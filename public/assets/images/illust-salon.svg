@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" fill="none">
+  <defs>
+    <style>.k{stroke:#243d2a;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}</style>
+    <linearGradient id="sl-brand" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#006838"/>
+      <stop offset="50%" stop-color="#8DC21F"/>
+      <stop offset="100%" stop-color="#E8A0BF"/>
+    </linearGradient>
+    <linearGradient id="sl-roof" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8DC21F"/>
+      <stop offset="100%" stop-color="#E8A0BF"/>
+    </linearGradient>
+    <linearGradient id="sl-awning" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#E8A0BF"/>
+      <stop offset="50%" stop-color="#8DC21F"/>
+      <stop offset="100%" stop-color="#E8A0BF"/>
+    </linearGradient>
+    <linearGradient id="sl-leaf" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8DC21F"/>
+      <stop offset="100%" stop-color="#006838"/>
+    </linearGradient>
+    <linearGradient id="sl-pole" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E8A0BF"/>
+      <stop offset="50%" stop-color="#8DC21F"/>
+      <stop offset="100%" stop-color="#006838"/>
+    </linearGradient>
+  </defs>
+  <rect x="250" y="8" width="30" height="30" rx="8" fill="url(#sl-brand)" opacity="0.12"/>
+  <rect x="10" y="12" width="28" height="28" rx="7" fill="url(#sl-brand)" opacity="0.1"/>
+
+  <rect x="0" y="262" width="300" height="38" fill="#8DC21F" opacity="0.1"/>
+  <line x1="0" y1="262" x2="300" y2="262" class="k"/>
+
+  <rect x="35" y="80" width="230" height="182" rx="4" fill="#fff" class="k"/>
+  <rect x="30" y="70" width="240" height="16" rx="4" fill="url(#sl-roof)" class="k"/>
+
+  <circle cx="150" cy="112" r="22" fill="#E8A0BF" opacity="0.12" class="k"/>
+  <path d="M142 106 Q150 116 158 106" stroke="#006838" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M142 118 Q150 108 158 118" stroke="#006838" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <rect x="55" y="92" width="22" height="22" rx="4" fill="#fff" class="k"/>
+  <rect x="223" y="92" width="22" height="22" rx="4" fill="#fff" class="k"/>
+
+  <rect x="30" y="142" width="240" height="14" rx="4" fill="url(#sl-awning)" class="k"/>
+  <path d="M30 156 Q90 168 150 156 Q210 168 270 156" fill="url(#sl-awning)" class="k"/>
+
+  <rect x="48" y="172" width="70" height="58" rx="4" fill="#8DC21F" opacity="0.06" class="k"/>
+  <rect x="182" y="172" width="70" height="58" rx="4" fill="#8DC21F" opacity="0.06" class="k"/>
+
+  <rect x="130" y="172" width="40" height="90" rx="4" fill="#E8A0BF" opacity="0.12" class="k"/>
+  <rect x="136" y="180" width="28" height="30" rx="3" fill="#fff" class="k"/>
+  <circle cx="163" cy="225" r="3" fill="#243d2a"/>
+
+  <rect x="48" y="242" width="16" height="20" rx="5" fill="#8DC21F" opacity="0.25" class="k"/>
+  <circle cx="56" cy="236" r="7" fill="url(#sl-leaf)" class="k"/>
+  <circle cx="56" cy="230" r="5" fill="#8DC21F" class="k" opacity="0.6"/>
+  <rect x="236" y="242" width="16" height="20" rx="5" fill="#8DC21F" opacity="0.25" class="k"/>
+  <circle cx="244" cy="236" r="7" fill="url(#sl-leaf)" class="k"/>
+  <circle cx="244" cy="230" r="5" fill="#8DC21F" class="k" opacity="0.6"/>
+
+  <rect x="36" y="200" width="6" height="62" rx="3" fill="url(#sl-pole)" class="k"/>
+  <rect x="36" y="212" width="6" height="6" rx="1" fill="#fff" stroke="none"/>
+  <rect x="36" y="226" width="6" height="6" rx="1" fill="#fff" stroke="none"/>
+  <rect x="36" y="240" width="6" height="6" rx="1" fill="#fff" stroke="none"/>
+</svg>

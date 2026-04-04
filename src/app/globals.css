@@ -1,0 +1,296 @@
+@import "tailwindcss";
+
+/* ─── Smooth scroll ─── */
+html {
+  scroll-behavior: smooth;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ─── CTA button: gradient border + gradient text ─── */
+.cta-gradient-outline {
+  position: relative;
+  isolation: isolate;
+  border-radius: 0.375rem;
+  background: var(--color-surface);
+  overflow: hidden;
+}
+.cta-gradient-outline::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(
+    to bottom right,
+    var(--color-primary) 0%,
+    var(--color-secondary) 50%,
+    var(--color-accent) 100%
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+.cta-gradient-outline::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-secondary) 50%,
+    var(--color-accent) 100%
+  );
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.cta-gradient-outline:hover::after {
+  opacity: 1;
+  animation: gradientSweep 0.8s ease forwards;
+}
+.cta-gradient-outline:hover .cta-gradient-text {
+  background: none;
+  -webkit-background-clip: unset;
+  background-clip: unset;
+  color: white;
+}
+.cta-gradient-text {
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(
+    to bottom right,
+    var(--color-primary) 0%,
+    var(--color-secondary) 50%,
+    var(--color-accent) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: color 0.3s ease;
+}
+
+/* ─── Gradient line ─── */
+.gradient-line {
+  background: linear-gradient(
+    to bottom right,
+    var(--color-primary) 0%,
+    var(--color-secondary) 50%,
+    var(--color-accent) 100%
+  );
+}
+
+/* ─── Gradient border ─── */
+.gradient-border {
+  position: relative;
+  isolation: isolate;
+}
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    to bottom right,
+    var(--color-primary) 0%,
+    var(--color-secondary) 50%,
+    var(--color-accent) 100%
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+/* ─── Form input gradient border ─── */
+.gradient-border-input {
+  border: 2px solid var(--color-border);
+  border-radius: 0.5rem;
+  transition: border-color 0.3s ease;
+}
+.gradient-border-input:focus {
+  border-color: transparent;
+  background-image: linear-gradient(var(--color-surface), var(--color-surface)),
+    linear-gradient(
+      to bottom right,
+      var(--color-primary) 0%,
+      var(--color-secondary) 50%,
+      var(--color-accent) 100%
+    );
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+/* ─── Header scrolled border ─── */
+.header-border-gradient {
+  border-bottom: 1px solid transparent;
+  border-image: linear-gradient(to bottom right, var(--color-primary) 0%, var(--color-secondary) 50%, var(--color-accent) 100%) 1;
+}
+
+/* ─── Header nav link hover & active ─── */
+.header-nav-link {
+  transition: all 0.2s ease;
+}
+.header-nav-link:hover,
+.header-nav-active {
+  background: linear-gradient(
+    to bottom right,
+    var(--color-primary) 0%,
+    var(--color-secondary) 50%,
+    var(--color-accent) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ─── Footer link hover ─── */
+.footer-link-text {
+  transition: all 0.2s ease;
+}
+.group:hover .footer-link-text,
+.group\/legal:hover .footer-link-text {
+  background: linear-gradient(
+    to bottom right,
+    var(--color-primary) 0%,
+    var(--color-secondary) 50%,
+    var(--color-accent) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 500;
+}
+
+/* ─── Hero animations ─── */
+@keyframes gradientSweep {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0% 0;
+  }
+}
+
+@keyframes heroFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes heroFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scrollBounce {
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(8px);
+  }
+}
+
+.hero-float {
+  animation: heroFloat 6s ease-in-out infinite;
+}
+
+.hero-fade-in {
+  animation: heroFadeIn 0.8s ease-out both;
+}
+
+.hero-fade-in-delay-1 {
+  animation: heroFadeIn 0.8s ease-out 0.2s both;
+}
+
+.hero-fade-in-delay-2 {
+  animation: heroFadeIn 0.8s ease-out 0.4s both;
+}
+
+.hero-fade-in-delay-3 {
+  animation: heroFadeIn 0.8s ease-out 0.6s both;
+}
+
+.hero-scroll-mobile {
+  animation: scrollBounce 2s infinite;
+}
+
+/* ─── Green gradient background (for sections) ─── */
+.bg-green-gradient {
+  background: linear-gradient(
+    135deg,
+    #e6f2eb 0%,
+    #eff7e8 30%,
+    #f5f9f2 55%,
+    #faf5f8 80%,
+    #ffffff 100%
+  );
+}
+
+/* ─── Left accent border ─── */
+.gradient-left-border {
+  position: relative;
+}
+.gradient-left-border::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  border-radius: 9999px;
+  background: linear-gradient(
+    to bottom,
+    var(--color-primary),
+    var(--color-accent)
+  );
+}
+
+@theme {
+  /* Brand — ロゴ3色：翠 → 黄緑 → ピンク */
+  --color-primary: #006838;
+  --color-primary-dark: #005530;
+  --color-secondary: #8DC21F;
+  --color-accent: #E8A0BF;
+  --color-accent-dark: #D4899B;
+
+  /* Neutral */
+  --color-surface: #ffffff;
+  --color-surface-dim: #f8f9f7;
+  --color-text: #243d2a;
+  --color-text-muted: #6b7280;
+  --color-border: #e5e7eb;
+
+  /* Font */
+  --font-sans: var(--font-zen-kaku-gothic-new), sans-serif;
+}

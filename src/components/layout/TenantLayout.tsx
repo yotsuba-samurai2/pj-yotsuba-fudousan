@@ -1,0 +1,521 @@
+"use client";
+
+import Link from "next/link";
+import Image from "next/image";
+import { useState, useEffect, useCallback, useMemo } from "react";
+import { usePathname } from "next/navigation";
+import { Menu, X, CalendarDays } from "lucide-react";
+import { groupBusinesses } from "@/config/group";
+import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher";
+import { GroupSwitcher } from "@/components/ui/GroupSwitcher";
+import { useTranslation } from "@/hooks/useTranslation";
+
+type NavItem = { href: string; label: string };
+type FooterSection = { title: string; links: NavItem[] };
+
+/** テナントごとのナビ href 定義（言語に依存しない） */
+const NAV_HREFS: Record<string, { href: string; key: string }[]> = {
+  realestate: [
+    { href: "/services", key: "services" },
+    { href: "/about", key: "about" },
+    { href: "/column", key: "column" },
+    { href: "/contact", key: "contact" },
+  ],
+  legal: [
+    { href: "/legal", key: "services" },
+    { href: "/legal/about", key: "about" },
+    { href: "/legal/column", key: "column" },
+    { href: "/contact", key: "contact" },
+  ],
+  labor: [
+    { href: "/labor", key: "services" },
+    { href: "/labor/about", key: "about" },
+    { href: "/labor/column", key: "column" },
+    { href: "/contact", key: "contact" },
+  ],
+};
+
+/** テナントごとのフッターナビ href 定義 */
+const FOOTER_NAV_HREFS: Record<string, { sectionKey: string; items: { href: string; key: string }[] }[]> = {
+  realestate: [
+    {
+      sectionKey: "services",
+      items: [
+        { href: "/services#rental", key: "rental" },
+        { href: "/services#sale", key: "sale" },
+        { href: "/services#management", key: "management" },
+        { href: "/services#foreign-residents", key: "foreignResidents" },
+      ],
+    },
+    {
+      sectionKey: "company",
+      items: [
+        { href: "/about", key: "about" },
+        { href: "/column", key: "column" },
+      ],
+    },
+    {
+      sectionKey: "other",
+      items: [
+        { href: "/contact", key: "contact" },
+        { href: "/legal-notice", key: "legalNotice" },
+      ],
+    },
+  ],
+  legal: [
+    {
+      sectionKey: "services",
+      items: [
+        { href: "/legal", key: "subsidy" },
+        { href: "/legal", key: "visa" },
+        { href: "/legal", key: "incorporation" },
+        { href: "/legal", key: "permits" },
+      ],
+    },
+    {
+      sectionKey: "office",
+      items: [
+        { href: "/legal/about", key: "about" },
+        { href: "/legal/column", key: "column" },
+      ],
+    },
+    {
+      sectionKey: "other",
+      items: [
+        { href: "/contact", key: "contact" },
+      ],
+    },
+  ],
+  labor: [
+    {
+      sectionKey: "services",
+      items: [
+        { href: "/labor", key: "socialInsurance" },
+        { href: "/labor", key: "subsidy" },
+        { href: "/labor", key: "rules" },
+        { href: "/labor", key: "payroll" },
+      ],
+    },
+    {
+      sectionKey: "office",
+      items: [
+        { href: "/labor/about", key: "about" },
+        { href: "/labor/column", key: "column" },
+      ],
+    },
+    {
+      sectionKey: "other",
+      items: [
+        { href: "/contact", key: "contact" },
+      ],
+    },
+  ],
+};
+
+function TenantHeader({ businessKey }: { businessKey: string }) {
+  const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+  const { t } = useTranslation();
+
+  const biz = groupBusinesses.find((b) => b.key === businessKey)!;
+
+  const allNav = useMemo(() => {
+    const hrefs = NAV_HREFS[businessKey] ?? [];
+    return hrefs.map((h) => ({
+      href: h.href,
+      label: t(`${businessKey}.nav.${h.key}`),
+    }));
+  }, [businessKey, t]);
+
+  const navItems = allNav.filter((n) => n.href !== "/contact");
+  const contactItem = allNav.find((n) => n.href === "/contact");
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 10);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [pathname]);
+
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
+
+  const isActive = useCallback(
+    (href: string) => {
+      if (href === "/") return pathname === "/";
+      return pathname === href || pathname.startsWith(href + "/");
+    },
+    [pathname],
+  );
+
+  return (
+    <>
+      <header
+        className={`fixed top-0 z-50 w-full transition-all duration-300 ${
+          scrolled
+            ? "header-border-gradient bg-surface/50 backdrop-blur-2xl"
+            : "bg-transparent"
+        }`}
+      >
+        <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:h-20 sm:px-6 lg:px-8">
+          <div className="relative z-50 flex shrink-0 items-center gap-2">
+            <div className="hidden md:block">
+              <GroupSwitcher />
+            </div>
+            <Link href={biz.href} className="flex items-center">
+              <Image
+                src={biz.logo.horizontal}
+                alt={t(`${businessKey}.name`)}
+                width={260}
+                height={72}
+                className="h-10 w-auto sm:h-14"
+                priority
+              />
+            </Link>
+          </div>
+
+          <nav
+            className="hidden items-center gap-1 md:flex"
+            aria-label={t("common.navigation.mainNav")}
+          >
+            {navItems.map(({ href, label }) => (
+              <Link
+                key={href}
+                href={href}
+                className={`header-nav-link relative px-4 py-2 text-base font-medium transition-colors duration-200 ${
+                  isActive(href) ? "header-nav-active" : "text-text-muted"
+                }`}
+              >
+                {label}
+                <span
+                  className={`gradient-line absolute bottom-0 left-1/2 h-0.5 -translate-x-1/2 rounded-full transition-all duration-300 ${
+                    isActive(href) ? "w-4/5" : "w-0"
+                  }`}
+                />
+              </Link>
+            ))}
+
+            <div className="ml-2 border-l border-border pl-3">
+              <LanguageSwitcher />
+            </div>
+
+            {contactItem && (
+              <Link
+                href={contactItem.href}
+                className="cta-gradient-outline ml-3 px-5 py-2 text-base font-semibold shadow-sm transition-all duration-200 hover:shadow-md"
+              >
+                <span className="cta-gradient-text">{contactItem.label}</span>
+              </Link>
+            )}
+          </nav>
+
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="relative z-50 flex h-10 w-10 items-center justify-center rounded-lg text-text transition-colors hover:bg-surface-dim md:hidden"
+            aria-label={isOpen ? t("common.navigation.closeMenu") : t("common.navigation.openMenu")}
+          >
+            {isOpen ? <X size={22} /> : <Menu size={22} />}
+          </button>
+        </div>
+      </header>
+
+      <div
+        className={`fixed inset-0 z-40 bg-black/20 backdrop-blur-sm transition-opacity duration-300 md:hidden ${
+          isOpen ? "opacity-100" : "pointer-events-none opacity-0"
+        }`}
+        onClick={() => setIsOpen(false)}
+      />
+
+      <nav
+        aria-label={t("common.navigation.mobileMenu")}
+        className={`fixed right-0 top-0 z-40 flex h-full w-[min(18rem,85vw)] flex-col bg-surface pt-16 shadow-2xl transition-transform duration-300 ease-out sm:pt-20 md:hidden ${
+          isOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        <div className="flex flex-1 flex-col gap-1 px-4 py-4">
+          {navItems.map(({ href, label }, i) => (
+            <Link
+              key={href}
+              href={href}
+              onClick={() => setIsOpen(false)}
+              className={`header-nav-link flex items-center rounded-lg px-4 py-3 text-sm font-medium transition-all duration-200 ${
+                isActive(href)
+                  ? "bg-primary/5 header-nav-active"
+                  : "text-text-muted hover:bg-surface-dim"
+              }`}
+              style={{ transitionDelay: isOpen ? `${i * 50}ms` : "0ms" }}
+            >
+              {isActive(href) && (
+                <span className="gradient-line mr-2 h-4 w-0.5 rounded-full" />
+              )}
+              {label}
+            </Link>
+          ))}
+        </div>
+        <div className="border-t border-border px-4 py-4">
+          <div className="mb-4 flex justify-center">
+            <LanguageSwitcher />
+          </div>
+          {contactItem && (
+            <Link
+              href={contactItem.href}
+              onClick={() => setIsOpen(false)}
+              className="cta-gradient-outline flex w-full items-center justify-center px-5 py-3 text-sm font-semibold shadow-sm transition-all duration-200 hover:shadow-md"
+            >
+              <span className="cta-gradient-text">{contactItem.label}</span>
+            </Link>
+          )}
+        </div>
+      </nav>
+    </>
+  );
+}
+
+function TenantFooter({ businessKey }: { businessKey: string }) {
+  const currentYear = new Date().getFullYear();
+  const biz = groupBusinesses.find((b) => b.key === businessKey)!;
+  const { t } = useTranslation();
+
+  const footerSections: FooterSection[] = useMemo(() => {
+    const defs = FOOTER_NAV_HREFS[businessKey] ?? [];
+    return defs.map((section) => ({
+      title: t(`${businessKey}.footerNav.${section.sectionKey}.title`),
+      links: section.items.map((item) => ({
+        href: item.href,
+        label: t(`${businessKey}.footerNav.${section.sectionKey}.${item.key}`),
+      })),
+    }));
+  }, [businessKey, t]);
+
+  return (
+    <footer className="text-text">
+      <div className="mx-auto max-w-7xl px-4 pt-12 pb-10 sm:px-6 sm:pt-16 sm:pb-12 lg:px-8">
+        <div className="flex flex-col gap-8 sm:gap-10 lg:flex-row lg:items-start lg:justify-between">
+          <div className="shrink-0">
+            <Link href={biz.href} className="inline-block">
+              <Image
+                src={biz.logo.square}
+                alt={t(`${businessKey}.name`)}
+                width={160}
+                height={140}
+                className="h-28 w-auto"
+              />
+            </Link>
+            <p className="cta-gradient-text mt-1 text-xs font-medium tracking-[0.15em]">
+              {t(`${businessKey}.tagline`)}
+            </p>
+            <p className="mt-4 text-sm leading-relaxed text-text/50">
+              {t(`${businessKey}.footerDescription`)}
+            </p>
+            <address className="mt-4 text-xs not-italic leading-relaxed text-text/50">
+              {t("address.postalCode")}
+              <br />
+              {t("address.full")}
+            </address>
+            <div className="mt-3 text-xs text-text/50">
+              <a href={`tel:${t("address.phone")}`} className="hover:text-text">
+                TEL: {t("address.phone")}
+              </a>
+            </div>
+
+            {/* SNS + Booking */}
+            <div className="mt-5 flex items-center gap-3">
+              <a
+                href="https://www.facebook.com/uramatsujoji"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex h-9 w-9 items-center justify-center rounded-lg border border-border text-text/40 transition-colors hover:border-primary/30 hover:text-primary"
+                aria-label="Facebook"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              </a>
+              <a
+                href="https://www.instagram.com/uramatsu_joji/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex h-9 w-9 items-center justify-center rounded-lg border border-border text-text/40 transition-colors hover:border-primary/30 hover:text-primary"
+                aria-label="Instagram"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C16.67.014 16.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              </a>
+              <a
+                href="https://note.com/luck428"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex h-9 w-9 items-center justify-center rounded-lg border border-border text-xs font-bold text-text/40 transition-colors hover:border-primary/30 hover:text-primary"
+                aria-label="note"
+              >
+                n
+              </a>
+              <a
+                href="https://www.samurai.co.jp/samurai/reserve/uramatsu-joji"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex h-9 items-center gap-1.5 rounded-lg border border-border px-3 text-text/40 transition-colors hover:border-primary/30 hover:text-primary"
+                aria-label={t("common.footer.samuraiName")}
+              >
+                <CalendarDays size={16} />
+                <span className="text-xs font-medium">{t("common.booking")}</span>
+              </a>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 sm:gap-12">
+            {footerSections.map((section) => (
+              <div key={section.title}>
+                <h3 className="text-sm font-bold tracking-wide text-text">
+                  {section.title}
+                </h3>
+                <ul className="mt-4 space-y-3">
+                  {section.links.map(({ href, label }, i) => (
+                    <li key={`${href}-${i}`}>
+                      <Link
+                        href={href}
+                        className="group inline-flex items-center text-sm text-text/50 transition-colors duration-200"
+                      >
+                        <span className="gradient-line mr-2 inline-block h-px w-0 transition-all duration-200 group-hover:w-3" />
+                        <span className="footer-link-text">{label}</span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Group businesses */}
+      <div className="border-t border-border">
+        <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8">
+          <p className="text-center text-[10px] font-medium tracking-[0.3em] text-text-muted">
+            {t("brand.groupNameEn")}
+          </p>
+          <p className="mt-1 text-center text-sm font-bold">
+            {t("brand.groupName")}
+          </p>
+          <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
+            {groupBusinesses.map((b) => {
+              const isCurrent = b.key === businessKey;
+              const inner = (
+                <div
+                  className={`flex items-center gap-3 rounded-lg border p-3 transition-colors ${
+                    isCurrent
+                      ? "border-primary/30 bg-primary/5"
+                      : "border-border bg-surface hover:border-primary/30 hover:bg-surface-dim"
+                  }`}
+                >
+                  <Image
+                    src={b.logo.square}
+                    alt={t(`${b.key}.name`)}
+                    width={48}
+                    height={48}
+                    className="h-12 w-12 shrink-0 object-contain"
+                  />
+                  <div className="min-w-0">
+                    <p className="truncate text-xs font-bold">{t(`${b.key}.name`)}</p>
+                    <p className="text-[10px] text-text-muted">
+                      {isCurrent ? t("common.currentSite") : t(`${b.key}.description`)}
+                    </p>
+                  </div>
+                </div>
+              );
+              if (isCurrent) return <div key={b.key}>{inner}</div>;
+              return (
+                <Link key={b.key} href={b.href}>
+                  {inner}
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+
+      {/* SAMURAI */}
+      <div className="border-t border-border">
+        <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+          <p className="text-center text-[10px] font-medium tracking-[0.2em] text-text-muted">
+            {t("common.footer.managedServices")}
+          </p>
+          <div className="mx-auto mt-4 max-w-xs">
+            <a
+              href="https://www.samurai.co.jp/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-4 rounded-xl border border-border bg-surface p-4 transition-all hover:border-primary/30 hover:shadow-md"
+            >
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-text/5 text-lg font-bold text-text/60">
+                S
+              </div>
+              <div>
+                <p className="text-sm font-bold">{t("common.footer.samuraiName")}</p>
+                <p className="mt-0.5 text-[10px] text-text-muted">
+                  {t("common.footer.samuraiDescription")}
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Legal */}
+      <div className="border-t border-border">
+        <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+          <p className="text-[11px] font-medium text-text/40">
+            {t("common.footer.legalHeadquartersLine")}
+          </p>
+          <div className="mt-3 space-y-1 text-[10px] leading-relaxed text-text/30">
+            <p>{t("common.footer.realestateRegistration")}</p>
+            <p>{t("common.footer.realestateRepRegistration")}</p>
+            <p>{t("common.footer.legalRepRegistration")}</p>
+            <p>{t("common.footer.laborRepRegistration")}</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Copyright */}
+      <div className="border-t border-border">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 py-6 sm:flex-row sm:px-6 lg:px-8">
+          <p className="text-xs text-text/30">
+            &copy; {currentYear} {t("common.footer.copyright")}
+          </p>
+          <div className="flex items-center gap-6 text-xs text-text/30">
+            <Link href="/privacy-policy" className="group/legal transition-colors duration-200">
+              <span className="footer-link-text">{t("common.footer.privacyPolicy")}</span>
+            </Link>
+            <Link href="/terms" className="group/legal transition-colors duration-200">
+              <span className="footer-link-text">{t("common.footer.terms")}</span>
+            </Link>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
+export function TenantLayoutShell({
+  businessKey,
+  children,
+}: {
+  businessKey: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <>
+      <TenantHeader businessKey={businessKey} />
+      <main id="main-content" className="relative z-[1]">
+        {children}
+      </main>
+      <TenantFooter businessKey={businessKey} />
+    </>
+  );
+}

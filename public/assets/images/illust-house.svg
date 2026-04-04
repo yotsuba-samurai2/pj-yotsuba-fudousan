@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 320" fill="none">
+  <defs>
+    <style>.k{stroke:#243d2a;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}</style>
+    <linearGradient id="h-brand" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#006838"/>
+      <stop offset="50%" stop-color="#8DC21F"/>
+      <stop offset="100%" stop-color="#E8A0BF"/>
+    </linearGradient>
+    <linearGradient id="h-leaf" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8DC21F"/>
+      <stop offset="100%" stop-color="#006838"/>
+    </linearGradient>
+  </defs>
+  <rect x="10" y="15" width="38" height="38" rx="9" fill="url(#h-brand)" opacity="0.15"/>
+  <rect x="280" y="10" width="30" height="30" rx="8" fill="url(#h-brand)" opacity="0.12"/>
+
+  <rect x="0" y="272" width="340" height="48" fill="#8DC21F" opacity="0.1"/>
+  <line x1="0" y1="272" x2="340" y2="272" class="k"/>
+  <rect x="146" y="272" width="48" height="40" rx="4" fill="#fff" opacity="0.5" class="k"/>
+
+  <rect x="55" y="148" width="230" height="124" rx="4" fill="#fff" class="k"/>
+  <path d="M38 152 L170 52 L302 152Z" fill="url(#h-brand)" class="k"/>
+  <rect x="232" y="72" width="26" height="50" rx="4" fill="url(#h-leaf)" class="k"/>
+
+  <rect x="90" y="108" width="34" height="30" rx="4" fill="#fff" class="k"/>
+  <rect x="216" y="108" width="34" height="30" rx="4" fill="#fff" class="k"/>
+  <rect x="76" y="195" width="58" height="48" rx="4" fill="#fff" class="k"/>
+
+  <rect x="155" y="185" width="42" height="87" rx="4" fill="#E8A0BF" opacity="0.25" class="k"/>
+  <rect x="163" y="195" width="26" height="22" rx="3" fill="#fff" class="k"/>
+  <circle cx="189" cy="235" r="3" fill="#243d2a"/>
+
+  <rect x="218" y="200" width="40" height="36" rx="4" fill="#fff" class="k"/>
+
+  <rect x="10" y="258" width="38" height="14" rx="4" fill="url(#h-brand)" opacity="0.12" class="k"/>
+  <rect x="292" y="258" width="38" height="14" rx="4" fill="url(#h-brand)" opacity="0.12" class="k"/>
+
+  <circle cx="28" cy="238" r="14" fill="#8DC21F" class="k"/>
+  <circle cx="28" cy="226" r="10" fill="url(#h-leaf)" class="k"/>
+  <rect x="24" y="248" width="8" height="24" rx="3" fill="#006838" class="k" opacity="0.4"/>
+  <circle cx="312" cy="238" r="14" fill="#8DC21F" class="k"/>
+  <circle cx="312" cy="226" r="10" fill="url(#h-leaf)" class="k"/>
+  <rect x="308" y="248" width="8" height="24" rx="3" fill="#006838" class="k" opacity="0.4"/>
+</svg>

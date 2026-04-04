@@ -1,0 +1,754 @@
+{
+  "common": {
+    "skipToContent": "跳转到主要内容",
+    "contact": "联系我们",
+    "readMore": "阅读更多",
+    "learnMore": "了解详情",
+    "prevPage": "上一页",
+    "nextPage": "下一页",
+    "prevArticle": "上一篇",
+    "nextArticle": "下一篇",
+    "backToTop": "返回顶部",
+    "submit": "提交",
+    "onlineBooking": "在线预约",
+    "openInGoogleMaps": "在 Google Maps 中打开",
+    "thisSite": "本站",
+    "thisPage": "本页",
+    "currentSite": "当前站点",
+    "current": "当前",
+    "booking": "预约",
+    "cta": {
+      "consultFirst": "先来咨询一下",
+      "viewServices": "查看服务内容",
+      "contactUs": "联系我们",
+      "consultAboutService": "关于此服务的咨询",
+      "viewCompanyInfo": "查看公司概况",
+      "feelFreeToContact": "欢迎随时咨询"
+    },
+    "navigation": {
+      "mainNav": "主导航",
+      "mobileMenu": "移动端菜单",
+      "openMenu": "打开菜单",
+      "closeMenu": "关闭菜单",
+      "showGroupBusinesses": "显示集团业务"
+    },
+    "footer": {
+      "privacyPolicy": "隐私政策",
+      "terms": "使用条款",
+      "managedServices": "运营服务",
+      "samuraiName": "士业ドットコム SAMURAI",
+      "samuraiDescription": "专业士业的预约与匹配平台",
+      "legalHeadquartersLine": "运营总部：四葉パートナーズ（总部・东京都文京区、代表・浦松丈二）",
+      "realestateRegistration": "四葉不動産株式会社　许可证号：東京都知事（1）第113304号",
+      "realestateRepRegistration": "四葉不動産 代表董事・专任不动产交易士 浦松丈二　不动产交易士登记号：（東京）第293544号",
+      "legalRepRegistration": "四葉行政書士事務所 代表行政书士 浦松丈二　登记号：第25087022号",
+      "laborRepRegistration": "社会保险劳务士合格 浦松丈二　令和7年10月1日 第202500525号",
+      "copyright": "四葉パートナーズ All rights reserved."
+    }
+  },
+  "brand": {
+    "groupName": "四葉パートナーズ",
+    "groupNameEn": "YOTSUBA PARTNERS",
+    "groupDescription": "不动产・行政书士・社会保险劳务士一站式集团。",
+    "metaTitle": "四葉パートナーズ",
+    "metaTitleTemplate": "%s | 四葉パートナーズ"
+  },
+  "address": {
+    "postalCode": "〒112-0006",
+    "prefecture": "東京都",
+    "city": "文京区",
+    "street": "小日向４丁目２−５",
+    "building": "小日向安田ビル 2F",
+    "full": "東京都文京区小日向４丁目２−５ 小日向安田ビル 2F",
+    "phone": "03-6161-9428",
+    "businessHours": "9:00〜18:00（工作日及周末）",
+    "nearestStation": "東京メトロ丸ノ内線「茗荷谷」駅 步行5分钟"
+  },
+  "representative": {
+    "name": "浦松 丈二",
+    "nameEn": "Joji Uramatsu",
+    "previousJob": "新闻记者",
+    "overseasExperience": "5个国家的驻外经验",
+    "qualificationsRealestate": "不动产交易士・行政书士・社会保险劳务士",
+    "qualificationsLegal": "行政书士・不动产交易士・社会保险劳务士",
+    "qualificationsLabor": "社会保险劳务士・行政书士・不动产交易士",
+    "languages": "日・英・中(繁体/简体)"
+  },
+  "languages": {
+    "ja": "日本語",
+    "en": "EN",
+    "zh-tw": "繁體",
+    "zh": "简体",
+    "nativeJa": "日本語",
+    "nativeEn": "English",
+    "nativeZhTw": "繁體中文",
+    "nativeZh": "简体中文"
+  },
+  "realestate": {
+    "name": "四葉不動産",
+    "nameEn": "Real Estate",
+    "legalName": "四葉不動産株式会社",
+    "description": "不动产租赁・买卖・管理",
+    "tagline": "跨越语言与行业的壁垒，为您找到理想的家。",
+    "footerDescription": "支持5种语言的不动产公司。以亲身经历为外国人的住房搜寻提供专业支持。",
+    "meta": {
+      "title": "四葉不動産 | 跨越语言与行业的壁垒，为您找到理想的家。",
+      "titleTemplate": "%s | 四葉不動産",
+      "description": "支持5种语言的不动产公司。前新闻记者、拥有海外驻外经验的代表，以亲身体验为外国人的住房搜寻提供专业支持。租赁・买卖・管理，欢迎随时咨询。"
+    },
+    "nav": {
+      "services": "服务内容",
+      "about": "公司概况",
+      "column": "专栏",
+      "contact": "联系我们"
+    },
+    "footerNav": {
+      "services": {
+        "title": "服务内容",
+        "rental": "租赁支持",
+        "sale": "买卖支持",
+        "management": "物业管理",
+        "foreignResidents": "外国人专属支持"
+      },
+      "company": {
+        "title": "公司信息",
+        "about": "公司概况",
+        "column": "专栏"
+      },
+      "other": {
+        "title": "其他",
+        "contact": "联系我们",
+        "legalNotice": "基于不动产交易业法的标注"
+      }
+    },
+    "home": {
+      "heroTitle1": "轻松交流，",
+      "heroTitle2": "值得信赖的",
+      "heroTitle3": "不动产公司。",
+      "heroSubtitle1": "凭借前新闻记者的信息力与人脉，",
+      "heroSubtitle2": "为您的不动产需求保驾护航。",
+      "heroImageAlt": "四叶草与房屋",
+      "whyYotsuba": {
+        "sectionTitle": "选择四葉不動産的理由",
+        "strengths": [
+          {
+            "title": "亲切的服务",
+            "subtitle": "Approachable Service",
+            "description": "零距离感。凭借前记者特有的倾听能力，营造轻松自在、畅所欲言的氛围。"
+          },
+          {
+            "title": "5种语言对应",
+            "subtitle": "Multilingual",
+            "description": "日语・中文・台湾华语・泰语・英语。无需担心语言障碍，轻松咨询。"
+          },
+          {
+            "title": "亲身经历者",
+            "subtitle": "Lived Experience",
+            "description": "曾在海外驻外期间多次经历找房。深刻了解外国人在异国寻找住所的艰辛。"
+          },
+          {
+            "title": "持有行政书士资质的不动产公司",
+            "subtitle": "Licensed Scrivener",
+            "description": "签证・在留资格的手续也可在公司内部办理。不动产与法务一站式解决。"
+          },
+          {
+            "title": "专业人士网络",
+            "subtitle": "Expert Network",
+            "description": "与税理士・司法书士・社会保险劳务士等各领域专家协作。复杂案件也能团队应对。"
+          },
+          {
+            "title": "前新闻记者的信息力",
+            "subtitle": "Information Network",
+            "description": "凭借丰富的人脉与采访能力，为您提供市场上不易获取的房源信息。"
+          }
+        ]
+      },
+      "services": {
+        "sectionTitle": "服务内容",
+        "items": [
+          {
+            "title": "租赁支持",
+            "subtitle": "Rental",
+            "description": "从找房到审查・签约，一站式全程支持"
+          },
+          {
+            "title": "买卖支持",
+            "subtitle": "Sales",
+            "description": "住宅购买・投资物业的买卖中介。为初次购房者提供通俗易懂的说明"
+          },
+          {
+            "title": "物业管理",
+            "subtitle": "Management",
+            "description": "代理业主的物业管理。租户应对也让您安心"
+          },
+          {
+            "title": "多语言支持",
+            "subtitle": "Multilingual",
+            "description": "支持日语・英语・中文(繁体/简体)。外国朋友也请放心"
+          }
+        ]
+      },
+      "message": {
+        "sectionTitle": "致辞",
+        "paragraph1": "作为新闻记者在世界各地奔波，曾在5个国家生活。在此过程中培养的信息收集能力、谈判能力以及广泛的人脉——我坚信这些在不动产领域也能成为强大的武器。",
+        "paragraph2": "当您在不动产方面遇到困难时，我希望成为您可以轻松交谈的对象。买卖・租赁・管理，任何咨询都欢迎。贴心陪伴每一位客户，一起找到最佳答案。这是四葉不動産的承诺。",
+        "title": "四葉不動産 代表"
+      },
+      "access": {
+        "sectionTitle": "交通指南",
+        "mapTitle": "四葉不動産 所在地",
+        "name": "四葉不動産",
+        "nearestStation": {
+          "label": "最近车站",
+          "value": "東京メトロ丸ノ内線「茗荷谷」駅 步行5分钟"
+        },
+        "businessHours": {
+          "label": "营业时间",
+          "value": "9:00〜18:00（工作日及周末）"
+        }
+      },
+      "ctaSection": {
+        "title": "欢迎随时咨询",
+        "description1": "\u201c外国人也能租到房子吗？\u201d\u201c该从哪里开始？\u201d",
+        "description2": "任何小问题都没关系。我们提供5种语言的服务。"
+      }
+    },
+    "servicesPage": {
+      "title": "服务内容",
+      "metaTitle": "服务",
+      "metaDescription": "租赁・买卖・管理・多语言支持。四葉不動産的服务一览。",
+      "heroDescription1": "从租赁・买卖・管理到多语言对应。",
+      "heroDescription2": "为客户的各种不动产困扰提供贴心服务。",
+      "sections": [
+        {
+          "id": "rental",
+          "title": "租赁支持",
+          "subtitle": "Rental Support",
+          "lead": "从找房到入住，全程交给我们。",
+          "description": "凭借前新闻记者的信息力与人脉，为您介绍市场上不易获取的房源信息。根据您的需求，一起寻找理想的住所。",
+          "points": [
+            "需求沟通・房源搜索",
+            "看房安排・签约手续支持",
+            "与管理公司・房东的谈判代理",
+            "入住后的跟进服务"
+          ]
+        },
+        {
+          "id": "sale",
+          "title": "买卖支持",
+          "subtitle": "Sales Support",
+          "lead": "无论住宅购买还是投资物业，助您达成满意交易。",
+          "description": "不动产买卖是人生中的重大决策。凭借丰富的信息和专业网络，为客户提供最佳选择的支持。",
+          "points": [
+            "物业调查・市场价格分析",
+            "出售评估・销售策略建议",
+            "合同文件编制・重要事项说明",
+            "税理士・司法书士协作支持"
+          ]
+        },
+        {
+          "id": "management",
+          "title": "物业管理",
+          "subtitle": "Property Management",
+          "lead": "负责任地管理业主的宝贵资产。",
+          "description": "从招租到建筑维护管理，减轻业主的负担。纠纷处理也迅速响应。为您打造安心可靠的管理体制。",
+          "points": [
+            "租户招募・审查・合同管理",
+            "租户应对・投诉处理",
+            "建筑定期检查・维修安排",
+            "租金收取・欠租处理"
+          ]
+        },
+        {
+          "id": "foreign-residents",
+          "title": "多语言支持",
+          "subtitle": "Multilingual Support",
+          "lead": "支持日语・英语・中文(繁体/简体)服务。",
+          "description": "代表本人拥有5个国家的海外生活经验。正因为了解外国人找房的艰辛，才能提供细致入微的支持。",
+          "points": [
+            "4种语言的房源介绍・合同说明",
+            "所需文件准备支持",
+            "入住后的生活起步支援",
+            "行政手续的指导与陪同"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "四葉不動産提供哪些服务？",
+          "answer": "我们提供租赁支持、买卖支持、物业管理、多语言支持（日语・英语・中文繁体/简体）四大服务。"
+        },
+        {
+          "question": "外国人也能租到房子吗？",
+          "answer": "是的，四葉不動産支持5种语言，专业服务于外国人的住房搜寻。代表本人拥有5个国家的海外生活经验，深刻理解外国人在异国找房的困难。"
+        },
+        {
+          "question": "服务覆盖哪些区域？",
+          "answer": "以东京都文京区为中心，覆盖东京23区全域的房源。最近车站为東京メトロ丸ノ内線「茗荷谷」駅。"
+        }
+      ],
+      "ctaDescription1": "\u201c该从哪里开始？\u201d\u201c这样的事也能拜托吗？\u201d",
+      "ctaDescription2": "任何小问题都没关系。"
+    },
+    "aboutPage": {
+      "title": "公司概况",
+      "metaDescription": "四葉不動産的公司概况与代表介绍。位于文京区小日向的不动产公司。",
+      "heroDescription1": "四葉不動産的公司信息与代表介绍。",
+      "heroDescription2": "从文京区小日向为客户的不动产需求提供支持。",
+      "representativeTitle": "代表 浦松 丈二",
+      "representativeBio1": "作为新闻记者在世界各地奔波，曾在5个国家生活。在此过程中培养的信息收集能力、谈判能力以及广泛的人脉——我坚信这些在不动产领域也能成为强大的武器。",
+      "representativeBio2": "当您在不动产方面遇到困难时，我希望成为您可以轻松交谈的对象。买卖・租赁・管理，任何咨询都欢迎。贴心陪伴每一位客户，一起找到最佳答案。这是四葉不動産的承诺。",
+      "highlights": {
+        "previousJob": { "label": "前职业", "value": "新闻记者" },
+        "overseas": { "label": "海外经验", "value": "5个国家的驻外经验" },
+        "qualifications": { "label": "资质", "value": "不动产交易士・行政书士・社会保险劳务士" },
+        "languages": { "label": "对应语言", "value": "日・英・中(繁体/简体)" }
+      },
+      "companyInfoTitle": "公司信息",
+      "companyInfo": [
+        { "label": "运营总部", "value": "四葉パートナーズ（代表・浦松丈二）" },
+        { "label": "商号", "value": "四葉不動産株式会社" },
+        { "label": "代表者", "value": "浦松 丈二" },
+        { "label": "所在地", "value": "〒112-0006\n東京都文京区小日向4丁目2−5 小日向安田ビル 2F" },
+        { "label": "许可证号", "value": "東京都知事（1）第113304号" },
+        { "label": "不动产交易士", "value": "浦松丈二　登记号：（東京）第293544号" },
+        { "label": "电话号码", "value": "03-6161-9428" },
+        { "label": "营业时间", "value": "9:00〜18:00（工作日及周末）" },
+        { "label": "对应语言", "value": "日语・英语・中文（繁体/简体）" },
+        { "label": "业务内容", "value": "不动产租赁・买卖・管理" },
+        { "label": "集团业务", "value": "四葉行政書士事務所（代表行政书士 浦松丈二　登记号：第25087022号）\n四葉社会保険労務士法人（浦松丈二　第202500525号）" }
+      ],
+      "accessTitle": "交通指南",
+      "partnersTitle": "四葉パートナーズ",
+      "partnersDescription1": "不动产・行政书士・社会保险劳务士。",
+      "partnersDescription2": "三大业务联动，为客户的问题提供一站式解决方案。",
+      "groupBusinesses": [
+        { "name": "四葉不動産", "description": "不动产租赁・买卖・管理" },
+        { "name": "四葉行政書士事務所", "description": "在留资格・签证申请・法务手续" },
+        { "name": "四葉社会保険労務士法人", "description": "社会保险・劳务管理・补助金申请" }
+      ],
+      "ctaDescription": "买卖・租赁・管理，任何问题都欢迎咨询。"
+    },
+    "columnPage": {
+      "title": "专栏",
+      "metaDescription": "四葉不動産的专栏。外国人找房、租赁・买卖小知识、文京区地区信息等，为您提供不动产相关的实用资讯。",
+      "heroDescription1": "外国人找房、租赁・买卖小知识、文京区地区信息等。",
+      "heroDescription2": "为您提供不动产相关的实用资讯。",
+      "ctaDescription": "关于专栏内容的任何问题，也非常欢迎。"
+    },
+    "columnDetail": {
+      "authorTitle": "四葉不動産 代表董事",
+      "authorName": "浦松 丈二",
+      "ctaDescription": "关于专栏内容的任何问题，也非常欢迎。"
+    }
+  },
+  "legal": {
+    "name": "四葉行政書士事務所",
+    "nameEn": "Administrative Scrivener",
+    "legalName": "四葉行政書士事務所",
+    "description": "补助金・助成金申请、在留资格・签证、法务手续",
+    "tagline": "补助金・签证・公司设立一站式服务。",
+    "footerDescription": "通过不动产与法务的联动，为您的商业与生活手续提供全方位支持。",
+    "meta": {
+      "title": "四葉行政書士事務所 | 补助金・助成金・签证申请",
+      "titleTemplate": "%s | 四葉行政書士事務所",
+      "description": "补助金・助成金申请、在留资格・签证申请、公司设立、各类许可证。四葉パートナーズ的行政书士事务所为您提供法务手续的一站式支持。"
+    },
+    "nav": {
+      "services": "服务内容",
+      "about": "事务所概况",
+      "column": "专栏",
+      "contact": "联系我们"
+    },
+    "footerNav": {
+      "services": {
+        "title": "服务内容",
+        "subsidy": "补助金・助成金申请",
+        "visa": "在留资格・签证申请",
+        "incorporation": "公司设立",
+        "permits": "各类许可证"
+      },
+      "office": {
+        "title": "事务所信息",
+        "about": "事务所概况",
+        "column": "专栏"
+      },
+      "other": {
+        "title": "其他",
+        "contact": "联系我们"
+      }
+    },
+    "homePage": {
+      "title": "四葉行政書士事務所",
+      "metaDescription": "补助金・助成金申请、在留资格・签证申请、公司设立、各类许可证。四葉パートナーズ的行政书士事务所为您提供法务手续的一站式支持。",
+      "heroDescription1": "从补助金・助成金申请到在留资格・签证、公司设立、许可证办理。",
+      "heroDescription2": "通过不动产与法务的一站式服务，支持您的商业与生活。",
+      "servicesTitle": "服务内容",
+      "services": [
+        {
+          "title": "补助金・助成金申请",
+          "description": "事业重构补助金、小规模事业者持续化补助金等，从申请文件编制到获批全程支持。拥有提高获批率的专业经验。"
+        },
+        {
+          "title": "在留资格・签证申请",
+          "description": "就劳签证、经营・管理签证、配偶签证等，支持在留资格的取得・更新・变更所需文件编制。支持5种语言，可与外国申请人直接沟通。"
+        },
+        {
+          "title": "公司设立・法人设立",
+          "description": "支持股份有限公司・合同公司的设立手续。从章程编制到设立手续，结合不动产（办公室选址）提供一站式服务。登记由合作司法书士办理。"
+        },
+        {
+          "title": "各类许可证申请",
+          "description": "建设业许可、餐饮营业许可、旧货商许可等，支持您获取事业所需的各类许可证。"
+        },
+        {
+          "title": "继承・遗嘱・信托支持",
+          "description": "遗嘱书编制、遗产分割协议书、民事信托（家族信托）设计、继承手续全面支持。不动产继承与四葉不動産联动办理。"
+        },
+        {
+          "title": "合同书・文件编制",
+          "description": "各类合同书的编制与审查、内容证明邮件的编制等，为您编制商业所需的法务文件。"
+        }
+      ],
+      "representativeBio1": "凭借新闻记者时期培养的调查能力与写作功底，广泛应对从补助金申请文件编制到许可证手续。尤其在补助金・助成金申请方面，事业计划的\"表达方式\"是获批的关键。运用记者经验编制有说服力的申请书。",
+      "representativeBio2": "此外，凭借5个国家的海外经验和多语言能力，在外国人的在留资格・签证申请方面也具有优势。能够将不动产（四葉不動産）与法务一站式解决，是本事务所的最大特色。",
+      "representativeTitle": "代表行政书士　登记号：第25087022号",
+      "oneStopTitle": "四葉集团的独特优势",
+      "oneStopDescription1": "不动产・行政书士・社会保险劳务士联动。",
+      "oneStopDescription2": "不让客户的困扰被推来推去。",
+      "groupBusinesses": [
+        { "name": "四葉不動産", "description": "租赁・买卖・管理" },
+        { "name": "四葉行政書士事務所", "description": "" },
+        { "name": "四葉社会保険労務士法人", "description": "社会保险・劳务管理" }
+      ],
+      "ctaDescription": "补助金・助成金、签证申请、公司设立等，欢迎随时咨询。",
+      "faq": [
+        {
+          "question": "委托行政书士申请补助金有什么优势？",
+          "answer": "凭借前新闻记者的写作功底，编制有说服力的申请书。在事业计划的\"表达方式\"决定获批与否的补助金申请中，记者经验是一大优势。"
+        },
+        {
+          "question": "也能办理外国人的签证申请吗？",
+          "answer": "是的，我们办理就劳签证、经营・管理签证、配偶签证等各类在留资格的取得・更新・变更。支持5种语言，可与外国申请人直接沟通。"
+        },
+        {
+          "question": "可以同时咨询不动产和法务吗？",
+          "answer": "是的，四葉パートナーズ集团中不动产（四葉不動産）与行政书士事务所联动，可一站式办理办公室租赁合同与公司设立手续等。"
+        }
+      ]
+    },
+    "aboutPage": {
+      "title": "公司概况",
+      "metaDescription": "四葉行政書士事務所的公司概况与代表介绍。位于文京区小日向的行政书士事务所。",
+      "heroDescription1": "四葉行政書士事務所的事务所信息与代表介绍。",
+      "heroDescription2": "从文京区小日向为您提供法务手续的一站式支持。",
+      "representativeTitle": "代表行政书士 浦松 丈二",
+      "representativeBio1": "作为新闻记者在世界各地奔波，曾在5个国家生活。在此过程中培养的信息收集能力、谈判能力以及广泛的人脉——这些在行政书士的业务中也成为了强大的武器。",
+      "representativeBio2": "尤其在补助金・助成金申请方面，事业计划的\"表达方式\"是获批的关键。运用记者经验编制有说服力的申请书。此外，凭借5个国家的海外经验，在外国人的在留资格・签证申请方面也具有优势。",
+      "highlights": {
+        "previousJob": { "label": "前职业", "value": "新闻记者" },
+        "overseas": { "label": "海外经验", "value": "5个国家的驻外经验" },
+        "qualifications": { "label": "资质", "value": "行政书士・不动产交易士・社会保险劳务士" },
+        "languages": { "label": "对应语言", "value": "日・英・中(繁体/简体)" }
+      },
+      "officeInfoTitle": "事务所信息",
+      "officeInfo": [
+        { "label": "运营总部", "value": "四葉パートナーズ（代表・浦松丈二）" },
+        { "label": "事务所名称", "value": "四葉行政書士事務所" },
+        { "label": "代表行政书士", "value": "浦松 丈二" },
+        { "label": "登记号", "value": "第25087022号" },
+        { "label": "所在地", "value": "〒112-0006\n東京都文京区小日向4丁目2−5 小日向安田ビル 2F" },
+        { "label": "电话号码", "value": "03-6161-9428" },
+        { "label": "营业时间", "value": "9:00〜18:00（工作日及周末）" },
+        { "label": "对应语言", "value": "日语・英语・中文（繁体/简体）" },
+        { "label": "业务内容", "value": "补助金・助成金申请、在留资格・签证申请、\n公司设立、各类许可证、继承・遗嘱・信托支持" },
+        { "label": "集团业务", "value": "四葉不動産株式会社（许可证号：東京都知事（1）第113304号）\n四葉社会保険労務士法人（浦松丈二　第202500525号）" }
+      ],
+      "accessTitle": "交通指南",
+      "mapTitle": "四葉行政書士事務所 所在地",
+      "ctaDescription": "补助金・助成金、签证申请、公司设立等，欢迎随时咨询。"
+    },
+    "columnPage": {
+      "title": "专栏",
+      "metaDescription": "四葉行政書士事務所的专栏。补助金・助成金、签证申请、公司设立等，为您提供法务相关的实用资讯。",
+      "heroDescription1": "补助金・签证・公司设立等，法务相关的实用资讯。",
+      "heroDescription2": "以行政书士的视角通俗易懂地为您呈现。"
+    },
+    "columnDetail": {
+      "authorTitle": "四葉行政書士事務所 代表行政书士",
+      "authorName": "浦松 丈二"
+    }
+  },
+  "labor": {
+    "name": "四葉社会保険労務士法人",
+    "nameEn": "Labor Consultant",
+    "legalName": "四葉社会保険労務士法人",
+    "description": "社会保险・劳务管理・助成金申请",
+    "tagline": "解决企业与\"人\"相关的一切困扰。",
+    "footerDescription": "为您提供社会保险・劳务管理・助成金申请的全方位支持。",
+    "meta": {
+      "title": "四葉社会保険労務士法人 | 社会保险・劳务・助成金",
+      "titleTemplate": "%s | 四葉社会保険労務士法人",
+      "description": "社会保险・劳动保险手续、就业规则编制、助成金申请、劳务咨询。四葉パートナーズ的社会保险劳务士法人为企业的人事・劳务提供全方位支持。"
+    },
+    "nav": {
+      "services": "服务内容",
+      "about": "事务所概况",
+      "column": "专栏",
+      "contact": "联系我们"
+    },
+    "footerNav": {
+      "services": {
+        "title": "服务内容",
+        "socialInsurance": "社会保险・劳动保险",
+        "subsidy": "助成金申请",
+        "rules": "就业规则编制",
+        "payroll": "薪资核算"
+      },
+      "office": {
+        "title": "事务所信息",
+        "about": "事务所概况",
+        "column": "专栏"
+      },
+      "other": {
+        "title": "其他",
+        "contact": "联系我们"
+      }
+    },
+    "homePage": {
+      "title": "四葉社会保険労務士法人",
+      "metaDescription": "社会保险・劳动保险手续、就业规则编制、助成金申请、劳务咨询。四葉パートナーズ的社会保险劳务士法人为企业的人事・劳务提供全方位支持。",
+      "heroDescription1": "从社会保险・劳动保险手续到就业规则、助成金申请、劳务咨询。",
+      "heroDescription2": "为企业与\"人\"相关的一切困扰提供全方位支持。",
+      "servicesTitle": "服务内容",
+      "services": [
+        {
+          "title": "社会保险・劳动保险手续",
+          "description": "入职・离职时的申报、定基届、年度更新等，准确代办繁琐的保险手续。减轻经营者的负担。"
+        },
+        {
+          "title": "助成金申请",
+          "description": "职业提升助成金、两立支援等助成金等，支持企业可用助成金的申请。与行政书士事务所联动，补助金也能覆盖。"
+        },
+        {
+          "title": "就业规则・内部规程编制",
+          "description": "编制与修订符合公司实际情况的就业规则。持续支持法规修订的应对。"
+        },
+        {
+          "title": "薪资核算",
+          "description": "准确代办每月薪资核算。涵盖社会保险费・所得税・住民税的计算到工资明细编制。"
+        },
+        {
+          "title": "劳务咨询",
+          "description": "员工纠纷、骚扰对策、工作方式改革的应对等，陪伴您解决日常劳务问题。"
+        },
+        {
+          "title": "劳务审计・合规",
+          "description": "应对劳动基准监督署的调查，进行劳务合规的检查与改善建议。"
+        }
+      ],
+      "representativeBio1": "企业经营中最重要的是\"人\"。打造让员工安心工作的环境，才能支撑事业的成长。从社会保险・劳动保险手续到就业规则的完善、助成金的活用，全面支持企业的人事・劳务。",
+      "representativeBio2": "关于外国人员工雇用的咨询也很多。通过与行政书士事务所（在留资格）・不动产（员工宿舍搜寻）的联动，从招聘到定着实现一站式支援，这是四葉集团的优势。",
+      "representativeTitle": "社会保险劳务士　第202500525号",
+      "oneStopTitle": "四葉集团的独特优势",
+      "oneStopDescription1": "不动产・行政书士・社会保险劳务士联动。",
+      "oneStopDescription2": "不让客户的困扰被推来推去。",
+      "groupBusinesses": [
+        { "name": "四葉不動産", "description": "租赁・买卖・管理" },
+        { "name": "四葉行政書士事務所", "description": "补助金・助成金・签证" },
+        { "name": "四葉社会保険労務士法人", "description": "" }
+      ],
+      "ctaDescription": "社会保险、就业规则、助成金等，欢迎随时咨询。",
+      "faq": [
+        {
+          "question": "委托社会保险劳务士有什么优势？",
+          "answer": "准确代办社会保险・劳动保险手续、就业规则的编制与修订、助成金申请等人事・劳务的专业业务。减轻经营者的负担，确保法规合规。"
+        },
+        {
+          "question": "也能咨询外国人员工的雇用问题吗？",
+          "answer": "是的，我们支持外国人员工的社会保险手续和劳务管理。通过集团行政书士事务所（在留资格）・不动产（员工宿舍搜寻）的联动，从招聘到定着提供一站式支援。"
+        },
+        {
+          "question": "也能帮忙申请助成金吗？",
+          "answer": "是的，我们支持职业提升助成金、两立支援等助成金等企业可用的各类助成金申请。与行政书士事务所联动，补助金也能覆盖。"
+        }
+      ]
+    },
+    "aboutPage": {
+      "title": "事务所概况",
+      "metaDescription": "四葉社会保険労務士法人（筹备中）的事务所概况与代表介绍。",
+      "heroDescription1": "四葉社会保険労務士法人的事务所信息与代表介绍。",
+      "heroDescription2": "为企业的人事・劳务提供全方位支持。",
+      "representativeTitle": "浦松 丈二",
+      "representativeBio1": "企业经营中最重要的是\"人\"。打造让员工安心工作的环境，才能支撑事业的成长。凭借作为新闻记者培养的调查能力与谈判能力，致力于解决企业的人事・劳务课题。",
+      "representativeBio2": "社会保险劳务士法人目前正在筹备设立中，但作为四葉パートナーズ，我们已在受理社会保险・劳务相关咨询。与行政书士事务所・不动产联动，也在积极支持外国人雇用。",
+      "highlights": {
+        "previousJob": { "label": "前职业", "value": "新闻记者" },
+        "overseas": { "label": "海外经验", "value": "5个国家的驻外经验" },
+        "qualifications": { "label": "资质", "value": "社会保险劳务士・行政书士・不动产交易士" },
+        "status": { "label": "状态", "value": "法人化 筹备中" }
+      },
+      "officeInfoTitle": "事务所信息",
+      "officeInfo": [
+        { "label": "运营总部", "value": "四葉パートナーズ（代表・浦松丈二）" },
+        { "label": "名称", "value": "四葉社会保険労務士法人（筹备中）" },
+        { "label": "代表", "value": "浦松 丈二" },
+        { "label": "社会保险劳务士", "value": "浦松丈二　第202500525号\n（令和7年10月1日合格）" },
+        { "label": "所在地", "value": "〒112-0006\n東京都文京区小日向4丁目2−5 小日向安田ビル 2F" },
+        { "label": "电话号码", "value": "03-6161-9428" },
+        { "label": "营业时间", "value": "9:00〜18:00（工作日及周末）" },
+        { "label": "业务内容", "value": "社会保险・劳动保险手续、助成金申请、\n就业规则编制、薪资核算、劳务咨询" },
+        { "label": "备注", "value": "法人化正在筹备中。目前作为四葉パートナーズ提供服务。" },
+        { "label": "集团业务", "value": "四葉不動産株式会社（许可证号：東京都知事（1）第113304号）\n四葉行政書士事務所（代表行政书士 浦松丈二　登记号：第25087022号）" }
+      ],
+      "ctaDescription": "社会保险、就业规则、助成金等，欢迎随时咨询。"
+    },
+    "columnPage": {
+      "title": "专栏",
+      "metaDescription": "四葉社会保険労務士法人的专栏。社会保险、助成金、劳务管理等，为您提供人事・劳务相关的实用资讯。",
+      "heroDescription1": "社会保险・助成金・劳务管理的实用资讯。",
+      "heroDescription2": "以社会保险劳务士的视角通俗易懂地为您呈现。"
+    },
+    "columnDetail": {
+      "authorTitle": "四葉社会保険労務士法人",
+      "authorName": "浦松 丈二"
+    }
+  },
+  "contact": {
+    "title": "联系我们",
+    "metaTitle": "联系我们 | 四葉パートナーズ",
+    "metaDescription": "联系四葉パートナーズ。不动产・行政书士・社会保险劳务士，任何咨询都欢迎。",
+    "heroDescription1": "不动产・补助金・签证・劳务，任何咨询都欢迎。",
+    "heroDescription2": "可通过电话・在线预约・表单联系我们。",
+    "methods": {
+      "title": "联系方式",
+      "phone": {
+        "label": "电话",
+        "number": "03-6161-9428"
+      },
+      "onlineBooking": {
+        "label": "在线预约",
+        "linkText": "前往SAMURAI预约页面 →"
+      },
+      "businessHours": {
+        "label": "营业时间",
+        "value": "9:00〜18:00（工作日及周末）"
+      },
+      "location": {
+        "label": "所在地"
+      }
+    },
+    "form": {
+      "title": "邮件咨询",
+      "description": "请通过以下表单联系我们。我们将在2个工作日内回复。",
+      "fields": {
+        "name": "姓名",
+        "email": "邮箱地址",
+        "phone": "电话号码",
+        "category": "咨询内容",
+        "message": "咨询详情"
+      },
+      "categoryOptions": {
+        "placeholder": "请选择",
+        "rental": "租赁咨询",
+        "sale": "买卖咨询",
+        "management": "管理咨询",
+        "subsidy": "补助金・助成金",
+        "visa": "签证・在留资格",
+        "labor": "社会保险・劳务",
+        "other": "其他"
+      }
+    }
+  },
+  "thanks": {
+    "metaTitle": "提交成功 | 四葉パートナーズ",
+    "metaDescription": "已收到您的咨询。",
+    "title": "已收到您的咨询",
+    "description1": "我们将在2个工作日内回复。",
+    "description2": "请稍候。"
+  },
+  "privacyPolicy": {
+    "metaTitle": "隐私政策 | 四葉パートナーズ",
+    "metaDescription": "四葉パートナーズ的隐私政策。",
+    "title": "隐私政策",
+    "sections": {
+      "collection": {
+        "title": "1. 个人信息的获取",
+        "content": "四葉パートナーズ（以下简称\"本公司\"）可能会通过咨询表单、电话、邮件等方式获取您的姓名、邮箱地址、电话号码、住址等个人信息。"
+      },
+      "purpose": {
+        "title": "2. 使用目的",
+        "content": "获取的个人信息将用于以下目的。",
+        "items": [
+          "回复・处理咨询",
+          "提供不动产交易、行政手续、劳务咨询相关服务",
+          "用于服务改善的分析"
+        ]
+      },
+      "thirdParty": {
+        "title": "3. 向第三方提供",
+        "content": "除法律规定的情况外，未经本人同意，不会向第三方提供个人信息。"
+      },
+      "security": {
+        "title": "4. 安全管理",
+        "content": "为防止个人信息的泄露、丢失、损毁，我们将采取适当的安全管理措施。"
+      },
+      "inquiry": {
+        "title": "5. 咨询",
+        "content": "如有关于个人信息处理的咨询，请通过以下方式联系我们。",
+        "contactInfo": "四葉パートナーズ　TEL: 03-6161-9428"
+      }
+    }
+  },
+  "terms": {
+    "metaTitle": "使用条款 | 四葉パートナーズ",
+    "metaDescription": "四葉パートナーズ的使用条款。",
+    "title": "使用条款",
+    "sections": {
+      "application": {
+        "title": "第1条（适用）",
+        "content": "本条款是关于四葉パートナーズ（以下简称\"本公司\"）运营的网站（以下简称\"本站\"）使用条件的规定。"
+      },
+      "prohibited": {
+        "title": "第2条（禁止事项）",
+        "content": "用户在使用本站时，不得进行以下行为。",
+        "items": [
+          "违反法律法规或公序良俗的行为",
+          "侵害本公司或第三方权利的行为",
+          "妨碍本站运营的行为"
+        ]
+      },
+      "disclaimer": {
+        "title": "第3条（免责声明）",
+        "content": "本公司不对本站所载信息的准确性和完整性做出保证。对于因使用本站而产生的损害，本公司不承担任何责任。"
+      },
+      "changes": {
+        "title": "第4条（变更）",
+        "content": "本公司可在必要时变更本条款。变更后的条款自在本站发布时起生效。"
+      }
+    }
+  },
+  "legalNotice": {
+    "metaTitle": "基于不动产交易业法的标注 | 四葉不動産",
+    "metaDescription": "四葉不動産株式会社基于不动产交易业法的标注。",
+    "title": "基于不动产交易业法的标注",
+    "items": [
+      { "label": "商号", "value": "四葉不動産株式会社" },
+      { "label": "代表者", "value": "浦松 丈二" },
+      { "label": "所在地", "value": "〒112-0006 東京都文京区小日向4丁目2−5 小日向安田ビル 2F" },
+      { "label": "许可证号", "value": "東京都知事（1）第113304号" },
+      { "label": "专任不动产交易士", "value": "浦松丈二（登记号：（東京）第293544号）" },
+      { "label": "电话号码", "value": "03-6161-9428" },
+      { "label": "营业时间", "value": "9:00〜18:00（工作日及周末）" }
+    ]
+  },
+  "breadcrumbs": {
+    "home": "首页",
+    "services": "服务内容",
+    "about": "公司概况",
+    "officeAbout": "事务所概况",
+    "column": "专栏",
+    "contact": "联系我们",
+    "legalNotice": "基于不动产交易业法的标注"
+  }
+}

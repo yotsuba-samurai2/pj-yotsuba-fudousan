@@ -1,0 +1,80 @@
+[
+  {
+    "business": "realestate",
+    "slug": "example-slug",
+    "title": "記事タイトル",
+    "date": "2026-01-01",
+    "category": "カテゴリ名",
+    "excerpt": "記事の概要文。一覧ページに表示される短い説明。",
+    "paragraphs": [
+      "本文の段落1。",
+      "本文の段落2。"
+    ],
+    "modifiedDate": "2026-01-02",
+    "ogImage": "/assets/images/og-example.jpg",
+    "author": {
+      "name": "浦松 丈二",
+      "title": "代表取締役"
+    },
+    "keywords": ["文京区 不動産", "外国人 賃貸", "5言語対応"],
+    "faq": [
+      {
+        "question": "よくある質問",
+        "answer": "回答テキスト"
+      }
+    ],
+    "tags": ["不動産", "外国人サポート"]
+  },
+  {
+    "business": "legal",
+    "slug": "example-slug",
+    "title": "記事タイトル",
+    "date": "2026-01-01",
+    "category": "カテゴリ名",
+    "excerpt": "記事の概要文。一覧ページに表示される短い説明。",
+    "paragraphs": [
+      "本文の段落1。",
+      "本文の段落2。"
+    ],
+    "modifiedDate": "2026-01-02",
+    "ogImage": "/assets/images/og-example.jpg",
+    "author": {
+      "name": "浦松 丈二",
+      "title": "代表行政書士"
+    },
+    "keywords": ["補助金 申請", "ビザ 行政書士", "会社設立 文京区"],
+    "faq": [
+      {
+        "question": "よくある質問",
+        "answer": "回答テキスト"
+      }
+    ],
+    "tags": ["補助金", "ビザ"]
+  },
+  {
+    "business": "labor",
+    "slug": "example-slug",
+    "title": "記事タイトル",
+    "date": "2026-01-01",
+    "category": "カテゴリ名",
+    "excerpt": "記事の概要文。一覧ページに表示される短い説明。",
+    "paragraphs": [
+      "本文の段落1。",
+      "本文の段落2。"
+    ],
+    "modifiedDate": "2026-01-02",
+    "ogImage": "/assets/images/og-example.jpg",
+    "author": {
+      "name": "浦松 丈二",
+      "title": "社会保険労務士"
+    },
+    "keywords": ["社会保険 手続き", "助成金 申請", "就業規則 作成"],
+    "faq": [
+      {
+        "question": "よくある質問",
+        "answer": "回答テキスト"
+      }
+    ],
+    "tags": ["社会保険", "助成金"]
+  }
+]

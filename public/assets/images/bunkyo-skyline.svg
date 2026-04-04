@@ -1,0 +1,211 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" fill="none">
+  <defs>
+    <!-- Logo color palette -->
+    <linearGradient id="green-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#006B3C"/>
+      <stop offset="100%" stop-color="#8CC63F"/>
+    </linearGradient>
+    <linearGradient id="light-green-grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8CC63F" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#006B3C" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- === Sloped street (文京区の坂道) === -->
+  <path d="M0 380 Q300 340 600 350 Q900 360 1200 330 L1200 400 L0 400Z" fill="#006B3C" opacity="0.08"/>
+  <path d="M0 385 Q300 350 600 358 Q900 365 1200 340" stroke="#006B3C" stroke-width="2" opacity="0.3"/>
+
+  <!-- === Background trees (六義園の木々) === -->
+  <g opacity="0.15">
+    <circle cx="80" cy="280" r="40" fill="#8CC63F"/>
+    <circle cx="60" cy="270" r="35" fill="#006B3C"/>
+    <rect x="68" y="310" width="6" height="30" fill="#006B3C"/>
+  </g>
+  <g opacity="0.12">
+    <circle cx="180" cy="290" r="30" fill="#8CC63F"/>
+    <circle cx="165" cy="282" r="28" fill="#006B3C"/>
+    <rect x="172" y="312" width="5" height="25" fill="#006B3C"/>
+  </g>
+  <g opacity="0.1">
+    <circle cx="1050" cy="275" r="35" fill="#8CC63F"/>
+    <circle cx="1035" cy="268" r="32" fill="#006B3C"/>
+    <rect x="1042" y="300" width="5" height="28" fill="#006B3C"/>
+  </g>
+
+  <!-- === Building 1: マンション (left) === -->
+  <g>
+    <rect x="120" y="180" width="80" height="200" rx="2" stroke="#006B3C" stroke-width="2" fill="none" opacity="0.6"/>
+    <!-- windows -->
+    <rect x="132" y="195" width="12" height="16" rx="1" stroke="#8CC63F" stroke-width="1.5" fill="none" opacity="0.5"/>
+    <rect x="152" y="195" width="12" height="16" rx="1" stroke="#8CC63F" stroke-width="1.5" fill="none" opacity="0.5"/>
+    <rect x="172" y="195" width="12" height="16" rx="1" stroke="#8CC63F" stroke-width="1.5" fill="none" opacity="0.5"/>
+    <rect x="132" y="225" width="12" height="16" rx="1" stroke="#8CC63F" stroke-width="1.5" fill="none" opacity="0.5"/>
+    <rect x="152" y="225" width="12" height="16" rx="1" stroke="#8CC63F" stroke-width="1.5" fill="none" opacity="0.5"/>
+    <rect x="172" y="225" width="12" height="16" rx="1" stroke="#8CC63F" stroke-width="1.5" fill="none" opacity="0.5"/>
+    <rect x="132" y="255" width="12" height="16" rx="1" stroke="#8CC63F" stroke-width="1.5" fill="none" opacity="0.5"/>
+    <rect x="152" y="255" width="12" height="16" rx="1" stroke="#8CC63F" stroke-width="1.5" fill="none" opacity="0.5"/>
+    <rect x="172" y="255" width="12" height="16" rx="1" stroke="#8CC63F" stroke-width="1.5" fill="none" opacity="0.5"/>
+    <rect x="132" y="285" width="12" height="16" rx="1" stroke="#8CC63F" stroke-width="1.5" fill="none" opacity="0.5"/>
+    <rect x="152" y="285" width="12" height="16" rx="1" stroke="#8CC63F" stroke-width="1.5" fill="none" opacity="0.5"/>
+    <rect x="172" y="285" width="12" height="16" rx="1" stroke="#8CC63F" stroke-width="1.5" fill="none" opacity="0.5"/>
+    <!-- entrance -->
+    <rect x="148" y="345" width="24" height="35" rx="2" stroke="#006B3C" stroke-width="1.5" fill="none" opacity="0.5"/>
+  </g>
+
+  <!-- === Building 2: 低層住宅 with slope === -->
+  <g>
+    <rect x="230" y="280" width="60" height="100" rx="2" stroke="#006B3C" stroke-width="2" fill="none" opacity="0.5"/>
+    <!-- roof -->
+    <path d="M225 280 L260 255 L295 280" stroke="#006B3C" stroke-width="2" fill="none" opacity="0.5"/>
+    <!-- windows -->
+    <rect x="240" y="295" width="14" height="14" rx="1" stroke="#8CC63F" stroke-width="1.5" fill="none" opacity="0.4"/>
+    <rect x="266" y="295" width="14" height="14" rx="1" stroke="#8CC63F" stroke-width="1.5" fill="none" opacity="0.4"/>
+    <!-- door -->
+    <rect x="250" y="350" width="18" height="30" rx="1" stroke="#006B3C" stroke-width="1.5" fill="none" opacity="0.4"/>
+  </g>
+
+  <!-- === 東京大学 赤門 (Akamon gate - center) === -->
+  <g transform="translate(420, 0)">
+    <!-- Main gate pillars -->
+    <rect x="0" y="220" width="20" height="160" rx="2" stroke="#006B3C" stroke-width="2.5" fill="none" opacity="0.7"/>
+    <rect x="140" y="220" width="20" height="160" rx="2" stroke="#006B3C" stroke-width="2.5" fill="none" opacity="0.7"/>
+    <!-- Inner pillars -->
+    <rect x="30" y="250" width="12" height="130" rx="1" stroke="#006B3C" stroke-width="2" fill="none" opacity="0.5"/>
+    <rect x="118" y="250" width="12" height="130" rx="1" stroke="#006B3C" stroke-width="2" fill="none" opacity="0.5"/>
+    <!-- Roof (traditional curved) -->
+    <path d="M-15 220 Q10 195 80 185 Q150 195 175 220" stroke="#006B3C" stroke-width="2.5" fill="none" opacity="0.7"/>
+    <path d="M-10 228 Q10 205 80 196 Q150 205 170 228" stroke="#8CC63F" stroke-width="2" fill="none" opacity="0.5"/>
+    <!-- Ridge decoration -->
+    <path d="M65 185 L80 170 L95 185" stroke="#006B3C" stroke-width="2" fill="none" opacity="0.6"/>
+    <!-- Gate beam -->
+    <line x1="20" y1="260" x2="140" y2="260" stroke="#006B3C" stroke-width="2" opacity="0.5"/>
+    <line x1="20" y1="280" x2="140" y2="280" stroke="#8CC63F" stroke-width="1.5" opacity="0.3"/>
+    <!-- Side roof wings -->
+    <path d="M20 248 Q-5 240 -20 250" stroke="#006B3C" stroke-width="2" fill="none" opacity="0.5"/>
+    <path d="M140 248 Q165 240 180 250" stroke="#006B3C" stroke-width="2" fill="none" opacity="0.5"/>
+  </g>
+
+  <!-- === Building 3: 大学建物風 === -->
+  <g>
+    <rect x="640" y="200" width="100" height="180" rx="2" stroke="#006B3C" stroke-width="2" fill="none" opacity="0.5"/>
+    <!-- clock/ornament circle -->
+    <circle cx="690" cy="225" r="12" stroke="#006B3C" stroke-width="1.5" fill="none" opacity="0.5"/>
+    <!-- windows row 1 -->
+    <rect x="652" y="250" width="14" height="20" rx="1" stroke="#8CC63F" stroke-width="1.5" fill="none" opacity="0.4"/>
+    <rect x="676" y="250" width="14" height="20" rx="1" stroke="#8CC63F" stroke-width="1.5" fill="none" opacity="0.4"/>
+    <rect x="700" y="250" width="14" height="20" rx="1" stroke="#8CC63F" stroke-width="1.5" fill="none" opacity="0.4"/>
+    <rect x="724" y="250" width="14" height="20" rx="1" stroke="#8CC63F" stroke-width="1.5" fill="none" opacity="0.4"/>
+    <!-- windows row 2 -->
+    <rect x="652" y="285" width="14" height="20" rx="1" stroke="#8CC63F" stroke-width="1.5" fill="none" opacity="0.4"/>
+    <rect x="676" y="285" width="14" height="20" rx="1" stroke="#8CC63F" stroke-width="1.5" fill="none" opacity="0.4"/>
+    <rect x="700" y="285" width="14" height="20" rx="1" stroke="#8CC63F" stroke-width="1.5" fill="none" opacity="0.4"/>
+    <rect x="724" y="285" width="14" height="20" rx="1" stroke="#8CC63F" stroke-width="1.5" fill="none" opacity="0.4"/>
+    <!-- entrance arch -->
+    <path d="M676 380 L676 350 Q690 338 704 350 L704 380" stroke="#006B3C" stroke-width="1.5" fill="none" opacity="0.5"/>
+  </g>
+
+  <!-- === 湯島天神 鳥居 (Torii gate) === -->
+  <g transform="translate(820, 0)">
+    <!-- Main pillars -->
+    <line x1="20" y1="250" x2="20" y2="380" stroke="#006B3C" stroke-width="3" opacity="0.7"/>
+    <line x1="120" y1="250" x2="120" y2="380" stroke="#006B3C" stroke-width="3" opacity="0.7"/>
+    <!-- Kasagi (top beam - curved) -->
+    <path d="M5 250 Q70 238 135 250" stroke="#006B3C" stroke-width="3" fill="none" opacity="0.7"/>
+    <!-- Shimaki (second beam) -->
+    <line x1="10" y1="258" x2="130" y2="258" stroke="#006B3C" stroke-width="2" opacity="0.6"/>
+    <!-- Nuki (horizontal beam) -->
+    <line x1="20" y1="280" x2="120" y2="280" stroke="#8CC63F" stroke-width="2.5" opacity="0.5"/>
+    <!-- Gakuzuka (tablet) -->
+    <rect x="52" y="262" width="36" height="14" rx="2" stroke="#006B3C" stroke-width="1.5" fill="none" opacity="0.5"/>
+    <!-- Pillar bases -->
+    <rect x="12" y="370" width="16" height="10" rx="1" stroke="#006B3C" stroke-width="1.5" fill="none" opacity="0.5"/>
+    <rect x="112" y="370" width="16" height="10" rx="1" stroke="#006B3C" stroke-width="1.5" fill="none" opacity="0.5"/>
+    <!-- Stone steps -->
+    <rect x="35" y="378" width="70" height="4" rx="1" stroke="#8CC63F" stroke-width="1" fill="none" opacity="0.3"/>
+    <rect x="30" y="384" width="80" height="4" rx="1" stroke="#8CC63F" stroke-width="1" fill="none" opacity="0.25"/>
+    <rect x="25" y="390" width="90" height="4" rx="1" stroke="#8CC63F" stroke-width="1" fill="none" opacity="0.2"/>
+  </g>
+
+  <!-- === Building 4: タワーマンション (right) === -->
+  <g>
+    <rect x="1000" y="140" width="70" height="240" rx="2" stroke="#006B3C" stroke-width="2" fill="none" opacity="0.5"/>
+    <!-- windows -->
+    <g opacity="0.4">
+      <rect x="1012" y="158" width="10" height="12" rx="1" stroke="#8CC63F" stroke-width="1.2" fill="none"/>
+      <rect x="1030" y="158" width="10" height="12" rx="1" stroke="#8CC63F" stroke-width="1.2" fill="none"/>
+      <rect x="1048" y="158" width="10" height="12" rx="1" stroke="#8CC63F" stroke-width="1.2" fill="none"/>
+      <rect x="1012" y="182" width="10" height="12" rx="1" stroke="#8CC63F" stroke-width="1.2" fill="none"/>
+      <rect x="1030" y="182" width="10" height="12" rx="1" stroke="#8CC63F" stroke-width="1.2" fill="none"/>
+      <rect x="1048" y="182" width="10" height="12" rx="1" stroke="#8CC63F" stroke-width="1.2" fill="none"/>
+      <rect x="1012" y="206" width="10" height="12" rx="1" stroke="#8CC63F" stroke-width="1.2" fill="none"/>
+      <rect x="1030" y="206" width="10" height="12" rx="1" stroke="#8CC63F" stroke-width="1.2" fill="none"/>
+      <rect x="1048" y="206" width="10" height="12" rx="1" stroke="#8CC63F" stroke-width="1.2" fill="none"/>
+      <rect x="1012" y="230" width="10" height="12" rx="1" stroke="#8CC63F" stroke-width="1.2" fill="none"/>
+      <rect x="1030" y="230" width="10" height="12" rx="1" stroke="#8CC63F" stroke-width="1.2" fill="none"/>
+      <rect x="1048" y="230" width="10" height="12" rx="1" stroke="#8CC63F" stroke-width="1.2" fill="none"/>
+      <rect x="1012" y="254" width="10" height="12" rx="1" stroke="#8CC63F" stroke-width="1.2" fill="none"/>
+      <rect x="1030" y="254" width="10" height="12" rx="1" stroke="#8CC63F" stroke-width="1.2" fill="none"/>
+      <rect x="1048" y="254" width="10" height="12" rx="1" stroke="#8CC63F" stroke-width="1.2" fill="none"/>
+      <rect x="1012" y="278" width="10" height="12" rx="1" stroke="#8CC63F" stroke-width="1.2" fill="none"/>
+      <rect x="1030" y="278" width="10" height="12" rx="1" stroke="#8CC63F" stroke-width="1.2" fill="none"/>
+      <rect x="1048" y="278" width="10" height="12" rx="1" stroke="#8CC63F" stroke-width="1.2" fill="none"/>
+    </g>
+    <!-- rooftop -->
+    <rect x="1020" y="132" width="30" height="10" rx="1" stroke="#006B3C" stroke-width="1.5" fill="none" opacity="0.4"/>
+  </g>
+
+  <!-- === 低層住宅 (far right) === -->
+  <g>
+    <rect x="1100" y="300" width="55" height="80" rx="2" stroke="#006B3C" stroke-width="2" fill="none" opacity="0.45"/>
+    <path d="M1095 300 L1127 275 L1160 300" stroke="#006B3C" stroke-width="2" fill="none" opacity="0.45"/>
+    <rect x="1110" y="318" width="12" height="12" rx="1" stroke="#8CC63F" stroke-width="1.2" fill="none" opacity="0.35"/>
+    <rect x="1133" y="318" width="12" height="12" rx="1" stroke="#8CC63F" stroke-width="1.2" fill="none" opacity="0.35"/>
+    <rect x="1118" y="352" width="16" height="28" rx="1" stroke="#006B3C" stroke-width="1.2" fill="none" opacity="0.35"/>
+  </g>
+
+  <!-- === 四つ葉クローバー装飾 (scattered) === -->
+  <!-- Clover 1 (top left) -->
+  <g transform="translate(50, 60) scale(0.5)" opacity="0.25">
+    <path d="M0 -12 C-8 -20 -20 -12 -12 0 C-20 8 -8 20 0 12 C8 20 20 8 12 0 C20 -12 8 -20 0 -12Z" stroke="#8CC63F" stroke-width="2.5" fill="none"/>
+    <line x1="0" y1="12" x2="4" y2="28" stroke="#8CC63F" stroke-width="2"/>
+  </g>
+  <!-- Clover 2 (top center-right) -->
+  <g transform="translate(780, 40) scale(0.4)" opacity="0.2">
+    <path d="M0 -12 C-8 -20 -20 -12 -12 0 C-20 8 -8 20 0 12 C8 20 20 8 12 0 C20 -12 8 -20 0 -12Z" stroke="#006B3C" stroke-width="2.5" fill="none"/>
+    <line x1="0" y1="12" x2="4" y2="28" stroke="#006B3C" stroke-width="2"/>
+  </g>
+  <!-- Clover 3 (bottom right) -->
+  <g transform="translate(1150, 200) scale(0.35)" opacity="0.18">
+    <path d="M0 -12 C-8 -20 -20 -12 -12 0 C-20 8 -8 20 0 12 C8 20 20 8 12 0 C20 -12 8 -20 0 -12Z" stroke="#8CC63F" stroke-width="2.5" fill="none"/>
+    <line x1="0" y1="12" x2="4" y2="28" stroke="#8CC63F" stroke-width="2"/>
+  </g>
+  <!-- Clover 4 (mid left) -->
+  <g transform="translate(320, 150) scale(0.3)" opacity="0.15">
+    <path d="M0 -12 C-8 -20 -20 -12 -12 0 C-20 8 -8 20 0 12 C8 20 20 8 12 0 C20 -12 8 -20 0 -12Z" stroke="#006B3C" stroke-width="2.5" fill="none"/>
+    <line x1="0" y1="12" x2="4" y2="28" stroke="#006B3C" stroke-width="2"/>
+  </g>
+
+  <!-- === Checker pattern (市松模様 - matching logo) === -->
+  <g opacity="0.25">
+    <rect x="0" y="396" width="8" height="4" fill="#006B3C"/>
+    <rect x="16" y="396" width="8" height="4" fill="#006B3C"/>
+    <rect x="32" y="396" width="8" height="4" fill="#006B3C"/>
+    <rect x="48" y="396" width="8" height="4" fill="#006B3C"/>
+    <rect x="64" y="396" width="8" height="4" fill="#006B3C"/>
+    <rect x="80" y="396" width="8" height="4" fill="#006B3C"/>
+    <rect x="96" y="396" width="8" height="4" fill="#006B3C"/>
+    <rect x="112" y="396" width="8" height="4" fill="#006B3C"/>
+    <rect x="128" y="396" width="8" height="4" fill="#006B3C"/>
+    <rect x="144" y="396" width="8" height="4" fill="#006B3C"/>
+    <rect x="1040" y="396" width="8" height="4" fill="#006B3C"/>
+    <rect x="1056" y="396" width="8" height="4" fill="#006B3C"/>
+    <rect x="1072" y="396" width="8" height="4" fill="#006B3C"/>
+    <rect x="1088" y="396" width="8" height="4" fill="#006B3C"/>
+    <rect x="1104" y="396" width="8" height="4" fill="#006B3C"/>
+    <rect x="1120" y="396" width="8" height="4" fill="#006B3C"/>
+    <rect x="1136" y="396" width="8" height="4" fill="#006B3C"/>
+    <rect x="1152" y="396" width="8" height="4" fill="#006B3C"/>
+    <rect x="1168" y="396" width="8" height="4" fill="#006B3C"/>
+    <rect x="1184" y="396" width="8" height="4" fill="#006B3C"/>
+  </g>
+</svg>
