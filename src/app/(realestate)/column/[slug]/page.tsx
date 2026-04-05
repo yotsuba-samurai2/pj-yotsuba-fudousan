@@ -3,6 +3,8 @@ import { getColumnBySlug, columns, getAllSlugs } from "@/lib/columns";
 import { buildPageMetadata } from "@/lib/seo";
 import { BlogPostingJsonLd } from "@/components/seo/BlogPostingJsonLd";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
+import { FAQJsonLd } from "@/components/seo/FAQJsonLd";
+
 import type { Metadata } from "next";
 import ColumnDetailContent from "./ColumnDetailContent";
 
@@ -50,6 +52,7 @@ export default async function ColumnDetailPage({ params }: Props) {
         { name: "コラム", href: "/column" },
         { name: col.title, href: `/column/${col.slug}` },
       ]} />
+      {col.faq && col.faq.length > 0 && <FAQJsonLd items={col.faq} />}
       <ColumnDetailContent col={col} prev={prev} next={next} />
     </div>
   );

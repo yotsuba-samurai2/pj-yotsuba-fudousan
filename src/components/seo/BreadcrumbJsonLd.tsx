@@ -38,7 +38,7 @@ export function BreadcrumbJsonLd({
           {items.map((item, i) => {
             const isLast = i === items.length - 1;
             return (
-              <li key={item.href} className="flex items-center gap-1">
+              <li key={i} className="flex items-center gap-1">
                 {i > 0 && (
                   <ChevronRight size={12} className="shrink-0 text-text-muted/50" />
                 )}

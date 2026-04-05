@@ -3,6 +3,8 @@ import { getLaborColumnBySlug, laborColumns, getAllLaborSlugs } from "@/lib/colu
 import { buildPageMetadata } from "@/lib/seo";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { BlogPostingJsonLd } from "@/components/seo/BlogPostingJsonLd";
+import { FAQJsonLd } from "@/components/seo/FAQJsonLd";
+
 import { LaborColumnDetailPageContent } from "./PageContent";
 import type { Metadata } from "next";
 
@@ -47,6 +49,7 @@ export default async function LaborColumnDetailPage({ params }: Props) {
         { name: "コラム", href: "/labor/column" },
         { name: col.title, href: `/labor/column/${col.slug}` },
       ]} />
+      {col.faq && col.faq.length > 0 && <FAQJsonLd items={col.faq} />}
       <LaborColumnDetailPageContent col={col} prev={prev} next={next} />
     </div>
   );

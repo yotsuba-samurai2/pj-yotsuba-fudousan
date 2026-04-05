@@ -20,7 +20,7 @@ export function LanguageSwitcher() {
                 ? "cta-gradient-text font-bold"
                 : "text-text-muted hover:text-text"
             }`}
-            aria-label={`Switch language to ${label}`}
+            aria-label={`${label}`}
           >
             {label}
           </button>

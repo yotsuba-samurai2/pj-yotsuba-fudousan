@@ -76,7 +76,10 @@ export const BUSINESS_SEO: Record<string, BusinessSEOConfig> = {
  * マルチテナントのcanonical URL生成
  * 内部パス `/legal/about` → `https://yotsuba-legal.com/about`
  */
-export function canonicalUrl(businessKey: string, internalPath: string): string {
+export function canonicalUrl(
+  businessKey: string,
+  internalPath: string,
+): string {
   const baseUrl = BUSINESS_URLS[businessKey] ?? SITE_URL;
   const biz = groupBusinesses.find((b) => b.key === businessKey);
   const prefix = biz?.pathPrefix ?? "/";
@@ -147,12 +150,24 @@ export function buildPageMetadata({
         }
       : {};
 
+  const bUrl = BUSINESS_URLS[businessKey] ?? SITE_URL;
+  // publicPath is the path portion after the domain (extracted from canonical url)
+  const publicPath = url.replace(bUrl, "") || "/";
+  const langPath = publicPath === "/" ? "" : publicPath;
+
   return {
     title,
     description,
     ...(keywords?.length ? { keywords } : {}),
     alternates: {
       canonical: url,
+      languages: {
+        ja: `${bUrl}${langPath}`,
+        en: `${bUrl}/en${langPath}`,
+        "zh-Hant": `${bUrl}/zh-tw${langPath}`,
+        "zh-Hans": `${bUrl}/zh${langPath}`,
+        "x-default": `${bUrl}${langPath}`,
+      },
     },
     openGraph: { ...ogBase, ...articleFields },
     twitter: {

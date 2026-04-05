@@ -1,15 +1,28 @@
 import { NextRequest, NextResponse } from "next/server";
 
 /**
- * ホスト名ベースのマルチテナントルーティング
+ * ミドルウェア: ロケール検出 → テナントリライト
  *
- * 各ドメインからのリクエストを内部パスにリライトする。
- * - yotsuba-fudousan.com  /about → /about（そのまま）
- * - yotsuba-legal.com     /about → /legal/about
- * - yotsuba-labor.com     /about → /labor/about
- *
- * 開発時: legal.localhost:3003/about → /legal/about
+ * 1. ロケールプレフィックスの検出・ストリップ (/en/services → /services, locale=en)
+ * 2. ホスト名ベースのテナントリライト (yotsuba-legal.com/about → /legal/about)
  */
+
+// ── Locale ──
+
+const NON_DEFAULT_LOCALES = ["en", "zh-tw", "zh"];
+const LOCALE_COOKIE = "yotsuba-locale";
+
+function detectAndStripLocale(pathname: string): { locale: string; stripped: string } {
+  for (const loc of NON_DEFAULT_LOCALES) {
+    if (pathname === `/${loc}` || pathname.startsWith(`/${loc}/`)) {
+      const stripped = pathname.slice(loc.length + 1) || "/";
+      return { locale: loc, stripped };
+    }
+  }
+  return { locale: "ja", stripped: pathname };
+}
+
+// ── Tenant ──
 
 type TenantConfig = {
   pathPrefix: string;
@@ -28,7 +41,6 @@ const tenants: TenantConfig[] = [
     domains: ["yotsuba-labor.com", "www.yotsuba-labor.com"],
     subdomains: ["labor"],
   },
-  // realestate はデフォルト（リライト不要）
 ];
 
 function getTenantPrefix(host: string): string | null {
@@ -38,45 +50,86 @@ function getTenantPrefix(host: string): string | null {
     if (tenant.domains.includes(hostname)) return tenant.pathPrefix;
   }
 
-  // localhost開発用: legal.localhost → /legal
   const sub = hostname.split(".")[0];
   for (const tenant of tenants) {
     if (tenant.subdomains.includes(sub)) return tenant.pathPrefix;
   }
 
-  return null; // デフォルト（不動産）: リライトなし
+  return null;
 }
 
-export function middleware(request: NextRequest) {
-  const host = request.headers.get("host") || "";
-  const prefix = getTenantPrefix(host);
+// ── Skip patterns ──
 
-  if (!prefix) return NextResponse.next();
-
-  const { pathname } = request.nextUrl;
-
-  // 既にプレフィクスが付いている場合はリライト不要
-  if (pathname.startsWith(prefix)) return NextResponse.next();
-
-  // 静的ファイル・API・_next はスキップ
+function shouldSkip(pathname: string): boolean {
   if (
     pathname.startsWith("/_next") ||
     pathname.startsWith("/api") ||
+    pathname.startsWith("/admin") ||
     pathname.includes(".")
   ) {
-    return NextResponse.next();
+    return true;
+  }
+  return false;
+}
+
+const sharedPaths = ["/privacy-policy", "/terms", "/legal-notice"];
+
+function isSharedPath(pathname: string): boolean {
+  return sharedPaths.some((p) => pathname === p || pathname.startsWith(p + "/"));
+}
+
+// ── Middleware ──
+
+export function middleware(request: NextRequest) {
+  const { pathname } = request.nextUrl;
+
+  // スキップ（静的ファイル、API、管理画面）
+  if (shouldSkip(pathname)) return NextResponse.next();
+
+  // Step 1: ロケール検出・ストリップ
+  const { locale, stripped } = detectAndStripLocale(pathname);
+
+  // Step 2: テナント検出
+  const host = request.headers.get("host") || "";
+  const tenantPrefix = getTenantPrefix(host);
+
+  // リライト先パスを決定
+  let rewritePath = stripped;
+
+  if (tenantPrefix && !stripped.startsWith(tenantPrefix) && !isSharedPath(stripped)) {
+    rewritePath = `${tenantPrefix}${stripped}`;
   }
 
-  // 共通ページはリライトしない（全テナント共通）
-  const sharedPaths = ["/privacy-policy", "/terms", "/legal-notice"];
-  if (sharedPaths.some((p) => pathname === p || pathname.startsWith(p + "/"))) {
-    return NextResponse.next();
+  // ロケールプレフィックスがあった場合、またはCookie設定が必要な場合
+  const needsRewrite = rewritePath !== pathname;
+
+  if (needsRewrite || locale !== "ja") {
+    const url = request.nextUrl.clone();
+    url.pathname = rewritePath;
+
+    const response = needsRewrite
+      ? NextResponse.rewrite(url)
+      : NextResponse.next();
+
+    // ロケール情報をCookieとヘッダーで伝搬
+    response.headers.set("x-locale", locale);
+    response.cookies.set(LOCALE_COOKIE, locale, {
+      path: "/",
+      maxAge: 60 * 60 * 24 * 365,
+      sameSite: "lax",
+    });
+
+    return response;
   }
 
-  // /about → /legal/about にリライト
-  const url = request.nextUrl.clone();
-  url.pathname = `${prefix}${pathname}`;
-  return NextResponse.rewrite(url);
+  // テナントリライトのみ必要な場合
+  if (tenantPrefix && !stripped.startsWith(tenantPrefix) && !isSharedPath(stripped)) {
+    const url = request.nextUrl.clone();
+    url.pathname = `${tenantPrefix}${stripped}`;
+    return NextResponse.rewrite(url);
+  }
+
+  return NextResponse.next();
 }
 
 export const config = {

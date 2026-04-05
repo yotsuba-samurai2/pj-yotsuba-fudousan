@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useTranslation } from "@/hooks/useTranslation";
+import ColumnBody from "@/components/column/ColumnBody";
 import type { Column } from "@/lib/columns";
 
 type Props = {
@@ -38,11 +39,7 @@ export default function LegalColumnDetailContent({ column: col, prev, next }: Pr
               <p className="text-xs text-text-muted">{t("legal.columnDetail.authorTitle")}</p>
             </div>
           </div>
-          <div className="space-y-6">
-            {col.paragraphs.map((p, i) => (
-              <p key={i} className="text-sm leading-[2] text-text-muted sm:text-base">{p}</p>
-            ))}
-          </div>
+          <ColumnBody content={col.content} />
           <div className="mt-16 grid gap-4 border-t border-border pt-8 sm:grid-cols-2">
             {prev ? (
               <Link href={`/legal/column/${prev.slug}`} className="group rounded-lg border border-border p-4 transition-all hover:border-primary/30 hover:shadow-md">

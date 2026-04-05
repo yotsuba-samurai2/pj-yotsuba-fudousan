@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { SITE_URL } from "@/lib/seo";
+import { BUSINESS_URLS } from "@/lib/seo";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -7,9 +7,9 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/thanks", "/api/"],
+        disallow: ["/thanks", "/api/", "/admin/"],
       },
     ],
-    sitemap: `${SITE_URL}/sitemap.xml`,
+    sitemap: Object.values(BUSINESS_URLS).map((url) => `${url}/sitemap.xml`),
   };
 }

@@ -3,6 +3,8 @@ import { getLegalColumnBySlug, legalColumns, getAllLegalSlugs } from "@/lib/colu
 import { buildPageMetadata } from "@/lib/seo";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { BlogPostingJsonLd } from "@/components/seo/BlogPostingJsonLd";
+import { FAQJsonLd } from "@/components/seo/FAQJsonLd";
+
 import LegalColumnDetailContent from "./LegalColumnDetailContent";
 import type { Metadata } from "next";
 
@@ -47,6 +49,7 @@ export default async function LegalColumnDetailPage({ params }: Props) {
         { name: "コラム", href: "/legal/column" },
         { name: col.title, href: `/legal/column/${col.slug}` },
       ]} />
+      {col.faq && col.faq.length > 0 && <FAQJsonLd items={col.faq} />}
       <LegalColumnDetailContent column={col} prev={prev} next={next} />
     </div>
   );

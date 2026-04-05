@@ -49,6 +49,20 @@ export function OrganizationJsonLd({ businessKey }: { businessKey: string }) {
           name: SHARED_ORG_INFO.name,
           url: "https://yotsuba-fudousan.com",
         },
+        founder: {
+          "@type": "Person",
+          name: SHARED_ORG_INFO.representative,
+          jobTitle: "代表取締役",
+        },
+        areaServed: {
+          "@type": "GeoCircle",
+          geoMidpoint: {
+            "@type": "GeoCoordinates",
+            latitude: SHARED_ORG_INFO.geo.latitude,
+            longitude: SHARED_ORG_INFO.geo.longitude,
+          },
+          geoRadius: "50000",
+        },
         knowsLanguage: ["ja", "en", "zh-Hant", "zh-Hans", "th"],
       }}
     />

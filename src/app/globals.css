@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 /* ─── Smooth scroll ─── */
 html {
@@ -46,26 +47,12 @@ html {
   inset: 0;
   z-index: -1;
   border-radius: inherit;
-  background: linear-gradient(
-    135deg,
-    var(--color-primary) 0%,
-    var(--color-secondary) 50%,
-    var(--color-accent) 100%
-  );
-  background-size: 200% 100%;
-  background-position: 100% 0;
+  background: var(--color-primary);
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.2s ease;
 }
 .cta-gradient-outline:hover::after {
-  opacity: 1;
-  animation: gradientSweep 0.8s ease forwards;
-}
-.cta-gradient-outline:hover .cta-gradient-text {
-  background: none;
-  -webkit-background-clip: unset;
-  background-clip: unset;
-  color: white;
+  opacity: 0.05;
 }
 .cta-gradient-text {
   position: relative;
@@ -89,6 +76,16 @@ html {
     var(--color-primary) 0%,
     var(--color-secondary) 50%,
     var(--color-accent) 100%
+  );
+}
+
+/* ─── Gradient button (70% opacity) ─── */
+.gradient-btn {
+  background: linear-gradient(
+    to bottom right,
+    color-mix(in srgb, var(--color-primary) 70%, transparent) 0%,
+    color-mix(in srgb, var(--color-secondary) 70%, transparent) 50%,
+    color-mix(in srgb, var(--color-accent) 70%, transparent) 100%
   );
 }
 

@@ -1,0 +1,38 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "columns",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "business", "order": "ASCENDING" },
+        { "fieldPath": "status", "order": "ASCENDING" },
+        { "fieldPath": "date", "order": "DESCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "columns",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "status", "order": "ASCENDING" },
+        { "fieldPath": "date", "order": "DESCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "columns",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "business", "order": "ASCENDING" },
+        { "fieldPath": "date", "order": "DESCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "columns",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "business", "order": "ASCENDING" },
+        { "fieldPath": "slug", "order": "ASCENDING" }
+      ]
+    }
+  ],
+  "fieldOverrides": []
+}

@@ -6,10 +6,7 @@
     "date": "2026-01-01",
     "category": "カテゴリ名",
     "excerpt": "記事の概要文。一覧ページに表示される短い説明。",
-    "paragraphs": [
-      "本文の段落1。",
-      "本文の段落2。"
-    ],
+    "content": "本文の段落1。\n\n本文の段落2。",
     "modifiedDate": "2026-01-02",
     "ogImage": "/assets/images/og-example.jpg",
     "author": {
@@ -32,10 +29,7 @@
     "date": "2026-01-01",
     "category": "カテゴリ名",
     "excerpt": "記事の概要文。一覧ページに表示される短い説明。",
-    "paragraphs": [
-      "本文の段落1。",
-      "本文の段落2。"
-    ],
+    "content": "本文の段落1。\n\n本文の段落2。",
     "modifiedDate": "2026-01-02",
     "ogImage": "/assets/images/og-example.jpg",
     "author": {
@@ -58,10 +52,7 @@
     "date": "2026-01-01",
     "category": "カテゴリ名",
     "excerpt": "記事の概要文。一覧ページに表示される短い説明。",
-    "paragraphs": [
-      "本文の段落1。",
-      "本文の段落2。"
-    ],
+    "content": "本文の段落1。\n\n本文の段落2。",
     "modifiedDate": "2026-01-02",
     "ogImage": "/assets/images/og-example.jpg",
     "author": {

@@ -17,7 +17,9 @@ export function BlogPostingJsonLd({
   if (!biz) return null;
 
   const url = canonicalUrl(businessKey, `${biz.columnBasePath}/${column.slug}`);
-  const wordCount = column.paragraphs.join("").length;
+  const imageUrl = column.ogImage
+    ? `${biz.url}${column.ogImage}`
+    : `${biz.url}${biz.ogImage}`;
 
   return (
     <JsonLd
@@ -27,7 +29,13 @@ export function BlogPostingJsonLd({
         headline: column.title,
         description: column.excerpt,
         datePublished: column.date,
-        dateModified: column.date,
+        dateModified: column.modifiedDate ?? column.date,
+        image: {
+          "@type": "ImageObject",
+          url: imageUrl,
+          width: 512,
+          height: 512,
+        },
         author: {
           "@type": "Person",
           name: authorName,
@@ -37,7 +45,8 @@ export function BlogPostingJsonLd({
         mainEntityOfPage: url,
         articleSection: column.category,
         inLanguage: "ja",
-        wordCount,
+        wordCount: column.content.length,
+        ...(column.keywords?.length ? { keywords: column.keywords.join(", ") } : {}),
       }}
     />
   );

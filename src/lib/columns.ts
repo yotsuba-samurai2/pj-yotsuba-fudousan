@@ -3,22 +3,28 @@ import columnsData from "./data/columns.json";
 export type BusinessKey = "realestate" | "legal" | "labor";
 
 export type Column = {
+  id?: string;
   business: BusinessKey;
   slug: string;
   title: string;
   date: string;
   category: string;
   excerpt: string;
-  paragraphs: string[];
-  // SEO fields
+  content: string;
   modifiedDate?: string;
   ogImage?: string;
   author?: { name: string; title: string };
   keywords?: string[];
   faq?: Array<{ question: string; answer: string }>;
   tags?: string[];
+  translations?: {
+    en?: { title: string; excerpt: string; content: string; category?: string; keywords?: string[]; tags?: string[]; faq?: Array<{ question: string; answer: string }> };
+    "zh-tw"?: { title: string; excerpt: string; content: string; category?: string; keywords?: string[]; tags?: string[]; faq?: Array<{ question: string; answer: string }> };
+    zh?: { title: string; excerpt: string; content: string; category?: string; keywords?: string[]; tags?: string[]; faq?: Array<{ question: string; answer: string }> };
+  };
 };
 
+/** 静的 JSON をフォールバックとして使用 */
 const allColumns: Column[] = columnsData as Column[];
 
 // ── Business filter helpers ──
@@ -73,4 +79,30 @@ export function getLaborColumnBySlug(slug: string): Column | undefined {
 
 export function getAllLaborSlugs(): string[] {
   return laborColumns.map((c) => c.slug);
+}
+
+// ── Locale-aware helper ──
+
+import type { LangCode } from "@/config/languages";
+
+/**
+ * ロケールに応じたコラムデータを返す
+ * 翻訳が存在する場合はマージ、なければ日本語（デフォルト）
+ */
+export function getLocalizedColumn(column: Column, locale: LangCode): Column {
+  if (locale === "ja" || !column.translations) return column;
+
+  const trans = column.translations[locale as keyof typeof column.translations];
+  if (!trans) return column;
+
+  return {
+    ...column,
+    title: trans.title || column.title,
+    excerpt: trans.excerpt || column.excerpt,
+    content: trans.content || column.content,
+    category: trans.category || column.category,
+    keywords: trans.keywords?.length ? trans.keywords : column.keywords,
+    tags: trans.tags?.length ? trans.tags : column.tags,
+    faq: trans.faq?.length ? trans.faq : column.faq,
+  };
 }
