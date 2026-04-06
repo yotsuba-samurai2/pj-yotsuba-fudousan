@@ -30,7 +30,7 @@ export default function LegalThanksPage() {
           <div className="mt-10">
             <Link
               href="/legal"
-              className="gradient-line inline-flex items-center gap-2 rounded-md px-8 py-3.5 text-sm font-semibold text-white shadow-lg transition-all duration-200 hover:shadow-xl hover:brightness-110"
+              className="gradient-line inline-flex items-center gap-2 rounded-md px-8 py-3.5 text-sm font-semibold text-white shadow-lg transition-all duration-200 hover:shadow-xl hover:brightness-110 opacity-80"
             >
               トップに戻る
               <ArrowRight size={16} />

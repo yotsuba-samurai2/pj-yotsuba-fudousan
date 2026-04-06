@@ -2,7 +2,9 @@ import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 import { z } from "zod";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+function getResend() {
+  return new Resend(process.env.RESEND_API_KEY);
+}
 
 const NOTIFY_TO = "uramatsujoji@luck428.com";
 const FROM_EMAIL = "noreply@samurai.co.jp";
@@ -223,7 +225,7 @@ export async function POST(req: NextRequest) {
     const businessLabel = businessLabels[business] ?? business;
 
     // 管理者への通知メール
-    await resend.emails.send({
+    await getResend().emails.send({
       from: `${businessLabel} <${FROM_EMAIL}>`,
       to: NOTIFY_TO,
       subject: `【お問い合わせ】${categoryLabel} - ${name}様`,
@@ -239,7 +241,7 @@ export async function POST(req: NextRequest) {
     });
 
     // お客様への自動返信メール
-    await resend.emails.send({
+    await getResend().emails.send({
       from: `${businessLabel} <${FROM_EMAIL}>`,
       to: email,
       subject: `【${businessLabel}】お問い合わせありがとうございます`,
