@@ -13,13 +13,24 @@ import {
 } from "lucide-react";
 import { useTranslation } from "@/hooks/useTranslation";
 
-const icons = [ClipboardCheck, Coins, FileText, Users, HeartHandshake, ShieldCheck];
+const icons = [
+  ClipboardCheck,
+  Coins,
+  FileText,
+  Users,
+  HeartHandshake,
+  ShieldCheck,
+];
 
 export function LaborPageContent() {
   const { t, tArray } = useTranslation();
 
-  const services = tArray<{ title: string; description: string }>("labor.homePage.services");
-  const groupBusinesses = tArray<{ name: string; description: string }>("labor.homePage.groupBusinesses");
+  const services = tArray<{ title: string; description: string }>(
+    "labor.homePage.services",
+  );
+  const groupBusinesses = tArray<{ name: string; description: string }>(
+    "labor.homePage.groupBusinesses",
+  );
 
   return (
     <>
@@ -76,7 +87,7 @@ export function LaborPageContent() {
               return (
                 <div
                   key={service.title}
-                  className="gradient-border group relative overflow-hidden rounded-xl bg-surface p-5 transition-shadow duration-300 hover:shadow-lg sm:p-8"
+                  className="gradient-border group relative overflow-hidden rounded-xl bg-surface p-5 transition-all duration-300 hover:border-primary/30 hover:shadow-lg sm:p-8"
                 >
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
                     <Icon size={24} className="text-primary" />
@@ -114,7 +125,9 @@ export function LaborPageContent() {
                   {t("labor.homePage.representativeBio2")}
                 </p>
                 <div className="mt-6">
-                  <p className="text-base font-bold">{t("representative.name")}</p>
+                  <p className="text-base font-bold">
+                    {t("representative.name")}
+                  </p>
                   <p className="mt-1 text-xs text-text-muted">
                     {t("labor.homePage.representativeTitle")}
                   </p>
@@ -142,12 +155,19 @@ export function LaborPageContent() {
           <div className="mt-12 grid gap-4 sm:grid-cols-3">
             {groupBusinesses.map((biz, i) => {
               const hrefs = ["/", "/legal", ""];
-              const imgs = ["/yotsuba/realestate-square.png", "/yotsuba/legal-square.png", "/yotsuba/labor-square.png"];
+              const imgs = [
+                "/yotsuba/realestate-square.png",
+                "/yotsuba/legal-square.png",
+                "/yotsuba/labor-square.png",
+              ];
               const isCurrentPage = i === 2;
 
               if (isCurrentPage) {
                 return (
-                  <div key={biz.name} className="rounded-xl border border-primary/30 bg-surface p-6 shadow-md">
+                  <div
+                    key={biz.name}
+                    className="rounded-xl border border-primary/30 bg-surface p-6 shadow-md"
+                  >
                     <Image
                       src={imgs[i]}
                       alt={biz.name}
@@ -210,7 +230,9 @@ export function LaborPageContent() {
               rel="noopener noreferrer"
               className="cta-gradient-outline inline-flex items-center gap-2 px-10 py-4 text-sm font-semibold shadow-sm transition-all duration-200 hover:shadow-md"
             >
-              <span className="cta-gradient-text">{t("common.onlineBooking")}</span>
+              <span className="cta-gradient-text">
+                {t("common.onlineBooking")}
+              </span>
             </a>
           </div>
         </div>

@@ -22,6 +22,7 @@ import type { LucideIcon } from "lucide-react";
 import { useTranslation } from "@/hooks/useTranslation";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { FAQJsonLd } from "@/components/seo/FAQJsonLd";
+import { ServiceJsonLd } from "@/components/seo/ServiceJsonLd";
 
 const sectionIcons: Record<string, LucideIcon> = {
   rental: Home,
@@ -57,12 +58,37 @@ export default function ServicesPageContent() {
   }>("realestate.servicesPage.sections");
 
   const faqItems = tArray<{ question: string; answer: string }>(
-    "realestate.servicesPage.faq"
+    "realestate.servicesPage.faq",
   );
 
   return (
     <div>
       <FAQJsonLd items={faqItems} />
+      <ServiceJsonLd
+        businessKey="realestate"
+        services={[
+          {
+            name: "賃貸仲介",
+            description:
+              "外国人の方にも対応した賃貸物件のご紹介。5言語対応で安心の住まい探しをサポートします。",
+          },
+          {
+            name: "売買仲介",
+            description:
+              "マイホーム購入から投資物件まで、不動産売買をトータルサポートします。",
+          },
+          {
+            name: "物件管理",
+            description:
+              "オーナー様向けの賃貸管理サービス。入居者対応から建物管理まで一括対応します。",
+          },
+          {
+            name: "外国人サポート",
+            description:
+              "在留資格に関わる住居相談、多言語での契約サポート、生活支援まで対応します。",
+          },
+        ]}
+      />
       <BreadcrumbJsonLd
         businessKey="realestate"
         items={[
@@ -153,7 +179,7 @@ export default function ServicesPageContent() {
                       return (
                         <div
                           key={j}
-                          className="flex items-start gap-3 rounded-lg border border-border bg-surface p-3 sm:p-4"
+                          className="flex items-start gap-3 rounded-lg border border-border bg-surface p-3 transition-all duration-200 hover:border-primary/30 hover:shadow-md sm:p-4"
                         >
                           <PointIcon
                             size={18}

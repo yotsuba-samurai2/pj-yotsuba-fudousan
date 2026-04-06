@@ -33,7 +33,7 @@ export default function ColumnDetailContent({ col, prev, next }: Props) {
               {col.category}
             </span>
           </div>
-          <h1 className="mt-4 text-2xl font-bold leading-relaxed sm:text-3xl md:text-4xl">
+          <h1 className="article-headline mt-4 text-2xl font-bold leading-relaxed sm:text-3xl md:text-4xl">
             {col.title}
           </h1>
         </div>
@@ -60,6 +60,9 @@ export default function ColumnDetailContent({ col, prev, next }: Props) {
               </p>
             </div>
           </div>
+
+          {/* Summary for Speakable */}
+          <p className="article-summary sr-only">{col.excerpt}</p>
 
           {/* Content */}
           <ColumnBody content={col.content} />

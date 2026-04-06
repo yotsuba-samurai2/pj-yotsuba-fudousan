@@ -101,7 +101,7 @@ export default function AboutPageContent() {
                 {highlightEntries.map(({ label, value }) => (
                   <div
                     key={label}
-                    className="rounded-lg border border-border bg-surface-dim p-4"
+                    className="rounded-lg border border-border bg-surface-dim p-4 transition-all duration-200 hover:border-primary/30 hover:shadow-md"
                   >
                     <p className="text-[10px] font-medium tracking-wider text-text-muted">
                       {label}

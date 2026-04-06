@@ -75,7 +75,7 @@ export default function LegalPageContent() {
               return (
                 <div
                   key={i}
-                  className="gradient-border group relative overflow-hidden rounded-xl bg-surface p-5 transition-shadow duration-300 hover:shadow-lg sm:p-8"
+                  className="gradient-border group relative overflow-hidden rounded-xl bg-surface p-5 transition-all duration-300 hover:border-primary/30 hover:shadow-lg sm:p-8"
                 >
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
                     <Icon size={24} className="text-primary" />

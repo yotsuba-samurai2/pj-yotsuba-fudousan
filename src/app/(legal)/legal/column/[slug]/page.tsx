@@ -4,6 +4,7 @@ import { buildPageMetadata } from "@/lib/seo";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { BlogPostingJsonLd } from "@/components/seo/BlogPostingJsonLd";
 import { FAQJsonLd } from "@/components/seo/FAQJsonLd";
+import { SpeakableJsonLd } from "@/components/seo/SpeakableJsonLd";
 
 import LegalColumnDetailContent from "./LegalColumnDetailContent";
 import type { Metadata } from "next";
@@ -50,6 +51,7 @@ export default async function LegalColumnDetailPage({ params }: Props) {
         { name: col.title, href: `/legal/column/${col.slug}` },
       ]} />
       {col.faq && col.faq.length > 0 && <FAQJsonLd items={col.faq} />}
+      <SpeakableJsonLd businessKey="legal" path={`/legal/column/${col.slug}`} headline={col.title} summary={col.excerpt} />
       <LegalColumnDetailContent column={col} prev={prev} next={next} />
     </div>
   );

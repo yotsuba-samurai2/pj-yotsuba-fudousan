@@ -4,6 +4,7 @@ import { buildPageMetadata } from "@/lib/seo";
 import { BlogPostingJsonLd } from "@/components/seo/BlogPostingJsonLd";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { FAQJsonLd } from "@/components/seo/FAQJsonLd";
+import { SpeakableJsonLd } from "@/components/seo/SpeakableJsonLd";
 
 import type { Metadata } from "next";
 import ColumnDetailContent from "./ColumnDetailContent";
@@ -53,6 +54,7 @@ export default async function ColumnDetailPage({ params }: Props) {
         { name: col.title, href: `/column/${col.slug}` },
       ]} />
       {col.faq && col.faq.length > 0 && <FAQJsonLd items={col.faq} />}
+      <SpeakableJsonLd businessKey="realestate" path={`/column/${col.slug}`} headline={col.title} summary={col.excerpt} />
       <ColumnDetailContent col={col} prev={prev} next={next} />
     </div>
   );

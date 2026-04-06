@@ -24,7 +24,7 @@ export default function LegalColumnDetailContent({ column: col, prev, next }: Pr
               <span className="text-xs text-text-muted">{col.date.replace(/-/g, ".")}</span>
               <span className="gradient-line rounded-full px-2.5 py-0.5 text-[10px] font-medium text-white">{col.category}</span>
             </div>
-            <h1 className="mt-4 text-2xl font-bold leading-relaxed sm:text-3xl md:text-4xl">{col.title}</h1>
+            <h1 className="article-headline mt-4 text-2xl font-bold leading-relaxed sm:text-3xl md:text-4xl">{col.title}</h1>
         </div>
       </section>
 
@@ -39,6 +39,7 @@ export default function LegalColumnDetailContent({ column: col, prev, next }: Pr
               <p className="text-xs text-text-muted">{t("legal.columnDetail.authorTitle")}</p>
             </div>
           </div>
+          <p className="article-summary sr-only">{col.excerpt}</p>
           <ColumnBody content={col.content} />
           <div className="mt-16 grid gap-4 border-t border-border pt-8 sm:grid-cols-2">
             {prev ? (

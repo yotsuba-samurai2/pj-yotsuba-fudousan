@@ -50,7 +50,7 @@ export default function LegalAboutPageContent() {
               </div>
               <div className="mt-8 grid gap-3 sm:grid-cols-2">
                 {highlights.map(({ label, value }) => (
-                  <div key={label} className="rounded-lg border border-border bg-surface-dim p-4">
+                  <div key={label} className="rounded-lg border border-border bg-surface-dim p-4 transition-all duration-200 hover:border-primary/30 hover:shadow-md">
                     <p className="text-[10px] font-medium tracking-wider text-text-muted">{label}</p>
                     <p className="mt-1 text-sm font-bold">{value}</p>
                   </div>
