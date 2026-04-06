@@ -25,6 +25,10 @@
       "viewCompanyInfo": "会社概要を見る",
       "feelFreeToContact": "まずはお気軽にご相談ください"
     },
+    "column": {
+      "emptyTitle": "記事を準備中です",
+      "emptyDescription": "現在、コラム記事を準備しております。公開までしばらくお待ちください。"
+    },
     "navigation": {
       "mainNav": "メインナビゲーション",
       "mobileMenu": "モバイルメニュー",
@@ -338,7 +342,7 @@
       "ctaDescription": "コラムの内容に関するご質問も大歓迎です。"
     },
     "columnDetail": {
-      "authorTitle": "四葉不動産 代表取締役",
+      "authorTitle": "四葉不動産",
       "authorName": "浦松 丈二",
       "ctaDescription": "コラムの内容に関するご質問も大歓迎です。"
     }
@@ -349,14 +353,15 @@
     "legalName": "四葉行政書士事務所",
     "description": "補助金・助成金申請、在留資格・ビザ、法務手続き",
     "tagline": "補助金・ビザ・会社設立をワンストップで。",
-    "footerDescription1": "補助金・ビザ・会社設立をワンストップで。",
-    "footerDescription2": "不動産×法務の連携で、ビジネスと暮らしの手続きをまとめてサポートします。",
+    "footerDescription1": "不動産×法務の連携で、",
+    "footerDescription2": "ビジネスと暮らしの手続きをまとめてサポートします。",
     "meta": {
       "title": "四葉行政書士事務所 | 補助金・助成金・ビザ申請",
       "titleTemplate": "%s | 四葉行政書士事務所",
       "description": "補助金・助成金申請、在留資格・ビザ申請、会社設立、各種許認可。四葉パートナーズの行政書士事務所が法務手続きをワンストップでサポートします。"
     },
     "nav": {
+      "home": "ホーム",
       "services": "サービス",
       "about": "事務所概要",
       "column": "コラム",
@@ -477,7 +482,7 @@
       "heroDescription2": "行政書士の視点でわかりやすくお届けします。"
     },
     "columnDetail": {
-      "authorTitle": "四葉行政書士事務所 代表行政書士",
+      "authorTitle": "四葉行政書士事務所",
       "authorName": "浦松 丈二"
     }
   },
@@ -487,14 +492,15 @@
     "legalName": "四葉社会保険労務士法人",
     "description": "社会保険・労務管理・助成金申請",
     "tagline": "企業の「人」に関するお困りごとを解決。",
-    "footerDescription1": "企業の「人」に関するお困りごとを解決。",
-    "footerDescription2": "社会保険・労務管理・助成金申請をトータルサポートします。",
+    "footerDescription1": "社会保険・労務管理・助成金申請を",
+    "footerDescription2": "トータルサポートします。",
     "meta": {
       "title": "四葉社会保険労務士法人 | 社会保険・労務・助成金",
       "titleTemplate": "%s | 四葉社会保険労務士法人",
       "description": "社会保険・労働保険の手続き、就業規則作成、助成金申請、労務相談。四葉パートナーズの社労士法人が企業の人事・労務をトータルサポートします。"
     },
     "nav": {
+      "home": "ホーム",
       "services": "サービス",
       "about": "事務所概要",
       "column": "コラム",
@@ -660,7 +666,9 @@
         "visa": "ビザ・在留資格",
         "labor": "社会保険・労務",
         "other": "その他"
-      }
+      },
+      "submitting": "送信中...",
+      "error": "送信に失敗しました。しばらく経ってからお試しください。"
     }
   },
   "thanks": {

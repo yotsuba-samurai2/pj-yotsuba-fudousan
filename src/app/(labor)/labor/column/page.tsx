@@ -1,5 +1,3 @@
-import { getLatestLaborColumns } from "@/lib/columns";
-
 import { buildPageMetadata } from "@/lib/seo";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { LaborColumnListPageContent } from "./PageContent";
@@ -12,14 +10,13 @@ export const metadata = buildPageMetadata({
 });
 
 export default function LaborColumnListPage() {
-  const columns = getLatestLaborColumns(20);
   return (
     <div>
       <BreadcrumbJsonLd businessKey="labor" items={[
         { name: "ホーム", href: "/labor" },
         { name: "コラム", href: "/labor/column" },
       ]} />
-      <LaborColumnListPageContent columns={columns} />
+      <LaborColumnListPageContent />
     </div>
   );
 }

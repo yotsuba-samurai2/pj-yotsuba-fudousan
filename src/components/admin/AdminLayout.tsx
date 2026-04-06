@@ -124,7 +124,9 @@ export default function AdminLayout({
                     className={`relative shrink-0 ${active ? "text-text" : "text-text-muted"}`}
                   />
                   {!collapsed && (
-                    <span className={`relative ${active ? "font-semibold" : ""}`}>
+                    <span
+                      className={`relative ${active ? "font-semibold" : ""}`}
+                    >
                       {item.label}
                     </span>
                   )}
@@ -175,7 +177,11 @@ export default function AdminLayout({
               className="hidden rounded-lg p-2 text-text-muted hover:bg-surface-dim lg:flex"
               title={collapsed ? "サイドバーを展開" : "サイドバーを折りたたむ"}
             >
-              {collapsed ? <PanelLeft size={16} /> : <PanelLeftClose size={16} />}
+              {collapsed ? (
+                <PanelLeft size={16} />
+              ) : (
+                <PanelLeftClose size={16} />
+              )}
             </button>
             <p className="text-sm font-medium text-text">
               {navItems.find((item) => isActive(item.href, item.exact))
@@ -184,7 +190,7 @@ export default function AdminLayout({
           </header>
           <div className="h-px gradient-line" />
 
-          <main className="flex-1 overflow-y-auto bg-surface">{children}</main>
+          <main className="flex-1 overflow-y-auto bg-surface-dim">{children}</main>
         </div>
       </div>
     </AuthGuard>

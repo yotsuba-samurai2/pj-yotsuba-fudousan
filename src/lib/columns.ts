@@ -1,4 +1,5 @@
-import columnsData from "./data/columns.json";
+import { db } from "@/lib/firebase";
+import { collection, query, where, orderBy, limit, getDocs } from "firebase/firestore";
 
 export type BusinessKey = "realestate" | "legal" | "labor";
 
@@ -11,6 +12,7 @@ export type Column = {
   category: string;
   excerpt: string;
   content: string;
+  status?: string;
   modifiedDate?: string;
   ogImage?: string;
   author?: { name: string; title: string };
@@ -24,71 +26,104 @@ export type Column = {
   };
 };
 
-/** 静的 JSON をフォールバックとして使用 */
-const allColumns: Column[] = columnsData as Column[];
+const COLLECTION = "columns";
 
-// ── Business filter helpers ──
+function toColumn(id: string, data: Record<string, unknown>): Column {
+  const { createdAt, updatedAt, ...rest } = data;
+  return { id, ...rest } as Column;
+}
 
-function byBusiness(business: BusinessKey): Column[] {
-  return allColumns.filter((c) => c.business === business);
+// ── Firestore queries (published only) ──
+
+async function fetchPublished(business: BusinessKey): Promise<Column[]> {
+  const q = query(
+    collection(db, COLLECTION),
+    where("business", "==", business),
+    where("status", "==", "published"),
+    orderBy("date", "desc"),
+  );
+  const snap = await getDocs(q);
+  return snap.docs.map((d) => toColumn(d.id, d.data()));
+}
+
+async function fetchPublishedBySlug(business: BusinessKey, slug: string): Promise<Column | undefined> {
+  const q = query(
+    collection(db, COLLECTION),
+    where("business", "==", business),
+    where("slug", "==", slug),
+    where("status", "==", "published"),
+    limit(1),
+  );
+  const snap = await getDocs(q);
+  if (snap.empty) return undefined;
+  const d = snap.docs[0];
+  return toColumn(d.id, d.data());
 }
 
 // ── Realestate ──
 
-export const columns: Column[] = byBusiness("realestate");
-
-export function getLatestColumns(n: number): Column[] {
-  return [...columns].sort((a, b) => b.date.localeCompare(a.date)).slice(0, n);
+export async function getColumns(): Promise<Column[]> {
+  return fetchPublished("realestate");
 }
 
-export function getColumnBySlug(slug: string): Column | undefined {
-  return columns.find((c) => c.slug === slug);
+export async function getLatestColumns(n: number): Promise<Column[]> {
+  const cols = await fetchPublished("realestate");
+  return cols.slice(0, n);
 }
 
-export function getAllSlugs(): string[] {
-  return columns.map((c) => c.slug);
+export async function getColumnBySlug(slug: string): Promise<Column | undefined> {
+  return fetchPublishedBySlug("realestate", slug);
+}
+
+export async function getAllSlugs(): Promise<string[]> {
+  const cols = await fetchPublished("realestate");
+  return cols.map((c) => c.slug);
 }
 
 // ── Legal ──
 
-export const legalColumns: Column[] = byBusiness("legal");
-
-export function getLatestLegalColumns(n: number): Column[] {
-  return [...legalColumns].sort((a, b) => b.date.localeCompare(a.date)).slice(0, n);
+export async function getLegalColumns(): Promise<Column[]> {
+  return fetchPublished("legal");
 }
 
-export function getLegalColumnBySlug(slug: string): Column | undefined {
-  return legalColumns.find((c) => c.slug === slug);
+export async function getLatestLegalColumns(n: number): Promise<Column[]> {
+  const cols = await fetchPublished("legal");
+  return cols.slice(0, n);
 }
 
-export function getAllLegalSlugs(): string[] {
-  return legalColumns.map((c) => c.slug);
+export async function getLegalColumnBySlug(slug: string): Promise<Column | undefined> {
+  return fetchPublishedBySlug("legal", slug);
+}
+
+export async function getAllLegalSlugs(): Promise<string[]> {
+  const cols = await fetchPublished("legal");
+  return cols.map((c) => c.slug);
 }
 
 // ── Labor ──
 
-export const laborColumns: Column[] = byBusiness("labor");
-
-export function getLatestLaborColumns(n: number): Column[] {
-  return [...laborColumns].sort((a, b) => b.date.localeCompare(a.date)).slice(0, n);
+export async function getLaborColumns(): Promise<Column[]> {
+  return fetchPublished("labor");
 }
 
-export function getLaborColumnBySlug(slug: string): Column | undefined {
-  return laborColumns.find((c) => c.slug === slug);
+export async function getLatestLaborColumns(n: number): Promise<Column[]> {
+  const cols = await fetchPublished("labor");
+  return cols.slice(0, n);
 }
 
-export function getAllLaborSlugs(): string[] {
-  return laborColumns.map((c) => c.slug);
+export async function getLaborColumnBySlug(slug: string): Promise<Column | undefined> {
+  return fetchPublishedBySlug("labor", slug);
+}
+
+export async function getAllLaborSlugs(): Promise<string[]> {
+  const cols = await fetchPublished("labor");
+  return cols.map((c) => c.slug);
 }
 
 // ── Locale-aware helper ──
 
 import type { LangCode } from "@/config/languages";
 
-/**
- * ロケールに応じたコラムデータを返す
- * 翻訳が存在する場合はマージ、なければ日本語（デフォルト）
- */
 export function getLocalizedColumn(column: Column, locale: LangCode): Column {
   if (locale === "ja" || !column.translations) return column;
 

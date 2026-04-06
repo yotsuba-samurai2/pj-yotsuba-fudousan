@@ -1,5 +1,4 @@
 import { buildPageMetadata } from "@/lib/seo";
-import { getLatestColumns } from "@/lib/columns";
 import ColumnListPageContent from "./ColumnListPageContent";
 
 export const metadata = buildPageMetadata({
@@ -10,7 +9,5 @@ export const metadata = buildPageMetadata({
 });
 
 export default function ColumnListPage() {
-  const columns = getLatestColumns(20);
-
-  return <ColumnListPageContent columns={columns} />;
+  return <ColumnListPageContent />;
 }

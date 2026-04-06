@@ -31,7 +31,7 @@ export function ServiceJsonLd({
               "@type": "AdministrativeArea",
               name: SHARED_ORG_INFO.addressRegion,
             },
-            availableLanguage: ["ja", "en", "zh-Hant", "zh-Hans", "th"],
+            availableLanguage: ["ja", "en", "zh-Hant", "zh-Hans"],
           }}
         />
       ))}

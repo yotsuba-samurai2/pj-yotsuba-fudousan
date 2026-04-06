@@ -1,5 +1,7 @@
 import type { MetadataRoute } from "next";
-import { columns, legalColumns, laborColumns } from "@/lib/columns";
+import { getColumns, getLegalColumns } from "@/lib/columns";
+// TODO: 社労士法人化後に復活
+// import { getLaborColumns } from "@/lib/columns";
 import { BUSINESS_URLS } from "@/lib/seo";
 
 /** Generate hreflang alternates for a given base URL and path */
@@ -15,19 +17,47 @@ function withLangs(base: string, path: string = "") {
   };
 }
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date().toISOString();
 
   const re = BUSINESS_URLS.realestate;
   const le = BUSINESS_URLS.legal;
-  const la = BUSINESS_URLS.labor;
+  // TODO: 社労士法人化後に復活
+  // const la = BUSINESS_URLS.labor;
+
+  const columns = await getColumns();
+  const legalColumns = await getLegalColumns();
 
   return [
     // ── Real Estate ──
-    { url: re, lastModified: now, changeFrequency: "weekly", priority: 1.0, alternates: withLangs(re) },
-    { url: `${re}/services`, lastModified: now, changeFrequency: "monthly", priority: 0.8, alternates: withLangs(re, "/services") },
-    { url: `${re}/about`, lastModified: now, changeFrequency: "monthly", priority: 0.7, alternates: withLangs(re, "/about") },
-    { url: `${re}/column`, lastModified: now, changeFrequency: "weekly", priority: 0.8, alternates: withLangs(re, "/column") },
+    {
+      url: re,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 1.0,
+      alternates: withLangs(re),
+    },
+    {
+      url: `${re}/services`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.8,
+      alternates: withLangs(re, "/services"),
+    },
+    {
+      url: `${re}/about`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.7,
+      alternates: withLangs(re, "/about"),
+    },
+    {
+      url: `${re}/column`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.8,
+      alternates: withLangs(re, "/column"),
+    },
     ...columns.map((col) => ({
       url: `${re}/column/${col.slug}`,
       lastModified: col.modifiedDate ?? col.date,
@@ -37,9 +67,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
 
     // ── Legal ──
-    { url: le, lastModified: now, changeFrequency: "weekly", priority: 1.0, alternates: withLangs(le) },
-    { url: `${le}/about`, lastModified: now, changeFrequency: "monthly", priority: 0.7, alternates: withLangs(le, "/about") },
-    { url: `${le}/column`, lastModified: now, changeFrequency: "weekly", priority: 0.8, alternates: withLangs(le, "/column") },
+    {
+      url: le,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 1.0,
+      alternates: withLangs(le),
+    },
+    {
+      url: `${le}/about`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.7,
+      alternates: withLangs(le, "/about"),
+    },
+    {
+      url: `${le}/column`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.8,
+      alternates: withLangs(le, "/column"),
+    },
     ...legalColumns.map((col) => ({
       url: `${le}/column/${col.slug}`,
       lastModified: col.modifiedDate ?? col.date,
@@ -48,6 +96,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       alternates: withLangs(le, `/column/${col.slug}`),
     })),
 
+    /* TODO: 社労士法人化後に復活
     // ── Labor ──
     { url: la, lastModified: now, changeFrequency: "weekly", priority: 1.0, alternates: withLangs(la) },
     { url: `${la}/about`, lastModified: now, changeFrequency: "monthly", priority: 0.7, alternates: withLangs(la, "/about") },
@@ -59,11 +108,36 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.6,
       alternates: withLangs(la, `/column/${col.slug}`),
     })),
+    */
 
     // ── Shared ──
-    { url: `${re}/contact`, lastModified: now, changeFrequency: "yearly", priority: 0.5, alternates: withLangs(re, "/contact") },
-    { url: `${re}/legal-notice`, lastModified: now, changeFrequency: "yearly", priority: 0.3, alternates: withLangs(re, "/legal-notice") },
-    { url: `${re}/privacy-policy`, lastModified: now, changeFrequency: "yearly", priority: 0.2, alternates: withLangs(re, "/privacy-policy") },
-    { url: `${re}/terms`, lastModified: now, changeFrequency: "yearly", priority: 0.2, alternates: withLangs(re, "/terms") },
+    {
+      url: `${re}/contact`,
+      lastModified: now,
+      changeFrequency: "yearly",
+      priority: 0.5,
+      alternates: withLangs(re, "/contact"),
+    },
+    {
+      url: `${re}/legal-notice`,
+      lastModified: now,
+      changeFrequency: "yearly",
+      priority: 0.3,
+      alternates: withLangs(re, "/legal-notice"),
+    },
+    {
+      url: `${re}/privacy-policy`,
+      lastModified: now,
+      changeFrequency: "yearly",
+      priority: 0.2,
+      alternates: withLangs(re, "/privacy-policy"),
+    },
+    {
+      url: `${re}/terms`,
+      lastModified: now,
+      changeFrequency: "yearly",
+      priority: 0.2,
+      alternates: withLangs(re, "/terms"),
+    },
   ];
 }

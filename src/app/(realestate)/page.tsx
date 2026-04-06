@@ -95,7 +95,7 @@ export default function HomePage() {
               <div className="hero-fade-in-delay-3 mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row">
                 <Link
                   href="/contact"
-                  className="gradient-line inline-flex items-center justify-center gap-2 rounded-md px-8 py-3 text-sm font-semibold text-white shadow-lg transition-all duration-200 hover:shadow-xl hover:brightness-110 sm:py-3.5"
+                  className="gradient-line inline-flex items-center justify-center gap-2 rounded-md px-8 py-3 text-sm font-semibold text-white shadow-lg transition-all duration-200 hover:shadow-xl hover:brightness-110 sm:py-3.5 opacity-80"
                 >
                   {t("common.cta.consultFirst")}
                   <ArrowRight size={16} />
@@ -301,7 +301,7 @@ export default function HomePage() {
           <div className="mx-auto mt-10 max-w-4xl sm:mt-14">
             <div className="grid gap-6 md:grid-cols-2 md:gap-8">
               {/* Map */}
-              <div className="overflow-hidden rounded-xl border border-border">
+              <div className="overflow-hidden rounded-xl border border-border bg-surface">
                 <iframe
                   src="https://maps.google.com/maps?q=%E5%9B%9B%E8%91%89%E4%B8%8D%E5%8B%95%E7%94%A3%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE+%2F+%E5%9B%9B%E8%91%89%E8%A1%8C%E6%94%BF%E6%9B%B8%E5%A3%AB%E4%BA%8B%E5%8B%99%E6%89%80&z=18&output=embed&hl=ja"
                   width="100%"

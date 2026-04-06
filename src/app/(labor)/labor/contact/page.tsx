@@ -92,7 +92,7 @@ export default function LaborContactPage() {
               </div>
             </div>
 
-            <ContactForm thanksPath="/labor/thanks" />
+            <ContactForm thanksPath="/labor/thanks" business="labor" />
           </div>
         </div>
       </section>

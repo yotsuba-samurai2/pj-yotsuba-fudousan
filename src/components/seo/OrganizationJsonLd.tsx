@@ -63,7 +63,7 @@ export function OrganizationJsonLd({ businessKey }: { businessKey: string }) {
           },
           geoRadius: "50000",
         },
-        knowsLanguage: ["ja", "en", "zh-Hant", "zh-Hans", "th"],
+        knowsLanguage: ["ja", "en", "zh-Hant", "zh-Hans"],
       }}
     />
   );

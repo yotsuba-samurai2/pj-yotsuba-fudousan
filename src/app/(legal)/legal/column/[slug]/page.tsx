@@ -1,6 +1,8 @@
 import { notFound } from "next/navigation";
-import { getLegalColumnBySlug, legalColumns, getAllLegalSlugs } from "@/lib/columns";
+import { cookies } from "next/headers";
+import { getLegalColumnBySlug, getLegalColumns, getLocalizedColumn, getAllLegalSlugs } from "@/lib/columns";
 import { buildPageMetadata } from "@/lib/seo";
+import { LOCALE_COOKIE, DEFAULT_LOCALE, isValidLocale } from "@/lib/locale";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { BlogPostingJsonLd } from "@/components/seo/BlogPostingJsonLd";
 import { FAQJsonLd } from "@/components/seo/FAQJsonLd";
@@ -8,17 +10,23 @@ import { SpeakableJsonLd } from "@/components/seo/SpeakableJsonLd";
 
 import LegalColumnDetailContent from "./LegalColumnDetailContent";
 import type { Metadata } from "next";
+import type { LangCode } from "@/config/languages";
 
 type Props = { params: Promise<{ slug: string }> };
 
 export async function generateStaticParams() {
-  return getAllLegalSlugs().map((slug) => ({ slug }));
+  const slugs = await getAllLegalSlugs();
+  return slugs.map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const col = getLegalColumnBySlug(slug);
-  if (!col) return {};
+  const base = await getLegalColumnBySlug(slug);
+  if (!base) return {};
+  const cookieStore = await cookies();
+  const lc = cookieStore.get(LOCALE_COOKIE)?.value;
+  const locale: LangCode = lc && isValidLocale(lc) ? lc : DEFAULT_LOCALE;
+  const col = getLocalizedColumn(base, locale);
   return buildPageMetadata({
     businessKey: "legal",
     title: col.title,
@@ -29,15 +37,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     publishedTime: col.date,
     modifiedTime: col.modifiedDate ?? col.date,
     section: col.category,
+    locale,
   });
 }
 
 export default async function LegalColumnDetailPage({ params }: Props) {
   const { slug } = await params;
-  const col = getLegalColumnBySlug(slug);
+  const col = await getLegalColumnBySlug(slug);
   if (!col) notFound();
 
-  const sorted = [...legalColumns].sort((a, b) => b.date.localeCompare(a.date));
+  const allLegalColumns = await getLegalColumns();
+  const sorted = [...allLegalColumns].sort((a, b) => b.date.localeCompare(a.date));
   const idx = sorted.findIndex((c) => c.slug === slug);
   const prev = idx < sorted.length - 1 ? sorted[idx + 1] : null;
   const next = idx > 0 ? sorted[idx - 1] : null;

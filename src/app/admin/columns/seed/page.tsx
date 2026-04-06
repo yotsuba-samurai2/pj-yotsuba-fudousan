@@ -112,7 +112,7 @@ export default function SeedPage() {
             <p className="text-sm text-red-600">{result}</p>
             <button
               onClick={handleSeed}
-              className="rounded-lg border border-border px-5 py-2 text-sm font-medium text-text hover:bg-surface-dim"
+              className="rounded-lg border border-border bg-surface px-5 py-2 text-sm font-medium text-text hover:bg-surface-dim"
             >
               再試行
             </button>

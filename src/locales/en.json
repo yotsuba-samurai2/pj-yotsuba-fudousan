@@ -25,6 +25,10 @@
       "viewCompanyInfo": "View company info",
       "feelFreeToContact": "Feel free to reach out for a consultation"
     },
+    "column": {
+      "emptyTitle": "Articles coming soon",
+      "emptyDescription": "We are currently preparing column articles. Please check back soon."
+    },
     "navigation": {
       "mainNav": "Main navigation",
       "mobileMenu": "Mobile menu",
@@ -380,7 +384,7 @@
       "ctaDescription": "Questions about our column articles are also welcome."
     },
     "columnDetail": {
-      "authorTitle": "四葉不動産 Representative Director",
+      "authorTitle": "四葉不動産",
       "authorName": "浦松 丈二",
       "ctaDescription": "Questions about our column articles are also welcome."
     }
@@ -391,14 +395,15 @@
     "legalName": "四葉行政書士事務所",
     "description": "Subsidies & grants, residence status & visas, legal procedures",
     "tagline": "Subsidies, visas, and company formation — all in one place.",
-    "footerDescription1": "Subsidies, visas, and company formation — all in one place.",
-    "footerDescription2": "Combining real estate and legal expertise, we provide comprehensive support for your business and daily life procedures.",
+    "footerDescription1": "Combining real estate and legal expertise,",
+    "footerDescription2": "we provide comprehensive support for your business and daily life procedures.",
     "meta": {
       "title": "四葉行政書士事務所 | Subsidies, Grants & Visa Applications",
       "titleTemplate": "%s | 四葉行政書士事務所",
       "description": "Subsidies & grants, residence status & visa applications, company formation, and various permits. 四葉パートナーズ's administrative scrivener office provides one-stop legal procedure support."
     },
     "nav": {
+      "home": "Home",
       "services": "Services",
       "about": "About Us",
       "column": "Column",
@@ -552,7 +557,7 @@
       "heroDescription2": "Delivered in an easy-to-understand manner from the perspective of an administrative scrivener."
     },
     "columnDetail": {
-      "authorTitle": "四葉行政書士事務所 Chief Administrative Scrivener",
+      "authorTitle": "四葉行政書士事務所",
       "authorName": "浦松 丈二"
     }
   },
@@ -562,14 +567,15 @@
     "legalName": "四葉社会保険労務士法人",
     "description": "Social insurance, labor management & subsidy applications",
     "tagline": "Solving your business challenges related to people.",
-    "footerDescription1": "Solving your business challenges related to people.",
-    "footerDescription2": "Comprehensive support for social insurance, labor management, and subsidy applications.",
+    "footerDescription1": "Comprehensive support for social insurance,",
+    "footerDescription2": "labor management, and subsidy applications.",
     "meta": {
       "title": "四葉社会保険労務士法人 | Social Insurance, Labor & Subsidies",
       "titleTemplate": "%s | 四葉社会保険労務士法人",
       "description": "Social insurance & labor insurance procedures, work rules creation, subsidy applications, and labor consulting. 四葉パートナーズ's labor consulting firm provides comprehensive HR and labor support for businesses."
     },
     "nav": {
+      "home": "Home",
       "services": "Services",
       "about": "About Us",
       "column": "Column",
@@ -771,7 +777,9 @@
         "visa": "Visa & residence status",
         "labor": "Social insurance & labor",
         "other": "Other"
-      }
+      },
+      "submitting": "Sending...",
+      "error": "Failed to send. Please try again later."
     }
   },
   "thanks": {

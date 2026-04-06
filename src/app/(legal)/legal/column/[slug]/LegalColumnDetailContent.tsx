@@ -43,13 +43,13 @@ export default function LegalColumnDetailContent({ column: col, prev, next }: Pr
           <ColumnBody content={col.content} />
           <div className="mt-16 grid gap-4 border-t border-border pt-8 sm:grid-cols-2">
             {prev ? (
-              <Link href={`/legal/column/${prev.slug}`} className="group rounded-lg border border-border p-4 transition-all hover:border-primary/30 hover:shadow-md">
+              <Link href={`/legal/column/${prev.slug}`} className="group rounded-lg border border-border bg-surface p-4 transition-all hover:border-primary/30 hover:shadow-md">
                 <p className="text-[10px] text-text-muted">{t("common.prevArticle")}</p>
                 <p className="mt-1 text-sm font-bold leading-relaxed group-hover:text-primary line-clamp-2">{prev.title}</p>
               </Link>
             ) : <div />}
             {next ? (
-              <Link href={`/legal/column/${next.slug}`} className="group rounded-lg border border-border p-4 text-right transition-all hover:border-primary/30 hover:shadow-md">
+              <Link href={`/legal/column/${next.slug}`} className="group rounded-lg border border-border bg-surface p-4 text-right transition-all hover:border-primary/30 hover:shadow-md">
                 <p className="text-[10px] text-text-muted">{t("common.nextArticle")}</p>
                 <p className="mt-1 text-sm font-bold leading-relaxed group-hover:text-primary line-clamp-2">{next.title}</p>
               </Link>

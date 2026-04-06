@@ -92,7 +92,7 @@ export default function LegalContactPage() {
               </div>
             </div>
 
-            <ContactForm thanksPath="/legal/thanks" />
+            <ContactForm thanksPath="/legal/thanks" business="legal" />
           </div>
         </div>
       </section>

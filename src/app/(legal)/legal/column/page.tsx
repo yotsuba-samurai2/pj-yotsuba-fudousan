@@ -1,4 +1,3 @@
-import { getLatestLegalColumns } from "@/lib/columns";
 import { buildPageMetadata } from "@/lib/seo";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import LegalColumnListContent from "./LegalColumnListContent";
@@ -11,14 +10,13 @@ export const metadata = buildPageMetadata({
 });
 
 export default function LegalColumnListPage() {
-  const columns = getLatestLegalColumns(20);
   return (
     <div>
       <BreadcrumbJsonLd businessKey="legal" items={[
         { name: "ホーム", href: "/legal" },
         { name: "コラム", href: "/legal/column" },
       ]} />
-      <LegalColumnListContent columns={columns} />
+      <LegalColumnListContent />
     </div>
   );
 }

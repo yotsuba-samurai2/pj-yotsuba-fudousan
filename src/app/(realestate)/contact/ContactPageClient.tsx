@@ -84,7 +84,7 @@ export function ContactPageClient() {
               </div>
             </div>
 
-            <ContactForm />
+            <ContactForm business="realestate" />
           </div>
         </div>
       </section>

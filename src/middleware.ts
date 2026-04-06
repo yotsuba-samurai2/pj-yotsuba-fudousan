@@ -12,7 +12,10 @@ import { NextRequest, NextResponse } from "next/server";
 const NON_DEFAULT_LOCALES = ["en", "zh-tw", "zh"];
 const LOCALE_COOKIE = "yotsuba-locale";
 
-function detectAndStripLocale(pathname: string): { locale: string; stripped: string } {
+function detectAndStripLocale(pathname: string): {
+  locale: string;
+  stripped: string;
+} {
   for (const loc of NON_DEFAULT_LOCALES) {
     if (pathname === `/${loc}` || pathname.startsWith(`/${loc}/`)) {
       const stripped = pathname.slice(loc.length + 1) || "/";
@@ -36,11 +39,12 @@ const tenants: TenantConfig[] = [
     domains: ["yotsuba-legal.com", "www.yotsuba-legal.com"],
     subdomains: ["legal"],
   },
-  {
-    pathPrefix: "/labor",
-    domains: ["yotsuba-labor.com", "www.yotsuba-labor.com"],
-    subdomains: ["labor"],
-  },
+  // TODO: 社労士法人化後に復活
+  // {
+  //   pathPrefix: "/labor",
+  //   domains: ["yotsuba-labor.com", "www.yotsuba-labor.com"],
+  //   subdomains: ["labor"],
+  // },
 ];
 
 function getTenantPrefix(host: string): string | null {
@@ -75,7 +79,9 @@ function shouldSkip(pathname: string): boolean {
 const sharedPaths = ["/privacy-policy", "/terms", "/legal-notice"];
 
 function isSharedPath(pathname: string): boolean {
-  return sharedPaths.some((p) => pathname === p || pathname.startsWith(p + "/"));
+  return sharedPaths.some(
+    (p) => pathname === p || pathname.startsWith(p + "/"),
+  );
 }
 
 // ── Middleware ──
@@ -96,7 +102,11 @@ export function middleware(request: NextRequest) {
   // リライト先パスを決定
   let rewritePath = stripped;
 
-  if (tenantPrefix && !stripped.startsWith(tenantPrefix) && !isSharedPath(stripped)) {
+  if (
+    tenantPrefix &&
+    !stripped.startsWith(tenantPrefix) &&
+    !isSharedPath(stripped)
+  ) {
     rewritePath = `${tenantPrefix}${stripped}`;
   }
 
@@ -123,7 +133,11 @@ export function middleware(request: NextRequest) {
   }
 
   // テナントリライトのみ必要な場合
-  if (tenantPrefix && !stripped.startsWith(tenantPrefix) && !isSharedPath(stripped)) {
+  if (
+    tenantPrefix &&
+    !stripped.startsWith(tenantPrefix) &&
+    !isSharedPath(stripped)
+  ) {
     const url = request.nextUrl.clone();
     url.pathname = `${tenantPrefix}${stripped}`;
     return NextResponse.rewrite(url);

@@ -149,7 +149,7 @@ export default function AdminDashboard() {
               </Link>
               <Link
                 href="/admin/translations"
-                className="flex items-center justify-center gap-2 rounded-lg border border-border px-4 py-2.5 text-sm font-medium text-text transition-colors hover:bg-surface-dim"
+                className="flex items-center justify-center gap-2 rounded-lg border border-border bg-surface px-4 py-2.5 text-sm font-medium text-text transition-colors hover:bg-surface-dim"
               >
                 <Languages size={14} />
                 翻訳を編集
@@ -171,7 +171,7 @@ export default function AdminDashboard() {
                 ].map((lang) => (
                   <div
                     key={lang.code}
-                    className="rounded-lg border border-border px-3 py-2 text-center"
+                    className="rounded-lg border border-border bg-surface px-3 py-2 text-center"
                   >
                     <p className="text-xs font-bold text-text">{lang.code}</p>
                     <p className="text-[10px] text-text-muted">{lang.label}</p>

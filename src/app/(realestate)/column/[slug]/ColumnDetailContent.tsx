@@ -55,9 +55,7 @@ export default function ColumnDetailContent({ col, prev, next }: Props) {
             </div>
             <div>
               <p className="text-sm font-bold">{t("realestate.columnDetail.authorName")}</p>
-              <p className="text-xs text-text-muted">
-                {t("realestate.columnDetail.authorTitle")}
-              </p>
+              <p className="text-xs text-text-muted">{t("realestate.columnDetail.authorTitle")}</p>
             </div>
           </div>
 
@@ -72,7 +70,7 @@ export default function ColumnDetailContent({ col, prev, next }: Props) {
             {prev ? (
               <Link
                 href={`/column/${prev.slug}`}
-                className="group rounded-lg border border-border p-4 transition-all hover:border-primary/30 hover:shadow-md"
+                className="group rounded-lg border border-border bg-surface p-4 transition-all hover:border-primary/30 hover:shadow-md"
               >
                 <p className="text-[10px] text-text-muted">{t("common.prevArticle")}</p>
                 <p className="mt-1 text-sm font-bold leading-relaxed group-hover:text-primary line-clamp-2">
@@ -85,7 +83,7 @@ export default function ColumnDetailContent({ col, prev, next }: Props) {
             {next ? (
               <Link
                 href={`/column/${next.slug}`}
-                className="group rounded-lg border border-border p-4 text-right transition-all hover:border-primary/30 hover:shadow-md"
+                className="group rounded-lg border border-border bg-surface p-4 text-right transition-all hover:border-primary/30 hover:shadow-md"
               >
                 <p className="text-[10px] text-text-muted">{t("common.nextArticle")}</p>
                 <p className="mt-1 text-sm font-bold leading-relaxed group-hover:text-primary line-clamp-2">

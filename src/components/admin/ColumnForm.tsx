@@ -365,7 +365,7 @@ export default function ColumnForm({
   return (
     <form onSubmit={handleSubmit} className="mx-auto max-w-3xl space-y-6">
       {/* Basic fields */}
-      <section className="rounded-xl border border-border bg-surface p-6">
+      <section className="rounded-xl border border-border bg-white p-6">
         <h2 className="mb-4 text-lg font-semibold text-text">基本情報</h2>
         <div className="grid gap-4 sm:grid-cols-2">
           <div>
@@ -375,7 +375,7 @@ export default function ColumnForm({
             <select
               value={status}
               onChange={(e) => setStatus(e.target.value as ColumnStatus)}
-              className="w-full rounded-lg border border-border bg-surface px-3 py-2 text-sm text-text outline-none focus:border-primary focus:ring-1 focus:ring-primary"
+              className="w-full rounded-lg border border-border bg-white px-3 py-2 text-sm text-text outline-none focus:border-primary focus:ring-1 focus:ring-primary"
             >
               <option value="draft">下書き</option>
               <option value="published">公開</option>
@@ -391,7 +391,7 @@ export default function ColumnForm({
               onChange={(e) =>
                 setBusiness(e.target.value as FirestoreColumn["business"])
               }
-              className="w-full rounded-lg border border-border bg-surface px-3 py-2 text-sm text-text outline-none focus:border-primary focus:ring-1 focus:ring-primary"
+              className="w-full rounded-lg border border-border bg-white px-3 py-2 text-sm text-text outline-none focus:border-primary focus:ring-1 focus:ring-primary"
             >
               <option value="realestate">不動産</option>
               <option value="legal">行政書士</option>
@@ -424,7 +424,7 @@ export default function ColumnForm({
       </section>
 
       {/* Japanese content */}
-      <section className="rounded-xl border border-border bg-surface p-6">
+      <section className="rounded-xl border border-border bg-white p-6">
         <h2 className="mb-4 text-lg font-semibold text-text">
           日本語コンテンツ
         </h2>
@@ -454,7 +454,7 @@ export default function ColumnForm({
       </section>
 
       {/* SEO */}
-      <section className="rounded-xl border border-border bg-surface p-6">
+      <section className="rounded-xl border border-border bg-white p-6">
         <div className="mb-4 flex items-center justify-between">
           <h2 className="text-lg font-semibold text-text">SEO</h2>
           <button
@@ -500,7 +500,7 @@ export default function ColumnForm({
       </section>
 
       {/* Translation tabs */}
-      <section className="rounded-xl border border-border bg-surface p-6">
+      <section className="rounded-xl border border-border bg-white p-6">
         <div className="mb-4 flex items-center justify-between">
           <h2 className="text-lg font-semibold text-text">翻訳</h2>
           <div className="flex items-center gap-2">
@@ -559,7 +559,7 @@ export default function ColumnForm({
               onClick={() => setActiveTranslation(tab.code)}
               className={`rounded-md px-4 py-2 text-sm font-medium transition-colors ${
                 activeTranslation === tab.code
-                  ? "bg-surface text-primary shadow-sm"
+                  ? "bg-white text-primary shadow-sm"
                   : "text-text-muted hover:text-text"
               }`}
             >
@@ -625,7 +625,7 @@ export default function ColumnForm({
       </section>
 
       {/* Author */}
-      <section className="rounded-xl border border-border bg-surface p-6">
+      <section className="rounded-xl border border-border bg-white p-6">
         <h2 className="mb-4 text-lg font-semibold text-text">著者</h2>
         <div className="grid gap-4 sm:grid-cols-2">
           <Field
@@ -644,7 +644,7 @@ export default function ColumnForm({
       </section>
 
       {/* Index Preview - always visible */}
-      <section className="rounded-xl border border-border bg-surface p-6">
+      <section className="rounded-xl border border-border bg-white p-6">
         <h2 className="mb-4 text-lg font-semibold text-text">
           インデックスプレビュー
         </h2>
@@ -808,7 +808,7 @@ function Field({
   maxLength?: number;
 }) {
   const inputClasses =
-    "w-full rounded-lg border border-border bg-surface px-3 py-2 text-sm text-text outline-none focus:border-primary focus:ring-1 focus:ring-primary";
+    "w-full rounded-lg border border-border bg-white px-3 py-2 text-sm text-text outline-none focus:border-primary focus:ring-1 focus:ring-primary";
 
   return (
     <div className={className}>

@@ -8,7 +8,8 @@ export const SITE_URL = "https://yotsuba-fudousan.com";
 export const BUSINESS_URLS: Record<string, string> = {
   realestate: "https://yotsuba-fudousan.com",
   legal: "https://yotsuba-legal.com",
-  labor: "https://yotsuba-labor.com",
+  // TODO: 社労士法人化後に復活
+  // labor: "https://yotsuba-labor.com",
 };
 
 export const SHARED_ORG_INFO = {
@@ -58,6 +59,7 @@ export const BUSINESS_SEO: Record<string, BusinessSEOConfig> = {
     ogImage: "/yotsuba/legal-square.png",
     columnBasePath: "/legal/column",
   },
+  /* TODO: 社労士法人化後に復活
   labor: {
     url: "https://yotsuba-labor.com",
     name: "四葉社会保険労務士法人",
@@ -68,6 +70,7 @@ export const BUSINESS_SEO: Record<string, BusinessSEOConfig> = {
     ogImage: "/yotsuba/labor-square.png",
     columnBasePath: "/labor/column",
   },
+  */
 };
 
 // ── Helpers ──
@@ -92,6 +95,31 @@ export function canonicalUrl(
   return `${baseUrl}${publicPath === "/" ? "" : publicPath}`;
 }
 
+/** 翻訳データからネストされたキーを取得 */
+export function getNestedValue(
+  data: Record<string, unknown>,
+  key: string,
+): string {
+  const keys = key.split(".");
+  let current: unknown = data;
+  for (const k of keys) {
+    if (current && typeof current === "object" && k in current) {
+      current = (current as Record<string, unknown>)[k];
+    } else {
+      return "";
+    }
+  }
+  return typeof current === "string" ? current : "";
+}
+
+/** OG locale マッピング */
+const OG_LOCALES: Record<string, string> = {
+  ja: "ja_JP",
+  en: "en_US",
+  "zh-tw": "zh_TW",
+  zh: "zh_CN",
+};
+
 /**
  * 全ページ共通のMetadata生成
  */
@@ -107,6 +135,7 @@ export function buildPageMetadata({
   publishedTime,
   modifiedTime,
   section,
+  locale = "ja",
 }: {
   businessKey: string;
   title: string;
@@ -119,6 +148,7 @@ export function buildPageMetadata({
   publishedTime?: string;
   modifiedTime?: string;
   section?: string;
+  locale?: string;
 }): Metadata {
   const biz = BUSINESS_SEO[businessKey];
   const url = canonicalUrl(businessKey, path);
@@ -129,7 +159,7 @@ export function buildPageMetadata({
     description,
     url,
     siteName: biz?.name ?? "四葉パートナーズ",
-    locale: "ja_JP",
+    locale: OG_LOCALES[locale] ?? "ja_JP",
     type,
     images: [
       {

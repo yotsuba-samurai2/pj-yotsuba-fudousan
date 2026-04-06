@@ -1,12 +1,15 @@
 import { notFound } from "next/navigation";
-import { getColumnBySlug, columns, getAllSlugs } from "@/lib/columns";
+import { cookies } from "next/headers";
+import { getColumnBySlug, getColumns, getLocalizedColumn, getAllSlugs } from "@/lib/columns";
 import { buildPageMetadata } from "@/lib/seo";
+import { LOCALE_COOKIE, DEFAULT_LOCALE, isValidLocale } from "@/lib/locale";
 import { BlogPostingJsonLd } from "@/components/seo/BlogPostingJsonLd";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { FAQJsonLd } from "@/components/seo/FAQJsonLd";
 import { SpeakableJsonLd } from "@/components/seo/SpeakableJsonLd";
 
 import type { Metadata } from "next";
+import type { LangCode } from "@/config/languages";
 import ColumnDetailContent from "./ColumnDetailContent";
 
 type Props = {
@@ -14,13 +17,18 @@ type Props = {
 };
 
 export async function generateStaticParams() {
-  return getAllSlugs().map((slug) => ({ slug }));
+  const slugs = await getAllSlugs();
+  return slugs.map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const col = getColumnBySlug(slug);
-  if (!col) return {};
+  const base = await getColumnBySlug(slug);
+  if (!base) return {};
+  const cookieStore = await cookies();
+  const lc = cookieStore.get(LOCALE_COOKIE)?.value;
+  const locale: LangCode = lc && isValidLocale(lc) ? lc : DEFAULT_LOCALE;
+  const col = getLocalizedColumn(base, locale);
   return buildPageMetadata({
     businessKey: "realestate",
     title: col.title,
@@ -31,16 +39,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     publishedTime: col.date,
     modifiedTime: col.modifiedDate ?? col.date,
     section: col.category,
+    locale,
   });
 }
 
 export default async function ColumnDetailPage({ params }: Props) {
   const { slug } = await params;
-  const col = getColumnBySlug(slug);
+  const col = await getColumnBySlug(slug);
   if (!col) notFound();
 
   // Find prev/next
-  const sorted = [...columns].sort((a, b) => b.date.localeCompare(a.date));
+  const allColumns = await getColumns();
+  const sorted = [...allColumns].sort((a, b) => b.date.localeCompare(a.date));
   const idx = sorted.findIndex((c) => c.slug === slug);
   const prev = idx < sorted.length - 1 ? sorted[idx + 1] : null;
   const next = idx > 0 ? sorted[idx - 1] : null;

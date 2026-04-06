@@ -25,6 +25,10 @@
       "viewCompanyInfo": "查看公司概況",
       "feelFreeToContact": "歡迎隨時諮詢"
     },
+    "column": {
+      "emptyTitle": "文章準備中",
+      "emptyDescription": "我們正在準備專欄文章，敬請期待。"
+    },
     "navigation": {
       "mainNav": "主導航",
       "mobileMenu": "行動端選單",
@@ -338,7 +342,7 @@
       "ctaDescription": "關於專欄內容的任何問題，也非常歡迎。"
     },
     "columnDetail": {
-      "authorTitle": "四葉不動産 代表董事",
+      "authorTitle": "四葉不動産",
       "authorName": "浦松 丈二",
       "ctaDescription": "關於專欄內容的任何問題，也非常歡迎。"
     }
@@ -349,14 +353,15 @@
     "legalName": "四葉行政書士事務所",
     "description": "補助金・助成金申請、在留資格・簽證、法務手續",
     "tagline": "補助金・簽證・公司設立一站式服務。",
-    "footerDescription1": "補助金・簽證・公司設立一站式服務。",
-    "footerDescription2": "透過不動產與法務的聯動，為您的商業與生活手續提供全方位支援。",
+    "footerDescription1": "透過不動產與法務的聯動，",
+    "footerDescription2": "為您的商業與生活手續提供全方位支援。",
     "meta": {
       "title": "四葉行政書士事務所 | 補助金・助成金・簽證申請",
       "titleTemplate": "%s | 四葉行政書士事務所",
       "description": "補助金・助成金申請、在留資格・簽證申請、公司設立、各類許可證。四葉パートナーズ的行政書士事務所為您提供法務手續的一站式支援。"
     },
     "nav": {
+      "home": "首頁",
       "services": "服務內容",
       "about": "事務所概況",
       "column": "專欄",
@@ -477,7 +482,7 @@
       "heroDescription2": "以行政書士的視角通俗易懂地為您呈現。"
     },
     "columnDetail": {
-      "authorTitle": "四葉行政書士事務所 代表行政書士",
+      "authorTitle": "四葉行政書士事務所",
       "authorName": "浦松 丈二"
     }
   },
@@ -487,14 +492,15 @@
     "legalName": "四葉社會保險勞務士法人",
     "description": "社會保險・勞務管理・助成金申請",
     "tagline": "解決企業與「人」相關的一切困擾。",
-    "footerDescription1": "解決企業與「人」相關的一切困擾。",
-    "footerDescription2": "為您提供社會保險・勞務管理・助成金申請的全方位支援。",
+    "footerDescription1": "為您提供社會保險・勞務管理・",
+    "footerDescription2": "助成金申請的全方位支援。",
     "meta": {
       "title": "四葉社會保險勞務士法人 | 社會保險・勞務・助成金",
       "titleTemplate": "%s | 四葉社會保險勞務士法人",
       "description": "社會保險・勞動保險手續、就業規則編製、助成金申請、勞務諮詢。四葉パートナーズ的社會保險勞務士法人為企業的人事・勞務提供全方位支援。"
     },
     "nav": {
+      "home": "首頁",
       "services": "服務內容",
       "about": "事務所概況",
       "column": "專欄",
@@ -660,7 +666,9 @@
         "visa": "簽證・在留資格",
         "labor": "社會保險・勞務",
         "other": "其他"
-      }
+      },
+      "submitting": "發送中...",
+      "error": "發送失敗，請稍後再試。"
     }
   },
   "thanks": {

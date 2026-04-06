@@ -149,7 +149,7 @@ export default function MarkdownEditor({
   return (
     <div>
       <label className="mb-1 block text-sm font-medium text-text">{label}</label>
-      <div className="overflow-hidden rounded-lg border border-border bg-surface">
+      <div className="overflow-hidden rounded-lg border border-border bg-white">
         {/* Toolbar + tabs */}
         <div className="flex items-center gap-1 border-b border-border bg-surface-dim px-2 py-1.5">
           {/* Edit / Preview toggle */}
@@ -158,7 +158,7 @@ export default function MarkdownEditor({
             onClick={() => setTab("edit")}
             className={`flex items-center gap-1 rounded-md px-2.5 py-1 text-xs font-medium transition-colors ${
               tab === "edit"
-                ? "bg-surface text-text shadow-sm"
+                ? "bg-white text-text shadow-sm"
                 : "text-text-muted hover:text-text"
             }`}
           >
@@ -170,7 +170,7 @@ export default function MarkdownEditor({
             onClick={() => setTab("preview")}
             className={`flex items-center gap-1 rounded-md px-2.5 py-1 text-xs font-medium transition-colors ${
               tab === "preview"
-                ? "bg-surface text-text shadow-sm"
+                ? "bg-white text-text shadow-sm"
                 : "text-text-muted hover:text-text"
             }`}
           >
@@ -190,7 +190,7 @@ export default function MarkdownEditor({
                     type="button"
                     title={action.title}
                     onClick={() => handleToolbar(action.action)}
-                    className="rounded p-1.5 text-text-muted transition-colors hover:bg-surface hover:text-text"
+                    className="rounded p-1.5 text-text-muted transition-colors hover:bg-white hover:text-text"
                   >
                     <Icon size={14} />
                   </button>
@@ -209,7 +209,7 @@ export default function MarkdownEditor({
             rows={rows}
             required={required}
             placeholder={placeholder}
-            className="w-full resize-y bg-surface px-4 py-3 font-mono text-sm text-text outline-none placeholder:text-text-muted/50"
+            className="w-full resize-y bg-white px-4 py-3 font-mono text-sm text-text outline-none placeholder:text-text-muted/50"
           />
         ) : (
           <div

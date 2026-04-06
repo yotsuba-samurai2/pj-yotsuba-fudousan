@@ -8,6 +8,7 @@ import { SkipToContent } from "@/components/ui/SkipToContent";
 import { SITE_URL } from "@/lib/seo";
 import { LOCALE_COOKIE, DEFAULT_LOCALE, isValidLocale } from "@/lib/locale";
 import type { LangCode } from "@/config/languages";
+import ScatteredIcons from "@/components/ui/ScatteredIcons";
 
 const zenKaku = Zen_Kaku_Gothic_New({
   variable: "--font-zen-kaku-gothic-new",
@@ -46,7 +47,8 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} className={`${zenKaku.variable}`}>
-      <body className="bg-surface text-text antialiased">
+      <body className="relative bg-surface text-text antialiased">
+        <ScatteredIcons />
         <LanguageProvider initialLocale={locale}>
           <TranslationProvider>
             <SkipToContent />

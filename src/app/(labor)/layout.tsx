@@ -1,34 +1,46 @@
 import type { Metadata } from "next";
+import { cookies } from "next/headers";
 import { TenantLayoutShell } from "@/components/layout/TenantLayout";
 import { OrganizationJsonLd } from "@/components/seo/OrganizationJsonLd";
 import { WebSiteJsonLd } from "@/components/seo/WebSiteJsonLd";
+import { LOCALE_COOKIE, DEFAULT_LOCALE, isValidLocale } from "@/lib/locale";
+import { getStaticTranslationData } from "@/lib/getTranslationData";
+import { getNestedValue, BUSINESS_SEO, BUSINESS_URLS } from "@/lib/seo";
+import type { LangCode } from "@/config/languages";
 
-export const metadata: Metadata = {
-  title: {
-    default: "四葉社会保険労務士法人 | 社会保険・労務・助成金",
-    template: "%s | 四葉社会保険労務士法人",
-  },
-  description:
-    "社会保険・労務管理・助成金申請をトータルサポートする社労士法人。就業規則作成、労使トラブル防止まで。不動産・行政書士と連携し企業の人事・労務をワンストップ支援。",
-  alternates: { canonical: "https://yotsuba-labor.com" },
-  openGraph: {
-    title: "四葉社会保険労務士法人 | 社会保険・労務・助成金",
-    description:
-      "社会保険・労務管理・助成金申請をトータルサポートする社労士法人。就業規則作成、労使トラブル防止まで。不動産・行政書士と連携し企業の人事・労務をワンストップ支援。",
-    url: "https://yotsuba-labor.com",
-    siteName: "四葉社会保険労務士法人",
-    locale: "ja_JP",
-    type: "website",
-    images: [{ url: "/yotsuba/labor-square.png", width: 512, height: 512, alt: "四葉社会保険労務士法人" }],
-  },
-  twitter: {
-    card: "summary",
-    title: "四葉社会保険労務士法人 | 社会保険・労務・助成金",
-    description:
-      "社会保険・労務管理・助成金申請をトータルサポートする社労士法人。就業規則作成、労使トラブル防止まで。不動産・行政書士と連携し企業の人事・労務をワンストップ支援。",
-    images: ["/yotsuba/labor-square.png"],
-  },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const cookieStore = await cookies();
+  const localeCookie = cookieStore.get(LOCALE_COOKIE)?.value;
+  const locale: LangCode = localeCookie && isValidLocale(localeCookie) ? localeCookie : DEFAULT_LOCALE;
+  const t = getStaticTranslationData(locale);
+
+  const title = getNestedValue(t, "labor.meta.title") || "四葉社会保険労務士法人";
+  const template = getNestedValue(t, "labor.meta.titleTemplate") || "%s | 四葉社会保険労務士法人";
+  const description = getNestedValue(t, "labor.meta.description") || BUSINESS_SEO.labor.description;
+  const biz = BUSINESS_SEO.labor;
+  const url = BUSINESS_URLS.labor;
+
+  return {
+    title: { default: title, template },
+    description,
+    alternates: { canonical: url },
+    openGraph: {
+      title,
+      description,
+      url,
+      siteName: biz.name,
+      locale: locale === "ja" ? "ja_JP" : locale === "en" ? "en_US" : locale === "zh-tw" ? "zh_TW" : "zh_CN",
+      type: "website",
+      images: [{ url: biz.ogImage, width: 512, height: 512, alt: biz.name }],
+    },
+    twitter: {
+      card: "summary",
+      title,
+      description,
+      images: [biz.ogImage],
+    },
+  };
+}
 
 export default function LaborLayout({
   children,

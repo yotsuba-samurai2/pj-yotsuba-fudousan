@@ -22,17 +22,21 @@ const NAV_HREFS: Record<string, { href: string; key: string }[]> = {
     { href: "/contact", key: "contact" },
   ],
   legal: [
+    // TODO: 社労士法人化後に復活
+    // { href: "/legal", key: "home" },
     { href: "/legal", key: "services" },
     { href: "/legal/about", key: "about" },
     { href: "/legal/column", key: "column" },
     { href: "/contact", key: "contact" },
   ],
-  labor: [
-    { href: "/labor", key: "services" },
-    { href: "/labor/about", key: "about" },
-    { href: "/labor/column", key: "column" },
-    { href: "/contact", key: "contact" },
-  ],
+  // TODO: 社労士法人化後に復活
+  // labor: [
+  //   { href: "/labor", key: "home" },
+  //   { href: "/labor/services", key: "services" },
+  //   { href: "/labor/about", key: "about" },
+  //   { href: "/labor/column", key: "column" },
+  //   { href: "/contact", key: "contact" },
+  // ],
 };
 
 /** テナントごとのフッターナビ href 定義 */
@@ -87,28 +91,29 @@ const FOOTER_NAV_HREFS: Record<
       items: [{ href: "/contact", key: "contact" }],
     },
   ],
-  labor: [
-    {
-      sectionKey: "services",
-      items: [
-        { href: "/labor", key: "socialInsurance" },
-        { href: "/labor", key: "subsidy" },
-        { href: "/labor", key: "rules" },
-        { href: "/labor", key: "payroll" },
-      ],
-    },
-    {
-      sectionKey: "office",
-      items: [
-        { href: "/labor/about", key: "about" },
-        { href: "/labor/column", key: "column" },
-      ],
-    },
-    {
-      sectionKey: "other",
-      items: [{ href: "/contact", key: "contact" }],
-    },
-  ],
+  // TODO: 社労士法人化後に復活
+  // labor: [
+  //   {
+  //     sectionKey: "services",
+  //     items: [
+  //       { href: "/labor/services", key: "socialInsurance" },
+  //       { href: "/labor/services", key: "subsidy" },
+  //       { href: "/labor/services", key: "rules" },
+  //       { href: "/labor/services", key: "payroll" },
+  //     ],
+  //   },
+  //   {
+  //     sectionKey: "office",
+  //     items: [
+  //       { href: "/labor/about", key: "about" },
+  //       { href: "/labor/column", key: "column" },
+  //     ],
+  //   },
+  //   {
+  //     sectionKey: "other",
+  //     items: [{ href: "/contact", key: "contact" }],
+  //   },
+  // ],
 };
 
 function TenantHeader({ businessKey }: { businessKey: string }) {
@@ -151,9 +156,13 @@ function TenantHeader({ businessKey }: { businessKey: string }) {
   const isActive = useCallback(
     (href: string) => {
       if (href === "/") return pathname === "/";
+      const hasChildNavItem = navItems.some(
+        (n) => n.href !== href && n.href.startsWith(href + "/"),
+      );
+      if (hasChildNavItem) return pathname === href;
       return pathname === href || pathname.startsWith(href + "/");
     },
-    [pathname],
+    [pathname, navItems],
   );
 
   return (
@@ -338,7 +347,7 @@ function TenantFooter({ businessKey }: { businessKey: string }) {
                 href="https://www.facebook.com/uramatsujoji"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-9 w-9 items-center justify-center rounded-lg border border-border text-text/40 transition-colors hover:border-primary/30 hover:text-primary"
+                className="flex h-9 w-9 items-center justify-center rounded-lg border border-border bg-surface text-text/40 transition-colors hover:border-primary/30 hover:text-primary"
                 aria-label="Facebook"
               >
                 <svg
@@ -354,7 +363,7 @@ function TenantFooter({ businessKey }: { businessKey: string }) {
                 href="https://www.instagram.com/uramatsu_joji/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-9 w-9 items-center justify-center rounded-lg border border-border text-text/40 transition-colors hover:border-primary/30 hover:text-primary"
+                className="flex h-9 w-9 items-center justify-center rounded-lg border border-border bg-surface text-text/40 transition-colors hover:border-primary/30 hover:text-primary"
                 aria-label="Instagram"
               >
                 <svg
@@ -370,7 +379,7 @@ function TenantFooter({ businessKey }: { businessKey: string }) {
                 href="https://note.com/luck428"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-9 w-9 items-center justify-center rounded-lg border border-border text-text/40 transition-colors hover:border-primary/30 hover:text-primary"
+                className="flex h-9 w-9 items-center justify-center rounded-lg border border-border bg-surface text-text/40 transition-colors hover:border-primary/30 hover:text-primary"
                 aria-label="note"
               >
                 <svg
@@ -386,7 +395,7 @@ function TenantFooter({ businessKey }: { businessKey: string }) {
                 href="https://www.samurai.co.jp/samurai/reserve/uramatsu-joji"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-9 items-center gap-1.5 rounded-lg border border-border px-3 text-text/40 transition-colors hover:border-primary/30 hover:text-primary"
+                className="flex h-9 items-center gap-1.5 rounded-lg border border-border bg-surface px-3 text-text/40 transition-colors hover:border-primary/30 hover:text-primary"
                 aria-label={t("common.footer.samuraiName")}
               >
                 <CalendarDays size={16} />

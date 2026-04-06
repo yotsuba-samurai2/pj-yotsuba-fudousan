@@ -42,6 +42,7 @@ export const groupBusinesses = [
       { href: "/legal/contact", label: "お問い合わせ" },
     ] as NavItem[],
   },
+  /* TODO: 社労士法人化後に復活
   {
     key: "labor",
     name: "四葉社会保険労務士法人",
@@ -62,10 +63,13 @@ export const groupBusinesses = [
       { href: "/labor/contact", label: "お問い合わせ" },
     ] as NavItem[],
   },
-] as const;
+  */
+];
 
 /** ホスト名からテナントを判定 */
-export function getBusinessByHost(host: string): (typeof groupBusinesses)[number] {
+export function getBusinessByHost(
+  host: string,
+): (typeof groupBusinesses)[number] {
   const hostname = host.split(":")[0]; // ポート番号を除去
 
   // ドメインマッチ
@@ -76,7 +80,8 @@ export function getBusinessByHost(host: string): (typeof groupBusinesses)[number
   // localhost開発用: legal.localhost → legal
   const sub = hostname.split(".")[0];
   if (sub === "legal") return groupBusinesses[1];
-  if (sub === "labor") return groupBusinesses[2];
+  // TODO: 社労士法人化後に復活
+  // if (sub === "labor") return groupBusinesses[2];
 
   // デフォルト: 不動産
   return groupBusinesses[0];

@@ -1,34 +1,46 @@
 import type { Metadata } from "next";
+import { cookies } from "next/headers";
 import { TenantLayoutShell } from "@/components/layout/TenantLayout";
 import { OrganizationJsonLd } from "@/components/seo/OrganizationJsonLd";
 import { WebSiteJsonLd } from "@/components/seo/WebSiteJsonLd";
+import { LOCALE_COOKIE, DEFAULT_LOCALE, isValidLocale } from "@/lib/locale";
+import { getStaticTranslationData } from "@/lib/getTranslationData";
+import { getNestedValue, BUSINESS_SEO, BUSINESS_URLS } from "@/lib/seo";
+import type { LangCode } from "@/config/languages";
 
-export const metadata: Metadata = {
-  title: {
-    default: "四葉不動産 | ことば、業界の壁を超えて、あなたの家を。",
-    template: "%s | 四葉不動産",
-  },
-  description:
-    "元新聞記者×行政書士の東京の不動産屋。日・英・中・タイ・ベトナム語の5言語対応と専門家ネットワークで、住まい探しから法務までワンストップでサポートします。",
-  alternates: { canonical: "https://yotsuba-fudousan.com" },
-  openGraph: {
-    title: "四葉不動産 | ことば、業界の壁を超えて、あなたの家を。",
-    description:
-      "元新聞記者×行政書士の東京の不動産屋。日・英・中・タイ・ベトナム語の5言語対応と専門家ネットワークで、住まい探しから法務までワンストップでサポートします。",
-    url: "https://yotsuba-fudousan.com",
-    siteName: "四葉不動産",
-    locale: "ja_JP",
-    type: "website",
-    images: [{ url: "/yotsuba/realestate-square.png", width: 512, height: 512, alt: "四葉不動産" }],
-  },
-  twitter: {
-    card: "summary",
-    title: "四葉不動産 | ことば、業界の壁を超えて、あなたの家を。",
-    description:
-      "元新聞記者×行政書士の東京の不動産屋。日・英・中・タイ・ベトナム語の5言語対応と専門家ネットワークで、住まい探しから法務までワンストップでサポートします。",
-    images: ["/yotsuba/realestate-square.png"],
-  },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const cookieStore = await cookies();
+  const localeCookie = cookieStore.get(LOCALE_COOKIE)?.value;
+  const locale: LangCode = localeCookie && isValidLocale(localeCookie) ? localeCookie : DEFAULT_LOCALE;
+  const t = getStaticTranslationData(locale);
+
+  const title = getNestedValue(t, "realestate.meta.title") || "四葉不動産";
+  const template = getNestedValue(t, "realestate.meta.titleTemplate") || "%s | 四葉不動産";
+  const description = getNestedValue(t, "realestate.meta.description") || BUSINESS_SEO.realestate.description;
+  const biz = BUSINESS_SEO.realestate;
+  const url = BUSINESS_URLS.realestate;
+
+  return {
+    title: { default: title, template },
+    description,
+    alternates: { canonical: url },
+    openGraph: {
+      title,
+      description,
+      url,
+      siteName: biz.name,
+      locale: locale === "ja" ? "ja_JP" : locale === "en" ? "en_US" : locale === "zh-tw" ? "zh_TW" : "zh_CN",
+      type: "website",
+      images: [{ url: biz.ogImage, width: 512, height: 512, alt: biz.name }],
+    },
+    twitter: {
+      card: "summary",
+      title,
+      description,
+      images: [biz.ogImage],
+    },
+  };
+}
 
 export default function RealEstateLayout({
   children,

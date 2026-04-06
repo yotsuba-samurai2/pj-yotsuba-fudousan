@@ -1,45 +1,10 @@
 import { NextRequest } from "next/server";
-import {
-  initializeApp,
-  getApps,
-  cert,
-  type ServiceAccount,
-} from "firebase-admin/app";
-import { getAuth } from "firebase-admin/auth";
 
-function getAdminApp() {
-  if (getApps().length > 0) return getApps()[0];
-
-  const projectId = process.env.FIREBASE_ADMIN_PROJECT_ID;
-  const clientEmail = process.env.FIREBASE_ADMIN_CLIENT_EMAIL;
-  const privateKey = process.env.FIREBASE_ADMIN_PRIVATE_KEY?.replace(
-    /\\n/g,
-    "\n",
-  );
-
-  if (projectId && clientEmail && privateKey) {
-    return initializeApp({
-      credential: cert({ projectId, clientEmail, privateKey } as ServiceAccount),
-    });
-  }
-
-  // Fallback: GOOGLE_APPLICATION_CREDENTIALS or FIREBASE_SERVICE_ACCOUNT_KEY
-  const serviceAccountJson = process.env.FIREBASE_SERVICE_ACCOUNT_KEY;
-  if (serviceAccountJson) {
-    const serviceAccount = JSON.parse(serviceAccountJson) as ServiceAccount;
-    return initializeApp({ credential: cert(serviceAccount) });
-  }
-
-  // Last resort: application default credentials
-  return initializeApp();
-}
-
-const adminApp = getAdminApp();
-const adminAuth = getAuth(adminApp);
+const FIREBASE_PROJECT_ID = "pj-yotsuba-corporate";
 
 /**
- * Verify Firebase ID token from the Authorization header.
- * Returns the decoded token on success, or throws an error.
+ * Verify Firebase ID token using Google's public token info endpoint.
+ * No service account needed.
  */
 export async function verifyAdminRequest(req: NextRequest) {
   const authHeader = req.headers.get("Authorization");
@@ -48,12 +13,30 @@ export async function verifyAdminRequest(req: NextRequest) {
   }
 
   const token = authHeader.slice(7);
-  try {
-    const decoded = await adminAuth.verifyIdToken(token);
-    return decoded;
-  } catch {
+
+  const res = await fetch(
+    `https://www.googleapis.com/identitytoolkit/v3/relyingparty/getAccountInfo?key=AIzaSyAQ2_xa2Nw2vB1GivwWxWaKijpDaWpHMLw`,
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ idToken: token }),
+    },
+  );
+
+  if (!res.ok) {
     throw new AuthError("無効な認証トークンです", 401);
   }
+
+  const data = await res.json();
+  const user = data.users?.[0];
+  if (!user) {
+    throw new AuthError("ユーザーが見つかりません", 401);
+  }
+
+  return {
+    uid: user.localId as string,
+    email: user.email as string | undefined,
+  };
 }
 
 export class AuthError extends Error {

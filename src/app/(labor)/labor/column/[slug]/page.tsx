@@ -1,6 +1,8 @@
 import { notFound } from "next/navigation";
-import { getLaborColumnBySlug, laborColumns, getAllLaborSlugs } from "@/lib/columns";
+import { cookies } from "next/headers";
+import { getLaborColumnBySlug, getLaborColumns, getLocalizedColumn, getAllLaborSlugs } from "@/lib/columns";
 import { buildPageMetadata } from "@/lib/seo";
+import { LOCALE_COOKIE, DEFAULT_LOCALE, isValidLocale } from "@/lib/locale";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { BlogPostingJsonLd } from "@/components/seo/BlogPostingJsonLd";
 import { FAQJsonLd } from "@/components/seo/FAQJsonLd";
@@ -8,17 +10,23 @@ import { SpeakableJsonLd } from "@/components/seo/SpeakableJsonLd";
 
 import { LaborColumnDetailPageContent } from "./PageContent";
 import type { Metadata } from "next";
+import type { LangCode } from "@/config/languages";
 
 type Props = { params: Promise<{ slug: string }> };
 
 export async function generateStaticParams() {
-  return getAllLaborSlugs().map((slug) => ({ slug }));
+  const slugs = await getAllLaborSlugs();
+  return slugs.map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const col = getLaborColumnBySlug(slug);
-  if (!col) return {};
+  const base = await getLaborColumnBySlug(slug);
+  if (!base) return {};
+  const cookieStore = await cookies();
+  const lc = cookieStore.get(LOCALE_COOKIE)?.value;
+  const locale: LangCode = lc && isValidLocale(lc) ? lc : DEFAULT_LOCALE;
+  const col = getLocalizedColumn(base, locale);
   return buildPageMetadata({
     businessKey: "labor",
     title: col.title,
@@ -29,15 +37,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     publishedTime: col.date,
     modifiedTime: col.modifiedDate ?? col.date,
     section: col.category,
+    locale,
   });
 }
 
 export default async function LaborColumnDetailPage({ params }: Props) {
   const { slug } = await params;
-  const col = getLaborColumnBySlug(slug);
+  const col = await getLaborColumnBySlug(slug);
   if (!col) notFound();
 
-  const sorted = [...laborColumns].sort((a, b) => b.date.localeCompare(a.date));
+  const allLaborColumns = await getLaborColumns();
+  const sorted = [...allLaborColumns].sort((a, b) => b.date.localeCompare(a.date));
   const idx = sorted.findIndex((c) => c.slug === slug);
   const prev = idx < sorted.length - 1 ? sorted[idx + 1] : null;
   const next = idx > 0 ? sorted[idx - 1] : null;
