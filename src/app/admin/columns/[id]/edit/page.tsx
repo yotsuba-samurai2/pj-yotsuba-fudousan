@@ -9,6 +9,30 @@ import {
   updateColumn,
   type FirestoreColumn,
 } from "@/lib/firestore/columns";
+import { auth } from "@/lib/firebase";
+
+async function revalidateColumn(business: string, slug: string) {
+  try {
+    const token = await auth.currentUser?.getIdToken();
+    const businessPath = business === "realestate" ? "" : `/${business}`;
+    await fetch("/api/admin/revalidate", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        ...(token && { Authorization: `Bearer ${token}` }),
+      },
+      body: JSON.stringify({
+        paths: [
+          `${businessPath}/column`,
+          `${businessPath}/column/${slug}`,
+          `${businessPath}/sitemap.xml`,
+        ],
+      }),
+    });
+  } catch (err) {
+    console.error("Revalidation failed:", err);
+  }
+}
 
 export default function EditColumnPage() {
   const params = useParams();
@@ -85,6 +109,7 @@ export default function EditColumnPage() {
           setError("");
           try {
             await updateColumn(id, data);
+            await revalidateColumn(data.business, data.slug);
             router.push("/admin/columns");
           } catch (err) {
             console.error("Failed to update column:", err);

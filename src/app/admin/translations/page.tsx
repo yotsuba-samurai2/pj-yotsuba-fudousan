@@ -7,19 +7,7 @@ import {
 } from "@/lib/firestore/translations";
 import type { LangCode } from "@/config/languages";
 
-import jaData from "@/locales/ja.json";
-import enData from "@/locales/en.json";
-import zhTwData from "@/locales/zh-tw.json";
-import zhData from "@/locales/zh.json";
-
 /* ─── Constants ─── */
-
-const staticFallbacks: Record<LangCode, Record<string, unknown>> = {
-  ja: jaData as Record<string, unknown>,
-  en: enData as Record<string, unknown>,
-  "zh-tw": zhTwData as Record<string, unknown>,
-  zh: zhData as Record<string, unknown>,
-};
 
 const locales: { code: LangCode; label: string }[] = [
   { code: "ja", label: "ja" },
@@ -96,16 +84,14 @@ export default function TranslationsPage() {
     setMessage(null);
     try {
       const result = await getTranslations(selectedLocale);
-      if (result) {
-        setTranslationData(result);
-      } else {
-        // Fallback to static JSON
-        setTranslationData(deepClone(staticFallbacks[selectedLocale]));
-      }
+      setTranslationData(result ?? {});
     } catch (err) {
       console.error("Failed to fetch translations:", err);
-      // Fallback to static JSON on error
-      setTranslationData(deepClone(staticFallbacks[selectedLocale]));
+      setTranslationData({});
+      setMessage({
+        type: "error",
+        text: "Firestoreからの読み込みに失敗しました",
+      });
     } finally {
       setLoading(false);
     }

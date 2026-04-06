@@ -1,8 +1,8 @@
 import type { MetadataRoute } from "next";
-import { getColumns, getLegalColumns } from "@/lib/columns";
-// TODO: 社労士法人化後に復活
-// import { getLaborColumns } from "@/lib/columns";
+import { getColumns } from "@/lib/columns";
 import { BUSINESS_URLS } from "@/lib/seo";
+
+export const revalidate = 300;
 
 /** Generate hreflang alternates for a given base URL and path */
 function withLangs(base: string, path: string = "") {
@@ -19,17 +19,11 @@ function withLangs(base: string, path: string = "") {
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date().toISOString();
-
   const re = BUSINESS_URLS.realestate;
-  const le = BUSINESS_URLS.legal;
-  // TODO: 社労士法人化後に復活
-  // const la = BUSINESS_URLS.labor;
 
   const columns = await getColumns();
-  const legalColumns = await getLegalColumns();
 
   return [
-    // ── Real Estate ──
     {
       url: re,
       lastModified: now,
@@ -65,52 +59,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.6,
       alternates: withLangs(re, `/column/${col.slug}`),
     })),
-
-    // ── Legal ──
-    {
-      url: le,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 1.0,
-      alternates: withLangs(le),
-    },
-    {
-      url: `${le}/about`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.7,
-      alternates: withLangs(le, "/about"),
-    },
-    {
-      url: `${le}/column`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.8,
-      alternates: withLangs(le, "/column"),
-    },
-    ...legalColumns.map((col) => ({
-      url: `${le}/column/${col.slug}`,
-      lastModified: col.modifiedDate ?? col.date,
-      changeFrequency: "yearly" as const,
-      priority: 0.6,
-      alternates: withLangs(le, `/column/${col.slug}`),
-    })),
-
-    /* TODO: 社労士法人化後に復活
-    // ── Labor ──
-    { url: la, lastModified: now, changeFrequency: "weekly", priority: 1.0, alternates: withLangs(la) },
-    { url: `${la}/about`, lastModified: now, changeFrequency: "monthly", priority: 0.7, alternates: withLangs(la, "/about") },
-    { url: `${la}/column`, lastModified: now, changeFrequency: "weekly", priority: 0.8, alternates: withLangs(la, "/column") },
-    ...laborColumns.map((col) => ({
-      url: `${la}/column/${col.slug}`,
-      lastModified: col.modifiedDate ?? col.date,
-      changeFrequency: "yearly" as const,
-      priority: 0.6,
-      alternates: withLangs(la, `/column/${col.slug}`),
-    })),
-    */
-
-    // ── Shared ──
     {
       url: `${re}/contact`,
       lastModified: now,

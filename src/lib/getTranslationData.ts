@@ -1,29 +1,75 @@
 import type { LangCode } from "@/config/languages";
 
-// 静的 JSON フォールバック
-import jaFallback from "@/locales/ja.json";
-import enFallback from "@/locales/en.json";
-import zhTwFallback from "@/locales/zh-tw.json";
-import zhFallback from "@/locales/zh.json";
-
-const fallbacks: Record<LangCode, Record<string, unknown>> = {
-  ja: jaFallback,
-  en: enFallback,
-  "zh-tw": zhTwFallback,
-  zh: zhFallback,
-};
+const PROJECT_ID = "pj-yotsuba-corporate";
+const LOCALES: LangCode[] = ["ja", "en", "zh-tw", "zh"];
 
 /**
- * 翻訳データを取得する
- * Firestore が利用可能なら Firestore から、そうでなければ静的 JSON にフォールバック
- *
- * NOTE: Firestore からの取得はクライアントサイドで行う（Firebase client SDK のため）
- * サーバーコンポーネントでは常に静的 JSON を使用
+ * Firestore REST APIのvalueをJSの値に変換する
  */
-export function getStaticTranslationData(locale: LangCode): Record<string, unknown> {
-  return fallbacks[locale] ?? fallbacks.ja;
+function decodeValue(value: Record<string, unknown>): unknown {
+  if ("stringValue" in value) return value.stringValue;
+  if ("integerValue" in value) return Number(value.integerValue);
+  if ("doubleValue" in value) return value.doubleValue;
+  if ("booleanValue" in value) return value.booleanValue;
+  if ("nullValue" in value) return null;
+  if ("mapValue" in value) {
+    const map = (value.mapValue as { fields?: Record<string, Record<string, unknown>> }).fields ?? {};
+    return decodeFields(map);
+  }
+  if ("arrayValue" in value) {
+    const arr = (value.arrayValue as { values?: Record<string, unknown>[] }).values ?? [];
+    return arr.map((v) => decodeValue(v));
+  }
+  return null;
 }
 
-export function getAllStaticTranslations(): Record<LangCode, Record<string, unknown>> {
-  return fallbacks;
+function decodeFields(
+  fields: Record<string, Record<string, unknown>>,
+): Record<string, unknown> {
+  const result: Record<string, unknown> = {};
+  for (const [key, value] of Object.entries(fields)) {
+    result[key] = decodeValue(value);
+  }
+  return result;
+}
+
+/**
+ * Firestore REST APIから単一localeの翻訳を取得
+ */
+export async function fetchTranslationsFromFirestore(
+  locale: LangCode,
+): Promise<Record<string, unknown>> {
+  const url = `https://firestore.googleapis.com/v1/projects/${PROJECT_ID}/databases/(default)/documents/translations/${locale}`;
+  try {
+    const res = await fetch(url, {
+      next: { revalidate: 60 },
+    });
+    if (!res.ok) {
+      console.error(`Failed to fetch translations/${locale}: ${res.status}`);
+      return {};
+    }
+    const data = (await res.json()) as {
+      fields?: Record<string, Record<string, unknown>>;
+    };
+    if (!data.fields) return {};
+    return decodeFields(data.fields);
+  } catch (err) {
+    console.error(`Error fetching translations/${locale}:`, err);
+    return {};
+  }
+}
+
+/**
+ * 全言語をFirestoreから並列取得
+ */
+export async function fetchAllTranslationsFromFirestore(): Promise<
+  Record<LangCode, Record<string, unknown>>
+> {
+  const entries = await Promise.all(
+    LOCALES.map(async (locale) => {
+      const data = await fetchTranslationsFromFirestore(locale);
+      return [locale, data] as const;
+    }),
+  );
+  return Object.fromEntries(entries) as Record<LangCode, Record<string, unknown>>;
 }

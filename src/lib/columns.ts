@@ -1,3 +1,4 @@
+import { cache } from "react";
 import { db } from "@/lib/firebase";
 import { collection, query, where, orderBy, limit, getDocs } from "firebase/firestore";
 
@@ -35,7 +36,7 @@ function toColumn(id: string, data: Record<string, unknown>): Column {
 
 // ── Firestore queries (published only) ──
 
-async function fetchPublished(business: BusinessKey): Promise<Column[]> {
+const fetchPublished = cache(async (business: BusinessKey): Promise<Column[]> => {
   const q = query(
     collection(db, COLLECTION),
     where("business", "==", business),
@@ -44,9 +45,9 @@ async function fetchPublished(business: BusinessKey): Promise<Column[]> {
   );
   const snap = await getDocs(q);
   return snap.docs.map((d) => toColumn(d.id, d.data()));
-}
+});
 
-async function fetchPublishedBySlug(business: BusinessKey, slug: string): Promise<Column | undefined> {
+const fetchPublishedBySlug = cache(async (business: BusinessKey, slug: string): Promise<Column | undefined> => {
   const q = query(
     collection(db, COLLECTION),
     where("business", "==", business),
@@ -58,7 +59,7 @@ async function fetchPublishedBySlug(business: BusinessKey, slug: string): Promis
   if (snap.empty) return undefined;
   const d = snap.docs[0];
   return toColumn(d.id, d.data());
-}
+});
 
 // ── Realestate ──
 

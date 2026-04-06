@@ -4,7 +4,7 @@ import { TenantLayoutShell } from "@/components/layout/TenantLayout";
 import { OrganizationJsonLd } from "@/components/seo/OrganizationJsonLd";
 import { WebSiteJsonLd } from "@/components/seo/WebSiteJsonLd";
 import { LOCALE_COOKIE, DEFAULT_LOCALE, isValidLocale } from "@/lib/locale";
-import { getStaticTranslationData } from "@/lib/getTranslationData";
+import { fetchTranslationsFromFirestore } from "@/lib/getTranslationData";
 import { getNestedValue, BUSINESS_SEO, BUSINESS_URLS } from "@/lib/seo";
 import type { LangCode } from "@/config/languages";
 
@@ -12,7 +12,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const cookieStore = await cookies();
   const localeCookie = cookieStore.get(LOCALE_COOKIE)?.value;
   const locale: LangCode = localeCookie && isValidLocale(localeCookie) ? localeCookie : DEFAULT_LOCALE;
-  const t = getStaticTranslationData(locale);
+  const t = await fetchTranslationsFromFirestore(locale);
 
   const title = getNestedValue(t, "labor.meta.title") || "四葉社会保険労務士法人";
   const template = getNestedValue(t, "labor.meta.titleTemplate") || "%s | 四葉社会保険労務士法人";

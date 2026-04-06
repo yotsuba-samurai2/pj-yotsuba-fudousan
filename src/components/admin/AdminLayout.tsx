@@ -11,6 +11,7 @@ import {
   LayoutDashboard,
   FileText,
   Languages,
+  Sparkles,
   LogOut,
   Menu,
   ExternalLink,
@@ -27,6 +28,7 @@ const navItems = [
   },
   { href: "/admin/columns", label: "コラム管理", icon: FileText },
   { href: "/admin/translations", label: "翻訳管理", icon: Languages },
+  { href: "/admin/ai-settings", label: "AIモデル管理", icon: Sparkles },
 ];
 
 export default function AdminLayout({

@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import Anthropic from "@anthropic-ai/sdk";
 import { verifyAdminRequest, AuthError } from "@/lib/api-auth";
 import { rateLimit } from "@/lib/rate-limit";
+import { getAiModel } from "@/lib/firestore/aiSettings";
 
 const anthropic = new Anthropic({
   apiKey: process.env.ANTHROPIC_API_KEY!,
@@ -66,7 +67,7 @@ Respond ONLY with a valid JSON object, no markdown code fence:
 {"keywords": ["keyword1", "keyword2", ...], "tags": ["tag1", "tag2", ...]}`;
 
     const message = await anthropic.messages.create({
-      model: "claude-sonnet-4-6",
+      model: await getAiModel(),
       max_tokens: 1024,
       messages: [{ role: "user", content: prompt }],
     });

@@ -5,7 +5,7 @@ import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 
 export const metadata = buildPageMetadata({
   businessKey: "legal",
-  title: "お問い合わせ | 四葉行政書士事務所",
+  title: "お問い合わせ",
   description: "補助金の申請書、ビザ取得、会社設立の相談はこちら。初回相談無料、電話・フォーム・オンライン予約で対応。文京区の四葉行政書士事務所。",
   path: "/legal/contact",
 });

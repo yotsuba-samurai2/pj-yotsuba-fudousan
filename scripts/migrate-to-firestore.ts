@@ -12,17 +12,13 @@ import { getFirestore, doc, setDoc, collection, addDoc, Timestamp } from "fireba
 import { readFileSync } from "fs";
 import { resolve } from "path";
 
-// dotenv 代わりに手動で .env.local を読む
-import { config } from "dotenv";
-config({ path: resolve(__dirname, "../.env.local") });
-
 const firebaseConfig = {
-  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
-  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+  apiKey: "AIzaSyAQ2_xa2Nw2vB1GivwWxWaKijpDaWpHMLw",
+  authDomain: "pj-yotsuba-corporate.firebaseapp.com",
+  projectId: "pj-yotsuba-corporate",
+  storageBucket: "pj-yotsuba-corporate.firebasestorage.app",
+  messagingSenderId: "30131850297",
+  appId: "1:30131850297:web:72f66776d0789b960c51e8",
 };
 
 const app = initializeApp(firebaseConfig);

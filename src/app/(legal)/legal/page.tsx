@@ -11,7 +11,6 @@ export const metadata = buildPageMetadata({
 */
 
 import { buildPageMetadata } from "@/lib/seo";
-import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { ServiceJsonLd } from "@/components/seo/ServiceJsonLd";
 import { HowToJsonLd } from "@/components/seo/HowToJsonLd";
 import { FAQJsonLd } from "@/components/seo/FAQJsonLd";
@@ -45,13 +44,6 @@ export default function LegalPage() {
             answer:
               "はい、在留資格の新規取得・変更・更新に対応しています。グループの不動産会社と連携して住居探しもまとめてサポートします。",
           },
-        ]}
-      />
-      <BreadcrumbJsonLd
-        businessKey="legal"
-        items={[
-          { name: "ホーム", href: "/legal" },
-          { name: "サービス", href: "/legal" },
         ]}
       />
       <ServiceJsonLd

@@ -5,7 +5,7 @@ import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata = buildPageMetadata({
   businessKey: "legal",
-  title: "送信完了 | 四葉行政書士事務所",
+  title: "送信完了",
   description: "お問い合わせを受け付けました。",
   path: "/legal/thanks",
   noindex: true,

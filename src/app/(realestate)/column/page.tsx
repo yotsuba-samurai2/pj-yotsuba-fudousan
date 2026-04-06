@@ -1,6 +1,8 @@
 import { buildPageMetadata } from "@/lib/seo";
 import ColumnListPageContent from "./ColumnListPageContent";
 
+export const revalidate = 300;
+
 export const metadata = buildPageMetadata({
   businessKey: "realestate",
   title: "コラム",

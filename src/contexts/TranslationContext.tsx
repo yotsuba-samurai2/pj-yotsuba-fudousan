@@ -3,7 +3,6 @@
 import { createContext, useContext, useState, useEffect } from "react";
 import type { LangCode } from "@/config/languages";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { getStaticTranslationData, getAllStaticTranslations } from "@/lib/getTranslationData";
 
 type TranslationContextType = {
   dictionary: Record<string, unknown>;
@@ -17,27 +16,26 @@ const TranslationContext = createContext<TranslationContextType>({
 
 /**
  * 翻訳辞書を提供する Provider
- * 初期値は静的 JSON、将来的に Firestore からの動的更新に対応可能
+ * Firestoreから取得した辞書をRootLayoutから受け取る
  */
 export function TranslationProvider({
   initialData,
   children,
 }: {
-  initialData?: Record<LangCode, Record<string, unknown>>;
+  initialData: Record<LangCode, Record<string, unknown>>;
   children: React.ReactNode;
 }) {
   const { locale } = useLanguage();
-  const allData = initialData ?? getAllStaticTranslations();
 
   const [dictionary, setDictionary] = useState<Record<string, unknown>>(
-    () => allData[locale] ?? allData.ja,
+    () => initialData[locale] ?? initialData.ja ?? {},
   );
 
   useEffect(() => {
-    setDictionary(allData[locale] ?? allData.ja);
-  }, [locale, allData]);
+    setDictionary(initialData[locale] ?? initialData.ja ?? {});
+  }, [locale, initialData]);
 
-  const fallback = allData.ja;
+  const fallback = initialData.ja ?? {};
 
   return (
     <TranslationContext.Provider value={{ dictionary, fallback }}>

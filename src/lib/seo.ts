@@ -46,7 +46,7 @@ export const BUSINESS_SEO: Record<string, BusinessSEOConfig> = {
     description:
       "元新聞記者×行政書士の東京の不動産屋。日・英・中・タイ・ベトナム語の5言語対応と専門家ネットワークで、住まい探しから法務までワンストップでサポートします。",
     schemaType: "RealEstateAgent",
-    ogImage: "/yotsuba/realestate-square.png",
+    ogImage: "/og.png",
     columnBasePath: "/column",
   },
   legal: {
@@ -56,7 +56,7 @@ export const BUSINESS_SEO: Record<string, BusinessSEOConfig> = {
     description:
       "元新聞記者の文章力×法務の専門知識。補助金採択率を高める申請書作成、ビザ取得、会社設立をワンストップ対応。不動産・社労士とも連携する四葉行政書士事務所。",
     schemaType: "LegalService",
-    ogImage: "/yotsuba/legal-square.png",
+    ogImage: "",
     columnBasePath: "/legal/column",
   },
   /* TODO: 社労士法人化後に復活
@@ -152,7 +152,9 @@ export function buildPageMetadata({
 }): Metadata {
   const biz = BUSINESS_SEO[businessKey];
   const url = canonicalUrl(businessKey, path);
-  const ogImage = image ?? biz?.ogImage ?? "/yotsuba/realestate-square.png";
+  const ogImage = image ?? biz?.ogImage ?? "";
+  const hasImage = Boolean(ogImage);
+  const isRealestate = businessKey === "realestate";
 
   const ogBase = {
     title,
@@ -161,14 +163,18 @@ export function buildPageMetadata({
     siteName: biz?.name ?? "四葉パートナーズ",
     locale: OG_LOCALES[locale] ?? "ja_JP",
     type,
-    images: [
-      {
-        url: ogImage,
-        width: 512,
-        height: 512,
-        alt: title,
-      },
-    ],
+    ...(hasImage
+      ? {
+          images: [
+            {
+              url: ogImage,
+              width: isRealestate ? 1322 : 512,
+              height: isRealestate ? 834 : 512,
+              alt: title,
+            },
+          ],
+        }
+      : {}),
   };
 
   const articleFields =
@@ -201,10 +207,10 @@ export function buildPageMetadata({
     },
     openGraph: { ...ogBase, ...articleFields },
     twitter: {
-      card: "summary",
+      card: hasImage && isRealestate ? "summary_large_image" : "summary",
       title,
       description,
-      images: [ogImage],
+      ...(hasImage ? { images: [ogImage] } : {}),
     },
     ...(noindex ? { robots: { index: false, follow: false } } : {}),
   };

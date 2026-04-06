@@ -5,10 +5,10 @@ import "./globals.css";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { TranslationProvider } from "@/contexts/TranslationContext";
 import { SkipToContent } from "@/components/ui/SkipToContent";
-import { SITE_URL } from "@/lib/seo";
 import { LOCALE_COOKIE, DEFAULT_LOCALE, isValidLocale } from "@/lib/locale";
 import type { LangCode } from "@/config/languages";
 import ScatteredIcons from "@/components/ui/ScatteredIcons";
+import { fetchAllTranslationsFromFirestore } from "@/lib/getTranslationData";
 
 const zenKaku = Zen_Kaku_Gothic_New({
   variable: "--font-zen-kaku-gothic-new",
@@ -18,7 +18,6 @@ const zenKaku = Zen_Kaku_Gothic_New({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(SITE_URL),
   title: {
     default: "四葉パートナーズ",
     template: "%s | 四葉パートナーズ",
@@ -27,10 +26,10 @@ export const metadata: Metadata = {
     "四葉パートナーズ — 不動産・行政書士・社会保険労務士のワンストップグループ。",
   icons: {
     icon: [
-      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
     ],
     apple: [
-      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
     ],
   },
 };
@@ -45,12 +44,14 @@ export default async function RootLayout({
   const locale: LangCode =
     localeCookie && isValidLocale(localeCookie) ? localeCookie : DEFAULT_LOCALE;
 
+  const allTranslations = await fetchAllTranslationsFromFirestore();
+
   return (
     <html lang={locale} className={`${zenKaku.variable}`}>
       <body className="relative bg-surface text-text antialiased">
         <ScatteredIcons />
         <LanguageProvider initialLocale={locale}>
-          <TranslationProvider>
+          <TranslationProvider initialData={allTranslations}>
             <SkipToContent />
             {children}
           </TranslationProvider>

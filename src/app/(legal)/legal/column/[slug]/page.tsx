@@ -12,6 +12,9 @@ import LegalColumnDetailContent from "./LegalColumnDetailContent";
 import type { Metadata } from "next";
 import type { LangCode } from "@/config/languages";
 
+export const revalidate = 300;
+export const dynamicParams = true;
+
 type Props = { params: Promise<{ slug: string }> };
 
 export async function generateStaticParams() {
