@@ -115,7 +115,7 @@ export default function HomePage() {
           {/* Right: hero photo (55%, rounded top-left, soft shadow inset) */}
           <div className="hero-fade-in relative w-full md:ml-auto md:w-[55%]">
             <div
-              className="relative h-48 w-full sm:h-64 md:h-full md:rounded-tl-[3rem]"
+              className="relative h-48 w-full sm:h-64 md:h-full md:rounded-tl-[20rem]"
               style={{ overflow: "hidden" }}
             >
               <Image
