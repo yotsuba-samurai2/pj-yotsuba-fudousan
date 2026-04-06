@@ -125,7 +125,8 @@ html {
 }
 .gradient-border-input:focus {
   border-color: transparent;
-  background-image: linear-gradient(var(--color-surface), var(--color-surface)),
+  background-image:
+    linear-gradient(var(--color-surface), var(--color-surface)),
     linear-gradient(
       to bottom right,
       var(--color-primary) 0%,
@@ -139,7 +140,13 @@ html {
 /* ─── Header scrolled border ─── */
 .header-border-gradient {
   border-bottom: 1px solid transparent;
-  border-image: linear-gradient(to bottom right, var(--color-primary) 0%, var(--color-secondary) 50%, var(--color-accent) 100%) 1;
+  border-image: linear-gradient(
+      to bottom right,
+      var(--color-primary) 0%,
+      var(--color-secondary) 50%,
+      var(--color-accent) 100%
+    )
+    1;
 }
 
 /* ─── Header nav link hover & active ─── */
@@ -277,9 +284,9 @@ html {
   /* Brand — ロゴ3色：翠 → 黄緑 → ピンク */
   --color-primary: #006838;
   --color-primary-dark: #005530;
-  --color-secondary: #8DC21F;
-  --color-accent: #E8A0BF;
-  --color-accent-dark: #D4899B;
+  --color-secondary: #8dc21f;
+  --color-accent: #e8a0bf;
+  --color-accent-dark: #d4899b;
 
   /* Neutral */
   --color-surface: #ffffff;

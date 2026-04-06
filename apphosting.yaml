@@ -42,9 +42,3 @@ env:
   # Secrets (runtime only)
   - variable: ANTHROPIC_API_KEY
     secret: ANTHROPIC_API_KEY
-  - variable: FIREBASE_ADMIN_PROJECT_ID
-    value: pj-yotsuba-corporate
-  - variable: FIREBASE_ADMIN_CLIENT_EMAIL
-    secret: FIREBASE_ADMIN_CLIENT_EMAIL
-  - variable: FIREBASE_ADMIN_PRIVATE_KEY
-    secret: FIREBASE_ADMIN_PRIVATE_KEY

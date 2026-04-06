@@ -31,12 +31,16 @@ const serviceHrefs = [
 export default function HomePage() {
   const { t, tArray } = useTranslation();
 
-  const strengths = tArray<{ title: string; subtitle: string; description: string }>(
-    "realestate.home.whyYotsuba.strengths"
-  );
-  const services = tArray<{ title: string; subtitle: string; description: string }>(
-    "realestate.home.services.items"
-  );
+  const strengths = tArray<{
+    title: string;
+    subtitle: string;
+    description: string;
+  }>("realestate.home.whyYotsuba.strengths");
+  const services = tArray<{
+    title: string;
+    subtitle: string;
+    description: string;
+  }>("realestate.home.services.items");
 
   return (
     <div className="relative">
@@ -69,7 +73,12 @@ export default function HomePage() {
               <h1 className="hero-fade-in-delay-1 mt-6 text-2xl font-bold leading-[1.3] tracking-tight sm:mt-8 sm:text-4xl md:text-[2.5rem] lg:text-5xl">
                 {t("realestate.home.heroTitle1")}
                 <br />
-                <span className="cta-gradient-text">{t("realestate.home.heroTitle2")}</span>{t("realestate.home.heroTitle3")}
+                <span className="whitespace-nowrap">
+                  <span className="cta-gradient-text">
+                    {t("realestate.home.heroTitle2")}
+                  </span>
+                  {t("realestate.home.heroTitle3")}
+                </span>
               </h1>
 
               {/* Gradient divider */}
@@ -95,14 +104,16 @@ export default function HomePage() {
                   href="/services"
                   className="cta-gradient-outline inline-flex items-center justify-center gap-2 px-8 py-3 text-sm font-semibold shadow-sm transition-all duration-200 hover:shadow-md sm:py-3.5"
                 >
-                  <span className="cta-gradient-text">{t("common.cta.viewServices")}</span>
+                  <span className="cta-gradient-text">
+                    {t("common.cta.viewServices")}
+                  </span>
                 </Link>
               </div>
             </div>
           </div>
 
-          {/* Right: hero photo (58%, rounded top-left, soft shadow inset) */}
-          <div className="hero-fade-in relative w-full md:w-[58%]">
+          {/* Right: hero photo (55%, rounded top-left, soft shadow inset) */}
+          <div className="hero-fade-in relative w-full md:ml-auto md:w-[55%]">
             <div
               className="relative h-48 w-full sm:h-64 md:h-full md:rounded-tl-[3rem]"
               style={{ overflow: "hidden" }}
@@ -111,7 +122,7 @@ export default function HomePage() {
                 src="/assets/images/hero-clover-hand.jpeg"
                 alt={t("realestate.home.heroImageAlt")}
                 fill
-                className="object-cover object-[65%_center] opacity-90"
+                className="object-cover object-[55%_center] opacity-90"
                 priority
               />
               {/* Soft gradient overlay on left edge for blend */}
@@ -196,7 +207,9 @@ export default function HomePage() {
                       <p className="text-[10px] font-medium tracking-wider text-text-muted">
                         {service.subtitle}
                       </p>
-                      <h3 className="mt-1 text-lg font-bold">{service.title}</h3>
+                      <h3 className="mt-1 text-lg font-bold">
+                        {service.title}
+                      </h3>
                       <p className="mt-2 text-sm leading-relaxed text-text-muted">
                         {service.description}
                       </p>
@@ -223,7 +236,9 @@ export default function HomePage() {
             <p className="cta-gradient-text text-sm font-medium tracking-[0.2em]">
               MESSAGE
             </p>
-            <h2 className="mt-3 text-2xl font-bold sm:text-3xl">{t("realestate.home.message.sectionTitle")}</h2>
+            <h2 className="mt-3 text-2xl font-bold sm:text-3xl">
+              {t("realestate.home.message.sectionTitle")}
+            </h2>
           </div>
 
           <div className="mx-auto mt-10 max-w-3xl sm:mt-14">
@@ -247,7 +262,9 @@ export default function HomePage() {
                     {t("realestate.home.message.paragraph2")}
                   </p>
                   <div className="mt-6">
-                    <p className="text-base font-bold">{t("representative.name")}</p>
+                    <p className="text-base font-bold">
+                      {t("representative.name")}
+                    </p>
                     <p className="mt-1 text-xs text-text-muted">
                       {t("realestate.home.message.title")}
                     </p>
@@ -276,7 +293,9 @@ export default function HomePage() {
             <p className="cta-gradient-text text-sm font-medium tracking-[0.2em]">
               ACCESS
             </p>
-            <h2 className="mt-3 text-2xl font-bold sm:text-3xl">{t("realestate.home.access.sectionTitle")}</h2>
+            <h2 className="mt-3 text-2xl font-bold sm:text-3xl">
+              {t("realestate.home.access.sectionTitle")}
+            </h2>
           </div>
 
           <div className="mx-auto mt-10 max-w-4xl sm:mt-14">
@@ -297,22 +316,30 @@ export default function HomePage() {
 
               {/* Info */}
               <div className="flex flex-col justify-center">
-                <h3 className="text-lg font-bold">{t("realestate.home.access.name")}</h3>
+                <h3 className="text-lg font-bold">
+                  {t("realestate.home.access.name")}
+                </h3>
                 <address className="mt-4 text-sm not-italic leading-relaxed text-text-muted">
                   {t("address.postalCode")}
                   <br />
-                  {t("address.prefecture")}{t("address.city")}{t("address.street")}
+                  {t("address.prefecture")}
+                  {t("address.city")}
+                  {t("address.street")}
                   <br />
                   {t("address.building")}
                 </address>
                 <div className="mt-6 space-y-2 text-sm text-text-muted">
                   <p>
-                    <span className="font-medium text-text">{t("realestate.home.access.nearestStation.label")}</span>
+                    <span className="font-medium text-text">
+                      {t("realestate.home.access.nearestStation.label")}
+                    </span>
                     <br />
                     {t("realestate.home.access.nearestStation.value")}
                   </p>
                   <p>
-                    <span className="font-medium text-text">{t("realestate.home.access.businessHours.label")}</span>
+                    <span className="font-medium text-text">
+                      {t("realestate.home.access.businessHours.label")}
+                    </span>
                     <br />
                     {t("realestate.home.access.businessHours.value")}
                   </p>
