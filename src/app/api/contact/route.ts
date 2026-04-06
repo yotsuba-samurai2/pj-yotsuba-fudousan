@@ -194,7 +194,7 @@ function autoReplyHtml({
             <p style="margin:0 0 4px;font-size:13px;color:#374151;font-weight:600;">${escapeHtml(businessLabel)}</p>
             <p style="margin:0;font-size:12px;color:#9ca3af;">
               〒112-0006 東京都文京区小日向4丁目2−5 小日向安田ビル 2F<br />
-              TEL: 03-6284-2901
+              TEL: 03-6161-9428
             </p>
             <div style="margin-top:12px;">
               <a href="https://luck428.com" style="font-size:12px;color:#16a34a;text-decoration:none;">luck428.com</a>
