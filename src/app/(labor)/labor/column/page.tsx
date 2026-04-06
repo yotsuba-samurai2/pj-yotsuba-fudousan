@@ -7,7 +7,7 @@ import { LaborColumnListPageContent } from "./PageContent";
 export const metadata = buildPageMetadata({
   businessKey: "labor",
   title: "コラム",
-  description: "四葉社会保険労務士法人のコラム。社会保険、助成金、労務管理など、人事・労務にまつわるお役立ち情報をお届けします。",
+  description: "社会保険手続きの実務、使える助成金情報、就業規則のポイントなど。企業の人事・労務担当者に役立つ実践コラム。",
   path: "/labor/column",
 });
 

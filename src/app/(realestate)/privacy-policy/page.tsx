@@ -4,7 +4,7 @@ import { PrivacyPolicyPageClient } from "./PrivacyPolicyPageClient";
 export const metadata = buildPageMetadata({
   businessKey: "realestate",
   title: "プライバシーポリシー | 四葉パートナーズ",
-  description: "四葉パートナーズのプライバシーポリシー。",
+  description: "四葉パートナーズの個人情報保護方針。お客様の個人情報の取り扱い、Cookie使用方針、データ管理体制について明記しています。",
   path: "/privacy-policy",
 });
 

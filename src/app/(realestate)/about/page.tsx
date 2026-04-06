@@ -4,7 +4,7 @@ import AboutPageContent from "./AboutPageContent";
 export const metadata = buildPageMetadata({
   businessKey: "realestate",
   title: "会社概要",
-  description: "四葉不動産の会社概要・代表紹介。文京区小日向の不動産会社です。",
+  description: "5カ国で暮らした元新聞記者が創業した東京の不動産屋。5言語対応と行政書士・社労士との連携で住まい探しから法務までサポートする四葉不動産の理念と代表プロフィール。",
   path: "/about",
 });
 

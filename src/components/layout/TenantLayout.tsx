@@ -317,7 +317,9 @@ function TenantFooter({ businessKey }: { businessKey: string }) {
               {t(`${businessKey}.tagline`)}
             </p>
             <p className="mt-4 text-sm leading-relaxed text-text/50">
-              {t(`${businessKey}.footerDescription`)}
+              {t(`${businessKey}.footerDescription1`)}
+              <br />
+              {t(`${businessKey}.footerDescription2`)}
             </p>
             <address className="mt-4 text-xs not-italic leading-relaxed text-text/50">
               {t("address.postalCode")}
@@ -368,10 +370,17 @@ function TenantFooter({ businessKey }: { businessKey: string }) {
                 href="https://note.com/luck428"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-9 w-9 items-center justify-center rounded-lg border border-border text-xs font-bold text-text/40 transition-colors hover:border-primary/30 hover:text-primary"
+                className="flex h-9 w-9 items-center justify-center rounded-lg border border-border text-text/40 transition-colors hover:border-primary/30 hover:text-primary"
                 aria-label="note"
               >
-                n
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path d="M22.195 2.641c-1.2-.499-4.063-.46-6.309.122-2.274.588-4.208 1.66-4.208 1.66s-.09-.2-.539-.408c-.449-.207-1.382-.525-2.792-.37-1.41.156-3.143.922-4.49 2.34C2.51 7.402 1.744 9.899 1.57 11.562c-.175 1.664-.07 3.463.384 5.105.455 1.643 1.34 3.296 2.782 4.348 1.443 1.053 3.092 1.186 4.544.922 1.452-.264 2.78-.886 3.812-1.584 1.032-.698 1.827-1.335 2.272-1.776l.145-.148c.184.24.414.46.694.64.96.617 2.12.563 2.963.32.843-.243 1.53-.65 2.083-1.095.553-.446.963-.916 1.248-1.29.284-.374.4-.605.4-.605l-1.462-.8s-.085.15-.306.43a5.831 5.831 0 01-.927.891c-.372.284-.817.533-1.322.662-.505.129-1.122.126-1.53-.137-.188-.122-.33-.287-.445-.504l7.395-3.62s.16-.7.108-1.874c-.054-1.175-.302-2.764-1.188-4.186-.887-1.423-2.188-2.18-3.35-2.577-1.163-.397-2.166-.517-2.902-.524-.737-.008-1.21.065-1.21.065s1.17-.713 2.872-1.196c1.702-.483 3.954-.56 5.26-.2l-.194-1.671zm-7.597 7.106c.485.033.937.12 1.312.275.75.308 1.278.828 1.636 1.418.358.59.55 1.247.652 1.835l-6.543 3.202c-.098-.39-.16-.8-.175-1.252-.028-.831.1-1.83.448-2.73.348-.9.876-1.72 1.575-2.254.485-.37 1.095-.494 1.095-.494z" />
+                </svg>
               </a>
               <a
                 href="https://www.samurai.co.jp/samurai/reserve/uramatsu-joji"

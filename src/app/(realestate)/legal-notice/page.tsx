@@ -5,7 +5,7 @@ import { LegalNoticePageClient } from "./LegalNoticePageClient";
 export const metadata = buildPageMetadata({
   businessKey: "realestate",
   title: "宅建業法に基づく表記 | 四葉不動産",
-  description: "四葉不動産株式会社の宅地建物取引業法に基づく表記。",
+  description: "四葉不動産株式会社の宅建業免許番号・事務所所在地・代表者情報など、宅地建物取引業法に基づく法定開示事項を掲載しています。",
   path: "/legal-notice",
 });
 

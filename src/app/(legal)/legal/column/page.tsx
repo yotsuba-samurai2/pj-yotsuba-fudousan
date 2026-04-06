@@ -6,7 +6,7 @@ import LegalColumnListContent from "./LegalColumnListContent";
 export const metadata = buildPageMetadata({
   businessKey: "legal",
   title: "コラム",
-  description: "四葉行政書士事務所のコラム。補助金・助成金、ビザ申請、会社設立など、法務にまつわるお役立ち情報をお届けします。",
+  description: "補助金・助成金の最新情報、ビザ申請のポイント、会社設立の手順など。元新聞記者の行政書士がわかりやすく解説するお役立ちコラム。",
   path: "/legal/column",
 });
 

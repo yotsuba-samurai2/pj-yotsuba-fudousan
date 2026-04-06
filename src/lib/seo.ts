@@ -43,7 +43,7 @@ export const BUSINESS_SEO: Record<string, BusinessSEOConfig> = {
     name: "四葉不動産",
     legalName: "四葉不動産株式会社",
     description:
-      "5言語対応の不動産屋。元新聞記者・海外赴任経験者の代表が、外国人の住まい探しを経験者の視点でサポートします。賃貸・売買・管理のご相談はお気軽にどうぞ。",
+      "元新聞記者×行政書士の東京の不動産屋。日・英・中・タイ・ベトナム語の5言語対応と専門家ネットワークで、住まい探しから法務までワンストップでサポートします。",
     schemaType: "RealEstateAgent",
     ogImage: "/yotsuba/realestate-square.png",
     columnBasePath: "/column",
@@ -53,7 +53,7 @@ export const BUSINESS_SEO: Record<string, BusinessSEOConfig> = {
     name: "四葉行政書士事務所",
     legalName: "四葉行政書士事務所",
     description:
-      "補助金・助成金申請、在留資格・ビザ申請、会社設立、各種許認可。四葉パートナーズの行政書士事務所が法務手続きをワンストップでサポートします。",
+      "元新聞記者の文章力×法務の専門知識。補助金採択率を高める申請書作成、ビザ取得、会社設立をワンストップ対応。不動産・社労士とも連携する四葉行政書士事務所。",
     schemaType: "LegalService",
     ogImage: "/yotsuba/legal-square.png",
     columnBasePath: "/legal/column",
@@ -63,7 +63,7 @@ export const BUSINESS_SEO: Record<string, BusinessSEOConfig> = {
     name: "四葉社会保険労務士法人",
     legalName: "四葉社会保険労務士法人",
     description:
-      "社会保険・労働保険の手続き、就業規則作成、助成金申請、労務相談。四葉パートナーズの社労士法人が企業の人事・労務をトータルサポートします。",
+      "社会保険・労務管理・助成金申請をトータルサポートする社労士法人。就業規則作成、労使トラブル防止まで。不動産・行政書士と連携し企業の人事・労務をワンストップ支援。",
     schemaType: "ProfessionalService",
     ogImage: "/yotsuba/labor-square.png",
     columnBasePath: "/labor/column",

@@ -8,7 +8,7 @@ import LegalPageContent from "./LegalPageContent";
 export const metadata = buildPageMetadata({
   businessKey: "legal",
   title: "四葉行政書士事務所",
-  description: "補助金・助成金申請、在留資格・ビザ申請、会社設立、各種許認可。四葉パートナーズの行政書士事務所が、法務手続きをワンストップでサポートします。",
+  description: "元記者が書く「通る申請書」で補助金採択率UP。ビザ申請・会社設立・許認可もワンストップ。不動産・社労士と連携し、事業の立ち上げから運営までを総合支援します。",
   path: "/legal",
 });
 

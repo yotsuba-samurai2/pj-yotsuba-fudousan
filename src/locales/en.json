@@ -90,11 +90,12 @@
     "legalName": "四葉不動産株式会社",
     "description": "Real estate leasing, sales & property management",
     "tagline": "Beyond language and industry barriers — finding your home.",
-    "footerDescription": "A multilingual real estate agency supporting housing searches for international residents with firsthand experience.",
+    "footerDescription1": "A real estate agency led by a former journalist and licensed scrivener.",
+    "footerDescription2": "5-language support and a professional network covering housing, legal, and labor services.",
     "meta": {
       "title": "四葉不動産 | Beyond language and industry barriers — finding your home.",
       "titleTemplate": "%s | 四葉不動産",
-      "description": "A multilingual real estate agency offering services in 5 languages. Our representative, a former journalist with overseas experience, supports international residents in finding homes. Feel free to contact us about leasing, buying, or property management."
+      "description": "A real estate agency led by a former journalist and licensed scrivener. With 5-language support and a professional network of legal and labor experts, we provide one-stop service from housing to legal matters."
     },
     "nav": {
       "services": "Services",
@@ -390,7 +391,8 @@
     "legalName": "四葉行政書士事務所",
     "description": "Subsidies & grants, residence status & visas, legal procedures",
     "tagline": "Subsidies, visas, and company formation — all in one place.",
-    "footerDescription": "Combining real estate and legal expertise, we provide comprehensive support for your business and daily life procedures.",
+    "footerDescription1": "Subsidies, visas, and company formation — all in one place.",
+    "footerDescription2": "Combining real estate and legal expertise, we provide comprehensive support for your business and daily life procedures.",
     "meta": {
       "title": "四葉行政書士事務所 | Subsidies, Grants & Visa Applications",
       "titleTemplate": "%s | 四葉行政書士事務所",
@@ -560,7 +562,8 @@
     "legalName": "四葉社会保険労務士法人",
     "description": "Social insurance, labor management & subsidy applications",
     "tagline": "Solving your business challenges related to people.",
-    "footerDescription": "Comprehensive support for social insurance, labor management, and subsidy applications.",
+    "footerDescription1": "Solving your business challenges related to people.",
+    "footerDescription2": "Comprehensive support for social insurance, labor management, and subsidy applications.",
     "meta": {
       "title": "四葉社会保険労務士法人 | Social Insurance, Labor & Subsidies",
       "titleTemplate": "%s | 四葉社会保険労務士法人",

@@ -24,6 +24,14 @@ export const metadata: Metadata = {
   },
   description:
     "四葉パートナーズ — 不動産・行政書士・社会保険労務士のワンストップグループ。",
+  icons: {
+    icon: [
+      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: [
+      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
+    ],
+  },
 };
 
 export default async function RootLayout({

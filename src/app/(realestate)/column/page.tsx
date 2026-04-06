@@ -5,7 +5,7 @@ import ColumnListPageContent from "./ColumnListPageContent";
 export const metadata = buildPageMetadata({
   businessKey: "realestate",
   title: "コラム",
-  description: "四葉不動産のコラム。外国人の住まい探し、賃貸・売買の豆知識、文京区の地域情報など、不動産にまつわるお役立ち情報をお届けします。",
+  description: "日本での部屋探しのコツ、敷金・礼金の仕組み、文京区の暮らし情報など。5カ国在住経験のある元新聞記者が実体験をもとにわかりやすく解説します。",
   path: "/column",
 });
 

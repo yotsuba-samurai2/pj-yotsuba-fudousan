@@ -4,7 +4,7 @@ import { TermsPageClient } from "./TermsPageClient";
 export const metadata = buildPageMetadata({
   businessKey: "realestate",
   title: "利用規約 | 四葉パートナーズ",
-  description: "四葉パートナーズの利用規約。",
+  description: "四葉パートナーズのウェブサイト利用規約。サービス利用条件、免責事項、知的財産権などの重要事項を掲載しています。",
   path: "/terms",
 });
 
