@@ -138,7 +138,7 @@ export default function LegalPageContent() {
             {t("legal.homePage.oneStopDescription2")}
           </p>
 
-          <div className="mt-12 grid gap-4 sm:grid-cols-3">
+          <div className="mx-auto mt-12 grid max-w-2xl gap-4 sm:grid-cols-2">
             {(() => {
               const businesses = tArray<{ name: string; description: string }>("legal.homePage.groupBusinesses");
               return (
@@ -172,6 +172,7 @@ export default function LegalPageContent() {
                       {t("common.thisPage")}
                     </p>
                   </div>
+                  {/* TODO: 社労士法人化後に復活
                   <Link
                     href="/labor"
                     className="rounded-xl border border-border bg-surface p-6 transition-all hover:border-primary/30 hover:shadow-md"
@@ -188,6 +189,7 @@ export default function LegalPageContent() {
                       {businesses[2]?.description}
                     </p>
                   </Link>
+                  */}
                 </>
               );
             })()}
