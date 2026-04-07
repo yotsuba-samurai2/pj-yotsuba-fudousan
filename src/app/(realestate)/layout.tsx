@@ -11,17 +11,21 @@ import type { LangCode } from "@/config/languages";
 export async function generateMetadata(): Promise<Metadata> {
   const cookieStore = await cookies();
   const localeCookie = cookieStore.get(LOCALE_COOKIE)?.value;
-  const locale: LangCode = localeCookie && isValidLocale(localeCookie) ? localeCookie : DEFAULT_LOCALE;
+  const locale: LangCode =
+    localeCookie && isValidLocale(localeCookie) ? localeCookie : DEFAULT_LOCALE;
   const t = await fetchTranslationsFromFirestore(locale);
 
   const title = getNestedValue(t, "realestate.meta.title") || "四葉不動産";
-  const template = getNestedValue(t, "realestate.meta.titleTemplate") || "%s | 四葉不動産";
-  const description = getNestedValue(t, "realestate.meta.description") || BUSINESS_SEO.realestate.description;
+  const template =
+    getNestedValue(t, "realestate.meta.titleTemplate") || "%s | 四葉不動産";
+  const description =
+    getNestedValue(t, "realestate.meta.description") ||
+    BUSINESS_SEO.realestate.description;
   const biz = BUSINESS_SEO.realestate;
   const url = BUSINESS_URLS.realestate;
 
   return {
-    metadataBase: new URL("https://yotsuba-fudousan.com"),
+    metadataBase: new URL("https://luck428.com"),
     title: { default: title, template },
     description,
     alternates: { canonical: url },
@@ -30,7 +34,14 @@ export async function generateMetadata(): Promise<Metadata> {
       description,
       url,
       siteName: biz.name,
-      locale: locale === "ja" ? "ja_JP" : locale === "en" ? "en_US" : locale === "zh-tw" ? "zh_TW" : "zh_CN",
+      locale:
+        locale === "ja"
+          ? "ja_JP"
+          : locale === "en"
+            ? "en_US"
+            : locale === "zh-tw"
+              ? "zh_TW"
+              : "zh_CN",
       type: "website",
       images: [{ url: "/og.png", width: 1322, height: 834, alt: biz.name }],
     },

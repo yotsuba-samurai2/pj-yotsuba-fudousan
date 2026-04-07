@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 export default async function NotFound() {
   const h = await headers();
   const host = h.get("host") || "";
-  const isLegal = host.includes("yotsuba-legal.com");
+  const isLegal = host.includes("luck428gyosei.com");
 
   // TODO: 行政書士・社労士ドメイン専用の404（社労士法人化後に実装）
   const homeHref = isLegal ? "/legal" : "/";

@@ -28,7 +28,7 @@ type TranslationLang = (typeof translationTabs)[number]["code"];
 
 const BUSINESS_DOMAINS: Record<string, string> = {
   realestate: "yotsuba-fudousan.com",
-  legal: "yotsuba-legal.com",
+  legal: "luck428gyosei.com",
   labor: "yotsuba-labor.com",
 };
 

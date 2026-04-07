@@ -4,7 +4,7 @@ import { NextRequest, NextResponse } from "next/server";
  * ミドルウェア: ロケール検出 → テナントリライト
  *
  * 1. ロケールプレフィックスの検出・ストリップ (/en/services → /services, locale=en)
- * 2. ホスト名ベースのテナントリライト (yotsuba-legal.com/about → /legal/about)
+ * 2. ホスト名ベースのテナントリライト (luck428gyosei.com/about → /legal/about)
  */
 
 // ── Locale ──
@@ -36,7 +36,7 @@ type TenantConfig = {
 const tenants: TenantConfig[] = [
   {
     pathPrefix: "/legal",
-    domains: ["yotsuba-legal.com", "www.yotsuba-legal.com"],
+    domains: ["luck428gyosei.com", "www.luck428gyosei.com"],
     subdomains: ["legal"],
   },
   // TODO: 社労士法人化後に復活

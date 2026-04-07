@@ -29,7 +29,7 @@ export const groupBusinesses = [
     description: "補助金・助成金申請、在留資格・ビザ、法務手続き",
     href: "/legal",
     pathPrefix: "/legal",
-    domains: ["yotsuba-legal.com", "www.yotsuba-legal.com"],
+    domains: ["luck428gyosei.com", "www.luck428gyosei.com"],
     external: false,
     logo: {
       square: "/yotsuba/legal-square.png",

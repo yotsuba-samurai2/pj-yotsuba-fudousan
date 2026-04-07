@@ -3,11 +3,11 @@ import { groupBusinesses } from "@/config/group";
 
 // ── Constants ──
 
-export const SITE_URL = "https://yotsuba-fudousan.com";
+export const SITE_URL = "https://luck428.com";
 
 export const BUSINESS_URLS: Record<string, string> = {
-  realestate: "https://yotsuba-fudousan.com",
-  legal: "https://yotsuba-legal.com",
+  realestate: "https://luck428.com",
+  legal: "https://luck428gyosei.com",
   // TODO: 社労士法人化後に復活
   // labor: "https://yotsuba-labor.com",
 };
@@ -40,7 +40,7 @@ export type BusinessSEOConfig = {
 
 export const BUSINESS_SEO: Record<string, BusinessSEOConfig> = {
   realestate: {
-    url: "https://yotsuba-fudousan.com",
+    url: "https://luck428.com",
     name: "四葉不動産",
     legalName: "四葉不動産株式会社",
     description:
@@ -50,7 +50,7 @@ export const BUSINESS_SEO: Record<string, BusinessSEOConfig> = {
     columnBasePath: "/column",
   },
   legal: {
-    url: "https://yotsuba-legal.com",
+    url: "https://luck428gyosei.com",
     name: "四葉行政書士事務所",
     legalName: "四葉行政書士事務所",
     description:
@@ -77,7 +77,7 @@ export const BUSINESS_SEO: Record<string, BusinessSEOConfig> = {
 
 /**
  * マルチテナントのcanonical URL生成
- * 内部パス `/legal/about` → `https://yotsuba-legal.com/about`
+ * 内部パス `/legal/about` → `https://luck428gyosei.com/about`
  */
 export function canonicalUrl(
   businessKey: string,

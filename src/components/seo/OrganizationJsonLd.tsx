@@ -47,7 +47,7 @@ export function OrganizationJsonLd({ businessKey }: { businessKey: string }) {
         parentOrganization: {
           "@type": "Organization",
           name: SHARED_ORG_INFO.name,
-          url: "https://yotsuba-fudousan.com",
+          url: "https://luck428.com",
         },
         founder: {
           "@type": "Person",

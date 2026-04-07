@@ -64,14 +64,14 @@ async function buildLegalSitemap(): Promise<MetadataRoute.Sitemap> {
 
 /**
  * ホスト名で振り分け:
- * - yotsuba-legal.com → 行政書士のsitemap
+ * - luck428gyosei.com → 行政書士のsitemap
  * - それ以外 → 不動産のsitemap
  */
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const h = await headers();
   const host = h.get("host") || "";
 
-  if (host.includes("yotsuba-legal.com")) {
+  if (host.includes("luck428gyosei.com")) {
     return buildLegalSitemap();
   }
 

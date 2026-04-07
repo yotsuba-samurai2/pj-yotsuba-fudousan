@@ -21,7 +21,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const url = BUSINESS_URLS.legal;
 
   return {
-    metadataBase: new URL("https://yotsuba-legal.com"),
+    metadataBase: new URL("https://luck428gyosei.com"),
     title: { default: title, template },
     description,
     alternates: { canonical: url },
