@@ -7,7 +7,7 @@ export const revalidate = 300;
 export const metadata = buildPageMetadata({
   businessKey: "legal",
   title: "コラム",
-  description: "補助金・助成金の最新情報、ビザ申請のポイント、会社設立の手順など。元新聞記者の行政書士がわかりやすく解説するお役立ちコラム。",
+  description: "補助金・助成金の最新情報と採択のコツ、ビザ・在留資格申請のポイント、会社設立の手順、各種許認可の実務まで。元新聞記者としての取材経験と現場の視点を活かし、四葉行政書士事務所がわかりやすく解説するお役立ちコラムです。",
   path: "/legal/column",
 });
 

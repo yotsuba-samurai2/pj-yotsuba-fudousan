@@ -5,7 +5,7 @@ import LegalAboutPageContent from "./LegalAboutPageContent";
 export const metadata = buildPageMetadata({
   businessKey: "legal",
   title: "会社概要",
-  description: "5カ国で暮らした元新聞記者が行政書士に。記者経験で培った取材力と文章力を武器に、補助金・ビザ・会社設立を支援する事務所の理念と代表紹介。",
+  description: "5カ国で暮らした元新聞記者が、取材で培った情報収集力と文章力を活かして行政書士に。補助金・助成金、ビザ、会社設立、許認可までワンストップで対応。文京区の四葉行政書士事務所の理念とバックグラウンドをご紹介します。",
   path: "/legal/about",
 });
 

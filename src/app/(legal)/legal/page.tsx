@@ -18,10 +18,11 @@ import LegalPageContent from "./LegalPageContent";
 
 export const metadata = buildPageMetadata({
   businessKey: "legal",
-  title: "四葉行政書士事務所",
+  title: "四葉行政書士事務所 | 補助金・ビザ・会社設立をワンストップ",
   description:
-    "元記者が書く「通る申請書」で補助金採択率UP。ビザ申請・会社設立・許認可もワンストップ。不動産と連携し、事業開始を総合支援します。",
+    "元新聞記者の文章力で「通る申請書」を作成する文京区の四葉行政書士事務所。補助金・助成金の採択率向上、ビザ・在留資格、会社設立、各種許認可までワンストップで対応。不動産とも連携し事業開始を総合支援。初回相談は無料、お気軽にどうぞ。",
   path: "/legal",
+  absoluteTitle: true,
 });
 
 export default function LegalPage() {

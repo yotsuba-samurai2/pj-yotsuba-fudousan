@@ -44,7 +44,7 @@ export const BUSINESS_SEO: Record<string, BusinessSEOConfig> = {
     name: "四葉不動産",
     legalName: "四葉不動産株式会社",
     description:
-      "元新聞記者×行政書士の東京の不動産屋。日・英・中・タイ・ベトナム語の5言語対応と専門家ネットワークで、住まい探しから法務までワンストップでサポートします。",
+      "元新聞記者が5カ国での在住経験を活かして立ち上げた、東京・文京区の不動産屋。賃貸・売買・管理から相続不動産まで、日英中タイベトナム5言語対応と専門家ネットワークで住まい探しから契約・法務までワンストップ対応。初回相談は無料、お気軽にどうぞ。",
     schemaType: "RealEstateAgent",
     ogImage: "/og.png",
     columnBasePath: "/column",
@@ -54,7 +54,7 @@ export const BUSINESS_SEO: Record<string, BusinessSEOConfig> = {
     name: "四葉行政書士事務所",
     legalName: "四葉行政書士事務所",
     description:
-      "元新聞記者の文章力×法務の専門知識。補助金採択率を高める申請書作成、ビザ取得、会社設立をワンストップ対応。不動産・社労士とも連携する四葉行政書士事務所。",
+      "元新聞記者の文章力で「通る申請書」を作成する文京区の四葉行政書士事務所。補助金・助成金の採択率向上、ビザ・在留資格、会社設立、各種許認可までワンストップ対応。不動産・社労士とも連携し事業開始を総合支援。初回相談無料。",
     schemaType: "LegalService",
     ogImage: "",
     columnBasePath: "/legal/column",
@@ -136,6 +136,7 @@ export function buildPageMetadata({
   modifiedTime,
   section,
   locale = "ja",
+  absoluteTitle = false,
 }: {
   businessKey: string;
   title: string;
@@ -149,6 +150,7 @@ export function buildPageMetadata({
   modifiedTime?: string;
   section?: string;
   locale?: string;
+  absoluteTitle?: boolean;
 }): Metadata {
   const biz = BUSINESS_SEO[businessKey];
   const url = canonicalUrl(businessKey, path);
@@ -192,7 +194,7 @@ export function buildPageMetadata({
   const langPath = publicPath === "/" ? "" : publicPath;
 
   return {
-    title,
+    title: absoluteTitle ? { absolute: title } : title,
     description,
     ...(keywords?.length ? { keywords } : {}),
     alternates: {
