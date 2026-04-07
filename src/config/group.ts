@@ -9,7 +9,7 @@ export const groupBusinesses = [
     href: "/",
     pathPrefix: "/",
     /** このテナントに紐づくドメイン（複数可） */
-    domains: ["yotsuba-fudousan.com", "www.yotsuba-fudousan.com"],
+    domains: ["luck428.com", "www.luck428.com"],
     external: false,
     logo: {
       square: "/yotsuba/realestate-square.png",
