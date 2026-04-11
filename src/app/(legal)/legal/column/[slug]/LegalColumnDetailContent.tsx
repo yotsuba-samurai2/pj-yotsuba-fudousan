@@ -32,11 +32,11 @@ export default function LegalColumnDetailContent({ column: col, prev, next }: Pr
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <div className="mb-12 flex items-center gap-4 border-b border-border pb-8">
             <div className="h-12 w-12 shrink-0 overflow-hidden rounded-full">
-              <Image src="/uramatsu.png" alt={t("legal.columnDetail.authorName")} width={48} height={48} className="h-full w-full object-cover" />
+              <Image src="/uramatsu.png" alt={col.author?.name || t("legal.columnDetail.authorName")} width={48} height={48} className="h-full w-full object-cover" />
             </div>
             <div>
-              <p className="text-sm font-bold">{t("legal.columnDetail.authorName")}</p>
-              <p className="text-xs text-text-muted">{t("legal.columnDetail.authorTitle")}</p>
+              <p className="text-sm font-bold">{col.author?.name || t("legal.columnDetail.authorName")}</p>
+              <p className="text-xs text-text-muted">{col.author?.title || t("legal.columnDetail.authorTitle")}</p>
             </div>
           </div>
           <p className="article-summary sr-only">{col.excerpt}</p>

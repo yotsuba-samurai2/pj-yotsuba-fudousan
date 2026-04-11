@@ -1,0 +1,29 @@
+rules_version = '2';
+
+service firebase.storage {
+  match /b/{bucket}/o {
+
+    // Firebase Auth でログイン済みであれば管理者とみなす (firestore.rules と同方針)
+    function isAdmin() {
+      return request.auth != null;
+    }
+
+    // 画像の制約: 10MB 以下かつ image/* であること
+    function isValidImage() {
+      return request.resource.size < 10 * 1024 * 1024
+        && request.resource.contentType.matches('image/.*');
+    }
+
+    // コラム記事用画像: 全員読み取り可 (記事は公開されるため)、管理者のみ書き込み可
+    match /columns/{allPaths=**} {
+      allow read: if true;
+      allow write: if isAdmin() && isValidImage();
+    }
+
+    // 想定外パスへの書き込み / 読み取りは全て拒否
+    match /{allPaths=**} {
+      allow read: if false;
+      allow write: if false;
+    }
+  }
+}

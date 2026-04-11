@@ -21,10 +21,21 @@ export type Column = {
   faq?: Array<{ question: string; answer: string }>;
   tags?: string[];
   translations?: {
-    en?: { title: string; excerpt: string; content: string; category?: string; keywords?: string[]; tags?: string[]; faq?: Array<{ question: string; answer: string }> };
-    "zh-tw"?: { title: string; excerpt: string; content: string; category?: string; keywords?: string[]; tags?: string[]; faq?: Array<{ question: string; answer: string }> };
-    zh?: { title: string; excerpt: string; content: string; category?: string; keywords?: string[]; tags?: string[]; faq?: Array<{ question: string; answer: string }> };
+    en?: ColumnTranslationLocalized;
+    "zh-tw"?: ColumnTranslationLocalized;
+    zh?: ColumnTranslationLocalized;
   };
+};
+
+export type ColumnTranslationLocalized = {
+  title: string;
+  excerpt: string;
+  content: string;
+  category?: string;
+  keywords?: string[];
+  tags?: string[];
+  author?: { name: string; title: string };
+  faq?: Array<{ question: string; answer: string }>;
 };
 
 const COLLECTION = "columns";
@@ -140,5 +151,9 @@ export function getLocalizedColumn(column: Column, locale: LangCode): Column {
     keywords: trans.keywords?.length ? trans.keywords : column.keywords,
     tags: trans.tags?.length ? trans.tags : column.tags,
     faq: trans.faq?.length ? trans.faq : column.faq,
+    author:
+      trans.author && (trans.author.name || trans.author.title)
+        ? trans.author
+        : column.author,
   };
 }

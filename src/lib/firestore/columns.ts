@@ -22,6 +22,7 @@ export type ColumnTranslation = {
   category?: string;
   keywords?: string[];
   tags?: string[];
+  author?: { name: string; title: string };
   faq?: Array<{ question: string; answer: string }>;
 };
 

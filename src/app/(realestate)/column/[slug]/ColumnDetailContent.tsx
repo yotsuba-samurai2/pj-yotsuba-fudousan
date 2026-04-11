@@ -47,15 +47,19 @@ export default function ColumnDetailContent({ col, prev, next }: Props) {
             <div className="h-12 w-12 shrink-0 overflow-hidden rounded-full">
               <Image
                 src="/uramatsu.png"
-                alt={t("realestate.columnDetail.authorName")}
+                alt={col.author?.name || t("realestate.columnDetail.authorName")}
                 width={48}
                 height={48}
                 className="h-full w-full object-cover"
               />
             </div>
             <div>
-              <p className="text-sm font-bold">{t("realestate.columnDetail.authorName")}</p>
-              <p className="text-xs text-text-muted">{t("realestate.columnDetail.authorTitle")}</p>
+              <p className="text-sm font-bold">
+                {col.author?.name || t("realestate.columnDetail.authorName")}
+              </p>
+              <p className="text-xs text-text-muted">
+                {col.author?.title || t("realestate.columnDetail.authorTitle")}
+              </p>
             </div>
           </div>
 

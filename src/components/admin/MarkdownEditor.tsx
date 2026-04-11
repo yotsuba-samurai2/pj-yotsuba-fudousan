@@ -16,7 +16,14 @@ import {
   Minus,
   Eye,
   Pencil,
+  Image as ImageIcon,
 } from "lucide-react";
+import { storage } from "@/lib/firebase";
+import {
+  ref as storageRef,
+  uploadBytes,
+  getDownloadURL,
+} from "firebase/storage";
 
 type Props = {
   value: string;
@@ -46,7 +53,8 @@ function wrapSelection(
   const start = textarea.selectionStart;
   const end = textarea.selectionEnd;
   const selected = value.slice(start, end) || placeholder;
-  const newValue = value.slice(0, start) + before + selected + after + value.slice(end);
+  const newValue =
+    value.slice(0, start) + before + selected + after + value.slice(end);
   return {
     value: newValue,
     selectionStart: start + before.length,
@@ -130,7 +138,12 @@ export default function MarkdownEditor({
   placeholder,
 }: Props) {
   const [tab, setTab] = useState<"edit" | "preview">("edit");
+  const [uploading, setUploading] = useState(false);
+  const [uploadError, setUploadError] = useState("");
   const textareaRef = useRef<HTMLTextAreaElement>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+  // 画像アップロード開始時のカーソル位置を保存 (ファイル選択中にフォーカスが外れて失われるため)
+  const savedSelectionRef = useRef<{ start: number; end: number } | null>(null);
 
   const handleToolbar = useCallback(
     (action: ToolbarAction["action"]) => {
@@ -146,9 +159,91 @@ export default function MarkdownEditor({
     [value, onChange],
   );
 
+  const insertAtCursor = useCallback(
+    (text: string) => {
+      const ta = textareaRef.current;
+      const saved = savedSelectionRef.current;
+      savedSelectionRef.current = null;
+
+      if (!ta && !saved) {
+        onChange(value + text);
+        return;
+      }
+      const start = saved?.start ?? ta!.selectionStart;
+      const end = saved?.end ?? ta!.selectionEnd;
+      const newValue = value.slice(0, start) + text + value.slice(end);
+      onChange(newValue);
+      const cursor = start + text.length;
+      requestAnimationFrame(() => {
+        if (ta) {
+          ta.focus();
+          ta.setSelectionRange(cursor, cursor);
+        }
+      });
+    },
+    [value, onChange],
+  );
+
+  const handleImageSelected = useCallback(
+    async (file: File) => {
+      setUploadError("");
+      setUploading(true);
+      try {
+        const allowed = [
+          "image/jpeg",
+          "image/png",
+          "image/webp",
+          "image/gif",
+          "image/svg+xml",
+        ];
+        if (!allowed.includes(file.type)) {
+          throw new Error("対応していない画像形式です (jpg/png/webp/gif/svg)");
+        }
+        if (file.size > 10 * 1024 * 1024) {
+          throw new Error("ファイルサイズは10MB以下にしてください");
+        }
+
+        const extMap: Record<string, string> = {
+          "image/jpeg": "jpg",
+          "image/png": "png",
+          "image/webp": "webp",
+          "image/gif": "gif",
+          "image/svg+xml": "svg",
+        };
+        const ext = extMap[file.type];
+        const yyyymm = new Date().toISOString().slice(0, 7).replace("-", "");
+        const rand =
+          typeof crypto !== "undefined" && "randomUUID" in crypto
+            ? crypto.randomUUID()
+            : `${Date.now()}-${Math.random().toString(36).slice(2)}`;
+        const path = `columns/${yyyymm}/${rand}.${ext}`;
+
+        const objectRef = storageRef(storage, path);
+        await uploadBytes(objectRef, file, {
+          contentType: file.type,
+          cacheControl: "public, max-age=31536000, immutable",
+        });
+        const url = await getDownloadURL(objectRef);
+
+        const alt = file.name.replace(/\.[^.]+$/, "");
+        insertAtCursor(`![${alt}](${url})\n`);
+      } catch (err) {
+        setUploadError(
+          err instanceof Error ? err.message : "アップロードに失敗しました",
+        );
+      } finally {
+        setUploading(false);
+        if (fileInputRef.current) fileInputRef.current.value = "";
+      }
+    },
+    [insertAtCursor],
+  );
+
   return (
     <div>
-      <label className="mb-1 block text-sm font-medium text-text">{label}</label>
+      <label className="mb-1 block text-sm font-medium text-text">
+        {label}
+      </label>
       <div className="overflow-hidden rounded-lg border border-border bg-white">
         {/* Toolbar + tabs */}
         <div className="flex items-center gap-1 border-b border-border bg-surface-dim px-2 py-1.5">
@@ -196,9 +291,48 @@ export default function MarkdownEditor({
                   </button>
                 );
               })}
+              <button
+                type="button"
+                title="画像をアップロード"
+                disabled={uploading}
+                onMouseDown={(e) => {
+                  // フォーカスが外れる前にカーソル位置を保存
+                  e.preventDefault();
+                  const ta = textareaRef.current;
+                  if (ta) {
+                    savedSelectionRef.current = {
+                      start: ta.selectionStart,
+                      end: ta.selectionEnd,
+                    };
+                  }
+                }}
+                onClick={() => fileInputRef.current?.click()}
+                className="rounded p-1.5 text-text-muted transition-colors hover:bg-white hover:text-text disabled:cursor-not-allowed disabled:opacity-50"
+              >
+                {uploading ? (
+                  <span className="inline-block h-3.5 w-3.5 animate-spin rounded-full border-2 border-text-muted/30 border-t-text-muted" />
+                ) : (
+                  <ImageIcon size={14} />
+                )}
+              </button>
+              <input
+                ref={fileInputRef}
+                type="file"
+                accept="image/jpeg,image/png,image/webp,image/gif,image/svg+xml"
+                className="hidden"
+                onChange={(e) => {
+                  const f = e.target.files?.[0];
+                  if (f) handleImageSelected(f);
+                }}
+              />
             </>
           )}
         </div>
+        {uploadError && (
+          <p className="border-b border-border bg-red-50 px-4 py-2 text-xs text-red-600">
+            {uploadError}
+          </p>
+        )}
 
         {/* Content area */}
         {tab === "edit" ? (
@@ -221,7 +355,9 @@ export default function MarkdownEditor({
                 {value}
               </ReactMarkdown>
             ) : (
-              <p className="text-text-muted">プレビューするコンテンツがありません</p>
+              <p className="text-text-muted">
+                プレビューするコンテンツがありません
+              </p>
             )}
           </div>
         )}

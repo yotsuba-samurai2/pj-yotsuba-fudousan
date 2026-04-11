@@ -13,7 +13,6 @@ type GenerateSeoRequest = {
   excerpt: string;
   content: string;
   category: string;
-  business: string;
 };
 
 export async function POST(req: NextRequest) {
@@ -30,7 +29,7 @@ export async function POST(req: NextRequest) {
     // Auth verification
     await verifyAdminRequest(req);
     const body = (await req.json()) as GenerateSeoRequest;
-    const { title, excerpt, content, category, business } = body;
+    const { title, excerpt, content, category } = body;
 
     if (!title || !content) {
       return NextResponse.json(
@@ -39,29 +38,24 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const businessNames: Record<string, string> = {
-      realestate: "不動産（外国人向け賃貸・売買）",
-      legal: "行政書士（ビザ・許認可・会社設立）",
-      labor: "社会保険労務士（労務・助成金）",
-    };
+    const prompt = `You are an SEO specialist. This article is published by a Japanese real estate company's website.
 
-    const prompt = `You are an SEO specialist for a Japanese ${businessNames[business] ?? "ビジネス"} company website.
-
-Based on the following article, generate SEO keywords and tags in Japanese.
+Your task is to generate SEO keywords and tags based on the ACTUAL content of the article below. The title, category, excerpt, and body are the single source of truth — read them carefully and produce keywords that match this specific article's topic.
 
 ARTICLE:
 ---
 Title: ${title}
-Excerpt: ${excerpt}
 Category: ${category}
+Excerpt: ${excerpt}
 Body: ${content.slice(0, 3000)}
 ---
 
 RULES:
-- Keywords: 3-5 SEO keywords that users would search for. Mix of short-tail and long-tail.
-- Tags: 3-5 topic tags for categorization.
-- All in Japanese.
-- Focus on search intent of foreigners living in Japan (or companies hiring foreigners).
+- Keywords: 3-5 SEO keywords that real users would actually search for to find THIS specific article. Mix short-tail and long-tail.
+- Tags: 3-5 topic tags for site-internal categorization.
+- All output must be in Japanese.
+- Reflect the article's actual topic and intent. Do NOT inject generic real estate terms that are not relevant to this particular article.
+- Avoid keyword stuffing and avoid duplicating the same concept across keywords and tags.
 
 Respond ONLY with a valid JSON object, no markdown code fence:
 {"keywords": ["keyword1", "keyword2", ...], "tags": ["tag1", "tag2", ...]}`;

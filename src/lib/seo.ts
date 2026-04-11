@@ -18,7 +18,7 @@ export const SHARED_ORG_INFO = {
   representative: "浦松 丈二",
   representativeEn: "Joji Uramatsu",
   postalCode: "112-0006",
-  streetAddress: "小日向４丁目２−５ 小日向安田ビル 2F",
+  streetAddress: "小日向４丁目２−５ 小日向安田ビル 203",
   addressLocality: "文京区",
   addressRegion: "東京都",
   addressCountry: "JP",
@@ -44,7 +44,7 @@ export const BUSINESS_SEO: Record<string, BusinessSEOConfig> = {
     name: "四葉不動産",
     legalName: "四葉不動産株式会社",
     description:
-      "元新聞記者が5カ国での在住経験を活かして立ち上げた、東京・文京区の不動産屋。賃貸・売買・管理から相続不動産まで、日英中タイベトナム5言語対応と専門家ネットワークで住まい探しから契約・法務までワンストップ対応。初回相談は無料、お気軽にどうぞ。",
+      "元新聞記者が5カ国での在住経験を活かして立ち上げた、東京都文京区にある不動産屋。賃貸・売買・管理から相続不動産まで、多言語（日本語・英語・中国語）対応と専門家ネットワークで住まい探しから契約・法務までワンストップ対応。初回相談は無料、お気軽にどうぞ。",
     schemaType: "RealEstateAgent",
     ogImage: "/og.png",
     columnBasePath: "/column",

@@ -47,8 +47,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function ColumnDetailPage({ params }: Props) {
   const { slug } = await params;
-  const col = await getColumnBySlug(slug);
-  if (!col) notFound();
+  const base = await getColumnBySlug(slug);
+  if (!base) notFound();
+
+  const cookieStore = await cookies();
+  const lc = cookieStore.get(LOCALE_COOKIE)?.value;
+  const locale: LangCode = lc && isValidLocale(lc) ? lc : DEFAULT_LOCALE;
+  const col = getLocalizedColumn(base, locale);
 
   // Find prev/next
   const allColumns = await getColumns();
@@ -59,7 +64,7 @@ export default async function ColumnDetailPage({ params }: Props) {
 
   return (
     <div>
-      <BlogPostingJsonLd businessKey="realestate" column={col} authorName="浦松 丈二" authorTitle="代表取締役" />
+      <BlogPostingJsonLd businessKey="realestate" column={col} locale={locale} />
       <BreadcrumbJsonLd businessKey="realestate" items={[
         { name: "ホーム", href: "/" },
         { name: "コラム", href: "/column" },

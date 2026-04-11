@@ -150,6 +150,8 @@ export default function ColumnForm({
     jaExcerpt.trim().length > 0 &&
     jaContent.trim().length > 0;
 
+  const isSeoGenerateReady = isJaContentReady && category.trim().length > 0;
+
   const isSeoReady = keywords.trim().length > 0 && tags.trim().length > 0;
 
   const isTranslateReady =
@@ -275,6 +277,7 @@ export default function ColumnForm({
           category,
           keywords: parsedKeywords,
           tags: parsedTags,
+          author: { name: authorName, title: authorTitle },
           targetLangs: ["en", "zh-tw", "zh"],
         }),
       });
@@ -294,6 +297,7 @@ export default function ColumnForm({
           category: translations.en.category,
           keywords: translations.en.keywords,
           tags: translations.en.tags,
+          author: translations.en.author,
         });
       }
       if (translations["zh-tw"]) {
@@ -304,6 +308,7 @@ export default function ColumnForm({
           category: translations["zh-tw"].category,
           keywords: translations["zh-tw"].keywords,
           tags: translations["zh-tw"].tags,
+          author: translations["zh-tw"].author,
         });
       }
       if (translations.zh) {
@@ -314,6 +319,7 @@ export default function ColumnForm({
           category: translations.zh.category,
           keywords: translations.zh.keywords,
           tags: translations.zh.tags,
+          author: translations.zh.author,
         });
       }
     } catch (err) {
@@ -453,6 +459,25 @@ export default function ColumnForm({
         </div>
       </section>
 
+      {/* Author (Japanese) */}
+      <section className="rounded-xl border border-border bg-white p-6">
+        <h2 className="mb-4 text-lg font-semibold text-text">著者</h2>
+        <div className="grid gap-4 sm:grid-cols-2">
+          <Field
+            label="著者名"
+            value={authorName}
+            onChange={setAuthorName}
+            maxLength={150}
+          />
+          <Field
+            label="著者肩書き"
+            value={authorTitle}
+            onChange={setAuthorTitle}
+            maxLength={200}
+          />
+        </div>
+      </section>
+
       {/* SEO */}
       <section className="rounded-xl border border-border bg-white p-6">
         <div className="mb-4 flex items-center justify-between">
@@ -460,7 +485,7 @@ export default function ColumnForm({
           <button
             type="button"
             onClick={handleGenerateSeo}
-            disabled={!isJaContentReady || generatingSeo || isLoading}
+            disabled={!isSeoGenerateReady || generatingSeo || isLoading}
             className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-emerald-500 to-teal-500 px-4 py-2 text-sm font-semibold text-white shadow-sm transition-all hover:from-emerald-600 hover:to-teal-600 disabled:cursor-not-allowed disabled:opacity-50"
           >
             {generatingSeo ? (
@@ -473,9 +498,9 @@ export default function ColumnForm({
             )}
           </button>
         </div>
-        {!isJaContentReady && (
+        {!isSeoGenerateReady && (
           <p className="mb-4 text-xs text-text-muted">
-            日本語のタイトル・概要・本文を入力するとAI生成が有効になります
+            カテゴリと日本語のタイトル・概要・本文を入力するとAI生成が有効になります
           </p>
         )}
         {seoError && (
@@ -620,27 +645,38 @@ export default function ColumnForm({
               }
               maxLength={500}
             />
+            <div className="grid gap-4 sm:grid-cols-2">
+              <Field
+                label="Author Name"
+                value={activeTrans.author?.name ?? ""}
+                onChange={(v) =>
+                  setActiveTrans({
+                    ...activeTrans,
+                    author: {
+                      name: v,
+                      title: activeTrans.author?.title ?? "",
+                    },
+                  })
+                }
+                maxLength={150}
+              />
+              <Field
+                label="Author Title"
+                value={activeTrans.author?.title ?? ""}
+                onChange={(v) =>
+                  setActiveTrans({
+                    ...activeTrans,
+                    author: {
+                      name: activeTrans.author?.name ?? "",
+                      title: v,
+                    },
+                  })
+                }
+                maxLength={200}
+              />
+            </div>
           </div>
         )}
-      </section>
-
-      {/* Author */}
-      <section className="rounded-xl border border-border bg-white p-6">
-        <h2 className="mb-4 text-lg font-semibold text-text">著者</h2>
-        <div className="grid gap-4 sm:grid-cols-2">
-          <Field
-            label="著者名"
-            value={authorName}
-            onChange={setAuthorName}
-            maxLength={150}
-          />
-          <Field
-            label="著者肩書き"
-            value={authorTitle}
-            onChange={setAuthorTitle}
-            maxLength={200}
-          />
-        </div>
       </section>
 
       {/* Index Preview - always visible */}

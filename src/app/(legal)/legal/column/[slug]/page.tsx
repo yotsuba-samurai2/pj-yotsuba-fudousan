@@ -45,8 +45,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function LegalColumnDetailPage({ params }: Props) {
   const { slug } = await params;
-  const col = await getLegalColumnBySlug(slug);
-  if (!col) notFound();
+  const base = await getLegalColumnBySlug(slug);
+  if (!base) notFound();
+
+  const cookieStore = await cookies();
+  const lc = cookieStore.get(LOCALE_COOKIE)?.value;
+  const locale: LangCode = lc && isValidLocale(lc) ? lc : DEFAULT_LOCALE;
+  const col = getLocalizedColumn(base, locale);
 
   const allLegalColumns = await getLegalColumns();
   const sorted = [...allLegalColumns].sort((a, b) => b.date.localeCompare(a.date));
@@ -56,7 +61,7 @@ export default async function LegalColumnDetailPage({ params }: Props) {
 
   return (
     <div>
-      <BlogPostingJsonLd businessKey="legal" column={col} authorName="浦松 丈二" authorTitle="代表行政書士" />
+      <BlogPostingJsonLd businessKey="legal" column={col} locale={locale} />
       <BreadcrumbJsonLd businessKey="legal" items={[
         { name: "ホーム", href: "/legal" },
         { name: "コラム", href: "/legal/column" },
