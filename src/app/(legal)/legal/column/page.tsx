@@ -2,7 +2,7 @@ import { buildPageMetadata } from "@/lib/seo";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import LegalColumnListContent from "./LegalColumnListContent";
 
-export const revalidate = 300;
+export const dynamic = "force-dynamic";
 
 export const metadata = buildPageMetadata({
   businessKey: "legal",

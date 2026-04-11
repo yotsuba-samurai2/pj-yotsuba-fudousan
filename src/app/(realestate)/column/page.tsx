@@ -1,7 +1,7 @@
 import { buildPageMetadata } from "@/lib/seo";
 import ColumnListPageContent from "./ColumnListPageContent";
 
-export const revalidate = 300;
+export const dynamic = "force-dynamic";
 
 export const metadata = buildPageMetadata({
   businessKey: "realestate",
