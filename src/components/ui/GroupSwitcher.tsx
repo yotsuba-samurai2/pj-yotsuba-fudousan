@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
-import Link from "next/link";
+import { LocaleLink as Link } from "@/components/ui/LocaleLink";
 import { Grid3X3 } from "lucide-react";
 import { groupBusinesses, getBusinessByPath } from "@/config/group";
 import { useTranslation } from "@/hooks/useTranslation";

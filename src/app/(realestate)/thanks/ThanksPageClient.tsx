@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { LocaleLink as Link } from "@/components/ui/LocaleLink";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import { useTranslation } from "@/hooks/useTranslation";
 

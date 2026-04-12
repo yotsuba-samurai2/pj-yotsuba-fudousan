@@ -24,7 +24,9 @@ const LanguageContext = createContext<LanguageContextType>({
 /** Cookie からロケールを読み取る */
 function getLocaleFromCookie(): LangCode | null {
   if (typeof document === "undefined") return null;
-  const match = document.cookie.match(new RegExp(`(?:^|; )${LOCALE_COOKIE}=([^;]*)`));
+  const match = document.cookie.match(
+    new RegExp(`(?:^|; )${LOCALE_COOKIE}=([^;]*)`),
+  );
   return match ? (match[1] as LangCode) : null;
 }
 
@@ -51,8 +53,13 @@ export function LanguageProvider({
   });
 
   // URL変更時にロケールを同期
+  // ※ usePathname() はミドルウェアのリライト後のパスを返すため、
+  //    window.location.pathname（ブラウザ実URL）から検出する
   useEffect(() => {
-    const { locale: pathLocale } = detectLocaleFromPath(pathname);
+    if (typeof window === "undefined") return;
+    const { locale: pathLocale } = detectLocaleFromPath(
+      window.location.pathname,
+    );
     if (pathLocale !== locale) {
       setLocaleState(pathLocale);
     }

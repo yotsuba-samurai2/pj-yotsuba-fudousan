@@ -1,7 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
+import { LocaleLink as Link } from "@/components/ui/LocaleLink";
 import { useState, useEffect, useCallback, useMemo } from "react";
 import { usePathname } from "next/navigation";
 import { Menu, X, CalendarDays } from "lucide-react";
