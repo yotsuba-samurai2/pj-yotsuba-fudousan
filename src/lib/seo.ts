@@ -7,7 +7,7 @@ export const SITE_URL = "https://luck428.com";
 
 export const BUSINESS_URLS: Record<string, string> = {
   realestate: "https://luck428.com",
-  legal: "https://luck428gyosei.com",
+  legal: "https://luck428.com/legal",
   // TODO: 社労士法人化後に復活
   // labor: "https://yotsuba-labor.com",
 };
@@ -18,7 +18,7 @@ export const SHARED_ORG_INFO = {
   representative: "浦松 丈二",
   representativeEn: "Joji Uramatsu",
   postalCode: "112-0006",
-  streetAddress: "小日向４丁目２−５ 小日向安田ビル 203",
+  streetAddress: "小日向４丁目２−５ 小日向安田ビル２０３",
   addressLocality: "文京区",
   addressRegion: "東京都",
   addressCountry: "JP",
@@ -50,7 +50,7 @@ export const BUSINESS_SEO: Record<string, BusinessSEOConfig> = {
     columnBasePath: "/column",
   },
   legal: {
-    url: "https://luck428gyosei.com",
+    url: "https://luck428.com/legal",
     name: "四葉行政書士事務所",
     legalName: "四葉行政書士事務所",
     description:
