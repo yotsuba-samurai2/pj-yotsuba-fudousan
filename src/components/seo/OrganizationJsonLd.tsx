@@ -1,5 +1,11 @@
 import { JsonLd } from "./JsonLd";
-import { BUSINESS_SEO, SHARED_ORG_INFO } from "@/lib/seo";
+import {
+  BUSINESS_SEO,
+  FOUNDER_SAME_AS,
+  LEGAL_SAME_AS,
+  REALESTATE_SAME_AS,
+  SHARED_ORG_INFO,
+} from "@/lib/seo";
 
 export function OrganizationJsonLd({ businessKey }: { businessKey: string }) {
   const biz = BUSINESS_SEO[businessKey];
@@ -24,8 +30,11 @@ export function OrganizationJsonLd({ businessKey }: { businessKey: string }) {
         ...(isRealEstate
           ? {
               slogan: "元新聞記者×行政書士がつくる、東京都文京区の不動産屋",
+              sameAs: REALESTATE_SAME_AS,
             }
-          : {}),
+          : {
+              sameAs: LEGAL_SAME_AS,
+            }),
         address: {
           "@type": "PostalAddress",
           postalCode: SHARED_ORG_INFO.postalCode,
@@ -67,6 +76,7 @@ export function OrganizationJsonLd({ businessKey }: { businessKey: string }) {
           "@type": "Organization",
           name: SHARED_ORG_INFO.name,
           url: "https://luck428.com",
+          sameAs: ["https://luck428.com"],
         },
         founder: {
           "@type": "Person",
@@ -74,6 +84,10 @@ export function OrganizationJsonLd({ businessKey }: { businessKey: string }) {
           jobTitle: "代表取締役",
           description:
             "元新聞記者として5カ国で取材経験を積んだ後、行政書士資格を取得。国際的な視点と法務知識を活かし、外国人居住者や相続不動産の案件に強みを持つ。",
+          sameAs: [
+            isRealEstate ? "https://luck428.com/legal" : "https://luck428.com",
+            ...FOUNDER_SAME_AS,
+          ],
         },
         areaServed: {
           "@type": "GeoCircle",

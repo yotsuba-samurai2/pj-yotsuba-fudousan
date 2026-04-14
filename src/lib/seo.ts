@@ -28,6 +28,39 @@ export const SHARED_ORG_INFO = {
   foundingDate: "2025",
 } as const;
 
+/** 代表者（浦松丈二）の外部プロフィールURL */
+export const FOUNDER_SAME_AS = [
+  "https://www.samurai.co.jp/samurai/reserve/uramatsu-joji",
+  "https://x.com/uramatsujoji",
+  "https://www.facebook.com/uramatsujoji",
+  "https://www.instagram.com/uramatsu_joji/",
+  "https://www.threads.com/@uramatsu_joji",
+  "https://www.linkedin.com/in/joji-uramatsu/",
+] as const;
+
+/** 四葉不動産（RealEstateAgent）の外部プロフィールURL */
+export const REALESTATE_SAME_AS = [
+  "https://www.samurai.co.jp/samurai/reserve/yotubahudousan",
+  "https://luck428.com/legal",
+  "https://maps.google.com/?cid=2684416286346615973",
+  "https://x.com/uramatsujoji",
+  "https://www.facebook.com/uramatsujoji",
+  "https://www.instagram.com/uramatsu_joji/",
+  "https://www.threads.com/@uramatsu_joji",
+  "https://www.linkedin.com/in/joji-uramatsu/",
+] as const;
+
+/** 四葉行政書士事務所（LegalService）の外部プロフィールURL */
+export const LEGAL_SAME_AS = [
+  "https://www.samurai.co.jp/samurai/reserve/uramatsu-joji",
+  "https://luck428.com",
+  "https://x.com/uramatsujoji",
+  "https://www.facebook.com/uramatsujoji",
+  "https://www.instagram.com/uramatsu_joji/",
+  "https://www.threads.com/@uramatsu_joji",
+  "https://www.linkedin.com/in/joji-uramatsu/",
+] as const;
+
 export type BusinessSEOConfig = {
   url: string;
   name: string;
