@@ -72,7 +72,7 @@ export default function LegalContactPage() {
                   </div>
                   <div>
                     <p className="text-sm font-bold">営業時間</p>
-                    <p className="mt-1 text-sm text-text-muted">9:00〜18:00（平日・土日）</p>
+                    <p className="mt-1 text-sm text-text-muted">火・水 10:00〜19:00 ／ 月・木・金・土・日 18:00〜19:00</p>
                   </div>
                 </div>
 

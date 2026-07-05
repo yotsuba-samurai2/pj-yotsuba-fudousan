@@ -23,10 +23,58 @@ export const SHARED_ORG_INFO = {
   addressRegion: "東京都",
   addressCountry: "JP",
   telephone: "03-6161-9428",
-  openingHours: "Mo-Su 09:00-18:00",
   geo: { latitude: 35.7178, longitude: 139.7343 },
   foundingDate: "2025",
 } as const;
+
+export type OpeningHoursSpec = {
+  dayOfWeek: string[];
+  opens: string;
+  closes: string;
+};
+
+/**
+ * 事業別の営業時間（不動産と士業で異なる）
+ * - 不動産: 月木金土日 10:00-18:00（火・水休）
+ * - 行政書士・社労士: 火水 10:00-19:00 ＋ 月木金土日 18:00-19:00
+ */
+export const BUSINESS_HOURS: Record<
+  string,
+  { specs: OpeningHoursSpec[]; display: string }
+> = {
+  realestate: {
+    specs: [
+      {
+        dayOfWeek: ["Monday", "Thursday", "Friday", "Saturday", "Sunday"],
+        opens: "10:00",
+        closes: "18:00",
+      },
+    ],
+    display: "10:00〜18:00（火・水休）",
+  },
+  legal: {
+    specs: [
+      { dayOfWeek: ["Tuesday", "Wednesday"], opens: "10:00", closes: "19:00" },
+      {
+        dayOfWeek: ["Monday", "Thursday", "Friday", "Saturday", "Sunday"],
+        opens: "18:00",
+        closes: "19:00",
+      },
+    ],
+    display: "火・水 10:00〜19:00 ／ 月・木・金・土・日 18:00〜19:00",
+  },
+  labor: {
+    specs: [
+      { dayOfWeek: ["Tuesday", "Wednesday"], opens: "10:00", closes: "19:00" },
+      {
+        dayOfWeek: ["Monday", "Thursday", "Friday", "Saturday", "Sunday"],
+        opens: "18:00",
+        closes: "19:00",
+      },
+    ],
+    display: "火・水 10:00〜19:00 ／ 月・木・金・土・日 18:00〜19:00",
+  },
+};
 
 /** 代表者（浦松丈二）の外部プロフィールURL */
 export const FOUNDER_SAME_AS = [

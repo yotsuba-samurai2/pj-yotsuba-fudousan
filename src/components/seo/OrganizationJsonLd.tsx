@@ -1,5 +1,6 @@
 import { JsonLd } from "./JsonLd";
 import {
+  BUSINESS_HOURS,
   BUSINESS_SEO,
   FOUNDER_SAME_AS,
   LEGAL_SAME_AS,
@@ -49,20 +50,14 @@ export function OrganizationJsonLd({ businessKey }: { businessKey: string }) {
           longitude: SHARED_ORG_INFO.geo.longitude,
         },
         hasMap: `https://www.google.com/maps/search/?api=1&query=${SHARED_ORG_INFO.geo.latitude},${SHARED_ORG_INFO.geo.longitude}`,
-        openingHoursSpecification: {
+        openingHoursSpecification: (
+          BUSINESS_HOURS[businessKey] ?? BUSINESS_HOURS.realestate
+        ).specs.map((s) => ({
           "@type": "OpeningHoursSpecification",
-          dayOfWeek: [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday",
-            "Sunday",
-          ],
-          opens: "09:00",
-          closes: "18:00",
-        },
+          dayOfWeek: s.dayOfWeek,
+          opens: s.opens,
+          closes: s.closes,
+        })),
         contactPoint: [
           {
             "@type": "ContactPoint",
