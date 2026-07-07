@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { LocaleLink as Link } from "@/components/ui/LocaleLink";
-import { Building2, TrendingUp, KeyRound, ArrowRight } from "lucide-react";
+import { Building2, TrendingUp, KeyRound, ArrowRight, MessageCircle } from "lucide-react";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { FAQJsonLd } from "@/components/seo/FAQJsonLd";
 import { ArticleJsonLd } from "@/components/seo/ArticleJsonLd";
@@ -329,15 +329,27 @@ export default function SouzokuPageContent() {
           <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-text-muted">
             相続した不動産のこと、「これ、どうしたらいい？」の一言からで構いません。文京区小日向の事務所（茗荷谷駅から徒歩約5分・10:00–18:00・火水休）でも、オンラインでもご相談いただけます。
           </p>
-          <div className="mt-10">
+          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <a
+              href="https://line.me/ti/p/EF5782JXqJ"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="gradient-line inline-flex items-center gap-2 rounded-md px-10 py-4 text-sm font-semibold text-white shadow-lg transition-all duration-200 hover:shadow-xl hover:brightness-110"
+            >
+              <MessageCircle size={16} />
+              代表のLINEで相談する
+            </a>
             <Link
               href="/contact"
-              className="gradient-line inline-flex items-center gap-2 rounded-md px-10 py-4 text-sm font-semibold text-white shadow-lg transition-all duration-200 hover:shadow-xl hover:brightness-110"
+              className="cta-gradient-outline inline-flex items-center gap-2 rounded-md px-10 py-4 text-sm font-semibold transition-all duration-200 hover:brightness-110"
             >
               お問い合わせ
               <ArrowRight size={16} />
             </Link>
           </div>
+          <p className="mx-auto mt-5 max-w-xl text-xs leading-relaxed text-text-muted">
+            LINEは代表・浦松 丈二の個人アカウントに直接つながります。「この物件、どう？」の一言からお気軽にどうぞ。
+          </p>
         </div>
       </section>
     </div>
