@@ -22,8 +22,7 @@ export const metadata: Metadata = {
     default: "四葉パートナーズ",
     template: "%s | 四葉パートナーズ",
   },
-  description:
-    "四葉パートナーズ — 不動産・行政書士・社会保険労務士のワンストップグループ。",
+  description: "四葉パートナーズ — 不動産・行政書士のワンストップグループ。",
   icons: {
     icon: [
       { url: "/icon-192.png", sizes: "192x192", type: "image/png" },

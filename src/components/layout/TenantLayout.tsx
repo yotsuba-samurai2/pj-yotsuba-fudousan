@@ -520,7 +520,9 @@ function TenantFooter({ businessKey }: { businessKey: string }) {
             <p>{t("common.footer.realestateRegistration")}</p>
             <p>{t("common.footer.realestateRepRegistration")}</p>
             <p>{t("common.footer.legalRepRegistration")}</p>
-            <p>{t("common.footer.laborRepRegistration")}</p>
+            {/* 社労士は法人化（2026-09開業予定）まで非表示（浦松指示 2026-07-07）。
+                復元: 下の行のコメントアウトを外すだけでよい。
+            <p>{t("common.footer.laborRepRegistration")}</p> */}
           </div>
         </div>
       </div>
