@@ -79,7 +79,7 @@ export const TRANSLATION_PATCHES: Record<string, TranslationPatch[]> = {
     {
       "path": "legal.aboutPage.officeInfo.6.value",
       "from": "9:00〜18:00（平日・土日）",
-      "to": "10:00〜18:00（定休日：火曜、水曜）"
+      "to": "火・水 10:00〜19:00 ／ 月・木・金・土・日 18:00〜19:00"
     },
     {
       "path": "legal.aboutPage.officeInfo.9.value",
@@ -151,7 +151,7 @@ export const TRANSLATION_PATCHES: Record<string, TranslationPatch[]> = {
     {
       "path": "legal.aboutPage.officeInfo.6.value",
       "from": "9:00 - 18:00 (Weekdays & Weekends)",
-      "to": "10:00 - 18:00 (Regular Holidays: Tue & Wed)"
+      "to": "Tue & Wed 10:00 - 19:00 / Mon, Thu, Fri, Sat & Sun 18:00 - 19:00"
     },
     {
       "path": "legal.aboutPage.officeInfo.9.value",
@@ -228,7 +228,7 @@ export const TRANSLATION_PATCHES: Record<string, TranslationPatch[]> = {
     {
       "path": "legal.aboutPage.officeInfo.6.value",
       "from": "9:00〜18:00（工作日及週末）",
-      "to": "10:00〜18:00（定休日：每周二、周三）"
+      "to": "周二・周三 10:00〜19:00／周一・周四・周五・周六・周日 18:00〜19:00"
     },
     {
       "path": "legal.aboutPage.officeInfo.9.value",
@@ -305,7 +305,7 @@ export const TRANSLATION_PATCHES: Record<string, TranslationPatch[]> = {
     {
       "path": "legal.aboutPage.officeInfo.6.value",
       "from": "9:00〜18:00（工作日及周末）",
-      "to": "10:00〜18:00（公休日：星期二、星期三）"
+      "to": "周二・周三 10:00〜19:00／周一・周四・周五・周六・周日 18:00〜19:00"
     },
     {
       "path": "legal.aboutPage.officeInfo.9.value",
