@@ -1,0 +1,225 @@
+{
+  "ja": [
+    [
+      "realestate.aboutPage.companyInfo.10.value",
+      "四葉行政書士事務所（代表行政書士 浦松丈二　登録番号：第25087022号）\n四葉社会保険労務士法人（浦松丈二　第202500525号）",
+      "四葉行政書士事務所（代表行政書士 浦松丈二　登録番号：第25087022号）"
+    ],
+    [
+      "realestate.aboutPage.companyInfo.3.value",
+      "〒112-0006\n東京都文京区小日向4丁目2−5 小日向安田ビル 2F",
+      "〒112-0006\n東京都文京区小日向4丁目2−5 小日向安田ビル 203"
+    ],
+    [
+      "realestate.aboutPage.companyInfo.7.value",
+      "9:00〜18:00（平日・土日）",
+      "10:00〜18:00（定休日：火曜、水曜）"
+    ],
+    [
+      "realestate.aboutPage.highlights.qualifications.value",
+      "宅地建物取引士・行政書士・社会保険労務士",
+      "宅地建物取引士・行政書士"
+    ],
+    [
+      "legal.aboutPage.highlights.qualifications.value",
+      "行政書士・宅地建物取引士・社会保険労務士",
+      "行政書士・宅地建物取引士"
+    ],
+    [
+      "realestate.aboutPage.partnersDescription1",
+      "不動産・行政書士・社会保険労務士。",
+      "不動産・行政書士。"
+    ],
+    [
+      "realestate.aboutPage.partnersDescription2",
+      "3つの事業が連携し、お客さまの課題をワンストップで解決します。",
+      "2つの事業が連携し、お客さまの課題をワンストップで解決します。"
+    ],
+    [
+      "realestate.home.whyYotsuba.strengths.4.description",
+      "税理士・司法書士・社労士など、各分野の専門家と連携。複雑な案件もチームで対応します。",
+      "税理士・司法書士など、各分野の専門家と連携。複雑な案件もチームで対応します。"
+    ],
+    [
+      "common.footer.samuraiName",
+      "士業ドットコム SAMURAI",
+      "士業ドットコム"
+    ],
+    [
+      "legalNotice.items.2.value",
+      "〒112-0006 東京都文京区小日向4丁目2−5 小日向安田ビル 2F",
+      "〒112-0006 東京都文京区小日向4丁目2−5 小日向安田ビル 203"
+    ],
+    [
+      "legalNotice.items.6.value",
+      "9:00〜18:00（平日・土日）",
+      "10:00〜18:00（定休日：火曜、水曜）"
+    ]
+  ],
+  "en": [
+    [
+      "realestate.aboutPage.companyInfo.10.value",
+      "四葉行政書士事務所 (Chief Administrative Scrivener 浦松丈二　Registration No.: 第25087022号)\n四葉社会保険労務士法人 (浦松丈二　第202500525号)",
+      "四葉行政書士事務所 (Chief Administrative Scrivener 浦松丈二　Registration No.: 第25087022号)"
+    ],
+    [
+      "realestate.aboutPage.companyInfo.3.value",
+      "〒112-0006\nKohinata 4-2-5, Bunkyo-ku, Tokyo, Kohinata Yasuda Bldg. 2F",
+      "〒112-0006\nKohinata 4-2-5, Bunkyo-ku, Tokyo, Kohinata Yasuda Bldg. 203"
+    ],
+    [
+      "realestate.aboutPage.companyInfo.7.value",
+      "9:00 - 18:00 (Weekdays & Weekends)",
+      "10:00 - 18:00 (Regular Holidays: Tue & Wed)"
+    ],
+    [
+      "realestate.aboutPage.highlights.qualifications.value",
+      "Licensed Real Estate Transaction Specialist, Administrative Scrivener (Gyoseishoshi), Certified Social Insurance and Labor Consultant (Sharoushi)",
+      "Licensed Real Estate Transaction Specialist, Administrative Scrivener (Gyoseishoshi)"
+    ],
+    [
+      "legal.aboutPage.highlights.qualifications.value",
+      "Administrative Scrivener (Gyoseishoshi), Licensed Real Estate Transaction Specialist, Certified Social Insurance and Labor Consultant (Sharoushi)",
+      "Administrative Scrivener (Gyoseishoshi), Licensed Real Estate Transaction Specialist"
+    ],
+    [
+      "realestate.aboutPage.partnersDescription1",
+      "Real estate, administrative scrivener, and social insurance & labor consulting.",
+      "Real estate and administrative scrivener."
+    ],
+    [
+      "realestate.aboutPage.partnersDescription2",
+      "Three businesses working together to solve your challenges in one place.",
+      "Two businesses working together to solve your challenges in one place."
+    ],
+    [
+      "realestate.home.whyYotsuba.strengths.4.description",
+      "We collaborate with tax accountants, judicial scriveners, labor consultants, and other specialists. Complex cases are handled as a team.",
+      "We collaborate with tax accountants, judicial scriveners, and other specialists. Complex cases are handled as a team."
+    ],
+    [
+      "legalNotice.items.2.value",
+      "〒112-0006 Kohinata 4-2-5, Bunkyo-ku, Tokyo, Kohinata Yasuda Bldg. 2F",
+      "〒112-0006 Kohinata 4-2-5, Bunkyo-ku, Tokyo, Kohinata Yasuda Bldg. 203"
+    ],
+    [
+      "legalNotice.items.6.value",
+      "9:00 - 18:00 (Weekdays & Weekends)",
+      "10:00 - 18:00 (Regular Holidays: Tue & Wed)"
+    ]
+  ],
+  "zh-tw": [
+    [
+      "realestate.aboutPage.companyInfo.10.value",
+      "四葉行政書士事務所（代表行政書士 浦松丈二　登記號：第25087022號）\n四葉社會保險勞務士法人（浦松丈二　第202500525號）",
+      "四葉行政書士事務所（代表行政書士 浦松丈二　登記號：第25087022號）"
+    ],
+    [
+      "realestate.aboutPage.companyInfo.3.value",
+      "〒112-0006\n東京都文京區小日向4丁目2−5 小日向安田ビル 2F",
+      "〒112-0006\n東京都文京區小日向4丁目2−5 小日向安田ビル 203"
+    ],
+    [
+      "realestate.aboutPage.companyInfo.7.value",
+      "9:00〜18:00（工作日及週末）",
+      "10:00〜18:00（定休日：每周二、周三）"
+    ],
+    [
+      "realestate.aboutPage.highlights.qualifications.value",
+      "不動產交易士・行政書士・社會保險勞務士",
+      "不動產交易士・行政書士"
+    ],
+    [
+      "legal.aboutPage.highlights.qualifications.value",
+      "行政書士・不動產交易士・社會保險勞務士",
+      "行政書士・不動產交易士"
+    ],
+    [
+      "realestate.aboutPage.partnersDescription1",
+      "不動產・行政書士・社會保險勞務士。",
+      "不動產・行政書士。"
+    ],
+    [
+      "realestate.aboutPage.partnersDescription2",
+      "三大業務聯動，為客戶的問題提供一站式解決方案。",
+      "二大業務聯動，為客戶的問題提供一站式解決方案。"
+    ],
+    [
+      "realestate.home.whyYotsuba.strengths.4.description",
+      "與稅理士・司法書士・社會保險勞務士等各領域專家協作。複雜案件也能團隊應對。",
+      "與稅理士・司法書士等各領域專家協作。複雜案件也能團隊應對。"
+    ],
+    [
+      "common.footer.samuraiName",
+      "士業ドットコム SAMURAI",
+      "士業ドットコム"
+    ],
+    [
+      "legalNotice.items.2.value",
+      "〒112-0006 東京都文京區小日向4丁目2−5 小日向安田ビル 2F",
+      "〒112-0006 東京都文京區小日向4丁目2−5 小日向安田ビル 203"
+    ],
+    [
+      "legalNotice.items.6.value",
+      "9:00〜18:00（工作日及週末）",
+      "10:00〜18:00（定休日：每周二、周三）"
+    ]
+  ],
+  "zh": [
+    [
+      "realestate.aboutPage.companyInfo.10.value",
+      "四葉行政書士事務所（代表行政书士 浦松丈二　登记号：第25087022号）\n四葉社会保険労務士法人（浦松丈二　第202500525号）",
+      "四葉行政書士事務所（代表行政书士 浦松丈二　登记号：第25087022号）"
+    ],
+    [
+      "realestate.aboutPage.companyInfo.3.value",
+      "〒112-0006\n東京都文京区小日向4丁目2−5 小日向安田ビル 2F",
+      "〒112-0006\n東京都文京区小日向4丁目2−5 小日向安田ビル 203"
+    ],
+    [
+      "realestate.aboutPage.companyInfo.7.value",
+      "9:00〜18:00（工作日及周末）",
+      "10:00〜18:00（公休日：星期二、星期三）"
+    ],
+    [
+      "realestate.aboutPage.highlights.qualifications.value",
+      "不动产交易士・行政书士・社会保险劳务士",
+      "不动产交易士・行政书士"
+    ],
+    [
+      "legal.aboutPage.highlights.qualifications.value",
+      "行政书士・不动产交易士・社会保险劳务士",
+      "行政书士・不动产交易士"
+    ],
+    [
+      "realestate.aboutPage.partnersDescription1",
+      "不动产・行政书士・社会保险劳务士。",
+      "不动产・行政书士。"
+    ],
+    [
+      "realestate.aboutPage.partnersDescription2",
+      "三大业务联动，为客户的问题提供一站式解决方案。",
+      "二大业务联动，为客户的问题提供一站式解决方案。"
+    ],
+    [
+      "realestate.home.whyYotsuba.strengths.4.description",
+      "与税理士・司法书士・社会保险劳务士等各领域专家协作。复杂案件也能团队应对。",
+      "与税理士・司法书士等各领域专家协作。复杂案件也能团队应对。"
+    ],
+    [
+      "common.footer.samuraiName",
+      "士业ドットコム SAMURAI",
+      "士业ドットコム"
+    ],
+    [
+      "legalNotice.items.2.value",
+      "〒112-0006 東京都文京区小日向4丁目2−5 小日向安田ビル 2F",
+      "〒112-0006 東京都文京区小日向4丁目2−5 小日向安田ビル 203"
+    ],
+    [
+      "legalNotice.items.6.value",
+      "9:00〜18:00（工作日及周末）",
+      "10:00〜18:00（公休日：星期二、星期三）"
+    ]
+  ]
+}

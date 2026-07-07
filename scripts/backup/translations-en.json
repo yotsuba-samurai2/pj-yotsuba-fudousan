@@ -1,0 +1,942 @@
+{
+  "contact": {
+    "form": {
+      "categoryOptions": {
+        "subsidy": "Subsidies & grants",
+        "sale": "Sales inquiry",
+        "management": "Property management inquiry",
+        "rental": "Rental inquiry",
+        "labor": "Social insurance & labor",
+        "other": "Other",
+        "visa": "Visa & residence status",
+        "placeholder": "Please select"
+      },
+      "fields": {
+        "category": "Inquiry Category",
+        "message": "Message",
+        "name": "Name",
+        "email": "Email Address",
+        "phone": "Phone Number"
+      },
+      "submitting": "Sending...",
+      "error": "Failed to send. Please try again later.",
+      "title": "Contact by Email",
+      "description": "Please use the form below to contact us. We will reply within 2 business days."
+    },
+    "heroDescription1": "Real estate, subsidies, visas, labor — feel free to ask about anything.",
+    "metaDescription": "Contact 四葉パートナーズ. Whether it's about real estate, administrative scrivener services, or labor consulting — feel free to reach out.",
+    "methods": {
+      "title": "How to Contact Us",
+      "businessHours": {
+        "label": "Business Hours",
+        "value": "10:00 - 18:00 (Regular Holidays: Tue & Wed)"
+      },
+      "location": {
+        "label": "Location"
+      },
+      "phone": {
+        "label": "Phone",
+        "number": "03-6161-9428"
+      },
+      "onlineBooking": {
+        "label": "Online Booking",
+        "linkText": "Go to SAMURAI booking page →"
+      }
+    },
+    "heroDescription2": "Contact us by phone, online booking, or the form below.",
+    "title": "Contact",
+    "metaTitle": "Contact | 四葉パートナーズ"
+  },
+  "labor": {
+    "homePage": {
+      "title": "四葉社会保険労務士法人",
+      "metaDescription": "Social insurance & labor insurance procedures, work rules creation, subsidy applications, and labor consulting. 四葉パートナーズ's labor consulting firm provides comprehensive HR and labor support for businesses.",
+      "heroDescription1": "From social insurance and labor insurance procedures to work rules, subsidy applications, and labor consulting.",
+      "oneStopDescription2": "We never pass your concerns from one office to another.",
+      "oneStopDescription1": "Real estate, administrative scrivener, and labor consultant working together.",
+      "representativeTitle": "Certified Social Insurance and Labor Consultant (Sharoushi)　第202500525号",
+      "representativeBio2": "We receive many inquiries about employing foreign nationals. By coordinating with our administrative scrivener office (residence status) and real estate division (company housing search), we can provide one-stop support from hiring to retention — a key strength of the 四葉 group.",
+      "oneStopTitle": "The Advantage of the 四葉 Group",
+      "representativeBio1": "The most important element in business management is people. Creating an environment where employees can work with peace of mind supports business growth. From social insurance and labor insurance procedures to work rules and subsidy utilization, we provide broad support for corporate HR and labor matters.",
+      "groupBusinesses": [
+        {
+          "name": "四葉不動産",
+          "description": "Leasing, sales & management"
+        },
+        {
+          "name": "四葉行政書士事務所",
+          "description": "Subsidies, grants & visas"
+        },
+        {
+          "description": "",
+          "name": "四葉社会保険労務士法人"
+        }
+      ],
+      "heroDescription2": "Comprehensive support for all your business challenges related to people.",
+      "servicesTitle": "Our Services",
+      "services": [
+        {
+          "title": "Social Insurance & Labor Insurance Procedures",
+          "description": "We accurately handle complex insurance procedures such as enrollment/withdrawal notifications, standard remuneration assessments, and annual updates, reducing the burden on business owners."
+        },
+        {
+          "title": "Subsidy Applications",
+          "description": "We support applications for subsidies available to businesses, such as the Career Advancement Subsidy and the Work-Life Balance Support Subsidy. In coordination with our administrative scrivener office, we also cover other grants."
+        },
+        {
+          "title": "Work Rules & Internal Regulations",
+          "description": "We create and review work rules that match your company's actual situation. We also provide ongoing support for compliance with legal amendments."
+        },
+        {
+          "title": "Payroll Processing",
+          "description": "We accurately handle monthly payroll calculations, from social insurance premiums, income tax, and resident tax calculations to payslip preparation."
+        },
+        {
+          "title": "Labor Consulting",
+          "description": "We address day-to-day labor issues including employee disputes, harassment prevention, and work-style reform compliance."
+        },
+        {
+          "title": "Labor Audits & Compliance",
+          "description": "We handle responses to labor standards bureau inspections and provide labor compliance reviews and improvement recommendations."
+        }
+      ],
+      "faq": [
+        {
+          "question": "What are the benefits of hiring a labor consultant?",
+          "answer": "We accurately handle specialized HR and labor tasks including social insurance and labor insurance procedures, work rules creation and review, and subsidy applications. We reduce the burden on business owners while ensuring legal compliance."
+        },
+        {
+          "question": "Can you help with employing foreign nationals?",
+          "answer": "Yes, we handle social insurance procedures and labor management for foreign employees. In coordination with our group's administrative scrivener office (residence status) and real estate division (company housing search), we provide one-stop support from hiring to retention."
+        },
+        {
+          "question": "Do you also support subsidy applications?",
+          "answer": "Yes, we support applications for various subsidies available to businesses, including the Career Advancement Subsidy and the Work-Life Balance Support Subsidy. In coordination with our administrative scrivener office, we also cover other grants."
+        }
+      ],
+      "ctaDescription": "Social insurance, work rules, subsidies — feel free to ask about anything."
+    },
+    "footerNav": {
+      "other": {
+        "title": "Other",
+        "contact": "Contact"
+      },
+      "office": {
+        "title": "Office",
+        "about": "About Us",
+        "column": "Column"
+      },
+      "services": {
+        "socialInsurance": "Social & Labor Insurance",
+        "rules": "Work Rules Creation",
+        "payroll": "Payroll Processing",
+        "subsidy": "Subsidy Applications",
+        "title": "Services"
+      }
+    },
+    "aboutPage": {
+      "representativeBio2": "The incorporation of the labor consulting firm is currently in preparation, but we are accepting social insurance and labor consultations under 四葉パートナーズ. We are also committed to supporting the employment of foreign nationals, in coordination with our administrative scrivener office and real estate division.",
+      "representativeTitle": "浦松 丈二",
+      "highlights": {
+        "previousJob": {
+          "value": "Newspaper journalist",
+          "label": "Previous Career"
+        },
+        "overseas": {
+          "label": "Overseas Experience",
+          "value": "Lived and worked in 5 countries"
+        },
+        "qualifications": {
+          "label": "Qualifications",
+          "value": "Certified Social Insurance and Labor Consultant (Sharoushi), Administrative Scrivener (Gyoseishoshi), Licensed Real Estate Transaction Specialist"
+        },
+        "status": {
+          "label": "Status",
+          "value": "Incorporation in preparation"
+        }
+      },
+      "ctaDescription": "Social insurance, work rules, subsidies — feel free to ask about anything.",
+      "officeInfo": [
+        {
+          "value": "四葉パートナーズ (Representative: 浦松丈二)",
+          "label": "Headquarters"
+        },
+        {
+          "value": "四葉社会保険労務士法人 (incorporation in preparation)",
+          "label": "Name"
+        },
+        {
+          "label": "Representative",
+          "value": "浦松 丈二"
+        },
+        {
+          "label": "Certified Social Insurance and Labor Consultant",
+          "value": "浦松丈二　第202500525号\n(Passed October 1, 2025)"
+        },
+        {
+          "label": "Address",
+          "value": "〒112-0006\nKohinata 4-2-5, Bunkyo-ku, Tokyo, Kohinata Yasuda Bldg. 2F"
+        },
+        {
+          "value": "03-6161-9428",
+          "label": "Phone"
+        },
+        {
+          "value": "9:00 - 18:00 (Weekdays & Weekends)",
+          "label": "Business Hours"
+        },
+        {
+          "value": "Social insurance & labor insurance procedures, subsidy applications,\nwork rules creation, payroll processing, labor consulting",
+          "label": "Business Activities"
+        },
+        {
+          "value": "Incorporation is currently in preparation. We are currently operating under 四葉パートナーズ.",
+          "label": "Note"
+        },
+        {
+          "value": "四葉不動産株式会社 (License No.: 東京都知事（1）第113304号)\n四葉行政書士事務所 (Chief Administrative Scrivener 浦松丈二　Registration No.: 第25087022号)",
+          "label": "Group Businesses"
+        }
+      ],
+      "heroDescription1": "Office information and representative profile of 四葉社会保険労務士法人.",
+      "heroDescription2": "Comprehensive support for corporate HR and labor management.",
+      "representativeBio1": "The most important element in business management is people. Creating an environment where employees can work with peace of mind supports business growth. Drawing on the investigative and negotiation skills honed as a newspaper journalist, I address corporate HR and labor challenges.",
+      "metaDescription": "About 四葉社会保険労務士法人 (currently being established) — office overview and representative profile.",
+      "title": "About Us",
+      "officeInfoTitle": "Office Information"
+    },
+    "meta": {
+      "titleTemplate": "%s | 四葉社会保険労務士法人",
+      "description": "Social insurance & labor insurance procedures, work rules creation, subsidy applications, and labor consulting. 四葉パートナーズ's labor consulting firm provides comprehensive HR and labor support for businesses.",
+      "title": "四葉社会保険労務士法人 | Social Insurance, Labor & Subsidies"
+    },
+    "columnDetail": {
+      "authorTitle": "四葉社会保険労務士法人",
+      "authorName": "浦松 丈二"
+    },
+    "legalName": "四葉社会保険労務士法人",
+    "footerDescription2": "labor management, and subsidy applications.",
+    "footerDescription1": "Comprehensive support for social insurance,",
+    "nav": {
+      "contact": "Contact",
+      "about": "About Us",
+      "services": "Services",
+      "home": "Home",
+      "column": "Column"
+    },
+    "tagline": "Solving your business challenges related to people.",
+    "description": "Social insurance, labor management & subsidy applications",
+    "columnPage": {
+      "heroDescription1": "Useful information on social insurance, subsidies, and labor management.",
+      "title": "Column",
+      "metaDescription": "Columns from 四葉社会保険労務士法人. Useful information on social insurance, subsidies, labor management, and other HR & labor topics.",
+      "heroDescription2": "Delivered in an easy-to-understand manner from the perspective of a labor consultant."
+    },
+    "name": "四葉社会保険労務士法人",
+    "nameEn": "Labor Consultant"
+  },
+  "legal": {
+    "columnPage": {
+      "title": "Column",
+      "heroDescription1": "Useful information on subsidies, visas, company formation, and other legal topics.",
+      "metaDescription": "Columns from 四葉行政書士事務所. Useful information on subsidies, grants, visa applications, company formation, and other legal topics.",
+      "heroDescription2": "Delivered in an easy-to-understand manner from the perspective of an administrative scrivener."
+    },
+    "description": "Subsidies & grants, residence status & visas, legal procedures",
+    "nameEn": "Administrative Scrivener",
+    "name": "四葉行政書士事務所",
+    "footerNav": {
+      "other": {
+        "contact": "Contact",
+        "title": "Other"
+      },
+      "office": {
+        "column": "Column",
+        "title": "Office",
+        "about": "About Us"
+      },
+      "services": {
+        "permits": "Various Permits",
+        "visa": "Residence Status & Visas",
+        "title": "Services",
+        "subsidy": "Subsidies & Grants",
+        "incorporation": "Company Formation"
+      }
+    },
+    "homePage": {
+      "ctaDescription": "Subsidies, grants, visa applications, company formation — feel free to ask about anything.",
+      "oneStopTitle": "The Advantage of the 四葉 Group",
+      "heroDescription2": "With our one-stop real estate and legal services, we support your business and daily life.",
+      "representativeBio1": "Drawing on the investigative and writing skills honed as a newspaper journalist, I handle a wide range of services from subsidy applications to permit procedures. Subsidy and grant applications in particular depend on how well you convey your business plan — and my journalism background produces persuasive applications.",
+      "groupBusinesses": [
+        {
+          "description": "Leasing, sales & management",
+          "name": "四葉不動産"
+        },
+        {
+          "name": "四葉行政書士事務所",
+          "description": ""
+        },
+        {
+          "description": "Social insurance & labor management",
+          "name": "四葉社会保険労務士法人"
+        }
+      ],
+      "servicesTitle": "Our Services",
+      "services": [
+        {
+          "description": "We support everything from document preparation to approval for subsidies such as the Business Restructuring Subsidy and the Small Business Sustainability Subsidy. We have the expertise to maximize your approval rate.",
+          "title": "Subsidies & Grants"
+        },
+        {
+          "title": "Residence Status & Visa Applications",
+          "description": "We support the preparation of documents needed to obtain, renew, or change residence statuses, including work visas, business manager visas, and spouse visas. With 5-language support, we can communicate directly with foreign applicants."
+        },
+        {
+          "description": "We support incorporation procedures for stock companies (KK) and limited liability companies (GK). From articles of incorporation to registration procedures, we offer a one-stop service combined with real estate (office search). Registration is handled by our partner judicial scrivener.",
+          "title": "Company & Corporation Formation"
+        },
+        {
+          "description": "We support the acquisition of permits required for your business, including construction business permits, restaurant business permits, and secondhand dealer permits.",
+          "title": "Various Permit Applications"
+        },
+        {
+          "title": "Inheritance, Wills & Trust Support",
+          "description": "We support all aspects of inheritance procedures, including will preparation, estate division agreements, and civil trust (family trust) design. Real estate inheritance is handled in coordination with 四葉不動産."
+        },
+        {
+          "description": "We prepare and review various contracts, draft certified mail, and create other legal documents required for your business.",
+          "title": "Contracts & Document Preparation"
+        }
+      ],
+      "faq": [
+        {
+          "question": "What are the benefits of hiring an administrative scrivener for subsidy applications?",
+          "answer": "We leverage the writing skills of a former journalist to create persuasive applications. For subsidy applications where how you present your business plan is key to approval, journalism experience is a significant advantage."
+        },
+        {
+          "answer": "Yes, we handle the acquisition, renewal, and change of various residence statuses including work visas, business manager visas, and spouse visas. With 5-language support, we can communicate directly with the foreign applicant.",
+          "question": "Do you handle visa applications for foreign nationals?"
+        },
+        {
+          "question": "Can I consult about both real estate and legal matters at the same time?",
+          "answer": "Yes. Within the 四葉パートナーズ group, the real estate division (四葉不動産) and the administrative scrivener office work together, so we can handle things like office lease contracts and company formation procedures in one place."
+        }
+      ],
+      "oneStopDescription1": "Real estate, administrative scrivener, and labor consultant working together.",
+      "representativeTitle": "Chief Administrative Scrivener (Gyoseishoshi)　Registration No.: 第25087022号",
+      "representativeBio2": "Additionally, with experience living in 5 countries and multilingual capabilities, I have particular strength in residence status and visa applications for foreign nationals. The ability to provide a one-stop solution combining real estate (四葉不動産) and legal services is our office's greatest advantage.",
+      "title": "四葉行政書士事務所",
+      "metaDescription": "Subsidies & grants, residence status & visa applications, company formation, and various permits. 四葉パートナーズ's administrative scrivener office provides one-stop legal procedure support.",
+      "heroDescription1": "From subsidy and grant applications to residence status, visas, company formation, and permits.",
+      "oneStopDescription2": "We never pass your concerns from one office to another."
+    },
+    "meta": {
+      "description": "Subsidies & grants, residence status & visa applications, company formation, and various permits. 四葉パートナーズ's administrative scrivener office provides one-stop legal procedure support.",
+      "titleTemplate": "%s | 四葉行政書士事務所",
+      "title": "四葉行政書士事務所 | Subsidies, Grants & Visa Applications"
+    },
+    "aboutPage": {
+      "officeInfoTitle": "Office Information",
+      "title": "About Us",
+      "mapTitle": "四葉行政書士事務所 Location",
+      "metaDescription": "About 四葉行政書士事務所 — office overview and representative profile. An administrative scrivener office in Kohinata, Bunkyo-ku.",
+      "heroDescription1": "Office information and representative profile of 四葉行政書士事務所.",
+      "highlights": {
+        "overseas": {
+          "label": "Overseas Experience",
+          "value": "Lived and worked in 5 countries"
+        },
+        "qualifications": {
+          "value": "Administrative Scrivener (Gyoseishoshi), Licensed Real Estate Transaction Specialist, Certified Social Insurance and Labor Consultant (Sharoushi)",
+          "label": "Qualifications"
+        },
+        "previousJob": {
+          "label": "Previous Career",
+          "value": "Newspaper journalist"
+        },
+        "languages": {
+          "label": "Languages",
+          "value": "Japanese, English, Chinese (Traditional/Simplified)"
+        }
+      },
+      "representativeTitle": "Chief Administrative Scrivener 浦松 丈二",
+      "representativeBio2": "Subsidy and grant applications in particular depend on how well you convey your business plan — and my journalism background produces persuasive applications. Additionally, with experience living in 5 countries, I have particular strength in residence status and visa applications for foreign nationals.",
+      "representativeBio1": "As a newspaper journalist, I traveled the world and lived in 5 countries. The information-gathering skills, negotiation expertise, and broad network I built along the way — these have proven to be great assets in administrative scrivener work as well.",
+      "heroDescription2": "Providing one-stop legal procedure support from Kohinata, Bunkyo-ku.",
+      "accessTitle": "Access",
+      "officeInfo": [
+        {
+          "value": "四葉パートナーズ (Representative: 浦松丈二)",
+          "label": "Headquarters"
+        },
+        {
+          "label": "Office Name",
+          "value": "四葉行政書士事務所"
+        },
+        {
+          "label": "Chief Administrative Scrivener",
+          "value": "浦松 丈二"
+        },
+        {
+          "label": "Registration No.",
+          "value": "第25087022号"
+        },
+        {
+          "value": "〒112-0006\nKohinata 4-2-5, Bunkyo-ku, Tokyo, Kohinata Yasuda Bldg. 2F",
+          "label": "Address"
+        },
+        {
+          "value": "03-6161-9428",
+          "label": "Phone"
+        },
+        {
+          "label": "Business Hours",
+          "value": "9:00 - 18:00 (Weekdays & Weekends)"
+        },
+        {
+          "label": "Languages",
+          "value": "Japanese, English, Chinese (Traditional/Simplified)"
+        },
+        {
+          "value": "Subsidies & grants, residence status & visa applications,\ncompany formation, various permits, inheritance/wills/trust support",
+          "label": "Business Activities"
+        },
+        {
+          "label": "Group Businesses",
+          "value": "四葉不動産株式会社 (License No.: 東京都知事（1）第113304号)\n四葉社会保険労務士法人 (浦松丈二　第202500525号)"
+        }
+      ],
+      "ctaDescription": "Subsidies, grants, visa applications, company formation — feel free to ask about anything."
+    },
+    "nav": {
+      "about": "About Us",
+      "column": "Column",
+      "services": "Services",
+      "home": "Home",
+      "contact": "Contact"
+    },
+    "footerDescription1": "Combining real estate and legal expertise,",
+    "legalName": "四葉行政書士事務所",
+    "footerDescription2": "we provide comprehensive support for your business and daily life procedures.",
+    "columnDetail": {
+      "authorTitle": "四葉行政書士事務所",
+      "authorName": "浦松 丈二"
+    },
+    "tagline": "Subsidies, visas, and company formation — all in one place."
+  },
+  "representative": {
+    "qualificationsLegal": "Administrative Scrivener (Gyoseishoshi), Licensed Real Estate Transaction Specialist, Certified Social Insurance and Labor Consultant (Sharoushi)",
+    "qualificationsRealestate": "Licensed Real Estate Transaction Specialist, Administrative Scrivener (Gyoseishoshi), Certified Social Insurance and Labor Consultant (Sharoushi)",
+    "nameEn": "Joji Uramatsu",
+    "overseasExperience": "Lived and worked in 4 countries",
+    "previousJob": "Newspaper journalist",
+    "name": "浦松 丈二",
+    "languages": "Japanese, English, Chinese (Traditional/Simplified)",
+    "qualificationsLabor": "Certified Social Insurance and Labor Consultant (Sharoushi), Administrative Scrivener (Gyoseishoshi), Licensed Real Estate Transaction Specialist"
+  },
+  "terms": {
+    "metaDescription": "Terms of Use of 四葉パートナーズ.",
+    "sections": {
+      "disclaimer": {
+        "content": "The Company does not guarantee the accuracy or completeness of the information published on the Site. The Company shall not be liable for any damages arising from the use of the Site.",
+        "title": "Article 3 (Disclaimer)"
+      },
+      "application": {
+        "title": "Article 1 (Scope of Application)",
+        "content": "These Terms of Use set forth the conditions for the use of the website (hereinafter \"the Site\") operated by 四葉パートナーズ (hereinafter \"the Company\")."
+      },
+      "changes": {
+        "content": "The Company may modify these Terms of Use as necessary. The revised Terms shall take effect upon being published on the Site.",
+        "title": "Article 4 (Changes)"
+      },
+      "prohibited": {
+        "items": [
+          "Activities that violate laws or public order and morals",
+          "Activities that infringe upon the rights of the Company or third parties",
+          "Activities that interfere with the operation of the Site"
+        ],
+        "content": "Users shall not engage in the following activities when using the Site:",
+        "title": "Article 2 (Prohibited Activities)"
+      }
+    },
+    "metaTitle": "Terms of Use | 四葉パートナーズ",
+    "title": "Terms of Use"
+  },
+  "breadcrumbs": {
+    "services": "Services",
+    "officeAbout": "About Us",
+    "home": "Home",
+    "column": "Column",
+    "about": "About Us",
+    "legalNotice": "Legal Notice",
+    "contact": "Contact"
+  },
+  "brand": {
+    "groupNameEn": "YOTSUBA PARTNERS",
+    "metaTitle": "四葉パートナーズ",
+    "groupDescription": "A one-stop group covering real estate, administrative scrivener, and social insurance & labor consulting.",
+    "metaTitleTemplate": "%s | 四葉パートナーズ",
+    "groupName": "四葉パートナーズ"
+  },
+  "address": {
+    "street": "Kohinata 4-2-5",
+    "full": "Kohinata 4-2-5, Bunkyo-ku, Tokyo 112-0006, Kohinata Yasuda Bldg. 203",
+    "city": "Bunkyo-ku",
+    "prefecture": "Tokyo",
+    "phone": "03-6161-9428",
+    "nearestStation": "Tokyo Metro Marunouchi Line \"Myogadani\" Station, 5 min walk",
+    "businessHours": "11:00 - 18:00 (Regular Holidays: Tue & Wed)",
+    "building": "Kohinata Yasuda Bldg. 203",
+    "postalCode": "〒112-0006"
+  },
+  "thanks": {
+    "metaDescription": "Your inquiry has been received.",
+    "metaTitle": "Submission Complete | 四葉パートナーズ",
+    "description2": "Thank you for your patience.",
+    "title": "Your inquiry has been received",
+    "description1": "We will reply within 2 business days."
+  },
+  "languages": {
+    "nativeZhTw": "繁體中文",
+    "nativeZh": "简体中文",
+    "zh": "简体",
+    "zh-tw": "繁體",
+    "nativeJa": "日本語",
+    "ja": "日本語",
+    "nativeEn": "English",
+    "en": "EN"
+  },
+  "privacyPolicy": {
+    "sections": {
+      "thirdParty": {
+        "title": "3. Disclosure to Third Parties",
+        "content": "We will not disclose personal information to third parties without your consent, except as required by law."
+      },
+      "inquiry": {
+        "contactInfo": "四葉パートナーズ　TEL: 03-6161-9428",
+        "content": "For inquiries regarding the handling of personal information, please contact us at:",
+        "title": "5. Inquiries"
+      },
+      "collection": {
+        "content": "四葉パートナーズ (hereinafter \"the Company\") may collect personal information such as your name, email address, phone number, and address through contact forms, phone calls, emails, and other means.",
+        "title": "1. Collection of Personal Information"
+      },
+      "purpose": {
+        "items": [
+          "Responding to inquiries",
+          "Providing services related to real estate transactions, administrative procedures, and labor consulting",
+          "Analysis for service improvement"
+        ],
+        "title": "2. Purpose of Use",
+        "content": "Collected personal information will be used for the following purposes:"
+      },
+      "security": {
+        "content": "We implement appropriate security measures to prevent the leakage, loss, or damage of personal information.",
+        "title": "4. Security Measures"
+      }
+    },
+    "metaTitle": "Privacy Policy | 四葉パートナーズ",
+    "title": "Privacy Policy",
+    "metaDescription": "Privacy Policy of 四葉パートナーズ."
+  },
+  "common": {
+    "skipToContent": "Skip to main content",
+    "booking": "Booking",
+    "thisSite": "This site",
+    "backToTop": "Back to top",
+    "nextArticle": "Next article",
+    "contact": "Contact",
+    "openInGoogleMaps": "Open in Google Maps",
+    "submit": "Submit",
+    "prevArticle": "Previous article",
+    "prevPage": "Previous page",
+    "column": {
+      "emptyTitle": "Articles coming soon",
+      "emptyDescription": "We are currently preparing column articles. Please check back soon."
+    },
+    "onlineBooking": "Online Booking",
+    "readMore": "Read more",
+    "navigation": {
+      "mainNav": "Main navigation",
+      "mobileMenu": "Mobile menu",
+      "showGroupBusinesses": "Show group businesses",
+      "closeMenu": "Close menu",
+      "openMenu": "Open menu"
+    },
+    "nextPage": "Next page",
+    "current": "Current",
+    "learnMore": "Learn more",
+    "footer": {
+      "legalRepRegistration": "四葉行政書士事務所 Chief Administrative Scrivener 浦松丈二　Registration No.: 第25087022号",
+      "legalHeadquartersLine": "Headquarters: 四葉パートナーズ (Head Office: Bunkyo-ku, Tokyo / Representative: 浦松丈二)",
+      "samuraiName": "士業ドットコム",
+      "realestateRepRegistration": "四葉不動産 Representative Director & Chief Licensed Real Estate Transaction Specialist 浦松丈二　Registration No.: （東京）第293544号",
+      "terms": "Terms of Use",
+      "privacyPolicy": "Privacy Policy",
+      "samuraiDescription": "Professional services booking & matching platform",
+      "realestateRegistration": "四葉不動産株式会社　License No.: 東京都知事（1）第113304号",
+      "laborRepRegistration": "Certified Social Insurance and Labor Consultant 浦松丈二　October 1, 2025 第202500525号",
+      "copyright": "四葉パートナーズ All rights reserved.",
+      "managedServices": "Managed Services"
+    },
+    "currentSite": "Current site",
+    "thisPage": "This page",
+    "cta": {
+      "viewCompanyInfo": "View company info",
+      "feelFreeToContact": "Feel free to reach out for a consultation",
+      "consultFirst": "Get a free consultation",
+      "contactUs": "Contact us",
+      "viewServices": "View services",
+      "consultAboutService": "Inquire about this service"
+    }
+  },
+  "realestate": {
+    "name": "四葉不動産",
+    "nameEn": "Real Estate",
+    "description": "Real estate leasing, sales & property management",
+    "columnPage": {
+      "ctaDescription": "Questions about our column articles are also welcome.",
+      "title": "Column",
+      "metaDescription": "Columns from 四葉不動産. Useful information on housing for international residents, rental & sales tips, Bunkyo-ku area guides, and more.",
+      "heroDescription2": "Useful real estate insights delivered to you.",
+      "heroDescription1": "Housing tips for international residents, rental & sales knowledge, Bunkyo-ku area information, and more."
+    },
+    "columnDetail": {
+      "authorTitle": "四葉不動産",
+      "authorName": "浦松 丈二",
+      "ctaDescription": "Questions about our column articles are also welcome."
+    },
+    "home": {
+      "heroTitle2": "someone you can",
+      "services": {
+        "sectionTitle": "Our Services",
+        "items": [
+          {
+            "description": "From apartment hunting to screening and contracts — one-stop support",
+            "title": "Rental Support",
+            "subtitle": "Rental"
+          },
+          {
+            "title": "Sales Support",
+            "subtitle": "Sales",
+            "description": "Brokerage for home purchases and investment properties. We explain everything clearly, even for first-time buyers"
+          },
+          {
+            "title": "Property Management",
+            "subtitle": "Management",
+            "description": "We manage properties on behalf of owners. Tenant relations handled with care"
+          },
+          {
+            "subtitle": "Multilingual",
+            "title": "Multilingual Support",
+            "description": "Services available in Japanese, English, and Chinese (Traditional/Simplified). International residents are welcome"
+          }
+        ]
+      },
+      "message": {
+        "sectionTitle": "Message",
+        "title": "四葉不動産 Representative",
+        "paragraph2": "When you have a real estate concern, I want to be someone you can talk to easily. Whether it's buying, selling, renting, or property management — no question is too small. Walking alongside each client to find the best answer together. That is the promise of 四葉不動産.",
+        "paragraph1": "As a newspaper journalist, I traveled the world and lived in 5 countries. The information-gathering skills, negotiation expertise, and broad network I built along the way — I am convinced these are powerful assets in the real estate world as well."
+      },
+      "heroTitle1": "Easy to talk to,",
+      "ctaSection": {
+        "description1": "\"Can a foreigner rent an apartment?\" \"Where do I even start?\"",
+        "title": "Feel free to reach out for a consultation",
+        "description2": "No question is too small. We offer support in 5 languages."
+      },
+      "heroImageAlt": "Four-leaf clover and a house",
+      "access": {
+        "businessHours": {
+          "value": "10:00 - 18:00 (Regular Holidays: Tue & Wed)",
+          "label": "Business Hours"
+        },
+        "mapTitle": "四葉不動産 Location",
+        "name": "四葉不動産",
+        "nearestStation": {
+          "label": "Nearest Station",
+          "value": "Tokyo Metro Marunouchi Line \"Myogadani\" Station, 5 min walk"
+        },
+        "sectionTitle": "Access"
+      },
+      "whyYotsuba": {
+        "strengths": [
+          {
+            "description": "Zero formality. With the listening skills of a former journalist, we create an atmosphere where you can talk freely about anything.",
+            "subtitle": "Approachable Service",
+            "title": "Approachable Service"
+          },
+          {
+            "title": "5 Languages",
+            "subtitle": "Multilingual",
+            "description": "Japanese, Chinese, Taiwanese Mandarin, Thai, and English. Consult with us without worrying about language barriers."
+          },
+          {
+            "title": "Firsthand Experience",
+            "subtitle": "Lived Experience",
+            "description": "Having searched for homes multiple times during overseas postings, we know firsthand the challenges of finding housing as a foreigner."
+          },
+          {
+            "description": "Visa and residence status procedures are handled in-house. We provide a one-stop solution for real estate and legal matters.",
+            "title": "A Real Estate Agency with an Administrative Scrivener",
+            "subtitle": "Licensed Scrivener"
+          },
+          {
+            "description": "We collaborate with tax accountants, judicial scriveners, labor consultants, and other specialists. Complex cases are handled as a team.",
+            "title": "Expert Network",
+            "subtitle": "Expert Network"
+          },
+          {
+            "subtitle": "Information Network",
+            "title": "Information Network of a Former Journalist",
+            "description": "With extensive connections and investigative skills, we deliver property information that is not easily available to the public."
+          }
+        ],
+        "sectionTitle": "Why Choose 四葉不動産"
+      },
+      "heroTitle3": "rely on.",
+      "heroSubtitle2": "we support your real estate needs.",
+      "heroSubtitle1": "With the information network and connections of a former journalist,"
+    },
+    "legalName": "四葉不動産株式会社",
+    "footerDescription2": "4-language support and a professional network covering housing, legal, and labor services.",
+    "footerDescription1": "A real estate agency led by a former journalist and licensed scrivener.",
+    "nav": {
+      "column": "Column",
+      "services": "Services",
+      "about": "About Us",
+      "contact": "Contact"
+    },
+    "tagline": "Beyond language and industry barriers — finding your home.",
+    "servicesPage": {
+      "faq": [
+        {
+          "question": "What services does 四葉不動産 offer?",
+          "answer": "We offer four services: rental support, sales support, property management, and multilingual support (Japanese, English, Chinese Traditional/Simplified)."
+        },
+        {
+          "question": "Can foreigners rent an apartment?",
+          "answer": "Yes. 四葉不動産 provides specialized support for international residents in 5 languages. Our representative has lived in 5 countries and understands the challenges of finding housing as a foreigner."
+        },
+        {
+          "answer": "We primarily cover Bunkyo-ku, Tokyo, and offer properties throughout all 23 wards of Tokyo. Our nearest station is Myogadani on the Tokyo Metro Marunouchi Line.",
+          "question": "What areas do you cover?"
+        }
+      ],
+      "ctaDescription2": "No question is too small.",
+      "heroDescription1": "From leasing, sales, and management to multilingual support.",
+      "heroDescription2": "We are here to help with all your real estate needs.",
+      "metaDescription": "Rental, sales, property management, and multilingual support. A full list of 四葉不動産 services.",
+      "title": "Our Services",
+      "sections": [
+        {
+          "lead": "Leave everything from apartment hunting to move-in to us.",
+          "points": [
+            "Consultation on your requirements & property search",
+            "Property viewings & contract support",
+            "Negotiations with management companies & landlords",
+            "After-move-in follow-up support"
+          ],
+          "subtitle": "Rental Support",
+          "description": "Leveraging the information network and connections of a former journalist, we introduce properties that are not easily available to the public. We work together to find the right home for you.",
+          "title": "Rental Support",
+          "id": "rental"
+        },
+        {
+          "subtitle": "Sales Support",
+          "points": [
+            "Property research & market price analysis",
+            "Appraisal & sales strategy proposals",
+            "Contract preparation & important matter explanations",
+            "Coordination with tax accountants & judicial scriveners"
+          ],
+          "lead": "Whether buying a home or investing — we ensure a satisfying deal.",
+          "id": "sale",
+          "title": "Sales Support",
+          "description": "Buying or selling real estate is a major life decision. We leverage extensive information and our expert network to help you make the best choice."
+        },
+        {
+          "lead": "We take care of your valuable assets with responsibility.",
+          "points": [
+            "Tenant recruitment, screening & lease management",
+            "Tenant relations & complaint handling",
+            "Regular building inspections & repair arrangements",
+            "Rent collection & delinquency management"
+          ],
+          "subtitle": "Property Management",
+          "description": "From tenant recruitment to building maintenance, we lighten the burden on property owners. We respond promptly to issues and maintain a management system you can rely on.",
+          "title": "Property Management",
+          "id": "management"
+        },
+        {
+          "subtitle": "Multilingual Support",
+          "lead": "Services available in Japanese, English, and Chinese (Traditional/Simplified).",
+          "points": [
+            "Property introductions & contract explanations in 4 languages",
+            "Document preparation support",
+            "Post-move-in settling-in assistance",
+            "Guidance & accompaniment for administrative procedures"
+          ],
+          "title": "Multilingual Support",
+          "id": "foreign-residents",
+          "description": "Our representative has lived in 5 countries. Because he knows firsthand the challenges of searching for a home as a foreigner, he can provide detailed and attentive support."
+        }
+      ],
+      "ctaDescription1": "\"Where do I start?\" \"Can I ask about something like this?\"",
+      "metaTitle": "Services"
+    },
+    "footerNav": {
+      "other": {
+        "legalNotice": "Legal Notice (Real Estate Transaction Act)",
+        "contact": "Contact",
+        "title": "Other"
+      },
+      "services": {
+        "foreignResidents": "Support for International Residents",
+        "title": "Services",
+        "sale": "Sales Support",
+        "rental": "Rental Support",
+        "management": "Property Management"
+      },
+      "company": {
+        "title": "Company",
+        "about": "About Us",
+        "column": "Column"
+      }
+    },
+    "aboutPage": {
+      "partnersDescription1": "Real estate, administrative scrivener, and social insurance & labor consulting.",
+      "metaDescription": "About 四葉不動産 — company overview and representative profile. A real estate agency in Kohinata, Bunkyo-ku.",
+      "title": "About Us",
+      "companyInfo": [
+        {
+          "value": "四葉パートナーズ (Representative: 浦松丈二)",
+          "label": "Headquarters"
+        },
+        {
+          "value": "四葉不動産株式会社",
+          "label": "Company Name"
+        },
+        {
+          "label": "Representative",
+          "value": "浦松 丈二"
+        },
+        {
+          "value": "〒112-0006\nKohinata 4-2-5, Bunkyo-ku, Tokyo, Kohinata Yasuda Bldg. 2F",
+          "label": "Address"
+        },
+        {
+          "value": "東京都知事（1）第113304号",
+          "label": "License No."
+        },
+        {
+          "label": "Licensed Real Estate Transaction Specialist",
+          "value": "浦松丈二　Registration No.: （東京）第293544号"
+        },
+        {
+          "value": "03-6161-9428",
+          "label": "Phone"
+        },
+        {
+          "label": "Business Hours",
+          "value": "9:00 - 18:00 (Weekdays & Weekends)"
+        },
+        {
+          "label": "Languages",
+          "value": "Japanese, English, Chinese (Traditional/Simplified)"
+        },
+        {
+          "label": "Business Activities",
+          "value": "Real estate leasing, sales & property management"
+        },
+        {
+          "label": "Group Businesses",
+          "value": "四葉行政書士事務所 (Chief Administrative Scrivener 浦松丈二　Registration No.: 第25087022号)\n四葉社会保険労務士法人 (浦松丈二　第202500525号)"
+        }
+      ],
+      "heroDescription1": "Company information and representative profile of 四葉不動産.",
+      "highlights": {
+        "overseas": {
+          "value": "Lived and worked in 4 countries",
+          "label": "Overseas Experience"
+        },
+        "qualifications": {
+          "value": "Licensed Real Estate Transaction Specialist, Administrative Scrivener (Gyoseishoshi), Certified Social Insurance and Labor Consultant (Sharoushi)",
+          "label": "Qualifications"
+        },
+        "languages": {
+          "label": "Languages",
+          "value": "Japanese, English, Chinese (Traditional/Simplified)"
+        },
+        "previousJob": {
+          "value": "Newspaper journalist",
+          "label": "Previous Career"
+        }
+      },
+      "representativeBio2": "When you have a real estate concern, I want to be someone you can talk to easily. Whether it's buying, selling, renting, or property management — no question is too small. Walking alongside each client to find the best answer together. That is the promise of 四葉不動産.",
+      "representativeTitle": "Representative 浦松 丈二",
+      "representativeBio1": "As a newspaper journalist, I traveled the world and lived in 5 countries. The information-gathering skills, negotiation expertise, and broad network I built along the way — I am convinced these are powerful assets in the real estate world as well.",
+      "heroDescription2": "Supporting your real estate needs from Kohinata, Bunkyo-ku.",
+      "groupBusinesses": [
+        {
+          "description": "Real estate leasing, sales & property management",
+          "name": "四葉不動産"
+        },
+        {
+          "description": "Residence status, visa applications & legal procedures",
+          "name": "四葉行政書士事務所"
+        },
+        {
+          "description": "Social insurance, labor management & subsidy applications",
+          "name": "四葉社会保険労務士法人"
+        }
+      ],
+      "accessTitle": "Access",
+      "partnersDescription2": "Three businesses working together to solve your challenges in one place.",
+      "companyInfoTitle": "Company Information",
+      "ctaDescription": "Buying, selling, renting, management — feel free to ask about anything.",
+      "partnersTitle": "四葉パートナーズ"
+    },
+    "meta": {
+      "title": "四葉不動産 | Beyond language and industry barriers — finding your home.",
+      "description": "A real estate agency led by a former journalist and licensed scrivener. With 5-language support and a professional network of legal and labor experts, we provide one-stop service from housing to legal matters.",
+      "titleTemplate": "%s | 四葉不動産"
+    }
+  },
+  "legalNotice": {
+    "metaTitle": "Legal Notice (Real Estate Transaction Act) | 四葉不動産",
+    "title": "Legal Notice (Real Estate Transaction Act)",
+    "items": [
+      {
+        "value": "四葉不動産株式会社",
+        "label": "Company Name"
+      },
+      {
+        "label": "Representative",
+        "value": "浦松 丈二"
+      },
+      {
+        "value": "〒112-0006 Kohinata 4-2-5, Bunkyo-ku, Tokyo, Kohinata Yasuda Bldg. 2F",
+        "label": "Address"
+      },
+      {
+        "value": "東京都知事（1）第113304号",
+        "label": "License No."
+      },
+      {
+        "value": "浦松丈二 (Registration No.: （東京）第293544号)",
+        "label": "Chief Licensed Real Estate Transaction Specialist"
+      },
+      {
+        "label": "Phone",
+        "value": "03-6161-9428"
+      },
+      {
+        "value": "9:00 - 18:00 (Weekdays & Weekends)",
+        "label": "Business Hours"
+      }
+    ],
+    "metaDescription": "Legal notice of 四葉不動産株式会社 as required by the Building Lots and Buildings Transaction Business Act."
+  }
+}

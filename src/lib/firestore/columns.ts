@@ -83,6 +83,24 @@ export async function getColumnBySlug(business: string, slug: string): Promise<F
   return { id: d.id, ...d.data() } as FirestoreColumn;
 }
 
+/**
+ * slug基準の冪等upsert（business+slugで既存を検索し、あれば更新・無ければ新規作成）。
+ * 同じslugで複数回実行しても重複を作らない。
+ */
+export async function upsertColumnBySlug(
+  business: FirestoreColumn["business"],
+  slug: string,
+  data: Omit<FirestoreColumn, "id" | "createdAt" | "updatedAt">,
+): Promise<{ id: string; action: "created" | "updated" }> {
+  const existing = await getColumnBySlug(business, slug);
+  if (existing) {
+    await updateColumn(existing.id, data);
+    return { id: existing.id, action: "updated" };
+  }
+  const id = await createColumn(data);
+  return { id, action: "created" };
+}
+
 /** コラム作成 */
 export async function createColumn(
   data: Omit<FirestoreColumn, "id" | "createdAt" | "updatedAt">,

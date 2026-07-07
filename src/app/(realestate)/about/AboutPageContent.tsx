@@ -6,11 +6,10 @@ import { ArrowRight, MapPin } from "lucide-react";
 import { useTranslation } from "@/hooks/useTranslation";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 
-const groupLogos = [
-  "/yotsuba/realestate-square.png",
-  "/yotsuba/legal-square.png",
-  "/yotsuba/labor-square.png",
-];
+// 社労士カードは法人化（2026-09開業予定）まで非表示（浦松指示 2026-07-07）。
+// 復元: "/yotsuba/labor-square.png" をこの配列へ戻すだけでよい（Firestore側の
+// realestate.aboutPage.groupBusinesses も3件に戻す必要あり）。
+const groupLogos = ["/yotsuba/realestate-square.png", "/yotsuba/legal-square.png"];
 
 export default function AboutPageContent() {
   const { t, tArray, tObject } = useTranslation();
@@ -201,7 +200,7 @@ export default function AboutPageContent() {
           </p>
 
           <div className="mt-12 grid gap-6 sm:grid-cols-3">
-            {groupBusinesses.map((biz, i) => {
+            {groupBusinesses.slice(0, groupLogos.length).map((biz, i) => {
               const isCurrent = i === 0;
               return (
                 <div
