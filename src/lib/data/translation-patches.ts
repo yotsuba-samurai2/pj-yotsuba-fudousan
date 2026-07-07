@@ -1,9 +1,11 @@
 /**
- * タスク0: 社労士全非表示・住所(2F→203)・営業時間統一・士業ドットコム表記 の
+ * タスク0: 社労士全非表示・住所(全角２０３)・営業時間統一・士業ドットコム表記 の
  * Firestore translations パッチ一覧（キックオフ タスク0）。
  *
  * scripts/backup-translations.ts で退避したバックアップ
  * （scripts/backup/translations-{locale}.json）から算出した「現在値→変更後の値」。
+ * 住所・営業時間はサイト内の既存の正表記（address.full／address.postalCode／
+ * realestate.home.access.businessHours.value）をそのまま流用し、新規の文言は作らない。
  * 現在値は安全確認用（適用直前に実際のFirestore値と一致するか照合し、
  * 一致しない場合はその項目だけスキップする）。
  *
@@ -22,7 +24,7 @@ export const TRANSLATION_PATCHES: Record<string, TranslationPatch[]> = {
     {
       "path": "realestate.aboutPage.companyInfo.3.value",
       "from": "〒112-0006\n東京都文京区小日向4丁目2−5 小日向安田ビル 2F",
-      "to": "〒112-0006\n東京都文京区小日向4丁目2−5 小日向安田ビル 203"
+      "to": "〒112-0006\n東京都文京区小日向４丁目２－５ 小日向安田ビル２０３"
     },
     {
       "path": "realestate.aboutPage.companyInfo.7.value",
@@ -62,12 +64,32 @@ export const TRANSLATION_PATCHES: Record<string, TranslationPatch[]> = {
     {
       "path": "legalNotice.items.2.value",
       "from": "〒112-0006 東京都文京区小日向4丁目2−5 小日向安田ビル 2F",
-      "to": "〒112-0006 東京都文京区小日向4丁目2−5 小日向安田ビル 203"
+      "to": "〒112-0006 東京都文京区小日向４丁目２－５ 小日向安田ビル２０３"
     },
     {
       "path": "legalNotice.items.6.value",
       "from": "9:00〜18:00（平日・土日）",
       "to": "10:00〜18:00（定休日：火曜、水曜）"
+    },
+    {
+      "path": "legal.aboutPage.officeInfo.4.value",
+      "from": "〒112-0006\n東京都文京区小日向4丁目2−5 小日向安田ビル 2F",
+      "to": "〒112-0006\n東京都文京区小日向４丁目２－５ 小日向安田ビル２０３"
+    },
+    {
+      "path": "legal.aboutPage.officeInfo.6.value",
+      "from": "9:00〜18:00（平日・土日）",
+      "to": "10:00〜18:00（定休日：火曜、水曜）"
+    },
+    {
+      "path": "legal.aboutPage.officeInfo.9.value",
+      "from": "四葉不動産株式会社（免許番号：東京都知事（1）第113304号）\n四葉社会保険労務士法人（浦松丈二　第202500525号）",
+      "to": "四葉不動産株式会社（免許番号：東京都知事（1）第113304号）"
+    },
+    {
+      "path": "legal.homePage.oneStopDescription1",
+      "from": "不動産・行政書士・社労士が連携。",
+      "to": "不動産・行政書士が連携。"
     }
   ],
   "en": [
@@ -79,7 +101,7 @@ export const TRANSLATION_PATCHES: Record<string, TranslationPatch[]> = {
     {
       "path": "realestate.aboutPage.companyInfo.3.value",
       "from": "〒112-0006\nKohinata 4-2-5, Bunkyo-ku, Tokyo, Kohinata Yasuda Bldg. 2F",
-      "to": "〒112-0006\nKohinata 4-2-5, Bunkyo-ku, Tokyo, Kohinata Yasuda Bldg. 203"
+      "to": "Kohinata 4-2-5, Bunkyo-ku, Tokyo 112-0006, Kohinata Yasuda Bldg. 203"
     },
     {
       "path": "realestate.aboutPage.companyInfo.7.value",
@@ -114,12 +136,32 @@ export const TRANSLATION_PATCHES: Record<string, TranslationPatch[]> = {
     {
       "path": "legalNotice.items.2.value",
       "from": "〒112-0006 Kohinata 4-2-5, Bunkyo-ku, Tokyo, Kohinata Yasuda Bldg. 2F",
-      "to": "〒112-0006 Kohinata 4-2-5, Bunkyo-ku, Tokyo, Kohinata Yasuda Bldg. 203"
+      "to": "Kohinata 4-2-5, Bunkyo-ku, Tokyo 112-0006, Kohinata Yasuda Bldg. 203"
     },
     {
       "path": "legalNotice.items.6.value",
       "from": "9:00 - 18:00 (Weekdays & Weekends)",
       "to": "10:00 - 18:00 (Regular Holidays: Tue & Wed)"
+    },
+    {
+      "path": "legal.aboutPage.officeInfo.4.value",
+      "from": "〒112-0006\nKohinata 4-2-5, Bunkyo-ku, Tokyo, Kohinata Yasuda Bldg. 2F",
+      "to": "Kohinata 4-2-5, Bunkyo-ku, Tokyo 112-0006, Kohinata Yasuda Bldg. 203"
+    },
+    {
+      "path": "legal.aboutPage.officeInfo.6.value",
+      "from": "9:00 - 18:00 (Weekdays & Weekends)",
+      "to": "10:00 - 18:00 (Regular Holidays: Tue & Wed)"
+    },
+    {
+      "path": "legal.aboutPage.officeInfo.9.value",
+      "from": "四葉不動産株式会社 (License No.: 東京都知事（1）第113304号)\n四葉社会保険労務士法人 (浦松丈二　第202500525号)",
+      "to": "四葉不動産株式会社 (License No.: 東京都知事（1）第113304号)"
+    },
+    {
+      "path": "legal.homePage.oneStopDescription1",
+      "from": "Real estate, administrative scrivener, and labor consultant working together.",
+      "to": "Real estate and administrative scrivener working together."
     }
   ],
   "zh-tw": [
@@ -131,7 +173,7 @@ export const TRANSLATION_PATCHES: Record<string, TranslationPatch[]> = {
     {
       "path": "realestate.aboutPage.companyInfo.3.value",
       "from": "〒112-0006\n東京都文京區小日向4丁目2−5 小日向安田ビル 2F",
-      "to": "〒112-0006\n東京都文京區小日向4丁目2−5 小日向安田ビル 203"
+      "to": "〒112-0006\n東京都文京區小日向４丁目２−５ 小日向安田ビル２０３"
     },
     {
       "path": "realestate.aboutPage.companyInfo.7.value",
@@ -171,12 +213,32 @@ export const TRANSLATION_PATCHES: Record<string, TranslationPatch[]> = {
     {
       "path": "legalNotice.items.2.value",
       "from": "〒112-0006 東京都文京區小日向4丁目2−5 小日向安田ビル 2F",
-      "to": "〒112-0006 東京都文京區小日向4丁目2−5 小日向安田ビル 203"
+      "to": "〒112-0006 東京都文京區小日向４丁目２−５ 小日向安田ビル２０３"
     },
     {
       "path": "legalNotice.items.6.value",
       "from": "9:00〜18:00（工作日及週末）",
       "to": "10:00〜18:00（定休日：每周二、周三）"
+    },
+    {
+      "path": "legal.aboutPage.officeInfo.4.value",
+      "from": "〒112-0006\n東京都文京區小日向4丁目2−5 小日向安田ビル 2F",
+      "to": "〒112-0006\n東京都文京區小日向４丁目２−５ 小日向安田ビル２０３"
+    },
+    {
+      "path": "legal.aboutPage.officeInfo.6.value",
+      "from": "9:00〜18:00（工作日及週末）",
+      "to": "10:00〜18:00（定休日：每周二、周三）"
+    },
+    {
+      "path": "legal.aboutPage.officeInfo.9.value",
+      "from": "四葉不動産株式會社（許可證號：東京都知事（1）第113304號）\n四葉社會保險勞務士法人（浦松丈二　第202500525號）",
+      "to": "四葉不動産株式會社（許可證號：東京都知事（1）第113304號）"
+    },
+    {
+      "path": "legal.homePage.oneStopDescription1",
+      "from": "不動產・行政書士・社會保險勞務士聯動。",
+      "to": "不動產・行政書士聯動。"
     }
   ],
   "zh": [
@@ -188,7 +250,7 @@ export const TRANSLATION_PATCHES: Record<string, TranslationPatch[]> = {
     {
       "path": "realestate.aboutPage.companyInfo.3.value",
       "from": "〒112-0006\n東京都文京区小日向4丁目2−5 小日向安田ビル 2F",
-      "to": "〒112-0006\n東京都文京区小日向4丁目2−5 小日向安田ビル 203"
+      "to": "〒112-0006\n東京都文京区小日向４丁目２－５ 小日向安田ビル２０３"
     },
     {
       "path": "realestate.aboutPage.companyInfo.7.value",
@@ -228,12 +290,32 @@ export const TRANSLATION_PATCHES: Record<string, TranslationPatch[]> = {
     {
       "path": "legalNotice.items.2.value",
       "from": "〒112-0006 東京都文京区小日向4丁目2−5 小日向安田ビル 2F",
-      "to": "〒112-0006 東京都文京区小日向4丁目2−5 小日向安田ビル 203"
+      "to": "〒112-0006 東京都文京区小日向４丁目２－５ 小日向安田ビル２０３"
     },
     {
       "path": "legalNotice.items.6.value",
       "from": "9:00〜18:00（工作日及周末）",
       "to": "10:00〜18:00（公休日：星期二、星期三）"
+    },
+    {
+      "path": "legal.aboutPage.officeInfo.4.value",
+      "from": "〒112-0006\n東京都文京区小日向4丁目2−5 小日向安田ビル 2F",
+      "to": "〒112-0006\n東京都文京区小日向４丁目２－５ 小日向安田ビル２０３"
+    },
+    {
+      "path": "legal.aboutPage.officeInfo.6.value",
+      "from": "9:00〜18:00（工作日及周末）",
+      "to": "10:00〜18:00（公休日：星期二、星期三）"
+    },
+    {
+      "path": "legal.aboutPage.officeInfo.9.value",
+      "from": "四葉不動産株式会社（许可证号：東京都知事（1）第113304号）\n四葉社会保険労務士法人（浦松丈二　第202500525号）",
+      "to": "四葉不動産株式会社（许可证号：東京都知事（1）第113304号）"
+    },
+    {
+      "path": "legal.homePage.oneStopDescription1",
+      "from": "不动产・行政书士・社会保险劳务士联动。",
+      "to": "不动产・行政书士联动。"
     }
   ]
 };
