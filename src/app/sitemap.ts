@@ -25,6 +25,7 @@ async function buildRealestateSitemap(): Promise<MetadataRoute.Sitemap> {
 
   return [
     { url: re, lastModified: now, changeFrequency: "weekly", priority: 1.0, alternates: withLangs(re) },
+    { url: `${re}/souzoku`, lastModified: now, changeFrequency: "monthly", priority: 0.9, alternates: withLangs(re, "/souzoku") },
     { url: `${re}/services`, lastModified: now, changeFrequency: "monthly", priority: 0.8, alternates: withLangs(re, "/services") },
     { url: `${re}/about`, lastModified: now, changeFrequency: "monthly", priority: 0.7, alternates: withLangs(re, "/about") },
     { url: `${re}/column`, lastModified: now, changeFrequency: "weekly", priority: 0.8, alternates: withLangs(re, "/column") },
