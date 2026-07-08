@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { cookies } from "next/headers";
-import { getColumnBySlug, getColumns, getLocalizedColumn, getAllSlugs } from "@/lib/columns";
+import { getColumnBySlug, getColumns, getLocalizedColumn, getAllSlugs, isLocaleAllowed } from "@/lib/columns";
 import { buildPageMetadata } from "@/lib/seo";
 import { LOCALE_COOKIE, DEFAULT_LOCALE, isValidLocale } from "@/lib/locale";
 import { BlogPostingJsonLd } from "@/components/seo/BlogPostingJsonLd";
@@ -30,6 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const cookieStore = await cookies();
   const lc = cookieStore.get(LOCALE_COOKIE)?.value;
   const locale: LangCode = lc && isValidLocale(lc) ? lc : DEFAULT_LOCALE;
+  if (!isLocaleAllowed(base, locale)) return {};
   const col = getLocalizedColumn(base, locale);
   return buildPageMetadata({
     businessKey: "realestate",
@@ -53,10 +54,11 @@ export default async function ColumnDetailPage({ params }: Props) {
   const cookieStore = await cookies();
   const lc = cookieStore.get(LOCALE_COOKIE)?.value;
   const locale: LangCode = lc && isValidLocale(lc) ? lc : DEFAULT_LOCALE;
+  if (!isLocaleAllowed(base, locale)) notFound();
   const col = getLocalizedColumn(base, locale);
 
   // Find prev/next
-  const allColumns = await getColumns();
+  const allColumns = await getColumns(locale);
   const sorted = [...allColumns].sort((a, b) => b.date.localeCompare(a.date));
   const idx = sorted.findIndex((c) => c.slug === slug);
   const prev = idx < sorted.length - 1 ? sorted[idx + 1] : null;

@@ -5,6 +5,7 @@ import {
   getLaborColumns,
   getLocalizedColumn,
   getAllLaborSlugs,
+  isLocaleAllowed,
 } from "@/lib/columns";
 import { buildPageMetadata } from "@/lib/seo";
 import { LOCALE_COOKIE, DEFAULT_LOCALE, isValidLocale } from "@/lib/locale";
@@ -33,6 +34,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const cookieStore = await cookies();
   const lc = cookieStore.get(LOCALE_COOKIE)?.value;
   const locale: LangCode = lc && isValidLocale(lc) ? lc : DEFAULT_LOCALE;
+  if (!isLocaleAllowed(base, locale)) return {};
   const col = getLocalizedColumn(base, locale);
   return buildPageMetadata({
     businessKey: "labor",
@@ -56,9 +58,10 @@ export default async function LaborColumnDetailPage({ params }: Props) {
   const cookieStore = await cookies();
   const lc = cookieStore.get(LOCALE_COOKIE)?.value;
   const locale: LangCode = lc && isValidLocale(lc) ? lc : DEFAULT_LOCALE;
+  if (!isLocaleAllowed(base, locale)) notFound();
   const col = getLocalizedColumn(base, locale);
 
-  const allLaborColumns = await getLaborColumns();
+  const allLaborColumns = await getLaborColumns(locale);
   const sorted = [...allLaborColumns].sort((a, b) =>
     b.date.localeCompare(a.date),
   );

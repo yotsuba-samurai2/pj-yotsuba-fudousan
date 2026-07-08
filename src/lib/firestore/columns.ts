@@ -12,6 +12,7 @@ import {
   Timestamp,
 } from "firebase/firestore";
 import { db } from "@/lib/firebase";
+import type { LangCode } from "@/config/languages";
 
 const COLLECTION = "columns";
 
@@ -44,6 +45,8 @@ export type FirestoreColumn = {
   keywords?: string[];
   faq?: Array<{ question: string; answer: string }>;
   tags?: string[];
+  /** このコラムを公開する言語。未設定＝全言語（後方互換のデフォルト） */
+  locales?: LangCode[];
   translations?: {
     en?: ColumnTranslation;
     "zh-tw"?: ColumnTranslation;
