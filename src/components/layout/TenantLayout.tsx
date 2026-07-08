@@ -520,9 +520,11 @@ function TenantFooter({ businessKey }: { businessKey: string }) {
             <p>{t("common.footer.realestateRegistration")}</p>
             <p>{t("common.footer.realestateRepRegistration")}</p>
             <p>{t("common.footer.legalRepRegistration")}</p>
-            {/* 社労士は法人化（2026-09開業予定）まで非表示（浦松指示 2026-07-07）。
-                復元: 下の行のコメントアウトを外すだけでよい。
-            <p>{t("common.footer.laborRepRegistration")}</p> */}
+            {/* 個人の"試験合格"は表示可・事務所は開業まで非表示（社労士_試験合格表記_実装指示_v1）。
+                representative.srExamNote は /admin/fix-sr-notation 適用後に値が入る（未投入時は非表示） */}
+            {t("representative.srExamNote") && (
+              <p>{t("representative.srExamNote")}</p>
+            )}
           </div>
         </div>
       </div>

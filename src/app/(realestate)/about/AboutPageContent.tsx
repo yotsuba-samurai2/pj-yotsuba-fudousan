@@ -109,6 +109,14 @@ export default function AboutPageContent() {
                   </div>
                 ))}
               </div>
+
+              {/* 社労士は"試験合格"のみ別立て表記（登録済み資格と横並びにしない・
+                  社労士_試験合格表記_実装指示_v1 §0）。データ未投入時は非表示 */}
+              {t("representative.srExamNote") && (
+                <p className="mt-3 text-xs text-text-muted">
+                  {t("representative.srExamNote")}
+                </p>
+              )}
             </div>
           </div>
         </div>

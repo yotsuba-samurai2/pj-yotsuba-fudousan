@@ -43,6 +43,17 @@ export default async function RootLayout({
 
   const allTranslations = await fetchAllTranslationsFromFirestore();
 
+  // 社労士事務所（事業体）は開業まで非表示。labor配下の翻訳は全ページのRSC
+  // ペイロードとしてHTMLに埋め込まれるため、開業フラグが立つまでクライアントに送らない
+  // （「社会保険労務士」等が1ページあたり40件以上露出していた対策）。
+  if (process.env.NEXT_PUBLIC_SR_LAUNCHED !== "true") {
+    for (const data of Object.values(allTranslations)) {
+      if (data && typeof data === "object") {
+        delete (data as Record<string, unknown>).labor;
+      }
+    }
+  }
+
   return (
     <html lang={locale} className={`${zenKaku.variable}`}>
       <body className="relative bg-surface text-text antialiased">
