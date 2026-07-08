@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo";
 import { getRequestLocale } from "@/lib/getRequestLocale";
+import { ProfilePageJsonLd } from "@/components/seo/ProfilePageJsonLd";
 import AboutPageContent from "./AboutPageContent";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -22,5 +23,10 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default function AboutPage() {
-  return <AboutPageContent />;
+  return (
+    <>
+      <ProfilePageJsonLd />
+      <AboutPageContent />
+    </>
+  );
 }

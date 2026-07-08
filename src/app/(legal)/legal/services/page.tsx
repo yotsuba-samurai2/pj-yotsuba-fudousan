@@ -12,7 +12,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return buildPageMetadata({
     businessKey: "legal",
     title: "四葉行政書士事務所 | サービス一覧",
-    description: "元記者が書く「通る申請書」で補助金採択率UP。ビザ申請・会社設立・許認可もワンストップ。不動産・社労士と連携し、事業の立ち上げから運営までを総合支援します。",
+    description: "元記者が書く「通る申請書」で補助金採択率UP。ビザ申請・会社設立・許認可もワンストップ。不動産と連携し、事業の立ち上げから運営までを総合支援します。",
     path: "/legal/services",
     locale,
   });

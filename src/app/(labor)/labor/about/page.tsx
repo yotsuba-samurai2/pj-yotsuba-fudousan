@@ -5,7 +5,7 @@ import { LaborAboutPageContent } from "./PageContent";
 export const metadata = buildPageMetadata({
   businessKey: "labor",
   title: "事務所概要",
-  description: "企業の人事・労務課題に寄り添う社労士法人。5カ国在住経験を持つ代表のプロフィールと、四葉社会保険労務士法人の理念をご紹介します。",
+  description: "企業の人事・労務課題に寄り添う社労士法人。4カ国在住経験を持つ代表のプロフィールと、四葉社会保険労務士法人の理念をご紹介します。",
   path: "/labor/about",
 });
 

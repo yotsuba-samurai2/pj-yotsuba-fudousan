@@ -2,8 +2,8 @@ import { JsonLd } from "./JsonLd";
 import {
   BUSINESS_HOURS,
   BUSINESS_SEO,
-  FOUNDER_SAME_AS,
   LEGAL_SAME_AS,
+  PERSON_ID,
   REALESTATE_SAME_AS,
   SHARED_ORG_INFO,
 } from "@/lib/seo";
@@ -75,14 +75,8 @@ export function OrganizationJsonLd({ businessKey }: { businessKey: string }) {
         },
         founder: {
           "@type": "Person",
+          "@id": PERSON_ID,
           name: SHARED_ORG_INFO.representative,
-          jobTitle: "代表取締役",
-          description:
-            "元新聞記者として5カ国で取材経験を積んだ後、行政書士資格を取得。国際的な視点と法務知識を活かし、外国人居住者や相続不動産の案件に強みを持つ。",
-          sameAs: [
-            isRealEstate ? "https://luck428.com/legal" : "https://luck428.com",
-            ...FOUNDER_SAME_AS,
-          ],
         },
         areaServed: {
           "@type": "GeoCircle",

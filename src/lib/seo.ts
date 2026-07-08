@@ -77,9 +77,18 @@ export const BUSINESS_HOURS: Record<
   },
 };
 
-/** 代表者（浦松丈二）の外部プロフィールURL */
-export const FOUNDER_SAME_AS = [
-  "https://www.samurai.co.jp/samurai/reserve/uramatsu-joji",
+/** 代表者（浦松丈二）Personノードの共通@id — 全記事のauthor・全組織のfounderからこれを参照する */
+export const PERSON_ID = "https://luck428.com/#uramatsu-joji";
+
+/** 士業ドットコムの浦松個人ページ（実在確認済み 2026-07-08） */
+export const SAMURAI_URAMATSU_URL =
+  "https://www.samurai.co.jp/samurai/reserve/uramatsu-joji";
+
+/** 代表者（浦松丈二）の外部プロフィールURL（Wikidata・note含む＝いずれも現物確認済み） */
+export const PERSON_SAME_AS = [
+  "https://www.wikidata.org/wiki/Q139738129",
+  SAMURAI_URAMATSU_URL,
+  "https://note.com/luck428",
   "https://x.com/uramatsujoji",
   "https://www.facebook.com/uramatsujoji",
   "https://www.instagram.com/uramatsu_joji/",
@@ -87,9 +96,33 @@ export const FOUNDER_SAME_AS = [
   "https://www.linkedin.com/in/joji-uramatsu/",
 ] as const;
 
-/** 四葉不動産（RealEstateAgent）の外部プロフィールURL */
+/**
+ * 代表者（浦松丈二）のPersonフルノード。/aboutのProfilePageで出力し、
+ * 他所からは { "@id": PERSON_ID } で参照する（エンティティ外部シグナル強化仕様_v1 §1-1）。
+ * 社労士関連（jobTitle・worksFor）は開業まで出力しない。
+ */
+export const PERSON_JSONLD = {
+  "@type": "Person",
+  "@id": PERSON_ID,
+  name: "浦松 丈二",
+  alternateName: "Joji Uramatsu",
+  jobTitle: ["宅地建物取引士", "行政書士"],
+  description:
+    "元毎日新聞中国総局長（記者歴34年）。文京区小日向で四葉不動産株式会社・四葉行政書士事務所を営む。",
+  url: "https://luck428.com/about",
+  worksFor: [
+    { "@id": "https://luck428.com/#organization" },
+    { "@id": "https://luck428.com/legal/#organization" },
+  ],
+  knowsLanguage: ["ja", "en", "zh"],
+  sameAs: [...PERSON_SAME_AS],
+} as const;
+
+/** 四葉不動産（RealEstateAgent）の外部プロフィールURL（Wikidata Q139738235＝現物確認済み） */
 export const REALESTATE_SAME_AS = [
+  "https://www.wikidata.org/wiki/Q139738235",
   "https://www.samurai.co.jp/samurai/reserve/yotubahudousan",
+  "https://note.com/luck428",
   "https://luck428.com/legal",
   "https://maps.google.com/?cid=2684416286346615973",
   "https://x.com/uramatsujoji",
@@ -99,9 +132,11 @@ export const REALESTATE_SAME_AS = [
   "https://www.linkedin.com/in/joji-uramatsu/",
 ] as const;
 
-/** 四葉行政書士事務所（LegalService）の外部プロフィールURL */
+/** 四葉行政書士事務所（LegalService）の外部プロフィールURL（Wikidata Q139738259＝現物確認済み） */
 export const LEGAL_SAME_AS = [
-  "https://www.samurai.co.jp/samurai/reserve/uramatsu-joji",
+  "https://www.wikidata.org/wiki/Q139738259",
+  SAMURAI_URAMATSU_URL,
+  "https://note.com/luck428",
   "https://luck428.com",
   "https://x.com/uramatsujoji",
   "https://www.facebook.com/uramatsujoji",
@@ -126,7 +161,7 @@ export const BUSINESS_SEO: Record<string, BusinessSEOConfig> = {
     name: "四葉不動産",
     legalName: "四葉不動産株式会社",
     description:
-      "元新聞記者が5カ国での在住経験を活かして立ち上げた、東京都文京区にある不動産屋。賃貸・売買・管理から相続不動産まで、多言語（日本語・英語・中国語）対応と専門家ネットワークで住まい探しから契約・法務までワンストップ対応。初回相談は無料、お気軽にどうぞ。",
+      "元新聞記者が4カ国での在住経験を活かして立ち上げた、東京都文京区にある不動産屋。賃貸・売買・管理から相続不動産まで、多言語（日本語・英語・中国語）対応と専門家ネットワークで住まい探しから契約・法務までワンストップ対応。初回相談は無料、お気軽にどうぞ。",
     schemaType: "RealEstateAgent",
     ogImage: "/og.png",
     columnBasePath: "/column",
@@ -136,7 +171,7 @@ export const BUSINESS_SEO: Record<string, BusinessSEOConfig> = {
     name: "四葉行政書士事務所",
     legalName: "四葉行政書士事務所",
     description:
-      "元新聞記者の文章力で「通る申請書」を作成する文京区の四葉行政書士事務所。補助金・助成金の採択率向上、ビザ・在留資格、会社設立、各種許認可までワンストップ対応。不動産・社労士とも連携し事業開始を総合支援。初回相談無料。",
+      "元新聞記者の文章力で「通る申請書」を作成する文京区の四葉行政書士事務所。補助金・助成金の採択率向上、ビザ・在留資格、会社設立、各種許認可までワンストップ対応。不動産とも連携し事業開始を総合支援。初回相談無料。",
     schemaType: "LegalService",
     ogImage: "",
     columnBasePath: "/legal/column",

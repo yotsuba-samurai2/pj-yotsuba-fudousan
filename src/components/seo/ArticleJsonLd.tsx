@@ -1,5 +1,5 @@
 import { JsonLd } from "./JsonLd";
-import { canonicalUrl, BUSINESS_SEO } from "@/lib/seo";
+import { canonicalUrl, BUSINESS_SEO, PERSON_ID, SHARED_ORG_INFO } from "@/lib/seo";
 
 /**
  * 静的なピラーページ（コラム記事ではない、/souzoku のような常設ページ）向けの
@@ -45,6 +45,12 @@ export function ArticleJsonLd({
         image: {
           "@type": "ImageObject",
           url: imageUrl,
+        },
+        author: {
+          "@type": "Person",
+          "@id": PERSON_ID,
+          name: SHARED_ORG_INFO.representative,
+          url: "https://luck428.com/about",
         },
         publisher: { "@id": `${biz.url}/#organization` },
         mainEntityOfPage: { "@type": "WebPage", "@id": url },

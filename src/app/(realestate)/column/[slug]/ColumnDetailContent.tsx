@@ -14,7 +14,7 @@ type Props = {
 };
 
 export default function ColumnDetailContent({ col, prev, next }: Props) {
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
 
   return (
     <>
@@ -60,6 +60,14 @@ export default function ColumnDetailContent({ col, prev, next }: Props) {
               <p className="text-xs text-text-muted">
                 {col.author?.title || t("realestate.columnDetail.authorTitle")}
               </p>
+              <a
+                href="https://www.samurai.co.jp/samurai/reserve/uramatsu-joji"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-0.5 inline-block text-xs text-primary hover:text-primary-dark"
+              >
+                {locale === "ja" ? "プロフィール（士業ドットコム）↗" : "Profile (samurai.co.jp) ↗"}
+              </a>
             </div>
           </div>
 
