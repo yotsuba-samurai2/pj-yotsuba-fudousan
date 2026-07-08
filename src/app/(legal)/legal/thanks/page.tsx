@@ -1,15 +1,21 @@
 import Link from "next/link";
 import { ArrowRight, CheckCircle } from "lucide-react";
+import type { Metadata } from "next";
 
 import { buildPageMetadata } from "@/lib/seo";
+import { getRequestLocale } from "@/lib/getRequestLocale";
 
-export const metadata = buildPageMetadata({
-  businessKey: "legal",
-  title: "送信完了",
-  description: "お問い合わせを受け付けました。",
-  path: "/legal/thanks",
-  noindex: true,
-});
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getRequestLocale();
+  return buildPageMetadata({
+    businessKey: "legal",
+    title: "送信完了",
+    description: "お問い合わせを受け付けました。",
+    path: "/legal/thanks",
+    noindex: true,
+    locale,
+  });
+}
 
 export default function LegalThanksPage() {
   return (

@@ -1,13 +1,19 @@
+import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo";
+import { getRequestLocale } from "@/lib/getRequestLocale";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import LegalAboutPageContent from "./LegalAboutPageContent";
 
-export const metadata = buildPageMetadata({
-  businessKey: "legal",
-  title: "会社概要",
-  description: "5カ国で暮らした元新聞記者が、取材で培った情報収集力と文章力を活かして行政書士に。補助金・助成金、ビザ、会社設立、許認可までワンストップで対応。文京区の四葉行政書士事務所の理念とバックグラウンドをご紹介します。",
-  path: "/legal/about",
-});
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getRequestLocale();
+  return buildPageMetadata({
+    businessKey: "legal",
+    title: "会社概要",
+    description: "4カ国で暮らした元新聞記者が、取材で培った情報収集力と文章力を活かして行政書士に。補助金・助成金、ビザ、会社設立、許認可までワンストップで対応。文京区の四葉行政書士事務所の理念とバックグラウンドをご紹介します。",
+    path: "/legal/about",
+    locale,
+  });
+}
 
 export default function LegalAboutPage() {
   return (

@@ -1,15 +1,21 @@
+import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo";
+import { getRequestLocale } from "@/lib/getRequestLocale";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import LegalColumnListContent from "./LegalColumnListContent";
 
 export const dynamic = "force-dynamic";
 
-export const metadata = buildPageMetadata({
-  businessKey: "legal",
-  title: "コラム",
-  description: "補助金・助成金の最新情報と採択のコツ、ビザ・在留資格申請のポイント、会社設立の手順、各種許認可の実務まで。元新聞記者としての取材経験と現場の視点を活かし、四葉行政書士事務所がわかりやすく解説するお役立ちコラムです。",
-  path: "/legal/column",
-});
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getRequestLocale();
+  return buildPageMetadata({
+    businessKey: "legal",
+    title: "コラム",
+    description: "補助金・助成金の最新情報と採択のコツ、ビザ・在留資格申請のポイント、会社設立の手順、各種許認可の実務まで。元新聞記者としての取材経験と現場の視点を活かし、四葉行政書士事務所がわかりやすく解説するお役立ちコラムです。",
+    path: "/legal/column",
+    locale,
+  });
+}
 
 export default function LegalColumnListPage() {
   return (
