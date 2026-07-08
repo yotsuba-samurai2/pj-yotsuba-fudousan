@@ -317,10 +317,12 @@ export const SR_COLUMN_PATCHES: { id: string; slug: string; patches: SrColumnPat
         "count": 1
       },
       {
+        // 生成時、このfindは上の長いパターンの部分文字列でもあるため出現数を2と
+        // 二重カウントしていた。初回適用で長い方が先に置換され実際は1件のため修正。
         "path": "content",
         "find": "行政書士・社会保険労務士・宅地建物取引士の三資格保有",
         "replace": "行政書士・宅地建物取引士の資格保有\n- 社会保険労務士試験合格（2026年9月開業予定）",
-        "count": 2
+        "count": 1
       },
       {
         "path": "excerpt",
