@@ -1,16 +1,22 @@
+import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo";
+import { getRequestLocale } from "@/lib/getRequestLocale";
 import { FAQJsonLd } from "@/components/seo/FAQJsonLd";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { ServiceJsonLd } from "@/components/seo/ServiceJsonLd";
 import { HowToJsonLd } from "@/components/seo/HowToJsonLd";
 import LegalPageContent from "../LegalPageContent";
 
-export const metadata = buildPageMetadata({
-  businessKey: "legal",
-  title: "四葉行政書士事務所 | サービス一覧",
-  description: "元記者が書く「通る申請書」で補助金採択率UP。ビザ申請・会社設立・許認可もワンストップ。不動産・社労士と連携し、事業の立ち上げから運営までを総合支援します。",
-  path: "/legal/services",
-});
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getRequestLocale();
+  return buildPageMetadata({
+    businessKey: "legal",
+    title: "四葉行政書士事務所 | サービス一覧",
+    description: "元記者が書く「通る申請書」で補助金採択率UP。ビザ申請・会社設立・許認可もワンストップ。不動産・社労士と連携し、事業の立ち上げから運営までを総合支援します。",
+    path: "/legal/services",
+    locale,
+  });
+}
 
 export default function LegalServicesPage() {
   return (

@@ -1,14 +1,20 @@
 import { Phone, MapPin, Clock, CalendarDays } from "lucide-react";
+import type { Metadata } from "next";
 import { ContactForm } from "@/components/ui/ContactForm";
 import { buildPageMetadata } from "@/lib/seo";
+import { getRequestLocale } from "@/lib/getRequestLocale";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 
-export const metadata = buildPageMetadata({
-  businessKey: "legal",
-  title: "お問い合わせ",
-  description: "補助金・助成金の申請書作成、ビザ・在留資格、会社設立、各種許認可のご相談はこちら。初回相談無料、電話・お問い合わせフォーム・オンライン予約で受付。文京区の四葉行政書士事務所が迅速・丁寧にお答えします。お気軽にどうぞ。",
-  path: "/legal/contact",
-});
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getRequestLocale();
+  return buildPageMetadata({
+    businessKey: "legal",
+    title: "お問い合わせ",
+    description: "補助金・助成金の申請書作成、ビザ・在留資格、会社設立、各種許認可のご相談はこちら。初回相談無料、電話・お問い合わせフォーム・オンライン予約で受付。文京区の四葉行政書士事務所が迅速・丁寧にお答えします。お気軽にどうぞ。",
+    path: "/legal/contact",
+    locale,
+  });
+}
 
 export default function LegalContactPage() {
   return (

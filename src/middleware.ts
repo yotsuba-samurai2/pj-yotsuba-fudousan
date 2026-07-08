@@ -113,13 +113,20 @@ export function middleware(request: NextRequest) {
   // ロケールプレフィックスがあった場合、またはCookie設定が必要な場合
   const needsRewrite = rewritePath !== pathname;
 
+  // Server Component の headers() から同一リクエスト内で確実にlocaleを読めるよう、
+  // レスポンス側（Cookie/ヘッダー）に加えリクエストヘッダーにも転送する
+  // （Cookieはブラウザの次回リクエストからしか反映されず、初回アクセス・クローラーでは読めないため）
+  const requestHeaders = new Headers(request.headers);
+  requestHeaders.set("x-locale", locale);
+  const requestInit = { request: { headers: requestHeaders } };
+
   if (needsRewrite || locale !== "ja") {
     const url = request.nextUrl.clone();
     url.pathname = rewritePath;
 
     const response = needsRewrite
-      ? NextResponse.rewrite(url)
-      : NextResponse.next();
+      ? NextResponse.rewrite(url, requestInit)
+      : NextResponse.next(requestInit);
 
     // ロケール情報をCookieとヘッダーで伝搬
     response.headers.set("x-locale", locale);
@@ -140,10 +147,10 @@ export function middleware(request: NextRequest) {
   ) {
     const url = request.nextUrl.clone();
     url.pathname = `${tenantPrefix}${stripped}`;
-    return NextResponse.rewrite(url);
+    return NextResponse.rewrite(url, requestInit);
   }
 
-  return NextResponse.next();
+  return NextResponse.next(requestInit);
 }
 
 export const config = {

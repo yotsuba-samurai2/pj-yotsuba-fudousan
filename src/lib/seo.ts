@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { groupBusinesses } from "@/config/group";
+import { DEFAULT_LOCALE, isValidLocale } from "@/lib/locale";
 
 // ── Constants ──
 
@@ -156,13 +157,21 @@ export const BUSINESS_SEO: Record<string, BusinessSEOConfig> = {
 
 // ── Helpers ──
 
+/** パス断片を安全に連結（重複スラッシュ・空断片を除去） */
+function joinPath(...segments: string[]): string {
+  const parts = segments.flatMap((s) => s.split("/")).filter(Boolean);
+  return parts.length ? `/${parts.join("/")}` : "/";
+}
+
 /**
- * マルチテナントのcanonical URL生成
- * 内部パス `/legal/about` → `https://luck428gyosei.com/about`
+ * マルチテナント×多言語のcanonical URL生成
+ * 内部パス `/legal/about` + locale `en` → `https://luck428.com/en/legal/about`
+ * 内部パス `/legal/about` + locale `ja`（デフォルト）→ `https://luck428.com/legal/about`
  */
 export function canonicalUrl(
   businessKey: string,
   internalPath: string,
+  locale: string = DEFAULT_LOCALE,
 ): string {
   const baseUrl = BUSINESS_URLS[businessKey] ?? SITE_URL;
   const biz = groupBusinesses.find((b) => b.key === businessKey);
@@ -173,7 +182,12 @@ export function canonicalUrl(
       ? internalPath.slice(prefix.length) || "/"
       : internalPath;
 
-  return `${baseUrl}${publicPath === "/" ? "" : publicPath}`;
+  const { origin, pathname: basePath } = new URL(baseUrl);
+  const localePrefix =
+    isValidLocale(locale) && locale !== DEFAULT_LOCALE ? `/${locale}` : "";
+  const path = joinPath(localePrefix, basePath, publicPath);
+
+  return `${origin}${path === "/" ? "" : path}`;
 }
 
 /** 翻訳データからネストされたキーを取得 */
@@ -234,7 +248,7 @@ export function buildPageMetadata({
   absoluteTitle?: boolean;
 }): Metadata {
   const biz = BUSINESS_SEO[businessKey];
-  const url = canonicalUrl(businessKey, path);
+  const url = canonicalUrl(businessKey, path, locale);
   const ogImage = image ?? biz?.ogImage ?? "";
   const hasImage = Boolean(ogImage);
   const isRealestate = businessKey === "realestate";
@@ -269,11 +283,6 @@ export function buildPageMetadata({
         }
       : {};
 
-  const bUrl = BUSINESS_URLS[businessKey] ?? SITE_URL;
-  // publicPath is the path portion after the domain (extracted from canonical url)
-  const publicPath = url.replace(bUrl, "") || "/";
-  const langPath = publicPath === "/" ? "" : publicPath;
-
   return {
     title: absoluteTitle ? { absolute: title } : title,
     description,
@@ -281,11 +290,11 @@ export function buildPageMetadata({
     alternates: {
       canonical: url,
       languages: {
-        ja: `${bUrl}${langPath}`,
-        en: `${bUrl}/en${langPath}`,
-        "zh-Hant": `${bUrl}/zh-tw${langPath}`,
-        "zh-Hans": `${bUrl}/zh${langPath}`,
-        "x-default": `${bUrl}${langPath}`,
+        ja: canonicalUrl(businessKey, path, "ja"),
+        en: canonicalUrl(businessKey, path, "en"),
+        "zh-Hant": canonicalUrl(businessKey, path, "zh-tw"),
+        "zh-Hans": canonicalUrl(businessKey, path, "zh"),
+        "x-default": canonicalUrl(businessKey, path, "ja"),
       },
     },
     openGraph: { ...ogBase, ...articleFields },
