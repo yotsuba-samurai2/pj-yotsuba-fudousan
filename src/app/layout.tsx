@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
-import { cookies } from "next/headers";
 import { Zen_Kaku_Gothic_New } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { TranslationProvider } from "@/contexts/TranslationContext";
 import { SkipToContent } from "@/components/ui/SkipToContent";
-import { LOCALE_COOKIE, DEFAULT_LOCALE, isValidLocale } from "@/lib/locale";
+import { getRequestLocale } from "@/lib/getRequestLocale";
 import type { LangCode } from "@/config/languages";
 import ScatteredIcons from "@/components/ui/ScatteredIcons";
 import { fetchAllTranslationsFromFirestore } from "@/lib/getTranslationData";
@@ -38,10 +37,9 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const cookieStore = await cookies();
-  const localeCookie = cookieStore.get(LOCALE_COOKIE)?.value;
-  const locale: LangCode =
-    localeCookie && isValidLocale(localeCookie) ? localeCookie : DEFAULT_LOCALE;
+  // x-localeリクエストヘッダー優先（URL基準・middlewareが常に設定）、Cookieはフォールバック。
+  // Cookieだけに頼ると初回アクセス・クローラー・素のリンク遷移でURLと言語がズレる。
+  const locale: LangCode = await getRequestLocale();
 
   const allTranslations = await fetchAllTranslationsFromFirestore();
 

@@ -147,10 +147,25 @@ export function middleware(request: NextRequest) {
   ) {
     const url = request.nextUrl.clone();
     url.pathname = `${tenantPrefix}${stripped}`;
-    return NextResponse.rewrite(url, requestInit);
+    const response = NextResponse.rewrite(url, requestInit);
+    response.cookies.set(LOCALE_COOKIE, locale, {
+      path: "/",
+      maxAge: 60 * 60 * 24 * 365,
+      sameSite: "lax",
+    });
+    return response;
   }
 
-  return NextResponse.next(requestInit);
+  // ja・リライトなしでもCookieを常に同期する（URLが言語の正）。
+  // 素のリンクで /zh-tw/... → /... に戻った際、古いCookieが残ると
+  // クライアント側の言語状態がURLとズレるため。
+  const response = NextResponse.next(requestInit);
+  response.cookies.set(LOCALE_COOKIE, locale, {
+    path: "/",
+    maxAge: 60 * 60 * 24 * 365,
+    sameSite: "lax",
+  });
+  return response;
 }
 
 export const config = {
