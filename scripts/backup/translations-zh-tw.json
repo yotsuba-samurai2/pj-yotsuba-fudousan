@@ -1,32 +1,175 @@
 {
+  "representative": {
+    "name": "浦松 丈二",
+    "qualificationsLabor": "社會保險勞務士・行政書士・不動產交易士",
+    "qualificationsRealestate": "不動產交易士・行政書士・社會保險勞務士",
+    "languages": "日・英・中(繁體/簡體)",
+    "overseasExperience": "4個國家的駐外經驗",
+    "qualificationsLegal": "行政書士・不動產交易士・社會保險勞務士",
+    "previousJob": "新聞記者",
+    "nameEn": "Joji Uramatsu"
+  },
+  "brand": {
+    "groupNameEn": "YOTSUBA PARTNERS",
+    "metaTitleTemplate": "%s | 四葉パートナーズ",
+    "groupName": "四葉パートナーズ",
+    "groupDescription": "不動產・行政書士・社會保險勞務士一站式集團。",
+    "metaTitle": "四葉パートナーズ"
+  },
   "realestate": {
-    "footerDescription1": "前新聞記者×行政書士的不動產公司。",
-    "columnDetail": {
-      "authorName": "浦松 丈二",
-      "authorTitle": "四葉不動産",
-      "ctaDescription": "關於專欄內容的任何問題，也非常歡迎。"
-    },
-    "footerNav": {
-      "services": {
-        "foreignResidents": "外國人專屬支援",
-        "management": "物業管理",
-        "rental": "租賃支援",
-        "sale": "買賣支援",
-        "title": "服務內容"
-      },
-      "company": {
-        "title": "公司資訊",
-        "column": "專欄",
-        "about": "公司概況"
-      },
-      "other": {
-        "legalNotice": "基於不動產交易業法的標註",
-        "contact": "聯絡我們",
-        "title": "其他"
-      }
+    "servicesPage": {
+      "heroDescription2": "為客戶的各種不動產困擾提供貼心服務。",
+      "heroDescription1": "從租賃・買賣・管理到多語言對應。",
+      "metaTitle": "服務",
+      "sections": [
+        {
+          "points": [
+            "需求溝通・房源搜索",
+            "看房安排・簽約手續支援",
+            "與管理公司・房東的談判代理",
+            "入住後的跟進服務"
+          ],
+          "lead": "從找房到入住，全程交給我們。",
+          "subtitle": "Rental Support",
+          "title": "租賃支援",
+          "id": "rental",
+          "description": "憑藉前新聞記者的資訊力與人脈，為您介紹市場上不易獲取的房源資訊。根據您的需求，一起尋找理想的住所。"
+        },
+        {
+          "description": "不動產買賣是人生中的重大決策。憑藉豐富的資訊和專業網路，為客戶提供最佳選擇的支援。",
+          "id": "sale",
+          "subtitle": "Sales Support",
+          "title": "買賣支援",
+          "points": [
+            "物業調查・市場價格分析",
+            "出售評估・銷售策略建議",
+            "合約文件編製・重要事項說明",
+            "稅理士・司法書士協作支援"
+          ],
+          "lead": "無論住宅購買還是投資物業，助您達成滿意交易。"
+        },
+        {
+          "description": "從招租到建築維護管理，減輕業主的負擔。糾紛處理也迅速響應。為您打造安心可靠的管理體制。",
+          "subtitle": "Property Management",
+          "title": "物業管理",
+          "id": "management",
+          "points": [
+            "租戶招募・審查・合約管理",
+            "租戶應對・投訴處理",
+            "建築定期檢查・維修安排",
+            "租金收取・欠租處理"
+          ],
+          "lead": "負責任地管理業主的寶貴資產。"
+        },
+        {
+          "description": "代表本人擁有5個國家的海外生活經驗。正因為了解外國人找房的艱辛，才能提供細緻入微的支援。",
+          "title": "多語言支援",
+          "subtitle": "Multilingual Support",
+          "id": "foreign-residents",
+          "points": [
+            "4種語言的房源介紹・合約說明",
+            "所需文件準備支援",
+            "入住後的生活起步支援",
+            "行政手續的指導與陪同"
+          ],
+          "lead": "支援日語・英語・中文(繁體/簡體)服務。"
+        }
+      ],
+      "metaDescription": "租賃・買賣・管理・多語言支援。四葉不動産的服務一覽。",
+      "ctaDescription1": "「該從哪裡開始？」「這樣的事也能拜託嗎？」",
+      "title": "服務內容",
+      "ctaDescription2": "任何小問題都沒關係。",
+      "faq": [
+        {
+          "answer": "我們提供租賃支援、買賣支援、物業管理、多語言支援（日語・英語・中文繁體/簡體）四大服務。",
+          "question": "四葉不動産提供哪些服務？"
+        },
+        {
+          "question": "外國人也能租到房子嗎？",
+          "answer": "是的，四葉不動産支援5種語言，專業服務於外國人的住房搜尋。代表本人擁有5個國家的海外生活經驗，深刻理解外國人在異國找房的困難。"
+        },
+        {
+          "answer": "以東京都文京區為中心，覆蓋東京23區全域的房源。最近車站為東京メトロ丸ノ內線「茗荷谷」駅。",
+          "question": "服務覆蓋哪些區域？"
+        }
+      ]
     },
     "aboutPage": {
-      "partnersDescription2": "三大業務聯動，為客戶的問題提供一站式解決方案。",
+      "title": "公司概況",
+      "partnersDescription1": "不動產・行政書士。",
+      "heroDescription1": "四葉不動産的公司資訊與代表介紹。",
+      "partnersTitle": "四葉パートナーズ",
+      "metaDescription": "四葉不動産的公司概況與代表介紹。位於文京區小日向的不動產公司。",
+      "accessTitle": "交通指南",
+      "representativeBio1": "作為新聞記者在世界各地奔波，曾在5個國家生活。在此過程中培養的資訊收集能力、談判能力以及廣泛的人脈——我堅信這些在不動產領域也能成為強大的武器。",
+      "ctaDescription": "買賣・租賃・管理，任何問題都歡迎諮詢。",
+      "representativeTitle": "代表 浦松 丈二",
+      "partnersDescription2": "二大業務聯動，為客戶的問題提供一站式解決方案。",
+      "companyInfo": [
+        {
+          "label": "營運總部",
+          "value": "四葉パートナーズ（代表・浦松丈二）"
+        },
+        {
+          "value": "四葉不動産株式會社",
+          "label": "商號"
+        },
+        {
+          "value": "浦松 丈二",
+          "label": "代表者"
+        },
+        {
+          "value": "〒112-0006\n東京都文京區小日向４丁目２−５ 小日向安田ビル２０３",
+          "label": "所在地"
+        },
+        {
+          "label": "許可證號",
+          "value": "東京都知事（1）第113304號"
+        },
+        {
+          "label": "不動產交易士",
+          "value": "浦松丈二　登記號：（東京）第293544號"
+        },
+        {
+          "label": "電話號碼",
+          "value": "03-6161-9428"
+        },
+        {
+          "label": "營業時間",
+          "value": "10:00〜18:00（定休日：每周二、周三）"
+        },
+        {
+          "value": "日語・英語・中文（繁體/簡體）",
+          "label": "對應語言"
+        },
+        {
+          "value": "不動產租賃・買賣・管理",
+          "label": "業務內容"
+        },
+        {
+          "label": "集團業務",
+          "value": "四葉行政書士事務所（代表行政書士 浦松丈二　登記號：第25087022號）"
+        }
+      ],
+      "heroDescription2": "從文京區小日向為客戶的不動產需求提供支援。",
+      "highlights": {
+        "overseas": {
+          "value": "4個國家的駐外經驗",
+          "label": "海外經驗"
+        },
+        "languages": {
+          "label": "對應語言",
+          "value": "日・英・中(繁體/簡體)"
+        },
+        "previousJob": {
+          "label": "前職業",
+          "value": "新聞記者"
+        },
+        "qualifications": {
+          "value": "不動產交易士・行政書士",
+          "label": "資質"
+        }
+      },
       "groupBusinesses": [
         {
           "name": "四葉不動産",
@@ -41,197 +184,70 @@
           "name": "四葉社會保險勞務士法人"
         }
       ],
-      "title": "公司概況",
-      "highlights": {
-        "previousJob": {
-          "value": "新聞記者",
-          "label": "前職業"
-        },
-        "overseas": {
-          "label": "海外經驗",
-          "value": "4個國家的駐外經驗"
-        },
-        "languages": {
-          "label": "對應語言",
-          "value": "日・英・中(繁體/簡體)"
-        },
-        "qualifications": {
-          "label": "資質",
-          "value": "不動產交易士・行政書士・社會保險勞務士"
-        }
-      },
-      "ctaDescription": "買賣・租賃・管理，任何問題都歡迎諮詢。",
-      "partnersTitle": "四葉パートナーズ",
-      "companyInfo": [
-        {
-          "label": "營運總部",
-          "value": "四葉パートナーズ（代表・浦松丈二）"
-        },
-        {
-          "value": "四葉不動産株式會社",
-          "label": "商號"
-        },
-        {
-          "label": "代表者",
-          "value": "浦松 丈二"
-        },
-        {
-          "label": "所在地",
-          "value": "〒112-0006\n東京都文京區小日向4丁目2−5 小日向安田ビル 2F"
-        },
-        {
-          "value": "東京都知事（1）第113304號",
-          "label": "許可證號"
-        },
-        {
-          "label": "不動產交易士",
-          "value": "浦松丈二　登記號：（東京）第293544號"
-        },
-        {
-          "label": "電話號碼",
-          "value": "03-6161-9428"
-        },
-        {
-          "label": "營業時間",
-          "value": "9:00〜18:00（工作日及週末）"
-        },
-        {
-          "value": "日語・英語・中文（繁體/簡體）",
-          "label": "對應語言"
-        },
-        {
-          "value": "不動產租賃・買賣・管理",
-          "label": "業務內容"
-        },
-        {
-          "value": "四葉行政書士事務所（代表行政書士 浦松丈二　登記號：第25087022號）\n四葉社會保險勞務士法人（浦松丈二　第202500525號）",
-          "label": "集團業務"
-        }
-      ],
-      "accessTitle": "交通指南",
-      "metaDescription": "四葉不動産的公司概況與代表介紹。位於文京區小日向的不動產公司。",
-      "representativeBio2": "當您在不動產方面遇到困難時，我希望成為您可以輕鬆交談的對象。買賣・租賃・管理，任何諮詢都歡迎。貼心陪伴每一位客戶，一起找到最佳答案。這是四葉不動産的承諾。",
-      "representativeBio1": "作為新聞記者在世界各地奔波，曾在5個國家生活。在此過程中培養的資訊收集能力、談判能力以及廣泛的人脈——我堅信這些在不動產領域也能成為強大的武器。",
       "companyInfoTitle": "公司資訊",
-      "representativeTitle": "代表 浦松 丈二",
-      "heroDescription1": "四葉不動産的公司資訊與代表介紹。",
-      "partnersDescription1": "不動產・行政書士・社會保險勞務士。",
-      "heroDescription2": "從文京區小日向為客戶的不動產需求提供支援。"
+      "representativeBio2": "當您在不動產方面遇到困難時，我希望成為您可以輕鬆交談的對象。買賣・租賃・管理，任何諮詢都歡迎。貼心陪伴每一位客戶，一起找到最佳答案。這是四葉不動産的承諾。"
     },
-    "footerDescription2": "透過4種語言服務和專家網路，從找房到法務提供全方位支援。",
-    "servicesPage": {
-      "ctaDescription2": "任何小問題都沒關係。",
-      "title": "服務內容",
-      "sections": [
-        {
-          "lead": "從找房到入住，全程交給我們。",
-          "subtitle": "Rental Support",
-          "points": [
-            "需求溝通・房源搜索",
-            "看房安排・簽約手續支援",
-            "與管理公司・房東的談判代理",
-            "入住後的跟進服務"
-          ],
-          "id": "rental",
-          "title": "租賃支援",
-          "description": "憑藉前新聞記者的資訊力與人脈，為您介紹市場上不易獲取的房源資訊。根據您的需求，一起尋找理想的住所。"
-        },
-        {
-          "title": "買賣支援",
-          "description": "不動產買賣是人生中的重大決策。憑藉豐富的資訊和專業網路，為客戶提供最佳選擇的支援。",
-          "id": "sale",
-          "subtitle": "Sales Support",
-          "points": [
-            "物業調查・市場價格分析",
-            "出售評估・銷售策略建議",
-            "合約文件編製・重要事項說明",
-            "稅理士・司法書士協作支援"
-          ],
-          "lead": "無論住宅購買還是投資物業，助您達成滿意交易。"
-        },
-        {
-          "description": "從招租到建築維護管理，減輕業主的負擔。糾紛處理也迅速響應。為您打造安心可靠的管理體制。",
-          "title": "物業管理",
-          "id": "management",
-          "points": [
-            "租戶招募・審查・合約管理",
-            "租戶應對・投訴處理",
-            "建築定期檢查・維修安排",
-            "租金收取・欠租處理"
-          ],
-          "subtitle": "Property Management",
-          "lead": "負責任地管理業主的寶貴資產。"
-        },
-        {
-          "id": "foreign-residents",
-          "title": "多語言支援",
-          "description": "代表本人擁有5個國家的海外生活經驗。正因為了解外國人找房的艱辛，才能提供細緻入微的支援。",
-          "lead": "支援日語・英語・中文(繁體/簡體)服務。",
-          "points": [
-            "4種語言的房源介紹・合約說明",
-            "所需文件準備支援",
-            "入住後的生活起步支援",
-            "行政手續的指導與陪同"
-          ],
-          "subtitle": "Multilingual Support"
-        }
-      ],
-      "metaTitle": "服務",
-      "heroDescription2": "為客戶的各種不動產困擾提供貼心服務。",
-      "ctaDescription1": "「該從哪裡開始？」「這樣的事也能拜託嗎？」",
-      "metaDescription": "租賃・買賣・管理・多語言支援。四葉不動産的服務一覽。",
-      "heroDescription1": "從租賃・買賣・管理到多語言對應。",
-      "faq": [
-        {
-          "answer": "我們提供租賃支援、買賣支援、物業管理、多語言支援（日語・英語・中文繁體/簡體）四大服務。",
-          "question": "四葉不動産提供哪些服務？"
-        },
-        {
-          "question": "外國人也能租到房子嗎？",
-          "answer": "是的，四葉不動産支援5種語言，專業服務於外國人的住房搜尋。代表本人擁有5個國家的海外生活經驗，深刻理解外國人在異國找房的困難。"
-        },
-        {
-          "question": "服務覆蓋哪些區域？",
-          "answer": "以東京都文京區為中心，覆蓋東京23區全域的房源。最近車站為東京メトロ丸ノ內線「茗荷谷」駅。"
-        }
-      ]
-    },
+    "footerDescription1": "前新聞記者×行政書士的不動產公司。",
     "tagline": "跨越語言與行業的壁壘，為您找到理想的家。",
-    "nav": {
-      "services": "服務內容",
-      "about": "公司概況",
-      "column": "專欄",
-      "contact": "聯絡我們"
-    },
-    "columnPage": {
-      "title": "專欄",
-      "metaDescription": "四葉不動産的專欄。外國人找房、租賃・買賣小知識、文京區地區資訊等，為您提供不動產相關的實用資訊。",
-      "heroDescription2": "為您提供不動產相關的實用資訊。",
-      "heroDescription1": "外國人找房、租賃・買賣小知識、文京區地區資訊等。",
+    "columnDetail": {
+      "authorName": "浦松 丈二",
+      "authorTitle": "四葉不動産",
       "ctaDescription": "關於專欄內容的任何問題，也非常歡迎。"
     },
-    "nameEn": "Real Estate",
+    "legalName": "四葉不動産株式會社",
+    "footerNav": {
+      "other": {
+        "contact": "聯絡我們",
+        "legalNotice": "基於不動產交易業法的標註",
+        "title": "其他"
+      },
+      "services": {
+        "sale": "買賣支援",
+        "title": "服務內容",
+        "management": "物業管理",
+        "foreignResidents": "外國人專屬支援",
+        "rental": "租賃支援"
+      },
+      "company": {
+        "column": "專欄",
+        "about": "公司概況",
+        "title": "公司資訊"
+      }
+    },
     "description": "不動產租賃・買賣・管理",
     "home": {
       "heroTitle1": "輕鬆交流，",
-      "access": {
-        "sectionTitle": "交通指南",
-        "businessHours": {
-          "value": "10:00〜18:00（定休日：每周二、周三）",
-          "label": "營業時間"
-        },
-        "name": "四葉不動産",
-        "nearestStation": {
-          "label": "最近車站",
-          "value": "東京メトロ丸ノ內線「茗荷谷」駅 步行5分鐘"
-        },
-        "mapTitle": "四葉不動産 所在地"
+      "services": {
+        "sectionTitle": "服務內容",
+        "items": [
+          {
+            "title": "租賃支援",
+            "subtitle": "Rental",
+            "description": "從找房到審查・簽約，一站式全程支援"
+          },
+          {
+            "title": "買賣支援",
+            "subtitle": "Sales",
+            "description": "住宅購買・投資物業的買賣仲介。為初次購房者提供通俗易懂的說明"
+          },
+          {
+            "description": "代理業主的物業管理。租戶應對也讓您安心",
+            "subtitle": "Management",
+            "title": "物業管理"
+          },
+          {
+            "description": "支援日語・英語・中文(繁體/簡體)。外國朋友也請放心",
+            "title": "多語言支援",
+            "subtitle": "Multilingual"
+          }
+        ]
       },
       "heroImageAlt": "四葉草與房屋",
+      "heroTitle3": "不動產公司。",
       "ctaSection": {
-        "title": "歡迎隨時諮詢",
+        "description2": "任何小問題都沒關係。我們提供5種語言的服務。",
         "description1": "「外國人也能租到房子嗎？」「該從哪裡開始？」",
-        "description2": "任何小問題都沒關係。我們提供5種語言的服務。"
+        "title": "歡迎隨時諮詢"
       },
       "whyYotsuba": {
         "sectionTitle": "選擇四葉不動産的理由",
@@ -242,24 +258,24 @@
             "description": "零距離感。憑藉前記者特有的傾聽能力，營造輕鬆自在、暢所欲言的氛圍。"
           },
           {
-            "subtitle": "Multilingual",
+            "description": "日語・中文・台灣華語・泰語・英語。無需擔心語言障礙，輕鬆諮詢。",
             "title": "5種語言對應",
-            "description": "日語・中文・台灣華語・泰語・英語。無需擔心語言障礙，輕鬆諮詢。"
+            "subtitle": "Multilingual"
           },
           {
-            "subtitle": "Lived Experience",
+            "description": "曾在海外駐外期間多次經歷找房。深刻了解外國人在異國尋找住所的艱辛。",
             "title": "親身經歷者",
-            "description": "曾在海外駐外期間多次經歷找房。深刻了解外國人在異國尋找住所的艱辛。"
+            "subtitle": "Lived Experience"
           },
           {
             "subtitle": "Licensed Scrivener",
-            "description": "簽證・在留資格的手續也可在公司內部辦理。不動產與法務一站式解決。",
-            "title": "持有行政書士資質的不動產公司"
+            "title": "持有行政書士資質的不動產公司",
+            "description": "簽證・在留資格的手續也可在公司內部辦理。不動產與法務一站式解決。"
           },
           {
+            "subtitle": "Expert Network",
             "title": "專業人士網路",
-            "description": "與稅理士・司法書士・社會保險勞務士等各領域專家協作。複雜案件也能團隊應對。",
-            "subtitle": "Expert Network"
+            "description": "與稅理士・司法書士等各領域專家協作。複雜案件也能團隊應對。"
           },
           {
             "subtitle": "Information Network",
@@ -268,62 +284,161 @@
           }
         ]
       },
-      "heroTitle3": "不動產公司。",
       "heroSubtitle1": "憑藉前新聞記者的資訊力與人脈，",
-      "heroTitle2": "值得信賴的",
       "message": {
-        "paragraph2": "當您在不動產方面遇到困難時，我希望成為您可以輕鬆交談的對象。買賣・租賃・管理，任何諮詢都歡迎。貼心陪伴每一位客戶，一起找到最佳答案。這是四葉不動産的承諾。",
-        "title": "四葉不動産 代表",
         "sectionTitle": "致辭",
-        "paragraph1": "作為新聞記者在世界各地奔波，曾在5個國家生活。在此過程中培養的資訊收集能力、談判能力以及廣泛的人脈——我堅信這些在不動產領域也能成為強大的武器。"
+        "title": "四葉不動産 代表",
+        "paragraph1": "作為新聞記者在世界各地奔波，曾在5個國家生活。在此過程中培養的資訊收集能力、談判能力以及廣泛的人脈——我堅信這些在不動產領域也能成為強大的武器。",
+        "paragraph2": "當您在不動產方面遇到困難時，我希望成為您可以輕鬆交談的對象。買賣・租賃・管理，任何諮詢都歡迎。貼心陪伴每一位客戶，一起找到最佳答案。這是四葉不動産的承諾。"
       },
-      "services": {
-        "items": [
-          {
-            "title": "租賃支援",
-            "description": "從找房到審查・簽約，一站式全程支援",
-            "subtitle": "Rental"
-          },
-          {
-            "description": "住宅購買・投資物業的買賣仲介。為初次購房者提供通俗易懂的說明",
-            "title": "買賣支援",
-            "subtitle": "Sales"
-          },
-          {
-            "subtitle": "Management",
-            "title": "物業管理",
-            "description": "代理業主的物業管理。租戶應對也讓您安心"
-          },
-          {
-            "description": "支援日語・英語・中文(繁體/簡體)。外國朋友也請放心",
-            "title": "多語言支援",
-            "subtitle": "Multilingual"
-          }
-        ],
-        "sectionTitle": "服務內容"
+      "access": {
+        "mapTitle": "四葉不動産 所在地",
+        "businessHours": {
+          "label": "營業時間",
+          "value": "10:00〜18:00（定休日：每周二、周三）"
+        },
+        "name": "四葉不動産",
+        "nearestStation": {
+          "label": "最近車站",
+          "value": "東京メトロ丸ノ內線「茗荷谷」駅 步行5分鐘"
+        },
+        "sectionTitle": "交通指南"
       },
-      "heroSubtitle2": "為您的不動產需求保駕護航。"
+      "heroSubtitle2": "為您的不動產需求保駕護航。",
+      "heroTitle2": "值得信賴的"
     },
-    "legalName": "四葉不動産株式會社",
-    "name": "四葉不動産",
+    "nav": {
+      "services": "服務內容",
+      "contact": "聯絡我們",
+      "column": "專欄",
+      "about": "公司概況"
+    },
     "meta": {
       "title": "四葉不動産 | 跨越語言與行業的壁壘，為您找到理想的家。",
       "description": "前新聞記者×行政書士的不動產公司。透過5種語言（日・英・中・泰・越）服務和專家網路，從找房到法務提供一站式支援。",
       "titleTemplate": "%s | 四葉不動産"
+    },
+    "footerDescription2": "透過4種語言服務和專家網路，從找房到法務提供全方位支援。",
+    "nameEn": "Real Estate",
+    "name": "四葉不動産",
+    "columnPage": {
+      "metaDescription": "四葉不動産的專欄。外國人找房、租賃・買賣小知識、文京區地區資訊等，為您提供不動產相關的實用資訊。",
+      "ctaDescription": "關於專欄內容的任何問題，也非常歡迎。",
+      "title": "專欄",
+      "heroDescription2": "為您提供不動產相關的實用資訊。",
+      "heroDescription1": "外國人找房、租賃・買賣小知識、文京區地區資訊等。"
     }
   },
+  "legalNotice": {
+    "title": "基於不動產交易業法的標註",
+    "items": [
+      {
+        "label": "商號",
+        "value": "四葉不動産株式會社"
+      },
+      {
+        "value": "浦松 丈二",
+        "label": "代表者"
+      },
+      {
+        "label": "所在地",
+        "value": "〒112-0006 東京都文京區小日向４丁目２−５ 小日向安田ビル２０３"
+      },
+      {
+        "label": "許可證號",
+        "value": "東京都知事（1）第113304號"
+      },
+      {
+        "value": "浦松丈二（登記號：（東京）第293544號）",
+        "label": "專任不動產交易士"
+      },
+      {
+        "value": "03-6161-9428",
+        "label": "電話號碼"
+      },
+      {
+        "value": "10:00〜18:00（定休日：每周二、周三）",
+        "label": "營業時間"
+      }
+    ],
+    "metaTitle": "基於不動產交易業法的標註 | 四葉不動産",
+    "metaDescription": "四葉不動産株式會社基於不動產交易業法的標註。"
+  },
+  "thanks": {
+    "title": "已收到您的諮詢",
+    "metaTitle": "提交成功 | 四葉パートナーズ",
+    "description2": "請稍候。",
+    "metaDescription": "已收到您的諮詢。",
+    "description1": "我們將在2個工作日內回覆。"
+  },
+  "address": {
+    "street": "小日向４丁目２−５",
+    "phone": "03-6161-9428",
+    "businessHours": "11:00〜18:00（定休日：每周二、周三）",
+    "full": "東京都文京區小日向４丁目２−５ 小日向安田ビル２０３",
+    "city": "文京區",
+    "prefecture": "東京都",
+    "postalCode": "〒112-0006",
+    "nearestStation": "東京メトロ丸ノ內線「茗荷谷」駅 步行5分鐘",
+    "building": "小日向安田ビル２０３"
+  },
+  "common": {
+    "onlineBooking": "線上預約",
+    "openInGoogleMaps": "在 Google Maps 中開啟",
+    "readMore": "閱讀更多",
+    "contact": "聯絡我們",
+    "thisPage": "本頁",
+    "navigation": {
+      "showGroupBusinesses": "顯示集團業務",
+      "openMenu": "開啟選單",
+      "mainNav": "主導航",
+      "closeMenu": "關閉選單",
+      "mobileMenu": "行動端選單"
+    },
+    "nextArticle": "下一篇",
+    "booking": "預約",
+    "prevPage": "上一頁",
+    "learnMore": "了解詳情",
+    "cta": {
+      "viewCompanyInfo": "查看公司概況",
+      "feelFreeToContact": "歡迎隨時諮詢",
+      "viewServices": "查看服務內容",
+      "contactUs": "聯絡我們",
+      "consultFirst": "先來諮詢一下",
+      "consultAboutService": "關於此服務的諮詢"
+    },
+    "current": "目前",
+    "currentSite": "目前站點",
+    "column": {
+      "emptyDescription": "我們正在準備專欄文章，敬請期待。",
+      "emptyTitle": "文章準備中"
+    },
+    "prevArticle": "上一篇",
+    "thisSite": "本站",
+    "footer": {
+      "legalRepRegistration": "四葉行政書士事務所 代表行政書士 浦松丈二　登記號：第25087022號",
+      "managedServices": "營運服務",
+      "laborRepRegistration": "社會保險勞務士合格 浦松丈二　令和7年10月1日 第202500525號",
+      "terms": "使用條款",
+      "privacyPolicy": "隱私政策",
+      "legalHeadquartersLine": "營運總部：四葉パートナーズ（總部・東京都文京區、代表・浦松丈二）",
+      "samuraiDescription": "專業士業的預約與媒合平台",
+      "samuraiName": "士業ドットコム",
+      "copyright": "四葉パートナーズ All rights reserved.",
+      "realestateRepRegistration": "四葉不動産 代表董事・專任不動產交易士 浦松丈二　不動產交易士登記號：（東京）第293544號",
+      "realestateRegistration": "四葉不動産株式會社　許可證號：東京都知事（1）第113304號"
+    },
+    "submit": "提交",
+    "nextPage": "下一頁",
+    "skipToContent": "跳轉到主要內容",
+    "backToTop": "返回頂部"
+  },
   "privacyPolicy": {
-    "metaTitle": "隱私政策 | 四葉パートナーズ",
     "metaDescription": "四葉パートナーズ的隱私政策。",
-    "title": "隱私政策",
     "sections": {
       "thirdParty": {
         "title": "3. 向第三方提供",
         "content": "除法律規定的情況外，未經本人同意，不會向第三方提供個人資訊。"
-      },
-      "collection": {
-        "content": "四葉パートナーズ（以下簡稱「本公司」）可能會透過諮詢表單、電話、郵件等方式取得您的姓名、電子郵件地址、電話號碼、住址等個人資訊。",
-        "title": "1. 個人資訊的取得"
       },
       "security": {
         "title": "4. 安全管理",
@@ -331,8 +446,8 @@
       },
       "inquiry": {
         "title": "5. 諮詢",
-        "contactInfo": "四葉パートナーズ　TEL: 03-6161-9428",
-        "content": "如有關於個人資訊處理的諮詢，請透過以下方式聯絡我們。"
+        "content": "如有關於個人資訊處理的諮詢，請透過以下方式聯絡我們。",
+        "contactInfo": "四葉パートナーズ　TEL: 03-6161-9428"
       },
       "purpose": {
         "content": "取得的個人資訊將用於以下目的。",
@@ -342,105 +457,97 @@
           "用於服務改善的分析"
         ],
         "title": "2. 使用目的"
+      },
+      "collection": {
+        "content": "四葉パートナーズ（以下簡稱「本公司」）可能會透過諮詢表單、電話、郵件等方式取得您的姓名、電子郵件地址、電話號碼、住址等個人資訊。",
+        "title": "1. 個人資訊的取得"
       }
-    }
-  },
-  "breadcrumbs": {
-    "legalNotice": "基於不動產交易業法的標註",
-    "officeAbout": "事務所概況",
-    "contact": "聯絡我們",
-    "services": "服務內容",
-    "home": "首頁",
-    "about": "公司概況",
-    "column": "專欄"
-  },
-  "address": {
-    "nearestStation": "東京メトロ丸ノ內線「茗荷谷」駅 步行5分鐘",
-    "street": "小日向４丁目２−５",
-    "full": "東京都文京區小日向４丁目２−５ 小日向安田ビル２０３",
-    "businessHours": "11:00〜18:00（定休日：每周二、周三）",
-    "city": "文京區",
-    "building": "小日向安田ビル２０３",
-    "phone": "03-6161-9428",
-    "postalCode": "〒112-0006",
-    "prefecture": "東京都"
+    },
+    "title": "隱私政策",
+    "metaTitle": "隱私政策 | 四葉パートナーズ"
   },
   "legal": {
-    "meta": {
-      "title": "四葉行政書士事務所 | 補助金・助成金・簽證申請",
-      "description": "補助金・助成金申請、在留資格・簽證申請、公司設立、各類許可證。四葉パートナーズ的行政書士事務所為您提供法務手續的一站式支援。",
-      "titleTemplate": "%s | 四葉行政書士事務所"
-    },
-    "description": "補助金・助成金申請、在留資格・簽證、法務手續",
     "nameEn": "Administrative Scrivener",
-    "legalName": "四葉行政書士事務所",
-    "name": "四葉行政書士事務所",
     "footerDescription2": "為您的商業與生活手續提供全方位支援。",
-    "columnPage": {
-      "metaDescription": "四葉行政書士事務所的專欄。補助金・助成金、簽證申請、公司設立等，為您提供法務相關的實用資訊。",
-      "heroDescription1": "補助金・簽證・公司設立等，法務相關的實用資訊。",
-      "title": "專欄",
-      "heroDescription2": "以行政書士的視角通俗易懂地為您呈現。"
+    "meta": {
+      "description": "補助金・助成金申請、在留資格・簽證申請、公司設立、各類許可證。四葉パートナーズ的行政書士事務所為您提供法務手續的一站式支援。",
+      "title": "四葉行政書士事務所 | 補助金・助成金・簽證申請",
+      "titleTemplate": "%s | 四葉行政書士事務所"
     },
     "nav": {
       "contact": "聯絡我們",
       "column": "專欄",
-      "about": "事務所概況",
       "home": "首頁",
-      "services": "服務內容"
+      "services": "服務內容",
+      "about": "事務所概況"
     },
-    "tagline": "補助金・簽證・公司設立一站式服務。",
+    "columnPage": {
+      "title": "專欄",
+      "metaDescription": "四葉行政書士事務所的專欄。補助金・助成金、簽證申請、公司設立等，為您提供法務相關的實用資訊。",
+      "heroDescription2": "以行政書士的視角通俗易懂地為您呈現。",
+      "heroDescription1": "補助金・簽證・公司設立等，法務相關的實用資訊。"
+    },
+    "name": "四葉行政書士事務所",
+    "description": "補助金・助成金申請、在留資格・簽證、法務手續",
     "footerNav": {
+      "office": {
+        "column": "專欄",
+        "title": "事務所資訊",
+        "about": "事務所概況"
+      },
       "other": {
         "title": "其他",
         "contact": "聯絡我們"
       },
-      "office": {
-        "about": "事務所概況",
-        "title": "事務所資訊",
-        "column": "專欄"
-      },
       "services": {
+        "incorporation": "公司設立",
         "title": "服務內容",
         "subsidy": "補助金・助成金申請",
-        "permits": "各類許可證",
         "visa": "在留資格・簽證申請",
-        "incorporation": "公司設立"
+        "permits": "各類許可證"
       }
     },
+    "legalName": "四葉行政書士事務所",
     "columnDetail": {
       "authorTitle": "四葉行政書士事務所",
       "authorName": "浦松 丈二"
     },
-    "footerDescription1": "透過不動產與法務的聯動，",
     "homePage": {
-      "representativeTitle": "代表行政書士　登記號：第25087022號",
-      "representativeBio1": "憑藉新聞記者時期培養的調查能力與寫作功底，廣泛應對從補助金申請文件編製到許可證手續。尤其在補助金・助成金申請方面，事業計畫的「表達方式」是獲批的關鍵。運用記者經驗編製有說服力的申請書。",
-      "oneStopTitle": "四葉集團的獨特優勢",
-      "oneStopDescription2": "不讓客戶的困擾被推來推去。",
-      "heroDescription2": "透過不動產與法務的一站式服務，支援您的商業與生活。",
-      "oneStopDescription1": "不動產・行政書士・社會保險勞務士聯動。",
+      "metaDescription": "補助金・助成金申請、在留資格・簽證申請、公司設立、各類許可證。四葉パートナーズ的行政書士事務所為您提供法務手續的一站式支援。",
       "heroDescription1": "從補助金・助成金申請到在留資格・簽證、公司設立、許可證辦理。",
-      "faq": [
+      "title": "四葉行政書士事務所",
+      "services": [
         {
-          "answer": "憑藉前新聞記者的寫作功底，編製有說服力的申請書。在事業計畫的「表達方式」決定獲批與否的補助金申請中，記者經驗是一大優勢。",
-          "question": "委託行政書士申請補助金有什麼優勢？"
+          "title": "補助金・助成金申請",
+          "description": "事業重構補助金、小規模事業者持續化補助金等，從申請文件編製到獲批全程支援。擁有提高獲批率的專業經驗。"
         },
         {
-          "question": "也能辦理外國人的簽證申請嗎？",
-          "answer": "是的，我們辦理就勞簽證、經營・管理簽證、配偶簽證等各類在留資格的取得・更新・變更。支援5種語言，可與外國申請人直接溝通。"
+          "description": "就勞簽證、經營・管理簽證、配偶簽證等，支援在留資格的取得・更新・變更所需文件編製。支援5種語言，可與外國申請人直接溝通。",
+          "title": "在留資格・簽證申請"
         },
         {
-          "question": "可以同時諮詢不動產和法務嗎？",
-          "answer": "是的，四葉パートナーズ集團中不動產（四葉不動産）與行政書士事務所聯動，可一站式辦理辦公室租賃合約與公司設立手續等。"
+          "description": "支援股份有限公司・合同公司的設立手續。從章程編製到設立手續，結合不動產（辦公室選址）提供一站式服務。登記由合作司法書士辦理。",
+          "title": "公司設立・法人設立"
+        },
+        {
+          "title": "各類許可證申請",
+          "description": "建設業許可、餐飲營業許可、舊貨商許可等，支援您獲取事業所需的各類許可證。"
+        },
+        {
+          "title": "繼承・遺囑・信託支援",
+          "description": "遺囑書編製、遺產分割協議書、民事信託（家族信託）設計、繼承手續全面支援。不動產繼承與四葉不動産聯動辦理。"
+        },
+        {
+          "title": "合約書・文件編製",
+          "description": "各類合約書的編製與審查、內容證明郵件的編製等，為您編製商業所需的法務文件。"
         }
       ],
+      "representativeBio2": "此外，憑藉5個國家的海外經驗和多語言能力，在外國人的在留資格・簽證申請方面也具有優勢。能夠將不動產（四葉不動産）與法務一站式解決，是本事務所的最大特色。",
       "servicesTitle": "服務內容",
-      "title": "四葉行政書士事務所",
       "groupBusinesses": [
         {
-          "name": "四葉不動産",
-          "description": "租賃・買賣・管理"
+          "description": "租賃・買賣・管理",
+          "name": "四葉不動産"
         },
         {
           "description": "",
@@ -451,65 +558,59 @@
           "description": "社會保險・勞務管理"
         }
       ],
-      "services": [
+      "heroDescription2": "透過不動產與法務的一站式服務，支援您的商業與生活。",
+      "ctaDescription": "補助金・助成金、簽證申請、公司設立等，歡迎隨時諮詢。",
+      "oneStopDescription1": "不動產・行政書士聯動。",
+      "oneStopDescription2": "不讓客戶的困擾被推來推去。",
+      "representativeTitle": "代表行政書士　登記號：第25087022號",
+      "faq": [
         {
-          "description": "事業重構補助金、小規模事業者持續化補助金等，從申請文件編製到獲批全程支援。擁有提高獲批率的專業經驗。",
-          "title": "補助金・助成金申請"
+          "answer": "憑藉前新聞記者的寫作功底，編製有說服力的申請書。在事業計畫的「表達方式」決定獲批與否的補助金申請中，記者經驗是一大優勢。",
+          "question": "委託行政書士申請補助金有什麼優勢？"
         },
         {
-          "title": "在留資格・簽證申請",
-          "description": "就勞簽證、經營・管理簽證、配偶簽證等，支援在留資格的取得・更新・變更所需文件編製。支援5種語言，可與外國申請人直接溝通。"
+          "question": "也能辦理外國人的簽證申請嗎？",
+          "answer": "是的，我們辦理就勞簽證、經營・管理簽證、配偶簽證等各類在留資格的取得・更新・變更。支援5種語言，可與外國申請人直接溝通。"
         },
         {
-          "title": "公司設立・法人設立",
-          "description": "支援股份有限公司・合同公司的設立手續。從章程編製到設立手續，結合不動產（辦公室選址）提供一站式服務。登記由合作司法書士辦理。"
-        },
-        {
-          "description": "建設業許可、餐飲營業許可、舊貨商許可等，支援您獲取事業所需的各類許可證。",
-          "title": "各類許可證申請"
-        },
-        {
-          "description": "遺囑書編製、遺產分割協議書、民事信託（家族信託）設計、繼承手續全面支援。不動產繼承與四葉不動産聯動辦理。",
-          "title": "繼承・遺囑・信託支援"
-        },
-        {
-          "description": "各類合約書的編製與審查、內容證明郵件的編製等，為您編製商業所需的法務文件。",
-          "title": "合約書・文件編製"
+          "answer": "是的，四葉パートナーズ集團中不動產（四葉不動産）與行政書士事務所聯動，可一站式辦理辦公室租賃合約與公司設立手續等。",
+          "question": "可以同時諮詢不動產和法務嗎？"
         }
       ],
-      "metaDescription": "補助金・助成金申請、在留資格・簽證申請、公司設立、各類許可證。四葉パートナーズ的行政書士事務所為您提供法務手續的一站式支援。",
-      "representativeBio2": "此外，憑藉5個國家的海外經驗和多語言能力，在外國人的在留資格・簽證申請方面也具有優勢。能夠將不動產（四葉不動産）與法務一站式解決，是本事務所的最大特色。",
-      "ctaDescription": "補助金・助成金、簽證申請、公司設立等，歡迎隨時諮詢。"
+      "representativeBio1": "憑藉新聞記者時期培養的調查能力與寫作功底，廣泛應對從補助金申請文件編製到許可證手續。尤其在補助金・助成金申請方面，事業計畫的「表達方式」是獲批的關鍵。運用記者經驗編製有說服力的申請書。",
+      "oneStopTitle": "四葉集團的獨特優勢"
     },
+    "tagline": "補助金・簽證・公司設立一站式服務。",
     "aboutPage": {
+      "accessTitle": "交通指南",
+      "metaDescription": "四葉行政書士事務所的公司概況與代表介紹。位於文京區小日向的行政書士事務所。",
+      "officeInfoTitle": "事務所資訊",
+      "heroDescription1": "四葉行政書士事務所的事務所資訊與代表介紹。",
       "title": "公司概況",
+      "mapTitle": "四葉行政書士事務所 所在地",
       "highlights": {
         "previousJob": {
           "label": "前職業",
           "value": "新聞記者"
         },
-        "languages": {
-          "value": "日・英・中(繁體/簡體)",
-          "label": "對應語言"
-        },
         "overseas": {
           "value": "4個國家的駐外經驗",
           "label": "海外經驗"
         },
+        "languages": {
+          "label": "對應語言",
+          "value": "日・英・中(繁體/簡體)"
+        },
         "qualifications": {
-          "value": "行政書士・不動產交易士・社會保險勞務士",
-          "label": "資質"
+          "label": "資質",
+          "value": "行政書士・不動產交易士"
         }
       },
-      "ctaDescription": "補助金・助成金、簽證申請、公司設立等，歡迎隨時諮詢。",
       "representativeBio2": "尤其在補助金・助成金申請方面，事業計畫的「表達方式」是獲批的關鍵。運用記者經驗編製有說服力的申請書。此外，憑藉4個國家的海外經驗，在外國人的在留資格・簽證申請方面也具有優勢。",
-      "metaDescription": "四葉行政書士事務所的公司概況與代表介紹。位於文京區小日向的行政書士事務所。",
-      "accessTitle": "交通指南",
-      "mapTitle": "四葉行政書士事務所 所在地",
+      "heroDescription2": "從文京區小日向為您提供法務手續的一站式支援。",
       "representativeBio1": "作為新聞記者在世界各地奔波，曾在4個國家生活。在此過程中培養的資訊收集能力、談判能力以及廣泛的人脈——這些在行政書士的業務中也成為了強大的武器。",
-      "officeInfoTitle": "事務所資訊",
       "representativeTitle": "代表行政書士 浦松 丈二",
-      "heroDescription1": "四葉行政書士事務所的事務所資訊與代表介紹。",
+      "ctaDescription": "補助金・助成金、簽證申請、公司設立等，歡迎隨時諮詢。",
       "officeInfo": [
         {
           "label": "營運總部",
@@ -529,7 +630,7 @@
         },
         {
           "label": "所在地",
-          "value": "〒112-0006\n東京都文京區小日向4丁目2−5 小日向安田ビル 2F"
+          "value": "〒112-0006\n東京都文京區小日向４丁目２−５ 小日向安田ビル２０３"
         },
         {
           "label": "電話號碼",
@@ -537,50 +638,284 @@
         },
         {
           "label": "營業時間",
-          "value": "9:00〜18:00（工作日及週末）"
+          "value": "10:00〜18:00（定休日：每周二、周三）"
         },
         {
-          "label": "對應語言",
-          "value": "日語・英語・中文（繁體/簡體）"
+          "value": "日語・英語・中文（繁體/簡體）",
+          "label": "對應語言"
         },
         {
-          "value": "補助金・助成金申請、在留資格・簽證申請、\n公司設立、各類許可證、繼承・遺囑・信託支援",
-          "label": "業務內容"
+          "label": "業務內容",
+          "value": "補助金・助成金申請、在留資格・簽證申請、\n公司設立、各類許可證、繼承・遺囑・信託支援"
         },
         {
-          "value": "四葉不動産株式會社（許可證號：東京都知事（1）第113304號）\n四葉社會保險勞務士法人（浦松丈二　第202500525號）",
+          "value": "四葉不動産株式會社（許可證號：東京都知事（1）第113304號）",
           "label": "集團業務"
         }
-      ],
-      "heroDescription2": "從文京區小日向為您提供法務手續的一站式支援。"
-    }
+      ]
+    },
+    "footerDescription1": "透過不動產與法務的聯動，"
   },
   "languages": {
     "zh": "简体",
-    "nativeEn": "English",
-    "nativeZh": "简体中文",
-    "ja": "日本語",
-    "nativeJa": "日本語",
     "zh-tw": "繁體",
+    "nativeJa": "日本語",
+    "nativeEn": "English",
     "en": "EN",
-    "nativeZhTw": "繁體中文"
+    "nativeZhTw": "繁體中文",
+    "ja": "日本語",
+    "nativeZh": "简体中文"
   },
-  "representative": {
-    "qualificationsLabor": "社會保險勞務士・行政書士・不動產交易士",
-    "qualificationsRealestate": "不動產交易士・行政書士・社會保險勞務士",
-    "previousJob": "新聞記者",
-    "nameEn": "Joji Uramatsu",
-    "name": "浦松 丈二",
-    "qualificationsLegal": "行政書士・不動產交易士・社會保險勞務士",
-    "overseasExperience": "4個國家的駐外經驗",
-    "languages": "日・英・中(繁體/簡體)"
+  "breadcrumbs": {
+    "contact": "聯絡我們",
+    "column": "專欄",
+    "home": "首頁",
+    "legalNotice": "基於不動產交易業法的標註",
+    "services": "服務內容",
+    "officeAbout": "事務所概況",
+    "about": "公司概況"
+  },
+  "labor": {
+    "footerNav": {
+      "office": {
+        "column": "專欄",
+        "title": "事務所資訊",
+        "about": "事務所概況"
+      },
+      "other": {
+        "title": "其他",
+        "contact": "聯絡我們"
+      },
+      "services": {
+        "title": "服務內容",
+        "subsidy": "助成金申請",
+        "socialInsurance": "社會保險・勞動保險",
+        "payroll": "薪資核算",
+        "rules": "就業規則編製"
+      }
+    },
+    "legalName": "四葉社會保險勞務士法人",
+    "columnDetail": {
+      "authorName": "浦松 丈二",
+      "authorTitle": "四葉社會保險勞務士法人"
+    },
+    "footerDescription1": "為您提供社會保險・勞務管理・",
+    "aboutPage": {
+      "representativeTitle": "浦松 丈二",
+      "ctaDescription": "社會保險、就業規則、助成金等，歡迎隨時諮詢。",
+      "representativeBio1": "企業經營中最重要的是「人」。打造讓員工安心工作的環境，才能支撐事業的成長。憑藉作為新聞記者培養的調查能力與談判能力，致力於解決企業的人事・勞務課題。",
+      "title": "事務所概況",
+      "officeInfo": [
+        {
+          "value": "四葉パートナーズ（代表・浦松丈二）",
+          "label": "營運總部"
+        },
+        {
+          "value": "四葉社會保險勞務士法人（籌備中）",
+          "label": "名稱"
+        },
+        {
+          "value": "浦松 丈二",
+          "label": "代表"
+        },
+        {
+          "value": "浦松丈二　第202500525號\n（令和7年10月1日合格）",
+          "label": "社會保險勞務士"
+        },
+        {
+          "label": "所在地",
+          "value": "〒112-0006\n東京都文京區小日向4丁目2−5 小日向安田ビル 2F"
+        },
+        {
+          "value": "03-6161-9428",
+          "label": "電話號碼"
+        },
+        {
+          "label": "營業時間",
+          "value": "9:00〜18:00（工作日及週末）"
+        },
+        {
+          "label": "業務內容",
+          "value": "社會保險・勞動保險手續、助成金申請、\n就業規則編製、薪資核算、勞務諮詢"
+        },
+        {
+          "value": "法人化正在籌備中。目前作為四葉パートナーズ提供服務。",
+          "label": "備註"
+        },
+        {
+          "value": "四葉不動産株式會社（許可證號：東京都知事（1）第113304號）\n四葉行政書士事務所（代表行政書士 浦松丈二　登記號：第25087022號）",
+          "label": "集團業務"
+        }
+      ],
+      "representativeBio2": "社會保險勞務士法人目前正在籌備設立中，但作為四葉パートナーズ，我們已在受理社會保險・勞務相關諮詢。與行政書士事務所・不動產聯動，也在積極支援外國人僱用。",
+      "highlights": {
+        "previousJob": {
+          "label": "前職業",
+          "value": "新聞記者"
+        },
+        "status": {
+          "value": "法人化 籌備中",
+          "label": "狀態"
+        },
+        "overseas": {
+          "label": "海外經驗",
+          "value": "5個國家的駐外經驗"
+        },
+        "qualifications": {
+          "label": "資質",
+          "value": "社會保險勞務士・行政書士・不動產交易士"
+        }
+      },
+      "metaDescription": "四葉社會保險勞務士法人（籌備中）的事務所概況與代表介紹。",
+      "heroDescription2": "為企業的人事・勞務提供全方位支援。",
+      "heroDescription1": "四葉社會保險勞務士法人的事務所資訊與代表介紹。",
+      "officeInfoTitle": "事務所資訊"
+    },
+    "tagline": "解決企業與「人」相關的一切困擾。",
+    "homePage": {
+      "oneStopDescription2": "不讓客戶的困擾被推來推去。",
+      "ctaDescription": "社會保險、就業規則、助成金等，歡迎隨時諮詢。",
+      "oneStopDescription1": "不動產・行政書士・社會保險勞務士聯動。",
+      "faq": [
+        {
+          "question": "委託社會保險勞務士有什麼優勢？",
+          "answer": "準確代辦社會保險・勞動保險手續、就業規則的編製與修訂、助成金申請等人事・勞務的專業業務。減輕經營者的負擔，確保法規合規。"
+        },
+        {
+          "answer": "是的，我們支援外國人員工的社會保險手續和勞務管理。透過集團行政書士事務所（在留資格）・不動產（員工宿舍搜尋）的聯動，從招聘到定著提供一站式支援。",
+          "question": "也能諮詢外國人員工的僱用問題嗎？"
+        },
+        {
+          "answer": "是的，我們支援職業提升助成金、兩立支援等助成金等企業可用的各類助成金申請。與行政書士事務所聯動，補助金也能覆蓋。",
+          "question": "也能幫忙申請助成金嗎？"
+        }
+      ],
+      "representativeTitle": "社會保險勞務士　第202500525號",
+      "representativeBio1": "企業經營中最重要的是「人」。打造讓員工安心工作的環境，才能支撐事業的成長。從社會保險・勞動保險手續到就業規則的完善、助成金的活用，全面支援企業的人事・勞務。",
+      "oneStopTitle": "四葉集團的獨特優勢",
+      "representativeBio2": "關於外國人員工僱用的諮詢也很多。透過與行政書士事務所（在留資格）・不動產（員工宿舍搜尋）的聯動，從招聘到定著實現一站式支援，這是四葉集團的優勢。",
+      "services": [
+        {
+          "title": "社會保險・勞動保險手續",
+          "description": "入職・離職時的申報、定基届、年度更新等，準確代辦繁瑣的保險手續。減輕經營者的負擔。"
+        },
+        {
+          "title": "助成金申請",
+          "description": "職業提升助成金、兩立支援等助成金等，支援企業可用助成金的申請。與行政書士事務所聯動，補助金也能覆蓋。"
+        },
+        {
+          "title": "就業規則・內部規程編製",
+          "description": "編製與修訂符合公司實際情況的就業規則。持續支援法規修訂的應對。"
+        },
+        {
+          "title": "薪資核算",
+          "description": "準確代辦每月薪資核算。涵蓋社會保險費・所得稅・住民稅的計算到工資明細編製。"
+        },
+        {
+          "title": "勞務諮詢",
+          "description": "員工糾紛、騷擾對策、工作方式改革的應對等，陪伴您解決日常勞務問題。"
+        },
+        {
+          "title": "勞務審計・合規",
+          "description": "應對勞動基準監督署的調查，進行勞務合規的檢查與改善建議。"
+        }
+      ],
+      "servicesTitle": "服務內容",
+      "groupBusinesses": [
+        {
+          "name": "四葉不動産",
+          "description": "租賃・買賣・管理"
+        },
+        {
+          "description": "補助金・助成金・簽證",
+          "name": "四葉行政書士事務所"
+        },
+        {
+          "description": "",
+          "name": "四葉社會保險勞務士法人"
+        }
+      ],
+      "heroDescription2": "為企業與「人」相關的一切困擾提供全方位支援。",
+      "title": "四葉社會保險勞務士法人",
+      "metaDescription": "社會保險・勞動保險手續、就業規則編製、助成金申請、勞務諮詢。四葉パートナーズ的社會保險勞務士法人為企業的人事・勞務提供全方位支援。",
+      "heroDescription1": "從社會保險・勞動保險手續到就業規則、助成金申請、勞務諮詢。"
+    },
+    "columnPage": {
+      "heroDescription2": "以社會保險勞務士的視角通俗易懂地為您呈現。",
+      "heroDescription1": "社會保險・助成金・勞務管理的實用資訊。",
+      "title": "專欄",
+      "metaDescription": "四葉社會保險勞務士法人的專欄。社會保險、助成金、勞務管理等，為您提供人事・勞務相關的實用資訊。"
+    },
+    "name": "四葉社會保險勞務士法人",
+    "footerDescription2": "助成金申請的全方位支援。",
+    "nameEn": "Labor Consultant",
+    "nav": {
+      "services": "服務內容",
+      "about": "事務所概況",
+      "column": "專欄",
+      "contact": "聯絡我們",
+      "home": "首頁"
+    },
+    "meta": {
+      "titleTemplate": "%s | 四葉社會保險勞務士法人",
+      "title": "四葉社會保險勞務士法人 | 社會保險・勞務・助成金",
+      "description": "社會保險・勞動保險手續、就業規則編製、助成金申請、勞務諮詢。四葉パートナーズ的社會保險勞務士法人為企業的人事・勞務提供全方位支援。"
+    },
+    "description": "社會保險・勞務管理・助成金申請"
+  },
+  "contact": {
+    "heroDescription2": "可透過電話・線上預約・表單聯絡我們。",
+    "heroDescription1": "不動產・補助金・簽證・勞務，任何諮詢都歡迎。",
+    "title": "聯絡我們",
+    "methods": {
+      "onlineBooking": {
+        "label": "線上預約",
+        "linkText": "前往SAMURAI預約頁面 →"
+      },
+      "title": "聯絡方式",
+      "location": {
+        "label": "所在地"
+      },
+      "phone": {
+        "label": "電話",
+        "number": "03-6161-9428"
+      },
+      "businessHours": {
+        "value": "10:00〜18:00（定休日：每周二、周三）",
+        "label": "營業時間"
+      }
+    },
+    "metaTitle": "聯絡我們 | 四葉パートナーズ",
+    "form": {
+      "submitting": "發送中...",
+      "error": "發送失敗，請稍後再試。",
+      "categoryOptions": {
+        "placeholder": "請選擇",
+        "subsidy": "補助金・助成金",
+        "visa": "簽證・在留資格",
+        "labor": "社會保險・勞務",
+        "sale": "買賣諮詢",
+        "rental": "租賃諮詢",
+        "other": "其他",
+        "management": "管理諮詢"
+      },
+      "description": "請透過以下表單聯絡我們。我們將在2個工作日內回覆。",
+      "fields": {
+        "name": "姓名",
+        "email": "電子郵件地址",
+        "message": "諮詢詳情",
+        "phone": "電話號碼",
+        "category": "諮詢內容"
+      },
+      "title": "郵件諮詢"
+    },
+    "metaDescription": "聯絡四葉パートナーズ。不動產・行政書士・社會保險勞務士，任何諮詢都歡迎。"
   },
   "terms": {
+    "metaDescription": "四葉パートナーズ的使用條款。",
+    "metaTitle": "使用條款 | 四葉パートナーズ",
+    "title": "使用條款",
     "sections": {
-      "changes": {
-        "content": "本公司可在必要時變更本條款。變更後的條款自在本站發布時起生效。",
-        "title": "第4條（變更）"
-      },
       "disclaimer": {
         "content": "本公司不對本站所載資訊的準確性和完整性做出保證。對於因使用本站而產生的損害，本公司不承擔任何責任。",
         "title": "第3條（免責聲明）"
@@ -597,346 +932,11 @@
       "application": {
         "title": "第1條（適用）",
         "content": "本條款是關於四葉パートナーズ（以下簡稱「本公司」）營運的網站（以下簡稱「本站」）使用條件的規定。"
-      }
-    },
-    "metaDescription": "四葉パートナーズ的使用條款。",
-    "title": "使用條款",
-    "metaTitle": "使用條款 | 四葉パートナーズ"
-  },
-  "thanks": {
-    "metaTitle": "提交成功 | 四葉パートナーズ",
-    "description1": "我們將在2個工作日內回覆。",
-    "metaDescription": "已收到您的諮詢。",
-    "title": "已收到您的諮詢",
-    "description2": "請稍候。"
-  },
-  "common": {
-    "current": "目前",
-    "column": {
-      "emptyTitle": "文章準備中",
-      "emptyDescription": "我們正在準備專欄文章，敬請期待。"
-    },
-    "nextArticle": "下一篇",
-    "nextPage": "下一頁",
-    "learnMore": "了解詳情",
-    "submit": "提交",
-    "prevPage": "上一頁",
-    "backToTop": "返回頂部",
-    "thisPage": "本頁",
-    "prevArticle": "上一篇",
-    "cta": {
-      "contactUs": "聯絡我們",
-      "viewCompanyInfo": "查看公司概況",
-      "consultAboutService": "關於此服務的諮詢",
-      "feelFreeToContact": "歡迎隨時諮詢",
-      "consultFirst": "先來諮詢一下",
-      "viewServices": "查看服務內容"
-    },
-    "readMore": "閱讀更多",
-    "openInGoogleMaps": "在 Google Maps 中開啟",
-    "footer": {
-      "copyright": "四葉パートナーズ All rights reserved.",
-      "samuraiName": "士業ドットコム SAMURAI",
-      "realestateRegistration": "四葉不動産株式會社　許可證號：東京都知事（1）第113304號",
-      "laborRepRegistration": "社會保險勞務士合格 浦松丈二　令和7年10月1日 第202500525號",
-      "legalHeadquartersLine": "營運總部：四葉パートナーズ（總部・東京都文京區、代表・浦松丈二）",
-      "managedServices": "營運服務",
-      "samuraiDescription": "專業士業的預約與媒合平台",
-      "terms": "使用條款",
-      "legalRepRegistration": "四葉行政書士事務所 代表行政書士 浦松丈二　登記號：第25087022號",
-      "realestateRepRegistration": "四葉不動産 代表董事・專任不動產交易士 浦松丈二　不動產交易士登記號：（東京）第293544號",
-      "privacyPolicy": "隱私政策"
-    },
-    "navigation": {
-      "mainNav": "主導航",
-      "closeMenu": "關閉選單",
-      "mobileMenu": "行動端選單",
-      "openMenu": "開啟選單",
-      "showGroupBusinesses": "顯示集團業務"
-    },
-    "contact": "聯絡我們",
-    "thisSite": "本站",
-    "skipToContent": "跳轉到主要內容",
-    "booking": "預約",
-    "onlineBooking": "線上預約",
-    "currentSite": "目前站點"
-  },
-  "labor": {
-    "meta": {
-      "titleTemplate": "%s | 四葉社會保險勞務士法人",
-      "title": "四葉社會保險勞務士法人 | 社會保險・勞務・助成金",
-      "description": "社會保險・勞動保險手續、就業規則編製、助成金申請、勞務諮詢。四葉パートナーズ的社會保險勞務士法人為企業的人事・勞務提供全方位支援。"
-    },
-    "name": "四葉社會保險勞務士法人",
-    "legalName": "四葉社會保險勞務士法人",
-    "nameEn": "Labor Consultant",
-    "description": "社會保險・勞務管理・助成金申請",
-    "nav": {
-      "column": "專欄",
-      "services": "服務內容",
-      "home": "首頁",
-      "about": "事務所概況",
-      "contact": "聯絡我們"
-    },
-    "tagline": "解決企業與「人」相關的一切困擾。",
-    "columnPage": {
-      "metaDescription": "四葉社會保險勞務士法人的專欄。社會保險、助成金、勞務管理等，為您提供人事・勞務相關的實用資訊。",
-      "heroDescription1": "社會保險・助成金・勞務管理的實用資訊。",
-      "title": "專欄",
-      "heroDescription2": "以社會保險勞務士的視角通俗易懂地為您呈現。"
-    },
-    "footerDescription2": "助成金申請的全方位支援。",
-    "aboutPage": {
-      "title": "事務所概況",
-      "officeInfoTitle": "事務所資訊",
-      "representativeTitle": "浦松 丈二",
-      "representativeBio1": "企業經營中最重要的是「人」。打造讓員工安心工作的環境，才能支撐事業的成長。憑藉作為新聞記者培養的調查能力與談判能力，致力於解決企業的人事・勞務課題。",
-      "representativeBio2": "社會保險勞務士法人目前正在籌備設立中，但作為四葉パートナーズ，我們已在受理社會保險・勞務相關諮詢。與行政書士事務所・不動產聯動，也在積極支援外國人僱用。",
-      "metaDescription": "四葉社會保險勞務士法人（籌備中）的事務所概況與代表介紹。",
-      "officeInfo": [
-        {
-          "value": "四葉パートナーズ（代表・浦松丈二）",
-          "label": "營運總部"
-        },
-        {
-          "label": "名稱",
-          "value": "四葉社會保險勞務士法人（籌備中）"
-        },
-        {
-          "value": "浦松 丈二",
-          "label": "代表"
-        },
-        {
-          "label": "社會保險勞務士",
-          "value": "浦松丈二　第202500525號\n（令和7年10月1日合格）"
-        },
-        {
-          "label": "所在地",
-          "value": "〒112-0006\n東京都文京區小日向4丁目2−5 小日向安田ビル 2F"
-        },
-        {
-          "label": "電話號碼",
-          "value": "03-6161-9428"
-        },
-        {
-          "value": "9:00〜18:00（工作日及週末）",
-          "label": "營業時間"
-        },
-        {
-          "value": "社會保險・勞動保險手續、助成金申請、\n就業規則編製、薪資核算、勞務諮詢",
-          "label": "業務內容"
-        },
-        {
-          "label": "備註",
-          "value": "法人化正在籌備中。目前作為四葉パートナーズ提供服務。"
-        },
-        {
-          "value": "四葉不動産株式會社（許可證號：東京都知事（1）第113304號）\n四葉行政書士事務所（代表行政書士 浦松丈二　登記號：第25087022號）",
-          "label": "集團業務"
-        }
-      ],
-      "heroDescription2": "為企業的人事・勞務提供全方位支援。",
-      "heroDescription1": "四葉社會保險勞務士法人的事務所資訊與代表介紹。",
-      "ctaDescription": "社會保險、就業規則、助成金等，歡迎隨時諮詢。",
-      "highlights": {
-        "qualifications": {
-          "label": "資質",
-          "value": "社會保險勞務士・行政書士・不動產交易士"
-        },
-        "status": {
-          "value": "法人化 籌備中",
-          "label": "狀態"
-        },
-        "previousJob": {
-          "value": "新聞記者",
-          "label": "前職業"
-        },
-        "overseas": {
-          "label": "海外經驗",
-          "value": "5個國家的駐外經驗"
-        }
-      }
-    },
-    "homePage": {
-      "representativeBio1": "企業經營中最重要的是「人」。打造讓員工安心工作的環境，才能支撐事業的成長。從社會保險・勞動保險手續到就業規則的完善、助成金的活用，全面支援企業的人事・勞務。",
-      "oneStopTitle": "四葉集團的獨特優勢",
-      "oneStopDescription2": "不讓客戶的困擾被推來推去。",
-      "representativeTitle": "社會保險勞務士　第202500525號",
-      "servicesTitle": "服務內容",
-      "heroDescription1": "從社會保險・勞動保險手續到就業規則、助成金申請、勞務諮詢。",
-      "faq": [
-        {
-          "question": "委託社會保險勞務士有什麼優勢？",
-          "answer": "準確代辦社會保險・勞動保險手續、就業規則的編製與修訂、助成金申請等人事・勞務的專業業務。減輕經營者的負擔，確保法規合規。"
-        },
-        {
-          "answer": "是的，我們支援外國人員工的社會保險手續和勞務管理。透過集團行政書士事務所（在留資格）・不動產（員工宿舍搜尋）的聯動，從招聘到定著提供一站式支援。",
-          "question": "也能諮詢外國人員工的僱用問題嗎？"
-        },
-        {
-          "question": "也能幫忙申請助成金嗎？",
-          "answer": "是的，我們支援職業提升助成金、兩立支援等助成金等企業可用的各類助成金申請。與行政書士事務所聯動，補助金也能覆蓋。"
-        }
-      ],
-      "heroDescription2": "為企業與「人」相關的一切困擾提供全方位支援。",
-      "oneStopDescription1": "不動產・行政書士・社會保險勞務士聯動。",
-      "services": [
-        {
-          "description": "入職・離職時的申報、定基届、年度更新等，準確代辦繁瑣的保險手續。減輕經營者的負擔。",
-          "title": "社會保險・勞動保險手續"
-        },
-        {
-          "description": "職業提升助成金、兩立支援等助成金等，支援企業可用助成金的申請。與行政書士事務所聯動，補助金也能覆蓋。",
-          "title": "助成金申請"
-        },
-        {
-          "description": "編製與修訂符合公司實際情況的就業規則。持續支援法規修訂的應對。",
-          "title": "就業規則・內部規程編製"
-        },
-        {
-          "description": "準確代辦每月薪資核算。涵蓋社會保險費・所得稅・住民稅的計算到工資明細編製。",
-          "title": "薪資核算"
-        },
-        {
-          "title": "勞務諮詢",
-          "description": "員工糾紛、騷擾對策、工作方式改革的應對等，陪伴您解決日常勞務問題。"
-        },
-        {
-          "description": "應對勞動基準監督署的調查，進行勞務合規的檢查與改善建議。",
-          "title": "勞務審計・合規"
-        }
-      ],
-      "title": "四葉社會保險勞務士法人",
-      "groupBusinesses": [
-        {
-          "name": "四葉不動産",
-          "description": "租賃・買賣・管理"
-        },
-        {
-          "description": "補助金・助成金・簽證",
-          "name": "四葉行政書士事務所"
-        },
-        {
-          "name": "四葉社會保險勞務士法人",
-          "description": ""
-        }
-      ],
-      "ctaDescription": "社會保險、就業規則、助成金等，歡迎隨時諮詢。",
-      "metaDescription": "社會保險・勞動保險手續、就業規則編製、助成金申請、勞務諮詢。四葉パートナーズ的社會保險勞務士法人為企業的人事・勞務提供全方位支援。",
-      "representativeBio2": "關於外國人員工僱用的諮詢也很多。透過與行政書士事務所（在留資格）・不動產（員工宿舍搜尋）的聯動，從招聘到定著實現一站式支援，這是四葉集團的優勢。"
-    },
-    "footerDescription1": "為您提供社會保險・勞務管理・",
-    "columnDetail": {
-      "authorName": "浦松 丈二",
-      "authorTitle": "四葉社會保險勞務士法人"
-    },
-    "footerNav": {
-      "services": {
-        "socialInsurance": "社會保險・勞動保險",
-        "payroll": "薪資核算",
-        "title": "服務內容",
-        "subsidy": "助成金申請",
-        "rules": "就業規則編製"
       },
-      "office": {
-        "column": "專欄",
-        "title": "事務所資訊",
-        "about": "事務所概況"
-      },
-      "other": {
-        "contact": "聯絡我們",
-        "title": "其他"
+      "changes": {
+        "content": "本公司可在必要時變更本條款。變更後的條款自在本站發布時起生效。",
+        "title": "第4條（變更）"
       }
     }
-  },
-  "contact": {
-    "methods": {
-      "location": {
-        "label": "所在地"
-      },
-      "title": "聯絡方式",
-      "onlineBooking": {
-        "linkText": "前往SAMURAI預約頁面 →",
-        "label": "線上預約"
-      },
-      "phone": {
-        "number": "03-6161-9428",
-        "label": "電話"
-      },
-      "businessHours": {
-        "value": "10:00〜18:00（定休日：每周二、周三）",
-        "label": "營業時間"
-      }
-    },
-    "metaTitle": "聯絡我們 | 四葉パートナーズ",
-    "heroDescription1": "不動產・補助金・簽證・勞務，任何諮詢都歡迎。",
-    "form": {
-      "submitting": "發送中...",
-      "error": "發送失敗，請稍後再試。",
-      "description": "請透過以下表單聯絡我們。我們將在2個工作日內回覆。",
-      "title": "郵件諮詢",
-      "fields": {
-        "category": "諮詢內容",
-        "email": "電子郵件地址",
-        "message": "諮詢詳情",
-        "phone": "電話號碼",
-        "name": "姓名"
-      },
-      "categoryOptions": {
-        "other": "其他",
-        "rental": "租賃諮詢",
-        "labor": "社會保險・勞務",
-        "visa": "簽證・在留資格",
-        "management": "管理諮詢",
-        "placeholder": "請選擇",
-        "sale": "買賣諮詢",
-        "subsidy": "補助金・助成金"
-      }
-    },
-    "heroDescription2": "可透過電話・線上預約・表單聯絡我們。",
-    "metaDescription": "聯絡四葉パートナーズ。不動產・行政書士・社會保險勞務士，任何諮詢都歡迎。",
-    "title": "聯絡我們"
-  },
-  "brand": {
-    "metaTitle": "四葉パートナーズ",
-    "groupNameEn": "YOTSUBA PARTNERS",
-    "groupDescription": "不動產・行政書士・社會保險勞務士一站式集團。",
-    "metaTitleTemplate": "%s | 四葉パートナーズ",
-    "groupName": "四葉パートナーズ"
-  },
-  "legalNotice": {
-    "metaTitle": "基於不動產交易業法的標註 | 四葉不動産",
-    "title": "基於不動產交易業法的標註",
-    "metaDescription": "四葉不動産株式會社基於不動產交易業法的標註。",
-    "items": [
-      {
-        "value": "四葉不動産株式會社",
-        "label": "商號"
-      },
-      {
-        "value": "浦松 丈二",
-        "label": "代表者"
-      },
-      {
-        "label": "所在地",
-        "value": "〒112-0006 東京都文京區小日向4丁目2−5 小日向安田ビル 2F"
-      },
-      {
-        "label": "許可證號",
-        "value": "東京都知事（1）第113304號"
-      },
-      {
-        "value": "浦松丈二（登記號：（東京）第293544號）",
-        "label": "專任不動產交易士"
-      },
-      {
-        "value": "03-6161-9428",
-        "label": "電話號碼"
-      },
-      {
-        "value": "9:00〜18:00（工作日及週末）",
-        "label": "營業時間"
-      }
-    ]
   }
 }
