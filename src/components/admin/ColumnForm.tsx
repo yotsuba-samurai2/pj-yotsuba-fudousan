@@ -7,6 +7,7 @@ import type {
   ColumnStatus,
 } from "@/lib/firestore/columns";
 import { auth } from "@/lib/firebase";
+import { languages, type LangCode } from "@/config/languages";
 import MarkdownEditor from "./MarkdownEditor";
 import ColumnBody from "@/components/column/ColumnBody";
 
@@ -89,6 +90,9 @@ export default function ColumnForm({
     initialData?.date ?? new Date().toISOString().slice(0, 10),
   );
   const [category, setCategory] = useState(initialData?.category ?? "");
+  const [locales, setLocales] = useState<LangCode[]>(
+    initialData?.locales ?? languages.map((l) => l.code),
+  );
 
   // Japanese content
   const [jaTitle, setJaTitle] = useState(initialData?.title ?? "");
@@ -144,6 +148,12 @@ export default function ColumnForm({
 
   const isLoading = saving || externalLoading;
 
+  const toggleLocale = (code: LangCode) => {
+    setLocales((prev) =>
+      prev.includes(code) ? prev.filter((c) => c !== code) : [...prev, code],
+    );
+  };
+
   // --- Readiness checks ---
   const isJaContentReady =
     jaTitle.trim().length > 0 &&
@@ -178,6 +188,7 @@ export default function ColumnForm({
         slug: slug || toSlug(jaTitle),
         date,
         category,
+        locales,
         title: jaTitle,
         excerpt: jaExcerpt,
         content: jaContent,
@@ -426,6 +437,37 @@ export default function ColumnForm({
             required
             maxLength={150}
           />
+        </div>
+        <div className="mt-4">
+          <div className="mb-1 flex items-center justify-between">
+            <label className="block text-sm font-medium text-text">
+              公開する言語
+            </label>
+            {locales.length === 0 && (
+              <span className="text-xs text-red-500">
+                最低1言語は選択してください
+              </span>
+            )}
+          </div>
+          <div className="flex flex-wrap gap-3">
+            {languages.map((lang) => (
+              <label
+                key={lang.code}
+                className="flex items-center gap-1.5 text-sm text-text"
+              >
+                <input
+                  type="checkbox"
+                  checked={locales.includes(lang.code)}
+                  onChange={() => toggleLocale(lang.code)}
+                  className="h-4 w-4 rounded border-border text-primary focus:ring-primary"
+                />
+                {lang.label}
+              </label>
+            ))}
+          </div>
+          <p className="mt-1 text-xs text-text-muted">
+            チェックした言語の一覧・記事詳細にのみこのコラムが表示されます（未チェックの言語では404）。
+          </p>
         </div>
       </section>
 
@@ -736,7 +778,7 @@ export default function ColumnForm({
         </button>
         <button
           type="submit"
-          disabled={isLoading}
+          disabled={isLoading || locales.length === 0}
           className="relative overflow-hidden rounded-lg px-6 py-2.5 text-sm font-semibold text-text transition-all duration-200 disabled:opacity-50"
         >
           <span

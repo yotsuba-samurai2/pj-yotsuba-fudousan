@@ -7,16 +7,17 @@ import { useTranslation } from "@/hooks/useTranslation";
 import { getLatestLegalColumns, type Column } from "@/lib/columns";
 
 export default function LegalColumnListContent() {
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
   const [columns, setColumns] = useState<Column[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    getLatestLegalColumns(20).then((cols) => {
+    setLoading(true);
+    getLatestLegalColumns(20, locale).then((cols) => {
       setColumns(cols);
       setLoading(false);
     });
-  }, []);
+  }, [locale]);
 
   return (
     <>

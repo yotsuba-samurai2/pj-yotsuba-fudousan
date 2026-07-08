@@ -1,6 +1,7 @@
 import { cache } from "react";
 import { db } from "@/lib/firebase";
 import { collection, query, where, orderBy, limit, getDocs } from "firebase/firestore";
+import type { LangCode } from "@/config/languages";
 
 export type BusinessKey = "realestate" | "legal" | "labor";
 
@@ -20,6 +21,8 @@ export type Column = {
   keywords?: string[];
   faq?: Array<{ question: string; answer: string }>;
   tags?: string[];
+  /** このコラムを公開する言語。未設定＝全言語（後方互換のデフォルト） */
+  locales?: LangCode[];
   translations?: {
     en?: ColumnTranslationLocalized;
     "zh-tw"?: ColumnTranslationLocalized;
@@ -47,7 +50,24 @@ function toColumn(id: string, data: Record<string, unknown>): Column {
 
 // ── Firestore queries (published only) ──
 
-const fetchPublished = cache(async (business: BusinessKey): Promise<Column[]> => {
+/** 現在ロケールの一覧・prev/next用。locales に current locale を含むもののみ（array-contains） */
+const fetchPublished = cache(async (business: BusinessKey, locale: LangCode): Promise<Column[]> => {
+  const q = query(
+    collection(db, COLLECTION),
+    where("business", "==", business),
+    where("status", "==", "published"),
+    where("locales", "array-contains", locale),
+    orderBy("date", "desc"),
+  );
+  const snap = await getDocs(q);
+  return snap.docs.map((d) => toColumn(d.id, d.data()));
+});
+
+/**
+ * 全ロケール横断（localeフィルタ無し）。sitemap.ts と generateStaticParams 専用。
+ * 一覧・詳細ページの表示には使わない（使うと出し分けが効かなくなる）。
+ */
+const fetchAllPublished = cache(async (business: BusinessKey): Promise<Column[]> => {
   const q = query(
     collection(db, COLLECTION),
     where("business", "==", business),
@@ -74,12 +94,12 @@ const fetchPublishedBySlug = cache(async (business: BusinessKey, slug: string): 
 
 // ── Realestate ──
 
-export async function getColumns(): Promise<Column[]> {
-  return fetchPublished("realestate");
+export async function getColumns(locale: LangCode): Promise<Column[]> {
+  return fetchPublished("realestate", locale);
 }
 
-export async function getLatestColumns(n: number): Promise<Column[]> {
-  const cols = await fetchPublished("realestate");
+export async function getLatestColumns(n: number, locale: LangCode): Promise<Column[]> {
+  const cols = await fetchPublished("realestate", locale);
   return cols.slice(0, n);
 }
 
@@ -87,19 +107,24 @@ export async function getColumnBySlug(slug: string): Promise<Column | undefined>
   return fetchPublishedBySlug("realestate", slug);
 }
 
+/** sitemap.ts・generateStaticParams専用（全ロケール横断） */
+export async function getAllColumnsAllLocales(): Promise<Column[]> {
+  return fetchAllPublished("realestate");
+}
+
 export async function getAllSlugs(): Promise<string[]> {
-  const cols = await fetchPublished("realestate");
+  const cols = await fetchAllPublished("realestate");
   return cols.map((c) => c.slug);
 }
 
 // ── Legal ──
 
-export async function getLegalColumns(): Promise<Column[]> {
-  return fetchPublished("legal");
+export async function getLegalColumns(locale: LangCode): Promise<Column[]> {
+  return fetchPublished("legal", locale);
 }
 
-export async function getLatestLegalColumns(n: number): Promise<Column[]> {
-  const cols = await fetchPublished("legal");
+export async function getLatestLegalColumns(n: number, locale: LangCode): Promise<Column[]> {
+  const cols = await fetchPublished("legal", locale);
   return cols.slice(0, n);
 }
 
@@ -107,19 +132,24 @@ export async function getLegalColumnBySlug(slug: string): Promise<Column | undef
   return fetchPublishedBySlug("legal", slug);
 }
 
+/** sitemap.ts・generateStaticParams専用（全ロケール横断） */
+export async function getAllLegalColumnsAllLocales(): Promise<Column[]> {
+  return fetchAllPublished("legal");
+}
+
 export async function getAllLegalSlugs(): Promise<string[]> {
-  const cols = await fetchPublished("legal");
+  const cols = await fetchAllPublished("legal");
   return cols.map((c) => c.slug);
 }
 
 // ── Labor ──
 
-export async function getLaborColumns(): Promise<Column[]> {
-  return fetchPublished("labor");
+export async function getLaborColumns(locale: LangCode): Promise<Column[]> {
+  return fetchPublished("labor", locale);
 }
 
-export async function getLatestLaborColumns(n: number): Promise<Column[]> {
-  const cols = await fetchPublished("labor");
+export async function getLatestLaborColumns(n: number, locale: LangCode): Promise<Column[]> {
+  const cols = await fetchPublished("labor", locale);
   return cols.slice(0, n);
 }
 
@@ -128,13 +158,16 @@ export async function getLaborColumnBySlug(slug: string): Promise<Column | undef
 }
 
 export async function getAllLaborSlugs(): Promise<string[]> {
-  const cols = await fetchPublished("labor");
+  const cols = await fetchAllPublished("labor");
   return cols.map((c) => c.slug);
 }
 
 // ── Locale-aware helper ──
 
-import type { LangCode } from "@/config/languages";
+/** locales 未設定＝全言語許可（後方互換）。設定済みなら現在ロケールを含むかで判定 */
+export function isLocaleAllowed(column: Column, locale: LangCode): boolean {
+  return !column.locales || column.locales.includes(locale);
+}
 
 export function getLocalizedColumn(column: Column, locale: LangCode): Column {
   if (locale === "ja" || !column.translations) return column;

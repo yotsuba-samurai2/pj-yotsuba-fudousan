@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { cookies } from "next/headers";
-import { getLegalColumnBySlug, getLegalColumns, getLocalizedColumn, getAllLegalSlugs } from "@/lib/columns";
+import { getLegalColumnBySlug, getLegalColumns, getLocalizedColumn, getAllLegalSlugs, isLocaleAllowed } from "@/lib/columns";
 import { buildPageMetadata } from "@/lib/seo";
 import { LOCALE_COOKIE, DEFAULT_LOCALE, isValidLocale } from "@/lib/locale";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
@@ -28,6 +28,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const cookieStore = await cookies();
   const lc = cookieStore.get(LOCALE_COOKIE)?.value;
   const locale: LangCode = lc && isValidLocale(lc) ? lc : DEFAULT_LOCALE;
+  if (!isLocaleAllowed(base, locale)) return {};
   const col = getLocalizedColumn(base, locale);
   return buildPageMetadata({
     businessKey: "legal",
@@ -51,9 +52,10 @@ export default async function LegalColumnDetailPage({ params }: Props) {
   const cookieStore = await cookies();
   const lc = cookieStore.get(LOCALE_COOKIE)?.value;
   const locale: LangCode = lc && isValidLocale(lc) ? lc : DEFAULT_LOCALE;
+  if (!isLocaleAllowed(base, locale)) notFound();
   const col = getLocalizedColumn(base, locale);
 
-  const allLegalColumns = await getLegalColumns();
+  const allLegalColumns = await getLegalColumns(locale);
   const sorted = [...allLegalColumns].sort((a, b) => b.date.localeCompare(a.date));
   const idx = sorted.findIndex((c) => c.slug === slug);
   const prev = idx < sorted.length - 1 ? sorted[idx + 1] : null;

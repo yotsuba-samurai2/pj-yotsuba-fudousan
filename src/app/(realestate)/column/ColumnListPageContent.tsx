@@ -8,16 +8,17 @@ import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { getLatestColumns, type Column } from "@/lib/columns";
 
 export default function ColumnListPageContent() {
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
   const [columns, setColumns] = useState<Column[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    getLatestColumns(20).then((cols) => {
+    setLoading(true);
+    getLatestColumns(20, locale).then((cols) => {
       setColumns(cols);
       setLoading(false);
     });
-  }, []);
+  }, [locale]);
 
   return (
     <div>

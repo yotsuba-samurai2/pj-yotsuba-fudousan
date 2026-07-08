@@ -32,6 +32,16 @@
         { "fieldPath": "business", "order": "ASCENDING" },
         { "fieldPath": "slug", "order": "ASCENDING" }
       ]
+    },
+    {
+      "collectionGroup": "columns",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "business", "order": "ASCENDING" },
+        { "fieldPath": "status", "order": "ASCENDING" },
+        { "fieldPath": "locales", "arrayConfig": "CONTAINS" },
+        { "fieldPath": "date", "order": "DESCENDING" }
+      ]
     }
   ],
   "fieldOverrides": []

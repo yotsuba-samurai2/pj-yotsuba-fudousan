@@ -7,16 +7,17 @@ import { useTranslation } from "@/hooks/useTranslation";
 import { getLatestLaborColumns, type Column } from "@/lib/columns";
 
 export function LaborColumnListPageContent() {
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
   const [columns, setColumns] = useState<Column[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    getLatestLaborColumns(20).then((cols) => {
+    setLoading(true);
+    getLatestLaborColumns(20, locale).then((cols) => {
       setColumns(cols);
       setLoading(false);
     });
-  }, []);
+  }, [locale]);
 
   return (
     <>
