@@ -22,14 +22,14 @@ const NAV_HREFS: Record<string, { href: string; key: string }[]> = {
     { href: "/contact", key: "contact" },
   ],
   legal: [
-    // TODO: 社労士法人化後に復活
+    // TODO: 社労士開業（2026年9月）後に復活
     // { href: "/legal", key: "home" },
     { href: "/legal", key: "services" },
     { href: "/legal/about", key: "about" },
     { href: "/legal/column", key: "column" },
     { href: "/contact", key: "contact" },
   ],
-  // TODO: 社労士法人化後に復活
+  // TODO: 社労士開業（2026年9月）後に復活
   // labor: [
   //   { href: "/labor", key: "home" },
   //   { href: "/labor/services", key: "services" },
@@ -91,7 +91,7 @@ const FOOTER_NAV_HREFS: Record<
       items: [{ href: "/contact", key: "contact" }],
     },
   ],
-  // TODO: 社労士法人化後に復活
+  // TODO: 社労士開業（2026年9月）後に復活
   // labor: [
   //   {
   //     sectionKey: "services",

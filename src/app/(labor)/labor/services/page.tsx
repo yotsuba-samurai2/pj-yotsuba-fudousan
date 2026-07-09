@@ -69,7 +69,7 @@ export default function LaborServicesPage() {
       />
       <HowToJsonLd
         name="助成金申請の流れ"
-        description="四葉社会保険労務士法人での助成金申請手続きの流れをご紹介します。"
+        description="四葉社会保険労務士事務所での助成金申請手続きの流れをご紹介します。"
         steps={[
           {
             name: "無料相談・ヒアリング",

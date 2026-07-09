@@ -47,7 +47,7 @@ const BUSINESS_NAMES: Record<string, Record<string, string>> = {
     zh: "四叶行政书士事务所",
   },
   labor: {
-    ja: "四葉社会保険労務士法人",
+    ja: "四葉社会保険労務士事務所",
     en: "Yotsuba Labor & Social Insurance Office",
     "zh-tw": "四葉社會保險勞務士法人",
     zh: "四叶社会保险劳务士法人",

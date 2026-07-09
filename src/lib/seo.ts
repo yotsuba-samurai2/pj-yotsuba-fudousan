@@ -9,7 +9,7 @@ export const SITE_URL = "https://luck428.com";
 export const BUSINESS_URLS: Record<string, string> = {
   realestate: "https://luck428.com",
   legal: "https://luck428.com/legal",
-  // TODO: 社労士法人化後に復活
+  // TODO: 社労士開業（2026年9月）後に復活
   // labor: "https://yotsuba-labor.com",
 };
 
@@ -176,13 +176,13 @@ export const BUSINESS_SEO: Record<string, BusinessSEOConfig> = {
     ogImage: "",
     columnBasePath: "/legal/column",
   },
-  /* TODO: 社労士法人化後に復活
+  /* TODO: 社労士開業（2026年9月）後に復活
   labor: {
     url: "https://yotsuba-labor.com",
-    name: "四葉社会保険労務士法人",
-    legalName: "四葉社会保険労務士法人",
+    name: "四葉社会保険労務士事務所",
+    legalName: "四葉社会保険労務士事務所",
     description:
-      "社会保険・労務管理・助成金申請をトータルサポートする社労士法人。就業規則作成、労使トラブル防止まで。不動産・行政書士と連携し企業の人事・労務をワンストップ支援。",
+      "社会保険・労務管理・助成金申請をトータルサポートする社労士事務所。就業規則作成、労使トラブル防止まで。不動産・行政書士と連携し企業の人事・労務をワンストップ支援。",
     schemaType: "ProfessionalService",
     ogImage: "/yotsuba/labor-square.png",
     columnBasePath: "/labor/column",

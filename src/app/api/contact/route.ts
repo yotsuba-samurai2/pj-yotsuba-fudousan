@@ -12,7 +12,7 @@ const FROM_EMAIL = "noreply@samurai.co.jp";
 const businessLabels: Record<string, string> = {
   realestate: "四葉不動産",
   legal: "四葉行政書士事務所",
-  labor: "四葉社会保険労務士法人",
+  labor: "四葉社会保険労務士事務所",
 };
 
 const categoryLabels: Record<string, string> = {

@@ -172,7 +172,7 @@ export default function LegalPageContent() {
                       {t("common.thisPage")}
                     </p>
                   </div>
-                  {/* TODO: 社労士法人化後に復活
+                  {/* TODO: 社労士開業（2026年9月）後に復活
                   <Link
                     href="/labor"
                     className="rounded-xl border border-border bg-surface p-6 transition-all hover:border-primary/30 hover:shadow-md"

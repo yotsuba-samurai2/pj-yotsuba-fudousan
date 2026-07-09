@@ -13,14 +13,14 @@ export const metadata: Metadata = {
  * グローバル 404 ページ
  *
  * - 不動産ドメイン: 不動産向けの404
- * - 行政書士ドメイン: TODO 社労士法人化後に専用デザイン
+ * - 行政書士ドメイン: TODO 社労士開業（2026年9月）後に専用デザイン
  */
 export default async function NotFound() {
   const h = await headers();
   const host = h.get("host") || "";
   const isLegal = host.includes("luck428gyosei.com");
 
-  // TODO: 行政書士・社労士ドメイン専用の404（社労士法人化後に実装）
+  // TODO: 行政書士・社労士ドメイン専用の404（社労士開業（2026年9月）後に実装）
   const homeHref = isLegal ? "/legal" : "/";
   const siteName = isLegal ? "四葉行政書士事務所" : "四葉不動産";
 

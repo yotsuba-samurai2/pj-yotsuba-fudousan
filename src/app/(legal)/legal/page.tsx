@@ -1,4 +1,4 @@
-/* TODO: 社労士法人化後に復活（統合トップページ）
+/* TODO: 社労士開業（2026年9月）後に復活（統合トップページ）
 import UnifiedTopContent from "./UnifiedTopContent";
 
 export const metadata = buildPageMetadata({
