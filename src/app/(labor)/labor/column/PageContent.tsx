@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { LocaleLink as Link } from "@/components/ui/LocaleLink";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { useTranslation } from "@/hooks/useTranslation";
-import { getLatestLaborColumns, type Column } from "@/lib/columns";
+import { getLatestLaborColumns, getLocalizedColumn, type Column } from "@/lib/columns";
 
 export function LaborColumnListPageContent() {
   const { t, locale } = useTranslation();
@@ -14,7 +14,7 @@ export function LaborColumnListPageContent() {
   useEffect(() => {
     setLoading(true);
     getLatestLaborColumns(20, locale).then((cols) => {
-      setColumns(cols);
+      setColumns(cols.map((c) => getLocalizedColumn(c, locale)));
       setLoading(false);
     });
   }, [locale]);

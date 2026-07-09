@@ -5,7 +5,7 @@ import { LocaleLink as Link } from "@/components/ui/LocaleLink";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { useTranslation } from "@/hooks/useTranslation";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
-import { getLatestColumns, type Column } from "@/lib/columns";
+import { getLatestColumns, getLocalizedColumn, type Column } from "@/lib/columns";
 
 export default function ColumnListPageContent() {
   const { t, locale } = useTranslation();
@@ -15,7 +15,7 @@ export default function ColumnListPageContent() {
   useEffect(() => {
     setLoading(true);
     getLatestColumns(20, locale).then((cols) => {
-      setColumns(cols);
+      setColumns(cols.map((c) => getLocalizedColumn(c, locale)));
       setLoading(false);
     });
   }, [locale]);
