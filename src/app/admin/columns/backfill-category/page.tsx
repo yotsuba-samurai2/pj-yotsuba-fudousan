@@ -9,7 +9,9 @@ import { getColumns, type FirestoreColumn } from "@/lib/firestore/columns";
  * コラムcategoryの公開表記統一（診断結果に基づく後埋め・2026-07-09）。
  *
  * ① 台湾9本: base.category / translations["zh-tw"].category を
- *    内部クラスタ管理ラベルから公開用の "日本不動產繼承" に統一。
+ *    内部クラスタ管理ラベルから公開用カテゴリに分割統一。
+ *    - 投資2本（taiwan-tokyo-fudosan-toshi・bunkyo-shueki-bukken）→ "日本不動產投資"
+ *    - 残り7本 → "日本不動產繼承"
  * ② overseas-owners-guide-japan-real-estate-sale: translations.{en,zh-tw,zh}.category が
  *    未設定だったため追加（base=ja の "海外オーナー向け" は変更しない）。
  *
@@ -21,18 +23,21 @@ import { getColumns, type FirestoreColumn } from "@/lib/firestore/columns";
  * 現在値と提案値が一致する行は自動スキップ（冪等）。上記フィールド以外は一切変更しない。
  */
 
-const TAIWAN_SLUGS = [
-  "taiwan-souzoku-japan-fudosan",
-  "taiwan-souzoku-baikyaku",
-  "taiwan-souzoku-kanri-katsuyo",
-  "taiwan-jin-souzoku-tetsuzuki",
-  "taiwan-souzoku-guide",
-  "taiwan-tokyo-fudosan-toshi",
-  "bunkyo-shueki-bukken",
-  "taiwan-tetsuzuki-onestop",
-  "taiwan",
-];
-const TAIWAN_CATEGORY = "日本不動產繼承";
+const TAIWAN_INHERITANCE_CATEGORY = "日本不動產繼承";
+const TAIWAN_INVESTMENT_CATEGORY = "日本不動產投資";
+
+const TAIWAN_CATEGORY_BY_SLUG: Record<string, string> = {
+  "taiwan-souzoku-japan-fudosan": TAIWAN_INHERITANCE_CATEGORY,
+  "taiwan-souzoku-baikyaku": TAIWAN_INHERITANCE_CATEGORY,
+  "taiwan-souzoku-kanri-katsuyo": TAIWAN_INHERITANCE_CATEGORY,
+  "taiwan-jin-souzoku-tetsuzuki": TAIWAN_INHERITANCE_CATEGORY,
+  "taiwan-souzoku-guide": TAIWAN_INHERITANCE_CATEGORY,
+  "taiwan-tetsuzuki-onestop": TAIWAN_INHERITANCE_CATEGORY,
+  taiwan: TAIWAN_INHERITANCE_CATEGORY,
+  "taiwan-tokyo-fudosan-toshi": TAIWAN_INVESTMENT_CATEGORY,
+  "bunkyo-shueki-bukken": TAIWAN_INVESTMENT_CATEGORY,
+};
+const TAIWAN_SLUGS = Object.keys(TAIWAN_CATEGORY_BY_SLUG);
 
 const OVERSEAS_SLUG = "overseas-owners-guide-japan-real-estate-sale";
 const OVERSEAS_CATEGORY: Record<"en" | "zh-tw" | "zh", string> = {
@@ -66,15 +71,16 @@ export default function BackfillCategoryPage() {
       for (const slug of TAIWAN_SLUGS) {
         const c = all.find((x) => x.slug === slug) as FirestoreColumn | undefined;
         if (!c) continue;
+        const proposed = TAIWAN_CATEGORY_BY_SLUG[slug];
         const curBase = c.category;
         const curZhTw = c.translations?.["zh-tw"]?.category;
         const allFields: FieldChange[] = [
-          { path: "category", label: "base.category", current: curBase, proposed: TAIWAN_CATEGORY },
+          { path: "category", label: "base.category", current: curBase, proposed },
           {
             path: "translations.zh-tw.category",
             label: "translations.zh-tw.category",
             current: curZhTw,
-            proposed: TAIWAN_CATEGORY,
+            proposed,
           },
         ];
         built.push({
@@ -134,8 +140,9 @@ export default function BackfillCategoryPage() {
     <div className="p-6">
       <h1 className="mb-1 text-lg font-bold">コラムcategory 後埋め</h1>
       <p className="mb-2 max-w-2xl text-sm text-text-muted">
-        台湾9本のcategoryを「{TAIWAN_CATEGORY}」に統一し、overseas-owners-guide-japan-real-estate-saleの
-        category翻訳（en/zh-tw/zh）を追加します。上記以外のフィールドは一切変更しません。
+        台湾9本のcategoryを「{TAIWAN_INVESTMENT_CATEGORY}」（投資2本）／「{TAIWAN_INHERITANCE_CATEGORY}」（残り7本）に分割統一し、
+        overseas-owners-guide-japan-real-estate-saleのcategory翻訳（en/zh-tw/zh）を追加します。
+        上記以外のフィールドは一切変更しません。
       </p>
       <p className="mb-6 max-w-2xl rounded-lg bg-yellow-50 px-4 py-3 text-xs text-yellow-800">
         現状値と提案値が一致するフィールドは自動スキップされます（再実行しても安全・冪等）。
