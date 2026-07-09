@@ -151,7 +151,7 @@ export default function UnifiedTopContent() {
                     SOCIAL INSURANCE & LABOR
                   </p>
                   <h3 className="mt-1 text-lg font-bold">
-                    四葉社会保険労務士法人
+                    四葉社会保険労務士事務所
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-text-muted">
                     社会保険手続き、就業規則作成、助成金申請、労務相談

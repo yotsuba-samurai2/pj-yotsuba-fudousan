@@ -5,8 +5,8 @@ import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 
 export const metadata = buildPageMetadata({
   businessKey: "labor",
-  title: "お問い合わせ | 四葉社会保険労務士法人",
-  description: "社会保険手続き、助成金活用、就業規則の相談はこちら。電話・フォーム・オンライン予約で対応。文京区の四葉社会保険労務士法人。",
+  title: "お問い合わせ | 四葉社会保険労務士事務所",
+  description: "社会保険手続き、助成金活用、就業規則の相談はこちら。電話・フォーム・オンライン予約で対応。文京区の四葉社会保険労務士事務所。",
   path: "/labor/contact",
 });
 

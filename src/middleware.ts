@@ -39,7 +39,7 @@ const tenants: TenantConfig[] = [
     domains: ["luck428gyosei.com", "www.luck428gyosei.com"],
     subdomains: ["legal"],
   },
-  // TODO: 社労士法人化後に復活
+  // TODO: 社労士開業（2026年9月）後に復活
   // {
   //   pathPrefix: "/labor",
   //   domains: ["yotsuba-labor.com", "www.yotsuba-labor.com"],

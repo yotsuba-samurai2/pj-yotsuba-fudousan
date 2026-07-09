@@ -42,10 +42,10 @@ export const groupBusinesses = [
       { href: "/legal/contact", label: "お問い合わせ" },
     ] as NavItem[],
   },
-  /* TODO: 社労士法人化後に復活
+  /* TODO: 社労士開業（2026年9月）後に復活
   {
     key: "labor",
-    name: "四葉社会保険労務士法人",
+    name: "四葉社会保険労務士事務所",
     nameEn: "Labor Consultant",
     description: "社会保険・労務管理・助成金申請",
     href: "/labor",
@@ -80,7 +80,7 @@ export function getBusinessByHost(
   // localhost開発用: legal.localhost → legal
   const sub = hostname.split(".")[0];
   if (sub === "legal") return groupBusinesses[1];
-  // TODO: 社労士法人化後に復活
+  // TODO: 社労士開業（2026年9月）後に復活
   // if (sub === "labor") return groupBusinesses[2];
 
   // デフォルト: 不動産

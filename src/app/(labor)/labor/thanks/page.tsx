@@ -5,7 +5,7 @@ import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata = buildPageMetadata({
   businessKey: "labor",
-  title: "送信完了 | 四葉社会保険労務士法人",
+  title: "送信完了 | 四葉社会保険労務士事務所",
   description: "お問い合わせを受け付けました。",
   path: "/labor/thanks",
   noindex: true,
