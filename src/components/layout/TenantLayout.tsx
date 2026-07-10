@@ -10,7 +10,7 @@ import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher";
 import { GroupSwitcher } from "@/components/ui/GroupSwitcher";
 import { useTranslation } from "@/hooks/useTranslation";
 import { tenantThemeVars } from "@/lib/tenant-theme";
-import { normalizePath } from "@/lib/cross-links";
+import { normalizePath } from "@/lib/normalize-path"; // cross-links直importはC7文言のクライアント同梱を招くため禁止
 import { MobileStickyBar } from "@/components/shared/MobileStickyBar";
 import { LinkaFab } from "@/components/shared/LinkaFab";
 import type { BusinessKey } from "@/lib/shared/office";

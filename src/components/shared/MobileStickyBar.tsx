@@ -2,12 +2,13 @@
 // md未満のみ表示（md:hidden）。高さ≥56px・各タッチ領域≥44px（DESIGN.md）。
 // LINEのみ主色、他は中立。position:fixed。ページ下部の被り回避に本文側へ pb を足す運用（TenantLayoutShell）。
 import Link from "next/link";
-import { LINE_URL, OFFICE, TENANT, type BusinessKey } from "@/lib/shared/office";
+// ⚠️ office.ts（テナント名・文言入り）はimportしない＝クライアントJSへの社労士名同梱を防ぐ（office-public参照）
+import { CONTACT_HREF, LINE_URL, OFFICE, type BusinessKey } from "@/lib/shared/office-public";
 
 type Props = { businessKey: BusinessKey };
 
 export function MobileStickyBar({ businessKey }: Props) {
-  const t = TENANT[businessKey];
+  const contactHref = CONTACT_HREF[businessKey];
   const item =
     "flex flex-1 flex-col items-center justify-center gap-0.5 text-[11px] font-medium min-h-[56px]";
   return (
@@ -20,7 +21,7 @@ export function MobileStickyBar({ businessKey }: Props) {
         <span aria-hidden>💬</span>
         LINE
       </a>
-      <Link href={t.contactHref} className={`${item} text-text-muted`}>
+      <Link href={contactHref} className={`${item} text-text-muted`}>
         <span aria-hidden>✉️</span>
         お問い合わせ
       </Link>
