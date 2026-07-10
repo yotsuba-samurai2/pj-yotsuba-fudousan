@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 import { Menu, X, CalendarDays } from "lucide-react";
 import { groupBusinesses } from "@/config/group";
 import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { GroupSwitcher } from "@/components/ui/GroupSwitcher";
 import { useTranslation } from "@/hooks/useTranslation";
 import { tenantThemeVars } from "@/lib/tenant-theme";
@@ -19,7 +20,8 @@ type NavItem = { href: string; label: string };
 type FooterSection = { title: string; links: NavItem[] };
 
 /** テナントごとのナビ href 定義（言語に依存しない） */
-const NAV_HREFS: Record<string, { href: string; key: string }[]> = {
+// labels＝コード内直書きラベル（4ロケール）。指定時はFirestore t() より優先（新キーをFirestoreに増やさない運用）
+const NAV_HREFS: Record<string, { href: string; key: string; labels?: Record<string, string> }[]> = {
   realestate: [
     { href: "/services", key: "services" },
     { href: "/about", key: "about" },
@@ -29,7 +31,8 @@ const NAV_HREFS: Record<string, { href: string; key: string }[]> = {
   legal: [
     // TODO: 社労士開業（2026年9月）後に復活
     // { href: "/legal", key: "home" },
-    // 2026-07-10浦松指示：ヘッダー1番目=報酬額表へ（ラベルはFirestore legal.nav.services を「報酬額表」系に変更）
+    // 2026-07-10浦松指示：①1番目=障害福祉（主力業務への直行） ②2番目=報酬額表（ラベルはFirestore legal.nav.services）
+    { href: "/legal/services/shogai-fukushi", key: "shogaiFukushi", labels: { ja: "障害福祉", en: "Disability Welfare", "zh-tw": "障礙福祉", zh: "残障福祉" } },
     { href: "/legal/ryokin", key: "services" },
     { href: "/legal/about", key: "about" },
     { href: "/legal/column", key: "column" },
@@ -126,6 +129,7 @@ function TenantHeader({ businessKey }: { businessKey: string }) {
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
   const { t } = useTranslation();
+  const { locale } = useLanguage();
 
   const biz = groupBusinesses.find((b) => b.key === businessKey)!;
 
@@ -133,9 +137,9 @@ function TenantHeader({ businessKey }: { businessKey: string }) {
     const hrefs = NAV_HREFS[businessKey] ?? [];
     return hrefs.map((h) => ({
       href: h.href,
-      label: t(`${businessKey}.nav.${h.key}`),
+      label: h.labels?.[locale] ?? h.labels?.ja ?? t(`${businessKey}.nav.${h.key}`),
     }));
-  }, [businessKey, t]);
+  }, [businessKey, t, locale]);
 
   const navItems = allNav.filter((n) => n.href !== "/contact");
   const contactItem = allNav.find((n) => n.href === "/contact");
