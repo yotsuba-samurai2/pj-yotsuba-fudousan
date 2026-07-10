@@ -1,0 +1,42 @@
+// CrossLinkBanner — 事業間クロスリンクのバナー（導入文＋相手先事業"色"カード＋独立受任注記）
+// 相手先事業の色は現ページの --color-primary ではなく、相手事業のブランド色 var(--brand-<business>) を使う
+// ＝「別の事務所へ移動する」ことが視覚的に分かる（ページ割v2 §3-2・業法分離の明示）。
+// バナーはHTMLテキストのカード（アンカーテキストがクローラ・LLMに読める）。
+// 使い方（各ページ・server component）：
+//   const links = getCrossLinks("/legal/services/visa", SR_LAUNCHED);
+//   {links.map((c) => <CrossLinkBanner key={c.id} link={c} />)}
+import Link from "next/link";
+import { INDEPENDENT_NOTE, INDEPENDENT_NOTE_TRIPLE, involvesLabor, type CrossLink } from "@/lib/cross-links";
+import { brandVar, brandTintVar } from "@/lib/tenant-theme";
+
+type Props = {
+  link: CrossLink;
+  /** 導入文（分担説明のトーン・宣伝コピーにしない。ページ側で文脈に合わせて上書き可） */
+  lead?: string;
+};
+
+export function CrossLinkBanner({ link, lead = "あわせて、四葉グループの関連サービスもご覧いただけます。" }: Props) {
+  const note = involvesLabor(link) ? INDEPENDENT_NOTE_TRIPLE : INDEPENDENT_NOTE;
+  return (
+    <aside aria-label="関連サービス" className="mx-auto my-6 max-w-3xl px-4">
+      <div className="rounded-2xl border border-border bg-surface p-4">
+        <p className="text-sm text-text-muted">{lead}</p>
+        <div className="mt-3 grid gap-2 sm:grid-cols-2">
+          {link.targets.map((t) => (
+            <Link
+              key={t.href}
+              href={t.href}
+              className="block rounded-xl border-l-4 bg-surface p-3 transition-shadow hover:shadow-sm"
+              style={{ borderLeftColor: brandVar(t.business), background: brandTintVar(t.business) }}
+            >
+              <span className="text-sm font-medium text-ink underline decoration-transparent underline-offset-2">
+                {t.anchor}
+              </span>
+            </Link>
+          ))}
+        </div>
+        <p className="mt-3 text-xs text-text-muted">{note}</p>
+      </div>
+    </aside>
+  );
+}

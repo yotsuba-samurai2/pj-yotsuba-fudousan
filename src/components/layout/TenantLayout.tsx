@@ -9,6 +9,11 @@ import { groupBusinesses } from "@/config/group";
 import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher";
 import { GroupSwitcher } from "@/components/ui/GroupSwitcher";
 import { useTranslation } from "@/hooks/useTranslation";
+import { tenantThemeVars } from "@/lib/tenant-theme";
+import { normalizePath } from "@/lib/cross-links";
+import { MobileStickyBar } from "@/components/shared/MobileStickyBar";
+import { LinkaFab } from "@/components/shared/LinkaFab";
+import type { BusinessKey } from "@/lib/shared/office";
 
 type NavItem = { href: string; label: string };
 type FooterSection = { title: string; links: NavItem[] };
@@ -29,14 +34,13 @@ const NAV_HREFS: Record<string, { href: string; key: string }[]> = {
     { href: "/legal/column", key: "column" },
     { href: "/contact", key: "contact" },
   ],
-  // TODO: 社労士開業（2026年9月）後に復活
-  // labor: [
-  //   { href: "/labor", key: "home" },
-  //   { href: "/labor/services", key: "services" },
-  //   { href: "/labor/about", key: "about" },
-  //   { href: "/labor/column", key: "column" },
-  //   { href: "/contact", key: "contact" },
-  // ],
+  // 社労士：ページ自体が SR_LAUNCHED=false の間は404（(labor)/layout.tsx）＝ここは labor ページ表示時のみ使われる
+  labor: [
+    { href: "/labor/services", key: "services" },
+    { href: "/labor/about", key: "about" },
+    { href: "/labor/column", key: "column" },
+    { href: "/contact", key: "contact" },
+  ],
 };
 
 /** テナントごとのフッターナビ href 定義 */
@@ -91,29 +95,29 @@ const FOOTER_NAV_HREFS: Record<
       items: [{ href: "/contact", key: "contact" }],
     },
   ],
-  // TODO: 社労士開業（2026年9月）後に復活
-  // labor: [
-  //   {
-  //     sectionKey: "services",
-  //     items: [
-  //       { href: "/labor/services", key: "socialInsurance" },
-  //       { href: "/labor/services", key: "subsidy" },
-  //       { href: "/labor/services", key: "rules" },
-  //       { href: "/labor/services", key: "payroll" },
-  //     ],
-  //   },
-  //   {
-  //     sectionKey: "office",
-  //     items: [
-  //       { href: "/labor/about", key: "about" },
-  //       { href: "/labor/column", key: "column" },
-  //     ],
-  //   },
-  //   {
-  //     sectionKey: "other",
-  //     items: [{ href: "/contact", key: "contact" }],
-  //   },
-  // ],
+  // 社労士：ページ自体が SR_LAUNCHED=false の間は404＝laborページ表示時のみ使われる
+  labor: [
+    {
+      sectionKey: "services",
+      items: [
+        { href: "/labor/services", key: "socialInsurance" },
+        { href: "/labor/services", key: "subsidy" },
+        { href: "/labor/services", key: "rules" },
+        { href: "/labor/services", key: "payroll" },
+      ],
+    },
+    {
+      sectionKey: "office",
+      items: [
+        { href: "/labor/about", key: "about" },
+        { href: "/labor/column", key: "column" },
+      ],
+    },
+    {
+      sectionKey: "other",
+      items: [{ href: "/contact", key: "contact" }],
+    },
+  ],
 };
 
 function TenantHeader({ businessKey }: { businessKey: string }) {
@@ -478,6 +482,11 @@ function TenantFooter({ businessKey }: { businessKey: string }) {
               );
             })}
           </div>
+          {/* 独立受任注記（業法分離・紹介料なし＝ページ割v2 §3-3。翻訳キー未投入時は日本語で表示） */}
+          <p className="mt-4 text-center text-[10px] leading-relaxed text-text-muted">
+            {t("common.footer.independentNote") ||
+              "※各事業は別の事業体として独立してご依頼をお受けします（紹介料等の授受はありません）。"}
+          </p>
         </div>
       </div>
 
@@ -563,16 +572,24 @@ export function TenantLayoutShell({
   businessKey,
   children,
 }: {
-  businessKey: string;
+  businessKey: BusinessKey;
   children: React.ReactNode;
 }) {
+  const pathname = usePathname();
+  // 【1ページ1LINKA】不動産トップ（各locale含む）は本文の60秒診断がLINKA＝FABを出さない
+  const isRealestateTop =
+    businessKey === "realestate" && normalizePath(pathname ?? "/") === "/";
   return (
-    <>
+    // A-2: テナント主色を route group 単位で --color-primary に割当（fixed子要素にも継承）
+    <div style={tenantThemeVars(businessKey)}>
       <TenantHeader businessKey={businessKey} />
-      <main id="main-content" className="relative z-[1]">
+      {/* pb: SPの固定バー（MobileStickyBar）に本文が隠れないための余白 */}
+      <main id="main-content" className="relative z-[1] pb-[64px] md:pb-0">
         {children}
       </main>
       <TenantFooter businessKey={businessKey} />
-    </>
+      <MobileStickyBar businessKey={businessKey} />
+      <LinkaFab businessKey={businessKey} suppressed={isRealestateTop} />
+    </div>
   );
 }

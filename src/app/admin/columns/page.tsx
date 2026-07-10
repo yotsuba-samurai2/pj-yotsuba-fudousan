@@ -17,9 +17,9 @@ const businessLabels: Record<string, string> = {
 };
 
 const businessColors: Record<string, string> = {
-  realestate: "bg-primary/10 text-primary",
-  legal: "bg-accent/20 text-accent-dark",
-  labor: "bg-secondary/20 text-text",
+  realestate: "bg-[var(--brand-realestate-tint)] text-[color:var(--brand-realestate)]",
+  legal: "bg-[var(--brand-legal-tint)] text-[color:var(--brand-legal)]",
+  labor: "bg-[var(--brand-labor-tint)] text-[color:var(--brand-labor)]",
 };
 
 const statusLabels: Record<ColumnStatus, string> = {

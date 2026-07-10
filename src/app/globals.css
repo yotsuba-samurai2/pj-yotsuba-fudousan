@@ -11,7 +11,7 @@ html {
   }
 }
 
-/* ─── CTA button: gradient border + gradient text ─── */
+/* ─── CTA button: primary outline + primary text（A-1単色化・DESIGN.md Secondary） ─── */
 .cta-gradient-outline {
   position: relative;
   isolation: isolate;
@@ -25,13 +25,8 @@ html {
   inset: 0;
   z-index: -1;
   border-radius: inherit;
-  padding: 2px;
-  background: linear-gradient(
-    to bottom right,
-    var(--color-primary) 0%,
-    var(--color-secondary) 50%,
-    var(--color-accent) 100%
-  );
+  padding: 1.5px;
+  background: var(--color-primary);
   -webkit-mask:
     linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
@@ -57,39 +52,22 @@ html {
 .cta-gradient-text {
   position: relative;
   z-index: 1;
-  background: linear-gradient(
-    to bottom right,
-    var(--color-primary) 0%,
-    var(--color-secondary) 50%,
-    var(--color-accent) 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: var(--color-primary);
   transition: color 0.3s ease;
 }
 
-/* ─── Gradient line ─── */
+/* ─── Primary line（旧gradient-line・単色） ─── */
 .gradient-line {
-  background: linear-gradient(
-    to bottom right,
-    var(--color-primary) 0%,
-    var(--color-secondary) 50%,
-    var(--color-accent) 100%
-  );
+  background: var(--color-primary);
 }
 
-/* ─── Gradient button (70% opacity) ─── */
+/* ─── Primary button（旧gradient-btn・単色塗り＋白文字） ─── */
 .gradient-btn {
-  background: linear-gradient(
-    to bottom right,
-    color-mix(in srgb, var(--color-primary) 70%, transparent) 0%,
-    color-mix(in srgb, var(--color-secondary) 70%, transparent) 50%,
-    color-mix(in srgb, var(--color-accent) 70%, transparent) 100%
-  );
+  background: var(--color-primary);
+  color: #ffffff;
 }
 
-/* ─── Gradient border ─── */
+/* ─── Primary border（旧gradient-border・1px主色枠） ─── */
 .gradient-border {
   position: relative;
   isolation: isolate;
@@ -101,12 +79,7 @@ html {
   z-index: -1;
   border-radius: inherit;
   padding: 1px;
-  background: linear-gradient(
-    to bottom right,
-    var(--color-primary) 0%,
-    var(--color-secondary) 50%,
-    var(--color-accent) 100%
-  );
+  background: var(--color-primary);
   -webkit-mask:
     linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
@@ -117,93 +90,45 @@ html {
   mask-composite: exclude;
 }
 
-/* ─── Form input gradient border ─── */
+/* ─── Form input focus border（単色主色） ─── */
 .gradient-border-input {
   border: 2px solid var(--color-border);
   border-radius: 0.5rem;
   transition: border-color 0.3s ease;
 }
 .gradient-border-input:focus {
-  border-color: transparent;
-  background-image:
-    linear-gradient(var(--color-surface), var(--color-surface)),
-    linear-gradient(
-      to bottom right,
-      var(--color-primary) 0%,
-      var(--color-secondary) 50%,
-      var(--color-accent) 100%
-    );
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
+  border-color: var(--color-primary);
+  outline: 2px solid var(--color-focus);
+  outline-offset: 1px;
 }
 
-/* ─── Header scrolled border ─── */
+/* ─── Header scrolled border（中立ボーダー） ─── */
 .header-border-gradient {
-  border-bottom: 1px solid transparent;
-  border-image: linear-gradient(
-      to bottom right,
-      var(--color-primary) 0%,
-      var(--color-secondary) 50%,
-      var(--color-accent) 100%
-    )
-    1;
+  border-bottom: 1px solid var(--color-border);
 }
 
-/* ─── Header nav link hover & active ─── */
+/* ─── Header nav link hover & active（主色文字） ─── */
 .header-nav-link {
   transition: all 0.2s ease;
 }
 .header-nav-link:hover,
 .header-nav-active {
-  background: linear-gradient(
-    to bottom right,
-    var(--color-primary) 0%,
-    var(--color-secondary) 50%,
-    var(--color-accent) 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  background: none;
+  color: var(--color-primary);
 }
 
-/* ─── Footer link hover ─── */
+/* ─── Footer link hover（主色文字） ─── */
 .footer-link-text {
   transition: all 0.2s ease;
 }
 .group:hover .footer-link-text,
 .group\/legal:hover .footer-link-text {
-  background: linear-gradient(
-    to bottom right,
-    var(--color-primary) 0%,
-    var(--color-secondary) 50%,
-    var(--color-accent) 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  background: none;
+  color: var(--color-primary);
   font-weight: 500;
 }
 
-/* ─── Hero animations ─── */
-@keyframes gradientSweep {
-  0% {
-    background-position: 100% 0;
-  }
-  100% {
-    background-position: 0% 0;
-  }
-}
-
-@keyframes heroFloat {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-12px);
-  }
-}
-
+/* ─── Hero animations（過剰アニメ削減：float削除・fade-in/scrollは温存） ─── */
 @keyframes heroFadeIn {
   from {
     opacity: 0;
@@ -223,10 +148,6 @@ html {
   50% {
     transform: translateX(-50%) translateY(8px);
   }
-}
-
-.hero-float {
-  animation: heroFloat 6s ease-in-out infinite;
 }
 
 .hero-fade-in {
@@ -249,19 +170,12 @@ html {
   animation: scrollBounce 2s infinite;
 }
 
-/* ─── Green gradient background (for sections) ─── */
+/* ─── Section background（旧bg-green-gradient・生成り単色） ─── */
 .bg-green-gradient {
-  background: linear-gradient(
-    135deg,
-    #e6f2eb 0%,
-    #eff7e8 30%,
-    #f5f9f2 55%,
-    #faf5f8 80%,
-    #ffffff 100%
-  );
+  background: var(--color-bg);
 }
 
-/* ─── Left accent border ─── */
+/* ─── Left accent border（単色主色） ─── */
 .gradient-left-border {
   position: relative;
 }
@@ -273,28 +187,39 @@ html {
   bottom: 0;
   width: 3px;
   border-radius: 9999px;
-  background: linear-gradient(
-    to bottom,
-    var(--color-primary),
-    var(--color-accent)
-  );
+  background: var(--color-primary);
 }
 
 @theme {
-  /* Brand — ロゴ3色：翠 → 黄緑 → ピンク */
-  --color-primary: #006838;
-  --color-primary-dark: #005530;
-  --color-secondary: #8dc21f;
-  --color-accent: #e8a0bf;
-  --color-accent-dark: #d4899b;
+  /* テナント主色（DESIGN.md §2.2・route group で --color-primary に割当＝A-2） */
+  --brand-realestate: #07913a;
+  --brand-realestate-dark: #067a31;
+  --brand-realestate-tint: #e8f5ec;
+  --brand-legal: #1f3a5f;
+  --brand-legal-dark: #16304a;
+  --brand-legal-tint: #e9edf3;
+  --brand-labor: #167c6b;
+  --brand-labor-dark: #0f6153;
+  --brand-labor-tint: #e6f1ee; /* 開業まで生成対象外・定義のみ */
 
-  /* Neutral */
+  /* 既定＝不動産（各 group layout で上書き＝A-2） */
+  --color-primary: var(--brand-realestate);
+  --color-primary-dark: var(--brand-realestate-dark);
+  --color-primary-tint: var(--brand-realestate-tint);
+
+  /* ニュートラル（DESIGN.md） */
+  --color-ink: #1a1a1a;
+  --color-text: #1a1a1a;
+  --color-text-muted: #5a5e58;
+  --color-border: #e4e5e1;
   --color-surface: #ffffff;
-  --color-surface-dim: #f8f9f7;
-  --color-text: #243d2a;
-  --color-text-muted: #6b7280;
-  --color-border: #e5e7eb;
+  --color-bg: #faf9f6; /* 生成り */
+  --color-surface-dim: #faf9f6; /* 旧トークンの互換エイリアス（既存57箇所が参照・値は生成りへ統一） */
+  --color-accent-gold: #c9a227; /* 1画面1箇所まで */
+  --color-danger: #c0392b;
+  --color-focus: color-mix(in srgb, var(--color-primary) 40%, transparent);
 
-  /* Font */
-  --font-sans: var(--font-zen-kaku-gothic-new), sans-serif;
+  /* タイポ：見出し Noto Serif JP／本文 Noto Sans JP（Zen Kaku はフォールバック） */
+  --font-serif: var(--font-noto-serif-jp), serif;
+  --font-sans: var(--font-noto-sans-jp), var(--font-zen-kaku-gothic-new), sans-serif;
 }

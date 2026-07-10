@@ -42,28 +42,33 @@ export const groupBusinesses = [
       { href: "/legal/contact", label: "お問い合わせ" },
     ] as NavItem[],
   },
-  /* TODO: 社労士開業（2026年9月）後に復活
-  {
-    key: "labor",
-    name: "四葉社会保険労務士事務所",
-    nameEn: "Labor Consultant",
-    description: "社会保険・労務管理・助成金申請",
-    href: "/labor",
-    pathPrefix: "/labor",
-    domains: ["yotsuba-labor.com", "www.yotsuba-labor.com"],
-    external: false,
-    logo: {
-      square: "/yotsuba/labor-square.png",
-      horizontal: "/yotsuba/labor-horizontal.png",
-    },
-    nav: [
-      { href: "/labor", label: "サービス" },
-      { href: "/labor/about", label: "事務所概要" },
-      { href: "/labor/column", label: "コラム" },
-      { href: "/labor/contact", label: "お問い合わせ" },
-    ] as NavItem[],
-  },
-  */
+  // 社労士：SR_LAUNCHED=true（開業日・2026年9月）まで配列に含めない
+  // ＝ヘッダーGroupSwitcher・フッターのグループ事業グリッド等へ一切露出しない（社労士法27条対策）。
+  // /labor維持（2026-07-09浦松決定）・旧yotsuba-labor.comドメインは使わない（domains空）。
+  ...(process.env.NEXT_PUBLIC_SR_LAUNCHED === "true"
+    ? [
+        {
+          key: "labor",
+          name: "四葉社会保険労務士事務所",
+          nameEn: "Labor and Social Security Attorney",
+          description: "障害福祉・介護の労務、処遇改善加算、雇用助成金",
+          href: "/labor",
+          pathPrefix: "/labor",
+          domains: [] as string[],
+          external: false,
+          logo: {
+            square: "/yotsuba/labor-square.png",
+            horizontal: "/yotsuba/labor-horizontal.png",
+          },
+          nav: [
+            { href: "/labor/services", label: "サービス" },
+            { href: "/labor/about", label: "事務所概要" },
+            { href: "/labor/column", label: "コラム" },
+            { href: "/labor/contact", label: "お問い合わせ" },
+          ] as NavItem[],
+        },
+      ]
+    : []),
 ];
 
 /** ホスト名からテナントを判定 */

@@ -52,7 +52,7 @@ export default function HomePageContent() {
           <div className="relative z-10 flex w-full flex-col justify-center px-5 pt-24 pb-8 sm:px-10 sm:pt-28 sm:pb-12 md:w-[42%] md:py-0 md:pl-[10%] md:pr-8 lg:pl-[12%] lg:pr-12">
             {/* Subtle BG accent */}
             <div
-              className="pointer-events-none absolute inset-0 bg-gradient-to-br from-primary/[0.03] via-transparent to-accent/[0.03]"
+              className="pointer-events-none absolute inset-0 bg-primary/[0.03]"
               aria-hidden="true"
             />
 
