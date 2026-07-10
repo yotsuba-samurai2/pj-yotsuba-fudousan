@@ -397,8 +397,9 @@ export default async function HomePageContent() {
             className="h-[60vw] max-h-[480px] w-full object-cover sm:h-auto"
             fetchPriority="high"
           />
-          <div className="absolute inset-0 flex items-center">
-            <div className="hero-fade-in m-4 max-w-2xl rounded-2xl bg-white/30 p-5 backdrop-blur-sm sm:m-8 sm:p-7">
+          {/* SP・小タブレット＝画像の下に縦積み（DESIGN.md§8「モバイルのヒーローは縦積み」＝パネルのクリップ/ヘッダーかぶり防止）／md+＝画像上のオーバーレイ */}
+          <div className="md:absolute md:inset-0 md:flex md:items-center">
+            <div className="hero-fade-in bg-surface p-5 md:m-8 md:max-w-2xl md:rounded-2xl md:bg-white/30 md:p-7 md:backdrop-blur-sm">
               <h1 className="font-serif text-2xl font-bold leading-snug text-ink sm:text-3xl">{c.h1}</h1>
               {tagline && (
                 <p className="mt-1.5 text-xs font-medium tracking-wide text-primary-dark sm:text-sm">
