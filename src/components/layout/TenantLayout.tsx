@@ -277,7 +277,8 @@ function TenantHeader({ businessKey }: { businessKey: string }) {
             </Link>
           ))}
         </div>
-        <div className="border-t border-border px-4 py-4">
+        {/* 下部固定バー(64px・z-40)に隠れないよう底上げ（言語切替＋お問い合わせを可視域に） */}
+        <div className="border-t border-border px-4 py-4 pb-[88px]">
           <div className="mb-4 flex justify-center">
             <LanguageSwitcher />
           </div>
