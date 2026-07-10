@@ -1,3 +1,7 @@
+// /（型F・二本柱トップ）＝原稿_不動産 #1（E-1差し戻し対応・2026-07-10・単独PR）
+// 【社名保護】title・H1に「四葉不動産」必須（H1は全ロケール＝HomePageContentのCOPY参照）。
+// GSCベースライン退避済＝_backup/GSCベースライン_E-0_不動産トップ_2026-07-10.md。
+// 本文＝HomePageContent.tsx（ja/en/zh-tw/zh の4ロケール・コード内ロケールマップ＝Firestore書き換えなし）。
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo";
 import { getRequestLocale } from "@/lib/getRequestLocale";
@@ -7,22 +11,13 @@ export async function generateMetadata(): Promise<Metadata> {
   const locale = await getRequestLocale();
   return buildPageMetadata({
     businessKey: "realestate",
-    title: "四葉不動産 | 東京都文京区にある元新聞記者×行政書士の不動産屋",
+    title: "四葉不動産｜文京区の相続不動産と投資・事業用不動産",
     description:
-      "元新聞記者が4カ国での在住経験を活かして立ち上げた、東京都文京区にある不動産屋。賃貸・売買・管理から相続不動産、外国人向け住居サポートまで、多言語（日本語・英語・中国語）対応と専門家ネットワークで住まい探しから契約・法務までワンストップ対応。初回相談は無料、お気軽にどうぞ。",
+      "東京都文京区小日向・茗荷谷駅徒歩5分の四葉不動産株式会社。相続した不動産の管理・活用・売却と、投資用・事業用（グループホーム・社宅）の不動産を扱います。元新聞記者で宅建士・行政書士の代表が、多言語で最初の一歩からお手伝いします。",
     path: "/",
-    absoluteTitle: true,
-    keywords: [
-      "東京 不動産",
-      "東京 賃貸",
-      "東京 売買",
-      "多言語 不動産 日本語 英語 中国語",
-      "外国人 賃貸 東京",
-      "相続不動産",
-      "行政書士 不動産",
-      "四葉不動産",
-    ],
+    keywords: ["四葉不動産", "文京区 相続 不動産", "文京区 不動産会社"],
     locale,
+    absoluteTitle: true,
   });
 }
 

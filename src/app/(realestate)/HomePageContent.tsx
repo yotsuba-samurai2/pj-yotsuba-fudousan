@@ -1,388 +1,548 @@
-"use client";
+// /（型F・二本柱トップ）本文＝原稿_不動産 #1（E-1差し戻し対応・2026-07-10）
+// 【差し戻し対応の要点】
+//  1. i18n退行禁止：トップは既存が多言語＝新セクションのコピーを ja/en/zh-tw/zh の4ロケール分、
+//     コード内ロケールマップ（COPY）で保持。Firestore翻訳データは書き換えない（浦松承認事項のため）。
+//     ※en/zh-tw/zh訳はFable作成＝フェーズIの監修対象（繁体字は台湾コラム定訳準拠：不動產・繼承・文京區・團體家屋）。
+//  2. 社名保護：H1は全ロケールで先頭に「四葉不動産」（社名はブランド＝各言語同一表記）。
+//  3. 既存タグライン（realestate.home.heroTitle1-3＝Firestore翻訳・各locale値あり）はサブコピーへ移設（t()参照＝退行なし）。
+//  4. 旧トップ（3強み/サービス概要/代表メッセージ/アクセス構成）は本ファイルから撤去＝原稿#1構成へ全面置換。
+// 【1ページ1LINKA】本文の60秒診断枠がLINKA＝右下FABなし（TenantLayoutShell側でsuppressed）。
+// AI接続（/api/linka）はフェーズK＝「準備中」明記（優良誤認回避）。
+// JSON-LD＝layoutの OrganizationJsonLd／WebSiteJsonLd が出力済み＝ここでは出さない（@id重複防止）。
+import Link from "next/link";
+import { LINE_URL } from "@/lib/shared/office";
+import { getRequestLocale } from "@/lib/getRequestLocale";
+import { fetchTranslationsFromFirestore } from "@/lib/getTranslationData";
+import { getNestedValue } from "@/lib/seo";
+import type { LangCode } from "@/config/languages";
 
-import Image from "next/image";
-import { LocaleLink as Link } from "@/components/ui/LocaleLink";
-import {
-  Globe,
-  Home,
-  KeyRound,
-  Building2,
-  Languages,
-  Newspaper,
-  Users,
-  ArrowRight,
-  ChevronDown,
-  Scale,
-  Heart,
-  Handshake,
-} from "lucide-react";
-import { useTranslation } from "@/hooks/useTranslation";
+type PillarCopy = { tag: string; title: string; body: string; anchor: string };
+type QaCopy = { q: string; a: string; anchor: string };
+type TopCopy = {
+  heroAlt: string;
+  h1: string;
+  intro: React.ReactNode;
+  pillars: [PillarCopy, PillarCopy, PillarCopy];
+  pillarHrefs: [string, string, string];
+  diagnosisH2: string;
+  diagnosisChips: { href: string; label: string }[];
+  diagnosisNote: string;
+  lineBtn: string;
+  repAlt: string;
+  repName: string;
+  repBio: string;
+  profileLabel: string;
+  qa: QaCopy[];
+  qaHrefs: string[];
+  nav: { href: string; label: string }[];
+  ctaHeading: string;
+  ctaLead: string;
+  contactBtn: string;
+  telBtn: string;
+  accessLine: string;
+};
 
-const strengthIcons = [Heart, Languages, Globe, Scale, Handshake, Newspaper];
+const PILLAR_HREFS: [string, string, string] = ["/souzoku", "/toushi", "/global"];
+const QA_HREFS = ["/souzoku", "/toushi/group-home", "/global", "/about"];
 
-const serviceIcons = [Home, KeyRound, Building2, Users];
-const serviceHrefs = [
-  "/services#rental",
-  "/services#sale",
-  "/services#management",
-  "/services#foreign-residents",
-];
+const COPY: Record<LangCode, TopCopy> = {
+  ja: {
+    heroAlt: "文京区・播磨坂の桜並木のイメージ",
+    h1: "四葉不動産｜文京区で、相続の不動産と投資・事業用の不動産を。",
+    intro: (
+      <>
+        <strong>四葉不動産株式会社は、東京都文京区小日向の不動産会社です。</strong>
+        親から受け継いだ家をどうするか。グループホームや社宅に使う物件をどう確保するか。——文京区・茗荷谷の地元で、元新聞記者の宅建士・行政書士である代表が、最初の一歩からお手伝いします。外国人の方のお部屋探しも、日本語・英語・中国語で対応します。
+      </>
+    ),
+    pillars: [
+      {
+        tag: "柱A",
+        title: "相続した不動産、どうする？",
+        body: "出口は「管理・活用・売却」の3つ。期限のある相続登記から出口の選び方まで、1本のガイドに整理しました。",
+        anchor: "文京区で不動産を相続したら——完全ガイド",
+      },
+      {
+        tag: "柱B",
+        title: "投資用・事業用の不動産を探す",
+        body: "グループホーム物件・社宅・収益物件を、事業の目的から逆算してご提案します。",
+        anchor: "投資用・事業用不動産",
+      },
+      {
+        tag: "多言語",
+        title: "外国人のお部屋探し",
+        body: "日本での家探しを、母語で。",
+        anchor: "外国人・多言語のお部屋探し",
+      },
+    ],
+    pillarHrefs: PILLAR_HREFS,
+    diagnosisH2: "60秒で、あなたの「次の一歩」がわかります。",
+    diagnosisChips: [
+      { href: "/souzoku", label: "相続の相談" },
+      { href: "/toushi", label: "投資・事業用を探す" },
+      { href: "/global", label: "お部屋探し" },
+    ],
+    diagnosisNote:
+      "AIコンシェルジュLINKAによる診断は準備中です。いまは上の入口からお進みいただくか、LINEで代表に直接どうぞ——状況を伺い、次の一歩を一緒に整理します。",
+    lineBtn: "LINEで一言相談（無料）",
+    repAlt: "四葉不動産株式会社 代表取締役 浦松丈二",
+    repName: "浦松 丈二（うらまつ・じょうじ）",
+    repBio:
+      "元毎日新聞中国総局長（記者歴34年）・海外4カ国在住。宅地建物取引士・行政書士。社会保険労務士試験合格（2026年9月開業予定）。34年、記者として人の話を聞いてきました。あなたの事情を整理するところから、一緒に。",
+    profileLabel: "プロフィール：",
+    qa: [
+      {
+        q: "文京区で不動産を相続したら、まず何をすればいいですか？",
+        a: "まず相続登記の期限を確認します（2024年4月から義務化・原則3年以内）。進め方の全体は完全ガイドへ。",
+        anchor: "相続不動産の完全ガイド",
+      },
+      {
+        q: "グループホームに使える物件はどう探せばいいですか？",
+        a: "指定基準（立地・構造・面積・消防）を見据えて、契約前に確認するのが鉄則です。",
+        anchor: "グループホーム物件",
+      },
+      {
+        q: "外国人でも日本で部屋を借りられますか？",
+        a: "借りられます。審査・保証・言語の壁を、四葉不動産が母語でサポートします。",
+        anchor: "多言語のお部屋探し",
+      },
+      {
+        q: "四葉不動産はどんな会社ですか？",
+        a: "文京区小日向の宅地建物取引業者で、相続不動産と投資・事業用不動産が専門です。",
+        anchor: "わたしたち",
+      },
+    ],
+    qaHrefs: QA_HREFS,
+    nav: [
+      { href: "/services", label: "サービス一覧" },
+      { href: "/column", label: "コラム" },
+      { href: "/faq", label: "よくある質問" },
+      { href: "/access", label: "アクセス・料金" },
+    ],
+    ctaHeading: "「これ、どうしたらいい？」の一言からで大丈夫です。",
+    ctaLead: "代表が直接お返事し、ご希望を伺って条件に合う物件があればLINEでご紹介します。",
+    contactBtn: "お問い合わせ",
+    telBtn: "電話 03-6161-9428",
+    accessLine: "東京メトロ丸ノ内線「茗荷谷」駅 徒歩5分｜10:00〜18:00（定休：火・水）",
+  },
+  en: {
+    heroAlt: "Cherry blossoms along Harimazaka in Bunkyo, Tokyo",
+    h1: "四葉不動産｜Inherited Property & Investment / Business-Use Real Estate in Bunkyo, Tokyo",
+    intro: (
+      <>
+        <strong>Yotsuba Real Estate Co., Ltd. (四葉不動産株式会社) is a real estate company in Kohinata, Bunkyo-ku, Tokyo.</strong>{" "}
+        What should you do with the house you inherited? How do you secure a property for a group home or company housing? Based in the Myogadani neighborhood, our representative—a former newspaper journalist who is a licensed real estate broker and gyoseishoshi lawyer—supports you from the very first step. Room-hunting support for international residents is available in Japanese, English, and Chinese.
+      </>
+    ),
+    pillars: [
+      {
+        tag: "Pillar A",
+        title: "Inherited a property—now what?",
+        body: "Your three exits are managing, utilizing, or selling. One guide covers everything from the registration deadline to choosing your exit.",
+        anchor: "Inheriting Property in Bunkyo: The Complete Guide",
+      },
+      {
+        tag: "Pillar B",
+        title: "Find investment & business-use property",
+        body: "Group-home properties, company housing, and income properties—proposed by working backward from your business goals.",
+        anchor: "Investment & Business-Use Real Estate",
+      },
+      {
+        tag: "Multilingual",
+        title: "Room hunting for international residents",
+        body: "House hunting in Japan, in your own language.",
+        anchor: "Multilingual Room-Hunting Support",
+      },
+    ],
+    pillarHrefs: PILLAR_HREFS,
+    diagnosisH2: "Find your next step in 60 seconds.",
+    diagnosisChips: [
+      { href: "/souzoku", label: "Inheritance" },
+      { href: "/toushi", label: "Investment & business use" },
+      { href: "/global", label: "Room hunting" },
+    ],
+    diagnosisNote:
+      "Our AI concierge LINKA is currently in preparation. For now, choose an entry above or message our representative directly on LINE—we will listen to your situation and sort out the next step together.",
+    lineBtn: "Chat on LINE (free)",
+    repAlt: "Joji Uramatsu, Representative Director of Yotsuba Real Estate Co., Ltd.",
+    repName: "Joji Uramatsu",
+    repBio:
+      "Former China General Bureau Chief of the Mainichi Shimbun (34 years as a journalist), with experience living in four countries. Licensed real estate broker and gyoseishoshi lawyer. Passed the national exam for licensed social insurance and labor consultant (office opening scheduled for September 2026). For 34 years I listened to people's stories as a journalist—let's start by sorting out yours, together.",
+    profileLabel: "Profile: ",
+    qa: [
+      {
+        q: "I inherited a property in Bunkyo—what should I do first?",
+        a: "First, check the inheritance registration deadline (mandatory since April 2024; within three years in principle). See the complete guide for the full picture.",
+        anchor: "Complete guide to inherited property",
+      },
+      {
+        q: "How do I find a property that can be used as a group home?",
+        a: "The golden rule is to check it against the designation standards (location, structure, floor area, fire safety) before signing a contract.",
+        anchor: "Group-home properties",
+      },
+      {
+        q: "Can foreign residents rent a home in Japan?",
+        a: "Yes. Yotsuba Real Estate supports you in your own language—through screening, guarantors, and paperwork.",
+        anchor: "Multilingual room hunting",
+      },
+      {
+        q: "What kind of company is Yotsuba Real Estate?",
+        a: "A licensed real estate brokerage in Kohinata, Bunkyo-ku, specializing in inherited properties and investment / business-use properties.",
+        anchor: "About us",
+      },
+    ],
+    qaHrefs: QA_HREFS,
+    nav: [
+      { href: "/services", label: "Services" },
+      { href: "/column", label: "Column" },
+      { href: "/faq", label: "FAQ" },
+      { href: "/access", label: "Access & Fees" },
+    ],
+    ctaHeading: "It's fine to start with just one line: “What should I do with this?”",
+    ctaLead:
+      "Our representative replies to you personally, and if a property matches your needs, we will introduce it via LINE.",
+    contactBtn: "Contact",
+    telBtn: "Call 03-6161-9428",
+    accessLine: "5 min walk from Myogadani Sta. (Tokyo Metro Marunouchi Line) | 10:00–18:00 (Closed Tue & Wed)",
+  },
+  "zh-tw": {
+    heroAlt: "東京文京區・播磨坂的櫻花並木",
+    h1: "四葉不動産｜文京區的繼承不動產與投資・事業用不動產",
+    intro: (
+      <>
+        <strong>四葉不動産株式会社是位於東京都文京區小日向的不動產公司。</strong>
+        從父母繼承的房子該怎麼辦？團體家屋（Group Home）或員工宿舍的物件該如何取得？——深耕文京區・茗荷谷在地，由曾任報社記者、具備宅建士與行政書士資格的代表，從第一步開始陪您處理。外國人士找房也提供日文、英文、中文服務。
+      </>
+    ),
+    pillars: [
+      {
+        tag: "主軸A",
+        title: "繼承的不動產，該怎麼辦？",
+        body: "出路有「管理・活用・出售」三種。從有期限的繼承登記到出路的選擇，整理成一份完整指南。",
+        anchor: "在文京區繼承不動產——完整指南",
+      },
+      {
+        tag: "主軸B",
+        title: "尋找投資用・事業用不動產",
+        body: "團體家屋物件、員工宿舍、收益物件——從事業目的反向推算，為您提案。",
+        anchor: "投資用・事業用不動產",
+      },
+      {
+        tag: "多語言",
+        title: "外國人找房",
+        body: "在日本找房，用您的母語。",
+        anchor: "外國人・多語言找房服務",
+      },
+    ],
+    pillarHrefs: PILLAR_HREFS,
+    diagnosisH2: "60秒，找到您的「下一步」。",
+    diagnosisChips: [
+      { href: "/souzoku", label: "繼承諮詢" },
+      { href: "/toushi", label: "尋找投資・事業用物件" },
+      { href: "/global", label: "找房" },
+    ],
+    diagnosisNote:
+      "AI禮賓LINKA的診斷功能目前準備中。現在請先由上方入口進入，或直接透過LINE聯絡代表——我們會了解您的狀況，一起整理下一步。",
+    lineBtn: "用LINE諮詢（免費）",
+    repAlt: "四葉不動産株式会社 代表取締役 浦松丈二",
+    repName: "浦松 丈二（Uramatsu Joji）",
+    repBio:
+      "曾任每日新聞中國總局長（記者資歷34年）、旅居海外4國。宅地建物取引士・行政書士。已通過社會保險勞務士考試（預定2026年9月開業）。34年來，我以記者的身分傾聽人們的故事。就從整理您的狀況開始，一起前進。",
+    profileLabel: "個人檔案：",
+    qa: [
+      {
+        q: "在文京區繼承了不動產，首先該做什麼？",
+        a: "首先確認繼承登記的期限（2024年4月起義務化・原則上3年內）。整體流程請見完整指南。",
+        anchor: "繼承不動產完整指南",
+      },
+      {
+        q: "可用於團體家屋的物件該如何尋找？",
+        a: "鐵則是在簽約前，先對照指定基準（地點・結構・面積・消防）進行確認。",
+        anchor: "團體家屋物件",
+      },
+      {
+        q: "外國人也能在日本租屋嗎？",
+        a: "可以。審查、保證、語言的門檻，四葉不動産以您的母語協助您跨過。",
+        anchor: "多語言找房服務",
+      },
+      {
+        q: "四葉不動産是什麼樣的公司？",
+        a: "位於文京區小日向的宅地建物取引業者，專精繼承不動產與投資・事業用不動產。",
+        anchor: "關於我們",
+      },
+    ],
+    qaHrefs: QA_HREFS,
+    nav: [
+      { href: "/services", label: "服務總覽" },
+      { href: "/column", label: "專欄" },
+      { href: "/faq", label: "常見問題" },
+      { href: "/access", label: "交通與費用" },
+    ],
+    ctaHeading: "從一句「這該怎麼辦？」開始就可以。",
+    ctaLead: "代表將親自回覆，了解您的需求後，若有符合條件的物件將透過LINE為您介紹。",
+    contactBtn: "聯絡我們",
+    telBtn: "電話 03-6161-9428",
+    accessLine: "東京Metro丸之內線「茗荷谷」站 步行5分｜10:00〜18:00（週二・週三公休）",
+  },
+  zh: {
+    heroAlt: "东京文京区・播磨坂的樱花街道",
+    h1: "四葉不動産｜文京区的继承不动产与投资・事业用不动产",
+    intro: (
+      <>
+        <strong>四葉不動産株式会社是位于东京都文京区小日向的不动产公司。</strong>
+        从父母继承的房子该怎么办？团体家屋（Group Home）或员工宿舍的物件该如何取得？——扎根文京区・茗荷谷本地，由曾任报社记者、持有宅建士与行政书士资格的代表，从第一步开始陪您处理。外国人士找房也提供日语、英语、中文服务。
+      </>
+    ),
+    pillars: [
+      {
+        tag: "主轴A",
+        title: "继承的不动产，该怎么办？",
+        body: "出路有“管理・活用・出售”三种。从有期限的继承登记到出路的选择，整理成一份完整指南。",
+        anchor: "在文京区继承不动产——完整指南",
+      },
+      {
+        tag: "主轴B",
+        title: "寻找投资用・事业用不动产",
+        body: "团体家屋物件、员工宿舍、收益物件——从事业目的反向推算，为您提案。",
+        anchor: "投资用・事业用不动产",
+      },
+      {
+        tag: "多语言",
+        title: "外国人找房",
+        body: "在日本找房，用您的母语。",
+        anchor: "外国人・多语言找房服务",
+      },
+    ],
+    pillarHrefs: PILLAR_HREFS,
+    diagnosisH2: "60秒，找到您的“下一步”。",
+    diagnosisChips: [
+      { href: "/souzoku", label: "继承咨询" },
+      { href: "/toushi", label: "寻找投资・事业用物件" },
+      { href: "/global", label: "找房" },
+    ],
+    diagnosisNote:
+      "AI礼宾LINKA的诊断功能正在准备中。现在请先从上方入口进入，或直接通过LINE联系代表——我们会了解您的情况，一起整理下一步。",
+    lineBtn: "用LINE咨询（免费）",
+    repAlt: "四葉不動産株式会社 代表取缔役 浦松丈二",
+    repName: "浦松 丈二（Uramatsu Joji）",
+    repBio:
+      "曾任每日新闻中国总局长（记者经历34年）、旅居海外4国。宅地建物取引士・行政书士。已通过社会保险劳务士考试（预定2026年9月开业）。34年来，我以记者的身份倾听人们的故事。就从整理您的情况开始，一起前进。",
+    profileLabel: "个人简介：",
+    qa: [
+      {
+        q: "在文京区继承了不动产，首先该做什么？",
+        a: "首先确认继承登记的期限（2024年4月起义务化・原则上3年内）。整体流程请见完整指南。",
+        anchor: "继承不动产完整指南",
+      },
+      {
+        q: "可用于团体家屋的物件该如何寻找？",
+        a: "铁则是在签约前，先对照指定基准（地点・结构・面积・消防）进行确认。",
+        anchor: "团体家屋物件",
+      },
+      {
+        q: "外国人也能在日本租房吗？",
+        a: "可以。审查、担保、语言的门槛，四葉不動産以您的母语协助您跨过。",
+        anchor: "多语言找房服务",
+      },
+      {
+        q: "四葉不動産是什么样的公司？",
+        a: "位于文京区小日向的宅地建物取引业者，专精继承不动产与投资・事业用不动产。",
+        anchor: "关于我们",
+      },
+    ],
+    qaHrefs: QA_HREFS,
+    nav: [
+      { href: "/services", label: "服务总览" },
+      { href: "/column", label: "专栏" },
+      { href: "/faq", label: "常见问题" },
+      { href: "/access", label: "交通与费用" },
+    ],
+    ctaHeading: "从一句“这该怎么办？”开始就可以。",
+    ctaLead: "代表将亲自回复，了解您的需求后，若有符合条件的物件将通过LINE为您介绍。",
+    contactBtn: "联系我们",
+    telBtn: "电话 03-6161-9428",
+    accessLine: "东京Metro丸之内线“茗荷谷”站 步行5分｜10:00〜18:00（周二・周三定休）",
+  },
+};
 
-export default function HomePageContent() {
-  const { t, tArray } = useTranslation();
+export default async function HomePageContent() {
+  const locale = await getRequestLocale();
+  const c = COPY[locale] ?? COPY.ja;
 
-  const strengths = tArray<{
-    title: string;
-    subtitle: string;
-    description: string;
-  }>("realestate.home.whyYotsuba.strengths");
-  const services = tArray<{
-    title: string;
-    subtitle: string;
-    description: string;
-  }>("realestate.home.services.items");
+  // 既存タグライン（Firestore翻訳・各locale値あり）＝サブコピーへ移設。取得不能時は非表示（退行なし）。
+  let tagline = "";
+  try {
+    const t = await fetchTranslationsFromFirestore(locale);
+    tagline = [
+      getNestedValue(t, "realestate.home.heroTitle1"),
+      getNestedValue(t, "realestate.home.heroTitle2"),
+      getNestedValue(t, "realestate.home.heroTitle3"),
+    ]
+      .filter(Boolean)
+      .join("");
+  } catch {
+    tagline = "";
+  }
 
   return (
-    <div className="relative">
-      {/* ─── Hero ─── */}
-      <section className="relative z-[1] min-h-[80vh] overflow-hidden md:min-h-screen">
-        {/* Full-width: left text + right image */}
-        <div className="relative flex min-h-[80vh] w-full flex-col md:min-h-screen md:flex-row md:items-stretch">
-          {/* Left: text content */}
-          <div className="relative z-10 flex w-full flex-col justify-center px-5 pt-24 pb-8 sm:px-10 sm:pt-28 sm:pb-12 md:w-[42%] md:py-0 md:pl-[10%] md:pr-8 lg:pl-[12%] lg:pr-12">
-            {/* Subtle BG accent */}
-            <div
-              className="pointer-events-none absolute inset-0 bg-primary/[0.03]"
-              aria-hidden="true"
-            />
-
-            <div className="relative">
-              {/* Logo */}
-              <div className="hero-fade-in">
-                <Image
-                  src="/yotsuba/realestate-square.png"
-                  alt={t("realestate.name")}
-                  width={180}
-                  height={158}
-                  className="h-16 w-auto sm:h-20 md:h-24"
-                  priority
-                />
-              </div>
-
-              {/* Main copy */}
-              <h1 className="hero-fade-in-delay-1 mt-6 text-2xl font-bold leading-[1.3] tracking-tight sm:mt-8 sm:text-4xl md:text-[2.5rem] lg:text-5xl">
-                {t("realestate.home.heroTitle1")}
-                <br />
-                <span className="whitespace-nowrap">
-                  <span className="cta-gradient-text">
-                    {t("realestate.home.heroTitle2")}
-                  </span>
-                  {t("realestate.home.heroTitle3")}
-                </span>
-              </h1>
-
-              {/* Gradient divider */}
-              <div className="hero-fade-in-delay-2 mt-4 h-0.5 w-16 rounded-full gradient-line sm:mt-6" />
-
-              {/* Sub copy */}
-              <p className="hero-fade-in-delay-2 mt-4 text-sm leading-[1.8] text-text-muted sm:mt-5 sm:text-[0.95rem]">
-                {t("realestate.home.heroSubtitle1")}
-                <br />
-                {t("realestate.home.heroSubtitle2")}
-              </p>
-
-              {/* CTA buttons */}
-              <div className="hero-fade-in-delay-3 mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row">
-                <Link
-                  href="/contact"
-                  className="gradient-line inline-flex items-center justify-center gap-2 rounded-md px-8 py-3 text-sm font-semibold text-white shadow-lg transition-all duration-200 hover:shadow-xl hover:brightness-110 sm:py-3.5 opacity-80"
-                >
-                  {t("common.cta.consultFirst")}
-                  <ArrowRight size={16} />
-                </Link>
-                <Link
-                  href="/services"
-                  className="cta-gradient-outline inline-flex items-center justify-center gap-2 px-8 py-3 text-sm font-semibold shadow-sm transition-all duration-200 hover:shadow-md sm:py-3.5"
-                >
-                  <span className="cta-gradient-text">
-                    {t("common.cta.viewServices")}
-                  </span>
-                </Link>
-              </div>
+    <>
+      {/* ヒーロー（H1＝全ロケール先頭に社名・回答ファースト・桜=bunkyo-sakura） */}
+      <section className="relative">
+        <div className="relative mx-auto max-w-6xl overflow-hidden rounded-b-3xl sm:mt-4 sm:rounded-3xl">
+          <img
+            src="/hero/bunkyo-sakura-16x9.webp"
+            alt={c.heroAlt}
+            width={1600}
+            height={900}
+            className="h-[60vw] max-h-[480px] w-full object-cover sm:h-auto"
+            fetchPriority="high"
+          />
+          <div className="absolute inset-0 flex items-center">
+            <div className="hero-fade-in m-4 max-w-2xl rounded-2xl bg-white/85 p-5 backdrop-blur-sm sm:m-8 sm:p-7">
+              <h1 className="font-serif text-2xl font-bold leading-snug text-ink sm:text-3xl">{c.h1}</h1>
+              {tagline && (
+                <p className="mt-1.5 text-xs font-medium tracking-wide text-primary-dark sm:text-sm">
+                  {tagline}
+                </p>
+              )}
+              <p className="mt-3 text-sm leading-relaxed text-text sm:text-base">{c.intro}</p>
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* Right: hero photo (55%, rounded top-left, soft shadow inset) */}
-          <div className="hero-fade-in relative w-full md:ml-auto md:w-[55%]">
-            <div
-              className="relative h-48 w-full sm:h-64 md:h-full md:rounded-tl-[20rem]"
-              style={{ overflow: "hidden" }}
+      <main className="mx-auto max-w-5xl px-4">
+        {/* 二本柱カード（＋横断） */}
+        <section aria-label="pillars" className="mt-10 grid gap-3 sm:grid-cols-3">
+          {c.pillars.map((p, i) => (
+            <Link
+              key={c.pillarHrefs[i]}
+              href={c.pillarHrefs[i]}
+              className="block rounded-2xl border border-border bg-surface p-5 transition-shadow hover:shadow-md"
             >
-              <Image
-                src="/assets/images/hero-clover-hand.jpeg"
-                alt={t("realestate.home.heroImageAlt")}
-                fill
-                className="object-cover object-[55%_center] opacity-90"
-                priority
-              />
-              {/* Soft gradient overlay on left edge for blend */}
-              <div className="pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-surface/40 to-transparent sm:w-24 md:w-32" />
-            </div>
+              <span className="inline-block rounded-full bg-primary-tint px-2.5 py-0.5 text-xs font-medium text-primary-dark">
+                {p.tag}
+              </span>
+              <div className="mt-2 font-serif text-lg font-semibold leading-snug text-ink">{p.title}</div>
+              <p className="mt-2 text-sm leading-relaxed text-text-muted">{p.body}</p>
+              <div className="mt-3 text-sm font-medium text-primary">→ {p.anchor}</div>
+            </Link>
+          ))}
+        </section>
+
+        {/* 60秒診断（LINKA起点枠・AI接続はフェーズK＝準備中） */}
+        <section aria-label="60-second diagnosis" className="mt-10 rounded-2xl bg-primary-tint p-6 text-center">
+          <h2 className="font-serif text-xl font-semibold text-ink">{c.diagnosisH2}</h2>
+          <div className="mt-4 flex flex-wrap items-center justify-center gap-2">
+            {c.diagnosisChips.map((chip) => (
+              <Link
+                key={chip.href}
+                href={chip.href}
+                className="rounded-full border border-primary/40 bg-surface px-4 py-2 text-sm font-medium text-primary-dark transition-colors hover:bg-primary hover:text-white"
+              >
+                {chip.label}
+              </Link>
+            ))}
           </div>
-        </div>
+          <p className="mx-auto mt-3 max-w-xl text-xs leading-relaxed text-text-muted">{c.diagnosisNote}</p>
+          <a
+            href={LINE_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="mt-4 inline-flex min-h-[44px] items-center rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-primary-dark"
+          >
+            {c.lineBtn}
+          </a>
+        </section>
 
-        {/* Scroll indicator */}
-        <div className="hero-fade-in-delay-3 absolute bottom-6 left-[21%] hero-scroll-mobile hidden md:block">
-          <ChevronDown size={20} className="text-text-muted/40" />
-        </div>
-      </section>
-
-      {/* ─── 3つの強み ─── */}
-      <section className="border-t border-border py-14 sm:py-20 md:py-28">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <p className="cta-gradient-text text-sm font-medium tracking-[0.2em]">
-              WHY YOTSUBA
+        {/* 代表紹介（E-E-A-T） */}
+        <section className="mt-10 flex flex-col items-start gap-4 rounded-2xl border border-border bg-surface p-5 sm:flex-row">
+          <img
+            src="/staff/uramatsu.webp"
+            alt={c.repAlt}
+            width={160}
+            height={213}
+            className="w-32 flex-shrink-0 rounded-xl object-cover sm:w-40"
+          />
+          <div>
+            <h2 className="font-serif text-lg font-semibold text-ink">{c.repName}</h2>
+            <p className="mt-1 text-sm leading-relaxed text-text-muted">{c.repBio}</p>
+            <p className="mt-2 text-xs">
+              {c.profileLabel}
+              <a
+                href="https://www.samurai.co.jp/samurai/reserve/uramatsu-joji"
+                target="_blank"
+                rel="noreferrer"
+                className="text-primary underline"
+              >
+                SAMURAI
+              </a>
+              ／
+              <a
+                href="https://www.wikidata.org/wiki/Q139738129"
+                target="_blank"
+                rel="noreferrer"
+                className="text-primary underline"
+              >
+                Wikidata
+              </a>
             </p>
-            <h2 className="mt-3 text-2xl font-bold sm:text-3xl">
-              {t("realestate.home.whyYotsuba.sectionTitle")}
-            </h2>
           </div>
+        </section>
 
-          <div className="mt-10 grid gap-4 sm:mt-14 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3">
-            {strengths.map((strength, i) => {
-              const Icon = strengthIcons[i];
-              return (
-                <div
-                  key={i}
-                  className="gradient-border group relative overflow-hidden rounded-xl bg-surface p-5 transition-shadow duration-300 hover:shadow-lg sm:p-8"
-                >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
-                    <Icon size={24} className="text-primary" />
-                  </div>
-                  <p className="mt-2 text-xs font-medium tracking-wider text-text-muted">
-                    {strength.subtitle}
-                  </p>
-                  <h3 className="mt-3 text-lg font-bold">{strength.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-text-muted">
-                    {strength.description}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* ─── サービス概要 ─── */}
-      <section className="bg-green-gradient py-14 sm:py-20 md:py-28">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <p className="cta-gradient-text text-sm font-medium tracking-[0.2em]">
-              SERVICES
-            </p>
-            <h2 className="mt-3 text-2xl font-bold sm:text-3xl">
-              {t("realestate.home.services.sectionTitle")}
-            </h2>
-          </div>
-
-          <div className="mt-10 grid gap-4 sm:mt-14 sm:grid-cols-2 sm:gap-6">
-            {services.map((service, i) => {
-              const Icon = serviceIcons[i];
-              const href = serviceHrefs[i];
-              return (
-                <Link
-                  key={i}
-                  href={href}
-                  className="group relative overflow-hidden rounded-xl border border-border bg-surface p-5 transition-all duration-300 hover:border-primary/30 hover:shadow-lg sm:p-8"
-                >
-                  <div className="flex items-start gap-4">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary/10 transition-colors duration-300 group-hover:bg-primary/20">
-                      <Icon
-                        size={24}
-                        className="text-primary transition-colors duration-300"
-                      />
-                    </div>
-                    <div>
-                      <p className="text-[10px] font-medium tracking-wider text-text-muted">
-                        {service.subtitle}
-                      </p>
-                      <h3 className="mt-1 text-lg font-bold">
-                        {service.title}
-                      </h3>
-                      <p className="mt-2 text-sm leading-relaxed text-text-muted">
-                        {service.description}
-                      </p>
-                    </div>
-                  </div>
-                  <div className="mt-4 flex items-center justify-end text-xs font-medium text-primary">
-                    {t("common.learnMore")}
-                    <ArrowRight
-                      size={14}
-                      className="ml-1 transition-transform duration-200 group-hover:translate-x-1"
-                    />
-                  </div>
+        {/* 疑問文H2直答（AIクエリ形・FAQPage JSON-LDは/faq専用＝表示のみ） */}
+        <section aria-label="direct answers" className="mt-10 space-y-6">
+          {c.qa.map((item, i) => (
+            <div key={item.q}>
+              <h2 className="font-serif text-lg font-semibold text-ink">{item.q}</h2>
+              <p className="mt-1.5 text-sm leading-relaxed text-text">
+                {item.a}{" "}
+                <Link href={c.qaHrefs[i]} className="text-primary underline">
+                  {item.anchor}
                 </Link>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* ─── 代表メッセージ ─── */}
-      <section className="py-14 sm:py-20 md:py-28">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl text-center">
-            <p className="cta-gradient-text text-sm font-medium tracking-[0.2em]">
-              MESSAGE
-            </p>
-            <h2 className="mt-3 text-2xl font-bold sm:text-3xl">
-              {t("realestate.home.message.sectionTitle")}
-            </h2>
-          </div>
-
-          <div className="mx-auto mt-10 max-w-3xl sm:mt-14">
-            <div className="gradient-border overflow-hidden rounded-2xl bg-surface p-5 sm:p-8 md:p-12">
-              <div className="flex flex-col items-center gap-8 sm:flex-row sm:items-start">
-                <div className="h-40 w-32 shrink-0 overflow-hidden rounded-2xl">
-                  <Image
-                    src="/uramatsu.png"
-                    alt={t("representative.name")}
-                    width={128}
-                    height={128}
-                    className="h-full w-full object-cover"
-                  />
-                </div>
-
-                <div>
-                  <p className="text-sm leading-[1.9] text-text-muted">
-                    {t("realestate.home.message.paragraph1")}
-                  </p>
-                  <p className="mt-4 text-sm leading-[1.9] text-text-muted">
-                    {t("realestate.home.message.paragraph2")}
-                  </p>
-                  <div className="mt-6">
-                    <p className="text-base font-bold">
-                      {t("representative.name")}
-                    </p>
-                    <p className="mt-1 text-xs text-text-muted">
-                      {t("realestate.home.message.title")}
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="mt-8 text-center">
-                <Link
-                  href="/about"
-                  className="inline-flex items-center gap-1 text-sm font-medium text-primary transition-colors hover:text-primary-dark"
-                >
-                  {t("common.cta.viewCompanyInfo")}
-                  <ArrowRight size={14} />
-                </Link>
-              </div>
+              </p>
             </div>
-          </div>
-        </div>
-      </section>
+          ))}
+        </section>
 
-      {/* ─── アクセス ─── */}
-      <section className="border-t border-border py-14 sm:py-20 md:py-28">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <p className="cta-gradient-text text-sm font-medium tracking-[0.2em]">
-              ACCESS
-            </p>
-            <h2 className="mt-3 text-2xl font-bold sm:text-3xl">
-              {t("realestate.home.access.sectionTitle")}
-            </h2>
-          </div>
+        {/* 導線 */}
+        <nav aria-label="site links" className="mt-10 flex flex-wrap gap-x-4 gap-y-1 text-sm text-primary">
+          {c.nav.map((n) => (
+            <Link key={n.href} href={n.href} className="underline">
+              {n.label}
+            </Link>
+          ))}
+        </nav>
 
-          <div className="mx-auto mt-10 max-w-4xl sm:mt-14">
-            <div className="grid gap-6 md:grid-cols-2 md:gap-8">
-              {/* Map */}
-              <div className="overflow-hidden rounded-xl border border-border bg-surface">
-                <iframe
-                  src="https://maps.google.com/maps?q=%E5%9B%9B%E8%91%89%E4%B8%8D%E5%8B%95%E7%94%A3%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE+%2F+%E5%9B%9B%E8%91%89%E8%A1%8C%E6%94%BF%E6%9B%B8%E5%A3%AB%E4%BA%8B%E5%8B%99%E6%89%80&z=18&output=embed&hl=ja"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0, minHeight: 280 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title={t("realestate.home.access.mapTitle")}
-                />
-              </div>
-
-              {/* Info */}
-              <div className="flex flex-col justify-center">
-                <h3 className="text-lg font-bold">
-                  {t("realestate.home.access.name")}
-                </h3>
-                <address className="mt-4 text-sm not-italic leading-relaxed text-text-muted">
-                  {t("address.postalCode")}
-                  <br />
-                  {t("address.prefecture")}
-                  {t("address.city")}
-                  {t("address.street")}
-                  <br />
-                  {t("address.building")}
-                </address>
-                <div className="mt-6 space-y-2 text-sm text-text-muted">
-                  <p>
-                    <span className="font-medium text-text">
-                      {t("realestate.home.access.nearestStation.label")}
-                    </span>
-                    <br />
-                    {t("realestate.home.access.nearestStation.value")}
-                  </p>
-                  <p>
-                    <span className="font-medium text-text">
-                      {t("realestate.home.access.businessHours.label")}
-                    </span>
-                    <br />
-                    {t("realestate.home.access.businessHours.value")}
-                  </p>
-                </div>
-                <div className="mt-6">
-                  <a
-                    href="https://maps.google.com/maps?q=四葉不動産株式会社+/+四葉行政書士事務所"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-sm font-medium text-primary transition-colors hover:text-primary-dark"
-                  >
-                    {t("common.openInGoogleMaps")}
-                    <ArrowRight size={14} />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ─── CTA ─── */}
-      <section className="border-t border-border bg-surface-dim py-14 sm:py-20 md:py-28">
-        <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
-          <h2 className="text-xl font-bold sm:text-2xl md:text-3xl">
-            {t("realestate.home.ctaSection.title")}
-          </h2>
-          <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-text-muted">
-            {t("realestate.home.ctaSection.description1")}
-            <br className="hidden sm:inline" />
-            {t("realestate.home.ctaSection.description2")}
-          </p>
-          <div className="mt-8 flex flex-col items-center gap-4 sm:mt-10 sm:flex-row sm:justify-center">
+        {/* CTA帯（トップのみロケール対応のインライン版＝共通CtaBandはja固定のため使わない） */}
+        <section aria-label="contact" className="my-10 rounded-2xl bg-primary-tint px-6 py-8 text-center">
+          <h2 className="font-serif text-xl font-semibold text-ink">{c.ctaHeading}</h2>
+          <p className="mx-auto mt-2 max-w-xl text-sm text-text-muted">{c.ctaLead}</p>
+          <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
+            <a
+              href={LINE_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex min-h-[44px] items-center rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-primary-dark"
+            >
+              {c.lineBtn}
+            </a>
             <Link
               href="/contact"
-              className="gradient-line inline-flex items-center gap-2 rounded-md px-10 py-4 text-sm font-semibold text-white shadow-lg transition-all duration-200 hover:shadow-xl hover:brightness-110"
+              className="inline-flex min-h-[44px] items-center rounded-lg border border-border px-5 py-3 text-sm font-medium text-text-muted transition-colors hover:border-primary hover:text-primary"
             >
-              {t("common.cta.contactUs")}
-              <ArrowRight size={16} />
+              {c.contactBtn}
             </Link>
+            <a
+              href="tel:0361619428"
+              className="inline-flex min-h-[44px] items-center rounded-lg border border-border px-5 py-3 text-sm font-medium text-text-muted transition-colors hover:border-primary hover:text-primary"
+            >
+              {c.telBtn}
+            </a>
           </div>
-        </div>
-      </section>
-    </div>
+          <p className="mt-3 text-xs text-text-muted">{c.accessLine}</p>
+        </section>
+      </main>
+    </>
   );
 }
