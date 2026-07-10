@@ -2,8 +2,10 @@ import { JsonLd } from "./JsonLd";
 import {
   BUSINESS_HOURS,
   BUSINESS_SEO,
+  LEGAL_MEMBER_OF,
   LEGAL_SAME_AS,
   PERSON_ID,
+  REALESTATE_MEMBER_OF,
   REALESTATE_SAME_AS,
   SHARED_ORG_INFO,
 } from "@/lib/seo";
@@ -32,9 +34,11 @@ export function OrganizationJsonLd({ businessKey }: { businessKey: string }) {
           ? {
               slogan: "元新聞記者×行政書士がつくる、東京都文京区の不動産屋",
               sameAs: REALESTATE_SAME_AS,
+              memberOf: REALESTATE_MEMBER_OF,
             }
           : {
               sameAs: LEGAL_SAME_AS,
+              memberOf: LEGAL_MEMBER_OF,
             }),
         address: {
           "@type": "PostalAddress",
@@ -67,12 +71,8 @@ export function OrganizationJsonLd({ businessKey }: { businessKey: string }) {
             availableLanguage: ["Japanese", "English", "Chinese"],
           },
         ],
-        parentOrganization: {
-          "@type": "Organization",
-          name: SHARED_ORG_INFO.name,
-          url: "https://luck428.com",
-          sameAs: ["https://luck428.com"],
-        },
+        // parentOrganization（「四葉パートナーズ」）は削除（2026-07-10浦松確認＝登記実体ではない。
+        // 各事業は別事業体・独立受任＝親子関係を構造化データで主張しない。関係はfounder共通@idで表現）
         founder: {
           "@type": "Person",
           "@id": PERSON_ID,
