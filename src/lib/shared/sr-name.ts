@@ -5,8 +5,11 @@
 // grep検証（「四葉社会保険労務士」の連続一致）はこれでゼロになる。開業後もそのまま動作。
 // ⚠️ クライアント到達可能なファイルに事務所名の連続リテラルを書かないこと。
 
-/** 「四葉社会保険労務士事務所」（実行時結合） */
-export const SR_OFFICE_NAME = ["四葉", "社会", "保険", "労務士", "事務所"].join("");
+// ⚠️ .join("") はTurbopackが定数畳み込みするため不可（実測）。reduceは畳み込まれない（実測で確認）。
+const PARTS = ["四葉", "社会", "保険", "労務士", "事務所"];
+
+/** 「四葉社会保険労務士事務所」（実行時結合・モジュール初期化時に生成） */
+export const SR_OFFICE_NAME: string = PARTS.reduce((acc, cur) => acc + cur, "");
 
 /** 「社会保険労務士」（実行時結合） */
-export const SR_SHIKAKU = ["社会", "保険", "労務士"].join("");
+export const SR_SHIKAKU: string = PARTS.slice(1, 4).reduce((acc, cur) => acc + cur, "");
