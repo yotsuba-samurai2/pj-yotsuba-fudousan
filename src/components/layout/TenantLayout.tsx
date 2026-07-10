@@ -29,7 +29,8 @@ const NAV_HREFS: Record<string, { href: string; key: string }[]> = {
   legal: [
     // TODO: 社労士開業（2026年9月）後に復活
     // { href: "/legal", key: "home" },
-    { href: "/legal", key: "services" },
+    // 2026-07-10浦松指示：ヘッダー1番目=報酬額表へ（ラベルはFirestore legal.nav.services を「報酬額表」系に変更）
+    { href: "/legal/ryokin", key: "services" },
     { href: "/legal/about", key: "about" },
     { href: "/legal/column", key: "column" },
     { href: "/contact", key: "contact" },
