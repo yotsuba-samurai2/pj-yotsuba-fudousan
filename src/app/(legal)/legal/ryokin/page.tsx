@@ -1,7 +1,8 @@
 // /legal/ryokin（型C・報酬額表）＝原稿_行政書士 #7（全8区分転記済み・公開用列のみ）
-// JSON-LD＝Service＋PriceSpecification(確定値のみ)＋BreadcrumbList（Breadcrumb部品が出力）。
+// フェーズI多言語化（2026-07-10・浦松承認）：サービス名（rows.name）・金額は日本語のまま＝見出し・列ラベル・免責・導線のみ4ロケール化。
+// en/zh-tw/zh=監修前ドラフト。JSON-LD＝Service＋PriceSpecification(確定値のみ)＋BreadcrumbList（Breadcrumb部品が出力）＝ja固定で不変。
 // 【重要】公開用列のみ／確定値のみ／SPはカード化。金額は「税込の目安」＋実費別＋事案により見積り。
-// C7（→/labor/ryokin）は SR_LAUNCHED=false の間 getCrossLinks が返さない＝非表示（開業日に自動開通）。
+// C7（→/labor/ryokin）は SR_LAUNCHED=false の間 getCrossLinks が返さない＝非表示（開業日に自動開通・リード文はja固定）。
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo";
 import { getRequestLocale } from "@/lib/getRequestLocale";
@@ -11,16 +12,162 @@ import { CtaBand } from "@/components/shared/CtaBand";
 import { CrossLinkBanner } from "@/components/shared/CrossLinkBanner";
 import { getCrossLinks } from "@/lib/cross-links";
 import { SR_LAUNCHED } from "@/lib/shared/office";
+import type { LangCode } from "@/config/languages";
 
 const SITE = "https://luck428.com";
 
+type RyokinCopy = {
+  metaTitle: string;
+  metaDesc: string;
+  crumbHome: string;
+  crumbCurrent: string;
+  h1: string;
+  lead: React.ReactNode;
+  colService: string;
+  colUnit: string;
+  colPrice: string;
+  colJitsuhi: string;
+  toService: string;
+  sectionTitles: [string, string, string, string, string, string, string];
+  footnote: string;
+  procedureLead: string;
+  procedureLink: string;
+};
+
+const COPY: Record<LangCode, RyokinCopy> = {
+  ja: {
+    metaTitle: "報酬額表｜四葉行政書士事務所",
+    metaDesc:
+      "四葉行政書士事務所の報酬額を業務ごとに掲載します。障害福祉サービス指定申請、在留資格・ビザ、相続、会社設立・許認可、補助金申請サポートの料金の目安。事案により変動する場合は個別にお見積りし、ご契約前に書面で明示します。",
+    crumbHome: "ホーム",
+    crumbCurrent: "報酬額表",
+    h1: "報酬額表",
+    lead: (
+      <>
+        四葉行政書士事務所の報酬額を、業務ごとに掲載します。金額は目安であり、<strong>事案の内容により変動する場合は、ご契約前に個別のお見積りを書面でご提示</strong>します。別途、登録免許税・自治体手数料・印紙代・戸籍取得費等の実費が発生します。
+      </>
+    ),
+    colService: "サービス",
+    colUnit: "単位",
+    colPrice: "税込目安",
+    colJitsuhi: "実費",
+    toService: "→ 業務内容",
+    sectionTitles: [
+      "障害福祉サービス（主力）",
+      "国際業務（在留資格・帰化・認証／中国語対応）",
+      "会社設立・法人",
+      "建設業・宅建業",
+      "許認可（産廃・飲食・古物 等）",
+      "相続・遺言・信託",
+      "その他（契約書・補助金）",
+    ],
+    footnote:
+      "※金額はすべて税込の目安です。事案により変動する場合は、ご契約前に書面でお見積りを明示します。確定値のみ構造化データ（PriceSpecification）として出力しています。",
+    procedureLead: "ご依頼の手順 → ",
+    procedureLink: "ご相談から完了までの受任の流れ",
+  },
+  en: {
+    metaTitle: "Fee Schedule｜四葉行政書士事務所",
+    metaDesc:
+      "Fee schedule of Yotsuba Gyoseishoshi Office by service area: disability-welfare service designation, residence status and visas, inheritance, company formation and licensing, and subsidy application support. Where fees vary by case, we provide a written estimate before you sign.",
+    crumbHome: "Home",
+    crumbCurrent: "Fee Schedule",
+    h1: "Fee Schedule",
+    lead: (
+      <>
+        Our fees are listed by service area. Amounts are indicative; <strong>where a fee varies with the specifics of your case, we present an individual written estimate before any engagement</strong>. Disbursements such as registration and license tax, municipal fees, revenue stamps, and family-register retrieval costs are charged separately. Service names are shown in Japanese as they appear in official procedures.
+      </>
+    ),
+    colService: "Service",
+    colUnit: "Unit",
+    colPrice: "Approx. fee (tax incl.)",
+    colJitsuhi: "Disbursements",
+    toService: "→ Service details",
+    sectionTitles: [
+      "Disability-Welfare Services (Core Practice)",
+      "International Services (Residence Status, Naturalization, Authentication / Chinese Support)",
+      "Company & Corporation Formation",
+      "Construction & Real-Estate Business Licensing",
+      "Licenses & Permits (Industrial Waste, Restaurants, Secondhand Goods, etc.)",
+      "Inheritance, Wills & Trusts",
+      "Other (Contracts & Subsidies)",
+    ],
+    footnote:
+      "* All amounts are indicative and include consumption tax. Where fees vary by case, a written estimate is provided before engagement. Only fixed amounts are output as structured data (PriceSpecification).",
+    procedureLead: "How to engage us → ",
+    procedureLink: "How engagement works, from consultation to completion",
+  },
+  "zh-tw": {
+    metaTitle: "報酬額表｜四葉行政書士事務所",
+    metaDesc:
+      "四葉行政書士事務所依業務類別刊載報酬額：障礙福祉服務指定申請、在留資格（簽證）、繼承、公司設立・許認可、補助金申請支援的費用參考。若因案件內容而變動，將於簽約前以書面提出個別估價。",
+    crumbHome: "首頁",
+    crumbCurrent: "報酬額表",
+    h1: "報酬額表",
+    lead: (
+      <>
+        依業務類別刊載本事務所的報酬額。金額為參考值，<strong>若因案件內容而變動，將於簽約前以書面提出個別估價</strong>。另需負擔登錄免許稅、自治體手續費、印紙代、戶籍取得費等實費。服務名稱依日本官方手續原文（日文）表示。
+      </>
+    ),
+    colService: "服務",
+    colUnit: "單位",
+    colPrice: "含稅參考價",
+    colJitsuhi: "實費",
+    toService: "→ 業務內容",
+    sectionTitles: [
+      "障礙福祉服務（主力業務）",
+      "國際業務（在留資格・歸化・認證／中文對應）",
+      "公司設立・法人",
+      "建設業・宅建業（不動產業）",
+      "許認可（產業廢棄物・餐飲・古物等）",
+      "繼承・遺囑・信託",
+      "其他（契約書・補助金）",
+    ],
+    footnote:
+      "※金額皆為含稅參考值。若因案件而變動，將於簽約前以書面明示估價。僅確定金額輸出為結構化資料（PriceSpecification）。",
+    procedureLead: "委託流程 → ",
+    procedureLink: "從諮詢到完成的受任流程",
+  },
+  zh: {
+    metaTitle: "报酬额表｜四葉行政書士事務所",
+    metaDesc:
+      "四葉行政書士事務所按业务类别刊载报酬额：残障福祉服务指定申请、在留资格（签证）、继承、公司设立・许认可、补助金申请支援的费用参考。若因案件内容而变动，将于签约前以书面提出个别估价。",
+    crumbHome: "首页",
+    crumbCurrent: "报酬额表",
+    h1: "报酬额表",
+    lead: (
+      <>
+        按业务类别刊载本事务所的报酬额。金额为参考值，<strong>若因案件内容而变动，将于签约前以书面提出个别估价</strong>。另需承担登录免许税、自治体手续费、印纸代、户籍取得费等实费。服务名称按日本官方手续原文（日文）表示。
+      </>
+    ),
+    colService: "服务",
+    colUnit: "单位",
+    colPrice: "含税参考价",
+    colJitsuhi: "实费",
+    toService: "→ 业务内容",
+    sectionTitles: [
+      "残障福祉服务（主力业务）",
+      "国际业务（在留资格・归化・认证／中文对应）",
+      "公司设立・法人",
+      "建设业・宅建业（不动产业）",
+      "许认可（产业废弃物・餐饮・古物等）",
+      "继承・遗嘱・信托",
+      "其他（合同・补助金）",
+    ],
+    footnote:
+      "※金额均为含税参考值。若因案件而变动，将于签约前以书面明示估价。仅确定金额输出为结构化数据（PriceSpecification）。",
+    procedureLead: "委托流程 → ",
+    procedureLink: "从咨询到完成的受任流程",
+  },
+};
+
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getRequestLocale();
+  const c = COPY[locale] ?? COPY.ja;
   return buildPageMetadata({
     businessKey: "legal",
-    title: "報酬額表｜四葉行政書士事務所",
-    description:
-      "四葉行政書士事務所の報酬額を業務ごとに掲載します。障害福祉サービス指定申請、在留資格・ビザ、相続、会社設立・許認可、補助金申請サポートの料金の目安。事案により変動する場合は個別にお見積りし、ご契約前に書面で明示します。",
+    title: c.metaTitle,
+    description: c.metaDesc,
     path: "/legal/ryokin",
     locale,
     absoluteTitle: true,
@@ -134,20 +281,20 @@ const SECTIONS: Section[] = [
     rows: [
       { name: "内容証明郵便作成", unit: "1件", price: "33,000円（郵便料別途）", value: 33000 },
       { name: "離婚協議書作成", unit: "1件", price: "50,000円（公正証書は加算・公証人手数料別途）", value: 50000 },
-      { name: "補助金申請サポート（相談・申請代行）", unit: "—", price: "相談は初回無料・以降30分5,500円／申請代行は別途お見積り。※雇用関係助成金は社労士独占" },
+      { name: "補助金申請サポート（相談・申請代行）", unit: "—", price: "相談は初回無料・以降30分5,500円／申請代行は別途お見積り" },
     ],
   },
 ];
 
-function FeeTable({ s }: { s: Section }) {
+function FeeTable({ s, title, c }: { s: Section; title: string; c: RyokinCopy }) {
   return (
     <div>
       <h2 className="border-l-4 border-primary pl-2 font-serif text-lg font-semibold text-ink">
-        {s.title}
+        {title}
         {s.href && (
           <>
             {" "}
-            <Link href={s.href} className="text-sm font-normal text-primary underline">→ 業務内容</Link>
+            <Link href={s.href} className="text-sm font-normal text-primary underline">{c.toService}</Link>
           </>
         )}
       </h2>
@@ -155,10 +302,10 @@ function FeeTable({ s }: { s: Section }) {
       <table className="mt-3 hidden w-full border-collapse text-sm sm:table">
         <thead>
           <tr className="bg-primary-tint text-left">
-            <th className="border border-border px-3 py-2">サービス</th>
-            <th className="border border-border px-3 py-2 whitespace-nowrap">単位</th>
-            <th className="border border-border px-3 py-2 whitespace-nowrap">税込目安</th>
-            {s.hasJitsuhi && <th className="border border-border px-3 py-2 whitespace-nowrap">実費</th>}
+            <th className="border border-border px-3 py-2">{c.colService}</th>
+            <th className="border border-border px-3 py-2 whitespace-nowrap">{c.colUnit}</th>
+            <th className="border border-border px-3 py-2 whitespace-nowrap">{c.colPrice}</th>
+            {s.hasJitsuhi && <th className="border border-border px-3 py-2 whitespace-nowrap">{c.colJitsuhi}</th>}
           </tr>
         </thead>
         <tbody className="text-text-muted">
@@ -178,9 +325,9 @@ function FeeTable({ s }: { s: Section }) {
           <li key={i} className="rounded-lg border border-border bg-surface p-3 text-sm">
             <div className="font-medium text-ink">{r.name}</div>
             <div className="mt-1 flex flex-wrap gap-x-3 text-text-muted">
-              <span>単位：{r.unit}</span>
-              <span>税込目安：{r.price}</span>
-              {s.hasJitsuhi && <span>実費：{r.jitsuhi ?? "—"}</span>}
+              <span>{c.colUnit}：{r.unit}</span>
+              <span>{c.colPrice}：{r.price}</span>
+              {s.hasJitsuhi && <span>{c.colJitsuhi}：{r.jitsuhi ?? "—"}</span>}
             </div>
           </li>
         ))}
@@ -214,47 +361,45 @@ function jsonLd() {
   };
 }
 
-export default function Page() {
+export default async function Page() {
+  const locale = await getRequestLocale();
+  const c = COPY[locale] ?? COPY.ja;
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()) }} />
-      <Breadcrumb items={[{ name: "ホーム", href: "/legal" }, { name: "報酬額表" }]} />
+      <Breadcrumb items={[{ name: c.crumbHome, href: "/legal" }, { name: c.crumbCurrent }]} />
 
       <main className="mx-auto max-w-3xl px-4 pb-16">
         <header className="pt-2">
-          <h1 className="font-serif text-2xl font-semibold text-ink sm:text-3xl">報酬額表</h1>
-          <p className="mt-3 leading-relaxed text-text">
-            四葉行政書士事務所の報酬額を、業務ごとに掲載します。金額は目安であり、<strong>事案の内容により変動する場合は、ご契約前に個別のお見積りを書面でご提示</strong>します。別途、登録免許税・自治体手数料・印紙代・戸籍取得費等の実費が発生します。
-          </p>
+          <h1 className="font-serif text-2xl font-semibold text-ink sm:text-3xl">{c.h1}</h1>
+          <p className="mt-3 leading-relaxed text-text">{c.lead}</p>
         </header>
 
         <div className="mt-6 space-y-8">
-          {SECTIONS.map((s) => (
-            <FeeTable key={s.title} s={s} />
+          {SECTIONS.map((s, i) => (
+            <FeeTable key={s.title} s={s} title={c.sectionTitles[i] ?? s.title} c={c} />
           ))}
         </div>
 
-        <p className="mt-6 text-xs leading-relaxed text-text-muted">
-          ※金額はすべて税込の目安です。事案により変動する場合は、ご契約前に書面でお見積りを明示します。確定値のみ構造化データ（PriceSpecification）として出力しています。
-        </p>
+        <p className="mt-6 text-xs leading-relaxed text-text-muted">{c.footnote}</p>
 
         <p className="mt-4 text-sm">
-          ご依頼の手順 →{" "}
+          {c.procedureLead}
           <Link href="/legal/nagare" className="text-primary underline">
-            ご相談から完了までの受任の流れ
+            {c.procedureLink}
           </Link>
         </p>
 
-        {/* C7（→/labor/ryokin）＝開業日開通（SR_LAUNCHED） */}
-        {getCrossLinks("/legal/ryokin", SR_LAUNCHED).map((c) => (
+        {/* C7（→/labor/ryokin）＝開業日開通（SR_LAUNCHED・リード文はja固定＝開業時に多言語化判断） */}
+        {getCrossLinks("/legal/ryokin", SR_LAUNCHED).map((cl) => (
           <CrossLinkBanner
-            key={c.id}
-            link={c}
+            key={cl.id}
+            link={cl}
             lead="労務・処遇改善加算・雇用関係助成金の料金は、四葉社会保険労務士事務所（別事業体）のページへ。"
           />
         ))}
 
-        {/* 署名（E-E-A-T・原稿サイト共通） */}
+        {/* 署名（E-E-A-T・原稿サイト共通・ja固定＝著者情報の訳はフェーズI後半で統一判断） */}
         <aside className="mt-8 flex items-start gap-3 rounded-xl border border-border bg-surface p-4">
           <img
             src="/staff/uramatsu-square.webp"
