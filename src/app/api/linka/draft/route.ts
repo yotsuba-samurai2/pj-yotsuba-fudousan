@@ -8,6 +8,8 @@ import { localDraft, NAMEISH } from "@/lib/linka/demo";
 import type { LinkaDraftResult, Summary } from "@/lib/linka/types";
 
 export const runtime = "nodejs";
+// /api/linka と同じくAI呼び出しのタイムアウト余裕（Vercel既定10sより延長）
+export const maxDuration = 30;
 
 const MODEL = process.env.LINKA_MODEL_MEMBER || "claude-haiku-4-5-20251001";
 const REQUIRED_PHRASE = "ご返答は任意で、お断りいただいても差し支えありません";
