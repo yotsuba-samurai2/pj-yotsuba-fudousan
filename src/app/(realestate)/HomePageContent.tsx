@@ -58,21 +58,21 @@ const COPY: Record<LangCode, TopCopy> = {
     ),
     pillars: [
       {
-        tag: "柱A",
+        tag: "承継するには？",
         title: "相続した不動産、どうする？",
         body: "出口は「管理・活用・売却」の3つ。期限のある相続登記から出口の選び方まで、1本のガイドに整理しました。",
         anchor: "文京区で不動産を相続したら——完全ガイド",
       },
       {
-        tag: "柱B",
+        tag: "物件を探すには？",
         title: "投資用・事業用の不動産を探す",
         body: "グループホーム物件・社宅・収益物件を、事業の目的から逆算してご提案します。",
         anchor: "投資用・事業用不動産",
       },
       {
-        tag: "多言語",
+        tag: "日本で暮らすには？",
         title: "外国人のお部屋探し",
-        body: "日本での家探しを、母語で。",
+        body: "必要な書類を集めて、翻訳するサポートもさせていただきます。",
         anchor: "外国人・多言語のお部屋探し",
       },
     ],
@@ -137,21 +137,21 @@ const COPY: Record<LangCode, TopCopy> = {
     ),
     pillars: [
       {
-        tag: "Pillar A",
+        tag: "Inheriting a property?",
         title: "Inherited a property—now what?",
         body: "Your three exits are managing, utilizing, or selling. One guide covers everything from the registration deadline to choosing your exit.",
         anchor: "Inheriting Property in Bunkyo: The Complete Guide",
       },
       {
-        tag: "Pillar B",
+        tag: "Looking for a property?",
         title: "Find investment & business-use property",
         body: "Group-home properties, company housing, and income properties—proposed by working backward from your business goals.",
         anchor: "Investment & Business-Use Real Estate",
       },
       {
-        tag: "Multilingual",
+        tag: "Living in Japan?",
         title: "Room hunting for international residents",
-        body: "House hunting in Japan, in your own language.",
+        body: "We also help you gather and translate the documents you need.",
         anchor: "Multilingual Room-Hunting Support",
       },
     ],
@@ -217,21 +217,21 @@ const COPY: Record<LangCode, TopCopy> = {
     ),
     pillars: [
       {
-        tag: "主軸A",
+        tag: "如何繼承不動產？",
         title: "繼承的不動產，該怎麼辦？",
         body: "出路有「管理・活用・出售」三種。從有期限的繼承登記到出路的選擇，整理成一份完整指南。",
         anchor: "在文京區繼承不動產——完整指南",
       },
       {
-        tag: "主軸B",
+        tag: "如何尋找物件？",
         title: "尋找投資用・事業用不動產",
         body: "團體家屋物件、員工宿舍、收益物件——從事業目的反向推算，為您提案。",
         anchor: "投資用・事業用不動產",
       },
       {
-        tag: "多語言",
+        tag: "如何在日本生活？",
         title: "外國人找房",
-        body: "在日本找房，用您的母語。",
+        body: "也協助您蒐集所需文件並提供翻譯支援。",
         anchor: "外國人・多語言找房服務",
       },
     ],
@@ -296,21 +296,21 @@ const COPY: Record<LangCode, TopCopy> = {
     ),
     pillars: [
       {
-        tag: "主轴A",
+        tag: "如何继承不动产？",
         title: "继承的不动产，该怎么办？",
         body: "出路有“管理・活用・出售”三种。从有期限的继承登记到出路的选择，整理成一份完整指南。",
         anchor: "在文京区继承不动产——完整指南",
       },
       {
-        tag: "主轴B",
+        tag: "如何寻找房源？",
         title: "寻找投资用・事业用不动产",
         body: "团体家屋物件、员工宿舍、收益物件——从事业目的反向推算，为您提案。",
         anchor: "投资用・事业用不动产",
       },
       {
-        tag: "多语言",
+        tag: "如何在日本生活？",
         title: "外国人找房",
-        body: "在日本找房，用您的母语。",
+        body: "也协助您收集所需文件并提供翻译支持。",
         anchor: "外国人・多语言找房服务",
       },
     ],
