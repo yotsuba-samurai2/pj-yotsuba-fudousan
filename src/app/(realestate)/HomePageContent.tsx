@@ -398,7 +398,7 @@ export default async function HomePageContent() {
             fetchPriority="high"
           />
           <div className="absolute inset-0 flex items-center">
-            <div className="hero-fade-in m-4 max-w-2xl rounded-2xl bg-white/85 p-5 backdrop-blur-sm sm:m-8 sm:p-7">
+            <div className="hero-fade-in m-4 max-w-2xl rounded-2xl bg-white/50 p-5 backdrop-blur-sm sm:m-8 sm:p-7">
               <h1 className="font-serif text-2xl font-bold leading-snug text-ink sm:text-3xl">{c.h1}</h1>
               {tagline && (
                 <p className="mt-1.5 text-xs font-medium tracking-wide text-primary-dark sm:text-sm">

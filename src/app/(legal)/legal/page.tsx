@@ -53,7 +53,7 @@ export default function LegalPage() {
             fetchPriority="high"
           />
           <div className="absolute inset-0 flex items-center">
-            <div className="m-4 max-w-xl rounded-2xl bg-white/80 p-5 backdrop-blur-sm sm:m-8 sm:p-7">
+            <div className="m-4 max-w-xl rounded-2xl bg-white/50 p-5 backdrop-blur-sm sm:m-8 sm:p-7">
               <h1 className="font-serif text-2xl font-bold text-ink sm:text-3xl">四葉行政書士事務所</h1>
               <p className="mt-3 text-sm leading-relaxed text-text sm:text-base">
                 <strong>東京都文京区小日向の行政書士事務所です。</strong>複雑な手続きを、整理して前に進める。——障害福祉サービスの指定申請、在留資格・ビザ、相続、会社設立、補助金申請を、元毎日新聞中国総局長の行政書士がお手伝いします。中国語・英語での相談にも対応します。
