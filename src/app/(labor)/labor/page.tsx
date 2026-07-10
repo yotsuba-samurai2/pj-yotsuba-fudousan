@@ -44,8 +44,9 @@ export default function LaborTopPage() {
             className="h-[52vw] max-h-[440px] w-full object-cover sm:h-auto"
             fetchPriority="high"
           />
-          <div className="absolute inset-0 flex items-center">
-            <div className="m-4 max-w-xl rounded-2xl bg-white/80 p-5 backdrop-blur-sm sm:m-8 sm:p-7">
+          {/* SP・小タブレット＝縦積み（クリップ/ヘッダーかぶり防止）／md+＝オーバーレイ（透明度は不動産・行政書士と統一） */}
+          <div className="md:absolute md:inset-0 md:flex md:items-center">
+            <div className="bg-surface p-5 md:m-8 md:max-w-xl md:rounded-2xl md:bg-white/30 md:p-7 md:backdrop-blur-sm">
               <h1 className="font-serif text-2xl font-bold text-ink sm:text-3xl">四葉社会保険労務士事務所</h1>
               <p className="mt-3 text-sm leading-relaxed text-text sm:text-base">
                 <strong>東京都文京区小日向の社会保険労務士事務所です。</strong>人の手続きを、事業の力に。——障害福祉・介護事業所の労務管理、処遇改善加算、社会保険手続き、雇用関係助成金、外国人介護人材の労務を、元新聞記者の社労士がお手伝いします。
