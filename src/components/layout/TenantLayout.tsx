@@ -584,7 +584,7 @@ export function TenantLayoutShell({
     <div style={tenantThemeVars(businessKey)}>
       <TenantHeader businessKey={businessKey} />
       {/* pb: SPの固定バー（MobileStickyBar）に本文が隠れないための余白 */}
-      <main id="main-content" className="relative z-[1] pb-[64px] md:pb-0">
+      <main id="main-content" className="relative z-[1] pt-16 pb-[64px] sm:pt-20 md:pb-0">
         {children}
       </main>
       <TenantFooter businessKey={businessKey} />
