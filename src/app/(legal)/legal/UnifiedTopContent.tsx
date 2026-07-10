@@ -45,7 +45,7 @@ export default function UnifiedTopContent() {
       {/* ─── Hero ─── */}
       <section className="relative grid min-h-screen place-content-center overflow-hidden border-b border-border pt-24 pb-16 sm:pt-32 sm:pb-32 md:pt-40 md:pb-40">
         <div
-          className="pointer-events-none absolute inset-0 bg-gradient-to-br from-primary/[0.03] via-transparent to-accent/[0.03]"
+          className="pointer-events-none absolute inset-0 bg-primary/[0.03]"
           aria-hidden="true"
         />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

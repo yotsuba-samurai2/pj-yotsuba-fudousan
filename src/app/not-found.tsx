@@ -42,7 +42,7 @@ export default async function NotFound() {
   return (
     <main className="relative flex min-h-screen flex-col items-center justify-center px-4 py-20">
       <div
-        className="pointer-events-none absolute inset-0 bg-gradient-to-br from-primary/[0.03] via-transparent to-accent/[0.03]"
+        className="pointer-events-none absolute inset-0 bg-primary/[0.03]"
         aria-hidden="true"
       />
 

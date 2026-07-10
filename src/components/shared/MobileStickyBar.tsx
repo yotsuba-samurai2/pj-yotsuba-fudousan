@@ -1,0 +1,37 @@
+// MobileStickyBar — SP（モバイル）画面下の固定バー：LINE ／ お問い合わせ ／ 電話 ／ 地図
+// md未満のみ表示（md:hidden）。高さ≥56px・各タッチ領域≥44px（DESIGN.md）。
+// LINEのみ主色、他は中立。position:fixed。ページ下部の被り回避に本文側へ pb を足す運用（TenantLayoutShell）。
+import Link from "next/link";
+import { LINE_URL, OFFICE, TENANT, type BusinessKey } from "@/lib/shared/office";
+
+type Props = { businessKey: BusinessKey };
+
+export function MobileStickyBar({ businessKey }: Props) {
+  const t = TENANT[businessKey];
+  const item =
+    "flex flex-1 flex-col items-center justify-center gap-0.5 text-[11px] font-medium min-h-[56px]";
+  return (
+    <nav
+      aria-label="モバイル固定メニュー"
+      className="fixed inset-x-0 bottom-0 z-40 flex border-t border-border bg-surface md:hidden"
+      style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
+    >
+      <a href={LINE_URL} target="_blank" rel="noreferrer" className={`${item} bg-primary text-white`}>
+        <span aria-hidden>💬</span>
+        LINE
+      </a>
+      <Link href={t.contactHref} className={`${item} text-text-muted`}>
+        <span aria-hidden>✉️</span>
+        お問い合わせ
+      </Link>
+      <a href={OFFICE.telHref} className={`${item} text-text-muted`}>
+        <span aria-hidden>📞</span>
+        電話
+      </a>
+      <a href={OFFICE.mapUrl} target="_blank" rel="noreferrer" className={`${item} text-text-muted`}>
+        <span aria-hidden>📍</span>
+        地図
+      </a>
+    </nav>
+  );
+}

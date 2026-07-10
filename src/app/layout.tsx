@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Zen_Kaku_Gothic_New } from "next/font/google";
+import { Zen_Kaku_Gothic_New, Noto_Serif_JP, Noto_Sans_JP } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { TranslationProvider } from "@/contexts/TranslationContext";
@@ -11,6 +11,21 @@ import { fetchAllTranslationsFromFirestore } from "@/lib/getTranslationData";
 
 const zenKaku = Zen_Kaku_Gothic_New({
   variable: "--font-zen-kaku-gothic-new",
+  weight: ["400", "500", "700"],
+  subsets: ["latin"],
+  display: "swap",
+});
+
+// DESIGN.md §3：見出し＝Noto Serif JP（editorial）／本文・UI＝Noto Sans JP
+const notoSerifJP = Noto_Serif_JP({
+  variable: "--font-noto-serif-jp",
+  weight: ["600", "700"],
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const notoSansJP = Noto_Sans_JP({
+  variable: "--font-noto-sans-jp",
   weight: ["400", "500", "700"],
   subsets: ["latin"],
   display: "swap",
@@ -55,7 +70,7 @@ export default async function RootLayout({
   }
 
   return (
-    <html lang={locale} className={`${zenKaku.variable}`}>
+    <html lang={locale} className={`${zenKaku.variable} ${notoSerifJP.variable} ${notoSansJP.variable}`}>
       <body className="relative bg-surface text-text antialiased">
         <ScatteredIcons />
         <LanguageProvider initialLocale={locale}>

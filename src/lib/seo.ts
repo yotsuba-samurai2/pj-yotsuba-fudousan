@@ -9,8 +9,11 @@ export const SITE_URL = "https://luck428.com";
 export const BUSINESS_URLS: Record<string, string> = {
   realestate: "https://luck428.com",
   legal: "https://luck428.com/legal",
-  // TODO: 社労士開業（2026年9月）後に復活（/labor維持＝2026-07-09浦松決定。旧yotsuba-labor.comは使わない）
-  // labor: "https://luck428.com/labor",
+  // 社労士（/labor維持＝2026-07-09浦松決定。旧yotsuba-labor.comは使わない）：
+  // SR_LAUNCHED=true（開業日）まで登録しない＝robots.tsのsitemap一覧等へ露出しない。
+  ...(process.env.NEXT_PUBLIC_SR_LAUNCHED === "true"
+    ? { labor: "https://luck428.com/labor" }
+    : {}),
 };
 
 export const SHARED_ORG_INFO = {
@@ -238,18 +241,22 @@ export const BUSINESS_SEO: Record<string, BusinessSEOConfig> = {
     ogImage: "",
     columnBasePath: "/legal/column",
   },
-  /* TODO: 社労士開業（2026年9月）後に復活
-  labor: {
-    url: "https://yotsuba-labor.com",
-    name: "四葉社会保険労務士事務所",
-    legalName: "四葉社会保険労務士事務所",
-    description:
-      "社会保険・労務管理・助成金申請をトータルサポートする社労士事務所。就業規則作成、労使トラブル防止まで。不動産・行政書士と連携し企業の人事・労務をワンストップ支援。",
-    schemaType: "ProfessionalService",
-    ogImage: "/yotsuba/labor-square.png",
-    columnBasePath: "/labor/column",
-  },
-  */
+  // 社労士：SR_LAUNCHED=true（開業日）までキー自体を登録しない（名称・説明の露出防止）
+  ...(process.env.NEXT_PUBLIC_SR_LAUNCHED === "true"
+    ? {
+        labor: {
+          url: "https://luck428.com/labor",
+          name: "四葉社会保険労務士事務所",
+          legalName: "四葉社会保険労務士事務所",
+          // 原稿_社労士サイト_v1.0 #1 の確定meta description
+          description:
+            "東京都文京区小日向・茗荷谷駅徒歩5分の四葉社会保険労務士事務所。障害福祉・介護事業所の労務管理、処遇改善加算、社会保険手続き、雇用関係助成金、外国人介護人材の労務に対応。元新聞記者の社労士が、複雑な労務を整理してお手伝いします。",
+          schemaType: "ProfessionalService",
+          ogImage: "",
+          columnBasePath: "/labor/column",
+        },
+      }
+    : {}),
 };
 
 // ── Helpers ──
