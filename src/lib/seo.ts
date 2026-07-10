@@ -18,8 +18,8 @@ export const BUSINESS_URLS: Record<string, string> = {
 };
 
 export const SHARED_ORG_INFO = {
-  name: "四葉パートナーズ",
-  nameEn: "YOTSUBA PARTNERS",
+  name: "四葉グループ",
+  nameEn: "YOTSUBA GROUP",
   representative: "浦松 丈二",
   representativeEn: "Joji Uramatsu",
   postalCode: "112-0006",
@@ -149,7 +149,7 @@ export const PERSON_JSONLD = {
     },
     {
       "@type": "Organization",
-      name: "士業ドットコムSAMURAI",
+      name: "士業ドットコム",
       url: "https://www.samurai.co.jp/",
     },
   ],
@@ -226,7 +226,7 @@ export const BUSINESS_SEO: Record<string, BusinessSEOConfig> = {
     name: "四葉不動産",
     legalName: "四葉不動産株式会社",
     description:
-      "元新聞記者が4カ国での在住経験を活かして立ち上げた、東京都文京区にある不動産屋。賃貸・売買・管理から相続不動産まで、多言語（日本語・英語・中国語）対応と専門家ネットワークで住まい探しから契約・法務までワンストップ対応。初回相談は無料、お気軽にどうぞ。",
+      "元新聞記者が4カ国での在住経験を活かして立ち上げた、東京都文京区にある不動産屋。賃貸・売買・管理から相続不動産まで、多言語（日本語・英語・中国語繁体字・中国語簡体字）対応と専門家ネットワークで住まい探しから契約・法務までワンストップ対応。初回相談は無料、お気軽にどうぞ。",
     schemaType: "RealEstateAgent",
     ogImage: "/og.png",
     columnBasePath: "/column",
@@ -362,7 +362,7 @@ export function buildPageMetadata({
     title,
     description,
     url,
-    siteName: biz?.name ?? "四葉パートナーズ",
+    siteName: biz?.name ?? "四葉グループ",
     locale: OG_LOCALES[locale] ?? "ja_JP",
     type,
     ...(hasImage

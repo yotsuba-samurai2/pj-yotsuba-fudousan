@@ -105,6 +105,6 @@ export function getBusinessByPath(pathname: string) {
 }
 
 export const groupBrand = {
-  name: "四葉パートナーズ",
-  nameEn: "YOTSUBA PARTNERS",
+  name: "四葉グループ",
+  nameEn: "YOTSUBA GROUP",
 } as const;

@@ -42,7 +42,7 @@ const COPY: Record<LangCode, FaqPageCopy> = {
       },
       {
         q: "中国語や英語で相談できますか？",
-        a: "できます。四葉行政書士事務所の代表・浦松丈二は元毎日新聞中国総局長で、日本語・英語・中国語での相談に対応します。",
+        a: "できます。四葉行政書士事務所の代表・浦松丈二は元毎日新聞中国総局長で、日本語・英語・中国語（繁体字・簡体字）での相談に対応します。",
       },
       {
         q: "障害福祉サービスの指定申請を頼めますか？",
@@ -84,7 +84,7 @@ const COPY: Record<LangCode, FaqPageCopy> = {
       },
       {
         q: "Can I consult in Chinese or English?",
-        a: "Yes. 浦松丈二 (Joji Uramatsu), the representative of 四葉行政書士事務所 and a former China General Bureau Chief of the Mainichi Shimbun, handles consultations in Japanese, English, and Chinese.",
+        a: "Yes. 浦松丈二 (Joji Uramatsu), the representative of 四葉行政書士事務所 and a former China General Bureau Chief of the Mainichi Shimbun, handles consultations in Japanese, English, Traditional Chinese, and Simplified Chinese.",
       },
       {
         q: "Can you handle designation applications for disability-welfare services?",
@@ -126,7 +126,7 @@ const COPY: Record<LangCode, FaqPageCopy> = {
       },
       {
         q: "可以用中文或英文諮詢嗎？",
-        a: "可以。四葉行政書士事務所代表・浦松丈二曾任每日新聞中國總局長，可用日文、英文、中文提供諮詢。",
+        a: "可以。四葉行政書士事務所代表・浦松丈二曾任每日新聞中國總局長，可用日文、英文、中文（繁體・簡體）提供諮詢。",
       },
       {
         q: "可以委託障礙福祉服務的指定申請嗎？",
@@ -168,7 +168,7 @@ const COPY: Record<LangCode, FaqPageCopy> = {
       },
       {
         q: "可以用中文或英文咨询吗？",
-        a: "可以。四葉行政書士事務所代表・浦松丈二曾任每日新闻中国总局长，可用日语、英语、中文提供咨询。",
+        a: "可以。四葉行政書士事務所代表・浦松丈二曾任每日新闻中国总局长，可用日语、英语、中文（繁体・简体）提供咨询。",
       },
       {
         q: "可以委托残障福祉服务的指定申请吗？",

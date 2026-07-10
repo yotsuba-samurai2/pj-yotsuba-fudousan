@@ -41,7 +41,7 @@ export default function AdminLoginPage() {
         <div className="mb-8 flex flex-col items-center">
           <Image
             src="/yotsuba/realestate-square.png"
-            alt="四葉パートナーズ"
+            alt="四葉グループ"
             width={80}
             height={80}
             className="h-20 w-20"
@@ -113,7 +113,7 @@ export default function AdminLoginPage() {
 
         {/* Footer */}
         <p className="mt-6 text-center text-[10px] tracking-wider text-text-muted/50">
-          YOTSUBA PARTNERS
+          YOTSUBA GROUP
         </p>
       </div>
     </div>

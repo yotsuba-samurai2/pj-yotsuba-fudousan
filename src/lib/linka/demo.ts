@@ -149,7 +149,7 @@ export function localConcierge(q: string, siteKey: "realestate" | "legal" | "lab
     type: "concierge", demo: true,
     kento: terms.length ? terms.slice(0, 4) : ["(見当を絞れませんでした)"],
     message: escalate
-      ? "お話の内容は、当サイトの範囲を超えるかもしれません。見当をお示ししたうえで、中立の士業ドットコムSAMURAIへおつなぎします。これは見当であって法的な判断ではありません。"
+      ? "お話の内容は、当サイトの範囲を超えるかもしれません。見当をお示ししたうえで、中立の士業ドットコムへおつなぎします。これは見当であって法的な判断ではありません。"
       : "お話の内容から、関わりそうな分野の見当と、当サイトのご案内先をお示しします。これは見当であって法的な判断ではありません。",
     services, escalate, escalateReason: escalate ? conf.escalateNote : "",
     columns: resolveColumnCards(matchColumns(q)),

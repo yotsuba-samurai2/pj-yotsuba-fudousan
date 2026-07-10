@@ -27,7 +27,7 @@ export function FacilitatorClient() {
           <LinkaAvatar size={48} />
           <div className="min-w-0 flex-1">
             <div className="text-[10px] uppercase tracking-widest text-white/50">AI Facilitator · LINKA</div>
-            <div className="text-sm font-semibold text-white">士業ドットコム SAMURAI</div>
+            <div className="text-sm font-semibold text-white">士業ドットコム</div>
           </div>
         </div>
         <div className="mx-auto max-w-2xl px-5">
