@@ -53,7 +53,7 @@ const COPY: Record<LangCode, ServicesCopy> = {
   ja: {
     metaTitle: "サービス｜仲介の前に「材料」を届ける不動産コンサルティング",
     metaDesc:
-      "四葉不動産株式会社のサービス案内。物件の売り込みではなく、売るべきか・買うべきか・動くべきかの判断材料をそろえる、文京区・小日向のコンサルティング型不動産会社です。相続不動産・事業用/投資用・外国人の住まいの3領域を、診断→選択肢→実行の3ステップで。相談・診断は無料です。",
+      "四葉不動産株式会社のサービス案内。物件の売り込みではなく、売るべきか・買うべきか・動くべきかの判断材料をそろえる、文京区・小日向のコンサルティング型不動産会社です。相続不動産・事業用/投資用・外国人の住まいの3領域を、診断→選択肢→実行の3ステップで。初回のご相談・診断は無料です。",
     breadcrumbHome: "ホーム",
     breadcrumbCurrent: "サービス",
     h1: "売る前に、考える。借りる前に、確かめる。",
@@ -91,7 +91,7 @@ const COPY: Record<LangCode, ServicesCopy> = {
         ],
       },
       // 【要確認】相談無料の範囲＝現行運用（/faqの媒介を伴わないコンサル料金）と一致するか（原稿§1注記の浦松確認待ち）
-      note: "※「動かない（売らない・買わない）」が最善なら、そのままお伝えします。仲介手数料は成約時のみ・相談だけで費用は生じません。",
+      note: "※「動かない（売らない・買わない）」が最善なら、そのままお伝えします。仲介手数料は成約時のみ・初回のご相談は無料です。",
     },
     fields: {
       heading: "四葉のコンサルティング3領域",
@@ -118,11 +118,11 @@ const COPY: Record<LangCode, ServicesCopy> = {
     },
     flow: {
       heading: "進め方——診断 → 選択肢 → 実行",
-      lead: "急かしません。費用が発生するのは、実行段階だけです。",
+      lead: "急かしません。初回のご相談は無料です。",
       steps: [
         {
           title: "診断",
-          note: "（無料）",
+          note: "（初回無料）",
           body: "まずLINKA（AIコンシェルジュ）またはLINEで一言。状況を伺い、論点を整理します。",
         },
         {
@@ -138,7 +138,7 @@ const COPY: Record<LangCode, ServicesCopy> = {
     pricing: {
       heading: "料金の考え方",
       // 【要確認】料金詳細は/accessの料金表と整合させる（原稿§4の浦松確認待ち）
-      body: "相談・診断は無料。費用が発生するのは実行段階（仲介手数料等・法定上限内）だけです。見積りは着手前に書面で明示し、書面にない費用は請求しません。",
+      body: "初回のご相談・診断は無料。2回目以降の継続的なご相談は、事前のご同意のうえ30分5,500円（税込）で承ります。実行段階の費用（仲介手数料等・法定上限内）を含め、見積りは着手前に書面で明示し、書面にない費用は請求しません。",
     },
     group: {
       heading: "士業グループとの連携",
@@ -149,7 +149,7 @@ const COPY: Record<LangCode, ServicesCopy> = {
   en: {
     metaTitle: "Services | Real Estate Consulting That Delivers the Facts Before the Deal",
     metaDesc:
-      "Services of Yotsuba Real Estate Co., Ltd., a consulting-style real estate company in Kohinata, Bunkyo, Tokyo. Instead of pushing properties, we prepare the material you need to decide whether to sell, buy, or move at all. Three fields—inherited property, business & investment use, and housing for international residents—in three steps: diagnosis, options, execution. Consultation and diagnosis are free.",
+      "Services of Yotsuba Real Estate Co., Ltd., a consulting-style real estate company in Kohinata, Bunkyo, Tokyo. Instead of pushing properties, we prepare the material you need to decide whether to sell, buy, or move at all. Three fields—inherited property, business & investment use, and housing for international residents—in three steps: diagnosis, options, execution. Your first consultation and diagnosis are free.",
     breadcrumbHome: "Home",
     breadcrumbCurrent: "Services",
     h1: "Think before you sell. Check before you rent.",
@@ -187,7 +187,7 @@ const COPY: Record<LangCode, ServicesCopy> = {
           { label: "Information", value: "Verified facts, good and bad alike" },
         ],
       },
-      note: "Note: If “not moving (not selling, not buying)” is the best answer, that is exactly what we will tell you. Brokerage fees arise only when a deal closes; consultation alone costs nothing.",
+      note: "Note: If “not moving (not selling, not buying)” is the best answer, that is exactly what we will tell you. Brokerage fees arise only when a deal closes; your first consultation is free.",
     },
     fields: {
       heading: "Yotsuba's three consulting fields",
@@ -214,11 +214,11 @@ const COPY: Record<LangCode, ServicesCopy> = {
     },
     flow: {
       heading: "How we proceed: Diagnosis → Options → Execution",
-      lead: "No rushing. Costs arise only at the execution stage.",
+      lead: "No rushing. Your first consultation is free.",
       steps: [
         {
           title: "Diagnosis",
-          note: "(free)",
+          note: "(first session free)",
           body: "Start with a single line via LINKA (our AI concierge) or LINE. We listen to your situation and sort out the issues.",
         },
         {
@@ -233,7 +233,7 @@ const COPY: Record<LangCode, ServicesCopy> = {
     },
     pricing: {
       heading: "How fees work",
-      body: "Consultation and diagnosis are free. Costs arise only at the execution stage (brokerage fees, etc., within the statutory limits). Estimates are set out in writing before we begin, and we never bill anything that is not in writing.",
+      body: "Your first consultation and diagnosis are free; follow-up consultations are ¥5,500 (tax incl.) per 30 minutes, only with your prior consent. Costs arise at the execution stage (brokerage fees, etc., within the statutory limits). Estimates are set out in writing before we begin, and we never bill anything that is not in writing.",
     },
     group: {
       heading: "Working with our professional group",
@@ -244,7 +244,7 @@ const COPY: Record<LangCode, ServicesCopy> = {
   "zh-tw": {
     metaTitle: "服務｜在仲介之前，先送上「材料」的不動產顧問",
     metaDesc:
-      "四葉不動産株式会社的服務介紹。不是推銷物件，而是備齊「該賣・該買・該不該行動」的判斷材料——位於文京區・小日向的顧問型不動產公司。繼承不動產・事業用/投資用・外國人居住三大領域，以診斷→選項→執行三步驟進行。諮詢・診斷免費。",
+      "四葉不動産株式会社的服務介紹。不是推銷物件，而是備齊「該賣・該買・該不該行動」的判斷材料——位於文京區・小日向的顧問型不動產公司。繼承不動產・事業用/投資用・外國人居住三大領域，以診斷→選項→執行三步驟進行。初次諮詢・診斷免費。",
     breadcrumbHome: "首頁",
     breadcrumbCurrent: "服務",
     h1: "出售之前，先思考。承租之前，先確認。",
@@ -281,7 +281,7 @@ const COPY: Record<LangCode, ServicesCopy> = {
           { label: "資訊", value: "查證過的事實，優缺點並陳" },
         ],
       },
-      note: "※若「不行動（不賣・不買）」才是最佳解，我們會如實告訴您。仲介手續費僅於成交時發生；僅諮詢不會產生費用。",
+      note: "※若「不行動（不賣・不買）」才是最佳解，我們會如實告訴您。仲介手續費僅於成交時發生；初次諮詢免費。",
     },
     fields: {
       heading: "四葉的顧問服務3領域",
@@ -308,11 +308,11 @@ const COPY: Record<LangCode, ServicesCopy> = {
     },
     flow: {
       heading: "進行方式——診斷 → 選項 → 執行",
-      lead: "我們不催促。費用只在執行階段發生。",
+      lead: "我們不催促。初次諮詢免費。",
       steps: [
         {
           title: "診斷",
-          note: "（免費）",
+          note: "（初次免費）",
           body: "先透過LINKA（AI禮賓）或LINE說一句話。我們了解您的狀況，整理出論點。",
         },
         {
@@ -327,7 +327,7 @@ const COPY: Record<LangCode, ServicesCopy> = {
     },
     pricing: {
       heading: "費用的思考方式",
-      body: "諮詢・診斷免費。費用只在執行階段（仲介手續費等・法定上限內）發生。估價在著手前以書面明示，書面上沒有的費用，我們不會請款。",
+      body: "初次諮詢・診斷免費。第2次起的持續諮詢，經事先同意後以每30分鐘5,500日圓（含稅）承接。費用另在執行階段（仲介手續費等・法定上限內）發生。估價在著手前以書面明示，書面上沒有的費用，我們不會請款。",
     },
     group: {
       heading: "與士業集團的合作",
@@ -338,7 +338,7 @@ const COPY: Record<LangCode, ServicesCopy> = {
   zh: {
     metaTitle: "服务｜在中介之前，先送上“材料”的不动产顾问",
     metaDesc:
-      "四葉不動産株式会社的服务介绍。不是推销物件，而是备齐“该卖・该买・该不该行动”的判断材料——位于文京区・小日向的顾问型不动产公司。继承不动产・事业用/投资用・外国人居住三大领域，以诊断→选项→执行三步骤进行。咨询・诊断免费。",
+      "四葉不動産株式会社的服务介绍。不是推销物件，而是备齐“该卖・该买・该不该行动”的判断材料——位于文京区・小日向的顾问型不动产公司。继承不动产・事业用/投资用・外国人居住三大领域，以诊断→选项→执行三步骤进行。初次咨询・诊断免费。",
     breadcrumbHome: "首页",
     breadcrumbCurrent: "服务",
     h1: "出售之前，先思考。承租之前，先确认。",
@@ -375,7 +375,7 @@ const COPY: Record<LangCode, ServicesCopy> = {
           { label: "信息", value: "核实过的事实，优缺点并陈" },
         ],
       },
-      note: "※若“不行动（不卖・不买）”才是最佳解，我们会如实告诉您。中介手续费仅在成交时发生；仅咨询不会产生费用。",
+      note: "※若“不行动（不卖・不买）”才是最佳解，我们会如实告诉您。中介手续费仅在成交时发生；初次咨询免费。",
     },
     fields: {
       heading: "四葉的顾问服务3领域",
@@ -402,11 +402,11 @@ const COPY: Record<LangCode, ServicesCopy> = {
     },
     flow: {
       heading: "进行方式——诊断 → 选项 → 执行",
-      lead: "我们不催促。费用只在执行阶段发生。",
+      lead: "我们不催促。初次咨询免费。",
       steps: [
         {
           title: "诊断",
-          note: "（免费）",
+          note: "（初次免费）",
           body: "先通过LINKA（AI礼宾）或LINE说一句话。我们了解您的情况，整理出论点。",
         },
         {
@@ -421,7 +421,7 @@ const COPY: Record<LangCode, ServicesCopy> = {
     },
     pricing: {
       heading: "费用的思考方式",
-      body: "咨询・诊断免费。费用只在执行阶段（中介手续费等・法定上限内）发生。估价在着手前以书面明示，书面上没有的费用一概不收取。",
+      body: "初次咨询・诊断免费。第2次起的持续咨询，经事先同意后以每30分钟5,500日元（含税）承接。费用另在执行阶段（中介手续费等・法定上限内）发生。估价在着手前以书面明示，书面上没有的费用一概不收取。",
     },
     group: {
       heading: "与士业集团的合作",
