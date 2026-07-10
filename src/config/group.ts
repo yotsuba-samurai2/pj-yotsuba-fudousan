@@ -1,3 +1,5 @@
+import { SR_OFFICE_NAME } from "@/lib/shared/sr-name";
+
 export type NavItem = { href: string; label: string };
 
 export const groupBusinesses = [
@@ -49,7 +51,7 @@ export const groupBusinesses = [
     ? [
         {
           key: "labor",
-          name: "四葉社会保険労務士事務所",
+          name: SR_OFFICE_NAME, // 事務所名は実行時結合（法27条ソース漏れ対策＝sr-name.ts参照）
           nameEn: "Labor and Social Security Attorney",
           description: "障害福祉・介護の労務、処遇改善加算、雇用助成金",
           href: "/labor",
