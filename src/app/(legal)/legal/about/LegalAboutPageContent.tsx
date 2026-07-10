@@ -87,7 +87,7 @@ export default function LegalAboutPageContent() {
           <div className="mx-auto mt-12 max-w-4xl">
             <div className="overflow-hidden rounded-xl border border-border bg-surface">
               <iframe
-                src="https://maps.google.com/maps?q=%E5%9B%9B%E8%91%89%E4%B8%8D%E5%8B%95%E7%94%A3%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE+%2F+%E5%9B%9B%E8%91%89%E8%A1%8C%E6%94%BF%E6%9B%B8%E5%A3%AB%E4%BA%8B%E5%8B%99%E6%89%80&z=18&output=embed&hl=ja"
+                src={`https://maps.google.com/maps?q=${encodeURIComponent("〒112-0006 東京都文京区小日向4-2-5 小日向安田ビル")}&z=17&output=embed&hl=ja`}
                 width="100%" height="400" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title={t("legal.aboutPage.mapTitle")}
               />
             </div>
