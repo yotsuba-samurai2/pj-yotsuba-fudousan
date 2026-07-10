@@ -53,7 +53,7 @@ const COPY: Record<LangCode, TopCopy> = {
     intro: (
       <>
         <strong>四葉不動産株式会社は、東京都文京区小日向の不動産会社です。</strong>
-        親から受け継いだ家をどうするか。グループホームや社宅に使う物件をどう確保するか。——文京区・茗荷谷の地元で、元新聞記者の宅建士・行政書士である代表が、最初の一歩からお手伝いします。外国人の方のお部屋探しも、日本語・英語・中国語で対応します。
+        親から受け継いだ家をどうするか。グループホームや社宅に使う物件をどう確保するか。——文京区・茗荷谷の地元で、元新聞記者の宅建士・行政書士である代表が、最初の一歩からお手伝いします。外国人の方のお部屋探しも、日本語・英語・中国語（繁体字・簡体字）で対応します。
       </>
     ),
     pillars: [
@@ -132,7 +132,7 @@ const COPY: Record<LangCode, TopCopy> = {
     intro: (
       <>
         <strong>Yotsuba Real Estate Co., Ltd. (四葉不動産株式会社) is a real estate company in Kohinata, Bunkyo-ku, Tokyo.</strong>{" "}
-        What should you do with the house you inherited? How do you secure a property for a group home or company housing? Based in the Myogadani neighborhood, our representative—a former newspaper journalist who is a licensed real estate broker and gyoseishoshi lawyer—supports you from the very first step. Room-hunting support for international residents is available in Japanese, English, and Chinese.
+        What should you do with the house you inherited? How do you secure a property for a group home or company housing? Based in the Myogadani neighborhood, our representative—a former newspaper journalist who is a licensed real estate broker and gyoseishoshi lawyer—supports you from the very first step. Room-hunting support for international residents is available in Japanese, English, Traditional Chinese, and Simplified Chinese.
       </>
     ),
     pillars: [
@@ -212,7 +212,7 @@ const COPY: Record<LangCode, TopCopy> = {
     intro: (
       <>
         <strong>四葉不動産株式会社是位於東京都文京區小日向的不動產公司。</strong>
-        從父母繼承的房子該怎麼辦？團體家屋（Group Home）或員工宿舍的物件該如何取得？——深耕文京區・茗荷谷在地，由曾任報社記者、具備宅建士與行政書士資格的代表，從第一步開始陪您處理。外國人士找房也提供日文、英文、中文服務。
+        從父母繼承的房子該怎麼辦？團體家屋（Group Home）或員工宿舍的物件該如何取得？——深耕文京區・茗荷谷在地，由曾任報社記者、具備宅建士與行政書士資格的代表，從第一步開始陪您處理。外國人士找房也提供日文、英文、中文（繁體・簡體）服務。
       </>
     ),
     pillars: [
@@ -291,7 +291,7 @@ const COPY: Record<LangCode, TopCopy> = {
     intro: (
       <>
         <strong>四葉不動産株式会社是位于东京都文京区小日向的不动产公司。</strong>
-        从父母继承的房子该怎么办？团体家屋（Group Home）或员工宿舍的物件该如何取得？——扎根文京区・茗荷谷本地，由曾任报社记者、持有宅建士与行政书士资格的代表，从第一步开始陪您处理。外国人士找房也提供日语、英语、中文服务。
+        从父母继承的房子该怎么办？团体家屋（Group Home）或员工宿舍的物件该如何取得？——扎根文京区・茗荷谷本地，由曾任报社记者、持有宅建士与行政书士资格的代表，从第一步开始陪您处理。外国人士找房也提供日语、英语、中文（繁体・简体）服务。
       </>
     ),
     pillars: [
@@ -466,7 +466,7 @@ export default async function HomePageContent() {
                 rel="noreferrer"
                 className="text-primary underline"
               >
-                SAMURAI
+                士業ドットコム
               </a>
               ／
               <a

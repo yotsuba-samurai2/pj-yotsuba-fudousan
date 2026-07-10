@@ -224,7 +224,7 @@ export default async function LegalPage() {
                 rel="noreferrer"
                 className="text-primary underline"
               >
-                SAMURAI
+                士業ドットコム
               </a>
               ／
               <a

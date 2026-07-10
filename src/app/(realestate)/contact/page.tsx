@@ -8,9 +8,10 @@ export async function generateMetadata(): Promise<Metadata> {
   const locale = await getRequestLocale();
   return buildPageMetadata({
     businessKey: "realestate",
-    title: "お問い合わせ | 四葉不動産（初回相談無料）",
+    // B2：社名はレイアウトのtitleテンプレート（%s | 四葉不動産）が付与＝ここでは書かない（重複防止）
+    title: "お問い合わせ（初回相談無料）",
     description:
-      "住まい探し・契約・相続不動産・ビザまで、不動産と行政書士がワンストップで対応。多言語（日本語・英語・中国語）対応、電話・お問い合わせフォーム・オンライン予約から受付。初回相談は無料、四葉不動産までお気軽にどうぞ。",
+      "住まい探し・契約・相続不動産・ビザまで、不動産と行政書士がワンストップで対応。多言語（日本語・英語・中国語繁体字・中国語簡体字）対応、電話・お問い合わせフォーム・オンライン予約から受付。初回相談は無料、四葉不動産までお気軽にどうぞ。",
     path: "/contact",
     keywords: [
       "不動産 相談",

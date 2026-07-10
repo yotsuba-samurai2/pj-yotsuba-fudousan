@@ -33,10 +33,10 @@ const notoSansJP = Noto_Sans_JP({
 
 export const metadata: Metadata = {
   title: {
-    default: "四葉パートナーズ",
-    template: "%s | 四葉パートナーズ",
+    default: "四葉グループ",
+    template: "%s | 四葉グループ",
   },
-  description: "四葉パートナーズ — 不動産・行政書士のワンストップグループ。",
+  description: "四葉グループ — 不動産・行政書士のワンストップグループ。",
   icons: {
     icon: [
       { url: "/icon-192.png", sizes: "192x192", type: "image/png" },

@@ -15,6 +15,7 @@ import { normalizePath } from "@/lib/normalize-path"; // cross-links直importは
 import { MobileStickyBar } from "@/components/shared/MobileStickyBar";
 import { LinkaFab } from "@/components/shared/LinkaFab";
 import type { BusinessKey } from "@/lib/shared/office";
+import { SR_OFFICE_NAME } from "@/lib/shared/sr-name"; // 事務所名は実行時結合（法27条ソース漏れ対策）
 
 type NavItem = { href: string; label: string };
 type FooterSection = { title: string; links: NavItem[] };
@@ -38,14 +39,16 @@ const NAV_HREFS: Record<string, { href: string; key: string; labels?: Record<str
     { href: "/legal/ryokin", key: "services" },
     { href: "/legal/about", key: "about" },
     { href: "/legal/column", key: "column" },
-    { href: "/contact", key: "contact" },
+    // B4（2026-07-10浦松承認）：/legal内の問い合わせ導線はテナント内 /legal/contact へ
+    { href: "/legal/contact", key: "contact" },
   ],
   // 社労士：ページ自体が SR_LAUNCHED=false の間は404（(labor)/layout.tsx）＝ここは labor ページ表示時のみ使われる
   labor: [
     { href: "/labor/services", key: "services" },
     { href: "/labor/about", key: "about" },
     { href: "/labor/column", key: "column" },
-    { href: "/contact", key: "contact" },
+    // B4：/labor/contact ページ実在（src/app/(labor)/labor/contact/page.tsx）＝テナント内導線へ
+    { href: "/labor/contact", key: "contact" },
   ],
 };
 
@@ -98,7 +101,8 @@ const FOOTER_NAV_HREFS: Record<
     },
     {
       sectionKey: "other",
-      items: [{ href: "/contact", key: "contact" }],
+      // B4：legalテナント内の問い合わせは /legal/contact（実在ページ）へ
+      items: [{ href: "/legal/contact", key: "contact" }],
     },
   ],
   // 社労士：ページ自体が SR_LAUNCHED=false の間は404＝laborページ表示時のみ使われる
@@ -121,9 +125,26 @@ const FOOTER_NAV_HREFS: Record<
     },
     {
       sectionKey: "other",
-      items: [{ href: "/contact", key: "contact" }],
+      // B4：laborテナント内の問い合わせは /labor/contact（実在ページ）へ
+      items: [{ href: "/labor/contact", key: "contact" }],
     },
   ],
+};
+
+/**
+ * B1（2026-07-10浦松承認）：フッター独立受任注記のコード内4ロケール直書き。
+ * Firestore側キー（common.footer.independentNote）が未定義のとき t() はキー文字列を
+ * 返す（truthy）ため `||` フォールバックが不発＝生キーが表示されていた。Firestoreに
+ * 依存せず、labelsパターンと同じくコード内ロケールマップで表示する。
+ * 社労士事務所名は連続リテラル禁止（法27条ソース漏れ対策）＝SR_OFFICE_NAMEで実行時結合。
+ * TODO: 社労士開業（2026年9月）後に「（2026年9月開業予定）」系の文言（ja/en/zh-tw/zh）を削除する。
+ */
+const INDEPENDENT_NOTE: Record<string, string> = {
+  ja: `四葉不動産株式会社・四葉行政書士事務所・${SR_OFFICE_NAME}（2026年9月開業予定）は、それぞれ独立した事業体として業務を受任します。`,
+  en: "Yotsuba Real Estate Co., Ltd., Yotsuba Gyoseishoshi (Administrative Scrivener) Office, and Yotsuba Labor and Social Security Attorney Office (opening September 2026) operate as independent business entities, each accepting engagements separately.",
+  // 中文でも日本語事務所名の連続リテラルは書けないためSR_OFFICE_NAMEを挿入
+  "zh-tw": `四葉不動產株式會社、四葉行政書士事務所、${SR_OFFICE_NAME}（預定2026年9月開業）為各自獨立之事業體，分別承接業務。`,
+  zh: `四葉不動産株式会社、四葉行政書士事務所、${SR_OFFICE_NAME}（预定2026年9月开业）为各自独立的事业体，分别承接业务。`,
 };
 
 function TenantHeader({ businessKey }: { businessKey: string }) {
@@ -143,8 +164,9 @@ function TenantHeader({ businessKey }: { businessKey: string }) {
     }));
   }, [businessKey, t, locale]);
 
-  const navItems = allNav.filter((n) => n.href !== "/contact");
-  const contactItem = allNav.find((n) => n.href === "/contact");
+  // B4：contactのhrefはテナントごとに /contact・/legal/contact・/labor/contact と異なるため末尾一致で判定
+  const navItems = allNav.filter((n) => !n.href.endsWith("/contact"));
+  const contactItem = allNav.find((n) => n.href.endsWith("/contact"));
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
@@ -308,6 +330,7 @@ function TenantFooter({ businessKey }: { businessKey: string }) {
   const currentYear = new Date().getFullYear();
   const biz = groupBusinesses.find((b) => b.key === businessKey)!;
   const { t } = useTranslation();
+  const { locale } = useLanguage();
 
   const footerSections: FooterSection[] = useMemo(() => {
     const defs = FOOTER_NAV_HREFS[businessKey] ?? [];
@@ -490,10 +513,9 @@ function TenantFooter({ businessKey }: { businessKey: string }) {
               );
             })}
           </div>
-          {/* 独立受任注記（業法分離・紹介料なし＝ページ割v2 §3-3。翻訳キー未投入時は日本語で表示） */}
+          {/* 独立受任注記（業法分離＝ページ割v2 §3-3）。B1：Firestoreに頼らずコード内4ロケールで表示 */}
           <p className="mt-4 text-center text-[10px] leading-relaxed text-text-muted">
-            {t("common.footer.independentNote") ||
-              "※各事業は別の事業体として独立してご依頼をお受けします（紹介料等の授受はありません）。"}
+            {INDEPENDENT_NOTE[locale] ?? INDEPENDENT_NOTE.ja}
           </p>
         </div>
       </div>

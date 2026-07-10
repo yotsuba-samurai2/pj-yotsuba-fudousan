@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 import { FacilitatorClient } from "./FacilitatorClient";
 
 export const metadata: Metadata = {
-  title: "LINKA｜士業ドットコム SAMURAI（プレビュー）",
+  title: "LINKA｜士業ドットコム（プレビュー）",
   robots: { index: false, follow: false },
 };
 

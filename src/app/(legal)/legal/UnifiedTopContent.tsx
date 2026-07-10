@@ -178,7 +178,7 @@ export default function UnifiedTopContent() {
               STRENGTHS
             </p>
             <h2 className="mt-3 text-2xl font-bold sm:text-3xl">
-              四葉パートナーズ 士業部門の強み
+              四葉グループ 士業部門の強み
             </h2>
           </div>
 

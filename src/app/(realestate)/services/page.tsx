@@ -111,7 +111,7 @@ const COPY: Record<LangCode, ServicesCopy> = {
         {
           tag: "日本で暮らすには？",
           title: "外国人の住まいコンサルティング",
-          body: "審査・保証・言語の壁を、日本語・英語・中国語で伴走します。お部屋探しだけでなく、必要書類の収集や翻訳のサポートまで。在留資格まわりはグループの行政書士事務所と連携できるので、「住まい」と「手続き」を別々に走り回る必要がありません。",
+          body: "審査・保証・言語の壁を、日本語・英語・中国語（繁体字・簡体字）で伴走します。お部屋探しだけでなく、必要書類の収集や翻訳のサポートまで。在留資格まわりはグループの行政書士事務所と連携できるので、「住まい」と「手続き」を別々に走り回る必要がありません。",
           linkLabel: "→ 多言語のお部屋探しへ",
         },
       ],
@@ -207,7 +207,7 @@ const COPY: Record<LangCode, ServicesCopy> = {
         {
           tag: "Living in Japan?",
           title: "Housing Consulting for International Residents",
-          body: "We walk with you through screening, guarantors, and the language barrier—in Japanese, English, and Chinese. Beyond room hunting, we also help you gather and translate the documents you need. For residence-status matters we can coordinate with our group's gyoseishoshi office, so you don't have to run around separately for “housing” and “paperwork.”",
+          body: "We walk with you through screening, guarantors, and the language barrier—in Japanese, English, Traditional Chinese, and Simplified Chinese. Beyond room hunting, we also help you gather and translate the documents you need. For residence-status matters we can coordinate with our group's gyoseishoshi office, so you don't have to run around separately for “housing” and “paperwork.”",
           linkLabel: "→ Multilingual room hunting",
         },
       ],
@@ -301,7 +301,7 @@ const COPY: Record<LangCode, ServicesCopy> = {
         {
           tag: "如何在日本生活？",
           title: "外國人的居住顧問",
-          body: "審查、保證、語言的門檻，我們以日文・英文・中文陪伴您跨過。不只找房，也協助蒐集所需文件與翻譯。在留資格相關事務可與集團的行政書士事務所合作，您不必為「居住」與「手續」分頭奔走。",
+          body: "審查、保證、語言的門檻，我們以日文・英文・中文（繁體・簡體）陪伴您跨過。不只找房，也協助蒐集所需文件與翻譯。在留資格相關事務可與集團的行政書士事務所合作，您不必為「居住」與「手續」分頭奔走。",
           linkLabel: "→ 前往多語言找房",
         },
       ],
@@ -395,7 +395,7 @@ const COPY: Record<LangCode, ServicesCopy> = {
         {
           tag: "如何在日本生活？",
           title: "外国人的居住顾问",
-          body: "审查、担保、语言的门槛，我们以日语・英语・中文陪伴您跨过。不只找房，也协助收集所需文件与翻译。在留资格相关事务可与集团的行政书士事务所合作，您不必为“居住”与“手续”分头奔走。",
+          body: "审查、担保、语言的门槛，我们以日语・英语・中文（繁体・简体）陪伴您跨过。不只找房，也协助收集所需文件与翻译。在留资格相关事务可与集团的行政书士事务所合作，您不必为“居住”与“手续”分头奔走。",
           linkLabel: "→ 前往多语言找房",
         },
       ],

@@ -30,7 +30,7 @@ export const runtime = "nodejs";
 export const maxDuration = 30;
 
 const SITE_LABELS: Record<LinkaSite, string> = {
-  samurai: "士業ドットコム SAMURAI",
+  samurai: "士業ドットコム",
   realestate: "四葉不動産",
   legal: "四葉行政書士事務所",
   labor: "四葉社会保険労務士事務所",

@@ -154,7 +154,7 @@ export function ResultView({
             className="inline-block rounded-lg px-4 py-2 text-sm text-white"
             style={{ background: "#1E3A5F" }}
           >
-            士業ドットコムSAMURAIで相談先を探す
+            士業ドットコムで相談先を探す
           </a>
           <div className="text-xs text-stone-400">
             中立のプラットフォームが、複数の専門家を順位付けせずご案内します(送客手数料はありません)。
@@ -190,7 +190,7 @@ export function ResultView({
               </div>
               <div className="mt-1 text-sm text-stone-800 underline">{c.title}</div>
               <div className="mt-0.5 text-xs text-stone-500">
-                執筆: {c.authorName ?? "士業ドットコムSAMURAI"}
+                執筆: {c.authorName ?? "士業ドットコム"}
                 {c.reason ? "|" + c.reason : ""}
               </div>
             </a>

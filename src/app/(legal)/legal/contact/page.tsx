@@ -67,7 +67,7 @@ export default function LegalContactPage() {
                       rel="noopener noreferrer"
                       className="mt-1 inline-flex items-center text-sm text-primary hover:text-primary-dark"
                     >
-                      SAMURAI予約ページへ →
+                      士業ドットコム予約ページへ →
                     </a>
                   </div>
                 </div>

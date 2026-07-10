@@ -110,7 +110,7 @@ export function OrganizationJsonLd({ businessKey }: { businessKey: string }) {
                   "@type": "Offer",
                   itemOffered: {
                     "@type": "Service",
-                    name: "外国人向け住居サポート（日本語・英語・中国語対応）",
+                    name: "外国人向け住居サポート（日本語・英語・中国語繁体字・中国語簡体字対応）",
                   },
                 },
               ],
