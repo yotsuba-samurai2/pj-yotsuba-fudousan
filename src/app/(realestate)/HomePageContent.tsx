@@ -10,6 +10,7 @@
 // AI接続（/api/linka）はフェーズK＝「準備中」明記（優良誤認回避）。
 // JSON-LD＝layoutの OrganizationJsonLd／WebSiteJsonLd が出力済み＝ここでは出さない（@id重複防止）。
 import Link from "next/link";
+import { LinkaWidget } from "@/components/linka/LinkaWidget";
 import { LINE_URL } from "@/lib/shared/office";
 import { getRequestLocale } from "@/lib/getRequestLocale";
 import { fetchTranslationsFromFirestore } from "@/lib/getTranslationData";
@@ -83,7 +84,7 @@ const COPY: Record<LangCode, TopCopy> = {
       { href: "/global", label: "お部屋探し" },
     ],
     diagnosisNote:
-      "AIコンシェルジュLINKAによる診断は準備中です。いまは上の入口からお進みいただくか、LINEで代表に直接どうぞ——状況を伺い、次の一歩を一緒に整理します。",
+      "こんにちは、四葉不動産のLINKAです。相続・投資や事業用・お部屋探しなど、お困りごとを匿名でどうぞ。分野の見当と、四葉のご案内先をお示しします。",
     lineBtn: "LINEで一言相談（無料）",
     repAlt: "四葉不動産株式会社 代表取締役 浦松丈二",
     repName: "浦松 丈二（うらまつ・じょうじ）",
@@ -162,7 +163,7 @@ const COPY: Record<LangCode, TopCopy> = {
       { href: "/global", label: "Room hunting" },
     ],
     diagnosisNote:
-      "Our AI concierge LINKA is currently in preparation. For now, choose an entry above or message our representative directly on LINE—we will listen to your situation and sort out the next step together.",
+      "Hi, I'm LINKA, Yotsuba Real Estate's AI concierge. Tell me your situation anonymously—inheritance, investment or business-use property, or room hunting—and I'll point you to the relevant area and where to start.",
     lineBtn: "Chat on LINE (free)",
     repAlt: "Joji Uramatsu, Representative Director of Yotsuba Real Estate Co., Ltd.",
     repName: "Joji Uramatsu",
@@ -242,7 +243,7 @@ const COPY: Record<LangCode, TopCopy> = {
       { href: "/global", label: "找房" },
     ],
     diagnosisNote:
-      "AI禮賓LINKA的診斷功能目前準備中。現在請先由上方入口進入，或直接透過LINE聯絡代表——我們會了解您的狀況，一起整理下一步。",
+      "您好，我是四葉不動産的AI禮賓LINKA。繼承、投資・事業用物件、找房等，請以匿名方式告訴我您的狀況，我會提示相關領域與合適的入口。",
     lineBtn: "用LINE諮詢（免費）",
     repAlt: "四葉不動産株式会社 代表取締役 浦松丈二",
     repName: "浦松 丈二（Uramatsu Joji）",
@@ -321,7 +322,7 @@ const COPY: Record<LangCode, TopCopy> = {
       { href: "/global", label: "找房" },
     ],
     diagnosisNote:
-      "AI礼宾LINKA的诊断功能正在准备中。现在请先从上方入口进入，或直接通过LINE联系代表——我们会了解您的情况，一起整理下一步。",
+      "您好，我是四葉不動産的AI礼宾LINKA。继承、投资・事业用物件、找房等，请以匿名方式告诉我您的情况，我会提示相关领域与合适的入口。",
     lineBtn: "用LINE咨询（免费）",
     repAlt: "四葉不動産株式会社 代表取缔役 浦松丈二",
     repName: "浦松 丈二（Uramatsu Joji）",
@@ -431,29 +432,18 @@ export default async function HomePageContent() {
           ))}
         </section>
 
-        {/* 60秒診断（LINKA起点枠・AI接続はフェーズK＝準備中） */}
-        <section aria-label="60-second diagnosis" className="mt-10 rounded-2xl bg-primary-tint p-6 text-center">
-          <h2 className="font-serif text-xl font-semibold text-ink">{c.diagnosisH2}</h2>
-          <div className="mt-4 flex flex-wrap items-center justify-center gap-2">
-            {c.diagnosisChips.map((chip) => (
-              <Link
-                key={chip.href}
-                href={chip.href}
-                className="rounded-full border border-primary/40 bg-surface px-4 py-2 text-sm font-medium text-primary-dark transition-colors hover:bg-primary hover:text-white"
-              >
-                {chip.label}
-              </Link>
-            ))}
+        {/* 60秒診断＝LINKAインライン本体（フェーズK接続済み・1ページ1LINKA＝右下FABはこのページ非表示のまま） */}
+        <section aria-label="60-second diagnosis" className="mt-10 rounded-2xl bg-primary-tint p-4 sm:p-6">
+          <h2 className="text-center font-serif text-xl font-semibold text-ink">{c.diagnosisH2}</h2>
+          <div className="mx-auto mt-4 h-[520px] max-w-2xl overflow-hidden rounded-2xl border border-border bg-surface">
+            <LinkaWidget
+              site="realestate"
+              mode="concierge"
+              greeting={c.diagnosisNote}
+              chips={c.diagnosisChips.map((chip) => chip.label)}
+              className="h-full"
+            />
           </div>
-          <p className="mx-auto mt-3 max-w-xl text-xs leading-relaxed text-text-muted">{c.diagnosisNote}</p>
-          <a
-            href={LINE_URL}
-            target="_blank"
-            rel="noreferrer"
-            className="mt-4 inline-flex min-h-[44px] items-center rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-primary-dark"
-          >
-            {c.lineBtn}
-          </a>
         </section>
 
         {/* 代表紹介（E-E-A-T） */}

@@ -95,15 +95,23 @@ export function LinkaWidget({
   site,
   mode,
   className = "",
+  greeting: greetingProp,
+  chips: chipsProp,
 }: {
   site: LinkaSite;
   mode: "member" | "customer" | "concierge";
   className?: string;
+  /** 挨拶の上書き（例：不動産トップのインライン60秒診断＝ロケール別の挨拶を渡す） */
+  greeting?: string;
+  /** クイックチップの上書き（ロケール別） */
+  chips?: string[];
 }) {
   const isCust = site === "samurai" && mode === "customer";
   const greeting =
-    site === "samurai" ? (mode === "customer" ? CUSTOMER_GREETING : MEMBER_GREETING) : UI_COPY[site].greeting;
-  const chips = site === "samurai" ? (mode === "customer" ? UI_COPY.samurai.chips : MEMBER_CHIPS) : UI_COPY[site].chips;
+    greetingProp ??
+    (site === "samurai" ? (mode === "customer" ? CUSTOMER_GREETING : MEMBER_GREETING) : UI_COPY[site].greeting);
+  const chips =
+    chipsProp ?? (site === "samurai" ? (mode === "customer" ? UI_COPY.samurai.chips : MEMBER_CHIPS) : UI_COPY[site].chips);
 
   const idSeq = useRef(0);
   const nextId = () => `m${++idSeq.current}`;
