@@ -26,6 +26,8 @@ const NAV_HREFS: Record<string, { href: string; key: string; labels?: Record<str
     { href: "/services", key: "services" },
     { href: "/about", key: "about" },
     { href: "/column", key: "column" },
+    // 2026-07-10浦松指示：コラムの後にアクセス（/access・コード内4ロケールラベル）
+    { href: "/access", key: "access", labels: { ja: "アクセス", en: "Access", "zh-tw": "交通位置", zh: "交通位置" } },
     { href: "/contact", key: "contact" },
   ],
   legal: [
