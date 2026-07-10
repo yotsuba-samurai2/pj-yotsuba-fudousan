@@ -10,7 +10,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return buildPageMetadata({
     businessKey: "legal",
     title: "お問い合わせ",
-    description: "補助金・助成金の申請書作成、ビザ・在留資格、会社設立、各種許認可のご相談はこちら。初回相談無料、電話・お問い合わせフォーム・オンライン予約で受付。文京区の四葉行政書士事務所が迅速・丁寧にお答えします。お気軽にどうぞ。",
+    description: "補助金の申請書作成、ビザ・在留資格、会社設立、各種許認可のご相談はこちら。初回相談無料、電話・お問い合わせフォーム・オンライン予約で受付。文京区の四葉行政書士事務所が迅速・丁寧にお答えします。お気軽にどうぞ。",
     path: "/legal/contact",
     locale,
   });
@@ -29,7 +29,7 @@ export default function LegalContactPage() {
             <p className="cta-gradient-text text-sm font-medium tracking-[0.2em]">CONTACT</p>
             <h1 className="mt-3 text-3xl font-bold sm:text-4xl md:text-5xl">お問い合わせ</h1>
             <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-text-muted">
-              補助金・助成金、ビザ申請、会社設立など、どんなご相談でもお気軽にどうぞ。
+              補助金、ビザ申請、会社設立など、どんなご相談でもお気軽にどうぞ。
               <br />
               お電話・オンライン予約・フォームからお問い合わせいただけます。
             </p>
