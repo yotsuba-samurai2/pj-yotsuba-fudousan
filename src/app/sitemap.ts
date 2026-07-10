@@ -46,6 +46,13 @@ async function buildRealestateSitemap(): Promise<MetadataRoute.Sitemap> {
   return [
     { url: re, lastModified: now, changeFrequency: "weekly", priority: 1.0, alternates: withLangs(re) },
     { url: `${re}/souzoku`, lastModified: now, changeFrequency: "monthly", priority: 0.9, alternates: withLangs(re, "/souzoku") },
+    { url: `${re}/souzoku/nagare`, lastModified: now, changeFrequency: "monthly", priority: 0.7, alternates: withLangs(re, "/souzoku/nagare") },
+    { url: `${re}/toushi`, lastModified: now, changeFrequency: "monthly", priority: 0.9, alternates: withLangs(re, "/toushi") },
+    { url: `${re}/toushi/group-home`, lastModified: now, changeFrequency: "monthly", priority: 0.8, alternates: withLangs(re, "/toushi/group-home") },
+    { url: `${re}/toushi/shataku`, lastModified: now, changeFrequency: "monthly", priority: 0.7, alternates: withLangs(re, "/toushi/shataku") },
+    { url: `${re}/global`, lastModified: now, changeFrequency: "monthly", priority: 0.8, alternates: withLangs(re, "/global") },
+    { url: `${re}/access`, lastModified: now, changeFrequency: "monthly", priority: 0.7, alternates: withLangs(re, "/access") },
+    { url: `${re}/faq`, lastModified: now, changeFrequency: "monthly", priority: 0.6, alternates: withLangs(re, "/faq") },
     { url: `${re}/services`, lastModified: now, changeFrequency: "monthly", priority: 0.8, alternates: withLangs(re, "/services") },
     { url: `${re}/about`, lastModified: now, changeFrequency: "monthly", priority: 0.7, alternates: withLangs(re, "/about") },
     { url: `${re}/column`, lastModified: now, changeFrequency: "weekly", priority: 0.8, alternates: withLangs(re, "/column") },
@@ -73,6 +80,15 @@ async function buildLegalSitemap(): Promise<MetadataRoute.Sitemap> {
 
   return [
     { url: le, lastModified: now, changeFrequency: "weekly", priority: 1.0, alternates: withLangs(le) },
+    { url: `${le}/services`, lastModified: now, changeFrequency: "monthly", priority: 0.9, alternates: withLangs(le, "/services") },
+    { url: `${le}/services/shogai-fukushi`, lastModified: now, changeFrequency: "monthly", priority: 0.9, alternates: withLangs(le, "/services/shogai-fukushi") },
+    { url: `${le}/services/visa`, lastModified: now, changeFrequency: "monthly", priority: 0.8, alternates: withLangs(le, "/services/visa") },
+    { url: `${le}/services/inheritance`, lastModified: now, changeFrequency: "monthly", priority: 0.8, alternates: withLangs(le, "/services/inheritance") },
+    { url: `${le}/services/company`, lastModified: now, changeFrequency: "monthly", priority: 0.7, alternates: withLangs(le, "/services/company") },
+    { url: `${le}/services/subsidy`, lastModified: now, changeFrequency: "monthly", priority: 0.7, alternates: withLangs(le, "/services/subsidy") },
+    { url: `${le}/ryokin`, lastModified: now, changeFrequency: "monthly", priority: 0.8, alternates: withLangs(le, "/ryokin") },
+    { url: `${le}/nagare`, lastModified: now, changeFrequency: "monthly", priority: 0.7, alternates: withLangs(le, "/nagare") },
+    { url: `${le}/faq`, lastModified: now, changeFrequency: "monthly", priority: 0.7, alternates: withLangs(le, "/faq") },
     { url: `${le}/about`, lastModified: now, changeFrequency: "monthly", priority: 0.7, alternates: withLangs(le, "/about") },
     { url: `${le}/column`, lastModified: now, changeFrequency: "weekly", priority: 0.8, alternates: withLangs(le, "/column") },
     ...legalColumns.map((col) => {
