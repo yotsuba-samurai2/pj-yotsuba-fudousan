@@ -26,6 +26,8 @@ import { SKILL_CUSTOMER, SKILL_MEMBER, skillConcierge } from "@/lib/linka/skills
 import type { LinkaResult, LinkaSite } from "@/lib/linka/types";
 
 export const runtime = "nodejs";
+// AI応答が6〜8秒かかるためVercel既定(10s)では混雑時にタイムアウト→デモ退避してしまう（2026-07-10実測6.7s）
+export const maxDuration = 30;
 
 const SITE_LABELS: Record<LinkaSite, string> = {
   samurai: "士業ドットコム SAMURAI",
