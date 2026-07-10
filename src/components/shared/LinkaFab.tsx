@@ -23,8 +23,8 @@ export function LinkaFab({
   if (suppressed) return null;
 
   return (
-    // z-30＝モバイルメニュー(z-40)より下＝メニューを開いてもLINKAが言語切替を覆わない。SPはbottom-[96px]で上へ退避
-    <div className="fixed bottom-4 right-4 z-30 md:bottom-6 md:right-6 max-md:bottom-[96px]">
+    // z-30＝モバイルメニュー(z-40)より下＝メニューを開いてもLINKAが言語切替を覆わない。SPはbottom-[112px]で上へ退避
+    <div className="fixed bottom-4 right-4 z-30 md:bottom-6 md:right-6 max-md:bottom-[112px]">
       {open ? (
         <div className="flex h-[min(600px,75vh)] w-[min(24rem,92vw)] flex-col overflow-hidden rounded-2xl border border-border bg-surface shadow-2xl">
           {/* ヘッダー */}
@@ -50,7 +50,7 @@ export function LinkaFab({
           <LinkaWidget site={businessKey} mode="concierge" className="min-h-0 flex-1" />
         </div>
       ) : (
-        /* 折りたたみ＝68px小円（52pxから約3割拡大・2026-07-10浦松指示）＋「AIに相談」チップ */
+        /* 折りたたみ＝84px小円（52→68→84px・2026-07-10浦松指示で2段階拡大）＋「AIに相談」チップ */
         <button
           type="button"
           onClick={() => setOpen(true)}
@@ -60,12 +60,12 @@ export function LinkaFab({
           <span className="rounded-full border border-border bg-surface px-3 py-1.5 text-xs text-text-muted shadow-sm">
             AIに相談
           </span>
-          <span className="grid h-[68px] w-[68px] place-items-center overflow-hidden rounded-full bg-primary shadow-lg ring-2 ring-primary">
+          <span className="grid h-[84px] w-[84px] place-items-center overflow-hidden rounded-full bg-primary shadow-lg ring-2 ring-primary">
             <Image
               src={linkaImg}
               alt="LINKA"
-              width={68}
-              height={68}
+              width={84}
+              height={84}
               className="h-full w-full object-cover"
             />
           </span>
