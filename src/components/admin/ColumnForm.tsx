@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { SR_OFFICE_NAME } from "@/lib/shared/sr-name";
 import type {
   FirestoreColumn,
   ColumnTranslation,
@@ -47,7 +48,7 @@ const BUSINESS_NAMES: Record<string, Record<string, string>> = {
     zh: "四叶行政书士事务所",
   },
   labor: {
-    ja: "四葉社会保険労務士事務所",
+    ja: SR_OFFICE_NAME, // 事務所名は実行時結合（法27条ソース漏れ対策＝sr-name.ts参照）
     en: "Yotsuba Labor & Social Insurance Office",
     "zh-tw": "四葉社會保險勞務士法人",
     zh: "四叶社会保险劳务士法人",

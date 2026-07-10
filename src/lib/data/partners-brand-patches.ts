@@ -5,7 +5,7 @@
  *  - 共通グループ表記 → 「四葉グループ」（表示専用の総称。登記実体でないためJSON-LDには出さない＝別PRで削除済）
  *  - 法務文書（privacy/terms）本文の「当社」→ 実体名「四葉不動産株式会社」（(realestate)配下の運営主体）
  *  - legal トップFAQ（faq[2]）→ 独立事業体表現へ全面改稿（コード側 /legal/services と同一文言）
- *  - labor.* → 「四葉社会保険労務士事務所（法人化しない方針）」＋総称は四葉グループ。※社労士は2026-09開業まで labor は notFound()＝非表示。開業タスクと同時整合させる想定で既定OFF。
+ *  - labor.* → 「社労士の事務所名（法人化しない方針・sr-name.ts）」＋総称は四葉グループ。※社労士は2026-09開業まで labor は notFound()＝非表示。開業タスクと同時整合させる想定で既定OFF。
  *
  * 実装形態: translation-patches.ts（静的 from/to）と同じ「現在値一致→書換／不一致はスキップ」の
  * 安全方式を踏襲しつつ、from の手動転記ミスを避けるため **規則ベース**にした。
@@ -16,6 +16,7 @@
  */
 
 import type { LangCode } from "@/config/languages";
+import { SR_OFFICE_NAME } from "@/lib/shared/sr-name";
 
 export type PatchGroupId = "brand" | "legalDoc" | "faq" | "labor";
 
@@ -48,7 +49,7 @@ export const LEGALDOC_KEYS: string[] = [
   "privacyPolicy.sections.inquiry.contactInfo",
 ];
 
-/** labor（現状404・非公開。開業タスクで有効化）→ 四葉社会保険労務士事務所＋四葉グループ */
+/** labor（現状404・非公開。開業タスクで有効化）→ 社労士事務所名（sr-name.ts）＋四葉グループ */
 export const LABOR_KEYS: string[] = [
   "labor.aboutPage.officeInfo.0.value",
   "labor.aboutPage.officeInfo.8.value",
@@ -85,9 +86,9 @@ export function legalDocReplace(s: string): string {
  */
 export function laborReplace(s: string): string {
   return s
-    .replace(/四葉パートナーズの社会保険労務士法人/g, "四葉社会保険労務士事務所")
-    .replace(/四葉パートナーズの社労士法人/g, "四葉社会保険労務士事務所")
-    .replace(/社会保険労務士法人/g, "四葉社会保険労務士事務所")
+    .replace(/四葉パートナーズの社会保険労務士法人/g, SR_OFFICE_NAME)
+    .replace(/四葉パートナーズの社労士法人/g, SR_OFFICE_NAME)
+    .replace(/社会保険労務士法人/g, SR_OFFICE_NAME)
     .replace(/四葉パートナーズ/g, "四葉グループ");
 }
 

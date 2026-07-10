@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { groupBusinesses } from "@/config/group";
+import { SR_OFFICE_NAME } from "@/lib/shared/sr-name";
 import { DEFAULT_LOCALE, isValidLocale } from "@/lib/locale";
 
 // ── Constants ──
@@ -246,11 +247,11 @@ export const BUSINESS_SEO: Record<string, BusinessSEOConfig> = {
     ? {
         labor: {
           url: "https://luck428.com/labor",
-          name: "四葉社会保険労務士事務所",
-          legalName: "四葉社会保険労務士事務所",
+          name: SR_OFFICE_NAME, // 事務所名は実行時結合（法27条ソース漏れ対策＝sr-name.ts参照）
+          legalName: SR_OFFICE_NAME,
           // 原稿_社労士サイト_v1.0 #1 の確定meta description
           description:
-            "東京都文京区小日向・茗荷谷駅徒歩5分の四葉社会保険労務士事務所。障害福祉・介護事業所の労務管理、処遇改善加算、社会保険手続き、雇用関係助成金、外国人介護人材の労務に対応。元新聞記者の社労士が、複雑な労務を整理してお手伝いします。",
+            `東京都文京区小日向・茗荷谷駅徒歩5分の${SR_OFFICE_NAME}。障害福祉・介護事業所の労務管理、処遇改善加算、社会保険手続き、雇用関係助成金、外国人介護人材の労務に対応。元新聞記者の社労士が、複雑な労務を整理してお手伝いします。`,
           schemaType: "ProfessionalService",
           ogImage: "",
           columnBasePath: "/labor/column",

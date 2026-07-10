@@ -3,7 +3,7 @@
 // 三禁則の特殊表示を保持：順位なし注記・匿名化・エスカレーション・demoバナー・オプトイン未取得の明示。
 // データはサーバ解決済みカード（LinkaResult）のみ＝クライアントは名簿を持たない。
 // 色は --color-primary（テナント色）を参照（サイト非依存）。
-import { LINE_URL } from "@/lib/shared/office";
+import { LINE_URL } from "@/lib/shared/office-public";
 import type { CandidateCard, LinkaResult } from "@/lib/linka/types";
 
 function Badge({ tone, children }: { tone: "amber" | "gray" | "blue" | "navy"; children: React.ReactNode }) {

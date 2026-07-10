@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { SR_OFFICE_NAME } from "@/lib/shared/sr-name";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -86,7 +87,7 @@ export default function AdminLayout({
                 />
                 <Image
                   src="/yotsuba/labor-square.png"
-                  alt="四葉社会保険労務士事務所"
+                  alt={SR_OFFICE_NAME}
                   width={36}
                   height={36}
                   className="h-9 w-9 rounded-full"

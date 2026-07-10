@@ -46,10 +46,9 @@ export const CROSS_LINKS: CrossLink[] = [
     ] },
 ];
 
-/** locale接頭辞（/en /zh-tw /zh）を除去してマッチ用の正規化パスを得る */
-export function normalizePath(pathname: string): string {
-  return pathname.replace(/^\/(en|zh-tw|zh)(?=\/|$)/, "") || "/";
-}
+// normalizePathは分離モジュールから再エクスポート（client側はlib/normalize-pathを直接使う）
+export { normalizePath } from "@/lib/normalize-path";
+import { normalizePath } from "@/lib/normalize-path";
 
 /** リンクが社労士に関与するか（注記の3者版を使うか） */
 export function involvesLabor(link: CrossLink): boolean {
