@@ -9,8 +9,8 @@ export const SITE_URL = "https://luck428.com";
 export const BUSINESS_URLS: Record<string, string> = {
   realestate: "https://luck428.com",
   legal: "https://luck428.com/legal",
-  // TODO: 社労士開業（2026年9月）後に復活
-  // labor: "https://yotsuba-labor.com",
+  // TODO: 社労士開業（2026年9月）後に復活（/labor維持＝2026-07-09浦松決定。旧yotsuba-labor.comは使わない）
+  // labor: "https://luck428.com/labor",
 };
 
 export const SHARED_ORG_INFO = {
@@ -84,10 +84,15 @@ export const PERSON_ID = "https://luck428.com/#uramatsu-joji";
 export const SAMURAI_URAMATSU_URL =
   "https://www.samurai.co.jp/samurai/reserve/uramatsu-joji";
 
-/** 代表者（浦松丈二）の外部プロフィールURL（Wikidata・note含む＝いずれも現物確認済み） */
+/**
+ * 代表者（浦松丈二）の外部プロフィールURL（いずれも現物確認済み）。
+ * 個人のSNS・ブログはここ（Person）にのみ載せる＝組織のsameAsへ混ぜない（Person/Org境界）。
+ * gyosei-bunkyo.org＝東京都行政書士会文京支部の公式会員名簿・本人ページ（2026-07-10実在確認）。
+ */
 export const PERSON_SAME_AS = [
   "https://www.wikidata.org/wiki/Q139738129",
   SAMURAI_URAMATSU_URL,
+  "https://gyosei-bunkyo.org/membersearch/%e6%b5%a6%e6%9d%be-%e4%b8%88%e4%ba%8c.html",
   "https://note.com/luck428",
   "https://x.com/uramatsujoji",
   "https://www.facebook.com/uramatsujoji",
@@ -106,7 +111,8 @@ export const PERSON_JSONLD = {
   "@id": PERSON_ID,
   name: "浦松 丈二",
   alternateName: "Joji Uramatsu",
-  jobTitle: ["宅地建物取引士", "行政書士"],
+  // jobTitle＝役職／資格はhasCredentialへ分離。社労士関連は開業（2026年9月）まで出力しない
+  jobTitle: ["四葉不動産株式会社 代表取締役", "四葉行政書士事務所 代表行政書士"],
   description:
     "元毎日新聞中国総局長（記者歴34年）。文京区小日向で四葉不動産株式会社・四葉行政書士事務所を営む。",
   url: "https://luck428.com/about",
@@ -114,35 +120,90 @@ export const PERSON_JSONLD = {
     { "@id": "https://luck428.com/#organization" },
     { "@id": "https://luck428.com/legal/#organization" },
   ],
+  hasCredential: [
+    "行政書士（登録番号 第25087022号）",
+    "宅地建物取引士（東京 第293544号）",
+    "社会保険労務士試験合格（2026年9月開業予定）",
+  ],
+  memberOf: [
+    {
+      "@type": "Organization",
+      name: "東京都行政書士会",
+      url: "https://www.tokyo-gyosei.or.jp/",
+    },
+    {
+      "@type": "Organization",
+      name: "日本行政書士会連合会",
+      url: "https://www.gyosei.or.jp/",
+    },
+  ],
+  affiliation: [
+    {
+      "@type": "Organization",
+      name: "東京都行政書士会 文京支部",
+      url: "https://gyosei-bunkyo.org/",
+    },
+    {
+      "@type": "Organization",
+      name: "士業ドットコムSAMURAI",
+      url: "https://www.samurai.co.jp/",
+    },
+  ],
   knowsLanguage: ["ja", "en", "zh"],
   sameAs: [...PERSON_SAME_AS],
 } as const;
 
-/** 四葉不動産（RealEstateAgent）の外部プロフィールURL（Wikidata Q139738235＝現物確認済み） */
+/**
+ * 四葉不動産（RealEstateAgent）の外部プロフィールURL（Wikidata Q139738235＝現物確認済み）。
+ * sameAs＝「同一エンティティの別ページ」のみ：
+ * - 別事業体（/legal）を入れない（別エンティティの同一視＝業法分離と矛盾）
+ * - 個人SNS・noteはPerson側にのみ（Person/Org境界）
+ * 事業間の関係は founder（Person @id）と可視リンクで表現する。
+ */
 export const REALESTATE_SAME_AS = [
   "https://www.wikidata.org/wiki/Q139738235",
   "https://www.samurai.co.jp/samurai/reserve/yotubahudousan",
-  "https://note.com/luck428",
-  "https://luck428.com/legal",
   "https://maps.google.com/?cid=2684416286346615973",
-  "https://x.com/uramatsujoji",
-  "https://www.facebook.com/uramatsujoji",
-  "https://www.instagram.com/uramatsu_joji/",
-  "https://www.threads.com/@uramatsu_joji",
-  "https://www.linkedin.com/in/joji-uramatsu/",
+  // 東京都宅建協会 会員検索の当社詳細ページ（2026-07-10現物確認＝免許 知事(1)113304・商号・住所一致・HP欄=luck428.com）
+  "https://www.tokyo-takken.or.jp/search-member/detail/31253",
 ] as const;
 
-/** 四葉行政書士事務所（LegalService）の外部プロフィールURL（Wikidata Q139738259＝現物確認済み） */
-export const LEGAL_SAME_AS = [
-  "https://www.wikidata.org/wiki/Q139738259",
-  SAMURAI_URAMATSU_URL,
-  "https://note.com/luck428",
-  "https://luck428.com",
-  "https://x.com/uramatsujoji",
-  "https://www.facebook.com/uramatsujoji",
-  "https://www.instagram.com/uramatsu_joji/",
-  "https://www.threads.com/@uramatsu_joji",
-  "https://www.linkedin.com/in/joji-uramatsu/",
+/**
+ * 四葉行政書士事務所（LegalService）の外部プロフィールURL（Wikidata Q139738259＝現物確認済み）。
+ * 士業ドットコムに事務所単体ページは無い＝浦松個人ページはPerson.sameAs経由で接続（Orgへは混ぜない）。
+ * 文京支部の会員名簿は本人名義ページのためPerson側に収載。
+ */
+export const LEGAL_SAME_AS = ["https://www.wikidata.org/wiki/Q139738259"] as const;
+
+/**
+ * 組織のmemberOf（公的所属団体）。会員ページ等で裏取りできたもののみ出力（監査原則）。
+ * - 宅建協会・全宅保証＝会員検索詳細ページで確認（2026-07-10・正会員）
+ * - 日本賃貸住宅管理協会＝会員裏取り未了のため出力保留（確認後に追加）
+ */
+export const REALESTATE_MEMBER_OF = [
+  {
+    "@type": "Organization",
+    name: "公益社団法人 東京都宅地建物取引業協会",
+    url: "https://www.tokyo-takken.or.jp/",
+  },
+  {
+    "@type": "Organization",
+    name: "公益社団法人 全国宅地建物取引業保証協会",
+    url: "https://www.zentaku.or.jp/",
+  },
+] as const;
+
+export const LEGAL_MEMBER_OF = [
+  {
+    "@type": "Organization",
+    name: "東京都行政書士会",
+    url: "https://www.tokyo-gyosei.or.jp/",
+  },
+  {
+    "@type": "Organization",
+    name: "日本行政書士会連合会",
+    url: "https://www.gyosei.or.jp/",
+  },
 ] as const;
 
 export type BusinessSEOConfig = {
@@ -170,8 +231,9 @@ export const BUSINESS_SEO: Record<string, BusinessSEOConfig> = {
     url: "https://luck428.com/legal",
     name: "四葉行政書士事務所",
     legalName: "四葉行政書士事務所",
+    // 原稿_行政書士サイト_v1.0 #10 の確定meta description（業際：雇用関係助成金＝社労士領域のため「助成金」を出さない）
     description:
-      "元新聞記者の文章力で「通る申請書」を作成する文京区の四葉行政書士事務所。補助金・助成金の採択率向上、ビザ・在留資格、会社設立、各種許認可までワンストップ対応。不動産とも連携し事業開始を総合支援。初回相談無料。",
+      "東京都文京区小日向・茗荷谷駅徒歩5分の四葉行政書士事務所。障害福祉サービスの指定申請、在留資格・ビザ、相続、会社設立、補助金申請に対応。元毎日新聞中国総局長の行政書士が、中国語・英語も交え、書類作成から申請までお手伝いします。",
     schemaType: "LegalService",
     ogImage: "",
     columnBasePath: "/legal/column",
