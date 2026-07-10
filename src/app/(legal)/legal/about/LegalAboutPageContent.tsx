@@ -87,7 +87,7 @@ export default function LegalAboutPageContent() {
           <div className="mx-auto mt-12 max-w-4xl">
             <div className="overflow-hidden rounded-xl border border-border bg-surface">
               <iframe
-                src={`https://maps.google.com/maps?q=${encodeURIComponent("〒112-0006 東京都文京区小日向4-2-5 小日向安田ビル")}&z=17&output=embed&hl=ja`}
+                src="https://maps.google.com/maps?q=35.7150431,139.7396698&z=17&output=embed&hl=ja"
                 width="100%" height="400" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title={t("legal.aboutPage.mapTitle")}
               />
             </div>
