@@ -50,22 +50,22 @@ export function LinkaFab({
           <LinkaWidget site={businessKey} mode="concierge" className="min-h-0 flex-1" />
         </div>
       ) : (
-        /* 折りたたみ＝84px小円（52→68→84px・2026-07-10浦松指示で2段階拡大）＋「AIに相談」チップ */
+        /* 折りたたみ＝SP84px／PC168px（2026-07-10浦松指示：PCは2倍・チップ文字はPC+5pt） */
         <button
           type="button"
           onClick={() => setOpen(true)}
           aria-label="LINKA・AIに相談"
           className="flex items-center gap-2 focus:outline-none"
         >
-          <span className="rounded-full border border-border bg-surface px-3 py-1.5 text-xs text-text-muted shadow-sm">
+          <span className="rounded-full border border-border bg-surface px-3 py-1.5 text-xs text-text-muted shadow-sm md:px-4 md:py-2 md:text-[17px]">
             AIに相談
           </span>
-          <span className="grid h-[84px] w-[84px] place-items-center overflow-hidden rounded-full bg-primary shadow-lg ring-2 ring-primary">
+          <span className="grid h-[84px] w-[84px] place-items-center overflow-hidden rounded-full bg-primary shadow-lg ring-2 ring-primary md:h-[168px] md:w-[168px]">
             <Image
               src={linkaImg}
               alt="LINKA"
-              width={84}
-              height={84}
+              width={168}
+              height={168}
               className="h-full w-full object-cover"
             />
           </span>
