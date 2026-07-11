@@ -70,7 +70,13 @@ const FOOTER_NAV_HREFS: Record<
         // クリックしてもジャンプしない＝実質機能していなかったため、実ページへ張り替え（浦松承認）。
         { href: "/services", key: "rental" },
         { href: "/services", key: "sale" },
-        { href: "/services", key: "management" },
+        // 2026-07-11修正：Firestoreの realestate.footerNav.services.management が空でラベル無し
+        // （文字が表示されないリンクになっていた）ため、コード内4ロケール直書きで補完。
+        {
+          href: "/services",
+          key: "management",
+          labels: { ja: "管理サポート", en: "Property Management", "zh-tw": "物業管理", zh: "物业管理" },
+        },
         // 外国人・多言語のお部屋探しは専用ページが実在
         { href: "/global", key: "foreignResidents" },
       ],
