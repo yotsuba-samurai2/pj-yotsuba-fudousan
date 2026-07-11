@@ -3,7 +3,7 @@
 // LINEのみ主色、他は中立。position:fixed。ページ下部の被り回避に本文側へ pb を足す運用（TenantLayoutShell）。
 import Link from "next/link";
 // ⚠️ office.ts（テナント名・文言入り）はimportしない＝クライアントJSへの社労士名同梱を防ぐ（office-public参照）
-import { CONTACT_HREF, LINE_URL, OFFICE, type BusinessKey } from "@/lib/shared/office-public";
+import { CONTACT_HREF, LINE_URL, MAP_URL, OFFICE, type BusinessKey } from "@/lib/shared/office-public";
 
 type Props = { businessKey: BusinessKey };
 
@@ -29,7 +29,8 @@ export function MobileStickyBar({ businessKey }: Props) {
         <span aria-hidden>📞</span>
         電話
       </a>
-      <a href={OFFICE.mapUrl} target="_blank" rel="noreferrer" className={`${item} text-text-muted`}>
+      {/* 地図＝事業別リンク（realestate/legal=GBP直リンク、labor=住所クエリフォールバック）。P2仕様 */}
+      <a href={MAP_URL[businessKey]} target="_blank" rel="noreferrer" className={`${item} text-text-muted`}>
         <span aria-hidden>📍</span>
         地図
       </a>

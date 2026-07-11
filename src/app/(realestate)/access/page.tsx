@@ -8,7 +8,7 @@ import Link from "next/link";
 import { Breadcrumb } from "@/components/shared/Breadcrumb";
 import { CtaBand } from "@/components/shared/CtaBand";
 import { Placeholder } from "@/components/shared/Placeholder";
-import { OFFICE } from "@/lib/shared/office";
+import { MAP_URL } from "@/lib/shared/office-public";
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getRequestLocale();
@@ -82,7 +82,7 @@ export default function Page() {
             </tbody>
           </table>
           <p className="mt-2 text-xs">
-            <a href={OFFICE.mapUrl} target="_blank" rel="noreferrer" className="text-primary underline">
+            <a href={MAP_URL.realestate} target="_blank" rel="noreferrer" className="text-primary underline">
               Googleマップで見る
             </a>
             <Placeholder reason="浦松＝地図/緯度経度(geo出力可否)・来店予約/駐車場" />

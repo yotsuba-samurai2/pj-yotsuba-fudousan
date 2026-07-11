@@ -18,6 +18,8 @@ export const OFFICE = {
   telHref: "tel:0361619428",
   address: "東京都文京区小日向４丁目２−５ 小日向安田ビル ２０３",
   access: "東京メトロ丸ノ内線「茗荷谷」駅 徒歩5分",
+  // 注：画面の地図リンクは事業別MAP_URL（office-public.ts）へ移行済み（2026-07-11 P2）。
+  // ここはlaborフォールバック値の元＝住所クエリ形式のまま維持（office-public.OFFICE.mapUrlと同値）。
   mapUrl:
     "https://maps.google.com/?q=" +
     encodeURIComponent("東京都文京区小日向4-2-5 小日向安田ビル203"),

@@ -25,3 +25,20 @@ export const CONTACT_HREF: Record<BusinessKey, string> = {
   legal: "/legal/contact",
   labor: "/labor/contact",
 };
+
+/**
+ * 事業別GBP（Googleビジネスプロフィール）直リンクの正本（JSON-LD hasMap／地図リンク共用。
+ * 2026-07-11 P2仕様・浦松承認済み）。laborはGBP未整備のため未設定（未検証の値を置かない）。
+ * seo.ts（BUSINESS_SEO.gbpUrl）もここを参照する＝値の二重管理をしない。
+ */
+export const GBP_URL = {
+  realestate: "https://maps.google.com/?cid=2684416286346615973",
+  legal: "https://share.google/qw9imD2snNKDEQS3Z",
+} as const;
+
+/** 事業別の地図リンク（フッター・下部固定バー用）。GBP直リンク優先／無い事業（labor）は住所クエリへフォールバック */
+export const MAP_URL: Record<BusinessKey, string> = {
+  realestate: GBP_URL.realestate,
+  legal: GBP_URL.legal,
+  labor: OFFICE.mapUrl,
+};

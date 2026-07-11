@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { groupBusinesses } from "@/config/group";
 import { SR_OFFICE_NAME } from "@/lib/shared/sr-name";
+import { GBP_URL } from "@/lib/shared/office-public";
 import { DEFAULT_LOCALE, isValidLocale } from "@/lib/locale";
 
 // ── Constants ──
@@ -170,6 +171,8 @@ export const REALESTATE_SAME_AS = [
   "https://maps.google.com/?cid=2684416286346615973",
   // 東京都宅建協会 会員検索の当社詳細ページ（2026-07-10現物確認＝免許 知事(1)113304・商号・住所一致・HP欄=luck428.com）
   "https://www.tokyo-takken.or.jp/search-member/detail/31253",
+  // ナレッジパネル（kgmid）＝JSON-LD修正P2（2026-07-11浦松承認済み仕様）
+  "https://www.google.com/search?kgmid=/g/11ytdshcrj",
 ] as const;
 
 /**
@@ -177,7 +180,12 @@ export const REALESTATE_SAME_AS = [
  * 士業ドットコムに事務所単体ページは無い＝浦松個人ページはPerson.sameAs経由で接続（Orgへは混ぜない）。
  * 文京支部の会員名簿は本人名義ページのためPerson側に収載。
  */
-export const LEGAL_SAME_AS = ["https://www.wikidata.org/wiki/Q139738259"] as const;
+export const LEGAL_SAME_AS = [
+  "https://www.wikidata.org/wiki/Q139738259",
+  // GBP共有リンク＋ナレッジパネル（kgmid）＝JSON-LD修正P2（2026-07-11浦松承認済み仕様）
+  "https://share.google/qw9imD2snNKDEQS3Z",
+  "https://www.google.com/search?kgmid=/g/11z5sjqsxz",
+] as const;
 
 /**
  * 組織のmemberOf（公的所属団体）。会員ページ等で裏取りできたもののみ出力（監査原則）。
@@ -217,6 +225,10 @@ export type BusinessSEOConfig = {
   description: string;
   schemaType: string;
   ogImage: string;
+  /** JSON-LDのlogo/image用・正方形ロゴ（ルート相対。SNS共有用ogImageとは独立＝ogImage値は変更しない） */
+  squareLogo?: string;
+  /** GBP直リンク（JSON-LD hasMap・地図リンク用）。正本=office-public.tsのGBP_URL。labor＝GBP未整備のため未設定 */
+  gbpUrl?: string;
   columnBasePath: string;
 };
 
@@ -229,6 +241,8 @@ export const BUSINESS_SEO: Record<string, BusinessSEOConfig> = {
       "元新聞記者が4カ国での在住経験を活かして立ち上げた、東京都文京区にある不動産屋。賃貸・売買・管理から相続不動産まで、多言語（日本語・英語・中国語繁体字・中国語簡体字）対応と専門家ネットワークで住まい探しから契約・法務までワンストップ対応。初回相談は無料、お気軽にどうぞ。",
     schemaType: "RealEstateAgent",
     ogImage: "/og.png",
+    squareLogo: "/yotsuba/realestate-square.png",
+    gbpUrl: GBP_URL.realestate,
     columnBasePath: "/column",
   },
   legal: {
@@ -240,6 +254,8 @@ export const BUSINESS_SEO: Record<string, BusinessSEOConfig> = {
       "東京都文京区小日向・茗荷谷駅徒歩5分の四葉行政書士事務所。障害福祉サービスの指定申請、在留資格・ビザ、相続、会社設立、補助金申請に対応。元毎日新聞中国総局長の行政書士が、中国語・英語も交え、書類作成から申請までお手伝いします。",
     schemaType: "LegalService",
     ogImage: "",
+    squareLogo: "/yotsuba/legal-square.png",
+    gbpUrl: GBP_URL.legal,
     columnBasePath: "/legal/column",
   },
   // 社労士：SR_LAUNCHED=true（開業日）までキー自体を登録しない（名称・説明の露出防止）
