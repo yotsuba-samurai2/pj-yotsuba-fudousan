@@ -3,8 +3,12 @@
 // 社労士行は SR_LAUNCHED=false の間は非表示（開業=2026年9月まで露出しない）。
 // ※既存 TenantLayout のフッターにグループ事業グリッドが既にあるため、Shellへの二重組み込みはしない。
 //   ページ単位で明示的に使いたい場合の部品として提供（委任§3「共通部品を追加」）。
+// 2026-07-11 ロケール保持（診断_ロケール保持リンク_v1 §B-5）：server維持（office.tsのSR名を含むためclient化しない）。
+//   async化して t.home のみ addLocalePrefix（ここで1回だけ付与）。見出し・blurb・注記の文言はja固定（スコープ外＝診断§E-6）。
 import Link from "next/link";
 import { TENANT, SR_LAUNCHED, type BusinessKey } from "@/lib/shared/office";
+import { getRequestLocale } from "@/lib/getRequestLocale";
+import { addLocalePrefix } from "@/lib/locale";
 
 type Props = {
   /** 現在のサイト（自分自身は出さない） */
@@ -19,7 +23,8 @@ const ALL: { key: BusinessKey; blurb: string }[] = [
   { key: "labor", blurb: "労務・処遇改善・助成金・障害年金" },
 ];
 
-export function RelatedBusinessFooter({ current, srLaunched = SR_LAUNCHED }: Props) {
+export async function RelatedBusinessFooter({ current, srLaunched = SR_LAUNCHED }: Props) {
+  const locale = await getRequestLocale();
   const items = ALL.filter((b) => b.key !== current).filter((b) => b.key !== "labor" || srLaunched);
   if (items.length === 0) return null;
   return (
@@ -31,7 +36,7 @@ export function RelatedBusinessFooter({ current, srLaunched = SR_LAUNCHED }: Pro
           return (
             <Link
               key={b.key}
-              href={t.home}
+              href={addLocalePrefix(t.home, locale)}
               className="block rounded-xl border border-border bg-surface p-4 transition-shadow hover:shadow-sm"
             >
               <div className="font-medium text-ink">{t.name}</div>

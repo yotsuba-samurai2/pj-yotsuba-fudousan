@@ -3,8 +3,14 @@
 // JSON-LD＝Service（provider=@id /#organization・author=Person @id参照のみ）。
 // BreadcrumbListは<Breadcrumb>部品が出力・FAQPageは/faq専用（疑問文H2は表示のみ）。
 // クロスリンクはpathで自動（getCrossLinks・C3/C6）＋独立受任注記。
+// 2026-07-11 ロケール保持（診断_ロケール保持リンク_v1 §B-7）：async化し、シェルが直接描画する
+//   internalLinks の素Linkのみ addLocalePrefix（ここで1回だけ付与）。Breadcrumb/CtaBand/CrossLinkBanner
+//   は各部品が自前付与＝シェルでは触らない（二重適用禁止）。Service JSON-LD の url は接頭辞なし維持（診断§C-3）。
+//   既存の多言語上書きprops（relatedAria等）は維持。
 import type { ReactNode } from "react";
 import Link from "next/link";
+import { getRequestLocale } from "@/lib/getRequestLocale";
+import { addLocalePrefix } from "@/lib/locale";
 import { Breadcrumb, type Crumb } from "@/components/shared/Breadcrumb";
 import { CtaBand } from "@/components/shared/CtaBand";
 import { CrossLinkBanner } from "@/components/shared/CrossLinkBanner";
@@ -39,7 +45,8 @@ export type RealestateServicePageProps = {
   children: ReactNode;
 };
 
-export function RealestateServicePage(p: RealestateServicePageProps) {
+export async function RealestateServicePage(p: RealestateServicePageProps) {
+  const locale = await getRequestLocale();
   const url = SITE + p.path;
   const crossLinks = getCrossLinks(p.path, SR_LAUNCHED);
 
@@ -86,7 +93,7 @@ export function RealestateServicePage(p: RealestateServicePageProps) {
           <ul className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-primary">
             {p.internalLinks.map((l) => (
               <li key={l.href}>
-                <Link href={l.href} className="underline">{l.label}</Link>
+                <Link href={addLocalePrefix(l.href, locale)} className="underline">{l.label}</Link>
               </li>
             ))}
           </ul>

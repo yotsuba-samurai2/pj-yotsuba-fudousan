@@ -5,7 +5,10 @@
 //   - ナビ・ロゴ・ドメインは src/config/group.ts が正本。
 //   - ここに置くのは共通部品（CtaBand/MobileStickyBar/LinkaFab 等）が使う
 //     事務所連絡先・テナント別CTA文言・公開フラグのみ。
-// TODO(フェーズI): ラベル・CTA文言の多言語化（t()置換・Firestore翻訳追加は浦松承認後）。
+// 2026-07-11: CTA帯文言の4ロケール化はTENANT_CTA_I18N（本ファイル内・server専用のまま）で対応済み。
+// Firestoreに新キーは増やさない（B1教訓）。
+
+import type { LangCode } from "@/config/languages";
 
 export type BusinessKey = "realestate" | "legal" | "labor";
 
@@ -67,6 +70,92 @@ export const TENANT: Record<
     ctaHeading: "「人」の手続き、まとめて整理しませんか。",
     ctaLead:
       "四葉社会保険労務士事務所（文京区小日向・東京メトロ丸ノ内線「茗荷谷」駅 徒歩5分）が、労務の現状整理からお手伝いします。",
+  },
+};
+
+/**
+ * CTA帯（CtaBand）テナント別文言の4ロケール版（2026-07-11・診断_ロケール保持リンク_v1 §B-1）。
+ * - server専用のまま＝SR名（社労士事務所名）を含むため office-public / client側へ移さないこと。
+ * - ja はTENANT正文の参照（バイト不変＝ja表示回帰なしの担保）。
+ * - en/zh-tw/zh は監修前ドラフト（realestateはHomePageContent COPYの既存訳を転用、legal/laborは新規訳＝要監修）。
+ * - labor.hours は全ロケール空欄維持（【要確認：浦松】開業時確定まで。未検証は出力しない）。
+ */
+export const TENANT_CTA_I18N: Record<
+  BusinessKey,
+  Record<LangCode, { ctaHeading: string; ctaLead: string; hours: string }>
+> = {
+  realestate: {
+    ja: {
+      ctaHeading: TENANT.realestate.ctaHeading,
+      ctaLead: TENANT.realestate.ctaLead,
+      hours: TENANT.realestate.hours,
+    },
+    en: {
+      ctaHeading: "It's fine to start with just one line: “What should I do with this?”",
+      ctaLead:
+        "Our representative replies to you personally, and if a property matches your needs, we will introduce it via LINE.",
+      hours: "10:00–18:00 (Closed Tue & Wed)",
+    },
+    "zh-tw": {
+      ctaHeading: "從一句「這該怎麼辦？」開始就可以。",
+      ctaLead: "代表將親自回覆，了解您的需求後，若有符合條件的物件將透過LINE為您介紹。",
+      hours: "10:00〜18:00（週二・週三公休）",
+    },
+    zh: {
+      ctaHeading: "从一句“这该怎么办？”开始就可以。",
+      ctaLead: "代表将亲自回复，了解您的需求后，若有符合条件的物件将通过LINE为您介绍。",
+      hours: "10:00〜18:00（周二・周三定休）",
+    },
+  },
+  legal: {
+    ja: {
+      ctaHeading: TENANT.legal.ctaHeading,
+      ctaLead: TENANT.legal.ctaLead,
+      hours: TENANT.legal.hours,
+    },
+    en: {
+      ctaHeading: "Let's start by sorting out your situation.",
+      ctaLead:
+        "Yotsuba Gyoseishoshi Office (Kohinata, Bunkyo-ku; a 5-minute walk from Myogadani Station on the Tokyo Metro Marunouchi Line) supports you from organizing the requirements through document preparation and application.",
+      hours: "Tue & Wed 10:00–19:00 / Mon, Thu–Sun 18:00–19:00",
+    },
+    "zh-tw": {
+      ctaHeading: "先從整理您的狀況開始。",
+      ctaLead:
+        "四葉行政書士事務所（文京區小日向・東京Metro丸之內線「茗荷谷」站 步行5分）從要件的整理到文件製作・申請，全程協助您。",
+      hours: "週二・週三 10:00〜19:00／週一・週四〜週日 18:00〜19:00",
+    },
+    zh: {
+      ctaHeading: "先从整理您的情况开始。",
+      ctaLead:
+        "四葉行政書士事務所（文京区小日向・东京Metro丸之内线“茗荷谷”站 步行5分）从要件的整理到文件制作・申请，全程协助您。",
+      hours: "周二・周三 10:00〜19:00／周一・周四〜周日 18:00〜19:00",
+    },
+  },
+  labor: {
+    ja: {
+      ctaHeading: TENANT.labor.ctaHeading,
+      ctaLead: TENANT.labor.ctaLead,
+      hours: TENANT.labor.hours,
+    },
+    en: {
+      ctaHeading: "Why not sort out all your “people” procedures at once?",
+      ctaLead:
+        "Yotsuba Labor and Social Security Attorney Office (Kohinata, Bunkyo-ku; a 5-minute walk from Myogadani Station on the Tokyo Metro Marunouchi Line) helps you, starting with a review of your current labor practices.",
+      hours: "",
+    },
+    "zh-tw": {
+      ctaHeading: "與「人」相關的手續，一次整理好如何？",
+      ctaLead:
+        "四葉社会保険労務士事務所（文京區小日向・東京Metro丸之內線「茗荷谷」站 步行5分）從勞務現狀的整理開始協助您。",
+      hours: "",
+    },
+    zh: {
+      ctaHeading: "与“人”相关的手续，一次整理好如何？",
+      ctaLead:
+        "四葉社会保険労務士事務所（文京区小日向・东京Metro丸之内线“茗荷谷”站 步行5分）从劳务现状的整理开始协助您。",
+      hours: "",
+    },
   },
 };
 
