@@ -5,6 +5,7 @@
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo";
 import { getRequestLocale } from "@/lib/getRequestLocale";
+import { addLocalePrefix } from "@/lib/locale";
 import Link from "next/link";
 import { CtaBand } from "@/components/shared/CtaBand";
 import type { LangCode } from "@/config/languages";
@@ -195,7 +196,7 @@ export default async function LegalPage() {
           {c.services.map((s) => (
             <Link
               key={s.href}
-              href={s.href}
+              href={addLocalePrefix(s.href, locale)}
               className="block rounded-2xl border border-border bg-surface p-4 transition-shadow hover:shadow-sm"
             >
               <div className="font-serif text-lg font-semibold text-ink">{s.label}</div>
@@ -256,7 +257,7 @@ export default async function LegalPage() {
         {/* 導線 */}
         <nav aria-label="site links" className="mt-10 flex flex-wrap gap-x-4 gap-y-1 text-sm text-primary">
           {c.nav.map((n) => (
-            <Link key={n.href} href={n.href} className="underline">
+            <Link key={n.href} href={addLocalePrefix(n.href, locale)} className="underline">
               {n.label}
             </Link>
           ))}

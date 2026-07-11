@@ -7,6 +7,7 @@
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo";
 import { getRequestLocale } from "@/lib/getRequestLocale";
+import { addLocalePrefix } from "@/lib/locale";
 import Link from "next/link";
 import { LegalServicePage, H2 } from "@/components/shared/LegalServicePage";
 import { Placeholder } from "@/components/shared/Placeholder";
@@ -249,11 +250,11 @@ export default async function Page() {
       <div>
         <H2>{c.feesH2}</H2>
         <p className="mt-2 text-sm">
-          → <Link href="/legal/ryokin" className="text-primary underline">{c.feeLinkLabel}</Link>
+          → <Link href={addLocalePrefix("/legal/ryokin", locale)} className="text-primary underline">{c.feeLinkLabel}</Link>
           <Placeholder reason="Notion＝料金体系・金額（報酬額表_HP公開用が正）" />
         </p>
         <p className="mt-1 text-sm">
-          → <Link href="/legal/nagare" className="text-primary underline">{c.flowLinkLabel}</Link>
+          → <Link href={addLocalePrefix("/legal/nagare", locale)} className="text-primary underline">{c.flowLinkLabel}</Link>
           <Placeholder reason="浦松＝各ステップの実運用・標準期間" />
         </p>
       </div>

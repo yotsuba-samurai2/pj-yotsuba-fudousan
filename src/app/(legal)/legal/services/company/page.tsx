@@ -6,6 +6,7 @@
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo";
 import { getRequestLocale } from "@/lib/getRequestLocale";
+import { addLocalePrefix } from "@/lib/locale";
 import Link from "next/link";
 import { LegalServicePage, H2 } from "@/components/shared/LegalServicePage";
 import { Placeholder } from "@/components/shared/Placeholder";
@@ -206,7 +207,7 @@ export default async function Page() {
         </p>
         <p className="mt-2 text-sm">
           {c.s1Note}{" "}
-          <Link href="/legal/services/shogai-fukushi" className="text-primary underline">{c.s1NoteLinkLabel}</Link>
+          <Link href={addLocalePrefix("/legal/services/shogai-fukushi", locale)} className="text-primary underline">{c.s1NoteLinkLabel}</Link>
         </p>
       </div>
 
@@ -214,18 +215,18 @@ export default async function Page() {
         <H2>{c.s2Heading}</H2>
         <p className="mt-3 leading-relaxed text-text">{c.s2Body}</p>
         <p className="mt-2 text-sm">
-          → <Link href="/legal/services/visa" className="text-primary underline">{c.s2LinkLabel}</Link>
+          → <Link href={addLocalePrefix("/legal/services/visa", locale)} className="text-primary underline">{c.s2LinkLabel}</Link>
         </p>
       </div>
 
       <div>
         <H2>{c.s3Heading}</H2>
         <p className="mt-2 text-sm">
-          → <Link href="/legal/ryokin" className="text-primary underline">{c.s3Link1Label}</Link>
+          → <Link href={addLocalePrefix("/legal/ryokin", locale)} className="text-primary underline">{c.s3Link1Label}</Link>
           <Placeholder reason="Notion＝料金体系・金額（報酬額表_HP公開用が正）" />
         </p>
         <p className="mt-1 text-sm">
-          → <Link href="/legal/nagare" className="text-primary underline">{c.s3Link2Label}</Link>
+          → <Link href={addLocalePrefix("/legal/nagare", locale)} className="text-primary underline">{c.s3Link2Label}</Link>
           <Placeholder reason="浦松＝各ステップの実運用・標準期間" />
         </p>
       </div>

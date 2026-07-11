@@ -5,6 +5,7 @@
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo";
 import { getRequestLocale } from "@/lib/getRequestLocale";
+import { addLocalePrefix } from "@/lib/locale";
 import Link from "next/link";
 import { LegalServicePage, H2 } from "@/components/shared/LegalServicePage";
 import { Placeholder } from "@/components/shared/Placeholder";
@@ -246,7 +247,7 @@ export default async function Page() {
         <H2>{c.fudosanHeading}</H2>
         <p className="mt-3 leading-relaxed text-text">{c.fudosanBody}</p>
         <p className="mt-2 text-sm">
-          → <Link href="/souzoku" className="text-primary underline">{c.souzokuGuideLabel}</Link>
+          → <Link href={addLocalePrefix("/souzoku", locale)} className="text-primary underline">{c.souzokuGuideLabel}</Link>
         </p>
         <p className="mt-1 text-xs text-text-muted">{c.independenceNote}</p>
         <p className="mt-3 text-sm leading-relaxed text-text-muted">{c.registrationNote}</p>
@@ -255,11 +256,11 @@ export default async function Page() {
       <div>
         <H2>{c.feesFlowHeading}</H2>
         <p className="mt-2 text-sm">
-          → <Link href="/legal/ryokin" className="text-primary underline">{c.ryokinLinkLabel}</Link>
+          → <Link href={addLocalePrefix("/legal/ryokin", locale)} className="text-primary underline">{c.ryokinLinkLabel}</Link>
           <Placeholder reason="Notion＝料金体系・金額（報酬額表_HP公開用が正）" />
         </p>
         <p className="mt-1 text-sm">
-          → <Link href="/legal/nagare" className="text-primary underline">{c.nagareLinkLabel}</Link>
+          → <Link href={addLocalePrefix("/legal/nagare", locale)} className="text-primary underline">{c.nagareLinkLabel}</Link>
           <Placeholder reason="浦松＝各ステップの実運用・標準期間" />
         </p>
       </div>

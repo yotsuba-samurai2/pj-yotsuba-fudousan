@@ -7,6 +7,7 @@
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo";
 import { getRequestLocale } from "@/lib/getRequestLocale";
+import { addLocalePrefix } from "@/lib/locale";
 import Link from "next/link";
 import { LegalServicePage, H2 } from "@/components/shared/LegalServicePage";
 import { Placeholder } from "@/components/shared/Placeholder";
@@ -20,7 +21,7 @@ type VisaCopy = {
   h1: string;
   lead: React.ReactNode;
   internalLinks: { href: string; label: string }[];
-  sections: React.ReactNode;
+  sections: (locale: LangCode) => React.ReactNode;
 };
 
 const COPY: Record<LangCode, VisaCopy> = {
@@ -42,7 +43,7 @@ const COPY: Record<LangCode, VisaCopy> = {
       { href: "/legal/nagare", label: "受任の流れ" },
       { href: "/legal/services/company", label: "会社設立・各種許認可" },
     ],
-    sections: (
+    sections: (locale) => (
       <>
         <div>
           <H2>どんな在留資格に対応していますか？</H2>
@@ -56,7 +57,7 @@ const COPY: Record<LangCode, VisaCopy> = {
             <li>家族滞在・留学 ほか</li>
             <li>
               <strong>経営・管理</strong>：会社設立と一体で進められます →{" "}
-              <Link href="/legal/services/company" className="text-primary underline">会社設立と経営管理ビザ</Link>
+              <Link href={addLocalePrefix("/legal/services/company", locale)} className="text-primary underline">会社設立と経営管理ビザ</Link>
             </li>
             <li>
               育成就労（2027年4月施行）への対応は、制度の施行にあわせてご案内します
@@ -76,8 +77,8 @@ const COPY: Record<LangCode, VisaCopy> = {
           <H2>住まいや会社設立も一緒に相談できますか？</H2>
           <p className="mt-3 leading-relaxed text-text">
             できます。経営・管理の在留資格は会社設立と一体で進むため、<strong>設立書類と在留資格申請を一体で</strong>扱えます。また、来日する従業員やご家族の<strong>住まい（社宅・賃貸）</strong>は、関連事業の四葉不動産株式会社が多言語で対応します →{" "}
-            <Link href="/toushi/shataku" className="text-primary underline">社宅・法人賃貸のサポート</Link>／
-            <Link href="/global" className="text-primary underline">外国人・多言語のお部屋探し</Link>
+            <Link href={addLocalePrefix("/toushi/shataku", locale)} className="text-primary underline">社宅・法人賃貸のサポート</Link>／
+            <Link href={addLocalePrefix("/global", locale)} className="text-primary underline">外国人・多言語のお部屋探し</Link>
           </p>
           <p className="mt-1 text-xs text-text-muted">
             ※四葉不動産株式会社・四葉行政書士事務所は、それぞれ別の事業体として独立してご依頼をお受けします（紹介料等の授受はありません）。
@@ -87,11 +88,11 @@ const COPY: Record<LangCode, VisaCopy> = {
         <div>
           <H2>費用・受任の流れ</H2>
           <p className="mt-2 text-sm">
-            → <Link href="/legal/ryokin" className="text-primary underline">在留資格・ビザ申請の報酬額（報酬額表）</Link>
+            → <Link href={addLocalePrefix("/legal/ryokin", locale)} className="text-primary underline">在留資格・ビザ申請の報酬額（報酬額表）</Link>
             <Placeholder reason="Notion＝料金体系・金額（報酬額表_HP公開用が正）" />
           </p>
           <p className="mt-1 text-sm">
-            → <Link href="/legal/nagare" className="text-primary underline">ご相談から完了までの受任の流れ</Link>
+            → <Link href={addLocalePrefix("/legal/nagare", locale)} className="text-primary underline">ご相談から完了までの受任の流れ</Link>
             <Placeholder reason="浦松＝各ステップの実運用・標準期間" />
           </p>
         </div>
@@ -116,7 +117,7 @@ const COPY: Record<LangCode, VisaCopy> = {
       { href: "/legal/nagare", label: "How Engagement Works" },
       { href: "/legal/services/company", label: "Company Formation & Licensing" },
     ],
-    sections: (
+    sections: (locale) => (
       <>
         <div>
           <H2>Which residence statuses do you handle?</H2>
@@ -130,7 +131,7 @@ const COPY: Record<LangCode, VisaCopy> = {
             <li>Dependent, Student, and more</li>
             <li>
               <strong>Business Manager</strong>: can be handled together with company formation →{" "}
-              <Link href="/legal/services/company" className="text-primary underline">Company Formation & the Business Manager Visa</Link>
+              <Link href={addLocalePrefix("/legal/services/company", locale)} className="text-primary underline">Company Formation & the Business Manager Visa</Link>
             </li>
             <li>
               Support for the new Employment for Skill Development (ikusei shuro) system, effective April 2027, will be announced as the system comes into force
@@ -150,8 +151,8 @@ const COPY: Record<LangCode, VisaCopy> = {
           <H2>Can we also discuss housing or company formation together?</H2>
           <p className="mt-3 leading-relaxed text-text">
             Yes. Because the Business Manager residence status moves in step with company formation, we can handle <strong>incorporation documents and the residence status application as one package</strong>. And for the <strong>housing (company housing or rentals)</strong> of arriving employees and their families, our affiliated business 四葉不動産株式会社 (Yotsuba Real Estate) provides multilingual support →{" "}
-            <Link href="/toushi/shataku" className="text-primary underline">Company Housing & Corporate Lease Support</Link>／
-            <Link href="/global" className="text-primary underline">Multilingual Home Search for Foreign Residents</Link>
+            <Link href={addLocalePrefix("/toushi/shataku", locale)} className="text-primary underline">Company Housing & Corporate Lease Support</Link>／
+            <Link href={addLocalePrefix("/global", locale)} className="text-primary underline">Multilingual Home Search for Foreign Residents</Link>
           </p>
           <p className="mt-1 text-xs text-text-muted">
             ※四葉不動産株式会社 (Yotsuba Real Estate) and 四葉行政書士事務所 are separate, independent businesses, and each accepts engagements independently (no referral fees are exchanged).
@@ -161,11 +162,11 @@ const COPY: Record<LangCode, VisaCopy> = {
         <div>
           <H2>Fees & How Engagement Works</H2>
           <p className="mt-2 text-sm">
-            → <Link href="/legal/ryokin" className="text-primary underline">Fees for Visa & Residence Status Applications (Fee Schedule)</Link>
+            → <Link href={addLocalePrefix("/legal/ryokin", locale)} className="text-primary underline">Fees for Visa & Residence Status Applications (Fee Schedule)</Link>
             <Placeholder reason="Notion＝料金体系・金額（報酬額表_HP公開用が正）" />
           </p>
           <p className="mt-1 text-sm">
-            → <Link href="/legal/nagare" className="text-primary underline">How Engagement Works, from Consultation to Completion</Link>
+            → <Link href={addLocalePrefix("/legal/nagare", locale)} className="text-primary underline">How Engagement Works, from Consultation to Completion</Link>
             <Placeholder reason="浦松＝各ステップの実運用・標準期間" />
           </p>
         </div>
@@ -190,7 +191,7 @@ const COPY: Record<LangCode, VisaCopy> = {
       { href: "/legal/nagare", label: "受任流程" },
       { href: "/legal/services/company", label: "公司設立・各類許可" },
     ],
-    sections: (
+    sections: (locale) => (
       <>
         <div>
           <H2>受理哪些在留資格（簽證）？</H2>
@@ -204,7 +205,7 @@ const COPY: Record<LangCode, VisaCopy> = {
             <li>家族滯在・留學等</li>
             <li>
               <strong>經營・管理</strong>：可與公司設立一併辦理 →{" "}
-              <Link href="/legal/services/company" className="text-primary underline">公司設立與經營管理簽證</Link>
+              <Link href={addLocalePrefix("/legal/services/company", locale)} className="text-primary underline">公司設立與經營管理簽證</Link>
             </li>
             <li>
               「育成就勞」制度（2027年4月施行）的相關服務，將配合制度施行陸續公告
@@ -224,8 +225,8 @@ const COPY: Record<LangCode, VisaCopy> = {
           <H2>住居或公司設立也可以一併諮詢嗎？</H2>
           <p className="mt-3 leading-relaxed text-text">
             可以。經營・管理的在留資格與公司設立一體推進，因此<strong>設立文件與在留資格申請可一併辦理</strong>。此外，來日工作的員工與家人的<strong>住居（公司宿舍・租屋）</strong>，由關聯事業四葉不動産株式会社以多語言對應 →{" "}
-            <Link href="/toushi/shataku" className="text-primary underline">公司宿舍・法人租賃支援</Link>／
-            <Link href="/global" className="text-primary underline">外國人・多語言找房</Link>
+            <Link href={addLocalePrefix("/toushi/shataku", locale)} className="text-primary underline">公司宿舍・法人租賃支援</Link>／
+            <Link href={addLocalePrefix("/global", locale)} className="text-primary underline">外國人・多語言找房</Link>
           </p>
           <p className="mt-1 text-xs text-text-muted">
             ※四葉不動産株式会社與四葉行政書士事務所為各自獨立的事業體，分別獨立受理委託（不收受介紹費等）。
@@ -235,11 +236,11 @@ const COPY: Record<LangCode, VisaCopy> = {
         <div>
           <H2>費用・受任流程</H2>
           <p className="mt-2 text-sm">
-            → <Link href="/legal/ryokin" className="text-primary underline">在留資格（簽證）申請的報酬額（報酬額表）</Link>
+            → <Link href={addLocalePrefix("/legal/ryokin", locale)} className="text-primary underline">在留資格（簽證）申請的報酬額（報酬額表）</Link>
             <Placeholder reason="Notion＝料金体系・金額（報酬額表_HP公開用が正）" />
           </p>
           <p className="mt-1 text-sm">
-            → <Link href="/legal/nagare" className="text-primary underline">從諮詢到完成的受任流程</Link>
+            → <Link href={addLocalePrefix("/legal/nagare", locale)} className="text-primary underline">從諮詢到完成的受任流程</Link>
             <Placeholder reason="浦松＝各ステップの実運用・標準期間" />
           </p>
         </div>
@@ -264,7 +265,7 @@ const COPY: Record<LangCode, VisaCopy> = {
       { href: "/legal/nagare", label: "受任流程" },
       { href: "/legal/services/company", label: "公司设立・各类许可" },
     ],
-    sections: (
+    sections: (locale) => (
       <>
         <div>
           <H2>受理哪些在留资格（签证）？</H2>
@@ -278,7 +279,7 @@ const COPY: Record<LangCode, VisaCopy> = {
             <li>家族滞在・留学等</li>
             <li>
               <strong>经营・管理</strong>：可与公司设立一并办理 →{" "}
-              <Link href="/legal/services/company" className="text-primary underline">公司设立与经营管理签证</Link>
+              <Link href={addLocalePrefix("/legal/services/company", locale)} className="text-primary underline">公司设立与经营管理签证</Link>
             </li>
             <li>
               “育成就劳”制度（2027年4月施行）的相关服务，将配合制度施行陆续公告
@@ -298,8 +299,8 @@ const COPY: Record<LangCode, VisaCopy> = {
           <H2>住房或公司设立也可以一并咨询吗？</H2>
           <p className="mt-3 leading-relaxed text-text">
             可以。经营・管理的在留资格与公司设立一体推进，因此<strong>设立文件与在留资格申请可一并办理</strong>。此外，来日工作的员工与家人的<strong>住房（公司宿舍・租房）</strong>，由关联事业四葉不動産株式会社以多语言对应 →{" "}
-            <Link href="/toushi/shataku" className="text-primary underline">公司宿舍・法人租赁支援</Link>／
-            <Link href="/global" className="text-primary underline">外国人・多语言找房</Link>
+            <Link href={addLocalePrefix("/toushi/shataku", locale)} className="text-primary underline">公司宿舍・法人租赁支援</Link>／
+            <Link href={addLocalePrefix("/global", locale)} className="text-primary underline">外国人・多语言找房</Link>
           </p>
           <p className="mt-1 text-xs text-text-muted">
             ※四葉不動産株式会社与四葉行政書士事務所为各自独立的事业体，分别独立受理委托（不收受介绍费等）。
@@ -309,11 +310,11 @@ const COPY: Record<LangCode, VisaCopy> = {
         <div>
           <H2>费用・受任流程</H2>
           <p className="mt-2 text-sm">
-            → <Link href="/legal/ryokin" className="text-primary underline">在留资格（签证）申请的报酬额（报酬额表）</Link>
+            → <Link href={addLocalePrefix("/legal/ryokin", locale)} className="text-primary underline">在留资格（签证）申请的报酬额（报酬额表）</Link>
             <Placeholder reason="Notion＝料金体系・金額（報酬額表_HP公開用が正）" />
           </p>
           <p className="mt-1 text-sm">
-            → <Link href="/legal/nagare" className="text-primary underline">从咨询到完成的受任流程</Link>
+            → <Link href={addLocalePrefix("/legal/nagare", locale)} className="text-primary underline">从咨询到完成的受任流程</Link>
             <Placeholder reason="浦松＝各ステップの実運用・標準期間" />
           </p>
         </div>
@@ -349,7 +350,7 @@ export default async function Page() {
       governmentService
       internalLinks={c.internalLinks}
     >
-      {c.sections}
+      {c.sections(locale)}
     </LegalServicePage>
   );
 }

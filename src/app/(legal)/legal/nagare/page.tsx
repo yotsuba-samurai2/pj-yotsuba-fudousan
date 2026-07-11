@@ -5,6 +5,7 @@
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo";
 import { getRequestLocale } from "@/lib/getRequestLocale";
+import { addLocalePrefix } from "@/lib/locale";
 import Link from "next/link";
 import { Breadcrumb } from "@/components/shared/Breadcrumb";
 import { CtaBand } from "@/components/shared/CtaBand";
@@ -28,7 +29,7 @@ type NagareCopy = {
   lead: React.ReactNode;
   steps: NagareStep[];
   howtoName: string;
-  note: React.ReactNode;
+  note: (locale: LangCode) => React.ReactNode;
 };
 
 const COPY: Record<LangCode, NagareCopy> = {
@@ -53,15 +54,15 @@ const COPY: Record<LangCode, NagareCopy> = {
       { name: "完了・フォロー", text: <>許可・指定の取得、書類の納品。必要に応じて事後の手続きもサポートします。</>, howto: "許可・指定の取得、書類の納品。必要に応じて事後の手続きもサポートします。" },
     ],
     howtoName: "四葉行政書士事務所 ご相談から完了までの流れ",
-    note: (
+    note: (locale) => (
       <>
         ※所要期間・準備物・費用発生のタイミングは業務により異なります。各業務ページ（
-        <Link href="/legal/services/shogai-fukushi" className="text-primary underline">障害福祉</Link>／
-        <Link href="/legal/services/visa" className="text-primary underline">在留資格</Link>／
-        <Link href="/legal/services/inheritance" className="text-primary underline">相続</Link>／
-        <Link href="/legal/services/company" className="text-primary underline">会社設立</Link>／
-        <Link href="/legal/services/subsidy" className="text-primary underline">補助金</Link>）と
-        <Link href="/legal/ryokin" className="text-primary underline">報酬額表</Link>もあわせてご覧ください。
+        <Link href={addLocalePrefix("/legal/services/shogai-fukushi", locale)} className="text-primary underline">障害福祉</Link>／
+        <Link href={addLocalePrefix("/legal/services/visa", locale)} className="text-primary underline">在留資格</Link>／
+        <Link href={addLocalePrefix("/legal/services/inheritance", locale)} className="text-primary underline">相続</Link>／
+        <Link href={addLocalePrefix("/legal/services/company", locale)} className="text-primary underline">会社設立</Link>／
+        <Link href={addLocalePrefix("/legal/services/subsidy", locale)} className="text-primary underline">補助金</Link>）と
+        <Link href={addLocalePrefix("/legal/ryokin", locale)} className="text-primary underline">報酬額表</Link>もあわせてご覧ください。
       </>
     ),
   },
@@ -86,15 +87,15 @@ const COPY: Record<LangCode, NagareCopy> = {
       { name: "Completion & Follow-up", text: <>Permits or designations are obtained and the documents delivered. We also support any follow-up procedures as needed.</>, howto: "Permits or designations are obtained and the documents delivered. We also support any follow-up procedures as needed." },
     ],
     howtoName: "四葉行政書士事務所 — How Engagement Works: From Consultation to Completion",
-    note: (
+    note: (locale) => (
       <>
         Note: Processing times, required documents, and the point at which fees arise vary by service. Please also see each service page (
-        <Link href="/legal/services/shogai-fukushi" className="text-primary underline">Disability-Welfare Services</Link> /{" "}
-        <Link href="/legal/services/visa" className="text-primary underline">Visa & Residence Status</Link> /{" "}
-        <Link href="/legal/services/inheritance" className="text-primary underline">Inheritance</Link> /{" "}
-        <Link href="/legal/services/company" className="text-primary underline">Company Formation</Link> /{" "}
-        <Link href="/legal/services/subsidy" className="text-primary underline">Subsidies</Link>) and the{" "}
-        <Link href="/legal/ryokin" className="text-primary underline">Fees</Link> page.
+        <Link href={addLocalePrefix("/legal/services/shogai-fukushi", locale)} className="text-primary underline">Disability-Welfare Services</Link> /{" "}
+        <Link href={addLocalePrefix("/legal/services/visa", locale)} className="text-primary underline">Visa & Residence Status</Link> /{" "}
+        <Link href={addLocalePrefix("/legal/services/inheritance", locale)} className="text-primary underline">Inheritance</Link> /{" "}
+        <Link href={addLocalePrefix("/legal/services/company", locale)} className="text-primary underline">Company Formation</Link> /{" "}
+        <Link href={addLocalePrefix("/legal/services/subsidy", locale)} className="text-primary underline">Subsidies</Link>) and the{" "}
+        <Link href={addLocalePrefix("/legal/ryokin", locale)} className="text-primary underline">Fees</Link> page.
       </>
     ),
   },
@@ -119,15 +120,15 @@ const COPY: Record<LangCode, NagareCopy> = {
       { name: "完成・後續支援", text: <>取得許可・指定並交付文件。如有需要，亦協助辦理後續手續。</>, howto: "取得許可・指定並交付文件。如有需要，亦協助辦理後續手續。" },
     ],
     howtoName: "四葉行政書士事務所 從諮詢到完成的流程",
-    note: (
+    note: (locale) => (
       <>
         ※所需期間、應備文件與費用產生的時點依業務而異。請一併參閱各業務頁面（
-        <Link href="/legal/services/shogai-fukushi" className="text-primary underline">障礙福祉</Link>／
-        <Link href="/legal/services/visa" className="text-primary underline">在留資格（簽證）</Link>／
-        <Link href="/legal/services/inheritance" className="text-primary underline">繼承</Link>／
-        <Link href="/legal/services/company" className="text-primary underline">公司設立</Link>／
-        <Link href="/legal/services/subsidy" className="text-primary underline">補助金</Link>）與
-        <Link href="/legal/ryokin" className="text-primary underline">報酬額表</Link>。
+        <Link href={addLocalePrefix("/legal/services/shogai-fukushi", locale)} className="text-primary underline">障礙福祉</Link>／
+        <Link href={addLocalePrefix("/legal/services/visa", locale)} className="text-primary underline">在留資格（簽證）</Link>／
+        <Link href={addLocalePrefix("/legal/services/inheritance", locale)} className="text-primary underline">繼承</Link>／
+        <Link href={addLocalePrefix("/legal/services/company", locale)} className="text-primary underline">公司設立</Link>／
+        <Link href={addLocalePrefix("/legal/services/subsidy", locale)} className="text-primary underline">補助金</Link>）與
+        <Link href={addLocalePrefix("/legal/ryokin", locale)} className="text-primary underline">報酬額表</Link>。
       </>
     ),
   },
@@ -152,15 +153,15 @@ const COPY: Record<LangCode, NagareCopy> = {
       { name: "完成・后续支持", text: <>取得许可・指定并交付文件。如有需要，也可协助办理后续手续。</>, howto: "取得许可・指定并交付文件。如有需要，也可协助办理后续手续。" },
     ],
     howtoName: "四葉行政書士事務所 从咨询到完成的流程",
-    note: (
+    note: (locale) => (
       <>
         ※所需时间、应备资料及费用产生的时点因业务而异。请一并参阅各业务页面（
-        <Link href="/legal/services/shogai-fukushi" className="text-primary underline">残障福祉</Link>／
-        <Link href="/legal/services/visa" className="text-primary underline">在留资格（签证）</Link>／
-        <Link href="/legal/services/inheritance" className="text-primary underline">继承</Link>／
-        <Link href="/legal/services/company" className="text-primary underline">公司设立</Link>／
-        <Link href="/legal/services/subsidy" className="text-primary underline">补助金</Link>）与
-        <Link href="/legal/ryokin" className="text-primary underline">报酬额表</Link>。
+        <Link href={addLocalePrefix("/legal/services/shogai-fukushi", locale)} className="text-primary underline">残障福祉</Link>／
+        <Link href={addLocalePrefix("/legal/services/visa", locale)} className="text-primary underline">在留资格（签证）</Link>／
+        <Link href={addLocalePrefix("/legal/services/inheritance", locale)} className="text-primary underline">继承</Link>／
+        <Link href={addLocalePrefix("/legal/services/company", locale)} className="text-primary underline">公司设立</Link>／
+        <Link href={addLocalePrefix("/legal/services/subsidy", locale)} className="text-primary underline">补助金</Link>）与
+        <Link href={addLocalePrefix("/legal/ryokin", locale)} className="text-primary underline">报酬额表</Link>。
       </>
     ),
   },
@@ -228,7 +229,7 @@ export default async function Page() {
         </ol>
 
         <blockquote className="mt-6 border-l-4 border-primary bg-primary-tint p-3 text-sm leading-relaxed text-text">
-          {c.note}
+          {c.note(locale)}
         </blockquote>
       </main>
 
