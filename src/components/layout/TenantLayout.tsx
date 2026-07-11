@@ -55,16 +55,24 @@ const NAV_HREFS: Record<string, { href: string; key: string; labels?: Record<str
 /** テナントごとのフッターナビ href 定義 */
 const FOOTER_NAV_HREFS: Record<
   string,
-  { sectionKey: string; items: { href: string; key: string }[] }[]
+  {
+    sectionKey: string;
+    // labels＝コード内直書き4ロケール（NAV_HREFSと同方式）。Firestoreに新キーを増やさず、
+    // 未定義キーで t() が生キー文字列を返して表示される事故も防ぐ（B1の教訓）。
+    items: { href: string; key: string; labels?: Record<string, string> }[];
+  }[]
 > = {
   realestate: [
     {
       sectionKey: "services",
       items: [
-        { href: "/services#rental", key: "rental" },
-        { href: "/services#sale", key: "sale" },
-        { href: "/services#management", key: "management" },
-        { href: "/services#foreign-residents", key: "foreignResidents" },
+        // 2026-07-11修正：/services 側に #rental 等のアンカーidが存在せず（現ページは別構成に改稿済み）
+        // クリックしてもジャンプしない＝実質機能していなかったため、実ページへ張り替え（浦松承認）。
+        { href: "/services", key: "rental" },
+        { href: "/services", key: "sale" },
+        { href: "/services", key: "management" },
+        // 外国人・多言語のお部屋探しは専用ページが実在
+        { href: "/global", key: "foreignResidents" },
       ],
     },
     {
@@ -86,10 +94,23 @@ const FOOTER_NAV_HREFS: Record<
     {
       sectionKey: "services",
       items: [
-        { href: "/legal", key: "subsidy" },
-        { href: "/legal", key: "visa" },
-        { href: "/legal", key: "incorporation" },
-        { href: "/legal", key: "permits" },
+        // 2026-07-11修正：全4項目が /legal（トップ）向きで個別ページに繋がっていなかったため実ページへ張り替え。
+        // あわせて主力（障害福祉・相続）をフッターに追加（浦松承認）。ラベルはコード内4ロケール直書き。
+        {
+          href: "/legal/services/shogai-fukushi",
+          key: "shogaiFukushi",
+          labels: { ja: "障害福祉", en: "Disability Welfare", "zh-tw": "障礙福祉", zh: "残障福祉" },
+        },
+        {
+          href: "/legal/services/inheritance",
+          key: "inheritance",
+          labels: { ja: "相続・遺言", en: "Inheritance & Wills", "zh-tw": "繼承・遺囑", zh: "继承・遗嘱" },
+        },
+        { href: "/legal/services/subsidy", key: "subsidy" },
+        { href: "/legal/services/visa", key: "visa" },
+        { href: "/legal/services/company", key: "incorporation" },
+        // 許認可の専用ページは無く、会社設立ページが「会社設立・許認可」を包含（浦松承認）
+        { href: "/legal/services/company", key: "permits" },
       ],
     },
     {
@@ -338,10 +359,14 @@ function TenantFooter({ businessKey }: { businessKey: string }) {
       title: t(`${businessKey}.footerNav.${section.sectionKey}.title`),
       links: section.items.map((item) => ({
         href: item.href,
-        label: t(`${businessKey}.footerNav.${section.sectionKey}.${item.key}`),
+        // labels（コード内4ロケール）を優先し、無ければFirestore t()。ヘッダー（allNav）と同方式。
+        label:
+          item.labels?.[locale] ??
+          item.labels?.ja ??
+          t(`${businessKey}.footerNav.${section.sectionKey}.${item.key}`),
       })),
     }));
-  }, [businessKey, t]);
+  }, [businessKey, t, locale]);
 
   return (
     <footer className="text-text">
