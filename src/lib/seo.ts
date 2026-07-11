@@ -368,6 +368,16 @@ export function buildPageMetadata({
   locale?: string;
   absoluteTitle?: boolean;
 }): Metadata {
+  // 【法27条・社労士 完全非表示の要】開業（SR_LAUNCHED=true）までは labor のメタデータを一切出力しない。
+  // (labor)/layout.tsx の notFound() は「本文」しか止めない：Next.jsはページ側 generateMetadata を
+  // 並行解決するため、404レスポンスの <title> に社労士事務所名が出てしまう
+  // （2026-07-11 本番実測＝/labor の title に「四葉社会保険労務士事務所｜…障害福祉に強い社労士」が露出）。
+  // labor全14ページが本ヘルパー経由のため、ここで一元遮断する（title/description/keywords/OG/canonicalすべて出さない）。
+  // 開業時：Vercelの NEXT_PUBLIC_SR_LAUNCHED=true で自動的に通常のメタデータへ戻る。
+  if (businessKey === "labor" && process.env.NEXT_PUBLIC_SR_LAUNCHED !== "true") {
+    return { robots: { index: false, follow: false } };
+  }
+
   const biz = BUSINESS_SEO[businessKey];
   const url = canonicalUrl(businessKey, path, locale);
   const ogImage = image ?? biz?.ogImage ?? "";
