@@ -8,6 +8,7 @@ import {
   REALESTATE_MEMBER_OF,
   REALESTATE_SAME_AS,
   SHARED_ORG_INFO,
+  SITE_URL,
 } from "@/lib/seo";
 
 export function OrganizationJsonLd({ businessKey }: { businessKey: string }) {
@@ -25,10 +26,13 @@ export function OrganizationJsonLd({ businessKey }: { businessKey: string }) {
         name: biz.legalName,
         alternateName: biz.name,
         url: biz.url,
-        logo: `${biz.url}${biz.ogImage}`,
-        image: `${biz.url}${biz.ogImage}`,
+        // アセットはルート配信のみ（実測2026-07-11：/legal/yotsuba/*.png=404、/yotsuba/*.png=200）
+        // ＝結合ベースはbiz.urlでなくSITE_URL（realestateは出力同一）。logo=正方形ロゴ／image=OG優先で分離（P2仕様）
+        logo: `${SITE_URL}${biz.squareLogo ?? biz.ogImage}`,
+        image: `${SITE_URL}${biz.ogImage || biz.squareLogo || ""}`,
         description: biz.description,
         telephone: SHARED_ORG_INFO.telephone,
+        priceRange: "¥¥",
         foundingDate: SHARED_ORG_INFO.foundingDate,
         ...(isRealEstate
           ? {
@@ -53,7 +57,10 @@ export function OrganizationJsonLd({ businessKey }: { businessKey: string }) {
           latitude: SHARED_ORG_INFO.geo.latitude,
           longitude: SHARED_ORG_INFO.geo.longitude,
         },
-        hasMap: `https://www.google.com/maps/search/?api=1&query=${SHARED_ORG_INFO.geo.latitude},${SHARED_ORG_INFO.geo.longitude}`,
+        // GBP直リンク優先（P2仕様）。labor＝gbpUrl無し→geoからの自動生成へフォールバック
+        hasMap:
+          biz.gbpUrl ??
+          `https://www.google.com/maps/search/?api=1&query=${SHARED_ORG_INFO.geo.latitude},${SHARED_ORG_INFO.geo.longitude}`,
         openingHoursSpecification: (
           BUSINESS_HOURS[businessKey] ?? BUSINESS_HOURS.realestate
         ).specs.map((s) => ({
