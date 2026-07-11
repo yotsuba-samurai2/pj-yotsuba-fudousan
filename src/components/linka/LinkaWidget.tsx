@@ -16,6 +16,7 @@ import {
 } from "@assistant-ui/react";
 import { LinkaAvatar } from "./LinkaAvatar";
 import { ResultView } from "./ResultView";
+import { useLanguage } from "@/contexts/LanguageContext";
 import type { LinkaResult, LinkaSite, Summary } from "@/lib/linka/types";
 
 type LocalMsg = { id: string; role: "user" | "assistant"; text?: string; result?: LinkaResult };
@@ -107,6 +108,9 @@ export function LinkaWidget({
   chips?: string[];
 }) {
   const isCust = site === "samurai" && mode === "customer";
+  // K-2a（2026-07-12）：安全メッセージのロケール選択用にlocaleをAPIへ渡す。
+  // useLanguage()はProvider不在でもDEFAULT_LOCALE("ja")を返す設計＝samurai/facilitator配下でも安全（診断A-4）。
+  const { locale } = useLanguage();
   const greeting =
     greetingProp ??
     (site === "samurai" ? (mode === "customer" ? CUSTOMER_GREETING : MEMBER_GREETING) : UI_COPY[site].greeting);
@@ -137,7 +141,7 @@ export function LinkaWidget({
         const res = await fetch("/api/linka", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ site, mode, message: q }),
+          body: JSON.stringify({ site, mode, message: q, locale }),
         });
         const result: LinkaResult = res.ok
           ? await res.json()
@@ -150,7 +154,7 @@ export function LinkaWidget({
         setIsRunning(false);
       }
     },
-    [isRunning, site, mode],
+    [isRunning, site, mode, locale],
   );
 
   const onNew = useCallback(

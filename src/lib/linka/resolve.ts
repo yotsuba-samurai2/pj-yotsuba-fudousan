@@ -17,8 +17,21 @@ import type {
   VideoCard,
 } from "./types";
 
-/** 推薦語（三禁則①「選ばない」）。出力文字列のどこにも含めない */
-export const BANNED_RECO_WORDS = ["最適", "一番", "おすすめ", "オススメ", "お勧め", "イチオシ", "ベスト", "No.1", "ナンバーワン"];
+/** 推薦語（三禁則①「選ばない」）。出力文字列のどこにも含めない
+ *  K-2a（2026-07-12）4言語化：既存ja9語は不変＝中文（簡繁）を追加のみ。enは下のBANNED_RECO_PATTERNS_EN（単語境界＋小文字化）で照合 */
+export const BANNED_RECO_WORDS = [
+  "最適", "一番", "おすすめ", "オススメ", "お勧め", "イチオシ", "ベスト", "No.1", "ナンバーワン",
+  // 中文（簡繁両表記・字面includes・診断書E-1）
+  "推薦", "推荐", "首選", "首选", "最好", "最佳", "最合適", "最适合",
+];
+/** en推薦語（K-2a 2026-07-12）：小文字化した出力全文に対し単語境界で照合（"best"⊂"asbestos"型の誤検知防止・診断書E-1） */
+export const BANNED_RECO_PATTERNS_EN: RegExp[] = [
+  /\bbest\b/,
+  /\brecommend/, // recommend/recommends/recommended/recommendation
+  /\btop choice\b/,
+  /\bno\.\s?1\b/,
+  /\bnumber one\b/,
+];
 
 export interface RawCandidateRef { id: string; reasons?: string[] }
 export interface RawColumnRef { id: string; reason?: string }
@@ -127,8 +140,58 @@ export function validateResolved(result: LinkaResult): string | null {
   for (const w of BANNED_RECO_WORDS) {
     if (text.includes(w)) return `推薦語検出: ${w}`;
   }
+  // K-2a（2026-07-12）：en推薦語は小文字化＋単語境界で照合（機構は言語非依存のまま語彙を拡張＝強化のみ）
+  const lower = text.toLowerCase();
+  for (const re of BANNED_RECO_PATTERNS_EN) {
+    if (re.test(lower)) return `推薦語検出(en): ${re.source}`;
+  }
   if (result.type === "candidates" || result.type === "triage") {
     if (!result.candidates || result.candidates.length < 2) return "候補が2件未満";
   }
+  return null;
+}
+
+// ===== K-2a 業際チェック（2026-07-12・(c)併用方式＝浦松承認済）=====
+// legalサイトのAI出力（concierge）の画面表示され得る全フィールドを検査する。
+// ①既存includes("助成金")維持 ②多言語文脈語（雇用関係助成金の文脈のみ・「補助金」単独は行政書士OKのため対象外）
+// ③言語ゲート＝仮名（ひらがな・カタカナ）が1文字も無ければ「非日本語出力の疑い」（skills.tsのja固定指示のプロンプト遵守失敗を決定論で塞ぐ）
+// 違反はデモ退避（迷ったら通さない）。デモ側定型（escalateNoteの分界説明）はここを通らない＝従来どおり許可。
+// escalateReasonを検査対象に含める＝診断書(A-3)の既存穴の修正。
+/** 雇用関係助成金の文脈語（ja／zh-tw／zh・字面includes。診断書(C)語彙案。中文は雇用・就業との複合語のみ＝「補助/补助」単独は登録しない） */
+export const GYOSAI_CONTEXT_WORDS = [
+  // ja（「助成金」は既存チェックとして先に単独判定）
+  "雇用保険", "労働保険", "社会保険", "労務", "キャリアアップ", "雇用調整", "処遇改善",
+  // zh-tw
+  "僱用補助", "就業補助金", "僱用保險", "勞動保險", "社會保險", "勞務", "就業保險",
+  // zh
+  "雇用补助", "就业补助金", "雇用保险", "劳动保险", "社会保险", "劳务", "就业保险",
+];
+/** 同・en（小文字化includes・必ず2語連結＝"labor"/"grant"単独は過広のため登録しない。診断書(C)注意点） */
+export const GYOSAI_CONTEXT_EN = [
+  "employment grant", "hiring subsidy", "employment subsidy", "wage subsidy", "payroll subsidy",
+  "employment insurance", "labor insurance", "labour insurance", "social insurance",
+];
+/** 仮名（ひらがな・カタカナ）1文字以上 */
+const KANA_RE = /[ぁ-ゟァ-ヿ]/;
+
+/** legalサイトのAI出力（concierge）の業際検証。違反なら種別のみの文字列（相談本文・出力本文は含めない） */
+export function validateLegalConciergeOutput(result: LinkaResult): string | null {
+  if (result.type !== "concierge") return null;
+  // 画面表示され得る全フィールド（escalateReason含む＝既存穴A-3の修正）
+  const visible = JSON.stringify({
+    kento: result.kento,
+    message: result.message,
+    services: result.services,
+    escalateReason: result.escalateReason ?? "",
+  });
+  if (visible.includes("助成金")) return "業際: legal出力に助成金";
+  for (const w of GYOSAI_CONTEXT_WORDS) {
+    if (visible.includes(w)) return "業際: legal出力に雇用助成金の文脈語";
+  }
+  const lower = visible.toLowerCase();
+  for (const p of GYOSAI_CONTEXT_EN) {
+    if (lower.includes(p)) return "業際: legal出力に雇用助成金の文脈語(en)";
+  }
+  if (!KANA_RE.test(visible)) return "業際: legal出力が非日本語の疑い(仮名ゼロ)";
   return null;
 }
