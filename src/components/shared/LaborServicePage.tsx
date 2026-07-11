@@ -3,8 +3,13 @@
 // JSON-LD＝Service（provider=@id /labor/#organization・author=Person @id参照のみ）。
 // 登録番号は【開業時確定】＝本文に出力しない（Placeholderのみ）。
 // クロスリンク（C8/C10/C12/C13/C14）はpathで自動（launchFlag=SR_LAUNCHED）。
+// 2026-07-11 ロケール保持（診断_ロケール保持リンク_v1 §B-8）：async化し、シェルが直接描画する
+//   internalLinks の素Linkのみ addLocalePrefix（ここで1回だけ付与）。Breadcrumb/CtaBand/CrossLinkBanner
+//   は各部品が自前付与＝シェルでは触らない（二重適用禁止）。Service JSON-LD の url は接頭辞なし維持（診断§C-3）。
 import type { ReactNode } from "react";
 import Link from "next/link";
+import { getRequestLocale } from "@/lib/getRequestLocale";
+import { addLocalePrefix } from "@/lib/locale";
 import { Breadcrumb } from "@/components/shared/Breadcrumb";
 import { CtaBand } from "@/components/shared/CtaBand";
 import { CrossLinkBanner } from "@/components/shared/CrossLinkBanner";
@@ -27,7 +32,8 @@ export type LaborServicePageProps = {
   children: ReactNode;
 };
 
-export function LaborServicePage(p: LaborServicePageProps) {
+export async function LaborServicePage(p: LaborServicePageProps) {
+  const locale = await getRequestLocale();
   const path = `/labor/services/${p.slug}`;
   const url = SITE + path;
   const crossLinks = getCrossLinks(path, SR_LAUNCHED);
@@ -81,7 +87,7 @@ export function LaborServicePage(p: LaborServicePageProps) {
           <ul className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-primary">
             {p.internalLinks.map((l) => (
               <li key={l.href}>
-                <Link href={l.href} className="underline">{l.label}</Link>
+                <Link href={addLocalePrefix(l.href, locale)} className="underline">{l.label}</Link>
               </li>
             ))}
           </ul>

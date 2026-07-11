@@ -6,6 +6,7 @@
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo";
 import { getRequestLocale } from "@/lib/getRequestLocale";
+import { addLocalePrefix } from "@/lib/locale";
 import Link from "next/link";
 import { Breadcrumb } from "@/components/shared/Breadcrumb";
 import { CtaBand } from "@/components/shared/CtaBand";
@@ -286,7 +287,7 @@ const SECTIONS: Section[] = [
   },
 ];
 
-function FeeTable({ s, title, c }: { s: Section; title: string; c: RyokinCopy }) {
+function FeeTable({ s, title, c, locale }: { s: Section; title: string; c: RyokinCopy; locale: LangCode }) {
   return (
     <div>
       <h2 className="border-l-4 border-primary pl-2 font-serif text-lg font-semibold text-ink">
@@ -294,7 +295,7 @@ function FeeTable({ s, title, c }: { s: Section; title: string; c: RyokinCopy })
         {s.href && (
           <>
             {" "}
-            <Link href={s.href} className="text-sm font-normal text-primary underline">{c.toService}</Link>
+            <Link href={addLocalePrefix(s.href, locale)} className="text-sm font-normal text-primary underline">{c.toService}</Link>
           </>
         )}
       </h2>
@@ -377,7 +378,7 @@ export default async function Page() {
 
         <div className="mt-6 space-y-8">
           {SECTIONS.map((s, i) => (
-            <FeeTable key={s.title} s={s} title={c.sectionTitles[i] ?? s.title} c={c} />
+            <FeeTable key={s.title} s={s} title={c.sectionTitles[i] ?? s.title} c={c} locale={locale} />
           ))}
         </div>
 
@@ -385,7 +386,7 @@ export default async function Page() {
 
         <p className="mt-4 text-sm">
           {c.procedureLead}
-          <Link href="/legal/nagare" className="text-primary underline">
+          <Link href={addLocalePrefix("/legal/nagare", locale)} className="text-primary underline">
             {c.procedureLink}
           </Link>
         </p>

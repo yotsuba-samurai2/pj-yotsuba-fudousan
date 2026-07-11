@@ -3,8 +3,13 @@
 // 差し替えるのは：slug（→URL・/hero/legal-<slug>-16x9.webp）・meta（各ページのexport）・h1・lead・faq・internalLinks・children（H2群）。
 // JSON-LD＝Service（BreadcrumbListは<Breadcrumb>部品が出力・FAQPageは/legal/faq専用）。クロスリンクはpathで自動（getCrossLinks）。
 // 本番配置＝src/components/shared/LegalServicePage.tsx。※flagship shogai-fukushi は全部入り版を別途保持。
+// 2026-07-11 ロケール保持（診断_ロケール保持リンク_v1 §B-6）：async化し、シェルが直接描画する
+//   internalLinks の素Linkのみ addLocalePrefix（ここで1回だけ付与）。Breadcrumb/CtaBand/CrossLinkBanner
+//   は各部品が自前付与＝シェルでは触らない（二重適用禁止）。Service JSON-LD の url は接頭辞なし維持（診断§C-3）。
 import type { ReactNode } from "react";
 import Link from "next/link";
+import { getRequestLocale } from "@/lib/getRequestLocale";
+import { addLocalePrefix } from "@/lib/locale";
 import { Breadcrumb } from "@/components/shared/Breadcrumb";
 import { CtaBand } from "@/components/shared/CtaBand";
 import { CrossLinkBanner } from "@/components/shared/CrossLinkBanner";
@@ -28,7 +33,8 @@ export type LegalServicePageProps = {
   children: ReactNode; // H2セクション群（疑問文H2＝表示のみ・FAQPageは/faq専用）
 };
 
-export function LegalServicePage(p: LegalServicePageProps) {
+export async function LegalServicePage(p: LegalServicePageProps) {
+  const locale = await getRequestLocale();
   const path = `/legal/services/${p.slug}`;
   const url = SITE + path;
   const crossLinks = getCrossLinks(path, SR_LAUNCHED);
@@ -88,7 +94,7 @@ export function LegalServicePage(p: LegalServicePageProps) {
           <ul className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-primary">
             {p.internalLinks.map((l) => (
               <li key={l.href}>
-                <Link href={l.href} className="underline">{l.label}</Link>
+                <Link href={addLocalePrefix(l.href, locale)} className="underline">{l.label}</Link>
               </li>
             ))}
           </ul>

@@ -11,6 +11,7 @@
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo";
 import { getRequestLocale } from "@/lib/getRequestLocale";
+import { addLocalePrefix } from "@/lib/locale";
 import Link from "next/link";
 import { Breadcrumb } from "@/components/shared/Breadcrumb";
 import { CtaBand } from "@/components/shared/CtaBand";
@@ -35,12 +36,12 @@ type ShogaiFukushiCopy = {
   /** 疑問文H2（表示見出しの元データ。FAQPageは出力しない＝/legal/faq 専用） */
   qa: { q: string; a: string }[];
   sec1Body: React.ReactNode;
-  sec2Body: React.ReactNode;
+  sec2Body: (locale: LangCode) => React.ReactNode;
   sec3Body: React.ReactNode;
   feeH2: string;
-  feeBody: React.ReactNode;
+  feeBody: (locale: LangCode) => React.ReactNode;
   flowH2: string;
-  flowBody: React.ReactNode;
+  flowBody: (locale: LangCode) => React.ReactNode;
   meritH2: string;
   meritBody: React.ReactNode;
   relatedHeading: string;
@@ -122,14 +123,14 @@ const COPY: Record<LangCode, ShogaiFukushiCopy> = {
         </p>
       </>
     ),
-    sec2Body: (
+    sec2Body: (locale) => (
       <>
         <p className="mt-3 leading-relaxed text-text">四葉行政書士事務所は、指定申請の前後まで含めて、次の範囲を一体で対応します。</p>
         <ul className="mt-3 space-y-2 text-sm text-text">
           <li>
             <strong>法人設立</strong>：指定の前提となる法人の設立書類作成（株式会社・合同会社・NPO法人等）
             <Placeholder reason="浦松＝対応する法人形態" />
-            　→ 詳細：<Link href="/legal/services/company" className="text-primary underline">会社設立・各種許認可の業務内容</Link>
+            　→ 詳細：<Link href={addLocalePrefix("/legal/services/company", locale)} className="text-primary underline">会社設立・各種許認可の業務内容</Link>
           </li>
           <li>
             <strong>指定申請</strong>：人員・設備・運営基準の事前確認、申請書類一式の作成・提出、自治体との協議対応
@@ -145,7 +146,7 @@ const COPY: Record<LangCode, ShogaiFukushiCopy> = {
           </li>
           <li>
             <strong>物件</strong>：グループホーム・事業所に使える物件は、関連事業の四葉不動産株式会社（宅地建物取引業）が扱います →{" "}
-            <Link href="/toushi/group-home" className="text-primary underline">グループホームに使える物件探し</Link>
+            <Link href={addLocalePrefix("/toushi/group-home", locale)} className="text-primary underline">グループホームに使える物件探し</Link>
             <br />
             <span className="text-xs text-text-muted">
               ※四葉不動産株式会社・四葉行政書士事務所は、それぞれ別の事業体として独立してご依頼をお受けします（紹介料等の授受はありません）。
@@ -177,27 +178,27 @@ const COPY: Record<LangCode, ShogaiFukushiCopy> = {
       </>
     ),
     feeH2: "費用・料金はいくらですか？",
-    feeBody: (
+    feeBody: (locale) => (
       <>
         <p className="mt-3 leading-relaxed text-text">
           障害福祉サービス指定申請の報酬は、サービス種別・法人設立の有無・自治体によって異なります。業務ごとの金額は報酬額表に掲載し、個別の事情によるお見積りにも対応します。
         </p>
         <p className="mt-2 text-sm">
           →{" "}
-          <Link href="/legal/ryokin" className="text-primary underline">障害福祉サービス指定申請の報酬額（報酬額表）</Link>
+          <Link href={addLocalePrefix("/legal/ryokin", locale)} className="text-primary underline">障害福祉サービス指定申請の報酬額（報酬額表）</Link>
           <Placeholder reason="Notion＝料金体系・金額（報酬額表_HP公開用が正）" />
         </p>
       </>
     ),
     flowH2: "受任の流れを教えてください",
-    flowBody: (
+    flowBody: (locale) => (
       <>
         <p className="mt-3 leading-relaxed text-text">
           ご相談から指定取得までは、<strong>①ご相談 → ②お見積り・受任 → ③要件整理・書類作成 → ④申請・自治体対応 → ⑤指定取得・運営開始のサポート</strong>、の順で進みます。
         </p>
         <p className="mt-2 text-sm">
           →{" "}
-          <Link href="/legal/nagare" className="text-primary underline">ご相談から完了までの受任の流れ</Link>
+          <Link href={addLocalePrefix("/legal/nagare", locale)} className="text-primary underline">ご相談から完了までの受任の流れ</Link>
           <Placeholder reason="浦松＝各ステップの実運用・標準期間" />
         </p>
       </>
@@ -297,14 +298,14 @@ const COPY: Record<LangCode, ShogaiFukushiCopy> = {
         </p>
       </>
     ),
-    sec2Body: (
+    sec2Body: (locale) => (
       <>
         <p className="mt-3 leading-relaxed text-text">四葉行政書士事務所 covers the following as one engagement, including the stages before and after the designation application itself.</p>
         <ul className="mt-3 space-y-2 text-sm text-text">
           <li>
             <strong>Incorporation</strong>: preparing the formation documents for the corporation that designation presupposes (stock company, LLC, NPO corporation, etc.)
             <Placeholder reason="浦松＝対応する法人形態" />
-            　→ Details: <Link href="/legal/services/company" className="text-primary underline">Company Formation & Licensing</Link>
+            　→ Details: <Link href={addLocalePrefix("/legal/services/company", locale)} className="text-primary underline">Company Formation & Licensing</Link>
           </li>
           <li>
             <strong>Designation application</strong>: advance checks against the staffing, facility, and operational standards; preparation and filing of the complete application package; consultations with the municipality
@@ -320,7 +321,7 @@ const COPY: Record<LangCode, ShogaiFukushiCopy> = {
           </li>
           <li>
             <strong>Property</strong>: properties usable for group homes and service sites are handled by our affiliated company 四葉不動産株式会社 (Yotsuba Fudosan Co., Ltd.; licensed real estate brokerage) →{" "}
-            <Link href="/toushi/group-home" className="text-primary underline">Finding a property for a group home</Link>
+            <Link href={addLocalePrefix("/toushi/group-home", locale)} className="text-primary underline">Finding a property for a group home</Link>
             <br />
             <span className="text-xs text-text-muted">
               * 四葉不動産株式会社 and 四葉行政書士事務所 each accept engagements independently as separate business entities (no referral fees are exchanged).
@@ -352,27 +353,27 @@ const COPY: Record<LangCode, ShogaiFukushiCopy> = {
       </>
     ),
     feeH2: "What are the fees?",
-    feeBody: (
+    feeBody: (locale) => (
       <>
         <p className="mt-3 leading-relaxed text-text">
           Fees for a disability-welfare service designation application vary with the service type, whether incorporation is needed, and the municipality. Per-service amounts are listed in our fee schedule, and we also prepare individual quotes for your specific circumstances.
         </p>
         <p className="mt-2 text-sm">
           →{" "}
-          <Link href="/legal/ryokin" className="text-primary underline">Fees for disability-welfare service designation applications (fee schedule)</Link>
+          <Link href={addLocalePrefix("/legal/ryokin", locale)} className="text-primary underline">Fees for disability-welfare service designation applications (fee schedule)</Link>
           <Placeholder reason="Notion＝料金体系・金額（報酬額表_HP公開用が正）" />
         </p>
       </>
     ),
     flowH2: "How does an engagement proceed?",
-    flowBody: (
+    flowBody: (locale) => (
       <>
         <p className="mt-3 leading-relaxed text-text">
           From first consultation to designation, the steps are: <strong>(1) consultation → (2) quote and engagement → (3) sorting requirements and preparing documents → (4) filing and dealing with the municipality → (5) designation obtained, with support for the start of operations</strong>.
         </p>
         <p className="mt-2 text-sm">
           →{" "}
-          <Link href="/legal/nagare" className="text-primary underline">How an engagement works, from consultation to completion</Link>
+          <Link href={addLocalePrefix("/legal/nagare", locale)} className="text-primary underline">How an engagement works, from consultation to completion</Link>
           <Placeholder reason="浦松＝各ステップの実運用・標準期間" />
         </p>
       </>
@@ -471,14 +472,14 @@ const COPY: Record<LangCode, ShogaiFukushiCopy> = {
         </p>
       </>
     ),
-    sec2Body: (
+    sec2Body: (locale) => (
       <>
         <p className="mt-3 leading-relaxed text-text">四葉行政書士事務所連同指定申請的前後階段，一體對應以下範圍。</p>
         <ul className="mt-3 space-y-2 text-sm text-text">
           <li>
             <strong>法人設立</strong>：製作作為指定前提的法人設立文件（株式會社・合同會社・NPO法人等）
             <Placeholder reason="浦松＝対応する法人形態" />
-            　→ 詳情：<Link href="/legal/services/company" className="text-primary underline">公司設立・各類許可的業務內容</Link>
+            　→ 詳情：<Link href={addLocalePrefix("/legal/services/company", locale)} className="text-primary underline">公司設立・各類許可的業務內容</Link>
           </li>
           <li>
             <strong>指定申請</strong>：人員・設備・營運基準的事前確認、申請文件全套的製作與提出、與自治體的協商對應
@@ -494,7 +495,7 @@ const COPY: Record<LangCode, ShogaiFukushiCopy> = {
           </li>
           <li>
             <strong>物件</strong>：可用於團體家屋・事業所的物件，由關係企業四葉不動産株式会社（宅地建物取引業）承辦 →{" "}
-            <Link href="/toushi/group-home" className="text-primary underline">尋找可作團體家屋的物件</Link>
+            <Link href={addLocalePrefix("/toushi/group-home", locale)} className="text-primary underline">尋找可作團體家屋的物件</Link>
             <br />
             <span className="text-xs text-text-muted">
               ※四葉不動産株式会社與四葉行政書士事務所是各自獨立的事業體，分別接受委託（不收受介紹費等）。
@@ -526,27 +527,27 @@ const COPY: Record<LangCode, ShogaiFukushiCopy> = {
       </>
     ),
     feeH2: "費用・收費是多少？",
-    feeBody: (
+    feeBody: (locale) => (
       <>
         <p className="mt-3 leading-relaxed text-text">
           障礙福祉服務指定申請的報酬，依服務類別、是否需要法人設立、自治體而異。各項業務的金額刊載於報酬額表，也可依個別情況提供估價。
         </p>
         <p className="mt-2 text-sm">
           →{" "}
-          <Link href="/legal/ryokin" className="text-primary underline">障礙福祉服務指定申請的報酬額（報酬額表）</Link>
+          <Link href={addLocalePrefix("/legal/ryokin", locale)} className="text-primary underline">障礙福祉服務指定申請的報酬額（報酬額表）</Link>
           <Placeholder reason="Notion＝料金体系・金額（報酬額表_HP公開用が正）" />
         </p>
       </>
     ),
     flowH2: "受任的流程為何？",
-    flowBody: (
+    flowBody: (locale) => (
       <>
         <p className="mt-3 leading-relaxed text-text">
           從諮詢到取得指定，依<strong>①諮詢 → ②估價・受任 → ③整理要件・製作文件 → ④申請・對應自治體 → ⑤取得指定・開始營運的支援</strong>的順序進行。
         </p>
         <p className="mt-2 text-sm">
           →{" "}
-          <Link href="/legal/nagare" className="text-primary underline">從諮詢到完成的受任流程</Link>
+          <Link href={addLocalePrefix("/legal/nagare", locale)} className="text-primary underline">從諮詢到完成的受任流程</Link>
           <Placeholder reason="浦松＝各ステップの実運用・標準期間" />
         </p>
       </>
@@ -646,14 +647,14 @@ const COPY: Record<LangCode, ShogaiFukushiCopy> = {
         </p>
       </>
     ),
-    sec2Body: (
+    sec2Body: (locale) => (
       <>
         <p className="mt-3 leading-relaxed text-text">四葉行政書士事務所连同指定申请的前后阶段，一体对应以下范围。</p>
         <ul className="mt-3 space-y-2 text-sm text-text">
           <li>
             <strong>法人设立</strong>：制作作为指定前提的法人设立文件（株式会社・合同会社・NPO法人等）
             <Placeholder reason="浦松＝対応する法人形態" />
-            　→ 详情：<Link href="/legal/services/company" className="text-primary underline">公司设立・各类许可的业务内容</Link>
+            　→ 详情：<Link href={addLocalePrefix("/legal/services/company", locale)} className="text-primary underline">公司设立・各类许可的业务内容</Link>
           </li>
           <li>
             <strong>指定申请</strong>：人员・设备・运营基准的事前确认、申请文件全套的制作与提交、与自治体的协商对应
@@ -669,7 +670,7 @@ const COPY: Record<LangCode, ShogaiFukushiCopy> = {
           </li>
           <li>
             <strong>物件</strong>：可用于团体家屋・事业所的物件，由关联企业四葉不動産株式会社（宅地建物取引業）承办 →{" "}
-            <Link href="/toushi/group-home" className="text-primary underline">寻找可作团体家屋的物件</Link>
+            <Link href={addLocalePrefix("/toushi/group-home", locale)} className="text-primary underline">寻找可作团体家屋的物件</Link>
             <br />
             <span className="text-xs text-text-muted">
               ※四葉不動産株式会社与四葉行政書士事務所是各自独立的事业体，分别接受委托（不收取介绍费等）。
@@ -701,27 +702,27 @@ const COPY: Record<LangCode, ShogaiFukushiCopy> = {
       </>
     ),
     feeH2: "费用・收费是多少？",
-    feeBody: (
+    feeBody: (locale) => (
       <>
         <p className="mt-3 leading-relaxed text-text">
           残障福祉服务指定申请的报酬，因服务类别、是否需要法人设立、自治体而异。各项业务的金额载于报酬额表，也可根据个别情况提供报价。
         </p>
         <p className="mt-2 text-sm">
           →{" "}
-          <Link href="/legal/ryokin" className="text-primary underline">残障福祉服务指定申请的报酬额（报酬额表）</Link>
+          <Link href={addLocalePrefix("/legal/ryokin", locale)} className="text-primary underline">残障福祉服务指定申请的报酬额（报酬额表）</Link>
           <Placeholder reason="Notion＝料金体系・金額（報酬額表_HP公開用が正）" />
         </p>
       </>
     ),
     flowH2: "受任的流程是怎样的？",
-    flowBody: (
+    flowBody: (locale) => (
       <>
         <p className="mt-3 leading-relaxed text-text">
           从咨询到取得指定，按<strong>①咨询 → ②报价・受任 → ③梳理要件・制作文件 → ④申请・对应自治体 → ⑤取得指定・开始运营的支援</strong>的顺序进行。
         </p>
         <p className="mt-2 text-sm">
           →{" "}
-          <Link href="/legal/nagare" className="text-primary underline">从咨询到完成的受任流程</Link>
+          <Link href={addLocalePrefix("/legal/nagare", locale)} className="text-primary underline">从咨询到完成的受任流程</Link>
           <Placeholder reason="浦松＝各ステップの実運用・標準期間" />
         </p>
       </>
@@ -828,7 +829,7 @@ export default async function Page() {
 
           <div>
             <h2 className="font-serif text-xl font-semibold text-ink">{c.qa[1].q}</h2>
-            {c.sec2Body}
+            {c.sec2Body(locale)}
           </div>
 
           <div>
@@ -839,13 +840,13 @@ export default async function Page() {
           {/* 費用 */}
           <div>
             <h2 className="font-serif text-xl font-semibold text-ink">{c.feeH2}</h2>
-            {c.feeBody}
+            {c.feeBody(locale)}
           </div>
 
           {/* 受任の流れ */}
           <div>
             <h2 className="font-serif text-xl font-semibold text-ink">{c.flowH2}</h2>
-            {c.flowBody}
+            {c.flowBody(locale)}
           </div>
 
           {/* メリット */}
@@ -860,7 +861,7 @@ export default async function Page() {
           <div className="font-medium text-ink">{c.relatedHeading}</div>
           <ul className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-primary">
             {c.relatedLinks.map((l) => (
-              <li key={l.href}><Link href={l.href} className="underline">{l.label}</Link></li>
+              <li key={l.href}><Link href={addLocalePrefix(l.href, locale)} className="underline">{l.label}</Link></li>
             ))}
           </ul>
         </nav>

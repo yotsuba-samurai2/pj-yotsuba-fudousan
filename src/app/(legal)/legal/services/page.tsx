@@ -3,6 +3,7 @@
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo";
 import { getRequestLocale } from "@/lib/getRequestLocale";
+import { addLocalePrefix } from "@/lib/locale";
 import Link from "next/link";
 import { Breadcrumb } from "@/components/shared/Breadcrumb";
 import { CtaBand } from "@/components/shared/CtaBand";
@@ -46,7 +47,8 @@ function jsonLd() {
   };
 }
 
-export default function Page() {
+export default async function Page() {
+  const locale = await getRequestLocale();
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()) }} />
@@ -62,7 +64,7 @@ export default function Page() {
 
         <div className="mt-6 grid gap-3 sm:grid-cols-2">
           {SERVICES.map((s) => (
-            <Link key={s.href} href={s.href} className="block rounded-2xl border border-border bg-surface p-4 transition-shadow hover:shadow-sm">
+            <Link key={s.href} href={addLocalePrefix(s.href, locale)} className="block rounded-2xl border border-border bg-surface p-4 transition-shadow hover:shadow-sm">
               <div className="font-serif text-lg font-semibold text-ink">{s.name}</div>
               <div className="mt-1 text-sm text-text-muted">こんな方に：{s.who}</div>
               <div className="mt-2 text-sm font-medium text-primary underline">詳しく見る →</div>
@@ -71,8 +73,8 @@ export default function Page() {
         </div>
 
         <p className="mt-6 text-sm text-text-muted">
-          料金は <Link href="/legal/ryokin" className="text-primary underline">報酬額表</Link>、依頼の手順は{" "}
-          <Link href="/legal/nagare" className="text-primary underline">受任の流れ</Link> をご覧ください。
+          料金は <Link href={addLocalePrefix("/legal/ryokin", locale)} className="text-primary underline">報酬額表</Link>、依頼の手順は{" "}
+          <Link href={addLocalePrefix("/legal/nagare", locale)} className="text-primary underline">受任の流れ</Link> をご覧ください。
         </p>
       </main>
 

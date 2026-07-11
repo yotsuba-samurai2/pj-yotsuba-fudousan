@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 
 import { buildPageMetadata } from "@/lib/seo";
 import { getRequestLocale } from "@/lib/getRequestLocale";
+import { addLocalePrefix } from "@/lib/locale";
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getRequestLocale();
@@ -17,7 +18,8 @@ export async function generateMetadata(): Promise<Metadata> {
   });
 }
 
-export default function LegalThanksPage() {
+export default async function LegalThanksPage() {
+  const locale = await getRequestLocale();
   return (
     <div>
       <section className="flex min-h-[70vh] items-center justify-center px-4 pt-20">
@@ -35,7 +37,7 @@ export default function LegalThanksPage() {
           </p>
           <div className="mt-10">
             <Link
-              href="/legal"
+              href={addLocalePrefix("/legal", locale)}
               className="gradient-line inline-flex items-center gap-2 rounded-md px-8 py-3.5 text-sm font-semibold text-white shadow-lg transition-all duration-200 hover:shadow-xl hover:brightness-110 opacity-80"
             >
               トップに戻る
