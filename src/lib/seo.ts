@@ -29,7 +29,7 @@ export const SHARED_ORG_INFO = {
   addressRegion: "東京都",
   addressCountry: "JP",
   telephone: "03-6161-9428",
-  geo: { latitude: 35.7178, longitude: 139.7343 },
+  geo: { latitude: 35.715069, longitude: 139.739822 },
   foundingDate: "2025",
 } as const;
 
