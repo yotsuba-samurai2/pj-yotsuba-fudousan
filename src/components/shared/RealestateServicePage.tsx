@@ -30,6 +30,12 @@ export type RealestateServicePageProps = {
   internalLinks: { href: string; label: string }[];
   /** クロスリンク導入文の上書き（分担説明トーン） */
   crossLinkLead?: string;
+  /** 多言語上書き（省略時=ja既定文言のまま・既存ページの出力は不変。2026-07-11 /toushi/shataku 4ロケール化で追加） */
+  relatedAria?: string;
+  relatedHeading?: string;
+  authorAlt?: string;
+  authorLabel?: string;
+  authorBio?: string;
   children: ReactNode;
 };
 
@@ -75,8 +81,8 @@ export function RealestateServicePage(p: RealestateServicePageProps) {
 
         <section className="mt-8 space-y-8">{p.children}</section>
 
-        <nav aria-label="関連リンク" className="mt-8 rounded-xl border border-border bg-surface p-4 text-sm">
-          <div className="font-medium text-ink">このページの関連リンク</div>
+        <nav aria-label={p.relatedAria ?? "関連リンク"} className="mt-8 rounded-xl border border-border bg-surface p-4 text-sm">
+          <div className="font-medium text-ink">{p.relatedHeading ?? "このページの関連リンク"}</div>
           <ul className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-primary">
             {p.internalLinks.map((l) => (
               <li key={l.href}>
@@ -94,13 +100,15 @@ export function RealestateServicePage(p: RealestateServicePageProps) {
         <aside className="mt-8 flex items-start gap-3 rounded-xl border border-border bg-surface p-4">
           <img
             src="/staff/uramatsu-square.webp"
-            alt="四葉不動産株式会社 代表取締役 浦松丈二"
+            alt={p.authorAlt ?? "四葉不動産株式会社 代表取締役 浦松丈二"}
             width={48}
             height={48}
             className="h-12 w-12 flex-shrink-0 rounded-full object-cover"
           />
           <p className="text-xs leading-relaxed text-text-muted">
-            <strong>この記事の著者</strong> 浦松 丈二｜四葉不動産株式会社 代表取締役・専任宅地建物取引士。行政書士。元毎日新聞中国総局長（記者歴34年）・海外4カ国在住経験。社会保険労務士試験合格（2026年9月開業予定）。
+            <strong>{p.authorLabel ?? "この記事の著者"}</strong>{" "}
+            {p.authorBio ??
+              "浦松 丈二｜四葉不動産株式会社 代表取締役・専任宅地建物取引士。行政書士。元毎日新聞中国総局長（記者歴34年）・海外4カ国在住経験。社会保険労務士試験合格（2026年9月開業予定）。"}
           </p>
         </aside>
       </article>

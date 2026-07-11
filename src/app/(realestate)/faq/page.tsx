@@ -1,20 +1,225 @@
 // /faq（型B・FAQPage）＝原稿_不動産 #8
-// FAQPage JSON-LDはこの専用ページのみ（各サイト1本＝URL構造設計v1 §1）。HTMLと構造化データは同じITEMSから生成＝完全一致。
+// FAQPage JSON-LDはこの専用ページのみ（各サイト1本＝URL構造設計v1 §1）。HTMLと構造化データは同じitems配列から生成＝完全一致。
+// 多言語化でもFaq部品にロケール済みitemsを渡すためHTMLとJSON-LDは自動一致（withJsonLd不変）。
 // 【要確認】の項目（対応エリア・査定のみ対応）は断定しない安全文で公開可能な形にしてある（未検証を出力しない原則）。
+// フェーズI多言語化（2026-07-11）：COPY: Record<LangCode,…>＋getRequestLocale 方式（手本= /legal/faq・/access）。
+// en/zh-tw/zh=監修前ドラフト（2026-07-11）。繁体=台湾定訳（文京區・茗荷谷站・繼承・不動產）／zh=大陸表記。
+// 相談料（Q1）＝2026-07-11浦松確定文言（初回無料・2回目以降/媒介を伴わないコンサルは同意ベースで30分5,500円税込）＝/accessと整合。
+// 業法訳は/access既訳と統一（仲介手数料=brokerage commission／法定上限=statutory maximum (cap) under the Real Estate Brokerage Act）。金額・率は全ロケール不変。
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo";
 import { getRequestLocale } from "@/lib/getRequestLocale";
 import { Breadcrumb } from "@/components/shared/Breadcrumb";
 import { Faq, type FaqItem } from "@/components/shared/Faq";
 import { CtaBand } from "@/components/shared/CtaBand";
+import type { LangCode } from "@/config/languages";
+
+type FaqPageCopy = {
+  metaTitle: string;
+  metaDesc: string;
+  breadcrumbHome: string;
+  breadcrumbCurrent: string;
+  heading: string;
+  items: FaqItem[];
+  authorAlt: string;
+  authorLabel: string;
+  authorBio: string;
+};
+
+const COPY: Record<LangCode, FaqPageCopy> = {
+  ja: {
+    metaTitle: "よくある質問｜文京区・茗荷谷の四葉不動産株式会社",
+    metaDesc:
+      "四葉不動産株式会社への「相続の相談は無料か」「中国語・英語で相談できるか」「文京区以外も対応か」「グループホーム物件や社宅を扱えるか」などのよくある質問に、一問一答でお答えします。文京区小日向・茗荷谷駅徒歩5分。まずはお気軽にご相談ください。",
+    breadcrumbHome: "ホーム",
+    breadcrumbCurrent: "よくある質問",
+    heading: "よくある質問",
+    items: [
+      {
+        q: "相続や不動産の相談は無料ですか？",
+        a: "初回のご相談は無料です。2回目以降の継続的なご相談や、媒介を伴わない不動産コンサルティング（セカンドオピニオン、資産全体の活用・保有方針の助言など）は、事前のご同意のうえ原則30分5,500円（税込・オンライン可）で承ります。まずはLINEか電話で一言からで大丈夫です。",
+      },
+      {
+        q: "中国語・英語でも相談できますか？",
+        a: "できます。代表の浦松丈二は元毎日新聞中国総局長で海外4カ国の在住経験があり、日本語・英語・中国語（繁体字・簡体字）で対応します。外国人の方のお部屋探しは「外国人・多言語のお部屋探し」ページもご覧ください。",
+      },
+      {
+        q: "文京区以外の物件でも相談できますか？",
+        a: "四葉不動産株式会社は文京区・茗荷谷を中心に対応します。エリア外については個別にご相談ください。",
+      },
+      {
+        q: "グループホームや障害福祉に使える物件を探せますか？",
+        a: "探せます。四葉不動産株式会社は、グループホーム（共同生活援助）等に使う物件のご相談を扱います。物件の用途・立地・消防などの指定基準に関わる点は、行政書士等の専門家と確認しながら進めます。指定申請そのものは、関連事業の四葉行政書士事務所（別事業体・独立受任・紹介料等の授受はありません）が対応します。",
+      },
+      {
+        q: "社宅・法人賃貸の手配もできますか？",
+        a: "できます。四葉不動産株式会社は、企業・施設向けの社宅手配や法人賃貸に対応します。外国人材の住まい確保にも対応します。",
+      },
+      {
+        q: "相続登記や相続税も頼めますか？",
+        a: "相続登記は司法書士、相続税は税理士の領域です。四葉不動産株式会社は不動産の相談・売買・賃貸・管理を扱い、これらの手続きは提携する専門家と連携して進めます。相続に関する書類作成・許認可は、四葉行政書士事務所（別事業体）が対応できます。",
+      },
+      {
+        q: "査定だけでもお願いできますか？",
+        a: "お気軽にご相談ください。物件の状況を伺い、対応の可否と進め方をご案内します。",
+      },
+      {
+        q: "仲介手数料はいくらですか？",
+        a: "売買・賃貸の仲介手数料は、宅地建物取引業法の法定上限の範囲です。具体的な金額は物件ごとに算出します。詳しくは「アクセス・料金」ページをご覧ください。",
+      },
+    ],
+    authorAlt: "四葉不動産株式会社 代表取締役 浦松丈二",
+    authorLabel: "この記事の著者",
+    authorBio:
+      "浦松 丈二｜四葉不動産株式会社 代表取締役・専任宅地建物取引士。行政書士。元毎日新聞中国総局長（記者歴34年）・海外4カ国在住経験。社会保険労務士試験合格（2026年9月開業予定）。",
+  },
+  en: {
+    metaTitle: "FAQ | 四葉不動産株式会社 (Yotsuba Real Estate) — Bunkyo & Myogadani, Tokyo",
+    metaDesc:
+      "Answers to frequently asked questions about Yotsuba Real Estate Co., Ltd.: Is an inheritance consultation free? Can I consult in Chinese or English? Do you cover areas outside Bunkyo-ku? Can you handle group-home properties or company housing? Kohinata, Bunkyo-ku, Tokyo — a 5-minute walk from Myogadani Station. Feel free to contact us.",
+    breadcrumbHome: "Home",
+    breadcrumbCurrent: "FAQ",
+    heading: "Frequently Asked Questions",
+    items: [
+      {
+        q: "Is a consultation about inheritance or real estate free?",
+        a: "Your first consultation is free of charge. Follow-up consultations and real-estate consulting not involving brokerage (a second opinion, advice on utilizing or holding your overall assets, and the like) are, in principle, ¥5,500 (tax incl.) per 30 minutes — only with your prior consent, and online sessions are available. Feel free to start with a single line via LINE or phone.",
+      },
+      {
+        q: "Can I consult in Chinese or English?",
+        a: "Yes. 浦松丈二 (Joji Uramatsu), our representative, is a former China General Bureau Chief of the Mainichi Shimbun with experience living in four countries, and handles consultations in Japanese, English, Traditional Chinese, and Simplified Chinese. If you are looking for a room as a foreign resident, please also see the “Multilingual Room-Hunting Support” page.",
+      },
+      {
+        q: "Can I consult about properties outside Bunkyo-ku?",
+        a: "Yotsuba Real Estate Co., Ltd. mainly serves Bunkyo-ku and the Myogadani area. For properties outside this area, please contact us individually.",
+      },
+      {
+        q: "Can you find properties usable for group homes or disability-welfare services?",
+        a: "Yes. Yotsuba Real Estate Co., Ltd. handles consultations on properties used for group homes (shared-living support, kyodo seikatsu enjo) and similar purposes. Points related to designation standards — such as the property's permitted use, location, and fire-safety requirements — are confirmed together with specialists such as a gyoseishoshi (administrative scrivener) as we proceed. The designation application itself is handled by 四葉行政書士事務所 (Yotsuba Gyoseishoshi Office), an affiliated but separate entity that accepts engagements independently (no referral fees are exchanged).",
+      },
+      {
+        q: "Can you also arrange company housing and corporate leases?",
+        a: "Yes. Yotsuba Real Estate Co., Ltd. arranges company housing for companies and facilities and handles corporate leases. We also help secure housing for international staff.",
+      },
+      {
+        q: "Can you also handle inheritance registration and inheritance tax?",
+        a: "Inheritance registration is the domain of a judicial scrivener (shiho-shoshi), and inheritance tax that of a licensed tax accountant. Yotsuba Real Estate Co., Ltd. handles real-estate consultation, sales, leasing, and management, and moves these procedures forward in coordination with partner specialists. Inheritance-related document preparation and permits/licenses can be handled by 四葉行政書士事務所 (Yotsuba Gyoseishoshi Office), a separate entity.",
+      },
+      {
+        q: "Can I request just a property valuation?",
+        a: "Please feel free to contact us. We will ask about the property's situation and explain whether we can assist and how we would proceed.",
+      },
+      {
+        q: "How much is the brokerage commission?",
+        a: "Brokerage commissions for sales and leasing are within the statutory maximum (cap) under the Real Estate Brokerage Act (宅地建物取引業法). The specific amount is calculated for each property. See the “Access & Fees” page for details.",
+      },
+    ],
+    authorAlt: "Joji Uramatsu, Representative Director of Yotsuba Real Estate Co., Ltd.",
+    authorLabel: "About the author",
+    authorBio:
+      "Joji Uramatsu | Representative Director of Yotsuba Real Estate Co., Ltd.; full-time licensed real estate broker; gyoseishoshi lawyer. Former China General Bureau Chief of the Mainichi Shimbun (34 years as a journalist), with experience living in four countries. Passed the national exam for licensed social insurance and labor consultant (office opening scheduled for September 2026).",
+  },
+  "zh-tw": {
+    metaTitle: "常見問題｜文京區・茗荷谷的四葉不動産株式会社",
+    metaDesc:
+      "關於四葉不動産株式会社的常見問題——「繼承諮詢是否免費」「可否用中文・英文諮詢」「文京區以外是否對應」「可否處理團體家屋物件或員工宿舍」等，以一問一答方式回答。文京區小日向・茗荷谷站步行5分鐘。歡迎隨時諮詢。",
+    breadcrumbHome: "首頁",
+    breadcrumbCurrent: "常見問題",
+    heading: "常見問題",
+    items: [
+      {
+        q: "繼承或不動產的諮詢是免費的嗎？",
+        a: "初次諮詢免費。第2次起的持續諮詢，以及不涉及仲介的不動產顧問服務（第二意見、整體資產的活用・持有方針建議等），經事先同意後原則上以每30分鐘5,500日圓（含稅・可線上進行）承接。歡迎先透過LINE或電話說一句話。",
+      },
+      {
+        q: "可以用中文或英文諮詢嗎？",
+        a: "可以。代表・浦松丈二曾任每日新聞中國總局長，旅居海外4國，可用日文、英文、中文（繁體・簡體）對應。外國人士找房，也請參閱「外國人・多語言找房服務」頁面。",
+      },
+      {
+        q: "文京區以外的物件也可以諮詢嗎？",
+        a: "四葉不動産株式会社以文京區・茗荷谷為中心提供服務。區域外的物件請個別洽詢。",
+      },
+      {
+        q: "可以找適合團體家屋或障礙福祉用途的物件嗎？",
+        a: "可以。四葉不動産株式会社受理團體家屋（共同生活援助）等用途物件的諮詢。物件的用途、地點、消防等與指定基準相關的事項，將與行政書士等專家確認後推進。指定申請本身由關聯事業・四葉行政書士事務所（另一事業體・獨立受任・不收受介紹費等）對應。",
+      },
+      {
+        q: "也可以安排員工宿舍・法人租賃嗎？",
+        a: "可以。四葉不動産株式会社對應企業・設施的員工宿舍（社宅）安排與法人租賃，也對應外國人才的住居確保。",
+      },
+      {
+        q: "繼承登記或繼承稅也可以委託嗎？",
+        a: "繼承登記屬司法書士、繼承稅（日本相續稅）屬稅理士的領域。四葉不動産株式会社負責不動產的諮詢・買賣・租賃・管理，這些手續將與合作的專家協同推進。與繼承相關的文件製作・許認可，可由四葉行政書士事務所（另一事業體）對應。",
+      },
+      {
+        q: "只做估價也可以嗎？",
+        a: "歡迎隨時諮詢。我們將了解物件狀況後，說明可否對應及進行方式。",
+      },
+      {
+        q: "仲介手續費是多少？",
+        a: "買賣・租賃的仲介手續費在宅地建物取引業法的法定上限範圍內。具體金額將按各物件個別計算。詳情請參閱「交通與費用」頁面。",
+      },
+    ],
+    authorAlt: "四葉不動産株式会社 代表取締役 浦松丈二",
+    authorLabel: "本文作者",
+    authorBio:
+      "浦松 丈二｜四葉不動産株式会社 代表取締役・專任宅地建物取引士。行政書士。曾任每日新聞中國總局長（記者資歷34年）・旅居海外4國。已通過社會保險勞務士考試（預定2026年9月開業）。",
+  },
+  zh: {
+    metaTitle: "常见问题｜文京区・茗荷谷的四葉不動産株式会社",
+    metaDesc:
+      "关于四葉不動産株式会社的常见问题——「继承咨询是否免费」「可否用中文・英文咨询」「文京区以外是否对应」「可否处理团体家屋物件或员工宿舍」等，以一问一答方式回答。文京区小日向・茗荷谷站步行5分钟。欢迎随时咨询。",
+    breadcrumbHome: "首页",
+    breadcrumbCurrent: "常见问题",
+    heading: "常见问题",
+    items: [
+      {
+        q: "继承或不动产的咨询是免费的吗？",
+        a: "初次咨询免费。第2次起的持续咨询，以及不涉及中介的不动产顾问服务（第二意见、整体资产的活用・持有方针建议等），经事先同意后原则上以每30分钟5,500日元（含税・可在线进行）承接。欢迎先通过LINE或电话说一句话。",
+      },
+      {
+        q: "可以用中文或英文咨询吗？",
+        a: "可以。代表・浦松丈二曾任每日新闻中国总局长，旅居海外4国，可用日语、英语、中文（繁体・简体）对应。外国人士找房，也请参阅「外国人・多语言找房服务」页面。",
+      },
+      {
+        q: "文京区以外的物件也可以咨询吗？",
+        a: "四葉不動産株式会社以文京区・茗荷谷为中心提供服务。区域外的物件请个别洽询。",
+      },
+      {
+        q: "可以找适合团体家屋或残障福祉用途的物件吗？",
+        a: "可以。四葉不動産株式会社受理团体家屋（共同生活援助）等用途物件的咨询。物件的用途、地点、消防等与指定基准相关的事项，将与行政书士等专家确认后推进。指定申请本身由关联事业・四葉行政書士事務所（另一事业体・独立受任・不收受介绍费等）对应。",
+      },
+      {
+        q: "也可以安排员工宿舍・法人租赁吗？",
+        a: "可以。四葉不動産株式会社对应企业・设施的员工宿舍（社宅）安排与法人租赁，也对应外国人才的住居确保。",
+      },
+      {
+        q: "继承登记或继承税也可以委托吗？",
+        a: "继承登记属司法书士、继承税（日本相续税）属税理士的领域。四葉不動産株式会社负责不动产的咨询・买卖・租赁・管理，这些手续将与合作的专家协同推进。与继承相关的文件制作・许认可，可由四葉行政書士事務所（另一事业体）对应。",
+      },
+      {
+        q: "只做估价也可以吗？",
+        a: "欢迎随时咨询。我们将了解物件状况后，说明可否对应及进行方式。",
+      },
+      {
+        q: "中介手续费是多少？",
+        a: "买卖・租赁的中介手续费在日本《宅地建物取引业法》的法定上限范围内。具体金额将按每个物件单独计算。详情请参阅「交通与费用」页面。",
+      },
+    ],
+    authorAlt: "四葉不動産株式会社 代表取缔役 浦松丈二",
+    authorLabel: "本文作者",
+    authorBio:
+      "浦松 丈二｜四葉不動産株式会社 代表取缔役・专任宅地建物取引士。行政书士。曾任每日新闻中国总局长（记者经历34年）・旅居海外4国。已通过社会保险劳务士考试（预定2026年9月开业）。",
+  },
+};
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getRequestLocale();
+  const c = COPY[locale] ?? COPY.ja;
   return buildPageMetadata({
     businessKey: "realestate",
-    title: "よくある質問｜文京区・茗荷谷の四葉不動産株式会社",
-    description:
-      "四葉不動産株式会社への「相続の相談は無料か」「中国語・英語で相談できるか」「文京区以外も対応か」「グループホーム物件や社宅を扱えるか」などのよくある質問に、一問一答でお答えします。文京区小日向・茗荷谷駅徒歩5分。まずはお気軽にご相談ください。",
+    title: c.metaTitle,
+    description: c.metaDesc,
     path: "/faq",
     keywords: ["四葉不動産 よくある質問", "文京区 不動産 相談 無料", "不動産 多言語 相談"],
     locale,
@@ -22,59 +227,26 @@ export async function generateMetadata(): Promise<Metadata> {
   });
 }
 
-const ITEMS: FaqItem[] = [
-  {
-    q: "相続や不動産の相談は無料ですか？",
-    a: "初回のご相談は無料です。2回目以降の継続的なご相談や、媒介を伴わない不動産コンサルティング（セカンドオピニオン、資産全体の活用・保有方針の助言など）は、事前のご同意のうえ原則30分5,500円（税込・オンライン可）で承ります。まずはLINEか電話で一言からで大丈夫です。",
-  },
-  {
-    q: "中国語・英語でも相談できますか？",
-    a: "できます。代表の浦松丈二は元毎日新聞中国総局長で海外4カ国の在住経験があり、日本語・英語・中国語（繁体字・簡体字）で対応します。外国人の方のお部屋探しは「外国人・多言語のお部屋探し」ページもご覧ください。",
-  },
-  {
-    q: "文京区以外の物件でも相談できますか？",
-    a: "四葉不動産株式会社は文京区・茗荷谷を中心に対応します。エリア外については個別にご相談ください。",
-  },
-  {
-    q: "グループホームや障害福祉に使える物件を探せますか？",
-    a: "探せます。四葉不動産株式会社は、グループホーム（共同生活援助）等に使う物件のご相談を扱います。物件の用途・立地・消防などの指定基準に関わる点は、行政書士等の専門家と確認しながら進めます。指定申請そのものは、関連事業の四葉行政書士事務所（別事業体・独立受任・紹介料等の授受はありません）が対応します。",
-  },
-  {
-    q: "社宅・法人賃貸の手配もできますか？",
-    a: "できます。四葉不動産株式会社は、企業・施設向けの社宅手配や法人賃貸に対応します。外国人材の住まい確保にも対応します。",
-  },
-  {
-    q: "相続登記や相続税も頼めますか？",
-    a: "相続登記は司法書士、相続税は税理士の領域です。四葉不動産株式会社は不動産の相談・売買・賃貸・管理を扱い、これらの手続きは提携する専門家と連携して進めます。相続に関する書類作成・許認可は、四葉行政書士事務所（別事業体）が対応できます。",
-  },
-  {
-    q: "査定だけでもお願いできますか？",
-    a: "お気軽にご相談ください。物件の状況を伺い、対応の可否と進め方をご案内します。",
-  },
-  {
-    q: "仲介手数料はいくらですか？",
-    a: "売買・賃貸の仲介手数料は、宅地建物取引業法の法定上限の範囲です。具体的な金額は物件ごとに算出します。詳しくは「アクセス・料金」ページをご覧ください。",
-  },
-];
-
-export default function Page() {
+export default async function Page() {
+  const locale = await getRequestLocale();
+  const c = COPY[locale] ?? COPY.ja;
   return (
     <>
-      <Breadcrumb items={[{ name: "ホーム", href: "/" }, { name: "よくある質問" }]} />
-      {/* FAQPage JSON-LD はこの専用ページのみ出力 */}
-      <Faq items={ITEMS} heading="よくある質問" withJsonLd />
+      <Breadcrumb items={[{ name: c.breadcrumbHome, href: "/" }, { name: c.breadcrumbCurrent }]} />
+      {/* FAQPage JSON-LD はこの専用ページのみ出力（ロケール済みitemsを渡す＝HTMLと構造化データは自動一致） */}
+      <Faq items={c.items} heading={c.heading} withJsonLd />
       <div className="mx-auto max-w-3xl px-4 pb-8">
-        {/* 署名（E-E-A-T・原稿_不動産サイト共通） */}
+        {/* 署名（E-E-A-T・原稿_不動産サイト共通）＝/access既訳と同一文言（社労士試験合格の表記は署名のみ可の規程どおり） */}
         <aside className="mt-2 flex items-start gap-3 rounded-xl border border-border bg-surface p-4">
           <img
             src="/staff/uramatsu-square.webp"
-            alt="四葉不動産株式会社 代表取締役 浦松丈二"
+            alt={c.authorAlt}
             width={48}
             height={48}
             className="h-12 w-12 flex-shrink-0 rounded-full object-cover"
           />
           <p className="text-xs leading-relaxed text-text-muted">
-            <strong>この記事の著者</strong> 浦松 丈二｜四葉不動産株式会社 代表取締役・専任宅地建物取引士。行政書士。元毎日新聞中国総局長（記者歴34年）・海外4カ国在住経験。社会保険労務士試験合格（2026年9月開業予定）。
+            <strong>{c.authorLabel}</strong> {c.authorBio}
           </p>
         </aside>
         <CtaBand businessKey="realestate" />
