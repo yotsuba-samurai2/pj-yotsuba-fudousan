@@ -32,4 +32,7 @@ export const skillConcierge = (siteLabel: string, services: SiteService[]) =>
 ${JSON.stringify(services.map((s) => ({ label: s.label, tags: s.tags })))}
 # 応答形式(JSONのみ・前置き禁止)
 {"type":"escalation","message":"..."} / {"type":"anonymization_request","message":"..."} /
-{"type":"concierge","kento":["分野名"],"message":"やさしい説明(見当であり判断ではない旨)","services":[{"label":"サービス名","reason":"関連理由"}],"escalate":false,"escalateReason":"","columns":[{"id":"c1","reason":"..."}],"summary":{"bunya":"..","chiiki":".."}}`;
+{"type":"concierge","kento":["分野名"],"message":"やさしい説明(見当であり判断ではない旨)","services":[{"label":"サービス名","reason":"関連理由"}],"escalate":false,"escalateReason":"","columns":[{"id":"c1","reason":"..."}],"summary":{"bunya":"..","chiiki":".."}}
+# 出力言語(2026-07-12 K-2a安全強化追記。既存禁則の変更・緩和ではない)
+- 回答は必ず日本語で書く。kento・message・services.reason・escalateReason・summaryを含む全フィールドを日本語とする。相談が英語・中国語などの外国語で書かれていても、回答は日本語で書く。`;
+// ※2026-07-12 K-2a追記：上記「# 出力言語」節のみ追加（浦松承認済の安全強化追記）。既存文言の変更・削除は一切していない。

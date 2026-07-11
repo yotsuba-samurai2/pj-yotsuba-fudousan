@@ -13,15 +13,16 @@ import {
   SAMURAI_FACILITATOR_URL,
 } from "@/lib/linka/directory";
 import {
-  ANONYMIZATION_MESSAGE,
-  ESCALATION_MESSAGE,
+  getAnonymizationMessage,
+  getEscalationMessage,
+  isNameish,
+  isUrgent,
   localConcierge,
   localSearch,
   localTriage,
-  NAMEISH,
-  URGENT,
 } from "@/lib/linka/demo";
-import { resolveResult, validateResolved, type RawResult } from "@/lib/linka/resolve";
+import { resolveResult, validateLegalConciergeOutput, validateResolved, type RawResult } from "@/lib/linka/resolve";
+import { isValidLocale } from "@/lib/locale";
 import { SKILL_CUSTOMER, SKILL_MEMBER, skillConcierge } from "@/lib/linka/skills";
 import type { LinkaResult, LinkaSite } from "@/lib/linka/types";
 
@@ -69,7 +70,7 @@ async function callAi(system: string, user: string, model: string): Promise<stri
 }
 
 export async function POST(req: Request) {
-  let body: { site?: string; mode?: string; message?: string };
+  let body: { site?: string; mode?: string; message?: string; locale?: string };
   try {
     body = await req.json();
   } catch {
@@ -78,6 +79,8 @@ export async function POST(req: Request) {
   const site = body.site as LinkaSite;
   const mode = body.mode;
   const message = typeof body.message === "string" ? body.message.slice(0, MAX_MESSAGE_LEN) : "";
+  // K-2a（2026-07-12）：安全メッセージのロケール選択用。不正値・未指定はja（判定ロジック自体はlocale非依存＝常時4言語）
+  const locale = typeof body.locale === "string" && isValidLocale(body.locale) ? body.locale : "ja";
 
   // サイト×モードの許可表（コーポレートはconciergeのみ＝名簿を出さない）
   const allowed =
@@ -93,21 +96,22 @@ export async function POST(req: Request) {
   }
 
   // 前段の決定論的ガード（AIより先・全モード共通）
-  if (URGENT.some((k) => message.includes(k))) {
-    const r: LinkaResult = { type: "escalation", message: ESCALATION_MESSAGE };
+  // K-2a（2026-07-12）：4言語判定（既存jaパターン不変＝isUrgent/isNameishが内包）＋locale別安全メッセージ
+  if (isUrgent(message)) {
+    const r: LinkaResult = { type: "escalation", message: getEscalationMessage(locale) };
     return NextResponse.json(r);
   }
-  if (NAMEISH.test(message)) {
-    const r: LinkaResult = { type: "anonymization_request", message: ANONYMIZATION_MESSAGE };
+  if (isNameish(message)) {
+    const r: LinkaResult = { type: "anonymization_request", message: getAnonymizationMessage(locale) };
     return NextResponse.json(r);
   }
 
   const demoFallback = (): LinkaResult =>
     site === "samurai"
       ? mode === "customer"
-        ? localTriage(message)
-        : localSearch(message)
-      : localConcierge(message, site as "realestate" | "legal" | "labor");
+        ? localTriage(message, locale)
+        : localSearch(message, locale)
+      : localConcierge(message, site as "realestate" | "legal" | "labor", locale);
 
   // APIキー未設定環境＝デモで応答（ローカル・プレビュー用）
   if (!process.env.ANTHROPIC_API_KEY) {
@@ -147,10 +151,10 @@ export async function POST(req: Request) {
     }
     const resolved = resolveResult(raw);
     let violation = validateResolved(resolved);
-    // 業際（指示書§9-4）：行政書士サイトのAI出力に「助成金」が混入したらデモへ（分界説明はデモ側の定型のみ許可）
+    // 業際（指示書§9-4・K-2a多言語化 2026-07-12＝(c)併用方式）：行政書士サイトのAI出力を検査（分界説明はデモ側の定型のみ許可）。
+    // ①既存includes("助成金")維持 ②多言語文脈語 ③言語ゲート（仮名ゼロ→デモ退避）＋escalateReasonも検査対象（既存穴A-3の修正）。
     if (!violation && site === "legal" && resolved.type === "concierge") {
-      const visible = JSON.stringify({ kento: resolved.kento, message: resolved.message, services: resolved.services });
-      if (visible.includes("助成金")) violation = "業際: legal出力に助成金";
+      violation = validateLegalConciergeOutput(resolved);
     }
     if (violation) {
       // 三禁則違反はAI出力を破棄してデモへ（相談本文はログしない＝違反種別のみ）
