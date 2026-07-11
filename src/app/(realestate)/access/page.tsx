@@ -3,7 +3,10 @@
 // PriceSpecification＝確定値のみの規則：本表は法定上限・範囲（3〜5%）・石井確認中（相談料）のため出力なし。
 // 方式＝COPY: Record<LangCode,…>＋getRequestLocale（手本=HomePageContent.tsx／services/page.tsx）。
 // en/zh-tw/zh=監修前ドラフト（2026-07-11）。繁体=台湾定訳（文京區・茗荷谷站・繼承・不動產）／zh=大陸表記。
-// 相談料＝2026-07-11浦松確定文言（初回相談無料・2回目以降は同意ベースで30分5,500円税込）＝/servicesの料金の考え方と整合（ja含む）。
+// 相談料＝2026-07-11浦松確定文言（改訂版）：初回無料／**媒介を伴わないご相談（媒介以外の関連業務）**の2回目以降のみ、
+// 事前同意のうえ30分5,500円（税込）。媒介に関する相談は仲介手数料の範囲。＝note欄の根拠（国交省 解釈・運用＝媒介以外の
+// 関連業務は明確区分・事前設定・別合意で受領）と表示基準を一致させる趣旨。/servicesの料金の考え方と整合（全ロケール）。
+// ※宅建業法上の相談料の切り分けは石井弁護士の最終確認を通すこと（下部Placeholder参照）。
 // 住所は全ロケール日本語表記維持（enのみ英字補記）。金額・率・TELは全ロケール不変。
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo";
@@ -88,14 +91,14 @@ const COPY: Record<LangCode, AccessCopy> = {
       },
       {
         item: "相談料",
-        fee: "初回のご相談は無料／2回目以降の継続的なご相談は、事前のご同意のうえ原則30分5,500円（税込）・オンライン可",
+        fee: "初回のご相談は無料／2回目以降で、媒介を伴わないご相談（媒介以外の関連業務）は、事前のご同意のうえ原則30分5,500円（税込）・オンライン可。売買・賃貸の媒介に関するご相談は、仲介手数料の範囲で承ります。",
         note: "媒介以外の関連業務は明確区分・事前設定・別合意で受領（国交省 解釈・運用の考え方）",
       },
     ],
     feeNote: "※売買価格に応じた具体的な手数料額は、物件ごとに算出してご提示します。",
     consultH2: "相談は無料ですか？オンラインでもできますか？",
     consultBody:
-      "初回のご相談・診断は無料です。2回目以降の継続的なご相談（他社物件のセカンドオピニオン、資産全体の活用・保有方針の助言など）は、事前のご同意のうえ原則30分5,500円（税込）で承り、オンラインにも対応します。まずはLINEか電話で一言からどうぞ。",
+      "初回のご相談・診断は無料です。2回目以降で、媒介を伴わないご相談（他社物件のセカンドオピニオン、資産全体の活用・保有方針の助言など＝媒介以外の関連業務）は、事前のご同意のうえ原則30分5,500円（税込）で承り、オンラインにも対応します。売買・賃貸の媒介に関するご相談は、仲介手数料の範囲で承ります。まずはLINEか電話で一言からどうぞ。",
     relatedAria: "関連リンク",
     relatedHeading: "このページの関連リンク",
     relatedLinks: [
@@ -158,14 +161,14 @@ const COPY: Record<LangCode, AccessCopy> = {
       },
       {
         item: "Consultation fee",
-        fee: "Your first consultation is free. Follow-up consultations are, in principle, ¥5,500 (tax incl.) per 30 minutes, only with your prior consent; online sessions available.",
+        fee: "Your first consultation is free. From the second session onward, consultations that do not involve brokerage (i.e., related work other than brokerage) are, in principle, ¥5,500 (tax incl.) per 30 minutes, only with your prior consent; online sessions available. Consultations relating to a sale or lease we broker are covered by the brokerage commission.",
         note: "Related services other than brokerage are charged only when clearly separated, set in advance, and separately agreed (MLIT interpretive guidelines)",
       },
     ],
     feeNote: "Note: The specific commission amount based on the sale price is calculated and presented for each property.",
     consultH2: "Is the consultation free? Can it be done online?",
     consultBody:
-      "Your first consultation and diagnosis are free. Follow-up consultations (a second opinion on a property handled by another company, advice on utilizing or holding your overall assets, and the like) are, in principle, ¥5,500 (tax incl.) per 30 minutes, only with your prior consent, and online sessions are also available. Feel free to start with a single line via LINE or phone.",
+      "Your first consultation and diagnosis are free. From the second session onward, consultations that do not involve brokerage (a second opinion on a property handled by another company, advice on utilizing or holding your overall assets, and the like — i.e., related work other than brokerage) are, in principle, ¥5,500 (tax incl.) per 30 minutes, only with your prior consent, and online sessions are also available. Consultations relating to a sale or lease we broker are covered by the brokerage commission. Feel free to start with a single line via LINE or phone.",
     relatedAria: "Related links",
     relatedHeading: "Related links on this page",
     relatedLinks: [
@@ -223,14 +226,14 @@ const COPY: Record<LangCode, AccessCopy> = {
       },
       {
         item: "諮詢費",
-        fee: "初次諮詢免費／第2次起的持續諮詢，經事先同意後原則上每30分鐘5,500日圓（含稅）・可線上進行",
+        fee: "初次諮詢免費／第2次起，不涉及仲介之諮詢（仲介以外的相關業務），經事先同意後原則上每30分鐘5,500日圓（含稅）・可線上進行。與本公司承辦之買賣・租賃仲介相關的諮詢，包含於仲介手續費範圍內。",
         note: "仲介以外的相關業務，以明確區分・事前設定・另行合意為前提收取（國土交通省 解釋・運用之考量）",
       },
     ],
     feeNote: "※依買賣價格計算的具體手續費金額，將按各物件個別試算後提示。",
     consultH2: "諮詢是免費的嗎？可以線上進行嗎？",
     consultBody:
-      "初次諮詢・診斷免費。第2次起的持續諮詢（其他公司物件的第二意見、整體資產的活用・持有方針建議等），經事先同意後原則上以每30分鐘5,500日圓（含稅）承接，也可線上進行。歡迎先透過LINE或電話說一句話。",
+      "初次諮詢・診斷免費。第2次起，不涉及仲介之諮詢（其他公司物件的第二意見、整體資產的活用・持有方針建議等＝仲介以外的相關業務），經事先同意後原則上以每30分鐘5,500日圓（含稅）承接，也可線上進行。與本公司承辦之買賣・租賃仲介相關的諮詢，包含於仲介手續費範圍內。歡迎先透過LINE或電話說一句話。",
     relatedAria: "相關連結",
     relatedHeading: "本頁相關連結",
     relatedLinks: [
@@ -288,14 +291,14 @@ const COPY: Record<LangCode, AccessCopy> = {
       },
       {
         item: "咨询费",
-        fee: "初次咨询免费／第2次起的持续咨询，经事先同意后原则上每30分钟5,500日元（含税）・可在线进行",
+        fee: "初次咨询免费／第2次起，不涉及中介之咨询（中介以外的相关业务），经事先同意后原则上每30分钟5,500日元（含税）・可在线进行。与本公司承办之买卖・租赁中介相关的咨询，包含在中介手续费范围内。",
         note: "中介以外的相关业务，以明确区分・事前设定・另行约定为前提收取（国土交通省 解释与运用指引）",
       },
     ],
     feeNote: "※根据买卖价格计算的具体手续费金额，将按每个物件单独测算后提示。",
     consultH2: "咨询是免费的吗？可以在线进行吗？",
     consultBody:
-      "初次咨询・诊断免费。第2次起的持续咨询（其他公司物件的第二意见、整体资产的活用・持有方针建议等），经事先同意后原则上以每30分钟5,500日元（含税）承接，也可在线进行。欢迎先通过LINE或电话说一句话。",
+      "初次咨询・诊断免费。第2次起，不涉及中介之咨询（其他公司物件的第二意见、整体资产的活用・持有方针建议等＝中介以外的相关业务），经事先同意后原则上以每30分钟5,500日元（含税）承接，也可在线进行。与本公司承办之买卖・租赁中介相关的咨询，包含在中介手续费范围内。欢迎先通过LINE或电话说一句话。",
     relatedAria: "相关链接",
     relatedHeading: "本页相关链接",
     relatedLinks: [

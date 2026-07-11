@@ -19,8 +19,10 @@ import type { LangCode } from "@/config/languages";
 const LABELS: Record<LangCode, { aria: string; line: string; contact: string; tel: string }> = {
   ja: { aria: "お問い合わせ", line: "LINEで一言相談（無料）", contact: "お問い合わせ", tel: "電話" },
   en: { aria: "Contact", line: "Chat on LINE (free)", contact: "Contact", tel: "Call" },
-  "zh-tw": { aria: "聯絡我們", line: "LINE免費諮詢", contact: "聯絡我們", tel: "電話" },
-  zh: { aria: "联系我们", line: "LINE免费咨询", contact: "联系我们", tel: "电话" },
+  // 2026-07-11：LINEボタンの中文訳をHomePageContent（トップ）＝en「Chat on LINE (free)」と同じ
+  // 「動作＋（無料）」構造に統一（旧「LINE免費諮詢／LINE免费咨询」から変更＝サイト内の表記ゆれ解消）。
+  "zh-tw": { aria: "聯絡我們", line: "用LINE諮詢（免費）", contact: "聯絡我們", tel: "電話" },
+  zh: { aria: "联系我们", line: "用LINE咨询（免费）", contact: "联系我们", tel: "电话" },
 };
 
 // アクセス表記の4ロケール（ja=OFFICE.access参照＝バイト不変。en/zh系=HomePageContent accessLine準拠）

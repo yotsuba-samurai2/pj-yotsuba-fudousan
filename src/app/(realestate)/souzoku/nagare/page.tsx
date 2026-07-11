@@ -1,6 +1,8 @@
 // /souzoku/nagare（型D・HowTo）＝原稿_不動産 #6
 // JSON-LD＝HowTo（既存部品）＋BreadcrumbList（Breadcrumb部品）＋author=Person(@id参照)。
-// 不動産の有料相談＝A案（媒介前提の相談は無料／媒介を伴わないコンサルのみ別合意で有料・原則30分5,500円税込）。
+// 不動産の相談料＝2026-07-11浦松確定（改訂版・全不動産ページ共通）：初回のご相談は無料／媒介に関する相談は
+// 仲介手数料の範囲／媒介を伴わないコンサル（媒介以外の関連業務）のみ、2回目以降に別合意で原則30分5,500円（税込）。
+// 根拠＝国交省 解釈・運用の考え方（媒介以外の関連業務は明確区分・事前設定・別合意で受領）。石井弁護士の最終確認を通すこと。
 // 方式＝COPY: Record<LangCode,…>＋getRequestLocale（手本=/access／/legal/nagare）。HowTo JSON-LDは画面表示と同一のロケール済みsteps配列から生成（ja出力は従来と同一）。
 // en/zh-tw/zh=監修前ドラフト（2026-07-11）。繁体=台湾定訳（繼承・不動產）／zh=大陸表記。金額・法的意味は全ロケール不変。
 import type { Metadata } from "next";
@@ -63,7 +65,7 @@ const COPY: Record<LangCode, SouzokuNagareCopy> = {
     startH2: "相続した不動産の相談は、何から始めますか？",
     startBody: (
       <>
-        まずはLINEか電話で「相続した家をどうしたらいい？」の一言からで大丈夫です。四葉不動産株式会社は、状況を伺い、次の一歩を一緒に整理します。<strong>当社に売却・活用（媒介）をご依頼いただく前提のご相談は無料</strong>です。媒介を伴わない不動産コンサルティング（他社物件のセカンドオピニオン、資産全体の活用・保有方針の助言など）をご希望の場合は、別途の合意のうえ原則30分5,500円（税込）で承ります（オンライン可）。
+        まずはLINEか電話で「相続した家をどうしたらいい？」の一言からで大丈夫です。四葉不動産株式会社は、状況を伺い、次の一歩を一緒に整理します。<strong>初回のご相談は無料</strong>です。当社に売却・活用（媒介）をご依頼いただく前提のご相談は、仲介手数料の範囲で承ります。媒介を伴わない不動産コンサルティング（他社物件のセカンドオピニオン、資産全体の活用・保有方針の助言など＝媒介以外の関連業務）をご希望の場合は、2回目以降、別途の合意のうえ原則30分5,500円（税込）で承ります（オンライン可）。
       </>
     ),
     stepsH2: "相談から解決までの流れは、どうなりますか？（6ステップ）",
@@ -134,7 +136,7 @@ const COPY: Record<LangCode, SouzokuNagareCopy> = {
     startH2: "Where do I start with a consultation about inherited real estate?",
     startBody: (
       <>
-        A single message via LINE or a phone call — &quot;What should I do with the house I inherited?&quot; — is enough to begin. Yotsuba Real Estate Co., Ltd. listens to your situation and organizes the next step together with you. <strong>Consultations premised on entrusting us with the sale or utilization (brokerage) are free.</strong> If you would like real estate consulting not involving brokerage (a second opinion on a property handled by another company, advice on utilizing or holding your overall assets, and the like), we provide it under a separate agreement, in principle at ¥5,500 (tax incl.) per 30 minutes (online sessions available).
+        A single message via LINE or a phone call — &quot;What should I do with the house I inherited?&quot; — is enough to begin. Yotsuba Real Estate Co., Ltd. listens to your situation and organizes the next step together with you. <strong>Your first consultation is free.</strong> Consultations premised on entrusting us with the sale or utilization (brokerage) are covered by the brokerage commission. If you would like real estate consulting not involving brokerage (a second opinion on a property handled by another company, advice on utilizing or holding your overall assets, and the like — i.e., related work other than brokerage), we provide it from the second session onward under a separate agreement, in principle at ¥5,500 (tax incl.) per 30 minutes (online sessions available).
       </>
     ),
     stepsH2: "What does the process from consultation to resolution look like? (6 steps)",
@@ -204,7 +206,7 @@ const COPY: Record<LangCode, SouzokuNagareCopy> = {
     startH2: "繼承不動產的諮詢，該從什麼開始？",
     startBody: (
       <>
-        先透過LINE或電話說一句「繼承的房子該怎麼辦？」就可以了。四葉不動産株式会社會了解您的狀況，和您一起整理下一步。<strong>以委託本公司出售・活用（仲介）為前提的諮詢免費</strong>。如需不含仲介的不動產顧問諮詢（其他公司物件的第二意見、整體資產的活用・持有方針建議等），經另行合意後原則上以每30分鐘5,500日圓（含稅）承接（可線上進行）。
+        先透過LINE或電話說一句「繼承的房子該怎麼辦？」就可以了。四葉不動産株式会社會了解您的狀況，和您一起整理下一步。<strong>初次諮詢免費</strong>。以委託本公司出售・活用（仲介）為前提的諮詢，包含於仲介手續費範圍內。如需不含仲介的不動產顧問諮詢（其他公司物件的第二意見、整體資產的活用・持有方針建議等＝仲介以外的相關業務），自第2次起，經另行合意後原則上以每30分鐘5,500日圓（含稅）承接（可線上進行）。
       </>
     ),
     stepsH2: "從諮詢到解決的流程是怎樣的？（6步驟）",
@@ -274,7 +276,7 @@ const COPY: Record<LangCode, SouzokuNagareCopy> = {
     startH2: "继承不动产的咨询，该从什么开始？",
     startBody: (
       <>
-        先通过LINE或电话说一句“继承的房子该怎么办？”就可以了。四葉不動産株式会社会了解您的状况，和您一起梳理下一步。<strong>以委托本公司出售・活用（中介）为前提的咨询免费</strong>。如需不含中介的不动产顾问咨询（其他公司物件的第二意见、整体资产的活用・持有方针建议等），经另行约定后原则上以每30分钟5,500日元（含税）承接（可在线进行）。
+        先通过LINE或电话说一句“继承的房子该怎么办？”就可以了。四葉不動産株式会社会了解您的状况，和您一起梳理下一步。<strong>初次咨询免费</strong>。以委托本公司出售・活用（中介）为前提的咨询，包含在中介手续费范围内。如需不含中介的不动产顾问咨询（其他公司物件的第二意见、整体资产的活用・持有方针建议等＝中介以外的相关业务），自第2次起，经另行约定后原则上以每30分钟5,500日元（含税）承接（可在线进行）。
       </>
     ),
     stepsH2: "从咨询到解决的流程是怎样的？（6个步骤）",

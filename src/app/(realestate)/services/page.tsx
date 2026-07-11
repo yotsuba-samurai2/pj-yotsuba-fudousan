@@ -139,7 +139,7 @@ const COPY: Record<LangCode, ServicesCopy> = {
     pricing: {
       heading: "料金の考え方",
       // 【要確認】料金詳細は/accessの料金表と整合させる（原稿§4の浦松確認待ち）
-      body: "初回のご相談・診断は無料。2回目以降の継続的なご相談は、事前のご同意のうえ30分5,500円（税込）で承ります。実行段階の費用（仲介手数料等・法定上限内）を含め、見積りは着手前に書面で明示し、書面にない費用は請求しません。",
+      body: "初回のご相談・診断は無料。2回目以降で、媒介を伴わないご相談（媒介以外の関連業務）は、事前のご同意のうえ30分5,500円（税込）で承ります。売買・賃貸の媒介に関するご相談は、仲介手数料の範囲で承ります。実行段階の費用（仲介手数料等・法定上限内）を含め、見積りは着手前に書面で明示し、書面にない費用は請求しません。",
     },
     group: {
       heading: "士業グループとの連携",
@@ -234,7 +234,7 @@ const COPY: Record<LangCode, ServicesCopy> = {
     },
     pricing: {
       heading: "How fees work",
-      body: "Your first consultation and diagnosis are free; follow-up consultations are ¥5,500 (tax incl.) per 30 minutes, only with your prior consent. Costs arise at the execution stage (brokerage fees, etc., within the statutory limits). Estimates are set out in writing before we begin, and we never bill anything that is not in writing.",
+      body: "Your first consultation and diagnosis are free; from the second session onward, consultations that do not involve brokerage (i.e., related work other than brokerage) are ¥5,500 (tax incl.) per 30 minutes, only with your prior consent. Consultations relating to a sale or lease we broker are covered by the brokerage commission. Costs arise at the execution stage (brokerage fees, etc., within the statutory limits). Estimates are set out in writing before we begin, and we never bill anything that is not in writing.",
     },
     group: {
       heading: "Working with our professional group",
@@ -328,7 +328,7 @@ const COPY: Record<LangCode, ServicesCopy> = {
     },
     pricing: {
       heading: "費用的思考方式",
-      body: "初次諮詢・診斷免費。第2次起的持續諮詢，經事先同意後以每30分鐘5,500日圓（含稅）承接。費用另在執行階段（仲介手續費等・法定上限內）發生。估價在著手前以書面明示，書面上沒有的費用，我們不會請款。",
+      body: "初次諮詢・診斷免費。第2次起，不涉及仲介之諮詢（仲介以外的相關業務），經事先同意後以每30分鐘5,500日圓（含稅）承接。與本公司承辦之買賣・租賃仲介相關的諮詢，包含於仲介手續費範圍內。費用另在執行階段（仲介手續費等・法定上限內）發生。估價在著手前以書面明示，書面上沒有的費用，我們不會請款。",
     },
     group: {
       heading: "與士業集團的合作",
@@ -422,7 +422,7 @@ const COPY: Record<LangCode, ServicesCopy> = {
     },
     pricing: {
       heading: "费用的思考方式",
-      body: "初次咨询・诊断免费。第2次起的持续咨询，经事先同意后以每30分钟5,500日元（含税）承接。费用另在执行阶段（中介手续费等・法定上限内）发生。估价在着手前以书面明示，书面上没有的费用一概不收取。",
+      body: "初次咨询・诊断免费。第2次起，不涉及中介之咨询（中介以外的相关业务），经事先同意后以每30分钟5,500日元（含税）承接。与本公司承办之买卖・租赁中介相关的咨询，包含在中介手续费范围内。费用另在执行阶段（中介手续费等・法定上限内）发生。估价在着手前以书面明示，书面上没有的费用一概不收取。",
     },
     group: {
       heading: "与士业集团的合作",
