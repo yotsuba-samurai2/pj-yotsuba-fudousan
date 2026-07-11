@@ -3,6 +3,7 @@
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo";
 import { getRequestLocale } from "@/lib/getRequestLocale";
+import { addLocalePrefix } from "@/lib/locale";
 import Link from "next/link";
 import { LaborServicePage, LaborH2 } from "@/components/shared/LaborServicePage";
 import { Placeholder } from "@/components/shared/Placeholder";
@@ -21,7 +22,8 @@ export async function generateMetadata(): Promise<Metadata> {
   });
 }
 
-export default function Page() {
+export default async function Page() {
+  const locale = await getRequestLocale();
   return (
     <LaborServicePage
       slug="joseikin"
@@ -78,7 +80,7 @@ export default function Page() {
         </div>
         <p className="mt-3 text-sm">
           事業の補助金をお考えの場合は →{" "}
-          <Link href="/legal/services/subsidy" className="text-primary underline">
+          <Link href={addLocalePrefix("/legal/services/subsidy", locale)} className="text-primary underline">
             補助金申請サポート（四葉行政書士事務所）
           </Link>
         </p>
@@ -90,8 +92,8 @@ export default function Page() {
       <div>
         <LaborH2>費用・受任の流れ</LaborH2>
         <p className="mt-2 text-sm">
-          → <Link href="/labor/ryokin" className="text-primary underline">助成金申請の料金</Link>／
-          <Link href="/labor/nagare" className="text-primary underline">受任の流れ</Link>
+          → <Link href={addLocalePrefix("/labor/ryokin", locale)} className="text-primary underline">助成金申請の料金</Link>／
+          <Link href={addLocalePrefix("/labor/nagare", locale)} className="text-primary underline">受任の流れ</Link>
           <Placeholder reason="Notion＝料金／浦松＝受任フロー実運用" />
         </p>
       </div>

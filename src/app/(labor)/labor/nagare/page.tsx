@@ -2,6 +2,7 @@
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo";
 import { getRequestLocale } from "@/lib/getRequestLocale";
+import { addLocalePrefix } from "@/lib/locale";
 import Link from "next/link";
 import { Breadcrumb } from "@/components/shared/Breadcrumb";
 import { CtaBand } from "@/components/shared/CtaBand";
@@ -30,7 +31,8 @@ const STEPS = [
   { name: "報告・フォロー", text: "完了のご報告と、必要に応じて事後のフォローを行います。" },
 ];
 
-export default function Page() {
+export default async function Page() {
+  const locale = await getRequestLocale();
   return (
     <>
       <HowToJsonLd
@@ -71,11 +73,11 @@ export default function Page() {
 
         <p className="mt-8 text-sm text-text-muted">
           ※所要期間・準備物・費用発生のタイミングは業務により異なります。各業務ページ（
-          <Link href="/labor/services/shogu-kaizen" className="text-primary underline">処遇改善加算</Link>／
-          <Link href="/labor/services/kaigo-roumu" className="text-primary underline">介護・障害福祉の労務</Link>／
-          <Link href="/labor/services/joseikin" className="text-primary underline">雇用関係助成金</Link>／
-          <Link href="/labor/services/gaikokujin-koyo" className="text-primary underline">外国人雇用</Link>
-          ）と<Link href="/labor/ryokin" className="text-primary underline">料金</Link>もあわせてご覧ください。
+          <Link href={addLocalePrefix("/labor/services/shogu-kaizen", locale)} className="text-primary underline">処遇改善加算</Link>／
+          <Link href={addLocalePrefix("/labor/services/kaigo-roumu", locale)} className="text-primary underline">介護・障害福祉の労務</Link>／
+          <Link href={addLocalePrefix("/labor/services/joseikin", locale)} className="text-primary underline">雇用関係助成金</Link>／
+          <Link href={addLocalePrefix("/labor/services/gaikokujin-koyo", locale)} className="text-primary underline">外国人雇用</Link>
+          ）と<Link href={addLocalePrefix("/labor/ryokin", locale)} className="text-primary underline">料金</Link>もあわせてご覧ください。
         </p>
 
         {/* 署名（登録番号＝開業時確定まで非出力） */}

@@ -4,6 +4,7 @@
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo";
 import { getRequestLocale } from "@/lib/getRequestLocale";
+import { addLocalePrefix } from "@/lib/locale";
 import Link from "next/link";
 import { Breadcrumb } from "@/components/shared/Breadcrumb";
 import { CtaBand } from "@/components/shared/CtaBand";
@@ -44,7 +45,8 @@ const ROWS = [
   },
 ];
 
-export default function LaborServicesPage() {
+export default async function LaborServicesPage() {
+  const locale = await getRequestLocale();
   return (
     <>
       <Breadcrumb items={[{ name: "ホーム", href: "/labor" }, { name: "業務案内" }]} />
@@ -62,7 +64,7 @@ export default function LaborServicesPage() {
           {ROWS.map((r) => (
             <Link
               key={r.href}
-              href={r.href}
+              href={addLocalePrefix(r.href, locale)}
               className="block rounded-2xl border border-border bg-surface p-4 transition-shadow hover:shadow-sm"
             >
               <div className="font-serif text-lg font-semibold text-ink">{r.label}</div>
@@ -73,9 +75,9 @@ export default function LaborServicesPage() {
 
         <p className="mt-6 text-sm">
           料金は{" "}
-          <Link href="/labor/ryokin" className="text-primary underline">料金</Link>
+          <Link href={addLocalePrefix("/labor/ryokin", locale)} className="text-primary underline">料金</Link>
           、依頼の手順は{" "}
-          <Link href="/labor/nagare" className="text-primary underline">受任の流れ</Link>{" "}
+          <Link href={addLocalePrefix("/labor/nagare", locale)} className="text-primary underline">受任の流れ</Link>{" "}
           をご覧ください。
         </p>
       </main>

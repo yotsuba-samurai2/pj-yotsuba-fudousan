@@ -4,6 +4,7 @@
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo";
 import { getRequestLocale } from "@/lib/getRequestLocale";
+import { addLocalePrefix } from "@/lib/locale";
 import Link from "next/link";
 import { LaborServicePage, LaborH2 } from "@/components/shared/LaborServicePage";
 import { Placeholder } from "@/components/shared/Placeholder";
@@ -22,7 +23,8 @@ export async function generateMetadata(): Promise<Metadata> {
   });
 }
 
-export default function Page() {
+export default async function Page() {
+  const locale = await getRequestLocale();
   return (
     <LaborServicePage
       slug="shogu-kaizen"
@@ -70,11 +72,11 @@ export default function Page() {
         <LaborH2>費用・受任の流れ</LaborH2>
         <p className="mt-2 text-sm">
           →{" "}
-          <Link href="/labor/ryokin" className="text-primary underline">処遇改善加算サポートの料金</Link>
+          <Link href={addLocalePrefix("/labor/ryokin", locale)} className="text-primary underline">処遇改善加算サポートの料金</Link>
         </p>
         <p className="mt-1 text-sm">
           →{" "}
-          <Link href="/labor/nagare" className="text-primary underline">ご相談から契約までの流れ</Link>
+          <Link href={addLocalePrefix("/labor/nagare", locale)} className="text-primary underline">ご相談から契約までの流れ</Link>
           <Placeholder reason="浦松＝各ステップの実運用・標準期間" />
         </p>
       </div>

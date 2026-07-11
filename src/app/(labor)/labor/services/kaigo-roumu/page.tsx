@@ -3,6 +3,7 @@
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo";
 import { getRequestLocale } from "@/lib/getRequestLocale";
+import { addLocalePrefix } from "@/lib/locale";
 import Link from "next/link";
 import { LaborServicePage, LaborH2 } from "@/components/shared/LaborServicePage";
 import { Placeholder } from "@/components/shared/Placeholder";
@@ -21,7 +22,8 @@ export async function generateMetadata(): Promise<Metadata> {
   });
 }
 
-export default function Page() {
+export default async function Page() {
+  const locale = await getRequestLocale();
   return (
     <LaborServicePage
       slug="kaigo-roumu"
@@ -51,7 +53,7 @@ export default function Page() {
           <li>人員配置基準を踏まえたシフト・勤怠の設計</li>
           <li>
             処遇改善加算との一体整備 →{" "}
-            <Link href="/labor/services/shogu-kaizen" className="text-primary underline">
+            <Link href={addLocalePrefix("/labor/services/shogu-kaizen", locale)} className="text-primary underline">
               処遇改善加算のサポート
             </Link>
           </li>
