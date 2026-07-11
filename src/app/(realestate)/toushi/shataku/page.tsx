@@ -7,6 +7,7 @@
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo";
 import { getRequestLocale } from "@/lib/getRequestLocale";
+import { addLocalePrefix } from "@/lib/locale";
 import Link from "next/link";
 import { RealestateServicePage, ReH2 } from "@/components/shared/RealestateServicePage";
 import { Placeholder } from "@/components/shared/Placeholder";
@@ -25,7 +26,7 @@ type ShatakuCopy = {
   internalLinks: { href: string; label: string }[];
   crossLinkLead: string;
   qaH2: string;
-  qaBody: React.ReactNode;
+  qaBody: (locale: LangCode) => React.ReactNode;
   relatedAria: string;
   relatedHeading: string;
   authorAlt: string;
@@ -56,10 +57,10 @@ const COPY: Record<LangCode, ShatakuCopy> = {
     ],
     crossLinkLead: "外国人材の受け入れに必要な在留資格の手続きは、関連事業の四葉行政書士事務所が対応します。",
     qaH2: "外国人従業員の社宅も対応できますか？",
-    qaBody: (
+    qaBody: (locale) => (
       <>
         できます。言語・保証会社・入居審査——外国人の住居手配で問題になりやすい3点を、四葉不動産が整理してサポートします。従業員個人のお部屋探しは{" "}
-        <Link href="/global" className="text-primary underline">外国人・多言語のお部屋探し</Link>{" "}
+        <Link href={addLocalePrefix("/global", locale)} className="text-primary underline">外国人・多言語のお部屋探し</Link>{" "}
         をご覧ください。受け入れに必要な<strong>在留資格の手続き</strong>は、関連事業の四葉行政書士事務所が対応します。
       </>
     ),
@@ -93,10 +94,10 @@ const COPY: Record<LangCode, ShatakuCopy> = {
     crossLinkLead:
       "The residence-status procedures required to bring in international talent are handled by our affiliated business, Yotsuba Gyoseishoshi Office.",
     qaH2: "Can you handle company housing for international employees?",
-    qaBody: (
+    qaBody: (locale) => (
       <>
         Yes. Language, guarantor companies, tenant screening—Yotsuba Real Estate sorts out and supports the three points that most often become issues when arranging housing for international residents. For an individual employee's room hunting, see{" "}
-        <Link href="/global" className="text-primary underline">Multilingual Room-Hunting Support</Link>
+        <Link href={addLocalePrefix("/global", locale)} className="text-primary underline">Multilingual Room-Hunting Support</Link>
         . The <strong>residence-status procedures</strong> required to bring employees on board are handled by our affiliated business, Yotsuba Gyoseishoshi Office.
       </>
     ),
@@ -129,10 +130,10 @@ const COPY: Record<LangCode, ShatakuCopy> = {
     ],
     crossLinkLead: "聘僱外國人才所需的在留資格手續，由關聯事業・四葉行政書士事務所對應。",
     qaH2: "外國員工的員工宿舍，也能協助安排嗎？",
-    qaBody: (
+    qaBody: (locale) => (
       <>
         可以。語言・保證公司・入住審查——外國人住居安排中容易出問題的3點，由四葉不動産為您整理並支援。員工個人的找房，請參閱{" "}
-        <Link href="/global" className="text-primary underline">外國人・多語言找房服務</Link>
+        <Link href={addLocalePrefix("/global", locale)} className="text-primary underline">外國人・多語言找房服務</Link>
         。聘僱所需的<strong>在留資格手續</strong>，由關聯事業・四葉行政書士事務所對應。
       </>
     ),
@@ -165,10 +166,10 @@ const COPY: Record<LangCode, ShatakuCopy> = {
     ],
     crossLinkLead: "聘用外国人才所需的在留资格手续，由关联事业・四葉行政書士事務所办理。",
     qaH2: "外国员工的员工宿舍，也能协助安排吗？",
-    qaBody: (
+    qaBody: (locale) => (
       <>
         可以。语言・担保公司・入住审查——外国人住房安排中容易出问题的3点，由四葉不動産为您整理并支持。员工个人的找房，请参阅{" "}
-        <Link href="/global" className="text-primary underline">外国人・多语言找房服务</Link>
+        <Link href={addLocalePrefix("/global", locale)} className="text-primary underline">外国人・多语言找房服务</Link>
         。聘用所需的<strong>在留资格手续</strong>，由关联事业・四葉行政書士事務所办理。
       </>
     ),
@@ -222,7 +223,7 @@ export default async function Page() {
     >
       <div>
         <ReH2>{c.qaH2}</ReH2>
-        <p className="mt-3 leading-relaxed text-text">{c.qaBody}</p>
+        <p className="mt-3 leading-relaxed text-text">{c.qaBody(locale)}</p>
         <Placeholder reason="浦松＝社宅・法人賃貸の対応範囲・実績（確定分のみ）" />
       </div>
     </RealestateServicePage>

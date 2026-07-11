@@ -8,6 +8,7 @@
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo";
 import { getRequestLocale } from "@/lib/getRequestLocale";
+import { addLocalePrefix } from "@/lib/locale";
 import Link from "next/link";
 import { Breadcrumb } from "@/components/shared/Breadcrumb";
 import { CtaBand } from "@/components/shared/CtaBand";
@@ -404,7 +405,7 @@ export default async function Page() {
           <ul className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-primary">
             {c.relatedLinks.map((l) => (
               <li key={l.href}>
-                <Link href={l.href} className="underline">
+                <Link href={addLocalePrefix(l.href, locale)} className="underline">
                   {l.label}
                 </Link>
               </li>

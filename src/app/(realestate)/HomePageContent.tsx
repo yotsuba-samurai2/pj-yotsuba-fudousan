@@ -13,6 +13,7 @@ import Link from "next/link";
 import { LinkaWidget } from "@/components/linka/LinkaWidget";
 import { LINE_URL } from "@/lib/shared/office";
 import { getRequestLocale } from "@/lib/getRequestLocale";
+import { addLocalePrefix } from "@/lib/locale";
 import { fetchTranslationsFromFirestore } from "@/lib/getTranslationData";
 import { getNestedValue } from "@/lib/seo";
 import type { LangCode } from "@/config/languages";
@@ -419,7 +420,7 @@ export default async function HomePageContent() {
           {c.pillars.map((p, i) => (
             <Link
               key={c.pillarHrefs[i]}
-              href={c.pillarHrefs[i]}
+              href={addLocalePrefix(c.pillarHrefs[i], locale)}
               className="block rounded-2xl border border-border bg-surface p-5 transition-shadow hover:shadow-md"
             >
               <span className="inline-block rounded-full bg-primary-tint px-2.5 py-0.5 text-xs font-medium text-primary-dark">
@@ -488,7 +489,7 @@ export default async function HomePageContent() {
               <h2 className="font-serif text-lg font-semibold text-ink">{item.q}</h2>
               <p className="mt-1.5 text-sm leading-relaxed text-text">
                 {item.a}{" "}
-                <Link href={c.qaHrefs[i]} className="text-primary underline">
+                <Link href={addLocalePrefix(c.qaHrefs[i], locale)} className="text-primary underline">
                   {item.anchor}
                 </Link>
               </p>
@@ -499,7 +500,7 @@ export default async function HomePageContent() {
         {/* 導線 */}
         <nav aria-label="site links" className="mt-10 flex flex-wrap gap-x-4 gap-y-1 text-sm text-primary">
           {c.nav.map((n) => (
-            <Link key={n.href} href={n.href} className="underline">
+            <Link key={n.href} href={addLocalePrefix(n.href, locale)} className="underline">
               {n.label}
             </Link>
           ))}
@@ -519,7 +520,7 @@ export default async function HomePageContent() {
               {c.lineBtn}
             </a>
             <Link
-              href="/contact"
+              href={addLocalePrefix("/contact", locale)}
               className="inline-flex min-h-[44px] items-center rounded-lg border border-border px-5 py-3 text-sm font-medium text-text-muted transition-colors hover:border-primary hover:text-primary"
             >
               {c.contactBtn}
