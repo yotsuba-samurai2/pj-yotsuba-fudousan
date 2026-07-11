@@ -1,17 +1,25 @@
 import Link from "next/link";
 import { ArrowRight, CheckCircle } from "lucide-react";
+import type { Metadata } from "next";
 
 import { buildPageMetadata } from "@/lib/seo";
+import { getRequestLocale } from "@/lib/getRequestLocale";
+import { addLocalePrefix } from "@/lib/locale";
 
-export const metadata = buildPageMetadata({
-  businessKey: "labor",
-  title: "送信完了 | 四葉社会保険労務士事務所",
-  description: "お問い合わせを受け付けました。",
-  path: "/labor/thanks",
-  noindex: true,
-});
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getRequestLocale();
+  return buildPageMetadata({
+    businessKey: "labor",
+    title: "送信完了 | 四葉社会保険労務士事務所",
+    description: "お問い合わせを受け付けました。",
+    path: "/labor/thanks",
+    noindex: true,
+    locale,
+  });
+}
 
-export default function LaborThanksPage() {
+export default async function LaborThanksPage() {
+  const locale = await getRequestLocale();
   return (
     <div>
       <section className="flex min-h-[70vh] items-center justify-center px-4 pt-20">
@@ -29,7 +37,7 @@ export default function LaborThanksPage() {
           </p>
           <div className="mt-10">
             <Link
-              href="/labor"
+              href={addLocalePrefix("/labor", locale)}
               className="gradient-line inline-flex items-center gap-2 rounded-md px-8 py-3.5 text-sm font-semibold text-white shadow-lg transition-all duration-200 hover:shadow-xl hover:brightness-110 opacity-80"
             >
               トップに戻る

@@ -3,6 +3,7 @@
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo";
 import { getRequestLocale } from "@/lib/getRequestLocale";
+import { addLocalePrefix } from "@/lib/locale";
 import Link from "next/link";
 import { Breadcrumb } from "@/components/shared/Breadcrumb";
 import { CtaBand } from "@/components/shared/CtaBand";
@@ -110,7 +111,8 @@ function jsonLd() {
   };
 }
 
-export default function Page() {
+export default async function Page() {
+  const locale = await getRequestLocale();
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()) }} />
@@ -182,7 +184,7 @@ export default function Page() {
 
         <p className="mt-4 text-sm">
           ご依頼の手順 →{" "}
-          <Link href="/labor/nagare" className="text-primary underline">
+          <Link href={addLocalePrefix("/labor/nagare", locale)} className="text-primary underline">
             ご相談から契約までの流れ
           </Link>
         </p>

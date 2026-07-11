@@ -3,6 +3,7 @@
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo";
 import { getRequestLocale } from "@/lib/getRequestLocale";
+import { addLocalePrefix } from "@/lib/locale";
 import Link from "next/link";
 import { LaborServicePage, LaborH2 } from "@/components/shared/LaborServicePage";
 import { Placeholder } from "@/components/shared/Placeholder";
@@ -21,7 +22,8 @@ export async function generateMetadata(): Promise<Metadata> {
   });
 }
 
-export default function Page() {
+export default async function Page() {
+  const locale = await getRequestLocale();
   return (
     <LaborServicePage
       slug="gaikokujin-koyo"
@@ -49,11 +51,11 @@ export default function Page() {
         </p>
         <p className="mt-2 text-sm">
           →{" "}
-          <Link href="/legal/services/visa" className="text-primary underline">
+          <Link href={addLocalePrefix("/legal/services/visa", locale)} className="text-primary underline">
             在留資格・ビザ申請（四葉行政書士事務所）
           </Link>
           ／
-          <Link href="/toushi/shataku" className="text-primary underline">
+          <Link href={addLocalePrefix("/toushi/shataku", locale)} className="text-primary underline">
             社宅・法人賃貸（四葉不動産）
           </Link>
         </p>

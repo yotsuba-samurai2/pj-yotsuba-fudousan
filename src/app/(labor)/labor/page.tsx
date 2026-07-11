@@ -5,6 +5,7 @@
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo";
 import { getRequestLocale } from "@/lib/getRequestLocale";
+import { addLocalePrefix } from "@/lib/locale";
 import Link from "next/link";
 import { CtaBand } from "@/components/shared/CtaBand";
 import { Placeholder } from "@/components/shared/Placeholder";
@@ -30,7 +31,8 @@ const SERVICES = [
   { href: "/labor/services/gaikokujin-koyo", label: "外国人雇用（介護・育成就労）の労務", sub: "多言語対応" },
 ];
 
-export default function LaborTopPage() {
+export default async function LaborTopPage() {
+  const locale = await getRequestLocale();
   return (
     <>
       {/* ヒーロー（H1＝事務所名のみ） */}
@@ -62,7 +64,7 @@ export default function LaborTopPage() {
           {SERVICES.map((s) => (
             <Link
               key={s.href}
-              href={s.href}
+              href={addLocalePrefix(s.href, locale)}
               className="block rounded-2xl border border-border bg-surface p-4 transition-shadow hover:shadow-sm"
             >
               <div className="font-serif text-lg font-semibold text-ink">{s.label}</div>
@@ -118,11 +120,11 @@ export default function LaborTopPage() {
           </p>
           <p className="mt-2 text-sm">
             →{" "}
-            <Link href="/toushi/group-home" className="text-primary underline">
+            <Link href={addLocalePrefix("/toushi/group-home", locale)} className="text-primary underline">
               グループホームに使える物件探し（四葉不動産）
             </Link>
             ／
-            <Link href="/legal/services/shogai-fukushi" className="text-primary underline">
+            <Link href={addLocalePrefix("/legal/services/shogai-fukushi", locale)} className="text-primary underline">
               障害福祉サービスの指定申請（四葉行政書士事務所）
             </Link>
           </p>
@@ -133,10 +135,10 @@ export default function LaborTopPage() {
 
         {/* 導線 */}
         <nav aria-label="サイト内導線" className="mt-10 flex flex-wrap gap-x-4 gap-y-1 text-sm text-primary">
-          <Link href="/labor/ryokin" className="underline">料金</Link>
-          <Link href="/labor/nagare" className="underline">受任の流れ</Link>
-          <Link href="/labor/faq" className="underline">よくある質問</Link>
-          <Link href="/labor/about" className="underline">事務所概要</Link>
+          <Link href={addLocalePrefix("/labor/ryokin", locale)} className="underline">料金</Link>
+          <Link href={addLocalePrefix("/labor/nagare", locale)} className="underline">受任の流れ</Link>
+          <Link href={addLocalePrefix("/labor/faq", locale)} className="underline">よくある質問</Link>
+          <Link href={addLocalePrefix("/labor/about", locale)} className="underline">事務所概要</Link>
         </nav>
       </main>
 
