@@ -8,6 +8,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { buildPageMetadata } from "@/lib/seo";
 import { getRequestLocale } from "@/lib/getRequestLocale";
+import { addLocalePrefix } from "@/lib/locale";
 import { Breadcrumb } from "@/components/shared/Breadcrumb";
 import { CtaBand } from "@/components/shared/CtaBand";
 import type { LangCode } from "@/config/languages";
@@ -569,7 +570,7 @@ export default async function ServicesPage() {
             {c.fields.items.map((f, i) => (
               <Link
                 key={FIELD_HREFS[i]}
-                href={FIELD_HREFS[i]}
+                href={addLocalePrefix(FIELD_HREFS[i], locale)}
                 className="flex flex-col rounded-3xl border border-border bg-surface p-6 transition-shadow hover:shadow-md"
               >
                 {FIELD_ICONS[i]}

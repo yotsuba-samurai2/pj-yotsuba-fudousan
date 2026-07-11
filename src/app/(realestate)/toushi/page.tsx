@@ -6,6 +6,7 @@
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo";
 import { getRequestLocale } from "@/lib/getRequestLocale";
+import { addLocalePrefix } from "@/lib/locale";
 import Link from "next/link";
 import { RealestateServicePage, ReH2 } from "@/components/shared/RealestateServicePage";
 import { Placeholder } from "@/components/shared/Placeholder";
@@ -26,7 +27,7 @@ type ToushiCopy = {
   authorAlt: string;
   authorLabel: string;
   authorBio: string;
-  sections: React.ReactNode;
+  sections: (locale: LangCode) => React.ReactNode;
 };
 
 const COPY: Record<LangCode, ToushiCopy> = {
@@ -56,18 +57,18 @@ const COPY: Record<LangCode, ToushiCopy> = {
     authorLabel: "この記事の著者",
     authorBio:
       "浦松 丈二｜四葉不動産株式会社 代表取締役・専任宅地建物取引士。行政書士。元毎日新聞中国総局長（記者歴34年）・海外4カ国在住経験。社会保険労務士試験合格（2026年9月開業予定）。",
-    sections: (
+    sections: (locale) => (
       <>
         <div>
           <ReH2>どんな投資・事業用不動産を扱っていますか？</ReH2>
           <ul className="mt-3 space-y-2 text-sm leading-relaxed text-text">
             <li>
               <strong>グループホーム・障害福祉事業所向け物件</strong>——指定基準を見据えた物件選び →{" "}
-              <Link href="/toushi/group-home" className="text-primary underline">グループホームに使える物件探し</Link>
+              <Link href={addLocalePrefix("/toushi/group-home", locale)} className="text-primary underline">グループホームに使える物件探し</Link>
             </li>
             <li>
               <strong>社宅・法人賃貸</strong>——外国人従業員の住居手配も多言語で →{" "}
-              <Link href="/toushi/shataku" className="text-primary underline">社宅・法人賃貸のサポート</Link>
+              <Link href={addLocalePrefix("/toushi/shataku", locale)} className="text-primary underline">社宅・法人賃貸のサポート</Link>
             </li>
             <li>
               <strong>収益物件（区分・一棟）</strong>
@@ -91,7 +92,7 @@ const COPY: Record<LangCode, ToushiCopy> = {
           <ReH2>費用について</ReH2>
           <p className="mt-3 text-sm leading-relaxed text-text">
             売買・賃貸の仲介手数料は、宅地建物取引業法の定めの範囲によります（一般情報）。詳細は{" "}
-            <Link href="/access" className="text-primary underline">アクセス・料金</Link> へ。
+            <Link href={addLocalePrefix("/access", locale)} className="text-primary underline">アクセス・料金</Link> へ。
             <Placeholder reason="Notion＝料金の掲載範囲" />
           </p>
         </div>
@@ -124,18 +125,18 @@ const COPY: Record<LangCode, ToushiCopy> = {
     authorLabel: "About the author",
     authorBio:
       "Joji Uramatsu | Representative Director of Yotsuba Real Estate Co., Ltd.; full-time licensed real estate broker; gyoseishoshi lawyer. Former China General Bureau Chief of the Mainichi Shimbun (34 years as a journalist), with experience living in four countries. Passed the national exam for licensed social insurance and labor consultant (office opening scheduled for September 2026).",
-    sections: (
+    sections: (locale) => (
       <>
         <div>
           <ReH2>What kinds of investment and business-use real estate do you handle?</ReH2>
           <ul className="mt-3 space-y-2 text-sm leading-relaxed text-text">
             <li>
               <strong>Properties for group homes and disability-welfare facilities</strong>—property selection with the designation standards in view →{" "}
-              <Link href="/toushi/group-home" className="text-primary underline">Finding a property for a group home</Link>
+              <Link href={addLocalePrefix("/toushi/group-home", locale)} className="text-primary underline">Finding a property for a group home</Link>
             </li>
             <li>
               <strong>Company housing & corporate leasing</strong>—housing arrangements for international employees, supported in multiple languages →{" "}
-              <Link href="/toushi/shataku" className="text-primary underline">Company Housing & Corporate Lease Support</Link>
+              <Link href={addLocalePrefix("/toushi/shataku", locale)} className="text-primary underline">Company Housing & Corporate Lease Support</Link>
             </li>
             <li>
               <strong>Income properties (condominium units & whole buildings)</strong>
@@ -159,7 +160,7 @@ const COPY: Record<LangCode, ToushiCopy> = {
           <ReH2>About fees</ReH2>
           <p className="mt-3 text-sm leading-relaxed text-text">
             Brokerage commissions for sales and leasing are within the range prescribed by the Real Estate Brokerage Act (宅地建物取引業法) (general information). For details, see{" "}
-            <Link href="/access" className="text-primary underline">Access &amp; Fees</Link>.
+            <Link href={addLocalePrefix("/access", locale)} className="text-primary underline">Access &amp; Fees</Link>.
             <Placeholder reason="Notion＝料金の掲載範囲" />
           </p>
         </div>
@@ -192,18 +193,18 @@ const COPY: Record<LangCode, ToushiCopy> = {
     authorLabel: "本文作者",
     authorBio:
       "浦松 丈二｜四葉不動産株式会社 代表取締役・專任宅地建物取引士。行政書士。曾任每日新聞中國總局長（記者資歷34年）・旅居海外4國。已通過社會保險勞務士考試（預定2026年9月開業）。",
-    sections: (
+    sections: (locale) => (
       <>
         <div>
           <ReH2>經手哪些投資・事業用不動產？</ReH2>
           <ul className="mt-3 space-y-2 text-sm leading-relaxed text-text">
             <li>
               <strong>團體家屋・障礙福祉事業所用物件</strong>——著眼指定基準的物件選擇 →{" "}
-              <Link href="/toushi/group-home" className="text-primary underline">尋找可作團體家屋的物件</Link>
+              <Link href={addLocalePrefix("/toushi/group-home", locale)} className="text-primary underline">尋找可作團體家屋的物件</Link>
             </li>
             <li>
               <strong>員工宿舍・法人租賃</strong>——外籍員工的住居安排也提供多語言服務 →{" "}
-              <Link href="/toushi/shataku" className="text-primary underline">員工宿舍・法人租賃支援</Link>
+              <Link href={addLocalePrefix("/toushi/shataku", locale)} className="text-primary underline">員工宿舍・法人租賃支援</Link>
             </li>
             <li>
               <strong>收益物件（區分・整棟）</strong>
@@ -227,7 +228,7 @@ const COPY: Record<LangCode, ToushiCopy> = {
           <ReH2>關於費用</ReH2>
           <p className="mt-3 text-sm leading-relaxed text-text">
             買賣・租賃的仲介手續費，依宅地建物取引業法所定之範圍（一般資訊）。詳情請見{" "}
-            <Link href="/access" className="text-primary underline">交通與費用</Link>。
+            <Link href={addLocalePrefix("/access", locale)} className="text-primary underline">交通與費用</Link>。
             <Placeholder reason="Notion＝料金の掲載範囲" />
           </p>
         </div>
@@ -260,18 +261,18 @@ const COPY: Record<LangCode, ToushiCopy> = {
     authorLabel: "本文作者",
     authorBio:
       "浦松 丈二｜四葉不動産株式会社 代表取缔役・专任宅地建物取引士。行政书士。曾任每日新闻中国总局长（记者经历34年）・旅居海外4国。已通过社会保险劳务士考试（预定2026年9月开业）。",
-    sections: (
+    sections: (locale) => (
       <>
         <div>
           <ReH2>经手哪些投资・事业用不动产？</ReH2>
           <ul className="mt-3 space-y-2 text-sm leading-relaxed text-text">
             <li>
               <strong>团体家屋・残障福祉事业所用物件</strong>——着眼指定基准的物件选择 →{" "}
-              <Link href="/toushi/group-home" className="text-primary underline">寻找可作团体家屋的物件</Link>
+              <Link href={addLocalePrefix("/toushi/group-home", locale)} className="text-primary underline">寻找可作团体家屋的物件</Link>
             </li>
             <li>
               <strong>员工宿舍・法人租赁</strong>——外籍员工的住房安排也提供多语言服务 →{" "}
-              <Link href="/toushi/shataku" className="text-primary underline">员工宿舍・法人租赁支援</Link>
+              <Link href={addLocalePrefix("/toushi/shataku", locale)} className="text-primary underline">员工宿舍・法人租赁支援</Link>
             </li>
             <li>
               <strong>收益物件（区分・整栋）</strong>
@@ -295,7 +296,7 @@ const COPY: Record<LangCode, ToushiCopy> = {
           <ReH2>关于费用</ReH2>
           <p className="mt-3 text-sm leading-relaxed text-text">
             买卖・租赁的中介手续费，依日本《宅地建物取引业法》所定范围（一般信息）。详情请见{" "}
-            <Link href="/access" className="text-primary underline">交通与费用</Link>。
+            <Link href={addLocalePrefix("/access", locale)} className="text-primary underline">交通与费用</Link>。
             <Placeholder reason="Notion＝料金の掲載範囲" />
           </p>
         </div>
@@ -339,7 +340,7 @@ export default async function Page() {
       authorLabel={c.authorLabel}
       authorBio={c.authorBio}
     >
-      {c.sections}
+      {c.sections(locale)}
     </RealestateServicePage>
   );
 }

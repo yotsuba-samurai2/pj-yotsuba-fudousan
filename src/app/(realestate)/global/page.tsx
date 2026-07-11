@@ -10,6 +10,7 @@
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo";
 import { getRequestLocale } from "@/lib/getRequestLocale";
+import { addLocalePrefix } from "@/lib/locale";
 import Link from "next/link";
 import { RealestateServicePage, ReH2 } from "@/components/shared/RealestateServicePage";
 import { Placeholder } from "@/components/shared/Placeholder";
@@ -31,7 +32,7 @@ type GlobalCopy = {
   s2H2: string;
   s2Body: React.ReactNode;
   s3H2: string;
-  s3Body: React.ReactNode;
+  s3Body: (locale: LangCode) => React.ReactNode;
   relatedAria: string;
   relatedHeading: string;
   authorAlt: string;
@@ -72,10 +73,10 @@ const COPY: Record<LangCode, GlobalCopy> = {
       </>
     ),
     s3H2: "繁体字（台湾・中華圏）のコンテンツはありますか？",
-    s3Body: (
+    s3Body: (locale) => (
       <>
         あります。台湾・中華圏の方向けの繁体字コラム（相続・投資・手続き）を公開しています。ページ右上の言語スイッチャーから繁體中文をお選びください →{" "}
-        <Link href="/column" className="text-primary underline">コラム一覧</Link>
+        <Link href={addLocalePrefix("/column", locale)} className="text-primary underline">コラム一覧</Link>
       </>
     ),
     relatedAria: "関連リンク",
@@ -118,10 +119,10 @@ const COPY: Record<LangCode, GlobalCopy> = {
       </>
     ),
     s3H2: "Do you have content in Traditional Chinese (Taiwan / Chinese-speaking regions)?",
-    s3Body: (
+    s3Body: (locale) => (
       <>
         Yes. We publish columns in Traditional Chinese for readers in Taiwan and Chinese-speaking regions (inheritance, investment, and procedures). Please choose 繁體中文 from the language switcher at the top right of the page →{" "}
-        <Link href="/column" className="text-primary underline">Column list</Link>
+        <Link href={addLocalePrefix("/column", locale)} className="text-primary underline">Column list</Link>
       </>
     ),
     relatedAria: "Related links",
@@ -163,10 +164,10 @@ const COPY: Record<LangCode, GlobalCopy> = {
       </>
     ),
     s3H2: "有繁體字（台灣・中華圈）的內容嗎？",
-    s3Body: (
+    s3Body: (locale) => (
       <>
         有的。我們公開面向台灣・中華圈讀者的繁體字專欄（繼承・投資・手續）。請從頁面右上方的語言切換選單選擇繁體中文 →{" "}
-        <Link href="/column" className="text-primary underline">專欄一覽</Link>
+        <Link href={addLocalePrefix("/column", locale)} className="text-primary underline">專欄一覽</Link>
       </>
     ),
     relatedAria: "相關連結",
@@ -208,10 +209,10 @@ const COPY: Record<LangCode, GlobalCopy> = {
       </>
     ),
     s3H2: "有繁体字（台湾・中华圈）的内容吗？",
-    s3Body: (
+    s3Body: (locale) => (
       <>
         有的。我们公开面向台湾・中华圈读者的繁体字专栏（继承・投资・手续）。请从页面右上方的语言切换菜单选择繁體中文 →{" "}
-        <Link href="/column" className="text-primary underline">专栏一览</Link>
+        <Link href={addLocalePrefix("/column", locale)} className="text-primary underline">专栏一览</Link>
       </>
     ),
     relatedAria: "相关链接",
@@ -270,7 +271,7 @@ export default async function Page() {
 
       <div>
         <ReH2>{c.s3H2}</ReH2>
-        <p className="mt-3 text-sm leading-relaxed text-text">{c.s3Body}</p>
+        <p className="mt-3 text-sm leading-relaxed text-text">{c.s3Body(locale)}</p>
       </div>
     </RealestateServicePage>
   );
