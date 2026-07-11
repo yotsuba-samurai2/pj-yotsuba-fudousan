@@ -4,7 +4,10 @@
 // 【要確認】の項目（対応エリア・査定のみ対応）は断定しない安全文で公開可能な形にしてある（未検証を出力しない原則）。
 // フェーズI多言語化（2026-07-11）：COPY: Record<LangCode,…>＋getRequestLocale 方式（手本= /legal/faq・/access）。
 // en/zh-tw/zh=監修前ドラフト（2026-07-11）。繁体=台湾定訳（文京區・茗荷谷站・繼承・不動產）／zh=大陸表記。
-// 相談料（Q1）＝2026-07-11浦松確定文言（初回無料・2回目以降/媒介を伴わないコンサルは同意ベースで30分5,500円税込）＝/accessと整合。
+// 相談料（Q1）＝2026-07-11浦松確定文言（改訂版）：媒介に関する相談＝仲介手数料の範囲（別途相談料なし）／
+// 媒介を伴わないコンサル（媒介以外の関連業務）＝初回無料・2回目以降のみ事前同意で30分5,500円（税込）。
+// ＝/access・/services・/souzoku/nagare と同一基準（国交省 解釈・運用＝媒介以外の関連業務は明確区分・事前設定・別合意）。
+// ※宅建業法上の相談料の切り分けは石井弁護士の最終確認を通すこと。
 // 業法訳は/access既訳と統一（仲介手数料=brokerage commission／法定上限=statutory maximum (cap) under the Real Estate Brokerage Act）。金額・率は全ロケール不変。
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo";
@@ -37,7 +40,7 @@ const COPY: Record<LangCode, FaqPageCopy> = {
     items: [
       {
         q: "相続や不動産の相談は無料ですか？",
-        a: "初回のご相談は無料です。2回目以降の継続的なご相談や、媒介を伴わない不動産コンサルティング（セカンドオピニオン、資産全体の活用・保有方針の助言など）は、事前のご同意のうえ原則30分5,500円（税込・オンライン可）で承ります。まずはLINEか電話で一言からで大丈夫です。",
+        a: "初回のご相談は無料です。2回目以降で、媒介を伴わない不動産コンサルティング（セカンドオピニオン、資産全体の活用・保有方針の助言など＝媒介以外の関連業務）は、事前のご同意のうえ原則30分5,500円（税込・オンライン可）で承ります。売買・賃貸の媒介に関するご相談は、仲介手数料の範囲で承ります。まずはLINEか電話で一言からで大丈夫です。",
       },
       {
         q: "中国語・英語でも相談できますか？",
@@ -83,7 +86,7 @@ const COPY: Record<LangCode, FaqPageCopy> = {
     items: [
       {
         q: "Is a consultation about inheritance or real estate free?",
-        a: "Your first consultation is free of charge. Follow-up consultations and real-estate consulting not involving brokerage (a second opinion, advice on utilizing or holding your overall assets, and the like) are, in principle, ¥5,500 (tax incl.) per 30 minutes — only with your prior consent, and online sessions are available. Feel free to start with a single line via LINE or phone.",
+        a: "Your first consultation is free of charge. From the second session onward, real-estate consulting that does not involve brokerage (a second opinion, advice on utilizing or holding your overall assets, and the like — i.e., related work other than brokerage) is, in principle, ¥5,500 (tax incl.) per 30 minutes — only with your prior consent, and online sessions are available. Consultations relating to a sale or lease we broker are covered by the brokerage commission. Feel free to start with a single line via LINE or phone.",
       },
       {
         q: "Can I consult in Chinese or English?",
@@ -129,7 +132,7 @@ const COPY: Record<LangCode, FaqPageCopy> = {
     items: [
       {
         q: "繼承或不動產的諮詢是免費的嗎？",
-        a: "初次諮詢免費。第2次起的持續諮詢，以及不涉及仲介的不動產顧問服務（第二意見、整體資產的活用・持有方針建議等），經事先同意後原則上以每30分鐘5,500日圓（含稅・可線上進行）承接。歡迎先透過LINE或電話說一句話。",
+        a: "初次諮詢免費。第2次起，不涉及仲介的不動產顧問服務（第二意見、整體資產的活用・持有方針建議等＝仲介以外的相關業務），經事先同意後原則上以每30分鐘5,500日圓（含稅・可線上進行）承接。與本公司承辦之買賣・租賃仲介相關的諮詢，包含於仲介手續費範圍內。歡迎先透過LINE或電話說一句話。",
       },
       {
         q: "可以用中文或英文諮詢嗎？",
@@ -175,7 +178,7 @@ const COPY: Record<LangCode, FaqPageCopy> = {
     items: [
       {
         q: "继承或不动产的咨询是免费的吗？",
-        a: "初次咨询免费。第2次起的持续咨询，以及不涉及中介的不动产顾问服务（第二意见、整体资产的活用・持有方针建议等），经事先同意后原则上以每30分钟5,500日元（含税・可在线进行）承接。欢迎先通过LINE或电话说一句话。",
+        a: "初次咨询免费。第2次起，不涉及中介的不动产顾问服务（第二意见、整体资产的活用・持有方针建议等＝中介以外的相关业务），经事先同意后原则上以每30分钟5,500日元（含税・可在线进行）承接。与本公司承办之买卖・租赁中介相关的咨询，包含在中介手续费范围内。欢迎先通过LINE或电话说一句话。",
       },
       {
         q: "可以用中文或英文咨询吗？",
