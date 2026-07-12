@@ -3,7 +3,11 @@
 // 三禁則の特殊表示を保持：順位なし注記・匿名化・エスカレーション・demoバナー・オプトイン未取得の明示。
 // データはサーバ解決済みカード（LinkaResult）のみ＝クライアントは名簿を持たない。
 // 色は --color-primary（テナント色）を参照（サイト非依存）。
+// K-2b（2026-07-12）：コーポレート（concierge）側の見出し・注記を4ロケール化（正本＝lib/linka/ui-copy.ts）。
+// 候補カード・参考動画（士業ドットコム専用UI）は日本語のまま＝あちらは日本語プラットフォーム。
 import { LINE_URL } from "@/lib/shared/office-public";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { linkaUi } from "@/lib/linka/ui-copy";
 import type { CandidateCard, LinkaResult } from "@/lib/linka/types";
 
 function Badge({ tone, children }: { tone: "amber" | "gray" | "blue" | "navy"; children: React.ReactNode }) {
@@ -85,18 +89,20 @@ export function ResultView({
   selected?: string | null;
   onSelect?: (id: string) => void;
 }) {
+  const { locale } = useLanguage();
+  const t = linkaUi(locale);
   return (
     <div className="space-y-3">
       {result.type === "escalation" && (
         <div className="rounded-xl border border-red-300 bg-red-50 p-4 text-sm text-red-900">
-          <div className="mb-1 font-semibold">まず公的な窓口へ</div>
+          <div className="mb-1 font-semibold">{t.escalationTitle}</div>
           {result.message}
         </div>
       )}
       {(result.type === "anonymization_request" || result.type === "clarify") && (
         <div className="rounded-xl border border-amber-300 bg-white p-4 text-sm text-stone-800">
           <div className="mb-1 font-semibold text-amber-800">
-            {result.type === "anonymization_request" ? "匿名化のお願い" : "確認させてください"}
+            {result.type === "anonymization_request" ? t.anonTitle : t.clarifyTitle}
           </div>
           {result.message}
         </div>
@@ -104,7 +110,7 @@ export function ResultView({
 
       {(result.type === "triage" || result.type === "concierge") && (
         <div className="space-y-2 rounded-xl border border-stone-200 bg-white p-4">
-          <div className="text-xs font-semibold text-stone-500">関わりそうな分野(見当)</div>
+          <div className="text-xs font-semibold text-stone-500">{t.kentoLabel}</div>
           <div className="flex flex-wrap gap-2">
             {result.kento.map((k, i) => (
               <Badge key={i} tone="navy">{k}</Badge>
@@ -117,14 +123,14 @@ export function ResultView({
 
       {result.demo && (
         <div className="rounded-lg border border-amber-200 bg-amber-50 px-3 py-2 text-xs text-amber-800">
-          AI接続が使えないため、簡易検索(デモモード)で表示しています。
+          {t.demoBanner}
         </div>
       )}
 
       {/* コーポレート: 自社サービス案内 */}
       {result.type === "concierge" && result.services.length > 0 && (
         <div className="space-y-2 rounded-xl border border-stone-200 bg-white p-4">
-          <div className="text-xs font-semibold text-stone-500">ご案内先</div>
+          <div className="text-xs font-semibold text-stone-500">{t.servicesLabel}</div>
           {result.services.map((s, i) => (
             <a key={i} href={s.url} className="block rounded-lg border border-stone-100 p-3 hover:shadow-sm">
               <div className="text-sm text-primary underline">{s.label}</div>
@@ -137,7 +143,7 @@ export function ResultView({
             rel="noreferrer"
             className="mt-1 inline-block rounded-md bg-primary px-3 py-1.5 text-xs text-white"
           >
-            LINEで一言相談(無料)
+            {t.lineBtn}
           </a>
         </div>
       )}
@@ -145,7 +151,7 @@ export function ResultView({
       {/* コーポレート: 範囲外→士業ドットコムへ（一般化・非名指し） */}
       {result.type === "concierge" && result.escalate && (
         <div className="space-y-2 rounded-xl border-2 border-primary bg-white p-4">
-          <div className="text-xs font-semibold text-primary">当サイトの範囲外かもしれません</div>
+          <div className="text-xs font-semibold text-primary">{t.outOfScopeTitle}</div>
           <div className="text-sm text-stone-700">{result.escalateReason}</div>
           <a
             href={result.samuraiUrl}
@@ -154,11 +160,9 @@ export function ResultView({
             className="inline-block rounded-lg px-4 py-2 text-sm text-white"
             style={{ background: "#1E3A5F" }}
           >
-            士業ドットコムで相談先を探す
+            {t.samuraiBtn}
           </a>
-          <div className="text-xs text-stone-400">
-            中立のプラットフォームが、複数の専門家を順位付けせずご案内します(送客手数料はありません)。
-          </div>
+          <div className="text-xs text-stone-400">{t.samuraiNote}</div>
         </div>
       )}
 
@@ -179,7 +183,7 @@ export function ResultView({
       {/* 参考コラム */}
       {"columns" in result && result.columns && result.columns.length > 0 && (
         <div className="space-y-2 rounded-xl border border-stone-200 bg-white p-4">
-          <div className="text-xs font-semibold text-stone-500">参考コラム(samurai.co.jp・一般的な解説)</div>
+          <div className="text-xs font-semibold text-stone-500">{t.columnsLabel}</div>
           {result.columns.map((c) => (
             <a key={c.id} href={c.url} target="_blank" rel="noreferrer" className="block rounded-lg border border-stone-100 p-3 hover:shadow-sm">
               <div className="flex flex-wrap items-center gap-2">
@@ -195,7 +199,7 @@ export function ResultView({
               </div>
             </a>
           ))}
-          <div className="text-xs text-stone-400">コラムは一般的な解説であり、個別のご事情への回答ではありません。</div>
+          <div className="text-xs text-stone-400">{t.columnsNote}</div>
         </div>
       )}
 

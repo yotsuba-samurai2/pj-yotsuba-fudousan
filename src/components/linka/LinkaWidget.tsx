@@ -17,30 +17,18 @@ import {
 import { LinkaAvatar } from "./LinkaAvatar";
 import { ResultView } from "./ResultView";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { linkaUi } from "@/lib/linka/ui-copy";
 import type { LinkaResult, LinkaSite, Summary } from "@/lib/linka/types";
 
 type LocalMsg = { id: string; role: "user" | "assistant"; text?: string; result?: LinkaResult };
 
-// クライアント側UIコピー（挨拶・チップ）。laborは事務所名を含めない汎用文（バンドル漏れ防止）。
-const UI_COPY: Record<LinkaSite, { greeting: string; chips: string[] }> = {
-  samurai: {
-    greeting: "こんにちは、リンカです。どんなことでお困りか、教えてください。",
-    chips: ["外国人の従業員のビザ更新が不安", "親が残した実家の相続をどうすれば", "起業したいが手続きが分からない"],
-  },
-  realestate: {
-    greeting:
-      "こんにちは、四葉不動産のLINKAです。相続の不動産・投資や事業用・お部屋探しなど、まずはお気軽にどうぞ。分野の見当と、四葉のご案内先をお示しします。",
-    chips: ["相続の相談", "投資・事業用を探す", "お部屋探し", "外国人・多言語"],
-  },
-  legal: {
-    greeting:
-      "こんにちは、四葉行政書士事務所のLINKAです。障害福祉の指定・GH、在留資格・ビザ、相続、会社設立、補助金など、分野の見当と当事務所のご案内先をお示しします。",
-    chips: ["障害福祉(指定/GH)", "在留資格・ビザ", "相続", "会社設立", "補助金"],
-  },
-  labor: {
-    greeting: "こんにちは、LINKAです。処遇改善加算、介護・福祉の労務、雇用助成金、外国人雇用、障害年金など、分野の見当とご案内先をお示しします。",
-    chips: ["処遇改善加算", "介護・福祉労務", "雇用助成金", "外国人雇用", "障害年金"],
-  },
+// K-2b（2026-07-12）：コーポレート3サイト（realestate/legal/labor）の挨拶・チップ、および
+// 入力欄・送信・免責などの共通文言は 4ロケール正本 `lib/linka/ui-copy.ts` へ集約した。
+// laborは全ロケールで**事務所名を含めない汎用文**（クライアントバンドル漏れ防止＝既存ルール）。
+// 士業ドットコム（samurai）は日本語プラットフォームのため、専用文言は日本語のままここに残す。
+const SAMURAI_COPY: { greeting: string; chips: string[] } = {
+  greeting: "こんにちは、リンカです。どんなことでお困りか、教えてください。",
+  chips: ["外国人の従業員のビザ更新が不安", "親が残した実家の相続をどうすれば", "起業したいが手続きが分からない"],
 };
 
 const MEMBER_GREETING =
@@ -111,11 +99,12 @@ export function LinkaWidget({
   // K-2a（2026-07-12）：安全メッセージのロケール選択用にlocaleをAPIへ渡す。
   // useLanguage()はProvider不在でもDEFAULT_LOCALE("ja")を返す設計＝samurai/facilitator配下でも安全（診断A-4）。
   const { locale } = useLanguage();
+  const t = linkaUi(locale);
   const greeting =
     greetingProp ??
-    (site === "samurai" ? (mode === "customer" ? CUSTOMER_GREETING : MEMBER_GREETING) : UI_COPY[site].greeting);
+    (site === "samurai" ? (mode === "customer" ? CUSTOMER_GREETING : MEMBER_GREETING) : t.sites[site].greeting);
   const chips =
-    chipsProp ?? (site === "samurai" ? (mode === "customer" ? UI_COPY.samurai.chips : MEMBER_CHIPS) : UI_COPY[site].chips);
+    chipsProp ?? (site === "samurai" ? (mode === "customer" ? SAMURAI_COPY.chips : MEMBER_CHIPS) : t.sites[site].chips);
 
   const idSeq = useRef(0);
   const nextId = () => `m${++idSeq.current}`;
@@ -145,7 +134,7 @@ export function LinkaWidget({
         });
         const result: LinkaResult = res.ok
           ? await res.json()
-          : { type: "clarify", message: "接続に失敗しました。時間をおいてもう一度お試しください。" };
+          : { type: "clarify", message: linkaUi(locale).connError };
         if ("summary" in result) lastSummary.current = result.summary;
         const id = nextId();
         setResults((prev) => ({ ...prev, [id]: result }));
@@ -230,7 +219,7 @@ export function LinkaWidget({
               {isRunning && (
                 <div className="flex items-center gap-2 text-sm text-stone-500">
                   <LinkaAvatar size={28} talking />
-                  <span>確認しています…</span>
+                  <span>{t.thinking}</span>
                 </div>
               )}
 
@@ -321,18 +310,20 @@ export function LinkaWidget({
                         ? isCust
                           ? "お困りごとを匿名で(お名前・会社名は伏せてください)…"
                           : "お探しの協力者の条件を匿名で(分野・地域・規模感・時期)…"
-                        : "お困りごとを匿名で入力…(⌘/Ctrl+Enterで送信)"
+                        : t.placeholder
                     }
                     className="flex-1 resize-none rounded-xl border border-stone-300 p-3 text-sm leading-relaxed focus:outline-none focus:ring-2 focus:ring-focus"
                   />
                   <ComposerPrimitive.Send className="flex-shrink-0 rounded-xl bg-primary px-4 py-3 text-sm font-semibold text-white disabled:opacity-40">
-                    送信
+                    {t.send}
                   </ComposerPrimitive.Send>
                 </ComposerPrimitive.Root>
+                {/* 免責＝三禁則の可視化（法的境界）。コーポレートは4ロケール（ui-copy.ts）、
+                    士業ドットコムは日本語のまま（「専門家の候補」の語を保持）。意味を弱めないこと。 */}
                 <p className="text-[11px] leading-relaxed text-stone-500">
-                  お名前・会社名など特定できる情報は入力しないでください。LINKAは分野の見当・
-                  {site === "samurai" ? "専門家の候補" : "自社サービスや相談先"}
-                  ・公開コラムのご案内までを行い、法律相談・法的判断はしません。回答の正確性・最新性は保証されません。ファシリテートは無償・中立で、順位付け・推薦は行いません。
+                  {site === "samurai"
+                    ? "お名前・会社名など特定できる情報は入力しないでください。LINKAは分野の見当・専門家の候補・公開コラムのご案内までを行い、法律相談・法的判断はしません。回答の正確性・最新性は保証されません。ファシリテートは無償・中立で、順位付け・推薦は行いません。"
+                    : t.disclaimer}
                 </p>
               </div>
             </div>
