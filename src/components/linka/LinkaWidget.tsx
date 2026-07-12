@@ -3,7 +3,7 @@
 // 設計書§2：外枠のみassistant-ui。結果の中身（ResultView）は独自描画のカスタム本文。
 // AIはサーバ（POST /api/linka）のみ＝クライアントにキー・名簿を置かない。
 // ⚠️ クライアント側のUI文言に社労士事務所名を置かない（バンドル漏れ防止＝laborは汎用文言）。
-import { createContext, useCallback, useContext, useMemo, useRef, useState } from "react";
+import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
 import {
   AssistantRuntimeProvider,
   ComposerPrimitive,
@@ -117,6 +117,14 @@ export function LinkaWidget({
   const [drafting, setDrafting] = useState(false);
   const [copied, setCopied] = useState(false);
   const lastSummary = useRef<Summary | undefined>(undefined);
+
+  // K-2d（2026-07-12）｜コールドスタート対策のウォームアップ。
+  // ウィジェットが表示された時点で /api/linka を GET（AIは呼ばない・即200）してLambdaを起こす。
+  // 利用者が文章を入力し終える頃には温まっているため、初回送信がデモ退避に落ちにくくなる。
+  // fire-and-forget＝失敗しても握りつぶす（本来の送信には影響させない）。相談本文は送らない。
+  useEffect(() => {
+    fetch("/api/linka", { method: "GET", cache: "no-store" }).catch(() => {});
+  }, []);
 
   const sendMessage = useCallback(
     async (text: string) => {

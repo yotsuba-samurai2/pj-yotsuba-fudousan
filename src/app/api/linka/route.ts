@@ -90,22 +90,63 @@ function parseJsonObject(text: string): Record<string, unknown> {
   return parsed as Record<string, unknown>;
 }
 
-async function callAi(system: string, user: string, model: string): Promise<string> {
+// ===== K-2d（2026-07-12）｜コールドスタート対策 =====
+// 症状＝Lambdaが冷えている初回リクエストだけAI経路が落ちてデモ退避し、再送すると実AIで返る（本番実測）。
+// 3段構えで潰す：
+//   ①明示タイムアウト＝ハングした呼び出しが関数の持ち時間（maxDuration=30s）を食い潰さないようにする
+//   ②1回だけ再試行＝一過性の失敗（ネットワーク・JSON整形崩れ）で即デモに落とさない
+//   ③ウォームアップ（GET）＝ウィジェット表示時にLambdaを温めておく（下のGETハンドラをLinkaWidgetが叩く）
+// 時間予算：生成10s ＋ 再試行10s ＋ 翻訳6s ＝ 最悪26s < maxDuration 30s。
+const AI_TIMEOUT_MS = 10_000;
+const TRANSLATE_TIMEOUT_MS = 6_000;
+
+async function callAi(
+  system: string,
+  user: string,
+  model: string,
+  timeoutMs: number = AI_TIMEOUT_MS,
+): Promise<string> {
   const client = new Anthropic(); // ANTHROPIC_API_KEY はサーバ環境変数から
-  const res = await client.messages.create({
-    model,
-    max_tokens: 1400,
-    system: [
-      // system＋名簿コンテキストは prompt caching（設計書§3）
-      { type: "text", text: system, cache_control: { type: "ephemeral" } },
-    ],
-    messages: [{ role: "user", content: user }],
-  });
+  const res = await client.messages.create(
+    {
+      model,
+      max_tokens: 1400,
+      system: [
+        // system＋名簿コンテキストは prompt caching（設計書§3）
+        { type: "text", text: system, cache_control: { type: "ephemeral" } },
+      ],
+      messages: [{ role: "user", content: user }],
+    },
+    { timeout: timeoutMs },
+  );
   const text = res.content
     .map((b) => (b.type === "text" ? b.text : ""))
     .join("");
   if (!text) throw new Error("empty");
   return text;
+}
+
+/**
+ * K-2d｜生成（AI呼び出し＋JSON整形）を**1回だけ再試行**する。
+ * 相談本文はログに出さない（既存方針）＝再試行した事実のみ記録。
+ * 2回とも失敗したら例外を投げ、呼び出し側が従来どおりデモへ退避する（安全側の挙動は不変）。
+ */
+async function generateWithRetry(system: string, user: string, model: string): Promise<RawResult> {
+  try {
+    return parseJsonBlock(await callAi(system, user, model));
+  } catch {
+    console.warn("[linka] ai retry (cold start / transient)");
+    return parseJsonBlock(await callAi(system, user, model));
+  }
+}
+
+/**
+ * K-2d｜ウォームアップ用。**AIを呼ばず即座に200を返すだけ**＝Lambdaを起こすのが目的。
+ * LinkaWidget のマウント時に fire-and-forget で叩く（利用者が送信する頃には温まっている）。
+ * 相談本文を受け取らない・ログを残さない。
+ */
+export async function GET() {
+  return NextResponse.json({ ok: true });
 }
 
 /**
@@ -147,6 +188,7 @@ async function translateResolved(
       TRANSLATE_SYSTEM,
       `# 翻訳先の言語\n${langName}\n\n# 翻訳対象JSON（値のみ翻訳・構造は不変）\n${JSON.stringify(payload)}`,
       MODEL_TRANSLATE,
+      TRANSLATE_TIMEOUT_MS, // K-2d：翻訳が長引いても関数の持ち時間を食い潰さない（失敗時は日本語のまま返る）
     );
     const t = parseJsonObject(raw);
 
@@ -253,13 +295,15 @@ export async function POST(req: Request) {
         "\n\n# 公開コラム\n" + JSON.stringify(cols) +
         "\n\n# 公式YouTube動画(テーマ)\n" + JSON.stringify(vids);
       const model = mode === "customer" ? MODEL_TRIAGE : MODEL_MEMBER;
-      raw = parseJsonBlock(await callAi(system, "# 相談\n" + message, model));
+      // K-2d：コールドスタート対策＝1回だけ再試行（2回失敗ならデモ退避＝従来どおり）
+      raw = await generateWithRetry(system, "# 相談\n" + message, model);
     } else {
       const conf = getSiteServices(site);
       const skill = skillConcierge(SITE_LABELS[site], conf.services);
       const cols = getColumns().map(({ id, title, author, tags }) => ({ id, title, author, tags }));
       const system = skill + "\n\n# 参考コラム(士業ドットコム)\n" + JSON.stringify(cols);
-      raw = parseJsonBlock(await callAi(system, "# 相談\n" + message, MODEL_MEMBER));
+      // K-2d：コールドスタート対策＝1回だけ再試行（2回失敗ならデモ退避＝従来どおり）
+      raw = await generateWithRetry(system, "# 相談\n" + message, MODEL_MEMBER);
       raw.samuraiUrl = SAMURAI_FACILITATOR_URL;
       // conciergeのservicesは自社カタログlabelのみ許可（url解決＝カタログ外は落ちる）
       if (raw.services) {

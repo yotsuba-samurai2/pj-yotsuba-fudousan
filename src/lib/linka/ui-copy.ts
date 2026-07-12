@@ -7,7 +7,7 @@
 // ⚠️ 不変ルール：
 //  1) labor の文言に**社労士事務所名を入れない**（クライアントバンドル漏れ防止＝全ロケールで汎用文言）。
 //  2) disclaimer（免責・三禁則の説明）は**法的境界そのもの**。意味を弱める訳をしない。
-//     en/zh の文面は【要監修】＝石井弁護士レビュー前（K-2aの安全メッセージと同じ扱い）。
+//     en/zh の文面は**石井弁護士レビュー済み**（2026-07-12・文面修正なしで承認）。**変更時は再レビュー必須**。
 //  3) ja は現行文字列を**そのまま**（表示回帰なし）。
 //
 // 三禁則（①選ばない ②判断しない ③機微を通さない）は文言でも崩さない：
@@ -101,7 +101,7 @@ export const LINKA_UI: Record<LangCode, LinkaUiCopy> = {
     placeholder: "Describe your situation anonymously… (⌘/Ctrl+Enter to send)",
     send: "Send",
     connError: "Connection failed. Please wait a moment and try again.",
-    // 【要監修】法的境界の文言（石井弁護士レビュー前）
+    // 法的境界の文言（石井弁護士レビュー済み・2026-07-12 修正なしで承認。変更時は再レビュー必須）
     disclaimer:
       "Please do not enter identifying information such as your name or company name. LINKA only suggests which fields may be involved and points you to our services, contact channels, and public columns. It does not provide legal advice and does not make legal judgments. The accuracy and currency of its answers are not guaranteed. Facilitation is free of charge and neutral: LINKA does not rank or recommend.",
     escalationTitle: "Please contact a public helpline first",
@@ -160,7 +160,7 @@ export const LINKA_UI: Record<LangCode, LinkaUiCopy> = {
     placeholder: "請以匿名方式描述您的問題…（⌘/Ctrl+Enter 送出）",
     send: "送出",
     connError: "連線失敗。請稍候再試一次。",
-    // 【要監修】法的境界の文言（石井弁護士レビュー前）
+    // 法的境界の文言（石井弁護士レビュー済み・2026-07-12 修正なしで承認。変更時は再レビュー必須）
     disclaimer:
       "請勿輸入姓名・公司名稱等可識別身分的資訊。LINKA僅提供可能相關領域的初步判斷，並為您指引本公司的服務、諮詢窗口與公開專欄；不提供法律諮詢，也不做法律判斷。回答的正確性與即時性不予保證。引導服務為免費且中立，不進行排名或推薦。",
     escalationTitle: "請先聯繫公家窗口",
@@ -204,7 +204,7 @@ export const LINKA_UI: Record<LangCode, LinkaUiCopy> = {
     placeholder: "请以匿名方式描述您的问题…（⌘/Ctrl+Enter 发送）",
     send: "发送",
     connError: "连接失败。请稍后再试一次。",
-    // 【要監修】法的境界の文言（石井弁護士レビュー前）
+    // 法的境界の文言（石井弁護士レビュー済み・2026-07-12 修正なしで承認。変更時は再レビュー必須）
     disclaimer:
       "请勿输入姓名・公司名称等可识别身份的信息。LINKA仅提供可能相关领域的初步判断，并为您指引本公司的服务、咨询窗口与公开专栏；不提供法律咨询，也不做法律判断。回答的准确性与时效性不予保证。引导服务免费且中立，不进行排名或推荐。",
     escalationTitle: "请先联系公共窗口",
