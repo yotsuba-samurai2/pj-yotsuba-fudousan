@@ -1,10 +1,16 @@
 import { NextRequest, NextResponse } from "next/server";
 
 /**
- * ミドルウェア: ロケール検出 → テナントリライト
+ * Proxy（旧 middleware）: ロケール検出 → テナントリライト
  *
  * 1. ロケールプレフィックスの検出・ストリップ (/en/services → /services, locale=en)
  * 2. ホスト名ベースのテナントリライト (luck428gyosei.com/about → /legal/about)
+ *
+ * 2026-07-12：Next.js 16.2 で `middleware` ファイル規約が非推奨になったため
+ * `src/middleware.ts` → `src/proxy.ts` へ改名（公式移行＝ファイル名と関数名のみ変更。
+ * https://nextjs.org/docs/messages/middleware-to-proxy ）。**ロジックは一切変更していない**。
+ * ※本ファイルはロケール判定（x-locale ヘッダー）とテナント振り分けの根幹。
+ *   「URLが言語の正」＝接頭辞なしパスは ja とみなしCookieも ja に同期する（末尾コメント参照）。
  */
 
 // ── Locale ──
@@ -84,9 +90,9 @@ function isSharedPath(pathname: string): boolean {
   );
 }
 
-// ── Middleware ──
+// ── Proxy ──
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   // スキップ（静的ファイル、API、管理画面）

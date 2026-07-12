@@ -4,7 +4,7 @@ import { DEFAULT_LOCALE, LOCALE_COOKIE, isValidLocale } from "@/lib/locale";
 
 /**
  * Server Componentからリクエストのlocaleを取得する。
- * middleware.tsが設定する `x-locale` リクエストヘッダーを優先する
+ * proxy.ts（旧 middleware.ts・Next.js 16.2で改名）が設定する `x-locale` リクエストヘッダーを優先する
  * （Cookieは次回リクエストからしか反映されず、初回アクセス・クローラーでは読めないため）。
  */
 export async function getRequestLocale(): Promise<LangCode> {
