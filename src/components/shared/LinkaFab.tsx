@@ -3,9 +3,13 @@
 // - 【1ページ1LINKA】不動産トップは本文の60秒診断がLINKA＝suppressedでFABなし（TenantLayoutShellが制御）
 // - パネル内に代表LINEを内包（LINE専用の別FABは置かない）。意匠正本＝wireframe_linka-floating.html
 // - laborは(labor)layoutの404＋APIのSR_LAUNCHEDゲートで二重に守られる（このFABはlaborページ内でのみ描画され得る）
+// K-2b（2026-07-12）：UI文言を4ロケール化（正本＝lib/linka/ui-copy.ts）。
+// useLanguage()はProvider不在でもDEFAULT_LOCALE("ja")を返す設計＝どこで描画しても安全。
 import { useState } from "react";
 import Image from "next/image";
 import { LinkaWidget } from "@/components/linka/LinkaWidget";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { linkaUi } from "@/lib/linka/ui-copy";
 import type { BusinessKey } from "@/lib/shared/office";
 
 export function LinkaFab({
@@ -20,6 +24,8 @@ export function LinkaFab({
   linkaImg?: string;
 }) {
   const [open, setOpen] = useState(false);
+  const { locale } = useLanguage();
+  const t = linkaUi(locale);
   if (suppressed) return null;
 
   return (
@@ -36,10 +42,10 @@ export function LinkaFab({
               height={28}
               className="h-7 w-7 rounded-full object-cover"
             />
-            <span className="text-sm font-semibold">LINKA｜四葉のAIコンシェルジュ</span>
+            <span className="text-sm font-semibold">{t.panelTitle}</span>
             <button
               type="button"
-              aria-label="閉じる"
+              aria-label={t.close}
               onClick={() => setOpen(false)}
               className="ml-auto rounded p-1 text-white/80 hover:text-white focus:outline-none focus:ring-2 focus:ring-white/50"
             >
@@ -54,11 +60,11 @@ export function LinkaFab({
         <button
           type="button"
           onClick={() => setOpen(true)}
-          aria-label="LINKA・AIに相談"
+          aria-label={t.fabAria}
           className="flex items-center gap-2 focus:outline-none"
         >
           <span className="rounded-full border border-border bg-surface px-3 py-1.5 text-xs text-text-muted shadow-sm md:px-4 md:py-2 md:text-[17px]">
-            AIに相談
+            {t.fabChip}
           </span>
           <span className="grid h-[84px] w-[84px] place-items-center overflow-hidden rounded-full bg-primary shadow-lg ring-2 ring-primary md:h-[168px] md:w-[168px]">
             <Image
