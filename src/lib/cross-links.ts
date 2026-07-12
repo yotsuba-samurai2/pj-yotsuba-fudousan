@@ -34,7 +34,7 @@ export const INDEPENDENT_NOTE_TRIPLE =
  * ⚠️ **本ファイルをクライアントへ持ち込まない**（TRIPLEとlabor系anchorに社労士事務所名の
  *    リテラルが含まれる＝法27条のソース漏れ経路）。CrossLinkBannerはserverのまま維持すること。
  * ⚠️ 「別事業体・独立受任・紹介料の授受なし」（非弁・業際配慮）を全言語で**弱めない**。
- *    en/zh の文面は【要監修】＝石井弁護士レビュー前。
+ *    en/zh の文面は**石井弁護士レビュー済み**（2026-07-12・修正なしで承認）。**変更時は再レビュー必須**。
  * ※ ja は既存定数をそのまま参照＝表示回帰ゼロ。
  */
 export const INDEPENDENT_NOTES: Record<LangCode, string> = {
@@ -54,7 +54,7 @@ export const INDEPENDENT_NOTES_TRIPLE: Record<LangCode, string> = {
 };
 
 // 2026-07-12：anchorI18n（en/zh-tw/zh）を追加。ja（anchor）は既存文言のまま＝表示回帰ゼロ。
-// 訳は【要監修】（石井弁護士レビュー前）。事務所名は各言語とも日本語表記のまま（固有名＝実体名）。
+// 訳は石井弁護士レビュー済み（2026-07-12・修正なしで承認／変更時は再レビュー必須）。事務所名は各言語とも日本語表記のまま（固有名＝実体名）。
 const A_SOUZOKU: Partial<Record<LangCode, string>> = {
   en: "Inheriting property in Bunkyo — the complete guide to managing, utilizing, or selling (四葉不動産 / Yotsuba Real Estate)",
   "zh-tw": "在文京區繼承不動產——管理・活用・出售的完整指南（四葉不動産）",
