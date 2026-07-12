@@ -174,10 +174,69 @@ export function localTriage(q: string, locale?: string): LinkaResult {
   return resolveResult(raw);
 }
 
+/**
+ * K-2c（2026-07-12）｜デモ（AI不可時の退避）本文の4言語化。
+ *
+ * デモは「AIが使えないときの命綱」なので**決定論的**でなければならない＝AI翻訳に頼らず定型文で持つ。
+ * 分野の推定（matchedTerms）は日本語キーワード照合のため、en/zh入力では terms が空になる。
+ * 従来はそこで日本語の定型文が出ていた＝**外国語利用者に読めない退避先**だった（本番実測で発見）。
+ *
+ * ⚠️ ja は既存文字列をそのまま（noTerms は normal と同一文字列＝表示回帰なし）。
+ * ⚠️ 「見当であって法的判断ではない」（三禁則②）を全言語で保持する。
+ */
+const DEMO_CONCIERGE: Record<
+  LangCode,
+  { normal: string; escalate: string; noTerms: string; serviceReason: string; kentoUnknown: string }
+> = {
+  ja: {
+    normal:
+      "お話の内容から、関わりそうな分野の見当と、当サイトのご案内先をお示しします。これは見当であって法的な判断ではありません。",
+    escalate:
+      "お話の内容は、当サイトの範囲を超えるかもしれません。見当をお示ししたうえで、中立の士業ドットコムへおつなぎします。これは見当であって法的な判断ではありません。",
+    // ja は normal と同一＝既存挙動を1文字も変えない
+    noTerms:
+      "お話の内容から、関わりそうな分野の見当と、当サイトのご案内先をお示しします。これは見当であって法的な判断ではありません。",
+    serviceReason: "当サイトの取扱サービス",
+    kentoUnknown: "(見当を絞れませんでした)",
+  },
+  en: {
+    normal:
+      "Based on what you've told us, here are the fields that may be involved and where we can help. This is a tentative guide, not a legal judgment.",
+    escalate:
+      "What you describe may fall outside the scope of this site. We show a tentative guide and connect you to the neutral platform 士業ドットコム. This is a tentative guide, not a legal judgment.",
+    noTerms:
+      "The AI assistant is temporarily unavailable, so we cannot narrow down the fields right now. Please tell us your situation via LINE or the contact form — we can respond in English. This is a tentative guide, not a legal judgment.",
+    serviceReason: "A service handled by this office",
+    kentoUnknown: "(could not narrow down)",
+  },
+  "zh-tw": {
+    normal:
+      "根據您所述的內容，為您指出可能相關的領域與本站的對應窗口。這僅為初步判斷，並非法律判斷。",
+    escalate:
+      "您所述的內容可能超出本站的範圍。我們先提供初步判斷，並為您連結至中立平台「士業ドットコム」。這僅為初步判斷，並非法律判斷。",
+    noTerms:
+      "AI 目前暫時無法使用，因此無法為您歸納相關領域。請透過 LINE 或聯絡表單告訴我們您的狀況，我們可以用中文回覆。這僅為初步判斷，並非法律判斷。",
+    serviceReason: "本事務所承辦的服務",
+    kentoUnknown: "（無法歸納出領域）",
+  },
+  zh: {
+    normal:
+      "根据您所述的内容，为您指出可能相关的领域与本站的对应窗口。这仅为初步判断，并非法律判断。",
+    escalate:
+      "您所述的内容可能超出本站的范围。我们先提供初步判断，并为您连接至中立平台“士業ドットコム”。这仅为初步判断，并非法律判断。",
+    noTerms:
+      "AI 目前暂时无法使用，因此无法为您归纳相关领域。请通过 LINE 或联系表单告诉我们您的情况，我们可以用中文回复。这仅为初步判断，并非法律判断。",
+    serviceReason: "本事务所承办的服务",
+    kentoUnknown: "（无法归纳出领域）",
+  },
+};
+
 export function localConcierge(q: string, siteKey: "realestate" | "legal" | "labor", locale?: string): LinkaResult {
   // K-2a（2026-07-12）：4言語判定＋locale別メッセージ（既存jaパターンは不変＝isUrgent/isNameishが内包）
   if (isUrgent(q)) return { type: "escalation", demo: true, message: getEscalationMessage(locale) };
   if (isNameish(q)) return { type: "anonymization_request", demo: true, message: getAnonymizationMessage(locale) };
+  // K-2c：デモ本文のロケール解決（不正値・未指定は ja ＝既存挙動）
+  const d = DEMO_CONCIERGE[locale && locale in DEMO_CONCIERGE ? (locale as LangCode) : "ja"];
   const conf = getSiteServices(siteKey);
   let terms = matchedTerms(q);
   // 業際（指示書§9-4）：行政書士サイトの見当に「助成金」を出さない（補助金のみ）。
@@ -192,14 +251,14 @@ export function localConcierge(q: string, siteKey: "realestate" | "legal" | "lab
     .map((s) => ({ s, n: s.tags.filter((t) => terms.includes(t)).length }))
     .filter((x) => x.n > 0)
     .sort((a, b) => b.n - a.n);
-  const services = hit.map(({ s }) => ({ label: s.label, url: s.url, reason: "当サイトの取扱サービス" }));
+  const services = hit.map(({ s }) => ({ label: s.label, url: s.url, reason: d.serviceReason }));
   const escalate = services.length === 0 && terms.length > 0;
   return {
     type: "concierge", demo: true,
-    kento: terms.length ? terms.slice(0, 4) : ["(見当を絞れませんでした)"],
-    message: escalate
-      ? "お話の内容は、当サイトの範囲を超えるかもしれません。見当をお示ししたうえで、中立の士業ドットコムへおつなぎします。これは見当であって法的な判断ではありません。"
-      : "お話の内容から、関わりそうな分野の見当と、当サイトのご案内先をお示しします。これは見当であって法的な判断ではありません。",
+    kento: terms.length ? terms.slice(0, 4) : [d.kentoUnknown],
+    // K-2c：terms が空（＝日本語キーワードに当たらない＝en/zh入力の典型）のときは、
+    // 「AIが一時的に使えないので窓口へ」という利用者の言語の案内を出す（ja は normal と同一文字列＝回帰なし）。
+    message: terms.length === 0 ? d.noTerms : escalate ? d.escalate : d.normal,
     services, escalate, escalateReason: escalate ? conf.escalateNote : "",
     columns: resolveColumnCards(matchColumns(q)),
     summary: extractSummary(q),
