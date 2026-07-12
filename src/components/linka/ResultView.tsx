@@ -7,6 +7,7 @@
 // 候補カード・参考動画（士業ドットコム専用UI）は日本語のまま＝あちらは日本語プラットフォーム。
 import { LINE_URL } from "@/lib/shared/office-public";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { addLocalePrefix } from "@/lib/locale";
 import { linkaUi } from "@/lib/linka/ui-copy";
 import type { CandidateCard, LinkaResult } from "@/lib/linka/types";
 
@@ -91,6 +92,11 @@ export function ResultView({
 }) {
   const { locale } = useLanguage();
   const t = linkaUi(locale);
+  // K-2c（2026-07-12）：**内部リンクにロケール接頭辞を付ける**。
+  // servicesのurlはカタログの生パス（例 /global）で、素の<a>のままだと middleware の
+  // 「URLが言語の正」により**日本語ページに落ちる**（本番実測で発見）。外部URL（http〜・LINE・
+  // samurai.co.jp・コラム）はそのまま。
+  const localizeHref = (u: string) => (u.startsWith("/") ? addLocalePrefix(u, locale) : u);
   return (
     <div className="space-y-3">
       {result.type === "escalation" && (
@@ -132,7 +138,11 @@ export function ResultView({
         <div className="space-y-2 rounded-xl border border-stone-200 bg-white p-4">
           <div className="text-xs font-semibold text-stone-500">{t.servicesLabel}</div>
           {result.services.map((s, i) => (
-            <a key={i} href={s.url} className="block rounded-lg border border-stone-100 p-3 hover:shadow-sm">
+            <a
+              key={i}
+              href={localizeHref(s.url)}
+              className="block rounded-lg border border-stone-100 p-3 hover:shadow-sm"
+            >
               <div className="text-sm text-primary underline">{s.label}</div>
               {s.reason && <div className="mt-0.5 text-xs text-stone-500">{s.reason}</div>}
             </a>
