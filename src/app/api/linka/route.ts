@@ -21,7 +21,13 @@ import {
   localSearch,
   localTriage,
 } from "@/lib/linka/demo";
-import { resolveResult, validateLegalConciergeOutput, validateResolved, type RawResult } from "@/lib/linka/resolve";
+import {
+  resolveResult,
+  validateLegalConciergeOutput,
+  validateResolved,
+  validateTranslatedLegalOutput,
+  type RawResult,
+} from "@/lib/linka/resolve";
 import { isValidLocale } from "@/lib/locale";
 import { SKILL_CUSTOMER, SKILL_MEMBER, skillConcierge } from "@/lib/linka/skills";
 import type { LinkaResult, LinkaSite } from "@/lib/linka/types";
@@ -39,8 +45,31 @@ const SITE_LABELS: Record<LinkaSite, string> = {
 
 const MODEL_MEMBER = process.env.LINKA_MODEL_MEMBER || "claude-haiku-4-5-20251001";
 const MODEL_TRIAGE = process.env.LINKA_MODEL_TRIAGE || "claude-sonnet-5";
+// K-2c：翻訳パス（安価・高速な軽量モデルで足りる）
+const MODEL_TRANSLATE = process.env.LINKA_MODEL_TRANSLATE || "claude-haiku-4-5-20251001";
 
 const MAX_MESSAGE_LEN = 2000;
+
+// ===== K-2c（2026-07-12）｜相談者の言語で回答する（日本語で生成→全ガード通過→翻訳） =====
+// 方式＝浦松承認（2026-07-12）。**生成側 skills.ts の「回答は必ず日本語」は不変**。
+// 理由：英中では「補助金（行政書士OK）」と「助成金（社労士のみ）」を機械的に区別できない。
+// 生成を日本語に固定したまま既存の全ガード（推薦語・業際・仮名ゲート）を通し、**合格した日本語だけ**を
+// 相談者の言語へ翻訳する。翻訳は検査済みの日本語を訳すだけ＝新たな助成金言及が入り得ない。
+// 失敗・タイムアウト・翻訳後の再検査で違反 → **日本語の結果をそのまま返す**（fail-safe）。
+const LANG_NAMES: Record<string, string> = {
+  en: "English",
+  "zh-tw": "繁體中文（台灣用語）",
+  zh: "简体中文",
+};
+
+const TRANSLATE_SYSTEM = `あなたは翻訳者です。与えられたJSONの値のみを、指定された言語へ翻訳します。
+# 絶対規則（違反したら失敗）
+- 翻訳だけを行う。内容の追加・削除・要約・補足・推測・言い換えによる意味の変更を一切しない。
+- JSONのキー名・構造・配列の要素数を変えない（要素を増やしても減らしてもいけない）。
+- URL・id・電話番号・数値・固有名詞（サービス名の日本語表記が固有名として自然な場合）はそのまま残してよい。
+- 原文に無い「推薦・順位付け」の語（best / recommend / 最適 / 一番 / おすすめ / 推薦 / 最佳 など）を新たに使わない。
+- 原文に無い制度名・給付名（助成金 / employment grant など）を新たに導入しない。
+- 出力はJSONのみ。前置き・説明・コードフェンスを書かない。`;
 
 function parseJsonBlock(text: string): RawResult {
   const s = text.indexOf("{");
@@ -49,6 +78,16 @@ function parseJsonBlock(text: string): RawResult {
   const parsed = JSON.parse(text.slice(s, e + 1));
   if (!parsed || typeof parsed.type !== "string") throw new Error("bad-shape");
   return parsed as RawResult;
+}
+
+/** 翻訳ペイロード用の素直なJSONパース（typeフィールドを持たないため parseJsonBlock は使えない） */
+function parseJsonObject(text: string): Record<string, unknown> {
+  const s = text.indexOf("{");
+  const e = text.lastIndexOf("}");
+  if (s === -1 || e <= s) throw new Error("no-json");
+  const parsed = JSON.parse(text.slice(s, e + 1));
+  if (!parsed || typeof parsed !== "object") throw new Error("bad-shape");
+  return parsed as Record<string, unknown>;
 }
 
 async function callAi(system: string, user: string, model: string): Promise<string> {
@@ -67,6 +106,89 @@ async function callAi(system: string, user: string, model: string): Promise<stri
     .join("");
   if (!text) throw new Error("empty");
   return text;
+}
+
+/**
+ * K-2c｜検査済みの日本語結果を、相談者の言語へ翻訳して返す。
+ * - 翻訳対象は**画面に出る自由文のみ**（message / kento / services.label / services.reason / escalateReason）。
+ *   url・id・type・samuraiUrl・columns（実在記事のタイトル）は**触らない**＝リンク解決を壊さない。
+ * - 翻訳後に ①三禁則の再検査（推薦語・4言語） ②legalは業際の語彙再検査（仮名ゲート除く）を通す。
+ * - どこかで失敗したら **null** を返し、呼び出し側は**日本語の結果をそのまま返す**（fail-safe）。
+ * - 相談本文はここに渡さない。ログにも出さない（違反種別のみ）。
+ */
+async function translateResolved(
+  resolved: LinkaResult,
+  locale: string,
+  site: LinkaSite,
+): Promise<LinkaResult | null> {
+  const langName = LANG_NAMES[locale];
+  if (!langName) return null;
+
+  const payload: {
+    message?: string;
+    kento?: string[];
+    services?: { label: string; reason?: string }[];
+    escalateReason?: string;
+  } = {};
+  if ("message" in resolved && typeof resolved.message === "string" && resolved.message) {
+    payload.message = resolved.message;
+  }
+  if (resolved.type === "concierge") {
+    if (resolved.kento?.length) payload.kento = [...resolved.kento];
+    if (resolved.services?.length) {
+      payload.services = resolved.services.map((s) => ({ label: s.label, reason: s.reason }));
+    }
+    if (resolved.escalateReason) payload.escalateReason = resolved.escalateReason;
+  }
+  if (Object.keys(payload).length === 0) return null;
+
+  try {
+    const raw = await callAi(
+      TRANSLATE_SYSTEM,
+      `# 翻訳先の言語\n${langName}\n\n# 翻訳対象JSON（値のみ翻訳・構造は不変）\n${JSON.stringify(payload)}`,
+      MODEL_TRANSLATE,
+    );
+    const t = parseJsonObject(raw);
+
+    const out = { ...resolved } as LinkaResult;
+    if (typeof t.message === "string" && t.message.trim()) {
+      (out as { message?: string }).message = t.message;
+    }
+    if (out.type === "concierge" && resolved.type === "concierge") {
+      // 要素数が一致する場合のみ採用（AIが増減させたら翻訳を捨てる＝改変の混入を防ぐ）
+      if (Array.isArray(t.kento) && payload.kento && t.kento.length === payload.kento.length) {
+        out.kento = t.kento.map((k) => String(k));
+      }
+      if (
+        Array.isArray(t.services) &&
+        payload.services &&
+        t.services.length === payload.services.length
+      ) {
+        const ts = t.services as { label?: unknown; reason?: unknown }[];
+        // url は**必ず元の解決済み値を保持**（翻訳させない＝リンクが壊れない）
+        out.services = resolved.services.map((s, i) => ({
+          label: typeof ts[i]?.label === "string" && ts[i].label ? (ts[i].label as string) : s.label,
+          url: s.url,
+          reason:
+            typeof ts[i]?.reason === "string" && ts[i].reason ? (ts[i].reason as string) : s.reason,
+        }));
+      }
+      if (typeof t.escalateReason === "string" && t.escalateReason.trim()) {
+        out.escalateReason = t.escalateReason;
+      }
+    }
+
+    // 翻訳後の再検査（防御の多層化）。違反なら翻訳を捨てて日本語を返す。
+    const v = validateResolved(out) ?? (site === "legal" ? validateTranslatedLegalOutput(out) : null);
+    if (v) {
+      console.warn("[linka] translate post-validate fallback:", v);
+      return null;
+    }
+    return out;
+  } catch {
+    console.warn("[linka] translate error fallback");
+    return null;
+  }
 }
 
 export async function POST(req: Request) {
@@ -160,6 +282,15 @@ export async function POST(req: Request) {
       // 三禁則違反はAI出力を破棄してデモへ（相談本文はログしない＝違反種別のみ）
       console.warn("[linka] validation fallback:", violation);
       return NextResponse.json(demoFallback());
+    }
+
+    // K-2c（2026-07-12）：ここに来た時点で resolved は**日本語かつ全ガード合格**。
+    // 相談者が日本語以外なら、その言語へ翻訳して返す（翻訳失敗・再検査違反なら日本語のまま）。
+    // ※escalation・anonymization はAI呼び出し前に locale 別メッセージで返却済み＝ここには来ない。
+    // ※デモ退避（demoFallback）は既に locale 別＝翻訳不要。
+    if (locale !== "ja") {
+      const translated = await translateResolved(resolved, locale, site);
+      if (translated) return NextResponse.json(translated);
     }
     return NextResponse.json(resolved);
   } catch {

@@ -195,3 +195,32 @@ export function validateLegalConciergeOutput(result: LinkaResult): string | null
   if (!KANA_RE.test(visible)) return "業際: legal出力が非日本語の疑い(仮名ゼロ)";
   return null;
 }
+
+/**
+ * K-2c（2026-07-12）｜**翻訳後**（非日本語）出力の業際検証。
+ *
+ * 設計の前提：生成は日本語のまま（skills.tsのja固定は不変）＝AI出力は上の
+ * validateLegalConciergeOutput（仮名ゲート含む全ガード）に**合格済み**。ここはその
+ * 合格した日本語を訳した結果に、翻訳が新たな違反語を持ち込んでいないかの**二重確認**。
+ *
+ * ⚠️ 仮名ゲートは適用しない（翻訳後は非日本語であることが正常なため）。語彙照合のみ。
+ * 違反時の退避先は「デモ」ではなく「**検査済みの日本語結果**」＝安全かつ内容も正しい。
+ */
+export function validateTranslatedLegalOutput(result: LinkaResult): string | null {
+  if (result.type !== "concierge") return null;
+  const visible = JSON.stringify({
+    kento: result.kento,
+    message: result.message,
+    services: result.services,
+    escalateReason: result.escalateReason ?? "",
+  });
+  if (visible.includes("助成金")) return "業際(翻訳後): 助成金";
+  for (const w of GYOSAI_CONTEXT_WORDS) {
+    if (visible.includes(w)) return "業際(翻訳後): 雇用助成金の文脈語";
+  }
+  const lower = visible.toLowerCase();
+  for (const p of GYOSAI_CONTEXT_EN) {
+    if (lower.includes(p)) return "業際(翻訳後): 雇用助成金の文脈語(en)";
+  }
+  return null;
+}
