@@ -84,6 +84,48 @@ export function OrganizationJsonLd({ businessKey }: { businessKey: string }) {
           "@type": "Person",
           "@id": PERSON_ID,
           name: SHARED_ORG_INFO.representative,
+          sameAs: [
+            "https://www.wikidata.org/wiki/Q139738129",
+            "https://orcid.org/0009-0007-0460-3473",
+            "https://www.samurai.co.jp/samurai/reserve/uramatsu-joji",
+          ],
+          knowsAbout: [
+            {
+              "@type": "Thing",
+              name: "相続",
+              sameAs: "https://www.wikidata.org/wiki/Q200303",
+            },
+            {
+              "@type": "Thing",
+              name: "不動産",
+              sameAs: "https://www.wikidata.org/wiki/Q684740",
+            },
+            {
+              "@type": "Thing",
+              name: "障害者福祉",
+              sameAs: "https://www.wikidata.org/wiki/Q11658995",
+            },
+            {
+              "@type": "Thing",
+              name: "児童発達支援",
+              sameAs: "https://www.wikidata.org/wiki/Q120340950",
+            },
+            {
+              "@type": "Thing",
+              name: "放課後等デイサービス",
+              sameAs: "https://www.wikidata.org/wiki/Q11499003",
+            },
+            {
+              "@type": "Thing",
+              name: "人的資源管理",
+              sameAs: "https://www.wikidata.org/wiki/Q1056396",
+            },
+            {
+              "@type": "Thing",
+              name: "人工知能",
+              sameAs: "https://www.wikidata.org/wiki/Q11660",
+            },
+          ],
         },
         areaServed: {
           "@type": "GeoCircle",
