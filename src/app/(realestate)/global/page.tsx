@@ -14,6 +14,7 @@ import { addLocalePrefix } from "@/lib/locale";
 import Link from "next/link";
 import { RealestateServicePage, ReH2 } from "@/components/shared/RealestateServicePage";
 import { Placeholder } from "@/components/shared/Placeholder";
+import { getColumns, getLocalizedColumn, filterColumnsByTheme } from "@/lib/columns";
 import type { LangCode } from "@/config/languages";
 
 type GlobalCopy = {
@@ -241,10 +242,15 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function Page() {
   const locale = await getRequestLocale();
   const c = COPY[locale] ?? COPY.ja;
+  const relatedColumns = filterColumnsByTheme(
+    (await getColumns(locale)).map((col) => getLocalizedColumn(col, locale)),
+    "global",
+  );
 
   return (
     <RealestateServicePage
       path="/global"
+      relatedColumns={relatedColumns}
       crumbs={[{ name: c.crumbHome, href: "/" }, { name: c.crumbCurrent }]}
       serviceName={c.serviceName}
       heroSrc="/hero/realestate-global-16x9.webp"

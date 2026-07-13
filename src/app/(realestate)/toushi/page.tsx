@@ -10,6 +10,7 @@ import { addLocalePrefix } from "@/lib/locale";
 import Link from "next/link";
 import { RealestateServicePage, ReH2 } from "@/components/shared/RealestateServicePage";
 import { Placeholder } from "@/components/shared/Placeholder";
+import { getColumns, getLocalizedColumn, filterColumnsByTheme } from "@/lib/columns";
 import type { LangCode } from "@/config/languages";
 
 type ToushiCopy = {
@@ -322,10 +323,15 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function Page() {
   const locale = await getRequestLocale();
   const c = COPY[locale] ?? COPY.ja;
+  const relatedColumns = filterColumnsByTheme(
+    (await getColumns(locale)).map((col) => getLocalizedColumn(col, locale)),
+    "toushi",
+  );
 
   return (
     <RealestateServicePage
       path="/toushi"
+      relatedColumns={relatedColumns}
       crumbs={[{ name: c.breadcrumbHome, href: "/" }, { name: c.breadcrumbCurrent }]}
       serviceName="投資用・事業用不動産の仲介・提案"
       heroSrc="/hero/realestate-toushi-16x9.webp"

@@ -17,6 +17,7 @@ import { CrossLinkBanner } from "@/components/shared/CrossLinkBanner";
 import { getCrossLinks } from "@/lib/cross-links";
 import { SR_LAUNCHED } from "@/lib/shared/office";
 import { PERSON_ID } from "@/lib/seo";
+import type { Column } from "@/lib/columns";
 
 const SITE = "https://luck428.com";
 
@@ -42,6 +43,10 @@ export type RealestateServicePageProps = {
   authorAlt?: string;
   authorLabel?: string;
   authorBio?: string;
+  /** テーマ関連コラム（内部リンク）。省略・空配列なら非表示。current locale で localize 済みを渡す */
+  relatedColumns?: Column[];
+  /** 関連コラム見出し（省略時「関連コラム」） */
+  relatedColumnsHeading?: string;
   children: ReactNode;
 };
 
@@ -98,6 +103,29 @@ export async function RealestateServicePage(p: RealestateServicePageProps) {
             ))}
           </ul>
         </nav>
+
+        {p.relatedColumns && p.relatedColumns.length > 0 && (
+          <nav
+            aria-label={p.relatedColumnsHeading ?? "関連コラム"}
+            className="mt-8 rounded-xl border border-border bg-surface p-4 text-sm"
+          >
+            <div className="font-medium text-ink">
+              {p.relatedColumnsHeading ?? "関連コラム"}
+            </div>
+            <ul className="mt-3 space-y-2">
+              {p.relatedColumns.map((col) => (
+                <li key={col.slug}>
+                  <Link
+                    href={addLocalePrefix(`/column/${col.slug}`, locale)}
+                    className="text-primary underline"
+                  >
+                    {col.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        )}
 
         {crossLinks.map((c) => (
           <CrossLinkBanner key={c.id} link={c} lead={p.crossLinkLead} />
