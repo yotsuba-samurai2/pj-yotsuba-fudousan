@@ -1,10 +1,10 @@
 {
   "protocolVersion": "0.3.0",
+  "extensions": "yotsuba-group-v1",
   "name": "四葉グループ",
   "alternateName": "Yotsuba Group",
-  "version": "0.1.0",
-  "lastUpdated": "2026-07-11",
-  "url": "https://luck428.com",
+  "version": "0.2.0",
+  "lastUpdated": "2026-07-13",
   "documentationUrl": "https://luck428.com/about",
   "description": {
     "ja": "東京都文京区小日向を拠点とする四葉不動産株式会社・四葉行政書士事務所の総称。代表は浦松丈二（行政書士・宅地建物取引士）。不動産（相続不動産・投資/事業用・多言語のお部屋探し）と行政書士業務（障害福祉サービスの指定申請・在留資格・相続・会社設立・補助金申請）を、それぞれ独立した事業体として提供する。日本語・英語・中国語対応。",
@@ -13,8 +13,8 @@
   "a2a": {
     "status": "discovery-only",
     "note": {
-      "ja": "A2Aサーバ（エージェント間メッセージの受付エンドポイント）は未実装です。本カードは発見・自己紹介（ディスカバリ）専用であり、機械からのタスク受付は行っていません。お問い合わせは interactionModes に示す窓口（ウェブ・LINE・電話）へお願いします。",
-      "en": "No A2A server (agent-to-agent message endpoint) is implemented yet. This card is for discovery and self-description only; no machine-to-machine task intake is offered. Please use the channels listed in interactionModes (web, LINE, phone)."
+      "ja": "A2Aサーバ（エージェント間メッセージの受付エンドポイント）は未実装です。本カードは発見・自己紹介（ディスカバリ）専用であり、機械からのタスク受付は行っていません。タスク送信先のエンドポイント（url フィールド）は、サーバ実装まで意図的に設けていません。お問い合わせは interactionModes に示す窓口（ウェブ・LINE・電話）へお願いします。",
+      "en": "No A2A server (agent-to-agent message endpoint) is implemented yet. This card is for discovery and self-description only; no machine-to-machine task intake is offered. The task endpoint (url field) is intentionally omitted until a server is implemented. Please use the channels listed in interactionModes (web, LINE, phone)."
     }
   },
   "interactionModes": ["web", "line", "phone"],
@@ -63,6 +63,7 @@
       "wikidata": "Q139738129",
       "sameAs": [
         "https://www.wikidata.org/wiki/Q139738129",
+        "https://orcid.org/0009-0007-0460-3473",
         "https://www.samurai.co.jp/samurai/reserve/uramatsu-joji",
         "https://gyosei-bunkyo.org/membersearch/%e6%b5%a6%e6%9d%be-%e4%b8%88%e4%ba%8c.html",
         "https://note.com/luck428",
@@ -267,7 +268,11 @@
         "ja": "運営参画",
         "en": "Participates in operation"
       },
-      "member": "四葉グループ（浦松 丈二）"
+      "member": "四葉グループ（浦松 丈二）",
+      "note": {
+        "ja": "運営に関与することは、同プラットフォーム上での候補提示・掲載順において一切の優遇を意味しない。",
+        "en": "Involvement in operations confers no preferential treatment in candidate presentation or listing order on that platform."
+      }
     },
     {
       "name": "東京都行政書士会",
@@ -315,6 +320,16 @@
       "id": "no-sensitive-data",
       "ja": "本カードおよび公開エージェント経由では、個別の機微情報・個人情報を取り扱いません。個別のご相談は、電話・ウェブの問い合わせフォーム・LINEなどの窓口で承ります。",
       "en": "No sensitive or personal information is handled via this card or public-facing agents. Individual consultations are handled through the listed channels (phone, web contact forms, LINE)."
+    }
+  ],
+  "relatedCards": [
+    {
+      "name": "士業ドットコムSAMURAI（士業ディレクトリ）",
+      "url": "https://www.samurai.co.jp/.well-known/agent-card.json"
+    },
+    {
+      "name": "四葉不動産 日台クロスボーダー窓口",
+      "url": "https://taiwan.luck428.com/.well-known/agent-card.json"
     }
   ]
 }
