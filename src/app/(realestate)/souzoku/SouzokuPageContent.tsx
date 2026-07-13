@@ -6,6 +6,8 @@ import { FAQJsonLd } from "@/components/seo/FAQJsonLd";
 import { ArticleJsonLd } from "@/components/seo/ArticleJsonLd";
 import { SHARED_ORG_INFO } from "@/lib/seo";
 import { getRequestLocale } from "@/lib/getRequestLocale";
+import { getColumns, getLocalizedColumn, filterColumnsByTheme } from "@/lib/columns";
+import { RelatedColumnsSection } from "@/components/column/RelatedColumnsSection";
 import type { LangCode } from "@/config/languages";
 
 /**
@@ -616,6 +618,12 @@ export default async function SouzokuPageContent() {
   const locale = await getRequestLocale();
   const c = COPY[locale] ?? COPY.ja;
 
+  // 相続テーマの関連コラム（内部リンク）。該当が無ければ節ごと非表示。
+  const relatedColumns = filterColumnsByTheme(
+    (await getColumns(locale)).map((col) => getLocalizedColumn(col, locale)),
+    "souzoku",
+  );
+
   return (
     <div>
       {/* ─── JSON-LD ─── */}
@@ -797,6 +805,9 @@ export default async function SouzokuPageContent() {
           </div>
         </div>
       </section>
+
+      {/* ─── 関連コラム ─── */}
+      <RelatedColumnsSection columns={relatedColumns} locale={locale} />
 
       {/* ─── CTA ─── */}
       <section className="border-t border-border bg-green-gradient py-14 sm:py-20 md:py-28">
