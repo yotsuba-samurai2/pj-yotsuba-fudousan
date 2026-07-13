@@ -5,15 +5,24 @@ import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { useTranslation } from "@/hooks/useTranslation";
 import ColumnBody from "@/components/column/ColumnBody";
+import { RelatedColumnsSection } from "@/components/column/RelatedColumnsSection";
 import type { Column } from "@/lib/columns";
 
 type Props = {
   col: Column;
   prev: Column | null;
   next: Column | null;
+  related: Column[];
 };
 
-export default function ColumnDetailContent({ col, prev, next }: Props) {
+const RELATED_HEADING: Record<string, string> = {
+  ja: "関連記事",
+  en: "Related Articles",
+  "zh-tw": "相關文章",
+  zh: "相关文章",
+};
+
+export default function ColumnDetailContent({ col, prev, next, related }: Props) {
   const { t, locale } = useTranslation();
 
   return (
@@ -108,6 +117,13 @@ export default function ColumnDetailContent({ col, prev, next }: Props) {
           </div>
         </div>
       </section>
+
+      {/* ─── 関連記事 ─── */}
+      <RelatedColumnsSection
+        columns={related}
+        locale={locale}
+        heading={RELATED_HEADING[locale] ?? RELATED_HEADING.ja}
+      />
 
       {/* ─── CTA ─── */}
       <section className="border-t border-border bg-surface-dim py-14 sm:py-20 md:py-28">
