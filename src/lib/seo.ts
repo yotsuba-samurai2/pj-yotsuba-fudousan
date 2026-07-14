@@ -96,6 +96,8 @@ export const SAMURAI_URAMATSU_URL =
  */
 export const PERSON_SAME_AS = [
   "https://www.wikidata.org/wiki/Q139738129",
+  "https://orcid.org/0009-0007-0460-3473",
+  "https://kyoto-u.academia.edu/JojiUramatsu",
   SAMURAI_URAMATSU_URL,
   "https://gyosei-bunkyo.org/membersearch/%e6%b5%a6%e6%9d%be-%e4%b8%88%e4%ba%8c.html",
   "https://note.com/luck428",
@@ -115,7 +117,15 @@ export const PERSON_JSONLD = {
   "@type": "Person",
   "@id": PERSON_ID,
   name: "浦松 丈二",
-  alternateName: "Joji Uramatsu",
+  alternateName: ["浦松丈二", "うらまつ じょうじ", "Joji Uramatsu", "Uramatsu Joji"],
+  // 同姓の別人（株式会社浦松興産・大分県別府市）との識別用に宅建登録番号を identifier で明示
+  identifier: [
+    {
+      "@type": "PropertyValue",
+      propertyID: "宅地建物取引士登録番号",
+      value: "東京 第293544号",
+    },
+  ],
   // jobTitle＝役職／資格はhasCredentialへ分離。社労士関連は開業（2026年9月）まで出力しない
   jobTitle: ["四葉不動産株式会社 代表取締役", "四葉行政書士事務所 代表行政書士"],
   description:
@@ -230,6 +240,12 @@ export type BusinessSEOConfig = {
   /** GBP直リンク（JSON-LD hasMap・地図リンク用）。正本=office-public.tsのGBP_URL。labor＝GBP未整備のため未設定 */
   gbpUrl?: string;
   columnBasePath: string;
+  /** 同名他社との識別用の別名（JSON-LD alternateName）。未設定＝name のみ */
+  alternateNames?: string[];
+  /** 法人番号（JSON-LD taxID）。法人でない事業体（事務所）は未設定 */
+  taxID?: string;
+  /** 公的識別子（JSON-LD identifier=PropertyValue）。法人番号・免許/登録番号など */
+  identifiers?: { propertyID: string; value: string }[];
 };
 
 export const BUSINESS_SEO: Record<string, BusinessSEOConfig> = {
@@ -244,6 +260,20 @@ export const BUSINESS_SEO: Record<string, BusinessSEOConfig> = {
     squareLogo: "/yotsuba/realestate-square.png",
     gbpUrl: GBP_URL.realestate,
     columnBasePath: "/column",
+    // 同名他社（本駒込 1010001172596／静岡 7080001012468／港区 1010001100838 等）との識別。
+    // 当社の法人番号は 7010001259396 のみ（文京区小日向・2025-10-15設立登記）。
+    alternateNames: [
+      "四葉不動産",
+      "四葉不動産（文京区小日向）",
+      "Yotsuba Real Estate",
+      "Yotsuba Real Estate Co., Ltd.",
+      "YOTSUBA REAL ESTATE",
+    ],
+    taxID: "7010001259396",
+    identifiers: [
+      { propertyID: "法人番号", value: "7010001259396" },
+      { propertyID: "宅地建物取引業免許番号", value: "東京都知事(1)第113304号" },
+    ],
   },
   legal: {
     url: "https://luck428.com/legal",
@@ -257,6 +287,13 @@ export const BUSINESS_SEO: Record<string, BusinessSEOConfig> = {
     squareLogo: "/yotsuba/legal-square.png",
     gbpUrl: GBP_URL.legal,
     columnBasePath: "/legal/column",
+    alternateNames: [
+      "四葉行政書士事務所",
+      "Yotsuba Administrative Scrivener Office",
+    ],
+    identifiers: [
+      { propertyID: "行政書士登録番号", value: "第25087022号" },
+    ],
   },
   // 社労士：SR_LAUNCHED=true（開業日）までキー自体を登録しない（名称・説明の露出防止）
   ...(process.env.NEXT_PUBLIC_SR_LAUNCHED === "true"
