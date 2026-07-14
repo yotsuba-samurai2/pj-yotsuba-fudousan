@@ -1,107 +1,128 @@
 import type { MetadataRoute } from "next";
 import { headers } from "next/headers";
 import { getAllColumnsAllLocales, getAllLegalColumnsAllLocales } from "@/lib/columns";
-import { BUSINESS_URLS } from "@/lib/seo";
+import { canonicalUrl } from "@/lib/seo";
+import type { Column } from "@/lib/columns";
 
 export const revalidate = 300;
 
 const ALL_LOCALES = ["ja", "en", "zh-tw", "zh"] as const;
+/** sitemap の xhtml:link hreflang 値（ページmetadataの alternates と同一マッピング） */
 const HREFLANG: Record<string, string> = { ja: "ja", en: "en", "zh-tw": "zh-Hant", zh: "zh-Hans" };
 
-/** Generate hreflang alternates for a given base URL and path (固定ページ＝常に全4言語) */
-function withLangs(base: string, path: string = "") {
-  const p = path || "";
-  return {
-    languages: {
-      ja: `${base}${p}`,
-      en: `${base}/en${p}`,
-      "zh-Hant": `${base}/zh-tw${p}`,
-      "zh-Hans": `${base}/zh${p}`,
-    },
-  };
+type ChangeFreq = NonNullable<MetadataRoute.Sitemap[number]["changeFrequency"]>;
+type StaticPage = { path: string; changeFrequency: ChangeFreq; priority: number };
+
+/**
+ * hreflang alternates を生成する。URL生成は canonicalUrl（＝ページmetadataの alternates と
+ * 同一の単一情報源）を再利用し、ロケール接頭辞・マルチテナントのパス結合を一箇所に集約する。
+ */
+function alternatesFor(businessKey: string, path: string, locales: readonly string[]) {
+  const languages: Record<string, string> = {};
+  for (const loc of locales) {
+    languages[HREFLANG[loc] ?? loc] = canonicalUrl(businessKey, path, loc);
+  }
+  return { languages };
 }
 
 /**
- * コラム用: col.locales に限定してalternatesを出す（locale不一致404を防ぐ）。
- * locales未設定＝後方互換で全4言語（withLangsと同じ挙動）。
- * 正規urlは ja があればjaパス、無ければ locales の先頭言語のプレフィックスを使う
- * （台湾9本のようにzh-tw限定のコラムを、存在しないjaパスとして出さないため）。
+ * 固定ページを全4ロケールに展開。各ロケールURLを独立した <loc> として出力し、
+ * それぞれに全4言語の hreflang alternates を付与する
+ * （Next.js は配列1要素につき <url> 1件・<loc>=url のみを出すため、ロケール別に要素化しないと
+ *  /en・/zh が <loc> として現れない）。
  */
-function columnUrlAndAlternates(base: string, path: string, locales: string[] | undefined) {
-  const active = locales && locales.length > 0 ? locales : [...ALL_LOCALES];
-  const primary = active.includes("ja") ? "ja" : active[0];
-  const prefix = (loc: string) => (loc === "ja" ? "" : `/${loc}`);
-  const languages: Record<string, string> = {};
-  for (const loc of active) {
-    languages[HREFLANG[loc] ?? loc] = `${base}${prefix(loc)}${path}`;
-  }
-  return { url: `${base}${prefix(primary)}${path}`, alternates: { languages } };
+function expandStatic(
+  businessKey: string,
+  page: StaticPage,
+  lastModified: string,
+): MetadataRoute.Sitemap {
+  const alternates = alternatesFor(businessKey, page.path, ALL_LOCALES);
+  return ALL_LOCALES.map((loc) => ({
+    url: canonicalUrl(businessKey, page.path, loc),
+    lastModified,
+    changeFrequency: page.changeFrequency,
+    priority: page.priority,
+    alternates,
+  }));
 }
+
+/**
+ * コラムを、そのコラムが実際に公開されているロケール（col.locales）のみ展開する
+ * （存在しないロケールのURLを機械生成して404を量産しない）。locales 未設定＝後方互換で全4言語。
+ * lastModified は frontmatter 相当の modifiedDate → date の順で採用（両方欠落時のみビルド時刻）。
+ */
+function expandColumn(
+  businessKey: string,
+  path: string,
+  col: Column,
+  fallbackModified: string,
+): MetadataRoute.Sitemap {
+  const active = col.locales && col.locales.length > 0 ? col.locales : [...ALL_LOCALES];
+  const alternates = alternatesFor(businessKey, path, active);
+  const lastModified = col.modifiedDate ?? col.date ?? fallbackModified;
+  return active.map((loc) => ({
+    url: canonicalUrl(businessKey, path, loc),
+    lastModified,
+    changeFrequency: "yearly" as const,
+    priority: 0.6,
+    alternates,
+  }));
+}
+
+const STATIC_REALESTATE: StaticPage[] = [
+  { path: "", changeFrequency: "weekly", priority: 1.0 },
+  { path: "/souzoku", changeFrequency: "monthly", priority: 0.9 },
+  { path: "/souzoku/nagare", changeFrequency: "monthly", priority: 0.7 },
+  { path: "/toushi", changeFrequency: "monthly", priority: 0.9 },
+  { path: "/toushi/group-home", changeFrequency: "monthly", priority: 0.8 },
+  { path: "/toushi/shataku", changeFrequency: "monthly", priority: 0.7 },
+  { path: "/global", changeFrequency: "monthly", priority: 0.8 },
+  { path: "/access", changeFrequency: "monthly", priority: 0.7 },
+  { path: "/faq", changeFrequency: "monthly", priority: 0.6 },
+  { path: "/services", changeFrequency: "monthly", priority: 0.8 },
+  { path: "/about", changeFrequency: "monthly", priority: 0.7 },
+  { path: "/column", changeFrequency: "weekly", priority: 0.8 },
+  { path: "/contact", changeFrequency: "yearly", priority: 0.5 },
+  { path: "/legal-notice", changeFrequency: "yearly", priority: 0.3 },
+  { path: "/privacy-policy", changeFrequency: "yearly", priority: 0.2 },
+  { path: "/terms", changeFrequency: "yearly", priority: 0.2 },
+];
+
+const STATIC_LEGAL: StaticPage[] = [
+  { path: "", changeFrequency: "weekly", priority: 1.0 },
+  { path: "/services", changeFrequency: "monthly", priority: 0.9 },
+  { path: "/services/shogai-fukushi", changeFrequency: "monthly", priority: 0.9 },
+  { path: "/services/visa", changeFrequency: "monthly", priority: 0.8 },
+  { path: "/services/inheritance", changeFrequency: "monthly", priority: 0.8 },
+  { path: "/services/company", changeFrequency: "monthly", priority: 0.7 },
+  { path: "/services/subsidy", changeFrequency: "monthly", priority: 0.7 },
+  { path: "/ryokin", changeFrequency: "monthly", priority: 0.8 },
+  { path: "/nagare", changeFrequency: "monthly", priority: 0.7 },
+  { path: "/faq", changeFrequency: "monthly", priority: 0.7 },
+  { path: "/about", changeFrequency: "monthly", priority: 0.7 },
+  { path: "/column", changeFrequency: "weekly", priority: 0.8 },
+  { path: "/contact", changeFrequency: "yearly", priority: 0.5 },
+];
 
 async function buildRealestateSitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date().toISOString();
-  const re = BUSINESS_URLS.realestate;
   const columns = await getAllColumnsAllLocales();
-
   return [
-    { url: re, lastModified: now, changeFrequency: "weekly", priority: 1.0, alternates: withLangs(re) },
-    { url: `${re}/souzoku`, lastModified: now, changeFrequency: "monthly", priority: 0.9, alternates: withLangs(re, "/souzoku") },
-    { url: `${re}/souzoku/nagare`, lastModified: now, changeFrequency: "monthly", priority: 0.7, alternates: withLangs(re, "/souzoku/nagare") },
-    { url: `${re}/toushi`, lastModified: now, changeFrequency: "monthly", priority: 0.9, alternates: withLangs(re, "/toushi") },
-    { url: `${re}/toushi/group-home`, lastModified: now, changeFrequency: "monthly", priority: 0.8, alternates: withLangs(re, "/toushi/group-home") },
-    { url: `${re}/toushi/shataku`, lastModified: now, changeFrequency: "monthly", priority: 0.7, alternates: withLangs(re, "/toushi/shataku") },
-    { url: `${re}/global`, lastModified: now, changeFrequency: "monthly", priority: 0.8, alternates: withLangs(re, "/global") },
-    { url: `${re}/access`, lastModified: now, changeFrequency: "monthly", priority: 0.7, alternates: withLangs(re, "/access") },
-    { url: `${re}/faq`, lastModified: now, changeFrequency: "monthly", priority: 0.6, alternates: withLangs(re, "/faq") },
-    { url: `${re}/services`, lastModified: now, changeFrequency: "monthly", priority: 0.8, alternates: withLangs(re, "/services") },
-    { url: `${re}/about`, lastModified: now, changeFrequency: "monthly", priority: 0.7, alternates: withLangs(re, "/about") },
-    { url: `${re}/column`, lastModified: now, changeFrequency: "weekly", priority: 0.8, alternates: withLangs(re, "/column") },
-    ...columns.map((col) => {
-      const { url, alternates } = columnUrlAndAlternates(re, `/column/${col.slug}`, col.locales);
-      return {
-        url,
-        lastModified: col.modifiedDate ?? col.date,
-        changeFrequency: "yearly" as const,
-        priority: 0.6,
-        alternates,
-      };
-    }),
-    { url: `${re}/contact`, lastModified: now, changeFrequency: "yearly", priority: 0.5, alternates: withLangs(re, "/contact") },
-    { url: `${re}/legal-notice`, lastModified: now, changeFrequency: "yearly", priority: 0.3, alternates: withLangs(re, "/legal-notice") },
-    { url: `${re}/privacy-policy`, lastModified: now, changeFrequency: "yearly", priority: 0.2, alternates: withLangs(re, "/privacy-policy") },
-    { url: `${re}/terms`, lastModified: now, changeFrequency: "yearly", priority: 0.2, alternates: withLangs(re, "/terms") },
+    ...STATIC_REALESTATE.flatMap((page) => expandStatic("realestate", page, now)),
+    ...columns.flatMap((col) =>
+      expandColumn("realestate", `/column/${col.slug}`, col, now),
+    ),
   ];
 }
 
 async function buildLegalSitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date().toISOString();
-  const le = BUSINESS_URLS.legal;
   const legalColumns = await getAllLegalColumnsAllLocales();
-
   return [
-    { url: le, lastModified: now, changeFrequency: "weekly", priority: 1.0, alternates: withLangs(le) },
-    { url: `${le}/services`, lastModified: now, changeFrequency: "monthly", priority: 0.9, alternates: withLangs(le, "/services") },
-    { url: `${le}/services/shogai-fukushi`, lastModified: now, changeFrequency: "monthly", priority: 0.9, alternates: withLangs(le, "/services/shogai-fukushi") },
-    { url: `${le}/services/visa`, lastModified: now, changeFrequency: "monthly", priority: 0.8, alternates: withLangs(le, "/services/visa") },
-    { url: `${le}/services/inheritance`, lastModified: now, changeFrequency: "monthly", priority: 0.8, alternates: withLangs(le, "/services/inheritance") },
-    { url: `${le}/services/company`, lastModified: now, changeFrequency: "monthly", priority: 0.7, alternates: withLangs(le, "/services/company") },
-    { url: `${le}/services/subsidy`, lastModified: now, changeFrequency: "monthly", priority: 0.7, alternates: withLangs(le, "/services/subsidy") },
-    { url: `${le}/ryokin`, lastModified: now, changeFrequency: "monthly", priority: 0.8, alternates: withLangs(le, "/ryokin") },
-    { url: `${le}/nagare`, lastModified: now, changeFrequency: "monthly", priority: 0.7, alternates: withLangs(le, "/nagare") },
-    { url: `${le}/faq`, lastModified: now, changeFrequency: "monthly", priority: 0.7, alternates: withLangs(le, "/faq") },
-    { url: `${le}/about`, lastModified: now, changeFrequency: "monthly", priority: 0.7, alternates: withLangs(le, "/about") },
-    { url: `${le}/column`, lastModified: now, changeFrequency: "weekly", priority: 0.8, alternates: withLangs(le, "/column") },
-    ...legalColumns.map((col) => {
-      const { url, alternates } = columnUrlAndAlternates(le, `/column/${col.slug}`, col.locales);
-      return {
-        url,
-        lastModified: col.modifiedDate ?? col.date,
-        changeFrequency: "yearly" as const,
-        priority: 0.6,
-        alternates,
-      };
-    }),
-    { url: `${le}/contact`, lastModified: now, changeFrequency: "yearly", priority: 0.5, alternates: withLangs(le, "/contact") },
+    ...STATIC_LEGAL.flatMap((page) => expandStatic("legal", page, now)),
+    ...legalColumns.flatMap((col) =>
+      expandColumn("legal", `/column/${col.slug}`, col, now),
+    ),
   ];
 }
 

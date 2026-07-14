@@ -24,7 +24,19 @@ export function OrganizationJsonLd({ businessKey }: { businessKey: string }) {
         "@type": biz.schemaType,
         "@id": `${biz.url}/#organization`,
         name: biz.legalName,
-        alternateName: biz.name,
+        legalName: biz.legalName,
+        // 同名他社との識別：別名（配列）・法人番号（taxID）・公的識別子（identifier）
+        alternateName: biz.alternateNames ?? biz.name,
+        ...(biz.taxID ? { taxID: biz.taxID } : {}),
+        ...(biz.identifiers
+          ? {
+              identifier: biz.identifiers.map((i) => ({
+                "@type": "PropertyValue",
+                propertyID: i.propertyID,
+                value: i.value,
+              })),
+            }
+          : {}),
         url: biz.url,
         // アセットはルート配信のみ（実測2026-07-11：/legal/yotsuba/*.png=404、/yotsuba/*.png=200）
         // ＝結合ベースはbiz.urlでなくSITE_URL（realestateは出力同一）。logo=正方形ロゴ／image=OG優先で分離（P2仕様）

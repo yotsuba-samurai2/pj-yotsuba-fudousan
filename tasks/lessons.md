@@ -15,3 +15,10 @@
 - **`"use client"` でもSSRはされる＝データを props で渡せば初期HTMLにリンクが載る**: 一覧が孤児化していた真因は「client描画」ではなく「clientでデータ取得」。データ層（Firebase client SDK + React `cache()`）は isomorphic で server 実行可能なので、取得を server の page.tsx に移し props で渡すだけで直る。同型の詳細ページ（既に server fetch）が手本。
 - **関連リンク節は1コンポーネントを全ページに強制しない**: full幅セクション（一覧/詳細/souzoku）と prose内カード（RealestateServicePage=toushi/global）とトップのカードで意匠が違う。各ページの既存デザイントークンに合わせて出し分ける方が「新しいスタイル体系を持ち込まない」原則に合う。
 - **該当データが無いテーマは偽リンクを作らず「不足」を報告する**: souzoku（相続）に張れる ja コラムが0本＝相続コラム未執筆。`filterColumnsByTheme` は0件なら節ごと非表示にし、不足は tasks/todo.md に記録して執筆計画へ回す。
+
+## 2026-07-14 sitemapロケール展開＋エンティティ識別子
+
+- **検証前に古いローカルサーバを必ず殺す**: `PORT=3100 npm start` を起動しても既存プロセスがポート占有中だと新プロセスはbindできず、curlは**古いコード**を返す（sitemap修正が「27本のまま」と誤判定した）。検証前に `lsof -ti tcp:3100 | xargs kill -9` でポートを空けてから起動する。「up after 1s」は再ビルド後には速すぎ＝占有の兆候。
+- **Next.jsのsitemapは配列1要素=<url>1件・<loc>=urlのみ**: `alternates.languages` は `xhtml:link hreflang` にしかならず `<loc>` にはならない。ロケール別URLを `<loc>` として出すには**ロケールごとに配列要素を分ける**。hreflang生成は既存 `canonicalUrl()` を単一情報源に再利用する（sitemap専用の別ロジックを作らない）。
+- **法人番号の取り違えは致命的**: 四葉不動産は同名他社が複数（特に文京区本駒込の別法人 1010001172596）。当社は **7010001259396**（小日向）のみ。実装前後に `grep -rn '1010001172596' src public` で誤番号がコードに入っていないことを機械確認する。JSON-LDには当社番号のみ、llms.txtの「区別」節でのみ他社番号を他社として明記。
+- **既存 sameAs は順序含め不変を厳守**: エンティティ強化で識別子を足すときも `REALESTATE_SAME_AS`/`LEGAL_SAME_AS`（Wikidata・cid・宅建協会・KG MID）は触らない。追加は Person 側 sameAs や新規 identifier/alternateName で行い、検証で既存値の欠落0を確認する。
