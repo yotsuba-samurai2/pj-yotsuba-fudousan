@@ -1,10 +1,9 @@
 import { NextRequest } from "next/server";
-
-const FIREBASE_PROJECT_ID = "pj-yotsuba-corporate";
+import { createClient } from "@supabase/supabase-js";
 
 /**
- * Verify Firebase ID token using Google's public token info endpoint.
- * No service account needed.
+ * Supabase Auth のアクセストークンを service role クライアントで検証する。
+ * シグネチャは移行前の実装から不変（既存APIルートは無改修で動く）。
  */
 export async function verifyAdminRequest(req: NextRequest) {
   const authHeader = req.headers.get("Authorization");
@@ -14,28 +13,24 @@ export async function verifyAdminRequest(req: NextRequest) {
 
   const token = authHeader.slice(7);
 
-  const res = await fetch(
-    `https://www.googleapis.com/identitytoolkit/v3/relyingparty/getAccountInfo?key=AIzaSyAQ2_xa2Nw2vB1GivwWxWaKijpDaWpHMLw`,
-    {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ idToken: token }),
-    },
-  );
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  if (!url || !serviceRoleKey) {
+    throw new AuthError("認証サーバーの設定が不足しています", 500);
+  }
 
-  if (!res.ok) {
+  const supabase = createClient(url, serviceRoleKey, {
+    auth: { autoRefreshToken: false, persistSession: false },
+  });
+
+  const { data, error } = await supabase.auth.getUser(token);
+  if (error || !data.user) {
     throw new AuthError("無効な認証トークンです", 401);
   }
 
-  const data = await res.json();
-  const user = data.users?.[0];
-  if (!user) {
-    throw new AuthError("ユーザーが見つかりません", 401);
-  }
-
   return {
-    uid: user.localId as string,
-    email: user.email as string | undefined,
+    uid: data.user.id,
+    email: data.user.email ?? undefined,
   };
 }
 

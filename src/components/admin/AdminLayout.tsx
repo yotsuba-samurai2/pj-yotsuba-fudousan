@@ -5,8 +5,7 @@ import { SR_OFFICE_NAME } from "@/lib/shared/sr-name";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { signOut } from "firebase/auth";
-import { auth } from "@/lib/firebase";
+import { getSupabaseClient } from "@/lib/supabase/client";
 import AuthGuard from "./AuthGuard";
 import {
   LayoutDashboard,
@@ -42,7 +41,7 @@ export default function AdminLayout({
   const pathname = usePathname();
 
   const handleSignOut = async () => {
-    await signOut(auth);
+    await getSupabaseClient().auth.signOut();
   };
 
   const isActive = (href: string, exact?: boolean) => {

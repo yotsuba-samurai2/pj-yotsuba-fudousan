@@ -2,26 +2,40 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { onAuthStateChanged, type User } from "firebase/auth";
-import { auth } from "@/lib/firebase";
+import type { Session } from "@supabase/supabase-js";
+import { getSupabaseClient } from "@/lib/supabase/client";
 
 export default function AuthGuard({ children }: { children: React.ReactNode }) {
-  const [user, setUser] = useState<User | null>(null);
+  const [session, setSession] = useState<Session | null>(null);
   const [loading, setLoading] = useState(true);
   const router = useRouter();
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (u) => {
-      if (u) {
-        setUser(u);
+    const supabase = getSupabaseClient();
+    let active = true;
+
+    const apply = (s: Session | null) => {
+      if (!active) return;
+      if (s) {
+        setSession(s);
         setLoading(false);
       } else {
-        setUser(null);
+        setSession(null);
         setLoading(false);
         router.replace("/admin/login");
       }
-    });
-    return unsubscribe;
+    };
+
+    supabase.auth.getSession().then(({ data }) => apply(data.session));
+
+    const {
+      data: { subscription },
+    } = supabase.auth.onAuthStateChange((_event, s) => apply(s));
+
+    return () => {
+      active = false;
+      subscription.unsubscribe();
+    };
   }, [router]);
 
   if (loading) {
@@ -32,7 +46,7 @@ export default function AuthGuard({ children }: { children: React.ReactNode }) {
     );
   }
 
-  if (!user) return null;
+  if (!session) return null;
 
   return <>{children}</>;
 }
