@@ -4,7 +4,7 @@ import { useState } from "react";
 import {
   getTranslations,
   saveTranslations,
-} from "@/lib/firestore/translations";
+} from "@/lib/admin-api";
 import { JOSEI_PATCHES } from "@/lib/data/translation-patches-josei";
 import type { LangCode } from "@/config/languages";
 

@@ -4,7 +4,7 @@ import { useMemo, useState } from "react";
 import {
   getTranslations,
   saveTranslations,
-} from "@/lib/firestore/translations";
+} from "@/lib/admin-api";
 import {
   PATCH_GROUPS,
   type PatchGroupId,

@@ -18,12 +18,7 @@ import {
   Pencil,
   Image as ImageIcon,
 } from "lucide-react";
-import { storage } from "@/lib/firebase";
-import {
-  ref as storageRef,
-  uploadBytes,
-  getDownloadURL,
-} from "firebase/storage";
+import { uploadImage } from "@/lib/admin-api";
 
 type Props = {
   value: string;
@@ -203,27 +198,8 @@ export default function MarkdownEditor({
           throw new Error("ファイルサイズは10MB以下にしてください");
         }
 
-        const extMap: Record<string, string> = {
-          "image/jpeg": "jpg",
-          "image/png": "png",
-          "image/webp": "webp",
-          "image/gif": "gif",
-          "image/svg+xml": "svg",
-        };
-        const ext = extMap[file.type];
-        const yyyymm = new Date().toISOString().slice(0, 7).replace("-", "");
-        const rand =
-          typeof crypto !== "undefined" && "randomUUID" in crypto
-            ? crypto.randomUUID()
-            : `${Date.now()}-${Math.random().toString(36).slice(2)}`;
-        const path = `columns/${yyyymm}/${rand}.${ext}`;
-
-        const objectRef = storageRef(storage, path);
-        await uploadBytes(objectRef, file, {
-          contentType: file.type,
-          cacheControl: "public, max-age=31536000, immutable",
-        });
-        const url = await getDownloadURL(objectRef);
+        // /api/admin/upload 経由で Supabase Storage へ保存（パス生成・cache制御はサーバー側）
+        const url = await uploadImage(file);
 
         const alt = file.name.replace(/\.[^.]+$/, "");
         insertAtCursor(`![${alt}](${url})\n`);

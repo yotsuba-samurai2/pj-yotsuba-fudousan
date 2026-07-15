@@ -8,7 +8,7 @@ import {
   updateColumn,
   type FirestoreColumn,
   type ColumnStatus,
-} from "@/lib/firestore/columns";
+} from "@/lib/admin-api";
 
 const businessLabels: Record<string, string> = {
   realestate: "不動産",

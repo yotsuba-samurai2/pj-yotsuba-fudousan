@@ -2,12 +2,12 @@
 
 import { useState } from "react";
 import { SR_OFFICE_NAME } from "@/lib/shared/sr-name";
-import type {
-  FirestoreColumn,
-  ColumnTranslation,
-  ColumnStatus,
-} from "@/lib/firestore/columns";
-import { auth } from "@/lib/firebase";
+import {
+  getAccessToken,
+  type FirestoreColumn,
+  type ColumnTranslation,
+  type ColumnStatus,
+} from "@/lib/admin-api";
 import { languages, type LangCode } from "@/config/languages";
 import MarkdownEditor from "./MarkdownEditor";
 import ColumnBody from "@/components/column/ColumnBody";
@@ -229,7 +229,7 @@ export default function ColumnForm({
     setSeoError("");
 
     try {
-      const token = await auth.currentUser?.getIdToken();
+      const token = await getAccessToken();
       const res = await fetch("/api/admin/generate-seo", {
         method: "POST",
         headers: {
@@ -275,7 +275,7 @@ export default function ColumnForm({
         .map((t) => t.trim())
         .filter(Boolean);
 
-      const token = await auth.currentUser?.getIdToken();
+      const token = await getAccessToken();
       const res = await fetch("/api/admin/translate", {
         method: "POST",
         headers: {

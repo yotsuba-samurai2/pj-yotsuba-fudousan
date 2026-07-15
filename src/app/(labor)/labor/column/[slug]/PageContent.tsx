@@ -4,7 +4,7 @@ import { LocaleLink as Link } from "@/components/ui/LocaleLink";
 import Image from "next/image";
 import { useTranslation } from "@/hooks/useTranslation";
 import ColumnBody from "@/components/column/ColumnBody";
-import type { Column } from "@/lib/columns";
+import type { Column } from "@/lib/column-shared";
 
 type Props = {
   col: Column;

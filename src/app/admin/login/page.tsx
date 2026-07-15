@@ -3,8 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "@/lib/firebase";
+import { getSupabaseClient } from "@/lib/supabase/client";
 import { Lock } from "lucide-react";
 
 export default function AdminLoginPage() {
@@ -19,7 +18,11 @@ export default function AdminLoginPage() {
     setError("");
     setLoading(true);
     try {
-      await signInWithEmailAndPassword(auth, email, password);
+      const { error: signInError } = await getSupabaseClient().auth.signInWithPassword({
+        email,
+        password,
+      });
+      if (signInError) throw signInError;
       router.replace("/admin");
     } catch {
       setError("メールアドレスまたはパスワードが正しくありません");

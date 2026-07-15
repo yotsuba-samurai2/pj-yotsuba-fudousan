@@ -4,12 +4,11 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import ColumnForm from "@/components/admin/ColumnForm";
-import { createColumn } from "@/lib/firestore/columns";
-import { auth } from "@/lib/firebase";
+import { createColumn, getAccessToken } from "@/lib/admin-api";
 
 async function revalidateColumn(business: string, slug: string) {
   try {
-    const token = await auth.currentUser?.getIdToken();
+    const token = await getAccessToken();
     const businessPath = business === "realestate" ? "" : `/${business}`;
     await fetch("/api/admin/revalidate", {
       method: "POST",

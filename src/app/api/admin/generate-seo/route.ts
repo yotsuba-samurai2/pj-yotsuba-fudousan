@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import Anthropic from "@anthropic-ai/sdk";
 import { verifyAdminRequest, AuthError } from "@/lib/api-auth";
 import { rateLimit } from "@/lib/rate-limit";
-import { getAiModel } from "@/lib/firestore/aiSettings";
+import { getAiModel } from "@/lib/db/aiSettings";
 
 const anthropic = new Anthropic({
   apiKey: process.env.ANTHROPIC_API_KEY!,

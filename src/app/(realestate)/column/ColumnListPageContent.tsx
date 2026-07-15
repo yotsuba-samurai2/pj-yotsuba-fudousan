@@ -4,7 +4,7 @@ import { LocaleLink as Link } from "@/components/ui/LocaleLink";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { useTranslation } from "@/hooks/useTranslation";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
-import type { Column } from "@/lib/columns";
+import type { Column } from "@/lib/column-shared";
 
 type Props = {
   /** server（page.tsx）で取得・ローカライズ済みのコラム配列。SSR HTML にリンクを出すため props で受け取る */

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { upsertColumnBySlug } from "@/lib/firestore/columns";
+import { upsertColumnBySlug } from "@/lib/admin-api";
 import { TAIWAN_COLUMNS_SEED } from "@/lib/data/taiwan-columns-seed";
 
 type ItemResult = {
