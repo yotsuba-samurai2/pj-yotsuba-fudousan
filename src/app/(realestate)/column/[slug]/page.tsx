@@ -43,6 +43,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     modifiedTime: col.modifiedDate ?? col.date,
     section: col.category,
     locale,
+    // hreflang を公開ロケールのみに限定（未公開ロケールの404 URLをGoogleに広告しない）。
+    // locales 未設定＝全ロケール許可（後方互換・isLocaleAllowed と同じ判定）。
+    availableLocales: base.locales,
   });
 }
 
