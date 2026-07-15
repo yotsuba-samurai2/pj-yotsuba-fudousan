@@ -1,0 +1,67 @@
+// 設計_Supabaseスキーマ_luck428移行_v1.md §2 を正とする
+// （形はFirestoreの現行スキーマを忠実に写す＝正規化しない）
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+enum Business {
+  realestate
+  legal
+  labor
+}
+
+enum ColumnStatus {
+  draft
+  published
+  deleted
+}
+
+model Column {
+  id           String       @id @default(uuid())
+  business     Business
+  slug         String
+  title        String
+  date         String // ISO文字列のまま維持（設計書§1：挙動を変えない）
+  category     String
+  excerpt      String       @db.Text
+  content      String       @db.Text
+  status       ColumnStatus @default(draft)
+  modifiedDate String?      @map("modified_date")
+  ogImage      String?      @map("og_image")
+  author       Json? // { name, title }
+  keywords     String[]     @default([])
+  faq          Json? // [{ question, answer }]
+  tags         String[]     @default([])
+  locales      String[]     @default([]) // 空配列＝全言語公開（設計書§2.4）
+  translations Json? // { en?, "zh-tw"?, zh? } 各 ColumnTranslation
+  createdAt    DateTime     @default(now()) @map("created_at")
+  updatedAt    DateTime     @updatedAt @map("updated_at")
+
+  @@unique([business, slug]) // upsertColumnBySlug の冪等性をDB制約で保証
+  @@index([business, status, date(sort: Desc)]) // 一覧・sitemap用
+  @@map("columns")
+}
+
+model Translation {
+  locale    String   @id // "ja" | "en" | "zh-tw" | "zh"
+  data      Json // ロケール全体を丸ごと（全体上書きと同義に保つ）
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("translations")
+}
+
+model AiSetting {
+  id        String   @id @default("ai")
+  model     String
+  updatedAt DateTime @updatedAt @map("updated_at")
+  updatedBy String?  @map("updated_by")
+
+  @@map("ai_settings")
+}
