@@ -3,6 +3,7 @@ import { groupBusinesses } from "@/config/group";
 import { SR_OFFICE_NAME } from "@/lib/shared/sr-name";
 import { GBP_URL } from "@/lib/shared/office-public";
 import { DEFAULT_LOCALE, isValidLocale } from "@/lib/locale";
+import type { LangCode } from "@/config/languages";
 
 // ── Constants ──
 
@@ -373,6 +374,40 @@ const OG_LOCALES: Record<string, string> = {
   zh: "zh_CN",
 };
 
+/** hreflang の並び順（x-default はこの順で最初に「存在する」ロケールを指す＝全バリアントで同一値） */
+const HREFLANG_ORDER: readonly LangCode[] = ["ja", "en", "zh-tw", "zh"];
+/** LangCode → hreflang 属性値 */
+const HREFLANG_ATTR: Record<LangCode, string> = {
+  ja: "ja",
+  en: "en",
+  "zh-tw": "zh-Hant",
+  zh: "zh-Hans",
+};
+
+/**
+ * alternates.languages（hreflang）を生成する。
+ * `availableLocales` 未指定＝全ロケール（従来挙動＝全ページで不変）。
+ * コラム等、一部ロケールのみ公開のページは公開ロケール（`Column.locales`）だけを渡すことで、
+ * 存在しないロケールURLを hreflang に出さない＝Googleに404を広告しない（GSC「見つかりませんでした」対策）。
+ */
+function buildHreflang(
+  businessKey: string,
+  path: string,
+  availableLocales?: LangCode[],
+): Record<string, string> {
+  const locales = availableLocales?.length
+    ? HREFLANG_ORDER.filter((l) => availableLocales.includes(l))
+    : HREFLANG_ORDER;
+  const languages: Record<string, string> = {};
+  for (const l of locales) {
+    languages[HREFLANG_ATTR[l]] = canonicalUrl(businessKey, path, l);
+  }
+  // x-default＝優先順位で最初に存在するロケール（ja があれば ja、無ければ公開先頭）。
+  const xDefault = locales[0] ?? DEFAULT_LOCALE;
+  languages["x-default"] = canonicalUrl(businessKey, path, xDefault);
+  return languages;
+}
+
 /**
  * 全ページ共通のMetadata生成
  */
@@ -390,6 +425,7 @@ export function buildPageMetadata({
   section,
   locale = "ja",
   absoluteTitle = false,
+  availableLocales,
 }: {
   businessKey: string;
   title: string;
@@ -404,6 +440,8 @@ export function buildPageMetadata({
   section?: string;
   locale?: string;
   absoluteTitle?: boolean;
+  /** このページが実在するロケール（hreflang をこのロケールに限定）。未指定＝全ロケール（従来挙動）。 */
+  availableLocales?: LangCode[];
 }): Metadata {
   // 【法27条・社労士 完全非表示の要】開業（SR_LAUNCHED=true）までは labor のメタデータを一切出力しない。
   // (labor)/layout.tsx の notFound() は「本文」しか止めない：Next.jsはページ側 generateMetadata を
@@ -457,13 +495,7 @@ export function buildPageMetadata({
     ...(keywords?.length ? { keywords } : {}),
     alternates: {
       canonical: url,
-      languages: {
-        ja: canonicalUrl(businessKey, path, "ja"),
-        en: canonicalUrl(businessKey, path, "en"),
-        "zh-Hant": canonicalUrl(businessKey, path, "zh-tw"),
-        "zh-Hans": canonicalUrl(businessKey, path, "zh"),
-        "x-default": canonicalUrl(businessKey, path, "ja"),
-      },
+      languages: buildHreflang(businessKey, path, availableLocales),
     },
     openGraph: { ...ogBase, ...articleFields },
     twitter: {
