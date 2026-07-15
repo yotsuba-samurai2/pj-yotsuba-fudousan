@@ -5,13 +5,16 @@ import type { LangCode } from "@/config/languages";
 import {
   isLocaleAllowed,
   getLocalizedColumn,
+  pickRelatedColumns,
+  filterColumnsByTheme,
   type BusinessKey,
   type Column,
+  type ColumnTheme,
   type ColumnTranslationLocalized,
 } from "@/lib/column-shared";
 
-export { isLocaleAllowed, getLocalizedColumn };
-export type { BusinessKey, Column, ColumnTranslationLocalized };
+export { isLocaleAllowed, getLocalizedColumn, pickRelatedColumns, filterColumnsByTheme };
+export type { BusinessKey, Column, ColumnTheme, ColumnTranslationLocalized };
 
 function toColumn(row: ColumnRow): Column {
   return {

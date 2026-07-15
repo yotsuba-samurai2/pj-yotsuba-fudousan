@@ -68,6 +68,20 @@ function getTenantPrefix(host: string): string | null {
   return null;
 }
 
+// ── Gone (410) ──
+
+// 恒久的に廃止した旧URL（旧WordPress由来）。404のままより 410 Gone の方がGSCからの除外が速い。
+// 完全一致のみ（末尾スラッシュは正規化して判定）＝ロケール/テナント判定には一切干渉しない。
+const GONE_PATHS = new Set(["/en/comments/feed", "/test1"]);
+
+function isGone(pathname: string): boolean {
+  const p =
+    pathname !== "/" && pathname.endsWith("/")
+      ? pathname.slice(0, -1)
+      : pathname;
+  return GONE_PATHS.has(p);
+}
+
 // ── Skip patterns ──
 
 function shouldSkip(pathname: string): boolean {
@@ -94,6 +108,11 @@ function isSharedPath(pathname: string): boolean {
 
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
+
+  // 恒久廃止URL（旧WordPress）は 410 Gone（ロケール/テナント判定より前に確定させる）
+  if (isGone(pathname)) {
+    return new NextResponse("Gone", { status: 410 });
+  }
 
   // スキップ（静的ファイル、API、管理画面）
   if (shouldSkip(pathname)) return NextResponse.next();

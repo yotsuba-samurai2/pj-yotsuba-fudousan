@@ -24,7 +24,19 @@ export function OrganizationJsonLd({ businessKey }: { businessKey: string }) {
         "@type": biz.schemaType,
         "@id": `${biz.url}/#organization`,
         name: biz.legalName,
-        alternateName: biz.name,
+        legalName: biz.legalName,
+        // 同名他社との識別：別名（配列）・法人番号（taxID）・公的識別子（identifier）
+        alternateName: biz.alternateNames ?? biz.name,
+        ...(biz.taxID ? { taxID: biz.taxID } : {}),
+        ...(biz.identifiers
+          ? {
+              identifier: biz.identifiers.map((i) => ({
+                "@type": "PropertyValue",
+                propertyID: i.propertyID,
+                value: i.value,
+              })),
+            }
+          : {}),
         url: biz.url,
         // アセットはルート配信のみ（実測2026-07-11：/legal/yotsuba/*.png=404、/yotsuba/*.png=200）
         // ＝結合ベースはbiz.urlでなくSITE_URL（realestateは出力同一）。logo=正方形ロゴ／image=OG優先で分離（P2仕様）
@@ -84,6 +96,48 @@ export function OrganizationJsonLd({ businessKey }: { businessKey: string }) {
           "@type": "Person",
           "@id": PERSON_ID,
           name: SHARED_ORG_INFO.representative,
+          sameAs: [
+            "https://www.wikidata.org/wiki/Q139738129",
+            "https://orcid.org/0009-0007-0460-3473",
+            "https://www.samurai.co.jp/samurai/reserve/uramatsu-joji",
+          ],
+          knowsAbout: [
+            {
+              "@type": "Thing",
+              name: "相続",
+              sameAs: "https://www.wikidata.org/wiki/Q200303",
+            },
+            {
+              "@type": "Thing",
+              name: "不動産",
+              sameAs: "https://www.wikidata.org/wiki/Q684740",
+            },
+            {
+              "@type": "Thing",
+              name: "障害者福祉",
+              sameAs: "https://www.wikidata.org/wiki/Q11658995",
+            },
+            {
+              "@type": "Thing",
+              name: "児童発達支援",
+              sameAs: "https://www.wikidata.org/wiki/Q120340950",
+            },
+            {
+              "@type": "Thing",
+              name: "放課後等デイサービス",
+              sameAs: "https://www.wikidata.org/wiki/Q11499003",
+            },
+            {
+              "@type": "Thing",
+              name: "人的資源管理",
+              sameAs: "https://www.wikidata.org/wiki/Q1056396",
+            },
+            {
+              "@type": "Thing",
+              name: "人工知能",
+              sameAs: "https://www.wikidata.org/wiki/Q11660",
+            },
+          ],
         },
         areaServed: {
           "@type": "GeoCircle",

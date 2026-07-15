@@ -16,7 +16,15 @@ import { getRequestLocale } from "@/lib/getRequestLocale";
 import { addLocalePrefix } from "@/lib/locale";
 import { fetchTranslations } from "@/lib/getTranslationData";
 import { getNestedValue } from "@/lib/seo";
+import { getLatestColumns, getLocalizedColumn } from "@/lib/columns";
 import type { LangCode } from "@/config/languages";
+
+const HOME_COLUMNS_HEADING: Record<LangCode, { title: string; all: string }> = {
+  ja: { title: "お役立ちコラム", all: "コラム一覧へ" },
+  en: { title: "Helpful Columns", all: "View all columns" },
+  "zh-tw": { title: "實用專欄", all: "查看所有專欄" },
+  zh: { title: "实用专栏", all: "查看所有专栏" },
+};
 
 type PillarCopy = { tag: string; title: string; body: string; anchor: string };
 type QaCopy = { q: string; a: string; anchor: string };
@@ -371,6 +379,12 @@ export default async function HomePageContent() {
   const locale = await getRequestLocale();
   const c = COPY[locale] ?? COPY.ja;
 
+  // トップの内部リンク＝最新コラム3本（現在ロケール）。0件なら節ごと非表示。
+  const latestColumns = (await getLatestColumns(3, locale)).map((col) =>
+    getLocalizedColumn(col, locale),
+  );
+  const columnsCopy = HOME_COLUMNS_HEADING[locale] ?? HOME_COLUMNS_HEADING.ja;
+
   // 既存タグライン（Firestore翻訳・各locale値あり）＝サブコピーへ移設。取得不能時は非表示（退行なし）。
   let tagline = "";
   try {
@@ -505,6 +519,41 @@ export default async function HomePageContent() {
             </Link>
           ))}
         </nav>
+
+        {/* 最新コラム（内部リンク・SSR） */}
+        {latestColumns.length > 0 && (
+          <section
+            aria-label="columns"
+            className="mt-10 rounded-2xl border border-border bg-surface p-5 sm:p-6"
+          >
+            <h2 className="font-serif text-xl font-semibold text-ink">
+              {columnsCopy.title}
+            </h2>
+            <ul className="mt-4 space-y-3">
+              {latestColumns.map((col) => (
+                <li key={col.slug}>
+                  <Link
+                    href={addLocalePrefix(`/column/${col.slug}`, locale)}
+                    className="group block"
+                  >
+                    <span className="text-xs text-text-muted">
+                      {col.date.replace(/-/g, ".")}
+                    </span>
+                    <p className="mt-0.5 text-sm font-medium text-ink group-hover:text-primary">
+                      {col.title}
+                    </p>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <Link
+              href={addLocalePrefix("/column", locale)}
+              className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary hover:text-primary-dark"
+            >
+              {columnsCopy.all}
+            </Link>
+          </section>
+        )}
 
         {/* CTA帯（トップのみロケール対応のインライン版＝共通CtaBandはja固定のため使わない） */}
         <section aria-label="contact" className="my-10 rounded-2xl bg-primary-tint px-6 py-8 text-center">

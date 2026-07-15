@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo";
 import { getRequestLocale } from "@/lib/getRequestLocale";
+import { getColumns, getLocalizedColumn } from "@/lib/columns";
+import { ColumnCollectionJsonLd } from "@/components/seo/ColumnCollectionJsonLd";
 import ColumnListPageContent from "./ColumnListPageContent";
 
 export const dynamic = "force-dynamic";
@@ -47,6 +49,24 @@ export async function generateMetadata(): Promise<Metadata> {
   });
 }
 
-export default function ColumnListPage() {
-  return <ColumnListPageContent />;
+export default async function ColumnListPage() {
+  const locale = await getRequestLocale();
+  const cols = await getColumns(locale);
+  const columns = cols.map((c) => getLocalizedColumn(c, locale));
+  const m = META_BY_LOCALE[locale] ?? META_BY_LOCALE.ja;
+
+  return (
+    <>
+      {columns.length > 0 && (
+        <ColumnCollectionJsonLd
+          businessKey="realestate"
+          columns={columns}
+          name={m.title}
+          description={m.description}
+          locale={locale}
+        />
+      )}
+      <ColumnListPageContent columns={columns} />
+    </>
+  );
 }
