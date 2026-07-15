@@ -22,3 +22,9 @@
 - **Next.jsのsitemapは配列1要素=<url>1件・<loc>=urlのみ**: `alternates.languages` は `xhtml:link hreflang` にしかならず `<loc>` にはならない。ロケール別URLを `<loc>` として出すには**ロケールごとに配列要素を分ける**。hreflang生成は既存 `canonicalUrl()` を単一情報源に再利用する（sitemap専用の別ロジックを作らない）。
 - **法人番号の取り違えは致命的**: 四葉不動産は同名他社が複数（特に文京区本駒込の別法人 1010001172596）。当社は **7010001259396**（小日向）のみ。実装前後に `grep -rn '1010001172596' src public` で誤番号がコードに入っていないことを機械確認する。JSON-LDには当社番号のみ、llms.txtの「区別」節でのみ他社番号を他社として明記。
 - **既存 sameAs は順序含め不変を厳守**: エンティティ強化で識別子を足すときも `REALESTATE_SAME_AS`/`LEGAL_SAME_AS`（Wikidata・cid・宅建協会・KG MID）は触らない。追加は Person 側 sameAs や新規 identifier/alternateName で行い、検証で既存値の欠落0を確認する。
+
+## 2026-07-15 GSCインデックス改善①（トップのメタ・ロケール別化）
+
+- **`buildPageMetadata` に固定文言を渡すとロケール横断で複製メタになる**: トップ `page.tsx` だけが title/description を日本語ハードコードしており、/en・/zh・/zh-tw が「日本語トップと同一の薄い複製」＝GSC「クロール済み・未登録」化していた（子ページは `META: Record<LangCode,…>`＋`getRequestLocale` で正しく出し分け済み）。**新規ページ／トップは必ず子ページと同じ META 方式に乗せる**。`buildPageMetadata` は locale から og:locale/twitter/canonical/hreflang を自動生成するので、直すのは title/description だけでよい（og:locale は元々 `ja_JP` 固定ではない＝`OG_LOCALES[locale]`）。
+- **多言語 title は H1（本文COPY）を単一情報源に再利用する**: 社名保護（全ロケール先頭に「四葉不動産」）と新規ハードコード増加防止を両立するため、メタ title は `HomePageContent` の各ロケール H1 と同一表記にする。en/zh-tw/zh の description は本文intro準拠の監修前ドラフトとしてコメントで明示（フェーズI監修対象）。
+- **メタ検証はユニークポートのdevで実測する**: `next dev -p 3111` で `/`・`/en`・`/zh`・`/zh-tw` の `<title>`・`og:locale`・`og:title` が各言語で出し分けられ、canonical・hreflang（ja/en/zh-Hant/zh-Hans/x-default）が不変であることを curl で確認してから完了扱いにする。ページの `generateMetadata` は Firestore を叩かない（inline META）ため、秘密情報なしでも title は正しく出る。
