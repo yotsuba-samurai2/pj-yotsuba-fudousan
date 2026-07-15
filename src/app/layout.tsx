@@ -8,6 +8,7 @@ import { getRequestLocale } from "@/lib/getRequestLocale";
 import type { LangCode } from "@/config/languages";
 import ScatteredIcons from "@/components/ui/ScatteredIcons";
 import { fetchAllTranslations } from "@/lib/getTranslationData";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 const zenKaku = Zen_Kaku_Gothic_New({
   variable: "--font-zen-kaku-gothic-new",
@@ -98,6 +99,7 @@ export default async function RootLayout({
   return (
     <html lang={locale} className={`${zenKaku.variable} ${notoSerifJP.variable} ${notoSansJP.variable}`}>
       <body className="relative bg-surface text-text antialiased">
+        <GoogleAnalytics />
         <ScatteredIcons />
         <LanguageProvider initialLocale={locale}>
           <TranslationProvider initialData={allTranslations}>
