@@ -4,7 +4,8 @@ import { useEffect, useState } from "react";
 import { LocaleLink as Link } from "@/components/ui/LocaleLink";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { useTranslation } from "@/hooks/useTranslation";
-import { getLatestLegalColumns, getLocalizedColumn, type Column } from "@/lib/columns";
+import { getLatestLegalColumns } from "@/lib/columns-actions";
+import { getLocalizedColumn, type Column } from "@/lib/column-shared";
 
 export default function LegalColumnListContent() {
   const { t, locale } = useTranslation();

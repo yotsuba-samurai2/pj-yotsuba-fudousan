@@ -7,7 +7,7 @@ import { SkipToContent } from "@/components/ui/SkipToContent";
 import { getRequestLocale } from "@/lib/getRequestLocale";
 import type { LangCode } from "@/config/languages";
 import ScatteredIcons from "@/components/ui/ScatteredIcons";
-import { fetchAllTranslationsFromFirestore } from "@/lib/getTranslationData";
+import { fetchAllTranslations } from "@/lib/getTranslationData";
 
 const zenKaku = Zen_Kaku_Gothic_New({
   variable: "--font-zen-kaku-gothic-new",
@@ -56,7 +56,7 @@ export default async function RootLayout({
   // Cookieだけに頼ると初回アクセス・クローラー・素のリンク遷移でURLと言語がズレる。
   const locale: LangCode = await getRequestLocale();
 
-  const allTranslations = await fetchAllTranslationsFromFirestore();
+  const allTranslations = await fetchAllTranslations();
 
   // 社労士事務所（事業体）は開業まで非表示。labor配下の翻訳は全ページのRSC
   // ペイロードとしてHTMLに埋め込まれるため、開業フラグが立つまでクライアントに送らない

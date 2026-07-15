@@ -1,96 +1,80 @@
 import { cache } from "react";
-import { db } from "@/lib/firebase";
-import { collection, query, where, orderBy, limit, getDocs } from "firebase/firestore";
+import { prisma } from "@/lib/prisma";
+import type { Business, Column as ColumnRow } from "@prisma/client";
 import type { LangCode } from "@/config/languages";
+import {
+  isLocaleAllowed,
+  getLocalizedColumn,
+  type BusinessKey,
+  type Column,
+  type ColumnTranslationLocalized,
+} from "@/lib/column-shared";
 
-export type BusinessKey = "realestate" | "legal" | "labor";
+export { isLocaleAllowed, getLocalizedColumn };
+export type { BusinessKey, Column, ColumnTranslationLocalized };
 
-export type Column = {
-  id?: string;
-  business: BusinessKey;
-  slug: string;
-  title: string;
-  date: string;
-  category: string;
-  excerpt: string;
-  content: string;
-  status?: string;
-  modifiedDate?: string;
-  ogImage?: string;
-  author?: { name: string; title: string };
-  keywords?: string[];
-  faq?: Array<{ question: string; answer: string }>;
-  tags?: string[];
-  /** このコラムを公開する言語。未設定＝全言語（後方互換のデフォルト） */
-  locales?: LangCode[];
-  translations?: {
-    en?: ColumnTranslationLocalized;
-    "zh-tw"?: ColumnTranslationLocalized;
-    zh?: ColumnTranslationLocalized;
+function toColumn(row: ColumnRow): Column {
+  return {
+    id: row.id,
+    business: row.business as BusinessKey,
+    slug: row.slug,
+    title: row.title,
+    date: row.date,
+    category: row.category,
+    excerpt: row.excerpt,
+    content: row.content,
+    status: row.status,
+    modifiedDate: row.modifiedDate ?? undefined,
+    ogImage: row.ogImage ?? undefined,
+    author: (row.author as Column["author"]) ?? undefined,
+    keywords: row.keywords,
+    faq: (row.faq as Column["faq"]) ?? undefined,
+    tags: row.tags,
+    locales: row.locales as LangCode[],
+    translations: (row.translations as Column["translations"]) ?? undefined,
   };
-};
-
-export type ColumnTranslationLocalized = {
-  title: string;
-  excerpt: string;
-  content: string;
-  category?: string;
-  keywords?: string[];
-  tags?: string[];
-  author?: { name: string; title: string };
-  faq?: Array<{ question: string; answer: string }>;
-};
-
-const COLLECTION = "columns";
-
-function toColumn(id: string, data: Record<string, unknown>): Column {
-  const { createdAt, updatedAt, ...rest } = data;
-  return { id, ...rest } as Column;
 }
 
-// ── Firestore queries (published only) ──
+// ── Prisma queries (published only) ──
 
-/** 現在ロケールの一覧・prev/next用。locales に current locale を含むもののみ（array-contains） */
-const fetchPublished = cache(async (business: BusinessKey, locale: LangCode): Promise<Column[]> => {
-  const q = query(
-    collection(db, COLLECTION),
-    where("business", "==", business),
-    where("status", "==", "published"),
-    where("locales", "array-contains", locale),
-    orderBy("date", "desc"),
-  );
-  const snap = await getDocs(q);
-  return snap.docs.map((d) => toColumn(d.id, d.data()));
-});
+/**
+ * 現在ロケールの一覧・prev/next用。
+ * locales 空配列＝全言語公開（Firestoreの「未設定」と等価）を含める。
+ */
+const fetchPublished = cache(
+  async (business: BusinessKey, locale: LangCode): Promise<Column[]> => {
+    const rows = await prisma.column.findMany({
+      where: {
+        business: business as Business,
+        status: "published",
+        OR: [{ locales: { isEmpty: true } }, { locales: { has: locale } }],
+      },
+      orderBy: { date: "desc" },
+    });
+    return rows.map(toColumn);
+  },
+);
 
 /**
  * 全ロケール横断（localeフィルタ無し）。sitemap.ts と generateStaticParams 専用。
  * 一覧・詳細ページの表示には使わない（使うと出し分けが効かなくなる）。
  */
 const fetchAllPublished = cache(async (business: BusinessKey): Promise<Column[]> => {
-  const q = query(
-    collection(db, COLLECTION),
-    where("business", "==", business),
-    where("status", "==", "published"),
-    orderBy("date", "desc"),
-  );
-  const snap = await getDocs(q);
-  return snap.docs.map((d) => toColumn(d.id, d.data()));
+  const rows = await prisma.column.findMany({
+    where: { business: business as Business, status: "published" },
+    orderBy: { date: "desc" },
+  });
+  return rows.map(toColumn);
 });
 
-const fetchPublishedBySlug = cache(async (business: BusinessKey, slug: string): Promise<Column | undefined> => {
-  const q = query(
-    collection(db, COLLECTION),
-    where("business", "==", business),
-    where("slug", "==", slug),
-    where("status", "==", "published"),
-    limit(1),
-  );
-  const snap = await getDocs(q);
-  if (snap.empty) return undefined;
-  const d = snap.docs[0];
-  return toColumn(d.id, d.data());
-});
+const fetchPublishedBySlug = cache(
+  async (business: BusinessKey, slug: string): Promise<Column | undefined> => {
+    const row = await prisma.column.findFirst({
+      where: { business: business as Business, slug, status: "published" },
+    });
+    return row ? toColumn(row) : undefined;
+  },
+);
 
 // ── Realestate ──
 
@@ -160,33 +144,4 @@ export async function getLaborColumnBySlug(slug: string): Promise<Column | undef
 export async function getAllLaborSlugs(): Promise<string[]> {
   const cols = await fetchAllPublished("labor");
   return cols.map((c) => c.slug);
-}
-
-// ── Locale-aware helper ──
-
-/** locales 未設定＝全言語許可（後方互換）。設定済みなら現在ロケールを含むかで判定 */
-export function isLocaleAllowed(column: Column, locale: LangCode): boolean {
-  return !column.locales || column.locales.includes(locale);
-}
-
-export function getLocalizedColumn(column: Column, locale: LangCode): Column {
-  if (locale === "ja" || !column.translations) return column;
-
-  const trans = column.translations[locale as keyof typeof column.translations];
-  if (!trans) return column;
-
-  return {
-    ...column,
-    title: trans.title || column.title,
-    excerpt: trans.excerpt || column.excerpt,
-    content: trans.content || column.content,
-    category: trans.category || column.category,
-    keywords: trans.keywords?.length ? trans.keywords : column.keywords,
-    tags: trans.tags?.length ? trans.tags : column.tags,
-    faq: trans.faq?.length ? trans.faq : column.faq,
-    author:
-      trans.author && (trans.author.name || trans.author.title)
-        ? trans.author
-        : column.author,
-  };
 }

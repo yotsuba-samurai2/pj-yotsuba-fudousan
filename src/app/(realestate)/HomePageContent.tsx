@@ -14,7 +14,7 @@ import { LinkaWidget } from "@/components/linka/LinkaWidget";
 import { LINE_URL } from "@/lib/shared/office";
 import { getRequestLocale } from "@/lib/getRequestLocale";
 import { addLocalePrefix } from "@/lib/locale";
-import { fetchTranslationsFromFirestore } from "@/lib/getTranslationData";
+import { fetchTranslations } from "@/lib/getTranslationData";
 import { getNestedValue } from "@/lib/seo";
 import type { LangCode } from "@/config/languages";
 
@@ -374,7 +374,7 @@ export default async function HomePageContent() {
   // 既存タグライン（Firestore翻訳・各locale値あり）＝サブコピーへ移設。取得不能時は非表示（退行なし）。
   let tagline = "";
   try {
-    const t = await fetchTranslationsFromFirestore(locale);
+    const t = await fetchTranslations(locale);
     tagline = [
       getNestedValue(t, "realestate.home.heroTitle1"),
       getNestedValue(t, "realestate.home.heroTitle2"),

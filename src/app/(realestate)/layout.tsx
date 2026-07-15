@@ -4,7 +4,7 @@ import { TenantLayoutShell } from "@/components/layout/TenantLayout";
 import { OrganizationJsonLd } from "@/components/seo/OrganizationJsonLd";
 import { WebSiteJsonLd } from "@/components/seo/WebSiteJsonLd";
 import { LOCALE_COOKIE, DEFAULT_LOCALE, isValidLocale } from "@/lib/locale";
-import { fetchTranslationsFromFirestore } from "@/lib/getTranslationData";
+import { fetchTranslations } from "@/lib/getTranslationData";
 import { getNestedValue, BUSINESS_SEO, BUSINESS_URLS } from "@/lib/seo";
 import type { LangCode } from "@/config/languages";
 
@@ -13,7 +13,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const localeCookie = cookieStore.get(LOCALE_COOKIE)?.value;
   const locale: LangCode =
     localeCookie && isValidLocale(localeCookie) ? localeCookie : DEFAULT_LOCALE;
-  const t = await fetchTranslationsFromFirestore(locale);
+  const t = await fetchTranslations(locale);
 
   const title = getNestedValue(t, "realestate.meta.title") || "四葉不動産";
   const template =
