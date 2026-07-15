@@ -28,3 +28,11 @@
 - **`buildPageMetadata` に固定文言を渡すとロケール横断で複製メタになる**: トップ `page.tsx` だけが title/description を日本語ハードコードしており、/en・/zh・/zh-tw が「日本語トップと同一の薄い複製」＝GSC「クロール済み・未登録」化していた（子ページは `META: Record<LangCode,…>`＋`getRequestLocale` で正しく出し分け済み）。**新規ページ／トップは必ず子ページと同じ META 方式に乗せる**。`buildPageMetadata` は locale から og:locale/twitter/canonical/hreflang を自動生成するので、直すのは title/description だけでよい（og:locale は元々 `ja_JP` 固定ではない＝`OG_LOCALES[locale]`）。
 - **多言語 title は H1（本文COPY）を単一情報源に再利用する**: 社名保護（全ロケール先頭に「四葉不動産」）と新規ハードコード増加防止を両立するため、メタ title は `HomePageContent` の各ロケール H1 と同一表記にする。en/zh-tw/zh の description は本文intro準拠の監修前ドラフトとしてコメントで明示（フェーズI監修対象）。
 - **メタ検証はユニークポートのdevで実測する**: `next dev -p 3111` で `/`・`/en`・`/zh`・`/zh-tw` の `<title>`・`og:locale`・`og:title` が各言語で出し分けられ、canonical・hreflang（ja/en/zh-Hant/zh-Hans/x-default）が不変であることを curl で確認してから完了扱いにする。ページの `generateMetadata` は Firestore を叩かない（inline META）ため、秘密情報なしでも title は正しく出る。
+
+## 2026-07-15 GSC 404/403 対応（②③）
+
+- **404の出力元はsitemapとは限らない＝hreflangを疑う**: sitemap 81本は全200でも、一部ロケールのみ公開のコラム（zh-tw専用のtaiwan系）の詳細ページが hreflang を全4ロケール分出していたため、存在しない ja/en/zh 版URLをGoogleが辿って404化していた。`buildPageMetadata` の `alternates.languages` は**実在ロケールに限定**する（`availableLocales` を追加＝未指定は従来の全ロケールで後方互換）。判定は既存の `Column.locales`／`isLocaleAllowed` を単一情報源に再利用する。
+- **ロケール構造は「/{locale}/legal/...」（locale先頭）が正**: 旧構造「/legal/{locale}/...」のGoogle保持URLは `next.config` の `redirects()` で 301。locale セグメントは `(en|zh-tw|zh)` に限定し ja 素パス（/legal/about 等の現行ページ）に一致させない。`zh-tw` は `zh` より前に並べる（セグメント最長一致）。
+- **Next.jsの `permanent:true` は308＝301が要るなら `statusCode:301` を明示**: 308もSEO等価だがGSCレポート整合と互換性のため 301 を使うなら明示する。検証では移転先が200で解決すること（リダイレクト先404の不在）まで確認する。
+- **410はproxy(middleware)で完全一致・早期return**: `next.config` は 301/rewrite/headers しか返せず 410 は出せない。恒久廃止の旧WP URL（/en/comments/feed・/test1）は proxy 先頭で 410 Gone。末尾スラッシュは正規化して判定し、ロケール/テナント判定には干渉させない（rootファイルへの追加は完全一致・早期returnに限る）。
+- **www 403 の主因はドメイン未設定（証明書欠落）でコードでは直せない**: `www.luck428.com` は TLS 証明書が www を含まず（`no alternative certificate subject name`）、http→https 308 後にハンドシェイク失敗でアプリに到達しない。Vercel の Domains に www を追加し apex への 301 リダイレクトを設定する（ダッシュボード操作）。コード側の middleware/WAF を疑う前に `curl -v https://www...` で証明書とサーバ応答元を確認する。
