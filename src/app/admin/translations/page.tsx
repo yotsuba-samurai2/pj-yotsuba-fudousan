@@ -4,7 +4,7 @@ import { useEffect, useState, useCallback } from "react";
 import {
   getTranslations,
   saveTranslations,
-} from "@/lib/firestore/translations";
+} from "@/lib/admin-api";
 import type { LangCode } from "@/config/languages";
 
 /* ─── Constants ─── */
@@ -90,7 +90,7 @@ export default function TranslationsPage() {
       setTranslationData({});
       setMessage({
         type: "error",
-        text: "Firestoreからの読み込みに失敗しました",
+        text: "データベースからの読み込みに失敗しました",
       });
     } finally {
       setLoading(false);

@@ -7,13 +7,13 @@ import ColumnForm from "@/components/admin/ColumnForm";
 import {
   getColumnById,
   updateColumn,
+  getAccessToken,
   type FirestoreColumn,
-} from "@/lib/firestore/columns";
-import { auth } from "@/lib/firebase";
+} from "@/lib/admin-api";
 
 async function revalidateColumn(business: string, slug: string) {
   try {
-    const token = await auth.currentUser?.getIdToken();
+    const token = await getAccessToken();
     const businessPath = business === "realestate" ? "" : `/${business}`;
     await fetch("/api/admin/revalidate", {
       method: "POST",

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { createColumn } from "@/lib/firestore/columns";
+import { createColumn } from "@/lib/admin-api";
 
 const testColumn = {
   business: "realestate" as const,

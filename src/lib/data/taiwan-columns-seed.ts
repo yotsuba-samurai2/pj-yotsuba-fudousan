@@ -10,7 +10,7 @@
  * 生成方法: npx tsx scripts/seed-taiwan-columns.ts の articles[].firestoreDoc から書き出し。
  */
 
-import type { FirestoreColumn } from "@/lib/firestore/columns";
+import type { FirestoreColumn } from "@/lib/column-shared";
 
 export type TaiwanColumnSeed = Omit<FirestoreColumn, "id" | "createdAt" | "updatedAt"> & {
   locale: string;

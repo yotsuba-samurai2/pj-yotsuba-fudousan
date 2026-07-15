@@ -1,9 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { doc, updateDoc } from "firebase/firestore";
-import { db } from "@/lib/firebase";
-import { getColumns, type FirestoreColumn } from "@/lib/firestore/columns";
+import {
+  getColumns,
+  getColumnById,
+  updateColumn,
+  type FirestoreColumn,
+} from "@/lib/admin-api";
 
 /**
  * コラムcategoryの公開表記統一（診断結果に基づく後埋め・2026-07-09）。
@@ -15,10 +18,10 @@ import { getColumns, type FirestoreColumn } from "@/lib/firestore/columns";
  * ② overseas-owners-guide-japan-real-estate-sale: translations.{en,zh-tw,zh}.category が
  *    未設定だったため追加（base=ja の "海外オーナー向け" は変更しない）。
  *
- * 書き込みは updateDoc に dot-path（例: "translations.zh-tw.category"）を渡す方式のみ。
- * ネストしたtranslationsオブジェクトを丸ごと上書きすると title/excerpt/content 等の
- * 既存フィールドを消してしまうため、必ずリーフのフィールドパスを個別指定する
- * （updateColumn()のような上位オブジェクトのspreadは使わない）。
+ * 書き込みは「最新のコラムを取得→dot-pathのリーフだけ差し替え→影響のある
+ * トップレベルフィールドのみ updateColumn で送る」方式。ネストしたtranslations
+ * オブジェクトを提案値だけで丸ごと上書きすると title/excerpt/content 等の
+ * 既存フィールドを消してしまうため、必ず現在値ベースに差し替える。
  *
  * 現在値と提案値が一致する行は自動スキップ（冪等）。上記フィールド以外は一切変更しない。
  */
@@ -45,6 +48,26 @@ const OVERSEAS_CATEGORY: Record<"en" | "zh-tw" | "zh", string> = {
   "zh-tw": "海外業主專屬",
   zh: "海外业主专属",
 };
+
+function setNestedField(
+  obj: Record<string, unknown>,
+  path: string,
+  value: unknown,
+): void {
+  const keys = path.split(".");
+  let cur: Record<string, unknown> = obj;
+  for (let i = 0; i < keys.length - 1; i++) {
+    if (
+      cur[keys[i]] === undefined ||
+      cur[keys[i]] === null ||
+      typeof cur[keys[i]] !== "object"
+    ) {
+      cur[keys[i]] = {};
+    }
+    cur = cur[keys[i]] as Record<string, unknown>;
+  }
+  cur[keys[keys.length - 1]] = value;
+}
 
 type FieldChange = { path: string; label: string; current?: string; proposed: string };
 
@@ -118,9 +141,15 @@ export default function BackfillCategoryPage() {
     setRunning(true);
     for (const row of targets) {
       try {
-        const payload: Record<string, string> = {};
-        for (const c of row.changes) payload[c.path] = c.proposed;
-        await updateDoc(doc(db, "columns", row.id), payload);
+        const current = await getColumnById(row.id);
+        if (!current) throw new Error("コラムが見つかりません");
+        const working = JSON.parse(JSON.stringify(current)) as Record<string, unknown>;
+        for (const c of row.changes) setNestedField(working, c.path, c.proposed);
+        const payload: Record<string, unknown> = {};
+        for (const key of new Set(row.changes.map((c) => c.path.split(".")[0]))) {
+          payload[key] = working[key];
+        }
+        await updateColumn(row.id, payload as Partial<FirestoreColumn>);
         setRows((prev) =>
           prev.map((r) => (r.id === row.id ? { ...r, result: "applied" } : r)),
         );

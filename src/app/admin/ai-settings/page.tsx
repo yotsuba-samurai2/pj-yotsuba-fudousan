@@ -2,8 +2,12 @@
 
 import { useEffect, useState, useCallback } from "react";
 import AdminLayout from "@/components/admin/AdminLayout";
-import { auth } from "@/lib/firebase";
-import { getAiModel, setAiModel, DEFAULT_AI_MODEL } from "@/lib/firestore/aiSettings";
+import {
+  getAiModel,
+  setAiModel,
+  getAccessToken,
+  DEFAULT_AI_MODEL,
+} from "@/lib/admin-api";
 
 type ModelOption = {
   id: string;
@@ -27,7 +31,7 @@ export default function AiSettingsPage() {
       setSelected(current);
       setInitialModel(current);
 
-      const token = await auth.currentUser?.getIdToken();
+      const token = await getAccessToken();
       const res = await fetch("/api/admin/ai-models", {
         headers: { ...(token && { Authorization: `Bearer ${token}` }) },
       });
@@ -49,7 +53,8 @@ export default function AiSettingsPage() {
   }, [loadAll]);
 
   const handleSave = async () => {
-    if (!auth.currentUser) {
+    const token = await getAccessToken();
+    if (!token) {
       setError("認証されていません");
       return;
     }
@@ -57,7 +62,7 @@ export default function AiSettingsPage() {
     setError(null);
     setMessage(null);
     try {
-      await setAiModel(selected, auth.currentUser.uid);
+      await setAiModel(selected);
       setInitialModel(selected);
       setMessage("保存しました");
     } catch (err) {

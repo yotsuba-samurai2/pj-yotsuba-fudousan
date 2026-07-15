@@ -1,12 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import { doc, updateDoc } from "firebase/firestore";
-import { db } from "@/lib/firebase";
 import {
   getTranslations,
   saveTranslations,
-} from "@/lib/firestore/translations";
+  getColumns,
+  updateColumn,
+  type FirestoreColumn,
+} from "@/lib/admin-api";
 import {
   SR_TRANSLATION_PATCHES,
   SR_COLUMN_PATCHES,
@@ -83,7 +84,6 @@ export default function FixSrNotationPage() {
     // ── コラム（find出現数を照合→dot-pathでフィールド更新） ──
     for (const col of SR_COLUMN_PATCHES) {
       try {
-        const { getColumns } = await import("@/lib/firestore/columns");
         const all = await getColumns();
         const current = all.find((c) => c.id === col.id) as unknown as Record<string, unknown> | undefined;
         if (!current) {
@@ -108,7 +108,17 @@ export default function FixSrNotationPage() {
           applied++;
         }
         if (Object.keys(updates).length) {
-          await updateDoc(doc(db, "columns", col.id), updates);
+          // 旧updateDoc(dot-path)相当: リーフを差し替えた上で、影響のある
+          // トップレベルフィールドのみを送る（他フィールドは巻き込まない）
+          const working = JSON.parse(JSON.stringify(current)) as Record<string, unknown>;
+          for (const [path, value] of Object.entries(updates)) {
+            setNested(working, path, value);
+          }
+          const payload: Record<string, unknown> = {};
+          for (const key of new Set(Object.keys(updates).map((x) => x.split(".")[0]))) {
+            payload[key] = working[key];
+          }
+          await updateColumn(col.id, payload as Partial<FirestoreColumn>);
         }
         out.push({ label: `columns/${col.slug}`, status: "applied", detail: `${applied}/${col.patches.length}件適用` });
       } catch (e) {

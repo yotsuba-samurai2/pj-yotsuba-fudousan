@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { getColumns, updateColumn, type FirestoreColumn } from "@/lib/firestore/columns";
+import { getColumns, updateColumn, type FirestoreColumn } from "@/lib/admin-api";
 import type { LangCode } from "@/config/languages";
 
 /**

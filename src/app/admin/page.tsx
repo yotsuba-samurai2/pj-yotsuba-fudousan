@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { FileText, Languages, ArrowRight } from "lucide-react";
-import { getColumns, type FirestoreColumn } from "@/lib/firestore/columns";
+import { getColumns, type FirestoreColumn } from "@/lib/admin-api";
 
 function KpiCard({
   title,

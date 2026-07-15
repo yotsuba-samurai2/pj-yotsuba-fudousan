@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { getColumns, updateColumn, type FirestoreColumn } from "@/lib/firestore/columns";
+import { getColumns, updateColumn, type FirestoreColumn } from "@/lib/admin-api";
 
 /**
  * 台湾繁体字9本の公開化（台湾コンテンツ_admin投入指示書_v1.md／四葉サイト_多言語コンテンツ
