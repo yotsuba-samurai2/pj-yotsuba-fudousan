@@ -39,6 +39,34 @@ export function PrivacyPolicyPageClient() {
               <p className="mt-3">{t("privacyPolicy.sections.security.content")}</p>
             </div>
             <div>
+              <h2 className="text-lg font-bold text-text">{t("privacyPolicy.sections.analytics.title")}</h2>
+              <p className="mt-3">{t("privacyPolicy.sections.analytics.content")}</p>
+              <ul className="mt-2 list-disc pl-5 space-y-1">
+                {tArray<string>("privacyPolicy.sections.analytics.items").map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </ul>
+              <p className="mt-3">
+                <a
+                  href="https://policies.google.com/privacy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline underline-offset-2 hover:text-text"
+                >
+                  {t("privacyPolicy.sections.analytics.googlePolicyLink")}
+                </a>
+                <span aria-hidden="true">　/　</span>
+                <a
+                  href="https://tools.google.com/dlpage/gaoptout"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline underline-offset-2 hover:text-text"
+                >
+                  {t("privacyPolicy.sections.analytics.optoutLink")}
+                </a>
+              </p>
+            </div>
+            <div>
               <h2 className="text-lg font-bold text-text">{t("privacyPolicy.sections.inquiry.title")}</h2>
               <p className="mt-3">{t("privacyPolicy.sections.inquiry.content")}</p>
               <p className="mt-2">{t("privacyPolicy.sections.inquiry.contactInfo")}</p>
