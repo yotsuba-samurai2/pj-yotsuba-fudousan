@@ -127,7 +127,7 @@ const COPY: Record<LangCode, SouzokuCopy> = {
       {
         question: "相談に費用はかかりますか？営業時間はいつですか？",
         answer:
-          "ご相談は無料です。事務所は文京区小日向４丁目２−５ 小日向安田ビル２０３（茗荷谷駅から徒歩約5分）、営業時間は10:00〜18:00（火・水休）です。売却や管理を正式にご依頼いただく場合の費用は、お手続きの前に必ず明示します。",
+          "ご相談は無料です。事務所は文京区小日向４丁目２−５ 小日向安田ビル ２０３（茗荷谷駅から徒歩約5分）、営業時間は10:00〜18:00（火・水休）です。売却や管理を正式にご依頼いただく場合の費用は、お手続きの前に必ず明示します。",
       },
     ],
     exitLabel: "3つの選択肢",
@@ -264,7 +264,7 @@ const COPY: Record<LangCode, SouzokuCopy> = {
       {
         question: "Does a consultation cost anything? What are your business hours?",
         answer:
-          "Consultations are free. Our office is at 文京区小日向４丁目２−５ 小日向安田ビル２０３ (Kohinata Yasuda Bldg. #203, 4-2-5 Kohinata, Bunkyo-ku), about a 5-minute walk from Myogadani Station, and business hours are 10:00–18:00 (closed Tuesdays and Wednesdays). If you formally engage us for a sale or for management, we always disclose the fees clearly before any procedures begin.",
+          "Consultations are free. Our office is at 文京区小日向４丁目２−５ 小日向安田ビル ２０３ (Kohinata Yasuda Bldg. #203, 4-2-5 Kohinata, Bunkyo-ku), about a 5-minute walk from Myogadani Station, and business hours are 10:00–18:00 (closed Tuesdays and Wednesdays). If you formally engage us for a sale or for management, we always disclose the fees clearly before any procedures begin.",
       },
     ],
     exitLabel: "Three options",
@@ -399,7 +399,7 @@ const COPY: Record<LangCode, SouzokuCopy> = {
       {
         question: "諮詢需要費用嗎？營業時間是什麼時候？",
         answer:
-          "諮詢免費。事務所位於文京区小日向４丁目２−５ 小日向安田ビル２０３（距茗荷谷站步行約5分鐘），營業時間為10:00〜18:00（週二・週三公休）。若正式委託出售或管理，相關費用必定在辦理手續前明確告知。",
+          "諮詢免費。事務所位於文京区小日向４丁目２−５ 小日向安田ビル ２０３（距茗荷谷站步行約5分鐘），營業時間為10:00〜18:00（週二・週三公休）。若正式委託出售或管理，相關費用必定在辦理手續前明確告知。",
       },
     ],
     exitLabel: "3種選擇",
@@ -534,7 +534,7 @@ const COPY: Record<LangCode, SouzokuCopy> = {
       {
         question: "咨询需要费用吗？营业时间是什么时候？",
         answer:
-          "咨询免费。事务所位于文京区小日向４丁目２−５ 小日向安田ビル２０３（距茗荷谷站步行约5分钟），营业时间为10:00〜18:00（周二・周三休息）。若正式委托出售或管理，相关费用必定在办理手续前明确告知。",
+          "咨询免费。事务所位于文京区小日向４丁目２−５ 小日向安田ビル ２０３（距茗荷谷站步行约5分钟），营业时间为10:00〜18:00（周二・周三休息）。若正式委托出售或管理，相关费用必定在办理手续前明确告知。",
       },
     ],
     exitLabel: "3种选择",

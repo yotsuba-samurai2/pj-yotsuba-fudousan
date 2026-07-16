@@ -91,7 +91,7 @@ export default function LegalContactPage() {
                     <p className="mt-1 text-sm text-text-muted">
                       〒112-0006<br />
                       東京都文京区小日向４丁目２−５<br />
-                      小日向安田ビル２０３
+                      小日向安田ビル ２０３
                     </p>
                   </div>
                 </div>
