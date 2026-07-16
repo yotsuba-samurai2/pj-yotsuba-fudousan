@@ -25,7 +25,7 @@ export const SHARED_ORG_INFO = {
   representative: "浦松 丈二",
   representativeEn: "Joji Uramatsu",
   postalCode: "112-0006",
-  streetAddress: "小日向４丁目２−５ 小日向安田ビル２０３",
+  streetAddress: "小日向４丁目２−５ 小日向安田ビル ２０３",
   addressLocality: "文京区",
   addressRegion: "東京都",
   addressCountry: "JP",
@@ -135,7 +135,7 @@ export const PERSON_JSONLD = {
     {
       "@type": "PropertyValue",
       propertyID: "宅地建物取引士登録番号",
-      value: "東京 第293544号",
+      value: "（東京）第293544号",
     },
   ],
   // jobTitle＝役職／資格はhasCredentialへ分離。社労士関連は開業（2026年9月）まで出力しない
@@ -147,10 +147,29 @@ export const PERSON_JSONLD = {
     { "@id": "https://luck428.com/#organization" },
     { "@id": "https://luck428.com/legal/#organization" },
   ],
+  // samurai.co.jp本番のPerson.hasCredentialと完全同一構造（クロスサイト整合・2026-07-16実測に合わせた）
   hasCredential: [
-    "行政書士（登録番号 第25087022号）",
-    "宅地建物取引士（東京 第293544号）",
-    "社会保険労務士試験合格（2026年9月開業予定）",
+    {
+      "@type": "EducationalOccupationalCredential",
+      credentialCategory: "行政書士",
+      identifier: "第25087022号",
+      recognizedBy: {
+        "@type": "Organization",
+        name: "日本行政書士会連合会",
+        url: "https://www.gyosei.or.jp/",
+      },
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      credentialCategory: "宅地建物取引士",
+      identifier: "（東京）第293544号",
+      recognizedBy: { "@type": "Organization", name: "登録先の都道府県知事" },
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      credentialCategory: "社会保険労務士試験合格",
+      identifier: "令和7年 第202500525号",
+    },
   ],
   memberOf: [
     {
