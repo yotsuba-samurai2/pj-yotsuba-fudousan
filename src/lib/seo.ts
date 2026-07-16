@@ -94,6 +94,11 @@ export const SAMURAI_URAMATSU_URL =
  * 代表者（浦松丈二）の外部プロフィールURL（いずれも現物確認済み）。
  * 個人のSNS・ブログはここ（Person）にのみ載せる＝組織のsameAsへ混ぜない（Person/Org境界）。
  * gyosei-bunkyo.org＝東京都行政書士会文京支部の公式会員名簿・本人ページ（2026-07-10実在確認）。
+ *
+ * ミツモア・ゼヒトモの事業者ページは掲載名義こそ屋号／法人名だが、
+ * 士業ドットコムの本人Person（@id=Q139738129相当）のsameAsに既に収載済み（2026-07-16本番実測14件）。
+ * 同一URLをこちらでOrg側に寄せると両サイトでエンティティの主張が食い違うため、
+ * samurai.co.jp側の実装に合わせてPersonに揃える（クロスサイト整合を優先）。
  */
 export const PERSON_SAME_AS = [
   "https://www.wikidata.org/wiki/Q139738129",
@@ -107,6 +112,12 @@ export const PERSON_SAME_AS = [
   "https://www.instagram.com/uramatsu_joji/",
   "https://www.threads.com/@uramatsu_joji",
   "https://www.linkedin.com/in/joji-uramatsu/",
+  // ミツモア事業者ページ（2026-07-16現物確認・掲載名義＝四葉行政書士事務所／事業者確認済み）。
+  // noarchive指定だがnoindexではないためsameAsとして有効。
+  "https://meetsmore.com/p/aa9Wdr6tn3FAECg9",
+  // ゼヒトモ事業者ページ（2026-07-16確認・本人/電話/メール認証済み）。
+  // URLのパーセントエンコードは解かない（ゼヒトモ側の正規表記）。
+  "https://www.zehitomo.com/profile/%E5%9B%9B%E8%91%89%E4%B8%8D%E5%8B%95%E7%94%A3%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE-27nhi0ukf/pro",
 ] as const;
 
 /**
@@ -184,10 +195,6 @@ export const REALESTATE_SAME_AS = [
   "https://www.tokyo-takken.or.jp/search-member/detail/31253",
   // ナレッジパネル（kgmid）＝JSON-LD修正P2（2026-07-11浦松承認済み仕様）
   "https://www.google.com/search?kgmid=/g/11ytdshcrj",
-  // ゼヒトモ事業者ページ（2026-07-16確認・本人/電話/メール認証済み）。
-  // 法人名義（四葉不動産株式会社）のページのためPersonではなくOrg側に収載する。
-  // URLのパーセントエンコードは解かない（ゼヒトモ側の正規表記）。
-  "https://www.zehitomo.com/profile/%E5%9B%9B%E8%91%89%E4%B8%8D%E5%8B%95%E7%94%A3%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE-27nhi0ukf/pro",
 ] as const;
 
 /**
@@ -200,10 +207,6 @@ export const LEGAL_SAME_AS = [
   // GBP共有リンク＋ナレッジパネル（kgmid）＝JSON-LD修正P2（2026-07-11浦松承認済み仕様）
   "https://share.google/qw9imD2snNKDEQS3Z",
   "https://www.google.com/search?kgmid=/g/11z5sjqsxz",
-  // ミツモア事業者ページ（2026-07-16現物確認・掲載名義＝四葉行政書士事務所／事業者確認済み）。
-  // 名義が当事務所のためPerson・不動産側ではなくLegalService側に収載する。
-  // noarchive指定だがnoindexではないためsameAsとして有効。
-  "https://meetsmore.com/p/aa9Wdr6tn3FAECg9",
 ] as const;
 
 /**
