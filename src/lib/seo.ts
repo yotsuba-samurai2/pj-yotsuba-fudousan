@@ -184,6 +184,10 @@ export const REALESTATE_SAME_AS = [
   "https://www.tokyo-takken.or.jp/search-member/detail/31253",
   // ナレッジパネル（kgmid）＝JSON-LD修正P2（2026-07-11浦松承認済み仕様）
   "https://www.google.com/search?kgmid=/g/11ytdshcrj",
+  // ゼヒトモ事業者ページ（2026-07-16確認・本人/電話/メール認証済み）。
+  // 法人名義（四葉不動産株式会社）のページのためPersonではなくOrg側に収載する。
+  // URLのパーセントエンコードは解かない（ゼヒトモ側の正規表記）。
+  "https://www.zehitomo.com/profile/%E5%9B%9B%E8%91%89%E4%B8%8D%E5%8B%95%E7%94%A3%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE-27nhi0ukf/pro",
 ] as const;
 
 /**
@@ -196,6 +200,10 @@ export const LEGAL_SAME_AS = [
   // GBP共有リンク＋ナレッジパネル（kgmid）＝JSON-LD修正P2（2026-07-11浦松承認済み仕様）
   "https://share.google/qw9imD2snNKDEQS3Z",
   "https://www.google.com/search?kgmid=/g/11z5sjqsxz",
+  // ミツモア事業者ページ（2026-07-16現物確認・掲載名義＝四葉行政書士事務所／事業者確認済み）。
+  // 名義が当事務所のためPerson・不動産側ではなくLegalService側に収載する。
+  // noarchive指定だがnoindexではないためsameAsとして有効。
+  "https://meetsmore.com/p/aa9Wdr6tn3FAECg9",
 ] as const;
 
 /**
