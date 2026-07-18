@@ -8,6 +8,7 @@ import {
 } from "@/lib/admin-api";
 import {
   COMPLIANCE_TRANSLATION_PATCHES,
+  COMPLIANCE_VALUE_PATCHES,
   COMPLIANCE_SCAN_TERMS,
 } from "@/lib/data/compliance-patches";
 import type { LangCode } from "@/config/languages";
@@ -38,6 +39,27 @@ function setNested(obj: Record<string, unknown>, path: string, value: unknown) {
     cur = cur[keys[i]] as Record<string, unknown>;
   }
   cur[keys[keys.length - 1]] = value;
+}
+
+/** 値ツリーを再帰走査し、値パッチ（完全一致）を適用。適用件数を返す */
+function applyValuePatches(node: unknown, prefix: string, log: (path: string) => void): unknown {
+  if (typeof node === "string") {
+    const hit = COMPLIANCE_VALUE_PATCHES.find((p) => p.from === node);
+    if (hit) {
+      log(prefix);
+      return hit.to;
+    }
+    return node;
+  }
+  if (Array.isArray(node)) {
+    return node.map((v, i) => applyValuePatches(v, `${prefix}.${i}`, log));
+  }
+  if (node && typeof node === "object") {
+    const out: Record<string, unknown> = {};
+    for (const [k, v] of Object.entries(node)) out[k] = applyValuePatches(v, `${prefix}.${k}`, log);
+    return out;
+  }
+  return node;
 }
 
 /** 値ツリーを再帰走査して禁止語を含む文字列リーフを列挙 */
@@ -79,7 +101,7 @@ export default function FixCompliancePage() {
       const patches = COMPLIANCE_TRANSLATION_PATCHES[loc] ?? [];
       try {
         const data = (await getTranslations(loc)) ?? {};
-        const working = JSON.parse(JSON.stringify(data)) as Record<string, unknown>;
+        let working = JSON.parse(JSON.stringify(data)) as Record<string, unknown>;
         let applied = 0;
         for (const p of patches) {
           const cur = getNested(working, p.path);
@@ -91,8 +113,17 @@ export default function FixCompliancePage() {
           setNested(working, p.path, p.to);
           applied++;
         }
-        if (applied > 0) await saveTranslations(loc, working);
-        out.push({ label: `translations/${loc}`, status: "applied", detail: `${applied}/${patches.length}件適用` });
+        // 値ベースパッチ（パス非依存・完全一致）＝パス特定できないキーの是正
+        let valueApplied = 0;
+        working = applyValuePatches(working, `translations/${loc}`, () => {
+          valueApplied++;
+        }) as Record<string, unknown>;
+        if (applied + valueApplied > 0) await saveTranslations(loc, working);
+        out.push({
+          label: `translations/${loc}`,
+          status: "applied",
+          detail: `パス指定${applied}/${patches.length}件＋値一致${valueApplied}件適用`,
+        });
         scanTree(working, `translations/${loc}`, hits);
       } catch (e) {
         out.push({ label: `translations/${loc}`, status: "error", detail: String(e) });
