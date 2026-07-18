@@ -96,6 +96,29 @@ export function OrganizationJsonLd({ businessKey }: { businessKey: string }) {
           "@type": "Person",
           "@id": PERSON_ID,
           name: SHARED_ORG_INFO.representative,
+          // 社会保険労務士は登録未了（2026年9月開業予定）のため出力しない
+          hasCredential: [
+            {
+              "@type": "EducationalOccupationalCredential",
+              credentialCategory: "国家資格",
+              name: "宅地建物取引士",
+              identifier: "登録番号（東京）第293544号",
+              recognizedBy: {
+                "@type": "GovernmentOrganization",
+                name: "東京都",
+              },
+            },
+            {
+              "@type": "EducationalOccupationalCredential",
+              credentialCategory: "国家資格",
+              name: "行政書士",
+              identifier: "登録番号 第25087022号",
+              recognizedBy: {
+                "@type": "Organization",
+                name: "日本行政書士会連合会",
+              },
+            },
+          ],
           sameAs: [
             "https://www.wikidata.org/wiki/Q139738129",
             "https://orcid.org/0009-0007-0460-3473",
