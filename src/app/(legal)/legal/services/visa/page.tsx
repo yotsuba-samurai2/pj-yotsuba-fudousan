@@ -102,13 +102,13 @@ const COPY: Record<LangCode, VisaCopy> = {
   en: {
     metaTitle: "Visa & Residence Status Applications｜四葉行政書士事務所",
     metaDesc:
-      "Support for Certificate of Eligibility applications, changes and renewals of residence status, and consultations on permanent residency and naturalization, from 四葉行政書士事務所 (Yotsuba Gyoseishoshi Office) in Bunkyo, Tokyo. Chinese and English available. A gyoseishoshi (administrative scrivener) and former newspaper journalist who has lived in four countries supports foreign residents with both the language and the system.",
+      "Support for Certificate of Eligibility applications, changes and renewals of residence status, and consultations on permanent residency and naturalization, from 四葉行政書士事務所 (Yotsuba Gyoseishoshi Office) in Bunkyo, Tokyo. Chinese and English available. A gyoseishoshi (administrative scrivener) and former newspaper journalist who was stationed in China, Taiwan, and Thailand supports foreign residents with both the language and the system.",
     crumbLabel: "Visa & Residence Status",
     heroAlt: "Visa and residence status applications (passport and globe)",
     h1: "Visa & Residence Status Applications",
     lead: (
       <p>
-        Applications for a Certificate of Eligibility and for changes and renewals of residence status <strong>can be entrusted to a certified application agent</strong> — a gyoseishoshi (administrative scrivener) authorized to submit immigration applications on your behalf. 四葉行政書士事務所 (Yotsuba Gyoseishoshi Office) handles residence status applications such as work-related statuses, Business Manager, and Dependent, along with consultations on permanent residency and naturalization. Our representative, 浦松 丈二 (Joji Uramatsu), <strong>has lived in four countries</strong> and offers consultations in <strong>Japanese, English, Traditional Chinese, and Simplified Chinese</strong>.
+        Applications for a Certificate of Eligibility and for changes and renewals of residence status <strong>can be entrusted to a certified application agent</strong> — a gyoseishoshi (administrative scrivener) authorized to submit immigration applications on your behalf. 四葉行政書士事務所 (Yotsuba Gyoseishoshi Office) handles residence status applications such as work-related statuses, Business Manager, and Dependent, along with consultations on permanent residency and naturalization. Our representative, 浦松 丈二 (Joji Uramatsu), <strong>was stationed in China, Taiwan, and Thailand</strong> and offers consultations in <strong>Japanese, English, Traditional Chinese, and Simplified Chinese</strong>.
         <Placeholder reason="浦松＝申請取次の届出有無・対応する在留資格種別の確定" />
       </p>
     ),

@@ -90,7 +90,7 @@ const COPY: Record<LangCode, FaqPageCopy> = {
       },
       {
         q: "Can I consult in Chinese or English?",
-        a: "Yes. 浦松丈二 (Joji Uramatsu), our representative, is a former China General Bureau Chief of the Mainichi Shimbun with experience living in four countries, and handles consultations in Japanese, English, Traditional Chinese, and Simplified Chinese. If you are looking for a room as a foreign resident, please also see the “Multilingual Room-Hunting Support” page.",
+        a: "Yes. 浦松丈二 (Joji Uramatsu), our representative, is a former China General Bureau Chief of the Mainichi Shimbun who was stationed in China, Taiwan, and Thailand, and handles consultations in Japanese, English, Traditional Chinese, and Simplified Chinese. If you are looking for a room as a foreign resident, please also see the “Multilingual Room-Hunting Support” page.",
       },
       {
         q: "Can I consult about properties outside Bunkyo-ku?",
@@ -120,7 +120,7 @@ const COPY: Record<LangCode, FaqPageCopy> = {
     authorAlt: "Joji Uramatsu, Representative Director of Yotsuba Real Estate Co., Ltd.",
     authorLabel: "About the author",
     authorBio:
-      "Joji Uramatsu | Representative Director of Yotsuba Real Estate Co., Ltd.; full-time licensed real estate broker; gyoseishoshi lawyer. Former China General Bureau Chief of the Mainichi Shimbun (34 years as a journalist), with experience living in four countries. Passed the national exam for licensed social insurance and labor consultant (office opening scheduled for September 2026).",
+      "Joji Uramatsu | Representative Director of Yotsuba Real Estate Co., Ltd.; full-time licensed real estate broker; gyoseishoshi lawyer. Former China General Bureau Chief of the Mainichi Shimbun (34 years as a journalist), stationed in China, Taiwan, and Thailand. Passed the national exam for licensed social insurance and labor consultant (office opening scheduled for September 2026).",
   },
   "zh-tw": {
     metaTitle: "常見問題｜文京區・茗荷谷的四葉不動産株式会社",

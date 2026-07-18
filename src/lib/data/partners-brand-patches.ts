@@ -62,10 +62,10 @@ export const LABOR_KEYS: string[] = [
 export const FAQ_KEY = "legal.homePage.faq.2.answer";
 
 export const FAQ_OVERRIDE: Record<LangCode, string> = {
-  ja: "はい、四葉不動産では、四葉行政書士事務所と連携し、事務所の賃貸契約と会社設立手続きなどをワンストップで対応できます。",
-  en: "Yes. 四葉不動産 (Yotsuba Real Estate) works together with 四葉行政書士事務所 (our administrative scrivener office), so matters spanning real estate and legal—such as office lease contracts and company formation—can be handled in one place.",
-  "zh-tw": "是的。四葉不動産與四葉行政書士事務所聯動，辦公室租賃合約與公司設立手續等不動產・法務事宜可一站式辦理。",
-  zh: "是的。四葉不動産与四葉行政书士事务所联动，办公室租赁合同与公司设立手续等不动产・法务事宜可一站式办理。",
+  ja: "はい。オフィスの賃貸契約は四葉不動産が対応します。会社設立などの法務手続きは、併設の四葉行政書士事務所が別契約で受任します。",
+  en: "Yes. 四葉不動産 (Yotsuba Real Estate) handles the office lease contract. Legal procedures such as company formation are handled by the adjoining 四葉行政書士事務所 (Yotsuba Gyoseishoshi Office) under a separate engagement.",
+  "zh-tw": "可以。辦公室的租賃合約由四葉不動産承辦；公司設立等法務手續，由併設的四葉行政書士事務所另行簽約受任。",
+  zh: "可以。办公室的租赁合同由四葉不動産承办；公司设立等法务手续，由并设的四葉行政書士事務所另行签约受任。",
 };
 
 /** 総称ブランド置換 */

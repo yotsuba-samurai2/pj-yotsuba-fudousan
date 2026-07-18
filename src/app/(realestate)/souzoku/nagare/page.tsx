@@ -185,7 +185,7 @@ const COPY: Record<LangCode, SouzokuNagareCopy> = {
     authorAlt: "Joji Uramatsu, Representative Director of Yotsuba Real Estate Co., Ltd.",
     authorLabel: "About the author",
     authorBio:
-      "Joji Uramatsu | Representative Director of Yotsuba Real Estate Co., Ltd.; full-time licensed real estate broker; gyoseishoshi lawyer. Former China General Bureau Chief of the Mainichi Shimbun (34 years as a journalist), with experience living in four countries. Passed the national exam for licensed social insurance and labor consultant (office opening scheduled for September 2026).",
+      "Joji Uramatsu | Representative Director of Yotsuba Real Estate Co., Ltd.; full-time licensed real estate broker; gyoseishoshi lawyer. Former China General Bureau Chief of the Mainichi Shimbun (34 years as a journalist), stationed in China, Taiwan, and Thailand. Passed the national exam for licensed social insurance and labor consultant (office opening scheduled for September 2026).",
   },
   "zh-tw": {
     metaTitle: "繼承的不動產：從諮詢到出售・活用的流程｜四葉不動産",

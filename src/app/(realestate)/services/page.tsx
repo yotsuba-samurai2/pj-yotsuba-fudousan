@@ -143,7 +143,7 @@ const COPY: Record<LangCode, ServicesCopy> = {
     },
     group: {
       heading: "士業グループとの連携",
-      body: "不動産の判断には、法務や許認可が絡みます。四葉グループには行政書士事務所（障害福祉指定申請・在留資格・相続書類・補助金）があり、ワンストップで見通せます。",
+      body: "不動産の判断には、法務や許認可が絡みます。四葉グループには行政書士事務所（障害福祉指定申請・在留資格・相続書類・補助金）が併設されており、これらの手続きは同事務所が別契約で受任します。",
       note: "※四葉不動産株式会社と四葉行政書士事務所は、別事業体として独立してご依頼をお受けします（紹介料等の授受はありません）。",
     },
   },
@@ -238,7 +238,7 @@ const COPY: Record<LangCode, ServicesCopy> = {
     },
     group: {
       heading: "Working with our professional group",
-      body: "Real estate decisions involve legal matters and licensing. The Yotsuba group includes a gyoseishoshi office (disability-welfare service designation, residence status, inheritance paperwork, subsidy applications), giving you a one-stop view.",
+      body: "Real estate decisions involve legal matters and licensing. The Yotsuba group includes an adjoining gyoseishoshi office (disability-welfare service designation, residence status, inheritance paperwork, subsidy applications), which takes on those procedures under a separate engagement.",
       note: "Yotsuba Real Estate Co., Ltd. and Yotsuba Gyoseishoshi Office accept engagements independently as separate business entities (no referral fees are exchanged).",
     },
   },
@@ -332,7 +332,7 @@ const COPY: Record<LangCode, ServicesCopy> = {
     },
     group: {
       heading: "與士業集團的合作",
-      body: "不動產的判斷，往往牽涉法務與許認可。四葉集團設有行政書士事務所（障礙福祉指定申請・在留資格・繼承文件・補助金），可一站式綜觀全局。",
+      body: "不動產的判斷，往往牽涉法務與許認可。四葉集團設有行政書士事務所（障礙福祉指定申請・在留資格・繼承文件・補助金），相關手續由該事務所另行簽約受任。",
       note: "※四葉不動産株式会社與四葉行政書士事務所為不同事業體，各自獨立受理委任（不收受介紹費等）。",
     },
   },
@@ -426,7 +426,7 @@ const COPY: Record<LangCode, ServicesCopy> = {
     },
     group: {
       heading: "与士业集团的合作",
-      body: "不动产的判断，往往涉及法务与许认可。四葉集团设有行政书士事务所（残障福祉指定申请・在留资格・继承文件・补助金），可一站式纵观全局。",
+      body: "不动产的判断，往往涉及法务与许认可。四葉集团设有行政书士事务所（残障福祉指定申请・在留资格・继承文件・补助金），相关手续由该事务所另行签约受任。",
       note: "※四葉不動産株式会社与四葉行政書士事務所为不同事业体，各自独立受理委托（不收受介绍费等）。",
     },
   },
