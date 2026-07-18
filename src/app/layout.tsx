@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     default: "四葉グループ",
     template: "%s | 四葉グループ",
   },
-  description: "四葉グループ — 不動産・行政書士のワンストップグループ。",
+  description: "四葉グループ — 不動産・行政書士の専門家グループ。",
   icons: {
     icon: [
       { url: "/icon-192.png", sizes: "192x192", type: "image/png" },

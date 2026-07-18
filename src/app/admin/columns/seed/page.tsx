@@ -27,12 +27,12 @@ const testColumn = {
     en: {
       title: "Complete Guide to Renting in Tokyo for Foreigners",
       excerpt:
-        "Key points foreigners should know when renting in Tokyo, explained by our representative with experience living in 5 countries.",
+        "Key points foreigners should know when renting in Tokyo, explained by our representative who was stationed in China, Taiwan, and Thailand.",
       content: `Renting an apartment in Tokyo can be challenging even for Japanese people. For foreigners, the language barrier and unique business customs make it even more difficult.
 
 First, you should know that Japanese rental contracts often require initial costs of 4-6 months' rent, including deposit, key money, agency fees, and guarantor company fees.
 
-At Yotsuba Real Estate, we specialize in supporting foreigners in finding housing. Our representative has lived in 5 countries and personally understands the challenges of finding a home as a foreigner.
+At Yotsuba Real Estate, we specialize in supporting foreigners in finding housing. Our representative has lived in China, Taiwan, and Thailand and personally understands the challenges of finding a home as a foreigner.
 
 If you need help finding a place to live, please don't hesitate to contact us. We offer support in Japanese, English, and Chinese (Traditional/Simplified).`,
       category: "Rental",

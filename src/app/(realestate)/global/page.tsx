@@ -90,7 +90,7 @@ const COPY: Record<LangCode, GlobalCopy> = {
   en: {
     metaTitle: "House Hunting in Japan for Foreign Residents | 四葉不動産 (Yotsuba Real Estate), Multilingual Support",
     metaDesc:
-      "Yotsuba Real Estate Co., Ltd. supports your house hunting in Japan in your own language. From tenant screening and the contract to the paperwork of daily life, we assist you in Japanese, English, Traditional Chinese, and Simplified Chinese. Our representative — a former China General Bureau Chief of the Mainichi Shimbun with experience living in four countries — supports room hunting for foreign residents on both the language and the system side.",
+      "Yotsuba Real Estate Co., Ltd. supports your house hunting in Japan in your own language. From tenant screening and the contract to the paperwork of daily life, we assist you in Japanese, English, Traditional Chinese, and Simplified Chinese. Our representative — a former China General Bureau Chief of the Mainichi Shimbun who was stationed in China, Taiwan, and Thailand — supports room hunting for foreign residents on both the language and the system side.",
     crumbHome: "Home",
     crumbCurrent: "Multilingual Room Hunting for Foreign Residents",
     serviceName: "Multilingual Room-Hunting Support",
@@ -98,7 +98,7 @@ const COPY: Record<LangCode, GlobalCopy> = {
     h1: "Multilingual Room Hunting for Foreign Residents",
     lead: (
       <p>
-        For foreign residents, house hunting in Japan is <strong>supported by Yotsuba Real Estate Co., Ltd. in your own language</strong>. We assist you in Japanese, English, Traditional Chinese, and Simplified Chinese. Tenant screening, guarantor companies, the contract, and the procedures after moving in — we go through them together, one by one. Our representative, Joji Uramatsu, lived in four countries as the former China General Bureau Chief of the Mainichi Shimbun, and has himself been the one searching for a home in a foreign country. That is why we understand what worries you.
+        For foreign residents, house hunting in Japan is <strong>supported by Yotsuba Real Estate Co., Ltd. in your own language</strong>. We assist you in Japanese, English, Traditional Chinese, and Simplified Chinese. Tenant screening, guarantor companies, the contract, and the procedures after moving in — we go through them together, one by one. Our representative, Joji Uramatsu, was stationed in China, Taiwan, and Thailand as the former China General Bureau Chief of the Mainichi Shimbun, and has himself been the one searching for a home in a foreign country. That is why we understand what worries you.
       </p>
     ),
     internalLinks: [
@@ -131,7 +131,7 @@ const COPY: Record<LangCode, GlobalCopy> = {
     authorAlt: "Joji Uramatsu, Representative Director of Yotsuba Real Estate Co., Ltd.",
     authorLabel: "About the author",
     authorBio:
-      "Joji Uramatsu | Representative Director of Yotsuba Real Estate Co., Ltd.; full-time licensed real estate broker; gyoseishoshi lawyer. Former China General Bureau Chief of the Mainichi Shimbun (34 years as a journalist), with experience living in four countries. Passed the national exam for licensed social insurance and labor consultant (office opening scheduled for September 2026).",
+      "Joji Uramatsu | Representative Director of Yotsuba Real Estate Co., Ltd.; full-time licensed real estate broker; gyoseishoshi lawyer. Former China General Bureau Chief of the Mainichi Shimbun (34 years as a journalist), stationed in China, Taiwan, and Thailand. Passed the national exam for licensed social insurance and labor consultant (office opening scheduled for September 2026).",
   },
   "zh-tw": {
     metaTitle: "外國人在日本找房｜多語言支援的四葉不動産",

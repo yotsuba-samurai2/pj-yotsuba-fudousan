@@ -151,7 +151,7 @@ const COPY: Record<LangCode, SouzokuCopy> = {
         id: "sale",
         title: "売却",
         description:
-          "住む予定がない、維持費や税負担が重い、相続人の間で分けたい——そんなときの現実的な出口が売却です。文京区の相場をふまえた査定から、売却に伴う手続きの段取りまで、提携する専門家（行政書士・司法書士・税理士等）と連携してワンストップで進めます。相続した一棟アパート・ビルなど収益不動産の売却もご相談ください。",
+          "住む予定がない、維持費や税負担が重い、相続人の間で分けたい——そんなときの現実的な出口が売却です。文京区の相場をふまえた査定から、売却に伴う手続きの段取りまで、提携する専門家（行政書士・司法書士・税理士等）と連携して進めます。相続した一棟アパート・ビルなど収益不動産の売却もご相談ください。",
       },
     ],
     internalHeading: "あわせてご覧いただきたいページ",
@@ -195,7 +195,7 @@ const COPY: Record<LangCode, SouzokuCopy> = {
     sourcesNote:
       "※各法令の最終改正日は本ページ作成時点で個別に裏取りしていません（未検証）。本ページは一般的な情報の提供を目的とするもので、個別の法的判断・税額計算を行うものではありません。最終的な判断は有資格者（提携する専門家）にご確認ください。",
     repBio:
-      "元毎日新聞記者として国内外の現場を歩き、中国総局長を務めたのち、地元・文京区小日向で四葉不動産を営んでいます。相続した不動産のご相談は、不動産・手続き・ご家族の事情が絡み合った「整理」から始まります。取材で培った、聞いて・整理して・分かりやすく伝える力と、宅地建物取引士・行政書士としての知識を土台に、最初の一歩から出口まで伴走します。手続きが必要な場面では、提携する専門家と連携してワンストップでお手伝いします。",
+      "元毎日新聞記者として国内外の現場を歩き、中国総局長を務めたのち、地元・文京区小日向で四葉不動産を営んでいます。相続した不動産のご相談は、不動産・手続き・ご家族の事情が絡み合った「整理」から始まります。取材で培った、聞いて・整理して・分かりやすく伝える力と、宅地建物取引士・行政書士としての知識を土台に、最初の一歩から出口まで伴走します。手続きが必要な場面では、提携する専門家と連携してお手伝いします。",
     repRole: "代表",
     ctaHeading: "まずはお気軽にご相談ください",
     ctaLead:
@@ -288,7 +288,7 @@ const COPY: Record<LangCode, SouzokuCopy> = {
         id: "sale",
         title: "Sale",
         description:
-          "No plans to live there, heavy maintenance costs and tax burden, or heirs who want to divide the proceeds—in such cases, selling is the realistic exit. From an appraisal based on Bunkyo market conditions to organizing the procedures involved in a sale, we move forward one-stop in coordination with our partner professionals (gyoseishoshi lawyers, judicial scriveners, licensed tax accountants, and others). We also welcome consultations on selling inherited income properties such as whole apartment buildings and office buildings.",
+          "No plans to live there, heavy maintenance costs and tax burden, or heirs who want to divide the proceeds—in such cases, selling is the realistic exit. From an appraisal based on Bunkyo market conditions to organizing the procedures involved in a sale, we move forward in coordination with our partner professionals (gyoseishoshi lawyers, judicial scriveners, licensed tax accountants, and others). We also welcome consultations on selling inherited income properties such as whole apartment buildings and office buildings.",
       },
     ],
     internalHeading: "Pages you may also want to see",
@@ -332,7 +332,7 @@ const COPY: Record<LangCode, SouzokuCopy> = {
     sourcesNote:
       "Note: The dates of the latest amendments to each law have not been individually verified as of the time this page was prepared (unverified). This page is intended to provide general information and does not make individual legal judgments or tax calculations. Please confirm final decisions with qualified professionals (our partner professionals).",
     repBio:
-      "After walking the field in Japan and abroad as a reporter for the Mainichi Shimbun and serving as its China General Bureau Chief, I now run Yotsuba Real Estate in my home neighborhood of Kohinata, Bunkyo. Consultations about inherited real estate begin with 'untangling' the property, the procedures, and the family circumstances intertwined in it. Building on the listening, organizing, and plain-spoken communication skills honed through reporting, and on my knowledge as a licensed real estate broker and gyoseishoshi lawyer, I walk with you from the first step to the exit. Where formal procedures are needed, we help one-stop in coordination with our partner professionals.",
+      "After walking the field in Japan and abroad as a reporter for the Mainichi Shimbun and serving as its China General Bureau Chief, I now run Yotsuba Real Estate in my home neighborhood of Kohinata, Bunkyo. Consultations about inherited real estate begin with 'untangling' the property, the procedures, and the family circumstances intertwined in it. Building on the listening, organizing, and plain-spoken communication skills honed through reporting, and on my knowledge as a licensed real estate broker and gyoseishoshi lawyer, I walk with you from the first step to the exit. Where formal procedures are needed, we help in coordination with our partner professionals.",
     repRole: "Representative",
     ctaHeading: "Feel free to consult us first",
     ctaLead:
@@ -423,7 +423,7 @@ const COPY: Record<LangCode, SouzokuCopy> = {
         id: "sale",
         title: "出售",
         description:
-          "沒有居住的打算、維持費與稅負沉重、想在繼承人之間分配——這些時候，出售就是務實的出口。從依文京區行情的估價，到出售相關手續的安排，皆與合作的專業人士（行政書士・司法書士・稅理士等）聯手一站式進行。繼承而來的整棟公寓・大樓等收益不動產的出售，也歡迎洽詢。",
+          "沒有居住的打算、維持費與稅負沉重、想在繼承人之間分配——這些時候，出售就是務實的出口。從依文京區行情的估價，到出售相關手續的安排，皆與合作的專業人士（行政書士・司法書士・稅理士等）聯手進行。繼承而來的整棟公寓・大樓等收益不動產的出售，也歡迎洽詢。",
       },
     ],
     internalHeading: "建議一併閱覽的頁面",
@@ -467,7 +467,7 @@ const COPY: Record<LangCode, SouzokuCopy> = {
     sourcesNote:
       "※各法令的最終修正日期，於本頁製作時點未逐一查證（未經查證）。本頁以提供一般資訊為目的，不進行個別的法律判斷・稅額計算。最終判斷請向具資格的專業人士（合作的專業人士）確認。",
     repBio:
-      "曾以每日新聞記者的身分走訪國內外現場，並擔任中國總局長，之後在家鄉・文京區小日向經營四葉不動産。繼承不動產的諮詢，往往從整理不動產・手續・家人情況相互交織的狀態開始。以採訪培養出的傾聽・整理・淺白傳達的能力，加上宅地建物取引士・行政書士的知識為基礎，從最初的一步到出口陪伴您。需要辦理手續的場合，將與合作的專業人士聯手一站式協助。",
+      "曾以每日新聞記者的身分走訪國內外現場，並擔任中國總局長，之後在家鄉・文京區小日向經營四葉不動産。繼承不動產的諮詢，往往從整理不動產・手續・家人情況相互交織的狀態開始。以採訪培養出的傾聽・整理・淺白傳達的能力，加上宅地建物取引士・行政書士的知識為基礎，從最初的一步到出口陪伴您。需要辦理手續的場合，將與合作的專業人士聯手協助。",
     repRole: "代表",
     ctaHeading: "歡迎先輕鬆諮詢",
     ctaLead:
@@ -558,7 +558,7 @@ const COPY: Record<LangCode, SouzokuCopy> = {
         id: "sale",
         title: "出售",
         description:
-          "没有居住的打算、维持费与税负沉重、想在继承人之间分配——这些时候，出售就是务实的出口。从依据文京区行情的估价，到出售相关手续的安排，均与合作的专业人士（行政书士・司法书士・税理士等）协作一站式推进。继承而来的整栋公寓・大楼等收益不动产的出售，也欢迎咨询。",
+          "没有居住的打算、维持费与税负沉重、想在继承人之间分配——这些时候，出售就是务实的出口。从依据文京区行情的估价，到出售相关手续的安排，均与合作的专业人士（行政书士・司法书士・税理士等）协作推进。继承而来的整栋公寓・大楼等收益不动产的出售，也欢迎咨询。",
       },
     ],
     internalHeading: "建议一并浏览的页面",
@@ -602,7 +602,7 @@ const COPY: Record<LangCode, SouzokuCopy> = {
     sourcesNote:
       "※各法令的最终修正日期，在本页制作时点未逐一核实（未经核实）。本页以提供一般信息为目的，不进行个别的法律判断・税额计算。最终判断请向具备资格的专业人士（合作的专业人士）确认。",
     repBio:
-      "曾以每日新闻记者的身份走访国内外现场，并担任中国总局长，之后在家乡・文京区小日向经营四葉不動産。继承不动产的咨询，往往从整理不动产・手续・家人情况相互交织的状态开始。以采访培养出的倾听・梳理・浅显传达的能力，加上宅地建物取引士・行政书士的知识为基础，从最初的一步到出口陪伴您。需要办理手续时，将与合作的专业人士协作提供一站式协助。",
+      "曾以每日新闻记者的身份走访国内外现场，并担任中国总局长，之后在家乡・文京区小日向经营四葉不動産。继承不动产的咨询，往往从整理不动产・手续・家人情况相互交织的状态开始。以采访培养出的倾听・梳理・浅显传达的能力，加上宅地建物取引士・行政书士的知识为基础，从最初的一步到出口陪伴您。需要办理手续时，将与合作的专业人士协作提供协助。",
     repRole: "代表",
     ctaHeading: "欢迎先轻松咨询",
     ctaLead:

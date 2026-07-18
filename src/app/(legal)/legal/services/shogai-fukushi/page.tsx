@@ -53,7 +53,7 @@ const COPY: Record<LangCode, ShogaiFukushiCopy> = {
   ja: {
     metaTitle: "障害福祉サービスの指定申請｜四葉行政書士事務所",
     metaDesc:
-      "障害福祉サービス（グループホーム・放課後等デイサービス等）の事業者指定申請を、文京区の四葉行政書士事務所が支援します。法人設立から指定申請、加算届、運営支援までワンストップ。元新聞記者の行政書士が複雑な要件を整理します。",
+      "障害福祉サービス（グループホーム・放課後等デイサービス等）の事業者指定申請を、文京区の四葉行政書士事務所が支援します。法人設立から指定申請、加算届、運営支援まで対応。元新聞記者の行政書士が複雑な要件を整理します。",
     crumbHome: "ホーム",
     crumbServices: "業務案内",
     crumbCurrent: "障害福祉サービスの指定申請",
@@ -73,7 +73,7 @@ const COPY: Record<LangCode, ShogaiFukushiCopy> = {
       },
       {
         q: "四葉行政書士事務所は、どこまで対応できますか？",
-        a: "法人設立、指定申請、加算届・変更届、指定後の運営支援まで一体で対応します。労務（就業規則・賃金等）は社会保険労務士、登記は司法書士、税務は税理士の領域です。物件は関連事業の四葉不動産が別事業体として扱います。",
+        a: "法人設立、指定申請、加算届・変更届、指定後の運営支援まで対応します。労務（就業規則・賃金等）は社会保険労務士、登記は司法書士、税務は税理士の領域です。物件は関連事業の四葉不動産が別事業体として扱います。",
       },
       {
         q: "グループホーム開設の相談は、どのタイミングがいいですか？",
@@ -125,7 +125,7 @@ const COPY: Record<LangCode, ShogaiFukushiCopy> = {
     ),
     sec2Body: (locale) => (
       <>
-        <p className="mt-3 leading-relaxed text-text">四葉行政書士事務所は、指定申請の前後まで含めて、次の範囲を一体で対応します。</p>
+        <p className="mt-3 leading-relaxed text-text">四葉行政書士事務所は、指定申請の前後まで含めて、次の範囲に対応します。</p>
         <ul className="mt-3 space-y-2 text-sm text-text">
           <li>
             <strong>法人設立</strong>：指定の前提となる法人の設立書類作成（株式会社・合同会社・NPO法人等）
@@ -228,7 +228,7 @@ const COPY: Record<LangCode, ShogaiFukushiCopy> = {
   en: {
     metaTitle: "Disability-Welfare Service Designation｜四葉行政書士事務所 (Gyoseishoshi Office in Bunkyo, Tokyo)",
     metaDesc:
-      "Support for provider designation of disability-welfare services (group homes, after-school day services, and more) by 四葉行政書士事務所, a gyoseishoshi (administrative scrivener) office in Bunkyo, Tokyo. One-stop support from incorporation to the designation application, add-on notifications, and operations. A former newspaper journalist untangles the complex requirements.",
+      "Support for provider designation of disability-welfare services (group homes, after-school day services, and more) by 四葉行政書士事務所, a gyoseishoshi (administrative scrivener) office in Bunkyo, Tokyo. Support from incorporation to the designation application, add-on notifications, and operations. A former newspaper journalist untangles the complex requirements.",
     crumbHome: "Home",
     crumbServices: "Services",
     crumbCurrent: "Disability-Welfare Service Designation",
@@ -402,7 +402,7 @@ const COPY: Record<LangCode, ShogaiFukushiCopy> = {
   "zh-tw": {
     metaTitle: "障礙福祉服務指定申請｜四葉行政書士事務所",
     metaDesc:
-      "文京區的四葉行政書士事務所，協助障礙福祉服務（團體家屋・放學後等日間服務等）的事業者指定申請。從法人設立到指定申請、加算申報、營運支援一站式服務。由曾任新聞記者的行政書士，為您整理複雜的要件。",
+      "文京區的四葉行政書士事務所，協助障礙福祉服務（團體家屋・放學後等日間服務等）的事業者指定申請。從法人設立到指定申請、加算申報、營運支援均可對應。由曾任新聞記者的行政書士，為您整理複雜的要件。",
     crumbHome: "首頁",
     crumbServices: "業務介紹",
     crumbCurrent: "障礙福祉服務指定申請",
@@ -577,7 +577,7 @@ const COPY: Record<LangCode, ShogaiFukushiCopy> = {
   zh: {
     metaTitle: "残障福祉服务指定申请｜四葉行政書士事務所",
     metaDesc:
-      "文京区的四葉行政書士事務所，协助残障福祉服务（团体家屋・放学后等日间服务等）的事业者指定申请。从法人设立到指定申请、加算申报、运营支援一站式服务。由曾任新闻记者的行政书士，为您梳理复杂的要件。",
+      "文京区的四葉行政書士事務所，协助残障福祉服务（团体家屋・放学后等日间服务等）的事业者指定申请。从法人设立到指定申请、加算申报、运营支援均可对应。由曾任新闻记者的行政书士，为您梳理复杂的要件。",
     crumbHome: "首页",
     crumbServices: "业务介绍",
     crumbCurrent: "残障福祉服务指定申请",

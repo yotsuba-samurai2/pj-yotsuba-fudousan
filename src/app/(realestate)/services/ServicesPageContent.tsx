@@ -80,7 +80,7 @@ export default function ServicesPageContent() {
           {
             name: "物件管理",
             description:
-              "オーナー様向けの賃貸管理サービス。入居者対応から建物管理まで一括対応します。",
+              "オーナー様向けの賃貸管理サービス。入居者対応から建物管理まで対応します。",
           },
           {
             name: "外国人サポート",
