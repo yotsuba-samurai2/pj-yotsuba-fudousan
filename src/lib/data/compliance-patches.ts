@@ -264,6 +264,144 @@ export const COMPLIANCE_TRANSLATION_PATCHES: Record<LangCode, CompliancePatch[]>
 };
 
 /**
+ * 値ベースの是正パッチ（パス非依存・文字列リーフの完全一致で置換）。
+ * 2026-07-19 本番ページのRSCペイロード実測から抽出した「DBに現存する禁止語入りの値」が対象。
+ * パスが特定できない・複数箇所に重複するキー（tagline / heroDescription2 / servicesPage配下等）を
+ * 漏れなく是正するため、値そのものを照合キーにする（完全一致のみ＝部分一致では書き換えない）。
+ * 全ロケールのツリーに適用（値は言語固有なので誤爆しない）。
+ */
+export const COMPLIANCE_VALUE_PATCHES: { from: string; to: string }[] = [
+  // ── ja ──
+  {
+    from: "2つの事業が連携し、お客さまの課題をワンストップで解決します。",
+    to: "2つの事業がそれぞれ別契約で受任し、お客さまの課題を解決します。",
+  },
+  { from: "4カ国での赴任経験", to: "中国・台湾・タイでの赴任経験" },
+  {
+    from: "お部屋探しから審査・契約まで、ワンストップでサポートします",
+    to: "お部屋探しから審査・契約まで、各ステップをサポートします",
+  },
+  {
+    from: "また、4カ国での海外経験と多言語対応を活かし、外国人の在留資格・ビザ申請にも強みがあります。不動産（四葉不動産）と法務をワンストップで解決できるのが、当事務所の最大の特長です。",
+    to: "また、中国や台湾、タイでの駐在経験と多言語対応を活かし、外国人の在留資格・ビザ申請にも強みがあります。",
+  },
+  {
+    from: "ビザ・在留資格の手続きも社内で対応。不動産と法務をワンストップで解決します。",
+    to: "ビザ・在留資格の手続きは、併設の四葉行政書士事務所が別契約で受任します。",
+  },
+  {
+    from: "不動産×法務のワンストップ対応で、あなたのビジネスと暮らしを支えます。",
+    to: "不動産と法務、2つの専門事業があなたのビジネスと暮らしを支えます。",
+  },
+  {
+    from: "文京区小日向から、法務手続きをワンストップでサポートします。",
+    to: "文京区小日向から、法務手続きをサポートします。",
+  },
+  {
+    from: "新聞記者として世界各地を飛び回り、4カ国で暮らしてきました。その中で培った情報収集力、交渉力、そして幅広い人脈——。これらは不動産の世界でも、大きな武器になると確信しています。",
+    to: "新聞記者として世界各地を飛び回り、中国や台湾、タイで暮らしてきました。その中で培った情報収集力、交渉力、そして幅広い人脈——。これらは不動産の世界でも、大きな武器になると確信しています。",
+  },
+  {
+    from: "株式会社・合同会社の設立手続きをサポート。定款作成から設立手続きまで、不動産（事務所探し）と合わせてワンストップ対応。登記は提携司法書士が対応します。",
+    to: "株式会社・合同会社の設立手続きをサポート。定款作成から申請書類までを支援します。事務所探しは四葉不動産が別契約で受任し、登記は提携司法書士が対応します。",
+  },
+  { from: "補助金・ビザ・会社設立をワンストップで。", to: "補助金・ビザ・会社設立の申請を支援。" },
+  // ── en ──
+  {
+    from: "A one-stop group covering real estate, administrative scrivener, and social insurance & labor consulting.",
+    to: "A professional group of real estate and administrative-scrivener practices.",
+  },
+  {
+    from: "From apartment hunting to screening and contracts — one-stop support",
+    to: "From apartment hunting to screening and contracts — support at every step",
+  },
+  {
+    from: "Providing one-stop legal procedure support from Kohinata, Bunkyo-ku.",
+    to: "Providing legal procedure support from Kohinata, Bunkyo-ku.",
+  },
+  {
+    from: "Subsidies & grants, residence status & visa applications, company formation, and various permits. 四葉グループ's administrative scrivener office provides one-stop legal procedure support.",
+    to: "Subsidies, residence status & visa applications, company formation, and various permits. 四葉グループ's administrative scrivener office provides legal procedure support.",
+  },
+  {
+    from: "Subsidies, visas, and company formation — all in one place.",
+    to: "Support for subsidies, visas, and company formation.",
+  },
+  {
+    from: "Two businesses working together to solve your challenges in one place.",
+    to: "Two businesses, each engaged under a separate contract, working to solve your challenges.",
+  },
+  {
+    from: "Visa and residence status procedures are handled in-house. We provide a one-stop solution for real estate and legal matters.",
+    to: "Visa and residence status procedures are handled by the adjoining gyoseishoshi office under a separate engagement.",
+  },
+  {
+    from: "We support incorporation procedures for stock companies (KK) and limited liability companies (GK). From articles of incorporation to registration procedures, we offer a one-stop service combined with real estate (office search). Registration is handled by our partner judicial scrivener.",
+    to: "We support incorporation procedures for stock companies (KK) and limited liability companies (GK), from articles of incorporation through the application paperwork. Office search is handled by 四葉不動産 under a separate engagement, and registration by our partner judicial scrivener.",
+  },
+  {
+    from: "With our one-stop real estate and legal services, we support your business and daily life.",
+    to: "Our real estate and legal practices, each engaged separately, support your business and daily life.",
+  },
+  // ── zh-tw ──
+  { from: "4個國家的駐外經驗", to: "中國、台灣、泰國的駐外經驗" },
+  {
+    from: "二大業務聯動，為客戶的問題提供一站式解決方案。",
+    to: "兩大業務各自另行簽約受任，為客戶解決問題。",
+  },
+  { from: "從找房到審查・簽約，一站式全程支援", to: "從找房到審查・簽約，逐步支援" },
+  {
+    from: "從文京區小日向為您提供法務手續的一站式支援。",
+    to: "從文京區小日向為您提供法務手續的支援。",
+  },
+  {
+    from: "作為新聞記者在世界各地奔波，曾在4個國家生活。在此過程中培養的資訊收集能力、談判能力以及廣泛的人脈——這些在行政書士的業務中也成為了強大的武器。",
+    to: "作為新聞記者在世界各地奔波，曾在中國、台灣、泰國生活。在此過程中培養的資訊收集能力、談判能力以及廣泛的人脈——這些在行政書士的業務中也成為了強大的武器。",
+  },
+  {
+    from: "支援股份有限公司・合同公司的設立手續。從章程編製到設立手續，結合不動產（辦公室選址）提供一站式服務。登記由合作司法書士辦理。",
+    to: "支援股份有限公司・合同公司的設立手續，從章程編製到申請文件。辦公室選址由四葉不動産另行簽約承辦，登記由合作司法書士辦理。",
+  },
+  {
+    from: "簽證・在留資格的手續也可在公司內部辦理。不動產與法務一站式解決。",
+    to: "簽證・在留資格的手續由併設的四葉行政書士事務所另行簽約受任。",
+  },
+  { from: "補助金・簽證・公司設立一站式服務。", to: "補助金・簽證・公司設立的申請支援。" },
+  {
+    from: "透過不動產與法務的一站式服務，支援您的商業與生活。",
+    to: "不動產與法務兩項專業事業，支援您的商業與生活。",
+  },
+  // ── zh ──
+  { from: "4个国家的驻外经验", to: "中国、台湾、泰国的驻外经验" },
+  {
+    from: "二大业务联动，为客户的问题提供一站式解决方案。",
+    to: "两大业务各自另行签约受任，为客户解决问题。",
+  },
+  { from: "从找房到审查・签约，一站式全程支持", to: "从找房到审查・签约，逐步支持" },
+  {
+    from: "从文京区小日向为您提供法务手续的一站式支持。",
+    to: "从文京区小日向为您提供法务手续的支持。",
+  },
+  {
+    from: "支持股份有限公司・合同公司的设立手续。从章程编制到设立手续，结合不动产（办公室选址）提供一站式服务。登记由合作司法书士办理。",
+    to: "支持股份有限公司・合同公司的设立手续，从章程编制到申请文件。办公室选址由四葉不動産另行签约承办，登记由合作司法书士办理。",
+  },
+  {
+    from: "此外，凭借4个国家的海外经验和多语言能力，在外国人的在留资格・签证申请方面也具有优势。能够将不动产（四葉不動産）与法务一站式解决，是本事务所的最大特色。",
+    to: "此外，凭借中国、台湾、泰国的驻在经验和多语言能力，在外国人的在留资格・签证申请方面也具有优势。",
+  },
+  {
+    from: "签证・在留资格的手续也可在公司内部办理。不动产与法务一站式解决。",
+    to: "签证・在留资格的手续由并设的四葉行政書士事務所另行签约受任。",
+  },
+  { from: "补助金・签证・公司设立一站式服务。", to: "补助金・签证・公司设立的申请支持。" },
+  {
+    from: "通过不动产与法务的一站式服务，支持您的商业与生活。",
+    to: "不动产与法务两项专业事业，支持您的商业与生活。",
+  },
+];
+
+/**
  * 残存スキャン用の禁止語・国数表記リスト（適用後にDB全体を走査して残りを報告する）。
  * ヒット＝即NGではなく人間判断用のレポート（例：コラム本文の文脈語）。
  */
