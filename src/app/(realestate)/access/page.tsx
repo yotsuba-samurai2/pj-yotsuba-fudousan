@@ -55,11 +55,11 @@ const COPY: Record<LangCode, AccessCopy> = {
     h1: "アクセス・料金",
     intro: (
       <>
-        四葉不動産株式会社は、<strong>東京都文京区小日向４丁目２−５ 小日向安田ビル ２０３</strong>にあります。東京メトロ丸ノ内線「茗荷谷」駅から徒歩5分。TEL 03-6161-9428。営業時間は10:00〜18:00（定休：火・水）。ご来店前にLINEか電話でご連絡いただくとスムーズです。
+        四葉不動産株式会社は、<strong>東京都文京区小日向４丁目２－５ 小日向安田ビル ２０３</strong>にあります。東京メトロ丸ノ内線「茗荷谷」駅から徒歩5分。TEL 03-6161-9428。営業時間は10:00〜18:00（定休：火・水）。ご来店前にLINEか電話でご連絡いただくとスムーズです。
       </>
     ),
     accessRows: [
-      { k: "住所", v: "東京都文京区小日向４丁目２−５ 小日向安田ビル ２０３" },
+      { k: "住所", v: "東京都文京区小日向４丁目２－５ 小日向安田ビル ２０３" },
       { k: "最寄駅", v: "東京メトロ丸ノ内線「茗荷谷」駅 徒歩5分" },
       { k: "TEL", v: "03-6161-9428" },
       { k: "営業時間", v: "10:00〜18:00" },
@@ -109,7 +109,7 @@ const COPY: Record<LangCode, AccessCopy> = {
     authorAlt: "四葉不動産株式会社 代表取締役 浦松丈二",
     authorLabel: "この記事の著者",
     authorBio:
-      "浦松 丈二｜四葉不動産株式会社 代表取締役・専任宅地建物取引士。行政書士。元毎日新聞中国総局長（記者歴34年）・海外4カ国在住経験。社会保険労務士試験合格（2026年9月開業予定）。",
+      "浦松 丈二｜四葉不動産株式会社 代表取締役・専任宅地建物取引士。行政書士。元毎日新聞中国総局長（記者歴34年）。中国や台湾、タイに駐在。社会保険労務士試験合格（2026年9月開業予定）。",
   },
   en: {
     metaTitle: "Access & Fees | 四葉不動産株式会社 (Yotsuba Real Estate), 5 min from Myogadani Sta.",
@@ -121,13 +121,13 @@ const COPY: Record<LangCode, AccessCopy> = {
     intro: (
       <>
         Yotsuba Real Estate Co., Ltd. is located at{" "}
-        <strong>東京都文京区小日向４丁目２−５ 小日向安田ビル ２０３</strong> (Kohinata Yasuda Bldg. #203, 4-2-5 Kohinata, Bunkyo-ku, Tokyo), a 5-minute walk from Myogadani Station on the Tokyo Metro Marunouchi Line. TEL 03-6161-9428. Hours: 10:00–18:00 (closed Tuesdays and Wednesdays). Contacting us via LINE or phone before visiting makes things smoother.
+        <strong>東京都文京区小日向４丁目２－５ 小日向安田ビル ２０３</strong> (Kohinata Yasuda Bldg. #203, 4-2-5 Kohinata, Bunkyo-ku, Tokyo), a 5-minute walk from Myogadani Station on the Tokyo Metro Marunouchi Line. TEL 03-6161-9428. Hours: 10:00–18:00 (closed Tuesdays and Wednesdays). Contacting us via LINE or phone before visiting makes things smoother.
       </>
     ),
     accessRows: [
       {
         k: "Address",
-        v: "東京都文京区小日向４丁目２−５ 小日向安田ビル ２０３（Kohinata Yasuda Bldg. #203, 4-2-5 Kohinata, Bunkyo-ku, Tokyo）",
+        v: "東京都文京区小日向４丁目２－５ 小日向安田ビル ２０３（Kohinata Yasuda Bldg. #203, 4-2-5 Kohinata, Bunkyo-ku, Tokyo）",
       },
       { k: "Nearest station", v: "5 min walk from Myogadani Sta. (Tokyo Metro Marunouchi Line)" },
       { k: "TEL", v: "03-6161-9428" },
@@ -190,11 +190,11 @@ const COPY: Record<LangCode, AccessCopy> = {
     h1: "交通與費用",
     intro: (
       <>
-        四葉不動産株式会社位於<strong>東京都文京区小日向４丁目２−５ 小日向安田ビル ２０３</strong>。距東京Metro丸之內線「茗荷谷」站步行5分。TEL 03-6161-9428。營業時間10:00〜18:00（週二・週三公休）。來店前先以LINE或電話聯繫，安排會更順暢。
+        四葉不動産株式会社位於<strong>東京都文京区小日向４丁目２－５ 小日向安田ビル ２０３</strong>。距東京Metro丸之內線「茗荷谷」站步行5分。TEL 03-6161-9428。營業時間10:00〜18:00（週二・週三公休）。來店前先以LINE或電話聯繫，安排會更順暢。
       </>
     ),
     accessRows: [
-      { k: "地址", v: "東京都文京区小日向４丁目２−５ 小日向安田ビル ２０３" },
+      { k: "地址", v: "東京都文京区小日向４丁目２－５ 小日向安田ビル ２０３" },
       { k: "最近車站", v: "東京Metro丸之內線「茗荷谷」站 步行5分" },
       { k: "電話", v: "03-6161-9428" },
       { k: "營業時間", v: "10:00〜18:00" },
@@ -255,11 +255,11 @@ const COPY: Record<LangCode, AccessCopy> = {
     h1: "交通与费用",
     intro: (
       <>
-        四葉不動産株式会社位于<strong>東京都文京区小日向４丁目２−５ 小日向安田ビル ２０３</strong>。距东京Metro丸之内线“茗荷谷”站步行5分。电话 03-6161-9428。营业时间10:00〜18:00（周二・周三休息）。来店前先通过LINE或电话联系，安排会更顺畅。
+        四葉不動産株式会社位于<strong>東京都文京区小日向４丁目２－５ 小日向安田ビル ２０３</strong>。距东京Metro丸之内线“茗荷谷”站步行5分。电话 03-6161-9428。营业时间10:00〜18:00（周二・周三休息）。来店前先通过LINE或电话联系，安排会更顺畅。
       </>
     ),
     accessRows: [
-      { k: "地址", v: "東京都文京区小日向４丁目２−５ 小日向安田ビル ２０３" },
+      { k: "地址", v: "東京都文京区小日向４丁目２－５ 小日向安田ビル ２０３" },
       { k: "最近车站", v: "东京Metro丸之内线“茗荷谷”站 步行5分" },
       { k: "电话", v: "03-6161-9428" },
       { k: "营业时间", v: "10:00〜18:00" },

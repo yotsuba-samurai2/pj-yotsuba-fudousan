@@ -195,7 +195,7 @@ function autoReplyHtml({
           <td style="padding:20px 32px;background:#f9fafb;border-top:1px solid #e5e7eb;text-align:center;">
             <p style="margin:0 0 4px;font-size:13px;color:#374151;font-weight:600;">${escapeHtml(businessLabel)}</p>
             <p style="margin:0;font-size:12px;color:#9ca3af;">
-              〒112-0006 東京都文京区小日向４丁目２−５ 小日向安田ビル ２０３<br />
+              〒112-0006 東京都文京区小日向４丁目２－５ 小日向安田ビル ２０３<br />
               TEL: 03-6161-9428
             </p>
             <div style="margin-top:12px;">

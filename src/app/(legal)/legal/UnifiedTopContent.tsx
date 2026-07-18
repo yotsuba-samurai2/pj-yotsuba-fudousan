@@ -234,7 +234,7 @@ export default function UnifiedTopContent() {
 
                 <div>
                   <p className="text-sm leading-[1.9] text-text-muted">
-                    元新聞記者。4カ国での在住経験を活かし、多角的な視点で法務・労務をサポートします。
+                    元新聞記者。中国や台湾、タイでの駐在経験を活かし、多角的な視点で法務・労務をサポートします。
                   </p>
                   <div className="mt-6">
                     <p className="text-base font-bold">
