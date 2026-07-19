@@ -47,7 +47,7 @@ export const INDEPENDENT_NOTES: Record<LangCode, string> = {
 
 export const INDEPENDENT_NOTES_TRIPLE: Record<LangCode, string> = {
   ja: INDEPENDENT_NOTE_TRIPLE,
-  en: "Note: Yotsuba Real Estate Co., Ltd., Yotsuba Gyoseishoshi Office, and Yotsuba Labor and Social Security Attorney Office are separate, independent business entities and accept engagements individually (no referral fees are exchanged).",
+  en: "Note: Yotsuba Real Estate Co., Ltd., Yotsuba Gyoseishoshi Office, and Yotsuba Sharoushi (Certified Social Insurance and Labor Consultant) Office are separate, independent business entities and accept engagements individually (no referral fees are exchanged).",
   "zh-tw":
     "※四葉不動産株式会社、四葉行政書士事務所、四葉社会保険労務士事務所為各自獨立的事業體，分別承接委託（不收取亦不支付介紹費）。",
   zh: "※四葉不動産株式会社、四葉行政書士事務所、四葉社会保険労務士事務所为各自独立的事业体，分别承接委托（不收取亦不支付介绍费）。",

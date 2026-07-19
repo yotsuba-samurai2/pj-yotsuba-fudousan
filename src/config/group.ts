@@ -52,7 +52,7 @@ export const groupBusinesses = [
         {
           key: "labor",
           name: SR_OFFICE_NAME, // 事務所名は実行時結合（法27条ソース漏れ対策＝sr-name.ts参照）
-          nameEn: "Labor and Social Security Attorney",
+          nameEn: "Certified Social Insurance and Labor Consultant (Sharoushi)",
           description: "障害福祉・介護の労務、処遇改善加算、雇用助成金",
           href: "/labor",
           pathPrefix: "/labor",

@@ -233,7 +233,7 @@ const COPY: Record<LangCode, SouzokuCopy> = {
         question:
           "Can I also consult you about inheritance tax filing and registration procedures, all in one place?",
         answer:
-          "Yes—you can bring everything to us as a single point of contact. What Yotsuba Real Estate itself handles is the management, utilization, and sale of the real estate. Registration, tax matters, and inheritance procedures are each carried out in coordination with our partner professionals (gyoseishoshi lawyers, judicial scriveners, licensed tax accountants, and others). Note that when an inheritance tax return is required, the deadline is within ten months from the day following the day you learned of the commencement of the inheritance (Article 27, Paragraph 1 of the Inheritance Tax Act).",
+          "Yes. What Yotsuba Real Estate itself handles is the management, utilization, and sale of the real estate. Registration, tax matters, and inheritance procedures are each carried out in coordination with our partner professionals (gyoseishoshi (administrative scriveners), judicial scriveners, licensed tax accountants, and others). Note that when an inheritance tax return is required, the deadline is within ten months from the day following the day you learned of the commencement of the inheritance (Article 27, Paragraph 1 of the Inheritance Tax Act).",
       },
       {
         question: "I live far away and can't go see the family home in Bunkyo. Can you handle that?",
@@ -267,7 +267,7 @@ const COPY: Record<LangCode, SouzokuCopy> = {
         id: "sale",
         title: "Sale",
         description:
-          "No plans to live there, heavy maintenance costs and tax burden, or heirs who want to divide the proceeds—in such cases, selling is the realistic exit. From an appraisal based on Bunkyo market conditions to organizing the procedures involved in a sale, we move forward in coordination with our partner professionals (gyoseishoshi lawyers, judicial scriveners, licensed tax accountants, and others). We also welcome consultations on selling inherited income properties such as whole apartment buildings and office buildings.",
+          "No plans to live there, heavy maintenance costs and tax burden, or heirs who want to divide the proceeds—in such cases, selling is the realistic exit. From an appraisal based on Bunkyo market conditions to organizing the procedures involved in a sale, we move forward in coordination with our partner professionals (gyoseishoshi (administrative scriveners), judicial scriveners, licensed tax accountants, and others). We also welcome consultations on selling inherited income properties such as whole apartment buildings and office buildings.",
       },
     ],
     internalHeading: "Pages you may also want to see",
@@ -311,7 +311,7 @@ const COPY: Record<LangCode, SouzokuCopy> = {
     sourcesNote:
       "Note: The dates of the latest amendments to each law have not been individually verified as of the time this page was prepared (unverified). This page is intended to provide general information and does not make individual legal judgments or tax calculations. Please confirm final decisions with qualified professionals (our partner professionals).",
     repBio:
-      "After walking the field in Japan and abroad as a reporter for the Mainichi Shimbun and serving as its China General Bureau Chief, I now run Yotsuba Real Estate in my home neighborhood of Kohinata, Bunkyo. Consultations about inherited real estate begin with 'untangling' the property, the procedures, and the family circumstances intertwined in it. Building on the listening, organizing, and plain-spoken communication skills honed through reporting, and on my knowledge as a licensed real estate broker and gyoseishoshi lawyer, I walk with you from the first step to the exit. Where formal procedures are needed, we help in coordination with our partner professionals.",
+      "After walking the field in Japan and abroad as a reporter for the Mainichi Shimbun and serving as its China General Bureau Chief, I now run Yotsuba Real Estate in my home neighborhood of Kohinata, Bunkyo. Consultations about inherited real estate begin with 'untangling' the property, the procedures, and the family circumstances intertwined in it. Building on the listening, organizing, and plain-spoken communication skills honed through reporting, and on my knowledge as a Licensed Real Estate Transaction Specialist and Gyoseishoshi (Administrative Scrivener), I walk with you from the first step to the exit. Where formal procedures are needed, we help in coordination with our partner professionals.",
     repRole: "Representative",
     ctaHeading: "Feel free to consult us first",
     ctaLead:
@@ -368,7 +368,7 @@ const COPY: Record<LangCode, SouzokuCopy> = {
       {
         question: "遺產稅的申報與登記手續，也可以一併諮詢嗎？",
         answer:
-          "可以，您可以把本公司當作統一窗口一併諮詢。四葉不動産負責的是不動產的管理・活用・出售；登記・稅務・繼承手續，則分別與合作的專業人士（行政書士・司法書士・稅理士等）聯手進行。另外，若需要申報遺產稅，期限為自知悉繼承開始之日的翌日起10個月以內（相續稅法第27條第1項）。",
+          "可以。四葉不動産負責的是不動產的管理・活用・出售；登記・稅務・繼承手續，則分別與合作的專業人士（行政書士・司法書士・稅理士等）聯手進行。另外，若需要申報遺產稅，期限為自知悉繼承開始之日的翌日起10個月以內（相續稅法第27條第1項）。",
       },
       {
         question: "住在遠方，無法親自去看文京區的老家。可以協助嗎？",
@@ -503,7 +503,7 @@ const COPY: Record<LangCode, SouzokuCopy> = {
       {
         question: "遗产税的申报与登记手续，也可以一并咨询吗？",
         answer:
-          "可以，您可以把本公司作为统一窗口一并咨询。四葉不動産负责的是不动产的管理・活用・出售；登记・税务・继承手续，则分别与合作的专业人士（行政书士・司法书士・税理士等）协作推进。另外，若需要申报遗产税，期限为自知悉继承开始之日的翌日起10个月以内（相续税法第27条第1项）。",
+          "可以。四葉不動産负责的是不动产的管理・活用・出售；登记・税务・继承手续，则分别与合作的专业人士（行政书士・司法书士・税理士等）协作推进。另外，若需要申报遗产税，期限为自知悉继承开始之日的翌日起10个月以内（相续税法第27条第1项）。",
       },
       {
         question: "住在远方，无法亲自去看文京区的老家。可以协助吗？",

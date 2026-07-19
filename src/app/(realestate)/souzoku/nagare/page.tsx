@@ -119,7 +119,7 @@ const COPY: Record<LangCode, SouzokuNagareCopy> = {
   en: {
     metaTitle: "Inherited Real Estate: From Consultation to Sale or Utilization | 四葉不動産株式会社 (Yotsuba Real Estate)",
     metaDesc:
-      "How to move forward with inherited real estate — Yotsuba Real Estate Co., Ltd. explains the process from your first consultation through organizing the current situation, appraisal, deciding on a policy of management, utilization, or sale, to contract and handover. From our local base in Myogadani, Bunkyo-ku, a former newspaper reporter and licensed real estate broker helps you take the first step via LINE, phone, or online.",
+      "How to move forward with inherited real estate — Yotsuba Real Estate Co., Ltd. explains the process from your first consultation through organizing the current situation, appraisal, deciding on a policy of management, utilization, or sale, to contract and handover. From our local base in Myogadani, Bunkyo-ku, a former newspaper reporter and Licensed Real Estate Transaction Specialist helps you take the first step via LINE, phone, or online.",
     breadcrumbHome: "Home",
     breadcrumbParent: "Inheriting Property in Bunkyo",
     breadcrumbCurrent: "From Consultation to Resolution",
@@ -185,7 +185,7 @@ const COPY: Record<LangCode, SouzokuNagareCopy> = {
     authorAlt: "Joji Uramatsu, Representative Director of Yotsuba Real Estate Co., Ltd.",
     authorLabel: "About the author",
     authorBio:
-      "Joji Uramatsu | Representative Director of Yotsuba Real Estate Co., Ltd.; full-time licensed real estate broker; gyoseishoshi lawyer. Former China General Bureau Chief of the Mainichi Shimbun (34 years as a journalist), stationed in China, Taiwan, and Thailand. Passed the national exam for licensed social insurance and labor consultant (office opening scheduled for September 2026).",
+      "Joji Uramatsu | Representative Director of Yotsuba Real Estate Co., Ltd.; full-time Licensed Real Estate Transaction Specialist (宅地建物取引士); Gyoseishoshi (Administrative Scrivener). Former China General Bureau Chief of the Mainichi Shimbun (34 years as a journalist), stationed in China, Taiwan, and Thailand. Passed the national exam for licensed social insurance and labor consultant (office opening scheduled for September 2026).",
   },
   "zh-tw": {
     metaTitle: "繼承的不動產：從諮詢到出售・活用的流程｜四葉不動産",

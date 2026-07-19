@@ -164,7 +164,7 @@ const COPY: Record<LangCode, ServicesCopy> = {
           <strong>should that property really be sold? Bought? Should you make a move at all?</strong>
         </>
       ),
-      p2: "Yotsuba Real Estate is a consulting-style real estate company whose representative is a licensed real estate broker and former China General Bureau Chief of the Mainichi Shimbun (34 years as a journalist). A journalist's job is to gather facts, verify them, and convey them in plain language. We brought that method into real estate.",
+      p2: "Yotsuba Real Estate is a consulting-style real estate company whose representative is a Licensed Real Estate Transaction Specialist and former China General Bureau Chief of the Mainichi Shimbun (34 years as a journalist). A journalist's job is to gather facts, verify them, and convey them in plain language. We brought that method into real estate.",
       diagramLead: (
         <>
           Before any brokerage, we deliver the <b className="text-primary">material</b>—the one who decides is you.
@@ -196,7 +196,7 @@ const COPY: Record<LangCode, ServicesCopy> = {
         {
           tag: "Inheriting a property?",
           title: "Inherited-Property Consulting",
-          body: "For a house or land inherited from your parents, we work backward from the three exits: managing, utilizing, or selling. Starting from the inheritance-registration deadline (mandatory since April 2024; three years in principle), we coordinate with tax accountants, judicial scriveners, and gyoseishoshi lawyers to lay out the whole sequence on a single sheet—untangling a succession where feelings and finances intertwine, with facts.",
+          body: "For a house or land inherited from your parents, we work backward from the three exits: managing, utilizing, or selling. Starting from the inheritance-registration deadline (mandatory since April 2024; three years in principle), we coordinate with tax accountants, judicial scriveners, and gyoseishoshi (administrative scriveners) to lay out the whole sequence on a single sheet—untangling a succession where feelings and finances intertwine, with facts.",
           linkLabel: "→ The complete guide",
         },
         {

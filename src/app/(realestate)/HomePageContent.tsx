@@ -141,7 +141,7 @@ const COPY: Record<LangCode, TopCopy> = {
     intro: (
       <>
         <strong>Yotsuba Real Estate Co., Ltd. (四葉不動産株式会社) is a real estate company in Kohinata, Bunkyo-ku, Tokyo.</strong>{" "}
-        What should you do with the house you inherited? How do you secure a property for a group home or company housing? Based in the Myogadani neighborhood, our representative—a former newspaper journalist who is a licensed real estate broker and gyoseishoshi lawyer—supports you from the very first step. Room-hunting support for international residents is available in Japanese, English, Traditional Chinese, and Simplified Chinese.
+        What should you do with the house you inherited? How do you secure a property for a group home or company housing? Based in the Myogadani neighborhood, our representative—a former newspaper journalist who is a Licensed Real Estate Transaction Specialist and Gyoseishoshi (Administrative Scrivener)—supports you from the very first step. Room-hunting support for international residents is available in Japanese, English, Traditional Chinese, and Simplified Chinese.
       </>
     ),
     pillars: [
@@ -177,7 +177,7 @@ const COPY: Record<LangCode, TopCopy> = {
     repAlt: "Joji Uramatsu, Representative Director of Yotsuba Real Estate Co., Ltd.",
     repName: "Joji Uramatsu",
     repBio:
-      "Former China General Bureau Chief of the Mainichi Shimbun (34 years as a journalist), stationed in China, Taiwan, and Thailand. Licensed real estate broker and gyoseishoshi lawyer. Passed the national exam for licensed social insurance and labor consultant (office opening scheduled for September 2026). For 34 years I listened to people's stories as a journalist—let's start by sorting out yours, together.",
+      "Former China General Bureau Chief of the Mainichi Shimbun (34 years as a journalist), stationed in China, Taiwan, and Thailand. Licensed Real Estate Transaction Specialist and Gyoseishoshi (Administrative Scrivener). Passed the national exam for licensed social insurance and labor consultant (office opening scheduled for September 2026). For 34 years I listened to people's stories as a journalist—let's start by sorting out yours, together.",
     profileLabel: "Profile: ",
     qa: [
       {

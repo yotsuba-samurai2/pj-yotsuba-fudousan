@@ -79,7 +79,7 @@ const COPY: Record<LangCode, LegalTopCopy> = {
     ],
     repName: "Joji Uramatsu",
     repBio:
-      "Former China General Bureau Chief of the Mainichi Shimbun (34 years as a journalist). Gyoseishoshi (Reg. No. 25087022) and licensed real estate broker. Passed the national exam for licensed social insurance and labor consultant (office opening scheduled for September 2026). Thirty-four years of turning facts into clear writing now go into every application we file.",
+      "Former China General Bureau Chief of the Mainichi Shimbun (34 years as a journalist). Gyoseishoshi (Reg. No. 25087022) and Licensed Real Estate Transaction Specialist. Passed the national exam for licensed social insurance and labor consultant (office opening scheduled for September 2026). Thirty-four years of turning facts into clear writing now go into every application we file.",
     profileLabel: "Profile: ",
     membershipsHeading: "Memberships",
     nav: [

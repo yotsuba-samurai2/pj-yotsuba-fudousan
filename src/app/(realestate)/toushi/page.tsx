@@ -102,7 +102,7 @@ const COPY: Record<LangCode, ToushiCopy> = {
         <div>
           <ReH2>なぜ四葉不動産に相談するのですか？</ReH2>
           <p className="mt-3 leading-relaxed text-text">
-            理由は「隣」にあります。グループホームの開設には物件のほかに<strong>事業者指定の申請</strong>が、外国人従業員の受け入れには<strong>在留資格</strong>が必要です。四葉不動産の関連事業には、これらを扱う四葉行政書士事務所があるため、<strong>物件確保からその後の手続きまでを見据えた相談</strong>が一つの窓口でできます。
+            理由は「隣」にあります。グループホームの開設には物件のほかに<strong>事業者指定の申請</strong>が、外国人従業員の受け入れには<strong>在留資格</strong>が必要です。四葉不動産の関連事業には、これらを扱う四葉行政書士事務所があるため、<strong>物件確保からその後の手続きまでを見据えた相談</strong>ができます。物件は四葉不動産株式会社が、指定申請などの手続きは四葉行政書士事務所が、それぞれ別契約で受任します。ご相談の入口は共通です。
           </p>
         </div>
 
@@ -142,7 +142,7 @@ const COPY: Record<LangCode, ToushiCopy> = {
     authorAlt: "Joji Uramatsu, Representative Director of Yotsuba Real Estate Co., Ltd.",
     authorLabel: "About the author",
     authorBio:
-      "Joji Uramatsu | Representative Director of Yotsuba Real Estate Co., Ltd.; full-time licensed real estate broker; gyoseishoshi lawyer. Former China General Bureau Chief of the Mainichi Shimbun (34 years as a journalist), stationed in China, Taiwan, and Thailand. Passed the national exam for licensed social insurance and labor consultant (office opening scheduled for September 2026).",
+      "Joji Uramatsu | Representative Director of Yotsuba Real Estate Co., Ltd.; full-time Licensed Real Estate Transaction Specialist (宅地建物取引士); Gyoseishoshi (Administrative Scrivener). Former China General Bureau Chief of the Mainichi Shimbun (34 years as a journalist), stationed in China, Taiwan, and Thailand. Passed the national exam for licensed social insurance and labor consultant (office opening scheduled for September 2026).",
     sections: (locale) => (
       <>
         <div>
@@ -170,7 +170,7 @@ const COPY: Record<LangCode, ToushiCopy> = {
         <div>
           <ReH2>Why consult Yotsuba Real Estate?</ReH2>
           <p className="mt-3 leading-relaxed text-text">
-            The reason is right next door. Opening a group home requires, in addition to the property, an <strong>application for service-provider designation</strong>; accepting international employees requires <strong>residence status</strong>. Yotsuba Real Estate&apos;s affiliated businesses include 四葉行政書士事務所 (Yotsuba Gyoseishoshi Office), which handles both—so you can <strong>consult through a single point of contact, with the whole path in view from securing the property to the procedures that follow</strong>.
+            The reason is right next door. Opening a group home requires, in addition to the property, an <strong>application for service-provider designation</strong>; accepting international employees requires <strong>residence status</strong>. Yotsuba Real Estate&apos;s affiliated businesses include 四葉行政書士事務所 (Yotsuba Gyoseishoshi Office), which handles both—so you can <strong>consult with the whole path in view, from securing the property to the procedures that follow</strong>. The property is handled by Yotsuba Real Estate Co., Ltd. and the designation application by Yotsuba Gyoseishoshi Office, each engaged under a separate contract. Your first inquiry can start in one place.
           </p>
         </div>
 
@@ -238,7 +238,7 @@ const COPY: Record<LangCode, ToushiCopy> = {
         <div>
           <ReH2>為什麼要諮詢四葉不動産？</ReH2>
           <p className="mt-3 leading-relaxed text-text">
-            理由就在「隔壁」。開設團體家屋，除了物件之外還需要<strong>事業者指定的申請</strong>；接納外籍員工則需要<strong>在留資格</strong>。四葉不動産的關聯事業中，設有承辦這些業務的四葉行政書士事務所，因此<strong>從取得物件到之後的手續，都能預先規劃、在同一個窗口諮詢</strong>。
+            理由就在「隔壁」。開設團體家屋，除了物件之外還需要<strong>事業者指定的申請</strong>；接納外籍員工則需要<strong>在留資格</strong>。四葉不動産的關聯事業中，設有承辦這些業務的四葉行政書士事務所，因此<strong>從取得物件到之後的手續，都能預先規劃後諮詢</strong>。物件由四葉不動産株式会社、指定申請等手續由四葉行政書士事務所，各自另行簽訂契約承辦。諮詢的入口是共同的。
           </p>
         </div>
 
@@ -306,7 +306,7 @@ const COPY: Record<LangCode, ToushiCopy> = {
         <div>
           <ReH2>为什么要咨询四葉不動産？</ReH2>
           <p className="mt-3 leading-relaxed text-text">
-            理由就在“隔壁”。开设团体家屋，除了物件之外还需要<strong>事业者指定的申请</strong>；接纳外籍员工则需要<strong>在留资格</strong>。四葉不動産的关联事业中，设有承办这些业务的四葉行政書士事務所，因此<strong>从取得物件到之后的手续，都能预先规划、在同一个窗口咨询</strong>。
+            理由就在“隔壁”。开设团体家屋，除了物件之外还需要<strong>事业者指定的申请</strong>；接纳外籍员工则需要<strong>在留资格</strong>。四葉不動産的关联事业中，设有承办这些业务的四葉行政書士事務所，因此<strong>从取得物件到之后的手续，都能预先规划后咨询</strong>。物件由四葉不動産株式会社、指定申请等手续由四葉行政书士事务所，各自另行签订合同承办。咨询的入口是共同的。
           </p>
         </div>
 

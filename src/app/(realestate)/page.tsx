@@ -27,7 +27,7 @@ const META: Record<LangCode, { title: string; description: string }> = {
     title:
       "四葉不動産｜Inherited Property & Investment / Business-Use Real Estate in Bunkyo, Tokyo",
     description:
-      "Yotsuba Real Estate Co., Ltd. (四葉不動産株式会社), a 5-minute walk from Myogadani Station in Kohinata, Bunkyo-ku, Tokyo. We handle inherited real estate—managing, utilizing, and selling—plus investment and business-use properties (group homes, company housing). Our representative, a former newspaper journalist, licensed real estate broker and gyoseishoshi lawyer, supports you from the very first step in Japanese, English, and Chinese.",
+      "Yotsuba Real Estate Co., Ltd. (四葉不動産株式会社), a 5-minute walk from Myogadani Station in Kohinata, Bunkyo-ku, Tokyo. We handle inherited real estate—managing, utilizing, and selling—plus investment and business-use properties (group homes, company housing). Our representative, a former newspaper journalist, Licensed Real Estate Transaction Specialist and Gyoseishoshi (Administrative Scrivener), supports you from the very first step in Japanese, English, and Chinese.",
   },
   "zh-tw": {
     title: "四葉不動産｜文京區的繼承不動產與投資・事業用不動產",

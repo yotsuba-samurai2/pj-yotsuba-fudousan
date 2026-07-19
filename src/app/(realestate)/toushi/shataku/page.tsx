@@ -54,7 +54,7 @@ const COPY: Record<LangCode, ShatakuCopy> = {
   ja: {
     metaTitle: "社宅・法人賃貸のサポート｜四葉不動産",
     metaDesc:
-      "法人向けの社宅・法人契約の賃貸を、四葉不動産株式会社がサポートします。外国人従業員の住居手配は日本語・英語・中国語（繁体字・簡体字）で対応。従業員の受け入れに必要な在留資格の手続きとあわせて、住まいの確保を一つの窓口で相談できます。",
+      "法人向けの社宅・法人契約の賃貸を、四葉不動産株式会社がサポートします。外国人従業員の住居手配は日本語・英語・中国語（繁体字・簡体字）で対応。住まいの確保は四葉不動産株式会社が、従業員の受け入れに必要な在留資格の手続きは四葉行政書士事務所が、それぞれ別契約で受任します。ご相談の入口は共通です。",
     crumbHome: "ホーム",
     crumbToushi: "投資用・事業用不動産",
     crumbCurrent: "社宅・法人賃貸",
@@ -90,7 +90,7 @@ const COPY: Record<LangCode, ShatakuCopy> = {
   en: {
     metaTitle: "Company Housing & Corporate Leasing Support | 四葉不動産 (Yotsuba Real Estate)",
     metaDesc:
-      "Yotsuba Real Estate Co., Ltd. supports company housing and corporate-lease rentals for businesses. Housing arrangements for international employees are handled in Japanese, English, Traditional Chinese, and Simplified Chinese. Together with the residence-status procedures required to bring employees on board, you can arrange housing through a single point of contact.",
+      "Yotsuba Real Estate Co., Ltd. supports company housing and corporate-lease rentals for businesses. Housing arrangements for international employees are handled in Japanese, English, Traditional Chinese, and Simplified Chinese. Housing is handled by Yotsuba Real Estate Co., Ltd. and the residence-status procedures required to bring employees on board by Yotsuba Gyoseishoshi Office, each engaged under a separate contract. Your first inquiry can start in one place.",
     crumbHome: "Home",
     crumbToushi: "Investment & Business-Use Real Estate",
     crumbCurrent: "Company Housing & Corporate Leasing",
@@ -122,12 +122,12 @@ const COPY: Record<LangCode, ShatakuCopy> = {
     authorAlt: "Joji Uramatsu, Representative Director of Yotsuba Real Estate Co., Ltd.",
     authorLabel: "About the author",
     authorBio:
-      "Joji Uramatsu | Representative Director of Yotsuba Real Estate Co., Ltd.; full-time licensed real estate broker; gyoseishoshi lawyer. Former China General Bureau Chief of the Mainichi Shimbun (34 years as a journalist), stationed in China, Taiwan, and Thailand. Passed the national exam for licensed social insurance and labor consultant (office opening scheduled for September 2026).",
+      "Joji Uramatsu | Representative Director of Yotsuba Real Estate Co., Ltd.; full-time Licensed Real Estate Transaction Specialist (宅地建物取引士); Gyoseishoshi (Administrative Scrivener). Former China General Bureau Chief of the Mainichi Shimbun (34 years as a journalist), stationed in China, Taiwan, and Thailand. Passed the national exam for licensed social insurance and labor consultant (office opening scheduled for September 2026).",
   },
   "zh-tw": {
     metaTitle: "員工宿舍・法人租賃支援｜四葉不動産",
     metaDesc:
-      "四葉不動産株式会社為法人企業提供員工宿舍・法人契約租賃的支援。外國員工的住居安排以日文・英文・中文（繁體・簡體）對應。連同聘僱外國員工所需的在留資格手續，住居的安排可在同一窗口一併諮詢。",
+      "四葉不動産株式会社為法人企業提供員工宿舍・法人契約租賃的支援。外國員工的住居安排以日文・英文・中文（繁體・簡體）對應。住居的安排由四葉不動産株式会社、聘僱外國員工所需的在留資格手續由四葉行政書士事務所，各自另行簽訂契約承辦。諮詢的入口是共同的。",
     crumbHome: "首頁",
     crumbToushi: "投資用・事業用不動產",
     crumbCurrent: "員工宿舍・法人租賃",
@@ -163,7 +163,7 @@ const COPY: Record<LangCode, ShatakuCopy> = {
   zh: {
     metaTitle: "员工宿舍・企业租赁支持｜四葉不動産",
     metaDesc:
-      "四葉不動産株式会社为企业提供员工宿舍・以公司名义签约租赁的支持。外国员工的住房安排以日语・英语・中文（繁体・简体）对应。连同聘用外国员工所需的在留资格手续，住房的落实可在同一窗口一并咨询。",
+      "四葉不動産株式会社为企业提供员工宿舍・以公司名义签约租赁的支持。外国员工的住房安排以日语・英语・中文（繁体・简体）对应。住房的落实由四葉不動産株式会社、聘用外国员工所需的在留资格手续由四葉行政书士事务所，各自另行签订合同承办。咨询的入口是共同的。",
     crumbHome: "首页",
     crumbToushi: "投资用・事业用不动产",
     crumbCurrent: "员工宿舍・企业租赁",

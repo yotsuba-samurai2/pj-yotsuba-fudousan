@@ -90,7 +90,7 @@ const COPY: Record<LangCode, GlobalCopy> = {
     s2H2: "在留資格や会社設立も相談できますか？",
     s2Body: (
       <>
-        住まいの手続きは四葉不動産が、<strong>在留資格・会社設立の手続き</strong>は関連事業の四葉行政書士事務所が対応します。日本での生活と事業の入口を、同じ窓口で相談できます。
+        住まいの手続きは四葉不動産が、<strong>在留資格・会社設立の手続き</strong>は関連事業の四葉行政書士事務所が対応します。それぞれ別契約で受任します。ご相談の入口は共通です。
       </>
     ),
     s3H2: "繁体字（台湾・中華圏）のコンテンツはありますか？",
@@ -136,7 +136,7 @@ const COPY: Record<LangCode, GlobalCopy> = {
     s2H2: "Can I also consult about residence status (visa) or company formation?",
     s2Body: (
       <>
-        Housing procedures are handled by Yotsuba Real Estate, and <strong>residence status (visa) and company formation procedures</strong> by our affiliated business, Yotsuba Gyoseishoshi Office. Life in Japan and the doorway to your business — both can be discussed at a single point of contact.
+        Housing procedures are handled by Yotsuba Real Estate, and <strong>residence status (visa) and company formation procedures</strong> by our affiliated business, Yotsuba Gyoseishoshi Office. Each is engaged under a separate contract. Your first inquiry can start in one place.
       </>
     ),
     s3H2: "Do you have content in Traditional Chinese (Taiwan / Chinese-speaking regions)?",
@@ -151,7 +151,7 @@ const COPY: Record<LangCode, GlobalCopy> = {
     authorAlt: "Joji Uramatsu, Representative Director of Yotsuba Real Estate Co., Ltd.",
     authorLabel: "About the author",
     authorBio:
-      "Joji Uramatsu | Representative Director of Yotsuba Real Estate Co., Ltd.; full-time licensed real estate broker; gyoseishoshi lawyer. Former China General Bureau Chief of the Mainichi Shimbun (34 years as a journalist), stationed in China, Taiwan, and Thailand. Passed the national exam for licensed social insurance and labor consultant (office opening scheduled for September 2026).",
+      "Joji Uramatsu | Representative Director of Yotsuba Real Estate Co., Ltd.; full-time Licensed Real Estate Transaction Specialist (宅地建物取引士); Gyoseishoshi (Administrative Scrivener). Former China General Bureau Chief of the Mainichi Shimbun (34 years as a journalist), stationed in China, Taiwan, and Thailand. Passed the national exam for licensed social insurance and labor consultant (office opening scheduled for September 2026).",
   },
   "zh-tw": {
     metaTitle: "外國人在日本找房｜多語言支援的四葉不動産",
@@ -181,7 +181,7 @@ const COPY: Record<LangCode, GlobalCopy> = {
     s2H2: "也能諮詢在留資格（簽證）或公司設立嗎？",
     s2Body: (
       <>
-        住居相關手續由四葉不動産對應，<strong>在留資格（簽證）・公司設立的手續</strong>則由關聯事業・四葉行政書士事務所對應。在日本的生活與事業的入口，都能在同一窗口諮詢。
+        住居相關手續由四葉不動産對應，<strong>在留資格（簽證）・公司設立的手續</strong>則由關聯事業・四葉行政書士事務所對應。各自另行簽訂契約承辦。諮詢的入口是共同的。
       </>
     ),
     s3H2: "有繁體字（台灣・中華圈）的內容嗎？",
@@ -226,7 +226,7 @@ const COPY: Record<LangCode, GlobalCopy> = {
     s2H2: "也能咨询在留资格（签证）或公司设立吗？",
     s2Body: (
       <>
-        住房相关手续由四葉不動産办理，<strong>在留资格（签证）・公司设立的手续</strong>则由关联事业・四葉行政書士事務所办理。在日本的生活与事业的入口，都可在同一窗口咨询。
+        住房相关手续由四葉不動産办理，<strong>在留资格（签证）・公司设立的手续</strong>则由关联事业・四葉行政書士事務所办理。各自另行签订合同承办。咨询的入口是共同的。
       </>
     ),
     s3H2: "有繁体字（台湾・中华圈）的内容吗？",

@@ -17,7 +17,7 @@ const COPY: Record<LangCode, { title: string; desc: string; home: string }> = {
   },
   en: {
     title: "About the Office",
-    desc: "A former newspaper journalist who was stationed in China, Taiwan, and Thailand, now a gyoseishoshi lawyer putting 34 years of reporting and writing to work. Support for subsidy applications, visas, company formation, and licensing. Learn about the philosophy and background of Yotsuba Gyoseishoshi Office in Bunkyo, Tokyo.",
+    desc: "A former newspaper journalist who was stationed in China, Taiwan, and Thailand, now a gyoseishoshi (administrative scrivener) putting 34 years of reporting and writing to work. Support for subsidy applications, visas, company formation, and licensing. Learn about the philosophy and background of Yotsuba Gyoseishoshi Office in Bunkyo, Tokyo.",
     home: "Home",
   },
   "zh-tw": {
