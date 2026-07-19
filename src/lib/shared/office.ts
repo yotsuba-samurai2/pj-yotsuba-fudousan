@@ -25,7 +25,7 @@ export const OFFICE = {
   // ここはlaborフォールバック値の元＝住所クエリ形式のまま維持（office-public.OFFICE.mapUrlと同値）。
   mapUrl:
     "https://maps.google.com/?q=" +
-    encodeURIComponent("東京都文京区小日向4-2-5 小日向安田ビル203"),
+    encodeURIComponent("東京都文京区小日向４丁目２－５ 小日向安田ビル ２０３"),
 };
 
 /** テナント別：ルート・表示名・問い合わせ先・営業時間・CTA帯文言（各原稿v1.0「サイト共通」より転記） */

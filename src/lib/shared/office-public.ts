@@ -16,7 +16,7 @@ export const OFFICE = {
   access: "東京メトロ丸ノ内線「茗荷谷」駅 徒歩5分",
   mapUrl:
     "https://maps.google.com/?q=" +
-    encodeURIComponent("東京都文京区小日向4-2-5 小日向安田ビル203"),
+    encodeURIComponent("東京都文京区小日向４丁目２－５ 小日向安田ビル ２０３"),
 };
 
 /** テナント別の問い合わせ先パス（名称・文言は含めない） */
