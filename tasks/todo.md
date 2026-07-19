@@ -145,3 +145,52 @@
 - 禁止語（ワンストップ・一体で・一括対応・まとめて対応・カ国/ヵ国/か国/ヶ国/ケ国）＝出力HTML実測0件
 - 準拠法（通則法36条）＝一般的枠組みのみ・「専門家にご相談ください」注記1件／CannotHandle（社労士未開業注記）1件
 - /global 回帰なし（200・新リンク1件のみ追加）／/faq に新規2問表示確認／vitest 30件 pass
+
+---
+
+# タスクC-6-1：/global/chinese 中国語版（繁体字/zh-tw・簡体字/zh）
+
+## チェックリスト
+- [x] 多言語ルーティング実装の確認（proxy.ts のロケール接頭辞剥がし＋x-localeヘッダ／page内COPYマップ方式／DB翻訳はUI文言のみ）
+- [x] 第1段階：訳語提案＋繁体字版全文草稿の提示 → 浦松検収（2026-07-19承認）
+- [x] 「別契約で受任します」の訳を統一（zh-tw=「另行簽訂契約承辦」／zh=「另行签订合同承办」）
+- [x] page.tsx を Record<LangCode, Copy> 構造へ組替え・zh-tw/zh 追加（ja文言は一字一句不変）
+- [x] availableLocales と sitemap の locales を ["ja","zh-tw","zh"] に拡張（en版は未作成のため除外）
+- [x] FAQPage JSON-LD を各言語で出力・inLanguage 設定（Faq に任意prop追加）
+- [x] `tsc --noEmit` exit 0／`npm run build` exit 0（prisma dev 使い捨てDB＋pgbouncer=true・本番DB非接続）
+- [x] 差分提示 → 浦松承認（2026-07-19第2段階。CannotHandleは中国語版で非表示に方針変更）
+
+## レビュー（2026-07-19 実装完了・浦松承認済み）
+
+### 変更ファイル
+- `src/app/(realestate)/global/chinese/page.tsx` — ja/zh-tw/zh の3ロケール化（COPYマップ方式・手本=HomePageContent）。en は COPY 未定義＝ja へフォールバック
+- `src/app/sitemap.ts` — /global/chinese を locales:["ja","zh-tw","zh"] に拡張
+- `src/lib/seo.ts` — HREFLANG_ATTR を BCP47_BY_LOCALE として export（hreflang と JSON-LD inLanguage を単一情報源に）
+- `src/components/shared/Faq.tsx` — 任意 inLanguage / ariaLabel prop 追加（未指定時は出力不変）
+- `src/components/shared/RealestateServicePage.tsx` — internalLinks に任意 noLocalePrefix 追加（未指定時は従来どおり addLocalePrefix）
+
+### 翻訳方針（浦松確定）
+- 法令名は「中国語訳（日本語：〇〇法）」形式で原名併記（通則法・宅地建物取引業）
+- 事業体名「四葉不動産株式会社」「四葉行政書士事務所」は日本語表記を維持・初出時に役割の括弧説明
+- 繁体字=台湾語彙（不動產・租屋・契約）／簡体字=大陸語彙（不动产・租房・合同）。簡体字の「不动产」は
+  相続登記の法律用語と揃えるため房地产を不採用（ページ内統一）
+- 台湾・大陸への言及は中立表現・繁簡で内容差なし／駐在歴は国名を具体列挙（国数表記は使わない）
+- CannotHandle は中国語版で非表示（呼び出し側 locale==="ja" 判定。2026-07-19浦松判断）
+
+### 検証結果（ローカル本番ビルド PORT=3132 実測）
+- 3ロケール HTTP 200／canonical＝/global/chinese・/zh-tw/global/chinese・/zh/global/chinese
+- hreflang＝ja・zh-Hant・zh-Hans・x-default(ja) の4本を3ページで相互一致（en は含めない）
+- `<html lang>`＝ja/zh-tw/zh・og:locale＝ja_JP/zh_TW/zh_CN
+- FAQPage inLanguage＝ja/zh-Hant/zh-Hans（各4問）／Service・BreadcrumbList も各言語でパース確認
+- sitemap.xml に3ロケールURL出力（各々に3本のhreflang alternates）
+- 内部リンク＝/zh-tw(zh)配下4本＋日本語版固定2本（/ryokin・overseas-ownersコラム＝当該言語版なし）
+- 禁止語（ワンストップ・一体で・一括対応・one-stop・一站式・一條龍/一条龙）＝全ロケール0件
+- NAP・電話・宅建業免許番号・行政書士登録番号＝3ロケール完全一致
+- 社労士「2026年9月開業予定」注記＝中国語版でも維持（署名欄）
+- 日本語版の回帰なし（旧ファイルの日本語文字列リテラル欠落0件・内部リンク6本同一）
+
+### 申し送り（別タスク候補）
+- `src/app/(realestate)/layout.tsx` の locale 判定が Cookie のみ（他は getRequestLocale のヘッダ優先）。
+  /zh-tw/... へ直接着地したクローラーで layout 側 title.template・og:locale が ja に解決される。
+- 言語切替UIの EN は /en/global/chinese を指し ja 文言へフォールバック（hreflang・sitemap 非掲載のため
+  Googleには広告されない）。EN版が必要なら別タスク。

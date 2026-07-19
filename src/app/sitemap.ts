@@ -88,8 +88,14 @@ const STATIC_REALESTATE: StaticPage[] = [
   { path: "/toushi/shitei-shinsei", changeFrequency: "monthly", priority: 0.7, locales: ["ja"] },
   { path: "/toushi/shataku", changeFrequency: "monthly", priority: 0.7 },
   { path: "/global", changeFrequency: "monthly", priority: 0.8 },
-  // タスクC-3（2026-07-19）：中国語圏特化ハブ。現フェーズ＝ja先行公開（中国語版はC-6で展開）
-  { path: "/global/chinese", changeFrequency: "monthly", priority: 0.7, locales: ["ja"] },
+  // タスクC-3（2026-07-19）：中国語圏特化ハブ。C-6-1で zh-tw・zh を公開（en版は未作成のため除外）。
+  // ページ側の availableLocales（PAGE_LOCALES）と必ず一致させる＝存在しないロケールURLを広告しない。
+  {
+    path: "/global/chinese",
+    changeFrequency: "monthly",
+    priority: 0.7,
+    locales: ["ja", "zh-tw", "zh"],
+  },
   // タスクC-5（2026-07-19）：相談事例（モデルケース）。現フェーズ＝ja先行公開（/ryokinと同方式）
   { path: "/jirei", changeFrequency: "monthly", priority: 0.7, locales: ["ja"] },
   { path: "/access", changeFrequency: "monthly", priority: 0.7 },

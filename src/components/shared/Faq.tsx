@@ -12,11 +12,16 @@ import Link from "next/link";
 export type FaqLink = { href: string; label: string };
 export type FaqItem = { q: string; a: string; links?: FaqLink[] };
 
-/** FAQPage JSON-LD を items から生成（Answer text＝回答本文のみ。links は含めない） */
-export function buildFaqJsonLd(items: FaqItem[]) {
+/**
+ * FAQPage JSON-LD を items から生成（Answer text＝回答本文のみ。links は含めない）
+ * inLanguage＝BCP47言語タグ（@/lib/seo の BCP47_BY_LOCALE）。省略時はキー自体を出力しない
+ * ＝既存の全呼び出し元で出力は不変（2026-07-19 C-6-1で追加）。
+ */
+export function buildFaqJsonLd(items: FaqItem[], inLanguage?: string) {
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+    ...(inLanguage ? { inLanguage } : {}),
     mainEntity: items.map((it) => ({
       "@type": "Question",
       name: it.q,
@@ -34,12 +39,24 @@ type Props = {
   openFirst?: boolean;
   /** 余白・最大幅を親に委ねるか（既定 false。業務ページの本文カラム内に置く場合に true） */
   bare?: boolean;
+  /** JSON-LD の inLanguage（BCP47）。省略時は出力しない＝既存ページの出力は不変 */
+  inLanguage?: string;
+  /** section の aria-label 上書き（多言語ページ用。省略時は ja 既定文言） */
+  ariaLabel?: string;
 };
 
-export function Faq({ items, heading, withJsonLd = false, openFirst = true, bare = false }: Props) {
-  const jsonLd = buildFaqJsonLd(items);
+export function Faq({
+  items,
+  heading,
+  withJsonLd = false,
+  openFirst = true,
+  bare = false,
+  inLanguage,
+  ariaLabel,
+}: Props) {
+  const jsonLd = buildFaqJsonLd(items, inLanguage);
   return (
-    <section aria-label="よくあるご質問" className={bare ? "" : "mx-auto max-w-3xl px-4 py-6"}>
+    <section aria-label={ariaLabel ?? "よくあるご質問"} className={bare ? "" : "mx-auto max-w-3xl px-4 py-6"}>
       {heading && <h2 className="mb-4 font-serif text-2xl font-semibold text-ink">{heading}</h2>}
       <div className="divide-y divide-border rounded-xl border border-border bg-surface">
         {items.map((it, i) => (

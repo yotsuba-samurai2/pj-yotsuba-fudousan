@@ -37,10 +37,17 @@ export type RealestateServicePageProps = {
   /**
    * 冒頭の回答ブロック（B-4・2026-07-19）。H1直下・lead の前に描画する自己完結の150〜200字。
    * 「誰に・何を・どの地域で・誰が担当するか・分離受任の明示」を1段落に収めた確定文言を渡す。
-   * 日本語版のみ運用のため、呼び出し側で locale === "ja" のときだけ渡すこと。
+   * 原則は日本語版のみ運用（呼び出し側で locale を判定する）。多言語版を持つページは
+   * 当該ロケールの訳文を渡す（2026-07-19 C-6-1：/global/chinese の zh-tw/zh が該当）。
    */
   answerBlock?: ReactNode;
-  internalLinks: { href: string; label: string }[];
+  /**
+   * 内部リンク。href はシェル側で1回だけ addLocalePrefix される。
+   * noLocalePrefix=true のときは接頭辞を付けず日本語版URLへ固定リンクする
+   * （2026-07-19 C-6-1：リンク先に当該ロケール版が存在しないページ用。存在しないロケールURLを
+   *  内部リンクで作らない＝日本語本文が /zh-tw 配下で表示されるのを避ける）。
+   */
+  internalLinks: { href: string; label: string; noLocalePrefix?: boolean }[];
   /** クロスリンク導入文の上書き（分担説明トーン） */
   crossLinkLead?: string;
   /** 多言語上書き（省略時=ja既定文言のまま・既存ページの出力は不変。2026-07-11 /toushi/shataku 4ロケール化で追加） */
@@ -107,7 +114,12 @@ export async function RealestateServicePage(p: RealestateServicePageProps) {
           <ul className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-primary">
             {p.internalLinks.map((l) => (
               <li key={l.href}>
-                <Link href={addLocalePrefix(l.href, locale)} className="underline">{l.label}</Link>
+                <Link
+                  href={l.noLocalePrefix ? l.href : addLocalePrefix(l.href, locale)}
+                  className="underline"
+                >
+                  {l.label}
+                </Link>
               </li>
             ))}
           </ul>

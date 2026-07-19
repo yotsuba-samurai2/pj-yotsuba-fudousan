@@ -406,13 +406,17 @@ const OG_LOCALES: Record<string, string> = {
 
 /** hreflang の並び順（x-default はこの順で最初に「存在する」ロケールを指す＝全バリアントで同一値） */
 const HREFLANG_ORDER: readonly LangCode[] = ["ja", "en", "zh-tw", "zh"];
-/** LangCode → hreflang 属性値 */
-const HREFLANG_ATTR: Record<LangCode, string> = {
+/**
+ * LangCode → BCP47 言語タグ。hreflang 属性値と JSON-LD の inLanguage で共用する
+ * （2026-07-19 C-6-1：/global/chinese 多言語化で inLanguage 用途を追加。hreflang と単一情報源に保つ）。
+ */
+export const BCP47_BY_LOCALE: Record<LangCode, string> = {
   ja: "ja",
   en: "en",
   "zh-tw": "zh-Hant",
   zh: "zh-Hans",
 };
+const HREFLANG_ATTR = BCP47_BY_LOCALE;
 
 /**
  * alternates.languages（hreflang）を生成する。
