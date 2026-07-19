@@ -105,13 +105,13 @@ const STATIC_REALESTATE: StaticPage[] = [
   // タスクC-5（2026-07-19）：相談事例（モデルケース）。現フェーズ＝ja先行公開（/ryokinと同方式）
   { path: "/jirei", changeFrequency: "monthly", priority: 0.7, locales: ["ja"] },
   { path: "/access", changeFrequency: "monthly", priority: 0.7 },
-  // タスクB-1（2026-07-19）：不動産・料金ページ。現フェーズ＝ja先行公開（多言語は後続ステップでlocales解除）
-  { path: "/ryokin", changeFrequency: "monthly", priority: 0.8, locales: ["ja"] },
+  // タスクB-1（2026-07-19）：不動産・料金ページ。C-6-3（2026-07-19）で en/zh-tw/zh を公開＝locales指定を解除（全4ロケール）
+  { path: "/ryokin", changeFrequency: "monthly", priority: 0.8 },
   { path: "/faq", changeFrequency: "monthly", priority: 0.6 },
   { path: "/services", changeFrequency: "monthly", priority: 0.8 },
   { path: "/about", changeFrequency: "monthly", priority: 0.7 },
-  // タスクB-2（2026-07-19）：代表者プロフィール。現フェーズ＝ja先行公開（/ryokinと同方式）
-  { path: "/about/uramatsu", changeFrequency: "monthly", priority: 0.6, locales: ["ja"] },
+  // タスクB-2（2026-07-19）：代表者プロフィール。C-6-3（2026-07-19）で en/zh-tw/zh を公開＝locales指定を解除（全4ロケール）
+  { path: "/about/uramatsu", changeFrequency: "monthly", priority: 0.6 },
   { path: "/column", changeFrequency: "weekly", priority: 0.8 },
   { path: "/contact", changeFrequency: "yearly", priority: 0.5 },
   { path: "/legal-notice", changeFrequency: "yearly", priority: 0.3 },
