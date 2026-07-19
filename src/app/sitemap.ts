@@ -11,7 +11,13 @@ const ALL_LOCALES = ["ja", "en", "zh-tw", "zh"] as const;
 const HREFLANG: Record<string, string> = { ja: "ja", en: "en", "zh-tw": "zh-Hant", zh: "zh-Hans" };
 
 type ChangeFreq = NonNullable<MetadataRoute.Sitemap[number]["changeFrequency"]>;
-type StaticPage = { path: string; changeFrequency: ChangeFreq; priority: number };
+type StaticPage = {
+  path: string;
+  changeFrequency: ChangeFreq;
+  priority: number;
+  /** このページが実在するロケール（未指定＝全4ロケール）。ja先行公開ページはjaのみ出す＝存在しないロケールURLを広告しない */
+  locales?: readonly (typeof ALL_LOCALES)[number][];
+};
 
 /**
  * hreflang alternates を生成する。URL生成は canonicalUrl（＝ページmetadataの alternates と
@@ -36,8 +42,9 @@ function expandStatic(
   page: StaticPage,
   lastModified: string,
 ): MetadataRoute.Sitemap {
-  const alternates = alternatesFor(businessKey, page.path, ALL_LOCALES);
-  return ALL_LOCALES.map((loc) => ({
+  const locales = page.locales ?? ALL_LOCALES;
+  const alternates = alternatesFor(businessKey, page.path, locales);
+  return locales.map((loc) => ({
     url: canonicalUrl(businessKey, page.path, loc),
     lastModified,
     changeFrequency: page.changeFrequency,
@@ -78,6 +85,8 @@ const STATIC_REALESTATE: StaticPage[] = [
   { path: "/toushi/shataku", changeFrequency: "monthly", priority: 0.7 },
   { path: "/global", changeFrequency: "monthly", priority: 0.8 },
   { path: "/access", changeFrequency: "monthly", priority: 0.7 },
+  // タスクB-1（2026-07-19）：不動産・料金ページ。現フェーズ＝ja先行公開（多言語は後続ステップでlocales解除）
+  { path: "/ryokin", changeFrequency: "monthly", priority: 0.8, locales: ["ja"] },
   { path: "/faq", changeFrequency: "monthly", priority: 0.6 },
   { path: "/services", changeFrequency: "monthly", priority: 0.8 },
   { path: "/about", changeFrequency: "monthly", priority: 0.7 },
