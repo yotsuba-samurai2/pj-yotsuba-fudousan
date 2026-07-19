@@ -90,6 +90,8 @@ const STATIC_REALESTATE: StaticPage[] = [
   { path: "/faq", changeFrequency: "monthly", priority: 0.6 },
   { path: "/services", changeFrequency: "monthly", priority: 0.8 },
   { path: "/about", changeFrequency: "monthly", priority: 0.7 },
+  // タスクB-2（2026-07-19）：代表者プロフィール。現フェーズ＝ja先行公開（/ryokinと同方式）
+  { path: "/about/uramatsu", changeFrequency: "monthly", priority: 0.6, locales: ["ja"] },
   { path: "/column", changeFrequency: "weekly", priority: 0.8 },
   { path: "/contact", changeFrequency: "yearly", priority: 0.5 },
   { path: "/legal-notice", changeFrequency: "yearly", priority: 0.3 },
