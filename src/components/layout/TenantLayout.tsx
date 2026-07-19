@@ -91,6 +91,9 @@ const FOOTER_NAV_HREFS: Record<
     {
       sectionKey: "other",
       items: [
+        // タスクB-1（2026-07-19）：料金ページ新設。ラベルは現時点ja直書き（labels?.ja フォールバックで全ロケール「料金」表示）。
+        // 多言語展開（後続ステップ）で en/zh-tw/zh ラベルを追加する。
+        { href: "/ryokin", key: "ryokin", labels: { ja: "料金" } },
         { href: "/contact", key: "contact" },
         { href: "/legal-notice", key: "legalNotice" },
       ],
