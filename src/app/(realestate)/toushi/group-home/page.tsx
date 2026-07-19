@@ -106,7 +106,7 @@ const COPY: Record<LangCode, GroupHomeCopy> = {
     h1: "Finding a Property for a Group Home",
     lead: (
       <p>
-        With a property for a group home (shared-living support), <strong>“lease first, think later” leads to failure</strong>. Provider designation has standards for location, structure, floor area, fire-safety equipment, and more, and there are real cases where it turns out, only after the contract is signed, that designation cannot be obtained for that property. Yotsuba Real Estate Co., Ltd. helps with your property search starting from <strong>pre-contract checks with the designation standards in view</strong>. The designation application itself is handled by our affiliated business 四葉行政書士事務所 (Yotsuba Gyoseishoshi Office), so you can consult about <strong>the property and the application at one desk</strong>.
+        With a property for a group home (shared-living support), <strong>“lease first, think later” leads to failure</strong>. Provider designation has standards for location, structure, floor area, fire-safety equipment, and more, and there are real cases where it turns out, only after the contract is signed, that designation cannot be obtained for that property. Yotsuba Real Estate Co., Ltd. helps with your property search starting from <strong>pre-contract checks with the designation standards in view</strong>. The designation application itself is handled by our affiliated business 四葉行政書士事務所 (Yotsuba Gyoseishoshi Office), engaged under a separate contract. Having the property and the permit handled by separate business entities secures both the expertise and the legal compliance of each.
       </p>
     ),
     s1H2: "What should I watch out for in a property for a group home?",
@@ -135,12 +135,12 @@ const COPY: Record<LangCode, GroupHomeCopy> = {
     authorAlt: "Joji Uramatsu, Representative Director of Yotsuba Real Estate Co., Ltd.",
     authorLabel: "About the author",
     authorBio:
-      "Joji Uramatsu | Representative Director of Yotsuba Real Estate Co., Ltd.; full-time licensed real estate broker; gyoseishoshi lawyer. Former China General Bureau Chief of the Mainichi Shimbun (34 years as a journalist), stationed in China, Taiwan, and Thailand. Passed the national exam for licensed social insurance and labor consultant (office opening scheduled for September 2026).",
+      "Joji Uramatsu | Representative Director of Yotsuba Real Estate Co., Ltd.; full-time Licensed Real Estate Transaction Specialist (宅地建物取引士); Gyoseishoshi (Administrative Scrivener). Former China General Bureau Chief of the Mainichi Shimbun (34 years as a journalist), stationed in China, Taiwan, and Thailand. Passed the national exam for licensed social insurance and labor consultant (office opening scheduled for September 2026).",
   },
   "zh-tw": {
     metaTitle: "尋找可作團體家屋的物件｜四葉不動産",
     metaDesc:
-      "四葉不動産株式会社為您提案可用於開設團體家屋（共同生活援助）的物件。從著眼指定基準（地點・結構・面積・消防）的簽約前確認，到放眼開設後營運的物件選擇。在文京區的窗口，物件與手續可一併諮詢。",
+      "四葉不動産株式会社為您提案可用於開設團體家屋（共同生活援助）的物件。從著眼指定基準（地點・結構・面積・消防）的簽約前確認，到放眼開設後營運的物件選擇。物件由四葉不動産株式会社、手續由四葉行政書士事務所，各自另行簽訂契約承辦。",
     crumbHome: "首頁",
     crumbToushi: "投資用・事業用不動產",
     crumbCurrent: "團體家屋物件",
@@ -148,7 +148,7 @@ const COPY: Record<LangCode, GroupHomeCopy> = {
     h1: "尋找可作團體家屋的物件",
     lead: (
       <p>
-        用於團體家屋（共同生活援助）的物件，<strong>「先租下來再想」很容易失敗</strong>。事業者指定對地點、結構、面積、消防設備等訂有基準，實務上確實發生過簽約後才發現「這個物件無法取得指定」的案例。四葉不動産株式会社從<strong>著眼指定基準的簽約前確認</strong>開始，協助您尋找物件。指定申請本身由關係企業四葉行政書士事務所對應，因此<strong>物件與申請可在同一窗口</strong>諮詢。
+        用於團體家屋（共同生活援助）的物件，<strong>「先租下來再想」很容易失敗</strong>。事業者指定對地點、結構、面積、消防設備等訂有基準，實務上確實發生過簽約後才發現「這個物件無法取得指定」的案例。四葉不動産株式会社從<strong>著眼指定基準的簽約前確認</strong>開始，協助您尋找物件。指定申請本身由關係企業四葉行政書士事務所對應，<strong>物件與申請由不同事業體分別負責</strong>，各自另行簽訂契約承辦。
       </p>
     ),
     s1H2: "團體家屋的物件，該注意些什麼？",
@@ -180,7 +180,7 @@ const COPY: Record<LangCode, GroupHomeCopy> = {
   zh: {
     metaTitle: "寻找可作团体家屋的物件｜四葉不動産",
     metaDesc:
-      "四葉不動産株式会社为您提案可用于开设团体家屋（共同生活援助）的物件。从着眼指定基准（地点・结构・面积・消防）的签约前确认，到放眼开设后运营的物件选择。在文京区的窗口，物件与手续可一并咨询。",
+      "四葉不動産株式会社为您提案可用于开设团体家屋（共同生活援助）的物件。从着眼指定基准（地点・结构・面积・消防）的签约前确认，到放眼开设后运营的物件选择。物件由四葉不動産株式会社、手续由四葉行政书士事务所，各自另行签订合同承办。",
     crumbHome: "首页",
     crumbToushi: "投资用・事业用不动产",
     crumbCurrent: "团体家屋物件",
@@ -188,7 +188,7 @@ const COPY: Record<LangCode, GroupHomeCopy> = {
     h1: "寻找可作团体家屋的物件",
     lead: (
       <p>
-        用于团体家屋（共同生活援助）的物件，<strong>“先租下来再想”很容易失败</strong>。事业者指定对地点、结构、面积、消防设备等定有基准，实务中确实发生过签约后才发现“该物件无法取得指定”的案例。四葉不動産株式会社从<strong>着眼指定基准的签约前确认</strong>开始，协助您寻找物件。指定申请本身由关联企业四葉行政書士事務所对应，因此<strong>物件与申请可在同一窗口</strong>咨询。
+        用于团体家屋（共同生活援助）的物件，<strong>“先租下来再想”很容易失败</strong>。事业者指定对地点、结构、面积、消防设备等定有基准，实务中确实发生过签约后才发现“该物件无法取得指定”的案例。四葉不動産株式会社从<strong>着眼指定基准的签约前确认</strong>开始，协助您寻找物件。指定申请本身由关联企业四葉行政書士事務所对应，<strong>物件与申请由不同事业体分别负责</strong>，各自另行签订合同承办。
       </p>
     ),
     s1H2: "团体家屋的物件，该注意些什么？",

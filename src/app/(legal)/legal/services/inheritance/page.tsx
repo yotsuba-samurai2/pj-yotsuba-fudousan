@@ -57,7 +57,7 @@ const COPY: Record<LangCode, InheritanceCopy> = {
     fudosanHeading: "相続した不動産も相談できますか？",
     fudosanBody: (
       <>
-        できます。相続した不動産の管理・活用・売却は、関連事業の<strong>四葉不動産株式会社</strong>（宅地建物取引業）が扱います。<strong>書類（行政書士）と不動産（宅建業）を同じ窓口で相談できる</strong>のが四葉の特長です。相続不動産の進め方は、四葉不動産の完全ガイドにまとまっています。
+        できます。相続した不動産の管理・活用・売却は、関連事業の<strong>四葉不動産株式会社</strong>（宅地建物取引業）が扱います。<strong>書類（行政書士）と不動産（宅建業）は、それぞれ別契約で受任します</strong>。ご相談の入口は共通です。相続不動産の進め方は、四葉不動産の完全ガイドにまとまっています。
       </>
     ),
     souzokuGuideLabel: "文京区で不動産を相続したら——管理・活用・売却の完全ガイド（四葉不動産）",
@@ -98,7 +98,7 @@ const COPY: Record<LangCode, InheritanceCopy> = {
     fudosanHeading: "Can you also help with inherited real estate?",
     fudosanBody: (
       <>
-        Yes. Managing, using, or selling inherited real estate is handled by our affiliated company, <strong>四葉不動産株式会社 (Yotsuba Real Estate Co., Ltd.)</strong>, a licensed real estate brokerage. <strong>Being able to discuss the paperwork (gyoseishoshi) and the property (real estate brokerage) at a single point of contact</strong> is what sets Yotsuba apart. Yotsuba Real Estate's complete guide walks you through what to do with inherited property.
+        Yes. Managing, using, or selling inherited real estate is handled by our affiliated company, <strong>四葉不動産株式会社 (Yotsuba Real Estate Co., Ltd.)</strong>, a licensed real estate brokerage. <strong>The paperwork (gyoseishoshi) and the property (real estate brokerage) are each engaged under a separate contract</strong>. Your first inquiry can start in one place. Yotsuba Real Estate's complete guide walks you through what to do with inherited property.
       </>
     ),
     souzokuGuideLabel:
@@ -139,7 +139,7 @@ const COPY: Record<LangCode, InheritanceCopy> = {
     fudosanHeading: "繼承的不動產也可以諮詢嗎？",
     fudosanBody: (
       <>
-        可以。繼承不動產的管理・活用・出售，由關聯事業<strong>四葉不動産株式会社</strong>（宅地建物取引業）負責。<strong>文件（行政書士）與不動產（宅建業）可在同一窗口諮詢</strong>，是四葉的特色。繼承不動產的進行方式，已整理於四葉不動產的完全指南。
+        可以。繼承不動產的管理・活用・出售，由關聯事業<strong>四葉不動産株式会社</strong>（宅地建物取引業）負責。<strong>文件（行政書士）與不動產（宅建業）各自另行簽訂契約承辦</strong>。諮詢的入口是共同的。繼承不動產的進行方式，已整理於四葉不動產的完全指南。
       </>
     ),
     souzokuGuideLabel: "在文京區繼承了不動產之後——管理・活用・出售完全指南（四葉不動產）",
@@ -179,7 +179,7 @@ const COPY: Record<LangCode, InheritanceCopy> = {
     fudosanHeading: "继承的不动产也可以咨询吗？",
     fudosanBody: (
       <>
-        可以。继承不动产的管理・活用・出售，由关联事业<strong>四葉不動産株式会社</strong>（宅地建物取引業）负责。<strong>文件（行政书士）与不动产（宅建业）可在同一窗口咨询</strong>，是四葉的特色。继承不动产的推进方式，已整理在四葉不動産的完全指南中。
+        可以。继承不动产的管理・活用・出售，由关联事业<strong>四葉不動産株式会社</strong>（宅地建物取引業）负责。<strong>文件（行政书士）与不动产（宅建业）各自另行签订合同承办</strong>。咨询的入口是共同的。继承不动产的推进方式，已整理在四葉不動産的完全指南中。
       </>
     ),
     souzokuGuideLabel: "在文京区继承了不动产之后——管理・活用・出售完全指南（四葉不動産）",

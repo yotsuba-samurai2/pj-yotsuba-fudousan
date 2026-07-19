@@ -58,7 +58,7 @@ const COPY: Record<LangCode, FaqPageCopy> = {
       },
       {
         q: "不動産の売買や賃貸も一緒に相談できますか？",
-        a: "宅地建物取引業は、関連事業の四葉不動産株式会社が別の事業体として独立して受任します（紹介料等の授受はありません）。書類（行政書士）と不動産（宅建業）を同じ窓口でご相談いただけます。",
+        a: "宅地建物取引業は、関連事業の四葉不動産株式会社が別の事業体として独立して受任します（紹介料等の授受はありません）。ご相談の入口は共通です。",
       },
       {
         q: "補助金の申請も頼めますか？",
@@ -100,7 +100,7 @@ const COPY: Record<LangCode, FaqPageCopy> = {
       },
       {
         q: "Can I also consult about buying, selling, or leasing real estate?",
-        a: "Yes. Licensed real-estate brokerage is handled by 四葉不動産株式会社 (Yotsuba Fudosan), an affiliated but separate entity that accepts engagements independently (no referral fees are exchanged). You can discuss paperwork (gyoseishoshi work) and real estate (licensed brokerage) at a single point of contact.",
+        a: "Yes. Licensed real-estate brokerage is handled by 四葉不動産株式会社 (Yotsuba Fudosan), an affiliated but separate entity that accepts engagements independently (no referral fees are exchanged). Your first inquiry can start in one place.",
       },
       {
         q: "Can you help with subsidy applications?",
@@ -142,7 +142,7 @@ const COPY: Record<LangCode, FaqPageCopy> = {
       },
       {
         q: "不動產的買賣或租賃也可以一起諮詢嗎？",
-        a: "可以。不動產買賣・租賃業務（宅地建物取引業）由關聯事業・四葉不動産株式会社作為另一事業體獨立受任（不收受介紹費等）。文件（行政書士）與不動產（宅建業）可在同一窗口諮詢。",
+        a: "可以。不動產買賣・租賃業務（宅地建物取引業）由關聯事業・四葉不動産株式会社作為另一事業體獨立受任（不收受介紹費等）。諮詢的入口是共同的。",
       },
       {
         q: "也可以委託補助金申請嗎？",
@@ -184,7 +184,7 @@ const COPY: Record<LangCode, FaqPageCopy> = {
       },
       {
         q: "不动产的买卖或租赁也可以一起咨询吗？",
-        a: "可以。不动产买卖・租赁业务（宅地建物取引业）由关联事业・四葉不動産株式会社作为另一事业体独立受任（不收受介绍费等）。文件（行政书士）与不动产（宅建业）可在同一窗口咨询。",
+        a: "可以。不动产买卖・租赁业务（宅地建物取引业）由关联事业・四葉不動産株式会社作为另一事业体独立受任（不收受介绍费等）。咨询的入口是共同的。",
       },
       {
         q: "也可以委托补助金申请吗？",

@@ -208,7 +208,7 @@ const COPY: Record<LangCode, ShogaiFukushiCopy> = {
       <p className="mt-3 leading-relaxed text-text">
         代表の浦松 丈二は、元毎日新聞中国総局長として<strong>34年間「複雑な事実を整理して伝える」仕事</strong>
         をしてきた行政書士です。障害福祉の指定申請は要件が多く、自治体ごとに解釈が分かれます。論点を整理し、根拠を押さえた申請書に落とす——記者の技術がそのまま活きる分野です。加えて、関連事業の四葉不動産株式会社との連携により、
-        <strong>物件確保から指定申請までを一つの窓口で</strong>相談できます。この組み合わせを持つ事務所は多くありません。
+        <strong>物件確保は四葉不動産株式会社、指定申請は当事務所が、それぞれ別契約で受任します。</strong>ご相談の入口は共通です。この組み合わせを持つ事務所は多くありません。
         <Placeholder reason="浦松＝公開可能な実績・件数（確定分のみ。無ければ数値は書かない）" />
       </p>
     ),
@@ -395,7 +395,7 @@ const COPY: Record<LangCode, ShogaiFukushiCopy> = {
     ],
     authorBody: (
       <>
-        <strong>About the author</strong> 浦松 丈二 (Joji Uramatsu)｜Representative gyoseishoshi (administrative scrivener), 四葉行政書士事務所 (Reg. No. 25087022); licensed real estate broker. Former China General Bureau Chief of the Mainichi Shimbun (34 years as a journalist). Passed the national exam for licensed social insurance and labor consultant (office opening scheduled for September 2026).
+        <strong>About the author</strong> 浦松 丈二 (Joji Uramatsu)｜Representative gyoseishoshi (administrative scrivener), 四葉行政書士事務所 (Reg. No. 25087022); Licensed Real Estate Transaction Specialist. Former China General Bureau Chief of the Mainichi Shimbun (34 years as a journalist). Passed the national exam for licensed social insurance and labor consultant (office opening scheduled for September 2026).
       </>
     ),
   },
@@ -557,7 +557,7 @@ const COPY: Record<LangCode, ShogaiFukushiCopy> = {
       <p className="mt-3 leading-relaxed text-text">
         代表浦松 丈二曾任每日新聞中國總局長，<strong>34年來從事「整理複雜事實並加以傳達」的工作</strong>
         ，現為行政書士。障礙福祉的指定申請要件繁多，各自治體的解釋也不盡相同。整理論點、落實為有憑有據的申請文件——正是記者的功夫可以直接發揮的領域。加上與關係企業四葉不動産株式会社的合作，
-        <strong>從確保物件到指定申請，都可在同一窗口</strong>諮詢。同時具備這種組合的事務所並不多。
+        <strong>確保物件由四葉不動産株式会社、指定申請由本事務所，各自另行簽訂契約承辦。</strong>諮詢的入口是共同的。同時具備這種組合的事務所並不多。
         <Placeholder reason="浦松＝公開可能な実績・件数（確定分のみ。無ければ数値は書かない）" />
       </p>
     ),
@@ -732,7 +732,7 @@ const COPY: Record<LangCode, ShogaiFukushiCopy> = {
       <p className="mt-3 leading-relaxed text-text">
         代表浦松 丈二曾任每日新闻中国总局长，<strong>34年来从事“整理复杂事实并加以传达”的工作</strong>
         ，现为行政书士。残障福祉的指定申请要件繁多，各自治体的解释也不尽相同。梳理论点、落实为有据可依的申请文件——正是记者的功夫可以直接发挥的领域。加上与关联企业四葉不動産株式会社的合作，
-        <strong>从确保物件到指定申请，都可在同一窗口</strong>咨询。同时具备这种组合的事务所并不多。
+        <strong>确保物件由四葉不動産株式会社、指定申请由本事务所，各自另行签订合同承办。</strong>咨询的入口是共同的。同时具备这种组合的事务所并不多。
         <Placeholder reason="浦松＝公開可能な実績・件数（確定分のみ。無ければ数値は書かない）" />
       </p>
     ),

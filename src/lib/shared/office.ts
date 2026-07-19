@@ -141,7 +141,7 @@ export const TENANT_CTA_I18N: Record<
     en: {
       ctaHeading: "Why not sort out all your “people” procedures at once?",
       ctaLead:
-        "Yotsuba Labor and Social Security Attorney Office (Kohinata, Bunkyo-ku; a 5-minute walk from Myogadani Station on the Tokyo Metro Marunouchi Line) helps you, starting with a review of your current labor practices.",
+        "Yotsuba Sharoushi (Certified Social Insurance and Labor Consultant) Office (Kohinata, Bunkyo-ku; a 5-minute walk from Myogadani Station on the Tokyo Metro Marunouchi Line) helps you, starting with a review of your current labor practices.",
       hours: "",
     },
     "zh-tw": {
