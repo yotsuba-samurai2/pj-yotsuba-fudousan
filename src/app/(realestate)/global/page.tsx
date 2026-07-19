@@ -75,6 +75,8 @@ const COPY: Record<LangCode, GlobalCopy> = {
       </p>
     ),
     internalLinks: [
+      // C-3（2026-07-19）：中国語圏特化ハブ（ja先行公開のため ja のみリンク。多言語版はC-6で追加）
+      { href: "/global/chinese", label: "中国語対応｜相続・売却・お部屋探し" },
       { href: "/toushi/shataku", label: "社宅・法人賃貸" },
       { href: "/access", label: "アクセス・料金" },
     ],

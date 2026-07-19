@@ -115,3 +115,33 @@
   `/souzoku`（相続ピラー）に張れる関連コラムが無い＝「文京区×相続」「相続登記の義務化」等の執筆が必要。
 - en/zh は多言語対応済みの2本のみ＝英語独自コラムは依然不足（レポートP1-2どおり）。
 
+
+---
+
+# タスクC-3：/global/chinese 新設（中国語圏特化ハブ・ja先行公開）
+
+## チェックリスト
+- [x] リポジトリ構成確認（/global現行実装・overseas-owners-guideコラムslug・B-4 CannotHandle・B-3 faqJa）
+- [x] 第1段階：本文5セクション草稿の提示 → 浦松検収（2026-07-19承認・Q3はB-3既存文言「海外在住のまま〜」を採用）
+- [x] /global/chinese ページ新規作成（RealestateServicePage方式・手本=C-2 shitei-shinsei）
+- [x] faqJa.ts に新規2問追加（「中国語で相続不動産の相談ができますか？」「相続登記まで頼めますか？」）＝46問
+- [x] /global（ja）に内部リンク追加・sitemap.ts に locales:["ja"] で追加
+- [x] `tsc --noEmit` exit 0／`npm run build` exit 0（prisma dev 使い捨てDB＋pgbouncer=true・本番DB非接続）
+- [x] 差分提示 → 浦松承認（2026-07-19第2段階承認済み・コミット実施）
+
+## レビュー（2026-07-19 実装完了・浦松承認済み）
+
+### 変更ファイル
+- `src/app/(realestate)/global/chinese/page.tsx` — 新規（ja先行。回答ブロック確定文言／本文5セクション／FAQPage 4問／Service＋BreadcrumbList／CannotHandle／内部リンク6本）
+- `src/data/faqJa.ts` — 外国人・中国語対応分野に2問追加（44→46問）
+- `src/app/(realestate)/global/page.tsx` — ja internalLinks に /global/chinese を追加（それ以外不変）
+- `src/app/sitemap.ts` — /global/chinese を locales:["ja"] で追加
+
+### 検証結果（ローカル本番ビルド PORT=3123 実測）
+- title＝「中国語で相談できる不動産・相続｜繁体字・簡体字対応 | 四葉不動産」／H1・冒頭回答ブロック＝指定文言と完全一致（grep 1件）
+- JSON-LD：Service（@id=…/global/chinese#service）／FAQPage 4問／BreadcrumbList 3階層（ホーム＞外国人・多言語のお部屋探し＞中国語対応）＝すべてパース確認
+- hreflang＝ja＋x-default のみ／canonical=https://luck428.com/global/chinese
+- sitemap.xml に https://luck428.com/global/chinese（ja のみ）出力確認
+- 禁止語（ワンストップ・一体で・一括対応・まとめて対応・カ国/ヵ国/か国/ヶ国/ケ国）＝出力HTML実測0件
+- 準拠法（通則法36条）＝一般的枠組みのみ・「専門家にご相談ください」注記1件／CannotHandle（社労士未開業注記）1件
+- /global 回帰なし（200・新リンク1件のみ追加）／/faq に新規2問表示確認／vitest 30件 pass
