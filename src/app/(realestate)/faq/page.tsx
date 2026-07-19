@@ -43,7 +43,7 @@ const COPY: Record<LangCode, FaqPageCopy> = {
     breadcrumbHome: "ホーム",
     breadcrumbCurrent: "よくある質問",
     heading: "よくある質問",
-    // ja＝40問6分野（JA_FAQ_SECTIONS）を平坦化。JSON-LDはこの配列から1本生成（表示HTMLと同一ソース＝完全一致）
+    // ja＝41問6分野（B-3の40問＋C-1の1問・JA_FAQ_SECTIONS）を平坦化。JSON-LDはこの配列から1本生成（表示HTMLと同一ソース＝完全一致）
     items: JA_FAQ_SECTIONS.flatMap((s) => s.items),
     authorAlt: "四葉不動産株式会社 代表取締役 浦松丈二",
     authorLabel: "この記事の著者",

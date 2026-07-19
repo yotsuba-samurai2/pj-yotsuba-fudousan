@@ -4,32 +4,38 @@
 // 方式＝COPY: Record<LangCode,…>＋getRequestLocale（手本=access/page.tsx）。
 // en/zh-tw/zh=監修前ドラフト（2026-07-11）。繁体=台湾定訳（團體家屋・障礙福祉・文京區）／zh=大陸表記（团体家屋・残障福祉）。
 // 訳語は/legal/services/shogai-fukushi・HomePageContentの既訳と統一（共同生活援助=shared-living support／指定基準=designation standards）。
-// JSON-LD Service name・keywords・Placeholder＝ja固定（構造不変）。ja表示文言は従来と一字一句同一。
+// JSON-LD Service name・keywords＝ja固定（構造不変）。
+// 2026-07-19 C-1（日本語版のみ）：H1・メタ・本文を5セクション構成（指定基準／契約前の確認／賃貸契約の注意点／
+//   役割分担／空き家転用）に大幅拡充。回答ブロック差し替え・FAQ 5問＋新規1問（東京都の事前相談）。
+//   en/zh-tw/zh はB-4時点の2セクション構成のまま（監修後に追従）。
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { buildPageMetadata } from "@/lib/seo";
 import { getRequestLocale } from "@/lib/getRequestLocale";
 import { RealestateServicePage, ReH2 } from "@/components/shared/RealestateServicePage";
-import { Placeholder } from "@/components/shared/Placeholder";
 import { CannotHandle } from "@/components/shared/CannotHandle";
 import { Faq } from "@/components/shared/Faq";
 import { pickFaqJa } from "@/data/faqJa";
 import type { LangCode } from "@/config/languages";
 
-// ─── B-4（2026-07-19浦松検収済み・日本語版のみ）─────────────────────────
-// 冒頭の回答ブロック（H1直下・158字）。指定申請の一文は浦松指定の必須文言＝一字一句変更しないこと。
-// 7.43㎡＝B-3と同じ事実アンカー（自治体・事業類型により異なる旨はFAQ側で担保）。
+// ─── C-1（2026-07-19浦松検収済み・日本語版のみ）─────────────────────────
+// 冒頭の回答ブロック（H1直下）。浦松指定の確定文言＝一字一句変更しないこと（B-4版から差し替え）。
+// 7.43㎡＝B-3と同じ事実アンカー（自治体・事業類型により異なる旨は本文注記・FAQ側で担保）。
 const JA_ANSWER_BLOCK =
-  "グループホーム（共同生活援助）の物件は、借りてから基準を確認すると間に合いません。文京区を中心に、用途地域・居室面積（原則7.43㎡以上）・消防設備・貸主の承諾を契約前に確認しながら、四葉不動産株式会社が物件探しと仲介を担当します。指定申請書類の作成は行政書士の独占業務として四葉行政書士事務所が別契約で受任します。";
+  "障害者グループホーム（共同生活援助）の物件は、障害者総合支援法や建築基準法・消防法の要件（立地・用途地域・居室7.43㎡以上・消防設備など）を契約前に確認することが重要です。四葉不動産株式会社が物件の紹介・仲介を担当し、指定申請書類の作成・提出は行政書士の独占業務として併設の四葉行政書士事務所が別契約で受任します。物件と許認可を別々の事業体が担当することで、それぞれの専門性と適法性を確保します。文京区を含む東京都内に対応します。";
 
-// FAQPage＝B-3の40問からグループホーム分野の5問を参照（文字列コピー禁止＝表記ゆれ防止）
+// FAQPage＝faqJa（B-3の5問＋C-1新規1問）を参照（文字列コピー禁止＝表記ゆれ防止）
 const JA_FAQ_QUESTIONS = [
   "グループホーム向けの物件はどう探せばいいですか？",
   "立地（用途地域）の基準はありますか？",
   "居室面積の基準はありますか？",
   "物件の契約前に確認すべき点は何ですか？",
   "指定申請の書類は誰に頼めますか？",
+  "東京都の事前相談はいつ行えばいい？",
 ];
+
+// C-1本文の各項目に必ず付ける注記（タスク指定文言）
+const JA_KIJUN_NOTE = "※自治体・類型により異なる場合があります。最新の要件は指定権者にご確認ください。";
 
 type GroupHomeCopy = {
   metaTitle: string;
@@ -40,11 +46,12 @@ type GroupHomeCopy = {
   heroAlt: string;
   h1: string;
   lead: ReactNode;
-  s1H2: string;
-  s1Note: string;
-  s1Items: ReactNode[];
-  s2H2: string;
-  s2Body: ReactNode;
+  /** en/zh-tw/zh の旧2セクション構成（jaはC-1で5セクション構成に移行＝ページ側で直接描画するため未使用） */
+  s1H2?: string;
+  s1Note?: string;
+  s1Items?: ReactNode[];
+  s2H2?: string;
+  s2Body?: ReactNode;
   internalLinks: { href: string; label: string }[];
   crossLinkLead: string;
   relatedAria: string;
@@ -56,36 +63,25 @@ type GroupHomeCopy = {
 
 const COPY: Record<LangCode, GroupHomeCopy> = {
   ja: {
-    metaTitle: "グループホームに使える物件探し｜四葉不動産",
+    // C-1：タイトルはタスク指定の完全表記（absoluteTitle: true でテンプレート非適用）
+    metaTitle: "障害者グループホームの物件を探す｜指定基準を見据えた物件選び | 四葉不動産",
     metaDesc:
-      "グループホーム（共同生活援助）の開設に使える物件を、四葉不動産株式会社がご提案します。指定基準（立地・構造・面積・消防）を見据えた契約前の確認から、開設後を見据えた物件選びまで。文京区の窓口で、物件と手続きをまとめて相談できます。",
+      "障害者グループホーム（共同生活援助）に使える物件の探し方を解説。立地・用途地域・居室面積（原則7.43㎡以上）・消防設備など、指定基準を見据えた契約前の確認ポイントと賃貸契約の注意点。物件の紹介・仲介は四葉不動産株式会社、指定申請は併設の四葉行政書士事務所が別契約で受任します。",
     crumbHome: "ホーム",
     crumbToushi: "投資用・事業用不動産",
     crumbCurrent: "グループホーム物件",
     heroAlt: "グループホームに使える物件のイメージ（住宅街の一軒家）",
-    h1: "グループホームに使える物件探し",
+    h1: "障害者グループホームに使える物件の探し方",
     lead: (
       <p>
-        グループホーム（共同生活援助）に使う物件は、<strong>「借りてから考える」と失敗します</strong>。事業者指定には立地・構造・面積・消防設備などの基準があり、契約後に「この物件では指定が取れない」と判明する事例が実際にあるからです。四葉不動産株式会社は、<strong>指定基準を見据えた契約前の確認</strong>から物件探しをお手伝いします。指定申請そのものは関連事業の四葉行政書士事務所が対応するため、<strong>物件と申請を一つの窓口で</strong>相談できます。
+        グループホームに使う物件は、<strong>「借りてから考える」と失敗しがちです</strong>。契約した後に基準を満たさないことが判明すると、開設の遅れや想定外の改修費の負担につながるためです。このページでは、<strong>指定基準を見据えた物件の探し方</strong>と、契約前に確認しておきたいポイントを解説します。
       </p>
     ),
-    s1H2: "グループホームの物件は、何に気をつければいいですか？",
-    s1Note: "契約前に確認すべき代表的なポイントです。個別の適合判断は自治体・専門家への確認が必要です。",
-    s1Items: [
-      <><strong>立地・用途地域</strong>：その場所で福祉事業が営めるか、近隣環境はどうか</>,
-      <><strong>構造・面積</strong>：居室の広さ・数、共用部分の要件、バリアフリー</>,
-      <><strong>消防・建築</strong>：消防設備の要否、建築基準への適合</>,
-      <><strong>貸主の理解</strong>：用途（福祉事業）への承諾——ここで止まる案件は少なくありません</>,
-    ],
-    s2H2: "物件探しから開設までは、どう進みますか？",
-    s2Body: (
-      <>
-        <strong>①物件のご相談（四葉不動産）→ ②指定基準との突き合わせ → ③指定申請（四葉行政書士事務所・別事業体）→ ④開設</strong>。物件と申請を並行で進めることで、「借りたのに開設できない」を避けられます。
-      </>
-    ),
     internalLinks: [
-      { href: "/toushi", label: "投資用・事業用不動産トップ" },
-      { href: "/access", label: "アクセス・料金" },
+      { href: "/ryokin", label: "料金のご案内" },
+      { href: "/legal", label: "四葉行政書士事務所" },
+      { href: "/faq#group-home", label: "よくある質問（グループホーム・障害福祉）" },
+      { href: "/contact", label: "お問い合わせ" },
     ],
     crossLinkLead: "指定申請の要件・流れは、関連事業の四葉行政書士事務所のページで詳しく解説しています。",
     relatedAria: "関連リンク",
@@ -260,21 +256,137 @@ export default async function Page() {
       authorLabel={c.authorLabel}
       authorBio={c.authorBio}
     >
-      <div>
-        <ReH2>{c.s1H2}</ReH2>
-        <p className="mt-3 text-sm leading-relaxed text-text-muted">{c.s1Note}</p>
-        <ul className="mt-2 space-y-2 text-sm leading-relaxed text-text">
-          {c.s1Items.map((item, i) => (
-            <li key={i}>{item}</li>
-          ))}
-        </ul>
-        <Placeholder reason="浦松＝実務上のチェックポイントの追加・オーナー向け（GH向け賃貸という出口）の記載可否" />
-      </div>
+      {isJa ? (
+        <>
+          {/* ─── C-1 本文5セクション（2026-07-19浦松検収済み草稿・日本語版のみ） ─── */}
+          {/* §1 指定基準と物件条件。根拠＝指定障害福祉サービス基準省令（平18厚労省令171号）の共同生活援助設備基準
+              （立地・居室7.43㎡・共用設備）／建築基準法の用途規制／消防法施行令別表第一(6)項。
+              条文番号・数値詳細は本文に出さず、各項目にJA_KIJUN_NOTEを必ず付ける（タスク指定） */}
+          <div>
+            <ReH2>指定基準と物件条件</ReH2>
+            <p className="mt-3 leading-relaxed text-text">
+              障害者グループホーム（共同生活援助）として物件を使うには、障害者総合支援法に基づく指定基準と、建築基準法・消防法の要件を満たす必要があります。代表的な確認項目は次のとおりです。
+            </p>
+            <ul className="mt-3 space-y-4 text-sm leading-relaxed text-text">
+              <li>
+                <strong>立地・用途地域</strong>：共同生活住居は、利用者の家族や地域住民との交流の機会が確保される地域にあることが求められ、入所施設や病院の敷地内は適当でないとされています。また、建築基準法では用途地域ごとに建てられる建物の用途が定められており、既存の建物をグループホームに使う場合は用途変更の手続きが必要になることがあります。
+                <span className="mt-1 block text-xs text-text-muted">{JA_KIJUN_NOTE}</span>
+              </li>
+              <li>
+                <strong>居室面積</strong>：居室の定員は原則1人、面積は収納設備等を除き原則7.43㎡以上とされています。
+                <span className="mt-1 block text-xs text-text-muted">{JA_KIJUN_NOTE}</span>
+              </li>
+              <li>
+                <strong>共用設備</strong>：共同生活住居ごとに、居間・食堂・浴室・トイレ・洗面設備など、日常生活に必要な設備を備えることとされています。
+                <span className="mt-1 block text-xs text-text-muted">{JA_KIJUN_NOTE}</span>
+              </li>
+              <li>
+                <strong>消防設備</strong>：消防法上、グループホームは福祉施設として扱われ、消火器・自動火災報知設備・誘導灯などの設置が必要になる場合があります。スプリンクラー設備の要否を含め、必要な設備は入居者の状況や建物の規模・構造により異なり、設置工事の要否は開設費用に直結します。
+                <span className="mt-1 block text-xs text-text-muted">※自治体・類型により異なる場合があります。最新の要件は指定権者・消防署にご確認ください。</span>
+              </li>
+            </ul>
+          </div>
 
-      <div>
-        <ReH2>{c.s2H2}</ReH2>
-        <p className="mt-3 leading-relaxed text-text">{c.s2Body}</p>
-      </div>
+          {/* §2 契約前の確認。事前相談の重要性＝指定基準の存在から導かれる実務上の注意（B-3 FAQと同趣旨・義務とは断定しない） */}
+          <div>
+            <ReH2>契約前の確認 ― 指定権者への事前相談</ReH2>
+            <p className="mt-3 leading-relaxed text-text">
+              指定を受けるには、物件が基準を満たしていることが前提になります。候補物件が決まったら、賃貸借契約や売買契約を結ぶ前の段階で、指定権者への事前相談を行うことが重要です。
+            </p>
+            <p className="mt-3 leading-relaxed text-text">
+              要件を満たさない物件を先に契約してしまうと、想定外の改修費がかかる、改修しても要件を満たせず指定を受けられない、といったリスクがあります。契約後にできることは限られるため、「物件の確保」と「基準の確認」は並行して進めることをお勧めします。当社は契約前の確認事項の整理をお手伝いし、指定申請に関するご相談は併設の四葉行政書士事務所（別契約）と連携して進めます。
+            </p>
+          </div>
+
+          {/* §3 賃貸契約の注意点。根拠＝民法の用法遵守義務（616条準用594条1項）・無断転貸の制限（612条）・原状回復（621条）＝条文番号は本文に出さない */}
+          <div>
+            <ReH2>賃貸契約の注意点</ReH2>
+            <ul className="mt-3 space-y-4 text-sm leading-relaxed text-text">
+              <li>
+                <strong>貸主の用途承諾</strong>：住宅として貸し出されている建物をグループホームとして使うには、貸主の承諾が必要です。賃借人には契約や建物の性質に従った使い方をする義務があり、無断で事業用途に転用するとトラブルの原因になります。承諾は口頭ではなく、契約書や覚書で残しておくことが大切です。
+              </li>
+              <li>
+                <strong>転貸・転用の制限</strong>：運営事業者が借りた物件を利用者に住まわせる形態など、事業の組み方によっては転貸に関わる整理が必要になる場合があります。賃借権の無断譲渡・無断転貸は契約解除の原因になり得るため、事業スキームを貸主に説明し、契約書上の位置づけを明確にしておきましょう。
+              </li>
+              <li>
+                <strong>原状回復の取り決め</strong>：消防設備の設置や間仕切りの変更など、開設にあたって改修を行う場合は、退去時にどこまで元に戻すのかを契約時に取り決めておくことが重要です。取り決めがないまま改修を進めると、退去時の負担が想定を超えることがあります。
+              </li>
+            </ul>
+          </div>
+
+          {/* §4 役割分担（表）。分離受任・紹介料なし＝CannotHandleの浦松確定文言と同一趣旨。社労士の未開業注記は必須。表スタイル＝access/page.tsxに準拠 */}
+          <div>
+            <ReH2>役割分担</ReH2>
+            <p className="mt-3 leading-relaxed text-text">
+              物件と許認可・労務は、それぞれ独立した事業体・専門家が別契約で担当します。
+            </p>
+            <table className="mt-4 w-full border-collapse text-sm">
+              <thead>
+                <tr className="bg-primary-tint text-left">
+                  <th className="border border-border px-3 py-2">業務</th>
+                  <th className="border border-border px-3 py-2">担当</th>
+                </tr>
+              </thead>
+              <tbody className="text-text">
+                <tr>
+                  <td className="border border-border px-3 py-2">物件の紹介・仲介（宅地建物取引業）</td>
+                  <td className="border border-border px-3 py-2">四葉不動産株式会社</td>
+                </tr>
+                <tr>
+                  <td className="border border-border px-3 py-2">指定申請書類の作成・提出（行政書士の独占業務・別契約）</td>
+                  <td className="border border-border px-3 py-2">併設の四葉行政書士事務所</td>
+                </tr>
+                <tr>
+                  <td className="border border-border px-3 py-2">労務・人員配置のご相談</td>
+                  <td className="border border-border px-3 py-2">四葉社会保険労務士事務所（2026年9月開業予定・現時点では未開業）</td>
+                </tr>
+                <tr>
+                  <td className="border border-border px-3 py-2">不動産登記</td>
+                  <td className="border border-border px-3 py-2">提携司法書士をご紹介</td>
+                </tr>
+                <tr>
+                  <td className="border border-border px-3 py-2">税務（税務申告等）</td>
+                  <td className="border border-border px-3 py-2">提携税理士をご紹介</td>
+                </tr>
+              </tbody>
+            </table>
+            <p className="mt-2 text-xs text-text-muted">
+              各事業体・専門家とは分離受任・個別契約であり、当社が紹介料を受け取ることはありません。
+            </p>
+          </div>
+
+          {/* §5 空き家の転用可能性。B-3 FAQ「相続した空き家をグループホームに使えますか？」と同一趣旨・同一の留保 */}
+          <div>
+            <ReH2>空き家の転用可能性</ReH2>
+            <p className="mt-3 leading-relaxed text-text">
+              相続した空き家を、グループホームとして活用できる場合があります。住宅街の一戸建てという立地・形状は共同生活援助の住まいと親和性があり、空き家の管理負担を活用に変える選択肢の一つです。ただし、用途地域・居室面積・消防設備など指定基準に関わる確認が必要で、基準は自治体・事業類型により異なります。相続した物件の活用をご検討の場合も、契約や改修の前の段階でご相談ください。
+            </p>
+            {/* C-4完了後に有効化（/souzoku/akiya は未作成のためリンクを張らない）：
+            <p className="mt-2 text-sm">
+              <Link href="/souzoku/akiya" className="text-primary underline">相続した空き家の活用</Link>
+            </p>
+            */}
+          </div>
+        </>
+      ) : (
+        <>
+          {/* en/zh-tw/zh＝B-4時点の2セクション構成を維持（C-1は日本語版のみ・監修後に追従） */}
+          <div>
+            <ReH2>{c.s1H2}</ReH2>
+            <p className="mt-3 text-sm leading-relaxed text-text-muted">{c.s1Note}</p>
+            <ul className="mt-2 space-y-2 text-sm leading-relaxed text-text">
+              {c.s1Items?.map((item, i) => (
+                <li key={i}>{item}</li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <ReH2>{c.s2H2}</ReH2>
+            <p className="mt-3 leading-relaxed text-text">{c.s2Body}</p>
+          </div>
+        </>
+      )}
 
       {isJa && (
         <>
