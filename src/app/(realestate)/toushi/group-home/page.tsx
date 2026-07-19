@@ -11,7 +11,25 @@ import { buildPageMetadata } from "@/lib/seo";
 import { getRequestLocale } from "@/lib/getRequestLocale";
 import { RealestateServicePage, ReH2 } from "@/components/shared/RealestateServicePage";
 import { Placeholder } from "@/components/shared/Placeholder";
+import { CannotHandle } from "@/components/shared/CannotHandle";
+import { Faq } from "@/components/shared/Faq";
+import { pickFaqJa } from "@/data/faqJa";
 import type { LangCode } from "@/config/languages";
+
+// ─── B-4（2026-07-19浦松検収済み・日本語版のみ）─────────────────────────
+// 冒頭の回答ブロック（H1直下・158字）。指定申請の一文は浦松指定の必須文言＝一字一句変更しないこと。
+// 7.43㎡＝B-3と同じ事実アンカー（自治体・事業類型により異なる旨はFAQ側で担保）。
+const JA_ANSWER_BLOCK =
+  "グループホーム（共同生活援助）の物件は、借りてから基準を確認すると間に合いません。文京区を中心に、用途地域・居室面積（原則7.43㎡以上）・消防設備・貸主の承諾を契約前に確認しながら、四葉不動産株式会社が物件探しと仲介を担当します。指定申請書類の作成は行政書士の独占業務として四葉行政書士事務所が別契約で受任します。";
+
+// FAQPage＝B-3の40問からグループホーム分野の5問を参照（文字列コピー禁止＝表記ゆれ防止）
+const JA_FAQ_QUESTIONS = [
+  "グループホーム向けの物件はどう探せばいいですか？",
+  "立地（用途地域）の基準はありますか？",
+  "居室面積の基準はありますか？",
+  "物件の契約前に確認すべき点は何ですか？",
+  "指定申請の書類は誰に頼めますか？",
+];
 
 type GroupHomeCopy = {
   metaTitle: string;
@@ -218,10 +236,12 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function Page() {
   const locale = await getRequestLocale();
   const c = COPY[locale] ?? COPY.ja;
+  const isJa = locale === "ja";
 
   return (
     <RealestateServicePage
       path="/toushi/group-home"
+      answerBlock={isJa ? JA_ANSWER_BLOCK : undefined}
       crumbs={[
         { name: c.crumbHome, href: "/" },
         { name: c.crumbToushi, href: "/toushi" },
@@ -255,6 +275,14 @@ export default async function Page() {
         <ReH2>{c.s2H2}</ReH2>
         <p className="mt-3 leading-relaxed text-text">{c.s2Body}</p>
       </div>
+
+      {isJa && (
+        <>
+          {/* FAQPage JSON-LD＝B-4の例外（浦松承認）。設問はB-3の40問を参照＝サイト内で文言一致 */}
+          <Faq items={pickFaqJa(JA_FAQ_QUESTIONS)} heading="よくある質問" withJsonLd bare openFirst={false} />
+          <CannotHandle bare />
+        </>
+      )}
     </RealestateServicePage>
   );
 }
