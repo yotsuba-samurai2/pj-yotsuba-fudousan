@@ -54,3 +54,10 @@
 - **ローカルのビルド検証は prisma dev の使い捨てDB＋`pgbouncer=true`**: `DATABASE_URL` 未設定だと page data 収集で落ちる。`npx prisma dev --name xxx` → 接続文字列に **`pgbouncer=true` を付けて** `.env.local` に置く（付けないと `prepared statement "s0" already exists` で失敗）。prisma CLI は `.env.local` を読まないので `db push` は環境変数を inline で渡す。検証後は `prisma dev stop` と `.env.local` 削除まで行う。本番Supabaseには接続しない。
 - **多言語ページの「日本語残留」検査は JSON-LD を除外してから行う**: 本文のかな検出をかけると `seo.ts` の Organization description（全ロケール ja 固定・構造不変）が大量にヒットして誤検知になる。比較対象として同方式の既存ページ（C-6-1 の `/zh-tw/global/chinese`）の残留プロファイルと突き合わせ、差分がゼロであることを確認する。
 - **ローカル検証の前に「そのポートを誰が握っているか」を必ず確認する**: C-6-3 で `PORT=3132 npm start` が既存プロセス（前セッションのC-6-2検証サーバー、同日12:03起動）とポート衝突し、`npm start` は黙って失敗、curl は**旧ビルド**に当たり続けた。「全ロケールで日本語が出る」という偽の不具合を数十分追った。**`lsof -nP -iTCP:<port> -sTCP:LISTEN` で所有プロセスを確認し、他セッションのサーバーは落とさず別ポートを使う**。ヘッダー（canonical・og:locale は新ロケール、title・hreflang は旧挙動）のように**新旧が混在して見えたら真っ先にビルド/プロセスの同一性を疑う**。
+
+## 2026-07-20 NAP住所 正式表記 統一（表示データ層）
+
+- **「表示側の値」はソース(repo)ではなくDB(translationテーブル)にあることを最初に確認する**: 本番HTMLの変種を「i18n辞書ファイル」だと想定して着手しかけたが、UI翻訳は `getTranslationData.ts` が `translation` テーブルから読む完全DB管理。ソース(seo.ts/office.ts)は既に正式表記で JSON-LD 専用だった。**repo編集だけでは本番表示は直らない**。表示不一致を見たら、まず値の格納先（DB or source）を `getTranslationData`/`admin-api` で特定してから方式を決める。
+- **DB翻訳値の一括是正は admin是正ルート（fix-compliance方式）が既定パターン**: `/admin/translations/fix-*` が `getTranslations→書換→saveTranslations` を4言語で回す。新規是正も同方式（今回 `/admin/translations/fix-nap-address` 新設）にすると本番でユーザーが実行でき、私が本番DBに直結せずに済む。
+- **住所の正規化は from/to 完全一致でなく「アンカー限定の正規表現置換」が堅牢**: 現行DB値が backup(2026-07-10)と一致する保証がなく、変種も多数。`小日向◯丁目`／`小日向安田ビル`／`Kohinata Yasuda Bldg.` をアンカーにした正規化なら、未知の変種も吸収でき、かつ「小日向・茗荷谷駅…」等の**近隣地名の言及（住所でない）は不変**に保てる。idempotent なので再実行安全。
+- **repo全体grepの「非正式ゼロ」判定は用途分類してから**: `小日向` 437件のうち住所は一部で大半は近隣地名の言及。残る非正式は①検出器の定義(NAP_BAD_VARIANTS＝仕様上必須) ②過去の監査/スナップショット記録(履歴・改変しない) ③seedのdry-run生成物(本番非表示) のみ。**履歴・監査記録・検出器定義を機械的に書き換えない**（履歴の改竄になる）。rendering層がゼロであることを示すのが目的。
