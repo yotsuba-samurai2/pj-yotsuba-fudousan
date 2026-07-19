@@ -11,7 +11,23 @@ import { addLocalePrefix } from "@/lib/locale";
 import Link from "next/link";
 import { RealestateServicePage, ReH2 } from "@/components/shared/RealestateServicePage";
 import { Placeholder } from "@/components/shared/Placeholder";
+import { CannotHandle } from "@/components/shared/CannotHandle";
+import { Faq } from "@/components/shared/Faq";
+import { pickFaqJa } from "@/data/faqJa";
 import type { LangCode } from "@/config/languages";
+
+// ─── B-4（2026-07-19浦松検収済み・日本語版のみ）─────────────────────────
+// 冒頭の回答ブロック（H1直下・153字）。対応言語表記＝D2確定「日本語・英語・中国語（繁体字・簡体字）」。
+const JA_ANSWER_BLOCK =
+  "企業・施設の社宅手配と法人契約の賃貸は、四葉不動産株式会社が文京区・茗荷谷を中心にお手伝いします。物件の選定から入居審査・保証会社の手配、外国人従業員への説明まで、日本語・英語・中国語（繁体字・簡体字）で対応します。受け入れに必要な在留資格の申請書類の作成は、併設の四葉行政書士事務所が別契約で受任します。";
+
+// FAQPage＝B-3の40問から法人・社宅3問＋重要事項説明の1問を参照（文字列コピー禁止＝表記ゆれ防止）
+const JA_FAQ_QUESTIONS = [
+  "社宅用の物件を探してもらえますか？",
+  "外国人採用にともなう社宅も相談できますか？",
+  "事業用物件の許認可（飲食・古物など）も相談できますか？",
+  "重要事項説明を外国語でサポートしてもらえますか？",
+];
 
 type ShatakuCopy = {
   metaTitle: string;
@@ -199,10 +215,12 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function Page() {
   const locale = await getRequestLocale();
   const c = COPY[locale] ?? COPY.ja;
+  const isJa = locale === "ja";
 
   return (
     <RealestateServicePage
       path="/toushi/shataku"
+      answerBlock={isJa ? JA_ANSWER_BLOCK : undefined}
       crumbs={[
         { name: c.crumbHome, href: "/" },
         { name: c.crumbToushi, href: "/toushi" },
@@ -226,6 +244,14 @@ export default async function Page() {
         <p className="mt-3 leading-relaxed text-text">{c.qaBody(locale)}</p>
         <Placeholder reason="浦松＝社宅・法人賃貸の対応範囲・実績（確定分のみ）" />
       </div>
+
+      {isJa && (
+        <>
+          {/* FAQPage JSON-LD＝B-4の例外（浦松承認）。設問はB-3の40問を参照＝サイト内で文言一致 */}
+          <Faq items={pickFaqJa(JA_FAQ_QUESTIONS)} heading="よくある質問" withJsonLd bare openFirst={false} />
+          <CannotHandle bare />
+        </>
+      )}
     </RealestateServicePage>
   );
 }

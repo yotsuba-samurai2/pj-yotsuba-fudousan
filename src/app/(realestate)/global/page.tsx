@@ -14,8 +14,26 @@ import { addLocalePrefix } from "@/lib/locale";
 import Link from "next/link";
 import { RealestateServicePage, ReH2 } from "@/components/shared/RealestateServicePage";
 import { Placeholder } from "@/components/shared/Placeholder";
+import { CannotHandle } from "@/components/shared/CannotHandle";
+import { Faq } from "@/components/shared/Faq";
+import { pickFaqJa } from "@/data/faqJa";
 import { getColumns, getLocalizedColumn, filterColumnsByTheme } from "@/lib/columns";
 import type { LangCode } from "@/config/languages";
+
+// ─── B-4（2026-07-19浦松検収済み・日本語版のみ）─────────────────────────
+// 冒頭の回答ブロック（H1直下・165字）。対応言語＝D2確定「日本語・英語・中国語（繁体字・簡体字）」を必須記載。
+// 代表の駐在歴は既存leadに記載済みのため重複させない（国数表記は一切使わない）。
+const JA_ANSWER_BLOCK =
+  "日本で家を探す外国人の方を、四葉不動産株式会社が日本語・英語・中国語（繁体字・簡体字）でサポートします。文京区・茗荷谷を中心に、在留資格の確認や保証会社の利用など日本特有の手続きを整理し、入居審査から契約、重要事項説明の補足まで母語でご案内します。在留資格そのものの申請書類の作成は、併設の四葉行政書士事務所が別契約で受任します。";
+
+// FAQPage＝B-3の40問から外国人・中国語対応分野の5問を参照（文字列コピー禁止＝表記ゆれ防止）
+const JA_FAQ_QUESTIONS = [
+  "外国人でも日本で部屋を借りられますか？",
+  "中国語で不動産の相談ができますか？",
+  "繁体字と簡体字の両方に対応していますか？",
+  "在留資格（ビザ）の相談もできますか？",
+  "重要事項説明を外国語でサポートしてもらえますか？",
+];
 
 type GlobalCopy = {
   metaTitle: string;
@@ -247,9 +265,12 @@ export default async function Page() {
     "global",
   );
 
+  const isJa = locale === "ja";
+
   return (
     <RealestateServicePage
       path="/global"
+      answerBlock={isJa ? JA_ANSWER_BLOCK : undefined}
       relatedColumns={relatedColumns}
       crumbs={[{ name: c.crumbHome, href: "/" }, { name: c.crumbCurrent }]}
       serviceName={c.serviceName}
@@ -279,6 +300,14 @@ export default async function Page() {
         <ReH2>{c.s3H2}</ReH2>
         <p className="mt-3 text-sm leading-relaxed text-text">{c.s3Body(locale)}</p>
       </div>
+
+      {isJa && (
+        <>
+          {/* FAQPage JSON-LD＝B-4の例外（浦松承認）。設問はB-3の40問を参照＝サイト内で文言一致 */}
+          <Faq items={pickFaqJa(JA_FAQ_QUESTIONS)} heading="よくある質問" withJsonLd bare openFirst={false} />
+          <CannotHandle bare />
+        </>
+      )}
     </RealestateServicePage>
   );
 }

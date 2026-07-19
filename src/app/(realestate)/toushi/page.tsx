@@ -10,8 +10,25 @@ import { addLocalePrefix } from "@/lib/locale";
 import Link from "next/link";
 import { RealestateServicePage, ReH2 } from "@/components/shared/RealestateServicePage";
 import { Placeholder } from "@/components/shared/Placeholder";
+import { CannotHandle } from "@/components/shared/CannotHandle";
+import { Faq } from "@/components/shared/Faq";
+import { pickFaqJa } from "@/data/faqJa";
 import { getColumns, getLocalizedColumn, filterColumnsByTheme } from "@/lib/columns";
 import type { LangCode } from "@/config/languages";
+
+// ─── B-4（2026-07-19浦松検収済み・日本語版のみ）─────────────────────────
+// 冒頭の回答ブロック（H1直下・168字）＝誰に・何を・どの地域で・誰が担当・分離受任を1段落に収める。
+// 「収益物件」は本ページの3本柱の一つとして既出（対応範囲はPlaceholder＝浦松確認待ち）。
+const JA_ANSWER_BLOCK =
+  "文京区で投資用・事業用の不動産をお探しなら、まず物件そのものではなく事業の目的から要件を整理します。グループホーム向け物件、社宅・法人賃貸、収益物件のいずれも、用途に合うかどうかで判断が変わるためです。四葉不動産株式会社が物件の調査・提案・仲介を担当し、事業者指定や許認可の申請書類の作成は併設の四葉行政書士事務所が別契約で受任します。";
+
+// FAQPage＝B-3の40問から投資・事業用に関連する4問を参照（文字列コピー禁止＝表記ゆれ防止）
+const JA_FAQ_QUESTIONS = [
+  "社宅用の物件を探してもらえますか？",
+  "事業用物件の許認可（飲食・古物など）も相談できますか？",
+  "グループホーム向けの物件はどう探せばいいですか？",
+  "物件探しと指定申請の担当はどう分かれますか？",
+];
 
 type ToushiCopy = {
   metaTitle: string;
@@ -323,6 +340,7 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function Page() {
   const locale = await getRequestLocale();
   const c = COPY[locale] ?? COPY.ja;
+  const isJa = locale === "ja";
   const relatedColumns = filterColumnsByTheme(
     (await getColumns(locale)).map((col) => getLocalizedColumn(col, locale)),
     "toushi",
@@ -331,6 +349,7 @@ export default async function Page() {
   return (
     <RealestateServicePage
       path="/toushi"
+      answerBlock={isJa ? JA_ANSWER_BLOCK : undefined}
       relatedColumns={relatedColumns}
       crumbs={[{ name: c.breadcrumbHome, href: "/" }, { name: c.breadcrumbCurrent }]}
       serviceName="投資用・事業用不動産の仲介・提案"
@@ -347,6 +366,13 @@ export default async function Page() {
       authorBio={c.authorBio}
     >
       {c.sections(locale)}
+      {isJa && (
+        <>
+          {/* FAQPage JSON-LD＝B-4の例外（浦松承認）。設問はB-3の40問を参照＝サイト内で文言一致 */}
+          <Faq items={pickFaqJa(JA_FAQ_QUESTIONS)} heading="よくある質問" withJsonLd bare openFirst={false} />
+          <CannotHandle bare />
+        </>
+      )}
     </RealestateServicePage>
   );
 }

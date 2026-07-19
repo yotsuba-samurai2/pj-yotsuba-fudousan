@@ -34,6 +34,12 @@ export type RealestateServicePageProps = {
   h1: string;
   /** 結論（回答ファースト） */
   lead: ReactNode;
+  /**
+   * 冒頭の回答ブロック（B-4・2026-07-19）。H1直下・lead の前に描画する自己完結の150〜200字。
+   * 「誰に・何を・どの地域で・誰が担当するか・分離受任の明示」を1段落に収めた確定文言を渡す。
+   * 日本語版のみ運用のため、呼び出し側で locale === "ja" のときだけ渡すこと。
+   */
+  answerBlock?: ReactNode;
   internalLinks: { href: string; label: string }[];
   /** クロスリンク導入文の上書き（分担説明トーン） */
   crossLinkLead?: string;
@@ -88,6 +94,9 @@ export async function RealestateServicePage(p: RealestateServicePageProps) {
 
         <header className="pt-4">
           <h1 className="font-serif text-2xl font-semibold text-ink sm:text-3xl">{p.h1}</h1>
+          {p.answerBlock && (
+            <p className="mt-4 leading-relaxed text-text">{p.answerBlock}</p>
+          )}
           <div className="mt-4 leading-relaxed text-text">{p.lead}</div>
         </header>
 

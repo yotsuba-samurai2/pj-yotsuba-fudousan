@@ -8,6 +8,8 @@ import { SHARED_ORG_INFO } from "@/lib/seo";
 import { getRequestLocale } from "@/lib/getRequestLocale";
 import { getColumns, getLocalizedColumn, filterColumnsByTheme } from "@/lib/columns";
 import { RelatedColumnsSection } from "@/components/column/RelatedColumnsSection";
+import { CannotHandle } from "@/components/shared/CannotHandle";
+import { pickFaqJa } from "@/data/faqJa";
 import type { LangCode } from "@/config/languages";
 
 /**
@@ -31,6 +33,7 @@ import type { LangCode } from "@/config/languages";
 type ExitCardId = "management" | "utilization" | "sale";
 type ExitCard = { id: ExitCardId; title: string; description: string };
 type FaqItem = { question: string; answer: string };
+
 type InternalLink = { href: string; label: string; description: string };
 type SouzokuCopy = {
   articleTitle: string;
@@ -69,6 +72,20 @@ const EXIT_ICONS: Record<ExitCardId, typeof Building2> = {
   sale: KeyRound,
 };
 
+// 2026-07-19 B-4：ja の相続FAQは B-3 の40問（@/data/faqJa・相続不動産8問）に統一する。
+// 従来の独自9問は設問が重複しつつ文言が異なり表記ゆれの原因だったため廃止（浦松承認）。
+// FAQJsonLd の {question, answer} へ写像するだけで、文面は faqJa 側の単一ソースが正。
+const JA_FAQ_ITEMS: FaqItem[] = pickFaqJa([
+  "文京区で不動産を相続したら、何から始めればいいですか？",
+  "相続登記の期限はありますか？",
+  "相続した不動産は、管理・活用・売却のどれを選べばいいですか？",
+  "借地権付きの実家を相続したら、どうすればいいですか？",
+  "共有名義で相続した不動産はどう扱えばいいですか？",
+  "売却にはどのくらいの期間がかかりますか？",
+  "遺産分割協議書などの相続手続きは、誰が担当しますか？",
+  "税理士や司法書士も紹介してもらえますか？",
+]).map((it) => ({ question: it.q, answer: it.a }));
+
 const COPY: Record<LangCode, SouzokuCopy> = {
   ja: {
     articleTitle: "文京区で不動産を相続したら——管理・活用・売却、3つの出口の選び方",
@@ -79,57 +96,12 @@ const COPY: Record<LangCode, SouzokuCopy> = {
     heroLabel: "相続不動産",
     h1Top: "文京区で不動産を相続したら。",
     h1Sub: "出口は「管理・活用・売却」の3つです",
+    // B-4：冒頭の回答ブロック（浦松確定文言・165字）。従来のheroLeadは同趣旨のため置換（追加ではない）。
     heroLead:
-      "文京区で不動産を相続したら、まず相続登記の期限を確認——2024年4月から申請が義務化され、原則3年以内です。そのうえで管理・活用・売却の3つから出口を選ぶ。この順番で進めれば迷いません。四葉不動産が最初の一歩から伴走します。",
+      "文京区で不動産を相続したら、まず相続登記の期限（2024年4月から義務化・原則3年以内）を確認します。次に、その不動産を『管理・活用・売却』のどの出口に導くかを、税負担や家族の状況から検討します。四葉不動産株式会社が物件の査定・売却・活用を担当し、遺産分割協議書の作成など法務手続きは併設の四葉行政書士事務所が別契約で受任します。",
     faqLabel: "FAQ",
     faqHeading: "文京区の相続不動産、よくある疑問",
-    faqItems: [
-      {
-        question: "文京区で不動産を相続したら、まず何から始めればいいですか？",
-        answer:
-          "一般的な流れは、①遺言書の有無の確認、②相続人と相続財産の確定、③遺産分割協議、④相続登記、⑤管理・活用・売却の方針決定、という順です。相続の承認・放棄には3か月の熟慮期間（民法第915条第1項）があるため、早めに全体像を整理するのが安心です。手続きが必要な場面は、提携する専門家と連携してご案内します。",
-      },
-      {
-        question: "相続登記に期限はありますか？",
-        answer:
-          "あります。2024年4月1日から相続登記の申請が義務化され、不動産の取得を知った日から原則3年以内の申請が必要です（不動産登記法第76条の2第1項）。それより前に相続した未登記の不動産も対象で、猶予期限は2027年3月31日です。正当な理由なく申請を怠ると10万円以下の過料の対象になり得ます（同法第164条第1項）。",
-      },
-      {
-        question: "相続した実家を空き家のままにしておくと、どうなりますか？",
-        answer:
-          "建物の傷みや老朽化が進むほか、固定資産税などの維持費は毎年かかり続けます。管理が不十分な空き家は、空家等対策特別措置法にもとづき市区町村の指導・勧告等の対象となる場合があり、勧告を受けると固定資産税の住宅用地特例が解除されることがあります。「まだ決められない」場合も、管理の体制だけは早めに整えることをおすすめします。",
-      },
-      {
-        question: "売却と賃貸（活用）、どちらが得ですか？",
-        answer:
-          "一概には言えません。立地・築年数・修繕の要否、まとまった資金の必要性、税負担、ご家族の思いによって最適解は変わります。四葉不動産では「売った場合」と「貸した場合」の双方を数字で比較したうえで、ご家族が納得できる出口を一緒に選びます。",
-      },
-      {
-        question: "相続した不動産の価値はどうやって調べますか？",
-        answer:
-          "目安になるのは、国税庁が公表する路線価（相続税評価の基礎）や公示地価です。ただし実際に売れる価格（実勢価格）はこれらと異なるのが通常です。文京区内の取引事情をふまえた個別の査定は当社で承りますので、お問い合わせからご依頼ください。",
-      },
-      {
-        question: "共有名義で相続した不動産でも売却できますか？",
-        answer:
-          "共有者全員の同意があれば売却できます。自分の持分だけを売ることも可能ですが、買い手が限られ価格面でも不利になりやすいのが実情です。遺産分割協議（民法第907条第1項）の整理が必要な場合は、提携する専門家と連携して進め方をご案内します。",
-      },
-      {
-        question: "相続税の申告や登記の手続きも、まとめて相談できますか？",
-        answer:
-          "はい、窓口としてまとめてご相談いただけます。四葉不動産が担うのは不動産の管理・活用・売却です。登記・税務・相続手続きは、それぞれ提携する専門家（行政書士・司法書士・税理士等）と連携して進めます。なお、相続税の申告が必要な場合の期限は、相続の開始を知った日の翌日から10か月以内です（相続税法第27条第1項）。",
-      },
-      {
-        question: "遠方に住んでいて、文京区の実家を見に行けません。対応できますか？",
-        answer:
-          "対応できます。文京区小日向に事務所を構える地元会社として、現地の状況確認とご報告、管理・売却の段取りまで、お越しいただかなくても進められる形でご相談に応じます。お電話・メール・オンラインでのやりとりも可能です。",
-      },
-      {
-        question: "相談に費用はかかりますか？営業時間はいつですか？",
-        answer:
-          "ご相談は無料です。事務所は文京区小日向４丁目２－５ 小日向安田ビル ２０３（茗荷谷駅から徒歩約5分）、営業時間は10:00〜18:00（火・水休）です。売却や管理を正式にご依頼いただく場合の費用は、お手続きの前に必ず明示します。",
-      },
-    ],
+    faqItems: JA_FAQ_ITEMS,
     exitLabel: "3つの選択肢",
     exitHeading: "相続した不動産の3つの出口——管理・活用・売却",
     exitLead:
@@ -808,6 +780,13 @@ export default async function SouzokuPageContent() {
 
       {/* ─── 関連コラム ─── */}
       <RelatedColumnsSection columns={relatedColumns} locale={locale} />
+
+      {/* ─── 当社が対応できないこと（B-4・日本語版のみ・お問い合わせ導線の手前） ─── */}
+      {locale === "ja" && (
+        <div className="pb-14 sm:pb-20 md:pb-28">
+          <CannotHandle />
+        </div>
+      )}
 
       {/* ─── CTA ─── */}
       <section className="border-t border-border bg-green-gradient py-14 sm:py-20 md:py-28">
