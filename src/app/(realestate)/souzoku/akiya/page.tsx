@@ -244,8 +244,8 @@ const COPY: Partial<Record<LangCode, Copy>> = {
       { href: "/souzoku/nagare", label: "到出售為止的流程" },
       { href: "/toushi/group-home", label: "尋找可作為團體家屋使用的物件" },
       { href: "/global/chinese", label: "給華人・中文圈客戶的說明" },
-      // /ryokin は ja 先行公開（sitemap の locales:["ja"]）＝zh-tw 版が存在しないため日本語版へリンク。
-      { href: "/ryokin", label: "費用說明（日文）", noLocalePrefix: true },
+      // C-6-3 で /zh-tw/ryokin を公開＝繁体字版へリンクする（日本語版固定と「（日文）」注記を解除）。
+      { href: "/ryokin", label: "費用說明" },
       { href: "/contact", label: "聯絡我們" },
     ],
     crossLinkLead:
@@ -400,8 +400,8 @@ const COPY: Partial<Record<LangCode, Copy>> = {
       { href: "/souzoku/nagare", label: "到出售为止的流程" },
       { href: "/toushi/group-home", label: "寻找可作为团体家屋使用的房屋" },
       { href: "/global/chinese", label: "给华人・中文圈客户的说明" },
-      // /ryokin は ja 先行公開（sitemap の locales:["ja"]）＝zh 版が存在しないため日本語版へリンク。
-      { href: "/ryokin", label: "费用说明（日文）", noLocalePrefix: true },
+      // C-6-3 で /zh/ryokin を公開＝簡体字版へリンクする（日本語版固定と「（日文）」注記を解除）。
+      { href: "/ryokin", label: "费用说明" },
       { href: "/contact", label: "联系我们" },
     ],
     crossLinkLead:

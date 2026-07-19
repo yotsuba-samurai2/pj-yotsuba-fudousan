@@ -188,7 +188,7 @@ const COPY: Partial<Record<LangCode, Copy>> = {
         noLocalePrefix: true,
       },
       // /ryokin は ja 先行公開（sitemap の locales:["ja"]）＝zh-tw 版が存在しないため日本語版へリンク。
-      { href: "/ryokin", label: "費用說明（日文）", noLocalePrefix: true },
+      { href: "/ryokin", label: "費用說明" },
       { href: "/legal", label: "四葉行政書士事務所" },
       { href: "/contact", label: "聯絡我們" },
     ],
@@ -299,7 +299,7 @@ const COPY: Partial<Record<LangCode, Copy>> = {
         noLocalePrefix: true,
       },
       // /ryokin は ja 先行公開（sitemap の locales:["ja"]）＝zh 版が存在しないため日本語版へリンク。
-      { href: "/ryokin", label: "费用说明（日文）", noLocalePrefix: true },
+      { href: "/ryokin", label: "费用说明" },
       { href: "/legal", label: "四葉行政书士事务所" },
       { href: "/contact", label: "联系我们" },
     ],
