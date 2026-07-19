@@ -90,6 +90,8 @@ const STATIC_REALESTATE: StaticPage[] = [
   { path: "/global", changeFrequency: "monthly", priority: 0.8 },
   // タスクC-3（2026-07-19）：中国語圏特化ハブ。現フェーズ＝ja先行公開（中国語版はC-6で展開）
   { path: "/global/chinese", changeFrequency: "monthly", priority: 0.7, locales: ["ja"] },
+  // タスクC-5（2026-07-19）：相談事例（モデルケース）。現フェーズ＝ja先行公開（/ryokinと同方式）
+  { path: "/jirei", changeFrequency: "monthly", priority: 0.7, locales: ["ja"] },
   { path: "/access", changeFrequency: "monthly", priority: 0.7 },
   // タスクB-1（2026-07-19）：不動産・料金ページ。現フェーズ＝ja先行公開（多言語は後続ステップでlocales解除）
   { path: "/ryokin", changeFrequency: "monthly", priority: 0.8, locales: ["ja"] },
