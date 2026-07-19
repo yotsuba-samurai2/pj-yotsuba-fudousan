@@ -307,6 +307,12 @@ export const COMPLIANCE_VALUE_PATCHES: { from: string; to: string }[] = [
   },
   { from: "補助金・ビザ・会社設立をワンストップで。", to: "補助金・ビザ・会社設立の申請を支援。" },
   // ── en ──
+  // 静的パスパッチ（highlights.overseas.value）の想定パスと実キーが異なりスキップされたため値一致でも是正
+  // （2026-07-19 fix-compliance初回適用後の本番再実測で残存確認）
+  {
+    from: "Lived and worked in 4 countries",
+    to: "Lived and worked in China, Taiwan, and Thailand",
+  },
   {
     from: "A one-stop group covering real estate, administrative scrivener, and social insurance & labor consulting.",
     to: "A professional group of real estate and administrative-scrivener practices.",
@@ -372,6 +378,11 @@ export const COMPLIANCE_VALUE_PATCHES: { from: string; to: string }[] = [
     to: "不動產與法務兩項專業事業，支援您的商業與生活。",
   },
   // ── zh ──
+  // 静的パスパッチ（realestate.home.message.paragraph1）の想定パスと実キーが異なりスキップされたため値一致でも是正
+  {
+    from: "作为新闻记者在世界各地奔波，曾在4个国家生活。在此过程中培养的信息收集能力、谈判能力以及广泛的人脉——我坚信这些在不动产领域也能成为强大的武器。",
+    to: "作为新闻记者在世界各地奔波，曾在中国、台湾、泰国生活。在此过程中培养的信息收集能力、谈判能力以及广泛的人脉——我坚信这些在不动产领域也能成为强大的武器。",
+  },
   { from: "4个国家的驻外经验", to: "中国、台湾、泰国的驻外经验" },
   {
     from: "二大业务联动，为客户的问题提供一站式解决方案。",
