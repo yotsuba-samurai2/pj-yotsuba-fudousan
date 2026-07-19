@@ -129,6 +129,13 @@ const COPY: Record<LangCode, SouzokuCopy> = {
     internalHeading: "あわせてご覧いただきたいページ",
     internalLinks: [
       {
+        // タスクC-4（2026-07-19）：相続空き家ページ新設に伴い追加（ja先行公開のためjaのみ）
+        href: "/souzoku/akiya",
+        label: "文京区の空き家、どうする？",
+        description:
+          "相続した空き家の放置リスクと、売却・賃貸活用・管理という3つの出口の選び方を解説しています。",
+      },
+      {
         href: "/services",
         label: "サービス一覧",
         description:

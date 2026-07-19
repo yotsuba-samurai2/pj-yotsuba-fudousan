@@ -10,6 +10,7 @@
 //   en/zh-tw/zh はB-4時点の2セクション構成のまま（監修後に追従）。
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import Link from "next/link";
 import { buildPageMetadata } from "@/lib/seo";
 import { getRequestLocale } from "@/lib/getRequestLocale";
 import { RealestateServicePage, ReH2 } from "@/components/shared/RealestateServicePage";
@@ -364,11 +365,10 @@ export default async function Page() {
             <p className="mt-3 leading-relaxed text-text">
               相続した空き家を、グループホームとして活用できる場合があります。住宅街の一戸建てという立地・形状は共同生活援助の住まいと親和性があり、空き家の管理負担を活用に変える選択肢の一つです。ただし、用途地域・居室面積・消防設備など指定基準に関わる確認が必要で、基準は自治体・事業類型により異なります。相続した物件の活用をご検討の場合も、契約や改修の前の段階でご相談ください。
             </p>
-            {/* C-4完了後に有効化（/souzoku/akiya は未作成のためリンクを張らない）：
+            {/* C-4（2026-07-19）で有効化＝/souzoku/akiya との相互リンク */}
             <p className="mt-2 text-sm">
               <Link href="/souzoku/akiya" className="text-primary underline">相続した空き家の活用</Link>
             </p>
-            */}
           </div>
         </>
       ) : (

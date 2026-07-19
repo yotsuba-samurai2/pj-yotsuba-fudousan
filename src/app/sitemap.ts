@@ -80,6 +80,8 @@ const STATIC_REALESTATE: StaticPage[] = [
   { path: "", changeFrequency: "weekly", priority: 1.0 },
   { path: "/souzoku", changeFrequency: "monthly", priority: 0.9 },
   { path: "/souzoku/nagare", changeFrequency: "monthly", priority: 0.7 },
+  // タスクC-4（2026-07-19）：相続空き家。現フェーズ＝ja先行公開（/ryokinと同方式）
+  { path: "/souzoku/akiya", changeFrequency: "monthly", priority: 0.7, locales: ["ja"] },
   { path: "/toushi", changeFrequency: "monthly", priority: 0.9 },
   { path: "/toushi/group-home", changeFrequency: "monthly", priority: 0.8 },
   // タスクC-2（2026-07-19）：指定申請と物件の分離受任。現フェーズ＝ja先行公開（/ryokinと同方式）
