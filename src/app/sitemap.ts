@@ -82,6 +82,8 @@ const STATIC_REALESTATE: StaticPage[] = [
   { path: "/souzoku/nagare", changeFrequency: "monthly", priority: 0.7 },
   { path: "/toushi", changeFrequency: "monthly", priority: 0.9 },
   { path: "/toushi/group-home", changeFrequency: "monthly", priority: 0.8 },
+  // タスクC-2（2026-07-19）：指定申請と物件の分離受任。現フェーズ＝ja先行公開（/ryokinと同方式）
+  { path: "/toushi/shitei-shinsei", changeFrequency: "monthly", priority: 0.7, locales: ["ja"] },
   { path: "/toushi/shataku", changeFrequency: "monthly", priority: 0.7 },
   { path: "/global", changeFrequency: "monthly", priority: 0.8 },
   { path: "/access", changeFrequency: "monthly", priority: 0.7 },
