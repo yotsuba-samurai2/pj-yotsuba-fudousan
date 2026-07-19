@@ -36,3 +36,7 @@
 - **Next.jsの `permanent:true` は308＝301が要るなら `statusCode:301` を明示**: 308もSEO等価だがGSCレポート整合と互換性のため 301 を使うなら明示する。検証では移転先が200で解決すること（リダイレクト先404の不在）まで確認する。
 - **410はproxy(middleware)で完全一致・早期return**: `next.config` は 301/rewrite/headers しか返せず 410 は出せない。恒久廃止の旧WP URL（/en/comments/feed・/test1）は proxy 先頭で 410 Gone。末尾スラッシュは正規化して判定し、ロケール/テナント判定には干渉させない（rootファイルへの追加は完全一致・早期returnに限る）。
 - **www 403 の主因はドメイン未設定（証明書欠落）でコードでは直せない**: `www.luck428.com` は TLS 証明書が www を含まず（`no alternative certificate subject name`）、http→https 308 後にハンドシェイク失敗でアプリに到達しない。Vercel の Domains に www を追加し apex への 301 リダイレクトを設定する（ダッシュボード操作）。コード側の middleware/WAF を疑う前に `curl -v https://www...` で証明書とサーバ応答元を確認する。
+
+## 2026-07-19 B-2 代表プロフィールページ
+
+- **外部リンクは指定URLのみ張る＝「親切心」でリンクを増やさない**: タスクが sameAs・外部リンクとして特定URL（士業ドットコム予約ページ）を指定している場合、関連するトップページ等を追加で張らない（浦松指摘＝samurai.co.jpトップは不要、予約ページ1本のみ）。リンク・sameAs・識別子は指示の集合と完全一致させ、増減は提案として分離する。

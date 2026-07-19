@@ -1,3 +1,45 @@
+# タスクB-2：代表者プロフィールページ /about/uramatsu 新設（ja先行公開）
+
+## 方針（B-1 /ryokin と同方式）
+- `src/app/(realestate)/about/uramatsu/page.tsx` 新規（COPY: Record<LangCode,…>＋getRequestLocale、現フェーズja のみ）
+- `availableLocales:["ja"]` で hreflang を実在ロケールに限定／sitemap も `locales:["ja"]`
+- JSON-LD：ProfilePage＋Person（@id=PERSON_ID・B-2指定のサブセット：jobTitle=代表取締役／worksFor=四葉不動産／knowsLanguage 4値／hasCredential=宅建士・行政書士の2件／sameAs=Wikidata・ORCID・士業ドットコム予約ページの3本）
+  ※Personフルノードの正は /about の ProfilePageJsonLd（seo.ts PERSON_JSONLD）のまま。@id同一のためKG上でマージされる
+- FAQPage（3問）＝Faq部品 withJsonLd（「FAQPageは/faqのみ」規則のB-2指示による例外＝B-1と同じ扱い）
+- BreadcrumbList＝Breadcrumb部品（ホーム＞会社概要＞代表プロフィール）
+- 経歴事実の一次資料：llms.txt route・/global・/ryokin authorBio（記者34年／中国総局長として中国や台湾、タイに駐在／中華圏12年／国立台湾師範大学留学／2025年設立）。国数表記は不使用
+- 社労士＝「2026年9月開業予定・現時点では未開業」注記を維持
+
+## チェックリスト
+- [x] リポジトリ構成確認（App Router／locale接頭辞方式／JSON-LD記述場所／既存/about構成）
+- [x] /about/uramatsu ページ新規作成
+- [x] sitemap.ts に /about/uramatsu（locales:["ja"]）追加
+- [x] /about（AboutPageContent）に「代表プロフィールを見る」リンク追加（最小差分。経歴本文はDB翻訳値のため今回不変）
+- [x] `npm run build` 通過＋ローカル実測（title/H1/回答ブロック/JSON-LD/内部リンク/sitemap反映）
+- [x] 禁止語チェック（ワンストップ・一体・一括・まとめて・国数表記）出力HTML実測0件
+- [ ] 差分提示 → 浦松承認待ち（承認までcommit/push/デプロイしない）
+
+## レビュー（2026-07-19 実装完了・承認待ち）
+
+### 変更ファイル
+- `src/app/(realestate)/about/uramatsu/page.tsx` — 新規（COPY方式・ja先行。ProfilePage＋Person／FAQPage 3問／BreadcrumbList／内部リンク5本／CtaBand）
+- `src/app/sitemap.ts` — /about/uramatsu を locales:["ja"] で追加
+- `src/app/(realestate)/about/AboutPageContent.tsx` — 代表紹介セクション末尾に「代表プロフィールを見る」リンク追加（それ以外不変）
+
+### 検証結果（ローカル本番ビルド PORT=3122 実測）
+- `tsc --noEmit` exit 0／`npm run build` exit 0（prisma dev 使い捨てDB＋pgbouncer=true・本番DB非接続）
+- title＝「代表・浦松丈二プロフィール｜元新聞記者の宅建士・行政書士 | 四葉不動産」／H1・冒頭回答ブロック＝指定文言と完全一致（grep 1件）
+- JSON-LD：ProfilePage（@id=…/about/uramatsu#profilepage）＋Person（@id=PERSON_ID・hasCredential 2件・knowsLanguage 4値・sameAs 3本）／FAQPage 3問／BreadcrumbList 3階層＝すべてパース確認
+- hreflang＝ja＋x-default のみ（/ryokin と同形）／canonical=https://luck428.com/about/uramatsu
+- sitemap.xml に https://luck428.com/about/uramatsu（ja のみ・1件）出力確認
+- 禁止語（ワンストップ・一体で・一括対応・まとめて対応・カ国/ヵ国/か国/ヶ国）＝出力HTML実測0件
+- /about 回帰なし（200・AboutPage+ProfilePage JSON-LD 不変・新リンク表示確認）
+
+### ビルド検証の補足（lessons更新候補）
+- build には DATABASE_URL に加え **DIRECT_URL** も必要（schema.prisma が directUrl 参照）。db push は素URL、next build は pgbouncer=true 付きURLで実行
+
+---
+
 # コラム内部リンク欠落の修正（feat/column-internal-links）
 
 ## 背景

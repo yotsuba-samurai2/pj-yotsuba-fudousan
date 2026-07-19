@@ -117,6 +117,18 @@ export default function AboutPageContent() {
                   {t("representative.srExamNote")}
                 </p>
               )}
+
+              {/* タスクB-2（2026-07-19）：代表プロフィール専用ページ（/about/uramatsu・ja先行公開）への導線。
+                  ラベルは現時点ja直書き（B-1フッター「料金」と同方式）＝多言語展開時に翻訳キー化する */}
+              <div className="mt-6">
+                <Link
+                  href="/about/uramatsu"
+                  className="inline-flex items-center gap-2 text-sm font-medium text-primary transition-opacity hover:opacity-80"
+                >
+                  代表プロフィールを見る
+                  <ArrowRight size={14} />
+                </Link>
+              </div>
             </div>
           </div>
         </div>
