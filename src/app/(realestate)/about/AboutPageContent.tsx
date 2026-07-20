@@ -11,8 +11,17 @@ import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 // realestate.aboutPage.groupBusinesses も3件に戻す必要あり）。
 const groupLogos = ["/yotsuba/realestate-square.png", "/yotsuba/legal-square.png"];
 
+// 代表プロフィール導線のロケール別ラベル（翻訳チェック§J1・2026-07-20）。
+// Firestoreに新キーを増やさずコード内直書き（B-1フッター「料金」等と同方式）。
+const PROFILE_LINK_LABEL: Record<string, string> = {
+  ja: "代表プロフィールを見る",
+  en: "View Representative Profile",
+  "zh-tw": "查看代表簡介",
+  zh: "查看代表简介",
+};
+
 export default function AboutPageContent() {
-  const { t, tArray, tObject } = useTranslation();
+  const { t, tArray, tObject, locale } = useTranslation();
 
   const companyInfo = tArray<{ label: string; value: string }>(
     "realestate.aboutPage.companyInfo"
@@ -118,14 +127,14 @@ export default function AboutPageContent() {
                 </p>
               )}
 
-              {/* タスクB-2（2026-07-19）：代表プロフィール専用ページ（/about/uramatsu・ja先行公開）への導線。
-                  ラベルは現時点ja直書き（B-1フッター「料金」と同方式）＝多言語展開時に翻訳キー化する */}
+              {/* タスクB-2（2026-07-19）：代表プロフィール専用ページ（/about/uramatsu）への導線。
+                  ラベルは2026-07-20（翻訳チェック§J1）で4ロケール直書き化。 */}
               <div className="mt-6">
                 <Link
                   href="/about/uramatsu"
                   className="inline-flex items-center gap-2 text-sm font-medium text-primary transition-opacity hover:opacity-80"
                 >
-                  代表プロフィールを見る
+                  {PROFILE_LINK_LABEL[locale] ?? PROFILE_LINK_LABEL.ja}
                   <ArrowRight size={14} />
                 </Link>
               </div>

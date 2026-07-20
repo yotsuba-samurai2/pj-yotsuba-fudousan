@@ -1,8 +1,18 @@
 import type { Metadata } from "next";
+import type { LangCode } from "@/config/languages";
 import { buildPageMetadata } from "@/lib/seo";
 import { getRequestLocale } from "@/lib/getRequestLocale";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { ContactPageClient } from "./ContactPageClient";
+
+// パンくず（表示＋JSON-LD）のロケール別ラベル（翻訳チェック§H・2026-07-20）。
+// お問い合わせ＝サイト内定訳（聯絡我們／联系我们）に統一。
+const BREADCRUMB: Record<LangCode, { home: string; current: string }> = {
+  ja: { home: "ホーム", current: "お問い合わせ" },
+  en: { home: "Home", current: "Contact" },
+  "zh-tw": { home: "首頁", current: "聯絡我們" },
+  zh: { home: "首页", current: "联系我们" },
+};
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getRequestLocale();
@@ -24,12 +34,14 @@ export async function generateMetadata(): Promise<Metadata> {
   });
 }
 
-export default function ContactPage() {
+export default async function ContactPage() {
+  const locale = await getRequestLocale();
+  const bc = BREADCRUMB[locale] ?? BREADCRUMB.ja;
   return (
     <div>
-      <BreadcrumbJsonLd businessKey="realestate" items={[
-        { name: "ホーム", href: "/" },
-        { name: "お問い合わせ", href: "/contact" },
+      <BreadcrumbJsonLd businessKey="realestate" locale={locale} items={[
+        { name: bc.home, href: "/" },
+        { name: bc.current, href: "/contact" },
       ]} />
       <ContactPageClient />
     </div>

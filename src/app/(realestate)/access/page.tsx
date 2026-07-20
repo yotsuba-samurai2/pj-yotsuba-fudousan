@@ -5,7 +5,7 @@
 // en/zh-tw/zh=監修前ドラフト（2026-07-11）。繁体=台湾定訳（文京區・茗荷谷站・繼承・不動產）／zh=大陸表記。
 // 相談料＝2026-07-19浦松指示（タスクB-1）：jaは「初回無料／2回目以降の扱いはご相談内容により異なります」に統一し
 // 30分5,500円（税込）の具体額を撤去（新設 /ryokin と同一基準）。あわせて ja のタイトル・H1・パンくずを
-// 「アクセス・料金」→「アクセス」に変更。en/zh-tw/zh は旧文言（5,500円あり）のまま＝多言語展開の後続ステップで追随させること。
+// 「アクセス・料金」→「アクセス」に変更。en/zh-tw/zh も2026-07-20（翻訳チェック§F・浦松指示）でjaに追随し金額を撤去済み。
 // （旧: 2026-07-11確定文言＝媒介外関連業務のみ事前同意のうえ30分5,500円。国交省 解釈・運用の考え方が根拠）
 // ※宅建業法上の相談料の切り分けは石井弁護士の最終確認を通すこと（下部Placeholder参照）。
 // 住所は全ロケール日本語表記維持（enのみ英字補記）。金額・率・TELは全ロケール不変。
@@ -162,14 +162,14 @@ const COPY: Record<LangCode, AccessCopy> = {
       },
       {
         item: "Consultation fee",
-        fee: "Your first consultation is free. From the second session onward, consultations that do not involve brokerage (i.e., related work other than brokerage) are, in principle, ¥5,500 (tax incl.) per 30 minutes, only with your prior consent; online sessions available. Consultations relating to a sale or lease we broker are covered by the brokerage commission.",
-        note: "Related services other than brokerage are charged only when clearly separated, set in advance, and separately agreed (MLIT interpretive guidelines)",
+        fee: "Your first consultation is free. From the second session onward, fees vary depending on the content of your consultation.",
+        note: "The specific handling will be explained at the time of your consultation",
       },
     ],
     feeNote: "Note: The specific commission amount based on the sale price is calculated and presented for each property.",
     consultH2: "Is the consultation free? Can it be done online?",
     consultBody:
-      "Your first consultation and diagnosis are free. From the second session onward, consultations that do not involve brokerage (a second opinion on a property handled by another company, advice on utilizing or holding your overall assets, and the like — i.e., related work other than brokerage) are, in principle, ¥5,500 (tax incl.) per 30 minutes, only with your prior consent, and online sessions are also available. Consultations relating to a sale or lease we broker are covered by the brokerage commission. Feel free to start with a single line via LINE or phone.",
+      "Your first consultation and diagnosis are free. From the second session onward, fees vary depending on the content of your consultation. Online sessions are also available. Feel free to start with a single line via LINE or phone.",
     relatedAria: "Related links",
     relatedHeading: "Related links on this page",
     relatedLinks: [
@@ -227,14 +227,14 @@ const COPY: Record<LangCode, AccessCopy> = {
       },
       {
         item: "諮詢費",
-        fee: "初次諮詢免費／第2次起，不涉及仲介之諮詢（仲介以外的相關業務），經事先同意後原則上每30分鐘5,500日圓（含稅）・可線上進行。與本公司承辦之買賣・租賃仲介相關的諮詢，包含於仲介手續費範圍內。",
-        note: "仲介以外的相關業務，以明確區分・事前設定・另行合意為前提收取（國土交通省 解釋・運用之考量）",
+        fee: "初次諮詢免費。第2次起，費用依諮詢內容而定。",
+        note: "具體處理方式將於諮詢時說明",
       },
     ],
     feeNote: "※依買賣價格計算的具體手續費金額，將按各物件個別試算後提示。",
     consultH2: "諮詢是免費的嗎？可以線上進行嗎？",
     consultBody:
-      "初次諮詢・診斷免費。第2次起，不涉及仲介之諮詢（其他公司物件的第二意見、整體資產的活用・持有方針建議等＝仲介以外的相關業務），經事先同意後原則上以每30分鐘5,500日圓（含稅）承接，也可線上進行。與本公司承辦之買賣・租賃仲介相關的諮詢，包含於仲介手續費範圍內。歡迎先透過LINE或電話說一句話。",
+      "初次諮詢・診斷免費。第2次起，費用依諮詢內容而定。亦可線上進行。歡迎先透過LINE或電話說一句話。",
     relatedAria: "相關連結",
     relatedHeading: "本頁相關連結",
     relatedLinks: [
@@ -245,7 +245,7 @@ const COPY: Record<LangCode, AccessCopy> = {
     authorAlt: "四葉不動産株式会社 代表取締役 浦松丈二",
     authorLabel: "本文作者",
     authorBio:
-      "浦松 丈二｜四葉不動産株式会社 代表取締役・專任宅地建物取引士。行政書士。曾任每日新聞中國總局長（記者資歷34年）・旅居海外4國。已通過社會保險勞務士考試（預定2026年9月開業）。",
+      "浦松 丈二｜四葉不動産株式会社 代表取締役・專任宅地建物取引士。行政書士。曾任每日新聞中國總局長（記者資歷34年）・曾派駐中國、台灣、泰國。已通過社會保險勞務士考試（預定2026年9月開業）。",
   },
   zh: {
     metaTitle: "交通与费用｜茗荷谷站步行5分的四葉不動産株式会社",
@@ -292,14 +292,14 @@ const COPY: Record<LangCode, AccessCopy> = {
       },
       {
         item: "咨询费",
-        fee: "初次咨询免费／第2次起，不涉及中介之咨询（中介以外的相关业务），经事先同意后原则上每30分钟5,500日元（含税）・可在线进行。与本公司承办之买卖・租赁中介相关的咨询，包含在中介手续费范围内。",
-        note: "中介以外的相关业务，以明确区分・事前设定・另行约定为前提收取（国土交通省 解释与运用指引）",
+        fee: "初次咨询免费。第2次起，费用依咨询内容而定。",
+        note: "具体处理方式将于咨询时说明",
       },
     ],
     feeNote: "※根据买卖价格计算的具体手续费金额，将按每个物件单独测算后提示。",
     consultH2: "咨询是免费的吗？可以在线进行吗？",
     consultBody:
-      "初次咨询・诊断免费。第2次起，不涉及中介之咨询（其他公司物件的第二意见、整体资产的活用・持有方针建议等＝中介以外的相关业务），经事先同意后原则上以每30分钟5,500日元（含税）承接，也可在线进行。与本公司承办之买卖・租赁中介相关的咨询，包含在中介手续费范围内。欢迎先通过LINE或电话说一句话。",
+      "初次咨询・诊断免费。第2次起，费用依咨询内容而定。也可在线进行。欢迎先通过LINE或电话说一句话。",
     relatedAria: "相关链接",
     relatedHeading: "本页相关链接",
     relatedLinks: [
@@ -310,7 +310,7 @@ const COPY: Record<LangCode, AccessCopy> = {
     authorAlt: "四葉不動産株式会社 代表取缔役 浦松丈二",
     authorLabel: "本文作者",
     authorBio:
-      "浦松 丈二｜四葉不動産株式会社 代表取缔役・专任宅地建物取引士。行政书士。曾任每日新闻中国总局长（记者经历34年）・旅居海外4国。已通过社会保险劳务士考试（预定2026年9月开业）。",
+      "浦松 丈二｜四葉不動産株式会社 代表取缔役・专任宅地建物取引士。行政书士。曾任每日新闻中国总局长（记者经历34年）・曾派驻中国、台湾、泰国。已通过社会保险劳务士考试（预定2026年9月开业）。",
   },
 };
 
