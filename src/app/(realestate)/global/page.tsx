@@ -40,6 +40,8 @@ type GlobalCopy = {
   serviceName: string;
   heroAlt: string;
   h1: string;
+  /** 冒頭の回答ブロック（H1直下・§D 2026-07-20で全ロケール化） */
+  answerBlock: string;
   lead: React.ReactNode;
   internalLinks: { href: string; label: string }[];
   crossLinkLead: string;
@@ -91,6 +93,7 @@ const COPY: Record<LangCode, GlobalCopy> = {
     serviceName: "外国人・多言語のお部屋探しサポート",
     heroAlt: "外国人・多言語のお部屋探しのイメージ（多国籍の入居者）",
     h1: "外国人・多言語のお部屋探し",
+    answerBlock: JA_ANSWER_BLOCK,
     lead: (
       <p>
         外国人の方の日本での家探しは、<strong>四葉不動産株式会社が母語でサポートします</strong>。対応言語は日本語・英語・中国語（繁体字・簡体字）。入居審査・保証会社・契約・入居後の手続きまで、一つずつ一緒に進めます。代表の浦松 丈二は元毎日新聞中国総局長として中国や台湾、タイに駐在し、「外国で家を探す側」の経験があります。だから、何が不安かがわかります。
@@ -283,6 +286,8 @@ const COPY: Record<LangCode, GlobalCopy> = {
     serviceName: "Multilingual Room-Hunting Support",
     heroAlt: "Multilingual room hunting for foreign residents (tenants of many nationalities)",
     h1: "Multilingual Room Hunting for Foreign Residents",
+    answerBlock:
+      "Yotsuba Real Estate Co., Ltd. supports foreign residents looking for a home in Japan in Japanese, English, and Chinese (Traditional and Simplified). Centered on Bunkyo and Myogadani, we sort out the procedures unique to Japan—such as confirming your residence status (visa) and using a guarantor company—and guide you in your native language, from tenant screening and the contract through to supplementary explanations of the important-matters disclosure. The preparation of the application documents for the residence status itself is undertaken under a separate contract by the affiliated 四葉行政書士事務所 (Yotsuba Gyoseishoshi Office).",
     lead: (
       <p>
         For foreign residents, house hunting in Japan is <strong>supported by Yotsuba Real Estate Co., Ltd. in your own language</strong>. We assist you in Japanese, English, Traditional Chinese, and Simplified Chinese. Tenant screening, guarantor companies, the contract, and the procedures after moving in — we go through them together, one by one. Our representative, Joji Uramatsu, was stationed in China, Taiwan, and Thailand as the former China General Bureau Chief of the Mainichi Shimbun, and has himself been the one searching for a home in a foreign country. That is why we understand what worries you.
@@ -471,6 +476,8 @@ const COPY: Record<LangCode, GlobalCopy> = {
     serviceName: "外國人・多語言找房服務",
     heroAlt: "外國人・多語言找房的示意圖（來自不同國家的住戶）",
     h1: "外國人・多語言找房",
+    answerBlock:
+      "四葉不動産株式会社以日語・英語・中文（繁體・簡體）協助在日本找房的外國人。以文京區・茗荷谷為中心，為您整理在留資格（簽證）的確認、保證公司的運用等日本特有的手續，從入住審查・簽約到重要事項說明的補充，皆以母語為您說明。在留資格本身的申請文件製作，由併設的四葉行政書士事務所另行簽訂契約承辦。",
     lead: (
       <p>
         外國人在日本找房，<strong>由四葉不動産株式会社以母語提供支援</strong>。對應語言為日語・英語・中文（繁體・簡體）。從入住審查・保證公司・簽約到入住後的手續，一項一項與您一起進行。代表浦松 丈二曾任每日新聞中國總局長、曾派駐中國、台灣、泰國，有過「在國外找房的一方」的親身經驗。所以，我們明白您會擔心什麼。
@@ -660,6 +667,8 @@ const COPY: Record<LangCode, GlobalCopy> = {
     serviceName: "外国人・多语言找房服务",
     heroAlt: "外国人・多语言找房的示意图（来自不同国家的住户）",
     h1: "外国人・多语言找房",
+    answerBlock:
+      "四葉不動産株式会社以日语・英语・中文（繁体・简体）协助在日本找房的外国人。以文京区・茗荷谷为中心，为您整理在留资格（签证）的确认、保证公司的运用等日本特有的手续，从入住审查・签约到重要事项说明的补充，皆以母语为您说明。在留资格本身的申请文件制作，由并设的四葉行政书士事务所另行签订合同承办。",
     lead: (
       <p>
         外国人在日本找房，<strong>由四葉不動産株式会社以母语提供支持</strong>。对应语言为日语・英语・中文（繁体・简体）。从入住审查・保证公司・签约到入住后的手续，一项一项与您一起进行。代表浦松 丈二曾任每日新闻中国总局长、曾派驻中国、台湾、泰国，有过“在国外找房的一方”的亲身经历。所以，我们明白您会担心什么。
@@ -874,12 +883,10 @@ export default async function Page() {
     "global",
   );
 
-  const isJa = locale === "ja";
-
   return (
     <RealestateServicePage
       path="/global"
-      answerBlock={isJa ? JA_ANSWER_BLOCK : undefined}
+      answerBlock={c.answerBlock}
       relatedColumns={relatedColumns}
       crumbs={[{ name: c.crumbHome, href: "/" }, { name: c.crumbCurrent }]}
       serviceName={c.serviceName}
@@ -1055,8 +1062,9 @@ export default async function Page() {
       {/* ─── 一般情報・分離受任の注記 ─── */}
       <p className="text-xs leading-relaxed text-text-muted">{c.generalNote}</p>
 
-      {/* ─── 当社が対応できないこと（B-4・日本語版のみ・お問い合わせ導線の手前） ─── */}
-      {isJa && <CannotHandle bare />}
+      {/* ─── 当社が対応できないこと（§E・2026-07-20で全ロケール化・お問い合わせ導線の手前）。
+          zh-tw/zh は CannotHandle.tsx の確定訳、en は同ファイルに追加した訳を表示。 ─── */}
+      <CannotHandle bare locale={locale} />
     </RealestateServicePage>
   );
 }
