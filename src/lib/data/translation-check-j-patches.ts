@@ -7,10 +7,9 @@
 // これらは「ロケール限定＋キーパス・アンカー限定」の部分文字列置換で安全に是正できる。
 // find は誤り側の字体/語のみに一致し、既に正しい値には一致しない（冪等）。
 //
-// J4 /legal-notice（英）「専任」の誤訳（"Chief"）は legalNotice.items 配列内の値で、
-//   現行値の形が不確実なため自動置換の対象にしない（誤置換防止）。ルート側で現行値を表示し、
-//   管理エディタ（特定商取引法・en）で手修正する運用とする。
-// J9 コラム記事の社名は翻訳辞書ではなくコラムデータ側＝本パッチの対象外。
+// J4 /legal-notice（英）「専任」の誤訳（"Chief"）は legalNotice.items 配列内の値。現行値の細かな
+//   語形に依存しないよう whole モード（find を含むリーフの値全体を確定値へ）で是正。必ずプレビュー確認。
+// J9 コラム記事の社名は翻訳辞書ではなく Prisma のコラムデータ側＝本パッチ対象外（/admin/columns で手修正）。
 import type { LangCode } from "@/config/languages";
 
 export type JPatch = {
@@ -22,13 +21,29 @@ export type JPatch = {
   locale: LangCode;
   /** 安全スコープ：ドットパスにこの部分文字列を含むリーフのみ対象 */
   pathIncludes: string;
-  /** 誤り側の部分文字列（正しい値には一致しない＝冪等） */
+  /** 誤り側の部分文字列（find を含むリーフのみ対象＝冪等） */
   find: string;
   /** 置換後 */
   replace: string;
+  /**
+   * true のとき：find を含むリーフの「値全体」を replace で置き換える（部分置換ではない）。
+   * 現行値の細かな語形に依存せず確定値へ揃えたい場合に使う（例：J4 の取引態様ラベル）。
+   * 誤って別の値に一致しないよう pathIncludes を十分に絞り、必ずプレビューで確認する。
+   */
+  whole?: boolean;
 };
 
 export const J_PATCHES: JPatch[] = [
+  {
+    id: "J4",
+    label: "/legal-notice（英）取引態様ラベル「Chief …」→ full-time 表記へ統一",
+    locale: "en",
+    pathIncludes: "legalNotice.items",
+    // 「Chief」を含む legalNotice.items のリーフ（＝専任の宅地建物取引士ラベルの誤訳）の値全体を確定値へ。
+    find: "Chief",
+    replace: "Full-time (dedicated) Licensed Real Estate Transaction Specialist",
+    whole: true,
+  },
   {
     id: "J5",
     label: "/about（繁）資格見出し「資質」→「資格／證照」",
@@ -63,16 +78,6 @@ export const J_PATCHES: JPatch[] = [
   },
 ];
 
-/** J4（手修正案内用）：英 legalNotice.items 内「取引態様（専任）」の誤訳。 */
-export const J4_MANUAL = {
-  id: "J4",
-  locale: "en" as LangCode,
-  pathIncludes: "legalNotice.items",
-  wrong: "Chief",
-  recommend: "Full-time (dedicated) Licensed Real Estate Transaction Specialist",
-  note: "legalNotice.items（特定商取引法・en）の該当値を管理エディタで手修正。他ページの \"full-time\" 表記に統一。",
-};
-
 export type JChange = {
   patchId: string;
   /** translations/<locale> からのドットパス */
@@ -99,7 +104,7 @@ export function applyJPatchesToLocale(
         if (!path.includes(p.pathIncludes)) continue;
         if (!next.includes(p.find)) continue;
         const before = next;
-        next = next.split(p.find).join(p.replace);
+        next = p.whole ? p.replace : next.split(p.find).join(p.replace);
         if (next !== before) changes.push({ patchId: p.id, path, before, after: next });
       }
       return next;
@@ -118,26 +123,4 @@ export function applyJPatchesToLocale(
     unknown
   >;
   return { tree, changes };
-}
-
-/** J4 手修正対象：en legalNotice.items 内の値のうち wrong を含む文字列を列挙（表示用）。 */
-export function scanJ4Manual(data: Record<string, unknown>): { path: string; value: string }[] {
-  const hits: { path: string; value: string }[] = [];
-  function walk(node: unknown, path: string) {
-    if (typeof node === "string") {
-      if (path.includes(J4_MANUAL.pathIncludes) && node.includes(J4_MANUAL.wrong)) {
-        hits.push({ path, value: node });
-      }
-      return;
-    }
-    if (Array.isArray(node)) {
-      node.forEach((v, i) => walk(v, `${path}.${i}`));
-      return;
-    }
-    if (node && typeof node === "object") {
-      for (const [k, v] of Object.entries(node)) walk(v, `${path}.${k}`);
-    }
-  }
-  walk(data, "translations/en");
-  return hits;
 }

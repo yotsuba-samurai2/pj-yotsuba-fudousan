@@ -4,9 +4,7 @@ import { useState } from "react";
 import { getTranslations, saveTranslations } from "@/lib/admin-api";
 import {
   applyJPatchesToLocale,
-  scanJ4Manual,
   J_PATCHES,
-  J4_MANUAL,
   type JChange,
 } from "@/lib/data/translation-check-j-patches";
 import type { LangCode } from "@/config/languages";
@@ -28,7 +26,6 @@ type LocalePreview = { locale: LangCode; changes: JChange[]; error?: string };
 export default function FixTranslationCheckJPage() {
   const [running, setRunning] = useState(false);
   const [preview, setPreview] = useState<LocalePreview[] | null>(null);
-  const [j4Hits, setJ4Hits] = useState<{ path: string; value: string }[] | null>(null);
   const [applied, setApplied] = useState(false);
 
   const runPreview = async () => {
@@ -43,12 +40,6 @@ export default function FixTranslationCheckJPage() {
       } catch (e) {
         rows.push({ locale: loc, changes: [], error: String(e) });
       }
-    }
-    try {
-      const en = (await getTranslations("en")) ?? {};
-      setJ4Hits(scanJ4Manual(en));
-    } catch {
-      setJ4Hits([]);
     }
     setPreview(rows);
     setRunning(false);
@@ -80,8 +71,9 @@ export default function FixTranslationCheckJPage() {
       <p className="mb-3 max-w-2xl text-sm text-text-muted">
         DB翻訳値の §J 項目を是正します（ロケール限定・キーパス限定の部分文字列置換＝冪等）。
         まず<strong>プレビュー</strong>で変更点を確認し、問題なければ<strong>適用</strong>してください。
-        対象：{J_PATCHES.map((p) => p.id).join("・")}。
-        J4（英 legalNotice の &quot;Chief&quot;）は自動置換せず現行値を表示＝手修正。J9（コラム社名）は対象外。
+        対象：{Array.from(new Set(J_PATCHES.map((p) => p.id.replace(/-.*/, "")))).join("・")}。
+        J4 は「Chief …」を含む legalNotice の値全体を確定値へ置換します（whole）。J9（コラム社名）は
+        翻訳辞書外＝対象外（/admin/columns で手修正）。
       </p>
 
       <div className="flex gap-3">
@@ -143,28 +135,6 @@ export default function FixTranslationCheckJPage() {
                       </li>
                     )),
               )}
-            </ul>
-          )}
-        </div>
-      )}
-
-      {j4Hits !== null && (
-        <div className="mt-8 max-w-3xl">
-          <h2 className="text-base font-bold">J4（手修正）：英 legalNotice の &quot;Chief&quot;</h2>
-          <p className="mb-2 mt-1 text-xs text-text-muted">{J4_MANUAL.note}</p>
-          {j4Hits.length === 0 ? (
-            <p className="rounded-lg bg-green-50 px-3 py-2 text-xs text-green-700">
-              &quot;Chief&quot; を含む値は見つかりませんでした（既に修正済み、またはキー構成が異なります）。
-            </p>
-          ) : (
-            <ul className="space-y-2">
-              {j4Hits.map((h, i) => (
-                <li key={i} className="rounded-lg bg-amber-50 px-3 py-2 text-xs">
-                  <div className="font-mono text-text-muted">{h.path}</div>
-                  <div className="mt-1 text-red-600">現行: {h.value}</div>
-                  <div className="mt-0.5 text-green-700">推奨: {J4_MANUAL.recommend}</div>
-                </li>
-              ))}
             </ul>
           )}
         </div>
