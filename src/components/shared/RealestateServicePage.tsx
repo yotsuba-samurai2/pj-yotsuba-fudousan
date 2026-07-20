@@ -18,8 +18,19 @@ import { getCrossLinks } from "@/lib/cross-links";
 import { SR_LAUNCHED } from "@/lib/shared/office";
 import { PERSON_ID } from "@/lib/seo";
 import type { Column } from "@/lib/columns";
+import type { LangCode } from "@/config/languages";
 
 const SITE = "https://luck428.com";
+
+// 関連コラム見出しのロケール別既定（翻訳チェック§G・2026-07-20）。
+// caller が relatedColumnsHeading を渡さない場合でも ja 以外で日本語見出しが出ない。
+// 値は RelatedColumnsSection の DEFAULT_HEADING と一致させる。
+const RELATED_COLUMNS_HEADING: Record<LangCode, string> = {
+  ja: "関連コラム",
+  en: "Related Columns",
+  "zh-tw": "相關專欄",
+  zh: "相关专栏",
+};
 
 export type RealestateServicePageProps = {
   /** 内部パス（例 "/toushi/group-home"） */
@@ -127,11 +138,11 @@ export async function RealestateServicePage(p: RealestateServicePageProps) {
 
         {p.relatedColumns && p.relatedColumns.length > 0 && (
           <nav
-            aria-label={p.relatedColumnsHeading ?? "関連コラム"}
+            aria-label={p.relatedColumnsHeading ?? RELATED_COLUMNS_HEADING[locale] ?? RELATED_COLUMNS_HEADING.ja}
             className="mt-8 rounded-xl border border-border bg-surface p-4 text-sm"
           >
             <div className="font-medium text-ink">
-              {p.relatedColumnsHeading ?? "関連コラム"}
+              {p.relatedColumnsHeading ?? RELATED_COLUMNS_HEADING[locale] ?? RELATED_COLUMNS_HEADING.ja}
             </div>
             <ul className="mt-3 space-y-2">
               {p.relatedColumns.map((col) => (

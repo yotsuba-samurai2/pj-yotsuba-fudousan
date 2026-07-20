@@ -86,17 +86,15 @@ const FOOTER_NAV_HREFS: Record<
       items: [
         { href: "/about", key: "about" },
         { href: "/column", key: "column" },
-        // タスクC-5（2026-07-19）：相談事例（モデルケース）。ja先行公開のためラベルはja直書き
-        // （labels?.ja フォールバックで全ロケール「相談事例」表示）。多言語展開時に en/zh-tw/zh を追加する。
-        { href: "/jirei", key: "jirei", labels: { ja: "相談事例" } },
+        // タスクC-5（2026-07-19）：相談事例（モデルケース）。2026-07-20（翻訳チェック§B）で en/zh-tw/zh を追加。
+        { href: "/jirei", key: "jirei", labels: { ja: "相談事例", en: "Case Studies", "zh-tw": "諮詢案例", zh: "咨询案例" } },
       ],
     },
     {
       sectionKey: "other",
       items: [
-        // タスクB-1（2026-07-19）：料金ページ新設。ラベルは現時点ja直書き（labels?.ja フォールバックで全ロケール「料金」表示）。
-        // 多言語展開（後続ステップ）で en/zh-tw/zh ラベルを追加する。
-        { href: "/ryokin", key: "ryokin", labels: { ja: "料金" } },
+        // タスクB-1（2026-07-19）：料金ページ新設。2026-07-20（翻訳チェック§B）で en/zh-tw/zh を追加。
+        { href: "/ryokin", key: "ryokin", labels: { ja: "料金", en: "Fees", "zh-tw": "費用", zh: "费用" } },
         { href: "/contact", key: "contact" },
         { href: "/legal-notice", key: "legalNotice" },
       ],
