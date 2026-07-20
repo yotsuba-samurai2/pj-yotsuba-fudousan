@@ -5,7 +5,7 @@ import { ContactForm } from "@/components/ui/ContactForm";
 import { useTranslation } from "@/hooks/useTranslation";
 
 export function ContactPageClient() {
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
 
   return (
     <>
@@ -74,9 +74,13 @@ export function ContactPageClient() {
                   </div>
                   <div>
                     <p className="text-sm font-bold">{t("contact.methods.location.label")}</p>
+                    {/* 住所の語順：日本語圏は「都道府県→市区→番地」、英語は「番地, 市区, 都道府県」に反転
+                        （§J2・2026-07-20。en で "TokyoBunkyo-kuKohinata 4-2-5" と連結されていた不具合の是正）。 */}
                     <p className="mt-1 text-sm text-text-muted">
                       {t("address.postalCode")}<br />
-                      {t("address.prefecture")}{t("address.city")}{t("address.street")}<br />
+                      {locale === "en"
+                        ? `${t("address.street")}, ${t("address.city")}, ${t("address.prefecture")}`
+                        : `${t("address.prefecture")}${t("address.city")}${t("address.street")}`}<br />
                       {t("address.building")}
                     </p>
                   </div>
