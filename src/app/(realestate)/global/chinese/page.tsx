@@ -329,7 +329,7 @@ const COPY: Partial<Record<LangCode, Copy>> = {
         label: "為海外屋主準備的日本不動產出售指南（日文）",
         noLocalePrefix: true,
       },
-      // /ryokin は ja 先行公開（sitemap の locales:["ja"]）＝zh-tw 版が存在しないため日本語版へリンク。
+      // /ryokin は C-6-3 で全4ロケール公開＝zh-tw 版が存在するため接頭辞を付与（noLocalePrefix なし）。
       { href: "/ryokin", label: "費用說明" },
       { href: "/legal", label: "四葉行政書士事務所" },
       { href: "/contact", label: "聯絡我們" },
@@ -440,7 +440,7 @@ const COPY: Partial<Record<LangCode, Copy>> = {
         label: "为海外业主准备的日本不动产出售指南（日文）",
         noLocalePrefix: true,
       },
-      // /ryokin は ja 先行公開（sitemap の locales:["ja"]）＝zh 版が存在しないため日本語版へリンク。
+      // /ryokin は C-6-3 で全4ロケール公開＝zh 版が存在するため接頭辞を付与（noLocalePrefix なし）。
       { href: "/ryokin", label: "费用说明" },
       { href: "/legal", label: "四葉行政书士事务所" },
       { href: "/contact", label: "联系我们" },
