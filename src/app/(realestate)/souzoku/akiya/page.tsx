@@ -212,6 +212,164 @@ const COPY: Partial<Record<LangCode, Copy>> = {
     faqAria: "よくあるご質問",
   },
 
+  en: {
+    meta: {
+      title:
+        "Selling or Using a Vacant House in Bunkyo | How to Handle an Inherited Vacant House | 四葉不動産 (Yotsuba Real Estate)",
+      description:
+        "If an inherited vacant house is left unattended and, after receiving a recommendation, is designated as a Specified Vacant House or a Poorly Managed Vacant House, the residential land special exception is removed and the land's fixed asset tax can become up to six times higher. Yotsuba Real Estate Co., Ltd., located in Kohinata, Bunkyo, proposes the sale, rental use, or management of vacant houses. We also handle properties with difficult conditions, such as those that cannot be rebuilt or that come with leasehold rights, and consultations from those living far away or overseas.",
+      keywords: [
+        "Bunkyo vacant house sale",
+        "inherited vacant house what to do",
+        "vacant house fixed asset tax",
+        "vacant house 30 million yen special deduction",
+        "non-rebuildable property sale",
+        "selling a vacant house from afar",
+      ],
+    },
+    answerBlock:
+      "If an inherited vacant house is left unattended and, after receiving a recommendation, is designated as a Specified Vacant House or a Poorly Managed Vacant House, the residential land special exception is removed and the land's fixed asset tax can become up to six times higher. 四葉不動産株式会社 (Yotsuba Real Estate Co., Ltd.) proposes the sale, rental use, or management of vacant houses in Bunkyo. We also handle properties with difficult conditions, such as those that cannot be rebuilt or that come with leasehold rights. The preparation of documents involved in legal procedures such as inheritance registration is undertaken under a separate contract by the affiliated 四葉行政書士事務所 (Yotsuba Gyoseishoshi Office). Even if you live far away, you can proceed with the sale online and by mail.",
+    crumbs: { home: "Home", souzoku: "Inherited Real Estate", current: "Vacant Houses" },
+    serviceName:
+      "Proposals for the sale, rental use, and management of inherited vacant houses in Bunkyo",
+    heroAlt: "A detached house in a residential neighborhood of Bunkyo (image of a vacant house)",
+    h1: "A Vacant House in Bunkyo—What Now? Sale, Use, and Management",
+    lead: {
+      pre: "An inherited family home left standing empty—consultations like this are increasing. This page explains the ",
+      strong1: "risks under the system",
+      mid: " of leaving a vacant house unattended, ",
+      strong2: "how to choose among the three exits of sale, rental use, and management",
+      post: ", and how those living far away can proceed.",
+    },
+    internalLinks: [
+      { href: "/souzoku", label: "Inheriting Real Estate in Bunkyo | Complete Guide" },
+      { href: "/souzoku/nagare", label: "The Process Up to Sale" },
+      { href: "/toushi/group-home", label: "Finding a Property Usable for a Group Home" },
+      { href: "/global/chinese", label: "For Chinese-Speaking Customers" },
+      { href: "/ryokin", label: "Fee Information" },
+      { href: "/contact", label: "Contact Us" },
+    ],
+    crossLinkLead:
+      "The preparation of documents involved in legal procedures such as inheritance registration is undertaken under a separate contract by the affiliated 四葉行政書士事務所 (Yotsuba Gyoseishoshi Office).",
+    relatedAria: "Related links",
+    relatedHeading: "Related links on this page",
+    authorAlt: "Joji Uramatsu, Representative Director of Yotsuba Real Estate Co., Ltd.",
+    authorLabel: "About the author",
+    authorBio:
+      "Joji Uramatsu | Representative Director of Yotsuba Real Estate Co., Ltd.; full-time Licensed Real Estate Transaction Specialist (宅地建物取引士); Gyoseishoshi (Administrative Scrivener). Former China General Bureau Chief of the Mainichi Shimbun (34 years as a journalist), stationed in China, Taiwan, and Thailand. Passed the national exam for licensed social insurance and labor consultant (office opening scheduled for September 2026).",
+    s1: {
+      h2: "Risks Under the System When a Vacant House Is Left Unattended",
+      p1: "If a vacant house continues to be inadequately managed, it may become subject to guidance or a recommendation from the municipality under the Act on Special Measures concerning the Promotion of Countermeasures against Vacant Houses (空家等対策の推進に関する特別措置法; the 'Vacant Houses Act'). If, after receiving a recommendation, it is designated as a 'Specified Vacant House' (特定空家等) or a 'Poorly Managed Vacant House' (管理不全空家等), it is excluded from the fixed asset tax residential land special exception—the measure under which small-scale residential land (the portion of 200㎡ or less) has its taxable base reduced to one-sixth—and the land's fixed asset tax can become up to six times higher.",
+      p2: "This is not a penalty; it is a tax mechanism whereby the reduction measure applied to land on which a home stands ceases to apply. Beginning to move toward one of management, use, or sale—before the building deteriorates or the impact on the neighborhood grows—is a realistic preparation for keeping the burden down.",
+      note: "*Please confirm the details of designation and taxation with Bunkyo City and a Tax Accountant (税理士).",
+    },
+    s2: {
+      h2: "Three Exits—Sale, Rental Use, and Management",
+      p: "There are broadly three exits for a vacant house: 'sale,' 'rental use,' and 'management.' You do not need to decide on one of them right away. We begin by lining them up and comparing them along the following four criteria.",
+      axes: [
+        {
+          title: "Location",
+          body: "How easy a property is to sell or rent varies greatly depending on the distance from the station and the surrounding environment. We appraise it taking the Bunkyo market into account.",
+        },
+        {
+          title: "Condition of the building",
+          body: "Can it be rented as is, or does it need repairs or renovation? The costs involved directly affect the income and expenses for both 'selling' and 'renting.'",
+        },
+        {
+          title: "The family's wishes",
+          body: "Whether there is a possibility of living there in the future, whether it is a family home with sentimental value, or whether the heirs wish to convert it to cash and divide it.",
+        },
+        {
+          title: "Tax burden",
+          body: "The fixed asset tax and the like if you continue to hold it, versus the capital gains taxation if you sell. For a judgment on specific tax amounts, please consult a Tax Accountant (税理士).",
+        },
+      ],
+      exits: [
+        {
+          title: "Sale",
+          body: "A realistic exit when there is no plan to live there and the upkeep costs and tax burden are heavy. We start from an appraisal that takes the Bunkyo market into account.",
+        },
+        {
+          title: "Rental use",
+          body: "An option that turns a well-located property into a source of income. We estimate the income and expenses 'if rented' and compare them in figures with the case of selling.",
+        },
+        {
+          title: "Management",
+          body: "An option for when you cannot decide right away, letting you consider your next move while preserving the asset's value.",
+        },
+      ],
+      closing:
+        "Yotsuba Real Estate Co., Ltd. helps from the very step of preparing the materials to compare the three.",
+    },
+    s3: {
+      h2: "The 'Special Deduction of Up to 30 Million Yen' for Inherited Vacant Houses",
+      p1: "When you sell an inherited vacant house, there is a special provision (the special deduction for capital gains on a residence (vacant house) of the decedent, 被相続人の居住用財産（空き家）に係る譲渡所得の特別控除) that allows up to 30 million yen to be deducted from the capital gains. It is one of the systems worth knowing about when considering the sale of an inherited vacant house.",
+      p2: "However, its application is subject to requirements concerning the building, the time period, the conditions of sale, and so on, and judging whether it can be used is the specialized domain of tax matters. For a judgment on the eligibility requirements, please consult a Tax Accountant (税理士). We provide referrals to partner Tax Accountants and support for the sale itself.",
+    },
+    s4: {
+      h2: "Please Also Consult Us About Vacant Houses with Difficult Conditions",
+      p1: "'I was told it cannot be rebuilt,' 'It comes with leasehold rights, and I'm not sure whether it can be sold,' 'It's under joint ownership, and things aren't moving forward'—even for a vacant house with difficult conditions, please consult us before giving up.",
+      p2: "Whether rebuilding is possible and what options exist for use differ according to individual circumstances, such as the road-frontage situation and the relationship with adjacent land, so we begin by checking the current state. For a property with leasehold rights, sorting out the relationship with the landowner is key to how to proceed; for a jointly owned property, reaching agreement among the co-owners is. While we do not promise whether a sale is possible or on what terms, it is precisely for properties with difficult conditions that a proposal on how to proceed holds value.",
+    },
+    s5: {
+      h2: "The Option of Conversion to a Group Home and the Like",
+      p1: "If an inherited vacant house meets the designation standards for a disability group home (communal-living support, 障害者グループホーム（共同生活援助）), it may in some cases be used as a welfare residence. The location and form of a detached house in a residential neighborhood have an affinity with a communal-living-support residence, making this one option for turning the management burden of a vacant house into active use.",
+      p2: "However, checks related to the designation standards for disability-welfare services are required—such as the zoning district, the floor area of the rooms, and fire-safety equipment—and the standards differ by municipality and type of business. Please consult us at the stage before any renovation or contract.",
+      linkLabel: "Finding a Property Usable for a Group Home",
+    },
+    s6: {
+      h2: "Even If You Live Far Away—A Sale Conducted Online and by Mail",
+      p: "The inherited vacant house is in Bunkyo, while you live far away or overseas—even in such cases, the sale can proceed. The general flow is as follows.",
+      steps: [
+        {
+          title: "Online consultation",
+          body: "Consultations can proceed online or by phone or LINE. We handle the on-site checks.",
+        },
+        {
+          title: "Document procedures by mail",
+          body: "The documents needed for the contract and procedures can be exchanged by mail. Because the required documents and whether your attendance is needed differ according to individual circumstances, we will explain after hearing about your situation.",
+        },
+        {
+          title: "Sale",
+          body: "From appraisal to handover, we accompany you as a local company in Bunkyo.",
+        },
+      ],
+      closingPre:
+        "The preparation of documents involved in legal procedures such as inheritance registration is undertaken under a separate contract by the affiliated 四葉行政書士事務所 (Yotsuba Gyoseishoshi Office). Because acting as an agent for a registration application is the work of a Judicial Scrivener (司法書士), we refer you to a partner Judicial Scrivener. We also handle consultations from those living overseas. If you live in a Chinese-speaking region, please also see ",
+      closingLink: "the information for Chinese-speaking customers",
+      closingPost: ".",
+    },
+    faqHeading: "Frequently Asked Questions",
+    faqAria: "Frequently asked questions",
+    faq: [
+      {
+        q: "What happens if a vacant house is left unattended?",
+        a: "In addition to deterioration and a worsening impact on the neighborhood, the tax burden can also increase. If it receives a recommendation and is designated as a 'Specified Vacant House' (特定空家等) or a 'Poorly Managed Vacant House' (管理不全空家等), it is excluded from the residential land special exception, and the land's fixed asset tax can become up to six times higher. The details of how this is applied in practice differ by municipality, so we suggest considering management, use, or sale early.",
+        links: [{ href: "/en/souzoku", label: "Consulting about inherited real estate, including vacant houses" }],
+      },
+      {
+        q: "Can the 'Special Deduction of Up to 30 Million Yen' be used when selling an inherited vacant house?",
+        a: "There is a system providing a special deduction of up to 30 million yen for the capital gains on an inherited vacant house. However, its application is subject to requirements, and judging whether it can be used is the specialized domain of tax matters, so please consult a Tax Accountant (税理士). We provide referrals to partner Tax Accountants and support for the sale itself.",
+        links: [{ href: "/en/souzoku", label: "Consulting about the sale of inherited real estate" }],
+      },
+      {
+        q: "Can I sell a vacant house even if I live far away?",
+        a: "Yes. Consultations can proceed online or by phone or LINE, and we handle the on-site checks. The documents needed for the procedures and whether your attendance is required differ according to individual circumstances, so we will explain after hearing about your situation. We also handle consultations from those living overseas.",
+        links: [{ href: "/en/souzoku/nagare", label: "The process up to sale" }],
+      },
+      {
+        q: "Can a property that cannot be rebuilt still be sold?",
+        a: "It may be possible to sell it. Whether rebuilding is possible and what options exist for use differ according to individual circumstances, such as the road-frontage situation and the relationship with adjacent land, so we begin by checking the current state. It is precisely for properties with difficult conditions that a proposal on how to proceed holds value, so please consult us before giving up.",
+        links: [{ href: "/en/souzoku", label: "Consulting about inherited real estate" }],
+      },
+      {
+        q: "Can an inherited vacant house be used for a group home?",
+        a: "It may be one of the options for use. However, checks related to the designation standards for disability-welfare services are required—such as the zoning district, the floor area of the rooms, and fire-safety equipment—and the standards differ by municipality and type of business. We take on consultations about using a property on the premise of confirming the standards.",
+        links: [{ href: "/en/toushi/group-home", label: "Finding a property usable for a group home" }],
+      },
+    ],
+  },
+
   "zh-tw": {
     meta: {
       title: "文京區的空屋想出售・活用｜繼承空屋的因應方式 | 四葉不動産",

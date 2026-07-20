@@ -158,6 +158,148 @@ const COPY: Partial<Record<LangCode, Copy>> = {
     faqAria: "よくあるご質問",
   },
 
+  en: {
+    meta: {
+      title:
+        "Japanese Real Estate & Inheritance You Can Consult About in Chinese | Traditional & Simplified Chinese Support | 四葉不動産 (Yotsuba Real Estate)",
+      description:
+        "You can consult about the inheritance, sale, and rental search of real estate in Japan in Chinese (Traditional and Simplified). The appraisal and sale of the property are handled by 四葉不動産株式会社 (Yotsuba Real Estate Co., Ltd.), while the preparation of inheritance-related documents—such as the translation of family-register and notarized documents—is undertaken under a separate contract by the affiliated 四葉行政書士事務所 (Yotsuba Gyoseishoshi Office). We also support online consultations for heirs living overseas.",
+      keywords: [
+        "Japanese real estate Chinese consultation",
+        "Chinese residents in Japan inheritance real estate",
+        "Tokyo real estate sale Chinese",
+      ],
+    },
+    answerBlock:
+      "四葉不動産株式会社 (Yotsuba Real Estate Co., Ltd.) handles the inheritance, sale, and rental search of real estate in Japan in Chinese (Traditional and Simplified). The appraisal and sale of the property are handled by Yotsuba Real Estate, while legal procedures such as the preparation and translation of documents related to inheritance registration are undertaken under a separate contract by the affiliated 四葉行政書士事務所 (Yotsuba Gyoseishoshi Office) (a Japanese profession qualified in the preparation of legal documents, responsible for preparing official documents and supporting their applications). Even heirs living overseas can begin a consultation online. We can handle documents from both Taiwan and the mainland.",
+    crumbs: {
+      home: "Home",
+      global: "Multilingual Room Hunting for Foreign Residents",
+      current: "Chinese Language Support",
+    },
+    serviceName:
+      "Support for Real Estate Inheritance, Sale, and Room Hunting in Chinese (Traditional and Simplified)",
+    heroAlt: "Chinese-language real estate consultation (clients of many nationalities)",
+    h1: "Chinese Language Support | Inheritance, Sale, and Room Hunting",
+    lead: {
+      pre: "We take on consultations about real estate in Japan from Chinese residents of Japan, people from Taiwan, and their families, ",
+      strong: "provided in Chinese (Traditional and Simplified)",
+      post:
+        ". From the sale of inherited real estate, to consultations while you remain overseas, to the translation and preparation of local documents, we proceed one step at a time, dividing the work among the specialists in charge.",
+    },
+    internalLinks: [
+      { href: "/global", label: "Multilingual Room Hunting for Foreign Residents" },
+      { href: "/souzoku", label: "Consulting About Inherited Real Estate" },
+      // The column's availability in an English locale depends on Column.locales (DB) and cannot be
+      // confirmed without a production DB connection, so we link to the Japanese version with no prefix.
+      {
+        href: "/column/overseas-owners-guide-japan-real-estate-sale",
+        label: "A Guide to Selling Japanese Real Estate for Overseas Owners (in Japanese)",
+        noLocalePrefix: true,
+      },
+      // /ryokin is published in ja first (sitemap locales:["ja"]); no en version exists, so link to the Japanese page.
+      { href: "/ryokin", label: "Fee Information" },
+      { href: "/legal", label: "四葉行政書士事務所 (Yotsuba Gyoseishoshi Office)" },
+      { href: "/contact", label: "Contact" },
+    ],
+    crossLinkLead:
+      "The preparation and translation of inheritance-related documents, as well as residence status (visa) procedures, are undertaken under a separate contract by our affiliated business, 四葉行政書士事務所 (Yotsuba Gyoseishoshi Office).",
+    relatedAria: "Related links",
+    relatedHeading: "Related links on this page",
+    authorAlt: "Joji Uramatsu, Representative Director of Yotsuba Real Estate Co., Ltd.",
+    authorLabel: "About the author",
+    authorBio:
+      "Joji Uramatsu | Representative Director of Yotsuba Real Estate Co., Ltd.; full-time Licensed Real Estate Transaction Specialist (宅地建物取引士); Gyoseishoshi (Administrative Scrivener). Former China General Bureau Chief of the Mainichi Shimbun (34 years as a journalist), stationed in China, Taiwan, and Thailand. Passed the national exam for licensed social insurance and labor consultant (office opening scheduled for September 2026).",
+    s1: {
+      h2: "What you can consult about in Chinese — inheritance, sale, and room hunting",
+      p1: "四葉不動産株式会社 (Yotsuba Real Estate Co., Ltd.) handles consultations on the inheritance of real estate in Japan, sales (including appraisal), and rental room hunting, in Chinese. We support both Traditional and Simplified Chinese: for clients in Taiwan and Hong Kong we can assist in Traditional Chinese, and for clients in mainland China in Simplified Chinese.",
+      p2: "Our representative, Joji Uramatsu, is a former Mainichi Shimbun journalist who was stationed in China, Taiwan, and Thailand as China General Bureau Chief. Beyond language, you can consult with us on the basis of the differences in systems and business customs between the Chinese-speaking world and Japan. Consultations in Japanese and English are of course also available.",
+    },
+    s2: {
+      h2: "Which country's law governs the inheritance of Chinese residents of Japan?",
+      p1: "When a person of Chinese nationality or from Taiwan who lives in Japan passes away, before proceeding with inheritance procedures it becomes necessary to sort out 'which country's or region's law serves as the basis (the governing law).'",
+      p2: "Japan's Act on General Rules for Application of Laws (法の適用に関する通則法) sets, for inheritance, the framework that it 'shall be governed by the national law of the decedent' (Article 36 of the same Act). In other words, where the deceased person's nationality lies becomes the starting point, and even for real estate located within Japan, the procedure does not necessarily conclude by looking at Japanese law alone.",
+      p3pre:
+        "That said, exactly which law applies and how involves many points to be examined case by case—such as the determination of nationality, the content of the national law, and whether renvoi applies.",
+      p3strong:
+        "Because the actual application differs from case to case and requires a legal judgment, please consult a specialist about your individual circumstances.",
+      p3post:
+        "Our company takes on consultations from the real estate side, while the preparation of inheritance-related documents is undertaken under a separate contract by the affiliated 四葉行政書士事務所 (Yotsuba Gyoseishoshi Office).",
+    },
+    s3: {
+      h2: "Can I proceed with the consultation and sale while living overseas?",
+      p1: "Yes, you can. Consultations can be held online (by video call), and we handle the on-site confirmation of the property. Because the exchange of the necessary documents can be done by mail, you can begin a consultation without assuming a visit to Japan.",
+      p2: "However, when an heir living overseas sells real estate in Japan, documents obtained from a local overseas mission or notary authority—such as a signature certificate or a certificate of residence—may sometimes be required. Preparing such documents can take time, so we recommend consulting us early, at the stage when you are considering a sale. The documents required differ depending on your situation (your country of residence, residency status, and so on), so we proceed while confirming them individually.",
+      p3pre: "For the flow of a sale conducted while living overseas, the column",
+      p3link: "'A Guide to Selling Japanese Real Estate for Overseas Owners' (in Japanese)",
+      p3post: " explains it in detail.",
+    },
+    s4: {
+      h2: "Translation and preparation of family-register and notarized documents from China and Taiwan",
+      p1: "In inheritance procedures involving the Chinese-speaking world, it becomes necessary to put local documents—such as a mainland Chinese household register (hukou) or a notarial certificate from a notary office, or a Taiwanese family-register transcript or a removed-household register transcript—into a form usable in Japanese procedures.",
+      p2: "The translation of such foreign-language documents and support with the preparation of documents proving inheritance relationships are undertaken under a separate contract by the affiliated 四葉行政書士事務所 (Yotsuba Gyoseishoshi Office) (an independent business entity from our company, with no referral fees exchanged). We can handle documents from both Taiwan and the mainland. Together with your real estate consultation, we can direct you to the appropriate contact.",
+    },
+    s5: {
+      h2: "Which procedure is handled by whom",
+      p: "The property, documents, registration, and tax matters are each handled by independent business entities and specialists under separate contracts.",
+      thTask: "Task",
+      thOwner: "Handled by",
+      roles: [
+        {
+          task: "Appraisal, sale, and leasing of the property (real estate brokerage business, 宅地建物取引業)",
+          owner: "四葉不動産株式会社 (Yotsuba Real Estate Co., Ltd.)",
+        },
+        {
+          task: "Preparation and translation of inheritance-related documents",
+          owner: "四葉行政書士事務所 (Yotsuba Gyoseishoshi Office) (undertaken under a separate contract)",
+        },
+        {
+          task: "Application for inheritance registration",
+          owner: "Referral to a partner Judicial Scrivener (司法書士)",
+        },
+        {
+          task: "Tax filings such as inheritance tax",
+          owner: "Referral to a partner Tax Accountant (税理士)",
+        },
+      ],
+      note: "With each specialist the engagement is separate, under an individual contract. Your inquiry can start from any entry point. After hearing your circumstances, we will direct you to the contact you need.",
+    },
+    faqHeading: "Frequently asked questions",
+    faqAria: "Frequently asked questions",
+    faq: [
+      {
+        q: "Can I consult about inherited real estate in Chinese?",
+        a: "Yes. Consultations on the inheritance and sale of real estate in Japan can all be conducted in Chinese (Traditional and Simplified). Our representative, Joji Uramatsu, is a former Mainichi Shimbun journalist who was stationed in China, Taiwan, and Thailand as China General Bureau Chief. The preparation and translation of documents relating to inheritance are undertaken under a separate contract by the affiliated 四葉行政書士事務所 (Yotsuba Gyoseishoshi Office).",
+        links: [
+          {
+            href: "/en/global/chinese",
+            label: "Chinese Language Support | Inheritance, Sale, and Room Hunting",
+          },
+        ],
+      },
+      {
+        q: "Do you support both Traditional and Simplified Chinese?",
+        a: "Yes, both are supported. Clients in Taiwan and Hong Kong can inquire in Traditional Chinese and clients in mainland China in Simplified Chinese, and this website also has Traditional and Simplified Chinese pages. We also provide our service while taking cultural-background differences into account.",
+        links: [{ href: "/en/global", label: "Multilingual Room Hunting for Foreign Residents" }],
+      },
+      {
+        q: "Can I sell real estate in Japan while living overseas?",
+        a: "You are welcome to consult us. We support online consultations, and the on-site confirmation is carried out by our company. The necessary documents and procedures differ depending on your situation (your country of residence, residency status, and so on), so we proceed while confirming them item by item.",
+        links: [{ href: "/en/global", label: "Multilingual Support for Foreign Residents" }],
+      },
+      {
+        q: "Can I also entrust the inheritance registration together?",
+        a: "Acting as an agent for the application for inheritance registration is the work of a Judicial Scrivener (司法書士), so our company will refer you to a partner Judicial Scrivener and proceed in coordination with them. The preparation and translation of the documents needed for registration, such as family registers, are undertaken under a separate contract by the affiliated 四葉行政書士事務所 (Yotsuba Gyoseishoshi Office). The appraisal and sale of the property are handled by 四葉不動産株式会社 (Yotsuba Real Estate Co., Ltd.).",
+        links: [
+          {
+            href: "/en/global/chinese",
+            label: "Chinese Language Support | Inheritance, Sale, and Room Hunting",
+          },
+        ],
+      },
+    ],
+  },
+
   "zh-tw": {
     meta: {
       title: "中文諮詢的日本不動產與繼承｜繁體字・簡體字對應 | 四葉不動産",
