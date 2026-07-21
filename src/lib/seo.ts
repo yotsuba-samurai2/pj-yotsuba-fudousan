@@ -226,6 +226,11 @@ export const LEGAL_SAME_AS = [
   // GBP共有リンク＋ナレッジパネル（kgmid）＝JSON-LD修正P2（2026-07-11浦松承認済み仕様）
   "https://share.google/qw9imD2snNKDEQS3Z",
   "https://www.google.com/search?kgmid=/g/11z5sjqsxz",
+  // いい相続グループ（鎌倉新書・東証プライム）の当事務所プロフィール＝2026-07-20掲載確認。
+  // 同一エンティティ（四葉行政書士事務所）の別ページ。Wikidata Q139738259 P973 にも同URLを登録済み。
+  "https://www.i-sozoku.com/detail/oid1000790/",
+  "https://egyoseishoshi.jp/detail/oid1000790",
+  "https://www.sozoku-price.com/detail/120920",
 ] as const;
 
 /**
