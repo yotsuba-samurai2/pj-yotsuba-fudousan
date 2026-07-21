@@ -1,4 +1,4 @@
-import { Phone, MapPin, Clock, CalendarDays } from "lucide-react";
+import { Phone, MapPin } from "lucide-react";
 import type { Metadata } from "next";
 import { ContactForm } from "@/components/ui/ContactForm";
 import { buildPageMetadata } from "@/lib/seo";
@@ -10,7 +10,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return buildPageMetadata({
     businessKey: "legal",
     title: "お問い合わせ",
-    description: "補助金の申請書作成、ビザ・在留資格、会社設立、各種許認可のご相談はこちら。初回相談無料、電話・お問い合わせフォーム・オンライン予約で受付。文京区の四葉行政書士事務所が迅速・丁寧にお答えします。お気軽にどうぞ。",
+    description: "補助金の申請書作成、ビザ・在留資格、会社設立、各種許認可のご相談はこちら。初回相談無料、電話・お問い合わせフォームで受付。文京区の四葉行政書士事務所が迅速・丁寧にお答えします。お気軽にどうぞ。",
     path: "/legal/contact",
     locale,
   });
@@ -31,7 +31,7 @@ export default function LegalContactPage() {
             <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-text-muted">
               補助金、ビザ申請、会社設立など、どんなご相談でもお気軽にどうぞ。
               <br />
-              お電話・オンライン予約・フォームからお問い合わせいただけます。
+              お電話・フォームからお問い合わせいただけます。
             </p>
         </div>
       </section>
@@ -52,33 +52,6 @@ export default function LegalContactPage() {
                     <a href="tel:03-6161-9428" className="mt-1 text-lg font-bold text-primary hover:text-primary-dark">
                       03-6161-9428
                     </a>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10">
-                    <CalendarDays size={20} className="text-primary" />
-                  </div>
-                  <div>
-                    <p className="text-sm font-bold">オンライン予約</p>
-                    <a
-                      href="https://www.samurai.co.jp/samurai/reserve/uramatsu-joji"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mt-1 inline-flex items-center text-sm text-primary hover:text-primary-dark"
-                    >
-                      士業ドットコム予約ページへ →
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10">
-                    <Clock size={20} className="text-primary" />
-                  </div>
-                  <div>
-                    <p className="text-sm font-bold">営業時間</p>
-                    <p className="mt-1 text-sm text-text-muted">火・水 10:00〜19:00 ／ 月・木・金・土・日 18:00〜19:00</p>
                   </div>
                 </div>
 
