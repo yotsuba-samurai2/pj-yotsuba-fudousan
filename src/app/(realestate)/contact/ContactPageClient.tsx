@@ -1,6 +1,6 @@
 "use client";
 
-import { Phone, MapPin, Clock, CalendarDays } from "lucide-react";
+import { Phone, MapPin } from "lucide-react";
 import { ContactForm } from "@/components/ui/ContactForm";
 import { useTranslation } from "@/hooks/useTranslation";
 
@@ -38,33 +38,6 @@ export function ContactPageClient() {
                     <a href={`tel:${t("contact.methods.phone.number")}`} className="mt-1 text-lg font-bold text-primary hover:text-primary-dark">
                       {t("contact.methods.phone.number")}
                     </a>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10">
-                    <CalendarDays size={20} className="text-primary" />
-                  </div>
-                  <div>
-                    <p className="text-sm font-bold">{t("contact.methods.onlineBooking.label")}</p>
-                    <a
-                      href="https://www.samurai.co.jp/samurai/reserve/uramatsu-joji"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mt-1 inline-flex items-center text-sm text-primary hover:text-primary-dark"
-                    >
-                      {t("contact.methods.onlineBooking.linkText")}
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10">
-                    <Clock size={20} className="text-primary" />
-                  </div>
-                  <div>
-                    <p className="text-sm font-bold">{t("contact.methods.businessHours.label")}</p>
-                    <p className="mt-1 text-sm text-text-muted">{t("contact.methods.businessHours.value")}</p>
                   </div>
                 </div>
 
