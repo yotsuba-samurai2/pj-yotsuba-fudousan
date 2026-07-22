@@ -90,6 +90,9 @@ const STATIC_REALESTATE: StaticPage[] = [
   },
   // 2026-07-22：グループホーム開設ピラー（#4/#5 最優先KPI）。物件＋指定申請の分離受任ハブ。手本＝souzoku（priority 0.9）。
   { path: "/group-home", changeFrequency: "monthly", priority: 0.9 },
+  // 2026-07-22：シナジー領域ピラー（#11 飲食店開業・#15 会社設立×オフィス）。ja先行公開（/toushi/shitei-shinseiと同方式）。
+  { path: "/inshokuten", changeFrequency: "monthly", priority: 0.8, locales: ["ja"] },
+  { path: "/office", changeFrequency: "monthly", priority: 0.8, locales: ["ja"] },
   { path: "/toushi", changeFrequency: "monthly", priority: 0.9 },
   { path: "/toushi/group-home", changeFrequency: "monthly", priority: 0.8 },
   // タスクC-2（2026-07-19）：指定申請と物件の分離受任。現フェーズ＝ja先行公開（/ryokinと同方式）
