@@ -53,7 +53,8 @@ type TopCopy = {
 };
 
 const PILLAR_HREFS: [string, string, string] = ["/souzoku", "/toushi", "/global"];
-const QA_HREFS = ["/souzoku", "/toushi/group-home", "/global", "/about"];
+// 2026-07-22：GHのトップ導線を開設ピラー /group-home（物件＋指定申請の完全ガイド）へ。物件 spoke /toushi/group-home は他ページから継続被リンク。
+const QA_HREFS = ["/souzoku", "/group-home", "/global", "/about"];
 
 const COPY: Record<LangCode, TopCopy> = {
   ja: {
