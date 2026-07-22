@@ -54,6 +54,9 @@ export async function generateMetadata(): Promise<Metadata> {
       "相続 不動産 活用",
       "相続登記 義務化 期限",
       "茗荷谷 不動産 相続",
+      // 2026-07-22：隣接区の商圏明示（定点#3対応）
+      "豊島区 相続 不動産 売却",
+      "大塚 巣鴨 駒込 相続 相談",
     ],
     locale,
   });
