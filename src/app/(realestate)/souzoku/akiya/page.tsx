@@ -707,7 +707,13 @@ export default async function Page() {
   const locale = await getRequestLocale();
   const c = pickCopy(locale);
   // ja は faqJa 参照（文字列コピー禁止＝表記ゆれ防止）。zh-tw/zh は COPY 側（faqJa の対象外）。
-  const faqItems: FaqItem[] = c.faq ?? pickFaqJa(JA_FAQ_QUESTIONS);
+  // 2026-07-21：faqJa 側のakiya設問リンクは本ページ（/souzoku/akiya）を指すよう更新済み（/faq からの内部リンク強化のため）。
+  // 本ページ自身がその設問を表示する際は自己参照リンクになるため、当ページ分のみ除外する（q/aの文言・JSON-LDには影響しない＝linksは表示のみ）。
+  const rawFaqItems: FaqItem[] = c.faq ?? pickFaqJa(JA_FAQ_QUESTIONS);
+  const faqItems: FaqItem[] = rawFaqItems.map((item) => ({
+    ...item,
+    links: item.links?.filter((l) => l.href !== "/souzoku/akiya"),
+  }));
 
   return (
     <RealestateServicePage
