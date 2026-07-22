@@ -93,6 +93,8 @@ const STATIC_REALESTATE: StaticPage[] = [
   // 2026-07-22：シナジー領域ピラー（#11 飲食店開業・#15 会社設立×オフィス）。ja先行公開（/toushi/shitei-shinseiと同方式）。
   { path: "/inshokuten", changeFrequency: "monthly", priority: 0.8, locales: ["ja"] },
   { path: "/office", changeFrequency: "monthly", priority: 0.8, locales: ["ja"] },
+  // 2026-07-22：民泊ピラー（#13）。ja先行公開。
+  { path: "/minpaku", changeFrequency: "monthly", priority: 0.8, locales: ["ja"] },
   { path: "/toushi", changeFrequency: "monthly", priority: 0.9 },
   { path: "/toushi/group-home", changeFrequency: "monthly", priority: 0.8 },
   // タスクC-2（2026-07-19）：指定申請と物件の分離受任。現フェーズ＝ja先行公開（/ryokinと同方式）
