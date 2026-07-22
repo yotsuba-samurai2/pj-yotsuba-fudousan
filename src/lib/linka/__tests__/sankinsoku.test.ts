@@ -32,7 +32,7 @@ describe("三禁則①選ばない：候補は常に2件以上・推薦語ゼロ
       if (t.type === "triage") expect(t.candidates.length).toBeGreaterThanOrEqual(2);
     }
   });
-  it("全モードの出力に推薦語（最適/一番/おすすめ等）が含まれない", () => {
+  it("全モードの出力に推薦語（最適/一番/ベスト等・2026-07-22浦松決定でおすすめ系は許容・samurai-app同一標準）が含まれない", () => {
     const outputs = [
       ...queries.map((q) => localSearch(q)),
       ...queries.map((q) => localTriage(q)),
