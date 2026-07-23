@@ -12,6 +12,7 @@ import { addLocalePrefix } from "@/lib/locale";
 import { Breadcrumb } from "@/components/shared/Breadcrumb";
 import { CtaBand } from "@/components/shared/CtaBand";
 import type { LangCode } from "@/config/languages";
+import { SERVICE_NAV_CATEGORIES, resolveNavLabel, isNavLinkVisible } from "@/config/services-nav"; // 4カードの子ページチップは単一ソースを参照（メガメニュー・フッターと同じ定義）
 
 type DiffRow = { label: string; value: string };
 type FieldCard = { tag: string; title: string; body: string; linkLabel: string };
@@ -33,7 +34,7 @@ type ServicesCopy = {
     cardB: { title: string; rows: DiffRow[] };
     note: string;
   };
-  fields: { heading: string; items: [FieldCard, FieldCard, FieldCard] };
+  fields: { heading: string; items: [FieldCard, FieldCard, FieldCard, FieldCard] };
   flow: { heading: string; lead: string; steps: [FlowStep, FlowStep, FlowStep] };
   pricing: { heading: string; body: string };
   group: { heading: string; body: string; note: string };
@@ -43,12 +44,13 @@ type ServicesCopy = {
 const KICKERS = {
   hero: "SERVICES",
   diff: "DIFFERENCE",
-  fields: "3 FIELDS",
+  fields: "4 FIELDS",
   flow: "HOW IT WORKS",
 } as const;
 
-// 3領域の遷移先（全ロケール共通・href不変）
-const FIELD_HREFS: [string, string, string] = ["/souzoku", "/toushi", "/global"];
+// 4領域の遷移先（全ロケール共通・href不変）。設計書§カテゴリ設計と同じ並び＝①相続②GH開設③投資・事業用④外国人
+// SERVICE_NAV_CATEGORIES（config/services-nav.ts）と同じ並び・同じhrefにすること（チップ生成でインデックス対応させるため）
+const FIELD_HREFS: [string, string, string, string] = ["/souzoku", "/group-home", "/toushi", "/global"];
 
 const COPY: Record<LangCode, ServicesCopy> = {
   ja: {
@@ -95,7 +97,7 @@ const COPY: Record<LangCode, ServicesCopy> = {
       note: "※「動かない（売らない・買わない）」が最善なら、そのままお伝えします。仲介手数料は成約時のみ・初回のご相談は無料です。",
     },
     fields: {
-      heading: "四葉のコンサルティング3領域",
+      heading: "四葉のコンサルティング4領域",
       items: [
         {
           tag: "承継するには？",
@@ -104,9 +106,15 @@ const COPY: Record<LangCode, ServicesCopy> = {
           linkLabel: "→ 完全ガイドへ",
         },
         {
+          tag: "グループホームを開くには？",
+          title: "グループホーム開設コンサルティング",
+          body: "共同生活援助（障害者グループホーム）の開設は、「物件」と「指定申請」が同時に動きます。指定基準（立地・構造・面積・消防）を見据えた物件の紹介・仲介は四葉不動産が、指定申請書類の作成・提出は行政書士の独占業務のため併設の四葉行政書士事務所が別契約で担当します。",
+          linkLabel: "→ 完全ガイドへ",
+        },
+        {
           tag: "物件を探すには？",
           title: "事業用・投資用の逆算提案",
-          body: "グループホーム・社宅・収益物件は、「事業の目的」から逆算しないと失敗します。障害福祉なら指定基準（立地・構造・面積・消防）を契約前に確認するのが鉄則——グループの行政書士事務所の知見を横に置いて、開設から運営までを見通した物件選びをご提案します。",
+          body: "民泊・飲食店・会社設立、社宅や収益物件は、「事業の目的」から逆算しないと失敗します。業種ごとの許認可要件（消防・用途地域など）を契約前に確認するのが鉄則。物件探しは四葉不動産、指定申請・許認可は提携の行政書士（別契約）が担当し、開業から運営までを見通した物件選びをご提案します。",
           linkLabel: "→ 投資・事業用へ",
         },
         {
@@ -191,7 +199,7 @@ const COPY: Record<LangCode, ServicesCopy> = {
       note: "Note: If “not moving (not selling, not buying)” is the best answer, that is exactly what we will tell you. Brokerage fees arise only when a deal closes; your first consultation is free.",
     },
     fields: {
-      heading: "Yotsuba's three consulting fields",
+      heading: "Yotsuba's four consulting fields",
       items: [
         {
           tag: "Inheriting a property?",
@@ -200,9 +208,15 @@ const COPY: Record<LangCode, ServicesCopy> = {
           linkLabel: "→ The complete guide",
         },
         {
+          tag: "Opening a group home?",
+          title: "Group Home Opening Consulting",
+          body: "Opening a group home for people with disabilities (kyodo seikatsu enjo / shared-living support) means the property and the designation application move at the same time. Yotsuba Real Estate handles the property brokerage with the designation criteria (location, structure, floor area, fire safety) in mind, while Yotsuba Gyoseishoshi Office—since preparing and filing designation documents is a gyoseishoshi's exclusive practice—takes on that work under a separate engagement.",
+          linkLabel: "→ The complete guide",
+        },
+        {
           tag: "Looking for a property?",
           title: "Working-Backward Proposals for Business & Investment Use",
-          body: "Group-home properties, company housing, and income properties fail unless you work backward from the purpose of the business. For disability welfare, the golden rule is to check the designation standards (location, structure, floor area, fire safety) before signing—drawing on the know-how of our group's gyoseishoshi office, we propose properties with the full view from opening to operation.",
+          body: "Minpaku, restaurants, company setups, company housing, and income properties fail unless you work backward from the purpose of the business. Checking the licensing requirements for each industry (fire safety, zoning, and more) before signing is the golden rule. Yotsuba Real Estate handles the property search, while designation applications and licensing are handled by our partner gyoseishoshi (administrative scrivener) under a separate engagement—together proposing properties with the full view from opening to operation.",
           linkLabel: "→ Investment & business use",
         },
         {
@@ -285,7 +299,7 @@ const COPY: Record<LangCode, ServicesCopy> = {
       note: "※若「不行動（不賣・不買）」才是最佳解，我們會如實告訴您。仲介手續費僅於成交時發生；初次諮詢免費。",
     },
     fields: {
-      heading: "四葉的顧問服務3領域",
+      heading: "四葉的顧問服務4領域",
       items: [
         {
           tag: "如何繼承不動產？",
@@ -294,9 +308,15 @@ const COPY: Record<LangCode, ServicesCopy> = {
           linkLabel: "→ 前往完整指南",
         },
         {
+          tag: "想開設團體家屋？",
+          title: "團體家屋開設顧問",
+          body: "身心障礙者團體家屋（共同生活援助）的開設，「物件」與「指定申請」是同時進行的。四葉不動産負責以指定基準（立地・結構・面積・消防）為前提的物件仲介；指定申請文件的製作・提出屬於行政書士的獨占業務，由附設的四葉行政書士事務所另行簽約承接。",
+          linkLabel: "→ 前往完整指南",
+        },
+        {
           tag: "如何尋找物件？",
           title: "事業用・投資用的反向推算提案",
-          body: "團體家屋、員工宿舍、收益物件，若不從「事業目的」反向推算，就容易失敗。若是障礙福祉，鐵則是在簽約前確認指定基準（地點・結構・面積・消防）——借助集團行政書士事務所的知識，為您提案能看清從開設到營運全程的物件選擇。",
+          body: "民宿、餐飲店、公司設立，以及員工宿舍、收益物件，若不從「事業目的」反向推算，就容易失敗。依業種確認許認可要件（消防・用途地域等）並在簽約前完成，是鐵則。物件的尋找由四葉不動産負責，指定申請・許認可則由合作的行政書士（另行簽約）負責，共同為您提案能看清從開設到營運全程的物件選擇。",
           linkLabel: "→ 前往投資・事業用",
         },
         {
@@ -379,24 +399,30 @@ const COPY: Record<LangCode, ServicesCopy> = {
       note: "※若“不行动（不卖・不买）”才是最佳解，我们会如实告诉您。中介手续费仅在成交时发生；初次咨询免费。",
     },
     fields: {
-      heading: "四葉的顾问服务3领域",
+      heading: "四葉的顾问服务4领域",
       items: [
         {
           tag: "如何继承不动产？",
           title: "继承不动产顾问",
-          body: "从父母继承的房屋・土地，我们从“管理・活用・出售”三种出路反向推算来思考。以继承登记的期限（2024年4月起义务化・原则3年）为起点，与税理士・司法书士・行政书士合作，把流程整理成一张表——用事实，解开情感与金钱交织的继承课题。",
+          body: "从父母继承的房屋・土地，我们从「管理・活用・出售」三种出路反向推算来思考。以继承登记的期限（2024年4月起义务化・原则3年）为起点，与税理士・司法书士・行政书士合作，把流程整理成一张表——用事实，解开情感与金钱交织的继承课题。",
+          linkLabel: "→ 前往完整指南",
+        },
+        {
+          tag: "想开设团体家屋？",
+          title: "团体家屋开设顾问",
+          body: "残障人士团体家屋（共同生活援助）的开设，「物件」与「指定申请」是同时推进的。四葉不動産负责以指定基准（选址・结构・面积・消防）为前提的物件中介；指定申请文件的制作・提交属于行政书士的独占业务，由附设的四葉行政書士事務所另行签约承接。",
           linkLabel: "→ 前往完整指南",
         },
         {
           tag: "如何寻找房源？",
           title: "事业用・投资用的反向推算提案",
-          body: "团体家屋、员工宿舍、收益物件，若不从“事业目的”反向推算，就容易失败。若是残障福祉，铁则是在签约前确认指定基准（地点・结构・面积・消防）——借助集团行政书士事务所的知识，为您提案能看清从开设到运营全程的物件选择。",
+          body: "民宿、餐饮店、公司设立，以及员工宿舍、收益物件，若不从「事业目的」反向推算，就容易失败。按业种确认许可要件（消防・用途地域等）并在签约前完成，是铁则。物件的寻找由四葉不動産负责，指定申请・许认可则由合作的行政书士（另行签约）负责，共同为您提案能看清从开设到运营全程的物件选择。",
           linkLabel: "→ 前往投资・事业用",
         },
         {
           tag: "如何在日本生活？",
           title: "外国人的居住顾问",
-          body: "审查、担保、语言的门槛，我们以日语・英语・中文（繁体・简体）陪伴您跨过。不只找房，也协助收集所需文件与翻译。在留资格相关事务可与集团的行政书士事务所合作，您不必为“居住”与“手续”分头奔走。",
+          body: "审查、担保、语言的门槛，我们以日语・英语・中文（繁体・简体）陪伴您跨过。不只找房，也协助收集所需文件与翻译。在留资格相关事务可与集团的行政书士事务所合作，您不必为「居住」与「手续」分头奔走。",
           linkLabel: "→ 前往多语言找房",
         },
       ],
@@ -472,12 +498,19 @@ function FlowArrow() {
   );
 }
 
-// 図解02のアイコン3種（家＝相続／ビル＋虫めがね＝事業用・投資用／地球＝多言語）
+// 図解02のアイコン4種（家＝相続／家＋人2人＝グループホーム開設／ビル＋虫めがね＝事業用・投資用／地球＝多言語）
 const FIELD_ICONS: React.ReactNode[] = [
   <svg key="souzoku" viewBox="0 0 100 100" className="mx-auto h-20 w-20 text-primary sm:h-24 sm:w-24" aria-hidden="true">
     <path d="M50 16 20 42v40h60V42z" fill="none" stroke="currentColor" strokeWidth="5" strokeLinejoin="round" />
     <path d="M38 82V58h24v24" fill="none" stroke="currentColor" strokeWidth="5" />
     <path d="M50 4v10M28 22l-8-8M72 22l8-8" stroke="currentColor" strokeWidth="5" strokeLinecap="round" />
+  </svg>,
+  <svg key="group-home" viewBox="0 0 100 100" className="mx-auto h-20 w-20 text-primary sm:h-24 sm:w-24" aria-hidden="true">
+    <path d="M50 14 18 40v46h64V40z" fill="none" stroke="currentColor" strokeWidth="5" strokeLinejoin="round" />
+    <circle cx="38" cy="58" r="7" fill="none" stroke="currentColor" strokeWidth="5" />
+    <path d="M26 82v-6c0-7 5-12 12-12s12 5 12 12v6" fill="none" stroke="currentColor" strokeWidth="5" strokeLinecap="round" />
+    <circle cx="66" cy="58" r="7" fill="none" stroke="currentColor" strokeWidth="5" />
+    <path d="M54 82v-6c0-7 5-12 12-12s12 5 12 12v6" fill="none" stroke="currentColor" strokeWidth="5" strokeLinecap="round" />
   </svg>,
   <svg key="toushi" viewBox="0 0 100 100" className="mx-auto h-20 w-20 text-primary sm:h-24 sm:w-24" aria-hidden="true">
     <rect x="18" y="30" width="26" height="52" fill="none" stroke="currentColor" strokeWidth="5" />
@@ -563,25 +596,46 @@ export default async function ServicesPage() {
           <p className="mt-4 text-xs leading-relaxed text-text-muted">{c.diff.note}</p>
         </section>
 
-        {/* §2 四葉のコンサルティング3領域（図解02再現：アイコンSVG＋問いかけチップ＝トップpillarsタグと同一訳語） */}
-        <section aria-label="three consulting fields" className="mt-14">
+        {/* §2 四葉のコンサルティング4領域（図解02再現：アイコンSVG＋問いかけチップ＝トップpillarsタグと同一訳語）
+            各カードの子ページチップは config/services-nav.ts（SERVICE_NAV_CATEGORIES）を単一ソースとして参照。
+            ハブページと同一hrefの子（＝「総合ガイド」）はカード本体のCTAと重複するためチップから除外する。 */}
+        <section aria-label="four consulting fields" className="mt-14">
           <SectionHead kicker={KICKERS.fields} heading={c.fields.heading} />
-          <div className="mt-6 grid gap-3 md:grid-cols-3">
-            {c.fields.items.map((f, i) => (
-              <Link
-                key={FIELD_HREFS[i]}
-                href={addLocalePrefix(FIELD_HREFS[i], locale)}
-                className="flex flex-col rounded-3xl border border-border bg-surface p-6 transition-shadow hover:shadow-md"
-              >
-                {FIELD_ICONS[i]}
-                <span className="mx-auto mt-4 inline-block rounded-full bg-primary-tint px-3 py-1 text-xs font-bold text-primary-dark">
-                  {f.tag}
-                </span>
-                <h3 className="mt-3 text-center font-serif text-lg font-bold leading-snug text-ink">{f.title}</h3>
-                <p className="mt-3 text-sm leading-[1.9] text-text-muted">{f.body}</p>
-                <span className="mt-auto pt-4 text-sm font-medium text-primary">{f.linkLabel}</span>
-              </Link>
-            ))}
+          <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            {c.fields.items.map((f, i) => {
+              const chipLinks = (SERVICE_NAV_CATEGORIES[i]?.children ?? []).filter(
+                (child) => child.href !== FIELD_HREFS[i] && isNavLinkVisible(child, locale),
+              );
+              return (
+                <div
+                  key={FIELD_HREFS[i]}
+                  className="flex flex-col rounded-3xl border border-border bg-surface p-6 transition-shadow hover:shadow-md"
+                >
+                  <Link href={addLocalePrefix(FIELD_HREFS[i], locale)} className="flex flex-1 flex-col">
+                    {FIELD_ICONS[i]}
+                    <span className="mx-auto mt-4 inline-block rounded-full bg-primary-tint px-3 py-1 text-xs font-bold text-primary-dark">
+                      {f.tag}
+                    </span>
+                    <h3 className="mt-3 text-center font-serif text-lg font-bold leading-snug text-ink">{f.title}</h3>
+                    <p className="mt-3 text-sm leading-[1.9] text-text-muted">{f.body}</p>
+                    <span className="mt-auto pt-4 text-sm font-medium text-primary">{f.linkLabel}</span>
+                  </Link>
+                  {chipLinks.length > 0 && (
+                    <div className="mt-4 flex flex-wrap gap-2 border-t border-border pt-4">
+                      {chipLinks.map((child) => (
+                        <Link
+                          key={child.href}
+                          href={addLocalePrefix(child.href, locale)}
+                          className="rounded-full border border-border px-3 py-1 text-xs font-medium text-text-muted transition-colors hover:border-primary/40 hover:text-primary"
+                        >
+                          {resolveNavLabel(child.label, locale)}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
           </div>
         </section>
 
