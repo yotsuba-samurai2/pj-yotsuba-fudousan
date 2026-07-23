@@ -512,6 +512,38 @@ const COPY: Record<LangCode, GroupHomeCopy> = {
         description:
           "3つの住居類型の特徴と、サテライト型特有の要件（本体住居との距離・部屋数上限）を整理しています。",
       },
+      // ── 開設コラム（GHクラスタP3・全体像#2＋手続き系#9-12・計5本・2026-07-24公開・ja限定＝jaのCOPYのみに追加） ──
+      // ハブ→スポーク導線。設計＝samurai-app/tasks/gh-column-cluster-placement-plan.md §3
+      {
+        href: "/legal/column/group-home-kaisetsu-schedule-junbi-kikan",
+        label: "コラム：開設までのスケジュールと準備期間",
+        description:
+          "開設予定日から逆算する工程表と、準備期間3〜6か月を左右する落とし穴を整理しています。",
+      },
+      {
+        href: "/legal/column/group-home-shitei-shinsei-shorui-ichiran",
+        label: "コラム：指定申請の必要書類一覧",
+        description:
+          "法人・物件・人員・運営規程・事前相談の記録まで、指定申請書類を5分類で一覧化しています。",
+      },
+      {
+        href: "/legal/column/group-home-tokyo-jizen-kyogi-setsumeikai",
+        label: "コラム：東京都の説明会・事前協議とは",
+        description:
+          "事業者向け説明会・財団への申請受付・区市町村等への事前協議、それぞれの役割の違いを整理しています。",
+      },
+      {
+        href: "/legal/column/group-home-kankei-kikan-soudan-kakuninsho",
+        label: "コラム：「関係機関相談状況確認書及び議事録」とは",
+        description:
+          "区・消防・建築との事前相談を記録し指定申請に添付する書類の書き方と実務上のポイントをまとめています。",
+      },
+      {
+        href: "/legal/column/group-home-henkotodoke-koshin-taimingu",
+        label: "コラム：指定後の変更届・更新のタイミング",
+        description:
+          "10日以内の変更届と6年ごとの指定更新——開設後に必要な管理を根拠条文とあわせて解説しています。",
+      },
     ],
 
     sourcesHeading: "根拠・出典",
