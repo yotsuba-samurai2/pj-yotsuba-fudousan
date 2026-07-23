@@ -2,9 +2,9 @@
 
 import Image from "next/image";
 import { LocaleLink as Link } from "@/components/ui/LocaleLink";
-import { useState, useEffect, useCallback, useMemo } from "react";
+import { useState, useEffect, useCallback, useMemo, useRef } from "react";
 import { usePathname } from "next/navigation";
-import { Menu, X, CalendarDays } from "lucide-react";
+import { Menu, X, CalendarDays, ChevronDown } from "lucide-react";
 import { groupBusinesses } from "@/config/group";
 import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -16,6 +16,13 @@ import { MobileStickyBar } from "@/components/shared/MobileStickyBar";
 import { LinkaFab } from "@/components/shared/LinkaFab";
 import type { BusinessKey } from "@/lib/shared/office";
 import { SR_OFFICE_NAME } from "@/lib/shared/sr-name"; // 事務所名は実行時結合（法27条ソース漏れ対策）
+import type { LangCode } from "@/config/languages";
+import {
+  SERVICE_NAV_CATEGORIES,
+  SERVICE_NAV_UTILITY_LINKS,
+  resolveNavLabel,
+  isNavLinkVisible,
+} from "@/config/services-nav"; // 「サービス」メガメニュー・アコーディオンの単一ソース（ヘッダー・フッター・/servicesページ共通）
 
 type NavItem = { href: string; label: string };
 type FooterSection = { title: string; links: NavItem[] };
@@ -57,46 +64,78 @@ const FOOTER_NAV_HREFS: Record<
   string,
   {
     sectionKey: string;
+    // titleLabels＝コード内直書き4ロケール（items[].labelsと同方式）。未指定時はFirestore t()に
+    // フォールバック（既存の legal/labor セクションはこれまで通りFirestore依存のまま）。
+    titleLabels?: Record<string, string>;
     // labels＝コード内直書き4ロケール（NAV_HREFSと同方式）。Firestoreに新キーを増やさず、
     // 未定義キーで t() が生キー文字列を返して表示される事故も防ぐ（B1の教訓）。
-    items: { href: string; key: string; labels?: Record<string, string> }[];
+    // locales＝このリンク先が実在するロケール（未指定＝全4ロケール）。config/services-nav.tsの
+    // ServiceNavLink.localesと同じ考え方＝sitemap.tsのStaticPage.localesと必ず一致させる。
+    items: { href: string; key: string; labels?: Record<string, string>; locales?: LangCode[] }[];
   }[]
 > = {
   realestate: [
+    // 2026-07-23：ヘッダーのメガメニュー化にあわせてフッターも3カラム→4カラムに再編（設計書§設計②）。
+    // 旧「サービス」列4項目が全て/servicesへの同一リンクだった不具合を解消＝各リンクが実ページに接続。
+    // カテゴリ・ロケール可用性は config/services-nav.ts と揃える（新設ピラーの多くはja先行公開）。
     {
-      sectionKey: "services",
+      sectionKey: "inheritance",
+      titleLabels: { ja: "相続・グループホーム開設", en: "Inheritance & Group Homes", "zh-tw": "繼承・團體家屋開設", zh: "继承・团体家屋开设" },
       items: [
-        // 2026-07-11修正：/services 側に #rental 等のアンカーidが存在せず（現ページは別構成に改稿済み）
-        // クリックしてもジャンプしない＝実質機能していなかったため、実ページへ張り替え（浦松承認）。
-        { href: "/services", key: "rental" },
-        { href: "/services", key: "sale" },
-        // 2026-07-11修正：Firestoreの realestate.footerNav.services.management が空でラベル無し
-        // （文字が表示されないリンクになっていた）ため、コード内4ロケール直書きで補完。
+        { href: "/souzoku", key: "souzokuGuide", labels: { ja: "相続不動産ガイド", en: "Inherited property guide", "zh-tw": "繼承不動產指南", zh: "继承不动产指南" } },
         {
-          href: "/services",
-          key: "management",
-          labels: { ja: "管理サポート", en: "Property Management", "zh-tw": "物業管理", zh: "物业管理" },
+          href: "/souzoku/akiya",
+          key: "akiya",
+          labels: { ja: "空き家の売却・活用", "zh-tw": "空屋的出售・活用", zh: "空置房屋的出售・活用" },
+          locales: ["ja", "zh-tw", "zh"],
         },
-        // 外国人・多言語のお部屋探しは専用ページが実在
-        { href: "/global", key: "foreignResidents" },
+        { href: "/group-home", key: "groupHome", labels: { ja: "グループホーム開設ガイド", en: "Group home opening guide", "zh-tw": "團體家屋開設指南", zh: "团体家屋开设指南" } },
+      ],
+    },
+    {
+      sectionKey: "business",
+      titleLabels: { ja: "投資・事業用不動産", en: "Investment & Business Use", "zh-tw": "投資・事業用不動產", zh: "投资・事业用不动产" },
+      items: [
+        { href: "/toushi", key: "toushiGuide", labels: { ja: "投資・事業用 総合", en: "Investment & business overview", "zh-tw": "投資・事業用 總覽", zh: "投资・事业用 总览" } },
+        { href: "/kaigo", key: "kaigo", labels: { ja: "介護事業所の開業" }, locales: ["ja"] },
+        {
+          href: "/toushi",
+          key: "openingSupport",
+          labels: {
+            ja: "民泊・飲食店・会社設立",
+            en: "Business openings: care homes, minpaku, restaurants, company setup",
+            "zh-tw": "民宿・餐飲店・公司設立",
+            zh: "民宿・餐饮店・公司设立",
+          },
+        },
+      ],
+    },
+    {
+      sectionKey: "global",
+      titleLabels: { ja: "外国人・基本業務", en: "International & Everyday Services", "zh-tw": "外國人・基本業務", zh: "外国人・基本业务" },
+      items: [
+        { href: "/global", key: "foreignResidents", labels: { ja: "外国人の部屋探し", en: "Room hunting for international residents", "zh-tw": "外國人租屋・找房", zh: "外国人租房・找房" } },
+        { href: "/global/chinese", key: "chinese", labels: { ja: "中国語相談", "zh-tw": "中文諮詢", zh: "中文咨询" }, locales: ["ja", "zh-tw", "zh"] },
+        // 2026-07-11修正の踏襲：基本業務（賃貸・売買・管理）は/servicesへ集約（表現規程＝コンサル型方針）
+        { href: "/services", key: "management", labels: { ja: "賃貸・売買・管理", en: "Rental, Sale & Management", "zh-tw": "租賃・買賣・管理", zh: "租赁・买卖・管理" } },
       ],
     },
     {
       sectionKey: "company",
+      titleLabels: { ja: "会社情報・その他", en: "Company & More", "zh-tw": "公司資訊・其他", zh: "公司信息・其他" },
       items: [
         { href: "/about", key: "about" },
         { href: "/column", key: "column" },
-        // タスクC-5（2026-07-19）：相談事例（モデルケース）。2026-07-20（翻訳チェック§B）で en/zh-tw/zh を追加。
-        { href: "/jirei", key: "jirei", labels: { ja: "相談事例", en: "Case Studies", "zh-tw": "諮詢案例", zh: "咨询案例" } },
-      ],
-    },
-    {
-      sectionKey: "other",
-      items: [
+        // タスクC-5（2026-07-19）：相談事例（モデルケース）。ja先行公開（sitemap/availableLocalesとも["ja"]）。
+        { href: "/jirei", key: "jirei", labels: { ja: "相談事例", en: "Case Studies", "zh-tw": "諮詢案例", zh: "咨询案例" }, locales: ["ja"] },
+        { href: "/faq", key: "faq", labels: { ja: "よくある質問", en: "FAQ", "zh-tw": "常見問題", zh: "常见问题" } },
         // タスクB-1（2026-07-19）：料金ページ新設。2026-07-20（翻訳チェック§B）で en/zh-tw/zh を追加。
         { href: "/ryokin", key: "ryokin", labels: { ja: "料金", en: "Fees", "zh-tw": "費用", zh: "费用" } },
-        { href: "/contact", key: "contact" },
-        { href: "/legal-notice", key: "legalNotice" },
+        // 2026-07-10浦松指示のラベルをNAV_HREFSから踏襲（ヘッダー・フッターで表記統一）
+        { href: "/access", key: "access", labels: { ja: "アクセス", en: "Access", "zh-tw": "交通位置", zh: "交通位置" } },
+        { href: "/contact", key: "contact", labels: { ja: "お問い合わせ", en: "Contact", "zh-tw": "聯絡我們", zh: "联系我们" } },
+        // sectionKeyを"other"→"company"に変更したためFirestoreキーパス変更＝コード内ラベル必須（B1の教訓）
+        { href: "/legal-notice", key: "legalNotice", labels: { ja: "特定商取引法表記", en: "Legal Notice", "zh-tw": "特定商交易法標示", zh: "特定商交易法标示" } },
       ],
     },
   ],
@@ -177,6 +216,238 @@ const INDEPENDENT_NOTE: Record<string, string> = {
   "zh-tw": `四葉不動產株式會社、四葉行政書士事務所、${SR_OFFICE_NAME}（預定2026年9月開業）為各自獨立之事業體，分別承接業務。`,
   zh: `四葉不動産株式会社、四葉行政書士事務所、${SR_OFFICE_NAME}（预定2026年9月开业）为各自独立的事业体，分别承接业务。`,
 };
+
+/**
+ * 「サービス」メガメニュー（デスクトップ・realestateテナント専用）。
+ * ホバーで開閉しつつ、クリックでもトグル可能にする（キーボード・タッチ操作がホバーのみに依存しないため）。
+ * カテゴリ・子ページ・ロケール可用性は config/services-nav.ts を単一ソースとして参照する。
+ */
+function ServicesMegaMenu({
+  label,
+  isActive,
+  locale,
+}: {
+  label: string;
+  isActive: boolean;
+  locale: LangCode;
+}) {
+  const [open, setOpen] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
+  const closeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const cancelClose = useCallback(() => {
+    if (closeTimerRef.current) {
+      clearTimeout(closeTimerRef.current);
+      closeTimerRef.current = null;
+    }
+  }, []);
+
+  const openMenu = useCallback(() => {
+    cancelClose();
+    setOpen(true);
+  }, [cancelClose]);
+
+  const scheduleClose = useCallback(() => {
+    cancelClose();
+    closeTimerRef.current = setTimeout(() => setOpen(false), 150);
+  }, [cancelClose]);
+
+  // Escapeで閉じる／外側クリックで閉じる（ホバーのみに依存しないa11y対応）
+  useEffect(() => {
+    if (!open) return;
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setOpen(false);
+        buttonRef.current?.focus();
+      }
+    };
+    const onPointerDown = (e: MouseEvent) => {
+      if (containerRef.current && !containerRef.current.contains(e.target as Node)) {
+        setOpen(false);
+      }
+    };
+    window.addEventListener("keydown", onKeyDown);
+    document.addEventListener("mousedown", onPointerDown);
+    return () => {
+      window.removeEventListener("keydown", onKeyDown);
+      document.removeEventListener("mousedown", onPointerDown);
+    };
+  }, [open]);
+
+  useEffect(() => () => cancelClose(), [cancelClose]);
+
+  return (
+    <div ref={containerRef}>
+      <button
+        ref={buttonRef}
+        type="button"
+        aria-expanded={open}
+        aria-haspopup="true"
+        aria-controls="services-mega-menu"
+        onClick={() => setOpen((v) => !v)}
+        onMouseEnter={openMenu}
+        onMouseLeave={scheduleClose}
+        className={`header-nav-link relative flex items-center gap-1 px-4 py-2 text-base font-medium transition-colors duration-200 ${
+          isActive || open ? "header-nav-active" : "text-text-muted"
+        }`}
+      >
+        {label}
+        <ChevronDown
+          size={16}
+          aria-hidden="true"
+          className={`transition-transform duration-200 ${open ? "rotate-180" : ""}`}
+        />
+        <span
+          className={`gradient-line absolute bottom-0 left-1/2 h-0.5 -translate-x-1/2 rounded-full transition-all duration-300 ${
+            isActive ? "w-4/5" : "w-0"
+          }`}
+        />
+      </button>
+
+      {open && (
+        <div
+          id="services-mega-menu"
+          className="fixed inset-x-0 top-16 z-40 sm:top-20"
+          onMouseEnter={openMenu}
+          onMouseLeave={scheduleClose}
+        >
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mt-3 rounded-2xl border border-border bg-surface p-6 shadow-2xl">
+              <div className="grid grid-cols-2 gap-6 lg:grid-cols-4 lg:gap-8">
+                {SERVICE_NAV_CATEGORIES.map((cat) => (
+                  <div key={cat.id}>
+                    <Link
+                      href={cat.hubHref}
+                      onClick={() => setOpen(false)}
+                      className="text-sm font-bold text-ink transition-colors hover:text-primary"
+                    >
+                      {resolveNavLabel(cat.categoryLabel, locale)}
+                    </Link>
+                    <ul className="mt-3 space-y-2.5">
+                      {cat.children
+                        .filter((child) => isNavLinkVisible(child, locale))
+                        .map((child) => (
+                          <li key={child.href}>
+                            <Link
+                              href={child.href}
+                              onClick={() => setOpen(false)}
+                              className="text-sm text-text-muted transition-colors hover:text-primary"
+                            >
+                              {resolveNavLabel(child.label, locale)}
+                            </Link>
+                          </li>
+                        ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 border-t border-border pt-4">
+                {SERVICE_NAV_UTILITY_LINKS.filter((link) => isNavLinkVisible(link, locale)).map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setOpen(false)}
+                    className="text-xs font-medium text-text-muted transition-colors hover:text-primary"
+                  >
+                    {resolveNavLabel(link.label, locale)}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+/**
+ * 「サービス」アコーディオン（モバイルメニュー内・realestateテナント専用）。
+ * タップで4カテゴリ＋子ページを一覧展開する（デスクトップのメガメニューと同じ情報構造をリスト形式で踏襲）。
+ */
+function ServicesMobileAccordion({
+  label,
+  isActive,
+  locale,
+  style,
+  onNavigate,
+}: {
+  label: string;
+  isActive: boolean;
+  locale: LangCode;
+  style?: React.CSSProperties;
+  onNavigate: () => void;
+}) {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div style={style}>
+      <button
+        type="button"
+        aria-expanded={open}
+        aria-controls="services-mobile-accordion"
+        onClick={() => setOpen((v) => !v)}
+        className={`header-nav-link flex w-full items-center justify-between rounded-lg px-4 py-3 text-sm font-medium transition-all duration-200 ${
+          isActive ? "bg-primary/5 header-nav-active" : "text-text-muted hover:bg-surface-dim"
+        }`}
+      >
+        <span className="inline-flex items-center">
+          {isActive && <span className="gradient-line mr-2 h-4 w-0.5 rounded-full" />}
+          {label}
+        </span>
+        <ChevronDown
+          size={16}
+          aria-hidden="true"
+          className={`transition-transform duration-200 ${open ? "rotate-180" : ""}`}
+        />
+      </button>
+
+      {open && (
+        <div id="services-mobile-accordion" className="mt-1 space-y-4 py-2 pl-4">
+          {SERVICE_NAV_CATEGORIES.map((cat) => (
+            <div key={cat.id}>
+              <Link
+                href={cat.hubHref}
+                onClick={onNavigate}
+                className="block text-xs font-bold tracking-wide text-text-muted"
+              >
+                {resolveNavLabel(cat.categoryLabel, locale)}
+              </Link>
+              <ul className="mt-1.5 space-y-1">
+                {cat.children
+                  .filter((child) => isNavLinkVisible(child, locale))
+                  .map((child) => (
+                    <li key={child.href}>
+                      <Link
+                        href={child.href}
+                        onClick={onNavigate}
+                        className="block rounded-md px-2 py-1.5 text-sm text-text hover:bg-surface-dim"
+                      >
+                        {resolveNavLabel(child.label, locale)}
+                      </Link>
+                    </li>
+                  ))}
+              </ul>
+            </div>
+          ))}
+          <div className="flex flex-wrap gap-x-4 gap-y-2 border-t border-border pt-3">
+            {SERVICE_NAV_UTILITY_LINKS.filter((link) => isNavLinkVisible(link, locale)).map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={onNavigate}
+                className="text-xs font-medium text-text-muted underline-offset-2 hover:underline"
+              >
+                {resolveNavLabel(link.label, locale)}
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
 
 function TenantHeader({ businessKey }: { businessKey: string }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -259,22 +530,26 @@ function TenantHeader({ businessKey }: { businessKey: string }) {
             className="hidden items-center gap-1 md:flex"
             aria-label={t("common.navigation.mainNav")}
           >
-            {navItems.map(({ href, label }) => (
-              <Link
-                key={href}
-                href={href}
-                className={`header-nav-link relative px-4 py-2 text-base font-medium transition-colors duration-200 ${
-                  isActive(href) ? "header-nav-active" : "text-text-muted"
-                }`}
-              >
-                {label}
-                <span
-                  className={`gradient-line absolute bottom-0 left-1/2 h-0.5 -translate-x-1/2 rounded-full transition-all duration-300 ${
-                    isActive(href) ? "w-4/5" : "w-0"
+            {navItems.map(({ href, label }) =>
+              businessKey === "realestate" && href === "/services" ? (
+                <ServicesMegaMenu key={href} label={label} isActive={isActive(href)} locale={locale} />
+              ) : (
+                <Link
+                  key={href}
+                  href={href}
+                  className={`header-nav-link relative px-4 py-2 text-base font-medium transition-colors duration-200 ${
+                    isActive(href) ? "header-nav-active" : "text-text-muted"
                   }`}
-                />
-              </Link>
-            ))}
+                >
+                  {label}
+                  <span
+                    className={`gradient-line absolute bottom-0 left-1/2 h-0.5 -translate-x-1/2 rounded-full transition-all duration-300 ${
+                      isActive(href) ? "w-4/5" : "w-0"
+                    }`}
+                  />
+                </Link>
+              ),
+            )}
 
             <div className="ml-2 border-l border-border pl-3">
               <LanguageSwitcher />
@@ -318,24 +593,35 @@ function TenantHeader({ businessKey }: { businessKey: string }) {
         }`}
       >
         <div className="flex flex-1 flex-col gap-1 px-4 py-4">
-          {navItems.map(({ href, label }, i) => (
-            <Link
-              key={href}
-              href={href}
-              onClick={() => setIsOpen(false)}
-              className={`header-nav-link flex items-center rounded-lg px-4 py-3 text-sm font-medium transition-all duration-200 ${
-                isActive(href)
-                  ? "bg-primary/5 header-nav-active"
-                  : "text-text-muted hover:bg-surface-dim"
-              }`}
-              style={{ transitionDelay: isOpen ? `${i * 50}ms` : "0ms" }}
-            >
-              {isActive(href) && (
-                <span className="gradient-line mr-2 h-4 w-0.5 rounded-full" />
-              )}
-              {label}
-            </Link>
-          ))}
+          {navItems.map(({ href, label }, i) =>
+            businessKey === "realestate" && href === "/services" ? (
+              <ServicesMobileAccordion
+                key={href}
+                label={label}
+                isActive={isActive(href)}
+                locale={locale}
+                style={{ transitionDelay: isOpen ? `${i * 50}ms` : "0ms" }}
+                onNavigate={() => setIsOpen(false)}
+              />
+            ) : (
+              <Link
+                key={href}
+                href={href}
+                onClick={() => setIsOpen(false)}
+                className={`header-nav-link flex items-center rounded-lg px-4 py-3 text-sm font-medium transition-all duration-200 ${
+                  isActive(href)
+                    ? "bg-primary/5 header-nav-active"
+                    : "text-text-muted hover:bg-surface-dim"
+                }`}
+                style={{ transitionDelay: isOpen ? `${i * 50}ms` : "0ms" }}
+              >
+                {isActive(href) && (
+                  <span className="gradient-line mr-2 h-4 w-0.5 rounded-full" />
+                )}
+                {label}
+              </Link>
+            ),
+          )}
         </div>
         {/* 下部固定バー(64px・z-40)に隠れないよう底上げ（言語切替＋お問い合わせを可視域に） */}
         <div className="border-t border-border px-4 py-4 pb-[88px]">
@@ -366,15 +652,22 @@ function TenantFooter({ businessKey }: { businessKey: string }) {
   const footerSections: FooterSection[] = useMemo(() => {
     const defs = FOOTER_NAV_HREFS[businessKey] ?? [];
     return defs.map((section) => ({
-      title: t(`${businessKey}.footerNav.${section.sectionKey}.title`),
-      links: section.items.map((item) => ({
-        href: item.href,
-        // labels（コード内4ロケール）を優先し、無ければFirestore t()。ヘッダー（allNav）と同方式。
-        label:
-          item.labels?.[locale] ??
-          item.labels?.ja ??
-          t(`${businessKey}.footerNav.${section.sectionKey}.${item.key}`),
-      })),
+      // titleLabels（コード内4ロケール）を優先し、無ければ従来どおりFirestore t()。
+      title:
+        section.titleLabels?.[locale] ??
+        section.titleLabels?.ja ??
+        t(`${businessKey}.footerNav.${section.sectionKey}.title`),
+      links: section.items
+        // locales未指定＝全ロケール表示。指定時は現在ロケールが含まれる項目のみ（存在しないページへのリンクを出さない）
+        .filter((item) => !item.locales || item.locales.includes(locale))
+        .map((item) => ({
+          href: item.href,
+          // labels（コード内4ロケール）を優先し、無ければFirestore t()。ヘッダー（allNav）と同方式。
+          label:
+            item.labels?.[locale] ??
+            item.labels?.ja ??
+            t(`${businessKey}.footerNav.${section.sectionKey}.${item.key}`),
+        })),
     }));
   }, [businessKey, t, locale]);
 
@@ -476,7 +769,12 @@ function TenantFooter({ businessKey }: { businessKey: string }) {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 sm:gap-12">
+          {/* realestate＝4カラム（設計書§設計②）／legal・labor＝既存3カラムのまま（回帰なし） */}
+          <div
+            className={`grid grid-cols-2 gap-8 ${
+              footerSections.length >= 4 ? "sm:grid-cols-4 sm:gap-8" : "sm:grid-cols-3 sm:gap-12"
+            }`}
+          >
             {footerSections.map((section) => (
               <div key={section.title}>
                 <h3 className="text-sm font-bold tracking-wide text-text">
