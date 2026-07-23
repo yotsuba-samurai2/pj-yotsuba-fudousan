@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo";
 import { getRequestLocale } from "@/lib/getRequestLocale";
+import { getLegalColumns, getLocalizedColumn } from "@/lib/columns";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
+import { ColumnCollectionJsonLd } from "@/components/seo/ColumnCollectionJsonLd";
 import LegalColumnListContent from "./LegalColumnListContent";
 
 export const dynamic = "force-dynamic";
@@ -41,14 +43,28 @@ export async function generateMetadata(): Promise<Metadata> {
   });
 }
 
-export default function LegalColumnListPage() {
+export default async function LegalColumnListPage() {
+  const locale = await getRequestLocale();
+  const cols = await getLegalColumns(locale);
+  const columns = cols.map((c) => getLocalizedColumn(c, locale));
+  const m = META_BY_LOCALE[locale] ?? META_BY_LOCALE.ja;
+
   return (
     <div>
       <BreadcrumbJsonLd businessKey="legal" items={[
         { name: "ホーム", href: "/legal" },
         { name: "コラム", href: "/legal/column" },
       ]} />
-      <LegalColumnListContent />
+      {columns.length > 0 && (
+        <ColumnCollectionJsonLd
+          businessKey="legal"
+          columns={columns}
+          name={m.title}
+          description={m.description}
+          locale={locale}
+        />
+      )}
+      <LegalColumnListContent columns={columns} />
     </div>
   );
 }
