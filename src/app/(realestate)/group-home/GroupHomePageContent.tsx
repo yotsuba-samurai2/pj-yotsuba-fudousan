@@ -448,6 +448,38 @@ const COPY: Record<LangCode, GroupHomeCopy> = {
         description:
           "相続した不動産の管理・活用・売却の完全ガイド。空き家のグループホーム活用の入口にもなります。",
       },
+      // ── 開設コラム（GHクラスタP1・2026-07-23公開・ja限定＝jaのCOPYのみに追加） ──
+      // ハブ→スポーク導線。設計＝samurai-app/tasks/gh-column-cluster-placement-plan.md §3
+      {
+        href: "/legal/column/group-home-kaisetsu-nagare-tokyo-bunkyo",
+        label: "コラム：開設の流れ【東京都・文京区版】",
+        description:
+          "法人準備から指定・開設までの7ステップと準備期間（3〜6か月）。物件と指定申請を同時に進める順番を整理しています。",
+      },
+      {
+        href: "/legal/column/group-home-bukken-shitei-onestop",
+        label: "コラム：物件と指定申請を一つの窓口で",
+        description:
+          "物件と手続きを別々に頼むと何が起きるか。契約前チェックの要点と、一つの窓口で進める流れを解説します。",
+      },
+      {
+        href: "/legal/column/group-home-shobo-setsubi-sprinkler",
+        label: "コラム：消防設備の要否（スプリンクラー）",
+        description:
+          "障害支援区分4以上の割合で変わるスプリンクラー・自動火災報知設備・通報装置の基準を、物件選びの視点で整理。",
+      },
+      {
+        href: "/legal/column/group-home-bunkyo-ku-kaisetsu",
+        label: "コラム：文京区で開設するには",
+        description:
+          "区の相談窓口（障害福祉課）・区独自の整備費補助・事前相談と指定申請の関係を、地元の視点でまとめています。",
+      },
+      {
+        href: "/legal/column/group-home-kaisetsu-hiyo-zentaizo",
+        label: "コラム：開設費用の全体像",
+        description:
+          "初期費用の内訳（法人・物件・改修/消防・什器・運転資金）と、物件条件で費用が動く理由を幅と出典で示します。",
+      },
     ],
 
     sourcesHeading: "根拠・出典",
