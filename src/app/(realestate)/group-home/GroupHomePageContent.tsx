@@ -480,6 +480,38 @@ const COPY: Record<LangCode, GroupHomeCopy> = {
         description:
           "初期費用の内訳（法人・物件・改修/消防・什器・運転資金）と、物件条件で費用が動く理由を幅と出典で示します。",
       },
+      // ── 開設コラム（GHクラスタP2・B物件系★5本・2026-07-24公開・ja限定＝jaのCOPYのみに追加） ──
+      // ハブ→スポーク導線。設計＝samurai-app/tasks/gh-column-cluster-placement-plan.md §3
+      {
+        href: "/legal/column/group-home-bukken-sagashikata-youto-chiiki",
+        label: "コラム：物件の探し方（用途地域・立地）",
+        description:
+          "建築基準法上「寄宿舎」として扱われる用途地域の基本と、駅距離・近隣環境など契約前に見るべき立地の確認ポイントを整理しています。",
+      },
+      {
+        href: "/legal/column/group-home-shitei-kijun-bukken-menseki",
+        label: "コラム：指定基準を満たす物件条件",
+        description:
+          "居室7.43㎡・入居定員・共用設備など、東京都条例に基づく数値基準を表で整理しています。",
+      },
+      {
+        href: "/legal/column/group-home-kenchikukijunho-youto-henko",
+        label: "コラム：建築基準法と用途変更の要否",
+        description:
+          "既存建物を転用する際に用途変更確認申請が必要になるライン（200㎡）と、確認申請が不要でも残る法適合義務を解説します。",
+      },
+      {
+        href: "/legal/column/group-home-keiyakumae-jizen-kyogi",
+        label: "コラム：契約前にやる事前協議",
+        description:
+          "区市町村・消防・建築部署という3つの窓口に、契約前に図面を持ち込んで確認する進め方をまとめています。",
+      },
+      {
+        href: "/legal/column/group-home-kodate-apart-satellite-chigai",
+        label: "コラム：戸建て型・アパート型・サテライト型の違い",
+        description:
+          "3つの住居類型の特徴と、サテライト型特有の要件（本体住居との距離・部屋数上限）を整理しています。",
+      },
     ],
 
     sourcesHeading: "根拠・出典",
