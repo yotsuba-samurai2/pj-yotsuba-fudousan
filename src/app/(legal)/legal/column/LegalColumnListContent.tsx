@@ -1,24 +1,17 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { LocaleLink as Link } from "@/components/ui/LocaleLink";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { useTranslation } from "@/hooks/useTranslation";
-import { getLatestLegalColumns } from "@/lib/columns-actions";
-import { getLocalizedColumn, type Column } from "@/lib/column-shared";
+import type { Column } from "@/lib/column-shared";
 
-export default function LegalColumnListContent() {
-  const { t, locale } = useTranslation();
-  const [columns, setColumns] = useState<Column[]>([]);
-  const [loading, setLoading] = useState(true);
+type Props = {
+  /** server（page.tsx）で取得・ローカライズ済みのコラム配列。SSR HTML にリンクを出すため props で受け取る */
+  columns: Column[];
+};
 
-  useEffect(() => {
-    setLoading(true);
-    getLatestLegalColumns(20, locale).then((cols) => {
-      setColumns(cols.map((c) => getLocalizedColumn(c, locale)));
-      setLoading(false);
-    });
-  }, [locale]);
+export default function LegalColumnListContent({ columns }: Props) {
+  const { t } = useTranslation();
 
   return (
     <>
@@ -33,11 +26,7 @@ export default function LegalColumnListContent() {
 
       <section className="py-14 sm:py-20 md:py-28">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          {loading ? (
-            <div className="flex justify-center py-12">
-              <div className="h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent" />
-            </div>
-          ) : columns.length === 0 ? (
+          {columns.length === 0 ? (
             <div className="rounded-xl border border-dashed border-border bg-surface p-12 text-center sm:p-16">
               <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-primary/10">
                 <ArrowRight size={24} className="text-primary" />
