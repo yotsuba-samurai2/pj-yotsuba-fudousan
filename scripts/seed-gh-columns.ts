@@ -8,6 +8,8 @@
  * 使い方:
  *   npx tsx scripts/seed-gh-columns.ts            # dry-run（scripts/gh-columns.preview.json を出力・DB接続なし）
  *   npx tsx scripts/seed-gh-columns.ts --write    # DATABASE_URL/DIRECT_URL を設定して本番upsert（冪等）
+ *   npx tsx scripts/seed-gh-columns.ts --emit-ts  # src/lib/data/gh-columns-seed.ts を生成（admin/columns/seed-gh 投入ページ用。
+ *                                                 #  本番環境変数がSensitive設定でenv pull不可のため、taiwan同型のadmin経由投入を正とする）
  *
  * 設計メモ:
  *   - FAQ は本文md「## よくある質問」から自動パース＝本文が単一ソース（FAQPage JSON-LD は
@@ -208,8 +210,22 @@ function verify(cols: SeedColumn[]): string[] {
 
 async function main() {
   const write = process.argv.includes("--write");
+  const emitTs = process.argv.includes("--emit-ts");
   const cols = buildColumns();
   const notes = verify(cols);
+
+  if (emitTs) {
+    if (notes.some((n) => n.startsWith("NG"))) {
+      console.error(notes.join("\n"));
+      console.error("NGがあるため中断します。");
+      process.exit(1);
+    }
+    const out = resolve(__dirname, "../src/lib/data/gh-columns-seed.ts");
+    const header = `// このファイルは自動生成（npx tsx scripts/seed-gh-columns.ts --emit-ts）。直接編集しない。\n// 原稿の正本＝scripts/gh-columns/*.md（浦松検収済み 2026-07-23）。修正はmd側→再生成で行う。\n// 用途＝/admin/columns/seed-gh からの管理者セッション経由バルクupsert（taiwan-columns-seed と同型）。\n\nexport type GhSeedColumn = {\n  business: "legal";\n  slug: string;\n  title: string;\n  date: string;\n  category: string;\n  excerpt: string;\n  content: string;\n  status: "published";\n  author: { name: string; title: string };\n  keywords: string[];\n  tags: string[];\n  locales: ("ja" | "en" | "zh-tw" | "zh")[];\n  faq: { question: string; answer: string }[];\n};\n\nexport const GH_COLUMNS_SEED: GhSeedColumn[] = `;
+    writeFileSync(out, header + JSON.stringify(cols, null, 2) + ";\n");
+    console.log(`emit-ts → ${out}（${cols.length}本）`);
+    return;
+  }
 
   const preview = {
     generatedAt: new Date().toISOString(),
