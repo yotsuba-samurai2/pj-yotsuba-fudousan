@@ -192,18 +192,29 @@ function buildColumns(): SeedColumn[] {
   });
 }
 
+// P2（scripts/seed-gh-columns-p2.ts・2026-07-24投入済み）のslug。
+// P1側（#21等）からP2記事への逆リンクを追加したため、verify()で既知slugとして許容する。
+const KNOWN_EXTERNAL_SLUGS = [
+  "group-home-bukken-sagashikata-youto-chiiki", // #3
+  "group-home-shitei-kijun-bukken-menseki", // #4
+  "group-home-kenchikukijunho-youto-henko", // #6
+  "group-home-keiyakumae-jizen-kyogi", // #7
+  "group-home-kodate-apart-satellite-chigai", // #8
+];
+
 function verify(cols: SeedColumn[]): string[] {
   const notes: string[] = [];
   const slugs = new Set(cols.map((c) => c.slug));
+  const knownSlugs = new Set([...slugs, ...KNOWN_EXTERNAL_SLUGS]);
   if (slugs.size !== cols.length) notes.push("NG: slug重複あり");
   for (const c of cols) {
     if (c.faq.length !== 6) notes.push(`WARN: ${c.slug} のFAQが${c.faq.length}件（想定6件）`);
     if (c.content.length < 2000) notes.push(`WARN: ${c.slug} の本文が短い（${c.content.length}字）`);
     // スポーク→ハブ必須リンク
     if (!c.content.includes("](/group-home)")) notes.push(`NG: ${c.slug} に /group-home リンクなし`);
-    // 相互リンク先slugの実在（この5本内のみ検査）
+    // 相互リンク先slugの実在（この5本＋P2既知slugを検査対象に含める）
     const links = [...c.content.matchAll(/\]\(\/legal\/column\/([a-z0-9-]+)\)/g)].map((x) => x[1]);
-    for (const l of links) if (!slugs.has(l)) notes.push(`NG: ${c.slug} → 不明slug ${l}`);
+    for (const l of links) if (!knownSlugs.has(l)) notes.push(`NG: ${c.slug} → 不明slug ${l}`);
   }
   return notes;
 }
