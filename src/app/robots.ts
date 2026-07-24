@@ -1,5 +1,4 @@
 import type { MetadataRoute } from "next";
-import { BUSINESS_URLS } from "@/lib/seo";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -16,7 +15,8 @@ export default function robots(): MetadataRoute.Robots {
         disallow: "/",
       },
     ],
-    // labor は SR_LAUNCHED=true まで BUSINESS_URLS に含まれない＝labor向けsitemapは生成されない
-    sitemap: Object.values(BUSINESS_URLS).map((url) => `${url}/sitemap.xml`),
+    // 2026-07-25：/legal/sitemap.xml は実在しないルート（404）だったため広告を停止。
+    // legal配下は本体 sitemap.xml に統合済み（sitemap.ts参照）。laborはSR_LAUNCHEDまで露出しない方針も維持。
+    sitemap: ["https://luck428.com/sitemap.xml"],
   };
 }
