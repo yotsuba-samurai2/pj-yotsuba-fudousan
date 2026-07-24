@@ -20,6 +20,17 @@ export const PROPERTY_TEMPLATE: Record<LangCode, string> = {
 export const PROPERTY_TEMPLATE_GH_JA =
   "エリア・駅：\n賃料の目安：\n広さ・面積：\n開設予定時期：\nその他（物件の希望など）：";
 
+/**
+ * トップページ向け一般テンプレート（2026-07-24 v2.1）。
+ * 住まい・事業用の両方が来る入口のため「用途」欄で受け分ける（店舗専門の語に寄せない）。
+ */
+export const PROPERTY_TEMPLATE_GENERAL: Record<LangCode, string> = {
+  ja: "駅・エリア：\n賃料の上限：\n広さ・間取り：\n用途（住まい／店舗／事務所など）：\n入居希望時期：",
+  en: "Station / area:\nMax rent:\nSize / layout:\nUse (home / shop / office):\nDesired move-in timing:",
+  "zh-tw": "車站・區域：\n租金上限：\n面積・格局：\n用途（自住／店鋪／辦公室等）：\n希望入住時期：",
+  zh: "车站・区域：\n租金上限：\n面积・户型：\n用途（自住／店铺／办公室等）：\n希望入住时期：",
+};
+
 /** テンプレートのコピー操作ラベル */
 export const TEMPLATE_COPY_LABELS: Record<LangCode, { copy: string; copied: string }> = {
   ja: { copy: "条件テンプレをコピー", copied: "コピーしました" },

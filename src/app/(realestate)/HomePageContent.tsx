@@ -9,9 +9,15 @@
 // 【1ページ1LINKA】本文の60秒診断枠がLINKA＝右下FABなし（TenantLayoutShell側でsuppressed）。
 // AI接続（/api/linka）はフェーズK＝「準備中」明記（優良誤認回避）。
 // JSON-LD＝layoutの OrganizationJsonLd／WebSiteJsonLd が出力済み＝ここでは出さない（@id重複防止）。
+// 2026-07-24 CTA刷新v2.1（浦松指摘「トップの希望条件メッセージが弱い」対応）：
+//   - 末尾のインラインCTA帯を共通CtaBand（variant="property-general"）に置換。
+//     旧インライン版は「共通CtaBandがja固定」時代の産物＝現在は4ロケール対応のため一本化。
+//     テンプレコピー・信頼行・GA計測・contactの?intent=bukkenがトップにも効く。
+//   - 60秒診断：LINKA挨拶に条件インテークの誘いを追記し、チップ「物件の希望条件を伝える」を追加
+//     （LINKA側はpropertyIntake＋joken実装済み＝条件を整理してコピー→LINE導線につながる）。
 import Link from "next/link";
 import { LinkaWidget } from "@/components/linka/LinkaWidget";
-import { LINE_URL } from "@/lib/shared/office";
+import { CtaBand } from "@/components/shared/CtaBand";
 import { getRequestLocale } from "@/lib/getRequestLocale";
 import { addLocalePrefix } from "@/lib/locale";
 import { fetchTranslations } from "@/lib/getTranslationData";
@@ -37,7 +43,6 @@ type TopCopy = {
   diagnosisH2: string;
   diagnosisChips: { href: string; label: string }[];
   diagnosisNote: string;
-  lineBtn: string;
   repAlt: string;
   repName: string;
   repBio: string;
@@ -45,11 +50,8 @@ type TopCopy = {
   qa: QaCopy[];
   qaHrefs: string[];
   nav: { href: string; label: string }[];
-  ctaHeading: string;
-  ctaLead: string;
-  contactBtn: string;
-  telBtn: string;
-  accessLine: string;
+  // CTA帯の文言（ctaHeading/ctaLead/lineBtn/contactBtn/telBtn/accessLine）は2026-07-24 v2.1で削除
+  // ＝共通CtaBand（variant="property-general"・4ロケール）へ一本化。
 };
 
 const PILLAR_HREFS: [string, string, string] = ["/souzoku", "/toushi", "/global"];
@@ -92,10 +94,10 @@ const COPY: Record<LangCode, TopCopy> = {
       { href: "/souzoku", label: "相続の相談" },
       { href: "/toushi", label: "投資・事業用を探す" },
       { href: "/global", label: "お部屋探し" },
+      { href: "/toushi", label: "物件の希望条件を伝える" },
     ],
     diagnosisNote:
-      "こんにちは、四葉不動産のLINKAです。相続・投資や事業用・お部屋探しなど、お困りごとを匿名でどうぞ。分野の見当と、四葉のご案内先をお示しします。",
-    lineBtn: "LINEで一言相談（無料）",
+      "こんにちは、四葉不動産のLINKAです。相続・投資や事業用・お部屋探しなど、お困りごとを匿名でどうぞ。物件をお探しの方は、駅・賃料・広さなど希望条件だけでも大丈夫——条件を整理して、そのままLINEで送れる形にします。",
     repAlt: "四葉不動産株式会社 代表取締役 浦松丈二",
     repName: "浦松 丈二（うらまつ・じょうじ）",
     repBio:
@@ -130,11 +132,6 @@ const COPY: Record<LangCode, TopCopy> = {
       { href: "/faq", label: "よくある質問" },
       { href: "/access", label: "アクセス・料金" },
     ],
-    ctaHeading: "「これ、どうしたらいい？」の一言からで大丈夫です。",
-    ctaLead: "代表が直接お返事し、ご希望を伺って条件に合う物件があればLINEでご紹介します。",
-    contactBtn: "お問い合わせ",
-    telBtn: "電話 03-6161-9428",
-    accessLine: "東京メトロ丸ノ内線「茗荷谷」駅 徒歩5分｜10:00〜18:00（定休：火・水）",
   },
   en: {
     heroAlt: "Cherry blossoms along Harimazaka in Bunkyo, Tokyo",
@@ -171,10 +168,10 @@ const COPY: Record<LangCode, TopCopy> = {
       { href: "/souzoku", label: "Inheritance" },
       { href: "/toushi", label: "Investment & business use" },
       { href: "/global", label: "Room hunting" },
+      { href: "/toushi", label: "Share my property conditions" },
     ],
     diagnosisNote:
-      "Hi, I'm LINKA, Yotsuba Real Estate's AI concierge. Tell me your situation anonymously—inheritance, investment or business-use property, or room hunting—and I'll point you to the relevant area and where to start.",
-    lineBtn: "Chat on LINE (free)",
+      "Hi, I'm LINKA, Yotsuba Real Estate's AI concierge. Tell me your situation anonymously—inheritance, investment or business-use property, or room hunting. Looking for a property? Just your conditions—station, rent, size—are enough: I'll organize them into a message you can send us on LINE as-is.",
     repAlt: "Joji Uramatsu, Representative Director of Yotsuba Real Estate Co., Ltd.",
     repName: "Joji Uramatsu",
     repBio:
@@ -209,12 +206,6 @@ const COPY: Record<LangCode, TopCopy> = {
       { href: "/faq", label: "FAQ" },
       { href: "/access", label: "Access & Fees" },
     ],
-    ctaHeading: "It's fine to start with just one line: “What should I do with this?”",
-    ctaLead:
-      "Our representative replies to you personally, and if a property matches your needs, we will introduce it via LINE.",
-    contactBtn: "Contact",
-    telBtn: "Call 03-6161-9428",
-    accessLine: "5 min walk from Myogadani Sta. (Tokyo Metro Marunouchi Line) | 10:00–18:00 (Closed Tue & Wed)",
   },
   "zh-tw": {
     heroAlt: "東京文京區・播磨坂的櫻花並木",
@@ -251,10 +242,10 @@ const COPY: Record<LangCode, TopCopy> = {
       { href: "/souzoku", label: "繼承諮詢" },
       { href: "/toushi", label: "尋找投資・事業用物件" },
       { href: "/global", label: "找房" },
+      { href: "/toushi", label: "告知希望條件" },
     ],
     diagnosisNote:
-      "您好，我是四葉不動産的AI禮賓LINKA。繼承、投資・事業用物件、找房等，請以匿名方式告訴我您的狀況，我會提示相關領域與合適的入口。",
-    lineBtn: "用LINE諮詢（免費）",
+      "您好，我是四葉不動産的AI禮賓LINKA。繼承、投資・事業用物件、找房等，請以匿名方式告訴我您的狀況。若您正在找物件，只要告訴我車站・租金・面積等希望條件即可——我會為您整理成可直接用LINE傳送的內容。",
     repAlt: "四葉不動産株式会社 代表取締役 浦松丈二",
     repName: "浦松 丈二（Uramatsu Joji）",
     repBio:
@@ -289,11 +280,6 @@ const COPY: Record<LangCode, TopCopy> = {
       { href: "/faq", label: "常見問題" },
       { href: "/access", label: "交通與費用" },
     ],
-    ctaHeading: "從一句「這該怎麼辦？」開始就可以。",
-    ctaLead: "代表將親自回覆，了解您的需求後，若有符合條件的物件將透過LINE為您介紹。",
-    contactBtn: "聯絡我們",
-    telBtn: "電話 03-6161-9428",
-    accessLine: "東京Metro丸之內線「茗荷谷」站 步行5分｜10:00〜18:00（週二・週三公休）",
   },
   zh: {
     heroAlt: "东京文京区・播磨坂的樱花街道",
@@ -330,10 +316,10 @@ const COPY: Record<LangCode, TopCopy> = {
       { href: "/souzoku", label: "继承咨询" },
       { href: "/toushi", label: "寻找投资・事业用物件" },
       { href: "/global", label: "找房" },
+      { href: "/toushi", label: "告知希望条件" },
     ],
     diagnosisNote:
-      "您好，我是四葉不動産的AI礼宾LINKA。继承、投资・事业用物件、找房等，请以匿名方式告诉我您的情况，我会提示相关领域与合适的入口。",
-    lineBtn: "用LINE咨询（免费）",
+      "您好，我是四葉不動産的AI礼宾LINKA。继承、投资・事业用物件、找房等，请以匿名方式告诉我您的情况。若您正在找物件，只要告诉我车站・租金・面积等希望条件即可——我会为您整理成可直接用LINE发送的内容。",
     repAlt: "四葉不動産株式会社 代表取缔役 浦松丈二",
     repName: "浦松 丈二（Uramatsu Joji）",
     repBio:
@@ -368,11 +354,6 @@ const COPY: Record<LangCode, TopCopy> = {
       { href: "/faq", label: "常见问题" },
       { href: "/access", label: "交通与费用" },
     ],
-    ctaHeading: "从一句“这该怎么办？”开始就可以。",
-    ctaLead: "代表将亲自回复，了解您的需求后，若有符合条件的物件将通过LINE为您介绍。",
-    contactBtn: "联系我们",
-    telBtn: "电话 03-6161-9428",
-    accessLine: "东京Metro丸之内线“茗荷谷”站 步行5分｜10:00〜18:00（周二・周三定休）",
   },
 };
 
@@ -556,34 +537,12 @@ export default async function HomePageContent() {
           </section>
         )}
 
-        {/* CTA帯（トップのみロケール対応のインライン版＝共通CtaBandはja固定のため使わない） */}
-        <section aria-label="contact" className="my-10 rounded-2xl bg-primary-tint px-6 py-8 text-center">
-          <h2 className="font-serif text-xl font-semibold text-ink">{c.ctaHeading}</h2>
-          <p className="mx-auto mt-2 max-w-xl text-sm text-text-muted">{c.ctaLead}</p>
-          <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
-            <a
-              href={LINE_URL}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex min-h-[44px] items-center rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-primary-dark"
-            >
-              {c.lineBtn}
-            </a>
-            <Link
-              href={addLocalePrefix("/contact", locale)}
-              className="inline-flex min-h-[44px] items-center rounded-lg border border-border px-5 py-3 text-sm font-medium text-text-muted transition-colors hover:border-primary hover:text-primary"
-            >
-              {c.contactBtn}
-            </Link>
-            <a
-              href="tel:0361619428"
-              className="inline-flex min-h-[44px] items-center rounded-lg border border-border px-5 py-3 text-sm font-medium text-text-muted transition-colors hover:border-primary hover:text-primary"
-            >
-              {c.telBtn}
-            </a>
-          </div>
-          <p className="mt-3 text-xs text-text-muted">{c.accessLine}</p>
-        </section>
+        {/* CTA帯＝共通CtaBand（2026-07-24 v2.1）。variant="property-general"＝住まい・事業用の両対応の
+            物件条件インテーク（テンプレコピー・信頼行・GA計測・contactの?intent=bukken込み・4ロケール）。
+            旧インライン版は「共通CtaBandがja固定」時代の産物のため撤去・一本化。 */}
+        <div className="my-4">
+          <CtaBand businessKey="realestate" variant="property-general" />
+        </div>
       </main>
     </>
   );
