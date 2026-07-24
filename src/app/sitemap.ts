@@ -97,6 +97,8 @@ const STATIC_REALESTATE: StaticPage[] = [
   { path: "/minpaku", changeFrequency: "monthly", priority: 0.8, locales: ["ja"] },
   // 2026-07-22：介護事業所ピラー（#14）。ja先行公開。GH（/group-home）と福祉系開設クラスタ。
   { path: "/kaigo", changeFrequency: "monthly", priority: 0.8, locales: ["ja"] },
+  // 2026-07-24：借り上げ社宅ピラー（#12）。ja先行公開。導入・社宅規程・物件の分離受任（宅建業×社労士×税務）。
+  { path: "/shataku", changeFrequency: "monthly", priority: 0.8, locales: ["ja"] },
   // 2026-07-22：台湾越境相続（#19）。ja先行公開・souzokuクラスタの子。2026-07-23 zh-tw追加。
   { path: "/souzoku/taiwan", changeFrequency: "monthly", priority: 0.7, locales: ["ja", "zh-tw"] },
   { path: "/toushi", changeFrequency: "monthly", priority: 0.9 },

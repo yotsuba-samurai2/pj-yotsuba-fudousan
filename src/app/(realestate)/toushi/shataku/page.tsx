@@ -67,6 +67,7 @@ const COPY: Record<LangCode, ShatakuCopy> = {
       </p>
     ),
     internalLinks: [
+      { href: "/shataku", label: "借り上げ社宅 導入の完全ガイド（物件と社宅規程）" },
       { href: "/toushi", label: "投資用・事業用不動産トップ" },
       { href: "/global", label: "外国人・多言語のお部屋探し" },
       { href: "/access", label: "アクセス・料金" },
@@ -112,7 +113,7 @@ const COPY: Record<LangCode, ShatakuCopy> = {
     qaH2: "Can you handle company housing for international employees?",
     qaBody: (locale) => (
       <>
-        Yes. Language, guarantor companies, tenant screening—Yotsuba Real Estate sorts out and supports the three points that most often become issues when arranging housing for international residents. For an individual employee's room hunting, see{" "}
+        Yes. Language, guarantor companies, tenant screening—Yotsuba Real Estate sorts out and supports the three points that most often become issues when arranging housing for international residents. For an individual employee&apos;s room hunting, see{" "}
         <Link href={addLocalePrefix("/global", locale)} className="text-primary underline">Multilingual Room-Hunting Support</Link>
         . The <strong>residence-status procedures</strong> required to bring employees on board are handled by our affiliated business, Yotsuba Gyoseishoshi Office.
       </>
