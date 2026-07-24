@@ -17,7 +17,7 @@ import { RealestateServicePage, ReH2 } from "@/components/shared/RealestateServi
 import { CannotHandle } from "@/components/shared/CannotHandle";
 import { Faq } from "@/components/shared/Faq";
 import { pickFaqJa } from "@/data/faqJa";
-import { PROPERTY_CONDITIONS_CTA_GROUPHOME_JA } from "@/lib/shared/office";
+import { InlineCtaProperty } from "@/components/shared/InlineCtaProperty";
 import type { LangCode } from "@/config/languages";
 
 // ─── C-1（2026-07-19浦松検収済み・日本語版のみ）─────────────────────────
@@ -260,8 +260,7 @@ export default async function Page() {
       authorAlt={c.authorAlt}
       authorLabel={c.authorLabel}
       authorBio={c.authorBio}
-      ctaHeading={isJa ? PROPERTY_CONDITIONS_CTA_GROUPHOME_JA.ctaHeading : undefined}
-      ctaSubtext={isJa ? PROPERTY_CONDITIONS_CTA_GROUPHOME_JA.ctaLead : undefined}
+      ctaVariant="property-gh"
     >
       {isJa ? (
         <>
@@ -304,6 +303,9 @@ export default async function Page() {
               要件を満たさない物件を先に契約してしまうと、想定外の改修費がかかる、改修しても要件を満たせず指定を受けられない、といったリスクがあります。契約後にできることは限られるため、「物件の確保」と「基準の確認」は並行して進めることをお勧めします。当社は契約前の確認事項の整理をお手伝いし、指定申請に関するご相談は併設の四葉行政書士事務所（別契約）と連携して進めます。
             </p>
           </div>
+
+          {/* 中間CTA（2026-07-24 CTA刷新v2）：事前相談セクション直後＝高意欲の瞬間に1か所のみ */}
+          <InlineCtaProperty gh page="/toushi/group-home" />
 
           {/* §3 賃貸契約の注意点。根拠＝民法の用法遵守義務（616条準用594条1項）・無断転貸の制限（612条）・原状回復（621条）＝条文番号は本文に出さない */}
           <div>

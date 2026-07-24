@@ -17,7 +17,7 @@ import { RealestateServicePage, ReH2 } from "@/components/shared/RealestateServi
 import { CannotHandle } from "@/components/shared/CannotHandle";
 import { Faq } from "@/components/shared/Faq";
 import { pickFaqJa } from "@/data/faqJa";
-import { PROPERTY_CONDITIONS_CTA_I18N } from "@/lib/shared/office";
+import { InlineCtaProperty } from "@/components/shared/InlineCtaProperty";
 
 // 冒頭の回答ブロック（H1直下）。分離受任の型＝shitei-shinsei確定文言に準拠（監修前ドラフト）
 const JA_ANSWER_BLOCK =
@@ -63,8 +63,6 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function Page() {
-  const locale = await getRequestLocale();
-  const cta = PROPERTY_CONDITIONS_CTA_I18N[locale] ?? PROPERTY_CONDITIONS_CTA_I18N.ja;
   return (
     <RealestateServicePage
       path="/minpaku"
@@ -74,8 +72,7 @@ export default async function Page() {
       heroSrc="/hero/realestate-toushi-16x9.webp"
       heroAlt="事業用物件のイメージ"
       h1="民泊の開業——物件探しと住宅宿泊事業の届出の完全ガイド"
-      ctaHeading={cta.ctaHeading}
-      ctaSubtext={cta.ctaLead}
+      ctaVariant="property"
       lead={
         <p>
           「借りてから、この区では平日できないと知った」——民泊では、<strong>物件と届出が同時に動きます</strong>。制度の選択・管理規約・条例・消防で「使える物件」の条件が変わるからこそ、契約前の確認が決定的です。このページでは、制度の入口の整理と物件選びの確認ポイント、<strong>担当・契約の分担</strong>を解説します。
@@ -133,6 +130,9 @@ export default async function Page() {
           四葉不動産株式会社（宅地建物取引業）が、制度の見通しを踏まえた物件探し・仲介を担当します。文京区・茗荷谷を中心に、東京都内に対応します。
         </p>
       </div>
+
+      {/* 中間CTA（2026-07-24 CTA刷新v2）：契約前チェック直後＝高意欲の瞬間に1か所のみ */}
+      <InlineCtaProperty page="/minpaku" />
 
       {/* §3 届出。作成＝独占業務の型・継続義務・自治体差＝事前相談へ誘導 */}
       <div>

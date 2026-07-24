@@ -16,7 +16,7 @@ import { RealestateServicePage, ReH2 } from "@/components/shared/RealestateServi
 import { CannotHandle } from "@/components/shared/CannotHandle";
 import { Faq } from "@/components/shared/Faq";
 import { pickFaqJa } from "@/data/faqJa";
-import { PROPERTY_CONDITIONS_CTA_I18N } from "@/lib/shared/office";
+import { InlineCtaProperty } from "@/components/shared/InlineCtaProperty";
 
 // 冒頭の回答ブロック（H1直下）。分離受任の型＝shitei-shinsei確定文言に準拠（監修前ドラフト）
 const JA_ANSWER_BLOCK =
@@ -63,8 +63,6 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function Page() {
-  const locale = await getRequestLocale();
-  const cta = PROPERTY_CONDITIONS_CTA_I18N[locale] ?? PROPERTY_CONDITIONS_CTA_I18N.ja;
   return (
     <RealestateServicePage
       path="/inshokuten"
@@ -74,8 +72,7 @@ export default async function Page() {
       heroSrc="/hero/realestate-toushi-16x9.webp"
       heroAlt="事業用物件のイメージ"
       h1="飲食店の開業——物件探しと営業許可の完全ガイド"
-      ctaHeading={cta.ctaHeading}
-      ctaSubtext={cta.ctaLead}
+      ctaVariant="property"
       lead={
         <p>
           「契約してから、シンクが足りないと言われた」——飲食店の開業では、<strong>物件と営業許可が同時に動きます</strong>。許可が取れるかどうかは契約前にほぼ決まるからこそ、物件選びの段階から施設基準・消防・排水を見据えることが大切です。このページでは、契約前の確認ポイントと<strong>担当・契約の分担</strong>を解説します。
@@ -123,6 +120,9 @@ export default async function Page() {
           四葉不動産株式会社（宅地建物取引業）が、業態と許可要件を踏まえた物件探し・仲介を担当します。文京区・茗荷谷を中心に、東京都内に対応します。
         </p>
       </div>
+
+      {/* 中間CTA（2026-07-24 CTA刷新v2）：契約前チェック直後＝高意欲の瞬間に1か所のみ */}
+      <InlineCtaProperty page="/inshokuten" />
 
       {/* §3 営業許可。基準の数値・条番号は書かない＝保健所への事前相談に誘導 */}
       <div>
