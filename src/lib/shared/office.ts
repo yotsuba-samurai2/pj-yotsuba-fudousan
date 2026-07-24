@@ -204,6 +204,42 @@ export const PROPERTY_CONDITIONS_CTA_I18N: Record<
 };
 
 /**
+ * トップページ向け一般バリアント（2026-07-24 v2.1・浦松指摘「トップの希望条件メッセージが弱い」対応）。
+ * トップは住まい探し（相続・外国人・賃貸）と事業用の両方が来る入口のため、例示条件を
+ * 「広さ・間取り／住まいでも事業用でも」に広げ、居抜き・スケルトン・業種など店舗専門の語に寄せない。
+ * ja=確定文言（浦松指示の趣旨）。en/zh-tw/zh=監修前ドラフト。
+ */
+export const PROPERTY_CONDITIONS_CTA_HOME_I18N: Record<
+  LangCode,
+  { ctaHeading: string; ctaLead: string; lineLabel: string }
+> = {
+  ja: {
+    ctaHeading: "希望条件だけでも、お聞かせください。",
+    ctaLead:
+      "駅・賃料・広さ・間取り——住まいでも、店舗・オフィスなどの事業用でも、わかる範囲で構いません。条件をお預けいただければ、四葉不動産が全力で物件をお探しします。",
+    lineLabel: "LINEで希望条件を送る（無料）",
+  },
+  en: {
+    ctaHeading: "Just tell us what you're looking for.",
+    ctaLead:
+      "Station, rent, size, layout — whether it's a home or a business space such as a shop or office, whatever you know is enough. Leave your conditions with us, and Yotsuba Real Estate will search hard to find a match.",
+    lineLabel: "Send your conditions on LINE (free)",
+  },
+  "zh-tw": {
+    ctaHeading: "只要告訴我們您的條件就可以。",
+    ctaLead:
+      "車站・租金、面積・格局——無論是自住，或是店鋪・辦公室等事業用，知道多少都可以。只要把條件交給我們，四葉不動産就會全力為您尋找物件。",
+    lineLabel: "用LINE傳送希望條件（免費）",
+  },
+  zh: {
+    ctaHeading: "只要告诉我们您的条件就可以。",
+    ctaLead:
+      "车站・租金、面积・户型——无论是自住，还是店铺・办公室等事业用，知道多少都可以。只要把条件交给我们，四葉不動産就会全力为您寻找物件。",
+    lineLabel: "用LINE发送希望条件（免费）",
+  },
+};
+
+/**
  * 上記の指定基準がからむ物件探し（グループホーム等）向けバリアント（ja固定＝該当ページがja先行公開のため）。
  * 例示条件を「用途地域・面積」等の指定基準寄りに差し替え、居抜き/スケルトンなど飲食・店舗系の語は使わない。
  */

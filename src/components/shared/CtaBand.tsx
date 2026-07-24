@@ -22,11 +22,13 @@ import {
   TENANT,
   TENANT_CTA_I18N,
   PROPERTY_CONDITIONS_CTA_I18N,
+  PROPERTY_CONDITIONS_CTA_HOME_I18N,
   PROPERTY_CONDITIONS_CTA_GROUPHOME_JA,
   type BusinessKey,
 } from "@/lib/shared/office";
 import {
   PROPERTY_TEMPLATE,
+  PROPERTY_TEMPLATE_GENERAL,
   PROPERTY_TEMPLATE_GH_JA,
   TEMPLATE_COPY_LABELS,
 } from "@/lib/shared/property-intake";
@@ -35,8 +37,12 @@ import { getRequestLocale } from "@/lib/getRequestLocale";
 import { addLocalePrefix } from "@/lib/locale";
 import type { LangCode } from "@/config/languages";
 
-/** CTA帯のバリアント（2026-07-24）。property=物件条件インテーク／property-gh=GH向け（jaのみ・他ロケールは既定） */
-export type CtaBandVariant = "property" | "property-gh";
+/**
+ * CTA帯のバリアント（2026-07-24）。
+ * property=物件条件インテーク（事業用寄り・4ロケール）／property-general=トップ等の入口向け
+ * （住まい・事業用の両対応・4ロケール）／property-gh=GH向け（jaのみ・他ロケールは既定）
+ */
+export type CtaBandVariant = "property" | "property-general" | "property-gh";
 
 // 部品内共通ラベル（SR名なし・汎用語のみ）。ja=現行文字列そのまま（バイト不変）。
 // en=HomePageContent既存訳（Chat on LINE (free)/Contact/Call）準拠。zh系=監修前ドラフト。
@@ -94,6 +100,13 @@ export async function CtaBand({ businessKey, heading, subtext, variant }: Props)
     vLead = p.ctaLead;
     vLineLabel = p.lineLabel;
     template = PROPERTY_TEMPLATE[locale] ?? PROPERTY_TEMPLATE.ja;
+    intent = true;
+  } else if (variant === "property-general") {
+    const p = PROPERTY_CONDITIONS_CTA_HOME_I18N[locale] ?? PROPERTY_CONDITIONS_CTA_HOME_I18N.ja;
+    vHeading = p.ctaHeading;
+    vLead = p.ctaLead;
+    vLineLabel = p.lineLabel;
+    template = PROPERTY_TEMPLATE_GENERAL[locale] ?? PROPERTY_TEMPLATE_GENERAL.ja;
     intent = true;
   } else if (variant === "property-gh" && locale === "ja") {
     // GH系はja先行公開のためjaのみ。他ロケールはテナント既定にフォールバック（存在しない訳を出さない）
