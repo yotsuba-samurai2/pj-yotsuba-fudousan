@@ -30,6 +30,12 @@ export type LegalServicePageProps = {
   /** 原稿で GovernmentService 指定のあるページ（shogai-fukushi/visa/company）で true */
   governmentService?: boolean;
   internalLinks: { href: string; label: string }[];
+  /**
+   * CtaBand見出し・リード文の上書き（省略時=テナント既定のCTA帯）。2026-07-24 CTA刷新で追加。
+   * 物件条件インテークCTA（PROPERTY_CONDITIONS_CTA_I18N等）をページ側で解決して渡す用途を想定。
+   */
+  ctaHeading?: string;
+  ctaSubtext?: string;
   children: ReactNode; // H2セクション群（疑問文H2＝表示のみ・FAQPageは/faq専用）
 };
 
@@ -115,7 +121,7 @@ export async function LegalServicePage(p: LegalServicePageProps) {
       </article>
 
       <div className="mx-auto max-w-3xl px-4">
-        <CtaBand businessKey="legal" />
+        <CtaBand businessKey="legal" heading={p.ctaHeading} subtext={p.ctaSubtext} />
       </div>
     </>
   );

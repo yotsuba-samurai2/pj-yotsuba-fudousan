@@ -14,6 +14,7 @@ import { CannotHandle } from "@/components/shared/CannotHandle";
 import { Faq, type FaqItem } from "@/components/shared/Faq";
 import { pickFaqJa } from "@/data/faqJa";
 import { getColumns, getLocalizedColumn, filterColumnsByTheme } from "@/lib/columns";
+import { PROPERTY_CONDITIONS_CTA_I18N } from "@/lib/shared/office";
 import type { LangCode } from "@/config/languages";
 
 // ─── B-4（2026-07-19浦松検収済み・日本語版のみ）─────────────────────────
@@ -422,6 +423,7 @@ export default async function Page() {
     (await getColumns(locale)).map((col) => getLocalizedColumn(col, locale)),
     "toushi",
   );
+  const cta = PROPERTY_CONDITIONS_CTA_I18N[locale] ?? PROPERTY_CONDITIONS_CTA_I18N.ja;
 
   return (
     <RealestateServicePage
@@ -441,6 +443,8 @@ export default async function Page() {
       authorAlt={c.authorAlt}
       authorLabel={c.authorLabel}
       authorBio={c.authorBio}
+      ctaHeading={cta.ctaHeading}
+      ctaSubtext={cta.ctaLead}
     >
       {c.sections(locale)}
       {/* FAQPage JSON-LD＝B-4の例外（浦松承認）。ja設問はB-3の40問を参照＝サイト内で文言一致。

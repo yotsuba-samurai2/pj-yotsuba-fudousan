@@ -14,6 +14,7 @@ import { Placeholder } from "@/components/shared/Placeholder";
 import { CannotHandle } from "@/components/shared/CannotHandle";
 import { Faq } from "@/components/shared/Faq";
 import { pickFaqJa } from "@/data/faqJa";
+import { PROPERTY_CONDITIONS_CTA_I18N } from "@/lib/shared/office";
 import type { LangCode } from "@/config/languages";
 
 // ─── B-4（2026-07-19浦松検収済み・日本語版のみ）─────────────────────────
@@ -217,6 +218,7 @@ export default async function Page() {
   const locale = await getRequestLocale();
   const c = COPY[locale] ?? COPY.ja;
   const isJa = locale === "ja";
+  const cta = PROPERTY_CONDITIONS_CTA_I18N[locale] ?? PROPERTY_CONDITIONS_CTA_I18N.ja;
 
   return (
     <RealestateServicePage
@@ -239,6 +241,8 @@ export default async function Page() {
       authorAlt={c.authorAlt}
       authorLabel={c.authorLabel}
       authorBio={c.authorBio}
+      ctaHeading={cta.ctaHeading}
+      ctaSubtext={cta.ctaLead}
     >
       <div>
         <ReH2>{c.qaH2}</ReH2>

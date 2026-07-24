@@ -25,6 +25,7 @@ import { RealestateServicePage, ReH2 } from "@/components/shared/RealestateServi
 import { CannotHandle } from "@/components/shared/CannotHandle";
 import { Faq } from "@/components/shared/Faq";
 import { pickFaqJa } from "@/data/faqJa";
+import { PROPERTY_CONDITIONS_CTA_I18N } from "@/lib/shared/office";
 
 // 冒頭の回答ブロック（H1直下）。分離受任の型＝shitei-shinsei確定文言に準拠（監修前ドラフト）
 const JA_ANSWER_BLOCK =
@@ -80,6 +81,8 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function Page() {
+  const locale = await getRequestLocale();
+  const cta = PROPERTY_CONDITIONS_CTA_I18N[locale] ?? PROPERTY_CONDITIONS_CTA_I18N.ja;
   return (
     <RealestateServicePage
       path="/office"
@@ -89,6 +92,8 @@ export default async function Page() {
       heroSrc="/hero/legal-company-16x9.webp"
       heroAlt="会社設立・許認可のイメージ（オフィスと設立書類）"
       h1="会社設立とオフィス開設——物件確保から定款・許認可までの完全ガイド"
+      ctaHeading={cta.ctaHeading}
+      ctaSubtext={cta.ctaLead}
       lead={
         <p>
           「オフィスが決まらないと、書類が進まない」——会社設立では、<strong>本店所在地（オフィス物件）と行政手続が同時に動きます</strong>。このページでは、オフィス探しと会社設立の手続を同じテーブルで進めるための確認ポイントと、<strong>担当・契約の分担</strong>を解説します。

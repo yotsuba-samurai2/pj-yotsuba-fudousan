@@ -336,7 +336,8 @@ export async function POST(req: Request) {
       raw = await generateWithRetry(system, "# 相談\n" + message, model);
     } else {
       const conf = getSiteServices(site);
-      const skill = skillConcierge(SITE_LABELS[site], conf.services);
+      // 2026-07-24：物件条件のヒアリングはrealestate/legalのみ有効化（labor＝社労士業務に物件は関係せず対象外）
+      const skill = skillConcierge(SITE_LABELS[site], conf.services, site !== "labor");
       const cols = getColumns().map(({ id, title, author, tags }) => ({ id, title, author, tags }));
       const system = skill + "\n\n# 参考コラム(士業ドットコム)\n" + JSON.stringify(cols);
       // K-2d：コールドスタート対策＝1回だけ再試行（2回失敗ならデモ退避＝従来どおり）
