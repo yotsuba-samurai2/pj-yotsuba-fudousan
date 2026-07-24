@@ -43,6 +43,11 @@ export type LinkaUiCopy = {
   samuraiNote: string;
   columnsLabel: string;
   columnsNote: string;
+  // 物件条件の要約カード（2026-07-24 CTA刷新v2・conciergeのjoken表示用。disclaimerの変更ではない＝キー追加のみ）
+  jokenLabel: string;
+  jokenNote: string;
+  jokenCopy: string;
+  jokenCopied: string;
   // サイト別（concierge）
   sites: { realestate: SiteCopy; legal: SiteCopy; labor: SiteCopy };
 };
@@ -72,6 +77,10 @@ export const LINKA_UI: Record<LangCode, LinkaUiCopy> = {
       "中立のプラットフォームが、複数の専門家を順位付けせずご案内します(送客手数料はありません)。",
     columnsLabel: "参考コラム(samurai.co.jp・一般的な解説)",
     columnsNote: "コラムは一般的な解説であり、個別のご事情への回答ではありません。",
+    jokenLabel: "ご希望条件の整理",
+    jokenNote: "コピーして、LINEでそのままお送りください。四葉不動産が全力でお探しします。",
+    jokenCopy: "条件をコピー",
+    jokenCopied: "コピーしました",
     sites: {
       realestate: {
         greeting:
@@ -119,6 +128,10 @@ export const LINKA_UI: Record<LangCode, LinkaUiCopy> = {
     columnsLabel: "Related columns (samurai.co.jp — general explanations)",
     columnsNote:
       "Columns are general explanations and are not answers to your individual circumstances.",
+    jokenLabel: "Your conditions, organized",
+    jokenNote: "Copy this and send it to us as-is on LINE. Yotsuba Real Estate will search hard for a match.",
+    jokenCopy: "Copy conditions",
+    jokenCopied: "Copied",
     sites: {
       realestate: {
         greeting:
@@ -175,6 +188,10 @@ export const LINKA_UI: Record<LangCode, LinkaUiCopy> = {
     samuraiNote: "由中立的平台為您介紹多位專家，不進行排名（不收取介紹費）。",
     columnsLabel: "參考專欄（samurai.co.jp・一般性說明）",
     columnsNote: "專欄為一般性說明，並非針對您個別情況的回覆。",
+    jokenLabel: "您的希望條件整理",
+    jokenNote: "複製後直接用LINE傳送給我們即可。四葉不動産將全力為您尋找物件。",
+    jokenCopy: "複製條件",
+    jokenCopied: "已複製",
     sites: {
       realestate: {
         greeting:
@@ -219,6 +236,10 @@ export const LINKA_UI: Record<LangCode, LinkaUiCopy> = {
     samuraiNote: "由中立的平台为您介绍多位专家，不进行排名（不收取介绍费）。",
     columnsLabel: "参考专栏（samurai.co.jp・一般性说明）",
     columnsNote: "专栏为一般性说明，并非针对您个别情况的回复。",
+    jokenLabel: "您的希望条件整理",
+    jokenNote: "复制后直接用LINE发送给我们即可。四葉不動産将全力为您寻找物件。",
+    jokenCopy: "复制条件",
+    jokenCopied: "已复制",
     sites: {
       realestate: {
         greeting:

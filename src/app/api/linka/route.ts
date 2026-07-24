@@ -104,6 +104,7 @@ function sanitizeResult(r: LinkaResult): LinkaResult {
       }));
     }
     if (out.escalateReason) out.escalateReason = stripMarkdown(out.escalateReason);
+    if (out.joken) out.joken = stripMarkdown(out.joken);
   }
   return out;
 }
@@ -207,6 +208,7 @@ async function translateResolved(
     kento?: string[];
     services?: { label: string; reason?: string }[];
     escalateReason?: string;
+    joken?: string;
   } = {};
   if ("message" in resolved && typeof resolved.message === "string" && resolved.message) {
     payload.message = resolved.message;
@@ -217,6 +219,8 @@ async function translateResolved(
       payload.services = resolved.services.map((s) => ({ label: s.label, reason: s.reason }));
     }
     if (resolved.escalateReason) payload.escalateReason = resolved.escalateReason;
+    // 2026-07-24：物件条件の要約も利用者の言語で表示（コピーして送る文面のため）
+    if (resolved.joken) payload.joken = resolved.joken;
   }
   if (Object.keys(payload).length === 0) return null;
 
@@ -254,6 +258,9 @@ async function translateResolved(
       }
       if (typeof t.escalateReason === "string" && t.escalateReason.trim()) {
         out.escalateReason = t.escalateReason;
+      }
+      if (typeof t.joken === "string" && t.joken.trim()) {
+        out.joken = t.joken.trim().slice(0, 200);
       }
     }
 

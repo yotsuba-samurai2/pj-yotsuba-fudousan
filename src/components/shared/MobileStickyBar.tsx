@@ -10,6 +10,7 @@
 
 import { LocaleLink as Link } from "@/components/ui/LocaleLink";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { gaEvent } from "@/lib/gtag";
 import type { LangCode } from "@/config/languages";
 // ⚠️ office.ts（テナント名・文言入り）はimportしない＝クライアントJSへの社労士名同梱を防ぐ（office-public参照）
 import { CONTACT_HREF, LINE_URL, MAP_URL, OFFICE, type BusinessKey } from "@/lib/shared/office-public";
@@ -36,20 +37,40 @@ export function MobileStickyBar({ businessKey }: Props) {
       className="fixed inset-x-0 bottom-0 z-40 flex border-t border-border bg-surface md:hidden"
       style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
     >
-      <a href={LINE_URL} target="_blank" rel="noreferrer" className={`${item} bg-primary text-white`}>
+      <a
+        href={LINE_URL}
+        target="_blank"
+        rel="noreferrer"
+        onClick={() => gaEvent("cta_line_click", { location: "sticky_bar" })}
+        className={`${item} bg-primary text-white`}
+      >
         <span aria-hidden>💬</span>
         {l.line}
       </a>
-      <Link href={contactHref} className={`${item} text-text-muted`}>
+      <Link
+        href={contactHref}
+        onClick={() => gaEvent("cta_contact_click", { location: "sticky_bar" })}
+        className={`${item} text-text-muted`}
+      >
         <span aria-hidden>✉️</span>
         {l.contact}
       </Link>
-      <a href={OFFICE.telHref} className={`${item} text-text-muted`}>
+      <a
+        href={OFFICE.telHref}
+        onClick={() => gaEvent("cta_tel_click", { location: "sticky_bar" })}
+        className={`${item} text-text-muted`}
+      >
         <span aria-hidden>📞</span>
         {l.tel}
       </a>
       {/* 地図＝事業別リンク（realestate/legal=GBP直リンク、labor=住所クエリフォールバック）。P2仕様 */}
-      <a href={MAP_URL[businessKey]} target="_blank" rel="noreferrer" className={`${item} text-text-muted`}>
+      <a
+        href={MAP_URL[businessKey]}
+        target="_blank"
+        rel="noreferrer"
+        onClick={() => gaEvent("cta_map_click", { location: "sticky_bar" })}
+        className={`${item} text-text-muted`}
+      >
         <span aria-hidden>📍</span>
         {l.map}
       </a>

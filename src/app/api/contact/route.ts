@@ -16,6 +16,8 @@ const businessLabels: Record<string, string> = {
 };
 
 const categoryLabels: Record<string, string> = {
+  // 2026-07-24 CTA刷新v2：物件条件インテーク（CTA帯 ?intent=bukken の受け皿）
+  bukken: "物件を探してほしい（希望条件）",
   rental: "賃貸のご相談",
   sale: "売買のご相談",
   management: "管理のご相談",

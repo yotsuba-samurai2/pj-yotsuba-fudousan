@@ -173,26 +173,33 @@ export const SR_LAUNCHED = process.env.NEXT_PUBLIC_SR_LAUNCHED === "true";
  * CtaBandのheading/subtext上書きpropとして各ページから渡す（RealestateServicePage/LegalServicePageの
  * ctaHeading/ctaSubtext経由）。
  */
-export const PROPERTY_CONDITIONS_CTA_I18N: Record<LangCode, { ctaHeading: string; ctaLead: string }> = {
+export const PROPERTY_CONDITIONS_CTA_I18N: Record<
+  LangCode,
+  { ctaHeading: string; ctaLead: string; lineLabel: string }
+> = {
   ja: {
     ctaHeading: "希望条件だけでも、お聞かせください。",
     ctaLead:
       "駅・賃料・坪数、居抜きかスケルトンか、業種（飲食など）——わかる範囲で構いません。条件をお預けいただければ、四葉不動産が全力で物件をお探しします。",
+    lineLabel: "LINEで希望条件を送る（無料）",
   },
   en: {
     ctaHeading: "Just tell us what you're looking for.",
     ctaLead:
       "Station/area, rent, size, turnkey (with existing fixtures) or bare-shell, business type such as a restaurant — whatever you know is enough. Leave your conditions with us, and Yotsuba Real Estate will search hard to find a match.",
+    lineLabel: "Send your conditions on LINE (free)",
   },
   "zh-tw": {
     ctaHeading: "只要告訴我們您的條件就可以。",
     ctaLead:
       "車站・租金、坪數大小、留有裝潢（居抜き）或毛坯交屋（スケルトン）、業種（如餐飲）——知道多少都可以。只要把條件交給我們，四葉不動産就會全力為您尋找物件。",
+    lineLabel: "用LINE傳送希望條件（免費）",
   },
   zh: {
     ctaHeading: "只要告诉我们您的条件就可以。",
     ctaLead:
       "车站・租金、面积大小、带装修（居抜き）或毛坯交房（スケルトン）、业种（如餐饮）——知道多少都可以。只要把条件交给我们，四葉不動産就会全力为您寻找物件。",
+    lineLabel: "用LINE发送希望条件（免费）",
   },
 };
 
@@ -204,4 +211,5 @@ export const PROPERTY_CONDITIONS_CTA_GROUPHOME_JA = {
   ctaHeading: "希望条件だけでも、お聞かせください。",
   ctaLead:
     "エリア・駅、賃料の目安、面積や用途地域など——わかる範囲で構いません。条件をお預けいただければ、指定基準を見据えて四葉不動産が全力で物件をお探しします。",
+  lineLabel: "LINEで希望条件を送る（無料）",
 };

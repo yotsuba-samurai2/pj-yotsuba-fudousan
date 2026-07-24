@@ -5,10 +5,14 @@
 // 色は --color-primary（テナント色）を参照（サイト非依存）。
 // K-2b（2026-07-12）：コーポレート（concierge）側の見出し・注記を4ロケール化（正本＝lib/linka/ui-copy.ts）。
 // 候補カード・参考動画（士業ドットコム専用UI）は日本語のまま＝あちらは日本語プラットフォーム。
+// 2026-07-24 CTA刷新v2：conciergeのjoken（物件条件の要約）カードを追加＝「コピーしてLINEで送る」導線。
+//   LINKAは送信も記録もしない（利用者が自分で送る）＝守秘設計は不変。GA4はクリック種別のみ計測（内容を送らない）。
+import { useState } from "react";
 import { LINE_URL } from "@/lib/shared/office-public";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { addLocalePrefix } from "@/lib/locale";
 import { linkaUi } from "@/lib/linka/ui-copy";
+import { gaEvent } from "@/lib/gtag";
 import type { CandidateCard, LinkaResult } from "@/lib/linka/types";
 
 function Badge({ tone, children }: { tone: "amber" | "gray" | "blue" | "navy"; children: React.ReactNode }) {
@@ -92,6 +96,18 @@ export function ResultView({
 }) {
   const { locale } = useLanguage();
   const t = linkaUi(locale);
+  // 2026-07-24：joken（物件条件の要約）のコピー状態
+  const [jokenCopied, setJokenCopied] = useState(false);
+  const copyJoken = async (text: string) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      setJokenCopied(true);
+      gaEvent("linka_conditions_copy", {});
+      setTimeout(() => setJokenCopied(false), 2500);
+    } catch {
+      // クリップボード不可の環境では表示のみ（手動選択でコピー可能）
+    }
+  };
   // K-2c（2026-07-12）：**内部リンクにロケール接頭辞を付ける**。
   // servicesのurlはカタログの生パス（例 /global）で、素の<a>のままだと middleware の
   // 「URLが言語の正」により**日本語ページに落ちる**（本番実測で発見）。外部URL（http〜・LINE・
@@ -130,6 +146,35 @@ export function ResultView({
       {result.demo && (
         <div className="rounded-lg border border-amber-200 bg-amber-50 px-3 py-2 text-xs text-amber-800">
           {t.demoBanner}
+        </div>
+      )}
+
+      {/* コーポレート: 物件条件の要約（2026-07-24）＝コピーしてLINEで送る導線。LINKAは送信・記録しない */}
+      {result.type === "concierge" && result.joken && (
+        <div className="space-y-2 rounded-xl border-2 border-primary bg-white p-4">
+          <div className="text-xs font-semibold text-stone-500">{t.jokenLabel}</div>
+          <pre className="whitespace-pre-wrap rounded-lg bg-stone-50 p-3 font-sans text-sm leading-relaxed text-stone-800">
+            {result.joken}
+          </pre>
+          <div className="flex flex-wrap items-center gap-2">
+            <button
+              type="button"
+              onClick={() => copyJoken(result.joken as string)}
+              className="rounded-md border border-primary px-3 py-1.5 text-xs font-semibold text-primary transition-colors hover:bg-primary hover:text-white"
+            >
+              {jokenCopied ? t.jokenCopied : t.jokenCopy}
+            </button>
+            <a
+              href={LINE_URL}
+              target="_blank"
+              rel="noreferrer"
+              onClick={() => gaEvent("cta_line_click", { location: "linka_joken" })}
+              className="rounded-md bg-primary px-3 py-1.5 text-xs font-semibold text-white"
+            >
+              {t.lineBtn}
+            </a>
+          </div>
+          <div className="text-xs text-stone-400">{t.jokenNote}</div>
         </div>
       )}
 

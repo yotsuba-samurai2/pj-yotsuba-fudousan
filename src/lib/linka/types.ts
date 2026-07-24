@@ -144,6 +144,11 @@ export type LinkaResult =
       summary?: Summary;
       /** 範囲外誘導先（士業ドットコム） */
       samuraiUrl: string;
+      /**
+       * 物件条件の要約（2026-07-24 CTA刷新v2・propertyIntake時のみ）。
+       * 利用者が述べた条件だけの一行要約＝利用者がコピーしてLINE等で自分で送る（LINKAは送信しない・記録しない）。
+       */
+      joken?: string;
     } & Base);
 
 export interface LinkaDraftRequest {

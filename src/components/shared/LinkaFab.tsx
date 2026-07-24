@@ -10,6 +10,7 @@ import Image from "next/image";
 import { LinkaWidget } from "@/components/linka/LinkaWidget";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { linkaUi } from "@/lib/linka/ui-copy";
+import { gaEvent } from "@/lib/gtag";
 import type { BusinessKey } from "@/lib/shared/office";
 
 export function LinkaFab({
@@ -59,7 +60,10 @@ export function LinkaFab({
         /* 折りたたみ＝SP84px／PC168px（2026-07-10浦松指示：PCは2倍・チップ文字はPC+5pt） */
         <button
           type="button"
-          onClick={() => setOpen(true)}
+          onClick={() => {
+            setOpen(true);
+            gaEvent("linka_open", { site: businessKey });
+          }}
           aria-label={t.fabAria}
           className="flex items-center gap-2 focus:outline-none"
         >

@@ -55,6 +55,8 @@ export type RawResult = {
   escalateReason?: string;
   summary?: Summary;
   samuraiUrl?: string;
+  /** 物件条件の要約（2026-07-24・conciergeのみ） */
+  joken?: string;
 };
 
 export function resolveCandidateCards(refs: RawCandidateRef[] | undefined): CandidateCard[] {
@@ -131,6 +133,11 @@ export function resolveResult(raw: RawResult): LinkaResult {
         columns: resolveColumns(raw.columns),
         summary: raw.summary,
         samuraiUrl: raw.samuraiUrl ?? "https://www.samurai.co.jp/",
+        // 2026-07-24：物件条件の要約（長さ上限＝暴走出力の保険。空文字は落とす）
+        joken:
+          typeof raw.joken === "string" && raw.joken.trim()
+            ? raw.joken.trim().slice(0, 200)
+            : undefined,
       };
     default:
       // 未知typeは安全側＝clarify
@@ -181,12 +188,13 @@ const KANA_RE = /[ぁ-ゟァ-ヿ]/;
 /** legalサイトのAI出力（concierge）の業際検証。違反なら種別のみの文字列（相談本文・出力本文は含めない） */
 export function validateLegalConciergeOutput(result: LinkaResult): string | null {
   if (result.type !== "concierge") return null;
-  // 画面表示され得る全フィールド（escalateReason含む＝既存穴A-3の修正）
+  // 画面表示され得る全フィールド（escalateReason含む＝既存穴A-3の修正。2026-07-24: joken追加＝検査対象の拡大のみ）
   const visible = JSON.stringify({
     kento: result.kento,
     message: result.message,
     services: result.services,
     escalateReason: result.escalateReason ?? "",
+    joken: result.joken ?? "",
   });
   if (visible.includes("助成金")) return "業際: legal出力に助成金";
   for (const w of GYOSAI_CONTEXT_WORDS) {
@@ -217,6 +225,7 @@ export function validateTranslatedLegalOutput(result: LinkaResult): string | nul
     message: result.message,
     services: result.services,
     escalateReason: result.escalateReason ?? "",
+    joken: result.joken ?? "",
   });
   if (visible.includes("助成金")) return "業際(翻訳後): 助成金";
   for (const w of GYOSAI_CONTEXT_WORDS) {

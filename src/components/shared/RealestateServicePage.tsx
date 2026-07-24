@@ -12,7 +12,7 @@ import Link from "next/link";
 import { getRequestLocale } from "@/lib/getRequestLocale";
 import { addLocalePrefix } from "@/lib/locale";
 import { Breadcrumb, type Crumb } from "@/components/shared/Breadcrumb";
-import { CtaBand } from "@/components/shared/CtaBand";
+import { CtaBand, type CtaBandVariant } from "@/components/shared/CtaBand";
 import { CrossLinkBanner } from "@/components/shared/CrossLinkBanner";
 import { getCrossLinks } from "@/lib/cross-links";
 import { SR_LAUNCHED } from "@/lib/shared/office";
@@ -72,11 +72,10 @@ export type RealestateServicePageProps = {
   /** 関連コラム見出し（省略時「関連コラム」） */
   relatedColumnsHeading?: string;
   /**
-   * CtaBand見出し・リード文の上書き（省略時=テナント既定のCTA帯）。2026-07-24 CTA刷新で追加。
-   * 物件条件インテークCTA（PROPERTY_CONDITIONS_CTA_I18N等）をページ側で解決して渡す用途を想定。
+   * CtaBandバリアント（2026-07-24 CTA刷新v2）。"property"=物件条件インテーク（4ロケール）、
+   * "property-gh"=GH向け（jaのみ・他ロケールはテナント既定）。文言解決はCtaBand内部で行う。
    */
-  ctaHeading?: string;
-  ctaSubtext?: string;
+  ctaVariant?: CtaBandVariant;
   children: ReactNode;
 };
 
@@ -187,7 +186,7 @@ export async function RealestateServicePage(p: RealestateServicePageProps) {
       </article>
 
       <div className="mx-auto max-w-3xl px-4">
-        <CtaBand businessKey="realestate" heading={p.ctaHeading} subtext={p.ctaSubtext} />
+        <CtaBand businessKey="realestate" variant={p.ctaVariant} />
       </div>
     </>
   );

@@ -11,7 +11,7 @@ import Link from "next/link";
 import { getRequestLocale } from "@/lib/getRequestLocale";
 import { addLocalePrefix } from "@/lib/locale";
 import { Breadcrumb } from "@/components/shared/Breadcrumb";
-import { CtaBand } from "@/components/shared/CtaBand";
+import { CtaBand, type CtaBandVariant } from "@/components/shared/CtaBand";
 import { CrossLinkBanner } from "@/components/shared/CrossLinkBanner";
 import { getCrossLinks } from "@/lib/cross-links";
 import { SR_LAUNCHED } from "@/lib/shared/office";
@@ -31,11 +31,10 @@ export type LegalServicePageProps = {
   governmentService?: boolean;
   internalLinks: { href: string; label: string }[];
   /**
-   * CtaBand見出し・リード文の上書き（省略時=テナント既定のCTA帯）。2026-07-24 CTA刷新で追加。
-   * 物件条件インテークCTA（PROPERTY_CONDITIONS_CTA_I18N等）をページ側で解決して渡す用途を想定。
+   * CtaBandバリアント（2026-07-24 CTA刷新v2）。"property"=物件条件インテーク（4ロケール）。
+   * 文言解決はCtaBand内部で行う。
    */
-  ctaHeading?: string;
-  ctaSubtext?: string;
+  ctaVariant?: CtaBandVariant;
   children: ReactNode; // H2セクション群（疑問文H2＝表示のみ・FAQPageは/faq専用）
 };
 
@@ -121,7 +120,7 @@ export async function LegalServicePage(p: LegalServicePageProps) {
       </article>
 
       <div className="mx-auto max-w-3xl px-4">
-        <CtaBand businessKey="legal" heading={p.ctaHeading} subtext={p.ctaSubtext} />
+        <CtaBand businessKey="legal" variant={p.ctaVariant} />
       </div>
     </>
   );

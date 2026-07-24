@@ -1,9 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import type { FormEvent } from "react";
 import { useTranslation } from "@/hooks/useTranslation";
+import { BUKKEN_CATEGORY_LABEL, PROPERTY_TEMPLATE } from "@/lib/shared/property-intake";
+import type { LangCode } from "@/config/languages";
 
 const inputClass =
   "mt-1 w-full rounded-lg bg-surface px-4 py-3 text-sm outline-none transition-all duration-300 gradient-border-input";
@@ -16,7 +18,7 @@ type Props = {
 
 export function ContactForm({ thanksPath = "/thanks", business = "realestate" }: Props) {
   const router = useRouter();
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -27,6 +29,19 @@ export function ContactForm({ thanksPath = "/thanks", business = "realestate" }:
   const [errors, setErrors] = useState<Record<string, string[]>>({});
   const [submitting, setSubmitting] = useState(false);
   const [serverError, setServerError] = useState("");
+
+  // 2026-07-24 CTA刷新v2：CTA帯から ?intent=bukken で遷移した場合、カテゴリと本文テンプレを
+  // 自動プリセット（空欄のときのみ＝入力途中を上書きしない）。useSearchParamsは使わない
+  // （Suspense境界不要のwindow参照＝静的レンダリング維持）。
+  useEffect(() => {
+    const sp = new URLSearchParams(window.location.search);
+    if (sp.get("intent") === "bukken") {
+      setCategory((c) => c || "bukken");
+      setMessage(
+        (m) => m || (PROPERTY_TEMPLATE[locale as LangCode] ?? PROPERTY_TEMPLATE.ja),
+      );
+    }
+  }, [locale]);
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -129,6 +144,11 @@ export function ContactForm({ thanksPath = "/thanks", business = "realestate" }:
             className={inputClass}
           >
             <option value="">{t("contact.form.categoryOptions.placeholder")}</option>
+            {/* 2026-07-24 CTA刷新v2：物件条件インテークの受け皿。Firestore辞書に新キーは増やさない
+                （B1教訓）＝ラベルは property-intake.ts の4ロケール直書きを参照 */}
+            <option value="bukken">
+              {BUKKEN_CATEGORY_LABEL[locale as LangCode] ?? BUKKEN_CATEGORY_LABEL.ja}
+            </option>
             <option value="rental">{t("contact.form.categoryOptions.rental")}</option>
             <option value="sale">{t("contact.form.categoryOptions.sale")}</option>
             <option value="management">{t("contact.form.categoryOptions.management")}</option>

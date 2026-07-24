@@ -8,11 +8,35 @@
 //   - 呼び出し側は変更不要（hrefは接頭辞なしで受け、付与はここで1回だけ＝二重適用禁止）。
 //   - 文言：共通ラベルは下のLABELS、テナント別はoffice.tsのTENANT_CTA_I18N（server専用のまま）。
 //     ja正文はTENANT値の参照＝バイト不変。en/zh-tw/zh=監修前ドラフト。
-import Link from "next/link";
-import { LINE_URL, OFFICE, TENANT, TENANT_CTA_I18N, type BusinessKey } from "@/lib/shared/office";
+// 2026-07-24 CTA刷新v2（浦松指示・コンバージョン強化）：
+//   - variant="property"（物件条件インテーク）を追加：見出し・リード・LINEボタン文言を
+//     PROPERTY_CONDITIONS_CTA_I18N に差し替え、コピペ用テンプレ＋「コピー」ボタンを表示、
+//     お問い合わせリンクに ?intent=bukken を付与（フォーム側でカテゴリ・本文を自動プリセット）。
+//   - variant="property-gh"：ja のみGH向け文言（指定基準寄り・店舗系の語なし）。他ロケールはテナント既定へ。
+//   - 信頼マイクロコピー（代表直通・24時間受付）を全バリアント共通で表示（group-homeピラーの
+//     ctaLineNote確定文言と同趣旨。en/zh=監修前ドラフト）。
+//   - ボタン・コピー操作は CtaBandActions（client）に分離＝GA4クリック計測。office.tsはserver側のまま。
+import {
+  LINE_URL,
+  OFFICE,
+  TENANT,
+  TENANT_CTA_I18N,
+  PROPERTY_CONDITIONS_CTA_I18N,
+  PROPERTY_CONDITIONS_CTA_GROUPHOME_JA,
+  type BusinessKey,
+} from "@/lib/shared/office";
+import {
+  PROPERTY_TEMPLATE,
+  PROPERTY_TEMPLATE_GH_JA,
+  TEMPLATE_COPY_LABELS,
+} from "@/lib/shared/property-intake";
+import { CtaBandActions } from "@/components/shared/CtaBandActions";
 import { getRequestLocale } from "@/lib/getRequestLocale";
 import { addLocalePrefix } from "@/lib/locale";
 import type { LangCode } from "@/config/languages";
+
+/** CTA帯のバリアント（2026-07-24）。property=物件条件インテーク／property-gh=GH向け（jaのみ・他ロケールは既定） */
+export type CtaBandVariant = "property" | "property-gh";
 
 // 部品内共通ラベル（SR名なし・汎用語のみ）。ja=現行文字列そのまま（バイト不変）。
 // en=HomePageContent既存訳（Chat on LINE (free)/Contact/Call）準拠。zh系=監修前ドラフト。
@@ -33,49 +57,74 @@ const ACCESS_I18N: Record<LangCode, string> = {
   zh: "东京Metro丸之内线“茗荷谷”站 步行5分",
 };
 
-type Props = {
-  businessKey: BusinessKey;
-  /** 見出しの上書き（省略時はテナント既定＝原稿サイト共通のCTA帯見出し） */
-  heading?: string;
-  /** リード文の上書き（省略時はテナント既定） */
-  subtext?: string;
+// 信頼マイクロコピー（2026-07-24）。group-homeピラーの「LINEは代表・浦松 丈二の個人アカウントに直接
+// つながります」（浦松検収済み）と同趣旨＋24時間受付を追記。ja=確定文言、en/zh系=監修前ドラフト。
+const TRUST_I18N: Record<LangCode, string> = {
+  ja: "LINEは代表・浦松丈二に直接つながります。24時間受付・順次お返事します。",
+  en: "LINE connects you directly to our representative, Joji Uramatsu. Messages are accepted 24/7 and answered in order.",
+  "zh-tw": "LINE直接連到代表・浦松丈二本人。24小時皆可傳訊，將依序回覆。",
+  zh: "LINE直接连到代表・浦松丈二本人。24小时均可发送信息，将依序回复。",
 };
 
-export async function CtaBand({ businessKey, heading, subtext }: Props) {
+type Props = {
+  businessKey: BusinessKey;
+  /** 見出しの上書き（省略時はvariant→テナント既定の順で解決） */
+  heading?: string;
+  /** リード文の上書き（省略時はvariant→テナント既定の順で解決） */
+  subtext?: string;
+  /** CTA帯バリアント（2026-07-24）。省略時は従来のテナント既定 */
+  variant?: CtaBandVariant;
+};
+
+export async function CtaBand({ businessKey, heading, subtext, variant }: Props) {
   const locale = await getRequestLocale();
   const t = TENANT[businessKey];
   const c = TENANT_CTA_I18N[businessKey][locale] ?? TENANT_CTA_I18N[businessKey].ja;
   const l = LABELS[locale] ?? LABELS.ja;
-  const lead = subtext ?? c.ctaLead;
+
+  // バリアント解決（優先度：明示props > variant > テナント既定）
+  let vHeading: string | undefined;
+  let vLead: string | undefined;
+  let vLineLabel: string | undefined;
+  let template: string | undefined;
+  let intent = false;
+  if (variant === "property") {
+    const p = PROPERTY_CONDITIONS_CTA_I18N[locale] ?? PROPERTY_CONDITIONS_CTA_I18N.ja;
+    vHeading = p.ctaHeading;
+    vLead = p.ctaLead;
+    vLineLabel = p.lineLabel;
+    template = PROPERTY_TEMPLATE[locale] ?? PROPERTY_TEMPLATE.ja;
+    intent = true;
+  } else if (variant === "property-gh" && locale === "ja") {
+    // GH系はja先行公開のためjaのみ。他ロケールはテナント既定にフォールバック（存在しない訳を出さない）
+    vHeading = PROPERTY_CONDITIONS_CTA_GROUPHOME_JA.ctaHeading;
+    vLead = PROPERTY_CONDITIONS_CTA_GROUPHOME_JA.ctaLead;
+    vLineLabel = PROPERTY_CONDITIONS_CTA_GROUPHOME_JA.lineLabel;
+    template = PROPERTY_TEMPLATE_GH_JA;
+    intent = true;
+  }
+
+  const copyLabels = TEMPLATE_COPY_LABELS[locale] ?? TEMPLATE_COPY_LABELS.ja;
+  const lead = subtext ?? vLead ?? c.ctaLead;
+  // 内部リンク＝ここで1回だけ接頭辞付与（二重適用禁止）。intent時はフォームのプリセット用クエリを付与
+  const contactHref = addLocalePrefix(t.contactHref, locale) + (intent ? "?intent=bukken" : "");
+
   return (
     <section aria-label={l.aria} className="my-6 rounded-2xl bg-primary-tint px-6 py-8 text-center">
-      <h2 className="font-serif text-xl font-semibold text-ink">{heading ?? c.ctaHeading}</h2>
+      <h2 className="font-serif text-xl font-semibold text-ink">{heading ?? vHeading ?? c.ctaHeading}</h2>
       {lead && <p className="mx-auto mt-2 max-w-xl text-sm text-text-muted">{lead}</p>}
-      <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
-        {/* 主CTA＝LINE（塗り・主色）＝外部URL・ロケール変換しない */}
-        <a
-          href={LINE_URL}
-          target="_blank"
-          rel="noreferrer"
-          className="inline-flex min-h-[44px] items-center rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-focus"
-        >
-          {l.line}
-        </a>
-        {/* 補助＝お問い合わせ（アウトライン中立）＝内部リンク・ここで1回だけ接頭辞付与 */}
-        <Link
-          href={addLocalePrefix(t.contactHref, locale)}
-          className="inline-flex min-h-[44px] items-center rounded-lg border border-border px-5 py-3 text-sm font-medium text-text-muted transition-colors hover:border-primary hover:text-primary"
-        >
-          {l.contact}
-        </Link>
-        {/* 補助＝電話＝tel:・変換しない */}
-        <a
-          href={OFFICE.telHref}
-          className="inline-flex min-h-[44px] items-center rounded-lg border border-border px-5 py-3 text-sm font-medium text-text-muted transition-colors hover:border-primary hover:text-primary"
-        >
-          {`${l.tel} ${OFFICE.tel}`}
-        </a>
-      </div>
+      <CtaBandActions
+        lineUrl={LINE_URL}
+        lineLabel={vLineLabel ?? l.line}
+        contactHref={contactHref}
+        contactLabel={l.contact}
+        telHref={OFFICE.telHref}
+        telLabel={`${l.tel} ${OFFICE.tel}`}
+        template={template}
+        copyLabel={copyLabels.copy}
+        copiedLabel={copyLabels.copied}
+        trustNote={TRUST_I18N[locale] ?? TRUST_I18N.ja}
+      />
       <p className="mt-3 text-xs text-text-muted">
         {ACCESS_I18N[locale] ?? ACCESS_I18N.ja}
         {c.hours ? `｜${c.hours}` : ""}

@@ -25,7 +25,7 @@ import { RealestateServicePage, ReH2 } from "@/components/shared/RealestateServi
 import { CannotHandle } from "@/components/shared/CannotHandle";
 import { Faq } from "@/components/shared/Faq";
 import { pickFaqJa } from "@/data/faqJa";
-import { PROPERTY_CONDITIONS_CTA_I18N } from "@/lib/shared/office";
+import { InlineCtaProperty } from "@/components/shared/InlineCtaProperty";
 
 // 冒頭の回答ブロック（H1直下）。分離受任の型＝shitei-shinsei確定文言に準拠（監修前ドラフト）
 const JA_ANSWER_BLOCK =
@@ -81,8 +81,6 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function Page() {
-  const locale = await getRequestLocale();
-  const cta = PROPERTY_CONDITIONS_CTA_I18N[locale] ?? PROPERTY_CONDITIONS_CTA_I18N.ja;
   return (
     <RealestateServicePage
       path="/office"
@@ -92,8 +90,7 @@ export default async function Page() {
       heroSrc="/hero/legal-company-16x9.webp"
       heroAlt="会社設立・許認可のイメージ（オフィスと設立書類）"
       h1="会社設立とオフィス開設——物件確保から定款・許認可までの完全ガイド"
-      ctaHeading={cta.ctaHeading}
-      ctaSubtext={cta.ctaLead}
+      ctaVariant="property"
       lead={
         <p>
           「オフィスが決まらないと、書類が進まない」——会社設立では、<strong>本店所在地（オフィス物件）と行政手続が同時に動きます</strong>。このページでは、オフィス探しと会社設立の手続を同じテーブルで進めるための確認ポイントと、<strong>担当・契約の分担</strong>を解説します。
@@ -139,6 +136,9 @@ export default async function Page() {
           四葉不動産株式会社（宅地建物取引業）が、事業計画と許認可の見通しを踏まえた物件探し・仲介を担当します。文京区・茗荷谷を中心に、豊島区（大塚・巣鴨・池袋など）を含む東京都内の事業用物件に対応します。
         </p>
       </div>
+
+      {/* 中間CTA（2026-07-24 CTA刷新v2）：契約前チェック直後＝高意欲の瞬間に1か所のみ */}
+      <InlineCtaProperty page="/office" />
 
       {/* §3 役割分担。登記＝司法書士・認証＝公証人・税務＝税理士（他士業の独占業務を「当方が行う」形で書かない） */}
       <div>

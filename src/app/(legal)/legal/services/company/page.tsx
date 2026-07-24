@@ -10,7 +10,6 @@ import { addLocalePrefix } from "@/lib/locale";
 import Link from "next/link";
 import { LegalServicePage, H2 } from "@/components/shared/LegalServicePage";
 import { Placeholder } from "@/components/shared/Placeholder";
-import { PROPERTY_CONDITIONS_CTA_I18N } from "@/lib/shared/office";
 import type { LangCode } from "@/config/languages";
 
 type CompanyCopy = {
@@ -186,7 +185,6 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function Page() {
   const locale = await getRequestLocale();
   const c = COPY[locale] ?? COPY.ja;
-  const cta = PROPERTY_CONDITIONS_CTA_I18N[locale] ?? PROPERTY_CONDITIONS_CTA_I18N.ja;
   return (
     <LegalServicePage
       slug="company"
@@ -202,8 +200,7 @@ export default async function Page() {
       }
       governmentService
       internalLinks={c.internalLinks}
-      ctaHeading={cta.ctaHeading}
-      ctaSubtext={cta.ctaLead}
+      ctaVariant="property"
     >
       <div>
         <H2>{c.s1Heading}</H2>
