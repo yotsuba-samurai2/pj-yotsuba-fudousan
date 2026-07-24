@@ -901,6 +901,7 @@ export default async function Page() {
       authorAlt={c.authorAlt}
       authorLabel={c.authorLabel}
       authorBio={c.authorBio}
+      ctaVariant="property-general"
     >
       {/* ─── 既存の物件探し導線（回答ファースト Q&A・不変） ─── */}
       <div>

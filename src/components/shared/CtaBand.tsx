@@ -89,38 +89,40 @@ export async function CtaBand({ businessKey, heading, subtext, variant }: Props)
   const l = LABELS[locale] ?? LABELS.ja;
 
   // バリアント解決（優先度：明示props > variant > テナント既定）
+  // intent＝contactフォームのプリセット種別（2026-07-24 v2.2：バリアントとテンプレの取り違え防止のため3値化。
+  // フォーム側 ContactForm.tsx が bukken=事業用／bukken-general=一般／bukken-gh=GH系 のテンプレへ振り分ける）
   let vHeading: string | undefined;
   let vLead: string | undefined;
   let vLineLabel: string | undefined;
   let template: string | undefined;
-  let intent = false;
+  let intent = "";
   if (variant === "property") {
     const p = PROPERTY_CONDITIONS_CTA_I18N[locale] ?? PROPERTY_CONDITIONS_CTA_I18N.ja;
     vHeading = p.ctaHeading;
     vLead = p.ctaLead;
     vLineLabel = p.lineLabel;
     template = PROPERTY_TEMPLATE[locale] ?? PROPERTY_TEMPLATE.ja;
-    intent = true;
+    intent = "bukken";
   } else if (variant === "property-general") {
     const p = PROPERTY_CONDITIONS_CTA_HOME_I18N[locale] ?? PROPERTY_CONDITIONS_CTA_HOME_I18N.ja;
     vHeading = p.ctaHeading;
     vLead = p.ctaLead;
     vLineLabel = p.lineLabel;
     template = PROPERTY_TEMPLATE_GENERAL[locale] ?? PROPERTY_TEMPLATE_GENERAL.ja;
-    intent = true;
+    intent = "bukken-general";
   } else if (variant === "property-gh" && locale === "ja") {
     // GH系はja先行公開のためjaのみ。他ロケールはテナント既定にフォールバック（存在しない訳を出さない）
     vHeading = PROPERTY_CONDITIONS_CTA_GROUPHOME_JA.ctaHeading;
     vLead = PROPERTY_CONDITIONS_CTA_GROUPHOME_JA.ctaLead;
     vLineLabel = PROPERTY_CONDITIONS_CTA_GROUPHOME_JA.lineLabel;
     template = PROPERTY_TEMPLATE_GH_JA;
-    intent = true;
+    intent = "bukken-gh";
   }
 
   const copyLabels = TEMPLATE_COPY_LABELS[locale] ?? TEMPLATE_COPY_LABELS.ja;
   const lead = subtext ?? vLead ?? c.ctaLead;
   // 内部リンク＝ここで1回だけ接頭辞付与（二重適用禁止）。intent時はフォームのプリセット用クエリを付与
-  const contactHref = addLocalePrefix(t.contactHref, locale) + (intent ? "?intent=bukken" : "");
+  const contactHref = addLocalePrefix(t.contactHref, locale) + (intent ? `?intent=${intent}` : "");
 
   return (
     <section aria-label={l.aria} className="my-6 rounded-2xl bg-primary-tint px-6 py-8 text-center">
