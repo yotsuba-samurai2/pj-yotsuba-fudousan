@@ -50,6 +50,8 @@ const COPY: Record<LangCode, CompanyCopy> = {
       { href: "/legal/nagare", label: "受任の流れ" },
       { href: "/legal/services/visa", label: "在留資格・ビザ申請" },
       { href: "/legal/services/shogai-fukushi", label: "障害福祉サービスの指定申請" },
+      // 2026-07-24：定点#15強化（内部リンク補強）。ja本文のみ追加＝/officeはja先行公開のため他ロケールは対象外。
+      { href: "/office", label: "会社設立とオフィス開設の完全ガイド（四葉不動産）" },
     ],
     s1Heading: "どんな許認可に対応していますか？",
     s1Body: "事業に必要な許認可はご相談ください。",

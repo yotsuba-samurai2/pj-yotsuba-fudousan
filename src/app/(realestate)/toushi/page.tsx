@@ -73,6 +73,8 @@ const COPY: Record<LangCode, ToushiCopy> = {
     internalLinks: [
       { href: "/toushi/group-home", label: "グループホーム物件" },
       { href: "/toushi/shataku", label: "社宅・法人賃貸" },
+      // 2026-07-24：定点#15強化（内部リンク補強）。ja本文のみ追加＝/officeはja先行公開のため他ロケールは対象外。
+      { href: "/office", label: "会社設立とオフィス開設の完全ガイド" },
       { href: "/access", label: "アクセス・料金" },
     ],
     crossLinkLead:
