@@ -201,6 +201,12 @@ const KNOWN_EXTERNAL_SLUGS = [
   "group-home-kenchikukijunho-youto-henko", // #6
   "group-home-keiyakumae-jizen-kyogi", // #7
   "group-home-kodate-apart-satellite-chigai", // #8
+  // P3（scripts/seed-gh-columns-p3.ts・2026-07-24投入済み）のslug。#1→#2,#9／#21→#9,#11の逆リンク用（Issue #119対応）。
+  "group-home-kaisetsu-schedule-junbi-kikan", // #2
+  "group-home-shitei-shinsei-shorui-ichiran", // #9
+  "group-home-tokyo-jizen-kyogi-setsumeikai", // #10
+  "group-home-kankei-kikan-soudan-kakuninsho", // #11
+  "group-home-henkotodoke-koshin-taimingu", // #12
   // P3b（scripts/seed-gh-columns-p3b.ts・2026-07-24投入）のslug。#16→#17,#18／#19→#17の逆リンク用。
   "group-home-service-kanri-sekininsha-yoken", // #13
   "group-home-sewanin-seikatsushienin-haichi", // #14
@@ -211,6 +217,8 @@ const KNOWN_EXTERNAL_SLUGS = [
   "group-home-gaikokujin-keieikanri-zairyushikaku", // #22
   "group-home-yokuaru-temodori-kaihi", // #23
 ];
+// 2026-07-24追記（Issue #119：内部リンク構造監査への対応）：
+// #1→#2,#9／#21→#9,#11,#22,#23／#19→#20 の逆リンクをP1側3本（01/19/21）に追加。
 
 function verify(cols: SeedColumn[]): string[] {
   const notes: string[] = [];

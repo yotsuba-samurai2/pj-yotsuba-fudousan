@@ -52,6 +52,8 @@ const KNOWN_LIVE_SLUGS = [
   "group-home-shobo-setsubi-sprinkler", // #5
   "group-home-bunkyo-ku-kaisetsu", // #19
   "group-home-kaisetsu-hiyo-zentaizo", // #16
+  // 2026-07-24追記（Issue #119）：#7→#23の逆リンク用（P3b・scripts/seed-gh-columns-p3b.ts投入済み）。
+  "group-home-yokuaru-temodori-kaihi", // #23
 ];
 
 // 検収済みドラフト（samurai-app/tasks/draft-gh-column-*.md）のDBメタと一致させる
