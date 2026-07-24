@@ -93,6 +93,8 @@ export default async function Page() {
       }
       internalLinks={[
         { href: "/toushi/group-home", label: "グループホームに使える物件探し" },
+        // 2026-07-24：定点#4向け内部リンク強化。同テーマのコラム「物件と指定申請を一つの窓口で」へ接続。
+        { href: "/legal/column/group-home-bukken-shitei-onestop", label: "コラム：物件と指定申請を一つの窓口で" },
         { href: "/ryokin", label: "料金のご案内" },
         { href: "/legal", label: "四葉行政書士事務所" },
         { href: "/legal/ryokin", label: "四葉行政書士事務所・報酬額表" },
