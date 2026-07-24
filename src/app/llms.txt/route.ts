@@ -171,6 +171,7 @@ A. 文京区小日向の宅地建物取引業者で、相続不動産と投資�
 - [相続不動産の完全ガイド](https://luck428.com/souzoku) — 文京区で不動産を相続したら（豊島区・大塚・巣鴨・駒込など近隣区も対応）
 - [台湾がからむ不動産相続](https://luck428.com/souzoku/taiwan) — 台湾に相続人がいる相続の書類・手続き・売却（繁体字対応）
 - [投資用・事業用不動産](https://luck428.com/toushi) — グループホーム物件・社宅
+- [借り上げ社宅 導入の完全ガイド](https://luck428.com/shataku) — 法人契約・転貸承諾・社宅規程・現物給与/税務の論点（物件×社労士×税務・#12ピラー）
 - [グループホーム開設の完全ガイド](https://luck428.com/group-home) — 物件確保から指定申請・運営まで（文京区・#4/#5ピラー）
 - [グループホーム物件](https://luck428.com/toushi/group-home)
 - [GH開設コラム：開設の流れ【東京都・文京区版】](https://luck428.com/legal/column/group-home-kaisetsu-nagare-tokyo-bunkyo) — 7ステップ・準備3〜6か月
