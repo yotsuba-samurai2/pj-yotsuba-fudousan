@@ -173,7 +173,13 @@ async function buildLegalSitemap(): Promise<MetadataRoute.Sitemap> {
 /**
  * ホスト名で振り分け:
  * - luck428gyosei.com → 行政書士のsitemap
- * - それ以外 → 不動産のsitemap
+ * - それ以外 → 不動産＋行政書士の統合sitemap
+ *
+ * 2026-07-25統合（AI可視性強化#2・Bing/IndexNow対応の前提整備）：
+ * 旧構成では robots.txt が /legal/sitemap.xml を広告していたが該当ルートは存在せず404、
+ * luck428gyosei.com/sitemap.xml も404＝**legal配下（GHコラム23本・業務ページ）がどの
+ * サイトマップにも載っていなかった**。legalページのcanonicalホストは luck428.com
+ * （BUSINESS_URLS.legal）のため、本体 sitemap.xml に統合して配信する。
  */
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const h = await headers();
@@ -183,5 +189,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     return buildLegalSitemap();
   }
 
-  return buildRealestateSitemap();
+  return [...(await buildRealestateSitemap()), ...(await buildLegalSitemap())];
 }
