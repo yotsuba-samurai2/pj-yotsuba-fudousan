@@ -15,6 +15,7 @@ import Link from "next/link";
 import { buildPageMetadata } from "@/lib/seo";
 import { getRequestLocale } from "@/lib/getRequestLocale";
 import { RealestateServicePage, ReH2 } from "@/components/shared/RealestateServicePage";
+import { InlineCtaProperty } from "@/components/shared/InlineCtaProperty";
 import { CannotHandle } from "@/components/shared/CannotHandle";
 import { Faq } from "@/components/shared/Faq";
 import { pickFaqJa } from "@/data/faqJa";
@@ -88,6 +89,7 @@ export default async function Page() {
       heroSrc="/hero/labor-kaigo-roumu-16x9.webp"
       heroAlt="介護事業所のイメージ"
       h1="介護事業所の開設——物件探しと指定申請の完全ガイド"
+      ctaVariant="property-gh"
       lead={
         <p>
           「物件を借りてから、相談室が足りないと言われた」——介護事業所の開設では、<strong>物件と指定申請が同時に動きます</strong>。サービス類型で必要な物件の条件が変わるからこそ、「どのサービスを・どの区で」を決めてから物件を探す順序が大切です。このページでは、類型ごとの物件条件と契約前の確認ポイント、<strong>担当・契約の分担</strong>を解説します。
@@ -141,6 +143,9 @@ export default async function Page() {
           をご覧ください。
         </p>
       </div>
+
+      {/* 中間CTA（2026-07-24 CTA刷新v2.2）：契約前チェック直後＝高意欲の瞬間に1か所のみ */}
+      <InlineCtaProperty gh page="/kaigo" />
 
       {/* §3 指定申請。法人＝原則必要（検収済み表現）・作成＝独占業務・更新は一般形 */}
       <div>

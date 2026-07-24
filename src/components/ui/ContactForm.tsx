@@ -4,7 +4,12 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import type { FormEvent } from "react";
 import { useTranslation } from "@/hooks/useTranslation";
-import { BUKKEN_CATEGORY_LABEL, PROPERTY_TEMPLATE } from "@/lib/shared/property-intake";
+import {
+  BUKKEN_CATEGORY_LABEL,
+  PROPERTY_TEMPLATE,
+  PROPERTY_TEMPLATE_GENERAL,
+  PROPERTY_TEMPLATE_GH_JA,
+} from "@/lib/shared/property-intake";
 import type { LangCode } from "@/config/languages";
 
 const inputClass =
@@ -30,17 +35,24 @@ export function ContactForm({ thanksPath = "/thanks", business = "realestate" }:
   const [submitting, setSubmitting] = useState(false);
   const [serverError, setServerError] = useState("");
 
-  // 2026-07-24 CTA刷新v2：CTA帯から ?intent=bukken で遷移した場合、カテゴリと本文テンプレを
+  // 2026-07-24 CTA刷新v2：CTA帯から ?intent=bukken* で遷移した場合、カテゴリと本文テンプレを
   // 自動プリセット（空欄のときのみ＝入力途中を上書きしない）。useSearchParamsは使わない
   // （Suspense境界不要のwindow参照＝静的レンダリング維持）。
+  // v2.2：intentを3値化＝来訪元バリアントとテンプレの取り違え防止（トップ・GHから来た人に
+  // 「居抜き・業種」の事業用テンプレを出さない）。
+  //   bukken=事業用ピラー／bukken-general=トップ等の入口（住まい・事業用両対応）／bukken-gh=GH系（ja）
   useEffect(() => {
     const sp = new URLSearchParams(window.location.search);
-    if (sp.get("intent") === "bukken") {
-      setCategory((c) => c || "bukken");
-      setMessage(
-        (m) => m || (PROPERTY_TEMPLATE[locale as LangCode] ?? PROPERTY_TEMPLATE.ja),
-      );
-    }
+    const intent = sp.get("intent") ?? "";
+    if (!intent.startsWith("bukken")) return;
+    const template =
+      intent === "bukken-gh"
+        ? PROPERTY_TEMPLATE_GH_JA
+        : intent === "bukken-general"
+          ? (PROPERTY_TEMPLATE_GENERAL[locale as LangCode] ?? PROPERTY_TEMPLATE_GENERAL.ja)
+          : (PROPERTY_TEMPLATE[locale as LangCode] ?? PROPERTY_TEMPLATE.ja);
+    setCategory((c) => c || "bukken");
+    setMessage((m) => m || template);
   }, [locale]);
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
@@ -140,7 +152,17 @@ export function ContactForm({ thanksPath = "/thanks", business = "realestate" }:
             id="category"
             required
             value={category}
-            onChange={(e) => setCategory(e.target.value)}
+            onChange={(e) => {
+              const v = e.target.value;
+              setCategory(v);
+              // v2.2：手動で「物件を探してほしい」を選んだ場合も、本文が空ならテンプレを挿入
+              // （ページ文脈がないため最も広い一般テンプレ＝住まい／店舗／事務所を用途欄で受け分け）
+              if (v === "bukken") {
+                setMessage(
+                  (m) => m || (PROPERTY_TEMPLATE_GENERAL[locale as LangCode] ?? PROPERTY_TEMPLATE_GENERAL.ja),
+                );
+              }
+            }}
             className={inputClass}
           >
             <option value="">{t("contact.form.categoryOptions.placeholder")}</option>

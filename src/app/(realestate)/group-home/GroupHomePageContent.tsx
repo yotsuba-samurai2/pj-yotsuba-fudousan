@@ -2124,7 +2124,7 @@ export default async function GroupHomePageContent() {
               {c.ctaLine}
             </a>
             <Link
-              href="/contact"
+              href="/contact?intent=bukken-gh"
               className="cta-gradient-outline inline-flex items-center gap-2 rounded-md px-10 py-4 text-sm font-semibold transition-all duration-200 hover:brightness-110"
             >
               {c.ctaContact}
