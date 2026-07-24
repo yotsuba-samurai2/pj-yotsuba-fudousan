@@ -544,6 +544,56 @@ const COPY: Record<LangCode, GroupHomeCopy> = {
         description:
           "10日以内の変更届と6年ごとの指定更新——開設後に必要な管理を根拠条文とあわせて解説しています。",
       },
+      // ── 開設コラム（GHクラスタP3b・D人員3＋E金残り2＋F残り1＋G残り2＝計8本・2026-07-24公開・ja限定＝jaのCOPYのみに追加） ──
+      // ハブ→スポーク導線。設計＝samurai-app/tasks/gh-column-cluster-placement-plan.md §3
+      {
+        href: "/legal/column/group-home-service-kanri-sekininsha-yoken",
+        label: "コラム：サービス管理責任者（サビ管）の要件と配置",
+        description:
+          "実務経験と研修修了という2つの要件、事業所ごとの配置の考え方を整理しています。",
+      },
+      {
+        href: "/legal/column/group-home-sewanin-seikatsushienin-haichi",
+        label: "コラム：世話人・生活支援員の配置基準",
+        description:
+          "利用者数と障害支援区分に応じた常勤換算の考え方と、配置人数の計算の目安をまとめています。",
+      },
+      {
+        href: "/legal/column/group-home-unei-kitei-kobetsushien-keikaku",
+        label: "コラム：運営規程・個別支援計画の整え方",
+        description:
+          "運営規程に記載する項目と、個別支援計画の作成・定期的な見直しの実務を整理しています。",
+      },
+      {
+        href: "/legal/column/group-home-bunkyo-hojokin-seibi-unei",
+        label: "コラム：文京区の整備費補助・運営費補助",
+        description:
+          "文京区独自の整備費等補助金と精神障害者グループホーム運営費補助金、2つの制度の対象・窓口の違いを解説します。",
+      },
+      {
+        href: "/legal/column/group-home-hoshu-taikei-kasan-kiso",
+        label: "コラム：報酬体系・加算の基礎",
+        description:
+          "基本報酬と各種加算の構成、令和6年度報酬改定での処遇改善加算一本化の概要を整理しています。",
+      },
+      {
+        href: "/legal/column/group-home-tokyo23ku-shiteikensha-chigai",
+        label: "コラム：東京23区の指定権者・運用の違い",
+        description:
+          "指定権者は23区共通で東京都知事。区ごとに異なるのは補助制度・事前相談の運用であることを整理しています。",
+      },
+      {
+        href: "/legal/column/group-home-gaikokujin-keieikanri-zairyushikaku",
+        label: "コラム：外国人がグループホーム事業を始めるには",
+        description:
+          "在留資格「経営・管理」の2025年10月改正のポイントと、指定申請との関係を整理しています。",
+      },
+      {
+        href: "/legal/column/group-home-yokuaru-temodori-kaihi",
+        label: "コラム：よくある手戻りと回避",
+        description:
+          "開設でよくある4つの手戻りパターンと、契約前の窓口確認で防ぐための考え方を実体験からまとめています。",
+      },
     ],
 
     sourcesHeading: "根拠・出典",
