@@ -161,3 +161,47 @@ export const TENANT_CTA_I18N: Record<
 
 /** 社労士の公開フラグ（開業=2026年9月まで false）。SSR/CSR両方から参照可（NEXT_PUBLIC_）。 */
 export const SR_LAUNCHED = process.env.NEXT_PUBLIC_SR_LAUNCHED === "true";
+
+/**
+ * 物件条件インテークCTA（2026-07-24・浦松指示）。
+ * 「駅・賃料・坪数・居抜きかスケルトンか・業種（飲食など）」など希望条件を、わかる範囲だけでも預ければ
+ * 四葉不動産が全力で探す、という統一メッセージ。不動産側だけでなく、物件がからむ行政書士側ページ
+ * （会社設立・許認可等）でも同じ呼びかけを使う（浦松指示：不動産も行政書士も統一メッセージで）。
+ * 物件を探すのは宅地建物取引業者である四葉不動産である旨は明記し、行政書士業務と混同させない
+ * （分離受任・業際の原則はCtaBand周辺の既存表示と同じ）。
+ * ja=浦松指示の趣旨を文章化（確定文言）。en/zh-tw/zh=監修前ドラフト。
+ * CtaBandのheading/subtext上書きpropとして各ページから渡す（RealestateServicePage/LegalServicePageの
+ * ctaHeading/ctaSubtext経由）。
+ */
+export const PROPERTY_CONDITIONS_CTA_I18N: Record<LangCode, { ctaHeading: string; ctaLead: string }> = {
+  ja: {
+    ctaHeading: "希望条件だけでも、お聞かせください。",
+    ctaLead:
+      "駅・賃料・坪数、居抜きかスケルトンか、業種（飲食など）——わかる範囲で構いません。条件をお預けいただければ、四葉不動産が全力で物件をお探しします。",
+  },
+  en: {
+    ctaHeading: "Just tell us what you're looking for.",
+    ctaLead:
+      "Station/area, rent, size, turnkey (with existing fixtures) or bare-shell, business type such as a restaurant — whatever you know is enough. Leave your conditions with us, and Yotsuba Real Estate will search hard to find a match.",
+  },
+  "zh-tw": {
+    ctaHeading: "只要告訴我們您的條件就可以。",
+    ctaLead:
+      "車站・租金、坪數大小、留有裝潢（居抜き）或毛坯交屋（スケルトン）、業種（如餐飲）——知道多少都可以。只要把條件交給我們，四葉不動産就會全力為您尋找物件。",
+  },
+  zh: {
+    ctaHeading: "只要告诉我们您的条件就可以。",
+    ctaLead:
+      "车站・租金、面积大小、带装修（居抜き）或毛坯交房（スケルトン）、业种（如餐饮）——知道多少都可以。只要把条件交给我们，四葉不動産就会全力为您寻找物件。",
+  },
+};
+
+/**
+ * 上記の指定基準がからむ物件探し（グループホーム等）向けバリアント（ja固定＝該当ページがja先行公開のため）。
+ * 例示条件を「用途地域・面積」等の指定基準寄りに差し替え、居抜き/スケルトンなど飲食・店舗系の語は使わない。
+ */
+export const PROPERTY_CONDITIONS_CTA_GROUPHOME_JA = {
+  ctaHeading: "希望条件だけでも、お聞かせください。",
+  ctaLead:
+    "エリア・駅、賃料の目安、面積や用途地域など——わかる範囲で構いません。条件をお預けいただければ、指定基準を見据えて四葉不動産が全力で物件をお探しします。",
+};

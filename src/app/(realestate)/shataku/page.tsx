@@ -21,6 +21,7 @@ import { RealestateServicePage, ReH2 } from "@/components/shared/RealestateServi
 import { CannotHandle } from "@/components/shared/CannotHandle";
 import { Faq } from "@/components/shared/Faq";
 import { pickFaqJa } from "@/data/faqJa";
+import { PROPERTY_CONDITIONS_CTA_I18N } from "@/lib/shared/office";
 
 // 冒頭の回答ブロック（H1直下）。当方が今できるのは物件＝宅建業に限定し、労務・税務は分離受任で振り分け（監修前ドラフト・浦松承認）
 const JA_ANSWER_BLOCK =
@@ -84,6 +85,8 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function Page() {
+  const locale = await getRequestLocale();
+  const cta = PROPERTY_CONDITIONS_CTA_I18N[locale] ?? PROPERTY_CONDITIONS_CTA_I18N.ja;
   return (
     <RealestateServicePage
       path="/shataku"
@@ -93,6 +96,8 @@ export default async function Page() {
       heroSrc="/hero/realestate-shataku-16x9.webp"
       heroAlt="借り上げ社宅のイメージ（オフィス街の集合住宅）"
       h1="借り上げ社宅の導入——物件・法人契約と社宅規程の完全ガイド"
+      ctaHeading={cta.ctaHeading}
+      ctaSubtext={cta.ctaLead}
       lead={
         <p>
           「物件を先に契約したら、貸主が社宅利用を認めてくれなかった」——借り上げ社宅の導入では、<strong>物件と社宅規程が同時に動きます</strong>。規程で決める従業員の負担割合が税務・社会保険の取り扱いに直結し、物件側では法人契約や転貸の承諾が前提になるからです。このページでは、導入の流れ、物件選びの契約前チェック、<strong>担当・契約の分担</strong>を解説します。

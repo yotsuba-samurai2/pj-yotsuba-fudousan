@@ -71,6 +71,12 @@ export type RealestateServicePageProps = {
   relatedColumns?: Column[];
   /** 関連コラム見出し（省略時「関連コラム」） */
   relatedColumnsHeading?: string;
+  /**
+   * CtaBand見出し・リード文の上書き（省略時=テナント既定のCTA帯）。2026-07-24 CTA刷新で追加。
+   * 物件条件インテークCTA（PROPERTY_CONDITIONS_CTA_I18N等）をページ側で解決して渡す用途を想定。
+   */
+  ctaHeading?: string;
+  ctaSubtext?: string;
   children: ReactNode;
 };
 
@@ -181,7 +187,7 @@ export async function RealestateServicePage(p: RealestateServicePageProps) {
       </article>
 
       <div className="mx-auto max-w-3xl px-4">
-        <CtaBand businessKey="realestate" />
+        <CtaBand businessKey="realestate" heading={p.ctaHeading} subtext={p.ctaSubtext} />
       </div>
     </>
   );

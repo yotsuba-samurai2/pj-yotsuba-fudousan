@@ -15,6 +15,7 @@ import { RealestateServicePage, ReH2 } from "@/components/shared/RealestateServi
 import { CannotHandle } from "@/components/shared/CannotHandle";
 import { Faq } from "@/components/shared/Faq";
 import { pickFaqJa } from "@/data/faqJa";
+import { PROPERTY_CONDITIONS_CTA_GROUPHOME_JA } from "@/lib/shared/office";
 
 // 冒頭の回答ブロック（H1直下）。浦松指定の確定文言（2026-07-19検収＝「作成」を独占業務とする修正済み）
 // ＝一字一句変更しないこと。
@@ -73,6 +74,8 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function Page() {
+  const locale = await getRequestLocale();
+  const isJa = locale === "ja";
   return (
     <RealestateServicePage
       path="/toushi/shitei-shinsei"
@@ -86,6 +89,8 @@ export default async function Page() {
       heroSrc="/hero/realestate-group-home-16x9.webp"
       heroAlt="グループホームに使える物件のイメージ（住宅街の一軒家）"
       h1="障害福祉サービスの指定申請と物件の関係"
+      ctaHeading={isJa ? PROPERTY_CONDITIONS_CTA_GROUPHOME_JA.ctaHeading : undefined}
+      ctaSubtext={isJa ? PROPERTY_CONDITIONS_CTA_GROUPHOME_JA.ctaLead : undefined}
       lead={
         <p>
           「物件は不動産会社、申請は行政書士」――グループホームの開設では、<strong>担当と契約が法律上分かれます</strong>。このページでは、指定申請書類の作成が行政書士の業務である根拠、開設までの全体フロー、そして<strong>担当・契約の分担</strong>を解説します。

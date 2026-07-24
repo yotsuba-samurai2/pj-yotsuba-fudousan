@@ -17,6 +17,7 @@ import { RealestateServicePage, ReH2 } from "@/components/shared/RealestateServi
 import { CannotHandle } from "@/components/shared/CannotHandle";
 import { Faq } from "@/components/shared/Faq";
 import { pickFaqJa } from "@/data/faqJa";
+import { PROPERTY_CONDITIONS_CTA_GROUPHOME_JA } from "@/lib/shared/office";
 import type { LangCode } from "@/config/languages";
 
 // ─── C-1（2026-07-19浦松検収済み・日本語版のみ）─────────────────────────
@@ -259,6 +260,8 @@ export default async function Page() {
       authorAlt={c.authorAlt}
       authorLabel={c.authorLabel}
       authorBio={c.authorBio}
+      ctaHeading={isJa ? PROPERTY_CONDITIONS_CTA_GROUPHOME_JA.ctaHeading : undefined}
+      ctaSubtext={isJa ? PROPERTY_CONDITIONS_CTA_GROUPHOME_JA.ctaLead : undefined}
     >
       {isJa ? (
         <>

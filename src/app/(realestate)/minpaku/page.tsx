@@ -17,6 +17,7 @@ import { RealestateServicePage, ReH2 } from "@/components/shared/RealestateServi
 import { CannotHandle } from "@/components/shared/CannotHandle";
 import { Faq } from "@/components/shared/Faq";
 import { pickFaqJa } from "@/data/faqJa";
+import { PROPERTY_CONDITIONS_CTA_I18N } from "@/lib/shared/office";
 
 // 冒頭の回答ブロック（H1直下）。分離受任の型＝shitei-shinsei確定文言に準拠（監修前ドラフト）
 const JA_ANSWER_BLOCK =
@@ -62,6 +63,8 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function Page() {
+  const locale = await getRequestLocale();
+  const cta = PROPERTY_CONDITIONS_CTA_I18N[locale] ?? PROPERTY_CONDITIONS_CTA_I18N.ja;
   return (
     <RealestateServicePage
       path="/minpaku"
@@ -71,6 +74,8 @@ export default async function Page() {
       heroSrc="/hero/realestate-toushi-16x9.webp"
       heroAlt="事業用物件のイメージ"
       h1="民泊の開業——物件探しと住宅宿泊事業の届出の完全ガイド"
+      ctaHeading={cta.ctaHeading}
+      ctaSubtext={cta.ctaLead}
       lead={
         <p>
           「借りてから、この区では平日できないと知った」——民泊では、<strong>物件と届出が同時に動きます</strong>。制度の選択・管理規約・条例・消防で「使える物件」の条件が変わるからこそ、契約前の確認が決定的です。このページでは、制度の入口の整理と物件選びの確認ポイント、<strong>担当・契約の分担</strong>を解説します。
