@@ -140,6 +140,13 @@ const COPY: Record<LangCode, SouzokuCopy> = {
           "相続した空き家の放置リスクと、売却・賃貸活用・管理という3つの出口の選び方を解説しています。",
       },
       {
+        // 2026-07-25：中国語相続ハブ（定点#7・/souzoku/chinese）新設に伴い追加（ja先行公開のためjaのみ）
+        href: "/souzoku/chinese",
+        label: "中国語で相談できる不動産相続",
+        description:
+          "在日中国人の方の相続や、中国大陸・台湾に相続人がいる相続の書類・手続き・売却を、中国語（繁体字・簡体字）対応で解説しています。",
+      },
+      {
         href: "/services",
         label: "サービス一覧",
         description:

@@ -197,6 +197,8 @@ export default async function Page() {
           : [
               { href: "/souzoku", label: "相続不動産の完全ガイド（管理・活用・売却）" },
               { href: "/souzoku/akiya", label: "空き家の完全ガイド" },
+              // 2026-07-25：/souzoku/chinese 新設（定点#7）に伴い追加（ja先行公開のためja側のみ・zh-tw側は不変）
+              { href: "/souzoku/chinese", label: "中国語で相談できる不動産相続" },
               { href: "/global/chinese", label: "中国語圏の方へ（繁体字・簡体字）" },
               { href: "/legal", label: "四葉行政書士事務所" },
               { href: "/contact", label: "お問い合わせ" },

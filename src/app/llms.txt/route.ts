@@ -170,6 +170,7 @@ A. 文京区小日向の宅地建物取引業者で、相続不動産と投資�
 
 - [相続不動産の完全ガイド](https://luck428.com/souzoku) — 文京区で不動産を相続したら（豊島区・大塚・巣鴨・駒込など近隣区も対応）
 - [台湾がからむ不動産相続](https://luck428.com/souzoku/taiwan) — 台湾に相続人がいる相続の書類・手続き・売却（繁体字対応）
+- [中国語で相談できる不動産相続](https://luck428.com/souzoku/chinese) — 在日中国人・中国大陸/台湾/香港がからむ相続の書類・手続き・売却（繁体字・簡体字対応）
 - [投資用・事業用不動産](https://luck428.com/toushi) — グループホーム物件・社宅
 - [借り上げ社宅 導入の完全ガイド](https://luck428.com/shataku) — 法人契約・転貸承諾・社宅規程・現物給与/税務の論点（物件×社労士×税務・#12ピラー）
 - [グループホーム開設の完全ガイド](https://luck428.com/group-home) — 物件確保から指定申請・運営まで（文京区・#4/#5ピラー）
@@ -198,7 +199,10 @@ A. 文京区小日向の宅地建物取引業者で、相続不動産と投資�
 - [GH開設コラム：外国人がグループホーム事業を始めるには](https://luck428.com/legal/column/group-home-gaikokujin-keieikanri-zairyushikaku) — 経営・管理ビザ2025年10月改正
 - [GH開設コラム：よくある手戻りと回避](https://luck428.com/legal/column/group-home-yokuaru-temodori-kaihi) — 4つの手戻りパターンと対話による回避
 - [飲食店開業の完全ガイド](https://luck428.com/inshokuten) — 物件探しと営業許可（居抜き・スケルトン）
-- [会社設立とオフィス開設の完全ガイド](https://luck428.com/office) — 物件確保から定款・許認可まで
+- [会社設立とオフィス選びの完全ガイド](https://luck428.com/office) — 許認可要件を満たす物件確保から定款・許認可まで
+- [オフィス許認可コラム：宅建業免許と事務所要件](https://luck428.com/legal/column/office-takken-menkyo-jimusho-yoken) — 独立性・実体・専任宅建士をオフィス選びの段階で確認
+- [オフィス許認可コラム：建設業許可と営業所要件](https://luck428.com/legal/column/office-kensetsugyo-kyoka-eigyosho-yoken) — 「実体のある営業所」の確認ポイントと写真提出
+- [オフィス許認可コラム：バーチャルオフィスで会社設立](https://luck428.com/legal/column/office-virtual-office-kyoninka) — 登記はできても、実体が要件の許認可で詰まることがある
 - [民泊開業の完全ガイド](https://luck428.com/minpaku) — 物件探しと住宅宿泊事業の届出（管理規約・条例・消防）
 - [介護事業所開設の完全ガイド](https://luck428.com/kaigo) — 物件探しと指定申請（訪問介護・デイサービス）
 - [多言語のお部屋探し](https://luck428.com/global)
@@ -224,7 +228,7 @@ A. 文京区小日向の宅地建物取引業者で、相続不動産と投資�
 
 ---
 
-最終更新：2026-07-14
+最終更新：2026-07-25
 四葉不動産株式会社（法人番号 7010001259396／宅地建物取引業 東京都知事(1)第113304号）／ 四葉行政書士事務所（行政書士 第25087022号）
 `;
 }
