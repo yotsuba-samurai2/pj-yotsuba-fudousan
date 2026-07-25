@@ -160,6 +160,7 @@ export default async function Page() {
         { href: "/legal/services/shogai-fukushi", label: "障害福祉サービスの許認可（事業者の方へ）" },
         { href: "/toushi/group-home", label: "グループホーム開設と物件（事業者の方へ）" },
         { href: "/souzoku", label: "文京区で不動産を相続したら｜完全ガイド" },
+        { href: "/legal/column/naze-oyanakiato-ni-torikumu", label: "なぜ、親なき後に取り組むのか（代表の署名記事）" },
         { href: "/legal/ryokin", label: "料金のご案内" },
         { href: "/legal/contact", label: "お問い合わせ" },
       ]}
@@ -280,6 +281,10 @@ export default async function Page() {
         </p>
         <p className="mt-3 text-sm leading-relaxed text-text-muted">
           このページは一般的な情報提供です。個別のご事情に応じた判断は、面談のうえ資格者が行います。ここに記した制度の適用可否も、ご本人の障害の種別・程度、お住まいの自治体、財産の状況によって変わります。
+        </p>
+        <p className="mt-5 leading-relaxed text-text">
+          なぜ当事務所がこの分野に取り組んでいるのかは、代表の署名記事に書きました。
+          <Link href="/legal/column/naze-oyanakiato-ni-torikumu" className="text-primary underline">なぜ、親なき後に取り組むのか</Link>
         </p>
       </div>
 
