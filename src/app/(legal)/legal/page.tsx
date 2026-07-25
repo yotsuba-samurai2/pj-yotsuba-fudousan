@@ -31,7 +31,7 @@ const MEMBERSHIPS = [
 
 const COPY: Record<LangCode, LegalTopCopy> = {
   ja: {
-    metaTitle: "四葉行政書士事務所｜文京区・茗荷谷の行政書士",
+    metaTitle: "文京区・茗荷谷の行政書士｜障害福祉・相続・ビザ | 四葉行政書士事務所",
     metaDesc:
       "東京都文京区小日向・茗荷谷駅徒歩5分の四葉行政書士事務所。障害福祉サービスの指定申請、在留資格・ビザ、相続、会社設立、補助金申請に対応。元毎日新聞中国総局長の行政書士が、中国語・英語も交え、書類作成から申請までお手伝いします。",
     heroAlt: "四葉行政書士事務所のイメージ（文京区の事務所）",
@@ -61,7 +61,7 @@ const COPY: Record<LangCode, LegalTopCopy> = {
     ],
   },
   en: {
-    metaTitle: "四葉行政書士事務所｜Gyoseishoshi (Administrative Scrivener) Office in Bunkyo, Tokyo",
+    metaTitle: "Gyoseishoshi (Administrative Scrivener) Office in Bunkyo, Tokyo | 四葉行政書士事務所",
     metaDesc:
       "Yotsuba Gyoseishoshi Office, a 5-minute walk from Myogadani Station in Kohinata, Bunkyo-ku, Tokyo. Disability-welfare service designation, visas and residence status, inheritance paperwork, company formation, and subsidy applications—handled by a former Mainichi Shimbun China bureau chief, with support in Chinese and English.",
     heroAlt: "Yotsuba Gyoseishoshi Office in Bunkyo, Tokyo",
@@ -91,7 +91,7 @@ const COPY: Record<LangCode, LegalTopCopy> = {
     ],
   },
   "zh-tw": {
-    metaTitle: "四葉行政書士事務所｜文京區・茗荷谷的行政書士",
+    metaTitle: "文京區・茗荷谷的行政書士｜障礙福祉・繼承・簽證 | 四葉行政書士事務所",
     metaDesc:
       "位於東京都文京區小日向、茗荷谷站步行5分鐘的四葉行政書士事務所。受理障礙福祉服務指定申請、在留資格（簽證）、繼承、公司設立、補助金申請。曾任每日新聞中國總局長的行政書士，提供中文・英文諮詢，從文件製作到申請全程協助。",
     heroAlt: "四葉行政書士事務所（東京文京區）",
@@ -121,7 +121,7 @@ const COPY: Record<LangCode, LegalTopCopy> = {
     ],
   },
   zh: {
-    metaTitle: "四葉行政書士事務所｜文京区・茗荷谷的行政书士",
+    metaTitle: "文京区・茗荷谷的行政书士｜残障福祉・继承・签证 | 四葉行政書士事務所",
     metaDesc:
       "位于东京都文京区小日向、茗荷谷站步行5分钟的四葉行政書士事務所。受理残障福祉服务指定申请、在留资格（签证）、继承、公司设立、补助金申请。曾任每日新闻中国总局长的行政书士，提供中文・英文咨询，从文件制作到申请全程协助。",
     heroAlt: "四葉行政書士事務所（东京文京区）",
@@ -161,6 +161,10 @@ export async function generateMetadata(): Promise<Metadata> {
     description: c.metaDesc,
     path: "/legal",
     locale,
+    // absoluteTitle=true 維持：サイトトップ（/・/legal）は title に社名を含める方式で統一しているため、
+    // レイアウトの「%s | 四葉行政書士事務所」テンプレートは付与しない（社名重複防止）。
+    // metaTitle 側では社名を末尾へ（2026-07-25）＝先頭に検索語「文京区・茗荷谷の行政書士」を置きつつ、
+    // og:title / twitter:title にも社名が残る（buildPageMetadata は absoluteTitle に関係なく title を使う）。
     absoluteTitle: true,
   });
 }
