@@ -138,6 +138,8 @@ const STATIC_LEGAL: StaticPage[] = [
   { path: "", changeFrequency: "weekly", priority: 1.0 },
   { path: "/services", changeFrequency: "monthly", priority: 0.9 },
   { path: "/services/shogai-fukushi", changeFrequency: "monthly", priority: 0.9 },
+  // 親なき後（2026-07-25新設）＝ja先行公開のため locales:["ja"]
+  { path: "/services/oyanakiato", changeFrequency: "monthly", priority: 0.9, locales: ["ja"] },
   { path: "/services/visa", changeFrequency: "monthly", priority: 0.8 },
   { path: "/services/inheritance", changeFrequency: "monthly", priority: 0.8 },
   { path: "/services/company", changeFrequency: "monthly", priority: 0.7 },

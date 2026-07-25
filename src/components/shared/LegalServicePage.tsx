@@ -25,6 +25,11 @@ export type LegalServicePageProps = {
   crumbLabel: string; // パンくず末尾＝ページ名
   serviceName: string; // JSON-LD Service name
   heroAlt: string;
+  /**
+   * ヒーロー画像の明示指定（任意）。省略時は従来どおり `/hero/legal-${slug}-16x9.webp`。
+   * 専用画像が未制作のページで既存画像を暫定共用するために追加（2026-07-25・既存呼び出し元の出力は不変）。
+   */
+  heroSrc?: string;
   h1: string;
   lead: ReactNode; // 結論（回答ファースト）
   /** 原稿で GovernmentService 指定のあるページ（shogai-fukushi/visa/company）で true */
@@ -76,7 +81,7 @@ export async function LegalServicePage(p: LegalServicePageProps) {
       <article className="mx-auto max-w-3xl px-4 pb-16">
         {/* ヒーロービジュアル（slug で決まる） */}
         <img
-          src={`/hero/legal-${p.slug}-16x9.webp`}
+          src={p.heroSrc ?? `/hero/legal-${p.slug}-16x9.webp`}
           alt={p.heroAlt}
           width={1600}
           height={900}
