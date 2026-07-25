@@ -99,6 +99,9 @@ const STATIC_REALESTATE: StaticPage[] = [
   { path: "/kaigo", changeFrequency: "monthly", priority: 0.8, locales: ["ja"] },
   // 2026-07-24：借り上げ社宅ピラー（#12）。ja先行公開。導入・社宅規程・物件の分離受任（宅建業×社労士×税務）。
   { path: "/shataku", changeFrequency: "monthly", priority: 0.8, locales: ["ja"] },
+  // 2026-07-25：本帰国ピラー（定点#18の入れ替え先）。ja先行公開。
+  // 役割＝主語は「帰国というライフイベント」。/global（主語＝在留資格・読者＝外国人）とは読者が別。
+  { path: "/kikoku", changeFrequency: "monthly", priority: 0.8, locales: ["ja"] },
   // 2026-07-22：台湾越境相続（#19）。ja先行公開・souzokuクラスタの子。2026-07-23 zh-tw追加。
   { path: "/souzoku/taiwan", changeFrequency: "monthly", priority: 0.7, locales: ["ja", "zh-tw"] },
   // 2026-07-25：中国語相続ハブ（#7）。ja先行公開・souzokuクラスタの子。ページ側 availableLocales:["ja"] と一致させる。
