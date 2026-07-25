@@ -26,6 +26,8 @@ export async function generateMetadata(): Promise<Metadata> {
 const SERVICES = [
   { name: "障害福祉サービスの指定申請", who: "グループホーム・放課後等デイ等を開設したい事業者", href: "/legal/services/shogai-fukushi" },
   { name: "在留資格・ビザ申請", who: "在留資格の取得・変更・更新をしたい外国人・受入企業", href: "/legal/services/visa" },
+  // 2026-07-25追加＝企業向け（B2B）。上の visa は本人視点で読者が異なる
+  { name: "外国人社員の受け入れ", who: "海外から社員を迎える企業（手続きの期限管理・帯同家族・書類の認証）", href: "/legal/services/gaikokujin-shain" },
   { name: "相続・遺言・信託", who: "遺産分割協議書・遺言書を整えたい方", href: "/legal/services/inheritance" },
   // 2026-07-25追加＝家族向け（B2C）。上の shogai-fukushi は事業者向けで読者が異なる
   { name: "親なき後の備え", who: "障害のあるお子さんの暮らしと実家に備えたいご家族", href: "/legal/services/oyanakiato" },

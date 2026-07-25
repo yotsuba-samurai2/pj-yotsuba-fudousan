@@ -143,6 +143,8 @@ const STATIC_LEGAL: StaticPage[] = [
   { path: "/services/shogai-fukushi", changeFrequency: "monthly", priority: 0.9 },
   // 親なき後（2026-07-25新設）＝ja先行公開のため locales:["ja"]
   { path: "/services/oyanakiato", changeFrequency: "monthly", priority: 0.9, locales: ["ja"] },
+  // 2026-07-25：外国人社員の受け入れ（企業向け・ピラーB）。ja先行公開。アポスティーユ／領事認証が中核資産。
+  { path: "/services/gaikokujin-shain", changeFrequency: "monthly", priority: 0.9, locales: ["ja"] },
   { path: "/services/visa", changeFrequency: "monthly", priority: 0.8 },
   { path: "/services/inheritance", changeFrequency: "monthly", priority: 0.8 },
   { path: "/services/company", changeFrequency: "monthly", priority: 0.7 },
