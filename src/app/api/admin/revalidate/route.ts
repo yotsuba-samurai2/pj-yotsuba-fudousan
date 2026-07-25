@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { revalidatePath } from "next/cache";
 import { verifyAdminRequest, AuthError } from "@/lib/api-auth";
+import { submitToIndexNow } from "@/lib/indexnow";
 
 export async function POST(req: NextRequest) {
   try {
@@ -12,7 +13,10 @@ export async function POST(req: NextRequest) {
     for (const p of paths) {
       revalidatePath(p);
     }
-    return NextResponse.json({ revalidated: paths });
+    // 再生成したページを IndexNow（Bing/Yandex系）へ即時通知する。
+    // submitToIndexNow は例外を投げない設計＝IndexNow の失敗で revalidate の成功を壊さない。
+    const indexnow = await submitToIndexNow(paths);
+    return NextResponse.json({ revalidated: paths, indexnow });
   } catch (err) {
     if (err instanceof AuthError) {
       return NextResponse.json({ error: err.message }, { status: err.status });
