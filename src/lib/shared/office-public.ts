@@ -31,9 +31,14 @@ export const CONTACT_HREF: Record<BusinessKey, string> = {
  * 2026-07-11 P2仕様・浦松承認済み）。laborはGBP未整備のため未設定（未検証の値を置かない）。
  * seo.ts（BUSINESS_SEO.gbpUrl）もここを参照する＝値の二重管理をしない。
  */
+// 形式はcid（恒久URL）に統一する。share.google の共有リンクは再発行のたびに変わり、
+// 同一GBPに複数の短縮URLが並存することを実測で確認したため使わない（2026-07-25）。
 export const GBP_URL = {
+  // cid=2684416286346615973（=0x2540f663c8f69ca5・kgmid /g/11ytdshcrj）現物確認済み
   realestate: "https://maps.google.com/?cid=2684416286346615973",
-  legal: "https://share.google/qw9imD2snNKDEQS3Z",
+  // cid=5422744564688438984（=0x4b4175735def46c8・kgmid /g/11z5sjqsxz）現物確認済み（2026-07-25）
+  // 旧値 https://share.google/qw9imD2snNKDEQS3Z から差し替え（同一GBPに解決することを確認済み）
+  legal: "https://maps.google.com/?cid=5422744564688438984",
 } as const;
 
 /** 事業別の地図リンク（フッター・下部固定バー用）。GBP直リンク優先／無い事業（labor）は住所クエリへフォールバック */

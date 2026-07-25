@@ -208,8 +208,13 @@ export const PERSON_JSONLD = {
  */
 export const REALESTATE_SAME_AS = [
   "https://www.wikidata.org/wiki/Q139738235",
+  // 【2026-07-25 浦松判断＝現状維持で確定】このURLは301で /samurai/reserve/uramatsu-joji へ
+  // 転送される。士業ドットコム側の法人プロフィールを削除したことへの対策として意図的に入れた
+  // リダイレクト（PR #91）であり、放置ではない。AI検索の索引に残った旧URLが404になる方が
+  // 損失が大きいという判断。この行は残す。
   "https://www.samurai.co.jp/samurai/reserve/yotubahudousan",
-  "https://maps.google.com/?cid=2684416286346615973",
+  // GBP＝office-public.tsのGBP_URLを参照（値の二重管理をしない・cid形式の恒久URL）
+  GBP_URL.realestate,
   // 東京都宅建協会 会員検索の当社詳細ページ（2026-07-10現物確認＝免許 知事(1)113304・商号・住所一致・HP欄=luck428.com）
   "https://www.tokyo-takken.or.jp/search-member/detail/31253",
   // ナレッジパネル（kgmid）＝JSON-LD修正P2（2026-07-11浦松承認済み仕様）
@@ -223,8 +228,13 @@ export const REALESTATE_SAME_AS = [
  */
 export const LEGAL_SAME_AS = [
   "https://www.wikidata.org/wiki/Q139738259",
-  // GBP共有リンク＋ナレッジパネル（kgmid）＝JSON-LD修正P2（2026-07-11浦松承認済み仕様）
-  "https://share.google/qw9imD2snNKDEQS3Z",
+  // GBP＝office-public.tsのGBP_URLを参照（値の二重管理をしない・cid形式の恒久URL）。
+  // 2026-07-25にshare.google短縮リンクから差し替え。理由：share.googleの共有リンクは
+  // 再発行のたびに変わり、同一GBPに対して複数の短縮URLが並存することを実測で確認した
+  // （qw9imD2snNKDEQS3Z と B5qzOGwxOTmhsSjYe がいずれも kgmid=/g/11z5sjqsxz に解決）。
+  // sameAsは「同一実体の恒久URL」を宣言する場所のため、揺れる短縮URLは不適。
+  GBP_URL.legal,
+  // ナレッジパネル（kgmid）＝JSON-LD修正P2（2026-07-11浦松承認済み仕様）
   "https://www.google.com/search?kgmid=/g/11z5sjqsxz",
   // いい相続グループ（鎌倉新書・東証プライム）の当事務所プロフィール＝2026-07-20掲載確認。
   // 同一エンティティ（四葉行政書士事務所）の別ページ。Wikidata Q139738259 P973 にも同URLを登録済み。
