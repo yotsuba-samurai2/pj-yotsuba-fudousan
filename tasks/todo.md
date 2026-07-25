@@ -194,3 +194,72 @@
   /zh-tw/... へ直接着地したクローラーで layout 側 title.template・og:locale が ja に解決される。
 - 言語切替UIの EN は /en/global/chinese を指し ja 文言へフォールバック（hreflang・sitemap 非掲載のため
   Googleには広告されない）。EN版が必要なら別タスク。
+
+---
+
+## 不動産コラム3本の追加（/column・business=realestate）
+
+### 背景
+
+`/column` の既存7本は相続・空き家クラスタに4本が偏在し、コラムトップの meta description が謳う
+「部屋探しのコツ／敷金・礼金／契約書の読み方」と、H1リード文の「外国人の住まい探し／文京区の地域情報」に
+対応する記事が **0本** だった。支えるサービスページのうち `/global`・`/services`・`/toushi`・`/kaigo` は
+被リンクとなるコラムを持っていない。本タスクはこの空白クラスタを埋める。
+
+グループホーム・クラスタの役割分担（luck428-column-seo 第2条）は崩さない
+＝02は通所/訪問系に限定し、居住系は `/group-home` へ送出するのみ。
+
+### 計画
+
+- [x] 原稿3本を house style（結論先出し／`## よくある質問` 4問／`## この記事の出典（一次情報）`／執筆者節）で作成
+- [x] `scripts/seed-realestate-columns.ts` を seed-office-columns.ts と同型で作成（business=realestate）
+- [x] dry-run → `scripts/realestate-columns.preview.json`・verify 全通過
+- [x] `--emit-ts` → `src/lib/data/realestate-columns-seed.ts`
+- [x] `/admin/columns/seed-realestate` を seed-office と同型で作成
+- [x] `npx tsc --noEmit` exit 0／`npx eslint` exit 0
+- [ ] 本番投入（`/admin/columns/seed-realestate` をブラウザで実行）＝浦松の承認後
+
+### 変更ファイル
+
+- `scripts/realestate-columns/01-gaikokujin-nyukyo-oya-no-fuan.md`（新規・5,389字）
+- `scripts/realestate-columns/02-kaigo-jigyousho-bukken-youto-chiiki.md`（新規・5,662字）
+- `scripts/realestate-columns/03-chintaishaku-keiyakusho-doko-wo-yomu.md`（新規・5,024字）
+- `scripts/seed-realestate-columns.ts`（新規。dry-run既定／--write／--emit-ts）
+- `scripts/realestate-columns.preview.json`（生成物）
+- `src/lib/data/realestate-columns-seed.ts`（生成物・直接編集しない）
+- `src/app/admin/columns/seed-realestate/page.tsx`（新規）
+
+### 内部リンク設計（評価の集約先。seed の verify() で機械検査）
+
+| slug | ハブ必須リンク | 姉妹コラム |
+|---|---|---|
+| gaikokujin-nyukyo-oya-no-fuan | `/global`・`/services`（＋`/global/chinese`） | 03 |
+| kaigo-jigyousho-bukken-youto-chiiki | `/kaigo`・`/toushi`・`/group-home` | —— |
+| chintaishaku-keiyakusho-doko-wo-yomu | `/services`・`/faq`（＋`/global`） | 01 |
+
+### 検証結果
+
+- verify() 全チェック通過（結論先出し・ハブリンク・相互リンクslug実在・FAQ各4問・出典節・判断留保）
+- 禁止語（ワンストップ／一括対応／一体で／one-stop）＝0件
+- 独占業務表現＝「作成・提出＝独占業務」の誤表現なし（lessons 2026-07-19 C-2 の再発防止チェックを
+  seed の verify() に機械化して組み込み済み）
+- `npx tsc --noEmit` exit 0／`npx eslint`（新規3ファイル）exit 0
+- sitemap は `getAllColumnsAllLocales()` 由来のため、投入後に自動で `/column/<slug>` が載る（コード変更不要）
+
+### 裏取り済みの主要事実
+
+- 在留外国人 4,125,395人（令和7年末・前年末比+356,418人／9.5%増）＝出入国在留管理庁公表
+- 用途変更の確認申請＝200㎡超（令和元年6月25日施行の改正建築基準法。従前100㎡超）
+- (6)項ロの社会福祉施設等のスプリンクラー＝面積によらず原則設置義務（平成27年4月1日施行。既存は平成30年3月31日まで経過措置）
+- 通常損耗補修特約の有効要件＝最判平成17年12月16日／自力救済の禁止＝最判昭和40年12月7日／
+  いわゆる追い出し条項の無効＝最判令和4年12月12日（消費者契約法10条）
+- 敷金＝民法622条の2（令和2年4月1日施行）／定期借家の説明書面＝借地借家法38条（電磁的方法は令和4年5月18日施行の改正）
+
+### 申し送り
+
+- **未検証1件**：訪問介護事業所を「老人福祉センターその他これに類するもの」として扱う国交省技術的助言の
+  文書番号（平成27年11月10日付・国住指第107号）は二次情報を含む確認による。公開前に発出元の原典で番号を確認する。
+  記事02の出典節に **未検証** と明記済み。
+- 本3本は `locales: ["ja"]`＝日本語のみ公開。多言語展開（en / zh-tw / zh）は別タスク。
+- 記事01は外国人賃貸クラスタの1本目。将来「借り手向け（外国人が部屋を借りるとき）」を追加する場合は、
+  本記事＝貸し手向けとの検索意図の重複に注意し、luck428-column-seo に役割分担表を追記する。
