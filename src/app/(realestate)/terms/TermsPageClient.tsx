@@ -1,6 +1,8 @@
 "use client";
 
 import { useTranslation } from "@/hooks/useTranslation";
+import { LegalSectionList } from "@/components/shared/LegalSectionList";
+import { TERMS_ADDITIONAL_SECTIONS } from "@/lib/data/legal-pages-sections";
 
 export function TermsPageClient() {
   const { t, tArray } = useTranslation();
@@ -38,6 +40,8 @@ export function TermsPageClient() {
               <h2 className="text-lg font-bold text-text">{t("terms.sections.changes.title")}</h2>
               <p className="mt-3">{t("terms.sections.changes.content")}</p>
             </div>
+            {/* 第5条以降（知的財産権・リンク・掲載情報の位置づけ・準拠法・お問い合わせ） */}
+            <LegalSectionList namespace="terms" sections={TERMS_ADDITIONAL_SECTIONS} />
           </div>
         </div>
       </section>

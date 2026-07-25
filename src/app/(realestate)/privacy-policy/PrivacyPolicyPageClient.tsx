@@ -1,6 +1,8 @@
 "use client";
 
 import { useTranslation } from "@/hooks/useTranslation";
+import { LegalSectionList } from "@/components/shared/LegalSectionList";
+import { PRIVACY_ADDITIONAL_SECTIONS } from "@/lib/data/legal-pages-sections";
 
 export function PrivacyPolicyPageClient() {
   const { t, tArray } = useTranslation();
@@ -71,6 +73,8 @@ export function PrivacyPolicyPageClient() {
               <p className="mt-3">{t("privacyPolicy.sections.inquiry.content")}</p>
               <p className="mt-2">{t("privacyPolicy.sections.inquiry.contactInfo")}</p>
             </div>
+            {/* 7.以降（保有期間・開示等の請求・守秘義務・個人情報保護管理者・改定） */}
+            <LegalSectionList namespace="privacyPolicy" sections={PRIVACY_ADDITIONAL_SECTIONS} />
           </div>
         </div>
       </section>
