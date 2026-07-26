@@ -24,6 +24,29 @@ const categoryLabels: Record<string, string> = {
   subsidy: "補助金・助成金",
   visa: "ビザ・在留資格",
   labor: "社会保険・労務",
+  // 2026-07-27：相談カテゴリの拡充（表示ラベルの正本は src/lib/shared/contact-intake.ts）
+  souzoku: "相続した不動産のこと（貸す・売る・活用する）",
+  akiya: "空き家のこと",
+  "foreign-housing": "外国人のお部屋探し・多言語対応",
+  "souzoku-legal": "相続・遺言・信託",
+  oyanakiato: "親なき後の備え",
+  "shogai-fukushi": "障害福祉サービスの許認可（事業者）",
+  "gaikokujin-shain": "外国人社員の受け入れ（企業）",
+  "kikoku-funin": "帰国・赴任の手続き",
+  kyoninka: "会社設立・各種許認可",
+  other: "その他",
+};
+
+// 2026-07-27：流入元（任意）。AI検索→受任の接続を測る結果指標。
+// 「AIに聞いて」と「検索結果」は必ず分ける（一括りにすると測定にならない）。
+const sourceLabels: Record<string, string> = {
+  ai: "ChatGPT・Claude などのAIに聞いて",
+  search: "Googleなどの検索結果",
+  map: "Googleマップ",
+  samurai: "士業ドットコム",
+  referral: "知人・お客様のご紹介",
+  sns: "SNS・note",
+  known: "以前から知っていた",
   other: "その他",
 };
 
@@ -32,6 +55,8 @@ const contactSchema = z.object({
   email: z.string().email("有効なメールアドレスを入力してください"),
   phone: z.string().optional().default(""),
   category: z.string().min(1, "ご相談内容を選択してください"),
+  // 2026-07-27：流入元は任意（未選択でも送信できる）
+  source: z.string().optional().default(""),
   message: z.string().min(1, "お問い合わせ内容を入力してください"),
   business: z.string().optional().default("realestate"),
 });
@@ -50,6 +75,7 @@ function adminEmailHtml({
   email,
   phone,
   categoryLabel,
+  sourceLabel,
   message,
   businessLabel,
 }: {
@@ -57,6 +83,7 @@ function adminEmailHtml({
   email: string;
   phone: string;
   categoryLabel: string;
+  sourceLabel: string;
   message: string;
   businessLabel: string;
 }) {
@@ -93,6 +120,10 @@ function adminEmailHtml({
               <tr>
                 <td style="padding:10px 0;border-bottom:1px solid #e5e7eb;color:#6b7280;vertical-align:top;">ご相談内容</td>
                 <td style="padding:10px 0;border-bottom:1px solid #e5e7eb;">${escapeHtml(categoryLabel)}</td>
+              </tr>
+              <tr>
+                <td style="padding:10px 0;border-bottom:1px solid #e5e7eb;color:#6b7280;vertical-align:top;">きっかけ</td>
+                <td style="padding:10px 0;border-bottom:1px solid #e5e7eb;">${escapeHtml(sourceLabel)}</td>
               </tr>
             </table>
             <!-- Message -->
@@ -222,9 +253,11 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ errors }, { status: 400 });
     }
 
-    const { name, email, phone, category, message, business } = result.data;
+    const { name, email, phone, category, source, message, business } = result.data;
     const categoryLabel = categoryLabels[category] ?? category;
     const businessLabel = businessLabels[business] ?? business;
+    // 任意項目のため未選択があり得る。集計時に「未回答」を分母から外せるよう明示する。
+    const sourceLabel = source ? (sourceLabels[source] ?? source) : "未回答";
 
     // 管理者への通知メール
     await getResend().emails.send({
@@ -237,6 +270,7 @@ export async function POST(req: NextRequest) {
         email,
         phone,
         categoryLabel,
+        sourceLabel,
         message,
         businessLabel,
       }),
