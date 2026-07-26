@@ -10,6 +10,14 @@ import {
   PROPERTY_TEMPLATE_GENERAL,
   PROPERTY_TEMPLATE_GH_JA,
 } from "@/lib/shared/property-intake";
+import {
+  CATEGORY_ORDER_BY_BUSINESS,
+  CATEGORY_ORDER_DEFAULT,
+  EXTRA_CATEGORY_LABELS,
+  SOURCE_FIELD_LABEL,
+  SOURCE_OPTIONS,
+  SOURCE_PLACEHOLDER,
+} from "@/lib/shared/contact-intake";
 import type { LangCode } from "@/config/languages";
 
 const inputClass =
@@ -29,7 +37,26 @@ export function ContactForm({ thanksPath = "/thanks", business = "realestate" }:
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [category, setCategory] = useState("");
+  // 2026-07-27：流入元（任意）。AI検索→受任の接続を測る唯一の結果指標。
+  const [source, setSource] = useState("");
   const [message, setMessage] = useState("");
+
+  const lang = locale as LangCode;
+
+  // 2026-07-27：相談カテゴリを事業別に出し分ける。
+  // 定義が無い事業（labor 等）は CATEGORY_ORDER_DEFAULT ＝従来の並びで挙動を変えない。
+  const categoryKeys = CATEGORY_ORDER_BY_BUSINESS[business] ?? CATEGORY_ORDER_DEFAULT;
+
+  // ラベルの解決順：bukken（property-intake）→ 新カテゴリ（contact-intake）→ Firestore辞書。
+  // Firestore辞書に新キーは増やさない（B1教訓）。
+  const categoryLabelOf = (key: string): string => {
+    if (key === "bukken") {
+      return BUKKEN_CATEGORY_LABEL[lang] ?? BUKKEN_CATEGORY_LABEL.ja;
+    }
+    const extra = EXTRA_CATEGORY_LABELS[key];
+    if (extra) return extra[lang] ?? extra.ja;
+    return t(`contact.form.categoryOptions.${key}`);
+  };
 
   const [errors, setErrors] = useState<Record<string, string[]>>({});
   const [submitting, setSubmitting] = useState(false);
@@ -44,16 +71,25 @@ export function ContactForm({ thanksPath = "/thanks", business = "realestate" }:
   useEffect(() => {
     const sp = new URLSearchParams(window.location.search);
     const intent = sp.get("intent") ?? "";
-    if (!intent.startsWith("bukken")) return;
-    const template =
-      intent === "bukken-gh"
-        ? PROPERTY_TEMPLATE_GH_JA
-        : intent === "bukken-general"
-          ? (PROPERTY_TEMPLATE_GENERAL[locale as LangCode] ?? PROPERTY_TEMPLATE_GENERAL.ja)
-          : (PROPERTY_TEMPLATE[locale as LangCode] ?? PROPERTY_TEMPLATE.ja);
-    setCategory((c) => c || "bukken");
-    setMessage((m) => m || template);
-  }, [locale]);
+    if (!intent) return;
+    if (intent.startsWith("bukken")) {
+      const template =
+        intent === "bukken-gh"
+          ? PROPERTY_TEMPLATE_GH_JA
+          : intent === "bukken-general"
+            ? (PROPERTY_TEMPLATE_GENERAL[locale as LangCode] ?? PROPERTY_TEMPLATE_GENERAL.ja)
+            : (PROPERTY_TEMPLATE[locale as LangCode] ?? PROPERTY_TEMPLATE.ja);
+      setCategory((c) => c || "bukken");
+      setMessage((m) => m || template);
+      return;
+    }
+    // 2026-07-27：物件以外も ?intent=<カテゴリキー> でプリセットする（本文テンプレは挿入しない）。
+    // 当該フォームに出さないキーは無視する＝存在しない選択肢を選ばせない。
+    const keys = CATEGORY_ORDER_BY_BUSINESS[business] ?? CATEGORY_ORDER_DEFAULT;
+    if (keys.includes(intent)) {
+      setCategory((c) => c || intent);
+    }
+  }, [locale, business]);
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -65,7 +101,7 @@ export function ContactForm({ thanksPath = "/thanks", business = "realestate" }:
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, phone, category, message, business }),
+        body: JSON.stringify({ name, email, phone, category, source, message, business }),
       });
 
       const data = await res.json();
@@ -166,20 +202,37 @@ export function ContactForm({ thanksPath = "/thanks", business = "realestate" }:
             className={inputClass}
           >
             <option value="">{t("contact.form.categoryOptions.placeholder")}</option>
-            {/* 2026-07-24 CTA刷新v2：物件条件インテークの受け皿。Firestore辞書に新キーは増やさない
-                （B1教訓）＝ラベルは property-intake.ts の4ロケール直書きを参照 */}
-            <option value="bukken">
-              {BUKKEN_CATEGORY_LABEL[locale as LangCode] ?? BUKKEN_CATEGORY_LABEL.ja}
-            </option>
-            <option value="rental">{t("contact.form.categoryOptions.rental")}</option>
-            <option value="sale">{t("contact.form.categoryOptions.sale")}</option>
-            <option value="management">{t("contact.form.categoryOptions.management")}</option>
-            <option value="subsidy">{t("contact.form.categoryOptions.subsidy")}</option>
-            <option value="visa">{t("contact.form.categoryOptions.visa")}</option>
-            <option value="labor">{t("contact.form.categoryOptions.labor")}</option>
-            <option value="other">{t("contact.form.categoryOptions.other")}</option>
+            {/* 2026-07-24 CTA刷新v2／2026-07-27 事業別の出し分け。
+                Firestore辞書に新キーは増やさない（B1教訓）＝新カテゴリのラベルは
+                contact-intake.ts、bukken は property-intake.ts の4ロケール直書きを参照 */}
+            {categoryKeys.map((key) => (
+              <option key={key} value={key}>
+                {categoryLabelOf(key)}
+              </option>
+            ))}
           </select>
           {errors.category && <p className={errorClass}>{errors.category[0]}</p>}
+        </div>
+
+        {/* 2026-07-27：流入元（任意）。AI検索の効果を測るため「AIに聞いて」と
+            「検索結果」を分けている。必須にしない＝問い合わせの摩擦を増やさない */}
+        <div>
+          <label htmlFor="source" className="block text-sm font-medium">
+            {SOURCE_FIELD_LABEL[lang] ?? SOURCE_FIELD_LABEL.ja}
+          </label>
+          <select
+            id="source"
+            value={source}
+            onChange={(e) => setSource(e.target.value)}
+            className={inputClass}
+          >
+            <option value="">{SOURCE_PLACEHOLDER[lang] ?? SOURCE_PLACEHOLDER.ja}</option>
+            {SOURCE_OPTIONS.map((o) => (
+              <option key={o.value} value={o.value}>
+                {o.label[lang] ?? o.label.ja}
+              </option>
+            ))}
+          </select>
         </div>
 
         <div>
