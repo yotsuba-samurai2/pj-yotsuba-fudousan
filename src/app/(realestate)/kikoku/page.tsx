@@ -21,6 +21,7 @@ import { buildPageMetadata } from "@/lib/seo";
 import { RealestateServicePage, ReH2 } from "@/components/shared/RealestateServicePage";
 import { CannotHandle } from "@/components/shared/CannotHandle";
 import { InlineCtaProperty } from "@/components/shared/InlineCtaProperty";
+import { ArticleJsonLd } from "@/components/seo/ArticleJsonLd";
 
 // 冒頭の回答ブロック（H1直下・AIが最初に拾う位置）
 const JA_ANSWER_BLOCK =
@@ -90,6 +91,55 @@ const JA_ONLINE: { can: string; note: string }[] = [
   { can: "契約書類の電子交付・電子契約", note: "2022年5月施行の宅建業法改正で可能になりました。こちらも物件により異なります" },
 ];
 
+// §4-2（2026-07-27追記）現行の JA_SCHEDULE リストは残したうえで、手順×海外可否の早見表を足す。
+// 【週数について】仕様書の原表は「【__】週前」の6行だが、週単位の目安は現行本文にも根拠資料にも
+// 存在しないため、浦松指示（2026-07-27「週数は全行空欄のままでよい」）に従い**推測で埋めていない**。
+// 代わりに「時期」列には現行本文にある月単位のバケット（＝出典のある値）をそのまま移し替えた。
+// 週単位で確定したい場合は、ここを週表記に置き換える（3〜5行目は現行では「1か月前」に同居している）。
+const JA_STEP_TABLE: { when: string; what: string; abroad: string }[] = [
+  { when: "帰国の3か月前", what: "エリアと予算を決める／オンライン面談", abroad: "○" },
+  { when: "帰国の2か月前", what: "物件の絞り込み・オンライン内見", abroad: "○" },
+  { when: "帰国の1か月前", what: "入居申込・審査書類の準備", abroad: "○" },
+  { when: "帰国の1か月前", what: "賃貸借契約（電子契約または国際郵便）", abroad: "○" },
+  { when: "帰国の1か月前", what: "初期費用の送金", abroad: "○" },
+  { when: "帰国後14日以内", what: "転入届・鍵の受け取り", abroad: "✗（帰国後）" },
+];
+
+// §4-3（2026-07-27追記）海外在住時に「代わりになりうるもの」。
+// 可否は断定しない（保証会社の審査基準は非公開＝未検証）。表の見出しも「代わりになりうるもの」で止める。
+const JA_SHORUI_ALT: { normal: string; alt: string }[] = [
+  { normal: "住民票", alt: "在外公館発行の在留証明、または帰国後の転入を前提とした誓約" },
+  { normal: "印鑑証明書", alt: "在外公館発行の署名証明（サイン証明）" },
+  {
+    normal: "源泉徴収票・国内の収入証明",
+    alt: "赴任先の在職証明・給与明細、帰国後の内定通知／辞令",
+  },
+  { normal: "国内の連帯保証人", alt: "家賃債務保証会社の利用、または国内在住の親族" },
+];
+
+// §4-4（2026-07-27追記）この記事の根拠。2026-07-27に一次資料で条文・施行日を確認済み。
+//  ・住民基本台帳法22条1項＝「転入をした日から十四日以内」（e-Gov条文で原文確認）
+//  ・宅建業法35条8項・37条4項＝電磁的方法による提供（e-Gov条文）。施行日2022-05-18は国交省報道発表で確認
+//  ・署名証明が印鑑証明書に代わる書面であることは法務省ページで確認（外務省サイトは自動取得を拒否＝
+//    「在外公館における証明」自体の原文は未確認のため、法務省を併記している）
+const JA_KONKYO: { what: string; source: string }[] = [
+  { what: "帰国後の転入届の期限（14日以内）", source: "住民基本台帳法第22条第1項" },
+  {
+    what: "在留証明・署名証明の発給（署名証明は印鑑証明書に代わる書面）",
+    source:
+      "外務省「在外公館における証明」／法務省「外国に居住しているため印鑑証明書を取得することができない場合の取扱いについて」",
+  },
+  {
+    what: "賃貸借契約の電磁的方法による書面交付",
+    source:
+      "宅地建物取引業法第35条第8項・第37条第4項（2022年5月18日施行の改正により電子化が可能）",
+  },
+];
+
+/** 可視の最終更新日（型・第7条6）。ArticleJsonLd の dateModified と必ず同じ日付にする */
+const LAST_UPDATED_ISO = "2026-07-27";
+const LAST_UPDATED_JA = "2026年7月27日";
+
 const JA_GENCHI: string[] = [
   "周辺の音・においなど、映像では伝わらない環境",
   "日当たりと風通しの実際（時間帯による変化）",
@@ -119,6 +169,17 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function Page() {
   return (
+    <>
+      {/* 型・第7条6：dateModified を出力し、本文冒頭の「最終更新」と同じ日付を持たせる。
+          Person は @id 参照1つのみ（ArticleJsonLd の author）＝Personノードを増やさない。 */}
+      <ArticleJsonLd
+        businessKey="realestate"
+        title="海外赴任からの本帰国｜東京の住まいを帰国前にオンラインで決める"
+        description="本帰国後の住まいは、海外にいるうちに決められます。住民票がなく国内の収入実績もない状態での賃貸審査、オンライン内見とIT重説、帰国日からの逆算スケジュールをまとめました。"
+        path="/kikoku"
+        datePublished="2026-07-25"
+        dateModified={LAST_UPDATED_ISO}
+      />
     <RealestateServicePage
       path="/kikoku"
       answerBlock={JA_ANSWER_BLOCK}
@@ -133,13 +194,24 @@ export default async function Page() {
       // property-general は「住まいでも、店舗・オフィスなどの事業用でも」で受け分ける。
       ctaVariant="property-general"
       lead={
-        <p>
-          「帰任の内示が出たが、日本に行けるのは着任の直前」——本帰国の住まい探しは、<strong>まだ海外にいるうちに、日本の物件を決めきる</strong>必要があります。しかも住民票はまだなく、国内での収入実績も示せない。このページでは、<strong>帰国日からの逆算</strong>と、<strong>審査で先に整理しておくこと</strong>を解説します。
-        </p>
+        <>
+          <p>
+            「帰任の内示が出たが、日本に行けるのは着任の直前」——本帰国の住まい探しは、<strong>まだ海外にいるうちに、日本の物件を決めきる</strong>必要があります。しかも住民票はまだなく、国内での収入実績も示せない。このページでは、<strong>帰国日からの逆算</strong>と、<strong>審査で先に整理しておくこと</strong>を解説します。
+          </p>
+          {/* §4-5 相互リンク：出る（/kaigai-owner）→持ち続ける→戻る（/kikoku）→来る（/funin）の回遊を閉じる */}
+          <p className="mt-3">
+            まだ海外にお住まいで、<strong>日本の家を貸すか売るか</strong>で迷っている方は
+            <Link href="/kaigai-owner" className="text-primary underline">〈海外に住んだまま、日本の家をどうするか〉</Link>
+            をご覧ください。
+          </p>
+          <p className="mt-3 text-sm text-text-muted">最終更新：{LAST_UPDATED_JA}</p>
+        </>
       }
       internalLinks={[
         { href: "/services", label: "賃貸・売買・管理" },
         { href: "/access", label: "アクセス・ご相談" },
+        // 2026-07-27：非居住者オーナーのピラー（定点#32）。帰国前に「貸す／売る」を迷う読者の受け皿。
+        { href: "/kaigai-owner", label: "海外に住んだまま日本の家を貸す・管理する" },
         { href: "/souzoku", label: "文京区で不動産を相続したら｜完全ガイド" },
         { href: "/ryokin", label: "料金のご案内" },
         { href: "/contact", label: "お問い合わせ" },
@@ -178,6 +250,32 @@ export default async function Page() {
         <p className="mt-3 leading-relaxed text-text">
           いちばん詰まりやすいのは<strong className="text-ink">2か月前</strong>です。物件は動きが早く、良い部屋ほど1か月以上先の入居を待ってもらえません。逆に早すぎると、入居日までの空家賃が発生します。この見極めは、エリアの動きを見ている業者でないと難しいところです。
         </p>
+
+        {/* §4-2 手順×海外可否の早見表（現行リストは上に残したまま追加） */}
+        <p className="mt-6 font-medium text-ink">どこまで海外から進められるか（早見表）</p>
+        <div className="mt-2 overflow-x-auto">
+          <table className="w-full border-collapse text-sm">
+            <thead>
+              <tr className="bg-primary-tint text-left">
+                <th className="border border-border px-3 py-2">時期</th>
+                <th className="border border-border px-3 py-2">やること</th>
+                <th className="border border-border px-3 py-2">海外からできるか</th>
+              </tr>
+            </thead>
+            <tbody className="text-text">
+              {JA_STEP_TABLE.map((s) => (
+                <tr key={s.what}>
+                  <td className="border border-border px-3 py-2 whitespace-nowrap">{s.when}</td>
+                  <td className="border border-border px-3 py-2">{s.what}</td>
+                  <td className="border border-border px-3 py-2 whitespace-nowrap">{s.abroad}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p className="mt-2 text-xs text-text-muted">
+          転入届は、転入をした日から14日以内に届け出ることとされています（住民基本台帳法第22条第1項）。
+        </p>
       </div>
 
       {/* 中間CTA（高意欲の瞬間） */}
@@ -197,6 +295,29 @@ export default async function Page() {
             </li>
           ))}
         </ul>
+        {/* §4-3 書類の代替表。何が代わりになりうるかを表で示す（可否は断定しない） */}
+        <p className="mt-6 font-medium text-ink">通常求められる書類と、海外在住時に代わりになりうるもの</p>
+        <div className="mt-2 overflow-x-auto">
+          <table className="w-full border-collapse text-sm">
+            <thead>
+              <tr className="bg-primary-tint text-left">
+                <th className="border border-border px-3 py-2">通常求められる書類</th>
+                <th className="border border-border px-3 py-2">海外在住時に代わりになりうるもの</th>
+              </tr>
+            </thead>
+            <tbody className="text-text">
+              {JA_SHORUI_ALT.map((s) => (
+                <tr key={s.normal}>
+                  <td className="border border-border px-3 py-2 whitespace-nowrap">{s.normal}</td>
+                  <td className="border border-border px-3 py-2">{s.alt}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p className="mt-3 leading-relaxed text-text">
+          <strong className="text-ink">どの組み合わせで通るかは、貸主と保証会社によって異なります。</strong>保証会社の審査基準は公開されていないため、当社が可否をお約束することはできません。<strong className="text-ink">申し込む前に、貸主・保証会社へ代替書類で差し支えないかを確認したうえで進めます。</strong>確認の結果、別の書類を求められた場合は、取得の段取りからご一緒します。
+        </p>
         <p className="mt-3 leading-relaxed text-text">
           四葉不動産株式会社は、これらを先に整理したうえで、貸主・保証会社への説明まで一緒に準備します。
         </p>
@@ -255,8 +376,38 @@ export default async function Page() {
         </p>
       </div>
 
+      {/* §4-4 この記事の根拠（型・第7条4） */}
+      <div>
+        <ReH2>この記事の根拠</ReH2>
+        <div className="mt-4 overflow-x-auto">
+          <table className="w-full border-collapse text-sm">
+            <thead>
+              <tr className="bg-primary-tint text-left">
+                <th className="border border-border px-3 py-2">内容</th>
+                <th className="border border-border px-3 py-2">根拠</th>
+              </tr>
+            </thead>
+            <tbody className="text-text">
+              {JA_KONKYO.map((k) => (
+                <tr key={k.what}>
+                  <td className="border border-border px-3 py-2">{k.what}</td>
+                  <td className="border border-border px-3 py-2">{k.source}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p className="mt-3 leading-relaxed text-text">
+          <strong className="text-ink">未検証事項：</strong>家賃債務保証会社の審査基準は公開されていないため、本ページでは審査の可否を断定していません。IT重説・電子契約の可否も、制度上は可能でも物件・貸主によって分かれます。
+        </p>
+        <p className="mt-3 leading-relaxed text-text">
+          本ページは一般的な情報提供です。住まいの媒介は四葉不動産株式会社（宅地建物取引業 東京都知事(1)第113304号）、書類の作成・認証手続きの代行は四葉行政書士事務所が、<strong className="text-ink">それぞれ別の契約</strong>としてお受けします。登記は司法書士、税務は税理士、紛争は弁護士の業務です。
+        </p>
+      </div>
+
       {/* 対応できないこと＝共通コンポーネント（確定文言） */}
       <CannotHandle bare />
     </RealestateServicePage>
+    </>
   );
 }

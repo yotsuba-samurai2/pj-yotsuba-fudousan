@@ -32,12 +32,14 @@ import Link from "next/link";
 import { buildPageMetadata } from "@/lib/seo";
 import { RealestateServicePage, ReH2 } from "@/components/shared/RealestateServicePage";
 import { CannotHandle } from "@/components/shared/CannotHandle";
+import { ArticleJsonLd } from "@/components/seo/ArticleJsonLd";
 // 中間CTA（InlineCtaProperty）は本ページでは使わない：同部品のコピーは2種とも
 // 「条件をお預けいただければ物件をお探しします」＝これから借りる／買う人向けで、
 // 本ページの読者（すでに日本の物件を所有している非居住者）と噛み合わないため。
 // 末尾の CtaBand（variant="property-general" / intent="management"）で受ける。
 
-/** 可視の最終更新日（型・第7条6：dateModified の可視表示） */
+/** 可視の最終更新日（型・第7条6）。ArticleJsonLd の dateModified と必ず同じ日付にする */
+const LAST_UPDATED_ISO = "2026-07-27";
 const LAST_UPDATED = "2026年7月27日";
 
 // 冒頭の回答ブロック（H1直下・AIが最初に拾う位置）
@@ -144,6 +146,17 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function Page() {
   return (
+    <>
+      {/* 型・第7条6：dateModified を出力し、本文冒頭の「最終更新」と同じ日付を持たせる。
+          Person は @id 参照1つのみ（ArticleJsonLd の author）＝Personノードを増やさない。 */}
+      <ArticleJsonLd
+        businessKey="realestate"
+        title="海外に住んだまま、日本の家をどうするか｜納税管理人と20.42%の源泉徴収"
+        description="海外赴任・海外移住で日本を離れたあと、日本の不動産を貸す・管理する・納税管理人を決めるまでの判断材料。家賃から20.42%が源泉徴収される条件を早見表で整理します。"
+        path="/kaigai-owner"
+        datePublished={LAST_UPDATED_ISO}
+        dateModified={LAST_UPDATED_ISO}
+      />
     <RealestateServicePage
       path="/kaigai-owner"
       answerBlock={JA_ANSWER_BLOCK}
@@ -366,5 +379,6 @@ export default async function Page() {
       {/* 対応できないこと＝共通コンポーネント（確定文言） */}
       <CannotHandle bare />
     </RealestateServicePage>
+    </>
   );
 }
