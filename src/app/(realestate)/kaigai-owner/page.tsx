@@ -169,8 +169,9 @@ export default async function Page() {
       ctaIntent="management"
       lead={
         <>
+          {/* answerBlock（H1直下）と同じ文を繰り返さないこと。ここは読者の状況と本文の射程を書く */}
           <p>
-            海外赴任や海外移住で日本を離れ、日本の不動産を持ち続ける場合、決めることは3つです。<strong>①貸すのか空けておくのか ②誰が日本側の窓口になるのか ③納税管理人を誰にするのか。</strong>
+            「日本を離れるが、家は残す」——そう決めた時点から、<strong>持ち主が国内にいない前提で回る仕組み</strong>に切り替える必要があります。家賃から税金が先に引かれ、税務署からの書類は国内の誰かが受け取り、庭木や郵便物の異変は誰も知らせてくれない。このページでは、<strong>貸すか空けておくかの判断</strong>と、<strong>日本側の窓口をどう置くか</strong>を解説します。
           </p>
           <p className="mt-3">
             <Link href="/column/overseas-owners-guide-japan-real-estate-sale" className="text-primary underline">
