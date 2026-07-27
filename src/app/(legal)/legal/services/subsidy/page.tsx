@@ -213,6 +213,7 @@ export default async function Page() {
     <LegalServicePage
       slug="subsidy"
       crumbLabel={c.crumbLabel}
+      ctaIntent="subsidy"
       serviceName="補助金の事業計画作成・申請支援"
       heroAlt={c.heroAlt}
       h1={c.h1}

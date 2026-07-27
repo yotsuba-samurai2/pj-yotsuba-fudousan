@@ -76,6 +76,11 @@ export type RealestateServicePageProps = {
    * "property-gh"=GH向け（jaのみ・他ロケールはテナント既定）。文言解決はCtaBand内部で行う。
    */
   ctaVariant?: CtaBandVariant;
+  /**
+   * CTAの相談カテゴリプリセット（2026-07-27）。CtaBandのintentへそのまま渡す。
+   * 値は contact-intake.ts の CATEGORY_ORDER_BY_BUSINESS.realestate のキー。
+   */
+  ctaIntent?: string;
   children: ReactNode;
 };
 
@@ -186,7 +191,7 @@ export async function RealestateServicePage(p: RealestateServicePageProps) {
       </article>
 
       <div className="mx-auto max-w-3xl px-4">
-        <CtaBand businessKey="realestate" variant={p.ctaVariant} />
+        <CtaBand businessKey="realestate" variant={p.ctaVariant} intent={p.ctaIntent} />
       </div>
     </>
   );

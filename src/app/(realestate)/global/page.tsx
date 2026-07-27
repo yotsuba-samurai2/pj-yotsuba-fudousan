@@ -902,6 +902,9 @@ export default async function Page() {
       authorLabel={c.authorLabel}
       authorBio={c.authorBio}
       ctaVariant="property-general"
+      // 2026-07-27：条件テンプレ（住まい／事業用の受け分け）はそのまま活かし、
+      // 着地カテゴリだけ「外国人のお部屋探し・多言語対応」にする。
+      ctaIntent="foreign-housing"
     >
       {/* ─── 既存の物件探し導線（回答ファースト Q&A・不変） ─── */}
       <div>

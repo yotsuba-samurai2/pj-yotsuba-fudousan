@@ -825,8 +825,13 @@ export default async function SouzokuPageContent() {
               <MessageCircle size={16} />
               {c.ctaLine}
             </a>
+            {/* 2026-07-27：?intent=souzoku ＝フォームの相談内容に
+                「相続した不動産のこと（貸す・売る・活用する）」をプリセットする。
+                このページはAIモード#2で筆頭引用を取れている最大の入口なので、
+                着地後に「その他」を選ばせない。LocaleLinkがロケール接頭辞を付与し、
+                クエリはそのまま保持される（addLocalePrefixは前方に付けるだけ）。 */}
             <Link
-              href="/contact"
+              href="/contact?intent=souzoku"
               className="cta-gradient-outline inline-flex items-center gap-2 rounded-md px-10 py-4 text-sm font-semibold transition-all duration-200 hover:brightness-110"
             >
               {c.ctaContact}

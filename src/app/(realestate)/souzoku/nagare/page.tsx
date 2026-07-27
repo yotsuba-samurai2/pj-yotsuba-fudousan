@@ -454,7 +454,7 @@ export default async function Page() {
       </article>
 
       <div className="mx-auto max-w-3xl px-4">
-        <CtaBand businessKey="realestate" />
+        <CtaBand businessKey="realestate" intent="souzoku" />
       </div>
     </>
   );

@@ -343,6 +343,7 @@ export default async function Page() {
     <LegalServicePage
       slug="visa"
       crumbLabel={c.crumbLabel}
+      ctaIntent="visa"
       serviceName="在留資格・ビザ申請の取次・支援"
       heroAlt={c.heroAlt}
       h1={c.h1}
