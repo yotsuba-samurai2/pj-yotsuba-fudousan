@@ -218,6 +218,7 @@ export default async function Page() {
     <LegalServicePage
       slug="inheritance"
       crumbLabel={c.crumbLabel}
+      ctaIntent="souzoku-legal"
       serviceName="相続関係書類の作成・収集の支援"
       heroAlt={c.heroAlt}
       h1={c.h1}

@@ -276,7 +276,10 @@ export default async function Page() {
       heroSrc="/hero/realestate-global-16x9.webp"
       heroAlt={c.heroAlt}
       h1={c.h1}
-      ctaVariant="property"
+      // 2026-07-27：property（事業用寄り）から property-general へ。
+      // 赴任者の住まい探しに「居抜きかスケルトンか・業種（飲食など）」を聞くのは筋が違う。
+      // property-general は4ロケールあり、ja＋zh-twの本ページをそのまま賄える。
+      ctaVariant="property-general"
       lead={c.lead}
       internalLinks={c.links.map((x) => ({ href: addLocalePrefix(x.href, locale), label: x.label, noLocalePrefix: true }))}
       crossLinkLead={c.crossLead}

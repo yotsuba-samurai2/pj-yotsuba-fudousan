@@ -80,9 +80,23 @@ type Props = {
   subtext?: string;
   /** CTA帯バリアント（2026-07-24）。省略時は従来のテナント既定 */
   variant?: CtaBandVariant;
+  /**
+   * お問い合わせフォームの相談カテゴリをプリセットするキー（2026-07-27）。
+   * 値は contact-intake.ts の CATEGORY_ORDER_BY_BUSINESS のキー。
+   * 当該フォームに出さないキーはフォーム側が無視する（存在しない選択肢を選ばせない）ため、
+   * 誤値を渡しても壊れず「未選択」に落ちるだけ。
+   * variant と併用した場合は本propが優先する（本文テンプレの挿入は variant 側のまま活かす）。
+   */
+  intent?: string;
 };
 
-export async function CtaBand({ businessKey, heading, subtext, variant }: Props) {
+export async function CtaBand({
+  businessKey,
+  heading,
+  subtext,
+  variant,
+  intent: intentProp,
+}: Props) {
   const locale = await getRequestLocale();
   const t = TENANT[businessKey];
   const c = TENANT_CTA_I18N[businessKey][locale] ?? TENANT_CTA_I18N[businessKey].ja;
@@ -118,6 +132,11 @@ export async function CtaBand({ businessKey, heading, subtext, variant }: Props)
     template = PROPERTY_TEMPLATE_GH_JA;
     intent = "bukken-gh";
   }
+
+  // 2026-07-27：明示のintentはvariant由来より優先する。
+  // 例＝/global は property-general のテンプレ（住まい／事業用の受け分け）を活かしたまま、
+  // カテゴリだけ「外国人のお部屋探し・多言語対応」に着地させたい。
+  if (intentProp) intent = intentProp;
 
   const copyLabels = TEMPLATE_COPY_LABELS[locale] ?? TEMPLATE_COPY_LABELS.ja;
   const lead = subtext ?? vLead ?? c.ctaLead;

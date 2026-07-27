@@ -40,6 +40,15 @@ export type LegalServicePageProps = {
    * 文言解決はCtaBand内部で行う。
    */
   ctaVariant?: CtaBandVariant;
+  /**
+   * CTAの相談カテゴリプリセット（2026-07-27）。CtaBandのintentへそのまま渡す。
+   * 値は contact-intake.ts の CATEGORY_ORDER_BY_BUSINESS.legal のキー。
+   */
+  ctaIntent?: string;
+  /** CTA見出しの上書き（2026-07-27）。省略時はvariant→テナント既定 */
+  ctaHeading?: string;
+  /** CTAリード文の上書き（2026-07-27）。省略時はvariant→テナント既定 */
+  ctaSubtext?: string;
   children: ReactNode; // H2セクション群（疑問文H2＝表示のみ・FAQPageは/faq専用）
 };
 
@@ -125,7 +134,13 @@ export async function LegalServicePage(p: LegalServicePageProps) {
       </article>
 
       <div className="mx-auto max-w-3xl px-4">
-        <CtaBand businessKey="legal" variant={p.ctaVariant} />
+        <CtaBand
+          businessKey="legal"
+          variant={p.ctaVariant}
+          intent={p.ctaIntent}
+          heading={p.ctaHeading}
+          subtext={p.ctaSubtext}
+        />
       </div>
     </>
   );

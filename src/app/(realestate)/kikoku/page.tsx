@@ -127,7 +127,11 @@ export default async function Page() {
       heroSrc="/hero/realestate-global-16x9.webp"
       heroAlt="日本へ戻る住まい探しのイメージ"
       h1="海外赴任からの本帰国 —— 東京の住まいを、帰国前に決める"
-      ctaVariant="property"
+      // 2026-07-27：property（事業用寄り）から property-general へ。
+      // property のリードは「居抜きかスケルトンか、業種（飲食など）」＝店舗向けで、
+      // 本帰国者の住まい探しというこのページの主語と合っていなかった。
+      // property-general は「住まいでも、店舗・オフィスなどの事業用でも」で受け分ける。
+      ctaVariant="property-general"
       lead={
         <p>
           「帰任の内示が出たが、日本に行けるのは着任の直前」——本帰国の住まい探しは、<strong>まだ海外にいるうちに、日本の物件を決めきる</strong>必要があります。しかも住民票はまだなく、国内での収入実績も示せない。このページでは、<strong>帰国日からの逆算</strong>と、<strong>審査で先に整理しておくこと</strong>を解説します。

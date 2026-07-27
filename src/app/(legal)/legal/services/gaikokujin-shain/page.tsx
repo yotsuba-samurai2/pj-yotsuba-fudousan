@@ -112,6 +112,7 @@ export default async function Page() {
     <LegalServicePage
       slug="gaikokujin-shain"
       crumbLabel="外国人社員の受け入れ（企業向け）"
+      ctaIntent="gaikokujin-shain"
       serviceName="外国人社員の受け入れに関する書類作成および認証手続きの代行"
       heroSrc="/hero/legal-visa-16x9.webp"
       heroAlt="海外から社員を迎える企業のイメージ"

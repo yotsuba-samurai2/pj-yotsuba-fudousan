@@ -880,7 +880,7 @@ export default async function Page() {
 
       {/* CTA帯（LINE主CTA） */}
       <div className="mx-auto max-w-3xl px-4">
-        <CtaBand businessKey="legal" />
+        <CtaBand businessKey="legal" intent="shogai-fukushi" />
       </div>
     </>
   );

@@ -728,6 +728,7 @@ export default async function Page() {
       heroSrc="/hero/realestate-group-home-16x9.webp"
       heroAlt={c.heroAlt}
       h1={c.h1}
+      ctaIntent="akiya"
       lead={
         <p>
           {c.lead.pre}
