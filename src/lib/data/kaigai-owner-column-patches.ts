@@ -26,6 +26,13 @@ export type ColumnTextPatch = {
   find: string;
   replace: string;
   count: number;
+  /**
+   * 適用済み判定に使う「挿入後にだけ存在する一意な文字列」。
+   * 【重要】replace が find を含む形（見出しを残して後ろに足す等）のパッチでは、適用後も find が
+   * 残るため「find の出現数」では適用済みを判定できず、押すたびに重複挿入される。
+   * 2026-07-27 に本番で ① が6回・③ が5回重複したのはこれが原因。marker で必ず判定すること。
+   */
+  marker: string;
   /** 管理画面に出す説明 */
   label: string;
 };
@@ -41,6 +48,7 @@ const SUMMARY_PATCHES: ColumnTextPatch[] = [
     replace:
       "## 📋 この記事の要約\n\n本記事は**売却**の手法比較です。**売らずに貸す・持ち続ける**場合の源泉徴収と納税管理人については[海外に住んだまま、日本の家をどうするか](/kaigai-owner)をご覧ください。\n",
     count: 1,
+    marker: "本記事は**売却**の手法比較です。",
     label: "ja ①要約に /kaigai-owner への導線を追加",
   },
   {
@@ -49,6 +57,7 @@ const SUMMARY_PATCHES: ColumnTextPatch[] = [
     replace:
       "## 📋 Article Summary\n\nThis article compares methods of **selling**. If you are **keeping the property and renting it out instead**, see [Owning a Japanese home while living abroad](/kaigai-owner) for withholding tax and tax representatives.\n",
     count: 1,
+    marker: "This article compares methods of **selling**.",
     label: "en ①要約に /kaigai-owner への導線を追加",
   },
   {
@@ -57,6 +66,7 @@ const SUMMARY_PATCHES: ColumnTextPatch[] = [
     replace:
       "## 📋 本文摘要\n\n本文比較的是**出售**的手法。若您**不出售、而是出租或繼續持有**,租金的源泉徵收與納稅管理人請見[人在海外,日本的房子該怎麼辦](/kaigai-owner)。\n",
     count: 1,
+    marker: "本文比較的是**出售**的手法。",
     label: "zh-tw ①要約に /kaigai-owner への導線を追加",
   },
   {
@@ -65,6 +75,7 @@ const SUMMARY_PATCHES: ColumnTextPatch[] = [
     replace:
       "## 📋 本文摘要\n\n本文比较的是**出售**的手法。若您**不出售、而是出租或继续持有**,租金的源泉征收与纳税管理人请见[人在海外,日本的房子该怎么办](/kaigai-owner)。\n",
     count: 1,
+    marker: "本文比较的是**出售**的手法。",
     label: "zh ①要約に /kaigai-owner への導線を追加",
   },
 ];
@@ -98,6 +109,7 @@ const FACT4_PATCHES: ColumnTextPatch[] = [
 
 売らずに貸す・持ち続ける場合の納税管理人と、家賃にかかる20.42%の源泉徴収は、[海外に住んだまま、日本の家をどうするか](/kaigai-owner)にまとめています。`,
     count: 1,
+    marker: "**納税管理人になること自体に資格の制限はありません。**",
     label: "ja ②事実4に比較表を追加＋独占業務の整理（行政書士が申告書提出を代行と読める記述の是正）",
   },
   {
@@ -123,6 +135,7 @@ Typically filled by a certified Administrative Scrivener (Gyoseishoshi), a tax a
 
 If you plan to keep and rent out the property rather than sell, see [Owning a Japanese home while living abroad](/kaigai-owner) for the 20.42% withholding on rent and for Tax Representatives.`,
     count: 1,
+    marker: "**There is no professional qualification requirement to serve as a Tax Representative.**",
     label: "en ②事実4に比較表を追加＋独占業務の整理",
   },
   {
@@ -148,6 +161,7 @@ If you plan to keep and rent out the property rather than sell, see [Owning a Ja
 
 若不出售而是出租或繼續持有,租金的20.42%源泉徵收與納稅管理人,整理於[人在海外,日本的房子該怎麼辦](/kaigai-owner)。`,
     count: 1,
+    marker: "**擔任納稅管理人本身沒有資格限制。**",
     label: "zh-tw ②事実4に比較表を追加＋独占業務の整理",
   },
   {
@@ -173,6 +187,7 @@ If you plan to keep and rent out the property rather than sell, see [Owning a Ja
 
 若不出售而是出租或继续持有,租金的20.42%源泉征收与纳税管理人,整理于[人在海外,日本的房子该怎么办](/kaigai-owner)。`,
     count: 1,
+    marker: "**担任纳税管理人本身没有资格限制。**",
     label: "zh ②事実4に比較表を追加＋独占業務の整理",
   },
 ];
@@ -185,6 +200,7 @@ const FACT1_PATCHES: ColumnTextPatch[] = [
     replace:
       "非居住者が日本不動産を売却する際、**買主が売却代金の10.21%を源泉徴収して税務署に納付する義務**があります。\n\nなお、**売却時は10.21%(譲渡対価)、賃貸時は20.42%(賃料)**と、税率も根拠条文も別の制度です。混同されやすいところです。",
     count: 1,
+    marker: "なお、**売却時は10.21%(譲渡対価)、賃貸時は20.42%(賃料)**と",
     label: "ja ③事実1に 10.21%／20.42% の対比を追加",
   },
   {
@@ -193,6 +209,7 @@ const FACT1_PATCHES: ColumnTextPatch[] = [
     replace:
       "When a non-resident sells Japanese real estate, **the buyer is obligated to withhold 10.21% of the sale proceeds and remit it directly to the tax office**.\n\nNote that **10.21% applies to sale proceeds, while 20.42% applies to rent** — different rates under different provisions. The two are easily confused.",
     count: 1,
+    marker: "Note that **10.21% applies to sale proceeds, while 20.42% applies to rent**",
     label: "en ③事実1に 10.21%／20.42% の対比を追加",
   },
   {
@@ -201,6 +218,7 @@ const FACT1_PATCHES: ColumnTextPatch[] = [
     replace:
       "非居住者出售日本不動產時,**買主有義務從售價中源泉徵收10.21%並直接繳納給稅務署**。\n\n另外,**出售時為10.21%(讓渡對價)、出租時為20.42%(租金)**,稅率與依據條文都是不同的制度,容易混淆。",
     count: 1,
+    marker: "另外,**出售時為10.21%(讓渡對價)、出租時為20.42%(租金)**",
     label: "zh-tw ③事実1に 10.21%／20.42% の対比を追加",
   },
   {
@@ -209,6 +227,7 @@ const FACT1_PATCHES: ColumnTextPatch[] = [
     replace:
       "非居住者出售日本不动产时,**买方有义务从售价中源泉征收10.21%并直接缴纳给税务署**。\n\n另外,**出售时为10.21%(让渡对价)、出租时为20.42%(租金)**,税率与依据条文都是不同的制度,容易混淆。",
     count: 1,
+    marker: "另外,**出售时为10.21%(让渡对价)、出租时为20.42%(租金)**",
     label: "zh ③事実1に 10.21%／20.42% の対比を追加",
   },
 ];
@@ -241,3 +260,33 @@ export const KAIGAI_OWNER_SCAN_TERMS: string[] = [
   "one-stop",
   "One-stop",
 ];
+
+/**
+ * 【重複除去】2026-07-27、①③に marker が無く find ベースで適用済み判定していたため、本番で
+ * 「適用」を押すたびに追記が重ねて挿入された（ja: ①6回・③5回）。
+ *
+ * replace が find で始まるパッチでは、**繰り返し挿入される単位は replace.slice(find.length)**
+ * であり、重複は必ず連続して並ぶ。ブロックを手書きすると改行数を間違えるため、
+ * ここではパッチ定義から機械的に導出する。
+ */
+export function repeatedUnitOf(p: ColumnTextPatch): string | null {
+  return p.replace.startsWith(p.find) ? p.replace.slice(p.find.length) : null;
+}
+
+/** 連続した重複を1つに畳む（冪等）。戻り値＝[畳んだ後の文字列, 除去した個数] */
+export function collapseRepeats(body: string, block: string): [string, number] {
+  if (!block) return [body, 0];
+  let out = body;
+  let removed = 0;
+  while (out.includes(block + block)) {
+    const before = out;
+    out = out.split(block + block).join(block);
+    removed += (before.length - out.length) / block.length;
+    if (removed > 200) break; // 無限ループ保険
+  }
+  return [out, Math.round(removed)];
+}
+
+/** 重複除去の対象＝replace が find で始まる（＝再適用で積み上がる）パッチのみ */
+export const KAIGAI_OWNER_DEDUPE_PATCHES: ColumnTextPatch[] =
+  KAIGAI_OWNER_COLUMN_PATCHES.filter((p) => repeatedUnitOf(p) !== null);
