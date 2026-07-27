@@ -112,6 +112,9 @@ const COPY: Partial<Record<LangCode, Copy>> = {
       post: "の選び方、遠方にお住まいの方の進め方を解説します。",
     },
     internalLinks: [
+      // 2026-07-27：エリア別ページ（レーンB）。ja本文のみ＝町名ページはja先行公開のため他ロケールは対象外。
+      // 2本目以降が出たら「エリア別のご相談」の独立ブロックへ切り出す（仕様書§3-3）。
+      { href: "/souzoku/akiya/koishikawa", label: "小石川の空き家" },
       { href: "/souzoku", label: "文京区で不動産を相続したら｜完全ガイド" },
       { href: "/souzoku/nagare", label: "売却までの流れ" },
       { href: "/toushi/group-home", label: "グループホームに使える物件探し" },

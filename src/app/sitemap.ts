@@ -107,6 +107,9 @@ const STATIC_REALESTATE: StaticPage[] = [
   // 2026-07-27：非居住者オーナー（定点#32の対応ページ）。ja先行公開。
   // 主語は「非居住者であること」＝/kikoku（戻る）・/funin（来る）・売却コラム（売る）と読者が別。
   { path: "/kaigai-owner", changeFrequency: "monthly", priority: 0.8, locales: ["ja"] },
+  // 2026-07-27：地名×空き家の1本目（レーンB）。ja先行公開・akiyaクラスタの子。
+  // 誘導ページ化を避けるため段階実装：本ページを2測定で判定してから2本目以降に進む。
+  { path: "/souzoku/akiya/koishikawa", changeFrequency: "monthly", priority: 0.6, locales: ["ja"] },
   // 2026-07-22：台湾越境相続（#19）。ja先行公開・souzokuクラスタの子。2026-07-23 zh-tw追加。
   { path: "/souzoku/taiwan", changeFrequency: "monthly", priority: 0.7, locales: ["ja", "zh-tw"] },
   // 2026-07-25：中国語相続ハブ（#7）。ja先行公開・souzokuクラスタの子。ページ側 availableLocales:["ja"] と一致させる。
