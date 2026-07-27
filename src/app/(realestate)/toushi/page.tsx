@@ -75,6 +75,8 @@ const COPY: Record<LangCode, ToushiCopy> = {
       { href: "/toushi/shataku", label: "社宅・法人賃貸" },
       // 2026-07-24：定点#15強化（内部リンク補強）。ja本文のみ追加＝/officeはja先行公開のため他ロケールは対象外。
       { href: "/office", label: "会社設立とオフィス開設の完全ガイド" },
+      // 2026-07-27：定点#32（非居住者オーナー）強化。ja本文のみ追加＝/kaigai-ownerはja先行公開のため他ロケールは対象外。
+      { href: "/kaigai-owner", label: "非居住者オーナーの賃貸・管理" },
       { href: "/access", label: "アクセス・料金" },
     ],
     crossLinkLead:
