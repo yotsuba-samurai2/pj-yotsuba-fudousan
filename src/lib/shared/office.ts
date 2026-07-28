@@ -67,7 +67,10 @@ export const TENANT: Record<
     contactHref: "/labor/contact",
     hours: "", // 【要確認：浦松＝社労士事務所の営業時間】開業時確定まで空欄（未検証は出力しない）
     openingHours: [],
-    ctaHeading: "「人」の手続き、まとめて整理しませんか。",
+    // 2026-07-29：旧「「人」の手続き、まとめて整理しませんか。」から変更。
+    // 「まとめて」は業務の一体提供を示唆する語（yotsuba-sharoushi-kaigyo 第6条）で、
+    // 4ロケール版（TENANT_CTA_I18N.labor.ja）もこの値を参照するため1か所の修正で全言語に効く。
+    ctaHeading: "「人」のことから、整理しませんか。",
     ctaLead:
       "四葉社会保険労務士事務所（文京区小日向・東京メトロ丸ノ内線「茗荷谷」駅 徒歩5分）が、労務の現状整理からお手伝いします。",
   },

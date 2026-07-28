@@ -112,11 +112,16 @@ export default async function LaborTopPage() {
           </div>
         </section>
 
-        {/* 四葉グループとの連携（原稿#1・独立受任注記＝3者版） */}
+        {/* 3つの事務所の役割分担（2026-07-29改訂）
+            旧「四葉グループとの連携」＋「開設から運営までを見通した相談ができます」は
+            業務の一体提供を示唆する（yotsuba-sharoushi-kaigyo 第6条）。
+            見出しから「連携」を外し、本文を分離受任の明示に置き換えた。 */}
         <section className="mt-10 rounded-2xl border border-border bg-surface p-5">
-          <h2 className="font-serif text-lg font-semibold text-ink">四葉グループとの連携</h2>
+          <h2 className="font-serif text-lg font-semibold text-ink">
+            どの事務所が、何を担いますか？
+          </h2>
           <p className="mt-2 text-sm leading-relaxed text-text">
-            障害福祉事業の立ち上げは、<strong>物件（四葉不動産株式会社）→ 指定申請（四葉行政書士事務所）→ 労務（当事務所）</strong>の順に進みます。四葉はこの3つを関連事業として持つため、開設から運営までを見通した相談ができます。
+            障害福祉事業の立ち上げには、<strong>物件・指定申請・労務</strong>の3つが必要になります。物件は四葉不動産株式会社、指定申請の書類作成は四葉行政書士事務所、労務は当事務所が、<strong>それぞれ別の契約で</strong>受任します。必要な部分だけをご依頼いただけますし、他の部分を他社にご依頼いただいても差し支えありません。
           </p>
           <p className="mt-2 text-sm">
             →{" "}
@@ -132,6 +137,55 @@ export default async function LaborTopPage() {
             ※四葉不動産株式会社・四葉行政書士事務所・四葉社会保険労務士事務所は、それぞれ別の事業体として独立してご依頼をお受けします（紹介料等の授受はありません）。
           </p>
         </section>
+
+        {/* 対応できないこと（2026-07-29追加・指示書11の必須セクション）
+            「提携税理士」等と書かない＝書面での提携の有無が未確認（U12）。「ご紹介します」にとどめる。 */}
+        <section className="mt-10">
+          <h2 className="font-serif text-lg font-semibold text-ink">
+            当事務所が取り扱わないことは何ですか？
+          </h2>
+          <ul className="mt-3 space-y-2 text-sm leading-relaxed text-text">
+            <li>
+              <strong>税務の申告・税務代理・税務相談</strong>
+              （税理士の業務）——取り扱っておりません。ご希望があれば税理士をご紹介します（紹介料の授受はありません）
+            </li>
+            <li>
+              <strong>登記</strong>
+              （司法書士の業務）——取り扱っておりません。ご希望があれば司法書士をご紹介します（同上）
+            </li>
+            <li>
+              <strong>紛争性のある事案の代理・法律相談</strong>
+              （弁護士の業務）——取り扱っておりません。ご希望があれば弁護士をご紹介します（同上）
+            </li>
+            <li>
+              <strong>在留資格の申請取次</strong>
+              （行政書士の業務）——四葉行政書士事務所が別の契約で承ります
+            </li>
+            <li>
+              <strong>不動産の媒介・賃貸管理</strong>
+              （宅地建物取引業）——四葉不動産株式会社が別の契約で承ります
+            </li>
+          </ul>
+        </section>
+
+        {/* 料金の考え方（2026-07-29追加・指示書11の必須セクション。金額は書かない） */}
+        <section className="mt-10">
+          <h2 className="font-serif text-lg font-semibold text-ink">料金はどう決まりますか？</h2>
+          <p className="mt-3 text-sm leading-relaxed text-text">
+            業務の範囲と事業所の規模により異なるため、お見積りをお示しします。四葉不動産株式会社・四葉行政書士事務所の料金とは
+            <strong>別建て</strong>
+            です。合算したご請求や、複数の事務所へご依頼いただいたことによるお値引きはありません。
+          </p>
+          <p className="mt-2 text-sm">
+            <Link href={addLocalePrefix("/labor/ryokin", locale)} className="text-primary underline">
+              料金のご案内
+            </Link>
+          </p>
+        </section>
+
+        <p className="mt-10 text-xs leading-relaxed text-text-muted">
+          本ページは一般的な情報提供です。個別の事案については、資格者による確認を経てご案内します。
+        </p>
 
         {/* 導線 */}
         <nav aria-label="サイト内導線" className="mt-10 flex flex-wrap gap-x-4 gap-y-1 text-sm text-primary">
