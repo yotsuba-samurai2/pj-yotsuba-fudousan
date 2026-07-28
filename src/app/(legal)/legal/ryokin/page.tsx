@@ -54,7 +54,7 @@ const COPY: Record<LangCode, RyokinCopy> = {
     colJitsuhi: "実費",
     toService: "→ 業務内容",
     sectionTitles: [
-      "障害福祉サービス（主力）",
+      "障害福祉サービス",
       "国際業務（在留資格・帰化・認証／中国語対応）",
       "会社設立・法人",
       "建設業・宅建業",
@@ -85,7 +85,7 @@ const COPY: Record<LangCode, RyokinCopy> = {
     colJitsuhi: "Disbursements",
     toService: "→ Service details",
     sectionTitles: [
-      "Disability-Welfare Services (Core Practice)",
+      "Disability-Welfare Services",
       "International Services (Residence Status, Naturalization, Authentication / Chinese Support)",
       "Company & Corporation Formation",
       "Construction & Real-Estate Business Licensing",
@@ -116,7 +116,7 @@ const COPY: Record<LangCode, RyokinCopy> = {
     colJitsuhi: "實費",
     toService: "→ 業務內容",
     sectionTitles: [
-      "障礙福祉服務（主力業務）",
+      "障礙福祉服務",
       "國際業務（在留資格・歸化・認證／中文對應）",
       "公司設立・法人",
       "建設業・宅建業（不動產業）",
@@ -147,7 +147,7 @@ const COPY: Record<LangCode, RyokinCopy> = {
     colJitsuhi: "实费",
     toService: "→ 业务内容",
     sectionTitles: [
-      "残障福祉服务（主力业务）",
+      "残障福祉服务",
       "国际业务（在留资格・归化・认证／中文对应）",
       "公司设立・法人",
       "建设业・宅建业（不动产业）",
@@ -180,10 +180,13 @@ type Section = { title: string; href?: string; rows: Row[]; hasJitsuhi?: boolean
 
 const SECTIONS: Section[] = [
   {
-    title: "障害福祉サービス（主力）",
+    // 2026-07-29 浦松指示：内部呼称の「（主力）」を削除（4言語とも）
+    title: "障害福祉サービス",
     href: "/legal/services/shogai-fukushi",
     rows: [
-      { name: "指定申請（通所系）フルサポート〔協議〜開業伴走〕", unit: "一式", price: "605,000円", value: 605000 },
+      // 2026-07-29：「開業伴走」は業務の一体提供を示唆する語（yotsuba-sharoushi-kaigyo 第6条）。
+      // 受任範囲を示す「事前協議から開業まで」へ置き換えた。
+      { name: "指定申請（通所系）フルサポート〔事前協議〜開業まで〕", unit: "一式", price: "605,000円", value: 605000 },
       { name: "指定申請（就労継続支援A型・B型）", unit: "1件", price: "440,000円", value: 440000 },
       { name: "指定申請（共同生活援助・グループホーム）", unit: "1件", price: "418,000円", value: 418000 },
       { name: "指定申請（通所系）スタンダード〔単独・顧問不要〕", unit: "1件", price: "385,000円", value: 385000 },
