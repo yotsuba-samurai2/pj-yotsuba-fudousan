@@ -34,6 +34,12 @@ const ROWS = [
     audience: "人員配置基準を踏まえた就業規則・シフト・社会保険手続きが必要な事業所",
   },
   {
+    // 2026-07-29 新設（指示書11「3. 障害福祉事業所の人員基準と労務」）
+    href: "/labor/services/jinin-kijun-roumu",
+    label: "障害福祉事業所の人員基準と労務",
+    audience: "常勤換算と就業規則の関係、兼務や体制変更の取り扱いを整理したい事業所",
+  },
+  {
     href: "/labor/services/joseikin",
     label: "雇用関係助成金の申請",
     audience: "キャリアアップ助成金等の受給を検討する事業者",
