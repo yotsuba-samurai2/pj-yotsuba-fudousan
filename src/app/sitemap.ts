@@ -131,6 +131,10 @@ const STATIC_REALESTATE: StaticPage[] = [
   // タスクC-5（2026-07-19）：相談事例（モデルケース）。現フェーズ＝ja先行公開（/ryokinと同方式）
   { path: "/jirei", changeFrequency: "monthly", priority: 0.7, locales: ["ja"] },
   { path: "/access", changeFrequency: "monthly", priority: 0.7 },
+  // 2026-07-28：相談先型クエリの受け皿。ja先行公開（多言語は指示書13で別途）。
+  // 正本＝Drive「四葉_社労士開業2026_サイト切替設計」設計書 §1-3・§2-A-2
+  { path: "/reasons", changeFrequency: "monthly", priority: 0.8, locales: ["ja"] },
+  { path: "/network", changeFrequency: "monthly", priority: 0.7, locales: ["ja"] },
   // タスクB-1（2026-07-19）：不動産・料金ページ。C-6-3（2026-07-19）で en/zh-tw/zh を公開＝locales指定を解除（全4ロケール）
   { path: "/ryokin", changeFrequency: "monthly", priority: 0.8 },
   { path: "/faq", changeFrequency: "monthly", priority: 0.6 },
