@@ -1,11 +1,13 @@
 // 翻訳チェック §J（DB翻訳値側）の一括是正パッチ（2026-07-20 浦松の翻訳チェック結果より）。
 //
 // 背景：修正シート §J のうち以下はソースコードではなく DB translation テーブル（4言語）側の値。
-//   - J5 /about（繁）資質 → 資格／證照
-//   - J6 /contact（繁）定休日 → 公休日
-//   - J7 フッター/住所（簡）「東」（繁/日字体）→ 东
-// これらは「ロケール限定＋キーパス・アンカー限定」の部分文字列置換で安全に是正できる。
-// find は誤り側の字体/語のみに一致し、既に正しい値には一致しない（冪等）。
+//   - J5 /about 資格見出し：繁「資質」→「資格／證照」／簡「资质」→「资格／证照」
+//   - J6 「定休日」→「公休日」（繁・簡）。/contact だけでなく /about 等にも残存＝辞書全体を横断。
+//   - J7 簡体の「東」字体 → 「东」（会社概要・宅建業法表示・住所・フッター等に横断的に残存）。
+//   - J8(DB) 簡体「行政書士事務所」→「行政书士事务所」（ブランド「四葉」は保持）。
+// 実機確認の結果、初版のキーパス・アンカー限定では取りこぼしがあったため、
+//   「そのロケールでは常に誤り」の性質を利用し pathIncludes を外して横断置換する（冪等）。
+// find は誤り側の字体/語のみに一致し、既に正しい値には一致しない。
 //
 // J4 /legal-notice（英）「専任」の誤訳（"Chief"）は legalNotice.items 配列内の値。現行値の細かな
 //   語形に依存しないよう whole モード（find を含むリーフの値全体を確定値へ）で是正。必ずプレビュー確認。
@@ -33,6 +35,9 @@ export type JPatch = {
   whole?: boolean;
 };
 
+// 注：本番実機で確認したところ、初版のアンカー（contact / address / footer 限定）は
+//   実際の格納キー（realestate.aboutPage.companyInfo・legalNotice.items 等）を取りこぼしていた。
+//   誤り表記は「そのロケールでは常に誤り」の性質のため、pathIncludes を外し（＝辞書全体）横断で是正する。
 export const J_PATCHES: JPatch[] = [
   {
     id: "J4",
@@ -44,37 +49,45 @@ export const J_PATCHES: JPatch[] = [
     replace: "Full-time (dedicated) Licensed Real Estate Transaction Specialist",
     whole: true,
   },
+  // J5：資格見出し。繁は是正済みでも簡（资质）が未是正のことがある＝両ロケール対象。
   {
-    id: "J5",
+    id: "J5-tw",
     label: "/about（繁）資格見出し「資質」→「資格／證照」",
     locale: "zh-tw",
-    pathIncludes: "realestate.aboutPage",
+    pathIncludes: "aboutPage",
     find: "資質",
     replace: "資格／證照",
   },
   {
-    id: "J6",
-    label: "/contact（繁）「定休日」→「公休日」",
-    locale: "zh-tw",
-    pathIncludes: "contact",
-    find: "定休日",
-    replace: "公休日",
-  },
-  {
-    id: "J7-address",
-    label: "住所（簡）「東」字体 → 「东」",
+    id: "J5-zh",
+    label: "/about（簡）資格見出し「资质」→「资格／证照」",
     locale: "zh",
-    pathIncludes: "address",
+    pathIncludes: "aboutPage",
+    find: "资质",
+    replace: "资格／证照",
+  },
+  // J6：定休日→公休日（繁の日本語表記是正）。/contact は是正済みでも /about 等に残存するため横断。
+  { id: "J6-tw", label: "（繁）「定休日」→「公休日」（全ページ横断）", locale: "zh-tw", pathIncludes: "", find: "定休日", replace: "公休日" },
+  { id: "J6-zh", label: "（簡）「定休日」→「公休日」（全ページ横断）", locale: "zh", pathIncludes: "", find: "定休日", replace: "公休日" },
+  // J7：簡体で「東」は常に誤り（东が正）。会社概要・宅建業法表示・住所・フッター等へ横断的に残存。
+  //   社名の漢字部（不動産・株式会社・四葉行政書士事務所 等）に「東」は含まれないため全キー横断で安全。
+  {
+    id: "J7",
+    label: "（簡）「東」字体 → 「东」（全キー横断）",
+    locale: "zh",
+    pathIncludes: "",
     find: "東",
     replace: "东",
   },
+  // J8(DB)：簡体の「行政書士事務所」→「行政书士事务所」（ブランド「四葉」は保持）。
+  //   シートJ8はコード側（souzoku/nagare）で是正済みだが、DB翻訳値にも同字体が残存していたため追加。
   {
-    id: "J7-footer",
-    label: "フッター（簡）「東京」→「东京」",
+    id: "J8",
+    label: "（簡）「行政書士事務所」→「行政书士事务所」（四葉は保持）",
     locale: "zh",
-    pathIncludes: "footer",
-    find: "東京",
-    replace: "东京",
+    pathIncludes: "",
+    find: "行政書士事務所",
+    replace: "行政书士事务所",
   },
 ];
 

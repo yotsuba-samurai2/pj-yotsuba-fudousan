@@ -71,9 +71,10 @@ export default function FixTranslationCheckJPage() {
       <p className="mb-3 max-w-2xl text-sm text-text-muted">
         DB翻訳値の §J 項目を是正します（ロケール限定・キーパス限定の部分文字列置換＝冪等）。
         まず<strong>プレビュー</strong>で変更点を確認し、問題なければ<strong>適用</strong>してください。
-        対象：{Array.from(new Set(J_PATCHES.map((p) => p.id.replace(/-.*/, "")))).join("・")}。
+        対象：{Array.from(new Set(J_PATCHES.map((p) => p.id.replace(/-.*/, "")))).join("・")}
+        （実機確認で判明した /about・宅建業法表示 等の残存も横断で是正）。
         J4 は「Chief …」を含む legalNotice の値全体を確定値へ置換します（whole）。J9（コラム社名）は
-        翻訳辞書外＝対象外（/admin/columns で手修正）。
+        翻訳辞書外＝対象外（/admin/columns/fix-brand-name）。
       </p>
 
       <div className="flex gap-3">
