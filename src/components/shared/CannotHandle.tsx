@@ -11,11 +11,14 @@
 import type { LangCode } from "@/config/languages";
 
 const TEXT: Partial<Record<LangCode, string>> = {
-  ja: "当社が対応できないこと：紛争性のある相続案件の代理交渉（弁護士をご紹介します）、不動産登記の申請代理（提携司法書士が受任します）、相続税申告（提携税理士が受任します）。社会保険労務士業務は2026年9月の開業までお受けできません。各専門家とは分離受任・個別契約であり、当社が紹介料を受け取ることはありません。",
-  en: "What our company cannot handle: representation and negotiation in contested inheritance disputes (we will introduce an attorney); filing real estate registration on your behalf (undertaken by a partner Judicial Scrivener (司法書士)); and inheritance tax filing (undertaken by a partner Tax Accountant (税理士)). Licensed social insurance and labor consultant (社会保険労務士) services cannot be accepted until our office opens in September 2026. Each specialist is engaged under a separate, individual contract, and our company does not receive any referral fee.",
+  // 2026-07-29 浦松指示：「受任します」→「おつなぎします」。他事務所の受任を当社が約束する形にしない。
+  // あわせて「提携司法書士」「提携税理士」の「提携」を削除（U12＝書面での提携の有無が未確認。
+  // 指示書11「『提携税理士』『提携司法書士』『提携弁護士』と書かない」）。
+  ja: "当社が対応できないこと：紛争性のある相続案件の代理交渉（弁護士におつなぎします）、不動産登記の申請代理（司法書士におつなぎします）、相続税申告（税理士におつなぎします）。社会保険労務士業務は2026年9月の開業までお受けできません。各専門家とは分離受任・個別契約であり、当社が紹介料を受け取ることはありません。",
+  en: "What our company cannot handle: representation and negotiation in contested inheritance disputes (we will connect you with an attorney); filing real estate registration on your behalf (we will connect you with a Judicial Scrivener (司法書士)); and inheritance tax filing (we will connect you with a Tax Accountant (税理士)). Licensed social insurance and labor consultant (社会保険労務士) services cannot be accepted until our office opens in September 2026. Each specialist is engaged under a separate, individual contract, and our company does not receive any referral fee.",
   "zh-tw":
-    "本公司無法承接的事項：具爭訟性之繼承案件的代理協商（將為您介紹律師）、不動產登記的申請代理（由合作的司法書士〔日本的登記申請代理專業資格〕承辦）、遺產稅申報（由合作的稅理士〔日本的稅務專業資格〕承辦）。社會保險勞務士（日本語：社会保険労務士）業務在2026年9月開業之前無法受理。與各專家均為分離受任・個別簽約，本公司不會收取介紹費。",
-  zh: "本公司无法承接的事项：具争议性之继承案件的代理协商（将为您介绍律师）、不动产登记的申请代理（由合作的司法书士〔日本的登记申请代理专业资格〕承办）、遗产税申报（由合作的税理士〔日本的税务专业资格〕承办）。社会保险劳务士（日本語：社会保険労務士）业务在2026年9月开业之前无法受理。与各专家均为分离受任・个别签约，本公司不会收取介绍费。",
+    "本公司無法承接的事項：具爭訟性之繼承案件的代理協商（將為您引介律師）、不動產登記的申請代理（將為您引介司法書士〔日本的登記申請代理專業資格〕）、遺產稅申報（將為您引介稅理士〔日本的稅務專業資格〕）。社會保險勞務士（日本語：社会保険労務士）業務在2026年9月開業之前無法受理。與各專家均為分離受任・個別簽約，本公司不會收取介紹費。",
+  zh: "本公司无法承接的事项：具争议性之继承案件的代理协商（将为您引介律师）、不动产登记的申请代理（将为您引介司法书士〔日本的登记申请代理专业资格〕）、遗产税申报（将为您引介税理士〔日本的税务专业资格〕）。社会保险劳务士（日本語：社会保険労務士）业务在2026年9月开业之前无法受理。与各专家均为分离受任・个别签约，本公司不会收取介绍费。",
 };
 
 const ARIA: Partial<Record<LangCode, string>> = {
