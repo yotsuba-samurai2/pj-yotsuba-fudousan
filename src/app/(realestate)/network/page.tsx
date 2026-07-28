@@ -29,6 +29,13 @@ const SR_LAUNCHED = process.env.NEXT_PUBLIC_SR_LAUNCHED === "true";
 
 const LAST_UPDATED_JA = "2026年7月28日";
 
+// 2026-07-28：H1・関連リンクのラベルで事務所数を数えない（開業前は2事務所のため）。
+// 設計書2-A-2のH1「3つの事務所が扱わない業務と、そのご相談先」は開業後の表現であり、
+// 開業前にそのまま出すと社労士事務所が既に存在するかのような表示になる（法27条の趣旨）。
+const H1_JA = SR_LAUNCHED
+  ? "3つの事務所が扱わない業務と、そのご相談先"
+  : "四葉が扱わない業務と、そのご相談先";
+
 export async function generateMetadata(): Promise<Metadata> {
   return buildPageMetadata({
     businessKey: "realestate",
@@ -136,9 +143,7 @@ export default async function Page() {
 
       <article className="mx-auto max-w-3xl px-4 pb-16">
         <header className="pt-2">
-          <h1 className="font-serif text-2xl font-semibold text-ink sm:text-3xl">
-            3つの事務所が扱わない業務と、そのご相談先
-          </h1>
+          <h1 className="font-serif text-2xl font-semibold text-ink sm:text-3xl">{H1_JA}</h1>
           <p className="mt-4 leading-relaxed text-text">{ANSWER_JA}</p>
         </header>
 
@@ -177,7 +182,9 @@ export default async function Page() {
         </section>
 
         <section className="mt-10">
-          <h2 className="font-serif text-xl font-semibold text-ink">ご紹介の原則はどうなっていますか？</h2>
+          <h2 className="font-serif text-xl font-semibold text-ink">
+            ご紹介の原則はどうなっていますか？
+          </h2>
           <ul className="mt-4 space-y-3 text-text">
             <li className="leading-relaxed">
               <span className="font-medium text-ink">紹介料をいただきません。</span>
