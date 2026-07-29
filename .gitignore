@@ -40,3 +40,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# AI tooling / local backups (2026-07-22 教訓: 本番リポジトリに横断AI設定・バックアップを混ぜない)
+.claude/
+_backup/
+.backup-*/
