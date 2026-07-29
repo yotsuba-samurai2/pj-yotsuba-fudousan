@@ -2,7 +2,7 @@
 // 表示HTMLと構造化データは同じ items から生成＝完全一致（Rich Results 合格の条件）。
 // 規則（委任§4-6）：FAQPage JSON-LD は各サイトの専用FAQページ（/faq・/legal/faq・/labor/faq）のみ。
 // 業務ページの疑問文セクションでは withJsonLd を渡さない（既定 false＝表示のみ）。
-// 【例外】2026-07-19 B-4（浦松承認）：/toushi・/toushi/group-home・/toushi/shataku・/global の日本語版でも
+// 【例外】2026-07-19 B-4（浦松承認）：/toushi・/toushi/group-home・/shataku・/global の日本語版でも
 // withJsonLd を使う。設問は B-3 の40問（@/data/faqJa）から pickFaqJa() で参照＝文言はサイト内で常に一致。
 // 既存の例外＝/ryokin（B-1）・/about/uramatsu（B-2）。/souzoku は seo/FAQJsonLd 側で出力（同じく faqJa 参照）。
 // links＝回答末尾の内部リンク（2026-07-19 B-3）。表示のみで JSON-LD の Answer text には含めない

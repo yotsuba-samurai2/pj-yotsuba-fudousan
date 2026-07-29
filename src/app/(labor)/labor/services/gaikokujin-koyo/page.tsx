@@ -1,5 +1,5 @@
 // /labor/services/gaikokujin-koyo（型A）＝原稿_社労士 #5
-// クロスリンク＝C14（→/legal/services/visa・/toushi/shataku）がpathで自動（launchFlag=SR_LAUNCHED）。
+// クロスリンク＝C14（→/legal/services/visa・/shataku）がpathで自動（launchFlag=SR_LAUNCHED）。
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo";
 import { getRequestLocale } from "@/lib/getRequestLocale";
@@ -55,8 +55,8 @@ export default async function Page() {
             在留資格・ビザ申請（四葉行政書士事務所）
           </Link>
           ／
-          <Link href={addLocalePrefix("/toushi/shataku", locale)} className="text-primary underline">
-            社宅・法人賃貸（四葉不動産）
+          <Link href={addLocalePrefix("/shataku", locale)} className="text-primary underline">
+            借り上げ社宅の導入（四葉不動産）
           </Link>
         </p>
         <p className="mt-1 text-xs text-text-muted">

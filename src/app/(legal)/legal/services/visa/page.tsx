@@ -77,7 +77,7 @@ const COPY: Record<LangCode, VisaCopy> = {
           <H2>住まいや会社設立も一緒に相談できますか？</H2>
           <p className="mt-3 leading-relaxed text-text">
             できます。経営・管理の在留資格は会社設立と一体で進むため、<strong>設立書類と在留資格申請を一体で</strong>扱えます。また、来日する従業員やご家族の<strong>住まい（社宅・賃貸）</strong>は、関連事業の四葉不動産株式会社が多言語で対応します →{" "}
-            <Link href={addLocalePrefix("/toushi/shataku", locale)} className="text-primary underline">社宅・法人賃貸のサポート</Link>／
+            <Link href={addLocalePrefix("/shataku", locale)} className="text-primary underline">借り上げ社宅の導入ガイド</Link>／
             <Link href={addLocalePrefix("/global", locale)} className="text-primary underline">外国人・多言語のお部屋探し</Link>
           </p>
           <p className="mt-1 text-xs text-text-muted">
@@ -151,7 +151,7 @@ const COPY: Record<LangCode, VisaCopy> = {
           <H2>Can we also discuss housing or company formation together?</H2>
           <p className="mt-3 leading-relaxed text-text">
             Yes. Because the Business Manager residence status moves in step with company formation, we can handle <strong>incorporation documents and the residence status application as one package</strong>. And for the <strong>housing (company housing or rentals)</strong> of arriving employees and their families, our affiliated business 四葉不動産株式会社 (Yotsuba Real Estate) provides multilingual support →{" "}
-            <Link href={addLocalePrefix("/toushi/shataku", locale)} className="text-primary underline">Company Housing & Corporate Lease Support</Link>／
+            <Link href={addLocalePrefix("/shataku", locale)} className="text-primary underline">Company Housing & Corporate Lease Support</Link>／
             <Link href={addLocalePrefix("/global", locale)} className="text-primary underline">Multilingual Home Search for Foreign Residents</Link>
           </p>
           <p className="mt-1 text-xs text-text-muted">
@@ -225,7 +225,7 @@ const COPY: Record<LangCode, VisaCopy> = {
           <H2>住居或公司設立也可以一併諮詢嗎？</H2>
           <p className="mt-3 leading-relaxed text-text">
             可以。經營・管理的在留資格與公司設立一體推進，因此<strong>設立文件與在留資格申請可一併辦理</strong>。此外，來日工作的員工與家人的<strong>住居（公司宿舍・租屋）</strong>，由關聯事業四葉不動産株式会社以多語言對應 →{" "}
-            <Link href={addLocalePrefix("/toushi/shataku", locale)} className="text-primary underline">公司宿舍・法人租賃支援</Link>／
+            <Link href={addLocalePrefix("/shataku", locale)} className="text-primary underline">公司宿舍・法人租賃支援</Link>／
             <Link href={addLocalePrefix("/global", locale)} className="text-primary underline">外國人・多語言找房</Link>
           </p>
           <p className="mt-1 text-xs text-text-muted">
@@ -299,7 +299,7 @@ const COPY: Record<LangCode, VisaCopy> = {
           <H2>住房或公司设立也可以一并咨询吗？</H2>
           <p className="mt-3 leading-relaxed text-text">
             可以。经营・管理的在留资格与公司设立一体推进，因此<strong>设立文件与在留资格申请可一并办理</strong>。此外，来日工作的员工与家人的<strong>住房（公司宿舍・租房）</strong>，由关联事业四葉不動産株式会社以多语言对应 →{" "}
-            <Link href={addLocalePrefix("/toushi/shataku", locale)} className="text-primary underline">公司宿舍・法人租赁支援</Link>／
+            <Link href={addLocalePrefix("/shataku", locale)} className="text-primary underline">公司宿舍・法人租赁支援</Link>／
             <Link href={addLocalePrefix("/global", locale)} className="text-primary underline">外国人・多语言找房</Link>
           </p>
           <p className="mt-1 text-xs text-text-muted">

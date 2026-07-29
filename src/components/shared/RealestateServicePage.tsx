@@ -1,5 +1,5 @@
 // RealestateServicePage — 不動産 型A業務ページの共通シェル（LegalServicePageの不動産版）
-// /toushi・/toushi/group-home・/toushi/shataku・/global で使用。
+// /toushi・/toushi/group-home・/shataku・/global で使用。
 // JSON-LD＝Service（provider=@id /#organization・author=Person @id参照のみ）。
 // BreadcrumbListは<Breadcrumb>部品が出力・FAQPageは/faq専用（疑問文H2は表示のみ）。
 // クロスリンクはpathで自動（getCrossLinks・C3/C6）＋独立受任注記。
@@ -61,7 +61,8 @@ export type RealestateServicePageProps = {
   internalLinks: { href: string; label: string; noLocalePrefix?: boolean }[];
   /** クロスリンク導入文の上書き（分担説明トーン） */
   crossLinkLead?: string;
-  /** 多言語上書き（省略時=ja既定文言のまま・既存ページの出力は不変。2026-07-11 /toushi/shataku 4ロケール化で追加） */
+  /** 多言語上書き（省略時=ja既定文言のまま・既存ページの出力は不変。2026-07-11 /toushi/shataku の4ロケール化で追加。
+   *  同ページは2026-07-29に /shataku へ統合済み＝現在の利用元は /shataku） */
   relatedAria?: string;
   relatedHeading?: string;
   authorAlt?: string;
