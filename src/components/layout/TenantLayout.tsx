@@ -710,7 +710,9 @@ function TenantFooter({ businessKey }: { businessKey: string }) {
                 href="https://www.facebook.com/uramatsujoji"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-9 w-9 items-center justify-center rounded-lg border border-border bg-surface text-text/40 transition-colors hover:border-primary/30 hover:text-primary"
+                // 2026-07-29 浦松指示：SNSアイコンを各サービスのブランド色にする。
+                // hover時は枠線を色に合わせ、地をごく薄い同系色にする（アイコン色は変えない）。
+                className="flex h-9 w-9 items-center justify-center rounded-lg border border-border bg-surface text-[#1877F2] transition-colors hover:border-[#1877F2]/40 hover:bg-[#1877F2]/5"
                 aria-label="Facebook"
               >
                 <svg
@@ -726,7 +728,9 @@ function TenantFooter({ businessKey }: { businessKey: string }) {
                 href="https://www.instagram.com/uramatsu_joji/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-9 w-9 items-center justify-center rounded-lg border border-border bg-surface text-text/40 transition-colors hover:border-primary/30 hover:text-primary"
+                // Instagramの公式マークはグラデーションだが、9pxの枠に収める小サイズでは
+                // 判別しづらいため、公式パレットの中核色 #E4405F（単色）を用いる。
+                className="flex h-9 w-9 items-center justify-center rounded-lg border border-border bg-surface text-[#E4405F] transition-colors hover:border-[#E4405F]/40 hover:bg-[#E4405F]/5"
                 aria-label="Instagram"
               >
                 <svg
@@ -742,7 +746,8 @@ function TenantFooter({ businessKey }: { businessKey: string }) {
                 href="https://note.com/luck428"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-9 w-9 items-center justify-center rounded-lg border border-border bg-surface text-text/40 transition-colors hover:border-primary/30 hover:text-primary"
+                // note のブランド色 #41C9B4
+                className="flex h-9 w-9 items-center justify-center rounded-lg border border-border bg-surface text-[#41C9B4] transition-colors hover:border-[#41C9B4]/40 hover:bg-[#41C9B4]/5"
                 aria-label="note"
               >
                 <svg
@@ -758,7 +763,10 @@ function TenantFooter({ businessKey }: { businessKey: string }) {
                 href="https://www.samurai.co.jp/samurai/reserve/uramatsu-joji"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-9 items-center gap-1.5 rounded-lg border border-border bg-surface px-3 text-text/40 transition-colors hover:border-primary/30 hover:text-primary"
+                // 「予約」は士業ドットコムの予約ページへ遷移する自社導線のため、
+                // 外部SNSのブランド色ではなくテナントの主色（--color-primary）を用いる。
+                // route group が割り当てる値を読むのでテナント非依存（不動産＝緑系／行政書士＝別色）。
+                className="flex h-9 items-center gap-1.5 rounded-lg border border-border bg-surface px-3 text-primary transition-colors hover:border-primary/40 hover:bg-primary/5"
                 aria-label={t("common.footer.samuraiName")}
               >
                 <CalendarDays size={16} />
