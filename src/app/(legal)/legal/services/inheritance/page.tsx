@@ -25,6 +25,8 @@ type InheritanceCopy = {
   fudosanHeading: string;
   fudosanBody: React.ReactNode;
   souzokuGuideLabel: string;
+  /** 相続前の書類準備コラム（四葉不動産）への任意リンク。日本語のみ設定 */
+  jizenJunbiColumnLabel?: string;
   independenceNote: string;
   registrationNote: string;
   feesFlowHeading: string;
@@ -61,6 +63,8 @@ const COPY: Record<LangCode, InheritanceCopy> = {
       </>
     ),
     souzokuGuideLabel: "文京区で不動産を相続したら——管理・活用・売却の完全ガイド（四葉不動産）",
+    jizenJunbiColumnLabel:
+      "相続が起きる前に——帰省中に集めておく書類（売買契約書・建築確認済証）｜四葉不動産のコラム",
     independenceNote:
       "※四葉不動産株式会社・四葉行政書士事務所は、それぞれ別の事業体として独立してご依頼をお受けします（紹介料等の授受はありません）。",
     registrationNote:
@@ -250,6 +254,11 @@ export default async function Page() {
         <p className="mt-2 text-sm">
           → <Link href={addLocalePrefix("/souzoku", locale)} className="text-primary underline">{c.souzokuGuideLabel}</Link>
         </p>
+        {c.jizenJunbiColumnLabel && (
+          <p className="mt-1 text-sm">
+            → <Link href={addLocalePrefix("/column/obon-kisei-jikka-tanaoroshi", locale)} className="text-primary underline">{c.jizenJunbiColumnLabel}</Link>
+          </p>
+        )}
         <p className="mt-1 text-xs text-text-muted">{c.independenceNote}</p>
         <p className="mt-3 text-sm leading-relaxed text-text-muted">{c.registrationNote}</p>
       </div>
