@@ -246,7 +246,13 @@ export const LEGAL_SAME_AS = [
 /**
  * 組織のmemberOf（公的所属団体）。会員ページ等で裏取りできたもののみ出力（監査原則）。
  * - 宅建協会・全宅保証＝会員検索詳細ページで確認（2026-07-10・正会員）
- * - 日本賃貸住宅管理協会＝会員裏取り未了のため出力保留（確認後に追加）
+ * - 日本賃貸住宅管理協会＝2026-08-01に裏取り完了のため追加（下記）
+ *
+ * memberOf に入れる理由（sameAs ではない）：
+ * 日管協側に当社単独の詳細ページは無く、掲載は東京都支部の正会員一覧（957社）の1行のみ。
+ * sameAs は「同一実体を一意に指す恒久URL」を宣言する場所であり、多数社の一覧ページは
+ * その条件を満たさない。所属の宣言は memberOf が正しいスロット。
+ * 会員一覧URLは /about の可視「所属団体」ブロックからリンクしている（AboutPageContent.tsx と対で管理）。
  */
 export const REALESTATE_MEMBER_OF = [
   {
@@ -258,6 +264,14 @@ export const REALESTATE_MEMBER_OF = [
     "@type": "Organization",
     name: "公益社団法人 全国宅地建物取引業保証協会",
     url: "https://www.zentaku.or.jp/",
+  },
+  {
+    // 2026-08-01 現物確認：東京都支部 正会員一覧（all.php?cid=14）に
+    // 「四葉不動産（株）」として掲載。リンク先 https://luck428.com/ ・rel なし（follow）・
+    // 住所表記も当社の正式表記と一致。なお list.php?cid=14（先頭ページのみ）には出ない。
+    "@type": "Organization",
+    name: "公益財団法人 日本賃貸住宅管理協会",
+    url: "https://www.jpm.jp/",
   },
 ] as const;
 
