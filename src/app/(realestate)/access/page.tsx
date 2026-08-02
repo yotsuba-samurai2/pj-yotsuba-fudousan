@@ -51,7 +51,7 @@ const COPY: Record<LangCode, AccessCopy> = {
   ja: {
     metaTitle: "アクセス｜茗荷谷駅徒歩5分の四葉不動産株式会社",
     metaDesc:
-      "四葉不動産株式会社（東京都文京区小日向・東京メトロ丸ノ内線「茗荷谷」駅 徒歩5分）へのアクセスと料金のご案内です。売買仲介・賃貸仲介の手数料は宅地建物取引業法の法定上限、賃貸管理は月額賃料の3〜5%。初回のご相談は無料・オンライン対応。TEL 03-6161-9428。",
+      "四葉不動産株式会社（東京都文京区小日向・東京メトロ丸ノ内線「茗荷谷」駅 徒歩5分）へのアクセスと料金のご案内です。売買仲介・賃貸仲介の手数料は宅地建物取引業法の法定上限、賃貸管理は月額賃料の3〜5%。ご相談は無料・オンライン対応。TEL 03-6161-9428。",
     breadcrumbHome: "ホーム",
     breadcrumbCurrent: "アクセス",
     h1: "アクセス",
@@ -116,7 +116,7 @@ const COPY: Record<LangCode, AccessCopy> = {
   en: {
     metaTitle: "Access & Fees | 四葉不動産株式会社 (Yotsuba Real Estate), 5 min from Myogadani Sta.",
     metaDesc:
-      "Access and fees of Yotsuba Real Estate Co., Ltd. (Kohinata, Bunkyo-ku, Tokyo; 5 min walk from Myogadani Sta. on the Tokyo Metro Marunouchi Line). Brokerage commissions for sales and leasing are within the statutory maximum (cap) under the Real Estate Brokerage Act; rental management is 3–5% of monthly rent. Your first consultation is free; online sessions available. TEL 03-6161-9428.",
+      "Access and fees of Yotsuba Real Estate Co., Ltd. (Kohinata, Bunkyo-ku, Tokyo; 5 min walk from Myogadani Sta. on the Tokyo Metro Marunouchi Line). Brokerage commissions for sales and leasing are within the statutory maximum (cap) under the Real Estate Brokerage Act; rental management is 3–5% of monthly rent. Consultations are free — the first and every one thereafter; online sessions available. TEL 03-6161-9428.",
     breadcrumbHome: "Home",
     breadcrumbCurrent: "Access & Fees",
     h1: "Access & Fees",
@@ -186,7 +186,7 @@ const COPY: Record<LangCode, AccessCopy> = {
   "zh-tw": {
     metaTitle: "交通與費用｜茗荷谷站步行5分的四葉不動産株式会社",
     metaDesc:
-      "四葉不動産株式会社（東京都文京區小日向・東京Metro丸之內線「茗荷谷」站 步行5分）的交通與費用介紹。買賣仲介・租賃仲介的手續費為宅地建物取引業法的法定上限，租賃管理為月租金的3〜5%。初次諮詢免費・可線上進行。TEL 03-6161-9428。",
+      "四葉不動産株式会社（東京都文京區小日向・東京Metro丸之內線「茗荷谷」站 步行5分）的交通與費用介紹。買賣仲介・租賃仲介的手續費為宅地建物取引業法的法定上限，租賃管理為月租金的3〜5%。諮詢免費・可線上進行。TEL 03-6161-9428。",
     breadcrumbHome: "首頁",
     breadcrumbCurrent: "交通與費用",
     h1: "交通與費用",
@@ -251,7 +251,7 @@ const COPY: Record<LangCode, AccessCopy> = {
   zh: {
     metaTitle: "交通与费用｜茗荷谷站步行5分的四葉不動産株式会社",
     metaDesc:
-      "四葉不動産株式会社（东京都文京区小日向・东京Metro丸之内线“茗荷谷”站 步行5分）的交通与费用介绍。买卖中介・租赁中介的手续费为日本《宅地建物取引业法》的法定上限，租赁管理为月租金的3〜5%。初次咨询免费・可在线进行。电话 03-6161-9428。",
+      "四葉不動産株式会社（东京都文京区小日向・东京Metro丸之内线“茗荷谷”站 步行5分）的交通与费用介绍。买卖中介・租赁中介的手续费为日本《宅地建物取引业法》的法定上限，租赁管理为月租金的3〜5%。咨询免费・可在线进行。电话 03-6161-9428。",
     breadcrumbHome: "首页",
     breadcrumbCurrent: "交通与费用",
     h1: "交通与费用",

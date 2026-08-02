@@ -43,12 +43,12 @@ type RyokinCopy = {
 const JA: RyokinCopy = {
   metaTitle: "料金｜仲介手数料・相談の考え方",
   metaDesc:
-    "四葉不動産株式会社の料金のご案内。売買・賃貸の仲介手数料は宅地建物取引業法の法定上限の範囲内で、初回のご相談は無料です。相続手続きなどの法務業務は、四葉行政書士事務所が別契約・別料金で受任します。具体的な金額は個別にお見積りいたします。TEL 03-6161-9428。",
+    "四葉不動産株式会社の料金のご案内。売買・賃貸の仲介手数料は宅地建物取引業法の法定上限の範囲内で、ご相談は無料です（初回・2回目以降とも）。相続手続きなどの法務業務は、四葉行政書士事務所が別契約・別料金で受任します。具体的な金額は個別にお見積りいたします。TEL 03-6161-9428。",
   breadcrumbHome: "ホーム",
   breadcrumbCurrent: "料金",
   h1: "料金のご案内",
   answerBlock:
-    "四葉不動産株式会社の売買仲介手数料は、宅地建物取引業法の定める上限の範囲内でご案内します。初回相談は無料です。相続手続きなどの法務業務は、四葉行政書士事務所が別契約・別料金で受任します。具体的な金額は物件やご依頼内容により異なるため、お見積りいたします。",
+    "四葉不動産株式会社の売買仲介手数料は、宅地建物取引業法の定める上限の範囲内でご案内します。ご相談は無料です（初回・2回目以降とも）。相続手続きなどの法務業務は、四葉行政書士事務所が別契約・別料金で受任します。具体的な金額は物件やご依頼内容により異なるため、お見積りいたします。",
   sections: [
     {
       h2: "不動産仲介手数料（売買）",
@@ -80,8 +80,8 @@ const JA: RyokinCopy = {
       h2: "相談料",
       body: (
         <p className="mt-3 leading-relaxed text-text">
-          <strong>初回のご相談は無料です。</strong>
-          2回目以降の扱いは、ご相談内容により異なります。まずはお気軽にお問い合わせください。
+          <strong>ご相談は無料です（初回・2回目以降とも）。</strong>
+          料金がかかる場合は見積もりを提示します。まずはお気軽にお問い合わせください。
         </p>
       ),
     },
@@ -117,7 +117,7 @@ const JA: RyokinCopy = {
     },
     {
       q: "相談は無料ですか？",
-      a: "初回のご相談は無料です。2回目以降の扱いは、ご相談内容により異なります。まずはお気軽にお問い合わせください。",
+      a: "ご相談は無料です。初回も2回目以降も無料で、料金がかかる場合は見積もりを提示します。まずはお気軽にお問い合わせください。",
     },
     {
       q: "行政書士業務の費用は別ですか？",
@@ -145,12 +145,12 @@ const JA: RyokinCopy = {
 const EN: RyokinCopy = {
   metaTitle: "Fees｜Brokerage Commissions and How Consultations Work",
   metaDesc:
-    "Fee information for Yotsuba Real Estate Co., Ltd. Brokerage commissions for sales and leasing are within the statutory maximum under the Real Estate Brokerage Act (宅地建物取引業法), and your first consultation is free. Legal work such as inheritance procedures is undertaken by Yotsuba Gyoseishoshi Office under a separate contract and separate fees. Specific amounts are quoted individually. TEL 03-6161-9428.",
+    "Fee information for Yotsuba Real Estate Co., Ltd. Brokerage commissions for sales and leasing are within the statutory maximum under the Real Estate Brokerage Act (宅地建物取引業法), and consultations are free — the first and every one thereafter. Legal work such as inheritance procedures is undertaken by Yotsuba Gyoseishoshi Office under a separate contract and separate fees. Specific amounts are quoted individually. TEL 03-6161-9428.",
   breadcrumbHome: "Home",
   breadcrumbCurrent: "Fees",
   h1: "Our Fees",
   answerBlock:
-    "Brokerage commissions for sales at Yotsuba Real Estate Co., Ltd. are within the maximum prescribed by the Real Estate Brokerage Act (宅地建物取引業法). Your first consultation is free. Legal work such as inheritance procedures is undertaken by Yotsuba Gyoseishoshi Office under a separate contract and separate fees. Because the specific amount varies with the property and the scope of your request, we provide a quotation.",
+    "Brokerage commissions for sales at Yotsuba Real Estate Co., Ltd. are within the maximum prescribed by the Real Estate Brokerage Act (宅地建物取引業法). Consultations are free — the first and every one thereafter. Legal work such as inheritance procedures is undertaken by Yotsuba Gyoseishoshi Office under a separate contract and separate fees. Because the specific amount varies with the property and the scope of your request, we provide a quotation.",
   sections: [
     {
       h2: "Brokerage commission (sales)",
@@ -182,7 +182,7 @@ const EN: RyokinCopy = {
       h2: "Consultation fees",
       body: (
         <p className="mt-3 leading-relaxed text-text">
-          <strong>Your first consultation is free.</strong> How consultations from the second time onward are handled depends on the nature of the matter. Please feel free to contact us first.
+          <strong>Consultations are free — the first and every one thereafter.</strong> If a fee should apply, we will present a quotation. Please feel free to contact us first.
         </p>
       ),
     },
@@ -219,7 +219,7 @@ const EN: RyokinCopy = {
     },
     {
       q: "Is the consultation free?",
-      a: "Your first consultation is free. How consultations from the second time onward are handled depends on the nature of the matter. Please feel free to contact us first.",
+      a: "Consultations are free — the first and every one thereafter. If a fee should apply, we will present a quotation. Please feel free to contact us first.",
     },
     {
       q: "Are gyoseishoshi fees separate?",
@@ -244,12 +244,12 @@ const EN: RyokinCopy = {
 const ZH_TW: RyokinCopy = {
   metaTitle: "費用說明｜仲介手續費與諮詢方式",
   metaDesc:
-    "四葉不動産株式会社的費用說明。買賣・租賃的仲介手續費（日本語：仲介手数料）在宅地建物交易業法（日本語：宅地建物取引業法）所定法定上限的範圍內，初次諮詢免費。繼承手續等法務業務，由四葉行政書士事務所另行簽訂契約、另行計費承辦。具體金額將個別報價。TEL 03-6161-9428。",
+    "四葉不動産株式会社的費用說明。買賣・租賃的仲介手續費（日本語：仲介手数料）在宅地建物交易業法（日本語：宅地建物取引業法）所定法定上限的範圍內，諮詢免費（初次與第2次以後皆同）。繼承手續等法務業務，由四葉行政書士事務所另行簽訂契約、另行計費承辦。具體金額將個別報價。TEL 03-6161-9428。",
   breadcrumbHome: "首頁",
   breadcrumbCurrent: "費用說明",
   h1: "費用說明",
   answerBlock:
-    "四葉不動産株式会社的買賣仲介手續費（日本語：仲介手数料），在宅地建物交易業法（日本語：宅地建物取引業法）所定上限的範圍內提供。初次諮詢免費。繼承手續等法務業務，由四葉行政書士事務所另行簽訂契約、另行計費承辦。具體金額因物件與委託內容而異，將為您報價。",
+    "四葉不動産株式会社的買賣仲介手續費（日本語：仲介手数料），在宅地建物交易業法（日本語：宅地建物取引業法）所定上限的範圍內提供。諮詢免費（初次與第2次以後皆同）。繼承手續等法務業務，由四葉行政書士事務所另行簽訂契約、另行計費承辦。具體金額因物件與委託內容而異，將為您報價。",
   sections: [
     {
       h2: "不動產仲介手續費（買賣）",
@@ -281,8 +281,8 @@ const ZH_TW: RyokinCopy = {
       h2: "諮詢費用",
       body: (
         <p className="mt-3 leading-relaxed text-text">
-          <strong>初次諮詢免費。</strong>
-          第2次以後的處理方式，因諮詢內容而異。請先隨時與我們聯絡。
+          <strong>諮詢免費（初次與第2次以後皆同）。</strong>
+          如需收費，將提出報價。請先隨時與我們聯絡。
         </p>
       ),
     },
@@ -319,7 +319,7 @@ const ZH_TW: RyokinCopy = {
     },
     {
       q: "諮詢免費嗎？",
-      a: "初次諮詢免費。第2次以後的處理方式，因諮詢內容而異。請先隨時與我們聯絡。",
+      a: "諮詢免費，初次與第2次以後皆免費。如需收費，將提出報價。請先隨時與我們聯絡。",
     },
     {
       q: "行政書士業務的費用是分開的嗎？",
@@ -345,12 +345,12 @@ const ZH_TW: RyokinCopy = {
 const ZH: RyokinCopy = {
   metaTitle: "费用说明｜中介手续费与咨询方式",
   metaDesc:
-    "四葉不動産株式会社的费用说明。买卖・租赁的中介手续费（日本語：仲介手数料）在宅地建物交易业法（日本語：宅地建物取引業法）所定法定上限的范围内，首次咨询免费。继承手续等法务业务，由四葉行政书士事务所另行签订合同、另行计费承办。具体金额将个别报价。TEL 03-6161-9428。",
+    "四葉不動産株式会社的费用说明。买卖・租赁的中介手续费（日本語：仲介手数料）在宅地建物交易业法（日本語：宅地建物取引業法）所定法定上限的范围内，咨询免费（首次与第2次以后均相同）。继承手续等法务业务，由四葉行政书士事务所另行签订合同、另行计费承办。具体金额将个别报价。TEL 03-6161-9428。",
   breadcrumbHome: "首页",
   breadcrumbCurrent: "费用说明",
   h1: "费用说明",
   answerBlock:
-    "四葉不動産株式会社的买卖中介手续费（日本語：仲介手数料），在宅地建物交易业法（日本語：宅地建物取引業法）所定上限的范围内提供。首次咨询免费。继承手续等法务业务，由四葉行政书士事务所另行签订合同、另行计费承办。具体金额因房屋与委托内容而异，将为您报价。",
+    "四葉不動産株式会社的买卖中介手续费（日本語：仲介手数料），在宅地建物交易业法（日本語：宅地建物取引業法）所定上限的范围内提供。咨询免费（首次与第2次以后均相同）。继承手续等法务业务，由四葉行政书士事务所另行签订合同、另行计费承办。具体金额因房屋与委托内容而异，将为您报价。",
   sections: [
     {
       h2: "不动产中介手续费（买卖）",
@@ -382,8 +382,8 @@ const ZH: RyokinCopy = {
       h2: "咨询费用",
       body: (
         <p className="mt-3 leading-relaxed text-text">
-          <strong>首次咨询免费。</strong>
-          第2次以后的处理方式，因咨询内容而异。请先随时与我们联系。
+          <strong>咨询免费（首次与第2次以后均相同）。</strong>
+          如需收费，将提出报价。请先随时与我们联系。
         </p>
       ),
     },
@@ -420,7 +420,7 @@ const ZH: RyokinCopy = {
     },
     {
       q: "咨询免费吗？",
-      a: "首次咨询免费。第2次以后的处理方式，因咨询内容而异。请先随时与我们联系。",
+      a: "咨询免费，首次与第2次以后均免费。如需收费，将提出报价。请先随时与我们联系。",
     },
     {
       q: "行政书士业务的费用是分开的吗？",
