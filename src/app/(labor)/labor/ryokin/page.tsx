@@ -59,7 +59,7 @@ const SECTIONS: Section[] = [
       { name: "社宅規程 作成", unit: "1件", price: "38,500円", value: 38500 },
       { name: "出張旅費規程 作成", unit: "1件", price: "36,300円", value: 36300 },
       { name: "助成金申請代行（顧問先限定）", unit: "一式", price: "別途お見積り（顧問契約先のみ受任・着手金なし）" },
-      { name: "外国人雇用 無料相談（中国語対応）", unit: "—", price: "初回無料" },
+      { name: "外国人雇用 無料相談（中国語対応）", unit: "—", price: "無料" },
       { name: "外国人雇用×募集コンサル（スポット）", unit: "—", price: "年50,000円〜／継続してのご支援は月額" },
     ],
   },
@@ -174,7 +174,7 @@ export default async function Page() {
         </div>
 
         <p className="mt-6 text-xs leading-relaxed text-text-muted">
-          ※金額はすべて税込の目安です。事案により変動する場合は、ご契約前に個別のお見積りを書面でご提示します。確定額のみ構造化データ（PriceSpecification）として出力します。相談は初回無料・以降30分5,500円（オンライン可）。
+          ※金額はすべて税込の目安です。事案により変動する場合は、ご契約前に個別のお見積りを書面でご提示します。確定額のみ構造化データ（PriceSpecification）として出力します。相談は無料（初回・2回目以降とも・オンライン可）。
           <Placeholder reason="Notion＝社労士業務の料金（全業務・開業時最終確認）" />
         </p>
 
