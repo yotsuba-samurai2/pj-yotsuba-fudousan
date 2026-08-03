@@ -31,14 +31,14 @@ const COPY: Record<LangCode, FaqPageCopy> = {
   ja: {
     metaTitle: "よくある質問｜四葉行政書士事務所",
     metaDesc:
-      "四葉行政書士事務所への「初回相談は無料か」「中国語・英語で相談できるか」「障害福祉の指定申請を頼めるか」などのよくある質問に、一問一答でお答えします。文京区小日向・茗荷谷駅徒歩5分。お気軽にご相談ください。",
+      "四葉行政書士事務所への「相談は無料か」「中国語・英語で相談できるか」「障害福祉の指定申請を頼めるか」などのよくある質問に、一問一答でお答えします。文京区小日向・茗荷谷駅徒歩5分。お気軽にご相談ください。",
     breadcrumbHome: "ホーム",
     breadcrumbCurrent: "よくある質問",
     heading: "よくある質問",
     items: [
       {
-        q: "初回相談は無料ですか？",
-        a: "初回相談は無料です。以降は原則30分5,500円（税込）。文京区小日向（東京メトロ丸ノ内線「茗荷谷」駅 徒歩5分）とオンラインで承ります。",
+        q: "相談は無料ですか？",
+        a: "ご相談は無料です（初回・2回目以降とも）。文京区小日向（東京メトロ丸ノ内線「茗荷谷」駅 徒歩5分）とオンラインで承ります。料金がかかる場合は見積もりを提示します。",
       },
       {
         q: "中国語や英語で相談できますか？",
@@ -73,14 +73,14 @@ const COPY: Record<LangCode, FaqPageCopy> = {
   en: {
     metaTitle: "FAQ｜四葉行政書士事務所 — Gyoseishoshi (Administrative Scrivener) Office in Bunkyo, Tokyo",
     metaDesc:
-      "Answers to frequently asked questions about 四葉行政書士事務所 (Yotsuba Gyoseishoshi Office): Is the first consultation free? Can I consult in Chinese or English? Can you handle disability-welfare service designation? Kohinata, Bunkyo-ku, Tokyo — a 5-minute walk from Myogadani Station. Feel free to contact us.",
+      "Answers to frequently asked questions about 四葉行政書士事務所 (Yotsuba Gyoseishoshi Office): Are consultations free? Can I consult in Chinese or English? Can you handle disability-welfare service designation? Kohinata, Bunkyo-ku, Tokyo — a 5-minute walk from Myogadani Station. Feel free to contact us.",
     breadcrumbHome: "Home",
     breadcrumbCurrent: "FAQ",
     heading: "Frequently Asked Questions",
     items: [
       {
-        q: "Is the first consultation free?",
-        a: "Yes — your first consultation is free of charge. After that, the standard rate is 5,500 yen (tax included) per 30 minutes. Consultations are available at our office in Kohinata, Bunkyo-ku (a 5-minute walk from Myogadani Station on the Tokyo Metro Marunouchi Line) or online.",
+        q: "Are consultations free?",
+        a: "Yes — consultations are free of charge, the first and every one thereafter. Consultations are available at our office in Kohinata, Bunkyo-ku (a 5-minute walk from Myogadani Station on the Tokyo Metro Marunouchi Line) or online. If a fee should apply, we will present a quotation.",
       },
       {
         q: "Can I consult in Chinese or English?",
@@ -115,14 +115,14 @@ const COPY: Record<LangCode, FaqPageCopy> = {
   "zh-tw": {
     metaTitle: "常見問題｜四葉行政書士事務所",
     metaDesc:
-      "關於四葉行政書士事務所的常見問題——「初次諮詢是否免費」「可否用中文・英文諮詢」「可否委託障礙福祉服務的指定申請」等，以一問一答方式回答。文京區小日向・茗荷谷站步行5分鐘。歡迎隨時諮詢。",
+      "關於四葉行政書士事務所的常見問題——「諮詢是否免費」「可否用中文・英文諮詢」「可否委託障礙福祉服務的指定申請」等，以一問一答方式回答。文京區小日向・茗荷谷站步行5分鐘。歡迎隨時諮詢。",
     breadcrumbHome: "首頁",
     breadcrumbCurrent: "常見問題",
     heading: "常見問題",
     items: [
       {
-        q: "初次諮詢是免費的嗎？",
-        a: "初次諮詢免費。之後原則上每30分鐘5,500日圓（含稅）。可在文京區小日向（東京Metro丸之內線「茗荷谷」站步行5分鐘）的事務所或線上進行。",
+        q: "諮詢是免費的嗎？",
+        a: "諮詢免費（初次與第2次以後皆同）。可在文京區小日向（東京Metro丸之內線「茗荷谷」站步行5分鐘）的事務所或線上進行。如需收費，將提出報價。",
       },
       {
         q: "可以用中文或英文諮詢嗎？",
@@ -157,14 +157,14 @@ const COPY: Record<LangCode, FaqPageCopy> = {
   zh: {
     metaTitle: "常见问题｜四葉行政書士事務所",
     metaDesc:
-      "关于四葉行政書士事務所的常见问题——「首次咨询是否免费」「可否用中文・英文咨询」「可否委托残障福祉服务的指定申请」等，以一问一答方式回答。文京区小日向・茗荷谷站步行5分钟。欢迎随时咨询。",
+      "关于四葉行政書士事務所的常见问题——「咨询是否免费」「可否用中文・英文咨询」「可否委托残障福祉服务的指定申请」等，以一问一答方式回答。文京区小日向・茗荷谷站步行5分钟。欢迎随时咨询。",
     breadcrumbHome: "首页",
     breadcrumbCurrent: "常见问题",
     heading: "常见问题",
     items: [
       {
-        q: "首次咨询是免费的吗？",
-        a: "首次咨询免费。之后原则上每30分钟5,500日元（含税）。可在文京区小日向（东京Metro丸之内线「茗荷谷」站步行5分钟）的事务所或线上进行。",
+        q: "咨询是免费的吗？",
+        a: "咨询免费（首次与第2次以后均相同）。可在文京区小日向（东京Metro丸之内线「茗荷谷」站步行5分钟）的事务所或线上进行。如需收费，将提出报价。",
       },
       {
         q: "可以用中文或英文咨询吗？",

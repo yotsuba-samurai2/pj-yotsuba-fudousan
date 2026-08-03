@@ -42,11 +42,11 @@ const COPY: Record<LangCode, NagareCopy> = {
     h1: "ご相談から完了までの流れ",
     lead: (
       <>
-        四葉行政書士事務所へのご依頼は、<strong>①ご相談 → ②お見積り → ③ご契約（受任）→ ④着手（書類作成）→ ⑤申請・提出 → ⑥完了・フォロー</strong>の6段階で進みます。オンライン相談にも対応します。費用は、初回相談が無料（以降は原則30分5,500円〈税込〉）、業務は書面でのお見積り・ご契約後に着手します。
+        四葉行政書士事務所へのご依頼は、<strong>①ご相談 → ②お見積り → ③ご契約（受任）→ ④着手（書類作成）→ ⑤申請・提出 → ⑥完了・フォロー</strong>の6段階で進みます。オンライン相談にも対応します。費用は、ご相談が無料（初回・2回目以降とも）、業務は書面でのお見積り・ご契約後に着手します。
       </>
     ),
     steps: [
-      { name: "ご相談", text: <>現状とご希望を伺い、論点を整理します（初回相談は無料、以降は原則30分5,500円〈税込〉）。</>, howto: "現状とご希望を伺い、論点を整理します。" },
+      { name: "ご相談", text: <>現状とご希望を伺い、論点を整理します（ご相談は初回・2回目以降とも無料）。</>, howto: "現状とご希望を伺い、論点を整理します。" },
       { name: "お見積り", text: <>業務範囲と報酬を書面でご提示します。</>, howto: "業務範囲と報酬を書面でご提示します。" },
       { name: "ご契約（受任）", text: <>内容にご納得いただいてから契約します。</>, howto: "内容にご納得いただいてから契約します。" },
       { name: "着手（書類作成）", text: <>必要書類の収集・作成を進めます。ご準備いただくものは業務ごとにご案内します。</>, howto: "必要書類の収集・作成を進めます。" },
@@ -75,11 +75,11 @@ const COPY: Record<LangCode, NagareCopy> = {
     h1: "From Consultation to Completion: How Engagement Works",
     lead: (
       <>
-        An engagement with Yotsuba Gyoseishoshi (administrative scrivener) Office proceeds in six stages: <strong>(1) Consultation → (2) Quotation → (3) Agreement (Engagement) → (4) Commencement (Document Preparation) → (5) Filing & Submission → (6) Completion & Follow-up</strong>. Online consultations are also available. The first consultation is free (thereafter, in principle, 5,500 yen per 30 minutes, tax included), and work begins only after a written quotation and a signed agreement.
+        An engagement with Yotsuba Gyoseishoshi (administrative scrivener) Office proceeds in six stages: <strong>(1) Consultation → (2) Quotation → (3) Agreement (Engagement) → (4) Commencement (Document Preparation) → (5) Filing & Submission → (6) Completion & Follow-up</strong>. Online consultations are also available. Consultations are free — the first and every one thereafter — and work begins only after a written quotation and a signed agreement.
       </>
     ),
     steps: [
-      { name: "Consultation", text: <>We listen to your situation and goals and organize the issues (the first consultation is free; thereafter, in principle, 5,500 yen per 30 minutes, tax included).</>, howto: "We listen to your situation and goals and organize the issues." },
+      { name: "Consultation", text: <>We listen to your situation and goals and organize the issues (consultations are free — the first and every one thereafter).</>, howto: "We listen to your situation and goals and organize the issues." },
       { name: "Quotation", text: <>We present the scope of work and fees in writing.</>, howto: "We present the scope of work and fees in writing." },
       { name: "Agreement (Engagement)", text: <>The agreement is signed only once you are fully satisfied with the terms.</>, howto: "The agreement is signed only once you are fully satisfied with the terms." },
       { name: "Commencement (Document Preparation)", text: <>We collect and prepare the required documents. What you need to provide is explained for each service.</>, howto: "We collect and prepare the required documents." },
@@ -108,11 +108,11 @@ const COPY: Record<LangCode, NagareCopy> = {
     h1: "從諮詢到完成的流程",
     lead: (
       <>
-        委託四葉行政書士事務所的流程，依<strong>①諮詢 → ②報價 → ③簽約（受任）→ ④著手（文件製作）→ ⑤申請・提交 → ⑥完成・後續支援</strong>六個階段進行。亦提供線上諮詢。費用方面，首次諮詢免費（之後原則上每30分鐘5,500日圓〈含稅〉），業務於書面報價並簽約後才會著手。
+        委託四葉行政書士事務所的流程，依<strong>①諮詢 → ②報價 → ③簽約（受任）→ ④著手（文件製作）→ ⑤申請・提交 → ⑥完成・後續支援</strong>六個階段進行。亦提供線上諮詢。費用方面，諮詢免費（初次與第2次以後皆同），業務於書面報價並簽約後才會著手。
       </>
     ),
     steps: [
-      { name: "諮詢", text: <>聆聽您的現況與需求，並梳理問題重點（首次諮詢免費，之後原則上每30分鐘5,500日圓〈含稅〉）。</>, howto: "聆聽您的現況與需求，並梳理問題重點。" },
+      { name: "諮詢", text: <>聆聽您的現況與需求，並梳理問題重點（諮詢免費，初次與第2次以後皆同）。</>, howto: "聆聽您的現況與需求，並梳理問題重點。" },
       { name: "報價", text: <>以書面提示業務範圍與報酬。</>, howto: "以書面提示業務範圍與報酬。" },
       { name: "簽約（受任）", text: <>在您對內容充分理解並認可後，才簽訂契約。</>, howto: "在您對內容充分理解並認可後，才簽訂契約。" },
       { name: "著手（文件製作）", text: <>進行必要文件的蒐集與製作。需準備的資料將依業務別逐一說明。</>, howto: "進行必要文件的蒐集與製作。" },
@@ -141,11 +141,11 @@ const COPY: Record<LangCode, NagareCopy> = {
     h1: "从咨询到完成的流程",
     lead: (
       <>
-        委托四葉行政書士事務所办理业务，按<strong>①咨询 → ②报价 → ③签约（受任）→ ④着手（文件制作）→ ⑤申请・提交 → ⑥完成・后续支持</strong>六个阶段进行。支持在线咨询。费用方面，首次咨询免费（此后原则上每30分钟5,500日元〈含税〉），业务在书面报价并签约后方才着手。
+        委托四葉行政書士事務所办理业务，按<strong>①咨询 → ②报价 → ③签约（受任）→ ④着手（文件制作）→ ⑤申请・提交 → ⑥完成・后续支持</strong>六个阶段进行。支持在线咨询。费用方面，咨询免费（首次与第2次以后均相同），业务在书面报价并签约后方才着手。
       </>
     ),
     steps: [
-      { name: "咨询", text: <>了解您的现状与期望，梳理问题重点（首次咨询免费，此后原则上每30分钟5,500日元〈含税〉）。</>, howto: "了解您的现状与期望，梳理问题重点。" },
+      { name: "咨询", text: <>了解您的现状与期望，梳理问题重点（咨询免费，首次与第2次以后均相同）。</>, howto: "了解您的现状与期望，梳理问题重点。" },
       { name: "报价", text: <>以书面形式提示业务范围与报酬。</>, howto: "以书面形式提示业务范围与报酬。" },
       { name: "签约（受任）", text: <>在您对内容充分理解并认可后，再签订合同。</>, howto: "在您对内容充分理解并认可后，再签订合同。" },
       { name: "着手（文件制作）", text: <>推进必要文件的收集与制作。需准备的资料将按业务分别说明。</>, howto: "推进必要文件的收集与制作。" },

@@ -7,6 +7,7 @@
 // 30分5,500円（税込）の具体額を撤去（新設 /ryokin と同一基準）。あわせて ja のタイトル・H1・パンくずを
 // 「アクセス・料金」→「アクセス」に変更。en/zh-tw/zh も2026-07-20（翻訳チェック§F・浦松指示）でjaに追随し金額を撤去済み。
 // （旧: 2026-07-11確定文言＝媒介外関連業務のみ事前同意のうえ30分5,500円。国交省 解釈・運用の考え方が根拠）
+// 2026-08-03浦松指示：相談料は「初回・2回目以降とも無料」に変更し、備考を「料金がかかる場合は見積もりを提示します」に統一（/access のみ。/legal は変更しない）。
 // ※宅建業法上の相談料の切り分けは石井弁護士の最終確認を通すこと（下部Placeholder参照）。
 // 住所は全ロケール日本語表記維持（enのみ英字補記）。金額・率・TELは全ロケール不変。
 import type { Metadata } from "next";
@@ -50,7 +51,7 @@ const COPY: Record<LangCode, AccessCopy> = {
   ja: {
     metaTitle: "アクセス｜茗荷谷駅徒歩5分の四葉不動産株式会社",
     metaDesc:
-      "四葉不動産株式会社（東京都文京区小日向・東京メトロ丸ノ内線「茗荷谷」駅 徒歩5分）へのアクセスと料金のご案内です。売買仲介・賃貸仲介の手数料は宅地建物取引業法の法定上限、賃貸管理は月額賃料の3〜5%。初回のご相談は無料・オンライン対応。TEL 03-6161-9428。",
+      "四葉不動産株式会社（東京都文京区小日向・東京メトロ丸ノ内線「茗荷谷」駅 徒歩5分）へのアクセスと料金のご案内です。売買仲介・賃貸仲介の手数料は宅地建物取引業法の法定上限、賃貸管理は月額賃料の3〜5%。ご相談は無料・オンライン対応。TEL 03-6161-9428。",
     breadcrumbHome: "ホーム",
     breadcrumbCurrent: "アクセス",
     h1: "アクセス",
@@ -92,14 +93,14 @@ const COPY: Record<LangCode, AccessCopy> = {
       },
       {
         item: "相談料",
-        fee: "初回のご相談は無料です。2回目以降の扱いは、ご相談内容により異なります。",
-        note: "具体的な扱いはご相談時にご案内します",
+        fee: "初回のご相談は無料です。2回目以降も無料です。",
+        note: "料金がかかる場合は見積もりを提示します",
       },
     ],
     feeNote: "※売買価格に応じた具体的な手数料額は、物件ごとに算出してご提示します。",
     consultH2: "相談は無料ですか？オンラインでもできますか？",
     consultBody:
-      "初回のご相談・診断は無料です。2回目以降の扱いは、ご相談内容により異なります。オンラインにも対応します。まずはLINEか電話で一言からどうぞ。",
+      "初回のご相談・診断は無料です。2回目以降も無料です。オンラインにも対応します。まずはLINEか電話で一言からどうぞ。",
     relatedAria: "関連リンク",
     relatedHeading: "このページの関連リンク",
     relatedLinks: [
@@ -115,7 +116,7 @@ const COPY: Record<LangCode, AccessCopy> = {
   en: {
     metaTitle: "Access & Fees | 四葉不動産株式会社 (Yotsuba Real Estate), 5 min from Myogadani Sta.",
     metaDesc:
-      "Access and fees of Yotsuba Real Estate Co., Ltd. (Kohinata, Bunkyo-ku, Tokyo; 5 min walk from Myogadani Sta. on the Tokyo Metro Marunouchi Line). Brokerage commissions for sales and leasing are within the statutory maximum (cap) under the Real Estate Brokerage Act; rental management is 3–5% of monthly rent. Your first consultation is free; online sessions available. TEL 03-6161-9428.",
+      "Access and fees of Yotsuba Real Estate Co., Ltd. (Kohinata, Bunkyo-ku, Tokyo; 5 min walk from Myogadani Sta. on the Tokyo Metro Marunouchi Line). Brokerage commissions for sales and leasing are within the statutory maximum (cap) under the Real Estate Brokerage Act; rental management is 3–5% of monthly rent. Consultations are free — the first and every one thereafter; online sessions available. TEL 03-6161-9428.",
     breadcrumbHome: "Home",
     breadcrumbCurrent: "Access & Fees",
     h1: "Access & Fees",
@@ -162,14 +163,14 @@ const COPY: Record<LangCode, AccessCopy> = {
       },
       {
         item: "Consultation fee",
-        fee: "Your first consultation is free. From the second session onward, fees vary depending on the content of your consultation.",
-        note: "The specific handling will be explained at the time of your consultation",
+        fee: "Your first consultation is free, and sessions from the second onward are free as well.",
+        note: "If a fee should apply, we will present a quotation",
       },
     ],
     feeNote: "Note: The specific commission amount based on the sale price is calculated and presented for each property.",
     consultH2: "Is the consultation free? Can it be done online?",
     consultBody:
-      "Your first consultation and diagnosis are free. From the second session onward, fees vary depending on the content of your consultation. Online sessions are also available. Feel free to start with a single line via LINE or phone.",
+      "Your first consultation and diagnosis are free, and sessions from the second onward are free as well. Online sessions are also available. Feel free to start with a single line via LINE or phone.",
     relatedAria: "Related links",
     relatedHeading: "Related links on this page",
     relatedLinks: [
@@ -185,7 +186,7 @@ const COPY: Record<LangCode, AccessCopy> = {
   "zh-tw": {
     metaTitle: "交通與費用｜茗荷谷站步行5分的四葉不動産株式会社",
     metaDesc:
-      "四葉不動産株式会社（東京都文京區小日向・東京Metro丸之內線「茗荷谷」站 步行5分）的交通與費用介紹。買賣仲介・租賃仲介的手續費為宅地建物取引業法的法定上限，租賃管理為月租金的3〜5%。初次諮詢免費・可線上進行。TEL 03-6161-9428。",
+      "四葉不動産株式会社（東京都文京區小日向・東京Metro丸之內線「茗荷谷」站 步行5分）的交通與費用介紹。買賣仲介・租賃仲介的手續費為宅地建物取引業法的法定上限，租賃管理為月租金的3〜5%。諮詢免費・可線上進行。TEL 03-6161-9428。",
     breadcrumbHome: "首頁",
     breadcrumbCurrent: "交通與費用",
     h1: "交通與費用",
@@ -227,14 +228,14 @@ const COPY: Record<LangCode, AccessCopy> = {
       },
       {
         item: "諮詢費",
-        fee: "初次諮詢免費。第2次起，費用依諮詢內容而定。",
-        note: "具體處理方式將於諮詢時說明",
+        fee: "初次諮詢免費。第2次起同樣免費。",
+        note: "如需收費，將提出報價",
       },
     ],
     feeNote: "※依買賣價格計算的具體手續費金額，將按各物件個別試算後提示。",
     consultH2: "諮詢是免費的嗎？可以線上進行嗎？",
     consultBody:
-      "初次諮詢・診斷免費。第2次起，費用依諮詢內容而定。亦可線上進行。歡迎先透過LINE或電話說一句話。",
+      "初次諮詢・診斷免費。第2次起同樣免費。亦可線上進行。歡迎先透過LINE或電話說一句話。",
     relatedAria: "相關連結",
     relatedHeading: "本頁相關連結",
     relatedLinks: [
@@ -250,7 +251,7 @@ const COPY: Record<LangCode, AccessCopy> = {
   zh: {
     metaTitle: "交通与费用｜茗荷谷站步行5分的四葉不動産株式会社",
     metaDesc:
-      "四葉不動産株式会社（东京都文京区小日向・东京Metro丸之内线“茗荷谷”站 步行5分）的交通与费用介绍。买卖中介・租赁中介的手续费为日本《宅地建物取引业法》的法定上限，租赁管理为月租金的3〜5%。初次咨询免费・可在线进行。电话 03-6161-9428。",
+      "四葉不動産株式会社（东京都文京区小日向・东京Metro丸之内线“茗荷谷”站 步行5分）的交通与费用介绍。买卖中介・租赁中介的手续费为日本《宅地建物取引业法》的法定上限，租赁管理为月租金的3〜5%。咨询免费・可在线进行。电话 03-6161-9428。",
     breadcrumbHome: "首页",
     breadcrumbCurrent: "交通与费用",
     h1: "交通与费用",
@@ -292,14 +293,14 @@ const COPY: Record<LangCode, AccessCopy> = {
       },
       {
         item: "咨询费",
-        fee: "初次咨询免费。第2次起，费用依咨询内容而定。",
-        note: "具体处理方式将于咨询时说明",
+        fee: "初次咨询免费。第2次起同样免费。",
+        note: "如需收费，将提出报价",
       },
     ],
     feeNote: "※根据买卖价格计算的具体手续费金额，将按每个物件单独测算后提示。",
     consultH2: "咨询是免费的吗？可以在线进行吗？",
     consultBody:
-      "初次咨询・诊断免费。第2次起，费用依咨询内容而定。也可在线进行。欢迎先通过LINE或电话说一句话。",
+      "初次咨询・诊断免费。第2次起同样免费。也可在线进行。欢迎先通过LINE或电话说一句话。",
     relatedAria: "相关链接",
     relatedHeading: "本页相关链接",
     relatedLinks: [
