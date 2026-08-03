@@ -56,7 +56,7 @@ const COPY: Record<LangCode, ServicesCopy> = {
   ja: {
     metaTitle: "サービス｜仲介の前に「材料」を届ける不動産コンサルティング",
     metaDesc:
-      "四葉不動産株式会社のサービス案内。物件の売り込みではなく、売るべきか・買うべきか・動くべきかの判断材料をそろえる、文京区・小日向のコンサルティング型不動産会社です。相続不動産・事業用/投資用・外国人の住まいの3領域を、診断→選択肢→実行の3ステップで。初回のご相談・診断は無料です。",
+      "四葉不動産株式会社のサービス案内。物件の売り込みではなく、売るべきか・買うべきか・動くべきかの判断材料をそろえる、文京区・小日向のコンサルティング型不動産会社です。相続不動産・事業用/投資用・外国人の住まいの3領域を、診断→選択肢→実行の3ステップで。ご相談・診断は無料です（初回・2回目以降とも）。",
     breadcrumbHome: "ホーム",
     breadcrumbCurrent: "サービス",
     h1: "売る前に、考える。借りる前に、確かめる。",
@@ -94,7 +94,7 @@ const COPY: Record<LangCode, ServicesCopy> = {
         ],
       },
       // 【要確認】相談無料の範囲＝現行運用（/faqの媒介を伴わないコンサル料金）と一致するか（原稿§1注記の浦松確認待ち）
-      note: "※「動かない（売らない・買わない）」が最善なら、そのままお伝えします。仲介手数料は成約時のみ・初回のご相談は無料です。",
+      note: "※「動かない（売らない・買わない）」が最善なら、そのままお伝えします。仲介手数料は成約時のみ・ご相談は無料です。",
     },
     fields: {
       heading: "四葉のコンサルティング4領域",
@@ -127,11 +127,11 @@ const COPY: Record<LangCode, ServicesCopy> = {
     },
     flow: {
       heading: "進め方——診断 → 選択肢 → 実行",
-      lead: "急かしません。初回のご相談は無料です。",
+      lead: "急かしません。ご相談は無料です。",
       steps: [
         {
           title: "診断",
-          note: "（初回無料）",
+          note: "（相談無料）",
           body: "まずLINKA（AIコンシェルジュ）またはLINEで一言。状況を伺い、論点を整理します。",
         },
         {
@@ -158,7 +158,7 @@ const COPY: Record<LangCode, ServicesCopy> = {
   en: {
     metaTitle: "Services | Real Estate Consulting That Delivers the Facts Before the Deal",
     metaDesc:
-      "Services of Yotsuba Real Estate Co., Ltd., a consulting-style real estate company in Kohinata, Bunkyo, Tokyo. Instead of pushing properties, we prepare the material you need to decide whether to sell, buy, or move at all. Three fields—inherited property, business & investment use, and housing for international residents—in three steps: diagnosis, options, execution. Your first consultation and diagnosis are free.",
+      "Services of Yotsuba Real Estate Co., Ltd., a consulting-style real estate company in Kohinata, Bunkyo, Tokyo. Instead of pushing properties, we prepare the material you need to decide whether to sell, buy, or move at all. Three fields—inherited property, business & investment use, and housing for international residents—in three steps: diagnosis, options, execution. Consultations and diagnoses are free.",
     breadcrumbHome: "Home",
     breadcrumbCurrent: "Services",
     h1: "Think before you sell. Check before you rent.",
@@ -196,7 +196,7 @@ const COPY: Record<LangCode, ServicesCopy> = {
           { label: "Information", value: "Verified facts, good and bad alike" },
         ],
       },
-      note: "Note: If “not moving (not selling, not buying)” is the best answer, that is exactly what we will tell you. Brokerage fees arise only when a deal closes; your first consultation is free.",
+      note: "Note: If “not moving (not selling, not buying)” is the best answer, that is exactly what we will tell you. Brokerage fees arise only when a deal closes; consultations are free.",
     },
     fields: {
       heading: "Yotsuba's four consulting fields",
@@ -229,11 +229,11 @@ const COPY: Record<LangCode, ServicesCopy> = {
     },
     flow: {
       heading: "How we proceed: Diagnosis → Options → Execution",
-      lead: "No rushing. Your first consultation is free.",
+      lead: "No rushing. Consultations are free.",
       steps: [
         {
           title: "Diagnosis",
-          note: "(first session free)",
+          note: "(free of charge)",
           body: "Start with a single line via LINKA (our AI concierge) or LINE. We listen to your situation and sort out the issues.",
         },
         {
@@ -259,7 +259,7 @@ const COPY: Record<LangCode, ServicesCopy> = {
   "zh-tw": {
     metaTitle: "服務｜在仲介之前，先送上「材料」的不動產顧問",
     metaDesc:
-      "四葉不動産株式会社的服務介紹。不是推銷物件，而是備齊「該賣・該買・該不該行動」的判斷材料——位於文京區・小日向的顧問型不動產公司。繼承不動產・事業用/投資用・外國人居住三大領域，以診斷→選項→執行三步驟進行。初次諮詢・診斷免費。",
+      "四葉不動産株式会社的服務介紹。不是推銷物件，而是備齊「該賣・該買・該不該行動」的判斷材料——位於文京區・小日向的顧問型不動產公司。繼承不動產・事業用/投資用・外國人居住三大領域，以診斷→選項→執行三步驟進行。諮詢・診斷免費（初次與第2次以後皆同）。",
     breadcrumbHome: "首頁",
     breadcrumbCurrent: "服務",
     h1: "出售之前，先思考。承租之前，先確認。",
@@ -296,7 +296,7 @@ const COPY: Record<LangCode, ServicesCopy> = {
           { label: "資訊", value: "查證過的事實，優缺點並陳" },
         ],
       },
-      note: "※若「不行動（不賣・不買）」才是最佳解，我們會如實告訴您。仲介手續費僅於成交時發生；初次諮詢免費。",
+      note: "※若「不行動（不賣・不買）」才是最佳解，我們會如實告訴您。仲介手續費僅於成交時發生；諮詢免費。",
     },
     fields: {
       heading: "四葉的顧問服務4領域",
@@ -329,11 +329,11 @@ const COPY: Record<LangCode, ServicesCopy> = {
     },
     flow: {
       heading: "進行方式——診斷 → 選項 → 執行",
-      lead: "我們不催促。初次諮詢免費。",
+      lead: "我們不催促。諮詢免費。",
       steps: [
         {
           title: "診斷",
-          note: "（初次免費）",
+          note: "（諮詢免費）",
           body: "先透過LINKA（AI禮賓）或LINE說一句話。我們了解您的狀況，整理出論點。",
         },
         {
@@ -359,7 +359,7 @@ const COPY: Record<LangCode, ServicesCopy> = {
   zh: {
     metaTitle: "服务｜在中介之前，先送上“材料”的不动产顾问",
     metaDesc:
-      "四葉不動産株式会社的服务介绍。不是推销物件，而是备齐“该卖・该买・该不该行动”的判断材料——位于文京区・小日向的顾问型不动产公司。继承不动产・事业用/投资用・外国人居住三大领域，以诊断→选项→执行三步骤进行。初次咨询・诊断免费。",
+      "四葉不動産株式会社的服务介绍。不是推销物件，而是备齐“该卖・该买・该不该行动”的判断材料——位于文京区・小日向的顾问型不动产公司。继承不动产・事业用/投资用・外国人居住三大领域，以诊断→选项→执行三步骤进行。咨询・诊断免费（首次与第2次以后均相同）。",
     breadcrumbHome: "首页",
     breadcrumbCurrent: "服务",
     h1: "出售之前，先思考。承租之前，先确认。",
@@ -396,7 +396,7 @@ const COPY: Record<LangCode, ServicesCopy> = {
           { label: "信息", value: "核实过的事实，优缺点并陈" },
         ],
       },
-      note: "※若“不行动（不卖・不买）”才是最佳解，我们会如实告诉您。中介手续费仅在成交时发生；初次咨询免费。",
+      note: "※若“不行动（不卖・不买）”才是最佳解，我们会如实告诉您。中介手续费仅在成交时发生；咨询免费。",
     },
     fields: {
       heading: "四葉的顾问服务4领域",
@@ -429,11 +429,11 @@ const COPY: Record<LangCode, ServicesCopy> = {
     },
     flow: {
       heading: "进行方式——诊断 → 选项 → 执行",
-      lead: "我们不催促。初次咨询免费。",
+      lead: "我们不催促。咨询免费。",
       steps: [
         {
           title: "诊断",
-          note: "（初次免费）",
+          note: "（咨询免费）",
           body: "先通过LINKA（AI礼宾）或LINE说一句话。我们了解您的情况，整理出论点。",
         },
         {
