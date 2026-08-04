@@ -43,7 +43,6 @@ const COPY: Record<LangCode, LegalTopCopy> = {
     services: [
       { href: "/legal/services/shogai-fukushi", label: "障害福祉サービスの指定申請", sub: "グループホーム開設を法人設立から運営まで" },
       { href: "/legal/services/visa", label: "在留資格・ビザ申請", sub: "中国語・英語で相談できる申請取次" },
-      { href: "/legal/services/gaikokujin-shain", label: "外国人社員の受け入れ", sub: "企業の人事・総務へ。認定証明書から入国後の届出まで" },
       { href: "/legal/services/inheritance", label: "相続・遺言・信託", sub: "遺産分割協議書・遺言書の作成" },
       { href: "/legal/services/company", label: "会社設立・各種許認可", sub: "外国人の起業・経営管理ビザにも対応" },
       { href: "/legal/services/subsidy", label: "補助金申請サポート", sub: "元記者が書く「伝わる事業計画書」" },
@@ -74,7 +73,6 @@ const COPY: Record<LangCode, LegalTopCopy> = {
     services: [
       { href: "/legal/services/shogai-fukushi", label: "Disability-Welfare Service Designation", sub: "From incorporation to opening and running a group home" },
       { href: "/legal/services/visa", label: "Visa & Residence Status", sub: "Certified application agent—consultations in Chinese and English" },
-      { href: "/legal/services/gaikokujin-shain", label: "Bringing Employees from Overseas", sub: "For HR and admin teams—from the certificate of eligibility to post-arrival filings" },
       { href: "/legal/services/inheritance", label: "Inheritance, Wills & Trusts", sub: "Estate-division agreements and will drafting" },
       { href: "/legal/services/company", label: "Company Formation & Licensing", sub: "Also for foreign founders and business-manager visas" },
       { href: "/legal/services/subsidy", label: "Subsidy Application Support", sub: "Business plans that persuade, written by a former journalist" },
@@ -105,7 +103,6 @@ const COPY: Record<LangCode, LegalTopCopy> = {
     services: [
       { href: "/legal/services/shogai-fukushi", label: "障礙福祉服務指定申請", sub: "從法人設立到團體家屋的開設與營運" },
       { href: "/legal/services/visa", label: "在留資格（簽證）申請", sub: "可用中文・英文諮詢的申請取次" },
-      { href: "/legal/services/gaikokujin-shain", label: "外籍員工的接受準備", sub: "為企業人事・總務。從在留資格認定證明書到入境後的申報" },
       { href: "/legal/services/inheritance", label: "繼承・遺囑・信託", sub: "遺產分割協議書・遺囑的製作" },
       { href: "/legal/services/company", label: "公司設立・各類許可", sub: "外國人創業・經營管理簽證亦可對應" },
       { href: "/legal/services/subsidy", label: "補助金申請支援", sub: "前記者執筆「能打動人的事業計畫書」" },
@@ -136,7 +133,6 @@ const COPY: Record<LangCode, LegalTopCopy> = {
     services: [
       { href: "/legal/services/shogai-fukushi", label: "残障福祉服务指定申请", sub: "从法人设立到团体家屋的开设与运营" },
       { href: "/legal/services/visa", label: "在留资格（签证）申请", sub: "可用中文・英文咨询的申请取次" },
-      { href: "/legal/services/gaikokujin-shain", label: "外籍员工的接收准备", sub: "为企业人事・总务。从在留资格认定证明书到入境后的申报" },
       { href: "/legal/services/inheritance", label: "继承・遗嘱・信托", sub: "遗产分割协议书・遗嘱的制作" },
       { href: "/legal/services/company", label: "公司设立・各类许可", sub: "外国人创业・经营管理签证亦可对应" },
       { href: "/legal/services/subsidy", label: "补助金申请支援", sub: "前记者执笔“能打动人的事业计划书”" },
