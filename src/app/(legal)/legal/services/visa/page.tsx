@@ -86,6 +86,14 @@ const COPY: Record<LangCode, VisaCopy> = {
         </div>
 
         <div>
+          <H2>会社が海外から社員を呼ぶ場合も、このページですか？</H2>
+          <p className="mt-3 leading-relaxed text-text">
+            このページは<strong>申請するご本人</strong>向けです。会社として海外にいる社員を迎える場合は、企業の側にも<strong>期限のある手続き</strong>（在留資格認定証明書の交付申請、入国後14日以内の住居地の届出など）があります。人事・総務のご担当者向けに、着任日から逆算した進め方と帯同するご家族の扱いを別のページにまとめています →{" "}
+            <Link href={addLocalePrefix("/legal/services/gaikokujin-shain", locale)} className="text-primary underline">外国人社員を海外から迎えるとき——企業が押さえる手続きと期限</Link>
+          </p>
+        </div>
+
+        <div>
           <H2>費用・受任の流れ</H2>
           <p className="mt-2 text-sm">
             → <Link href={addLocalePrefix("/legal/ryokin", locale)} className="text-primary underline">在留資格・ビザ申請の報酬額（報酬額表）</Link>
@@ -156,6 +164,14 @@ const COPY: Record<LangCode, VisaCopy> = {
           </p>
           <p className="mt-1 text-xs text-text-muted">
             ※四葉不動産株式会社 (Yotsuba Real Estate) and 四葉行政書士事務所 are separate, independent businesses, and each accepts engagements independently (no referral fees are exchanged).
+          </p>
+        </div>
+
+        <div>
+          <H2>Is this also the right page if our company is bringing an employee from overseas?</H2>
+          <p className="mt-3 leading-relaxed text-text">
+            This page is written for <strong>the applicant</strong>. When a company brings in an employee from abroad, the employer has its own <strong>deadline-bound steps</strong>—applying for the certificate of eligibility, filing the residence address within 14 days of arrival, and so on. For HR and admin teams, we set out the countdown from the start date and how accompanying family members are treated on a separate page →{" "}
+            <Link href={addLocalePrefix("/legal/services/gaikokujin-shain", locale)} className="text-primary underline">Bringing employees from overseas — the steps and deadlines companies need to track</Link>
           </p>
         </div>
 
@@ -234,6 +250,14 @@ const COPY: Record<LangCode, VisaCopy> = {
         </div>
 
         <div>
+          <H2>公司從海外聘請員工時，也是看這一頁嗎？</H2>
+          <p className="mt-3 leading-relaxed text-text">
+            這一頁是寫給<strong>申請本人</strong>看的。公司從海外迎接員工時，企業方也有<strong>附期限的手續</strong>（在留資格認定證明書的交付申請、入境後14日內的居住地申報等）。我們在另一頁，為人事・總務的承辦人整理了從到任日往回推算的進行方式，以及帶同家屬的處理 →{" "}
+            <Link href={addLocalePrefix("/legal/services/gaikokujin-shain", locale)} className="text-primary underline">從海外迎接外籍員工時——企業須掌握的手續與期限</Link>
+          </p>
+        </div>
+
+        <div>
           <H2>費用・受任流程</H2>
           <p className="mt-2 text-sm">
             → <Link href={addLocalePrefix("/legal/ryokin", locale)} className="text-primary underline">在留資格（簽證）申請的報酬額（報酬額表）</Link>
@@ -304,6 +328,14 @@ const COPY: Record<LangCode, VisaCopy> = {
           </p>
           <p className="mt-1 text-xs text-text-muted">
             ※四葉不動産株式会社与四葉行政書士事務所为各自独立的事业体，分别独立受理委托（不收受介绍费等）。
+          </p>
+        </div>
+
+        <div>
+          <H2>公司从海外聘请员工时，也是看这一页吗？</H2>
+          <p className="mt-3 leading-relaxed text-text">
+            这一页是写给<strong>申请本人</strong>看的。公司从海外迎接员工时，企业方也有<strong>附期限的手续</strong>（在留资格认定证明书的交付申请、入境后14日内的居住地申报等）。我们在另一页，为人事・总务的承办人整理了从到任日倒推的进行方式，以及带同家属的处理 →{" "}
+            <Link href={addLocalePrefix("/legal/services/gaikokujin-shain", locale)} className="text-primary underline">从海外迎接外籍员工时——企业须掌握的手续与期限</Link>
           </p>
         </div>
 
