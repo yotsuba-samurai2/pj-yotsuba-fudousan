@@ -127,9 +127,9 @@ export const CROSS_LINKS: CrossLink[] = [
   { id: "C1", from: ["/legal/services/inheritance"], targets: [{ href: "/souzoku", anchor: "文京区で不動産を相続したら——管理・活用・売却の完全ガイド（四葉不動産）", anchorI18n: A_SOUZOKU, business: "realestate" }] },
   { id: "C2", from: ["/legal/services/shogai-fukushi"], targets: [{ href: "/toushi/group-home", anchor: "グループホームに使える物件探し（四葉不動産）", anchorI18n: A_GROUP_HOME, business: "realestate" }] },
   { id: "C3", from: ["/toushi", "/toushi/group-home"], targets: [{ href: "/legal/services/shogai-fukushi", anchor: "障害福祉サービスの指定申請（四葉行政書士事務所）", anchorI18n: A_SHOGAI_SHITEI, business: "legal" }] },
-  { id: "C4", from: ["/legal/services/visa"], targets: [{ href: "/toushi/shataku", anchor: "社宅・法人賃貸のサポート（四葉不動産）", anchorI18n: A_SHATAKU_SUPPORT, business: "realestate" }] },
+  { id: "C4", from: ["/legal/services/visa"], targets: [{ href: "/shataku", anchor: "借り上げ社宅の導入ガイド（四葉不動産）", anchorI18n: A_SHATAKU_SUPPORT, business: "realestate" }] },
   { id: "C5", from: ["/legal/services/visa"], targets: [{ href: "/global", anchor: "外国人・多言語のお部屋探し（四葉不動産）", anchorI18n: A_GLOBAL, business: "realestate" }] },
-  { id: "C6", from: ["/toushi/shataku", "/global"], targets: [{ href: "/legal/services/visa", anchor: "在留資格・ビザ申請（四葉行政書士事務所）", anchorI18n: A_VISA, business: "legal" }] },
+  { id: "C6", from: ["/shataku", "/global"], targets: [{ href: "/legal/services/visa", anchor: "在留資格・ビザ申請（四葉行政書士事務所）", anchorI18n: A_VISA, business: "legal" }] },
 
   // ── 開業日開通（C7〜C14・SR_LAUNCHED） ──
   { id: "C7", from: ["/legal/ryokin"], launchFlag: "SR_LAUNCHED", targets: [{ href: "/labor/ryokin", anchor: "労務・処遇改善加算・雇用関係助成金の料金（四葉社会保険労務士事務所）", anchorI18n: A_SR_RYOKIN, business: "labor" }] },
@@ -144,7 +144,7 @@ export const CROSS_LINKS: CrossLink[] = [
   { id: "C13", from: ["/labor/services/kaigo-roumu", "/labor"], launchFlag: "SR_LAUNCHED", targets: [{ href: "/toushi/group-home", anchor: "グループホームに使える物件探し（四葉不動産）", anchorI18n: A_GROUP_HOME, business: "realestate" }] },
   { id: "C14", from: ["/labor/services/gaikokujin-koyo"], launchFlag: "SR_LAUNCHED", targets: [
       { href: "/legal/services/visa", anchor: "在留資格・ビザ申請（四葉行政書士事務所）", anchorI18n: A_VISA, business: "legal" },
-      { href: "/toushi/shataku", anchor: "社宅・法人賃貸（四葉不動産）", anchorI18n: A_SHATAKU, business: "realestate" },
+      { href: "/shataku", anchor: "借り上げ社宅の導入（四葉不動産）", anchorI18n: A_SHATAKU, business: "realestate" },
     ] },
 ];
 

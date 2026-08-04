@@ -91,8 +91,8 @@ export const SERVICE_NAV_CATEGORIES: ServiceNavCategory[] = [
       { href: "/inshokuten", label: { ja: "飲食店の開業" }, locales: ["ja"] },
       { href: "/office", label: { ja: "会社設立×オフィス" }, locales: ["ja"] },
       {
-        href: "/toushi/shataku",
-        label: { ja: "社宅・法人契約", en: "Company housing & corporate leases", "zh-tw": "員工宿舍・法人租賃", zh: "员工宿舍・法人租赁" },
+        href: "/shataku",
+        label: { ja: "借り上げ社宅の導入", en: "Company housing & corporate leases", "zh-tw": "員工宿舍・法人租賃", zh: "员工宿舍・法人租赁" },
       },
     ],
   },

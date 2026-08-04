@@ -6,7 +6,7 @@
 //   ・/legal/services/visa ＝**本人視点**の在留資格（実測で「赴任」4回・「駐在」12回が既出）
 //   ・本ページ ＝**企業視点**（誰が費用を持つか／社内の期限管理／帯同家族／書類の認証）
 //     → 在留資格の類型解説は書かず visa へ送る。
-//   ・/global（不動産側）＝外国人本人の住まい。/toushi/shataku＝社宅・法人賃貸。相互リンクで組む。
+//   ・/global（不動産側）＝外国人本人の住まい。/shataku＝社宅・法人賃貸。相互リンクで組む。
 //
 // 【コンプライアンス】shigyo-compliance-gate 準拠
 //   ・アポスティーユ／公印確認を**発行するのは外務省**。「当事務所が発行」と書かない。
@@ -121,7 +121,7 @@ export default async function Page() {
       governmentService
       internalLinks={[
         { href: "/legal/services/visa", label: "在留資格・ビザ申請（本人向けの詳細）" },
-        { href: "/toushi/shataku", label: "借り上げ社宅・法人賃貸" },
+        { href: "/shataku", label: "借り上げ社宅の導入" },
         { href: "/global", label: "外国人・多言語のお部屋探し" },
         { href: "/legal/ryokin", label: "料金のご案内" },
         { href: "/legal/contact", label: "お問い合わせ" },
@@ -245,7 +245,7 @@ export default async function Page() {
         </p>
         <p className="mt-3 leading-relaxed text-text">
           社宅の導入や法人契約は
-          <Link href="/toushi/shataku" className="text-primary underline">借り上げ社宅・法人賃貸のご案内</Link>
+          <Link href="/shataku" className="text-primary underline">借り上げ社宅の導入ガイド</Link>
           を、本人が自分で借りる場合は
           <Link href="/global" className="text-primary underline">外国人・多言語のお部屋探し</Link>
           をご覧ください。いずれも四葉不動産株式会社（宅地建物取引業）が<strong className="text-ink">別契約で</strong>承ります。

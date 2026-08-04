@@ -72,7 +72,7 @@ const COPY: Record<PageLocale, Copy> = {
       </p>
     ),
     links: [
-      { href: "/toushi/shataku", label: "借り上げ社宅・法人賃貸（企業の方へ）" },
+      { href: "/shataku", label: "借り上げ社宅の導入（企業の方へ）" },
       { href: "/legal/services/gaikokujin-shain", label: "外国人社員の受け入れ（企業向け手続き）" },
       { href: "/global", label: "外国人・多言語のお部屋探し" },
       { href: "/access", label: "アクセス・ご相談" },
@@ -158,7 +158,7 @@ const COPY: Record<PageLocale, Copy> = {
       </p>
     ),
     links: [
-      { href: "/toushi/shataku", label: "承租型員工宿舍・法人租賃（給企業）" },
+      { href: "/shataku", label: "承租型員工宿舍・法人租賃（給企業）" },
       { href: "/legal/services/gaikokujin-shain", label: "外籍員工的接收（企業端手續）" },
       { href: "/global", label: "外國人・多語言的找房" },
       { href: "/access", label: "交通・諮詢" },

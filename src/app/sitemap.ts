@@ -98,7 +98,7 @@ const STATIC_REALESTATE: StaticPage[] = [
   // 2026-07-22：介護事業所ピラー（#14）。ja先行公開。GH（/group-home）と福祉系開設クラスタ。
   { path: "/kaigo", changeFrequency: "monthly", priority: 0.8, locales: ["ja"] },
   // 2026-07-24：借り上げ社宅ピラー（#12）。ja先行公開。導入・社宅規程・物件の分離受任（宅建業×社労士×税務）。
-  { path: "/shataku", changeFrequency: "monthly", priority: 0.8, locales: ["ja"] },
+  { path: "/shataku", changeFrequency: "monthly", priority: 0.8 },
   // 2026-07-25：本帰国ピラー（定点#18の入れ替え先）。ja先行公開。
   // 役割＝主語は「帰国というライフイベント」。/global（主語＝在留資格・読者＝外国人）とは読者が別。
   { path: "/kikoku", changeFrequency: "monthly", priority: 0.8, locales: ["ja"] },
@@ -118,7 +118,6 @@ const STATIC_REALESTATE: StaticPage[] = [
   { path: "/toushi/group-home", changeFrequency: "monthly", priority: 0.8 },
   // タスクC-2（2026-07-19）：指定申請と物件の分離受任。現フェーズ＝ja先行公開（/ryokinと同方式）
   { path: "/toushi/shitei-shinsei", changeFrequency: "monthly", priority: 0.7, locales: ["ja"] },
-  { path: "/toushi/shataku", changeFrequency: "monthly", priority: 0.7 },
   { path: "/global", changeFrequency: "monthly", priority: 0.8 },
   // タスクC-3（2026-07-19）：中国語圏特化ハブ。C-6-1で zh-tw・zh を公開（en版は未作成のため除外）。
   // ページ側の availableLocales（PAGE_LOCALES）と必ず一致させる＝存在しないロケールURLを広告しない。

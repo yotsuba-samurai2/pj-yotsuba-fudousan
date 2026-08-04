@@ -72,7 +72,7 @@ const COPY: Record<LangCode, ToushiCopy> = {
     ),
     internalLinks: [
       { href: "/toushi/group-home", label: "グループホーム物件" },
-      { href: "/toushi/shataku", label: "社宅・法人賃貸" },
+      { href: "/shataku", label: "借り上げ社宅の導入" },
       // 2026-07-24：定点#15強化（内部リンク補強）。ja本文のみ追加＝/officeはja先行公開のため他ロケールは対象外。
       { href: "/office", label: "会社設立とオフィス開設の完全ガイド" },
       // 2026-07-27：定点#32（非居住者オーナー）強化。ja本文のみ追加＝/kaigai-ownerはja先行公開のため他ロケールは対象外。
@@ -98,9 +98,14 @@ const COPY: Record<LangCode, ToushiCopy> = {
               <strong>グループホーム・障害福祉事業所向け物件</strong>——指定基準を見据えた物件選び →{" "}
               <Link href={addLocalePrefix("/toushi/group-home", locale)} className="text-primary underline">グループホームに使える物件探し</Link>
             </li>
+            {/* 10C：社宅は福利厚生にあたるため /toushi 配下から外し /shataku に統一した。
+                項目が消えたように見えないよう、位置づけを1文で明示する（指示書10C STEP 7） */}
             <li>
               <strong>社宅・法人賃貸</strong>——外国人従業員の住居手配も多言語で →{" "}
-              <Link href={addLocalePrefix("/toushi/shataku", locale)} className="text-primary underline">社宅・法人賃貸のサポート</Link>
+              <Link href={addLocalePrefix("/shataku", locale)} className="text-primary underline">借り上げ社宅の導入ガイド</Link>
+              <span className="mt-1 block text-xs text-text-muted">
+                従業員の住まいとして社宅を導入する場合は、借り上げ社宅の導入ガイドをご覧ください（社宅は福利厚生にあたるため、事業用不動産とは別のページにまとめています）。
+              </span>
             </li>
             <li>
               <strong>収益物件（区分・一棟）</strong>
@@ -148,7 +153,7 @@ const COPY: Record<LangCode, ToushiCopy> = {
     ),
     internalLinks: [
       { href: "/toushi/group-home", label: "Group-Home Properties" },
-      { href: "/toushi/shataku", label: "Company Housing & Corporate Leasing" },
+      { href: "/shataku", label: "Company Housing & Corporate Leasing" },
       { href: "/access", label: "Access & Fees" },
     ],
     crossLinkLead:
@@ -190,7 +195,7 @@ const COPY: Record<LangCode, ToushiCopy> = {
             </li>
             <li>
               <strong>Company housing & corporate leasing</strong>—housing arrangements for international employees, supported in multiple languages →{" "}
-              <Link href={addLocalePrefix("/toushi/shataku", locale)} className="text-primary underline">Company Housing & Corporate Lease Support</Link>
+              <Link href={addLocalePrefix("/shataku", locale)} className="text-primary underline">Company Housing & Corporate Lease Support</Link>
             </li>
             <li>
               <strong>Income properties (condominium units & whole buildings)</strong>
@@ -238,7 +243,7 @@ const COPY: Record<LangCode, ToushiCopy> = {
     ),
     internalLinks: [
       { href: "/toushi/group-home", label: "團體家屋物件" },
-      { href: "/toushi/shataku", label: "員工宿舍・法人租賃" },
+      { href: "/shataku", label: "員工宿舍・法人租賃" },
       { href: "/access", label: "交通與費用" },
     ],
     crossLinkLead:
@@ -280,7 +285,7 @@ const COPY: Record<LangCode, ToushiCopy> = {
             </li>
             <li>
               <strong>員工宿舍・法人租賃</strong>——外籍員工的住居安排也提供多語言服務 →{" "}
-              <Link href={addLocalePrefix("/toushi/shataku", locale)} className="text-primary underline">員工宿舍・法人租賃支援</Link>
+              <Link href={addLocalePrefix("/shataku", locale)} className="text-primary underline">員工宿舍・法人租賃支援</Link>
             </li>
             <li>
               <strong>收益物件（區分・整棟）</strong>
@@ -328,7 +333,7 @@ const COPY: Record<LangCode, ToushiCopy> = {
     ),
     internalLinks: [
       { href: "/toushi/group-home", label: "团体家屋物件" },
-      { href: "/toushi/shataku", label: "员工宿舍・法人租赁" },
+      { href: "/shataku", label: "员工宿舍・法人租赁" },
       { href: "/access", label: "交通与费用" },
     ],
     crossLinkLead:
@@ -370,7 +375,7 @@ const COPY: Record<LangCode, ToushiCopy> = {
             </li>
             <li>
               <strong>员工宿舍・法人租赁</strong>——外籍员工的住房安排也提供多语言服务 →{" "}
-              <Link href={addLocalePrefix("/toushi/shataku", locale)} className="text-primary underline">员工宿舍・法人租赁支援</Link>
+              <Link href={addLocalePrefix("/shataku", locale)} className="text-primary underline">员工宿舍・法人租赁支援</Link>
             </li>
             <li>
               <strong>收益物件（区分・整栋）</strong>

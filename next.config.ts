@@ -39,6 +39,18 @@ const nextConfig: NextConfig = {
         destination: "/en",
         statusCode: 301,
       },
+      // 社宅ページの統一（指示書10C・2026-07-29）。社宅は投資用でも事業用でもなく福利厚生のため
+      // /toushi 配下から外し、主力の /shataku へ恒久統合する。4ロケールとも実在するため全て張る。
+      {
+        source: "/toushi/shataku",
+        destination: "/shataku",
+        statusCode: 301,
+      },
+      {
+        source: "/:locale(en|zh-tw|zh)/toushi/shataku",
+        destination: "/:locale/shataku",
+        statusCode: 301,
+      },
     ];
   },
 };

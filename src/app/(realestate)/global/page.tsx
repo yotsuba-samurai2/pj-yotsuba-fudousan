@@ -1,6 +1,6 @@
 // /global（型A・横断レイヤー）＝原稿_不動産 #5 →【統合ピラー格上げ】外国人の住まい×在留資格 完全ガイド
 // クロスリンク＝C6（→/legal/services/visa）がpathで自動表示。
-// 方式＝COPY: Record<LangCode,…>＋getRequestLocale（手本=/access・/toushi/shataku・/souzoku）。既存の RealestateServicePage シェルを維持し、
+// 方式＝COPY: Record<LangCode,…>＋getRequestLocale（手本=/access・/shataku・/souzoku）。既存の RealestateServicePage シェルを維持し、
 //   ピラー本文（3つの壁・入口・住まい×在留の連動・当事者対応・その後の暮らし・現場の実感・チェックリスト・FAQ・関連クラスタ）を children として増築。
 // en/zh-tw/zh=監修前ドラフト。既存の物件探し導線（s1〜s3・lead・answerBlock・internalLinks・crossLinks）は不変。
 //   ピラー増築分の en/zh-tw/zh＝監修前ドラフト（2026-07-18）。繁体=台湾定訳（找房・簽證・保證公司・經營管理簽證・繼承）／zh=大陸表記。
@@ -102,7 +102,7 @@ const COPY: Record<LangCode, GlobalCopy> = {
     internalLinks: [
       // C-3（2026-07-19）：中国語圏特化ハブ（ja先行公開のため ja のみリンク。多言語版はC-6で追加）
       { href: "/global/chinese", label: "中国語対応｜相続・売却・お部屋探し" },
-      { href: "/toushi/shataku", label: "社宅・法人賃貸" },
+      { href: "/shataku", label: "借り上げ社宅の導入" },
       { href: "/access", label: "アクセス・料金" },
     ],
     crossLinkLead: "在留資格・会社設立の手続きは、関連事業の四葉行政書士事務所が対応します。",
@@ -294,7 +294,7 @@ const COPY: Record<LangCode, GlobalCopy> = {
       </p>
     ),
     internalLinks: [
-      { href: "/toushi/shataku", label: "Company Housing & Corporate Leasing" },
+      { href: "/shataku", label: "Company Housing & Corporate Leasing" },
       { href: "/access", label: "Access & Fees" },
     ],
     crossLinkLead:
@@ -484,7 +484,7 @@ const COPY: Record<LangCode, GlobalCopy> = {
       </p>
     ),
     internalLinks: [
-      { href: "/toushi/shataku", label: "員工宿舍・法人租賃" },
+      { href: "/shataku", label: "員工宿舍・法人租賃" },
       { href: "/access", label: "交通與費用" },
     ],
     crossLinkLead: "在留資格（簽證）・公司設立的手續，由關聯事業・四葉行政書士事務所對應。",
@@ -675,7 +675,7 @@ const COPY: Record<LangCode, GlobalCopy> = {
       </p>
     ),
     internalLinks: [
-      { href: "/toushi/shataku", label: "员工宿舍・企业租赁" },
+      { href: "/shataku", label: "员工宿舍・企业租赁" },
       { href: "/access", label: "交通与费用" },
     ],
     crossLinkLead: "在留资格（签证）・公司设立的手续，由关联事业・四葉行政書士事務所办理。",
