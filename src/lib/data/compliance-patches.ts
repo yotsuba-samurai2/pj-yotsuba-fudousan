@@ -418,21 +418,362 @@ export const COMPLIANCE_VALUE_PATCHES: { from: string; to: string }[] = [
  */
 export const COMPLIANCE_SCAN_TERMS: string[] = [
   "ワンストップ",
+  "ワン・ストップ",
   "一体で対応",
+  "一体で",
+  "一体的",
   "一括対応",
+  "一括して",
   "まとめて対応",
+  "まとめて",
+  "一気通貫",
+  "窓口を一本化",
+  "窓口の一本化",
+  "単一窓口",
+  "入口は同じ",
+  "トータルで",
+  "シームレス",
+  "切れ目な",
+  "チームで対応",
+  "並走",
+  "伴走",
+  "連携して対応",
+  "あわせてご相談",
+  "一緒にご相談",
   "一站式",
+  "一站到底",
   "一條龍",
   "一条龙",
+  "單一窗口",
+  "单一窗口",
   "one-stop",
   "One-stop",
+  "all-in-one",
+  "end-to-end",
+  "seamless",
+  "Seamless",
+  "under one roof",
   "in one place",
   "4カ国",
   "４カ国",
   "5カ国",
+  "4ヶ国",
+  "4ヵ国",
+  "四カ国",
+  "四ヶ国",
+  "4か国",
   "4個國家",
   "4个国家",
   "4 countries",
   "four countries",
+  "four nations",
   "5 countries",
+];
+
+/**
+ * スキャンの除外句。この句の内側に落ちたヒットは報告しない。
+ * 固有名詞「東京開業ワンストップセンター（TOSBEC）」は禁止語ルールの唯一の例外
+ * （マスター進行表「全指示書に共通する禁止事項」1）。除外しないと毎回ヒットして
+ * 本物の違反が埋もれる。
+ */
+export const COMPLIANCE_SCAN_EXCLUSIONS: string[] = [
+  "東京開業ワンストップセンター",
+  "TOSBEC",
+];
+
+// ── コラム本文の部分置換（指示書10D・2026-07-29） ──
+// 翻訳値パッチ（上記）は「値の完全一致」で置換するため、長文のコラム本文には効かない。
+// コラム本文は下の ColumnPatch で部分一致置換する。適用は
+// /admin/translations/fix-compliance の「ドライラン → 差分確認 → 適用」の3段のみ。
+
+/** コラム本文の部分置換パッチ */
+export type ColumnPatch = {
+  /** 対象コラムの slug。"*" で全コラム */
+  slug: string;
+  /** 対象フィールド。省略時は title/excerpt/content/faq すべて（翻訳版の同名フィールドも含む） */
+  fields?: ColumnPatchField[];
+  /** 部分一致で探す文字列（完全一致ではない）。出現箇所すべてを置換する */
+  from: string;
+  to: string;
+  /** 説明（ログ表示用） */
+  note?: string;
+};
+
+export type ColumnPatchField = "title" | "excerpt" | "content" | "faq" | "keywords";
+
+export const COLUMN_PATCH_FIELDS: ColumnPatchField[] = [
+  "title",
+  "excerpt",
+  "content",
+  "faq",
+  "keywords",
+];
+
+/**
+ * 初期パッチ8件＝指示書10B（表示コンプライアンス是正）の内容。
+ * from は 2026-07-28 に本番から取得した実物。ドライランで不一致だった場合は
+ * その後に編集されたということなので、近い文字列に合わせず報告する。
+ */
+export const COMPLIANCE_COLUMN_PATCHES: ColumnPatch[] = [
+  {
+    slug: "meiyokomon-izumihiroyasu",
+    from: "東京都文京区小日向を拠点に、不動産の賃貸・売買・管理に加え、相続・遺言・信託、在留資格・ビザ、各種法務手続きまでをワンストップで手掛ける「元新聞記者×行政書士の不動産会社」です。",
+    to: "東京都文京区小日向を拠点とする「元新聞記者×行政書士の不動産会社」です。不動産の賃貸・売買・管理を四葉不動産株式会社が、相続・遺言・信託や在留資格・ビザの書類作成を併設の四葉行政書士事務所が、それぞれ別契約で承ります。",
+    note: "会社紹介文（一体提供の示唆）",
+  },
+  {
+    slug: "meiyokomon-izumihiroyasu",
+    from: "身近さと専門性の両立を掲げ、外国人のお客様にも安心してご相談いただける住まいと法務のワンストップサービスをご提供しております。",
+    to: "身近さと専門性の両立を掲げています。外国人のお客様にも安心してご相談いただけるよう、住まいは四葉不動産株式会社が、法務の書類作成は併設の四葉行政書士事務所が、それぞれ別契約で承ります。",
+    note: "コメント欄の会社紹介",
+  },
+  {
+    slug: "overseas-owners-guide-japan-real-estate-sale",
+    from: "海外オーナーの皆様が「いざという時」に最適な選択ができるよう、ワンストップでのサポート体制を整えています。",
+    to: "海外オーナーの皆様が「いざという時」に最適な選択ができるよう、どの手続きをどの専門家が担うかを整理してお示しします。",
+    note: "サポート体制の説明",
+  },
+  {
+    slug: "overseas-owners-guide-japan-real-estate-sale",
+    from: "ワンストップサービスの内容",
+    to: "四葉が承る業務の範囲",
+    note: "H3見出し。目次・アンカーリンクへの影響を要確認",
+  },
+  {
+    slug: "overseas-owners-guide-japan-real-estate-sale",
+    from: "元毎日新聞中国総局長(北京駐在3年、国立台湾師範大学留学経験)",
+    to: "元毎日新聞中国総局長。中国総局長として中国や台湾、タイに駐在。国立台湾師範大学に留学。",
+    note: "「北京駐在3年」は事実と異なる（浦松確認済み）。年数は書かない",
+  },
+  {
+    slug: "foreign-workers-japan",
+    from: "在留資格・日本語能力・住まいをワンストップでサポート、5言語対応。",
+    to: "在留資格の書類作成は四葉行政書士事務所が、住まいのご紹介は四葉不動産株式会社が、それぞれ別契約で承ります。4言語対応。",
+    note: "本文と抜粋の両方にある。「5言語」は誤りで正しくは4言語（浦松確認済み）",
+  },
+  {
+    slug: "gyoseishoshi-fudosan-betsubetsu-tanomu-to",
+    from: "相続の手続きと不動産の管理・活用・売却をワンストップでサポートしています。",
+    to: "不動産の管理・活用・売却は四葉不動産株式会社が、相続の書類作成は四葉行政書士事務所が、それぞれ別契約で受任しています。",
+    note: "著者プロフィール。記事タイトル「別々に頼むと」と矛盾していた",
+  },
+  {
+    slug: "souzoku-tetsuzuki-hiyo-soba",
+    from: "不動産（四葉不動産株式会社）と行政書士業務をワンストップで手がけ、相続手続きと相続不動産の活用・売却まで一貫して相談に応じている。",
+    to: "不動産は四葉不動産株式会社が、相続の書類作成は四葉行政書士事務所が、それぞれ別契約で受任している。",
+    note: "著者プロフィール。「一貫して」も一体提供の示唆のため削除",
+  },
+
+  // ── 翻訳版（en / zh-tw / zh）2026-07-29 追加 ──
+  // 上の8件は日本語の from のため翻訳版には一致しない（＝翻訳版に違反が残る）。
+  // 実測で en/zh-tw/zh に21箇所の残存を確認したため、言語別の from/to を追加する。
+  // 訳文は日本語の to と同じ趣旨（分離受任・別契約の明示）に揃えてある。
+
+  // meiyokomon-izumihiroyasu
+  {
+    slug: "meiyokomon-izumihiroyasu",
+    from: 'Yotsuba Real Estate Co., Ltd. (Yotsuba Partners) is based in Kohinata, Bunkyo Ward, Tokyo, and operates as a "former journalist and administrative scrivener real estate company" offering one-stop services encompassing real estate rental, sales, and management, as well as inheritance, wills, trusts, residence status and visa matters, and various legal procedures.',
+    to: 'Yotsuba Real Estate Co., Ltd. (Yotsuba Partners) is based in Kohinata, Bunkyo Ward, Tokyo, and operates as a "former journalist and administrative scrivener real estate company." Real estate rental, sales, and management are handled by Yotsuba Real Estate Co., Ltd., while the preparation of documents for inheritance, wills, trusts, residence status, and visa matters is handled by the co-located Yotsuba Administrative Scrivener Office, each under a separate contract.',
+    note: "en：会社紹介文（パッチ1の英語版）",
+  },
+  {
+    slug: "meiyokomon-izumihiroyasu",
+    from: 'As a "former journalist and administrative scrivener real estate company," Yotsuba Real Estate is committed to balancing accessibility with professional expertise, providing comprehensive one-stop services for housing and legal affairs that allow foreign clients to consult with confidence.',
+    to: 'As a "former journalist and administrative scrivener real estate company," Yotsuba Real Estate is committed to balancing accessibility with professional expertise. So that foreign clients can consult with confidence, housing is handled by Yotsuba Real Estate Co., Ltd. and the preparation of legal documents by the co-located Yotsuba Administrative Scrivener Office, each under a separate contract.',
+    note: "en：コメント欄の会社紹介（パッチ2の英語版）",
+  },
+  {
+    slug: "meiyokomon-izumihiroyasu",
+    from: "四葉不動產株式會社（四葉Partners）以東京都文京區小日向為據點，除了房地產的租賃、買賣、管理業務外，還提供相續、遺囑、信託、居留資格、簽證及各類法務手續的一站式服務，是一家「資深記者╳行政書士的房地產企業」。",
+    to: "四葉不動產株式會社（四葉Partners）以東京都文京區小日向為據點，是一家「資深記者╳行政書士的房地產企業」。房地產的租賃、買賣、管理由四葉不動產株式會社承辦，相續、遺囑、信託及居留資格、簽證等法務文件的製作由併設的四葉行政書士事務所承辦，各自另行簽約。",
+    note: "zh-tw：会社紹介文（パッチ1の繁体字版）",
+  },
+  {
+    slug: "meiyokomon-izumihiroyasu",
+    from: "四葉不動產作為「資深記者╳行政書士的房地產企業」，既強調親近感又不失專業性，為包括外國客戶在內的所有人提供安心可靠的住房與法務一站式服務。",
+    to: "四葉不動產作為「資深記者╳行政書士的房地產企業」，既強調親近感又不失專業性。為了讓包括外國客戶在內的所有人都能安心諮詢，住房由四葉不動產株式會社承辦，法務文件的製作由併設的四葉行政書士事務所承辦，各自另行簽約。",
+    note: "zh-tw：コメント欄の会社紹介（パッチ2の繁体字版）",
+  },
+  {
+    slug: "meiyokomon-izumihiroyasu",
+    from: '四葉不動産株式会社（四叶Partners）以东京都文京区小日向为基地，除了房产租赁、买卖、管理外，还一站式处理继承、遗嘱、信托，在留资格、签证等各类法务手续，是名副其实的"前记者×行政书士的房产公司"。',
+    to: '四葉不動産株式会社（四叶Partners）以东京都文京区小日向为基地，是"前记者×行政书士的房产公司"。房产的租赁、买卖、管理由四葉不動産株式会社承办，继承、遗嘱、信托及在留资格、签证等法务文件的制作由并设的四葉行政書士事務所承办，各自另行签约。',
+    note: "zh：会社紹介文（パッチ1の簡体字版）",
+  },
+  {
+    slug: "meiyokomon-izumihiroyasu",
+    from: '四叶房产作为"前记者×行政书士的房产公司"，追求亲切感与专业性的统一，为包括外国客户在内的所有客户提供住房和法务的一站式服务。',
+    to: '四叶房产作为"前记者×行政书士的房产公司"，追求亲切感与专业性的统一。为了让包括外国客户在内的所有客户都能安心咨询，住房由四葉不動産株式会社承办，法务文件的制作由并设的四葉行政書士事務所承办，各自另行签约。',
+    note: "zh：コメント欄の会社紹介（パッチ2の簡体字版）",
+  },
+
+  // overseas-owners-guide-japan-real-estate-sale
+  {
+    slug: "overseas-owners-guide-japan-real-estate-sale",
+    from: "We at SAMURAI have established a one-stop support structure to ensure overseas owners can make optimal choices when the time comes.",
+    to: "We at SAMURAI set out which professional handles which procedure, so that overseas owners can make optimal choices when the time comes.",
+    note: "en：サポート体制の説明（パッチ3の英語版）",
+  },
+  {
+    slug: "overseas-owners-guide-japan-real-estate-sale",
+    from: "我們SAMURAI為了讓海外業主在「萬一發生時」能做出最適切的選擇,建立了一站式的支援體制。",
+    to: "我們SAMURAI為了讓海外業主在「萬一發生時」能做出最適切的選擇,整理並說明各項手續分別由哪一位專業人士承辦。",
+    note: "zh-tw：サポート体制の説明（パッチ3の繁体字版）",
+  },
+  {
+    slug: "overseas-owners-guide-japan-real-estate-sale",
+    from: "我们SAMURAI为了让海外业主在「万一发生时」能做出最适切的选择,建立了一站式的支援体制。",
+    to: "我们SAMURAI为了让海外业主在「万一发生时」能做出最适切的选择,整理并说明各项手续分别由哪一位专业人士承办。",
+    note: "zh：サポート体制の説明（パッチ3の簡体字版）",
+  },
+  {
+    slug: "overseas-owners-guide-japan-real-estate-sale",
+    from: "一站式服務內容",
+    to: "四葉承辦的業務範圍",
+    note: "zh-tw：H3見出し（パッチ4の繁体字版）",
+  },
+  {
+    slug: "overseas-owners-guide-japan-real-estate-sale",
+    from: "一站式服务内容",
+    to: "四葉承办的业务范围",
+    note: "zh：H3見出し（パッチ4の簡体字版）",
+  },
+  // ★ 長い方を先に置く（短い方が長い方の内側に一致しないことは確認済みだが、順序で担保する）
+  {
+    slug: "overseas-owners-guide-japan-real-estate-sale",
+    from: "原《每日新聞》中國總局長(駐北京3年、國立台灣師範大學留學經歷、34年記者・編輯經驗)",
+    to: "原《每日新聞》中國總局長。以中國總局長身分派駐中國、台灣及泰國。曾留學國立台灣師範大學。記者・編輯經歷34年。",
+    note: "zh-tw：著者略歴（長い方）。「駐北京3年」は事実と異なる（パッチ5の繁体字版）",
+  },
+  {
+    slug: "overseas-owners-guide-japan-real-estate-sale",
+    from: "原《每日新聞》中國總局長(駐北京3年、國立台灣師範大學留學經歷)",
+    to: "原《每日新聞》中國總局長。以中國總局長身分派駐中國、台灣及泰國。曾留學國立台灣師範大學。",
+    note: "zh-tw：著者略歴（短い方）（パッチ5の繁体字版）",
+  },
+  {
+    slug: "overseas-owners-guide-japan-real-estate-sale",
+    from: "原《每日新闻》中国总局长(驻北京3年、国立台湾师范大学留学经历、34年记者・编辑经验)",
+    to: "原《每日新闻》中国总局长。以中国总局长身份派驻中国、台湾及泰国。曾留学国立台湾师范大学。记者・编辑经历34年。",
+    note: "zh：著者略歴（長い方）（パッチ5の簡体字版）",
+  },
+  {
+    slug: "overseas-owners-guide-japan-real-estate-sale",
+    from: "原《每日新闻》中国总局长(驻北京3年、国立台湾师范大学留学经历)",
+    to: "原《每日新闻》中国总局长。以中国总局长身份派驻中国、台湾及泰国。曾留学国立台湾师范大学。",
+    note: "zh：著者略歴（短い方）（パッチ5の簡体字版）",
+  },
+
+  // foreign-workers-japan
+  // ★ 日本語本文にも「スペイン語の5言語で対応」が残っている。パッチ6（抜粋）では直らない。
+  //   スペイン語対応は事実として確認できないため、4言語に是正する（禁止事項6）。
+  {
+    slug: "foreign-workers-japan",
+    from: "日本語・英語・中国語繁体字・簡体字・スペイン語の5言語で対応していますので、契約書の細かい部分まで母国語でご説明できます。",
+    to: "日本語・英語・中国語繁体字・簡体字の4言語で対応していますので、契約書の細かい部分まで母国語でご説明できます。",
+    note: "ja：本文。スペイン語対応は確認できないため削除し4言語に是正（禁止事項6）",
+  },
+  {
+    slug: "foreign-workers-japan",
+    from: "One-stop support for visa status, Japanese language proficiency, and housing in five languages.",
+    to: "The preparation of documents for residence status is handled by Yotsuba Administrative Scrivener Office and housing referrals by Yotsuba Real Estate Co., Ltd., each under a separate contract. Available in four languages.",
+    note: "en：抜粋（パッチ6の英語版）",
+  },
+  {
+    slug: "foreign-workers-japan",
+    from: "We support five languages—Japanese, English, Traditional Chinese, Simplified Chinese, and Spanish—so we can explain even the fine details of contracts in your native language.",
+    to: "We support four languages—Japanese, English, Traditional Chinese, and Simplified Chinese—so we can explain even the fine details of contracts in your native language.",
+    note: "en：本文。スペイン語対応は確認できないため削除し4言語に是正（禁止事項6）",
+  },
+  {
+    slug: "foreign-workers-japan",
+    from: "在留資格、日語能力、住居一站式支援，提供5種語言服務。",
+    to: "在留資格的文件製作由四葉行政書士事務所承辦，住居的介紹由四葉不動產株式會社承辦，各自另行簽約。提供4種語言服務。",
+    note: "zh-tw：抜粋（パッチ6の繁体字版）",
+  },
+  {
+    slug: "foreign-workers-japan",
+    from: "我們提供日語、英語、繁體中文、簡體中文，以及西班牙語服務。",
+    to: "我們提供日語、英語、繁體中文、簡體中文4種語言服務。",
+    note: "zh-tw：本文。スペイン語対応は確認できないため削除（禁止事項6）",
+  },
+  {
+    slug: "foreign-workers-japan",
+    from: "我們提供日語、英語、繁體中文、簡體中文、西班牙語等5種語言服務，可以用母語詳細說明租賃契約的各項內容。",
+    to: "我們提供日語、英語、繁體中文、簡體中文4種語言服務，可以用母語詳細說明租賃契約的各項內容。",
+    note: "zh-tw：本文。スペイン語対応は確認できないため削除し4言語に是正（禁止事項6）",
+  },
+  {
+    slug: "foreign-workers-japan",
+    from: "提供在留资格、日本语能力、住房一站式支持，支持4种语言。",
+    to: "在留资格的文件制作由四葉行政書士事務所承办，住房的介绍由四葉不動産株式会社承办，各自另行签约。支持4种语言。",
+    note: "zh：抜粋（パッチ6の簡体字版）",
+  },
+  {
+    slug: "foreign-workers-japan",
+    from: "我们支持日语、英语、繁体中文、简体中文以及西班牙语等五种语言。",
+    to: "我们支持日语、英语、繁体中文、简体中文4种语言。",
+    note: "zh：本文。スペイン語対応は確認できないため削除し4言語に是正（禁止事項6）",
+  },
+
+  // gyoseishoshi-fudosan-betsubetsu-tanomu-to（著者プロフィール＋keywords）
+  {
+    slug: "gyoseishoshi-fudosan-betsubetsu-tanomu-to",
+    from: "Based in Kohinata, Bunkyo City, providing one-stop support for inheritance procedures and property management, use, and sale.",
+    to: "Based in Kohinata, Bunkyo City. Property management, use, and sale are handled by Yotsuba Real Estate Co., Ltd., and the preparation of inheritance documents by Yotsuba Administrative Scrivener Office, each under a separate contract.",
+    note: "en：著者プロフィール（パッチ7の英語版）",
+  },
+  {
+    slug: "gyoseishoshi-fudosan-betsubetsu-tanomu-to",
+    from: "以文京區小日向為據點，提供繼承手續與不動產管理、活用、出售的一站式支援。",
+    to: "以文京區小日向為據點。不動產的管理、活用、出售由四葉不動産株式会社承辦，繼承的文件製作由四葉行政書士事務所承辦，各自另行簽約。",
+    note: "zh-tw：著者プロフィール（パッチ7の繁体字版）",
+  },
+  {
+    slug: "gyoseishoshi-fudosan-betsubetsu-tanomu-to",
+    from: "以文京区小日向为据点，提供继承手续与房产管理、盘活、出售的一站式支持。",
+    to: "以文京区小日向为据点。房产的管理、盘活、出售由四葉不动产株式会社承办，继承的文件制作由四葉行政书士事务所承办，各自另行签约。",
+    note: "zh：著者プロフィール（パッチ7の簡体字版）",
+  },
+  {
+    slug: "gyoseishoshi-fudosan-betsubetsu-tanomu-to",
+    fields: ["keywords"],
+    from: "inheritance administrative scrivener real estate one-stop",
+    to: "inheritance administrative scrivener real estate separate contracts",
+    note: "en：keywords に禁止語が残っていた",
+  },
+  {
+    slug: "gyoseishoshi-fudosan-betsubetsu-tanomu-to",
+    fields: ["keywords"],
+    from: "繼承 行政書士 不動產 一站式",
+    to: "繼承 行政書士 不動產 分別簽約",
+    note: "zh-tw：keywords に禁止語が残っていた",
+  },
+  {
+    slug: "gyoseishoshi-fudosan-betsubetsu-tanomu-to",
+    fields: ["keywords"],
+    from: "继承 行政书士 房产 一站式",
+    to: "继承 行政书士 房产 分别签约",
+    note: "zh：keywords に禁止語が残っていた",
+  },
+
+  // souzoku-tetsuzuki-hiyo-soba（著者プロフィール）
+  {
+    slug: "souzoku-tetsuzuki-hiyo-soba",
+    from: "He handles real estate (四葉不動産株式会社) and administrative scrivener work on a one-stop basis, providing integrated consultation covering everything from inheritance procedures to the utilization and sale of inherited real property.",
+    to: "Real estate is handled by 四葉不動産株式会社 and the preparation of inheritance documents by 四葉行政書士事務所, each under a separate contract.",
+    note: "en：著者プロフィール。integrated consultation も一体提供の示唆（パッチ8の英語版）",
+  },
+  {
+    slug: "souzoku-tetsuzuki-hiyo-soba",
+    from: "以一站式方式同時經營不動產（四葉不動産株式会社）與行政書士業務，從繼承手續到繼承不動產的活用、出售提供一貫的諮詢服務。",
+    to: "不動產由四葉不動産株式会社承辦，繼承的文件製作由四葉行政書士事務所承辦，各自另行簽約。",
+    note: "zh-tw：著者プロフィール（パッチ8の繁体字版）",
+  },
+  {
+    slug: "souzoku-tetsuzuki-hiyo-soba",
+    from: "将不动产（四葉不動産株式会社）与行政书士业务一站式承办，从继承手续到继承不动产的活用、出售提供一贯的咨询应对。",
+    to: "不动产由四葉不動産株式会社承办，继承的文件制作由四葉行政書士事務所承办，各自另行签约。",
+    note: "zh：著者プロフィール（パッチ8の簡体字版）",
+  },
 ];
