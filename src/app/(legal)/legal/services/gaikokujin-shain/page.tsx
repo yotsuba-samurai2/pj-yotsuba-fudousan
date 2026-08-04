@@ -146,19 +146,32 @@ export default async function Page() {
         <p className="mt-3 leading-relaxed text-text">
           審査期間は案件により幅があるため、下表は目安です。<strong className="text-ink">誰が動くか</strong>を分けて示します。
         </p>
-        <ul className="mt-4 space-y-3">
-          {JA_SCHEDULE.map((s) => (
-            <li key={s.when} className="rounded-lg border border-border bg-surface p-4 text-sm leading-relaxed text-text">
-              <strong className="text-ink">{s.when}</strong>
-              <span className="mt-1 block text-text-muted">主に動くのは：{s.who}</span>
-              <ul className="mt-2 list-disc space-y-1 pl-5">
-                {s.what.map((w) => (
-                  <li key={w}>{w}</li>
-                ))}
-              </ul>
-            </li>
-          ))}
-        </ul>
+        <div className="mt-4 overflow-x-auto">
+          <table className="w-full border-collapse text-sm">
+            <thead>
+              <tr className="bg-primary-tint text-left">
+                <th scope="col" className="border border-border px-3 py-2 align-top">時期</th>
+                <th scope="col" className="border border-border px-3 py-2 align-top">主に動くのは</th>
+                <th scope="col" className="border border-border px-3 py-2 align-top">やること</th>
+              </tr>
+            </thead>
+            <tbody className="text-text">
+              {JA_SCHEDULE.map((s) => (
+                <tr key={s.when}>
+                  <th scope="row" className="border border-border px-3 py-2 text-left align-top font-medium text-ink">{s.when}</th>
+                  <td className="border border-border px-3 py-2 align-top whitespace-nowrap">{s.who}</td>
+                  <td className="border border-border px-3 py-2 align-top leading-relaxed">
+                    <ul className="list-disc space-y-1 pl-4">
+                      {s.what.map((w) => (
+                        <li key={w}>{w}</li>
+                      ))}
+                    </ul>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
         <p className="mt-3 leading-relaxed text-text">
           社内で見落とされやすいのが<strong className="text-ink">入国後14日以内の住居地の届出</strong>です。住まいが決まっていないと届出ができないため、住居の手配は在留手続きと同時並行で進めます。
         </p>
