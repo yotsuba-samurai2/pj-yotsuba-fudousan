@@ -20,6 +20,43 @@ const PROFILE_LINK_LABEL: Record<string, string> = {
   zh: "查看代表简介",
 };
 
+// 所属団体の可視表示（2026-08-01 新設）。
+// これまで所属団体は /llms.txt（機械可読層）にしか書いておらず、人が読むHTMLに存在しなかった。
+// 団体名は日本語の正式名称のまま全ロケール共通で出す。各団体の公式な英訳・中文表記は
+// 裏取りできていないため訳さない（監査原則）。見出しと注記のみロケール別。
+// リンク先は「当社の掲載を実際に確認できたページ」だけを指す（2026-08-01 現物確認）。
+// seo.ts の REALESTATE_MEMBER_OF と対で管理すること。
+const AFFILIATION_TITLE: Record<string, string> = {
+  ja: "所属団体",
+  en: "Affiliations",
+  "zh-tw": "所屬團體",
+  zh: "所属团体",
+};
+
+const AFFILIATION_NOTE: Record<string, string> = {
+  ja: "各団体の会員名簿で当社の掲載をご確認いただけます。",
+  en: "Our membership can be verified in each association's member directory.",
+  "zh-tw": "可於各團體的會員名冊確認本公司的登載。",
+  zh: "可在各团体的会员名册确认本公司的登载。",
+};
+
+const AFFILIATIONS: { href: string; name: string }[] = [
+  {
+    // 当社の会員詳細ページ（免許番号・商号・住所・HP欄が一致・2026-07-10確認）
+    href: "https://www.tokyo-takken.or.jp/search-member/detail/31253",
+    name: "公益社団法人 東京都宅地建物取引業協会",
+  },
+  {
+    href: "https://www.zentaku.or.jp/",
+    name: "公益社団法人 全国宅地建物取引業保証協会",
+  },
+  {
+    // 東京都支部 正会員一覧の全件版。当社は全件版にのみ掲載される（list.php には出ない）
+    href: "https://www.jpm.jp/branch/all.php?cid=14",
+    name: "公益財団法人 日本賃貸住宅管理協会 東京都支部（正会員）",
+  },
+];
+
 export default function AboutPageContent() {
   const { t, tArray, tObject, locale } = useTranslation();
 
@@ -171,6 +208,30 @@ export default function AboutPageContent() {
                 </dd>
               </div>
             ))}
+          </div>
+
+          {/* 所属団体（2026-08-01 新設）＝実在性の裏付け。各団体の会員名簿へ直接リンクする */}
+          <div className="mt-8 overflow-hidden rounded-xl border border-border bg-surface px-4 py-5 sm:px-6 sm:py-6">
+            <h3 className="text-sm font-bold">
+              {AFFILIATION_TITLE[locale] ?? AFFILIATION_TITLE.ja}
+            </h3>
+            <ul className="mt-3 space-y-2">
+              {AFFILIATIONS.map(({ href, name }) => (
+                <li key={href} className="text-sm leading-relaxed">
+                  <a
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-text-muted underline decoration-border underline-offset-4 transition-colors hover:text-primary"
+                  >
+                    {name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-4 text-xs leading-relaxed text-text-muted">
+              {AFFILIATION_NOTE[locale] ?? AFFILIATION_NOTE.ja}
+            </p>
           </div>
         </div>
       </section>
