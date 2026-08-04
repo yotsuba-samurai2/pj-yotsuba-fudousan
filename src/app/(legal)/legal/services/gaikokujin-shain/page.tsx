@@ -183,14 +183,24 @@ export default async function Page() {
         <p className="mt-3 leading-relaxed text-text">
           変わります。ご家族には<strong className="text-ink">別の在留資格</strong>が必要で、本人の在留資格の種類によって、帯同できるかどうかが分かれます。
         </p>
-        <ul className="mt-4 space-y-3">
-          {JA_KAZOKU.map((k) => (
-            <li key={k.type} className="rounded-lg border border-border bg-surface p-4 text-sm leading-relaxed text-text">
-              <strong className="text-ink">{k.type}</strong>
-              <span className="mt-1 block">{k.can}</span>
-            </li>
-          ))}
-        </ul>
+        <div className="mt-4 overflow-x-auto">
+          <table className="w-full border-collapse text-sm">
+            <thead>
+              <tr className="bg-primary-tint text-left">
+                <th scope="col" className="border border-border px-3 py-2 align-top">本人の在留資格</th>
+                <th scope="col" className="border border-border px-3 py-2 align-top">配偶者・子の帯同</th>
+              </tr>
+            </thead>
+            <tbody className="text-text">
+              {JA_KAZOKU.map((k) => (
+                <tr key={k.type}>
+                  <th scope="row" className="border border-border px-3 py-2 text-left align-top font-medium text-ink">{k.type}</th>
+                  <td className="border border-border px-3 py-2 align-top leading-relaxed">{k.can}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
         <p className="mt-3 leading-relaxed text-text">
           採用の段階で帯同の可否が分かっていないと、着任後にご家族の予定が立たず、本人の定着にも影響します。<strong className="text-ink">条件提示の前に確認しておくこと</strong>をお勧めします。個別の可否は、ご本人の在留状況により異なります。
         </p>
