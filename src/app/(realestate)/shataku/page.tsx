@@ -127,7 +127,9 @@ const COPY: Record<LangCode, ShatakuCopy> = {
       <>
         できます。言語・保証会社・入居審査という、外国人の住居手配でつまずきやすい3点を整理してサポートします。法人契約・借り上げの物件の紹介・仲介は四葉不動産株式会社が承ります。受け入れに必要な
         <Link href={addLocalePrefix("/legal/services/visa", locale)} className="text-primary underline">在留資格の申請書類の作成</Link>
-        は、併設の四葉行政書士事務所が別契約で受任します。従業員ご本人のお部屋探しは
+        は、併設の四葉行政書士事務所が別契約で受任します。着任日から逆算した企業側の手続きと期限は
+        <Link href={addLocalePrefix("/legal/services/gaikokujin-shain", locale)} className="text-primary underline">外国人社員を海外から迎えるとき</Link>
+        にまとめています。従業員ご本人のお部屋探しは
         <Link href={addLocalePrefix("/global", locale)} className="text-primary underline">外国人・多言語のお部屋探し</Link>
         をご覧ください。
       </>
@@ -177,7 +179,8 @@ const COPY: Record<LangCode, ShatakuCopy> = {
       <>
         Yes. We sort out and support the three points that most often become issues when arranging housing for international residents: language, guarantor companies, and tenant screening. Introduction and brokerage of properties for corporate contracts and company leases are handled by Yotsuba Real Estate Co., Ltd. The{" "}
         <Link href={addLocalePrefix("/legal/services/visa", locale)} className="text-primary underline">preparation of residence-status application documents</Link>{" "}
-        required to bring employees on board is undertaken by the co-located Yotsuba Gyoseishoshi Office under a separate contract. For an individual employee&apos;s own room hunting, see{" "}
+        required to bring employees on board is undertaken by the co-located Yotsuba Gyoseishoshi Office under a separate contract. The employer-side steps and deadlines, counted back from the start date, are set out in{" "}
+        <Link href={addLocalePrefix("/legal/services/gaikokujin-shain", locale)} className="text-primary underline">Bringing employees from overseas</Link>. For an individual employee&apos;s own room hunting, see{" "}
         <Link href={addLocalePrefix("/global", locale)} className="text-primary underline">Multilingual Room-Hunting Support</Link>.
       </>
     ),
@@ -228,7 +231,9 @@ const COPY: Record<LangCode, ShatakuCopy> = {
       <>
         可以。語言・保證公司・入住審查——外國人住居安排中容易出問題的3點，我們為您整理並支援。法人契約・承租型物件的介紹・仲介由四葉不動産株式会社承辦。聘僱所需的
         <Link href={addLocalePrefix("/legal/services/visa", locale)} className="text-primary underline">在留資格申請文件的製作</Link>
-        ，由併設的四葉行政書士事務所另行簽約受任。員工個人的找房，請參閱
+        ，由併設的四葉行政書士事務所另行簽約受任。從到任日往回推算的企業方手續與期限，整理於
+        <Link href={addLocalePrefix("/legal/services/gaikokujin-shain", locale)} className="text-primary underline">從海外迎接外籍員工時</Link>
+        。員工個人的找房，請參閱
         <Link href={addLocalePrefix("/global", locale)} className="text-primary underline">外國人・多語言找房服務</Link>
         。
       </>
@@ -278,7 +283,9 @@ const COPY: Record<LangCode, ShatakuCopy> = {
       <>
         可以。语言・担保公司・入住审查——外国人住房安排中容易出问题的3点，我们为您整理并支持。法人合同・承租型物件的介绍・中介由四葉不動産株式会社承办。聘用所需的
         <Link href={addLocalePrefix("/legal/services/visa", locale)} className="text-primary underline">在留资格申请文件的制作</Link>
-        ，由并设的四葉行政書士事務所另行签约受任。员工个人的找房，请参阅
+        ，由并设的四葉行政書士事務所另行签约受任。从到任日倒推的企业方手续与期限，整理于
+        <Link href={addLocalePrefix("/legal/services/gaikokujin-shain", locale)} className="text-primary underline">从海外迎接外籍员工时</Link>
+        。员工个人的找房，请参阅
         <Link href={addLocalePrefix("/global", locale)} className="text-primary underline">外国人・多语言找房服务</Link>
         。
       </>
