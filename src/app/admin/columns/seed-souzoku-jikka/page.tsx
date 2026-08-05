@@ -1,0 +1,142 @@
+"use client";
+
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { upsertColumnBySlug } from "@/lib/admin-api";
+import { SOUZOKU_JIKKA_SEED } from "@/lib/data/souzoku-jikka-seed";
+
+type ItemResult = {
+  slug: string;
+  title: string;
+  business: string;
+  status: "pending" | "done" | "error";
+  action?: "created" | "updated";
+  message?: string;
+};
+
+/**
+ * 定点#25「相続した空き家 賃貸に出すか売るか 判断基準」対策の1本を投入する。
+ *
+ * scripts/souzoku-columns/souzoku-jikka-uru-nokosu.md から
+ * `npx tsx scripts/seed-souzoku-jikka.ts --emit-ts` で焼き込んだ
+ * src/lib/data/souzoku-jikka-seed.ts を、ブラウザの管理者セッション経由で
+ * slug基準の冪等upsertで投入する（seed-akiya-gh-tenyo と同型・再実行しても重複しない）。
+ *
+ * 本ページは対象1本のみを更新する。他のコラムには触れないため、
+ * seed-realestate（3本）を押したときのような巻き添え更新は起きない。
+ */
+export default function SeedSouzokuJikkaPage() {
+  const [running, setRunning] = useState(false);
+  const [results, setResults] = useState<ItemResult[]>(
+    SOUZOKU_JIKKA_SEED.map((a) => ({
+      slug: a.slug,
+      title: a.title,
+      business: a.business,
+      status: "pending",
+    })),
+  );
+  const router = useRouter();
+
+  const handleRun = async () => {
+    setRunning(true);
+    for (let i = 0; i < SOUZOKU_JIKKA_SEED.length; i++) {
+      const article = SOUZOKU_JIKKA_SEED[i];
+      try {
+        const { action } = await upsertColumnBySlug(
+          article.business,
+          article.slug,
+          article,
+        );
+        setResults((prev) =>
+          prev.map((r, idx) =>
+            idx === i ? { ...r, status: "done", action } : r,
+          ),
+        );
+      } catch (err) {
+        setResults((prev) =>
+          prev.map((r, idx) =>
+            idx === i ? { ...r, status: "error", message: String(err) } : r,
+          ),
+        );
+      }
+    }
+    setRunning(false);
+  };
+
+  const allDone = results.every((r) => r.status !== "pending");
+  const hasError = results.some((r) => r.status === "error");
+
+  return (
+    <div className="p-6">
+      <h1 className="mb-1 text-lg font-bold">
+        定点#25 相続した空き家 賃貸に出すか売るか（1本）投入
+      </h1>
+      <p className="mb-4 text-sm text-text-muted">
+        設問「相続した空き家 賃貸に出すか売るか 判断基準」に正面から答えるための1本を、slug基準の冪等upsertで更新します。
+        再実行しても重複しません。原稿の正本＝scripts/souzoku-columns/souzoku-jikka-uru-nokosu.md。
+        <br />
+        既存1ページの更新のみで、新規ページは作成しません。対象外のコラムには触れません。
+        改稿前の現行値は scripts/backup/column-souzoku-jikka-uru-nokosu-2026-08-05.json に退避済みです。
+      </p>
+
+      <div className="max-w-2xl rounded-xl border border-border bg-surface p-6">
+        <ul className="space-y-2">
+          {results.map((r) => (
+            <li
+              key={`${r.business}/${r.slug}`}
+              className="flex items-center justify-between gap-3 rounded-lg bg-surface-dim px-3 py-2 text-xs"
+            >
+              <span className="min-w-0 flex-1">
+                <span className="block truncate">{r.title}</span>
+                <span className="block truncate font-mono text-[10px] text-text-muted">
+                  {`/column/${r.slug}`}
+                </span>
+              </span>
+              <span className="shrink-0 font-mono">
+                {r.status === "pending" && "…"}
+                {r.status === "done" && `✓ ${r.action ?? "done"}`}
+                {r.status === "error" && "✗ error"}
+              </span>
+            </li>
+          ))}
+        </ul>
+
+        {hasError && (
+          <ul className="mt-3 space-y-1 text-xs text-red-600">
+            {results
+              .filter((r) => r.status === "error")
+              .map((r) => (
+                <li key={r.slug}>
+                  {r.slug}: {r.message}
+                </li>
+              ))}
+          </ul>
+        )}
+
+        <div className="mt-4 flex items-center gap-3">
+          <button
+            type="button"
+            onClick={handleRun}
+            disabled={running}
+            className="rounded-lg bg-primary px-4 py-2 text-sm font-medium text-white disabled:opacity-50"
+          >
+            {running ? "投入中…" : allDone && !hasError ? "再実行（冪等）" : "1本を投入する"}
+          </button>
+          <button
+            type="button"
+            onClick={() => router.push("/admin/columns")}
+            className="rounded-lg border border-border px-4 py-2 text-sm"
+          >
+            コラム一覧へ
+          </button>
+        </div>
+
+        {allDone && !hasError && (
+          <p className="mt-4 text-xs text-text-muted">
+            投入後、本番URLの表示と FAQPage 構造化データの出力を確認し、GSCからインデックス登録をリクエストしてください。
+          </p>
+        )}
+      </div>
+    </div>
+  );
+}
