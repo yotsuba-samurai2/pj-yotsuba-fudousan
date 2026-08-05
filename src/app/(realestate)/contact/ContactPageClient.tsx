@@ -1,8 +1,18 @@
 "use client";
 
-import { Phone, MapPin } from "lucide-react";
+import { Phone, Printer, MapPin } from "lucide-react";
 import { ContactForm } from "@/components/ui/ContactForm";
+import { OFFICE } from "@/lib/shared/office-public";
 import { useTranslation } from "@/hooks/useTranslation";
+
+// FAXのラベルのみロケール別に持つ。値（番号）は OFFICE.fax が正本。
+// 翻訳DB（Firestore）に新キーを増やさない方針のため、コード側の定数で持つ（office.ts 冒頭のB1教訓）。
+const FAX_LABEL: Record<string, string> = {
+  ja: "FAX",
+  en: "Fax",
+  "zh-tw": "傳真",
+  zh: "传真",
+};
 
 export function ContactPageClient() {
   const { t, locale } = useTranslation();
@@ -38,6 +48,16 @@ export function ContactPageClient() {
                     <a href={`tel:${t("contact.methods.phone.number")}`} className="mt-1 text-lg font-bold text-primary hover:text-primary-dark">
                       {t("contact.methods.phone.number")}
                     </a>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10">
+                    <Printer size={20} className="text-primary" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-bold">{FAX_LABEL[locale] ?? "FAX"}</p>
+                    <p className="mt-1 text-lg font-bold text-text">{OFFICE.fax}</p>
                   </div>
                 </div>
 

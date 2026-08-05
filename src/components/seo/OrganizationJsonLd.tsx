@@ -44,6 +44,7 @@ export function OrganizationJsonLd({ businessKey }: { businessKey: string }) {
         image: `${SITE_URL}${biz.ogImage || biz.squareLogo || ""}`,
         description: biz.description,
         telephone: SHARED_ORG_INFO.telephone,
+        faxNumber: SHARED_ORG_INFO.faxNumber,
         priceRange: "¥¥",
         foundingDate: SHARED_ORG_INFO.foundingDate,
         ...(isRealEstate

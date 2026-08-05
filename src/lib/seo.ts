@@ -30,6 +30,9 @@ export const SHARED_ORG_INFO = {
   addressRegion: "東京都",
   addressCountry: "JP",
   telephone: "03-6161-9428",
+  // FAX は3事業体で共通。可視表示（/contact・/legal/contact・/labor/contact・/access）と同一デプロイで追加した
+  // ＝可視コンテンツ先行の原則（構造化データだけが先行しない）。表記は半角固定。
+  faxNumber: "03-6161-2576",
   geo: { latitude: 35.715069, longitude: 139.739822 },
   foundingDate: "2025",
 } as const;

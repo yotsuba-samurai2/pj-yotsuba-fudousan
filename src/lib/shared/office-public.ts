@@ -13,6 +13,9 @@ export const LINE_URL = "https://line.me/ti/p/EF5782JXqJ";
 export const OFFICE = {
   tel: "03-6161-9428",
   telHref: "tel:0361619428",
+  // FAX は3事業体で共通（浦松確定・2026-08-05 に /contact・/legal/contact・/labor/contact・/access へ新規掲載）。
+  // tel: と違い href を持たせない（FAX はリンクにしない）。表記は半角固定。
+  fax: "03-6161-2576",
   access: "東京メトロ丸ノ内線「茗荷谷」駅 徒歩5分",
   mapUrl:
     "https://maps.google.com/?q=" +
