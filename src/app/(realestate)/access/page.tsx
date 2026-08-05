@@ -8,6 +8,10 @@
 // 「アクセス・料金」→「アクセス」に変更。en/zh-tw/zh も2026-07-20（翻訳チェック§F・浦松指示）でjaに追随し金額を撤去済み。
 // （旧: 2026-07-11確定文言＝媒介外関連業務のみ事前同意のうえ30分5,500円。国交省 解釈・運用の考え方が根拠）
 // 2026-08-03浦松指示：相談料は「初回・2回目以降とも無料」に変更し、備考を「料金がかかる場合は見積もりを提示します」に統一（/access のみ。/legal は変更しない）。
+// 2026-08-03浦松指示（同日・追加）：料金表の相談料は端的に「無料」の1語にし、備考は
+// 「費用がかかる場合は事前に見積もりを提示します」に変更。「事前に」を明示するのが要点。
+// 4ロケールとも同義で揃える（en: Free／zh-tw: 免費／zh: 免费）。
+// 本文側の consultH2・consultBody（初回・2回目以降とも無料／オンライン可）は説明文のため変更しない。
 // ※宅建業法上の相談料の切り分けは石井弁護士の最終確認を通すこと（下部Placeholder参照）。
 // 住所は全ロケール日本語表記維持（enのみ英字補記）。金額・率・TELは全ロケール不変。
 import type { Metadata } from "next";
@@ -93,8 +97,8 @@ const COPY: Record<LangCode, AccessCopy> = {
       },
       {
         item: "相談料",
-        fee: "初回のご相談は無料です。2回目以降も無料です。",
-        note: "料金がかかる場合は見積もりを提示します",
+        fee: "無料",
+        note: "費用がかかる場合は事前に見積もりを提示します",
       },
     ],
     feeNote: "※売買価格に応じた具体的な手数料額は、物件ごとに算出してご提示します。",
@@ -163,8 +167,8 @@ const COPY: Record<LangCode, AccessCopy> = {
       },
       {
         item: "Consultation fee",
-        fee: "Your first consultation is free, and sessions from the second onward are free as well.",
-        note: "If a fee should apply, we will present a quotation",
+        fee: "Free",
+        note: "If any cost should arise, we will present a quotation in advance",
       },
     ],
     feeNote: "Note: The specific commission amount based on the sale price is calculated and presented for each property.",
@@ -228,8 +232,8 @@ const COPY: Record<LangCode, AccessCopy> = {
       },
       {
         item: "諮詢費",
-        fee: "初次諮詢免費。第2次起同樣免費。",
-        note: "如需收費，將提出報價",
+        fee: "免費",
+        note: "如需收費，將事先提出報價",
       },
     ],
     feeNote: "※依買賣價格計算的具體手續費金額，將按各物件個別試算後提示。",
@@ -293,8 +297,8 @@ const COPY: Record<LangCode, AccessCopy> = {
       },
       {
         item: "咨询费",
-        fee: "初次咨询免费。第2次起同样免费。",
-        note: "如需收费，将提出报价",
+        fee: "免费",
+        note: "如需收费，将事先提出报价",
       },
     ],
     feeNote: "※根据买卖价格计算的具体手续费金额，将按每个物件单独测算后提示。",
