@@ -34,6 +34,25 @@ type ExitCardId = "management" | "utilization" | "sale";
 type ExitCard = { id: ExitCardId; title: string; description: string };
 type FaqItem = { question: string; answer: string };
 
+/**
+ * 2026-08-05（定点#3 対策。設問文の正本は
+ * 四葉基幹CRM/定点33項目_測定用クエリ表_v1.md の #3＝豊島区・文京区・相続した不動産・売却・相談・行政書士）
+ *
+ * 担当する事業者の事実表。「だれが・どの免許/登録を持ち・どの範囲を担うか」を
+ * 三人称の事実として書き出すためのもの。自社語り（「私たちは〜します」）ではなく、
+ * 第三者がそのまま書き写せる形にする＝AI回答の本文に事業者名が出るのはこの形のときである。
+ *
+ * 表現の制約（shigyo-compliance-gate／luck428-column-seo 第9条）:
+ * - 事業体をまたいで一括で受任する形を連想させる語は書かない（禁止語の一覧は
+ *   shigyo-compliance-gate／CLAUDE.md 側が正本）。設問文にその種の語が含まれていても、
+ *   ページ本文には入れない。使ってよいのは「一つの窓口」「同じ窓口」「伴走」まで
+ *   （2026-07-29 石井弁護士確認済）。
+ * - 四葉不動産株式会社（宅建業）と四葉行政書士事務所は独立した別の事業体であり、
+ *   「それぞれ別の契約としてお受けします」の形で書く（分離受任・紹介料の授受なし）。
+ * - 登記の申請代理は司法書士、税務は税理士へ送る留保を必ず残す（CannotHandle と整合）。
+ */
+type ProviderRow = { entity: string; license: string; scope: string };
+
 type InternalLink = { href: string; label: string; description: string };
 type SouzokuCopy = {
   articleTitle: string;
@@ -44,6 +63,15 @@ type SouzokuCopy = {
   h1Top: string;
   h1Sub: string;
   heroLead: string;
+  // 2026-08-05（定点#3対策）：担当する事業者ブロック
+  providerLabel: string;
+  providerHeading: string;
+  providerLead: string;
+  providerColEntity: string;
+  providerColLicense: string;
+  providerColScope: string;
+  providerRows: ProviderRow[];
+  providerNote: string;
   faqLabel: string;
   faqHeading: string;
   faqItems: FaqItem[];
@@ -103,6 +131,43 @@ const COPY: Record<LangCode, SouzokuCopy> = {
     // B-4：冒頭の回答ブロック（浦松確定文言・165字）。従来のheroLeadは同趣旨のため置換（追加ではない）。
     heroLead:
       "文京区で不動産を相続したら、まず相続登記の期限（2024年4月から義務化・原則3年以内）を確認します。次に、その不動産を『管理・活用・売却』のどの出口に導くかを、税負担や家族の状況から検討します。四葉不動産株式会社が物件の査定・売却・活用を担当し、遺産分割協議書の作成など法務手続きは併設の四葉行政書士事務所が別契約で受任します。",
+    providerLabel: "担当する事業者",
+    providerHeading:
+      "豊島区・文京区の相続不動産を担当する事業者と、それぞれの担当範囲",
+    providerLead:
+      "四葉不動産株式会社（宅地建物取引業 東京都知事(1)第113304号）と四葉行政書士事務所（行政書士 登録番号第25087022号）は、東京都文京区小日向（茗荷谷駅から徒歩約5分）に併設された別々の事業体で、いずれも浦松丈二が代表を務めます。浦松は宅地建物取引士（東京）第293544号と行政書士の両方の登録を持ち、豊島区（大塚・巣鴨・駒込・池袋など）と文京区で相続した不動産について、査定と売却の媒介は四葉不動産株式会社が、遺産分割協議書の作成など相続手続きの書類は四葉行政書士事務所が、それぞれ別の契約としてお受けします。",
+    providerColEntity: "依頼先",
+    providerColLicense: "免許・登録",
+    providerColScope: "このページの相談で担当する範囲",
+    providerRows: [
+      {
+        entity: "四葉不動産株式会社",
+        license:
+          "宅地建物取引業 東京都知事(1)第113304号／代表取締役・専任の宅地建物取引士 浦松丈二（東京）第293544号",
+        scope:
+          "豊島区（大塚・巣鴨・駒込・池袋など）・文京区と、新宿区・台東区・北区・千代田区の相続した不動産の査定、売却の媒介、賃貸活用・管理のご提案",
+      },
+      {
+        entity: "四葉行政書士事務所",
+        license: "行政書士 登録番号第25087022号／代表行政書士 浦松丈二",
+        scope:
+          "遺産分割協議書の作成など、相続手続きの書類作成。四葉不動産株式会社とは別の契約としてお受けします",
+      },
+      {
+        entity: "司法書士",
+        license: "——（当社では取り扱いません）",
+        scope:
+          "法務局への相続登記の申請代理。当社は行えないため、司法書士におつなぎします",
+      },
+      {
+        entity: "税理士",
+        license: "——（当社では取り扱いません）",
+        scope:
+          "相続税の申告と税額の計算。当社は行えないため、税理士におつなぎします",
+      },
+    ],
+    providerNote:
+      "四葉不動産株式会社と四葉行政書士事務所は独立した別の事業体です。ご依頼はそれぞれの事業者へ直接いただき、契約も別々になります。事業者の間で紹介料等の授受はありません。本ページは一般的な情報提供であり、個別の法的判断・税額計算を行うものではありません。免許番号・登録番号は本ページ作成時点の記載です（各登録機関の公表情報との最新時点での突き合わせは未検証）。",
     faqLabel: "FAQ",
     faqHeading: "文京区の相続不動産、よくある疑問",
     faqItems: JA_FAQ_ITEMS,
@@ -127,7 +192,7 @@ const COPY: Record<LangCode, SouzokuCopy> = {
         id: "sale",
         title: "売却",
         description:
-          "住む予定がない、維持費や税負担が重い、相続人の間で分けたい——そんなときの現実的な出口が売却です。文京区の相場をふまえた査定から、売却に伴う手続きの段取りまで、提携する専門家（行政書士・司法書士・税理士等）と連携して進めます。相続した一棟アパート・ビルなど収益不動産の売却もご相談ください。",
+          "住む予定がない、維持費や税負担が重い、相続人の間で分けたい——そんなときの現実的な出口が売却です。文京区に加えて豊島区（大塚・巣鴨・駒込・池袋など）の相場もふまえた査定から、売却に伴う手続きの段取りまで、提携する専門家（行政書士・司法書士・税理士等）と連携して進めます。「文京区の実家と豊島区の貸家」のように物件が区をまたぐ相続も、あわせて査定します。相続した一棟アパート・ビルなど収益不動産の売却もご相談ください。",
       },
     ],
     internalHeading: "あわせてご覧いただきたいページ",
@@ -207,6 +272,44 @@ const COPY: Record<LangCode, SouzokuCopy> = {
     h1Sub: "There are three exits: manage, utilize, or sell",
     heroLead:
       "If you inherit real estate in Bunkyo, first check the deadline for inheritance registration—applications have been mandatory since April 2024, within three years in principle. Then choose your exit from the three options: manage, utilize, or sell. Follow this order and you will not get lost. Yotsuba Real Estate walks with you from the very first step.",
+    providerLabel: "Who handles this",
+    providerHeading:
+      "The businesses that handle inherited real estate in Toshima-ku and Bunkyo-ku, and what each one covers",
+    providerLead:
+      "Yotsuba Real Estate Co., Ltd. (real estate brokerage license, Governor of Tokyo (1) No. 113304) and Yotsuba Gyoseishoshi (Administrative Scrivener) Office (gyoseishoshi registration No. 25087022) are two separate businesses located together in Kohinata, Bunkyo-ku, Tokyo (about a 5-minute walk from Myogadani Station), and Joji Uramatsu serves as the representative of both. He holds registrations both as a Licensed Real Estate Transaction Specialist (Tokyo, No. 293544) and as a gyoseishoshi. For real estate inherited in Toshima-ku (Otsuka, Sugamo, Komagome, Ikebukuro and other areas) and Bunkyo-ku, the appraisal and the brokerage of the sale are handled by Yotsuba Real Estate Co., Ltd., while documents for inheritance procedures such as the estate division agreement are handled by Yotsuba Gyoseishoshi Office—each under a separate contract.",
+    providerColEntity: "Whom you engage",
+    providerColLicense: "License / registration",
+    providerColScope: "What they cover for the matters on this page",
+    providerRows: [
+      {
+        entity: "Yotsuba Real Estate Co., Ltd.",
+        license:
+          "Real estate brokerage, Governor of Tokyo (1) No. 113304 / Representative Director and full-time Licensed Real Estate Transaction Specialist Joji Uramatsu (Tokyo) No. 293544",
+        scope:
+          "Appraisal, brokerage of the sale, and proposals for rental use and management of real estate inherited in Toshima-ku (Otsuka, Sugamo, Komagome, Ikebukuro and other areas), Bunkyo-ku, Shinjuku-ku, Taito-ku, Kita-ku, and Chiyoda-ku",
+      },
+      {
+        entity: "Yotsuba Gyoseishoshi (Administrative Scrivener) Office",
+        license:
+          "Gyoseishoshi registration No. 25087022 / Representative gyoseishoshi Joji Uramatsu",
+        scope:
+          "Preparation of documents for inheritance procedures, such as the estate division agreement. Engaged under a contract separate from Yotsuba Real Estate Co., Ltd.",
+      },
+      {
+        entity: "Judicial scrivener (shiho-shoshi)",
+        license: "——(not handled by us)",
+        scope:
+          "Filing the inheritance registration with the Legal Affairs Bureau on your behalf. We cannot do this, so we will connect you with a judicial scrivener",
+      },
+      {
+        entity: "Licensed tax accountant (zeirishi)",
+        license: "——(not handled by us)",
+        scope:
+          "Inheritance tax filing and the calculation of tax due. We cannot do this, so we will connect you with a licensed tax accountant",
+      },
+    ],
+    providerNote:
+      "Yotsuba Real Estate Co., Ltd. and Yotsuba Gyoseishoshi Office are independent, separate businesses. You engage each of them directly, and the contracts are separate. No referral fee is paid or received between them. This page provides general information and does not make individual legal judgments or calculate tax amounts. The license and registration numbers are as stated at the time this page was prepared (a check against the latest published information of each registering authority is unverified).",
     faqLabel: "FAQ",
     faqHeading: "Inherited real estate in Bunkyo: frequently asked questions",
     faqItems: [
@@ -278,7 +381,7 @@ const COPY: Record<LangCode, SouzokuCopy> = {
         id: "sale",
         title: "Sale",
         description:
-          "No plans to live there, heavy maintenance costs and tax burden, or heirs who want to divide the proceeds—in such cases, selling is the realistic exit. From an appraisal based on Bunkyo market conditions to organizing the procedures involved in a sale, we move forward in coordination with our partner professionals (gyoseishoshi (administrative scriveners), judicial scriveners, licensed tax accountants, and others). We also welcome consultations on selling inherited income properties such as whole apartment buildings and office buildings.",
+          "No plans to live there, heavy maintenance costs and tax burden, or heirs who want to divide the proceeds—in such cases, selling is the realistic exit. From an appraisal that reflects market conditions in Bunkyo-ku and also in Toshima-ku (Otsuka, Sugamo, Komagome, Ikebukuro and other areas), to organizing the procedures involved in a sale, we move forward in coordination with our partner professionals (gyoseishoshi (administrative scriveners), judicial scriveners, licensed tax accountants, and others). Where an inheritance spans wards—for example a family home in Bunkyo-ku and a rented house in Toshima-ku—we appraise them together. We also welcome consultations on selling inherited income properties such as whole apartment buildings and office buildings.",
       },
     ],
     internalHeading: "Pages you may also want to see",
@@ -343,6 +446,41 @@ const COPY: Record<LangCode, SouzokuCopy> = {
     h1Sub: "出口有「管理・活用・出售」3種",
     heroLead:
       "在文京區繼承不動產後，請先確認繼承登記的期限——自2024年4月起申請已義務化，原則上須在3年以內辦理。接著再從管理・活用・出售3種出口中做選擇。依照這個順序進行就不會迷惘。四葉不動産從最初的一步開始陪伴您。",
+    providerLabel: "承辦的事業體",
+    providerHeading: "承辦豐島區・文京區繼承不動產的事業體，以及各自的承辦範圍",
+    providerLead:
+      "四葉不動産株式会社（宅地建物交易業〔日本語：宅地建物取引業〕 東京都知事(1)第113304號）與四葉行政書士事務所（行政書士 登錄號碼第25087022號），是設於東京都文京區小日向（距茗荷谷站步行約5分鐘）、併設於同一處的兩個獨立事業體，均由浦松丈二擔任代表。浦松同時具備宅地建物交易士（日本語：宅地建物取引士／東京）第293544號與行政書士的登錄。豐島區（大塚・巢鴨・駒込・池袋等）與文京區的繼承不動產，估價與買賣仲介由四葉不動産株式会社承辦，遺產分割協議書等繼承手續的文件製作由四葉行政書士事務所承辦，各自以另行簽訂的契約受理。",
+    providerColEntity: "委託對象",
+    providerColLicense: "免許・登錄",
+    providerColScope: "在本頁的諮詢中承辦的範圍",
+    providerRows: [
+      {
+        entity: "四葉不動産株式会社",
+        license:
+          "宅地建物交易業〔日本語：宅地建物取引業〕 東京都知事(1)第113304號／代表取締役・專任宅地建物交易士 浦松丈二（東京）第293544號",
+        scope:
+          "豐島區（大塚・巢鴨・駒込・池袋等）・文京區，以及新宿區・台東區・北區・千代田區的繼承不動產之估價、買賣仲介、租賃活用與管理的提案",
+      },
+      {
+        entity: "四葉行政書士事務所",
+        license: "行政書士 登錄號碼第25087022號／代表行政書士 浦松丈二",
+        scope:
+          "遺產分割協議書的製作等，繼承手續的文件製作。與四葉不動産株式会社另行簽訂契約受理",
+      },
+      {
+        entity: "司法書士〔日本的登記申請代理專業資格〕",
+        license: "——（本公司不承辦）",
+        scope:
+          "向法務局申請繼承登記的代理。本公司無法辦理，將為您引介司法書士",
+      },
+      {
+        entity: "稅理士〔日本的稅務專業資格〕",
+        license: "——（本公司不承辦）",
+        scope: "遺產稅的申報與稅額計算。本公司無法辦理，將為您引介稅理士",
+      },
+    ],
+    providerNote:
+      "四葉不動産株式会社與四葉行政書士事務所是獨立的不同事業體。委託請分別直接向各事業體提出，契約亦分別簽訂。事業體之間不會收受介紹費。本頁以提供一般資訊為目的，不進行個別的法律判斷・稅額計算。免許號碼・登錄號碼為本頁製作時點的記載（與各登錄機關最新公開資訊的核對未經查證）。",
     faqLabel: "FAQ",
     faqHeading: "文京區的繼承不動產，常見疑問",
     faqItems: [
@@ -413,7 +551,7 @@ const COPY: Record<LangCode, SouzokuCopy> = {
         id: "sale",
         title: "出售",
         description:
-          "沒有居住的打算、維持費與稅負沉重、想在繼承人之間分配——這些時候，出售就是務實的出口。從依文京區行情的估價，到出售相關手續的安排，皆與合作的專業人士（行政書士・司法書士・稅理士等）聯手進行。繼承而來的整棟公寓・大樓等收益不動產的出售，也歡迎洽詢。",
+          "沒有居住的打算、維持費與稅負沉重、想在繼承人之間分配——這些時候，出售就是務實的出口。從依文京區以及豐島區（大塚・巢鴨・駒込・池袋等）行情的估價，到出售相關手續的安排，皆與合作的專業人士（行政書士・司法書士・稅理士等）聯手進行。像是「文京區的老家與豐島區的出租房」這種物件橫跨不同區的繼承，也會一併估價。繼承而來的整棟公寓・大樓等收益不動產的出售，也歡迎洽詢。",
       },
     ],
     internalHeading: "建議一併閱覽的頁面",
@@ -478,6 +616,40 @@ const COPY: Record<LangCode, SouzokuCopy> = {
     h1Sub: "出口有“管理・活用・出售”3种",
     heroLead:
       "在文京区继承不动产后，请先确认继承登记的期限——自2024年4月起申请已义务化，原则上须在3年以内办理。然后再从管理・活用・出售3种出口中进行选择。按照这个顺序推进就不会迷茫。四葉不動産从最初的一步开始陪伴您。",
+    providerLabel: "承办的事业体",
+    providerHeading: "承办丰岛区・文京区继承不动产的事业体，以及各自的承办范围",
+    providerLead:
+      "四葉不動産株式会社（宅地建物交易业〔日本語：宅地建物取引業〕 东京都知事(1)第113304号）与四葉行政書士事務所（行政书士 登录号码第25087022号），是设于东京都文京区小日向（距茗荷谷站步行约5分钟）、并设于同一处的两个独立事业体，均由浦松丈二担任代表。浦松同时具备宅地建物交易士（日本語：宅地建物取引士／东京）第293544号与行政书士的登录。丰岛区（大塚・巢鸭・驹込・池袋等）与文京区的继承不动产，估价与买卖中介由四葉不動産株式会社承办，遗产分割协议书等继承手续的文件制作由四葉行政書士事務所承办，各自以另行签订的合同受理。",
+    providerColEntity: "委托对象",
+    providerColLicense: "免许・登录",
+    providerColScope: "在本页的咨询中承办的范围",
+    providerRows: [
+      {
+        entity: "四葉不動産株式会社",
+        license:
+          "宅地建物交易业〔日本語：宅地建物取引業〕 东京都知事(1)第113304号／代表取締役・专任宅地建物交易士 浦松丈二（东京）第293544号",
+        scope:
+          "丰岛区（大塚・巢鸭・驹込・池袋等）・文京区，以及新宿区・台东区・北区・千代田区的继承不动产之估价、买卖中介、租赁活用与管理的提案",
+      },
+      {
+        entity: "四葉行政書士事務所",
+        license: "行政书士 登录号码第25087022号／代表行政书士 浦松丈二",
+        scope:
+          "遗产分割协议书的制作等，继承手续的文件制作。与四葉不動産株式会社另行签订合同受理",
+      },
+      {
+        entity: "司法书士〔日本的登记申请代理专业资格〕",
+        license: "——（本公司不承办）",
+        scope: "向法务局申请继承登记的代理。本公司无法办理，将为您引介司法书士",
+      },
+      {
+        entity: "税理士〔日本的税务专业资格〕",
+        license: "——（本公司不承办）",
+        scope: "遗产税的申报与税额计算。本公司无法办理，将为您引介税理士",
+      },
+    ],
+    providerNote:
+      "四葉不動産株式会社与四葉行政書士事務所是独立的不同事业体。委托请分别直接向各事业体提出，合同也分别签订。事业体之间不会收受介绍费。本页以提供一般信息为目的，不进行个别的法律判断・税额计算。免许号码・登录号码为本页制作时点的记载（与各登录机关最新公开信息的核对未经核实）。",
     faqLabel: "FAQ",
     faqHeading: "文京区的继承不动产，常见疑问",
     faqItems: [
@@ -548,7 +720,7 @@ const COPY: Record<LangCode, SouzokuCopy> = {
         id: "sale",
         title: "出售",
         description:
-          "没有居住的打算、维持费与税负沉重、想在继承人之间分配——这些时候，出售就是务实的出口。从依据文京区行情的估价，到出售相关手续的安排，均与合作的专业人士（行政书士・司法书士・税理士等）协作推进。继承而来的整栋公寓・大楼等收益不动产的出售，也欢迎咨询。",
+          "没有居住的打算、维持费与税负沉重、想在继承人之间分配——这些时候，出售就是务实的出口。从依据文京区以及丰岛区（大塚・巢鸭・驹込・池袋等）行情的估价，到出售相关手续的安排，均与合作的专业人士（行政书士・司法书士・税理士等）协作推进。像是“文京区的老家与丰岛区的出租房”这种物件横跨不同区的继承，也会一并估价。继承而来的整栋公寓・大楼等收益不动产的出售，也欢迎咨询。",
       },
     ],
     internalHeading: "建议一并浏览的页面",
@@ -652,6 +824,60 @@ export default async function SouzokuPageContent() {
           </h1>
           <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-text-muted sm:text-base">
             {c.heroLead}
+          </p>
+        </div>
+      </section>
+
+      {/* ─── 担当する事業者（2026-08-05・定点#3対策） ───
+          型B（引用〇・名指し×）の打ち手。ページは引用されているのに
+          AI回答の本文に事業者名が出ないため、「だれが・どの免許/登録を持ち・
+          どの範囲を担うか」を三人称の事実として、そのまま書き写せる形で置く。
+          事業体をまたいで一手に引き受ける形を連想させる語は使わない（改善ループ規程 第4条）。 */}
+      <section className="border-b border-border py-14 sm:py-20 md:py-28">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <p className="cta-gradient-text text-sm font-medium tracking-[0.2em]">
+            {c.providerLabel}
+          </p>
+          <h2 className="mt-3 text-2xl font-bold sm:text-3xl">
+            {c.providerHeading}
+          </h2>
+          <p className="mt-5 text-sm leading-relaxed text-text-muted sm:text-base">
+            {c.providerLead}
+          </p>
+          <div className="mt-8 overflow-x-auto">
+            <table className="w-full min-w-[42rem] border-collapse text-sm">
+              <thead>
+                <tr className="bg-surface-dim">
+                  <th className="border border-border px-3 py-2 text-left font-bold">
+                    {c.providerColEntity}
+                  </th>
+                  <th className="border border-border px-3 py-2 text-left font-bold">
+                    {c.providerColLicense}
+                  </th>
+                  <th className="border border-border px-3 py-2 text-left font-bold">
+                    {c.providerColScope}
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {c.providerRows.map((row) => (
+                  <tr key={row.entity}>
+                    <td className="border border-border px-3 py-2 align-top font-bold">
+                      {row.entity}
+                    </td>
+                    <td className="border border-border px-3 py-2 align-top leading-relaxed text-text-muted">
+                      {row.license}
+                    </td>
+                    <td className="border border-border px-3 py-2 align-top leading-relaxed text-text-muted">
+                      {row.scope}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-4 text-xs leading-relaxed text-text-muted">
+            {c.providerNote}
           </p>
         </div>
       </section>
