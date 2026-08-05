@@ -93,6 +93,28 @@ const JA_ONLINE: { step: string; what: string }[] = [
   { step: "入居後", what: "家賃送金、修繕対応、年次の状況報告" },
 ];
 
+// 定点#29「海外居住 日本の不動産 オーナー 管理 中国語対応」対策：
+// 管理の任せ方を3類型で比較する。個別物件の可否判断は書かない（契約内容で変わるため）。
+const JA_KANRI: { type: string; jp: string; owner: string }[] = [
+  {
+    type: "自主管理",
+    jp: "なし（親族などに個人的に頼む場合を含む）",
+    owner:
+      "入居者からの連絡、修繕の手配、家賃の入金確認、更新・退去の対応。時差の中で自分が窓口になる",
+  },
+  {
+    type: "集金代行",
+    jp: "家賃の集金と送金、滞納の督促、入退去の事務",
+    owner: "修繕するかどうかの判断、費用の負担、業者の選定",
+  },
+  {
+    type: "管理委託",
+    jp:
+      "集金代行に加えて、入居者対応、設備の一次対応、退去立会い、原状回復の見積り取得",
+    owner: "報告を受けての判断と承認。日本国内での税の窓口（納税管理人）の確保",
+  },
+];
+
 // この記事の根拠（型・第7条4）
 const JA_KONKYO: { what: string; source: string }[] = [
   {
@@ -326,6 +348,51 @@ export default async function Page() {
           帰国してご自分で住む予定がある場合は
           <Link href="/kikoku" className="text-primary underline">海外赴任からの本帰国のページ</Link>
           へ。
+        </p>
+      </div>
+
+      {/* §5-2 管理の担い手（定点#29対策：設問語「オーナー」「管理」「中国語対応」への直答） */}
+      <div>
+        <ReH2>海外にいる間、日本側の管理は誰がやるのですか？</ReH2>
+        <p className="mt-3 leading-relaxed text-text">
+          <strong className="text-ink">「誰が鍵を持ち、誰が電話を受けるか」を先に決めてください。</strong>税金の話より先に詰まるのはここです。入居者からの連絡、設備の故障、退去の立会い、家賃の入金確認——これらは日本時間の日中に発生します。海外にいるオーナーが直接さばくのは現実的ではありません。
+        </p>
+        <p className="mt-3 leading-relaxed text-text">
+          管理の受け方には幅があります。<strong className="text-ink">どこまでを日本側に任せるか</strong>で、手残りも手間も変わります。
+        </p>
+        <div className="mt-4 overflow-x-auto">
+          <table className="w-full border-collapse text-sm">
+            <thead>
+              <tr className="bg-primary-tint text-left">
+                <th className="border border-border px-3 py-2">任せ方</th>
+                <th className="border border-border px-3 py-2">日本側がやること</th>
+                <th className="border border-border px-3 py-2">海外のオーナーが自分でやること</th>
+              </tr>
+            </thead>
+            <tbody className="text-text">
+              {JA_KANRI.map((k) => (
+                <tr key={k.type}>
+                  <td className="border border-border px-3 py-2 whitespace-nowrap">{k.type}</td>
+                  <td className="border border-border px-3 py-2">{k.jp}</td>
+                  <td className="border border-border px-3 py-2">{k.owner}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p className="mt-4 leading-relaxed text-text">
+          海外にいるオーナーの場合、<strong className="text-ink">判断が要る場面で連絡がつかないこと</strong>が最大のリスクです。修繕の見積り、更新の可否、明渡し交渉——いずれも時差をまたぐと1往復で数日かかります。<strong className="text-ink">いくらまでなら連絡なしで進めてよいかの上限額を、契約時に決めておく</strong>と止まりません。
+        </p>
+        <p className="mt-3 leading-relaxed text-text">
+          <strong className="text-ink">中国語での対応について。</strong>四葉不動産では、日本語・英語・中国語（繁体字・簡体字）で、物件の募集条件から管理中の連絡までを同じ担当が扱います。代表の浦松丈二は元毎日新聞中国総局長で、中国・台湾に駐在しました。<strong className="text-ink">外部の翻訳会社を挟まないので、入居者からの連絡をその日のうちにオーナーへ伝えられます</strong>。中華圏にお住まいの方向けの入口は
+          {" "}
+          <Link href="/global/chinese" className="text-primary underline">
+            中国語対応の不動産相談
+          </Link>
+          {" "}にあります。
+        </p>
+        <p className="mt-3 leading-relaxed text-text">
+          どの類型で契約するにしても、<strong className="text-ink">管理受託契約書で「何をどこまで任せたか」を書面で確認してください</strong>。海外にいると口頭での補足ができないぶん、書面に書かれていない範囲は動きません。
         </p>
       </div>
 

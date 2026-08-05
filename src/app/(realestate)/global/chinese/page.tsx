@@ -96,6 +96,8 @@ const COPY: Partial<Record<LangCode, Copy>> = {
     internalLinks: [
       { href: "/global", label: "外国人・多言語のお部屋探し" },
       { href: "/souzoku", label: "相続不動産の相談" },
+      // /kaigai-owner は ja 単独公開（availableLocales:["ja"]）。定点#29対策で導線を追加。
+      { href: "/kaigai-owner", label: "海外に住んだまま日本の家を貸す・管理する" },
       {
         href: "/column/overseas-owners-guide-japan-real-estate-sale",
         label: "海外オーナーのための日本不動産売却ガイド",
@@ -190,6 +192,12 @@ const COPY: Partial<Record<LangCode, Copy>> = {
     internalLinks: [
       { href: "/global", label: "Multilingual Room Hunting for Foreign Residents" },
       { href: "/souzoku", label: "Consulting About Inherited Real Estate" },
+      // /kaigai-owner is published in ja only (availableLocales:["ja"]); link to the Japanese page.
+      {
+        href: "/kaigai-owner",
+        label: "Renting Out and Managing Your Japanese Home from Abroad (in Japanese)",
+        noLocalePrefix: true,
+      },
       // The column's availability in an English locale depends on Column.locales (DB) and cannot be
       // confirmed without a production DB connection, so we link to the Japanese version with no prefix.
       {
@@ -322,6 +330,12 @@ const COPY: Partial<Record<LangCode, Copy>> = {
     internalLinks: [
       { href: "/global", label: "外國人・多語言租屋" },
       { href: "/souzoku", label: "繼承不動產的諮詢" },
+      // /kaigai-owner は ja 単独公開（availableLocales:["ja"]）のため日本語版へ接頭辞なしで固定する。
+      {
+        href: "/kaigai-owner",
+        label: "人在海外，出租與管理日本的房子（日文）",
+        noLocalePrefix: true,
+      },
       // 当該コラムの zh-tw 公開状況は Column.locales（DB）依存で本番DB非接続のため確認できない。
       // リンク先に当該言語版がない場合は日本語版へリンクする方針に従い、接頭辞なしで固定する。
       {
@@ -434,6 +448,12 @@ const COPY: Partial<Record<LangCode, Copy>> = {
     internalLinks: [
       { href: "/global", label: "外国人・多语言租房" },
       { href: "/souzoku", label: "继承不动产的咨询" },
+      // /kaigai-owner は ja 単独公開（availableLocales:["ja"]）のため日本語版へ接頭辞なしで固定する。
+      {
+        href: "/kaigai-owner",
+        label: "人在海外，出租与管理日本的房子（日文）",
+        noLocalePrefix: true,
+      },
       // zh-tw 版と同じ理由（Column.locales はDB管理・本番DB非接続）で日本語版へ固定リンクする。
       {
         href: "/column/overseas-owners-guide-japan-real-estate-sale",
