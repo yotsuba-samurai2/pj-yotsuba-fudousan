@@ -280,7 +280,7 @@ export default async function Page() {
         <H2>四葉行政書士事務所は、何ができますか？</H2>
         <p className="mt-3 leading-relaxed text-text">当事務所がお引き受けできるのは、次の範囲です。</p>
         <ul className="mt-4 list-disc space-y-2 pl-5 text-sm leading-relaxed text-text">
-          <li>在留資格認定証明書の交付申請など、官公署に提出する書類の作成（行政書士法第1条の2・第19条）と申請の取次</li>
+          <li>在留資格認定証明書の交付申請など、官公署に提出する書類の作成（行政書士法第1条の3・第19条第1項）と申請の取次</li>
           <li>外国語書類の日本語訳、日本語書類の外国語訳の作成</li>
           <li>公証役場・外務省・各駐日公館への申請の代行（委任状による）</li>
           <li>提出先の国と書類の性質から、どの認証ルートに乗るかの整理</li>
