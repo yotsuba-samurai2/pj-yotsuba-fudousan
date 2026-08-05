@@ -1,5 +1,6 @@
-import { Phone, MapPin, Clock, CalendarDays } from "lucide-react";
+import { Phone, Printer, MapPin, Clock, CalendarDays } from "lucide-react";
 import { ContactForm } from "@/components/ui/ContactForm";
+import { OFFICE } from "@/lib/shared/office-public";
 import { buildPageMetadata } from "@/lib/seo";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 
@@ -46,6 +47,16 @@ export default function LaborContactPage() {
                     <a href="tel:03-6161-9428" className="mt-1 text-lg font-bold text-primary hover:text-primary-dark">
                       03-6161-9428
                     </a>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10">
+                    <Printer size={20} className="text-primary" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-bold">FAX</p>
+                    <p className="mt-1 text-lg font-bold text-text">{OFFICE.fax}</p>
                   </div>
                 </div>
 

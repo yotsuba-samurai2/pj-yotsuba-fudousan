@@ -38,13 +38,90 @@ import { ArticleJsonLd } from "@/components/seo/ArticleJsonLd";
 // 本ページの読者（すでに日本の物件を所有している非居住者）と噛み合わないため。
 // 末尾の CtaBand（variant="property-general" / intent="management"）で受ける。
 
+/** 初回公開日。dateModified と分けて持つ（更新のたびに published が動かないようにする） */
+const PUBLISHED_ISO = "2026-07-27";
 /** 可視の最終更新日（型・第7条6）。ArticleJsonLd の dateModified と必ず同じ日付にする */
-const LAST_UPDATED_ISO = "2026-07-27";
-const LAST_UPDATED = "2026年7月27日";
+const LAST_UPDATED_ISO = "2026-08-05";
+const LAST_UPDATED = "2026年8月5日";
 
 // 冒頭の回答ブロック（H1直下・AIが最初に拾う位置）
+// 2026-08-05：定点#32「海外転勤 持ち家 賃貸に出す 納税管理人 相談」対策で、
+// 設問語（海外転勤・持ち家・賃貸に出す）を1文目に入れ、出国前の意思決定から書き起こす形に変えた。
+// 変更前は「日本を離れたあと」＝すでに非居住者になった人の視点で始まっており、
+// 「転勤が決まった。持ち家をどうするか」という出国前の読者と噛み合っていなかった。
 const JA_ANSWER_BLOCK =
-  "海外赴任や海外移住で日本を離れ、日本の不動産を持ち続ける場合、決めることは3つです。①貸すのか空けておくのか ②誰が日本側の窓口になるのか ③納税管理人を誰にするのか。非居住者が日本国内の不動産を貸すと、借主が法人の場合などは家賃から20.42%が源泉徴収されます。四葉不動産株式会社（文京区小日向・茗荷谷駅徒歩5分）は①②を宅地建物取引業として、③の届出書の作成と確定申告は提携税理士に分けてお受けします。契約はそれぞれ直接結んでいただきます。";
+  "海外転勤や海外移住が決まり、持ち家を賃貸に出すか空けておくかを決めるとき、順番に決めることは4つです。①貸すのか空けておくのか ②普通借家か定期借家か（帰任して自分が住む予定があるなら定期借家を検討します） ③誰が日本側の窓口になるのか ④納税管理人を誰にするのか。納税管理人は出国の時までに税務署へ届け出ます。届け出ずに出国すると、その年の確定申告と納税を出国の時までに済ませることになります。非居住者が日本国内の不動産を貸すと、借主が法人の場合などは家賃から20.42%が源泉徴収されます。四葉不動産株式会社（文京区小日向・茗荷谷駅徒歩5分）は①②③を宅地建物取引業として、④の届出書の作成と確定申告は提携税理士に分けてお受けします。契約はそれぞれ直接結んでいただきます。";
+
+// §0 出国までの逆算（定点#32対策・2026-08-05新設）
+// 時期は目安であって当社の実績値ではない。断定を避け「ごろ」「すみやか」で書く。
+const JA_SHUKKOKU: { when: string; what: string; why: string }[] = [
+  {
+    when: "出国の3か月前ごろ",
+    what: "貸すか、空けておくかを決める",
+    why: "募集を始めてから入居が決まるまでには時間がかかります。出国後に決めると、空室の期間がそのまま持ち出しになります。",
+  },
+  {
+    when: "出国の1〜2か月前",
+    what: "普通借家か定期借家かを決め、募集条件を確定する",
+    why: "定期借家は、契約前に「更新がなく期間の満了で終了する」旨の書面を渡して説明することが要件です（借地借家法第38条第3項）。海外に出てから整えると往復が増えます。",
+  },
+  {
+    when: "出国の時まで",
+    what: "納税管理人を定め、税務署へ届け出る",
+    why: "届け出ずに出国すると、その年の確定申告と納税を出国の時までに済ませることになります（国税庁タックスアンサー No.1923）。",
+  },
+  {
+    when: "出国後すみやかに",
+    what: "家賃の受取口座、日本側の連絡先、郵便の転送先を確定する",
+    why: "国内の住所がなくなると、届かなくなる書類が出ます。",
+  },
+  {
+    when: "帰任が決まったら",
+    what: "定期借家の終了通知と、納税管理人の解任届",
+    why: "期間が1年以上の定期借家は、満了の1年前から6か月前までの間に通知しないと、終了を借主に対抗できません（同条第6項）。",
+  },
+];
+
+// §0 普通借家と定期借家（定点#32対策・2026-08-05新設）
+// 借地借家法（平成3年法律第90号）第38条は、e-Gov法令検索の法令API
+// （/api/1/lawdata/403AC0000000090）で2026-08-05に現行条文を取得し、
+// 第1項〜第9項を逐語で確認したうえで要約している。
+const JA_SHAKKA: { item: string; futsu: string; teiki: string }[] = [
+  {
+    item: "期間が満了したら",
+    futsu: "正当の事由がなければ更新を拒めません",
+    teiki: "期間の満了で終了します（第38条第1項）",
+  },
+  {
+    item: "帰任して自分が住めるか",
+    futsu: "借主が住み続けたい場合、明け渡してもらうのは容易ではありません",
+    teiki: "期間を帰任の予定に合わせておけば、満了時に戻れます",
+  },
+  {
+    item: "契約のしかた",
+    futsu: "書面でなくても成立します",
+    teiki:
+      "書面（内容を記録した電磁的記録を含む）による契約であることが要件です（第1項・第2項）",
+  },
+  {
+    item: "事前の説明を落とすと",
+    futsu: "—",
+    teiki:
+      "「更新がない」という定めだけが無効になります（第5項）。契約自体は残り、普通借家として扱われます",
+  },
+  {
+    item: "終了させるときの通知",
+    futsu: "—",
+    teiki:
+      "期間が1年以上なら、満了の1年前から6か月前までの間に通知しないと、終了を借主に対抗できません（第6項）",
+  },
+  {
+    item: "借主からの中途解約",
+    futsu: "契約の定めによります",
+    teiki:
+      "床面積200㎡未満の居住用で、借主が転勤・療養・親族の介護などにより生活の本拠として使えなくなったときは、借主から解約を申し入れられます（第7項）。これに反する借主に不利な特約は無効です（第8項）",
+  },
+];
 
 // §2 源泉徴収の要否（借主と使いみちで決まる）
 const JA_GENSEN: { who: string; use: string; need: string }[] = [
@@ -131,6 +208,16 @@ const JA_KONKYO: { what: string; source: string }[] = [
     source: "国税通則法第117条第1項・第2項（第3項以下は令和3年度税制改正で拡充）",
   },
   {
+    what: "海外勤務と納税管理人の選任・解任（帰国して居住者に戻るときは解任の届出が要ること）",
+    source:
+      "国税庁タックスアンサー No.1923「海外勤務と納税管理人の選任又は解任」（令和7年4月1日現在法令等）／根拠法令 所得税法第2条・第120条・第161条ほか、国税通則法第117条",
+  },
+  {
+    what: "定期建物賃貸借（書面要件・事前説明・終了通知・借主からの中途解約）",
+    source:
+      "借地借家法（平成3年法律第90号）第38条第1項〜第9項。e-Gov法令検索の法令API（403AC0000000090）で2026年8月5日に現行条文を取得し逐語確認",
+  },
+  {
     what: "税務書類の作成・税務代理が税理士の業務であること",
     source: "税理士法第2条第1項第1号・第2号、第52条",
   },
@@ -149,9 +236,9 @@ export async function generateMetadata(): Promise<Metadata> {
   return buildPageMetadata({
     businessKey: "realestate",
     title:
-      "海外に住んだまま日本の家を貸す・管理する｜納税管理人と20.42%の源泉徴収 | 四葉不動産",
+      "海外転勤で持ち家を賃貸に出す｜納税管理人・定期借家・20.42%の源泉徴収 | 四葉不動産",
     description:
-      "海外赴任・海外移住で日本を離れたあと、日本の不動産を貸す・管理する・納税管理人を決めるまでの判断材料。家賃から20.42%が源泉徴収される条件を早見表で整理します。文京区小日向・茗荷谷駅徒歩5分。",
+      "海外転勤・海外移住が決まってから出国までに決めることを逆算で整理。持ち家を賃貸に出すか空けておくか、帰任して戻るなら普通借家か定期借家か、納税管理人を誰にするか。家賃から20.42%が源泉徴収される条件も早見表で示します。文京区小日向・茗荷谷駅徒歩5分。",
     path: "/kaigai-owner",
     keywords: [
       "非居住者 不動産 納税管理人",
@@ -173,10 +260,10 @@ export default async function Page() {
           Person は @id 参照1つのみ（ArticleJsonLd の author）＝Personノードを増やさない。 */}
       <ArticleJsonLd
         businessKey="realestate"
-        title="海外に住んだまま、日本の家をどうするか｜納税管理人と20.42%の源泉徴収"
-        description="海外赴任・海外移住で日本を離れたあと、日本の不動産を貸す・管理する・納税管理人を決めるまでの判断材料。家賃から20.42%が源泉徴収される条件を早見表で整理します。"
+        title="海外転勤で持ち家を賃貸に出すとき｜納税管理人・定期借家・20.42%の源泉徴収"
+        description="海外転勤・海外移住が決まってから出国までに決めることを逆算で整理。持ち家を賃貸に出すか空けておくか、帰任して戻るなら普通借家か定期借家か、納税管理人を誰にするか。家賃から20.42%が源泉徴収される条件も早見表で示します。"
         path="/kaigai-owner"
-        datePublished={LAST_UPDATED_ISO}
+        datePublished={PUBLISHED_ISO}
         dateModified={LAST_UPDATED_ISO}
       />
     <RealestateServicePage
@@ -214,6 +301,78 @@ export default async function Page() {
       ]}
       crossLinkLead="海外で作成された書類の日本語訳や、アポスティーユ・領事認証の手続きは、関連事業の四葉行政書士事務所のページで解説しています。"
     >
+      {/* §0 出国前の意思決定（定点#32「海外転勤 持ち家 賃貸に出す 納税管理人 相談」対策・2026-08-05新設）
+          設問語（海外転勤・持ち家・賃貸に出す・納税管理人）への直答を、AIが最初に拾う位置に置く。
+          売却の詳細は書かない（/column/overseas-owners-guide-japan-real-estate-sale の役割）。 */}
+      <div>
+        <ReH2>海外転勤が決まりました。持ち家は賃貸に出すべきですか、空けておくべきですか？</ReH2>
+        <p className="mt-3 leading-relaxed text-text">
+          <strong className="text-ink">先に決めるのは「帰ってきて自分が住むかどうか」です。</strong>ここが決まると、貸すか空けておくか、貸すならどの契約でいくかが自動的に絞られます。逆にここを曖昧にしたまま募集を始めると、帰任のときに自分の家に戻れません。
+        </p>
+        <p className="mt-3 leading-relaxed text-text">
+          空けておけば、いつでも戻れます。ただし収入はゼロで、固定資産税・管理費・修繕積立金は出続けます。さらに<strong className="text-ink">管理されていない状態が続くと、固定資産税の負担が増える場合があります</strong>（このページの「貸さずに空けておく場合は、何をしておけばいいですか？」で後述します）。貸せば収入は入りますが、契約の型を間違えると明け渡してもらえません。
+        </p>
+
+        <h3 className="mt-6 text-base font-semibold text-ink">出国までの逆算（目安）</h3>
+        <div className="mt-3 overflow-x-auto">
+          <table className="w-full border-collapse text-sm">
+            <thead>
+              <tr className="bg-primary-tint text-left">
+                <th className="border border-border px-3 py-2">時期</th>
+                <th className="border border-border px-3 py-2">決めること・やること</th>
+                <th className="border border-border px-3 py-2">なぜその時期か</th>
+              </tr>
+            </thead>
+            <tbody className="text-text">
+              {JA_SHUKKOKU.map((s) => (
+                <tr key={s.when}>
+                  <td className="border border-border px-3 py-2 whitespace-nowrap font-medium text-ink">{s.when}</td>
+                  <td className="border border-border px-3 py-2">{s.what}</td>
+                  <td className="border border-border px-3 py-2">{s.why}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p className="mt-3 leading-relaxed text-text">
+          時期は目安です。物件の状態と赴任先によって前後します。
+        </p>
+
+        <h3 className="mt-6 text-base font-semibold text-ink">帰任して戻るなら、普通借家ではなく定期借家を検討する</h3>
+        <p className="mt-3 leading-relaxed text-text">
+          転勤で家を貸す方がいちばん誤解しやすいのがここです。<strong className="text-ink">普通借家で貸すと、期間が来ても正当の事由がなければ更新を拒めません。</strong>「3年で帰ってくるので3年契約にした」だけでは、3年後に明け渡してもらえるとは限りません。
+        </p>
+        <div className="mt-3 overflow-x-auto">
+          <table className="w-full border-collapse text-sm">
+            <thead>
+              <tr className="bg-primary-tint text-left">
+                <th className="border border-border px-3 py-2">論点</th>
+                <th className="border border-border px-3 py-2">普通借家（更新あり）</th>
+                <th className="border border-border px-3 py-2">定期借家（更新なし）</th>
+              </tr>
+            </thead>
+            <tbody className="text-text">
+              {JA_SHAKKA.map((s) => (
+                <tr key={s.item}>
+                  <td className="border border-border px-3 py-2 whitespace-nowrap font-medium text-ink">{s.item}</td>
+                  <td className="border border-border px-3 py-2">{s.futsu}</td>
+                  <td className="border border-border px-3 py-2">{s.teiki}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <blockquote className="mt-4 rounded-lg border-l-4 border-primary bg-surface p-4 text-sm leading-relaxed text-text">
+          <strong className="text-ink">よくある取り違え。</strong>借地借家法第38条第7項の「転勤」は、<strong className="text-ink">借りている側の転勤</strong>です。貸主であるあなたの帰任が早まったことは、この条文による中途解約の理由になりません。帰任が動く可能性があるなら、期間の決め方と再契約の可否を契約の段階で詰めておく必要があります。
+        </blockquote>
+        <p className="mt-3 leading-relaxed text-text">
+          定期借家は借主にとって条件が厳しくなるぶん、<strong className="text-ink">同じ物件でも普通借家より賃料を下げないと決まりにくい</strong>のが実務です。「確実に戻れること」と「毎月の手残り」のどちらを取るかの判断になります。四葉不動産株式会社では、普通借家と定期借家の2本立ての想定賃料をお出ししたうえで選んでいただきます。
+        </p>
+        <p className="mt-3 leading-relaxed text-text">
+          個別の契約でどちらが妥当か、期間を何年にするかは、物件の条件と赴任期間によって変わります。<strong className="text-ink">契約書の条項の適法性や、借主との紛争になったときの見通しは弁護士の領域です。</strong>当社は宅地建物取引業として募集・契約・管理をお受けし、税務の届出と申告は提携税理士と直接ご契約いただきます。紹介料のやりとりはありません。
+        </p>
+      </div>
+
       {/* §1 何が違うか */}
       <div>
         <ReH2>海外に住んだまま日本の家を貸すと、普通の賃貸と何が違うのですか？</ReH2>
