@@ -60,8 +60,9 @@ const COPY: Record<LangCode, VisaCopy> = {
               <Link href={addLocalePrefix("/legal/services/company", locale)} className="text-primary underline">会社設立と経営管理ビザ</Link>
             </li>
             <li>
-              育成就労（2027年4月施行）への対応は、制度の施行にあわせてご案内します
-              <Placeholder reason="浦松＝育成就労対応の範囲" />
+              育成就労（2027年4月施行）のうち、監理支援機関に求められる外部監査については
+              <Link href="/legal/services/ikuseishuro-gaibu-kansa" className="text-primary underline">育成就労の外部監査人</Link>
+              をご覧ください
             </li>
           </ul>
         </div>
