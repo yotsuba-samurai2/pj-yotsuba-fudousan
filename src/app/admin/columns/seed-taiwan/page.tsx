@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { upsertColumnBySlug } from "@/lib/admin-api";
+import { getColumns, upsertColumnBySlug } from "@/lib/admin-api";
+import type { ColumnStatus } from "@/lib/admin-api";
 import { TAIWAN_COLUMNS_SEED } from "@/lib/data/taiwan-columns-seed";
 
 type ItemResult = {
@@ -19,7 +20,15 @@ type ItemResult = {
  * scripts/seed-taiwan-columns.ts のdry-runパース結果を焼き込んだ
  * src/lib/data/taiwan-columns-seed.ts を、ブラウザの管理者セッション経由で
  * slug基準の冪等upsertで投入する（サービスアカウント不要・何度実行しても重複しない）。
- * status は常に "draft"（出し分け実装後にpublished化する）。
+ * status の扱い【2026-08-06 是正】：
+ * seed 定数（taiwan-columns-seed.ts）は 9本すべて "draft" を持つ。以前はこれを
+ * そのまま upsert していたため、**再実行すると公開中の台湾コラム9本が非公開に戻る**
+ * 事故が起きる状態だった。実際この危険のために、本番に残る禁止語（一站式・一條龍＝
+ * 135件／11ページ・2026-08-06 実測）の是正に着手できずにいた。
+ *
+ * 現在は投入前に既存コラムを取得し、**既に存在する slug については既存の status を
+ * そのまま引き継ぐ**（新規作成のときだけ seed 定数の "draft" を使う）。
+ * これにより本文の修正を何度でも安全に再投入できる。
  */
 export default function SeedTaiwanPage() {
   const [running, setRunning] = useState(false);
@@ -34,8 +43,32 @@ export default function SeedTaiwanPage() {
 
   const handleRun = async () => {
     setRunning(true);
+
+    // 既存コラムの status を slug ごとに控える。取得に失敗した場合は
+    // 「公開状態を保てない」ため投入を中止する（黙って draft で上書きしない）。
+    let existingStatusBySlug: Record<string, ColumnStatus>;
+    try {
+      const existing = await getColumns("realestate");
+      existingStatusBySlug = Object.fromEntries(
+        existing.map((c) => [c.slug, c.status]),
+      );
+    } catch (err) {
+      setResults((prev) =>
+        prev.map((r) => ({
+          ...r,
+          status: "error",
+          message: `既存コラムの取得に失敗したため中止しました（公開中の記事をdraftに戻さないため）: ${String(err)}`,
+        })),
+      );
+      setRunning(false);
+      return;
+    }
+
     for (let i = 0; i < TAIWAN_COLUMNS_SEED.length; i++) {
-      const article = TAIWAN_COLUMNS_SEED[i];
+      const seeded = TAIWAN_COLUMNS_SEED[i];
+      const keptStatus = existingStatusBySlug[seeded.slug];
+      // 既存があればその status を引き継ぐ。新規のときだけ seed 定数の値を使う。
+      const article = keptStatus ? { ...seeded, status: keptStatus } : seeded;
       try {
         const { action } = await upsertColumnBySlug(
           article.business,
@@ -67,8 +100,10 @@ export default function SeedTaiwanPage() {
     <div className="p-6">
       <h1 className="mb-1 text-lg font-bold">台湾コンテンツ9本 バルク投入</h1>
       <p className="mb-4 text-sm text-text-muted">
-        business=realestate／locale=zh-tw／status=draft でupsert投入します（slug基準・冪等）。
-        再実行しても重複しません。
+        business=realestate／locale=zh-tw で upsert 投入します（slug基準・冪等）。
+        再実行しても重複しません。<strong>既に存在するslugは現在の公開状態（status）を
+        そのまま引き継ぎます</strong>ので、公開中の記事が非公開に戻ることはありません。
+        新規作成のときだけ draft で作成されます。
       </p>
 
       <div className="max-w-2xl rounded-xl border border-border bg-surface p-6">
