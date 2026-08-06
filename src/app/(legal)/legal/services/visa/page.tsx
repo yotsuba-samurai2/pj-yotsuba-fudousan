@@ -143,8 +143,9 @@ const COPY: Record<LangCode, VisaCopy> = {
               <Link href={addLocalePrefix("/legal/services/company", locale)} className="text-primary underline">Company Formation & the Business Manager Visa</Link>
             </li>
             <li>
-              Support for the new Employment for Skill Development (ikusei shuro) system, effective April 2027, will be announced as the system comes into force
-              <Placeholder reason="浦松＝育成就労対応の範囲" />
+              For the external audit required of supervising support organisations under the new Employment for Skill Development (ikusei shuro) system, effective April 2027, see{" "}
+              <Link href="/legal/services/ikuseishuro-gaibu-kansa" className="text-primary underline">External auditors under the Employment for Skill Development system</Link>
+              {" "}(Japanese)
             </li>
           </ul>
         </div>
@@ -225,8 +226,9 @@ const COPY: Record<LangCode, VisaCopy> = {
               <Link href={addLocalePrefix("/legal/services/company", locale)} className="text-primary underline">公司設立與經營管理簽證</Link>
             </li>
             <li>
-              「育成就勞」制度（2027年4月施行）的相關服務，將配合制度施行陸續公告
-              <Placeholder reason="浦松＝育成就労対応の範囲" />
+              「育成就勞」制度（2027年4月施行）中，監理支援機關所需的外部稽核，請參閱{" "}
+              <Link href="/legal/services/ikuseishuro-gaibu-kansa" className="text-primary underline">育成就勞的外部稽核人員</Link>
+              （日文頁面）
             </li>
           </ul>
         </div>
@@ -307,8 +309,9 @@ const COPY: Record<LangCode, VisaCopy> = {
               <Link href={addLocalePrefix("/legal/services/company", locale)} className="text-primary underline">公司设立与经营管理签证</Link>
             </li>
             <li>
-              “育成就劳”制度（2027年4月施行）的相关服务，将配合制度施行陆续公告
-              <Placeholder reason="浦松＝育成就労対応の範囲" />
+              “育成就劳”制度（2027年4月施行）中，监理支援机构所需的外部审计，请参阅{" "}
+              <Link href="/legal/services/ikuseishuro-gaibu-kansa" className="text-primary underline">育成就劳的外部审计人员</Link>
+              （日文页面）
             </li>
           </ul>
         </div>
