@@ -62,6 +62,14 @@ export const EXTRA_CATEGORY_LABELS: Record<string, Record<LangCode, string>> = {
     "zh-tw": "外籍員工的聘僱與接納（企業）",
     zh: "外籍员工的聘用与接纳（企业）",
   },
+  // 2026-08-06：育成就労の外部監査（定点#26・#27の受け皿ページ /legal/services/ikuseishuro-gaibu-kansa）。
+  // 相談者は監理支援機関の許可を検討する事業者で、外国人本人でも受入企業でもないため独立のキーにする。
+  "ikuseishuro-gaibu-kansa": {
+    ja: "育成就労の外部監査（監理支援機関）",
+    en: "External audit under the Employment for Skill Development system (supervising support organisations)",
+    "zh-tw": "育成就勞的外部稽核（監理支援機關）",
+    zh: "育成就劳的外部审计（监理支援机构）",
+  },
   "kikoku-funin": {
     ja: "帰国・赴任の手続き",
     en: "Procedures for returning to Japan or taking up an overseas post",
@@ -104,6 +112,7 @@ export const CATEGORY_ORDER_BY_BUSINESS: Record<string, string[]> = {
     "oyanakiato",
     "shogai-fukushi",
     "gaikokujin-shain",
+    "ikuseishuro-gaibu-kansa",
     "kikoku-funin",
     "kyoninka",
     "subsidy",
