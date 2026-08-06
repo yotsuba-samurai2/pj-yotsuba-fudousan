@@ -9,6 +9,7 @@ import type { LangCode } from "@/config/languages";
 import ScatteredIcons from "@/components/ui/ScatteredIcons";
 import { fetchAllTranslations } from "@/lib/getTranslationData";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import { stripSrEntities } from "@/lib/shared/sr-strip";
 
 const zenKaku = Zen_Kaku_Gothic_New({
   variable: "--font-zen-kaku-gothic-new",
@@ -67,31 +68,14 @@ export default async function RootLayout({
     // labor配下＋他名前空間の groupBusinesses 等の「社労士エントリ」を除去（源HTML漏れ防止・法27条）。
     // 例：legal.homePage.groupBusinesses[2].name / realestate.aboutPage.groupBusinesses[2].name
     // ※許容表記「社会保険労務士試験合格（2026年9月開業予定）」は文字列＝nameを持つ配列要素ではないため影響しない。
-    const SR_RE = /社会保険労務士|社労士/;
-    const stripSr = (node: unknown): unknown => {
-      if (Array.isArray(node)) {
-        return node
-          .filter(
-            (el) =>
-              !(
-                el &&
-                typeof el === "object" &&
-                SR_RE.test(String((el as Record<string, unknown>).name ?? ""))
-              ),
-          )
-          .map(stripSr);
-      }
-      if (node && typeof node === "object") {
-        const o = node as Record<string, unknown>;
-        for (const k of Object.keys(o)) o[k] = stripSr(o[k]);
-        return o;
-      }
-      return node;
-    };
+    //
+    // 判定は src/lib/shared/sr-strip.ts に切り出した（テスト sr-strip.test.ts で全書体を固定）。
+    // 2026-08-05：旧実装 /社会保険労務士|社労士/ は日本語の漢字しか見ておらず、
+    // 繁体字「四葉社會保險勞務士法人」が除去されずに本番の全ロケールへ配信されていた。
     for (const data of Object.values(allTranslations)) {
       if (data && typeof data === "object") {
         delete (data as Record<string, unknown>).labor;
-        stripSr(data); // legal/realestate 等に残る groupBusinesses の社労士エントリを除去
+        stripSrEntities(data); // legal/realestate 等に残る groupBusinesses の社労士エントリを除去
       }
     }
   }

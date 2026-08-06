@@ -50,8 +50,10 @@ const BUSINESS_NAMES: Record<string, Record<string, string>> = {
   labor: {
     ja: SR_OFFICE_NAME, // 事務所名は実行時結合（法27条ソース漏れ対策＝sr-name.ts参照）
     en: "Yotsuba Labor & Social Insurance Office",
-    "zh-tw": "四葉社會保險勞務士法人",
-    zh: "四叶社会保险劳务士法人",
+    // 2026-08-05：「法人」は事実に反する（開設するのは個人の社会保険労務士事務所）。
+    // 既定値が誤っていると新規コラムのたびに再生産されるため是正した。
+    "zh-tw": "四葉社會保險勞務士事務所",
+    zh: "四叶社会保险劳务士事务所",
   },
 };
 
