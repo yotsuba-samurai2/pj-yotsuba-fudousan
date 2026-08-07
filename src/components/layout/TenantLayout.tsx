@@ -648,6 +648,20 @@ function TenantFooter({ businessKey }: { businessKey: string }) {
   const biz = groupBusinesses.find((b) => b.key === businessKey)!;
   const { t } = useTranslation();
   const { locale } = useLanguage();
+  const pathname = usePathname();
+
+  // いい相続バナーの表示判定（下の「Legal」ブロック末尾で使う）。
+  // フッターは共通部品のため、条件を付けないと legal テナントの全ページに出る。
+  // 浦松指示（2026-08-07）により /legal トップの1ページだけに限定する。
+  // ・businessKey === "legal"：宅建業・社労士のフッターには出さない（業法分離）
+  // ・locale === "ja"：先方指定のアンカーテキストが日本語固定
+  // ・normalizePath(...) === "/legal"：locale接頭辞を除いたパスがトップ本体のときのみ。
+  //   末尾スラッシュは Next.js の trailingSlash 既定（false）により付かないが、
+  //   将来の設定変更に備えて許容しておく。
+  const isISozokuBadgeVisible =
+    businessKey === "legal" &&
+    locale === "ja" &&
+    ["/legal", "/legal/"].includes(normalizePath(pathname ?? "/"));
 
   const footerSections: FooterSection[] = useMemo(() => {
     const defs = FOOTER_NAV_HREFS[businessKey] ?? [];
@@ -914,14 +928,15 @@ function TenantFooter({ businessKey }: { businessKey: string }) {
               ・リンク先＝いい相続内の当事務所ページ。lib/seo.ts の LEGAL_SAME_AS と同一URL。
               ・画像は先方ホストのバッジを先方指定のまま参照する（先方が更新した場合に追随させるため／
                 先方の設置確認も同URLで行われる）。ローカルへ複製しない。
-              ・表示条件＝businessKey === "legal" かつ ja。
-                掲載主体は「四葉行政書士事務所」であるため、宅建業（realestate）・社労士（labor）の
-                フッターには出さない（業法分離）。アンカーテキストが日本語固定のため ja 限定。
+              ・表示条件＝isISozokuBadgeVisible（この関数の先頭で算出）。
+                legal テナント／ja／パスが /legal トップ本体、の3条件すべて。
+                フッターは共通部品のため、条件を付けないと legal 配下の全ページに出る。
+                浦松指示（2026-08-07）によりトップ1ページだけに限定している。
               ・配置＝資格表記（社会保険労務士試験合格）の直下（浦松指示 2026-08-07）。
                 相談導線より前に外部サイトへの出口を置かない。先方PPTは位置・大きさを指定していない。
               ・rel は noopener のみ。nofollow を付けない（相互リンクの趣旨を損なうため）。
                 noreferrer も付けない（先方側で当サイトからの流入を計測できるようにするため）。 */}
-          {businessKey === "legal" && locale === "ja" && (
+          {isISozokuBadgeVisible && (
             <div className="mt-6">
               <a
                 href="https://www.i-sozoku.com/detail/oid1000790/"
