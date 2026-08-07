@@ -27,6 +27,11 @@ type InheritanceCopy = {
   souzokuGuideLabel: string;
   /** 相続前の書類準備コラム（四葉不動産）への任意リンク。日本語のみ設定 */
   jizenJunbiColumnLabel?: string;
+  /** 定点#7（外国人 相続 中国語対応 相談できる 行政書士 東京）への直答。全ロケール必須 */
+  gaikokujinHeading: string;
+  gaikokujinBody: React.ReactNode;
+  gaikokujinNote: string;
+  chineseGuideLabel: string;
   independenceNote: string;
   registrationNote: string;
   feesFlowHeading: string;
@@ -63,6 +68,15 @@ const COPY: Record<LangCode, InheritanceCopy> = {
       </>
     ),
     souzokuGuideLabel: "文京区で不動産を相続したら——管理・活用・売却の完全ガイド（四葉不動産）",
+    gaikokujinHeading: "外国人の相続を中国語で相談できますか？",
+    gaikokujinBody: (
+      <>
+        できます。四葉行政書士事務所の代表・浦松丈二は<strong>元毎日新聞中国総局長</strong>で、中国語（繁体字・簡体字）と英語で直接お話しできます。被相続人または相続人が外国籍・海外在住の場合について、<strong>遺産分割協議書の作成</strong>、台湾の戸籍・除戸謄本や中国の公証書といった<strong>本国の身分関係書類の確認と日本語訳の手配</strong>、<strong>相続関係説明図の作成</strong>を行政書士業務として担います。相続した不動産の管理・活用・売却は<strong>四葉不動産株式会社</strong>（宅地建物取引業）が扱い、書類（行政書士）と不動産（宅建業）は<strong>それぞれ別契約で受任します</strong>。
+      </>
+    ),
+    gaikokujinNote:
+      "※どの国の法律が適用されるか（準拠法）や、相続分・遺留分の具体的な判断は個別の事情によって異なります。判断が必要な場面では、連携する弁護士・司法書士・税理士におつなぎします。在留資格に関する手続きは別のサービスとしてご案内します。",
+    chineseGuideLabel: "中国語で相談できる不動産相続——中国・台湾の書類から売却まで（四葉不動産）",
     jizenJunbiColumnLabel:
       "相続が起きる前に——帰省中に集めておく書類（売買契約書・建築確認済証）｜四葉不動産のコラム",
     independenceNote:
@@ -108,6 +122,16 @@ const COPY: Record<LangCode, InheritanceCopy> = {
     ),
     souzokuGuideLabel:
       "Inherited real estate in Bunkyo: the complete guide to managing, using, and selling (Yotsuba Real Estate)",
+    gaikokujinHeading: "Can you handle an inheritance involving non-Japanese nationals, in Chinese?",
+    gaikokujinBody: (
+      <>
+        Yes. Uramatsu Joji, the representative of 四葉行政書士事務所 (Yotsuba Gyoseishoshi Office), is a <strong>former China Bureau Chief of the Mainichi Shimbun</strong> and speaks with you directly in Chinese (traditional and simplified) and English. Where the deceased or an heir is a non-Japanese national or lives outside Japan, our gyoseishoshi work covers <strong>preparing the estate-division agreement</strong>, <strong>reviewing identity and family documents issued abroad</strong>—such as Taiwanese family registers and removed-register transcripts, or Chinese notarial certificates—and arranging their Japanese translation, and <strong>preparing the diagram of heirs</strong>. Managing, using, or selling the inherited property is handled by <strong>四葉不動産株式会社 (Yotsuba Real Estate Co., Ltd.)</strong>, a licensed brokerage, and <strong>the paperwork and the property are each engaged under a separate contract</strong>.
+      </>
+    ),
+    gaikokujinNote:
+      "Note: which country's law applies (the governing law), and the specific determination of shares and statutory reserved portions, depend on the individual circumstances. Where such a determination is required, we connect you with our partner attorneys, judicial scriveners, and licensed tax accountants. Residency-status procedures are offered as a separate service.",
+    chineseGuideLabel:
+      "Inherited real estate with Chinese-language support: from documents in China and Taiwan through to sale (Yotsuba Real Estate)",
     independenceNote:
       "Note: 四葉不動産株式会社 and 四葉行政書士事務所 are separate businesses, and each accepts engagements independently (no referral fees are exchanged).",
     registrationNote:
@@ -148,6 +172,15 @@ const COPY: Record<LangCode, InheritanceCopy> = {
       </>
     ),
     souzokuGuideLabel: "在文京區繼承了不動產之後——管理・活用・出售完全指南（四葉不動產）",
+    gaikokujinHeading: "外國人的繼承可以用中文諮詢嗎？",
+    gaikokujinBody: (
+      <>
+        可以。四葉行政書士事務所的代表浦松丈二曾任<strong>每日新聞中國總局長</strong>，可以用中文（繁體・簡體）與英文直接溝通。當被繼承人或繼承人為外國籍、或居住在日本以外時，行政書士業務的範圍包括：<strong>遺產分割協議書的製作</strong>、<strong>本國身分關係文件的確認與日文翻譯的安排</strong>（例如台灣的戶籍・除戶謄本、中國的公證書），以及<strong>繼承關係說明圖的製作</strong>。繼承不動產的管理・活用・出售由<strong>四葉不動産株式会社</strong>（宅地建物取引業）負責，<strong>文件（行政書士）與不動產（宅建業）各自另行簽訂契約承辦</strong>。
+      </>
+    ),
+    gaikokujinNote:
+      "※適用哪一國的法律（準據法），以及應繼分・特留分的具體判斷，會因個別情況而不同。需要判斷時，將為您轉介合作的律師・司法書士・稅理士。在留資格相關手續為另一項服務。",
+    chineseGuideLabel: "可以用中文諮詢的不動產繼承——從中國・台灣的文件到出售（四葉不動產）",
     independenceNote:
       "※四葉不動産株式会社與四葉行政書士事務所為各自獨立的事業體，分別獨立受理委託（不收受介紹費等）。",
     registrationNote:
@@ -188,6 +221,15 @@ const COPY: Record<LangCode, InheritanceCopy> = {
       </>
     ),
     souzokuGuideLabel: "在文京区继承了不动产之后——管理・活用・出售完全指南（四葉不動産）",
+    gaikokujinHeading: "外国人的继承可以用中文咨询吗？",
+    gaikokujinBody: (
+      <>
+        可以。四葉行政書士事務所的代表浦松丈二曾任<strong>每日新闻中国总局长</strong>，可以用中文（繁体・简体）与英文直接沟通。当被继承人或继承人为外国籍、或居住在日本以外时，行政书士业务的范围包括：<strong>遗产分割协议书的制作</strong>、<strong>本国身份关系文件的确认与日文翻译的安排</strong>（例如台湾的户籍・除户誊本、中国的公证书），以及<strong>继承关系说明图的制作</strong>。继承不动产的管理・活用・出售由<strong>四葉不動産株式会社</strong>（宅地建物取引業）负责，<strong>文件（行政书士）与不动产（宅建业）各自另行签订合同承办</strong>。
+      </>
+    ),
+    gaikokujinNote:
+      "※适用哪一国的法律（准据法），以及应继份・特留份的具体判断，会因个别情况而不同。需要判断时，将为您对接合作的律师・司法书士・税理士。在留资格相关手续为另一项服务。",
+    chineseGuideLabel: "可以用中文咨询的不动产继承——从中国・台湾的文件到出售（四葉不動産）",
     independenceNote:
       "※四葉不動産株式会社与四葉行政書士事務所为各自独立的事业体，分别独立受理委托（不收受介绍费等）。",
     registrationNote:
@@ -262,6 +304,15 @@ export default async function Page() {
         )}
         <p className="mt-1 text-xs text-text-muted">{c.independenceNote}</p>
         <p className="mt-3 text-sm leading-relaxed text-text-muted">{c.registrationNote}</p>
+      </div>
+
+      <div>
+        <H2>{c.gaikokujinHeading}</H2>
+        <p className="mt-3 leading-relaxed text-text">{c.gaikokujinBody}</p>
+        <p className="mt-2 text-sm">
+          → <Link href={addLocalePrefix("/souzoku/chinese", locale)} className="text-primary underline">{c.chineseGuideLabel}</Link>
+        </p>
+        <p className="mt-2 text-xs text-text-muted">{c.gaikokujinNote}</p>
       </div>
 
       <div>
