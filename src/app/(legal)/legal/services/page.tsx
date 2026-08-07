@@ -28,6 +28,8 @@ const SERVICES = [
   { name: "在留資格・ビザ申請", who: "在留資格の取得・変更・更新をしたい外国人・受入企業", href: "/legal/services/visa" },
   // 2026-07-25追加＝企業向け（B2B）。上の visa は本人視点で読者が異なる
   { name: "外国人社員の受け入れ", who: "海外から社員を迎える企業（手続きの期限管理・帯同家族・書類の認証）", href: "/legal/services/gaikokujin-shain" },
+  // 2026-08-06追加＝監理支援機関の側（B2B）。上の2つは受入企業・本人の視点で読者が異なる
+  { name: "育成就労の外部監査人", who: "監理支援機関の許可を検討する事業者（2027年4月施行に向けた外部監査の体制）", href: "/legal/services/ikuseishuro-gaibu-kansa" },
   { name: "相続・遺言・信託", who: "遺産分割協議書・遺言書を整えたい方", href: "/legal/services/inheritance" },
   // 2026-07-25追加＝家族向け（B2C）。上の shogai-fukushi は事業者向けで読者が異なる
   { name: "親なき後の備え", who: "障害のあるお子さんの暮らしと実家に備えたいご家族", href: "/legal/services/oyanakiato" },
