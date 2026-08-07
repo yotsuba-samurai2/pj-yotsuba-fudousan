@@ -45,6 +45,7 @@ const COPY: Record<LangCode, LegalTopCopy> = {
       { href: "/legal/services/visa", label: "在留資格・ビザ申請", sub: "中国語・英語で相談できる申請取次" },
       { href: "/legal/services/gaikokujin-shain", label: "外国人社員の受け入れ", sub: "企業の人事・総務へ。認定証明書から入国後の届出まで" },
       { href: "/legal/services/inheritance", label: "相続・遺言・信託", sub: "遺産分割協議書・遺言書の作成" },
+      { href: "/legal/services/oyanakiato", label: "親なき後の備え", sub: "障害のあるお子さんの暮らしと実家に備えるご家族へ" },
       { href: "/legal/services/company", label: "会社設立・各種許認可", sub: "外国人の起業・経営管理ビザにも対応" },
       { href: "/legal/services/subsidy", label: "補助金申請サポート", sub: "元記者が書く「伝わる事業計画書」" },
     ],
