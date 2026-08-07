@@ -263,6 +263,38 @@ export default async function LegalPage() {
           </ul>
         </section>
 
+        {/* いい相続（株式会社鎌倉新書・東証プライム 6184）との相互リンク
+            ── 2026-08-07 いい相続運営事務局／山﨑氏より設置手順PPTを受領し、浦松承認のうえ設置。
+            ・バナーは先方指定の4パターンから④「いい相続提携士業」（オレンジ）を選択。
+              2026-07-29にクラウドサインで顧客紹介申込書・規約の締結が完了しており「提携」表記が事実に合致する。
+            ・リンク先＝いい相続内の当事務所ページ。lib/seo.ts の LEGAL_SAME_AS と同一URL（値の意味を揃える）。
+            ・画像は先方ホストのバッジを先方指定のまま参照する（先方が更新した場合に追随させるため／
+              先方の設置確認も同URLで行われる）。ローカルへ複製しない。
+            ・ja固定＝先方指定のアンカーテキストが日本語のため（浦松判断 2026-08-07）。
+            ・rel は noopener のみ。nofollow を付けない（相互リンクの趣旨を損なうため）。
+              noreferrer も付けない（先方側で当サイトからの流入を計測できるようにするため）。
+            ・掲載主体は「四葉行政書士事務所」であり、宅建業側のトップ（/）には置かない（業法分離）。 */}
+        {locale === "ja" && (
+          <section className="mt-10 rounded-2xl border border-border bg-surface p-4">
+            <a
+              href="https://www.i-sozoku.com/detail/oid1000790/"
+              target="_blank"
+              rel="noopener"
+              className="inline-flex flex-col items-center gap-2 text-sm text-primary"
+            >
+              <img
+                src="https://www.i-sozoku.com/wp-content/themes/i-sozoku/images/badge/teikei-orange.png"
+                alt="当事務所は「いい相続」に掲載されています"
+                width={150}
+                height={150}
+                loading="lazy"
+                decoding="async"
+              />
+              <span className="underline">当事務所は「いい相続」に掲載されています</span>
+            </a>
+          </section>
+        )}
+
         {/* 導線 */}
         <nav aria-label="site links" className="mt-10 flex flex-wrap gap-x-4 gap-y-1 text-sm text-primary">
           {c.nav.map((n) => (
