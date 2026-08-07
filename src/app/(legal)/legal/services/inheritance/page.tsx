@@ -73,6 +73,7 @@ const COPY: Record<LangCode, InheritanceCopy> = {
     ryokinLinkLabel: "相続関連書類作成の報酬額（報酬額表）",
     nagareLinkLabel: "ご相談から完了までの受任の流れ",
     internalLinks: [
+      { href: "/legal/services/oyanakiato", label: "親なき後の備え｜障害のある子と実家をどうするか" },
       { href: "/legal/ryokin", label: "報酬額表" },
       { href: "/legal/nagare", label: "受任の流れ" },
       { href: "/legal/faq", label: "よくある質問" },
