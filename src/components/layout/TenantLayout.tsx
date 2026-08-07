@@ -906,6 +906,41 @@ function TenantFooter({ businessKey }: { businessKey: string }) {
               <p>{t("representative.srExamNote")}</p>
             )}
           </div>
+
+          {/* いい相続（株式会社鎌倉新書・東証プライム 6184）との相互リンク
+              ── 2026-08-07 いい相続運営事務局／山﨑氏の設置手順PPTに基づき設置（浦松指示）。
+              ・バナー＝先方指定4パターンのうち①「いい相続掲載士業」（白）。
+                「掲載」は掲載の事実のみを述べる控えめな表記（浦松選択 2026-08-07）。
+              ・リンク先＝いい相続内の当事務所ページ。lib/seo.ts の LEGAL_SAME_AS と同一URL。
+              ・画像は先方ホストのバッジを先方指定のまま参照する（先方が更新した場合に追随させるため／
+                先方の設置確認も同URLで行われる）。ローカルへ複製しない。
+              ・表示条件＝businessKey === "legal" かつ ja。
+                掲載主体は「四葉行政書士事務所」であるため、宅建業（realestate）・社労士（labor）の
+                フッターには出さない（業法分離）。アンカーテキストが日本語固定のため ja 限定。
+              ・配置＝資格表記（社会保険労務士試験合格）の直下（浦松指示 2026-08-07）。
+                相談導線より前に外部サイトへの出口を置かない。先方PPTは位置・大きさを指定していない。
+              ・rel は noopener のみ。nofollow を付けない（相互リンクの趣旨を損なうため）。
+                noreferrer も付けない（先方側で当サイトからの流入を計測できるようにするため）。 */}
+          {businessKey === "legal" && locale === "ja" && (
+            <div className="mt-6">
+              <a
+                href="https://www.i-sozoku.com/detail/oid1000790/"
+                target="_blank"
+                rel="noopener"
+                className="inline-flex flex-col items-center gap-2 text-[11px] text-text-muted"
+              >
+                <img
+                  src="https://www.i-sozoku.com/wp-content/themes/i-sozoku/images/badge/keisai-white.png"
+                  alt="当事務所は「いい相続」に掲載されています"
+                  width={110}
+                  height={110}
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span className="underline">当事務所は「いい相続」に掲載されています</span>
+              </a>
+            </div>
+          )}
         </div>
       </div>
 
