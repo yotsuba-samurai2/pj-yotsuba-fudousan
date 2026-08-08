@@ -1,5 +1,7 @@
 // /leaving-japan（緊急帰国・不動産スピード換金 特集）＝離日売却クラスタの主力ページ
-// 2026-08-09新設・ja＋zh の2ロケール（en/zh-tw は ja へフォールバック・sitemap も ["ja","zh"] のみ広告）。
+// 2026-08-09新設・ja＋zh。同日 en を追加（zh-tw は ja へフォールバック・sitemap は ["ja","en","zh"] を広告）。
+// en の資格・制度の訳語は 2026-07-27 承認済みパッチ（Tax Representative／Judicial Scrivener／
+// tax accountant (Zeirishi)）と CannotHandle en 確定文言に統一。
 // 方式＝RealestateServicePage＋pickPageLocale（手本=/funin）。原稿＝原稿_leaving-japan_ja_v1.md／zh_v1.md（2026-08-09浦松確定稿）。
 //
 // 【役割分担（luck428-column-seo 第8条追記予定・カニバリ防止）】主語で分ける。
@@ -41,8 +43,9 @@ import type { LangCode } from "@/config/languages";
 const PUBLISHED_ISO = "2026-08-09";
 const LAST_UPDATED_ISO = "2026-08-09";
 
-type PageLocale = "ja" | "zh";
-const pickPageLocale = (locale: LangCode): PageLocale => (locale === "zh" ? "zh" : "ja");
+type PageLocale = "ja" | "zh" | "en";
+const pickPageLocale = (locale: LangCode): PageLocale =>
+  locale === "zh" ? "zh" : locale === "en" ? "en" : "ja";
 
 /** 詐欺の型（第1部）。特定の事件ではなく、実際に相談される典型的トラブルの再構成（本文・根拠欄に明記） */
 type FraudCase = { h3: string; story: string; problemLabel: string; problem: string; defenseLabel: string; defense: string };
@@ -124,6 +127,11 @@ type Copy = {
   lead: React.ReactNode;
   links: { href: string; label: string; noLocalePrefix?: boolean }[];
   crossLead: string;
+  /** ロケール別の署名・関連リンク見出しの上書き（省略時＝シェル既定の日本語） */
+  authorLabel?: string;
+  authorBio?: string;
+  relatedAria?: string;
+  relatedHeading?: string;
 };
 
 const JA: Copy = {
@@ -697,9 +705,310 @@ const ZH: Copy = {
     { href: "/zh/contact", label: "联系我们", noLocalePrefix: true },
   ],
   crossLead: "随撤出日本业务发生的行政许可注销、各类申报文件的制作，由关联机构四叶行政书士事务所另行签约受理。",
+  authorLabel: "本文作者",
+  authorBio:
+    "浦松丈二｜四叶不动产株式会社 代表取缔役·专任宅地建物取引士、行政书士。原日本《每日新闻》中国总局长（记者生涯34年，曾驻中国、台湾、泰国）。社会保险劳务士考试合格（2026年9月开业预定）。",
+  relatedAria: "相关链接",
+  relatedHeading: "本页相关链接",
 };
 
-const COPY: Record<PageLocale, Copy> = { ja: JA, zh: ZH };
+const EN: Copy = {
+  answerBlock:
+    "Send us your property's address and a photo of your residence card. That is all you need to do today. We check the title registry the same day and send the property simultaneously to 5–10 professional buyers. Offers come back within days, and we aim to close with the highest bidder in as little as two weeks. The full price is paid by bank transfer into an account in your own name. Both condominiums and houses qualify. The following year's tax filing and payment are completed by our company as your Tax Representative (tax calculation and return preparation by a licensed tax accountant under a separate direct contract) — and with that, everything is finished. We can accept properties in Greater Tokyo with a liquid market, at least two weeks before departure, with no outstanding mortgage. The representative works with you directly in English, Japanese, and Chinese.",
+  crumb: "Urgent departure: fast property sale",
+  serviceName: "Fast pre-departure property sale (brokered competition among professional buyers)",
+  heroAlt: "Selling Japanese property before leaving the country",
+  h1: "Special Feature: Leaving Japan on Short Notice — Even With 30 Days Left, You Can Still Sell Your Property",
+  lastUpdatedLabel: "Last updated",
+  part1H2: "Part 1: How Does the Money From a Sale Disappear?",
+  part1Intro:
+    "Sellers who are short on time get targeted. The four cases below are not specific incidents; they are reconstructions of the typical disputes actually brought to consultations in this field, combined from multiple cases. All names are anonymized.",
+  cases: [
+    {
+      h3: "Case 1: “I'll sell it for you” — the power-of-attorney scheme",
+      story:
+        "Mr. A's visa was not renewed, and he had one month to leave Japan. An acquaintance from his home country told him: “You'll never make it in time. Leave me a power of attorney and the title deed, and I'll sell it at a good price for you.” Three months after he returned home, the property had been sold — at half the market price, to a company related to that acquaintance. Then came deduction after deduction: “fees,” “expenses,” “tax advances.” Mr. A's share shrank to one-tenth of the market value. And even that one-tenth never arrived.",
+      problemLabel: "What happened",
+      problem:
+        "As long as the power of attorney is genuine, overturning the sale itself is very difficult. Handing over a power of attorney and your title deed before leaving the country is the same as handing over a blank check drawn on the asset. Remember one benchmark: even a legitimate purchase by a licensed professional buyer prices at 70–80% of market value (see Part 3). “Half price” is not the price of a sale — it is the price of a plunder.",
+      defenseLabel: "How to prevent it",
+      defense:
+        "Complete the settlement while you are still in Japan. If you must delegate anything, limit the scope in writing — never sign a blanket power of attorney. Sale proceeds go only into an account in your own name.",
+    },
+    {
+      h3: "Case 2: “A license? You don't need one of those” — the unlicensed broker",
+      story:
+        "Mr. B, met through social media, was said to be “strong in real estate.” No office; no license number on his business card. On top of a 3% brokerage fee came a 5% “special speed fee.” The contract was a simple memo. After the handover a defect surfaced in the building's equipment — and by the time buyer and seller were caught in the middle, Mr. B's account had vanished.",
+      problemLabel: "What happened",
+      problem:
+        "In Japan, operating a real estate brokerage without a license is illegal (Real Estate Brokerage Act, Articles 3 and 12). Unlicensed operators answer to no regulator and sit outside every guarantee system.",
+      defenseLabel: "How to prevent it",
+      defense:
+        "Deal only with licensed companies. One sentence exposes the rest: “Please tell me your real estate brokerage license number (宅地建物取引業免許番号).” Licensed companies participate in the industry compensation fund (Article 64-8), from which customers can be compensated if something goes wrong.",
+    },
+    {
+      h3: "Case 3: “We'll wire the rest once you've settled in” — the deferred-payment scheme",
+      story:
+        "The contract was signed, the deposit received, and Mr. C left Japan as planned. “We'll send the balance as soon as the registration is done.” The registration was done. Contact was lost. The property was no longer in his name, and pursuing the money from abroad costs more than the balance itself.",
+      problemLabel: "What happened",
+      problem:
+        "Payment and registration were not simultaneous. Handing over the registration first and leaving payment for later means handing the other side the decision of whether to pay at all.",
+      defenseLabel: "How to prevent it",
+      defense:
+        "Simultaneous settlement. A Judicial Scrivener (司法書士 — Japan's registration specialist) confirms on the spot that the full amount has arrived, then files the ownership transfer the same day. Between the money and the registration there is no “later.”",
+    },
+    {
+      h3: "Case 4: “You can't back out now, can you?” — the last-minute price cut",
+      story:
+        "The agreed price was ¥38 million. On the day of the contract — three days before Ms. D's departure — the buyer said: “We found an issue with the building. We can sign today at ¥32 million.” The flight was booked. The boxes were shipped. She could not leave the property unsold. She signed.",
+      problemLabel: "What happened",
+      problem:
+        "There was only one buyer, and that buyer knew the seller had run out of time. At the final moment, the pricing power belonged entirely to the other side.",
+      defenseLabel: "How to prevent it",
+      defense:
+        "Make 5–10 companies bid at the same time — a buyer who cuts the price at the last minute can simply be replaced. Fix the terms in writing as soon as they are agreed. Never push the schedule to the edge (we work backwards from settlement five business days before departure).",
+    },
+  ],
+  commonH3: "What the four schemes have in common",
+  commonBody:
+    "All four exploit the same thing — your lack of time. And all four lack the same three things: a license, paper, and simultaneous settlement. That is why the defense list is short.",
+  defenseHead: ["Defense", "What it means in practice"],
+  defenseRows: [
+    { a: "Deal only with licensed companies", b: "Ask for the brokerage license number (verifiable in the government register)" },
+    { a: "Everything in writing", b: "Bids, contract, fees, every deduction — all of it on paper" },
+    { a: "Simultaneous settlement", b: "The Judicial Scrivener confirms receipt of funds, then files the transfer the same day. Never “registration first, payment later”" },
+    { a: "Proceeds only into your own account", b: "Bank transfer, in your own name, leaving a record. Cash handovers and transfers to relatives' or friends' accounts are refused regardless of amount" },
+    { a: "No blanket power of attorney", b: "Limit any delegation in writing; never hand your title deed and registered seal to a “helpful” third party" },
+  ],
+  part2H2: "Part 2: Why Is “I'll Just Sell After I Leave” Too Late?",
+  part2Intro:
+    "The you who is in Japan today and the you of the day after departure are selling the same property under two different sets of rules. Here is what actually awaits people who leave thinking they will “sell at leisure from abroad.”",
+  compareHead: ["", "Sell before departure (now)", "Sell after departure"],
+  compareRows: [
+    { a: "Tax withholding", b: "None (same as a normal sale)", c: "The buyer must withhold 10.21% of the price. Your proceeds shrink; recovering it means filing a return the following year" },
+    { a: "Seal certificate", b: "You still have resident registration, so it can be issued as usual", c: "No longer available. You need a signature certificate from a Japanese embassy or consulate (booking + travel, 2–4 weeks)" },
+    { a: "Tax contact point", b: "File the Tax Representative notification before departure and entrust next year's return", c: "A Tax Representative becomes mandatory for the whole sale; the 10.21% refund also runs through them" },
+    { a: "Viewings, keys, belongings", b: "30 minutes of your presence is enough", c: "No one in Japan to open the door" },
+    { a: "Buyers' reaction", b: "A normal transaction", c: "Buyers who dislike the withholding paperwork simply pass — fewer buyers, weaker prices" },
+    { a: "Time required", b: "As little as 2–3 weeks", c: "Documents crossing borders: months" },
+    { a: "Resistance to fraud", b: "You choose the licensed company and the simultaneous settlement yourself, in person", c: "From afar you must depend on someone who will “handle it for you” — exactly where the four schemes in Part 1 wait" },
+  ],
+  part2Close1:
+    "In other words, your departure date is not just a moving day — it is the day the difficulty and the net proceeds of your sale switch over. The four schemes in Part 1 target precisely the people scrambling on either side of that line. Starting today, before the switch, is the way to sell at the best price, fastest and safest. That is why we plan backwards from settlement five business days before departure.",
+  part2Close2: null,
+  part3H2: "Part 3: How Do You Sell Everything in 30 Days?",
+  scheduleH3: "Standard schedule to departure (guide)",
+  scheduleHead: ["Day", "What happens", "What you do"],
+  scheduleRows: [
+    { a: "Today", b: "We check the registry and send the property to 5–10 professional buyers the same day", c: "Send the property address and a photo of your residence card. That's all" },
+    { a: "Days 2–4", b: "Offers come in (multiple bids = the market's answer). One viewing", c: "Attend the viewing (about 30 minutes) or entrust the keys" },
+    { a: "Days 5–7", b: "Terms fixed with the highest bidder, document checks, sale contract (electronic signing available)", c: "Prepare the title deed, residence record, and seal registration certificate" },
+    { a: "Days 14–21", b: "Settlement, with the ownership transfer filed the same day. Full price wired to an account in your own name", c: "Attend the settlement (or online)" },
+    { a: "After settlement, before departure", b: "Tax Representative notification → moving-out notification → departure, in that order. Our company can serve as your Tax Representative (tax calculation and return preparation by a tax accountant under direct contract)", c: "Deposit the estimated tax amount with us, or leave it in your Japanese account" },
+    { a: "5 business days before departure", b: "Our target: settlement completed by this point", c: "—" },
+    { a: "Feb–Mar next year", b: "The Tax Representative (our company) files and pays, and sends you the settlement statement — everything is finished", c: "Nothing" },
+  ],
+  scheduleNote:
+    "There is no time to start with a leisurely appraisal report. The bids from competing buyers are themselves the most honest appraisal. As soon as the offers are in, we report the highest bid and its terms — you decide whether to sell by looking at the numbers. Days are indicative and shift with title issues and fee settlements.",
+  checklistH3: "The 30-day task list",
+  checklistIntro: "Print it and cross items off. We handle most of it. Your list has just eight items.",
+  youHead: "What you do",
+  youTableHead: ["By when", "Task", "Notes"],
+  youRows: [
+    { a: "Today", b: "Send us the property address and a photo of your residence card", c: "This is what sets us in motion" },
+    { a: "Day 2", b: "Find your title deed (registration identification information)", c: "You can still sell without it (the Judicial Scrivener runs an identity-verification procedure — it takes time, so tell us early)" },
+    { a: "Day 2", b: "Check whether your seal is registered; if not, register it at the ward office", c: "Same-day with your residence card. A seal registration certificate is mandatory for the transfer registration" },
+    { a: "Day 3", b: "Find the purchase contract and receipts from when you bought", c: "The basis for the tax calculation. Without them, tax can rise sharply (deemed acquisition cost)" },
+    { a: "Day 7", b: "Obtain your residence record and seal registration certificate (2 copies each)", c: "Before you file the moving-out notification" },
+    { a: "Viewing day", b: "Attend (30 minutes) or entrust the keys", c: "All keys: room, building entrance, mailbox, parcel-locker code" },
+    { a: "Contract day", b: "Sign the sale contract (electronic OK); fill in the property condition disclosure honestly", c: "Leaks, water damage, malfunctions — write what you know" },
+    { a: "Settlement day", b: "Attend and confirm the funds have arrived. Then: Tax Representative notification → moving-out notification → departure", c: "Deposit the tax funds with us or leave them in your Japanese account" },
+  ],
+  usHead: "What we do (this is the brokerage work)",
+  usTableHead: ["When", "Task"],
+  usRows: [
+    { a: "Today", b: "Obtain the certified registry record; check for mortgages, co-ownership, and address discrepancies" },
+    { a: "Today", b: "(Condos) Order the management disclosure report from the building manager (it takes 1–2 weeks to issue — so we order on day one)" },
+    { a: "Today", b: "Simultaneous inquiry to 5–10 professional buyers" },
+    { a: "Days 2–3", b: "Obtain the tax certificate (fixed asset and city planning tax) by proxy and compute the pro-rata settlement" },
+    { a: "Days 2–3", b: "(Condos) Collect the building rules, usage rules, long-term repair plan, and repair history from the manager" },
+    { a: "Days 2–3", b: "(Houses) Check survey maps, boundaries, private roads, and encroachments. Even with unfixed boundaries a professional buyer purchases as-is (a sale to an individual often requires a boundary survey that takes months)" },
+    { a: "Day 4", b: "Tally the bids; report the highest bid and terms. (Condos) Check for unpaid management fees and repair reserves (arrears are cleared at settlement)" },
+    { a: "Before contract", b: "Draft the sale contract and the statutory disclosure. If tenanted, organize the owner-change transfer (lease, deposit succession, tenant notice)" },
+    { a: "Before settlement", b: "Fix the treatment of belongings (sale with contents is standard; disposal costs itemized in writing). Organize cut-off dates for utilities, internet, and fire insurance (you do the procedures; we guide you)" },
+    { a: "Settlement day", b: "Simultaneous settlement with the Judicial Scrivener; transfer filed the same day. Pro-rata settlement of taxes and fees. Delivery of the fund-source documentation pack" },
+  ],
+  proHead: "What the professionals do (each under a separate direct contract)",
+  proTableHead: ["Who", "Task"],
+  proRows: [
+    { a: "Judicial Scrivener (司法書士)", b: "Identity verification; (if the registered address is outdated) address-change registration first; same-day filing of the ownership transfer; identity-verification documents if the title deed is lost" },
+    { a: "Tax accountant (税理士)", b: "Capital-gains estimate; preparation of the Tax Representative notification and next year's tax return" },
+  ],
+  chokepoints:
+    "Three things cause the most delays: waiting for the management disclosure report (so we order it on day one), a registry address still showing your old residence (an address-change registration must come first), and a missing purchase contract (it directly affects your tax). We check all three on day one.",
+  bidH2: "How Do You Find the Buyer Who Pays the Most?",
+  bidIntro1: "There is one method: send the file to 5–10 professional buyers on the same day, and make them compete.",
+  bidIntro2:
+    "First, something we should say honestly. Professional buyers normally ask for around three months to settle. “Within 30 days, in cash” is a demand that strains them — so the bids come in lower. That discount cannot be avoided, no matter whom you ask.",
+  bidIntro3:
+    "What can be avoided is the size of the discount. Ask one company only, and it knows you are a seller who must exit in 30 days — it can bid with no competitor in sight. That is a take-it-or-leave-it price. Ask 5–10 companies on the same day, and each must bid knowing another will take the deal otherwise. The same 30-day condition — very different prices, depending on how many you ask.",
+  bidStepHead: ["Step", "What happens"],
+  bidSteps: [
+    { a: "1", b: "We send simultaneous inquiries to 5–10 professional buyers (we prepare the property file)" },
+    { a: "2", b: "Offers come in. We report the highest bid and its terms" },
+    { a: "3", b: "If you decide to sell, you sign a brokerage agreement with us and proceed to contract with the highest bidder" },
+    { a: "4", b: "Simultaneous settlement attended by a Judicial Scrivener. Full amount into an account in your own name" },
+  ],
+  bidClose:
+    "Because this is a professional buy-up, the price is below market (roughly 70–80%), but competition keeps the “30 days, cash” discount to a minimum. The final decision to sell or not belongs to you, looking at the bids.",
+  docsH2: "What Documents Do I Need?",
+  docsIntro:
+    "At the start, only two things: the property address and a photo of your residence card. We obtain the registry records. The rest is prepared step by step between contract and settlement.",
+  docsHead: ["Document", "Notes"],
+  docsRows: [
+    { a: "Residence card / passport", b: "Identity verification (the Judicial Scrivener verifies in person)" },
+    { a: "Title deed (registration identification information)", b: "If lost, an alternative procedure exists (tell us early)" },
+    { a: "Residence record / seal registration certificate", b: "Obtain them before deregistering your residence — it keeps things fast" },
+    { a: "(Condos) Management fee / repair reserve statements", b: "Arrears pass to the buyer, so they are cleared at settlement" },
+  ],
+  payH2: "How Do I Receive the Money?",
+  payBody1:
+    "The full amount, by bank transfer, into an account in your own name. We accept no other method. Cash handovers and transfers into relatives' or friends' accounts are declined regardless of amount (we run checks under the Act on Prevention of Transfer of Criminal Proceeds). The deferred-payment and power-of-attorney schemes in Part 1 are fully blocked by this one rule.",
+  payBody2:
+    "Moving the funds overseas is your own banking procedure. At settlement we hand you a fund-source documentation pack (Japanese–Chinese bilingual): the sale contract, registration completion certificate, statutory disclosure, appraisal materials, and tax documents bound in one volume. Whether at a Japanese bank's foreign-remittance desk or at the bank in your destination country, these are the documents they ask for. For the receiving country's currency rules, please check with your bank there.",
+  stuffH2: "Do I Have to Dispose of My Furniture?",
+  stuffBody:
+    "No — leave it as it is. Sales to professional buyers are standard on an as-is, contents-included basis. Disposal costs appear as an itemized deduction in writing. The limited time before departure should not be spent throwing away furniture.",
+  cannotH2: "Are There Cases You Cannot Accept?",
+  cannotIntro:
+    "Yes. We do not claim to handle everything. We accept only cases that can run the full 30-day course without skipping a single safety check. Conversely, be careful with anyone who says “no problem, leave it all to me” under any conditions — the troubles in Part 1 usually begin with that one sentence.",
+  cannotHead: ["What we cannot accept", "Why", "The alternative"],
+  cannotRows: [
+    { a: "Properties whose owner has already left Japan", b: "Identity checks and paperwork cross borders; the 30-day method cannot hold", c: "The Overseas Owner's Guide (a standard sale with withholding and a Tax Representative)" },
+    { a: "Less than two weeks before departure", b: "Inquiry to settlement takes two weeks at minimum; there is no time left to make it without skipping safety checks", c: "A standard sale after departure, or renting the property out" },
+    { a: "Outside Greater Tokyo, or areas with unstable prices even within it", b: "Too few professional buyers bid, so no competition forms — it becomes one company's asking price", c: "A standard sale through a local agent" },
+    { a: "Co-owned properties, unregistered inheritances, and other complex titles", b: "Obtaining co-owners' consent and fixing the registry takes more than 30 days", c: "Sort the title first, then sell without haste (consultations welcome)" },
+    { a: "Properties with an outstanding mortgage", b: "Loan payoff and mortgage cancellation need the bank's internal processing (usually 2 weeks–1 month), incompatible with a 30-day settlement", c: "A standard sale with more time" },
+  ],
+  cannotClose: "We state in advance what we will not take, for one reason: to keep the promise that we can sell in 30 days.",
+  whoH2: "Who Handles This?",
+  whoBody1: (
+    <>
+      Yotsuba Real Estate Co., Ltd. (licensed real estate broker, Tokyo Governor (1) No. 113304; Kohinata, Bunkyo-ku — five minutes&apos; walk from Myogadani Station) brokers the whole course from the buyer competition through contract and settlement. Representative Joji Uramatsu is a former China General Bureau Chief of the Mainichi Newspapers (34 years as a journalist; postings in China, Taiwan, and Thailand), a licensed real estate transaction specialist and Administrative Scrivener.{" "}
+      <strong>No outside interpreters — the representative works with you directly in English, Japanese, and Chinese (simplified and traditional).</strong>
+    </>
+  ),
+  whoBody2: (
+    <>
+      Tax work (tax calculation; preparation of the return and the Tax Representative notification) is contracted directly with a tax accountant, and registration directly with a Judicial Scrivener. We receive no referral fees.{" "}
+      <strong>On request, our company serves as your Tax Representative</strong> — calculation and document preparation belong to the tax accountant; receiving tax-office mail and handling payment belong to the Tax Representative (the law sets no qualification requirement, and a corporation may serve).
+    </>
+  ),
+  feeH3: "Fees",
+  feeHead: ["Item", "Fee"],
+  feeRows: [
+    { a: "Consultation, buyer inquiries, bid reporting", b: "Free" },
+    { a: "Brokerage fee when a sale completes", b: "Within the statutory cap (sale price × 3% + ¥60,000 + consumption tax)" },
+  ],
+  faqH2: "FAQ",
+  faqs: [
+    {
+      q: "Why is the price below market?",
+      a: "Professional buyers normally settle in about three months; “cash within 30 days” is priced as the cost of that strain. Our job is to compress that discount through competition among 5–10 buyers. The outcome differs greatly from selling at one company's asking price.",
+    },
+    {
+      q: "Can I sell a tenanted property?",
+      a: "Yes. It is bid out to professional buyers as an owner-change (tenanted) sale; the deposit passes to the buyer.",
+    },
+    {
+      q: "Can I sell with a mortgage outstanding?",
+      a: "Not under this fast-sale service. Payoff and mortgage cancellation need the bank's internal processing (usually 2 weeks–1 month), which is incompatible with a 30-day settlement. With more time, a standard sale is available — please ask.",
+    },
+    {
+      q: "Can I request this from abroad after leaving?",
+      a: (
+        <>
+          This service is only for owners still in Japan. After departure it becomes a standard cross-border sale with 10.21% withholding, signature certificates, and a Tax Representative (see{" "}
+          <Link href="/en/column/overseas-owners-guide-japan-real-estate-sale" className="text-primary underline">
+            The Overseas Owner&apos;s Guide to Selling Japanese Real Estate
+          </Link>
+          ). Which is exactly why — talk to us <strong>before you leave</strong>.
+        </>
+      ),
+    },
+    {
+      q: "Can you handle a property owned by my company?",
+      a: "Yes. Sales of corporate-owned property in a withdrawal from Japan can be handled alongside liquidation and license-cancellation paperwork (documents prepared by Yotsuba Administrative Scrivener Office under a separate contract).",
+    },
+    {
+      q: "Is it all right to file and pay tax after I leave?",
+      a: "Yes. If you are a Japan resident on the settlement date there is no withholding (the 10.21%), and the capital-gains filing and payment fall on February 16–March 15 of the following year. File a Tax Representative notification before departure, and the Tax Representative becomes the contact point for everything afterwards (Act on General Rules for National Taxes, Article 117). On request our company serves as your Tax Representative: the tax accountant (direct contract) calculates and prepares, while we receive documents and handle payment. The estimated tax is deposited with us at settlement, kept in segregated custody, and refunded with a statement after payment. If you leave without filing the notification, you must complete your filing before departure (Income Tax Act, Articles 126 and 127). The order: Tax Representative notification → moving-out notification → departure. Residence tax is levied on those with a Japanese address on January 1 of the following year (Local Tax Act, Articles 39 and 318).",
+    },
+    {
+      q: "What happens if I leave without paying tax?",
+      a: "“I'm not in Japan anymore” does not end it. Non-filing adds a penalty of 15–30% plus late-payment interest of roughly 2.4–8.7% per year (2025 rates, revised annually); concealment raises it to 35–40% (Act on General Rules for National Taxes, Articles 60, 66, and 68). The obligation does not vanish with departure (the collection period is five years, reset by demand), and bank accounts or property left in Japan can be seized. Japan is a party to the Convention on Mutual Administrative Assistance in Tax Matters, under which collection assistance can be requested from treaty partners, including China. And the heaviest cost is your future: when you next apply for a status of residence — especially a Business Manager visa or permanent residency — your tax record is examined. Arrears close the road to doing business in, or settling permanently in, Japan. Our method secures the tax funds at settlement, and the Tax Representative completes filing and payment the following year — so this worry never arises.",
+    },
+    {
+      q: "A friend has offered to sell it for me. Should I decline?",
+      a: "The safest course is to sell while you are in Japan, through a licensed company, at a simultaneous settlement attended by a Judicial Scrivener. If you must delegate to a third party, limit the power of attorney's scope in writing, and have the proceeds paid directly into an account in your own name. The one thing never to do is hand over a blanket power of attorney together with your title deed.",
+    },
+  ],
+  konkyoH2: "Sources for this article",
+  konkyoHead: ["Item", "Source"],
+  konkyoRows: [
+    { a: "Prohibition of unlicensed real estate brokerage", b: "Real Estate Brokerage Act (宅地建物取引業法), Articles 3 and 12" },
+    { a: "Industry compensation fund (弁済業務保証金)", b: "Real Estate Brokerage Act, Article 64-8" },
+    { a: "10.21% withholding on purchases from non-residents", b: "Income Tax Act, Article 161(1)(v) and Article 212(1); Special Reconstruction Income Tax Act, Article 28; NTA Tax Answer No. 2879" },
+    { a: "Exception (≤ ¥100 million, for the buyer's own residence)", b: "Income Tax Act Enforcement Order, Article 281-3" },
+    { a: "Tax Representative (no qualification requirement; corporations may serve)", b: "Act on General Rules for National Taxes, Article 117; NTA Tax Answer No. 1923" },
+    { a: "Filing when leaving Japan", b: "Income Tax Act, Articles 126 and 127" },
+    { a: "Residence tax assessment date (January 1 of the following year)", b: "Local Tax Act, Articles 39 and 318" },
+    { a: "Late-payment interest and penalties", b: "Act on General Rules for National Taxes, Articles 60, 66, and 68" },
+    { a: "International assistance in tax collection", b: "Convention on Mutual Administrative Assistance in Tax Matters (Japan, China, and others are parties)" },
+    { a: "Brokerage agreements and the fee cap", b: "Real Estate Brokerage Act, Articles 34-2 and 46; fee notification" },
+    { a: "Identity verification at transactions", b: "Act on Prevention of Transfer of Criminal Proceeds, Article 4" },
+    { a: "Unpaid management fees pass to the buyer", b: "Condominium Ownership Act, Article 8" },
+    { a: "Ex-post reporting of non-resident transactions (expanded from April 1, 2026)", b: "Ministerial ordinance under the Foreign Exchange and Foreign Trade Act (amended effective April 1, 2026)" },
+  ],
+  konkyoNote1:
+    "The cases in Part 1 are not specific incidents; they are reconstructions of typical disputes actually brought to consultations in this field, combined from multiple cases.",
+  konkyoNote2:
+    "This page is general information. Individual tax judgments are made by a tax accountant, and registrations by a Judicial Scrivener. Real estate brokerage is handled by Yotsuba Real Estate Co., Ltd., and preparation of license-related applications by Yotsuba Administrative Scrivener Office, each under a separate contract.",
+  lead: (
+    <>
+      <p>
+        <strong>One thing first: selling gets harder the moment you leave Japan.</strong> From the day you depart, 10.21% withholding, consular paperwork, and a mandatory Tax Representative pile cost and time onto the sale — and prices weaken. And one more thing — <strong>sellers with no time get targeted</strong>. This feature was written to protect both: your time, and your money.
+      </p>
+      <p className="mt-3">
+        This page is for <strong>owners about to leave Japan</strong> (returning home, transfers, business withdrawal). Already living abroad? See{" "}
+        <Link href="/en/column/overseas-owners-guide-japan-real-estate-sale" className="text-primary underline">
+          The Overseas Owner&apos;s Guide to Selling Japanese Real Estate
+        </Link>
+        . Keeping and renting the property out instead? See{" "}
+        <Link href="/kaigai-owner" className="text-primary underline">
+          Owning a Japanese home while living abroad (Japanese)
+        </Link>
+        .
+      </p>
+      <p className="mt-3 text-sm text-text-muted">Last updated: August 9, 2026</p>
+    </>
+  ),
+  links: [
+    { href: "/en/column/overseas-owners-guide-japan-real-estate-sale", label: "The Overseas Owner's Guide to Selling Japanese Real Estate", noLocalePrefix: true },
+    { href: "/kaigai-owner", label: "Owning a Japanese home while living abroad (Japanese)", noLocalePrefix: true },
+    { href: "/en/global", label: "Housing for foreign residents", noLocalePrefix: true },
+    { href: "/en/contact", label: "Contact", noLocalePrefix: true },
+  ],
+  crossLead:
+    "License cancellations and other filings that accompany a withdrawal from Japan are handled by the affiliated Yotsuba Administrative Scrivener Office under a separate contract.",
+  authorLabel: "About the author",
+  authorBio:
+    "Joji Uramatsu | Representative Director, Yotsuba Real Estate Co., Ltd.; licensed real estate transaction specialist and Administrative Scrivener (gyoseishoshi). Former China General Bureau Chief of the Mainichi Newspapers (34 years as a journalist; postings in China, Taiwan, and Thailand). Passed the Licensed Social Insurance and Labor Consultant examination (office opening September 2026).",
+  relatedAria: "Related links",
+  relatedHeading: "Related links on this page",
+};
+
+const COPY: Record<PageLocale, Copy> = { ja: JA, zh: ZH, en: EN };
 
 const TABLE_TH = "border border-border px-3 py-2";
 const TABLE_TD = "border border-border px-3 py-2";
@@ -733,6 +1042,25 @@ function SimpleTable({ head, rows }: { head: string[]; rows: (Row2 | Row3)[] }) 
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getRequestLocale();
+  if (pickPageLocale(locale) === "en") {
+    return buildPageMetadata({
+      businessKey: "realestate",
+      title: "Leaving Japan in 30 Days? Selling Your Property Fast | 四葉不動産 (Yotsuba Real Estate)",
+      description:
+        "A feature for foreign owners leaving Japan on short notice: the typical fraud patterns (blanket powers of attorney, unlicensed brokers, deferred payment, last-minute price cuts), why selling before departure matters, and the full 30-day process with checklists. Send the address and a photo of your residence card — we start the same day. English, Japanese, Chinese. Bunkyo-ku, Tokyo.",
+      path: "/leaving-japan",
+      keywords: [
+        "sell property before leaving japan",
+        "leaving japan sell apartment fast",
+        "japan real estate quick sale foreigner",
+        "sell condo japan 30 days",
+        "sell house before becoming non-resident japan",
+      ],
+      locale,
+      absoluteTitle: true,
+      availableLocales: ["ja", "en", "zh"],
+    });
+  }
   if (pickPageLocale(locale) === "zh") {
     return buildPageMetadata({
       businessKey: "realestate",
@@ -743,7 +1071,7 @@ export async function generateMetadata(): Promise<Metadata> {
       keywords: ["紧急回国 卖房 日本", "离开日本 房产 快速变现", "回国前 卖日本的房子", "日本 卖房 30天", "在日华人 卖房 骗局"],
       locale,
       absoluteTitle: true,
-      availableLocales: ["ja", "zh"],
+      availableLocales: ["ja", "en", "zh"],
     });
   }
   return buildPageMetadata({
@@ -761,7 +1089,7 @@ export async function generateMetadata(): Promise<Metadata> {
     ],
     locale,
     absoluteTitle: true,
-    availableLocales: ["ja", "zh"],
+    availableLocales: ["ja", "en", "zh"],
   });
 }
 
@@ -769,7 +1097,7 @@ export default async function Page() {
   const locale = await getRequestLocale();
   const l = pickPageLocale(locale);
   const c = COPY[l];
-  const home = l === "zh" ? "首页" : "ホーム";
+  const home = l === "zh" ? "首页" : l === "en" ? "Home" : "ホーム";
 
   return (
     <>
@@ -779,7 +1107,9 @@ export default async function Page() {
         description={
           l === "zh"
             ? "为必须在短期内离开日本的外国业主写的卖房专题：骗局类型、出境前后对比、30天流程与任务清单。"
-            : "帰国・出国が決まった外国人所有者のための売却特集。トラブルの型、出国前後の比較、30日の手順とチェックリスト。"
+            : l === "en"
+              ? "A feature for foreign owners leaving Japan on short notice: fraud patterns, before/after-departure comparison, and the 30-day process with checklists."
+              : "帰国・出国が決まった外国人所有者のための売却特集。トラブルの型、出国前後の比較、30日の手順とチェックリスト。"
         }
         path="/leaving-japan"
         datePublished={PUBLISHED_ISO}
@@ -802,6 +1132,10 @@ export default async function Page() {
           noLocalePrefix: true,
         }))}
         crossLinkLead={c.crossLead}
+        authorLabel={c.authorLabel}
+        authorBio={c.authorBio}
+        relatedAria={c.relatedAria}
+        relatedHeading={c.relatedHeading}
       >
         {/* ── 第1部　詐欺の4類型（再構成事例） ── */}
         <div>

@@ -9,8 +9,8 @@
 //   /kaigai-owner 導線文）を逐語で anchor に使う。ja は 2026-08-09 に本番ページの表示で
 //   文面の存在を確認済み。zh は未検証（不一致ならスキップされ、管理画面に現在値差異として出る）。
 //
-// 【対象ロケール】ja・zh のみ。/leaving-japan は ja＋zh の2ロケール公開のため、
-//   en・zh-tw のコラムからは（当該ロケール版ページを作るまで）リンクしない
+// 【対象ロケール】ja・zh・en（2026-08-09 en版ページ追加に伴い en パッチを追加）。
+//   zh-tw のコラムからは（当該ロケール版ページを作るまで）リンクしない
 //   ＝存在しないロケールでの読者導線を作らない（C-6-1 の趣旨）。
 import type { ColumnTextPatch } from "@/lib/data/kaigai-owner-column-patches";
 
@@ -36,10 +36,20 @@ export const LEAVING_JAPAN_COLUMN_PATCHES: ColumnTextPatch[] = [
     marker: "(/leaving-japan)",
     label: "zh 要約に /leaving-japan への導線を追加",
   },
+  {
+    path: "translations.en.content",
+    find: "This article compares methods of **selling**. If you are **keeping the property and renting it out instead**, see [Owning a Japanese home while living abroad](/kaigai-owner) for withholding tax and tax representatives.",
+    replace:
+      "This article compares methods of **selling**. If you are **keeping the property and renting it out instead**, see [Owning a Japanese home while living abroad](/kaigai-owner) for withholding tax and tax representatives.\n\nIf you are **about to leave Japan and short on time**, see [Special Feature: Leaving Japan on Short Notice — Even With 30 Days Left, You Can Still Sell](/leaving-japan).",
+    count: 1,
+    marker: "(/leaving-japan)",
+    label: "en 要約に /leaving-japan への導線を追加",
+  },
 ];
 
 /** 適用後スキャン用（含まれていなければ管理画面に「要確認」で出す） */
 export const LEAVING_JAPAN_EXPECT_TERMS: { locale: string; term: string }[] = [
   { locale: "ja", term: "/leaving-japan" },
   { locale: "zh", term: "/leaving-japan" },
+  { locale: "en", term: "/leaving-japan" },
 ];
