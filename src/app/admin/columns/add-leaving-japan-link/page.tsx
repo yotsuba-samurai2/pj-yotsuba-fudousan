@@ -124,9 +124,9 @@ export default function AddLeavingJapanLinkPage() {
       <h1 className="mb-1 text-lg font-bold">海外オーナー売却コラムに /leaving-japan 導線を追加（ja・zh）</h1>
       <p className="mb-2 max-w-2xl text-sm text-text-muted">
         <code>{LEAVING_JAPAN_COLUMN_SLUG}</code> の要約ブロックに、
-        <code>/leaving-japan</code>（緊急帰国・不動産スピード換金 特集）への1行を ja / zh / en の計
-        {LEAVING_JAPAN_COLUMN_PATCHES.length}件当てます。zh-tw は当該ロケール版ページの公開時に追加します。
-        ja・zh 適用済みの場合は「適用済み（marker検出）」と表示され、en だけが新たに当たります。
+        <code>/leaving-japan</code>（緊急帰国・不動産スピード換金 特集）への1行を ja / zh / en / zh-tw の計
+        {LEAVING_JAPAN_COLUMN_PATCHES.length}件当てます。適用済みロケールは「適用済み（marker検出）」と
+        表示され、未適用のロケールだけが新たに当たります。
       </p>
       <p className="mb-6 max-w-2xl rounded-lg bg-yellow-50 p-3 text-sm text-yellow-800">
         <strong>先に「確認のみ」を実行してください。</strong>照合用の find は 2026-07-27

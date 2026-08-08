@@ -9,9 +9,7 @@
 //   /kaigai-owner 導線文）を逐語で anchor に使う。ja は 2026-08-09 に本番ページの表示で
 //   文面の存在を確認済み。zh は未検証（不一致ならスキップされ、管理画面に現在値差異として出る）。
 //
-// 【対象ロケール】ja・zh・en（2026-08-09 en版ページ追加に伴い en パッチを追加）。
-//   zh-tw のコラムからは（当該ロケール版ページを作るまで）リンクしない
-//   ＝存在しないロケールでの読者導線を作らない（C-6-1 の趣旨）。
+// 【対象ロケール】ja・zh・en・zh-tw の全4ロケール（2026-08-09 に段階追加し同日全ロケール到達）。
 import type { ColumnTextPatch } from "@/lib/data/kaigai-owner-column-patches";
 
 export const LEAVING_JAPAN_COLUMN_SLUG =
@@ -45,6 +43,15 @@ export const LEAVING_JAPAN_COLUMN_PATCHES: ColumnTextPatch[] = [
     marker: "(/leaving-japan)",
     label: "en 要約に /leaving-japan への導線を追加",
   },
+  {
+    path: "translations.zh-tw.content",
+    find: "本文比較的是**出售**的手法。若您**不出售、而是出租或繼續持有**,租金的源泉徵收與納稅管理人請見[人在海外,日本的房子該怎麼辦](/kaigai-owner)。",
+    replace:
+      "本文比較的是**出售**的手法。若您**不出售、而是出租或繼續持有**,租金的源泉徵收與納稅管理人請見[人在海外,日本的房子該怎麼辦](/kaigai-owner)。\n\n若您**即將離開日本、時間緊迫**,請見[【專題】緊急回國・不動產快速變現——距離出境只剩30天也能賣](/leaving-japan)。",
+    count: 1,
+    marker: "(/leaving-japan)",
+    label: "zh-tw 要約に /leaving-japan への導線を追加",
+  },
 ];
 
 /** 適用後スキャン用（含まれていなければ管理画面に「要確認」で出す） */
@@ -52,4 +59,5 @@ export const LEAVING_JAPAN_EXPECT_TERMS: { locale: string; term: string }[] = [
   { locale: "ja", term: "/leaving-japan" },
   { locale: "zh", term: "/leaving-japan" },
   { locale: "en", term: "/leaving-japan" },
+  { locale: "zh-tw", term: "/leaving-japan" },
 ];
