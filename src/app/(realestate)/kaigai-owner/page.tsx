@@ -286,13 +286,18 @@ export default async function Page() {
             <Link href="/column/overseas-owners-guide-japan-real-estate-sale" className="text-primary underline">
               売却を検討している方は「海外オーナーのための日本不動産売却ガイド」へ
             </Link>
-            。このページは、<strong>売らずに貸す・持ち続ける</strong>場合の話です。
+            。これから日本を<strong>出国する予定で、売却の時間がない</strong>方は
+            <Link href="/leaving-japan" className="text-primary underline">
+              【特集】緊急帰国・不動産スピード換金
+            </Link>
+            へ。このページは、<strong>売らずに貸す・持ち続ける</strong>場合の話です。
           </p>
           <p className="mt-3 text-sm text-text-muted">最終更新：{LAST_UPDATED}</p>
         </>
       }
       internalLinks={[
         { href: "/column/overseas-owners-guide-japan-real-estate-sale", label: "海外オーナーのための日本不動産売却ガイド" },
+        { href: "/leaving-japan", label: "【特集】緊急帰国・不動産スピード換金｜出国まで30日でも売れます" },
         { href: "/kikoku", label: "海外赴任からの本帰国｜帰国前に住まいを決める" },
         { href: "/souzoku/akiya", label: "文京区の相続空き家" },
         { href: "/toushi", label: "不動産投資・賃貸経営" },
