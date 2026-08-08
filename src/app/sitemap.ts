@@ -107,6 +107,9 @@ const STATIC_REALESTATE: StaticPage[] = [
   // 2026-07-27：非居住者オーナー（定点#32の対応ページ）。ja先行公開。
   // 主語は「非居住者であること」＝/kikoku（戻る）・/funin（来る）・売却コラム（売る）と読者が別。
   { path: "/kaigai-owner", changeFrequency: "monthly", priority: 0.8, locales: ["ja"] },
+  // 2026-08-09：緊急帰国・不動産スピード換金（特集・離日売却クラスタの主力）。ja＋zh。
+  // 主語は「これから出国する所有者・時間がない」＝売却コラム（海外在住・急がない）・/kaigai-owner（持つ）と読者が別。
+  { path: "/leaving-japan", changeFrequency: "weekly", priority: 0.8, locales: ["ja", "zh"] },
   // 2026-07-27：地名×空き家の1本目（レーンB）。ja先行公開・akiyaクラスタの子。
   // 誘導ページ化を避けるため段階実装：本ページを2測定で判定してから2本目以降に進む。
   { path: "/souzoku/akiya/koishikawa", changeFrequency: "monthly", priority: 0.6, locales: ["ja"] },
