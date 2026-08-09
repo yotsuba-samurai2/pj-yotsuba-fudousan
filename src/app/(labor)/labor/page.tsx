@@ -139,7 +139,7 @@ export default async function LaborTopPage() {
         </section>
 
         {/* 対応できないこと（2026-07-29追加・指示書11の必須セクション）
-            「提携税理士」等と書かない＝書面での提携の有無が未確認（U12）。「ご紹介します」にとどめる。 */}
+            「税理士」等と書かない＝書面での提携の有無が未確認（U12）。「ご紹介します」にとどめる。 */}
         <section className="mt-10">
           <h2 className="font-serif text-lg font-semibold text-ink">
             当事務所が取り扱わないことは何ですか？

@@ -203,11 +203,11 @@ export default async function Page() {
             </tr>
             <tr>
               <td className="border border-border px-3 py-2">不動産登記</td>
-              <td className="border border-border px-3 py-2">提携司法書士をご紹介</td>
+              <td className="border border-border px-3 py-2">司法書士をご紹介</td>
             </tr>
             <tr>
               <td className="border border-border px-3 py-2">税務（税務申告等）</td>
-              <td className="border border-border px-3 py-2">提携税理士をご紹介</td>
+              <td className="border border-border px-3 py-2">税理士をご紹介</td>
             </tr>
           </tbody>
         </table>

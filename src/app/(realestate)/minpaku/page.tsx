@@ -162,7 +162,7 @@ export default async function Page() {
           <Link href="/office" className="text-primary underline">会社設立とオフィス開設の完全ガイド</Link>
           を、飲食の提供を伴う場合は
           <Link href="/inshokuten" className="text-primary underline">飲食店開業の完全ガイド</Link>
-          をご覧ください。税務は提携税理士をご紹介します。
+          をご覧ください。税務は税理士をご紹介します。
         </p>
       </div>
 

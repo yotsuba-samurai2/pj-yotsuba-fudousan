@@ -55,8 +55,8 @@ const JA_ROLES: { work: string; who: string }[] = [
   { work: "物件の紹介・仲介（宅地建物取引業）", who: "四葉不動産株式会社" },
   { work: "指定申請書類の作成・提出（作成は行政書士の独占業務・別契約）", who: "併設の四葉行政書士事務所" },
   { work: "労務・人員配置のご相談", who: "四葉社会保険労務士事務所（2026年9月開業予定・現時点では未開業）" },
-  { work: "登記", who: "提携司法書士をご紹介" },
-  { work: "税務（税務申告等）", who: "提携税理士をご紹介" },
+  { work: "登記", who: "司法書士をご紹介" },
+  { work: "税務（税務申告等）", who: "税理士をご紹介" },
 ];
 
 export async function generateMetadata(): Promise<Metadata> {
