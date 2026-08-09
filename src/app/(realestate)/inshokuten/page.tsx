@@ -153,7 +153,7 @@ export default async function Page() {
         <p className="mt-3 leading-relaxed text-text">
           飲食店は個人事業として開業することも、会社を設立して開業することもできます。法人化する場合は、定款・許認可・本店所在地（オフィス）の論点が加わります。詳しくは
           <Link href="/office" className="text-primary underline">会社設立とオフィス開設の完全ガイド</Link>
-          をご覧ください。税務上の有利不利は個別の事情によるため、提携税理士をご紹介します。
+          をご覧ください。税務上の有利不利は個別の事情によるため、税理士をご紹介します。
         </p>
       </div>
 
