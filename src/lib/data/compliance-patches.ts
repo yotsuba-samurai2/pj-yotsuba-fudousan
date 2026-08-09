@@ -271,6 +271,28 @@ export const COMPLIANCE_TRANSLATION_PATCHES: Record<LangCode, CompliancePatch[]>
  * 全ロケールのツリーに適用（値は言語固有なので誤爆しない）。
  */
 export const COMPLIANCE_VALUE_PATCHES: { from: string; to: string }[] = [
+  // ─────────────────────────────────────────────────────────────
+  // 2026-08-06 追加：M-4「提携◯◯士」の翻訳値（4言語）。
+  // U12 が「書面での業務提携はない」で確定したため、提携関係を断定できない。
+  // PR #198 でリポジトリ側は是正したが、これらは **DB に適用済みの値** のため
+  // 別途この値パッチで上書きする（本番の /kaigo 等で実測した実物）。
+  // ─────────────────────────────────────────────────────────────
+  {
+    from: "株式会社・合同会社の設立手続きをサポート。定款作成から申請書類までを支援します。事務所探しは四葉不動産が別契約で受任し、登記は提携司法書士が対応します。",
+    to: "株式会社・合同会社の設立手続きをサポート。定款作成から申請書類までを支援します。事務所探しは四葉不動産が別契約で受任し、登記は司法書士におつなぎします。",
+  },
+  {
+    from: "支援股份有限公司・合同公司的設立手續，從章程編製到申請文件。辦公室選址由四葉不動産另行簽約承辦，登記由合作司法書士辦理。",
+    to: "支援股份有限公司・合同公司的設立手續，從章程編製到申請文件。辦公室選址由四葉不動産另行簽約承辦，登記則為您介紹司法書士。",
+  },
+  {
+    from: "支持股份有限公司・合同公司的设立手续，从章程编制到申请文件。办公室选址由四葉不動産另行签约承办，登记由合作司法书士办理。",
+    to: "支持股份有限公司・合同公司的设立手续，从章程编制到申请文件。办公室选址由四葉不動産另行签约承办，登记则为您介绍司法书士。",
+  },
+  {
+    from: "We support incorporation procedures for stock companies (KK) and limited liability companies (GK), from articles of incorporation through the application paperwork. Office search is handled by 四葉不動産 under a separate engagement, and registration by our partner judicial scrivener.",
+    to: "We support incorporation procedures for stock companies (KK) and limited liability companies (GK), from articles of incorporation through the application paperwork. Office search is handled by 四葉不動産 under a separate engagement, and we will refer you to a judicial scrivener for the registration.",
+  },
   // ── ja ──
   {
     from: "2つの事業が連携し、お客さまの課題をワンストップで解決します。",
