@@ -93,6 +93,10 @@ type Copy = {
   proTableHead: [string, string];
   proRows: Row2[];
   chokepoints: string;
+  /** 「30日でやることリスト」直後の深掘りリンク集（離日売却クラスタ7本への導線） */
+  deepDiveH3: string;
+  deepDiveIntro: string;
+  deepDiveItems: { slug: string; label: string; note: string }[];
   bidH2: string;
   bidIntro1: string;
   bidIntro2: string;
@@ -268,6 +272,18 @@ const JA: Copy = {
   proRows: [
     { a: "司法書士", b: "本人確認、（登記簿の住所が古い場合）住所変更登記、所有権移転登記の同日申請、権利証紛失時の本人確認情報の作成" },
     { a: "税理士", b: "納税管理人への就任、譲渡所得の税額試算、納税管理人届出書・翌年の確定申告書の作成、翌年の納付" },
+  ],
+  deepDiveH3: "リストの各項目を、もっと詳しく",
+  deepDiveIntro:
+    "上の表で1行にまとめた論点を、それぞれ条文と数字で解いた記事があります。つまずいたところだけお読みください。",
+  deepDiveItems: [
+    { slug: "nozei-kanrinin-shikaku-hojin", label: "納税管理人に資格は要るのか、会社でもなれるのか", note: "決済後〜出国の「納税管理人の届出」" },
+    { slug: "hikyojusha-hantei-hikiwatashi-bi", label: "いつから「非居住者」になるのか", note: "源泉徴収10.21%の要否が切り替わる日" },
+    { slug: "gaisan-shutokuhi-keiyakusho-nai", label: "購入時の契約書が見つからないと、税金はどうなるのか", note: "3日目「購入時の売買契約書・領収書を探す」" },
+    { slug: "jusho-henko-toki-gimuka-2026", label: "登記簿の住所が引っ越し前のままだと、どうなるのか", note: "つまずきやすい3つのうちの2つ目" },
+    { slug: "ininjo-hakushi-to-gentei", label: "委任状を渡して帰国するなら、何をどう書けばいいのか", note: "第1部ケース1（委任状型）の続き" },
+    { slug: "satei-gaku-to-fuda-chigai", label: "査定額がいちばん高い会社に頼めばいいのではないのか", note: "札（買取額）とは何かの深掘り" },
+    { slug: "shukkoku-go-minou-kasanzei-zairyu-shinsa", label: "出国後の未納は、いつまで追いかけてくるのか", note: "加算税・差押え、そして次のビザ審査" },
   ],
   chokepoints:
     "つまずきやすいのは3つです。重要事項調査報告書の発行待ち（だから初日に発注します）、登記簿の住所が引っ越し前のままのケース（住所変更登記を先に済ませる必要があります）、購入時の契約書が見つからないケース（税額に直結します）。当社は初日にこの3つを確認します。",
@@ -558,6 +574,18 @@ const ZH: Copy = {
     { a: "司法书士", b: "本人确认、（登记地址是旧址时）先办地址变更登记、过户登记当天申请、权利证遗失时制作本人确认信息" },
     { a: "税理士", b: "担任纳税管理人、试算让渡所得税额、制作纳税管理人届出书和第二年的确定申告书、第二年缴纳税款" },
   ],
+  deepDiveH3: "清单上的每一项，再详细一点",
+  deepDiveIntro:
+    "上表中用一行带过的论点，各自都有一篇用条文和数字解开的文章。只读您卡住的那几项就好。",
+  deepDiveItems: [
+    { slug: "nozei-kanrinin-shikaku-hojin", label: "纳税管理人需要资格吗？公司也能担任吗？", note: "交割后〜出境的「纳税管理人届出」" },
+    { slug: "hikyojusha-hantei-hikiwatashi-bi", label: "从什么时候起成为「非居住者」？", note: "是否预扣10.21%的分界日" },
+    { slug: "gaisan-shutokuhi-keiyakusho-nai", label: "找不到购房时的买卖合同，税金会怎么样？", note: "第3天「找出购房时的合同和收据」" },
+    { slug: "jusho-henko-toki-gimuka-2026", label: "登记簿上的住址还停留在搬家之前，会怎么样？", note: "三个常见卡关点的第二个" },
+    { slug: "ininjo-hakushi-to-gentei", label: "把委任书交给别人再回国，该写什么、怎么写？", note: "第1部案例1（委任书型）的后续" },
+    { slug: "satei-gaku-to-fuda-chigai", label: "委托估价金额最高的公司不就行了吗？", note: "出价究竟是什么" },
+    { slug: "shukkoku-go-minou-kasanzei-zairyu-shinsa", label: "出国后未缴的税，会追到什么时候？", note: "加算税、扣押，以及下一次签证审查" },
+  ],
   chokepoints:
     "最容易卡住的是3件事：等管理公司出报告（所以我们第一天就下单）、登记簿上还是搬家前的旧地址（必须先办地址变更登记）、当年的购房合同找不到（直接影响税额）。这3件事，我们第一天就查。",
   bidH2: "出价最高的买家，怎么找出来？",
@@ -846,6 +874,18 @@ const EN: Copy = {
   proRows: [
     { a: "Judicial Scrivener (司法書士)", b: "Identity verification; (if the registered address is outdated) address-change registration first; same-day filing of the ownership transfer; identity-verification documents if the title deed is lost" },
     { a: "Tax accountant (税理士)", b: "Acting as your Tax Representative; capital-gains estimate; preparation of the Tax Representative notification and next year's tax return; payment the following year" },
+  ],
+  deepDiveH3: "Each item on the list, in more detail",
+  deepDiveIntro:
+    "Each line in the table above has its own article, worked through with the statutes and the figures. Read only the ones you get stuck on.",
+  deepDiveItems: [
+    { slug: "nozei-kanrinin-shikaku-hojin", label: "Does a tax agent in Japan need a qualification, and can a company act as one?", note: "the tax agent notification, between settlement and departure" },
+    { slug: "hikyojusha-hantei-hikiwatashi-bi", label: "When do you become a non-resident?", note: "the day the 10.21% withholding starts to apply" },
+    { slug: "gaisan-shutokuhi-keiyakusho-nai", label: "What happens to the tax if you cannot find the contract from when you bought?", note: "day 3, finding the purchase contract and receipts" },
+    { slug: "jusho-henko-toki-gimuka-2026", label: "What happens if the address on the register is still your old one?", note: "the second of the three usual sticking points" },
+    { slug: "ininjo-hakushi-to-gentei", label: "If you are handing over a power of attorney and going home, what should it say?", note: "following on from Part 1, Case 1" },
+    { slug: "satei-gaku-to-fuda-chigai", label: "Should you not simply instruct the company that gives the highest appraisal figure?", note: "what a bid actually is" },
+    { slug: "shukkoku-go-minou-kasanzei-zairyu-shinsa", label: "How long does unpaid Japanese tax follow you after you leave?", note: "additional taxes, seizure, and your next visa application" },
   ],
   chokepoints:
     "Three things cause the most delays: waiting for the management disclosure report (so we order it on day one), a registry address still showing your old residence (an address-change registration must come first), and a missing purchase contract (it directly affects your tax). We check all three on day one.",
@@ -1140,6 +1180,18 @@ const ZHTW: Copy = {
   proRows: [
     { a: "司法書士", b: "本人確認、（登記地址是舊址時）先辦地址變更登記、過戶登記當天申請、權利證遺失時製作本人確認資訊" },
     { a: "稅理士", b: "擔任納稅管理人、試算讓渡所得稅額、製作納稅管理人屆出書和第二年的確定申告書、第二年繳納稅款" },
+  ],
+  deepDiveH3: "清單上的每一項，再詳細一點",
+  deepDiveIntro:
+    "上表中以一行帶過的論點，各自都有一篇用條文和數字解開的文章。只讀您卡住的那幾項就好。",
+  deepDiveItems: [
+    { slug: "nozei-kanrinin-shikaku-hojin", label: "納稅管理人需要資格嗎？公司也可以擔任嗎", note: "交割後〜出境的「納稅管理人屆出」" },
+    { slug: "hikyojusha-hantei-hikiwatashi-bi", label: "從什麼時候起成為「非居住者」？", note: "預扣10.21%與否的分界日" },
+    { slug: "gaisan-shutokuhi-keiyakusho-nai", label: "找不到購買時的契約書，稅金會變成怎樣？", note: "第3天「找出購屋時的契約書和收據」" },
+    { slug: "jusho-henko-toki-gimuka-2026", label: "登記簿上的住址還停留在搬家之前，會怎麼樣？", note: "三個常見卡關點的第二個" },
+    { slug: "ininjo-hakushi-to-gentei", label: "把委任狀交給別人再回國，該寫什麼、怎麼寫？", note: "第1部案例1（委任狀型）的後續" },
+    { slug: "satei-gaku-to-fuda-chigai", label: "委託估價金額最高的公司，不就好了嗎？", note: "出價究竟是什麼" },
+    { slug: "shukkoku-go-minou-kasanzei-zairyu-shinsa", label: "出國後未繳的稅，會追到什麼時候？", note: "加算稅、扣押，以及下一次的簽證審查" },
   ],
   chokepoints:
     "最容易卡住的是3件事：等管理公司出報告（所以我們第一天就下單）、登記簿上還是搬家前的舊地址（必須先辦地址變更登記）、當年的購屋合約找不到（直接影響稅額）。這3件事，我們第一天就查。",
@@ -1489,6 +1541,24 @@ export default async function Page() {
           <p className="mt-4 font-medium text-ink">{c.proHead}</p>
           <SimpleTable head={[...c.proTableHead]} rows={c.proRows} />
           <p className="mt-3 leading-relaxed text-text">{c.chokepoints}</p>
+
+          {/* 離日売却クラスタ7本への導線（特集＝幹、コラム＝枝。評価集約の主方向はコラム→特集を維持し、
+              ここは特集→コラムの補助リンク。luck428-column-seo 第6条5） */}
+          <h3 className="mt-8 text-base font-semibold text-ink">{c.deepDiveH3}</h3>
+          <p className="mt-2 leading-relaxed text-text">{c.deepDiveIntro}</p>
+          <ul className="mt-3 space-y-2">
+            {c.deepDiveItems.map((it) => (
+              <li key={it.slug} className="leading-relaxed">
+                <Link
+                  href={addLocalePrefix(`/column/${it.slug}`, locale)}
+                  className="text-primary underline"
+                >
+                  {it.label}
+                </Link>
+                <span className="text-text">（{it.note}）</span>
+              </li>
+            ))}
+          </ul>
         </div>
 
         {/* ── 業者競争の仕組み ── */}
