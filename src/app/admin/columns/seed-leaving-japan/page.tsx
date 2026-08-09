@@ -92,7 +92,7 @@ export default function SeedLeavingJapanPage() {
   return (
     <div className="mx-auto max-w-4xl px-4 py-10">
       <h1 className="text-2xl font-bold">
-        離日売却クラスタ 9月分コラム7本の投入
+        離日売却クラスタ コラムの投入（9月分7本＋10月分4本）
       </h1>
 
       <div className="mt-4 space-y-2 rounded-md border border-amber-300 bg-amber-50 p-4 text-sm">
@@ -107,13 +107,14 @@ export default function SeedLeavingJapanPage() {
           （公開中の記事が下書きに戻ることはありません）。何度実行しても重複しません。
         </p>
         <p className="text-amber-900">
-          公開前に決着が必要な事項が2件あります。
-          <strong>
-            おつなぎ先の税理士が納税管理人の就任を引き受けるか
-          </strong>
-          （C2・C4・C1・C3が前提にしています）。
-          <strong>B1・A4+D2・C1の企画差し替えの承認</strong>
-          （いずれも特集との重複を避けるためテーマを変えています）。
+          <strong>9月分7本は公開済み</strong>なので、再実行しても公開状態のまま本文と翻訳が更新されるだけです。
+          <strong>10月分4本（B4・D1・A3・A2）は新規</strong>で、下書きとして入ります。
+        </p>
+        <p className="text-amber-900">
+          10月分の <code>date</code> は投入日（2026-08-10）を入れてあります。
+          <strong>公開に切り替えるときに、実際の公開日へ直してください。</strong>
+          この値は記事の表示日付と sitemap の <code>lastmod</code> の両方に効きます
+          （下書きのあいだは sitemap に出ないため実害はありません）。
         </p>
       </div>
 
@@ -123,7 +124,9 @@ export default function SeedLeavingJapanPage() {
         disabled={running}
         className="mt-6 rounded-md bg-primary px-5 py-2.5 text-white disabled:opacity-50"
       >
-        {running ? "投入中…" : "7本を下書きで投入する"}
+        {running
+          ? "投入中…"
+          : `${LEAVING_JAPAN_COLUMNS_SEED.length}本を投入する（新規は下書き）`}
       </button>
 
       <p className="mt-3 text-sm text-muted-foreground">
