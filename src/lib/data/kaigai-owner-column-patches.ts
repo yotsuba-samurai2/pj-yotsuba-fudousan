@@ -131,7 +131,7 @@ Typically filled by a certified Administrative Scrivener (Gyoseishoshi), a tax a
 |---|---|---|
 | A tax accountant (Zeirishi) | You are selling and must file capital gains | Filing fees apply; managing the property itself is out of scope |
 | A family member in Japan | Mainly receiving documents from the tax office | No qualification requirement, but **a family member cannot prepare the tax return either** (Certified Public Tax Accountant Act) |
-| Yotsuba Real Estate + partner tax accountant | Your property is in or near Bunkyo Ward and you are still deciding whether to sell | Brokerage and document handling by Yotsuba Real Estate; filing under a **separate, direct contract** with the partner tax accountant. No referral fees are exchanged |
+| Yotsuba Real Estate + tax accountant | Your property is in or near Bunkyo Ward and you are still deciding whether to sell | Brokerage and document handling by Yotsuba Real Estate; filing under a **separate, direct contract** with the tax accountant. No referral fees are exchanged |
 
 If you plan to keep and rent out the property rather than sell, see [Owning a Japanese home while living abroad](/kaigai-owner) for the 20.42% withholding on rent and for Tax Representatives.`,
     count: 1,
@@ -157,7 +157,7 @@ If you plan to keep and rent out the property rather than sell, see [Owning a Ja
 |---|---|---|
 | 委託稅理士 | 出售後需申報讓渡所得 | 需支付申報報酬。房產本身的管理不在範圍內 |
 | 在日本的親屬 | 主要是代收稅務署的文件 | 沒有資格限制,但**申告書的製作親屬也無法代勞**(稅理士法) |
-| 四葉不動產＋合作稅理士 | 房產位於文京區或鄰近地區,且仍在判斷是否出售 | 仲介與文件交付由四葉不動產股份有限公司負責,申報則與合作稅理士**分別直接簽約**。不收取介紹費 |
+| 四葉不動產＋稅理士 | 房產位於文京區或鄰近地區,且仍在判斷是否出售 | 仲介與文件交付由四葉不動產股份有限公司負責,申報則與稅理士**分別直接簽約**。不收取介紹費 |
 
 若不出售而是出租或繼續持有,租金的20.42%源泉徵收與納稅管理人,整理於[人在海外,日本的房子該怎麼辦](/kaigai-owner)。`,
     count: 1,
@@ -183,7 +183,7 @@ If you plan to keep and rent out the property rather than sell, see [Owning a Ja
 |---|---|---|
 | 委托税理士 | 出售后需申报让渡所得 | 需支付申报报酬。房产本身的管理不在范围内 |
 | 在日本的亲属 | 主要是代收税务署的文件 | 没有资格限制,但**申告书的制作亲属也无法代劳**(税理士法) |
-| 四叶不动产＋合作税理士 | 房产位于文京区或邻近地区,且仍在判断是否出售 | 中介与文件交付由四叶不动产股份有限公司负责,申报则与合作税理士**分别直接签约**。不收取介绍费 |
+| 四叶不动产＋税理士 | 房产位于文京区或邻近地区,且仍在判断是否出售 | 中介与文件交付由四叶不动产股份有限公司负责,申报则与税理士**分别直接签约**。不收取介绍费 |
 
 若不出售而是出租或继续持有,租金的20.42%源泉征收与纳税管理人,整理于[人在海外,日本的房子该怎么办](/kaigai-owner)。`,
     count: 1,
