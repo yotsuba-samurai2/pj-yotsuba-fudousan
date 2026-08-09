@@ -194,7 +194,7 @@ const COPY: Record<LangCode, ShatakuCopy> = {
       { work: "Company-housing rules, in-kind remuneration, and social insurance (labor)", who: "Yotsuba Social Insurance and Labor Consultant Office (opening scheduled for September 2026; not yet in operation) / a partner licensed social insurance and labor consultant, under a separate contract" },
       { work: "Payroll taxation and rent-equivalent amounts (tax representation and tax consultation are the exclusive domain of certified tax accountants)", who: "We introduce a partner certified tax accountant" },
       { work: "Preparation of residence-status application documents for international employees (preparation is the exclusive domain of gyoseishoshi; separate contract)", who: "The co-located Yotsuba Gyoseishoshi Office" },
-      { work: "Registration", who: "We introduce a partner judicial scrivener" },
+      { work: "Registration", who: "We introduce a judicial scrivener" },
     ],
     rolesFootnote:
       "Each business and professional is engaged separately under its own contract, and we receive no referral fees.",
@@ -225,7 +225,7 @@ const COPY: Record<LangCode, ShatakuCopy> = {
       { href: "/access", label: "交通與費用" },
     ],
     crossLinkLead:
-      "員工宿舍規程與實物給付・社會保險屬於勞務的論點，實務由社會保險勞務士（開業後・合作）承辦，稅務由合作稅理士承辦，各自另行簽約。",
+      "員工宿舍規程與實物給付・社會保險屬於勞務的論點，實務由社會保險勞務士（開業後）承辦，稅務由稅理士承辦，各自另行簽約。",
     gaikokujinH2: "外國員工的員工宿舍，也能協助安排嗎？",
     gaikokujinBody: (locale) => (
       <>
@@ -245,9 +245,9 @@ const COPY: Record<LangCode, ShatakuCopy> = {
     roles: [
       { work: "承租型員工宿舍物件的介紹・仲介，法人契約・轉租承諾的確認（宅地建物取引業）", who: "四葉不動産株式会社" },
       { work: "員工宿舍規程的整備・實物給付・社會保險的處理（勞務）", who: "四葉社会保険労務士事務所（預定2026年9月開業・現階段尚未開業）／合作的社會保險勞務士另行簽約承辦" },
-      { work: "薪資課稅・租金相當額等稅務（稅務代理・稅務諮詢為稅理士的獨占業務）", who: "介紹合作稅理士" },
+      { work: "薪資課稅・租金相當額等稅務（稅務代理・稅務諮詢為稅理士的獨占業務）", who: "介紹稅理士" },
       { work: "外國員工在留資格申請文件的製作（製作為行政書士的獨占業務・另行簽約）", who: "併設的四葉行政書士事務所" },
-      { work: "登記", who: "介紹合作司法書士" },
+      { work: "登記", who: "介紹司法書士" },
     ],
     rolesFootnote: "與各事業體・專業人士皆為分離受任・個別簽約，本公司不收取介紹費。",
     relatedAria: "相關連結",
@@ -277,7 +277,7 @@ const COPY: Record<LangCode, ShatakuCopy> = {
       { href: "/access", label: "交通与费用" },
     ],
     crossLinkLead:
-      "员工宿舍规程与实物给付・社会保险属于劳务的论点，实务由社会保险劳务士（开业后・合作）承办，税务由合作税理士承办，各自另行签约。",
+      "员工宿舍规程与实物给付・社会保险属于劳务的论点，实务由社会保险劳务士（开业后）承办，税务由税理士承办，各自另行签约。",
     gaikokujinH2: "外国员工的员工宿舍，也能协助安排吗？",
     gaikokujinBody: (locale) => (
       <>
@@ -297,9 +297,9 @@ const COPY: Record<LangCode, ShatakuCopy> = {
     roles: [
       { work: "承租型员工宿舍物件的介绍・中介，法人合同・转租承诺的确认（宅地建物取引业）", who: "四葉不動産株式会社" },
       { work: "员工宿舍规程的整备・实物给付・社会保险的处理（劳务）", who: "四葉社会保険労務士事務所（预定2026年9月开业・现阶段尚未开业）／合作的社会保险劳务士另行签约承办" },
-      { work: "工资课税・租金相当额等税务（税务代理・税务咨询为税理士的独占业务）", who: "介绍合作税理士" },
+      { work: "工资课税・租金相当额等税务（税务代理・税务咨询为税理士的独占业务）", who: "介绍税理士" },
       { work: "外国员工在留资格申请文件的制作（制作为行政书士的独占业务・另行签约）", who: "并设的四葉行政書士事務所" },
-      { work: "登记", who: "介绍合作司法书士" },
+      { work: "登记", who: "介绍司法书士" },
     ],
     rolesFootnote: "与各事业体・专业人士均为分离受任・个别签约，本公司不收取介绍费。",
     relatedAria: "相关链接",

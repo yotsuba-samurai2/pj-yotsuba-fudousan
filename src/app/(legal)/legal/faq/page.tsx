@@ -92,7 +92,7 @@ const COPY: Record<LangCode, FaqPageCopy> = {
       },
       {
         q: "For company formation, what can a gyoseishoshi do, and how is that different from a judicial scrivener?",
-        a: "Incorporation documents such as the articles of incorporation are the domain of a gyoseishoshi (administrative scrivener), while registration filings with the Legal Affairs Bureau belong to a judicial scrivener (shiho-shoshi). 四葉行政書士事務所 prepares the incorporation documents and refers the registration to a partner judicial scrivener.",
+        a: "Incorporation documents such as the articles of incorporation are the domain of a gyoseishoshi (administrative scrivener), while registration filings with the Legal Affairs Bureau belong to a judicial scrivener (shiho-shoshi). 四葉行政書士事務所 prepares the incorporation documents and refers the registration to a judicial scrivener.",
       },
       {
         q: "What can you do for inheritance matters?",
