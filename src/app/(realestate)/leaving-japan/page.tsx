@@ -385,7 +385,7 @@ const JA: Copy = {
     },
     {
       q: "税金を払わずに出国したら、どうなりますか？",
-      a: "「もう日本にいないから関係ない」とは、なりません。無申告には本税に加えて無申告加算税（15〜30%）と延滞税（令和8年は年2.8%、納期限の翌日から2か月を経過した後は年9.1%。年により変動）が上乗せされ、隠蔽があれば重加算税（35〜40%）です（国税通則法第60条・第66条・第68条）。納税義務は出国しても消えず（徴収権の時効は5年・督促で中断）、日本に残した銀行口座や不動産は差押えの対象になります。日本は税務行政執行共助条約に加盟しており、締約国のうち徴収共助に応じる国へ協力を要請する制度もあります（同条約は締約国ごとに留保があり、徴収共助を留保している国もあります）。そして実務上いちばん重いのは将来です——再来日して在留資格を取るとき、特に経営・管理ビザや永住申請では納税状況が審査されます。滞納は、将来の日本でのビジネスと永住の道をふさぎます。だから当社は、決済の日程を組む段階で税理士におつなぎし、出国の日までに納税管理人の届出を終えるところまでを段取りします。",
+      a: "「もう日本にいないから関係ない」とは、なりません。無申告には本税に加えて無申告加算税（15〜30%）と延滞税（令和8年は年2.8%、納期限の翌日から2か月を経過した後は年9.1%。年により変動）が上乗せされ、隠蔽があれば重加算税（35〜40%）です（国税通則法第60条・第66条・第68条）。納税義務は出国しても消えず（徴収権の時効は5年・督促で中断）、日本に残した銀行口座や不動産は差押えの対象になります。日本は税務行政執行共助条約に加盟していますが、同条約は締約国ごとに項目を留保でき、中国は2015年10月の批准時にすべての税について徴収共助を留保しています（同条約第30条第1項b。香港・マカオにも及びます）。ただし、条約が使えるかどうかより先に、日本に残した口座・不動産・敷金の返還請求権・源泉徴収された10.21%の還付金が差押えの対象です。そして実務上いちばん重いのは将来です——再来日して在留資格を取るとき、特に経営・管理ビザや永住申請では納税状況が審査されます。滞納は、将来の日本でのビジネスと永住の道をふさぎます。だから当社は、決済の日程を組む段階で税理士におつなぎし、出国の日までに納税管理人の届出を終えるところまでを段取りします。",
     },
     {
       q: "知人から「代わりに売ってあげる」と言われています。頼んではいけませんか？",
@@ -403,7 +403,7 @@ const JA: Copy = {
     { a: "出国する場合の確定申告", b: "所得税法第126条・第127条" },
     { a: "個人住民税の賦課期日（翌年1月1日）", b: "地方税法第39条・第318条" },
     { a: "延滞税・無申告加算税・重加算税", b: "国税通則法第60条・第66条・第68条" },
-    { a: "税の国際徴収共助", b: "税務行政執行共助条約（日本・中国ほか締約）" },
+    { a: "税の国際徴収共助と、中国の留保", b: "税務行政執行共助条約（日本は2013年10月1日発効）／同条約第30条第1項b＝中国はすべての税について徴収共助・保全共助を留保（2015年10月16日批准・2016年2月1日効力発生。香港・マカオにも及ぶ）。出典＝欧州評議会 条約事務局 Reservations and Declarations, Treaty No.127" },
     { a: "媒介契約・媒介報酬の上限", b: "宅地建物取引業法第34条の2・第46条、報酬告示" },
     { a: "取引時の本人確認", b: "犯罪収益移転防止法第4条" },
     { a: "管理費・修繕積立金の滞納は買主に承継", b: "建物の区分所有等に関する法律第8条" },
@@ -682,7 +682,7 @@ const ZH: Copy = {
     },
     {
       q: "不缴税就出境，会怎么样？",
-      a: "不会因为“人已经不在日本”就没事。不申报的，在本税之外要加收无申报加算税（15%〜30%）和延滞税（2026年度为年2.8%，超过缴纳期限次日起2个月后为年9.1%，逐年调整）；有隐瞒行为的，加收重加算税（35%〜40%）（国税通则法第60条·第66条·第68条）。纳税义务不因出境而消失（征收时效5年，经催告即中断），留在日本的银行账户和房产都可能被扣押。日本已加入税务行政执行互助公约，制度上可以向缔约方中接受征收协助的国家请求协助（该公约允许缔约方分项保留，也有国家对征收协助作出保留）。而实际影响最大的，是您的将来——再次来日本申请在留资格时，尤其是经营管理签证和永住申请，纳税记录是必审项目。欠税，堵住的是您将来在日本做生意、拿永住的路。所以我们在安排交割日程的阶段，就为您对接税理士，把出境之日前的纳税管理人届出安排妥当。",
+      a: "不会因为“人已经不在日本”就没事。不申报的，在本税之外要加收无申报加算税（15%〜30%）和延滞税（2026年度为年2.8%，超过缴纳期限次日起2个月后为年9.1%，逐年调整）；有隐瞒行为的，加收重加算税（35%〜40%）（国税通则法第60条·第66条·第68条）。纳税义务不因出境而消失（征收时效5年，经催告即中断），留在日本的银行账户和房产都可能被扣押。日本已加入税务行政执行互助公约，但该公约允许缔约方分项保留，中国在2015年10月批准时已就全部税种对征收协助作出保留（公约第30条第1款b项，香港、澳门同样适用）。不过，比公约能否适用更靠前的，是您留在日本的账户、房产、押金返还请求权，以及被预扣的10.21%退税款——这些都可能被扣押。而实际影响最大的，是您的将来——再次来日本申请在留资格时，尤其是经营管理签证和永住申请，纳税记录是必审项目。欠税，堵住的是您将来在日本做生意、拿永住的路。所以我们在安排交割日程的阶段，就为您对接税理士，把出境之日前的纳税管理人届出安排妥当。",
     },
     {
       q: "熟人说“房子我帮你卖”，能托付吗？",
@@ -700,7 +700,7 @@ const ZH: Copy = {
     { a: "出境时的确定申告", b: "所得税法第126条·第127条" },
     { a: "个人住民税的课税基准日（次年1月1日）", b: "地方税法第39条·第318条" },
     { a: "延滞税·无申报加算税·重加算税", b: "国税通则法第60条·第66条·第68条" },
-    { a: "税务的国际协助征收", b: "税务行政执行互助公约（日本、中国等均为缔约方）" },
+    { a: "税务的国际协助征收与中国的保留", b: "税务行政执行互助公约（对日本于2013年10月1日生效）／公约第30条第1款b项＝中国就全部税种对征收协助及保全措施作出保留（2015年10月16日批准，2016年2月1日生效，香港、澳门同样适用）。出处＝欧洲委员会条约局 Reservations and Declarations, Treaty No.127" },
     { a: "中介合同·中介报酬上限", b: "宅地建物取引业法第34条の2·第46条、报酬告示" },
     { a: "交易时的本人确认", b: "犯罪收益移转防止法第4条" },
     { a: "拖欠的管理费·修缮积立金由买家承接", b: "建物区分所有法第8条" },
@@ -989,7 +989,7 @@ const EN: Copy = {
     },
     {
       q: "What happens if I leave without paying tax?",
-      a: "“I'm not in Japan anymore” does not end it. Non-filing adds a penalty of 15–30% plus late-payment interest of 2.8% per year, rising to 9.1% after two months from the due date (Reiwa 8 / 2026 rates, revised annually); concealment raises it to 35–40% (Act on General Rules for National Taxes, Articles 60, 66, and 68). The obligation does not vanish with departure (the collection period is five years, reset by demand), and bank accounts or property left in Japan can be seized. Japan is a party to the Convention on Mutual Administrative Assistance in Tax Matters, under which collection assistance can be requested from treaty partners that accept it (the Convention allows parties to enter reservations, and some have reserved on assistance in recovery). And the heaviest cost is your future: when you next apply for a status of residence — especially a Business Manager visa or permanent residency — your tax record is examined. Arrears close the road to doing business in, or settling permanently in, Japan. That is why, as soon as we start setting the settlement date, we introduce you to a licensed tax accountant and make sure the Tax Representative notification is filed before the day you leave.",
+      a: "“I'm not in Japan anymore” does not end it. Non-filing adds a penalty of 15–30% plus late-payment interest of 2.8% per year, rising to 9.1% after two months from the due date (Reiwa 8 / 2026 rates, revised annually); concealment raises it to 35–40% (Act on General Rules for National Taxes, Articles 60, 66, and 68). The obligation does not vanish with departure (the collection period is five years, reset by demand), and bank accounts or property left in Japan can be seized. Japan is a party to the Convention on Mutual Administrative Assistance in Tax Matters, but the Convention allows each party to enter reservations: China reserved on assistance in the recovery of tax claims for all taxes when it ratified in October 2015 (Article 30, paragraph 1.b; the same applies to Hong Kong and Macao). What comes before the Convention, though, is what you leave behind in Japan — bank accounts, property, deposit refunds and the 10.21% withheld at source awaiting refund can all be seized. And the heaviest cost is your future: when you next apply for a status of residence — especially a Business Manager visa or permanent residency — your tax record is examined. Arrears close the road to doing business in, or settling permanently in, Japan. That is why, as soon as we start setting the settlement date, we introduce you to a licensed tax accountant and make sure the Tax Representative notification is filed before the day you leave.",
     },
     {
       q: "A friend has offered to sell it for me. Should I decline?",
@@ -1007,7 +1007,7 @@ const EN: Copy = {
     { a: "Filing when leaving Japan", b: "Income Tax Act, Articles 126 and 127" },
     { a: "Residence tax assessment date (January 1 of the following year)", b: "Local Tax Act, Articles 39 and 318" },
     { a: "Late-payment interest and penalties", b: "Act on General Rules for National Taxes, Articles 60, 66, and 68" },
-    { a: "International assistance in tax collection", b: "Convention on Mutual Administrative Assistance in Tax Matters (Japan, China, and others are parties)" },
+    { a: "International assistance in tax collection, and China's reservation", b: "Convention on Mutual Administrative Assistance in Tax Matters (in force for Japan from 1 October 2013); Article 30, paragraph 1.b — China reserved on assistance in the recovery of tax claims and conservancy measures for all taxes (ratified 16 October 2015, in force 1 February 2016; the same applies to Hong Kong and Macao). Source: Council of Europe Treaty Office, Reservations and Declarations, Treaty No.127" },
     { a: "Brokerage agreements and the fee cap", b: "Real Estate Brokerage Act, Articles 34-2 and 46; fee notification" },
     { a: "Identity verification at transactions", b: "Act on Prevention of Transfer of Criminal Proceeds, Article 4" },
     { a: "Unpaid management fees pass to the buyer", b: "Condominium Ownership Act, Article 8" },
@@ -1289,7 +1289,7 @@ const ZHTW: Copy = {
     },
     {
       q: "不繳稅就出境，會怎麼樣？",
-      a: "不會因為「人已經不在日本」就沒事。不申報的，在本稅之外要加收無申告加算稅（15%〜30%）和延滯稅（2026年度為年2.8%，超過繳納期限次日起2個月後為年9.1%，逐年調整）；有隱瞞行為的，加收重加算稅（35%〜40%）（國稅通則法第60條・第66條・第68條）。納稅義務不因出境而消失（徵收時效5年，經催告即中斷），留在日本的銀行帳戶和房產都可能被扣押。日本已加入稅務行政執行互助公約，制度上可以向締約方請求協助徵收。而實際影響最大的，是您的將來——再次來日本申請在留資格時，尤其是經營管理簽證和永住申請，納稅紀錄是必審項目。欠稅，堵住的是您將來在日本做生意、拿永住的路。我們的方案在交割時就確保納稅資金，由納稅管理人在第二年完成申報繳納——讓這個問題根本不需要您擔心。",
+      a: "不會因為「人已經不在日本」就沒事。不申報的，在本稅之外要加收無申告加算稅（15%〜30%）和延滯稅（2026年度為年2.8%，超過繳納期限次日起2個月後為年9.1%，逐年調整）；有隱瞞行為的，加收重加算稅（35%〜40%）（國稅通則法第60條・第66條・第68條）。納稅義務不因出境而消失（徵收時效5年，經催告即中斷），留在日本的銀行帳戶和房產都可能被扣押。日本已加入稅務行政執行互助公約，但該公約允許締約方分項保留，中國在2015年10月批准時已就全部稅目對徵收協助作出保留（公約第30條第1項b款，香港、澳門同樣適用）。不過，比公約能否適用更前面的，是您留在日本的帳戶、房產、押金返還請求權，以及被預扣的10.21%退稅款——這些都可能被扣押。而實際影響最大的，是您的將來——再次來日本申請在留資格時，尤其是經營管理簽證和永住申請，納稅紀錄是必審項目。欠稅，堵住的是您將來在日本做生意、拿永住的路。所以我們在安排交割日程的階段，就為您對接稅理士，把出境之日前的納稅管理人屆出安排妥當。",
     },
     {
       q: "熟人說「房子我幫你賣」，能託付嗎？",
@@ -1307,7 +1307,7 @@ const ZHTW: Copy = {
     { a: "出境時的確定申告", b: "所得稅法第126條・第127條" },
     { a: "個人住民稅的課稅基準日（次年1月1日）", b: "地方稅法第39條・第318條" },
     { a: "延滯稅・無申告加算稅・重加算稅", b: "國稅通則法第60條・第66條・第68條" },
-    { a: "稅務的國際協助徵收", b: "稅務行政執行互助公約（日本等多國為締約方）" },
+    { a: "稅務的國際協助徵收與中國的保留", b: "稅務行政執行互助公約（對日本於2013年10月1日生效）／公約第30條第1項b款＝中國就全部稅目對徵收協助及保全措施作出保留（2015年10月16日批准，2016年2月1日生效，香港、澳門同樣適用）。出處＝歐洲委員會條約局 Reservations and Declarations, Treaty No.127" },
     { a: "仲介契約（媒介契約）・仲介報酬上限", b: "宅地建物取引業法第34條の2・第46條、報酬告示" },
     { a: "交易時的本人確認", b: "犯罪收益移轉防止法第4條" },
     { a: "拖欠的管理費・修繕積立金由買家承接", b: "建物區分所有法第8條" },
