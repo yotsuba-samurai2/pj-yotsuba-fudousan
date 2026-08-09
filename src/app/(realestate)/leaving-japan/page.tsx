@@ -14,9 +14,11 @@
 // 【コンプライアンス】shigyo-compliance-gate＋luck428-column-seo 第9条 準拠
 //   ・方式は一つ（5〜10社の買取業者競争→最高値へ媒介）。三択・自社買取の提示はしない（2026-08-08浦松確定）。
 //   ・買取価格が市場相場の7〜8割になる理由（決済サイト3か月→30日現金の対価）を隠さず明示（同日確定）。
-//   ・納税管理人は**当社（四葉不動産株式会社）が就任できる**と明記する（2026-08-09浦松指示。
-//     /kaigai-owner の2026-07-27方針「引き受ける形で書かない」とは別ページ・別サービスの扱い。
-//     税額計算・申告書作成＝税理士（税理士法2条1項1号・2号、52条）、当社＝書類受領・納付手続きの事実行為に限定）。
+//   ・納税管理人は**税理士におつなぎする**（2026-08-09浦松決定で方針変更。従前の「当社が就任できる」は撤回）。
+//     理由＝納税管理人の事務範囲には税務書類の作成が含まれ（国税通則法基本通達117条関係2(1)）、
+//     通達は「(1)〜(4)の一部のみを処理することはできない」としている。税務書類の作成は税理士の業務
+//     （税理士法2条1項2号、52条）であるため、税理士でない当社が引き受ける形には整理しきれない部分が残る。
+//   ・決済時の納税資金の預かり・分別管理は行わない（同日決定）。置き場所は税理士と決めていただく。
 //   ・「提携税理士」「提携司法書士」とは書かない（2026-07-29浦松指示・指示書11）。「税理士（直接契約）」等で書く。
 //   ・詐欺4事例は「特定の事件ではなく典型的トラブルの再構成」と本文・根拠欄の両方に明記。人物は仮名・匿名。
 //   ・外貨規制の回避を示唆しない（受取国の規制は受取国の銀行へ確認、とだけ書く）。
@@ -137,7 +139,7 @@ type Copy = {
 
 const JA: Copy = {
   answerBlock:
-    "物件の住所と在留カードの写しをお送りください。今日必要なのはそれだけです。当社がその日のうちに登記を確認し、5〜10社の買取業者へ同時に打診。数日で各社の買取額が出揃い、最高値の買主と最短2週間の決済を目指します。代金は全額、銀行送金でご本人名義の口座へ。マンションも戸建ても対象です。翌年の確定申告・納税は当社が納税管理人として済ませ（税額計算・申告書作成は税理士と直接契約）、そこで全業務が完了します。対応できるのは、首都圏の市場性のある物件で、出国まで2週間以上あり、住宅ローンが残っていない場合です。日本語・英語・中国語（繁体字・簡体字）で代表本人が対応します。",
+    "物件の住所と在留カードの写しをお送りください。今日必要なのはそれだけです。当社がその日のうちに登記を確認し、5〜10社の買取業者へ同時に打診。数日で各社の買取額が出揃い、最高値の買主と最短2週間の決済を目指します。代金は全額、銀行送金でご本人名義の口座へ。マンションも戸建ても対象です。出国前に納税管理人（税理士）の届出まで段取りし、決済で当社の仕事は終わります。翌年の確定申告は税理士がご本人と直接契約して行います。対応できるのは、首都圏の市場性のある物件で、出国まで2週間以上あり、住宅ローンが残っていない場合です。日本語・英語・中国語（繁体字・簡体字）で代表本人が対応します。",
   crumb: "緊急帰国・不動産スピード換金",
   serviceName: "出国前の不動産スピード売却（買取業者競争による媒介）",
   heroAlt: "出国前に日本の不動産を売却するイメージ",
@@ -227,9 +229,9 @@ const JA: Copy = {
     { a: "2〜4日目", b: "各社の買取額が出揃う（複数の札＝市場の答え）。内見1回", c: "内見の立会い（30分程度）または鍵のお預け" },
     { a: "5〜7日目", b: "最高値の買主と条件確定・書類精査・売買契約（電子契約可）", c: "権利証・住民票・印鑑登録証明書のご用意" },
     { a: "14〜21日目", b: "決済と同日に所有権移転登記を申請。代金全額をご本人名義の口座へ銀行送金", c: "決済への出席（またはオンライン）" },
-    { a: "決済後〜出国", b: "納税管理人の届出→転出届→出国の順。納税管理人は当社が就任可（税額計算・申告書作成は税理士と直接契約）", c: "納税資金の概算額を当社に預けるか、日本の口座に残しておく" },
+    { a: "決済後〜出国", b: "納税管理人の届出→転出届→出国の順。納税管理人には税理士におつなぎします（届出書の作成・翌年の申告まで、ご本人と直接ご契約いただきます）", c: "税理士と契約し、届出書に署名。納税資金の置き場所を税理士と決める" },
     { a: "出国5営業日前", b: "ここまでに決済を終えるのが目標です", c: "―" },
-    { a: "翌年2〜3月", b: "納税管理人（当社）が確定申告・納税を済ませ、精算書をお送りして全業務完了", c: "何もする必要はありません" },
+    { a: "翌年2〜3月", b: "納税管理人である税理士が確定申告・納税を行います", c: "税理士とのやりとり（メール中心。海外からで完結します）" },
   ],
   scheduleNote:
     "悠長な査定書づくりから始めている時間はありません。複数の業者に競わせた札が、そのまま最も正直な査定です。札が出揃った時点で最高値と条件をご報告しますので、売るかどうかをそこで決めていただけます。日数は目安で、権利関係・管理費の清算状況により前後します。",
@@ -245,7 +247,7 @@ const JA: Copy = {
     { a: "7日目", b: "住民票・印鑑登録証明書を取得（各2通）", c: "転出届を出す前に" },
     { a: "内見日", b: "立会い（30分）または鍵のお預け", c: "鍵は全種類（部屋・オートロック・ポスト・宅配ボックス暗証）" },
     { a: "契約日", b: "売買契約の締結（電子契約可）・物件状況の告知書記入", c: "雨漏り・漏水・不具合など、知っていることを正直に" },
-    { a: "決済日", b: "決済に出席し着金確認。以後、納税管理人の届出→転出届→出国", c: "納税資金を当社に預けるか、日本の口座に残す" },
+    { a: "決済日", b: "決済に出席し着金確認。以後、納税管理人の届出→転出届→出国", c: "納税資金の置き場所を税理士と決めておく（出国後の海外送金は日数と為替で目減りします）" },
   ],
   usHead: "当社がやること（媒介の仕事です）",
   usTableHead: ["いつ", "やること"],
@@ -265,7 +267,7 @@ const JA: Copy = {
   proTableHead: ["誰が", "やること"],
   proRows: [
     { a: "司法書士", b: "本人確認、（登記簿の住所が古い場合）住所変更登記、所有権移転登記の同日申請、権利証紛失時の本人確認情報の作成" },
-    { a: "税理士", b: "譲渡所得の税額試算、納税管理人届出書・翌年の確定申告書の作成" },
+    { a: "税理士", b: "納税管理人への就任、譲渡所得の税額試算、納税管理人届出書・翌年の確定申告書の作成、翌年の納付" },
   ],
   chokepoints:
     "つまずきやすいのは3つです。重要事項調査報告書の発行待ち（だから初日に発注します）、登記簿の住所が引っ越し前のままのケース（住所変更登記を先に済ませる必要があります）、購入時の契約書が見つからないケース（税額に直結します）。当社は初日にこの3つを確認します。",
@@ -322,7 +324,7 @@ const JA: Copy = {
   ),
   whoBody2: (
     <>
-      税務（税額の計算・確定申告書と納税管理人届出書の作成）は税理士と、登記は司法書士と、<strong>それぞれ直接ご契約</strong>いただきます。当社が紹介料を受け取ることはありません。<strong>納税管理人には、ご希望により当社が就任します</strong>——税額の計算・申告書の作成は税理士、税務署からの書類の受領と納付の手続きは納税管理人、という役割分担です（納税管理人に資格の定めはなく、法人も就任できます）。
+      税務（納税管理人への就任・税額の計算・確定申告書と納税管理人届出書の作成）は税理士と、登記は司法書士と、<strong>それぞれ直接ご契約</strong>いただきます。当社が紹介料を受け取ることはありません。<strong>納税管理人には、税理士におつなぎします</strong>。納税管理人に資格の定めはなく法人も就任できますが、その事務には税務書類の作成が含まれるため（国税通則法基本通達第117条関係2）、当社ではお受けせず、税理士にお願いする形をとっています。当社の仕事は、出国日から逆算した段取り、決済、そして税理士へおつなぎするところまでです。
     </>
   ),
   feeH3: "料金",
@@ -363,11 +365,11 @@ const JA: Copy = {
     },
     {
       q: "税金の申告・納税は、出国した後でも大丈夫ですか？",
-      a: "大丈夫です。決済日にご本人が日本の居住者であれば源泉徴収（10.21%の天引き）はなく、譲渡所得の確定申告・納税は翌年の2月16日〜3月15日です。出国前に「納税管理人の届出書」を税務署に提出しておけば、出国後の税務はすべて納税管理人が窓口になります（国税通則法第117条）。納税管理人には、ご希望により当社（四葉不動産株式会社）が就任できます。税額の計算と申告書の作成は税理士（直接契約）が行い、当社は税務署からの書類の受領と納付の手続きを担当します。納税資金は決済時に概算額をお預かりして分別管理し、納付後に精算書とともに残額をご返金します。届出をせずに出国すると、出国の時までに申告を済ませる義務が生じます（所得税法第126条・第127条）。順番は納税管理人の届出→転出届→出国。なお住民税は、翌年1月1日に日本に住所がある方に課されます（地方税法第39条・第318条）。",
+      a: "大丈夫です。決済日（引渡しの日）にご本人が日本の居住者であれば源泉徴収（10.21%の天引き）はなく、譲渡所得の確定申告・納税は翌年の2月16日〜3月15日です。源泉徴収の要否は、代金の支払日でも契約日でもなく、原則として引渡しの日の立場で判定されます（国税庁 質疑応答事例／所得税基本通達36-12）。出国前に「納税管理人の届出書」を税務署に提出しておけば、出国後の税務はすべて納税管理人が窓口になります（国税通則法第117条）。納税管理人には、税理士におつなぎします。届出書の作成、翌年の確定申告、納付まで、ご本人と税理士が直接ご契約いただく形です。当社が紹介料を受け取ることはありません。納税資金は、出国後に海外から送金すると日数と為替で目減りするため、決済日に置き場所を税理士と決めておきます。届出をせずに出国すると、出国の時までに申告を済ませる義務が生じます（所得税法第126条・第127条）。順番は納税管理人の届出→転出届→出国。なお住民税は、翌年1月1日に日本に住所がある方に課されます（地方税法第39条・第318条）。",
     },
     {
       q: "税金を払わずに出国したら、どうなりますか？",
-      a: "「もう日本にいないから関係ない」とは、なりません。無申告には本税に加えて無申告加算税（15〜30%）と延滞税（年2.4%〜8.7%・令和7年の割合、年により変動）が上乗せされ、隠蔽があれば重加算税（35〜40%）です（国税通則法第60条・第66条・第68条）。納税義務は出国しても消えず（徴収権の時効は5年・督促で中断）、日本に残した銀行口座や不動産は差押えの対象になります。日本は税務行政執行共助条約に加盟しており、中国を含む締約国へ徴収の協力を要請する制度もあります。そして実務上いちばん重いのは将来です——再来日して在留資格を取るとき、特に経営・管理ビザや永住申請では納税状況が審査されます。滞納は、将来の日本でのビジネスと永住の道をふさぎます。当社の方式は決済時に納税資金を確保し、納税管理人が翌年に申告・納税まで済ませるので、この心配ごと自体をなくせます。",
+      a: "「もう日本にいないから関係ない」とは、なりません。無申告には本税に加えて無申告加算税（15〜30%）と延滞税（令和8年は年2.8%、納期限の翌日から2か月を経過した後は年9.1%。年により変動）が上乗せされ、隠蔽があれば重加算税（35〜40%）です（国税通則法第60条・第66条・第68条）。納税義務は出国しても消えず（徴収権の時効は5年・督促で中断）、日本に残した銀行口座や不動産は差押えの対象になります。日本は税務行政執行共助条約に加盟しており、締約国のうち徴収共助に応じる国へ協力を要請する制度もあります（同条約は締約国ごとに留保があり、徴収共助を留保している国もあります）。そして実務上いちばん重いのは将来です——再来日して在留資格を取るとき、特に経営・管理ビザや永住申請では納税状況が審査されます。滞納は、将来の日本でのビジネスと永住の道をふさぎます。だから当社は、決済の日程を組む段階で税理士におつなぎし、出国の日までに納税管理人の届出を終えるところまでを段取りします。",
     },
     {
       q: "知人から「代わりに売ってあげる」と言われています。頼んではいけませんか？",
@@ -428,7 +430,7 @@ const JA: Copy = {
 
 const ZH: Copy = {
   answerBlock:
-    "请把房产地址和在留卡照片发给我们。今天需要做的只有这一件事。我们当天核查登记，同步向5〜10家收购公司询价。数日内各家报价出齐，与出价最高的买家争取最快2周完成交割。房款全额银行转账，只进您本人名下的账户。公寓、独栋（一户建）都可以办。第二年的报税缴税由我公司作为纳税管理人办完（税额计算·申报文件制作由税理士直接签约负责），到那里全部事务结束。适用范围：首都圈内市场流动性好的房产、距出境2周以上、无未还清房贷。日语、英语、中文（简体·繁体）由代表本人直接沟通。",
+    "请把房产地址和在留卡照片发给我们。今天需要做的只有这一件事。我们当天核查登记，同步向5〜10家收购公司询价。数日内各家报价出齐，与出价最高的买家争取最快2周完成交割。房款全额银行转账，只进您本人名下的账户。公寓、独栋（一户建）都可以办。出境前我们会把纳税管理人（税理士）的届出安排妥当，交割完成，我公司的工作即告结束。第二年的报税由税理士与您直接签约办理。适用范围：首都圈内市场流动性好的房产、距出境2周以上、无未还清房贷。日语、英语、中文（简体·繁体）由代表本人直接沟通。",
   crumb: "紧急回国·房产快速变现",
   serviceName: "出境前不动产快速出售（收购公司竞价中介）",
   heroAlt: "出境前出售日本房产的形象图",
@@ -516,9 +518,9 @@ const ZH: Copy = {
     { a: "第2〜4天", b: "各家报价出齐（多家竞价＝市场给出的真实答案）。安排1次看房", c: "看房到场（约30分钟）或把钥匙交给我们" },
     { a: "第5〜7天", b: "与出价最高的买家锁定条件、审核文件、签订买卖合同（可电子签约）", c: "准备权利证、住民票、印章登记证明" },
     { a: "第14〜21天", b: "交割，当天申请过户登记。房款全额银行转账至您本人账户", c: "出席交割（或线上）" },
-    { a: "交割后〜出境", b: "纳税管理人届出→迁出登记→出境，按此顺序。纳税管理人可由我公司担任（税额计算·申报文件由税理士直接签约负责）", c: "纳税资金预存我公司或留在日本账户" },
+    { a: "交割后〜出境", b: "纳税管理人届出→迁出登记→出境，按此顺序。纳税管理人由我们为您介绍税理士担任（届出书制作、第二年报税，均由您与税理士直接签约）", c: "与税理士签约并在届出书上签名。纳税资金放在哪里，与税理士商定" },
     { a: "出境前5个工作日", b: "交割在此之前完成，是我们的目标", c: "―" },
-    { a: "第二年2〜3月", b: "纳税管理人（我公司）完成申报纳税，寄送清算明细，全部事务完结", c: "您什么都不用做" },
+    { a: "第二年2〜3月", b: "担任纳税管理人的税理士完成申报纳税", c: "与税理士的往来（以邮件为主，在海外即可完成）" },
   ],
   scheduleNote:
     "没有时间慢悠悠做估价报告。让多家公司竞出来的报价，就是最诚实的估价。报价出齐后我们立即告知最高价和条件，卖不卖，您看着数字决定。天数为参考，因权利关系、管理费清算情况会有前后。",
@@ -534,7 +536,7 @@ const ZH: Copy = {
     { a: "第7天", b: "领取住民票、印章登记证明（各2份）", c: "一定要在办迁出登记之前" },
     { a: "看房日", b: "到场30分钟，或把钥匙交给我们", c: "钥匙要全套（房门、单元门、信箱、快递柜密码）" },
     { a: "签约日", b: "签订买卖合同（可电子签约）、如实填写房况告知书", c: "漏水、渗水、设备故障等，知道什么写什么" },
-    { a: "交割日", b: "出席交割、确认到账。之后按纳税管理人届出→迁出登记→出境的顺序办理", c: "纳税资金预存我公司或留在日本账户" },
+    { a: "交割日", b: "出席交割、确认到账。之后按纳税管理人届出→迁出登记→出境的顺序办理", c: "纳税资金放在哪里，事先与税理士商定（出境后从海外汇款，耗时且有汇率损失）" },
   ],
   usHead: "我们做的事（属于中介服务，不另收费）",
   usTableHead: ["时间", "事项"],
@@ -554,7 +556,7 @@ const ZH: Copy = {
   proTableHead: ["谁", "事项"],
   proRows: [
     { a: "司法书士", b: "本人确认、（登记地址是旧址时）先办地址变更登记、过户登记当天申请、权利证遗失时制作本人确认信息" },
-    { a: "税理士", b: "试算让渡所得税额、制作纳税管理人届出书和第二年的确定申告书" },
+    { a: "税理士", b: "担任纳税管理人、试算让渡所得税额、制作纳税管理人届出书和第二年的确定申告书、第二年缴纳税款" },
   ],
   chokepoints:
     "最容易卡住的是3件事：等管理公司出报告（所以我们第一天就下单）、登记簿上还是搬家前的旧地址（必须先办地址变更登记）、当年的购房合同找不到（直接影响税额）。这3件事，我们第一天就查。",
@@ -610,7 +612,7 @@ const ZH: Copy = {
   ),
   whoBody2: (
     <>
-      税务（税额计算、确定申告书和纳税管理人届出书的制作）由税理士、登记由司法书士<strong>分别与您直接签约</strong>办理，我公司不收取任何介绍费。<strong>纳税管理人可由我公司担任</strong>——税额计算·申报文件制作归税理士，接收税务署文件·办理缴纳手续归纳税管理人，分工明确（纳税管理人没有资格限制，法人也可担任）。
+      税务（担任纳税管理人、税额计算、确定申告书和纳税管理人届出书的制作）由税理士、登记由司法书士<strong>分别与您直接签约</strong>办理，我公司不收取任何介绍费。<strong>纳税管理人由我们为您介绍税理士担任</strong>。纳税管理人虽无资格限制、法人也可担任，但其事务范围包含税务文件的制作（国税通则法基本通达第117条关系2），因此我公司不承接，而是请税理士担任。我公司的工作，是从出境日倒排日程、完成交割，并为您对接税理士。
     </>
   ),
   feeH3: "收费",
@@ -648,11 +650,11 @@ const ZH: Copy = {
     },
     {
       q: "税务申报和缴税，出境以后办可以吗？",
-      a: "可以。交割日您还是日本居住者，就没有预扣税（10.21%），让渡所得的申报纳税在第二年2月16日〜3月15日。出境前向税务署提交“纳税管理人届出书”，出境后的税务就全部由纳税管理人做窗口（国税通则法第117条）。纳税管理人可由我公司（四叶不动产株式会社）担任。税额计算和申报文件由税理士（直接签约）制作，我公司负责接收税务署文件和办理缴纳。纳税资金在交割时按概算预存我公司，专户分离管理，缴纳后连同清算明细退还余款。不提交届出就出境的，会变成必须在出境前完成申报（所得税法第126条·第127条）。顺序是纳税管理人届出→迁出登记→出境。另外，住民税只向第二年1月1日在日本有住所的人征收（地方税法第39条·第318条）。",
+      a: "可以。交割日（房产交付之日）您还是日本居住者，就没有预扣税（10.21%）。是否需要预扣，原则上以交付之日的身份判定，而非付款日或签约日（国税厅质疑应答事例／所得税基本通达36-12），让渡所得的申报纳税在第二年2月16日〜3月15日。出境前向税务署提交“纳税管理人届出书”，出境后的税务就全部由纳税管理人做窗口（国税通则法第117条）。纳税管理人由我们为您介绍税理士担任。届出书的制作、第二年的报税与缴纳，均由您与税理士直接签约办理，我公司不收取任何介绍费。纳税资金出境后从海外汇款既耗时又有汇率损失，因此请在交割日与税理士商定资金放在哪里。不提交届出就出境的，会变成必须在出境前完成申报（所得税法第126条·第127条）。顺序是纳税管理人届出→迁出登记→出境。另外，住民税只向第二年1月1日在日本有住所的人征收（地方税法第39条·第318条）。",
     },
     {
       q: "不缴税就出境，会怎么样？",
-      a: "不会因为“人已经不在日本”就没事。不申报的，在本税之外要加收无申报加算税（15%〜30%）和延滞税（年2.4%〜8.7%，2025年度税率，逐年调整）；有隐瞒行为的，加收重加算税（35%〜40%）（国税通则法第60条·第66条·第68条）。纳税义务不因出境而消失（征收时效5年，经催告即中断），留在日本的银行账户和房产都可能被扣押。日本已加入税务行政执行互助公约，制度上可以向包括中国在内的缔约国请求协助征收。而实际影响最大的，是您的将来——再次来日本申请在留资格时，尤其是经营管理签证和永住申请，纳税记录是必审项目。欠税，堵住的是您将来在日本做生意、拿永住的路。我们的方案在交割时就确保纳税资金，由纳税管理人在第二年完成申报缴纳——让这个问题根本不需要您担心。",
+      a: "不会因为“人已经不在日本”就没事。不申报的，在本税之外要加收无申报加算税（15%〜30%）和延滞税（2026年度为年2.8%，超过缴纳期限次日起2个月后为年9.1%，逐年调整）；有隐瞒行为的，加收重加算税（35%〜40%）（国税通则法第60条·第66条·第68条）。纳税义务不因出境而消失（征收时效5年，经催告即中断），留在日本的银行账户和房产都可能被扣押。日本已加入税务行政执行互助公约，制度上可以向缔约方中接受征收协助的国家请求协助（该公约允许缔约方分项保留，也有国家对征收协助作出保留）。而实际影响最大的，是您的将来——再次来日本申请在留资格时，尤其是经营管理签证和永住申请，纳税记录是必审项目。欠税，堵住的是您将来在日本做生意、拿永住的路。所以我们在安排交割日程的阶段，就为您对接税理士，把出境之日前的纳税管理人届出安排妥当。",
     },
     {
       q: "熟人说“房子我帮你卖”，能托付吗？",
@@ -715,7 +717,7 @@ const ZH: Copy = {
 
 const EN: Copy = {
   answerBlock:
-    "Send us your property's address and a photo of your residence card. That is all you need to do today. We check the title registry the same day and send the property simultaneously to 5–10 professional buyers. Offers come back within days, and we aim to close with the highest bidder in as little as two weeks. The full price is paid by bank transfer into an account in your own name. Both condominiums and houses qualify. The following year's tax filing and payment are completed by our company as your Tax Representative (tax calculation and return preparation by a licensed tax accountant under a separate direct contract) — and with that, everything is finished. We can accept properties in Greater Tokyo with a liquid market, at least two weeks before departure, with no outstanding mortgage. The representative works with you directly in English, Japanese, and Chinese.",
+    "Send us your property's address and a photo of your residence card. That is all you need to do today. We check the title registry the same day and send the property simultaneously to 5–10 professional buyers. Offers come back within days, and we aim to close with the highest bidder in as little as two weeks. The full price is paid by bank transfer into an account in your own name. Both condominiums and houses qualify. Before you leave, we arrange the Tax Representative notification with a licensed tax accountant; our work ends at settlement. The following year's tax return is handled by the tax accountant, with whom you contract directly. We can accept properties in Greater Tokyo with a liquid market, at least two weeks before departure, with no outstanding mortgage. The representative works with you directly in English, Japanese, and Chinese.",
   crumb: "Urgent departure: fast property sale",
   serviceName: "Fast pre-departure property sale (brokered competition among professional buyers)",
   heroAlt: "Selling Japanese property before leaving the country",
@@ -805,9 +807,9 @@ const EN: Copy = {
     { a: "Days 2–4", b: "Offers come in (multiple bids = the market's answer). One viewing", c: "Attend the viewing (about 30 minutes) or entrust the keys" },
     { a: "Days 5–7", b: "Terms fixed with the highest bidder, document checks, sale contract (electronic signing available)", c: "Prepare the title deed, residence record, and seal registration certificate" },
     { a: "Days 14–21", b: "Settlement, with the ownership transfer filed the same day. Full price wired to an account in your own name", c: "Attend the settlement (or online)" },
-    { a: "After settlement, before departure", b: "Tax Representative notification → moving-out notification → departure, in that order. Our company can serve as your Tax Representative (tax calculation and return preparation by a tax accountant under direct contract)", c: "Deposit the estimated tax amount with us, or leave it in your Japanese account" },
+    { a: "After settlement, before departure", b: "Tax Representative notification → moving-out notification → departure, in that order. We introduce you to a licensed tax accountant who acts as your Tax Representative (notification, next year's return and payment, all under a direct contract with you)", c: "Contract with the tax accountant and sign the notification. Agree with them where the tax funds will be held" },
     { a: "5 business days before departure", b: "Our target: settlement completed by this point", c: "—" },
-    { a: "Feb–Mar next year", b: "The Tax Representative (our company) files and pays, and sends you the settlement statement — everything is finished", c: "Nothing" },
+    { a: "Feb–Mar next year", b: "The tax accountant acting as your Tax Representative files and pays", c: "Correspondence with the tax accountant (mostly by email; can be completed from abroad)" },
   ],
   scheduleNote:
     "There is no time to start with a leisurely appraisal report. The bids from competing buyers are themselves the most honest appraisal. As soon as the offers are in, we report the highest bid and its terms — you decide whether to sell by looking at the numbers. Days are indicative and shift with title issues and fee settlements.",
@@ -823,7 +825,7 @@ const EN: Copy = {
     { a: "Day 7", b: "Obtain your residence record and seal registration certificate (2 copies each)", c: "Before you file the moving-out notification" },
     { a: "Viewing day", b: "Attend (30 minutes) or entrust the keys", c: "All keys: room, building entrance, mailbox, parcel-locker code" },
     { a: "Contract day", b: "Sign the sale contract (electronic OK); fill in the property condition disclosure honestly", c: "Leaks, water damage, malfunctions — write what you know" },
-    { a: "Settlement day", b: "Attend and confirm the funds have arrived. Then: Tax Representative notification → moving-out notification → departure", c: "Deposit the tax funds with us or leave them in your Japanese account" },
+    { a: "Settlement day", b: "Attend and confirm the funds have arrived. Then: Tax Representative notification → moving-out notification → departure", c: "Agree with the tax accountant in advance where the tax funds will be held (remitting from abroad after departure costs days and exchange losses)" },
   ],
   usHead: "What we do (this is the brokerage work)",
   usTableHead: ["When", "Task"],
@@ -843,7 +845,7 @@ const EN: Copy = {
   proTableHead: ["Who", "Task"],
   proRows: [
     { a: "Judicial Scrivener (司法書士)", b: "Identity verification; (if the registered address is outdated) address-change registration first; same-day filing of the ownership transfer; identity-verification documents if the title deed is lost" },
-    { a: "Tax accountant (税理士)", b: "Capital-gains estimate; preparation of the Tax Representative notification and next year's tax return" },
+    { a: "Tax accountant (税理士)", b: "Acting as your Tax Representative; capital-gains estimate; preparation of the Tax Representative notification and next year's tax return; payment the following year" },
   ],
   chokepoints:
     "Three things cause the most delays: waiting for the management disclosure report (so we order it on day one), a registry address still showing your old residence (an address-change registration must come first), and a missing purchase contract (it directly affects your tax). We check all three on day one.",
@@ -901,8 +903,8 @@ const EN: Copy = {
   ),
   whoBody2: (
     <>
-      Tax work (tax calculation; preparation of the return and the Tax Representative notification) is contracted directly with a tax accountant, and registration directly with a Judicial Scrivener. We receive no referral fees.{" "}
-      <strong>On request, our company serves as your Tax Representative</strong> — calculation and document preparation belong to the tax accountant; receiving tax-office mail and handling payment belong to the Tax Representative (the law sets no qualification requirement, and a corporation may serve).
+      Tax work (acting as your Tax Representative; tax calculation; preparation of the return and the Tax Representative notification) is contracted directly with a tax accountant, and registration directly with a Judicial Scrivener. We receive no referral fees.{" "}
+      <strong>For the Tax Representative role, we introduce you to a licensed tax accountant.</strong> The law sets no qualification requirement and a corporation may serve, but the role covers the preparation of tax documents (National Tax General Rules Basic Circular, Article 117, item 2), so we do not take it on ourselves and ask a tax accountant to do so. Our work runs from planning the schedule backwards from your departure date, through settlement, to introducing you to the tax accountant.
     </>
   ),
   feeH3: "Fees",
@@ -943,11 +945,11 @@ const EN: Copy = {
     },
     {
       q: "Is it all right to file and pay tax after I leave?",
-      a: "Yes. If you are a Japan resident on the settlement date there is no withholding (the 10.21%), and the capital-gains filing and payment fall on February 16–March 15 of the following year. File a Tax Representative notification before departure, and the Tax Representative becomes the contact point for everything afterwards (Act on General Rules for National Taxes, Article 117). On request our company serves as your Tax Representative: the tax accountant (direct contract) calculates and prepares, while we receive documents and handle payment. The estimated tax is deposited with us at settlement, kept in segregated custody, and refunded with a statement after payment. If you leave without filing the notification, you must complete your filing before departure (Income Tax Act, Articles 126 and 127). The order: Tax Representative notification → moving-out notification → departure. Residence tax is levied on those with a Japanese address on January 1 of the following year (Local Tax Act, Articles 39 and 318).",
+      a: "Yes. If you are a Japan resident on the settlement date — that is, the date the property is delivered — there is no withholding (the 10.21%), and the capital-gains filing and payment fall on February 16–March 15 of the following year. Whether withholding applies is judged, in principle, by your status on the date of delivery, not the date of payment or the date of contract (NTA Q&A; Income Tax Basic Circular 36-12). File a Tax Representative notification before departure, and the Tax Representative becomes the contact point for everything afterwards (Act on General Rules for National Taxes, Article 117). For that role we introduce you to a licensed tax accountant: the notification, next year's return and the payment are all handled under a direct contract between you and them, and we receive no referral fee. Because remitting tax funds from abroad after departure costs days and exchange losses, agree on the settlement day with the tax accountant where those funds will be held. If you leave without filing the notification, you must complete your filing before departure (Income Tax Act, Articles 126 and 127). The order: Tax Representative notification → moving-out notification → departure. Residence tax is levied on those with a Japanese address on January 1 of the following year (Local Tax Act, Articles 39 and 318).",
     },
     {
       q: "What happens if I leave without paying tax?",
-      a: "“I'm not in Japan anymore” does not end it. Non-filing adds a penalty of 15–30% plus late-payment interest of roughly 2.4–8.7% per year (2025 rates, revised annually); concealment raises it to 35–40% (Act on General Rules for National Taxes, Articles 60, 66, and 68). The obligation does not vanish with departure (the collection period is five years, reset by demand), and bank accounts or property left in Japan can be seized. Japan is a party to the Convention on Mutual Administrative Assistance in Tax Matters, under which collection assistance can be requested from treaty partners, including China. And the heaviest cost is your future: when you next apply for a status of residence — especially a Business Manager visa or permanent residency — your tax record is examined. Arrears close the road to doing business in, or settling permanently in, Japan. Our method secures the tax funds at settlement, and the Tax Representative completes filing and payment the following year — so this worry never arises.",
+      a: "“I'm not in Japan anymore” does not end it. Non-filing adds a penalty of 15–30% plus late-payment interest of 2.8% per year, rising to 9.1% after two months from the due date (Reiwa 8 / 2026 rates, revised annually); concealment raises it to 35–40% (Act on General Rules for National Taxes, Articles 60, 66, and 68). The obligation does not vanish with departure (the collection period is five years, reset by demand), and bank accounts or property left in Japan can be seized. Japan is a party to the Convention on Mutual Administrative Assistance in Tax Matters, under which collection assistance can be requested from treaty partners that accept it (the Convention allows parties to enter reservations, and some have reserved on assistance in recovery). And the heaviest cost is your future: when you next apply for a status of residence — especially a Business Manager visa or permanent residency — your tax record is examined. Arrears close the road to doing business in, or settling permanently in, Japan. That is why, as soon as we start setting the settlement date, we introduce you to a licensed tax accountant and make sure the Tax Representative notification is filed before the day you leave.",
     },
     {
       q: "A friend has offered to sell it for me. Should I decline?",
@@ -1099,9 +1101,9 @@ const ZHTW: Copy = {
     { a: "第2〜4天", b: "各家報價到齊（多家競價＝市場給出的真實答案）。安排1次看房", c: "看房到場（約30分鐘）或把鑰匙交給我們" },
     { a: "第5〜7天", b: "與出價最高的買家鎖定條件、審核文件、簽訂買賣合約（可電子簽約）", c: "準備權利證、住民票、印鑑登錄證明" },
     { a: "第14〜21天", b: "交割，當天申請過戶登記。房款全額匯入您本人帳戶", c: "出席交割（或線上）" },
-    { a: "交割後〜出境", b: "納稅管理人屆出→遷出登記→出境，依此順序。納稅管理人可由本公司擔任（稅額計算・申報文件由稅理士直接簽約負責）", c: "納稅資金預存本公司或留在日本帳戶" },
+    { a: "交割後〜出境", b: "納稅管理人屆出→遷出登記→出境，依此順序。納稅管理人由我們為您介紹稅理士擔任（屆出書製作、第二年報稅，均由您與稅理士直接簽約）", c: "與稅理士簽約並在屆出書上簽名。納稅資金放在哪裡，與稅理士商定" },
     { a: "出境前5個工作天", b: "交割在此之前完成，是我們的目標", c: "―" },
-    { a: "第二年2〜3月", b: "納稅管理人（本公司）完成申報繳稅，寄送清算明細，全部事務完結", c: "您什麼都不用做" },
+    { a: "第二年2〜3月", b: "擔任納稅管理人的稅理士完成申報繳稅", c: "與稅理士的往來（以電子郵件為主，在海外即可完成）" },
   ],
   scheduleNote:
     "沒有時間慢慢做估價報告。讓多家業者競出來的報價，就是最誠實的估價。報價到齊後我們立即告知最高價和條件，賣不賣，您看著數字決定。天數為參考，因權利關係、管理費清算情況會有前後。",
@@ -1117,7 +1119,7 @@ const ZHTW: Copy = {
     { a: "第7天", b: "領取住民票、印鑑登錄證明（各2份）", c: "一定要在辦遷出登記之前" },
     { a: "看房日", b: "到場30分鐘，或把鑰匙交給我們", c: "鑰匙要全套（房門、大門、信箱、宅配箱密碼）" },
     { a: "簽約日", b: "簽訂買賣合約（可電子簽約）、如實填寫房況告知書", c: "漏水、滲水、設備故障等，知道什麼寫什麼" },
-    { a: "交割日", b: "出席交割、確認入帳。之後按納稅管理人屆出→遷出登記→出境的順序辦理", c: "納稅資金預存本公司或留在日本帳戶" },
+    { a: "交割日", b: "出席交割、確認入帳。之後按納稅管理人屆出→遷出登記→出境的順序辦理", c: "納稅資金放在哪裡，事先與稅理士商定（出境後從海外匯款，耗時且有匯率損失）" },
   ],
   usHead: "我們做的事（屬於仲介服務，不另收費）",
   usTableHead: ["時間", "事項"],
@@ -1137,7 +1139,7 @@ const ZHTW: Copy = {
   proTableHead: ["誰", "事項"],
   proRows: [
     { a: "司法書士", b: "本人確認、（登記地址是舊址時）先辦地址變更登記、過戶登記當天申請、權利證遺失時製作本人確認資訊" },
-    { a: "稅理士", b: "試算讓渡所得稅額、製作納稅管理人屆出書和第二年的確定申告書" },
+    { a: "稅理士", b: "擔任納稅管理人、試算讓渡所得稅額、製作納稅管理人屆出書和第二年的確定申告書、第二年繳納稅款" },
   ],
   chokepoints:
     "最容易卡住的是3件事：等管理公司出報告（所以我們第一天就下單）、登記簿上還是搬家前的舊地址（必須先辦地址變更登記）、當年的購屋合約找不到（直接影響稅額）。這3件事，我們第一天就查。",
@@ -1193,7 +1195,7 @@ const ZHTW: Copy = {
   ),
   whoBody2: (
     <>
-      稅務（稅額計算、確定申告書和納稅管理人屆出書的製作）由稅理士、登記由司法書士<strong>分別與您直接簽約</strong>辦理，本公司不收取任何介紹費。<strong>納稅管理人可由本公司擔任</strong>——稅額計算・申報文件製作歸稅理士，接收稅務署文件・辦理繳納手續歸納稅管理人，分工明確（納稅管理人沒有資格限制，法人也可擔任）。
+      稅務（擔任納稅管理人、稅額計算、確定申告書和納稅管理人屆出書的製作）由稅理士、登記由司法書士<strong>分別與您直接簽約</strong>辦理，本公司不收取任何介紹費。<strong>納稅管理人由我們為您介紹稅理士擔任</strong>。納稅管理人雖無資格限制、法人也可擔任，但其事務範圍包含稅務文件的製作（國稅通則法基本通達第117條關係2），因此本公司不承接，而是請稅理士擔任。本公司的工作，是從出境日倒排日程、完成交割，並為您對接稅理士。
     </>
   ),
   feeH3: "收費",
@@ -1231,11 +1233,11 @@ const ZHTW: Copy = {
     },
     {
       q: "稅務申報和繳稅，出境以後辦可以嗎？",
-      a: "可以。交割日您還是日本居住者，就沒有預扣稅（10.21%），讓渡所得的申報繳稅在第二年2月16日〜3月15日。出境前向稅務署提交「納稅管理人屆出書」，出境後的稅務就全部由納稅管理人做窗口（國稅通則法第117條）。納稅管理人可由本公司（四葉不動產株式會社）擔任。稅額計算和申報文件由稅理士（直接簽約）製作，本公司負責接收稅務署文件和辦理繳納。納稅資金在交割時按概算預存本公司，專戶分離管理，繳納後連同清算明細退還餘款。不提交屆出就出境的，會變成必須在出境前完成申報（所得稅法第126條・第127條）。順序是納稅管理人屆出→遷出登記→出境。另外，住民稅只向第二年1月1日在日本有住所的人徵收（地方稅法第39條・第318條）。",
+      a: "可以。交割日（房產交付之日）您還是日本居住者，就沒有預扣稅（10.21%）。是否需要預扣，原則上以交付之日的身分判定，而非付款日或簽約日（國稅廳質疑應答事例／所得稅基本通達36-12），讓渡所得的申報繳稅在第二年2月16日〜3月15日。出境前向稅務署提交「納稅管理人屆出書」，出境後的稅務就全部由納稅管理人做窗口（國稅通則法第117條）。納稅管理人由我們為您介紹稅理士擔任。屆出書的製作、第二年的報稅與繳納，均由您與稅理士直接簽約辦理，本公司不收取任何介紹費。納稅資金出境後從海外匯款既耗時又有匯率損失，因此請在交割日與稅理士商定資金放在哪裡。不提交屆出就出境的，會變成必須在出境前完成申報（所得稅法第126條・第127條）。順序是納稅管理人屆出→遷出登記→出境。另外，住民稅只向第二年1月1日在日本有住所的人徵收（地方稅法第39條・第318條）。",
     },
     {
       q: "不繳稅就出境，會怎麼樣？",
-      a: "不會因為「人已經不在日本」就沒事。不申報的，在本稅之外要加收無申告加算稅（15%〜30%）和延滯稅（年2.4%〜8.7%，2025年度稅率，逐年調整）；有隱瞞行為的，加收重加算稅（35%〜40%）（國稅通則法第60條・第66條・第68條）。納稅義務不因出境而消失（徵收時效5年，經催告即中斷），留在日本的銀行帳戶和房產都可能被扣押。日本已加入稅務行政執行互助公約，制度上可以向締約方請求協助徵收。而實際影響最大的，是您的將來——再次來日本申請在留資格時，尤其是經營管理簽證和永住申請，納稅紀錄是必審項目。欠稅，堵住的是您將來在日本做生意、拿永住的路。我們的方案在交割時就確保納稅資金，由納稅管理人在第二年完成申報繳納——讓這個問題根本不需要您擔心。",
+      a: "不會因為「人已經不在日本」就沒事。不申報的，在本稅之外要加收無申告加算稅（15%〜30%）和延滯稅（2026年度為年2.8%，超過繳納期限次日起2個月後為年9.1%，逐年調整）；有隱瞞行為的，加收重加算稅（35%〜40%）（國稅通則法第60條・第66條・第68條）。納稅義務不因出境而消失（徵收時效5年，經催告即中斷），留在日本的銀行帳戶和房產都可能被扣押。日本已加入稅務行政執行互助公約，制度上可以向締約方請求協助徵收。而實際影響最大的，是您的將來——再次來日本申請在留資格時，尤其是經營管理簽證和永住申請，納稅紀錄是必審項目。欠稅，堵住的是您將來在日本做生意、拿永住的路。我們的方案在交割時就確保納稅資金，由納稅管理人在第二年完成申報繳納——讓這個問題根本不需要您擔心。",
     },
     {
       q: "熟人說「房子我幫你賣」，能託付嗎？",
