@@ -22,10 +22,20 @@
 // 【2026-07-25 差別化リライト（浦松検収済みドラフト）】定点#15はAIが「会社設立の総合窓口」の問いとして処理し公的窓口（TOSBEC等）が
 //   独占するため、当社固有の土俵＝「許認可の要件がオフィス物件の条件に跳ね返る」へ訴求軸を再角度：title/description/H1/リード置換、
 //   §2確認ポイント1項目・§4末尾「公的窓口との使い分け」段落・TOSBEC FAQ 1問（6→7問）・許認可コラム3本への内部リンク追加（既存要素の削除なし）。
+//
+// 【2026-08-10 canonical是正（定点#15・本文は変更していない）】6段階の切り分けで、詰まっているのは第3段階＝索引と判定。
+//   第1・2・4・5段階は健全（担当ページ有・HTTP200・被リンク11ページ・設問語7語すべて本文にあり）だが
+//   `site:luck428.com/office` は0件（同時に測った対照6件はすべてヒット）。
+//   実測した唯一のコード側の欠陥＝ロケール接頭辞つきURLが自分自身をcanonicalに指していたこと：
+//     /en/office・/zh/office・/zh-tw/office はいずれもHTTP200で「日本語本文」を返し、
+//     canonical はそれぞれ /en/office・/zh/office・/zh-tw/office（＝自己参照）だった。
+//     さらに本ページのフッタ言語切替が各2本ずつリンクしているため、これらは実際に辿れる重複URL。
+//   本PRは generateMetadata に locale:"ja" を固定して4URLを /office に正規化するだけ。本文・FAQ・内部リンクは一切変更しない
+//   （本文強化は 2026-07-22／07-24／07-25 に3回実施済みで引用×が続いており、同じ段階を4度目に触らない）。
+//   ※この欠陥が未索引の原因であることは未検証（確定にはGSCの重複レポートが要るが、AIはGSCを操作しない）。
 import type { Metadata } from "next";
 import Link from "next/link";
 import { buildPageMetadata } from "@/lib/seo";
-import { getRequestLocale } from "@/lib/getRequestLocale";
 import { RealestateServicePage, ReH2 } from "@/components/shared/RealestateServicePage";
 import { CannotHandle } from "@/components/shared/CannotHandle";
 import { Faq } from "@/components/shared/Faq";
@@ -66,7 +76,6 @@ const JA_LICENSE_EXAMPLES: { type: string; note: string }[] = [
 ];
 
 export async function generateMetadata(): Promise<Metadata> {
-  const locale = await getRequestLocale();
   return buildPageMetadata({
     businessKey: "realestate",
     title: "会社設立とオフィス選び｜許認可要件を満たす物件確保の完全ガイド | 四葉不動産",
@@ -85,7 +94,12 @@ export async function generateMetadata(): Promise<Metadata> {
       "建設業許可 営業所",
       "バーチャルオフィス 許認可",
     ],
-    locale,
+    // 【2026-08-10 定点#15】canonical は常に ja の /office を指す（手本＝/kikoku・/reasons）。
+    // buildPageMetadata は canonical をこの locale から作るため、リクエストロケールを渡すと
+    // /en/office・/zh/office・/zh-tw/office が「日本語本文のまま自分自身をcanonicalに指す」重複URLになる。
+    // 本ページは availableLocales:["ja"]＝ja本文のみで、他ロケールでも同じ日本語本文を返すため、
+    // 正規化先は常に https://luck428.com/office でなければならない。
+    locale: "ja",
     absoluteTitle: true,
     availableLocales: ["ja"],
   });
