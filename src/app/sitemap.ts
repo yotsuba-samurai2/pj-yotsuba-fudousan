@@ -1,6 +1,10 @@
 import type { MetadataRoute } from "next";
 import { headers } from "next/headers";
-import { getAllColumnsAllLocales, getAllLegalColumnsAllLocales } from "@/lib/columns";
+import {
+  getAllColumnsAllLocales,
+  getAllLegalColumnsAllLocales,
+  getAllLaborColumnsAllLocales,
+} from "@/lib/columns";
 import { canonicalUrl } from "@/lib/seo";
 import type { Column } from "@/lib/columns";
 
@@ -174,6 +178,51 @@ const STATIC_LEGAL: StaticPage[] = [
   { path: "/contact", changeFrequency: "yearly", priority: 0.5 },
 ];
 
+/**
+ * 社労士（/labor）。**開業まで sitemap に載せない。**
+ *
+ * 2026-08-09 に発見した欠落：本ファイルには labor の定義が一切なく、
+ * `sitemap()` は realestate と legal しか返していなかった。
+ * `BUSINESS_URLS.labor` は SR_LAUNCHED=true で追加されるが、それは
+ * canonical URL の組み立てと robots.ts の露出に効くだけで、
+ * **sitemap のエントリは1件も作られない**。
+ * このままだと 9月1日にフラグを立てても /labor 配下は sitemap に載らず、
+ * Search Console へ送れない（発見は内部リンク頼み）。
+ *
+ * ロケールは実装の availableLocales と一致させる。
+ * ※ /labor 配下は現時点で ja のみ公開。多言語版を出すときは
+ *   ページ側の availableLocales と本表の両方を同時に直す
+ *   （18_言語別存在マトリクス.md の突合対象）。
+ */
+const STATIC_LABOR: StaticPage[] = [
+  { path: "/labor", changeFrequency: "monthly", priority: 0.9, locales: ["ja"] },
+  { path: "/labor/services", changeFrequency: "monthly", priority: 0.8, locales: ["ja"] },
+  { path: "/labor/services/kaigo-roumu", changeFrequency: "monthly", priority: 0.8, locales: ["ja"] },
+  { path: "/labor/services/jinin-kijun-roumu", changeFrequency: "monthly", priority: 0.8, locales: ["ja"] },
+  { path: "/labor/services/shogu-kaizen", changeFrequency: "monthly", priority: 0.8, locales: ["ja"] },
+  { path: "/labor/services/joseikin", changeFrequency: "monthly", priority: 0.7, locales: ["ja"] },
+  { path: "/labor/services/gaikokujin-koyo", changeFrequency: "monthly", priority: 0.8, locales: ["ja"] },
+  { path: "/labor/ryokin", changeFrequency: "monthly", priority: 0.7, locales: ["ja"] },
+  { path: "/labor/nagare", changeFrequency: "yearly", priority: 0.6, locales: ["ja"] },
+  { path: "/labor/faq", changeFrequency: "monthly", priority: 0.6, locales: ["ja"] },
+  { path: "/labor/about", changeFrequency: "yearly", priority: 0.6, locales: ["ja"] },
+  { path: "/labor/column", changeFrequency: "daily", priority: 0.7, locales: ["ja"] },
+  { path: "/labor/contact", changeFrequency: "yearly", priority: 0.5, locales: ["ja"] },
+];
+
+/** 社労士サイトマップ。**SR_LAUNCHED=false の間は空配列を返す**（開業前は1件も出さない） */
+async function buildLaborSitemap(): Promise<MetadataRoute.Sitemap> {
+  if (process.env.NEXT_PUBLIC_SR_LAUNCHED !== "true") return [];
+  const now = new Date().toISOString();
+  const laborColumns = await getAllLaborColumnsAllLocales();
+  return [
+    ...STATIC_LABOR.flatMap((page) => expandStatic("labor", page, now)),
+    ...laborColumns.flatMap((col) =>
+      expandColumn("labor", `/column/${col.slug}`, col, now),
+    ),
+  ];
+}
+
 async function buildRealestateSitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date().toISOString();
   const columns = await getAllColumnsAllLocales();
@@ -215,5 +264,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     return buildLegalSitemap();
   }
 
-  return [...(await buildRealestateSitemap()), ...(await buildLegalSitemap())];
+  return [
+    ...(await buildRealestateSitemap()),
+    ...(await buildLegalSitemap()),
+    ...(await buildLaborSitemap()), // SR_LAUNCHED=false の間は空
+  ];
 }
