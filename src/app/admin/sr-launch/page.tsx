@@ -169,6 +169,70 @@ export default function SrLaunchPage() {
   const [scanHits, setScanHits] = useState<ScanHit[] | null>(null);
   const [keepBefore, setKeepBefore] = useState<Record<string, number> | null>(null);
   const [keepAfter, setKeepAfter] = useState<Record<string, number> | null>(null);
+  const [laborDump, setLaborDump] = useState<Record<string, unknown> | null>(null);
+  const [laborFlags, setLaborFlags] = useState<Array<{ path: string; term: string; value: string }> | null>(null);
+  const [dumping, setDumping] = useState(false);
+
+  /**
+   * (0) labor.* の書き出し（**読み取り専用**）。
+   *
+   * labor 配下の翻訳値は SR_LAUNCHED=false の間 app/layout.tsx が丸ごと削除するため、
+   * 本番HTMLからは読めない。しかし**9月1日に公開される**。
+   * 事前に中身を点検できるようにする。書き込みは一切しない。
+   */
+  const dumpLabor = async () => {
+    setDumping(true);
+    const out: Record<string, unknown> = {};
+    const flags: Array<{ path: string; term: string; value: string }> = [];
+    const BAD = [
+      // 事実に反する（開設するのは個人事務所であり法人ではない）
+      "社会保険労務士法人", "社會保險勞務士法人", "社会保险劳务士法人",
+      // 一括受任と読める（4書体）
+      "ワンストップ", "一括対応", "一括して受任", "まとめて契約", "まとめてお任せ",
+      "一体で受任", "一気通貫", "トータルで", "チームで対応", "連携して対応",
+      "一站式", "一條龍", "一条龙", "one-stop", "all-in-one", "end-to-end",
+      // 国数表記
+      "4カ国", "4個國家", "4个国家", "four countries",
+      // 未開業注記（9/1に消す対象）
+      "2026年9月開業予定", "預定2026年9月開業", "预定2026年9月开业", "September 2026",
+      "設立準備中", "籌備中", "筹备中", "準備中",
+    ];
+    const walk = (node: unknown, path: string) => {
+      if (typeof node === "string") {
+        for (const t of BAD) {
+          if (node.includes(t)) flags.push({ path, term: t, value: node });
+        }
+        return;
+      }
+      if (Array.isArray(node)) { node.forEach((v, i) => walk(v, `${path}.${i}`)); return; }
+      if (node && typeof node === "object") {
+        for (const [k, v] of Object.entries(node)) walk(v, `${path}.${k}`);
+      }
+    };
+    try {
+      for (const loc of LOCALES) {
+        const data = (await getTranslations(loc)) as unknown as Record<string, unknown> | null;
+        const labor = data?.labor ?? null;
+        out[loc] = labor;
+        if (labor) walk(labor, `${loc}.labor`);
+      }
+      setLaborDump(out);
+      setLaborFlags(flags);
+    } catch (e) {
+      setLaborDump({ error: String(e) });
+      setLaborFlags([]);
+    }
+    setDumping(false);
+  };
+
+  const downloadLabor = () => {
+    if (!laborDump) return;
+    const blob = new Blob([JSON.stringify(laborDump, null, 2)], { type: "application/json" });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = `labor-translations-${new Date().toISOString().slice(0, 10)}.json`;
+    a.click();
+  };
 
   /** (A) 翻訳データの適用 */
   const runTranslations = async () => {
@@ -363,6 +427,50 @@ export default function SrLaunchPage() {
           </p>
         )}
       </div>
+
+      <section className="mt-8">
+        <h2 className="font-bold">0. labor.* の点検（読み取り専用）</h2>
+        <p className="mt-1 text-text-muted">
+          <code>labor</code> 配下の翻訳値は、開業まで <code>app/layout.tsx</code> が丸ごと削除するため
+          <b>本番HTMLからは読めない</b>。しかし<b>9月1日に公開される</b>。
+          事前に中身を点検する。<b>書き込みは行わない。</b>
+        </p>
+        <div className="mt-3 flex gap-3">
+          <button onClick={dumpLabor} disabled={dumping} className="rounded border border-primary px-4 py-2 font-bold text-primary disabled:opacity-40">
+            {dumping ? "読み出し中…" : "labor.* を読み出して点検"}
+          </button>
+          {laborDump && (
+            <button onClick={downloadLabor} className="rounded border border-border px-4 py-2">
+              JSONで書き出す
+            </button>
+          )}
+        </div>
+
+        {laborFlags && (
+          <div className="mt-4">
+            {laborFlags.length === 0 ? (
+              <p className="text-green-700">✅ 要是正の語は見つかりませんでした。</p>
+            ) : (
+              <div className="rounded border border-red-400 bg-red-50 p-3">
+                <p className="font-bold">⚠️ 要是正 {laborFlags.length}件</p>
+                <p className="text-text-muted">
+                  「法人」は事実に反する（開設するのは個人事務所）。一括受任と読める語・国数表記・
+                  未開業注記は、<b>9月1日に公開される前に</b>直す。
+                </p>
+                <ul className="mt-2 space-y-2">
+                  {laborFlags.map((f, i) => (
+                    <li key={i} className="border-t border-border pt-2">
+                      <p className="font-mono text-xs text-text-muted">{f.path}</p>
+                      <p><b className="text-red-700">{f.term}</b></p>
+                      <p className="text-xs">{f.value}</p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        )}
+      </section>
 
       <section className="mt-8">
         <h2 className="font-bold">A. 翻訳データ（4言語 × 5キー）</h2>
