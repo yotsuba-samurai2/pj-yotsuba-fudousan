@@ -72,6 +72,7 @@ const COPY: Record<LangCode, ToushiCopy> = {
     ),
     internalLinks: [
       { href: "/toushi/group-home", label: "グループホーム物件" },
+      { href: "/column/yosekiritsu-hosei-tochine", label: "土地値と容積率の考え方" },
       { href: "/shataku", label: "借り上げ社宅の導入" },
       // 2026-07-24：定点#15強化（内部リンク補強）。ja本文のみ追加＝/officeはja先行公開のため他ロケールは対象外。
       { href: "/office", label: "会社設立とオフィス開設の完全ガイド" },
@@ -153,6 +154,7 @@ const COPY: Record<LangCode, ToushiCopy> = {
     ),
     internalLinks: [
       { href: "/toushi/group-home", label: "Group-Home Properties" },
+      { href: "/column/yosekiritsu-hosei-tochine", label: "Land Value and Floor Area Ratio" },
       { href: "/shataku", label: "Company Housing & Corporate Leasing" },
       { href: "/access", label: "Access & Fees" },
     ],
@@ -243,6 +245,7 @@ const COPY: Record<LangCode, ToushiCopy> = {
     ),
     internalLinks: [
       { href: "/toushi/group-home", label: "團體家屋物件" },
+      { href: "/column/yosekiritsu-hosei-tochine", label: "土地價格與容積率的關係" },
       { href: "/shataku", label: "員工宿舍・法人租賃" },
       { href: "/access", label: "交通與費用" },
     ],
@@ -333,6 +336,7 @@ const COPY: Record<LangCode, ToushiCopy> = {
     ),
     internalLinks: [
       { href: "/toushi/group-home", label: "团体家屋物件" },
+      { href: "/column/yosekiritsu-hosei-tochine", label: "土地价格与容积率的关系" },
       { href: "/shataku", label: "员工宿舍・法人租赁" },
       { href: "/access", label: "交通与费用" },
     ],
