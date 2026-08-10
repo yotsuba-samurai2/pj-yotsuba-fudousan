@@ -13,7 +13,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { buildPageMetadata } from "@/lib/seo";
-import { getRequestLocale } from "@/lib/getRequestLocale";
 import { RealestateServicePage, ReH2 } from "@/components/shared/RealestateServicePage";
 import { CannotHandle } from "@/components/shared/CannotHandle";
 import { Faq } from "@/components/shared/Faq";
@@ -43,7 +42,6 @@ const JA_CHECKS: { title: string; body: string }[] = [
 ];
 
 export async function generateMetadata(): Promise<Metadata> {
-  const locale = await getRequestLocale();
   return buildPageMetadata({
     businessKey: "realestate",
     title: "東京で民泊を始めるなら｜物件探しと住宅宿泊事業の届出の完全ガイド | 四葉不動産",
@@ -57,7 +55,10 @@ export async function generateMetadata(): Promise<Metadata> {
       "マンション 民泊 管理規約",
       "民泊 賃貸 転貸承諾",
     ],
-    locale,
+    // 【2026-08-10 canonical是正】availableLocales:["ja"] のページはロケール接頭辞つきURLでも
+    // 同じ日本語本文を返すため、canonical は常に ja を指す（手本＝/office・/kikoku・/reasons）。
+    // リクエストロケールを渡すと /en/・/zh/・/zh-tw/ が自己canonicalの重複URLになる。
+    locale: "ja",
     absoluteTitle: true,
     availableLocales: ["ja"],
   });

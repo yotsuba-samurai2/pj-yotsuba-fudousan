@@ -31,7 +31,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { buildPageMetadata } from "@/lib/seo";
-import { getRequestLocale } from "@/lib/getRequestLocale";
 import { LegalServicePage, H2 } from "@/components/shared/LegalServicePage";
 
 // 冒頭の回答ブロック（H1直下・AIが最初に拾う位置）
@@ -87,7 +86,6 @@ const JA_KAZOKU: { type: string; can: string }[] = [
 ];
 
 export async function generateMetadata(): Promise<Metadata> {
-  const locale = await getRequestLocale();
   return buildPageMetadata({
     businessKey: "legal",
     title: "外国人社員を海外から迎えるとき｜企業が押さえる手続きと期限 | 四葉行政書士事務所",
@@ -101,7 +99,10 @@ export async function generateMetadata(): Promise<Metadata> {
       "アポスティーユ 企業 手続き",
       "台湾 領事認証 書類",
     ],
-    locale,
+    // 【2026-08-10 canonical是正】availableLocales:["ja"] のページはロケール接頭辞つきURLでも
+    // 同じ日本語本文を返すため、canonical は常に ja を指す（手本＝/office・/kikoku・/reasons）。
+    // リクエストロケールを渡すと /en/・/zh/・/zh-tw/ が自己canonicalの重複URLになる。
+    locale: "ja",
     absoluteTitle: true,
     availableLocales: ["ja"],
   });

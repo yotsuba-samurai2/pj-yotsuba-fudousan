@@ -14,7 +14,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { buildPageMetadata } from "@/lib/seo";
-import { getRequestLocale } from "@/lib/getRequestLocale";
 import { RealestateServicePage, ReH2 } from "@/components/shared/RealestateServicePage";
 import { InlineCtaProperty } from "@/components/shared/InlineCtaProperty";
 import { CannotHandle } from "@/components/shared/CannotHandle";
@@ -60,7 +59,6 @@ const JA_ROLES: { work: string; who: string }[] = [
 ];
 
 export async function generateMetadata(): Promise<Metadata> {
-  const locale = await getRequestLocale();
   return buildPageMetadata({
     businessKey: "realestate",
     title: "東京で介護事業所を開設するなら｜物件探しと指定申請の完全ガイド | 四葉不動産",
@@ -74,7 +72,10 @@ export async function generateMetadata(): Promise<Metadata> {
       "介護 指定申請 行政書士",
       "介護事業所 開設 東京 文京区",
     ],
-    locale,
+    // 【2026-08-10 canonical是正】availableLocales:["ja"] のページはロケール接頭辞つきURLでも
+    // 同じ日本語本文を返すため、canonical は常に ja を指す（手本＝/office・/kikoku・/reasons）。
+    // リクエストロケールを渡すと /en/・/zh/・/zh-tw/ が自己canonicalの重複URLになる。
+    locale: "ja",
     absoluteTitle: true,
     availableLocales: ["ja"],
   });
