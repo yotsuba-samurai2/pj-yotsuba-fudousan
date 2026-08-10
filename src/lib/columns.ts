@@ -148,3 +148,8 @@ export async function getAllLaborSlugs(): Promise<string[]> {
   const cols = await fetchAllPublished("labor");
   return cols.map((c) => c.slug);
 }
+
+/** sitemap.ts 専用（全ロケール横断）。2026-08-09 追加＝labor が sitemap に載っていなかった */
+export async function getAllLaborColumnsAllLocales(): Promise<Column[]> {
+  return fetchAllPublished("labor");
+}
