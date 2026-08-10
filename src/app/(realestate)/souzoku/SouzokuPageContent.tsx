@@ -1025,12 +1025,11 @@ export default async function SouzokuPageContent() {
       {/* ─── 関連コラム ─── */}
       <RelatedColumnsSection columns={relatedColumns} locale={locale} />
 
-      {/* ─── 当社が対応できないこと（B-4・日本語版のみ・お問い合わせ導線の手前） ─── */}
-      {locale === "ja" && (
-        <div className="pb-14 sm:pb-20 md:pb-28">
-          <CannotHandle />
-        </div>
-      )}
+      {/* ─── 当社が対応できないこと（B-4・お問い合わせ導線の手前・全ロケール） ───
+          2026-08-09：日本語版のみのゲートを外した（2026-07-19 浦松指示の反映漏れ）。 */}
+      <div className="pb-14 sm:pb-20 md:pb-28">
+        <CannotHandle locale={locale} />
+      </div>
 
       {/* ─── CTA ─── */}
       <section className="border-t border-border bg-green-gradient py-14 sm:py-20 md:py-28">
