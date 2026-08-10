@@ -457,10 +457,13 @@ export default async function Page() {
         <p className="mt-2 text-xs text-text-muted">{c.rolesFootnote}</p>
       </div>
 
+      {/* 対応できないこと＝共通コンポーネント（確定文言）。
+          2026-08-09：isJa のゲートから出した。全ロケールで表示する
+          （業際・分離受任・紹介料授受なしは「中国語圏読者にこそ必要」＝2026-07-19 浦松指示） */}
+      <CannotHandle bare locale={locale} />
+
       {isJa && (
         <>
-          {/* 対応できないこと＝共通コンポーネント（確定文言） */}
-          <CannotHandle bare />
 
           {/* FAQPage JSON-LD＝faqJa参照（サイト内で文言一致） */}
           <Faq items={pickFaqJa(JA_FAQ_QUESTIONS)} heading="よくある質問" withJsonLd bare openFirst={false} />

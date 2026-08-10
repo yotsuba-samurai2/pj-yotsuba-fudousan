@@ -2097,12 +2097,13 @@ export default async function GroupHomePageContent() {
       {/* ─── 関連コラム ─── */}
       <RelatedColumnsSection columns={relatedColumns} locale={locale} />
 
-      {/* ─── 当社が対応できないこと（日本語版のみ・お問い合わせ導線の手前） ─── */}
-      {locale === "ja" && (
-        <div className="pb-14 sm:pb-20 md:pb-28">
-          <CannotHandle />
-        </div>
-      )}
+      {/* ─── 当社が対応できないこと（お問い合わせ導線の手前・全ロケール） ───
+          2026-08-09：日本語版のみのゲートを外した。業際・分離受任・紹介料授受なしの
+          表示は「中国語圏読者にこそ必要」（2026-07-19 浦松指示・CannotHandle.tsx 冒頭）。
+          コンポーネントは4言語の確定訳を持っており、locale を渡すだけでよい。 */}
+      <div className="pb-14 sm:pb-20 md:pb-28">
+        <CannotHandle locale={locale} />
+      </div>
 
       {/* ─── CTA ─── */}
       <section className="border-t border-border bg-green-gradient py-14 sm:py-20 md:py-28">

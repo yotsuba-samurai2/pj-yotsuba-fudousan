@@ -398,12 +398,14 @@ export default async function Page() {
       )}
 
       {isJa && (
-        <>
-          {/* FAQPage JSON-LD＝B-4の例外（浦松承認）。設問はB-3の40問を参照＝サイト内で文言一致 */}
-          <Faq items={pickFaqJa(JA_FAQ_QUESTIONS)} heading="よくある質問" withJsonLd bare openFirst={false} />
-          <CannotHandle bare />
-        </>
+        /* FAQPage JSON-LD＝B-4の例外（浦松承認）。設問はB-3の40問を参照＝サイト内で文言一致。
+           JSON-LD は日本語版のみで出す＝多言語で同一の FAQPage を重複出力しない */
+        <Faq items={pickFaqJa(JA_FAQ_QUESTIONS)} heading="よくある質問" withJsonLd bare openFirst={false} />
       )}
+
+      {/* 当社が対応できないこと＝全ロケールで出す（2026-08-09。Faq の ja ゲートに巻き込まれていた）。
+          業際・分離受任・紹介料授受なしの表示は「中国語圏読者にこそ必要」（2026-07-19 浦松指示） */}
+      <CannotHandle bare locale={locale} />
     </RealestateServicePage>
   );
 }

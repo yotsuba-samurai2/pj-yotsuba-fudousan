@@ -357,7 +357,7 @@ export default async function Page() {
         ))}
       </div>
 
-      <CannotHandle bare />
+      <CannotHandle bare locale={locale} />
     </RealestateServicePage>
   );
 }
