@@ -171,3 +171,78 @@ describe("スキャン語と保護対象", () => {
     }
   });
 });
+
+describe("labor.* の是正（2026-08-10 追加）", () => {
+  const laborPatches = (loc: LangCode) =>
+    SR_LAUNCH_TRANSLATION_PATCHES[loc].filter((p) => p.path.startsWith("labor."));
+
+  it.each(LOCALES)("%s：labor.* のパッチが13件ある", (loc) => {
+    expect(laborPatches(loc)).toHaveLength(13);
+  });
+
+  it.each(LOCALES)("%s：to 側に「法人」を残していない", (loc) => {
+    for (const p of laborPatches(loc)) {
+      for (const w of ["社会保険労務士法人", "社會保險勞務士法人", "社会保险劳务士法人", "社労士法人"]) {
+        expect(p.to).not.toContain(w);
+      }
+    }
+  });
+
+  it.each(LOCALES)("%s：to 側に一括受任と読める語を残していない", (loc) => {
+    for (const p of laborPatches(loc)) {
+      for (const w of ["ワンストップ", "一括対応", "一気通貫", "一站式", "一條龍", "one-stop", "all-in-one"]) {
+        expect(p.to.toLowerCase()).not.toContain(w.toLowerCase());
+      }
+    }
+  });
+
+  it.each(LOCALES)("%s：to 側に「法人化」「準備中」を残していない（法人化の予定はない）", (loc) => {
+    for (const p of laborPatches(loc)) {
+      for (const w of ["法人化", "設立準備中", "籌備中", "筹备中", "in preparation", "being established"]) {
+        expect(p.to).not.toContain(w);
+      }
+    }
+  });
+
+  it("★ 事業体をまたぐ記述には分離受任の明示が入っている", () => {
+    const MARK: Record<string, string> = {
+      ja: "別の契約",
+      en: "separate contract",
+      "zh-tw": "另行簽約",
+      zh: "另行签约",
+    };
+    for (const loc of LOCALES) {
+      for (const key of ["labor.homePage.faq.1.answer", "labor.homePage.representativeBio2", "labor.aboutPage.representativeBio2"]) {
+        const p = SR_LAUNCH_TRANSLATION_PATCHES[loc].find((x) => x.path === key);
+        expect(p, `${loc} / ${key}`).toBeDefined();
+        expect(p!.to, `${loc} / ${key}`).toContain(MARK[loc]);
+      }
+    }
+  });
+
+  it("★ 「四葉グループとして労務相談を承っている」と読める記述を残していない", () => {
+    for (const loc of LOCALES) {
+      for (const p of laborPatches(loc)) {
+        expect(p.to).not.toContain("四葉グループとして");
+        expect(p.to).not.toContain("under YOTSUBA GROUP");
+        expect(p.to).not.toContain("作為四葉グループ");
+        expect(p.to).not.toContain("作为四葉グループ");
+      }
+    }
+  });
+
+  it("meta.title / titleTemplate が事務所名になっている", () => {
+    const NAME: Record<string, string> = {
+      ja: "四葉社会保険労務士事務所",
+      en: "四葉社会保険労務士事務所",
+      "zh-tw": "四葉社會保險勞務士事務所",
+      zh: "四葉社会保険労務士事務所",
+    };
+    for (const loc of LOCALES) {
+      for (const key of ["labor.meta.title", "labor.meta.titleTemplate"]) {
+        const p = SR_LAUNCH_TRANSLATION_PATCHES[loc].find((x) => x.path === key);
+        expect(p?.to).toContain(NAME[loc]);
+      }
+    }
+  });
+});
