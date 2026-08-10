@@ -45,7 +45,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { buildPageMetadata } from "@/lib/seo";
-import { getRequestLocale } from "@/lib/getRequestLocale";
 import { LegalServicePage, H2 } from "@/components/shared/LegalServicePage";
 
 // 冒頭の回答ブロック（H1直下・AIが最初に拾う位置）＝定点#26「どこに依頼」#27「要件」への直答
@@ -93,7 +92,6 @@ const JA_WHEN: { item: string; state: string }[] = [
 ];
 
 export async function generateMetadata(): Promise<Metadata> {
-  const locale = await getRequestLocale();
   return buildPageMetadata({
     businessKey: "legal",
     path: "/legal/services/ikuseishuro-gaibu-kansa",
@@ -107,7 +105,10 @@ export async function generateMetadata(): Promise<Metadata> {
       "育成就労法 施行規則 第47条",
       "育成就労 2027年4月 施行",
     ],
-    locale,
+    // 【2026-08-10 canonical是正】availableLocales:["ja"] のページはロケール接頭辞つきURLでも
+    // 同じ日本語本文を返すため、canonical は常に ja を指す（手本＝/office・/kikoku・/reasons）。
+    // リクエストロケールを渡すと /en/・/zh/・/zh-tw/ が自己canonicalの重複URLになる。
+    locale: "ja",
     absoluteTitle: true,
     availableLocales: ["ja"],
   });

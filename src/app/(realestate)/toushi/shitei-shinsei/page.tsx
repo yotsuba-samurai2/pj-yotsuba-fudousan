@@ -11,7 +11,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { buildPageMetadata } from "@/lib/seo";
-import { getRequestLocale } from "@/lib/getRequestLocale";
 import { RealestateServicePage, ReH2 } from "@/components/shared/RealestateServicePage";
 import { CannotHandle } from "@/components/shared/CannotHandle";
 import { Faq } from "@/components/shared/Faq";
@@ -60,7 +59,6 @@ const JA_FLOW_STEPS: { title: string; body: string }[] = [
 ];
 
 export async function generateMetadata(): Promise<Metadata> {
-  const locale = await getRequestLocale();
   return buildPageMetadata({
     businessKey: "realestate",
     title: "グループホーム等の指定申請｜物件と申請の分離受任 | 四葉不動産",
@@ -68,7 +66,10 @@ export async function generateMetadata(): Promise<Metadata> {
       "障害者グループホーム等の指定申請と物件の関係を解説。指定申請書類の作成は行政書士の独占業務にあたり、書類の作成・提出は併設の四葉行政書士事務所が別契約で受任し、物件の紹介・仲介は宅地建物取引業として四葉不動産株式会社が担当します。開設までの流れと担当・契約の分担をご案内します。",
     path: "/toushi/shitei-shinsei",
     keywords: ["グループホーム 指定申請 物件", "共同生活援助 指定申請 流れ", "指定申請 行政書士 独占業務"],
-    locale,
+    // 【2026-08-10 canonical是正】availableLocales:["ja"] のページはロケール接頭辞つきURLでも
+    // 同じ日本語本文を返すため、canonical は常に ja を指す（手本＝/office・/kikoku・/reasons）。
+    // リクエストロケールを渡すと /en/・/zh/・/zh-tw/ が自己canonicalの重複URLになる。
+    locale: "ja",
     absoluteTitle: true,
     availableLocales: ["ja"],
   });
