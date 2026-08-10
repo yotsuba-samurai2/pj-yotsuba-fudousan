@@ -8,18 +8,62 @@
 //   （訳語は /global/chinese C-6-1 の確定訳に統一＝司法書士・税理士・行政書士の表記）。
 //   2026-07-20（翻訳チェック§C/§E）：/en も対応＝下記 TEXT.en / ARIA.en を追加（逐語訳）。
 // 既定は日本語（locale 未指定＝ja＝既存の全呼び出し元で出力は不変）。
+//
+// 2026-08-09：**開業（SR_LAUNCHED=true）で社労士の一文が自動的に切り替わるようにした。**
+//   開業後も「2026年9月の開業までお受けできません」が残ると事実に反する。
+//   本番実測（全277URL）で ja 10件・zh-tw 4件が出ていた（20B 第3-2節）。
+//   env 1行の切替で、未開業版 → 開業版 に入れ替わる。
+import { SR_LAUNCHED } from "@/lib/shared/office";
 import type { LangCode } from "@/config/languages";
 
-const TEXT: Partial<Record<LangCode, string>> = {
-  // 2026-07-29 浦松指示：「受任します」→「おつなぎします」。他事務所の受任を当社が約束する形にしない。
-  // あわせて「提携司法書士」「提携税理士」の「提携」を削除（U12＝書面での提携の有無が未確認。
-  // 指示書11「『提携税理士』『提携司法書士』『提携弁護士』と書かない」）。
-  ja: "当社が対応できないこと：紛争性のある相続案件の代理交渉（弁護士におつなぎします）、不動産登記の申請代理（司法書士におつなぎします）、相続税申告（税理士におつなぎします）。社会保険労務士業務は2026年9月の開業までお受けできません。各専門家とは分離受任・個別契約であり、当社が紹介料を受け取ることはありません。",
-  en: "What our company cannot handle: representation and negotiation in contested inheritance disputes (we will connect you with an attorney); filing real estate registration on your behalf (we will connect you with a Judicial Scrivener (司法書士)); and inheritance tax filing (we will connect you with a Tax Accountant (税理士)). Licensed social insurance and labor consultant (社会保険労務士) services cannot be accepted until our office opens in September 2026. Each specialist is engaged under a separate, individual contract, and our company does not receive any referral fee.",
-  "zh-tw":
-    "本公司無法承接的事項：具爭訟性之繼承案件的代理協商（將為您引介律師）、不動產登記的申請代理（將為您引介司法書士〔日本的登記申請代理專業資格〕）、遺產稅申報（將為您引介稅理士〔日本的稅務專業資格〕）。社會保險勞務士（日本語：社会保険労務士）業務在2026年9月開業之前無法受理。與各專家均為分離受任・個別簽約，本公司不會收取介紹費。",
-  zh: "本公司无法承接的事项：具争议性之继承案件的代理协商（将为您引介律师）、不动产登记的申请代理（将为您引介司法书士〔日本的登记申请代理专业资格〕）、遗产税申报（将为您引介税理士〔日本的税务专业资格〕）。社会保险劳务士（日本語：社会保険労務士）业务在2026年9月开业之前无法受理。与各专家均为分离受任・个别签约，本公司不会收取介绍费。",
+/**
+ * 社労士に関する一文。開業前と開業後で入れ替える。
+ * **事務所名は書かない**（法27条のソース漏れ対策＝SR_OFFICE_NAME 経由でないリテラルを置かない）。
+ */
+const SR_SENTENCE_BEFORE: Partial<Record<LangCode, string>> = {
+  ja: "社会保険労務士業務は2026年9月の開業までお受けできません。",
+  en: "Licensed social insurance and labor consultant (社会保険労務士) services cannot be accepted until our office opens in September 2026.",
+  "zh-tw": "社會保險勞務士（日本語：社会保険労務士）業務在2026年9月開業之前無法受理。",
+  zh: "社会保险劳务士（日本語：社会保険労務士）业务在2026年9月开业之前无法受理。",
 };
+
+const SR_SENTENCE_AFTER: Partial<Record<LangCode, string>> = {
+  ja: "社会保険労務士業務は、併設の社会保険労務士事務所が別契約で承ります。",
+  en: "Licensed social insurance and labor consultant (社会保険労務士) services are undertaken by the affiliated office under a separate contract.",
+  "zh-tw": "社會保險勞務士（日本語：社会保険労務士）業務由附設的社會保險勞務士事務所另行簽約承辦。",
+  zh: "社会保险劳务士（日本語：社会保険労務士）业务由附设的社会保险劳务士事务所另行签约承办。",
+};
+
+/** 社労士の一文を除いた本文（前半・後半で挟む） */
+const HEAD: Partial<Record<LangCode, string>> = {
+  // 2026-07-29 浦松指示：「受任します」→「おつなぎします」。他事務所の受任を当社が約束する形にしない。
+  // あわせて「提携司法書士」「提携税理士」の「提携」を削除（U12＝2026-08-06 に「書面はない」で確定）。
+  ja: "当社が対応できないこと：紛争性のある相続案件の代理交渉（弁護士におつなぎします）、不動産登記の申請代理（司法書士におつなぎします）、相続税申告（税理士におつなぎします）。",
+  en: "What our company cannot handle: representation and negotiation in contested inheritance disputes (we will connect you with an attorney); filing real estate registration on your behalf (we will connect you with a Judicial Scrivener (司法書士)); and inheritance tax filing (we will connect you with a Tax Accountant (税理士)).",
+  "zh-tw":
+    "本公司無法承接的事項：具爭訟性之繼承案件的代理協商（將為您引介律師）、不動產登記的申請代理（將為您引介司法書士〔日本的登記申請代理專業資格〕）、遺產稅申報（將為您引介稅理士〔日本的稅務專業資格〕）。",
+  zh: "本公司无法承接的事项：具争议性之继承案件的代理协商（将为您引介律师）、不动产登记的申请代理（将为您引介司法书士〔日本的登记申请代理专业资格〕）、遗产税申报（将为您引介税理士〔日本的税务专业资格〕）。",
+};
+
+const TAIL: Partial<Record<LangCode, string>> = {
+  ja: "各専門家とは分離受任・個別契約であり、当社が紹介料を受け取ることはありません。",
+  en: "Each specialist is engaged under a separate, individual contract, and our company does not receive any referral fee.",
+  "zh-tw": "與各專家均為分離受任・個別簽約，本公司不會收取介紹費。",
+  zh: "与各专家均为分离受任・个别签约，本公司不会收取介绍费。",
+};
+
+/**
+ * 開業状態に応じた全文を組み立てる。
+ *
+ * 文の区切りは、日本語・中国語は句点で詰め、英語は半角スペースを入れる。
+ * 切り出し前の確定文言と**一字一句同じ**になること（cannot-handle.test.ts が検査）。
+ */
+export function buildCannotHandleText(locale: LangCode, launched: boolean): string {
+  const l = (m: Partial<Record<LangCode, string>>) => m[locale] ?? m.ja ?? "";
+  const sep = locale === "en" ? " " : "";
+  const sr = launched ? l(SR_SENTENCE_AFTER) : l(SR_SENTENCE_BEFORE);
+  return [l(HEAD), sr, l(TAIL)].join(sep);
+}
 
 const ARIA: Partial<Record<LangCode, string>> = {
   ja: "当社が対応できないこと",
@@ -42,7 +86,7 @@ export function CannotHandle({ bare = false, locale = "ja" }: Props) {
       className={bare ? "" : "mx-auto max-w-3xl px-4 py-6"}
     >
       <p className="rounded-xl border border-border bg-surface p-4 text-sm leading-relaxed text-text-muted">
-        {TEXT[locale] ?? TEXT.ja}
+        {buildCannotHandleText(locale, SR_LAUNCHED)}
       </p>
     </section>
   );
