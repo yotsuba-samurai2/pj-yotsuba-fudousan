@@ -1,7 +1,9 @@
 // /souzoku/akiya（相続空き家の売却・活用・管理）＝タスクC-4（2026-07-19）＋C-6-2 中国語版（2026-07-19）
 // 方式＝RealestateServicePage（手本=/toushi/shitei-shinsei C-2）。多言語は locale 別 COPY マップ
-//   （手本=/global/chinese C-6-1）。ja / zh-tw / zh の3ロケール公開＝availableLocales と sitemap の locales を一致させる。
-//   en 版は未作成のため COPY に持たず ja へフォールバックする（存在しないロケールURLは広告しない）。
+//   （手本=/global/chinese C-6-1）。ja / en / zh-tw / zh の4ロケール公開＝availableLocales と sitemap の locales を一致させる。
+//   【2026-08-10 訂正】en 版は COPY に実在し、本番の /en/souzoku/akiya は英語本文（可視14,247字）を配信している。
+//   COPY.en が後から書かれたのに PAGE_LOCALES と sitemap の locales が3のまま取り残されており、
+//   実在するページを hreflang にも sitemap にも出していなかったため en を追加した。
 // 表示コンプライアンス（宅建業法・分離受任）：業務一体提供を示唆する語（ワンストップ／one-stop／一站式／
 //   一條龍 等）は全ロケールで使用禁止。可とするのは属性の事実と分離受任の明示のみ。
 // 翻訳の原則（C-6-2・C-6-1と同一）：日本語版にない事実・数値を訳で追加しない。構成・6セクション・FAQ5問は
@@ -32,7 +34,7 @@ import { Faq, type FaqItem } from "@/components/shared/Faq";
 import { pickFaqJa } from "@/data/faqJa";
 
 /** 本ページを公開するロケール（hreflang・sitemap と一致させる） */
-const PAGE_LOCALES: LangCode[] = ["ja", "zh-tw", "zh"];
+const PAGE_LOCALES: LangCode[] = ["ja", "en", "zh-tw", "zh"];
 
 // FAQPage（ja）＝faqJa（B-3の空き家分野5問）を参照
 const JA_FAQ_QUESTIONS = [

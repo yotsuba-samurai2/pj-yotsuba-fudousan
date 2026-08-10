@@ -1,7 +1,9 @@
 // /global/chinese（型A・中国語圏特化ハブ）＝タスクC-3（2026-07-19）＋C-6-1 中国語版（2026-07-19）
 // 方式＝RealestateServicePage（手本=/toushi/shitei-shinsei C-2）。多言語は locale 別 COPY マップ
-//   （手本=HomePageContent）。ja / zh-tw / zh の3ロケール公開＝availableLocales と sitemap の locales を一致させる。
-//   en 版は未作成のため COPY に持たず ja へフォールバックする（存在しないロケールURLは広告しない）。
+//   （手本=HomePageContent）。ja / en / zh-tw / zh の4ロケール公開＝availableLocales と sitemap の locales を一致させる。
+//   【2026-08-10 訂正】en 版は COPY に実在する（COPY.en は4ロケール中で最大の分量）のに、PAGE_LOCALES と
+//   sitemap の locales が3のまま取り残されていた。本番の /en/global/chinese は HTTP200 で英語本文を配信して
+//   いるのに hreflang にも sitemap にも出ていない＝実在するページを広告していなかったので en を追加した。
 // 表示コンプライアンス（宅建業法・分離受任）：業務一体提供を示唆する語（ワンストップ／one-stop／一站式／
 //   一條龍 等）は全ロケールで使用禁止。可とするのは属性の事実と分離受任の明示のみ。
 // 翻訳の原則（C-6-1・浦松承認）：日本語版にない事実・数値を訳で追加しない。構成・セクション・FAQは日本語版と同一。
@@ -28,7 +30,7 @@ import { Faq, type FaqItem } from "@/components/shared/Faq";
 import { pickFaqJa } from "@/data/faqJa";
 
 /** 本ページを公開するロケール（hreflang・sitemap と一致させる） */
-const PAGE_LOCALES: LangCode[] = ["ja", "zh-tw", "zh"];
+const PAGE_LOCALES: LangCode[] = ["ja", "en", "zh-tw", "zh"];
 
 // FAQPage（ja）＝faqJa（B-3既存2問＋C-3新規2問）を参照
 const JA_FAQ_QUESTIONS = [
