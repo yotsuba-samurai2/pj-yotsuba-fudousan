@@ -80,13 +80,14 @@ const STATIC_REALESTATE: StaticPage[] = [
   { path: "", changeFrequency: "weekly", priority: 1.0 },
   { path: "/souzoku", changeFrequency: "monthly", priority: 0.9 },
   { path: "/souzoku/nagare", changeFrequency: "monthly", priority: 0.7 },
-  // タスクC-4（2026-07-19）：相続空き家。C-6-2で zh-tw・zh を公開（en版は未作成のため除外）。
+  // タスクC-4（2026-07-19）：相続空き家。C-6-2で zh-tw・zh を公開。
+  // 【2026-08-10】en 版は COPY に実在し本番の /en/souzoku/akiya が英語本文を配信しているため en を追加。
   // ページ側の availableLocales（PAGE_LOCALES）と必ず一致させる＝存在しないロケールURLを広告しない。
   {
     path: "/souzoku/akiya",
     changeFrequency: "monthly",
     priority: 0.7,
-    locales: ["ja", "zh-tw", "zh"],
+    locales: ["ja", "en", "zh-tw", "zh"],
   },
   // 2026-07-22：グループホーム開設ピラー（#4/#5 最優先KPI）。物件＋指定申請の分離受任ハブ。手本＝souzoku（priority 0.9）。
   { path: "/group-home", changeFrequency: "monthly", priority: 0.9 },
@@ -122,13 +123,14 @@ const STATIC_REALESTATE: StaticPage[] = [
   // タスクC-2（2026-07-19）：指定申請と物件の分離受任。現フェーズ＝ja先行公開（/ryokinと同方式）
   { path: "/toushi/shitei-shinsei", changeFrequency: "monthly", priority: 0.7, locales: ["ja"] },
   { path: "/global", changeFrequency: "monthly", priority: 0.8 },
-  // タスクC-3（2026-07-19）：中国語圏特化ハブ。C-6-1で zh-tw・zh を公開（en版は未作成のため除外）。
+  // タスクC-3（2026-07-19）：中国語圏特化ハブ。C-6-1で zh-tw・zh を公開。
+  // 【2026-08-10】en 版は COPY に実在し本番の /en/global/chinese が英語本文を配信しているため en を追加。
   // ページ側の availableLocales（PAGE_LOCALES）と必ず一致させる＝存在しないロケールURLを広告しない。
   {
     path: "/global/chinese",
     changeFrequency: "monthly",
     priority: 0.7,
-    locales: ["ja", "zh-tw", "zh"],
+    locales: ["ja", "en", "zh-tw", "zh"],
   },
   // タスクC-5（2026-07-19）：相談事例（モデルケース）。現フェーズ＝ja先行公開（/ryokinと同方式）
   { path: "/jirei", changeFrequency: "monthly", priority: 0.7, locales: ["ja"] },
