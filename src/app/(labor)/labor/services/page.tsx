@@ -49,6 +49,13 @@ const ROWS = [
     label: "外国人雇用（介護・育成就労）の労務",
     audience: "外国人材の雇用契約・社会保険・受入準備を整えたい事業者",
   },
+  {
+    // 2026-08-11 新設。要件・依頼先は /legal/services/ikuseishuro-gaibu-kansa（主力）が扱う。
+    // 本ページは「監査で何を見られるか」＝備える側の主語で分ける（luck428-column-seo 第6条）
+    href: "/labor/services/gaibu-kansanin",
+    label: "外部監査で見られる労務",
+    audience: "育成就労の外部監査に備える監理支援機関・受入企業",
+  },
 ];
 
 export default async function LaborServicesPage() {
