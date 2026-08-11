@@ -32,6 +32,8 @@ type RyokinCopy = {
   sectionTitles: [string, string, string, string, string, string, string];
   /** 障害福祉セクションの直下に出す業際の注記（処遇改善加算の線引き） */
   shogaiNote: React.ReactNode;
+  /** 国際業務セクションの直下に出す注記（育成就労＝どちらの事務所で受けるか・独立性） */
+  ikuseishuroNote: React.ReactNode;
   footnote: string;
   procedureLead: string;
   procedureLink: string;
@@ -75,6 +77,18 @@ const COPY: Record<LangCode, RyokinCopy> = {
         。これらは社会保険労務士の業務で、四葉社会保険労務士事務所
         {SR_LAUNCHED ? "が別契約でお受けします" : "（2026年9月開業予定・現時点では未開業）が、開業後に別契約でお受けします"}
         。別の事業体のため、それぞれ別々にご契約いただきます（紹介料の授受はありません）。
+      </>
+    ),
+    ikuseishuroNote: (
+      <>
+        <strong>育成就労（2027年4月施行）について</strong>
+        ：<strong>監理支援機関の許可申請書類の作成</strong>は行政書士の業務で、当事務所がお受けします。
+        <strong>外部監査人</strong>は、施行規則が弁護士・社会保険労務士・行政書士を列挙しているとおり
+        いずれの資格でも就任でき、当事務所と四葉社会保険労務士事務所
+        {SR_LAUNCHED ? "" : "（2026年9月開業予定・現時点では未開業）"}のどちらでもお引き受けできます。
+        ただし<strong>独立性の確保</strong>のため、外部監査人をお引き受けした監理支援機関の関係先とは労務の顧問契約を結びません。
+        この扱いは、どちらの事務所で受けた場合にも同じです。
+        なお<strong>許可申請の受付開始時期は公表されていません</strong>。制度が始まる前の段階から、事前のご相談を承ります。
       </>
     ),
     footnote:
@@ -122,6 +136,21 @@ const COPY: Record<LangCode, RyokinCopy> = {
         . The two are separate businesses, so you contract with each of them separately. No referral fees are exchanged.
       </>
     ),
+    ikuseishuroNote: (
+      <>
+        <strong>On the training-employment (ikusei-shuro) system, effective April 2027</strong>:{" "}
+        <strong>preparing the permit application for a supervising and support organization</strong> is
+        gyoseishoshi work, and this office handles it. The <strong>external auditor</strong> role can be
+        filled by any of the qualifications the implementing regulation lists — attorney, licensed social
+        insurance and labor consultant, or gyoseishoshi — so either this office or 四葉社会保険労務士事務所
+        {SR_LAUNCHED ? "" : " (opening September 2026; not yet in operation)"} can take it on.
+        To preserve <strong>independence</strong>, however, we do not enter into a labor retainer with parties
+        related to a supervising and support organization whose external auditor we serve as. This applies
+        whichever of the two offices takes the role.{" "}
+        <strong>The date on which permit applications begin to be accepted has not been announced.</strong>{" "}
+        We accept inquiries in advance, before the system starts.
+      </>
+    ),
     footnote:
       "* All amounts are indicative and include consumption tax. Where fees vary by case, a written estimate is provided before engagement. Only fixed amounts are output as structured data (PriceSpecification).",
     procedureLead: "How to engage us → ",
@@ -164,6 +193,18 @@ const COPY: Record<LangCode, RyokinCopy> = {
         。這些屬社會保險勞務士的業務，由四葉社会保険労務士事務所
         {SR_LAUNCHED ? "另行簽約承辦" : "（預定2026年9月開業・現階段尚未開業）於開業後另行簽約承辦"}
         。兩者為不同的事業體，須分別簽約（不收受介紹費）。
+      </>
+    ),
+    ikuseishuroNote: (
+      <>
+        <strong>關於育成就勞（2027年4月施行）</strong>
+        ：<strong>監理支援機關的許可申請文件製作</strong>屬行政書士的業務，由本事務所承辦。
+        <strong>外部稽核人員</strong>依施行規則所列舉，律師、社會保險勞務士、行政書士任一資格皆可就任，
+        本事務所與四葉社会保険労務士事務所
+        {SR_LAUNCHED ? "" : "（預定2026年9月開業・現階段尚未開業）"}皆可承辦。
+        惟為確保<strong>獨立性</strong>，本所不與擔任外部稽核人員之監理支援機關的關係方締結勞務顧問契約。
+        此一處理方式，不論由哪一個事務所承辦皆相同。
+        另<strong>許可申請的受理開始時期尚未公布</strong>。制度施行前的階段，即可受理事前諮詢。
       </>
     ),
     footnote:
@@ -210,6 +251,18 @@ const COPY: Record<LangCode, RyokinCopy> = {
         。两者为不同的事业体，须分别签约（不收受介绍费）。
       </>
     ),
+    ikuseishuroNote: (
+      <>
+        <strong>关于育成就劳（2027年4月施行）</strong>
+        ：<strong>监理支援机构的许可申请文件制作</strong>属行政书士的业务，由本事务所承办。
+        <strong>外部审计人员</strong>依施行规则所列举，律师、社会保险劳务士、行政书士任一资格皆可就任，
+        本事务所与四葉社会保険労務士事務所
+        {SR_LAUNCHED ? "" : "（预定2026年9月开业・现阶段尚未开业）"}皆可承办。
+        惟为确保<strong>独立性</strong>，本所不与担任外部审计人员之监理支援机构的关系方缔结劳务顾问契约。
+        此一处理方式，不论由哪一个事务所承办皆相同。
+        另<strong>许可申请的受理开始时期尚未公布</strong>。制度施行前的阶段，即可受理事前咨询。
+      </>
+    ),
     footnote:
       "※金额均为含税参考值。若因案件而变动，将于签约前以书面明示估价。仅确定金额输出为结构化数据（PriceSpecification）。",
     procedureLead: "委托流程 → ",
@@ -232,7 +285,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 // 2026-08-11：行単位の遷移先。設定した行は名称がリンクになる（定点#26・#27）
 type Row = { name: string; unit: string; price: string; jitsuhi?: string; value?: number; href?: string };
-type Section = { title: string; href?: string; rows: Row[]; hasJitsuhi?: boolean; noteKey?: "shogaiNote" };
+type Section = { title: string; href?: string; rows: Row[]; hasJitsuhi?: boolean; noteKey?: "shogaiNote" | "ikuseishuroNote" };
 
 const SECTIONS: Section[] = [
   {
@@ -264,6 +317,7 @@ const SECTIONS: Section[] = [
     title: "国際業務（在留資格・帰化・認証／中国語対応）",
     href: "/legal/services/visa",
     hasJitsuhi: true,
+    noteKey: "ikuseishuroNote",
     rows: [
       { name: "経営・管理ビザ申請", unit: "1件", price: "別途お見積り", jitsuhi: "—" },
       { name: "永住許可申請", unit: "1件", price: "275,000円〜", jitsuhi: "8,000円" },
@@ -285,7 +339,13 @@ const SECTIONS: Section[] = [
       // 2026-08-11：上の意図に対して href が入っておらず、備考の文言だけで実際のリンクが無かった。
       // GSCのURL検査で当該ページが「URL が Google に認識されていません」＝参照元ページ検出されず、
       // 内部リンクが実質2ページ（/legal/services・/legal/services/visa）しか無いことを実測したため href を補う。
-      { name: "〔予約・準備中〕育成就労 外部監査人／監理支援機関許可", unit: "月額/件", price: "別途お見積り（2027年4月施行・予約受付）", jitsuhi: "詳細は「育成就労の外部監査人」のページ", href: "/legal/services/ikuseishuro-gaibu-kansa" },
+      // 2026-08-12：1行に2業務が混在していた。担当できる事務所も単位も違うため分けた。
+      //   ・監理支援機関の許可申請＝行政書士の業務（当事務所のみ）／1件
+      //   ・外部監査人＝弁護士・社労士・行政書士のいずれでも就任可／事業所ごとに3か月に1回以上
+      // 「予約受付」は入管の受付が始まっているように読めるため外した（受付開始時期は未公表）。
+      // どちらの事務所で受けられるか・独立性の制約は ikuseishuroNote（表の下）に書いている。
+      { name: "〔2027年4月施行〕監理支援機関 許可申請", unit: "1件", price: "別途お見積り", jitsuhi: "—", href: "/legal/services/ikuseishuro-gaibu-kansa" },
+      { name: "〔2027年4月施行〕育成就労 外部監査人 就任・定期監査", unit: "1回", price: "別途お見積り", jitsuhi: "—", href: "/legal/services/ikuseishuro-gaibu-kansa" },
     ],
   },
   {
