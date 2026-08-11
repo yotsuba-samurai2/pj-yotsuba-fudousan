@@ -145,6 +145,9 @@ const STATIC_REALESTATE: StaticPage[] = [
   { path: "/network", changeFrequency: "monthly", priority: 0.7, locales: ["ja"] },
   // タスクB-1（2026-07-19）：不動産・料金ページ。C-6-3（2026-07-19）で en/zh-tw/zh を公開＝locales指定を解除（全4ロケール）
   { path: "/ryokin", changeFrequency: "monthly", priority: 0.8 },
+  // 2026-08-11：転換側の受け皿。ご依頼から引渡しまでの実務（書類・費用の支払時期）。ja先行。
+  // /souzoku/nagare（相続という入口）・/legal/nagare（行政書士業務）とは主語が別＝役割分担はページ冒頭に記載。
+  { path: "/nagare", changeFrequency: "monthly", priority: 0.8, locales: ["ja"] },
   { path: "/faq", changeFrequency: "monthly", priority: 0.6 },
   { path: "/services", changeFrequency: "monthly", priority: 0.8 },
   { path: "/about", changeFrequency: "monthly", priority: 0.7 },
