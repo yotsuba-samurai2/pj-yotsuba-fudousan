@@ -109,7 +109,7 @@ export default function SeedLeavingJapanPage() {
         <p className="text-amber-900">
           <strong>9月分7本・10月分4本は公開済み</strong>なので、再実行しても公開状態のまま本文と翻訳が更新されるだけです。
           <strong>11月分6本（B3・B6・C6・D4・D3・B2）は新規</strong>で、下書きとして入ります。
-          11月分は日本語のみで、繁体字・簡体字・英語は別途投入します。
+          11月分も繁体字・簡体字・英語を含みます。
         </p>
         <p className="text-amber-900">
           10月分の <code>date</code> は投入日（2026-08-10）、11月分は（2026-08-11）を入れてあります。
