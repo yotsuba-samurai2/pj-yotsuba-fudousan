@@ -55,6 +55,13 @@ export default async function Page() {
             在留資格・ビザ申請（四葉行政書士事務所）
           </Link>
           ／
+          <Link
+            href={addLocalePrefix("/legal/services/gaikokujin-shain", locale)}
+            className="text-primary underline"
+          >
+            海外から社員を迎えるときの手順（四葉行政書士事務所）
+          </Link>
+          ／
           <Link href={addLocalePrefix("/shataku", locale)} className="text-primary underline">
             借り上げ社宅の導入（四葉不動産）
           </Link>
