@@ -1,5 +1,12 @@
-// /labor/ryokin（型C・料金）＝原稿_社労士 #6（開業後公開・SR_LAUNCHED=falseの間は404）
-// JSON-LD＝Service＋PriceSpecification(確定値のみ)。C8（→/legal/ryokin）はSR_LAUNCHEDで自動開通。
+// /labor/ryokin（型C・料金）＝開業後公開（SR_LAUNCHED=falseの間は404）
+// 2026-08-11 全面改訂：報酬額表 v18（決定済み30件）に差し替え。
+//   ・顧問料は相談料。手続はすべてスポット。手続だけの依頼は受けない
+//   ・給与計算は顧問契約とセット（1人あたり月1,100円・基本料なし）
+//   ・障害福祉レーンは廃止し本体へ統合
+//   ・顧問先割引という区分はない（手続のみの依頼を受けないため、対象が存在しない）
+//   ・★顧問料÷11,000の「ご相談時間の目安」は契約書にのみ記載。本ページには出さない（N-9）
+// JSON-LD＝Service＋PriceSpecification（「〜」「お見積り」を含まない確定値のみ）。
+// C8（→/legal/ryokin）はSR_LAUNCHEDで自動開通。
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo";
 import { getRequestLocale } from "@/lib/getRequestLocale";
@@ -20,7 +27,7 @@ export async function generateMetadata(): Promise<Metadata> {
     businessKey: "labor",
     title: "料金｜四葉社会保険労務士事務所",
     description:
-      "四葉社会保険労務士事務所の料金を業務ごとに掲載します。顧問契約、処遇改善加算サポート、雇用関係助成金、外国人雇用の労務。事案により変動する場合は個別にお見積りし、ご契約前に書面で明示します。まずはご相談ください。",
+      "四葉社会保険労務士事務所の料金です。顧問料は労務のご相談に対する対価で、ご相談は回数・時間の制限なく承ります。労働社会保険の手続は届出ごとの料金を都度申し受けます。給与計算は従業員1人あたり月1,100円。文京区小日向・茗荷谷駅徒歩5分。",
     path: "/labor/ryokin",
     locale,
     absoluteTitle: true,
@@ -28,63 +35,147 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 type Row = { name: string; unit: string; price: string; value?: number };
-type Section = { title: string; note?: string; rows: Row[] };
+type Section = { title: string; lead?: string; note?: string; rows: Row[] };
 
 const SECTIONS: Section[] = [
   {
-    // 2026-07-29 浦松指示：内部呼称の「松竹梅＋」を削除
-    title: "顧問",
-    note: "人数階段式（労務顧問トータル・税込）：〜4名 22,000／5〜9名 27,500／10〜19名 33,000／20〜29名 38,500／30〜49名 44,000／50名〜別途。年度更新・算定基礎届・就業規則・助成金は別途（顧問先割引）。",
+    title: "顧問（ご相談）",
+    lead: "顧問料は、労務のご相談に対する対価です。ご相談は回数・時間の制限なく承ります。",
+    note: "従業員数は被保険者数を目安に判断します。手続・給与計算・規程の作成は顧問料に含まれません（下記のとおり別途申し受けます）。",
     rows: [
-      { name: "プレミアム顧問（手続＋給与計算込み）", unit: "月額", price: "44,000円〜（人数階段式）" },
-      // 2026-07-29 浦松指示：内部呼称の「※主力」を削除
-      { name: "労務顧問（トータル・手続込み）", unit: "月額", price: "22,000円〜（人数階段式）" },
-      { name: "アドバイザリー顧問（相談のみ）", unit: "月額", price: "11,000円〜（人数階段式）" },
+      { name: "〜4人", unit: "月額", price: "22,000円", value: 22000 },
+      { name: "5〜9人", unit: "月額", price: "33,000円", value: 33000 },
+      { name: "10〜14人", unit: "月額", price: "44,000円", value: 44000 },
+      { name: "15〜19人", unit: "月額", price: "55,000円", value: 55000 },
+      { name: "20〜24人", unit: "月額", price: "66,000円", value: 66000 },
+      { name: "25〜29人", unit: "月額", price: "77,000円", value: 77000 },
+      { name: "30〜39人", unit: "月額", price: "88,000円", value: 88000 },
+      { name: "40〜49人", unit: "月額", price: "99,000円", value: 99000 },
+      { name: "50〜59人", unit: "月額", price: "110,000円", value: 110000 },
+      { name: "60〜69人", unit: "月額", price: "121,000円", value: 121000 },
+      { name: "70〜79人", unit: "月額", price: "132,000円", value: 132000 },
+      { name: "80〜89人", unit: "月額", price: "143,000円", value: 143000 },
+      { name: "90〜99人", unit: "月額", price: "154,000円", value: 154000 },
+      { name: "100人〜", unit: "月額", price: "お見積り" },
     ],
   },
   {
-    title: "手続代行",
+    title: "ご相談（顧問契約前）",
+    note: "顧問契約に至らない場合の2回目以降に申し受けます。顧問契約後のご相談は顧問料に含まれます。",
     rows: [
-      { name: "入社・退社手続", unit: "1件", price: "顧問先：顧問料に含む／非顧問スポット 7,700円" },
-      { name: "社会保険・労働保険 新規適用", unit: "一式", price: "27,500円〜" },
-      { name: "社会保険 算定基礎届／労働保険 年度更新", unit: "一式", price: "各 16,500円〜" },
+      { name: "初めてのご相談", unit: "60分まで", price: "無料" },
+      { name: "2回目以降のご相談", unit: "1時間", price: "11,000円", value: 11000 },
     ],
   },
   {
-    title: "規程・その他",
+    title: "給与計算",
+    lead: "顧問契約とセットのオプションです。給与計算だけのご依頼は承っておりません。",
+    note: "基本料はありません。勤怠の打刻管理と年末調整は含みません（年末調整は税理士の業務です）。",
     rows: [
-      // 2026-07-29 浦松指示：万円表記を円表記へ統一（他の項目と単位をそろえる）
-      { name: "就業規則 新規作成", unit: "一式", price: "目安 50,000〜200,000円（規模・内容で変動・顧問先割引）" },
+      { name: "給与計算", unit: "1名／月", price: "1,100円", value: 1100 },
+      { name: "住民税 特別徴収の異動届", unit: "1件", price: "お見積り" },
+    ],
+  },
+  {
+    title: "手続代行（適用）",
+    rows: [
+      { name: "社会保険 新規適用", unit: "1件", price: "29,700円", value: 29700 },
+      { name: "労働保険 新規適用", unit: "1件", price: "29,700円", value: 29700 },
+      { name: "事業所 各種変更届", unit: "1件", price: "8,800円", value: 8800 },
+    ],
+  },
+  {
+    title: "手続代行（入退社・扶養）",
+    note: "届出ごとの料金です。入社1名を社会保険・雇用保険の両方で承る場合は7,920円になります。",
+    rows: [
+      { name: "社会保険 資格取得届", unit: "1名", price: "3,960円", value: 3960 },
+      { name: "雇用保険 資格取得届", unit: "1名", price: "3,960円", value: 3960 },
+      { name: "社会保険 資格喪失届", unit: "1名", price: "3,960円", value: 3960 },
+      { name: "雇用保険 資格喪失届", unit: "1名", price: "3,960円", value: 3960 },
+      { name: "被扶養者（異動）届", unit: "1名", price: "3,960円", value: 3960 },
+      { name: "月額変更届", unit: "1件", price: "5,500円", value: 5500 },
+    ],
+  },
+  {
+    title: "手続代行（年次・給付）",
+    note: "算定基礎届・年度更新は10名を超える場合、10名ごとに加算します。",
+    rows: [
+      { name: "社会保険 算定基礎届", unit: "一式", price: "23,100円〜" },
+      { name: "労働保険 年度更新", unit: "一式", price: "23,100円〜" },
+      { name: "賞与支払届", unit: "1回", price: "6,600円〜" },
+      { name: "傷病手当金 申請", unit: "1件", price: "22,000円", value: 22000 },
+      { name: "出産手当金 申請", unit: "1件", price: "22,000円", value: 22000 },
+      { name: "育児休業給付金", unit: "1件", price: "初回 39,600円／2回目以降 9,240円〜" },
+    ],
+  },
+  {
+    title: "規程",
+    note: "当事務所が作成した規程の法改正対応（該当条文の改定と届出）は、顧問料に含まれます。回数の制限はありません。会社の都合による改定は「就業規則 変更」の料金を申し受けます。",
+    rows: [
+      { name: "就業規則 新規作成", unit: "一式", price: "88,000〜220,000円（規模・規程の本数で変動）" },
       { name: "就業規則 変更", unit: "一式", price: "44,000円〜" },
+      { name: "賃金規程 作成", unit: "1件", price: "49,800円", value: 49800 },
+      { name: "育児介護休業規程 作成", unit: "1件", price: "79,800円", value: 79800 },
+      { name: "ハラスメント防止規程 作成", unit: "1件", price: "11,000円", value: 11000 },
       { name: "社宅規程 作成", unit: "1件", price: "38,500円", value: 38500 },
       { name: "出張旅費規程 作成", unit: "1件", price: "36,300円", value: 36300 },
-      { name: "助成金申請代行（顧問先限定）", unit: "一式", price: "別途お見積り（顧問契約先のみ受任・着手金なし）" },
-      { name: "外国人雇用 無料相談（中国語対応）", unit: "—", price: "無料" },
-      { name: "外国人雇用×募集コンサル（スポット）", unit: "—", price: "年50,000円〜／継続してのご支援は月額" },
     ],
   },
   {
-    title: "障害福祉の労務",
+    title: "加算・募集・調査",
     rows: [
-      // 2026-07-29 浦松指示：（〜10名）→（〜5名）。上の人数階段式「10〜19名 33,000」と
-      // 同額で重なって見えたため、障害福祉の専門顧問として区分を分ける
-      { name: "障害福祉 労務顧問（〜5名）", unit: "月額", price: "33,000円", value: 33000 },
-      { name: "障害福祉 就業規則＋賃金規程（処遇改善加算の賃金要件設計込み）", unit: "一式", price: "220,000円", value: 220000 },
-      { name: "障害福祉 処遇改善加算 算定・実績支援（社労士視点）", unit: "1件", price: "44,000〜66,000円 or 顧問内" },
-      { name: "障害福祉 算定基礎届／年度更新（〜9名）", unit: "1件", price: "27,500円", value: 27500 },
-      { name: "障害福祉 助成金（キャリアアップ等）", unit: "一式", price: "別途お見積り（着手金なし・紹介料なし）" },
-      { name: "障害福祉 労基署調査立会・是正対応", unit: "1件", price: "55,000〜110,000円" },
+      { name: "処遇改善加算 賃金要件の設計・算定支援", unit: "1件", price: "お見積り" },
+      { name: "募集・採用コンサルタント", unit: "一式", price: "お見積り" },
+      { name: "労基署調査・是正対応", unit: "1件", price: "55,000〜110,000円" },
+      { name: "従業員説明会の開催", unit: "1回", price: "55,000円", value: 55000 },
+      { name: "労働者代表の選出支援", unit: "—", price: "無料" },
+      { name: "外国人雇用のご相談（中国語対応）", unit: "—", price: "顧問料に含む" },
     ],
   },
   {
-    title: "障害年金（親なき後・当事者家族向け）※社労士独占（年金裁定請求代理）",
-    note: "着手金・成功報酬の額は税込です。診断書料等の実費は別途。障害年金の裁定請求代理は社会保険労務士の独占業務です。",
+    title: "助成金",
+    note: "着手金はいただきません。紹介料の授受も行いません。",
+    rows: [
+      { name: "助成金 申請代行（顧問先限定）", unit: "一式", price: "着手金なし ＋ 成功報酬 支給額の20%" },
+    ],
+  },
+  {
+    title: "外部監査人（監理支援機関のお客さま）",
+    lead: "顧問契約は不要です。監理支援機関から直接お受けします。",
+    note: "外部監査人をお引き受けした監理支援機関の関係先とは、労務の顧問契約を結びません。既存の顧問先が加入している監理支援機関の外部監査人も、お引き受けしません。",
+    rows: [
+      { name: "外部監査人 就任・定期監査", unit: "1回", price: "お見積り" },
+      { name: "実地確認への同行", unit: "1回", price: "上記のお見積りに含みます" },
+    ],
+  },
+  {
+    title: "障害年金（個人のお客さま）",
+    lead: "顧問契約は不要です。ご本人・ご家族から直接お受けします。",
+    note: "着手金・成功報酬の額は税込です。診断書料等の実費は別途申し受けます。障害年金の裁定請求の代理は社会保険労務士の業務です。",
     rows: [
       { name: "障害年金 裁定請求（新規）", unit: "1件", price: "着手金 30,000円 ＋ 成功報酬 年金3ヶ月分" },
-      { name: "障害年金 裁定請求（遡及請求あり）", unit: "1件", price: "上記 ＋ 遡及額の15%（加算）" },
+      { name: "障害年金 裁定請求（遡及請求あり）", unit: "1件", price: "上記 ＋ 遡及額の15%" },
       { name: "事務手数料・実費", unit: "—", price: "郵送・診断書料・書類取得等の実費は別途" },
     ],
   },
+];
+
+/** 当事務所では取り扱わない業務。おつなぎ先を明示する（分離受任） */
+const NOT_HANDLED: { name: string; to: string }[] = [
+  { name: "年末調整、扶養控除・賃貸料相当額・非課税限度額などの税務判断", to: "税理士" },
+  { name: "法人登記の変更", to: "司法書士" },
+  { name: "離職理由をめぐる争いなど、紛争性が生じた事案", to: "弁護士" },
+  {
+    name: "在留資格の申請書類の作成・申請取次",
+    to: "四葉行政書士事務所（別事業体・別々にご契約いただきます）",
+  },
+  {
+    name: "処遇改善加算の計画書・実績報告書の作成と指定権者への提出",
+    to: "四葉行政書士事務所（同上）",
+  },
+  { name: "補助金の申請", to: "四葉行政書士事務所（同上）" },
+  { name: "監理支援機関の許可申請書類の作成", to: "四葉行政書士事務所（同上）" },
+  { name: "求職者の紹介・あっせん、応募者の面接代行、求人媒体の運用代行", to: "取り扱っておりません" },
 ];
 
 function jsonLd() {
@@ -93,7 +184,7 @@ function jsonLd() {
       .filter((r) => typeof r.value === "number")
       .map((r) => ({
         "@type": "Offer",
-        name: r.name,
+        name: `${s.title}／${r.name}`,
         priceSpecification: {
           "@type": "PriceSpecification",
           price: r.value,
@@ -127,7 +218,13 @@ export default async function Page() {
         <header className="pt-2">
           <h1 className="font-serif text-2xl font-semibold text-ink sm:text-3xl">料金</h1>
           <p className="mt-3 leading-relaxed text-text">
-            四葉社会保険労務士事務所の料金を業務ごとに掲載します。<strong>事案により変動する場合は、ご契約前に個別のお見積りを書面でご提示</strong>します。
+            <strong>顧問料は、労務のご相談に対する対価です。</strong>
+            ご相談は回数・時間の制限なく承ります。労働社会保険の手続は、顧問先の方も届出ごとの料金を都度申し受けます。
+          </p>
+          <p className="mt-3 leading-relaxed text-text">
+            <strong>手続だけのご依頼は承っておりません。</strong>
+            ご相談を伴わずに手続だけをお受けすると、実情を把握しないまま誤った前提で処理してしまうおそれがあるためです。法人・個人事業主のお客さまは顧問契約を前提としてお受けします。
+            <strong>障害年金（個人のお客さま）と外部監査人（監理支援機関のお客さま）は、顧問契約を前提としません。</strong>
           </p>
         </header>
 
@@ -137,13 +234,14 @@ export default async function Page() {
               <h2 className="border-l-4 border-primary pl-2 font-serif text-lg font-semibold text-ink">
                 {s.title}
               </h2>
+              {s.lead && <p className="mt-2 text-sm leading-relaxed text-text">{s.lead}</p>}
               {/* PC＝表 */}
               <table className="mt-3 hidden w-full border-collapse text-sm sm:table">
                 <thead>
                   <tr className="bg-primary-tint text-left">
                     <th className="border border-border px-3 py-2">サービス</th>
                     <th className="border border-border px-3 py-2 whitespace-nowrap">単位</th>
-                    <th className="border border-border px-3 py-2 whitespace-nowrap">税込目安</th>
+                    <th className="border border-border px-3 py-2 whitespace-nowrap">税込</th>
                   </tr>
                 </thead>
                 <tbody className="text-text-muted">
@@ -163,7 +261,7 @@ export default async function Page() {
                     <div className="font-medium text-ink">{r.name}</div>
                     <div className="mt-1 flex flex-wrap gap-x-3 text-text-muted">
                       <span>単位：{r.unit}</span>
-                      <span>税込目安：{r.price}</span>
+                      <span>税込：{r.price}</span>
                     </div>
                   </li>
                 ))}
@@ -173,8 +271,30 @@ export default async function Page() {
           ))}
         </div>
 
-        <p className="mt-6 text-xs leading-relaxed text-text-muted">
-          ※金額はすべて税込の目安です。事案により変動する場合は、ご契約前に個別のお見積りを書面でご提示します。確定額のみ構造化データ（PriceSpecification）として出力します。相談は無料（初回・2回目以降とも・オンライン可）。
+        {/* 取り扱わない業務＝おつなぎ先の明示（分離受任） */}
+        <div className="mt-10">
+          <h2 className="border-l-4 border-primary pl-2 font-serif text-lg font-semibold text-ink">
+            当事務所では取り扱わない業務
+          </h2>
+          <p className="mt-2 text-sm leading-relaxed text-text">
+            次の業務は当事務所では承っておりません。その資格をお持ちの方におつなぎします。
+            <strong>ご紹介にあたって紹介料の授受は一切行いません。</strong>
+          </p>
+          <ul className="mt-3 space-y-2 text-sm leading-relaxed text-text">
+            {NOT_HANDLED.map((n, i) => (
+              <li key={i} className="rounded-lg border border-border bg-surface p-3">
+                <span className="text-text">{n.name}</span>
+                <span className="ml-1 text-text-muted">→ {n.to}</span>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-3 text-xs leading-relaxed text-text-muted">
+            ※四葉不動産株式会社・四葉行政書士事務所・四葉社会保険労務士事務所は、それぞれ別の事業体として独立してご依頼をお受けします。ご依頼いただく場合は事務所ごとに別々にご契約いただき、料金・請求も分かれます。当事務所へのご依頼が、他の事務所へのご依頼の条件になることはありません。
+          </p>
+        </div>
+
+        <p className="mt-8 text-xs leading-relaxed text-text-muted">
+          ※金額はすべて税込です。「〜」「お見積り」としている項目は、事案により作業量が変わるため、ご契約前に個別のお見積りを書面でご提示します。確定額のみ構造化データ（PriceSpecification）として出力しています。
           <Placeholder reason="Notion＝社労士業務の料金（全業務・開業時最終確認）" />
         </p>
 
