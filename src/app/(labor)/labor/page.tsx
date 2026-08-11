@@ -29,7 +29,6 @@ const SERVICES = [
   { href: "/labor/services/kaigo-roumu", label: "介護・障害福祉の労務管理", sub: "人員配置基準と日々の手続き" },
   { href: "/labor/services/joseikin", label: "雇用関係助成金の申請", sub: "キャリアアップ助成金ほか" },
   { href: "/labor/services/gaikokujin-koyo", label: "外国人雇用（介護・育成就労）の労務", sub: "多言語対応" },
-  { href: "/labor/services/gaibu-kansanin", label: "外部監査人", sub: "育成就労の監理支援機関向け" },
 ];
 
 export default async function LaborTopPage() {

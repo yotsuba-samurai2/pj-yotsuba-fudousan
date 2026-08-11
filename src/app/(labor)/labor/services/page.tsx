@@ -49,12 +49,6 @@ const ROWS = [
     label: "外国人雇用（介護・育成就労）の労務",
     audience: "外国人材の雇用契約・社会保険・受入準備を整えたい事業者",
   },
-  {
-    // 2026-08-11 新設（61_外部監査人_導線設計.md）
-    href: "/labor/services/gaibu-kansanin",
-    label: "外部監査人",
-    audience: "育成就労で外部監査人の設置が必要になる監理支援機関",
-  },
 ];
 
 export default async function LaborServicesPage() {

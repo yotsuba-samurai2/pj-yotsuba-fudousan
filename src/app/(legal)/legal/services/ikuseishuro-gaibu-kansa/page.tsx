@@ -46,6 +46,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { buildPageMetadata } from "@/lib/seo";
 import { LegalServicePage, H2 } from "@/components/shared/LegalServicePage";
+// 2026-08-11：外部監査人は四葉社会保険労務士事務所が受けると決定（監査の対象が労働関係法令の
+// 遵守状況＝労務の領域のため）。開業（2026-09-01）まで社労士としての受任に言及しないため
+// SR_LAUNCHED でゲートする。開業前の表示は従来どおり。
+import { SR_LAUNCHED } from "@/lib/shared/office";
 
 // 冒頭の回答ブロック（H1直下・AIが最初に拾う位置）＝定点#26「どこに依頼」#27「要件」への直答
 const JA_LEAD =
@@ -253,7 +257,18 @@ export default async function Page() {
         <p className="mt-5 leading-relaxed text-text">一方、次は当事務所の業務ではありません。</p>
         <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-relaxed text-text">
           <li><strong className="text-ink">許可されることの保証</strong>：許可の判断を行うのは主務大臣です。要件の充足は個別に判断されます</li>
-          <li><strong className="text-ink">労務管理・社会保険の手続き</strong>：社会保険労務士業務は代表の開業（2026年9月予定）前のため、現時点ではお受けできません</li>
+          <li>
+            <strong className="text-ink">労務管理・社会保険の手続き</strong>：
+            {SR_LAUNCHED
+              ? "社会保険労務士業務は四葉社会保険労務士事務所が承ります（別事業体・別々にご契約いただきます）"
+              : "社会保険労務士業務は代表の開業（2026年9月予定）前のため、現時点ではお受けできません"}
+          </li>
+          <li>
+            <strong className="text-ink">外部監査人への就任</strong>：
+            {SR_LAUNCHED
+              ? "外部監査人は四葉社会保険労務士事務所がお引き受けします。監査の対象が労働関係法令の遵守状況であり、労務の領域にあたるためです。許可申請書類の作成（当事務所）とは別々にご契約いただきます"
+              : "外部監査そのものは制度の施行後です。就任をお引き受けするのは四葉社会保険労務士事務所（2026年9月開業予定）を予定しています"}
+          </li>
           <li>法人の<strong className="text-ink">登記</strong>：司法書士／<strong className="text-ink">税務</strong>：税理士／<strong className="text-ink">法的紛争・法律判断</strong>：弁護士</li>
         </ul>
         <p className="mt-3 leading-relaxed text-text">

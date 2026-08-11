@@ -66,7 +66,6 @@ describe("STATIC_LABOR の中身", () => {
       "/labor/services/shogu-kaizen",
       "/labor/services/joseikin",
       "/labor/services/gaikokujin-koyo",
-      "/labor/services/gaibu-kansanin",
       "/labor/ryokin",
       "/labor/faq",
       "/labor/about",
