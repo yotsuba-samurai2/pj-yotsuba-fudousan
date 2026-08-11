@@ -15,7 +15,7 @@ type ItemResult = {
 };
 
 /**
- * 離日売却クラスタ 9月分コラム7本のバルクupsert投入。
+ * 離日売却クラスタ コラム17本（9月分7本・10月分4本・11月分6本）のバルクupsert投入。
  *
  * 原稿は各コラムの「管理画面入力ガイド」（2026-08-09 Claude作成）。
  * すべて status="draft" で入り、浦松が事実確認・加筆・署名のうえ
@@ -92,7 +92,7 @@ export default function SeedLeavingJapanPage() {
   return (
     <div className="mx-auto max-w-4xl px-4 py-10">
       <h1 className="text-2xl font-bold">
-        離日売却クラスタ コラムの投入（9月分7本＋10月分4本）
+        離日売却クラスタ コラムの投入（9月分7本＋10月分4本＋11月分6本）
       </h1>
 
       <div className="mt-4 space-y-2 rounded-md border border-amber-300 bg-amber-50 p-4 text-sm">
@@ -107,11 +107,12 @@ export default function SeedLeavingJapanPage() {
           （公開中の記事が下書きに戻ることはありません）。何度実行しても重複しません。
         </p>
         <p className="text-amber-900">
-          <strong>9月分7本は公開済み</strong>なので、再実行しても公開状態のまま本文と翻訳が更新されるだけです。
-          <strong>10月分4本（B4・D1・A3・A2）は新規</strong>で、下書きとして入ります。
+          <strong>9月分7本・10月分4本は公開済み</strong>なので、再実行しても公開状態のまま本文と翻訳が更新されるだけです。
+          <strong>11月分6本（B3・B6・C6・D4・D3・B2）は新規</strong>で、下書きとして入ります。
+          11月分は日本語のみで、繁体字・簡体字・英語は別途投入します。
         </p>
         <p className="text-amber-900">
-          10月分の <code>date</code> は投入日（2026-08-10）を入れてあります。
+          10月分の <code>date</code> は投入日（2026-08-10）、11月分は（2026-08-11）を入れてあります。
           <strong>公開に切り替えるときに、実際の公開日へ直してください。</strong>
           この値は記事の表示日付と sitemap の <code>lastmod</code> の両方に効きます
           （下書きのあいだは sitemap に出ないため実害はありません）。
