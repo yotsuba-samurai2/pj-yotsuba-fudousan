@@ -7,7 +7,7 @@
 // 表示コンプライアンス（宅建業法・分離受任）：業務一体提供を示唆する語（ワンストップ等）は全文で使用禁止。
 //   行政書士業務は「併設の四葉行政書士事務所が別契約・別料金で受任」の形でのみ記載。
 // 【2026-08-11 方針更新（浦松判断）】従来は「料金＝法令上の上限（速算式）の説明のみ。当社独自の料率は書かない」
-//   としていたが、賃貸管理の料率（月額賃料の3〜5%）を出す判断が下りたため更新した。
+//   としていたが、賃貸管理の料率（月額賃料の3〜5%・消費税込み）を出す判断が下りたため更新した。
 //   ・売買の媒介報酬＝法定上限を価格帯ごとの表で示す（宅建業法46条1項／昭和45年建設省告示第1552号、
 //     最終改正 令和6年国土交通省告示第949号・2024年7月1日施行）。低廉な空家等の特例は33万円（消費税込み）。
 //   ・売却の査定＝無料（2026-08-11 浦松確認）。買取価格は案件差が大きいため数値を書かず「査定のうえ個別にご提示」。
@@ -27,8 +27,9 @@ import type { LangCode } from "@/config/languages";
 
 type Section = { h2: string; body: React.ReactNode };
 // 2026-08-11 追加：料金を文章でなく表で示す（浦松判断）。
-// 従来このページは「当社独自の料率は書かない」方針だったが、賃貸管理の料率（月額賃料の3〜5%）を
-// 出す判断が下りたため方針を更新した。買取の査定額は案件差が大きいため数値を出さず「お見積り」とする。
+// 従来このページは「当社独自の料率は書かない」方針だったが、賃貸管理の料率（月額賃料の3〜5%・消費税込み）を
+// 出す判断が下りたため方針を更新した。売却の査定は無料。買取価格は案件差が大きいため数値を出さず
+// 「査定のうえ個別にご提示」とする（いずれも2026-08-11 浦松確認）。
 type FeeRow = { a: string; b: string };
 function FeeTable({ head, rows }: { head: readonly [string, string]; rows: readonly FeeRow[] }) {
   return (
@@ -81,25 +82,25 @@ const OWN_ROWS = {
     { a: "ご相談（初回・2回目以降とも）", b: "無料" },
     { a: "売却の査定", b: "無料" },
     { a: "買取価格のご提示", b: "査定のうえ個別にご提示" },
-    { a: "賃貸管理", b: "月額賃料の3〜5% ＋ 消費税" },
+    { a: "賃貸管理", b: "月額賃料の3〜5%（消費税込み）" },
   ],
   en: [
     { a: "Consultation (the first and every one thereafter)", b: "Free" },
     { a: "Sale appraisal", b: "Free" },
     { a: "Buyout price proposal", b: "Presented individually after the appraisal" },
-    { a: "Rental property management", b: "3-5% of the monthly rent + consumption tax" },
+    { a: "Rental property management", b: "3-5% of the monthly rent (consumption tax included)" },
   ],
   "zh-tw": [
     { a: "諮詢（首次與之後皆同）", b: "免費" },
     { a: "出售估價", b: "免費" },
     { a: "收購價格的提示", b: "估價後個別提出" },
-    { a: "租賃管理", b: "月租金的3〜5% ＋ 消費稅" },
+    { a: "租賃管理", b: "月租金的3〜5%（含消費稅）" },
   ],
   zh: [
     { a: "咨询（首次及之后均同）", b: "免费" },
     { a: "出售估价", b: "免费" },
     { a: "收购价格的提示", b: "估价后个别提出" },
-    { a: "租赁管理", b: "月租金的3〜5% ＋ 消费税" },
+    { a: "租赁管理", b: "月租金的3〜5%（含消费税）" },
   ],
 } as const;
 type RyokinCopy = {
@@ -212,6 +213,10 @@ const JA: RyokinCopy = {
     {
       q: "相談は無料ですか？",
       a: "ご相談は無料です。初回も2回目以降も無料で、料金がかかる場合は見積もりを提示します。まずはお気軽にお問い合わせください。",
+    },
+    {
+      q: "査定は無料ですか？",
+      a: "無料です。売却の査定に費用はかかりません。査定のあとでご依頼をお決めいただけます。買取価格のご提示は、物件の状態・立地・時期により幅があるため、査定のうえ個別にご提示します。",
     },
     {
       q: "行政書士業務の費用は別ですか？",
@@ -329,6 +334,10 @@ const EN: RyokinCopy = {
       a: "Consultations are free — the first and every one thereafter. If a fee should apply, we will present a quotation. Please feel free to contact us first.",
     },
     {
+      q: "Is the appraisal free?",
+      a: "Yes. There is no charge for a sale appraisal, and you decide whether to proceed after seeing it. A buyout price varies with the condition, location and timing of the property, so we present it individually after the appraisal.",
+    },
+    {
       q: "Are gyoseishoshi fees separate?",
       a: "Yes, they are separate. Legal work such as inheritance documents and permits and licenses is undertaken by the affiliated Yotsuba Gyoseishoshi Office under a separate contract and separate fees. Because fees vary with the scope of work, we provide a quotation. For details, see the “Fee schedule for gyoseishoshi work” page (/legal/ryokin).",
     },
@@ -440,6 +449,10 @@ const ZH_TW: RyokinCopy = {
     {
       q: "諮詢免費嗎？",
       a: "諮詢免費，初次與第2次以後皆免費。如需收費，將提出報價。請先隨時與我們聯絡。",
+    },
+    {
+      q: "估價是免費的嗎？",
+      a: "免費。出售估價不會產生費用，看過估價後再決定是否委託即可。收購價格因物件狀況、地點與時期而有幅度，將於估價後個別提出。",
     },
     {
       q: "行政書士業務的費用是分開的嗎？",
@@ -554,6 +567,10 @@ const ZH: RyokinCopy = {
     {
       q: "咨询免费吗？",
       a: "咨询免费，首次与第2次以后均免费。如需收费，将提出报价。请先随时与我们联系。",
+    },
+    {
+      q: "估价是免费的吗？",
+      a: "免费。出售估价不会产生费用，看过估价后再决定是否委托即可。收购价格因房屋状况、地点与时期而有幅度，将于估价后个别提出。",
     },
     {
       q: "行政书士业务的费用是分开的吗？",
