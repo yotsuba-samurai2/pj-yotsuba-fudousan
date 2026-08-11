@@ -50,10 +50,11 @@ const ROWS = [
     audience: "外国人材の雇用契約・社会保険・受入準備を整えたい事業者",
   },
   {
-    // 2026-08-11 新設（61_外部監査人_導線設計.md）
+    // 2026-08-11 新設。要件・依頼先は /legal/services/ikuseishuro-gaibu-kansa（主力）が扱う。
+    // 本ページは「監査で何を見られるか」＝備える側の主語で分ける（luck428-column-seo 第6条）
     href: "/labor/services/gaibu-kansanin",
-    label: "外部監査人",
-    audience: "育成就労で外部監査人の設置が必要になる監理支援機関",
+    label: "外部監査で見られる労務",
+    audience: "育成就労の外部監査に備える監理支援機関・受入企業",
   },
 ];
 

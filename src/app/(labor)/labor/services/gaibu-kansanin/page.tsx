@@ -1,6 +1,21 @@
 // /labor/services/gaibu-kansanin（型A）＝2026-08-11 新規。設計＝61_外部監査人_導線設計.md
-// ★「相談先を尋ねる型」（luck428-column-seo 第7条：引用12/13・名指し11/13の型）。
-// 業際：監理支援機関の許可申請書類の作成は四葉行政書士事務所。当事務所は外部監査人の就任のみ。
+//
+// 【役割分担】luck428-column-seo 第2条・第6条。**主語で分ける。**
+//   ・/legal/services/ikuseishuro-gaibu-kansa（2026-08-06 新設・定点#26/#27の主力）
+//       ＝「誰に依頼できるか」「要件は何か」「いつから始まるか」＝**探している側**
+//   ・本ページ ＝「監査では何を見られるか」「何を備えておけばよいか」＝**備える側**
+//     要件・誰に依頼できるかは書かない。legal 側へ発リンクして評価を集約する（第6条5）
+//
+// 【なぜ両方あるか】施行規則第47条第2項第2号は弁護士・社会保険労務士・行政書士を列挙しており、
+//   浦松はいずれの資格でも就任できる。四葉行政書士事務所・四葉社会保険労務士事務所の
+//   どちらでもお受けできるため、両方に窓口を置く。契約は事務所ごとに別々。
+//
+// 【法令の裏取り】2026-08-06 に /legal 側で e-Gov法令API v2・出入国在留管理庁により確認済みの値を使う。
+//   ・育成就労法＝**平成28年法律第89号**（技能実習法を令和6年法律第60号が改正し題名を差し替えたもの）
+//   ・法第25条第1項第5号＝外部監査の措置が許可の基準（技能実習法のイ／ロ選択制が単一号になった）
+//   ・施行規則＝令和7年法務省・厚生労働省令第4号（技能実習法施行規則の全部改正）第47条ほか
+//   ・施行日＝令和9年4月1日（令和7年政令第340号）
+//   ・**施行日前の許可申請の受付開始時期は未公表**（令和6年法律第60号 附則第5条第3項）
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo";
 import { getRequestLocale } from "@/lib/getRequestLocale";
@@ -12,11 +27,11 @@ export async function generateMetadata(): Promise<Metadata> {
   const locale = await getRequestLocale();
   return buildPageMetadata({
     businessKey: "labor",
-    title: "外部監査人｜四葉社会保険労務士事務所",
+    title: "外部監査で見られる労務｜四葉社会保険労務士事務所",
     description:
-      "育成就労制度では監理支援機関に外部監査人の設置が義務づけられます。四葉社会保険労務士事務所（文京区小日向・茗荷谷駅徒歩5分）が外部監査人をお引き受けします。代表は監理責任者等講習を修了済み。要件・頻度・費用と、当事務所が取り扱わない範囲を整理しました。",
+      "育成就労の外部監査では、労働時間・賃金・安全衛生・住環境といった労働関係法令の遵守状況が確認されます。監理支援機関と受入企業が何を備えておけばよいかを、社会保険労務士の立場から整理しました。外部監査人の就任もお受けします。文京区小日向・茗荷谷駅徒歩5分。",
     path: "/labor/services/gaibu-kansanin",
-    keywords: ["外部監査人 誰に頼む", "育成就労 監理支援機関 外部監査人", "外部監査人 社労士"],
+    keywords: ["育成就労 外部監査 何を見られる", "監理支援機関 労務 備え", "外部監査 賃金台帳"],
     locale,
     absoluteTitle: true,
   });
@@ -27,133 +42,159 @@ export default async function Page() {
   return (
     <LaborServicePage
       slug="gaibu-kansanin"
-      crumbLabel="外部監査人"
-      serviceName="監理支援機関の外部監査人の受託"
-      heroAlt="外部監査人のイメージ（書類を確認する専門家）"
-      h1="外部監査人"
+      crumbLabel="外部監査で見られる労務"
+      serviceName="育成就労の外部監査に備える労務整備・外部監査人の受託"
+      heroAlt="外部監査で見られる労務のイメージ（賃金台帳と勤怠記録の確認）"
+      h1="外部監査で見られる労務"
       lead={
         <p>
-          育成就労制度では、<strong>監理支援機関に外部監査人の設置が義務づけられます</strong>
-          。技能実習制度で認められていた指定外部役員による方式は選べなくなります。四葉社会保険労務士事務所が外部監査人をお引き受けします。代表は
-          <strong>監理責任者等講習を2026年7月10日に修了</strong>しています。
+          育成就労の外部監査で確認されるのは、<strong>労働関係法令が守られているか</strong>です。労働時間・賃金・安全衛生・住環境といった、
+          <strong>労務そのもの</strong>が対象になります。監理支援機関と受入企業が何を備えておけばよいかを、社会保険労務士の立場から整理しました。
         </p>
       }
       internalLinks={[
         { href: "/labor/ryokin", label: "外部監査人の料金" },
-        { href: "/labor/nagare", label: "ご相談から契約までの流れ" },
         { href: "/labor/services/gaikokujin-koyo", label: "外国人雇用（介護・育成就労）の労務" },
+        { href: "/labor/nagare", label: "ご相談から契約までの流れ" },
       ]}
-      crossLinkLead="監理支援機関の許可申請書類の作成は四葉行政書士事務所、外部監査人の就任は当事務所が、それぞれ別の契約で受任します。"
+      crossLinkLead="外部監査人の要件と依頼先については、四葉行政書士事務所のページで整理しています。"
     >
       <div>
-        <LaborH2>外部監査人は誰に頼めばよいのですか？</LaborH2>
+        <LaborH2>外部監査では、何を見られるのですか？</LaborH2>
         <p className="mt-3 leading-relaxed text-text">
-          外部監査人になれるのは、<strong>監理支援機関と密接な関係を持たず</strong>、かつ
-          <strong>主務大臣が認めた養成講習を過去3年以内に修了した人</strong>
-          です。実務では社会保険労務士や行政書士が就任することが一般的です。
+          外部監査人が確認するのは、監理支援機関の<strong>監理・監査の業務が適正に行われているか</strong>です。その監理・監査が向き合っているのは、受入企業における労働関係法令の遵守状況にほかなりません。したがって、実際に問われるのは次のような労務です。
         </p>
-        <p className="mt-3 leading-relaxed text-text">
-          監査の中身は、<strong>監理・監査の業務が適正に行われているかの確認</strong>
-          です。確認の対象になるのは労働時間・賃金・安全衛生・住環境といった労働関係法令の遵守状況であり、
-          <strong>労務そのもの</strong>です。当事務所が社会保険労務士としてお引き受けするのは、この理由によります。
+        <ul className="mt-4 space-y-2 text-sm leading-relaxed text-text">
+          <li>
+            <strong>労働時間</strong>——記録の方法、時間外・休日労働の上限、36協定の内容と実態の一致
+          </li>
+          <li>
+            <strong>賃金</strong>——最低賃金、割増賃金の計算、控除の根拠、賃金台帳の記載
+          </li>
+          <li>
+            <strong>安全衛生</strong>——健康診断、教育、作業環境
+          </li>
+          <li>
+            <strong>住環境</strong>——宿舎の状況、費用の徴収額と実費との関係
+          </li>
+          <li>
+            <strong>受入れの条件</strong>——雇用契約の内容が、日本人と同等以上になっているか
+          </li>
+        </ul>
+        <p className="mt-4 text-sm leading-relaxed text-text-muted">
+          ※確認の対象となる書類の範囲は、出入国在留管理庁「育成就労制度運用要領」第5章に示されています。制度は施行前で、下位の告示や運用の細目がこれから示される部分があります（
+          <strong>未検証</strong>）。
         </p>
       </div>
 
       <div>
-        <LaborH2>育成就労で何が変わるのですか？</LaborH2>
+        <LaborH2>備えるとしたら、どこから手をつけますか？</LaborH2>
+        <p className="mt-3 leading-relaxed text-text">
+          監査の場で困るのは、<strong>制度を知らないことより、記録が残っていないこと</strong>です。順序としては次のようになります。
+        </p>
         <div className="mt-4 overflow-x-auto">
           <table className="w-full border-collapse text-sm">
             <thead>
               <tr>
                 <th className="border border-border bg-primary-tint px-3 py-2 text-left font-medium text-ink">
-                  項目
+                  順
                 </th>
                 <th className="border border-border bg-primary-tint px-3 py-2 text-left font-medium text-ink">
-                  技能実習（現行）
+                  やること
                 </th>
                 <th className="border border-border bg-primary-tint px-3 py-2 text-left font-medium text-ink">
-                  育成就労
+                  なぜ先か
                 </th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <th className="border border-border px-3 py-2 text-left font-medium text-ink">機関の名称</th>
-                <td className="border border-border px-3 py-2 text-text">監理団体</td>
-                <td className="border border-border px-3 py-2 text-text">監理支援機関</td>
-              </tr>
-              <tr>
-                <th className="border border-border px-3 py-2 text-left font-medium text-ink">外部の目</th>
+                <th className="border border-border px-3 py-2 text-left font-medium text-ink">1</th>
+                <td className="border border-border px-3 py-2 text-text">勤怠の記録方法をそろえる</td>
                 <td className="border border-border px-3 py-2 text-text">
-                  指定外部役員 または 外部監査人 の選択制
-                </td>
-                <td className="border border-border px-3 py-2 text-text">
-                  <strong>外部監査人の設置が義務</strong>
+                  賃金の計算も36協定の管理も、ここが元になります
                 </td>
               </tr>
               <tr>
-                <th className="border border-border px-3 py-2 text-left font-medium text-ink">許可</th>
-                <td className="border border-border px-3 py-2 text-text">既存の許可が有効</td>
+                <th className="border border-border px-3 py-2 text-left font-medium text-ink">2</th>
                 <td className="border border-border px-3 py-2 text-text">
-                  <strong>取り直しが必要</strong>（自動的には移行しません）
+                  賃金台帳と雇用契約の内容を突き合わせる
+                </td>
+                <td className="border border-border px-3 py-2 text-text">
+                  控除の根拠が契約に書かれていないと説明できません
+                </td>
+              </tr>
+              <tr>
+                <th className="border border-border px-3 py-2 text-left font-medium text-ink">3</th>
+                <td className="border border-border px-3 py-2 text-text">就業規則と実態を合わせる</td>
+                <td className="border border-border px-3 py-2 text-text">
+                  規則にない運用は、監査で必ず理由を聞かれます
+                </td>
+              </tr>
+              <tr>
+                <th className="border border-border px-3 py-2 text-left font-medium text-ink">4</th>
+                <td className="border border-border px-3 py-2 text-text">
+                  宿舎の費用と実費の関係を整理する
+                </td>
+                <td className="border border-border px-3 py-2 text-text">
+                  住環境は育成就労で重く見られる項目です
                 </td>
               </tr>
             </tbody>
           </table>
         </div>
-        <p className="mt-3 text-sm leading-relaxed text-text-muted">
-          育成就労制度の施行日および施行日前申請の受付期間・推奨申請期限については、本ページ作成時点で一次資料による確認を行っていません（
-          <strong>未検証</strong>）。実際の日程は主務省庁の公表資料をご確認ください。
+      </div>
+
+      <div>
+        <LaborH2>言葉が通じないところは、どうしますか？</LaborH2>
+        <p className="mt-3 leading-relaxed text-text">
+          監査では、育成就労外国人本人からの聞き取りが行われます。通訳を介すると、労働時間や賃金の説明が正確に伝わらないことがあります。当事務所の代表は元毎日新聞中国総局長で、
+          <strong>中国語（繁体字・簡体字）と英語に対応</strong>します。外部の通訳を挟まずに確認できます。
         </p>
       </div>
 
       <div>
-        <LaborH2>外部監査人は何をするのですか？</LaborH2>
-        <p className="mt-3 leading-relaxed text-text">現行制度では、次のとおり定められています。</p>
-        <div className="mt-4 overflow-x-auto">
-          <table className="w-full border-collapse text-sm">
-            <thead>
-              <tr>
-                <th className="border border-border bg-primary-tint px-3 py-2 text-left font-medium text-ink">
-                  項目
-                </th>
-                <th className="border border-border bg-primary-tint px-3 py-2 text-left font-medium text-ink">
-                  内容
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th className="border border-border px-3 py-2 text-left font-medium text-ink">頻度</th>
-                <td className="border border-border px-3 py-2 text-text">
-                  <strong>各事業所につき3か月に1回以上</strong>
-                </td>
-              </tr>
-              <tr>
-                <th className="border border-border px-3 py-2 text-left font-medium text-ink">
-                  確認すること
-                </th>
-                <td className="border border-border px-3 py-2 text-text">
-                  監理・監査その他の業務が適正に実施されているか
-                </td>
-              </tr>
-              <tr>
-                <th className="border border-border px-3 py-2 text-left font-medium text-ink">成果物</th>
-                <td className="border border-border px-3 py-2 text-text">
-                  確認の結果を記載した書類を作成し、監理支援機関へ提出
-                </td>
-              </tr>
-              <tr>
-                <th className="border border-border px-3 py-2 text-left font-medium text-ink">
-                  許可申請での扱い
-                </th>
-                <td className="border border-border px-3 py-2 text-text">
-                  申請書に外部監査人の氏名・名称を記載。概要書・就任承諾書・誓約書の写しを添付
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        <LaborH2>外部監査人は、行政書士と社会保険労務士のどちらに頼めますか？</LaborH2>
+        <p className="mt-3 leading-relaxed text-text">
+          施行規則は、外部監査人になれる者として<strong>弁護士・社会保険労務士・行政書士</strong>（およびそれぞれの法人）と、育成就労に関する知見を有する者を挙げています。
+        </p>
+        <p className="mt-3 leading-relaxed text-text">
+          四葉では、<strong>四葉行政書士事務所と四葉社会保険労務士事務所のどちらでもお受けできます</strong>
+          。ご契約は事務所ごとに別々になりますので、すでにいずれかとお取引がある場合は、そちらに合わせていただけます。
+        </p>
+        <p className="mt-2 text-sm">
+          外部監査人の<strong>要件</strong>（講習の修了、独立性、欠格事由、氏名の公表への同意）と、依頼先の選び方は次のページで整理しています。 →{" "}
+          <Link
+            href={addLocalePrefix("/legal/services/ikuseishuro-gaibu-kansa", locale)}
+            className="text-primary underline"
+          >
+            育成就労の外部監査人（四葉行政書士事務所）
+          </Link>
+        </p>
+        <p className="mt-1 text-xs text-text-muted">
+          ※四葉行政書士事務所・四葉社会保険労務士事務所は、それぞれ別の事業体として独立してご依頼をお受けします（紹介料等の授受はありません）。
+        </p>
+      </div>
+
+      <div>
+        <LaborH2>顧問先の会社が受け入れている場合はどうなりますか？</LaborH2>
+        <p className="mt-3 leading-relaxed text-text">
+          <strong>その監理支援機関の外部監査人はお受けしません。</strong>
+          外部監査人には、監理支援機関やその関係先から独立していることが求められます。当事務所は要件の確認にとどめず、
+          <strong>方針として次のとおり切り分けています</strong>。
+        </p>
+        <ul className="mt-3 space-y-2 text-sm leading-relaxed text-text">
+          <li>
+            外部監査人をお引き受けした監理支援機関の関係先（傘下の受入企業）とは、労務の顧問契約を結びません
+          </li>
+          <li>既存の顧問先が加入している監理支援機関の外部監査人は、お引き受けしません</li>
+          <li>
+            <strong>この切り分けは、行政書士事務所・社会保険労務士事務所のどちらで受けた場合にも適用します</strong>
+          </li>
+        </ul>
+        <p className="mt-3 leading-relaxed text-text">
+          外から確認する立場と、内側で相談に応じる立場を、同じ人が兼ねないためです。事務所を分けても同じ人である以上、扱いは変えません。ご相談の際に、まず関係の有無を確認させてください。
+        </p>
       </div>
 
       <div>
@@ -171,82 +212,26 @@ export default async function Page() {
       </div>
 
       <div>
-        <LaborH2>監理支援機関の許可申請もお願いできますか？</LaborH2>
-        <p className="mt-3 leading-relaxed text-text">
-          <strong>当事務所では取り扱いません。</strong>
-          許可申請書類の作成は行政書士の業務です。四葉行政書士事務所で承ることも可能ですが、
-          <strong>外部監査人の就任とは別々にご契約いただきます</strong>。
-        </p>
-        <p className="mt-2 text-sm">
-          →{" "}
-          <Link href={addLocalePrefix("/legal", locale)} className="text-primary underline">
-            四葉行政書士事務所
-          </Link>
-        </p>
-        <p className="mt-3 leading-relaxed text-text">
-          また、実習実施者（受入企業）に対する監査そのものは監理支援機関の業務であり、外部監査人が代わって行うものではありません。外部監査人は、その監査が適正に行われているかを外から確認する立場です。
-        </p>
-        <p className="mt-1 text-xs text-text-muted">
-          ※四葉行政書士事務所・四葉社会保険労務士事務所は、それぞれ別の事業体として独立してご依頼をお受けします（紹介料等の授受はありません）。
-        </p>
-      </div>
-
-      <div>
-        <LaborH2>顧問先の会社が受け入れている場合はどうなりますか？</LaborH2>
-        <p className="mt-3 leading-relaxed text-text">
-          <strong>その監理支援機関の外部監査人はお受けしません。</strong>
-          外部監査人には、監理支援機関やその関係先と密接な関係を持たないことが求められます。当事務所は法令上の欠格事由を確認するだけでなく、
-          <strong>方針として次のとおり切り分けています</strong>。
-        </p>
-        <ul className="mt-3 space-y-2 text-sm leading-relaxed text-text">
-          <li>
-            外部監査人をお引き受けした監理支援機関の関係先（傘下の実習実施者・受入企業）とは、労務の顧問契約を結びません
-          </li>
-          <li>既存の顧問先が加入している監理支援機関の外部監査人は、お引き受けしません</li>
-        </ul>
-        <p className="mt-3 leading-relaxed text-text">
-          外から確認する立場と、内側で相談に応じる立場を、同じ事務所が兼ねないためです。ご相談の際に、まず関係の有無を確認させてください。
-        </p>
-      </div>
-
-      <div>
-        <LaborH2>なぜ社会保険労務士に頼むのですか？</LaborH2>
-        <ul className="mt-3 space-y-2 text-sm leading-relaxed text-text">
-          <li>
-            <strong>監査の中身が労務だから</strong>
-            ——確認の対象は労働時間・賃金・安全衛生・住環境の遵守状況です
-          </li>
-          <li>
-            <strong>養成講習を修了しているから</strong>
-            ——代表は監理責任者等講習を2026年7月10日に修了しました（修了後3年間有効）
-          </li>
-          <li>
-            <strong>中国語で確認できるから</strong>
-            ——代表は元毎日新聞中国総局長で、中国語（繁体字・簡体字）と英語に対応します
-          </li>
-        </ul>
-      </div>
-
-      <div>
         <LaborH2>このページの根拠</LaborH2>
         <ul className="mt-3 space-y-2 text-sm leading-relaxed text-text-muted">
           <li>
-            外部監査の根拠＝外国人の技能実習の適正な実施及び技能実習生の保護に関する法律（平成28年法律第89号）第25条第1項第5号ロ
+            外国人の育成就労の適正な実施及び育成就労外国人の保護に関する法律（
+            <strong>平成28年法律第89号</strong>）第25条第1項第5号／施行日 令和9年4月1日／最終改正
+            令和6年法律第60号。本法は2024年に新たに制定されたものではなく、外国人の技能実習の適正な実施及び技能実習生の保護に関する法律を令和6年法律第60号が改正して題名を改めたものです
           </li>
-          <li>外部監査の定義＝同法施行規則（平成28年法務省・厚生労働省令第3号）第1条第11号</li>
           <li>
-            外部役員及び外部監査人＝同規則第30条。<strong>各事業所につき3か月に1回以上</strong>
-            の頻度で確認し、結果を記載した書類を提出することが定められています
+            同法施行規則（<strong>令和7年法務省・厚生労働省令第4号</strong>・公布 令和7年9月30日）第47条／施行日
+            令和9年4月1日／最終改正 令和8年法務省・厚生労働省令第3号。第2項第2号に弁護士・社会保険労務士・行政書士の明文があります
           </li>
-          <li>申請書の記載事項＝同規則第26条／申請書の添付書類＝同規則第27条</li>
           <li>
-            育成就労制度＝出入国管理及び難民認定法及び外国人の技能実習の適正な実施及び技能実習生の保護に関する法律の一部を改正する法律（令和6年法律第60号）による改正。施行規則は令和7年法務省・厚生労働省令第4号として公布
+            外部監査の方法・確認対象書類＝出入国在留管理庁「育成就労制度運用要領」第5章（令和8年8月5日更新版・2026年8月6日確認）
           </li>
+          <li>労働時間・賃金・安全衛生の根拠＝労働基準法（昭和22年法律第49号）、労働安全衛生法（昭和47年法律第57号）、最低賃金法（昭和34年法律第137号）</li>
         </ul>
         <p className="mt-3 text-xs leading-relaxed text-text-muted">
-          ※技能実習法および同法施行規則の条番号は2026年8月11日にe-Gov法令検索で確認しました。
+          ※法令の条番号は、四葉行政書士事務所のページで2026年8月6日に一次資料により確認したものを引用しています。
           <strong>
-            育成就労制度における外部監査人の条番号、施行日、施行日前申請の受付期間および推奨申請期限は、本ページ作成時点で一次資料による確認を行っていません（未検証）。
+            確認対象書類の具体的な範囲、監査の頻度、施行日前の許可申請の受付開始時期は、いずれも本ページ作成時点で確定していません（未検証）。
           </strong>
         </p>
         <p className="mt-3 text-xs leading-relaxed text-text-muted">

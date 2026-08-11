@@ -46,6 +46,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { buildPageMetadata } from "@/lib/seo";
 import { LegalServicePage, H2 } from "@/components/shared/LegalServicePage";
+// 2026-08-11：外部監査人は四葉社会保険労務士事務所が受けると決定（監査の対象が労働関係法令の
+// 遵守状況＝労務の領域のため）。開業（2026-09-01）まで社労士としての受任に言及しないため
+// SR_LAUNCHED でゲートする。開業前の表示は従来どおり。
+import { SR_LAUNCHED } from "@/lib/shared/office";
 
 // 冒頭の回答ブロック（H1直下・AIが最初に拾う位置）＝定点#26「どこに依頼」#27「要件」への直答
 const JA_LEAD =
@@ -253,12 +257,39 @@ export default async function Page() {
         <p className="mt-5 leading-relaxed text-text">一方、次は当事務所の業務ではありません。</p>
         <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-relaxed text-text">
           <li><strong className="text-ink">許可されることの保証</strong>：許可の判断を行うのは主務大臣です。要件の充足は個別に判断されます</li>
-          <li><strong className="text-ink">労務管理・社会保険の手続き</strong>：社会保険労務士業務は代表の開業（2026年9月予定）前のため、現時点ではお受けできません</li>
+          <li>
+            <strong className="text-ink">労務管理・社会保険の手続き</strong>：
+            {SR_LAUNCHED
+              ? "社会保険労務士業務は四葉社会保険労務士事務所が承ります（別事業体・別々にご契約いただきます）"
+              : "社会保険労務士業務は代表の開業（2026年9月予定）前のため、現時点ではお受けできません"}
+          </li>
+          <li>
+            <strong className="text-ink">外部監査の実施そのもの</strong>：制度の施行後になります。就任は当事務所（行政書士）
+            {SR_LAUNCHED ? "と四葉社会保険労務士事務所のいずれでも" : "でも"}
+            お引き受けできます（下記）
+          </li>
           <li>法人の<strong className="text-ink">登記</strong>：司法書士／<strong className="text-ink">税務</strong>：税理士／<strong className="text-ink">法的紛争・法律判断</strong>：弁護士</li>
         </ul>
         <p className="mt-3 leading-relaxed text-text">
           必要な場合は提携する専門家をご紹介します。<strong className="text-ink">紹介料の授受は一切ありません。</strong>各専門家と貴社に直接ご契約いただく形をとっています。
         </p>
+        <p className="mt-5 leading-relaxed text-text">
+          なお外部監査人は、施行規則が<strong className="text-ink">弁護士・社会保険労務士・行政書士</strong>を列挙しているとおり、いずれの資格でも就任できます。四葉では
+          <strong className="text-ink">当事務所（行政書士）と四葉社会保険労務士事務所{SR_LAUNCHED ? "" : "（2026年9月開業予定）"}のどちらでもお引き受けできます</strong>
+          。ご契約は事務所ごとに別々になりますので、すでにいずれかとお取引がある場合はそちらに合わせていただけます。
+        </p>
+        <p className="mt-3 leading-relaxed text-text">
+          ただし<strong className="text-ink">独立性の確保</strong>のため、外部監査人をお引き受けした監理支援機関の関係先とは労務の顧問契約を結ばず、既存の顧問先が加入している監理支援機関の外部監査人もお引き受けしません。
+          <strong className="text-ink">この扱いは、どちらの事務所で受けた場合にも同じです</strong>（事務所を分けても代表は同じ人であるため）。
+        </p>
+        {SR_LAUNCHED && (
+          <p className="mt-2 text-sm">
+            監査で確認される労務の中身（労働時間・賃金・安全衛生・住環境）は →{" "}
+            <Link href="/labor/services/gaibu-kansanin" className="text-primary underline">
+              外部監査で見られる労務（四葉社会保険労務士事務所）
+            </Link>
+          </p>
+        )}
         <p className="mt-3 text-sm leading-relaxed text-text-muted">
           このページは一般的な情報提供です。育成就労制度は施行前で、下位の告示や運用の細目がこれから示される部分があります。個別のご事情に応じた判断は、面談のうえ資格者が行います。
         </p>
