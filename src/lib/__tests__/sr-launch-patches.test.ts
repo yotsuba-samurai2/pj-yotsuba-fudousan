@@ -8,6 +8,8 @@ import {
   SR_LAUNCH_KEEP_AS_IS,
 } from "@/lib/data/sr-launch-patches";
 import type { LangCode } from "@/config/languages";
+import fs from "node:fs";
+import path from "node:path";
 
 /**
  * 開業版パッチセットのガード。
@@ -244,5 +246,26 @@ describe("labor.* の是正（2026-08-10 追加）", () => {
         expect(p?.to).toContain(NAME[loc]);
       }
     }
+  });
+});
+
+describe("登録番号の正本が1か所であること", () => {
+  it("llms.txt が REGISTRATION_NUMBER を参照している（プレースホルダーを二重に持たない）", () => {
+    const src = fs.readFileSync(path.join(process.cwd(), "src/app/llms.txt/route.ts"), "utf-8");
+    expect(src).toContain("REGISTRATION_NUMBER");
+    // 直書きのプレースホルダーが残っていないこと
+    expect(src).not.toContain("第【登録番号】号\"");
+  });
+
+  it("llms.txt が SR_LAUNCHED で出し分けている", () => {
+    const src = fs.readFileSync(path.join(process.cwd(), "src/app/llms.txt/route.ts"), "utf-8");
+    expect(src).toContain("SR_LAUNCHED");
+    expect(src).toContain("const sr =");
+  });
+
+  it("開業前の分岐に社労士業務を現在形で書いていない", () => {
+    const src = fs.readFileSync(path.join(process.cwd(), "src/app/llms.txt/route.ts"), "utf-8");
+    // sr(before, after) の before 側に「開業まで行っていない」旨が残っていること
+    expect(src).toContain("2026年9月の開業まで行っていない");
   });
 });
