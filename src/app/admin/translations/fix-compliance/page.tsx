@@ -13,6 +13,8 @@ import {
   COMPLIANCE_TRANSLATION_PATCHES,
   COMPLIANCE_VALUE_PATCHES,
   COMPLIANCE_SCAN_TERMS,
+  COMPLIANCE_SCAN_TERMS_CONDITIONAL,
+  COMPLIANCE_SCAN_ALLOWLIST,
   COMPLIANCE_SCAN_EXCLUSIONS,
   COMPLIANCE_COLUMN_PATCHES,
   COLUMN_PATCH_FIELDS,
@@ -37,7 +39,7 @@ const TRANSLATION_LOCALES = ["en", "zh-tw", "zh"] as const;
 const PER_COLUMN_WARN_THRESHOLD = 10;
 
 type Result = { label: string; status: "applied" | "skipped" | "error"; detail?: string };
-type ScanHit = { where: string; term: string; excerpt: string };
+type ScanHit = { where: string; term: string; excerpt: string; tier: "violation" | "conditional" };
 
 /** ドライランで検出した1置換 */
 type ColumnDiff = {
@@ -122,24 +124,42 @@ function excludedRanges(s: string): Array<[number, number]> {
   return ranges;
 }
 
-/** 値ツリーを再帰走査して禁止語を含む文字列リーフを列挙（全出現・除外句あり） */
+/** 個別に許容済みか（path の末尾一致 × 語） */
+function isAllowed(where: string, term: string): boolean {
+  return COMPLIANCE_SCAN_ALLOWLIST.some((a) => where.endsWith(a.path) && a.term === term);
+}
+
+/**
+ * 値ツリーを再帰走査して列挙する（全出現・除外句あり）。
+ *
+ * 2026-08-10：**2段構えにした。**
+ *   violation   … 常に不可。是正する
+ *   conditional … 条件付きで可（6-3）。同一ページに分離受任の明示があれば可。参考表示
+ * さらに COMPLIANCE_SCAN_ALLOWLIST（path×語）で個別許容を除く。
+ * 分けないと、許容済みの表現が毎回警告に出て本物の違反が埋もれる。
+ */
 function scanTree(node: unknown, prefix: string, out: ScanHit[]) {
   if (typeof node === "string") {
     const excluded = excludedRanges(node);
-    for (const term of COMPLIANCE_SCAN_TERMS) {
-      let i = node.indexOf(term);
-      while (i >= 0) {
-        const inExcluded = excluded.some(([s, e]) => i >= s && i + term.length <= e);
-        if (!inExcluded) {
-          out.push({
-            where: prefix,
-            term,
-            excerpt: node.slice(Math.max(0, i - 20), i + term.length + 20),
-          });
+    const collect = (terms: string[], tier: "violation" | "conditional") => {
+      for (const term of terms) {
+        let i = node.indexOf(term);
+        while (i >= 0) {
+          const inExcluded = excluded.some(([s, e]) => i >= s && i + term.length <= e);
+          if (!inExcluded && !isAllowed(prefix, term)) {
+            out.push({
+              where: prefix,
+              term,
+              excerpt: node.slice(Math.max(0, i - 20), i + term.length + 20),
+              tier,
+            });
+          }
+          i = node.indexOf(term, i + term.length);
         }
-        i = node.indexOf(term, i + term.length);
       }
-    }
+    };
+    collect(COMPLIANCE_SCAN_TERMS, "violation");
+    collect(COMPLIANCE_SCAN_TERMS_CONDITIONAL, "conditional");
     return;
   }
   if (Array.isArray(node)) {
@@ -511,34 +531,72 @@ export default function FixCompliancePage() {
         </ul>
       )}
 
-      {scanHits !== null && (
-        <div className="mt-8 max-w-3xl">
-          <h2 className="text-base font-bold">
-            残存スキャン結果：{scanHits.length}件
-          </h2>
-          <p className="mb-3 mt-1 text-xs text-text-muted">
-            禁止語・国数表記を含む値の一覧（適用後の状態）。コラム本文等は文脈判断のうえ個別に是正してください。
-            固有名詞「東京開業ワンストップセンター（TOSBEC）」は除外しています。
-          </p>
-          {scanHits.length === 0 ? (
-            <p className="rounded-lg bg-green-50 px-3 py-2 text-xs text-green-700">
-              残存なし（翻訳4言語・全コラム）
+      {scanHits !== null && (() => {
+        const violations = scanHits.filter((h) => h.tier === "violation");
+        const conditionals = scanHits.filter((h) => h.tier === "conditional");
+        return (
+          <div className="mt-8 max-w-3xl">
+            <h2 className="text-base font-bold">
+              残存スキャン結果：要是正 {violations.length}件／要確認 {conditionals.length}件
+            </h2>
+            <p className="mb-3 mt-1 text-xs text-text-muted">
+              適用後の状態。<b>除外済み</b>＝固有名詞「東京開業ワンストップセンター（TOSBEC）」、
+              コラムの「〜にまとめています」（内部リンク文）、制度用語「一体的に運営／支援」、
+              個別に許容済みの{COMPLIANCE_SCAN_ALLOWLIST.length}件。
             </p>
-          ) : (
-            <ul className="space-y-2">
-              {scanHits.map((h, i) => (
-                <li key={i} className="rounded-lg bg-surface-dim px-3 py-2 text-xs">
-                  <div className="font-mono text-text-muted">{h.where}</div>
-                  <div className="mt-1">
-                    <span className="mr-2 rounded bg-red-100 px-1.5 py-0.5 font-medium text-red-600">{h.term}</span>
-                    <span className="text-text-muted">…{h.excerpt}…</span>
-                  </div>
-                </li>
-              ))}
-            </ul>
-          )}
-        </div>
-      )}
+
+            <h3 className="mt-4 text-sm font-bold text-red-700">
+              ① 要是正（常に不可）：{violations.length}件
+            </h3>
+            {violations.length === 0 ? (
+              <p className="mt-1 rounded-lg bg-green-50 px-3 py-2 text-xs text-green-700">
+                残存なし（翻訳4言語・全コラム）
+              </p>
+            ) : (
+              <ul className="mt-2 space-y-2">
+                {violations.map((h, i) => (
+                  <li key={i} className="rounded-lg bg-surface-dim px-3 py-2 text-xs">
+                    <div className="font-mono text-text-muted">{h.where}</div>
+                    <div className="mt-1">
+                      <span className="mr-2 rounded bg-red-100 px-1.5 py-0.5 font-medium text-red-600">{h.term}</span>
+                      <span className="text-text-muted">…{h.excerpt}…</span>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            )}
+
+            <h3 className="mt-6 text-sm font-bold text-amber-700">
+              ② 要確認（条件付きで可）：{conditionals.length}件
+            </h3>
+            <p className="mt-1 text-xs text-text-muted">
+              「一つの窓口」「單一窗口」「伴走」等。2026-07-29 石井弁護士確認で<b>可</b>。
+              条件は<b>同じページ内に分離受任を明示していること</b>
+              （「それぞれ別の契約で受任します」「紹介料の授受はありません」等）。
+              スキャンは条件の充足を判定できないため、違反ではなく参考として出しています。
+              <b>機械的に削らないでください。</b>
+            </p>
+            {conditionals.length === 0 ? (
+              <p className="mt-1 rounded-lg bg-surface-dim px-3 py-2 text-xs text-text-muted">なし</p>
+            ) : (
+              <details className="mt-2">
+                <summary className="cursor-pointer text-xs font-bold">一覧を開く（{conditionals.length}件）</summary>
+                <ul className="mt-2 space-y-2">
+                  {conditionals.map((h, i) => (
+                    <li key={i} className="rounded-lg bg-surface-dim px-3 py-2 text-xs">
+                      <div className="font-mono text-text-muted">{h.where}</div>
+                      <div className="mt-1">
+                        <span className="mr-2 rounded bg-amber-100 px-1.5 py-0.5 font-medium text-amber-700">{h.term}</span>
+                        <span className="text-text-muted">…{h.excerpt}…</span>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </details>
+            )}
+          </div>
+        );
+      })()}
 
       {/* ───────── コラム本文の一括置換（ドライラン → 差分確認 → 適用） ───────── */}
       <hr className="my-10 max-w-3xl border-border" />
@@ -683,7 +741,12 @@ export default function FixCompliancePage() {
 
           {columnScanHits !== null && (
             <div className="mt-6">
-              <h3 className="text-base font-bold">適用後のコラム残存スキャン：{columnScanHits.length}件</h3>
+              <h3 className="text-base font-bold">
+                適用後のコラム残存スキャン：要是正 {columnScanHits.filter((h) => h.tier === "violation").length}件
+                <span className="ml-2 text-xs font-normal text-text-muted">
+                  （要確認 {columnScanHits.filter((h) => h.tier === "conditional").length}件は下の一覧に含みます）
+                </span>
+              </h3>
               {columnScanHits.length === 0 ? (
                 <p className="mt-2 rounded-lg bg-green-50 px-3 py-2 text-xs text-green-700">
                   残存なし（全コラム）
