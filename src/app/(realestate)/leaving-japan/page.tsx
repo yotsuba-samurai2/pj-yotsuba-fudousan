@@ -35,7 +35,8 @@
 //   ・管理費等の滞納の承継＝区分所有法8条。犯収法4条（取引時確認）。
 import type { Metadata } from "next";
 import Link from "next/link";
-import { buildPageMetadata } from "@/lib/seo";
+import { buildPageMetadata, BCP47_BY_LOCALE } from "@/lib/seo";
+import { buildFaqJsonLd, type FaqLink } from "@/components/shared/Faq";
 import { getRequestLocale } from "@/lib/getRequestLocale";
 import { addLocalePrefix } from "@/lib/locale";
 import { RealestateServicePage, ReH2 } from "@/components/shared/RealestateServicePage";
@@ -54,7 +55,10 @@ const pickPageLocale = (locale: LangCode): PageLocale => locale;
 type FraudCase = { h3: string; story: string; problemLabel: string; problem: string; defenseLabel: string; defense: string };
 type Row2 = { a: string; b: string };
 type Row3 = { a: string; b: string; c: string };
-type Faq = { q: string; a: React.ReactNode };
+// 2026-08-11：FAQPage JSON-LD を出すため a を string に変えた（浦松判断）。
+// Faq.tsx の設計どおり「表示HTMLと構造化データを同じ文字列から生成して完全一致させる」ため、
+// 回答本文は必ず文字列にし、内部リンクは links に分けて持つ（JSON-LD の Answer text には含めない）。
+type Faq = { q: string; a: string; links?: FaqLink[] };
 
 type Copy = {
   answerBlock: string;
@@ -365,15 +369,8 @@ const JA: Copy = {
     },
     {
       q: "出国後に、海外から依頼することもできますか？",
-      a: (
-        <>
-          このスピード換金の対象は、日本にご滞在中の方のみです。出国後は本人確認と書類が国をまたぐ通常売却となり、源泉徴収10.21%・サイン証明・納税管理人が必要です（
-          <Link href="/column/overseas-owners-guide-japan-real-estate-sale" className="text-primary underline">
-            海外オーナーのための日本不動産売却ガイド
-          </Link>
-          ）。だからこそ、<strong>出国前に</strong>ご相談ください。
-        </>
-      ),
+      a: "このスピード換金の対象は、日本にご滞在中の方のみです。出国後は本人確認と書類が国をまたぐ通常売却となり、源泉徴収10.21%・サイン証明・納税管理人が必要です。だからこそ、出国前にご相談ください。",
+      links: [{ href: "/column/overseas-owners-guide-japan-real-estate-sale", label: "海外オーナーのための日本不動産売却ガイド" }],
     },
     {
       q: "会社（法人）名義の物件も対応できますか？",
@@ -678,15 +675,8 @@ const ZH: Copy = {
     },
     {
       q: "出境之后，能从海外委托吗？",
-      a: (
-        <>
-          这项快速变现服务只面向人还在日本的业主。出境后属于本人确认和文件跨国的常规出售，需要预扣10.21%、签名证明、纳税管理人（参见
-          <Link href="/zh/column/overseas-owners-guide-japan-real-estate-sale" className="text-primary underline">
-            海外业主日本房产出售指南
-          </Link>
-          ）。正因如此——请<strong>在出境之前</strong>联系我们。
-        </>
-      ),
+      a: "这项快速变现服务只面向人还在日本的业主。出境后属于本人确认和文件跨国的常规出售，需要预扣10.21%、签名证明、纳税管理人。正因如此——请在出境之前联系我们。",
+      links: [{ href: "/zh/column/overseas-owners-guide-japan-real-estate-sale", label: "海外业主日本房产出售指南" }],
     },
     {
       q: "公司（法人）名下的房产也能办吗？",
@@ -985,15 +975,8 @@ const EN: Copy = {
     },
     {
       q: "Can I request this from abroad after leaving?",
-      a: (
-        <>
-          This service is only for owners still in Japan. After departure it becomes a standard cross-border sale with 10.21% withholding, signature certificates, and a Tax Representative (see{" "}
-          <Link href="/en/column/overseas-owners-guide-japan-real-estate-sale" className="text-primary underline">
-            The Overseas Owner&apos;s Guide to Selling Japanese Real Estate
-          </Link>
-          ). Which is exactly why — talk to us <strong>before you leave</strong>.
-        </>
-      ),
+      a: "This service is only for owners still in Japan. After departure it becomes a standard cross-border sale with 10.21% withholding, signature certificates, and a Tax Representative. Which is exactly why — talk to us before you leave.",
+      links: [{ href: "/en/column/overseas-owners-guide-japan-real-estate-sale", label: "The Overseas Owner’s Guide to Selling Japanese Real Estate" }],
     },
     {
       q: "Can you handle a property owned by my company?",
@@ -1285,15 +1268,8 @@ const ZHTW: Copy = {
     },
     {
       q: "出境之後，能從海外委託嗎？",
-      a: (
-        <>
-          這項快速變現服務只面向人還在日本的業主。出境後屬於本人確認和文件跨國的常規出售，需要預扣10.21%、簽名證明、納稅管理人（參見
-          <Link href="/zh-tw/column/overseas-owners-guide-japan-real-estate-sale" className="text-primary underline">
-            海外業主日本房產出售指南
-          </Link>
-          ）。正因如此——請<strong>在出境之前</strong>聯絡我們。
-        </>
-      ),
+      a: "這項快速變現服務只面向人還在日本的業主。出境後屬於本人確認和文件跨國的常規出售，需要預扣10.21%、簽名證明、納稅管理人。正因如此——請在出境之前聯絡我們。",
+      links: [{ href: "/zh-tw/column/overseas-owners-guide-japan-real-estate-sale", label: "海外業主日本房產出售指南" }],
     },
     {
       q: "公司（法人）名下的房產也能辦嗎？",
@@ -1628,15 +1604,32 @@ export default async function Page() {
           <SimpleTable head={[...c.feeHead]} rows={c.feeRows} />
         </div>
 
-        {/* ── FAQ（表示のみ。FAQPage JSON-LD は /faq 専用） ── */}
+        {/* ── FAQ ──
+            2026-08-11 浦松判断で FAQPage JSON-LD を出す。
+            /souzoku（10問）・/group-home（9問）・/office（7問）・/minpaku（4問）は既に出しており、
+            本ページだけが出していなかった＝自社内の不整合を解消する。
+            Answer text は表示している a と同一文字列（buildFaqJsonLd が links を含めないため完全一致）。 */}
         <div>
           <ReH2>{c.faqH2}</ReH2>
           {c.faqs.map((f) => (
             <div key={f.q} className="mt-5">
               <h3 className="text-base font-semibold text-ink">Q. {f.q}</h3>
               <p className="mt-2 leading-relaxed text-text">{f.a}</p>
+              {f.links && f.links.length > 0 && (
+                <p className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-sm">
+                  {f.links.map((lk) => (
+                    <Link key={lk.href} href={lk.href} className="text-primary underline">
+                      {lk.label}
+                    </Link>
+                  ))}
+                </p>
+              )}
             </div>
           ))}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(buildFaqJsonLd(c.faqs, BCP47_BY_LOCALE[l])) }}
+          />
         </div>
 
         {/* ── 根拠 ── */}

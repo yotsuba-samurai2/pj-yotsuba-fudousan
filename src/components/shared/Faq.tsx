@@ -5,6 +5,11 @@
 // 【例外】2026-07-19 B-4（浦松承認）：/toushi・/toushi/group-home・/shataku・/global の日本語版でも
 // withJsonLd を使う。設問は B-3 の40問（@/data/faqJa）から pickFaqJa() で参照＝文言はサイト内で常に一致。
 // 既存の例外＝/ryokin（B-1）・/about/uramatsu（B-2）。/souzoku は seo/FAQJsonLd 側で出力（同じく faqJa 参照）。
+// 【例外】2026-08-11（浦松判断）：/leaving-japan（4ロケール）でも出力する。定点#34〜#45 は自然文の質問形で、
+// 本ページだけが FAQPage を出していなかったため。同ページは本ファイルの Faq 部品ではなく独自のQ&A表示を持つが、
+// buildFaqJsonLd() を直接呼ぶことで Answer text＝表示文字列の完全一致は維持している。
+// 【注記】本番実測（2026-08-11・JSON-LDをパースして確認）では /group-home 9問・/office 7問・/minpaku 4問も
+// FAQPage を出しており、上の「専用FAQページのみ」は既に実態と一致していない。方針の再定義は未着手（浦松判断待ち）。
 // links＝回答末尾の内部リンク（2026-07-19 B-3）。表示のみで JSON-LD の Answer text には含めない
 // （Answer text＝回答本文 a と完全一致を維持）。多言語で使う場合は items 側でロケール済み href を渡すこと。
 import Link from "next/link";
