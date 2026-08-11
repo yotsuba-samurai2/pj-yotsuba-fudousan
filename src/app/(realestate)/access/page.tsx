@@ -83,7 +83,7 @@ const COPY: Record<LangCode, AccessCopy> = {
     feeRows: [
       {
         item: "売買仲介 手数料",
-        fee: "法定上限：（売買価格×3%＋6万円）＋消費税 ※売買価格200万円以下・200〜400万円は別料率／2024年改正で800万円以下は33万円＋税を上限に設定可",
+        fee: "法定上限：（売買価格×3%＋6万円）＋消費税 ※売買価格200万円以下・200〜400万円は別料率／2024年改正で800万円以下は33万円（消費税込み）を上限に設定可",
         note: "宅建業法46条・国交省告示",
       },
       {
@@ -154,7 +154,7 @@ const COPY: Record<LangCode, AccessCopy> = {
     feeRows: [
       {
         item: "Sales brokerage commission",
-        fee: "Statutory maximum (cap): (sale price × 3% + ¥60,000) + consumption tax. Different rates apply to sale prices of ¥2 million or less and ¥2–4 million; under the 2024 revision, a cap of ¥330,000 + tax may be set for properties of ¥8 million or less.",
+        fee: "Statutory maximum (cap): (sale price × 3% + ¥60,000) + consumption tax. Different rates apply to sale prices of ¥2 million or less and ¥2–4 million; under the 2024 revision, a cap of ¥330,000 including consumption tax may be set for properties of ¥8 million or less.",
         note: "Art. 46 of the Real Estate Brokerage Act (宅地建物取引業法) / MLIT public notice",
       },
       {
@@ -220,7 +220,7 @@ const COPY: Record<LangCode, AccessCopy> = {
     feeRows: [
       {
         item: "買賣仲介手續費",
-        fee: "法定上限：（買賣價格×3%＋6萬日圓）＋消費稅 ※買賣價格200萬日圓以下・200〜400萬日圓適用其他費率／依2024年修正，800萬日圓以下可設定33萬日圓＋稅為上限",
+        fee: "法定上限：（買賣價格×3%＋6萬日圓）＋消費稅 ※買賣價格200萬日圓以下・200〜400萬日圓適用其他費率／依2024年修正，800萬日圓以下可設定33萬日圓（含消費稅）為上限",
         note: "宅地建物取引業法第46條・國土交通省告示",
       },
       {
@@ -286,7 +286,7 @@ const COPY: Record<LangCode, AccessCopy> = {
     feeRows: [
       {
         item: "买卖中介手续费",
-        fee: "法定上限：（买卖价格×3%＋6万日元）＋消费税 ※买卖价格200万日元以下・200〜400万日元适用其他费率／根据2024年修订，800万日元以下可设定33万日元＋税为上限",
+        fee: "法定上限：（买卖价格×3%＋6万日元）＋消费税 ※买卖价格200万日元以下・200〜400万日元适用其他费率／根据2024年修订，800万日元以下可设定33万日元（含消费税）为上限",
         note: "《宅地建物取引业法》第46条・国土交通省告示",
       },
       {
