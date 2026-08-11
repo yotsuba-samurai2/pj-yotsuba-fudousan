@@ -175,7 +175,8 @@ export async function generateMetadata(): Promise<Metadata> {
   });
 }
 
-type Row = { name: string; unit: string; price: string; jitsuhi?: string; value?: number };
+// 2026-08-11：行単位の遷移先。設定した行は名称がリンクになる（定点#26・#27）
+type Row = { name: string; unit: string; price: string; jitsuhi?: string; value?: number; href?: string };
 type Section = { title: string; href?: string; rows: Row[]; hasJitsuhi?: boolean };
 
 const SECTIONS: Section[] = [
@@ -225,7 +226,10 @@ const SECTIONS: Section[] = [
       { name: "登録支援機関 支援委託", unit: "月額", price: "33,000円/人", jitsuhi: "—", value: 33000 },
       { name: "緊急加算（期限2週間前）／再申請加算", unit: "1件", price: "各44,000円", jitsuhi: "—", value: 44000 },
       // 2026-08-06：受け皿ページを新設したので、料金表からも辿れるようにする（定点#26・#27）
-      { name: "〔予約・準備中〕育成就労 外部監査人／監理支援機関許可", unit: "月額/件", price: "別途お見積り（2027年4月施行・予約受付）", jitsuhi: "詳細は「育成就労の外部監査人」のページ" },
+      // 2026-08-11：上の意図に対して href が入っておらず、備考の文言だけで実際のリンクが無かった。
+      // GSCのURL検査で当該ページが「URL が Google に認識されていません」＝参照元ページ検出されず、
+      // 内部リンクが実質2ページ（/legal/services・/legal/services/visa）しか無いことを実測したため href を補う。
+      { name: "〔予約・準備中〕育成就労 外部監査人／監理支援機関許可", unit: "月額/件", price: "別途お見積り（2027年4月施行・予約受付）", jitsuhi: "詳細は「育成就労の外部監査人」のページ", href: "/legal/services/ikuseishuro-gaibu-kansa" },
     ],
   },
   {
@@ -316,7 +320,13 @@ function FeeTable({ s, title, c, locale }: { s: Section; title: string; c: Ryoki
         <tbody className="text-text-muted">
           {s.rows.map((r, i) => (
             <tr key={i}>
-              <td className="border border-border px-3 py-2 text-text">{r.name}</td>
+              <td className="border border-border px-3 py-2 text-text">
+                {r.href ? (
+                  <Link href={addLocalePrefix(r.href, locale)} className="text-primary underline">{r.name}</Link>
+                ) : (
+                  r.name
+                )}
+              </td>
               <td className="border border-border px-3 py-2 whitespace-nowrap">{r.unit}</td>
               <td className="border border-border px-3 py-2 whitespace-nowrap">{r.price}</td>
               {s.hasJitsuhi && <td className="border border-border px-3 py-2 whitespace-nowrap">{r.jitsuhi ?? "—"}</td>}
@@ -328,7 +338,13 @@ function FeeTable({ s, title, c, locale }: { s: Section; title: string; c: Ryoki
       <ul className="mt-3 space-y-2 sm:hidden">
         {s.rows.map((r, i) => (
           <li key={i} className="rounded-lg border border-border bg-surface p-3 text-sm">
-            <div className="font-medium text-ink">{r.name}</div>
+            <div className="font-medium text-ink">
+              {r.href ? (
+                <Link href={addLocalePrefix(r.href, locale)} className="text-primary underline">{r.name}</Link>
+              ) : (
+                r.name
+              )}
+            </div>
             <div className="mt-1 flex flex-wrap gap-x-3 text-text-muted">
               <span>{c.colUnit}：{r.unit}</span>
               <span>{c.colPrice}：{r.price}</span>
