@@ -6,8 +6,13 @@
 //   金額・料率・法定上限の速算式（売買価格×3%＋6万円＋税／借賃1か月分＋税）は全ロケールで日本語版と完全一致。
 // 表示コンプライアンス（宅建業法・分離受任）：業務一体提供を示唆する語（ワンストップ等）は全文で使用禁止。
 //   行政書士業務は「併設の四葉行政書士事務所が別契約・別料金で受任」の形でのみ記載。
-// 料金＝法令上の上限（速算式）の説明のみ。当社独自の料率・行政書士報酬の具体額・値引き示唆は書かない
-//   ＝確定値なしのため PriceSpecification は出力しない（/access と同じ規則）。
+// 【2026-08-11 方針更新（浦松判断）】従来は「料金＝法令上の上限（速算式）の説明のみ。当社独自の料率は書かない」
+//   としていたが、賃貸管理の料率（月額賃料の3〜5%・消費税込み）を出す判断が下りたため更新した。
+//   ・売買の媒介報酬＝法定上限を価格帯ごとの表で示す（宅建業法46条1項／昭和45年建設省告示第1552号、
+//     最終改正 令和6年国土交通省告示第949号・2024年7月1日施行）。低廉な空家等の特例は33万円（消費税込み）。
+//   ・売却の査定＝無料（2026-08-11 浦松確認）。買取価格は案件差が大きいため数値を書かず「査定のうえ個別にご提示」。
+//   ・行政書士報酬の具体額は引き続き書かない（/legal/ryokin へ送る）。値引き示唆も書かない。
+//   ・PriceSpecification は引き続き出力しない（管理料は幅・買取は見積りで確定値ではないため）。
 // FAQPage JSON-LD＝タスクB-1指示によりこのページで3問を出力（withJsonLd）。
 //   ※既存規則「FAQPage は各サイト1本＝/faq のみ」（委任§4-6・URL構造設計v1 §1）の例外＝浦松承認前提。
 import type { Metadata } from "next";
@@ -21,6 +26,83 @@ import { CtaBand } from "@/components/shared/CtaBand";
 import type { LangCode } from "@/config/languages";
 
 type Section = { h2: string; body: React.ReactNode };
+// 2026-08-11 追加：料金を文章でなく表で示す（浦松判断）。
+// 従来このページは「当社独自の料率は書かない」方針だったが、賃貸管理の料率（月額賃料の3〜5%・消費税込み）を
+// 出す判断が下りたため方針を更新した。売却の査定は無料。買取価格は案件差が大きいため数値を出さず
+// 「査定のうえ個別にご提示」とする（いずれも2026-08-11 浦松確認）。
+type FeeRow = { a: string; b: string };
+function FeeTable({ head, rows }: { head: readonly [string, string]; rows: readonly FeeRow[] }) {
+  return (
+    <table className="mt-3 w-full border-collapse text-sm">
+      <thead>
+        <tr className="bg-primary-tint text-left">
+          <th className="border border-border px-3 py-2">{head[0]}</th>
+          <th className="border border-border px-3 py-2">{head[1]}</th>
+        </tr>
+      </thead>
+      <tbody className="text-text">
+        {rows.map((r) => (
+          <tr key={r.a}>
+            <td className="border border-border px-3 py-2">{r.a}</td>
+            <td className="border border-border px-3 py-2">{r.b}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  );
+}
+
+// 売買の媒介報酬の上限＝宅地建物取引業法第46条第1項／昭和45年建設省告示第1552号
+// （最終改正 令和6年国土交通省告示第949号・2024年7月1日施行）。金額は全ロケール共通。
+const SALE_ROWS = {
+  ja: [
+    { a: "200万円以下", b: "売買価格 × 5%" },
+    { a: "200万円超 400万円以下", b: "売買価格 × 4% ＋ 2万円" },
+    { a: "400万円超", b: "売買価格 × 3% ＋ 6万円" },
+  ],
+  en: [
+    { a: "Up to ¥2,000,000", b: "sale price × 5%" },
+    { a: "Over ¥2,000,000 and up to ¥4,000,000", b: "sale price × 4% + ¥20,000" },
+    { a: "Over ¥4,000,000", b: "sale price × 3% + ¥60,000" },
+  ],
+  "zh-tw": [
+    { a: "200萬日圓以下", b: "買賣價格 × 5%" },
+    { a: "超過200萬日圓、400萬日圓以下", b: "買賣價格 × 4% ＋ 2萬日圓" },
+    { a: "超過400萬日圓", b: "買賣價格 × 3% ＋ 6萬日圓" },
+  ],
+  zh: [
+    { a: "200万日元以下", b: "买卖价格 × 5%" },
+    { a: "超过200万日元、400万日元以下", b: "买卖价格 × 4% ＋ 2万日元" },
+    { a: "超过400万日元", b: "买卖价格 × 3% ＋ 6万日元" },
+  ],
+} as const;
+
+const OWN_ROWS = {
+  ja: [
+    { a: "ご相談（初回・2回目以降とも）", b: "無料" },
+    { a: "売却の査定", b: "無料" },
+    { a: "買取価格のご提示", b: "査定のうえ個別にご提示" },
+    { a: "賃貸管理", b: "月額賃料の3〜5%（消費税込み）" },
+  ],
+  en: [
+    { a: "Consultation (the first and every one thereafter)", b: "Free" },
+    { a: "Sale appraisal", b: "Free" },
+    { a: "Buyout price proposal", b: "Presented individually after the appraisal" },
+    { a: "Rental property management", b: "3-5% of the monthly rent (consumption tax included)" },
+  ],
+  "zh-tw": [
+    { a: "諮詢（首次與之後皆同）", b: "免費" },
+    { a: "出售估價", b: "免費" },
+    { a: "收購價格的提示", b: "估價後個別提出" },
+    { a: "租賃管理", b: "月租金的3〜5%（含消費稅）" },
+  ],
+  zh: [
+    { a: "咨询（首次及之后均同）", b: "免费" },
+    { a: "出售估价", b: "免费" },
+    { a: "收购价格的提示", b: "估价后个别提出" },
+    { a: "租赁管理", b: "月租金的3〜5%（含消费税）" },
+  ],
+} as const;
 type RyokinCopy = {
   metaTitle: string;
   metaDesc: string;
@@ -62,7 +144,14 @@ const JA: RyokinCopy = {
             ：売買価格×3%＋6万円＋消費税
           </p>
           <p className="mt-3 leading-relaxed text-text">
-            ※売買価格400万円以下の場合は、別の料率が適用されます。当社の仲介手数料は、この法定上限の範囲内で、物件やご依頼内容に応じて個別にお見積りいたします。
+            売買価格の帯ごとの法定上限は次のとおりです（いずれも別途消費税）。
+          </p>
+          <FeeTable head={["売買価格", "法定上限（消費税別）"]} rows={SALE_ROWS.ja} />
+          <p className="mt-3 text-sm leading-relaxed text-text-muted">
+            ※800万円以下の宅地建物の売買の媒介については、現地調査等に要する費用を勘案し、依頼者との合意に基づき<strong>33万円（消費税込み）</strong>を上限として受領できます（2024年7月1日施行）。
+          </p>
+          <p className="mt-3 leading-relaxed text-text">
+            当社の仲介手数料は、この法定上限の範囲内で、物件やご依頼内容に応じて個別にお見積りいたします。
           </p>
         </>
       ),
@@ -77,12 +166,18 @@ const JA: RyokinCopy = {
       ),
     },
     {
-      h2: "相談料",
+      h2: "相談料・査定・賃貸管理の料金",
       body: (
-        <p className="mt-3 leading-relaxed text-text">
-          <strong>ご相談は無料です（初回・2回目以降とも）。</strong>
-          料金がかかる場合は見積もりを提示します。まずはお気軽にお問い合わせください。
-        </p>
+        <>
+          <p className="mt-3 leading-relaxed text-text">
+            <strong>ご相談は無料です（初回・2回目以降とも）。</strong>
+            料金がかかる場合は見積もりを提示します。
+          </p>
+          <FeeTable head={["内容", "料金"]} rows={OWN_ROWS.ja} />
+          <p className="mt-3 text-sm leading-relaxed text-text-muted">
+            ※買取のご提案額は、物件の状態・立地・時期により幅があるため、査定のうえ個別にご提示します。賃貸管理の料率は、管理の範囲（集金・入居者対応・原状回復の手配など）により決まります。
+          </p>
+        </>
       ),
     },
     {
@@ -118,6 +213,10 @@ const JA: RyokinCopy = {
     {
       q: "相談は無料ですか？",
       a: "ご相談は無料です。初回も2回目以降も無料で、料金がかかる場合は見積もりを提示します。まずはお気軽にお問い合わせください。",
+    },
+    {
+      q: "査定は無料ですか？",
+      a: "無料です。売却の査定に費用はかかりません。査定のあとでご依頼をお決めいただけます。買取価格のご提示は、物件の状態・立地・時期により幅があるため、査定のうえ個別にご提示します。",
     },
     {
       q: "行政書士業務の費用は別ですか？",
@@ -164,7 +263,14 @@ const EN: RyokinCopy = {
             : sale price × 3% + 60,000 yen + consumption tax
           </p>
           <p className="mt-3 leading-relaxed text-text">
-            * Where the sale price is 4 million yen or less, a different rate applies. Our brokerage commission is quoted individually within this statutory maximum, according to the property and the scope of your request.
+            The statutory maximum by price band is as follows (consumption tax is added to each).
+          </p>
+          <FeeTable head={["Sale price", "Statutory maximum (before consumption tax)"]} rows={SALE_ROWS.en} />
+          <p className="mt-3 text-sm leading-relaxed text-text-muted">
+            * For the brokerage of land or a building priced at ¥8,000,000 or less, in view of the cost of on-site surveys and with the client&apos;s agreement, up to <strong>¥330,000 including consumption tax</strong> may be received (in force since 1 July 2024).
+          </p>
+          <p className="mt-3 leading-relaxed text-text">
+            Our brokerage commission is quoted individually within this statutory maximum, according to the property and the scope of your request.
           </p>
         </>
       ),
@@ -179,11 +285,17 @@ const EN: RyokinCopy = {
       ),
     },
     {
-      h2: "Consultation fees",
+      h2: "Consultation, appraisal and management fees",
       body: (
-        <p className="mt-3 leading-relaxed text-text">
-          <strong>Consultations are free — the first and every one thereafter.</strong> If a fee should apply, we will present a quotation. Please feel free to contact us first.
-        </p>
+        <>
+          <p className="mt-3 leading-relaxed text-text">
+            <strong>Consultations are free — the first and every one thereafter.</strong> If a fee should apply, we will present a quotation.
+          </p>
+          <FeeTable head={["Service", "Fee"]} rows={OWN_ROWS.en} />
+          <p className="mt-3 text-sm leading-relaxed text-text-muted">
+            * A buyout figure varies with the condition, location and timing of the property, so we present it individually after an appraisal. The management rate depends on the scope of management (rent collection, tenant response, arranging restoration work and so on).
+          </p>
+        </>
       ),
     },
     {
@@ -220,6 +332,10 @@ const EN: RyokinCopy = {
     {
       q: "Is the consultation free?",
       a: "Consultations are free — the first and every one thereafter. If a fee should apply, we will present a quotation. Please feel free to contact us first.",
+    },
+    {
+      q: "Is the appraisal free?",
+      a: "Yes. There is no charge for a sale appraisal, and you decide whether to proceed after seeing it. A buyout price varies with the condition, location and timing of the property, so we present it individually after the appraisal.",
     },
     {
       q: "Are gyoseishoshi fees separate?",
@@ -263,7 +379,14 @@ const ZH_TW: RyokinCopy = {
             ：買賣價格×3%＋6萬日圓＋消費稅
           </p>
           <p className="mt-3 leading-relaxed text-text">
-            ※買賣價格在400萬日圓以下時，適用不同的費率。本公司的仲介手續費，在此法定上限的範圍內，依物件與委託內容個別報價。
+            依買賣價格區間的法定上限如下（均另加消費稅）。
+          </p>
+          <FeeTable head={["買賣價格", "法定上限（未含消費稅）"]} rows={SALE_ROWS["zh-tw"]} />
+          <p className="mt-3 text-sm leading-relaxed text-text-muted">
+            ※800萬日圓以下的土地建物買賣媒介，考量現場調查等所需費用，經與委託人合意，可收取上限<strong>33萬日圓（含消費稅）</strong>（2024年7月1日施行）。
+          </p>
+          <p className="mt-3 leading-relaxed text-text">
+            本公司的仲介手續費，在此法定上限的範圍內，依物件與委託內容個別報價。
           </p>
         </>
       ),
@@ -278,12 +401,18 @@ const ZH_TW: RyokinCopy = {
       ),
     },
     {
-      h2: "諮詢費用",
+      h2: "諮詢・估價・租賃管理的費用",
       body: (
-        <p className="mt-3 leading-relaxed text-text">
-          <strong>諮詢免費（初次與第2次以後皆同）。</strong>
-          如需收費，將提出報價。請先隨時與我們聯絡。
-        </p>
+        <>
+          <p className="mt-3 leading-relaxed text-text">
+            <strong>諮詢免費（初次與第2次以後皆同）。</strong>
+            如需收費，將提出報價。
+          </p>
+          <FeeTable head={["項目", "費用"]} rows={OWN_ROWS["zh-tw"]} />
+          <p className="mt-3 text-sm leading-relaxed text-text-muted">
+            ※收購的提案金額，因物件狀況、地點與時期而有幅度，將於估價後個別提出。租賃管理的費率，依管理範圍（收租、房客對應、修繕復原的安排等）而定。
+          </p>
+        </>
       ),
     },
     {
@@ -320,6 +449,10 @@ const ZH_TW: RyokinCopy = {
     {
       q: "諮詢免費嗎？",
       a: "諮詢免費，初次與第2次以後皆免費。如需收費，將提出報價。請先隨時與我們聯絡。",
+    },
+    {
+      q: "估價是免費的嗎？",
+      a: "免費。出售估價不會產生費用，看過估價後再決定是否委託即可。收購價格因物件狀況、地點與時期而有幅度，將於估價後個別提出。",
     },
     {
       q: "行政書士業務的費用是分開的嗎？",
@@ -364,7 +497,14 @@ const ZH: RyokinCopy = {
             ：买卖价格×3%＋6万日元＋消费税
           </p>
           <p className="mt-3 leading-relaxed text-text">
-            ※买卖价格在400万日元以下时，适用不同的费率。本公司的中介手续费，在此法定上限的范围内，依房屋与委托内容个别报价。
+            按买卖价格区间的法定上限如下（均另加消费税）。
+          </p>
+          <FeeTable head={["买卖价格", "法定上限（不含消费税）"]} rows={SALE_ROWS.zh} />
+          <p className="mt-3 text-sm leading-relaxed text-text-muted">
+            ※800万日元以下的土地建筑买卖中介，考虑现场调查等所需费用，经与委托人达成一致，可收取上限<strong>33万日元（含消费税）</strong>（2024年7月1日施行）。
+          </p>
+          <p className="mt-3 leading-relaxed text-text">
+            本公司的中介手续费，在此法定上限的范围内，依房屋与委托内容个别报价。
           </p>
         </>
       ),
@@ -379,12 +519,18 @@ const ZH: RyokinCopy = {
       ),
     },
     {
-      h2: "咨询费用",
+      h2: "咨询・估价・租赁管理的费用",
       body: (
-        <p className="mt-3 leading-relaxed text-text">
-          <strong>咨询免费（首次与第2次以后均相同）。</strong>
-          如需收费，将提出报价。请先随时与我们联系。
-        </p>
+        <>
+          <p className="mt-3 leading-relaxed text-text">
+            <strong>咨询免费（首次与第2次以后均相同）。</strong>
+            如需收费，将提出报价。
+          </p>
+          <FeeTable head={["项目", "费用"]} rows={OWN_ROWS.zh} />
+          <p className="mt-3 text-sm leading-relaxed text-text-muted">
+            ※收购的提案金额，因房屋状况、地点与时期而有幅度，将于估价后个别提出。租赁管理的费率，依管理范围（收租、租客对应、修缮复原的安排等）而定。
+          </p>
+        </>
       ),
     },
     {
@@ -421,6 +567,10 @@ const ZH: RyokinCopy = {
     {
       q: "咨询免费吗？",
       a: "咨询免费，首次与第2次以后均免费。如需收费，将提出报价。请先随时与我们联系。",
+    },
+    {
+      q: "估价是免费的吗？",
+      a: "免费。出售估价不会产生费用，看过估价后再决定是否委托即可。收购价格因房屋状况、地点与时期而有幅度，将于估价后个别提出。",
     },
     {
       q: "行政书士业务的费用是分开的吗？",
