@@ -193,7 +193,8 @@ function verify(cols: SeedColumn[]): string[] {
   const slugs = new Set(cols.map((c) => c.slug));
   if (slugs.size !== cols.length) notes.push("NG: slug重複あり");
   for (const c of cols) {
-    if (c.faq.length !== 4) notes.push(`WARN: ${c.slug} のFAQが${c.faq.length}件（想定4件）`);
+    if (c.faq.length < 4 || c.faq.length > 6)
+      notes.push(`WARN: ${c.slug} のFAQが${c.faq.length}件（想定4〜6件）`);
     if (c.content.length < 2000) notes.push(`WARN: ${c.slug} の本文が短い（${c.content.length}字）`);
     // 評価集約＝労務クラスタ内への発リンクが最低1本（luck428-column-seo 第6条5）
     if (!/\]\(\/labor\//.test(c.content)) notes.push(`NG: ${c.slug} に /labor 配下へのリンクなし`);
