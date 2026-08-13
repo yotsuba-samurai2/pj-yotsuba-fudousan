@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo";
 import { getRequestLocale } from "@/lib/getRequestLocale";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
+import { CtaBand } from "@/components/shared/CtaBand";
 import { LaborColumnListPageContent } from "./PageContent";
 
 export const dynamic = "force-dynamic";
@@ -49,6 +50,12 @@ export default function LaborColumnListPage() {
         { name: "コラム", href: "/labor/column" },
       ]} />
       <LaborColumnListPageContent />
+      {/* ★2026-08-13 追加：CTA帯（LINE・お問い合わせ・電話）。
+          3レーンとも column/[slug]・column・about だけ CtaBand が無く、
+          PCでLINEへの導線が出ていなかった。contact / thanks には入れない。 */}
+      <div className="mx-auto max-w-3xl px-4">
+        <CtaBand businessKey="labor" />
+      </div>
     </div>
   );
 }

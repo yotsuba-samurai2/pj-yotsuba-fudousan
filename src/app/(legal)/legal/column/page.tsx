@@ -4,6 +4,7 @@ import { getRequestLocale } from "@/lib/getRequestLocale";
 import { getLegalColumns, getLocalizedColumn } from "@/lib/columns";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { ColumnCollectionJsonLd } from "@/components/seo/ColumnCollectionJsonLd";
+import { CtaBand } from "@/components/shared/CtaBand";
 import LegalColumnListContent from "./LegalColumnListContent";
 
 export const dynamic = "force-dynamic";
@@ -65,6 +66,12 @@ export default async function LegalColumnListPage() {
         />
       )}
       <LegalColumnListContent columns={columns} />
+      {/* ★2026-08-13 追加：CTA帯（LINE・お問い合わせ・電話）。
+          3レーンとも column/[slug]・column・about だけ CtaBand が無く、
+          PCでLINEへの導線が出ていなかった。contact / thanks には入れない。 */}
+      <div className="mx-auto max-w-3xl px-4">
+        <CtaBand businessKey="legal" />
+      </div>
     </div>
   );
 }

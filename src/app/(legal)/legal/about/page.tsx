@@ -8,6 +8,7 @@ import { getRequestLocale } from "@/lib/getRequestLocale";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import LegalAboutPageContent from "./LegalAboutPageContent";
 import type { LangCode } from "@/config/languages";
+import { CtaBand } from "@/components/shared/CtaBand";
 
 // metaTitle：Bing Webmaster Tools「タイトルが短すぎる」対応（2026-07-25）＝地域（文京区小日向・
 // 茗荷谷駅徒歩5分）＋士業（行政書士）を足して最終表示30〜40字に。社名はレイアウトのtitleテンプレート
@@ -65,6 +66,12 @@ export default async function LegalAboutPage() {
         { name: c.title, href: "/legal/about" },
       ]} />
       <LegalAboutPageContent />
+      {/* ★2026-08-13 追加：CTA帯（LINE・お問い合わせ・電話）。
+          3レーンとも column/[slug]・column・about だけ CtaBand が無く、
+          PCでLINEへの導線が出ていなかった。contact / thanks には入れない。 */}
+      <div className="mx-auto max-w-3xl px-4">
+        <CtaBand businessKey="legal" />
+      </div>
     </div>
   );
 }

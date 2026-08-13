@@ -13,6 +13,7 @@ import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { BlogPostingJsonLd } from "@/components/seo/BlogPostingJsonLd";
 import { FAQJsonLd } from "@/components/seo/FAQJsonLd";
 import { SpeakableJsonLd } from "@/components/seo/SpeakableJsonLd";
+import { CtaBand } from "@/components/shared/CtaBand";
 
 import { LaborColumnDetailPageContent } from "./PageContent";
 import type { Metadata } from "next";
@@ -90,6 +91,14 @@ export default async function LaborColumnDetailPage({ params }: Props) {
         summary={col.excerpt}
       />
       <LaborColumnDetailPageContent col={col} prev={prev} next={next} />
+      {/* ★2026-08-13 追加：コラム記事の末尾にCTA帯を置く。
+          3レーンとも column/[slug]・column・about にだけ CtaBand が無く、
+          PCではLINEへの導線が出ていなかった（SPは MobileStickyBar があるので出る）。
+          コラムは検索・AIから直接入ってくる入口で、読み終えた直後がいちばん動く。
+          contact / thanks には入れない（フォームの前後で導線が割れるため）。 */}
+      <div className="mx-auto max-w-3xl px-4">
+        <CtaBand businessKey="labor" />
+      </div>
     </div>
   );
 }

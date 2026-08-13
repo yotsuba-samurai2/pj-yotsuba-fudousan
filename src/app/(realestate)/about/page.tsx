@@ -3,6 +3,7 @@ import type { LangCode } from "@/config/languages";
 import { buildPageMetadata } from "@/lib/seo";
 import { getRequestLocale } from "@/lib/getRequestLocale";
 import { ProfilePageJsonLd } from "@/components/seo/ProfilePageJsonLd";
+import { CtaBand } from "@/components/shared/CtaBand";
 import AboutPageContent from "./AboutPageContent";
 
 // メタ（title/description）のロケール別文言（翻訳チェック§I・2026-07-20）。
@@ -58,6 +59,12 @@ export default function AboutPage() {
     <>
       <ProfilePageJsonLd />
       <AboutPageContent />
+      {/* ★2026-08-13 追加：CTA帯（LINE・お問い合わせ・電話）。
+          3レーンとも column/[slug]・column・about だけ CtaBand が無く、
+          PCでLINEへの導線が出ていなかった。contact / thanks には入れない。 */}
+      <div className="mx-auto max-w-3xl px-4">
+        <CtaBand businessKey="realestate" />
+      </div>
     </>
   );
 }
