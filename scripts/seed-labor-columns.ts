@@ -21,10 +21,25 @@
  *     裏取りできない条文番号・告示番号を書かない（shigyo-compliance-gate 第4条）。
  */
 
-import { readFileSync, writeFileSync } from "fs";
+import { existsSync, readFileSync, writeFileSync } from "fs";
 import { resolve, join } from "path";
 
 type Faq = { question: string; answer: string };
+
+/** src/lib/column-shared.ts の ColumnTranslation と同形 */
+type Translation = {
+  title: string;
+  excerpt: string;
+  content: string;
+  category?: string;
+  keywords?: string[];
+  tags?: string[];
+  author?: { name: string; title: string };
+  faq?: Faq[];
+};
+
+const LOCALES = ["en", "zh-tw", "zh"] as const;
+type Locale = (typeof LOCALES)[number];
 
 type SeedColumn = {
   business: "labor";
@@ -40,6 +55,7 @@ type SeedColumn = {
   tags: string[];
   locales: string[];
   faq: Faq[];
+  translations?: Partial<Record<Locale, Translation>>;
 };
 
 const AUTHOR = {
@@ -126,6 +142,176 @@ const ARTICLES: Array<{
     ],
     tags: ["顧問料", "料金", "受任方針", "就業規則", "社会保険労務士"],
   },
+  {
+    file: "05-gaichu-koyo-sakaime.md",
+    slug: "gaichu-koyo-sakaime-roudoushasei",
+    title: "外注と雇用の境目は、契約書では決まらない",
+    category: "労働法の基本",
+    excerpt:
+      "業務委託契約書があっても、実態が雇用なら雇用として扱われます。判断は契約書の題名ではなく、仕事の依頼を断れるか、指揮監督を受けているか、時間や場所の拘束があるか——という実態で行われます。労働基準法研究会報告（昭和60年12月19日）の判断項目と、遡って求められる範囲・時効を表で整理しました。",
+    keywords: [
+      "業務委託 雇用 違い",
+      "労働者性 判断基準",
+      "業務委託 実態は雇用",
+      "業務委託 社会保険 遡及",
+      "労働基準法 第9条 労働者",
+      "偽装請負 残業代 遡り",
+    ],
+    tags: ["労働者性", "業務委託", "労働基準法", "社会保険", "時効"],
+  },
+  {
+    file: "06-shacho-rosai-tokubetsu-kanyu.md",
+    slug: "shacho-rosai-tokubetsu-kanyu-hitori",
+    title: "社長には労災が出ない。そして1人だと特別加入もできない",
+    category: "労働保険",
+    excerpt:
+      "役員は労災保険の給付を受けられません。中小事業主等の特別加入という制度がありますが、労働者を1人も雇っていない会社は加入できません。労働者について労災保険の保険関係が成立していることが条件だからです。業種別の規模要件と、加入までの順序をまとめました。",
+    keywords: [
+      "社長 労災 出ない",
+      "労災保険 特別加入 中小事業主",
+      "一人社長 労災 特別加入",
+      "特別加入 労働保険事務組合",
+      "特別加入 業種 規模要件",
+      "役員 労災 けが",
+    ],
+    tags: ["労災保険", "特別加入", "役員", "労働保険事務組合", "中小企業"],
+  },
+  {
+    file: "07-kazoku-shain-tsumazuku-3tsu.md",
+    slug: "kazoku-shain-koyohoken-yakuin-joseikin",
+    title: "家族を社員にするとき、つまずく3つのところ",
+    category: "採用と雇用",
+    excerpt:
+      "家族を社員にするときは、同居しているか、取締役にするか、助成金を考えているか——の3つを確かめてください。同居の親族は原則として雇用保険の被保険者になりませんが、要件を示せば被保険者として取り扱われます。立場ごとの雇用保険・社会保険の可否を表にしました。",
+    keywords: [
+      "家族 従業員 雇用保険",
+      "同居の親族 雇用保険 被保険者",
+      "取締役 雇用保険 入れない",
+      "family 助成金 3親等以内の親族",
+      "同族会社 家族 社会保険",
+      "使用人兼務役員 雇用保険",
+    ],
+    tags: ["雇用保険", "同居の親族", "役員", "同族会社", "助成金"],
+  },
+  {
+    file: "08-tanjikan-koyo-shakaihoken.md",
+    slug: "tanjikan-koyo-shakaihoken-4bunno3",
+    title: "短い時間で雇うと、社会保険はどうなるか",
+    category: "社会保険",
+    excerpt:
+      "従業員51人未満の会社では、社会保険に入るかどうかは4分の3基準だけで決まります。1週の所定労働時間と1月の所定労働日数の両方が通常の労働者の4分の3未満なら入りません。雇用保険は週20時間が分かれ目です。企業規模要件が2035年10月までに撤廃される日程も表にしました。",
+    keywords: [
+      "パート 社会保険 何時間から",
+      "社会保険 4分の3基準",
+      "106万円の壁 撤廃",
+      "社会保険 適用拡大 51人",
+      "雇用保険 週20時間",
+      "短時間労働者 社会保険 企業規模要件",
+    ],
+    tags: ["社会保険", "雇用保険", "パート", "適用拡大", "年金制度改正"],
+  },
+  {
+    file: "09-kaisha-tatamu-zenso.md",
+    slug: "kaisha-tatamu-shakaihoken-zenso-tetsuzuki",
+    title: "会社をたたむとき、社会保険と労働保険はどうするか",
+    category: "手続と期限",
+    excerpt:
+      "会社をたたむときは、社会保険の適用事業所全喪届、雇用保険の適用事業所廃止届、労働保険の確定保険料申告書の3つが必要です。被保険者の資格喪失届は別に人数分出します。「労働保険 保険関係消滅届」という届出は存在しません。届出の名称・提出先・期限を一覧にしました。",
+    keywords: [
+      "会社 廃業 社会保険 手続き",
+      "適用事業所全喪届 期限",
+      "雇用保険 適用事業所廃止届",
+      "労働保険 確定保険料 廃業",
+      "廃業 社会保険 資格喪失届",
+      "会社 解散 労働保険",
+    ],
+    tags: ["廃業", "全喪届", "労働保険", "社会保険", "手続"],
+  },
+  {
+    file: "10-nenkin-jukyuchu-koyo.md",
+    slug: "nenkin-jukyuchu-koyo-zaishoku-rorei",
+    title: "年金をもらいながら働く人を雇うとき",
+    category: "社会保険",
+    excerpt:
+      "老齢厚生年金は、給与と合わせて一定額を超えると一部が止まります。令和8年4月以降の支給停止調整額は65万円です。65万円までは、いくら払っても年金は減りません。繰下げ待機中に在職老齢年金で止まった額は増額の対象にならない点も、あわせて整理します。",
+    keywords: [
+      "在職老齢年金 65万円",
+      "支給停止調整額 令和8年度",
+      "年金 もらいながら 働く 上限",
+      "70歳以上被用者該当届",
+      "繰下げ 在職老齢年金 増額されない",
+      "高齢者 雇用 社会保険 何歳まで",
+    ],
+    tags: ["在職老齢年金", "高年齢者雇用", "厚生年金保険", "繰下げ受給", "賃金設計"],
+  },
+  {
+    file: "11-kaigai-shucho-haken-rosai.md",
+    slug: "kaigai-shucho-haken-rosai-chigai",
+    title: "海外出張と海外派遣は、労災でまったく違う",
+    category: "労働保険",
+    excerpt:
+      "労災保険は属地主義です。海外出張なら国内の事業場の労災保険から給付されますが、海外派遣には適用がなく、特別加入の手続をしていなければ給付を受けられません。分かれ目は滞在期間ではなく指揮命令の所在です。日中社会保障協定の適用証明書についても整理します。",
+    keywords: [
+      "海外出張 海外派遣 労災 違い",
+      "海外派遣 労災 特別加入",
+      "日中社会保障協定 適用証明書",
+      "中国 駐在 社会保険 免除",
+      "海外赴任 健康保険 厚生年金",
+      "海外勤務 介護保険 適用除外",
+    ],
+    tags: ["労災保険", "特別加入", "海外派遣", "社会保障協定", "中国"],
+  },
+  {
+    file: "12-shugyokisoku-10nin-gimu.md",
+    slug: "shugyokisoku-10nin-gimu-nani-ga-hitsuyo",
+    title: "就業規則は何人から義務か。義務でないものは何か",
+    category: "労働法の基本",
+    excerpt:
+      "就業規則の作成と届出が義務になるのは常時10人以上からです。ただしハラスメント防止の措置と育児・介護休業法上の措置は人数に関係なく義務で、労働条件の明示も1人目から必要です。令和8年10月からはカスタマーハラスメントへの対応も義務になります。",
+    keywords: [
+      "就業規則 何人から 義務",
+      "10人未満 就業規則 不要",
+      "パワハラ防止措置 中小企業 義務",
+      "カスタマーハラスメント 義務化 令和8年10月",
+      "労働条件通知書 明示事項",
+      "36協定 届出 人数",
+    ],
+    tags: ["就業規則", "ハラスメント", "労働条件明示", "36協定", "育児介護休業法"],
+  },
+  {
+    file: "13-kaisha-setsuritsu-kigen.md",
+    slug: "kaisha-setsuritsu-shakaihoken-roudouhoken-kigen",
+    title: "会社をつくったら、いつまでに何を出すのか",
+    category: "手続と期限",
+    excerpt:
+      "法人は代表者1人でも社会保険の適用事業所になります。人を雇えば労働保険も要ります。見落としやすいのが労働保険の概算保険料申告書で、保険関係が成立した日から50日以内という別の期限があります。届出の名称・提出先・期限を一覧にしました。",
+    keywords: [
+      "会社設立 社会保険 手続き 期限",
+      "新規適用届 5日以内",
+      "労働保険 保険関係成立届 10日",
+      "概算保険料申告書 50日以内",
+      "雇用保険 適用事業所設置届",
+      "設立直後 労働保険 何を出す",
+    ],
+    tags: ["会社設立", "新規適用届", "労働保険", "概算保険料", "手続"],
+  },
+  {
+    file: "14-joseikin-yuki-muki-keiyaku.md",
+    slug: "joseikin-yuki-muki-keiyaku-katachi",
+    title: "助成金を狙うなら、最初の契約形態で決まる",
+    category: "助成金",
+    excerpt:
+      "キャリアアップ助成金の正社員化コースは、有期契約から正社員にしたか、無期契約から正社員にしたかで額が変わります。パートを迎える時点でどちらにするかが、1年後の金額を決めます。キャリアアップ計画は転換の実施日の前日までに提出しないと不支給になります。",
+    keywords: [
+      "キャリアアップ助成金 有期 無期 違い",
+      "正社員化コース 金額",
+      "キャリアアップ計画 提出期限",
+      "パート 正社員 助成金",
+      "重点支援対象者 キャリアアップ助成金",
+      "助成金 家族 3親等以内の親族",
+    ],
+    tags: ["助成金", "キャリアアップ助成金", "正社員化", "有期契約", "無期転換"],
+  },
 ];
 
 /** Markdownリンク・強調を平文化（FAQ JSON-LD用。本文には適用しない） */
@@ -136,10 +322,11 @@ function toPlainText(md: string): string {
     .trim();
 }
 
-/** 「## よくある質問」節から **Q. …** / A. … の組をパースする */
-function parseFaq(content: string, file: string): Faq[] {
-  const m = content.match(/## よくある質問\n([\s\S]*?)(?=\n## |$)/);
-  if (!m) throw new Error(`${file}: 「## よくある質問」節が見つかりません`);
+/** 「## よくある質問」節（翻訳版は heading 引数）から **Q. …** / A. … の組をパースする */
+function parseFaq(content: string, file: string, heading = "よくある質問"): Faq[] {
+  const esc = heading.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const m = content.match(new RegExp(`## ${esc}\\n([\\s\\S]*?)(?=\\n## |$)`));
+  if (!m) throw new Error(`${file}: 「## ${heading}」節が見つかりません`);
   const block = m[1];
   const faqs: Faq[] = [];
   const re = /\*\*Q\.\s*([\s\S]*?)\*\*\n(A\.\s*[\s\S]*?)(?=\n\*\*Q\.|\s*$)/g;
@@ -154,11 +341,75 @@ function parseFaq(content: string, file: string): Faq[] {
   return faqs;
 }
 
+/** 各言語の著者表記（第9条：事務所名は日本語表記のまま。資格名は各言語に訳す） */
+const AUTHOR_BY_LOCALE: Record<Locale, { name: string; title: string }> = {
+  en: {
+    name: "Joji Uramatsu",
+    title:
+      "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所",
+  },
+  "zh-tw": {
+    name: "浦松 丈二",
+    title: "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）",
+  },
+  zh: {
+    name: "浦松 丈二",
+    title: "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）",
+  },
+};
+
+/**
+ * 翻訳md（scripts/labor-columns/<locale>/<file>）を読む。無ければ undefined。
+ * 形式＝フロントマター（title / excerpt / category / faqHeading / keywords / tags）＋本文。
+ * FAQは本文の faqHeading 節から `**Q. …**` / `A. …` をパースする（日本語版と同じ型）。
+ */
+function readTranslation(locale: Locale, file: string): Translation | undefined {
+  const p = resolve(__dirname, "labor-columns", locale, file);
+  if (!existsSync(p)) return undefined;
+  const raw = readFileSync(p, "utf-8");
+  const m = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)$/);
+  if (!m) throw new Error(`${locale}/${file}: フロントマターがありません`);
+  const meta: Record<string, string> = {};
+  for (const line of m[1].split(/\r?\n/)) {
+    const kv = line.match(/^([A-Za-z]+):\s*(.*)$/);
+    if (kv) meta[kv[1]] = kv[2].trim();
+  }
+  for (const k of ["title", "excerpt", "faqHeading"]) {
+    if (!meta[k]) throw new Error(`${locale}/${file}: フロントマターに ${k} がありません`);
+  }
+  const content = m[2].trim();
+  const list = (v?: string) =>
+    v
+      ? v
+          .split("|")
+          .map((s) => s.trim())
+          .filter(Boolean)
+      : undefined;
+  return {
+    title: meta.title,
+    excerpt: meta.excerpt,
+    content,
+    category: meta.category || undefined,
+    keywords: list(meta.keywords),
+    tags: list(meta.tags),
+    author: { ...AUTHOR_BY_LOCALE[locale] },
+    faq: parseFaq(content, `${locale}/${file}`, meta.faqHeading),
+  };
+}
+
 function buildColumns(): SeedColumn[] {
   const dir = resolve(__dirname, "labor-columns");
   return ARTICLES.map((a) => {
     const content = readFileSync(join(dir, a.file), "utf-8").trim();
     const faq = parseFaq(content, a.file);
+
+    const translations: Partial<Record<Locale, Translation>> = {};
+    for (const l of LOCALES) {
+      const t = readTranslation(l, a.file);
+      if (t) translations[l] = t;
+    }
+    const complete = LOCALES.every((l) => translations[l]);
+
     return {
       business: "labor" as const,
       slug: a.slug,
@@ -171,8 +422,12 @@ function buildColumns(): SeedColumn[] {
       author: { ...AUTHOR },
       keywords: a.keywords,
       tags: a.tags,
-      locales: ["ja"],
+      // 空配列＝全言語公開（schema.prisma の Column.locales）。
+      // 4言語が揃っていない記事は ["ja"] のままにして、非日本語URLをsitemapに出さない
+      // （luck428-column-seo 第10条：翻訳未投入のまま提出すると登録リクエストの枠を捨てる）。
+      locales: complete ? [] : ["ja"],
       faq,
+      ...(Object.keys(translations).length ? { translations } : {}),
     };
   });
 }
@@ -187,6 +442,40 @@ const BANNED = [
   "2026年4月15日",
   "推奨申請期限",
 ];
+
+/**
+ * 一体提供・提携・国数表記の禁止語を4書体で列挙する（yotsuba-sharoushi-kaigyo 第6条6-2/6-4/6-5、第13条）。
+ * ★日本語だけのリストを作らない。2026年8月に同種の取りこぼしを3回繰り返している。
+ * 異体字はコードポイントが違うため、日本語の文字列では一致しない（会/會、険/險/险、労/勞/劳、務/务）。
+ */
+const BANNED_ALL_SCRIPTS = [
+  ...BANNED,
+  // ja 6-2
+  "一括して受任", "まとめて契約", "まとめてお任せ", "一体で受任",
+  // zh-tw / zh 6-2
+  "一站式", "一條龍", "一条龙", "一站到底", "整合承辦", "整合承办",
+  // en 6-2
+  "one-stop", "all-in-one", "end-to-end", "under one roof",
+  // 6-4 提携・連携
+  "提携税理士", "提携司法書士", "提携弁護士", "提携社会保険労務士", "連携して対応", "連携して進め",
+  "合作稅理士", "合作司法書士", "合作律師", "合作税理士", "合作司法书士", "合作律师",
+  "協同處理", "协同处理",
+  "partner tax accountant", "affiliated tax accountant", "partner judicial scrivener",
+  "affiliated judicial scrivener", "partner attorney", "affiliated attorney",
+  // 6-5 国数表記
+  "4カ国", "４カ国", "四カ国", "four countries", "4個國家", "4个国家",
+];
+
+/** 分離受任を明示していると認める語（4書体。第6条6-3の併記条件） */
+const SEPARATE_ENGAGEMENT = [
+  "独立した事業体", "別々にご契約", "それぞれ別の事業体",
+  "另行簽約", "各自獨立", "分別承接",
+  "另行签约", "各自独立", "分别承接",
+  "separate contract", "separately",
+];
+
+/** 事業体をまたぐ言及（4書体） */
+const CROSSES_ENTITY = ["四葉行政書士事務所", "四葉不動産"];
 
 function verify(cols: SeedColumn[]): string[] {
   const notes: string[] = [];
@@ -219,6 +508,36 @@ function verify(cols: SeedColumn[]): string[] {
     if (!c.content.includes("## この記事の根拠")) notes.push(`NG: ${c.slug} に「この記事の根拠」なし`);
     // 第1条：判断留保
     if (!c.content.includes("資格者が行います")) notes.push(`WARN: ${c.slug} に判断留保の一文なし`);
+    // 第7条5：著者ページリンク
+    if (!c.content.includes("/about/uramatsu"))
+      notes.push(`WARN: ${c.slug} に著者ページ（/about/uramatsu）へのリンクなし`);
+
+    // ── 多言語版の検査（第13条：日本語だけ見て判定しない）────────────────
+    const locs = Object.keys(c.translations ?? {}) as Locale[];
+    if (locs.length && locs.length !== LOCALES.length)
+      notes.push(`WARN: ${c.slug} の翻訳が${locs.length}/${LOCALES.length}言語（locales は ["ja"] のまま）`);
+    for (const l of locs) {
+      const t = c.translations![l]!;
+      const hay = `${t.title}\n${t.excerpt}\n${t.content}`;
+      for (const w of BANNED_ALL_SCRIPTS)
+        if (hay.toLowerCase().includes(w.toLowerCase()))
+          notes.push(`NG: ${c.slug}[${l}] に禁止語「${w}」`);
+      if (CROSSES_ENTITY.some((w) => hay.includes(w)) && !SEPARATE_ENGAGEMENT.some((w) => hay.includes(w)))
+        notes.push(`NG: ${c.slug}[${l}] 事業体をまたぐが分離受任の明示なし`);
+      // 第9条：多言語版の条項号は「项／項」。簡体字で「款」を使わない
+      if ((l === "zh" || l === "zh-tw") && /第[一二三四五六七八九十百千0-9０-９]+款/.test(hay))
+        notes.push(`NG: ${c.slug}[${l}] 条項号に「款」を使用（第9条：既存は「项／項」で統一）`);
+      // 事務所名は各言語でも日本語表記のまま
+      for (const bad of ["四葉社會保險勞務士", "四葉社会保险劳务士", "四葉行政書士事務所法人", "社會保險勞務士法人", "社会保险劳务士法人"])
+        if (hay.includes(bad)) notes.push(`NG: ${c.slug}[${l}] 事務所名の表記「${bad}」`);
+      if (t.faq && t.faq.length !== c.faq.length)
+        notes.push(`WARN: ${c.slug}[${l}] のFAQが${t.faq.length}件（日本語版は${c.faq.length}件）`);
+      if (t.content.length < 1500) notes.push(`WARN: ${c.slug}[${l}] の本文が短い（${t.content.length}字）`);
+      // 労務クラスタ内への発リンクは翻訳版でもロケール付きで維持する
+      const re = new RegExp(`\\]\\(/${l}/labor/`);
+      if (!re.test(t.content) && !/\]\(\/labor\//.test(t.content))
+        notes.push(`WARN: ${c.slug}[${l}] に /labor 配下へのリンクなし`);
+    }
   }
   return notes;
 }
@@ -236,7 +555,7 @@ async function main() {
       process.exit(1);
     }
     const out = resolve(__dirname, "../src/lib/data/labor-columns-seed.ts");
-    const header = `// このファイルは自動生成（npx tsx scripts/seed-labor-columns.ts --emit-ts）。直接編集しない。\n// 原稿の正本＝scripts/labor-columns/*.md。修正はmd側→再生成で行う。\n// 用途＝/admin/columns/seed-labor からの管理者セッション経由バルクupsert（seed-office と同型）。\n\nexport type LaborSeedColumn = {\n  business: "labor";\n  slug: string;\n  title: string;\n  date: string;\n  category: string;\n  excerpt: string;\n  content: string;\n  status: "published";\n  author: { name: string; title: string };\n  keywords: string[];\n  tags: string[];\n  locales: ("ja" | "en" | "zh-tw" | "zh")[];\n  faq: { question: string; answer: string }[];\n};\n\nexport const LABOR_COLUMNS_SEED: LaborSeedColumn[] = `;
+    const header = `// このファイルは自動生成（npx tsx scripts/seed-labor-columns.ts --emit-ts）。直接編集しない。\n// 原稿の正本＝scripts/labor-columns/*.md。修正はmd側→再生成で行う。\n// 用途＝/admin/columns/seed-labor からの管理者セッション経由バルクupsert（seed-office と同型）。\n\nexport type LaborSeedColumn = {\n  business: "labor";\n  slug: string;\n  title: string;\n  date: string;\n  category: string;\n  excerpt: string;\n  content: string;\n  status: "published";\n  author: { name: string; title: string };\n  keywords: string[];\n  tags: string[];\n  locales: ("ja" | "en" | "zh-tw" | "zh")[];\n  faq: { question: string; answer: string }[];\n  translations?: Partial<\n    Record<\n      "en" | "zh-tw" | "zh",\n      {\n        title: string;\n        excerpt: string;\n        content: string;\n        category?: string;\n        keywords?: string[];\n        tags?: string[];\n        author?: { name: string; title: string };\n        faq?: { question: string; answer: string }[];\n      }\n    >\n  >;\n};\n\nexport const LABOR_COLUMNS_SEED: LaborSeedColumn[] = `;
     writeFileSync(out, header + JSON.stringify(cols, null, 2) + ";\n");
     console.log(`emit-ts → ${out}（${cols.length}本）`);
     return;
