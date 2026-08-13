@@ -312,6 +312,26 @@ const ARTICLES: Array<{
     ],
     tags: ["助成金", "キャリアアップ助成金", "正社員化", "有期契約", "無期転換"],
   },
+  {
+    // 2026-08-13 追加。freeeの公式プレスリリース2本（2025-05-14 AIコンセプト／
+    // 2026-03-02 freee-mcp のOSS公開）を一次資料にしている。
+    // ★機能名・提供時期は変わるため、本文に「最新はfreee公式で確認」と明記済み。
+    file: "15-freee-jinji-kaikei-ai.md",
+    slug: "freee-jinji-kaikei-ai",
+    title: "freee人事労務とfreee会計のAI連携は、どこまで進んでいるのか",
+    category: "労務のしくみ",
+    excerpt:
+      "freeeは会計・人事労務など5領域でAPIを公開し、2026年3月にはAIエージェントから直接操作できる「freee-mcp」をOSSとして公開しました。人事労務ではAI年末調整アシストとAI勤怠チェッカーが先行しています。公式発表をもとに、何が自動になり、何が判断として残るのかを整理します。",
+    keywords: [
+      "freee人事労務 freee会計 連携",
+      "freee AI 年末調整",
+      "freee AI 勤怠チェッカー",
+      "freee-mcp",
+      "給与仕訳 自動化 freee",
+      "社労士 AI 自動化 どこまで",
+    ],
+    tags: ["freee", "AI", "給与計算", "年末調整", "勤怠管理", "バックオフィス"],
+  },
 ];
 
 /** Markdownリンク・強調を平文化（FAQ JSON-LD用。本文には適用しない） */

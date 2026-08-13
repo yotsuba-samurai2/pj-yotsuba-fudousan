@@ -2547,5 +2547,188 @@ export const LABOR_COLUMNS_SEED: LaborSeedColumn[] = [
         ]
       }
     }
+  },
+  {
+    "business": "labor",
+    "slug": "freee-jinji-kaikei-ai",
+    "title": "freee人事労務とfreee会計のAI連携は、どこまで進んでいるのか",
+    "date": "2026-09-01",
+    "category": "労務のしくみ",
+    "excerpt": "freeeは会計・人事労務など5領域でAPIを公開し、2026年3月にはAIエージェントから直接操作できる「freee-mcp」をOSSとして公開しました。人事労務ではAI年末調整アシストとAI勤怠チェッカーが先行しています。公式発表をもとに、何が自動になり、何が判断として残るのかを整理します。",
+    "content": "**結論（先に要点）**：freeeは会計・人事労務・請求書・工数管理・販売の5領域でAPIを公開しており、2026年3月には**AIエージェントからそれらを直接操作できる「freee-mcp」をOSSとして公開**しました。人事労務の側では**AI年末調整アシスト**と**AI勤怠チェッカー**が先行しています。給与計算の結果が仕訳として会計へ流れる連携は以前からあり、そこにAIが乗る形です。ただし**判断まで自動化されるわけではありません。**\n\n「freeeのAIで、労務も経理も自動になるのか」と聞かれることが増えました。公式の発表を読むかぎり、**進んでいるのは事実**です。ただ何がどこまでできて、何が残るのかは、発表を分けて見たほうが正確です。\n\n## そもそも、人事労務と会計はどうつながっているのか？\n\nAIの話の前に、土台のほうから。\n\nfreee人事労務で給与計算をすると、月々の給与、社会保険料、所得税・住民税の控除額が計算されます。**その結果を「給与仕訳」としてfreee会計へ自動で流せる**——これが人事労務と会計の連携の中心です。手で入力し直す作業と、そこで起きる転記ミスが消えます。\n\n**AIが加わるのは、この土台の上です。** 土台がないところにAIだけ乗せても、効果は限られます。\n\n## freeeはAIをどう位置づけているのか？\n\n2025年5月14日、freeeは**AIコンセプト**を発表しました。掲げているのは「**統合flow**」×「**AI**」です。\n\n「統合flow」はWork flow・Communication flow・Data flowの3つから成る、freeeの設計思想の総称です。そこにAIを掛け合わせる、という組み立てになっています。同じ発表で、AIエージェント「**freee AI（β版）**」の申込受付も始まりました。\n\n**バックオフィスの効率化にとどまらず「経営のパートナーに進化する」**——というのが、freeeが自ら書いている位置づけです。\n\n## 人事労務の側では、何が動いているのか？\n\n同じ2025年5月14日の発表で、クローズドβ版として案内されたもののうち、**人事労務に直接かかわるのは2つ**です。\n\n| 機能 | 何をするか |\n|---|---|\n| **AI年末調整アシスト** | 従業員が書類をカメラで撮るだけで、年末調整の記入をアシスト。生命保険料控除なら契約者・保険種類・区分・金額を自動入力。**年度違いなどのエラー検知**も備える |\n| **AI勤怠チェッカー** | AIに勤怠チェックを指示すると、**不備のある従業員をリストアップ**し、修正・催促の連絡まで自動で行う。催促メッセージを複数パターン提案し、指定すると送信する |\n\n**AI年末調整アシストは2025年分の年末調整から提供開始**とされています。\n\nこの2つは、実務の感覚に合っています。**年末調整の不備と、勤怠締めの催促**は、どちらも「人が何度も同じことを確認する」種類の作業だからです。\n\n## 2026年に何が変わったのか？\n\n**2026年3月2日、freeeは「freee-mcp」をOSSとして公開しました。** ここが大きい変化です。\n\nMCP（Model Context Protocol）は、AIアシスタントと外部ツールをつなぐためのオープンな規格です。「freee-mcp」は、freeeが2018年から提供してきたPublic APIをもとに、**会計・人事労務・請求書・工数管理・販売の約270本のAPIをMCPツール化**したものです。\n\nfreeeの発表には、こうあります。\n\n> チャット上で「請求書を作って」と依頼するだけで、取引先登録から請求書発行まで一連の操作を正確に完了できます。\n\nClaude Desktop・Claude Code・Claude Cowork・Cursorなど、主要なAIツールから利用できるとされています。\n\n**つまり「freeeの画面を人が操作する」から「AIに頼むとfreeeが動く」へ、入口が変わりつつある**ということです。freeeの共同創業者でCAIOの横路隆氏は、記者発表でこう述べたと発表文に記されています。\n\n> SaaSは人が使うものではなく、AIから使われるものになってきた\n\n## それで、労務の仕事はなくなるのか？\n\n**作業は軽くなります。判断は残ります。**\n\n年末調整の入力も、勤怠の催促も、請求書の発行も、**手順が決まっている作業**です。決まっているから自動化できます。\n\n一方で、労務には手順が決まっていないものがあります。\n\n- 業務委託でお願いしている方が、**労働者にあたるのかどうか**\n- パートを**社会保険に入れるべきかどうか**（週の所定労働時間をどう設計するか）\n- 助成金の**要件を満たしているかどうか**\n- 就業規則を、**この会社の実態に合わせてどう書くか**\n\n**これらは、正解が事実の側にあるのではなく、事実をどう評価するかの問題です。** AIは資料を整理し、論点を並べるところまでは助けになりますが、**評価そのものは資格者が行います。**\n\nそして、間違えたときに責任を負うのも資格者です。**AIで安くなるのは作業であって、責任ではありません。**\n\n## 会社として、どう構えればいいのか？\n\n順序があります。\n\n**1. まず土台をつくる。** 人事労務と会計を連携させ、給与仕訳が自動で流れる状態にする。ここができていないと、AIを足しても効きません。\n\n**2. 決まった作業から任せる。** 年末調整の入力補助、勤怠の不備チェック。**間違えても取り返しがつく範囲**から始めるのが安全です。\n\n**3. 判断が要るところは、人が見る。** 労働者性、社会保険の加入、助成金の要件、規程の設計。ここを自動化しようとすると、**あとから遡って直すほうが高くつきます。**\n\n## よくある質問\n\n**Q. freee-mcp は誰でも使えますか？**\nA. npmパッケージとして公開されており、GitHubとNPMから誰でもインストールできるとされています。ただし**基幹業務を操作するもの**なので、権限の設定と、誰が何をしたかの記録は、導入前に決めておくべきです。\n\n**Q. 顧問先のデータをAIに渡すことになりませんか？**\nA. その点は、事業者ごとに方針を決める必要があります。**当事務所は、顧問先の個人情報を生成AIに入力しない運用にしています。**社会保険労務士には秘密を守る義務があります（社会保険労務士法第21条）。AIは調べものと下書きに使い、判断と最終確認は社会保険労務士が行います。\n\n**Q. AIを入れれば、社労士に頼まなくてよくなりますか？**\nA. 手続きの**作業**は軽くなります。ただし、報酬を得て労働社会保険の申請書等を作成・提出代行することは、社会保険労務士でなければできません（社会保険労務士法第27条）。AIが代わりに資格者になるわけではありません。\n\n**Q. まだ様子を見たほうがいいですか？**\nA. **土台の連携（給与仕訳の自動化）は、いま整えて損はありません。**AIの機能はこれからも増えますが、データが整っていない会社には効きません。順序としては、連携が先です。\n\n## この記事の根拠\n\n- freee株式会社「**freeeのAIコンセプトを発表 「統合flow」×「AI」でスモールビジネスの経営と組織を進化**」（2025年5月14日）\n  https://corp.freee.co.jp/news/20250514freee_ai.html\n  ——AI年末調整アシスト（2025年分の年末調整より提供開始）、AI勤怠チェッカー、freee AI（β版）の記載はこの発表による\n- freee株式会社「**freee、AIエージェントからfreeeの基幹業務を操作可能にするMCPサーバー「freee-mcp」をOSSとして公開**」（2026年3月2日）\n  https://corp.freee.co.jp/news/20260302freee_mcp.html\n  ——約270本のAPI、5領域（会計・人事労務・請求書・工数管理・販売）、対応AIツール、横路隆CAIOの発言はこの発表による\n- 社会保険労務士法（昭和43年法律第89号）**第21条**（秘密を守る義務）・**第27条**（業務の制限）\n\n**機能の提供状況・名称・提供時期は変わります。導入をご検討の際は、freeeの公式サイトで最新の情報をご確認ください。**本記事は2026年8月時点の公表資料に基づいています。\n\n当事務所が手続きと給与計算をどう進めるかは[ご相談から契約までの流れ](/labor/nagare)に、料金は[報酬額表](/labor/ryokin)に書いています。給与計算の値付けについては[給与計算を社会保険労務士に頼むと、いくらかかるのか](/labor/column/kyuyo-keisan-soba-sharoushi)をご覧ください。\n\n本記事は一般的な情報提供です。個別のご事情に応じた判断は、面談のうえ資格者が行います。執筆は[浦松丈二](/about/uramatsu)（社会保険労務士・行政書士・宅地建物取引士）です。",
+    "status": "published",
+    "author": {
+      "name": "浦松 丈二",
+      "title": "社会保険労務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+    },
+    "keywords": [
+      "freee人事労務 freee会計 連携",
+      "freee AI 年末調整",
+      "freee AI 勤怠チェッカー",
+      "freee-mcp",
+      "給与仕訳 自動化 freee",
+      "社労士 AI 自動化 どこまで"
+    ],
+    "tags": [
+      "freee",
+      "AI",
+      "給与計算",
+      "年末調整",
+      "勤怠管理",
+      "バックオフィス"
+    ],
+    "locales": [],
+    "faq": [
+      {
+        "question": "freee-mcp は誰でも使えますか？",
+        "answer": "npmパッケージとして公開されており、GitHubとNPMから誰でもインストールできるとされています。ただし基幹業務を操作するものなので、権限の設定と、誰が何をしたかの記録は、導入前に決めておくべきです。"
+      },
+      {
+        "question": "顧問先のデータをAIに渡すことになりませんか？",
+        "answer": "その点は、事業者ごとに方針を決める必要があります。当事務所は、顧問先の個人情報を生成AIに入力しない運用にしています。社会保険労務士には秘密を守る義務があります（社会保険労務士法第21条）。AIは調べものと下書きに使い、判断と最終確認は社会保険労務士が行います。"
+      },
+      {
+        "question": "AIを入れれば、社労士に頼まなくてよくなりますか？",
+        "answer": "手続きの作業は軽くなります。ただし、報酬を得て労働社会保険の申請書等を作成・提出代行することは、社会保険労務士でなければできません（社会保険労務士法第27条）。AIが代わりに資格者になるわけではありません。"
+      },
+      {
+        "question": "まだ様子を見たほうがいいですか？",
+        "answer": "土台の連携（給与仕訳の自動化）は、いま整えて損はありません。AIの機能はこれからも増えますが、データが整っていない会社には効きません。順序としては、連携が先です。"
+      }
+    ],
+    "translations": {
+      "en": {
+        "title": "How far has the AI integration between freee HR and freee Accounting actually come?",
+        "excerpt": "freee publishes APIs across five areas including accounting and HR, and in March 2026 it released freee-mcp as open-source software, letting AI agents operate those APIs directly. On the HR side, AI Year-End Adjustment Assist and the AI Attendance Checker came first. Working from the official announcements, we set out what becomes automatic and what remains a matter of judgement.",
+        "content": "**In short:** freee publishes APIs across five areas — accounting, HR (人事労務), invoicing, project time tracking and sales — and in March 2026 it released **freee-mcp** as open-source software, so that AI agents can operate them directly. On the HR side, **AI Year-End Adjustment Assist** and the **AI Attendance Checker** came first. The link that carries payroll results into accounting as journal entries has existed for some time; AI is being layered on top of it. **What is not automated is judgement.**\n\nWe are asked more and more often whether freee's AI will make both labour administration and bookkeeping run by themselves. Reading the official announcements, **real progress is being made.** But it is more accurate to look at the announcements separately, and to be clear about what each one covers.\n\n## How are HR and accounting connected in the first place?\n\nBefore the AI, the foundation.\n\nWhen you run payroll in freee HR, monthly salary, social insurance contributions and income tax and resident tax withholdings are calculated. **Those results can then flow automatically into freee Accounting as \"payroll journal entries.\"** That is the heart of the integration. It removes the re-keying, and the transcription errors that come with it.\n\n**AI sits on top of that foundation.** Adding AI where the foundation is missing achieves little.\n\n## How does freee position AI?\n\nOn 14 May 2025 freee announced its **AI concept**. What it sets out is \"**integrated flow**\" × \"**AI**.\"\n\n\"Integrated flow\" is freee's umbrella term for its design philosophy, made up of Work flow, Communication flow and Data flow. AI is to be multiplied into that. The same announcement opened applications for the AI agent **freee AI (beta)**.\n\nfreee's own wording is that it will go beyond making back-office work more efficient and \"**evolve into a partner in management.**\"\n\n## What is moving on the HR side?\n\nIn the same announcement of 14 May 2025, two of the functions offered as a closed beta bear directly on HR.\n\n| Function | What it does |\n|---|---|\n| **AI Year-End Adjustment Assist** | An employee photographs the paperwork and the entry for the year-end adjustment is assisted. For life insurance premium deductions, the policyholder, type of policy, category and amount are filled in automatically. It also **detects errors** such as documents from the wrong year |\n| **AI Attendance Checker** | Instruct the AI to check attendance and it **lists the employees whose records are incomplete**, then handles the correction and chasing messages. It proposes several patterns of chasing message and sends the one you choose |\n\n**AI Year-End Adjustment Assist is stated as being provided from the 2025 year-end adjustment onwards.**\n\nThese two match what the work actually feels like. **Year-end adjustment errors and chasing people at attendance close** are both the kind of task where a person checks the same thing over and over.\n\n## What changed in 2026?\n\n**On 2 March 2026, freee released \"freee-mcp\" as open-source software.** This is the larger shift.\n\nMCP (Model Context Protocol) is an open protocol for connecting AI assistants to external tools. \"freee-mcp\" turns roughly **270 of the Public APIs** freee has offered since 2018 — across accounting, HR, invoicing, project time tracking and sales — into MCP tools.\n\nfreee's announcement puts it this way:\n\n> Simply asking, in a chat, \"create an invoice,\" completes the whole sequence accurately, from registering the counterparty through to issuing the invoice.\n\nIt is stated as usable from the main AI tools, including Claude Desktop, Claude Code, Claude Cowork and Cursor.\n\n**In other words, the entrance is shifting from \"a person operates the freee screen\" to \"you ask the AI and freee moves.\"** Takashi Yokoji, freee's co-founder and CAIO, is quoted in the announcement as having said at a press briefing:\n\n> SaaS has become something used by AI, not something used by people.\n\n## So does labour administration stop being a job?\n\n**The work gets lighter. The judgement stays.**\n\nEntering the year-end adjustment, chasing attendance, issuing invoices — these are **tasks with a settled procedure**. Because the procedure is settled, it can be automated.\n\nLabour administration also contains things where no procedure is settled.\n\n- Whether the person you engage under a service contract **is in fact a worker**\n- Whether a part-timer **ought to be enrolled in social insurance** (and how to design the contracted hours)\n- Whether the **requirements for a subsidy** are met\n- **How to write** work rules that fit this particular company\n\n**In each of these the answer does not sit in the facts; it lies in how the facts are assessed.** AI helps as far as organising the material and laying out the issues, but **the assessment itself is made by a qualified professional.**\n\nAnd when something goes wrong, it is the qualified professional who answers for it. **What AI makes cheaper is the work, not the responsibility.**\n\n## How should a company approach this?\n\nThere is an order to it.\n\n**1. Build the foundation first.** Connect HR and accounting so that payroll journal entries flow automatically. Without this, adding AI will not help.\n\n**2. Hand over the settled tasks.** Assisted entry for the year-end adjustment; checking attendance records. It is safer to begin where **a mistake can still be undone**.\n\n**3. Keep a person on anything that calls for judgement.** Worker status, enrolment in social insurance, subsidy requirements, the design of internal rules. Trying to automate this is where **putting it right afterwards costs more**.\n\n## Frequently asked questions\n\n**Q. Can anyone use freee-mcp?**\nA. It is published as an npm package and stated to be installable by anyone from GitHub and NPM. But it **operates core business systems**, so permissions, and a record of who did what, should be settled before you introduce it.\n\n**Q. Doesn't this mean handing client data to an AI?**\nA. That is a matter each business has to decide for itself. **This office does not enter clients' personal data into generative AI.** A Certified Social Insurance and Labour Consultant is under a duty of confidentiality (Article 21 of the Certified Social Insurance and Labour Consultant Act). We use AI for research and drafting; the judgement and the final check are made by the consultant.\n\n**Q. If we bring in AI, will we no longer need a labour consultant?**\nA. The **work** of the procedures gets lighter. But preparing and filing applications under labour and social insurance legislation for a fee may only be done by a Certified Social Insurance and Labour Consultant (Article 27 of the same Act). AI does not become the qualified professional in their place.\n\n**Q. Should we wait and see?**\nA. **There is nothing to lose by putting the foundation — automatic payroll journal entries — in place now.** More AI functions will come, but they do not help a company whose data is not in order. The integration comes first.\n\n## Sources for this article\n\n- freee K.K., \"freeeのAIコンセプトを発表 「統合flow」×「AI」でスモールビジネスの経営と組織を進化\" (14 May 2025)\n  https://corp.freee.co.jp/news/20250514freee_ai.html\n  — AI Year-End Adjustment Assist (from the 2025 year-end adjustment), the AI Attendance Checker and freee AI (beta) are taken from this announcement\n- freee K.K., \"freee、AIエージェントからfreeeの基幹業務を操作可能にするMCPサーバー「freee-mcp」をOSSとして公開\" (2 March 2026)\n  https://corp.freee.co.jp/news/20260302freee_mcp.html\n  — the roughly 270 APIs, the five areas, the AI tools supported and the remark by CAIO Takashi Yokoji are taken from this announcement\n- Certified Social Insurance and Labour Consultant Act (Act No. 89 of 1968), **Article 21** (duty of confidentiality) and **Article 27** (restriction on business)\n\n**Function names, availability and timing change. Please check freee's official site for the current position before deciding to adopt anything.** This article reflects material published as at August 2026.\n\nHow this office handles procedures and payroll is set out in [From consultation to engagement](/en/labor/nagare), and the fees in the [fee schedule](/en/labor/ryokin). On how payroll is priced, see [What does it cost to have a labour consultant run your payroll?](/en/labor/column/kyuyo-keisan-soba-sharoushi).\n\nThis article is general information. Any assessment of your particular circumstances is made by a qualified professional after a meeting. Written by [Joji Uramatsu](/en/about/uramatsu).",
+        "category": "How labour administration works",
+        "keywords": [
+          "freee HR freee Accounting integration",
+          "freee AI year-end adjustment",
+          "freee AI attendance checker",
+          "freee-mcp",
+          "payroll journal entry automation freee",
+          "how far can AI automate labour administration"
+        ],
+        "tags": [
+          "freee",
+          "AI",
+          "payroll",
+          "year-end adjustment",
+          "attendance management",
+          "back office"
+        ],
+        "author": {
+          "name": "Joji Uramatsu",
+          "title": "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所"
+        },
+        "faq": [
+          {
+            "question": "Can anyone use freee-mcp?",
+            "answer": "It is published as an npm package and stated to be installable by anyone from GitHub and NPM. But it operates core business systems, so permissions, and a record of who did what, should be settled before you introduce it."
+          },
+          {
+            "question": "Doesn't this mean handing client data to an AI?",
+            "answer": "That is a matter each business has to decide for itself. This office does not enter clients' personal data into generative AI. A Certified Social Insurance and Labour Consultant is under a duty of confidentiality (Article 21 of the Certified Social Insurance and Labour Consultant Act). We use AI for research and drafting; the judgement and the final check are made by the consultant."
+          },
+          {
+            "question": "If we bring in AI, will we no longer need a labour consultant?",
+            "answer": "The work of the procedures gets lighter. But preparing and filing applications under labour and social insurance legislation for a fee may only be done by a Certified Social Insurance and Labour Consultant (Article 27 of the same Act). AI does not become the qualified professional in their place."
+          },
+          {
+            "question": "Should we wait and see?",
+            "answer": "There is nothing to lose by putting the foundation — automatic payroll journal entries — in place now. More AI functions will come, but they do not help a company whose data is not in order. The integration comes first."
+          }
+        ]
+      },
+      "zh-tw": {
+        "title": "freee人事労務與freee会計的AI整合，究竟進展到什麼程度",
+        "excerpt": "freee在會計、人事勞務等5個領域公開API，並於2026年3月將可讓AI代理直接操作的「freee-mcp」以OSS形式公開。人事勞務方面，AI年終調整輔助與AI出勤檢查器先行推出。本文依據官方發表，整理哪些會自動化、哪些仍是判斷的範疇。",
+        "content": "**結論（先講重點）**：freee在會計、人事勞務、請款單、工時管理、銷售等5個領域公開API，並於2026年3月將**可讓AI代理直接操作的「freee-mcp」以OSS形式公開**。人事勞務方面，**AI年終調整輔助**與**AI出勤檢查器**先行推出。薪資計算的結果以分錄形式流入會計的整合，在此之前就已存在，AI是疊加在上面。**不過，判斷並不會被自動化。**\n\n「用freee的AI，勞務和會計都能自動化嗎」——這樣的詢問變多了。就官方發表來看，**進展是事實**。但哪些做得到、哪些做不到，分開來看才準確。\n\n## 人事勞務與會計，原本是如何連結的？\n\n在談AI之前，先談基礎。\n\n在freee人事労務進行薪資計算後，會算出每月薪資、社會保險費、所得稅與住民稅的扣繳額。**能將這個結果以「薪資分錄」的形式自動流入freee会計**——這是人事勞務與會計整合的核心。重新輸入的作業，以及由此產生的轉記錯誤，都會消失。\n\n**AI是加在這個基礎之上的。** 在沒有基礎的地方只放AI，效果有限。\n\n## freee如何定位AI？\n\n2025年5月14日，freee發表了**AI概念**。標舉的是「**統合flow**」×「**AI**」。\n\n「統合flow」由Work flow、Communication flow、Data flow三者構成，是freee設計思想的總稱。在其中乘上AI，就是這個組合。同一場發表也開始受理AI代理「**freee AI（β版）**」的申請。\n\n**不僅止於後勤作業的效率化，而是「進化為經營的夥伴」**——這是freee自己寫下的定位。\n\n## 人事勞務方面，有哪些正在推動？\n\n在同一場2025年5月14日的發表中，以封閉β版介紹的功能裡，**與人事勞務直接相關的有2項**。\n\n| 功能 | 做什麼 |\n|---|---|\n| **AI年終調整輔助** | 員工只要用相機拍攝文件，就能輔助年終調整的填寫。以人壽保險費扣除為例，會自動輸入投保人、保險種類、區分、金額。也具備**年度錯誤等的錯誤偵測**功能 |\n| **AI出勤檢查器** | 向AI下達出勤檢查的指示，就會**列出出勤紀錄有缺漏的員工**，並自動進行修正與催促的聯繫。會提出多種催促訊息的版本，指定後即發送 |\n\n**AI年終調整輔助記載為自2025年分的年終調整起提供。**\n\n這2項符合實務的感受。**年終調整的缺漏，與出勤結算的催促**，都屬於「同一件事要由人反覆確認」的作業。\n\n## 2026年有什麼改變？\n\n**2026年3月2日，freee將「freee-mcp」以OSS形式公開。** 這是較大的變化。\n\nMCP（Model Context Protocol）是連接AI助理與外部工具的開放規格。「freee-mcp」以freee自2018年起提供的Public API為基礎，將**會計、人事勞務、請款單、工時管理、銷售等約270支API**轉為MCP工具。\n\nfreee的發表中如此記載：\n\n> 只要在聊天上請求「製作請款單」，就能從交易對象登錄到請款單發行，正確完成一連串的操作。\n\n並記載可從Claude Desktop、Claude Code、Claude Cowork、Cursor等主要AI工具使用。\n\n**也就是說，入口正從「由人操作freee的畫面」轉為「向AI提出請求，freee就會動作」。** freee共同創辦人兼CAIO橫路隆在記者發表中的發言，發表文中如此記載：\n\n> SaaS已經不是給人使用的東西，而是被AI使用的東西。\n\n## 那麼，勞務的工作會消失嗎？\n\n**作業會變輕。判斷會留下。**\n\n年終調整的輸入、出勤的催促、請款單的發行，都是**步驟已定的作業**。因為已定，所以能自動化。\n\n另一方面，勞務中有些事情，步驟並未確定。\n\n- 以業務委託方式請託的人，**是否屬於勞工**\n- 兼職人員**是否應加入社會保險**（週約定工時要如何設計）\n- 是否**符合補助金的要件**\n- 工作規則要**如何配合這家公司的實態來撰寫**\n\n**這些的答案不在事實那一側，而在於如何評價事實。** AI在整理資料、列出爭點的範圍內有幫助，但**評價本身由有資格者進行。**\n\n而且，出錯時承擔責任的也是有資格者。**AI讓變便宜的是作業，不是責任。**\n\n## 公司該如何因應？\n\n是有順序的。\n\n**1. 先建立基礎。** 讓人事勞務與會計整合，使薪資分錄能自動流動。這裡沒做好，加上AI也不會有效。\n\n**2. 從已定的作業開始交付。** 年終調整的輸入輔助、出勤缺漏的檢查。從**即使出錯也還來得及挽回的範圍**開始比較安全。\n\n**3. 需要判斷的地方，由人來看。** 勞工性、社會保險的加入、補助金的要件、規程的設計。若想把這裡也自動化，**事後回頭修正的代價更高。**\n\n## 常見問題\n\n**Q. freee-mcp 任何人都能使用嗎？**\nA. 記載為以npm套件形式公開，任何人都能從GitHub與NPM安裝。不過因為是**操作核心業務**的東西，權限的設定，以及誰做了什麼的紀錄，應在導入前先行決定。\n\n**Q. 這是否等於把顧問客戶的資料交給AI？**\nA. 這一點需要各事業體自行決定方針。**本事務所採取不將顧問客戶的個人資料輸入生成式AI的做法。** 社會保險勞務士負有保密義務（社會保險勞務士法第21條）。AI用於查找與草稿，判斷與最終確認由社會保險勞務士進行。\n\n**Q. 導入AI之後，是不是就不需要委託社會保險勞務士了？**\nA. 手續的**作業**會變輕。但是，收取報酬製作勞動社會保險相關的申請書等並代為提出，非社會保險勞務士不得為之（同法第27條）。AI並不會代替成為有資格者。\n\n**Q. 是不是再觀望一下比較好？**\nA. **基礎的整合（薪資分錄的自動化），現在著手並無損失。** AI的功能今後還會增加，但對資料未整理好的公司並不會有效。就順序而言，整合在先。\n\n## 本文的依據\n\n- freee株式会社「freeeのAIコンセプトを発表 「統合flow」×「AI」でスモールビジネスの経営と組織を進化」（2025年5月14日）\n  https://corp.freee.co.jp/news/20250514freee_ai.html\n  ——AI年終調整輔助（自2025年分的年終調整起提供）、AI出勤檢查器、freee AI（β版）的記載依據此發表\n- freee株式会社「freee、AIエージェントからfreeeの基幹業務を操作可能にするMCPサーバー「freee-mcp」をOSSとして公開」（2026年3月2日）\n  https://corp.freee.co.jp/news/20260302freee_mcp.html\n  ——約270支API、5個領域、支援的AI工具、橫路隆CAIO的發言依據此發表\n- 社會保險勞務士法（昭和43年法律第89號）**第21條**（保密義務）・**第27條**（業務的限制）\n\n**功能的提供狀況、名稱、提供時期都會變動。考慮導入時，請至freee官方網站確認最新資訊。** 本文依據2026年8月時點的公開資料。\n\n本事務所如何進行手續與薪資計算，寫在[從諮詢到簽約的流程](/zh-tw/labor/nagare)；費用寫在[報酬額表](/zh-tw/labor/ryokin)。關於薪資計算的定價，請見[委託社會保險勞務士做薪資計算，要花多少錢](/zh-tw/labor/column/kyuyo-keisan-soba-sharoushi)。\n\n本文為一般性的資訊提供。針對個別情況的判斷，將於面談後由有資格者進行。撰文為[浦松丈二](/zh-tw/about/uramatsu)（社會保險勞務士・行政書士・宅地建物取引士）。",
+        "category": "勞務的機制",
+        "keywords": [
+          "freee人事労務 freee会計 整合",
+          "freee AI 年終調整",
+          "freee AI 出勤檢查",
+          "freee-mcp",
+          "薪資分錄 自動化 freee",
+          "社會保險勞務士 AI 自動化 到什麼程度"
+        ],
+        "tags": [
+          "freee",
+          "AI",
+          "薪資計算",
+          "年終調整",
+          "出勤管理",
+          "後勤作業"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "freee-mcp 任何人都能使用嗎？",
+            "answer": "記載為以npm套件形式公開，任何人都能從GitHub與NPM安裝。不過因為是操作核心業務的東西，權限的設定，以及誰做了什麼的紀錄，應在導入前先行決定。"
+          },
+          {
+            "question": "這是否等於把顧問客戶的資料交給AI？",
+            "answer": "這一點需要各事業體自行決定方針。本事務所採取不將顧問客戶的個人資料輸入生成式AI的做法。 社會保險勞務士負有保密義務（社會保險勞務士法第21條）。AI用於查找與草稿，判斷與最終確認由社會保險勞務士進行。"
+          },
+          {
+            "question": "導入AI之後，是不是就不需要委託社會保險勞務士了？",
+            "answer": "手續的作業會變輕。但是，收取報酬製作勞動社會保險相關的申請書等並代為提出，非社會保險勞務士不得為之（同法第27條）。AI並不會代替成為有資格者。"
+          },
+          {
+            "question": "是不是再觀望一下比較好？",
+            "answer": "基礎的整合（薪資分錄的自動化），現在著手並無損失。 AI的功能今後還會增加，但對資料未整理好的公司並不會有效。就順序而言，整合在先。"
+          }
+        ]
+      },
+      "zh": {
+        "title": "freee人事労務与freee会計的AI整合，究竟进展到什么程度",
+        "excerpt": "freee在会计、人事劳务等5个领域公开API，并于2026年3月将可让AI代理直接操作的「freee-mcp」以OSS形式公开。人事劳务方面，AI年终调整辅助与AI考勤检查器先行推出。本文依据官方发表，整理哪些会自动化、哪些仍属判断的范畴。",
+        "content": "**结论（先讲重点）**：freee在会计、人事劳务、请款单、工时管理、销售等5个领域公开API，并于2026年3月将**可让AI代理直接操作的「freee-mcp」以OSS形式公开**。人事劳务方面，**AI年终调整辅助**与**AI考勤检查器**先行推出。工资计算的结果以分录形式流入会计的整合，在此之前就已存在，AI是叠加在上面。**不过，判断并不会被自动化。**\n\n「用freee的AI，劳务和会计都能自动化吗」——这样的询问变多了。就官方发表来看，**进展是事实**。但哪些做得到、哪些做不到，分开来看才准确。\n\n## 人事劳务与会计，原本是如何连结的？\n\n在谈AI之前，先谈基础。\n\n在freee人事労務进行工资计算后，会算出每月工资、社会保险费、所得税与住民税的扣缴额。**能将这个结果以「工资分录」的形式自动流入freee会計**——这是人事劳务与会计整合的核心。重新输入的作业，以及由此产生的转记错误，都会消失。\n\n**AI是加在这个基础之上的。** 在没有基础的地方只放AI，效果有限。\n\n## freee如何定位AI？\n\n2025年5月14日，freee发表了**AI概念**。标举的是「**统合flow**」×「**AI**」。\n\n「统合flow」由Work flow、Communication flow、Data flow三者构成，是freee设计思想的总称。在其中乘上AI，就是这个组合。同一场发表也开始受理AI代理「**freee AI（β版）**」的申请。\n\n**不仅止于后勤作业的效率化，而是「进化为经营的伙伴」**——这是freee自己写下的定位。\n\n## 人事劳务方面，有哪些正在推动？\n\n在同一场2025年5月14日的发表中，以封闭β版介绍的功能里，**与人事劳务直接相关的有2项**。\n\n| 功能 | 做什么 |\n|---|---|\n| **AI年终调整辅助** | 员工只要用相机拍摄文件，就能辅助年终调整的填写。以人寿保险费扣除为例，会自动输入投保人、保险种类、区分、金额。也具备**年度错误等的错误侦测**功能 |\n| **AI考勤检查器** | 向AI下达考勤检查的指示，就会**列出考勤记录有缺漏的员工**，并自动进行修正与催促的联系。会提出多种催促信息的版本，指定后即发送 |\n\n**AI年终调整辅助记载为自2025年分的年终调整起提供。**\n\n这2项符合实务的感受。**年终调整的缺漏，与考勤结算的催促**，都属于「同一件事要由人反复确认」的作业。\n\n## 2026年有什么改变？\n\n**2026年3月2日，freee将「freee-mcp」以OSS形式公开。** 这是较大的变化。\n\nMCP（Model Context Protocol）是连接AI助理与外部工具的开放规格。「freee-mcp」以freee自2018年起提供的Public API为基础，将**会计、人事劳务、请款单、工时管理、销售等约270支API**转为MCP工具。\n\nfreee的发表中如此记载：\n\n> 只要在聊天上请求「制作请款单」，就能从交易对象登录到请款单发行，正确完成一连串的操作。\n\n并记载可从Claude Desktop、Claude Code、Claude Cowork、Cursor等主要AI工具使用。\n\n**也就是说，入口正从「由人操作freee的画面」转为「向AI提出请求，freee就会动作」。** freee共同创办人兼CAIO横路隆在记者发表中的发言，发表文中如此记载：\n\n> SaaS已经不是给人使用的东西，而是被AI使用的东西。\n\n## 那么，劳务的工作会消失吗？\n\n**作业会变轻。判断会留下。**\n\n年终调整的输入、考勤的催促、请款单的发行，都是**步骤已定的作业**。因为已定，所以能自动化。\n\n另一方面，劳务中有些事情，步骤并未确定。\n\n- 以业务委托方式请托的人，**是否属于劳动者**\n- 兼职人员**是否应加入社会保险**（周约定工时要如何设计）\n- 是否**符合补助金的要件**\n- 工作规则要**如何配合这家公司的实态来撰写**\n\n**这些的答案不在事实那一侧，而在于如何评价事实。** AI在整理资料、列出争点的范围内有帮助，但**评价本身由有资格者进行。**\n\n而且，出错时承担责任的也是有资格者。**AI让变便宜的是作业，不是责任。**\n\n## 公司该如何因应？\n\n是有顺序的。\n\n**1. 先建立基础。** 让人事劳务与会计整合，使工资分录能自动流动。这里没做好，加上AI也不会有效。\n\n**2. 从已定的作业开始交付。** 年终调整的输入辅助、考勤缺漏的检查。从**即使出错也还来得及挽回的范围**开始比较安全。\n\n**3. 需要判断的地方，由人来看。** 劳动者性、社会保险的加入、补助金的要件、规程的设计。若想把这里也自动化，**事后回头修正的代价更高。**\n\n## 常见问题\n\n**Q. freee-mcp 任何人都能使用吗？**\nA. 记载为以npm套件形式公开，任何人都能从GitHub与NPM安装。不过因为是**操作核心业务**的东西，权限的设定，以及谁做了什么的记录，应在导入前先行决定。\n\n**Q. 这是否等于把顾问客户的资料交给AI？**\nA. 这一点需要各事业体自行决定方针。**本事务所采取不将顾问客户的个人资料输入生成式AI的做法。** 社会保险劳务士负有保密义务（社会保险劳务士法第21条）。AI用于查找与草稿，判断与最终确认由社会保险劳务士进行。\n\n**Q. 导入AI之后，是不是就不需要委托社会保险劳务士了？**\nA. 手续的**作业**会变轻。但是，收取报酬制作劳动社会保险相关的申请书等并代为提出，非社会保险劳务士不得为之（同法第27条）。AI并不会代替成为有资格者。\n\n**Q. 是不是再观望一下比较好？**\nA. **基础的整合（工资分录的自动化），现在着手并无损失。** AI的功能今后还会增加，但对资料未整理好的公司并不会有效。就顺序而言，整合在先。\n\n## 本文的依据\n\n- freee株式会社「freeeのAIコンセプトを発表 「統合flow」×「AI」でスモールビジネスの経営と組織を進化」（2025年5月14日）\n  https://corp.freee.co.jp/news/20250514freee_ai.html\n  ——AI年终调整辅助（自2025年分的年终调整起提供）、AI考勤检查器、freee AI（β版）的记载依据此发表\n- freee株式会社「freee、AIエージェントからfreeeの基幹業務を操作可能にするMCPサーバー「freee-mcp」をOSSとして公開」（2026年3月2日）\n  https://corp.freee.co.jp/news/20260302freee_mcp.html\n  ——约270支API、5个领域、支援的AI工具、横路隆CAIO的发言依据此发表\n- 社会保险劳务士法（昭和43年法律第89号）**第21条**（保密义务）・**第27条**（业务的限制）\n\n**功能的提供状况、名称、提供时期都会变动。考虑导入时，请至freee官方网站确认最新信息。** 本文依据2026年8月时点的公开资料。\n\n本事务所如何进行手续与工资计算，写在[从咨询到签约的流程](/zh/labor/nagare)；费用写在[报酬额表](/zh/labor/ryokin)。关于工资计算的定价，请见[委托社会保险劳务士做工资计算，要花多少钱](/zh/labor/column/kyuyo-keisan-soba-sharoushi)。\n\n本文为一般性的信息提供。针对个别情况的判断，将于面谈后由有资格者进行。撰文为[浦松丈二](/zh/about/uramatsu)（社会保险劳务士・行政书士・宅地建物取引士）。",
+        "category": "劳务的机制",
+        "keywords": [
+          "freee人事労務 freee会計 整合",
+          "freee AI 年终调整",
+          "freee AI 考勤检查",
+          "freee-mcp",
+          "工资分录 自动化 freee",
+          "社会保险劳务士 AI 自动化 到什么程度"
+        ],
+        "tags": [
+          "freee",
+          "AI",
+          "工资计算",
+          "年终调整",
+          "考勤管理",
+          "后勤作业"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "freee-mcp 任何人都能使用吗？",
+            "answer": "记载为以npm套件形式公开，任何人都能从GitHub与NPM安装。不过因为是操作核心业务的东西，权限的设定，以及谁做了什么的记录，应在导入前先行决定。"
+          },
+          {
+            "question": "这是否等于把顾问客户的资料交给AI？",
+            "answer": "这一点需要各事业体自行决定方针。本事务所采取不将顾问客户的个人资料输入生成式AI的做法。 社会保险劳务士负有保密义务（社会保险劳务士法第21条）。AI用于查找与草稿，判断与最终确认由社会保险劳务士进行。"
+          },
+          {
+            "question": "导入AI之后，是不是就不需要委托社会保险劳务士了？",
+            "answer": "手续的作业会变轻。但是，收取报酬制作劳动社会保险相关的申请书等并代为提出，非社会保险劳务士不得为之（同法第27条）。AI并不会代替成为有资格者。"
+          },
+          {
+            "question": "是不是再观望一下比较好？",
+            "answer": "基础的整合（工资分录的自动化），现在着手并无损失。 AI的功能今后还会增加，但对资料未整理好的公司并不会有效。就顺序而言，整合在先。"
+          }
+        ]
+      }
+    }
   }
 ];
