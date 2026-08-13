@@ -71,7 +71,52 @@ export default async function LaborServicesPage() {
             <strong>四葉社会保険労務士事務所の取扱業務の一覧です。</strong>{" "}
             各業務の詳しい内容・費用・流れは、それぞれのページをご覧ください。
           </p>
+          {/* ★2026-08-13 追加：一覧ページで「受け方」と「取り扱わない業務」を先に示す。
+              サービス一覧は並べるだけになりがちだが、
+              受任の前提とおつなぎ先を先に出すほうが、問い合わせの空振りが減る。 */}
+          <div className="mt-5 rounded-xl border border-border bg-surface p-4 text-sm leading-relaxed text-text">
+            <p>
+              <strong>法人・個人事業主のお客さまは、顧問契約を前提としてお受けします。</strong>
+              手続だけ、給与計算だけのご依頼は承っておりません。実情を知らないまま届出だけをお受けすると、
+              誤りに気づけないためです。
+              <strong>障害年金（個人のお客さま）と外部監査人（監理支援機関）は、顧問契約を前提としません。</strong>
+            </p>
+            <p className="mt-3">
+              手続きと給与計算は <strong>freee人事労務</strong> で行い、顧問先と
+              <strong>同じデータを見ながら</strong>進めます。料金は
+              <strong>着手前に書面</strong>でお出しします。
+              <Link href={addLocalePrefix("/labor/nagare", locale)} className="text-primary underline">
+                進め方
+              </Link>
+              に、AIをどこまで使うか（と、使わないところ）を書いています。
+            </p>
+          </div>
         </header>
+
+        {/* ★取り扱わない業務を一覧に置く。分離受任＝shigyo-compliance-gate */}
+        <section className="mt-8">
+          <h2 className="border-l-4 border-primary pl-2 font-serif text-lg font-semibold text-ink">
+            当事務所が取り扱わない業務
+          </h2>
+          <p className="mt-2 text-sm leading-relaxed text-text">
+            下記は社会保険労務士の業務ではありません。その資格をお持ちの方におつなぎします。
+            <strong>紹介料の授受は一切行いません。</strong>
+          </p>
+          <dl className="mt-3 divide-y divide-border overflow-hidden rounded-xl border border-border bg-surface text-sm">
+            {[
+              { w: "年末調整、扶養控除・非課税限度額などの税務判断", t: "税理士" },
+              { w: "法人登記の変更", t: "司法書士" },
+              { w: "離職理由をめぐる争いなど、紛争性が生じた事案", t: "弁護士" },
+              { w: "在留資格の申請書類の作成・申請取次／補助金の申請", t: "四葉行政書士事務所（別事業体・別々にご契約いただきます）" },
+              { w: "求職者の紹介・あっせん、応募者の面接代行", t: "取り扱っておりません" },
+            ].map((r) => (
+              <div key={r.w} className="flex flex-col gap-1 px-4 py-3 sm:flex-row sm:gap-4">
+                <dt className="text-text sm:w-1/2">{r.w}</dt>
+                <dd className="font-medium text-ink sm:w-1/2">→ {r.t}</dd>
+              </div>
+            ))}
+          </dl>
+        </section>
 
         <section className="mt-6 space-y-3">
           {ROWS.map((r) => (

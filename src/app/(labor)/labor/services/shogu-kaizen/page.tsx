@@ -70,14 +70,22 @@ export default async function Page() {
 
       <div>
         <LaborH2>費用・受任の流れ</LaborH2>
-        <p className="mt-2 text-sm">
-          →{" "}
-          <Link href={addLocalePrefix("/labor/ryokin", locale)} className="text-primary underline">処遇改善加算サポートの料金</Link>
+        <p className="mt-3">
+          <strong>賃金要件の設計・算定支援は、お見積りとしています。</strong>
+          事業所の規模、サービス種別、既存の賃金規程がどこまで整っているかで作業量が大きく変わるためです。
+          <strong>金額は着手前に書面でお出しします。</strong>
+          就業規則・賃金規程の作成は、報酬額表の単価どおりに申し受けます。
         </p>
-        <p className="mt-1 text-sm">
+        <p className="mt-3">
+          手続きと給与計算は <strong>freee人事労務</strong> で行い、顧問先と
+          <strong>同じデータを見ながら</strong>進めます。賃金改善額の算定は、
+          給与計算のデータをそのまま使えるため、資料を作り直していただく必要がありません。
+        </p>
+        <p className="mt-3 text-sm">
           →{" "}
+          <Link href={addLocalePrefix("/labor/ryokin", locale)} className="text-primary underline">報酬額表</Link>
+          ／{" "}
           <Link href={addLocalePrefix("/labor/nagare", locale)} className="text-primary underline">ご相談から契約までの流れ</Link>
-          <Placeholder reason="浦松＝各ステップの実運用・標準期間" />
         </p>
       </div>
     </LaborServicePage>
