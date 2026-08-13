@@ -18,6 +18,11 @@
 //  - 一般名詞としての資格名は各言語に訳す（社會保險勞務士／社会保险劳务士）
 //  - 国数の表記（4カ国等）は使わない
 //  - 法人ではないので「社会保険労務士法人」と書かない
+//
+// ★営業時間は行政書士事務所と同じ。宅地建物取引業法上の専任の宅地建物取引士の
+//   専従性のため、四葉不動産（10:00〜18:00・火水定休）と時間を重ねられない。
+//   正は src/lib/shared/office.ts の TENANT.labor.hours。ここはその表示用。
+//   ★変更するときは office.ts・legal と3か所を必ず揃える。
 
 import type { LangCode } from "@/config/languages";
 
@@ -48,7 +53,7 @@ export const LABOR_OFFICE_INFO: Record<LangCode, OfficeInfoRow[]> = {
     { label: "所在地", value: "〒112-0006 東京都文京区小日向４丁目２－５ 小日向安田ビル ２０３" },
     { label: "最寄駅", value: "東京メトロ丸ノ内線 茗荷谷駅 徒歩5分" },
     { label: "電話番号", value: "03-6161-9428" },
-    { label: "営業時間", value: "9:00〜18:00（平日・土日）" },
+    { label: "営業時間", value: "火・水 10:00〜19:00／月・木・金・土・日 18:00〜19:00" },
     { label: "対応言語", value: "日本語・英語・中国語（繁体字／簡体字）" },
     { label: "対応地域", value: "東京都および近県。オンラインでの対応も承ります" },
     { label: "使用システム", value: "freee人事労務" },
@@ -65,7 +70,7 @@ export const LABOR_OFFICE_INFO: Record<LangCode, OfficeInfoRow[]> = {
     { label: "Address", value: "203 Kohinata Yasuda Building, 4-2-5 Kohinata, Bunkyo-ku, Tokyo 112-0006" },
     { label: "Nearest station", value: "Myogadani Station, Tokyo Metro Marunouchi Line — 5 minutes on foot" },
     { label: "Phone", value: "03-6161-9428" },
-    { label: "Business hours", value: "9:00–18:00 (weekdays and weekends)" },
+    { label: "Business hours", value: "Tue & Wed 10:00–19:00 / Mon, Thu, Fri, Sat & Sun 18:00–19:00" },
     { label: "Languages", value: "Japanese, English, Chinese (Traditional / Simplified)" },
     { label: "Area covered", value: "Tokyo and neighbouring prefectures. Online consultation is also available." },
     { label: "System used", value: "freee HR (freee人事労務)" },
@@ -82,7 +87,7 @@ export const LABOR_OFFICE_INFO: Record<LangCode, OfficeInfoRow[]> = {
     { label: "地址", value: "〒112-0006 東京都文京區小日向４丁目２－５ 小日向安田大樓 ２０３" },
     { label: "最近車站", value: "東京Metro丸之內線 茗荷谷站 步行5分鐘" },
     { label: "電話號碼", value: "03-6161-9428" },
-    { label: "營業時間", value: "9:00〜18:00（平日・週六日）" },
+    { label: "營業時間", value: "週二・週三 10:00〜19:00／週一・週四・週五・週六・週日 18:00〜19:00" },
     { label: "對應語言", value: "日文・英文・中文（繁體／簡體）" },
     { label: "服務地區", value: "東京都及鄰近縣。亦可線上對應。" },
     { label: "使用系統", value: "freee人事労務" },
@@ -99,7 +104,7 @@ export const LABOR_OFFICE_INFO: Record<LangCode, OfficeInfoRow[]> = {
     { label: "地址", value: "〒112-0006 东京都文京区小日向４丁目２－５ 小日向安田大厦 ２０３" },
     { label: "最近车站", value: "东京Metro丸之内线 茗荷谷站 步行5分钟" },
     { label: "电话号码", value: "03-6161-9428" },
-    { label: "营业时间", value: "9:00〜18:00（平日・周六日）" },
+    { label: "营业时间", value: "周二・周三 10:00〜19:00／周一・周四・周五・周六・周日 18:00〜19:00" },
     { label: "对应语言", value: "日语・英语・中文（繁体／简体）" },
     { label: "服务地区", value: "东京都及邻近县。亦可线上对应。" },
     { label: "使用系统", value: "freee人事労務" },

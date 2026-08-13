@@ -66,11 +66,20 @@ export const TENANT: Record<
     home: "/labor",
     name: "四葉社会保険労務士事務所",
     contactHref: "/labor/contact",
-    hours: "", // 【要確認：浦松＝社労士事務所の営業時間】開業時確定まで空欄（未検証は出力しない）
-    openingHours: [],
+    // ★2026-08-13 確定（浦松）：行政書士事務所と同じ時間にする。
+    // 理由は宅地建物取引業法上の専任の宅地建物取引士の専従性。
+    // 四葉不動産（Mo,Th,Fr,Sa,Su 10:00-18:00）と時間を重ねられないため、
+    // 火・水は不動産が定休の日中を、それ以外の曜日は不動産が閉まる18:00以降を充てる。
+    // legal と同じ値にしているのは偶然ではなく、同じ制約から導かれた必然。
+    // ★片方だけ変えると専従性の説明が崩れる。変更するときは legal と必ず揃える。
+    hours: "火・水 10:00〜19:00／月・木・金・土・日 18:00〜19:00",
+    openingHours: ["Tu,We 10:00-19:00", "Mo,Th,Fr,Sa,Su 18:00-19:00"],
     // 2026-07-29：旧「「人」の手続き、まとめて整理しませんか。」から変更。
-    // 「まとめて」は業務の一体提供を示唆する語（yotsuba-sharoushi-kaigyo 第6条）で、
-    // 4ロケール版（TENANT_CTA_I18N.labor.ja）もこの値を参照するため1か所の修正で全言語に効く。
+    // 「まとめて」は業務の一体提供を示唆する語（yotsuba-sharoushi-kaigyo 第6条）。
+    // ★2026-08-13 訂正：当時「4ロケール版もこの値を参照するため1か所の修正で全言語に効く」と
+    // 書いたが誤りだった。参照しているのは TENANT_CTA_I18N.labor.ja だけで、
+    // en / zh-tw / zh は個別の文字列を持っており、7月29日の修正が届いていなかった
+    // （en "at once" / 繁簡「一次整理好」が残存）。3言語とも書き換え済み。
     ctaHeading: "「人」のことから、整理しませんか。",
     ctaLead:
       "四葉社会保険労務士事務所（文京区小日向・東京メトロ丸ノ内線「茗荷谷」駅 徒歩5分）が、労務の現状整理からお手伝いします。",
@@ -82,7 +91,10 @@ export const TENANT: Record<
  * - server専用のまま＝SR名（社労士事務所名）を含むため office-public / client側へ移さないこと。
  * - ja はTENANT正文の参照（バイト不変＝ja表示回帰なしの担保）。
  * - en/zh-tw/zh は監修前ドラフト（realestateはHomePageContent COPYの既存訳を転用、legal/laborは新規訳＝要監修）。
- * - labor.hours は全ロケール空欄維持（【要確認：浦松】開業時確定まで。未検証は出力しない）。
+ * - ★2026-08-13：labor.hours を確定（浦松）。行政書士事務所と同じ
+ *   「火・水 10:00〜19:00／月・木・金・土・日 18:00〜19:00」。
+ *   宅地建物取引業法上の専任の宅地建物取引士の専従性のため、
+ *   四葉不動産（10:00〜18:00・火水定休）と時間を重ねられないことによる。
  */
 export const TENANT_CTA_I18N: Record<
   BusinessKey,
@@ -142,23 +154,28 @@ export const TENANT_CTA_I18N: Record<
       ctaLead: TENANT.labor.ctaLead,
       hours: TENANT.labor.hours,
     },
+    // ★2026-08-13：ja の 2026-07-29 の修正が en / zh-tw / zh に反映されていなかった。
+    // 「まとめて／at once／一次整理好」は業務の一体提供を示唆する語（yotsuba-sharoushi-kaigyo 第6条）。
+    // ja だけ TENANT.labor.ctaHeading を参照しており、他3言語は個別の文字列を持っていたため、
+    // 「1か所の修正で全言語に効く」という当時のコメントは誤りだった。3言語とも書き換える。
+    // ★事務所名は繁体字・簡体字でも日本語表記のまま。英語も同様に統一した。
     en: {
-      ctaHeading: "Why not sort out all your “people” procedures at once?",
+      ctaHeading: "Let’s start by sorting out where things stand.",
       ctaLead:
-        "Yotsuba Sharoushi (Certified Social Insurance and Labor Consultant) Office (Kohinata, Bunkyo-ku; a 5-minute walk from Myogadani Station on the Tokyo Metro Marunouchi Line) helps you, starting with a review of your current labor practices.",
-      hours: "",
+        "四葉社会保険労務士事務所 (Kohinata, Bunkyo-ku; a 5-minute walk from Myogadani Station on the Tokyo Metro Marunouchi Line) helps you, starting with a review of your current labour practices.",
+      hours: "Tue & Wed 10:00–19:00 / Mon, Thu–Sun 18:00–19:00",
     },
     "zh-tw": {
-      ctaHeading: "與「人」相關的手續，一次整理好如何？",
+      ctaHeading: "從整理「人」的現狀開始吧。",
       ctaLead:
         "四葉社会保険労務士事務所（文京區小日向・東京Metro丸之內線「茗荷谷」站 步行5分）從勞務現狀的整理開始協助您。",
-      hours: "",
+      hours: "週二・週三 10:00〜19:00／週一・週四〜週日 18:00〜19:00",
     },
     zh: {
-      ctaHeading: "与“人”相关的手续，一次整理好如何？",
+      ctaHeading: "从整理“人”的现状开始吧。",
       ctaLead:
         "四葉社会保険労務士事務所（文京区小日向・东京Metro丸之内线“茗荷谷”站 步行5分）从劳务现状的整理开始协助您。",
-      hours: "",
+      hours: "周二・周三 10:00〜19:00／周一・周四〜周日 18:00〜19:00",
     },
   },
 };
