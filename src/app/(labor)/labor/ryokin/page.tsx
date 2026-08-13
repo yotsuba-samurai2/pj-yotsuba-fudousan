@@ -270,6 +270,37 @@ export default async function Page() {
             ご相談を伴わずに手続だけをお受けすると、実情を把握しないまま誤った前提で処理してしまうおそれがあるためです。法人・個人事業主のお客さまは顧問契約を前提としてお受けします。
             <strong>障害年金（個人のお客さま）と外部監査人（監理支援機関のお客さま）は、顧問契約を前提としません。</strong>
           </p>
+
+          {/* ★2026-08-13 追加：この表の読み方を先に示す。
+              「安い」ではなく「あとで増えない」「理由が書いてある」を打ち出す。
+              相場より安いとは言えない項目（賃金規程49,800円・育児介護79,800円は
+              市場と同額）があるため、価格の安さを掲げると事実と食い違う。 */}
+          <div className="mt-5 rounded-xl border border-border bg-surface p-4">
+            <p className="font-medium text-ink">この表の読み方</p>
+            <ul className="mt-2 space-y-1.5 text-sm leading-relaxed text-text">
+              <li>
+                <strong>「含まないもの」も書いています。</strong>
+                当事務所が取り扱わない業務は、おつなぎ先を明示しています。紹介料の授受は行いません。
+              </li>
+              <li>
+                <strong>お見積りの項目は5つです。</strong>
+                募集・採用コンサルタント／処遇改善加算の設計／外部監査人／顧問料の30人〜／給与計算の30人〜。
+                作業量が案件ごとに大きく変わるためで、隠しているわけではありません。
+              </li>
+              <li>
+                <strong>金額は着手前に書面でお出しします。</strong>
+                この表の単価から積み上げるので、内訳がそのまま見えます。作業を始めてから金額が決まることはありません。
+              </li>
+              <li>
+                <strong>2026年8月、手続きの料金をおおむね3割引き下げました。</strong>
+                freee人事労務と生成AIの活用で、手続きの<em>作業</em>は軽くなります。そのぶんをお返しする趣旨です。
+                <Link href={addLocalePrefix("/labor/nagare", locale)} className="text-primary underline">
+                  進め方のページ
+                </Link>
+                に、AIをどこまで使うか（と、使わないところ）を書いています。
+              </li>
+            </ul>
+          </div>
         </header>
 
         <div className="mt-6 space-y-8">
