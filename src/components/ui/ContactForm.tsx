@@ -19,6 +19,7 @@ import {
   SOURCE_PLACEHOLDER,
 } from "@/lib/shared/contact-intake";
 import type { LangCode } from "@/config/languages";
+import { gaEvent } from "@/lib/gtag";
 
 const inputClass =
   "mt-1 w-full rounded-lg bg-surface px-4 py-3 text-sm outline-none transition-all duration-300 gradient-border-input";
@@ -109,15 +110,32 @@ export function ContactForm({ thanksPath = "/thanks", business = "realestate" }:
       if (!res.ok) {
         if (data.errors) {
           setErrors(data.errors);
+          // 入力エラーで止まった回数。どの項目で詰まるかは送らない（自由記述を出さないため）。
+          // GA4のform_startが1ユーザー9.1回（2026-08-13時点の28日実測）と異常に多く、
+          // 記入途中の離脱が疑われるため、その切り分け用に残す。
+          gaEvent("contact_submit_error", { business, kind: "validation" });
         } else {
           setServerError(data.error ?? t("contact.form.error"));
+          gaEvent("contact_submit_error", { business, kind: "server" });
         }
         return;
       }
 
+      // 送信完了（2026-08-14 新設）。
+      // 本フォームは React の状態から fetch で送るため、GA4 の自動計測（form_submit）が
+      // 発火せず、成果が1件も記録されていなかった。ここが唯一の成功地点なので必ず通す。
+      // パラメータは閉じた選択肢のみ。氏名・メール・電話・本文は送らない（gtag.ts の規約）。
+      // source＝「どちらで四葉グループをお知りになりましたか」の任意選択。未回答は空文字になる。
+      gaEvent("contact_submit", {
+        business,
+        category: category || "unset",
+        source: source || "unanswered",
+      });
+
       router.push(thanksPath);
     } catch {
       setServerError(t("contact.form.error"));
+      gaEvent("contact_submit_error", { business, kind: "network" });
     } finally {
       setSubmitting(false);
     }

@@ -1,4 +1,5 @@
 import { Phone, Printer, MapPin, Clock, CalendarDays } from "lucide-react";
+import { TelLink } from "@/components/shared/TelLink";
 import { ContactForm } from "@/components/ui/ContactForm";
 import { OFFICE } from "@/lib/shared/office-public";
 import { buildPageMetadata } from "@/lib/seo";
@@ -44,9 +45,13 @@ export default function LaborContactPage() {
                   </div>
                   <div>
                     <p className="text-sm font-bold">お電話</p>
-                    <a href="tel:03-6161-9428" className="mt-1 text-lg font-bold text-primary hover:text-primary-dark">
+                    <TelLink
+                      phone="03-6161-9428"
+                      location="contact_page_labor"
+                      className="mt-1 text-lg font-bold text-primary hover:text-primary-dark"
+                    >
                       03-6161-9428
-                    </a>
+                    </TelLink>
                   </div>
                 </div>
 

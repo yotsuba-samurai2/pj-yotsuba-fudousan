@@ -1,6 +1,7 @@
 "use client";
 
 import { Phone, Printer, MapPin } from "lucide-react";
+import { TelLink } from "@/components/shared/TelLink";
 import { ContactForm } from "@/components/ui/ContactForm";
 import { OFFICE } from "@/lib/shared/office-public";
 import { useTranslation } from "@/hooks/useTranslation";
@@ -45,9 +46,13 @@ export function ContactPageClient() {
                   </div>
                   <div>
                     <p className="text-sm font-bold">{t("contact.methods.phone.label")}</p>
-                    <a href={`tel:${t("contact.methods.phone.number")}`} className="mt-1 text-lg font-bold text-primary hover:text-primary-dark">
+                    <TelLink
+                      phone={t("contact.methods.phone.number")}
+                      location="contact_page_realestate"
+                      className="mt-1 text-lg font-bold text-primary hover:text-primary-dark"
+                    >
                       {t("contact.methods.phone.number")}
-                    </a>
+                    </TelLink>
                   </div>
                 </div>
 

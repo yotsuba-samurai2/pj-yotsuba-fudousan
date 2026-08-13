@@ -1,4 +1,5 @@
 import { Phone, Printer, MapPin } from "lucide-react";
+import { TelLink } from "@/components/shared/TelLink";
 import type { Metadata } from "next";
 import { ContactForm } from "@/components/ui/ContactForm";
 import { OFFICE } from "@/lib/shared/office-public";
@@ -50,9 +51,13 @@ export default function LegalContactPage() {
                   </div>
                   <div>
                     <p className="text-sm font-bold">お電話</p>
-                    <a href="tel:03-6161-9428" className="mt-1 text-lg font-bold text-primary hover:text-primary-dark">
+                    <TelLink
+                      phone="03-6161-9428"
+                      location="contact_page_legal"
+                      className="mt-1 text-lg font-bold text-primary hover:text-primary-dark"
+                    >
                       03-6161-9428
-                    </a>
+                    </TelLink>
                   </div>
                 </div>
 
