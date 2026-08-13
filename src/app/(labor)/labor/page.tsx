@@ -60,6 +60,59 @@ export default async function LaborTopPage() {
       </section>
 
       <main className="mx-auto max-w-5xl px-4">
+        {/* ★2026-08-13 追加：直答ブロック（luck428-column-seo 第7条1）。
+            トップに「この事務所は何をするのか」を80〜120字で置く。
+            AI検索は冒頭の直答を拾うため、H1の直後に結論を置く。 */}
+        <section className="mt-8 rounded-2xl border-l-4 border-primary bg-primary-tint p-5">
+          <p className="leading-relaxed text-text">
+            <strong>顧問料は、労務のご相談に対する対価です。</strong>
+            ご相談は回数・時間の制限なく承ります。手続きと給与計算は{" "}
+            <strong>freee人事労務</strong> で行い、顧問先と<strong>同じデータを見ながら</strong>
+            進めます。料金は<strong>着手前に書面</strong>でお出しします。
+          </p>
+        </section>
+
+        {/* ★こんなときにご相談ください（読者の自分ごと化）。
+            具体の状況を並べる。トップで最も効く節。各項目から対応するページへ送る。 */}
+        <section className="mt-10">
+          <h2 className="font-serif text-lg font-semibold text-ink">
+            こんなときに、ご相談ください
+          </h2>
+          <ul className="mt-3 space-y-2 text-sm leading-relaxed text-text">
+            <li>
+              <strong>業務委託でお願いしている方が、実は雇用ではないかと気になっている</strong>
+              ——契約書ではなく実態で判断されます。放っておくと遡って求められます
+            </li>
+            <li>
+              <strong>パートやアルバイトを雇うが、社会保険に入るのかが分からない</strong>
+              ——週の所定労働時間が分かれ目です
+            </li>
+            <li>
+              <strong>家族を社員にする</strong>
+              ——同居しているか、取締役にするか、助成金を考えているか。入社の日より前に決めることがあります
+            </li>
+            <li>
+              <strong>年金を受け取りながら働く方を雇う</strong>
+              ——賃金の決め方で、年金が止まる額が変わります
+            </li>
+            <li>
+              <strong>中国など海外へ社員を出している</strong>
+              ——出張か派遣かで、労災の扱いがまったく違います
+            </li>
+            <li>
+              <strong>会社をたたむ</strong>
+              ——社会保険と労働保険にも、登記より先に来る期限があります
+            </li>
+          </ul>
+          <p className="mt-3 text-sm">
+            →{" "}
+            <Link href={addLocalePrefix("/labor/column", locale)} className="text-primary underline">
+              労務のコラム（14本）
+            </Link>{" "}
+            に、それぞれの答えを書いています。
+          </p>
+        </section>
+
         {/* 取扱業務カード（具体アンカー・内部リンク一覧§1どおり） */}
         <section className="mt-10 grid gap-3 sm:grid-cols-2">
           {SERVICES.map((s) => (
@@ -169,18 +222,62 @@ export default async function LaborTopPage() {
           </ul>
         </section>
 
-        {/* 料金の考え方（2026-07-29追加・指示書11の必須セクション。金額は書かない） */}
+        {/* ★2026-08-13 全面改稿：金額を書くように改めた。
+            旧文は「お見積りをお示しします」だけで金額を出していなかったが、
+            報酬額表には全項目の単価を掲載している。「透明な報酬」を打ち出す以上、
+            トップで金額を伏せるのは矛盾する。代表的な単価を表で出す（第7条3）。 */}
         <section className="mt-10">
           <h2 className="font-serif text-lg font-semibold text-ink">料金はどう決まりますか？</h2>
           <p className="mt-3 text-sm leading-relaxed text-text">
-            業務の範囲と事業所の規模により異なるため、お見積りをお示しします。四葉不動産株式会社・四葉行政書士事務所の料金とは
-            <strong>別建て</strong>
-            です。合算したご請求や、複数の事務所へご依頼いただいたことによるお値引きはありません。
+            <strong>顧問料は労務のご相談に対する対価で、手続は届出ごとに都度申し受けます。</strong>
+            単価は<strong>すべて報酬額表に掲載</strong>しています。含まないものと、その場合のおつなぎ先も同じ表に書いています。
+            <strong>お見積りは着手前に書面</strong>でお出しし、作業を始めてから金額が決まることはありません。
           </p>
-          <p className="mt-2 text-sm">
+          <div className="mt-4 overflow-x-auto">
+            <table className="w-full border-collapse text-sm">
+              <thead>
+                <tr className="bg-primary-tint text-left">
+                  <th className="border border-border px-3 py-2">主な料金（税込）</th>
+                  <th className="border border-border px-3 py-2 w-24">単位</th>
+                  <th className="border border-border px-3 py-2 w-40 text-right">金額</th>
+                </tr>
+              </thead>
+              <tbody className="text-text-muted">
+                {[
+                  ["顧問（ご相談）", "月額", "22,000円〜"],
+                  ["給与計算", "1名／月", "1,100円"],
+                  ["社会保険・雇用保険 資格取得届", "1名", "各 2,750円"],
+                  ["就業規則 新規作成", "一式", "88,000〜220,000円"],
+                  ["助成金 申請代行（顧問先限定）", "一式", "着手金なし ＋ 成功報酬20%"],
+                  ["障害年金 裁定請求（新規）", "1件", "着手金30,000円 ＋ 年金3ヶ月分"],
+                ].map(([a, b, c]) => (
+                  <tr key={a}>
+                    <td className="border border-border px-3 py-2">{a}</td>
+                    <td className="border border-border px-3 py-2">{b}</td>
+                    <td className="border border-border px-3 py-2 text-right">{c}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 text-sm leading-relaxed text-text">
+            <strong>2026年8月、手続きの料金をおおむね3割引き下げました。</strong>
+            freee人事労務と生成AIの活用で、手続きの<em>作業</em>は軽くなります。そのぶんをお返しする趣旨です。
+            ただし<strong>AIで安くなるのは作業であって、責任ではありません。</strong>
+            判断は社会保険労務士が行います。
+          </p>
+          <p className="mt-3 text-sm">
+            →{" "}
             <Link href={addLocalePrefix("/labor/ryokin", locale)} className="text-primary underline">
-              料金のご案内
+              報酬額表（全項目）
             </Link>
+            ／{" "}
+            <Link href={addLocalePrefix("/labor/nagare", locale)} className="text-primary underline">
+              進め方（AIをどこまで使うか）
+            </Link>
+          </p>
+          <p className="mt-3 text-xs leading-relaxed text-text-muted">
+            ※四葉不動産株式会社・四葉行政書士事務所の料金とは<strong>別建て</strong>です。合算したご請求や、複数の事務所へご依頼いただいたことによるお値引きはありません。
           </p>
         </section>
 
