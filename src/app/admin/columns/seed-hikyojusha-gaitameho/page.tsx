@@ -112,8 +112,9 @@ export default function SeedHikyojushaGaitamehoPage() {
           （公開中の記事が下書きに戻ることはありません）。何度実行しても重複しません。
         </p>
         <p className="text-amber-900">
-          <strong>翻訳は未投入です。</strong>日本語版の公開後、繁体字→英語→簡体字の順で追加してください。
-          translations が空のあいだ /en/ /zh-tw/ /zh/ が404を返すのは正しい状態です。
+          <strong>日本語・繁体字・英語・簡体字の4言語で入ります。</strong>
+          翻訳は機械変換ではなく、繁体字と簡体字を別々に書き分けています
+          （条項号は繁「第◯條第◯項第◯號」／簡「第◯条第◯项第◯号」で統一。「款」は使っていません）。
           公開へ切り替えるときは <code>date</code> を実際の公開日へ直してください
           （記事の表示日付と sitemap の <code>lastmod</code> の両方に効きます）。
         </p>
