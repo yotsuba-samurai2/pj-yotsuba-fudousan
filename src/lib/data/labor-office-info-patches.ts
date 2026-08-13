@@ -23,12 +23,21 @@ import type { LangCode } from "@/config/languages";
 
 export type OfficeInfoRow = { label: string; value: string };
 
-/** 登録番号の欄に入れる暫定値。開業後にここを実番号へ差し替える */
+/**
+ * 登録番号の欄に入れる暫定値。
+ *
+ * 2026-08-13 訂正：新規登録入会研修会は8月4日に受講済みで、9月1日の登録は自動。
+ * ★番号の交付は9月下旬の見込みのため、登録日と交付時期を分けて書く。
+ * 「登録予定」だと9月1日を過ぎた時点で事実と合わなくなる。
+ *
+ * 番号が交付されたら、ここを実番号（例：社会保険労務士 第◯◯号／東京都社会保険労務士会）へ
+ * 差し替えて /admin/translations/fix-labor-office-info を再実行する。
+ */
 export const REGISTRATION_PENDING: Record<LangCode, string> = {
-  ja: "2026年9月1日 登録予定",
-  en: "Registration scheduled for 1 September 2026",
-  "zh-tw": "預定於2026年9月1日登錄",
-  zh: "预定于2026年9月1日登录",
+  ja: "2026年9月1日 登録（番号は9月下旬に交付予定）",
+  en: "Registered 1 September 2026 (number to be issued in late September)",
+  "zh-tw": "2026年9月1日登錄（號碼預定於9月下旬核發）",
+  zh: "2026年9月1日登录（号码预定于9月下旬核发）",
 };
 
 export const LABOR_OFFICE_INFO: Record<LangCode, OfficeInfoRow[]> = {
