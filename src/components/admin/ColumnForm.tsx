@@ -28,33 +28,33 @@ const translationTabs = [
 
 type TranslationLang = (typeof translationTabs)[number]["code"];
 
+// インデックスプレビューは「実際に出力されるもの」を映す。ここに独自の値を持たない。
+//
+// 2026-08-13：ドメインを是正した。canonical の実ベースは `BUSINESS_URLS`（lib/seo.ts:12）で
+// 3事業とも `luck428.com` 配下。実測でも同じ記事が luck428.com は200・canonical も自分を指すのに対し、
+// luck428gyosei.com は404、sitemap にも luck428gyosei.com のURLは0件だった。
+// `yotsuba-labor.com` は「使わない」と決まっている（config/group.ts：/labor維持＝2026-07-09 浦松決定）。
 const BUSINESS_DOMAINS: Record<string, string> = {
   realestate: "luck428.com",
-  legal: "luck428gyosei.com",
-  labor: "yotsuba-labor.com",
+  legal: "luck428.com",
+  labor: "luck428.com",
 };
 
-const BUSINESS_NAMES: Record<string, Record<string, string>> = {
-  realestate: {
-    ja: "四葉不動産",
-    en: "Yotsuba Real Estate",
-    "zh-tw": "四葉不動產",
-    zh: "四叶不动产",
-  },
-  legal: {
-    ja: "四葉行政書士事務所",
-    en: "Yotsuba Administrative Scrivener Office",
-    "zh-tw": "四葉行政書士事務所",
-    zh: "四叶行政书士事务所",
-  },
-  labor: {
-    ja: SR_OFFICE_NAME, // 事務所名は実行時結合（法27条ソース漏れ対策＝sr-name.ts参照）
-    en: "Yotsuba Labor & Social Insurance Office",
-    // 2026-08-05：「法人」は事実に反する（開設するのは個人の社会保険労務士事務所）。
-    // 既定値が誤っていると新規コラムのたびに再生産されるため是正した。
-    "zh-tw": "四葉社會保險勞務士事務所",
-    zh: "四叶社会保险劳务士事务所",
-  },
+// 事務所名は言語で変えない。実メタデータは `BUSINESS_SEO[key].name`（lib/seo.ts）を
+// ロケールに関係なく使っており、`locale` は canonical URL と og:locale にしか効かない。
+// タイトルのテンプレート（(labor)/layout.tsx の `%s｜${biz.name}`）も同じ値を使う。
+//
+// 2026-08-13：事務所名を言語ごとに訳し分けていた表を廃止した。
+// ①プレビューが実際の出力と食い違い、検証にならなかった
+// ②luck428-column-seo 第9条「固有名詞の事務所名は繁体字版・簡体字版でも日本語表記のまま」に反する
+//   （簡体字版では社名の「葉」まで簡体字に変換され、別の事業体名になっていた）
+// ③このファイルは新規コラムの既定値の供給源で、誤りが記事ごとに再生産される
+//   （2026-08-05 に「法人」の誤りを同じ理由で是正した履歴がある）
+// 一般名詞としての資格名を各言語に訳すのは可。固有名詞の事務所名は訳さない。
+const BUSINESS_NAMES: Record<string, string> = {
+  realestate: "四葉不動産",
+  legal: "四葉行政書士事務所",
+  labor: SR_OFFICE_NAME, // 事務所名は実行時結合（法27条ソース漏れ対策＝sr-name.ts参照）
 };
 
 const COLUMN_PATHS: Record<string, string> = {
@@ -349,35 +349,36 @@ export default function ColumnForm({
   const previewSlug = slug || toSlug(jaTitle) || "XXXX";
   const previewDomain = BUSINESS_DOMAINS[business];
   const previewPath = COLUMN_PATHS[business];
-  const bizNames = BUSINESS_NAMES[business];
+  // 事務所名は4言語とも同じ（実メタデータがロケールに関係なく同じ名前を出すため）
+  const bizName = BUSINESS_NAMES[business];
 
   const previews = [
     {
       lang: "日本語",
       title: jaTitle,
       excerpt: jaExcerpt,
-      siteName: bizNames.ja,
+      siteName: bizName,
       url: `https://${previewDomain}${previewPath}/${previewSlug}`,
     },
     {
       lang: "EN",
       title: enTrans.title,
       excerpt: enTrans.excerpt,
-      siteName: bizNames.en,
+      siteName: bizName,
       url: `https://${previewDomain}/en${previewPath}/${previewSlug}`,
     },
     {
       lang: "繁體",
       title: zhTwTrans.title,
       excerpt: zhTwTrans.excerpt,
-      siteName: bizNames["zh-tw"],
+      siteName: bizName,
       url: `https://${previewDomain}/zh-tw${previewPath}/${previewSlug}`,
     },
     {
       lang: "简体",
       title: zhTrans.title,
       excerpt: zhTrans.excerpt,
-      siteName: bizNames.zh,
+      siteName: bizName,
       url: `https://${previewDomain}/zh${previewPath}/${previewSlug}`,
     },
   ];
