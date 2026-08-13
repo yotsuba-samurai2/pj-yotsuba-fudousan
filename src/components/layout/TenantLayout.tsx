@@ -11,6 +11,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { GroupSwitcher } from "@/components/ui/GroupSwitcher";
 import { useTranslation } from "@/hooks/useTranslation";
 import { tenantThemeVars } from "@/lib/tenant-theme";
+import { gaEvent } from "@/lib/gtag";
 import { normalizePath } from "@/lib/normalize-path"; // cross-links直importはC7文言のクライアント同梱を招くため禁止
 import { MobileStickyBar } from "@/components/shared/MobileStickyBar";
 import { LinkaFab } from "@/components/shared/LinkaFab";
@@ -713,7 +714,15 @@ function TenantFooter({ businessKey }: { businessKey: string }) {
               {t("address.full")}
             </address>
             <div className="mt-3 text-xs text-text/50">
-              <a href={`tel:${t("address.phone")}`} className="hover:text-text">
+              {/* 2026-08-14：フッターの電話は全ページに出るのに未計測だった。
+                  tel: リンク7か所のうち計測されていたのは CtaBandActions と
+                  MobileStickyBar の2か所だけで、GA4の cta_tel_click が28日間0件
+                  だった主因はここ。location で押された場所を分けて記録する。 */}
+              <a
+                href={`tel:${t("address.phone")}`}
+                onClick={() => gaEvent("cta_tel_click", { location: "footer" })}
+                className="hover:text-text"
+              >
                 TEL: {t("address.phone")}
               </a>
             </div>
