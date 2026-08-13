@@ -6,6 +6,7 @@ import { buildPageMetadata } from "@/lib/seo";
 import { getRequestLocale } from "@/lib/getRequestLocale";
 import type { LangCode } from "@/config/languages";
 import SouzokuPageContent from "./SouzokuPageContent";
+import { CtaBand } from "@/components/shared/CtaBand";
 
 /**
  * /souzoku — 相続不動産ピラーページ「文京区で不動産を相続したら」
@@ -63,5 +64,16 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default function SouzokuPage() {
-  return <SouzokuPageContent />;
+  return (
+    <>
+      <SouzokuPageContent />
+      {/* ★2026-08-13 追加：CTA帯（LINE・お問い合わせ・電話）。
+          不動産の主力ページなのに CtaBand が無く、PCではLINEへの導線が出ていなかった
+          （SPは MobileStickyBar がレイアウトにあるので出る）。
+          利用規約・プライバシー・特商法に無いのは意図的だが、この2ページは性質が違う。 */}
+      <div className="mx-auto max-w-3xl px-4">
+        <CtaBand businessKey="realestate" />
+      </div>
+    </>
+  );
 }

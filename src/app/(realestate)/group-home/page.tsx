@@ -6,6 +6,7 @@ import { buildPageMetadata } from "@/lib/seo";
 import { getRequestLocale } from "@/lib/getRequestLocale";
 import type { LangCode } from "@/config/languages";
 import GroupHomePageContent from "./GroupHomePageContent";
+import { CtaBand } from "@/components/shared/CtaBand";
 
 /**
  * /group-home — グループホーム開設ピラーページ「文京区でグループホームを開設するなら」
@@ -65,5 +66,16 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default function GroupHomePage() {
-  return <GroupHomePageContent />;
+  return (
+    <>
+      <GroupHomePageContent />
+      {/* ★2026-08-13 追加：CTA帯（LINE・お問い合わせ・電話）。
+          不動産の主力ページなのに CtaBand が無く、PCではLINEへの導線が出ていなかった
+          （SPは MobileStickyBar がレイアウトにあるので出る）。
+          利用規約・プライバシー・特商法に無いのは意図的だが、この2ページは性質が違う。 */}
+      <div className="mx-auto max-w-3xl px-4">
+        <CtaBand businessKey="realestate" />
+      </div>
+    </>
+  );
 }
