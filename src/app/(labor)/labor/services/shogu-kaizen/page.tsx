@@ -62,9 +62,72 @@ export default async function Page() {
 
       <div>
         <LaborH2>加算の届出は、行政書士と社労士のどちらに頼むのですか？</LaborH2>
+        {/* ★2026-08-13 書き換え。旧文は「四葉では、案件の内容に応じて適切な資格者が
+            担当する体制をとっています」だったが、これは一体提供に読まれる。
+            四葉の方針は「別事業体として個別に受任」で、料金表にもそう明記している。
+            コラム 01-shogu-kaizen-dochira が「2つの契約に分かれます」と正しく書いており、
+            そちらに揃えた。 */}
         <p className="mt-3 leading-relaxed text-text">
-          処遇改善加算は、指定関係の届出（行政書士の領域）と、賃金・就業規則（社会保険労務士の領域）が重なり合う分野です。<strong>四葉では、案件の内容に応じて適切な資格者が担当する体制</strong>をとっています。個別のご相談時に、どちらが担当するかを明確にしてご案内します。
-          <Placeholder reason="石井弁護士＝処遇改善加算の行政書士／社労士の業際（両サイトで断定しない方針の最終文言）" />
+          <strong>工程で分かれます。</strong>
+          処遇改善加算は「賃金を上げること」と「上げたと届け出ること」の2つでできていて、
+          この2つは<strong>別々の法律の管轄</strong>に入るためです。
+        </p>
+        <div className="mt-4 overflow-x-auto">
+          <table className="w-full border-collapse text-sm">
+            <thead>
+              <tr className="bg-primary-tint text-left">
+                <th className="border border-border px-3 py-2">工程</th>
+                <th className="border border-border px-3 py-2 w-32">担当</th>
+                <th className="border border-border px-3 py-2">根拠</th>
+              </tr>
+            </thead>
+            <tbody className="text-text-muted">
+              <tr>
+                <td className="border border-border px-3 py-2">
+                  就業規則・賃金規程・キャリアパス要件などの<strong className="text-text">賃金制度の設計</strong>、
+                  <strong className="text-text">賃金改善額の算定</strong>
+                </td>
+                <td className="border border-border px-3 py-2">
+                  <strong className="text-text">社会保険労務士</strong><br />（当事務所）
+                </td>
+                <td className="border border-border px-3 py-2">
+                  社会保険労務士法 第2条第1項第3号（労務管理その他の労働に関する事項についての相談・指導）
+                </td>
+              </tr>
+              <tr>
+                <td className="border border-border px-3 py-2">
+                  加算体制届・計画書・実績報告書など、
+                  <strong className="text-text">指定権者（自治体）へ提出する書類の作成</strong>
+                </td>
+                <td className="border border-border px-3 py-2">
+                  <strong className="text-text">行政書士</strong><br />（四葉行政書士事務所）
+                </td>
+                <td className="border border-border px-3 py-2">
+                  行政書士法 第1条の2第1項（官公署に提出する書類の作成）
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p className="mt-4 leading-relaxed text-text">
+          <strong>ひとつの事務所が両方を名乗ることはできません。</strong>
+          両方をご依頼いただく場合は、<strong>四葉社会保険労務士事務所と四葉行政書士事務所に、
+          それぞれ別々にご契約いただく</strong>形になります。同じ代表者が営んでいますが、
+          別の事業体です。<strong>事務所間で紹介料の授受は行いません。</strong>
+          当事務所へのご依頼が、行政書士事務所へのご依頼の条件になることもありません。
+        </p>
+        <p className="mt-3 text-sm leading-relaxed text-text-muted">
+          ウェブで検索すると、社会保険労務士事務所も行政書士事務所も、どちらも「処遇改善加算に対応します」と
+          書いています。矛盾しているように見えますが、それぞれ違う工程を指しているだけです。
+          くわしくは{" "}
+          <Link
+            href={addLocalePrefix("/labor/column/shogu-kaizen-sharoushi-gyoseishoshi-dochira", locale)}
+            className="text-primary underline"
+          >
+            処遇改善加算は、社労士と行政書士のどちらに頼むのか
+          </Link>{" "}
+          に書いています。
+          <Placeholder reason="石井弁護士＝業際の整理について確認継続中（2026-08-13：コラムの断定に合わせて記載。確認後に見直す）" />
         </p>
       </div>
 
