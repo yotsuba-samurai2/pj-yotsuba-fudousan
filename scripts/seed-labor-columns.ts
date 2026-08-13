@@ -21,10 +21,25 @@
  *     裏取りできない条文番号・告示番号を書かない（shigyo-compliance-gate 第4条）。
  */
 
-import { readFileSync, writeFileSync } from "fs";
+import { existsSync, readFileSync, writeFileSync } from "fs";
 import { resolve, join } from "path";
 
 type Faq = { question: string; answer: string };
+
+/** src/lib/column-shared.ts の ColumnTranslation と同形 */
+type Translation = {
+  title: string;
+  excerpt: string;
+  content: string;
+  category?: string;
+  keywords?: string[];
+  tags?: string[];
+  author?: { name: string; title: string };
+  faq?: Faq[];
+};
+
+const LOCALES = ["en", "zh-tw", "zh"] as const;
+type Locale = (typeof LOCALES)[number];
 
 type SeedColumn = {
   business: "labor";
@@ -40,6 +55,7 @@ type SeedColumn = {
   tags: string[];
   locales: string[];
   faq: Faq[];
+  translations?: Partial<Record<Locale, Translation>>;
 };
 
 const AUTHOR = {
@@ -306,10 +322,11 @@ function toPlainText(md: string): string {
     .trim();
 }
 
-/** 「## よくある質問」節から **Q. …** / A. … の組をパースする */
-function parseFaq(content: string, file: string): Faq[] {
-  const m = content.match(/## よくある質問\n([\s\S]*?)(?=\n## |$)/);
-  if (!m) throw new Error(`${file}: 「## よくある質問」節が見つかりません`);
+/** 「## よくある質問」節（翻訳版は heading 引数）から **Q. …** / A. … の組をパースする */
+function parseFaq(content: string, file: string, heading = "よくある質問"): Faq[] {
+  const esc = heading.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const m = content.match(new RegExp(`## ${esc}\\n([\\s\\S]*?)(?=\\n## |$)`));
+  if (!m) throw new Error(`${file}: 「## ${heading}」節が見つかりません`);
   const block = m[1];
   const faqs: Faq[] = [];
   const re = /\*\*Q\.\s*([\s\S]*?)\*\*\n(A\.\s*[\s\S]*?)(?=\n\*\*Q\.|\s*$)/g;
@@ -324,11 +341,75 @@ function parseFaq(content: string, file: string): Faq[] {
   return faqs;
 }
 
+/** 各言語の著者表記（第9条：事務所名は日本語表記のまま。資格名は各言語に訳す） */
+const AUTHOR_BY_LOCALE: Record<Locale, { name: string; title: string }> = {
+  en: {
+    name: "Joji Uramatsu",
+    title:
+      "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所",
+  },
+  "zh-tw": {
+    name: "浦松 丈二",
+    title: "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）",
+  },
+  zh: {
+    name: "浦松 丈二",
+    title: "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）",
+  },
+};
+
+/**
+ * 翻訳md（scripts/labor-columns/<locale>/<file>）を読む。無ければ undefined。
+ * 形式＝フロントマター（title / excerpt / category / faqHeading / keywords / tags）＋本文。
+ * FAQは本文の faqHeading 節から `**Q. …**` / `A. …` をパースする（日本語版と同じ型）。
+ */
+function readTranslation(locale: Locale, file: string): Translation | undefined {
+  const p = resolve(__dirname, "labor-columns", locale, file);
+  if (!existsSync(p)) return undefined;
+  const raw = readFileSync(p, "utf-8");
+  const m = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)$/);
+  if (!m) throw new Error(`${locale}/${file}: フロントマターがありません`);
+  const meta: Record<string, string> = {};
+  for (const line of m[1].split(/\r?\n/)) {
+    const kv = line.match(/^([A-Za-z]+):\s*(.*)$/);
+    if (kv) meta[kv[1]] = kv[2].trim();
+  }
+  for (const k of ["title", "excerpt", "faqHeading"]) {
+    if (!meta[k]) throw new Error(`${locale}/${file}: フロントマターに ${k} がありません`);
+  }
+  const content = m[2].trim();
+  const list = (v?: string) =>
+    v
+      ? v
+          .split("|")
+          .map((s) => s.trim())
+          .filter(Boolean)
+      : undefined;
+  return {
+    title: meta.title,
+    excerpt: meta.excerpt,
+    content,
+    category: meta.category || undefined,
+    keywords: list(meta.keywords),
+    tags: list(meta.tags),
+    author: { ...AUTHOR_BY_LOCALE[locale] },
+    faq: parseFaq(content, `${locale}/${file}`, meta.faqHeading),
+  };
+}
+
 function buildColumns(): SeedColumn[] {
   const dir = resolve(__dirname, "labor-columns");
   return ARTICLES.map((a) => {
     const content = readFileSync(join(dir, a.file), "utf-8").trim();
     const faq = parseFaq(content, a.file);
+
+    const translations: Partial<Record<Locale, Translation>> = {};
+    for (const l of LOCALES) {
+      const t = readTranslation(l, a.file);
+      if (t) translations[l] = t;
+    }
+    const complete = LOCALES.every((l) => translations[l]);
+
     return {
       business: "labor" as const,
       slug: a.slug,
@@ -341,8 +422,12 @@ function buildColumns(): SeedColumn[] {
       author: { ...AUTHOR },
       keywords: a.keywords,
       tags: a.tags,
-      locales: ["ja"],
+      // 空配列＝全言語公開（schema.prisma の Column.locales）。
+      // 4言語が揃っていない記事は ["ja"] のままにして、非日本語URLをsitemapに出さない
+      // （luck428-column-seo 第10条：翻訳未投入のまま提出すると登録リクエストの枠を捨てる）。
+      locales: complete ? [] : ["ja"],
       faq,
+      ...(Object.keys(translations).length ? { translations } : {}),
     };
   });
 }
@@ -357,6 +442,40 @@ const BANNED = [
   "2026年4月15日",
   "推奨申請期限",
 ];
+
+/**
+ * 一体提供・提携・国数表記の禁止語を4書体で列挙する（yotsuba-sharoushi-kaigyo 第6条6-2/6-4/6-5、第13条）。
+ * ★日本語だけのリストを作らない。2026年8月に同種の取りこぼしを3回繰り返している。
+ * 異体字はコードポイントが違うため、日本語の文字列では一致しない（会/會、険/險/险、労/勞/劳、務/务）。
+ */
+const BANNED_ALL_SCRIPTS = [
+  ...BANNED,
+  // ja 6-2
+  "一括して受任", "まとめて契約", "まとめてお任せ", "一体で受任",
+  // zh-tw / zh 6-2
+  "一站式", "一條龍", "一条龙", "一站到底", "整合承辦", "整合承办",
+  // en 6-2
+  "one-stop", "all-in-one", "end-to-end", "under one roof",
+  // 6-4 提携・連携
+  "提携税理士", "提携司法書士", "提携弁護士", "提携社会保険労務士", "連携して対応", "連携して進め",
+  "合作稅理士", "合作司法書士", "合作律師", "合作税理士", "合作司法书士", "合作律师",
+  "協同處理", "协同处理",
+  "partner tax accountant", "affiliated tax accountant", "partner judicial scrivener",
+  "affiliated judicial scrivener", "partner attorney", "affiliated attorney",
+  // 6-5 国数表記
+  "4カ国", "４カ国", "四カ国", "four countries", "4個國家", "4个国家",
+];
+
+/** 分離受任を明示していると認める語（4書体。第6条6-3の併記条件） */
+const SEPARATE_ENGAGEMENT = [
+  "独立した事業体", "別々にご契約", "それぞれ別の事業体",
+  "另行簽約", "各自獨立", "分別承接",
+  "另行签约", "各自独立", "分别承接",
+  "separate contract", "separately",
+];
+
+/** 事業体をまたぐ言及（4書体） */
+const CROSSES_ENTITY = ["四葉行政書士事務所", "四葉不動産"];
 
 function verify(cols: SeedColumn[]): string[] {
   const notes: string[] = [];
@@ -389,6 +508,36 @@ function verify(cols: SeedColumn[]): string[] {
     if (!c.content.includes("## この記事の根拠")) notes.push(`NG: ${c.slug} に「この記事の根拠」なし`);
     // 第1条：判断留保
     if (!c.content.includes("資格者が行います")) notes.push(`WARN: ${c.slug} に判断留保の一文なし`);
+    // 第7条5：著者ページリンク
+    if (!c.content.includes("/about/uramatsu"))
+      notes.push(`WARN: ${c.slug} に著者ページ（/about/uramatsu）へのリンクなし`);
+
+    // ── 多言語版の検査（第13条：日本語だけ見て判定しない）────────────────
+    const locs = Object.keys(c.translations ?? {}) as Locale[];
+    if (locs.length && locs.length !== LOCALES.length)
+      notes.push(`WARN: ${c.slug} の翻訳が${locs.length}/${LOCALES.length}言語（locales は ["ja"] のまま）`);
+    for (const l of locs) {
+      const t = c.translations![l]!;
+      const hay = `${t.title}\n${t.excerpt}\n${t.content}`;
+      for (const w of BANNED_ALL_SCRIPTS)
+        if (hay.toLowerCase().includes(w.toLowerCase()))
+          notes.push(`NG: ${c.slug}[${l}] に禁止語「${w}」`);
+      if (CROSSES_ENTITY.some((w) => hay.includes(w)) && !SEPARATE_ENGAGEMENT.some((w) => hay.includes(w)))
+        notes.push(`NG: ${c.slug}[${l}] 事業体をまたぐが分離受任の明示なし`);
+      // 第9条：多言語版の条項号は「项／項」。簡体字で「款」を使わない
+      if ((l === "zh" || l === "zh-tw") && /第[一二三四五六七八九十百千0-9０-９]+款/.test(hay))
+        notes.push(`NG: ${c.slug}[${l}] 条項号に「款」を使用（第9条：既存は「项／項」で統一）`);
+      // 事務所名は各言語でも日本語表記のまま
+      for (const bad of ["四葉社會保險勞務士", "四葉社会保险劳务士", "四葉行政書士事務所法人", "社會保險勞務士法人", "社会保险劳务士法人"])
+        if (hay.includes(bad)) notes.push(`NG: ${c.slug}[${l}] 事務所名の表記「${bad}」`);
+      if (t.faq && t.faq.length !== c.faq.length)
+        notes.push(`WARN: ${c.slug}[${l}] のFAQが${t.faq.length}件（日本語版は${c.faq.length}件）`);
+      if (t.content.length < 1500) notes.push(`WARN: ${c.slug}[${l}] の本文が短い（${t.content.length}字）`);
+      // 労務クラスタ内への発リンクは翻訳版でもロケール付きで維持する
+      const re = new RegExp(`\\]\\(/${l}/labor/`);
+      if (!re.test(t.content) && !/\]\(\/labor\//.test(t.content))
+        notes.push(`WARN: ${c.slug}[${l}] に /labor 配下へのリンクなし`);
+    }
   }
   return notes;
 }
@@ -406,7 +555,7 @@ async function main() {
       process.exit(1);
     }
     const out = resolve(__dirname, "../src/lib/data/labor-columns-seed.ts");
-    const header = `// このファイルは自動生成（npx tsx scripts/seed-labor-columns.ts --emit-ts）。直接編集しない。\n// 原稿の正本＝scripts/labor-columns/*.md。修正はmd側→再生成で行う。\n// 用途＝/admin/columns/seed-labor からの管理者セッション経由バルクupsert（seed-office と同型）。\n\nexport type LaborSeedColumn = {\n  business: "labor";\n  slug: string;\n  title: string;\n  date: string;\n  category: string;\n  excerpt: string;\n  content: string;\n  status: "published";\n  author: { name: string; title: string };\n  keywords: string[];\n  tags: string[];\n  locales: ("ja" | "en" | "zh-tw" | "zh")[];\n  faq: { question: string; answer: string }[];\n};\n\nexport const LABOR_COLUMNS_SEED: LaborSeedColumn[] = `;
+    const header = `// このファイルは自動生成（npx tsx scripts/seed-labor-columns.ts --emit-ts）。直接編集しない。\n// 原稿の正本＝scripts/labor-columns/*.md。修正はmd側→再生成で行う。\n// 用途＝/admin/columns/seed-labor からの管理者セッション経由バルクupsert（seed-office と同型）。\n\nexport type LaborSeedColumn = {\n  business: "labor";\n  slug: string;\n  title: string;\n  date: string;\n  category: string;\n  excerpt: string;\n  content: string;\n  status: "published";\n  author: { name: string; title: string };\n  keywords: string[];\n  tags: string[];\n  locales: ("ja" | "en" | "zh-tw" | "zh")[];\n  faq: { question: string; answer: string }[];\n  translations?: Partial<\n    Record<\n      "en" | "zh-tw" | "zh",\n      {\n        title: string;\n        excerpt: string;\n        content: string;\n        category?: string;\n        keywords?: string[];\n        tags?: string[];\n        author?: { name: string; title: string };\n        faq?: { question: string; answer: string }[];\n      }\n    >\n  >;\n};\n\nexport const LABOR_COLUMNS_SEED: LaborSeedColumn[] = `;
     writeFileSync(out, header + JSON.stringify(cols, null, 2) + ";\n");
     console.log(`emit-ts → ${out}（${cols.length}本）`);
     return;
