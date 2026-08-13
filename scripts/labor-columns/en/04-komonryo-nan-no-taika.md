@@ -75,7 +75,7 @@ A. We set no limit on the number of times or the length of time. The retainer fe
 A. The first consultation is free for up to 60 minutes. If it does not lead to a retainer agreement, the second and subsequent consultations are charged at 11,000 yen per hour (tax included). Consultations after a retainer agreement is in place are covered by the retainer fee.
 
 **Q. Is the retainer fee decided by the number of employees?**
-A. It is decided by bands of employee numbers. It starts at 22,000 yen a month (tax included) for up to 4 people and runs to 154,000 yen a month (tax included) for up to 99 people, in steps of 5 to 10 people. For 100 or more, we quote individually. The number of employees is judged using the number of insured persons as a guide.
+A. It is decided by bands. It starts at 22,000 yen a month (tax included) for up to 4 people and runs to 77,000 yen a month (tax included) for 25 to 29 people, in steps of 5 people. For 30 or more, we quote individually. The number counted is officers plus employees, including part-timers and casual staff — not the number of people enrolled in social insurance. The bands are a guide: because the retainer is payment for consultation, we quote the band that matches the content and volume of your consultations.
 
 **Q. Do retainer clients get a discount on filings?**
 A. No. Filings are accepted only from retainer clients, so there is nothing to compare them against. Because we never take filing-only work from anyone without a retainer agreement, we do not use the notion of a "retainer client price."
