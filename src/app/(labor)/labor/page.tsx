@@ -16,7 +16,7 @@ export async function generateMetadata(): Promise<Metadata> {
     businessKey: "labor",
     title: "四葉社会保険労務士事務所｜文京区・障害福祉に強い社労士",
     description:
-      "東京都文京区小日向・茗荷谷駅徒歩5分の四葉社会保険労務士事務所。障害福祉・介護事業所の労務管理、処遇改善加算、社会保険手続き、雇用関係助成金、外国人介護人材の労務に対応。元新聞記者の社労士が、複雑な労務を整理してお手伝いします。",
+      "東京都文京区小日向・茗荷谷駅徒歩5分の四葉社会保険労務士事務所。顧問料は労務相談の対価で回数無制限。給与計算をfreeeで自社処理（内製）する体制づくりの支援も顧問料に含みます。障害福祉・介護の労務、処遇改善加算、雇用関係助成金、外国人雇用に対応。元新聞記者の社労士がお手伝いします。",
     path: "/labor",
     keywords: ["社労士 文京区", "障害福祉 社労士", "介護 事業所 労務"],
     locale,
@@ -51,8 +51,11 @@ export default async function LaborTopPage() {
           <div className="md:absolute md:inset-0 md:flex md:items-center">
             <div className="bg-surface p-5 md:m-8 md:max-w-xl md:rounded-2xl md:bg-white/30 md:p-7 md:backdrop-blur-sm">
               <h1 className="font-serif text-2xl font-bold text-ink sm:text-3xl">四葉社会保険労務士事務所</h1>
+              {/* ★2026-08-14 リード改稿（浦松決定・案②）：キャッチを「人の手続きを、事業の力に。」から
+                  「給与計算を、頼まないという頼み方も。」へ。内製化支援＝顧問料に含むを前面に出し、
+                  コラム37と言葉を統一。「もちろん代行も承ります」で従来層（障害福祉・介護）を落とさない。 */}
               <p className="mt-3 text-sm leading-relaxed text-text sm:text-base">
-                <strong>東京都文京区小日向の社会保険労務士事務所です。</strong>人の手続きを、事業の力に。——障害福祉・介護事業所の労務管理、処遇改善加算、社会保険手続き、雇用関係助成金、外国人介護人材の労務を、元新聞記者の社労士がお手伝いします。
+                <strong>東京都文京区小日向の社会保険労務士事務所です。</strong>給与計算を、頼まないという頼み方も。——顧問料は労務相談の対価です。ご相談は回数・時間の制限なく、給与計算などをfreeeで自社処理（内製）する体制づくりの支援も顧問料に含みます。もちろん代行も承ります。障害福祉・介護、助成金、外国人雇用まで、元新聞記者の社労士が対応します。
               </p>
             </div>
           </div>
@@ -64,11 +67,12 @@ export default async function LaborTopPage() {
             トップに「この事務所は何をするのか」を80〜120字で置く。
             AI検索は冒頭の直答を拾うため、H1の直後に結論を置く。 */}
         <section className="mt-8 rounded-2xl border-l-4 border-primary bg-primary-tint p-5">
+          {/* 2026-08-14 更新：給与計算を「代行」と「内製支援（顧問料に含む）」の2択表現に。ryokinと整合 */}
           <p className="leading-relaxed text-text">
             <strong>顧問料は、労務のご相談に対する対価です。</strong>
-            ご相談は回数・時間の制限なく承ります。手続きと給与計算は{" "}
-            <strong>freee人事労務</strong> で行い、顧問先と<strong>同じデータを見ながら</strong>
-            進めます。料金は<strong>着手前に書面</strong>でお出しします。
+            ご相談は回数・時間の制限なく承ります。給与計算は、当事務所への<strong>代行</strong>のほか、
+            <strong>freeeで自社処理（内製）に切り替える体制づくりの支援</strong>を顧問料に含めて承ります。
+            手続きは顧問先と<strong>同じデータを見ながら</strong>進め、料金は<strong>着手前に書面</strong>でお出しします。
           </p>
         </section>
 
@@ -79,6 +83,11 @@ export default async function LaborTopPage() {
             こんなときに、ご相談ください
           </h2>
           <ul className="mt-3 space-y-2 text-sm leading-relaxed text-text">
+            {/* 2026-08-14 追加：内製化支援の打ち出しに対応する具体状況を筆頭に */}
+            <li>
+              <strong>給与計算を外注しているが、freeeを入れて自社で回したい</strong>
+              ——設定の設計と毎月の判断を、顧問料の範囲で支援します
+            </li>
             <li>
               <strong>業務委託でお願いしている方が、実は雇用ではないかと気になっている</strong>
               ——契約書ではなく実態で判断されます。放っておくと遡って求められます
@@ -107,7 +116,7 @@ export default async function LaborTopPage() {
           <p className="mt-3 text-sm">
             →{" "}
             <Link href={addLocalePrefix("/labor/column", locale)} className="text-primary underline">
-              労務のコラム（14本）
+              労務のコラム（37本）
             </Link>{" "}
             に、それぞれの答えを書いています。
           </p>
@@ -245,7 +254,8 @@ export default async function LaborTopPage() {
               <tbody className="text-text-muted">
                 {[
                   ["顧問（ご相談）", "月額", "22,000円〜"],
-                  ["給与計算", "1名／月", "1,100円"],
+                  ["給与計算（代行）", "1名／月", "1,100円"],
+                  ["freeeでの内製（自社計算）への切替支援", "—", "顧問料に含む"],
                   ["社会保険・雇用保険 資格取得届", "1名", "各 2,750円"],
                   ["就業規則 新規作成", "一式", "88,000〜220,000円"],
                   ["助成金 申請代行（顧問先限定）", "一式", "着手金なし ＋ 成功報酬20%"],
@@ -265,6 +275,7 @@ export default async function LaborTopPage() {
             freee人事労務と生成AIの活用で、手続きの<em>作業</em>は軽くなります。そのぶんをお返しする趣旨です。
             ただし<strong>AIで安くなるのは作業であって、責任ではありません。</strong>
             判断は社会保険労務士が行います。
+            給与計算を当事務所に頼まず、freeeで内製する体制づくりを顧問契約の範囲で支援する形も選べます。
           </p>
           <p className="mt-3 text-sm">
             →{" "}
