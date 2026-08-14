@@ -6752,5 +6752,184 @@ export const LABOR_COLUMNS_SEED: LaborSeedColumn[] = [
         ]
       }
     }
+  },
+  {
+    "business": "labor",
+    "slug": "hitori-de-60sha-roumu-de-nariatsu-ka",
+    "title": "「一人で60社」は、労務でも成り立つのか",
+    "date": "2026-09-01",
+    "category": "労務のしくみ",
+    "excerpt": "スタッフ0名で顧問先60社を回す税理士が話題になっています。ただ、この方が最初にやったのは自動化ではなく「何を自動化して、何を人間が見るか」の線引きでした。労務でも同じことはできますが、線を引く場所が違います。会計は明細が自動で流れてきますが、労務は人が申し出て初めて事実が生まれるからです。",
+    "content": "**結論（先に要点）**：スタッフ0名で顧問先60社を回す税理士が話題になっています。ただ、この方が最初にやったのは自動化ではなく、**「何を自動化して、何を人間が見るか」の線引き**でした。労務でも同じことはできますが、**線を引く場所が違います。**\n\n「AIで士業の仕事はなくなるのか」という問いを、この半年で何度もいただきました。抽象論で答えても仕方がないので、実際に起きていることから始めます。\n\n## 何が起きているのか？\n\n京都市の畠山謙人税理士事務所が、会計ソフトのfreeeが公開した導入事例で取り上げられました。事務所の規模は**代表税理士1名、スタッフ0名**。それで**顧問先は60社を超え、問い合わせは増え続けている**といいます。顧客層はシード期のスタートアップが中心で、**17時退勤**。SNSでの発信は350万インプレッションを記録しました。\n\n支えているのは、**Claude Codeとfreeeのデータ連携**です。会計ソフトに溜まった未登録の明細をAIが取得し、仕訳を進める。税理士は「作業する人」から「レビューする人」に移った、と事例は伝えています。\n\n数字だけを見ると、遠い世界の話に聞こえるかもしれません。**この記事で書きたいのは、そこではありません。**\n\n## この方が最初にやったのは、何だったのか？\n\n自動化ではありませんでした。**線を引くことです。**\n\n事例によると、畠山さんが最初に取り組んだのは、AIに「実行してよいこと、やってはいけないこと」を書いた設定ファイルを作ることでした。**ご本人はそれを「事務所の憲法」と呼んでいます。**\n\nそのうえで、こう述べています。\n\n> 自動仕訳で一番怖いのは「本来仕訳すべきでないものを仕訳してしまう」こと\n\n**速く処理することではなく、触ってはいけないものを触らせないことが先に来ている。** ここがこの事例のいちばん大事なところだと、当方は読みました。\n\nそして、AIと人の役割分担について、こう続けています。\n\n> AIのアウトプットに対するチェックと最終判断は、必ず人が行うべきです。（中略）**その責任を税理士が担わないのなら、ライセンスを持っている意味がありません。**\n\n## 会計と労務では、何が違うのか？\n\nここからが本題です。**「税理士が60社なら、社労士も60社」とはなりません。** 構造が違うからです。\n\n| | 会計（記帳） | 労働・社会保険の手続 |\n|---|---|---|\n| **入力はどこから来るか** | 銀行・カードの明細。**機械が読めるデータが自動で流れてくる** | 入社・退職・扶養の増減・傷病・出産・転居。**人が申し出て初めて発生する** |\n| **周期** | 毎月同じ処理。型にしやすい | **出来事で動く**。いつ起きるか分からない。年次（算定基礎届）と随時（月額変更届）が混在する |\n| **判断の中身** | 勘定科目の判断。**過去の仕訳から型を学べる** | **事実の確認**。この人は労働者か。同居の親族は被保険者になる要件を満たすか。**人に聞かないと分からない** |\n| **誤りの現れ方** | 月次・決算で**気づく機会がある** | **数年後、本人の給付で表面化する**。年金や失業給付。しかも遡って直すことになる |\n| **法令の変わり方** | ― | **改正が多く、施行日が分かれる**。たとえば社会保険の企業規模要件は[2027年10月・2029年10月・2032年10月・2035年10月と4段階](/labor/column/tanjikan-koyo-shakaihoken-4bunno3)で下がります |\n\n**いちばん大きな違いは、1行目です。**\n\n会計の自動化は「**流れてきたデータを、どう分類するか**」の問題でした。銀行明細は、こちらが何もしなくても毎日届きます。\n\n労務は違います。**扶養が増えたことも、住所が変わったことも、誰かが言ってくれなければ分かりません。** 従業員が言い忘れれば、そこで止まります。データが流れてこないものは、どれだけ賢いAIでも処理できません。\n\n4行目も効いてきます。仕訳の誤りは決算で気づく機会がありますが、**手続の漏れは、その人が年金をもらう年齢になって初めて表に出ることがあります。** そのときには何年も経っています。\n\n## 労務でAIに任せるとしたら、どこか？\n\nだから、労務でAIに任せるべきものは**仕訳にあたるもの**ではありません。\n\n**期限の管理と、聞き漏らしを防ぐことです。**\n\n- 入社の予定が決まったら、いつまでに何を出すのかを並べる\n- 算定基礎届の時期に、対象者を漏れなく拾う\n- 法改正の施行日を、自社に関係する順に並べ替える\n- 「言い忘れやすいこと」を、こちらから聞きに行く形にする\n\nどれも判断ではありません。**判断の手前の、抜けを防ぐ作業です。** ここはAIが得意なところで、しかも労務でいちばん事故が起きるところでもあります。\n\n逆に、**任せてはいけないのは事実の確認と、そこから先の判断**です。[外注と雇用の境目](/labor/column/gaichu-koyo-sakaime-roudoushasei)も、[同居の親族が雇用保険に入れるか](/labor/column/kazoku-shain-koyohoken-yakuin-joseikin)も、実態を聞き取らないと決まりません。**AIに聞けば、それらしい答えは返ってきます。だから危ないのです。**\n\n## なぜ、最後は人が判断しなければならないのか？\n\n畠山さんの言う「ライセンスを持っている意味」は、社会保険労務士については**条文にそのまま書いてあります。**\n\n社会保険労務士法第2条第1項第1号は、独占業務の対象となる「申請書等」を、こう定義しています。\n\n> 申請書、届出書、報告書…その他の書類（**その作成に代えて電磁的記録**…**を作成する場合における当該電磁的記録を含む**）\n\n**「電磁的記録を含む」と書いてあります。** つまり、AIが電子申請のデータを作っても、それは条文がいう「申請書等」そのものです。紙かデータかで扱いは変わりません。\n\nそのうえで第27条が線を引きます。\n\n> 社会保険労務士又は社会保険労務士法人でない者は、**他人の求めに応じ報酬を得て**、第二条第一項第一号から第二号までに掲げる事務を**業として行つてはならない**\n\n**誰が作ったかではなく、他人のために報酬を得て業として行うかどうかで決まります。** 自社の手続を自社でやる分には資格は要りません。ソフトを使おうがAIを使おうが同じです。ここは[freee人事労務を入れました。顧問社労士は何をしてくれるのですか](/labor/column/freee-jinji-roumu-sharoushi-doko-made)に詳しく書きました。\n\n**AIが賢くなるほど、資格の意味は「作れること」から「引き受けること」に寄っていきます。** 畠山さんの言葉は、そういうことだと当方は受け取りました。\n\n## 四葉社会保険労務士事務所は、何ができますか？\n\n**当事務所も、同じ考え方で線を引いています。**\n\nAIは、資料の整理、論点の洗い出し、条文の突き合わせ、期限の並べ替えに使います。**判断は資格者が行います。** 顧客の個人データをどこまで外部のサービスに渡すかについても、あらかじめ線を決めています。この運用は[AIに労務を聞いてから、社労士に相談してよいか](/labor/column/ai-de-shirabete-kara-soudan-shite-yoika)で具体的に書きました。\n\n**そして、この記事でいちばんお伝えしたいのは次のことです。**\n\n畠山さんがやったのは、**自分の事務所の作業を減らすこと**でした。当事務所が力を入れているのは、**お客さまの会社の作業を減らすこと**です。給与計算をfreeeで自社処理に切り替える体制づくりを、顧問料に含めて支援しています。別料金はいただきません。詳しくは[給与計算をfreeeで内製したい](/labor/column/kyuyo-keisan-freee-naisei)をご覧ください。\n\n代行をお受けするほうが、当事務所の売上は増えます。**それでも内製の支援を顧問料に入れているのは、顧問料を「相談の対価」と決めているからです。** 作業が減っても、相談の必要はなくなりません。むしろ設定の設計や毎月の締めの相談という形で、増えます。この設計の理由は[社会保険労務士の顧問料は、何の対価なのか](/labor/column/sharoushi-komonryo-nan-no-taika)に書いています。\n\n**ご相談は初回・2回目以降とも無料です。** 「うちもAIで何かできないか」という漠然とした段階で構いません。\n\n## よくある質問\n\n**Q. AIを使えば、顧問料は安くなりますか？**\nA. 当事務所は顧問料を相談の対価として決めているため、作業が減っても顧問料は変わりません。一方、給与計算のように**作業量で決まる料金は、内製に切り替えれば減ります**。代行（従業員1人あたり月1,100円・税込）をやめて自社処理にすれば、その分はなくなります。切り替えの支援自体は顧問料に含んでいますので、支援のために追加でいただくことはありません。\n\n**Q. 社労士の仕事も、いずれAIに置き換わるのではないですか？**\nA. 作業は減っていくと考えています。ただ、労務は事実の確認が仕事の中心にあり、そこは人に聞かないと進みません。また、報酬を得て他人のために手続を行うことは、社会保険労務士でない者にはできないと法律が定めています（社会保険労務士法第27条）。**置き換わるというより、資格者が何に時間を使うかが変わる、というのが当方の見方です。**\n\n**Q. AIが出した答えを持ち込んでも、迷惑ではないですか？**\nA. まったく問題ありません。**むしろ調べてからお越しいただくほうが、相談は速く進みます。** ただしAIの答えは、条文の番号や施行日でずれることがあります。答え合わせのつもりでお持ちください。\n\n**Q. うちのような小さな会社でも、freeeで内製できますか？**\nA. 従業員数が少ないほど、内製の効果は出やすい面があります。人数が少なければ、毎月の処理そのものは重くないからです。つまずくのは操作ではなく、**最初の設定の設計**です。ここを一緒に作れば、あとはご自身で回せる会社が多いと考えています。まずは代行と内製のどちらが向いているかの整理から、ご相談ください。\n\n## この記事の根拠\n\n- freee「スタッフ0人、顧問先60社、17時退勤。一人税理士が実践する『責任あるAI』」（畠山謙人税理士事務所 導入事例）。**2026年8月14日参照。** 事務所の規模・顧問先数・手法・引用した発言は、すべてこの公開事例によります\n- 引用は原文のまま用い、改変していません。ご本人の意図について、公開されている記述を超える推測は書いていません\n- 社会保険労務士法（昭和43年法律第89号）第2条第1項第1号、第27条。**2026年8月14日にe-Gov法令検索で確認**\n- 社会保険の企業規模要件の段階的な引下げは、社会経済の変化を踏まえた年金制度の機能強化のための国民年金法等の一部を改正する等の法律（令和7年法律第74号）および厚生労働省の公表資料によります\n- 会計業務と労働社会保険手続の性質の比較は、**当方の整理です**。制度上そう定められているものではありません\n- **畠山謙人税理士事務所は税理士事務所であり、当事務所とは何の関係もありません。** 公開されている事例を、当方が一方的に取り上げたものです\n\n**この記事は、誰に相談するかまでは決めていません。** 記帳・決算・申告は**税理士**の業務です。当事務所では取り扱っておりませんので、税理士へ直接ご依頼いただく形をご案内します。当事務所は紹介料を受け取りません。労働・社会保険の手続、就業規則、給与計算とその内製支援は、四葉社会保険労務士事務所で承ります。費用は[報酬額表](/labor/ryokin)に、よくいただくご質問は[よくあるご質問](/labor/faq)にまとめています。\n\n本記事は一般的な情報提供です。個別のご事情に応じた判断は、面談のうえ資格者が行います。執筆は[浦松丈二](/about/uramatsu)（社会保険労務士・行政書士・宅地建物取引士）です。",
+    "status": "published",
+    "author": {
+      "name": "浦松 丈二",
+      "title": "社会保険労務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+    },
+    "keywords": [
+      "一人税理士 60社 AI",
+      "士業 AI 置き換わる",
+      "社労士 AI 自動化 どこまで",
+      "会計 労務 自動化 違い",
+      "労務 AI 任せてよい範囲",
+      "社会保険労務士法 第27条 電磁的記録"
+    ],
+    "tags": [
+      "AI",
+      "freee",
+      "自動化",
+      "社会保険労務士法",
+      "労務のしくみ"
+    ],
+    "locales": [],
+    "faq": [
+      {
+        "question": "AIを使えば、顧問料は安くなりますか？",
+        "answer": "当事務所は顧問料を相談の対価として決めているため、作業が減っても顧問料は変わりません。一方、給与計算のように作業量で決まる料金は、内製に切り替えれば減ります。代行（従業員1人あたり月1,100円・税込）をやめて自社処理にすれば、その分はなくなります。切り替えの支援自体は顧問料に含んでいますので、支援のために追加でいただくことはありません。"
+      },
+      {
+        "question": "社労士の仕事も、いずれAIに置き換わるのではないですか？",
+        "answer": "作業は減っていくと考えています。ただ、労務は事実の確認が仕事の中心にあり、そこは人に聞かないと進みません。また、報酬を得て他人のために手続を行うことは、社会保険労務士でない者にはできないと法律が定めています（社会保険労務士法第27条）。置き換わるというより、資格者が何に時間を使うかが変わる、というのが当方の見方です。"
+      },
+      {
+        "question": "AIが出した答えを持ち込んでも、迷惑ではないですか？",
+        "answer": "まったく問題ありません。むしろ調べてからお越しいただくほうが、相談は速く進みます。 ただしAIの答えは、条文の番号や施行日でずれることがあります。答え合わせのつもりでお持ちください。"
+      },
+      {
+        "question": "うちのような小さな会社でも、freeeで内製できますか？",
+        "answer": "従業員数が少ないほど、内製の効果は出やすい面があります。人数が少なければ、毎月の処理そのものは重くないからです。つまずくのは操作ではなく、最初の設定の設計です。ここを一緒に作れば、あとはご自身で回せる会社が多いと考えています。まずは代行と内製のどちらが向いているかの整理から、ご相談ください。"
+      }
+    ],
+    "translations": {
+      "en": {
+        "title": "Does \"one person, 60 client companies\" work in labour too?",
+        "excerpt": "A tax accountant running 60 client companies with zero staff has become a talking point. But the first thing he did was not automation — it was drawing the line between what gets automated and what a human looks at. The same is possible in labour, but the line falls in a different place. Accounting data flows in on its own; in labour, a fact only comes into being once someone tells you about it.",
+        "content": "**In short:** a tax accountant who runs 60 client companies with no staff has become a talking point. But the first thing he did was not automation — it was **drawing the line between what gets automated and what a human looks at**. The same can be done in labour, but **the line falls in a different place.**\n\n\"Will AI do away with the work of licensed professionals?\" We have been asked this many times over the past six months. Answering in the abstract gets us nowhere, so let us start from what is actually happening.\n\n## What is actually happening?\n\n畠山謙人税理士事務所 — the Kyoto City office of the tax accountant 畠山謙人 (Kento Hatakeyama) — was featured in a customer case study published by the accounting software company freee. The office consists of **one representative tax accountant and zero staff**. On that footing it has **more than 60 retained client companies, with enquiries still increasing**. Its clients are mainly seed-stage startups, and the working day **ends at 17:00**. Its posts on social media have recorded 3.5 million impressions.\n\nWhat supports this is **a data integration between Claude Code and freee**. The AI retrieves the unposted transaction lines that have accumulated in the accounting software and works through the journal entries. The tax accountant, the case study says, has moved from being \"the person who does the work\" to \"the person who reviews it\".\n\nLooked at as figures alone, it may sound like a distant world. **That is not what this article is about.**\n\n## What was the first thing he did?\n\nIt was not automation. **It was drawing a line.**\n\nAccording to the case study, the first thing 畠山 worked on was creating a configuration file setting out what the AI may do and what it must not do. **He himself calls it \"the office's constitution.\"**\n\nOn that footing, he says the following (the original is in Japanese; the English is our translation).\n\n> What is most frightening about automated journal entries is \"posting an entry for something that should never have been posted at all\"\n\n**What comes first is not processing quickly, but not letting the machine touch what must not be touched.** That, as we read it, is the most important part of this case.\n\nHe then goes on, on the division of roles between AI and people (our translation).\n\n> The checking of AI output and the final judgement should always be done by a human. […] **If the tax accountant does not carry that responsibility, there is no point in holding the licence.**\n\n## What is different between accounting and labour?\n\nThis is the heart of it. **It does not follow that \"if a tax accountant can take 60, a shakai hoken roumushi can take 60 too.\"** The structure is different.\n\n| | Accounting (bookkeeping) | Labour and social insurance procedures |\n|---|---|---|\n| **Where the input comes from** | Bank and card transaction lines. **Machine-readable data flows in automatically** | A hire, a departure, a change in dependants, sickness or injury, childbirth, a change of address. **It arises only once a person tells you** |\n| **Cycle** | The same processing every month. Easy to reduce to a pattern | **Driven by events.** You do not know when they will happen. Annual filings (算定基礎届, the standard remuneration base notification) and as-and-when filings (月額変更届, the monthly-remuneration change notification) sit side by side |\n| **What the judgement is about** | Which account to post to. **A pattern can be learned from past entries** | **Establishing the facts.** Is this person a worker? Does a relative living in the same household meet the requirements to become an insured person? **You cannot know without asking a person** |\n| **How errors surface** | **There are chances to notice** at the monthly close or at the year-end | **It surfaces years later, in the person's own benefits** — a pension, or unemployment benefit. And the correction has to be made retroactively |\n| **How the law changes** | — | **Amendments are frequent, and the effective dates are staggered.** The company-size requirement for social insurance, for example, comes down in [four stages — October 2027, October 2029, October 2032 and October 2035](/en/labor/column/tanjikan-koyo-shakaihoken-4bunno3) |\n\n**The biggest difference is the first row.**\n\nAutomating accounting was a question of \"**how to classify the data that has flowed in**\". Bank transaction lines arrive every day whether or not you do anything.\n\nLabour is different. **A new dependant, a change of address — you do not know about either unless someone tells you.** If the employee forgets to mention it, everything stops there. However clever the AI, it cannot process data that never flows in.\n\nThe fourth row bites as well. A wrong journal entry can be caught at the year-end close, but **a missed filing may not come to light until the person reaches the age of drawing a pension.** By then, years have passed.\n\n## Where in labour would you hand work to AI?\n\nSo what should be handed to AI in labour is not **the equivalent of journal entries**.\n\n**It is managing deadlines, and making sure nothing goes unasked.**\n\n- Once a hire is scheduled, laying out what has to be filed and by when\n- At 算定基礎届 season, picking up every person in scope without omission\n- Re-sorting the effective dates of amendments in the order in which they touch your own company\n- Turning \"the things people forget to mention\" into questions we go out and ask\n\nNone of these is a judgement. **They are the work of preventing gaps, upstream of judgement.** This is where AI is strong — and it is also where most accidents happen in labour.\n\nConversely, **what must not be handed over is establishing the facts, and the judgement that follows from them.** Neither [the line between outsourcing and employment](/en/labor/column/gaichu-koyo-sakaime-roudoushasei) nor [whether a relative living in the same household can join employment insurance](/en/labor/column/kazoku-shain-koyohoken-yakuin-joseikin) is settled without hearing out how things actually work. **Ask an AI and a plausible answer comes back. That is exactly why it is dangerous.**\n\n## Why must a human make the final judgement?\n\nWhat 畠山 calls \"the point of holding the licence\" is, for shakai hoken roumushi, **written straight into the statute.**\n\nThe Shakai Hoken Roumushi Act (社会保険労務士法, Act No. 89 of 1968), Article 2, paragraph 1, item 1 defines the \"applications and other documents\" that make up the reserved work as follows (our translation).\n\n> applications, notifications, reports … and other documents (**including, where an electromagnetic record** … **is prepared in place of preparing such a document, that electromagnetic record**)\n\n**It says \"including … that electromagnetic record.\"** In other words, even where an AI produces the data for an electronic filing, that data is itself the \"application or other document\" the statute speaks of. Paper or data, the treatment does not change.\n\nOn that footing, Article 27 draws the line (our translation).\n\n> A person who is not a shakai hoken roumushi or a shakai hoken roumushi corporation must not, **in response to a request from another person and for remuneration**, **carry out as a business** the work listed in Article 2, paragraph 1, items 1 through 2\n\n**What decides it is not who prepared the document, but whether it is done for another person, for remuneration, as a business.** Doing your own company's filings yourselves needs no qualification. That holds whether you use software or AI. We set this out in detail in [We've brought in freee HR. So what does a retained shakai hoken roumushi actually do?](/en/labor/column/freee-jinji-roumu-sharoushi-doko-made).\n\n**The cleverer AI becomes, the more the meaning of a qualification shifts from \"being able to produce it\" to \"taking it on.\"** That, as we read them, is what 畠山's words mean.\n\n## What can 四葉社会保険労務士事務所 do?\n\n**This office draws the line on the same principle.**\n\nWe use AI for organising materials, surfacing the issues, checking wording against the statute, and sorting deadlines. **Judgement is made by the qualified professional.** We have also decided in advance how far client personal data may be passed to outside services. That practice is set out concretely in [Can I ask an AI about a labour question first, and then consult a shakai hoken roumushi?](/en/labor/column/ai-de-shirabete-kara-soudan-shite-yoika).\n\n**And here is what we most want to say in this article.**\n\nWhat 畠山 did was **reduce the work inside his own office**. What this office puts its effort into is **reducing the work inside the client's company**. We support the build-up to processing payroll in-house on freee, included in the retainer fee. There is no separate charge. For detail, see [We want to run payroll in-house on freee — what do we ask a shakai hoken roumushi for?](/en/labor/column/kyuyo-keisan-freee-naisei).\n\nTaking the work on ourselves would earn this office more. **We still put in-house support inside the retainer because we have defined the retainer as the price of consultation.** Less work does not mean less need to consult. If anything it increases — as consultation on the design of the settings, and on each month's close. The reason for this design is in [What is a shakai hoken roumushi's retainer actually paying for?](/en/labor/column/sharoushi-komonryo-nan-no-taika).\n\n**Consultation is free of charge, the first time and every time after.** The vague stage — \"could we do something with AI too?\" — is perfectly fine.\n\n## Frequently asked questions\n\n**Q. If you use AI, does the retainer get cheaper?**\nA. Because this office sets the retainer as the price of consultation, the retainer does not change when the amount of work goes down. On the other hand, **fees that are set by volume of work — payroll, for instance — do go down if you switch to in-house**. Stop the outsourcing (1,100 yen per employee per month, tax included) and process it yourselves, and that part disappears. The support for switching is itself included in the retainer, so we charge nothing extra for the support.\n\n**Q. Won't a shakai hoken roumushi's work be replaced by AI in the end?**\nA. We expect the volume of work to fall. But labour has establishing the facts at the centre of it, and that does not move forward without asking people. The law also provides that carrying out procedures for another person for remuneration is not open to anyone who is not a shakai hoken roumushi (社会保険労務士法, Article 27). **Rather than being replaced, what changes is where the qualified professional spends time — that is how we see it.**\n\n**Q. Is it a nuisance if I bring in an answer an AI gave me?**\nA. Not at all. **In fact, coming in after you have looked it up makes the consultation faster.** But AI answers can drift on article numbers and effective dates. Bring them as something to be checked against the source.\n\n**Q. Can a company as small as ours really go in-house on freee?**\nA. The fewer employees you have, the more easily the benefit of going in-house shows: with few people, the monthly processing itself is not heavy. What trips companies up is not the operation but **the design of the initial settings**. Build that part with us, and most companies can run the rest themselves. Start by sorting out whether outsourcing or in-house suits you better — please do get in touch.\n\n## Sources for this article\n\n- freee, 「スタッフ0人、顧問先60社、17時退勤。一人税理士が実践する『責任あるAI』」 (customer case study, 畠山謙人税理士事務所). **Viewed 14 August 2026.** The size of the office, the number of client companies, the methods and the remarks quoted all come from this published case study\n- The quoted remarks are in Japanese in the original; the English here is our translation, with nothing added and nothing removed. We have written no speculation about his intentions beyond what is published\n- 社会保険労務士法 (Shakai Hoken Roumushi Act, Act No. 89 of 1968), **Article 2, paragraph 1, item 1 and Article 27** — **confirmed on e-Gov法令検索 on 14 August 2026.** The English of the statutory text quoted above is our translation\n- The staged reduction of the company-size requirement for social insurance follows 社会経済の変化を踏まえた年金制度の機能強化のための国民年金法等の一部を改正する等の法律 (Act No. 74 of 2025) and materials published by the Ministry of Health, Labour and Welfare\n- The comparison between the nature of accounting work and that of labour and social insurance procedures is **our own analysis**. It is not laid down as such by the system\n- **畠山謙人税理士事務所 is a tax accountant's office and has no relationship whatsoever with this office.** We have taken up a published case study entirely on our own initiative\n\n**This article does not go so far as to decide whom you should consult.** Bookkeeping, closing the books and tax returns are the work of **a tax accountant**. This office does not handle them, so we will point you to a tax accountant and you engage them directly. This office does not accept referral fees. Labour and social insurance procedures, work rules, payroll and support for bringing it in-house are handled by 四葉社会保険労務士事務所. Fees are set out in the [fee schedule](/en/labor/ryokin), and the questions we are asked most often are collected on the [FAQ page](/en/labor/faq).\n\nThis article is general information. Judgments that fit your particular circumstances are made by a qualified professional after a meeting. Written by [Joji Uramatsu](/en/about/uramatsu) (Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist).",
+        "category": "How labour administration works",
+        "keywords": [
+          "solo tax accountant 60 clients AI",
+          "will AI replace licensed professionals",
+          "how far can a shakai hoken roumushi automate with AI",
+          "difference between automating accounting and labour",
+          "what labour work can be handed to AI",
+          "Shakai Hoken Roumushi Act Article 27 electromagnetic record"
+        ],
+        "tags": [
+          "AI",
+          "freee",
+          "Automation",
+          "Shakai Hoken Roumushi Act",
+          "How labour administration works"
+        ],
+        "author": {
+          "name": "Joji Uramatsu",
+          "title": "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所"
+        },
+        "faq": [
+          {
+            "question": "If you use AI, does the retainer get cheaper?",
+            "answer": "Because this office sets the retainer as the price of consultation, the retainer does not change when the amount of work goes down. On the other hand, fees that are set by volume of work — payroll, for instance — do go down if you switch to in-house. Stop the outsourcing (1,100 yen per employee per month, tax included) and process it yourselves, and that part disappears. The support for switching is itself included in the retainer, so we charge nothing extra for the support."
+          },
+          {
+            "question": "Won't a shakai hoken roumushi's work be replaced by AI in the end?",
+            "answer": "We expect the volume of work to fall. But labour has establishing the facts at the centre of it, and that does not move forward without asking people. The law also provides that carrying out procedures for another person for remuneration is not open to anyone who is not a shakai hoken roumushi (社会保険労務士法, Article 27). Rather than being replaced, what changes is where the qualified professional spends time — that is how we see it."
+          },
+          {
+            "question": "Is it a nuisance if I bring in an answer an AI gave me?",
+            "answer": "Not at all. In fact, coming in after you have looked it up makes the consultation faster. But AI answers can drift on article numbers and effective dates. Bring them as something to be checked against the source."
+          },
+          {
+            "question": "Can a company as small as ours really go in-house on freee?",
+            "answer": "The fewer employees you have, the more easily the benefit of going in-house shows: with few people, the monthly processing itself is not heavy. What trips companies up is not the operation but the design of the initial settings. Build that part with us, and most companies can run the rest themselves. Start by sorting out whether outsourcing or in-house suits you better — please do get in touch."
+          }
+        ]
+      },
+      "zh-tw": {
+        "title": "「一人做60家」，在勞務也成立嗎",
+        "excerpt": "以0名員工承接60家顧問客戶的稅理士成為話題。不過，這位最先做的不是自動化，而是「哪些交給自動化、哪些由人來看」的劃線。勞務也能做同樣的事，但線劃的位置不同。會計的明細會自動流進來，勞務卻是有人提出才產生事實。",
+        "content": "**結論（先講重點）**：以0名員工承接60家顧問客戶的稅理士成為話題。不過，這位最先做的不是自動化，而是**「哪些交給自動化、哪些由人來看」的劃線**。勞務也能做同樣的事，但**線劃的位置不同。**\n\n「AI會讓士業的工作消失嗎」——這半年來，這個問題被問了很多次。用抽象論回答沒有意義，所以從實際正在發生的事開始談。\n\n## 正在發生什麼？\n\n位於京都市的畠山謙人税理士事務所，被會計軟體freee公開的導入案例所報導。事務所的規模是**代表稅理士1名、員工0名**。在這樣的規模下，**顧問客戶超過60家，詢問仍持續增加**。客層以種子期的新創為主，**17點下班**。在社群媒體的發布，創下350萬次曝光。\n\n支撐這一切的，是**Claude Code與freee的資料串接**。AI取得累積在會計軟體中尚未登錄的明細，推進分錄。案例中記載，稅理士已從「作業的人」移動為「審閱的人」。\n\n只看數字，也許聽起來像遙遠世界的事。**本文想寫的，不在那裡。**\n\n## 這位最先做的，是什麼？\n\n不是自動化。**是劃線。**\n\n依案例所述，畠山先生最先著手的，是為AI製作一份寫明「可以執行的事、不可以做的事」的設定檔。**他本人稱之為「事務所的憲法」。**\n\n在此之上，他這樣說（原文為日文，以下為當方的中譯）。\n\n> 自動分錄最可怕的是「把本來不該做分錄的東西做成了分錄」\n\n**先來的不是快速處理，而是不讓它碰不能碰的東西。** 當方認為，這是本案例最重要的地方。\n\n接著，關於AI與人的角色分工，他繼續說（同為中譯）。\n\n> 對AI輸出的檢查與最終判斷，必定應由人來進行。（中略）**如果稅理士不承擔那份責任，持有執照就沒有意義了。**\n\n## 會計與勞務，有什麼不同？\n\n從這裡開始才是正題。**並不會變成「稅理士能做60家，社會保險勞務士也能做60家」。** 因為結構不同。\n\n| | 會計（記帳） | 勞動・社會保險的手續 |\n|---|---|---|\n| **輸入從哪裡來** | 銀行・信用卡的明細。**機器可讀的資料會自動流進來** | 入職・離職・扶養的增減・傷病・生產・遷居。**有人提出才會發生** |\n| **週期** | 每月相同的處理。容易做成定型 | **由事件驅動**。不知道何時發生。年度（算定基礎届）與隨時（月額変更届）混雜在一起 |\n| **判斷的內容** | 會計科目的判斷。**能從過去的分錄學到型** | **事實的確認**。這個人是不是勞工。同住的親屬是否滿足成為被保險人的要件。**不問人就不會知道** |\n| **錯誤如何浮現** | 在月結・決算時**有機會發現** | **數年後，在本人的給付上浮上檯面**。年金或失業給付。而且要追溯更正 |\n| **法令如何變動** | ― | **修正頻繁，施行日分開**。例如社會保險的企業規模要件，將分[2027年10月・2029年10月・2032年10月・2035年10月共4個階段](/zh-tw/labor/column/tanjikan-koyo-shakaihoken-4bunno3)調降 |\n\n**最大的不同，是第1行。**\n\n會計的自動化，是「**把流進來的資料，如何分類**」的問題。銀行明細即使我們什麼都不做，每天也會送到。\n\n勞務不同。**扶養增加了、住址變了，若沒有人說，就不會知道。** 員工忘了說，事情就停在那裡。資料沒有流進來的東西，再聰明的AI也無法處理。\n\n第4行也會發揮作用。分錄的錯誤在決算時有機會發現，但**手續的遺漏，有時要到本人到了領年金的年齡才會浮上檯面。** 那時已經過了好幾年。\n\n## 勞務若要交給AI，該交在哪裡？\n\n所以，勞務中該交給AI的，不是**相當於分錄的東西**。\n\n**是期限的管理，以及防止漏問。**\n\n- 入職的預定確定後，把在什麼時候之前要提出什麼排列出來\n- 到算定基礎届的時期，把對象者無遺漏地撿起來\n- 把法令修正的施行日，依與自家公司的相關程度重新排序\n- 把「容易忘記說的事」，做成由我們主動去問的形式\n\n哪一項都不是判斷。**是判斷之前，防止遺漏的作業。** 這裡是AI擅長的地方，而且也是勞務中最常出事故的地方。\n\n反過來，**不可以交出去的是事實的確認，以及由此往後的判斷**。[外包與僱用的界線](/zh-tw/labor/column/gaichu-koyo-sakaime-roudoushasei)也好，[同住的親屬能否加入僱用保險](/zh-tw/labor/column/kazoku-shain-koyohoken-yakuin-joseikin)也好，不聽取實際情況就無法決定。**問AI，會回來一個看似合理的答案。所以才危險。**\n\n## 為什麼最後必須由人來判斷？\n\n畠山先生所說的「持有執照的意義」，就社會保險勞務士而言，**條文裡就是這樣寫的。**\n\n社會保險勞務士法（昭和43年法律第89號）第2條第1項第1號，把屬於獨占業務對象的「申請書等」，這樣定義（以下為當方的中譯）。\n\n> 申請書、申報書、報告書…及其他文件（**包含以電磁紀錄代替其製作**…**時的該電磁紀錄**）\n\n**寫著「包含該電磁紀錄」。** 也就是說，即使由AI製作電子申請的資料，那也就是條文所說的「申請書等」本身。是紙還是資料，處理方式不會改變。\n\n在此之上，第27條劃出界線（以下為當方的中譯）。\n\n> 非社會保險勞務士或社會保險勞務士法人者，不得**應他人之請求並收取報酬**，**以業務方式進行**第2條第1項第1號至第2號所列之事務\n\n**決定的不是誰製作的，而是是否為他人、收取報酬、以業務方式進行。** 自家公司辦自家公司的手續，不需要資格。用軟體或用AI都一樣。這一點詳細寫在[導入了freee人事労務。那麼，顧問社會保險勞務士要為我們做什麼](/zh-tw/labor/column/freee-jinji-roumu-sharoushi-doko-made)。\n\n**AI越聰明，資格的意義就越從「做得出來」偏向「承擔下來」。** 畠山先生的話，當方是這樣理解的。\n\n## 四葉社会保険労務士事務所能做什麼？\n\n**本事務所也以同樣的想法劃線。**\n\nAI用於資料的整理、爭點的盤點、條文的核對、期限的排序。**判斷由有資格者進行。** 關於顧客的個人資料能交給外部服務到什麼程度，也事先劃好了線。這個做法具體寫在[先問AI勞務問題，再諮詢社會保險勞務士，可以嗎](/zh-tw/labor/column/ai-de-shirabete-kara-soudan-shite-yoika)。\n\n**而本文最想傳達的，是下面這件事。**\n\n畠山先生做的，是**減少自己事務所的作業**。本事務所致力的，是**減少客戶公司的作業**。把薪資計算以freee切換為自家處理的體制建構，包含在顧問費之內提供支援。不另外收費。詳情請見[想以freee自行計算薪資。該委託社會保險勞務士什麼](/zh-tw/labor/column/kyuyo-keisan-freee-naisei)。\n\n承接代辦，本事務所的營收會增加。**即使如此仍把內製的支援放進顧問費，是因為把顧問費定為「諮詢的對價」。** 作業減少了，諮詢的必要也不會消失。反而會以設定的設計、每月結算的諮詢等形式增加。這個設計的理由寫在[社會保險勞務士的顧問費，究竟是什麼的對價](/zh-tw/labor/column/sharoushi-komonryo-nan-no-taika)。\n\n**諮詢無論初次或第2次以後都免費。** 「我們是不是也能用AI做點什麼」——在這種模糊的階段就可以。\n\n## 常見問題\n\n**Q. 使用AI的話，顧問費會變便宜嗎？**\nA. 本事務所把顧問費定為諮詢的對價，因此即使作業減少，顧問費也不會改變。另一方面，像薪資計算這種**依作業量決定的費用，切換為內製就會減少**。停止代辦（每位員工每月1,100日圓・含稅）改為自家處理，這部分就不再發生。切換的支援本身包含在顧問費之內，不會為了支援而另外收取費用。\n\n**Q. 社會保險勞務士的工作，是不是遲早也會被AI取代？**\nA. 我們認為作業會逐漸減少。不過，勞務的核心是事實的確認，那裡不問人就無法推進。而且，收取報酬為他人辦理手續，法律規定非社會保險勞務士不得為之（社會保險勞務士法第27條）。**與其說是被取代，不如說是有資格者把時間用在什麼上會改變——這是當方的看法。**\n\n**Q. 把AI給的答案帶來，會不會造成困擾？**\nA. 完全沒有問題。**反而是先查過再來，諮詢會進行得更快。** 不過AI的答案，可能在條文號碼與施行日上出現偏差。請當作核對答案帶來。\n\n**Q. 像我們這樣的小公司，也能用freee內製嗎？**\nA. 員工人數越少，內製的效果越容易顯現。因為人數少，每月的處理本身並不沉重。會卡住的不是操作，而是**最初設定的設計**。把這裡一起做好，多數公司之後都能自行運轉。請先從代辦與內製哪個適合的整理開始諮詢。\n\n## 本文的依據\n\n- freee「スタッフ0人、顧問先60社、17時退勤。一人税理士が実践する『責任あるAI』」（畠山謙人税理士事務所 導入案例）。**2026年8月14日參閱。** 事務所的規模・顧問客戶數・做法・所引用的發言，全部依據這份公開案例\n- 所引用的發言原文為日文，本文所載為當方的中譯，未增添亦未刪減。關於本人的意圖，未寫超出公開記述的推測\n- 社會保險勞務士法（昭和43年法律第89號）第2條第1項第1號、第27條。**2026年8月14日於e-Gov法令検索確認。** 上述條文的中文為當方的翻譯\n- 社會保險的企業規模要件的階段性調降，依社会経済の変化を踏まえた年金制度の機能強化のための国民年金法等の一部を改正する等の法律（令和7年法律第74號）與厚生勞動省的公開資料\n- 會計業務與勞動社會保險手續的性質比較，是**當方的整理**。並非制度上如此規定\n- **畠山謙人税理士事務所是稅理士事務所，與本事務所沒有任何關係。** 是當方單方面取用公開的案例\n\n**本文並未決定到「該向誰諮詢」為止。** 記帳・決算・申報是**稅理士**的業務。本事務所並不承接，因此會請您直接委託稅理士。本事務所不收取介紹費。勞動・社會保險的手續、就業規則、薪資計算及其內製支援，由四葉社会保険労務士事務所承接。費用整理於[報酬額表](/zh-tw/labor/ryokin)，常被詢問的問題整理於[常見問答](/zh-tw/labor/faq)。\n\n本文為一般性的資訊提供。因應個別情事的判斷，由具備資格者在面談後進行。撰文者為[浦松丈二](/zh-tw/about/uramatsu)（社會保險勞務士・行政書士・宅地建物取引士）。",
+        "category": "勞務的機制",
+        "keywords": [
+          "一人稅理士 60家 AI",
+          "士業 AI 被取代",
+          "社會保險勞務士 AI 自動化 到什麼程度",
+          "會計 勞務 自動化 差異",
+          "勞務 AI 可以交付的範圍",
+          "社會保險勞務士法 第27條 電磁紀錄"
+        ],
+        "tags": [
+          "AI",
+          "freee",
+          "自動化",
+          "社會保險勞務士法",
+          "勞務的機制"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "使用AI的話，顧問費會變便宜嗎？",
+            "answer": "本事務所把顧問費定為諮詢的對價，因此即使作業減少，顧問費也不會改變。另一方面，像薪資計算這種依作業量決定的費用，切換為內製就會減少。停止代辦（每位員工每月1,100日圓・含稅）改為自家處理，這部分就不再發生。切換的支援本身包含在顧問費之內，不會為了支援而另外收取費用。"
+          },
+          {
+            "question": "社會保險勞務士的工作，是不是遲早也會被AI取代？",
+            "answer": "我們認為作業會逐漸減少。不過，勞務的核心是事實的確認，那裡不問人就無法推進。而且，收取報酬為他人辦理手續，法律規定非社會保險勞務士不得為之（社會保險勞務士法第27條）。與其說是被取代，不如說是有資格者把時間用在什麼上會改變——這是當方的看法。"
+          },
+          {
+            "question": "把AI給的答案帶來，會不會造成困擾？",
+            "answer": "完全沒有問題。反而是先查過再來，諮詢會進行得更快。 不過AI的答案，可能在條文號碼與施行日上出現偏差。請當作核對答案帶來。"
+          },
+          {
+            "question": "像我們這樣的小公司，也能用freee內製嗎？",
+            "answer": "員工人數越少，內製的效果越容易顯現。因為人數少，每月的處理本身並不沉重。會卡住的不是操作，而是最初設定的設計。把這裡一起做好，多數公司之後都能自行運轉。請先從代辦與內製哪個適合的整理開始諮詢。"
+          }
+        ]
+      },
+      "zh": {
+        "title": "「一人做60家」，在劳务也成立吗",
+        "excerpt": "以0名员工承接60家顾问客户的税理士成为话题。不过，这位最先做的不是自动化，而是「哪些交给自动化、哪些由人来看」的划线。劳务也能做同样的事，但线划的位置不同。会计的明细会自动流进来，劳务却是有人提出才产生事实。",
+        "content": "**结论（先讲重点）**：以0名员工承接60家顾问客户的税理士成为话题。不过，这位最先做的不是自动化，而是**「哪些交给自动化、哪些由人来看」的划线**。劳务也能做同样的事，但**线划的位置不同。**\n\n「AI会让士业的工作消失吗」——这半年来，这个问题被问了很多次。用抽象论回答没有意义，所以从实际正在发生的事开始谈。\n\n## 正在发生什么？\n\n位于京都市的畠山謙人税理士事務所，被会计软件freee公开的导入案例所报导。事务所的规模是**代表税理士1名、员工0名**。在这样的规模下，**顾问客户超过60家，询问仍持续增加**。客层以种子期的初创企业为主，**17点下班**。在社交媒体的发布，创下350万次曝光。\n\n支撑这一切的，是**Claude Code与freee的数据对接**。AI取得累积在会计软件中尚未登录的明细，推进记账分录。案例中记载，税理士已从「作业的人」移动为「审阅的人」。\n\n只看数字，也许听起来像遥远世界的事。**本文想写的，不在那里。**\n\n## 这位最先做的，是什么？\n\n不是自动化。**是划线。**\n\n依案例所述，畠山先生最先着手的，是为AI制作一份写明「可以执行的事、不可以做的事」的设定档。**他本人称之为「事务所的宪法」。**\n\n在此之上，他这样说（原文为日文，以下为当方的中译）。\n\n> 自动分录最可怕的是「把本来不该做分录的东西做成了分录」\n\n**先来的不是快速处理，而是不让它碰不能碰的东西。** 当方认为，这是本案例最重要的地方。\n\n接着，关于AI与人的角色分工，他继续说（同为中译）。\n\n> 对AI输出的检查与最终判断，必定应由人来进行。（中略）**如果税理士不承担那份责任，持有执照就没有意义了。**\n\n## 会计与劳务，有什么不同？\n\n从这里开始才是正题。**并不会变成「税理士能做60家，社会保险劳务士也能做60家」。** 因为结构不同。\n\n| | 会计（记帐） | 劳动・社会保险的手续 |\n|---|---|---|\n| **输入从哪里来** | 银行・信用卡的明细。**机器可读的数据会自动流进来** | 入职・离职・扶养的增减・伤病・生产・迁居。**有人提出才会发生** |\n| **周期** | 每月相同的处理。容易做成定型 | **由事件驱动**。不知道何时发生。年度（算定基礎届）与随时（月額変更届）混杂在一起 |\n| **判断的内容** | 会计科目的判断。**能从过去的分录学到型** | **事实的确认**。这个人是不是劳动者。同住的亲属是否满足成为被保险人的要件。**不问人就不会知道** |\n| **错误如何浮现** | 在月结・决算时**有机会发现** | **数年后，在本人的给付上浮上台面**。年金或失业给付。而且要追溯更正 |\n| **法令如何变动** | ― | **修正频繁，施行日分开**。例如社会保险的企业规模要件，将分[2027年10月・2029年10月・2032年10月・2035年10月共4个阶段](/zh/labor/column/tanjikan-koyo-shakaihoken-4bunno3)调降 |\n\n**最大的不同，是第1行。**\n\n会计的自动化，是「**把流进来的数据，如何分类**」的问题。银行明细即使我们什么都不做，每天也会送到。\n\n劳务不同。**扶养增加了、住址变了，若没有人说，就不会知道。** 员工忘了说，事情就停在那里。数据没有流进来的东西，再聪明的AI也无法处理。\n\n第4行也会发挥作用。分录的错误在决算时有机会发现，但**手续的遗漏，有时要到本人到了领年金的年龄才会浮上台面。** 那时已经过了好几年。\n\n## 劳务若要交给AI，该交在哪里？\n\n所以，劳务中该交给AI的，不是**相当于分录的东西**。\n\n**是期限的管理，以及防止漏问。**\n\n- 入职的预定确定后，把在什么时候之前要提出什么排列出来\n- 到算定基礎届的时期，把对象者无遗漏地捡起来\n- 把法令修正的施行日，依与自家公司的相关程度重新排序\n- 把「容易忘记说的事」，做成由我们主动去问的形式\n\n哪一项都不是判断。**是判断之前，防止遗漏的作业。** 这里是AI擅长的地方，而且也是劳务中最常出事故的地方。\n\n反过来，**不可以交出去的是事实的确认，以及由此往后的判断**。[外包与雇用的界线](/zh/labor/column/gaichu-koyo-sakaime-roudoushasei)也好，[同住的亲属能否加入雇用保险](/zh/labor/column/kazoku-shain-koyohoken-yakuin-joseikin)也好，不听取实际情况就无法决定。**问AI，会回来一个看似合理的答案。所以才危险。**\n\n## 为什么最后必须由人来判断？\n\n畠山先生所说的「持有执照的意义」，就社会保险劳务士而言，**条文里就是这样写的。**\n\n社会保险劳务士法（昭和43年法律第89号）第2条第1项第1号，把属于独占业务对象的「申请书等」，这样定义（以下为当方的中译）。\n\n> 申请书、申报书、报告书…及其他文件（**包含以电磁记录代替其制作**…**时的该电磁记录**）\n\n**写着「包含该电磁记录」。** 也就是说，即使由AI制作电子申请的数据，那也就是条文所说的「申请书等」本身。是纸还是数据，处理方式不会改变。\n\n在此之上，第27条划出界线（以下为当方的中译）。\n\n> 非社会保险劳务士或社会保险劳务士法人者，不得**应他人之请求并收取报酬**，**以业务方式进行**第2条第1项第1号至第2号所列之事务\n\n**决定的不是谁制作的，而是是否为他人、收取报酬、以业务方式进行。** 自家公司办自家公司的手续，不需要资格。用软件或用AI都一样。这一点详细写在[导入了freee人事労務。那么，顾问社会保险劳务士要为我们做什么](/zh/labor/column/freee-jinji-roumu-sharoushi-doko-made)。\n\n**AI越聪明，资格的意义就越从「做得出来」偏向「承担下来」。** 畠山先生的话，当方是这样理解的。\n\n## 四葉社会保険労務士事務所能做什么？\n\n**本事务所也以同样的想法划线。**\n\nAI用于资料的整理、争点的盘点、条文的核对、期限的排序。**判断由具备资格者进行。** 关于顾客的个人数据能交给外部服务到什么程度，也事先划好了线。这个做法具体写在[先问AI劳务问题，再咨询社会保险劳务士，可以吗](/zh/labor/column/ai-de-shirabete-kara-soudan-shite-yoika)。\n\n**而本文最想传达的，是下面这件事。**\n\n畠山先生做的，是**减少自己事务所的作业**。本事务所致力的，是**减少客户公司的作业**。把工资计算以freee切换为自家处理的体制建构，包含在顾问费之内提供支援。不另外收费。详情请见[想以freee自行计算工资。该委托社会保险劳务士什么](/zh/labor/column/kyuyo-keisan-freee-naisei)。\n\n承接代办，本事务所的营收会增加。**即使如此仍把内制的支援放进顾问费，是因为把顾问费定为「咨询的对价」。** 作业减少了，咨询的必要也不会消失。反而会以设定的设计、每月结算的咨询等形式增加。这个设计的理由写在[社会保险劳务士的顾问费，究竟是什么的对价](/zh/labor/column/sharoushi-komonryo-nan-no-taika)。\n\n**咨询无论初次或第2次以后都免费。** 「我们是不是也能用AI做点什么」——在这种模糊的阶段就可以。\n\n## 常见问题\n\n**Q. 使用AI的话，顾问费会变便宜吗？**\nA. 本事务所把顾问费定为咨询的对价，因此即使作业减少，顾问费也不会改变。另一方面，像工资计算这种**依作业量决定的费用，切换为内制就会减少**。停止代办（每位员工每月1,100日圆・含税）改为自家处理，这部分就不再发生。切换的支援本身包含在顾问费之内，不会为了支援而另外收取费用。\n\n**Q. 社会保险劳务士的工作，是不是迟早也会被AI取代？**\nA. 我们认为作业会逐渐减少。不过，劳务的核心是事实的确认，那里不问人就无法推进。而且，收取报酬为他人办理手续，法律规定非社会保险劳务士不得为之（社会保险劳务士法第27条）。**与其说是被取代，不如说是具备资格者把时间用在什么上会改变——这是当方的看法。**\n\n**Q. 把AI给的答案带来，会不会造成困扰？**\nA. 完全没有问题。**反而是先查过再来，咨询会进行得更快。** 不过AI的答案，可能在条文号码与施行日上出现偏差。请当作核对答案带来。\n\n**Q. 像我们这样的小公司，也能用freee内制吗？**\nA. 员工人数越少，内制的效果越容易显现。因为人数少，每月的处理本身并不沉重。会卡住的不是操作，而是**最初设定的设计**。把这里一起做好，多数公司之后都能自行运转。请先从代办与内制哪个适合的整理开始咨询。\n\n## 本文依据\n\n- freee「スタッフ0人、顧問先60社、17時退勤。一人税理士が実践する『責任あるAI』」（畠山謙人税理士事務所 导入案例）。**2026年8月14日参阅。** 事务所的规模・顾问客户数・做法・所引用的发言，全部依据这份公开案例\n- 所引用的发言原文为日文，本文所载为当方的中译，未增添亦未删减。关于本人的意图，未写超出公开记述的推测\n- 社会保险劳务士法（昭和43年法律第89号）第2条第1项第1号、第27条。**2026年8月14日于e-Gov法令検索确认。** 上述条文的中文为当方的翻译\n- 社会保险的企业规模要件的阶段性调降，依社会経済の変化を踏まえた年金制度の機能強化のための国民年金法等の一部を改正する等の法律（令和7年法律第74号）与厚生劳动省的公开资料\n- 会计业务与劳动社会保险手续的性质比较，是**当方的整理**。并非制度上如此规定\n- **畠山謙人税理士事務所是税理士事务所，与本事务所没有任何关系。** 是当方单方面取用公开的案例\n\n**本文并未决定到「该向谁咨询」为止。** 记帐・决算・申报是**税理士**的业务。本事务所并不承接，因此会请您直接委托税理士。本事务所不收取介绍费。劳动・社会保险的手续、就业规则、工资计算及其内制支援，由四葉社会保険労務士事務所承接。费用整理于[报酬额表](/zh/labor/ryokin)，常被询问的问题整理于[常见问答](/zh/labor/faq)。\n\n本文为一般性的信息提供。因应个别情事的判断，由具备资格者在面谈后进行。撰文者为[浦松丈二](/zh/about/uramatsu)（社会保险劳务士・行政书士・宅地建物取引士）。",
+        "category": "劳务的机制",
+        "keywords": [
+          "一人税理士 60家 AI",
+          "士业 AI 被取代",
+          "社会保险劳务士 AI 自动化 到什么程度",
+          "会计 劳务 自动化 差异",
+          "劳务 AI 可以交付的范围",
+          "社会保险劳务士法 第27条 电磁记录"
+        ],
+        "tags": [
+          "AI",
+          "freee",
+          "自动化",
+          "社会保险劳务士法",
+          "劳务的机制"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "使用AI的话，顾问费会变便宜吗？",
+            "answer": "本事务所把顾问费定为咨询的对价，因此即使作业减少，顾问费也不会改变。另一方面，像工资计算这种依作业量决定的费用，切换为内制就会减少。停止代办（每位员工每月1,100日圆・含税）改为自家处理，这部分就不再发生。切换的支援本身包含在顾问费之内，不会为了支援而另外收取费用。"
+          },
+          {
+            "question": "社会保险劳务士的工作，是不是迟早也会被AI取代？",
+            "answer": "我们认为作业会逐渐减少。不过，劳务的核心是事实的确认，那里不问人就无法推进。而且，收取报酬为他人办理手续，法律规定非社会保险劳务士不得为之（社会保险劳务士法第27条）。与其说是被取代，不如说是具备资格者把时间用在什么上会改变——这是当方的看法。"
+          },
+          {
+            "question": "把AI给的答案带来，会不会造成困扰？",
+            "answer": "完全没有问题。反而是先查过再来，咨询会进行得更快。 不过AI的答案，可能在条文号码与施行日上出现偏差。请当作核对答案带来。"
+          },
+          {
+            "question": "像我们这样的小公司，也能用freee内制吗？",
+            "answer": "员工人数越少，内制的效果越容易显现。因为人数少，每月的处理本身并不沉重。会卡住的不是操作，而是最初设定的设计。把这里一起做好，多数公司之后都能自行运转。请先从代办与内制哪个适合的整理开始咨询。"
+          }
+        ]
+      }
+    }
   }
 ];
