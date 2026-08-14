@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-14T01:40:55.732Z",
+  "generatedAt": "2026-08-14T02:25:42.039Z",
   "note": "労務コラム（4本）。報酬額表 v18 の決定と相場調査から起こした原稿md（scripts/labor-columns/）から生成。--write でupsert。",
-  "articleCount": 17,
+  "articleCount": 20,
   "verification": [
     "OK: 全チェック通過"
   ],
@@ -3060,6 +3060,555 @@
             {
               "question": "如果AI的答案是对的，咨询也要收费吗？",
               "answer": "咨询免费。答案对的话，告诉您「是对的」就结束。之后若委托手续或规程的整备，费用依报酬额表事先向您提示。"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "business": "labor",
+      "slug": "freee-nenmatsu-chosei-dare-no-shigoto",
+      "title": "freeeの年末調整は、誰の仕事か",
+      "date": "2026-09-01",
+      "category": "誰に頼むか",
+      "excerpt": "freee人事労務には年末調整の機能があり、自社で行う分には資格は要りません。ただし年末調整は所得税の過不足を精算する税務の手続で、報酬を得て代わりに行うのは税理士の業務です。給与計算を社会保険労務士に頼んでいても年末調整は含まれません。プラン別の機能範囲とあわせて整理します。",
+      "content": "**結論（先に要点）**：freee人事労務には年末調整の機能があり、**自社で行う分には資格は要りません**。ただし年末調整は所得税の過不足を精算する**税務の手続**で、報酬を得て代わりに行うのは**税理士**の業務です。給与計算を社会保険労務士に頼んでいても、**年末調整は含まれません**。\n\n「freeeに年末調整のボタンがあるのに、顧問の社労士からは『年末調整はお受けできません』と言われ…（全4003字）",
+      "status": "published",
+      "author": {
+        "name": "浦松 丈二",
+        "title": "社会保険労務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+      },
+      "keywords": [
+        "freee 年末調整 誰に頼む",
+        "年末調整 社労士 頼めない",
+        "年末調整 税理士 業務",
+        "freee 年末調整 プラン 違い",
+        "給与計算 年末調整 含まれない",
+        "年末調整 電子申告 freee"
+      ],
+      "tags": [
+        "freee",
+        "年末調整",
+        "税理士",
+        "業際",
+        "給与計算",
+        "電子申告"
+      ],
+      "locales": [],
+      "faq": [
+        {
+          "question": "給与計算を頼んでいる社労士に、年末調整もあわせて頼めますか？",
+          "answer": "頼めません。年末調整は税務の手続で、報酬を得て代わりに行うのは税理士の業務です（税理士法第2条第1項）。当事務所でも取り扱っておらず、税理士に直接ご依頼いただく形をご案内しています。紹介料の授受はありません。"
+        },
+        {
+          "question": "freeeのプランによって、年末調整でできることは違いますか？",
+          "answer": "違います。公式ヘルプ（2026年8月14日参照）によると、年末調整ペーパーレスプランは情報収集とCSV出力まで、ミニマムプランは計算まで（電子申告不可）、スタータープラン以上で電子申告までできます。機能は改定されるため、最新は公式ヘルプでご確認ください。"
+        },
+        {
+          "question": "自社で年末調整を完結させるのに、資格は要りますか？",
+          "answer": "要りません。自社の手続を自社で行うことは、資格の線の外側です。電子申告まで行う場合は、対応プランの契約とe-Tax・eLTAXの事前準備が必要です。"
+        },
+        {
+          "question": "「給与計算は社労士、年末調整は税理士」と分けると、二度手間になりませんか？",
+          "answer": "契約は分かれますが、作業は連続しています。毎月の給与データが正確に積み上がっていれば、年末調整側の作業は軽くなります。誰が何をどこまで持つかを11月までに決めておくことが、二度手間を防ぐ実務です。"
+        }
+      ],
+      "translations": {
+        "en": {
+          "title": "The year-end adjustment in freee — whose job is it?",
+          "excerpt": "freee HR has a year-end adjustment feature, and no licence is needed to run it for your own company. But the year-end adjustment is a tax procedure that settles over- and under-withheld income tax, and doing it for another party for a fee is work for a tax accountant. Even if a shakai hoken roumushi runs your payroll, the year-end adjustment is not included.",
+          "content": "**In short:** freee HR (freee人事労務) has a year-end adjustment feature, and **no licence is needed to run it for your own company**. But the year-end adjustment (nenmatsu chōsei) is a **tax procedure** that settles the over- and under-withholding of income tax, and doing it for another party for a fee is work for **a tax accountant**. Even if a shakai hoken roumushi runs your payroll, **the year-end adjustment is not included**.\n\n\"freee has a year-end adjustment button, but our retained shakai hoken roumushi says they can't take it on\" — every year as December approaches, companies run into this apparent contradiction. This page is for owners and back-office staff planning to run the year-end adjustment in freee HR, and explains why something \"in the software\" cannot be handed to the labour consultant. Yotsuba does not handle it either; we point clients to a tax accountant.\n\n## Is the year-end adjustment part of payroll?\n\nNo — and this is where the confusion starts.\n\nIn monthly payroll, income tax is **withheld according to the withholding tax tables**. That is part of payroll, and within what you can ask a shakai hoken roumushi to do. The year-end adjustment, by contrast, **settles the difference between the total withheld during the year and the tax actually due for that year** (Income Tax Act, Article 190). The monthly withholding is a \"provisional collection\"; the year-end adjustment is the \"once-a-year settlement\". Same tax, different character of procedure.\n\nAnd the settlement side is **a tax procedure**. That is why a payroll retainer does not automatically include the year-end adjustment.\n\n## The feature is in the software — why can't we hand it over?\n\nArticle 2, paragraph 1 of the Certified Public Tax Accountant Act defines **tax agency, preparation of tax documents, and tax consultation** as the work of a tax accountant. Calculating the year-end adjustment, and the documents it produces — the withholding certificates, the statutory report summary, the salary payment reports — belong to this territory. Doing it **for another party, for a fee**, is the tax accountant's province.\n\nIf the structure looks familiar, you are right. As with the Certified Social Insurance and Labor Consultant Act discussed in [We've brought in freee HR. So what does a retained shakai hoken roumushi actually do?](/en/labor/column/freee-jinji-roumu-sharoushi-doko-made), the definition of \"tax documents\" in item 2 of the Tax Accountant Act also expressly **includes electronic or magnetic records**. **Paper or cloud data, the line is drawn the same way.** The software's feature exists so you can do your own company's work yourself; the licensing line for having someone do it for you runs outside the screen.\n\nfreee's official help (updated 21 July 2026, viewed 14 August 2026) also divides what each plan can do.\n\n| Plan | What the year-end adjustment feature covers |\n|---|---|\n| Year-End Adjustment Paperless plan (年末調整ペーパーレスプラン) | **Collecting employee information and exporting CSV only.** It cannot calculate refunds and additional collections; the collected data is meant to be imported into payroll software or **shared with a professional** for the remaining work |\n| Minimum plan (ミニマムプラン) | The administrator enters the data; **calculation and reflection of refunds/additional collections** are covered. No electronic filing — paper submission |\n| Starter plan (スタータープラン, formerly Basic) and above | Employee self-entry, calculation, and **electronic filing** (advance setup in e-Tax and eLTAX required) |\n\nfreee's features and plan structure change. The table reflects materials published as of August 2026; check the official help pages for the current scope.\n\n## Heading into December, who decides what?\n\nStart the year-end adjustment in December and you will be late. There are three decisions.\n\n| Decision | Options |\n|---|---|\n| **Who calculates and finalises** | Complete it in-house in freee / engage a tax accountant |\n| **How the documents are submitted** | Electronic filing (plan and e-Tax/eLTAX setup permitting) / on paper |\n| **The employee-facing schedule** | When to request input (November is the benchmark), My Number administrator settings, how to collect insurance premium deduction certificates |\n\nIf you have a retained tax accountant, agree **by November** on how far you enter data in freee yourselves and where you hand over. If you have none and in-house completion looks difficult, deciding to engage a tax accountant comes first.\n\n## How far can a shakai hoken roumushi take it?\n\nAround the year-end adjustment sit tasks that can be handed to a shakai hoken roumushi. Drawing the line:\n\n| Task | Whom to engage |\n|---|---|\n| Monthly payroll and bonus calculation (including withholding) | A shakai hoken roumushi can take this |\n| Social and labour insurance procedures, the annual calculation report and annual renewal | A shakai hoken roumushi can take this |\n| The year-end adjustment's **tax calculation and finalisation** | **A tax accountant** |\n| Preparing and filing the withholding certificates, statutory report summary and salary payment reports **on your behalf** | **A tax accountant** |\n\nIn other words, \"payroll to the shakai hoken roumushi, year-end adjustment to the tax accountant\" — **separate contracts** — is the shape that follows the licensing lines. Since a year of accurate payroll data is the precondition for the year-end adjustment, keeping monthly payroll in order makes December lighter.\n\n## What can 四葉社会保険労務士事務所 do?\n\n四葉社会保険労務士事務所, in Kohinata, Bunkyo City, handles monthly payroll, social and labour insurance procedures, labour consultation, and the drafting and revision of work rules. **We do not handle the year-end adjustment; we point you to a tax accountant, whom you engage directly. No referral fees change hands.** If you use freee HR, there is no need to change software.\n\n**Consultation is free of charge.** We will start by sorting out how much you can do in-house and how to divide payroll from the year-end adjustment. Fees are in the [fee schedule](/en/labor/ryokin), and the questions we are asked most often are collected on the [FAQ page](/en/labor/faq).\n\n### Whom to consult\n\nTax — including the year-end adjustment, bookkeeping, closing and returns — is work for **a tax accountant**; registration for **a judicial scrivener**; matters in dispute for **an attorney**. Residence-status applications, subsidies and company-formation documents are handled by **四葉行政書士事務所** (a separate business from this office, engaged under a separate contract). In every case, no referral fees change hands.\n\n## Frequently asked questions\n\n**Q. Can the shakai hoken roumushi who runs our payroll also do our year-end adjustment?**\nA. No. The year-end adjustment is a tax procedure, and performing it for another party for a fee is the work of a tax accountant (Certified Public Tax Accountant Act, Article 2, paragraph 1). This office does not handle it either; we point you to a tax accountant, whom you engage directly. No referral fees change hands.\n\n**Q. Do freee's plans differ in what the year-end adjustment feature can do?**\nA. Yes. According to the official help (viewed 14 August 2026), the Year-End Adjustment Paperless plan covers information collection and CSV export only; the Minimum plan calculates but cannot file electronically; the Starter plan and above can file electronically. Features change — check the official help for the latest.\n\n**Q. Do we need any licence to complete the year-end adjustment in-house?**\nA. No. Doing your own company's procedures yourselves sits outside the licensing lines. To file electronically you need a qualifying plan and advance setup in e-Tax and eLTAX.\n\n**Q. Doesn't splitting \"payroll to the consultant, year-end adjustment to the tax accountant\" double the work?**\nA. The contracts split; the work is continuous. If monthly payroll data accumulates accurately, the year-end side becomes lighter. Deciding by November who holds what is the practical way to avoid duplication.\n\n## Sources for this article\n\n- Income Tax Act (所得税法, Act No. 33 of 1965), **Article 190** (year-end adjustment) — current text confirmed on e-Gov on 14 August 2026\n- Certified Public Tax Accountant Act (税理士法, Act No. 237 of 1951), **Article 2, paragraph 1** (the definition of tax documents in item 2 includes electronic or magnetic records) — current text confirmed on e-Gov the same day\n- The plan-by-plan scope of freee HR's year-end adjustment feature — freee Help Center, \"The flow of the year-end adjustment in freee HR\" (updated 21 July 2026, viewed 14 August 2026)\n\n**freee's features and plan structure change. Check freee's official help pages for the latest scope.** This article is based on materials published as of August 2026.\n\nThe overall line between the software and the shakai hoken roumushi is drawn in [We've brought in freee HR. So what does a retained shakai hoken roumushi actually do?](/en/labor/column/freee-jinji-roumu-sharoushi-doko-made); where freee's AI features (including AI Year-End Adjustment Assist) now stand is in [How far has the AI integration between freee HR and freee Accounting actually come?](/en/labor/column/freee-jinji-kaikei-ai); and how payroll pricing works in [How much does it cost to have a shakai hoken roumushi run payroll?](/en/labor/column/kyuyo-keisan-soba-sharoushi).\n\nThis article is general information. Judgments that fit your particular circumstances are made by a qualified professional after a meeting. Written by [Joji Uramatsu](/en/about/uramatsu) (Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist).",
+          "category": "Who to ask",
+          "keywords": [
+            "freee year-end adjustment who to ask",
+            "year-end adjustment labour consultant cannot",
+            "year-end adjustment tax accountant work",
+            "freee year-end adjustment plan differences",
+            "payroll outsourcing year-end adjustment not included",
+            "electronic filing year-end adjustment freee"
+          ],
+          "tags": [
+            "freee",
+            "year-end adjustment",
+            "tax accountant",
+            "scope of practice",
+            "payroll",
+            "electronic filing"
+          ],
+          "author": {
+            "name": "Joji Uramatsu",
+            "title": "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所"
+          },
+          "faq": [
+            {
+              "question": "Can the shakai hoken roumushi who runs our payroll also do our year-end adjustment?",
+              "answer": "No. The year-end adjustment is a tax procedure, and performing it for another party for a fee is the work of a tax accountant (Certified Public Tax Accountant Act, Article 2, paragraph 1). This office does not handle it either; we point you to a tax accountant, whom you engage directly. No referral fees change hands."
+            },
+            {
+              "question": "Do freee's plans differ in what the year-end adjustment feature can do?",
+              "answer": "Yes. According to the official help (viewed 14 August 2026), the Year-End Adjustment Paperless plan covers information collection and CSV export only; the Minimum plan calculates but cannot file electronically; the Starter plan and above can file electronically. Features change — check the official help for the latest."
+            },
+            {
+              "question": "Do we need any licence to complete the year-end adjustment in-house?",
+              "answer": "No. Doing your own company's procedures yourselves sits outside the licensing lines. To file electronically you need a qualifying plan and advance setup in e-Tax and eLTAX."
+            },
+            {
+              "question": "Doesn't splitting \"payroll to the consultant, year-end adjustment to the tax accountant\" double the work?",
+              "answer": "The contracts split; the work is continuous. If monthly payroll data accumulates accurately, the year-end side becomes lighter. Deciding by November who holds what is the practical way to avoid duplication."
+            }
+          ]
+        },
+        "zh-tw": {
+          "title": "freee的年終調整，是誰的工作",
+          "excerpt": "freee人事労務有年終調整功能，自家公司自己操作不需要資格。但年終調整是結清所得稅過與不足的稅務手續，收取報酬代辦是稅理士的業務。即使把薪資計算委託給社會保險勞務士，年終調整也不包含在內。本文連同各方案的功能範圍一起整理。",
+          "content": "**結論（先講重點）**：freee人事労務有年終調整（年末調整）功能，**自家公司自己操作，不需要資格**。但年終調整是結清所得稅過與不足的**稅務手續**，收取報酬代辦是**稅理士**的業務。即使把薪資計算委託給社會保險勞務士，**年終調整也不包含在內**。\n\n「freee裡明明有年終調整的按鈕，顧問的社會保險勞務士卻說『年終調整無法承接』」——每年接近12月，就會有公司對這個落差感到困惑。本頁面寫給打算用freee人事労務做年終調整的經營者與總務人員，沿著條文說明為什麼「軟體裡有的功能」卻不能委託給勞務顧問。四葉也不承接年終調整，會為您介紹稅理士。\n\n## 年終調整包含在薪資計算裡嗎？\n\n不包含。落差就是從這裡開始的。\n\n每月的薪資計算中，所得稅依**源泉徵收稅額表預扣（源泉徵收）**。這是薪資計算的一部分，屬於可以委託社會保險勞務士的範圍。而年終調整，是**結清全年預扣所得稅總額與該年度應納稅額之間過與不足的手續**（所得稅法第190條）。每月預扣是「概算的預收」，年終調整是「一年一次的結清」——處理的都是所得稅，但手續的性質不同。\n\n而結清這一側，是**稅務手續**。薪資計算的顧問契約不會自動包含年終調整，理由就在這裡。\n\n## 軟體裡有功能，為什麼不能委託？\n\n稅理士法第2條第1項將**稅務代理・稅務文件的製作・稅務諮詢**定為稅理士的業務。年終調整的稅額計算，以及其結果產生的源泉徵收票・法定調書合計表・給與支払報告書，都屬於這個領域。收取報酬**代辦**的，是稅理士。\n\n如果覺得這個結構似曾相識，您是對的。與[導入了freee人事労務。那麼，顧問社會保險勞務士要為我們做什麼](/zh-tw/labor/column/freee-jinji-roumu-sharoushi-doko-made)所寫的社會保險勞務士法相同，稅理士法第2條第1項第2號「稅務文件」的定義中，也明確寫著**「包含電磁紀錄」**。**紙本或雲端資料，分界線的劃法都一樣。** 軟體的功能是讓您「自己做自己公司的事」，而「請人代辦」時的資格分界線，劃在畫面之外。\n\nfreee官方說明頁（2026年7月21日更新・2026年8月14日參閱）中，各方案能做的範圍也有所區分。\n\n| 方案 | 年終調整能做的事 |\n|---|---|\n| 年末調整ペーパーレスプラン（年終調整無紙化方案） | **只到向員工收集資訊與匯出CSV為止**。無法計算退補稅額，收集的資訊需匯入薪資軟體，或**交給專業人士**進行後續作業 |\n| ミニマムプラン（迷你方案） | 管理者輸入，**可計算並反映退補稅額**。無法電子申告，以紙本提出 |\n| スタータープラン（入門方案，舊ベーシック）以上 | 員工自行輸入、計算、**直到電子申告**（需事先完成e-Tax・eLTAX的準備） |\n\nfreee的功能與方案構成會改版。上表依據2026年8月時點的公開資料，最新範圍請以官方說明頁為準。\n\n## 邁向12月，該和誰決定什麼？\n\n年終調整如果12月才開始，就來不及了。要決定的有3件事。\n\n| 要決定的事 | 選項 |\n|---|---|\n| **誰來計算・確定** | 自家公司在freee上完成／委託稅理士 |\n| **文件的提出方式** | 電子申告（以方案與e-Tax・eLTAX的準備為前提）／紙本提出 |\n| **對員工的安排** | 請員工輸入的時期（以11月為基準）、My Number管理者設定、保險費扣除證明書的回收方式 |\n\n有顧問稅理士的公司，**在11月之前**談妥「自己在freee裡輸入到哪裡、從哪裡交給稅理士」，12月就不會慌張。沒有顧問稅理士、又難以自家完成的公司，先決定委託稅理士才是正確順序。\n\n## 能委託社會保險勞務士的，到哪裡為止？\n\n年終調整的周邊，排列著可以委託社會保險勞務士的業務。劃線整理如下。\n\n| 業務 | 委託對象 |\n|---|---|\n| 每月薪資・獎金計算（含源泉徵收的預扣） | 可委託社會保險勞務士 |\n| 社會保險・勞動保險手續、算定基礎届・年度更新 | 可委託社會保險勞務士 |\n| 年終調整的**稅額計算・確定** | **稅理士** |\n| 源泉徵收票・法定調書合計表・給與支払報告書的**製作・提出代辦** | **稅理士** |\n\n也就是說，「薪資計算找社會保險勞務士、年終調整找稅理士」——**契約分開**——才是沿著資格分界線的形式。一整年正確累積的薪資資料是年終調整的前提，所以每月薪資計算的整備，結果上會讓12月變輕鬆。\n\n## 四葉社会保険労務士事務所能做什麼？\n\n位於文京區小日向的四葉社会保険労務士事務所，承接每月薪資計算、社會保險・勞動保險手續、勞務諮詢、就業規則的制定與修訂。**年終調整不承接，會為您介紹稅理士，由您直接委任。不收取介紹費。** 使用freee人事労務的公司，軟體照舊即可。\n\n**諮詢免費。** 從「自己能做到哪裡」「薪資計算與年終調整怎麼分」的整理開始，與您一起進行。費用公開於[報酬額表](/zh-tw/labor/ryokin)，常被詢問的問題整理於[常見問答](/zh-tw/labor/faq)。\n\n### 該向誰諮詢\n\n含年終調整在內的稅務（記帳・結算・申報）是**稅理士**的業務，登記是**司法書士**的業務，已發生爭議的案件是**律師**的業務。在留資格的申請・補助金・公司設立文件，由**四葉行政書士事務所**（與本事務所是不同的事業體，另行簽約）承接。以上均不收取介紹費。\n\n## 常見問題\n\n**Q. 能請負責薪資計算的社會保險勞務士順便做年終調整嗎？**\nA. 不能。年終調整是稅務手續，收取報酬代辦是稅理士的業務（稅理士法第2條第1項）。本事務所也不承接，會為您介紹稅理士，由您直接委任。不收取介紹費。\n\n**Q. freee的方案不同，年終調整能做的事也不同嗎？**\nA. 不同。依官方說明頁（2026年8月14日參閱），年末調整ペーパーレスプラン只到資訊收集與CSV匯出，ミニマムプラン可計算但無法電子申告，スタータープラン以上可電子申告。功能會改版，最新請以官方說明頁為準。\n\n**Q. 自家公司完成年終調整，需要資格嗎？**\nA. 不需要。自家公司為自己辦理手續，在資格分界線之外。若要電子申告，需要對應方案的契約與e-Tax・eLTAX的事前準備。\n\n**Q. 「薪資計算找社勞士、年終調整找稅理士」分開委託，不會變成雙重作業嗎？**\nA. 契約分開，但作業是連續的。每月薪資資料正確累積，年終調整這一側的作業就會變輕。在11月之前決定誰負責到哪裡，是避免重複作業的實務做法。\n\n## 本文依據\n\n- 所得稅法（昭和40年法律第33號）**第190條**（年終調整） ―― 2026年8月14日於e-Gov法令檢索確認現行條文\n- 稅理士法（昭和26年法律第237號）**第2條第1項**（稅理士的業務。第2號稅務文件的定義包含電磁紀錄） ―― 同日於e-Gov法令檢索確認現行條文\n- freee人事労務年終調整功能的方案別範圍 ―― freee說明中心「freee人事労務的年終調整流程」（2026年7月21日更新・2026年8月14日參閱）\n\n**freee的功能與方案構成會改版。最新範圍請以freee官方說明頁為準。** 本文依據2026年8月時點的公開資料。\n\n軟體與社會保險勞務士之間分界線的全貌，見[導入了freee人事労務。那麼，顧問社會保險勞務士要為我們做什麼](/zh-tw/labor/column/freee-jinji-roumu-sharoushi-doko-made)；freee的AI功能（含AI年終調整輔助）的現況，見[freee人事労務與freee会計的AI整合，究竟進展到什麼程度](/zh-tw/labor/column/freee-jinji-kaikei-ai)；薪資計算的費用思路，見[委託社會保險勞務士計算薪資要花多少錢](/zh-tw/labor/column/kyuyo-keisan-soba-sharoushi)。\n\n本文為一般性的資訊提供。因應個別情事的判斷，由具備資格者在面談後進行。撰文者為[浦松丈二](/zh-tw/about/uramatsu)（社會保險勞務士・行政書士・宅地建物取引士）。",
+          "category": "該委託誰",
+          "keywords": [
+            "freee 年終調整 該找誰",
+            "年終調整 社會保險勞務士 不能代辦",
+            "年終調整 稅理士 業務",
+            "freee 年終調整 方案 差異",
+            "薪資計算 年終調整 不包含",
+            "年終調整 電子申告 freee"
+          ],
+          "tags": [
+            "freee",
+            "年終調整",
+            "稅理士",
+            "業務分界",
+            "薪資計算",
+            "電子申告"
+          ],
+          "author": {
+            "name": "浦松 丈二",
+            "title": "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+          },
+          "faq": [
+            {
+              "question": "能請負責薪資計算的社會保險勞務士順便做年終調整嗎？",
+              "answer": "不能。年終調整是稅務手續，收取報酬代辦是稅理士的業務（稅理士法第2條第1項）。本事務所也不承接，會為您介紹稅理士，由您直接委任。不收取介紹費。"
+            },
+            {
+              "question": "freee的方案不同，年終調整能做的事也不同嗎？",
+              "answer": "不同。依官方說明頁（2026年8月14日參閱），年末調整ペーパーレスプラン只到資訊收集與CSV匯出，ミニマムプラン可計算但無法電子申告，スタータープラン以上可電子申告。功能會改版，最新請以官方說明頁為準。"
+            },
+            {
+              "question": "自家公司完成年終調整，需要資格嗎？",
+              "answer": "不需要。自家公司為自己辦理手續，在資格分界線之外。若要電子申告，需要對應方案的契約與e-Tax・eLTAX的事前準備。"
+            },
+            {
+              "question": "「薪資計算找社勞士、年終調整找稅理士」分開委託，不會變成雙重作業嗎？",
+              "answer": "契約分開，但作業是連續的。每月薪資資料正確累積，年終調整這一側的作業就會變輕。在11月之前決定誰負責到哪裡，是避免重複作業的實務做法。"
+            }
+          ]
+        },
+        "zh": {
+          "title": "freee的年终调整，是谁的工作",
+          "excerpt": "freee人事労務有年终调整功能，自家公司自己操作不需要资格。但年终调整是结清所得税过与不足的税务手续，收取报酬代办是税理士的业务。即使把工资计算委托给社会保险劳务士，年终调整也不包含在内。本文连同各方案的功能范围一起整理。",
+          "content": "**结论（先讲重点）**：freee人事労務有年终调整（年末调整）功能，**自家公司自己操作，不需要资格**。但年终调整是结清所得税过与不足的**税务手续**，收取报酬代办是**税理士**的业务。即使把工资计算委托给社会保险劳务士，**年终调整也不包含在内**。\n\n「freee里明明有年终调整的按钮，顾问的社会保险劳务士却说『年终调整无法承接』」——每年接近12月，就会有公司对这个落差感到困惑。本页面写给打算用freee人事労務做年终调整的经营者与总务人员，沿着条文说明为什么「软件里有的功能」却不能委托给劳务顾问。四叶也不承接年终调整，会为您介绍税理士。\n\n## 年终调整包含在工资计算里吗？\n\n不包含。落差就是从这里开始的。\n\n每月的工资计算中，所得税依**源泉征收税额表预扣（源泉征收）**。这是工资计算的一部分，属于可以委托社会保险劳务士的范围。而年终调整，是**结清全年预扣所得税总额与该年度应纳税额之间过与不足的手续**（所得税法第190条）。每月预扣是「概算的预收」，年终调整是「一年一次的结清」——处理的都是所得税，但手续的性质不同。\n\n而结清这一侧，是**税务手续**。工资计算的顾问契约不会自动包含年终调整，理由就在这里。\n\n## 软件里有功能，为什么不能委托？\n\n税理士法第2条第1项将**税务代理・税务文件的制作・税务咨询**定为税理士的业务。年终调整的税额计算，以及其结果产生的源泉征收票・法定调书合计表・给与支払报告书，都属于这个领域。收取报酬**代办**的，是税理士。\n\n如果觉得这个结构似曾相识，您是对的。与[导入了freee人事労務。那么，顾问社会保险劳务士要为我们做什么](/zh/labor/column/freee-jinji-roumu-sharoushi-doko-made)所写的社会保险劳务士法相同，税理士法第2条第1项第2号「税务文件」的定义中，也明确写着**「包含电磁记录」**。**纸质或云端数据，分界线的划法都一样。** 软件的功能是让您「自己做自己公司的事」，而「请人代办」时的资格分界线，划在画面之外。\n\nfreee官方说明页（2026年7月21日更新・2026年8月14日参阅）中，各方案能做的范围也有所区分。\n\n| 方案 | 年终调整能做的事 |\n|---|---|\n| 年末調整ペーパーレスプラン（年终调整无纸化方案） | **只到向员工收集信息与导出CSV为止**。无法计算退补税额，收集的信息需导入工资软件，或**交给专业人士**进行后续作业 |\n| ミニマムプラン（迷你方案） | 管理者输入，**可计算并反映退补税额**。无法电子申告，以纸质提出 |\n| スタータープラン（入门方案，旧ベーシック）以上 | 员工自行输入、计算、**直到电子申告**（需事先完成e-Tax・eLTAX的准备） |\n\nfreee的功能与方案构成会改版。上表依据2026年8月时点的公开资料，最新范围请以官方说明页为准。\n\n## 迈向12月，该和谁决定什么？\n\n年终调整如果12月才开始，就来不及了。要决定的有3件事。\n\n| 要决定的事 | 选项 |\n|---|---|\n| **谁来计算・确定** | 自家公司在freee上完成／委托税理士 |\n| **文件的提出方式** | 电子申告（以方案与e-Tax・eLTAX的准备为前提）／纸质提出 |\n| **对员工的安排** | 请员工输入的时期（以11月为基准）、My Number管理者设置、保险费扣除证明书的回收方式 |\n\n有顾问税理士的公司，**在11月之前**谈妥「自己在freee里输入到哪里、从哪里交给税理士」，12月就不会慌张。没有顾问税理士、又难以自家完成的公司，先决定委托税理士才是正确顺序。\n\n## 能委托社会保险劳务士的，到哪里为止？\n\n年终调整的周边，排列着可以委托社会保险劳务士的业务。划线整理如下。\n\n| 业务 | 委托对象 |\n|---|---|\n| 每月工资・奖金计算（含源泉征收的预扣） | 可委托社会保险劳务士 |\n| 社会保险・劳动保险手续、算定基礎届・年度更新 | 可委托社会保险劳务士 |\n| 年终调整的**税额计算・确定** | **税理士** |\n| 源泉征收票・法定调书合计表・给与支払报告书的**制作・提出代办** | **税理士** |\n\n也就是说，「工资计算找社会保险劳务士、年终调整找税理士」——**契约分开**——才是沿着资格分界线的形式。一整年正确累积的工资数据是年终调整的前提，所以每月工资计算的整备，结果上会让12月变轻松。\n\n## 四葉社会保険労務士事務所能做什么？\n\n位于文京区小日向的四葉社会保険労務士事務所，承接每月工资计算、社会保险・劳动保险手续、劳务咨询、就业规则的制定与修订。**年终调整不承接，会为您介绍税理士，由您直接委任。不收取介绍费。** 使用freee人事労務的公司，软件照旧即可。\n\n**咨询免费。** 从「自己能做到哪里」「工资计算与年终调整怎么分」的整理开始，与您一起进行。费用公开于[报酬额表](/zh/labor/ryokin)，常被询问的问题整理于[常见问答](/zh/labor/faq)。\n\n### 该向谁咨询\n\n含年终调整在内的税务（记账・结算・申报）是**税理士**的业务，登记是**司法书士**的业务，已发生争议的案件是**律师**的业务。在留资格的申请・补助金・公司设立文件，由**四葉行政書士事務所**（与本事务所是不同的事业体，另行签约）承接。以上均不收取介绍费。\n\n## 常见问题\n\n**Q. 能请负责工资计算的社会保险劳务士顺便做年终调整吗？**\nA. 不能。年终调整是税务手续，收取报酬代办是税理士的业务（税理士法第2条第1项）。本事务所也不承接，会为您介绍税理士，由您直接委任。不收取介绍费。\n\n**Q. freee的方案不同，年终调整能做的事也不同吗？**\nA. 不同。依官方说明页（2026年8月14日参阅），年末調整ペーパーレスプラン只到信息收集与CSV导出，ミニマムプラン可计算但无法电子申告，スタータープラン以上可电子申告。功能会改版，最新请以官方说明页为准。\n\n**Q. 自家公司完成年终调整，需要资格吗？**\nA. 不需要。自家公司为自己办理手续，在资格分界线之外。若要电子申告，需要对应方案的契约与e-Tax・eLTAX的事前准备。\n\n**Q. 「工资计算找社劳士、年终调整找税理士」分开委托，不会变成双重作业吗？**\nA. 契约分开，但作业是连续的。每月工资数据正确累积，年终调整这一侧的作业就会变轻。在11月之前决定谁负责到哪里，是避免重复作业的实务做法。\n\n## 本文依据\n\n- 所得税法（昭和40年法律第33号）**第190条**（年终调整） ―― 2026年8月14日于e-Gov法令检索确认现行条文\n- 税理士法（昭和26年法律第237号）**第2条第1项**（税理士的业务。第2号税务文件的定义包含电磁记录） ―― 同日于e-Gov法令检索确认现行条文\n- freee人事労務年终调整功能的方案别范围 ―― freee帮助中心「freee人事労務的年终调整流程」（2026年7月21日更新・2026年8月14日参阅）\n\n**freee的功能与方案构成会改版。最新范围请以freee官方说明页为准。** 本文依据2026年8月时点的公开资料。\n\n软件与社会保险劳务士之间分界线的全貌，见[导入了freee人事労務。那么，顾问社会保险劳务士要为我们做什么](/zh/labor/column/freee-jinji-roumu-sharoushi-doko-made)；freee的AI功能（含AI年终调整辅助）的现况，见[freee人事労務与freee会計的AI整合，究竟进展到什么程度](/zh/labor/column/freee-jinji-kaikei-ai)；工资计算的费用思路，见[委托社会保险劳务士计算工资要花多少钱](/zh/labor/column/kyuyo-keisan-soba-sharoushi)。\n\n本文为一般性的信息提供。因应个别情事的判断，由具备资格者在面谈后进行。撰文者为[浦松丈二](/zh/about/uramatsu)（社会保险劳务士・行政书士・宅地建物取引士）。",
+          "category": "该委托谁",
+          "keywords": [
+            "freee 年终调整 该找谁",
+            "年终调整 社会保险劳务士 不能代办",
+            "年终调整 税理士 业务",
+            "freee 年终调整 方案 差异",
+            "工资计算 年终调整 不包含",
+            "年终调整 电子申告 freee"
+          ],
+          "tags": [
+            "freee",
+            "年终调整",
+            "税理士",
+            "业务分界",
+            "工资计算",
+            "电子申告"
+          ],
+          "author": {
+            "name": "浦松 丈二",
+            "title": "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+          },
+          "faq": [
+            {
+              "question": "能请负责工资计算的社会保险劳务士顺便做年终调整吗？",
+              "answer": "不能。年终调整是税务手续，收取报酬代办是税理士的业务（税理士法第2条第1项）。本事务所也不承接，会为您介绍税理士，由您直接委任。不收取介绍费。"
+            },
+            {
+              "question": "freee的方案不同，年终调整能做的事也不同吗？",
+              "answer": "不同。依官方说明页（2026年8月14日参阅），年末調整ペーパーレスプラン只到信息收集与CSV导出，ミニマムプラン可计算但无法电子申告，スタータープラン以上可电子申告。功能会改版，最新请以官方说明页为准。"
+            },
+            {
+              "question": "自家公司完成年终调整，需要资格吗？",
+              "answer": "不需要。自家公司为自己办理手续，在资格分界线之外。若要电子申告，需要对应方案的契约与e-Tax・eLTAX的事前准备。"
+            },
+            {
+              "question": "「工资计算找社劳士、年终调整找税理士」分开委托，不会变成双重作业吗？",
+              "answer": "契约分开，但作业是连续的。每月工资数据正确累积，年终调整这一侧的作业就会变轻。在11月之前决定谁负责到哪里，是避免重复作业的实务做法。"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "business": "labor",
+      "slug": "ai-shugyokisoku-todokede-dekiruka",
+      "title": "AIがつくった就業規則は、届け出られるか",
+      "date": "2026-09-01",
+      "category": "誰に頼むか",
+      "excerpt": "届け出られます。就業規則に様式の指定はなく、誰が作ったかも問われません。問題は中身と手続のほうです。意見書の添付（労働基準法第90条）と周知（第106条）が必要で、実態と合わない規程は争いのときに機能しません。AI原案の直しどころと頼み方まで整理します。",
+      "content": "**結論（先に要点）**：届け出られます。就業規則に様式の指定はなく、**誰が作ったかも問われません**。問題は中身と手続のほうです。過半数代表者等の**意見を聴いた書面の添付**（労働基準法第90条）と**周知**（第106条）が必要で、**実態と合っていない規程は、争いになったときに機能しません**。\n\nAIに就業規則の原案を作らせてみた——という会社が増えています。このページは、その原案を前…（全3338字）",
+      "status": "published",
+      "author": {
+        "name": "浦松 丈二",
+        "title": "社会保険労務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+      },
+      "keywords": [
+        "AI 就業規則 届け出",
+        "就業規則 AI 原案 チェック",
+        "就業規則 意見書 過半数代表",
+        "就業規則 周知 義務",
+        "AI 就業規則 有効性",
+        "就業規則 原案 持ち込み 社労士"
+      ],
+      "tags": [
+        "AI",
+        "就業規則",
+        "労働基準法",
+        "意見聴取",
+        "周知",
+        "届出"
+      ],
+      "locales": [],
+      "faq": [
+        {
+          "question": "AIで作った就業規則を、そのまま労働基準監督署に出せますか？",
+          "answer": "形式の上では出せます。様式の指定はなく、作成者の資格も問われません。ただし過半数代表者等の意見を聴いた書面の添付（労働基準法第90条）が必要で、労働者への周知（第106条）も義務です。受理されることは、規程が有効に機能することの保証ではありません。"
+        },
+        {
+          "question": "従業員が10人未満でも、届け出は必要ですか？",
+          "answer": "作成・届出の義務は「常時10人以上」の事業場にかかります（労働基準法第89条）。10人未満に義務はありませんが、労働条件の根拠を明確にするために作る意味はあります。詳しくは就業規則は何人から義務か。義務でないものは何かをご覧ください。"
+        },
+        {
+          "question": "AIの原案では、どこを直すことが多いのですか？",
+          "answer": "一般的な傾向として、労働時間制度や手当の定めが実態と合っていない箇所、法改正が反映されていない箇所、その会社にない制度の規定が残っている箇所です。文章の出来ばえより、実態との突き合わせに時間がかかります。"
+        },
+        {
+          "question": "原案を持ち込めば、費用は安くなりますか？",
+          "answer": "内容によります。作業の本体は実態の聴き取りと突き合わせのため、原案の有無で費用が大きく変わらない場合もあります。いずれの場合も、着手前に報酬額表に沿ってお見積りを提示します。ご相談は無料です。"
+        }
+      ],
+      "translations": {
+        "en": {
+          "title": "Can work rules drafted by an AI actually be filed?",
+          "excerpt": "Yes. There is no prescribed format for work rules, and no one asks who drafted them. The problems lie in the content and the procedure — a written record of the majority representative's opinion must be attached (Labor Standards Act, Article 90), the rules must be made known to workers (Article 106), and rules that do not match reality will not function in a dispute.",
+          "content": "**In short:** yes, they can be filed. There is no prescribed format for work rules (shūgyō kisoku), and **no one asks who drafted them**. The problems lie in the content and the procedure. A written record of the opinion of the majority representative must be attached (**Labor Standards Act, Article 90**), the rules must be **made known to workers** (Article 106) — and **rules that do not match the company's reality will not function when a dispute comes**.\n\nMore and more companies have tried having an AI draft their work rules. This page is for owners and back-office staff looking at such a draft and wondering, \"can we file this as it is?\" From how many employees the obligation arises is covered in [From how many workers are work rules mandatory — and what is not mandatory?](/en/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo). This article deals with **how to treat a draft produced by an AI**.\n\n## Will a filing based on an AI draft be accepted?\n\nYes. Article 89 of the Labor Standards Act obliges an employer with ten or more workers regularly employed to **draw up work rules and file them with the authorities** — but it says **nothing about who may draft them**. Drafted in-house or built on an AI's draft, the statutory treatment is the same.\n\nWhat Article 89 does prescribe is the **content**. Start and finish times, breaks, days off and leave (item 1); how wages are decided, calculated and paid, the cut-off and payment dates, and pay raises (item 2); and matters concerning retirement, including grounds for dismissal (item 3) — these **must** be included. Retirement allowances, bonuses, safety and hygiene, commendations and sanctions are matters that **must be included if provided for**. The first yardstick for checking an AI draft is this list of items.\n\n## Is \"accepted\" the same as \"usable\"?\n\nNo. Around the filing sit two statutory procedures.\n\n| Procedure | Basis | Substance |\n|---|---|---|\n| **Hearing of opinions and attaching the written opinion** | Labor Standards Act, Article 90 | **Hear the opinion** of the majority union (or, absent one, the representative of the majority of workers) and **attach a document recording that opinion** to the filing |\n| **Making the rules known** | Labor Standards Act, Article 106 | Make the rules known to workers by posting or keeping them in a visible place at each workplace, distributing them in writing, or other methods prescribed by ministerial order |\n\nHearing opinions does not require obtaining **consent** — but filing **without hearing them is not possible**. And work rules that have not been made known do not function as a basis for binding workers; this is territory with an accumulation of court decisions, and the effect in an individual case depends on its facts. Hold on to one point: **\"accepted\" is not a guarantee of \"effective\".**\n\n## What happens with rules that do not match reality?\n\nWhat we often see in AI drafts is a set of rules that reads well as prose but is **not connected to how the company actually works**.\n\n- **The working-hours system differs from reality** — the draft assumes the standard 8-hours-a-day, 40-hours-a-week shape while the company actually runs shifts or a modified working-hours system\n- **Allowances and fixed overtime pay diverge from the actual pay slips** — when rules and actual payment part ways, the basis for calculating premium wages crumbles\n- **Amendments are not reflected** — the way AI answers drift on article numbers and effective dates, described in [Can I ask an AI about a labour question first, and then consult a shakai hoken roumushi?](/en/labor/column/ai-de-shirabete-kara-soudan-shite-yoika), happens in work-rules drafts too\n- **Provisions for systems the company does not have creep in** — clauses for unused schemes left in the text become the entry point for diverging claims between labour and management\n\nWork rules are the document **the company stands on when a dispute comes**. Rules that do not match reality will not protect the company when it matters. A completed filing and a working set of rules are different things.\n\n## With a draft in hand, what do you ask a shakai hoken roumushi to do?\n\nNot \"draft from zero\" — **bring the draft in and ask for a review**. That is a perfectly good way in; in fact, a working draft makes the issues visible faster. Three things to ask for:\n\n| What to ask | Substance |\n|---|---|\n| **Matching against reality** | Checking the provisions on working hours, wages, allowances and leave against how people actually work and what the pay slips actually say. This is the main body of the work |\n| **Checking the required items and current law** | Whether the items required by Article 89 are all present, and whether amendments are reflected |\n| **Designing the procedure** | Selecting the majority representative, hearing opinions, filing, and making the rules known |\n\nFees from reviewing a draft through drafting, revision and filing are published in the \"work rules\" rows of the [fee schedule](/en/labor/ryokin). **Consultation is free of charge.** Bring the AI's draft exactly as it is.\n\n## What can 四葉社会保険労務士事務所 do?\n\n四葉社会保険労務士事務所, in Kohinata, Bunkyo City, handles the drafting, revision and filing of work rules, the fact-finding about working practices that underpins them, and labour and social insurance procedures. We also work in the form of reviewing and adjusting an AI draft you bring in. The questions we are asked most often are collected on the [FAQ page](/en/labor/faq).\n\n### Whom to consult\n\nTax (including the year-end adjustment) is work for **a tax accountant**; registration for **a judicial scrivener**; matters already in dispute for **an attorney**. Residence-status applications, subsidies and company-formation documents are handled by **四葉行政書士事務所** (a separate business from this office, engaged under a separate contract). In every case, no referral fees change hands.\n\n## Frequently asked questions\n\n**Q. Can we file AI-drafted work rules with the Labour Standards Inspection Office as they are?**\nA. Formally, yes. There is no prescribed format and no qualification requirement for the drafter. But a document recording the opinion of the majority representative must be attached (Labor Standards Act, Article 90), and making the rules known to workers is an obligation (Article 106). Acceptance of the filing is no guarantee that the rules will function effectively.\n\n**Q. Is filing required with fewer than ten employees?**\nA. The obligation to draw up and file applies to workplaces with ten or more workers regularly employed (Labor Standards Act, Article 89). Below ten there is no obligation, though having rules to anchor working conditions still has value. See [From how many workers are work rules mandatory — and what is not mandatory?](/en/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo).\n\n**Q. What do you most often end up fixing in AI drafts?**\nA. As a general tendency: provisions on working hours and allowances that do not match reality, amendments not reflected, and clauses left in for schemes the company does not have. It is the matching against reality, not the prose, that takes the time.\n\n**Q. Is it cheaper if we bring our own draft?**\nA. It depends. The main body of the work is the fact-finding and the matching against reality, so the existence of a draft does not always change the workload much. Either way, we present an estimate in advance, following the [fee schedule](/en/labor/ryokin). Consultation is free.\n\n## Sources for this article\n\n- Labor Standards Act (労働基準法, Act No. 49 of 1947), **Article 89** (obligation to draw up and file; required items), **Article 90** (procedure — hearing of opinions and attaching the written opinion), **Article 106** (obligation to make the rules known) — current text confirmed on e-Gov on 14 August 2026\n\nThis article is general information. Whether rules match reality, and the effect of an individual set of rules, are judged by a qualified professional after a meeting. Written by [Joji Uramatsu](/en/about/uramatsu) (Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist).",
+          "category": "Who to ask",
+          "keywords": [
+            "AI drafted work rules filing",
+            "check AI work rules draft",
+            "work rules opinion letter majority representative",
+            "work rules notification obligation",
+            "AI work rules validity",
+            "bring work rules draft to a consultant"
+          ],
+          "tags": [
+            "AI",
+            "work rules",
+            "Labor Standards Act",
+            "hearing of opinions",
+            "making known",
+            "filing"
+          ],
+          "author": {
+            "name": "Joji Uramatsu",
+            "title": "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所"
+          },
+          "faq": [
+            {
+              "question": "Can we file AI-drafted work rules with the Labour Standards Inspection Office as they are?",
+              "answer": "Formally, yes. There is no prescribed format and no qualification requirement for the drafter. But a document recording the opinion of the majority representative must be attached (Labor Standards Act, Article 90), and making the rules known to workers is an obligation (Article 106). Acceptance of the filing is no guarantee that the rules will function effectively."
+            },
+            {
+              "question": "Is filing required with fewer than ten employees?",
+              "answer": "The obligation to draw up and file applies to workplaces with ten or more workers regularly employed (Labor Standards Act, Article 89). Below ten there is no obligation, though having rules to anchor working conditions still has value. See From how many workers are work rules mandatory — and what is not mandatory?."
+            },
+            {
+              "question": "What do you most often end up fixing in AI drafts?",
+              "answer": "As a general tendency: provisions on working hours and allowances that do not match reality, amendments not reflected, and clauses left in for schemes the company does not have. It is the matching against reality, not the prose, that takes the time."
+            },
+            {
+              "question": "Is it cheaper if we bring our own draft?",
+              "answer": "It depends. The main body of the work is the fact-finding and the matching against reality, so the existence of a draft does not always change the workload much. Either way, we present an estimate in advance, following the fee schedule. Consultation is free."
+            }
+          ]
+        },
+        "zh-tw": {
+          "title": "AI寫的就業規則，能提交申報嗎",
+          "excerpt": "能提交。就業規則沒有格式的指定，也不會被問是誰寫的。問題在內容與手續這一側——需要附上聽取過半數代表意見的書面（勞動基準法第90條），周知也是義務（第106條），而與實態不符的規程，在發生爭議時無法發揮作用。本文整理AI草案的修改重點與委託方式。",
+          "content": "**結論（先講重點）**：能提交。就業規則沒有格式的指定，**也不會被問是誰寫的**。問題在內容與手續這一側。需要附上聽取過半數代表等意見的**書面**（勞動基準法第90條），**周知**也是義務（第106條）——而且，**與公司實態不符的規程，在發生爭議時無法發揮作用**。\n\n讓AI起草就業規則草案的公司越來越多。本頁面寫給拿著這份草案、猶豫「能不能就這樣提交」的經營者與總務人員。從幾人開始有製作義務，已在[就業規則從幾人開始是義務。哪些不是義務](/zh-tw/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo)中處理。本文處理的是**AI所寫草案的對待方式**。\n\n## AI寫的草案，申報會被受理嗎？\n\n會。勞動基準法第89條規定，經常僱用10人以上勞工的雇主，必須**製作就業規則並向行政官廳申報**——但**對製作者的資格沒有任何規定**。公司內部寫的，或以AI草案為底稿的，在條文上的對待相同。\n\n第89條規定的是**內容**這一側。始業・終業時刻、休息・休日・休假（第1號），工資的決定・計算・支付方法、締切與支付時期、加薪（第2號），退職相關事項（含解僱事由。第3號），是**必須記載的事項**。退職金・獎金・安全衛生・表彰懲戒等，則是**有規定時必須記載的事項**。檢查AI草案的第一把量尺，就是這些號的排列。\n\n## 被受理，和能用，是同一回事嗎？\n\n不是。申報的前後，有兩項條文上的手續。\n\n| 手續 | 依據 | 內容 |\n|---|---|---|\n| **意見聽取與意見書的附上** | 勞動基準法第90條 | **聽取**過半數工會（沒有時為勞工過半數代表者）的意見，並將記載該意見的**書面附於申報** |\n| **周知** | 勞動基準法第106條 | 以在各作業場所顯眼處張貼・備置、交付書面，及其他厚生勞動省令所定方法，**使勞工周知** |\n\n意見聽取不要求做到「取得同意」，但**沒有聽取就無法申報**。而未周知的就業規則，無法作為拘束勞工的依據發揮作用——這是有判例積累的領域，個別案件的效力依情事而定。請記住一點：**「被受理」不是「有效發揮作用」的保證。**\n\n## 與實態不符的規程，會發生什麼？\n\nAI草案中常見的，是文章寫得整齊、卻**與這家公司的實態沒有連接**的規程。\n\n- **工時制度與實態不同**——草案是1天8小時・週40小時的原則形，實際上卻以排班制或變形工時制運作\n- **津貼・固定加班費的規定與實際的工資明細不符**——規程與支付實態一旦錯開，加班費的計算依據就會崩壞\n- **未反映修法**——AI的答案在條文號碼與施行日上出現偏差的結構，如[先問AI勞務問題，再諮詢社會保險勞務士，可以嗎](/zh-tw/labor/column/ai-de-shirabete-kara-soudan-shite-yoika)所寫，在就業規則草案上也同樣發生\n- **混入這家公司沒有的制度**——沒在使用的制度條文留在文中，就會成為勞資主張分歧的入口\n\n就業規則，是發生爭議時**公司賴以立足的文書**。與實態不符的規程，在關鍵時刻無法保護公司。形式上完成了申報，與規程能發揮作用，是兩回事。\n\n## 手上有草案時，要委託社會保險勞務士做什麼？\n\n不是「從零開始寫」，而是**帶著草案來，委託確認**——這個入口就可以。而且，有底稿反而更快看清論點。委託的內容是這3項。\n\n| 委託的事 | 內容 |\n|---|---|\n| **與實態的核對** | 將工時制度・工資・津貼・休假的規定，對照實際的工作方式與工資明細確認。這是作業的本體 |\n| **記載事項與最新法令的確認** | 第89條的必要記載事項是否齊全、修法是否已反映 |\n| **手續的設計** | 過半數代表者的選出、意見聽取、申報、周知的安排 |\n\n從草案確認，到修訂・製作的代辦、再到申報的費用，公開於[報酬額表](/zh-tw/labor/ryokin)的「就業規則」欄。**諮詢免費。** AI的草案，請原樣帶來。\n\n## 四葉社会保険労務士事務所能做什麼？\n\n位於文京區小日向的四葉社会保険労務士事務所，承接就業規則的製作・修訂與申報、作為其前提的勞務實態聽取，以及勞動社會保險手續。也對應以活用AI草案的形式進行確認・修改。常被詢問的問題整理於[常見問答](/zh-tw/labor/faq)。\n\n### 該向誰諮詢\n\n稅務（含年終調整）是**稅理士**的業務，登記是**司法書士**的業務，已經發生爭議的案件是**律師**的業務。在留資格的申請・補助金・公司設立文件，由**四葉行政書士事務所**（與本事務所是不同的事業體，另行簽約）承接。以上均不收取介紹費。\n\n## 常見問題\n\n**Q. AI寫的就業規則，能直接提交給勞動基準監督署嗎？**\nA. 形式上能。沒有格式的指定，也不問製作者的資格。但需要附上聽取過半數代表等意見的書面（勞動基準法第90條），向勞工周知也是義務（第106條）。被受理，不是規程有效發揮作用的保證。\n\n**Q. 員工不到10人，也需要申報嗎？**\nA. 製作・申報的義務適用於「經常僱用10人以上」的事業場（勞動基準法第89條）。不到10人沒有義務，但為了明確勞動條件的依據，製作仍有意義。詳見[就業規則從幾人開始是義務。哪些不是義務](/zh-tw/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo)。\n\n**Q. AI的草案，最常修改的是哪裡？**\nA. 就一般傾向而言：工時制度或津貼的規定與實態不符的地方、未反映修法的地方、這家公司沒有的制度規定殘留的地方。花時間的不是文章的好壞，而是與實態的核對。\n\n**Q. 帶草案來，費用會比較便宜嗎？**\nA. 視內容而定。作業的本體是實態的聽取與核對，有無草案未必大幅改變作業量。無論哪種情形，著手前都會依[報酬額表](/zh-tw/labor/ryokin)提示估價。諮詢免費。\n\n## 本文依據\n\n- 勞動基準法（昭和22年法律第49號）**第89條**（製作及申報義務・記載事項）、**第90條**（製作手續＝意見聽取・意見書附上）、**第106條**（周知義務） ―― 2026年8月14日於e-Gov法令檢索確認現行條文\n\n本文為一般性的資訊提供。是否與實態相符的評價，以及個別規程效力的判斷，由具備資格者在面談後進行。撰文者為[浦松丈二](/zh-tw/about/uramatsu)（社會保險勞務士・行政書士・宅地建物取引士）。",
+          "category": "該委託誰",
+          "keywords": [
+            "AI 就業規則 提交申報",
+            "就業規則 AI 草案 檢查",
+            "就業規則 意見書 過半數代表",
+            "就業規則 周知 義務",
+            "AI 就業規則 有效性",
+            "就業規則 草案 委託 社會保險勞務士"
+          ],
+          "tags": [
+            "AI",
+            "就業規則",
+            "勞動基準法",
+            "意見聽取",
+            "周知",
+            "申報"
+          ],
+          "author": {
+            "name": "浦松 丈二",
+            "title": "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+          },
+          "faq": [
+            {
+              "question": "AI寫的就業規則，能直接提交給勞動基準監督署嗎？",
+              "answer": "形式上能。沒有格式的指定，也不問製作者的資格。但需要附上聽取過半數代表等意見的書面（勞動基準法第90條），向勞工周知也是義務（第106條）。被受理，不是規程有效發揮作用的保證。"
+            },
+            {
+              "question": "員工不到10人，也需要申報嗎？",
+              "answer": "製作・申報的義務適用於「經常僱用10人以上」的事業場（勞動基準法第89條）。不到10人沒有義務，但為了明確勞動條件的依據，製作仍有意義。詳見就業規則從幾人開始是義務。哪些不是義務。"
+            },
+            {
+              "question": "AI的草案，最常修改的是哪裡？",
+              "answer": "就一般傾向而言：工時制度或津貼的規定與實態不符的地方、未反映修法的地方、這家公司沒有的制度規定殘留的地方。花時間的不是文章的好壞，而是與實態的核對。"
+            },
+            {
+              "question": "帶草案來，費用會比較便宜嗎？",
+              "answer": "視內容而定。作業的本體是實態的聽取與核對，有無草案未必大幅改變作業量。無論哪種情形，著手前都會依報酬額表提示估價。諮詢免費。"
+            }
+          ]
+        },
+        "zh": {
+          "title": "AI写的就业规则，能提交申报吗",
+          "excerpt": "能提交。就业规则没有格式的指定，也不会被问是谁写的。问题在内容与手续这一侧——需要附上听取过半数代表意见的书面（劳动基准法第90条），周知也是义务（第106条），而与实态不符的规程，在发生争议时无法发挥作用。本文整理AI草案的修改重点与委托方式。",
+          "content": "**结论（先讲重点）**：能提交。就业规则没有格式的指定，**也不会被问是谁写的**。问题在内容与手续这一侧。需要附上听取过半数代表等意见的**书面**（劳动基准法第90条），**周知**也是义务（第106条）——而且，**与公司实态不符的规程，在发生争议时无法发挥作用**。\n\n让AI起草就业规则草案的公司越来越多。本页面写给拿着这份草案、犹豫「能不能就这样提交」的经营者与总务人员。从几人开始有制作义务，已在[就业规则从几人开始是义务。哪些不是义务](/zh/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo)中处理。本文处理的是**AI所写草案的对待方式**。\n\n## AI写的草案，申报会被受理吗？\n\n会。劳动基准法第89条规定，经常雇用10人以上劳动者的雇主，必须**制作就业规则并向行政官厅申报**——但**对制作者的资格没有任何规定**。公司内部写的，或以AI草案为底稿的，在条文上的对待相同。\n\n第89条规定的是**内容**这一侧。始业・终业时刻、休息・休日・休假（第1号），工资的决定・计算・支付方法、截止与支付时期、加薪（第2号），退职相关事项（含解雇事由。第3号），是**必须记载的事项**。退职金・奖金・安全卫生・表彰惩戒等，则是**有规定时必须记载的事项**。检查AI草案的第一把量尺，就是这些号的排列。\n\n## 被受理，和能用，是同一回事吗？\n\n不是。申报的前后，有两项条文上的手续。\n\n| 手续 | 依据 | 内容 |\n|---|---|---|\n| **意见听取与意见书的附上** | 劳动基准法第90条 | **听取**过半数工会（没有时为劳动者过半数代表者）的意见，并将记载该意见的**书面附于申报** |\n| **周知** | 劳动基准法第106条 | 以在各作业场所显眼处张贴・备置、交付书面，及其他厚生劳动省令所定方法，**使劳动者周知** |\n\n意见听取不要求做到「取得同意」，但**没有听取就无法申报**。而未周知的就业规则，无法作为拘束劳动者的依据发挥作用——这是有判例积累的领域，个别案件的效力依情事而定。请记住一点：**「被受理」不是「有效发挥作用」的保证。**\n\n## 与实态不符的规程，会发生什么？\n\nAI草案中常见的，是文章写得整齐、却**与这家公司的实态没有连接**的规程。\n\n- **工时制度与实态不同**——草案是1天8小时・周40小时的原则形，实际上却以排班制或变形工时制运作\n- **津贴・固定加班费的规定与实际的工资明细不符**——规程与支付实态一旦错开，加班费的计算依据就会崩坏\n- **未反映修法**——AI的答案在条文号码与施行日上出现偏差的结构，如[先问AI劳务问题，再咨询社会保险劳务士，可以吗](/zh/labor/column/ai-de-shirabete-kara-soudan-shite-yoika)所写，在就业规则草案上也同样发生\n- **混入这家公司没有的制度**——没在使用的制度条文留在文中，就会成为劳资主张分歧的入口\n\n就业规则，是发生争议时**公司赖以立足的文书**。与实态不符的规程，在关键时刻无法保护公司。形式上完成了申报，与规程能发挥作用，是两回事。\n\n## 手上有草案时，要委托社会保险劳务士做什么？\n\n不是「从零开始写」，而是**带着草案来，委托确认**——这个入口就可以。而且，有底稿反而更快看清论点。委托的内容是这3项。\n\n| 委托的事 | 内容 |\n|---|---|\n| **与实态的核对** | 将工时制度・工资・津贴・休假的规定，对照实际的工作方式与工资明细确认。这是作业的本体 |\n| **记载事项与最新法令的确认** | 第89条的必要记载事项是否齐全、修法是否已反映 |\n| **手续的设计** | 过半数代表者的选出、意见听取、申报、周知的安排 |\n\n从草案确认，到修订・制作的代办、再到申报的费用，公开于[报酬额表](/zh/labor/ryokin)的「就业规则」栏。**咨询免费。** AI的草案，请原样带来。\n\n## 四葉社会保険労務士事務所能做什么？\n\n位于文京区小日向的四葉社会保険労務士事務所，承接就业规则的制作・修订与申报、作为其前提的劳务实态听取，以及劳动社会保险手续。也对应以活用AI草案的形式进行确认・修改。常被询问的问题整理于[常见问答](/zh/labor/faq)。\n\n### 该向谁咨询\n\n税务（含年终调整）是**税理士**的业务，登记是**司法书士**的业务，已经发生争议的案件是**律师**的业务。在留资格的申请・补助金・公司设立文件，由**四葉行政書士事務所**（与本事务所是不同的事业体，另行签约）承接。以上均不收取介绍费。\n\n## 常见问题\n\n**Q. AI写的就业规则，能直接提交给劳动基准监督署吗？**\nA. 形式上能。没有格式的指定，也不问制作者的资格。但需要附上听取过半数代表等意见的书面（劳动基准法第90条），向劳动者周知也是义务（第106条）。被受理，不是规程有效发挥作用的保证。\n\n**Q. 员工不到10人，也需要申报吗？**\nA. 制作・申报的义务适用于「经常雇用10人以上」的事业场（劳动基准法第89条）。不到10人没有义务，但为了明确劳动条件的依据，制作仍有意义。详见[就业规则从几人开始是义务。哪些不是义务](/zh/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo)。\n\n**Q. AI的草案，最常修改的是哪里？**\nA. 就一般倾向而言：工时制度或津贴的规定与实态不符的地方、未反映修法的地方、这家公司没有的制度规定残留的地方。花时间的不是文章的好坏，而是与实态的核对。\n\n**Q. 带草案来，费用会比较便宜吗？**\nA. 视内容而定。作业的本体是实态的听取与核对，有无草案未必大幅改变作业量。无论哪种情形，着手前都会依[报酬额表](/zh/labor/ryokin)提示估价。咨询免费。\n\n## 本文依据\n\n- 劳动基准法（昭和22年法律第49号）**第89条**（制作及申报义务・记载事项）、**第90条**（制作手续＝意见听取・意见书附上）、**第106条**（周知义务） ―― 2026年8月14日于e-Gov法令检索确认现行条文\n\n本文为一般性的信息提供。是否与实态相符的评价，以及个别规程效力的判断，由具备资格者在面谈后进行。撰文者为[浦松丈二](/zh/about/uramatsu)（社会保险劳务士・行政书士・宅地建物取引士）。",
+          "category": "该委托谁",
+          "keywords": [
+            "AI 就业规则 提交申报",
+            "就业规则 AI 草案 检查",
+            "就业规则 意见书 过半数代表",
+            "就业规则 周知 义务",
+            "AI 就业规则 有效性",
+            "就业规则 草案 委托 社会保险劳务士"
+          ],
+          "tags": [
+            "AI",
+            "就业规则",
+            "劳动基准法",
+            "意见听取",
+            "周知",
+            "申报"
+          ],
+          "author": {
+            "name": "浦松 丈二",
+            "title": "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+          },
+          "faq": [
+            {
+              "question": "AI写的就业规则，能直接提交给劳动基准监督署吗？",
+              "answer": "形式上能。没有格式的指定，也不问制作者的资格。但需要附上听取过半数代表等意见的书面（劳动基准法第90条），向劳动者周知也是义务（第106条）。被受理，不是规程有效发挥作用的保证。"
+            },
+            {
+              "question": "员工不到10人，也需要申报吗？",
+              "answer": "制作・申报的义务适用于「经常雇用10人以上」的事业场（劳动基准法第89条）。不到10人没有义务，但为了明确劳动条件的依据，制作仍有意义。详见就业规则从几人开始是义务。哪些不是义务。"
+            },
+            {
+              "question": "AI的草案，最常修改的是哪里？",
+              "answer": "就一般倾向而言：工时制度或津贴的规定与实态不符的地方、未反映修法的地方、这家公司没有的制度规定残留的地方。花时间的不是文章的好坏，而是与实态的核对。"
+            },
+            {
+              "question": "带草案来，费用会比较便宜吗？",
+              "answer": "视内容而定。作业的本体是实态的听取与核对，有无草案未必大幅改变作业量。无论哪种情形，着手前都会依报酬额表提示估价。咨询免费。"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "business": "labor",
+      "slug": "ai-jugyoin-joho-nyuryoku-yoihi",
+      "title": "AIに従業員の情報を入れてよいか",
+      "date": "2026-09-01",
+      "category": "労務のしくみ",
+      "excerpt": "一律には決まりません。従業員の情報は個人データで、生成AIへの入力には個人情報保護法の枠組みがかかり、個人情報保護委員会も注意喚起を出しています。「学習しない」設定の型と限界、社内で決めておく4項目、当事務所自身のデータの扱いまで開示して整理します。",
+      "content": "**結論（先に要点）**：一律には決まりません。従業員の情報は個人データで、生成AIへの入力には個人情報保護法の枠組みがかかり、個人情報保護委員会も注意喚起を出しています。**線を決めてから使う——順序はこれだけです。** 四葉は、顧客・従業員の個人データを生成AIに入力しない運用です。\n\n「勤怠の集計をAIにやらせたい」「従業員とのやりとりを要約させたい」——社内でAIを使い始めると、従業員の情…（全4925字）",
+      "status": "published",
+      "author": {
+        "name": "浦松 丈二",
+        "title": "社会保険労務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+      },
+      "keywords": [
+        "AI 従業員 情報 入力",
+        "生成AI 個人情報 会社 ルール",
+        "AI 学習しない 設定",
+        "生成AI 社内ルール 就業規則",
+        "個人情報保護委員会 生成AI 注意喚起",
+        "社労士 守秘義務 個人データ"
+      ],
+      "tags": [
+        "AI",
+        "生成AI",
+        "個人情報",
+        "学習しない設定",
+        "社内ルール",
+        "守秘義務"
+      ],
+      "locales": [],
+      "faq": [
+        {
+          "question": "従業員の名前や給与額をAIに入れるのは、違法なのですか？",
+          "answer": "一律には決まりません。個人情報保護委員会は、本人の同意なく個人データを含むプロンプトを入力し、それが応答の出力以外の目的で取り扱われる場合、個人情報保護法に違反する可能性があると指摘しています（令和5年6月2日注意喚起）。サービスの契約・設定で扱いが変わるため、線引きを決めてから使うことをお勧めします。個別の適法性の判断が必要な場合は、弁護士にご相談ください。"
+        },
+        {
+          "question": "「学習しない」設定にすれば、従業員の情報を入れてもよいですか？",
+          "answer": "設定の確認は出発点として重要ですが、それだけで「入れてよい」ことにはなりません。学習に使わない設定でも入力データが一定期間保存される場合があり、安全管理措置（個人情報保護法第23条）や利用目的の範囲の論点も残ります。当事務所は、設定にかかわらず顧客・従業員の個人データを生成AIに入力しない運用にしています。"
+        },
+        {
+          "question": "社会保険労務士に給与データを渡すのは、大丈夫なのですか？",
+          "answer": "開業社会保険労務士と、社会保険労務士でつくる法人の社員には法律上の守秘義務があり、その立場でなくなった後も続きます（社会保険労務士法第21条）。また会社から見ると、事務所は個人データの取扱いの委託先で、会社には委託先を監督する立場があります（個人情報保護法第25条）。取扱いの運用を事務所に確認することは、頼む側の当然の権利です。"
+        },
+        {
+          "question": "社内のAI利用ルールづくりは、どこに相談すればよいですか？",
+          "answer": "服務規律として就業規則に位置づける部分は、社会保険労務士がお受けできます。個人情報保護法の解釈が必要な部分は弁護士に、制度の一次情報は個人情報保護委員会の公表資料をご確認ください。当事務所のご相談は無料です。"
+        }
+      ],
+      "translations": {
+        "en": {
+          "title": "Can we put employee information into an AI?",
+          "excerpt": "There is no one-size-fits-all answer. Employee information is personal data; feeding it into generative AI sits within the framework of the Act on the Protection of Personal Information, and Japan's Personal Information Protection Commission has issued an alert. We set out the \"no-training\" settings and their limits, the four rules to fix in advance, and how this office itself handles data.",
+          "content": "**In short:** there is no one-size-fits-all answer. Employee information is **personal data**; feeding it into generative AI sits within the framework of the Act on the Protection of Personal Information, and the Personal Information Protection Commission (個人情報保護委員会) has issued an alert. **Decide the lines first, then use the tools — the order is all.** Yotsuba does not enter client or employee personal data into generative AI.\n\n\"We want the AI to total the attendance records\" — \"we want it to summarise exchanges with an employee\" — once AI arrives inside a company, the question of how much employee information may go in arrives with it. This page is for owners and back-office staff about to draw those lines. It confines itself to **presenting the statutory framework and disclosing this office's own practice**, and does not judge the lawfulness of any particular service or use.\n\n## What can go wrong when employee information goes into an AI?\n\nEmployees' names, addresses, wages, evaluations and health information are **personal data** managed by the company. The Act on the Protection of Personal Information places this framework on the businesses that handle it:\n\n| Provision | Framework |\n|---|---|\n| Article 23 | **Security control measures** — necessary and appropriate measures against leakage, loss or damage |\n| Article 24 | **Supervision of employees** handling personal data |\n| Article 25 | **Supervision of contractors** when handling is outsourced |\n| Article 27 | **Restriction on third-party provision** — personal data may not, in principle, be provided to a third party without the person's prior consent |\n\nOn generative AI specifically, the Personal Information Protection Commission published its **\"Alert Regarding the Use of Generative AI Services\" (2 June 2023)**, making two points to businesses: **(1)** when entering prompts containing personal information, confirm carefully that the entry stays within the scope needed to achieve the specified purpose of use; and **(2)** where personal data is entered into a prompt without the person's consent and is then handled **for purposes other than producing the response (such as training)**, this **may violate** the Act.\n\nHow your input is handled **depends on each service's contract and settings**. That is why no blanket \"this service is fine\" exists — the order is: confirm, then draw the line.\n\n## What should the company decide before using AI?\n\nIn practice, the internal decisions come down to four items. This is a presentation of decision material, not an evaluation of any service's lawfulness.\n\n| Decision | Substance |\n|---|---|\n| **What may and may not go in** | An internal standard — e.g. no personal data, health or evaluation information. When in doubt, leave it out |\n| **The service's settings and contract** | Whether input is used for training (next section). Corporate contracts, opt-out settings, terms of service |\n| **Who may use it, and where** | Which staff, for which tasks. Whether personal accounts may be used for work |\n| **Records** | Keeping it possible to check, afterwards, what went into which service |\n\nAnchoring the rules in the work rules as service discipline is labour-management territory; the procedure is the same as described in [Can work rules drafted by an AI actually be filed?](/en/labor/column/ai-shugyokisoku-todokede-dekiruka).\n\n## If we turn on the \"no-training\" setting, may the data go in?\n\nThe settings first. Many generative AI services offer a setting that **keeps your input out of model training (an opt-out)**, or contract forms that never train on input in the first place. From the providers' published materials (viewed 14 August 2026), the landscape sorts roughly into these shapes:\n\n| Form of use | Treatment of input for training |\n|---|---|\n| Consumer plans | **Some services use input for training by default.** Turning this off in the settings is generally possible (ChatGPT's \"Improve the model for everyone\" toggle, Claude's privacy settings, and the like) |\n| Corporate plans (Team, Enterprise, etc.) | Many services **do not train on input by default**, with administrators managing the organisation's settings centrally |\n| Via API | Stating that input is **not used for training by default** is the norm |\n\nThis setting bears directly on point (2) of the Commission's alert — input handled **for purposes other than producing the response, such as training**. **For business use, confirming the no-training setting or contract is the starting point.** A personal account on default settings, used for work, is the most dangerous shape.\n\nTwo caveats. First, even with training off, **input data may be retained for a period — for abuse monitoring, for example**; the retention period and conditions differ by service and contract. Second, **\"no training\" does not mean \"personal data may go in.\"** The questions of security control measures (Article 23) and the scope of the purpose of use remain — and even with names removed, a person can sometimes be identified from the combination of department, title and circumstances. Setting names, defaults and retention rules change frequently, so **check each provider's published materials at the time of use**.\n\n## How is information handed to a shakai hoken roumushi protected?\n\nWhen you outsource payroll or procedures, employee personal data passes to the office. Two protections apply.\n\nFirst, **statutory confidentiality**. A practising shakai hoken roumushi, and the members of a corporation formed by shakai hoken roumushi, must not divulge or misappropriate secrets learned in the course of business without just cause — and the duty **continues after they leave that position** (Certified Social Insurance and Labor Consultant Act, Article 21).\n\nSecond, **the outsourcing framework**. From the company's side, the office is a contractor handling personal data, and the company is charged with supervising its contractors (Act on the Protection of Personal Information, Article 25). In other words, **asking the office how it handles data is the client's proper role**. This office discloses its practice as follows.\n\n## How does Yotsuba handle AI and personal data?\n\nThis office uses AI in its work as well — under **an internal standard defining which information may go into which AI**, and on these terms:\n\n- **Client and employee personal data is not entered into generative AI.** However processed, this line does not move\n- What AI is given: **organising general materials, surfacing issues, drafting documents** — that far\n- **Judgement on individual matters is made by the qualified representative**\n\nThe same policy applies in the work of 四葉不動産 and 四葉行政書士事務所 (each an independent business, engaged separately). How to check an AI's answers is covered in [Can I ask an AI about a labour question first, and then consult a shakai hoken roumushi?](/en/labor/column/ai-de-shirabete-kara-soudan-shite-yoika), and where freee's AI features stand in [How far has the AI integration between freee HR and freee Accounting actually come?](/en/labor/column/freee-jinji-kaikei-ai).\n\n## What can 四葉社会保険労務士事務所 do?\n\n四葉社会保険労務士事務所, in Kohinata, Bunkyo City, handles payroll, labour and social insurance procedures, labour consultation, and the drafting and revision of work rules. **Framing your internal AI-use rules as service discipline within the work rules** is a consultation we can take on from the labour-management side. **Consultation is free of charge.** Fees are in the [fee schedule](/en/labor/ryokin), and the questions we are asked most often are collected on the [FAQ page](/en/labor/faq).\n\n### Whom to consult\n\nSituations requiring **interpretation** of the Act on the Protection of Personal Information, and the legal response when a leak occurs, are work for **an attorney**. For primary sources, see the published materials of the **Personal Information Protection Commission**. Tax goes to **a tax accountant**, registration to **a judicial scrivener**; residence-status applications, subsidies and company-formation documents are handled by **四葉行政書士事務所** (a separate business from this office, engaged under a separate contract). In every case, no referral fees change hands.\n\n## Frequently asked questions\n\n**Q. Is it illegal to put employees' names or salaries into an AI?**\nA. There is no blanket answer. The Personal Information Protection Commission has said that entering personal data into a prompt without the person's consent, where it is handled for purposes other than producing the response, may violate the Act (alert of 2 June 2023). Since the treatment turns on each service's contract and settings, we recommend deciding the lines before use. Where a judgement of lawfulness is needed, consult an attorney.\n\n**Q. If we turn on the \"no-training\" setting, may employee information go in?**\nA. Checking the setting is an important starting point, but it does not by itself make the data acceptable to enter. Even with training off, input may be retained for a period, and the questions of security control measures (Article 23) and the scope of the purpose of use remain. This office does not enter client or employee personal data into generative AI, whatever the settings.\n\n**Q. Is it safe to hand payroll data to a shakai hoken roumushi?**\nA. A practising shakai hoken roumushi, and the members of a corporation formed by shakai hoken roumushi, are under a statutory duty of confidentiality that continues after they leave the position (Certified Social Insurance and Labor Consultant Act, Article 21). And from the company's side, the office is a contractor whose data handling the company is charged with supervising (Act on the Protection of Personal Information, Article 25). Asking an office how it handles data is the client's proper role.\n\n**Q. Where do we take the drafting of internal AI-use rules?**\nA. The part framed as service discipline within the work rules can be taken on by a shakai hoken roumushi. Parts requiring interpretation of the Act on the Protection of Personal Information go to an attorney, and for primary sources see the Personal Information Protection Commission's published materials. Consultation with this office is free.\n\n## Sources for this article\n\n- Act on the Protection of Personal Information (個人情報の保護に関する法律, Act No. 57 of 2003), **Articles 23** (security control measures), **24** (supervision of employees), **25** (supervision of contractors) and **27** (restriction on third-party provision) — current text confirmed on e-Gov on 14 August 2026\n- Certified Social Insurance and Labor Consultant Act (社会保険労務士法, Act No. 89 of 1968), **Article 21** (duty of confidentiality) — current text confirmed on e-Gov the same day\n- Personal Information Protection Commission, **\"Alert Regarding the Use of Generative AI Services\"** (2 June 2023; viewed 14 August 2026)\n  https://www.ppc.go.jp/news/careful_information/230602_AI_utilize_alert/\n- The training-use settings and defaults of generative AI services — per the providers' published materials (viewed 14 August 2026). **Names, defaults and retention rules change; check each provider's materials at the time of use**\n\nThis article confines itself to presenting the statutory framework and disclosing this office's practice; it does not judge the lawfulness of any particular use of any service. Judgments that fit your particular circumstances are made by a qualified professional after a meeting. Written by [Joji Uramatsu](/en/about/uramatsu) (Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist).",
+          "category": "How labour administration works",
+          "keywords": [
+            "employee data generative AI input",
+            "company rules generative AI personal information",
+            "AI no-training setting opt out",
+            "internal AI policy work rules",
+            "PPC generative AI alert Japan",
+            "labour consultant confidentiality personal data"
+          ],
+          "tags": [
+            "AI",
+            "generative AI",
+            "personal information",
+            "no-training setting",
+            "internal rules",
+            "confidentiality"
+          ],
+          "author": {
+            "name": "Joji Uramatsu",
+            "title": "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所"
+          },
+          "faq": [
+            {
+              "question": "Is it illegal to put employees' names or salaries into an AI?",
+              "answer": "There is no blanket answer. The Personal Information Protection Commission has said that entering personal data into a prompt without the person's consent, where it is handled for purposes other than producing the response, may violate the Act (alert of 2 June 2023). Since the treatment turns on each service's contract and settings, we recommend deciding the lines before use. Where a judgement of lawfulness is needed, consult an attorney."
+            },
+            {
+              "question": "If we turn on the \"no-training\" setting, may employee information go in?",
+              "answer": "Checking the setting is an important starting point, but it does not by itself make the data acceptable to enter. Even with training off, input may be retained for a period, and the questions of security control measures (Article 23) and the scope of the purpose of use remain. This office does not enter client or employee personal data into generative AI, whatever the settings."
+            },
+            {
+              "question": "Is it safe to hand payroll data to a shakai hoken roumushi?",
+              "answer": "A practising shakai hoken roumushi, and the members of a corporation formed by shakai hoken roumushi, are under a statutory duty of confidentiality that continues after they leave the position (Certified Social Insurance and Labor Consultant Act, Article 21). And from the company's side, the office is a contractor whose data handling the company is charged with supervising (Act on the Protection of Personal Information, Article 25). Asking an office how it handles data is the client's proper role."
+            },
+            {
+              "question": "Where do we take the drafting of internal AI-use rules?",
+              "answer": "The part framed as service discipline within the work rules can be taken on by a shakai hoken roumushi. Parts requiring interpretation of the Act on the Protection of Personal Information go to an attorney, and for primary sources see the Personal Information Protection Commission's published materials. Consultation with this office is free."
+            }
+          ]
+        },
+        "zh-tw": {
+          "title": "可以把員工的資訊輸入AI嗎",
+          "excerpt": "沒有一律的答案。員工資訊是個人資料，輸入生成式AI受個人情報保護法的框架規範，日本的個人情報保護委員会也發出了注意提醒。本文整理「不用於學習」設定的類型與界限、公司事先要決定的4個項目，並公開本事務所自身的資料處理方式。",
+          "content": "**結論（先講重點）**：沒有一律的答案。員工資訊是個人資料，輸入生成式AI受個人情報保護法的框架規範，日本的個人資料保護主管機關「個人情報保護委員会」也發出了注意提醒。**先劃線，再使用——順序就是這樣。** 四葉不將顧客・員工的個人資料輸入生成式AI。\n\n「想讓AI統計出勤紀錄」「想讓它摘要與員工的往來內容」——公司內部開始使用AI後，「員工資訊能輸入到什麼程度」的問題必然隨之而來。本頁面寫給正要劃這條線的經營者與總務人員。本文**僅止於介紹制度框架，以及公開本事務所自身的運用**，不對個別服務使用的適法性作出判斷。\n\n## 把員工資訊輸入AI，可能出什麼問題？\n\n員工的姓名・住址・工資・考核・健康資訊，是公司管理的**個人資料**。個人情報保護法對處理這些資料的事業者，課以下列框架。\n\n| 條文 | 框架 |\n|---|---|\n| 第23條 | **安全管理措施**——為防止洩漏・滅失・毀損，採取必要且適當的措施 |\n| 第24條 | **對從業者的監督**——讓從業者處理個人資料時的監督 |\n| 第25條 | **對受託者的監督**——委託處理時對受託方的監督 |\n| 第27條 | **第三者提供的限制**——原則上不得未經本人事先同意，向第三者提供個人資料 |\n\n關於生成式AI，個人情報保護委員会公布了**「關於生成式AI服務利用的注意提醒等」（令和5年〔2023年〕6月2日）**，對事業者指出2點：**①**輸入含個人資訊的提示詞時，應充分確認其在達成已特定之利用目的所需範圍內。**②**未經本人同意輸入含個人資料的提示詞，且該資料**在產生回應以外的目的（如學習）下被處理**時，**有違反**個人情報保護法規定**的可能**。\n\n輸入的內容如何被處理，**因各服務的契約與設定而異**。正因如此，「這個服務就沒問題」的一般論不成立——先確認、再劃線，就是這個順序。\n\n## 公司要先決定什麼，才能開始用？\n\n公司內部要決定的，實務上可整理為4項。這是判斷材料的提示，不是對個別服務適法性的評價。\n\n| 要決定的事 | 內容 |\n|---|---|\n| **可輸入資訊的界線** | 「個人資料・健康資訊・考核資訊不輸入」之類的公司內部基準。猶豫時往不輸入的一側倒 |\n| **服務的設定與契約** | 輸入內容是否用於學習（下一章詳述）。法人契約・退出（opt-out）設定的有無。條款的確認 |\n| **誰能用、用在哪** | 誰・在哪些業務上可以使用。是否允許以私人帳號處理業務 |\n| **紀錄** | 讓「什麼內容輸入了哪個服務」事後可以確認 |\n\n把定好的規則**作為服務紀律納入就業規則**，屬於勞務管理的領域。做成規程的程序，與[AI寫的就業規則，能提交申報嗎](/zh-tw/labor/column/ai-shugyokisoku-todokede-dekiruka)所寫的就業規則手續相同。\n\n## 設成「不用於學習」，就可以輸入了嗎？\n\n先從設定說起。許多生成式AI服務提供**不讓輸入內容用於模型學習的設定（opt-out）**，或一開始就不用於學習的契約形態。依各公司的公開資料・解說（2026年8月14日參閱），大致可整理為以下類型。\n\n| 使用形態 | 學習利用的處理 |\n|---|---|\n| 個人方案 | **有些服務預設會將輸入用於學習**。一般可在設定畫面關閉（如ChatGPT的「為所有人改善模型」關閉、Claude的隱私設定切換等） |\n| 法人方案（Team・Enterprise等） | **預設不用於學習**的服務居多，管理者可統一管理整個組織的設定 |\n| 經由API | 明示輸入**預設不用於學習**是一般做法 |\n\n這個設定，直接關係到前章注意提醒的②——輸入**在產生回應以外的目的（如學習）下被處理**的情形。**業務上要使用，先確認不學習的設定・契約，就是出發點。** 以預設狀態的個人帳號處理業務，是最危險的形態。\n\n不過要補上兩點。第一，即使設為不用於學習，**輸入資料仍可能因不當使用監控等目的被保存一段期間**，保存的期間與條件因服務與契約而異。第二，**「不學習」不等於「可以輸入個人資料」**。安全管理措施（第23條）與利用目的範圍的論點仍然存在；而且即使隱去姓名，部門・職位・經過的組合仍可能識別出本人。設定的名稱・預設值・保存的處理經常變動，**使用時請以各服務的公開資料為準**。\n\n## 交給社會保險勞務士的資訊，如何被保護？\n\n委託薪資計算或手續代辦時，員工的個人資料會交到事務所。這裡有兩層保護。\n\n第一，**法律上的守密義務**。開業的社會保險勞務士，以及由社會保險勞務士組成的法人（社会保険労務士法人）的社員，非有正當理由，不得洩漏或盜用業務上知悉的秘密，且此義務**在離開該身分之後仍然持續**（社會保險勞務士法第21條）。\n\n第二，**委託的框架**。從公司的角度看，事務所是個人資料處理的受託方，公司負有監督受託方的立場（個人情報保護法第25條）。也就是說，**確認事務所如何處理資料，是委託方理所當然的權利**。本事務所公開運用如下。\n\n## 四葉如何處理AI與個人資料？\n\n本事務所也在業務中使用AI。但持有**規定「哪些資訊可以輸入哪個AI」的內部基準**，並採取以下運用。\n\n- **顧客・員工的個人資料，不輸入生成式AI。** 無論加工到什麼程度，這條線不移動\n- 交給AI的，只到**一般資料的整理・論點盤點・文書草稿**為止\n- **個別案件的判斷，由具備資格的代表進行**\n\n這個方針，在四葉不動産・四葉行政書士事務所的業務中也相同（各自作為獨立的事業體，分別承接業務）。AI答案的核對方式見[先問AI勞務問題，再諮詢社會保險勞務士，可以嗎](/zh-tw/labor/column/ai-de-shirabete-kara-soudan-shite-yoika)，freee的AI功能現況見[freee人事労務與freee会計的AI整合，究竟進展到什麼程度](/zh-tw/labor/column/freee-jinji-kaikei-ai)。\n\n## 四葉社会保険労務士事務所能做什麼？\n\n位於文京區小日向的四葉社会保険労務士事務所，承接薪資計算・勞動社會保險手續・勞務諮詢・就業規則的制定與修訂。**把公司的AI使用規則作為服務紀律納入就業規則**的諮詢，也可從勞務管理的角度承接。**諮詢免費。** 費用公開於[報酬額表](/zh-tw/labor/ryokin)，常被詢問的問題整理於[常見問答](/zh-tw/labor/faq)。\n\n### 該向誰諮詢\n\n需要**解釋**個人情報保護法的場面，以及發生洩漏時的法律應對，是**律師**的業務。制度的一次資訊請確認**個人情報保護委員会**的公開資料。稅務是**稅理士**、登記是**司法書士**的業務；在留資格的申請・補助金・公司設立文件，由**四葉行政書士事務所**（與本事務所是不同的事業體，另行簽約）承接。以上均不收取介紹費。\n\n## 常見問題\n\n**Q. 把員工的姓名或工資輸入AI，是違法的嗎？**\nA. 沒有一律的答案。個人情報保護委員会指出，未經本人同意輸入含個人資料的提示詞，且該資料在產生回應以外的目的下被處理時，有違反個人情報保護法的可能（令和5年6月2日注意提醒）。因服務的契約・設定而處理方式不同，建議先劃好界線再使用。需要判斷個別適法性時，請諮詢律師。\n\n**Q. 設成「不用於學習」，就可以輸入員工資訊了嗎？**\nA. 確認設定是重要的出發點，但僅此並不等於「可以輸入」。即使不用於學習，輸入資料仍可能被保存一段期間，安全管理措施（個人情報保護法第23條）與利用目的範圍的論點也仍然存在。本事務所無論設定如何，都不將顧客・員工的個人資料輸入生成式AI。\n\n**Q. 把工資資料交給社會保險勞務士，沒問題嗎？**\nA. 開業的社會保險勞務士，以及由社會保險勞務士組成的法人（社会保険労務士法人）的社員，負有法律上的守密義務，離開該身分後仍持續（社會保險勞務士法第21條）。而且從公司的角度看，事務所是個人資料處理的受託方，公司負有監督的立場（個人情報保護法第25條）。向事務所確認資料的處理方式，是委託方理所當然的權利。\n\n**Q. 公司的AI使用規則，該找誰商量？**\nA. 作為服務紀律納入就業規則的部分，社會保險勞務士可以承接。需要解釋個人情報保護法的部分請諮詢律師，制度的一次資訊請確認個人情報保護委員会的公開資料。本事務所的諮詢免費。\n\n## 本文依據\n\n- 個人情報保護法（個人情報の保護に関する法律。平成15年法律第57號）**第23條**（安全管理措施）・**第24條**（對從業者的監督）・**第25條**（對受託者的監督）・**第27條**（第三者提供的限制） ―― 2026年8月14日於e-Gov法令檢索確認現行條文\n- 社會保險勞務士法（昭和43年法律第89號）**第21條**（守密義務） ―― 同日於e-Gov法令檢索確認現行條文\n- 個人情報保護委員会「**關於生成式AI服務利用的注意提醒等**」（令和5年6月2日・2026年8月14日參閱）\n  https://www.ppc.go.jp/news/careful_information/230602_AI_utilize_alert/\n- 各生成式AI服務對學習利用的設定・預設值 ―― 依各公司的公開資料（2026年8月14日參閱）。**名稱・預設值・保存的處理會變動，使用時請以各服務的公開資料為準**\n\n本文僅止於介紹制度框架與公開本事務所的運用，不對個別服務使用的適法性作出判斷。因應個別情事的判斷，由具備資格者在面談後進行。撰文者為[浦松丈二](/zh-tw/about/uramatsu)（社會保險勞務士・行政書士・宅地建物取引士）。",
+          "category": "勞務的機制",
+          "keywords": [
+            "員工資料 生成式AI 輸入",
+            "公司規則 生成式AI 個人資料",
+            "AI 不學習 設定",
+            "AI使用規範 就業規則",
+            "個人情報保護委員会 生成式AI 注意提醒",
+            "社會保險勞務士 守密義務 個人資料"
+          ],
+          "tags": [
+            "AI",
+            "生成式AI",
+            "個人資料",
+            "不學習設定",
+            "公司內規",
+            "守密義務"
+          ],
+          "author": {
+            "name": "浦松 丈二",
+            "title": "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+          },
+          "faq": [
+            {
+              "question": "把員工的姓名或工資輸入AI，是違法的嗎？",
+              "answer": "沒有一律的答案。個人情報保護委員会指出，未經本人同意輸入含個人資料的提示詞，且該資料在產生回應以外的目的下被處理時，有違反個人情報保護法的可能（令和5年6月2日注意提醒）。因服務的契約・設定而處理方式不同，建議先劃好界線再使用。需要判斷個別適法性時，請諮詢律師。"
+            },
+            {
+              "question": "設成「不用於學習」，就可以輸入員工資訊了嗎？",
+              "answer": "確認設定是重要的出發點，但僅此並不等於「可以輸入」。即使不用於學習，輸入資料仍可能被保存一段期間，安全管理措施（個人情報保護法第23條）與利用目的範圍的論點也仍然存在。本事務所無論設定如何，都不將顧客・員工的個人資料輸入生成式AI。"
+            },
+            {
+              "question": "把工資資料交給社會保險勞務士，沒問題嗎？",
+              "answer": "開業的社會保險勞務士，以及由社會保險勞務士組成的法人（社会保険労務士法人）的社員，負有法律上的守密義務，離開該身分後仍持續（社會保險勞務士法第21條）。而且從公司的角度看，事務所是個人資料處理的受託方，公司負有監督的立場（個人情報保護法第25條）。向事務所確認資料的處理方式，是委託方理所當然的權利。"
+            },
+            {
+              "question": "公司的AI使用規則，該找誰商量？",
+              "answer": "作為服務紀律納入就業規則的部分，社會保險勞務士可以承接。需要解釋個人情報保護法的部分請諮詢律師，制度的一次資訊請確認個人情報保護委員会的公開資料。本事務所的諮詢免費。"
+            }
+          ]
+        },
+        "zh": {
+          "title": "可以把员工的信息输入AI吗",
+          "excerpt": "没有一律的答案。员工信息是个人数据，输入生成式AI受个人情报保护法的框架规范，日本的个人情报保护委员会也发出了注意提醒。本文整理「不用于学习」设置的类型与界限、公司事先要决定的4个项目，并公开本事务所自身的数据处理方式。",
+          "content": "**结论（先讲重点）**：没有一律的答案。员工信息是个人数据，输入生成式AI受个人情报保护法的框架规范，日本的个人信息保护监管机构「個人情報保護委員会」也发出了注意提醒。**先划线，再使用——顺序就是这样。** 四叶不将顾客・员工的个人数据输入生成式AI。\n\n「想让AI统计出勤记录」「想让它摘要与员工的往来内容」——公司内部开始使用AI后，「员工信息能输入到什么程度」的问题必然随之而来。本页面写给正要划这条线的经营者与总务人员。本文**仅止于介绍制度框架，以及公开本事务所自身的运用**，不对个别服务使用的适法性作出判断。\n\n## 把员工信息输入AI，可能出什么问题？\n\n员工的姓名・住址・工资・考核・健康信息，是公司管理的**个人数据**。个人情报保护法对处理这些数据的事业者，课以下列框架。\n\n| 条文 | 框架 |\n|---|---|\n| 第23条 | **安全管理措施**——为防止泄漏・灭失・毁损，采取必要且适当的措施 |\n| 第24条 | **对从业者的监督**——让从业者处理个人数据时的监督 |\n| 第25条 | **对受托者的监督**——委托处理时对受托方的监督 |\n| 第27条 | **第三者提供的限制**——原则上不得未经本人事先同意，向第三者提供个人数据 |\n\n关于生成式AI，個人情報保護委員会公布了**「关于生成式AI服务利用的注意提醒等」（令和5年〔2023年〕6月2日）**，对事业者指出2点：**①**输入含个人信息的提示词时，应充分确认其在达成已特定之利用目的所需范围内。**②**未经本人同意输入含个人数据的提示词，且该数据**在产生回应以外的目的（如学习）下被处理**时，**有违反**个人情报保护法规定**的可能**。\n\n输入的内容如何被处理，**因各服务的契约与设置而异**。正因如此，「这个服务就没问题」的一般论不成立——先确认、再划线，就是这个顺序。\n\n## 公司要先决定什么，才能开始用？\n\n公司内部要决定的，实务上可整理为4项。这是判断材料的提示，不是对个别服务适法性的评价。\n\n| 要决定的事 | 内容 |\n|---|---|\n| **可输入信息的界线** | 「个人数据・健康信息・考核信息不输入」之类的公司内部基准。犹豫时往不输入的一侧倒 |\n| **服务的设置与契约** | 输入内容是否用于学习（下一章详述）。法人契约・退出（opt-out）设置的有无。条款的确认 |\n| **谁能用、用在哪** | 谁・在哪些业务上可以使用。是否允许以私人账号处理业务 |\n| **记录** | 让「什么内容输入了哪个服务」事后可以确认 |\n\n把定好的规则**作为服务纪律纳入就业规则**，属于劳务管理的领域。做成规程的程序，与[AI写的就业规则，能提交申报吗](/zh/labor/column/ai-shugyokisoku-todokede-dekiruka)所写的就业规则手续相同。\n\n## 设成「不用于学习」，就可以输入了吗？\n\n先从设置说起。许多生成式AI服务提供**不让输入内容用于模型学习的设置（opt-out）**，或一开始就不用于学习的契约形态。依各公司的公开资料・解说（2026年8月14日参阅），大致可整理为以下类型。\n\n| 使用形态 | 学习利用的处理 |\n|---|---|\n| 个人方案 | **有些服务默认会将输入用于学习**。一般可在设置画面关闭（如ChatGPT的「为所有人改善模型」关闭、Claude的隐私设置切换等） |\n| 法人方案（Team・Enterprise等） | **默认不用于学习**的服务居多，管理者可统一管理整个组织的设置 |\n| 经由API | 明示输入**默认不用于学习**是一般做法 |\n\n这个设置，直接关系到前章注意提醒的②——输入**在产生回应以外的目的（如学习）下被处理**的情形。**业务上要使用，先确认不学习的设置・契约，就是出发点。** 以默认状态的个人账号处理业务，是最危险的形态。\n\n不过要补上两点。第一，即使设为不用于学习，**输入数据仍可能因不当使用监控等目的被保存一段期间**，保存的期间与条件因服务与契约而异。第二，**「不学习」不等于「可以输入个人数据」**。安全管理措施（第23条）与利用目的范围的论点仍然存在；而且即使隐去姓名，部门・职位・经过的组合仍可能识别出本人。设置的名称・默认值・保存的处理经常变动，**使用时请以各服务的公开资料为准**。\n\n## 交给社会保险劳务士的信息，如何被保护？\n\n委托工资计算或手续代办时，员工的个人数据会交到事务所。这里有两层保护。\n\n第一，**法律上的保密义务**。开业的社会保险劳务士，以及由社会保险劳务士组成的法人（社会保険労務士法人）的社员，非有正当理由，不得泄漏或盗用业务上知悉的秘密，且此义务**在离开该身份之后仍然持续**（社会保险劳务士法第21条）。\n\n第二，**委托的框架**。从公司的角度看，事务所是个人数据处理的受托方，公司负有监督受托方的立场（个人情报保护法第25条）。也就是说，**确认事务所如何处理数据，是委托方理所当然的权利**。本事务所公开运用如下。\n\n## 四叶如何处理AI与个人数据？\n\n本事务所也在业务中使用AI。但持有**规定「哪些信息可以输入哪个AI」的内部基准**，并采取以下运用。\n\n- **顾客・员工的个人数据，不输入生成式AI。** 无论加工到什么程度，这条线不移动\n- 交给AI的，只到**一般资料的整理・论点盘点・文书草稿**为止\n- **个别案件的判断，由具备资格的代表进行**\n\n这个方针，在四葉不動産・四葉行政書士事務所的业务中也相同（各自作为独立的事业体，分别承接业务）。AI答案的核对方式见[先问AI劳务问题，再咨询社会保险劳务士，可以吗](/zh/labor/column/ai-de-shirabete-kara-soudan-shite-yoika)，freee的AI功能现况见[freee人事労務与freee会計的AI整合，究竟进展到什么程度](/zh/labor/column/freee-jinji-kaikei-ai)。\n\n## 四葉社会保険労務士事務所能做什么？\n\n位于文京区小日向的四葉社会保険労務士事務所，承接工资计算・劳动社会保险手续・劳务咨询・就业规则的制定与修订。**把公司的AI使用规则作为服务纪律纳入就业规则**的咨询，也可从劳务管理的角度承接。**咨询免费。** 费用公开于[报酬额表](/zh/labor/ryokin)，常被询问的问题整理于[常见问答](/zh/labor/faq)。\n\n### 该向谁咨询\n\n需要**解释**个人情报保护法的场面，以及发生泄漏时的法律应对，是**律师**的业务。制度的一次信息请确认**個人情報保護委員会**的公开资料。税务是**税理士**、登记是**司法书士**的业务；在留资格的申请・补助金・公司设立文件，由**四葉行政書士事務所**（与本事务所是不同的事业体，另行签约）承接。以上均不收取介绍费。\n\n## 常见问题\n\n**Q. 把员工的姓名或工资输入AI，是违法的吗？**\nA. 没有一律的答案。個人情報保護委員会指出，未经本人同意输入含个人数据的提示词，且该数据在产生回应以外的目的下被处理时，有违反个人情报保护法的可能（令和5年6月2日注意提醒）。因服务的契约・设置而处理方式不同，建议先划好界线再使用。需要判断个别适法性时，请咨询律师。\n\n**Q. 设成「不用于学习」，就可以输入员工信息了吗？**\nA. 确认设置是重要的出发点，但仅此并不等于「可以输入」。即使不用于学习，输入数据仍可能被保存一段期间，安全管理措施（个人情报保护法第23条）与利用目的范围的论点也仍然存在。本事务所无论设置如何，都不将顾客・员工的个人数据输入生成式AI。\n\n**Q. 把工资数据交给社会保险劳务士，没问题吗？**\nA. 开业的社会保险劳务士，以及由社会保险劳务士组成的法人（社会保険労務士法人）的社员，负有法律上的保密义务，离开该身份后仍持续（社会保险劳务士法第21条）。而且从公司的角度看，事务所是个人数据处理的受托方，公司负有监督的立场（个人情报保护法第25条）。向事务所确认数据的处理方式，是委托方理所当然的权利。\n\n**Q. 公司的AI使用规则，该找谁商量？**\nA. 作为服务纪律纳入就业规则的部分，社会保险劳务士可以承接。需要解释个人情报保护法的部分请咨询律师，制度的一次信息请确认個人情報保護委員会的公开资料。本事务所的咨询免费。\n\n## 本文依据\n\n- 个人情报保护法（個人情報の保護に関する法律。平成15年法律第57号）**第23条**（安全管理措施）・**第24条**（对从业者的监督）・**第25条**（对受托者的监督）・**第27条**（第三者提供的限制） ―― 2026年8月14日于e-Gov法令检索确认现行条文\n- 社会保险劳务士法（昭和43年法律第89号）**第21条**（保密义务） ―― 同日于e-Gov法令检索确认现行条文\n- 個人情報保護委員会「**关于生成式AI服务利用的注意提醒等**」（令和5年6月2日・2026年8月14日参阅）\n  https://www.ppc.go.jp/news/careful_information/230602_AI_utilize_alert/\n- 各生成式AI服务对学习利用的设置・默认值 ―― 依各公司的公开资料（2026年8月14日参阅）。**名称・默认值・保存的处理会变动，使用时请以各服务的公开资料为准**\n\n本文仅止于介绍制度框架与公开本事务所的运用，不对个别服务使用的适法性作出判断。因应个别情事的判断，由具备资格者在面谈后进行。撰文者为[浦松丈二](/zh/about/uramatsu)（社会保险劳务士・行政书士・宅地建物取引士）。",
+          "category": "劳务的机制",
+          "keywords": [
+            "员工数据 生成式AI 输入",
+            "公司规则 生成式AI 个人信息",
+            "AI 不学习 设置",
+            "AI使用规范 就业规则",
+            "个人情报保护委员会 生成式AI 注意提醒",
+            "社会保险劳务士 保密义务 个人数据"
+          ],
+          "tags": [
+            "AI",
+            "生成式AI",
+            "个人信息",
+            "不学习设置",
+            "公司内规",
+            "保密义务"
+          ],
+          "author": {
+            "name": "浦松 丈二",
+            "title": "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+          },
+          "faq": [
+            {
+              "question": "把员工的姓名或工资输入AI，是违法的吗？",
+              "answer": "没有一律的答案。個人情報保護委員会指出，未经本人同意输入含个人数据的提示词，且该数据在产生回应以外的目的下被处理时，有违反个人情报保护法的可能（令和5年6月2日注意提醒）。因服务的契约・设置而处理方式不同，建议先划好界线再使用。需要判断个别适法性时，请咨询律师。"
+            },
+            {
+              "question": "设成「不用于学习」，就可以输入员工信息了吗？",
+              "answer": "确认设置是重要的出发点，但仅此并不等于「可以输入」。即使不用于学习，输入数据仍可能被保存一段期间，安全管理措施（个人情报保护法第23条）与利用目的范围的论点也仍然存在。本事务所无论设置如何，都不将顾客・员工的个人数据输入生成式AI。"
+            },
+            {
+              "question": "把工资数据交给社会保险劳务士，没问题吗？",
+              "answer": "开业的社会保险劳务士，以及由社会保险劳务士组成的法人（社会保険労務士法人）的社员，负有法律上的保密义务，离开该身份后仍持续（社会保险劳务士法第21条）。而且从公司的角度看，事务所是个人数据处理的受托方，公司负有监督的立场（个人情报保护法第25条）。向事务所确认数据的处理方式，是委托方理所当然的权利。"
+            },
+            {
+              "question": "公司的AI使用规则，该找谁商量？",
+              "answer": "作为服务纪律纳入就业规则的部分，社会保险劳务士可以承接。需要解释个人情报保护法的部分请咨询律师，制度的一次信息请确认個人情報保護委員会的公开资料。本事务所的咨询免费。"
             }
           ]
         }
