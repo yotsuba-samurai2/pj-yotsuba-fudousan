@@ -183,7 +183,11 @@ export async function generateMetadata(): Promise<Metadata> {
       "国際相続 台湾 相談",
       "台湾 相続 不動産 売却",
     ],
-    locale,
+    // 【2026-08-14 canonical是正】本ページの本文は ja / zh-tw のみ（pickPageLocale）。en・zh の
+    // リクエストにも同じ日本語本文を返すため、fallback側の canonical は常に ja を指す
+    // （PR#210・#211 と同型。リクエストロケールを渡すと /en/・/zh/ が自己canonicalの重複URLになる。
+    //  2026-08-14 本番実測＝/en/souzoku/taiwan が日本語本文のまま自己canonicalを配信していた）。
+    locale: "ja",
     absoluteTitle: true,
     availableLocales: ["ja", "zh-tw"],
   });
