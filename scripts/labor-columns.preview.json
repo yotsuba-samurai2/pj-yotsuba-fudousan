@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-14T04:57:13.187Z",
+  "generatedAt": "2026-08-14T07:34:16.822Z",
   "note": "労務コラム（4本）。報酬額表 v18 の決定と相場調査から起こした原稿md（scripts/labor-columns/）から生成。--write でupsert。",
-  "articleCount": 31,
+  "articleCount": 36,
   "verification": [
     "OK: 全チェック通過"
   ],
@@ -5622,6 +5622,921 @@
             {
               "question": "可以只委托申请吗？",
               "answer": "雇用关系助成金的申请可以承接。但录用系的助成金，可否往往在雇入前的途径・契约形态就已决定，从申请阶段开始可能已无法满足要件。请尽量在刊出招聘之前咨询。"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "business": "labor",
+      "slug": "ikusei-shuro-ima-yatte-oku-koto",
+      "title": "育成就労、いま何をしておくのか",
+      "date": "2026-09-01",
+      "category": "手続と期限",
+      "excerpt": "施行は2027年4月ですが、手続はもう始まっています。監理支援機関許可の施行日前申請は受付中、育成就労計画認定の施行日前申請は2026年9月1日からです。技能実習側の期限（監理団体の新規許可は2026年9月30日まで等）とあわせ、一次資料で確認したカレンダーを整理します。",
+      "content": "**結論（先に要点）**：施行は2027年4月ですが、**手続はもう始まっています**。監理支援機関の許可の施行日前申請は**受付中**で、**育成就労計画認定の施行日前申請は2026年9月1日から**です。技能実習の側にも期限があり、監理団体の新規許可は**2026年9月30日まで**、1号技能実習計画の認定申請は**2027年2月まで**とされています。\n\nこのページは、技能実習生を受け入れて…（全4257字）",
+      "status": "published",
+      "author": {
+        "name": "浦松 丈二",
+        "title": "社会保険労務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+      },
+      "keywords": [
+        "育成就労 いつから 何をする",
+        "育成就労 施行日前申請 スケジュール",
+        "監理支援機関 許可 申請 いつまで",
+        "育成就労計画認定 9月1日",
+        "技能実習 監理団体 新規許可 期限",
+        "育成就労 準備 受け入れ企業"
+      ],
+      "tags": [
+        "育成就労",
+        "施行日前申請",
+        "期限",
+        "監理支援機関",
+        "技能実習",
+        "カレンダー"
+      ],
+      "locales": [],
+      "faq": [
+        {
+          "question": "施行前なのに、なぜ申請が始まっているのですか？",
+          "answer": "施行日前申請という仕組みが設けられているためです。監理支援機関許可は受付中、育成就労計画認定は2026年9月1日から始まります（OTITの公表資料・2026年8月14日確認）。施行日（2027年4月1日予定）に制度を使い始めるためには、施行前に許可・認定の手続を進めておく必要があります。"
+        },
+        {
+          "question": "「9月30日までに申請」と聞きましたが、育成就労の期限ですか？",
+          "answer": "違います。2026年9月30日は、技能実習制度に基づく監理団体の新規許可の申請期限としてOTITが案内している日付です。育成就労の申請の推奨期限ではありません。この2つを取り違えた情報が出回っていますので、一次資料（OTITのページ）でご確認ください。"
+        },
+        {
+          "question": "まだ技能実習で受け入れ中です。何か関係ありますか？",
+          "answer": "あります。1号技能実習計画の認定申請は2027年2月までとされており、以後の新規は育成就労側に移ります。いま技能実習で受け入れている会社ほど、移行のカレンダーを早めに引く必要があります。全体の違いは技能実習と育成就労で、労務は何が変わるのかをご覧ください。"
+        },
+        {
+          "question": "外部監査人は、いつまでに決めればいいのですか？",
+          "answer": "申請書類の一覧に就任承諾書（監理支援機関許可＝参考様式第2-5号）が含まれているため、申請書を出す時点で決まっている必要があります。「許可が下りてから探す」という順序では申請できません。依頼先の選び方は育成就労の外部監査人（四葉行政書士事務所・別事業体）をご覧ください。"
+        }
+      ],
+      "translations": {
+        "en": {
+          "title": "The Employment for Skill Development system — what to do now",
+          "excerpt": "The system takes effect in April 2027, but the procedures have already begun. Pre-enforcement applications for supervising support organisation licences are being accepted now, and pre-enforcement applications for training-employment plan certification open on September 1, 2026. The technical intern training side has deadlines too. We lay out the calendar from primary sources.",
+          "content": "**In short:** the system takes effect in April 2027, but **the procedures have already begun**. Pre-enforcement applications for **supervising support organisation (監理支援機関) licences are being accepted now**, and pre-enforcement applications for **training-employment plan certification open on September 1, 2026**. The technical intern training side has deadlines too: new supervising organisation licences **by September 30, 2026**, and No. 1 technical intern training plan applications **by February 2027**.\n\nThis page is for owners and back-office staff of companies hosting technical intern trainees, or preparing to receive workers under the Employment for Skill Development (育成就労) system. Not a system explainer — **only \"by when, and what\"**, from the OTIT's published pages (checked 14 August 2026).\n\n## It starts next April — why move now?\n\n**Because pre-enforcement application machinery is already running.** Wait for enforcement and you will not be ready on day one. And on the technical intern training side, **the windows for new applications are closing on a published schedule**. Companies thinking \"we'll stay on technical intern training until the new system starts\" are exactly the ones who need both calendars side by side.\n\n## By when, and what?\n\nAll items below are stated on the OTIT's pages (checked 14 August 2026). **The pages are updated frequently — reconfirm on the latest page before acting.**\n\n| When | What |\n|---|---|\n| **Now accepting** | Pre-enforcement applications for **supervising support organisation licences** (full document set and forms published) |\n| **From September 1, 2026** | Pre-enforcement applications for **training-employment plan certification** (\"send so as to arrive on or after September 1\") |\n| **By September 30, 2026** | Applications for new **supervising organisation** licences under the **technical intern training** system |\n| **By February 2027** | Applications for certification of **No. 1 technical intern training plans** under the **technical intern training** system |\n| **April 1, 2027** | The Employment for Skill Development system takes effect (planned) |\n\nTwo cautions. First, **\"September 30\" is the deadline for new supervising organisation licences under technical intern training** — not a deadline for the new system's applications. Much circulating material confuses the two. Second, **the mailing destinations differ**: the licence application goes to the head-office examination division **annex** (a different address from the head office), while plan certification goes to the **regional offices and branches** (not the head office). The OTIT flags both itself. A dedicated call centre for pre-enforcement applications is open (0570-011-300, weekdays 9:00–17:00).\n\n## What does the receiving company prepare?\n\nThe list of application forms tells you, in reverse, what will be asked.\n\n| Form | What to prepare |\n|---|---|\n| 1-2 | **The employment contract and conditions document** — rebuild the contract templates |\n| 1-13 | The **statement of important matters on treatment** during the period |\n| 1-15 / 1-39 | Statements of **remuneration, accommodation and amounts collected** (1-39 adds relocation costs) — [what goes into the treatment sections](/en/labor/column/ikusei-shuro-keikaku-taigu-kakikata) |\n| 1-11 | Acceptance letters for the **training-employment supervisor, instructor and life advisor** — three roles to fill |\n| 1-35 | The declaration on **target Japanese-language ability** — decide the learning arrangements |\n| 1-16 to 1-22 | **The seven transfer-related forms** — [insurance and notifications on transfer](/en/labor/column/ikusei-shuro-tenseki-shakaihoken-koyohoken) |\n| 1-36 | The excellent-standards declaration — decide whether to pursue it |\n\nSeven forms for transfers alone — **the number of forms itself shows that transfer sits at the centre of the system**. The overall picture is in [What changes for labour administration between technical intern training and the new system?](/en/labor/column/ginou-jisshu-ikusei-shuro-roumu-chigai); the work-rules side in [How do you revise the work rules before receiving workers?](/en/labor/column/ikusei-shuro-shugyokisoku-minaoshi).\n\n## Whom do you ask for what?\n\n| Task | Whose work |\n|---|---|\n| The licence application and the plan-certification documents | **A gyoseishoshi** (四葉行政書士事務所 — a separate business from this office, engaged under a separate contract) |\n| **Securing the external auditor** | The published document lists include **the auditor's acceptance letters** (licence = reference form 2-5; plan certification = form 1-26). **The auditor must therefore be decided before the application is filed.** For choosing whom to appoint, see [the external auditor page](/en/legal/services/ikuseishuro-gaibu-kansa) (四葉行政書士事務所, a separate business); for what an audit examines and how to prepare, [the preparing-side page](/en/labor/services/gaibu-kansanin) |\n| Contract templates, treatment documents, work rules, social insurance — **rebuilding the labour side** | **A shakai hoken roumushi** (this office) |\n\n## What can 四葉社会保険労務士事務所 do?\n\n四葉社会保険労務士事務所, in Kohinata, Bunkyo City, handles the labour-side preparation — the employment contract templates (the substance behind form 1-2), the treatment statements, the work-rules revision, and the social and labour insurance procedures. **Consultation is free of charge.** Fees are in the [fee schedule](/en/labor/ryokin). We start from a stocktake of \"in our case, what by when\".\n\n### Whom to consult\n\nLicence applications, plan certification and residence status go to **四葉行政書士事務所** (a separate business from this office, engaged under a separate contract). External auditors may be attorneys, shakai hoken roumushi or gyoseishoshi; at Yotsuba either office can accept the role, but **each accepts it as an independent business under its own contract**. Housing goes to **四葉不動産株式会社** (likewise), payroll taxation to **a tax accountant**, disputes to **an attorney**. No referral fees change hands.\n\n## Frequently asked questions\n\n**Q. Why are applications open before the system takes effect?**\nA. Because a pre-enforcement application mechanism exists. Licence applications are being accepted now, and plan-certification applications open on September 1, 2026 (OTIT, checked 14 August 2026). To use the system from day one (April 1, 2027, planned), the permissions must be progressed beforehand.\n\n**Q. We heard \"apply by September 30\" — is that the new system's deadline?**\nA. No. September 30, 2026 is the date the OTIT gives for new supervising organisation licence applications under the technical intern training system. It is not a recommended deadline for the new system's applications. The two are widely confused — check the OTIT's own pages.\n\n**Q. We are still hosting technical intern trainees. Does this concern us?**\nA. Yes. No. 1 technical intern training plan applications run until February 2027; after that, new intake moves to the new system. Companies currently hosting trainees are precisely the ones that need the transition calendar early. See [the comparison article](/en/labor/column/ginou-jisshu-ikusei-shuro-roumu-chigai).\n\n**Q. By when must the external auditor be decided?**\nA. The document lists include the auditor's acceptance letter (reference form 2-5 for the licence), so the auditor must be in place when the application is filed. \"Find one after the licence is granted\" is not an available order of events. For choosing whom to appoint, see [the external auditor page](/en/legal/services/ikuseishuro-gaibu-kansa) (四葉行政書士事務所, a separate business).\n\n## Sources for this article\n\n- OTIT, \"**Pre-enforcement applications for supervising support organisation licences**\" (updated 10 July 2026; checked 14 August 2026) — now accepting; document list including reference form 2-5; mailing destination (head-office examination division annex); call centre; the note \"apply for new supervising organisation licences under the technical intern training system by September 30, 2026\"\n- OTIT, \"**Pre-enforcement applications for training-employment plan certification**\" (updated 5 August 2026; checked 14 August 2026) — \"opens September 1; send to arrive on or after September 1\"; regional offices/branches as destination; reference forms 1-1 to 1-39; the note \"apply for No. 1 technical intern training plan certification by February 2027\"\n- The legal basis is the Act on Proper Technical Intern Training and Protection of Technical Intern Trainees (平成28年法律第89号) as amended by Act No. 60 of 2024 (**the current text on e-Gov still carries the pre-amendment title — confirmed 14 August 2026**; the system's content rests on OTIT, Ministry of Justice and MHLW publications)\n- **Deadlines and acceptance status are updated. Always reconfirm on the OTIT's latest pages before acting**\n\nThis article is general information. Judgments that fit your particular circumstances are made by a qualified professional after a meeting. Written by [Joji Uramatsu](/en/about/uramatsu) (Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist).",
+          "category": "Procedures and deadlines",
+          "keywords": [
+            "ikusei shuro employment skill development what to do now",
+            "pre-enforcement application schedule",
+            "supervising support organisation licence deadline",
+            "plan certification September 1",
+            "technical intern training supervising organisation deadline",
+            "receiving company preparation"
+          ],
+          "tags": [
+            "Employment for Skill Development",
+            "pre-enforcement applications",
+            "deadlines",
+            "supervising support organisations",
+            "technical intern training",
+            "calendar"
+          ],
+          "author": {
+            "name": "Joji Uramatsu",
+            "title": "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所"
+          },
+          "faq": [
+            {
+              "question": "Why are applications open before the system takes effect?",
+              "answer": "Because a pre-enforcement application mechanism exists. Licence applications are being accepted now, and plan-certification applications open on September 1, 2026 (OTIT, checked 14 August 2026). To use the system from day one (April 1, 2027, planned), the permissions must be progressed beforehand."
+            },
+            {
+              "question": "We heard \"apply by September 30\" — is that the new system's deadline?",
+              "answer": "No. September 30, 2026 is the date the OTIT gives for new supervising organisation licence applications under the technical intern training system. It is not a recommended deadline for the new system's applications. The two are widely confused — check the OTIT's own pages."
+            },
+            {
+              "question": "We are still hosting technical intern trainees. Does this concern us?",
+              "answer": "Yes. No. 1 technical intern training plan applications run until February 2027; after that, new intake moves to the new system. Companies currently hosting trainees are precisely the ones that need the transition calendar early. See the comparison article."
+            },
+            {
+              "question": "By when must the external auditor be decided?",
+              "answer": "The document lists include the auditor's acceptance letter (reference form 2-5 for the licence), so the auditor must be in place when the application is filed. \"Find one after the licence is granted\" is not an available order of events. For choosing whom to appoint, see the external auditor page (四葉行政書士事務所, a separate business)."
+            }
+          ]
+        },
+        "zh-tw": {
+          "title": "育成就勞，現在該做什麼",
+          "excerpt": "施行是2027年4月，但手續已經開始了。監理支援機關許可的施行日前申請受理中，育成就勞計畫認定的施行日前申請自2026年9月1日開始。技能實習側也有期限（監理團體新規許可至2026年9月30日等）。本文以一次資料確認的行事曆整理「何時之前・做什麼」。",
+          "content": "**結論（先講重點）**：施行是2027年4月，但**手續已經開始了**。監理支援機關許可的施行日前申請**受理中**，**育成就勞計畫認定的施行日前申請自2026年9月1日開始**。技能實習側也有期限：監理團體的新規許可至**2026年9月30日**、1號技能實習計畫的認定申請至**2027年2月**。\n\n本頁面寫給正在接收技能實習生、或準備以育成就勞接收外國人材的公司經營者與總務人員。不是制度解說，只從外國人技能實習機構（OTIT）的公開資料（2026年8月14日確認）整理**「何時之前・做什麼」**。\n\n## 施行是明年4月，為什麼是現在？\n\n**因為施行日前申請的機制已經在運轉。** 等施行才動，施行日就來不及。而且技能實習側，**新規受理關閉的期限**已經公示。「育成就勞開始之前先用技能實習」——這樣想的公司，恰恰需要同時看這兩份行事曆。\n\n## 何時之前，提出什麼？\n\n以下全部是OTIT公開頁面（2026年8月14日確認）明記的事項。**頁面更新頻繁，行動前務必以最新頁面再確認。**\n\n| 時期 | 發生什麼 |\n|---|---|\n| **受理中** | **監理支援機關許可**的施行日前申請（申請書類一式・樣式已公開） |\n| **2026年9月1日起** | **育成就勞計畫認定**的施行日前申請開始（「請於9月1日以後送達」） |\n| **2026年9月30日前** | **技能實習**制度的**監理團體新規許可**申請 |\n| **2027年2月前** | **技能實習**制度的**1號技能實習計畫**認定申請 |\n| **2027年4月1日** | 育成就勞制度施行（預定） |\n\n兩點注意。第一，**「9月30日」是技能實習的監理團體新規許可的期限**，不是育成就勞的申請期限。混淆兩者的資訊不少，公司內部共享時也請區分。第二，**提出地點因申請而異**：監理支援機關許可寄往本部審查課**分室**（與本部地址不同），育成就勞計畫認定寄往**地方事務所・支所**（不是本部）。OTIT自己在兩處都加了注意標記。施行日前申請的一般諮詢，設有專用客服電話（0570-011-300・平日9:00〜17:00）。\n\n## 接收的公司，要準備什麼？\n\n從育成就勞計畫認定的申請樣式一覽，**可以反推會被要求什麼**。\n\n| 樣式 | 要準備的東西 |\n|---|---|\n| 第1-2號 | **雇用契約書及雇用條件書**——契約書式的重建 |\n| 第1-13號 | 期間中的**待遇重要事項說明書** |\n| 第1-15號・第1-39號 | **報酬・宿泊設施・徵收費用**（第1-39號含移動・轉居費用等）的說明書——[待遇欄寫什麼](/zh-tw/labor/column/ikusei-shuro-keikaku-taigu-kakikata) |\n| 第1-11號 | **育成就勞責任者・指導員・生活相談員**的就任承諾書——3個職務的人選 |\n| 第1-35號 | **目標日本語能力**講習等履修狀況申告書——日語學習體制 |\n| 第1-16號〜第1-22號 | **轉籍（實施者變更希望）相關7樣式**——[轉籍時的保險與申報](/zh-tw/labor/column/ikusei-shuro-tenseki-shakaihoken-koyohoken) |\n| 第1-36號 | 優良要件適合申告書——是否爭取優良要件的判斷 |\n\n光轉籍就有7個樣式——**樣式的數量本身，顯示轉籍位於這個制度的中心**。整體圖像見[技能實習與育成就勞，勞務會有什麼不同](/zh-tw/labor/column/ginou-jisshu-ikusei-shuro-roumu-chigai)，就業規則側的準備見[接收之前，就業規則怎麼修](/zh-tw/labor/column/ikusei-shuro-shugyokisoku-minaoshi)。\n\n## 找誰，辦什麼？\n\n| 要做的事 | 誰的業務 |\n|---|---|\n| 監理支援機關的許可申請・育成就勞計畫認定的申請書類製作 | **行政書士**（四葉行政書士事務所。與本事務所是不同的事業體，另行簽約） |\n| **外部稽核人員的確保** | 申請書類一覽含**外部稽核人員・稽核人員（外部監査人・監査人）的就任承諾書**（監理支援機關許可＝參考樣式第2-5號、計畫認定＝第1-26號）。**也就是說，申請時點稽核人員必須已經確定。** 委託對象的選法・要件見[育成就勞的外部稽核人員](/zh-tw/legal/services/ikuseishuro-gaibu-kansa)（四葉行政書士事務所・不同事業體）；稽核會看什麼・如何準備見[外部稽核人員（備妥側）](/zh-tw/labor/services/gaibu-kansanin) |\n| 雇用契約書式・待遇書面・就業規則・社會保險——**勞務的重建** | **社會保險勞務士**（本事務所） |\n\n## 四葉社会保険労務士事務所能做什麼？\n\n位於文京區小日向的四葉社会保険労務士事務所，承接面向育成就勞接收的**勞務側準備**——雇用契約書式（對應第1-2號的內容）、待遇說明書面的整理、就業規則的修訂、社會保險・勞動保險手續。**諮詢免費。** 費用載於[報酬額表](/zh-tw/labor/ryokin)。從「我們公司的話，何時之前做什麼」的盤點開始，與您一起進行。\n\n### 該向誰諮詢\n\n監理支援機關的許可申請・育成就勞計畫認定的申請・在留資格由**四葉行政書士事務所**承接（與本事務所是不同的事業體，另行簽約）。外部稽核人員由律師・社會保險勞務士・行政書士任一資格皆可就任，四葉的行政書士事務所・社會保險勞務士事務所都可以承接，但**各自作為獨立的事業體、以各自的契約受任**。住居・宿舍由**四葉不動産株式会社**（同）、薪資課稅是**稅理士**、爭議案件是**律師**的業務。以上均不收取介紹費。\n\n## 常見問題\n\n**Q. 還沒施行，為什麼申請已經開始？**\nA. 因為設有施行日前申請的機制。監理支援機關許可受理中，育成就勞計畫認定自2026年9月1日開始（OTIT公開資料・2026年8月14日確認）。要在施行日（2027年4月1日預定）開始使用制度，就必須在施行前推進許可・認定的手續。\n\n**Q. 聽說「9月30日前要申請」，是育成就勞的期限嗎？**\nA. 不是。2026年9月30日是OTIT就技能實習制度的監理團體新規許可申請所示的期限，不是育成就勞申請的推薦期限。混淆兩者的資訊在流傳，請以一次資料（OTIT的頁面）確認。\n\n**Q. 目前還在用技能實習接收。有關係嗎？**\nA. 有。1號技能實習計畫的認定申請至2027年2月，之後的新規將移往育成就勞側。正在用技能實習接收的公司，更需要及早畫出移行的行事曆。整體差異見[比較文章](/zh-tw/labor/column/ginou-jisshu-ikusei-shuro-roumu-chigai)。\n\n**Q. 外部稽核人員要在什麼時候之前決定？**\nA. 申請書類一覽含就任承諾書（監理支援機關許可＝參考樣式第2-5號），因此提出申請書的時點就必須已經確定。「許可下來再找」的順序不可行。委託對象的選法見[育成就勞的外部稽核人員](/zh-tw/legal/services/ikuseishuro-gaibu-kansa)（四葉行政書士事務所・不同事業體）。\n\n## 本文依據\n\n- 外國人技能實習機構「**監理支援機關許可施行日前申請**」（令和8年7月10日更新・2026年8月14日確認）――受理中・申請書類一覽（含參考樣式第2-5號）・提出地點（本部審查課分室）・客服電話・「技能實習制度的監理團體新規許可請於令和8年9月30日前申請」的注記\n- 外國人技能實習機構「**育成就勞計畫認定施行日前申請**」（令和8年8月5日更新・2026年8月14日確認）――「9月1日開始・請於9月1日以後送達」・提出地點（地方事務所・支所）・參考樣式第1-1號〜第1-39號一覽・「1號技能實習計畫的認定申請請於令和9年2月前」的注記\n- 育成就勞制度的根據法令，是令和6年法律第60號對外國人の技能実習の適正な実施及び技能実習生の保護に関する法律（平成28年法律第89號）的修正（**e-Gov的現行條文仍為改題前，2026年8月14日確認**。制度內容依OTIT・法務省・厚生勞動省的公開資料）\n- **各期限・受理狀況會更新。辦理前請務必以OTIT最新頁面確認**\n\n本文為一般性的資訊提供。因應個別情事的判斷，由具備資格者在面談後進行。撰文者為[浦松丈二](/zh-tw/about/uramatsu)（社會保險勞務士・行政書士・宅地建物取引士）。",
+          "category": "手續與期限",
+          "keywords": [
+            "育成就勞 何時開始 做什麼",
+            "育成就勞 施行日前申請 日程",
+            "監理支援機關 許可 申請 期限",
+            "育成就勞計畫認定 9月1日",
+            "技能實習 監理團體 新規許可 期限",
+            "育成就勞 受入企業 準備"
+          ],
+          "tags": [
+            "育成就勞",
+            "施行日前申請",
+            "期限",
+            "監理支援機關",
+            "技能實習",
+            "行事曆"
+          ],
+          "author": {
+            "name": "浦松 丈二",
+            "title": "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+          },
+          "faq": [
+            {
+              "question": "還沒施行，為什麼申請已經開始？",
+              "answer": "因為設有施行日前申請的機制。監理支援機關許可受理中，育成就勞計畫認定自2026年9月1日開始（OTIT公開資料・2026年8月14日確認）。要在施行日（2027年4月1日預定）開始使用制度，就必須在施行前推進許可・認定的手續。"
+            },
+            {
+              "question": "聽說「9月30日前要申請」，是育成就勞的期限嗎？",
+              "answer": "不是。2026年9月30日是OTIT就技能實習制度的監理團體新規許可申請所示的期限，不是育成就勞申請的推薦期限。混淆兩者的資訊在流傳，請以一次資料（OTIT的頁面）確認。"
+            },
+            {
+              "question": "目前還在用技能實習接收。有關係嗎？",
+              "answer": "有。1號技能實習計畫的認定申請至2027年2月，之後的新規將移往育成就勞側。正在用技能實習接收的公司，更需要及早畫出移行的行事曆。整體差異見比較文章。"
+            },
+            {
+              "question": "外部稽核人員要在什麼時候之前決定？",
+              "answer": "申請書類一覽含就任承諾書（監理支援機關許可＝參考樣式第2-5號），因此提出申請書的時點就必須已經確定。「許可下來再找」的順序不可行。委託對象的選法見育成就勞的外部稽核人員（四葉行政書士事務所・不同事業體）。"
+            }
+          ]
+        },
+        "zh": {
+          "title": "育成就劳，现在该做什么",
+          "excerpt": "施行是2027年4月，但手续已经开始了。监理支援机构许可的施行日前申请受理中，育成就劳计划认定的施行日前申请自2026年9月1日开始。技能实习侧也有期限（监理团体新规许可至2026年9月30日等）。本文以一次资料确认的日程表整理「何时之前・做什么」。",
+          "content": "**结论（先讲重点）**：施行是2027年4月，但**手续已经开始了**。监理支援机构许可的施行日前申请**受理中**，**育成就劳计划认定的施行日前申请自2026年9月1日开始**。技能实习侧也有期限：监理团体的新规许可至**2026年9月30日**、1号技能实习计划的认定申请至**2027年2月**。\n\n本页面写给正在接收技能实习生、或准备以育成就劳接收外国人材的公司经营者与总务人员。不是制度解说，只从外国人技能实习机构（OTIT）的公开资料（2026年8月14日确认）整理**「何时之前・做什么」**。\n\n## 施行是明年4月，为什么是现在？\n\n**因为施行日前申请的机制已经在运转。** 等施行才动，施行日就来不及。而且技能实习侧，**新规受理关闭的期限**已经公示。「育成就劳开始之前先用技能实习」——这样想的公司，恰恰需要同时看这两份日程表。\n\n## 何时之前，提出什么？\n\n以下全部是OTIT公开页面（2026年8月14日确认）明记的事项。**页面更新频繁，行动前务必以最新页面再确认。**\n\n| 时期 | 发生什么 |\n|---|---|\n| **受理中** | **监理支援机构许可**的施行日前申请（申请书类一式・样式已公开） |\n| **2026年9月1日起** | **育成就劳计划认定**的施行日前申请开始（「请于9月1日以后送达」） |\n| **2026年9月30日前** | **技能实习**制度的**监理团体新规许可**申请 |\n| **2027年2月前** | **技能实习**制度的**1号技能实习计划**认定申请 |\n| **2027年4月1日** | 育成就劳制度施行（预定） |\n\n两点注意。第一，**「9月30日」是技能实习的监理团体新规许可的期限**，不是育成就劳的申请期限。混淆两者的信息不少，公司内部共享时也请区分。第二，**提出地点因申请而异**：监理支援机构许可寄往本部审查课**分室**（与本部地址不同），育成就劳计划认定寄往**地方事务所・支所**（不是本部）。OTIT自己在两处都加了注意标记。施行日前申请的一般咨询，设有专用客服电话（0570-011-300・平日9:00〜17:00）。\n\n## 接收的公司，要准备什么？\n\n从育成就劳计划认定的申请样式一览，**可以反推会被要求什么**。\n\n| 样式 | 要准备的东西 |\n|---|---|\n| 第1-2号 | **雇用契约书及雇用条件书**——契约书式的重建 |\n| 第1-13号 | 期间中的**待遇重要事项说明书** |\n| 第1-15号・第1-39号 | **报酬・宿泊设施・征收费用**（第1-39号含移动・转居费用等）的说明书——[待遇栏写什么](/zh/labor/column/ikusei-shuro-keikaku-taigu-kakikata) |\n| 第1-11号 | **育成就劳责任者・指导员・生活相谈员**的就任承诺书——3个职务的人选 |\n| 第1-35号 | **目标日语能力**讲习等履修状况申告书——日语学习体制 |\n| 第1-16号〜第1-22号 | **转籍（实施者变更希望）相关7样式**——[转籍时的保险与申报](/zh/labor/column/ikusei-shuro-tenseki-shakaihoken-koyohoken) |\n| 第1-36号 | 优良要件适合申告书——是否争取优良要件的判断 |\n\n光转籍就有7个样式——**样式的数量本身，显示转籍位于这个制度的中心**。整体图像见[技能实习与育成就劳，劳务会有什么不同](/zh/labor/column/ginou-jisshu-ikusei-shuro-roumu-chigai)，就业规则侧的准备见[接收之前，就业规则怎么修](/zh/labor/column/ikusei-shuro-shugyokisoku-minaoshi)。\n\n## 找谁，办什么？\n\n| 要做的事 | 谁的业务 |\n|---|---|\n| 监理支援机构的许可申请・育成就劳计划认定的申请书类制作 | **行政书士**（四葉行政書士事務所。与本事务所是不同的事业体，另行签约） |\n| **外部审计人员的确保** | 申请书类一览含**外部审计人员・审计人员（外部監査人・監査人）的就任承诺书**（监理支援机构许可＝参考样式第2-5号、计划认定＝第1-26号）。**也就是说，申请时点审计人员必须已经确定。** 委托对象的选法・要件见[育成就劳的外部审计人员](/zh/legal/services/ikuseishuro-gaibu-kansa)（四葉行政書士事務所・不同事业体）；审计会看什么・如何准备见[外部审计人员（备妥侧）](/zh/labor/services/gaibu-kansanin) |\n| 雇用契约书式・待遇书面・就业规则・社会保险——**劳务的重建** | **社会保险劳务士**（本事务所） |\n\n## 四葉社会保険労務士事務所能做什么？\n\n位于文京区小日向的四葉社会保険労務士事務所，承接面向育成就劳接收的**劳务侧准备**——雇用契约书式（对应第1-2号的内容）、待遇说明书面的整理、就业规则的修订、社会保险・劳动保险手续。**咨询免费。** 费用载于[报酬额表](/zh/labor/ryokin)。从「我们公司的话，何时之前做什么」的盘点开始，与您一起进行。\n\n### 该向谁咨询\n\n监理支援机构的许可申请・育成就劳计划认定的申请・在留资格由**四葉行政書士事務所**承接（与本事务所是不同的事业体，另行签约）。外部审计人员由律师・社会保险劳务士・行政书士任一资格皆可就任，四叶的行政书士事务所・社会保险劳务士事务所都可以承接，但**各自作为独立的事业体、以各自的契约受任**。住居・宿舍由**四葉不動産株式会社**（同）、工资课税是**税理士**、争议案件是**律师**的业务。以上均不收取介绍费。\n\n## 常见问题\n\n**Q. 还没施行，为什么申请已经开始？**\nA. 因为设有施行日前申请的机制。监理支援机构许可受理中，育成就劳计划认定自2026年9月1日开始（OTIT公开资料・2026年8月14日确认）。要在施行日（2027年4月1日预定）开始使用制度，就必须在施行前推进许可・认定的手续。\n\n**Q. 听说「9月30日前要申请」，是育成就劳的期限吗？**\nA. 不是。2026年9月30日是OTIT就技能实习制度的监理团体新规许可申请所示的期限，不是育成就劳申请的推荐期限。混淆两者的信息在流传，请以一次资料（OTIT的页面）确认。\n\n**Q. 目前还在用技能实习接收。有关系吗？**\nA. 有。1号技能实习计划的认定申请至2027年2月，之后的新规将移往育成就劳侧。正在用技能实习接收的公司，更需要及早画出移行的日程表。整体差异见[比较文章](/zh/labor/column/ginou-jisshu-ikusei-shuro-roumu-chigai)。\n\n**Q. 外部审计人员要在什么时候之前决定？**\nA. 申请书类一览含就任承诺书（监理支援机构许可＝参考样式第2-5号），因此提出申请书的时点就必须已经确定。「许可下来再找」的顺序不可行。委托对象的选法见[育成就劳的外部审计人员](/zh/legal/services/ikuseishuro-gaibu-kansa)（四葉行政書士事務所・不同事业体）。\n\n## 本文依据\n\n- 外国人技能实习机构「**监理支援机构许可施行日前申请**」（令和8年7月10日更新・2026年8月14日确认）――受理中・申请书类一览（含参考样式第2-5号）・提出地点（本部审查课分室）・客服电话・「技能实习制度的监理团体新规许可请于令和8年9月30日前申请」的注记\n- 外国人技能实习机构「**育成就劳计划认定施行日前申请**」（令和8年8月5日更新・2026年8月14日确认）――「9月1日开始・请于9月1日以后送达」・提出地点（地方事务所・支所）・参考样式第1-1号〜第1-39号一览・「1号技能实习计划的认定申请请于令和9年2月前」的注记\n- 育成就劳制度的根据法令，是令和6年法律第60号对外国人の技能実習の適正な実施及び技能実習生の保護に関する法律（平成28年法律第89号）的修正（**e-Gov的现行条文仍为改题前，2026年8月14日确认**。制度内容依OTIT・法务省・厚生劳动省的公开资料）\n- **各期限・受理状况会更新。办理前请务必以OTIT最新页面确认**\n\n本文为一般性的信息提供。因应个别情事的判断，由具备资格者在面谈后进行。撰文者为[浦松丈二](/zh/about/uramatsu)（社会保险劳务士・行政书士・宅地建物取引士）。",
+          "category": "手续与期限",
+          "keywords": [
+            "育成就劳 何时开始 做什么",
+            "育成就劳 施行日前申请 日程",
+            "监理支援机构 许可 申请 期限",
+            "育成就劳计划认定 9月1日",
+            "技能实习 监理团体 新规许可 期限",
+            "育成就劳 受入企业 准备"
+          ],
+          "tags": [
+            "育成就劳",
+            "施行日前申请",
+            "期限",
+            "监理支援机构",
+            "技能实习",
+            "日程表"
+          ],
+          "author": {
+            "name": "浦松 丈二",
+            "title": "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+          },
+          "faq": [
+            {
+              "question": "还没施行，为什么申请已经开始？",
+              "answer": "因为设有施行日前申请的机制。监理支援机构许可受理中，育成就劳计划认定自2026年9月1日开始（OTIT公开资料・2026年8月14日确认）。要在施行日（2027年4月1日预定）开始使用制度，就必须在施行前推进许可・认定的手续。"
+            },
+            {
+              "question": "听说「9月30日前要申请」，是育成就劳的期限吗？",
+              "answer": "不是。2026年9月30日是OTIT就技能实习制度的监理团体新规许可申请所示的期限，不是育成就劳申请的推荐期限。混淆两者的信息在流传，请以一次资料（OTIT的页面）确认。"
+            },
+            {
+              "question": "目前还在用技能实习接收。有关系吗？",
+              "answer": "有。1号技能实习计划的认定申请至2027年2月，之后的新规将移往育成就劳侧。正在用技能实习接收的公司，更需要及早画出移行的日程表。整体差异见比较文章。"
+            },
+            {
+              "question": "外部审计人员要在什么时候之前决定？",
+              "answer": "申请书类一览含就任承诺书（监理支援机构许可＝参考样式第2-5号），因此提出申请书的时点就必须已经确定。「许可下来再找」的顺序不可行。委托对象的选法见育成就劳的外部审计人员（四葉行政書士事務所・不同事业体）。"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "business": "labor",
+      "slug": "ikusei-shuro-tenseki-shakaihoken-koyohoken",
+      "title": "転籍されたとき、社会保険と雇用保険はどうなるのか",
+      "date": "2026-09-01",
+      "category": "手続と期限",
+      "excerpt": "労務の側から見ると、転籍は「離職」と「雇入れ」が同時に起きることです。転籍元は資格喪失、転籍先は資格取得、外国人雇用状況の届出は両方で必要になります。移動・転居の費用は申請の段階で書面により説明しておく事項です。両側の手続を期限とあわせて整理します。",
+      "content": "**結論（先に要点）**：労務の側から見ると、転籍は**「離職」と「雇入れ」が同時に起きること**です。転籍元は社会保険・雇用保険の**資格喪失**、転籍先は**資格取得**の手続を行い、**外国人雇用状況の届出は離職側と雇入れ側の両方で必要**です（労働施策総合推進法第28条第1項）。移動・転居の費用は、**申請の段階で書面により説明しておく事項**になっています（参考様式第1-39号）。\n\nこ…（全3668字）",
+      "status": "published",
+      "author": {
+        "name": "浦松 丈二",
+        "title": "社会保険労務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+      },
+      "keywords": [
+        "育成就労 転籍 社会保険 手続",
+        "転籍 雇用保険 資格喪失 資格取得",
+        "育成就労 転籍 届出 期限",
+        "転籍 外国人雇用状況の届出 両方",
+        "育成就労 転居費用 誰が負担",
+        "転籍元 転籍先 手続"
+      ],
+      "tags": [
+        "育成就労",
+        "転籍",
+        "社会保険",
+        "雇用保険",
+        "資格喪失",
+        "外国人雇用状況の届出"
+      ],
+      "locales": [],
+      "faq": [
+        {
+          "question": "転籍のとき、社会保険は継続できないのですか？",
+          "answer": "制度上の「継続」はなく、転籍元での資格喪失と転籍先での資格取得を、それぞれの期限内に行います。手続が滞ると本人の保険証の切り替えが遅れますので、転籍日が決まった時点で両社の総務が同時に動くのが実務です。"
+        },
+        {
+          "question": "外国人雇用状況の届出は、どちらの会社が出すのですか？",
+          "answer": "両方です。転籍は労務上「離職＋雇入れ」なので、転籍元は離職側の届出、転籍先は雇入れ側の届出をそれぞれ行います（労働施策総合推進法第28条第1項）。雇用保険の被保険者であれば、喪失届・取得届がそれぞれ届出を兼ねます。"
+        },
+        {
+          "question": "転籍を防ぐことはできますか？",
+          "answer": "転籍の要件・可否は主務省令・入管の領域で、当事務所では判断しません。労務の側でできるのは、転籍されにくい職場を作ること——待遇の透明化・生活相談の体制・日本語支援——です。技能実習と育成就労で、労務は何が変わるのかで書いたとおり、労務の軸は「残ってもらう」設計に移ります。"
+        },
+        {
+          "question": "転居費用は会社が持たなければならないのですか？",
+          "answer": "一律の答えは本記事では示しません。負担のルールは運用要領・分野別の定めを確認したうえで、受け入れの入口で書面（参考様式第1-39号の説明書）により明確にしておく事項です。決めていないことがいちばんのリスクです。"
+        }
+      ],
+      "translations": {
+        "en": {
+          "title": "When a worker transfers, what happens to social and employment insurance?",
+          "excerpt": "Seen from the labour side, a transfer is a separation and a hire happening at once. The old employer files losses of insured status, the new employer files acquisitions, and the foreign worker employment status notification is required on both sides. Relocation costs are a matter to be explained in writing at the application stage. We lay out both sides with deadlines.",
+          "content": "**In short:** seen from the labour side, a transfer (tenseki) is **a separation and a hire happening at the same time**. The old employer files the **losses of insured status** for social and employment insurance, the new employer files the **acquisitions**, and **the foreign worker employment status notification is required on both sides** (Act on Comprehensive Promotion of Labour Measures, Article 28, paragraph 1). Relocation costs are **a matter to be explained in writing at the application stage** (reference form 1-39).\n\nThis page is for back-office staff of companies receiving, or preparing to receive, workers under the Employment for Skill Development system. **The conditions under which a transfer is permitted are the territory of ministerial orders and the immigration authorities** — this article does not cover them; for that side, consult 四葉行政書士事務所 (a separate business), which maintains [the external auditor page](/en/legal/services/ikuseishuro-gaibu-kansa). This article covers only **what labour administration does when a transfer happens**.\n\n## What is a transfer, legally speaking?\n\nThe labour and social insurance world has no special \"transfer\" procedure. It is **the end of the employment contract with the old employer and the conclusion of one with the new employer** — a separation plus a hire. So the procedures arise on both sides, exactly as usual. Assume \"it's an intra-system move, so the paperwork must be simplified\" and the notifications get missed.\n\nNote that the plan-certification application set includes **seven forms on changes of implementer** (reference forms 1-16 to 1-22; OTIT, checked 14 August 2026). As the number of forms shows, transfer is not an edge case in this system but **the centre of its design**. Prepare the procedures on the assumption that it will happen — not \"we'll think about it if it does.\"\n\n## What does the old employer file, and by when?\n\n| Procedure | Deadline (guide) |\n|---|---|\n| Health insurance and employees' pension **loss notifications** | Within **5 days** of the event |\n| Employment insurance **loss notification** (confirm with the person whether a separation certificate is wanted) | Within **10 days from the day after** separation |\n| **Employment status notification** (separation side) | The employment insurance loss notification **doubles as it**; for non-insured workers, Form 3 by **the end of the following month** |\n| Handover and settlement of company housing, if provided | Per the contract and [the in-kind compensation treatment](/en/labor/column/shataku-genbutsu-kyuyo-hyojun-hoshu) |\n\nDelay the loss notifications because \"the person is just moving to another company,\" and both the premium calculations and the person's health-insurance switch stall. The deadlines are the same as an ordinary departure.\n\n## What does the new employer file, and by when?\n\n| Procedure | Deadline (guide) |\n|---|---|\n| Health insurance and employees' pension **acquisition notifications** | Within **5 days** of the event |\n| Employment insurance **acquisition notification** | By **the 10th of the month following** the hire |\n| **Employment status notification** (hire side) | The acquisition notification **doubles as it** (complete the residence-status fields correctly) |\n| Employment contract and conditions document (reference form 1-2), treatment statements | Kept consistent with the application-side documents |\n\nThe hire-side skeleton is the same as [What to file, and by when, after incorporating](/en/labor/column/kaisha-setsuritsu-shakaihoken-roudouhoken-kigen) and [Hired a foreign worker? Notify Hello Work](/en/labor/column/gaikokujin-koyo-jokyo-todokede). What makes transfers distinctive is that **the separation-side and hire-side filings run simultaneously across two companies** — familiar from ordinary job changes, and just as easy to drop.\n\n## Who bears the moving and relocation costs?\n\nThe application forms point to where the answer lives. Reference form 1-39 is the statement covering remuneration, accommodation and amounts collected **plus \"moving and relocation costs\"** (OTIT, checked 14 August 2026). In other words, **who bears relocation costs is a matter to be explained in writing at the entrance** — not something to negotiate after a transfer happens.\n\nThe standards for amounts and shares belong to the operating guidelines and sector-specific rules, which this article does not enter. What labour administration does is clear: **put the treatment of housing, the return of company property, and the cost rules into the contract and the internal rules**. The rules side is covered in [How do you revise the work rules before receiving workers?](/en/labor/column/ikusei-shuro-shugyokisoku-minaoshi).\n\n## What can 四葉社会保険労務士事務所 do?\n\n四葉社会保険労務士事務所, in Kohinata, Bunkyo City, handles the loss and acquisition filings and the employment status notifications when a transfer occurs, and designs the contract, housing and cost rules on the assumption that transfers can happen. **Consultation is free of charge.** Fees are in the [fee schedule](/en/labor/ryokin); the full \"what to do now\" calendar is in [The Employment for Skill Development system — what to do now](/en/labor/column/ikusei-shuro-ima-yatte-oku-koto).\n\n### Whom to consult\n\nThe **application side of transfer conditions and procedures**, supervising support organisation licences and residence status go to **四葉行政書士事務所** (a separate business from this office, engaged under a separate contract). Housing and corporate leases go to **四葉不動産株式会社** (likewise). Payroll taxation is for **a tax accountant**, disputes for **an attorney**. No referral fees change hands.\n\n## Frequently asked questions\n\n**Q. Can't the social insurance simply continue across the transfer?**\nA. There is no \"continuation\" mechanism: the old employer files losses and the new employer files acquisitions, each within its deadline. If the paperwork stalls, the person's health-insurance switch is delayed — in practice both companies' back offices move simultaneously once the transfer date is set.\n\n**Q. Which company files the employment status notification?**\nA. Both. A transfer is, in labour terms, a separation plus a hire, so the old employer files the separation-side notification and the new employer the hire-side one (Act on Comprehensive Promotion of Labour Measures, Article 28, paragraph 1). For insured workers, the loss and acquisition notifications each double as the notification.\n\n**Q. Can we prevent transfers?**\nA. The conditions and permissibility of transfers are the territory of ministerial orders and the immigration authorities; this office does not judge them. What labour administration can do is build a workplace people do not transfer out of — transparent treatment, a working life-advisor arrangement, language support. As set out in [the comparison article](/en/labor/column/ginou-jisshu-ikusei-shuro-roumu-chigai), the axis shifts to designing for retention.\n\n**Q. Must the company bear the relocation costs?**\nA. This article gives no blanket answer. The cost rules are checked against the operating guidelines and sector-specific provisions, and then made explicit in writing at the entrance (the form 1-39 statement). Having no rule at all is the biggest risk.\n\n## Sources for this article\n\n- Act on Comprehensive Promotion of Labour Measures (労働施策総合推進法, Act No. 132 of 1966), **Article 28, paragraph 1** (the foreign worker employment status notification) — current text confirmed on e-Gov on 14 August 2026\n- OTIT, \"**Pre-enforcement applications for training-employment plan certification**\" (updated 5 August 2026; checked 14 August 2026) — reference forms 1-16 to 1-22 on changes of implementer; the statement covering moving and relocation costs (form 1-39)\n- The deadlines for acquisitions and losses follow the enforcement ordinances of the Health Insurance Act, the Employees' Pension Insurance Act and the Employment Insurance Act (the acquisition-side provisions are set out in [the incorporation article](/en/labor/column/kaisha-setsuritsu-shakaihoken-roudouhoken-kigen))\n- **The detailed conditions under which transfers are permitted belong to ministerial orders, the operating guidelines and the immigration authorities. This article covers the labour-side procedures only**\n\nThis article is general information. Judgments that fit your particular circumstances are made by a qualified professional after a meeting. Written by [Joji Uramatsu](/en/about/uramatsu) (Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist).",
+          "category": "Procedures and deadlines",
+          "keywords": [
+            "ikusei shuro transfer social insurance procedures",
+            "transfer employment insurance loss acquisition",
+            "transfer notification deadlines Japan",
+            "employment status notification both employers",
+            "relocation costs who bears",
+            "old employer new employer procedures"
+          ],
+          "tags": [
+            "Employment for Skill Development",
+            "transfers",
+            "social insurance",
+            "employment insurance",
+            "loss of insured status",
+            "employment status notification"
+          ],
+          "author": {
+            "name": "Joji Uramatsu",
+            "title": "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所"
+          },
+          "faq": [
+            {
+              "question": "Can't the social insurance simply continue across the transfer?",
+              "answer": "There is no \"continuation\" mechanism: the old employer files losses and the new employer files acquisitions, each within its deadline. If the paperwork stalls, the person's health-insurance switch is delayed — in practice both companies' back offices move simultaneously once the transfer date is set."
+            },
+            {
+              "question": "Which company files the employment status notification?",
+              "answer": "Both. A transfer is, in labour terms, a separation plus a hire, so the old employer files the separation-side notification and the new employer the hire-side one (Act on Comprehensive Promotion of Labour Measures, Article 28, paragraph 1). For insured workers, the loss and acquisition notifications each double as the notification."
+            },
+            {
+              "question": "Can we prevent transfers?",
+              "answer": "The conditions and permissibility of transfers are the territory of ministerial orders and the immigration authorities; this office does not judge them. What labour administration can do is build a workplace people do not transfer out of — transparent treatment, a working life-advisor arrangement, language support. As set out in the comparison article, the axis shifts to designing for retention."
+            },
+            {
+              "question": "Must the company bear the relocation costs?",
+              "answer": "This article gives no blanket answer. The cost rules are checked against the operating guidelines and sector-specific provisions, and then made explicit in writing at the entrance (the form 1-39 statement). Having no rule at all is the biggest risk."
+            }
+          ]
+        },
+        "zh-tw": {
+          "title": "被轉籍時，社會保險與僱用保險會怎麼樣",
+          "excerpt": "從勞務側看，轉籍是「離職」與「僱入」同時發生。轉籍前的公司辦資格喪失、轉籍後的公司辦資格取得，外國人僱用狀況的申報兩邊都需要。移動・轉居費用是申請階段就要以書面說明的事項。本文連同期限，整理兩側的手續。",
+          "content": "**結論（先講重點）**：從勞務側看，轉籍是**「離職」與「僱入」同時發生**。轉籍前的公司辦社會保險・僱用保險的**資格喪失**，轉籍後的公司辦**資格取得**，而**外國人僱用狀況的申報，離職側與僱入側兩邊都需要**（勞動施策總合推進法第28條第1項）。移動・轉居的費用，是**申請階段就要以書面說明的事項**（參考樣式第1-39號）。\n\n本頁面寫給以育成就勞接收・準備接收外國人材的公司總務人員。**轉籍被允許的要件（幾年後・什麼情形）屬主務省令・入管的領域**，本文不處理；要件側請諮詢持有[外部稽核人員頁面](/zh-tw/legal/services/ikuseishuro-gaibu-kansa)的四葉行政書士事務所（不同事業體）。本文只寫**轉籍發生時，勞務要做什麼**。\n\n## 轉籍在法律上是什麼樣的處理？\n\n勞動・社會保險的世界裡，沒有「轉籍」這種特別手續。它是**與轉籍前公司的雇用契約終了，與轉籍後公司的雇用契約締結**——也就是離職加僱入。所以手續在兩側照常發生。以為「制度內的異動，手續應該簡單」，申報就會漏掉。\n\n另外，育成就勞計畫認定的申請樣式中，**實施者變更希望的樣式有7個**（參考樣式第1-16號〜第1-22號。OTIT・2026年8月14日確認）。如樣式數量所示，轉籍不是這個制度的例外事件，而是**設計的中心**。請以「會發生」為前提整備手續，而不是「發生了再想」。\n\n## 轉籍前的公司，何時之前提出什麼？\n\n| 手續 | 期限的基準 |\n|---|---|\n| 健康保險・厚生年金保險 **被保險人資格喪失届** | 事實發生起**5日以內** |\n| 僱用保險 **被保險人資格喪失届**（離職票的要否向本人確認） | 離職日的**翌日起10日以內** |\n| **外國人僱用狀況的申報**（離職側） | 僱用保險的資格喪失届**兼作申報**。非被保險人時以樣式第3號於**翌月末日前** |\n| 有出借宿舍時的騰空・費用清算 | 依契約與[宿舍的現物給與](/zh-tw/labor/column/shataku-genbutsu-kyuyo-hyojun-hoshu)的整理 |\n\n以為「本人只是搬到別家公司」而把喪失届往後放，保險費的計算與本人保險證的切換都會卡住。期限與一般離職相同。\n\n## 轉籍後的公司，何時之前提出什麼？\n\n| 手續 | 期限的基準 |\n|---|---|\n| 健康保險・厚生年金保險 **被保險人資格取得届** | 事實發生起**5日以內** |\n| 僱用保險 **被保險人資格取得届** | 僱入日所屬月的**翌月10日前** |\n| **外國人僱用狀況的申報**（僱入側） | 資格取得届**兼作申報**（正確填寫在留資格等欄位） |\n| 雇用契約書・雇用條件書（參考樣式第1-2號）、待遇說明書面 | 與申請側文件保持一致 |\n\n僱入側手續的骨架，與[成立公司後，何時之前提出什麼](/zh-tw/labor/column/kaisha-setsuritsu-shakaihoken-roudouhoken-kigen)・[僱用了外國人，就要向Hello Work申報](/zh-tw/labor/column/gaikokujin-koyo-jokyo-todokede)相同。轉籍的特徵是**離職側・僱入側的申報跨兩家公司同時進行**——與一般轉職相同，也同樣容易漏。\n\n## 移動與轉居的費用，誰來負擔？\n\n申請樣式指出了答案所在。參考樣式第1-39號，是在報酬・宿泊設施・徵收費用之外，**加上「移動及轉居費用等」的說明書**（OTIT・2026年8月14日確認）。也就是說，**轉籍伴隨的移動・轉居費用由誰如何負擔，是在接收的入口就要以書面說明的事項**，不是轉籍發生後才交涉的話題。\n\n金額・負擔比例的基準屬運用要領・分野別規定的領域，本文不深入。勞務側要做的很明確——**把住居（宿舍）的處理・借用物的返還・費用負擔規則，落到雇用契約與規程裡**。規程側的整理見[接收之前，就業規則怎麼修](/zh-tw/labor/column/ikusei-shuro-shugyokisoku-minaoshi)。\n\n## 四葉社会保険労務士事務所能做什麼？\n\n位於文京區小日向的四葉社会保険労務士事務所，承接轉籍發生時的資格喪失・資格取得・外國人僱用狀況申報的代辦，以及以轉籍為前提的雇用契約・宿舍・費用負擔規則的設計。**諮詢免費。** 費用見[報酬額表](/zh-tw/labor/ryokin)，現在該做的事的全貌見[育成就勞，現在該做什麼](/zh-tw/labor/column/ikusei-shuro-ima-yatte-oku-koto)。\n\n### 該向誰諮詢\n\n轉籍的**要件・手續的申請側**、監理支援機關的許可、在留資格由**四葉行政書士事務所**承接（與本事務所是不同的事業體，另行簽約）。住居・宿舍的物件與法人契約由**四葉不動産株式会社**（同）。薪資課稅是**稅理士**、爭議案件是**律師**的業務。以上均不收取介紹費。\n\n## 常見問題\n\n**Q. 轉籍時，社會保險不能直接延續嗎？**\nA. 沒有制度上的「延續」，而是轉籍前公司的資格喪失與轉籍後公司的資格取得，各自在期限內辦理。手續一卡，本人保險證的切換就會延遲；實務上，轉籍日確定的時點，兩家公司的總務就同時動起來。\n\n**Q. 外國人僱用狀況的申報，由哪家公司提出？**\nA. 兩家都要。轉籍在勞務上是「離職＋僱入」，轉籍前公司辦離職側申報、轉籍後公司辦僱入側申報（勞動施策總合推進法第28條第1項）。若為僱用保險被保險人，喪失届・取得届各自兼作申報。\n\n**Q. 可以防止轉籍嗎？**\nA. 轉籍的要件・可否屬主務省令・入管的領域，本事務所不作判斷。勞務側能做的，是打造不被轉籍出去的職場——待遇的透明化・生活相談體制・日語支援。如[比較文章](/zh-tw/labor/column/ginou-jisshu-ikusei-shuro-roumu-chigai)所寫，勞務的軸心移向「留下來」的設計。\n\n**Q. 轉居費用必須由公司負擔嗎？**\nA. 本文不給一律的答案。負擔規則要先確認運用要領・分野別規定，再於接收的入口以書面（第1-39號說明書）明確化。什麼都沒決定，才是最大的風險。\n\n## 本文依據\n\n- 勞動施策總合推進法（労働施策の総合的な推進並びに労働者の雇用の安定及び職業生活の充実等に関する法律。昭和41年法律第132號）**第28條第1項**（外國人僱用狀況的申報） ―― 2026年8月14日於e-Gov法令檢索確認現行條文\n- 外國人技能實習機構「**育成就勞計畫認定施行日前申請**」（令和8年8月5日更新・2026年8月14日確認）――實施者變更希望的參考樣式第1-16號〜第1-22號、含移動及轉居費用等的說明書（第1-39號）\n- 社會保險・僱用保險資格取得・喪失的期限，依健康保險法施行規則・厚生年金保險法施行規則・僱用保險法施行規則的規定（取得側條文記載於[成立公司的文章](/zh-tw/labor/column/kaisha-setsuritsu-shakaihoken-roudouhoken-kigen)）\n- **轉籍被允許的要件詳情，屬主務省令・運用要領・入管的領域。本文僅處理勞務側的手續**\n\n本文為一般性的資訊提供。因應個別情事的判斷，由具備資格者在面談後進行。撰文者為[浦松丈二](/zh-tw/about/uramatsu)（社會保險勞務士・行政書士・宅地建物取引士）。",
+          "category": "手續與期限",
+          "keywords": [
+            "育成就勞 轉籍 社會保險 手續",
+            "轉籍 僱用保險 資格喪失 資格取得",
+            "育成就勞 轉籍 申報 期限",
+            "轉籍 外國人僱用狀況申報 兩邊",
+            "育成就勞 轉居費用 誰負擔",
+            "轉籍前 轉籍後 手續"
+          ],
+          "tags": [
+            "育成就勞",
+            "轉籍",
+            "社會保險",
+            "僱用保險",
+            "資格喪失",
+            "外國人僱用狀況申報"
+          ],
+          "author": {
+            "name": "浦松 丈二",
+            "title": "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+          },
+          "faq": [
+            {
+              "question": "轉籍時，社會保險不能直接延續嗎？",
+              "answer": "沒有制度上的「延續」，而是轉籍前公司的資格喪失與轉籍後公司的資格取得，各自在期限內辦理。手續一卡，本人保險證的切換就會延遲；實務上，轉籍日確定的時點，兩家公司的總務就同時動起來。"
+            },
+            {
+              "question": "外國人僱用狀況的申報，由哪家公司提出？",
+              "answer": "兩家都要。轉籍在勞務上是「離職＋僱入」，轉籍前公司辦離職側申報、轉籍後公司辦僱入側申報（勞動施策總合推進法第28條第1項）。若為僱用保險被保險人，喪失届・取得届各自兼作申報。"
+            },
+            {
+              "question": "可以防止轉籍嗎？",
+              "answer": "轉籍的要件・可否屬主務省令・入管的領域，本事務所不作判斷。勞務側能做的，是打造不被轉籍出去的職場——待遇的透明化・生活相談體制・日語支援。如比較文章所寫，勞務的軸心移向「留下來」的設計。"
+            },
+            {
+              "question": "轉居費用必須由公司負擔嗎？",
+              "answer": "本文不給一律的答案。負擔規則要先確認運用要領・分野別規定，再於接收的入口以書面（第1-39號說明書）明確化。什麼都沒決定，才是最大的風險。"
+            }
+          ]
+        },
+        "zh": {
+          "title": "被转籍时，社会保险与雇用保险会怎么样",
+          "excerpt": "从劳务侧看，转籍是「离职」与「雇入」同时发生。转籍前的公司办资格丧失、转籍后的公司办资格取得，外国人雇用状况的申报两边都需要。移动・转居费用是申请阶段就要以书面说明的事项。本文连同期限，整理两侧的手续。",
+          "content": "**结论（先讲重点）**：从劳务侧看，转籍是**「离职」与「雇入」同时发生**。转籍前的公司办社会保险・雇用保险的**资格丧失**，转籍后的公司办**资格取得**，而**外国人雇用状况的申报，离职侧与雇入侧两边都需要**（劳动施策总合推进法第28条第1项）。移动・转居的费用，是**申请阶段就要以书面说明的事项**（参考样式第1-39号）。\n\n本页面写给以育成就劳接收・准备接收外国人材的公司总务人员。**转籍被允许的要件（几年后・什么情形）属主务省令・入管的领域**，本文不处理；要件侧请咨询持有[外部审计人员页面](/zh/legal/services/ikuseishuro-gaibu-kansa)的四葉行政書士事務所（不同事业体）。本文只写**转籍发生时，劳务要做什么**。\n\n## 转籍在法律上是什么样的处理？\n\n劳动・社会保险的世界里，没有「转籍」这种特别手续。它是**与转籍前公司的雇用契约终了，与转籍后公司的雇用契约缔结**——也就是离职加雇入。所以手续在两侧照常发生。以为「制度内的异动，手续应该简单」，申报就会漏掉。\n\n另外，育成就劳计划认定的申请样式中，**实施者变更希望的样式有7个**（参考样式第1-16号〜第1-22号。OTIT・2026年8月14日确认）。如样式数量所示，转籍不是这个制度的例外事件，而是**设计的中心**。请以「会发生」为前提整备手续，而不是「发生了再想」。\n\n## 转籍前的公司，何时之前提出什么？\n\n| 手续 | 期限的基准 |\n|---|---|\n| 健康保险・厚生年金保险 **被保险人资格丧失届** | 事实发生起**5日以内** |\n| 雇用保险 **被保险人资格丧失届**（离职票的要否向本人确认） | 离职日的**翌日起10日以内** |\n| **外国人雇用状况的申报**（离职侧） | 雇用保险的资格丧失届**兼作申报**。非被保险人时以样式第3号于**翌月末日前** |\n| 有出借宿舍时的腾空・费用清算 | 依契约与[宿舍的现物给与](/zh/labor/column/shataku-genbutsu-kyuyo-hyojun-hoshu)的整理 |\n\n以为「本人只是搬到别家公司」而把丧失届往后放，保险费的计算与本人保险证的切换都会卡住。期限与一般离职相同。\n\n## 转籍后的公司，何时之前提出什么？\n\n| 手续 | 期限的基准 |\n|---|---|\n| 健康保险・厚生年金保险 **被保险人资格取得届** | 事实发生起**5日以内** |\n| 雇用保险 **被保险人资格取得届** | 雇入日所属月的**翌月10日前** |\n| **外国人雇用状况的申报**（雇入侧） | 资格取得届**兼作申报**（正确填写在留资格等栏位） |\n| 雇用契约书・雇用条件书（参考样式第1-2号）、待遇说明书面 | 与申请侧文件保持一致 |\n\n雇入侧手续的骨架，与[成立公司后，何时之前提出什么](/zh/labor/column/kaisha-setsuritsu-shakaihoken-roudouhoken-kigen)・[雇用了外国人，就要向Hello Work申报](/zh/labor/column/gaikokujin-koyo-jokyo-todokede)相同。转籍的特征是**离职侧・雇入侧的申报跨两家公司同时进行**——与一般转职相同，也同样容易漏。\n\n## 移动与转居的费用，谁来负担？\n\n申请样式指出了答案所在。参考样式第1-39号，是在报酬・宿泊设施・征收费用之外，**加上「移动及转居费用等」的说明书**（OTIT・2026年8月14日确认）。也就是说，**转籍伴随的移动・转居费用由谁如何负担，是在接收的入口就要以书面说明的事项**，不是转籍发生后才交涉的话题。\n\n金额・负担比例的基准属运用要领・分野别规定的领域，本文不深入。劳务侧要做的很明确——**把住居（宿舍）的处理・借用物的返还・费用负担规则，落到雇用契约与规程里**。规程侧的整理见[接收之前，就业规则怎么修](/zh/labor/column/ikusei-shuro-shugyokisoku-minaoshi)。\n\n## 四葉社会保険労務士事務所能做什么？\n\n位于文京区小日向的四葉社会保険労務士事務所，承接转籍发生时的资格丧失・资格取得・外国人雇用状况申报的代办，以及以转籍为前提的雇用契约・宿舍・费用负担规则的设计。**咨询免费。** 费用见[报酬额表](/zh/labor/ryokin)，现在该做的事的全貌见[育成就劳，现在该做什么](/zh/labor/column/ikusei-shuro-ima-yatte-oku-koto)。\n\n### 该向谁咨询\n\n转籍的**要件・手续的申请侧**、监理支援机构的许可、在留资格由**四葉行政書士事務所**承接（与本事务所是不同的事业体，另行签约）。住居・宿舍的物件与法人契约由**四葉不動産株式会社**（同）。工资课税是**税理士**、争议案件是**律师**的业务。以上均不收取介绍费。\n\n## 常见问题\n\n**Q. 转籍时，社会保险不能直接延续吗？**\nA. 没有制度上的「延续」，而是转籍前公司的资格丧失与转籍后公司的资格取得，各自在期限内办理。手续一卡，本人保险证的切换就会延迟；实务上，转籍日确定的时点，两家公司的总务就同时动起来。\n\n**Q. 外国人雇用状况的申报，由哪家公司提出？**\nA. 两家都要。转籍在劳务上是「离职＋雇入」，转籍前公司办离职侧申报、转籍后公司办雇入侧申报（劳动施策总合推进法第28条第1项）。若为雇用保险被保险人，丧失届・取得届各自兼作申报。\n\n**Q. 可以防止转籍吗？**\nA. 转籍的要件・可否属主务省令・入管的领域，本事务所不作判断。劳务侧能做的，是打造不被转籍出去的职场——待遇的透明化・生活相谈体制・日语支援。如[比较文章](/zh/labor/column/ginou-jisshu-ikusei-shuro-roumu-chigai)所写，劳务的轴心移向「留下来」的设计。\n\n**Q. 转居费用必须由公司负担吗？**\nA. 本文不给一律的答案。负担规则要先确认运用要领・分野别规定，再于接收的入口以书面（第1-39号说明书）明确化。什么都没决定，才是最大的风险。\n\n## 本文依据\n\n- 劳动施策总合推进法（労働施策の総合的な推進並びに労働者の雇用の安定及び職業生活の充実等に関する法律。昭和41年法律第132号）**第28条第1项**（外国人雇用状况的申报） ―― 2026年8月14日于e-Gov法令检索确认现行条文\n- 外国人技能实习机构「**育成就劳计划认定施行日前申请**」（令和8年8月5日更新・2026年8月14日确认）――实施者变更希望的参考样式第1-16号〜第1-22号、含移动及转居费用等的说明书（第1-39号）\n- 社会保险・雇用保险资格取得・丧失的期限，依健康保险法施行规则・厚生年金保险法施行规则・雇用保险法施行规则的规定（取得侧条文记载于[成立公司的文章](/zh/labor/column/kaisha-setsuritsu-shakaihoken-roudouhoken-kigen)）\n- **转籍被允许的要件详情，属主务省令・运用要领・入管的领域。本文仅处理劳务侧的手续**\n\n本文为一般性的信息提供。因应个别情事的判断，由具备资格者在面谈后进行。撰文者为[浦松丈二](/zh/about/uramatsu)（社会保险劳务士・行政书士・宅地建物取引士）。",
+          "category": "手续与期限",
+          "keywords": [
+            "育成就劳 转籍 社会保险 手续",
+            "转籍 雇用保险 资格丧失 资格取得",
+            "育成就劳 转籍 申报 期限",
+            "转籍 外国人雇用状况申报 两边",
+            "育成就劳 转居费用 谁负担",
+            "转籍前 转籍后 手续"
+          ],
+          "tags": [
+            "育成就劳",
+            "转籍",
+            "社会保险",
+            "雇用保险",
+            "资格丧失",
+            "外国人雇用状况申报"
+          ],
+          "author": {
+            "name": "浦松 丈二",
+            "title": "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+          },
+          "faq": [
+            {
+              "question": "转籍时，社会保险不能直接延续吗？",
+              "answer": "没有制度上的「延续」，而是转籍前公司的资格丧失与转籍后公司的资格取得，各自在期限内办理。手续一卡，本人保险证的切换就会延迟；实务上，转籍日确定的时点，两家公司的总务就同时动起来。"
+            },
+            {
+              "question": "外国人雇用状况的申报，由哪家公司提出？",
+              "answer": "两家都要。转籍在劳务上是「离职＋雇入」，转籍前公司办离职侧申报、转籍后公司办雇入侧申报（劳动施策总合推进法第28条第1项）。若为雇用保险被保险人，丧失届・取得届各自兼作申报。"
+            },
+            {
+              "question": "可以防止转籍吗？",
+              "answer": "转籍的要件・可否属主务省令・入管的领域，本事务所不作判断。劳务侧能做的，是打造不被转籍出去的职场——待遇的透明化・生活相谈体制・日语支援。如比较文章所写，劳务的轴心移向「留下来」的设计。"
+            },
+            {
+              "question": "转居费用必须由公司负担吗？",
+              "answer": "本文不给一律的答案。负担规则要先确认运用要领・分野别规定，再于接收的入口以书面（第1-39号说明书）明确化。什么都没决定，才是最大的风险。"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "business": "labor",
+      "slug": "ikusei-shuro-keikaku-taigu-kakikata",
+      "title": "育成就労計画の「待遇」欄に、何を書くのか",
+      "date": "2026-09-01",
+      "category": "労務のしくみ",
+      "excerpt": "育成就労計画認定の申請には、待遇を書面で説明する様式が4つあります。宿泊施設と徴収費用を書かせる様式があるということは、住居費をいくら徴収しているかが確認の対象になるということです。社会保険の現物給与との接続、賃金控除の協定まで、労務として作っておく中身を整理します。",
+      "content": "**結論（先に要点）**：育成就労計画認定の申請には、**待遇を書面で説明する様式が4つ**あります（雇用契約書・雇用条件書、待遇に関する重要事項説明書、報酬・宿泊施設・徴収費用の説明書×2）。**宿泊施設と徴収費用を書かせる様式がある**ということは、**住居費をいくら徴収しているかが確認の対象になる**ということです。ここは社会保険の**現物給与**（健康保険法第46条）と直結します。\n\nこの…（全3439字）",
+      "status": "published",
+      "author": {
+        "name": "浦松 丈二",
+        "title": "社会保険労務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+      },
+      "keywords": [
+        "育成就労計画 待遇 書き方",
+        "育成就労 住居費 徴収 いくら",
+        "育成就労 宿泊施設 説明書",
+        "育成就労 現物給与 社会保険",
+        "寮費 給与天引き 労使協定",
+        "育成就労 重要事項説明書 様式"
+      ],
+      "tags": [
+        "育成就労",
+        "待遇",
+        "住居費",
+        "現物給与",
+        "賃金控除",
+        "社宅"
+      ],
+      "locales": [],
+      "faq": [
+        {
+          "question": "住居費はいくらに設定すればいいですか？",
+          "answer": "本記事では金額を示しません。徴収水準は運用要領（2026年8月5日改正）と分野別の定めで確認する領域です。労務の側で確実にすべきは、実際の徴収額・様式の記載・給与明細の控除の三つを一致させること、そして徴収の根拠を労使協定と規程に落とすことです。"
+        },
+        {
+          "question": "寮費を給与から天引きしています。問題ありませんか？",
+          "answer": "賃金からの控除には、賃金全額払いの原則（労働基準法第24条）の例外として労使協定が必要です。協定・就業規則・社宅規程・実際の控除額が揃っているかをまず確認してください。書面の整備は当事務所でお受けします。"
+        },
+        {
+          "question": "現物給与の算入は、育成就労でも同じですか？",
+          "answer": "同じです。社会保険の現物給与の仕組み（健康保険法第46条・厚生労働大臣が定める価額）は在留資格で変わりません。本人負担額と告示価額の差額が報酬に算入される取扱いで、令和8年10月1日からは住宅の算定単位が畳から㎡に変わります。詳細は社宅の記事をご覧ください。"
+        },
+        {
+          "question": "様式は自分で書けますか？",
+          "answer": "様式そのものはOTITのサイトで公開されています。ただし申請書類として整えて提出する部分は行政書士の業務（四葉行政書士事務所・別事業体）で、書く前提になる待遇・徴収・規程の設計が当事務所の担当です。中身を先に固めてから様式に落とす順序をお勧めします。"
+        }
+      ],
+      "translations": {
+        "en": {
+          "title": "What goes into the \"treatment\" sections of a training-employment plan?",
+          "excerpt": "The certification application includes four forms that explain treatment in writing — the contract and conditions document, the statement of important matters, and two statements of remuneration, accommodation and amounts collected. A form that asks about accommodation and collections means the housing charge you collect is subject to review — and it connects straight to in-kind compensation in social insurance.",
+          "content": "**In short:** the certification application includes **four forms that explain treatment in writing** (the employment contract and conditions document; the statement of important matters on treatment; and two statements of remuneration, accommodation and amounts collected). **A form that asks about accommodation and amounts collected means that how much you charge for housing is subject to confirmation.** This connects straight to **in-kind compensation** in social insurance (Health Insurance Act, Article 46).\n\nThis page is for owners and back-office staff planning a plan-certification application. Preparing the application documents themselves is gyoseishoshi work (四葉行政書士事務所, a separate business); this article covers only **how to build, on the labour side, the substance those forms demand**.\n\n## Why so many pages about treatment?\n\nPulling the treatment documents out of the published form list (OTIT, checked 14 August 2026):\n\n| Form | Content |\n|---|---|\n| Reference form 1-2 | **The employment contract and conditions document** |\n| Reference form 1-13 | The statement of **important matters on treatment** during the period |\n| Reference form 1-15 | The statement of **remuneration, accommodation and amounts collected** |\n| Reference form 1-39 | The same **plus moving and relocation costs** |\n\nThe same \"treatment,\" written repeatedly from different angles — contract, explanation, breakdown of charges. The reason lies in the system's character: [where workers may transfer on their own initiative](/en/labor/column/ginou-jisshu-ikusei-shuro-roumu-chigai), **a gap between the treatment shown at the entrance and the treatment actually given can itself become the reason someone leaves**. Treat the documents not as paper for the review but as **the baseline** against which both the worker and the authorities will later compare reality.\n\n## How much may be collected for housing?\n\n**This article gives no monetary standard.** The level of permissible collections is checked against the system's operating guidelines (**revised as recently as 5 August 2026**) and, in some sectors, sector-specific provisions; the appropriateness of amounts belongs to the review side.\n\nTwo principles hold on the labour side. First, **make the amount actually collected, the amount written on the forms, and the deduction on the pay slip identical** — a three-way mismatch is the classic opening for findings. Second, **anchor the collections in a wage-deduction agreement and internal rules**: deducting housing charges from wages requires a labour-management agreement (the exception to full payment of wages under Article 24 of the Labor Standards Act) consistent with the work rules and housing rules.\n\n## How do collected housing charges feed back into social insurance?\n\nThis is the junction most often missed. Where the company provides housing and bears rent, the benefit can count as **in-kind compensation** in remuneration (Health Insurance Act, Article 46 — the value is set by the Minister according to local market prices). **How much you collect from the person changes the amount counted into remuneration, and with it the standard monthly remuneration — the premiums.**\n\nThe mechanics are in [Provide company housing, and social insurance premiums can rise](/en/labor/column/shataku-genbutsu-kyuyo-hyojun-hoshu). One point bears repeating: **from October 1, 2026, the valuation unit for housing changes from per tatami mat to per square metre of floor area** (Japan Pension Service, viewed 14 August 2026). The timing overlaps the preparation period — design housing charges **on the new unit**.\n\n## When, and with whom, do you decide?\n\n**Before the application.** If the content moves after the forms are written, the statements must be redone and re-explained to the person. The division of roles:\n\n| Decision | With whom |\n|---|---|\n| Securing the property, the corporate lease, market rents | **A licensed real estate agent** (四葉不動産株式会社 — **a separate business** from this office, engaged under a separate contract) |\n| Collection design, in-kind compensation, the wage-deduction agreement, housing rules | **A shakai hoken roumushi** (this office) |\n| The income-tax side | **A tax accountant** |\n| Preparing and filing the application forms | **A gyoseishoshi** (四葉行政書士事務所, a separate business) |\n\n## What can 四葉社会保険労務士事務所 do?\n\n四葉社会保険労務士事務所, in Kohinata, Bunkyo City, builds the **substance** of the treatment documents — the contract templates, the housing-charge design and in-kind compensation, the wage-deduction agreement, the housing rules. **Consultation is free of charge.** Fees are in the [fee schedule](/en/labor/ryokin) (including company housing rules). The full \"what to do now\" picture is in [The Employment for Skill Development system — what to do now](/en/labor/column/ikusei-shuro-ima-yatte-oku-koto).\n\n### Whom to consult\n\nPreparing and filing the application documents, and confirming conformity with the collection standards, go to **四葉行政書士事務所** (a separate business from this office, engaged under a separate contract). Property and corporate leases go to **四葉不動産株式会社** (likewise). Payroll taxation is for **a tax accountant**, disputes for **an attorney**. No referral fees change hands.\n\n## Frequently asked questions\n\n**Q. How much should we set the housing charge at?**\nA. This article gives no figure. Collection levels are checked against the operating guidelines (revised 5 August 2026) and sector-specific provisions. What the labour side must secure is the three-way match — actual collection, the forms, the pay-slip deduction — and the anchoring of collections in an agreement and rules.\n\n**Q. We deduct dormitory fees from wages. Any problem?**\nA. Deductions from wages require a labour-management agreement as the exception to the full-payment principle (Labor Standards Act, Article 24). First check that the agreement, the work rules, the housing rules and the actual deduction line up. This office prepares the paperwork.\n\n**Q. Does in-kind compensation work the same under this system?**\nA. Yes. The social insurance mechanism (Health Insurance Act, Article 46; values set by the Minister) does not vary by residence status. The difference between the person's payment and the notified value is counted into remuneration, and from October 1, 2026 the housing unit changes from tatami mats to square metres. Details in [the company housing article](/en/labor/column/shataku-genbutsu-kyuyo-hyojun-hoshu).\n\n**Q. Can we fill in the forms ourselves?**\nA. The forms themselves are published on the OTIT's site. Assembling and filing them as an application is gyoseishoshi work (四葉行政書士事務所, a separate business); designing the treatment, collections and rules that the forms describe is this office's part. Fix the substance first, then put it into the forms.\n\n## Sources for this article\n\n- OTIT, \"**Pre-enforcement applications for training-employment plan certification**\" (updated 5 August 2026; checked 14 August 2026) — the names and existence of reference forms 1-2, 1-13, 1-15 and 1-39\n- Health Insurance Act (健康保険法, Act No. 70 of 1922), **Article 46** (value of in-kind compensation) — current text confirmed on e-Gov on 14 August 2026\n- Labor Standards Act (労働基準法, Act No. 49 of 1947), **Article 24** (payment of wages; deduction agreements) — confirmed the same day\n- Japan Pension Service, the national in-kind compensation value table (updated 19 March 2026; viewed 14 August 2026) — the change of the housing valuation unit from October 1, 2026\n- **Collection levels follow the operating guidelines (revised 5 August 2026) and sector-specific provisions. No amounts appear in this article; always check the latest guidelines**\n\nThis article is general information. Judgments that fit your particular circumstances are made by a qualified professional after a meeting. Written by [Joji Uramatsu](/en/about/uramatsu) (Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist).",
+          "category": "How labour administration works",
+          "keywords": [
+            "training employment plan treatment sections what to write",
+            "housing charge collect how much dormitory",
+            "accommodation statement form",
+            "in-kind compensation social insurance ikusei shuro",
+            "dormitory rent payroll deduction agreement",
+            "important matters statement forms"
+          ],
+          "tags": [
+            "Employment for Skill Development",
+            "treatment",
+            "housing charges",
+            "in-kind compensation",
+            "payroll deductions",
+            "company housing"
+          ],
+          "author": {
+            "name": "Joji Uramatsu",
+            "title": "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所"
+          },
+          "faq": [
+            {
+              "question": "How much should we set the housing charge at?",
+              "answer": "This article gives no figure. Collection levels are checked against the operating guidelines (revised 5 August 2026) and sector-specific provisions. What the labour side must secure is the three-way match — actual collection, the forms, the pay-slip deduction — and the anchoring of collections in an agreement and rules."
+            },
+            {
+              "question": "We deduct dormitory fees from wages. Any problem?",
+              "answer": "Deductions from wages require a labour-management agreement as the exception to the full-payment principle (Labor Standards Act, Article 24). First check that the agreement, the work rules, the housing rules and the actual deduction line up. This office prepares the paperwork."
+            },
+            {
+              "question": "Does in-kind compensation work the same under this system?",
+              "answer": "Yes. The social insurance mechanism (Health Insurance Act, Article 46; values set by the Minister) does not vary by residence status. The difference between the person's payment and the notified value is counted into remuneration, and from October 1, 2026 the housing unit changes from tatami mats to square metres. Details in the company housing article."
+            },
+            {
+              "question": "Can we fill in the forms ourselves?",
+              "answer": "The forms themselves are published on the OTIT's site. Assembling and filing them as an application is gyoseishoshi work (四葉行政書士事務所, a separate business); designing the treatment, collections and rules that the forms describe is this office's part. Fix the substance first, then put it into the forms."
+            }
+          ]
+        },
+        "zh-tw": {
+          "title": "育成就勞計畫的「待遇」欄，要寫什麼",
+          "excerpt": "認定申請中，以書面說明待遇的樣式有4個——雇用契約書・雇用條件書、待遇重要事項說明書，以及報酬・宿泊設施・徵收費用的說明書2種。有要求填寫宿泊設施與徵收費用的樣式，就表示住居費收多少會成為確認的對象——並直接連到社會保險的現物給與。",
+          "content": "**結論（先講重點）**：育成就勞計畫認定的申請中，**以書面說明待遇的樣式有4個**（雇用契約書・雇用條件書、待遇重要事項說明書、報酬・宿泊設施・徵收費用的說明書×2）。**有要求填寫宿泊設施與徵收費用的樣式**，就表示**住居費收多少會成為確認的對象**。這裡直接連到社會保險的**現物給與**（健康保險法第46條）。\n\n本頁面寫給預定申請育成就勞計畫認定的公司經營者與總務人員。申請書類本身的製作是行政書士（四葉行政書士事務所・不同事業體）的業務，本文只寫**如何在勞務側把樣式所要求的內容準備好**。\n\n## 為什麼待遇要寫好幾張？\n\n從申請樣式一覽（OTIT・2026年8月14日確認）抽出與待遇相關的書面，如下。\n\n| 樣式 | 內容 |\n|---|---|\n| 參考樣式第1-2號 | **雇用契約書及雇用條件書** |\n| 參考樣式第1-13號 | 期間中的**待遇重要事項說明書** |\n| 參考樣式第1-15號 | **報酬・宿泊設施・徵收費用**的說明書 |\n| 參考樣式第1-39號 | 同上＋**移動及轉居費用等** |\n\n同一個「待遇」，以契約・說明・費用內訳，**換著角度反覆書面化**的結構。理由在制度的性格：在[允許本人意向轉籍的制度](/zh-tw/labor/column/ginou-jisshu-ikusei-shuro-roumu-chigai)裡，**入口示出的待遇與實際待遇的落差，本身就可能成為轉籍的理由**。這些書面不是「審查用的紙」，而是之後會被本人與行政兩方對照的**基準線**。\n\n## 住居費可以收到多少？\n\n**本文不示金額基準。** 徵收費用的水準，屬於育成就勞制度運用要領（**2026年8月5日剛修正**）與部分分野的分野別規定所確認的領域；金額的當否屬於審查側＝入口的領域。\n\n勞務側要把握的原則有2個。第一，**實際徵收額・樣式記載額・薪資明細的扣除額三者一致**。三者錯開的狀態，是最典型的指摘入口。第二，**把徵收的依據落到薪資扣除協定與規程**。要從薪資扣除住居費，前提是勞使協定（勞動基準法第24條薪資全額支付原則的例外）與就業規則・宿舍規程的整合。\n\n## 徵收的住居費，如何反映到社會保險？\n\n這是最容易被漏看的接點。公司準備住居並負擔房租時，該利益可能作為**現物給與**算入報酬（健康保險法第46條＝價額依當地時價由厚生勞動大臣定之）。**向本人收多少，算入報酬的金額就變多少，標準報酬月額——也就是保險費——跟著變。**\n\n機制的詳情見[提供公司宿舍，社會保險費有時會上升](/zh-tw/labor/column/shataku-genbutsu-kyuyo-hyojun-hoshu)。只重提一點——**2026年10月1日起，住宅現物給與的計算單位由「每1疊」改為「樓地板面積每1㎡」**（日本年金機構・2026年8月14日參閱）。與育成就勞的接收準備時期重疊，住居費的設計請**以新單位為前提**。\n\n## 什麼時候、和誰決定？\n\n**申請之前。** 樣式寫好之後內容再動，說明書面就要重做、還要向本人再說明。分工如下。\n\n| 要決定的事 | 和誰 |\n|---|---|\n| 物件的確保・法人契約・房租行情 | **宅地建物取引業者**（四葉不動産株式会社。與本事務所是**不同的事業體**，另行簽約） |\n| 徵收額的設計・現物給與的算入・薪資扣除協定・宿舍規程 | **社會保險勞務士**（本事務所） |\n| 所得稅側的課稅 | **稅理士** |\n| 申請書類（樣式）的製作・提出 | **行政書士**（四葉行政書士事務所・不同事業體） |\n\n## 四葉社会保険労務士事務所能做什麼？\n\n位於文京區小日向的四葉社会保険労務士事務所，承接待遇書面的**內容**——雇用契約書式、住居費的徵收設計與現物給與的算入、薪資扣除的勞使協定、宿舍規程。**諮詢免費。** 費用載於[報酬額表](/zh-tw/labor/ryokin)（含社宅規程製作）。現在該做的事的全貌見[育成就勞，現在該做什麼](/zh-tw/labor/column/ikusei-shuro-ima-yatte-oku-koto)。\n\n### 該向誰諮詢\n\n申請書類的製作・提出，與徵收基準適合性的確認，由**四葉行政書士事務所**承接（與本事務所是不同的事業體，另行簽約）。物件與法人契約由**四葉不動産株式会社**（同）。薪資課稅是**稅理士**、爭議案件是**律師**的業務。以上均不收取介紹費。\n\n## 常見問題\n\n**Q. 住居費該設定多少？**\nA. 本文不示金額。徵收水準是以運用要領（2026年8月5日修正）與分野別規定確認的領域。勞務側確實要做的，是實際徵收額・樣式記載・薪資明細扣除三者一致，以及把徵收依據落到協定與規程。\n\n**Q. 宿舍費從薪資扣除中。有問題嗎？**\nA. 從薪資扣除，需要作為薪資全額支付原則（勞動基準法第24條）例外的勞使協定。請先確認協定・就業規則・宿舍規程・實際扣除額是否對齊。書面的整備由本事務所承接。\n\n**Q. 現物給與的算入，在育成就勞也一樣嗎？**\nA. 一樣。社會保險的現物給與機制（健康保險法第46條・厚生勞動大臣所定價額）不因在留資格而異。本人負擔額與告示價額的差額算入報酬，且2026年10月1日起住宅的計算單位由疊改為㎡。詳見[宿舍的文章](/zh-tw/labor/column/shataku-genbutsu-kyuyo-hyojun-hoshu)。\n\n**Q. 樣式可以自己填嗎？**\nA. 樣式本身在OTIT網站公開。但整理成申請書類提出的部分是行政書士的業務（四葉行政書士事務所・不同事業體），而作為填寫前提的待遇・徵收・規程的設計是本事務所的分擔。建議先固定內容、再落到樣式的順序。\n\n## 本文依據\n\n- 外國人技能實習機構「**育成就勞計畫認定施行日前申請**」（令和8年8月5日更新・2026年8月14日確認）――參考樣式第1-2號・第1-13號・第1-15號・第1-39號的名稱與存在\n- 健康保險法（大正11年法律第70號）**第46條**（現物給與的價額） ―― 2026年8月14日於e-Gov法令檢索確認現行條文\n- 勞動基準法（昭和22年法律第49號）**第24條**（薪資支付・扣除的勞使協定） ―― 同日確認\n- 日本年金機構「全國現物給與價額一覽表」（2026年3月19日更新・2026年8月14日參閱）――2026年10月1日起住宅計算單位的變更\n- **徵收費用的水準依育成就勞制度運用要領（2026年8月5日修正）・分野別規定。本文未記載金額，請務必以最新運用要領確認**\n\n本文為一般性的資訊提供。因應個別情事的判斷，由具備資格者在面談後進行。撰文者為[浦松丈二](/zh-tw/about/uramatsu)（社會保險勞務士・行政書士・宅地建物取引士）。",
+          "category": "勞務的機制",
+          "keywords": [
+            "育成就勞計畫 待遇 寫法",
+            "育成就勞 住居費 徵收 多少",
+            "育成就勞 宿泊設施 說明書",
+            "育成就勞 現物給與 社會保險",
+            "宿舍費 薪資扣除 勞使協定",
+            "育成就勞 重要事項說明書 樣式"
+          ],
+          "tags": [
+            "育成就勞",
+            "待遇",
+            "住居費",
+            "現物給與",
+            "薪資扣除",
+            "公司宿舍"
+          ],
+          "author": {
+            "name": "浦松 丈二",
+            "title": "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+          },
+          "faq": [
+            {
+              "question": "住居費該設定多少？",
+              "answer": "本文不示金額。徵收水準是以運用要領（2026年8月5日修正）與分野別規定確認的領域。勞務側確實要做的，是實際徵收額・樣式記載・薪資明細扣除三者一致，以及把徵收依據落到協定與規程。"
+            },
+            {
+              "question": "宿舍費從薪資扣除中。有問題嗎？",
+              "answer": "從薪資扣除，需要作為薪資全額支付原則（勞動基準法第24條）例外的勞使協定。請先確認協定・就業規則・宿舍規程・實際扣除額是否對齊。書面的整備由本事務所承接。"
+            },
+            {
+              "question": "現物給與的算入，在育成就勞也一樣嗎？",
+              "answer": "一樣。社會保險的現物給與機制（健康保險法第46條・厚生勞動大臣所定價額）不因在留資格而異。本人負擔額與告示價額的差額算入報酬，且2026年10月1日起住宅的計算單位由疊改為㎡。詳見宿舍的文章。"
+            },
+            {
+              "question": "樣式可以自己填嗎？",
+              "answer": "樣式本身在OTIT網站公開。但整理成申請書類提出的部分是行政書士的業務（四葉行政書士事務所・不同事業體），而作為填寫前提的待遇・徵收・規程的設計是本事務所的分擔。建議先固定內容、再落到樣式的順序。"
+            }
+          ]
+        },
+        "zh": {
+          "title": "育成就劳计划的「待遇」栏，要写什么",
+          "excerpt": "认定申请中，以书面说明待遇的样式有4个——雇用契约书・雇用条件书、待遇重要事项说明书，以及报酬・宿泊设施・征收费用的说明书2种。有要求填写宿泊设施与征收费用的样式，就表示住居费收多少会成为确认的对象——并直接连到社会保险的现物给与。",
+          "content": "**结论（先讲重点）**：育成就劳计划认定的申请中，**以书面说明待遇的样式有4个**（雇用契约书・雇用条件书、待遇重要事项说明书、报酬・宿泊设施・征收费用的说明书×2）。**有要求填写宿泊设施与征收费用的样式**，就表示**住居费收多少会成为确认的对象**。这里直接连到社会保险的**现物给与**（健康保险法第46条）。\n\n本页面写给预定申请育成就劳计划认定的公司经营者与总务人员。申请书类本身的制作是行政书士（四葉行政書士事務所・不同事业体）的业务，本文只写**如何在劳务侧把样式所要求的内容准备好**。\n\n## 为什么待遇要写好几张？\n\n从申请样式一览（OTIT・2026年8月14日确认）抽出与待遇相关的书面，如下。\n\n| 样式 | 内容 |\n|---|---|\n| 参考样式第1-2号 | **雇用契约书及雇用条件书** |\n| 参考样式第1-13号 | 期间中的**待遇重要事项说明书** |\n| 参考样式第1-15号 | **报酬・宿泊设施・征收费用**的说明书 |\n| 参考样式第1-39号 | 同上＋**移动及转居费用等** |\n\n同一个「待遇」，以契约・说明・费用内訳，**换着角度反复书面化**的结构。理由在制度的性格：在[允许本人意向转籍的制度](/zh/labor/column/ginou-jisshu-ikusei-shuro-roumu-chigai)里，**入口示出的待遇与实际待遇的落差，本身就可能成为转籍的理由**。这些书面不是「审查用的纸」，而是之后会被本人与行政两方对照的**基准线**。\n\n## 住居费可以收到多少？\n\n**本文不示金额基准。** 征收费用的水准，属于育成就劳制度运用要领（**2026年8月5日刚修正**）与部分分野的分野别规定所确认的领域；金额的当否属于审查侧＝入口的领域。\n\n劳务侧要把握的原则有2个。第一，**实际征收额・样式记载额・工资明细的扣除额三者一致**。三者错开的状态，是最典型的指摘入口。第二，**把征收的依据落到工资扣除协定与规程**。要从工资扣除住居费，前提是劳使协定（劳动基准法第24条工资全额支付原则的例外）与就业规则・宿舍规程的整合。\n\n## 征收的住居费，如何反映到社会保险？\n\n这是最容易被漏看的接点。公司准备住居并负担房租时，该利益可能作为**现物给与**算入报酬（健康保险法第46条＝价额依当地时价由厚生劳动大臣定之）。**向本人收多少，算入报酬的金额就变多少，标准报酬月额——也就是保险费——跟着变。**\n\n机制的详情见[提供公司宿舍，社会保险费有时会上升](/zh/labor/column/shataku-genbutsu-kyuyo-hyojun-hoshu)。只重提一点——**2026年10月1日起，住宅现物给与的计算单位由「每1叠」改为「楼地板面积每1㎡」**（日本年金机构・2026年8月14日参阅）。与育成就劳的接收准备时期重叠，住居费的设计请**以新单位为前提**。\n\n## 什么时候、和谁决定？\n\n**申请之前。** 样式写好之后内容再动，说明书面就要重做、还要向本人再说明。分工如下。\n\n| 要决定的事 | 和谁 |\n|---|---|\n| 物件的确保・法人契约・房租行情 | **宅地建物取引业者**（四葉不動産株式会社。与本事务所是**不同的事业体**，另行签约） |\n| 征收额的设计・现物给与的算入・工资扣除协定・宿舍规程 | **社会保险劳务士**（本事务所） |\n| 所得税侧的课税 | **税理士** |\n| 申请书类（样式）的制作・提出 | **行政书士**（四葉行政書士事務所・不同事业体） |\n\n## 四葉社会保険労務士事務所能做什么？\n\n位于文京区小日向的四葉社会保険労務士事務所，承接待遇书面的**内容**——雇用契约书式、住居费的征收设计与现物给与的算入、工资扣除的劳使协定、宿舍规程。**咨询免费。** 费用载于[报酬额表](/zh/labor/ryokin)（含社宅规程制作）。现在该做的事的全貌见[育成就劳，现在该做什么](/zh/labor/column/ikusei-shuro-ima-yatte-oku-koto)。\n\n### 该向谁咨询\n\n申请书类的制作・提出，与征收基准适合性的确认，由**四葉行政書士事務所**承接（与本事务所是不同的事业体，另行签约）。物件与法人契约由**四葉不動産株式会社**（同）。工资课税是**税理士**、争议案件是**律师**的业务。以上均不收取介绍费。\n\n## 常见问题\n\n**Q. 住居费该设定多少？**\nA. 本文不示金额。征收水准是以运用要领（2026年8月5日修正）与分野别规定确认的领域。劳务侧确实要做的，是实际征收额・样式记载・工资明细扣除三者一致，以及把征收依据落到协定与规程。\n\n**Q. 宿舍费从工资扣除中。有问题吗？**\nA. 从工资扣除，需要作为工资全额支付原则（劳动基准法第24条）例外的劳使协定。请先确认协定・就业规则・宿舍规程・实际扣除额是否对齐。书面的整备由本事务所承接。\n\n**Q. 现物给与的算入，在育成就劳也一样吗？**\nA. 一样。社会保险的现物给与机制（健康保险法第46条・厚生劳动大臣所定价额）不因在留资格而异。本人负担额与告示价额的差额算入报酬，且2026年10月1日起住宅的计算单位由叠改为㎡。详见[宿舍的文章](/zh/labor/column/shataku-genbutsu-kyuyo-hyojun-hoshu)。\n\n**Q. 样式可以自己填吗？**\nA. 样式本身在OTIT网站公开。但整理成申请书类提出的部分是行政书士的业务（四葉行政書士事務所・不同事业体），而作为填写前提的待遇・征收・规程的设计是本事务所的分担。建议先固定内容、再落到样式的顺序。\n\n## 本文依据\n\n- 外国人技能实习机构「**育成就劳计划认定施行日前申请**」（令和8年8月5日更新・2026年8月14日确认）――参考样式第1-2号・第1-13号・第1-15号・第1-39号的名称与存在\n- 健康保险法（大正11年法律第70号）**第46条**（现物给与的价额） ―― 2026年8月14日于e-Gov法令检索确认现行条文\n- 劳动基准法（昭和22年法律第49号）**第24条**（工资支付・扣除的劳使协定） ―― 同日确认\n- 日本年金机构「全国现物给与价额一览表」（2026年3月19日更新・2026年8月14日参阅）――2026年10月1日起住宅计算单位的变更\n- **征收费用的水准依育成就劳制度运用要领（2026年8月5日修正）・分野别规定。本文未记载金额，请务必以最新运用要领确认**\n\n本文为一般性的信息提供。因应个别情事的判断，由具备资格者在面谈后进行。撰文者为[浦松丈二](/zh/about/uramatsu)（社会保险劳务士・行政书士・宅地建物取引士）。",
+          "category": "劳务的机制",
+          "keywords": [
+            "育成就劳计划 待遇 写法",
+            "育成就劳 住居费 征收 多少",
+            "育成就劳 宿泊设施 说明书",
+            "育成就劳 现物给与 社会保险",
+            "宿舍费 工资扣除 劳使协定",
+            "育成就劳 重要事项说明书 样式"
+          ],
+          "tags": [
+            "育成就劳",
+            "待遇",
+            "住居费",
+            "现物给与",
+            "工资扣除",
+            "公司宿舍"
+          ],
+          "author": {
+            "name": "浦松 丈二",
+            "title": "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+          },
+          "faq": [
+            {
+              "question": "住居费该设定多少？",
+              "answer": "本文不示金额。征收水准是以运用要领（2026年8月5日修正）与分野别规定确认的领域。劳务侧确实要做的，是实际征收额・样式记载・工资明细扣除三者一致，以及把征收依据落到协定与规程。"
+            },
+            {
+              "question": "宿舍费从工资扣除中。有问题吗？",
+              "answer": "从工资扣除，需要作为工资全额支付原则（劳动基准法第24条）例外的劳使协定。请先确认协定・就业规则・宿舍规程・实际扣除额是否对齐。书面的整备由本事务所承接。"
+            },
+            {
+              "question": "现物给与的算入，在育成就劳也一样吗？",
+              "answer": "一样。社会保险的现物给与机制（健康保险法第46条・厚生劳动大臣所定价额）不因在留资格而异。本人负担额与告示价额的差额算入报酬，且2026年10月1日起住宅的计算单位由叠改为㎡。详见宿舍的文章。"
+            },
+            {
+              "question": "样式可以自己填吗？",
+              "answer": "样式本身在OTIT网站公开。但整理成申请书类提出的部分是行政书士的业务（四葉行政書士事務所・不同事业体），而作为填写前提的待遇・征收・规程的设计是本事务所的分担。建议先固定内容、再落到样式的顺序。"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "business": "labor",
+      "slug": "ikusei-shuro-shugyokisoku-minaoshi",
+      "title": "受け入れる前に、就業規則をどう直すのか",
+      "date": "2026-09-01",
+      "category": "労働法の基本",
+      "excerpt": "外国人を受け入れること自体で就業規則の作成義務は変わりません。変わるのは規程と実態の距離です。周知は効力の前提で、理解できない言語のみの掲示は十分かが問われます。転籍が前提の育成就労では、貸与物・住居・費用負担の規程が新しい争点になります。直す箇所を整理します。",
+      "content": "**結論（先に要点）**：外国人を受け入れること自体で就業規則の作成義務が変わるわけではありません。変わるのは**規程と実態の距離**です。就業規則は**周知**されて初めて機能し（労働基準法第106条）、**本人が理解できない言語でのみ掲示されている状態は、周知として十分かが問われます**。転籍が前提の育成就労では、**貸与物・住居・費用負担の規程**が新しい争点になります。\n\nこのページは、育…（全3562字）",
+      "status": "published",
+      "author": {
+        "name": "浦松 丈二",
+        "title": "社会保険労務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+      },
+      "keywords": [
+        "外国人 受け入れ 就業規則 見直し",
+        "就業規則 翻訳 義務 あるか",
+        "就業規則 周知 外国人 母語",
+        "育成就労 就業規則 何を直す",
+        "寮規程 生活ルール 就業規則",
+        "教育費用 返還 規定 書けるか"
+      ],
+      "tags": [
+        "育成就労",
+        "就業規則",
+        "周知",
+        "翻訳",
+        "社宅規程",
+        "外国人雇用"
+      ],
+      "locales": [],
+      "faq": [
+        {
+          "question": "就業規則を全部翻訳しなければいけませんか？",
+          "answer": "翻訳の義務そのものは法令にありません。ただし周知（労働基準法第106条）の趣旨から、本人の利害に直結する部分——労働条件・控除・懲戒・退寮——は母語または理解できる言語で要旨を示すことをお勧めします。全文訳と要旨訳のどちらにするかは、費用と実態で設計します。"
+        },
+        {
+          "question": "10人未満なので就業規則がありません。それでも作るべきですか？",
+          "answer": "作成義務は常時10人以上の事業場にかかります（労働基準法第89条）。義務がなくても、住居・貸与物・控除のルールを書面にしておかないと、転籍・退職のたびに個別交渉になります。義務の線は別記事をご覧ください。"
+        },
+        {
+          "question": "寮の門限や生活ルールを就業規則に入れられますか？",
+          "answer": "服務規律・懲戒との関係で設計は可能ですが、私生活への制約は合理的な範囲かが問われます。生活ルールは寮規程として切り出し、懲戒に結びつける部分を限定するのが実務的です。個別の書きぶりはご相談ください。"
+        },
+        {
+          "question": "日本語講習の費用を会社が出します。辞めたら返してもらう規定は書けますか？",
+          "answer": "安易な返還規定は、賠償予定の禁止（労働基準法第16条）との関係で問題になり得る領域です。書けるかどうかを一律には言えません。設計の選択肢と論点を整理したうえで、必要に応じて弁護士の確認を挟む形をご案内します。"
+        }
+      ],
+      "translations": {
+        "en": {
+          "title": "How do you revise the work rules before receiving workers?",
+          "excerpt": "Receiving foreign workers does not itself change the obligation to have work rules. What changes is the distance between the rules and reality. Work rules function only when made known to workers, and posting them solely in a language the person cannot read raises the question of whether that is sufficient. With transfers as a premise, the provisions on lent property, housing and costs become the new battleground.",
+          "content": "**In short:** receiving foreign workers does not itself change the obligation to draw up work rules. What changes is **the distance between the rules and reality**. Work rules function only when **made known** (Labor Standards Act, Article 106), and **posting them solely in a language the person cannot understand raises the question of whether that is sufficient**. Under a system where transfers are a premise, **the provisions on lent property, housing and cost burdens** become the new points of contention.\n\nThis page is for owners and back-office staff preparing their work rules before receiving workers under the Employment for Skill Development system (or technical intern training). **From how many workers the obligation arises** is covered in [the dedicated article](/en/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo); this one is about **what to fix before receiving**.\n\n## Does receiving foreign workers require revising the rules?\n\nThe trigger for the obligation (ten or more workers regularly employed — Labor Standards Act, Article 89) does not depend on nationality. The need to revise arises because **realities the rules never contemplated** come in:\n\n- **Housing** — the company provides dormitories more often; [the collections and in-kind compensation](/en/labor/column/ikusei-shuro-keikaku-taigu-kakikata) need anchoring in rules and a deduction agreement\n- **Lent property** — workwear, tools, bicycles, Wi-Fi routers; lending accumulates without return rules\n- **Living rules and discipline** — dormitory rules run outside the work rules leave discipline without a footing\n- **Consistency with the application documents** — the certification application includes the contract and conditions document (reference form 1-2) and treatment statements. **If the rules and the application papers diverge, one of them is false**\n\n## Without a translation, has \"making known\" happened?\n\n**No translation obligation as such exists in the statutes.** At the same time, work rules must be made known to workers by **posting or keeping them in a visible place at each workplace, distributing them in writing, or other methods prescribed by ministerial order** (Labor Standards Act, Article 106, paragraph 1).\n\nMaking known exists so that workers **can actually know** the rules — not merely so that a document sits somewhere. **Whether rules displayed only in a language the person cannot understand satisfy that purpose is precisely the question** — and it comes back as whether, in a dispute, you can truly say \"they were made known.\" As practice, we recommend providing **at least the parts that touch the person directly — working conditions, deductions, discipline, leaving the dormitory — in summary form in their language or one they understand**. How far to translate is a cost decision; the multilingual approach is also covered in our [foreign-employment service](/en/labor/services/gaikokujin-koyo).\n\n## With transfers as a premise, which provisions do you revisit?\n\n[A transfer is, in labour terms, a separation plus a hire](/en/labor/column/ikusei-shuro-tenseki-shakaihoken-koyohoken). Reread the rules on the assumption that people move, and the places to fix become visible.\n\n| Provision | Angle |\n|---|---|\n| **Dormitory/housing rules** | Vacating deadlines on departure or transfer, restoration costs, settlement of housing charges. [Form 1-39 requires explaining moving and relocation costs](/en/labor/column/ikusei-shuro-keikaku-taigu-kakikata) |\n| **Lent property** | What must be returned, by when, and compensation rules |\n| **Wages and deductions** | The agreement basis for housing and utility deductions, and settlement on departure |\n| **Training and licence costs** | The treatment of company-funded courses. **A casually drafted repayment-on-departure clause can collide with Article 16 of the Labor Standards Act (prohibition of predetermined damages)** — an easy place to mis-design; take individual advice |\n| **Discipline and service rules** | Whether dormitory living rules are anchored as service discipline |\n\n## By when should the rules be fixed?\n\n**Before the application.** The certification application includes the contract templates and treatment statements ([the calendar](/en/labor/column/ikusei-shuro-ima-yatte-oku-koto)), so applying with inconsistent rules only multiplies later corrections. Amending work rules also requires **hearing the majority representative's opinion, attaching the written opinion, and making the amended rules known** (Labor Standards Act, Articles 90 and 106) — build that into the count-back. The procedure runs as described in [Can work rules drafted by an AI actually be filed?](/en/labor/column/ai-shugyokisoku-todokede-dekiruka).\n\n## What can 四葉社会保険労務士事務所 do?\n\n四葉社会保険労務士事務所, in Kohinata, Bunkyo City, revises and drafts the work rules, housing rules and wage-deduction agreements before receiving workers, designs the native-language summaries, and runs the procedure from opinion-hearing to filing and making known. Fees: the \"work rules\" rows of the [fee schedule](/en/labor/ryokin). **Consultation is free of charge.** Bring your current rules and we start with a stocktake of what to fix before receiving.\n\n### Whom to consult\n\nThe plan-certification and licence application documents, and residence status, go to **四葉行政書士事務所** (a separate business from this office, engaged under a separate contract). Housing property and corporate leases go to **四葉不動産株式会社** (likewise). Payroll taxation is for **a tax accountant**; matters already in dispute for **an attorney**. No referral fees change hands.\n\n## Frequently asked questions\n\n**Q. Must the work rules be translated in full?**\nA. No translation obligation as such exists. But given the purpose of making known (Article 106), we recommend summaries in a language the person understands for the parts that touch them directly — conditions, deductions, discipline, dormitory departure. Full versus summary translation is designed around cost and reality.\n\n**Q. We have fewer than ten workers and no work rules. Should we still make them?**\nA. The obligation applies from ten workers (Article 89). Even without the obligation, unwritten rules on housing, lent property and deductions mean case-by-case negotiation at every transfer or departure. The threshold question is covered in [the dedicated article](/en/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo).\n\n**Q. Can dormitory curfews and living rules go into the work rules?**\nA. Design via service discipline is possible, but constraints on private life are tested for reasonableness. The practical shape is to carve living rules out into dormitory rules and limit what connects to discipline. Consult on the specific drafting.\n\n**Q. We pay for Japanese lessons. Can we require repayment if the person quits?**\nA. A casual repayment clause can collide with the prohibition of predetermined damages (Labor Standards Act, Article 16); whether it can be drafted safely cannot be answered in the abstract. We lay out the design options and the issues, with an attorney's check where needed.\n\n## Sources for this article\n\n- Labor Standards Act (労働基準法, Act No. 49 of 1947), **Article 89** (obligation to draw up and file), **Article 90** (opinion hearing), **Article 106, paragraph 1** (making known), **Article 16** (prohibition of predetermined damages), **Article 24** (deduction agreements) — current text confirmed on e-Gov on 14 August 2026\n- OTIT, \"Pre-enforcement applications for training-employment plan certification\" (updated 5 August 2026; checked 14 August 2026) — the contract and conditions document (reference form 1-2), the treatment statements, the moving and relocation costs statement (form 1-39)\n- **Whether a translation is needed and whether making-known is sufficient are questions on which assessments differ case by case. This article confines itself to the general approach**\n\nThis article is general information. Judgments that fit your particular circumstances are made by a qualified professional after a meeting. Written by [Joji Uramatsu](/en/about/uramatsu) (Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist).",
+          "category": "Labor law basics",
+          "keywords": [
+            "foreign workers work rules revision",
+            "work rules translation obligation Japan",
+            "work rules making known native language",
+            "ikusei shuro work rules what to fix",
+            "dormitory rules service discipline",
+            "training cost repayment clause"
+          ],
+          "tags": [
+            "Employment for Skill Development",
+            "work rules",
+            "making known",
+            "translation",
+            "housing rules",
+            "foreign employment"
+          ],
+          "author": {
+            "name": "Joji Uramatsu",
+            "title": "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所"
+          },
+          "faq": [
+            {
+              "question": "Must the work rules be translated in full?",
+              "answer": "No translation obligation as such exists. But given the purpose of making known (Article 106), we recommend summaries in a language the person understands for the parts that touch them directly — conditions, deductions, discipline, dormitory departure. Full versus summary translation is designed around cost and reality."
+            },
+            {
+              "question": "We have fewer than ten workers and no work rules. Should we still make them?",
+              "answer": "The obligation applies from ten workers (Article 89). Even without the obligation, unwritten rules on housing, lent property and deductions mean case-by-case negotiation at every transfer or departure. The threshold question is covered in the dedicated article."
+            },
+            {
+              "question": "Can dormitory curfews and living rules go into the work rules?",
+              "answer": "Design via service discipline is possible, but constraints on private life are tested for reasonableness. The practical shape is to carve living rules out into dormitory rules and limit what connects to discipline. Consult on the specific drafting."
+            },
+            {
+              "question": "We pay for Japanese lessons. Can we require repayment if the person quits?",
+              "answer": "A casual repayment clause can collide with the prohibition of predetermined damages (Labor Standards Act, Article 16); whether it can be drafted safely cannot be answered in the abstract. We lay out the design options and the issues, with an attorney's check where needed."
+            }
+          ]
+        },
+        "zh-tw": {
+          "title": "接收之前，就業規則怎麼修",
+          "excerpt": "接收外國人這件事本身不改變就業規則的作成義務。改變的是規程與實態的距離。就業規則經周知才發揮效力，只以本人無法理解的語言掲示，是否足以構成周知會被質疑。以轉籍為前提的育成就勞，借用物・住居・費用負擔的規程成為新的爭點。本文整理要修的地方。",
+          "content": "**結論（先講重點）**：接收外國人這件事本身，不會改變就業規則的作成義務。改變的是**規程與實態的距離**。就業規則經**周知**才發揮機能（勞動基準法第106條），**只以本人無法理解的語言掲示的狀態，是否足以構成周知會被質疑**。以轉籍為前提的育成就勞，**借用物・住居・費用負擔的規程**成為新的爭點。\n\n本頁面寫給在以育成就勞（含技能實習）接收外國人之前、考慮整備就業規則的公司經營者與總務人員。**從幾人開始有作成義務**寫在[專文](/zh-tw/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo)，本文寫**接收前要修什麼**。\n\n## 接收外國人，就業規則需要修嗎？\n\n義務的發生條件（經常僱用10人以上・勞動基準法第89條）不因國籍而異。需要修的原因，是**規程沒有預想過的實態**進來了。\n\n- **住居**——公司準備宿舍的場面變多。[住居費的徵收與現物給與](/zh-tw/labor/column/ikusei-shuro-keikaku-taigu-kakikata)需要落到規程與勞使協定\n- **借用物**——工作服・工具・自行車・Wi-Fi路由器。沒有返還規則，出借越積越多\n- **生活規則與懲戒**——宿舍生活規則在就業規則之外運用，懲戒的依據就懸空\n- **與申請文件的整合**——育成就勞計畫認定的申請要提出雇用契約書・雇用條件書（參考樣式第1-2號）與待遇說明書面。**規程與申請書面錯開，其中一方就成了謊言**\n\n## 不譯成母語，就不算周知嗎？\n\n**翻譯義務本身，法令上沒有。** 另一方面，就業規則必須以**在各作業場所顯眼處常時掲示・備置、書面交付及其他厚生勞動省令所定方法**使勞工周知（勞動基準法第106條第1項）。\n\n周知不是「放在那裡」，而是為了「處於可得而知的狀態」的制度。**只掲示著內容無法理解的語言的規則，是否符合這個旨趣**——這就是被質疑的點，並反映到爭議發生時能否斷言「已經周知」。實務上，建議**至少就勞動條件・薪資扣除・懲戒・退宿等與本人利害直結的部分，以母語或能理解的語言示出要旨**。譯到什麼程度是與費用的商量，多語對應的思路也在本事務所的[外國人僱用勞務](/zh-tw/labor/services/gaikokujin-koyo)處理。\n\n## 以轉籍為前提，要重看哪些規程？\n\n[轉籍在勞務上是「離職＋僱入」](/zh-tw/labor/column/ikusei-shuro-tenseki-shakaihoken-koyohoken)。以人會移動為前提重讀規程，要修的地方就浮現。\n\n| 規程 | 重看的觀點 |\n|---|---|\n| **宿舍規程** | 退職・轉籍時的騰空期限、原狀回復的負擔、住居費的清算。[申請樣式第1-39號要求說明移動・轉居費用](/zh-tw/labor/column/ikusei-shuro-keikaku-taigu-kakikata) |\n| **借用物** | 返還的對象・期限・賠償規則 |\n| **薪資・扣除** | 住居費・水電費等扣除的依據（勞使協定）與清算方法 |\n| **教育・資格取得費用** | 公司出資的講習・資格的處理。**離職時返還的條款寫得草率，會與勞動基準法第16條（賠償預定的禁止）發生問題**——這裡容易設計錯誤，請個別諮詢 |\n| **懲戒・服務** | 宿舍生活規則是否作為服務紀律定位 |\n\n## 什麼時候之前要修好？\n\n**申請之前。** 育成就勞計畫認定的申請要提出雇用契約書式・待遇說明書面（[行事曆](/zh-tw/labor/column/ikusei-shuro-ima-yatte-oku-koto)），規程與其不整合的狀態下申請，之後要改的東西只會變多。就業規則的變更還需要**過半數代表者等的意見聽取・意見書的附上、變更後的周知**（勞動基準法第90條・第106條）這些程序，也請算進倒推。程序的全貌與[AI寫的就業規則，能提交申報嗎](/zh-tw/labor/column/ai-shugyokisoku-todokede-dekiruka)所寫的流程相同。\n\n## 四葉社会保険労務士事務所能做什麼？\n\n位於文京區小日向的四葉社会保険労務士事務所，承接接收前的就業規則・宿舍規程・薪資扣除協定的修訂與製作、母語要旨的整備設計、從意見聽取到申報・周知的程序。費用為[報酬額表](/zh-tw/labor/ryokin)的「就業規則 新規作成／變更」。**諮詢免費。** 帶著現行規則來，就從接收前要修的地方的盤點開始。\n\n### 該向誰諮詢\n\n育成就勞計畫認定・監理支援機關許可的申請書類、在留資格由**四葉行政書士事務所**承接（與本事務所是不同的事業體，另行簽約）。宿舍的物件・法人契約由**四葉不動産株式会社**（同）。薪資課稅是**稅理士**、已生紛爭的案件是**律師**的業務。以上均不收取介紹費。\n\n## 常見問題\n\n**Q. 就業規則必須全部翻譯嗎？**\nA. 翻譯義務本身法令上沒有。但依周知（勞動基準法第106條）的旨趣，與本人利害直結的部分——勞動條件・扣除・懲戒・退宿——建議以能理解的語言示出要旨。全文譯或要旨譯，依費用與實態設計。\n\n**Q. 不到10人，沒有就業規則。也該做嗎？**\nA. 作成義務適用於經常僱用10人以上的事業場（第89條）。即使沒有義務，住居・借用物・扣除的規則不落成書面，每逢轉籍・離職就是個別交涉。義務的界線見[專文](/zh-tw/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo)。\n\n**Q. 宿舍門禁與生活規則，可以寫進就業規則嗎？**\nA. 透過服務紀律・懲戒的關係可以設計，但對私生活的限制會被檢驗是否在合理範圍。實務做法是把生活規則切出為宿舍規程，把連到懲戒的部分限定。具體的寫法請諮詢。\n\n**Q. 公司出日語講習的費用。離職時要求返還的規定可以寫嗎？**\nA. 草率的返還規定，在賠償預定的禁止（勞動基準法第16條）的關係上可能出問題，能否書寫無法一概而論。我們會整理設計的選項與論點，必要時再加上律師的確認。\n\n## 本文依據\n\n- 勞動基準法（昭和22年法律第49號）**第89條**（作成・申報義務）、**第90條**（意見聽取・意見書）、**第106條第1項**（周知義務）、**第16條**（賠償預定的禁止）、**第24條**（薪資扣除的勞使協定） ―― 2026年8月14日於e-Gov法令檢索確認現行條文\n- 外國人技能實習機構「育成就勞計畫認定施行日前申請」（令和8年8月5日更新・2026年8月14日確認）――雇用契約書及雇用條件書（參考樣式第1-2號）・待遇說明書面・移動及轉居費用等說明書（第1-39號）\n- **翻譯的要否與周知的十分性，是依個別情事評價分歧的領域。本文僅止於一般思路的整理**\n\n本文為一般性的資訊提供。因應個別情事的判斷，由具備資格者在面談後進行。撰文者為[浦松丈二](/zh-tw/about/uramatsu)（社會保險勞務士・行政書士・宅地建物取引士）。",
+          "category": "勞動法基礎",
+          "keywords": [
+            "外國人 接收 就業規則 修訂",
+            "就業規則 翻譯 義務 有嗎",
+            "就業規則 周知 外國人 母語",
+            "育成就勞 就業規則 修什麼",
+            "宿舍規程 生活規則 就業規則",
+            "教育費用 返還 條款 可以寫嗎"
+          ],
+          "tags": [
+            "育成就勞",
+            "就業規則",
+            "周知",
+            "翻譯",
+            "宿舍規程",
+            "外國人僱用"
+          ],
+          "author": {
+            "name": "浦松 丈二",
+            "title": "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+          },
+          "faq": [
+            {
+              "question": "就業規則必須全部翻譯嗎？",
+              "answer": "翻譯義務本身法令上沒有。但依周知（勞動基準法第106條）的旨趣，與本人利害直結的部分——勞動條件・扣除・懲戒・退宿——建議以能理解的語言示出要旨。全文譯或要旨譯，依費用與實態設計。"
+            },
+            {
+              "question": "不到10人，沒有就業規則。也該做嗎？",
+              "answer": "作成義務適用於經常僱用10人以上的事業場（第89條）。即使沒有義務，住居・借用物・扣除的規則不落成書面，每逢轉籍・離職就是個別交涉。義務的界線見專文。"
+            },
+            {
+              "question": "宿舍門禁與生活規則，可以寫進就業規則嗎？",
+              "answer": "透過服務紀律・懲戒的關係可以設計，但對私生活的限制會被檢驗是否在合理範圍。實務做法是把生活規則切出為宿舍規程，把連到懲戒的部分限定。具體的寫法請諮詢。"
+            },
+            {
+              "question": "公司出日語講習的費用。離職時要求返還的規定可以寫嗎？",
+              "answer": "草率的返還規定，在賠償預定的禁止（勞動基準法第16條）的關係上可能出問題，能否書寫無法一概而論。我們會整理設計的選項與論點，必要時再加上律師的確認。"
+            }
+          ]
+        },
+        "zh": {
+          "title": "接收之前，就业规则怎么修",
+          "excerpt": "接收外国人这件事本身不改变就业规则的作成义务。改变的是规程与实态的距离。就业规则经周知才发挥效力，只以本人无法理解的语言揭示，是否足以构成周知会被质疑。以转籍为前提的育成就劳，借用物・住居・费用负担的规程成为新的争点。本文整理要修的地方。",
+          "content": "**结论（先讲重点）**：接收外国人这件事本身，不会改变就业规则的作成义务。改变的是**规程与实态的距离**。就业规则经**周知**才发挥机能（劳动基准法第106条），**只以本人无法理解的语言揭示的状态，是否足以构成周知会被质疑**。以转籍为前提的育成就劳，**借用物・住居・费用负担的规程**成为新的争点。\n\n本页面写给在以育成就劳（含技能实习）接收外国人之前、考虑整备就业规则的公司经营者与总务人员。**从几人开始有作成义务**写在[专文](/zh/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo)，本文写**接收前要修什么**。\n\n## 接收外国人，就业规则需要修吗？\n\n义务的发生条件（经常雇用10人以上・劳动基准法第89条）不因国籍而异。需要修的原因，是**规程没有预想过的实态**进来了。\n\n- **住居**——公司准备宿舍的场面变多。[住居费的征收与现物给与](/zh/labor/column/ikusei-shuro-keikaku-taigu-kakikata)需要落到规程与劳使协定\n- **借用物**——工作服・工具・自行车・Wi-Fi路由器。没有返还规则，出借越积越多\n- **生活规则与惩戒**——宿舍生活规则在就业规则之外运用，惩戒的依据就悬空\n- **与申请文件的整合**——育成就劳计划认定的申请要提出雇用契约书・雇用条件书（参考样式第1-2号）与待遇说明书面。**规程与申请书面错开，其中一方就成了谎言**\n\n## 不译成母语，就不算周知吗？\n\n**翻译义务本身，法令上没有。** 另一方面，就业规则必须以**在各作业场所显眼处常时揭示・备置、书面交付及其他厚生劳动省令所定方法**使劳动者周知（劳动基准法第106条第1项）。\n\n周知不是「放在那里」，而是为了「处于可得而知的状态」的制度。**只揭示着内容无法理解的语言的规则，是否符合这个旨趣**——这就是被质疑的点，并反映到争议发生时能否断言「已经周知」。实务上，建议**至少就劳动条件・工资扣除・惩戒・退宿等与本人利害直结的部分，以母语或能理解的语言示出要旨**。译到什么程度是与费用的商量，多语对应的思路也在本事务所的[外国人雇用劳务](/zh/labor/services/gaikokujin-koyo)处理。\n\n## 以转籍为前提，要重看哪些规程？\n\n[转籍在劳务上是「离职＋雇入」](/zh/labor/column/ikusei-shuro-tenseki-shakaihoken-koyohoken)。以人会移动为前提重读规程，要修的地方就浮现。\n\n| 规程 | 重看的观点 |\n|---|---|\n| **宿舍规程** | 退职・转籍时的腾空期限、原状恢复的负担、住居费的清算。[申请样式第1-39号要求说明移动・转居费用](/zh/labor/column/ikusei-shuro-keikaku-taigu-kakikata) |\n| **借用物** | 返还的对象・期限・赔偿规则 |\n| **工资・扣除** | 住居费・水电费等扣除的依据（劳使协定）与清算方法 |\n| **教育・资格取得费用** | 公司出资的讲习・资格的处理。**离职时返还的条款写得草率，会与劳动基准法第16条（赔偿预定的禁止）发生问题**——这里容易设计错误，请个别咨询 |\n| **惩戒・服务** | 宿舍生活规则是否作为服务纪律定位 |\n\n## 什么时候之前要修好？\n\n**申请之前。** 育成就劳计划认定的申请要提出雇用契约书式・待遇说明书面（[日程表](/zh/labor/column/ikusei-shuro-ima-yatte-oku-koto)），规程与其不整合的状态下申请，之后要改的东西只会变多。就业规则的变更还需要**过半数代表者等的意见听取・意见书的附上、变更后的周知**（劳动基准法第90条・第106条）这些程序，也请算进倒推。程序的全貌与[AI写的就业规则，能提交申报吗](/zh/labor/column/ai-shugyokisoku-todokede-dekiruka)所写的流程相同。\n\n## 四葉社会保険労務士事務所能做什么？\n\n位于文京区小日向的四葉社会保険労務士事務所，承接接收前的就业规则・宿舍规程・工资扣除协定的修订与制作、母语要旨的整备设计、从意见听取到申报・周知的程序。费用为[报酬额表](/zh/labor/ryokin)的「就业规则 新规作成／变更」。**咨询免费。** 带着现行规则来，就从接收前要修的地方的盘点开始。\n\n### 该向谁咨询\n\n育成就劳计划认定・监理支援机构许可的申请书类、在留资格由**四葉行政書士事務所**承接（与本事务所是不同的事业体，另行签约）。宿舍的物件・法人契约由**四葉不動産株式会社**（同）。工资课税是**税理士**、已生纷争的案件是**律师**的业务。以上均不收取介绍费。\n\n## 常见问题\n\n**Q. 就业规则必须全部翻译吗？**\nA. 翻译义务本身法令上没有。但依周知（劳动基准法第106条）的旨趣，与本人利害直结的部分——劳动条件・扣除・惩戒・退宿——建议以能理解的语言示出要旨。全文译或要旨译，依费用与实态设计。\n\n**Q. 不到10人，没有就业规则。也该做吗？**\nA. 作成义务适用于经常雇用10人以上的事业场（第89条）。即使没有义务，住居・借用物・扣除的规则不落成书面，每逢转籍・离职就是个别交涉。义务的界线见[专文](/zh/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo)。\n\n**Q. 宿舍门禁与生活规则，可以写进就业规则吗？**\nA. 通过服务纪律・惩戒的关系可以设计，但对私生活的限制会被检验是否在合理范围。实务做法是把生活规则切出为宿舍规程，把连到惩戒的部分限定。具体的写法请咨询。\n\n**Q. 公司出日语讲习的费用。离职时要求返还的规定可以写吗？**\nA. 草率的返还规定，在赔偿预定的禁止（劳动基准法第16条）的关系上可能出问题，能否书写无法一概而论。我们会整理设计的选项与论点，必要时再加上律师的确认。\n\n## 本文依据\n\n- 劳动基准法（昭和22年法律第49号）**第89条**（作成・申报义务）、**第90条**（意见听取・意见书）、**第106条第1项**（周知义务）、**第16条**（赔偿预定的禁止）、**第24条**（工资扣除的劳使协定） ―― 2026年8月14日于e-Gov法令检索确认现行条文\n- 外国人技能实习机构「育成就劳计划认定施行日前申请」（令和8年8月5日更新・2026年8月14日确认）――雇用契约书及雇用条件书（参考样式第1-2号）・待遇说明书面・移动及转居费用等说明书（第1-39号）\n- **翻译的要否与周知的十分性，是依个别情事评价分歧的领域。本文仅止于一般思路的整理**\n\n本文为一般性的信息提供。因应个别情事的判断，由具备资格者在面谈后进行。撰文者为[浦松丈二](/zh/about/uramatsu)（社会保险劳务士・行政书士・宅地建物取引士）。",
+          "category": "劳动法基础",
+          "keywords": [
+            "外国人 接收 就业规则 修订",
+            "就业规则 翻译 义务 有吗",
+            "就业规则 周知 外国人 母语",
+            "育成就劳 就业规则 修什么",
+            "宿舍规程 生活规则 就业规则",
+            "教育费用 返还 条款 可以写吗"
+          ],
+          "tags": [
+            "育成就劳",
+            "就业规则",
+            "周知",
+            "翻译",
+            "宿舍规程",
+            "外国人雇用"
+          ],
+          "author": {
+            "name": "浦松 丈二",
+            "title": "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+          },
+          "faq": [
+            {
+              "question": "就业规则必须全部翻译吗？",
+              "answer": "翻译义务本身法令上没有。但依周知（劳动基准法第106条）的旨趣，与本人利害直结的部分——劳动条件・扣除・惩戒・退宿——建议以能理解的语言示出要旨。全文译或要旨译，依费用与实态设计。"
+            },
+            {
+              "question": "不到10人，没有就业规则。也该做吗？",
+              "answer": "作成义务适用于经常雇用10人以上的事业场（第89条）。即使没有义务，住居・借用物・扣除的规则不落成书面，每逢转籍・离职就是个别交涉。义务的界线见专文。"
+            },
+            {
+              "question": "宿舍门禁与生活规则，可以写进就业规则吗？",
+              "answer": "通过服务纪律・惩戒的关系可以设计，但对私生活的限制会被检验是否在合理范围。实务做法是把生活规则切出为宿舍规程，把连到惩戒的部分限定。具体的写法请咨询。"
+            },
+            {
+              "question": "公司出日语讲习的费用。离职时要求返还的规定可以写吗？",
+              "answer": "草率的返还规定，在赔偿预定的禁止（劳动基准法第16条）的关系上可能出问题，能否书写无法一概而论。我们会整理设计的选项与论点，必要时再加上律师的确认。"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "business": "labor",
+      "slug": "ginou-jisshu-ikusei-shuro-roumu-chigai",
+      "title": "技能実習と育成就労で、労務は何が変わるのか",
+      "date": "2026-09-01",
+      "category": "労務のしくみ",
+      "excerpt": "いちばん大きい違いは、本人の意向による転籍が認められることです。人が辞められる制度になるため、労務の軸は「来てもらう」から「残ってもらう」に移ります。待遇の透明化・生活相談の体制・日本語と技能の育成計画・賃金カーブ——様式の構造から逆算して、労務が変えるものを整理します。",
+      "content": "**結論（先に要点）**：労務にとっていちばん大きい違いは、**本人の意向による転籍が認められる**ことです。「人が辞められる制度」になるため、労務の軸は「来てもらう」から**「残ってもらう」**に移ります。日本語能力や技能の段階が計画の要素になるため（目標とする日本語能力の申告様式があります）、**賃金と育成の設計**そのものが労務の仕事になります。\n\nこのページは、技能実習で受け入れてきた会社…（全3898字）",
+      "status": "published",
+      "author": {
+        "name": "浦松 丈二",
+        "title": "社会保険労務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+      },
+      "keywords": [
+        "技能実習 育成就労 違い 労務",
+        "育成就労 転籍 本人の意向",
+        "育成就労 定着 賃金設計",
+        "技能実習 育成就労 移行 手続",
+        "育成就労 生活相談員 日本語",
+        "育成就労 何から手をつける"
+      ],
+      "tags": [
+        "育成就労",
+        "技能実習",
+        "転籍",
+        "定着",
+        "賃金設計",
+        "移行"
+      ],
+      "locales": [],
+      "faq": [
+        {
+          "question": "技能実習と育成就労は、別の法律の制度ですか？",
+          "answer": "別の法律ではありません。育成就労制度は、外国人の技能実習の適正な実施及び技能実習生の保護に関する法律（平成28年法律第89号）を令和6年法律第60号が改正して設けられるものです（題名も改められますが、e-Govの現行条文は改題前です。2026年8月14日確認）。"
+        },
+        {
+          "question": "転籍で人が出ていくなら、教育投資は回収できないのでは？",
+          "answer": "その不安が、賃金と育成の設計を労務の仕事にする理由です。費用負担のルールを入口の書面で明確にし（第1-39号）、段階に応じた賃金カーブで「残る理由」を示すのが基本線です。なお、退職時の費用返還を安易に定めると労働基準法第16条との関係が問題になり得る点は就業規則の記事で書いたとおりです。"
+        },
+        {
+          "question": "給与水準は上げなければいけませんか？",
+          "answer": "一律の答えは本記事では示しません。報酬の水準は計画の認定に関わる領域で、分野別の定めもあります。労務の側で確実なのは、報酬・徴収費用の説明書面と実際の支給・控除を一致させることと、段階が上がったときの昇給の道筋を示すことです。"
+        },
+        {
+          "question": "まだ何も決まっていない段階でも相談できますか？",
+          "answer": "できます。ご相談は無料です。カレンダー（期限）の確認と、自社の現状の棚卸し——契約書式・規程・住居費・保険の手続——から始めるのが、いちばん無駄のない入り方です。"
+        }
+      ],
+      "translations": {
+        "en": {
+          "title": "What changes for labour administration between technical intern training and the new system?",
+          "excerpt": "The biggest change for labour administration is that transfers at the worker's own initiative are recognised. In a system people can leave, the axis shifts from bringing people in to keeping them — treatment transparency, a working life-advisor arrangement, Japanese-language and skills development, and a wage curve. We work backwards from the structure of the application forms.",
+          "content": "**In short:** the biggest change for labour administration is that **transfers at the worker's own initiative are recognised**. The system becomes one people can leave, so the axis shifts from \"bringing people in\" to **\"keeping them\"**. Because Japanese-language ability and skill stages become elements of the plan (there is a declaration form on target Japanese ability), **wage and development design** itself becomes labour administration's work.\n\nThis page is an **overview** for owners and back-office staff who have hosted technical intern trainees or are weighing the new system. System explainers abound, and sector-specific guidelines keep updating; this article stays on **what labour administration changes**, and hands the specifics to four companion articles.\n\n## What changes most?\n\n**People become able to move.** The certification application set includes **seven forms on changes of implementer (transfers)** (reference forms 1-16 to 1-22; OTIT, checked 14 August 2026). As the count shows, transfer is not an exception path but the centre of the design.\n\nLabour arrangements built on the premise that \"once received, people stay to the end\" — dormitory charges, lent property, recouping training costs, the wage curve — get rebuilt on the premise that **people may move mid-way**. The reason treatment must be documented so many times ([what goes into the treatment sections](/en/labor/column/ikusei-shuro-keikaku-taigu-kakikata)) is that this is a system where the conditions shown at the entrance are later checked against reality.\n\n## What does labour administration do to keep people?\n\nNot slogans — the structure of the forms tells you.\n\n| Measure | The corresponding element in the system |\n|---|---|\n| **Treatment transparency** — contract, statements and pay slips kept identical | The statement of important matters (1-13) and the remuneration/accommodation/collections statements (1-15, 1-39) |\n| **Housing-charge design** — collections and [in-kind compensation](/en/labor/column/shataku-genbutsu-kyuyo-hyojun-hoshu) in order | Accommodation and collections are documented items |\n| **Being someone people can consult** — a life advisor who is more than a name | Acceptance letters for the supervisor, instructor and **life advisor** (1-11) |\n| **A Japanese and skills development plan** — hours and cost burden decided | The declaration on target Japanese-language ability (1-35) |\n| **A wage curve** — showing how pay rises as stages rise | The stage structure of skills and language built into the plan itself |\n\nEach is the work of showing, in documents and in fact, **a reason to stay**. A treatment gap that once ended in grumbling now ends in a transfer. Put the other way: transparent treatment and a real development plan are themselves the retention design.\n\n## How does the transition from technical intern training work?\n\nThe calendar, with primary sources, is in [What to do now](/en/labor/column/ikusei-shuro-ima-yatte-oku-koto). In outline: licence pre-applications are **being accepted**, plan-certification pre-applications open **September 1, 2026**, and on the technical intern training side new supervising-organisation licences run to **September 30, 2026** and No. 1 plan applications to **February 2027** (OTIT, checked 14 August 2026).\n\nFor those currently in technical intern training, the form set includes **a certification application form for former technical intern trainees (annexed form 3(2))** — the transition path exists at form level. **Whether and how an individual case can transition is the territory of ministerial orders, the operating guidelines and the immigration authorities.** This office does not judge it; the application side belongs to 四葉行政書士事務所 (a separate business).\n\n## Where do you start?\n\nAs a single sequence:\n\n1. **Draw the calendar** — put [the deadlines](/en/labor/column/ikusei-shuro-ima-yatte-oku-koto) into your own schedule\n2. **Design treatment and housing charges** — [the treatment sections](/en/labor/column/ikusei-shuro-keikaku-taigu-kakikata)\n3. **Fix the rules** — [the work rules](/en/labor/column/ikusei-shuro-shugyokisoku-minaoshi)\n4. **Prepare the transfer procedures** — [insurance and notifications on transfer](/en/labor/column/ikusei-shuro-tenseki-shakaihoken-koyohoken)\n\nStep 1 has deadlines; steps 2–4 are substance. Do 1 first, and build 2–4 toward enforcement.\n\n## What can 四葉社会保険労務士事務所 do?\n\n四葉社会保険労務士事務所, in Kohinata, Bunkyo City, takes on the labour-side rebuild for the transition — the treatment documents, housing charges and in-kind compensation, work rules and housing rules, and the transfer-time procedures — one piece at a time. **Consultation is free of charge.** Fees are in the [fee schedule](/en/labor/ryokin). Companies currently hosting trainees at the \"where do we even start\" stage are welcome.\n\n### Whom to consult\n\nLicence applications, plan certification, residence status and transition conditions go to **四葉行政書士事務所** (a separate business from this office, engaged under a separate contract; for choosing an external auditor, see [this page](/en/legal/services/ikuseishuro-gaibu-kansa)). Preparing for audits is covered on [the preparing-side page](/en/labor/services/gaibu-kansanin). Housing goes to **四葉不動産株式会社** (a separate business, a separate contract), payroll taxation to **a tax accountant**, disputes to **an attorney**. No referral fees change hands.\n\n## Frequently asked questions\n\n**Q. Are technical intern training and the new system different laws?**\nA. No. The new system is created by amending the Act on Proper Technical Intern Training and Protection of Technical Intern Trainees (Act No. 89 of 2016) through Act No. 60 of 2024 (the title also changes, but the current text on e-Gov still carries the old title — confirmed 14 August 2026).\n\n**Q. If people can transfer away, how do we recoup training investment?**\nA. That worry is exactly why wage and development design becomes labour administration's work. Set the cost rules in the entrance documents (form 1-39) and show a wage curve that gives stages a payoff. Note that casually drafted repayment-on-departure clauses can collide with Article 16 of the Labor Standards Act — see [the work-rules article](/en/labor/column/ikusei-shuro-shugyokisoku-minaoshi).\n\n**Q. Do we have to raise wages?**\nA. This article gives no blanket answer. Remuneration levels touch plan certification, and sector-specific provisions exist. What is certain on the labour side: keep the remuneration and collections statements identical to actual payment and deductions, and show the path by which pay rises with stages.\n\n**Q. Can we consult before anything is decided?**\nA. Yes — consultation is free. The least wasteful entry is the calendar check plus a stocktake of your current state: contract templates, rules, housing charges, insurance procedures.\n\n## Sources for this article\n\n- OTIT, \"**Pre-enforcement applications for training-employment plan certification**\" (updated 5 August 2026; checked 14 August 2026) — reference forms 1-11, 1-13, 1-15, 1-16 to 1-22, 1-35 and 1-39; the certification application form for former technical intern trainees (annexed form 3(2)); the note on No. 1 plan applications running to February 2027\n- OTIT, \"**Pre-enforcement applications for supervising support organisation licences**\" (updated 10 July 2026; checked 14 August 2026) — now accepting; the note on new supervising-organisation licences running to September 30, 2026\n- The legal basis: the Act on Proper Technical Intern Training and Protection of Technical Intern Trainees (Act No. 89 of 2016) as amended by Act No. 60 of 2024. **The current text on e-Gov still carries the pre-amendment title — confirmed 14 August 2026**\n- **Transition conditions, remuneration levels and the detailed permissibility of transfers belong to ministerial orders, the operating guidelines (revised 5 August 2026), sector-specific provisions and the immigration authorities. This article covers the labour-side design only**\n\nThis article is general information. Judgments that fit your particular circumstances are made by a qualified professional after a meeting. Written by [Joji Uramatsu](/en/about/uramatsu) (Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist).",
+          "category": "How labour administration works",
+          "keywords": [
+            "technical intern training ikusei shuro differences labour",
+            "transfer at workers initiative",
+            "retention wage design foreign workers",
+            "transition from technical intern training procedures",
+            "life advisor Japanese language development",
+            "where to start ikusei shuro"
+          ],
+          "tags": [
+            "Employment for Skill Development",
+            "technical intern training",
+            "transfers",
+            "retention",
+            "wage design",
+            "transition"
+          ],
+          "author": {
+            "name": "Joji Uramatsu",
+            "title": "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所"
+          },
+          "faq": [
+            {
+              "question": "Are technical intern training and the new system different laws?",
+              "answer": "No. The new system is created by amending the Act on Proper Technical Intern Training and Protection of Technical Intern Trainees (Act No. 89 of 2016) through Act No. 60 of 2024 (the title also changes, but the current text on e-Gov still carries the old title — confirmed 14 August 2026)."
+            },
+            {
+              "question": "If people can transfer away, how do we recoup training investment?",
+              "answer": "That worry is exactly why wage and development design becomes labour administration's work. Set the cost rules in the entrance documents (form 1-39) and show a wage curve that gives stages a payoff. Note that casually drafted repayment-on-departure clauses can collide with Article 16 of the Labor Standards Act — see the work-rules article."
+            },
+            {
+              "question": "Do we have to raise wages?",
+              "answer": "This article gives no blanket answer. Remuneration levels touch plan certification, and sector-specific provisions exist. What is certain on the labour side: keep the remuneration and collections statements identical to actual payment and deductions, and show the path by which pay rises with stages."
+            },
+            {
+              "question": "Can we consult before anything is decided?",
+              "answer": "Yes — consultation is free. The least wasteful entry is the calendar check plus a stocktake of your current state: contract templates, rules, housing charges, insurance procedures."
+            }
+          ]
+        },
+        "zh-tw": {
+          "title": "技能實習與育成就勞，勞務會有什麼不同",
+          "excerpt": "對勞務而言最大的不同，是承認本人意向的轉籍。變成「人可以離開的制度」，勞務的軸心從「請人來」移向「留人住」。日語能力與技能的階段成為計畫的要素，薪資與育成的設計本身成為勞務的工作。本文從申請樣式的結構倒推，整理勞務要改變的東西。",
+          "content": "**結論（先講重點）**：對勞務而言最大的不同，是**承認本人意向的轉籍**。變成「人可以離開的制度」，勞務的軸心從「請人來」移向**「留人住」**。日語能力與技能的階段成為計畫的要素（有目標日語能力的申告樣式），**薪資與育成的設計**本身成為勞務的工作。\n\n本頁面是寫給用技能實習接收過、或正在檢討育成就勞的公司經營者與總務人員的**總論**。制度全體的解說世上很多，分野別運用要領也持續更新中。本文只聚焦**勞務要改變什麼**，各論交給4篇專欄。\n\n## 最大的改變是什麼？\n\n**人變得能移動。** 育成就勞計畫認定的申請樣式中，**實施者變更希望（轉籍）的樣式有7個**（參考樣式第1-16號〜第1-22號。OTIT・2026年8月14日確認）。如數量所示，轉籍不是例外處理，而在制度設計的中心。\n\n過去以「接收了基本上待到最後」為前提組起來的勞務——宿舍費用、借用物、教育投資的回收、薪資曲線——要以**「中途可能離開」為前提**重組。待遇的書面要寫好幾張（[待遇欄寫什麼](/zh-tw/labor/column/ikusei-shuro-keikaku-taigu-kakikata)），也是因為這是入口示出的條件之後會被對照的制度。\n\n## 為了「留人住」，勞務要做什麼？\n\n不是精神論，可以從樣式所示的結構倒推。\n\n| 打法 | 對應的制度要素 |\n|---|---|\n| **待遇的透明化**——契約・說明書面・薪資明細一致 | 待遇重要事項說明書（第1-13號）、報酬・宿泊設施・徵收費用說明書（第1-15號・第1-39號） |\n| **住居費的設計**——徵收額與[現物給與](/zh-tw/labor/column/shataku-genbutsu-kyuyo-hyojun-hoshu)的整理 | 宿泊設施・徵收費用是書面記載事項 |\n| **能被商量的體制**——生活相談員不是「掛名」 | 育成就勞責任者・指導員・**生活相談員**的就任承諾書（第1-11號） |\n| **日語與技能的育成計畫**——學習時間與費用負擔先決定 | 目標日語能力講習等履修狀況申告書（第1-35號） |\n| **薪資曲線**——階段上去薪資怎麼上去，先示出來 | 技能・日語的階段成為計畫要素的結構本身 |\n\n每一項都是把「本人留在這裡的理由」，以書面與實態兩方示出的作業。**待遇的落差，以前也許止於不滿，之後會連到轉籍這個出口。** 反過來說，透明的待遇與育成的設計，就是定著的設計。\n\n## 從技能實習移行，手續會怎樣？\n\n行事曆連同一次資料整理在[育成就勞，現在該做什麼](/zh-tw/labor/column/ikusei-shuro-ima-yatte-oku-koto)。只重述骨架——監理支援機關許可的施行日前申請**受理中**、育成就勞計畫認定的施行日前申請**2026年9月1日開始**、技能實習側的監理團體新規許可至**2026年9月30日**・1號技能實習計畫認定申請至**2027年2月**（OTIT・2026年8月14日確認）。\n\n關於現在技能實習中的人，申請樣式備有**舊技能實習生用的認定申請書（別記樣式第3號（2））**，移行的路徑在樣式層面確實存在。**個別能否移行・何時如何移行的判斷，屬主務省令・運用要領・入管的領域。** 本事務所不作判斷，申請側請諮詢四葉行政書士事務所（不同事業體）。\n\n## 從哪裡著手？\n\n整理成一條順序。\n\n1. **畫行事曆**——把[現在該做什麼](/zh-tw/labor/column/ikusei-shuro-ima-yatte-oku-koto)的期限落到自家日程\n2. **設計待遇與住居費**——[待遇欄寫什麼](/zh-tw/labor/column/ikusei-shuro-keikaku-taigu-kakikata)\n3. **修規程**——[就業規則怎麼修](/zh-tw/labor/column/ikusei-shuro-shugyokisoku-minaoshi)\n4. **準備轉籍的手續**——[被轉籍時，社會保險與僱用保險會怎麼樣](/zh-tw/labor/column/ikusei-shuro-tenseki-shakaihoken-koyohoken)\n\n1是有截止日的作業，2〜4是內容的作業。先完成1，再在施行前把2〜4堆起來，是現實的走法。\n\n## 四葉社会保険労務士事務所能做什麼？\n\n位於文京區小日向的四葉社会保険労務士事務所，逐項承接伴隨移行的勞務重建——待遇書面、住居費與現物給與、就業規則・宿舍規程、轉籍時的手續。**諮詢免費。** 費用載於[報酬額表](/zh-tw/labor/ryokin)。用技能實習接收中、「我們該從哪裡動」這個階段的諮詢也歡迎。\n\n### 該向誰諮詢\n\n監理支援機關的許可申請・育成就勞計畫認定的申請・在留資格・移行的要件由**四葉行政書士事務所**承接（與本事務所是不同的事業體，另行簽約。外部稽核人員的委託對象選法見[此頁](/zh-tw/legal/services/ikuseishuro-gaibu-kansa)）。備妥稽核的整理見[外部稽核人員（備妥側）](/zh-tw/labor/services/gaibu-kansanin)。住居・宿舍由**四葉不動産株式会社**（不同事業體・另行簽約）、薪資課稅是**稅理士**、爭議案件是**律師**的業務。以上均不收取介紹費。\n\n## 常見問題\n\n**Q. 技能實習與育成就勞，是不同法律的制度嗎？**\nA. 不是不同的法律。育成就勞制度是令和6年法律第60號修正外國人の技能実習の適正な実施及び技能実習生の保護に関する法律（平成28年法律第89號）所設（題名也將改，但e-Gov的現行條文仍為改題前。2026年8月14日確認）。\n\n**Q. 人會轉籍走的話，教育投資不就回收不了？**\nA. 這個不安，正是薪資與育成設計成為勞務工作的理由。以入口的書面（第1-39號）明確費用負擔規則，以對應階段的薪資曲線示出「留下的理由」，是基本線。另外，離職時費用返還的條款寫得草率，會與勞動基準法第16條發生問題——如[就業規則的文章](/zh-tw/labor/column/ikusei-shuro-shugyokisoku-minaoshi)所寫。\n\n**Q. 薪資水準必須提高嗎？**\nA. 本文不給一律的答案。報酬水準關係計畫的認定，也有分野別規定。勞務側確實的是：報酬・徵收費用的說明書面與實際支給・扣除一致，並示出階段上升時加薪的路徑。\n\n**Q. 什麼都還沒決定的階段，也能諮詢嗎？**\nA. 可以，諮詢免費。從行事曆（期限）的確認與自家現狀的盤點——契約書式・規程・住居費・保險手續——開始，是最不浪費的切入方式。\n\n## 本文依據\n\n- 外國人技能實習機構「**育成就勞計畫認定施行日前申請**」（令和8年8月5日更新・2026年8月14日確認）――參考樣式第1-11號・第1-13號・第1-15號・第1-16號〜第1-22號・第1-35號・第1-39號、舊技能實習生用別記樣式第3號（2）、「1號技能實習計畫認定申請至令和9年2月」的注記\n- 外國人技能實習機構「**監理支援機關許可施行日前申請**」（令和8年7月10日更新・2026年8月14日確認）――受理中・「監理團體新規許可至令和8年9月30日」的注記\n- 育成就勞制度的根據法令＝外國人の技能実習の適正な実施及び技能実習生の保護に関する法律（平成28年法律第89號）的修正（令和6年法律第60號）。**e-Gov的現行條文仍為改題前，2026年8月14日確認**\n- **移行要件・報酬水準・轉籍可否的詳情，屬主務省令・運用要領（2026年8月5日修正）・分野別規定・入管的領域。本文僅處理勞務側的設計**\n\n本文為一般性的資訊提供。因應個別情事的判斷，由具備資格者在面談後進行。撰文者為[浦松丈二](/zh-tw/about/uramatsu)（社會保險勞務士・行政書士・宅地建物取引士）。",
+          "category": "勞務的機制",
+          "keywords": [
+            "技能實習 育成就勞 不同 勞務",
+            "育成就勞 轉籍 本人意向",
+            "育成就勞 定著 薪資設計",
+            "技能實習 育成就勞 移行 手續",
+            "育成就勞 生活相談員 日語",
+            "育成就勞 從哪裡著手"
+          ],
+          "tags": [
+            "育成就勞",
+            "技能實習",
+            "轉籍",
+            "定著",
+            "薪資設計",
+            "移行"
+          ],
+          "author": {
+            "name": "浦松 丈二",
+            "title": "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+          },
+          "faq": [
+            {
+              "question": "技能實習與育成就勞，是不同法律的制度嗎？",
+              "answer": "不是不同的法律。育成就勞制度是令和6年法律第60號修正外國人の技能実習の適正な実施及び技能実習生の保護に関する法律（平成28年法律第89號）所設（題名也將改，但e-Gov的現行條文仍為改題前。2026年8月14日確認）。"
+            },
+            {
+              "question": "人會轉籍走的話，教育投資不就回收不了？",
+              "answer": "這個不安，正是薪資與育成設計成為勞務工作的理由。以入口的書面（第1-39號）明確費用負擔規則，以對應階段的薪資曲線示出「留下的理由」，是基本線。另外，離職時費用返還的條款寫得草率，會與勞動基準法第16條發生問題——如就業規則的文章所寫。"
+            },
+            {
+              "question": "薪資水準必須提高嗎？",
+              "answer": "本文不給一律的答案。報酬水準關係計畫的認定，也有分野別規定。勞務側確實的是：報酬・徵收費用的說明書面與實際支給・扣除一致，並示出階段上升時加薪的路徑。"
+            },
+            {
+              "question": "什麼都還沒決定的階段，也能諮詢嗎？",
+              "answer": "可以，諮詢免費。從行事曆（期限）的確認與自家現狀的盤點——契約書式・規程・住居費・保險手續——開始，是最不浪費的切入方式。"
+            }
+          ]
+        },
+        "zh": {
+          "title": "技能实习与育成就劳，劳务会有什么不同",
+          "excerpt": "对劳务而言最大的不同，是承认本人意向的转籍。变成「人可以离开的制度」，劳务的轴心从「请人来」移向「留人住」。日语能力与技能的阶段成为计划的要素，工资与育成的设计本身成为劳务的工作。本文从申请样式的结构倒推，整理劳务要改变的东西。",
+          "content": "**结论（先讲重点）**：对劳务而言最大的不同，是**承认本人意向的转籍**。变成「人可以离开的制度」，劳务的轴心从「请人来」移向**「留人住」**。日语能力与技能的阶段成为计划的要素（有目标日语能力的申告样式），**工资与育成的设计**本身成为劳务的工作。\n\n本页面是写给用技能实习接收过、或正在检讨育成就劳的公司经营者与总务人员的**总论**。制度全体的解说世上很多，分野别运用要领也持续更新中。本文只聚焦**劳务要改变什么**，各论交给4篇专栏。\n\n## 最大的改变是什么？\n\n**人变得能移动。** 育成就劳计划认定的申请样式中，**实施者变更希望（转籍）的样式有7个**（参考样式第1-16号〜第1-22号。OTIT・2026年8月14日确认）。如数量所示，转籍不是例外处理，而在制度设计的中心。\n\n过去以「接收了基本上待到最后」为前提组起来的劳务——宿舍费用、借用物、教育投资的回收、工资曲线——要以**「中途可能离开」为前提**重组。待遇的书面要写好几张（[待遇栏写什么](/zh/labor/column/ikusei-shuro-keikaku-taigu-kakikata)），也是因为这是入口示出的条件之后会被对照的制度。\n\n## 为了「留人住」，劳务要做什么？\n\n不是精神论，可以从样式所示的结构倒推。\n\n| 打法 | 对应的制度要素 |\n|---|---|\n| **待遇的透明化**——契约・说明书面・工资明细一致 | 待遇重要事项说明书（第1-13号）、报酬・宿泊设施・征收费用说明书（第1-15号・第1-39号） |\n| **住居费的设计**——征收额与[现物给与](/zh/labor/column/shataku-genbutsu-kyuyo-hyojun-hoshu)的整理 | 宿泊设施・征收费用是书面记载事项 |\n| **能被商量的体制**——生活相谈员不是「挂名」 | 育成就劳责任者・指导员・**生活相谈员**的就任承诺书（第1-11号） |\n| **日语与技能的育成计划**——学习时间与费用负担先决定 | 目标日语能力讲习等履修状况申告书（第1-35号） |\n| **工资曲线**——阶段上去工资怎么上去，先示出来 | 技能・日语的阶段成为计划要素的结构本身 |\n\n每一项都是把「本人留在这里的理由」，以书面与实态两方示出的作业。**待遇的落差，以前也许止于不满，之后会连到转籍这个出口。** 反过来说，透明的待遇与育成的设计，就是定着的设计。\n\n## 从技能实习移行，手续会怎样？\n\n日程表连同一次资料整理在[育成就劳，现在该做什么](/zh/labor/column/ikusei-shuro-ima-yatte-oku-koto)。只重述骨架——监理支援机构许可的施行日前申请**受理中**、育成就劳计划认定的施行日前申请**2026年9月1日开始**、技能实习侧的监理团体新规许可至**2026年9月30日**・1号技能实习计划认定申请至**2027年2月**（OTIT・2026年8月14日确认）。\n\n关于现在技能实习中的人，申请样式备有**旧技能实习生用的认定申请书（别记样式第3号（2））**，移行的路径在样式层面确实存在。**个别能否移行・何时如何移行的判断，属主务省令・运用要领・入管的领域。** 本事务所不作判断，申请侧请咨询四葉行政書士事務所（不同事业体）。\n\n## 从哪里着手？\n\n整理成一条顺序。\n\n1. **画日程表**——把[现在该做什么](/zh/labor/column/ikusei-shuro-ima-yatte-oku-koto)的期限落到自家日程\n2. **设计待遇与住居费**——[待遇栏写什么](/zh/labor/column/ikusei-shuro-keikaku-taigu-kakikata)\n3. **修规程**——[就业规则怎么修](/zh/labor/column/ikusei-shuro-shugyokisoku-minaoshi)\n4. **准备转籍的手续**——[被转籍时，社会保险与雇用保险会怎么样](/zh/labor/column/ikusei-shuro-tenseki-shakaihoken-koyohoken)\n\n1是有截止日的作业，2〜4是内容的作业。先完成1，再在施行前把2〜4堆起来，是现实的走法。\n\n## 四葉社会保険労務士事務所能做什么？\n\n位于文京区小日向的四葉社会保険労務士事務所，逐项承接伴随移行的劳务重建——待遇书面、住居费与现物给与、就业规则・宿舍规程、转籍时的手续。**咨询免费。** 费用载于[报酬额表](/zh/labor/ryokin)。用技能实习接收中、「我们该从哪里动」这个阶段的咨询也欢迎。\n\n### 该向谁咨询\n\n监理支援机构的许可申请・育成就劳计划认定的申请・在留资格・移行的要件由**四葉行政書士事務所**承接（与本事务所是不同的事业体，另行签约。外部审计人员的委托对象选法见[此页](/zh/legal/services/ikuseishuro-gaibu-kansa)）。备妥审计的整理见[外部审计人员（备妥侧）](/zh/labor/services/gaibu-kansanin)。住居・宿舍由**四葉不動産株式会社**（不同事业体・另行签约）、工资课税是**税理士**、争议案件是**律师**的业务。以上均不收取介绍费。\n\n## 常见问题\n\n**Q. 技能实习与育成就劳，是不同法律的制度吗？**\nA. 不是不同的法律。育成就劳制度是令和6年法律第60号修正外国人の技能実習の適正な実施及び技能実習生の保護に関する法律（平成28年法律第89号）所设（题名也将改，但e-Gov的现行条文仍为改题前。2026年8月14日确认）。\n\n**Q. 人会转籍走的话，教育投资不就回收不了？**\nA. 这个不安，正是工资与育成设计成为劳务工作的理由。以入口的书面（第1-39号）明确费用负担规则，以对应阶段的工资曲线示出「留下的理由」，是基本线。另外，离职时费用返还的条款写得草率，会与劳动基准法第16条发生问题——如[就业规则的文章](/zh/labor/column/ikusei-shuro-shugyokisoku-minaoshi)所写。\n\n**Q. 工资水准必须提高吗？**\nA. 本文不给一律的答案。报酬水准关系计划的认定，也有分野别规定。劳务侧确实的是：报酬・征收费用的说明书面与实际支给・扣除一致，并示出阶段上升时加薪的路径。\n\n**Q. 什么都还没决定的阶段，也能咨询吗？**\nA. 可以，咨询免费。从日程表（期限）的确认与自家现状的盘点——契约书式・规程・住居费・保险手续——开始，是最不浪费的切入方式。\n\n## 本文依据\n\n- 外国人技能实习机构「**育成就劳计划认定施行日前申请**」（令和8年8月5日更新・2026年8月14日确认）――参考样式第1-11号・第1-13号・第1-15号・第1-16号〜第1-22号・第1-35号・第1-39号、旧技能实习生用别记样式第3号（2）、「1号技能实习计划认定申请至令和9年2月」的注记\n- 外国人技能实习机构「**监理支援机构许可施行日前申请**」（令和8年7月10日更新・2026年8月14日确认）――受理中・「监理团体新规许可至令和8年9月30日」的注记\n- 育成就劳制度的根据法令＝外国人の技能実習の適正な実施及び技能実習生の保護に関する法律（平成28年法律第89号）的修正（令和6年法律第60号）。**e-Gov的现行条文仍为改题前，2026年8月14日确认**\n- **移行要件・报酬水准・转籍可否的详情，属主务省令・运用要领（2026年8月5日修正）・分野别规定・入管的领域。本文仅处理劳务侧的设计**\n\n本文为一般性的信息提供。因应个别情事的判断，由具备资格者在面谈后进行。撰文者为[浦松丈二](/zh/about/uramatsu)（社会保险劳务士・行政书士・宅地建物取引士）。",
+          "category": "劳务的机制",
+          "keywords": [
+            "技能实习 育成就劳 不同 劳务",
+            "育成就劳 转籍 本人意向",
+            "育成就劳 定着 工资设计",
+            "技能实习 育成就劳 移行 手续",
+            "育成就劳 生活相谈员 日语",
+            "育成就劳 从哪里着手"
+          ],
+          "tags": [
+            "育成就劳",
+            "技能实习",
+            "转籍",
+            "定着",
+            "工资设计",
+            "移行"
+          ],
+          "author": {
+            "name": "浦松 丈二",
+            "title": "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+          },
+          "faq": [
+            {
+              "question": "技能实习与育成就劳，是不同法律的制度吗？",
+              "answer": "不是不同的法律。育成就劳制度是令和6年法律第60号修正外国人の技能実習の適正な実施及び技能実習生の保護に関する法律（平成28年法律第89号）所设（题名也将改，但e-Gov的现行条文仍为改题前。2026年8月14日确认）。"
+            },
+            {
+              "question": "人会转籍走的话，教育投资不就回收不了？",
+              "answer": "这个不安，正是工资与育成设计成为劳务工作的理由。以入口的书面（第1-39号）明确费用负担规则，以对应阶段的工资曲线示出「留下的理由」，是基本线。另外，离职时费用返还的条款写得草率，会与劳动基准法第16条发生问题——如就业规则的文章所写。"
+            },
+            {
+              "question": "工资水准必须提高吗？",
+              "answer": "本文不给一律的答案。报酬水准关系计划的认定，也有分野别规定。劳务侧确实的是：报酬・征收费用的说明书面与实际支给・扣除一致，并示出阶段上升时加薪的路径。"
+            },
+            {
+              "question": "什么都还没决定的阶段，也能咨询吗？",
+              "answer": "可以，咨询免费。从日程表（期限）的确认与自家现状的盘点——契约书式・规程・住居费・保险手续——开始，是最不浪费的切入方式。"
             }
           ]
         }
