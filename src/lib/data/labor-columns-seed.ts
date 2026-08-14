@@ -3641,5 +3641,1103 @@ export const LABOR_COLUMNS_SEED: LaborSeedColumn[] = [
         ]
       }
     }
+  },
+  {
+    "business": "labor",
+    "slug": "gaikokujin-koyo-madoguchi-wakekata",
+    "title": "外国人を1人雇うと、窓口はいくつ必要か",
+    "date": "2026-09-01",
+    "category": "誰に頼むか",
+    "excerpt": "外国人を1人雇うと、在留資格の申請、労働・社会保険の加入と届出、住まいの確保という3つの手続が同時に動きます。担当する資格が違うため、それぞれ別の契約になります。内定から帰国までの時系列で、何を・誰に・いつ頼むのかを1枚に整理します。",
+    "content": "**結論（先に要点）**：外国人を1人雇うと、少なくとも3つの手続が同時に動きます。**在留資格**の申請、**労働・社会保険**の加入と届出、そして**住まい**の確保です。担当する資格が違うため、それぞれ別の契約になります。順番を間違えると、入社日が動きます。\n\nこのページは、はじめて外国人を雇う中小企業の経営者・総務担当の方に向けて、「何が・どの順番で・誰の担当で」動くのかを1枚に整理するものです。個別の論点は、この記事から各論のコラムへつながります。\n\n## 何が、どの順番で動くのか？\n\n時系列で並べると、担当の分かれ方が見えます。\n\n| 段階 | 何が動くか | 誰の業務か |\n|---|---|---|\n| 内定〜入社前 | 在留資格の認定・変更の申請 | **行政書士**（四葉行政書士事務所） |\n| 入社前 | 労働条件の明示・雇用契約（在留期限との関係は[在留期限と雇用契約期間は、どちらが先に切れるか](/labor/column/zairyu-kigen-koyo-keiyaku-kikan)） | **社会保険労務士** |\n| 入社前後 | 住まいの確保・社宅の法人契約 | **宅地建物取引業者**（四葉不動産株式会社） |\n| 入社時 | 社会保険・雇用保険の資格取得、[外国人雇用状況の届出](/labor/column/gaikokujin-koyo-jokyo-todokede) | **社会保険労務士** |\n| 毎月・毎年 | 給与計算、[社宅の現物給与の算入](/labor/column/shataku-genbutsu-kyuyo-hyojun-hoshu)、算定基礎届・年度更新 | **社会保険労務士** |\n| 帰国時 | 資格喪失、離職の届出、[年金の清算](/labor/column/gaikokujin-shain-kikoku-nenkin-seisan) | **社会保険労務士** |\n\n**入口（在留資格）→運用（毎月の労務）→出口（帰国）**という流れの中で、入口は行政書士、運用と出口は社会保険労務士、住まいは宅建業者と、資格の線で担当が分かれます。\n\n## どこからどこまでが、社会保険労務士の仕事か？\n\n**雇ったあとに毎月・毎年発生することの全部**です。社会保険・雇用保険の資格取得と喪失、外国人雇用状況の届出、給与計算と現物給与の算入、労働時間の管理（[留学生の週28時間](/labor/column/ryugakusei-arubaito-28jikan-kanri)を含む）、帰国時の手続。当事務所の[外国人雇用の労務・社会保険](/labor/services/gaikokujin-koyo)でお受けしています。\n\n逆に、**在留資格を取る・変える・更新する手続は書きません・扱いません**。それは行政書士の業務で、[企業側の手続と期限](/legal/services/gaikokujin-shain)は四葉行政書士事務所のページにあります（当事務所とは**別の事業体**です）。\n\n## 社宅を用意すると、何が増えるのか？\n\n外国人社員は、会社が住まいを用意する場面が多くなります。増えるのは3つです。物件探しと法人契約（宅建業者）、社宅規程の整備（社会保険労務士。料金は[報酬額表](/labor/ryokin)の「社宅規程 作成」）、そして見落とされやすいのが**社宅の現物給与としての報酬算入**です。家賃の負担のさせ方によって社会保険料が変わります。詳しくは[社宅を貸すと、社会保険料が上がることがある](/labor/column/shataku-genbutsu-kyuyo-hyojun-hoshu)をご覧ください。\n\n## 四葉には、どう相談すればいいのか？\n\n四葉には不動産（四葉不動産株式会社）・行政書士（四葉行政書士事務所）・社会保険労務士（四葉社会保険労務士事務所）が同じ拠点にあり、**一つの窓口でご相談いただけます。ただし、それぞれ独立した事業体として受任するため、契約・請求・お振込先は分かれます。** 紹介料の授受はありません。**ご相談は無料です。** 「まず何から動くべきか」の整理からご一緒します。\n\n### 誰に相談するか\n\n在留資格の申請・変更・更新は**四葉行政書士事務所**、社宅の物件探し・法人契約は**四葉不動産株式会社**（いずれも当事務所とは別の事業体で、別々にご契約いただきます）。給与課税・年末調整は**税理士**、登記は**司法書士**、紛争性のある事案は**弁護士**の業務です。いずれも紹介料の授受はありません。\n\n## よくある質問\n\n**Q. 全部まとめて1つの契約でお願いできますか？**\nA. できません。在留資格は行政書士、労務・社会保険は社会保険労務士、物件と法人契約は宅建業者と、法律上の資格が分かれているためです。四葉では窓口を一つにしてご相談いただけますが、受任はそれぞれ独立した事業体が行い、契約・請求・お振込先も分かれます。\n\n**Q. 最初に動くべきなのは、どの手続ですか？**\nA. 一般に、在留資格が決まらないと入社日が確定しません。入口の在留資格（行政書士の業務）を先に、並行して労働条件の設計と住まいの確保を進める順序が実務的です。当事務所は労働条件の側と入社後の手続を担当します。\n\n**Q. 外国人だからといって、社会保険の扱いは変わりますか？**\nA. 加入の要件は国籍で変わりません。日本人と同じ基準で社会保険・雇用保険に入ります。外国人に特有なのは、外国人雇用状況の届出（雇入れ・離職のたび）と、帰国時の年金の清算です。それぞれ別の記事で書いています。\n\n**Q. 相談だけでも費用はかかりますか？**\nA. 当事務所のご相談は無料です。手続や顧問をご依頼いただく場合の料金は[報酬額表](/labor/ryokin)で公開しています。\n\n## この記事の根拠\n\n- 本記事は担当の分かれ方（業際）を整理したものです。各手続の根拠条文は、リンク先の各論記事にそれぞれ記載しています\n- 社会保険労務士法（昭和43年法律第89号）第2条第1項・第27条（労働社会保険の手続を報酬を得て代行できるのは社会保険労務士） ―― 2026年8月14日にe-Gov法令検索で現行条文を確認\n\n本記事は一般的な情報提供です。個別のご事情に応じた判断は、面談のうえ資格者が行います。執筆は[浦松丈二](/about/uramatsu)（社会保険労務士・行政書士・宅地建物取引士）です。",
+    "status": "published",
+    "author": {
+      "name": "浦松 丈二",
+      "title": "社会保険労務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+    },
+    "keywords": [
+      "外国人 雇う 手続 流れ",
+      "外国人雇用 誰に頼む",
+      "外国人 社員 社会保険 届出",
+      "外国人雇用 社労士 行政書士 違い",
+      "外国人 採用 会社 やること",
+      "外国人雇用 窓口"
+    ],
+    "tags": [
+      "外国人雇用",
+      "業際",
+      "在留資格",
+      "社会保険",
+      "社宅",
+      "手続"
+    ],
+    "locales": [],
+    "faq": [
+      {
+        "question": "全部まとめて1つの契約でお願いできますか？",
+        "answer": "できません。在留資格は行政書士、労務・社会保険は社会保険労務士、物件と法人契約は宅建業者と、法律上の資格が分かれているためです。四葉では窓口を一つにしてご相談いただけますが、受任はそれぞれ独立した事業体が行い、契約・請求・お振込先も分かれます。"
+      },
+      {
+        "question": "最初に動くべきなのは、どの手続ですか？",
+        "answer": "一般に、在留資格が決まらないと入社日が確定しません。入口の在留資格（行政書士の業務）を先に、並行して労働条件の設計と住まいの確保を進める順序が実務的です。当事務所は労働条件の側と入社後の手続を担当します。"
+      },
+      {
+        "question": "外国人だからといって、社会保険の扱いは変わりますか？",
+        "answer": "加入の要件は国籍で変わりません。日本人と同じ基準で社会保険・雇用保険に入ります。外国人に特有なのは、外国人雇用状況の届出（雇入れ・離職のたび）と、帰国時の年金の清算です。それぞれ別の記事で書いています。"
+      },
+      {
+        "question": "相談だけでも費用はかかりますか？",
+        "answer": "当事務所のご相談は無料です。手続や顧問をご依頼いただく場合の料金は報酬額表で公開しています。"
+      }
+    ],
+    "translations": {
+      "en": {
+        "title": "Hire one foreign employee — how many counters do you need?",
+        "excerpt": "Hiring one foreign employee sets at least three procedures moving at once — the residence-status application, labour and social insurance enrolment and notifications, and housing. Different licences are responsible for each, so each is a separate contract. We map the whole timeline, from offer to return home, on one page.",
+        "content": "**In short:** hiring one foreign employee sets at least three procedures moving at once — the **residence-status** application, **labour and social insurance** enrolment and notifications, and **housing**. Because different licences are responsible, each becomes a separate contract. Get the order wrong and the start date moves.\n\nThis page is for owners and back-office staff of small and medium-sized companies hiring a foreign employee for the first time. It lays out what moves, in what order, under whose responsibility — and links out to the detailed articles.\n\n## What moves, and in what order?\n\nArranged as a timeline, the division of roles becomes visible.\n\n| Stage | What moves | Whose work |\n|---|---|---|\n| Offer to joining | Residence-status certification or change application | **A gyoseishoshi** (四葉行政書士事務所) |\n| Before joining | Written working conditions and the employment contract (for the relationship with the period of stay, see [Which expires first — the period of stay or the employment contract?](/en/labor/column/zairyu-kigen-koyo-keiyaku-kikan)) | **A shakai hoken roumushi** |\n| Around joining | Housing and the corporate lease | **A licensed real estate agent** (四葉不動産株式会社) |\n| On joining | Social and employment insurance enrolment; the [foreign worker employment status notification](/en/labor/column/gaikokujin-koyo-jokyo-todokede) | **A shakai hoken roumushi** |\n| Monthly and yearly | Payroll, [company housing as in-kind compensation](/en/labor/column/shataku-genbutsu-kyuyo-hyojun-hoshu), the annual calculation report and annual renewal | **A shakai hoken roumushi** |\n| On returning home | Loss of insured status, separation notifications, [settling the pension](/en/labor/column/gaikokujin-shain-kikoku-nenkin-seisan) | **A shakai hoken roumushi** |\n\nAcross the flow — **entrance (residence status) → operation (monthly labour administration) → exit (return home)** — the entrance belongs to the gyoseishoshi, operation and exit to the shakai hoken roumushi, and housing to the real estate agent. The lines follow the licences.\n\n## Where does the shakai hoken roumushi's work start and end?\n\n**Everything that recurs monthly and yearly after the hire.** Social and employment insurance enrolment and loss, the foreign worker employment status notification, payroll and in-kind compensation, working-hours management (including the [28-hour limit for international students](/en/labor/column/ryugakusei-arubaito-28jikan-kanri)), and the procedures at departure. This office takes these on through its [labour and social insurance service for foreign employment](/en/labor/services/gaikokujin-koyo).\n\nConversely, **this article does not cover — and this office does not handle — obtaining, changing or renewing a residence status.** That is gyoseishoshi work; [the company-side procedures and deadlines](/en/legal/services/gaikokujin-shain) are covered by 四葉行政書士事務所 (**a separate business** from this office).\n\n## What does providing company housing add?\n\nWith foreign employees, the company often arranges the housing. Three things are added: finding the property and the corporate lease (the real estate agent), the company housing rules (the shakai hoken roumushi; see the \"company housing rules\" rows of the [fee schedule](/en/labor/ryokin)) — and, most often overlooked, **the housing counting as in-kind compensation in the standard remuneration**. How much rent you collect from the employee changes the social insurance premiums. See [Provide company housing, and social insurance premiums can rise](/en/labor/column/shataku-genbutsu-kyuyo-hyojun-hoshu).\n\n## How do I consult Yotsuba?\n\nYotsuba has real estate (四葉不動産株式会社), a gyoseishoshi office (四葉行政書士事務所) and a shakai hoken roumushi office (四葉社会保険労務士事務所) at the same location, so you have **a single point of contact. However, each accepts work as an independent business, under a separate contract, with separate invoices and separate payment accounts.** No referral fees change hands. **Consultation is free of charge.** We start by sorting out what to move first.\n\n### Whom to consult\n\nResidence-status applications, changes and renewals go to **四葉行政書士事務所**; property search and corporate leases to **四葉不動産株式会社** (each a separate business from this office, engaged under a separate contract). Payroll taxation and the year-end adjustment are for **a tax accountant**, registration for **a judicial scrivener**, and matters in dispute for **an attorney**. In every case, no referral fees change hands.\n\n## Frequently asked questions\n\n**Q. Can we ask for everything under one contract?**\nA. No. Residence status is gyoseishoshi work, labour and social insurance is shakai hoken roumushi work, and the property and corporate lease belong to a licensed real estate agent — the licences are separate by law. At Yotsuba you can consult through a single point of contact, but each engagement is accepted by an independent business, with separate contracts, invoices and payment accounts.\n\n**Q. Which procedure should move first?**\nA. Generally, the start date cannot be fixed until the residence status is settled. The practical order is: the residence status first (gyoseishoshi work), with the design of working conditions and the housing search running in parallel. This office handles the working-conditions side and everything after joining.\n\n**Q. Does social insurance treat foreign employees differently?**\nA. The enrolment criteria do not depend on nationality; foreign employees join social and employment insurance on the same tests as Japanese employees. What is specific to foreign employment is the employment status notification (at every hire and separation) and the pension settlement at departure — each covered in its own article.\n\n**Q. Is there a charge just to consult?**\nA. Consultation with this office is free. Fees for procedures and retainers are published in the [fee schedule](/en/labor/ryokin).\n\n## Sources for this article\n\n- This article organises the division of roles (scope of practice); the statutory basis for each procedure is given in the linked articles\n- Certified Social Insurance and Labor Consultant Act (社会保険労務士法, Act No. 89 of 1968), Article 2, paragraph 1 and Article 27 (only a shakai hoken roumushi may handle labour and social insurance procedures for a fee) — current text confirmed on e-Gov on 14 August 2026\n\nThis article is general information. Judgments that fit your particular circumstances are made by a qualified professional after a meeting. Written by [Joji Uramatsu](/en/about/uramatsu) (Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist).",
+        "category": "Who to ask",
+        "keywords": [
+          "hiring foreign employee procedures flow Japan",
+          "foreign employment who to ask",
+          "foreign staff social insurance notification",
+          "shakai hoken roumushi or gyoseishoshi foreign worker",
+          "company obligations hiring foreigner",
+          "foreign employment single point of contact"
+        ],
+        "tags": [
+          "foreign employment",
+          "scope of practice",
+          "residence status",
+          "social insurance",
+          "company housing",
+          "procedures"
+        ],
+        "author": {
+          "name": "Joji Uramatsu",
+          "title": "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所"
+        },
+        "faq": [
+          {
+            "question": "Can we ask for everything under one contract?",
+            "answer": "No. Residence status is gyoseishoshi work, labour and social insurance is shakai hoken roumushi work, and the property and corporate lease belong to a licensed real estate agent — the licences are separate by law. At Yotsuba you can consult through a single point of contact, but each engagement is accepted by an independent business, with separate contracts, invoices and payment accounts."
+          },
+          {
+            "question": "Which procedure should move first?",
+            "answer": "Generally, the start date cannot be fixed until the residence status is settled. The practical order is: the residence status first (gyoseishoshi work), with the design of working conditions and the housing search running in parallel. This office handles the working-conditions side and everything after joining."
+          },
+          {
+            "question": "Does social insurance treat foreign employees differently?",
+            "answer": "The enrolment criteria do not depend on nationality; foreign employees join social and employment insurance on the same tests as Japanese employees. What is specific to foreign employment is the employment status notification (at every hire and separation) and the pension settlement at departure — each covered in its own article."
+          },
+          {
+            "question": "Is there a charge just to consult?",
+            "answer": "Consultation with this office is free. Fees for procedures and retainers are published in the fee schedule."
+          }
+        ]
+      },
+      "zh-tw": {
+        "title": "僱用1名外國人，需要幾個窗口",
+        "excerpt": "僱用1名外國人，至少有3項手續同時啟動——在留資格的申請、勞動・社會保險的加入與申報、住居的安排。因為負責的資格不同，各自成為獨立的契約。本文以從內定到回國的時間軸，把「什麼事・找誰・何時辦」整理在一頁裡。",
+        "content": "**結論（先講重點）**：僱用1名外國人，至少有3項手續同時啟動。**在留資格**的申請、**勞動・社會保險**的加入與申報，以及**住居**的安排。因為負責的資格不同，各自成為獨立的契約。順序弄錯，入職日就會往後移。\n\n本頁面寫給第一次僱用外國人的中小企業經營者與總務人員，把「什麼事・以什麼順序・由誰負責」整理成一張表，並連往各論的專欄。\n\n## 什麼事，以什麼順序啟動？\n\n按時間軸排列，分工就看得見了。\n\n| 階段 | 動什麼 | 誰的業務 |\n|---|---|---|\n| 內定〜入職前 | 在留資格的認定・變更申請 | **行政書士**（四葉行政書士事務所） |\n| 入職前 | 勞動條件的明示・雇用契約（與在留期限的關係見[在留期限與雇用契約期間，哪個先到期](/zh-tw/labor/column/zairyu-kigen-koyo-keiyaku-kikan)） | **社會保險勞務士** |\n| 入職前後 | 住居的安排・公司宿舍的法人契約 | **宅地建物取引業者**（四葉不動産株式会社） |\n| 入職時 | 社會保險・僱用保險的資格取得、[外國人僱用狀況的申報](/zh-tw/labor/column/gaikokujin-koyo-jokyo-todokede) | **社會保險勞務士** |\n| 每月・每年 | 薪資計算、[公司宿舍的現物給與算入](/zh-tw/labor/column/shataku-genbutsu-kyuyo-hyojun-hoshu)、算定基礎届・年度更新 | **社會保險勞務士** |\n| 回國時 | 資格喪失、離職申報、[年金的清算](/zh-tw/labor/column/gaikokujin-shain-kikoku-nenkin-seisan) | **社會保險勞務士** |\n\n在**入口（在留資格）→運用（每月的勞務）→出口（回國）**的流程中，入口是行政書士，運用與出口是社會保險勞務士，住居是宅建業者——分界線沿著資格劃分。\n\n## 社會保險勞務士的工作，從哪裡到哪裡？\n\n**僱用之後每月・每年發生的全部。** 社會保險・僱用保險的資格取得與喪失、外國人僱用狀況的申報、薪資計算與現物給與的算入、工時管理（含[留學生的週28小時](/zh-tw/labor/column/ryugakusei-arubaito-28jikan-kanri)）、回國時的手續。由本事務所的[外國人僱用的勞務・社會保險](/zh-tw/labor/services/gaikokujin-koyo)承接。\n\n反過來說，**取得・變更・更新在留資格的手續，本文不寫，本事務所也不承辦**。那是行政書士的業務，[企業方的手續與期限](/zh-tw/legal/services/gaikokujin-shain)在四葉行政書士事務所的頁面（與本事務所是**不同的事業體**）。\n\n## 準備公司宿舍，會多出什麼？\n\n外國人員工的情形，公司安排住居的場面很多。多出來的是3件事：找物件與法人契約（宅建業者）、宿舍規程的整備（社會保險勞務士。費用見[報酬額表](/zh-tw/labor/ryokin)的「社宅規程 作成」），以及最容易被忽略的——**宿舍作為現物給與算入報酬**。房租怎麼讓本人負擔，社會保險費就會跟著變。詳見[提供公司宿舍，社會保險費有時會上升](/zh-tw/labor/column/shataku-genbutsu-kyuyo-hyojun-hoshu)。\n\n## 該怎麼諮詢四葉？\n\n四葉在同一據點有不動產（四葉不動産株式会社）、行政書士（四葉行政書士事務所）、社會保險勞務士（四葉社会保険労務士事務所），**可以透過單一窗口諮詢。不過，各自作為獨立的事業體承接業務，契約・請款・匯款帳戶都分開。** 不收取介紹費。**諮詢免費。** 從「該先動哪一項」的整理開始，與您一起進行。\n\n### 該向誰諮詢\n\n在留資格的申請・變更・更新由**四葉行政書士事務所**，宿舍的物件與法人契約由**四葉不動産株式会社**承接（均與本事務所是不同的事業體，另行簽約）。薪資的課稅・年終調整是**稅理士**、登記是**司法書士**、已發生爭議的案件是**律師**的業務。以上均不收取介紹費。\n\n## 常見問題\n\n**Q. 能用一份契約全部委託嗎？**\nA. 不能。在留資格是行政書士、勞務・社會保險是社會保險勞務士、物件與法人契約是宅建業者——法律上的資格是分開的。在四葉可以透過單一窗口諮詢，但受任由各自獨立的事業體進行，契約・請款・匯款帳戶也分開。\n\n**Q. 最先該動的是哪項手續？**\nA. 一般而言，在留資格未定，入職日就無法確定。實務的順序是：先辦入口的在留資格（行政書士的業務），並行推進勞動條件的設計與住居的安排。本事務所負責勞動條件這一側與入職後的手續。\n\n**Q. 外國人的社會保險，處理方式會不同嗎？**\nA. 加入的要件不因國籍而異，與日本人依同樣基準加入社會保險・僱用保險。外國人特有的是外國人僱用狀況的申報（每次僱入・離職）與回國時的年金清算，各有專文說明。\n\n**Q. 只是諮詢也要收費嗎？**\nA. 本事務所的諮詢免費。委託手續或顧問時的費用公開於[報酬額表](/zh-tw/labor/ryokin)。\n\n## 本文依據\n\n- 本文整理的是分工（業務分界）。各手續的依據條文，分別記載於連結的各論文章\n- 社會保險勞務士法（昭和43年法律第89號）第2條第1項・第27條（收取報酬代辦勞動社會保險手續者，以社會保險勞務士為限） ―― 2026年8月14日於e-Gov法令檢索確認現行條文\n\n本文為一般性的資訊提供。因應個別情事的判斷，由具備資格者在面談後進行。撰文者為[浦松丈二](/zh-tw/about/uramatsu)（社會保險勞務士・行政書士・宅地建物取引士）。",
+        "category": "該委託誰",
+        "keywords": [
+          "僱用外國人 手續 流程",
+          "外國人僱用 該找誰",
+          "外國人 員工 社會保險 申報",
+          "外國人僱用 社會保險勞務士 行政書士 差別",
+          "僱用外國人 公司 該做的事",
+          "外國人僱用 窗口"
+        ],
+        "tags": [
+          "外國人僱用",
+          "業務分界",
+          "在留資格",
+          "社會保險",
+          "公司宿舍",
+          "手續"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "能用一份契約全部委託嗎？",
+            "answer": "不能。在留資格是行政書士、勞務・社會保險是社會保險勞務士、物件與法人契約是宅建業者——法律上的資格是分開的。在四葉可以透過單一窗口諮詢，但受任由各自獨立的事業體進行，契約・請款・匯款帳戶也分開。"
+          },
+          {
+            "question": "最先該動的是哪項手續？",
+            "answer": "一般而言，在留資格未定，入職日就無法確定。實務的順序是：先辦入口的在留資格（行政書士的業務），並行推進勞動條件的設計與住居的安排。本事務所負責勞動條件這一側與入職後的手續。"
+          },
+          {
+            "question": "外國人的社會保險，處理方式會不同嗎？",
+            "answer": "加入的要件不因國籍而異，與日本人依同樣基準加入社會保險・僱用保險。外國人特有的是外國人僱用狀況的申報（每次僱入・離職）與回國時的年金清算，各有專文說明。"
+          },
+          {
+            "question": "只是諮詢也要收費嗎？",
+            "answer": "本事務所的諮詢免費。委託手續或顧問時的費用公開於報酬額表。"
+          }
+        ]
+      },
+      "zh": {
+        "title": "雇用1名外国人，需要几个窗口",
+        "excerpt": "雇用1名外国人，至少有3项手续同时启动——在留资格的申请、劳动・社会保险的加入与申报、住居的安排。因为负责的资格不同，各自成为独立的契约。本文以从内定到回国的时间轴，把「什么事・找谁・何时办」整理在一页里。",
+        "content": "**结论（先讲重点）**：雇用1名外国人，至少有3项手续同时启动。**在留资格**的申请、**劳动・社会保险**的加入与申报，以及**住居**的安排。因为负责的资格不同，各自成为独立的契约。顺序弄错，入职日就会往后移。\n\n本页面写给第一次雇用外国人的中小企业经营者与总务人员，把「什么事・以什么顺序・由谁负责」整理成一张表，并连往各论的专栏。\n\n## 什么事，以什么顺序启动？\n\n按时间轴排列，分工就看得见了。\n\n| 阶段 | 动什么 | 谁的业务 |\n|---|---|---|\n| 内定〜入职前 | 在留资格的认定・变更申请 | **行政书士**（四葉行政書士事務所） |\n| 入职前 | 劳动条件的明示・雇用契约（与在留期限的关系见[在留期限与雇用契约期间，哪个先到期](/zh/labor/column/zairyu-kigen-koyo-keiyaku-kikan)） | **社会保险劳务士** |\n| 入职前后 | 住居的安排・公司宿舍的法人契约 | **宅地建物取引业者**（四葉不動産株式会社） |\n| 入职时 | 社会保险・雇用保险的资格取得、[外国人雇用状况的申报](/zh/labor/column/gaikokujin-koyo-jokyo-todokede) | **社会保险劳务士** |\n| 每月・每年 | 工资计算、[公司宿舍的现物给与算入](/zh/labor/column/shataku-genbutsu-kyuyo-hyojun-hoshu)、算定基礎届・年度更新 | **社会保险劳务士** |\n| 回国时 | 资格丧失、离职申报、[年金的清算](/zh/labor/column/gaikokujin-shain-kikoku-nenkin-seisan) | **社会保险劳务士** |\n\n在**入口（在留资格）→运用（每月的劳务）→出口（回国）**的流程中，入口是行政书士，运用与出口是社会保险劳务士，住居是宅建业者——分界线沿着资格划分。\n\n## 社会保险劳务士的工作，从哪里到哪里？\n\n**雇用之后每月・每年发生的全部。** 社会保险・雇用保险的资格取得与丧失、外国人雇用状况的申报、工资计算与现物给与的算入、工时管理（含[留学生的周28小时](/zh/labor/column/ryugakusei-arubaito-28jikan-kanri)）、回国时的手续。由本事务所的[外国人雇用的劳务・社会保险](/zh/labor/services/gaikokujin-koyo)承接。\n\n反过来说，**取得・变更・更新在留资格的手续，本文不写，本事务所也不承办**。那是行政书士的业务，[企业方的手续与期限](/zh/legal/services/gaikokujin-shain)在四葉行政書士事務所的页面（与本事务所是**不同的事业体**）。\n\n## 准备公司宿舍，会多出什么？\n\n外国人员工的情形，公司安排住居的场面很多。多出来的是3件事：找物件与法人契约（宅建业者）、宿舍规程的整备（社会保险劳务士。费用见[报酬额表](/zh/labor/ryokin)的「社宅規程 作成」），以及最容易被忽略的——**宿舍作为现物给与算入报酬**。房租怎么让本人负担，社会保险费就会跟着变。详见[提供公司宿舍，社会保险费有时会上升](/zh/labor/column/shataku-genbutsu-kyuyo-hyojun-hoshu)。\n\n## 该怎么咨询四叶？\n\n四叶在同一据点有不动产（四葉不動産株式会社）、行政书士（四葉行政書士事務所）、社会保险劳务士（四葉社会保険労務士事務所），**可以通过单一窗口咨询。不过，各自作为独立的事业体承接业务，契约・请款・汇款账户都分开。** 不收取介绍费。**咨询免费。** 从「该先动哪一项」的整理开始，与您一起进行。\n\n### 该向谁咨询\n\n在留资格的申请・变更・更新由**四葉行政書士事務所**，宿舍的物件与法人契约由**四葉不動産株式会社**承接（均与本事务所是不同的事业体，另行签约）。工资的课税・年终调整是**税理士**、登记是**司法书士**、已发生争议的案件是**律师**的业务。以上均不收取介绍费。\n\n## 常见问题\n\n**Q. 能用一份契约全部委托吗？**\nA. 不能。在留资格是行政书士、劳务・社会保险是社会保险劳务士、物件与法人契约是宅建业者——法律上的资格是分开的。在四叶可以通过单一窗口咨询，但受任由各自独立的事业体进行，契约・请款・汇款账户也分开。\n\n**Q. 最先该动的是哪项手续？**\nA. 一般而言，在留资格未定，入职日就无法确定。实务的顺序是：先办入口的在留资格（行政书士的业务），并行推进劳动条件的设计与住居的安排。本事务所负责劳动条件这一侧与入职后的手续。\n\n**Q. 外国人的社会保险，处理方式会不同吗？**\nA. 加入的要件不因国籍而异，与日本人依同样基准加入社会保险・雇用保险。外国人特有的是外国人雇用状况的申报（每次雇入・离职）与回国时的年金清算，各有专文说明。\n\n**Q. 只是咨询也要收费吗？**\nA. 本事务所的咨询免费。委托手续或顾问时的费用公开于[报酬额表](/zh/labor/ryokin)。\n\n## 本文依据\n\n- 本文整理的是分工（业务分界）。各手续的依据条文，分别记载于链接的各论文章\n- 社会保险劳务士法（昭和43年法律第89号）第2条第1项・第27条（收取报酬代办劳动社会保险手续者，以社会保险劳务士为限） ―― 2026年8月14日于e-Gov法令检索确认现行条文\n\n本文为一般性的信息提供。因应个别情事的判断，由具备资格者在面谈后进行。撰文者为[浦松丈二](/zh/about/uramatsu)（社会保险劳务士・行政书士・宅地建物取引士）。",
+        "category": "该委托谁",
+        "keywords": [
+          "雇用外国人 手续 流程",
+          "外国人雇用 该找谁",
+          "外国人 员工 社会保险 申报",
+          "外国人雇用 社会保险劳务士 行政书士 差别",
+          "雇用外国人 公司 该做的事",
+          "外国人雇用 窗口"
+        ],
+        "tags": [
+          "外国人雇用",
+          "业务分界",
+          "在留资格",
+          "社会保险",
+          "公司宿舍",
+          "手续"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "能用一份契约全部委托吗？",
+            "answer": "不能。在留资格是行政书士、劳务・社会保险是社会保险劳务士、物件与法人契约是宅建业者——法律上的资格是分开的。在四叶可以通过单一窗口咨询，但受任由各自独立的事业体进行，契约・请款・汇款账户也分开。"
+          },
+          {
+            "question": "最先该动的是哪项手续？",
+            "answer": "一般而言，在留资格未定，入职日就无法确定。实务的顺序是：先办入口的在留资格（行政书士的业务），并行推进劳动条件的设计与住居的安排。本事务所负责劳动条件这一侧与入职后的手续。"
+          },
+          {
+            "question": "外国人的社会保险，处理方式会不同吗？",
+            "answer": "加入的要件不因国籍而异，与日本人依同样基准加入社会保险・雇用保险。外国人特有的是外国人雇用状况的申报（每次雇入・离职）与回国时的年金清算，各有专文说明。"
+          },
+          {
+            "question": "只是咨询也要收费吗？",
+            "answer": "本事务所的咨询免费。委托手续或顾问时的费用公开于报酬额表。"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "business": "labor",
+    "slug": "shataku-genbutsu-kyuyo-hyojun-hoshu",
+    "title": "社宅を貸すと、社会保険料が上がることがある",
+    "date": "2026-09-01",
+    "category": "社会保険",
+    "excerpt": "社宅の家賃の会社負担分は、現物給与として報酬に算入されることがあります。健康保険法第46条は通貨以外の報酬の価額を「その地方の時価によって、厚生労働大臣が定める」とし、標準報酬月額が上がれば保険料も上がります。本人からいくら徴収するかで結論が変わります。",
+    "content": "**結論（先に要点）**：社宅を貸すと、家賃の会社負担分が**現物給与**として報酬に算入されることがあります。健康保険法第46条は、通貨以外で支払われる報酬の価額を「**その地方の時価によって、厚生労働大臣が定める**」としています。**標準報酬月額が上がれば、保険料も上がります。** 本人からいくら徴収するかで結論が変わります。\n\nこのページは、社宅を用意している・これから用意する会社の経営者・総務担当の方に向けたものです。外国人社員は会社が住まいを用意することが多いため、[外国人雇用](/labor/column/gaikokujin-koyo-madoguchi-wakekata)では特に直撃します。なお、**所得税の側の給与課税の判断は税理士の業務**のため、本記事は社会保険の標準報酬の側からだけ書きます。\n\n## 社宅は、なぜ「給与」になるのか？\n\n報酬は、お金で払うものに限られないからです。健康保険法第46条第1項は、報酬の全部または一部が**通貨以外のもの**で支払われる場合、その価額は**その地方の時価によって厚生労働大臣が定める**としています（厚生年金保険にも同様の仕組みがあります）。会社が家賃を負担して住まいを提供することは、この「通貨以外のもので支払われる報酬」——**現物給与**——にあたり得ます。\n\n現物で受け取った利益を通貨に換算して報酬に合算し、**標準報酬月額**を求める。標準報酬月額が上がれば、健康保険料・厚生年金保険料は労使とも上がる。これが「社宅を貸すと保険料が上がることがある」の仕組みです。\n\n## いくらと評価されるのか？\n\n金額そのものは、**都道府県ごとに厚生労働省告示（全国現物給与価額一覧表）で定められ、年度ごとに改定されます**。本記事では金額を書きません。必ず最新の一覧表（日本年金機構が公表）でご確認ください。\n\nそのうえで、**令和8年度は仕組み自体が動く年**です（日本年金機構・2026年3月19日更新の公表資料による）。\n\n| 期間 | 住宅の価額の算定単位 |\n|---|---|\n| 令和8年9月30日まで | 1人1月あたり**畳1畳**につき（㎡表示の住宅は1畳＝1.65㎡で換算） |\n| **令和8年10月1日から** | 1人1月あたり**居住用の室の床面積1㎡**につき（価額も同時に改定） |\n\n同じ社宅でも、**令和8年10月を境に算入額の計算が変わり得ます**。社宅がある会社は、切り替え時点での再計算を予定に入れておいてください。なお、本社と支店が1つの適用事業所になっている場合は、**支店等が所在する都道府県の価額**を適用します。\n\n## 本人からいくら取れば、報酬に入らないのか？\n\n告示価額との**差額**で考えます。本人から徴収している額が告示価額より少なければ、**その差額が現物給与として報酬に算入される**取扱いです（日本年金機構の公表資料による。2026年8月14日参照）。つまり、同じ物件でも「全額会社負担」「半額徴収」「告示価額以上を徴収」で、報酬に算入される額が変わります。\n\n家賃をいくらに設定するかは、社会保険料だけでなく、**所得税の給与課税**（税理士の領域。判断の基準が社会保険とは別です）にも関わります。片方だけ見て決めると、もう片方で想定外が起きる論点です。\n\n## 家賃の決め方は、誰と相談するのか？\n\n| 論点 | 誰の業務か |\n|---|---|\n| 現物給与の報酬算入・標準報酬月額・社宅規程 | **社会保険労務士**（当事務所） |\n| 所得税の給与課税（賃貸料相当額の計算） | **税理士** |\n| 物件探し・法人契約・賃料の相場 | **宅地建物取引業者**（[借り上げ社宅](/shataku)は四葉不動産株式会社。当事務所とは**別の事業体**で、別々にご契約いただきます） |\n\n## 四葉社会保険労務士事務所は、何ができますか？\n\n文京区小日向の四葉社会保険労務士事務所は、社宅の現物給与の報酬算入の整理、標準報酬月額への反映（算定基礎届・月額変更届）、**社宅規程の作成**（料金は[報酬額表](/labor/ryokin)）をお受けします。**ご相談は無料です。** 社宅の家賃設定を検討中の段階でも、「社会保険の側から見るとこうなる」の整理からご一緒します。短時間勤務の方の加入要件とあわせて見る場合は[短い時間で雇うと、社会保険はどうなるか](/labor/column/tanjikan-koyo-shakaihoken-4bunno3)もご覧ください。\n\n### 誰に相談するか\n\n所得税の給与課税・年末調整は**税理士**、登記は**司法書士**、紛争性のある事案は**弁護士**の業務です。社宅の物件探し・法人契約は**四葉不動産株式会社**、在留資格の申請は**四葉行政書士事務所**（いずれも当事務所とは別の事業体で、別々にご契約いただきます）。紹介料の授受はありません。\n\n## よくある質問\n\n**Q. 社宅を用意したら、必ず保険料が上がるのですか？**\nA. 必ずではありません。本人から徴収している額と告示価額との差額で考える取扱いのため、徴収額によっては算入が生じない場合もあります。物件・都道府県・徴収額で結論が変わるので、個別の計算のうえでご判断ください。\n\n**Q. 金額はどこで確認できますか？**\nA. 日本年金機構が公表する「全国現物給与価額一覧表」（厚生労働省告示）で、都道府県別に定められています。年度ごとに改定されるため、必ず最新年度の一覧表をご確認ください。令和8年度は、住宅の算定単位が10月1日から畳1畳あたり→床面積1㎡あたりに変わります。\n\n**Q. 所得税のほうはどうなりますか？**\nA. 所得税の給与課税（賃貸料相当額）は、社会保険の現物給与とは別の基準で判断されます。税務の判断は税理士の業務のため、当事務所では取り扱わず、税理士に直接ご相談いただく形をご案内しています。紹介料の授受はありません。\n\n**Q. 社宅規程は必要ですか？**\nA. 家賃の徴収額・入退去のルール・原状回復の負担を規程の形にしておくと、算入額の根拠が明確になり、入退社のたびの判断が安定します。作成は当事務所でお受けしており、料金は[報酬額表](/labor/ryokin)に掲載しています。\n\n## この記事の根拠\n\n- 健康保険法（大正11年法律第70号）**第46条第1項・第2項**（現物給与の価額。第2項は健康保険組合の別段の定め） ―― 2026年8月14日にe-Gov法令検索で現行条文を確認\n- 日本年金機構「**全国現物給与価額一覧表（厚生労働大臣が定める現物給与の価額）**」（2026年3月19日更新・2026年8月14日参照）――令和8年度の改定内容（食事は令和8年4月1日、住宅は令和8年10月1日から算定単位の変更を含む改定）\n- **価額は都道府県別・年度ごとに改定されます。本記事は金額を記載していません。必ず最新の一覧表でご確認ください**\n\n本記事は一般的な情報提供です。個別のご事情に応じた判断は、面談のうえ資格者が行います。執筆は[浦松丈二](/about/uramatsu)（社会保険労務士・行政書士・宅地建物取引士）です。",
+    "status": "published",
+    "author": {
+      "name": "浦松 丈二",
+      "title": "社会保険労務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+    },
+    "keywords": [
+      "社宅 社会保険料 上がる",
+      "現物給与 社宅 標準報酬",
+      "社宅 家賃 本人負担 いくら",
+      "現物給与価額 住宅 都道府県",
+      "借り上げ社宅 社会保険",
+      "社宅規程 作成 社労士"
+    ],
+    "tags": [
+      "社宅",
+      "現物給与",
+      "標準報酬月額",
+      "社会保険料",
+      "社宅規程",
+      "外国人雇用"
+    ],
+    "locales": [],
+    "faq": [
+      {
+        "question": "社宅を用意したら、必ず保険料が上がるのですか？",
+        "answer": "必ずではありません。本人から徴収している額と告示価額との差額で考える取扱いのため、徴収額によっては算入が生じない場合もあります。物件・都道府県・徴収額で結論が変わるので、個別の計算のうえでご判断ください。"
+      },
+      {
+        "question": "金額はどこで確認できますか？",
+        "answer": "日本年金機構が公表する「全国現物給与価額一覧表」（厚生労働省告示）で、都道府県別に定められています。年度ごとに改定されるため、必ず最新年度の一覧表をご確認ください。令和8年度は、住宅の算定単位が10月1日から畳1畳あたり→床面積1㎡あたりに変わります。"
+      },
+      {
+        "question": "所得税のほうはどうなりますか？",
+        "answer": "所得税の給与課税（賃貸料相当額）は、社会保険の現物給与とは別の基準で判断されます。税務の判断は税理士の業務のため、当事務所では取り扱わず、税理士に直接ご相談いただく形をご案内しています。紹介料の授受はありません。"
+      },
+      {
+        "question": "社宅規程は必要ですか？",
+        "answer": "家賃の徴収額・入退去のルール・原状回復の負担を規程の形にしておくと、算入額の根拠が明確になり、入退社のたびの判断が安定します。作成は当事務所でお受けしており、料金は報酬額表に掲載しています。"
+      }
+    ],
+    "translations": {
+      "en": {
+        "title": "Provide company housing, and social insurance premiums can rise",
+        "excerpt": "The rent the company bears for company housing can count as in-kind compensation and be added to remuneration. Article 46 of the Health Insurance Act has the Minister set the value of non-cash remuneration by local market prices; if the standard monthly remuneration rises, so do the premiums. How much you collect from the employee changes the outcome.",
+        "content": "**In short:** provide company housing, and the rent the company bears can count as **in-kind compensation (現物給与)**, added to remuneration. Article 46 of the Health Insurance Act provides that the value of remuneration paid in anything other than currency is **\"set by the Minister of Health, Labour and Welfare according to local market prices.\"** **If the standard monthly remuneration rises, the premiums rise.** How much you collect from the employee changes the conclusion.\n\nThis page is for owners and back-office staff of companies that provide, or are about to provide, company housing. Because companies often arrange housing for foreign employees, it bears directly on [foreign employment](/en/labor/column/gaikokujin-koyo-madoguchi-wakekata). Note: **the income-tax side of housing benefits is a tax accountant's field**, so this article stays on the social insurance (standard remuneration) side only.\n\n## Why does housing count as \"pay\"?\n\nBecause remuneration is not limited to money. Article 46, paragraph 1 of the Health Insurance Act provides that where all or part of remuneration is paid **in something other than currency**, its value is **set by the Minister of Health, Labour and Welfare according to local market prices** (the employees' pension system has a parallel mechanism). A company bearing the rent and providing housing can constitute this \"remuneration paid in something other than currency\" — **in-kind compensation**.\n\nThe benefit received in kind is converted to currency, added to remuneration, and the **standard monthly remuneration** is set on that basis. A higher standard monthly remuneration means higher health insurance and employees' pension premiums, for both employer and employee. That is the mechanism behind \"company housing can raise premiums.\"\n\n## How is it valued?\n\nThe amounts themselves are **set by prefecture in a Ministry of Health, Labour and Welfare notification (the national in-kind compensation value table), revised each fiscal year**. This article deliberately quotes no figures — always check the latest table, published by the Japan Pension Service.\n\nOn top of that, **fiscal 2026 is a year in which the mechanism itself moves** (per the Japan Pension Service's materials updated 19 March 2026):\n\n| Period | Unit for valuing housing |\n|---|---|\n| Through 30 September 2026 | Per person per month, **per tatami mat** (housing measured in m² converted at 1 mat = 1.65 m²) |\n| **From 1 October 2026** | Per person per month, **per m² of residential floor area** (values also revised at the same time) |\n\nThe same housing can therefore **be counted differently from October 2026**. If you run company housing, schedule a recalculation at the switch. Note also: where head office and branches form one covered workplace, **the values of the prefecture where the branch is located** apply.\n\n## How much rent from the employee keeps it out of remuneration?\n\nThink in terms of the **difference** against the notified value. Where the amount collected from the employee is less than the notified value, **the difference is counted into remuneration as in-kind compensation** (per the Japan Pension Service's published materials, viewed 14 August 2026). The same property produces different outcomes depending on whether the company bears all of the rent, half, or collects at least the notified value.\n\nSetting the rent also touches **income-tax treatment of housing benefits** (a tax accountant's field, with tests different from social insurance). Decide by looking at only one side, and the other side surprises you.\n\n## Whom do you consult on setting the rent?\n\n| Issue | Whose work |\n|---|---|\n| In-kind compensation, standard monthly remuneration, company housing rules | **A shakai hoken roumushi** (this office) |\n| Income-tax treatment (the deemed rental value) | **A tax accountant** |\n| Property search, corporate lease, market rents | **A licensed real estate agent** ([leased company housing](/en/shataku) is 四葉不動産株式会社 — **a separate business** from this office, engaged under a separate contract) |\n\n## What can 四葉社会保険労務士事務所 do?\n\n四葉社会保険労務士事務所, in Kohinata, Bunkyo City, handles the sorting of in-kind compensation, its reflection in the standard monthly remuneration (the annual calculation report and revision notifications), and the **drafting of company housing rules** (fees in the [fee schedule](/en/labor/ryokin)). **Consultation is free of charge.** Even at the stage of considering the rent setting, we will lay out how it looks from the social insurance side. If short-hours employees are involved, see also [Hire for short hours, and what happens to social insurance?](/en/labor/column/tanjikan-koyo-shakaihoken-4bunno3).\n\n### Whom to consult\n\nIncome-tax treatment and the year-end adjustment are for **a tax accountant**; registration for **a judicial scrivener**; matters in dispute for **an attorney**. Property search and corporate leases go to **四葉不動産株式会社**, residence-status applications to **四葉行政書士事務所** (each a separate business from this office, engaged under a separate contract). No referral fees change hands.\n\n## Frequently asked questions\n\n**Q. Does providing company housing always raise the premiums?**\nA. Not always. The treatment turns on the difference between what you collect from the employee and the notified value, so depending on the amount collected, nothing may be counted in. The conclusion varies with the property, the prefecture and the amount collected — judge on an individual calculation.\n\n**Q. Where do I check the amounts?**\nA. In the national in-kind compensation value table (a ministerial notification), published by the Japan Pension Service and set by prefecture. It is revised each fiscal year, so always check the latest year's table. In fiscal 2026, the housing unit changes from per tatami mat to per m² of floor area from 1 October.\n\n**Q. What about the income-tax side?**\nA. The income-tax treatment (the deemed rental value) is judged on tests separate from social insurance. Tax judgments are a tax accountant's work; this office does not handle them and points you to a tax accountant, whom you engage directly. No referral fees change hands.\n\n**Q. Do we need company housing rules?**\nA. Putting the collected rent, move-in/move-out rules and restoration costs into written rules makes the basis of the counted amounts clear and stabilises the judgements at every arrival and departure. This office drafts them; fees are in the [fee schedule](/en/labor/ryokin).\n\n## Sources for this article\n\n- Health Insurance Act (健康保険法, Act No. 70 of 1922), **Article 46, paragraphs 1 and 2** (value of in-kind compensation; paragraph 2 allows health insurance societies to provide otherwise) — current text confirmed on e-Gov on 14 August 2026\n- Japan Pension Service, \"National in-kind compensation value table (values set by the Minister of Health, Labour and Welfare)\" (updated 19 March 2026, viewed 14 August 2026) — fiscal 2026 revisions, including the change of the housing valuation unit from 1 October 2026\n- **Values are set by prefecture and revised each fiscal year. This article quotes no figures; always check the latest table**\n\nThis article is general information. Judgments that fit your particular circumstances are made by a qualified professional after a meeting. Written by [Joji Uramatsu](/en/about/uramatsu) (Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist).",
+        "category": "Social insurance",
+        "keywords": [
+          "company housing social insurance premiums rise",
+          "in-kind compensation housing standard remuneration",
+          "company housing rent employee contribution",
+          "in-kind compensation values by prefecture",
+          "leased company housing social insurance",
+          "company housing rules shakai hoken roumushi"
+        ],
+        "tags": [
+          "company housing",
+          "in-kind compensation",
+          "standard monthly remuneration",
+          "social insurance premiums",
+          "housing rules",
+          "foreign employment"
+        ],
+        "author": {
+          "name": "Joji Uramatsu",
+          "title": "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所"
+        },
+        "faq": [
+          {
+            "question": "Does providing company housing always raise the premiums?",
+            "answer": "Not always. The treatment turns on the difference between what you collect from the employee and the notified value, so depending on the amount collected, nothing may be counted in. The conclusion varies with the property, the prefecture and the amount collected — judge on an individual calculation."
+          },
+          {
+            "question": "Where do I check the amounts?",
+            "answer": "In the national in-kind compensation value table (a ministerial notification), published by the Japan Pension Service and set by prefecture. It is revised each fiscal year, so always check the latest year's table. In fiscal 2026, the housing unit changes from per tatami mat to per m² of floor area from 1 October."
+          },
+          {
+            "question": "What about the income-tax side?",
+            "answer": "The income-tax treatment (the deemed rental value) is judged on tests separate from social insurance. Tax judgments are a tax accountant's work; this office does not handle them and points you to a tax accountant, whom you engage directly. No referral fees change hands."
+          },
+          {
+            "question": "Do we need company housing rules?",
+            "answer": "Putting the collected rent, move-in/move-out rules and restoration costs into written rules makes the basis of the counted amounts clear and stabilises the judgements at every arrival and departure. This office drafts them; fees are in the fee schedule."
+          }
+        ]
+      },
+      "zh-tw": {
+        "title": "提供公司宿舍，社會保險費有時會上升",
+        "excerpt": "公司負擔的宿舍房租，可能作為現物給與算入報酬。健康保險法第46條規定，以通貨以外形式支付的報酬價額「依當地時價，由厚生勞動大臣定之」。標準報酬月額上升，保險費也上升。向本人收取多少房租，結論就會不同。",
+        "content": "**結論（先講重點）**：提供公司宿舍，公司負擔的房租可能作為**現物給與（実物給付）**算入報酬。健康保險法第46條規定，以通貨以外形式支付的報酬價額「**依當地時價，由厚生勞動大臣定之**」。**標準報酬月額上升，保險費也上升。** 向本人收取多少房租，結論就會不同。\n\n本頁面寫給已提供・準備提供公司宿舍的公司經營者與總務人員。外國人員工多由公司安排住居，因此在[外國人僱用](/zh-tw/labor/column/gaikokujin-koyo-madoguchi-wakekata)上尤其直接相關。另外，**所得稅側的課稅判斷是稅理士的業務**，本文只從社會保險的標準報酬這一側來寫。\n\n## 宿舍為什麼會變成「給與」？\n\n因為報酬不限於金錢。健康保險法第46條第1項規定，報酬的全部或一部以**通貨以外之物**支付時，其價額**依當地時價、由厚生勞動大臣定之**（厚生年金保險也有同樣的機制）。公司負擔房租提供住居，可能構成這種「以通貨以外之物支付的報酬」——**現物給與**。\n\n以實物取得的利益換算為通貨、合算入報酬，據以計算**標準報酬月額**。標準報酬月額上升，健康保險費・厚生年金保險費就勞資雙方一起上升。這就是「提供宿舍，保險費有時上升」的機制。\n\n## 會被評價為多少錢？\n\n金額本身**依都道府縣，由厚生勞動省告示（全國現物給與價額一覽表）定之，且逐年度改定**。本文不寫金額。請務必以日本年金機構公布的最新一覽表確認。\n\n而且，**令和8年度（2026年度）是機制本身變動的年度**（依日本年金機構2026年3月19日更新的公開資料）。\n\n| 期間 | 住宅價額的計算單位 |\n|---|---|\n| 令和8年（2026年）9月30日以前 | 每人每月**每1疊（榻榻米1張）**（以㎡表示的住宅按1疊＝1.65㎡換算） |\n| **令和8年（2026年）10月1日起** | 每人每月**居住用房間樓地板面積每1㎡**（價額同時改定） |\n\n同一間宿舍，**以2026年10月為界，算入額的計算可能改變**。有宿舍的公司，請把切換時點的重新計算排入日程。另外，總公司與分店合為一個適用事業所時，適用**分店等所在都道府縣的價額**。\n\n## 向本人收多少，才不算入報酬？\n\n以與告示價額的**差額**來思考。向本人收取的金額少於告示價額時，**其差額作為現物給與算入報酬**（依日本年金機構的公開資料。2026年8月14日參閱）。同一物件，「全額公司負擔」「收一半」「收取告示價額以上」，算入報酬的金額都不同。\n\n房租定多少，也關係到**所得稅的課稅**（稅理士的領域，判斷基準與社會保險不同）。只看一邊決定，另一邊就會出現意料之外。\n\n## 房租的定法，該與誰商量？\n\n| 論點 | 誰的業務 |\n|---|---|\n| 現物給與的報酬算入・標準報酬月額・社宅規程 | **社會保險勞務士**（本事務所） |\n| 所得稅的課稅（賃貸料相當額的計算） | **稅理士** |\n| 找物件・法人契約・房租行情 | **宅地建物取引業者**（[借上社宅](/zh-tw/shataku)是四葉不動産株式会社。與本事務所是**不同的事業體**，另行簽約） |\n\n## 四葉社会保険労務士事務所能做什麼？\n\n位於文京區小日向的四葉社会保険労務士事務所，承接現物給與的報酬算入整理、標準報酬月額的反映（算定基礎届・月額変更届）、**社宅規程的製作**（費用見[報酬額表](/zh-tw/labor/ryokin)）。**諮詢免費。** 在檢討房租設定的階段，也可以從「社會保險側看起來是這樣」的整理開始。涉及短時間勤務者時，請一併參閱[以短時間僱用時，社會保險會如何](/zh-tw/labor/column/tanjikan-koyo-shakaihoken-4bunno3)。\n\n### 該向誰諮詢\n\n所得稅的課稅・年終調整是**稅理士**、登記是**司法書士**、已發生爭議的案件是**律師**的業務。宿舍的物件・法人契約由**四葉不動産株式会社**、在留資格的申請由**四葉行政書士事務所**承接（均與本事務所是不同的事業體，另行簽約）。不收取介紹費。\n\n## 常見問題\n\n**Q. 提供宿舍，保險費一定會上升嗎？**\nA. 不一定。取扱方式是以向本人收取的金額與告示價額的差額來考慮，依收取金額，也可能不發生算入。結論因物件・都道府縣・收取金額而異，請在個別計算之後判斷。\n\n**Q. 金額在哪裡確認？**\nA. 日本年金機構公布的「全國現物給與價額一覽表」（厚生勞動省告示），依都道府縣定之。逐年度改定，請務必確認最新年度的一覽表。令和8年度，住宅的計算單位自10月1日起由每1疊改為樓地板面積每1㎡。\n\n**Q. 所得稅那一側會怎樣？**\nA. 所得稅的課稅（賃貸料相當額）以與社會保險不同的基準判斷。稅務判斷是稅理士的業務，本事務所不承辦，會為您介紹稅理士，由您直接委任。不收取介紹費。\n\n**Q. 需要社宅規程嗎？**\nA. 把收取的房租・入退居規則・回復原狀的負擔做成規程，算入額的依據就明確，每次入退社的判斷也會穩定。製作由本事務所承接，費用載於[報酬額表](/zh-tw/labor/ryokin)。\n\n## 本文依據\n\n- 健康保險法（大正11年法律第70號）**第46條第1項・第2項**（現物給與的價額。第2項為健康保險組合的另行規定） ―― 2026年8月14日於e-Gov法令檢索確認現行條文\n- 日本年金機構「**全國現物給與價額一覽表（厚生勞動大臣所定現物給與的價額）**」（2026年3月19日更新・2026年8月14日參閱）――令和8年度的改定內容（食事自2026年4月1日、住宅自2026年10月1日起含計算單位的變更）\n- **價額依都道府縣・逐年度改定。本文未記載金額，請務必以最新一覽表確認**\n\n本文為一般性的資訊提供。因應個別情事的判斷，由具備資格者在面談後進行。撰文者為[浦松丈二](/zh-tw/about/uramatsu)（社會保險勞務士・行政書士・宅地建物取引士）。",
+        "category": "社會保險",
+        "keywords": [
+          "公司宿舍 社會保險費 上升",
+          "現物給與 宿舍 標準報酬",
+          "宿舍 房租 本人負擔 多少",
+          "現物給與價額 住宅 都道府縣",
+          "借上社宅 社會保險",
+          "社宅規程 製作 社會保險勞務士"
+        ],
+        "tags": [
+          "公司宿舍",
+          "現物給與",
+          "標準報酬月額",
+          "社會保險費",
+          "社宅規程",
+          "外國人僱用"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "提供宿舍，保險費一定會上升嗎？",
+            "answer": "不一定。取扱方式是以向本人收取的金額與告示價額的差額來考慮，依收取金額，也可能不發生算入。結論因物件・都道府縣・收取金額而異，請在個別計算之後判斷。"
+          },
+          {
+            "question": "金額在哪裡確認？",
+            "answer": "日本年金機構公布的「全國現物給與價額一覽表」（厚生勞動省告示），依都道府縣定之。逐年度改定，請務必確認最新年度的一覽表。令和8年度，住宅的計算單位自10月1日起由每1疊改為樓地板面積每1㎡。"
+          },
+          {
+            "question": "所得稅那一側會怎樣？",
+            "answer": "所得稅的課稅（賃貸料相當額）以與社會保險不同的基準判斷。稅務判斷是稅理士的業務，本事務所不承辦，會為您介紹稅理士，由您直接委任。不收取介紹費。"
+          },
+          {
+            "question": "需要社宅規程嗎？",
+            "answer": "把收取的房租・入退居規則・回復原狀的負擔做成規程，算入額的依據就明確，每次入退社的判斷也會穩定。製作由本事務所承接，費用載於報酬額表。"
+          }
+        ]
+      },
+      "zh": {
+        "title": "提供公司宿舍，社会保险费有时会上升",
+        "excerpt": "公司负担的宿舍房租，可能作为现物给与算入报酬。健康保险法第46条规定，以通货以外形式支付的报酬价额「依当地时价，由厚生劳动大臣定之」。标准报酬月额上升，保险费也上升。向本人收取多少房租，结论就会不同。",
+        "content": "**结论（先讲重点）**：提供公司宿舍，公司负担的房租可能作为**现物给与（实物给付）**算入报酬。健康保险法第46条规定，以通货以外形式支付的报酬价额「**依当地时价，由厚生劳动大臣定之**」。**标准报酬月额上升，保险费也上升。** 向本人收取多少房租，结论就会不同。\n\n本页面写给已提供・准备提供公司宿舍的公司经营者与总务人员。外国人员工多由公司安排住居，因此在[外国人雇用](/zh/labor/column/gaikokujin-koyo-madoguchi-wakekata)上尤其直接相关。另外，**所得税侧的课税判断是税理士的业务**，本文只从社会保险的标准报酬这一侧来写。\n\n## 宿舍为什么会变成「给与」？\n\n因为报酬不限于金钱。健康保险法第46条第1项规定，报酬的全部或一部以**通货以外之物**支付时，其价额**依当地时价、由厚生劳动大臣定之**（厚生年金保险也有同样的机制）。公司负担房租提供住居，可能构成这种「以通货以外之物支付的报酬」——**现物给与**。\n\n以实物取得的利益换算为通货、合算入报酬，据以计算**标准报酬月额**。标准报酬月额上升，健康保险费・厚生年金保险费就劳资双方一起上升。这就是「提供宿舍，保险费有时上升」的机制。\n\n## 会被评价为多少钱？\n\n金额本身**依都道府县，由厚生劳动省告示（全国现物给与价额一览表）定之，且逐年度改定**。本文不写金额。请务必以日本年金机构公布的最新一览表确认。\n\n而且，**令和8年度（2026年度）是机制本身变动的年度**（依日本年金机构2026年3月19日更新的公开资料）。\n\n| 期间 | 住宅价额的计算单位 |\n|---|---|\n| 令和8年（2026年）9月30日以前 | 每人每月**每1叠（榻榻米1张）**（以㎡表示的住宅按1叠＝1.65㎡换算） |\n| **令和8年（2026年）10月1日起** | 每人每月**居住用房间楼地板面积每1㎡**（价额同时改定） |\n\n同一间宿舍，**以2026年10月为界，算入额的计算可能改变**。有宿舍的公司，请把切换时点的重新计算排入日程。另外，总公司与分店合为一个适用事业所时，适用**分店等所在都道府县的价额**。\n\n## 向本人收多少，才不算入报酬？\n\n以与告示价额的**差额**来思考。向本人收取的金额少于告示价额时，**其差额作为现物给与算入报酬**（依日本年金机构的公开资料。2026年8月14日参阅）。同一物件，「全额公司负担」「收一半」「收取告示价额以上」，算入报酬的金额都不同。\n\n房租定多少，也关系到**所得税的课税**（税理士的领域，判断基准与社会保险不同）。只看一边决定，另一边就会出现意料之外。\n\n## 房租的定法，该与谁商量？\n\n| 论点 | 谁的业务 |\n|---|---|\n| 现物给与的报酬算入・标准报酬月额・社宅规程 | **社会保险劳务士**（本事务所） |\n| 所得税的课税（赁贷料相当额的计算） | **税理士** |\n| 找物件・法人契约・房租行情 | **宅地建物取引业者**（[借上社宅](/zh/shataku)是四葉不動産株式会社。与本事务所是**不同的事业体**，另行签约） |\n\n## 四葉社会保険労務士事務所能做什么？\n\n位于文京区小日向的四葉社会保険労務士事務所，承接现物给与的报酬算入整理、标准报酬月额的反映（算定基礎届・月額変更届）、**社宅规程的制作**（费用见[报酬额表](/zh/labor/ryokin)）。**咨询免费。** 在检讨房租设定的阶段，也可以从「社会保险侧看起来是这样」的整理开始。涉及短时间勤务者时，请一并参阅[以短时间雇用时，社会保险会如何](/zh/labor/column/tanjikan-koyo-shakaihoken-4bunno3)。\n\n### 该向谁咨询\n\n所得税的课税・年终调整是**税理士**、登记是**司法书士**、已发生争议的案件是**律师**的业务。宿舍的物件・法人契约由**四葉不動産株式会社**、在留资格的申请由**四葉行政書士事務所**承接（均与本事务所是不同的事业体，另行签约）。不收取介绍费。\n\n## 常见问题\n\n**Q. 提供宿舍，保险费一定会上升吗？**\nA. 不一定。处理方式是以向本人收取的金额与告示价额的差额来考虑，依收取金额，也可能不发生算入。结论因物件・都道府县・收取金额而异，请在个别计算之后判断。\n\n**Q. 金额在哪里确认？**\nA. 日本年金机构公布的「全国现物给与价额一览表」（厚生劳动省告示），依都道府县定之。逐年度改定，请务必确认最新年度的一览表。令和8年度，住宅的计算单位自10月1日起由每1叠改为楼地板面积每1㎡。\n\n**Q. 所得税那一侧会怎样？**\nA. 所得税的课税（赁贷料相当额）以与社会保险不同的基准判断。税务判断是税理士的业务，本事务所不承办，会为您介绍税理士，由您直接委任。不收取介绍费。\n\n**Q. 需要社宅规程吗？**\nA. 把收取的房租・入退居规则・恢复原状的负担做成规程，算入额的依据就明确，每次入退社的判断也会稳定。制作由本事务所承接，费用载于[报酬额表](/zh/labor/ryokin)。\n\n## 本文依据\n\n- 健康保险法（大正11年法律第70号）**第46条第1项・第2项**（现物给与的价额。第2项为健康保险组合的另行规定） ―― 2026年8月14日于e-Gov法令检索确认现行条文\n- 日本年金机构「**全国现物给与价额一览表（厚生劳动大臣所定现物给与的价额）**」（2026年3月19日更新・2026年8月14日参阅）――令和8年度的改定内容（食事自2026年4月1日、住宅自2026年10月1日起含计算单位的变更）\n- **价额依都道府县・逐年度改定。本文未记载金额，请务必以最新一览表确认**\n\n本文为一般性的信息提供。因应个别情事的判断，由具备资格者在面谈后进行。撰文者为[浦松丈二](/zh/about/uramatsu)（社会保险劳务士・行政书士・宅地建物取引士）。",
+        "category": "社会保险",
+        "keywords": [
+          "公司宿舍 社会保险费 上升",
+          "现物给与 宿舍 标准报酬",
+          "宿舍 房租 本人负担 多少",
+          "现物给与价额 住宅 都道府县",
+          "借上社宅 社会保险",
+          "社宅规程 制作 社会保险劳务士"
+        ],
+        "tags": [
+          "公司宿舍",
+          "现物给与",
+          "标准报酬月额",
+          "社会保险费",
+          "社宅规程",
+          "外国人雇用"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "提供宿舍，保险费一定会上升吗？",
+            "answer": "不一定。处理方式是以向本人收取的金额与告示价额的差额来考虑，依收取金额，也可能不发生算入。结论因物件・都道府县・收取金额而异，请在个别计算之后判断。"
+          },
+          {
+            "question": "金额在哪里确认？",
+            "answer": "日本年金机构公布的「全国现物给与价额一览表」（厚生劳动省告示），依都道府县定之。逐年度改定，请务必确认最新年度的一览表。令和8年度，住宅的计算单位自10月1日起由每1叠改为楼地板面积每1㎡。"
+          },
+          {
+            "question": "所得税那一侧会怎样？",
+            "answer": "所得税的课税（赁贷料相当额）以与社会保险不同的基准判断。税务判断是税理士的业务，本事务所不承办，会为您介绍税理士，由您直接委任。不收取介绍费。"
+          },
+          {
+            "question": "需要社宅规程吗？",
+            "answer": "把收取的房租・入退居规则・恢复原状的负担做成规程，算入额的依据就明确，每次入退社的判断也会稳定。制作由本事务所承接，费用载于报酬额表。"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "business": "labor",
+    "slug": "gaikokujin-koyo-jokyo-todokede",
+    "title": "外国人を雇ったら、ハローワークに届け出る",
+    "date": "2026-09-01",
+    "category": "手続と期限",
+    "excerpt": "外国人を雇い入れたときも離職したときも、ハローワークへの外国人雇用状況の届出が必要です（労働施策総合推進法第28条第1項）。雇用保険の被保険者かどうかで様式と期限が変わり、届出をしないと30万円以下の罰金の対象になります。雇用保険に入らないアルバイトでも必要です。",
+    "content": "**結論（先に要点）**：外国人を雇い入れたときも、離職したときも、**ハローワークへの届出が必要です**（労働施策総合推進法第28条第1項）。氏名・**在留資格**・**在留期間**などを確認したうえで届け出ます。雇用保険の被保険者かどうかで、様式と期限が変わります。届出をしない・虚偽の届出には**30万円以下の罰金**があります（同法第40条第1項第2号）。\n\nこのページは、外国人を雇い入れた、または外国人社員が離職した会社の経営者・総務担当の方に向けたものです。義務なのに知られていない届出の代表格で、雇用保険に入らないアルバイトでも対象になります。\n\n## 誰について、いつ届け出るのか？\n\n**すべての事業主が、外国人労働者の雇入れと離職のたびに**届け出ます（特別永住者、在留資格「外交」「公用」の方は対象外です）。根拠は労働施策総合推進法第28条第1項で、氏名、在留資格、在留期間などを**確認したうえで**厚生労働大臣（実務はハローワーク）に届け出ることを事業主に義務づけています。\n\n**雇用保険に入るかどうかで、様式と期限が分かれます**（厚生労働省の公表資料による。2026年8月14日参照）。\n\n| 区分 | 様式 | 期限 |\n|---|---|---|\n| 雇用保険の**被保険者になる**人 | 雇用保険被保険者**資格取得届**（届出欄に在留資格等を記載） | 雇入れ日の属する月の**翌月10日まで** |\n| 同・**離職** | 雇用保険被保険者**資格喪失届** | 離職日の**翌日から10日以内** |\n| 雇用保険の**被保険者にならない**人（週20時間未満のアルバイト等） | **様式第3号**（外国人雇用状況届出書） | 雇入れ・離職とも**翌月末日まで** |\n\n被保険者の場合は、雇用保険の手続と**一体**になっているため、資格取得届を正しく書けば届出も済みます。落とし穴は**被保険者にならない人**です。雇用保険の手続がないぶん、様式第3号の存在自体が忘れられます。\n\n## 雇用保険に入る人と、入らない人で何が違うのか？\n\n加入の基準は日本人と同じです（週20時間以上・31日以上の雇用見込みなど）。外国人だから入る・入らないという区分はありません。違うのは、**どちらであっても外国人雇用状況の届出だけは必要**という点です。「雇用保険に入らないから手続なし」とはならないのが、この届出の要注意点です。留学生のアルバイトは[週28時間の管理](/labor/column/ryugakusei-arubaito-28jikan-kanri)とセットで見てください。\n\n## 在留資格は、どうやって確認するのか？\n\n**在留カードの原本**で、氏名・在留資格・在留期間・資格外活動許可の有無を確認し、記載どおりに届け出ます。ここで大事な線引きがあります。**在留資格を取る・変えるのは、四葉行政書士事務所（別事業体・別契約）の業務です。雇ったあとに届け出るのは事業主の義務で、その代行は社会保険労務士の業務です。** 同じ「在留資格」に触れていても、入口と運用で担当が分かれます。\n\n## 出していなかったと気づいたら、どうするのか？\n\n気づいた時点で、ハローワークに相談のうえ届け出てください。届出をしない・虚偽の届出は**30万円以下の罰金**の対象です（労働施策総合推進法第40条第1項第2号）。放置するほど対象者が積み上がります。当事務所では、**現状の雇用者リストの棚卸し**——誰が届出済みで誰が未届か——の整理からお手伝いします。\n\n## 四葉社会保険労務士事務所は、何ができますか？\n\n文京区小日向の四葉社会保険労務士事務所は、外国人雇用状況の届出の代行、雇用保険・社会保険の資格取得・喪失、[外国人雇用の労務・社会保険](/labor/services/gaikokujin-koyo)の全般をお受けします。**ご相談は無料です。** 料金は[報酬額表](/labor/ryokin)で公開しています。外国人雇用の全体の流れは[外国人を1人雇うと、窓口はいくつ必要か](/labor/column/gaikokujin-koyo-madoguchi-wakekata)にまとめています。\n\n### 誰に相談するか\n\n在留資格の申請・変更・更新は**四葉行政書士事務所**（当事務所とは別の事業体で、別々にご契約いただきます）。給与課税・年末調整は**税理士**、登記は**司法書士**、紛争性のある事案は**弁護士**の業務です。いずれも紹介料の授受はありません。\n\n## よくある質問\n\n**Q. 週数時間だけのアルバイトでも届出は必要ですか？**\nA. 必要です。雇用保険の被保険者にならない場合は、様式第3号を雇入れ・離職の翌月末日までにハローワークへ届け出ます。雇用保険の手続がないぶん忘れられやすい類型です（特別永住者、在留資格「外交」「公用」の方は対象外です）。\n\n**Q. 雇用保険の資格取得届を出せば、それで足りますか？**\nA. 被保険者になる方については、資格取得届の在留資格等の欄を正しく記載して期限内（翌月10日まで）に出せば、外国人雇用状況の届出を兼ねます。記載漏れがあると届出をしたことになりませんので、在留カードの原本と突き合わせて記載してください。\n\n**Q. 届出を忘れていました。罰則はありますか？**\nA. 届出をしない・虚偽の届出は30万円以下の罰金の対象です（労働施策総合推進法第40条第1項第2号）。気づいた時点でハローワークに相談のうえ届け出てください。当事務所では未届の棚卸しからお手伝いします。\n\n**Q. 在留資格の期限が近い社員がいます。更新もお願いできますか？**\nA. 在留資格の申請・変更・更新は行政書士の業務のため、当事務所ではお受けできません。四葉行政書士事務所（別の事業体・別のご契約）がお受けします。紹介料の授受はありません。当事務所は、雇用契約の期間との関係（[在留期限と雇用契約期間](/labor/column/zairyu-kigen-koyo-keiyaku-kikan)）の側を担当します。\n\n## この記事の根拠\n\n- 労働施策の総合的な推進並びに労働者の雇用の安定及び職業生活の充実等に関する法律（昭和41年法律第132号）**第28条第1項**（外国人雇用状況の届出等）・**第40条第1項第2号**（30万円以下の罰金） ―― 2026年8月14日にe-Gov法令検索で現行条文を確認\n- 様式・期限の区分（被保険者＝資格取得届・翌月10日まで／喪失届・翌日から10日以内、被保険者以外＝様式第3号・翌月末日まで） ―― 厚生労働省「外国人雇用状況の届出について」（2026年8月14日参照）\n\n本記事は一般的な情報提供です。個別のご事情に応じた判断は、面談のうえ資格者が行います。執筆は[浦松丈二](/about/uramatsu)（社会保険労務士・行政書士・宅地建物取引士）です。",
+    "status": "published",
+    "author": {
+      "name": "浦松 丈二",
+      "title": "社会保険労務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+    },
+    "keywords": [
+      "外国人雇用状況の届出 期限",
+      "外国人 雇った ハローワーク 届出",
+      "様式第3号 外国人 アルバイト",
+      "外国人雇用状況届出 罰則",
+      "雇用保険 資格取得届 在留資格",
+      "外国人 離職 届出"
+    ],
+    "tags": [
+      "外国人雇用",
+      "届出",
+      "ハローワーク",
+      "雇用保険",
+      "期限",
+      "罰則"
+    ],
+    "locales": [],
+    "faq": [
+      {
+        "question": "週数時間だけのアルバイトでも届出は必要ですか？",
+        "answer": "必要です。雇用保険の被保険者にならない場合は、様式第3号を雇入れ・離職の翌月末日までにハローワークへ届け出ます。雇用保険の手続がないぶん忘れられやすい類型です（特別永住者、在留資格「外交」「公用」の方は対象外です）。"
+      },
+      {
+        "question": "雇用保険の資格取得届を出せば、それで足りますか？",
+        "answer": "被保険者になる方については、資格取得届の在留資格等の欄を正しく記載して期限内（翌月10日まで）に出せば、外国人雇用状況の届出を兼ねます。記載漏れがあると届出をしたことになりませんので、在留カードの原本と突き合わせて記載してください。"
+      },
+      {
+        "question": "届出を忘れていました。罰則はありますか？",
+        "answer": "届出をしない・虚偽の届出は30万円以下の罰金の対象です（労働施策総合推進法第40条第1項第2号）。気づいた時点でハローワークに相談のうえ届け出てください。当事務所では未届の棚卸しからお手伝いします。"
+      },
+      {
+        "question": "在留資格の期限が近い社員がいます。更新もお願いできますか？",
+        "answer": "在留資格の申請・変更・更新は行政書士の業務のため、当事務所ではお受けできません。四葉行政書士事務所（別の事業体・別のご契約）がお受けします。紹介料の授受はありません。当事務所は、雇用契約の期間との関係（在留期限と雇用契約期間）の側を担当します。"
+      }
+    ],
+    "translations": {
+      "en": {
+        "title": "Hired a foreign worker? Notify Hello Work",
+        "excerpt": "Both when you hire a foreign worker and when one leaves, a notification to Hello Work is required (Act on Comprehensive Promotion of Labour Measures, Article 28, paragraph 1). You confirm the name, residence status and period of stay and then file. The form and deadline differ by employment insurance status, and failure to file carries a fine of up to 300,000 yen.",
+        "content": "**In short:** both when you hire a foreign worker and when one leaves, **a notification to Hello Work is required** (Act on Comprehensive Promotion of Labour Measures, Article 28, paragraph 1). You confirm the name, **residence status** and **period of stay**, then file. The form and deadline change with employment insurance status. Failing to file, or filing falsely, carries **a fine of up to 300,000 yen** (Article 40, paragraph 1, item 2).\n\nThis page is for owners and back-office staff of companies that have hired a foreign worker, or whose foreign employee has left. It is the textbook example of an obligation that is not well known — and it applies even to part-timers who are not in employment insurance.\n\n## About whom, and by when, do you file?\n\n**Every employer files, at every hire and every separation of a foreign worker** (special permanent residents, and those with \"Diplomat\" or \"Official\" status, are outside the system). The basis is Article 28, paragraph 1 of the Act on Comprehensive Promotion of Labour Measures (労働施策総合推進法), which obliges the employer to **confirm** the name, residence status, period of stay and other matters, and notify the Minister of Health, Labour and Welfare (in practice, Hello Work).\n\n**The form and deadline split by employment insurance status** (per Ministry of Health, Labour and Welfare materials, viewed 14 August 2026).\n\n| Category | Form | Deadline |\n|---|---|---|\n| A person who **becomes an employment insurance insured** | The employment insurance **acquisition notification** (with the residence-status fields completed) | **By the 10th of the month following** the month of hire |\n| Same, on **separation** | The employment insurance **loss notification** | **Within 10 days from the day after** separation |\n| A person who does **not** become insured (a part-timer under 20 hours a week, etc.) | **Form 3** (the foreign worker employment status notification) | **By the end of the month following** the hire or separation |\n\nFor insured workers, the notification is **integrated** with the employment insurance procedure: complete the acquisition notification correctly and the notification is done. The trap is **the non-insured**. With no employment insurance procedure to prompt it, Form 3 itself gets forgotten.\n\n## What differs between those in and out of employment insurance?\n\nThe enrolment tests are the same as for Japanese workers (20 hours a week or more, an expected employment of 31 days or more, and so on) — there is no separate rule for foreign workers. What differs is only the paperwork route; **either way, the employment status notification itself is always required**. \"No employment insurance, so no procedure\" is exactly the mistake this notification punishes. For student part-timers, read this together with [the 28-hour limit](/en/labor/column/ryugakusei-arubaito-28jikan-kanri).\n\n## How do you confirm the residence status?\n\nAgainst **the original residence card**: name, residence status, period of stay, and whether permission for activities outside the status is held — and you file exactly as recorded. An important line runs here. **Obtaining or changing a residence status is the work of 四葉行政書士事務所 (a separate business, engaged separately). Notifying after the hire is the employer's own obligation, and a shakai hoken roumushi handles it on the employer's behalf.** The same words \"residence status\" — but entrance and operation belong to different licences.\n\n## What if you realise you never filed?\n\nFile as soon as you notice, after consulting Hello Work. Non-filing and false filing carry **a fine of up to 300,000 yen** (Article 40, paragraph 1, item 2). Left alone, the unfiled cases pile up. This office helps by **taking stock of your current workforce** — who is filed, who is not.\n\n## What can 四葉社会保険労務士事務所 do?\n\n四葉社会保険労務士事務所, in Kohinata, Bunkyo City, files the foreign worker employment status notifications on your behalf, handles employment and social insurance acquisitions and losses, and covers [labour and social insurance for foreign employment](/en/labor/services/gaikokujin-koyo) generally. **Consultation is free of charge.** Fees are in the [fee schedule](/en/labor/ryokin). The whole flow of foreign employment is mapped in [Hire one foreign employee — how many counters do you need?](/en/labor/column/gaikokujin-koyo-madoguchi-wakekata).\n\n### Whom to consult\n\nResidence-status applications, changes and renewals go to **四葉行政書士事務所** (a separate business from this office, engaged under a separate contract). Payroll taxation and the year-end adjustment are for **a tax accountant**, registration for **a judicial scrivener**, matters in dispute for **an attorney**. No referral fees change hands.\n\n## Frequently asked questions\n\n**Q. Is the notification needed even for a few hours of part-time work a week?**\nA. Yes. Where the worker does not become an employment insurance insured, you file Form 3 with Hello Work by the end of the month following the hire or separation. It is the type most often forgotten, precisely because no employment insurance procedure prompts it (special permanent residents and \"Diplomat\"/\"Official\" status holders are outside the system).\n\n**Q. Is filing the employment insurance acquisition notification enough?**\nA. For workers who become insured, yes — complete the residence-status fields correctly and file by the deadline (the 10th of the following month), and it doubles as the employment status notification. Incomplete fields mean the notification has not been made; check against the original residence card.\n\n**Q. We forgot to file. Are there penalties?**\nA. Non-filing and false filing carry a fine of up to 300,000 yen (Act on Comprehensive Promotion of Labour Measures, Article 40, paragraph 1, item 2). File as soon as you notice, after consulting Hello Work. This office helps with the stocktake of unfiled cases.\n\n**Q. An employee's period of stay is expiring soon. Can you handle the renewal too?**\nA. Residence-status applications, changes and renewals are gyoseishoshi work, so this office cannot take them. 四葉行政書士事務所 (a separate business, a separate contract) does. No referral fees change hands. This office covers the employment-contract side — see [the period of stay and the contract term](/en/labor/column/zairyu-kigen-koyo-keiyaku-kikan).\n\n## Sources for this article\n\n- Act on Comprehensive Promotion of Labour Measures and Stabilisation of Employment of Workers etc. (労働施策の総合的な推進並びに労働者の雇用の安定及び職業生活の充実等に関する法律, Act No. 132 of 1966), **Article 28, paragraph 1** (the foreign worker employment status notification) and **Article 40, paragraph 1, item 2** (fine of up to 300,000 yen) — current text confirmed on e-Gov on 14 August 2026\n- The form and deadline categories (insured: acquisition notification by the 10th of the following month / loss notification within 10 days; non-insured: Form 3 by the end of the following month) — Ministry of Health, Labour and Welfare, \"On the foreign worker employment status notification\" (viewed 14 August 2026)\n\nThis article is general information. Judgments that fit your particular circumstances are made by a qualified professional after a meeting. Written by [Joji Uramatsu](/en/about/uramatsu) (Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist).",
+        "category": "Procedures and deadlines",
+        "keywords": [
+          "foreign worker employment status notification deadline",
+          "hired foreigner Hello Work notification",
+          "Form 3 foreign part-time worker",
+          "foreign employment notification penalty",
+          "employment insurance acquisition residence status",
+          "foreign worker separation notification"
+        ],
+        "tags": [
+          "foreign employment",
+          "notification",
+          "Hello Work",
+          "employment insurance",
+          "deadlines",
+          "penalties"
+        ],
+        "author": {
+          "name": "Joji Uramatsu",
+          "title": "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所"
+        },
+        "faq": [
+          {
+            "question": "Is the notification needed even for a few hours of part-time work a week?",
+            "answer": "Yes. Where the worker does not become an employment insurance insured, you file Form 3 with Hello Work by the end of the month following the hire or separation. It is the type most often forgotten, precisely because no employment insurance procedure prompts it (special permanent residents and \"Diplomat\"/\"Official\" status holders are outside the system)."
+          },
+          {
+            "question": "Is filing the employment insurance acquisition notification enough?",
+            "answer": "For workers who become insured, yes — complete the residence-status fields correctly and file by the deadline (the 10th of the following month), and it doubles as the employment status notification. Incomplete fields mean the notification has not been made; check against the original residence card."
+          },
+          {
+            "question": "We forgot to file. Are there penalties?",
+            "answer": "Non-filing and false filing carry a fine of up to 300,000 yen (Act on Comprehensive Promotion of Labour Measures, Article 40, paragraph 1, item 2). File as soon as you notice, after consulting Hello Work. This office helps with the stocktake of unfiled cases."
+          },
+          {
+            "question": "An employee's period of stay is expiring soon. Can you handle the renewal too?",
+            "answer": "Residence-status applications, changes and renewals are gyoseishoshi work, so this office cannot take them. 四葉行政書士事務所 (a separate business, a separate contract) does. No referral fees change hands. This office covers the employment-contract side — see the period of stay and the contract term."
+          }
+        ]
+      },
+      "zh-tw": {
+        "title": "僱用了外國人，就要向Hello Work申報",
+        "excerpt": "僱入外國人時、外國人離職時，都需要向Hello Work（公共職業安定所）申報（勞動施策總合推進法第28條第1項）。確認姓名・在留資格・在留期間後提出。是否為僱用保險被保險人，樣式與期限不同；不申報有30萬日圓以下的罰金。",
+        "content": "**結論（先講重點）**：僱入外國人時、離職時，**都需要向Hello Work（公共職業安定所）申報**（勞動施策總合推進法第28條第1項）。確認姓名・**在留資格**・**在留期間**等之後提出。是否為僱用保險的被保險人，樣式與期限不同。不申報・虛偽申報有**30萬日圓以下的罰金**（同法第40條第1項第2號）。\n\n本頁面寫給僱入了外國人、或外國人員工離職的公司經營者與總務人員。這是「明明是義務卻不為人知」的代表性申報，連不加入僱用保險的打工人員也是對象。\n\n## 就誰、在何時之前申報？\n\n**所有雇主，於外國人勞工每次僱入與離職時**申報（特別永住者、在留資格「外交」「公用」者除外）。依據是勞動施策總合推進法第28條第1項：雇主應**確認**姓名、在留資格、在留期間等事項後，向厚生勞動大臣（實務上為Hello Work）申報。\n\n**是否加入僱用保險，樣式與期限就此分開**（依厚生勞動省公開資料。2026年8月14日參閱）。\n\n| 區分 | 樣式 | 期限 |\n|---|---|---|\n| **成為僱用保險被保險人**者 | 僱用保險被保險人**資格取得届**（填寫在留資格等欄位） | 僱入日所屬月的**翌月10日前** |\n| 同・**離職** | 僱用保險被保險人**資格喪失届** | 離職日的**翌日起10日以內** |\n| **不成為被保險人**者（週20小時未滿的打工等） | **樣式第3號**（外國人僱用狀況申報書） | 僱入・離職均為**翌月末日前** |\n\n被保險人的情形，申報與僱用保險手續**一體化**：正確填寫資格取得届即完成申報。陷阱在**不成為被保險人的人**。因為沒有僱用保險手續的提醒，樣式第3號本身就被遺忘。\n\n## 加入與不加入僱用保險，差在哪裡？\n\n加入基準與日本人相同（週20小時以上・預計僱用31日以上等），沒有「因為是外國人」的特別區分。不同的只是文件的路徑；**無論哪一種，外國人僱用狀況的申報本身都必須辦理**。「不加入僱用保險所以沒有手續」正是這項申報最常見的誤解。留學生打工請與[週28小時的管理](/zh-tw/labor/column/ryugakusei-arubaito-28jikan-kanri)一併閱讀。\n\n## 在留資格怎麼確認？\n\n以**在留卡的原本**確認姓名・在留資格・在留期間・資格外活動許可的有無，並照記載申報。這裡有一條重要的線：**取得・變更在留資格，是四葉行政書士事務所（不同事業體・另行簽約）的業務。僱用之後的申報，是雇主自身的義務，由社會保險勞務士代辦。** 同樣涉及「在留資格」，入口與運用分屬不同資格。\n\n## 發現漏報了，怎麼辦？\n\n發現的時點，先向Hello Work諮詢後補辦申報。不申報・虛偽申報是**30萬日圓以下罰金**的對象（勞動施策總合推進法第40條第1項第2號）。放著不管，未申報的對象只會累積。本事務所可從**現有僱用名單的盤點**——誰已申報、誰未申報——開始協助。\n\n## 四葉社会保険労務士事務所能做什麼？\n\n位於文京區小日向的四葉社会保険労務士事務所，承接外國人僱用狀況申報的代辦、僱用保險・社會保險的資格取得・喪失，以及[外國人僱用的勞務・社會保險](/zh-tw/labor/services/gaikokujin-koyo)全般。**諮詢免費。** 費用公開於[報酬額表](/zh-tw/labor/ryokin)。外國人僱用的整體流程整理於[僱用1名外國人，需要幾個窗口](/zh-tw/labor/column/gaikokujin-koyo-madoguchi-wakekata)。\n\n### 該向誰諮詢\n\n在留資格的申請・變更・更新由**四葉行政書士事務所**承接（與本事務所是不同的事業體，另行簽約）。薪資課稅・年終調整是**稅理士**、登記是**司法書士**、已發生爭議的案件是**律師**的業務。以上均不收取介紹費。\n\n## 常見問題\n\n**Q. 一週只有幾小時的打工，也需要申報嗎？**\nA. 需要。不成為僱用保險被保險人的情形，於僱入・離職的翌月末日前，以樣式第3號向Hello Work申報。正因沒有僱用保險手續的提醒，這是最容易被遺忘的類型（特別永住者、在留資格「外交」「公用」者除外）。\n\n**Q. 提出僱用保險的資格取得届，就足夠了嗎？**\nA. 就成為被保險人者而言，是的——正確填寫在留資格等欄位並在期限內（翌月10日前）提出，即兼作外國人僱用狀況的申報。欄位漏填則不成立申報，請與在留卡原本核對後填寫。\n\n**Q. 忘記申報了。有罰則嗎？**\nA. 不申報・虛偽申報是30萬日圓以下罰金的對象（勞動施策總合推進法第40條第1項第2號）。發現的時點，先向Hello Work諮詢後補辦。本事務所可從未申報案件的盤點開始協助。\n\n**Q. 有員工的在留期限快到了。更新也能委託嗎？**\nA. 在留資格的申請・變更・更新是行政書士的業務，本事務所無法承接。由四葉行政書士事務所（不同事業體・另行簽約）承接，不收取介紹費。本事務所負責雇用契約期間的這一側——見[在留期限與雇用契約期間](/zh-tw/labor/column/zairyu-kigen-koyo-keiyaku-kikan)。\n\n## 本文依據\n\n- 勞動施策總合推進法（労働施策の総合的な推進並びに労働者の雇用の安定及び職業生活の充実等に関する法律。昭和41年法律第132號）**第28條第1項**（外國人僱用狀況的申報等）・**第40條第1項第2號**（30萬日圓以下的罰金） ―― 2026年8月14日於e-Gov法令檢索確認現行條文\n- 樣式・期限的區分（被保險人＝資格取得届・翌月10日前／喪失届・翌日起10日以內，非被保險人＝樣式第3號・翌月末日前） ―― 厚生勞動省「關於外國人僱用狀況的申報」（2026年8月14日參閱）\n\n本文為一般性的資訊提供。因應個別情事的判斷，由具備資格者在面談後進行。撰文者為[浦松丈二](/zh-tw/about/uramatsu)（社會保險勞務士・行政書士・宅地建物取引士）。",
+        "category": "手續與期限",
+        "keywords": [
+          "外國人僱用狀況申報 期限",
+          "僱用外國人 Hello Work 申報",
+          "樣式第3號 外國人 打工",
+          "外國人僱用狀況申報 罰則",
+          "僱用保險 資格取得届 在留資格",
+          "外國人 離職 申報"
+        ],
+        "tags": [
+          "外國人僱用",
+          "申報",
+          "Hello Work",
+          "僱用保險",
+          "期限",
+          "罰則"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "一週只有幾小時的打工，也需要申報嗎？",
+            "answer": "需要。不成為僱用保險被保險人的情形，於僱入・離職的翌月末日前，以樣式第3號向Hello Work申報。正因沒有僱用保險手續的提醒，這是最容易被遺忘的類型（特別永住者、在留資格「外交」「公用」者除外）。"
+          },
+          {
+            "question": "提出僱用保險的資格取得届，就足夠了嗎？",
+            "answer": "就成為被保險人者而言，是的——正確填寫在留資格等欄位並在期限內（翌月10日前）提出，即兼作外國人僱用狀況的申報。欄位漏填則不成立申報，請與在留卡原本核對後填寫。"
+          },
+          {
+            "question": "忘記申報了。有罰則嗎？",
+            "answer": "不申報・虛偽申報是30萬日圓以下罰金的對象（勞動施策總合推進法第40條第1項第2號）。發現的時點，先向Hello Work諮詢後補辦。本事務所可從未申報案件的盤點開始協助。"
+          },
+          {
+            "question": "有員工的在留期限快到了。更新也能委託嗎？",
+            "answer": "在留資格的申請・變更・更新是行政書士的業務，本事務所無法承接。由四葉行政書士事務所（不同事業體・另行簽約）承接，不收取介紹費。本事務所負責雇用契約期間的這一側——見在留期限與雇用契約期間。"
+          }
+        ]
+      },
+      "zh": {
+        "title": "雇用了外国人，就要向Hello Work申报",
+        "excerpt": "雇入外国人时、外国人离职时，都需要向Hello Work（公共职业安定所）申报（劳动施策总合推进法第28条第1项）。确认姓名・在留资格・在留期间后提出。是否为雇用保险被保险人，样式与期限不同；不申报有30万日元以下的罚金。",
+        "content": "**结论（先讲重点）**：雇入外国人时、离职时，**都需要向Hello Work（公共职业安定所）申报**（劳动施策总合推进法第28条第1项）。确认姓名・**在留资格**・**在留期间**等之后提出。是否为雇用保险的被保险人，样式与期限不同。不申报・虚假申报有**30万日元以下的罚金**（同法第40条第1项第2号）。\n\n本页面写给雇入了外国人、或外国人员工离职的公司经营者与总务人员。这是「明明是义务却不为人知」的代表性申报，连不加入雇用保险的打工人员也是对象。\n\n## 就谁、在何时之前申报？\n\n**所有雇主，于外国人劳动者每次雇入与离职时**申报（特别永住者、在留资格「外交」「公用」者除外）。依据是劳动施策总合推进法第28条第1项：雇主应**确认**姓名、在留资格、在留期间等事项后，向厚生劳动大臣（实务上为Hello Work）申报。\n\n**是否加入雇用保险，样式与期限就此分开**（依厚生劳动省公开资料。2026年8月14日参阅）。\n\n| 区分 | 样式 | 期限 |\n|---|---|---|\n| **成为雇用保险被保险人**者 | 雇用保险被保险人**资格取得届**（填写在留资格等栏位） | 雇入日所属月的**翌月10日前** |\n| 同・**离职** | 雇用保险被保险人**资格丧失届** | 离职日的**翌日起10日以内** |\n| **不成为被保险人**者（周20小时未满的打工等） | **样式第3号**（外国人雇用状况申报书） | 雇入・离职均为**翌月末日前** |\n\n被保险人的情形，申报与雇用保险手续**一体化**：正确填写资格取得届即完成申报。陷阱在**不成为被保险人的人**。因为没有雇用保险手续的提醒，样式第3号本身就被遗忘。\n\n## 加入与不加入雇用保险，差在哪里？\n\n加入基准与日本人相同（周20小时以上・预计雇用31日以上等），没有「因为是外国人」的特别区分。不同的只是文件的路径；**无论哪一种，外国人雇用状况的申报本身都必须办理**。「不加入雇用保险所以没有手续」正是这项申报最常见的误解。留学生打工请与[周28小时的管理](/zh/labor/column/ryugakusei-arubaito-28jikan-kanri)一并阅读。\n\n## 在留资格怎么确认？\n\n以**在留卡的原件**确认姓名・在留资格・在留期间・资格外活动许可的有无，并照记载申报。这里有一条重要的线：**取得・变更在留资格，是四葉行政書士事務所（不同事业体・另行签约）的业务。雇用之后的申报，是雇主自身的义务，由社会保险劳务士代办。** 同样涉及「在留资格」，入口与运用分属不同资格。\n\n## 发现漏报了，怎么办？\n\n发现的时点，先向Hello Work咨询后补办申报。不申报・虚假申报是**30万日元以下罚金**的对象（劳动施策总合推进法第40条第1项第2号）。放着不管，未申报的对象只会累积。本事务所可从**现有雇用名单的盘点**——谁已申报、谁未申报——开始协助。\n\n## 四葉社会保険労務士事務所能做什么？\n\n位于文京区小日向的四葉社会保険労務士事務所，承接外国人雇用状况申报的代办、雇用保险・社会保险的资格取得・丧失，以及[外国人雇用的劳务・社会保险](/zh/labor/services/gaikokujin-koyo)全般。**咨询免费。** 费用公开于[报酬额表](/zh/labor/ryokin)。外国人雇用的整体流程整理于[雇用1名外国人，需要几个窗口](/zh/labor/column/gaikokujin-koyo-madoguchi-wakekata)。\n\n### 该向谁咨询\n\n在留资格的申请・变更・更新由**四葉行政書士事務所**承接（与本事务所是不同的事业体，另行签约）。工资课税・年终调整是**税理士**、登记是**司法书士**、已发生争议的案件是**律师**的业务。以上均不收取介绍费。\n\n## 常见问题\n\n**Q. 一周只有几小时的打工，也需要申报吗？**\nA. 需要。不成为雇用保险被保险人的情形，于雇入・离职的翌月末日前，以样式第3号向Hello Work申报。正因没有雇用保险手续的提醒，这是最容易被遗忘的类型（特别永住者、在留资格「外交」「公用」者除外）。\n\n**Q. 提出雇用保险的资格取得届，就足够了吗？**\nA. 就成为被保险人者而言，是的——正确填写在留资格等栏位并在期限内（翌月10日前）提出，即兼作外国人雇用状况的申报。栏位漏填则不成立申报，请与在留卡原件核对后填写。\n\n**Q. 忘记申报了。有罚则吗？**\nA. 不申报・虚假申报是30万日元以下罚金的对象（劳动施策总合推进法第40条第1项第2号）。发现的时点，先向Hello Work咨询后补办。本事务所可从未申报案件的盘点开始协助。\n\n**Q. 有员工的在留期限快到了。更新也能委托吗？**\nA. 在留资格的申请・变更・更新是行政书士的业务，本事务所无法承接。由四葉行政書士事務所（不同事业体・另行签约）承接，不收取介绍费。本事务所负责雇用契约期间的这一侧——见[在留期限与雇用契约期间](/zh/labor/column/zairyu-kigen-koyo-keiyaku-kikan)。\n\n## 本文依据\n\n- 劳动施策总合推进法（労働施策の総合的な推進並びに労働者の雇用の安定及び職業生活の充実等に関する法律。昭和41年法律第132号）**第28条第1项**（外国人雇用状况的申报等）・**第40条第1项第2号**（30万日元以下的罚金） ―― 2026年8月14日于e-Gov法令检索确认现行条文\n- 样式・期限的区分（被保险人＝资格取得届・翌月10日前／丧失届・翌日起10日以内，非被保险人＝样式第3号・翌月末日前） ―― 厚生劳动省「关于外国人雇用状况的申报」（2026年8月14日参阅）\n\n本文为一般性的信息提供。因应个别情事的判断，由具备资格者在面谈后进行。撰文者为[浦松丈二](/zh/about/uramatsu)（社会保险劳务士・行政书士・宅地建物取引士）。",
+        "category": "手续与期限",
+        "keywords": [
+          "外国人雇用状况申报 期限",
+          "雇用外国人 Hello Work 申报",
+          "样式第3号 外国人 打工",
+          "外国人雇用状况申报 罚则",
+          "雇用保险 资格取得届 在留资格",
+          "外国人 离职 申报"
+        ],
+        "tags": [
+          "外国人雇用",
+          "申报",
+          "Hello Work",
+          "雇用保险",
+          "期限",
+          "罚则"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "一周只有几小时的打工，也需要申报吗？",
+            "answer": "需要。不成为雇用保险被保险人的情形，于雇入・离职的翌月末日前，以样式第3号向Hello Work申报。正因没有雇用保险手续的提醒，这是最容易被遗忘的类型（特别永住者、在留资格「外交」「公用」者除外）。"
+          },
+          {
+            "question": "提出雇用保险的资格取得届，就足够了吗？",
+            "answer": "就成为被保险人者而言，是的——正确填写在留资格等栏位并在期限内（翌月10日前）提出，即兼作外国人雇用状况的申报。栏位漏填则不成立申报，请与在留卡原件核对后填写。"
+          },
+          {
+            "question": "忘记申报了。有罚则吗？",
+            "answer": "不申报・虚假申报是30万日元以下罚金的对象（劳动施策总合推进法第40条第1项第2号）。发现的时点，先向Hello Work咨询后补办。本事务所可从未申报案件的盘点开始协助。"
+          },
+          {
+            "question": "有员工的在留期限快到了。更新也能委托吗？",
+            "answer": "在留资格的申请・变更・更新是行政书士的业务，本事务所无法承接。由四葉行政書士事務所（不同事业体・另行签约）承接，不收取介绍费。本事务所负责雇用契约期间的这一侧——见在留期限与雇用契约期间。"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "business": "labor",
+    "slug": "gaikokujin-shain-kikoku-nenkin-seisan",
+    "title": "帰国する社員の年金は、どうなるのか",
+    "date": "2026-09-01",
+    "category": "社会保険",
+    "excerpt": "帰国する外国人社員は、要件を満たせば脱退一時金を請求できます（厚生年金保険法附則第29条）。ただし出国後2年以内の期限があり、受け取るとその期間は被保険者でなかったものとみなされます。社会保障協定で加入期間を通算できる国では、請求しないほうがよい場合があります。",
+    "content": "**結論（先に要点）**：帰国する外国人社員は、一定の要件のもとで**脱退一時金**を請求できます（厚生年金保険法附則第29条）。ただし**出国後2年以内**という期限があり、受け取ると**その期間は被保険者でなかったものとみなされます**。社会保障協定で加入期間を通算できる国の出身者は、**請求すると通算の対象から外れる**ため、請求しないほうがよい場合があります。\n\nこのページは、外国人社員が帰国することになった会社の総務担当の方、そしてご本人に向けたものです。日本から社員を送り出す話は[海外出張と海外派遣は、労災でまったく違う](/labor/column/kaigai-shucho-haken-rosai-chigai)で書きました。本記事はその逆方向——**日本から帰す**ときの年金の話です。\n\n## 払った保険料は、返ってくるのか？\n\n**一部が、脱退一時金という形で返ってくる場合があります。** 厚生年金保険法附則第29条は、次の要件を満たす方に脱退一時金の請求を認めています。\n\n| 主な要件（厚生年金保険の場合） | 内容 |\n|---|---|\n| 被保険者期間 | **6か月以上**あること |\n| 国籍 | 日本国籍を有しないこと |\n| 住所 | 日本国内に住所を有しないこと（＝出国後に請求） |\n| 期限 | 最後に被保険者資格を喪失した日（出国日等）から**2年を経過していない**こと |\n| 受給歴 | 障害厚生年金などの受給権を有したことがないこと |\n\n額は被保険者期間に応じて計算され、計算の基礎となる月数には**上限60月（5年分）**があります（最終月が令和3年4月以降の場合。日本年金機構の公表資料による）。国民年金の第1号被保険者期間についても、国民年金法附則第9条の3の2に同様の仕組みがあります。\n\n## 請求すると、損になることがあるのはなぜか？\n\n条文に理由が書いてあります。厚生年金保険法附則第29条**第5項**——脱退一時金の支給を受けると、**その計算の基礎となった期間は「被保険者でなかったものとみなす」**。\n\nここで**社会保障協定**が効いてきます。協定の中には、日本と相手国の**加入期間を通算**して、それぞれの国の年金の受給資格につなげられるものがあります。通算できる国の出身者が脱退一時金を受け取ると、**その期間が消え、通算の土台がなくなります**。将来その国で年金の受給資格を組み立てるつもりなら、請求しないほうが有利な場合があるのです。\n\n一方、**日中社会保障協定は二重加入の防止のみで、加入期間の通算はできません**。つまり同じ「帰国」でも、**国によって最適な選択が変わります**。協定の有無と内容（通算できるか）を、日本年金機構の国別ページで必ず確認してください。**どちらが得かは本人の年齢・加入歴・帰国後の予定で変わるため、本記事では断定しません。**\n\n## 会社は、何を出せばいいのか？\n\n会社側の手続は、通常の退職と同じ枠組みです。\n\n- 社会保険の**資格喪失届**、雇用保険の**資格喪失届**（＝[外国人雇用状況の届出](/labor/column/gaikokujin-koyo-jokyo-todokede)を兼ねます）\n- 脱退一時金の請求は**本人が行うもの**ですが、会社が**在職期間・標準報酬の記録**を整えておくと、本人の手続が速くなります\n- 帰国前に、**年金手帳・基礎年金番号の控え、請求書の様式（日本年金機構が多言語で公表）**を本人に案内しておくのが実務です\n\n## いつまでに動けばいいのか？\n\n期限は**出国後2年**です。ただし判断（請求するか・しないか）は**帰国前**に済ませておくべきです。帰国後に海外から情報を集めて判断するのは、本人にとって負担が大きいからです。退職が決まった時点で、①出身国と日本の協定の有無・通算の可否を確認、②請求する場合の段取りを案内、③会社側の喪失手続——の順で動きます。\n\n## 四葉社会保険労務士事務所は、何ができますか？\n\n文京区小日向の四葉社会保険労務士事務所は、帰国に伴う資格喪失の手続、外国人雇用状況の届出、本人への脱退一時金の制度案内（判断材料の整理）をお受けします。**ご相談は無料です。** 料金は[報酬額表](/labor/ryokin)に、外国人雇用の全体の流れは[外国人を1人雇うと、窓口はいくつ必要か](/labor/column/gaikokujin-koyo-madoguchi-wakekata)にまとめています。会社をたたむことに伴う手続の全体は[会社をたたむとき、社会保険と労働保険はどうするか](/labor/column/kaisha-tatamu-shakaihoken-zenso-tetsuzuki)をご覧ください。\n\n### 誰に相談するか\n\n脱退一時金からは所得税（源泉徴収と還付）の論点も生じますが、税務は**税理士**の業務です。在留資格に関する手続は**四葉行政書士事務所**（当事務所とは別の事業体で、別々にご契約いただきます）、紛争性のある事案は**弁護士**の業務です。いずれも紹介料の授受はありません。\n\n## よくある質問\n\n**Q. 帰国する社員全員に、脱退一時金を勧めるべきですか？**\nA. 一律には勧められません。社会保障協定で加入期間を通算できる国の出身者は、受け取るとその期間が通算から外れます（厚生年金保険法附則第29条第5項）。国と本人の状況で最適解が変わるため、会社としては「制度と期限の案内」にとどめ、判断は本人に委ねるのが適切です。\n\n**Q. 期限の「2年」は、いつから数えますか？**\nA. 条文上は、最後に国民年金の被保険者資格を喪失した日（喪失日に日本国内に住所があった場合は、その後はじめて住所を有しなくなった日）から起算して2年です（厚生年金保険法附則第29条第1項第3号）。実務的には「出国後2年以内」と案内されています。\n\n**Q. 6か月未満で帰国する場合はどうなりますか？**\nA. 厚生年金保険の脱退一時金は被保険者期間6か月以上が要件のため、請求できません。社会保障協定で通算できる国であれば、短い期間でも将来の通算に活きる場合があります。国別の確認が必要です。\n\n**Q. 中国籍の社員が帰国します。通算はできますか？**\nA. 日中社会保障協定は保険料の二重負担の防止を目的とするもので、加入期間の通算の仕組みはありません（日本年金機構の公表資料による）。この場合、脱退一時金の請求が現実的な選択肢になりやすいですが、期限（出国後2年）と手続の段取りを帰国前に確認してください。\n\n## この記事の根拠\n\n- 厚生年金保険法（昭和29年法律第115号）**附則第29条**（脱退一時金。第1項＝要件と2年の期限、第3項・第4項＝額の計算、**第5項＝被保険者でなかったものとみなす**） ―― 2026年8月14日にe-Gov法令検索で現行条文を確認\n- 国民年金法（昭和34年法律第141号）**附則第9条の3の2**（国民年金の脱退一時金） ―― 同日にe-Gov法令検索で存在を確認\n- 支給額計算の月数の上限60月（最終月が令和3年4月以降の場合） ―― 日本年金機構「脱退一時金の制度」（2026年8月14日参照）\n- 日中社会保障協定に通算の仕組みがないこと ―― 日本年金機構「協定相手国別の情報（中国）」（2026年8月14日参照）\n\n本記事は一般的な情報提供です。請求の可否・有利不利の判断は個別の事情によります。個別のご事情に応じた判断は、面談のうえ資格者が行います。執筆は[浦松丈二](/about/uramatsu)（社会保険労務士・行政書士・宅地建物取引士）です。",
+    "status": "published",
+    "author": {
+      "name": "浦松 丈二",
+      "title": "社会保険労務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+    },
+    "keywords": [
+      "外国人 帰国 年金 どうなる",
+      "脱退一時金 請求 期限 2年",
+      "脱退一時金 社会保障協定 通算",
+      "外国人 社員 退職 帰国 手続",
+      "脱退一時金 上限 5年",
+      "中国 帰国 年金 脱退一時金"
+    ],
+    "tags": [
+      "外国人雇用",
+      "脱退一時金",
+      "年金",
+      "社会保障協定",
+      "帰国",
+      "資格喪失"
+    ],
+    "locales": [],
+    "faq": [
+      {
+        "question": "帰国する社員全員に、脱退一時金を勧めるべきですか？",
+        "answer": "一律には勧められません。社会保障協定で加入期間を通算できる国の出身者は、受け取るとその期間が通算から外れます（厚生年金保険法附則第29条第5項）。国と本人の状況で最適解が変わるため、会社としては「制度と期限の案内」にとどめ、判断は本人に委ねるのが適切です。"
+      },
+      {
+        "question": "期限の「2年」は、いつから数えますか？",
+        "answer": "条文上は、最後に国民年金の被保険者資格を喪失した日（喪失日に日本国内に住所があった場合は、その後はじめて住所を有しなくなった日）から起算して2年です（厚生年金保険法附則第29条第1項第3号）。実務的には「出国後2年以内」と案内されています。"
+      },
+      {
+        "question": "6か月未満で帰国する場合はどうなりますか？",
+        "answer": "厚生年金保険の脱退一時金は被保険者期間6か月以上が要件のため、請求できません。社会保障協定で通算できる国であれば、短い期間でも将来の通算に活きる場合があります。国別の確認が必要です。"
+      },
+      {
+        "question": "中国籍の社員が帰国します。通算はできますか？",
+        "answer": "日中社会保障協定は保険料の二重負担の防止を目的とするもので、加入期間の通算の仕組みはありません（日本年金機構の公表資料による）。この場合、脱退一時金の請求が現実的な選択肢になりやすいですが、期限（出国後2年）と手続の段取りを帰国前に確認してください。"
+      }
+    ],
+    "translations": {
+      "en": {
+        "title": "What happens to the pension of an employee returning home?",
+        "excerpt": "A foreign employee returning home can, on certain conditions, claim the lump-sum withdrawal payment (Employees' Pension Insurance Act, Supplementary Provisions, Article 29). But the deadline is two years from departure, and receiving it deems the period never insured. For nationals of countries whose social security agreements totalise periods, claiming can mean losing more than you gain.",
+        "content": "**In short:** a foreign employee returning home can, on certain conditions, claim **the lump-sum withdrawal payment (脱退一時金)** (Employees' Pension Insurance Act, Supplementary Provisions, Article 29). But there is a deadline — **within two years of departure** — and receiving it means **the period is deemed never to have been insured**. For nationals of countries whose social security agreements allow periods to be **totalised**, claiming removes the period from totalisation, so **not claiming can be the better choice**.\n\nThis page is for back-office staff of companies whose foreign employee is returning home — and for the employee. Sending employees out of Japan was covered in [How overseas business trips and overseas postings differ for workers' compensation](/en/labor/column/kaigai-shucho-haken-rosai-chigai). This article runs the other way: **the pension when someone leaves Japan**.\n\n## Do the premiums paid come back?\n\n**Part of them can, as the lump-sum withdrawal payment.** Article 29 of the Supplementary Provisions of the Employees' Pension Insurance Act allows a claim by a person meeting these tests:\n\n| Main requirements (employees' pension) | Substance |\n|---|---|\n| Insured period | **Six months or more** |\n| Nationality | Not a Japanese national |\n| Address | No address in Japan (i.e. claim after departure) |\n| Deadline | **Less than two years** since the day the person last lost insured status (departure, in practice) |\n| Benefit history | Never held entitlement to disability employees' pension or similar |\n\nThe amount is computed from the insured period, and the months used in the computation are **capped at 60 months (five years)** (where the final month is April 2021 or later; per the Japan Pension Service). The national pension has a parallel mechanism in Article 9-3-2 of its Supplementary Provisions.\n\n## Why can claiming make you worse off?\n\nThe reason is written in the provision itself. Article 29, **paragraph 5**: once the lump-sum withdrawal payment is received, **the period on which it was computed is \"deemed never to have been an insured period.\"**\n\nThis is where **social security agreements** come in. Some agreements allow Japanese and foreign insured periods to be **totalised** toward pension entitlement in each country. If a national of such a country takes the lump sum, **the period disappears — and the base for totalisation with it**. For someone planning to build pension entitlement at home, not claiming can be the better course.\n\nBy contrast, **the Japan–China agreement only prevents double coverage; it has no totalisation**. The same \"return home\" therefore has **different best answers by country**. Always check the existence and content of the agreement (whether it totalises) on the Japan Pension Service's country pages. **Which way is better depends on the person's age, record and plans — this article does not decide it.**\n\n## What does the company file?\n\nThe company side follows the ordinary departure framework.\n\n- The social insurance **loss notification** and the employment insurance **loss notification** (which doubles as [the foreign worker employment status notification](/en/labor/column/gaikokujin-koyo-jokyo-todokede))\n- The lump-sum claim is **the employee's own**, but the company keeping **the service and standard remuneration records** in order speeds it up\n- Before departure, the practical step is to hand over **the pension number records and the claim form** (published by the Japan Pension Service in many languages)\n\n## By when should things move?\n\nThe deadline is **two years from departure** — but the decision (claim or not) should be settled **before departure**. Gathering information from abroad afterwards is a heavy burden on the individual. Once the departure is fixed: (1) check the agreement and totalisation for the home country, (2) walk through the claim procedure if claiming, (3) the company's loss notifications — in that order.\n\n## What can 四葉社会保険労務士事務所 do?\n\n四葉社会保険労務士事務所, in Kohinata, Bunkyo City, handles the loss procedures at departure, the employment status notification, and lays out the decision material on the lump-sum system for the employee. **Consultation is free of charge.** Fees are in the [fee schedule](/en/labor/ryokin); the whole flow of foreign employment is in [Hire one foreign employee — how many counters do you need?](/en/labor/column/gaikokujin-koyo-madoguchi-wakekata); winding a company up is covered in [The social and labour insurance procedures when you close a company](/en/labor/column/kaisha-tatamu-shakaihoken-zenso-tetsuzuki).\n\n### Whom to consult\n\nThe lump-sum payment also raises income-tax issues (withholding and refund), which belong to **a tax accountant**. Residence-status procedures go to **四葉行政書士事務所** (a separate business from this office, engaged under a separate contract); matters in dispute to **an attorney**. No referral fees change hands.\n\n## Frequently asked questions\n\n**Q. Should we recommend the lump sum to every returning employee?**\nA. No — not uniformly. For nationals of countries whose agreements totalise periods, receiving it removes the period from totalisation (Supplementary Provisions, Article 29, paragraph 5). The best answer varies by country and by the individual, so the company's proper role is to explain the system and the deadline and leave the decision to the person.\n\n**Q. When does the two-year clock start?**\nA. Under the provision, it runs from the day the person last lost national pension insured status (or, if they still had an address in Japan on that day, from the day they first ceased to have one) — Article 29, paragraph 1, item 3. In practice it is described as \"within two years of leaving Japan.\"\n\n**Q. What if the person returns home with less than six months of coverage?**\nA. The employees' pension lump sum requires six months or more of insured period, so no claim lies. If the home country's agreement totalises, even a short period can still count later — check country by country.\n\n**Q. A Chinese employee is returning home. Can periods be totalised?**\nA. The Japan–China agreement is for preventing double coverage and has no totalisation mechanism (per the Japan Pension Service). In that case the lump-sum claim tends to be the realistic option — but confirm the deadline (two years from departure) and the procedure before departure.\n\n## Sources for this article\n\n- Employees' Pension Insurance Act (厚生年金保険法, Act No. 115 of 1954), **Supplementary Provisions, Article 29** (the lump-sum withdrawal payment: paragraph 1 = requirements and the two-year limit; paragraphs 3 and 4 = computation; **paragraph 5 = deemed never insured**) — current text confirmed on e-Gov on 14 August 2026\n- National Pension Act (国民年金法, Act No. 141 of 1959), **Supplementary Provisions, Article 9-3-2** (the national pension lump sum) — existence confirmed on e-Gov the same day\n- The 60-month cap on months used in computation (final month April 2021 or later) — Japan Pension Service, \"The lump-sum withdrawal payment system\" (viewed 14 August 2026)\n- The absence of totalisation in the Japan–China agreement — Japan Pension Service, country page for China (viewed 14 August 2026)\n\nThis article is general information; whether claiming is advantageous depends on individual circumstances. Judgments that fit your particular circumstances are made by a qualified professional after a meeting. Written by [Joji Uramatsu](/en/about/uramatsu) (Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist).",
+        "category": "Social insurance",
+        "keywords": [
+          "foreign employee returning home pension",
+          "lump-sum withdrawal payment two year deadline",
+          "lump-sum withdrawal social security agreement totalisation",
+          "foreign staff leaving Japan procedures",
+          "withdrawal payment five year cap",
+          "China return pension lump sum"
+        ],
+        "tags": [
+          "foreign employment",
+          "lump-sum withdrawal payment",
+          "pension",
+          "social security agreements",
+          "returning home",
+          "loss of insured status"
+        ],
+        "author": {
+          "name": "Joji Uramatsu",
+          "title": "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所"
+        },
+        "faq": [
+          {
+            "question": "Should we recommend the lump sum to every returning employee?",
+            "answer": "No — not uniformly. For nationals of countries whose agreements totalise periods, receiving it removes the period from totalisation (Supplementary Provisions, Article 29, paragraph 5). The best answer varies by country and by the individual, so the company's proper role is to explain the system and the deadline and leave the decision to the person."
+          },
+          {
+            "question": "When does the two-year clock start?",
+            "answer": "Under the provision, it runs from the day the person last lost national pension insured status (or, if they still had an address in Japan on that day, from the day they first ceased to have one) — Article 29, paragraph 1, item 3. In practice it is described as \"within two years of leaving Japan.\""
+          },
+          {
+            "question": "What if the person returns home with less than six months of coverage?",
+            "answer": "The employees' pension lump sum requires six months or more of insured period, so no claim lies. If the home country's agreement totalises, even a short period can still count later — check country by country."
+          },
+          {
+            "question": "A Chinese employee is returning home. Can periods be totalised?",
+            "answer": "The Japan–China agreement is for preventing double coverage and has no totalisation mechanism (per the Japan Pension Service). In that case the lump-sum claim tends to be the realistic option — but confirm the deadline (two years from departure) and the procedure before departure."
+          }
+        ]
+      },
+      "zh-tw": {
+        "title": "回國的員工，年金會怎麼樣",
+        "excerpt": "回國的外國人員工，符合要件即可請求脫退一時金（厚生年金保險法附則第29條）。但期限為出國後2年以內，且領取後該期間視為未曾加入。社會保障協定可通算加入期間的國家出身者，請求反而可能吃虧——有時不請求才是更好的選擇。",
+        "content": "**結論（先講重點）**：回國的外國人員工，符合一定要件即可請求**脫退一時金**（厚生年金保險法附則第29條）。但有**出國後2年以內**的期限，且領取後，**該期間視為未曾是被保險人**。社會保障協定可通算加入期間的國家出身者，**一旦請求就脫離通算的對象**——有時不請求才是更好的選擇。\n\n本頁面寫給外國人員工即將回國的公司總務人員，以及本人。把員工從日本派出去的話題，寫在[海外出差與海外派遣的勞災有何不同](/zh-tw/labor/column/kaigai-shucho-haken-rosai-chigai)。本文是相反的方向——**從日本回國**時的年金。\n\n## 繳過的保險費，會退回來嗎？\n\n**一部分可能以脫退一時金的形式退回。** 厚生年金保險法附則第29條允許符合下列要件者請求。\n\n| 主要要件（厚生年金保險） | 內容 |\n|---|---|\n| 被保險人期間 | **6個月以上** |\n| 國籍 | 不具日本國籍 |\n| 住所 | 在日本國內無住所（＝出國後請求） |\n| 期限 | 自最後喪失被保險人資格之日（實務上為出國日等）起**未經過2年** |\n| 受給歷 | 未曾擁有障害厚生年金等的受給權 |\n\n金額依被保險人期間計算，計算基礎的月數**上限為60個月（5年分）**（最終月為2021年〔令和3年〕4月以後的情形。依日本年金機構的公開資料）。國民年金的第1號被保險人期間，於國民年金法附則第9條之3之2也有同樣的機制。\n\n## 為什麼請求了反而可能吃虧？\n\n理由寫在條文裡。厚生年金保險法附則第29條**第5項**——領取脫退一時金後，**作為其計算基礎的期間「視為未曾是被保險人」**。\n\n**社會保障協定**在這裡發揮作用。有些協定允許把日本與對方國的**加入期間通算**，連結到各國年金的受給資格。可通算的國家出身者領取脫退一時金，**該期間就消失，通算的基礎也隨之消失**。將來打算在母國組建年金受給資格的人，不請求可能更有利。\n\n另一方面，**日中社會保障協定只防止雙重加入，沒有加入期間的通算**。也就是說，同樣是「回國」，**最佳選擇因國家而異**。請務必在日本年金機構的國別頁面確認協定的有無與內容（能否通算）。**哪個有利，因本人的年齡・加入紀錄・回國後的規劃而異，本文不作斷定。**\n\n## 公司要提出什麼？\n\n公司側的手續，與一般的離職相同框架。\n\n- 社會保險的**資格喪失届**、僱用保險的**資格喪失届**（＝兼作[外國人僱用狀況的申報](/zh-tw/labor/column/gaikokujin-koyo-jokyo-todokede)）\n- 脫退一時金的請求由**本人進行**，但公司把**在職期間・標準報酬的紀錄**整理好，本人的手續會更快\n- 回國前，把**基礎年金番號的紀錄、請求書樣式（日本年金機構以多語言公布）**交給本人，是實務上的做法\n\n## 什麼時候之前要動起來？\n\n期限是**出國後2年**。但（請求與否的）判斷應在**回國前**完成。回國後從海外收集資訊再判斷，對本人負擔太大。離職確定後的順序：①確認出身國與日本的協定有無・可否通算，②要請求時說明手續的安排，③公司側的喪失手續。\n\n## 四葉社会保険労務士事務所能做什麼？\n\n位於文京區小日向的四葉社会保険労務士事務所，承接回國相關的資格喪失手續、外國人僱用狀況的申報，以及對本人說明脫退一時金制度（判斷材料的整理）。**諮詢免費。** 費用見[報酬額表](/zh-tw/labor/ryokin)，外國人僱用的整體流程見[僱用1名外國人，需要幾個窗口](/zh-tw/labor/column/gaikokujin-koyo-madoguchi-wakekata)，結束公司時的手續全體見[結束公司時的社會保險・勞動保險手續](/zh-tw/labor/column/kaisha-tatamu-shakaihoken-zenso-tetsuzuki)。\n\n### 該向誰諮詢\n\n脫退一時金也會產生所得稅（源泉徵收與退還）的論點，稅務是**稅理士**的業務。在留資格相關手續由**四葉行政書士事務所**（與本事務所是不同的事業體，另行簽約）承接，已發生爭議的案件是**律師**的業務。以上均不收取介紹費。\n\n## 常見問題\n\n**Q. 應該向所有回國的員工推薦脫退一時金嗎？**\nA. 不能一律推薦。協定可通算期間的國家出身者，領取後該期間即脫離通算（厚生年金保險法附則第29條第5項）。最佳答案因國家與本人的狀況而異，公司的適當角色是「說明制度與期限」，把判斷交給本人。\n\n**Q. 「2年」從什麼時候起算？**\nA. 條文上，自最後喪失國民年金被保險人資格之日（該日在日本國內有住所者，為其後首次不再有住所之日）起算2年（厚生年金保險法附則第29條第1項第3號）。實務上的說明是「出國後2年以內」。\n\n**Q. 未滿6個月就回國的話會怎樣？**\nA. 厚生年金保險的脫退一時金以被保險人期間6個月以上為要件，無法請求。若出身國的協定可通算，短期間也可能對將來的通算有用。需要逐國確認。\n\n**Q. 中國籍的員工要回國。可以通算嗎？**\nA. 日中社會保障協定以防止保險費雙重負擔為目的，沒有加入期間通算的機制（依日本年金機構的公開資料）。這種情形，請求脫退一時金往往是現實的選項——但請在回國前確認期限（出國後2年）與手續的安排。\n\n## 本文依據\n\n- 厚生年金保險法（昭和29年法律第115號）**附則第29條**（脫退一時金。第1項＝要件與2年期限、第3項・第4項＝金額計算、**第5項＝視為未曾是被保險人**） ―― 2026年8月14日於e-Gov法令檢索確認現行條文\n- 國民年金法（昭和34年法律第141號）**附則第9條之3之2**（國民年金的脫退一時金） ―― 同日於e-Gov法令檢索確認其存在\n- 計算月數的上限60個月（最終月為2021年4月以後） ―― 日本年金機構「脫退一時金制度」（2026年8月14日參閱）\n- 日中社會保障協定無通算機制 ―― 日本年金機構「協定相手國別資訊（中國）」（2026年8月14日參閱）\n\n本文為一般性的資訊提供。請求與否的有利不利依個別情事而定。因應個別情事的判斷，由具備資格者在面談後進行。撰文者為[浦松丈二](/zh-tw/about/uramatsu)（社會保險勞務士・行政書士・宅地建物取引士）。",
+        "category": "社會保險",
+        "keywords": [
+          "外國人 回國 年金 怎麼辦",
+          "脫退一時金 請求 期限 2年",
+          "脫退一時金 社會保障協定 通算",
+          "外國人 員工 離職 回國 手續",
+          "脫退一時金 上限 5年",
+          "中國 回國 年金"
+        ],
+        "tags": [
+          "外國人僱用",
+          "脫退一時金",
+          "年金",
+          "社會保障協定",
+          "回國",
+          "資格喪失"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "應該向所有回國的員工推薦脫退一時金嗎？",
+            "answer": "不能一律推薦。協定可通算期間的國家出身者，領取後該期間即脫離通算（厚生年金保險法附則第29條第5項）。最佳答案因國家與本人的狀況而異，公司的適當角色是「說明制度與期限」，把判斷交給本人。"
+          },
+          {
+            "question": "「2年」從什麼時候起算？",
+            "answer": "條文上，自最後喪失國民年金被保險人資格之日（該日在日本國內有住所者，為其後首次不再有住所之日）起算2年（厚生年金保險法附則第29條第1項第3號）。實務上的說明是「出國後2年以內」。"
+          },
+          {
+            "question": "未滿6個月就回國的話會怎樣？",
+            "answer": "厚生年金保險的脫退一時金以被保險人期間6個月以上為要件，無法請求。若出身國的協定可通算，短期間也可能對將來的通算有用。需要逐國確認。"
+          },
+          {
+            "question": "中國籍的員工要回國。可以通算嗎？",
+            "answer": "日中社會保障協定以防止保險費雙重負擔為目的，沒有加入期間通算的機制（依日本年金機構的公開資料）。這種情形，請求脫退一時金往往是現實的選項——但請在回國前確認期限（出國後2年）與手續的安排。"
+          }
+        ]
+      },
+      "zh": {
+        "title": "回国的员工，年金会怎么样",
+        "excerpt": "回国的外国人员工，符合要件即可请求脱退一时金（厚生年金保险法附则第29条）。但期限为出国后2年以内，且领取后该期间视为未曾加入。社会保障协定可通算加入期间的国家出身者，请求反而可能吃亏——有时不请求才是更好的选择。",
+        "content": "**结论（先讲重点）**：回国的外国人员工，符合一定要件即可请求**脱退一时金**（厚生年金保险法附则第29条）。但有**出国后2年以内**的期限，且领取后，**该期间视为未曾是被保险人**。社会保障协定可通算加入期间的国家出身者，**一旦请求就脱离通算的对象**——有时不请求才是更好的选择。\n\n本页面写给外国人员工即将回国的公司总务人员，以及本人。把员工从日本派出去的话题，写在[海外出差与海外派遣的劳灾有何不同](/zh/labor/column/kaigai-shucho-haken-rosai-chigai)。本文是相反的方向——**从日本回国**时的年金。\n\n## 缴过的保险费，会退回来吗？\n\n**一部分可能以脱退一时金的形式退回。** 厚生年金保险法附则第29条允许符合下列要件者请求。\n\n| 主要要件（厚生年金保险） | 内容 |\n|---|---|\n| 被保险人期间 | **6个月以上** |\n| 国籍 | 不具日本国籍 |\n| 住所 | 在日本国内无住所（＝出国后请求） |\n| 期限 | 自最后丧失被保险人资格之日（实务上为出国日等）起**未经过2年** |\n| 受给历 | 未曾拥有障害厚生年金等的受给权 |\n\n金额依被保险人期间计算，计算基础的月数**上限为60个月（5年分）**（最终月为2021年〔令和3年〕4月以后的情形。依日本年金机构的公开资料）。国民年金的第1号被保险人期间，于国民年金法附则第9条之3之2也有同样的机制。\n\n## 为什么请求了反而可能吃亏？\n\n理由写在条文里。厚生年金保险法附则第29条**第5项**——领取脱退一时金后，**作为其计算基础的期间「视为未曾是被保险人」**。\n\n**社会保障协定**在这里发挥作用。有些协定允许把日本与对方国的**加入期间通算**，连结到各国年金的受给资格。可通算的国家出身者领取脱退一时金，**该期间就消失，通算的基础也随之消失**。将来打算在母国组建年金受给资格的人，不请求可能更有利。\n\n另一方面，**日中社会保障协定只防止双重加入，没有加入期间的通算**。也就是说，同样是「回国」，**最佳选择因国家而异**。请务必在日本年金机构的国别页面确认协定的有无与内容（能否通算）。**哪个有利，因本人的年龄・加入记录・回国后的规划而异，本文不作断定。**\n\n## 公司要提出什么？\n\n公司侧的手续，与一般的离职相同框架。\n\n- 社会保险的**资格丧失届**、雇用保险的**资格丧失届**（＝兼作[外国人雇用状况的申报](/zh/labor/column/gaikokujin-koyo-jokyo-todokede)）\n- 脱退一时金的请求由**本人进行**，但公司把**在职期间・标准报酬的记录**整理好，本人的手续会更快\n- 回国前，把**基础年金番号的记录、请求书样式（日本年金机构以多语言公布）**交给本人，是实务上的做法\n\n## 什么时候之前要动起来？\n\n期限是**出国后2年**。但（请求与否的）判断应在**回国前**完成。回国后从海外收集信息再判断，对本人负担太大。离职确定后的顺序：①确认出身国与日本的协定有无・可否通算，②要请求时说明手续的安排，③公司侧的丧失手续。\n\n## 四葉社会保険労務士事務所能做什么？\n\n位于文京区小日向的四葉社会保険労務士事務所，承接回国相关的资格丧失手续、外国人雇用状况的申报，以及对本人说明脱退一时金制度（判断材料的整理）。**咨询免费。** 费用见[报酬额表](/zh/labor/ryokin)，外国人雇用的整体流程见[雇用1名外国人，需要几个窗口](/zh/labor/column/gaikokujin-koyo-madoguchi-wakekata)，结束公司时的手续全体见[结束公司时的社会保险・劳动保险手续](/zh/labor/column/kaisha-tatamu-shakaihoken-zenso-tetsuzuki)。\n\n### 该向谁咨询\n\n脱退一时金也会产生所得税（源泉征收与退还）的论点，税务是**税理士**的业务。在留资格相关手续由**四葉行政書士事務所**（与本事务所是不同的事业体，另行签约）承接，已发生争议的案件是**律师**的业务。以上均不收取介绍费。\n\n## 常见问题\n\n**Q. 应该向所有回国的员工推荐脱退一时金吗？**\nA. 不能一律推荐。协定可通算期间的国家出身者，领取后该期间即脱离通算（厚生年金保险法附则第29条第5项）。最佳答案因国家与本人的状况而异，公司的适当角色是「说明制度与期限」，把判断交给本人。\n\n**Q. 「2年」从什么时候起算？**\nA. 条文上，自最后丧失国民年金被保险人资格之日（该日在日本国内有住所者，为其后首次不再有住所之日）起算2年（厚生年金保险法附则第29条第1项第3号）。实务上的说明是「出国后2年以内」。\n\n**Q. 未满6个月就回国的话会怎样？**\nA. 厚生年金保险的脱退一时金以被保险人期间6个月以上为要件，无法请求。若出身国的协定可通算，短期间也可能对将来的通算有用。需要逐国确认。\n\n**Q. 中国籍的员工要回国。可以通算吗？**\nA. 日中社会保障协定以防止保险费双重负担为目的，没有加入期间通算的机制（依日本年金机构的公开资料）。这种情形，请求脱退一时金往往是现实的选项——但请在回国前确认期限（出国后2年）与手续的安排。\n\n## 本文依据\n\n- 厚生年金保险法（昭和29年法律第115号）**附则第29条**（脱退一时金。第1项＝要件与2年期限、第3项・第4项＝金额计算、**第5项＝视为未曾是被保险人**） ―― 2026年8月14日于e-Gov法令检索确认现行条文\n- 国民年金法（昭和34年法律第141号）**附则第9条之3之2**（国民年金的脱退一时金） ―― 同日于e-Gov法令检索确认其存在\n- 计算月数的上限60个月（最终月为2021年4月以后） ―― 日本年金机构「脱退一时金制度」（2026年8月14日参阅）\n- 日中社会保障协定无通算机制 ―― 日本年金机构「协定相手国别信息（中国）」（2026年8月14日参阅）\n\n本文为一般性的信息提供。请求与否的有利不利依个别情事而定。因应个别情事的判断，由具备资格者在面谈后进行。撰文者为[浦松丈二](/zh/about/uramatsu)（社会保险劳务士・行政书士・宅地建物取引士）。",
+        "category": "社会保险",
+        "keywords": [
+          "外国人 回国 年金 怎么办",
+          "脱退一时金 请求 期限 2年",
+          "脱退一时金 社会保障协定 通算",
+          "外国人 员工 离职 回国 手续",
+          "脱退一时金 上限 5年",
+          "中国 回国 年金"
+        ],
+        "tags": [
+          "外国人雇用",
+          "脱退一时金",
+          "年金",
+          "社会保障协定",
+          "回国",
+          "资格丧失"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "应该向所有回国的员工推荐脱退一时金吗？",
+            "answer": "不能一律推荐。协定可通算期间的国家出身者，领取后该期间即脱离通算（厚生年金保险法附则第29条第5项）。最佳答案因国家与本人的状况而异，公司的适当角色是「说明制度与期限」，把判断交给本人。"
+          },
+          {
+            "question": "「2年」从什么时候起算？",
+            "answer": "条文上，自最后丧失国民年金被保险人资格之日（该日在日本国内有住所者，为其后首次不再有住所之日）起算2年（厚生年金保险法附则第29条第1项第3号）。实务上的说明是「出国后2年以内」。"
+          },
+          {
+            "question": "未满6个月就回国的话会怎样？",
+            "answer": "厚生年金保险的脱退一时金以被保险人期间6个月以上为要件，无法请求。若出身国的协定可通算，短期间也可能对将来的通算有用。需要逐国确认。"
+          },
+          {
+            "question": "中国籍的员工要回国。可以通算吗？",
+            "answer": "日中社会保障协定以防止保险费双重负担为目的，没有加入期间通算的机制（依日本年金机构的公开资料）。这种情形，请求脱退一时金往往是现实的选项——但请在回国前确认期限（出国后2年）与手续的安排。"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "business": "labor",
+    "slug": "zairyu-kigen-koyo-keiyaku-kikan",
+    "title": "在留期限と雇用契約期間は、どちらが先に切れるか",
+    "date": "2026-09-01",
+    "category": "採用と雇用",
+    "excerpt": "在留期限と雇用契約期間は別々に走る2つの時計です。契約を在留期限に合わせれば更新のたびに労働条件の明示が要り、切り離せば在留期限が先に来ます。更新上限の明示（労働基準法施行規則第5条第1項第1号の2）と無期転換もあわせ、3つの時計を1枚で設計します。",
+    "content": "**結論（先に要点）**：在留期限と雇用契約期間は、**別々に走る2つの時計**です。契約を在留期限に合わせて短く切れば更新のたびに労働条件の明示が要り、契約を長くすれば在留期限が先に来ます。**どちらを基準にするかは、入社前に決めておくこと。** 有期契約には**更新上限の明示**も必要になりました（労働基準法施行規則第5条第1項第1号の2）。\n\nこのページは、有期契約で外国人を雇っている・雇おうとしている会社の経営者・総務担当の方に向けたものです。**本記事は労働契約の側からだけ書きます。** 在留資格の更新手続そのものは行政書士の業務で、[企業側の手続と期限](/legal/services/gaikokujin-shain)は四葉行政書士事務所（別事業体）のページをご覧ください。\n\n## 契約期間は、在留期限に合わせるべきか？\n\n決まった正解はありませんが、**どちらの設計かを意識的に選ぶ**必要があります。\n\n| 設計 | 起きること |\n|---|---|\n| 契約期間を**在留期限に合わせる**（例：在留期限までの有期契約） | 在留資格が更新されるたびに契約も更新。**更新のたびに労働条件の明示**（更新の基準・更新上限を含む）が必要。管理は明快だが事務は増える |\n| 契約期間を**在留期限と切り離す**（例：無期または長めの有期） | 契約は続くが、**在留期限が先に切れる**リスクを契約の外で管理することになる。期限管理の仕組みが必須 |\n\nどちらにも共通するのは、**在留期限の管理を「契約の更新日」だけに頼らない**ことです。切り離した設計では特に、期限を見張る仕組みが契約書のどこにもない状態になりがちです。\n\n## 更新上限は、どう書けばいいのか？\n\n有期労働契約では、**更新の基準**に加えて、**通算契約期間または更新回数に上限を定める場合はその上限**を、労働条件として明示する必要があります（労働基準法施行規則第5条第1項第1号の2。令和6年4月施行の改正で加わった事項です）。\n\n外国人雇用で注意したいのは、**「在留期限まで」を上限のように扱う書き方**です。在留資格が更新されれば働き続けられる前提なのに、契約書の上限がそれを塞いでいる——あるいは逆に、上限を書かずに更新を繰り返し、無期転換（労働契約法第18条の通算5年）の見込みを整理していない——という食い違いが起きます。**在留期限・契約の更新上限・無期転換の3つの時計を、1枚の表で並べて設計する**のが実務です。\n\n## 在留期限が切れたら、雇用契約はどうなるのか？\n\n在留期限を過ぎて就労させると、会社の側に**不法就労助長罪**（出入国管理及び難民認定法第73条の2。**3年以下の拘禁刑もしくは300万円以下の罰金、または併科**）が問われ得ます。しかも同条第2項は、在留資格や期限を**「知らなかったことを理由に処罰を免れることはできない」**（過失がないときを除く）と定めています。**確認していなかった、では通らない**構造です。\n\n雇用契約そのものをどう終了させるかは労働契約の論点として残りますが、その手前の**期限管理**——在留カードの期限の把握と、更新申請のスケジュール確認——が会社の防波堤になります。\n\n## 期限の管理は、誰がするのか？\n\n| 役割 | 誰が |\n|---|---|\n| 在留期限・契約期間・無期転換の3つの時計の設計と台帳管理 | **社会保険労務士**（当事務所） |\n| 在留資格の更新申請そのもの | **行政書士**（四葉行政書士事務所。別事業体・別契約） |\n| 更新の基準・上限を含む労働条件通知書・雇用契約書の整備 | **社会保険労務士**（当事務所） |\n\n外注か雇用かの整理が先に必要な場合は[外注と雇用の境目は、契約書では決まらない](/labor/column/gaichu-koyo-sakaime-roudoushasei)を、規程の整備は[就業規則は何人から義務か](/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo)をご覧ください。\n\n## 四葉社会保険労務士事務所は、何ができますか？\n\n文京区小日向の四葉社会保険労務士事務所は、有期契約の設計（更新の基準・更新上限の明示）、労働条件通知書・雇用契約書の整備、在留期限とあわせた期限台帳の設計をお受けします。**ご相談は無料です。** 料金は[報酬額表](/labor/ryokin)に、外国人雇用の全体の流れは[外国人を1人雇うと、窓口はいくつ必要か](/labor/column/gaikokujin-koyo-madoguchi-wakekata)にまとめています。\n\n### 誰に相談するか\n\n在留資格の申請・変更・更新は**四葉行政書士事務所**（当事務所とは別の事業体で、別々にご契約いただきます）。税務は**税理士**、登記は**司法書士**、すでに紛争になっている解雇・雇止めの事案は**弁護士**の業務です。いずれも紹介料の授受はありません。\n\n## よくある質問\n\n**Q. 契約期間は在留期限より長くしても違法ではないのですか？**\nA. 契約期間の設定自体が直ちに違法になるわけではありません。ただし在留期限を過ぎた就労は許されず、会社側に不法就労助長罪（入管法第73条の2）が問われ得ます。契約を長くする設計を取るなら、在留期限の管理を契約とは別に確実に回す仕組みが前提になります。\n\n**Q. 更新上限は必ず定めなければいけませんか？**\nA. 定めること自体は義務ではありません。義務なのは、更新の基準と、**上限を定める場合には**その上限を明示することです（労働基準法施行規則第5条第1項第1号の2）。定めない場合は、無期転換（通算5年）の見込みを含めて設計しておくことをお勧めします。\n\n**Q. 在留期限の管理はどのくらい前から動けばいいですか？**\nA. 更新申請の受付時期や審査期間は在留資格や個別の事情で変わるため、当事務所からは断定できません。申請の時期・段取りは行政書士（四葉行政書士事務所・別事業体）にご確認ください。当事務所は、期限の一覧化と契約側の準備（更新面談・条件明示）のスケジュールを担当します。\n\n**Q. 雇止めをしたい場合も相談できますか？**\nA. 更新の基準の整理や手続の設計はお受けできます。ただし、すでに紛争になっている・なりそうな個別の雇止めの可否判断は弁護士の業務のため、弁護士へ直接ご依頼いただく形をご案内します。紹介料の授受はありません。\n\n## この記事の根拠\n\n- 労働基準法施行規則（昭和22年厚生省令第23号）**第5条第1項第1号の2**（更新の基準。通算契約期間・更新回数の上限を定める場合はその上限を含む） ―― 2026年8月14日にe-Gov法令検索で現行条文を確認\n- 出入国管理及び難民認定法（昭和26年政令第319号）**第73条の2**（不法就労助長。3年以下の拘禁刑もしくは300万円以下の罰金または併科。第2項＝知らないことを理由に処罰を免れない〔過失がないときを除く〕） ―― 同日にe-Gov法令検索で現行条文を確認\n- 労働契約法（平成19年法律第128号）第18条（無期転換）は、本文中の参照として記載\n\n本記事は一般的な情報提供です。個別の契約の設計・雇止めの可否は事情によって判断が分かれます。個別のご事情に応じた判断は、面談のうえ資格者が行います。執筆は[浦松丈二](/about/uramatsu)（社会保険労務士・行政書士・宅地建物取引士）です。",
+    "status": "published",
+    "author": {
+      "name": "浦松 丈二",
+      "title": "社会保険労務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+    },
+    "keywords": [
+      "在留期限 雇用契約 期間 合わせる",
+      "外国人 有期契約 更新上限",
+      "在留期限 切れた 雇用契約",
+      "不法就労助長罪 会社 リスク",
+      "外国人 無期転換 5年",
+      "外国人 契約期間 決め方"
+    ],
+    "tags": [
+      "外国人雇用",
+      "有期契約",
+      "更新上限",
+      "在留期限",
+      "無期転換",
+      "労働条件明示"
+    ],
+    "locales": [],
+    "faq": [
+      {
+        "question": "契約期間は在留期限より長くしても違法ではないのですか？",
+        "answer": "契約期間の設定自体が直ちに違法になるわけではありません。ただし在留期限を過ぎた就労は許されず、会社側に不法就労助長罪（入管法第73条の2）が問われ得ます。契約を長くする設計を取るなら、在留期限の管理を契約とは別に確実に回す仕組みが前提になります。"
+      },
+      {
+        "question": "更新上限は必ず定めなければいけませんか？",
+        "answer": "定めること自体は義務ではありません。義務なのは、更新の基準と、上限を定める場合にはその上限を明示することです（労働基準法施行規則第5条第1項第1号の2）。定めない場合は、無期転換（通算5年）の見込みを含めて設計しておくことをお勧めします。"
+      },
+      {
+        "question": "在留期限の管理はどのくらい前から動けばいいですか？",
+        "answer": "更新申請の受付時期や審査期間は在留資格や個別の事情で変わるため、当事務所からは断定できません。申請の時期・段取りは行政書士（四葉行政書士事務所・別事業体）にご確認ください。当事務所は、期限の一覧化と契約側の準備（更新面談・条件明示）のスケジュールを担当します。"
+      },
+      {
+        "question": "雇止めをしたい場合も相談できますか？",
+        "answer": "更新の基準の整理や手続の設計はお受けできます。ただし、すでに紛争になっている・なりそうな個別の雇止めの可否判断は弁護士の業務のため、弁護士へ直接ご依頼いただく形をご案内します。紹介料の授受はありません。"
+      }
+    ],
+    "translations": {
+      "en": {
+        "title": "Which expires first — the period of stay or the employment contract?",
+        "excerpt": "The period of stay and the contract term are two clocks running separately. Match the contract to the period of stay and every renewal requires new written conditions; decouple them and the period of stay expires first. Decide which is the anchor before the hire. The renewal cap must now also be stated (Ordinance for Enforcement of the Labor Standards Act, Article 5).",
+        "content": "**In short:** the period of stay and the employment contract term are **two clocks running separately**. Cut the contract to the period of stay, and every renewal requires the written conditions again; make the contract longer, and the period of stay expires first. **Decide which is the anchor before the hire.** Fixed-term contracts now also require **the renewal cap to be stated** (Ordinance for Enforcement of the Labor Standards Act, Article 5, paragraph 1, item 1-2).\n\nThis page is for owners and back-office staff employing foreign workers on fixed-term contracts. **It is written from the labour-contract side only.** Renewal of the residence status itself is gyoseishoshi work — see [the company-side procedures and deadlines](/en/legal/services/gaikokujin-shain) at 四葉行政書士事務所 (a separate business).\n\n## Should the contract term match the period of stay?\n\nThere is no single right answer — but you must **choose the design deliberately**.\n\n| Design | What follows |\n|---|---|\n| Contract term **matched to the period of stay** (e.g. fixed term up to the expiry) | The contract renews every time the status renews. **Written conditions — including the renewal criteria and cap — are required at each renewal.** Clear to manage, heavier to administer |\n| Contract term **decoupled from the period of stay** (e.g. indefinite or longer fixed term) | The contract continues, but **the period of stay expires first** — a risk now managed outside the contract. A deadline-tracking system becomes essential |\n\nCommon to both: **do not rely on the contract renewal date alone to track the period of stay.** In the decoupled design especially, nothing in the contract file watches the immigration clock.\n\n## How do you write the renewal cap?\n\nFor fixed-term contracts, the **renewal criteria** must be stated — and where a cap on **the total contract period or the number of renewals** is set, **that cap** as well (Ordinance for Enforcement of the Labor Standards Act, Article 5, paragraph 1, item 1-2; added by the amendment that took effect in April 2024).\n\nThe trap in foreign employment is **writing \"until the period of stay\" as if it were a cap**. If the status renews, the person can keep working — yet the contract's cap blocks it. Or the opposite: no cap, repeated renewals, and no thought given to conversion to an indefinite term (five years total under Article 18 of the Labor Contracts Act). The practical method is to **design the three clocks — period of stay, renewal cap, conversion — side by side in one table**.\n\n## What happens when the period of stay runs out?\n\nLetting someone work past the expiry exposes the company to **the offence of promoting illegal work** (Immigration Control and Refugee Recognition Act, Article 73-2: **up to three years' imprisonment or a fine of up to three million yen, or both**). And paragraph 2 of the same article provides that **not knowing** the status or the expiry **is no defence** (unless there was no negligence). **\"We hadn't checked\" does not work.**\n\nHow the employment contract itself is then wound up remains a labour-contract question — but the **deadline management** before that point (knowing the residence-card expiry, confirming the renewal application schedule) is the company's real seawall.\n\n## Who manages the deadlines?\n\n| Role | Who |\n|---|---|\n| Designing and keeping the register of the three clocks — period of stay, contract term, conversion | **A shakai hoken roumushi** (this office) |\n| The residence-status renewal application itself | **A gyoseishoshi** (四葉行政書士事務所 — a separate business, a separate contract) |\n| Written conditions and contracts including the renewal criteria and cap | **A shakai hoken roumushi** (this office) |\n\nIf the outsourcing-versus-employment line needs sorting first, see [The line between outsourcing and employment is not decided by the contract](/en/labor/column/gaichu-koyo-sakaime-roudoushasei); for the rules, [From how many workers are work rules mandatory?](/en/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo).\n\n## What can 四葉社会保険労務士事務所 do?\n\n四葉社会保険労務士事務所, in Kohinata, Bunkyo City, designs fixed-term contracts (renewal criteria and caps), prepares written conditions and contracts, and builds the deadline register alongside the period of stay. **Consultation is free of charge.** Fees are in the [fee schedule](/en/labor/ryokin); the whole flow of foreign employment is in [Hire one foreign employee — how many counters do you need?](/en/labor/column/gaikokujin-koyo-madoguchi-wakekata).\n\n### Whom to consult\n\nResidence-status applications, changes and renewals go to **四葉行政書士事務所** (a separate business from this office, engaged under a separate contract). Tax is for **a tax accountant**, registration for **a judicial scrivener**, and dismissal or non-renewal cases already in dispute for **an attorney**. No referral fees change hands.\n\n## Frequently asked questions\n\n**Q. Is it unlawful to set a contract term longer than the period of stay?**\nA. The term itself is not automatically unlawful. But work past the expiry is not permitted, and the company risks the offence of promoting illegal work (Article 73-2). If you take the longer-contract design, a reliable deadline-management system outside the contract is the precondition.\n\n**Q. Must we set a renewal cap?**\nA. Setting one is not mandatory. What is mandatory is stating the renewal criteria — and, **where a cap is set**, stating that cap (Ordinance, Article 5, paragraph 1, item 1-2). If you set none, design with the conversion right (five years total) in view.\n\n**Q. How early should we move on the period-of-stay renewal?**\nA. Filing windows and review periods vary by status and by case, so this office does not give a number. Ask the gyoseishoshi (四葉行政書士事務所 — a separate business) about timing and steps. This office handles the register of deadlines and the contract-side preparation (renewal interviews, written conditions).\n\n**Q. Can we consult you about non-renewal?**\nA. We can take on the design of renewal criteria and procedure. But judging whether a specific non-renewal will hold, once a dispute exists or looms, is attorney work — we point you to an attorney, whom you engage directly. No referral fees change hands.\n\n## Sources for this article\n\n- Ordinance for Enforcement of the Labor Standards Act (労働基準法施行規則, Ministry of Welfare Order No. 23 of 1947), **Article 5, paragraph 1, item 1-2** (renewal criteria; where a cap on the total period or number of renewals is set, the cap) — current text confirmed on e-Gov on 14 August 2026\n- Immigration Control and Refugee Recognition Act (出入国管理及び難民認定法, Cabinet Order No. 319 of 1951), **Article 73-2** (promoting illegal work: up to three years' imprisonment or a fine of up to three million yen, or both; paragraph 2 — ignorance is no defence unless without negligence) — current text confirmed on e-Gov the same day\n- Labor Contracts Act (労働契約法, Act No. 128 of 2007), Article 18 (conversion to indefinite term) — referenced in the text\n\nThis article is general information. The design of an individual contract, and whether a non-renewal will hold, depend on the facts. Judgments that fit your particular circumstances are made by a qualified professional after a meeting. Written by [Joji Uramatsu](/en/about/uramatsu) (Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist).",
+        "category": "Hiring and employment",
+        "keywords": [
+          "period of stay employment contract term align",
+          "foreign worker fixed-term renewal cap",
+          "period of stay expired employment contract",
+          "offence of promoting illegal work company risk",
+          "foreign employee conversion five years",
+          "how to set contract term foreign hire"
+        ],
+        "tags": [
+          "foreign employment",
+          "fixed-term contracts",
+          "renewal cap",
+          "period of stay",
+          "conversion to indefinite term",
+          "written working conditions"
+        ],
+        "author": {
+          "name": "Joji Uramatsu",
+          "title": "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所"
+        },
+        "faq": [
+          {
+            "question": "Is it unlawful to set a contract term longer than the period of stay?",
+            "answer": "The term itself is not automatically unlawful. But work past the expiry is not permitted, and the company risks the offence of promoting illegal work (Article 73-2). If you take the longer-contract design, a reliable deadline-management system outside the contract is the precondition."
+          },
+          {
+            "question": "Must we set a renewal cap?",
+            "answer": "Setting one is not mandatory. What is mandatory is stating the renewal criteria — and, where a cap is set, stating that cap (Ordinance, Article 5, paragraph 1, item 1-2). If you set none, design with the conversion right (five years total) in view."
+          },
+          {
+            "question": "How early should we move on the period-of-stay renewal?",
+            "answer": "Filing windows and review periods vary by status and by case, so this office does not give a number. Ask the gyoseishoshi (四葉行政書士事務所 — a separate business) about timing and steps. This office handles the register of deadlines and the contract-side preparation (renewal interviews, written conditions)."
+          },
+          {
+            "question": "Can we consult you about non-renewal?",
+            "answer": "We can take on the design of renewal criteria and procedure. But judging whether a specific non-renewal will hold, once a dispute exists or looms, is attorney work — we point you to an attorney, whom you engage directly. No referral fees change hands."
+          }
+        ]
+      },
+      "zh-tw": {
+        "title": "在留期限與雇用契約期間，哪個先到期",
+        "excerpt": "在留期限與契約期間是分開走的兩個時鐘。契約配合在留期限，每次更新都要重新明示勞動條件；把兩者切開，在留期限就會先到。以哪個為基準，入職前就要決定。有期契約現在還需要明示更新上限（勞動基準法施行規則第5條第1項第1號之2）。",
+        "content": "**結論（先講重點）**：在留期限與雇用契約期間，是**分開走的兩個時鐘**。契約配合在留期限切短，每次更新都要重新明示勞動條件；契約拉長，在留期限就會先到。**以哪個為基準，入職前就要決定。** 有期契約還需要**明示更新上限**（勞動基準法施行規則第5條第1項第1號之2）。\n\n本頁面寫給以有期契約僱用・準備僱用外國人的公司經營者與總務人員。**本文只從勞動契約這一側來寫。** 在留資格的更新手續本身是行政書士的業務，[企業方的手續與期限](/zh-tw/legal/services/gaikokujin-shain)請見四葉行政書士事務所（不同事業體）的頁面。\n\n## 契約期間該配合在留期限嗎？\n\n沒有固定的正解，但**必須有意識地選擇**是哪一種設計。\n\n| 設計 | 會發生的事 |\n|---|---|\n| 契約期間**配合在留期限**（例：至在留期限為止的有期契約） | 在留資格每次更新，契約也更新。**每次更新都需要明示勞動條件**（含更新基準・更新上限）。管理明快但事務增加 |\n| 契約期間**與在留期限切開**（例：無期或較長的有期） | 契約持續，但**在留期限先到期**的風險要在契約之外管理。期限追蹤的機制不可或缺 |\n\n兩者共通的是：**不要只靠「契約更新日」來管理在留期限**。尤其是切開的設計，契約文件裡沒有任何東西在盯著入管的時鐘。\n\n## 更新上限該怎麼寫？\n\n有期勞動契約中，除了**更新的基準**，**就通算契約期間或更新次數設有上限時，該上限**也必須作為勞動條件明示（勞動基準法施行規則第5條第1項第1號之2。2024年〔令和6年〕4月施行的修正所加入的事項）。\n\n外國人僱用要注意的，是**把「至在留期限為止」寫得像上限**的寫法。在留資格更新後本可繼續工作，契約的上限卻擋住了它；或者相反——不寫上限、反覆更新，卻沒有整理無期轉換（勞動契約法第18條的通算5年）的預期。實務的做法是**把在留期限・契約更新上限・無期轉換這3個時鐘，並排在一張表上設計**。\n\n## 在留期限到期了，雇用契約會怎樣？\n\n讓對方在在留期限過後繼續工作，公司方可能被追究**不法就勞助長罪**（出入國管理及難民認定法第73條之2。**3年以下拘禁刑或300萬日圓以下罰金，或併科**）。而且同條第2項規定，對在留資格或期限**「不知情不能作為免責的理由」**（無過失時除外）。**「沒有確認過」是行不通的**結構。\n\n雇用契約本身如何終了，仍是勞動契約的論點；但在那之前的**期限管理**——掌握在留卡的期限、確認更新申請的日程——才是公司的防波堤。\n\n## 期限的管理，由誰來做？\n\n| 角色 | 誰 |\n|---|---|\n| 在留期限・契約期間・無期轉換3個時鐘的設計與台帳管理 | **社會保險勞務士**（本事務所） |\n| 在留資格的更新申請本身 | **行政書士**（四葉行政書士事務所。不同事業體・另行簽約） |\n| 含更新基準・上限的勞動條件通知書・雇用契約書的整備 | **社會保險勞務士**（本事務所） |\n\n需要先整理外包還是僱用的，請見[外包與僱用的界線，不由契約書決定](/zh-tw/labor/column/gaichu-koyo-sakaime-roudoushasei)；規程的整備請見[就業規則從幾人開始是義務](/zh-tw/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo)。\n\n## 四葉社会保険労務士事務所能做什麼？\n\n位於文京區小日向的四葉社会保険労務士事務所，承接有期契約的設計（更新基準・更新上限的明示）、勞動條件通知書・雇用契約書的整備、連同在留期限的期限台帳設計。**諮詢免費。** 費用見[報酬額表](/zh-tw/labor/ryokin)，外國人僱用的整體流程見[僱用1名外國人，需要幾個窗口](/zh-tw/labor/column/gaikokujin-koyo-madoguchi-wakekata)。\n\n### 該向誰諮詢\n\n在留資格的申請・變更・更新由**四葉行政書士事務所**承接（與本事務所是不同的事業體，另行簽約）。稅務是**稅理士**、登記是**司法書士**、已經發生爭議的解僱・止僱案件是**律師**的業務。以上均不收取介紹費。\n\n## 常見問題\n\n**Q. 契約期間定得比在留期限長，違法嗎？**\nA. 期間的設定本身不會直接違法。但在留期限過後的就勞不被允許，公司方可能被追究不法就勞助長罪（入管法第73條之2）。採取拉長契約的設計，前提是在契約之外確實運轉在留期限的管理機制。\n\n**Q. 更新上限一定要定嗎？**\nA. 設定本身不是義務。義務的是明示更新的基準，以及**設有上限時**明示該上限（勞動基準法施行規則第5條第1項第1號之2）。不設定時，建議連同無期轉換（通算5年）的預期一起設計。\n\n**Q. 在留期限的更新，要提前多久動起來？**\nA. 申請的受理時期與審查期間，因在留資格與個別情事而異，本事務所不作斷定。申請的時期・安排請向行政書士（四葉行政書士事務所・不同事業體）確認。本事務所負責期限的一覽化與契約側的準備（更新面談・條件明示）的日程。\n\n**Q. 想止僱（不更新）時也能諮詢嗎？**\nA. 更新基準的整理與手續的設計可以承接。但已經發生・即將發生爭議的個別止僱可否判斷，是律師的業務，會為您介紹由您直接委任。不收取介紹費。\n\n## 本文依據\n\n- 勞動基準法施行規則（昭和22年厚生省令第23號）**第5條第1項第1號之2**（更新的基準。就通算契約期間・更新次數設有上限時含該上限） ―― 2026年8月14日於e-Gov法令檢索確認現行條文\n- 出入國管理及難民認定法（昭和26年政令第319號）**第73條之2**（不法就勞助長。3年以下拘禁刑或300萬日圓以下罰金或併科。第2項＝不知情不能免責〔無過失時除外〕） ―― 同日於e-Gov法令檢索確認現行條文\n- 勞動契約法（平成19年法律第128號）第18條（無期轉換），作為本文中的參照記載\n\n本文為一般性的資訊提供。個別契約的設計・止僱的可否依情事而定。因應個別情事的判斷，由具備資格者在面談後進行。撰文者為[浦松丈二](/zh-tw/about/uramatsu)（社會保險勞務士・行政書士・宅地建物取引士）。",
+        "category": "招募與雇用",
+        "keywords": [
+          "在留期限 雇用契約 期間 配合",
+          "外國人 有期契約 更新上限",
+          "在留期限 到期 雇用契約",
+          "不法就勞助長罪 公司 風險",
+          "外國人 無期轉換 5年",
+          "外國人 契約期間 怎麼定"
+        ],
+        "tags": [
+          "外國人僱用",
+          "有期契約",
+          "更新上限",
+          "在留期限",
+          "無期轉換",
+          "勞動條件明示"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "契約期間定得比在留期限長，違法嗎？",
+            "answer": "期間的設定本身不會直接違法。但在留期限過後的就勞不被允許，公司方可能被追究不法就勞助長罪（入管法第73條之2）。採取拉長契約的設計，前提是在契約之外確實運轉在留期限的管理機制。"
+          },
+          {
+            "question": "更新上限一定要定嗎？",
+            "answer": "設定本身不是義務。義務的是明示更新的基準，以及設有上限時明示該上限（勞動基準法施行規則第5條第1項第1號之2）。不設定時，建議連同無期轉換（通算5年）的預期一起設計。"
+          },
+          {
+            "question": "在留期限的更新，要提前多久動起來？",
+            "answer": "申請的受理時期與審查期間，因在留資格與個別情事而異，本事務所不作斷定。申請的時期・安排請向行政書士（四葉行政書士事務所・不同事業體）確認。本事務所負責期限的一覽化與契約側的準備（更新面談・條件明示）的日程。"
+          },
+          {
+            "question": "想止僱（不更新）時也能諮詢嗎？",
+            "answer": "更新基準的整理與手續的設計可以承接。但已經發生・即將發生爭議的個別止僱可否判斷，是律師的業務，會為您介紹由您直接委任。不收取介紹費。"
+          }
+        ]
+      },
+      "zh": {
+        "title": "在留期限与雇用契约期间，哪个先到期",
+        "excerpt": "在留期限与契约期间是分开走的两个时钟。契约配合在留期限，每次更新都要重新明示劳动条件；把两者切开，在留期限就会先到。以哪个为基准，入职前就要决定。有期契约现在还需要明示更新上限（劳动基准法施行规则第5条第1项第1号之2）。",
+        "content": "**结论（先讲重点）**：在留期限与雇用契约期间，是**分开走的两个时钟**。契约配合在留期限切短，每次更新都要重新明示劳动条件；契约拉长，在留期限就会先到。**以哪个为基准，入职前就要决定。** 有期契约还需要**明示更新上限**（劳动基准法施行规则第5条第1项第1号之2）。\n\n本页面写给以有期契约雇用・准备雇用外国人的公司经营者与总务人员。**本文只从劳动契约这一侧来写。** 在留资格的更新手续本身是行政书士的业务，[企业方的手续与期限](/zh/legal/services/gaikokujin-shain)请见四葉行政書士事務所（不同事业体）的页面。\n\n## 契约期间该配合在留期限吗？\n\n没有固定的正解，但**必须有意识地选择**是哪一种设计。\n\n| 设计 | 会发生的事 |\n|---|---|\n| 契约期间**配合在留期限**（例：至在留期限为止的有期契约） | 在留资格每次更新，契约也更新。**每次更新都需要明示劳动条件**（含更新基准・更新上限）。管理明快但事务增加 |\n| 契约期间**与在留期限切开**（例：无期或较长的有期） | 契约持续，但**在留期限先到期**的风险要在契约之外管理。期限跟踪的机制不可或缺 |\n\n两者共通的是：**不要只靠「契约更新日」来管理在留期限**。尤其是切开的设计，契约文件里没有任何东西在盯着入管的时钟。\n\n## 更新上限该怎么写？\n\n有期劳动契约中，除了**更新的基准**，**就通算契约期间或更新次数设有上限时，该上限**也必须作为劳动条件明示（劳动基准法施行规则第5条第1项第1号之2。2024年〔令和6年〕4月施行的修正所加入的事项）。\n\n外国人雇用要注意的，是**把「至在留期限为止」写得像上限**的写法。在留资格更新后本可继续工作，契约的上限却挡住了它；或者相反——不写上限、反复更新，却没有整理无期转换（劳动契约法第18条的通算5年）的预期。实务的做法是**把在留期限・契约更新上限・无期转换这3个时钟，并排在一张表上设计**。\n\n## 在留期限到期了，雇用契约会怎样？\n\n让对方在在留期限过后继续工作，公司方可能被追究**不法就劳助长罪**（出入国管理及难民认定法第73条之2。**3年以下拘禁刑或300万日元以下罚金，或并科**）。而且同条第2项规定，对在留资格或期限**「不知情不能作为免责的理由」**（无过失时除外）。**「没有确认过」是行不通的**结构。\n\n雇用契约本身如何终了，仍是劳动契约的论点；但在那之前的**期限管理**——掌握在留卡的期限、确认更新申请的日程——才是公司的防波堤。\n\n## 期限的管理，由谁来做？\n\n| 角色 | 谁 |\n|---|---|\n| 在留期限・契约期间・无期转换3个时钟的设计与台账管理 | **社会保险劳务士**（本事务所） |\n| 在留资格的更新申请本身 | **行政书士**（四葉行政書士事務所。不同事业体・另行签约） |\n| 含更新基准・上限的劳动条件通知书・雇用契约书的整备 | **社会保险劳务士**（本事务所） |\n\n需要先整理外包还是雇用的，请见[外包与雇用的界线，不由契约书决定](/zh/labor/column/gaichu-koyo-sakaime-roudoushasei)；规程的整备请见[就业规则从几人开始是义务](/zh/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo)。\n\n## 四葉社会保険労務士事務所能做什么？\n\n位于文京区小日向的四葉社会保険労務士事務所，承接有期契约的设计（更新基准・更新上限的明示）、劳动条件通知书・雇用契约书的整备、连同在留期限的期限台账设计。**咨询免费。** 费用见[报酬额表](/zh/labor/ryokin)，外国人雇用的整体流程见[雇用1名外国人，需要几个窗口](/zh/labor/column/gaikokujin-koyo-madoguchi-wakekata)。\n\n### 该向谁咨询\n\n在留资格的申请・变更・更新由**四葉行政書士事務所**承接（与本事务所是不同的事业体，另行签约）。税务是**税理士**、登记是**司法书士**、已经发生争议的解雇・止雇案件是**律师**的业务。以上均不收取介绍费。\n\n## 常见问题\n\n**Q. 契约期间定得比在留期限长，违法吗？**\nA. 期间的设定本身不会直接违法。但在留期限过后的就劳不被允许，公司方可能被追究不法就劳助长罪（入管法第73条之2）。采取拉长契约的设计，前提是在契约之外确实运转在留期限的管理机制。\n\n**Q. 更新上限一定要定吗？**\nA. 设定本身不是义务。义务的是明示更新的基准，以及**设有上限时**明示该上限（劳动基准法施行规则第5条第1项第1号之2）。不设定时，建议连同无期转换（通算5年）的预期一起设计。\n\n**Q. 在留期限的更新，要提前多久动起来？**\nA. 申请的受理时期与审查期间，因在留资格与个别情事而异，本事务所不作断定。申请的时期・安排请向行政书士（四葉行政書士事務所・不同事业体）确认。本事务所负责期限的一览化与契约侧的准备（更新面谈・条件明示）的日程。\n\n**Q. 想止雇（不更新）时也能咨询吗？**\nA. 更新基准的整理与手续的设计可以承接。但已经发生・即将发生争议的个别止雇可否判断，是律师的业务，会为您介绍由您直接委任。不收取介绍费。\n\n## 本文依据\n\n- 劳动基准法施行规则（昭和22年厚生省令第23号）**第5条第1项第1号之2**（更新的基准。就通算契约期间・更新次数设有上限时含该上限） ―― 2026年8月14日于e-Gov法令检索确认现行条文\n- 出入国管理及难民认定法（昭和26年政令第319号）**第73条之2**（不法就劳助长。3年以下拘禁刑或300万日元以下罚金或并科。第2项＝不知情不能免责〔无过失时除外〕） ―― 同日于e-Gov法令检索确认现行条文\n- 劳动契约法（平成19年法律第128号）第18条（无期转换），作为本文中的参照记载\n\n本文为一般性的信息提供。个别契约的设计・止雇的可否依情事而定。因应个别情事的判断，由具备资格者在面谈后进行。撰文者为[浦松丈二](/zh/about/uramatsu)（社会保险劳务士・行政书士・宅地建物取引士）。",
+        "category": "招聘与雇用",
+        "keywords": [
+          "在留期限 雇用契约 期间 配合",
+          "外国人 有期契约 更新上限",
+          "在留期限 到期 雇用契约",
+          "不法就劳助长罪 公司 风险",
+          "外国人 无期转换 5年",
+          "外国人 契约期间 怎么定"
+        ],
+        "tags": [
+          "外国人雇用",
+          "有期契约",
+          "更新上限",
+          "在留期限",
+          "无期转换",
+          "劳动条件明示"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "契约期间定得比在留期限长，违法吗？",
+            "answer": "期间的设定本身不会直接违法。但在留期限过后的就劳不被允许，公司方可能被追究不法就劳助长罪（入管法第73条之2）。采取拉长契约的设计，前提是在契约之外确实运转在留期限的管理机制。"
+          },
+          {
+            "question": "更新上限一定要定吗？",
+            "answer": "设定本身不是义务。义务的是明示更新的基准，以及设有上限时明示该上限（劳动基准法施行规则第5条第1项第1号之2）。不设定时，建议连同无期转换（通算5年）的预期一起设计。"
+          },
+          {
+            "question": "在留期限的更新，要提前多久动起来？",
+            "answer": "申请的受理时期与审查期间，因在留资格与个别情事而异，本事务所不作断定。申请的时期・安排请向行政书士（四葉行政書士事務所・不同事业体）确认。本事务所负责期限的一览化与契约侧的准备（更新面谈・条件明示）的日程。"
+          },
+          {
+            "question": "想止雇（不更新）时也能咨询吗？",
+            "answer": "更新基准的整理与手续的设计可以承接。但已经发生・即将发生争议的个别止雇可否判断，是律师的业务，会为您介绍由您直接委任。不收取介绍费。"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "business": "labor",
+    "slug": "ryugakusei-arubaito-28jikan-kanri",
+    "title": "留学生を雇うとき、週28時間をどう数えるか",
+    "date": "2026-09-01",
+    "category": "採用と雇用",
+    "excerpt": "留学生のアルバイトは資格外活動許可により週28時間以内（学則上の長期休業期間は1日8時間以内）に制限されています。28時間は自社ではなく本人の合計時間で、他社での勤務は会社から見えません。申告の仕組みとシフト上限の設計、雇用保険・届出の扱いまで整理します。",
+    "content": "**結論（先に要点）**：留学生のアルバイトは、資格外活動許可により**1週について28時間以内**に制限されています（出入国管理及び難民認定法施行規則第19条第5項第1号。在籍する教育機関の学則で定める長期休業期間は**1日8時間以内**）。許可は入管の制度ですが、**時間を数えて守らせるのは労務管理**です。難所は、**他社での勤務時間が会社からは見えない**ことです。\n\nこのページは、留学生をアルバイトで雇っている・雇おうとしている会社の経営者・店長・総務担当の方に向けたものです。許可を取る手続そのものではなく、**雇ったあとの時間管理**の側から書きます。\n\n## 週28時間は、どこからどこまでを数えるのか？\n\n条文で確認できるのは次の3点です（出入国管理及び難民認定法施行規則第19条第5項第1号）。\n\n- **1週について28時間以内**。在籍する教育機関が学則で定める**長期休業期間**にあるときは**1日8時間以内**\n- **教育機関に在籍している間**に行うものに限る（卒業後・除籍後は前提が変わります）\n- 風俗営業等の営業所で行うものは**許可の対象外**\n\n時間の数え方の細部——起算日の取り方や複数社勤務の合算方法——は、出入国在留管理庁の案内・個別の運用によります。押さえるべき原則はひとつで、**28時間は「その会社での時間」ではなく「本人の合計時間」**だということです。2社で15時間ずつ働けば、それぞれの会社では適法に見えても、本人は超えています。\n\n## 他の会社での勤務は、どうやって把握するのか？\n\n見えないものは、**申告してもらう仕組みを先に作る**しかありません。実務の型は3つです。\n\n| 仕組み | 中身 |\n|---|---|\n| **採用時の確認** | 在留カードで資格外活動許可の有無を確認し、**他社での勤務の有無と時間数**を書面で申告してもらう |\n| **変更時の申告義務** | 他社での勤務を始める・時間が変わるときは会社に申告する旨を、雇用契約書や服務規律に定めておく |\n| **シフトの上限設計** | 自社のシフトを28時間の全部で組まない。他社分の余地を残した上限（例として週20時間台前半）で設計する会社が多い |\n\n申告に頼る以上、完全にはなりません。だからこそ、**会社として確認の手を尽くした記録**——採用時の書面・定期の確認——を残すことが、後述のリスクに対する防波堤になります。\n\n## 雇用保険には入るのか？\n\n**昼間の課程の学生は、原則として雇用保険の被保険者になりません**（雇用保険法第6条第4号）。休学中の方や定時制の課程の方など、省令で被保険者となる場合が定められていますので、当てはまりそうなときは個別に確認します。\n\n一方、**外国人雇用状況の届出は、雇用保険に入らない留学生アルバイトにも必要**です（様式第3号・翌月末日まで。詳細は[外国人を雇ったら、ハローワークに届け出る](/labor/column/gaikokujin-koyo-jokyo-todokede)）。また、短時間労働者としての社会保険の適用拡大には「学生でないこと」という要件が置かれています（[短い時間で雇うと、社会保険はどうなるか](/labor/column/tanjikan-koyo-shakaihoken-4bunno3)）。「学生だから何の手続もない」とはならない点に注意してください。\n\n## 超えてしまったら、何が起きるのか？\n\n本人の側は資格外活動許可の条件に反する就労となり、在留資格の更新などに影響し得ます（この先の個別判断は入管の領域です）。会社の側には、**不法就労助長罪**（出入国管理及び難民認定法第73条の2。3年以下の拘禁刑もしくは300万円以下の罰金、または併科）のリスクがあります。同条第2項は、**知らなかったことを理由に処罰を免れることはできない**（過失がないときを除く）と定めています。「他社の分は知らなかった」で終わらない構造だからこそ、前章の**確認の仕組みと記録**が意味を持ちます。\n\n## 四葉社会保険労務士事務所は、何ができますか？\n\n文京区小日向の四葉社会保険労務士事務所は、留学生アルバイトの採用時確認の書式づくり、他社勤務の申告ルールの設計（雇用契約書・服務規律）、シフト上限の設計、外国人雇用状況の届出をお受けします。**ご相談は無料です。** 料金は[報酬額表](/labor/ryokin)に、外国人雇用の全体の流れは[外国人を1人雇うと、窓口はいくつ必要か](/labor/column/gaikokujin-koyo-madoguchi-wakekata)にまとめています。\n\n### 誰に相談するか\n\n資格外活動許可の申請や在留資格の変更・更新は**四葉行政書士事務所**（当事務所とは別の事業体で、別々にご契約いただきます）。税務は**税理士**、すでに紛争になっている事案は**弁護士**の業務です。いずれも紹介料の授受はありません。\n\n## よくある質問\n\n**Q. うちの店では週20時間しか入れていません。それでも問題になり得ますか？**\nA. あり得ます。28時間の制限は本人の合計時間で考えるため、他社と掛け持ちしていれば、自社のシフトが少なくても本人は超えている場合があります。採用時と定期の申告で他社分を把握する仕組みが必要です。\n\n**Q. 夏休みは何時間まで働けますか？**\nA. 在籍する教育機関が学則で定める長期休業期間にあるときは、1日8時間以内とされています（出入国管理及び難民認定法施行規則第19条第5項第1号）。学則上の期間かどうかが基準になるため、学校の学年暦で確認してください。\n\n**Q. 留学生のアルバイトにも、ハローワークへの届出は要りますか？**\nA. 要ります。雇用保険の被保険者にならない場合は様式第3号を雇入れ・離職の翌月末日までに届け出ます。届出をしない・虚偽の届出には30万円以下の罰金があります（労働施策総合推進法第40条第1項第2号）。\n\n**Q. 資格外活動許可を持っているかは、どう確認しますか？**\nA. 在留カードの裏面（資格外活動許可欄）と、必要に応じて指定書で確認します。許可を持っていない留学生を働かせると、時間数にかかわらず不法就労の問題になります。許可の申請そのものは行政書士（四葉行政書士事務所・別事業体）の領域です。\n\n## この記事の根拠\n\n- 出入国管理及び難民認定法施行規則（昭和56年法務省令第54号）**第19条第5項第1号**（1週28時間以内・長期休業期間は1日8時間以内・教育機関在籍中に限る・風俗営業等の除外） ―― 2026年8月14日にe-Gov法令検索で現行条文を確認\n- 出入国管理及び難民認定法（昭和26年政令第319号）**第73条の2**（不法就労助長。第2項＝知らないことを理由に処罰を免れない〔過失がないときを除く〕） ―― 同日にe-Gov法令検索で現行条文を確認\n- 雇用保険法（昭和49年法律第116号）**第6条第4号**（学生・生徒の適用除外。被保険者となる例外は厚生労働省令の定めによる） ―― 同日にe-Gov法令検索で現行条文を確認\n- 労働施策の総合的な推進並びに労働者の雇用の安定及び職業生活の充実等に関する法律（昭和41年法律第132号）第28条第1項・第40条第1項第2号 ―― 同日にe-Gov法令検索で現行条文を確認\n- 時間の数え方の細部（起算日・複数社の合算の運用）は出入国在留管理庁の案内によります。個別の事案では最新の案内をご確認ください\n\n本記事は一般的な情報提供です。在留資格への影響など入管の領域の個別判断には踏み込みません。個別のご事情に応じた判断は、面談のうえ資格者が行います。執筆は[浦松丈二](/about/uramatsu)（社会保険労務士・行政書士・宅地建物取引士）です。",
+    "status": "published",
+    "author": {
+      "name": "浦松 丈二",
+      "title": "社会保険労務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+    },
+    "keywords": [
+      "留学生 アルバイト 28時間 数え方",
+      "留学生 バイト 掛け持ち 28時間",
+      "資格外活動許可 時間 管理",
+      "留学生 雇用保険 入る",
+      "留学生 アルバイト 届出",
+      "28時間 超えた 会社 リスク"
+    ],
+    "tags": [
+      "外国人雇用",
+      "留学生",
+      "資格外活動",
+      "アルバイト",
+      "労働時間",
+      "シフト管理"
+    ],
+    "locales": [],
+    "faq": [
+      {
+        "question": "うちの店では週20時間しか入れていません。それでも問題になり得ますか？",
+        "answer": "あり得ます。28時間の制限は本人の合計時間で考えるため、他社と掛け持ちしていれば、自社のシフトが少なくても本人は超えている場合があります。採用時と定期の申告で他社分を把握する仕組みが必要です。"
+      },
+      {
+        "question": "夏休みは何時間まで働けますか？",
+        "answer": "在籍する教育機関が学則で定める長期休業期間にあるときは、1日8時間以内とされています（出入国管理及び難民認定法施行規則第19条第5項第1号）。学則上の期間かどうかが基準になるため、学校の学年暦で確認してください。"
+      },
+      {
+        "question": "留学生のアルバイトにも、ハローワークへの届出は要りますか？",
+        "answer": "要ります。雇用保険の被保険者にならない場合は様式第3号を雇入れ・離職の翌月末日までに届け出ます。届出をしない・虚偽の届出には30万円以下の罰金があります（労働施策総合推進法第40条第1項第2号）。"
+      },
+      {
+        "question": "資格外活動許可を持っているかは、どう確認しますか？",
+        "answer": "在留カードの裏面（資格外活動許可欄）と、必要に応じて指定書で確認します。許可を持っていない留学生を働かせると、時間数にかかわらず不法就労の問題になります。許可の申請そのものは行政書士（四葉行政書士事務所・別事業体）の領域です。"
+      }
+    ],
+    "translations": {
+      "en": {
+        "title": "Employing an international student — how do you count the 28 hours a week?",
+        "excerpt": "Student part-timers are limited by their activity permission to 28 hours a week (8 hours a day during school holidays set by the institution's rules). The permission is an immigration matter, but counting the hours is labour management — and the hard part is that hours worked at other employers are invisible to you. We cover the reporting system, shift caps, and the insurance and notification rules.",
+        "content": "**In short:** part-time work by international students is limited by the permission for activities outside the residence status to **28 hours per week** (Regulation for Enforcement of the Immigration Control Act, Article 19, paragraph 5, item 1; during long school holidays set by the institution's rules, **8 hours per day**). The permission is an immigration institution, but **counting and keeping the hours is labour management**. The hard part: **hours worked at other employers are invisible to your company**.\n\nThis page is for owners, store managers and back-office staff employing international students part-time. It is written not about obtaining the permission but about **managing the hours after the hire**.\n\n## What counts toward the 28 hours?\n\nThree points can be confirmed in the provision itself (Regulation for Enforcement of the Immigration Control and Refugee Recognition Act, Article 19, paragraph 5, item 1):\n\n- **28 hours per week**; during **long holiday periods** set by the educational institution's rules, **8 hours per day**\n- Limited to work **while enrolled** at the institution (after graduation or withdrawal, the premise changes)\n- Work at **adult-entertainment establishments** is outside the permission\n\nThe finer points of counting — where the week starts, how multi-employer hours are aggregated — follow the Immigration Services Agency's guidance and case-by-case practice. The one principle to hold on to: **28 hours means the person's total, not your company's share.** Two jobs at 15 hours each look lawful to each employer — and the student is over.\n\n## How do you learn about work at other employers?\n\nWhat you cannot see, you must **build a reporting system for, in advance**. Three practical pieces:\n\n| Mechanism | Substance |\n|---|---|\n| **Checks at hiring** | Confirm the activity permission on the residence card, and have the student declare **in writing** whether and how many hours they work elsewhere |\n| **A duty to report changes** | Put into the contract or service rules a duty to report when other work starts or its hours change |\n| **Shift caps by design** | Do not build your shifts up to the full 28 hours; many companies cap in the low twenties to leave room for the other job |\n\nReporting is never perfect. That is exactly why **a record that the company did its checking** — the written declaration at hiring, periodic confirmations — becomes the seawall against the risk below.\n\n## Does employment insurance apply?\n\n**Daytime students are, in principle, not employment insurance insured** (Employment Insurance Act, Article 6, item 4). Ministerial order defines cases that are insured — students on leave of absence, evening-course students and others — so check individually where they might apply.\n\nMeanwhile, **the foreign worker employment status notification is required even for student part-timers outside employment insurance** (Form 3, by the end of the following month — see [Hired a foreign worker? Notify Hello Work](/en/labor/column/gaikokujin-koyo-jokyo-todokede)). And the expanded social insurance coverage for short-hours workers carries a \"not a student\" condition (see [Hire for short hours, and what happens to social insurance?](/en/labor/column/tanjikan-koyo-shakaihoken-4bunno3)). \"A student, so no paperwork\" is wrong on both counts.\n\n## What happens if the hours are exceeded?\n\nOn the student's side, work in breach of the permission's conditions can affect renewal of the residence status (the individual outcomes are immigration territory). On the company's side sits **the offence of promoting illegal work** (Immigration Control Act, Article 73-2: up to three years' imprisonment or a fine of up to three million yen, or both). Paragraph 2 provides that **not knowing is no defence** (unless without negligence). \"We didn't know about the other job\" does not end the matter — which is precisely why the **checking system and its records** in the previous section carry weight.\n\n## What can 四葉社会保険労務士事務所 do?\n\n四葉社会保険労務士事務所, in Kohinata, Bunkyo City, builds the hiring-check forms for student part-timers, designs the other-employer reporting rules (contracts and service rules), designs shift caps, and files the employment status notifications. **Consultation is free of charge.** Fees are in the [fee schedule](/en/labor/ryokin); the whole flow of foreign employment is in [Hire one foreign employee — how many counters do you need?](/en/labor/column/gaikokujin-koyo-madoguchi-wakekata).\n\n### Whom to consult\n\nApplications for the activity permission and residence-status changes or renewals go to **四葉行政書士事務所** (a separate business from this office, engaged under a separate contract). Tax is for **a tax accountant**; matters already in dispute for **an attorney**. No referral fees change hands.\n\n## Frequently asked questions\n\n**Q. We only give 20 hours a week of shifts. Can there still be a problem?**\nA. Yes. The 28-hour limit applies to the person's total hours, so with another job the student can be over even though your shifts are modest. You need declarations at hiring and periodically to capture the other employer's hours.\n\n**Q. How many hours during the summer holiday?**\nA. During long holiday periods set by the institution's rules, up to 8 hours per day (Regulation, Article 19, paragraph 5, item 1). Whether a period falls under the school rules is the test — check the institution's academic calendar.\n\n**Q. Is the Hello Work notification needed for student part-timers too?**\nA. Yes. Where the student is not an employment insurance insured, file Form 3 by the end of the month following the hire or separation. Non-filing or false filing carries a fine of up to 300,000 yen (Act on Comprehensive Promotion of Labour Measures, Article 40, paragraph 1, item 2).\n\n**Q. How do we confirm the activity permission?**\nA. On the back of the residence card (the permission field), and where needed the designation slip. Employing a student without the permission is an illegal-work problem regardless of hours. Applying for the permission itself is gyoseishoshi territory (四葉行政書士事務所 — a separate business).\n\n## Sources for this article\n\n- Regulation for Enforcement of the Immigration Control and Refugee Recognition Act (出入国管理及び難民認定法施行規則, Ministry of Justice Order No. 54 of 1981), **Article 19, paragraph 5, item 1** (28 hours per week; 8 hours per day in long holidays; while enrolled; adult-entertainment exclusion) — current text confirmed on e-Gov on 14 August 2026\n- Immigration Control and Refugee Recognition Act (出入国管理及び難民認定法, Cabinet Order No. 319 of 1951), **Article 73-2** (promoting illegal work; paragraph 2 — ignorance no defence unless without negligence) — confirmed the same day\n- Employment Insurance Act (雇用保険法, Act No. 116 of 1974), **Article 6, item 4** (student exclusion; insured exceptions per ministerial order) — confirmed the same day\n- Act on Comprehensive Promotion of Labour Measures (労働施策総合推進法, Act No. 132 of 1966), Article 28, paragraph 1 and Article 40, paragraph 1, item 2 — confirmed the same day\n- The finer counting rules (week start, multi-employer aggregation) follow the Immigration Services Agency's guidance; check the latest guidance for individual cases\n\nThis article is general information and does not enter individual immigration judgments such as effects on residence status. Judgments that fit your particular circumstances are made by a qualified professional after a meeting. Written by [Joji Uramatsu](/en/about/uramatsu) (Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist).",
+        "category": "Hiring and employment",
+        "keywords": [
+          "international student part-time 28 hours counting",
+          "student worker multiple jobs 28 hour limit",
+          "activities outside status permission hours management",
+          "international student employment insurance",
+          "student part-timer notification",
+          "exceeded 28 hours company risk"
+        ],
+        "tags": [
+          "foreign employment",
+          "international students",
+          "activities outside status",
+          "part-time work",
+          "working hours",
+          "shift management"
+        ],
+        "author": {
+          "name": "Joji Uramatsu",
+          "title": "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所"
+        },
+        "faq": [
+          {
+            "question": "We only give 20 hours a week of shifts. Can there still be a problem?",
+            "answer": "Yes. The 28-hour limit applies to the person's total hours, so with another job the student can be over even though your shifts are modest. You need declarations at hiring and periodically to capture the other employer's hours."
+          },
+          {
+            "question": "How many hours during the summer holiday?",
+            "answer": "During long holiday periods set by the institution's rules, up to 8 hours per day (Regulation, Article 19, paragraph 5, item 1). Whether a period falls under the school rules is the test — check the institution's academic calendar."
+          },
+          {
+            "question": "Is the Hello Work notification needed for student part-timers too?",
+            "answer": "Yes. Where the student is not an employment insurance insured, file Form 3 by the end of the month following the hire or separation. Non-filing or false filing carries a fine of up to 300,000 yen (Act on Comprehensive Promotion of Labour Measures, Article 40, paragraph 1, item 2)."
+          },
+          {
+            "question": "How do we confirm the activity permission?",
+            "answer": "On the back of the residence card (the permission field), and where needed the designation slip. Employing a student without the permission is an illegal-work problem regardless of hours. Applying for the permission itself is gyoseishoshi territory (四葉行政書士事務所 — a separate business)."
+          }
+        ]
+      },
+      "zh-tw": {
+        "title": "僱用留學生時，週28小時怎麼數",
+        "excerpt": "留學生打工受資格外活動許可限制，每週28小時以內（學則所定的長期休假期間為每日8小時以內）。許可是入管的制度，但數時間・守時間是勞務管理——難處在於，本人在其他公司的工作時數，貴公司看不到。本文整理申報機制、排班上限、保險與申報的處理。",
+        "content": "**結論（先講重點）**：留學生打工受資格外活動許可限制，**每週28小時以內**（出入國管理及難民認定法施行規則第19條第5項第1號。在籍教育機關學則所定的**長期休假期間為每日8小時以內**）。許可是入管的制度，但**數時間・守時間是勞務管理**。難處在於：**本人在其他公司的工作時數，貴公司看不到**。\n\n本頁面寫給僱用・準備僱用留學生打工的公司經營者・店長・總務人員。不談取得許可的手續本身，而從**僱用之後的時間管理**這一側來寫。\n\n## 週28小時，從哪裡數到哪裡？\n\n條文上能確認的是這3點（出入國管理及難民認定法施行規則第19條第5項第1號）。\n\n- **每週28小時以內**。在籍教育機關學則所定的**長期休假期間**為**每日8小時以內**\n- 以**在教育機關在籍期間**進行者為限（畢業・退學後前提改變）\n- 在風俗營業等場所進行者**不在許可範圍**\n\n時間計算的細節——起算日的取法、多家公司的合算方式——依出入國在留管理廳的指引與個案運用。必須把握的原則只有一個：**28小時不是「在貴公司的時數」，而是「本人的合計時數」**。在兩家公司各工作15小時，對各公司看似合法，本人卻已超過。\n\n## 在其他公司的工作，怎麼掌握？\n\n看不到的東西，只能**先建立申報的機制**。實務的型有3個。\n\n| 機制 | 內容 |\n|---|---|\n| **僱用時的確認** | 以在留卡確認資格外活動許可的有無，並以**書面**申報在其他公司工作的有無與時數 |\n| **變更時的申報義務** | 在雇用契約書或服務紀律中，規定開始在其他公司工作・時數變更時應向公司申報 |\n| **排班上限的設計** | 不把自家排班排滿28小時。保留其他公司的餘地，以20小時出頭為上限設計的公司很多 |\n\n依賴申報就不會完美。正因如此，**公司已盡確認之力的紀錄**——僱用時的書面・定期確認——才是對後述風險的防波堤。\n\n## 會加入僱用保險嗎？\n\n**日間部的學生，原則上不成為僱用保險的被保險人**（僱用保險法第6條第4號）。休學中・夜間部等依省令成為被保險人的情形另有規定，疑似該當時個別確認。\n\n另一方面，**外國人僱用狀況的申報，對不加入僱用保險的留學生打工也必須辦理**（樣式第3號・翌月末日前。詳見[僱用了外國人，就要向Hello Work申報](/zh-tw/labor/column/gaikokujin-koyo-jokyo-todokede)）。此外，短時間勞動者的社會保險適用擴大設有「非學生」的要件（見[以短時間僱用時，社會保險會如何](/zh-tw/labor/column/tanjikan-koyo-shakaihoken-4bunno3)）。「因為是學生所以什麼手續都沒有」——兩邊都不成立。\n\n## 超過了，會發生什麼？\n\n本人這一側，違反資格外活動許可條件的就勞，可能影響在留資格的更新等（其後的個別判斷屬入管的領域）。公司這一側，有**不法就勞助長罪**（出入國管理及難民認定法第73條之2。3年以下拘禁刑或300萬日圓以下罰金，或併科）的風險。同條第2項規定，**不知情不能作為免責的理由**（無過失時除外）。「其他公司的部分不知道」不會就此了結——正因如此，前章的**確認機制與紀錄**才有意義。\n\n## 四葉社会保険労務士事務所能做什麼？\n\n位於文京區小日向的四葉社会保険労務士事務所，承接留學生打工僱用時確認的書式製作、其他公司工作申報規則的設計（雇用契約書・服務紀律）、排班上限的設計、外國人僱用狀況的申報。**諮詢免費。** 費用見[報酬額表](/zh-tw/labor/ryokin)，外國人僱用的整體流程見[僱用1名外國人，需要幾個窗口](/zh-tw/labor/column/gaikokujin-koyo-madoguchi-wakekata)。\n\n### 該向誰諮詢\n\n資格外活動許可的申請、在留資格的變更・更新由**四葉行政書士事務所**承接（與本事務所是不同的事業體，另行簽約）。稅務是**稅理士**、已發生爭議的案件是**律師**的業務。以上均不收取介紹費。\n\n## 常見問題\n\n**Q. 我們店只排週20小時。也可能出問題嗎？**\nA. 可能。28小時的限制以本人的合計時數計，若有兼職，即使自家排班不多，本人也可能已超過。需要以僱用時與定期的申報掌握其他公司的時數。\n\n**Q. 暑假可以工作幾小時？**\nA. 在籍教育機關學則所定的長期休假期間，為每日8小時以內（出入國管理及難民認定法施行規則第19條第5項第1號）。是否屬學則上的期間是判斷基準，請以學校的學年曆確認。\n\n**Q. 留學生打工也要向Hello Work申報嗎？**\nA. 要。不成為僱用保險被保險人的情形，於僱入・離職的翌月末日前以樣式第3號申報。不申報・虛偽申報有30萬日圓以下的罰金（勞動施策總合推進法第40條第1項第2號）。\n\n**Q. 怎麼確認有沒有資格外活動許可？**\nA. 以在留卡背面（資格外活動許可欄），必要時加上指定書確認。僱用沒有許可的留學生，無論時數多少都是不法就勞的問題。許可的申請本身是行政書士（四葉行政書士事務所・不同事業體）的領域。\n\n## 本文依據\n\n- 出入國管理及難民認定法施行規則（昭和56年法務省令第54號）**第19條第5項第1號**（每週28小時以內・長期休假期間每日8小時以內・以在籍期間為限・風俗營業等除外） ―― 2026年8月14日於e-Gov法令檢索確認現行條文\n- 出入國管理及難民認定法（昭和26年政令第319號）**第73條之2**（不法就勞助長。第2項＝不知情不能免責〔無過失時除外〕） ―― 同日確認\n- 僱用保險法（昭和49年法律第116號）**第6條第4號**（學生的適用除外。成為被保險人的例外依厚生勞動省令） ―― 同日確認\n- 勞動施策總合推進法（昭和41年法律第132號）第28條第1項・第40條第1項第2號 ―― 同日確認\n- 時間計算的細節（起算日・多家公司的合算運用）依出入國在留管理廳的指引。個別案件請確認最新指引\n\n本文為一般性的資訊提供，不涉入對在留資格影響等入管領域的個別判斷。因應個別情事的判斷，由具備資格者在面談後進行。撰文者為[浦松丈二](/zh-tw/about/uramatsu)（社會保險勞務士・行政書士・宅地建物取引士）。",
+        "category": "招募與雇用",
+        "keywords": [
+          "留學生 打工 28小時 怎麼數",
+          "留學生 兼職 多份工作 28小時",
+          "資格外活動許可 時間 管理",
+          "留學生 僱用保險 加入",
+          "留學生 打工 申報",
+          "超過28小時 公司 風險"
+        ],
+        "tags": [
+          "外國人僱用",
+          "留學生",
+          "資格外活動",
+          "打工",
+          "工時",
+          "排班管理"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "我們店只排週20小時。也可能出問題嗎？",
+            "answer": "可能。28小時的限制以本人的合計時數計，若有兼職，即使自家排班不多，本人也可能已超過。需要以僱用時與定期的申報掌握其他公司的時數。"
+          },
+          {
+            "question": "暑假可以工作幾小時？",
+            "answer": "在籍教育機關學則所定的長期休假期間，為每日8小時以內（出入國管理及難民認定法施行規則第19條第5項第1號）。是否屬學則上的期間是判斷基準，請以學校的學年曆確認。"
+          },
+          {
+            "question": "留學生打工也要向Hello Work申報嗎？",
+            "answer": "要。不成為僱用保險被保險人的情形，於僱入・離職的翌月末日前以樣式第3號申報。不申報・虛偽申報有30萬日圓以下的罰金（勞動施策總合推進法第40條第1項第2號）。"
+          },
+          {
+            "question": "怎麼確認有沒有資格外活動許可？",
+            "answer": "以在留卡背面（資格外活動許可欄），必要時加上指定書確認。僱用沒有許可的留學生，無論時數多少都是不法就勞的問題。許可的申請本身是行政書士（四葉行政書士事務所・不同事業體）的領域。"
+          }
+        ]
+      },
+      "zh": {
+        "title": "雇用留学生时，周28小时怎么数",
+        "excerpt": "留学生打工受资格外活动许可限制，每周28小时以内（学则所定的长期休假期间为每日8小时以内）。许可是入管的制度，但数时间・守时间是劳务管理——难处在于，本人在其他公司的工作时数，贵公司看不到。本文整理申报机制、排班上限、保险与申报的处理。",
+        "content": "**结论（先讲重点）**：留学生打工受资格外活动许可限制，**每周28小时以内**（出入国管理及难民认定法施行规则第19条第5项第1号。在籍教育机关学则所定的**长期休假期间为每日8小时以内**）。许可是入管的制度，但**数时间・守时间是劳务管理**。难处在于：**本人在其他公司的工作时数，贵公司看不到**。\n\n本页面写给雇用・准备雇用留学生打工的公司经营者・店长・总务人员。不谈取得许可的手续本身，而从**雇用之后的时间管理**这一侧来写。\n\n## 周28小时，从哪里数到哪里？\n\n条文上能确认的是这3点（出入国管理及难民认定法施行规则第19条第5项第1号）。\n\n- **每周28小时以内**。在籍教育机关学则所定的**长期休假期间**为**每日8小时以内**\n- 以**在教育机关在籍期间**进行者为限（毕业・退学后前提改变）\n- 在风俗营业等场所进行者**不在许可范围**\n\n时间计算的细节——起算日的取法、多家公司的合算方式——依出入国在留管理厅的指引与个案运用。必须把握的原则只有一个：**28小时不是「在贵公司的时数」，而是「本人的合计时数」**。在两家公司各工作15小时，对各公司看似合法，本人却已超过。\n\n## 在其他公司的工作，怎么掌握？\n\n看不到的东西，只能**先建立申报的机制**。实务的型有3个。\n\n| 机制 | 内容 |\n|---|---|\n| **雇用时的确认** | 以在留卡确认资格外活动许可的有无，并以**书面**申报在其他公司工作的有无与时数 |\n| **变更时的申报义务** | 在雇用契约书或服务纪律中，规定开始在其他公司工作・时数变更时应向公司申报 |\n| **排班上限的设计** | 不把自家排班排满28小时。保留其他公司的余地，以20小时出头为上限设计的公司很多 |\n\n依赖申报就不会完美。正因如此，**公司已尽确认之力的记录**——雇用时的书面・定期确认——才是对后述风险的防波堤。\n\n## 会加入雇用保险吗？\n\n**日间部的学生，原则上不成为雇用保险的被保险人**（雇用保险法第6条第4号）。休学中・夜间部等依省令成为被保险人的情形另有规定，疑似该当时个别确认。\n\n另一方面，**外国人雇用状况的申报，对不加入雇用保险的留学生打工也必须办理**（样式第3号・翌月末日前。详见[雇用了外国人，就要向Hello Work申报](/zh/labor/column/gaikokujin-koyo-jokyo-todokede)）。此外，短时间劳动者的社会保险适用扩大设有「非学生」的要件（见[以短时间雇用时，社会保险会如何](/zh/labor/column/tanjikan-koyo-shakaihoken-4bunno3)）。「因为是学生所以什么手续都没有」——两边都不成立。\n\n## 超过了，会发生什么？\n\n本人这一侧，违反资格外活动许可条件的就劳，可能影响在留资格的更新等（其后的个别判断属入管的领域）。公司这一侧，有**不法就劳助长罪**（出入国管理及难民认定法第73条之2。3年以下拘禁刑或300万日元以下罚金，或并科）的风险。同条第2项规定，**不知情不能作为免责的理由**（无过失时除外）。「其他公司的部分不知道」不会就此了结——正因如此，前章的**确认机制与记录**才有意义。\n\n## 四葉社会保険労務士事務所能做什么？\n\n位于文京区小日向的四葉社会保険労務士事務所，承接留学生打工雇用时确认的书式制作、其他公司工作申报规则的设计（雇用契约书・服务纪律）、排班上限的设计、外国人雇用状况的申报。**咨询免费。** 费用见[报酬额表](/zh/labor/ryokin)，外国人雇用的整体流程见[雇用1名外国人，需要几个窗口](/zh/labor/column/gaikokujin-koyo-madoguchi-wakekata)。\n\n### 该向谁咨询\n\n资格外活动许可的申请、在留资格的变更・更新由**四葉行政書士事務所**承接（与本事务所是不同的事业体，另行签约）。税务是**税理士**、已发生争议的案件是**律师**的业务。以上均不收取介绍费。\n\n## 常见问题\n\n**Q. 我们店只排周20小时。也可能出问题吗？**\nA. 可能。28小时的限制以本人的合计时数计，若有兼职，即使自家排班不多，本人也可能已超过。需要以雇用时与定期的申报掌握其他公司的时数。\n\n**Q. 暑假可以工作几小时？**\nA. 在籍教育机关学则所定的长期休假期间，为每日8小时以内（出入国管理及难民认定法施行规则第19条第5项第1号）。是否属学则上的期间是判断基准，请以学校的学年历确认。\n\n**Q. 留学生打工也要向Hello Work申报吗？**\nA. 要。不成为雇用保险被保险人的情形，于雇入・离职的翌月末日前以样式第3号申报。不申报・虚假申报有30万日元以下的罚金（劳动施策总合推进法第40条第1项第2号）。\n\n**Q. 怎么确认有没有资格外活动许可？**\nA. 以在留卡背面（资格外活动许可栏），必要时加上指定书确认。雇用没有许可的留学生，无论时数多少都是不法就劳的问题。许可的申请本身是行政书士（四葉行政書士事務所・不同事业体）的领域。\n\n## 本文依据\n\n- 出入国管理及难民认定法施行规则（昭和56年法务省令第54号）**第19条第5项第1号**（每周28小时以内・长期休假期间每日8小时以内・以在籍期间为限・风俗营业等除外） ―― 2026年8月14日于e-Gov法令检索确认现行条文\n- 出入国管理及难民认定法（昭和26年政令第319号）**第73条之2**（不法就劳助长。第2项＝不知情不能免责〔无过失时除外〕） ―― 同日确认\n- 雇用保险法（昭和49年法律第116号）**第6条第4号**（学生的适用除外。成为被保险人的例外依厚生劳动省令） ―― 同日确认\n- 劳动施策总合推进法（昭和41年法律第132号）第28条第1项・第40条第1项第2号 ―― 同日确认\n- 时间计算的细节（起算日・多家公司的合算运用）依出入国在留管理厅的指引。个别案件请确认最新指引\n\n本文为一般性的信息提供，不涉入对在留资格影响等入管领域的个别判断。因应个别情事的判断，由具备资格者在面谈后进行。撰文者为[浦松丈二](/zh/about/uramatsu)（社会保险劳务士・行政书士・宅地建物取引士）。",
+        "category": "招聘与雇用",
+        "keywords": [
+          "留学生 打工 28小时 怎么数",
+          "留学生 兼职 多份工作 28小时",
+          "资格外活动许可 时间 管理",
+          "留学生 雇用保险 加入",
+          "留学生 打工 申报",
+          "超过28小时 公司 风险"
+        ],
+        "tags": [
+          "外国人雇用",
+          "留学生",
+          "资格外活动",
+          "打工",
+          "工时",
+          "排班管理"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "我们店只排周20小时。也可能出问题吗？",
+            "answer": "可能。28小时的限制以本人的合计时数计，若有兼职，即使自家排班不多，本人也可能已超过。需要以雇用时与定期的申报掌握其他公司的时数。"
+          },
+          {
+            "question": "暑假可以工作几小时？",
+            "answer": "在籍教育机关学则所定的长期休假期间，为每日8小时以内（出入国管理及难民认定法施行规则第19条第5项第1号）。是否属学则上的期间是判断基准，请以学校的学年历确认。"
+          },
+          {
+            "question": "留学生打工也要向Hello Work申报吗？",
+            "answer": "要。不成为雇用保险被保险人的情形，于雇入・离职的翌月末日前以样式第3号申报。不申报・虚假申报有30万日元以下的罚金（劳动施策总合推进法第40条第1项第2号）。"
+          },
+          {
+            "question": "怎么确认有没有资格外活动许可？",
+            "answer": "以在留卡背面（资格外活动许可栏），必要时加上指定书确认。雇用没有许可的留学生，无论时数多少都是不法就劳的问题。许可的申请本身是行政书士（四葉行政書士事務所・不同事业体）的领域。"
+          }
+        ]
+      }
+    }
   }
 ];
