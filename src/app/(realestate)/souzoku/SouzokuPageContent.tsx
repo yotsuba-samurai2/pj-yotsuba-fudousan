@@ -4,6 +4,7 @@ import { Building2, TrendingUp, KeyRound, ArrowRight, MessageCircle } from "luci
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { FAQJsonLd } from "@/components/seo/FAQJsonLd";
 import { ArticleJsonLd } from "@/components/seo/ArticleJsonLd";
+import { LineLink } from "@/components/shared/LineLink";
 import { SHARED_ORG_INFO } from "@/lib/seo";
 import { getRequestLocale } from "@/lib/getRequestLocale";
 import { getColumns, getLocalizedColumn, filterColumnsByTheme } from "@/lib/columns";
@@ -1041,15 +1042,14 @@ export default async function SouzokuPageContent() {
             {c.ctaLead}
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <a
-              href="https://line.me/ti/p/EF5782JXqJ"
-              target="_blank"
-              rel="noopener noreferrer"
+            <LineLink
+              location="page_cta"
+              page="souzoku"
               className="gradient-line inline-flex items-center gap-2 rounded-md px-10 py-4 text-sm font-semibold text-white shadow-lg transition-all duration-200 hover:shadow-xl hover:brightness-110"
             >
               <MessageCircle size={16} />
               {c.ctaLine}
-            </a>
+            </LineLink>
             {/* 2026-07-27：?intent=souzoku ＝フォームの相談内容に
                 「相続した不動産のこと（貸す・売る・活用する）」をプリセットする。
                 このページはAIモード#2で筆頭引用を取れている最大の入口なので、
