@@ -18,9 +18,12 @@ When people set out to have payroll handled elsewhere and start reading fee sche
 | Base fee + per head | Base fee + 200-500 yen per person per month (before tax) | The most common shape. With few employees the base fee weighs heavily |
 | Included in the retainer | Payroll is included within the retainer fee | The breakdown is hard to see. What happens when headcount grows is settled by the contract |
 | Support for doing it in-house | From 6,980 yen a month (from around 10 people) | ★Not outsourcing, but support that walks you through using a cloud service. Not directly comparable with outsourcing |
+| Adopting software and running it in-house | The software fee only (depends on the plan) | Not engaging an office at all. No outsourcing fee arises, but entry, checking and judgement stay with you. Outsourcing the procedures is a separate contract |
 | Not offered | — | Some offices that specialize in one-off work have a policy of not taking payroll at all |
 
 The third row calls for care. Even where you see "payroll from 6,980 yen a month," whether that is **outsourcing or help with doing it yourself** changes the work required entirely. When you compare, line that up first.
+
+As in the fourth row, there is also the option of adopting software and not outsourcing at all. What you would still ask a shakai hoken roumushi for in that case, and what stays with you, is set out in [We've brought in freee HR. So what does a retained shakai hoken roumushi actually do?](/en/labor/column/freee-jinji-roumu-sharoushi-doko-made).
 
 ## Why is there a "base fee"?
 

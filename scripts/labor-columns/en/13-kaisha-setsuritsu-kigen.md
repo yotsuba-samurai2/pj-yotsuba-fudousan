@@ -73,6 +73,14 @@ When you wind a company up, the mirror image applies and you file a **definite p
 
 **Get the timing straight in advance, at least.** The social insurance new coverage notification requires a certificate of registered matters, so you have to wait for the incorporation registration to be completed. On the other hand, **the 5-day deadline does not wait for the registration to be completed**. In practice you assemble the documents in advance so that you can move the moment the registration is done.
 
+## What changes if you incorporated through a cloud service?
+
+**On the deadline side — nothing.** Cloud incorporation services such as freee Company Formation (freee会社設立) let you prepare the articles of incorporation, the registration application and other documents by following the on-screen guide (per materials published as of 14 August 2026). It is true that the incorporation itself gets done faster.
+
+But what these services prepare is **mainly the documents on the incorporation (registration) and tax side**. The labour and social insurance filings in the table above — 5 days, 10 days, 50 days — **begin separately, after the incorporation is done**. If anything, the faster the incorporation, the sooner the social insurance "5 days" arrives. Everything looks finished when the on-screen guide ends — and that is the most typical way companies get stuck on labour insurance after a cloud incorporation.
+
+The division of roles is as in the table in the previous section. **Incorporating through the cloud does not move the licensing lines.** How the line runs between the software and the shakai hoken roumushi is drawn in [We've brought in freee HR. So what does a retained shakai hoken roumushi actually do?](/en/labor/column/freee-jinji-roumu-sharoushi-doko-made).
+
 ## Frequently asked questions
 
 **Q. There is only one representative director and we have set the officer's remuneration at zero. Is social insurance still required?**
@@ -97,6 +105,7 @@ A. Labor and social insurance filings are handled by 四葉社会保険労務士
 - Ministry of Health, Labour and Welfare, 「労働保険の成立手続」 (notification of establishment within 10 days; estimated premium declaration within 50 days; employment insurance notification of establishment of a covered place of business within 10 days; notification of acquisition of insured status by the 10th of the following month)
 - Japan Pension Service, 「新規適用の手続き」 (filing period is within 5 days of the fact arising; the destination is the administrative center or the competent Japan Pension Service office)
 - Ministry of Health, Labour and Welfare, 「雇用保険事務手続きの手引き【第1編】適用事業所編【令和7年8月版】」
+- The documents freee Company Formation can prepare and output (the registration application, articles of incorporation, corporation establishment notification, etc.) — per freee K.K.'s published materials (viewed 14 August 2026). Features change; check the official site for the latest
 - All statutory provisions are the versions in force as confirmed on e-Gov法令検索 on August 13, 2026
 
 **This article does not go so far as to decide whom you should consult.** Labor and social insurance filings, the estimated premium declaration and the acquisition-of-insured-status procedures are the work of a Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant). Incorporation registration goes to a judicial scrivener, and tax matters such as the corporation establishment notification go to a tax accountant; in each case we will point you to them and you engage them directly. The drafting of articles of incorporation and licence and permit documents is handled by 四葉行政書士事務所 (**a separate business entity; you enter into a separate contract with each office**). This office does not accept referral fees. The cost of consulting 四葉社会保険労務士事務所 is set out in the [fee schedule](/en/labor/ryokin), and the questions we are asked most often are collected on the [FAQ page](/en/labor/faq).
