@@ -1,0 +1,75 @@
+{
+  "generatedAt": "2026-08-14T13:46:32.156Z",
+  "note": "不動産コラム第3弾（1本・4言語＝プロット⑤）。石井弁護士確認済（2026-08-14）。投入は /admin/columns/seed-realestate-p3。",
+  "verification": [
+    "OK: 全チェック通過"
+  ],
+  "article": {
+    "business": "realestate",
+    "slug": "chuka-fudosan-pro-kyodo-torihiki",
+    "title": "中華圏の不動産会社・営業担当の方へ──日本の宅建業者と組んで日本の物件取引を進める方法",
+    "date": "2026-08-14",
+    "category": "海外の不動産会社向け",
+    "excerpt": "日本国内の不動産売買を業として媒介するには、日本の宅地建物取引業の免許が必要です。免許のない海外の会社は、日本の宅建業者と役割を分けて取引を進めます。顧客に日本の物件を紹介したい中華圏の不動産会社・営業担当の方に向けて、役割分担の表、重要事項説明を誰が行うか、売主が非居住者の場合の決済、一棟・複数戸をまとめた取引の進め方、四葉不動産に頼めることを整理しました。相談は無料で、中国語（簡体字・繁体字）でそのままお問い合わせいただけます。",
+    "content": "**結論（先に要点）**：日本国内の不動産売買を業として媒介するには、日本の宅地建物取引業の免許が必要です。免許のない海外の会社は、日本の宅建業者と役割を分けて取引を進めます。四葉不動産株式会社は中国語（簡体字・繁体字）で、この協業の日本側——物件調査、重要事項説明、契約書作成、決済まで——を担います。本記事は、顧客に日本の物件を紹介したい中華圏の不動産会社・営業担当の方に向けたものです。\n\n##…（全3135字）",
+    "status": "published",
+    "author": {
+      "name": "浦松 丈二",
+      "title": "代表取締役・宅地建物取引士（四葉不動産株式会社）"
+    },
+    "keywords": [
+      "日本 不動産 海外業者 提携",
+      "日本 不动产 中介 合作",
+      "日本 房产 中介 牌照",
+      "宅建業 免許 海外",
+      "非居住者 売主 源泉徴収",
+      "重要事項説明 中国語"
+    ],
+    "tags": [
+      "中華圏",
+      "業者間協業",
+      "宅建業法",
+      "非居住者",
+      "海外パートナー"
+    ],
+    "locales": [],
+    "faq": [
+      {
+        "question": "当社（海外の不動産会社）が日本の物件の広告を出してもよいですか？",
+        "answer": "どのような関わり方が日本の宅建業法上の「業として媒介」に当たるかは、関与の形態ごとに個別の検討が必要です。日本国内の取引の媒介そのもの——重要事項説明、契約書の作成、決済——は日本の免許業者が担う前提で、役割分担を最初に設計することをおすすめします。個別の形態のご相談は面談で承ります。"
+      },
+      {
+        "question": "重要事項説明を中国語で受けられますか？",
+        "answer": "重要事項説明は宅地建物取引士が行います。四葉不動産では、説明の内容を中国語で補足し、お客様が理解できる形で進めます。契約書・重要事項説明書の原本は日本語です。"
+      },
+      {
+        "question": "売主が非居住者の場合、買主は何に注意すればよいですか？",
+        "answer": "買主側に源泉徴収の義務が生じる場合があります（所得税法161条・212条）。また外為法の事後報告が必要になる場合があります。要否の判定と手順は関連記事で説明しています。税額の計算・申告は税理士の業務のため、税理士へ直接ご依頼いただく形をご案内します。"
+      },
+      {
+        "question": "相談に費用はかかりますか？",
+        "answer": "かかりません。相談は無料です。中国語（簡体字・繁体字）でそのままお問い合わせください。取引をお引き受けする場合の条件は、内容を確認したうえで書面でご提示します。"
+      }
+    ],
+    "translations": {
+      "en": {
+        "title": "For real estate professionals in Greater China: working with a licensed Japanese broker on property deals in Japan",
+        "excerpt": "Brokering real estate transactions in Japan as a business requires a Japanese real estate brokerage licence (takken licence). An overseas firm without one proceeds by dividing roles with a licensed Japanese broker. This article is for real estate companies and agents in Greater China who want to introduce Japanese properties to their clients. It covers how roles are divided, who delivers the statutory explanation of important matters, what happens at settlement when the seller is a non-resident, how bulk deals for a whole building or multiple units proceed, and what you can ask Yotsuba Real Estate Co., Ltd. to handle. Consultation is free of charge, in Chinese or English.",
+        "category": "For overseas agents",
+        "content": "**In short:** brokering the sale and purchase of real estate located in Japan, as a business, requires a licence under Japan's Real Estate Brokerage A…（全8237字）"
+      },
+      "zh-tw": {
+        "title": "給中華圈的不動產同業——如何與日本持牌業者合作推進日本物件交易",
+        "excerpt": "在日本國內以業務方式居間（仲介）不動產買賣，需要日本的宅地建物取引業執照。沒有該執照的海外公司，與日本的持牌業者分工推進交易。本文寫給想向客戶介紹日本物件的中華圈不動產公司與業務人員，說明與日本宅建業者的分工方式、重要事項說明由誰進行、賣方為非居住者時交屋會發生什麼、一棟或多戶打包交易的流程，以及可以委託四葉不動產株式會社的事項。諮詢免費，可直接使用中文。",
+        "category": "給海外同業",
+        "content": "**結論（先說要點）**：在日本國內以業務方式居間（仲介）不動產買賣，需要日本的宅地建物取引業（日本的不動產交易業執照制度）執照。沒有該執照的海外公司，與日本的持牌業者分工推進交易。四葉不動產株式會社以中文（繁體・簡體）承擔這項合作的日本側工作——從物件調查、重要事項說明、契約書製作到交屋。本文寫給…（全2836字）"
+      },
+      "zh": {
+        "title": "致中华圈的房产中介与业务伙伴——如何与日本持牌业者合作推进日本房产交易",
+        "excerpt": "在日本国内以业务方式居间（中介）不动产买卖，需要日本的宅地建物取引业执照。没有该执照的海外公司，与日本的持牌业者分工推进交易。本文面向想向客户介绍日本房源的中华圈房产中介公司与业务人员，说明与日本宅建业者的分工方式、重要事项说明由谁进行、卖方为非居住者时交割会发生什么、一栋楼或多户打包交易的流程，以及可以委托四叶不动产株式会社的事项。咨询免费，可直接使用中文。",
+        "category": "面向海外同业",
+        "content": "**结论（先说要点）**：在日本国内以业务方式居间（中介）不动产买卖，需要日本的宅地建物取引业（日本的不动产交易业执照制度）执照。没有该执照的海外公司，与日本的持牌业者分工推进交易。四叶不动产株式会社以中文（简体・繁体）承担这一合作的日本侧工作——从房源调查、重要事项说明、合同制作到交割。本文面向想…（全2841字）"
+      }
+    }
+  }
+}
