@@ -146,6 +146,12 @@ export const CROSS_LINKS: CrossLink[] = [
       { href: "/legal/services/visa", anchor: "在留資格・ビザ申請（四葉行政書士事務所）", anchorI18n: A_VISA, business: "legal" },
       { href: "/shataku", anchor: "借り上げ社宅の導入（四葉不動産）", anchorI18n: A_SHATAKU, business: "realestate" },
     ] },
+  // 2026-08-14 新設。採用は在留資格（入口）と住まいで事業体をまたぐため、C14と同じ2先へ送る。
+  // 受任はそれぞれ別契約＝CrossLinkBanner が involvesLabor で3者版の注記を出す。
+  { id: "C15", from: ["/labor/services/saiyo"], launchFlag: "SR_LAUNCHED", targets: [
+      { href: "/legal/services/visa", anchor: "在留資格・ビザ申請（四葉行政書士事務所）", anchorI18n: A_VISA, business: "legal" },
+      { href: "/shataku", anchor: "借り上げ社宅の導入（四葉不動産）", anchorI18n: A_SHATAKU, business: "realestate" },
+    ] },
 ];
 
 // normalizePathは分離モジュールから再エクスポート（client側はlib/normalize-pathを直接使う）

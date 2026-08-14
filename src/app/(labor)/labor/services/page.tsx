@@ -56,6 +56,14 @@ const ROWS = [
     label: "外部監査で見られる労務",
     audience: "育成就労の外部監査に備える監理支援機関・受入企業",
   },
+  {
+    // 2026-08-14 新設。料金表の2列から導出（luck428-column-seo 第7条）。
+    // ★求職者の紹介・あっせん、面接代行、求人媒体の運用代行は「取り扱っておりません」。
+    // 有料職業紹介は厚生労働大臣の許可事業（職業安定法第30条第1項）＝この境界がページの主題。
+    href: "/labor/services/saiyo",
+    label: "募集・採用の労務",
+    audience: "求人票の労働条件と、内定から入社までの書面・手続きを整えたい事業者",
+  },
 ];
 
 export default async function LaborServicesPage() {

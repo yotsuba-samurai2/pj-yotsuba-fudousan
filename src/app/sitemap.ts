@@ -206,6 +206,7 @@ const STATIC_LABOR: StaticPage[] = [
   { path: "/labor/services/joseikin", changeFrequency: "monthly", priority: 0.7, locales: ["ja"] },
   { path: "/labor/services/gaikokujin-koyo", changeFrequency: "monthly", priority: 0.8, locales: ["ja"] },
   { path: "/labor/services/gaibu-kansanin", changeFrequency: "monthly", priority: 0.8, locales: ["ja"] },
+  { path: "/labor/services/saiyo", changeFrequency: "monthly", priority: 0.8, locales: ["ja"] },
   { path: "/labor/ryokin", changeFrequency: "monthly", priority: 0.7, locales: ["ja"] },
   { path: "/labor/nagare", changeFrequency: "yearly", priority: 0.6, locales: ["ja"] },
   { path: "/labor/faq", changeFrequency: "monthly", priority: 0.6, locales: ["ja"] },
