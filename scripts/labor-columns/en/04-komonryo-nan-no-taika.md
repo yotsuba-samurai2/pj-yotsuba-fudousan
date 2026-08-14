@@ -38,6 +38,8 @@ On how we price payroll calculation, see [What does it cost to have a Shakai Hok
 
 **Third, we did not want to place limits on consultation.** In return for not including filings, **we accept consultation with no limit on the number of times or the length of time**. We have not set any "up to so many times" or "up to so many hours."
 
+This design has a sequel. **Support for switching monthly work such as payroll to in-house processing on freee is included in the retainer fee.** At offices that bundle filings and payroll into the retainer, the more a client moves in-house, the thinner the grounds for the retainer become. Because 四葉's retainer is the price of consultation, supporting the switch to in-house does not change what the retainer means — if anything, the weight of consultation grows, in the form of designing the settings and talking through each month's close. What the in-house option involves is set out in [We want to run payroll in-house on freee — what do we ask a shakai hoken roumushi for?](/en/labor/column/kyuyo-keisan-freee-naisei).
+
 ## Does the total change even when the monthly amount is the same?
 
 We will state this plainly. **Because filings are billed separately, in a year with many filings the total will come out higher than at an office with an inclusive fee.**
@@ -48,7 +50,7 @@ We will state this plainly. **Because filings are billed separately, in a year w
 | Filings on hiring and departure | Usually included in the retainer | Billed each time |
 | 算定基礎届 and 年度更新 | Usually included in the retainer | Billed each time |
 | Number and length of consultations | Some offices set limits | **No limit** |
-| Payroll calculation | Usually charged separately | Charged separately (paired with a retainer agreement) |
+| Payroll calculation | Usually charged separately | Charged separately (paired with a retainer agreement). Support for switching to in-house on freee is **included in the retainer** |
 
 If you line up only the monthly figures on the fee schedules, 四葉 looks inexpensive. **That reading is not correct.** The filings are added on top. When you are weighing this up, estimate how many filings are likely to arise over a year and compare the totals.
 

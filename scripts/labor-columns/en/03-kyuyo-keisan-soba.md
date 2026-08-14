@@ -23,7 +23,7 @@ When people set out to have payroll handled elsewhere and start reading fee sche
 
 The third row calls for care. Even where you see "payroll from 6,980 yen a month," whether that is **outsourcing or help with doing it yourself** changes the work required entirely. When you compare, line that up first.
 
-As in the fourth row, there is also the option of adopting software and not outsourcing at all. What you would still ask a shakai hoken roumushi for in that case, and what stays with you, is set out in [We've brought in freee HR. So what does a retained shakai hoken roumushi actually do?](/en/labor/column/freee-jinji-roumu-sharoushi-doko-made).
+As in the fourth row, there is also the option of adopting software and not outsourcing at all. What you would still ask a shakai hoken roumushi for in that case, and what stays with you, is set out in [We've brought in freee HR. So what does a retained shakai hoken roumushi actually do?](/en/labor/column/freee-jinji-roumu-sharoushi-doko-made). At Yotsuba, we support the switch to this "run it yourselves" shape within the retainer agreement (more below).
 
 ## Why is there a "base fee"?
 
@@ -48,15 +48,18 @@ Because of the latter, most offices set a base fee. Even at a company with one e
 
 | | |
 |---|---|
-| Fee | **1,100 yen per employee per month (tax incl.)** |
+| Outsourcing fee | **1,100 yen per employee per month (tax incl.)** |
 | Base fee | **None** |
 | Condition | ★**Bundled with a retainer agreement.** We do not accept payroll on its own |
+| Support for going in-house | ★Support for building a setup to run payroll yourselves on freee is **included in the retainer** (there is no separate charge) |
 
 1,100 yen per person is twice the top of the market (around 550 yen including tax). In exchange, there is no base fee. At 20 employees the amount comes out the same as the common market shape of "an 11,000 yen base fee + 550 yen per person." Below 20 people Yotsuba is cheaper; above that, more expensive.
 
 **We can do without a base fee because we do not take payroll on its own.** A retainer agreement is a precondition, so the situation of "taking on a company with one employee for 1,100 yen a month" does not arise. The smallest configuration is a 22,000 yen retainer plus 1,100 yen for payroll: 23,100 yen a month (tax incl.).
 
 In other words, **the engagement policy plays the part that the base fee would otherwise play**.
+
+There is also **the choice of not outsourcing at all**. We support the build-up to running payroll in-house on freee — designing the initial settings, sorting out pay items and deductions, checking the months when premium rates are revised, and consulting on each month's close — within the retainer agreement. There is no separate charge for this support. You can also start by working out with us which suits you better: outsourcing (1,100 yen per person) or in-house.
 
 ## Four things to line up when you compare
 
@@ -74,7 +77,7 @@ The fees as a whole, payroll included, are on [the fee schedule](/en/labor/ryoki
 ## Frequently asked questions
 
 **Q. Can we ask you for payroll alone?**
-A. We do not accept that. Payroll is taken on together with a retainer agreement. If we handled the calculations without also handling the consultations, we would risk processing the work on mistaken assumptions without knowing the actual situation. Policies differ between offices, so looking for an office that takes payroll on its own is one reasonable option.
+A. We do not accept that. Payroll is taken on together with a retainer agreement. If we handled the calculations without also handling the consultations, we would risk processing the work on mistaken assumptions without knowing the actual situation. We do, however, support switching to calculating payroll yourselves on freee, with the support included in the retainer. Policies differ between offices, so looking for an office that takes payroll on its own is one reasonable option.
 
 **Q. Is payroll work that only a shakai hoken roumushi may do?**
 A. No. Payroll itself is not exclusive to shakai hoken roumushi. However, the procedures that arise alongside payroll — acquiring and losing social insurance coverage, the standard remuneration base notification, notifications of monthly remuneration changes — require registration as a shakai hoken roumushi if they are carried out for a fee (Article 27 of 社会保険労務士法).
