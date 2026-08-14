@@ -1,0 +1,75 @@
+{
+  "generatedAt": "2026-08-14T21:49:53.541Z",
+  "note": "不動産コラム第4弾（1本・4言語＝木造賃貸×東京ゼロエミ）。投入は /admin/columns/seed-realestate-p4。",
+  "verification": [
+    "OK: 全チェック通過"
+  ],
+  "article": {
+    "business": "realestate",
+    "slug": "mokuzo-chintai-mansion-zeroemi-hojokin",
+    "title": "賃貸マンションを木造で建てる──3階建ては可能か、都の助成金はいくらか",
+    "date": "2026-08-15",
+    "category": "投資・事業用不動産",
+    "excerpt": "賃貸マンションは木造でも3階建てを建てられます。東京都の東京ゼロエミ住宅の助成は集合住宅で最大200万円/戸、10戸なら約2,000万円になる計算です。木三共の考え方、RC造との比較（法定耐用年数22年/47年）、令和8年度の助成額・要件・受付期間、大田区蒲田で見学した木造3階建て・10戸の賃貸住宅の所感をまとめました。都内で土地活用・賃貸経営を考えている土地オーナー・投資家の方に向けた記事です。",
+    "content": "**結論（先に要点）**：賃貸マンションは木造でも3階建てを建てられます。東京都には新築のゼロエミッション住宅への助成があり、集合住宅は最大200万円/戸。10戸なら約2,000万円になる計算です。本記事は、都内で土地活用・賃貸経営を考えている土地オーナー・投資家の方に向けて、構造の選択肢と都の助成金、木造3階建て賃貸を見学した所感をまとめたものです。\n\n## 木造で3階建ての賃貸マンションは建て…（全4385字）",
+    "status": "published",
+    "author": {
+      "name": "浦松 丈二",
+      "title": "代表取締役・宅地建物取引士（四葉不動産株式会社）"
+    },
+    "keywords": [
+      "賃貸マンション 木造 3階建て",
+      "木三共 賃貸",
+      "東京ゼロエミ住宅 助成金 集合住宅",
+      "東京ゼロエミ住宅 200万円",
+      "木造 アパート 耐用年数 22年",
+      "土地活用 木造 賃貸"
+    ],
+    "tags": [
+      "土地活用",
+      "木造",
+      "賃貸経営",
+      "東京ゼロエミ住宅",
+      "補助金・助成金"
+    ],
+    "locales": [],
+    "faq": [
+      {
+        "question": "木造の賃貸マンションは何階建てまで建てられますか？",
+        "answer": "3階建てまでは、木造3階建て共同住宅（木三共）の基準——主要構造部の1時間準耐火構造、避難上有効なバルコニー等——を満たせば、耐火建築物にせずに建てられる場合があります。それ以上の階数や防火地域内では求められる性能が変わります。敷地の防火規制と規模で結論が変わるため、土地選びの段階で設計者・特定行政庁にご確認ください。"
+      },
+      {
+        "question": "賃貸経営が目的でも、東京ゼロエミ住宅の助成は申請できますか？",
+        "answer": "申請者は新築住宅の建築主（個人・事業者）で、集合住宅等も助成対象に含まれています。集合住宅は全戸が水準C以上であること、床面積の合計が2,000㎡未満であることなどの条件があります。個別の該当性と最新の要件は、クール・ネット東京の公式ページと要綱でご確認ください。"
+      },
+      {
+        "question": "木造は法定耐用年数が22年と短いですが、不利ではありませんか？",
+        "answer": "一概には言えません。耐用年数が短いことは、減価償却では単年の償却費が大きくなるという性質があり、融資期間や出口（売却時期）の設計にも関わります。有利にも不利にも働き得るため、物件の計画と借入条件を前提に、税理士へ直接ご相談いただく形をご案内します。"
+      },
+      {
+        "question": "土地探しから助成金の申請まで、あわせて相談できますか？",
+        "answer": "ご相談の入口は当社で承りますが、契約は分野ごとに別々になります。土地の選定・賃貸ニーズの見立ては四葉不動産株式会社、助成金申請の手続サポートは四葉行政書士事務所（独立した事業体・別契約）、設計・認証はハウスメーカーと認証審査機関、税務は税理士です。段取りの全体像は最初のご相談で整理してお示しします。相談は無料です。"
+      }
+    ],
+    "translations": {
+      "en": {
+        "title": "Building a wooden rental apartment building in Tokyo: is three storeys possible, and how much is the Tokyo subsidy?",
+        "excerpt": "A rental apartment building can be built in timber up to three storeys in Japan. Tokyo subsidises newly built zero-emission homes (Tokyo Zero-Emission House) at up to 2 million yen per unit for apartment buildings — around 20 million yen for a ten-unit building. Written for landowners and investors considering land utilisation and rental management in Tokyo, this article covers the feasibility of timber construction, how it compares with reinforced concrete, the amounts and conditions of the Tokyo subsidy, and impressions from visiting a three-storey wooden rental building. Consultation is free of charge.",
+        "category": "Investment & Commercial Real Estate",
+        "content": "**In short:** a rental apartment building can be built in timber up to three storeys. Tokyo subsidises newly built zero-emission homes at up to 2 mill…（全10762字）"
+      },
+      "zh-tw": {
+        "title": "在東京用木造蓋出租公寓——3層樓可行嗎？東京都的補助每戶最高200萬日圓",
+        "excerpt": "出租公寓用木造也可以蓋到3層樓。東京都對新建的零排放住宅（東京ゼロエミ住宅）設有補助，集合住宅每戶最高200萬日圓，10戶即約2,000萬日圓。本文寫給在東京考慮土地活用、出租經營的土地持有者與投資人，整理木造的可行性、與鋼筋混凝土造（RC）的比較、東京都補助的金額與要件，以及實地參觀木造3層樓出租住宅的見聞。諮詢免費，可直接使用中文。",
+        "category": "投資・事業用不動產",
+        "content": "**結論（先說要點）**：出租公寓用木造也可以蓋到3層樓。東京都對新建的零排放住宅設有補助，集合住宅每戶最高200萬日圓，10戶即約2,000萬日圓。本文寫給在東京考慮土地活用、出租經營的土地持有者與投資人，整理構造的選項、東京都的補助，以及實地參觀木造3層樓出租住宅的見聞。\n\n## 木造可以蓋3層…（全3786字）"
+      },
+      "zh": {
+        "title": "在东京用木结构建出租公寓——3层可行吗？东京都的补助每户最高200万日元",
+        "excerpt": "出租公寓用木结构也可以建到3层。东京都对新建的零排放住宅（東京ゼロエミ住宅）设有补助，集合住宅每户最高200万日元，10户即约2,000万日元。本文面向在东京考虑土地活用、出租经营的土地业主与投资者，整理木结构的可行性、与钢筋混凝土结构（RC）的比较、东京都补助的金额与要件，以及实地参观木结构3层出租住宅的见闻。咨询免费，可直接使用中文。",
+        "category": "投资・事业用不动产",
+        "content": "**结论（先说要点）**：出租公寓用木结构也可以建到3层。东京都对新建的零排放住宅设有补助，集合住宅每户最高200万日元，10户即约2,000万日元。本文面向在东京考虑土地活用、出租经营的土地业主与投资者，整理结构的选项、东京都的补助，以及实地参观木结构3层出租住宅的见闻。\n\n## 木结构可以建3层…（全3784字）"
+      }
+    }
+  }
+}
