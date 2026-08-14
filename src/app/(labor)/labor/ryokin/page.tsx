@@ -239,6 +239,39 @@ const NOT_HANDLED: { name: string; to: string }[] = [
   { name: "求職者の紹介・あっせん、応募者の面接代行、求人媒体の運用代行", to: "取り扱っておりません" },
 ];
 
+/** 料金についてよくある質問。
+ *  2026-08-14 新設（浦松指示）：内製化支援と報酬の関係をQAで説明する。
+ *  第7条「報酬額表からFAQ・コラムを導出する」に沿い、FAQPage JSON-LDにも出力する。
+ *  ★回答は構造の説明に徹する：成果の約束（「自動化できます」）・比較優位の断定（「安い」）は書かない。
+ *  ★aはJSON-LDにそのまま出すため平文（リンク・強調なし）。リンクはlinkフィールドで別途描画。 */
+const FAQS: { q: string; a: string; link?: { href: string; label: string } }[] = [
+  {
+    q: "顧問料には何が含まれますか？",
+    a: "労務のご相談（回数・時間の制限なし）、給与計算などをfreeeで自社処理（内製）に切り替える体制づくりの支援、当事務所が作成した規程の法改正対応が含まれます。労働社会保険の手続、給与計算の代行、規程の新規作成は含まれず、この表の料金を都度申し受けます。",
+  },
+  {
+    q: "freeeでの内製化支援では、何をしてもらえますか？",
+    a: "初期設定の設計（給与項目・手当・控除の整理と根拠づけ）、賃金控除の労使協定の整備、移行時の数か月の並走、毎月の締めや保険料率改定時のご相談です。すべて顧問料に含みます。画面操作の細部はfreeeの公式ヘルプ・サポートの領域と切り分けています。",
+    link: { href: "/labor/column/kyuyo-keisan-freee-naisei", label: "内製という選択肢の中身（解説記事）" },
+  },
+  {
+    q: "給与計算を内製に切り替えると、支払いはどう変わりますか？",
+    a: "代行をやめた月から、1人あたり月1,100円の代行料はかからなくなり、顧問料とfreeeの利用料（額はプランによります）になります。顧問料はご相談の対価のため変わりません。資格取得届などの手続を代行でご依頼いただく場合は、この表の料金を都度申し受けます。",
+  },
+  {
+    q: "代行と内製は、途中で切り替えられますか？",
+    a: "切り替えられます。内製から代行に戻すことも可能です。担当者の入退社などで状況が変わったら切り替えればよい設計にしており、どちらでも顧問料は変わりません。どちらが向いているかの整理からご相談いただけます。",
+  },
+  {
+    q: "なぜ内製化支援は顧問料に含まれるのですか？",
+    a: "当事務所の顧問料はご相談に対する対価で、手続や給与計算を含んでいません。内製の支援——設定の設計や毎月の判断のご相談——は、社会保険労務士法第2条第1項第3号が定める相談・指導そのもので、顧問契約でお受けしている相談の一場面だからです。別のサービスとして料金を立てていません。",
+  },
+  {
+    q: "給与計算や手続だけをお願いできますか？",
+    a: "承っておりません。ご相談を伴わずにお受けすると、実情を把握しないまま誤った前提で処理してしまうおそれがあるためです。障害年金（個人のお客さま）と外部監査人（監理支援機関のお客さま）は、顧問契約を前提とせずお受けします。",
+  },
+];
+
 function jsonLd() {
   const offers = SECTIONS.flatMap((s) =>
     s.rows
@@ -263,6 +296,15 @@ function jsonLd() {
         name: "四葉社会保険労務士事務所 料金",
         provider: { "@id": SITE + "/labor/#organization" },
         offers,
+      },
+      {
+        "@type": "FAQPage",
+        "@id": SITE + "/labor/ryokin#faq",
+        mainEntity: FAQS.map((f) => ({
+          "@type": "Question",
+          name: f.q,
+          acceptedAnswer: { "@type": "Answer", text: f.a },
+        })),
       },
     ],
   };
@@ -385,6 +427,29 @@ export default async function Page() {
           <p className="mt-3 text-xs leading-relaxed text-text-muted">
             ※四葉不動産株式会社・四葉行政書士事務所・四葉社会保険労務士事務所は、それぞれ別の事業体として独立してご依頼をお受けします。ご依頼いただく場合は事務所ごとに別々にご契約いただき、料金・請求も分かれます。当事務所へのご依頼が、他の事務所へのご依頼の条件になることはありません。
           </p>
+        </div>
+
+        {/* 料金QA（FAQPage JSON-LDと同一ソース。内製化支援の説明＝2026-08-14） */}
+        <div className="mt-10">
+          <h2 className="border-l-4 border-primary pl-2 font-serif text-lg font-semibold text-ink">
+            料金についてよくある質問
+          </h2>
+          <ul className="mt-3 space-y-3">
+            {FAQS.map((f, i) => (
+              <li key={i} className="rounded-xl border border-border bg-surface p-4">
+                <p className="font-medium text-ink">Q. {f.q}</p>
+                <p className="mt-1.5 text-sm leading-relaxed text-text">A. {f.a}</p>
+                {f.link && (
+                  <p className="mt-1.5 text-sm">
+                    →{" "}
+                    <Link href={addLocalePrefix(f.link.href, locale)} className="text-primary underline">
+                      {f.link.label}
+                    </Link>
+                  </p>
+                )}
+              </li>
+            ))}
+          </ul>
         </div>
 
         <p className="mt-8 text-xs leading-relaxed text-text-muted">
