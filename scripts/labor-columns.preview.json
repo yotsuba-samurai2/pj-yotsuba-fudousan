@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-13T23:43:57.650Z",
+  "generatedAt": "2026-08-14T01:40:55.732Z",
   "note": "労務コラム（4本）。報酬額表 v18 の決定と相場調査から起こした原稿md（scripts/labor-columns/）から生成。--write でupsert。",
-  "articleCount": 15,
+  "articleCount": 17,
   "verification": [
     "OK: 全チェック通過"
   ],
@@ -2698,6 +2698,368 @@
             {
               "question": "是不是再观望一下比较好？",
               "answer": "基础的整合（工资分录的自动化），现在着手并无损失。 AI的功能今后还会增加，但对资料未整理好的公司并不会有效。就顺序而言，整合在先。"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "business": "labor",
+      "slug": "freee-jinji-roumu-sharoushi-doko-made",
+      "title": "freee人事労務を入れました。顧問社労士は何をしてくれるのですか",
+      "date": "2026-09-01",
+      "category": "誰に頼むか",
+      "excerpt": "freee人事労務は書類を作り、マイナポータルやe-Govを通じて電子申請まで出せます。自社の手続を自社で行う限り、資格は要りません。社会保険労務士が必要になるのは、報酬を得て他人の手続を代わりに行うときです。条文に沿って、ソフトと社労士の線の引き方を整理します。",
+      "content": "**結論（先に要点）**：freee人事労務は書類を作り、マイナポータルやe-Govを通じて電子申請まで出せます。**自社の手続を自社で行う限り、資格は要りません。** 社会保険労務士が必要になるのは、**他人の求めに応じ報酬を得て**、代わりに作成・提出するときです（社会保険労務士法第27条）。\n\nこのページは、freee人事労務を導入した、あるいは導入を検討している中小企業の経営者・総務担当の…（全4560字）",
+      "status": "published",
+      "author": {
+        "name": "浦松 丈二",
+        "title": "社会保険労務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+      },
+      "keywords": [
+        "freee人事労務 社労士 何を頼む",
+        "freee 電子申請 gBizID",
+        "顧問社労士 何をしてくれる",
+        "社会保険労務士 独占業務 電磁的記録",
+        "freee 年末調整 誰に頼む",
+        "クラウド労務 社労士 必要か"
+      ],
+      "tags": [
+        "freee",
+        "電子申請",
+        "社会保険労務士",
+        "業際",
+        "顧問契約",
+        "gBizID"
+      ],
+      "locales": [],
+      "faq": [
+        {
+          "question": "freeeで電子申請までできるなら、社会保険労務士に頼む意味はありますか？",
+          "answer": "自社の手続を自社で出す作業は、ソフトでできます。社会保険労務士に頼むのは、その手続が要るのか・いつまでか・どの給付が使えるかという判断と、報酬を得て代わりに行える作成・提出代行・事務代理（社会保険労務士法第2条第1項第1号〜第1号の3）です。作業と判断は別のものです。"
+        },
+        {
+          "question": "freeeの電子申請には、何が必要ですか？",
+          "answer": "公式ヘルプ（2026年8月14日参照）によると、gBizIDプライムアカウントが必要で、法人事業所のみが対象です。経路はマイナポータルとe-Govの2つに分かれます。機能や対応書類は改定されるため、最新の範囲はfreeeの公式ヘルプでご確認ください。"
+        },
+        {
+          "question": "顧問の社会保険労務士は、freeeの中から代理申請してくれるのですか？",
+          "answer": "freeeの公式ヘルプには「社労士による代理人申請には現在対応しておりません」（2026年4月10日更新）と明記されています。代理で申請する場合は、社会保険労務士側の仕組みで行います。freee人事労務をお使いのまま頼めますので、ソフトの入れ替えは不要です。"
+        },
+        {
+          "question": "年末調整も社会保険労務士に頼めますか？",
+          "answer": "freee人事労務に年末調整の機能はありますが、報酬を得て代わりに行うのは税務の領域で、税理士の業務です。当事務所では取り扱っておらず、税理士に直接ご依頼いただく形をご案内しています。紹介料の授受はありません。"
+        }
+      ],
+      "translations": {
+        "en": {
+          "title": "We've brought in freee HR. So what does a retained shakai hoken roumushi actually do?",
+          "excerpt": "freee HR prepares the documents and can file them electronically through Mynaportal or e-Gov. As long as your company files its own procedures for itself, no licence is required. A shakai hoken roumushi becomes necessary when someone prepares or files them on another's behalf, for a fee. We draw the line by the statute itself.",
+          "content": "**In short:** freee HR (freee人事労務) prepares the documents and can file them electronically through Mynaportal or e-Gov. **As long as your company files its own procedures for itself, no licence is required.** A shakai hoken roumushi (Certified Social Insurance and Labor Consultant) becomes necessary when someone **prepares or files them on another person's behalf, for a fee, at that person's request** (Certified Social Insurance and Labor Consultant Act, Article 27).\n\nThis page is for owners and back-office staff of small and medium-sized companies that have adopted freee HR, or are thinking about it. The software and the consultant are not substitutes for each other; the line between them simply runs in a different place. We trace that line along the statute.\n\n## How far can freee HR alone take you?\n\nAccording to freee's official help pages (updated 10 April 2026, viewed 14 August 2026), electronic filing from freee HR runs through **two routes — Mynaportal and e-Gov** — and requires a **gBizID Prime account** (corporate accounts only; the free tier is not covered).\n\n| Route | Documents that can be filed electronically (examples) |\n|---|---|\n| Mynaportal | The monthly standard remuneration revision notification (月額変更届), the annual standard remuneration calculation report (算定基礎届), the bonus payment notification (賞与支払届), acquisition and loss of insured status notifications for health insurance and employees' pension (資格取得届・喪失届), employment insurance acquisition and loss notifications (with or without the separation certificate), and application forms for childcare-leave benefits and continued-employment benefits for older workers, among others |\n| e-Gov | The annual renewal of labour insurance (年度更新), the periodic health checkup results report, and the stress-check results report |\n\nIn other words, filing your own company's procedures for yourself — the social and employment insurance filings that come with hiring and departures, the annual calculation report, the annual renewal — **is something the software can do**.\n\nTwo cautions. First, freee's features and the list of supported documents change. The table above reflects **published materials as of August 2026**; check the official help pages for the current scope. Second, the same help page states plainly: **\"agent filing by a shakai hoken roumushi is not currently supported.\"** Electronic filing in freee HR is designed as **a tool for an employer to file its own procedures itself**.\n\n## If the software exists, why would we need a shakai hoken roumushi?\n\nThe Certified Social Insurance and Labor Consultant Act defines three types of work concerning labour and social insurance procedures (Article 2, paragraph 1).\n\n| Item | Work | What it means |\n|---|---|---|\n| Item 1 | **Preparing** applications and other documents | Drawing up the applications, notifications and reports submitted to public agencies |\n| Item 1-2 | **Filing on another's behalf** | Carrying out the submission procedures for those documents in another's place |\n| Item 1-3 | **Representation in procedures** | Acting as agent in applications, and in statements and assertions made to the agency in investigations and dispositions |\n\nThere is a phrase here that is easy to miss. The statutory definition of \"applications and other documents\" in item 1 expressly **includes electronic or magnetic records (電磁的記録)** created in place of paper documents. That is: not only the paper notification, but **the data you build in cloud software and file electronically falls squarely within the statute**.\n\nArticle 27 then draws the line.\n\n> No person other than a shakai hoken roumushi or a shakai hoken roumushi corporation may, **at the request of another person and for a fee**, carry out **as a business** the affairs listed in Article 2, paragraph 1, items 1 through 2. (Certified Social Insurance and Labor Consultant Act, Article 27)\n\nRead in reverse: **a company handling its own procedures for itself is outside this provision.** You need no licence to prepare and file your own annual calculation report in freee. The licence is needed when someone does it **for another company, for a fee**. What the software removes is the labour of filing your own paperwork — not the legal character of having someone do it for you.\n\nArticle 27 has a proviso: work performed incidentally to business designated by cabinet order is exempt. The order (Order for Enforcement of the Certified Social Insurance and Labor Consultant Act, Article 2) designates two cases — **work performed by a certified public accountant as part of CPA practice, and work performed by a tax accountant or tax accountant corporation incidentally to tax practice**. Where exactly \"incidental\" ends is a case-by-case judgement, so this article goes no further than presenting the provision.\n\n## Accounting and labour: who do you ask for which?\n\nIn a company running freee, accounting and HR sit side by side on the same screen, so the question \"can't we just ask one person to handle everything?\" arises naturally. But the licensing lines are drawn somewhere other than the software's menus.\n\n| Software / situation | Doing it yourself | Whom to engage, for a fee, to do it for you |\n|---|---|---|\n| freee Accounting (bookkeeping, closing, tax returns) | No licence needed | **A tax accountant** |\n| freee HR (social and labour insurance procedures) | No licence needed | **A shakai hoken roumushi** |\n| freee HR's year-end adjustment feature | No licence needed | **A tax accountant** (the year-end adjustment is tax work) |\n| Licences and permits after freee Company Formation | No licence needed | **A gyoseishoshi** (Certified Administrative Procedures Legal Specialist) |\n\nIn Yotsuba's case, labour and social insurance procedures are handled by 四葉社会保険労務士事務所, and permits, residence status and subsidies by 四葉行政書士事務所. **They are independent businesses, with separate contracts and separate invoices.** For tax we point you to a tax accountant, whom you engage directly; **no referral fees change hands.**\n\n## What exactly is the retainer paying for, then?\n\nOnce the software takes over the typing and the filing, the consultant's work shifts away from \"writing documents\" to **what comes before and after them**.\n\n- Whether the procedure is **needed at all, and by when** (a judgement arises with every hire, departure and leave)\n- Whether the **requirements for a benefit are met**, and which benefits are available\n- Handling **investigations and inquiries** from the agencies (the representation in item 1-3 is the work for this situation)\n- The **labour management underneath the procedures** — working hours, wages, work rules\n\nFor a company that has adopted the software, the retained consultant looks less like an outsourced typist and more like the place you take judgement calls. How payroll pricing works, and where a shakai hoken roumushi fits, is set out in [How much does it cost to have a shakai hoken roumushi run payroll?](/en/labor/column/kyuyo-keisan-soba-sharoushi), and our own thinking on fees in the [fee schedule](/en/labor/ryokin). If the fees are not visible, there is nothing to compare — we take that view too.\n\n## What can 四葉社会保険労務士事務所 do?\n\n四葉社会保険労務士事務所, in Kohinata, Bunkyo City, handles the preparation, agent filing and procedural representation of labour and social insurance filings (Certified Social Insurance and Labor Consultant Act, Article 2, paragraph 1, items 1 through 1-3), together with labour consultation and the drafting and revision of work rules. If your company uses freee HR, **there is no need to switch software**. You keep filing what you can file yourselves, and hand over only the parts that need judgement or agent filing.\n\n**Consultation is free of charge.** Bring your freee settings screen, or the list of procedures you are about to file, and we will start by sorting them into \"things you can file yourselves\" and \"things better handed over\". The questions we are asked most often are collected on the [FAQ page](/en/labor/faq).\n\n### Whom to consult\n\nBookkeeping, closing, tax returns and the year-end adjustment are work for **a tax accountant**; registration for **a judicial scrivener**; matters already in dispute for **an attorney**. Residence-status applications, subsidies and company-formation documents are handled by **四葉行政書士事務所** (a separate business from this office, engaged under a separate contract). In every case, no referral fees change hands.\n\n## Frequently asked questions\n\n**Q. If freee can file electronically, is there any point in engaging a shakai hoken roumushi?**\nA. The work of filing your own procedures can be done by the software. What you engage a shakai hoken roumushi for is the **judgement** — whether a procedure is needed, by when, and which benefits apply — and the **preparation, agent filing and procedural representation** that only a licence-holder may perform for a fee (Certified Social Insurance and Labor Consultant Act, Article 2, paragraph 1, items 1 through 1-3). The work and the judgement are different things.\n\n**Q. What does electronic filing from freee require?**\nA. According to the official help pages (viewed 14 August 2026), a gBizID Prime account, and corporate accounts only. The routes divide into Mynaportal and e-Gov. Features and supported documents change, so check freee's official help for the current scope.\n\n**Q. Will a retained shakai hoken roumushi file as our agent from inside freee?**\nA. freee's official help states that \"agent filing by a shakai hoken roumushi is not currently supported\" (updated 10 April 2026). Agent filings are made through the consultant's own systems. You can stay on freee HR while engaging us — no need to switch software.\n\n**Q. Can we also ask a shakai hoken roumushi to do the year-end adjustment?**\nA. freee HR has a year-end adjustment feature, but performing it for another person for a fee is tax work — the province of **a tax accountant**. This office does not handle it; we point you to a tax accountant, whom you engage directly. No referral fees change hands.\n\n## Sources for this article\n\n- Certified Social Insurance and Labor Consultant Act (社会保険労務士法, Act No. 89 of 1968), **Article 2, paragraph 1, items 1, 1-2 and 1-3; Article 27** — current text confirmed on e-Gov on 14 August 2026\n- Order for Enforcement of the Certified Social Insurance and Labor Consultant Act (社会保険労務士法施行令, Cabinet Order No. 327 of 1968), **Article 2** — current text confirmed on e-Gov the same day\n- The scope of electronic filing in freee HR, the gBizID Prime requirement, and the non-support of agent filing by a shakai hoken roumushi — freee Help Center, \"Filing various documents electronically from freee HR\" (updated 10 April 2026, viewed 14 August 2026)\n\n**freee's features and supported documents change. When considering adoption or operation, check freee's official help pages for the latest information.** This article is based on materials published as of August 2026.\n\nHow far freee's AI features have come is set out in [How far has the AI integration between freee HR and freee Accounting actually come?](/en/labor/column/freee-jinji-kaikei-ai). Our fees are in the [fee schedule](/en/labor/ryokin), and the path from consultation to engagement in [How an engagement proceeds](/en/labor/nagare).\n\nThis article is general information. Judgments that fit your particular circumstances are made by a qualified professional after a meeting. Written by [Joji Uramatsu](/en/about/uramatsu) (Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist).",
+          "category": "Who to ask",
+          "keywords": [
+            "freee HR shakai hoken roumushi what to ask",
+            "freee electronic filing gBizID",
+            "what does a retained labour consultant do",
+            "scope of practice social insurance labor consultant electronic records",
+            "freee year-end adjustment who to ask",
+            "cloud payroll software do we still need a consultant"
+          ],
+          "tags": [
+            "freee",
+            "electronic filing",
+            "shakai hoken roumushi",
+            "scope of practice",
+            "retainer",
+            "gBizID"
+          ],
+          "author": {
+            "name": "Joji Uramatsu",
+            "title": "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所"
+          },
+          "faq": [
+            {
+              "question": "If freee can file electronically, is there any point in engaging a shakai hoken roumushi?",
+              "answer": "The work of filing your own procedures can be done by the software. What you engage a shakai hoken roumushi for is the judgement — whether a procedure is needed, by when, and which benefits apply — and the preparation, agent filing and procedural representation that only a licence-holder may perform for a fee (Certified Social Insurance and Labor Consultant Act, Article 2, paragraph 1, items 1 through 1-3). The work and the judgement are different things."
+            },
+            {
+              "question": "What does electronic filing from freee require?",
+              "answer": "According to the official help pages (viewed 14 August 2026), a gBizID Prime account, and corporate accounts only. The routes divide into Mynaportal and e-Gov. Features and supported documents change, so check freee's official help for the current scope."
+            },
+            {
+              "question": "Will a retained shakai hoken roumushi file as our agent from inside freee?",
+              "answer": "freee's official help states that \"agent filing by a shakai hoken roumushi is not currently supported\" (updated 10 April 2026). Agent filings are made through the consultant's own systems. You can stay on freee HR while engaging us — no need to switch software."
+            },
+            {
+              "question": "Can we also ask a shakai hoken roumushi to do the year-end adjustment?",
+              "answer": "freee HR has a year-end adjustment feature, but performing it for another person for a fee is tax work — the province of a tax accountant. This office does not handle it; we point you to a tax accountant, whom you engage directly. No referral fees change hands."
+            }
+          ]
+        },
+        "zh-tw": {
+          "title": "導入了freee人事労務。那麼，顧問社會保險勞務士要為我們做什麼",
+          "excerpt": "freee人事労務能製作文件，並透過Mynaportal或e-Gov完成電子申請。只要是自家公司為自己辦理手續，不需要資格。需要社會保險勞務士的，是收取報酬、代他人辦理的時候。本文依條文整理軟體與社會保險勞務士之間的分界線。",
+          "content": "**結論（先講重點）**：freee人事労務能製作文件，並透過Mynaportal（マイナポータル）或e-Gov完成電子申請。**只要是自家公司為自己辦理手續，不需要資格。** 需要社會保險勞務士的，是**應他人之託、收取報酬**，代為製作・提出的時候（社會保險勞務士法第27條）。\n\n本頁面寫給已導入freee人事労務、或正在考慮導入的中小企業經營者與總務人員。軟體與社會保險勞務士不是替代關係，只是分界線劃在不同的地方。本文沿著條文，把這條線整理清楚。\n\n## 只靠freee人事労務，能做到哪裡？\n\n依freee官方說明頁（2026年4月10日更新・2026年8月14日參閱），freee人事労務的電子申請分為**Mynaportal與e-Gov兩條路徑**，使用時需要**gBizID Prime帳戶**（僅限法人事業所。免費方案等不適用）。\n\n| 路徑 | 可電子申請的文件（例） |\n|---|---|\n| Mynaportal | 月額変更届／算定基礎届（標準報酬月額的年度計算申報）／賞与支払届／健康保險・厚生年金保險的被保險人資格取得届・喪失届／僱用保險的被保險人資格取得届・喪失届（附或不附離職票）／育兒休業給付・高年齡僱用繼續給付的申請書 等 |\n| e-Gov | 勞動保險的年度更新／定期健康診斷結果報告書／心理負擔程度檢查（壓力檢測）結果等報告書 |\n\n也就是說，隨著員工入職・離職而來的社會保險・僱用保險手續，以及每年的算定基礎届・年度更新，**自家公司的部分由自己提出，是軟體本身就能做到的**。\n\n有兩點要注意。第一，freee的功能與支援文件會改版。上表依據的是**2026年8月時點的公開資料**，最新範圍請以官方說明頁為準。第二，同一說明頁明確寫著**「目前不支援由社會保險勞務士進行的代理人申請」**。freee人事労務的電子申請，是設計來**讓事業主自行提出自家手續的功能**。\n\n## 既然有軟體，為什麼還需要社會保險勞務士？\n\n關於勞動社會保險的手續，社會保險勞務士法將下列三項定為社會保險勞務士的業務（第2條第1項）。\n\n| 號 | 業務 | 內容 |\n|---|---|---|\n| 第1號 | 申請書等的**製作** | 製作向行政機關等提出的申請書・申報書・報告書等 |\n| 第1號之2 | **提出代行** | 代為辦理申請書等的提出手續 |\n| 第1號之3 | **事務代理** | 就申請等事項，以及行政機關的調查・處分相關的主張・陳述，進行代理 |\n\n這裡有一個容易被忽略的詞。第1號「申請書等」的定義中，條文明確寫道：以製作**電磁紀錄（電磁的記録）**代替書面製作時，該電磁紀錄**包含在內**。也就是說，不只是紙本申報書，**用雲端軟體製作、以電子方式申請的資料，在條文上同樣屬於對象**。\n\n然後，第27條劃出這條線。\n\n> 非社會保險勞務士、亦非由社會保險勞務士組成的法人（社会保険労務士法人）者，不得**應他人之託、收取報酬**，**以業務形式**辦理第2條第1項第1號至第2號所列事務。（社會保險勞務士法第27條）\n\n反過來說，**自家公司為自己辦理手續，不在這條規定的範圍內**。用freee製作並提出自家的算定基礎届，不需要資格。需要資格的，是**收取報酬、代其他公司辦理**的時候。軟體的導入消除的是「自己提出的作業負擔」，而不是「請人代辦」這一行為的性質。\n\n另外，第27條設有但書：附隨於政令所定業務而辦理的情形屬於例外。政令（社會保險勞務士法施行令第2條）所定的是兩種情形——**公認會計士作為其業務辦理的情形，以及稅理士・稅理士法人附隨於稅理士業務辦理的情形**。「附隨」的界線何在，屬於個案判斷，本文僅止於介紹條文。\n\n## 會計與勞務，該分別委託誰？\n\n在使用freee的公司裡，會計與勞務在同一個畫面上並排，自然會產生「能不能都交給同一個人」的疑問。但資格的分界線，劃在軟體畫面以外的地方。\n\n| 軟體・場景 | 自己做 | 收取報酬、代辦時該委託誰 |\n|---|---|---|\n| freee会計（記帳・結算・申報） | 不需要資格 | **稅理士** |\n| freee人事労務（社會保險・勞動保險手續） | 不需要資格 | **社會保險勞務士** |\n| freee人事労務的年終調整功能 | 不需要資格 | **稅理士**（年終調整屬於稅務領域） |\n| freee会社設立之後的許認可申請 | 不需要資格 | **行政書士** |\n\n以四葉來說，勞動社會保險的手續由四葉社会保険労務士事務所承接，許認可、在留資格與補助金由四葉行政書士事務所承接。**兩者是各自獨立的事業體，契約與請款也各自分開。** 稅務方面，我們會為您介紹稅理士，由您直接委任；**不收取介紹費**。\n\n## 顧問費到底是為了什麼服務而支付的？\n\n當軟體承擔了輸入與提出，社會保險勞務士的工作就從「填寫文件的作業」，移到**作業的前後兩端**。\n\n- 這項手續**究竟需不需要辦、期限到什麼時候**（每逢入職・離職・休業都會產生判斷）\n- 是否**符合領取給付的要件**、有哪些給付可以使用\n- 應對行政機關的**調查與照會**（第1號之3的事務代理就是這個場景的業務）\n- 手續背後的**勞務管理本身**（工時・薪資・就業規則）\n\n對已導入軟體的公司而言，顧問不再像「輸入作業的外包對象」，而更接近「判斷事項的商量對象」。薪資計算的行情與社會保險勞務士的角色，整理於[委託社會保險勞務士計算薪資要花多少錢](/zh-tw/labor/column/kyuyo-keisan-soba-sharoushi)；費用的思路公開於[報酬額表](/zh-tw/labor/ryokin)。費用不透明就無從比較——我們也是這樣想的。\n\n## 四葉社会保険労務士事務所能做什麼？\n\n位於文京區小日向的四葉社会保険労務士事務所，承接勞動社會保險手續的製作・提出代行・事務代理（社會保險勞務士法第2條第1項第1號〜第1號之3），以及勞務諮詢、就業規則的制定與修訂。使用freee人事労務的公司來諮詢時，**不需要更換軟體**。自己能提出的部分照樣自己提出，只把需要判斷、需要代辦的部分交給我們。\n\n**諮詢免費。** 只要帶著freee的設定畫面，或準備提出的手續清單，我們就從「自己能提出的」與「交出來比較好的」的分類開始，與您一起整理。常被詢問的問題整理於[常見問答](/zh-tw/labor/faq)。\n\n### 該向誰諮詢\n\n記帳・結算・申報・年終調整是**稅理士**的業務，登記是**司法書士**的業務，已發生爭議的案件是**律師**的業務。在留資格的申請・補助金・公司設立文件，由**四葉行政書士事務所**（與本事務所是不同的事業體，另行簽約）承接。以上均不收取介紹費。\n\n## 常見問題\n\n**Q. 既然freee能做到電子申請，委託社會保險勞務士還有意義嗎？**\nA. 自家手續由自己提出的作業，軟體就能完成。委託社會保險勞務士的，是「這項手續需不需要辦・期限到何時・有哪些給付可用」的**判斷**，以及只有資格者才能收取報酬代辦的**製作・提出代行・事務代理**（社會保險勞務士法第2條第1項第1號〜第1號之3）。作業與判斷是兩回事。\n\n**Q. freee的電子申請需要什麼？**\nA. 依官方說明頁（2026年8月14日參閱），需要gBizID Prime帳戶，且僅限法人事業所。路徑分為Mynaportal與e-Gov兩種。功能與支援文件會改版，最新範圍請以freee官方說明頁為準。\n\n**Q. 顧問的社會保險勞務士會從freee裡面代理申請嗎？**\nA. freee官方說明頁明確寫著「目前不支援由社會保險勞務士進行的代理人申請」（2026年4月10日更新）。代理申請時，使用的是社會保險勞務士這一側的系統。您可以繼續使用freee人事労務，不需要更換軟體。\n\n**Q. 年終調整也能委託社會保險勞務士嗎？**\nA. freee人事労務有年終調整功能，但收取報酬代辦屬於稅務領域，是**稅理士**的業務。本事務所不承接，會為您介紹稅理士，由您直接委任。不收取介紹費。\n\n## 本文依據\n\n- 社會保險勞務士法（昭和43年法律第89號）**第2條第1項第1號・第1號之2・第1號之3、第27條** ―― 2026年8月14日於e-Gov法令檢索確認現行條文\n- 社會保險勞務士法施行令（昭和43年政令第327號）**第2條**（業務限制的解除） ―― 同日於e-Gov法令檢索確認現行條文\n- freee人事労務的電子申請範圍・gBizID Prime的必要性・不支援社會保險勞務士代理人申請 ―― freee說明中心「從freee人事労務進行各類文件的電子申請」（2026年4月10日更新・2026年8月14日參閱）\n\n**freee的功能與支援文件會改版。考慮導入或運用時，請以freee官方說明頁的最新資訊為準。** 本文依據2026年8月時點的公開資料。\n\nfreee的AI功能進展到什麼程度，整理於[freee人事労務與freee会計的AI整合，究竟進展到什麼程度](/zh-tw/labor/column/freee-jinji-kaikei-ai)。本事務所的費用見[報酬額表](/zh-tw/labor/ryokin)，從諮詢到簽約的流程見[諮詢到簽約的流程](/zh-tw/labor/nagare)。\n\n本文為一般性的資訊提供。因應個別情事的判斷，由具備資格者在面談後進行。撰文者為[浦松丈二](/zh-tw/about/uramatsu)（社會保險勞務士・行政書士・宅地建物取引士）。",
+          "category": "該委託誰",
+          "keywords": [
+            "freee人事労務 社會保險勞務士 委託什麼",
+            "freee 電子申請 gBizID",
+            "顧問社會保險勞務士 做什麼",
+            "社會保險勞務士 獨占業務 電磁紀錄",
+            "freee 年終調整 該找誰",
+            "雲端勞務軟體 還需要社勞士嗎"
+          ],
+          "tags": [
+            "freee",
+            "電子申請",
+            "社會保險勞務士",
+            "業務分界",
+            "顧問契約",
+            "gBizID"
+          ],
+          "author": {
+            "name": "浦松 丈二",
+            "title": "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+          },
+          "faq": [
+            {
+              "question": "既然freee能做到電子申請，委託社會保險勞務士還有意義嗎？",
+              "answer": "自家手續由自己提出的作業，軟體就能完成。委託社會保險勞務士的，是「這項手續需不需要辦・期限到何時・有哪些給付可用」的判斷，以及只有資格者才能收取報酬代辦的製作・提出代行・事務代理（社會保險勞務士法第2條第1項第1號〜第1號之3）。作業與判斷是兩回事。"
+            },
+            {
+              "question": "freee的電子申請需要什麼？",
+              "answer": "依官方說明頁（2026年8月14日參閱），需要gBizID Prime帳戶，且僅限法人事業所。路徑分為Mynaportal與e-Gov兩種。功能與支援文件會改版，最新範圍請以freee官方說明頁為準。"
+            },
+            {
+              "question": "顧問的社會保險勞務士會從freee裡面代理申請嗎？",
+              "answer": "freee官方說明頁明確寫著「目前不支援由社會保險勞務士進行的代理人申請」（2026年4月10日更新）。代理申請時，使用的是社會保險勞務士這一側的系統。您可以繼續使用freee人事労務，不需要更換軟體。"
+            },
+            {
+              "question": "年終調整也能委託社會保險勞務士嗎？",
+              "answer": "freee人事労務有年終調整功能，但收取報酬代辦屬於稅務領域，是稅理士的業務。本事務所不承接，會為您介紹稅理士，由您直接委任。不收取介紹費。"
+            }
+          ]
+        },
+        "zh": {
+          "title": "导入了freee人事労務。那么，顾问社会保险劳务士要为我们做什么",
+          "excerpt": "freee人事労務能制作文件，并通过Mynaportal或e-Gov完成电子申请。只要是自家公司为自己办理手续，不需要资格。需要社会保险劳务士的，是收取报酬、代他人办理的时候。本文依条文整理软件与社会保险劳务士之间的分界线。",
+          "content": "**结论（先讲重点）**：freee人事労務能制作文件，并通过Mynaportal（マイナポータル）或e-Gov完成电子申请。**只要是自家公司为自己办理手续，不需要资格。** 需要社会保险劳务士的，是**应他人之托、收取报酬**，代为制作・提出的时候（社会保险劳务士法第27条）。\n\n本页面写给已导入freee人事労務、或正在考虑导入的中小企业经营者与总务人员。软件与社会保险劳务士不是替代关系，只是分界线划在不同的地方。本文沿着条文，把这条线整理清楚。\n\n## 只靠freee人事労務，能做到哪里？\n\n依freee官方说明页（2026年4月10日更新・2026年8月14日参阅），freee人事労務的电子申请分为**Mynaportal与e-Gov两条路径**，使用时需要**gBizID Prime账户**（仅限法人事业所。免费方案等不适用）。\n\n| 路径 | 可电子申请的文件（例） |\n|---|---|\n| Mynaportal | 月額変更届／算定基礎届（标准报酬月额的年度计算申报）／賞与支払届／健康保险・厚生年金保险的被保险人资格取得届・丧失届／雇用保险的被保险人资格取得届・丧失届（附或不附离职票）／育儿休业给付・高年龄雇用继续给付的申请书 等 |\n| e-Gov | 劳动保险的年度更新／定期健康诊断结果报告书／心理负担程度检查（压力检测）结果等报告书 |\n\n也就是说，随着员工入职・离职而来的社会保险・雇用保险手续，以及每年的算定基礎届・年度更新，**自家公司的部分由自己提出，是软件本身就能做到的**。\n\n有两点要注意。第一，freee的功能与支持文件会改版。上表依据的是**2026年8月时点的公开资料**，最新范围请以官方说明页为准。第二，同一说明页明确写着**「目前不支持由社会保险劳务士进行的代理人申请」**。freee人事労務的电子申请，是设计来**让事业主自行提出自家手续的功能**。\n\n## 既然有软件，为什么还需要社会保险劳务士？\n\n关于劳动社会保险的手续，社会保险劳务士法将下列三项定为社会保险劳务士的业务（第2条第1项）。\n\n| 号 | 业务 | 内容 |\n|---|---|---|\n| 第1号 | 申请书等的**制作** | 制作向行政机关等提出的申请书・申报书・报告书等 |\n| 第1号之2 | **提出代行** | 代为办理申请书等的提出手续 |\n| 第1号之3 | **事务代理** | 就申请等事项，以及行政机关的调查・处分相关的主张・陈述，进行代理 |\n\n这里有一个容易被忽略的词。第1号「申请书等」的定义中，条文明确写道：以制作**电磁记录（電磁的記録）**代替书面制作时，该电磁记录**包含在内**。也就是说，不只是纸质申报书，**用云端软件制作、以电子方式申请的数据，在条文上同样属于对象**。\n\n然后，第27条划出这条线。\n\n> 非社会保险劳务士、亦非由社会保险劳务士组成的法人（社会保険労務士法人）者，不得**应他人之托、收取报酬**，**以业务形式**办理第2条第1项第1号至第2号所列事务。（社会保险劳务士法第27条）\n\n反过来说，**自家公司为自己办理手续，不在这条规定的范围内**。用freee制作并提出自家的算定基礎届，不需要资格。需要资格的，是**收取报酬、代其他公司办理**的时候。软件的导入消除的是「自己提出的作业负担」，而不是「请人代办」这一行为的性质。\n\n另外，第27条设有但书：附随于政令所定业务而办理的情形属于例外。政令（社会保险劳务士法施行令第2条）所定的是两种情形——**注册会计师（公认会计士）作为其业务办理的情形，以及税理士・税理士法人附随于税理士业务办理的情形**。「附随」的界线何在，属于个案判断，本文仅止于介绍条文。\n\n## 会计与劳务，该分别委托谁？\n\n在使用freee的公司里，会计与劳务在同一个画面上并排，自然会产生「能不能都交给同一个人」的疑问。但资格的分界线，划在软件画面以外的地方。\n\n| 软件・场景 | 自己做 | 收取报酬、代办时该委托谁 |\n|---|---|---|\n| freee会計（记账・结算・申报） | 不需要资格 | **税理士** |\n| freee人事労務（社会保险・劳动保险手续） | 不需要资格 | **社会保险劳务士** |\n| freee人事労務的年终调整功能 | 不需要资格 | **税理士**（年终调整属于税务领域） |\n| freee会社設立之后的许认可申请 | 不需要资格 | **行政书士** |\n\n以四叶来说，劳动社会保险的手续由四葉社会保険労務士事務所承接，许认可、在留资格与补助金由四葉行政書士事務所承接。**两者是各自独立的事业体，契约与请款也各自分开。** 税务方面，我们会为您介绍税理士，由您直接委任；**不收取介绍费**。\n\n## 顾问费到底是为了什么服务而支付的？\n\n当软件承担了输入与提出，社会保险劳务士的工作就从「填写文件的作业」，移到**作业的前后两端**。\n\n- 这项手续**究竟需不需要办、期限到什么时候**（每逢入职・离职・休业都会产生判断）\n- 是否**符合领取给付的要件**、有哪些给付可以使用\n- 应对行政机关的**调查与照会**（第1号之3的事务代理就是这个场景的业务）\n- 手续背后的**劳务管理本身**（工时・工资・就业规则）\n\n对已导入软件的公司而言，顾问不再像「输入作业的外包对象」，而更接近「判断事项的商量对象」。工资计算的行情与社会保险劳务士的角色，整理于[委托社会保险劳务士计算工资要花多少钱](/zh/labor/column/kyuyo-keisan-soba-sharoushi)；费用的思路公开于[报酬额表](/zh/labor/ryokin)。费用不透明就无从比较——我们也是这样想的。\n\n## 四葉社会保険労務士事務所能做什么？\n\n位于文京区小日向的四葉社会保険労務士事務所，承接劳动社会保险手续的制作・提出代行・事务代理（社会保险劳务士法第2条第1项第1号〜第1号之3），以及劳务咨询、就业规则的制定与修订。使用freee人事労務的公司来咨询时，**不需要更换软件**。自己能提出的部分照样自己提出，只把需要判断、需要代办的部分交给我们。\n\n**咨询免费。** 只要带着freee的设置画面，或准备提出的手续清单，我们就从「自己能提出的」与「交出来比较好的」的分类开始，与您一起整理。常被询问的问题整理于[常见问答](/zh/labor/faq)。\n\n### 该向谁咨询\n\n记账・结算・申报・年终调整是**税理士**的业务，登记是**司法书士**的业务，已发生争议的案件是**律师**的业务。在留资格的申请・补助金・公司设立文件，由**四葉行政書士事務所**（与本事务所是不同的事业体，另行签约）承接。以上均不收取介绍费。\n\n## 常见问题\n\n**Q. 既然freee能做到电子申请，委托社会保险劳务士还有意义吗？**\nA. 自家手续由自己提出的作业，软件就能完成。委托社会保险劳务士的，是「这项手续需不需要办・期限到何时・有哪些给付可用」的**判断**，以及只有资格者才能收取报酬代办的**制作・提出代行・事务代理**（社会保险劳务士法第2条第1项第1号〜第1号之3）。作业与判断是两回事。\n\n**Q. freee的电子申请需要什么？**\nA. 依官方说明页（2026年8月14日参阅），需要gBizID Prime账户，且仅限法人事业所。路径分为Mynaportal与e-Gov两种。功能与支持文件会改版，最新范围请以freee官方说明页为准。\n\n**Q. 顾问的社会保险劳务士会从freee里面代理申请吗？**\nA. freee官方说明页明确写着「目前不支持由社会保险劳务士进行的代理人申请」（2026年4月10日更新）。代理申请时，使用的是社会保险劳务士这一侧的系统。您可以继续使用freee人事労務，不需要更换软件。\n\n**Q. 年终调整也能委托社会保险劳务士吗？**\nA. freee人事労務有年终调整功能，但收取报酬代办属于税务领域，是**税理士**的业务。本事务所不承接，会为您介绍税理士，由您直接委任。不收取介绍费。\n\n## 本文依据\n\n- 社会保险劳务士法（昭和43年法律第89号）**第2条第1项第1号・第1号之2・第1号之3、第27条** ―― 2026年8月14日于e-Gov法令检索确认现行条文\n- 社会保险劳务士法施行令（昭和43年政令第327号）**第2条**（业务限制的解除） ―― 同日于e-Gov法令检索确认现行条文\n- freee人事労務的电子申请范围・gBizID Prime的必要性・不支持社会保险劳务士代理人申请 ―― freee帮助中心「从freee人事労務进行各类文件的电子申请」（2026年4月10日更新・2026年8月14日参阅）\n\n**freee的功能与支持文件会改版。考虑导入或运用时，请以freee官方说明页的最新信息为准。** 本文依据2026年8月时点的公开资料。\n\nfreee的AI功能进展到什么程度，整理于[freee人事労務与freee会計的AI整合，究竟进展到什么程度](/zh/labor/column/freee-jinji-kaikei-ai)。本事务所的费用见[报酬额表](/zh/labor/ryokin)，从咨询到签约的流程见[咨询到签约的流程](/zh/labor/nagare)。\n\n本文为一般性的信息提供。因应个别情事的判断，由具备资格者在面谈后进行。撰文者为[浦松丈二](/zh/about/uramatsu)（社会保险劳务士・行政书士・宅地建物取引士）。",
+          "category": "该委托谁",
+          "keywords": [
+            "freee人事労務 社会保险劳务士 委托什么",
+            "freee 电子申请 gBizID",
+            "顾问社会保险劳务士 做什么",
+            "社会保险劳务士 独占业务 电磁记录",
+            "freee 年终调整 该找谁",
+            "云端劳务软件 还需要社劳士吗"
+          ],
+          "tags": [
+            "freee",
+            "电子申请",
+            "社会保险劳务士",
+            "业务分界",
+            "顾问契约",
+            "gBizID"
+          ],
+          "author": {
+            "name": "浦松 丈二",
+            "title": "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+          },
+          "faq": [
+            {
+              "question": "既然freee能做到电子申请，委托社会保险劳务士还有意义吗？",
+              "answer": "自家手续由自己提出的作业，软件就能完成。委托社会保险劳务士的，是「这项手续需不需要办・期限到何时・有哪些给付可用」的判断，以及只有资格者才能收取报酬代办的制作・提出代行・事务代理（社会保险劳务士法第2条第1项第1号〜第1号之3）。作业与判断是两回事。"
+            },
+            {
+              "question": "freee的电子申请需要什么？",
+              "answer": "依官方说明页（2026年8月14日参阅），需要gBizID Prime账户，且仅限法人事业所。路径分为Mynaportal与e-Gov两种。功能与支持文件会改版，最新范围请以freee官方说明页为准。"
+            },
+            {
+              "question": "顾问的社会保险劳务士会从freee里面代理申请吗？",
+              "answer": "freee官方说明页明确写着「目前不支持由社会保险劳务士进行的代理人申请」（2026年4月10日更新）。代理申请时，使用的是社会保险劳务士这一侧的系统。您可以继续使用freee人事労務，不需要更换软件。"
+            },
+            {
+              "question": "年终调整也能委托社会保险劳务士吗？",
+              "answer": "freee人事労務有年终调整功能，但收取报酬代办属于税务领域，是税理士的业务。本事务所不承接，会为您介绍税理士，由您直接委任。不收取介绍费。"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "business": "labor",
+      "slug": "ai-de-shirabete-kara-soudan-shite-yoika",
+      "title": "AIに労務を聞いてから、社労士に相談してよいか",
+      "date": "2026-09-01",
+      "category": "誰に頼むか",
+      "excerpt": "かまいません。むしろ調べてからお越しいただくほうが、相談は速く進みます。ただしAIの答えは、条文の番号と施行日でずれることがあります。当事務所が一次資料で実際に見つけた誤りの実例とともに、AIで調べた結果の持ち込み方をご案内します。",
+      "content": "**結論（先に要点）**：かまいません。むしろ調べてからお越しいただくほうが、相談は速く進みます。ただしAIの答えは、**条文の番号と施行日**でずれることがあります。四葉でもAIは資料と論点の整理に使いますが、**判断は資格者が行います**。\n\nこのページは、労務の疑問をまずAIで調べてみた——そして「この答え、合っているのだろうか」と不安になった経営者・総務担当の方に向けたものです。調べた結果…（全3438字）",
+      "status": "published",
+      "author": {
+        "name": "浦松 丈二",
+        "title": "社会保険労務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+      },
+      "keywords": [
+        "AI 労務 相談 してよいか",
+        "生成AI 労務 答え合わせ",
+        "AI 調べた 社労士 相談",
+        "AI 条文 間違い 確認",
+        "労務 AI 正しいか 不安",
+        "社労士 AI どう使う"
+      ],
+      "tags": [
+        "AI",
+        "生成AI",
+        "労務相談",
+        "条文確認",
+        "相談の仕方"
+      ],
+      "locales": [],
+      "faq": [
+        {
+          "question": "AIで調べた内容を、そのまま持ち込んでいいのですか？",
+          "answer": "はい。スクリーンショットで構いません。あわせて、質問の前提にした会社の状況（業種・人数・雇用形態）と、「この答えのとおり進めてよいか」の一文があると、確認が速く進みます。ご相談は無料です。"
+        },
+        {
+          "question": "AIの答えは、どこが間違いやすいのですか？",
+          "answer": "制度の骨格はおおむね合っていることが多い一方、条文の番号・施行日・様式の有無といった細部でずれます。たとえば賃金請求権の時効は「一律3年」ではなく、労働基準法第115条と附則第143条第3項により、退職手当は5年・それ以外の賃金は当分の間3年です。"
+        },
+        {
+          "question": "四葉でもAIを使っているのですか？",
+          "answer": "使っています。ただし資料の整理・論点の洗い出し・構成の下書きまでで、条文・数字・様式は必ず一次資料で確認し、個別の事案への判断は資格者である代表が行います。AIの出力をそのまま回答としてお渡しすることはありません。"
+        },
+        {
+          "question": "AIの答えが合っていた場合も、相談料はかかりますか？",
+          "answer": "ご相談は無料です。合っていれば「合っています」とお伝えして終わります。そのうえで手続や規程の整備をご依頼いただく場合の料金は、報酬額表に沿って事前にお示しします。"
+        }
+      ],
+      "translations": {
+        "en": {
+          "title": "Can I ask an AI about a labour question first, and then consult a shakai hoken roumushi?",
+          "excerpt": "Of course. Coming in after you have looked it up actually makes the consultation faster. But AI answers drift at the level of article numbers and effective dates. We show real errors we caught against the primary sources, and how to bring in what you found. The first consultation is free.",
+          "content": "**In short:** of course. Coming in after you have looked it up actually makes the consultation faster. But AI answers drift at the level of **article numbers and effective dates**. At Yotsuba we use AI too — for organising materials and laying out the issues — while **judgement is made by the qualified professional**.\n\nThis page is for owners and back-office staff who asked an AI a labour question first — and then wondered, \"is this answer actually right?\" Bring what you found, exactly as it is.\n\n## Where are AI answers right, and where are they dangerous?\n\nFor the broad shape of a system and the way of thinking about it, they are mostly useful. The danger sits in the details where one character changes everything: **article numbers, effective dates, and whether a form exists at all**.\n\nThese are not borrowed examples. They are errors this office actually caught and corrected while writing this column series, by going back to the primary sources (the statute text on e-Gov).\n\n| The plausible answer | What the primary source says |\n|---|---|\n| \"Exempt under Article 6, paragraph 1, item 1 of the Employment Insurance Act\" | Article 6 of the Employment Insurance Act has no paragraphs; the correct citation is **\"Article 6, item 1\"** |\n| \"Wage claims prescribe uniformly in 3 years\" | The principle in Article 115 of the Labor Standards Act is 5 years. Under the substitution in Article 143, paragraph 3 of the Supplementary Provisions, **retirement allowances prescribe in 5 years, and other wages — for the time being — in 3** |\n| \"The Japan–China Social Security Agreement exemption applies where the posting is expected to be within 5 years\" | It is not an expectation test: the exemption from the other country's system covers **the first 5 years from the start of the posting** (per materials published by the Japan Pension Service) |\n| \"On closing the business, file the labour insurance relationship extinction notification\" | No such filing **exists**. The insurance relationship is extinguished **by operation of law on the day after** the business is abolished or ends (Act on the Collection of Labour Insurance Premiums, Article 5) |\n\nEach of these points in a plausible direction. But the first two are wrong as citations, the third gets the structure of the requirement wrong, and the fourth is **a procedure that does not exist**. Hunting for a non-existent filing across counters and search results costs you time by itself.\n\n## Why do the article numbers and effective dates drift?\n\nThere are structural reasons, common to AI and to explanatory articles on the web.\n\n- **Statutes move when they are amended.** Explanations of the pre-amendment law stay online, and answers that learned from or cite them show the old shape\n- **Transitional measures live in the supplementary provisions.** Read only the main text and you get \"5 years\"; read the supplementary provisions and you get \"3 years for the time being\" — the Labor Standards Act limitation period is exactly this shape\n- **Plausible-sounding forms get invented.** From the general rule that procedures need filings, a filing name is generated that does not exist\n\nThat is why article numbers, effective dates and form names need to be **checked against primary sources such as e-Gov before use**. This holds whether or not an AI is involved.\n\n## How does Yotsuba use AI?\n\nThis office uses AI as well. We draw the line as follows.\n\n- What we hand to AI: **organising materials, surfacing the issues, drafting structure** — that far\n- **Statutes, figures and forms are always checked against the primary sources.** The errors in the table above were found in exactly that checking\n- **Judgement on an individual matter is made by the qualified representative.** We never pass AI output on as an answer as it stands\n\nThe same approach applies in the work of 四葉不動産 and 四葉行政書士事務所 (each an independent business, engaged separately).\n\n## How should I bring in what the AI told me?\n\nWe welcome consultations at the stage where you feel it is \"probably not worth a consultation yet\". **Checking an AI answer** is a perfectly good way in. Three things make it fast.\n\n| What to bring | Form |\n|---|---|\n| The AI's answer | **A screenshot is fine** (with the prompt included, we can check even more precisely) |\n| Your company's context | Industry, headcount, employment types — whatever the question assumed |\n| What you want confirmed | One sentence — \"can we proceed as this answer says?\" — is enough |\n\n**Consultation is free of charge.** If the answer is right, it ends with \"it's right.\" If it drifts, we show you where and how, alongside the statute.\n\n## What can 四葉社会保険労務士事務所 do?\n\n四葉社会保険労務士事務所, in Kohinata, Bunkyo City, handles the preparation, agent filing and procedural representation of labour and social insurance filings, together with labour consultation and the drafting and revision of work rules. What you can handle yourselves with AI and software stays with you; **we take only the parts that need judgement**. Fees are published in the [fee schedule](/en/labor/ryokin), and the questions we are asked most often are collected on the [FAQ page](/en/labor/faq).\n\n### Whom to consult\n\nTax (including the year-end adjustment) is work for **a tax accountant**; registration for **a judicial scrivener**; matters already in dispute for **an attorney**. Residence-status applications, subsidies and company-formation documents are handled by **四葉行政書士事務所** (a separate business from this office, engaged under a separate contract). In every case, no referral fees change hands.\n\n## Frequently asked questions\n\n**Q. Can I really bring in what the AI told me, as it is?**\nA. Yes. A screenshot is fine. Add the context the question assumed (industry, headcount, employment types) and one sentence — \"can we proceed as this answer says?\" — and the check goes quickly. Consultation is free.\n\n**Q. Where do AI answers tend to go wrong?**\nA. The broad shape of a system is usually about right; the drift is in details — article numbers, effective dates, whether a form exists. For example, wage claims do not prescribe \"uniformly in 3 years\": under Article 115 of the Labor Standards Act and Article 143, paragraph 3 of the Supplementary Provisions, retirement allowances prescribe in 5 years and other wages, for the time being, in 3.\n\n**Q. Does Yotsuba itself use AI?**\nA. Yes — for organising materials, surfacing issues and drafting structure. Statutes, figures and forms are always checked against primary sources, and judgement on individual matters is made by the qualified representative. AI output is never passed on as an answer as it stands.\n\n**Q. If the AI's answer turns out to be right, do I still pay for the consultation?**\nA. Consultation is free. If the answer is right, we tell you so and that is the end of it. If you then engage us for procedures or drafting of rules, the fees are shown in advance, following the fee schedule.\n\n## Sources for this article\n\n- Employment Insurance Act (雇用保険法, Act No. 116 of 1974), **Article 6** — current text confirmed on e-Gov on 14 August 2026 (no paragraph divisions; items 1 through 6)\n- Labor Standards Act (労働基準法, Act No. 49 of 1947), **Article 115; Article 143, paragraph 3 of the Supplementary Provisions** — current text confirmed on e-Gov the same day\n- Act on the Collection, etc. of Insurance Premiums of Labor Insurance (労働保険の保険料の徴収等に関する法律, Act No. 84 of 1969), **Article 5** — current text confirmed on e-Gov the same day\n- Agreement between Japan and the People's Republic of China on Social Security — Japan Pension Service, country page for China (viewed 14 August 2026)\n\nThe background to the third and fourth examples is covered in detail in [How overseas business trips and overseas postings differ for workers' compensation](/en/labor/column/kaigai-shucho-haken-rosai-chigai) and [The social and labour insurance procedures when you close a company](/en/labor/column/kaisha-tatamu-shakaihoken-zenso-tetsuzuki). Where freee's AI features stand now is set out in [How far has the AI integration between freee HR and freee Accounting actually come?](/en/labor/column/freee-jinji-kaikei-ai).\n\nThis article is general information. Judgments that fit your particular circumstances are made by a qualified professional after a meeting. Written by [Joji Uramatsu](/en/about/uramatsu) (Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist).",
+          "category": "Who to ask",
+          "keywords": [
+            "ask AI about labour law first",
+            "check AI answer with a consultant",
+            "AI got the article number wrong",
+            "generative AI labour advice reliable",
+            "bring AI answer to shakai hoken roumushi",
+            "AI answer check free consultation"
+          ],
+          "tags": [
+            "AI",
+            "generative AI",
+            "labour consultation",
+            "checking statutes",
+            "how to consult"
+          ],
+          "author": {
+            "name": "Joji Uramatsu",
+            "title": "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所"
+          },
+          "faq": [
+            {
+              "question": "Can I really bring in what the AI told me, as it is?",
+              "answer": "Yes. A screenshot is fine. Add the context the question assumed (industry, headcount, employment types) and one sentence — \"can we proceed as this answer says?\" — and the check goes quickly. Consultation is free."
+            },
+            {
+              "question": "Where do AI answers tend to go wrong?",
+              "answer": "The broad shape of a system is usually about right; the drift is in details — article numbers, effective dates, whether a form exists. For example, wage claims do not prescribe \"uniformly in 3 years\": under Article 115 of the Labor Standards Act and Article 143, paragraph 3 of the Supplementary Provisions, retirement allowances prescribe in 5 years and other wages, for the time being, in 3."
+            },
+            {
+              "question": "Does Yotsuba itself use AI?",
+              "answer": "Yes — for organising materials, surfacing issues and drafting structure. Statutes, figures and forms are always checked against primary sources, and judgement on individual matters is made by the qualified representative. AI output is never passed on as an answer as it stands."
+            },
+            {
+              "question": "If the AI's answer turns out to be right, do I still pay for the consultation?",
+              "answer": "Consultation is free. If the answer is right, we tell you so and that is the end of it. If you then engage us for procedures or drafting of rules, the fees are shown in advance, following the fee schedule."
+            }
+          ]
+        },
+        "zh-tw": {
+          "title": "先問AI勞務問題，再諮詢社會保險勞務士，可以嗎",
+          "excerpt": "當然可以。先查過再來，諮詢反而更快。不過AI的答案，常在條文號碼與施行日這一層出現偏差。本文列出本事務所對照一次資料實際發現的錯誤實例，並說明如何把查到的內容帶來諮詢。諮詢免費。",
+          "content": "**結論（先講重點）**：當然可以。先查過再來，諮詢反而更快。不過AI的答案，常在**條文號碼與施行日**這一層出現偏差。四葉也使用AI——用於資料與論點的整理——但**判斷由具備資格者進行**。\n\n本頁面寫給先用AI查了勞務問題——然後開始不安「這個答案到底對不對」的經營者與總務人員。查到的內容，請原樣帶來。\n\n## AI的答案，哪裡是對的，哪裡危險？\n\n關於制度的骨架與思考方式，大致有用。危險的是**條文號碼・施行日・格式（樣式）是否存在**這些一字之差就變成另一回事的部分。\n\n這不是借來的一般論。是本事務所在撰寫這一系列專欄的過程中，重新對照一次資料（e-Gov法令檢索的條文原文），實際予以更正的錯誤實例。\n\n| 看似合理的答案 | 一次資料確認的事實 |\n|---|---|\n| 「依雇用保險法第6條第1項第1號屬適用除外」 | 雇用保險法第6條沒有項的區分，正確引用是**「第6條第1號」** |\n| 「工資請求權的時效一律3年」 | 勞動基準法第115條的原則是5年。經附則第143條第3項的替換讀法，**退職金5年、其他工資當分期間（暫時）3年** |\n| 「日中社會保障協定的免除，以派遣預計5年以內為條件」 | 不是「預計」的要件，而是**自派遣開始起最初的5年間**免除對方國制度的適用（依日本年金機構的公開資料） |\n| 「歇業時要提出勞動保險的保險關係消滅申報書」 | 這種申報**不存在**。保險關係於事業廢止・終了的**翌日依法律當然消滅**（勞動保險保險費徵收等相關法律第5條） |\n\n每一條的結論方向看起來都像那麼回事。但第1、2條作為引用是錯的，第3條把要件的結構弄錯了，第4條是**不存在的手續**。為了找一個不存在的申報書而奔走於窗口與搜尋之間，這本身就是時間的損失。\n\n## 為什麼會在條文號碼與施行日出現偏差？\n\n不限於AI，網路上的解說文章也有共通的結構性原因。\n\n- **法律會因修正而變動條號與內容。** 修正前的解說留在網路上，學習・參照了它們的答案，呈現的是舊的樣貌\n- **過渡措施放在附則裡。** 只讀本則是「5年」，讀到附則才是「當分期間3年」——勞動基準法的時效正是這個形狀\n- **會生成「看似存在」的格式名稱。** 從「手續需要申報」這一般法則類推，生成了不存在的申報書名稱\n\n正因如此，條文號碼・施行日・格式名稱，必須**先在e-Gov法令檢索等一次資料上確認**再使用。不使用AI時也一樣。\n\n## 四葉是怎麼使用AI的？\n\n本事務所也使用AI。但劃了一條線。\n\n- 交給AI的，是**資料整理・論點盤點・架構草稿**為止\n- **條文・數字・格式，必定以一次資料確認。** 上表的錯誤，正是在這個確認過程中發現的\n- **個別案件的判斷，由具備資格的代表進行。** 不會把AI的輸出原樣作為回答交給您\n\n這個思路，在四葉不動産與四葉行政書士事務所的業務中也相同（各自作為獨立的事業體，分別承接業務）。\n\n## 用AI查到的內容，該怎麼帶來？\n\n「好像還不到需要諮詢的程度」——本事務所歡迎正處於這個階段的諮詢。以**「核對AI的答案」**作為入口就可以。帶上下面3樣，確認會更快。\n\n| 帶來的東西 | 形式 |\n|---|---|\n| AI的回答 | **截圖即可**（連同提問內容一起，能確認得更精確） |\n| 公司的前提 | 行業・人數・僱用形態等，提問時作為前提的資訊 |\n| 想確認的事 | 「照這個答案進行可以嗎」一句話就夠了 |\n\n**諮詢免費。** 答案是對的，就以「是對的」結束；有偏差，就連同條文一起告訴您偏在哪裡、怎麼偏的。\n\n## 四葉社会保険労務士事務所能做什麼？\n\n位於文京區小日向的四葉社会保険労務士事務所，承接勞動社會保險手續的製作・提出代行・事務代理，以及勞務諮詢、就業規則的制定與修訂。能用AI與軟體自行處理的部分照樣保留，**只把需要判斷的部分交給我們**。費用公開於[報酬額表](/zh-tw/labor/ryokin)，常被詢問的問題整理於[常見問答](/zh-tw/labor/faq)。\n\n### 該向誰諮詢\n\n稅務（含年終調整）是**稅理士**的業務，登記是**司法書士**的業務，已發生爭議的案件是**律師**的業務。在留資格的申請・補助金・公司設立文件，由**四葉行政書士事務所**（與本事務所是不同的事業體，另行簽約）承接。以上均不收取介紹費。\n\n## 常見問題\n\n**Q. 用AI查到的內容，可以原樣帶來嗎？**\nA. 可以。截圖即可。再附上提問時的前提（行業・人數・僱用形態），以及「照這個答案進行可以嗎」一句話，確認會更快。諮詢免費。\n\n**Q. AI的答案容易錯在哪裡？**\nA. 制度的骨架大多是對的，偏差出現在細節——條文號碼・施行日・格式是否存在。例如工資請求權的時效不是「一律3年」：依勞動基準法第115條與附則第143條第3項，退職金是5年，其他工資當分期間（暫時）是3年。\n\n**Q. 四葉自己也用AI嗎？**\nA. 用。但只到資料整理・論點盤點・架構草稿為止。條文・數字・格式必定以一次資料確認，個別案件的判斷由具備資格的代表進行。不會把AI的輸出原樣作為回答交給您。\n\n**Q. 如果AI的答案是對的，諮詢也要收費嗎？**\nA. 諮詢免費。答案對的話，告訴您「是對的」就結束。之後若委託手續或規程的整備，費用依報酬額表事先向您提示。\n\n## 本文依據\n\n- 雇用保險法（昭和49年法律第116號）**第6條** ―― 2026年8月14日於e-Gov法令檢索確認現行條文（無項的區分・第1號〜第6號）\n- 勞動基準法（昭和22年法律第49號）**第115條、附則第143條第3項** ―― 同日於e-Gov法令檢索確認現行條文\n- 勞動保險保險費徵收等相關法律（労働保険の保険料の徴収等に関する法律。昭和44年法律第84號）**第5條** ―― 同日於e-Gov法令檢索確認現行條文\n- 日本國政府與中華人民共和國政府間的社會保障協定 ―― 日本年金機構「協定相手國別資訊（中國）」（2026年8月14日參閱）\n\n第3、4個實例的背景，詳見[海外出差與海外派遣的勞災有何不同](/zh-tw/labor/column/kaigai-shucho-haken-rosai-chigai)與[結束公司時的社會保險・勞動保險手續](/zh-tw/labor/column/kaisha-tatamu-shakaihoken-zenso-tetsuzuki)。freee的AI功能現況，整理於[freee人事労務與freee会計的AI整合，究竟進展到什麼程度](/zh-tw/labor/column/freee-jinji-kaikei-ai)。\n\n本文為一般性的資訊提供。因應個別情事的判斷，由具備資格者在面談後進行。撰文者為[浦松丈二](/zh-tw/about/uramatsu)（社會保險勞務士・行政書士・宅地建物取引士）。",
+          "category": "該委託誰",
+          "keywords": [
+            "先問AI 勞務 再諮詢",
+            "AI答案 對不對 社會保險勞務士",
+            "AI 條文號碼 錯誤",
+            "生成式AI 勞務 可信嗎",
+            "AI答案 帶去諮詢",
+            "AI 答案核對 免費諮詢"
+          ],
+          "tags": [
+            "AI",
+            "生成式AI",
+            "勞務諮詢",
+            "條文確認",
+            "諮詢方式"
+          ],
+          "author": {
+            "name": "浦松 丈二",
+            "title": "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+          },
+          "faq": [
+            {
+              "question": "用AI查到的內容，可以原樣帶來嗎？",
+              "answer": "可以。截圖即可。再附上提問時的前提（行業・人數・僱用形態），以及「照這個答案進行可以嗎」一句話，確認會更快。諮詢免費。"
+            },
+            {
+              "question": "AI的答案容易錯在哪裡？",
+              "answer": "制度的骨架大多是對的，偏差出現在細節——條文號碼・施行日・格式是否存在。例如工資請求權的時效不是「一律3年」：依勞動基準法第115條與附則第143條第3項，退職金是5年，其他工資當分期間（暫時）是3年。"
+            },
+            {
+              "question": "四葉自己也用AI嗎？",
+              "answer": "用。但只到資料整理・論點盤點・架構草稿為止。條文・數字・格式必定以一次資料確認，個別案件的判斷由具備資格的代表進行。不會把AI的輸出原樣作為回答交給您。"
+            },
+            {
+              "question": "如果AI的答案是對的，諮詢也要收費嗎？",
+              "answer": "諮詢免費。答案對的話，告訴您「是對的」就結束。之後若委託手續或規程的整備，費用依報酬額表事先向您提示。"
+            }
+          ]
+        },
+        "zh": {
+          "title": "先问AI劳务问题，再咨询社会保险劳务士，可以吗",
+          "excerpt": "当然可以。先查过再来，咨询反而更快。不过AI的答案，常在条文号码与施行日这一层出现偏差。本文列出本事务所对照一次资料实际发现的错误实例，并说明如何把查到的内容带来咨询。咨询免费。",
+          "content": "**结论（先讲重点）**：当然可以。先查过再来，咨询反而更快。不过AI的答案，常在**条文号码与施行日**这一层出现偏差。四叶也使用AI——用于资料与论点的整理——但**判断由具备资格者进行**。\n\n本页面写给先用AI查了劳务问题——然后开始不安「这个答案到底对不对」的经营者与总务人员。查到的内容，请原样带来。\n\n## AI的答案，哪里是对的，哪里危险？\n\n关于制度的骨架与思考方式，大致有用。危险的是**条文号码・施行日・格式（样式）是否存在**这些一字之差就变成另一回事的部分。\n\n这不是借来的一般论。是本事务所在撰写这一系列专栏的过程中，重新对照一次资料（e-Gov法令检索的条文原文），实际予以更正的错误实例。\n\n| 看似合理的答案 | 一次资料确认的事实 |\n|---|---|\n| 「依雇用保险法第6条第1项第1号属适用除外」 | 雇用保险法第6条没有项的区分，正确引用是**「第6条第1号」** |\n| 「工资请求权的时效一律3年」 | 劳动基准法第115条的原则是5年。经附则第143条第3项的替换读法，**退职金5年、其他工资当分期间（暂时）3年** |\n| 「日中社会保障协定的免除，以派遣预计5年以内为条件」 | 不是「预计」的要件，而是**自派遣开始起最初的5年间**免除对方国制度的适用（依日本年金机构的公开资料） |\n| 「歇业时要提出劳动保险的保险关系消灭申报书」 | 这种申报**不存在**。保险关系于事业废止・终了的**翌日依法律当然消灭**（劳动保险保险费征收等相关法律第5条） |\n\n每一条的结论方向看起来都像那么回事。但第1、2条作为引用是错的，第3条把要件的结构弄错了，第4条是**不存在的手续**。为了找一个不存在的申报书而奔走于窗口与搜索之间，这本身就是时间的损失。\n\n## 为什么会在条文号码与施行日出现偏差？\n\n不限于AI，网络上的解说文章也有共通的结构性原因。\n\n- **法律会因修正而变动条号与内容。** 修正前的解说留在网络上，学习・参照了它们的答案，呈现的是旧的样貌\n- **过渡措施放在附则里。** 只读本则是「5年」，读到附则才是「当分期间3年」——劳动基准法的时效正是这个形状\n- **会生成「看似存在」的格式名称。** 从「手续需要申报」这一般法则类推，生成了不存在的申报书名称\n\n正因如此，条文号码・施行日・格式名称，必须**先在e-Gov法令检索等一次资料上确认**再使用。不使用AI时也一样。\n\n## 四叶是怎么使用AI的？\n\n本事务所也使用AI。但划了一条线。\n\n- 交给AI的，是**资料整理・论点盘点・架构草稿**为止\n- **条文・数字・格式，必定以一次资料确认。** 上表的错误，正是在这个确认过程中发现的\n- **个别案件的判断，由具备资格的代表进行。** 不会把AI的输出原样作为回答交给您\n\n这个思路，在四葉不動産与四葉行政書士事務所的业务中也相同（各自作为独立的事业体，分别承接业务）。\n\n## 用AI查到的内容，该怎么带来？\n\n「好像还不到需要咨询的程度」——本事务所欢迎正处于这个阶段的咨询。以**「核对AI的答案」**作为入口就可以。带上下面3样，确认会更快。\n\n| 带来的东西 | 形式 |\n|---|---|\n| AI的回答 | **截图即可**（连同提问内容一起，能确认得更精确） |\n| 公司的前提 | 行业・人数・雇用形态等，提问时作为前提的信息 |\n| 想确认的事 | 「照这个答案进行可以吗」一句话就够了 |\n\n**咨询免费。** 答案是对的，就以「是对的」结束；有偏差，就连同条文一起告诉您偏在哪里、怎么偏的。\n\n## 四葉社会保険労務士事務所能做什么？\n\n位于文京区小日向的四葉社会保険労務士事務所，承接劳动社会保险手续的制作・提出代行・事务代理，以及劳务咨询、就业规则的制定与修订。能用AI与软件自行处理的部分照样保留，**只把需要判断的部分交给我们**。费用公开于[报酬额表](/zh/labor/ryokin)，常被询问的问题整理于[常见问答](/zh/labor/faq)。\n\n### 该向谁咨询\n\n税务（含年终调整）是**税理士**的业务，登记是**司法书士**的业务，已发生争议的案件是**律师**的业务。在留资格的申请・补助金・公司设立文件，由**四葉行政書士事務所**（与本事务所是不同的事业体，另行签约）承接。以上均不收取介绍费。\n\n## 常见问题\n\n**Q. 用AI查到的内容，可以原样带来吗？**\nA. 可以。截图即可。再附上提问时的前提（行业・人数・雇用形态），以及「照这个答案进行可以吗」一句话，确认会更快。咨询免费。\n\n**Q. AI的答案容易错在哪里？**\nA. 制度的骨架大多是对的，偏差出现在细节——条文号码・施行日・格式是否存在。例如工资请求权的时效不是「一律3年」：依劳动基准法第115条与附则第143条第3项，退职金是5年，其他工资当分期间（暂时）是3年。\n\n**Q. 四叶自己也用AI吗？**\nA. 用。但只到资料整理・论点盘点・架构草稿为止。条文・数字・格式必定以一次资料确认，个别案件的判断由具备资格的代表进行。不会把AI的输出原样作为回答交给您。\n\n**Q. 如果AI的答案是对的，咨询也要收费吗？**\nA. 咨询免费。答案对的话，告诉您「是对的」就结束。之后若委托手续或规程的整备，费用依报酬额表事先向您提示。\n\n## 本文依据\n\n- 雇用保险法（昭和49年法律第116号）**第6条** ―― 2026年8月14日于e-Gov法令检索确认现行条文（无项的区分・第1号〜第6号）\n- 劳动基准法（昭和22年法律第49号）**第115条、附则第143条第3项** ―― 同日于e-Gov法令检索确认现行条文\n- 劳动保险保险费征收等相关法律（労働保険の保険料の徴収等に関する法律。昭和44年法律第84号）**第5条** ―― 同日于e-Gov法令检索确认现行条文\n- 日本国政府与中华人民共和国政府间的社会保障协定 ―― 日本年金机构「协定相手国别信息（中国）」（2026年8月14日参阅）\n\n第3、4个实例的背景，详见[海外出差与海外派遣的劳灾有何不同](/zh/labor/column/kaigai-shucho-haken-rosai-chigai)与[结束公司时的社会保险・劳动保险手续](/zh/labor/column/kaisha-tatamu-shakaihoken-zenso-tetsuzuki)。freee的AI功能现况，整理于[freee人事労務与freee会計的AI整合，究竟进展到什么程度](/zh/labor/column/freee-jinji-kaikei-ai)。\n\n本文为一般性的信息提供。因应个别情事的判断，由具备资格者在面谈后进行。撰文者为[浦松丈二](/zh/about/uramatsu)（社会保险劳务士・行政书士・宅地建物取引士）。",
+          "category": "该委托谁",
+          "keywords": [
+            "先问AI 劳务 再咨询",
+            "AI答案 对不对 社会保险劳务士",
+            "AI 条文号码 错误",
+            "生成式AI 劳务 可信吗",
+            "AI答案 带去咨询",
+            "AI 答案核对 免费咨询"
+          ],
+          "tags": [
+            "AI",
+            "生成式AI",
+            "劳务咨询",
+            "条文确认",
+            "咨询方式"
+          ],
+          "author": {
+            "name": "浦松 丈二",
+            "title": "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+          },
+          "faq": [
+            {
+              "question": "用AI查到的内容，可以原样带来吗？",
+              "answer": "可以。截图即可。再附上提问时的前提（行业・人数・雇用形态），以及「照这个答案进行可以吗」一句话，确认会更快。咨询免费。"
+            },
+            {
+              "question": "AI的答案容易错在哪里？",
+              "answer": "制度的骨架大多是对的，偏差出现在细节——条文号码・施行日・格式是否存在。例如工资请求权的时效不是「一律3年」：依劳动基准法第115条与附则第143条第3项，退职金是5年，其他工资当分期间（暂时）是3年。"
+            },
+            {
+              "question": "四叶自己也用AI吗？",
+              "answer": "用。但只到资料整理・论点盘点・架构草稿为止。条文・数字・格式必定以一次资料确认，个别案件的判断由具备资格的代表进行。不会把AI的输出原样作为回答交给您。"
+            },
+            {
+              "question": "如果AI的答案是对的，咨询也要收费吗？",
+              "answer": "咨询免费。答案对的话，告诉您「是对的」就结束。之后若委托手续或规程的整备，费用依报酬额表事先向您提示。"
             }
           ]
         }
