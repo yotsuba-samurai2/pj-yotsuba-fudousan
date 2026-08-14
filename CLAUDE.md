@@ -1,4 +1,4 @@
-# モノレポテンプレート
+# luck428.com（pj-yotsuba-fudousan）
 
 - **Framework**: Next.js 16 (App Router) + TypeScript
 - **CSS**: Tailwind CSS v4 + shadcn/ui (New York)
@@ -6,6 +6,87 @@
 - **BaaS**: Supabase (Auth + DB)
 - **Validation**: Zod
 - **Package Manager**: npm
+- **Hosting**: Firebase App Hosting（`apphosting.yaml`）
+
+---
+
+# ★このリポジトリの運用ルール【2026-08-14 統一】
+
+## 1. 作業場所は `~/pj-yotsuba-fudousan` だけ
+
+**`~/Documents/…/四葉基幹CRM/pj-yotsuba-fudousan` は使わない。** 2026-08-14に統一した。理由は2つとも実測で確認している。
+
+| 問題 | 原因 |
+|---|---|
+| `next build` が `TurbopackInternalError: char boundary` で落ちる | パスに**日本語**（`四葉基幹CRM`）が含まれる。Turbopackがマルチバイト境界でpanicする |
+| 「◯◯ 2.md」という重複ファイルが繰り返し生まれる | `~/Documents` が**同期対象**。書き込みと同期が競合して複製ができる |
+
+`~/pj-yotsuba-fudousan` は**同期対象外・ASCIIパス**なので、どちらも起きない。**同じリポジトリのクローンを2つ持たない。**
+
+## 2. 環境変数は `.env.local`
+
+`.env.example` をコピーして値を入れる。`.gitignore` の `.env*` に該当するためコミットされない。
+
+```bash
+cp .env.example .env.local   # 値は Supabase のダッシュボードから
+```
+
+**これが無いと動かないもの**：`npx tsx scripts/seed-*.ts --write`（DB投入）／`npm run dev`／`npx next build`（`/column/[slug]` のデータ取得で落ちる）。
+
+## 3. 着手前に必ずやること
+
+```bash
+cd ~/pj-yotsuba-fudousan && git pull --ff-only origin main
+```
+
+**企画書・TODOに書かれた「未着手」を信じない。** 2026-08-14、企画書が「未着手」としていた作業が、実際には別セッションで完了・本番反映済みだった（`/legal/services/ikuseishuro-gaibu-kansa` の参考様式2-5号追記）。**着手直前に `git log -- <該当ファイル>` とファイル実体を見る。**
+
+同じ理由で、**スキルのキャッシュも信じない**。セッション開始時に配布された SKILL.md は同日中に更新されていることがある。
+
+## 4. `/labor`（社労士サイト）の扱い
+
+`SR_LAUNCHED=false` の間は `(labor)/layout.tsx` が `notFound()` を返す。**本番404・sitemap未収載**。
+
+- 既存確認は**サイトマップではなくリポジトリ**で行う（`scripts/labor-columns/`、`scripts/seed-labor-columns.ts` の ARTICLES）
+- 表示確認は `NEXT_PUBLIC_SR_LAUNCHED=true npm run dev`
+- **検証は `SR_LAUNCHED` の両状態で行う**（`yotsuba-sharoushi-kaigyo` 第4条）
+
+## 5. コラムを追加する手順
+
+1. 原稿 `scripts/labor-columns/NN-slug.md` を書く（H1なし・「**結論（先に要点）**：」開始・H2は疑問文・FAQ4問・「この記事の根拠」・末尾に判断留保と著者リンク）
+2. 翻訳 `scripts/labor-columns/{en,zh-tw,zh}/NN-slug.md`（フロントマター付き・内部リンクにロケール前置）
+3. `scripts/seed-labor-columns.ts` の ARTICLES に登録
+4. `npx tsx scripts/seed-labor-columns.ts` → **「OK: 全チェック通過」を確認**
+5. `npx tsx scripts/seed-labor-columns.ts --emit-ts` → **忘れると管理画面に並ばない**
+6. PRを出す（マージは指示を受けてから）
+7. マージ・デプロイ後に DB 投入（`--write` か `/admin/columns/seed-labor`）
+
+**バリデータに引っかかったら、まずバリデータ側を疑う。** 2026-08-14、社労士法第27条の条文（「社会保険労務士**又は社会保険労務士法人**でない者は」）の訳出が誤検知でNGになった。**記事を歪めて検査を通さない。**
+
+## 6. 出す前の検証
+
+```bash
+npx tsc --noEmit -p tsconfig.json      # 本PRのファイルにエラーが無いこと
+npx eslint <変更ファイル>               # error 0
+npx vitest run                          # 231件（2026-08-14時点）
+npx tsx scripts/seed-labor-columns.ts   # OK: 全チェック通過
+```
+
+**既存のエラーと自分が出したエラーを混ぜない。** `@prisma/client`・`@supabase/supabase-js` 由来の型エラーは `.env.local` と `prisma generate` の有無による既存事象。
+
+## 7. PR運用
+
+squash マージ。コミット件名は `type(scope): 要約 (#PR番号)`。**マージと本番反映は浦松の指示を受けてから。**
+
+## 8. 開業日（2026-09-01）にやること
+
+`NEXT_PUBLIC_SR_LAUNCHED=true` → 再デプロイ → 152URL（38本×4言語）が一斉公開。**その後**にGSCのインデックス登録（1日10〜12件・13〜15日／`luck428-column-seo` 第10条）。**公開前にリクエストすると404のURLを出して枠を捨てる。**
+
+## 9. 併用する規程
+
+`shigyo-compliance-gate`（最優先）／`luck428-column-seo`（カニバリ防止・記事の型）／`yotsuba-sharoushi-kaigyo`（開業の順序）／`yotsuba-ledger-gate`／`yotsuba-model-routing`。
+
+---
 
 ## コア原則
 
