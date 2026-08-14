@@ -4739,5 +4739,920 @@ export const LABOR_COLUMNS_SEED: LaborSeedColumn[] = [
         ]
       }
     }
+  },
+  {
+    "business": "labor",
+    "slug": "saiyo-sharoushi-doko-made-tanomeru",
+    "title": "社労士に、採用の何を頼めて、何を頼めないのか",
+    "date": "2026-09-01",
+    "category": "誰に頼むか",
+    "excerpt": "求人票の労働条件、内定から入社までの書面と手続、採用助成金の入口設計——ここは社会保険労務士の領域です。一方、求職者の紹介・あっせんは扱えません。有料の職業紹介は厚生労働大臣の許可が要る事業だからです（職業安定法第30条第1項）。線を引いて整理します。",
+    "content": "**結論（先に要点）**：求人票の労働条件、選考の進め方の整理、内定から入社までの書面と手続、採用に絡む助成金の入口設計——ここは社会保険労務士の領域です。一方、**求職者の紹介・あっせんは扱えません**。雇用関係の成立をあっせんすることは「職業紹介」にあたり、有料で行うには**厚生労働大臣の許可**が要る事業だからです。\n\nこのページは、採用まわりの仕事を外に頼もうとしている中小企業の経営者・総務担当の方に向けたものです。当事務所の[募集・採用の労務サポート](/labor/services/saiyo)の、コラム側の入口でもあります。\n\n## 採用のどこからどこまでが、社会保険労務士の仕事か？\n\n[報酬額表](/labor/ryokin)の「募集・採用コンサルタント」の中身を、線を引いて示します。\n\n| 区分 | 中身 |\n|---|---|\n| **お受けするもの** | [求人票の労働条件の設計](/labor/column/kyujin-hyo-meiji-jiko-roudou-joken)（明示義務への適合）／選考の進め方の整理／[内定通知書などの書面整備](/labor/column/naitei-torikeshi-dekiruka)／入社手続（雇入れ時の健康診断の段取り〔労働安全衛生規則第43条〕・社会保険・雇用保険の資格取得）／[採用で使える助成金の入口設計](/labor/column/saiyo-joseikin-iriguchi-de-kimaru) |\n| **取り扱っていないもの** | **求職者の紹介・あっせん**／応募者の**面接代行**／求人媒体の**運用代行** |\n\n「取り扱っていない」の側は、できるのにやらないのではありません。**法律上、扱えない・扱うべきでない**ものです。次の章で理由を書きます。\n\n## なぜ「紹介」だけ、頼めないのか？\n\n職業安定法第4条第1項は、「職業紹介」を**「求人及び求職の申込みを受け、求人者と求職者との間における雇用関係の成立をあつせんすること」**と定義しています。そして**有料の職業紹介事業は、厚生労働大臣の許可**を受けなければ行えません（同法第30条第1項）。\n\nつまり「いい人を探してきて引き合わせる」は、報酬を得て行うなら**許可事業**です。社会保険労務士の資格は、この許可の代わりになりません。当事務所が求職者の紹介・あっせんを「取り扱っておりません」と料金表に明記しているのは、この線を守るためです。**紹介料の授受も行いません。**\n\nなお、募集そのものを社外の人に報酬を払って任せる場合は「委託募集」という別の枠組みがあり、厚生労働大臣の**許可**（無報酬なら**届出**）が必要です（同法第36条）。ここも当事務所の業務ではなく、制度の存在をお伝えするにとどめます。\n\n## 人材紹介会社と、何が違うのか？\n\n競合ではなく、**役割が違います**。並べると選びやすくなります。\n\n| | 人材紹介会社（有料職業紹介事業者） | 社会保険労務士 |\n|---|---|---|\n| 何をする | 候補者を探して引き合わせる（マッチング） | 採用の**中身**を整える（労働条件・書面・手続・助成金の入口） |\n| 根拠 | 厚生労働大臣の許可（職業安定法第30条第1項） | 社会保険労務士法に基づく国家資格 |\n| 費用の形 | 成功報酬が一般的 | 顧問料または一式見積り（[報酬額表](/labor/ryokin)） |\n\n紹介会社に人を探してもらいながら、求人票・内定書面・入社手続は社会保険労務士に——という**併用**が、実務ではいちばん多い形です。\n\n## 外国人を採るときは、誰に何を頼むのか？\n\n採用に在留資格が絡むと、担当がもう1つ増えます。**在留資格の申請・変更は四葉行政書士事務所**（当事務所とは別の事業体・別々にご契約いただきます）、**住まいの確保は四葉不動産株式会社**（同）、**雇い入れたあとの労務・社会保険は当事務所**です。全体の時系列は[外国人を1人雇うと、窓口はいくつ必要か](/labor/column/gaikokujin-koyo-madoguchi-wakekata)に、留学生の新卒採用は[留学生を4月1日入社にできるか](/labor/column/ryugakusei-shinsotsu-nyusha-bi-zairyu-henko)にまとめています。\n\n## 四葉社会保険労務士事務所は、何ができますか？\n\n文京区小日向の四葉社会保険労務士事務所は、[募集・採用の労務サポート](/labor/services/saiyo)として、求人票の労働条件の設計から内定書面、入社手続、採用助成金の入口設計までをお受けします。料金は[報酬額表](/labor/ryokin)の「募集・採用コンサルタント」（一式・お見積り）です。**ご相談は無料です。** 「どこを自社でやり、どこを頼むか」の仕分けからご一緒します。\n\n### 誰に相談するか\n\n求職者の紹介・あっせんは**許可を受けた職業紹介事業者**へ。在留資格の申請・変更・更新は**四葉行政書士事務所**、社宅・住まいは**四葉不動産株式会社**（いずれも当事務所とは別の事業体で、別々にご契約いただきます）。給与課税・年末調整は**税理士**、紛争性が生じた事案は**弁護士**の業務です。いずれも紹介料の授受はありません。\n\n## よくある質問\n\n**Q. 「いい人がいたら紹介してほしい」とお願いできますか？**\nA. お受けできません。雇用関係の成立をあっせんすることは職業紹介にあたり、有料で行うには厚生労働大臣の許可が要る事業です（職業安定法第4条第1項・第30条第1項）。当事務所は許可事業者ではなく、紹介料の授受も行いません。人探しは許可を受けた職業紹介事業者かハローワークをご利用ください。\n\n**Q. 面接に同席してもらうことはできますか？**\nA. 面接の代行はお受けしていません。選考の進め方の整理——聞くべきこと・確認すべき書類・評価の観点の設計——は募集・採用コンサルタントの範囲でお受けします。面接そのものは会社が行うのが原則です。\n\n**Q. 雇入れ時の健康診断は、いつ・誰にやらせればいいですか？**\nA. 常時使用する労働者を雇い入れるときは、医師による健康診断が必要です（労働安全衛生規則第43条）。入社前3か月以内に医師による健康診断を受けた方がその結果の書面を提出したときは、相当する項目を省略できます。段取りの設計は入社手続の一部としてお受けします。\n\n**Q. 人材紹介会社と契約済みです。それでも頼む意味はありますか？**\nA. あります。紹介会社が担うのはマッチングで、求人票の明示義務への適合・内定書面・入社手続・助成金の入口はそのままご依頼側に残ります。併用が実務ではいちばん多い形です。\n\n## この記事の根拠\n\n- 職業安定法（昭和22年法律第141号）**第4条第1項**（職業紹介の定義）・**第2項・第3項**（無料・有料の定義）・**第30条第1項**（有料職業紹介事業の許可）・**第36条**（委託募集の許可・届出） ―― 2026年8月14日にe-Gov法令検索で現行条文を確認\n- 労働安全衛生法（昭和47年法律第57号）第66条第1項・労働安全衛生規則（昭和47年労働省令第32号）**第43条**（雇入時の健康診断・3か月以内の健診書面提出による省略） ―― 同日にe-Gov法令検索で現行条文を確認\n\n本記事は一般的な情報提供です。個別のご事情に応じた判断は、面談のうえ資格者が行います。執筆は[浦松丈二](/about/uramatsu)（社会保険労務士・行政書士・宅地建物取引士）です。",
+    "status": "published",
+    "author": {
+      "name": "浦松 丈二",
+      "title": "社会保険労務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+    },
+    "keywords": [
+      "採用 社労士 何を頼める",
+      "社労士 人材紹介 できない 理由",
+      "採用 コンサルタント 社会保険労務士",
+      "職業紹介 許可 厚生労働大臣",
+      "面接代行 頼めるか",
+      "採用 手続 外注 誰に"
+    ],
+    "tags": [
+      "採用",
+      "業際",
+      "職業紹介",
+      "求人",
+      "内定",
+      "入社手続"
+    ],
+    "locales": [],
+    "faq": [
+      {
+        "question": "「いい人がいたら紹介してほしい」とお願いできますか？",
+        "answer": "お受けできません。雇用関係の成立をあっせんすることは職業紹介にあたり、有料で行うには厚生労働大臣の許可が要る事業です（職業安定法第4条第1項・第30条第1項）。当事務所は許可事業者ではなく、紹介料の授受も行いません。人探しは許可を受けた職業紹介事業者かハローワークをご利用ください。"
+      },
+      {
+        "question": "面接に同席してもらうことはできますか？",
+        "answer": "面接の代行はお受けしていません。選考の進め方の整理——聞くべきこと・確認すべき書類・評価の観点の設計——は募集・採用コンサルタントの範囲でお受けします。面接そのものは会社が行うのが原則です。"
+      },
+      {
+        "question": "雇入れ時の健康診断は、いつ・誰にやらせればいいですか？",
+        "answer": "常時使用する労働者を雇い入れるときは、医師による健康診断が必要です（労働安全衛生規則第43条）。入社前3か月以内に医師による健康診断を受けた方がその結果の書面を提出したときは、相当する項目を省略できます。段取りの設計は入社手続の一部としてお受けします。"
+      },
+      {
+        "question": "人材紹介会社と契約済みです。それでも頼む意味はありますか？",
+        "answer": "あります。紹介会社が担うのはマッチングで、求人票の明示義務への適合・内定書面・入社手続・助成金の入口はそのままご依頼側に残ります。併用が実務ではいちばん多い形です。"
+      }
+    ],
+    "translations": {
+      "en": {
+        "title": "In hiring, what can a shakai hoken roumushi do for you — and what can't they?",
+        "excerpt": "The working conditions on the job posting, the paperwork from offer to joining, and the entry design for hiring subsidies — that is shakai hoken roumushi territory. Introducing or placing candidates, on the other hand, is off the table - fee-charging employment placement requires a licence from the Minister of Health, Labour and Welfare. We draw the lines.",
+        "content": "**In short:** the working conditions on the job posting, the shape of the selection process, the documents and procedures from offer to joining, and the entry design for hiring subsidies — that is shakai hoken roumushi territory. On the other hand, **introducing or placing candidates is not something we handle**. Arranging the formation of an employment relationship is \"employment placement\" (shokugyō shōkai), and doing it for a fee requires **a licence from the Minister of Health, Labour and Welfare**.\n\nThis page is for owners and back-office staff of small and medium-sized companies thinking of outsourcing parts of hiring. It is the column-side entrance to our [recruitment and hiring support service](/en/labor/services/saiyo).\n\n## Where does the shakai hoken roumushi's work in hiring start and end?\n\nDrawing the line through the \"recruitment and hiring consultant\" item in the [fee schedule](/en/labor/ryokin):\n\n| Category | Substance |\n|---|---|\n| **What we take on** | [Designing the working conditions on the job posting](/en/labor/column/kyujin-hyo-meiji-jiko-roudou-joken) (compliance with the disclosure duties) / structuring the selection process / [offer letters and related documents](/en/labor/column/naitei-torikeshi-dekiruka) / onboarding procedures (scheduling the pre-employment health check under Article 43 of the Ordinance on Industrial Safety and Health; social and employment insurance enrolment) / [the entry design for hiring subsidies](/en/labor/column/saiyo-joseikin-iriguchi-de-kimaru) |\n| **What we do not handle** | **Introducing or placing candidates** / conducting **interviews on the company's behalf** / **operating job-advertising accounts** for you |\n\nThe right-hand side of \"not handled\" is not a choice of taste. It is **legally off-limits or improper for us** — the next section explains why.\n\n## Why is \"placement\" the one thing you cannot ask for?\n\nArticle 4, paragraph 1 of the Employment Security Act defines employment placement as **\"receiving offers of jobs and offers to work, and arranging the formation of an employment relationship between the job offerer and the job seeker.\"** And **fee-charging employment placement requires a licence from the Minister of Health, Labour and Welfare** (Article 30, paragraph 1).\n\nIn other words, \"find someone good and match us\" is, when done for reward, **a licensed business**. The shakai hoken roumushi qualification is no substitute for that licence. Our fee schedule states plainly that we do not handle introduction or placement — that line exists to be kept. **No referral fees change hands in either direction.**\n\nThere is also a separate frame called \"commissioned recruitment\" — having someone outside your workforce recruit for you — which requires the Minister's **licence** if they are paid, or a **notification** if unpaid (Article 36). That, too, is not our business; we simply point out that the frame exists.\n\n## How does this differ from a recruitment agency?\n\nNot competitors — **different roles**. Side by side:\n\n| | Recruitment agency (licensed fee-charging placement business) | Shakai hoken roumushi |\n|---|---|---|\n| What they do | Find and match candidates | Put the **substance** of the hire in order — conditions, documents, procedures, subsidy entrances |\n| Basis | Licence from the Minister of Health, Labour and Welfare (Employment Security Act, Article 30, paragraph 1) | National qualification under the Certified Social Insurance and Labor Consultant Act |\n| Fee shape | Typically success fees | Retainer or package quote ([fee schedule](/en/labor/ryokin)) |\n\nThe most common shape in practice is **using both**: an agency finds the people, while the job posting, offer documents and onboarding stay with the shakai hoken roumushi.\n\n## When hiring a foreign national, who does what?\n\nWhen residence status enters the picture, one more counter opens. **Residence-status applications and changes go to 四葉行政書士事務所** (a separate business from this office, engaged under a separate contract); **housing to 四葉不動産株式会社** (likewise); **the labour and social insurance after the hire to this office**. The full timeline is in [Hire one foreign employee — how many counters do you need?](/en/labor/column/gaikokujin-koyo-madoguchi-wakekata), and new-graduate hiring of international students in [Can an international student start on April 1?](/en/labor/column/ryugakusei-shinsotsu-nyusha-bi-zairyu-henko).\n\n## What can 四葉社会保険労務士事務所 do?\n\n四葉社会保険労務士事務所, in Kohinata, Bunkyo City, provides [recruitment and hiring support](/en/labor/services/saiyo) — from the working conditions on the posting through offer documents, onboarding procedures and the subsidy entry design. Fees: the \"recruitment and hiring consultant\" item in the [fee schedule](/en/labor/ryokin) (package, quoted). **Consultation is free of charge.** We start by sorting what you keep in-house and what you hand over.\n\n### Whom to consult\n\nCandidate introduction and placement belong to **licensed employment placement businesses**. Residence-status applications go to **四葉行政書士事務所**, company housing to **四葉不動産株式会社** (each a separate business from this office, engaged under a separate contract). Payroll taxation and the year-end adjustment are for **a tax accountant**; matters that have turned contentious for **an attorney**. In every case, no referral fees change hands.\n\n## Frequently asked questions\n\n**Q. Can we ask you to \"introduce someone good if you know anyone\"?**\nA. No. Arranging the formation of an employment relationship is employment placement, and doing it for a fee requires a licence from the Minister of Health, Labour and Welfare (Employment Security Act, Article 4, paragraph 1; Article 30, paragraph 1). This office holds no such licence and neither pays nor receives referral fees. For finding people, use a licensed placement business or Hello Work.\n\n**Q. Can you sit in on interviews?**\nA. We do not conduct interviews on your behalf. What we do take on, within recruitment consulting, is structuring the selection — what to ask, which documents to verify, how to frame the evaluation. The interviewing itself stays with the company.\n\n**Q. When and how should the pre-employment health check happen?**\nA. When hiring a worker for regular employment, a physician's health examination is required (Ordinance on Industrial Safety and Health, Article 43). Where the person had a physician's examination within the previous three months and submits the documented results, the corresponding items may be omitted. We handle the scheduling as part of onboarding.\n\n**Q. We already have an agency under contract. Is there still a point in engaging you?**\nA. Yes. The agency covers matching; the posting's compliance with disclosure duties, the offer documents, onboarding and the subsidy entrances remain on your side of the table. Using both is the most common arrangement in practice.\n\n## Sources for this article\n\n- Employment Security Act (職業安定法, Act No. 141 of 1947), **Article 4, paragraph 1** (definition of employment placement), **paragraphs 2 and 3** (free and fee-charging), **Article 30, paragraph 1** (licence for fee-charging placement), **Article 36** (commissioned recruitment — licence or notification) — current text confirmed on e-Gov on 14 August 2026\n- Industrial Safety and Health Act (労働安全衛生法, Act No. 57 of 1972), Article 66, paragraph 1; Ordinance on Industrial Safety and Health (労働安全衛生規則, Ministry of Labour Order No. 32 of 1972), **Article 43** (pre-employment health examination; omission where documented results within three months are submitted) — confirmed the same day\n\nThis article is general information. Judgments that fit your particular circumstances are made by a qualified professional after a meeting. Written by [Joji Uramatsu](/en/about/uramatsu) (Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist).",
+        "category": "Who to ask",
+        "keywords": [
+          "hiring what to ask labour consultant",
+          "why consultant cannot introduce candidates",
+          "recruitment consulting social insurance labour consultant",
+          "employment placement licence Japan",
+          "interview on behalf of company",
+          "hiring procedures whom to outsource"
+        ],
+        "tags": [
+          "hiring",
+          "scope of practice",
+          "employment placement",
+          "job postings",
+          "job offers",
+          "onboarding procedures"
+        ],
+        "author": {
+          "name": "Joji Uramatsu",
+          "title": "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所"
+        },
+        "faq": [
+          {
+            "question": "Can we ask you to \"introduce someone good if you know anyone\"?",
+            "answer": "No. Arranging the formation of an employment relationship is employment placement, and doing it for a fee requires a licence from the Minister of Health, Labour and Welfare (Employment Security Act, Article 4, paragraph 1; Article 30, paragraph 1). This office holds no such licence and neither pays nor receives referral fees. For finding people, use a licensed placement business or Hello Work."
+          },
+          {
+            "question": "Can you sit in on interviews?",
+            "answer": "We do not conduct interviews on your behalf. What we do take on, within recruitment consulting, is structuring the selection — what to ask, which documents to verify, how to frame the evaluation. The interviewing itself stays with the company."
+          },
+          {
+            "question": "When and how should the pre-employment health check happen?",
+            "answer": "When hiring a worker for regular employment, a physician's health examination is required (Ordinance on Industrial Safety and Health, Article 43). Where the person had a physician's examination within the previous three months and submits the documented results, the corresponding items may be omitted. We handle the scheduling as part of onboarding."
+          },
+          {
+            "question": "We already have an agency under contract. Is there still a point in engaging you?",
+            "answer": "Yes. The agency covers matching; the posting's compliance with disclosure duties, the offer documents, onboarding and the subsidy entrances remain on your side of the table. Using both is the most common arrangement in practice."
+          }
+        ]
+      },
+      "zh-tw": {
+        "title": "招募・錄用，能委託社會保險勞務士什麼、不能委託什麼",
+        "excerpt": "求人票（徵才啟事）的勞動條件、從內定到入職的文件與手續、錄用相關助成金的入口設計——這些是社會保險勞務士的領域。另一方面，求職者的介紹・斡旋無法承接：有償的職業介紹是需要厚生勞動大臣許可的事業。本文劃出這條線。",
+        "content": "**結論（先講重點）**：求人票（徵才啟事）的勞動條件、選考流程的整理、從內定到入職的文件與手續、錄用相關助成金的入口設計——這些是社會保險勞務士的領域。另一方面，**求職者的介紹・斡旋無法承接**。斡旋雇用關係的成立屬於「職業介紹」，有償進行需要**厚生勞動大臣的許可**。\n\n本頁面寫給想把錄用相關工作委外的中小企業經營者與總務人員，也是本事務所[招募・錄用勞務支援](/zh-tw/labor/services/saiyo)在專欄側的入口。\n\n## 錄用的哪裡到哪裡，是社會保險勞務士的工作？\n\n以[報酬額表](/zh-tw/labor/ryokin)的「募集・採用コンサルタント（招募・錄用顧問）」為基準劃線。\n\n| 區分 | 內容 |\n|---|---|\n| **承接的** | [求人票勞動條件的設計](/zh-tw/labor/column/kyujin-hyo-meiji-jiko-roudou-joken)（符合明示義務）／選考流程的整理／[內定通知書等文件整備](/zh-tw/labor/column/naitei-torikeshi-dekiruka)／入職手續（僱入時健康檢查的安排〔勞動安全衛生規則第43條〕・社會保險・僱用保險的資格取得）／[錄用可用助成金的入口設計](/zh-tw/labor/column/saiyo-joseikin-iriguchi-de-kimaru) |\n| **不承接的** | **求職者的介紹・斡旋**／應徵者的**面試代辦**／徵才媒體的**代操作** |\n\n「不承接」這一側，不是能做而不做，而是**法律上不能做・不應做**。理由在下一章。\n\n## 為什麼唯獨「介紹」不能委託？\n\n職業安定法第4條第1項將「職業介紹」定義為**「接受求人及求職的申請，斡旋求人者與求職者之間雇用關係的成立」**。而**有償的職業介紹事業，須經厚生勞動大臣的許可**方能進行（同法第30條第1項）。\n\n也就是說，「找個好人選來牽線」若收取報酬，就是**許可事業**。社會保險勞務士的資格不能代替這個許可。本事務所在報酬額表明記「不承接求職者的介紹・斡旋」，就是為了守住這條線。**也不收取・不支付介紹費。**\n\n另外，把招募本身有償委託給公司外部的人，另有「委託募集」的框架，需要厚生勞動大臣的**許可**（無償則為**申報**）（同法第36條）。這也不是本事務所的業務，僅告知制度的存在。\n\n## 與人才介紹公司，有什麼不同？\n\n不是競爭，而是**角色不同**。並排比較更容易選擇。\n\n| | 人才介紹公司（有償職業介紹事業者） | 社會保險勞務士 |\n|---|---|---|\n| 做什麼 | 尋找・撮合候選人（媒合） | 整備錄用的**內容**（勞動條件・文件・手續・助成金入口） |\n| 依據 | 厚生勞動大臣的許可（職業安定法第30條第1項） | 依社會保險勞務士法的國家資格 |\n| 費用形態 | 一般為成功報酬 | 顧問費或一式估價（[報酬額表](/zh-tw/labor/ryokin)） |\n\n請介紹公司找人，求人票・內定文件・入職手續交給社會保險勞務士——這種**並用**，在實務上最常見。\n\n## 錄用外國人時，找誰辦什麼？\n\n錄用一旦涉及在留資格，負責的窗口再多一個。**在留資格的申請・變更是四葉行政書士事務所**（與本事務所是不同的事業體，另行簽約），**住居的安排是四葉不動産株式会社**（同），**僱入之後的勞務・社會保險是本事務所**。整體時間軸見[僱用1名外國人，需要幾個窗口](/zh-tw/labor/column/gaikokujin-koyo-madoguchi-wakekata)，留學生的新卒錄用見[留學生能在4月1日入職嗎](/zh-tw/labor/column/ryugakusei-shinsotsu-nyusha-bi-zairyu-henko)。\n\n## 四葉社会保険労務士事務所能做什麼？\n\n位於文京區小日向的四葉社会保険労務士事務所，以[招募・錄用勞務支援](/zh-tw/labor/services/saiyo)承接：求人票勞動條件的設計、內定文件、入職手續、錄用助成金的入口設計。費用為[報酬額表](/zh-tw/labor/ryokin)的「募集・採用コンサルタント」（一式・估價）。**諮詢免費。** 從「哪些自己做、哪些委託」的整理開始，與您一起進行。\n\n### 該向誰諮詢\n\n求職者的介紹・斡旋請洽**取得許可的職業介紹事業者**。在留資格的申請・變更・更新由**四葉行政書士事務所**、公司宿舍由**四葉不動産株式会社**承接（均與本事務所是不同的事業體，另行簽約）。薪資課稅・年終調整是**稅理士**、已生紛爭的案件是**律師**的業務。以上均不收取介紹費。\n\n## 常見問題\n\n**Q. 可以拜託您「有好人選就介紹一下」嗎？**\nA. 不可以。斡旋雇用關係的成立屬於職業介紹，有償進行需要厚生勞動大臣的許可（職業安定法第4條第1項・第30條第1項）。本事務所不是許可事業者，也不收取・不支付介紹費。找人請利用取得許可的職業介紹事業者或Hello Work（公共職業安定所）。\n\n**Q. 可以請您同席面試嗎？**\nA. 面試代辦不承接。在招募・錄用顧問的範圍內，承接的是選考流程的設計——該問什麼・該確認哪些文件・評價的觀點。面試本身由公司進行是原則。\n\n**Q. 僱入時的健康檢查，什麼時候・怎麼安排？**\nA. 僱入經常使用的勞工時，需要醫師的健康檢查（勞動安全衛生規則第43條）。入職前3個月以內接受過醫師健診、並提出結果證明文件者，相當項目可以省略。安排的設計作為入職手續的一部分承接。\n\n**Q. 已經與人才介紹公司簽約了。還有委託的意義嗎？**\nA. 有。介紹公司負責的是媒合；求人票的明示義務、內定文件、入職手續、助成金的入口仍留在委託方。並用是實務上最常見的形式。\n\n## 本文依據\n\n- 職業安定法（昭和22年法律第141號）**第4條第1項**（職業介紹的定義）・**第2項・第3項**（無償・有償）・**第30條第1項**（有償職業介紹事業的許可）・**第36條**（委託募集的許可・申報） ―― 2026年8月14日於e-Gov法令檢索確認現行條文\n- 勞動安全衛生法（昭和47年法律第57號）第66條第1項・勞動安全衛生規則（昭和47年勞動省令第32號）**第43條**（僱入時的健康檢查・3個月以內健診證明提出時的省略） ―― 同日確認\n\n本文為一般性的資訊提供。因應個別情事的判斷，由具備資格者在面談後進行。撰文者為[浦松丈二](/zh-tw/about/uramatsu)（社會保險勞務士・行政書士・宅地建物取引士）。",
+        "category": "該委託誰",
+        "keywords": [
+          "錄用 社會保險勞務士 能委託什麼",
+          "社勞士 人才介紹 不能 理由",
+          "招募錄用 顧問 社會保險勞務士",
+          "職業介紹 許可 厚生勞動大臣",
+          "面試代辦 可以嗎",
+          "錄用手續 外包 找誰"
+        ],
+        "tags": [
+          "錄用",
+          "業務分界",
+          "職業介紹",
+          "徵才",
+          "內定",
+          "入職手續"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "可以拜託您「有好人選就介紹一下」嗎？",
+            "answer": "不可以。斡旋雇用關係的成立屬於職業介紹，有償進行需要厚生勞動大臣的許可（職業安定法第4條第1項・第30條第1項）。本事務所不是許可事業者，也不收取・不支付介紹費。找人請利用取得許可的職業介紹事業者或Hello Work（公共職業安定所）。"
+          },
+          {
+            "question": "可以請您同席面試嗎？",
+            "answer": "面試代辦不承接。在招募・錄用顧問的範圍內，承接的是選考流程的設計——該問什麼・該確認哪些文件・評價的觀點。面試本身由公司進行是原則。"
+          },
+          {
+            "question": "僱入時的健康檢查，什麼時候・怎麼安排？",
+            "answer": "僱入經常使用的勞工時，需要醫師的健康檢查（勞動安全衛生規則第43條）。入職前3個月以內接受過醫師健診、並提出結果證明文件者，相當項目可以省略。安排的設計作為入職手續的一部分承接。"
+          },
+          {
+            "question": "已經與人才介紹公司簽約了。還有委託的意義嗎？",
+            "answer": "有。介紹公司負責的是媒合；求人票的明示義務、內定文件、入職手續、助成金的入口仍留在委託方。並用是實務上最常見的形式。"
+          }
+        ]
+      },
+      "zh": {
+        "title": "招募・录用，能委托社会保险劳务士什么、不能委托什么",
+        "excerpt": "求人票（招聘启事）的劳动条件、从内定到入职的文件与手续、录用相关助成金的入口设计——这些是社会保险劳务士的领域。另一方面，求职者的介绍・斡旋无法承接：有偿的职业介绍是需要厚生劳动大臣许可的事业。本文划出这条线。",
+        "content": "**结论（先讲重点）**：求人票（招聘启事）的劳动条件、选考流程的整理、从内定到入职的文件与手续、录用相关助成金的入口设计——这些是社会保险劳务士的领域。另一方面，**求职者的介绍・斡旋无法承接**。斡旋雇用关系的成立属于「职业介绍」，有偿进行需要**厚生劳动大臣的许可**。\n\n本页面写给想把录用相关工作委外的中小企业经营者与总务人员，也是本事务所[招募・录用劳务支援](/zh/labor/services/saiyo)在专栏侧的入口。\n\n## 录用的哪里到哪里，是社会保险劳务士的工作？\n\n以[报酬额表](/zh/labor/ryokin)的「募集・採用コンサルタント（招募・录用顾问）」为基准划线。\n\n| 区分 | 内容 |\n|---|---|\n| **承接的** | [求人票劳动条件的设计](/zh/labor/column/kyujin-hyo-meiji-jiko-roudou-joken)（符合明示义务）／选考流程的整理／[内定通知书等文件整备](/zh/labor/column/naitei-torikeshi-dekiruka)／入职手续（雇入时健康检查的安排〔劳动安全卫生规则第43条〕・社会保险・雇用保险的资格取得）／[录用可用助成金的入口设计](/zh/labor/column/saiyo-joseikin-iriguchi-de-kimaru) |\n| **不承接的** | **求职者的介绍・斡旋**／应聘者的**面试代办**／招聘媒体的**代操作** |\n\n「不承接」这一侧，不是能做而不做，而是**法律上不能做・不应做**。理由在下一章。\n\n## 为什么唯独「介绍」不能委托？\n\n职业安定法第4条第1项将「职业介绍」定义为**「接受求人及求职的申请，斡旋求人者与求职者之间雇用关系的成立」**。而**有偿的职业介绍事业，须经厚生劳动大臣的许可**方能进行（同法第30条第1项）。\n\n也就是说，「找个好人选来牵线」若收取报酬，就是**许可事业**。社会保险劳务士的资格不能代替这个许可。本事务所在报酬额表明记「不承接求职者的介绍・斡旋」，就是为了守住这条线。**也不收取・不支付介绍费。**\n\n另外，把招募本身有偿委托给公司外部的人，另有「委托募集」的框架，需要厚生劳动大臣的**许可**（无偿则为**申报**）（同法第36条）。这也不是本事务所的业务，仅告知制度的存在。\n\n## 与人才介绍公司，有什么不同？\n\n不是竞争，而是**角色不同**。并排比较更容易选择。\n\n| | 人才介绍公司（有偿职业介绍事业者） | 社会保险劳务士 |\n|---|---|---|\n| 做什么 | 寻找・撮合候选人（匹配） | 整备录用的**内容**（劳动条件・文件・手续・助成金入口） |\n| 依据 | 厚生劳动大臣的许可（职业安定法第30条第1项） | 依社会保险劳务士法的国家资格 |\n| 费用形态 | 一般为成功报酬 | 顾问费或一式估价（[报酬额表](/zh/labor/ryokin)） |\n\n请介绍公司找人，求人票・内定文件・入职手续交给社会保险劳务士——这种**并用**，在实务上最常见。\n\n## 录用外国人时，找谁办什么？\n\n录用一旦涉及在留资格，负责的窗口再多一个。**在留资格的申请・变更是四葉行政書士事務所**（与本事务所是不同的事业体，另行签约），**住居的安排是四葉不動産株式会社**（同），**雇入之后的劳务・社会保险是本事务所**。整体时间轴见[雇用1名外国人，需要几个窗口](/zh/labor/column/gaikokujin-koyo-madoguchi-wakekata)，留学生的新卒录用见[留学生能在4月1日入职吗](/zh/labor/column/ryugakusei-shinsotsu-nyusha-bi-zairyu-henko)。\n\n## 四葉社会保険労務士事務所能做什么？\n\n位于文京区小日向的四葉社会保険労務士事務所，以[招募・录用劳务支援](/zh/labor/services/saiyo)承接：求人票劳动条件的设计、内定文件、入职手续、录用助成金的入口设计。费用为[报酬额表](/zh/labor/ryokin)的「募集・採用コンサルタント」（一式・估价）。**咨询免费。** 从「哪些自己做、哪些委托」的整理开始，与您一起进行。\n\n### 该向谁咨询\n\n求职者的介绍・斡旋请洽**取得许可的职业介绍事业者**。在留资格的申请・变更・更新由**四葉行政書士事務所**、公司宿舍由**四葉不動産株式会社**承接（均与本事务所是不同的事业体，另行签约）。工资课税・年终调整是**税理士**、已生纷争的案件是**律师**的业务。以上均不收取介绍费。\n\n## 常见问题\n\n**Q. 可以拜托您「有好人选就介绍一下」吗？**\nA. 不可以。斡旋雇用关系的成立属于职业介绍，有偿进行需要厚生劳动大臣的许可（职业安定法第4条第1项・第30条第1项）。本事务所不是许可事业者，也不收取・不支付介绍费。找人请利用取得许可的职业介绍事业者或Hello Work（公共职业安定所）。\n\n**Q. 可以请您同席面试吗？**\nA. 面试代办不承接。在招募・录用顾问的范围内，承接的是选考流程的设计——该问什么・该确认哪些文件・评价的观点。面试本身由公司进行是原则。\n\n**Q. 雇入时的健康检查，什么时候・怎么安排？**\nA. 雇入经常使用的劳动者时，需要医师的健康检查（劳动安全卫生规则第43条）。入职前3个月以内接受过医师健诊、并提出结果证明文件者，相当项目可以省略。安排的设计作为入职手续的一部分承接。\n\n**Q. 已经与人才介绍公司签约了。还有委托的意义吗？**\nA. 有。介绍公司负责的是匹配；求人票的明示义务、内定文件、入职手续、助成金的入口仍留在委托方。并用是实务上最常见的形式。\n\n## 本文依据\n\n- 职业安定法（昭和22年法律第141号）**第4条第1项**（职业介绍的定义）・**第2项・第3项**（无偿・有偿）・**第30条第1项**（有偿职业介绍事业的许可）・**第36条**（委托募集的许可・申报） ―― 2026年8月14日于e-Gov法令检索确认现行条文\n- 劳动安全卫生法（昭和47年法律第57号）第66条第1项・劳动安全卫生规则（昭和47年劳动省令第32号）**第43条**（雇入时的健康检查・3个月以内健诊证明提出时的省略） ―― 同日确认\n\n本文为一般性的信息提供。因应个别情事的判断，由具备资格者在面谈后进行。撰文者为[浦松丈二](/zh/about/uramatsu)（社会保险劳务士・行政书士・宅地建物取引士）。",
+        "category": "该委托谁",
+        "keywords": [
+          "录用 社会保险劳务士 能委托什么",
+          "社劳士 人才介绍 不能 理由",
+          "招募录用 顾问 社会保险劳务士",
+          "职业介绍 许可 厚生劳动大臣",
+          "面试代办 可以吗",
+          "录用手续 外包 找谁"
+        ],
+        "tags": [
+          "录用",
+          "业务分界",
+          "职业介绍",
+          "招聘",
+          "内定",
+          "入职手续"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "可以拜托您「有好人选就介绍一下」吗？",
+            "answer": "不可以。斡旋雇用关系的成立属于职业介绍，有偿进行需要厚生劳动大臣的许可（职业安定法第4条第1项・第30条第1项）。本事务所不是许可事业者，也不收取・不支付介绍费。找人请利用取得许可的职业介绍事业者或Hello Work（公共职业安定所）。"
+          },
+          {
+            "question": "可以请您同席面试吗？",
+            "answer": "面试代办不承接。在招募・录用顾问的范围内，承接的是选考流程的设计——该问什么・该确认哪些文件・评价的观点。面试本身由公司进行是原则。"
+          },
+          {
+            "question": "雇入时的健康检查，什么时候・怎么安排？",
+            "answer": "雇入经常使用的劳动者时，需要医师的健康检查（劳动安全卫生规则第43条）。入职前3个月以内接受过医师健诊、并提出结果证明文件者，相当项目可以省略。安排的设计作为入职手续的一部分承接。"
+          },
+          {
+            "question": "已经与人才介绍公司签约了。还有委托的意义吗？",
+            "answer": "有。介绍公司负责的是匹配；求人票的明示义务、内定文件、入职手续、助成金的入口仍留在委托方。并用是实务上最常见的形式。"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "business": "labor",
+    "slug": "kyujin-hyo-meiji-jiko-roudou-joken",
+    "title": "求人票に書かなければならないこと",
+    "date": "2026-09-01",
+    "category": "採用と雇用",
+    "excerpt": "求人を出す段階で、業務内容・賃金・労働時間などの労働条件を明示する義務があります（職業安定法第5条の3）。入社時の明示（労働基準法第15条）とは別の義務です。明示事項の一覧と、求人票と実際の条件がずれたときの変更明示、令和6年4月に増えた事項まで整理します。",
+    "content": "**結論（先に要点）**：求人を出す段階で、**従事すべき業務の内容、賃金、労働時間その他の労働条件**を明示する義務があります（職業安定法第5条の3第1項）。これは入社時の労働条件の明示（労働基準法第15条）とは**別の義務**です。求人票と労働条件通知書が食い違うと、あとで説明を求められます。\n\nこのページは、求人を出そうとしている会社の経営者・総務担当の方に向けたものです。「募集のときの明示」と「契約のときの明示」を1つの義務だと思っていると、求人票と通知書の食い違いが後の紛争の種になります。\n\n## 募集のときと、契約のときで、何が違うのか？\n\n明示の義務は**2回**あります。時点も、根拠も、相手も違います。\n\n| | 募集のとき | 契約のとき |\n|---|---|---|\n| 根拠 | **職業安定法第5条の3** | **労働基準法第15条**（明示事項は同施行規則第5条） |\n| 相手 | 求職者・募集に応じて労働者になろうとする者 | 労働契約を結ぶ本人 |\n| 場面 | 求人票・募集広告・紹介への求人申込み | 内定〜入社時の労働条件通知書 |\n\n2つは連続しています。**募集時に示した条件が、契約時の条件の出発点**になり、ずれるなら変更の明示が要る——この構造を押さえると、求人票は「広告」ではなく「契約の前段の書面」だと分かります。\n\n## 求人票には、何をどこまで書くのか？\n\n明示する事項は職業安定法施行規則第4条の2第3項に列挙されています。求人票のチェックリストとして使えます。\n\n| 明示事項 |\n|---|\n| 従事すべき業務の内容（**変更の範囲を含む**） |\n| 労働契約の期間 |\n| **試用期間**（試みの使用期間） |\n| 有期契約を更新する場合の**基準**（通算契約期間・更新回数に**上限**があるときはその上限） |\n| 就業の場所（**変更の範囲を含む**） |\n| 始業・終業の時刻、**所定労働時間を超える労働の有無**、休憩時間、休日 |\n| 賃金の額（臨時に支払われる賃金・賞与等を除く） |\n| 健康保険・厚生年金・労災保険・雇用保険の**適用に関する事項** |\n| 募集者の**氏名または名称** |\n| （派遣労働者として雇用する場合）その旨 |\n| 就業の場所における**受動喫煙を防止するための措置** |\n\n見落とされやすいのは、試用期間、所定外労働の有無、社会保険の適用、受動喫煙防止措置の4つです。「詳細は面談で」で省略できる事項ではありません。\n\n## 求人票と実際の条件がずれたら、どうなるのか？\n\n募集時に示した条件を**特定する・削除する・追加する**場合には、その内容をあらためて明示する必要があります（職業安定法第5条の3第3項、同施行規則第4条の2第1項・第2項）。つまり「求人票はあくまで目安」という運用は、制度の側が塞いでいます。\n\n実務では、**内定時に労働条件通知書と求人票を突き合わせる**ことが最良の防波堤です。ずれがあるなら、どこがどう変わったかを本人に示して合意を取る。この一手間を省いた食い違いが、入社後の「話が違う」の典型的な入口です。\n\n## 令和6年4月から、何が増えたのか？\n\n令和6年（2024年）4月施行の改正で、明示事項に**「変更の範囲」**が加わりました。従事すべき業務と就業の場所について、**将来の配置転換で変わり得る範囲**まで示す仕組みです。あわせて有期契約の**更新上限**（定めがある場合）も明示事項になりました。これらは募集時（職安法側）と契約時（労基法側）の**両方**に入っています。\n\n有期契約の更新上限と在留期限の関係は[在留期限と雇用契約期間は、どちらが先に切れるか](/labor/column/zairyu-kigen-koyo-keiyaku-kikan)で、就業規則側の整備は[就業規則は何人から義務か](/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo)で書いています。\n\n## 四葉社会保険労務士事務所は、何ができますか？\n\n文京区小日向の四葉社会保険労務士事務所は、[募集・採用の労務サポート](/labor/services/saiyo)の一部として、求人票の労働条件の設計（明示義務への適合の確認）、労働条件通知書との突き合わせ、変更明示の手順の整備をお受けします。料金は[報酬額表](/labor/ryokin)の「募集・採用コンサルタント」（一式・お見積り）です。**ご相談は無料です。** いまお使いの求人票をお持ちいただければ、チェックリストとの突き合わせからご一緒します。\n\n### 誰に相談するか\n\n求職者の紹介・あっせんは**許可を受けた職業紹介事業者**の領域です（当事務所は取り扱っておらず、紹介料の授受もありません）。在留資格の申請は**四葉行政書士事務所**（当事務所とは別の事業体で、別々にご契約いただきます）、給与課税は**税理士**、求人票をめぐって紛争性が生じた事案は**弁護士**の業務です。\n\n## よくある質問\n\n**Q. 求人媒体の入力欄が小さくて、全部書けません。**\nA. 媒体の欄に収まらない場合でも、明示義務がなくなるわけではありません。原則は書面等による明示で、募集に応じようとする段階までに示す必要があります。媒体＋詳細資料の二段構えなど、明示の設計そのものをご相談ください。\n\n**Q. 「給与は経験により優遇」だけの記載でもよいですか？**\nA. 賃金の額は明示事項です（職業安定法施行規則第4条の2第3項）。幅で示す場合でも、実際の初任給と大きくずれる見せ方は、特定時の変更明示や入社後の食い違いの問題につながります。求人票の賃金欄は労働条件通知書から逆算して書くのが安全です。\n\n**Q. 求人票に試用期間を書き忘れて採用してしまいました。**\nA. 契約時の明示（労働条件通知書）で試用期間を初めて出すなら、募集時にない条件の追加にあたり得ます。本人への説明と合意の取り方を含め、個別の状況で対応が変わりますので、早めにご相談ください。\n\n**Q. 求人票のチェックだけを頼めますか？**\nA. お受けできます。募集・採用コンサルタント（一式・お見積り）の範囲で、明示事項のチェックリストとの突き合わせと修正案の提示を行います。ご相談は無料です。\n\n## この記事の根拠\n\n- 職業安定法（昭和22年法律第141号）**第5条の3第1項〜第3項**（労働条件等の明示・変更等の明示） ―― 2026年8月14日にe-Gov法令検索で現行条文を確認\n- 職業安定法施行規則（昭和22年労働省令第12号）**第4条の2第1項〜第3項**（変更明示の場合・明示事項の列挙。業務内容と就業場所の変更の範囲、試用期間、更新の基準と上限、所定外労働の有無、社会保険等の適用、受動喫煙防止措置等） ―― 同日にe-Gov法令検索で現行条文を確認\n- 労働基準法（昭和22年法律第49号）**第15条**・同施行規則**第5条**（契約締結時の明示。変更の範囲・更新上限は令和6年4月施行の改正による） ―― 同日にe-Gov法令検索で現行条文を確認\n\n本記事は一般的な情報提供です。個別のご事情に応じた判断は、面談のうえ資格者が行います。執筆は[浦松丈二](/about/uramatsu)（社会保険労務士・行政書士・宅地建物取引士）です。",
+    "status": "published",
+    "author": {
+      "name": "浦松 丈二",
+      "title": "社会保険労務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+    },
+    "keywords": [
+      "求人票 書かなければならないこと",
+      "求人 労働条件 明示 義務",
+      "職業安定法 5条の3 明示事項",
+      "求人票 労働条件通知書 違い",
+      "求人票 変更の範囲 明示",
+      "求人票 試用期間 書き忘れ"
+    ],
+    "tags": [
+      "求人票",
+      "労働条件明示",
+      "職業安定法",
+      "採用",
+      "募集",
+      "変更の範囲"
+    ],
+    "locales": [],
+    "faq": [
+      {
+        "question": "求人媒体の入力欄が小さくて、全部書けません。",
+        "answer": "媒体の欄に収まらない場合でも、明示義務がなくなるわけではありません。原則は書面等による明示で、募集に応じようとする段階までに示す必要があります。媒体＋詳細資料の二段構えなど、明示の設計そのものをご相談ください。"
+      },
+      {
+        "question": "「給与は経験により優遇」だけの記載でもよいですか？",
+        "answer": "賃金の額は明示事項です（職業安定法施行規則第4条の2第3項）。幅で示す場合でも、実際の初任給と大きくずれる見せ方は、特定時の変更明示や入社後の食い違いの問題につながります。求人票の賃金欄は労働条件通知書から逆算して書くのが安全です。"
+      },
+      {
+        "question": "求人票に試用期間を書き忘れて採用してしまいました。",
+        "answer": "契約時の明示（労働条件通知書）で試用期間を初めて出すなら、募集時にない条件の追加にあたり得ます。本人への説明と合意の取り方を含め、個別の状況で対応が変わりますので、早めにご相談ください。"
+      },
+      {
+        "question": "求人票のチェックだけを頼めますか？",
+        "answer": "お受けできます。募集・採用コンサルタント（一式・お見積り）の範囲で、明示事項のチェックリストとの突き合わせと修正案の提示を行います。ご相談は無料です。"
+      }
+    ],
+    "translations": {
+      "en": {
+        "title": "What a job posting must state",
+        "excerpt": "At the recruiting stage there is already a duty to state the work, pay, hours and other conditions (Employment Security Act, Article 5-3) — separate from the disclosure at hiring under Article 15 of the Labor Standards Act. We list the required items, what happens when the posting and the real conditions diverge, and what was added from April 2024.",
+        "content": "**In short:** at the stage of putting out a job posting, there is already a duty to state **the work to be performed, the pay, the working hours and other working conditions** (Employment Security Act, Article 5-3, paragraph 1). This is **a separate duty** from the disclosure at hiring (Labor Standards Act, Article 15). When the posting and the written conditions diverge, you will be asked to explain.\n\nThis page is for owners and back-office staff about to put out a job posting. Treating \"disclosure at recruiting\" and \"disclosure at hiring\" as one duty is what plants the seed of later disputes.\n\n## What differs between recruiting time and contract time?\n\nThe disclosure duty arises **twice** — at different moments, on different bases, to different counterparts.\n\n| | At recruiting | At hiring |\n|---|---|---|\n| Basis | **Employment Security Act, Article 5-3** | **Labor Standards Act, Article 15** (items in Article 5 of its Ordinance) |\n| Counterpart | Job seekers; those responding to the recruitment | The individual entering the contract |\n| Scene | Job postings, adverts, offers to placement services | The written working conditions at offer/joining |\n\nThe two are continuous: **what you stated at recruiting is the starting point of the contract terms**, and any divergence requires a disclosure of the change. Seen this way, a job posting is not an advertisement — it is **the document that precedes the contract**.\n\n## What, exactly, goes on the posting?\n\nThe items are listed in Article 4-2, paragraph 3 of the Ordinance for Enforcement of the Employment Security Act — usable directly as a checklist.\n\n| Required items |\n|---|\n| The work to be performed (**including the scope of future changes**) |\n| The term of the labour contract |\n| **The trial period** |\n| For renewable fixed-term contracts, the **renewal criteria** (including any **cap** on total term or number of renewals) |\n| The place of work (**including the scope of future changes**) |\n| Start and finish times, **whether work beyond scheduled hours exists**, breaks, days off |\n| The amount of wages (excluding ad-hoc payments and bonuses) |\n| **Coverage** under health insurance, employees' pension, workers' compensation and employment insurance |\n| The **name** of the recruiting employer |\n| (Where hiring as a dispatched worker) that fact |\n| Measures to **prevent passive smoking** at the place of work |\n\nThe four most commonly missed: the trial period, the existence of overtime, the insurance coverage, and the passive-smoking measures. None of them may be waved off with \"details at the interview.\"\n\n## What if the posting and the real conditions diverge?\n\nWhere the conditions stated at recruiting are later **made specific, deleted or added to**, the change must itself be disclosed (Employment Security Act, Article 5-3, paragraph 3; Ordinance, Article 4-2, paragraphs 1 and 2). The idea that \"the posting is only indicative\" is blocked by the system itself.\n\nIn practice, the best seawall is to **check the written working conditions against the posting at offer time**. Where something has moved, show the person what changed and obtain their agreement. Skipping that one step is the classic entrance to the post-joining \"this isn't what was advertised.\"\n\n## What was added from April 2024?\n\nThe amendment that took effect in April 2024 added **\"the scope of changes\"** to the required items — for the work to be performed and the place of work, you now state **how far future reassignment can reach**. Renewal caps on fixed-term contracts (where set) also became required items. These entered **both** sides: recruiting (Employment Security Act side) and hiring (Labor Standards Act side).\n\nThe renewal cap and the period of stay are treated in [Which expires first — the period of stay or the employment contract?](/en/labor/column/zairyu-kigen-koyo-keiyaku-kikan); the work-rules side in [From how many workers are work rules mandatory?](/en/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo).\n\n## What can 四葉社会保険労務士事務所 do?\n\n四葉社会保険労務士事務所, in Kohinata, Bunkyo City, takes on — as part of [recruitment and hiring support](/en/labor/services/saiyo) — the design of the working conditions on the posting (checking against the disclosure duties), the reconciliation with the written working conditions, and the procedure for disclosing changes. Fees: the \"recruitment and hiring consultant\" item in the [fee schedule](/en/labor/ryokin) (package, quoted). **Consultation is free of charge.** Bring your current posting and we start by checking it against the list.\n\n### Whom to consult\n\nCandidate introduction and placement belong to **licensed employment placement businesses** (this office does not handle them, and no referral fees change hands). Residence-status applications go to **四葉行政書士事務所** (a separate business from this office, engaged under a separate contract); payroll taxation to **a tax accountant**; posting-related matters that have turned contentious to **an attorney**.\n\n## Frequently asked questions\n\n**Q. The job board's input fields are too small for everything.**\nA. Small fields do not shrink the duty. The rule is disclosure in writing or equivalent, by the time the person responds to the recruitment. A two-tier design — the board entry plus a detailed document — is one workable shape; the design of the disclosure itself is something we can take on.\n\n**Q. Is \"salary negotiable based on experience\" alone acceptable?**\nA. The amount of wages is a required item (Ordinance, Article 4-2, paragraph 3). Even stating a range, a presentation that diverges widely from the actual starting salary invites the change-disclosure problem and post-joining friction. Write the wage line backwards from the written working conditions.\n\n**Q. We forgot the trial period on the posting and have already hired.**\nA. Introducing a trial period for the first time at contract time can amount to adding a condition absent at recruiting. How to explain and obtain agreement depends on the situation — consult us early.\n\n**Q. Can we ask you to check the posting only?**\nA. Yes. Within the recruitment and hiring consulting package we check the posting against the required-items list and propose corrections. Consultation is free.\n\n## Sources for this article\n\n- Employment Security Act (職業安定法, Act No. 141 of 1947), **Article 5-3, paragraphs 1 to 3** (disclosure of working conditions; disclosure of changes) — current text confirmed on e-Gov on 14 August 2026\n- Ordinance for Enforcement of the Employment Security Act (職業安定法施行規則, Ministry of Labour Order No. 12 of 1947), **Article 4-2, paragraphs 1 to 3** (cases of change disclosure; the item list — scope of changes for work and place, trial period, renewal criteria and caps, existence of overtime, insurance coverage, passive-smoking measures, etc.) — confirmed the same day\n- Labor Standards Act (労働基準法, Act No. 49 of 1947), **Article 15**, and Article 5 of its Ordinance (disclosure at hiring; scope of changes and renewal caps added by the amendment effective April 2024) — confirmed the same day\n\nThis article is general information. Judgments that fit your particular circumstances are made by a qualified professional after a meeting. Written by [Joji Uramatsu](/en/about/uramatsu) (Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist).",
+        "category": "Hiring and employment",
+        "keywords": [
+          "job posting required items Japan",
+          "recruiting working conditions disclosure duty",
+          "Employment Security Act article 5-3 items",
+          "job posting versus written working conditions",
+          "scope of changes disclosure job ad",
+          "trial period omitted from posting"
+        ],
+        "tags": [
+          "job postings",
+          "working conditions disclosure",
+          "Employment Security Act",
+          "hiring",
+          "recruiting",
+          "scope of changes"
+        ],
+        "author": {
+          "name": "Joji Uramatsu",
+          "title": "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所"
+        },
+        "faq": [
+          {
+            "question": "The job board's input fields are too small for everything.",
+            "answer": "Small fields do not shrink the duty. The rule is disclosure in writing or equivalent, by the time the person responds to the recruitment. A two-tier design — the board entry plus a detailed document — is one workable shape; the design of the disclosure itself is something we can take on."
+          },
+          {
+            "question": "Is \"salary negotiable based on experience\" alone acceptable?",
+            "answer": "The amount of wages is a required item (Ordinance, Article 4-2, paragraph 3). Even stating a range, a presentation that diverges widely from the actual starting salary invites the change-disclosure problem and post-joining friction. Write the wage line backwards from the written working conditions."
+          },
+          {
+            "question": "We forgot the trial period on the posting and have already hired.",
+            "answer": "Introducing a trial period for the first time at contract time can amount to adding a condition absent at recruiting. How to explain and obtain agreement depends on the situation — consult us early."
+          },
+          {
+            "question": "Can we ask you to check the posting only?",
+            "answer": "Yes. Within the recruitment and hiring consulting package we check the posting against the required-items list and propose corrections. Consultation is free."
+          }
+        ]
+      },
+      "zh-tw": {
+        "title": "求人票（徵才啟事）必須寫的事項",
+        "excerpt": "在刊出徵才的階段，就有明示業務內容・工資・工時等勞動條件的義務（職業安定法第5條之3）——與入職時的明示（勞動基準法第15條）是不同的義務。本文列出明示事項一覽、求人票與實際條件出現落差時的變更明示，以及2024年4月起新增的事項。",
+        "content": "**結論（先講重點）**：在刊出徵才的階段，就有明示**應從事的業務內容、工資、工時及其他勞動條件**的義務（職業安定法第5條之3第1項）。這與入職時的勞動條件明示（勞動基準法第15條）是**不同的義務**。求人票與勞動條件通知書一旦出現落差，事後就會被要求說明。\n\n本頁面寫給準備刊出徵才的公司經營者與總務人員。把「招募時的明示」與「簽約時的明示」當成同一件事，就是求人票與通知書落差、進而演變成糾紛的起點。\n\n## 招募時與簽約時，有什麼不同？\n\n明示義務有**兩次**，時點・依據・對象都不同。\n\n| | 招募時 | 簽約時 |\n|---|---|---|\n| 依據 | **職業安定法第5條之3** | **勞動基準法第15條**（明示事項在同施行規則第5條） |\n| 對象 | 求職者・應徵而欲成為勞工者 | 締結勞動契約的本人 |\n| 場面 | 求人票・徵才廣告・向介紹機構的求人申請 | 內定〜入職時的勞動條件通知書 |\n\n兩者是連續的：**招募時示出的條件，是簽約時條件的出發點**；要變動就需要變更的明示。這樣看，求人票不是「廣告」，而是**契約前段的文件**。\n\n## 求人票要寫什麼、寫到哪裡？\n\n明示事項列舉於職業安定法施行規則第4條之2第3項，可直接作為求人票的檢查清單。\n\n| 明示事項 |\n|---|\n| 應從事的業務內容（**含變更的範圍**） |\n| 勞動契約的期間 |\n| **試用期間** |\n| 有期契約更新時的**基準**（通算契約期間・更新次數設有**上限**時含該上限） |\n| 就業場所（**含變更的範圍**） |\n| 始業・終業時刻、**有無超過所定工時的勞動**、休息時間、休日 |\n| 工資的金額（臨時支付的工資・獎金等除外） |\n| 健康保險・厚生年金・勞災保險・僱用保險的**適用** |\n| 招募者的**姓名或名稱** |\n| （以派遣勞工僱用時）其旨 |\n| 就業場所的**被動吸菸防止措施** |\n\n最容易漏的是4項：試用期間、所定外勞動的有無、社會保險的適用、被動吸菸防止措施。這些都不是能用「詳情面談時說明」帶過的事項。\n\n## 求人票與實際條件出現落差，會怎樣？\n\n把招募時示出的條件**特定・刪除・追加**時，必須就其內容再次明示（職業安定法第5條之3第3項、同施行規則第4條之2第1項・第2項）。「求人票只是參考」這種運用，被制度本身堵住了。\n\n實務上最好的防波堤，是**內定時把勞動條件通知書與求人票逐項核對**。有落差，就向本人示明哪裡怎麼變了、取得同意。省略這一道工夫的落差，就是入職後「講的跟做的不一樣」的典型入口。\n\n## 2024年4月起，增加了什麼？\n\n2024年（令和6年）4月施行的修正，在明示事項中加入了**「變更的範圍」**——就應從事的業務與就業場所，連**將來調動可能變動的範圍**都要示明。同時，有期契約的**更新上限**（有規定時）也成為明示事項。這些**同時**進入了招募時（職安法側）與簽約時（勞基法側）。\n\n更新上限與在留期限的關係見[在留期限與雇用契約期間，哪個先到期](/zh-tw/labor/column/zairyu-kigen-koyo-keiyaku-kikan)，就業規則側的整備見[就業規則從幾人開始是義務](/zh-tw/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo)。\n\n## 四葉社会保険労務士事務所能做什麼？\n\n位於文京區小日向的四葉社会保険労務士事務所，作為[招募・錄用勞務支援](/zh-tw/labor/services/saiyo)的一部分，承接求人票勞動條件的設計（明示義務的核對）、與勞動條件通知書的核對、變更明示程序的整備。費用為[報酬額表](/zh-tw/labor/ryokin)的「募集・採用コンサルタント」（一式・估價）。**諮詢免費。** 帶著現在使用的求人票來，就從與檢查清單的核對開始。\n\n### 該向誰諮詢\n\n求職者的介紹・斡旋是**取得許可的職業介紹事業者**的領域（本事務所不承接，也不收取介紹費）。在留資格的申請由**四葉行政書士事務所**（與本事務所是不同的事業體，另行簽約）承接；薪資課稅是**稅理士**、圍繞求人票已生紛爭的案件是**律師**的業務。\n\n## 常見問題\n\n**Q. 徵才網站的輸入欄太小，寫不完。**\nA. 欄位小，義務不會變小。原則是以書面等方式，在對方應徵之前明示。「網站欄位＋詳細資料」的兩段式等，明示方式本身的設計也可以承接。\n\n**Q. 只寫「薪資面議・依經驗優待」可以嗎？**\nA. 工資的金額是明示事項（職業安定法施行規則第4條之2第3項）。即使以區間表示，與實際起薪差距過大的寫法，會連到特定時的變更明示與入職後的落差問題。工資欄請從勞動條件通知書倒推來寫。\n\n**Q. 求人票忘了寫試用期間，已經錄用了。**\nA. 在簽約時第一次拿出試用期間，可能構成追加招募時沒有的條件。如何說明・如何取得同意，因狀況而異，請盡早諮詢。\n\n**Q. 可以只委託求人票的檢查嗎？**\nA. 可以。在招募・錄用顧問（一式・估價）的範圍內，進行與明示事項清單的核對並提出修正案。諮詢免費。\n\n## 本文依據\n\n- 職業安定法（昭和22年法律第141號）**第5條之3第1項〜第3項**（勞動條件等的明示・變更等的明示） ―― 2026年8月14日於e-Gov法令檢索確認現行條文\n- 職業安定法施行規則（昭和22年勞動省令第12號）**第4條之2第1項〜第3項**（變更明示的情形・明示事項的列舉。業務與就業場所的變更範圍、試用期間、更新基準與上限、所定外勞動的有無、社會保險等的適用、被動吸菸防止措施等） ―― 同日確認\n- 勞動基準法（昭和22年法律第49號）**第15條**・同施行規則**第5條**（簽約時的明示。變更範圍・更新上限為2024年4月施行的修正） ―― 同日確認\n\n本文為一般性的資訊提供。因應個別情事的判斷，由具備資格者在面談後進行。撰文者為[浦松丈二](/zh-tw/about/uramatsu)（社會保險勞務士・行政書士・宅地建物取引士）。",
+        "category": "招募與雇用",
+        "keywords": [
+          "求人票 必須寫什麼",
+          "徵才 勞動條件 明示 義務",
+          "職業安定法 5條之3 明示事項",
+          "求人票 勞動條件通知書 差異",
+          "求人票 變更範圍 明示",
+          "求人票 試用期間 漏寫"
+        ],
+        "tags": [
+          "求人票",
+          "勞動條件明示",
+          "職業安定法",
+          "錄用",
+          "招募",
+          "變更範圍"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "徵才網站的輸入欄太小，寫不完。",
+            "answer": "欄位小，義務不會變小。原則是以書面等方式，在對方應徵之前明示。「網站欄位＋詳細資料」的兩段式等，明示方式本身的設計也可以承接。"
+          },
+          {
+            "question": "只寫「薪資面議・依經驗優待」可以嗎？",
+            "answer": "工資的金額是明示事項（職業安定法施行規則第4條之2第3項）。即使以區間表示，與實際起薪差距過大的寫法，會連到特定時的變更明示與入職後的落差問題。工資欄請從勞動條件通知書倒推來寫。"
+          },
+          {
+            "question": "求人票忘了寫試用期間，已經錄用了。",
+            "answer": "在簽約時第一次拿出試用期間，可能構成追加招募時沒有的條件。如何說明・如何取得同意，因狀況而異，請盡早諮詢。"
+          },
+          {
+            "question": "可以只委託求人票的檢查嗎？",
+            "answer": "可以。在招募・錄用顧問（一式・估價）的範圍內，進行與明示事項清單的核對並提出修正案。諮詢免費。"
+          }
+        ]
+      },
+      "zh": {
+        "title": "求人票（招聘启事）必须写的事项",
+        "excerpt": "在刊出招聘的阶段，就有明示业务内容・工资・工时等劳动条件的义务（职业安定法第5条之3）——与入职时的明示（劳动基准法第15条）是不同的义务。本文列出明示事项一览、求人票与实际条件出现落差时的变更明示，以及2024年4月起新增的事项。",
+        "content": "**结论（先讲重点）**：在刊出招聘的阶段，就有明示**应从事的业务内容、工资、工时及其他劳动条件**的义务（职业安定法第5条之3第1项）。这与入职时的劳动条件明示（劳动基准法第15条）是**不同的义务**。求人票与劳动条件通知书一旦出现落差，事后就会被要求说明。\n\n本页面写给准备刊出招聘的公司经营者与总务人员。把「招募时的明示」与「签约时的明示」当成同一件事，就是求人票与通知书落差、进而演变成纠纷的起点。\n\n## 招募时与签约时，有什么不同？\n\n明示义务有**两次**，时点・依据・对象都不同。\n\n| | 招募时 | 签约时 |\n|---|---|---|\n| 依据 | **职业安定法第5条之3** | **劳动基准法第15条**（明示事项在同施行规则第5条） |\n| 对象 | 求职者・应聘而欲成为劳动者者 | 缔结劳动契约的本人 |\n| 场面 | 求人票・招聘广告・向介绍机构的求人申请 | 内定〜入职时的劳动条件通知书 |\n\n两者是连续的：**招募时示出的条件，是签约时条件的出发点**；要变动就需要变更的明示。这样看，求人票不是「广告」，而是**契约前段的文件**。\n\n## 求人票要写什么、写到哪里？\n\n明示事项列举于职业安定法施行规则第4条之2第3项，可直接作为求人票的检查清单。\n\n| 明示事项 |\n|---|\n| 应从事的业务内容（**含变更的范围**） |\n| 劳动契约的期间 |\n| **试用期间** |\n| 有期契约更新时的**基准**（通算契约期间・更新次数设有**上限**时含该上限） |\n| 就业场所（**含变更的范围**） |\n| 始业・终业时刻、**有无超过所定工时的劳动**、休息时间、休日 |\n| 工资的金额（临时支付的工资・奖金等除外） |\n| 健康保险・厚生年金・劳灾保险・雇用保险的**适用** |\n| 招募者的**姓名或名称** |\n| （以派遣劳动者雇用时）其旨 |\n| 就业场所的**被动吸烟防止措施** |\n\n最容易漏的是4项：试用期间、所定外劳动的有无、社会保险的适用、被动吸烟防止措施。这些都不是能用「详情面谈时说明」带过的事项。\n\n## 求人票与实际条件出现落差，会怎样？\n\n把招募时示出的条件**特定・删除・追加**时，必须就其内容再次明示（职业安定法第5条之3第3项、同施行规则第4条之2第1项・第2项）。「求人票只是参考」这种运用，被制度本身堵住了。\n\n实务上最好的防波堤，是**内定时把劳动条件通知书与求人票逐项核对**。有落差，就向本人示明哪里怎么变了、取得同意。省略这一道工夫的落差，就是入职后「讲的跟做的不一样」的典型入口。\n\n## 2024年4月起，增加了什么？\n\n2024年（令和6年）4月施行的修正，在明示事项中加入了**「变更的范围」**——就应从事的业务与就业场所，连**将来调动可能变动的范围**都要示明。同时，有期契约的**更新上限**（有规定时）也成为明示事项。这些**同时**进入了招募时（职安法侧）与签约时（劳基法侧）。\n\n更新上限与在留期限的关系见[在留期限与雇用契约期间，哪个先到期](/zh/labor/column/zairyu-kigen-koyo-keiyaku-kikan)，就业规则侧的整备见[就业规则从几人开始是义务](/zh/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo)。\n\n## 四葉社会保険労務士事務所能做什么？\n\n位于文京区小日向的四葉社会保険労務士事務所，作为[招募・录用劳务支援](/zh/labor/services/saiyo)的一部分，承接求人票劳动条件的设计（明示义务的核对）、与劳动条件通知书的核对、变更明示程序的整备。费用为[报酬额表](/zh/labor/ryokin)的「募集・採用コンサルタント」（一式・估价）。**咨询免费。** 带着现在使用的求人票来，就从与检查清单的核对开始。\n\n### 该向谁咨询\n\n求职者的介绍・斡旋是**取得许可的职业介绍事业者**的领域（本事务所不承接，也不收取介绍费）。在留资格的申请由**四葉行政書士事務所**（与本事务所是不同的事业体，另行签约）承接；工资课税是**税理士**、围绕求人票已生纷争的案件是**律师**的业务。\n\n## 常见问题\n\n**Q. 招聘网站的输入栏太小，写不完。**\nA. 栏位小，义务不会变小。原则是以书面等方式，在对方应聘之前明示。「网站栏位＋详细资料」的两段式等，明示方式本身的设计也可以承接。\n\n**Q. 只写「薪资面议・依经验优待」可以吗？**\nA. 工资的金额是明示事项（职业安定法施行规则第4条之2第3项）。即使以区间表示，与实际起薪差距过大的写法，会连到特定时的变更明示与入职后的落差问题。工资栏请从劳动条件通知书倒推来写。\n\n**Q. 求人票忘了写试用期间，已经录用了。**\nA. 在签约时第一次拿出试用期间，可能构成追加招募时没有的条件。如何说明・如何取得同意，因状况而异，请尽早咨询。\n\n**Q. 可以只委托求人票的检查吗？**\nA. 可以。在招募・录用顾问（一式・估价）的范围内，进行与明示事项清单的核对并提出修正案。咨询免费。\n\n## 本文依据\n\n- 职业安定法（昭和22年法律第141号）**第5条之3第1项〜第3项**（劳动条件等的明示・变更等的明示） ―― 2026年8月14日于e-Gov法令检索确认现行条文\n- 职业安定法施行规则（昭和22年劳动省令第12号）**第4条之2第1项〜第3项**（变更明示的情形・明示事项的列举。业务与就业场所的变更范围、试用期间、更新基准与上限、所定外劳动的有无、社会保险等的适用、被动吸烟防止措施等） ―― 同日确认\n- 劳动基准法（昭和22年法律第49号）**第15条**・同施行规则**第5条**（签约时的明示。变更范围・更新上限为2024年4月施行的修正） ―― 同日确认\n\n本文为一般性的信息提供。因应个别情事的判断，由具备资格者在面谈后进行。撰文者为[浦松丈二](/zh/about/uramatsu)（社会保险劳务士・行政书士・宅地建物取引士）。",
+        "category": "招聘与雇用",
+        "keywords": [
+          "求人票 必须写什么",
+          "招聘 劳动条件 明示 义务",
+          "职业安定法 5条之3 明示事项",
+          "求人票 劳动条件通知书 差异",
+          "求人票 变更范围 明示",
+          "求人票 试用期间 漏写"
+        ],
+        "tags": [
+          "求人票",
+          "劳动条件明示",
+          "职业安定法",
+          "录用",
+          "招募",
+          "变更范围"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "招聘网站的输入栏太小，写不完。",
+            "answer": "栏位小，义务不会变小。原则是以书面等方式，在对方应聘之前明示。「网站栏位＋详细资料」的两段式等，明示方式本身的设计也可以承接。"
+          },
+          {
+            "question": "只写「薪资面议・依经验优待」可以吗？",
+            "answer": "工资的金额是明示事项（职业安定法施行规则第4条之2第3项）。即使以区间表示，与实际起薪差距过大的写法，会连到特定时的变更明示与入职后的落差问题。工资栏请从劳动条件通知书倒推来写。"
+          },
+          {
+            "question": "求人票忘了写试用期间，已经录用了。",
+            "answer": "在签约时第一次拿出试用期间，可能构成追加招募时没有的条件。如何说明・如何取得同意，因状况而异，请尽早咨询。"
+          },
+          {
+            "question": "可以只委托求人票的检查吗？",
+            "answer": "可以。在招募・录用顾问（一式・估价）的范围内，进行与明示事项清单的核对并提出修正案。咨询免费。"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "business": "labor",
+    "slug": "ryugakusei-shinsotsu-nyusha-bi-zairyu-henko",
+    "title": "留学生を4月1日入社にできるか",
+    "date": "2026-09-01",
+    "category": "採用と雇用",
+    "excerpt": "内定を出しても、在留資格の変更が許可されるまでは働かせられません。出入国在留管理庁は、4月からの就労を希望する場合は12月1日から1月末までの申請を案内しています。入社日をいつに置くか、内定書面に何を書いておくか——内定の段階で決めておく設計を整理します。",
+    "content": "**結論（先に要点）**：内定を出しても、**在留資格の変更が許可されるまでは働かせられません**。「留学」のままでは就労できないためです。出入国在留管理庁は、4月からの就労を希望する場合は**12月1日から1月末までの間に変更申請を**と案内しています（2026年8月14日参照）。**入社日をいつに置くかは、内定の段階で決めておく問題です。**\n\nこのページは、留学生を新卒採用した・しようとしている会社の経営者・人事担当の方に向けたものです。**在留資格変更許可申請そのものは四葉行政書士事務所（別事業体・別々にご契約いただきます）の業務**で、本記事は「許可が下りるまでの労務の扱い」——内定書面・入社日の設計・入社までの段取り——だけを書きます。\n\n## 内定を出せば、4月から働いてもらえるのか？\n\n内定だけでは働けません。「留学」の在留資格は就労を目的とした活動を予定していないため、**「技術・人文知識・国際業務」などへの変更が許可されてはじめて**、社員として働けます。許可の判断は入管が行い、当事務所も行政書士も「許可される」と約束することはできません。\n\n時期については、一次情報があります。出入国在留管理庁は、例年1月〜3月に申請が集中し、書類不足や申請の遅れがあると**希望日までに審査が終わらない可能性**があるとして、**4月就労希望者は12月1日から1月末までの申請**を呼びかけています。また、在留審査の処理期間は同庁が月ごとに公表しています。つまり「4月1日入社」は、**前年の秋の内定段階から逆算して初めて成立する**日付です。\n\n期限切れ後の就労が会社に何をもたらすかは[在留期限と雇用契約期間は、どちらが先に切れるか](/labor/column/zairyu-kigen-koyo-keiyaku-kikan)で書いたとおりで、不法就労助長罪（出入国管理及び難民認定法第73条の2）は「知らなかった」では免れません。\n\n## 許可が下りるまで、どう扱えばいいのか？\n\n3つの原則で設計します。\n\n- **働かせない。** 変更許可前の就労はできません。入社前の研修などを予定する場合、それが報酬を伴う活動にあたらないかの判断は入管の領域です。迷う設計は行政書士（四葉行政書士事務所・別事業体）に確認してから動かします\n- **入社日を条件付きで書く。** 内定通知書・労働条件通知書に、入社が在留資格の変更許可を前提とすること、許可が遅れた場合に入社日を繰り下げる手続を定めておきます（[内定を出したあと、取り消せるのか](/labor/column/naitei-torikeshi-dekiruka)）\n- **在留カードで確認してから就労開始。** 許可後、変更後の在留カードを原本で確認し、それから勤務を始めます\n\n## 間に合わなかったら、内定はどうなるのか？\n\nまず選ぶべきは**入社日の繰下げ**です。内定書面に繰下げの手続が書いてあれば、その手順で本人と合意して動かすだけで済みます。書いていない場合は、その都度の合意になります。\n\n不許可だった場合の内定の扱いは、書面の定め方と個別の事情によって変わります。内定の取消しには判例上の制約があり（詳しくは[内定を出したあと、取り消せるのか](/labor/column/naitei-torikeshi-dekiruka)）、**本記事では可否を断定しません**。紛争性が生じた事案は弁護士の業務です。ここでも結論は同じで、**内定書面に何を書いておくかが、あとの選択肢を決めます**。\n\n## 会社は、いつ何を準備するのか？\n\n| 時期 | 会社がすること | 担当 |\n|---|---|---|\n| 内定（秋） | 内定通知書（変更許可を前提とする旨・繰下げ手続を明記）、労働条件の明示 | **社会保険労務士**（当事務所） |\n| 〜11月 | 申請書類の準備。会社側の書類（登記事項証明書・決算書類等は申請の類型による）を揃える | **行政書士**（四葉行政書士事務所・別事業体） |\n| **12月1日〜1月末** | 本人が在留資格変更許可申請（入管庁の案内する申請期間） | 本人＋行政書士 |\n| 許可後 | 在留カードの原本確認 | 会社（当事務所が確認項目を整備） |\n| 入社 | 雇入れ時の健康診断・社会保険・雇用保険の資格取得・[外国人雇用状況の届出](/labor/column/gaikokujin-koyo-jokyo-todokede) | **社会保険労務士**（当事務所） |\n\nなお2025年12月1日からは、日本の大学卒業（予定）者などについて、「留学」から「技術・人文知識・国際業務」等への変更申請の**提出書類の省略**が可能になっています（入管庁の公表資料・2026年8月14日参照。適用の可否の判断は申請の側＝行政書士の領域です）。\n\n## 四葉社会保険労務士事務所は、何ができますか？\n\n文京区小日向の四葉社会保険労務士事務所は、[募集・採用の労務サポート](/labor/services/saiyo)として、内定通知書・労働条件通知書の整備（変更許可を前提とする設計）、入社日の繰下げ手続の設計、入社時の手続一式をお受けします。**ご相談は無料です。** 料金は[報酬額表](/labor/ryokin)に、外国人雇用の全体の流れは[外国人を1人雇うと、窓口はいくつ必要か](/labor/column/gaikokujin-koyo-madoguchi-wakekata)にまとめています。\n\n### 誰に相談するか\n\n在留資格変更許可申請と、その見込み・書類・時期の相談は**四葉行政書士事務所**（当事務所とは別の事業体で、別々にご契約いただきます）。許可・不許可の判断は**入管**が行います。内定をめぐって紛争性が生じた事案は**弁護士**、給与課税は**税理士**の業務です。いずれも紹介料の授受はありません。\n\n## よくある質問\n\n**Q. 4月1日入社は、実際に間に合うものですか？**\nA. 入管庁は、4月就労希望者に12月1日から1月末までの申請を案内しており、書類不足や申請の遅れがあると希望日までに審査が終わらない可能性があるとしています。審査期間は月ごとに公表されていますが、個別の申請がいつ許可されるかは誰にも約束できません。だからこそ、内定書面に入社日繰下げの手続を書いておくことが実務の答えになります。\n\n**Q. 許可が出る前に、アルバイトとして働いてもらえますか？**\nA. 「留学」の資格外活動許可の範囲（週28時間以内）でのアルバイトと、社員としての就労は別のものです。卒業後は在籍要件を欠くため前提が変わります。個別の可否の判断は入管の領域で、当事務所では判断しません。設計に迷う場合は行政書士にご確認ください。留学生アルバイトの時間管理は[留学生を雇うとき、週28時間をどう数えるか](/labor/column/ryugakusei-arubaito-28jikan-kanri)をご覧ください。\n\n**Q. 会社側は申請に何を出すのですか？**\nA. 申請の類型（所属機関のカテゴリーや書類省略の適用の有無）によって会社側の書類は変わります。何をいつまでに揃えるかは、申請を担当する行政書士（四葉行政書士事務所・別事業体）にご確認ください。当事務所は、雇用契約側の書面と入社手続を担当します。\n\n**Q. 不許可になったら、内定はどうすればいいですか？**\nA. 内定書面の定め方と個別の事情によります。取消しには判例上の制約があるため、一方的な判断で動く前に、書面の定めを確認し、紛争性がありそうな場合は弁護士にご相談ください。次の採用に向けては、内定書面に条件と手続を明記しておくことが最大の予防になります。\n\n## この記事の根拠\n\n- 出入国在留管理庁「**在留資格『留学』から就労資格への変更申請を予定されている皆様へ**」（2026年8月14日参照）――4月就労希望者への12月1日〜1月末の申請の呼びかけ、2025年12月1日からの提出書類の省略（日本の大学卒業（予定）者等）\n- 出入国在留管理庁「**在留審査処理期間**」（同日参照）――処理期間は月ごとに公表\n- 出入国管理及び難民認定法（昭和26年政令第319号）**第73条の2**（不法就労助長） ―― 2026年8月14日にe-Gov法令検索で現行条文を確認\n- 労働安全衛生規則第43条（雇入時の健康診断）・労働施策総合推進法第28条第1項（外国人雇用状況の届出）は、リンク先の各記事に記載\n\n本記事は一般的な情報提供です。在留資格の該当性・許可の見込みには踏み込みません（入管が判断し、申請は行政書士の業務です）。個別のご事情に応じた判断は、面談のうえ資格者が行います。執筆は[浦松丈二](/about/uramatsu)（社会保険労務士・行政書士・宅地建物取引士）です。",
+    "status": "published",
+    "author": {
+      "name": "浦松 丈二",
+      "title": "社会保険労務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+    },
+    "keywords": [
+      "留学生 新卒 4月入社 間に合う",
+      "留学生 内定 在留資格 変更 いつ",
+      "技人国 変更 申請 12月",
+      "留学生 採用 入社日 決め方",
+      "在留資格 許可前 働かせる",
+      "留学生 内定通知書 条件"
+    ],
+    "tags": [
+      "留学生",
+      "新卒採用",
+      "在留資格変更",
+      "入社日",
+      "内定",
+      "外国人雇用"
+    ],
+    "locales": [],
+    "faq": [
+      {
+        "question": "4月1日入社は、実際に間に合うものですか？",
+        "answer": "入管庁は、4月就労希望者に12月1日から1月末までの申請を案内しており、書類不足や申請の遅れがあると希望日までに審査が終わらない可能性があるとしています。審査期間は月ごとに公表されていますが、個別の申請がいつ許可されるかは誰にも約束できません。だからこそ、内定書面に入社日繰下げの手続を書いておくことが実務の答えになります。"
+      },
+      {
+        "question": "許可が出る前に、アルバイトとして働いてもらえますか？",
+        "answer": "「留学」の資格外活動許可の範囲（週28時間以内）でのアルバイトと、社員としての就労は別のものです。卒業後は在籍要件を欠くため前提が変わります。個別の可否の判断は入管の領域で、当事務所では判断しません。設計に迷う場合は行政書士にご確認ください。留学生アルバイトの時間管理は留学生を雇うとき、週28時間をどう数えるかをご覧ください。"
+      },
+      {
+        "question": "会社側は申請に何を出すのですか？",
+        "answer": "申請の類型（所属機関のカテゴリーや書類省略の適用の有無）によって会社側の書類は変わります。何をいつまでに揃えるかは、申請を担当する行政書士（四葉行政書士事務所・別事業体）にご確認ください。当事務所は、雇用契約側の書面と入社手続を担当します。"
+      },
+      {
+        "question": "不許可になったら、内定はどうすればいいですか？",
+        "answer": "内定書面の定め方と個別の事情によります。取消しには判例上の制約があるため、一方的な判断で動く前に、書面の定めを確認し、紛争性がありそうな場合は弁護士にご相談ください。次の採用に向けては、内定書面に条件と手続を明記しておくことが最大の予防になります。"
+      }
+    ],
+    "translations": {
+      "en": {
+        "title": "Can an international student start on April 1?",
+        "excerpt": "An offer alone lets no one work — not until the change of residence status is granted. The Immigration Services Agency asks those hoping to start work in April to apply between December 1 and the end of January. Where to place the start date, and what to write into the offer documents, are decisions for the offer stage. We design that.",
+        "content": "**In short:** an offer alone lets no one work — **not until the change of residence status is granted**. Under \"Student\" status, employment is not possible. The Immigration Services Agency asks those hoping to start work in April to **apply between December 1 and the end of January** (viewed 14 August 2026). **Where to place the start date is a decision for the offer stage.**\n\nThis page is for owners and HR staff hiring, or about to hire, international students as new graduates. **The change-of-status application itself is the work of 四葉行政書士事務所** (a separate business from this office, engaged under a separate contract); this article covers only **the labour side while the permission is pending** — offer documents, start-date design, and the run-up to joining.\n\n## Does an offer mean they can work from April?\n\nNot by itself. \"Student\" status does not contemplate employment as its activity, so work as an employee becomes possible **only once the change to \"Engineer/Specialist in Humanities/International Services\" or another working status is granted**. The decision belongs to the immigration authority; neither this office nor a gyoseishoshi can promise a grant.\n\nOn timing, there is a primary source. The Immigration Services Agency notes that applications concentrate from January to March, that missing documents or late filing may mean **review does not finish by the hoped-for date**, and asks April starters to **apply between December 1 and the end of January**. Review processing times are published monthly by the Agency. In short: \"April 1 joining\" is a date that **only works when planned backwards from the autumn offer**.\n\nWhat an expired or absent status means for the company is covered in [Which expires first — the period of stay or the employment contract?](/en/labor/column/zairyu-kigen-koyo-keiyaku-kikan) — the offence of promoting illegal work (Immigration Control Act, Article 73-2) accepts no plea of ignorance.\n\n## How do we handle the period before the grant?\n\nThree design principles:\n\n- **No work.** Employment before the change is granted is not possible. If pre-joining training is contemplated, whether it amounts to remunerated activity is immigration territory — check with the gyoseishoshi (四葉行政書士事務所, a separate business) before moving\n- **Write the start date conditionally.** In the offer letter and written conditions, state that joining is premised on the grant of the status change, and set the procedure for pushing back the start date if the grant is delayed ([Can a job offer be withdrawn?](/en/labor/column/naitei-torikeshi-dekiruka))\n- **Verify the residence card, then start.** After the grant, confirm the new residence card against the original — then work begins\n\n## What if it doesn't arrive in time?\n\nThe first tool is **pushing back the start date**. If the offer documents set out the procedure, you move the date by that procedure and the person's agreement — nothing more.\n\nWhere the application is refused, the treatment of the offer depends on what the documents say and on the individual facts. Withdrawal of an offer faces case-law constraints (see [Can a job offer be withdrawn?](/en/labor/column/naitei-torikeshi-dekiruka)); **this article does not decide the question**. Matters turning contentious belong to an attorney. The conclusion is the same either way: **what you wrote into the offer documents decides what options remain**.\n\n## What does the company prepare, and when?\n\n| When | What the company does | Who |\n|---|---|---|\n| Offer (autumn) | Offer letter (grant of status change as a premise; push-back procedure), disclosure of working conditions | **Shakai hoken roumushi** (this office) |\n| To November | Application documents assembled; the company-side papers vary with the application type | **Gyoseishoshi** (四葉行政書士事務所 — a separate business) |\n| **December 1 – end of January** | The person applies for the change of status (the Agency's recommended window) | The person + gyoseishoshi |\n| After grant | Verify the new residence card (original) | Company (we prepare the checklist) |\n| Joining | Pre-employment health check, social and employment insurance enrolment, [the employment status notification](/en/labor/column/gaikokujin-koyo-jokyo-todokede) | **Shakai hoken roumushi** (this office) |\n\nNote: from 1 December 2025, graduates (and expected graduates) of Japanese universities, among others, may **omit certain documents** in the change from \"Student\" to \"Engineer/Specialist in Humanities/International Services\" and similar (per the Agency's materials, viewed 14 August 2026; whether the omission applies is a question for the application side — the gyoseishoshi).\n\n## What can 四葉社会保険労務士事務所 do?\n\n四葉社会保険労務士事務所, in Kohinata, Bunkyo City, provides — within [recruitment and hiring support](/en/labor/services/saiyo) — the offer letter and written conditions designed around the status-change premise, the start-date push-back procedure, and the full set of joining procedures. **Consultation is free of charge.** Fees are in the [fee schedule](/en/labor/ryokin); the whole flow of foreign employment is in [Hire one foreign employee — how many counters do you need?](/en/labor/column/gaikokujin-koyo-madoguchi-wakekata).\n\n### Whom to consult\n\nThe change-of-status application — its prospects, documents and timing — goes to **四葉行政書士事務所** (a separate business from this office, engaged under a separate contract). The grant or refusal is decided by **the immigration authority**. Offer disputes go to **an attorney**; payroll taxation to **a tax accountant**. In every case, no referral fees change hands.\n\n## Frequently asked questions\n\n**Q. Does April 1 actually work out?**\nA. The Agency asks April starters to apply between December 1 and the end of January, and warns that missing documents or late filing may push review past the hoped-for date. Processing times are published monthly, but no one can promise when an individual grant lands. That is precisely why the practical answer is a push-back procedure written into the offer documents.\n\n**Q. Can they work part-time for us until the grant?**\nA. Part-time work within the \"Student\" activity permission (28 hours a week) and employment as staff are different things — and after graduation the enrolment premise lapses. The individual judgment is immigration territory and not one this office makes; if the design is in doubt, confirm with the gyoseishoshi. On student part-timers, see [Employing an international student — how do you count the 28 hours?](/en/labor/column/ryugakusei-arubaito-28jikan-kanri).\n\n**Q. What does the company submit for the application?**\nA. The company-side documents vary with the application type (the organisation's category; whether document omission applies). Ask the gyoseishoshi handling the application (四葉行政書士事務所 — a separate business) what to prepare and by when. This office covers the contract-side documents and the joining procedures.\n\n**Q. The application was refused. What happens to the offer?**\nA. It depends on the offer documents and the individual facts. Withdrawal faces case-law constraints, so before acting unilaterally, check what the documents provide and consult an attorney where a dispute looms. For the next hire, the greatest prevention is writing the condition and the procedure into the offer documents.\n\n## Sources for this article\n\n- Immigration Services Agency, \"**To those planning to apply for a change from 'Student' to a working residence status**\" (viewed 14 August 2026) — the December 1 to end-of-January application window for April starters; the document omissions available from 1 December 2025\n- Immigration Services Agency, \"**Processing times for residence examinations**\" (viewed the same day) — published monthly\n- Immigration Control and Refugee Recognition Act (出入国管理及び難民認定法, Cabinet Order No. 319 of 1951), **Article 73-2** (promoting illegal work) — current text confirmed on e-Gov on 14 August 2026\n- The pre-employment health check (Ordinance on Industrial Safety and Health, Article 43) and the employment status notification (Act on Comprehensive Promotion of Labour Measures, Article 28, paragraph 1) are covered in the linked articles\n\nThis article is general information. It does not enter the prospects of any application or the suitability of any status (the immigration authority decides; applications are gyoseishoshi work). Judgments that fit your particular circumstances are made by a qualified professional after a meeting. Written by [Joji Uramatsu](/en/about/uramatsu) (Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist).",
+        "category": "Hiring and employment",
+        "keywords": [
+          "international student new graduate April start",
+          "student offer change of residence status when",
+          "student to work visa application December",
+          "start date design foreign graduate hire",
+          "working before status granted",
+          "offer letter condition residence status"
+        ],
+        "tags": [
+          "international students",
+          "new-graduate hiring",
+          "change of residence status",
+          "start date",
+          "job offers",
+          "foreign employment"
+        ],
+        "author": {
+          "name": "Joji Uramatsu",
+          "title": "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所"
+        },
+        "faq": [
+          {
+            "question": "Does April 1 actually work out?",
+            "answer": "The Agency asks April starters to apply between December 1 and the end of January, and warns that missing documents or late filing may push review past the hoped-for date. Processing times are published monthly, but no one can promise when an individual grant lands. That is precisely why the practical answer is a push-back procedure written into the offer documents."
+          },
+          {
+            "question": "Can they work part-time for us until the grant?",
+            "answer": "Part-time work within the \"Student\" activity permission (28 hours a week) and employment as staff are different things — and after graduation the enrolment premise lapses. The individual judgment is immigration territory and not one this office makes; if the design is in doubt, confirm with the gyoseishoshi. On student part-timers, see Employing an international student — how do you count the 28 hours?."
+          },
+          {
+            "question": "What does the company submit for the application?",
+            "answer": "The company-side documents vary with the application type (the organisation's category; whether document omission applies). Ask the gyoseishoshi handling the application (四葉行政書士事務所 — a separate business) what to prepare and by when. This office covers the contract-side documents and the joining procedures."
+          },
+          {
+            "question": "The application was refused. What happens to the offer?",
+            "answer": "It depends on the offer documents and the individual facts. Withdrawal faces case-law constraints, so before acting unilaterally, check what the documents provide and consult an attorney where a dispute looms. For the next hire, the greatest prevention is writing the condition and the procedure into the offer documents."
+          }
+        ]
+      },
+      "zh-tw": {
+        "title": "留學生能在4月1日入職嗎",
+        "excerpt": "發了內定，也要等在留資格的變更獲得許可才能工作。出入國在留管理廳呼籲希望4月開始工作者，於12月1日至1月底之間提出申請。入職日放在哪一天、內定文件要寫什麼——都是內定階段就要決定的設計。本文從勞務側整理。",
+        "content": "**結論（先講重點）**：發了內定，**在留資格的變更獲得許可之前，也不能讓對方工作**。「留學」身分無法從事就勞。出入國在留管理廳呼籲希望4月開始工作者，於**12月1日至1月底之間提出變更申請**（2026年8月14日參閱）。**入職日放在哪一天，是內定階段就要決定的問題。**\n\n本頁面寫給錄用・準備錄用留學生新卒的公司經營者與人事人員。**在留資格變更許可申請本身是四葉行政書士事務所（與本事務所是不同的事業體，另行簽約）的業務**，本文只寫「許可下來之前的勞務處理」——內定文件・入職日的設計・入職前的安排。\n\n## 發了內定，4月就能開始工作嗎？\n\n只有內定不能工作。「留學」的在留資格不以就勞為活動內容，**變更為「技術・人文知識・國際業務」等就勞資格獲得許可後**，才能作為員工工作。許可與否由入管判斷，本事務所與行政書士都不能保證「會獲得許可」。\n\n關於時期，有一次資訊。出入國在留管理廳指出，每年1月〜3月申請集中，文件不足或申請過晚時，**可能無法在希望日之前完成審查**，因此呼籲4月就勞希望者**於12月1日至1月底之間申請**。在留審查的處理期間由同廳按月公布。也就是說，「4月1日入職」是**從前一年秋天的內定階段倒推才能成立**的日期。\n\n期限過後的就勞會給公司帶來什麼，已寫在[在留期限與雇用契約期間，哪個先到期](/zh-tw/labor/column/zairyu-kigen-koyo-keiyaku-kikan)——不法就勞助長罪（出入國管理及難民認定法第73條之2）不接受「不知情」的辯解。\n\n## 許可下來之前，怎麼處理？\n\n以3個原則設計。\n\n- **不讓對方工作。** 變更許可前的就勞不可行。若預定入職前研修，其是否構成伴隨報酬的活動，判斷屬入管領域——有疑慮的設計，先向行政書士（四葉行政書士事務所・不同事業體）確認再動\n- **入職日寫成附條件。** 在內定通知書・勞動條件通知書中，載明入職以在留資格變更獲得許可為前提，並定好許可延遲時入職日往後移的程序（[發了內定之後，能取消嗎](/zh-tw/labor/column/naitei-torikeshi-dekiruka)）\n- **確認在留卡之後才開始上班。** 許可後，以原本確認變更後的在留卡，再開始勤務\n\n## 來不及的話，內定會怎樣？\n\n首先該選的是**入職日的往後移**。內定文件裡寫了延後的程序，就照程序與本人合意移動日期即可。沒寫的話，就變成每次個別合意。\n\n不許可確定時內定如何處理，取決於文件的寫法與個別情事。內定的取消受判例上的限制（詳見[發了內定之後，能取消嗎](/zh-tw/labor/column/naitei-torikeshi-dekiruka)），**本文不對可否作出斷定**。已生紛爭的案件是律師的業務。結論在哪裡都一樣：**內定文件裡寫了什麼，決定之後還剩哪些選項**。\n\n## 公司什麼時候準備什麼？\n\n| 時期 | 公司要做的事 | 負責 |\n|---|---|---|\n| 內定（秋） | 內定通知書（載明以變更許可為前提・延後程序）、勞動條件的明示 | **社會保險勞務士**（本事務所） |\n| 〜11月 | 準備申請文件。公司側文件（登記事項證明書・決算文件等，依申請類型而異） | **行政書士**（四葉行政書士事務所・不同事業體） |\n| **12月1日〜1月底** | 本人提出在留資格變更許可申請（入管廳呼籲的申請期間） | 本人＋行政書士 |\n| 許可後 | 以原本確認在留卡 | 公司（本事務所整備確認項目） |\n| 入職 | 僱入時健康檢查・社會保險・僱用保險的資格取得・[外國人僱用狀況的申報](/zh-tw/labor/column/gaikokujin-koyo-jokyo-todokede) | **社會保險勞務士**（本事務所） |\n\n另外，2025年12月1日起，日本的大學畢業（預定）者等，在「留學」變更為「技術・人文知識・國際業務」等的申請中，**可省略部分提出文件**（入管廳公開資料・2026年8月14日參閱。是否適用的判斷屬申請側＝行政書士的領域）。\n\n## 四葉社会保険労務士事務所能做什麼？\n\n位於文京區小日向的四葉社会保険労務士事務所，以[招募・錄用勞務支援](/zh-tw/labor/services/saiyo)承接：以變更許可為前提的內定通知書・勞動條件通知書的整備、入職日延後程序的設計、入職手續一式。**諮詢免費。** 費用見[報酬額表](/zh-tw/labor/ryokin)，外國人僱用的整體流程見[僱用1名外國人，需要幾個窗口](/zh-tw/labor/column/gaikokujin-koyo-madoguchi-wakekata)。\n\n### 該向誰諮詢\n\n在留資格變更許可申請，及其展望・文件・時期的商談，請洽**四葉行政書士事務所**（與本事務所是不同的事業體，另行簽約）。許可・不許可由**入管**判斷。內定相關已生紛爭的案件是**律師**、薪資課稅是**稅理士**的業務。以上均不收取介紹費。\n\n## 常見問題\n\n**Q. 4月1日入職，實際上來得及嗎？**\nA. 入管廳呼籲4月就勞希望者於12月1日至1月底申請，並提醒文件不足或申請過晚時，審查可能無法在希望日前完成。處理期間按月公布，但個別申請何時獲得許可，誰都不能保證。正因如此，實務的答案是把入職日延後的程序寫進內定文件。\n\n**Q. 許可下來之前，可以先以打工形式工作嗎？**\nA. 「留學」資格外活動許可範圍內的打工（週28小時以內），與作為員工的就勞是不同的東西——而且畢業後在籍要件消滅，前提改變。個別可否屬入管領域，本事務所不作判斷；設計有疑慮時請向行政書士確認。留學生打工的時間管理見[僱用留學生時，週28小時怎麼數](/zh-tw/labor/column/ryugakusei-arubaito-28jikan-kanri)。\n\n**Q. 公司側要為申請提出什麼？**\nA. 公司側文件依申請類型（所屬機關的類別・文件省略的適用與否）而異。要準備什麼・何時之前，請向負責申請的行政書士（四葉行政書士事務所・不同事業體）確認。本事務所負責契約側的文件與入職手續。\n\n**Q. 不許可的話，內定該怎麼辦？**\nA. 取決於內定文件的寫法與個別情事。取消受判例上的限制，單方面行動之前，請先確認文件的規定；有紛爭之虞時請諮詢律師。面向下一次錄用，最大的預防是把條件與程序寫進內定文件。\n\n## 本文依據\n\n- 出入國在留管理廳「**致預定申請由『留學』變更為就勞資格的各位**」（2026年8月14日參閱）――對4月就勞希望者呼籲12月1日〜1月底申請、2025年12月1日起的文件省略（日本的大學畢業（預定）者等）\n- 出入國在留管理廳「**在留審查處理期間**」（同日參閱）――按月公布\n- 出入國管理及難民認定法（昭和26年政令第319號）**第73條之2**（不法就勞助長） ―― 2026年8月14日於e-Gov法令檢索確認現行條文\n- 僱入時健康檢查（勞動安全衛生規則第43條）・外國人僱用狀況申報（勞動施策總合推進法第28條第1項）記載於連結的各文章\n\n本文為一般性的資訊提供，不涉入在留資格的該當性・許可的展望（由入管判斷、申請是行政書士的業務）。因應個別情事的判斷，由具備資格者在面談後進行。撰文者為[浦松丈二](/zh-tw/about/uramatsu)（社會保險勞務士・行政書士・宅地建物取引士）。",
+        "category": "招募與雇用",
+        "keywords": [
+          "留學生 新卒 4月入職 來得及嗎",
+          "留學生 內定 在留資格 變更 何時",
+          "技人國 變更 申請 12月",
+          "留學生 錄用 入職日 怎麼定",
+          "許可前 工作 可以嗎",
+          "內定通知書 在留資格 條件"
+        ],
+        "tags": [
+          "留學生",
+          "新卒錄用",
+          "在留資格變更",
+          "入職日",
+          "內定",
+          "外國人僱用"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "4月1日入職，實際上來得及嗎？",
+            "answer": "入管廳呼籲4月就勞希望者於12月1日至1月底申請，並提醒文件不足或申請過晚時，審查可能無法在希望日前完成。處理期間按月公布，但個別申請何時獲得許可，誰都不能保證。正因如此，實務的答案是把入職日延後的程序寫進內定文件。"
+          },
+          {
+            "question": "許可下來之前，可以先以打工形式工作嗎？",
+            "answer": "「留學」資格外活動許可範圍內的打工（週28小時以內），與作為員工的就勞是不同的東西——而且畢業後在籍要件消滅，前提改變。個別可否屬入管領域，本事務所不作判斷；設計有疑慮時請向行政書士確認。留學生打工的時間管理見僱用留學生時，週28小時怎麼數。"
+          },
+          {
+            "question": "公司側要為申請提出什麼？",
+            "answer": "公司側文件依申請類型（所屬機關的類別・文件省略的適用與否）而異。要準備什麼・何時之前，請向負責申請的行政書士（四葉行政書士事務所・不同事業體）確認。本事務所負責契約側的文件與入職手續。"
+          },
+          {
+            "question": "不許可的話，內定該怎麼辦？",
+            "answer": "取決於內定文件的寫法與個別情事。取消受判例上的限制，單方面行動之前，請先確認文件的規定；有紛爭之虞時請諮詢律師。面向下一次錄用，最大的預防是把條件與程序寫進內定文件。"
+          }
+        ]
+      },
+      "zh": {
+        "title": "留学生能在4月1日入职吗",
+        "excerpt": "发了内定，也要等在留资格的变更获得许可才能工作。出入国在留管理厅呼吁希望4月开始工作者，于12月1日至1月底之间提出申请。入职日放在哪一天、内定文件要写什么——都是内定阶段就要决定的设计。本文从劳务侧整理。",
+        "content": "**结论（先讲重点）**：发了内定，**在留资格的变更获得许可之前，也不能让对方工作**。「留学」身份无法从事就劳。出入国在留管理厅呼吁希望4月开始工作者，于**12月1日至1月底之间提出变更申请**（2026年8月14日参阅）。**入职日放在哪一天，是内定阶段就要决定的问题。**\n\n本页面写给录用・准备录用留学生新卒的公司经营者与人事人员。**在留资格变更许可申请本身是四葉行政書士事務所（与本事务所是不同的事业体，另行签约）的业务**，本文只写「许可下来之前的劳务处理」——内定文件・入职日的设计・入职前的安排。\n\n## 发了内定，4月就能开始工作吗？\n\n只有内定不能工作。「留学」的在留资格不以就劳为活动内容，**变更为「技术・人文知识・国际业务」等就劳资格获得许可后**，才能作为员工工作。许可与否由入管判断，本事务所与行政书士都不能保证「会获得许可」。\n\n关于时期，有一次信息。出入国在留管理厅指出，每年1月〜3月申请集中，文件不足或申请过晚时，**可能无法在希望日之前完成审查**，因此呼吁4月就劳希望者**于12月1日至1月底之间申请**。在留审查的处理期间由同厅按月公布。也就是说，「4月1日入职」是**从前一年秋天的内定阶段倒推才能成立**的日期。\n\n期限过后的就劳会给公司带来什么，已写在[在留期限与雇用契约期间，哪个先到期](/zh/labor/column/zairyu-kigen-koyo-keiyaku-kikan)——不法就劳助长罪（出入国管理及难民认定法第73条之2）不接受「不知情」的辩解。\n\n## 许可下来之前，怎么处理？\n\n以3个原则设计。\n\n- **不让对方工作。** 变更许可前的就劳不可行。若预定入职前研修，其是否构成伴随报酬的活动，判断属入管领域——有疑虑的设计，先向行政书士（四葉行政書士事務所・不同事业体）确认再动\n- **入职日写成附条件。** 在内定通知书・劳动条件通知书中，载明入职以在留资格变更获得许可为前提，并定好许可延迟时入职日往后移的程序（[发了内定之后，能取消吗](/zh/labor/column/naitei-torikeshi-dekiruka)）\n- **确认在留卡之后才开始上班。** 许可后，以原件确认变更后的在留卡，再开始勤务\n\n## 来不及的话，内定会怎样？\n\n首先该选的是**入职日的往后移**。内定文件里写了延后的程序，就照程序与本人合意移动日期即可。没写的话，就变成每次个别合意。\n\n不许可确定时内定如何处理，取决于文件的写法与个别情事。内定的取消受判例上的限制（详见[发了内定之后，能取消吗](/zh/labor/column/naitei-torikeshi-dekiruka)），**本文不对可否作出断定**。已生纷争的案件是律师的业务。结论在哪里都一样：**内定文件里写了什么，决定之后还剩哪些选项**。\n\n## 公司什么时候准备什么？\n\n| 时期 | 公司要做的事 | 负责 |\n|---|---|---|\n| 内定（秋） | 内定通知书（载明以变更许可为前提・延后程序）、劳动条件的明示 | **社会保险劳务士**（本事务所） |\n| 〜11月 | 准备申请文件。公司侧文件（登记事项证明书・决算文件等，依申请类型而异） | **行政书士**（四葉行政書士事務所・不同事业体） |\n| **12月1日〜1月底** | 本人提出在留资格变更许可申请（入管厅呼吁的申请期间） | 本人＋行政书士 |\n| 许可后 | 以原件确认在留卡 | 公司（本事务所整备确认项目） |\n| 入职 | 雇入时健康检查・社会保险・雇用保险的资格取得・[外国人雇用状况的申报](/zh/labor/column/gaikokujin-koyo-jokyo-todokede) | **社会保险劳务士**（本事务所） |\n\n另外，2025年12月1日起，日本的大学毕业（预定）者等，在「留学」变更为「技术・人文知识・国际业务」等的申请中，**可省略部分提出文件**（入管厅公开资料・2026年8月14日参阅。是否适用的判断属申请侧＝行政书士的领域）。\n\n## 四葉社会保険労務士事務所能做什么？\n\n位于文京区小日向的四葉社会保険労務士事務所，以[招募・录用劳务支援](/zh/labor/services/saiyo)承接：以变更许可为前提的内定通知书・劳动条件通知书的整备、入职日延后程序的设计、入职手续一式。**咨询免费。** 费用见[报酬额表](/zh/labor/ryokin)，外国人雇用的整体流程见[雇用1名外国人，需要几个窗口](/zh/labor/column/gaikokujin-koyo-madoguchi-wakekata)。\n\n### 该向谁咨询\n\n在留资格变更许可申请，及其展望・文件・时期的商谈，请洽**四葉行政書士事務所**（与本事务所是不同的事业体，另行签约）。许可・不许可由**入管**判断。内定相关已生纷争的案件是**律师**、工资课税是**税理士**的业务。以上均不收取介绍费。\n\n## 常见问题\n\n**Q. 4月1日入职，实际上来得及吗？**\nA. 入管厅呼吁4月就劳希望者于12月1日至1月底申请，并提醒文件不足或申请过晚时，审查可能无法在希望日前完成。处理期间按月公布，但个别申请何时获得许可，谁都不能保证。正因如此，实务的答案是把入职日延后的程序写进内定文件。\n\n**Q. 许可下来之前，可以先以打工形式工作吗？**\nA. 「留学」资格外活动许可范围内的打工（周28小时以内），与作为员工的就劳是不同的东西——而且毕业后在籍要件消灭，前提改变。个别可否属入管领域，本事务所不作判断；设计有疑虑时请向行政书士确认。留学生打工的时间管理见[雇用留学生时，周28小时怎么数](/zh/labor/column/ryugakusei-arubaito-28jikan-kanri)。\n\n**Q. 公司侧要为申请提出什么？**\nA. 公司侧文件依申请类型（所属机关的类别・文件省略的适用与否）而异。要准备什么・何时之前，请向负责申请的行政书士（四葉行政書士事務所・不同事业体）确认。本事务所负责契约侧的文件与入职手续。\n\n**Q. 不许可的话，内定该怎么办？**\nA. 取决于内定文件的写法与个别情事。取消受判例上的限制，单方面行动之前，请先确认文件的规定；有纷争之虞时请咨询律师。面向下一次录用，最大的预防是把条件与程序写进内定文件。\n\n## 本文依据\n\n- 出入国在留管理厅「**致预定申请由『留学』变更为就劳资格的各位**」（2026年8月14日参阅）――对4月就劳希望者呼吁12月1日〜1月底申请、2025年12月1日起的文件省略（日本的大学毕业（预定）者等）\n- 出入国在留管理厅「**在留审查处理期间**」（同日参阅）――按月公布\n- 出入国管理及难民认定法（昭和26年政令第319号）**第73条之2**（不法就劳助长） ―― 2026年8月14日于e-Gov法令检索确认现行条文\n- 雇入时健康检查（劳动安全卫生规则第43条）・外国人雇用状况申报（劳动施策总合推进法第28条第1项）记载于链接的各文章\n\n本文为一般性的信息提供，不涉入在留资格的该当性・许可的展望（由入管判断、申请是行政书士的业务）。因应个别情事的判断，由具备资格者在面谈后进行。撰文者为[浦松丈二](/zh/about/uramatsu)（社会保险劳务士・行政书士・宅地建物取引士）。",
+        "category": "招聘与雇用",
+        "keywords": [
+          "留学生 新卒 4月入职 来得及吗",
+          "留学生 内定 在留资格 变更 何时",
+          "技人国 变更 申请 12月",
+          "留学生 录用 入职日 怎么定",
+          "许可前 工作 可以吗",
+          "内定通知书 在留资格 条件"
+        ],
+        "tags": [
+          "留学生",
+          "新卒录用",
+          "在留资格变更",
+          "入职日",
+          "内定",
+          "外国人雇用"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "4月1日入职，实际上来得及吗？",
+            "answer": "入管厅呼吁4月就劳希望者于12月1日至1月底申请，并提醒文件不足或申请过晚时，审查可能无法在希望日前完成。处理期间按月公布，但个别申请何时获得许可，谁都不能保证。正因如此，实务的答案是把入职日延后的程序写进内定文件。"
+          },
+          {
+            "question": "许可下来之前，可以先以打工形式工作吗？",
+            "answer": "「留学」资格外活动许可范围内的打工（周28小时以内），与作为员工的就劳是不同的东西——而且毕业后在籍要件消灭，前提改变。个别可否属入管领域，本事务所不作判断；设计有疑虑时请向行政书士确认。留学生打工的时间管理见雇用留学生时，周28小时怎么数。"
+          },
+          {
+            "question": "公司侧要为申请提出什么？",
+            "answer": "公司侧文件依申请类型（所属机关的类别・文件省略的适用与否）而异。要准备什么・何时之前，请向负责申请的行政书士（四葉行政書士事務所・不同事业体）确认。本事务所负责契约侧的文件与入职手续。"
+          },
+          {
+            "question": "不许可的话，内定该怎么办？",
+            "answer": "取决于内定文件的写法与个别情事。取消受判例上的限制，单方面行动之前，请先确认文件的规定；有纷争之虞时请咨询律师。面向下一次录用，最大的预防是把条件与程序写进内定文件。"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "business": "labor",
+    "slug": "naitei-torikeshi-dekiruka",
+    "title": "内定を出したあと、取り消せるのか",
+    "date": "2026-09-01",
+    "category": "採用と雇用",
+    "excerpt": "内定は単なる約束ではなく、最高裁判例上、始期付き・解約権留保付きの労働契約が成立したと扱われる場合があります。取消しは内定当時知り得なかった事実で、客観的に合理的・社会通念上相当なものに限られます。争いを避けるための内定通知書の設計まで整理します。",
+    "content": "**結論（先に要点）**：内定は、単なる約束ではありません。最高裁の判例上、採用内定の通知により**始期付き・解約権留保付きの労働契約が成立した**と認められる場合があり、その場合の取消しは**解雇に近い制約**を受けます。取り消せるのは、内定当時知ることができなかった事実で、客観的に合理的・社会通念上相当と認められるものに限られます。\n\nこのページは、内定を出したあとに事情が変わった会社の経営者・人事担当の方に向けたものです。内定取消しは**判例法理**の領域で、個別の可否は事情によって判断が分かれます。本記事は**一般的な取り扱いと、考慮される要素**の整理にとどめ、可否の断定はしません。紛争性が生じた事案は弁護士の業務です。\n\n## 内定は、いつから契約になるのか？\n\n最高裁は、大日本印刷事件（最高裁第二小法廷昭和54年7月20日判決・民集33巻5号582頁）で、採用内定通知と誓約書の提出という経過のもとで、**就労の始期を付し、内定取消事由に基づく解約権を留保した労働契約**が成立したと認めました。\n\n大事なのは、「内定＝常に契約成立」ではなく、**募集から内定までの経過——通知の文面、誓約書の有無、他社への就職活動をやめさせたか——によって判断される**という点です。とはいえ新卒採用の典型的な流れは、この判例の事案とよく似ています。**「まだ入社前だから自由に取り消せる」という前提は、判例上成り立たない**——ここが出発点です。\n\n## どんなときなら、取り消せるのか？\n\n同判決は、取消しが許される事由をこう限定しています。\n\n> 採用内定の取消事由は、**採用内定当時知ることができず、また知ることが期待できないような事実**であって、これを理由として採用内定を取消すことが**解約権留保の趣旨、目的に照らして客観的に合理的と認められ社会通念上相当**として是認することができるものに限られる\n\n一般に考慮される要素としては、卒業できなかった・所定の資格を取得できなかったなど**内定書面に明記された事由に当たるか**、その事実が**内定時に分かり得たものか**、取消し以外の手段（入社日の繰下げ等）を尽くしたか、説明と手続が誠実か——が挙げられます。逆に、内定時に既に分かっていた事情や、抽象的な印象を後から理由にすることは、この基準に照らして厳しく見られます。**個別の可否はここでは判断しません。** 迷う状況は、動く前にご相談ください。\n\n## 在留資格が下りなかったときは、どうなるのか？\n\n外国人の内定では、[在留資格の変更・取得が許可されない](/labor/column/ryugakusei-shinsotsu-nyusha-bi-zairyu-henko)という、日本人の採用にはない事情が加わります。許可がなければ**そもそも就労させられない**（不法就労助長罪の側からも塞がれている）ため、内定書面に**「在留資格の変更等の許可を入社の条件とする」旨と、許可が遅れた場合の入社日繰下げの手続**を定めておくのが実務です。\n\n定めがあれば、条件と手続に沿って処理できます。定めがないまま不許可が確定した場合の扱いは、個別の事情によって判断が分かれる領域に入ります。**予防のすべては、内定書面に書いてあるかどうか**に懸かっています。\n\n## 内定通知書には、何を書いておくのか？\n\n争いを避ける設計は、事前の書面整備です。ここは社会保険労務士の仕事です。\n\n| 書いておくこと | 中身 |\n|---|---|\n| **入社日** | 日付と、繰下げの手続（誰が・いつまでに・どう合意するか） |\n| **取消事由の明示** | 卒業できなかった場合、所定の免許・資格を取得できなかった場合、提出書類に重大な虚偽があった場合、健康状態により就労が著しく困難になった場合 など、具体的に列挙 |\n| **（外国人の場合）在留資格の条件** | 変更・取得の許可を入社の条件とする旨、不許可・遅延時の取り扱い |\n| **提出書類と期限** | 誓約書・卒業証明書・（外国人は）在留カードの提示 |\n| **労働条件** | [求人票の明示](/labor/column/kyujin-hyo-meiji-jiko-roudou-joken)と食い違いのない労働条件通知書を内定時に交付 |\n\n## 四葉社会保険労務士事務所は、何ができますか？\n\n文京区小日向の四葉社会保険労務士事務所は、[募集・採用の労務サポート](/labor/services/saiyo)として、内定通知書・誓約書・労働条件通知書の整備と、入社日繰下げなど手続の設計をお受けします。料金は[報酬額表](/labor/ryokin)の「募集・採用コンサルタント」（一式・お見積り）です。**ご相談は無料です。** すでに具体的な取消しを検討している状況では、後述のとおり弁護士への相談を先にご案内することがあります。\n\n### 誰に相談するか\n\n**すでに紛争になっている・なりそうな内定取消しの可否判断は、弁護士の業務です**（当事務所から直接ご依頼いただく形をご案内し、紹介料の授受はありません）。在留資格の申請は**四葉行政書士事務所**（当事務所とは別の事業体で、別々にご契約いただきます）、給与課税は**税理士**の業務です。当事務所が担うのは、争いを生まないための**事前の書面と手続の整備**です。\n\n## よくある質問\n\n**Q. 入社前なら、理由を問わず取り消せるのではないですか？**\nA. その前提は判例上成り立ちません。採用内定の通知により始期付き・解約権留保付きの労働契約が成立したと認められる場合があり（大日本印刷事件・最高裁昭和54年7月20日判決）、取消しは内定当時知り得なかった事実で、客観的に合理的・社会通念上相当なものに限られます。\n\n**Q. 業績が悪化しました。内定を取り消せますか？**\nA. 可否はここでは判断できません。経営上の理由による取消しは、整理解雇に準じた厳しい目で見られるのが一般的な理解で、取消し以外の手段の検討や説明の誠実さも問われます。動く前に、紛争性を見据えて弁護士にご相談ください。\n\n**Q. 内定者が卒業できませんでした。**\nA. 卒業を入社の条件とし、取消事由として内定書面に明記してあるのが典型的な設計で、この場合は書面の定めに沿って処理します。書面に定めがない場合は個別の判断になります。まず内定通知書の記載をご確認ください。\n\n**Q. 内定通知書のひな形だけ整備してもらえますか？**\nA. お受けできます。取消事由の列挙、入社日と繰下げ手続、外国人の場合の在留資格の条件まで含めて、会社の実態に合わせて整備します。ご相談は無料です。\n\n## この記事の根拠\n\n- **大日本印刷事件・最高裁第二小法廷昭和54年7月20日判決（民集33巻5号582頁）**――採用内定により始期付解約権留保付労働契約の成立を認め、取消事由を「採用内定当時知ることができず、また知ることが期待できないような事実であって、これを理由として採用内定を取消すことが解約権留保の趣旨、目的に照らして客観的に合理的と認められ社会通念上相当として是認することができるもの」に限定（判示の引用は公刊物・複数の公開解説により2026年8月14日に確認）\n- 内定の法的性質・取消しの可否は、募集から内定までの経過と個別の事情によって判断が分かれます。**本記事は一般的な取り扱いの紹介であり、個別事案の可否判断を示すものではありません**\n\n本記事は一般的な情報提供です。紛争性が生じた・生じそうな事案の判断は弁護士の業務です。個別のご事情に応じた判断は、面談のうえ資格者が行います。執筆は[浦松丈二](/about/uramatsu)（社会保険労務士・行政書士・宅地建物取引士）です。",
+    "status": "published",
+    "author": {
+      "name": "浦松 丈二",
+      "title": "社会保険労務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+    },
+    "keywords": [
+      "内定 取り消せるか",
+      "内定取消 要件 判例",
+      "内定 労働契約 成立 いつ",
+      "大日本印刷事件 内定",
+      "内定通知書 書き方 取消事由",
+      "外国人 内定 在留資格 不許可"
+    ],
+    "tags": [
+      "内定",
+      "内定取消",
+      "採用",
+      "判例",
+      "内定通知書",
+      "労働契約"
+    ],
+    "locales": [],
+    "faq": [
+      {
+        "question": "入社前なら、理由を問わず取り消せるのではないですか？",
+        "answer": "その前提は判例上成り立ちません。採用内定の通知により始期付き・解約権留保付きの労働契約が成立したと認められる場合があり（大日本印刷事件・最高裁昭和54年7月20日判決）、取消しは内定当時知り得なかった事実で、客観的に合理的・社会通念上相当なものに限られます。"
+      },
+      {
+        "question": "業績が悪化しました。内定を取り消せますか？",
+        "answer": "可否はここでは判断できません。経営上の理由による取消しは、整理解雇に準じた厳しい目で見られるのが一般的な理解で、取消し以外の手段の検討や説明の誠実さも問われます。動く前に、紛争性を見据えて弁護士にご相談ください。"
+      },
+      {
+        "question": "内定者が卒業できませんでした。",
+        "answer": "卒業を入社の条件とし、取消事由として内定書面に明記してあるのが典型的な設計で、この場合は書面の定めに沿って処理します。書面に定めがない場合は個別の判断になります。まず内定通知書の記載をご確認ください。"
+      },
+      {
+        "question": "内定通知書のひな形だけ整備してもらえますか？",
+        "answer": "お受けできます。取消事由の列挙、入社日と繰下げ手続、外国人の場合の在留資格の条件まで含めて、会社の実態に合わせて整備します。ご相談は無料です。"
+      }
+    ],
+    "translations": {
+      "en": {
+        "title": "Can a job offer be withdrawn once made?",
+        "excerpt": "A job offer is not a mere promise. Under Supreme Court case law, an offer can form a labour contract with a fixed start date and a reserved right of rescission — and withdrawal then faces constraints close to dismissal, limited to facts unknowable at the time of the offer that are objectively reasonable and socially acceptable grounds. We cover what to write into offer letters.",
+        "content": "**In short:** a job offer (naitei) is not a mere promise. Under Supreme Court case law, an offer notice can be found to have formed **a labour contract with a fixed start date and a reserved right of rescission** — and withdrawal then faces **constraints close to dismissal**. Withdrawal is limited to facts that could not have been known at the time of the offer, and that make withdrawal objectively reasonable and socially acceptable.\n\nThis page is for owners and HR staff whose circumstances changed after an offer went out. Offer withdrawal is **case-law territory**; outcomes turn on individual facts. This article confines itself to **the general treatment and the factors considered** — it decides nothing, and matters turning contentious belong to an attorney.\n\n## When does an offer become a contract?\n\nIn the Dai Nippon Printing case (Supreme Court, Second Petty Bench, judgment of 20 July 1979 (Shōwa 54); Minshū Vol. 33, No. 5, p. 582), the Supreme Court held that — on the facts of an offer notice followed by the submission of a written pledge — **a labour contract with a fixed start date and a rescission right reserved for the stated withdrawal grounds** had been formed.\n\nThe key point: it is not that \"an offer always equals a contract,\" but that the question is **judged from the course of events** — the wording of the notice, whether a pledge was taken, whether the person was made to end their job hunt. That said, the typical new-graduate sequence closely resembles the facts of that case. **The assumption \"they haven't joined yet, so we are free to withdraw\" does not survive the case law** — that is the starting point.\n\n## On what grounds can an offer be withdrawn?\n\nThe judgment confines permissible grounds as follows:\n\n> Grounds for withdrawing an offer are limited to **facts that could not be known, and could not be expected to be known, at the time of the offer**, such that withdrawing the offer on their basis can be **found objectively reasonable, in light of the purpose of the reserved right of rescission, and accepted as socially appropriate**.\n\nFactors generally weighed include: whether the event falls within **grounds expressly listed in the offer documents** (failing to graduate; failing to obtain a required licence), whether the fact **was knowable at offer time**, whether alternatives short of withdrawal (such as pushing back the start date) were exhausted, and whether the explanation and process were honest. Conversely, circumstances already known at offer time, or vague impressions raised afterwards, are viewed severely against this standard. **This article does not judge any individual case.** If you are weighing a withdrawal, consult before acting.\n\n## What if the residence status is not granted?\n\nIn foreign hires, [a refused change or grant of residence status](/en/labor/column/ryugakusei-shinsotsu-nyusha-bi-zairyu-henko) adds a factor absent from domestic hiring. Without the grant there is **no lawful way to have the person work at all** (the offence of promoting illegal work bars it from the other side) — so the practice is to write into the offer documents **that the grant is a condition of joining, and the procedure for pushing back the start date** where the grant is delayed.\n\nWith such terms, you process by the terms. Without them, a confirmed refusal drops you into territory where outcomes turn on the individual facts. **All of the prevention lives in what the offer documents say.**\n\n## What goes into the offer letter?\n\nDispute-avoiding design is advance paperwork — and that is shakai hoken roumushi work.\n\n| What to write | Substance |\n|---|---|\n| **The start date** | The date, and the push-back procedure (who agrees, with whom, by when) |\n| **Express withdrawal grounds** | Failing to graduate; failing to obtain a required licence or qualification; material falsehoods in submitted documents; health conditions making work substantially impossible — listed concretely |\n| **(Foreign hires) the status condition** | That the grant of the change or acquisition of residence status is a condition of joining; the treatment on refusal or delay |\n| **Documents and deadlines** | The pledge, graduation certificate, and (for foreign hires) presentation of the residence card |\n| **Working conditions** | A written statement of conditions at offer time, consistent with [the job posting](/en/labor/column/kyujin-hyo-meiji-jiko-roudou-joken) |\n\n## What can 四葉社会保険労務士事務所 do?\n\n四葉社会保険労務士事務所, in Kohinata, Bunkyo City, prepares — within [recruitment and hiring support](/en/labor/services/saiyo) — offer letters, pledges and written conditions, and designs the procedures such as start-date push-backs. Fees: the \"recruitment and hiring consultant\" item in the [fee schedule](/en/labor/ryokin) (package, quoted). **Consultation is free of charge.** Where a concrete withdrawal is already under consideration, we may first point you to an attorney, as below.\n\n### Whom to consult\n\n**Judging whether a specific withdrawal will hold, once a dispute exists or looms, is attorney work** (we point you to an attorney, whom you engage directly; no referral fees change hands). Residence-status applications go to **四葉行政書士事務所** (a separate business from this office, engaged under a separate contract); payroll taxation to **a tax accountant**. What this office carries is **the advance paperwork and procedure that keep the dispute from arising**.\n\n## Frequently asked questions\n\n**Q. Before joining, can't we withdraw for any reason at all?**\nA. That assumption does not survive the case law. An offer can be found to form a labour contract with a fixed start date and reserved rescission right (Dai Nippon Printing case, Supreme Court judgment of 20 July 1979), and withdrawal is limited to facts unknowable at offer time that are objectively reasonable and socially acceptable grounds.\n\n**Q. Business has deteriorated. Can we withdraw the offer?**\nA. We cannot judge that here. The general understanding is that withdrawal for management reasons is scrutinised in a manner close to redundancy dismissal, with alternatives and the honesty of the explanation also weighed. Before acting, consult an attorney with the potential dispute in view.\n\n**Q. The offer holder failed to graduate.**\nA. The typical design makes graduation a condition of joining and an express withdrawal ground in the offer documents — in which case you process by the terms. Absent such terms, it becomes an individual judgment. Check the offer letter's wording first.\n\n**Q. Can you prepare just the offer-letter template?**\nA. Yes. We prepare it to fit your company — the listed withdrawal grounds, the start date and push-back procedure, and for foreign hires the residence-status condition. Consultation is free.\n\n## Sources for this article\n\n- **Dai Nippon Printing case — Supreme Court, Second Petty Bench, judgment of 20 July 1979 (Minshū Vol. 33, No. 5, p. 582)** — recognising the formation of a labour contract with fixed start date and reserved rescission right, and confining withdrawal grounds to \"facts that could not be known, and could not be expected to be known, at the time of the offer, such that withdrawal is objectively reasonable in light of the purpose of the reserved right and socially acceptable\" (the holding was checked on 14 August 2026 against published reports and multiple public commentaries)\n- The legal nature of an offer, and the permissibility of withdrawal, turn on the course of events and the individual facts. **This article presents the general treatment only and decides no individual case**\n\nThis article is general information. Matters where a dispute exists or looms belong to an attorney. Judgments that fit your particular circumstances are made by a qualified professional after a meeting. Written by [Joji Uramatsu](/en/about/uramatsu) (Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist).",
+        "category": "Hiring and employment",
+        "keywords": [
+          "job offer withdrawal Japan requirements",
+          "naitei cancellation case law",
+          "when does an offer become a contract",
+          "Dainippon Printing case offer",
+          "offer letter what to include grounds",
+          "foreign hire offer residence status refused"
+        ],
+        "tags": [
+          "job offers",
+          "offer withdrawal",
+          "hiring",
+          "case law",
+          "offer letters",
+          "labour contracts"
+        ],
+        "author": {
+          "name": "Joji Uramatsu",
+          "title": "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所"
+        },
+        "faq": [
+          {
+            "question": "Before joining, can't we withdraw for any reason at all?",
+            "answer": "That assumption does not survive the case law. An offer can be found to form a labour contract with a fixed start date and reserved rescission right (Dai Nippon Printing case, Supreme Court judgment of 20 July 1979), and withdrawal is limited to facts unknowable at offer time that are objectively reasonable and socially acceptable grounds."
+          },
+          {
+            "question": "Business has deteriorated. Can we withdraw the offer?",
+            "answer": "We cannot judge that here. The general understanding is that withdrawal for management reasons is scrutinised in a manner close to redundancy dismissal, with alternatives and the honesty of the explanation also weighed. Before acting, consult an attorney with the potential dispute in view."
+          },
+          {
+            "question": "The offer holder failed to graduate.",
+            "answer": "The typical design makes graduation a condition of joining and an express withdrawal ground in the offer documents — in which case you process by the terms. Absent such terms, it becomes an individual judgment. Check the offer letter's wording first."
+          },
+          {
+            "question": "Can you prepare just the offer-letter template?",
+            "answer": "Yes. We prepare it to fit your company — the listed withdrawal grounds, the start date and push-back procedure, and for foreign hires the residence-status condition. Consultation is free."
+          }
+        ]
+      },
+      "zh-tw": {
+        "title": "發了內定之後，能取消嗎",
+        "excerpt": "內定不是單純的約定。依最高裁判例，內定通知可能已成立附始期・保留解約權的勞動契約，其取消受到接近解僱的限制——僅限於內定當時無從知悉的事實，且客觀上合理・社會通念上相當者。本文整理一般的處理方式，以及為避免爭議、內定通知書該寫什麼。",
+        "content": "**結論（先講重點）**：內定不是單純的約定。依最高裁的判例，採用內定的通知可能被認定已成立**附始期・保留解約權的勞動契約**，此時的取消受到**接近解僱的限制**。能取消的，僅限於內定當時無從知悉的事實，且以之取消在客觀上合理・社會通念上相當者。\n\n本頁面寫給發出內定後情事有變的公司經營者與人事人員。內定取消是**判例法理**的領域，個別的可否因情事而異。本文僅止於**一般的處理方式與考量要素**的整理，不作可否的斷定。已生紛爭的案件是律師的業務。\n\n## 內定從什麼時候起變成契約？\n\n最高裁在大日本印刷事件（最高裁第二小法庭昭和54年〔1979年〕7月20日判決・民集33卷5號582頁）中，就「內定通知＋提出誓約書」的經過，認定已成立**附就勞始期、並就內定取消事由保留解約權的勞動契約**。\n\n重要的是，不是「內定＝一律成立契約」，而是**依從招募到內定的經過**——通知的文字、有無誓約書、是否讓對方停止求職活動——來判斷。話雖如此，新卒錄用的典型流程與該判例的事實非常相似。**「還沒入職所以可以自由取消」這個前提，在判例上不成立**——這是出發點。\n\n## 什麼情形才能取消？\n\n同判決把允許取消的事由限定如下。\n\n> 採用內定的取消事由，僅限於**採用內定當時無從知悉、亦無從期待知悉的事實**，且以之取消採用內定，**依保留解約權的旨趣・目的，客觀上被認為合理、社會通念上被認為相當**而可獲是認者\n\n一般被考量的要素有：是否屬於**內定文件明記的事由**（未能畢業・未能取得所定資格）、該事實**在內定時是否可得而知**、是否用盡取消以外的手段（入職日延後等）、說明與程序是否誠實。反過來說，內定時已知的情事、事後才提出的抽象印象，在這個基準下會被嚴格檢視。**個別的可否本文不作判斷。** 猶豫的狀況，請在行動之前諮詢。\n\n## 在留資格沒有下來時，怎麼辦？\n\n外國人的內定，會加上[在留資格的變更・取得未獲許可](/zh-tw/labor/column/ryugakusei-shinsotsu-nyusha-bi-zairyu-henko)這個日本人錄用所沒有的情事。沒有許可就**根本不能讓對方工作**（不法就勞助長罪從另一側堵住了這條路），因此實務是把**「以在留資格變更等的許可為入職條件」的旨趣，以及許可延遲時入職日延後的程序**寫進內定文件。\n\n有規定，就照條件與程序處理。沒有規定而不許可確定時，就進入依個別情事判斷分歧的領域。**預防的全部，都在內定文件裡寫了沒有。**\n\n## 內定通知書該寫什麼？\n\n避免爭議的設計，就是事前的文件整備。這是社會保險勞務士的工作。\n\n| 要寫的事 | 內容 |\n|---|---|\n| **入職日** | 日期，與延後的程序（誰・何時之前・如何合意） |\n| **取消事由的明記** | 未能畢業、未能取得所定執照・資格、提出文件有重大虛偽、健康狀態致就勞顯著困難 等，具體列舉 |\n| **（外國人時）在留資格的條件** | 以變更・取得的許可為入職條件的旨趣、不許可・延遲時的處理 |\n| **提出文件與期限** | 誓約書・畢業證明書・（外國人）在留卡的提示 |\n| **勞動條件** | 內定時交付與[求人票的明示](/zh-tw/labor/column/kyujin-hyo-meiji-jiko-roudou-joken)沒有落差的勞動條件通知書 |\n\n## 四葉社会保険労務士事務所能做什麼？\n\n位於文京區小日向的四葉社会保険労務士事務所，以[招募・錄用勞務支援](/zh-tw/labor/services/saiyo)承接內定通知書・誓約書・勞動條件通知書的整備，以及入職日延後等程序的設計。費用為[報酬額表](/zh-tw/labor/ryokin)的「募集・採用コンサルタント」（一式・估價）。**諮詢免費。** 已在檢討具體取消的狀況，如後述，可能先建議您諮詢律師。\n\n### 該向誰諮詢\n\n**已經發生・即將發生紛爭的內定取消可否判斷，是律師的業務**（由您直接委任，本事務所不收取介紹費）。在留資格的申請由**四葉行政書士事務所**（與本事務所是不同的事業體，另行簽約）承接，薪資課稅是**稅理士**的業務。本事務所承擔的，是不讓爭議發生的**事前文件與程序的整備**。\n\n## 常見問題\n\n**Q. 入職前的話，不是可以不問理由地取消嗎？**\nA. 這個前提在判例上不成立。採用內定的通知可能被認定已成立附始期・保留解約權的勞動契約（大日本印刷事件・最高裁昭和54年7月20日判決），取消僅限於內定當時無從知悉的事實，且客觀上合理・社會通念上相當者。\n\n**Q. 業績惡化了。可以取消內定嗎？**\nA. 可否無法在此判斷。因經營理由的取消，一般的理解是以接近整理解僱的嚴格眼光檢視，取消以外手段的檢討與說明的誠實性也會被追問。行動之前，請預想紛爭性，先諮詢律師。\n\n**Q. 內定者沒能畢業。**\nA. 把畢業定為入職條件、並在內定文件明記為取消事由，是典型的設計；此時照文件的規定處理。文件沒有規定時，就是個別的判斷。請先確認內定通知書的記載。\n\n**Q. 可以只委託內定通知書範本的整備嗎？**\nA. 可以。含取消事由的列舉、入職日與延後程序、外國人時的在留資格條件，配合公司的實態整備。諮詢免費。\n\n## 本文依據\n\n- **大日本印刷事件・最高裁第二小法庭昭和54年7月20日判決（民集33卷5號582頁）**――認定採用內定成立附始期・保留解約權的勞動契約，並把取消事由限定於「採用內定當時無從知悉、亦無從期待知悉的事實，且以之取消在保留解約權的旨趣・目的上客觀合理、社會通念上相當而可獲是認者」（判旨的引用於2026年8月14日依公刊物・多個公開解說確認）\n- 內定的法律性質・取消的可否，依從招募到內定的經過與個別情事而判斷分歧。**本文僅為一般處理方式的介紹，不就個別案件示可否**\n\n本文為一般性的資訊提供。已生・將生紛爭的案件之判斷是律師的業務。因應個別情事的判斷，由具備資格者在面談後進行。撰文者為[浦松丈二](/zh-tw/about/uramatsu)（社會保險勞務士・行政書士・宅地建物取引士）。",
+        "category": "招募與雇用",
+        "keywords": [
+          "內定 能取消嗎",
+          "內定取消 要件 判例",
+          "內定 勞動契約 成立 何時",
+          "大日本印刷事件 內定",
+          "內定通知書 寫法 取消事由",
+          "外國人 內定 在留資格 不許可"
+        ],
+        "tags": [
+          "內定",
+          "內定取消",
+          "錄用",
+          "判例",
+          "內定通知書",
+          "勞動契約"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "入職前的話，不是可以不問理由地取消嗎？",
+            "answer": "這個前提在判例上不成立。採用內定的通知可能被認定已成立附始期・保留解約權的勞動契約（大日本印刷事件・最高裁昭和54年7月20日判決），取消僅限於內定當時無從知悉的事實，且客觀上合理・社會通念上相當者。"
+          },
+          {
+            "question": "業績惡化了。可以取消內定嗎？",
+            "answer": "可否無法在此判斷。因經營理由的取消，一般的理解是以接近整理解僱的嚴格眼光檢視，取消以外手段的檢討與說明的誠實性也會被追問。行動之前，請預想紛爭性，先諮詢律師。"
+          },
+          {
+            "question": "內定者沒能畢業。",
+            "answer": "把畢業定為入職條件、並在內定文件明記為取消事由，是典型的設計；此時照文件的規定處理。文件沒有規定時，就是個別的判斷。請先確認內定通知書的記載。"
+          },
+          {
+            "question": "可以只委託內定通知書範本的整備嗎？",
+            "answer": "可以。含取消事由的列舉、入職日與延後程序、外國人時的在留資格條件，配合公司的實態整備。諮詢免費。"
+          }
+        ]
+      },
+      "zh": {
+        "title": "发了内定之后，能取消吗",
+        "excerpt": "内定不是单纯的约定。依最高裁判例，内定通知可能已成立附始期・保留解约权的劳动契约，其取消受到接近解雇的限制——仅限于内定当时无从知悉的事实，且客观上合理・社会通念上相当者。本文整理一般的处理方式，以及为避免争议、内定通知书该写什么。",
+        "content": "**结论（先讲重点）**：内定不是单纯的约定。依最高裁的判例，采用内定的通知可能被认定已成立**附始期・保留解约权的劳动契约**，此时的取消受到**接近解雇的限制**。能取消的，仅限于内定当时无从知悉的事实，且以之取消在客观上合理・社会通念上相当者。\n\n本页面写给发出内定后情事有变的公司经营者与人事人员。内定取消是**判例法理**的领域，个别的可否因情事而异。本文仅止于**一般的处理方式与考量要素**的整理，不作可否的断定。已生纷争的案件是律师的业务。\n\n## 内定从什么时候起变成契约？\n\n最高裁在大日本印刷事件（最高裁第二小法庭昭和54年〔1979年〕7月20日判决・民集33卷5号582页）中，就「内定通知＋提出誓约书」的经过，认定已成立**附就劳始期、并就内定取消事由保留解约权的劳动契约**。\n\n重要的是，不是「内定＝一律成立契约」，而是**依从招募到内定的经过**——通知的文字、有无誓约书、是否让对方停止求职活动——来判断。话虽如此，新卒录用的典型流程与该判例的事实非常相似。**「还没入职所以可以自由取消」这个前提，在判例上不成立**——这是出发点。\n\n## 什么情形才能取消？\n\n同判决把允许取消的事由限定如下。\n\n> 采用内定的取消事由，仅限于**采用内定当时无从知悉、亦无从期待知悉的事实**，且以之取消采用内定，**依保留解约权的旨趣・目的，客观上被认为合理、社会通念上被认为相当**而可获是认者\n\n一般被考量的要素有：是否属于**内定文件明记的事由**（未能毕业・未能取得所定资格）、该事实**在内定时是否可得而知**、是否用尽取消以外的手段（入职日延后等）、说明与程序是否诚实。反过来说，内定时已知的情事、事后才提出的抽象印象，在这个基准下会被严格检视。**个别的可否本文不作判断。** 犹豫的状况，请在行动之前咨询。\n\n## 在留资格没有下来时，怎么办？\n\n外国人的内定，会加上[在留资格的变更・取得未获许可](/zh/labor/column/ryugakusei-shinsotsu-nyusha-bi-zairyu-henko)这个日本人录用所没有的情事。没有许可就**根本不能让对方工作**（不法就劳助长罪从另一侧堵住了这条路），因此实务是把**「以在留资格变更等的许可为入职条件」的旨趣，以及许可延迟时入职日延后的程序**写进内定文件。\n\n有规定，就照条件与程序处理。没有规定而不许可确定时，就进入依个别情事判断分歧的领域。**预防的全部，都在内定文件里写了没有。**\n\n## 内定通知书该写什么？\n\n避免争议的设计，就是事前的文件整备。这是社会保险劳务士的工作。\n\n| 要写的事 | 内容 |\n|---|---|\n| **入职日** | 日期，与延后的程序（谁・何时之前・如何合意） |\n| **取消事由的明记** | 未能毕业、未能取得所定执照・资格、提出文件有重大虚伪、健康状态致就劳显著困难 等，具体列举 |\n| **（外国人时）在留资格的条件** | 以变更・取得的许可为入职条件的旨趣、不许可・延迟时的处理 |\n| **提出文件与期限** | 誓约书・毕业证明书・（外国人）在留卡的提示 |\n| **劳动条件** | 内定时交付与[求人票的明示](/zh/labor/column/kyujin-hyo-meiji-jiko-roudou-joken)没有落差的劳动条件通知书 |\n\n## 四葉社会保険労務士事務所能做什么？\n\n位于文京区小日向的四葉社会保険労務士事務所，以[招募・录用劳务支援](/zh/labor/services/saiyo)承接内定通知书・誓约书・劳动条件通知书的整备，以及入职日延后等程序的设计。费用为[报酬额表](/zh/labor/ryokin)的「募集・採用コンサルタント」（一式・估价）。**咨询免费。** 已在检讨具体取消的状况，如后述，可能先建议您咨询律师。\n\n### 该向谁咨询\n\n**已经发生・即将发生纷争的内定取消可否判断，是律师的业务**（由您直接委任，本事务所不收取介绍费）。在留资格的申请由**四葉行政書士事務所**（与本事务所是不同的事业体，另行签约）承接，工资课税是**税理士**的业务。本事务所承担的，是不让争议发生的**事前文件与程序的整备**。\n\n## 常见问题\n\n**Q. 入职前的话，不是可以不问理由地取消吗？**\nA. 这个前提在判例上不成立。采用内定的通知可能被认定已成立附始期・保留解约权的劳动契约（大日本印刷事件・最高裁昭和54年7月20日判决），取消仅限于内定当时无从知悉的事实，且客观上合理・社会通念上相当者。\n\n**Q. 业绩恶化了。可以取消内定吗？**\nA. 可否无法在此判断。因经营理由的取消，一般的理解是以接近整理解雇的严格眼光检视，取消以外手段的检讨与说明的诚实性也会被追问。行动之前，请预想纷争性，先咨询律师。\n\n**Q. 内定者没能毕业。**\nA. 把毕业定为入职条件、并在内定文件明记为取消事由，是典型的设计；此时照文件的规定处理。文件没有规定时，就是个别的判断。请先确认内定通知书的记载。\n\n**Q. 可以只委托内定通知书范本的整备吗？**\nA. 可以。含取消事由的列举、入职日与延后程序、外国人时的在留资格条件，配合公司的实态整备。咨询免费。\n\n## 本文依据\n\n- **大日本印刷事件・最高裁第二小法庭昭和54年7月20日判决（民集33卷5号582页）**――认定采用内定成立附始期・保留解约权的劳动契约，并把取消事由限定于「采用内定当时无从知悉、亦无从期待知悉的事实，且以之取消在保留解约权的旨趣・目的上客观合理、社会通念上相当而可获是认者」（判旨的引用于2026年8月14日依公刊物・多个公开解说确认）\n- 内定的法律性质・取消的可否，依从招募到内定的经过与个别情事而判断分歧。**本文仅为一般处理方式的介绍，不就个别案件示可否**\n\n本文为一般性的信息提供。已生・将生纷争的案件之判断是律师的业务。因应个别情事的判断，由具备资格者在面谈后进行。撰文者为[浦松丈二](/zh/about/uramatsu)（社会保险劳务士・行政书士・宅地建物取引士）。",
+        "category": "招聘与雇用",
+        "keywords": [
+          "内定 能取消吗",
+          "内定取消 要件 判例",
+          "内定 劳动契约 成立 何时",
+          "大日本印刷事件 内定",
+          "内定通知书 写法 取消事由",
+          "外国人 内定 在留资格 不许可"
+        ],
+        "tags": [
+          "内定",
+          "内定取消",
+          "录用",
+          "判例",
+          "内定通知书",
+          "劳动契约"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "入职前的话，不是可以不问理由地取消吗？",
+            "answer": "这个前提在判例上不成立。采用内定的通知可能被认定已成立附始期・保留解约权的劳动契约（大日本印刷事件・最高裁昭和54年7月20日判决），取消仅限于内定当时无从知悉的事实，且客观上合理・社会通念上相当者。"
+          },
+          {
+            "question": "业绩恶化了。可以取消内定吗？",
+            "answer": "可否无法在此判断。因经营理由的取消，一般的理解是以接近整理解雇的严格眼光检视，取消以外手段的检讨与说明的诚实性也会被追问。行动之前，请预想纷争性，先咨询律师。"
+          },
+          {
+            "question": "内定者没能毕业。",
+            "answer": "把毕业定为入职条件、并在内定文件明记为取消事由，是典型的设计；此时照文件的规定处理。文件没有规定时，就是个别的判断。请先确认内定通知书的记载。"
+          },
+          {
+            "question": "可以只委托内定通知书范本的整备吗？",
+            "answer": "可以。含取消事由的列举、入职日与延后程序、外国人时的在留资格条件，配合公司的实态整备。咨询免费。"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "business": "labor",
+    "slug": "saiyo-joseikin-iriguchi-de-kimaru",
+    "title": "採用で使える助成金は、入口で決まる",
+    "date": "2026-09-01",
+    "category": "助成金",
+    "excerpt": "採用に関する助成金には、ハローワークまたは職業紹介事業者等の紹介で雇い入れることが要件のものがあります。求人媒体で直接採用すると、その時点で対象外が確定することがあります。採ったあとでは戻れません。求人を出す前に確認する順序を整理します。",
+    "content": "**結論（先に要点）**：採用に関する助成金には、**ハローワークまたは職業紹介事業者等の紹介で雇い入れること**が要件になっているものがあります（例：特定求職者雇用開発助成金）。求人媒体で直接採用すると、**その時点で対象外が確定する**ことがあります。採ったあとでは戻れません——**採用助成金は、入口で決まります。**\n\nこのページは、これから人を採ろうとしている会社の経営者・総務担当の方に向けたものです。助成金の額と要件は年度ごとに（年度の途中でも）改定されるため、**本記事は金額を書きません**。個別の要件は、申請時点の最新の支給要領で必ず確認します。\n\n## なぜ、採ったあとでは間に合わないのか？\n\n助成金の多くの要件は「何をしたか」ですが、採用系の助成金には**「どの経路で雇い入れたか」**という、あとから変えられない要件が含まれるからです。\n\n例えば、特定求職者雇用開発助成金（特定就職困難者コース）は、対象となる方を**ハローワークまたは民間の職業紹介事業者等の紹介により**雇い入れることが要件のひとつです（厚生労働省の公表資料・2026年8月14日参照）。求人媒体経由や直接応募で同じ方を採用しても、この要件は満たせません。雇入れ日を過ぎてから気づいても、**採用経路は遡って変えられない**——これが「入口で決まる」の意味です。\n\n[助成金を狙うなら、最初の契約形態で決まる](/labor/column/joseikin-yuki-muki-keiyaku-katachi)で書いたのは**入社後の転換の入口**（契約形態）でした。本記事はその一つ手前、**募集経路の入口**です。2つの入口はどちらも、動いたあとでは戻れません。\n\n## ハローワークを通すと、何が変わるのか？\n\n紹介を受けて雇い入れたことの**記録が残る**ことが本質です。ハローワークの紹介で雇い入れれば紹介の事実が確認でき、民間の職業紹介事業者等の場合は、**助成金の取扱いについて労働局に届出をしている事業者**からの紹介であることと、紹介証明が要ります（厚生労働省「雇用関係助成金を取り扱う職業紹介事業者等」・2026年8月14日参照）。\n\nつまり同じ「紹介会社経由」でも、**その事業者が助成金の取扱届出をしているか**で結論が分かれ得ます。紹介会社と契約する前に確認する価値のある一点です。\n\n## どの助成金が、採用のときに関係するのか？\n\n名称だけ挙げます（金額・細目は支給要領で確認します）。\n\n| 場面 | 関係し得る助成金の例 |\n|---|---|\n| 高年齢者・障害者・母子家庭の母などを雇い入れる | 特定求職者雇用開発助成金（特定就職困難者コースなど。**紹介要件あり**） |\n| 有期で迎えて正社員に転換する | キャリアアップ助成金（正社員化コース。**入口は契約形態**——[別記事](/labor/column/joseikin-yuki-muki-keiyaku-katachi)） |\n\nどのコースにどの要件（紹介経路・対象者・雇用形態・賃金）が付くかは、**年度の支給要領が正本**です。名称が同じでもコースの統廃合があり、リーフレットの日付が古いまま判断するのは危険です。\n\n## いつ、誰に相談すればいいのか？\n\n**求人を出す前**です。順序はこうなります。\n\n1. 採りたい人物像を決める（ここで対象者類型が見える）\n2. **使える可能性のある助成金と、その紹介要件を確認する**（当事務所）\n3. 経路を決める——ハローワークに求人を出すか、取扱届出のある紹介事業者を使うか\n4. [求人票の労働条件](/labor/column/kyujin-hyo-meiji-jiko-roudou-joken)と[内定書面](/labor/column/naitei-torikeshi-dekiruka)を整える\n5. 雇入れ・申請\n\nこの順序を逆にして「もう採ってしまったが、何か使える助成金はないか」から始めると、選択肢は大きく減っています。\n\n## 四葉社会保険労務士事務所は、何ができますか？\n\n文京区小日向の四葉社会保険労務士事務所は、[募集・採用の労務サポート](/labor/services/saiyo)の一部として、採用計画段階での助成金の入口設計（紹介要件・契約形態の確認）、雇用関係助成金の申請をお受けします。**ご相談は無料です。** 料金は[報酬額表](/labor/ryokin)に掲載しています。「この採り方で、あとから困らないか」の確認だけでも構いません。\n\n### 誰に相談するか\n\n求職者の紹介そのものは**ハローワークまたは許可を受けた職業紹介事業者**の領域です（当事務所は紹介・あっせんを取り扱っておらず、紹介料の授受もありません——[社労士に、採用の何を頼めて、何を頼めないのか](/labor/column/saiyo-sharoushi-doko-made-tanomeru)）。税務は**税理士**、在留資格は**四葉行政書士事務所**（当事務所とは別の事業体で、別々にご契約いただきます）、紛争性のある事案は**弁護士**の業務です。\n\n## よくある質問\n\n**Q. 求人サイトで良い人が応募してきました。いまから助成金は使えますか？**\nA. 紹介経由の雇入れが要件になっている助成金は、直接応募では使えません。ただし、採用のすべてが紹介要件付きではなく、雇入れ後の転換を入口とするもの（キャリアアップ助成金など）は別の道が残ることがあります。雇入れ日を確定させる前に、一度ご相談ください。\n\n**Q. どの紹介会社でも、助成金の対象になりますか？**\nA. なりません。民間の職業紹介事業者等の場合、雇用関係助成金の取扱いに係る届出を労働局に行っている事業者からの紹介であることが必要です（厚生労働省の公表資料による）。契約前に、その事業者が取扱届出をしているかをご確認ください。\n\n**Q. 助成金の金額はいくらですか？**\nA. 本記事では書きません。額と要件は年度ごとに、また年度の途中でも改定されるためです。ご相談いただいた時点の最新の支給要領で、対象になり得るコースと額をお示しします。\n\n**Q. 申請だけをお願いすることはできますか？**\nA. 雇用関係助成金の申請はお受けします。ただし採用系の助成金は、雇入れ前の経路・契約形態で可否が決まっているため、申請段階からでは要件を満たせないことがあります。できるだけ求人を出す前にご相談ください。\n\n## この記事の根拠\n\n- 特定求職者雇用開発助成金（特定就職困難者コース）の紹介要件（ハローワークまたは民間の職業紹介事業者等の紹介による雇入れ） ―― 厚生労働省「特定求職者雇用開発助成金（特定就職困難者コース）」（2026年8月14日参照）\n- 民間の職業紹介事業者等の取扱届出 ―― 厚生労働省「雇用関係助成金を取り扱う職業紹介事業者等」（2026年8月14日参照）\n- 職業紹介・有料職業紹介事業の許可は、職業安定法（昭和22年法律第141号）第4条第1項・第30条第1項（2026年8月14日にe-Gov法令検索で現行条文を確認）\n- **助成金の名称・コース・要件・額は改定されます。申請時は必ず最新の支給要領をご確認ください。本記事は金額を記載していません**\n\n本記事は一般的な情報提供です。個別の支給の可否は支給要領と個別の事情によります。個別のご事情に応じた判断は、面談のうえ資格者が行います。執筆は[浦松丈二](/about/uramatsu)（社会保険労務士・行政書士・宅地建物取引士）です。",
+    "status": "published",
+    "author": {
+      "name": "浦松 丈二",
+      "title": "社会保険労務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+    },
+    "keywords": [
+      "採用 助成金 ハローワーク 紹介 要件",
+      "特定求職者雇用開発助成金 紹介",
+      "助成金 直接応募 対象外",
+      "採用 助成金 いつ相談",
+      "紹介会社 助成金 届出",
+      "求人 出す前 助成金"
+    ],
+    "tags": [
+      "助成金",
+      "採用",
+      "ハローワーク",
+      "特定求職者雇用開発助成金",
+      "紹介要件",
+      "募集経路"
+    ],
+    "locales": [],
+    "faq": [
+      {
+        "question": "求人サイトで良い人が応募してきました。いまから助成金は使えますか？",
+        "answer": "紹介経由の雇入れが要件になっている助成金は、直接応募では使えません。ただし、採用のすべてが紹介要件付きではなく、雇入れ後の転換を入口とするもの（キャリアアップ助成金など）は別の道が残ることがあります。雇入れ日を確定させる前に、一度ご相談ください。"
+      },
+      {
+        "question": "どの紹介会社でも、助成金の対象になりますか？",
+        "answer": "なりません。民間の職業紹介事業者等の場合、雇用関係助成金の取扱いに係る届出を労働局に行っている事業者からの紹介であることが必要です（厚生労働省の公表資料による）。契約前に、その事業者が取扱届出をしているかをご確認ください。"
+      },
+      {
+        "question": "助成金の金額はいくらですか？",
+        "answer": "本記事では書きません。額と要件は年度ごとに、また年度の途中でも改定されるためです。ご相談いただいた時点の最新の支給要領で、対象になり得るコースと額をお示しします。"
+      },
+      {
+        "question": "申請だけをお願いすることはできますか？",
+        "answer": "雇用関係助成金の申請はお受けします。ただし採用系の助成金は、雇入れ前の経路・契約形態で可否が決まっているため、申請段階からでは要件を満たせないことがあります。できるだけ求人を出す前にご相談ください。"
+      }
+    ],
+    "translations": {
+      "en": {
+        "title": "Hiring subsidies are decided at the entrance",
+        "excerpt": "Some hiring subsidies require that the person be hired through a referral from Hello Work or a registered placement business. Hire directly through a job board, and ineligibility can be locked in at that moment — the hiring route cannot be changed afterwards. We set out the order of checks to run before the posting goes out. No amounts are quoted; schemes change yearly.",
+        "content": "**In short:** some hiring-related subsidies require that the person be **hired through a referral from Hello Work or a registered employment placement business** (for example, the Specified Job Seeker Employment Development Subsidy (特定求職者雇用開発助成金)). Hire directly through a job board, and **ineligibility can be locked in at that moment**. You cannot go back after the hire — **hiring subsidies are decided at the entrance.**\n\nThis page is for owners and back-office staff about to hire. Because subsidy amounts and requirements are revised every fiscal year (and mid-year), **this article quotes no amounts**; individual requirements are always checked against the latest payment guidelines at application time.\n\n## Why is it too late after the hire?\n\nMost subsidy requirements concern what you did — but hiring subsidies include a requirement about **the route by which you hired**, and that cannot be changed afterwards.\n\nFor example, the Specified Job Seeker Employment Development Subsidy (Specified Difficult-to-Employ Persons course) requires, among other things, that the eligible person be hired **through a referral from Hello Work or a registered private placement business** (per Ministry of Health, Labour and Welfare materials, viewed 14 August 2026). Hire the same person via a job board or direct application, and this requirement cannot be met. Realising after the hiring date changes nothing — **the route cannot be rewritten retroactively**. That is what \"decided at the entrance\" means.\n\n[If you are aiming for subsidies, the first contract form decides](/en/labor/column/joseikin-yuki-muki-keiyaku-katachi) covered the **post-joining conversion entrance** (contract form). This article covers the step before it — **the recruiting-route entrance**. Neither entrance can be re-entered once passed.\n\n## What changes when you go through Hello Work?\n\nThe essence is that **a record of the referral exists**. A Hello Work referral is verifiable in itself; with a private placement business, the referral must come from **a business that has filed the subsidy-handling notification with the Labour Bureau**, and a referral certificate is needed (Ministry of Health, Labour and Welfare, \"Placement businesses handling employment-related subsidies\", viewed 14 August 2026).\n\nSo even \"via an agency\" splits: **whether that agency has filed the handling notification** can change the outcome. It is a single question worth asking before signing with any agency.\n\n## Which subsidies matter at hiring time?\n\nNames only — amounts and details belong to the payment guidelines.\n\n| Scene | Examples of subsidies that can be involved |\n|---|---|\n| Hiring older workers, persons with disabilities, single mothers, and other specified groups | Specified Job Seeker Employment Development Subsidy (Specified Difficult-to-Employ Persons course and others; **referral requirement applies**) |\n| Bringing someone in on a fixed term and converting to regular employment | Career-Up Subsidy (regular-conversion course; **the entrance is the contract form** — [see the companion article](/en/labor/column/joseikin-yuki-muki-keiyaku-katachi)) |\n\nWhich requirements (route, eligible persons, employment form, wages) attach to which course is governed by **the fiscal year's payment guidelines**. Courses are merged and abolished under unchanged names; judging from an old leaflet is dangerous.\n\n## When, and whom, do you consult?\n\n**Before the posting goes out.** The order:\n\n1. Decide the profile you want to hire (this reveals the eligible-person categories)\n2. **Check which subsidies could apply, and their referral requirements** (this office)\n3. Choose the route — a Hello Work posting, or an agency with the handling notification on file\n4. Put [the posting's working conditions](/en/labor/column/kyujin-hyo-meiji-jiko-roudou-joken) and [the offer documents](/en/labor/column/naitei-torikeshi-dekiruka) in order\n5. Hire and apply\n\nRun this in reverse — \"we've already hired; is there a subsidy?\" — and the options have already narrowed sharply.\n\n## What can 四葉社会保険労務士事務所 do?\n\n四葉社会保険労務士事務所, in Kohinata, Bunkyo City, takes on — within [recruitment and hiring support](/en/labor/services/saiyo) — the subsidy entrance design at the planning stage (referral requirements, contract form) and the application for employment-related subsidies. **Consultation is free of charge.** Fees are in the [fee schedule](/en/labor/ryokin). \"Will this way of hiring cause trouble later?\" is a perfectly good question to bring on its own.\n\n### Whom to consult\n\nCandidate referral itself belongs to **Hello Work or licensed placement businesses** (this office does not handle introduction or placement, and no referral fees change hands — [In hiring, what can a shakai hoken roumushi do for you?](/en/labor/column/saiyo-sharoushi-doko-made-tanomeru)). Tax goes to **a tax accountant**, residence status to **四葉行政書士事務所** (a separate business from this office, engaged under a separate contract), contentious matters to **an attorney**.\n\n## Frequently asked questions\n\n**Q. A good candidate applied through a job site. Can we still use a subsidy?**\nA. Subsidies whose requirement is a referral-based hire cannot be used for a direct application. But not all hiring subsidies carry the referral requirement — schemes whose entrance is post-joining conversion (such as the Career-Up Subsidy) may still leave a path. Consult before fixing the hiring date.\n\n**Q. Does any agency qualify?**\nA. No. With a private placement business, the referral must come from one that has filed the employment-subsidy handling notification with the Labour Bureau (per the Ministry's published materials). Before contracting, confirm whether the agency has filed it.\n\n**Q. How much are the subsidies?**\nA. This article does not say. Amounts and requirements are revised each fiscal year and sometimes mid-year. At consultation we identify the courses that could apply and their amounts against the latest payment guidelines.\n\n**Q. Can we ask you to handle only the application?**\nA. We take on employment-related subsidy applications. But for hiring subsidies, eligibility is often already decided by the pre-hire route and contract form — starting at the application stage can be too late. Consult, wherever possible, before the posting goes out.\n\n## Sources for this article\n\n- The referral requirement of the Specified Job Seeker Employment Development Subsidy (Specified Difficult-to-Employ Persons course) — Ministry of Health, Labour and Welfare (viewed 14 August 2026)\n- The handling notification for private placement businesses — Ministry of Health, Labour and Welfare, \"Placement businesses handling employment-related subsidies\" (viewed 14 August 2026)\n- Employment placement and its licensing — Employment Security Act (職業安定法, Act No. 141 of 1947), Article 4, paragraph 1 and Article 30, paragraph 1 (confirmed on e-Gov on 14 August 2026)\n- **Subsidy names, courses, requirements and amounts change. Always check the latest payment guidelines at application. This article quotes no amounts**\n\nThis article is general information; eligibility in an individual case follows the payment guidelines and the facts. Judgments that fit your particular circumstances are made by a qualified professional after a meeting. Written by [Joji Uramatsu](/en/about/uramatsu) (Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist).",
+        "category": "Employment subsidies",
+        "keywords": [
+          "hiring subsidy Hello Work referral requirement",
+          "specified job seeker employment development subsidy referral",
+          "subsidy direct application ineligible",
+          "when to consult hiring subsidy",
+          "placement agency subsidy notification",
+          "before posting job subsidy check"
+        ],
+        "tags": [
+          "subsidies",
+          "hiring",
+          "Hello Work",
+          "employment development subsidy",
+          "referral requirement",
+          "recruiting route"
+        ],
+        "author": {
+          "name": "Joji Uramatsu",
+          "title": "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所"
+        },
+        "faq": [
+          {
+            "question": "A good candidate applied through a job site. Can we still use a subsidy?",
+            "answer": "Subsidies whose requirement is a referral-based hire cannot be used for a direct application. But not all hiring subsidies carry the referral requirement — schemes whose entrance is post-joining conversion (such as the Career-Up Subsidy) may still leave a path. Consult before fixing the hiring date."
+          },
+          {
+            "question": "Does any agency qualify?",
+            "answer": "No. With a private placement business, the referral must come from one that has filed the employment-subsidy handling notification with the Labour Bureau (per the Ministry's published materials). Before contracting, confirm whether the agency has filed it."
+          },
+          {
+            "question": "How much are the subsidies?",
+            "answer": "This article does not say. Amounts and requirements are revised each fiscal year and sometimes mid-year. At consultation we identify the courses that could apply and their amounts against the latest payment guidelines."
+          },
+          {
+            "question": "Can we ask you to handle only the application?",
+            "answer": "We take on employment-related subsidy applications. But for hiring subsidies, eligibility is often already decided by the pre-hire route and contract form — starting at the application stage can be too late. Consult, wherever possible, before the posting goes out."
+          }
+        ]
+      },
+      "zh-tw": {
+        "title": "錄用可用的助成金，在入口就決定了",
+        "excerpt": "錄用相關的助成金中，有些以「經由Hello Work或登錄的職業介紹事業者的介紹僱入」為要件（例：特定求職者雇用開発助成金）。用徵才媒體直接錄用，可能在那個時點就確定不符資格。僱入之後回不去了——本文整理刊出徵才前的確認順序。金額不記載（逐年度改定）。",
+        "content": "**結論（先講重點）**：錄用相關的助成金中，有些以**經由Hello Work或登錄的職業介紹事業者的介紹僱入**為要件（例：特定求職者雇用開発助成金）。用徵才媒體直接錄用，**可能在那個時點就確定不符資格**。僱入之後回不去了——**錄用的助成金，在入口就決定了。**\n\n本頁面寫給準備招人的公司經營者與總務人員。助成金的金額與要件逐年度（年度中途也會）改定，**本文不記載金額**。個別要件以申請時點最新的支給要領確認。\n\n## 為什麼僱入之後就來不及了？\n\n助成金的要件多半是「做了什麼」，但錄用系的助成金包含**「經由哪條途徑僱入」**這個事後無法改變的要件。\n\n例如，特定求職者雇用開発助成金（特定就職困難者コース）的要件之一，是把對象者**經由Hello Work或民間的職業介紹事業者等的介紹**僱入（厚生勞動省公開資料・2026年8月14日參閱）。同一個人經由徵才媒體或直接應徵錄用，這個要件就無法滿足。過了僱入日才發現也一樣——**錄用途徑無法回溯改寫**。這就是「在入口決定」的意思。\n\n[想用助成金，最初的契約形態就決定了](/zh-tw/labor/column/joseikin-yuki-muki-keiyaku-katachi)寫的是**入職後轉換的入口**（契約形態），本文是它的前一步——**招募途徑的入口**。兩個入口都一樣，走過了就回不去。\n\n## 經由Hello Work，什麼會不一樣？\n\n本質是**留下介紹的紀錄**。經Hello Work介紹僱入，介紹的事實可以確認；經民間的職業介紹事業者時，必須是**已向勞動局提出助成金取扱申報的事業者**的介紹，並需要介紹證明（厚生勞動省「取扱雇用關係助成金的職業介紹事業者等」・2026年8月14日參閱）。\n\n也就是說，同樣是「經介紹公司」，**該事業者有沒有提出取扱申報**，結論可能不同。與介紹公司簽約前，值得確認的就是這一點。\n\n## 哪些助成金與錄用有關？\n\n只列名稱（金額・細目以支給要領確認）。\n\n| 場面 | 可能相關的助成金例 |\n|---|---|\n| 僱入高齡者・身心障礙者・單親媽媽等 | 特定求職者雇用開発助成金（特定就職困難者コース等。**有介紹要件**） |\n| 以有期迎入、之後轉換為正社員 | キャリアアップ助成金（正社員化コース。**入口是契約形態**——[另文](/zh-tw/labor/column/joseikin-yuki-muki-keiyaku-katachi)） |\n\n哪個コース附帶哪些要件（介紹途徑・對象者・僱用形態・工資），**以年度的支給要領為正本**。名稱不變而コース統廢合的情形是有的，拿著舊的傳單判斷很危險。\n\n## 什麼時候、找誰商量？\n\n**刊出徵才之前。** 順序如下。\n\n1. 決定想錄用的人物像（在此看見對象者類型）\n2. **確認可能可用的助成金及其介紹要件**（本事務所）\n3. 決定途徑——向Hello Work刊出徵才，或使用有取扱申報的介紹事業者\n4. 整備[求人票的勞動條件](/zh-tw/labor/column/kyujin-hyo-meiji-jiko-roudou-joken)與[內定文件](/zh-tw/labor/column/naitei-torikeshi-dekiruka)\n5. 僱入・申請\n\n順序反過來——「已經錄用了，有什麼助成金可用嗎」——選項已經大幅減少。\n\n## 四葉社会保険労務士事務所能做什麼？\n\n位於文京區小日向的四葉社会保険労務士事務所，作為[招募・錄用勞務支援](/zh-tw/labor/services/saiyo)的一部分，承接錄用計畫階段的助成金入口設計（介紹要件・契約形態的確認）與雇用關係助成金的申請。**諮詢免費。** 費用載於[報酬額表](/zh-tw/labor/ryokin)。「這種招法，之後會不會吃虧」——只確認這一點也歡迎。\n\n### 該向誰諮詢\n\n求職者的介紹本身是**Hello Work或取得許可的職業介紹事業者**的領域（本事務所不承接介紹・斡旋，也不收取介紹費——[招募・錄用，能委託社會保險勞務士什麼](/zh-tw/labor/column/saiyo-sharoushi-doko-made-tanomeru)）。稅務是**稅理士**、在留資格是**四葉行政書士事務所**（與本事務所是不同的事業體，另行簽約）、已生紛爭的案件是**律師**的業務。\n\n## 常見問題\n\n**Q. 徵才網站來了好人選。現在還能用助成金嗎？**\nA. 以介紹僱入為要件的助成金，直接應徵無法使用。不過，並非所有錄用助成金都附介紹要件；以僱入後轉換為入口的（キャリアアップ助成金等）可能還留有路。確定僱入日之前，請先諮詢一次。\n\n**Q. 任何介紹公司都可以嗎？**\nA. 不是。民間的職業介紹事業者，必須是已向勞動局提出雇用關係助成金取扱申報的事業者的介紹（依厚生勞動省的公開資料）。簽約前，請確認該事業者是否已提出取扱申報。\n\n**Q. 助成金有多少錢？**\nA. 本文不寫。金額與要件逐年度、年度中途也會改定。諮詢時，以最新的支給要領示出可能符合的コース與金額。\n\n**Q. 可以只委託申請嗎？**\nA. 雇用關係助成金的申請可以承接。但錄用系的助成金，可否往往在僱入前的途徑・契約形態就已決定，從申請階段開始可能已無法滿足要件。請盡量在刊出徵才之前諮詢。\n\n## 本文依據\n\n- 特定求職者雇用開発助成金（特定就職困難者コース）的介紹要件（經Hello Work或民間職業介紹事業者等的介紹僱入） ―― 厚生勞動省（2026年8月14日參閱）\n- 民間職業介紹事業者的取扱申報 ―― 厚生勞動省「取扱雇用關係助成金的職業介紹事業者等」（2026年8月14日參閱）\n- 職業介紹・有償職業介紹事業的許可 ―― 職業安定法（昭和22年法律第141號）第4條第1項・第30條第1項（2026年8月14日於e-Gov法令檢索確認現行條文）\n- **助成金的名稱・コース・要件・金額會改定。申請時請務必確認最新的支給要領。本文未記載金額**\n\n本文為一般性的資訊提供。個別可否依支給要領與個別情事而定。因應個別情事的判斷，由具備資格者在面談後進行。撰文者為[浦松丈二](/zh-tw/about/uramatsu)（社會保險勞務士・行政書士・宅地建物取引士）。",
+        "category": "助成金",
+        "keywords": [
+          "錄用 助成金 Hello Work 介紹 要件",
+          "特定求職者雇用開發助成金 介紹",
+          "助成金 直接應徵 不符資格",
+          "錄用 助成金 何時諮詢",
+          "介紹公司 助成金 申報",
+          "刊出徵才前 助成金 確認"
+        ],
+        "tags": [
+          "助成金",
+          "錄用",
+          "Hello Work",
+          "特定求職者雇用開發助成金",
+          "介紹要件",
+          "招募途徑"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "徵才網站來了好人選。現在還能用助成金嗎？",
+            "answer": "以介紹僱入為要件的助成金，直接應徵無法使用。不過，並非所有錄用助成金都附介紹要件；以僱入後轉換為入口的（キャリアアップ助成金等）可能還留有路。確定僱入日之前，請先諮詢一次。"
+          },
+          {
+            "question": "任何介紹公司都可以嗎？",
+            "answer": "不是。民間的職業介紹事業者，必須是已向勞動局提出雇用關係助成金取扱申報的事業者的介紹（依厚生勞動省的公開資料）。簽約前，請確認該事業者是否已提出取扱申報。"
+          },
+          {
+            "question": "助成金有多少錢？",
+            "answer": "本文不寫。金額與要件逐年度、年度中途也會改定。諮詢時，以最新的支給要領示出可能符合的コース與金額。"
+          },
+          {
+            "question": "可以只委託申請嗎？",
+            "answer": "雇用關係助成金的申請可以承接。但錄用系的助成金，可否往往在僱入前的途徑・契約形態就已決定，從申請階段開始可能已無法滿足要件。請盡量在刊出徵才之前諮詢。"
+          }
+        ]
+      },
+      "zh": {
+        "title": "录用可用的助成金，在入口就决定了",
+        "excerpt": "录用相关的助成金中，有些以「经由Hello Work或登录的职业介绍事业者的介绍雇入」为要件（例：特定求職者雇用開発助成金）。用招聘媒体直接录用，可能在那个时点就确定不符资格。雇入之后回不去了——本文整理刊出招聘前的确认顺序。金额不记载（逐年度改定）。",
+        "content": "**结论（先讲重点）**：录用相关的助成金中，有些以**经由Hello Work或登录的职业介绍事业者的介绍雇入**为要件（例：特定求職者雇用開発助成金）。用招聘媒体直接录用，**可能在那个时点就确定不符资格**。雇入之后回不去了——**录用的助成金，在入口就决定了。**\n\n本页面写给准备招人的公司经营者与总务人员。助成金的金额与要件逐年度（年度中途也会）改定，**本文不记载金额**。个别要件以申请时点最新的支给要领确认。\n\n## 为什么雇入之后就来不及了？\n\n助成金的要件多半是「做了什么」，但录用系的助成金包含**「经由哪条途径雇入」**这个事后无法改变的要件。\n\n例如，特定求職者雇用開発助成金（特定就職困難者コース）的要件之一，是把对象者**经由Hello Work或民间的职业介绍事业者等的介绍**雇入（厚生劳动省公开资料・2026年8月14日参阅）。同一个人经由招聘媒体或直接应聘录用，这个要件就无法满足。过了雇入日才发现也一样——**录用途径无法回溯改写**。这就是「在入口决定」的意思。\n\n[想用助成金，最初的契约形态就决定了](/zh/labor/column/joseikin-yuki-muki-keiyaku-katachi)写的是**入职后转换的入口**（契约形态），本文是它的前一步——**招募途径的入口**。两个入口都一样，走过了就回不去。\n\n## 经由Hello Work，什么会不一样？\n\n本质是**留下介绍的记录**。经Hello Work介绍雇入，介绍的事实可以确认；经民间的职业介绍事业者时，必须是**已向劳动局提出助成金取扱申报的事业者**的介绍，并需要介绍证明（厚生劳动省「取扱雇用关系助成金的职业介绍事业者等」・2026年8月14日参阅）。\n\n也就是说，同样是「经介绍公司」，**该事业者有没有提出取扱申报**，结论可能不同。与介绍公司签约前，值得确认的就是这一点。\n\n## 哪些助成金与录用有关？\n\n只列名称（金额・细目以支给要领确认）。\n\n| 场面 | 可能相关的助成金例 |\n|---|---|\n| 雇入高龄者・残障者・单亲妈妈等 | 特定求職者雇用開発助成金（特定就職困難者コース等。**有介绍要件**） |\n| 以有期迎入、之后转换为正社员 | キャリアアップ助成金（正社员化コース。**入口是契约形态**——[另文](/zh/labor/column/joseikin-yuki-muki-keiyaku-katachi)） |\n\n哪个コース附带哪些要件（介绍途径・对象者・雇用形态・工资），**以年度的支给要领为正本**。名称不变而コース统废合的情形是有的，拿着旧的传单判断很危险。\n\n## 什么时候、找谁商量？\n\n**刊出招聘之前。** 顺序如下。\n\n1. 决定想录用的人物像（在此看见对象者类型）\n2. **确认可能可用的助成金及其介绍要件**（本事务所）\n3. 决定途径——向Hello Work刊出招聘，或使用有取扱申报的介绍事业者\n4. 整备[求人票的劳动条件](/zh/labor/column/kyujin-hyo-meiji-jiko-roudou-joken)与[内定文件](/zh/labor/column/naitei-torikeshi-dekiruka)\n5. 雇入・申请\n\n顺序反过来——「已经录用了，有什么助成金可用吗」——选项已经大幅减少。\n\n## 四葉社会保険労務士事務所能做什么？\n\n位于文京区小日向的四葉社会保険労務士事務所，作为[招募・录用劳务支援](/zh/labor/services/saiyo)的一部分，承接录用计划阶段的助成金入口设计（介绍要件・契约形态的确认）与雇用关系助成金的申请。**咨询免费。** 费用载于[报酬额表](/zh/labor/ryokin)。「这种招法，之后会不会吃亏」——只确认这一点也欢迎。\n\n### 该向谁咨询\n\n求职者的介绍本身是**Hello Work或取得许可的职业介绍事业者**的领域（本事务所不承接介绍・斡旋，也不收取介绍费——[招募・录用，能委托社会保险劳务士什么](/zh/labor/column/saiyo-sharoushi-doko-made-tanomeru)）。税务是**税理士**、在留资格是**四葉行政書士事務所**（与本事务所是不同的事业体，另行签约）、已生纷争的案件是**律师**的业务。\n\n## 常见问题\n\n**Q. 招聘网站来了好人选。现在还能用助成金吗？**\nA. 以介绍雇入为要件的助成金，直接应聘无法使用。不过，并非所有录用助成金都附介绍要件；以雇入后转换为入口的（キャリアアップ助成金等）可能还留有路。确定雇入日之前，请先咨询一次。\n\n**Q. 任何介绍公司都可以吗？**\nA. 不是。民间的职业介绍事业者，必须是已向劳动局提出雇用关系助成金取扱申报的事业者的介绍（依厚生劳动省的公开资料）。签约前，请确认该事业者是否已提出取扱申报。\n\n**Q. 助成金有多少钱？**\nA. 本文不写。金额与要件逐年度、年度中途也会改定。咨询时，以最新的支给要领示出可能符合的コース与金额。\n\n**Q. 可以只委托申请吗？**\nA. 雇用关系助成金的申请可以承接。但录用系的助成金，可否往往在雇入前的途径・契约形态就已决定，从申请阶段开始可能已无法满足要件。请尽量在刊出招聘之前咨询。\n\n## 本文依据\n\n- 特定求職者雇用開発助成金（特定就職困難者コース）的介绍要件（经Hello Work或民间职业介绍事业者等的介绍雇入） ―― 厚生劳动省（2026年8月14日参阅）\n- 民间职业介绍事业者的取扱申报 ―― 厚生劳动省「取扱雇用关系助成金的职业介绍事业者等」（2026年8月14日参阅）\n- 职业介绍・有偿职业介绍事业的许可 ―― 职业安定法（昭和22年法律第141号）第4条第1项・第30条第1项（2026年8月14日于e-Gov法令检索确认现行条文）\n- **助成金的名称・コース・要件・金额会改定。申请时请务必确认最新的支给要领。本文未记载金额**\n\n本文为一般性的信息提供。个别可否依支给要领与个别情事而定。因应个别情事的判断，由具备资格者在面谈后进行。撰文者为[浦松丈二](/zh/about/uramatsu)（社会保险劳务士・行政书士・宅地建物取引士）。",
+        "category": "助成金",
+        "keywords": [
+          "录用 助成金 Hello Work 介绍 要件",
+          "特定求职者雇用开发助成金 介绍",
+          "助成金 直接应聘 不符资格",
+          "录用 助成金 何时咨询",
+          "介绍公司 助成金 申报",
+          "刊出招聘前 助成金 确认"
+        ],
+        "tags": [
+          "助成金",
+          "录用",
+          "Hello Work",
+          "特定求职者雇用开发助成金",
+          "介绍要件",
+          "招募途径"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "招聘网站来了好人选。现在还能用助成金吗？",
+            "answer": "以介绍雇入为要件的助成金，直接应聘无法使用。不过，并非所有录用助成金都附介绍要件；以雇入后转换为入口的（キャリアアップ助成金等）可能还留有路。确定雇入日之前，请先咨询一次。"
+          },
+          {
+            "question": "任何介绍公司都可以吗？",
+            "answer": "不是。民间的职业介绍事业者，必须是已向劳动局提出雇用关系助成金取扱申报的事业者的介绍（依厚生劳动省的公开资料）。签约前，请确认该事业者是否已提出取扱申报。"
+          },
+          {
+            "question": "助成金有多少钱？",
+            "answer": "本文不写。金额与要件逐年度、年度中途也会改定。咨询时，以最新的支给要领示出可能符合的コース与金额。"
+          },
+          {
+            "question": "可以只委托申请吗？",
+            "answer": "雇用关系助成金的申请可以承接。但录用系的助成金，可否往往在雇入前的途径・契约形态就已决定，从申请阶段开始可能已无法满足要件。请尽量在刊出招聘之前咨询。"
+          }
+        ]
+      }
+    }
   }
 ];
