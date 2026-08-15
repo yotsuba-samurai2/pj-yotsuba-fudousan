@@ -6931,5 +6931,185 @@ export const LABOR_COLUMNS_SEED: LaborSeedColumn[] = [
         ]
       }
     }
+  },
+  {
+    "business": "labor",
+    "slug": "kasuhara-taisaku-2026-10-gimu",
+    "title": "カスタマーハラスメント対策は、2026年10月から義務になる",
+    "date": "2026-09-01",
+    "category": "手続と期限",
+    "excerpt": "カスタマーハラスメント対策は、令和8年10月1日（2026年10月1日）から企業規模を問わず事業主の義務になります。求職者等へのセクシュアルハラスメント防止措置も同時に義務化。パワハラ防止措置と同じ「方針の明確化・相談体制・事後対応」で足ります。何をすれば足りるか、クレームとの線引き、誰に頼むかを整理します。",
+    "content": "**結論（先に要点）**：カスタマーハラスメント対策は、**令和8年10月1日（2026年10月1日）から**、**企業規模を問わず**事業主の義務になります。求職者等に対するセクシュアルハラスメントの防止措置も同時に義務化します。やることはパワハラ防止措置とほぼ同じで、**方針の明確化と周知、相談体制の整備、事後の対応**の3点です。すでにパワハラの体制がある会社は、その枠を広げれば対応できます。\n\n「カスハラ」という言葉は聞いたことがあるけれど、義務なのか努力目標なのか、何をすれば足りるのかが分からない——というご相談が増えています。このページは、接客・窓口・電話対応がある会社の経営者・総務担当の方に向けて、カスタマーハラスメントの定義、義務の時期と対象、具体的な措置、クレームとの線引き、誰に頼むかを整理します。個別の法的判断や、加害者への法的手続きのご案内はこの記事の範囲外です。\n\n## カスタマーハラスメントとは、何を指すのか？\n\n厚生労働省の公表資料では、カスタマーハラスメントを「**顧客等からの著しい迷惑行為**」で、労働者の就業環境を害されるものとしています。「顧客等」は、実際に取引のあるお客さまに限りません。取引先、施設の利用者、その他利害関係者が含まれます。\n\n「著しい迷惑行為」として例示されているのは、次のようなものです。\n\n- 暴行・傷害、脅迫\n- 名誉毀損や侮辱、ひどい暴言\n- 過剰・執拗な要求やクレームの継続・繰り返し\n- 土下座の強要、SNS等への拡散\n- 性的な言動\n- 不退去・居座り、長時間の拘束\n\nポイントは、**「正当なクレーム」はカスタマーハラスメントではない**ことです。商品の不具合やサービスの不備への指摘、改善の要望そのものは、むしろ業務の改善に必要な声です。問題になるのは、要求の内容ではなく**「態様」が著しい迷惑行為に当たる場合**です。\n\n## 義務は、いつから・どの会社に？\n\n令和7年法律第63号による労働施策総合推進法等の改正で、事業主に次の措置が義務づけられます。\n\n- **カスタマーハラスメント**（顧客等からの著しい迷惑行為）による就業環境の害を防止するための雇用管理上の措置\n- **求職者等に対するセクシュアルハラスメント**の防止措置（こちらは採用・募集の場面。この記事の主題ではありません）\n\n施行日は**令和8年10月1日（2026年10月1日）**です。**企業規模を問いません。** パワハラ防止措置と同じく、従業員が1人でも、個人事業主であっても、労働者を使用する事業主は対象になります。この記事が公開される2026年9月1日の翌月からです。\n\nなお、施行前の現在は準備期間です。義務になるのは10月1日からですが、「義務になった日に何もない」状態を避けるため、制度の骨格は施行前に整えておくのが現実的です。\n\n## 会社は、具体的に何をすれば足りるのか？\n\nパワハラ防止措置と同じ3分類に、併せて講ずべき措置が付く形です。\n\n| 措置 | 中身 |\n|---|---|\n| **① 方針の明確化と周知・啓発** | カスハラには組織として対応する方針、対応の窓口と手順を定め、社員に周知する |\n| **② 相談体制の整備** | 相談窓口を設け、申出に適切に対応できる体制を作る |\n| **③ 事後の迅速かつ適切な対応** | 申出があったら事実確認を行い、必要な措置（被害者への配慮、再発防止、加害者への対応）を講じる |\n| **併せて講ずべき措置** | プライバシーの保護、相談等を理由とする不利益取扱いの禁止の周知・啓発 |\n\n**すでにパワハラ防止の体制がある会社は、その枠を広げる形で対応できます。** 実務上、追加で必要になりやすいのは次の2点です。\n\n1. 方針文書と対応手順に「**加害者が社外のお客さま**」という場面を明記すること\n2. 現場で対応を打ち切ってよいライン、上司や相談窓口へのエスカレーション先を決めておくこと\n\n逆に、パワハラの措置自体が未整備の会社は、10月までに2つ分をまとめて整えることになります。就業規則をめぐる義務の全体像は[就業規則は何人から義務か](/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo)をご覧ください。\n\n## 「いつものクレーム」と、何が違うのか？\n\n線引きは、**要求の内容**と**態様**の両方で見ます。\n\n| 観点 | カスタマーハラスメント | 通常のクレーム・苦情 |\n|---|---|---|\n| 要求の内容 | 不当・過剰な要求、人格的な攻撃など | 商品・サービスの不具合や不満の表明、改善要望 |\n| 態様 | 暴言・脅迫・侮辱・長時間の拘束・不退去など「著しい迷惑行為」に当たる | 社会通念上、相当な範囲 |\n| 会社の対応 | 就業環境を守る観点から対応を制限・打ち切る判断があり得る | 真摯に受け止め、改善につなげる |\n\n注意していただきたいのは、**「正当なクレームだから何をしてもよい」わけでも、「クレームならすべてカスハラ」でもない**ことです。正当な指摘であっても、態様が暴言・脅迫・長時間の拘束などを伴えばカスタマーハラスメントになり得ます。逆に、要求内容が不当でも、態様が穏当な範囲にとどまればカスタマーハラスメントに当たらないことがあります。判断の際は、行為の内容・程度、継続性・反復性、要求の相当性、労働者の就業環境への影響といった要素を総合的に見ることになります。\n\n## 誰に、何を頼むのか？\n\n| すること | 誰の業務か |\n|---|---|\n| カスハラ対応の方針策定、就業規則・服務規律の整備、相談窓口の設計、社員向け研修 | **社会保険労務士**（当事務所） |\n| 加害者（顧客）への法的措置、損害賠償請求、刑事的な対応の検討 | **弁護士** |\n| 加害者が社内の従業員で、懲戒処分を検討する場面 | 就業規則が根拠。制度整備は**社会保険労務士**、紛争化した場合は**弁護士** |\n\nカスタマーハラスメントは「顧客対応」と「従業員保護」の両立が難しい場面です。社労士の役割は、**組織としてどう線を引くか**を方針・規程・研修という形に整えること。個別の紛争になった後の法的手続きは弁護士の領域です。\n\n## 四葉社会保険労務士事務所は、何ができますか？\n\n文京区小日向の四葉社会保険労務士事務所は、カスタマーハラスメント対策に必要な**方針文書、就業規則・服務規律の整備、相談窓口の設計、社員向けの周知・研修**をお受けします。パワハラ防止措置がまだの会社は、両方をまとめて整えることもできます。**ご相談は無料です。** 料金は[報酬額表](/labor/ryokin)に掲載しています。「うちの場合、何から手をつければいいのか」の棚卸しからご一緒します。\n\n### 誰に相談するか\n\nカスタマーハラスメント対応の方針・就業規則・相談窓口・研修は**社会保険労務士**の業務です。個別の紛争や加害者（顧客）への法的手続き・損害賠償請求は**弁護士**の業務です。当事務所は紹介料を受け取りません。四葉社会保険労務士事務所にご相談いただく場合の費用は[報酬額表](/labor/ryokin)に、よくいただくご質問は[よくあるご質問](/labor/faq)にまとめています。\n\n## よくある質問\n\n**Q. 従業員が1人の会社でも、義務ですか？**\nA. 義務です。カスタマーハラスメント防止措置は企業規模を問わず、労働者を使用する事業主が対象です。パワハラ防止措置と同じく、従業員が1人でも、個人事業主でも対象になります。\n\n**Q. すでにパワハラ対策をしています。追加で何をすればいいですか？**\nA. 基本の枠は共通なので、ゼロから作る必要はありません。方針文書と対応手順に「加害者が社外のお客さま」である場面を明記し、現場で対応を打ち切ってよいラインとエスカレーション先を足すのが中心になります。すでに整っている相談窓口は、そのまま使えます。\n\n**Q. 正当なクレームまで「カスハラ」として無視していいのですか？**\nA. いいえ。正当な意見・苦情はカスタマーハラスメントに含まれず、真摯に対応する必要があります。対応を制限・打ち切る判断が検討されるのは、態様が「著しい迷惑行為」に当たる場合です。クレーム対応とカスタマーハラスメント対策は別物で、両方を整える必要があります。\n\n**Q. 加害者はお客さまです。会社はどこまで従業員を守れますか？**\nA. 義務づけられるのは、あくまで「雇用管理上の措置」——就業環境を守る方針・相談体制・事後対応を整えることです。加害者への損害賠償請求、刑事的な対応、出入禁止の強制といった法的手続きは、個別の事案に応じて弁護士が判断する領域です。社内で完結できる部分と、専門家に振り分ける部分を分けておくことが大切です。\n\n## この記事の根拠\n\n- 労働施策の総合的な推進並びに労働者の雇用の安定及び職業生活の充実等に関する法律（昭和41年法律第132号）。令和7年法律第63号による改正で、カスタマーハラスメント（顧客等からの著しい迷惑行為）による就業環境の害を防止するための雇用管理上の措置、および求職者等に対するセクシュアルハラスメントの防止措置が事業主の義務に追加\n- 施行日は**令和8年10月1日（2026年10月1日）**。厚生労働省「職場におけるハラスメントの防止のために」に「令和8年10月1日施行」と明記されていることにより確認\n- 事業主が講ずべき措置の内容（方針の明確化と周知・啓発、相談体制の整備、事後の迅速かつ適切な対応、プライバシー保護・不利益取扱い禁止の周知）は、パワハラ防止措置（労働施策総合推進法第30条の2第1項）と同型。カスタマーハラスメントの定義・判断の考え方・措置の具体例は、厚生労働省の指針およびカスタマーハラスメント対策マニュアル等の公表資料による\n- 改正後のカスタマーハラスメント防止措置に関する条・項・号の番号は、本稿執筆時点でe-Gov法令検索により再確認できていないため引用を控えています（**未検証**）\n\n本記事は一般的な情報提供です。個別のご事情に応じた判断は、面談のうえ資格者が行います。執筆は[浦松丈二](/about/uramatsu)（社会保険労務士・行政書士・宅地建物取引士）です。",
+    "status": "published",
+    "author": {
+      "name": "浦松 丈二",
+      "title": "社会保険労務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+    },
+    "keywords": [
+      "カスタマーハラスメント 対策 義務",
+      "カスハラ 2026年10月 義務化",
+      "カスハラ 企業 対応 何をすれば",
+      "カスタマーハラスメント 就業規則",
+      "カスハラ 相談窓口 設置",
+      "カスハラ 中小企業 義務"
+    ],
+    "tags": [
+      "カスタマーハラスメント",
+      "カスハラ",
+      "ハラスメント",
+      "就業規則",
+      "労務管理",
+      "社会保険労務士"
+    ],
+    "locales": [],
+    "faq": [
+      {
+        "question": "従業員が1人の会社でも、義務ですか？",
+        "answer": "義務です。カスタマーハラスメント防止措置は企業規模を問わず、労働者を使用する事業主が対象です。パワハラ防止措置と同じく、従業員が1人でも、個人事業主でも対象になります。"
+      },
+      {
+        "question": "すでにパワハラ対策をしています。追加で何をすればいいですか？",
+        "answer": "基本の枠は共通なので、ゼロから作る必要はありません。方針文書と対応手順に「加害者が社外のお客さま」である場面を明記し、現場で対応を打ち切ってよいラインとエスカレーション先を足すのが中心になります。すでに整っている相談窓口は、そのまま使えます。"
+      },
+      {
+        "question": "正当なクレームまで「カスハラ」として無視していいのですか？",
+        "answer": "いいえ。正当な意見・苦情はカスタマーハラスメントに含まれず、真摯に対応する必要があります。対応を制限・打ち切る判断が検討されるのは、態様が「著しい迷惑行為」に当たる場合です。クレーム対応とカスタマーハラスメント対策は別物で、両方を整える必要があります。"
+      },
+      {
+        "question": "加害者はお客さまです。会社はどこまで従業員を守れますか？",
+        "answer": "義務づけられるのは、あくまで「雇用管理上の措置」——就業環境を守る方針・相談体制・事後対応を整えることです。加害者への損害賠償請求、刑事的な対応、出入禁止の強制といった法的手続きは、個別の事案に応じて弁護士が判断する領域です。社内で完結できる部分と、専門家に振り分ける部分を分けておくことが大切です。"
+      }
+    ],
+    "translations": {
+      "en": {
+        "title": "Customer harassment prevention becomes mandatory from October 2026",
+        "excerpt": "Customer harassment prevention becomes a legal obligation for every employer from October 1, 2026, regardless of company size. Measures to prevent sexual harassment against job applicants and others also become mandatory at the same time. The required measures are the same as for power harassment: a clear policy, a consultation system, and follow-up after incidents. This page explains what customer harassment is, what exactly you must do, how it differs from ordinary complaints, and whom to consult.",
+        "content": "**In short:** Responding to customer harassment becomes a legal obligation for employers **from October 1, 2026 (令和8年10月1日)**, **regardless of company size**. Measures to prevent sexual harassment against job applicants and others become mandatory at the same time. What you must do is almost the same as the measures against power harassment: **a clearly stated and publicized policy, a consultation system, and follow-up after incidents**. If you already have a power-harassment framework, you can respond by widening that same frame.\n\nLately we have been receiving more and more questions along the lines of: \"I know the word 'kasu-hara', but is it an obligation or just a goal to aim for, and what exactly do we have to do?\" This page is for the owners and general-affairs staff of companies that deal with customers at the counter, on the phone, or in person. We set out the definition of customer harassment, when and to whom the obligation applies, the specific measures, how it differs from ordinary complaints, and whom to ask. Giving legal advice on a particular case, or guiding you through legal proceedings against the offender, is outside the scope of this article.\n\n## What exactly counts as customer harassment?\n\nIn materials published by the Ministry of Health, Labour and Welfare, customer harassment means \"**severely abusive conduct by customers and others**\" that harms a worker's working environment. \"Customers and others\" is not limited to people who actually do business with you. It includes business partners, users of your facilities, and other interested parties.\n\nThe following are given as examples of \"severely abusive conduct\":\n\n- Assault and injury, or intimidation\n- Defamation or insult, or severe verbal abuse\n- Persistent or excessive demands, or repeated complaints\n- Being forced to kneel on the floor, or having the matter spread on social media\n- Sexual remarks or conduct\n- Refusing to leave, staying on the premises, or holding someone for a long time\n\nThe point is that **an ordinary, legitimate complaint is not customer harassment**. Pointing out a defect in a product or a shortcoming in a service, or asking for improvement, is in fact the kind of voice that helps you improve your business. What makes something a problem is not the content of the demand but **whether the manner of it amounts to severely abusive conduct**.\n\n## From when, and which companies?\n\nUnder the amendment of the Labor Measures Comprehensive Promotion Act and related acts by Act No. 63 of 2025 (令和7年法律第63号), employers become subject to the following obligations:\n\n- Employment-management measures to prevent harm to the working environment caused by **customer harassment** (severely abusive conduct by customers and others)\n- Measures to prevent **sexual harassment against job applicants and others** (this applies at the recruitment stage; it is not the subject of this article)\n\nThe measures come into force on **October 1, 2026 (令和8年10月1日)**. **Company size does not matter.** As with the power-harassment measures, the obligation applies to any employer who uses workers, even one with a single employee, and even a sole proprietor. It is the month after the date this article is published, September 1, 2026.\n\nFor the moment, before the effective date, we are still in a preparation period. The obligation itself begins on October 1, but to avoid having nothing in place on the day it takes effect, it is realistic to build the framework before then.\n\n## What exactly does a company have to do?\n\nThe structure is the same three categories as the power-harassment measures, with some additional measures on top.\n\n| Measure | What it means |\n|---|---|\n| **① A clearly stated and publicized policy** | Decide the policy that the organization will respond to customer harassment as a company, along with the contact point and procedure, and publicize them to employees |\n| **② A consultation system** | Set up a consultation desk and a structure that can respond appropriately to reports |\n| **③ Prompt and appropriate follow-up** | When a report is made, look into the facts and take the necessary measures (care for the victim, prevention of recurrence, and dealing with the offender) |\n| **Additional measures** | Protecting privacy, and publicizing the prohibition of detrimental treatment because someone consulted or reported |\n\n**If you already have a power-harassment framework, you can respond by widening that same frame.** In practice, the two things you are most likely to need to add are these:\n\n1. State explicitly in the policy and procedure that **the offender may be an outside customer**\n2. Decide in advance the line at which frontline staff may stop dealing with someone, and where to escalate to a manager or the consultation desk\n\nConversely, if you have not put the power-harassment measures themselves in place, you will need to build both at once by October. For the overall picture of the obligations around work rules, see [How many employees make work rules mandatory](/en/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo).\n\n## How is it different from an ordinary complaint?\n\nYou look at both **the content of the demand** and **the manner of it**.\n\n| Aspect | Customer harassment | Ordinary complaint or grievance |\n|---|---|---|\n| Content | Unreasonable or excessive demands, personal attacks, and so on | Pointing out a defect in a product or service, or asking for improvement |\n| Manner | Verbal abuse, intimidation, insults, long periods of detention, refusing to leave — conduct that amounts to \"severely abusive conduct\" | Within what is socially reasonable |\n| The company's response | There may be a decision to limit or cut off the dealing in order to protect the working environment | Take it seriously and use it to improve |\n\nPlease note that it is **neither \"a legitimate complaint means anything goes\" nor \"every complaint is customer harassment\"**. Even a legitimate point can become customer harassment if the manner involves verbal abuse, intimidation, or detaining someone for a long time. Conversely, a demand can be unreasonable but still fall short of customer harassment if the manner stays within a calm, moderate range. When judging, you look at the factors as a whole: the content and degree of the conduct, whether it is persistent or repeated, whether the demand is reasonable, and the effect on the worker's working environment.\n\n## Whom should you ask, for what?\n\n| What you want done | Whose work it is |\n|---|---|\n| Setting the policy for responding to customer harassment, drawing up work rules and disciplinary rules, designing the consultation desk, and training employees | **A Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant)** (this office) |\n| Legal action against the offender (the customer), claims for damages, and considering criminal measures | **An attorney** |\n| Where the offender is one of your own employees and you are considering disciplinary action | The work rules are the basis. Setting up the system is the work of a **Shakai Hoken Roumushi**; if it turns into a dispute, an **attorney** |\n\nCustomer harassment is an area where it is hard to balance \"dealing with the customer\" and \"protecting the employee\". The role of a Shakai Hoken Roumushi is to give shape — in a policy, in rules, and in training — to **where the organization draws the line**. The legal proceedings that come after a dispute has actually arisen are the domain of an attorney.\n\n## What can 四葉社会保険労務士事務所 do for you?\n\n四葉社会保険労務士事務所 in Kohinata, Bunkyo Ward, handles the **policy document, work rules and disciplinary rules, the design of the consultation desk, and the publicity and training for employees** that customer-harassment measures require. If you have not yet put power-harassment measures in place, we can build both at once. **The initial consultation is free.** Fees are set out in the [fee schedule](/en/labor/ryokin). We start by helping you take stock of what to do first in your case.\n\n### Whom to consult\n\nThe policy for responding to customer harassment, work rules, the consultation desk, and training are the work of a **Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant)**. Legal proceedings and claims for damages against the offender (the customer) are the work of an **attorney**. This office does not accept referral fees. The cost of consulting 四葉社会保険労務士事務所 is set out in the [fee schedule](/en/labor/ryokin), and the questions we are asked most often are collected on the [FAQ page](/en/labor/faq).\n\n## Frequently asked questions\n\n**Q. Is a company with just one employee covered?**\nA. Yes. The customer-harassment measures apply regardless of company size, to any employer who uses workers. As with the power-harassment measures, they apply even to a company with a single employee and even to a sole proprietor.\n\n**Q. We already have power-harassment measures in place. What more do we need to do?**\nA. The basic frame is shared, so you do not need to build from zero. The main additions are to state in your policy and procedure that \"the offender may be an outside customer\", and to add the line at which frontline staff may stop dealing with someone and the point to escalate to. A consultation desk you already have can be used as it is.\n\n**Q. Does this mean we can ignore legitimate complaints as \"customer harassment\"?**\nA. No. Legitimate opinions and complaints are not customer harassment, and they have to be dealt with in good faith. A decision to limit or cut off the dealing is considered only where the manner amounts to \"severely abusive conduct\". Dealing with complaints and preventing customer harassment are separate things, and you need to put both in place.\n\n**Q. The offender is our customer. How far can the company protect its employees?**\nA. What is made mandatory is, after all, \"employment-management measures\" — putting in place a policy, a consultation system, and follow-up to protect the working environment. Claims for damages against the offender, criminal measures, and enforcing a ban on entry are legal proceedings that an attorney decides on case by case. The important thing is to separate what you can complete in-house from what you hand to a specialist.\n\n## Sources for this article\n\n- Labor Measures Comprehensive Promotion Act (労働施策の総合的な推進並びに労働者の雇用の安定及び職業生活の充実等に関する法律, Act No. 132 of 1966). Under the amendment by Act No. 63 of 2025 (令和7年法律第63号), the following are added as employer obligations: employment-management measures to prevent harm to the working environment caused by customer harassment (severely abusive conduct by customers and others), and measures to prevent sexual harassment against job applicants and others\n- The effective date is **October 1, 2026 (令和8年10月1日)**. Confirmed from the Ministry of Health, Labour and Welfare's 「職場におけるハラスメントの防止のために」, which states \"effective October 1, 2026\"\n- The content of the measures employers must take (a clearly stated and publicized policy, a consultation system, prompt and appropriate follow-up, and protecting privacy and publicizing the prohibition of detrimental treatment) is the same in structure as the power-harassment measures (Labor Measures Comprehensive Promotion Act, Article 30-2, paragraph 1). The definition of customer harassment, the way it is judged, and the specific examples of the measures follow the guidelines and the customer-harassment manual and other published materials of the Ministry of Health, Labour and Welfare\n- The article, paragraph and item numbers of the post-amendment provisions on customer-harassment measures have not been re-confirmed on e-Gov法令検索 at the time of writing, so we refrain from citing them (**unverified**)\n\nThis article does not go so far as to decide whom you should consult. Setting the policy for responding to customer harassment, work rules and disciplinary rules, the consultation desk, and training are the work of a Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant). Individual disputes, legal proceedings against the offender (the customer), and claims for damages are the work of an attorney. This office does not accept referral fees. The cost of consulting 四葉社会保険労務士事務所 is set out in the [fee schedule](/en/labor/ryokin), and the questions we are asked most often are collected on the [FAQ page](/en/labor/faq).\n\nThis article is general information. Judgments that fit your particular circumstances are made by a qualified professional after a meeting. Written by [Joji Uramatsu](/en/about/uramatsu) (Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist).",
+        "category": "Procedures and deadlines",
+        "keywords": [
+          "customer harassment measures mandatory",
+          "customer harassment October 2026 mandatory",
+          "what companies must do for customer harassment",
+          "customer harassment work rules",
+          "customer harassment consultation desk",
+          "customer harassment SME obligation"
+        ],
+        "tags": [
+          "customer harassment",
+          "harassment",
+          "work rules",
+          "labour management",
+          "Shakai Hoken Roumushi"
+        ],
+        "author": {
+          "name": "Joji Uramatsu",
+          "title": "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所"
+        },
+        "faq": [
+          {
+            "question": "Is a company with just one employee covered?",
+            "answer": "Yes. The customer-harassment measures apply regardless of company size, to any employer who uses workers. As with the power-harassment measures, they apply even to a company with a single employee and even to a sole proprietor."
+          },
+          {
+            "question": "We already have power-harassment measures in place. What more do we need to do?",
+            "answer": "The basic frame is shared, so you do not need to build from zero. The main additions are to state in your policy and procedure that \"the offender may be an outside customer\", and to add the line at which frontline staff may stop dealing with someone and the point to escalate to. A consultation desk you already have can be used as it is."
+          },
+          {
+            "question": "Does this mean we can ignore legitimate complaints as \"customer harassment\"?",
+            "answer": "No. Legitimate opinions and complaints are not customer harassment, and they have to be dealt with in good faith. A decision to limit or cut off the dealing is considered only where the manner amounts to \"severely abusive conduct\". Dealing with complaints and preventing customer harassment are separate things, and you need to put both in place."
+          },
+          {
+            "question": "The offender is our customer. How far can the company protect its employees?",
+            "answer": "What is made mandatory is, after all, \"employment-management measures\" — putting in place a policy, a consultation system, and follow-up to protect the working environment. Claims for damages against the offender, criminal measures, and enforcing a ban on entry are legal proceedings that an attorney decides on case by case. The important thing is to separate what you can complete in-house from what you hand to a specialist."
+          }
+        ]
+      },
+      "zh-tw": {
+        "title": "顧客騷擾對策，從2026年10月起成為義務",
+        "excerpt": "顧客騷擾對策，自令和8年（2026年）10月1日起，不問企業規模，一律成為事業主的義務。對求職者等的性騷擾防止措施也同時義務化。應做的事與職權騷擾防止措施幾乎相同，即方針的明確化與周知、諮詢體制的整備、事後的因應。本文說明顧客騷擾是什麼、必須做什麼、與一般客訴的差異、該委託誰。",
+        "content": "**結論（先講重點）**：因應顧客騷擾，**自令和8年（2026年）10月1日起**，**不問企業規模**，成為事業主的義務。對求職者等的性騷擾防止措施也同時義務化。應做的事與職權騷擾防止措施幾乎相同，即**方針的明確化與周知、諮詢體制的整備、事後的因應**這3點。已經建立職權騷擾體制的公司，可以用擴大該框架的方式因應。\n\n近來「聽過『顧客騷擾』這個詞，但它是義務還是努力目標？具體該做什麼？」這類諮詢正在增加。本頁面是為有接待、窗口、電話應對之公司的經營者與總務人員而寫，整理顧客騷擾的定義、義務的時期與對象、具體措施、與客訴的界線、以及該委託誰。個別的法律判斷，以及對加害者的法律程序之說明，不在本文範圍內。\n\n## 顧客騷擾指的是什麼？\n\n在厚生勞動省的公表資料中，顧客騷擾是指「**來自顧客等的顯著困擾行為**」，使勞動者的工作環境受到損害。「顧客等」不侷限於實際有交易往來的顧客，也包括交易對象、設施使用者、其他利害關係人。\n\n被列為「顯著困擾行為」的例子如下：\n\n- 暴行・傷害、脅迫\n- 毀損名譽或侮辱、嚴重的辱罵\n- 過度・執拗的要求或客訴的持續・反覆\n- 強迫下跪、散布於社群媒體等\n- 性方面的言行\n- 拒不離去・賴著不走、長時間的拘束\n\n重點在於，**「正當的客訴」不是顧客騷擾**。指出商品瑕疵或服務不周、要求改善，反而是改善業務所需的聲音。有問題的不是要求的內容，而是**「態樣」是否屬於顯著困擾行為**。\n\n## 義務是何時、哪些公司適用？\n\n依令和7年法律第63號對勞動施策綜合推進法等的修正，事業主被課予下列措施的義務。\n\n- 為防止因**顧客騷擾**（來自顧客等的顯著困擾行為）而損害工作環境所需的僱用管理上的措施\n- 防止**對求職者等的性騷擾**的措施（此為採用・招募場面。非本文主題）\n\n施行日為**令和8年（2026年）10月1日**。**不問企業規模。** 與職權騷擾防止措施相同，即使是1位員工的企業、即使是個人事業主，只要使用勞動者的事業主都是對象。就是本文公開日（2026年9月1日）的隔月。\n\n此外，施行前的現在是準備期間。義務從10月1日起生效，但為了避免「義務生效當天卻什麼都沒有」的狀態，在施行前先整備制度的骨架較為實際。\n\n## 具體上，公司必須做什麼？\n\n形式上是職權騷擾防止措施相同的3分類，再加上「應一併採取的措施」。\n\n| 措施 | 內容 |\n|---|---|\n| **① 方針的明確化與周知・啟發** | 定出組織以公司整體因應顧客騷擾的方針、應對窗口與程序，並向員工周知 |\n| **② 諮詢體制的整備** | 設置諮詢窗口，建立能適切因應申告的體制 |\n| **③ 事後的迅速且適切因應** | 有申告時進行事實確認，採取必要措施（對受害者的關懷、防止再發、對加害者的因應） |\n| **應一併採取的措施** | 隱私保護、因諮詢等而受到不利益對待之禁止的周知・啟發 |\n\n**已經建立職權騷擾防止體制的公司，可以用擴大該框架的方式因應。** 實務上，容易需要追加的是以下2點。\n\n1. 在方針文件與應對程序中明確記載「**加害者是公司外的顧客**」這個場面\n2. 事先決定現場可以終止應對的界線、以及向上司或諮詢窗口升級的對象\n\n反之，連職權騷擾的措施本身都尚未整備的公司，就得在10月之前一次整備兩份。關於就業規則義務的全貌，請見[就業規則從幾人開始成為義務](/zh-tw/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo)。\n\n## 與「平常的客訴」有何不同？\n\n界線要從**要求的內容**與**態樣**兩方面來看。\n\n| 觀點 | 顧客騷擾 | 一般客訴・不滿 |\n|---|---|---|\n| 要求的內容 | 不當・過度的要求、人格性攻擊等 | 指出商品・服務的瑕疵或不滿、要求改善 |\n| 態樣 | 辱罵・脅迫・侮辱・長時間拘束・拒不離去等，屬於「顯著困擾行為」 | 社會通念上相當的範圍 |\n| 公司的因應 | 從保護工作環境的觀點，可能有終止或限制因應的判斷 | 誠摯接受，並用於改善 |\n\n請注意，**既不是「正當客訴所以什麼都可以」，也不是「客訴就全部是顧客騷擾」**。即使是正當的指摘，只要態樣伴隨辱罵・脅迫・長時間拘束等，就可能成為顧客騷擾。反之，即使要求內容不當，只要態樣停留在穏當的範圍，也可能不構成顧客騷擾。判斷時，要綜合考量行為的內容・程度、持續性・反覆性、要求的相當性、對勞動者工作環境的影響等要素。\n\n## 該委託誰、委託什麼？\n\n| 要做的事 | 誰的業務 |\n|---|---|\n| 顧客騷擾因應方針的策定、就業規則・服務紀律的整備、諮詢窗口的設計、員工研修 | **社會保險勞務士**（本事務所） |\n| 對加害者（顧客）的法律措施、損害賠償請求、刑事因應的檢討 | **律師** |\n| 加害者是公司內員工、檢討懲戒處分的場面 | 以就業規則為依據。制度整備是**社會保險勞務士**，若紛爭化則為**律師** |\n\n顧客騷擾是「顧客因應」與「員工保護」難以兩立的場面。社會保險勞務士的角色，是把**組織要如何劃線**整理成方針・規程・研修的形式。紛爭實際發生後的法律程序，屬於律師的領域。\n\n## 四葉社会保険労務士事務所能做什麼？\n\n位於文京區小日向的四葉社会保険労務士事務所，承接顧客騷擾對策所需的**方針文件、就業規則・服務紀律的整備、諮詢窗口的設計、對員工的周知・研修**。尚未進行職權騷擾防止措施的公司，也可以兩者一次整備。**諮詢免費。** 費用刊登於[報酬額表](/zh-tw/labor/ryokin)。我們會從「本公司的情況該先從何處著手」的盤點開始陪伴您。\n\n### 該向誰諮詢\n\n顧客騷擾因應的方針・就業規則・諮詢窗口・研修是**社會保險勞務士**的業務。個別紛爭、對加害者（顧客）的法律程序・損害賠償請求是**律師**的業務。本事務所不收取介紹費。向四葉社会保険労務士事務所諮詢時的費用整理於[報酬額表](/zh-tw/labor/ryokin)，常被詢問的問題整理於[常見問答](/zh-tw/labor/faq)。\n\n## 常見問題\n\n**Q. 只有1位員工的公司也是義務嗎？**\nA. 是義務。顧客騷擾防止措施不問企業規模，以使用勞動者的事業主為對象。與職權騷擾防止措施相同，即使1位員工、即使是個人事業主，都是對象。\n\n**Q. 已經在做職權騷擾對策了。還需要追加什麼？**\nA. 基本框架是共通的，所以不必從零開始。主要是在方針文件與應對程序中，明確記載「加害者是公司外的顧客」這個場面，並追加現場可以終止應對的界線與升級對象。已經設置的諮詢窗口可以沿用。\n\n**Q. 連正當的客訴都可以當作「顧客騷擾」而不予理會嗎？**\nA. 不可以。正當的意見・不滿不屬於顧客騷擾，必須誠摯因應。會被檢討終止或限制因應的，是態樣屬於「顯著困擾行為」的場合。客訴因應與顧客騷擾對策是兩回事，兩者都必須整備。\n\n**Q. 加害者是顧客。公司能保護員工到什麼程度？**\nA. 被課予義務的，終究是「僱用管理上的措施」——整備保護工作環境的方針・諮詢體制・事後因應。對加害者的損害賠償請求、刑事因應、強制禁止入內等法律程序，是律師依個別案件判斷的領域。區分公司內部能完成的部分與交給專家的部分，非常重要。\n\n## 本文依據\n\n- 日本《勞動施策綜合推進法》（労働施策の総合的な推進並びに労働者の雇用の安定及び職業生活の充実等に関する法律，昭和41年法律第132號）。依令和7年法律第63號的修正，追加以下事業主義務：為防止因顧客騷擾（來自顧客等的顯著困擾行為）而損害工作環境的僱用管理上的措施、以及防止對求職者等的性騷擾的措施\n- 施行日為**令和8年（2026年）10月1日**。依厚生勞動省「職場におけるハラスメントの防止のために」中明記「令和8年10月1日施行」而確認\n- 事業主應採取措施的內容（方針的明確化與周知・啟發、諮詢體制的整備、事後的迅速且適切因應、隱私保護・不利益對待禁止的周知），與職權騷擾防止措施（勞動施策綜合推進法第30條之2第1項）同型。顧客騷擾的定義・判斷想法・措施的具體例子，依厚生勞動省的指針及顧客騷擾對策手冊等公表資料\n- 修正後關於顧客騷擾防止措施的條・項・號的編號，於本文執筆時點尚未以e-Gov法令檢索再次確認，因此暫不引用（**未驗證**）\n\n本文為一般性的資訊提供。因應個別情事的判斷，由具備資格者在面談後進行。撰文者為[浦松丈二](/zh-tw/about/uramatsu)（社會保險勞務士・行政書士・宅地建物取引士）。",
+        "category": "手續與期限",
+        "keywords": [
+          "顧客騷擾 對策 義務",
+          "顧客騷擾 2026年10月 義務化",
+          "顧客騷擾 企業 對應 該做什麼",
+          "顧客騷擾 就業規則",
+          "顧客騷擾 諮詢窗口 設置",
+          "顧客騷擾 中小企業 義務"
+        ],
+        "tags": [
+          "顧客騷擾",
+          "騷擾",
+          "就業規則",
+          "勞務管理",
+          "社會保險勞務士"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "只有1位員工的公司也是義務嗎？",
+            "answer": "是義務。顧客騷擾防止措施不問企業規模，以使用勞動者的事業主為對象。與職權騷擾防止措施相同，即使1位員工、即使是個人事業主，都是對象。"
+          },
+          {
+            "question": "已經在做職權騷擾對策了。還需要追加什麼？",
+            "answer": "基本框架是共通的，所以不必從零開始。主要是在方針文件與應對程序中，明確記載「加害者是公司外的顧客」這個場面，並追加現場可以終止應對的界線與升級對象。已經設置的諮詢窗口可以沿用。"
+          },
+          {
+            "question": "連正當的客訴都可以當作「顧客騷擾」而不予理會嗎？",
+            "answer": "不可以。正當的意見・不滿不屬於顧客騷擾，必須誠摯因應。會被檢討終止或限制因應的，是態樣屬於「顯著困擾行為」的場合。客訴因應與顧客騷擾對策是兩回事，兩者都必須整備。"
+          },
+          {
+            "question": "加害者是顧客。公司能保護員工到什麼程度？",
+            "answer": "被課予義務的，終究是「僱用管理上的措施」——整備保護工作環境的方針・諮詢體制・事後因應。對加害者的損害賠償請求、刑事因應、強制禁止入內等法律程序，是律師依個別案件判斷的領域。區分公司內部能完成的部分與交給專家的部分，非常重要。"
+          }
+        ]
+      },
+      "zh": {
+        "title": "顾客骚扰对策，从2026年10月起成为义务",
+        "excerpt": "顾客骚扰对策，自令和8年（2026年）10月1日起，不问企业规模，一律成为事业主的义务。对求职者等的性骚扰防止措施也同时义务化。应做的事与职权骚扰防止措施几乎相同，即方针的明确化与周知、咨询体制的整备、事后的应对。本文说明顾客骚扰是什么、必须做什么、与一般客诉的差异、该委托谁。",
+        "content": "**结论（先讲重点）**：应对顾客骚扰，**自令和8年（2026年）10月1日起**，**不问企业规模**，成为事业主的义务。对求职者等的性骚扰防止措施也同时义务化。应做的事与职权骚扰防止措施几乎相同，即**方针的明确化与周知、咨询体制的整备、事后的应对**这3点。已经建立职权骚扰体制的公司，可以用扩大该框架的方式应对。\n\n近来「听过『顾客骚扰』这个词，但它是义务还是努力目标？具体该做什么？」这类咨询正在增加。本页面是为有接待、窗口、电话应对之公司的经营者与总务人员而写，整理顾客骚扰的定义、义务的时期与对象、具体措施、与客诉的界线、以及该委托谁。个别的法律判断，以及对加害者的法律程序之说明，不在本文范围内。\n\n## 顾客骚扰指的是什么？\n\n在厚生劳动省的公表资料中，顾客骚扰是指「**来自顾客等的显著困扰行为**」，使劳动者的工作环境受到损害。「顾客等」不局限于实际有交易往来的顾客，也包括交易对象、设施使用者、其他利害关系人。\n\n被列为「显著困扰行为」的例子如下：\n\n- 暴行・伤害、胁迫\n- 损毁名誉或侮辱、严重的辱骂\n- 过度・执拗的要求或客诉的持续・反复\n- 强迫下跪、散布于社交媒体等\n- 性方面的言行\n- 拒不离去・赖着不走、长时间的拘束\n\n重点在于，**「正当的客诉」不是顾客骚扰**。指出商品瑕疵或服务不周、要求改善，反而是改善业务所需的声音。有问题的不是要求的内容，而是**「样态」是否属于显著困扰行为**。\n\n## 义务是何时、哪些公司适用？\n\n依令和7年法律第63号对劳动施策综合推进法等的修正，事业主被课予下列措施的义务。\n\n- 为防止因**顾客骚扰**（来自顾客等的显著困扰行为）而损害工作环境所需的雇用管理上的措施\n- 防止**对求职者等的性骚扰**的措施（此为采用・招募场面。非本文主题）\n\n施行日为**令和8年（2026年）10月1日**。**不问企业规模。** 与职权骚扰防止措施相同，即使是1位员工的企业、即使是个人事业主，只要使用劳动者的事业主都是对象。就是本文公开日（2026年9月1日）的下一个月。\n\n此外，施行前的现在是准备期间。义务从10月1日起生效，但为了避免「义务生效当天却什么都没有」的状态，在施行前先整备制度的骨架较为实际。\n\n## 具体上，公司必须做什么？\n\n形式上是职权骚扰防止措施相同的3分类，再加上「应一并采取的措施」。\n\n| 措施 | 内容 |\n|---|---|\n| **① 方针的明确化与周知・启发** | 定出组织以公司整体应对顾客骚扰的方针、应对窗口与程序，并向员工周知 |\n| **② 咨询体制的整备** | 设置咨询窗口，建立能适切应对申报的体制 |\n| **③ 事后的迅速且适切应对** | 有申报时进行事实确认，采取必要措施（对受害者的关怀、防止再发、对加害者的应对） |\n| **应一并采取的措施** | 隐私保护、因咨询等而受到不利对待之禁止的周知・启发 |\n\n**已经建立职权骚扰防止体制的公司，可以用扩大该框架的方式应对。** 实务上，容易需要追加的是以下2点。\n\n1. 在方针文件与应对程序中明确记载「**加害者是公司外的顾客**」这个场面\n2. 事先决定现场可以终止应对的界线、以及向上司或咨询窗口升级的对象\n\n反之，连职权骚扰的措施本身都尚未整备的公司，就得在10月之前一次整备两份。关于就业规则义务的全貌，请见[就业规则从几人开始成为义务](/zh/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo)。\n\n## 与「平常的客诉」有何不同？\n\n界线要从**要求的内容**与**样态**两方面来看。\n\n| 观点 | 顾客骚扰 | 一般客诉・不满 |\n|---|---|---|\n| 要求的内容 | 不当・过度的要求、人格性攻击等 | 指出商品・服务的瑕疵或不满、要求改善 |\n| 样态 | 辱骂・胁迫・侮辱・长时间拘束・拒不离去等，属于「显著困扰行为」 | 社会通念上相当的范围 |\n| 公司的应对 | 从保护工作环境的观点，可能有终止或限制应对的判断 | 诚挚接受，并用于改善 |\n\n请注意，**既不是「正当客诉所以什么都可以」，也不是「客诉就全部是顾客骚扰」**。即使是正当的指摘，只要样态伴随辱骂・胁迫・长时间拘束等，就可能成为顾客骚扰。反之，即使要求内容不当，只要样态停留在稳当的范围，也可能不构成顾客骚扰。判断时，要综合考量行为的内容・程度、持续性・反复性、要求的相当性、对劳动者工作环境的影响等要素。\n\n## 该委托谁、委托什么？\n\n| 要做的事 | 谁的业务 |\n|---|---|\n| 顾客骚扰应对方针的策定、就业规则・服务纪律的整备、咨询窗口的设计、员工研修 | **社会保险劳务士**（本事务所） |\n| 对加害者（顾客）的法律措施、损害赔偿请求、刑事应对的检讨 | **律师** |\n| 加害者是公司内员工、检讨惩戒处分的场面 | 以就业规则为依据。制度整备是**社会保险劳务士**，若纷争化则为**律师** |\n\n顾客骚扰是「顾客应对」与「员工保护」难以两立的场面。社会保险劳务士的角色，是把**组织要如何划线**整理成方针・规程・研修的形式。纷争实际发生后的法律程序，属于律师的领域。\n\n## 四葉社会保険労務士事務所能做什么？\n\n位于文京区小日向的四葉社会保険労務士事務所，承接顾客骚扰对策所需的**方针文件、就业规则・服务纪律的整备、咨询窗口的设计、对员工的周知・研修**。尚未进行职权骚扰防止措施的公司，也可以两者一次整备。**咨询免费。** 费用刊登于[报酬额表](/zh/labor/ryokin)。我们会从「本公司的情况该先从何处着手」的盘点开始陪伴您。\n\n### 该向谁咨询\n\n顾客骚扰应对的方针・就业规则・咨询窗口・研修是**社会保险劳务士**的业务。个别纷争、对加害者（顾客）的法律程序・损害赔偿请求是**律师**的业务。本事务所不收取介绍费。向四葉社会保険労務士事務所咨询时的费用整理于[报酬额表](/zh/labor/ryokin)，常被询问的问题整理于[常见问答](/zh/labor/faq)。\n\n## 常见问题\n\n**Q. 只有1位员工的公司也是义务吗？**\nA. 是义务。顾客骚扰防止措施不问企业规模，以使用劳动者的事业主为对象。与职权骚扰防止措施相同，即使1位员工、即使是个人事业主，都是对象。\n\n**Q. 已经在做职权骚扰对策了。还需要追加什么？**\nA. 基本框架是共通的，所以不必从零开始。主要是在方针文件与应对程序中，明确记载「加害者是公司外的顾客」这个场面，并追加现场可以终止应对的界线与升级对象。已经设置的咨询窗口可以沿用。\n\n**Q. 连正当的客诉都可以当作「顾客骚扰」而不予理会吗？**\nA. 不可以。正当的意见・不满不属于顾客骚扰，必须诚挚应对。会被检讨终止或限制应对的，是样态属于「显著困扰行为」的场合。客诉应对与顾客骚扰对策是两回事，两者都必须整备。\n\n**Q. 加害者是顾客。公司能保护员工到什么程度？**\nA. 被课予义务的，终究是「雇用管理上的措施」——整备保护工作环境的方针・咨询体制・事后应对。对加害者的损害赔偿请求、刑事应对、强制禁止入内等法律程序，是律师依个别案件判断的领域。区分公司内部能完成的部分与交给专家的部分，非常重要。\n\n## 本文依据\n\n- 日本《劳动施策综合推进法》（労働施策の総合的な推進並びに労働者の雇用の安定及び職業生活の充実等に関する法律，昭和41年法律第132号）。依令和7年法律第63号的修正，追加以下事业主义务：为防止因顾客骚扰（来自顾客等的显著困扰行为）而损害工作环境的雇用管理上的措施、以及防止对求职者等的性骚扰的措施\n- 施行日为**令和8年（2026年）10月1日**。依厚生劳动省「職場におけるハラスメントの防止のために」中明记「令和8年10月1日施行」而确认\n- 事业主应采取措施的内容（方针的明确化与周知・启发、咨询体制的整备、事后的迅速且适切应对、隐私保护・不利对待禁止的周知），与职权骚扰防止措施（劳动施策综合推进法第30条之2第1项）同型。顾客骚扰的定义・判断想法・措施的具体例子，依厚生劳动省的指针及顾客骚扰对策手册等公表资料\n- 修正后关于顾客骚扰防止措施的条・项・号的编号，于本文执笔时点尚未以e-Gov法令检索再次确认，因此暂不引用（**未验证**）\n\n本文为一般性的信息提供。因应个别情事的判断，由具备资格者在面谈后进行。撰文者为[浦松丈二](/zh/about/uramatsu)（社会保险劳务士・行政书士・宅地建物取引士）。",
+        "category": "手续与期限",
+        "keywords": [
+          "顾客骚扰 对策 义务",
+          "顾客骚扰 2026年10月 义务化",
+          "顾客骚扰 企业 应对 该做什么",
+          "顾客骚扰 就业规则",
+          "顾客骚扰 咨询窗口 设置",
+          "顾客骚扰 中小企业 义务"
+        ],
+        "tags": [
+          "顾客骚扰",
+          "骚扰",
+          "就业规则",
+          "劳务管理",
+          "社会保险劳务士"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "只有1位员工的公司也是义务吗？",
+            "answer": "是义务。顾客骚扰防止措施不问企业规模，以使用劳动者的事业主为对象。与职权骚扰防止措施相同，即使1位员工、即使是个人事业主，都是对象。"
+          },
+          {
+            "question": "已经在做职权骚扰对策了。还需要追加什么？",
+            "answer": "基本框架是共通的，所以不必从零开始。主要是在方针文件与应对程序中，明确记载「加害者是公司外的顾客」这个场面，并追加现场可以终止应对的界线与升级对象。已经设置的咨询窗口可以沿用。"
+          },
+          {
+            "question": "连正当的客诉都可以当作「顾客骚扰」而不予理会吗？",
+            "answer": "不可以。正当的意见・不满不属于顾客骚扰，必须诚挚应对。会被检讨终止或限制应对的，是样态属于「显著困扰行为」的场合。客诉应对与顾客骚扰对策是两回事，两者都必须整备。"
+          },
+          {
+            "question": "加害者是顾客。公司能保护员工到什么程度？",
+            "answer": "被课予义务的，终究是「雇用管理上的措施」——整备保护工作环境的方针・咨询体制・事后应对。对加害者的损害赔偿请求、刑事应对、强制禁止入内等法律程序，是律师依个别案件判断的领域。区分公司内部能完成的部分与交给专家的部分，非常重要。"
+          }
+        ]
+      }
+    }
   }
 ];
