@@ -7294,5 +7294,187 @@ export const LABOR_COLUMNS_SEED: LaborSeedColumn[] = [
         ]
       }
     }
+  },
+  {
+    "business": "labor",
+    "slug": "36-kyotei-zangyo-sharoushi-doko-made",
+    "title": "残業の上限は36協定で決まる。社労士にどこまで頼めるのか",
+    "date": "2026-09-01",
+    "category": "誰に頼むか",
+    "excerpt": "残業の上限は会社の都合では決められません。36協定を締結・届出し、その範囲内で時間外労働を行う必要があります。限度時間は原則月45時間・年360時間、特別条項でも年720時間以内・単月100時間未満・複数月平均80時間以内です。36協定の仕組みと、社労士にどこまで頼めるかを整理します。",
+    "content": "**結論（先に要点）**：残業の上限は、会社の都合で自由に決められません。時間外労働・休日労働をさせるには「**36協定**」を締結し、所轄労働基準監督署長に届け出て、その範囲内で行う必要があります。限度時間の原則は**1か月45時間・1年360時間**、臨時の特別条項でも**年720時間以内・単月100時間未満・複数月平均80時間以内**です。届け出ずに残業をさせると**罰則（労働基準法第119条）**の対象になります。この記事では、36協定の仕組みと「社労士にどこまで頼めるか」を整理します。\n\n「残業は何時間までなら大丈夫ですか」というご質問をよくいただきますが、答えは「会社の規模や業種で変わるのではなく、36協定の届出と、その内容で決まる」です。このページは、残業がある中小企業の経営者・総務担当の方に向けて、36協定の役割、上限時間、届出の手続、そして誰に何を頼むかを整理します。\n\n## 36協定とは、何のためにあるのか？\n\n労働基準法は、原則として**1日8時間・1週40時間**を超えて働かせてはいけないと定めています（労働基準法第32条）。それを超えて時間外労働や休日労働をさせるには、労働者の過半数を代表する者との**書面による協定**を締結し、**所轄労働基準監督署長に届け出る**必要があります。この協定が、条文番号にちなんで「36協定」と呼ばれています（労働基準法第36条第1項）。\n\nつまり36協定は「残業をしてもよい」という**会社の免罪符ではなく、残業を合法に行うための前提手続**です。届け出ていなければ、法定時間を超えて働かせている状態は、人数や業種を問わず違法になります。人数を問わず必要な点は[就業規則は何人から義務か](/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo)もご覧ください。\n\n## 残業の上限は、具体的に何時間なのか？\n\n時間外労働の上限は、原則と特別条項で分かれます。\n\n| 区分 | 上限 | 根拠 |\n|---|---|---|\n| **原則（限度時間）** | 1か月45時間・1年360時間 | 労働基準法第36条第4項 |\n| **特別条項・年間** | 年720時間以内 | 同条第5項 |\n| **特別条項・単月** | 単月100時間未満（休日労働を含む） | 同条第6項第2号 |\n| **特別条項・複数月平均** | 2〜6か月平均で80時間以内（休日労働を含む） | 同条第6項第3号 |\n| **特別条項・回数** | 月45時間を超えられるのは年6回まで | 特別条項の限度 |\n\n「特別条項」は、臨時的な特別の事情があるときに労使が合意して定めるものです。ここでも、**年720時間という絶対的な上限**と、**単月100時間未満・複数月平均80時間以内**というラインは崩せません。繁忙期があるからといって、この枠を超えることはできません。\n\nなお、**建設業・自動車運転の業務など**、従来は上限規制の適用が猶予されていた業務にも、令和6年（2024年）4月1日から上限規制が適用されています。「うちは業種が特殊だから」という理由で外れるものではありません。\n\n## 届け出ないまま残業をさせると、どうなるのか？\n\n36協定の締結・届出がないのに時間外労働や休日労働をさせると、**6か月以下の懲役又は30万円以下の罰金**の対象になります（労働基準法第119条）。届出を失念していた、という理由では免れません。\n\nあわせて、時間外・休日労働に対しては**割増賃金**を支払う義務があります。法定時間外は25%以上、休日労働は35%以上、深夜（午後10時〜午前5時）は25%以上といった割増率がかかり、未払いのまま放置すると**遡って請求される**リスクがあります。上限の管理と割増賃金の支払いは、セットで整える必要があります。\n\n## 誰と、どうやって協定を結ぶのか？\n\n36協定は、**労働者の過半数で組織する労働組合**がある場合はその組合と、なければ**労働者の過半数を代表する者**と書面で締結します。この「過半数代表者」は、管理監督者でないことなど一定の要件を満たす必要があります（労働基準法施行規則第6条の2）。選出の方法を誤ると、協定そのものの効力が争われる原因になります。\n\n協定には、**対象となる労働者の範囲、延長できる時間、有効期間**などを定め、所轄労働基準監督署長に届け出ます。電子申請（e-Gov等）でも届け出ることができます。\n\n## 社労士には、どこまで頼めるのか？\n\n| すること | 誰の業務か |\n|---|---|\n| 36協定の原案作成・届出代行、過半数代表者の選出の助言、労働時間の記録・管理の整備 | **社会保険労務士**（当事務所） |\n| 就業規則・賃金規程との整合、残業代（割増賃金）の計算・給与計算 | **社会保険労務士**（当事務所） |\n| 未払い残業代の請求、紛争、労働審判・訴訟への対応 | **弁護士** |\n| 割増賃金の源泉徴収・年末調整の扱い | **税理士** |\n\n36協定の作成・届出は、社会保険労務士の業務です。当事務所は、**実態に合った協定の設計と、その後の時間管理**までを担います。すでに未払い残業代の請求や紛争になっている事案は、弁護士の領域です。\n\n## 四葉社会保険労務士事務所は、何ができますか？\n\n文京区小日向の四葉社会保険労務士事務所は、**36協定の原案作成・届出、過半数代表者の選出の助言、労働時間の記録・管理の整備**をお受けします。就業規則や賃金規程との整合、割増賃金の計算もあわせてご相談いただけます。**ご相談は無料です。** 36協定の作成・届出は内容と人数に応じてお見積りし、料金の考え方は[報酬額表](/labor/ryokin)をご覧ください。\n\nなお、未払い残業代の請求や紛争がすでに起きている場合は、弁護士へ直接ご依頼いただく形をご案内します。当事務所は紹介料を受け取りません。\n\n## よくある質問\n\n**Q. 36協定を届け出ていない会社は、どのくらいいるのでしょうか？**\nA. 正確な割合をお示しすることはできませんが、監督署の指導で発覚するケースは少なくありません。届出がないまま残業をさせている状態は、人数を問わず違法です。まずは現状を確認し、遡っての届出や今後の整備についてご相談ください。\n\n**Q. 特別条項を結べば、いつでも720時間まで残業させられますか？**\nA. できません。特別条項は臨時的な特別の事情がある場合に限られ、年720時間以内という上限に加えて、単月100時間未満・複数月平均80時間以内、月45時間を超えられるのは年6回までという制約があります。恒常的な長時間労働を特別条項で正当化することはできません。\n\n**Q. 過半数代表者は、誰でもなれますか？**\nA. 誰でもなれるわけではありません。管理監督者でないことなど、一定の要件があります（労働基準法施行規則第6条の2）。選出方法を誤ると協定の効力が争われるため、選出の手続きを記録に残しておくことが大切です。\n\n**Q. 電子申請で36協定を届け出られますか？**\nA. 届け出られます。e-Gov等の電子申請で提出できます。書面の記載事項と有効期間、対象範囲などを整えたうえで提出してください。原案の作成から届出までお受けします。\n\n## この記事の根拠\n\n- 労働基準法（昭和22年法律第49号）第32条、第36条第1項・第4項・第5項・第6項（第2号・第3号）、第119条\n- 労働基準法施行規則（昭和22年厚生省令第23号）第6条の2（過半数代表者の要件）\n- 割増賃金率は、時間外25%以上・休日35%以上・深夜25%以上（労働基準法第37条。金額・率は厚生労働省の公表資料による一般論です）\n- 建設業・自動車運転の業務などへの上限規制の適用は、令和6年（2024年）4月1日から（厚生労働省・都道府県労働局の公表資料により確認）\n- 条文番号と上限時間は、厚生労働省・都道府県労働局等の公表資料により確認しています（2026年8月時点）\n\nこの記事は、誰に相談するかまでは決めていません。36協定の原案作成・届出、過半数代表者の選出の助言、労働時間の記録・管理の整備、割増賃金の計算は社会保険労務士の業務です。未払い残業代の請求、紛争、労働審判・訴訟への対応は弁護士の業務です。割増賃金の源泉徴収・年末調整の扱いは税理士の業務です。当事務所は紹介料を受け取りません。四葉社会保険労務士事務所にご相談いただく場合の費用は[報酬額表](/labor/ryokin)に、よくいただくご質問は[よくあるご質問](/labor/faq)にまとめています。\n\n本記事は一般的な情報提供です。個別のご事情に応じた判断は、面談のうえ資格者が行います。執筆は[浦松丈二](/about/uramatsu)（社会保険労務士・行政書士・宅地建物取引士）です。",
+    "status": "published",
+    "author": {
+      "name": "浦松 丈二",
+      "title": "社会保険労務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+    },
+    "keywords": [
+      "36協定 社労士 誰に頼む",
+      "36協定 時間外労働 上限",
+      "36協定 届出 書き方",
+      "特別条項 720時間 100時間",
+      "36協定 ない 罰則",
+      "残業 上限 月45時間 年360時間"
+    ],
+    "tags": [
+      "36協定",
+      "時間外労働",
+      "残業",
+      "労働基準法",
+      "労務管理",
+      "社会保険労務士"
+    ],
+    "locales": [],
+    "faq": [
+      {
+        "question": "36協定を届け出ていない会社は、どのくらいいるのでしょうか？",
+        "answer": "正確な割合をお示しすることはできませんが、監督署の指導で発覚するケースは少なくありません。届出がないまま残業をさせている状態は、人数を問わず違法です。まずは現状を確認し、遡っての届出や今後の整備についてご相談ください。"
+      },
+      {
+        "question": "特別条項を結べば、いつでも720時間まで残業させられますか？",
+        "answer": "できません。特別条項は臨時的な特別の事情がある場合に限られ、年720時間以内という上限に加えて、単月100時間未満・複数月平均80時間以内、月45時間を超えられるのは年6回までという制約があります。恒常的な長時間労働を特別条項で正当化することはできません。"
+      },
+      {
+        "question": "過半数代表者は、誰でもなれますか？",
+        "answer": "誰でもなれるわけではありません。管理監督者でないことなど、一定の要件があります（労働基準法施行規則第6条の2）。選出方法を誤ると協定の効力が争われるため、選出の手続きを記録に残しておくことが大切です。"
+      },
+      {
+        "question": "電子申請で36協定を届け出られますか？",
+        "answer": "届け出られます。e-Gov等の電子申請で提出できます。書面の記載事項と有効期間、対象範囲などを整えたうえで提出してください。原案の作成から届出までお受けします。"
+      }
+    ],
+    "translations": {
+      "en": {
+        "title": "The overtime ceiling is set by the 36 Agreement — how far can you leave it to a shakai hoken roumushi?",
+        "excerpt": "How much overtime you can have is not something a company can decide freely. To have workers work overtime or on days off, you must conclude a \"36 Agreement\", file it with the head of the competent Labor Standards Inspection Office, and stay within its limits. The ceiling is in principle 45 hours a month and 360 hours a year; even under a special clause it is within 720 hours a year, under 100 hours in a single month, and within 80 hours averaged over several months. Working overtime without filing is subject to a penalty (Labor Standards Act, Article 119). This page explains the framework and how far you can leave it to a shakai hoken roumushi.",
+        "content": "**In short:** How much overtime is allowed is not something a company can decide freely. To have workers work overtime or on days off, you must conclude a \"**36 Agreement**\", file it with the head of the competent Labor Standards Inspection Office, and work within its limits. The ceiling is in principle **45 hours a month and 360 hours a year**; even under a special clause it is **within 720 hours a year, under 100 hours in a single month, and within 80 hours averaged over several months**. Working overtime without filing it is subject to a **penalty (Labor Standards Act, Article 119)**. This page explains the framework of the 36 Agreement and how far you can leave it to a shakai hoken roumushi.\n\nWe are often asked, \"How many hours of overtime is OK?\" The answer is not that it depends on the size of your company or your industry — it is decided by whether the 36 Agreement is filed and what it says. This page is for the owners and general-affairs staff of small and medium-sized companies that have overtime. We set out the role of the 36 Agreement, the ceiling hours, the filing procedure, and whom to ask for what.\n\n## What is the 36 Agreement for?\n\nThe Labor Standards Act provides, in principle, that a worker must not be made to work more than **8 hours a day and 40 hours a week** (Labor Standards Act, Article 32). To have workers work overtime or on days off beyond that, you must conclude a **written agreement** with a representative of the majority of workers and **file it with the head of the competent Labor Standards Inspection Office**. This agreement is called the \"36 Agreement\" after the article number (Labor Standards Act, Article 36, paragraph 1).\n\nIn other words, the 36 Agreement is **not a company's free pass to have overtime — it is the procedure that makes overtime lawful in the first place**. If it is not filed, having workers work beyond the statutory hours is unlawful regardless of headcount or industry. For the fact that it is required regardless of headcount, see also [How many employees make work rules mandatory](/en/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo).\n\n## How many hours of overtime, exactly, is the ceiling?\n\nThe ceiling on overtime splits into a principle and a special clause.\n\n| Category | Ceiling | Basis |\n|---|---|---|\n| **Principle (ceiling hours)** | 45 hours a month and 360 hours a year | Labor Standards Act, Article 36, paragraph 4 |\n| **Special clause — annual** | Within 720 hours a year | Article 36, paragraph 5 |\n| **Special clause — single month** | Under 100 hours in a single month (including work on days off) | Article 36, paragraph 6, item 2 |\n| **Special clause — average over several months** | Within 80 hours averaged over 2–6 months (including work on days off) | Article 36, paragraph 6, item 3 |\n| **Special clause — frequency** | Exceeding 45 hours in a month is allowed only up to 6 times a year | The limit on the special clause |\n\nThe \"special clause\" is what labour and management agree on when there are temporary special circumstances. Even there, the **absolute ceiling of 720 hours a year** and the lines of **under 100 hours in a single month and within 80 hours averaged over several months** cannot be broken. Having a busy season does not let you go beyond this frame.\n\nPlease note that **construction and motor vehicle driving, among others** — types of work to which the application of the ceiling had previously been deferred — have been subject to the ceiling since April 1, 2024. \"Our industry is special\" does not put you outside it.\n\n## What happens if you have workers work overtime without filing?\n\nHaving workers work overtime or on days off without concluding and filing a 36 Agreement is subject to **imprisonment with work for up to 6 months or a fine of up to 300,000 yen** (Labor Standards Act, Article 119). Forgetting to file is not an excuse.\n\nAt the same time, overtime and holiday work require **premium wages**. The premium rates are 25% or more for work beyond the statutory hours, 35% or more for work on days off, and 25% or more for late-night work (from 10 p.m. to 5 a.m.); if left unpaid, there is a risk that they will be claimed **retroactively**. Managing the ceiling and paying premium wages need to be put in place together.\n\n## With whom, and how, do you conclude the agreement?\n\nA 36 Agreement is concluded in writing with a **labor union organized by a majority of workers**, if one exists, or otherwise with a **representative of the majority of workers**. This \"majority representative\" must satisfy certain requirements, such as not being a person in a managerial position (Ordinance for Enforcement of the Labor Standards Act, Article 6-2). If the method of selection is wrong, the validity of the agreement itself can become the subject of dispute.\n\nThe agreement must set out **the scope of workers covered, the hours of extension, and the effective period**, and it must be filed with the head of the competent Labor Standards Inspection Office. It can also be filed electronically (via e-Gov and the like).\n\n## How far can you leave it to a shakai hoken roumushi?\n\n| What you want done | Whose work it is |\n|---|---|\n| Drafting and filing the 36 Agreement, advising on selecting the majority representative, and putting the recording and management of working hours in order | **A Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant)** (this office) |\n| Consistency with the work rules and wage rules, and calculating overtime (premium wages) and payroll | **A Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant)** (this office) |\n| Claims for unpaid overtime, disputes, and labor tribunal proceedings or litigation | **An attorney** |\n| Withholding and year-end adjustment on premium wages | **A tax accountant** |\n\nDrafting and filing the 36 Agreement is the work of a Shakai Hoken Roumushi. This office takes care of **designing an agreement that matches your actual operations and the management of working hours that follows**. A matter that has already become a claim for unpaid overtime or a dispute is the domain of an attorney.\n\n## What can 四葉社会保険労務士事務所 do for you?\n\n四葉社会保険労務士事務所 in Kohinata, Bunkyo Ward, handles **drafting and filing the 36 Agreement, advising on selecting the majority representative, and putting the recording and management of working hours in order**. We can also look at consistency with the work rules and wage rules, and the calculation of premium wages. **The initial consultation is free.** Drafting and filing the 36 Agreement is quoted according to the content and the number of employees; for how fees are thought about, see the [fee schedule](/en/labor/ryokin).\n\nPlease note that where a claim for unpaid overtime or a dispute has already arisen, we will guide you to engage an attorney directly. This office does not accept referral fees.\n\n## Frequently asked questions\n\n**Q. How many companies are there that have not filed a 36 Agreement?**\nA. We cannot give an exact figure, but there are not a few cases that come to light through the guidance of the Inspection Office. Working overtime without a filing is unlawful regardless of headcount. First check your current situation, and please consult us about filing and about putting things in order from here.\n\n**Q. If we conclude a special clause, can we always have workers work up to 720 hours?**\nA. No. The special clause applies only where there are temporary special circumstances; on top of the ceiling of 720 hours a year, there are the constraints of under 100 hours in a single month, within 80 hours averaged over several months, and exceeding 45 hours in a month no more than 6 times a year. Habitual long working hours cannot be justified by a special clause.\n\n**Q. Can anyone be the majority representative?**\nA. Not anyone. There are certain requirements, such as not being a person in a managerial position (Ordinance for Enforcement of the Labor Standards Act, Article 6-2). Because getting the selection wrong can put the validity of the agreement into dispute, it is important to leave a record of the selection procedure.\n\n**Q. Can a 36 Agreement be filed electronically?**\nA. Yes. It can be filed through e-Gov and other electronic filing. Please prepare the items to be stated, the effective period, and the scope of coverage, and then file. We handle everything from drafting to filing.\n\n## Sources for this article\n\n- Labor Standards Act (労働基準法, Act No. 49 of 1947), Article 32, Article 36, paragraph 1, paragraph 4, paragraph 5 and paragraph 6 (items 2 and 3), and Article 119\n- Ordinance for Enforcement of the Labor Standards Act (労働基準法施行規則, Ordinance of the Ministry of Health and Welfare No. 23 of 1947), Article 6-2 (requirements for the majority representative)\n- The premium rates are 25% or more for overtime, 35% or more for holiday work, and 25% or more for late-night work (Labor Standards Act, Article 37; the amounts and rates are general figures from materials published by the Ministry of Health, Labour and Welfare)\n- The application of the ceiling to construction, motor vehicle driving and other types of work began on April 1, 2024 (confirmed from materials published by the Ministry of Health, Labour and Welfare and prefectural labour bureaus)\n- The article numbers and ceiling hours have been checked against materials published by the Ministry of Health, Labour and Welfare and prefectural labour bureaus (as of August 2026)\n\nThis article does not go so far as to decide whom you should consult. Drafting and filing the 36 Agreement, advising on selecting the majority representative, putting the recording and management of working hours in order, and calculating premium wages are the work of a Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant). Claims for unpaid overtime, disputes, and labor tribunal proceedings or litigation are the work of an attorney. The handling of withholding and the year-end adjustment on premium wages is the work of a tax accountant. This office does not accept referral fees. The cost of consulting 四葉社会保険労務士事務所 is set out in the [fee schedule](/en/labor/ryokin), and the questions we are asked most often are collected on the [FAQ page](/en/labor/faq).\n\nThis article is general information. Judgments that fit your particular circumstances are made by a qualified professional after a meeting. Written by [Joji Uramatsu](/en/about/uramatsu) (Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist).",
+        "category": "Who to ask",
+        "keywords": [
+          "Article 36 agreement who to ask",
+          "36 agreement overtime ceiling",
+          "36 agreement filing how to write",
+          "special clause 720 hours",
+          "no 36 agreement penalty",
+          "overtime limit 45 hours 360 hours"
+        ],
+        "tags": [
+          "Article 36 agreement",
+          "overtime",
+          "Labour Standards Act",
+          "labour management",
+          "Shakai Hoken Roumushi"
+        ],
+        "author": {
+          "name": "Joji Uramatsu",
+          "title": "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所"
+        },
+        "faq": [
+          {
+            "question": "How many companies are there that have not filed a 36 Agreement?",
+            "answer": "We cannot give an exact figure, but there are not a few cases that come to light through the guidance of the Inspection Office. Working overtime without a filing is unlawful regardless of headcount. First check your current situation, and please consult us about filing and about putting things in order from here."
+          },
+          {
+            "question": "If we conclude a special clause, can we always have workers work up to 720 hours?",
+            "answer": "No. The special clause applies only where there are temporary special circumstances; on top of the ceiling of 720 hours a year, there are the constraints of under 100 hours in a single month, within 80 hours averaged over several months, and exceeding 45 hours in a month no more than 6 times a year. Habitual long working hours cannot be justified by a special clause."
+          },
+          {
+            "question": "Can anyone be the majority representative?",
+            "answer": "Not anyone. There are certain requirements, such as not being a person in a managerial position (Ordinance for Enforcement of the Labor Standards Act, Article 6-2). Because getting the selection wrong can put the validity of the agreement into dispute, it is important to leave a record of the selection procedure."
+          },
+          {
+            "question": "Can a 36 Agreement be filed electronically?",
+            "answer": "Yes. It can be filed through e-Gov and other electronic filing. Please prepare the items to be stated, the effective period, and the scope of coverage, and then file. We handle everything from drafting to filing."
+          }
+        ]
+      },
+      "zh-tw": {
+        "title": "加班的上限由36協定決定——可以委託社會保險勞務士到哪裡？",
+        "excerpt": "加班的上限不能由公司擅自決定。要讓員工延長工時或休假日勞動，必須締結「36協定」並向所轄勞動基準監督署長申報，在範圍內進行。上限原則上是1個月45小時・1年360小時；即使有特別條款，也是1年720小時以內、單月未滿100小時、複數月平均80小時以內。未申報就讓員工加班，會成為罰則（勞動基準法第119條）的對象。本文整理解僱36協定的機制，以及可以委託社會保險勞務士到哪裡。",
+        "content": "**結論（先講重點）**：加班的上限不能由公司擅自決定。要讓員工延長工時或休假日勞動，必須締結「**36協定**」並向所轄勞動基準監督署長申報，在範圍內進行。上限時間的原則是**1個月45小時・1年360小時**，即使是臨時的特別條款，也是**1年720小時以內、單月未滿100小時、複數月平均80小時以內**。未申報就讓員工加班，會成為**罰則（勞動基準法第119條）**的對象。本文整理36協定的機制，以及可以委託社會保險勞務士到哪裡。\n\n我們常被問到「加班最多幾小時沒問題？」答案不是「依公司規模或行業而異」，而是「由36協定的申報與其內容決定」。本頁面是為有加班的中小企業經營者與總務人員而寫，整理36協定的角色、上限時間、申報手續、以及該委託誰做什麼。\n\n## 36協定是做什麼用的？\n\n日本《勞動基準法》原則上規定，不得讓員工工作超過**1天8小時・1週40小時**（勞動基準法第32條）。要讓員工超過這個範圍延長工時或休假日勞動，必須與代表勞動者過半數者締結**書面協定**，並**向所轄勞動基準監督署長申報**。這個協定依條文編號被稱為「36協定」（勞動基準法第36條第1項）。\n\n也就是說，36協定**不是公司可以加班的「免罪符」，而是讓加班合法化的前提手續**。若未申報，讓員工超過法定工時工作，不論人數或行業都是違法。不問人數都需要這點，請一併參閱[就業規則從幾人開始成為義務](/zh-tw/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo)。\n\n## 加班的上限，具體是幾小時？\n\n延長工時的上限，分為原則與特別條款。\n\n| 區分 | 上限 | 依據 |\n|---|---|---|\n| **原則（上限時間）** | 1個月45小時・1年360小時 | 勞動基準法第36條第4項 |\n| **特別條款・年間** | 1年720小時以內 | 同條第5項 |\n| **特別條款・單月** | 單月未滿100小時（含休假日勞動） | 同條第6項第2號 |\n| **特別條款・複數月平均** | 2〜6個月平均80小時以內（含休假日勞動） | 同條第6項第3號 |\n| **特別條款・次數** | 超過單月45小時以一年6次為限 | 特別條款的限度 |\n\n「特別條款」是有臨時性特別情事時，由勞資合意訂定的。即使如此，**1年720小時這個絕對上限**，以及**單月未滿100小時・複數月平均80小時以內**這條線，都無法打破。不能因為有旺季就超過這個範圍。\n\n此外，**建設業・汽車駕駛業務等**，以往上限規制的適用被緩期的業務，自令和6年（2024年）4月1日起也已適用上限規制。「我們行業特殊」並非排除理由。\n\n## 未申報就讓員工加班，會怎樣？\n\n未締結・申報36協定卻讓員工延長工時或休假日勞動，會成為**6個月以下懲役或30萬日圓以下罰金**的對象（勞動基準法第119條）。「忘了申報」不能免責。\n\n同時，對延長工時・休假日勞動，有支付**加班費（割増賃金）**的義務。法定外工時加25%以上、休假日勞動加35%以上、深夜（晚上10點〜凌晨5點）加25%以上等加給率，若持續未支付，有被**追溯請求**的風險。上限的管理與加班費的支付，必須一併整備。\n\n## 與誰、如何締結協定？\n\n36協定，若有**由勞動者過半數組織的工會**，則與該工會；若無，則與**勞動者過半數的代表者**以書面締結。這個「過半數代表者」必須符合非管理監督者等一定要件（勞動基準法施行規則第6條之2）。選出方法錯誤，可能成為協定本身效力被爭執的原因。\n\n協定必須定出**對象勞動者的範圍、可延長的時間、有效期間**等，並向所轄勞動基準監督署長申報。也可以用電子申請（e-Gov等）申報。\n\n## 可以委託社會保險勞務士到哪裡？\n\n| 要做的事 | 誰的業務 |\n|---|---|\n| 36協定的原案作成・申報代行、過半數代表者選出的協助、工作時間的記錄・管理整備 | **社會保險勞務士**（本事務所） |\n| 與就業規則・工資規程的整合、加班費（割増賃金）的計算・薪資計算 | **社會保險勞務士**（本事務所） |\n| 未付加班費的請求、紛爭、勞動審判・訴訟的因應 | **律師** |\n| 加班費的源泉徵收・年終調整的處理 | **稅理士** |\n\n36協定的作成・申報是社會保險勞務士的業務。本事務所負責到**設計符合實際的協定，以及之後的時間管理**。已經成為未付加班費請求或紛爭的案件，屬於律師的領域。\n\n## 四葉社会保険労務士事務所能做什麼？\n\n位於文京區小日向的四葉社会保険労務士事務所，承接**36協定的原案作成・申報、過半數代表者選出的協助、工作時間的記錄・管理整備**。也可以一併諮詢與就業規則・工資規程的整合、加班費的計算。**諮詢免費。** 36協定的作成・申報依內容與人數估價，費用的想法請參閱[報酬額表](/zh-tw/labor/ryokin)。\n\n此外，若未付加班費的請求或紛爭已經發生，會為您介紹直接委任律師。本事務所不收取介紹費。\n\n## 常見問題\n\n**Q. 未申報36協定的公司，有多少？**\nA. 無法提供正確比例，但經監督署指導而發現的案例並不少。未申報卻讓員工加班，不問人數都是違法。請先確認現狀，並就申報與今後的整備與我們討論。\n\n**Q. 締結特別條款的話，隨時都可以加班到720小時嗎？**\nA. 不行。特別條款僅限有臨時性特別情事時，除了1年720小時以內的上限，還有單月未滿100小時、複數月平均80小時以內、超過單月45小時以一年6次為限等制約。恆常性的長時間勞動無法以特別條款正當化。\n\n**Q. 過半數代表者，任何人都能擔任嗎？**\nA. 不是任何人都可以。有非管理監督者等一定要件（勞動基準法施行規則第6條之2）。選出方法錯誤可能使協定效力被爭執，因此留下選出手續的紀錄很重要。\n\n**Q. 36協定可以用電子申請申報嗎？**\nA. 可以申報。可以透過e-Gov等電子申請提出。請整理記載事項、有效期間、對象範圍後提出。從原案作成到申報，我們都可以承接。\n\n## 本文依據\n\n- 日本《勞動基準法》（労働基準法，昭和22年法律第49號）第32條、第36條第1項・第4項・第5項・第6項（第2號・第3號）、第119條\n- 日本《勞動基準法施行規則》（労働基準法施行規則，昭和22年厚生省令第23號）第6條之2（過半數代表者的要件）\n- 加班費加給率為法定外工時25%以上・休假日35%以上・深夜25%以上（勞動基準法第37條。金額・比率是依厚生勞動省公表資料的一般論）\n- 對建設業・汽車駕駛業務等的上限規制適用，自令和6年（2024年）4月1日起（依厚生勞動省・都道府縣勞動局公表資料確認）\n- 條文編號與上限時間，依厚生勞動省・都道府縣勞動局等公表資料確認（2026年8月時點）\n\n本文並未決定到「該向誰諮詢」為止。36協定的原案作成・申報、過半數代表者選出的協助、工作時間的記錄・管理整備、加班費的計算是社會保險勞務士的業務。未付加班費的請求、紛爭、勞動審判・訴訟的因應是律師的業務。加班費的源泉徵收・年終調整的處理是稅理士的業務。本事務所不收取介紹費。向四葉社会保険労務士事務所諮詢時的費用整理於[報酬額表](/zh-tw/labor/ryokin)，常被詢問的問題整理於[常見問答](/zh-tw/labor/faq)。\n\n本文為一般性的資訊提供。因應個別情事的判斷，由具備資格者在面談後進行。撰文者為[浦松丈二](/zh-tw/about/uramatsu)（社會保險勞務士・行政書士・宅地建物取引士）。",
+        "category": "該委託誰",
+        "keywords": [
+          "36協定 社會保險勞務士 該委託誰",
+          "36協定 延長工時 上限",
+          "36協定 申報 怎麼寫",
+          "特別條款 720小時",
+          "沒有36協定 罰則",
+          "加班 上限 45小時 360小時"
+        ],
+        "tags": [
+          "36協定",
+          "延長工時",
+          "加班",
+          "勞動基準法",
+          "勞務管理",
+          "社會保險勞務士"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "未申報36協定的公司，有多少？",
+            "answer": "無法提供正確比例，但經監督署指導而發現的案例並不少。未申報卻讓員工加班，不問人數都是違法。請先確認現狀，並就申報與今後的整備與我們討論。"
+          },
+          {
+            "question": "締結特別條款的話，隨時都可以加班到720小時嗎？",
+            "answer": "不行。特別條款僅限有臨時性特別情事時，除了1年720小時以內的上限，還有單月未滿100小時、複數月平均80小時以內、超過單月45小時以一年6次為限等制約。恆常性的長時間勞動無法以特別條款正當化。"
+          },
+          {
+            "question": "過半數代表者，任何人都能擔任嗎？",
+            "answer": "不是任何人都可以。有非管理監督者等一定要件（勞動基準法施行規則第6條之2）。選出方法錯誤可能使協定效力被爭執，因此留下選出手續的紀錄很重要。"
+          },
+          {
+            "question": "36協定可以用電子申請申報嗎？",
+            "answer": "可以申報。可以透過e-Gov等電子申請提出。請整理記載事項、有效期間、對象範圍後提出。從原案作成到申報，我們都可以承接。"
+          }
+        ]
+      },
+      "zh": {
+        "title": "加班的上限由36协定决定——可以委托社会保险劳务士到哪里？",
+        "excerpt": "加班的上限不能由公司擅自决定。要让员工延长工时或休假日劳动，必须缔结「36协定」并向所辖劳动基准监督署长申报，在范围内进行。上限原则上是1个月45小时・1年360小时；即使有特别条款，也是1年720小时以内、单月未满100小时、复数月平均80小时以内。未申报就让员工加班，会成为罚则（劳动基准法第119条）的对象。本文整理36协定的机制，以及可以委托社会保险劳务士到哪里。",
+        "content": "**结论（先讲重点）**：加班的上限不能由公司擅自决定。要让员工延长工时或休假日劳动，必须缔结「**36协定**」并向所辖劳动基准监督署长申报，在范围内进行。上限时间的原则是**1个月45小时・1年360小时**，即使是临时的特别条款，也是**1年720小时以内、单月未满100小时、复数月平均80小时以内**。未申报就让员工加班，会成为**罚则（劳动基准法第119条）**的对象。本文整理36协定的机制，以及可以委托社会保险劳务士到哪里。\n\n我们常被问到「加班最多几小时没问题？」答案不是「依公司规模或行业而异」，而是「由36协定的申报与其内容决定」。本页面是为有加班的中小企业经营者与总务人员而写，整理36协定的角色、上限时间、申报手续、以及该委托谁做什么。\n\n## 36协定是做什么用的？\n\n日本《劳动基准法》原则上规定，不得让员工工作超过**1天8小时・1周40小时**（劳动基准法第32条）。要让员工超过这个范围延长工时或休假日劳动，必须与代表劳动者过半数者缔结**书面协定**，并**向所辖劳动基准监督署长申报**。这个协定依条文编号被称为「36协定」（劳动基准法第36条第1项）。\n\n也就是说，36协定**不是公司可以加班的「免罪符」，而是让加班合法化的前提手续**。若未申报，让员工超过法定工时工作，不论人数或行业都是违法。不问人数都需要这点，请一并参阅[就业规则从几人开始成为义务](/zh/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo)。\n\n## 加班的上限，具体是几小时？\n\n延长工时的上限，分为原则与特别条款。\n\n| 区分 | 上限 | 依据 |\n|---|---|---|\n| **原则（上限时间）** | 1个月45小时・1年360小时 | 劳动基准法第36条第4项 |\n| **特别条款・年间** | 1年720小时以内 | 同条第5项 |\n| **特别条款・单月** | 单月未满100小时（含休假日劳动） | 同条第6项第2号 |\n| **特别条款・复数月平均** | 2〜6个月平均80小时以内（含休假日劳动） | 同条第6项第3号 |\n| **特别条款・次数** | 超过单月45小时以一年6次为限 | 特别条款的限度 |\n\n「特别条款」是有临时性特别情事时，由劳资合意订定的。即便如此，**1年720小时这个绝对上限**，以及**单月未满100小时・复数月平均80小时以内**这条线，都无法打破。不能因为有旺季就超过这个范围。\n\n此外，**建设业・汽车驾驶业务等**，以往上限规制的适用被缓期的业务，自令和6年（2024年）4月1日起也已适用上限规制。「我们行业特殊」并非排除理由。\n\n## 未申报就让员工加班，会怎样？\n\n未缔结・申报36协定却让员工延长工时或休假日劳动，会成为**6个月以下惩役或30万日元以下罚金**的对象（劳动基准法第119条）。「忘了申报」不能免责。\n\n同时，对延长工时・休假日劳动，有支付**加班费（割増賃金）**的义务。法定外工时加25%以上、休假日劳动加35%以上、深夜（晚上10点〜凌晨5点）加25%以上等加给率，若持续未支付，有被**追溯请求**的风险。上限的管理与加班费的支付，必须一并整备。\n\n## 与谁、如何缔结协定？\n\n36协定，若有**由劳动者过半数组织的工会**，则与该工会；若无，则与**劳动者过半数的代表者**以书面缔结。这个「过半数代表者」必须符合非管理监督者等一定要件（劳动基准法施行规则第6条之2）。选出方法错误，可能成为协定本身效力被争执的原因。\n\n协定必须定出**对象劳动者的范围、可延长的时间、有效期间**等，并向所辖劳动基准监督署长申报。也可以用电子申请（e-Gov等）申报。\n\n## 可以委托社会保险劳务士到哪里？\n\n| 要做的事 | 谁的业务 |\n|---|---|\n| 36协定的原案作成・申报代行、过半数代表者选出的协助、工作时间的记录・管理整备 | **社会保险劳务士**（本事务所） |\n| 与就业规则・工资规程的整合、加班费（割増賃金）的计算・薪资计算 | **社会保险劳务士**（本事务所） |\n| 未付加班费的请求、纷争、劳动审判・诉讼的应对 | **律师** |\n| 加班费的源泉征收・年终调整的处理 | **税理士** |\n\n36协定的作成・申报是社会保险劳务士的业务。本事务所负责到**设计符合实际的协定，以及之后的时间管理**。已经成为未付加班费请求或纷争的案件，属于律师的领域。\n\n## 四葉社会保険労務士事務所能做什么？\n\n位于文京区小日向的四葉社会保険労務士事務所，承接**36协定的原案作成・申报、过半数代表者选出的协助、工作时间的记录・管理整备**。也可以一并咨询与就业规则・工资规程的整合、加班费的计算。**咨询免费。** 36协定的作成・申报依内容与人数估价，费用的想法请参阅[报酬额表](/zh/labor/ryokin)。\n\n此外，若未付加班费的请求或纷争已经发生，会为您介绍直接委任律师。本事务所不收取介绍费。\n\n## 常见问题\n\n**Q. 未申报36协定的公司，有多少？**\nA. 无法提供正确比例，但经监督署指导而发现的案例并不少。未申报却让员工加班，不问人数都是违法。请先确认现状，并就申报与今后的整备与我们讨论。\n\n**Q. 缔结特别条款的话，随时都可以加班到720小时吗？**\nA. 不行。特别条款仅限有临时性特别情事时，除了1年720小时以内的上限，还有单月未满100小时、复数月平均80小时以内、超过单月45小时以一年6次为限等制约。恒常性的长时间劳动无法以特别条款正当化。\n\n**Q. 过半数代表者，任何人都能担任吗？**\nA. 不是任何人都可以。有非管理监督者等一定要件（劳动基准法施行规则第6条之2）。选出方法错误可能使协定效力被争执，因此留下选出手续的记录很重要。\n\n**Q. 36协定可以用电子申请申报吗？**\nA. 可以申报。可以透过e-Gov等电子申请提出。请整理记载事项、有效期间、对象范围后提出。从原案作成到申报，我们都可以承接。\n\n## 本文依据\n\n- 日本《劳动基准法》（労働基準法，昭和22年法律第49号）第32条、第36条第1项・第4项・第5项・第6项（第2号・第3号）、第119条\n- 日本《劳动基准法施行规则》（労働基準法施行規則，昭和22年厚生省令第23号）第6条之2（过半数代表者的要件）\n- 加班费加给率为法定外工时25%以上・休假日35%以上・深夜25%以上（劳动基准法第37条。金额・比率是依厚生劳动省公表资料的一般论）\n- 对建设业・汽车驾驶业务等的上限规制适用，自令和6年（2024年）4月1日起（依厚生劳动省・都道府县劳动局公表资料确认）\n- 条文编号与上限时间，依厚生劳动省・都道府县劳动局等公表资料确认（2026年8月时点）\n\n本文并未决定到「该向谁咨询」为止。36协定的原案作成・申报、过半数代表者选出的协助、工作时间的记录・管理整备、加班费的计算是社会保险劳务士的业务。未付加班费的请求、纷争、劳动审判・诉讼的应对是律师的业务。加班费的源泉征收・年终调整的处理是税理士的业务。本事务所不收取介绍费。向四葉社会保険労務士事務所咨询时的费用整理于[报酬额表](/zh/labor/ryokin)，常被询问的问题整理于[常见问答](/zh/labor/faq)。\n\n本文为一般性的信息提供。因应个别情事的判断，由具备资格者在面谈后进行。撰文者为[浦松丈二](/zh/about/uramatsu)（社会保险劳务士・行政书士・宅地建物取引士）。",
+        "category": "该委托谁",
+        "keywords": [
+          "36协定 社会保险劳务士 该委托谁",
+          "36协定 延长工时 上限",
+          "36协定 申报 怎么写",
+          "特别条款 720小时",
+          "没有36协定 罚则",
+          "加班 上限 45小时 360小时"
+        ],
+        "tags": [
+          "36协定",
+          "延长工时",
+          "加班",
+          "劳动基准法",
+          "劳务管理",
+          "社会保险劳务士"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "未申报36协定的公司，有多少？",
+            "answer": "无法提供正确比例，但经监督署指导而发现的案例并不少。未申报却让员工加班，不问人数都是违法。请先确认现状，并就申报与今后的整备与我们讨论。"
+          },
+          {
+            "question": "缔结特别条款的话，随时都可以加班到720小时吗？",
+            "answer": "不行。特别条款仅限有临时性特别情事时，除了1年720小时以内的上限，还有单月未满100小时、复数月平均80小时以内、超过单月45小时以一年6次为限等制约。恒常性的长时间劳动无法以特别条款正当化。"
+          },
+          {
+            "question": "过半数代表者，任何人都能担任吗？",
+            "answer": "不是任何人都可以。有非管理监督者等一定要件（劳动基准法施行规则第6条之2）。选出方法错误可能使协定效力被争执，因此留下选出手续的记录很重要。"
+          },
+          {
+            "question": "36协定可以用电子申请申报吗？",
+            "answer": "可以申报。可以透过e-Gov等电子申请提出。请整理记载事项、有效期间、对象范围后提出。从原案作成到申报，我们都可以承接。"
+          }
+        ]
+      }
+    }
   }
 ];
