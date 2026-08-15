@@ -51,6 +51,29 @@ const nextConfig: NextConfig = {
         destination: "/:locale/shataku",
         statusCode: 301,
       },
+      // GSC 404対策（2026-08-15）: 台湾シリーズのコラム9本は zh-tw 版のみ実在する
+      // （src/lib/data/taiwan-columns-seed.ts）。Googleが保持する ja素パス・en・zh の
+      // ロケール違いURLを、実在する zh-tw の同一記事へ恒久移転してリンク評価を温存する。
+      // ※スラッグは完全一致の列挙。ja に実在する /column/taiwan-inkan-shomei-isan-bunkatsu
+      //   等には一致しない。将来 ja/en/zh 版を公開する場合は該当スラッグをここから外すこと。
+      {
+        source:
+          "/column/:slug(taiwan|taiwan-souzoku-japan-fudosan|taiwan-souzoku-baikyaku|taiwan-souzoku-kanri-katsuyo|taiwan-jin-souzoku-tetsuzuki|taiwan-souzoku-guide|taiwan-tokyo-fudosan-toshi|bunkyo-shueki-bukken|taiwan-tetsuzuki-onestop)",
+        destination: "/zh-tw/column/:slug",
+        statusCode: 301,
+      },
+      {
+        source:
+          "/:locale(en|zh)/column/:slug(taiwan|taiwan-souzoku-japan-fudosan|taiwan-souzoku-baikyaku|taiwan-souzoku-kanri-katsuyo|taiwan-jin-souzoku-tetsuzuki|taiwan-souzoku-guide|taiwan-tokyo-fudosan-toshi|bunkyo-shueki-bukken|taiwan-tetsuzuki-onestop)",
+        destination: "/zh-tw/column/:slug",
+        statusCode: 301,
+      },
+      // ゴミURL「/&」（GSCが2026/05に検出）。samurai-app と同じ作法でトップへ逃がす。
+      {
+        source: "/&",
+        destination: "/",
+        statusCode: 301,
+      },
     ];
   },
 };
