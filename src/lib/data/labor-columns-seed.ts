@@ -7111,5 +7111,188 @@ export const LABOR_COLUMNS_SEED: LaborSeedColumn[] = [
         ]
       }
     }
+  },
+  {
+    "business": "labor",
+    "slug": "kaiko-sharoushi-bengoshi-dochira",
+    "title": "社員を辞めてもらうとき、社労士と弁護士のどちらに頼むのか",
+    "date": "2026-09-01",
+    "category": "誰に頼むか",
+    "excerpt": "当事務所は「よほどのことがない限り、解雇はおすすめしません」とお伝えしています。それでもやむを得ず解雇を選ぶ場面はあり、一般論では片付かないケースが現場では起きます。解雇の判断の枠組み、残る手続、そして「どこまで社労士・どこから弁護士」かを整理します。",
+    "content": "**結論（先に要点）**：当事務所は、ご相談者に「**よほどのことがない限り、解雇はおすすめしません**」とお伝えしています。解雇は、あとから「客観的に合理的な理由」と「社会通念上の相当性」を争われやすい選択だからです。それでも、**やむを得ず解雇を選ばざるを得ない場合**はあります。一般論では片付けられないケースが、現場では実際に起きるからです。この記事は、解雇を考える前と決めたあとに押さえること、そして「どこまで社労士、どこから弁護士」かを整理します。個別の「この解雇は有効か」の判断は、この記事の範囲外です。\n\n「社員を辞めてもらいたい」というご相談は、たいてい一つの答えに落ちません。退職勧奨と解雇の違い、解雇の種類、手続の期限、そして法的なリスク——切り分けるべき論点が複数あります。このページは、解雇を検討している中小企業の経営者・総務担当の方に向けて、判断の枠組みと残る手続、誰に何を頼むかを整理します。\n\n## なぜ「解雇はおすすめしない」のか？\n\n解雇は、その理由の客観性と相当性が**あとから振り返って争われる**選択です。労働契約法第16条は「解雇は、客観的に合理的な理由を欠き、社会通念上相当であると認められない場合は、その権利を濫用したものとして、無効とする」と定めています。\n\n解雇が無効と判断されると、雇用関係は続いていたことになります。すると、その間の賃金を遡って支払うなど、会社側の負担は思いのほか大きくなります。「とりあえず辞めてもらえば終わり」ではなく、**一度無効になると取り返しがつきにくい**。だから当事務所は「よほどのことがない限り、解雇はおすすめしません」と申し上げているのです。\n\n## それでも解雇を選ぶとき、何が分かれ目になるのか？\n\nまず、解雇には種類があります。\n\n| 類型 | どんな解雇か | 押さえる枠組み |\n|---|---|---|\n| **普通解雇** | 懲戒ではなく、契約を終了させる通常の解雇 | 客観的に合理的な理由＋社会通念上相当（労働契約法第16条） |\n| **整理解雇** | 経営上の理由による人員整理 | 人員整理の必要性、解雇回避努力、人選の合理性、手続の相当性（裁判例で重視される一般論） |\n| **懲戒解雇** | 就業規則の懲戒事由に基づく解雇 | 懲戒事由への該当性と相当性。予告手当の免除には「解雇予告除外認定」が必要（労働基準法第20条第3項） |\n\n共通するのは、いずれも**「客観的に合理的な理由」と「社会通念上の相当性」**が問われる点です。ここまでが、解雇を考えるときに押さえておくべき**判断の枠組み**です。個別の事案への当てはめ（このケースが有効か無効か）は、資格者・弁護士が行うべき領域です。\n\n## 「一般論では片付かない」とは、どんなケースか？\n\n現場では、教科書的な整理だけでは収まらないケースが起きます。代表的な論点を挙げます。\n\n- **能力不足・勤務態度**——「使えない」というだけでは客観的合理性が足りないとされることがあります。指導や改善の機会を与えたか、評価や記録が裏付けになるかが論点になります。\n- **私傷病・休職の長期化**——復職の見込み、休職期間満了の扱い、療養中の解雇制限（労働基準法第19条）との関係など、複数の論点が重なります。\n- **有期契約・試用期間**——期間途中の解雇は「やむを得ない事由」が要件です（労働契約法第17条）。試用期間中も、留保解約権の行使として一定の広い判断の余地はありますが、無限定ではありません。\n- **高齢者・育児や介護と重なる場面**——解雇制限や不利益取扱いの観点が加わり、単純な「人員整理」では済まないことがあります。\n\nこのように、「一般的には○」「一般論では△」だけでは整理しきれないケースが実際にあります。だからこそ、**事実を丁寧に並べ、論点を分け、必要なら弁護士の判断に載せる**工程が要ります。\n\n## 解雇を決めたら、どんな手続きが残るのか？\n\n解雇が有効かどうかとは別に、**手続き**が残ります。ここは逃げられません。\n\n| 手続 | 内容 | 根拠・期限 |\n|---|---|---|\n| **解雇予告** | 30日前までに予告。予告しない場合は30日分以上の平均賃金（解雇予告手当） | 労働基準法第20条 |\n| **解雇制限の確認** | 業務上災害の療養休業中＋その後30日、産前産後休業中＋その後30日は解雇不可 | 労働基準法第19条 |\n| **退職証明書** | 労働者が請求した場合、遅滞なく交付（解雇の場合の理由を含む） | 労働基準法第22条 |\n| **賃金の清算** | 未払い賃金等は請求から7日以内に支払い | 労働基準法第23条 |\n| **雇用保険の資格喪失届** | 離職日の翌日から10日以内にハローワークへ | 雇用保険法 |\n| **健康保険・厚生年金の資格喪失届** | 事実があった日から5日以内 | 健康保険法・厚生年金保険法 |\n\n懲戒解雇で解雇予告手当の支払いを省くには、労働基準監督署長の**「解雇予告除外認定」**を受ける必要があります（労働基準法第20条第3項）。認定がなければ、予告又は手当が必要です。\n\n## 誰に、何を頼むのか？\n\n| すること | 誰の業務か |\n|---|---|\n| 解雇の進め方の棚卸し、事実・経緯の整理、解雇予告・退職証明書・離職票・社会保険資格喪失等の手続 | **社会保険労務士**（当事務所） |\n| 就業規則の懲戒事由・服務規律の整備 | **社会保険労務士**（当事務所） |\n| 「この解雇が有効か」の法的判断、交渉、労働審判・訴訟への対応 | **弁護士** |\n| 退職金・源泉徴収票の税務の扱い | **税理士** |\n\n解雇の「当てはめ」は弁護士の業務です。当事務所は、**事実と論点を整理し、手続を整えるところまで**を担い、有効性の判断が必要な場面では弁護士へ直接ご依頼いただく形をご案内します。懲戒解雇の前提となる就業規則の整備は、[就業規則は何人から義務か](/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo)もあわせてご覧ください。\n\n## 四葉社会保険労務士事務所は、何ができますか？\n\n文京区小日向の四葉社会保険労務士事務所は、解雇を**「検討している段階」**からご一緒します。「辞めてもらう」以外に取り得る選択肢（配置転換、雇用形態の見直し、退職勧奨・合意退職の整理）も含めて棚卸しをし、そのうえで解雇に進む場合の手続き——解雇予告、退職証明書、離職票、社会保険の資格喪失、就業規則との整合——をお受けします。**ご相談は無料です。** 料金は[報酬額表](/labor/ryokin)に掲載しています。\n\nなお、「この解雇が有効か」の法的判断は行いません。その判断が必要な場面では、弁護士へ直接ご依頼いただく形をご案内します。当事務所は紹介料を受け取りません。\n\n## よくある質問\n\n**Q. 解雇を考えています。まずどこに相談すればよいですか？**\nA. まずは社会保険労務士に「何が問題で、何を実現したいか」を整理していただくのが現実的です。解雇以外の選択肢も含めて棚卸しをし、リスクが高い場合は弁護士へ直接ご依頼いただく形をご案内します。解雇の有効性そのものの判断は弁護士の業務です。\n\n**Q. 「30日前に予告すれば解雇できる」のですか？**\nA. いいえ。解雇予告（労働基準法第20条）は手続上の要件で、解雇の有効性（労働契約法第16条）とは別の話です。予告を守っていても、客観的に合理的な理由や社会通念上の相当性がなければ、解雇は無効になり得ます。\n\n**Q. 懲戒解雇なら解雇予告手当は不要ですか？**\nA. 必ずしも不要ではありません。予告手当の支払いを省くには、労働基準監督署長の「解雇予告除外認定」（労働基準法第20条第3項）を受ける必要があります。認定がなければ、予告又は手当が必要です。\n\n**Q. 試用期間中なら解雇しやすいですか？**\nA. 試用期間中の解雇は、留保解約権の行使として一定の広い判断の余地が認められることがありますが、無限定ではありません。個別の当てはめは弁護士の判断になります。\n\n## この記事の根拠\n\n- 労働契約法（平成19年法律第128号）第16条、第17条\n- 労働基準法（昭和22年法律第49号）第19条、第20条第1項・第3項、第22条、第23条\n- 雇用保険法に基づく資格喪失届（離職日の翌日から10日以内）、健康保険法・厚生年金保険法に基づく資格喪失届（事実があった日から5日以内）\n- 整理解雇の考慮要素は、法文ではなく裁判例で示される一般的な整理です（特定の事件名の引用は控えます）\n- 条文は厚生労働省・都道府県労働局の公表資料により確認しています（2026年8月15日時点）\n\nこの記事は、誰に相談するか・どう判断するかまでは決めていません。解雇をめぐる事実整理・手続（解雇予告、退職証明書、離職票、社会保険資格喪失）・就業規則の整備は社会保険労務士の業務です。「この解雇が有効か」の法的判断、交渉、労働審判・訴訟への対応は弁護士の業務です。退職金・源泉徴収の税務は税理士の業務です。当事務所は紹介料を受け取りません。四葉社会保険労務士事務所にご相談いただく場合の費用は[報酬額表](/labor/ryokin)に、よくいただくご質問は[よくあるご質問](/labor/faq)にまとめています。\n\n本記事は一般的な情報提供です。個別のご事情に応じた判断は、面談のうえ資格者が行います。執筆は[浦松丈二](/about/uramatsu)（社会保険労務士・行政書士・宅地建物取引士）です。",
+    "status": "published",
+    "author": {
+      "name": "浦松 丈二",
+      "title": "社会保険労務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+    },
+    "keywords": [
+      "解雇 社労士 弁護士 どちら",
+      "解雇 手続 解雇予告",
+      "解雇 有効性 労働契約法16条",
+      "懲戒解雇 解雇予告手当",
+      "退職証明書 離職票",
+      "解雇 相談 社会保険労務士"
+    ],
+    "tags": [
+      "解雇",
+      "退職",
+      "懲戒解雇",
+      "就業規則",
+      "労務管理",
+      "社会保険労務士"
+    ],
+    "locales": [],
+    "faq": [
+      {
+        "question": "解雇を考えています。まずどこに相談すればよいですか？",
+        "answer": "まずは社会保険労務士に「何が問題で、何を実現したいか」を整理していただくのが現実的です。解雇以外の選択肢も含めて棚卸しをし、リスクが高い場合は弁護士へ直接ご依頼いただく形をご案内します。解雇の有効性そのものの判断は弁護士の業務です。"
+      },
+      {
+        "question": "「30日前に予告すれば解雇できる」のですか？",
+        "answer": "いいえ。解雇予告（労働基準法第20条）は手続上の要件で、解雇の有効性（労働契約法第16条）とは別の話です。予告を守っていても、客観的に合理的な理由や社会通念上の相当性がなければ、解雇は無効になり得ます。"
+      },
+      {
+        "question": "懲戒解雇なら解雇予告手当は不要ですか？",
+        "answer": "必ずしも不要ではありません。予告手当の支払いを省くには、労働基準監督署長の「解雇予告除外認定」（労働基準法第20条第3項）を受ける必要があります。認定がなければ、予告又は手当が必要です。"
+      },
+      {
+        "question": "試用期間中なら解雇しやすいですか？",
+        "answer": "試用期間中の解雇は、留保解約権の行使として一定の広い判断の余地が認められることがありますが、無限定ではありません。個別の当てはめは弁護士の判断になります。"
+      }
+    ],
+    "translations": {
+      "en": {
+        "title": "When you have to part ways with an employee, do you ask a shakai hoken roumushi or an attorney?",
+        "excerpt": "We tell our clients: \"Unless there is a very good reason, we do not recommend dismissal.\" Still, there are cases where dismissal becomes unavoidable, and cases that general principles alone cannot settle do happen in practice. This page explains the framework for judging dismissal, the procedures that remain afterwards, and where a shakai hoken roumushi's work ends and an attorney's begins.",
+        "content": "**In short:** This office tells people who consult us: \"**Unless there is a very good reason, we do not recommend dismissal.**\" Dismissal is a choice whose \"objectively reasonable grounds\" and \"social acceptability\" are easily contested after the fact. Even so, there are cases where **you have no choice but to dismiss**, because cases that general principles alone cannot settle do happen in practice. This page explains what to keep in mind before and after deciding to dismiss, and where a shakai hoken roumushi's work ends and an attorney's begins. Judging whether a particular dismissal is valid is outside the scope of this article.\n\nA request to \"get rid of an employee\" rarely comes down to a single answer. There are several points that have to be separated: the difference between encouraging voluntary resignation and dismissal, the types of dismissal, the deadlines for the procedures, and the legal risk. This page is for the owners and general-affairs staff of small and medium-sized companies considering dismissal. We set out the framework for judging, the procedures that remain, and whom to ask for what.\n\n## Why do we not recommend dismissal?\n\nDismissal is a choice whose reasonableness and proportionality are **contested after the fact, looking back**. Article 16 of the Labor Contract Act provides: \"A dismissal shall, if it lacks objectively reasonable grounds and is not considered to be appropriate in general societal terms, be treated as an abuse of right and be invalid.\"\n\nIf a dismissal is found invalid, the employment relationship is treated as having continued. The company then has to pay the wages for that period retroactively, and the burden can be larger than expected. \"Just getting them to leave\" is not the end of it — **once a dismissal is invalid, it is hard to undo**. That is why this office says: \"Unless there is a very good reason, we do not recommend dismissal.\"\n\n## If you still choose to dismiss, what becomes the deciding point?\n\nFirst, there are different types of dismissal.\n\n| Type | What kind of dismissal | Framework to keep in mind |\n|---|---|---|\n| **Ordinary dismissal** | A normal dismissal that ends the contract, not a disciplinary one | Objectively reasonable grounds + appropriate in general societal terms (Labor Contract Act, Article 16) |\n| **Dismissal for economic reasons** | A reduction in workforce for business reasons | The necessity of the reduction, efforts to avoid dismissal, the reasonableness of the selection, and the fairness of the procedure (general principles emphasized in case law) |\n| **Disciplinary dismissal** | Dismissal based on disciplinary grounds in the work rules | Whether the conduct falls under the disciplinary grounds and whether it is proportionate. Exemption from the notice allowance requires an \"authorization to dispense with advance notice\" (Labor Standards Act, Article 20, paragraph 3) |\n\nWhat they have in common is that each is judged by **\"objectively reasonable grounds\" and \"appropriateness in general societal terms.\"** That is the framework to keep in mind when considering dismissal. Applying it to a particular case (whether this case is valid or invalid) is a matter for a qualified professional or an attorney.\n\n## What does \"cannot be settled by general principles\" mean?\n\nIn practice, there are cases that a textbook framework alone cannot settle. Here are the representative points.\n\n- **Lack of ability, or poor attitude** — saying \"they are useless\" alone is often not enough for objective reasonableness. Whether you gave guidance and a chance to improve, and whether evaluations and records back it up, become the points at issue.\n- **Personal illness or injury, and long-term leave** — the prospects for returning to work, how to treat the expiry of the leave period, and the relationship with the restrictions on dismissal during medical treatment (Labor Standards Act, Article 19) all overlap.\n- **Fixed-term contracts and probationary periods** — dismissal before the term ends requires \"unavoidable grounds\" (Labor Contract Act, Article 17). During a probationary period, there is some room for broader judgment as the exercise of a reserved right to terminate, but it is not without limit.\n- **Where an older worker, or child care or family care, overlaps** — the restrictions on dismissal and the angle of detrimental treatment come in, and a simple \"reduction in workforce\" may not settle the matter.\n\nIn this way, there really are cases that \"generally speaking X\" or \"as a general principle Y\" cannot settle. That is why you need a process of **laying out the facts carefully, separating the points at issue, and, where necessary, putting it before an attorney for a decision**.\n\n## Once you have decided to dismiss, what procedures remain?\n\nSeparate from whether the dismissal is valid, **the procedures remain**. These cannot be avoided.\n\n| Procedure | What it involves | Basis / deadline |\n|---|---|---|\n| **Advance notice of dismissal** | Give notice at least 30 days in advance. If notice is not given, pay at least 30 days' worth of average wages (the dismissal notice allowance) | Labor Standards Act, Article 20 |\n| **Checking the restrictions on dismissal** | Dismissal is prohibited during leave for medical treatment for a work-related injury or illness and for 30 days after, and during pre- and post-natal leave and for 30 days after | Labor Standards Act, Article 19 |\n| **Certificate of employment** | If the worker requests one, deliver it without delay (including the reason, in the case of dismissal) | Labor Standards Act, Article 22 |\n| **Settlement of wages** | Unpaid wages and the like must be paid within 7 days of a request | Labor Standards Act, Article 23 |\n| **Report of loss of employment insurance status** | Report to Hello Work within 10 days of the day after separation | Employment Insurance Act |\n| **Report of loss of health insurance / employees' pension status** | Report within 5 days of the event | Health Insurance Act / Employees' Pension Insurance Act |\n\nTo omit the dismissal notice allowance in a disciplinary dismissal, you need an \"**authorization to dispense with advance notice**\" from the head of the Labor Standards Inspection Office (Labor Standards Act, Article 20, paragraph 3). Without that authorization, advance notice or the allowance is required.\n\n## Whom should you ask, for what?\n\n| What you want done | Whose work it is |\n|---|---|\n| Taking stock of how to proceed with the dismissal, organizing the facts and history, and the procedures such as advance notice, the certificate of employment, the certificate of separation, and the report of loss of social insurance status | **A Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant)** (this office) |\n| Drawing up the disciplinary grounds and service rules in the work rules | **A Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant)** (this office) |\n| Judging whether \"this dismissal is valid\", negotiating, and handling labor tribunal proceedings or litigation | **An attorney** |\n| The tax treatment of retirement allowances and the withholding certificate | **A tax accountant** |\n\nApplying the law to decide whether a dismissal is valid is an attorney's work. This office takes care of **organizing the facts and the points at issue and putting the procedures in order**, and where a judgment on validity is needed, we will guide you to engage an attorney directly. For the work rules that are the premise of a disciplinary dismissal, see [How many employees make work rules mandatory](/en/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo).\n\n## What can 四葉社会保険労務士事務所 do for you?\n\n四葉社会保険労務士事務所 in Kohinata, Bunkyo Ward, works with you from **the stage where you are considering** dismissal. We take stock of the alternatives to \"getting them to leave\" (transfer, changing the form of employment, and organizing voluntary resignation or a mutual agreement to leave), and then, if you proceed to dismissal, we handle the procedures — advance notice, the certificate of employment, the certificate of separation, the loss of social insurance status, and consistency with the work rules. **The initial consultation is free.** Fees are set out in the [fee schedule](/en/labor/ryokin).\n\nPlease note that we do not judge whether \"this dismissal is valid.\" Where such a judgment is needed, we will guide you to engage an attorney directly. This office does not accept referral fees.\n\n## Frequently asked questions\n\n**Q. We are considering dismissal. Where should we consult first?**\nA. The realistic first step is to have a shakai hoken roumushi help you organize \"what the problem is and what you want to achieve.\" We take stock of the alternatives to dismissal as well, and where the risk is high, we will guide you to engage an attorney directly. Judging the validity of the dismissal itself is an attorney's work.\n\n**Q. Is it true that \"if I give 30 days' notice, I can dismiss\"?**\nA. No. Advance notice of dismissal (Labor Standards Act, Article 20) is a procedural requirement, and is separate from the validity of the dismissal (Labor Contract Act, Article 16). Even if notice is given, the dismissal can still be invalid if it lacks objectively reasonable grounds or appropriateness in general societal terms.\n\n**Q. In a disciplinary dismissal, is the dismissal notice allowance not required?**\nA. It is not necessarily waived. To omit the notice allowance, you need an \"authorization to dispense with advance notice\" from the head of the Labor Standards Inspection Office (Labor Standards Act, Article 20, paragraph 3). Without that authorization, advance notice or the allowance is required.\n\n**Q. Is it easier to dismiss someone during a probationary period?**\nA. Dismissal during a probationary period can be given some room for broader judgment as the exercise of a reserved right to terminate, but it is not without limit. Applying it to a particular case is an attorney's judgment.\n\n## Sources for this article\n\n- Labor Contract Act (労働契約法, Act No. 128 of 2007), Article 16 and Article 17\n- Labor Standards Act (労働基準法, Act No. 49 of 1947), Article 19, Article 20, paragraph 1 and paragraph 3, Article 22, and Article 23\n- The report of loss of employment insurance status (within 10 days of the day after separation) under the Employment Insurance Act, and the report of loss of health insurance / employees' pension insurance status (within 5 days of the event) under the Health Insurance Act and the Employees' Pension Insurance Act\n- The factors considered in a dismissal for economic reasons are a general organization shown in case law, not a statutory provision (we refrain from citing a specific case name)\n- The provisions have been checked against materials published by the Ministry of Health, Labour and Welfare and prefectural labour bureaus (as of 15 August 2026)\n\nThis article does not go so far as to decide whom you should consult or how you should decide. Organizing the facts around a dismissal and the procedures (advance notice, the certificate of employment, the certificate of separation, and the report of loss of social insurance status) and drawing up the work rules are the work of a Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant). Judging whether \"this dismissal is valid\", negotiating, and handling labor tribunal proceedings or litigation are the work of an attorney. The tax treatment of a retirement allowance and withholding is the work of a tax accountant. This office does not accept referral fees. The cost of consulting 四葉社会保険労務士事務所 is set out in the [fee schedule](/en/labor/ryokin), and the questions we are asked most often are collected on the [FAQ page](/en/labor/faq).\n\nThis article is general information. Judgments that fit your particular circumstances are made by a qualified professional after a meeting. Written by [Joji Uramatsu](/en/about/uramatsu) (Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist).",
+        "category": "Who to ask",
+        "keywords": [
+          "dismissal shakai hoken roumushi attorney",
+          "dismissal procedure advance notice",
+          "dismissal validity Labor Contract Act Article 16",
+          "disciplinary dismissal payment in lieu of notice",
+          "certificate of employment separation notice",
+          "dismissal consultation social insurance labor consultant"
+        ],
+        "tags": [
+          "dismissal",
+          "retirement",
+          "disciplinary dismissal",
+          "work rules",
+          "labour management",
+          "Shakai Hoken Roumushi"
+        ],
+        "author": {
+          "name": "Joji Uramatsu",
+          "title": "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所"
+        },
+        "faq": [
+          {
+            "question": "We are considering dismissal. Where should we consult first?",
+            "answer": "The realistic first step is to have a shakai hoken roumushi help you organize \"what the problem is and what you want to achieve.\" We take stock of the alternatives to dismissal as well, and where the risk is high, we will guide you to engage an attorney directly. Judging the validity of the dismissal itself is an attorney's work."
+          },
+          {
+            "question": "Is it true that \"if I give 30 days' notice, I can dismiss\"?",
+            "answer": "No. Advance notice of dismissal (Labor Standards Act, Article 20) is a procedural requirement, and is separate from the validity of the dismissal (Labor Contract Act, Article 16). Even if notice is given, the dismissal can still be invalid if it lacks objectively reasonable grounds or appropriateness in general societal terms."
+          },
+          {
+            "question": "In a disciplinary dismissal, is the dismissal notice allowance not required?",
+            "answer": "It is not necessarily waived. To omit the notice allowance, you need an \"authorization to dispense with advance notice\" from the head of the Labor Standards Inspection Office (Labor Standards Act, Article 20, paragraph 3). Without that authorization, advance notice or the allowance is required."
+          },
+          {
+            "question": "Is it easier to dismiss someone during a probationary period?",
+            "answer": "Dismissal during a probationary period can be given some room for broader judgment as the exercise of a reserved right to terminate, but it is not without limit. Applying it to a particular case is an attorney's judgment."
+          }
+        ]
+      },
+      "zh-tw": {
+        "title": "要讓員工離職時，該委託社會保險勞務士還是律師？",
+        "excerpt": "本事務所會告訴諮詢者：「除非有非常充分的理由，否則不建議解僱。」因為解僱容易在事後就「客觀合理的理由」與「社會通念上的相當性」受到爭執。即便如此，仍有不得不選擇解僱的情形，現場也會發生一般論無法處理的案例。本文整理解僱的判斷框架、之後殘留的手續，以及「到哪裡為止是社會保險勞務士、從哪裡開始是律師」。",
+        "content": "**結論（先講重點）**：本事務所會告訴諮詢者：「**除非有非常充分的理由，否則不建議解僱。**」解僱是容易在事後就「客觀合理的理由」與「社會通念上的相當性」受到爭執的選擇。即便如此，**仍有不得不選擇解僱的情形**。因為現場會發生一般論無法處理的案例。本文整理在解僱之前與決定之後該掌握的事項，以及「到哪裡為止是社會保險勞務士、從哪裡開始是律師」。個別的「這個解僱是否有效」之判斷，不在本文範圍內。\n\n「想讓員工離職」這類諮詢，大多不會只落在一個答案上。勸退與解僱的差異、解僱的種類、手續的期限、以及法律風險——必須切分的論點有好幾個。本頁面是為正在檢討解僱的中小企業經營者與總務人員而寫，整理判斷的框架、殘留的手續、以及該委託誰做什麼。\n\n## 為什麼「不建議解僱」？\n\n解僱是容易在**事後回頭**就其理由的客觀性與相當性受到爭執的選擇。日本《勞動契約法》（労働契約法，平成19年法律第128號）第16條規定：「解僱若欠缺客觀合理的理由，且不認為在社會通念上相當者，視為權利濫用而無效。」\n\n一旦解僱被判定無效，僱用關係就等於繼續存在。於是，公司必須追溯支付那段期間的工資，負擔可能超乎想像。「先讓他離職就好」並非結束，**一旦無效就很難挽回**。正因如此，本事務所才會說「除非有非常充分的理由，否則不建議解僱」。\n\n## 即便如此仍選擇解僱時，分界點是什麼？\n\n首先，解僱有種類之分。\n\n| 類型 | 什麼樣的解僱 | 應掌握的框架 |\n|---|---|---|\n| **普通解僱** | 非懲戒，而是終止契約的一般解僱 | 客觀合理的理由＋社會通念上相當（勞動契約法第16條） |\n| **整理解僱** | 因經營上的理由進行人員整頓 | 人員整頓的必要性、避免解僱的努力、人選的合理性、程序的相當性（裁判例所重視的一般論） |\n| **懲戒解僱** | 依就業規則的懲戒事由所為的解僱 | 是否該當懲戒事由與其相當性。免除預告工資需「解僱預告除外認定」（勞動基準法第20條第3項） |\n\n共通的是，任何一種都會被問到**「客觀合理的理由」與「社會通念上的相當性」**。到這裡為止，是檢討解僱時應掌握的**判斷框架**。將框架套用到個別案件（這個案例有效或無效），是具備資格者與律師應進行的領域。\n\n## 「一般論無法處理」是指什麼案例？\n\n現場會發生教科書式的整理無法收斂的案例。以下列舉代表性的論點。\n\n- **能力不足・工作態度**——單憑「不能用」往往欠缺客觀合理性。是否給予指導與改善機會、評價與紀錄能否成為佐證，會成為論點。\n- **私傷病・休職長期化**——復職的可能性、休職期間屆滿的處理、與療養中禁止解僱（勞動基準法第19條）的關係等，多個論點重疊。\n- **有期契約・試用期間**——期間中途的解僱以「不得不解僱之事由」為要件（勞動契約法第17條）。試用期間中，作為保留解約權的行使雖有一定較廣的判斷餘地，但並非毫無限制。\n- **與高齡者、育兒或照護重疊的場面**——禁止解僱與不利益對待的觀點加入，單純的「人員整頓」可能無法解決。\n\n像這樣，確實存在「一般來說○」「一般論上△」無法整理完的案例。正因如此，才需要**仔細排列事實、切分論點、必要時交由律師判斷**的工程。\n\n## 決定解僱後，還會殘留哪些手續？\n\n與解僱是否有效無關，**手續**仍會殘留。這部分無法迴避。\n\n| 手續 | 內容 | 依據・期限 |\n|---|---|---|\n| **解僱預告** | 應於30日前預告。未預告者，須支付30日分以上的平均工資（解僱預告工資） | 勞動基準法第20條 |\n| **確認禁止解僱** | 因業務災害療養休業期間＋其後30日、產前產後休業期間＋其後30日，不得解僱 | 勞動基準法第19條 |\n| **退職證明書** | 勞工請求時，應儘速交付（解僱時包含其理由） | 勞動基準法第22條 |\n| **工資清算** | 未付工資等應於請求後7日內支付 | 勞動基準法第23條 |\n| **僱用保險的資格喪失申報** | 離職日翌日起10日內向Hello Work申報 | 僱用保險法 |\n| **健保・厚生年金的資格喪失申報** | 事實發生之日起5日內 | 健康保險法・厚生年金保險法 |\n\n懲戒解僱若要免除解僱預告工資，需取得勞動基準監督署長的**「解僱預告除外認定」**（勞動基準法第20條第3項）。未取得認定時，仍須預告或支付預告工資。\n\n## 該委託誰、委託什麼？\n\n| 要做的事 | 誰的業務 |\n|---|---|\n| 解僱進行方式的盤點、事實與經過的整理、解僱預告・退職證明書・離職票・社會保險資格喪失等手續 | **社會保險勞務士**（本事務所） |\n| 就業規則的懲戒事由・服務紀律的整備 | **社會保險勞務士**（本事務所） |\n| 「這個解僱是否有效」的法律判斷、交涉、勞動審判・訴訟的因應 | **律師** |\n| 退職金・源泉徵收票的稅務處理 | **稅理士** |\n\n解僱的「適用」是律師的業務。本事務所負責到**整理事實與論點、整備手續**為止，需要有效性判斷的場面，會為您介紹直接委任律師。懲戒解僱前提的就業規則整備，請一併參閱[就業規則從幾人開始成為義務](/zh-tw/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo)。\n\n## 四葉社会保険労務士事務所能做什麼？\n\n位於文京區小日向的四葉社会保険労務士事務所，會從**「正在檢討」解僱的階段**開始陪伴您。包括「讓對方離職」以外的選項（調動、僱用形態的調整、勸退・合意退職的整理）一併盤點，之後若進入解僱，則承接手續——解僱預告、退職證明書、離職票、社會保險資格喪失、與就業規則的整合。**諮詢免費。** 費用刊登於[報酬額表](/zh-tw/labor/ryokin)。\n\n此外，本事務所不判斷「這個解僱是否有效」。需要此判斷的場面，會為您介紹直接委任律師。本事務所不收取介紹費。\n\n## 常見問題\n\n**Q. 正在檢討解僱。首先該向哪裡諮詢？**\nA. 現實的做法是，先請社會保險勞務士為您整理「問題是什麼、想達成什麼」。包括解僱以外的選項一併盤點，風險較高時，會為您介紹直接委任律師。解僱有效性本身的判斷是律師的業務。\n\n**Q. 「只要30日前預告就可以解僱」是真的嗎？**\nA. 不是。解僱預告（勞動基準法第20條）是手續上的要件，與解僱的有效性（勞動契約法第16條）是兩回事。即使遵守預告，若欠缺客觀合理的理由或社會通念上的相當性，解僱仍可能無效。\n\n**Q. 懲戒解僱的話，解僱預告工資就不需要嗎？**\nA. 未必不需要。要免除預告工資，需取得勞動基準監督署長的「解僱預告除外認定」（勞動基準法第20條第3項）。未取得認定時，仍須預告或支付預告工資。\n\n**Q. 試用期間中比較容易解僱嗎？**\nA. 試用期間中的解僱，作為保留解約權的行使，有一定較廣的判斷餘地，但並非毫無限制。個別的適用是律師的判斷。\n\n## 本文依據\n\n- 日本《勞動契約法》（労働契約法，平成19年法律第128號）第16條、第17條\n- 日本《勞動基準法》（労働基準法，昭和22年法律第49號）第19條、第20條第1項・第3項、第22條、第23條\n- 依僱用保險法的資格喪失申報（離職日翌日起10日內）、依健康保險法・厚生年金保險法的資格喪失申報（事實發生之日起5日內）\n- 整理解僱的考慮要素是裁判例所示的一般性整理，而非法律條文（不引用特定事件名）\n- 條文已依厚生勞動省・都道府縣勞動局的公表資料確認（2026年8月15日時點）\n\n本文並未決定到「該向誰諮詢、該如何判斷」為止。解僱相關的事實整理・手續（解僱預告、退職證明書、離職票、社會保險資格喪失）・就業規則的整備是社會保險勞務士的業務。「這個解僱是否有效」的法律判斷、交涉、勞動審判・訴訟的因應是律師的業務。退職金・源泉徵收的稅務是稅理士的業務。本事務所不收取介紹費。向四葉社会保険労務士事務所諮詢時的費用整理於[報酬額表](/zh-tw/labor/ryokin)，常被詢問的問題整理於[常見問答](/zh-tw/labor/faq)。\n\n本文為一般性的資訊提供。因應個別情事的判斷，由具備資格者在面談後進行。撰文者為[浦松丈二](/zh-tw/about/uramatsu)（社會保險勞務士・行政書士・宅地建物取引士）。",
+        "category": "該委託誰",
+        "keywords": [
+          "解僱 社會保險勞務士 律師 該委託誰",
+          "解僱 手續 解僱預告",
+          "解僱 有效性 勞動契約法第16條",
+          "懲戒解僱 解僱預告工資",
+          "退職證明書 離職票",
+          "解僱 諮詢 社會保險勞務士"
+        ],
+        "tags": [
+          "解僱",
+          "退職",
+          "懲戒解僱",
+          "就業規則",
+          "勞務管理",
+          "社會保險勞務士"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "正在檢討解僱。首先該向哪裡諮詢？",
+            "answer": "現實的做法是，先請社會保險勞務士為您整理「問題是什麼、想達成什麼」。包括解僱以外的選項一併盤點，風險較高時，會為您介紹直接委任律師。解僱有效性本身的判斷是律師的業務。"
+          },
+          {
+            "question": "「只要30日前預告就可以解僱」是真的嗎？",
+            "answer": "不是。解僱預告（勞動基準法第20條）是手續上的要件，與解僱的有效性（勞動契約法第16條）是兩回事。即使遵守預告，若欠缺客觀合理的理由或社會通念上的相當性，解僱仍可能無效。"
+          },
+          {
+            "question": "懲戒解僱的話，解僱預告工資就不需要嗎？",
+            "answer": "未必不需要。要免除預告工資，需取得勞動基準監督署長的「解僱預告除外認定」（勞動基準法第20條第3項）。未取得認定時，仍須預告或支付預告工資。"
+          },
+          {
+            "question": "試用期間中比較容易解僱嗎？",
+            "answer": "試用期間中的解僱，作為保留解約權的行使，有一定較廣的判斷餘地，但並非毫無限制。個別的適用是律師的判斷。"
+          }
+        ]
+      },
+      "zh": {
+        "title": "要让员工离职时，该委托社会保险劳务士还是律师？",
+        "excerpt": "本事务所会告诉咨询者：「除非有非常充分的理由，否则不建议解雇。」因为解雇容易在事后就「客观合理的理由」与「社会通念上的相当性」受到争执。即便如此，仍有不得不选择解雇的情形，现场也会发生一般论无法处理的案例。本文整理解雇的判断框架、之后残留的手续，以及「到哪里为止是社会保险劳务士、从哪里开始是律师」。",
+        "content": "**结论（先讲重点）**：本事务所会告诉咨询者：「**除非有非常充分的理由，否则不建议解雇。**」解雇是容易在事后就「客观合理的理由」与「社会通念上的相当性」受到争执的选择。即便如此，**仍有不得不选择解雇的情形**。因为现场会发生一般论无法处理的案例。本文整理在解雇之前与决定之后该掌握的事项，以及「到哪里为止是社会保险劳务士、从哪里开始是律师」。个别的「这个解雇是否有效」之判断，不在本文范围内。\n\n「想让员工离职」这类咨询，大多不会只落在一个答案上。劝退与解雇的差异、解雇的种类、手续的期限、以及法律风险——必须切分的论点有好几个。本页面是为正在检讨解雇的中小企业经营者与总务人员而写，整理判断的框架、残留的手续、以及该委托谁做什么。\n\n## 为什么「不建议解雇」？\n\n解雇是容易在**事后回头**就其理由的客观性与相当性受到争执的选择。日本《劳动合同法》（労働契約法，平成19年法律第128号）第16条规定：「解雇若欠缺客观合理的理由，且不认为在社会通念上相当者，视为权利滥用而无效。」\n\n一旦解雇被判定无效，雇用关系就等于继续存在。于是，公司必须追溯支付那段期间的工资，负担可能超乎想象。「先让他离职就好」并非结束，**一旦无效就很难挽回**。正因如此，本事务所才会说「除非有非常充分的理由，否则不建议解雇」。\n\n## 即便如此仍选择解雇时，分界点是什么？\n\n首先，解雇有种类之分。\n\n| 类型 | 什么样的解雇 | 应掌握的框架 |\n|---|---|---|\n| **普通解雇** | 非惩戒，而是终止契约的一般解雇 | 客观合理的理由＋社会通念上相当（劳动合同法第16条） |\n| **整理解雇** | 因经营上的理由进行人员整顿 | 人员整顿的必要性、避免解雇的努力、人选的合理性、程序的相当性（裁判例所重视的一般论） |\n| **惩戒解雇** | 依就业规则的惩戒事由所为的解雇 | 是否该当惩戒事由与其相当性。免除预告工资需「解雇预告除外认定」（劳动基准法第20条第3项） |\n\n| 共通的是，任何一种都会被问到**「客观合理的理由」与「社会通念上的相当性」**。到这里为止，是检讨解雇时应掌握的**判断框架**。将框架套用到个别案件（这个案例有效或无效），是具备资格者与律师应进行的领域。\n\n## 「一般论无法处理」是指什么案例？\n\n现场会发生教科书式的整理无法收敛的案例。以下列举代表性的论点。\n\n- **能力不足・工作态度**——单凭「不能用」往往欠缺客观合理性。是否给予指导与改善机会、评价与纪录能否成为佐证，会成为论点。\n- **私伤病・休职长期化**——复职的可能性、休职期间届满的处理、与疗养中禁止解雇（劳动基准法第19条）的关系等，多个论点重叠。\n- **有期契约・试用期间**——期间中途的解雇以「不得不解雇之事由」为要件（劳动合同法第17条）。试用期间中，作为保留解约权的行使虽有一定较广的判断余地，但并非毫无限制。\n- **与高龄者、育儿或护理重叠的场面**——禁止解雇与不利对待的观点加入，单纯的「人员整顿」可能无法解决。\n\n像这样，确实存在「一般来说○」「一般论上△」无法整理完的案例。正因如此，才需要**仔细排列事实、切分论点、必要时交由律师判断**的工程。\n\n## 决定解雇后，还会残留哪些手续？\n\n与解雇是否有效无关，**手续**仍会残留。这部分无法回避。\n\n| 手续 | 内容 | 依据・期限 |\n|---|---|---|\n| **解雇预告** | 应于30日前预告。未预告者，须支付30日分以上的平均工资（解雇预告工资） | 劳动基准法第20条 |\n| **确认禁止解雇** | 因业务灾害疗养休业期间＋其后30日、产前产后休业期间＋其后30日，不得解雇 | 劳动基准法第19条 |\n| **退职证明书** | 劳工请求时，应尽速交付（解雇时包含其理由） | 劳动基准法第22条 |\n| **工资清算** | 未付工资等应于请求后7日内支付 | 劳动基准法第23条 |\n| **雇用保险的资格丧失申报** | 离职日次日起10日内向Hello Work申报 | 雇用保险法 |\n| **健保・厚生年金的资格丧失申报** | 事实发生之日起5日内 | 健康保险法・厚生年金保险法 |\n\n惩戒解雇若要免除解雇预告工资，需取得劳动基准监督署长的**「解雇预告除外认定」**（劳动基准法第20条第3项）。未取得认定时，仍须预告或支付预告工资。\n\n## 该委托谁、委托什么？\n\n| 要做的事 | 谁的业务 |\n|---|---|\n| 解雇进行方式的盘点、事实与经过的整理、解雇预告・退职证明书・离职票・社会保险资格丧失等手续 | **社会保险劳务士**（本事务所） |\n| 就业规则的惩戒事由・服务纪律的整备 | **社会保险劳务士**（本事务所） |\n| 「这个解雇是否有效」的法律判断、交涉、劳动审判・诉讼的应对 | **律师** |\n| 退职金・源泉征收票的税务处理 | **税理士** |\n\n解雇的「适用」是律师的业务。本事务所负责到**整理事实与论点、整备手续**为止，需要有效性判断的场面，会为您介绍直接委任律师。惩戒解雇前提的就业规则整备，请一并参阅[就业规则从几人开始成为义务](/zh/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo)。\n\n## 四葉社会保険労務士事務所能做什么？\n\n位于文京区小日向的四葉社会保険労務士事務所，会从**「正在检讨」解雇的阶段**开始陪伴您。包括「让对方离职」以外的选项（调动、雇用形态的调整、劝退・合意退职的整理）一并盘点，之后若进入解雇，则承接手续——解雇预告、退职证明书、离职票、社会保险资格丧失、与就业规则的整合。**咨询免费。** 费用刊登于[报酬额表](/zh/labor/ryokin)。\n\n此外，本事务所不判断「这个解雇是否有效」。需要此判断的场面，会为您介绍直接委任律师。本事务所不收取介绍费。\n\n## 常见问题\n\n**Q. 正在检讨解雇。首先该向哪里咨询？**\nA. 现实的做法是，先请社会保险劳务士为您整理「问题是什么、想达成什么」。包括解雇以外的选项一并盘点，风险较高时，会为您介绍直接委任律师。解雇有效性本身的判断是律师的业务。\n\n**Q. 「只要30日前预告就可以解雇」是真的吗？**\nA. 不是。解雇预告（劳动基准法第20条）是手续上的要件，与解雇的有效性（劳动合同法第16条）是两回事。即使遵守预告，若欠缺客观合理的理由或社会通念上的相当性，解雇仍可能无效。\n\n**Q. 惩戒解雇的话，解雇预告工资就不需要吗？**\nA. 未必不需要。要免除预告工资，需取得劳动基准监督署长的「解雇预告除外认定」（劳动基准法第20条第3项）。未取得认定时，仍须预告或支付预告工资。\n\n**Q. 试用期间中比较容易解雇吗？**\nA. 试用期间中的解雇，作为保留解约权的行使，有一定较广的判断余地，但并非毫无限制。个别的适用是律师的判断。\n\n## 本文依据\n\n- 日本《劳动合同法》（労働契約法，平成19年法律第128号）第16条、第17条\n- 日本《劳动基准法》（労働基準法，昭和22年法律第49号）第19条、第20条第1项・第3项、第22条、第23条\n- 依雇用保险法的资格丧失申报（离职日次日起10日内）、依健康保险法・厚生年金保险法的资格丧失申报（事实发生之日起5日内）\n- 整理解雇的考虑要素是裁判例所示的一般性整理，而非法律条文（不引用特定事件名）\n- 条文已依厚生劳动省・都道府县劳动局的公表资料确认（2026年8月15日时点）\n\n本文并未决定到「该向谁咨询、该如何判断」为止。解雇相关的事实整理・手续（解雇预告、退职证明书、离职票、社会保险资格丧失）・就业规则的整备是社会保险劳务士的业务。「这个解雇是否有效」的法律判断、交涉、劳动审判・诉讼的应对是律师的业务。退职金・源泉征收的税务是税理士的业务。本事务所不收取介绍费。向四葉社会保険労務士事務所咨询时的费用整理于[报酬额表](/zh/labor/ryokin)，常被询问的问题整理于[常见问答](/zh/labor/faq)。\n\n本文为一般性的信息提供。因应个别情事的判断，由具备资格者在面谈后进行。撰文者为[浦松丈二](/zh/about/uramatsu)（社会保险劳务士・行政书士・宅地建物取引士）。",
+        "category": "该委托谁",
+        "keywords": [
+          "解雇 社会保险劳务士 律师 该委托谁",
+          "解雇 手续 解雇预告",
+          "解雇 有效性 劳动合同法第16条",
+          "惩戒解雇 解雇预告工资",
+          "退职证明书 离职票",
+          "解雇 咨询 社会保险劳务士"
+        ],
+        "tags": [
+          "解雇",
+          "退职",
+          "惩戒解雇",
+          "就业规则",
+          "劳务管理",
+          "社会保险劳务士"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "正在检讨解雇。首先该向哪里咨询？",
+            "answer": "现实的做法是，先请社会保险劳务士为您整理「问题是什么、想达成什么」。包括解雇以外的选项一并盘点，风险较高时，会为您介绍直接委任律师。解雇有效性本身的判断是律师的业务。"
+          },
+          {
+            "question": "「只要30日前预告就可以解雇」是真的吗？",
+            "answer": "不是。解雇预告（劳动基准法第20条）是手续上的要件，与解雇的有效性（劳动合同法第16条）是两回事。即使遵守预告，若欠缺客观合理的理由或社会通念上的相当性，解雇仍可能无效。"
+          },
+          {
+            "question": "惩戒解雇的话，解雇预告工资就不需要吗？",
+            "answer": "未必不需要。要免除预告工资，需取得劳动基准监督署长的「解雇预告除外认定」（劳动基准法第20条第3项）。未取得认定时，仍须预告或支付预告工资。"
+          },
+          {
+            "question": "试用期间中比较容易解雇吗？",
+            "answer": "试用期间中的解雇，作为保留解约权的行使，有一定较广的判断余地，但并非毫无限制。个别的适用是律师的判断。"
+          }
+        ]
+      }
+    }
   }
 ];
