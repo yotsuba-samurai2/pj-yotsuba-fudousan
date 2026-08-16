@@ -100,6 +100,15 @@ const REQUIRED_HUB_LINKS: Record<string, string[]> = {
     "/legal/column/taiwan-inkan-shomei-isan-bunkatsu",
     "/legal/column/denshi-keiyaku-enpo-inin-kami",
   ],
+  "souzoku-zaisan-mokuroku": [
+    "/legal/services/inheritance",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/souzoku",
+    "/legal/column/souzoku-hajime-koseki-chosa-bunkyo",
+    "/legal/column/isan-bunkatsu-kyougisho",
+    "/legal/column/houtei-souzoku-jouhou-ichiran-zu",
+  ],
 };
 
 /** 表示コンプライアンス上の禁止語 */
@@ -174,6 +183,23 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "本国官憲",
     "司法書士・管轄登記所",
   ],
+  "souzoku-zaisan-mokuroku": [
+    "財産目録",
+    "所有不動産記録証明制度",
+    "2026年2月2日",
+    "登記事項証明書",
+    "固定資産税納税通知書",
+    "固定資産評価証明書",
+    "名寄帳",
+    "JICC",
+    "CIC",
+    "全国銀行個人信用情報センター",
+    "法定相続分に応じて当然に分割",
+    "売却査定・媒介",
+    "都税事務所",
+    "日本行政書士会連合会",
+    "3か月の熟慮期間",
+  ],
 };
 
 /** 記事ごとに含めてはならない表現 */
@@ -198,6 +224,7 @@ const FORBIDDEN_PHRASES: Record<string, string[]> = {
     "台湾にも独自の反致規定",
     "台湾籍なら必ず台湾法",
   ],
+  "souzoku-zaisan-mokuroku": ["売却判断"],
 };
 
 /** 本セット外へ張る既存legalコラムslug（リポジトリの他シードで実在確認済み） */
@@ -300,6 +327,23 @@ const ARTICLES: Array<{
       "行政書士 海外相続 文京区",
     ],
     tags: ["相続", "海外在住", "外国籍", "本国法", "反致", "署名証明"],
+  },
+  {
+    file: "07-souzoku-zaisan-mokuroku.md",
+    slug: "souzoku-zaisan-mokuroku",
+    title: "相続財産の調査と財産目録の作り方──何を・どう調べる？行政書士に頼めること",
+    category: "相続の手続き（行政書士の実務から）",
+    excerpt:
+      "相続財産にはプラスとマイナスがあります。遺産分割・相続放棄・相続税の前提として、財産と債務の全体像を整理することが重要です。所有不動産記録証明制度、預貯金・借金の調べ方、財産目録の作り方と行政書士に頼める範囲を文京区の実務に沿って整理しました。",
+    keywords: [
+      "相続財産 調査 財産目録",
+      "所有不動産記録証明制度",
+      "相続 借金 調べ方 信用情報",
+      "相続 財産目録 作り方",
+      "行政書士 相続財産調査 文京区",
+      "相続 債務 調査",
+    ],
+    tags: ["相続財産", "財産目録", "所有不動産記録証明制度", "相続債務", "行政書士"],
   },
 ];
 
