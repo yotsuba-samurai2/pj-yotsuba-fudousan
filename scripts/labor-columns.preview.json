@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-15T15:30:26.701Z",
+  "generatedAt": "2026-08-16T00:24:35.934Z",
   "note": "労務コラム（4本）。報酬額表 v18 の決定と相場調査から起こした原稿md（scripts/labor-columns/）から生成。--write でupsert。",
-  "articleCount": 41,
+  "articleCount": 42,
   "verification": [
     "OK: 全チェック通過"
   ],
@@ -7444,6 +7444,185 @@
             {
               "question": "36协定可以用电子申请申报吗？",
               "answer": "可以申报。可以透过e-Gov等电子申请提出。请整理记载事项、有效期间、对象范围后提出。从原案作成到申报，我们都可以承接。"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "business": "labor",
+      "slug": "nenji-yukyu-5nichi-torikirenai",
+      "title": "年5日の有給休暇、なぜ取りきれないのか。会社の義務と2年の時効",
+      "date": "2026-09-01",
+      "category": "手続と期限",
+      "excerpt": "年10日以上の年次有給休暇が付与される労働者には、使用者が年5日を時季指定して取得させる義務があります（労働基準法第39条第7項、2019年4月施行）。取得させないと30万円以下の罰金（第120条）。ただ、全社員への年5日徹底は意外に難しく、取得権は2年で時効消滅します（第115条）。",
+      "content": "**結論（先に要点）**：年10日以上の年次有給休暇が付与される労働者には、使用者が毎年**5日を時季指定して取得させる義務**があります（労働基準法第39条第7項、2019年4月施行）。取得させないと**30万円以下の罰金**（同法第120条）の対象です。ただ、実務では「**全社員に年5日を徹底するのは意外に難しい**」というのが本音です。背景には「いざという時に使いたいから、早い段階で消化する…（全3921字）",
+      "status": "published",
+      "author": {
+        "name": "浦松 丈二",
+        "title": "社会保険労務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+      },
+      "keywords": [
+        "年5日 有給 取得義務",
+        "年次有給休暇 5日 時季指定",
+        "有給 取らせない 罰則",
+        "有給休暇 時効 2年",
+        "年次有給休暇 取りきれない",
+        "有給 意識 改革"
+      ],
+      "tags": [
+        "年次有給休暇",
+        "有給休暇",
+        "労働基準法",
+        "労務管理",
+        "社会保険労務士"
+      ],
+      "locales": [],
+      "faq": [
+        {
+          "question": "年5日を取らせなかったら、すぐに罰則になりますか？",
+          "answer": "取得させない場合は労働基準法第120条により30万円以下の罰金の対象になります。実務では監督署の指導を経ることが多いですが、義務違反の状態を放置してよいわけではありません。まず取得状況を把握し、時季指定を含めて是正することが必要です。"
+        },
+        {
+          "question": "使わなかった有給を、会社が買い取ることはできますか？",
+          "answer": "原則としてできません。法定の年次有給休暇を金銭で買い上げることは、取得を促す制度の趣旨に反します。例外的に、時効で消滅した分や退職時の未消化分は、一定の範囲で買取りが差し支えないとされています。就業規則等で整理したうえで進めてください。"
+        },
+        {
+          "question": "年次有給休暇の時効は何年ですか？",
+          "answer": "2年です（労働基準法第115条）。付与された日から2年を経過した分は時効で消滅し、以後は取得できなくなります。繰り越した分も含めて、2年の期限で管理する必要があります。"
+        },
+        {
+          "question": "従業員が「有給を取らなくていい」と言っても、時季指定は必要ですか？",
+          "answer": "年5日の取得義務は使用者側の義務です。本人が取得を希望しない場合でも、取得が5日に届かない分は会社が時季を指定して取得させる必要があります。計画年休の枠組みで計画的に進めるのが現実的です。"
+        }
+      ],
+      "translations": {
+        "en": {
+          "title": "Why is it so hard to get everyone to take five days of paid leave a year? The company's obligation and the two-year time limit",
+          "excerpt": "For workers who are granted 10 or more days of annual paid leave, the employer is obliged to have them take five days a year by designating the timing (Labor Standards Act, Article 39, paragraph 7, in force since April 2019). Failing to have them take it is subject to a fine of up to 300,000 yen (Article 120). In practice, however, making every employee take five days a year is unexpectedly hard, because workers want to keep leave in reserve \"just in case\" and are uneasy about using it up early. Since the right to annual paid leave is extinguished by prescription after two years (Article 115), changing how both sides think is needed.",
+          "content": "**In short:** For workers who are granted **10 or more days** of annual paid leave, the employer is obliged to have them take **five days a year by designating the timing** (Labor Standards Act, Article 39, paragraph 7; in force since April 2019). Failing to have them take it is subject to a **fine of up to 300,000 yen** (Article 120). In practice, however, \"**making every employee take five days a year is unexpectedly hard**\" is the honest reality. Behind it lies workers' psychology: they want to keep leave in reserve **\"just in case,\"** and feel uneasy about **using it up early**. And the right to annual paid leave is **extinguished by prescription after two years** (Article 115). So that the right is not lost, the company needs a structure, and both sides need a **change of mindset**. This page explains the substance of the obligation, why it is hard to get leave taken, and what a company can do.\n\nWe receive many consultations along the lines of: \"They have paid leave but will not take it,\" and \"Before we knew it, unused leave had piled up.\" This page is for the owners and general-affairs staff of small and medium-sized companies. We set out the exact substance of the five-days-a-year obligation, why it is hard to enforce, what is lost by prescription, and what a company should put in place. Judging an individual labor dispute is outside the scope of this article.\n\n## Who, from when, and what is the five-days-a-year obligation?\n\nAnnual paid leave is granted, in principle, as **10 days** to a worker who has been employed continuously for six months and whose attendance rate during that period was 80% or more (Labor Standards Act, Article 39, paragraph 1). The number then increases with years of service, up to a maximum of 20 days.\n\nOf these, for a worker who is granted **10 or more days a year**, the employer is obliged to **have the worker take five days each year by designating the timing** (Labor Standards Act, Article 39, paragraph 7). Leave that the worker takes at his or her own request counts toward these five days, but **for the part that does not reach five days, the company must have the worker take it even by designating the timing**.\n\nThe obligation has applied since **April 1, 2019**. If the worker is not made to take the leave, this is subject to a **fine of up to 300,000 yen** under Article 120. \"The worker will not take time off\" is not an excuse.\n\n## Why is making everyone take five days a year unexpectedly hard?\n\nEven though the rule is simple, in practice **making every employee take five days a year is unexpectedly hard**. The fact that, in many workplaces, the personnel staff are constantly sending notice of the leave-taking situation **both to everyone as a whole and to the individual concerned** is the flip side of that difficulty.\n\nWhat lies behind it is the psychology of workers. Paid leave is something they want to **use \"just in case.\"** They want to keep it in reserve for illness, family matters, or sudden circumstances, and it is said that there is an uneasiness that **if they use it up early, they will have nothing to use in an emergency**.\n\nYet this \"reserving\" in fact endangers the right, because the right to annual paid leave is **extinguished by prescription after two years**. Leave that has been piled up can lose the right itself before \"just in case\" ever arrives. This is where a **change of mindset — from \"paid leave is something to save up\" to \"paid leave is something you use so as not to lose the right\"** — becomes necessary.\n\n## What is lost if you leave it alone?\n\nThe right to claim annual paid leave is **extinguished by prescription two years** after the day it is granted (Labor Standards Act, Article 115). Even though it can be carried over to the next year, the two-year limit does not move, including the carried-over portion. Leave that has passed two years without being used **can no longer be taken**.\n\nThis raises the question: \"Then can the company buy back the unused leave?\" — but the company is **in principle not allowed to buy back statutory annual paid leave for money**. The purpose of annual paid leave is to let the worker \"rest and recover,\" and allowing buy-back would run counter to the purpose of encouraging leave to be taken. By way of exception, the portion that has been extinguished by prescription, or unused leave at the time of retirement, is said to be acceptable to buy back within a certain range.\n\nIn other words, unused paid leave basically \"disappears without being rested.\" That is exactly why a structure is needed for **taking leave before it disappears**.\n\n## How does a company turn a \"change of mindset\" into a structure?\n\nSimply saying \"please take it\" will not change the psychology of reserving leave. An environment in which leave is easy to take needs to be built as a structure.\n\n| What to do | What it means |\n|---|---|\n| **Make the take-up visible** | Regularly grasp, and notify, who has how many days left, both as a whole and for each individual |\n| **Planned annual leave** | Allocate the days to be taken on a planned basis under a labour-management agreement (a way to use up the employer-designated portion of the five days on a planned basis) |\n| **Operating the designation of timing** | For people whose take-up is low, the company designates the timing and encourages them to take leave |\n| **Creating an atmosphere where leave is easy to take** | Put in place a structure where \"work keeps moving even when someone is off\" (handover, spreading out responsibilities) and lower the psychological hurdle |\n\nThe important thing is to present the notices and the designation of timing not as \"**nagging**\" but as \"**a structure that protects the right**.\" Continually explaining that paid leave disappears after two years, and that taking it early and on a planned basis is in the worker's own interest — this is the entry point to a change of mindset.\n\n## Whom should you ask, for what?\n\n| What you want done | Whose work it is |\n|---|---|\n| Putting the work rules and the annual-paid-leave rules in order, concluding the labour-management agreement for planned annual leave, and building the structure for managing and notifying the take-up | **A Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant)** (this office) |\n| Disputes over paid leave, claims for the unused portion, and disputes connected with dismissal or retirement | **An attorney** |\n| Payroll, withholding, and the year-end adjustment that accompany taking paid leave | **A Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant)** (this office) / **a tax accountant** |\n\nManaging annual paid leave, planned annual leave, and putting the work rules in order are the work of a Shakai Hoken Roumushi. This office helps you build, as a structure, not only \"**complying with the obligation**\" but also \"**a workplace where leave is easy to take**.\" A matter that has already become a dispute is the domain of an attorney.\n\n## What can 四葉社会保険労務士事務所 do for you?\n\n四葉社会保険労務士事務所 in Kohinata, Bunkyo Ward, handles **putting the annual-paid-leave rules and work rules in order, the labour-management agreement for planned annual leave, building a take-up management table and a notification structure, and organizing the division of work so that leave is easy to take**. **The initial consultation is free.** Fees are set out in the [fee schedule](/en/labor/ryokin).\n\nPlease note that where a claim for the unused portion or a dispute has already arisen, we will guide you to engage an attorney directly. This office does not accept referral fees.\n\n## Frequently asked questions\n\n**Q. If we do not have workers take the five days, does the penalty apply immediately?**\nA. Failing to have the leave taken is subject to a fine of up to 300,000 yen under Article 120. In practice it often goes through the guidance of the Inspection Office first, but that does not mean you may leave the violation as it is. First grasp the take-up situation and correct it, including by designating the timing.\n\n**Q. Can the company buy back paid leave that was not used?**\nA. In principle, no. Buying back statutory annual paid leave for money runs counter to the purpose of a system that encourages leave to be taken. By way of exception, the portion extinguished by prescription, or unused leave at retirement, is said to be acceptable to buy back within a certain range. Proceed after sorting this out in the work rules and the like.\n\n**Q. What is the time limit on annual paid leave?**\nA. Two years (Labor Standards Act, Article 115). The portion that has passed two years from the day it was granted is extinguished by prescription and can no longer be taken. You need to manage it on a two-year limit, including the carried-over portion.\n\n**Q. If an employee says \"I don't need to take paid leave,\" is designation of the timing still necessary?**\nA. The obligation to have five days taken is an obligation on the employer's side. Even if the worker does not wish to take it, for the part that does not reach five days the company must have the worker take it by designating the timing. It is realistic to proceed on a planned basis through the framework of planned annual leave.\n\n## Sources for this article\n\n- Labor Standards Act (労働基準法, Act No. 49 of 1947), Article 39, paragraph 1 and paragraph 7 (annual paid leave and the obligation to have five days taken by designating the timing), Article 120 (fine of up to 300,000 yen), and Article 115 (two-year prescription of the right to claim)\n- The five-days-a-year obligation came into force on April 1, 2019 (amended Labor Standards Act; confirmed from materials published by the Ministry of Health, Labour and Welfare and prefectural labour bureaus)\n- The statement that buying back annual paid leave is in principle not allowed, while the portion extinguished by prescription and unused leave at retirement may be bought back within a certain range, is a general statement based on administrative interpretation\n- The article numbers, the prescription period, and the penalty have been checked against materials published by the Ministry of Health, Labour and Welfare and prefectural labour bureaus (as of August 2026)\n\nThis article does not go so far as to decide whom you should consult. Putting the annual-paid-leave rules and work rules in order, concluding the labour-management agreement for planned annual leave, and building the structure for managing and notifying the take-up are the work of a Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant). Claims for the unused portion and disputes over paid leave are the work of an attorney. As for payroll, withholding, and the year-end adjustment that accompany taking paid leave, payroll is the work of a Shakai Hoken Roumushi and the tax side is the work of a tax accountant. This office does not accept referral fees. The cost of consulting 四葉社会保険労務士事務所 is set out in the [fee schedule](/en/labor/ryokin), and the questions we are asked most often are collected on the [FAQ page](/en/labor/faq).\n\nThis article is general information. Judgments that fit your particular circumstances are made by a qualified professional after a meeting. Written by [Joji Uramatsu](/en/about/uramatsu) (Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist).",
+          "category": "Procedures and deadlines",
+          "keywords": [
+            "five days paid leave obligation",
+            "annual paid leave five days employer designates timing",
+            "penalty for not letting employees take paid leave",
+            "paid leave extinctive prescription two years",
+            "annual paid leave cannot use up",
+            "paid leave change awareness"
+          ],
+          "tags": [
+            "annual paid leave",
+            "paid leave",
+            "Labor Standards Act",
+            "labour management",
+            "Shakai Hoken Roumushi"
+          ],
+          "author": {
+            "name": "Joji Uramatsu",
+            "title": "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所"
+          },
+          "faq": [
+            {
+              "question": "If we do not have workers take the five days, does the penalty apply immediately?",
+              "answer": "Failing to have the leave taken is subject to a fine of up to 300,000 yen under Article 120. In practice it often goes through the guidance of the Inspection Office first, but that does not mean you may leave the violation as it is. First grasp the take-up situation and correct it, including by designating the timing."
+            },
+            {
+              "question": "Can the company buy back paid leave that was not used?",
+              "answer": "In principle, no. Buying back statutory annual paid leave for money runs counter to the purpose of a system that encourages leave to be taken. By way of exception, the portion extinguished by prescription, or unused leave at retirement, is said to be acceptable to buy back within a certain range. Proceed after sorting this out in the work rules and the like."
+            },
+            {
+              "question": "What is the time limit on annual paid leave?",
+              "answer": "Two years (Labor Standards Act, Article 115). The portion that has passed two years from the day it was granted is extinguished by prescription and can no longer be taken. You need to manage it on a two-year limit, including the carried-over portion."
+            },
+            {
+              "question": "If an employee says \"I don't need to take paid leave,\" is designation of the timing still necessary?",
+              "answer": "The obligation to have five days taken is an obligation on the employer's side. Even if the worker does not wish to take it, for the part that does not reach five days the company must have the worker take it by designating the timing. It is realistic to proceed on a planned basis through the framework of planned annual leave."
+            }
+          ]
+        },
+        "zh-tw": {
+          "title": "每年5天的有給休假，為什麼難以讓全員休完？公司的義務與2年時效",
+          "excerpt": "對被賦予10天以上年次有給休假的勞工，使用者有義務每年以指定時季的方式讓其取得5天（勞動基準法第39條第7項，2019年4月施行）。未讓其取得，會成為30萬日圓以下罰金（第120條）的對象。然而實務上，讓全體員工確實取得每年5天意外地困難，背景是勞工「想留到萬一時使用」、對提早使用感到不安的心理。年次有給休假的取得權會因2年時效而消滅（第115條），因此需要意識改革。",
+          "content": "**結論（先講重點）**：對被賦予**10天以上**年次有給休假的勞工，使用者有義務每年以指定時季的方式讓其取得**5天**（勞動基準法第39條第7項，2019年4月施行）。未讓其取得，會成為**30萬日圓以下罰金**（第120條）的對象。然而實務上，「**讓全體員工確實取得每年5天意外地困難**」才是實情。背景是勞工的心理——想**「留到萬一時使用」**，對**提早使用完**感到不安。而年次有給休假的取得權會因**2年時效而消滅**（第115條）。為了不讓權利喪失，需要公司方面的機制，以及雙方的**意識改革**。本文整理義務的內容、休不完的原因、以及公司能做的事。\n\n我們常接到「明明有有給休假，卻一直不休」「回過神來未使用天數已經累積很多」這類諮詢。本頁面是為中小企業的經營者與總務人員而寫，整理每年5天取得義務的正確內容、為什麼難以徹底、因時效而喪失的是什麼、以及公司應整備什麼。個別勞資糾紛的判斷不在本文範圍內。\n\n## 每年5天的取得義務，是誰・何時開始・義務內容是什麼？\n\n年次有給休假，是對連續工作滿6個月、且期間出勤率達8成以上的勞工，原則上賦予**10天**（勞動基準法第39條第1項）。之後依年資增加，最多可達20天。\n\n其中，對**每年被賦予10天以上者**，使用者有義務**每年以指定時季的方式讓其取得5天**（勞動基準法第39條第7項）。勞工自行申請而取得的天數可計入這5天，但**未達5天的部分，公司必須指定時季讓其取得**。\n\n義務化自**2019年4月1日**起。未讓其取得時，依勞動基準法第120條，會成為**30萬日圓以下罰金**的對象。「本人不休」不能成為免責理由。\n\n## 為什麼「每年5天的徹底」意外地困難？\n\n制度上雖然簡單，但現場的實情是**要讓全體員工確實取得每年5天意外地困難**。許多職場中，人事人員不斷地對**全體、以及該當個人雙方**發出取得狀況的通知，正是這種困難的另一面。\n\n背景是勞工的心理。有給休假是「**想留到萬一時使用**」的東西。想為疾病、家人有事、突發狀況而保留，據說存在著「**太早用完的話，萬一時就沒得用**」的不安。\n\n然而，這種「保留」反而危及權利。因為年次有給休假的取得權會**因2年時效而消滅**。累積下來的休假，可能在「萬一」到來之前，就先失去權利本身。這裡就需要**從「休假是要存起來的」轉變為「使用休假才不會失去權利」的意識改革**。\n\n## 若放置不管，會失去什麼？\n\n年次有給休假的請求權，自**賦予日起2年**因時效而消滅（勞動基準法第115條）。即使可以遞延到隔年，包含遞延部分在內，2年的期限也不會變動。未使用而經過2年的休假，**就再也無法取得**。\n\n這裡會出現「那麼，由公司買回未使用的休假不就好了」的討論，但法定年次有給休假**原則上不得以金錢買回**。年假的宗旨是「休假以恢復身心」，若允許買回，就會違反促進取得的宗旨。例外上，因時效而消滅的部分、或退職時的未使用部分，在一定範圍內買回並無妨。\n\n也就是說，未使用的有給休假基本上是「沒休到就消失」。正因如此，才需要**在消失前取得休假**的機制。\n\n## 公司要如何把「意識改革」變成機制？\n\n光是喊「請休假」，無法改變保留的心理。必須把容易取得的環境，當作機制來建立。\n\n| 要做的事 | 內容 |\n|---|---|\n| **取得狀況的可視化** | 定期掌握並通知誰還剩幾天，分為全體與個人 |\n| **計劃年休** | 以勞使協定計劃性地分配取得日（將每年5天中由公司指定時季的部分計劃性消化） |\n| **指定時季的運用** | 對取得少的人，由公司指定時季促使其取得 |\n| **營造容易取得的氛圍** | 建立「有人休假業務仍能運轉」的體制（交接、分散職責），降低心理門檻 |\n\n重點是，把通知與指定時季當作**「守護權利的機制」而非「催促」**來傳達。持續說明「休假2年就會消失，因此盡早計劃性地取得對本人有利」——這就是意識改革的入口。\n\n## 該委託誰、委託什麼？\n\n| 要做的事 | 誰的業務 |\n|---|---|\n| 就業規則・年次有給休假規程的整備、計劃年休的勞使協定締結、取得狀況的管理・通知機制建立 | **社會保險勞務士**（本事務所） |\n| 有給休假相關紛爭、未取得部分的請求、與解僱・退職相關的爭議 | **律師** |\n| 取得有給休假所伴隨的薪資計算、源泉徵收・年終調整 | **社會保險勞務士**（本事務所）／**稅理士** |\n\n年次有給休假的管理・計劃年休・就業規則的整備是社會保險勞務士的業務。本事務所協助的不只是**「遵守義務」**，而是連**「容易取得休假的職場」**都作為機制建立。已經發生紛爭的案件屬於律師的領域。\n\n## 四葉社会保険労務士事務所能做什麼？\n\n位於文京區小日向的四葉社会保険労務士事務所，承接**年次有給休假規程・就業規則的整備、計劃年休的勞使協定、取得狀況管理表與通知機制的建立、容易取得休假的業務分擔整理**。**諮詢免費。** 費用請參閱[報酬額表](/zh-tw/labor/ryokin)。\n\n此外，若未取得部分的請求或紛爭已經發生，會為您介紹直接委任律師。本事務所不收取介紹費。\n\n## 常見問題\n\n**Q. 未讓員工取得每年5天，會馬上受罰嗎？**\nA. 未讓其取得時，依勞動基準法第120條會成為30萬日圓以下罰金的對象。實務上常先經過監督署的指導，但這不表示可以放置違反狀態不管。請先掌握取得狀況，並以指定時季等方式進行改善。\n\n**Q. 未使用的有給休假，可以由公司買回嗎？**\nA. 原則上不行。以金錢買回法定年次有給休假，違反促進取得的制度宗旨。例外上，因時效而消滅的部分、退職時的未使用部分，在一定範圍內買回並無妨。請在就業規則等整理後進行。\n\n**Q. 年次有給休假的時效是幾年？**\nA. 2年（勞動基準法第115條）。自賦予日起經過2年的部分會因時效而消滅，之後就無法取得。包含遞延部分在內，都必須以2年期限來管理。\n\n**Q. 員工說「不休有給休假也沒關係」，還是需要指定時季嗎？**\nA. 每年5天的取得義務是使用者方面的義務。即使本人不希望取得，未達5天的部分，公司仍須指定時季讓其取得。以計劃年休的框架計劃性地進行較為實際。\n\n## 本文依據\n\n- 日本《勞動基準法》（労働基準法，昭和22年法律第49號）第39條第1項・第7項（年次有給休假及每年5天的指定時季義務）、第120條（30萬日圓以下罰金）、第115條（請求權時效2年）\n- 每年5天取得義務的施行為2019年4月1日（修正勞動基準法。依厚生勞動省・都道府縣勞動局公表資料確認）\n- 關於年次有給休假的買回，法定年假因違反促進取得宗旨而原則不可、時效消滅部分・退職時未使用部分在一定範圍內可，這是依行政解釋的一般論\n- 條文編號・時效期間・罰則，依厚生勞動省・都道府縣勞動局等公表資料確認（2026年8月時點）\n\n本文並未決定到「該向誰諮詢」為止。年次有給休假規程・就業規則的整備、計劃年休的勞使協定、取得狀況的管理・通知機制建立是社會保險勞務士的業務。未取得部分的請求、有給休假相關紛爭是律師的業務。取得有給休假所伴隨的薪資計算・源泉徵收・年終調整，薪資計算是社會保險勞務士、稅務是稅理士的業務。本事務所不收取介紹費。向四葉社会保険労務士事務所諮詢時的費用整理於[報酬額表](/zh-tw/labor/ryokin)，常被詢問的問題整理於[常見問答](/zh-tw/labor/faq)。\n\n本文為一般性的資訊提供。因應個別情事的判斷，由具備資格者在面談後進行。撰文者為[浦松丈二](/zh-tw/about/uramatsu)（社會保險勞務士・行政書士・宅地建物取引士）。",
+          "category": "手續與期限",
+          "keywords": [
+            "每年5天 有給休假 取得義務",
+            "年次有給休假 5天 指定時季",
+            "不讓員工休假 罰則",
+            "有給休假 時效 2年",
+            "年次有給休假 休不完",
+            "有給休假 意識改革"
+          ],
+          "tags": [
+            "年次有給休假",
+            "有給休假",
+            "勞動基準法",
+            "勞務管理",
+            "社會保險勞務士"
+          ],
+          "author": {
+            "name": "浦松 丈二",
+            "title": "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+          },
+          "faq": [
+            {
+              "question": "未讓員工取得每年5天，會馬上受罰嗎？",
+              "answer": "未讓其取得時，依勞動基準法第120條會成為30萬日圓以下罰金的對象。實務上常先經過監督署的指導，但這不表示可以放置違反狀態不管。請先掌握取得狀況，並以指定時季等方式進行改善。"
+            },
+            {
+              "question": "未使用的有給休假，可以由公司買回嗎？",
+              "answer": "原則上不行。以金錢買回法定年次有給休假，違反促進取得的制度宗旨。例外上，因時效而消滅的部分、退職時的未使用部分，在一定範圍內買回並無妨。請在就業規則等整理後進行。"
+            },
+            {
+              "question": "年次有給休假的時效是幾年？",
+              "answer": "2年（勞動基準法第115條）。自賦予日起經過2年的部分會因時效而消滅，之後就無法取得。包含遞延部分在內，都必須以2年期限來管理。"
+            },
+            {
+              "question": "員工說「不休有給休假也沒關係」，還是需要指定時季嗎？",
+              "answer": "每年5天的取得義務是使用者方面的義務。即使本人不希望取得，未達5天的部分，公司仍須指定時季讓其取得。以計劃年休的框架計劃性地進行較為實際。"
+            }
+          ]
+        },
+        "zh": {
+          "title": "每年5天的有给休假，为什么难以让全员休完？公司的义务与2年时效",
+          "excerpt": "对被赋予10天以上年次有给休假的劳工，使用者有义务每年以指定时季的方式让其取得5天（劳动基准法第39条第7项，2019年4月施行）。未让其取得，会成为30万日元以下罚金（第120条）的对象。然而实务上，让全体员工确实取得每年5天意外地困难，背景是劳工「想留到万一时使用」、对提早使用感到不安的心理。年次有给休假的取得权会因2年时效而消灭（第115条），因此需要意识改革。",
+          "content": "**结论（先讲重点）**：对被赋予**10天以上**年次有给休假的劳工，使用者有义务每年以指定时季的方式让其取得**5天**（劳动基准法第39条第7项，2019年4月施行）。未让其取得，会成为**30万日元以下罚金**（第120条）的对象。然而实务上，「**让全体员工确实取得每年5天意外地困难**」才是实情。背景是劳工的心理——想**「留到万一时使用」**，对**提早使用完**感到不安。而年次有给休假的取得权会因**2年时效而消灭**（第115条）。为了不让权利丧失，需要公司方面的机制，以及双方的**意识改革**。本文整理义务的内容、休不完的原因、以及公司能做的事。\n\n我们常接到「明明有有给休假，却一直不休」「回过神来未使用天数已经累积很多」这类咨询。本页面是为中小企业的经营者与总务人员而写，整理每年5天取得义务的正确内容、为什么难以彻底、因时效而丧失的是什么、以及公司应整备什么。个别劳资纠纷的判断不在本文范围内。\n\n## 每年5天的取得义务，是谁・何时开始・义务内容是什么？\n\n年次有给休假，是对连续工作满6个月、且期间出勤率达8成以上的劳工，原则上赋予**10天**（劳动基准法第39条第1项）。之后依年资增加，最多可达20天。\n\n其中，对**每年被赋予10天以上者**，使用者有义务**每年以指定时季的方式让其取得5天**（劳动基准法第39条第7项）。劳工自行申请而取得的天数可计入这5天，但**未达5天的部分，公司必须指定时季让其取得**。\n\n义务化自**2019年4月1日**起。未让其取得时，依劳动基准法第120条，会成为**30万日元以下罚金**的对象。「本人不休」不能成为免责理由。\n\n## 为什么「每年5天的彻底」意外地困难？\n\n制度上虽然简单，但现场的实情是**要让全体员工确实取得每年5天意外地困难**。许多职场中，人事人员不断地对**全体、以及该当个人双方**发出取得状况的通知，正是这种困难的另一面。\n\n背景是劳工的心理。有给休假是「**想留到万一时使用**」的东西。想为疾病、家人有事、突发状况而保留，据说存在着「**太早用完的话，万一时就没得用**」的不安。\n\n然而，这种「保留」反而危及权利。因为年次有给休假的取得权会**因2年时效而消灭**。累积下来的休假，可能在「万一」到来之前，就先失去权利本身。这里就需要**从「休假是要存起来的」转变为「使用休假才不会失去权利」的意识改革**。\n\n## 若放置不管，会失去什么？\n\n年次有给休假的请求权，自**赋予日起2年**因时效而消灭（劳动基准法第115条）。即使可以递延到隔年，包含递延部分在内，2年的期限也不会变动。未使用而经过2年的休假，**就再也无法取得**。\n\n这里会出现「那么，由公司买回未使用的休假不就好了」的讨论，但法定年次有给休假**原则上不得以金钱买回**。年假的宗旨是「休假以恢复身心」，若允许买回，就会违反促进取得的宗旨。例外上，因时效而消灭的部分、或退职时的未使用部分，在一定范围内买回并无妨。\n\n也就是说，未使用的有给休假基本上是「没休到就消失」。正因如此，才需要**在消失前取得休假**的机制。\n\n## 公司要如何把「意识改革」变成机制？\n\n光是喊「请休假」，无法改变保留的心理。必须把容易取得的环境，当作机制来建立。\n\n| 要做的事 | 内容 |\n|---|---|\n| **取得状况的可视化** | 定期掌握并通知谁还剩几天，分为全体与个人 |\n| **计划年休** | 以劳使协定计划性地分配取得日（将每年5天中由公司指定时季的部分计划性消化） |\n| **指定时季的运用** | 对取得少的人，由公司指定时季促使其取得 |\n| **营造容易取得的氛围** | 建立「有人休假业务仍能运转」的体制（交接、分散职责），降低心理门槛 |\n\n重点是，把通知与指定时季当作**「守护权利的机制」而非「催促」**来传达。持续说明「休假2年就会消失，因此尽早计划性地取得对本人有利」——这就是意识改革的入口。\n\n## 该委托谁、委托什么？\n\n| 要做的事 | 谁的业务 |\n|---|---|\n| 就业规则・年次有给休假规程的整备、计划年休的劳使协定缔结、取得状况的管理・通知机制建立 | **社会保险劳务士**（本事务所） |\n| 有给休假相关纷争、未取得部分的请求、与解雇・退职相关的争议 | **律师** |\n| 取得有给休假所伴随的薪资计算、源泉征收・年终调整 | **社会保险劳务士**（本事务所）／**税理士** |\n\n年次有给休假的管理・计划年休・就业规则的整备是社会保险劳务士的业务。本事务所协助的不只是**「遵守义务」**，而是连**「容易取得休假的职场」**都作为机制建立。已经发生纷争的案件属于律师的领域。\n\n## 四葉社会保険労務士事務所能做什么？\n\n位于文京区小日向的四葉社会保険労務士事務所，承接**年次有给休假规程・就业规则的整备、计划年休的劳使协定、取得状况管理表与通知机制的建立、容易取得休假的业务分担整理**。**咨询免费。** 费用请参阅[报酬额表](/zh/labor/ryokin)。\n\n此外，若未取得部分的请求或纷争已经发生，会为您介绍直接委任律师。本事务所不收取介绍费。\n\n## 常见问题\n\n**Q. 未让员工取得每年5天，会马上受罚吗？**\nA. 未让其取得时，依劳动基准法第120条会成为30万日元以下罚金的对象。实务上常先经过监督署的指导，但这不表示可以放置违反状态不管。请先掌握取得状况，并以指定时季等方式进行改善。\n\n**Q. 未使用的有给休假，可以由公司买回吗？**\nA. 原则上不行。以金钱买回法定年次有给休假，违反促进取得的制度宗旨。例外上，因时效而消灭的部分、退职时的未使用部分，在一定范围内买回并无妨。请在就业规则等整理后进行。\n\n**Q. 年次有给休假的时效是几年？**\nA. 2年（劳动基准法第115条）。自赋予日起经过2年的部分会因时效而消灭，之后就无法取得。包含递延部分在内，都必须以2年期限来管理。\n\n**Q. 员工说「不休有给休假也没关系」，还是需要指定时季吗？**\nA. 每年5天的取得义务是使用者方面的义务。即使本人不希望取得，未达5天的部分，公司仍须指定时季让其取得。以计划年休的框架计划性地进行较为实际。\n\n## 本文依据\n\n- 日本《劳动基准法》（労働基準法，昭和22年法律第49号）第39条第1项・第7项（年次有给休假及每年5天的指定时季义务）、第120条（30万日元以下罚金）、第115条（请求权时效2年）\n- 每年5天取得义务的施行为2019年4月1日（修正劳动基准法。依厚生劳动省・都道府县劳动局公表资料确认）\n- 关于年次有给休假的买回，法定年假因违反促进取得宗旨而原则上不可、时效消灭部分・退职时未使用部分在一定范围内可，这是依行政解释的一般论\n- 条文编号・时效期间・罚则，依厚生劳动省・都道府县劳动局等公表资料确认（2026年8月时点）\n\n本文并未决定到「该向谁咨询」为止。年次有给休假规程・就业规则的整备、计划年休的劳使协定、取得状况的管理・通知机制建立是社会保险劳务士的业务。未取得部分的请求、有给休假相关纷争是律师的业务。取得有给休假所伴随的薪资计算・源泉征收・年终调整，薪资计算是社会保险劳务士、税务是税理士的业务。本事务所不收取介绍费。向四葉社会保険労務士事務所咨询时的费用整理于[报酬额表](/zh/labor/ryokin)，常被询问的问题整理于[常见问答](/zh/labor/faq)。\n\n本文为一般性的信息提供。因应个别情事的判断，由具备资格者在面谈后进行。撰文者为[浦松丈二](/zh/about/uramatsu)（社会保险劳务士・行政书士・宅地建物取引士）。",
+          "category": "手续与期限",
+          "keywords": [
+            "每年5天 有给休假 取得义务",
+            "年次有给休假 5天 指定时季",
+            "不让员工休假 罚则",
+            "有给休假 时效 2年",
+            "年次有给休假 休不完",
+            "有给休假 意识改革"
+          ],
+          "tags": [
+            "年次有给休假",
+            "有给休假",
+            "劳动基准法",
+            "劳务管理",
+            "社会保险劳务士"
+          ],
+          "author": {
+            "name": "浦松 丈二",
+            "title": "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+          },
+          "faq": [
+            {
+              "question": "未让员工取得每年5天，会马上受罚吗？",
+              "answer": "未让其取得时，依劳动基准法第120条会成为30万日元以下罚金的对象。实务上常先经过监督署的指导，但这不表示可以放置违反状态不管。请先掌握取得状况，并以指定时季等方式进行改善。"
+            },
+            {
+              "question": "未使用的有给休假，可以由公司买回吗？",
+              "answer": "原则上不行。以金钱买回法定年次有给休假，违反促进取得的制度宗旨。例外上，因时效而消灭的部分、退职时的未使用部分，在一定范围内买回并无妨。请在就业规则等整理后进行。"
+            },
+            {
+              "question": "年次有给休假的时效是几年？",
+              "answer": "2年（劳动基准法第115条）。自赋予日起经过2年的部分会因时效而消灭，之后就无法取得。包含递延部分在内，都必须以2年期限来管理。"
+            },
+            {
+              "question": "员工说「不休有给休假也没关系」，还是需要指定时季吗？",
+              "answer": "每年5天的取得义务是使用者方面的义务。即使本人不希望取得，未达5天的部分，公司仍须指定时季让其取得。以计划年休的框架计划性地进行较为实际。"
             }
           ]
         }
