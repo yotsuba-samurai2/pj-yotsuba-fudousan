@@ -1,8 +1,8 @@
 /**
- * 相続コラム（行政書士）シリーズ（第1号〜第3号）投入スクリプト
+ * 相続コラム（行政書士）シリーズ（第1号〜第7号・4言語）投入スクリプト
  *
  * 対象＝luck428.com /legal/column（business=legal）。
- * 原稿＝scripts/legal-columns/NN-*.md。
+ * 原稿＝scripts/legal-columns/NN-*.md（ja）＋{en,zh-tw,zh}/NN-*.md（翻訳）。
  * 法令・公的資料は実装時に一次確認済み（2026-08-16）：
  *   - 文京区「【受付は午後4時まで】戸籍証明書等の広域交付」（更新日 2026年4月9日）
  *   - 法務局「法定相続情報証明制度の具体的な手続について」（更新日 2024年4月1日）
@@ -33,6 +33,14 @@ import { resolve, join } from "path";
 
 type Faq = { question: string; answer: string };
 
+type Translation = {
+  title: string;
+  excerpt: string;
+  content: string;
+  category?: string;
+  faq?: Faq[];
+};
+
 type SeedColumn = {
   business: "legal";
   slug: string;
@@ -47,6 +55,7 @@ type SeedColumn = {
   tags: string[];
   locales: string[];
   faq: Faq[];
+  translations: { en: Translation; "zh-tw": Translation; zh: Translation };
 };
 
 const AUTHOR = {
@@ -407,10 +416,17 @@ function toPlainText(md: string): string {
     .trim();
 }
 
-/** 「## よくある質問」節から **Q. …** / A. … の組をパースする */
-function parseFaq(content: string, file: string): Faq[] {
-  const m = content.match(/## よくある質問\n([\s\S]*?)(?=\n## |$)/);
-  if (!m) throw new Error(`${file}: 「## よくある質問」節が見つかりません`);
+const FAQ_HEADINGS: Record<string, string> = {
+  ja: "よくある質問",
+  en: "FAQ",
+  "zh-tw": "常見問題",
+  zh: "常见问题",
+};
+
+/** FAQ節から **Q. …** / A. … の組をパースする（見出しはロケール別） */
+function parseFaq(content: string, file: string, heading = "よくある質問"): Faq[] {
+  const m = content.match(new RegExp(`## ${heading}\\n([\\s\\S]*?)(?=\\n## |$)`));
+  if (!m) throw new Error(`${file}: 「## ${heading}」節が見つかりません`);
   const block = m[1];
   const faqs: Faq[] = [];
   const re = /\*\*Q\.\s*([\s\S]*?)\*\*\n(A\.\s*[\s\S]*?)(?=\n\*\*Q\.|\s*$)/g;
@@ -423,6 +439,32 @@ function parseFaq(content: string, file: string): Faq[] {
   }
   if (faqs.length === 0) throw new Error(`${file}: FAQを1件もパースできません`);
   return faqs;
+}
+
+function parseFrontmatter(raw: string, label: string): { meta: Record<string, string>; body: string } {
+  const m = raw.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
+  if (!m) throw new Error(`${label}: frontmatterが見つかりません`);
+  const meta: Record<string, string> = {};
+  for (const line of m[1].split("\n")) {
+    const kv = line.match(/^([a-zA-Z-]+):\s*(.*)$/);
+    if (kv) meta[kv[1]] = kv[2].replace(/^"(.*)"$/, "$1").trim();
+  }
+  for (const key of ["title", "excerpt", "category"]) {
+    if (!meta[key]) throw new Error(`${label}: frontmatterに ${key} がありません`);
+  }
+  return { meta, body: m[2].trim() };
+}
+
+function readTranslation(locale: "en" | "zh-tw" | "zh", file: string): Translation {
+  const p = resolve(process.cwd(), "scripts", "legal-columns", locale, file);
+  const { meta, body } = parseFrontmatter(readFileSync(p, "utf-8"), `${locale}/${file}`);
+  return {
+    title: meta.title,
+    excerpt: meta.excerpt,
+    category: meta.category,
+    content: body,
+    faq: parseFaq(body, `${locale}/${file}`, FAQ_HEADINGS[locale]),
+  };
 }
 
 function buildColumns(): SeedColumn[] {
@@ -442,8 +484,13 @@ function buildColumns(): SeedColumn[] {
       author: { ...AUTHOR },
       keywords: a.keywords,
       tags: a.tags,
-      locales: ["ja"],
+      locales: ["ja", "en", "zh-tw", "zh"],
       faq,
+      translations: {
+        en: readTranslation("en", a.file),
+        "zh-tw": readTranslation("zh-tw", a.file),
+        zh: readTranslation("zh", a.file),
+      },
     };
   });
 }
@@ -510,6 +557,30 @@ function verify(cols: SeedColumn[]): string[] {
     if (!c.content.includes("一般的な情報提供")) {
       notes.push(`NG: ${c.slug} に判断留保の記載なし`);
     }
+
+    // 翻訳整合（4言語）
+    const jaH2 = (c.content.match(/^## /gm) || []).length;
+    for (const loc of ["en", "zh-tw", "zh"] as const) {
+      const tr = c.translations[loc];
+      if (!tr.title.trim() || !tr.excerpt.trim() || !tr.content.trim()) {
+        notes.push(`NG: ${c.slug} ${loc} にtitle/excerpt/content欠落`);
+      }
+      const trH2 = (tr.content.match(/^## /gm) || []).length;
+      if (trH2 !== jaH2) notes.push(`NG: ${c.slug} ${loc} のH2数不一致（${trH2}/${jaH2}）`);
+      if (tr.faq && tr.faq.length !== c.faq.length) {
+        notes.push(`NG: ${c.slug} ${loc} のFAQ件数不一致（${tr.faq.length}/${c.faq.length}）`);
+      }
+      if (/\]\(\/(?!\/)/.test(tr.content)) notes.push(`NG: ${c.slug} ${loc} に相対内部リンクあり`);
+    }
+    if (!c.translations.en.content.toLowerCase().includes("independent business")) {
+      notes.push(`NG: ${c.slug} en に分離受任の明示なし`);
+    }
+    if (!c.translations["zh-tw"].content.includes("獨立的事業體")) {
+      notes.push(`NG: ${c.slug} zh-tw に分離受任の明示なし`);
+    }
+    if (!c.translations.zh.content.includes("独立的事业体")) {
+      notes.push(`NG: ${c.slug} zh に分離受任の明示なし`);
+    }
   }
   return notes;
 }
@@ -532,7 +603,7 @@ async function main() {
       process.exit(1);
     }
     const out = resolve(process.cwd(), "src/lib/data/souzoku-legal-columns-seed.ts");
-    const header = `// このファイルは自動生成（npx tsx scripts/seed-souzoku-legal-columns.ts --emit-ts）。直接編集しない。\n// 原稿の正本＝scripts/legal-columns/02-souzoku-hajime-koseki-chosa-bunkyo.md。修正はmd側→再生成で行う。\n// 用途＝/admin/columns/seed-souzoku-legal からの管理者セッション経由バルクupsert（seed-denshi-keiyaku と同型）。\n\nexport type SouzokuLegalSeedColumn = {\n  business: "legal";\n  slug: string;\n  title: string;\n  date: string;\n  category: string;\n  excerpt: string;\n  content: string;\n  status: "published";\n  author: { name: string; title: string };\n  keywords: string[];\n  tags: string[];\n  locales: ("ja" | "en" | "zh-tw" | "zh")[];\n  faq: { question: string; answer: string }[];\n};\n\nexport const SOUZOKU_LEGAL_COLUMNS_SEED: SouzokuLegalSeedColumn[] = `;
+    const header = `// このファイルは自動生成（npx tsx scripts/seed-souzoku-legal-columns.ts --emit-ts）。直接編集しない。\n// 原稿の正本＝scripts/legal-columns/NN-*.md（ja）＋{en,zh-tw,zh}/NN-*.md（翻訳）。修正はmd側→再生成で行う。\n// 用途＝/admin/columns/seed-souzoku-legal からの管理者セッション経由バルクupsert（seed-denshi-keiyaku と同型）。\n\nexport type SouzokuLegalSeedColumn = {\n  business: "legal";\n  slug: string;\n  title: string;\n  date: string;\n  category: string;\n  excerpt: string;\n  content: string;\n  status: "published";\n  author: { name: string; title: string };\n  keywords: string[];\n  tags: string[];\n  locales: ("ja" | "en" | "zh-tw" | "zh")[];\n  faq: { question: string; answer: string }[];\n  translations: {\n    en: { title: string; excerpt: string; content: string; category?: string; faq?: { question: string; answer: string }[] };\n    "zh-tw": { title: string; excerpt: string; content: string; category?: string; faq?: { question: string; answer: string }[] };\n    zh: { title: string; excerpt: string; content: string; category?: string; faq?: { question: string; answer: string }[] };\n  };\n};\n\nexport const SOUZOKU_LEGAL_COLUMNS_SEED: SouzokuLegalSeedColumn[] = `;
     writeFileSync(out, header + JSON.stringify(cols, null, 2) + ";\n");
     console.log(`emit-ts → ${out}（${cols.length}本）`);
     return;
