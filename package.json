@@ -12,7 +12,12 @@
     "lint": "eslint",
     "test": "vitest run",
     "column:check": "npx tsx scripts/seed-labor-columns.ts",
-    "column:emit": "npx tsx scripts/seed-labor-columns.ts --emit-ts"
+    "column:emit": "npx tsx scripts/seed-labor-columns.ts --emit-ts",
+    "column:plan": "node scripts/column-plan.mjs",
+    "column:draft": "node scripts/column-draft.mjs",
+    "column:publish-prep": "node scripts/column-publish-prep.mjs",
+    "column:start:deprecated": "node scripts/column-start.mjs",
+    "column:continue:deprecated": "node scripts/column-continue.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.82.0",
