@@ -65,10 +65,46 @@ const REQUIRED_HUB_LINKS: Record<string, string[]> = {
     "/legal/ryokin",
     "/souzoku",
   ],
+  "isan-bunkatsu-kyougisho": [
+    "/legal/services/inheritance",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/souzoku",
+    "/legal/column/souzoku-hajime-koseki-chosa-bunkyo",
+  ],
 };
 
 /** 表示コンプライアンス上の禁止語 */
 const FORBIDDEN_WORDS = ["ワンストップ", "一括対応", "一体で", "one-stop", "一気通貫"];
+
+/** 記事ごとに必ず含めるべき表現（機械ゲート。最低限の合否判定） */
+const REQUIRED_PHRASES: Record<string, string[]> = {
+  "souzoku-hajime-koseki-chosa-bunkyo": [
+    "courts.go.jp/saiban/syurui/syurui_kazi/kazi_06_13",
+    "nta.go.jp/taxes/shiraberu/taxanswer/sozoku/4205",
+    "必要な戸籍の範囲、請求先の数、手続にかけられる時間",
+  ],
+  "isan-bunkatsu-kyougisho": [
+    "10年",
+    "法定相続情報一覧図",
+    "実印",
+    "印鑑証明書",
+    "houmukyoku.moj.go.jp/homu/page7_000014",
+    "houmukyoku.moj.go.jp/sapporo/page000236",
+  ],
+};
+
+/** 記事ごとに含めてはならない表現 */
+const FORBIDDEN_PHRASES: Record<string, string[]> = {
+  "souzoku-hajime-koseki-chosa-bunkyo": ["トレードオフ"],
+  "isan-bunkatsu-kyougisho": ["独占業務"],
+};
+
+/** 本セット外へ張る既存legalコラムslug（リポジトリの他シードで実在確認済み） */
+const KNOWN_EXISTING_LEGAL_SLUGS = new Set([
+  "taiwan-inkan-shomei-isan-bunkatsu",
+  "denshi-keiyaku-enpo-inin-kami",
+]);
 
 const ARTICLES: Array<{
   file: string;
@@ -95,6 +131,23 @@ const ARTICLES: Array<{
       "行政書士 相続 文京区 相談",
     ],
     tags: ["相続", "戸籍", "相続人調査", "広域交付", "相続関係説明図", "法定相続情報一覧図"],
+  },
+  {
+    file: "03-isan-bunkatsu-kyougisho.md",
+    slug: "isan-bunkatsu-kyougisho",
+    title: "遺産分割協議書は自分で作れる？必要書類・書き方のポイントと行政書士に頼めること",
+    category: "相続の手続き（行政書士の実務から）",
+    excerpt:
+      "遺産分割協議書は、相続人全員が遺産の分け方について合意した内容を文書にしたものです。法定相続情報一覧図との違い、実印・印鑑証明書の使い分け、行政書士に頼める範囲と頼めないことを文京区の実務に沿って整理しました。",
+    keywords: [
+      "遺産分割協議書 作り方",
+      "遺産分割協議書 必要書類",
+      "遺産分割協議書 行政書士",
+      "遺産分割協議書 印鑑証明書",
+      "遺産分割協議書 相続登記",
+      "遺産分割協議書 法定相続情報一覧図 違い",
+    ],
+    tags: ["遺産分割協議書", "相続", "印鑑証明書", "法定相続情報一覧図", "相続登記", "行政書士"],
   },
 ];
 
@@ -164,6 +217,14 @@ function verify(cols: SeedColumn[]): string[] {
       if (!c.content.includes(`](${hub})`)) notes.push(`NG: ${c.slug} に ${hub} リンクなし`);
     }
 
+    // /legal/column/<slug> リンク＝本セット内 or 既存実在slugのみ許可
+    const legalLinks = [...c.content.matchAll(/\]\(\/legal\/column\/([a-z0-9-]+)\)/g)].map((x) => x[1]);
+    for (const l of legalLinks) {
+      if (!slugs.has(l) && !KNOWN_EXISTING_LEGAL_SLUGS.has(l)) {
+        notes.push(`NG: ${c.slug} → 不明legal slug ${l}`);
+      }
+    }
+
     for (const w of FORBIDDEN_WORDS) {
       if (c.content.includes(w)) notes.push(`NG: ${c.slug} に禁止語「${w}」あり`);
     }
@@ -189,19 +250,13 @@ function verify(cols: SeedColumn[]): string[] {
     if (!c.content.includes("## この記事の出典（一次情報）")) {
       notes.push(`NG: ${c.slug} に出典節なし`);
     }
-    // ユーザー修正事項1：裁判所・国税庁を出典に追加
-    if (!c.content.includes("courts.go.jp/saiban/syurui/syurui_kazi/kazi_06_13")) {
-      notes.push(`NG: ${c.slug} の出典に裁判所「相続の放棄の申述」がない`);
+
+    // 記事ごとの必須表現・禁止表現
+    for (const phrase of REQUIRED_PHRASES[c.slug] ?? []) {
+      if (!c.content.includes(phrase)) notes.push(`NG: ${c.slug} に必須表現「${phrase}」なし`);
     }
-    if (!c.content.includes("nta.go.jp/taxes/shiraberu/taxanswer/sozoku/4205")) {
-      notes.push(`NG: ${c.slug} の出典に国税庁「相続税の申告と納税」がない`);
-    }
-    // ユーザー修正事項2：中立的な選択基準の文言（「トレードオフ」を使わない）
-    if (c.content.includes("トレードオフ")) {
-      notes.push(`NG: ${c.slug} に「トレードオフ」表現が残っている`);
-    }
-    if (!c.content.includes("必要な戸籍の範囲、請求先の数、手続にかけられる時間")) {
-      notes.push(`NG: ${c.slug} に本人請求/依頼を選ぶ中立的な基準の記載がない`);
+    for (const phrase of FORBIDDEN_PHRASES[c.slug] ?? []) {
+      if (c.content.includes(phrase)) notes.push(`NG: ${c.slug} に禁止表現「${phrase}」あり`);
     }
 
     if (!c.content.includes("一般的な情報提供")) {

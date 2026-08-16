@@ -14,9 +14,9 @@ type ItemResult = {
 };
 
 /**
- * 相続コラム（行政書士）第1号のupsert投入。
+ * 相続コラム（行政書士）シリーズのupsert投入。
  *
- * scripts/legal-columns/02-souzoku-hajime-koseki-chosa-bunkyo.md から
+ * scripts/legal-columns/NN-*.md から
  * `npx tsx scripts/seed-souzoku-legal-columns.ts --emit-ts` で焼き込んだ
  * src/lib/data/souzoku-legal-columns-seed.ts を、ブラウザの管理者セッション経由で
  * slug基準の冪等upsertで投入する（seed-denshi-keiyaku と同型・再実行しても重複しない）。
@@ -64,10 +64,10 @@ export default function SeedSouzokuLegalPage() {
 
   return (
     <div className="p-6">
-      <h1 className="mb-1 text-lg font-bold">相続コラム（行政書士）第1号 投入</h1>
+      <h1 className="mb-1 text-lg font-bold">相続コラム（行政書士）投入</h1>
       <p className="mb-4 text-sm text-text-muted">
         business=legal／locales=[&quot;ja&quot;]／status=published でupsert投入します（slug基準・冪等）。
-        再実行しても重複しません。原稿の正本＝scripts/legal-columns/02-souzoku-hajime-koseki-chosa-bunkyo.md。
+        再実行しても重複しません。原稿の正本＝scripts/legal-columns/NN-*.md。
       </p>
 
       <div className="max-w-2xl rounded-xl border border-border bg-surface p-6">
