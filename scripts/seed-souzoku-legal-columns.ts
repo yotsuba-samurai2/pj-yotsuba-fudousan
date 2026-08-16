@@ -109,6 +109,17 @@ const REQUIRED_HUB_LINKS: Record<string, string[]> = {
     "/legal/column/isan-bunkatsu-kyougisho",
     "/legal/column/houtei-souzoku-jouhou-ichiran-zu",
   ],
+  "houtei-souzoku-bun": [
+    "/legal/services/inheritance",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/souzoku",
+    "/legal/column/souzoku-hajime-koseki-chosa-bunkyo",
+    "/legal/column/isan-bunkatsu-kyougisho",
+    "/legal/column/houtei-souzoku-jouhou-ichiran-zu",
+    "/legal/column/jihitsu-kosei-yuigon",
+    "/legal/column/souzoku-kaigai-gaikokuseki",
+  ],
 };
 
 /** 表示コンプライアンス上の禁止語 */
@@ -200,6 +211,26 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "日本行政書士会連合会",
     "3か月の熟慮期間",
   ],
+  "houtei-souzoku-bun": [
+    "法定相続人",
+    "法定相続分",
+    "代襲相続",
+    "再代襲",
+    "半血兄弟姉妹",
+    "内縁",
+    "相続欠格",
+    "廃除",
+    "相続放棄",
+    "配偶者",
+    "共同相続人の相続割合について民法が定める基準",
+    "相続債務",
+    "法定相続分に応じて承継",
+    "第887条",
+    "第889条",
+    "第890条",
+    "第900条",
+    "第901条",
+  ],
 };
 
 /** 記事ごとに含めてはならない表現 */
@@ -225,6 +256,10 @@ const FORBIDDEN_PHRASES: Record<string, string[]> = {
     "台湾籍なら必ず台湾法",
   ],
   "souzoku-zaisan-mokuroku": ["売却判断"],
+  "houtei-souzoku-bun": [
+    "相続人の範囲・相続分の法的確定",
+    "各2分の1",
+  ],
 };
 
 /** 本セット外へ張る既存legalコラムslug（リポジトリの他シードで実在確認済み） */
@@ -344,6 +379,23 @@ const ARTICLES: Array<{
       "相続 債務 調査",
     ],
     tags: ["相続財産", "財産目録", "所有不動産記録証明制度", "相続債務", "行政書士"],
+  },
+  {
+    file: "08-houtei-souzoku-bun.md",
+    slug: "houtei-souzoku-bun",
+    title: "法定相続人と相続分の基本──相続順位・代襲相続・法定相続分を整理",
+    category: "相続の手続き（行政書士の実務から）",
+    excerpt:
+      "相続人になれる範囲と優先順位は民法で決まっています。相続順位の早見表、代襲相続・再代襲、半血兄弟姉妹の相続分、配偶者・内縁、法定相続分の基本を文京区の行政書士が整理しました。",
+    keywords: [
+      "法定相続人 相続順位",
+      "法定相続分 計算",
+      "代襲相続 再代襲",
+      "半血兄弟姉妹 相続分",
+      "配偶者 相続分",
+      "相続 行政書士 文京区",
+    ],
+    tags: ["法定相続人", "法定相続分", "相続順位", "代襲相続", "行政書士"],
   },
 ];
 
