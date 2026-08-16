@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-16T00:24:35.934Z",
+  "generatedAt": "2026-08-16T00:48:42.158Z",
   "note": "労務コラム（4本）。報酬額表 v18 の決定と相場調査から起こした原稿md（scripts/labor-columns/）から生成。--write でupsert。",
-  "articleCount": 42,
+  "articleCount": 43,
   "verification": [
     "OK: 全チェック通過"
   ],
@@ -7623,6 +7623,189 @@
             {
               "question": "员工说「不休有给休假也没关系」，还是需要指定时季吗？",
               "answer": "每年5天的取得义务是使用者方面的义务。即使本人不希望取得，未达5天的部分，公司仍须指定时季让其取得。以计划年休的框架计划性地进行较为实际。"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "business": "labor",
+      "slug": "group-home-yakin-shukuchoku-roudou-chigai",
+      "title": "グループホームの夜勤と宿直、労務では何が違うのか",
+      "date": "2026-09-01",
+      "category": "労働法の基本",
+      "excerpt": "グループホームの夜間体制は「夜勤」と「宿直」で労務管理が大きく変わります。夜勤は深夜帯（22時〜5時）の介護・見守りを行う労働時間で、深夜割増（25%以上）と、時間外なら36協定が必要です。宿直は軽度の断続的業務で、所轄労働基準監督署の許可があれば労働時間規制の適用除外（労働基準法第41条第3号）。ただし呼び名ではなく実態で判断され、介護・見守りなら夜勤として扱われます。",
+      "content": "**結論（先に要点）**：グループホームの夜間体制は、**「夜勤」と「宿直」で労務管理がまったく違います**。夜勤は、深夜帯（午後10時〜午前5時）に通常の介護・見守り・支援を行う**労働時間**で、深夜割増（25%以上）と、時間外労働なら36協定と時間外割増が必要です。宿直は、本来の業務をせず巡回・電話対応など軽度の断続的業務だけを行う勤務で、**所轄労働基準監督署の許可**を受ければ労働時間・…（全6453字）",
+      "status": "published",
+      "author": {
+        "name": "浦松 丈二",
+        "title": "社会保険労務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+      },
+      "keywords": [
+        "グループホーム 夜勤 宿直 違い",
+        "障害者グループホーム 宿直 労働時間",
+        "グループホーム 夜勤 36協定",
+        "宿日直許可 要件",
+        "夜勤 宿直 深夜割増",
+        "障害福祉 人員配置基準 労務"
+      ],
+      "tags": [
+        "グループホーム",
+        "夜勤",
+        "宿直",
+        "労働時間",
+        "障害福祉",
+        "社会保険労務士"
+      ],
+      "locales": [],
+      "faq": [
+        {
+          "question": "グループホームの夜間勤務は、宿直にすれば労働時間の管理をしなくてよいですか？",
+          "answer": "呼び名を宿直に変えても、実態が利用者の介護・見守りであれば労働時間として扱われます。宿日直許可を受けられるのは、巡回・電話対応など軽度の断続的業務で、睡眠時間を確保できる場合に限られます。まず実態を整理し、個別に判断する必要があります。"
+        },
+        {
+          "question": "宿直の許可を受けていれば、深夜割増は不要ですか？",
+          "answer": "許可を受けた宿直は労働時間規制の適用除外のため、原則として深夜割増の対象になりません。ただし、許可を受けていても、実際に介護などの実労働をした時間は労働時間として賃金（深夜割増を含む）を支払う必要があります。"
+        },
+        {
+          "question": "夜勤の仮眠時間は、休憩として労働時間から外せますか？",
+          "answer": "仮眠時間中でもコール対応や緊急時の対応を義務付けている場合は、自由に休める時間ではないため、休憩として扱えず労働時間（手待時間）になります。仮眠を休憩として外すには、その間の対応義務をなくし、実質的に自由に休める状態を確保する必要があります。"
+        },
+        {
+          "question": "夜勤を含むシフトは、変形労働時間制にすれば深夜割増が不要になりますか？",
+          "answer": "なりません。変形労働時間制は、所定労働時間を期間の総枠で調整する仕組みであり、深夜（22時〜5時）の割増賃金は変形労働時間制でも支払う必要があります（労働基準法第37条第3項）。"
+        }
+      ],
+      "translations": {
+        "en": {
+          "title": "Group home night shifts and \"night duty\" (shukuchoku): how they differ for labour management",
+          "excerpt": "At a group home, whether a worker is on a \"night shift\" or \"night duty (shukuchoku)\" changes labour management completely. A night shift is working time spent doing ordinary care and monitoring during the late-night hours (10 p.m. to 5 a.m.), and requires a late-night premium (25% or more) plus a 36 Agreement and overtime premium if it is overtime. Night duty, by contrast, involves only light, intermittent work such as patrolling and answering the phone, and — with the permission of the director of the labour standards inspection office — is exempt from the rules on working hours, breaks and days off (Labor Standards Act, Article 41, item 3). But even if it is called \"night duty,\" if the reality is care and monitoring, it is treated as a night shift. This article explains the difference with a practical eye on how to think about the actual work schedule.",
+          "content": "**In short:** At a group home, whether the night-time arrangement is a **\"night shift\"** or **\"night duty (shukuchoku)\"** changes labour management completely. A **night shift** is **working time** spent doing ordinary care, monitoring and support during the late-night hours (10 p.m. to 5 a.m.), and it requires a **late-night premium (25% or more)** plus, where there is overtime, a **36 Agreement** and an overtime premium. **Night duty**, by contrast, involves only light, intermittent work such as patrolling and answering the phone, and — where the **director of the labour standards inspection office has granted permission** — is exempt from the rules on working hours, breaks and days off (Labor Standards Act, Article 41, item 3). But **even if it is called \"night duty,\" if the reality is care and monitoring, it is treated as a night shift**. This article explains the difference between the two with a practical eye on how to think about the actual work schedule.\n\n\"What is the difference between a night shift and night duty?\" and \"We use night duty, so we must be fine\" — these are questions we often hear from the owners and managers of disability-welfare establishments, especially group homes (communal living support). This page is for operators who run disability group homes, and for those who are about to open one. We set out the labour-management difference between night shifts and night duty, how to think about working hours, and how to keep attendance records. Judging an individual labour dispute is outside the scope of this article.\n\n## How do night shifts and night duty differ for labour management?\n\nAlthough both mean \"working at night,\" a night shift and night duty occupy different positions in law.\n\n| Aspect | Night shift | Night duty (where permission has been granted) |\n|---|---|---|\n| Actual work | Ordinary care, monitoring and support | Light, intermittent work such as patrolling, answering the phone and standing by for emergencies |\n| Working time | Counts as working time | Exempt from the rules on working hours, breaks and days off |\n| Late-night premium | 25% or more for 10 p.m.–5 a.m. | In principle not required (because it is not working time) |\n| 36 Agreement | Required where there is overtime or holiday work | In principle not required (because it is not overtime) |\n| Permission / filing | Not required (handled as working time) | Permission of the director of the labour standards inspection office required |\n| Pay | A late-night and overtime premium is paid | A night-duty allowance (the amount is set by agreement between labour and management) |\n\nThe basis on which night duty is exempt from the working-hours rules is Article 41, item 3 of the Labor Standards Act. It provides that, for \"intermittent work\" for which the employer has obtained the permission of the director of the labour standards inspection office, the provisions on working hours, breaks and days off do not apply. However, this is premised on **\"doing only light, intermittent work in a way that secures sleep.\"** This is explained in more detail below.\n\n## What happens if it is called \"night duty\" but is actually a night shift?\n\nThe answer, in short, is that **the reality, not the label, decides**. Even if the duty is called \"night duty,\" if what the worker actually does is care and monitoring — helping users to the toilet, repositioning them, answering call bells and making scheduled rounds — that is not \"intermittent work\" but **ordinary work**. In that case the labour standards inspection office will in principle not grant night-duty permission, and the time is handled as **working time**.\n\nFor example, take a group home for five users in which, during the night (from evening until the next morning), one staff member stays in the residence, responds to call bells and assists, and makes rounds every two hours. Even if this arrangement is called \"night duty,\" the reality is \"care and monitoring,\" so it is subject to working-hours rules, premium pay and a 36 Agreement as a night shift. Conversely, if the users are mostly asleep at night and the staff member is only responsible for responding to emergencies and making a few rounds, the arrangement can qualify for night-duty permission. **Which it is depends on the actual circumstances of each establishment.**\n\n## Where is the line between time that counts as working time and time that does not?\n\nWorking time is **time during which the worker is under the employer's direction and supervision**. In addition to time actually spent working, such as assisting and making rounds, the following can also count as working time.\n\n- **Time spent on standby, ready to be called (so-called \"hand-waiting\" time):** time spent standing by, ready to work at any moment, counts as working time even if no actual work is performed.\n- **Time during a nap in which the worker is still obliged to answer calls:** even during a nap, if the worker is obliged to answer call bells or respond to emergencies, the time may be judged as working time because the worker is under the employer's direction and supervision.\n\nCase law likewise treats time as working time where the worker is obliged to remain on standby in the night-duty room even during a nap or a break. **Simply labelling time a \"break\" or a \"nap\" does not make it working time exempt if, in reality, the worker is not free to use the time.**\n\n## How should breaks, naps and standby be handled on the work schedule?\n\nWhen drawing up a work schedule, the following three should be considered separately.\n\n1. **Break:** time given in the middle of working hours for the worker to use freely. Only a \"break that is freely usable\" can be excluded from working time.\n2. **Nap:** a nap can be treated as a break only if the worker is free to rest, without an obligation to answer calls. A nap on the premise of answering calls is working time (hand-waiting time).\n3. **Standby:** time spent standing by, ready to be called, is in principle working time.\n\nAccordingly, even if the schedule says \"2-hour break,\" if the worker is in fact answering call bells many times during that period, it is not a break, and the time counts as working time subject to the late-night premium. **The figures on the schedule must match the reality.**\n\n## What is the relationship with night-duty permission?\n\nTo be exempt from the working-hours rules as night duty, **the permission of the director of the labour standards inspection office** is required. The permission covers \"intermittent night duty or day duty\" under Article 23 of the Ordinance for Enforcement of the Labor Standards Act, and is premised on roughly the following.\n\n- **Not performing the worker's ordinary duties** (patrolling, receiving documents and phone calls, standing by for emergencies, and the like)\n- **Ordinarily having almost no need to work**\n- For night duty, **being able to secure sufficient sleep during the night**\n\nPermission is not granted mechanically based on what is written in the application. **The labour standards inspection office judges each case on the basis of the actual work.** Night work at a group home that ordinarily involves care and monitoring is unlikely to meet these requirements, and will generally not qualify for night-duty permission. Do not lightly assume that \"because it is night duty, working-hours management is unnecessary.\" Furthermore, even where permission has been granted, **time actually spent working, such as providing care, must be paid as working time.**\n\n## What is the relationship with the 36 Agreement and variable working-hours systems?\n\nFor an arrangement that includes night shifts, both the 36 Agreement and a variable working-hours system should be put in order.\n\n- **36 Agreement:** to have workers perform overtime or holiday work, an agreement between labour and management must be concluded and filed with the director of the labour standards inspection office (Labor Standards Act, Article 36). Where a night shift involves overtime beyond the statutory working hours (8 hours a day, 40 hours a week), concluding and filing a 36 Agreement is the precondition. For the upper limits, see [the upper limit on overtime is set by the 36 Agreement](/en/labor/column/36-kyotei-zangyo-sharoushi-doko-made).\n- **Variable working-hours system:** shift work that includes night shifts is often operated under a monthly or yearly variable working-hours system, under which the total scheduled hours can be kept within the period even if a particular day or week is long. However, **the late-night premium (10 p.m.–5 a.m.) is still required under a variable working-hours system.**\n\nBoth need to be consistent with the work rules and the wage regulations. For when work rules are required, see [from how many employees are work rules mandatory](/en/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo).\n\n## What happens to the late-night premium?\n\nWhere a worker is made to work at night, between 10 p.m. and 5 a.m., the employer is obliged to pay a premium of **at least 25% of the ordinary wage** (Labor Standards Act, Article 37, paragraph 3). Where overtime extends into the late-night hours, the overtime premium (25% or more) and the late-night premium (25% or more) are combined, making **50% or more**; where statutory holiday work extends into the late-night hours, it is **60% or more**.\n\nBecause a night shift includes the late-night hours, the late-night premium is a point that must always be kept in mind in practice. In payroll, the ordinary hourly wage and the premium rates must be calculated separately. For the approach to payroll, see [how much does it cost to entrust payroll to a Shakai Hoken Roumushi](/en/labor/column/kyuyo-keisan-soba-sharoushi).\n\n## How should attendance records be kept?\n\nFor both night shifts and night duty, **the start and end times must be recorded by an objective method (a time card, time clock, attendance system, or the like)**. In addition, keeping the following records can serve as rebuttal evidence if it is claimed that \"the reality is a night shift.\"\n\n- The times and number of rounds, and the times and contents of call-bell responses\n- The actual state of naps and breaks\n- Who did what work during which time period (reconciling the shift table with actual records)\n\nIf the work schedule (the plan) and the actual records do not match, this is disadvantageous in a labour standards inspection or a claim for unpaid premium wages. **Record the \"reality,\" not the \"plan.\"**\n\n## What should an owner check before opening?\n\nBefore opening a group home, or before reviewing the night-time arrangement, check the following.\n\n1. The staffing standards and the category under the remuneration system (the night support structure add-on distinguishes \"where a night-shift worker is assigned\" from \"where a night-duty worker is assigned\")\n2. Whether night-duty permission is necessary and can be obtained (if the reality is care and monitoring, handle it as a night shift)\n3. The state of the 36 Agreement, the variable working-hours system and the work rules\n4. The method of recording attendance, and a mechanism for reconciling the shift table with actual records\n\nNote that the **designation application** for disability-welfare services and the documents filed with public agencies in connection with remuneration add-ons are the work of a Gyoseishoshi (administrative procedures legal specialist); securing and leasing a **property** is the work of a real estate business (real estate broker). Labour matters (work rules, the 36 Agreement, payroll) are the work of a Shakai Hoken Roumushi. At Yotsuba, each of these is a **separate business**, and each is engaged under a **separate contract**.\n\n## Who should be asked to do what?\n\n| What is done | Whose work it is |\n|---|---|\n| Putting in order the work rules, the 36 Agreement and the variable working-hours system; designing attendance management; calculating premium wages | **Shakai Hoken Roumushi** (this office) |\n| Preparing documents filed with public agencies, such as the designation application for disability-welfare services and filings for remuneration add-ons | **Gyoseishoshi** (四葉行政書士事務所 — a separate business) |\n| Securing and leasing the property | **Real estate** (a real estate broker) |\n| Claims for unpaid premium wages, disputes, labour tribunal proceedings and litigation | **Attorney** |\n\nPutting night-shift and night-duty labour matters in order is the work of a Shakai Hoken Roumushi. This office handles **designing working hours and premium pay that match the reality, and building the attendance-recording structure**. Work of a Gyoseishoshi, such as designation applications, and work of a real estate business, such as the property, are each engaged separately under a separate contract with a separate business.\n\n## What can 四葉社会保険労務士事務所 do?\n\n四葉社会保険労務士事務所, in Kohinata, Bunkyo City, handles **sorting out the reality of night shifts and night duty, putting in order the work rules, the 36 Agreement and a variable working-hours system, designing attendance management, and calculating premium wages**. For putting in order the staffing standards and labour matters of disability-welfare establishments, see [staffing standards and labour for disability-welfare establishments](/en/labor/services/jinin-kijun-roumu); for the overall picture of labour management in care and disability welfare, see [labour management for care and disability welfare](/en/labor/services/kaigo-roumu). **Consultation is free.** For fees, see [the fee schedule](/en/labor/ryokin).\n\nDesignation applications for disability-welfare services are handled by 四葉行政書士事務所 (a separate business, engaged under a separate contract). This office receives no referral fees.\n\n## Frequently asked questions\n\n**Q. If we make the night work at our group home \"night duty,\" do we no longer need to manage working hours?**\nA. Even if you change the label to night duty, if the reality is care and monitoring of users, the time is handled as working time. Night-duty permission can be obtained only for light, intermittent work such as patrolling and answering the phone, where sleep can be secured. First sort out the reality, and then judge each case individually.\n\n**Q. If we have night-duty permission, is the late-night premium unnecessary?**\nA. Because permitted night duty is exempt from the working-hours rules, it is in principle not subject to the late-night premium. However, even with permission, time actually spent working, such as providing care, must be paid as working time (including the late-night premium).\n\n**Q. Can a nap during a night shift be excluded from working time as a break?**\nA. If the worker is still obliged to answer call bells or respond to emergencies during the nap, the time is not freely usable, so it cannot be treated as a break and counts as working time (hand-waiting time). To exclude a nap as a break, the obligation to respond during that period must be removed, and a state in which the worker is in fact free to rest must be secured.\n\n**Q. If we use a variable working-hours system for a shift that includes night work, does the late-night premium become unnecessary?**\nA. No. A variable working-hours system is a mechanism for adjusting scheduled working hours within the total for the period; the late-night premium (10 p.m.–5 a.m.) must still be paid even under a variable working-hours system (Labor Standards Act, Article 37, paragraph 3).\n\n## Sources\n\n- Labor Standards Act (Act No. 49 of 1947), Article 32 (statutory working hours), Article 36 (36 Agreement), Article 37 (premium wages; late-night premium 25% or more), Article 41, item 3 (exemption for surveillance or intermittent work)\n- Ordinance for Enforcement of the Labor Standards Act (Ministry of Health and Welfare Ordinance No. 23 of 1947), Article 23 (permission for intermittent night duty or day duty)\n- Permission for night duty is premised on light, intermittent work (not performing the worker's ordinary duties; patrolling; receiving documents and phone calls; standing by for emergencies) with ordinarily almost no need to work. The labour standards inspection office judges each case on the basis of the actual work.\n- Whether time counts as working time depends on whether the worker is \"under the employer's direction and supervision.\" The statement that time on standby or during a nap counts as working time (hand-waiting time) where there is an obligation to answer calls is a general proposition based on administrative interpretation and case law.\n- The staffing standards for disability-welfare services (communal living support) and the night support structure add-on follow the remuneration notice and notifications of the Ministry of Health, Labour and Welfare and the practice of the designating authority (municipality). The unit amounts, categories and staffing of the add-on are revised each fiscal year, so please check the latest notice and notifications.\n- The late-night premium rate, the overtime premium rate and the approach to night-duty permission are based on materials published by the Ministry of Health, Labour and Welfare and the prefectural labour bureaus (as of August 2026).\n\nThis article does not decide whom to consult. Putting in order the work rules, the 36 Agreement and a variable working-hours system, designing attendance management and calculating premium wages is the work of a Shakai Hoken Roumushi. Preparing documents filed with public agencies, such as the designation application for disability-welfare services and filings for remuneration add-ons, is the work of a Gyoseishoshi; securing and leasing the property is the work of a real estate business (real estate broker). Claims for unpaid premium wages and disputes are the work of an attorney. 四葉社会保険労務士事務所 and 四葉行政書士事務所 are separate businesses, and each is engaged under a separate contract. This office receives no referral fees. For fees when consulting 四葉社会保険労務士事務所, see [the fee schedule](/en/labor/ryokin); for frequently asked questions, see [the FAQ](/en/labor/faq).\n\nThis article is general information. A judgment on individual circumstances is made by a qualified professional after a consultation. Written by [Joji Uramatsu](/en/about/uramatsu) (Shakai Hoken Roumushi, Gyoseishoshi, Registered Real Estate Transaction Specialist).",
+          "category": "Labor law basics",
+          "keywords": [
+            "group home night shift night duty difference",
+            "disability group home night duty working hours",
+            "group home night shift 36 agreement",
+            "night duty permission requirements",
+            "night shift night duty late-night premium",
+            "disability welfare staffing standards labour"
+          ],
+          "tags": [
+            "group home",
+            "night shift",
+            "night duty",
+            "working hours",
+            "disability welfare",
+            "Shakai Hoken Roumushi"
+          ],
+          "author": {
+            "name": "Joji Uramatsu",
+            "title": "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所"
+          },
+          "faq": [
+            {
+              "question": "If we make the night work at our group home \"night duty,\" do we no longer need to manage working hours?",
+              "answer": "Even if you change the label to night duty, if the reality is care and monitoring of users, the time is handled as working time. Night-duty permission can be obtained only for light, intermittent work such as patrolling and answering the phone, where sleep can be secured. First sort out the reality, and then judge each case individually."
+            },
+            {
+              "question": "If we have night-duty permission, is the late-night premium unnecessary?",
+              "answer": "Because permitted night duty is exempt from the working-hours rules, it is in principle not subject to the late-night premium. However, even with permission, time actually spent working, such as providing care, must be paid as working time (including the late-night premium)."
+            },
+            {
+              "question": "Can a nap during a night shift be excluded from working time as a break?",
+              "answer": "If the worker is still obliged to answer call bells or respond to emergencies during the nap, the time is not freely usable, so it cannot be treated as a break and counts as working time (hand-waiting time). To exclude a nap as a break, the obligation to respond during that period must be removed, and a state in which the worker is in fact free to rest must be secured."
+            },
+            {
+              "question": "If we use a variable working-hours system for a shift that includes night work, does the late-night premium become unnecessary?",
+              "answer": "No. A variable working-hours system is a mechanism for adjusting scheduled working hours within the total for the period; the late-night premium (10 p.m.–5 a.m.) must still be paid even under a variable working-hours system (Labor Standards Act, Article 37, paragraph 3)."
+            }
+          ]
+        },
+        "zh-tw": {
+          "title": "團體家屋的夜班與宿直，在勞務上有何不同？",
+          "excerpt": "在團體家屋（共同生活援助）裡，夜間體制是「夜班」還是「宿直」，會讓勞務管理完全不同。夜班是在深夜時段（晚上10點～早上5點）進行一般照顧、看護、支援的勞動時間，需要深夜加成（25%以上）；若有延長工時，還需要36協定與延長工時加成。宿直則是只做巡邏、接電話等輕度斷續性業務的勤務，取得所轄勞動基準監督署的許可後，可不受勞動時間、休息、休日的規定拘束（勞動基準法第41條第3項）。不過，即使名稱是「宿直」，只要實際上是照顧、看護，就會被當作「夜班」處理。本文以實際排班的角度，整理兩者的不同。",
+          "content": "**先講結論**：在團體家屋裡，夜間體制是**「夜班」還是「宿直」，勞務管理會完全不同**。**夜班**是在深夜時段（晚上10點～早上5點）進行一般照顧、看護、支援的**勞動時間**，需要**深夜加成（25%以上）**；若有延長工時，還需要**36協定**與延長工時加成。**宿直**則是只做巡邏、接電話等輕度斷續性業務的勤務，**取得所轄勞動基準監督署長的許可**後，可不受勞動時間、休息、休日的規定拘束（勞動基準法第41條第3項）。不過，**即使名稱是「宿直」，只要實際上是照顧、看護，就會被當作「夜班」處理**。本文以實際排班該怎麼想的角度，整理兩者的不同。\n\n「夜班和宿直有什麼不同？」「我們是排宿直，所以沒問題吧？」——這是身心障礙福利事業所、特別是團體家屋（共同生活援助）的經營者、管理者常問的問題。本頁面是為了正在經營、或即將開設身心障礙團體家屋的事業者，整理夜班與宿直在勞務上的不同、勞動時間的想法、出勤紀錄的留存方式。個別勞資糾紛的判斷不在本文範圍內。\n\n## 夜班和宿直，在勞務管理上有何不同？\n\n首先，夜班和宿直雖然「都是在晚上工作」，但法律上的定位不同。\n\n| 項目 | 夜班 | 宿直（取得許可時） |\n|---|---|---|\n| 業務實態 | 一般的照顧、看護、支援 | 巡邏、接電話、待命應對緊急狀況等輕度斷續性業務 |\n| 勞動時間 | 屬於勞動時間 | 不受勞動時間、休息、休日的規定拘束 |\n| 深夜加成 | 22點～5點為25%以上 | 原則上不需要（因為不是勞動時間） |\n| 36協定 | 有延長工時、休假日勞動就需要 | 原則上不需要（因為不是延長工時） |\n| 許可・申報 | 不需要（當作勞動時間處理） | 需要所轄勞動基準監督署長的許可 |\n| 薪資 | 支付深夜、延長工時的加成 | 宿直津貼（金額由勞資雙方約定） |\n\n宿直可不受勞動時間規定拘束的依據，是勞動基準法第41條第3項。該條規定，雇主取得所轄勞動基準監督署長許可的「斷續性勞動」，不適用勞動時間、休息、休日的規定。不過，前提是**「只做輕度斷續性業務，且能確保睡眠」**。詳情後述。\n\n## 即使名稱是「宿直」，實際是夜班的話會怎樣？\n\n先講結論：**看的是實態，不是名稱**。即使勤務名稱寫「宿直」，只要實際上做的是使用者的如廁協助、翻身、接呼叫鈴、定時巡邏等照顧、看護，那就不是「斷續性業務」，而是**一般業務**。這種情況下，所轄勞動基準監督署原則上不會許可宿日直，該時間會以**勞動時間**處理。\n\n舉例來說，一個5名使用者的團體家屋，夜間（傍晚到隔天早上）由1名職員常駐住居，接到使用者的呼叫鈴就去協助，每2小時巡邏一次。即使把這個體制叫「宿直」，實態仍是「照顧、看護」，因此會以夜班處理，成為勞動時間、加成薪資、36協定的對象。相反地，若夜間使用者大多就寢，職員只需應對緊急聯絡和數次巡邏，這種體制就有可能成為宿日直許可的對象。**是哪一種，取決於個別事業所的實態。**\n\n## 屬於勞動時間、不屬於勞動時間，界線在哪裡？\n\n勞動時間，是指**處於雇主指揮命令下的時間**。除了協助、巡邏等實際作業的時間之外，以下時間也可能屬於勞動時間。\n\n- **為應對呼叫而待命的時間（等待時間）**：處於隨時可以工作的狀態待命，即使實際上沒有作業，也算勞動時間。\n- **假寐中仍負有應對呼叫義務的時間**：即使是在假寐中，只要被要求應對呼叫鈴、緊急狀況，就可能因處於雇主指揮命令下而被判斷為勞動時間。\n\n判例也認為，即使在假寐時間、休息時間，只要被要求待在宿直室待命，該時間就屬於勞動時間。**即使掛上「休息」「假寐」的名稱，只要實際上不是可以自由使用的時間，就是勞動時間。**\n\n## 休息、假寐、待命，在排班表上該怎麼想？\n\n排班時，要把以下三者分開思考。\n\n1. **休息**：在勞動時間途中，給予勞工可自由使用的時間。能從勞動時間扣除的，只有這種「可自由使用的休息」。\n2. **假寐**：假寐時間也必須「沒有應對呼叫的義務、可以自由休息」，才能當作休息處理。以應對呼叫為前提的假寐是勞動時間（等待時間）。\n3. **待命**：為應對呼叫而待命的時間，原則上屬於勞動時間。\n\n因此，即使排班表寫「休息2小時」，只要實際上在那段時間多次應對呼叫鈴，就不算休息，而會以勞動時間成為深夜加成的對象。**排班表的數字與實態必須一致。**\n\n## 宿日直許可的關係為何？\n\n要以宿日直勤務免除勞動時間規定，需要**所轄勞動基準監督署長的許可**。許可的對象，是依據勞動基準法施行規則第23條的「斷續性宿直或日直」，大致有以下前提。\n\n- **不處理原本的業務**（巡邏、收發文書電話、待命應對緊急狀況等）\n- **常態上幾乎不需要勞動**\n- 若是宿直，**夜間能確保充分睡眠**\n\n許可不會只憑申請書的記載就機械式核發。**所轄勞動基準監督署會依業務實態個別判斷**。在團體家屋常態進行照顧、看護的夜間勤務，很難符合這些要件，通常不會成為宿日直許可的對象。請不要輕率地斷定「因為是宿直，就不用管理勞動時間」。此外，即使取得許可，**實際進行照顧等實際勞動的時間，仍須以勞動時間支付薪資。**\n\n## 36協定與變形勞動時間制的關係為何？\n\n包含夜班的體制，必須整理36協定與變形勞動時間制兩者。\n\n- **36協定**：要讓勞工延長工時、休假日勞動，必須締結勞資協定，並向所轄勞動基準監督署長申報（勞動基準法第36條）。夜班若產生超過法定勞動時間（1天8小時、1週40小時）的延長工時，締結、申報36協定就是前提。上限時間請見[加班的上限由36協定決定](/zh-tw/labor/column/36-kyotei-zangyo-sharoushi-doko-made)。\n- **變形勞動時間制**：包含夜班的輪班，常以1個月單位或1年單位的變形勞動時間制運用，即使某一天、某一週的勞動時間較長，也能在期間的總時數內收斂。不過，**深夜（22點～5點）的加成，在變形勞動時間制下仍然需要**。\n\n兩者都必須與就業規則、薪資規程一致。就業規則的義務請見[就業規則是幾人以上的義務](/zh-tw/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo)。\n\n## 深夜加成會怎樣？\n\n讓勞工在晚上10點到早上5點的深夜勞動時，有義務支付**一般勞動時間薪資的2成5分以上**的加成薪資（勞動基準法第37條第3項）。延長工時跨入深夜時，延長工時加成（25%以上）與深夜加成（25%以上）合計為**50%以上**；法定休假日勞動跨入深夜時，為**60%以上**。\n\n夜班包含深夜時段，因此深夜加成是實務上必須時時注意的論點。計算薪資時，必須把一般時薪與加成率分開計算。薪資計算的想法請見[把薪資計算委託給社會保險勞務士，要花多少錢](/zh-tw/labor/column/kyuyo-keisan-soba-sharoushi)。\n\n## 出勤紀錄該怎麼留存？\n\n無論夜班或宿直，前提都是**以客觀方法（打卡、打鐘、出勤系統等）記錄開始、結束時間**。同時，留存以下紀錄，可作為被指稱「實態是夜班」時的反證。\n\n- 巡邏的時間與次數、應對呼叫鈴的時間與內容\n- 假寐、休息的實際取得狀況\n- 誰、在哪個時段、做了什麼業務（班表與實績的比對）\n\n班表（預定）與實績的紀錄若不一致，在勞基署調查或未支付加成薪資的請求中會處於不利。**請留下「實態」而非「預定」的紀錄。**\n\n## 開設前，經營者該確認的事\n\n開設團體家屋前，或檢討夜間體制前，請確認以下事項。\n\n1. 人員配置基準與報酬上的區分（夜間支援等體制加算分為「配置夜班職員時」與「配置宿直職員時」）\n2. 宿日直許可是否需要、能否取得（實態是照顧、看護的話，就當作夜班處理）\n3. 36協定、變形勞動時間制、就業規則的整備狀況\n4. 出勤紀錄的方法，以及班表與實績的比對機制\n\n另外，身心障礙福利服務的**指定申請**、報酬上加算等向官公署提出的文件，是行政書士的業務；**物件的確保、租賃**，是不動產（宅地建物取引業）的業務。勞務（就業規則、36協定、薪資計算）是社會保險勞務士的業務。在四葉，這些分別是**各自獨立的事業體**，請**另行簽約**。\n\n## 什麼事該委託誰？\n\n| 事項 | 誰的業務 |\n|---|---|\n| 就業規則、36協定、變形勞動時間制的整備；出勤管理的設計；加成薪資的計算 | **社會保險勞務士**（本事務所） |\n| 身心障礙福利服務的指定申請、報酬上加算的申報等向官公署提出文件的製作 | **行政書士**（四葉行政書士事務所・另事業體） |\n| 物件的確保、租賃 | **不動產**（宅地建物取引業者） |\n| 未支付加成薪資的請求、糾紛、勞動審判、訴訟 | **律師** |\n\n整理夜班、宿直的勞務，是社會保險勞務士的業務。本事務所負責**設計符合實態的勞動時間、加成薪資，以及出勤紀錄的機制**。指定申請等行政書士的業務、物件等不動產的業務，請由各自的事業體另行簽約。\n\n## 四葉社会保険労務士事務所能做什麼？\n\n位於文京區小日向的四葉社会保険労務士事務所，承辦**夜班、宿直的實態整理，就業規則、36協定、變形勞動時間制的整備，出勤管理的設計，加成薪資的計算**。身心障礙事業所的人員基準與勞務整理，請見[身心障礙福利事業所的人員基準與勞務](/zh-tw/labor/services/jinin-kijun-roumu)；照護、身心障礙福利勞務管理的全貌，請見[照護、身心障礙福利的勞務管理](/zh-tw/labor/services/kaigo-roumu)。**諮詢免費。** 費用請見[報酬金額表](/zh-tw/labor/ryokin)。\n\n身心障礙福利服務的指定申請，由四葉行政書士事務所（各自獨立的事業體・另行簽約）承辦。本事務所不收取介紹費。\n\n## 常見問題\n\n**Q. 把團體家屋的夜間勤務改成宿直，就可以不用管理勞動時間嗎？**\nA. 即使把名稱改成宿直，只要實態是照顧、看護使用者，就會以勞動時間處理。宿日直許可只限於巡邏、接電話等輕度斷續性業務，且能確保睡眠的情況。請先整理實態，再個別判斷。\n\n**Q. 取得宿直許可的話，就不需要深夜加成嗎？**\nA. 取得許可的宿直，因不受勞動時間規定拘束，原則上不屬於深夜加成的對象。不過，即使取得許可，實際進行照顧等實際勞動的時間，仍須以勞動時間（含深夜加成）支付薪資。\n\n**Q. 夜班的假寐時間，可以當作休息從勞動時間扣除嗎？**\nA. 假寐時間中仍被要求應對呼叫鈴、緊急狀況的話，就不是可以自由休息的時間，無法當作休息，而屬於勞動時間（等待時間）。要把假寐當作休息扣除，必須取消該時段的應對義務，實際確保可自由休息的狀態。\n\n**Q. 包含夜班的輪班改用變形勞動時間制，就可以不用深夜加成嗎？**\nA. 不行。變形勞動時間制是把所定勞動時間在期間總時數內調整的機制，深夜（22點～5點）的加成薪資即使在變形勞動時間制下也必須支付（勞動基準法第37條第3項）。\n\n## 本文依據\n\n- 勞動基準法（昭和22年法律第49號）第32條（法定勞動時間）、第36條（36協定）、第37條（加成薪資、深夜25%以上）、第41條第3項（監視或斷續性勞動的適用除外）\n- 勞動基準法施行規則（昭和22年厚生省令第23號）第23條（斷續性宿直或日直的許可）\n- 宿日直勤務的許可，前提是輕度斷續性業務（不處理原本的業務、巡邏、收發文書電話、待命應對緊急狀況），且常態上幾乎不需要勞動。所轄勞動基準監督署依業務實態個別判斷。\n- 是否屬於勞動時間，取決於是否「處於雇主指揮命令下」。假寐、待命中若負有應對呼叫義務，即屬勞動時間（等待時間），此為依行政解釋、判例的一般見解。\n- 身心障礙福利服務（共同生活援助）的人員配置與夜間支援等體制加算，依厚生勞動省的報酬告示、通知及指定權者（自治體）的運用。加算的單位數、區分、人員配置每年修訂，請確認最新告示、通知。\n- 深夜加成率、延長工時加成率、宿日直許可的想法，已依厚生勞動省、都道府縣勞動局的公布資料確認（2026年8月時點）。\n\n本文不替讀者決定該諮詢誰。就業規則、36協定、變形勞動時間制的整備，出勤管理的設計，加成薪資的計算，是社會保險勞務士的業務。身心障礙福利服務的指定申請、報酬上加算等向官公署提出文件的製作，是行政書士的業務；物件的確保、租賃，是不動產（宅地建物取引業）的業務。未支付加成薪資的請求、糾紛，是律師的業務。四葉社会保険労務士事務所與四葉行政書士事務所是各自獨立的事業體，請分別另行簽約。本事務所不收取介紹費。向四葉社会保険労務士事務所諮詢時的費用請見[報酬金額表](/zh-tw/labor/ryokin)，常見問題請見[常見問題](/zh-tw/labor/faq)。\n\n本文為一般資訊提供。個別情況的判斷，請在面談後由資格者進行。執筆者為[浦松丈二](/zh-tw/about/uramatsu)（社會保險勞務士・行政書士・宅地建物取引士）。",
+          "category": "勞動法基礎",
+          "keywords": [
+            "團體家屋 夜班 宿直 不同",
+            "身心障礙團體家屋 宿直 勞動時間",
+            "團體家屋 夜班 36協定",
+            "宿日直許可 要件",
+            "夜班 宿直 深夜加成",
+            "身心障礙福利 人員配置基準 勞務"
+          ],
+          "tags": [
+            "團體家屋",
+            "夜班",
+            "宿直",
+            "勞動時間",
+            "身心障礙福利",
+            "社會保險勞務士"
+          ],
+          "author": {
+            "name": "浦松 丈二",
+            "title": "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+          },
+          "faq": [
+            {
+              "question": "把團體家屋的夜間勤務改成宿直，就可以不用管理勞動時間嗎？",
+              "answer": "即使把名稱改成宿直，只要實態是照顧、看護使用者，就會以勞動時間處理。宿日直許可只限於巡邏、接電話等輕度斷續性業務，且能確保睡眠的情況。請先整理實態，再個別判斷。"
+            },
+            {
+              "question": "取得宿直許可的話，就不需要深夜加成嗎？",
+              "answer": "取得許可的宿直，因不受勞動時間規定拘束，原則上不屬於深夜加成的對象。不過，即使取得許可，實際進行照顧等實際勞動的時間，仍須以勞動時間（含深夜加成）支付薪資。"
+            },
+            {
+              "question": "夜班的假寐時間，可以當作休息從勞動時間扣除嗎？",
+              "answer": "假寐時間中仍被要求應對呼叫鈴、緊急狀況的話，就不是可以自由休息的時間，無法當作休息，而屬於勞動時間（等待時間）。要把假寐當作休息扣除，必須取消該時段的應對義務，實際確保可自由休息的狀態。"
+            },
+            {
+              "question": "包含夜班的輪班改用變形勞動時間制，就可以不用深夜加成嗎？",
+              "answer": "不行。變形勞動時間制是把所定勞動時間在期間總時數內調整的機制，深夜（22點～5點）的加成薪資即使在變形勞動時間制下也必須支付（勞動基準法第37條第3項）。"
+            }
+          ]
+        },
+        "zh": {
+          "title": "团体家屋的夜班与宿直，在劳务上有何不同？",
+          "excerpt": "在团体家屋（共同生活援助）里，夜间体制是「夜班」还是「宿直」，会让劳务管理完全不同。夜班是在深夜时段（晚上10点～早上5点）进行一般照顾、看护、支援的劳动时间，需要深夜加成（25%以上）；若有延长工时，还需要36协定与延长工时加成。宿直则是只做巡逻、接电话等轻度断续性业务的勤务，取得所辖劳动基准监督署的许可后，可不受劳动时间、休息、休日的规定拘束（劳动基准法第41条第3项）。不过，即使名称是「宿直」，只要实际上是照顾、看护，就会被当作「夜班」处理。本文以实际排班的角度，整理两者的不同。",
+          "content": "**先讲结论**：在团体家屋里，夜间体制是**「夜班」还是「宿直」，劳务管理会完全不同**。**夜班**是在深夜时段（晚上10点～早上5点）进行一般照顾、看护、支援的**劳动时间**，需要**深夜加成（25%以上）**；若有延长工时，还需要**36协定**与延长工时加成。**宿直**则是只做巡逻、接电话等轻度断续性业务的勤务，**取得所辖劳动基准监督署长的许可**后，可不受劳动时间、休息、休日的规定拘束（劳动基准法第41条第3项）。不过，**即使名称是「宿直」，只要实际上是照顾、看护，就会被当作「夜班」处理**。本文以实际排班该怎么想的角度，整理两者的不同。\n\n「夜班和宿直有什么不同？」「我们是排宿直，所以没问题吧？」——这是残障福利事业所、特别是团体家屋（共同生活援助）的经营者、管理者常问的问题。本页面是为了正在经营、或即将开设残障团体家屋的事业者，整理夜班与宿直在劳务上的不同、劳动时间的想法、出勤记录的留存方式。个别劳资纠纷的判断不在本文范围内。\n\n## 夜班和宿直，在劳务管理上有何不同？\n\n首先，夜班和宿直虽然「都是在晚上工作」，但法律上的定位不同。\n\n| 项目 | 夜班 | 宿直（取得许可时） |\n|---|---|---|\n| 业务实态 | 一般的照顾、看护、支援 | 巡逻、接电话、待命应对紧急状况等轻度断续性业务 |\n| 劳动时间 | 属于劳动时间 | 不受劳动时间、休息、休日的规定拘束 |\n| 深夜加成 | 22点～5点为25%以上 | 原则上不需要（因为不是劳动时间） |\n| 36协定 | 有延长工时、休假日劳动就需要 | 原则上不需要（因为不是延长工时） |\n| 许可・申报 | 不需要（当作劳动时间处理） | 需要所辖劳动基准监督署长的许可 |\n| 薪资 | 支付深夜、延长工时的加成 | 宿直津贴（金额由劳资双方约定） |\n\n宿直可不受劳动时间规定拘束的依据，是劳动基准法第41条第3项。该条规定，雇主取得所辖劳动基准监督署长许可的「断续性劳动」，不适用劳动时间、休息、休日的规定。不过，前提是**「只做轻度断续性业务，且能确保睡眠」**。详情后述。\n\n## 即使名称是「宿直」，实际是夜班的话会怎样？\n\n先讲结论：**看的是实态，不是名称**。即使勤务名称写「宿直」，只要实际上做的是使用者的如厕协助、翻身、接呼叫铃、定时巡逻等照顾、看护，那就不是「断续性业务」，而是**一般业务**。这种情况下，所辖劳动基准监督署原则上不会许可宿日直，该时间会以**劳动时间**处理。\n\n举例来说，一个5名使用者的团体家屋，夜间（傍晚到隔天早上）由1名职员常驻住居，接到使用者的呼叫铃就去协助，每2小时巡逻一次。即使把这个体制叫「宿直」，实态仍是「照顾、看护」，因此会以夜班处理，成为劳动时间、加成薪资、36协定的对象。相反地，若夜间使用者大多就寝，职员只需应对紧急联络和数次巡逻，这种体制就有可能成为宿日直许可的对象。**是哪一种，取决于个别事业所的实态。**\n\n## 属于劳动时间、不属于劳动时间，界线在哪里？\n\n劳动时间，是指**处于雇主指挥命令下的时间**。除了协助、巡逻等实际作业的时间之外，以下时间也可能属于劳动时间。\n\n- **为应对呼叫而待命的时间（等待时间）**：处于随时可以工作的状态待命，即使实际上没有作业，也算劳动时间。\n- **假寐中仍负有应对呼叫义务的时间**：即使是在假寐中，只要被要求应对呼叫铃、紧急状况，就可能因处于雇主指挥命令下而被判断为劳动时间。\n\n判例也认为，即使在假寐时间、休息时间，只要被要求待在宿直室待命，该时间就属于劳动时间。**即使挂上「休息」「假寐」的名称，只要实际上不是可以自由使用的时间，就是劳动时间。**\n\n## 休息、假寐、待命，在排班表上该怎么想？\n\n排班时，要把以下三者分开思考。\n\n1. **休息**：在劳动时间途中，给予劳工可自由使用的时间。能从劳动时间扣除的，只有这种「可自由使用的休息」。\n2. **假寐**：假寐时间也必须「没有应对呼叫的义务、可以自由休息」，才能当作休息处理。以应对呼叫为前提的假寐是劳动时间（等待时间）。\n3. **待命**：为应对呼叫而待命的时间，原则上属于劳动时间。\n\n因此，即使排班表写「休息2小时」，只要实际上在那段时间多次应对呼叫铃，就不算休息，而会以劳动时间成为深夜加成的对象。**排班表的数字与实态必须一致。**\n\n## 宿日直许可的关系为何？\n\n要以宿日直勤务免除劳动时间规定，需要**所辖劳动基准监督署长的许可**。许可的对象，是依据劳动基准法施行规则第23条的「断续性宿直或日直」，大致有以下前提。\n\n- **不处理原本的业务**（巡逻、收发文书电话、待命应对紧急状况等）\n- **常态上几乎不需要劳动**\n- 若是宿直，**夜间能确保充分睡眠**\n\n许可不会只凭申请书的记载就机械式核发。**所辖劳动基准监督署会依业务实态个别判断**。在团体家屋常态进行照顾、看护的夜间勤务，很难符合这些要件，通常不会成为宿日直许可的对象。请不要轻率地断定「因为是宿直，就不用管理劳动时间」。此外，即使取得许可，**实际进行照顾等实际劳动的时间，仍须以劳动时间支付薪资。**\n\n## 36协定与变形劳动时间制的关系为何？\n\n包含夜班的体制，必须整理36协定与变形劳动时间制两者。\n\n- **36协定**：要让劳工延长工时、休假日劳动，必须缔结劳资协定，并向所辖劳动基准监督署长申报（劳动基准法第36条）。夜班若产生超过法定劳动时间（1天8小时、1周40小时）的延长工时，缔结、申报36协定就是前提。上限时间请见[加班的上限由36协定决定](/zh/labor/column/36-kyotei-zangyo-sharoushi-doko-made)。\n- **变形劳动时间制**：包含夜班的轮班，常以1个月单位或1年单位的变形劳动时间制运用，即使某一天、某一周的劳动时间较长，也能在期间的总时数内收敛。不过，**深夜（22点～5点）的加成，在变形劳动时间制下仍然需要**。\n\n两者都必须与就业规则、薪资规程一致。就业规则的义务请见[就业规则是几人以上的义务](/zh/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo)。\n\n## 深夜加成会怎样？\n\n让劳工在晚上10点到早上5点的深夜劳动时，有义务支付**一般劳动时间薪资的2成5分以上**的加成薪资（劳动基准法第37条第3项）。延长工时跨入深夜时，延长工时加成（25%以上）与深夜加成（25%以上）合计为**50%以上**；法定休假日劳动跨入深夜时，为**60%以上**。\n\n夜班包含深夜时段，因此深夜加成是实务上必须时时注意的论点。计算薪资时，必须把一般时薪与加成率分开计算。薪资计算的想法请见[把薪资计算委托给社会保险劳务士，要花多少钱](/zh/labor/column/kyuyo-keisan-soba-sharoushi)。\n\n## 出勤记录该怎么留存？\n\n无论夜班或宿直，前提都是**以客观方法（打卡、打钟、出勤系统等）记录开始、结束时间**。同时，留存以下记录，可作为被指称「实态是夜班」时的反证。\n\n- 巡逻的时间与次数、应对呼叫铃的时间与内容\n- 假寐、休息的实际取得状况\n- 谁、在哪个时段、做了什么业务（班表与实绩的比对）\n\n班表（预定）与实绩的记录若不一致，在劳基署调查或未支付加成薪资的请求中会处于不利。**请留下「实态」而非「预定」的记录。**\n\n## 开设前，经营者该确认的事\n\n开设团体家屋前，或检讨夜间体制前，请确认以下事项。\n\n1. 人员配置基准与报酬上的区分（夜间支援等体制加算分为「配置夜班职员时」与「配置宿直职员时」）\n2. 宿日直许可是否需要、能否取得（实态是照顾、看护的话，就当作夜班处理）\n3. 36协定、变形劳动时间制、就业规则的整备状况\n4. 出勤记录的方法，以及班表与实绩的比对机制\n\n另外，残障福利服务的**指定申请**、报酬上加算等向官公署提出的文件，是行政书士的业务；**物件的确保、租赁**，是不动产（宅地建物取引业）的业务。劳务（就业规则、36协定、薪资计算）是社会保险劳务士的业务。在四叶，这些分别是**各自独立的事业体**，请**另行签约**。\n\n## 什么事该委托谁？\n\n| 事项 | 谁的业务 |\n|---|---|\n| 就业规则、36协定、变形劳动时间制的整备；出勤管理的设计；加成薪资的计算 | **社会保险劳务士**（本事务所） |\n| 残障福利服务的指定申请、报酬上加算的申报等向官公署提出文件的制作 | **行政书士**（四葉行政書士事務所・另事业体） |\n| 物件的确保、租赁 | **不动产**（宅地建物取引业者） |\n| 未支付加成薪资的请求、纠纷、劳动审判、诉讼 | **律师** |\n\n整理夜班、宿直的劳务，是社会保险劳务士的业务。本事务所负责**设计符合实态的劳动时间、加成薪资，以及出勤记录的机制**。指定申请等行政书士的业务、物件等不动产的业务，请由各自的事业体另行签约。\n\n## 四葉社会保険労務士事務所能做什么？\n\n位于文京区小日向的四葉社会保険労務士事務所，承办**夜班、宿直的实态整理，就业规则、36协定、变形劳动时间制的整备，出勤管理的设计，加成薪资的计算**。残障事业所的人员基准与劳务整理，请见[残障福利事业所的人员基准与劳务](/zh/labor/services/jinin-kijun-roumu)；照护、残障福利劳务管理的全貌，请见[照护、残障福利的劳务管理](/zh/labor/services/kaigo-roumu)。**咨询免费。** 费用请见[报酬金额表](/zh/labor/ryokin)。\n\n残障福利服务的指定申请，由四葉行政書士事務所（各自独立的事业体・另行签约）承办。本事务所不收取介绍费。\n\n## 常见问题\n\n**Q. 把团体家屋的夜间勤务改成宿直，就可以不用管理劳动时间吗？**\nA. 即使把名称改成宿直，只要实态是照顾、看护使用者，就会以劳动时间处理。宿日直许可只限于巡逻、接电话等轻度断续性业务，且能确保睡眠的情况。请先整理实态，再个别判断。\n\n**Q. 取得宿直许可的话，就不需要深夜加成吗？**\nA. 取得许可的宿直，因不受劳动时间规定拘束，原则上不属于深夜加成的对象。不过，即使取得许可，实际进行照顾等实际劳动的时间，仍须以劳动时间（含深夜加成）支付薪资。\n\n**Q. 夜班的假寐时间，可以当作休息从劳动时间扣除吗？**\nA. 假寐时间中仍被要求应对呼叫铃、紧急状况的话，就不是可以自由休息的时间，无法当作休息，而属于劳动时间（等待时间）。要把假寐当作休息扣除，必须取消该时段的应对义务，实际确保可自由休息的状态。\n\n**Q. 包含夜班的轮班改用变形劳动时间制，就可以不用深夜加成吗？**\nA. 不行。变形劳动时间制是把所定劳动时间在期间总时数内调整的机制，深夜（22点～5点）的加成薪资即使在变形劳动时间制下也必须支付（劳动基准法第37条第3项）。\n\n## 本文依据\n\n- 劳动基准法（昭和22年法律第49号）第32条（法定劳动时间）、第36条（36协定）、第37条（加成薪资、深夜25%以上）、第41条第3项（监视或断续性劳动的适用除外）\n- 劳动基准法施行规则（昭和22年厚生省令第23号）第23条（断续性宿直或日直的许可）\n- 宿日直勤务的许可，前提是轻度断续性业务（不处理原本的业务、巡逻、收发文书电话、待命应对紧急状况），且常态上几乎不需要劳动。所辖劳动基准监督署依业务实态个别判断。\n- 是否属于劳动时间，取决于是否「处于雇主指挥命令下」。假寐、待命中若负有应对呼叫义务，即属劳动时间（等待时间），此为依行政解释、判例的一般见解。\n- 残障福利服务（共同生活援助）的人员配置与夜间支援等体制加算，依厚生劳动省的报酬告示、通知及指定权者（自治体）的运用。加算的单位数、区分、人员配置每年修订，请确认最新告示、通知。\n- 深夜加成率、延长工时加成率、宿日直许可的想法，已依厚生劳动省、都道府县劳动局的公布资料确认（2026年8月时点）。\n\n本文不替读者决定该咨询谁。就业规则、36协定、变形劳动时间制的整备，出勤管理的设计，加成薪资的计算，是社会保险劳务士的业务。残障福利服务的指定申请、报酬上加算等向官公署提出文件的制作，是行政书士的业务；物件的确保、租赁，是不动产（宅地建物取引业）的业务。未支付加成薪资的请求、纠纷，是律师的业务。四葉社会保険労務士事務所与四葉行政書士事務所是各自独立的事业体，请分别另行签约。本事务所不收取介绍费。向四葉社会保険労務士事務所咨询时的费用请见[报酬金额表](/zh/labor/ryokin)，常见问题请见[常见问题](/zh/labor/faq)。\n\n本文为一般信息提供。个别情况的判断，请在面谈后由资格者进行。执笔者为[浦松丈二](/zh/about/uramatsu)（社会保险劳务士・行政书士・宅地建物取引士）。",
+          "category": "劳动法基础",
+          "keywords": [
+            "团体家屋 夜班 宿直 不同",
+            "残障团体家屋 宿直 劳动时间",
+            "团体家屋 夜班 36协定",
+            "宿日直许可 要件",
+            "夜班 宿直 深夜加成",
+            "残障福利 人员配置基准 劳务"
+          ],
+          "tags": [
+            "团体家屋",
+            "夜班",
+            "宿直",
+            "劳动时间",
+            "残障福利",
+            "社会保险劳务士"
+          ],
+          "author": {
+            "name": "浦松 丈二",
+            "title": "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+          },
+          "faq": [
+            {
+              "question": "把团体家屋的夜间勤务改成宿直，就可以不用管理劳动时间吗？",
+              "answer": "即使把名称改成宿直，只要实态是照顾、看护使用者，就会以劳动时间处理。宿日直许可只限于巡逻、接电话等轻度断续性业务，且能确保睡眠的情况。请先整理实态，再个别判断。"
+            },
+            {
+              "question": "取得宿直许可的话，就不需要深夜加成吗？",
+              "answer": "取得许可的宿直，因不受劳动时间规定拘束，原则上不属于深夜加成的对象。不过，即使取得许可，实际进行照顾等实际劳动的时间，仍须以劳动时间（含深夜加成）支付薪资。"
+            },
+            {
+              "question": "夜班的假寐时间，可以当作休息从劳动时间扣除吗？",
+              "answer": "假寐时间中仍被要求应对呼叫铃、紧急状况的话，就不是可以自由休息的时间，无法当作休息，而属于劳动时间（等待时间）。要把假寐当作休息扣除，必须取消该时段的应对义务，实际确保可自由休息的状态。"
+            },
+            {
+              "question": "包含夜班的轮班改用变形劳动时间制，就可以不用深夜加成吗？",
+              "answer": "不行。变形劳动时间制是把所定劳动时间在期间总时数内调整的机制，深夜（22点～5点）的加成薪资即使在变形劳动时间制下也必须支付（劳动基准法第37条第3项）。"
             }
           ]
         }
