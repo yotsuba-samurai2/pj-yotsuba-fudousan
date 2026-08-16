@@ -1,8 +1,8 @@
 /**
- * 相続コラム（行政書士）第1号「相続は何から始める？戸籍収集・相続人調査」投入スクリプト（1本）
+ * 相続コラム（行政書士）シリーズ（第1号〜第3号）投入スクリプト
  *
  * 対象＝luck428.com /legal/column（business=legal）。
- * 原稿＝scripts/legal-columns/02-souzoku-hajime-koseki-chosa-bunkyo.md。
+ * 原稿＝scripts/legal-columns/NN-*.md。
  * 法令・公的資料は実装時に一次確認済み（2026-08-16）：
  *   - 文京区「【受付は午後4時まで】戸籍証明書等の広域交付」（更新日 2026年4月9日）
  *   - 法務局「法定相続情報証明制度の具体的な手続について」（更新日 2024年4月1日）
@@ -12,8 +12,7 @@
  *
  * カニバリ回避＝サイトマップ・既存legalコラム照合済み。本件は「相続の入口（戸籍収集・
  * 相続人調査）」であり、既存の台湾×相続（taiwan-legal-columns）や電子契約×委任状
- * （denshi-keiyaku）とは役割分担する。同一シリーズの後続（遺産分割協議書／法定相続情報
- * 一覧図／遺言）は本スクリプトにはまだ追加しない（別タスク）。
+ * （denshi-keiyaku）とは役割分担する。遺言は本スクリプトにはまだ追加しない（別タスク）。
  *
  * seed-denshi-keiyaku-columns.ts と同型：dry-run既定 → preview JSON、--emit-ts で
  * admin投入ページ用の seed データを生成。本番投入は /admin/columns/seed-souzoku-legal
@@ -106,6 +105,12 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "認証文",
     "5年",
     "遺産分割の内容",
+    "法定相続情報番号",
+    "法定相続情報を識別するために登記官が付す",
+    "住所を証する書面",
+    "被相続人の相続人（又はその相続人）",
+    "自らの資格では再交付を受けることができません",
+    "提出の手間を減らせるのがこの制度の利用目的",
     "houmukyoku.moj.go.jp/homu/page7_000014",
     "houmukyoku.moj.go.jp/sapporo/page000236",
   ],
@@ -115,10 +120,18 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
 const FORBIDDEN_PHRASES: Record<string, string[]> = {
   "souzoku-hajime-koseki-chosa-bunkyo": ["トレードオフ"],
   "isan-bunkatsu-kyougisho": ["独占業務"],
+  "houtei-souzoku-jouhou-ichiran-zu": [
+    "戸籍の束を1枚",
+    "唯一の番号",
+    "印鑑登録証明書",
+    "手間と取得費用",
+    "相続登記は司法書士",
+  ],
 };
 
 /** 本セット外へ張る既存legalコラムslug（リポジトリの他シードで実在確認済み） */
 const KNOWN_EXISTING_LEGAL_SLUGS = new Set([
+  "taiwan-koseki-jokoseki-shutoku",
   "taiwan-inkan-shomei-isan-bunkatsu",
   "denshi-keiyaku-enpo-inin-kami",
 ]);
@@ -169,7 +182,7 @@ const ARTICLES: Array<{
   {
     file: "04-houtei-souzoku-jouhou-ichiran-zu.md",
     slug: "houtei-souzoku-jouhou-ichiran-zu",
-    title: "法定相続情報一覧図とは？戸籍の束を1枚にできる制度と申出のしかた",
+    title: "法定相続情報一覧図とは？戸籍一式の代わりに利用できる制度と申出のしかた",
     category: "相続の手続き（行政書士の実務から）",
     excerpt:
       "法定相続情報一覧図は、戸籍から判明する法定相続人を一覧にした図で、法定相続情報証明制度として法務局へ申出ると登記官の認証文付きの写しを交付してもらえます。相続関係説明図との違い、申出方法、5年保存・再交付、行政書士に頼める範囲を整理しました。",
@@ -326,7 +339,7 @@ async function main() {
 
   const preview = {
     generatedAt: new Date().toISOString(),
-    note: "相続コラム（行政書士）第1号。原稿md（scripts/legal-columns/02-souzoku-hajime-koseki-chosa-bunkyo.md）から生成。投入は /admin/columns/seed-souzoku-legal。",
+    note: "相続コラム（行政書士）シリーズ。原稿md（scripts/legal-columns/NN-*.md）から生成。投入は /admin/columns/seed-souzoku-legal。",
     articleCount: cols.length,
     verification: notes.length ? notes : ["OK: 全チェック通過"],
     articles: cols.map((c) => ({
