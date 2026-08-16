@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-16T01:31:28.355Z",
+  "generatedAt": "2026-08-16T05:11:19.632Z",
   "note": "労務コラム（4本）。報酬額表 v18 の決定と相場調査から起こした原稿md（scripts/labor-columns/）から生成。--write でupsert。",
-  "articleCount": 44,
+  "articleCount": 45,
   "verification": [
     "OK: 全チェック通過"
   ],
@@ -7985,6 +7985,185 @@
             {
               "question": "成为加入对象时，公司该做什么？",
               "answer": "盘点对象员工，确认约定工作时间、雇用期间、是否为学生后，计算保险费并从工资扣除、记录出勤、办理取得资格的手续。个别判定与手续，可咨询社会保险劳务士。"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "business": "labor",
+      "slug": "part-yuki-2026-10-meiji-taigu-setsumei",
+      "title": "2026年10月、パート・有期雇用のルールはどう変わる？会社が確認したい雇入れ時の明示と待遇差",
+      "date": "2026-09-01",
+      "category": "労働法の基本",
+      "excerpt": "2026年10月1日から、パートタイム・有期雇用労働者を雇い入れる際の労働条件明示事項に「正社員との待遇差の内容や理由の説明を求めることができる旨」が追加されます。説明義務そのものは2020年4月からあり、今回の改正は雇入れ時にその権利を明示する点が中心です。通知書の文言を直すだけでは終わらず、正社員との待遇差とその理由を説明できる状態を作っておくことが本質です。施行規則（省令）・雇用管理指針・同一労働同一賃金ガイドラインの改正内容と、就業規則・賃金規程・実際の運用の確認ポイントを整理します。",
+      "content": "**結論（先に要点）**：2026年10月1日から、パート・有期雇用労働者を雇い入れるときの**労働条件の明示事項**に「**正社員との待遇差について、その内容や理由の説明を求めることができる旨**」が追加されます。ただし、会社が本当に準備すべきなのは**書式の文言だけではありません**。この改正を機に、自社の正社員と非正規社員の待遇差について「なぜその違いがあるのか」を説明できる状態を作っておく…（全5978字）",
+      "status": "published",
+      "author": {
+        "name": "浦松 丈二",
+        "title": "社会保険労務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+      },
+      "keywords": [
+        "パート 有期雇用 2026年10月",
+        "パート 労働条件通知書 明示 2026",
+        "有期雇用 労働条件 明示事項",
+        "パート 待遇差 説明義務",
+        "同一労働同一賃金 2026 改正",
+        "待遇差 説明を求めることができる旨"
+      ],
+      "tags": [
+        "パートタイム",
+        "有期雇用",
+        "同一労働同一賃金",
+        "労働条件明示",
+        "待遇差の説明"
+      ],
+      "locales": [],
+      "faq": [
+        {
+          "question": "2026年10月から、労働条件通知書を作り直す必要がありますか？",
+          "answer": "雇入れ時の明示事項が増えるため、新たに雇い入れるパート・有期雇用労働者には「待遇差の説明を求めることができる旨」を含む通知書が必要です。既に在籍している労働者についても、通知書・雇用契約書・就業規則の整合を点検しておくことをおすすめします。"
+        },
+        {
+          "question": "パートと正社員で手当が違うと違法ですか？",
+          "answer": "違法とは限りません。禁止されるのは不合理な待遇差です。職務内容・責任・配置変更範囲などを踏まえ、支給趣旨を説明できるかどうかが重要です。個別の判断は資格者による確認が必要です。"
+        },
+        {
+          "question": "待遇差は、どこまで説明する必要がありますか？",
+          "answer": "労働者から説明を求められた場合、待遇の内容・決定に際して考慮した事項、正社員との待遇差の内容や理由を説明する義務があります。説明できる資料と記録を整えておくことが前提です。"
+        },
+        {
+          "question": "就業規則も変更する必要がありますか？",
+          "answer": "就業規則は人数要件を満たせば作成・届出義務がありますが、それとは別に、実態の待遇と規程がずれていないかを確認してください。待遇差を説明するためには、規程の定めと実際の運用を一致させておくことが大切です。"
+        }
+      ],
+      "translations": {
+        "en": {
+          "title": "How the rules for part-time and fixed-term employment change in October 2026 — notice at hiring and differences in treatment",
+          "excerpt": "From 1 October 2026, the matters to be stated in the notice of working conditions when hiring a part-time or fixed-term worker will newly include \"the fact that the worker may request an explanation of the content of, and reasons for, any difference in treatment from regular employees.\" The duty to explain itself has existed since April 2020; this revision centres on making that right clear to workers at the time of hiring. Fixing the wording of the notice is not enough — the essence is to reach a state where you can explain the differences in treatment from regular employees and the reasons. This article organises the revisions to the enforcement regulations (ministerial ordinance), the employment management guidelines and the equal-pay-for-equal-work guidelines, together with what to check in the work rules, wage regulations and actual practice.",
+          "content": "**In short:** From 1 October 2026, when hiring a part-time or fixed-term worker, the **matters to be stated in the notice of working conditions** will newly include **\"the fact that the worker may request an explanation of the content of, and reasons for, any difference in treatment from regular employees.\"** However, what a company really needs to prepare is **not just the wording on a form**. The essence is to use this revision as an opportunity to reach a state where you can explain \"why this difference exists\" for the differences in treatment between your regular and non-regular employees.\n\nFrom 1 October 2026, the three points a company should check are:\n\n1. **Notice at the time of hiring:** whether the affected part-time or fixed-term workers are clearly told that they may request an explanation\n2. **Differences in treatment from regular employees and the reasons:** whether you are in a state where you can explain the differences\n3. **Consistency among work rules, wage regulations and actual practice:** whether the documents and the reality match\n\nEvery time the law changes, employers must keep track of employment contracts, work rules, wage regulations, payroll, social insurance and more — simply chasing \"what exactly should we change?\" is already a heavy burden. This article explains what changes on 1 October 2026, and focuses on how to put the \"day-to-day employment management\" of explaining differences in treatment in order, rather than a mere change of forms.\n\n## What changes on 1 October 2026?\n\nTo improve the treatment of part-time and fixed-term workers (referred to below as \"part-time/fixed-term workers\"), the enforcement regulations (ministerial ordinance) and the notifications for the employment management guidelines and the equal-pay-for-equal-work guidelines are being revised, and come into effect and apply from 1 October 2026. Let us organise the changes into three layers: **what changes this time, what has existed for some time, and what is worth checking on this occasion.**\n\n| Aspect | Before the revision (to September 2026) | After the revision (from 1 October 2026) |\n|---|---|---|\n| Notice at the time of hiring | State the statutory matters in the notice of working conditions | **Add \"the fact that the worker may request an explanation of differences in treatment\" and state it** |\n| Explanation of differences in treatment | The duty to explain itself has existed since April 2020 | The right to request an explanation is made known to workers at the time of hiring |\n| Approach to the treatment covered | Certain treatment organised under the equal-pay-for-equal-work guidelines | **The revised guidelines and employment management guidelines add and clarify the approach to each item of treatment and the measures employers should take** |\n\nThe key point is that **the duty to explain differences in treatment does not suddenly begin in October 2026**. The duty to explain already exists, and this revision centres on requiring employers to tell workers, at the time of hiring, that they may request an explanation. It is important not to confuse the two.\n\n## Who is covered?\n\nThe workers covered are part-time workers (short-time workers) and fixed-term workers. There is no exemption based on company size: **an employer that employs short-time workers or fixed-term workers is covered**. Confirm this by whether a person falls under the legal definition, not by labels such as \"part-timer\" or \"casual worker.\"\n\nAt the time of hiring, **\"the fact that the worker may request an explanation of differences in treatment\" is added to the matters to be stated in writing or by other means**, in addition to the existing statutory matters to be stated (such as the term of the labour contract, place of work, duties, wages and working hours). In practice, you will reflect this in the model notice of working conditions published by the Ministry of Health, Labour and Welfare, and in similar documents.\n\n## What does \"may request an explanation\" mean?\n\nUnder Article 14 of the Part-Time and Fixed-Term Employment Act, when a worker requests an explanation of the content of, and reasons for, any difference in treatment from regular employees, the employer has a duty to explain. This revision adds, to the matters to be stated at the time of hiring, the fact that an explanation may be requested under Article 14, paragraph 2.\n\nIn other words, from the worker's perspective, the right to ask the company \"why is my treatment different from that of regular employees?\" is now made clear at the time of hiring. From the company's perspective, being **able to explain when asked** is the premise.\n\nAs for the method of explanation, **oral explanation using materials is the basic approach**, and providing an easy-to-understand document that covers all the necessary matters is also acceptable. Separately, keeping an internal record of when, to whom and what was explained is useful practice for preventing later misunderstandings (see below).\n\n## A difference in treatment does not automatically mean it is illegal\n\nHere, the point not to misunderstand is that **a difference in treatment is not automatically illegal**. What Article 8 of the Part-Time and Fixed-Term Employment Act prohibits is **unreasonable differences in treatment**.\n\nWhether a difference in treatment is unreasonable is judged comprehensively in light of the nature and purpose of the treatment in question, taking into account the content of the duties, the degree of responsibility, the scope of changes in duties and the range of reassignment, and other circumstances. Even where the name of an \"allowance\" is the same, the difference may be reasonable if its purpose or the range of recipients differs. **It is a mistake to judge legality or illegality by the name of an allowance alone.** Whether a particular difference in treatment is lawful is beyond the scope of this article and requires confirmation by a qualified professional.\n\n## Why is it hard for the voice of part-time workers to reach the owner?\n\nAlongside confirming the system, there is one more point you should not overlook. **Sometimes the dissatisfaction on the side of part-time and fixed-term workers does not sufficiently reach the owner.** In day-to-day work, there may be opportunities to hear from regular employees and managers about how part-timers work, but there is not necessarily much opportunity for the owner to hear directly how part-time workers feel about differences in treatment.\n\nWithin an organisation, while an information route of **regular employees → managers → owner** exists on a daily basis, in a company where the route of **part-time workers → owner** is weak, dissatisfaction may have already accumulated by the time questions about differences in treatment surface. This bias in information can delay noticing dissatisfaction with treatment.\n\nIf questions remain unresolved, they may go beyond being raised internally and develop into consultations with the Labour Bureau or dispute-resolution procedures, or — depending on the individual case — into disputes including litigation.\n\nThat is why the October 2026 revision is not \"done once you add a line to the notice.\" It should be taken as an opportunity to **review treatment once, not only from the voice of regular employees but also from the perspective of part-time workers.**\n\n## Is it enough to just fix the notice?\n\nNo. The notice is \"a document handed over at the time of hiring,\" but actual treatment is determined by **the work rules, wage regulations, employment contracts and payroll practices**. Even if the notice says \"you may request an explanation,\" you will be in trouble when asked if the substance — the differences in treatment — has not been organised.\n\nAt a minimum, cross-check the following three:\n\n1. **Notice of working conditions:** whether the matters to be stated are complete and the form is up to date\n2. **Employment contract:** whether it contradicts the notice\n3. **Work rules and wage regulations:** whether the provisions on the treatment of regular and non-regular employees match the reality\n\nFor the obligation and arrangement of work rules, see [from how many employees are work rules mandatory, and what is not mandatory](/en/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo). The notice at the recruitment stage (job advertisement) is covered separately in [what must be written in a job advertisement](/en/labor/column/kyujin-hyo-meiji-jiko-roudou-joken).\n\n## How to organise differences in bonuses, retirement allowances, various allowances and leave\n\nIn this revision, the items to consider when comparing with regular employees, and the approach to judging them, have been added or clarified in the equal-pay-for-equal-work guidelines and the employment management guidelines for the following items.\n\n- Bonuses\n- Retirement allowances\n- Various allowances such as accident-free allowances, family allowances and housing allowances\n- Welfare facilities\n- Sick leave\n- Summer and winter leave, commendations and the like\n\nThe basic approach to organisation is to **clarify, one by one, \"what is this treatment provided for?\"** However, **simply putting the purpose of payment into words does not make a difference in treatment reasonable.** You need to organise it in light of the content of the duties, responsibility, the scope of changes in duties and reassignment and other circumstances, and the nature and purpose of the treatment in question.\n\nNote that social insurance (the \"1.06 million yen wall\") is a separate system from working conditions and treatment. To avoid confusion, for social-insurance coverage see [the 1.06 million yen wall is abolished in October 2026 — what a business owner should do](/en/labor/column/106man-no-kabe-teppai-jigyousha-yaru-koto).\n\n## Documents a company should prepare when asked for an explanation\n\nWhen asked for an explanation, oral explanation alone is hard to convey and can leave differences in understanding. Having the following documents in order makes explanation easier.\n\n- Documents showing the content of duties, responsibility and scope of reassignment (job descriptions, organisation charts, etc.)\n- A list of wages, allowances, leave and welfare benefits for regular and non-regular employees\n- Notes organising the reasons for differences in treatment (purpose of payment, recipients, basis for the amount)\n- Work rules, wage regulations and employment contracts (the latest versions)\n- A form for recording the date, content and recipient of the explanation\n\nThe method of explanation required by law (oral explanation using materials is the basic approach) should be separated from keeping an internal record of the process of explanation. In practice, recording when, to whom and what was explained helps prevent later misunderstandings.\n\n## Checklist for owners before the effective date\n\nBy 1 October 2026, check in the following order.\n\n1. Identify the affected part-time and fixed-term workers\n2. Check the matters to be stated in the notice of working conditions (including \"the fact that an explanation may be requested\")\n3. Check the consistency of employment contracts, work rules and wage regulations\n4. List differences in bonuses, retirement allowances, various allowances, leave, sick leave and so on, and organise the reasons\n5. Set rules for who responds, what to explain and how to record when an explanation is requested\n\n## What can 四葉社会保険労務士事務所 organise?\n\nIt is a considerable burden for an owner to keep following every regulatory change on their own. 四葉社会保険労務士事務所 values **organising \"what this company should check,\"** rather than merely explaining the revision itself. We organise the differences in treatment and their reasons from documents, regulations and actual practice, and clarify which points a qualified professional should confirm. The first consultation (up to 60 minutes) is free. For fees, see [the fee schedule](/en/labor/ryokin).\n\n## Frequently asked questions\n\n**Q. From October 2026, do I need to redo the notice of working conditions?**\nA. Because the matters to be stated at the time of hiring will increase, newly hired part-time and fixed-term workers will need a notice that includes \"the fact that they may request an explanation of differences in treatment.\" Even for existing workers, we recommend checking the consistency of the notice, employment contract and work rules.\n\n**Q. Is it illegal if part-time workers receive different allowances from regular employees?**\nA. Not necessarily. What is prohibited is unreasonable differences in treatment. What matters is whether you can explain the purpose of payment in light of the content of duties, responsibility, the scope of reassignment and so on. Individual judgments require confirmation by a qualified professional.\n\n**Q. How far must differences in treatment be explained?**\nA. When a worker requests an explanation, the employer has a duty to explain the content of the treatment, the matters considered in determining it, and the content of and reasons for any difference in treatment from regular employees. Having documents and records ready is the premise.\n\n**Q. Do the work rules also need to be changed?**\nA. Work rules must be drawn up and filed if the headcount requirement is met, but separately from that, check that the actual treatment does not diverge from the regulations. To explain differences in treatment, it is important to keep the provisions of the regulations consistent with actual practice.\n\n## Sources\n\n- Act on Improvement, etc. of Employment Management for Part-Time Workers and Fixed-Term Workers, Article 8 (prohibition of unreasonable differences in treatment) and Article 14 (duty to explain differences in treatment). Under the revision that takes effect and applies from 1 October 2026, \"the fact that an explanation may be requested under Article 14, paragraph 2\" is added to the matters to be stated in the notice of working conditions at the time of hiring.\n- Ministerial Ordinance Partially Amending the Ordinance for Enforcement of the Act on Securing the Proper Operation of Worker Dispatching Undertakings and Improved Working Conditions for Dispatched Workers and the Ordinance for Enforcement of the Act on Improvement, etc. of Employment Management for Part-Time Workers and Fixed-Term Workers (Ministry of Health, Labour and Welfare Ordinance No. 87 of 2026; promulgated on 28 April 2026, in force from 1 October 2026).\n- Notice Partially Amending the Guidelines on Measures, etc. That Employers Should Take for the Improvement, etc. of Employment Management for Part-Time Workers and Fixed-Term Workers (Ministry of Health, Labour and Welfare Notification No. 202 of 2026; promulgated on 28 April 2026, applied from 1 October 2026). The content of the measures for the improvement of employment management is revised.\n- Notice Partially Amending the Guidelines on the Prohibition, etc. of Unreasonable Differences in Treatment of Part-Time and Fixed-Term Workers and Dispatched Workers (Ministry of Health, Labour and Welfare Notification No. 203 of 2026; promulgated on 28 April 2026, applied from 1 October 2026). Under this revision to the so-called equal-pay-for-equal-work guidelines, the treatment of and approach to judging bonuses, retirement allowances, accident-free allowances, family allowances, housing allowances, welfare facilities, sick leave, summer and winter leave, commendations and the like are clarified.\n- The content of the revision, the model notice of working conditions, the old/new comparison tables and the Q&A have been confirmed in primary sources such as the Ministry of Health, Labour and Welfare's \"equal pay for equal work\" page (as of August 2026). For details of the implementation, please check the latest revised ordinance, notifications and Q&A.\n- Whether a difference in treatment is reasonable is judged comprehensively in light of the nature and purpose of the treatment in question, taking into account the content of the duties, the degree of responsibility, the scope of changes in duties and reassignment and other circumstances. This article is limited to a general explanation.\n\nThis article does not decide whom you should consult. Preparing work rules, wage regulations, the notice of working conditions and employment contracts, and organising differences in treatment, are the work of a Shakai Hoken Roumushi. Tax matters (the tax treatment of allowances) are the domain of a tax accountant, and individual disputes and litigation are the domain of a lawyer. For fees when consulting 四葉社会保険労務士事務所, see [the fee schedule](/en/labor/ryokin); for frequently asked questions, see [the FAQ](/en/labor/faq).\n\nThis article is general information. Whether the system applies and whether a particular difference in treatment is lawful are determined by a qualified professional after a consultation, in light of the latest primary sources (Ministry of Health, Labour and Welfare, e-Gov, etc.) and individual circumstances. Written by [Joji Uramatsu](/en/about/uramatsu) (Shakai Hoken Roumushi, Gyoseishoshi, Registered Real Estate Transaction Specialist).",
+          "category": "Labor law basics",
+          "keywords": [
+            "part-time fixed-term employment October 2026",
+            "part-time notice of working conditions 2026",
+            "fixed-term employment statement of working conditions",
+            "part-time treatment differences explanation duty",
+            "equal pay for equal work 2026 revision",
+            "request explanation of treatment differences"
+          ],
+          "tags": [
+            "part-time",
+            "fixed-term employment",
+            "equal pay for equal work",
+            "notice of working conditions",
+            "differences in treatment"
+          ],
+          "author": {
+            "name": "Joji Uramatsu",
+            "title": "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所"
+          },
+          "faq": [
+            {
+              "question": "From October 2026, do I need to redo the notice of working conditions?",
+              "answer": "Because the matters to be stated at the time of hiring will increase, newly hired part-time and fixed-term workers will need a notice that includes \"the fact that they may request an explanation of differences in treatment.\" Even for existing workers, we recommend checking the consistency of the notice, employment contract and work rules."
+            },
+            {
+              "question": "Is it illegal if part-time workers receive different allowances from regular employees?",
+              "answer": "Not necessarily. What is prohibited is unreasonable differences in treatment. What matters is whether you can explain the purpose of payment in light of the content of duties, responsibility, the scope of reassignment and so on. Individual judgments require confirmation by a qualified professional."
+            },
+            {
+              "question": "How far must differences in treatment be explained?",
+              "answer": "When a worker requests an explanation, the employer has a duty to explain the content of the treatment, the matters considered in determining it, and the content of and reasons for any difference in treatment from regular employees. Having documents and records ready is the premise."
+            },
+            {
+              "question": "Do the work rules also need to be changed?",
+              "answer": "Work rules must be drawn up and filed if the headcount requirement is met, but separately from that, check that the actual treatment does not diverge from the regulations. To explain differences in treatment, it is important to keep the provisions of the regulations consistent with actual practice."
+            }
+          ]
+        },
+        "zh-tw": {
+          "title": "2026年10月，兼職・有期僱用的規則如何改變？公司該確認的僱用時明示與待遇差",
+          "excerpt": "從2026年10月1日起，僱用兼職・有期僱用勞工時的勞動條件明示事項中，將新增「可請求說明與正職員之間待遇差的內容及理由」。說明義務本身自2020年4月起即已存在，這次改正的重點在於，於僱用時向勞工明確告知這項權利。只修正通知書文句還不夠，本質在於建立能說明「與正職員的待遇差及其理由」的狀態。本文整理施行規則（省令）、僱用管理指針、同工同酬指針的改正內容，以及就業規則・薪資規程・實際運用的確認重點。",
+          "content": "**先講結論**：從2026年10月1日起，僱用兼職・有期僱用勞工時的**勞動條件明示事項**中，將新增「**可請求說明與正職員之間待遇差的內容及理由**」。不過，公司真正該準備的**不只是書面上的文句**。趁這次改正，建立能說明「為什麼有這個差異」的狀態——也就是自社正職員與非正規員工的待遇差，這才是本質。\n\n從2026年10月1日起，公司該確認的三點如下：\n\n1. **僱用時的明示**：是否已向對象的兼職・有期僱用勞工明示可以請求說明\n2. **與正職員的待遇差及其理由**：是否處於能說明待遇差異的狀態\n3. **就業規則・薪資規程・實際運用的一致性**：書面與實際是否有落差\n\n每次法律修正，僱用契約書、就業規則、薪資規程、薪資、社會保險……公司光是要追「到底該改哪裡」就很吃力。本文整理2026年10月1日會改變什麼，並把焦點放在如何整備「說明待遇差」這項日常僱用管理，而不是單純的書面變更。\n\n## 2026年10月1日，會改變什麼？\n\n為了改善兼職・有期僱用勞工（以下稱「兼職・有期」）的待遇，與同工同酬相關的施行規則（省令），以及僱用管理指針・同工同酬指針的告示都將修正，並自2026年10月1日起施行・適用。我們把變更整理為**「這次會變的事」「以前就存在的事」「趁這次確認較好的事」**三層。\n\n| 觀點 | 改正前（至2026年9月） | 改正後（2026年10月1日起） |\n|---|---|---|\n| 僱用時的明示 | 在勞動條件通知書中明示法定事項 | **新增「可請求說明待遇差」並加以明示** |\n| 待遇差的說明 | 說明義務本身自2020年4月起即存在 | 僱用時向勞工告知可請求說明的形式 |\n| 對象待遇的思考方式 | 在同工同酬指針中有一定整理 | **修正後的指針・僱用管理指針，新增並明確化各待遇的思考方式及事業主應採取的措施** |\n\n重點是，**「待遇差的說明義務並非2026年10月才突然開始」**。說明義務本來就存在，這次改正的核心在於，讓僱用時的明示事項中包含「可以請求說明」這點，向勞工明示。切勿混淆。\n\n## 誰是對象？\n\n對象勞工是兼職勞工（短時間勞工）與有期僱用勞工。沒有依公司規模的適用除外，**僱用短時間勞工或有期僱用勞工的事業主即為對象**。不是以「兼職」「打工」等稱呼，而是以是否該當法律上的定義來確認。\n\n僱用時，除了既有的法定明示事項（勞動契約期間、工作場所、業務內容、薪資、勞動時間等）之外，這次的「可請求說明待遇差」將**新增為應以書面等明示的事項**。實務上，會反映在厚生勞動省公布的模範勞動條件通知書等。\n\n## 「可請求說明」是什麼意思？\n\n兼職・有期僱用勞工法第14條規定，勞工請求說明與通常勞工（正職員）之間待遇差的內容及理由時，事業主有說明的義務。這次的改正，就是將「可依第14條第2項請求說明」這點，新增為僱用時的明示事項。\n\n也就是說，從勞工的立場看，「為什麼我的待遇和正職員不同，可以向公司詢問」這項權利，會在僱用的時點被明確表示。從公司的立場看，前提就是**被詢問時能說明**。\n\n說明的方法，以**活用資料進行口頭說明為基本**，交付記載全部必要事項且易懂的資料等亦可。另外，公司內部記錄何時、向誰、說明了什麼，是防止日後認知差異的有效實務（後述）。\n\n## 有待遇差不等於違法\n\n這裡不該誤解的是，**「有待遇差」不代表「違法」**。兼職・有期僱用勞工法第8條禁止的是**不合理的待遇差**。\n\n待遇差是否不合理，應依其待遇的性質・目的，綜合考量職務內容、責任程度、職務及配置的變更範圍，以及其他事情來判斷。即使是同名的「津貼」，只要其旨趣或對象範圍不同，該差異也可能合理。**只看津貼名稱就判斷適法・違法是錯誤的**。個別待遇差的適法性，超出本文範圍，須由資格者確認。\n\n## 為什麼兼職方的聲音不容易傳到經營者？\n\n在確認制度的同時，還有一點不該忽略。**經營者有時未能充分接收到兼職・有期僱用勞工方的聲音。** 在日常職場中，雖然有機會從正職員或管理職聽到對兼職工作方式的意見，但經營者直接聽取兼職方如何看待待遇差的機會，未必很多。\n\n在組織裡，**正職員 → 管理職 → 經營者**這條資訊路徑是日常存在的；相對地，在**兼職 → 經營者**這條路徑薄弱的公司，待遇差的疑問浮上檯面時，不滿可能已經累積。這種資訊的偏頗，會延遲發現對待遇的不滿。\n\n如果疑問一直沒有化解，就不只是公司內部的意見表達，還可能發展為向勞動局諮詢、紛爭解決程序，或依個別案件發展為訴訟等紛爭。\n\n正因如此，2026年10月的改正不是「在通知書加一行就結束」。應把它視為**不只從正職員的聲音，也從兼職方的觀點重新點檢待遇**的契機。\n\n## 只修正通知書就結束了嗎？\n\n還沒有。通知書是「僱用時交付的書面」，實際待遇是由**就業規則・薪資規程・僱用契約書・薪資計算的運用**決定。就算通知書寫了「可請求說明」，若內容的待遇差沒有整理，被詢問時就會困擾。\n\n至少請比對確認以下三點：\n\n1. **勞動條件通知書**：明示事項是否足夠、是否為最新格式\n2. **僱用契約書**：是否與通知書矛盾\n3. **就業規則・薪資規程**：正職員與非正規員工的待遇規定是否與實際一致\n\n就業規則的義務與整備想法，請見[就業規則從幾人開始成為義務？不是義務的又是哪些？](/zh-tw/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo)。招募階段的明示（徵才廣告）另整理於[徵才廣告必須寫什麼](/zh-tw/labor/column/kyujin-hyo-meiji-jiko-roudou-joken)。\n\n## 獎金・退休金・各種津貼・休假的待遇差該怎麼整理？\n\n這次改正中，對於下列項目，與正職員比較的對象及判斷思考方式，已在同工同酬指針及僱用管理指針中新增・明確化。\n\n- 獎金\n- 退休金\n- 無事故津貼・家庭津貼・住宅津貼等各種津貼\n- 福利設施\n- 因病休職\n- 夏季・冬季休假、褒賞等\n\n整理的基本，是**逐一明確「這個待遇是為什麼而設」**。不過，**只把支付旨趣化為文字，並不代表待遇差就合理。** 必須依職務內容、責任、職務及配置的變更範圍等其他事情，以及該待遇的性質・目的來整理。\n\n另外，社會保險（106萬圓之牆）與勞動條件・待遇是不同制度。為免混淆，社會保險的適用請見[2026年10月「106萬圓之牆」撤廢。事業主該做什麼](/zh-tw/labor/column/106man-no-kabe-teppai-jigyousha-yaru-koto)。\n\n## 被勞工請求說明時，公司想準備的資料\n\n被請求說明時，只靠口頭難以傳達，也容易留下認知差異。備妥下列資料，說明會比較容易。\n\n- 可看出職務內容・責任・配置變更範圍的書面（職務定義、組織圖等）\n- 正職員與非正規員工的薪資・津貼・休假・福利一覽表\n- 整理待遇差理由的備忘錄（支付旨趣・對象者・金額的根據）\n- 就業規則・薪資規程・僱用契約書（最新版）\n- 記錄說明日期・內容・對象的格式\n\n法令上的說明方法（活用資料的口頭說明為基本）與公司內部記錄說明經過，應分開思考。實務上，記錄何時、向誰、說明了什麼，有助於防止日後的認知差異。\n\n## 施行前，經營者該做的檢查表\n\n在2026年10月1日前，請依下列順序確認。\n\n1. 盤點對象的兼職・有期僱用勞工\n2. 確認勞動條件通知書的明示事項（含「可請求說明」）\n3. 確認僱用契約書・就業規則・薪資規程的一致性\n4. 一覽化獎金・退休金・各種津貼・休假・休職等待遇差，並整理理由\n5. 制定被請求說明時的應對者・說明內容・記錄規則\n\n## 四葉社会保険労務士事務所能整理什麼？\n\n經營者自己持續追每次的制度改正，負擔不小。四葉社会保険労務士事務所重視的，不是解說改正資訊本身，而是**整理「這家公司該確認什麼」**。我們從資料・規程・實際運用整理待遇的差異及其理由，並明確應由資格者確認的論點。初次諮詢（60分鐘以內）免費。費用請見[報酬金額表](/zh-tw/labor/ryokin)。\n\n## 常見問題\n\n**Q. 從2026年10月起，需要重做勞動條件通知書嗎？**\nA. 由於僱用時的明示事項會增加，新僱用的兼職・有期僱用勞工，需要包含「可請求說明待遇差」的通知書。既有的勞工也建議點檢通知書・僱用契約書・就業規則的一致性。\n\n**Q. 兼職和正職員的津貼不同，就違法嗎？**\nA. 未必違法。被禁止的是不合理的待遇差。重要的是，能否依職務內容・責任・配置變更範圍等說明支付旨趣。個別判斷須由資格者確認。\n\n**Q. 待遇差要說明到什麼程度？**\nA. 勞工請求說明時，有義務說明待遇的內容、決定時考量的事項，以及與正職員之間待遇差的內容及理由。備妥可說明的資料與記錄是前提。\n\n**Q. 就業規則也需要變更嗎？**\nA. 就業規則在滿足人數要件時有制定・申報義務，但除此之外，請確認實際待遇與規程沒有偏離。要說明待遇差，重要的是讓規程的規定與實際運用一致。\n\n## 本文的依據\n\n- 兼職・有期僱用勞工法（短時間勞工及有期僱用勞工之僱用管理改善等相關法律）第8條（禁止不當待遇）、第14條（待遇差的說明義務）。依2026年10月1日施行・適用的改正，僱用時的勞動條件明示事項中將新增「可依第14條第2項請求說明」\n- 確保勞工派遣事業之適當營運及派遣勞工保護等相關法律施行規則及短時間勞工及有期僱用勞工之僱用管理改善等相關法律施行規則之一部分改正省令（令和8年厚生勞動省令第87號，2026年4月28日公布・2026年10月1日施行）\n- 事業主應採取之短時間勞工及有期僱用勞工僱用管理改善等措施相關指針之一部分改正（令和8年厚生勞動省告示第202號，2026年4月28日公布・2026年10月1日適用）。僱用管理改善等措施內容有所改正\n- 禁止對短時間・有期僱用勞工及派遣勞工之不當待遇等差相關指針之一部分改正（令和8年厚生勞動省告示第203號，2026年4月28日公布・2026年10月1日適用）。即所謂同工同酬指針的改正，獎金、退休金、無事故津貼、家庭津貼、住宅津貼、福利設施、因病休職、夏季・冬季休假、褒賞等的處理・判斷思考方式有所明確化\n- 改正內容・模範勞動條件通知書・新舊對照表・Q&A，已依厚生勞動省「同工同酬特集頁面」等一次資料確認（2026年8月時點）。施行內容的詳細，請確認最新的改正省令・告示・Q&A\n- 待遇差的合理性，應依其待遇的性質・目的，綜合考量職務內容、責任程度、職務及配置的變更範圍等其他事情來判斷，本文僅止於一般性整理\n\n本文並不替讀者決定該諮詢誰。就業規則・薪資規程・勞動條件通知書・僱用契約書的整備與待遇差的整理，是社會保險勞務士的業務。稅務（津貼的課稅關係）是稅理士的領域，個別紛爭・訴訟是律師的領域。向四葉社会保険労務士事務所諮詢時的費用請見[報酬金額表](/zh-tw/labor/ryokin)，常見問題請見[常見問題](/zh-tw/labor/faq)。\n\n本文為一般資訊提供。制度的適用與個別待遇差的適法性，請依最新一次資料（厚生勞動省、e-Gov等）與個別情況，在面談後由資格者進行。執筆者為[浦松丈二](/zh-tw/about/uramatsu)（社會保險勞務士・行政書士・宅地建物取引士）。",
+          "category": "勞動法基礎",
+          "keywords": [
+            "兼職 有期僱用 2026年10月",
+            "兼職 勞動條件通知書 2026",
+            "有期僱用 勞動條件 明示事項",
+            "兼職 待遇差 說明義務",
+            "同工同酬 2026 改正",
+            "請求說明待遇差"
+          ],
+          "tags": [
+            "兼職",
+            "有期僱用",
+            "同工同酬",
+            "勞動條件明示",
+            "待遇差"
+          ],
+          "author": {
+            "name": "浦松 丈二",
+            "title": "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+          },
+          "faq": [
+            {
+              "question": "從2026年10月起，需要重做勞動條件通知書嗎？",
+              "answer": "由於僱用時的明示事項會增加，新僱用的兼職・有期僱用勞工，需要包含「可請求說明待遇差」的通知書。既有的勞工也建議點檢通知書・僱用契約書・就業規則的一致性。"
+            },
+            {
+              "question": "兼職和正職員的津貼不同，就違法嗎？",
+              "answer": "未必違法。被禁止的是不合理的待遇差。重要的是，能否依職務內容・責任・配置變更範圍等說明支付旨趣。個別判斷須由資格者確認。"
+            },
+            {
+              "question": "待遇差要說明到什麼程度？",
+              "answer": "勞工請求說明時，有義務說明待遇的內容、決定時考量的事項，以及與正職員之間待遇差的內容及理由。備妥可說明的資料與記錄是前提。"
+            },
+            {
+              "question": "就業規則也需要變更嗎？",
+              "answer": "就業規則在滿足人數要件時有制定・申報義務，但除此之外，請確認實際待遇與規程沒有偏離。要說明待遇差，重要的是讓規程的規定與實際運用一致。"
+            }
+          ]
+        },
+        "zh": {
+          "title": "2026年10月，兼职・有期雇用的规则如何改变？公司该确认的雇用时明示与待遇差",
+          "excerpt": "从2026年10月1日起，雇用兼职・有期雇用劳动者时的劳动条件明示事项中，将新增「可请求说明与正式员工之间待遇差的内容及理由」。说明义务本身自2020年4月起即已存在，这次改正的重点在于，于雇用时向劳动者明确告知这项权利。只修正通知书文句还不够，本质在于建立能说明「与正式员工的待遇差及其理由」的状态。本文整理施行规则（省令）、雇用管理指针、同工同酬指针的改正内容，以及就业规则・工资规程・实际运用的确认重点。",
+          "content": "**先讲结论**：从2026年10月1日起，雇用兼职・有期雇用劳动者时的**劳动条件明示事项**中，将新增「**可请求说明与正式员工之间待遇差的内容及理由**」。不过，公司真正该准备的**不只是书面上的文句**。趁这次改正，建立能说明「为什么有这个差异」的状态——也就是自社正式员工与非正式员工的待遇差，这才是本质。\n\n从2026年10月1日起，公司该确认的三点如下：\n\n1. **雇用时的明示**：是否已向对象的兼职・有期雇用劳动者明示可以请求说明\n2. **与正式员工的待遇差及其理由**：是否处于能说明待遇差异的状态\n3. **就业规则・工资规程・实际运用的一致性**：书面与实际是否有落差\n\n每次法律修正，雇佣合同书、就业规则、工资规程、工资、社会保险……公司光是要追「到底该改哪里」就很吃力。本文整理2026年10月1日会改变什么，并把焦点放在如何整备「说明待遇差」这项日常雇用管理，而不是单纯的书面变更。\n\n## 2026年10月1日，会改变什么？\n\n为了改善兼职・有期雇用劳动者（以下称「兼职・有期」）的待遇，与同工同酬相关的施行规则（省令），以及雇用管理指针・同工同酬指针的告示都将修正，并自2026年10月1日起施行・适用。我们把变更整理为**「这次会变的事」「以前就存在的事」「趁这次确认较好的事」**三层。\n\n| 观点 | 改正前（至2026年9月） | 改正后（2026年10月1日起） |\n|---|---|---|\n| 雇用时的明示 | 在劳动条件通知书中明示法定事项 | **新增「可请求说明待遇差」并加以明示** |\n| 待遇差的说明 | 说明义务本身自2020年4月起即存在 | 雇用时向劳动者告知可请求说明的形式 |\n| 对象待遇的思考方式 | 在同工同酬指针中有一定整理 | **修正后的指针・雇用管理指针，新增并明确化各待遇的思考方式及企业主应采取的措施** |\n\n重点是，**「待遇差的说明义务并非2026年10月才突然开始」**。说明义务本来就存在，这次改正的核心在于，让雇用时的明示事项中包含「可以请求说明」这点，向劳动者明示。切勿混淆。\n\n## 谁是对象？\n\n对象劳动者是兼职劳动者（短时间劳动者）与有期雇用劳动者。没有依公司规模的适用除外，**雇用短时间劳动者或有期雇用劳动者的企业主即为对象**。不是以「兼职」「打工」等称呼，而是以是否该当法律上的定义来确认。\n\n雇用时，除了既有的法定明示事项（劳动合同期间、工作场所、业务内容、工资、劳动时间等）之外，这次的「可请求说明待遇差」将**新增为应以书面等明示的事项**。实务上，会反映在厚生劳动省公布的模范劳动条件通知书等。\n\n## 「可请求说明」是什么意思？\n\n兼职・有期雇用劳动者法第14条规定，劳动者请求说明与通常劳动者（正式员工）之间待遇差的内容及理由时，企业主有说明的义务。这次的改正，就是将「可依第14条第2项请求说明」这点，新增为雇用时的明示事项。\n\n也就是说，从劳动者的立场看，「为什么我的待遇和正式员工不同，可以向公司询问」这项权利，会在雇用的时点被明确表示。从公司的立场看，前提就是**被询问时能说明**。\n\n说明的方法，以**活用资料进行口头说明为基本**，交付记载全部必要事项且易懂的资料等亦可。另外，公司内部记录何时、向谁、说明了什么，是防止日后认知差异的有效实务（后述）。\n\n## 有待遇差不等于违法\n\n这里不该误解的是，**「有待遇差」不代表「违法」**。兼职・有期雇用劳动者法第8条禁止的是**不合理的待遇差**。\n\n待遇差是否不合理，应依其待遇的性质・目的，综合考量职务内容、责任程度、职务及配置的变更范围，以及其他事情来判断。即使是同名的「津贴」，只要其旨趣或对象范围不同，该差异也可能合理。**只看津贴名称就判断适法・违法是错误的**。个别待遇差的适法性，超出本文范围，须由资格者确认。\n\n## 为什么兼职方的声音不容易传到经营者？\n\n在确认制度的同时，还有一点不该忽略。**经营者有时未能充分接收到兼职・有期雇用劳动者方的声音。** 在日常职场中，虽然有机会从正式员工或管理人员听到对兼职工作方式的意见，但经营者直接听取兼职方如何看待待遇差的机会，未必很多。\n\n在组织里，**正式员工 → 管理人员 → 经营者**这条资讯路径是日常存在的；相对地，在**兼职 → 经营者**这条路径薄弱的公司，待遇差的疑问浮上台面时，不满可能已经累积。这种资讯的偏颇，会延迟发现对待遇的不满。\n\n如果疑问一直没有化解，就不只是公司内部的意见表达，还可能发展为向劳动局咨询、纠纷解决程序，或依个别案件发展为诉讼等纠纷。\n\n正因如此，2026年10月的改正不是「在通知书加一行就结束」。应把它视为**不只从正式员工的声音，也从兼职方的观点重新点检待遇**的契机。\n\n## 只修正通知书就结束了吗？\n\n还没有。通知书是「雇用时交付的书面」，实际待遇是由**就业规则・工资规程・雇佣合同书・工资计算的运用**决定。就算通知书写了「可请求说明」，若内容的待遇差没有整理，被询问时就会困扰。\n\n至少请比对确认以下三点：\n\n1. **劳动条件通知书**：明示事项是否足够、是否为最新格式\n2. **雇佣合同书**：是否与通知书矛盾\n3. **就业规则・工资规程**：正式员工与非正式员工的待遇规定是否与实际一致\n\n就业规则的义务与整备想法，请见[就业规则从几人开始成为义务？不是义务的又有哪些？](/zh/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo)。招募阶段的明示（招聘广告）另整理于[招聘广告必须写什么](/zh/labor/column/kyujin-hyo-meiji-jiko-roudou-joken)。\n\n## 奖金・退休金・各种津贴・休假的待遇差该怎么整理？\n\n这次改正中，对于下列项目，与正式员工比较的对象及判断思考方式，已在同工同酬指针及雇用管理指针中新增・明确化。\n\n- 奖金\n- 退休金\n- 无事故津贴・家庭津贴・住宅津贴等各种津贴\n- 福利设施\n- 因病休职\n- 夏季・冬季休假、褒赏等\n\n整理的基本，是**逐一明确「这个待遇是为什么而设」**。不过，**只把支付旨趣化为文字，并不代表待遇差就合理。** 必须依职务内容、责任、职务及配置的变更范围等其他事情，以及该待遇的性质・目的来整理。\n\n另外，社会保险（106万日元之墙）与劳动条件・待遇是不同制度。为免混淆，社会保险的适用请见[2026年10月「106万日元之墙」撤废。企业主该做什么](/zh/labor/column/106man-no-kabe-teppai-jigyousha-yaru-koto)。\n\n## 被劳动者请求说明时，公司想准备的资料\n\n被请求说明时，只靠口头难以传达，也容易留下认知差异。备妥下列资料，说明会比较容易。\n\n- 可看出职务内容・责任・配置变更范围的书面（职务定义、组织图等）\n- 正式员工与非正式员工的工资・津贴・休假・福利一览表\n- 整理待遇差理由的备忘录（支付旨趣・对象者・金额的根据）\n- 就业规则・工资规程・雇佣合同书（最新版）\n- 记录说明日期・内容・对象的格式\n\n法令上的说明方法（活用资料的口头说明为基本）与公司内部记录说明经过，应分开思考。实务上，记录何时、向谁、说明了什么，有助于防止日后的认知差异。\n\n## 施行前，经营者该做的检查表\n\n在2026年10月1日前，请依下列顺序确认。\n\n1. 盘点对象的兼职・有期雇用劳动者\n2. 确认劳动条件通知书的明示事项（含「可请求说明」）\n3. 确认雇佣合同书・就业规则・工资规程的一致性\n4. 一览化奖金・退休金・各种津贴・休假・休职等待遇差，并整理理由\n5. 制定被请求说明时的应对者・说明内容・记录规则\n\n## 四葉社会保険労務士事務所能整理什么？\n\n经营者自己持续追每次的制度改正，负担不小。四葉社会保険労務士事務所重视的，不是解说改正资讯本身，而是**整理「这家公司该确认什么」**。我们从资料・规程・实际运用整理待遇的差异及其理由，并明确应由资格者确认的论点。初次咨询（60分钟以内）免费。费用请见[报酬金额表](/zh/labor/ryokin)。\n\n## 常见问题\n\n**Q. 从2026年10月起，需要重做劳动条件通知书吗？**\nA. 由于雇用时的明示事项会增加，新雇用的兼职・有期雇用劳动者，需要包含「可请求说明待遇差」的通知书。既有的劳动者也建议点检通知书・雇佣合同书・就业规则的一致性。\n\n**Q. 兼职和正式员工的津贴不同，就违法吗？**\nA. 未必违法。被禁止的是不合理的待遇差。重要的是，能否依职务内容・责任・配置变更范围等说明支付旨趣。个别判断须由资格者确认。\n\n**Q. 待遇差要说明到什么程度？**\nA. 劳动者请求说明时，有义务说明待遇的内容、决定时考量的事项，以及与正式员工之间待遇差的内容及理由。备妥可说明的资料与记录是前提。\n\n**Q. 就业规则也需要变更吗？**\nA. 就业规则在满足人数要件时有制定・申报义务，但除此之外，请确认实际待遇与规程没有偏离。要说明待遇差，重要的是让规程的规定与实际运用一致。\n\n## 本文的依据\n\n- 兼职・有期雇用劳动者法（短时间劳动者及有期雇用劳动者的雇用管理改善等相关法律）第8条（禁止不当待遇）、第14条（待遇差的说明义务）。依2026年10月1日施行・适用的改正，雇用时的劳动条件明示事项中将新增「可依第14条第2项请求说明」\n- 确保劳动者派遣事业的适当运营及派遣劳动者保护等相关法律施行规则及短时间劳动者及有期雇用劳动者的雇用管理改善等相关法律施行规则之一部分改正省令（令和8年厚生劳动省令第87号，2026年4月28日公布・2026年10月1日施行）\n- 企业主应采取的短时间劳动者及有期雇用劳动者雇用管理改善等措施相关指针之一部分改正（令和8年厚生劳动省告示第202号，2026年4月28日公布・2026年10月1日适用）。雇用管理改善等措施内容有所改正\n- 禁止对短时间・有期雇用劳动者及派遣劳动者的不合理待遇等相关指针之一部分改正（令和8年厚生劳动省告示第203号，2026年4月28日公布・2026年10月1日适用）。即所谓同工同酬指针的改正，奖金、退休金、无事故津贴、家庭津贴、住宅津贴、福利设施、因病休职、夏季・冬季休假、褒赏等的处理・判断思考方式有所明确化\n- 改正内容・模范劳动条件通知书・新旧对照表・Q&A，已依厚生劳动省「同工同酬特集页面」等一次资料确认（2026年8月时点）。施行内容的详细，请确认最新的改正省令・告示・Q&A\n- 待遇差的合理性，应依其待遇的性质・目的，综合考量职务内容、责任程度、职务及配置的变更范围等其他事情来判断，本文仅止于一般性整理\n\n本文并不替读者决定该咨询谁。就业规则・工资规程・劳动条件通知书・雇佣合同书的整备与待遇差的整理，是社会保险劳务士的业务。税务（津贴的课税关系）是税务师（税理士）的领域，个别纠纷・诉讼是律师的领域。向四葉社会保険労務士事務所咨询时的费用请见[报酬金额表](/zh/labor/ryokin)，常见问题请见[常见问题](/zh/labor/faq)。\n\n本文为一般资讯提供。制度的适用与个别待遇差的适法性，请依最新一次资料（厚生劳动省、e-Gov等）与个别情况，在面谈后由资格者进行。执笔者为[浦松丈二](/zh/about/uramatsu)（社会保险劳务士・行政书士・宅地建物取引士）。",
+          "category": "劳动法基础",
+          "keywords": [
+            "兼职 有期雇用 2026年10月",
+            "兼职 劳动条件通知书 2026",
+            "有期雇用 劳动条件 明示事项",
+            "兼职 待遇差 说明义务",
+            "同工同酬 2026 改正",
+            "请求说明待遇差"
+          ],
+          "tags": [
+            "兼职",
+            "有期雇用",
+            "同工同酬",
+            "劳动条件明示",
+            "待遇差"
+          ],
+          "author": {
+            "name": "浦松 丈二",
+            "title": "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+          },
+          "faq": [
+            {
+              "question": "从2026年10月起，需要重做劳动条件通知书吗？",
+              "answer": "由于雇用时的明示事项会增加，新雇用的兼职・有期雇用劳动者，需要包含「可请求说明待遇差」的通知书。既有的劳动者也建议点检通知书・雇佣合同书・就业规则的一致性。"
+            },
+            {
+              "question": "兼职和正式员工的津贴不同，就违法吗？",
+              "answer": "未必违法。被禁止的是不合理的待遇差。重要的是，能否依职务内容・责任・配置变更范围等说明支付旨趣。个别判断须由资格者确认。"
+            },
+            {
+              "question": "待遇差要说明到什么程度？",
+              "answer": "劳动者请求说明时，有义务说明待遇的内容、决定时考量的事项，以及与正式员工之间待遇差的内容及理由。备妥可说明的资料与记录是前提。"
+            },
+            {
+              "question": "就业规则也需要变更吗？",
+              "answer": "就业规则在满足人数要件时有制定・申报义务，但除此之外，请确认实际待遇与规程没有偏离。要说明待遇差，重要的是让规程的规定与实际运用一致。"
             }
           ]
         }

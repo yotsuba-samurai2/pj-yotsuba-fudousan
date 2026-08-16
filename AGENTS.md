@@ -24,6 +24,61 @@ This version has breaking changes — APIs, conventions, and file structure may 
 
 > 本ファイルは上記ルールの「上位互換」ではありません。あくまで実行手順の固定です。
 
+## 0.5 社労士コラム制作ワークフロー（手動モデルレビューゲート方式・2026-08-16 改訂）
+
+社労士コラムの「企画 → 執筆 → レビュー → 実装」を、**Codex（DeepSeek V4 Pro）が生成した
+Markdown を人間が別モデル（GPT-5.6 Sol / Fable 5）へ渡してレビューする**方式に変更した。
+モデル認証・サンドボックス・provider切替に依存せず安定させる。既存ルールは代替しない。
+
+### 重要原則
+
+- Codex 自身が Sol / Fable 5 の代役をしない。
+- Codex から別モデルを自動起動しない。
+- `codex exec --model` によるモデル切替は本フローでは使用しない。
+- レビュー工程では必ず人間を介在させる。
+
+### 全体フロー
+
+- **PHASE 1（企画）**：Codex が企画候補を生成 → `PLAN_REVIEW_INPUT.md` 出力 → 停止 → 人間が Sol/Fable 5 へ渡す → `PLAN_REVIEW_OUTPUT.md` 保存
+- **PHASE 2（原稿）**：Codex が `PLAN_REVIEW_OUTPUT.md` と `COLUMN_BRIEF.md` を読み日本語原稿を執筆 → `ARTICLE_REVIEW_INPUT.md` 出力 → 停止 → 人間が Sol/Fable 5 へ渡す → `ARTICLE_REVIEW_OUTPUT.md` 保存
+- **PHASE 3（実装）**：Codex が `ARTICLE_REVIEW_OUTPUT.md` を読み修正 → 翻訳 → seed → 検証 → build → git diff → 停止
+
+### コマンド
+
+- `npm run column:plan`：企画生成 → `PLAN_REVIEW_INPUT.md` 生成 → 停止
+- `npm run column:draft`：`PLAN_REVIEW_OUTPUT.md` + `COLUMN_BRIEF.md` を読む → 日本語原稿 → `ARTICLE_REVIEW_INPUT.md` 生成 → 停止
+- `npm run column:publish-prep`：`ARTICLE_REVIEW_OUTPUT.md` を読む → 修正 → 翻訳 → seed → 検証 → build → git diff → 停止
+
+### レビューファイル（scripts/labor-columns/review-work/）
+
+- `PLAN_REVIEW_INPUT.md` … Codex が企画候補を出力（テンプレート：`PLAN_REVIEW_INPUT.template.md`）
+- `PLAN_REVIEW_OUTPUT.md` … 人間が Sol/Fable 5 のレビュー結果を保存（Codex が読む）
+- `ARTICLE_REVIEW_INPUT.md` … Codex が日本語原稿を出力（テンプレート：`ARTICLE_REVIEW_INPUT.template.md`）
+- `ARTICLE_REVIEW_OUTPUT.md` … 人間が Sol/Fable 5 のレビュー結果を保存（Codex が読む）
+- `archive/` … 既存ファイルの退避先
+
+### 読み込みルール（必須）
+
+- `column:draft` は `PLAN_REVIEW_OUTPUT.md` が存在しない場合は実行しない。
+- `column:publish-prep` は `ARTICLE_REVIEW_OUTPUT.md` が存在しない場合は実行しない。
+- 優先順位：法令・一次資料 → 既存コンプライアンス → `USER_MEMO` → `PLAN_REVIEW_OUTPUT.md` → V4企画案。
+
+### セキュリティ
+
+- APIキー・認証情報・顧客個人情報をレビュー用 Markdown に入れない。
+- 実案件を例示する場合は匿名化する。
+
+### 実行ゲート
+
+- `commit` / `push` / PR / merge / 本番deploy / DB `--write` は自動実行しない。
+- 無条件禁止：`git reset --hard` / `git clean -fd` / force push / rebase。
+
+### 旧自動ルーティング（deprecated）
+
+- 旧 `column:start` / `column:continue`（V4⇄Sol の自動 `codex exec`）は非推奨。
+- package.json では `column:start:deprecated` / `column:continue:deprecated` に改名。
+- 旧テンプレート（`templates/sol-plan-review.md` / `sol-editor-review.md`）は参照用に残すが、新フローでは使わない。
+
 ## 1. 編集境界 COLUMN_BRIEF.md
 
 repo 直下の `COLUMN_BRIEF.md` が人間と Codex の編集境界です。
