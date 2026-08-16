@@ -79,13 +79,23 @@ repo 直下の `COLUMN_BRIEF.md` が人間と Codex の編集境界です。
 11. lint / typecheck / test / build（§12）
 12. エラー修正（自分が原因のもののみ）
 13. git diff 確認
+14. 論理コミット分割（docs=ワークフロー／feat=記事）→ `git commit`
+15. `git push` → PR作成 → squash merge（§5）
 
-## 5. 絶対に自動実行しない（ハード禁止）
+> 本番DB投入（`--write` / `/admin/columns/seed-labor`）はここでは行いません（§5）。
 
-`git commit` / `git push` / PR作成 / merge / 本番 deploy / 本番DBへの `--write` は、
-**ユーザーの明示指示があるまで実行しません**。
+## 5. 実行ゲート（ノンストップ実行と、手動に残す工程）
 
-以下も禁止：`git reset --hard` / `git clean -fd` / force push / rebase による既存作業破壊 / 他人の変更の削除。
+**ユーザーによる企画選定（COLUMN_BRIEF.md を `APPROVED` にする）をもって、以降を一括承認したものとみなします。**
+フェーズ2では、検証完了まで**原則ノンストップ**で `git commit` → `git push` → PR作成 → squash merge まで自動実行します。
+
+**本番DB投入（`--write` / `/admin/columns/seed-labor`）は自動実行しません。**
+merge 後に停止し、ユーザーが管理画面 `/admin/columns/seed-labor` から手動で投入します。
+（ローカル `--write` は `.env.local` に実接続情報が必要で、通常は使用しません。）
+
+本番 deploy（`NEXT_PUBLIC_SR_LAUNCHED=true` の再デプロイ）も自動実行しません。開業日 2026-09-01 のタイミングで行う工程です。
+
+無条件に禁止：`git reset --hard` / `git clean -fd` / force push / rebase による既存作業破壊 / 他人の変更の削除 / 本番DBへの直接SQL（スキーマ変更）。
 開始時は必ず `git status` を確認し、既存の未コミット変更を破壊しません。
 
 ## 6. 法令・制度のファクトチェック
@@ -138,3 +148,15 @@ URL・内部リンク・frontmatter は既存 locale ルールを厳守します
 
 `npm run column:check`（dry-run 検証）と `npm run column:emit`（seed TS 生成）を package.json に追加済み。
 企画（フェーズ1）は AI の調査・提案工程のため CLI にはせず、ユーザーの「企画開始コマンド」で起動します。
+
+## 14. ノンストップ実行の前提（毎セッション最初に1回だけ）
+
+作業開始時に次の権限を**1回にまとめて**確保する（毎ターン再申請しない）：
+- リポジトリ書き込み（`/Users/uramatsujouji/pj-yotsuba-fudousan`）
+- `.git` 書き込み（commit / branch / merge に必要）
+- ネットワーク（`git push`・`gh` に必要）
+
+※ 可能なら Codex の「書き込み可能ルート」に `/Users/uramatsujouji/pj-yotsuba-fudousan` を追加し、
+　 session スコープで許可すると毎回の再申請が不要になる。
+
+本番DB投入は自動化しない（§5）。ユーザーが merge 後に `/admin/columns/seed-labor` から投入する。

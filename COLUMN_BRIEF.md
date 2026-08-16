@@ -9,8 +9,8 @@
 > STATUS の意味：
 > - `NEW` … 企画未着手
 > - `WAITING_FOR_USER` … 企画候補を提示済み・人間の選定待ち
-> - `APPROVED` … 企画番号とメモ記入済み・実行可
-> - `COMPLETED` … 完了
+> - `APPROVED` … 企画番号とメモ記入済み・実行可（以降、検証〜merge まで Codex がノンストップ実行）
+> - `COMPLETED` … 記事執筆〜merge まで完了（本番DB投入はユーザーが `/admin/columns/seed-labor` から手動で行う）
 
 STATUS: COMPLETED
 
