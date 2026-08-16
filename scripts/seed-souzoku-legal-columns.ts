@@ -72,6 +72,14 @@ const REQUIRED_HUB_LINKS: Record<string, string[]> = {
     "/souzoku",
     "/legal/column/souzoku-hajime-koseki-chosa-bunkyo",
   ],
+  "houtei-souzoku-jouhou-ichiran-zu": [
+    "/legal/services/inheritance",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/souzoku",
+    "/legal/column/souzoku-hajime-koseki-chosa-bunkyo",
+    "/legal/column/isan-bunkatsu-kyougisho",
+  ],
 };
 
 /** 表示コンプライアンス上の禁止語 */
@@ -89,6 +97,15 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "法定相続情報一覧図",
     "実印",
     "印鑑証明書",
+    "houmukyoku.moj.go.jp/homu/page7_000014",
+    "houmukyoku.moj.go.jp/sapporo/page000236",
+  ],
+  "houtei-souzoku-jouhou-ichiran-zu": [
+    "法定相続情報証明制度",
+    "相続関係説明図",
+    "認証文",
+    "5年",
+    "遺産分割の内容",
     "houmukyoku.moj.go.jp/homu/page7_000014",
     "houmukyoku.moj.go.jp/sapporo/page000236",
   ],
@@ -148,6 +165,23 @@ const ARTICLES: Array<{
       "遺産分割協議書 法定相続情報一覧図 違い",
     ],
     tags: ["遺産分割協議書", "相続", "印鑑証明書", "法定相続情報一覧図", "相続登記", "行政書士"],
+  },
+  {
+    file: "04-houtei-souzoku-jouhou-ichiran-zu.md",
+    slug: "houtei-souzoku-jouhou-ichiran-zu",
+    title: "法定相続情報一覧図とは？戸籍の束を1枚にできる制度と申出のしかた",
+    category: "相続の手続き（行政書士の実務から）",
+    excerpt:
+      "法定相続情報一覧図は、戸籍から判明する法定相続人を一覧にした図で、法定相続情報証明制度として法務局へ申出ると登記官の認証文付きの写しを交付してもらえます。相続関係説明図との違い、申出方法、5年保存・再交付、行政書士に頼める範囲を整理しました。",
+    keywords: [
+      "法定相続情報一覧図 とは",
+      "法定相続情報証明制度",
+      "法定相続情報一覧図 作り方",
+      "法定相続情報一覧図 申出",
+      "法定相続情報一覧図 相続関係説明図 違い",
+      "法定相続情報一覧図 再交付",
+    ],
+    tags: ["法定相続情報一覧図", "法定相続情報証明制度", "相続", "戸籍", "相続関係説明図", "行政書士"],
   },
 ];
 
