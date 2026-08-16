@@ -79,6 +79,14 @@ const REQUIRED_HUB_LINKS: Record<string, string[]> = {
     "/legal/column/souzoku-hajime-koseki-chosa-bunkyo",
     "/legal/column/isan-bunkatsu-kyougisho",
   ],
+  "jihitsu-kosei-yuigon": [
+    "/legal/services/inheritance",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/souzoku",
+    "/legal/column/souzoku-hajime-koseki-chosa-bunkyo",
+    "/legal/column/isan-bunkatsu-kyougisho",
+  ],
 };
 
 /** 表示コンプライアンス上の禁止語 */
@@ -114,6 +122,25 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "houmukyoku.moj.go.jp/homu/page7_000014",
     "houmukyoku.moj.go.jp/sapporo/page000236",
   ],
+  "jihitsu-kosei-yuigon": [
+    "自筆証書遺言",
+    "公正証書遺言",
+    "押印",
+    "保管証書遺言",
+    "民法第968条の2",
+    "未施行",
+    "指定者通知",
+    "関係遺言書保管通知",
+    "外形的に確認",
+    "2025年10月1日",
+    "電磁的記録",
+    "法務大臣が指定する公証人",
+    "民法第1022条",
+    "民法第1023条",
+    "遺留分",
+    "公証人手数料令",
+    "50万円以下",
+  ],
 };
 
 /** 記事ごとに含めてはならない表現 */
@@ -126,6 +153,12 @@ const FORBIDDEN_PHRASES: Record<string, string[]> = {
     "印鑑登録証明書",
     "手間と取得費用",
     "相続登記は司法書士",
+  ],
+  "jihitsu-kosei-yuigon": [
+    "いわゆるデジタル遺言",
+    "順次利用可能",
+    "すべての公証役場で同時に",
+    "11,000円",
   ],
 };
 
@@ -195,6 +228,23 @@ const ARTICLES: Array<{
       "法定相続情報一覧図 再交付",
     ],
     tags: ["法定相続情報一覧図", "法定相続情報証明制度", "相続", "戸籍", "相続関係説明図", "行政書士"],
+  },
+  {
+    file: "05-jihitsu-kosei-yuigon.md",
+    slug: "jihitsu-kosei-yuigon",
+    title: "自筆証書遺言と公正証書遺言の違いとは？文京区で作る遺言と行政書士に頼めること",
+    category: "相続の手続き（行政書士の実務から）",
+    excerpt:
+      "自筆証書遺言と公正証書遺言は、方式・検認の要否・費用が異なります。現行の自筆証書遺言では押印が必須であること、2020年開始の法務局保管制度、2025年の公証実務デジタル化、2026年公布で未施行の押印任意化・保管証書遺言までを文京区の実務に沿って整理しました。",
+    keywords: [
+      "自筆証書遺言 公正証書遺言 違い",
+      "遺言 行政書士 文京区",
+      "自筆証書遺言書保管制度",
+      "公正証書遺言 費用",
+      "保管証書遺言 未施行",
+      "遺留分 遺言 無効",
+    ],
+    tags: ["遺言", "自筆証書遺言", "公正証書遺言", "保管証書遺言", "検認", "行政書士"],
   },
 ];
 
