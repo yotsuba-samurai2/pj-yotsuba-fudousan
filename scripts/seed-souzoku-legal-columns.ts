@@ -87,6 +87,19 @@ const REQUIRED_HUB_LINKS: Record<string, string[]> = {
     "/legal/column/souzoku-hajime-koseki-chosa-bunkyo",
     "/legal/column/isan-bunkatsu-kyougisho",
   ],
+  "souzoku-kaigai-gaikokuseki": [
+    "/legal/services/inheritance",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/souzoku",
+    "/legal/column/souzoku-hajime-koseki-chosa-bunkyo",
+    "/legal/column/isan-bunkatsu-kyougisho",
+    "/legal/column/houtei-souzoku-jouhou-ichiran-zu",
+    "/legal/column/jihitsu-kosei-yuigon",
+    "/legal/column/taiwan-koseki-jokoseki-shutoku",
+    "/legal/column/taiwan-inkan-shomei-isan-bunkatsu",
+    "/legal/column/denshi-keiyaku-enpo-inin-kami",
+  ],
 };
 
 /** 表示コンプライアンス上の禁止語 */
@@ -141,6 +154,26 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "公証人手数料令",
     "50万円以下",
   ],
+  "souzoku-kaigai-gaikokuseki": [
+    "海外在住",
+    "外国籍",
+    "被相続人の本国法",
+    "反致",
+    "通則法第41条",
+    "通則法第38条",
+    "第31条",
+    "第9条",
+    "第58条",
+    "第6条",
+    "涉外民事关系法律适用法",
+    "涉外民事法律適用法",
+    "法定相続情報一覧図",
+    "在外公館",
+    "納税管理人",
+    "遺言の方式の準拠法に関する法律",
+    "本国官憲",
+    "司法書士・管轄登記所",
+  ],
 };
 
 /** 記事ごとに含めてはならない表現 */
@@ -159,6 +192,11 @@ const FORBIDDEN_PHRASES: Record<string, string[]> = {
     "順次利用可能",
     "すべての公証役場で同時に",
     "11,000円",
+  ],
+  "souzoku-kaigai-gaikokuseki": [
+    "日本領事の署名証明",
+    "台湾にも独自の反致規定",
+    "台湾籍なら必ず台湾法",
   ],
 };
 
@@ -245,6 +283,23 @@ const ARTICLES: Array<{
       "遺留分 遺言 無効",
     ],
     tags: ["遺言", "自筆証書遺言", "公正証書遺言", "保管証書遺言", "検認", "行政書士"],
+  },
+  {
+    file: "06-souzoku-kaigai-gaikokuseki.md",
+    slug: "souzoku-kaigai-gaikokuseki",
+    title: "相続人が海外在住・外国籍の場合は？必要書類・署名証明と行政書士に頼めること",
+    category: "相続の手続き（行政書士の実務から）",
+    excerpt:
+      "海外在住と外国籍は同じ問題ではありません。印鑑証明・署名証明・住所証明に加え、被相続人が外国籍の場合は本国法と反致が関係します。中国大陸と台湾の準拠法の違い、行政書士に頼める範囲を文京区の実務に沿って整理しました。",
+    keywords: [
+      "相続 海外在住 外国籍",
+      "相続 本国法 反致",
+      "中国 台湾 相続 準拠法 違い",
+      "海外在住 相続 印鑑証明 署名証明",
+      "納税管理人 海外 相続",
+      "行政書士 海外相続 文京区",
+    ],
+    tags: ["相続", "海外在住", "外国籍", "本国法", "反致", "署名証明"],
   },
 ];
 
