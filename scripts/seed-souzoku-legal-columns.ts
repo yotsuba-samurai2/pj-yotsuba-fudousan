@@ -1,5 +1,5 @@
 /**
- * 相続コラム（行政書士）シリーズ（第1号〜第10号・4言語）投入スクリプト
+ * 相続コラム（行政書士）シリーズ（第1号〜第11号・4言語）投入スクリプト
  *
  * 対象＝luck428.com /legal/column（business=legal）。
  * 原稿＝scripts/legal-columns/NN-*.md（ja）＋{en,zh-tw,zh}/NN-*.md（翻訳）。
@@ -165,6 +165,15 @@ const REQUIRED_HUB_LINKS: Record<string, string[]> = {
     "/legal/column/houtei-souzoku-bun",
     "/legal/column/souzoku-kigen-matome",
     "/legal/column/souzoku-zei-shinkoku-hitsuyo",
+  ],
+  "souzoku-hoki-gentei-shonin": [
+    "/legal/services/inheritance",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/souzoku-zaisan-mokuroku",
+    "/legal/column/houtei-souzoku-bun",
+    "/legal/column/souzoku-kigen-matome",
+    "/legal/column/souzoku-touki-nagare",
   ],
 };
 
@@ -343,6 +352,26 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "対象不動産の所在地",
     "独立した事業体",
   ],
+  "souzoku-hoki-gentei-shonin": [
+    "単純承認",
+    "相続放棄",
+    "限定承認",
+    "自己のために相続の開始があったことを知った時から3か月",
+    "相続によって得た財産の限度",
+    "被相続人の債務及び遺贈を弁済することを留保",
+    "共同相続人全員が共同して",
+    "限定承認後5日以内",
+    "選任後10日以内",
+    "公告",
+    "家庭裁判所",
+    "収入印紙800円",
+    "熟慮期間の伸長",
+    "相当な理由がある場合",
+    "司法書士又は弁護士",
+    "相続財産目録",
+    "譲渡があったものとみなされる",
+    "独立した事業体",
+  ],
 };
 
 /** 記事ごとに含めてはならない表現 */
@@ -391,6 +420,7 @@ const FORBIDDEN_PHRASES: Record<string, string[]> = {
     "戸籍・協議書・印鑑証明書を全部そろえればどの相続登記でも足りる",
     "すべての100万円以下の不動産が免税",
   ],
+  "souzoku-hoki-gentei-shonin": [],
 };
 
 /** 本セット外へ張る既存legalコラムslug（リポジトリの他シードで実在確認済み） */
@@ -578,6 +608,23 @@ const ARTICLES: Array<{
       "相続登記 法定相続情報一覧図",
     ],
     tags: ["相続登記", "相続人申告登記", "登記申請", "法定相続情報一覧図", "司法書士", "相続"],
+  },
+  {
+    file: "12-souzoku-hoki-gentei-shonin.md",
+    slug: "souzoku-hoki-gentei-shonin",
+    title: "相続放棄・限定承認を検討する前に知っておきたいこと──3か月・財産調査・手続きの流れ",
+    category: "相続の手続き（行政書士の実務から）",
+    excerpt:
+      "相続の承認・放棄には、単純承認、相続放棄、限定承認の3つがあります。3か月の熟慮期間、相続財産の処分による単純承認、相続放棄の効果、限定承認の方式と清算手続、家庭裁判所への申述、行政書士・司法書士・弁護士・税理士の担当範囲を文京区の実務に沿って整理しました。",
+    keywords: [
+      "相続放棄 限定承認 違い",
+      "相続放棄 3か月",
+      "相続放棄 手続き 必要書類",
+      "相続放棄 撤回 代襲",
+      "限定承認 共同相続人",
+      "相続放棄 行政書士",
+    ],
+    tags: ["相続放棄", "限定承認", "単純承認", "熟慮期間", "家庭裁判所", "相続"],
   },
 ];
 
