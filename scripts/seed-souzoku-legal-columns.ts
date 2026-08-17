@@ -1,5 +1,5 @@
 /**
- * 相続コラム（行政書士）シリーズ（第1号〜第8号・4言語）投入スクリプト
+ * 相続コラム（行政書士）シリーズ（第1号〜第9号・4言語）投入スクリプト
  *
  * 対象＝luck428.com /legal/column（business=legal）。
  * 原稿＝scripts/legal-columns/NN-*.md（ja）＋{en,zh-tw,zh}/NN-*.md（翻訳）。
@@ -142,6 +142,17 @@ const REQUIRED_HUB_LINKS: Record<string, string[]> = {
     "/legal/column/souzoku-zaisan-mokuroku",
     "/legal/column/houtei-souzoku-bun",
   ],
+  "souzoku-zei-shinkoku-hitsuyo": [
+    "/legal/services/inheritance",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/souzoku",
+    "/legal/column/souzoku-hajime-koseki-chosa-bunkyo",
+    "/legal/column/isan-bunkatsu-kyougisho",
+    "/legal/column/souzoku-zaisan-mokuroku",
+    "/legal/column/houtei-souzoku-bun",
+    "/legal/column/souzoku-kigen-matome",
+  ],
 };
 
 /** 表示コンプライアンス上の禁止語 */
@@ -271,6 +282,30 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "10万円以下の過料",
     "独立した事業体",
   ],
+  "souzoku-zei-shinkoku-hitsuyo": [
+    "相続税の申告は、相続が発生した方全員に必要なわけではありません",
+    "3,000万円＋600万円×法定相続人の数",
+    "相続放棄をした人がいても",
+    "実子がいる場合は1人まで",
+    "実子がいない場合は2人まで",
+    "みなし相続財産",
+    "死亡保険金",
+    "死亡退職金",
+    "500万円×法定相続人の数",
+    "暦年課税に係る贈与",
+    "相続開始日によって加算対象期間が異なる",
+    "2027年1月2日",
+    "100万円",
+    "相続時精算課税",
+    "税額が0円でも申告が必要",
+    "配偶者の税額軽減",
+    "小規模宅地等の特例",
+    "相続税の申告が必要となるケースでは",
+    "申告期限後3年以内の分割見込書",
+    "相続税の申告要否判定コーナー",
+    "税務相談を行いません",
+    "独立した事業体",
+  ],
 };
 
 /** 記事ごとに含めてはならない表現 */
@@ -304,6 +339,15 @@ const FORBIDDEN_PHRASES: Record<string, string[]> = {
     "10年を過ぎたら遺産分割できない",
     "単純にまとめないでください",
     "断定しないでください",
+  ],
+  "souzoku-zei-shinkoku-hitsuyo": [
+    "一律7年前まで加算",
+    "税金が0円＝申告不要",
+    "遺産総額が基礎控除以下なら必ず申告不要",
+    "借金なら全部控除",
+    "葬儀関連費用なら全部控除",
+    "この人は申告不要",
+    "税務評価額は○円",
   ],
 };
 
@@ -458,6 +502,23 @@ const ARTICLES: Array<{
       "遺留分侵害額請求 期限",
     ],
     tags: ["相続", "期限", "相続放棄", "準確定申告", "相続税", "相続登記", "遺留分"],
+  },
+  {
+    file: "10-souzoku-zei-shinkoku-hitsuyo.md",
+    slug: "souzoku-zei-shinkoku-hitsuyo",
+    title: "相続税の申告は必要？基礎控除・10か月の期限と申告要否の考え方",
+    category: "相続の手続き（行政書士の実務から）",
+    excerpt:
+      "相続税の申告は、相続が発生した方全員に必要なわけではありません。基礎控除「3,000万円＋600万円×法定相続人の数」を踏まえた申告要否、課税対象財産・非課税財産・債務・葬式費用・みなし相続財産・生前贈与の論点を、税理士へ相談する前に整理します。税額計算や申告要否の最終判断は税理士の領域です。",
+    keywords: [
+      "相続税 申告 必要か",
+      "相続税 基礎控除",
+      "相続税 申告 期限 10か月",
+      "相続税 申告不要 税額0円",
+      "相続税 配偶者 税額軽減",
+      "相続税 小規模宅地等の特例",
+    ],
+    tags: ["相続税", "基礎控除", "申告要否", "相続税申告", "税理士", "相続"],
   },
 ];
 
