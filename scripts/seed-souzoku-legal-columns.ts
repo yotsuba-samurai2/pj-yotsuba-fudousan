@@ -1,5 +1,5 @@
 /**
- * 相続コラム（行政書士）シリーズ（第1号〜第7号・4言語）投入スクリプト
+ * 相続コラム（行政書士）シリーズ（第1号〜第8号・4言語）投入スクリプト
  *
  * 対象＝luck428.com /legal/column（business=legal）。
  * 原稿＝scripts/legal-columns/NN-*.md（ja）＋{en,zh-tw,zh}/NN-*.md（翻訳）。
@@ -129,6 +129,19 @@ const REQUIRED_HUB_LINKS: Record<string, string[]> = {
     "/legal/column/jihitsu-kosei-yuigon",
     "/legal/column/souzoku-kaigai-gaikokuseki",
   ],
+  "souzoku-kigen-matome": [
+    "/legal/services/inheritance",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/souzoku",
+    "/legal/column/souzoku-hajime-koseki-chosa-bunkyo",
+    "/legal/column/isan-bunkatsu-kyougisho",
+    "/legal/column/houtei-souzoku-jouhou-ichiran-zu",
+    "/legal/column/jihitsu-kosei-yuigon",
+    "/legal/column/souzoku-kaigai-gaikokuseki",
+    "/legal/column/souzoku-zaisan-mokuroku",
+    "/legal/column/houtei-souzoku-bun",
+  ],
 };
 
 /** 表示コンプライアンス上の禁止語 */
@@ -240,6 +253,24 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "第900条",
     "第901条",
   ],
+  "souzoku-kigen-matome": [
+    "相続人申告登記",
+    "基本的な相続登記申請義務を簡易に履行する制度",
+    "法定相続人全員・法定相続分を確定",
+    "遺産分割成立の日から3年以内",
+    "2027年3月31日",
+    "相続税法第27条",
+    "相続税法第33条",
+    "相続の開始があったことを知った日の翌日から4か月以内",
+    "遺留分侵害額請求",
+    "民法第1048条",
+    "民法第904条の3",
+    "相続開始から10年",
+    "2023年4月1日",
+    "2028年4月1日",
+    "10万円以下の過料",
+    "独立した事業体",
+  ],
 };
 
 /** 記事ごとに含めてはならない表現 */
@@ -268,6 +299,11 @@ const FORBIDDEN_PHRASES: Record<string, string[]> = {
   "houtei-souzoku-bun": [
     "相続人の範囲・相続分の法的確定",
     "各2分の1",
+  ],
+  "souzoku-kigen-matome": [
+    "10年を過ぎたら遺産分割できない",
+    "単純にまとめないでください",
+    "断定しないでください",
   ],
 };
 
@@ -405,6 +441,23 @@ const ARTICLES: Array<{
       "相続 行政書士 文京区",
     ],
     tags: ["法定相続人", "法定相続分", "相続順位", "代襲相続", "行政書士"],
+  },
+  {
+    file: "09-souzoku-kigen-matome.md",
+    slug: "souzoku-kigen-matome",
+    title: "相続手続きの期限まとめ──相続放棄・準確定申告・相続税・相続登記・遺留分",
+    category: "相続の手続き（行政書士の実務から）",
+    excerpt:
+      "相続手続きには相続放棄・限定承認、準確定申告、相続税、相続登記、遺留分侵害額請求など複数の期限があります。起算点は制度ごとに異なるため、死亡日から一律には数えられません。3か月・4か月・10か月・3年・10年を軸に、各期限と行政書士に頼める範囲を文京区の実務に沿って整理しました。",
+    keywords: [
+      "相続 手続き 期限 まとめ",
+      "相続放棄 3か月 期限",
+      "準確定申告 4か月",
+      "相続税 申告 期限 10か月",
+      "相続登記 3年 期限",
+      "遺留分侵害額請求 期限",
+    ],
+    tags: ["相続", "期限", "相続放棄", "準確定申告", "相続税", "相続登記", "遺留分"],
   },
 ];
 
