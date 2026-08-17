@@ -15,13 +15,14 @@ type ItemResult = {
 };
 
 /**
- * 台湾×相続の日本語コラム2本のバルクupsert投入（2026-08-07 新設）。
+ * 台湾×相続コラム2本のバルクupsert投入（2026-08-07 新設）。
  *
  * 原稿の正本＝scripts/taiwan-legal-columns/*.md → src/lib/data/taiwan-legal-columns-seed.ts。
  *
  * 【この投入が触らないもの】seed 定数に該当キーを持たせていないため既存値がそのまま残る
  *   （src/lib/db/columns.ts の toUpdateInput が `if ("キー" in data)` で判定するため）
- *   ・translations（en / zh-tw / zh）・faq・tags・ogImage・modifiedDate
+ *   ・translations（第2号はseedに含み更新する。第1号は既存値を温存）
+ *   ・faq・tags・ogImage・modifiedDate
  *
  * 【status】既存の記事は現在の公開状態を引き継ぐ。新規作成のときだけ seed の値を使う。
  *   2026-08-06 の seed-taiwan で「再投入すると公開中の記事が draft に戻る」問題があり
@@ -91,7 +92,7 @@ export default function SeedTaiwanLegalPage() {
   return (
     <div className="p-6">
       <h1 className="mb-1 text-lg font-bold">
-        台湾×相続コラム2本（日本語本文）バルク投入
+        台湾×相続コラム2本（日本語本文＋第2号翻訳）バルク投入
       </h1>
       <p className="mb-4 text-sm text-text-muted">
         business=legal で upsert 投入します（slug基準・冪等）。再実行しても重複しません。
@@ -100,8 +101,8 @@ export default function SeedTaiwanLegalPage() {
       </p>
       <p className="mb-4 max-w-2xl rounded-lg bg-surface-dim p-3 text-xs text-text">
         この投入が更新するのは<strong>日本語の本文・タイトル・抜粋・キーワード・著者・公開言語</strong>です。
-        <strong>en・繁體・简体の翻訳、FAQ、タグ、OG画像は触りません</strong>（既存の値が残ります）。
-        日本語をPRで直した場合、<strong>翻訳の更新は管理画面で別途行う必要があります。</strong>
+        <strong>第2号は en・繁體・简体の翻訳も更新します。第1号の翻訳、FAQ、タグ、OG画像は触りません</strong>
+        （既存の値が残ります）。第1号の日本語をPRで直した場合は、翻訳を管理画面で別途更新してください。
       </p>
 
       <div className="max-w-2xl rounded-xl border border-border bg-surface p-6">
