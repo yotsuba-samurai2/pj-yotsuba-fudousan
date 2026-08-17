@@ -1,5 +1,5 @@
 /**
- * 相続コラム（行政書士）シリーズ（第1号〜第9号・4言語）投入スクリプト
+ * 相続コラム（行政書士）シリーズ（第1号〜第10号・4言語）投入スクリプト
  *
  * 対象＝luck428.com /legal/column（business=legal）。
  * 原稿＝scripts/legal-columns/NN-*.md（ja）＋{en,zh-tw,zh}/NN-*.md（翻訳）。
@@ -152,6 +152,19 @@ const REQUIRED_HUB_LINKS: Record<string, string[]> = {
     "/legal/column/souzoku-zaisan-mokuroku",
     "/legal/column/houtei-souzoku-bun",
     "/legal/column/souzoku-kigen-matome",
+  ],
+  "souzoku-touki-nagare": [
+    "/legal/services/inheritance",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/souzoku",
+    "/legal/column/souzoku-hajime-koseki-chosa-bunkyo",
+    "/legal/column/isan-bunkatsu-kyougisho",
+    "/legal/column/houtei-souzoku-jouhou-ichiran-zu",
+    "/legal/column/souzoku-zaisan-mokuroku",
+    "/legal/column/houtei-souzoku-bun",
+    "/legal/column/souzoku-kigen-matome",
+    "/legal/column/souzoku-zei-shinkoku-hitsuyo",
   ],
 };
 
@@ -306,6 +319,30 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "税務相談を行いません",
     "独立した事業体",
   ],
+  "souzoku-touki-nagare": [
+    "相続人本人が申請することもできます",
+    "司法書士又は弁護士の業務",
+    "相続登記申請の代理、登記申請書の作成、個別の登記申請に関する法律相談を行いません",
+    "2024年4月1日",
+    "3年以内",
+    "遺産分割成立の日から3年以内",
+    "2027年3月31日",
+    "10万円以下の過料",
+    "法定相続分による相続",
+    "遺産分割協議による相続",
+    "遺言による相続",
+    "相続人申告登記",
+    "法定相続分による所有権移転登記ではありません",
+    "登記官の認証文が付された法定相続情報一覧図の写し",
+    "法定相続情報番号",
+    "所有不動産記録証明制度",
+    "100％判明するわけではありません",
+    "すべてオンラインで完結する",
+    "不動産価額の0.4％",
+    "対象は**土地**",
+    "対象不動産の所在地",
+    "独立した事業体",
+  ],
 };
 
 /** 記事ごとに含めてはならない表現 */
@@ -348,6 +385,11 @@ const FORBIDDEN_PHRASES: Record<string, string[]> = {
     "葬儀関連費用なら全部控除",
     "この人は申告不要",
     "税務評価額は○円",
+  ],
+  "souzoku-touki-nagare": [
+    "相続登記は司法書士しかできない",
+    "戸籍・協議書・印鑑証明書を全部そろえればどの相続登記でも足りる",
+    "すべての100万円以下の不動産が免税",
   ],
 };
 
@@ -519,6 +561,23 @@ const ARTICLES: Array<{
       "相続税 小規模宅地等の特例",
     ],
     tags: ["相続税", "基礎控除", "申告要否", "相続税申告", "税理士", "相続"],
+  },
+  {
+    file: "11-souzoku-touki-nagare.md",
+    slug: "souzoku-touki-nagare",
+    title: "相続登記はどう進める？3年ルール・必要書類・自分で申請する場合と司法書士に頼む場合",
+    category: "相続の手続き（行政書士の実務から）",
+    excerpt:
+      "相続登記は相続人本人も申請できますが、他人から依頼を受けて行う申請代理・登記申請書等の作成・登記相談は司法書士又は弁護士の業務です。2024年開始の義務化、3年ルール、必要書類、相続人申告登記、法定相続情報一覧図の利用、申請の流れを文京区の実務に沿って整理しました。",
+    keywords: [
+      "相続登記 申請 流れ",
+      "相続登記 必要書類",
+      "相続登記 義務化 3年",
+      "相続人申告登記",
+      "相続登記 登録免許税",
+      "相続登記 法定相続情報一覧図",
+    ],
+    tags: ["相続登記", "相続人申告登記", "登記申請", "法定相続情報一覧図", "司法書士", "相続"],
   },
 ];
 
