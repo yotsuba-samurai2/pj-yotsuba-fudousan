@@ -1910,5 +1910,197 @@ export const SOUZOKU_LEGAL_COLUMNS_SEED: SouzokuLegalSeedColumn[] = [
         ]
       }
     }
+  },
+  {
+    "business": "legal",
+    "slug": "souzoku-yuigon-hakken-tetsuzuki",
+    "title": "遺言書が見つかったら？検認・遺言執行・不動産登記の流れと行政書士に頼めること",
+    "date": "2026-08-16",
+    "category": "相続の手続き（行政書士の実務から）",
+    "excerpt": "遺言書が見つかったら、まず封印の有無と種類を確認します。封印のある遺言書は家庭裁判所外で開封してはいけません。自宅保管の自筆証書遺言は原則検認が必要ですが、公正証書遺言・法務局保管の自筆証書遺言は不要です。遺言執行、遺贈登記、遺留分、行政書士に頼める範囲を文京区の実務に沿って整理しました。",
+    "content": "**結論（先に要点）**：遺言書が見つかった場合、まず確認するのは遺言書の種類と、封印の有無です。検認が必要な遺言書について、遺言書の保管者又は遺言書を発見した相続人は、遺言者の死亡を知った後、遅滞なく家庭裁判所へ提出し、検認を請求します。封印のある遺言書は、家庭裁判所外で勝手に開封しないでください。自宅等で保管されていた自筆証書遺言は原則として家庭裁判所の検認が必要ですが、公正証書遺言や法務局保管の自筆証書遺言は検認不要です。検認は遺言の有効・無効を判断する手続ではありません。遺言執行者が就任した場合、遺言内容実現のための任務を行います。四葉行政書士事務所では、戸籍収集、相続人調査、財産調査、遺言内容・財産資料の整理、権利義務書類等の作成を行います。検認申立書の作成、遺言の有効性・解釈、遺留分、紛争対応、不動産登記代理は行いません。\n\n## 遺言書が見つかったら、まず開封せず種類を確認\n\n遺言書が見つかったら、まず種類と封印の有無を確認します。**封印のある遺言書は、家庭裁判所外で勝手に開封しないでください**（民法第1004条）。\n\n検認が必要な遺言書について、遺言書の保管者又は遺言書を発見した相続人は、遺言者の死亡を知った後、遅滞なく家庭裁判所へ提出し、検認を請求します。\n\n民法第1005条により、遺言書の提出を怠る、検認を経ずに遺言を執行する、封印のある遺言書を家庭裁判所外で開封するなどした場合、5万円以下の過料となる場合があります。\n\nただし、単に封筒に入っている全ての文書について一律に「開封してはいけない」と断定するものではありません。ここでいうのは「封印のある遺言書」です。\n\n## 遺言書があると遺産分割協議は不要？\n\n「遺言があれば必ず一切の遺産分割協議が不要」とはいえません。\n\n有効な遺言によって取得者・分け方が決まっている財産は、原則としてその遺言内容に沿って手続します。一方、遺言に記載されていない財産や、分け方が決まっていない財産は、遺産分割協議が必要になる場合があります。\n\n民法第908条により、遺言者は相続開始から5年以内の期間、遺産分割を禁止できます。遺言と異なる分け方を希望する場合は、遺言執行者、受遺者、分割禁止、第三者関係などが問題になるため、「全員合意なら必ず可能」とは断定できません。個別判断は弁護士にご確認ください。\n\n遺産分割協議の基本は[遺産分割協議書は自分で作れる？](/legal/column/isan-bunkatsu-kyougisho)をご覧ください。\n\n## 自筆証書・公正証書・法務局保管で何が違う？\n\n遺言の種類によって、検認の要否が異なります。\n\n| 遺言の種類 | 検認 |\n| --- | --- |\n| 公正証書遺言 | 不要 |\n| 法務局保管の自筆証書遺言 | 不要 |\n| 自宅等で保管された自筆証書遺言 | 原則必要 |\n| 秘密証書遺言 | 原則必要 |\n\n自筆証書遺言と公正証書遺言の違いは[自筆証書遺言と公正証書遺言の違いとは？](/legal/column/jihitsu-kosei-yuigon)をご覧ください。\n\nなお、2026年6月24日に令和8年法律第45号が公布されましたが、2026年8月現在、遺言制度改正は全面施行前です。押印任意化等は公布から1年以内の政令指定日、保管証書遺言創設等は公布から3年以内の政令指定日とされています。「既に新制度が使える」わけではありません。本記事は2026年8月現在の現行制度に基づきます。\n\n## 検認とは？遺言の有効性を判断する手続ではない\n\n検認は、遺言の有効・無効を判断する手続ではありません。目的は、相続人に遺言の存在・内容を知らせ、遺言書の形状、加除訂正、日付、署名等の状態を明確にし、偽造・変造を防止することです。\n\n申立先は、遺言者の最後の住所地の家庭裁判所です。費用は、遺言書1通につき収入印紙800円＋郵便料です。検認済証明書は、遺言書1通につき収入印紙150円です。相続人全員が検認期日に出席する必要はありません。\n\n検認後、遺言執行に使用するため、検認済証明書を取得する流れがあります。\n\n家庭裁判所提出書類の作成は司法書士又は弁護士、手続代理・争いは弁護士の領域です。四葉行政書士事務所では、検認申立書を業務として作成しません。\n\n## 封印された遺言書を自分で開封してはいけない？\n\n封印のある遺言書は、家庭裁判所外で勝手に開封してはいけません。家庭裁判所において、相続人又は代理人の立会いのもとで開封します。\n\n封印のある遺言書を家庭裁判所外で開封するなどした場合、5万円以下の過料となる場合があります。遺言書を発見したら、まず開封せずに専門家又は家庭裁判所へ確認してください。\n\n## 法務局保管の遺言か分からない場合の確認方法\n\n法務局に遺言書が保管されているか確認するには、**遺言書保管事実証明書**を利用します。これは遺言書が法務局に保管されているか確認する制度です。\n\n相続開始後は、**遺言書情報証明書**を取得できます。遺言書情報証明書は、遺言書画像を含む内容証明であり、各種相続手続で原本に代えて使用することが想定されます。\n\n相続人・受遺者・遺言執行者等が、相続開始後に請求できます。法務局保管遺言は検認不要です。\n\n## 複数の遺言書が見つかったら？\n\n後の日付の遺言があるからといって、古い遺言全部が当然に無効になるわけではありません。\n\n民法第1022条・第1023条によれば、前の遺言と後の遺言が抵触する場合、抵触する部分について、後の遺言によって前の遺言を撤回したものとみなします。複数遺言の有効性・抵触・解釈は弁護士にご確認ください。\n\n## 遺言執行者とは？指定されていたら何をする？\n\n遺言執行者とは、遺言内容を実現する者です（民法第1006条〜第1016条）。遺言執行者が**就任した場合**、遺言内容実現のための任務を行います。指定された者が必ず就任するとは限りません。\n\n民法第1009条上、未成年者・破産者は遺言執行者になれません。弁護士・司法書士・行政書士等の資格自体が必須ではありません。したがって、行政書士が遺言で指定され、就任することも可能です。ただし、「行政書士資格があるから特別な遺言執行権限が付与される」わけではありません。\n\n遺言執行者は、就任後、遅滞なく遺言内容を相続人へ通知し、遅滞なく相続財産目録を作成して相続人へ交付します。遺言内容実現のため、相続財産管理その他必要な行為を行います。遺言執行者がいる場合、相続人は遺言執行を妨げる相続財産処分等をしてはなりません（民法第1013条）。\n\n## 遺言執行者がいない場合は？\n\n遺言執行者が指定されていない、又はいなくなった場合、家庭裁判所は利害関係人の申立てにより遺言執行者を選任できます。\n\nただし、「遺言執行者がいなければ全ての遺言で必ず家庭裁判所選任が必要」とはいえません。遺言内容により遺言執行者の必要性は異なります。\n\n家庭裁判所提出書類作成は司法書士又は弁護士、法的判断・代理は弁護士の領域です。\n\n## 遺言による不動産の名義変更──相続登記と遺贈登記\n\n遺言による不動産取得は、全て「相続登記」とは限りません。遺言の文言、取得者が相続人か否か、「相続させる」旨か「遺贈」かなどにより、登記原因・申請方法が異なります。\n\n法務局の2026年版「相続登記・遺贈の登記の申請をされる相続人の方へ」を踏まえて確認します。2023年4月1日以後、相続人に対する遺贈では、受遺者である相続人が単独で所有権移転登記を申請できる制度があります。2023年4月1日前に開始した相続による遺贈でも、同日以後の申請ではこの単独申請制度を利用できる場合があります。\n\n個別登記判断・申請代理・申請書作成は司法書士又は弁護士の領域です。相続登記の流れは[相続登記はどう進める？](/legal/column/souzoku-touki-nagare)をご覧ください。\n\n## 特定財産承継遺言について\n\n特定財産承継遺言の場合、民法第1014条第2項により、遺言執行者は、特定財産承継遺言により取得した相続人が対抗要件を備えるために必要な行為を行うことができます。\n\nただし、これを理由に「行政書士が司法書士業務として登記代理できる」とはなりません。個別の登記実務は司法書士等へ確認してください。\n\n## 遺留分・遺言の有効性・争いがある場合\n\n遺言があるからといって、遺留分問題がなくなるわけではありません。\n\n遺留分侵害額請求、遺言能力、方式、偽造、複数遺言の効力、遺言解釈、相続人・受遺者間の争いは弁護士の領域です。遺留分については[自筆証書遺言と公正証書遺言の違いとは？](/legal/column/jihitsu-kosei-yuigon)もご覧ください。\n\n## 行政書士・司法書士・弁護士・税理士の役割\n\n四葉行政書士事務所では、適法な範囲で、戸籍収集、相続人調査、財産調査、相続関係整理、遺言内容・財産資料の整理、権利義務書類等の作成を扱います。\n\nさらに、遺言によって指定されるなどした場合、遺言執行者に就任すること自体は可能です。ただし、遺言執行者として行う場合でも、弁護士法、司法書士法、税理士法等により他士業に限定される業務は行いません。\n\n- 紛争・個別法律判断 → 弁護士\n- 不動産登記代理 → 司法書士又は弁護士\n- 家庭裁判所提出書類作成 → 司法書士又は弁護士\n- 税務 → 税理士\n- 不動産査定・媒介 → 四葉不動産株式会社\n\n四葉行政書士事務所と四葉不動産株式会社は別事業体・別契約で対応します。当事務所は紹介料を受け取りません。\n\n相続した不動産の売却・管理は[相続不動産の完全ガイド（四葉不動産）](/souzoku)をご覧ください。四葉不動産株式会社は四葉行政書士事務所とは別事業体・別契約で対応します。\n\n## 文京区で遺言書発見後の手続きを進める流れ\n\n四葉行政書士事務所（文京区小日向・茗荷谷駅徒歩約5分）では、遺言書の種類・内容の整理、戸籍収集、相続人調査、財産調査、遺言執行に必要な資料整理、権利義務書類等の作成を段階的に案内します。\n\n受任の流れは[受任の流れ](/legal/nagare)、料金は[報酬額表](/legal/ryokin)、相続業務の全体像は[相続・遺言・信託サービス](/legal/services/inheritance)をご覧ください。\n\n## よくある質問\n\n**Q. 封がされた遺言書を家族で開けてもいいですか？**\nA. 封印のある遺言書は、家庭裁判所外で勝手に開封しないでください。家庭裁判所において相続人又は代理人の立会いのもとで開封します。\n\n**Q. 自筆証書遺言は必ず検認が必要ですか？**\nA. 自宅等で保管された自筆証書遺言は原則として検認が必要です。法務局保管の自筆証書遺言は検認不要です。\n\n**Q. 検認をしたら遺言書が有効だと認められたことになりますか？**\nA. 検認は遺言の有効・無効を判断する手続ではありません。遺言書の存在・内容・状態を明確にし、偽造・変造を防止する手続です。\n\n**Q. 遺言書があれば遺産分割協議は不要ですか？**\nA. 有効な遺言で分け方が決まっている財産は原則遺言内容に沿いますが、遺言に記載のない財産や分け方が決まっていない財産は遺産分割協議が必要になる場合があります。\n\n**Q. 複数の遺言書が見つかったら新しい方だけ有効ですか？**\nA. 前の遺言と後の遺言が抵触する場合、抵触部分について後の遺言が前の遺言を撤回したものとみなされます。古い遺言全部が当然に無効になるわけではありません。\n\n**Q. 遺言執行者が指定されていない場合はどうしますか？**\nA. 家庭裁判所へ遺言執行者の選任を申し立てることができます。ただし、全ての遺言で選任が必ず必要とは限りません。\n\n**Q. 行政書士は遺言執行者になれますか？**\nA. 遺言によって指定されるなどし、欠格事由がなければ、行政書士が遺言執行者に就任すること自体は可能です。ただし、他士業に限定される業務は行いません。\n\n**Q. 封印された遺言書を間違えて開封したら無効ですか？**\nA. 家庭裁判所外での開封のみを理由として、直ちに遺言そのものが無効になるとは説明しません。ただし民法第1005条の過料対象となる場合があり、検認が必要な遺言書であれば開封後も検認手続を確認してください。遺言の有効性は弁護士にご確認ください。\n\n## この記事の出典（一次情報）\n\n- e-Gov 民法第908条、第1004条、第1005条、第1006条〜第1016条、第1022条、第1023条、第1042条以下（必要範囲）\n- 裁判所「遺言書の検認」\n- 裁判所「遺言執行者の選任」\n- 法務省「自筆証書遺言書保管制度」\n- 法務省「相続人等の手続」\n- 法務省「遺言書情報証明書」\n- 法務省「遺言書保管事実証明書」\n- 法務局「相続登記・遺贈の登記の申請をされる相続人の方へ」（2026年版）\n- 司法書士法第3条\n- 行政書士法現行条文\n- 弁護士法第72条\n\n本記事は一般的な情報提供であり、個別の遺言の有効性、方式、検認、遺言執行、遺贈、相続登記、遺留分、紛争を保証するものではありません。検認申立書等の家庭裁判所提出書類作成は司法書士又は弁護士、遺言の有効性・解釈・遺留分・紛争対応は弁護士、不動産登記代理は司法書士又は弁護士、税務は税理士、不動産の査定・媒介は四葉不動産株式会社が、それぞれ独立した事業体として別契約で対応します。当事務所は紹介料を受け取りません。個別の判断は、面談のうえ資格者が行います。執筆は[浦松 丈二](/about/uramatsu)（行政書士・宅地建物取引士）です。",
+    "status": "published",
+    "author": {
+      "name": "浦松 丈二",
+      "title": "行政書士・宅地建物取引士（四葉行政書士事務所／四葉不動産株式会社）"
+    },
+    "keywords": [
+      "遺言書 見つかった どうする",
+      "遺言 検認 手続き",
+      "自筆証書遺言 検認 必要",
+      "遺言執行者 行政書士",
+      "遺言 相続登記 遺贈登記",
+      "法務局保管 自筆証書遺言"
+    ],
+    "tags": [
+      "遺言",
+      "検認",
+      "遺言執行者",
+      "遺贈登記",
+      "相続登記",
+      "行政書士"
+    ],
+    "locales": [
+      "ja",
+      "en",
+      "zh-tw",
+      "zh"
+    ],
+    "faq": [
+      {
+        "question": "封がされた遺言書を家族で開けてもいいですか？",
+        "answer": "封印のある遺言書は、家庭裁判所外で勝手に開封しないでください。家庭裁判所において相続人又は代理人の立会いのもとで開封します。"
+      },
+      {
+        "question": "自筆証書遺言は必ず検認が必要ですか？",
+        "answer": "自宅等で保管された自筆証書遺言は原則として検認が必要です。法務局保管の自筆証書遺言は検認不要です。"
+      },
+      {
+        "question": "検認をしたら遺言書が有効だと認められたことになりますか？",
+        "answer": "検認は遺言の有効・無効を判断する手続ではありません。遺言書の存在・内容・状態を明確にし、偽造・変造を防止する手続です。"
+      },
+      {
+        "question": "遺言書があれば遺産分割協議は不要ですか？",
+        "answer": "有効な遺言で分け方が決まっている財産は原則遺言内容に沿いますが、遺言に記載のない財産や分け方が決まっていない財産は遺産分割協議が必要になる場合があります。"
+      },
+      {
+        "question": "複数の遺言書が見つかったら新しい方だけ有効ですか？",
+        "answer": "前の遺言と後の遺言が抵触する場合、抵触部分について後の遺言が前の遺言を撤回したものとみなされます。古い遺言全部が当然に無効になるわけではありません。"
+      },
+      {
+        "question": "遺言執行者が指定されていない場合はどうしますか？",
+        "answer": "家庭裁判所へ遺言執行者の選任を申し立てることができます。ただし、全ての遺言で選任が必ず必要とは限りません。"
+      },
+      {
+        "question": "行政書士は遺言執行者になれますか？",
+        "answer": "遺言によって指定されるなどし、欠格事由がなければ、行政書士が遺言執行者に就任すること自体は可能です。ただし、他士業に限定される業務は行いません。"
+      },
+      {
+        "question": "封印された遺言書を間違えて開封したら無効ですか？",
+        "answer": "家庭裁判所外での開封のみを理由として、直ちに遺言そのものが無効になるとは説明しません。ただし民法第1005条の過料対象となる場合があり、検認が必要な遺言書であれば開封後も検認手続を確認してください。遺言の有効性は弁護士にご確認ください。"
+      }
+    ],
+    "translations": {
+      "en": {
+        "title": "What to do when a will is found: probate, execution of the will, real estate registration and what an administrative scrivener can do",
+        "excerpt": "If a will is found, first check the type and whether it is sealed. A sealed will must not be opened outside the Family Court. A self-written will kept at home generally requires probate, but a notarised will or a self-written will kept at the Legal Affairs Bureau does not. This article explains the procedure, executors and the division of work among specialists.",
+        "category": "Inheritance Procedures (From the Practice of an Administrative Scrivener)",
+        "content": "**In short:** if a will is found, first check the type and whether it is sealed. For a will requiring probate, the custodian of the will or the heir who found it must, after learning of the testator's death, submit the will to the Family Court without delay and request probate. A sealed will must not be opened outside the Family Court. A self-written will kept at home generally requires probate, but a notarised will or a self-written will kept at the Legal Affairs Bureau does not. Probate is not a procedure to judge the validity of the will. If an executor assumes office, the executor carries out the task of realising the content of the will. Yotsuba Administrative Scrivener Office collects family registers, investigates heirs, investigates the estate, organises the will and estate materials and prepares rights-and-obligations documents. It does not prepare a petition for probate, judge the validity or interpretation of a will, handle the legally reserved portion or disputes, or act as an agent for real estate registration.\n\n## When a will is found, first check the type without opening it\n\nWhen a will is found, first check the type and whether it is sealed. **A sealed will must not be opened outside the Family Court** (Civil Code, Article 1004).\n\nFor a will requiring probate, the custodian of the will or the heir who found it must, after learning of the testator's death, submit the will to the Family Court without delay and request probate.\n\nUnder Civil Code, Article 1005, a person who fails to submit the will, executes the will without probate, or opens a sealed will outside the Family Court may be subject to a non-criminal fine of not more than 50,000 yen.\n\nHowever, this does not mean that every document simply placed in an envelope must not be opened. The rule concerns a \"sealed will\".\n\n## If there is a will, is an estate division agreement unnecessary?\n\nIt cannot be said that \"if there is a will, no estate division agreement is necessary at all\".\n\nFor assets whose acquirer or division is decided by a valid will, procedures in principle follow the will. For assets not stated in the will or whose division is not decided, an estate division agreement may be necessary.\n\nUnder Civil Code, Article 908, a testator may prohibit estate division for up to five years from the commencement of inheritance. If the heirs wish to divide differently from the will, the executor, devisees, the prohibition on division and third-party relationships may become issues, so it cannot be asserted that \"agreement by all always makes it possible\". Consult an attorney for individual judgement.\n\nFor the basics of an estate division agreement, see [Can you prepare an estate division agreement yourself?](https://luck428.com/legal/column/isan-bunkatsu-kyougisho).\n\n## What differs between a self-written will, a notarised will and one kept at the Legal Affairs Bureau?\n\nWhether probate is required differs by the type of will.\n\n| Type of will | Probate |\n| --- | --- |\n| Notarised will | Not required |\n| Self-written will kept at the Legal Affairs Bureau | Not required |\n| Self-written will kept at home or elsewhere | Generally required |\n| Secret will | Generally required |\n\nFor the difference between a self-written will and a notarised will, see [Holograph wills vs notarised wills](https://luck428.com/legal/column/jihitsu-kosei-yuigon).\n\nAct No. 45 of 2026 was promulgated on 24 June 2026, but as of August 2026 the will-system reforms have not fully entered into force. The optional seal requirement and related changes are scheduled to take effect within one year from promulgation, and the creation of the stored-certificate will and related changes within three years from promulgation. It is not the case that \"the new system can already be used\". This article is based on the current system as of August 2026.\n\n## What is probate? It is not a procedure to judge validity\n\nProbate is not a procedure to judge whether a will is valid or invalid. Its purpose is to inform heirs of the existence and content of the will, clarify the form, additions, deletions, corrections, date, signature and other conditions of the will, and prevent forgery and alteration.\n\nThe application is made to the Family Court with jurisdiction over the testator's last address. The fee is a revenue stamp of 800 yen per will plus postage. A certificate of probate costs a revenue stamp of 150 yen per will. All heirs need not attend the probate date.\n\nAfter probate, a certificate of probate is obtained for use in executing the will.\n\nPreparation of documents to be filed with the Family Court is the domain of a judicial scrivener or an attorney, and procedural representation and disputes are an attorney. Yotsuba Administrative Scrivener Office does not prepare a petition for probate as a business.\n\n## Must a sealed will not be opened by yourself?\n\nA sealed will must not be opened outside the Family Court. It is opened at the Family Court in the presence of the heirs or their agents.\n\nOpening a sealed will outside the Family Court may result in a non-criminal fine of not more than 50,000 yen. If a will is found, do not open it and confirm with a specialist or the Family Court.\n\n## How to check whether a will is kept at the Legal Affairs Bureau\n\nTo check whether a will is kept at the Legal Affairs Bureau, use a **certificate of the fact of will custody**. This is a system to confirm whether a will is kept at the Legal Affairs Bureau.\n\nAfter the commencement of inheritance, a **will information certificate** can be obtained. The will information certificate is a content certificate including an image of the will, and is expected to be used instead of the original in various inheritance procedures.\n\nHeirs, devisees and executors may request it after the commencement of inheritance. A will kept at the Legal Affairs Bureau does not require probate.\n\n## What if several wills are found?\n\nThe existence of a later-dated will does not mean that all older wills are automatically invalid.\n\nUnder Civil Code, Articles 1022 and 1023, if the former will and the later will conflict, the former will is deemed revoked by the later will to the extent of the conflict. Consult an attorney for the validity, conflict and interpretation of multiple wills.\n\n## What is an executor? What does one do if designated?\n\nAn executor is a person who realises the content of the will (Civil Code, Articles 1006 to 1016). If an executor **assumes office**, the executor carries out the task of realising the content of the will. A designated person does not necessarily assume office.\n\nUnder Civil Code, Article 1009, a minor or a bankrupt person cannot be an executor. A qualification as an attorney, judicial scrivener or administrative scrivener is not required. Therefore, an administrative scrivener can be designated by a will and assume office. However, it is not the case that \"having an administrative scrivener qualification grants special executor authority\".\n\nAfter assuming office, the executor notifies the heirs of the content of the will without delay, prepares an inventory of the inherited assets without delay and delivers it to the heirs. The executor manages the inherited assets and performs other necessary acts to realise the content of the will. If there is an executor, the heirs must not dispose of the inherited assets in a way that obstructs execution of the will.\n\n## What if there is no executor?\n\nIf no executor is designated or the executor ceases to exist, the Family Court may appoint an executor upon petition by an interested person.\n\nHowever, it is not the case that \"if there is no executor, appointment by the Family Court is always necessary for every will\". The necessity of an executor differs depending on the content of the will.\n\nPreparation of documents to be filed with the Family Court is a judicial scrivener or an attorney, and legal judgement and representation are an attorney.\n\n## Change of title of real estate by will: inheritance registration and devise registration\n\nAcquisition of real estate by will is not always \"inheritance registration\". The cause of registration and application method differ depending on the wording of the will, whether the acquirer is an heir, and whether it is a devise or a gift of specific property.\n\nConfirm based on the Legal Affairs Bureau's 2026 edition \"For heirs applying for inheritance registration or registration of a testamentary gift\". From 1 April 2023, for a devise to an heir, the devisee heir can apply for ownership transfer registration alone. For a devise from an inheritance commencing before 1 April 2023, if the application is made on or after that date, this single-application system may also be used.\n\nIndividual registration judgement, agency application and preparation of the application are the domain of a judicial scrivener or an attorney. For the flow of inheritance registration, see [How to proceed with inheritance registration](https://luck428.com/legal/column/souzoku-touki-nagare).\n\n## Wills for succession of specific property\n\nFor a will for succession of specific property, under Civil Code, Article 1014, paragraph 2, the executor may perform the acts necessary for the heir who acquired by that will to satisfy the requirements for asserting the acquisition against third parties.\n\nHowever, this does not mean that \"an administrative scrivener can act as a registration agent as judicial-scrivener work\". Confirm individual registration practice with a judicial scrivener or another specialist.\n\n## Legally reserved portion, validity of the will and disputes\n\nThe existence of a will does not eliminate the issue of the legally reserved portion.\n\nClaims for the legally reserved portion, testamentary capacity, formality, forgery, the effect of multiple wills, interpretation of the will and disputes between heirs and devisees are the domain of an attorney. For the legally reserved portion, see also [Holograph wills vs notarised wills](https://luck428.com/legal/column/jihitsu-kosei-yuigon).\n\n## Roles of administrative scriveners, judicial scriveners, attorneys and tax accountants\n\nYotsuba Administrative Scrivener Office, within the lawful scope, collects family registers, investigates heirs, investigates the estate, organises the inheritance relationship, organises the will and estate materials and prepares rights-and-obligations documents.\n\nIn addition, if designated by a will, it is possible for the office to assume office as an executor. However, even when acting as an executor, the office does not perform work reserved to other professions under the Attorney Act, Judicial Scrivener Act, Certified Public Tax Accountant Act and other laws.\n\n- Disputes and individual legal judgement → an attorney\n- Real estate registration agency → a judicial scrivener or attorney\n- Preparation of documents to be filed with the Family Court → a judicial scrivener or attorney\n- Tax → a tax accountant\n- Real estate appraisal and brokerage → Yotsuba Real Estate Co., Ltd.\n\nYotsuba Administrative Scrivener Office and Yotsuba Real Estate Co., Ltd. handle their work under separate businesses and separate contracts. Our office receives no referral fee.\n\n## How to proceed after finding a will in Bunkyo\n\nYotsuba Administrative Scrivener Office (Kohinata, Bunkyo, about five minutes' walk from Myogadani Station) guides you in stages through organising the type and content of the will, family register collection, heir investigation, estate investigation, organisation of materials for executing the will and preparation of rights-and-obligations documents.\n\nFor the flow of engagement, see [Engagement Flow](https://luck428.com/legal/nagare); for fees, see [Fee Schedule](https://luck428.com/legal/ryokin); and for the whole picture, see [Inheritance, Wills and Trusts](https://luck428.com/legal/services/inheritance).\n\n## FAQ\n\n**Q. May the family open a sealed will?**\nA. A sealed will must not be opened outside the Family Court. It is opened at the Family Court in the presence of the heirs or their agents.\n\n**Q. Is probate always required for a self-written will?**\nA. A self-written will kept at home or elsewhere generally requires probate. A self-written will kept at the Legal Affairs Bureau does not require probate.\n\n**Q. If probate is performed, is the will recognised as valid?**\nA. Probate is not a procedure to judge the validity or invalidity of a will. It clarifies the existence, content and condition of the will and prevents forgery and alteration.\n\n**Q. If there is a will, is an estate division agreement unnecessary?**\nA. Assets whose division is decided by a valid will in principle follow the will, but assets not stated in the will or whose division is not decided may require an estate division agreement.\n\n**Q. If several wills are found, is only the newer one valid?**\nA. If the former will and the later will conflict, the former will is deemed revoked by the later will to the extent of the conflict. The older will does not automatically become wholly invalid.\n\n**Q. What should be done if no executor is designated?**\nA. An executor can be appointed by petition to the Family Court. However, appointment is not always necessary for every will.\n\n**Q. Can an administrative scrivener be an executor?**\nA. If designated by a will and without any ground for disqualification, an administrative scrivener can assume office as an executor. However, work reserved to other professions is not performed.\n\n**Q. If a sealed will is opened by mistake, is it invalid?**\nA. Opening outside the Family Court alone does not immediately make the will invalid. However, it may be subject to a non-criminal fine under Civil Code, Article 1005, and if probate is required, confirm the probate procedure even after opening. Consult an attorney for the validity of the will.\n\n## Sources (Primary Information)\n\n- e-Gov, Civil Code, Articles 908, 1004, 1005, 1006 to 1016, 1022, 1023 and 1042 onward (to the extent necessary)\n- Courts, \"Probate of a will\"\n- Courts, \"Appointment of an executor\"\n- Ministry of Justice, \"Self-written will custody system\"\n- Ministry of Justice, \"Procedures for heirs and others\"\n- Ministry of Justice, \"Will information certificate\"\n- Ministry of Justice, \"Certificate of the fact of will custody\"\n- Legal Affairs Bureau, \"For heirs applying for inheritance registration or registration of a testamentary gift\" (2026 edition)\n- Judicial Scrivener Act, Article 3\n- Administrative Scrivener Act, current provisions\n- Attorney Act, Article 72\n\nThis article is general information and does not guarantee the validity, formality, probate, execution, devise, inheritance registration, legally reserved portion or disputes of any individual will. Preparation of documents to be filed with the Family Court such as a petition for probate is handled by a judicial scrivener or an attorney; validity, interpretation, the legally reserved portion and disputes by an attorney; real estate registration agency by a judicial scrivener or an attorney; tax by a tax accountant; and real estate appraisal and brokerage by Yotsuba Real Estate Co., Ltd., each as an independent business under a separate contract. Our office receives no referral fee. Individual judgements are made by a qualified professional after a meeting. Written by [Joji Uramatsu](https://luck428.com/about/uramatsu), administrative scrivener and licensed real estate broker.",
+        "faq": [
+          {
+            "question": "May the family open a sealed will?",
+            "answer": "A sealed will must not be opened outside the Family Court. It is opened at the Family Court in the presence of the heirs or their agents."
+          },
+          {
+            "question": "Is probate always required for a self-written will?",
+            "answer": "A self-written will kept at home or elsewhere generally requires probate. A self-written will kept at the Legal Affairs Bureau does not require probate."
+          },
+          {
+            "question": "If probate is performed, is the will recognised as valid?",
+            "answer": "Probate is not a procedure to judge the validity or invalidity of a will. It clarifies the existence, content and condition of the will and prevents forgery and alteration."
+          },
+          {
+            "question": "If there is a will, is an estate division agreement unnecessary?",
+            "answer": "Assets whose division is decided by a valid will in principle follow the will, but assets not stated in the will or whose division is not decided may require an estate division agreement."
+          },
+          {
+            "question": "If several wills are found, is only the newer one valid?",
+            "answer": "If the former will and the later will conflict, the former will is deemed revoked by the later will to the extent of the conflict. The older will does not automatically become wholly invalid."
+          },
+          {
+            "question": "What should be done if no executor is designated?",
+            "answer": "An executor can be appointed by petition to the Family Court. However, appointment is not always necessary for every will."
+          },
+          {
+            "question": "Can an administrative scrivener be an executor?",
+            "answer": "If designated by a will and without any ground for disqualification, an administrative scrivener can assume office as an executor. However, work reserved to other professions is not performed."
+          },
+          {
+            "question": "If a sealed will is opened by mistake, is it invalid?",
+            "answer": "Opening outside the Family Court alone does not immediately make the will invalid. However, it may be subject to a non-criminal fine under Civil Code, Article 1005, and if probate is required, confirm the probate procedure even after opening. Consult an attorney for the validity of the will."
+          }
+        ]
+      },
+      "zh-tw": {
+        "title": "發現遺囑時該怎麼辦？檢認・遺囑執行・不動產登記流程與行政書士可協助事項",
+        "excerpt": "發現遺囑時，首先確認種類與有無封印。封印遺囑不可於家庭裁判所外擅自開封。自宅保管自筆遺囑原則須檢認，公證遺囑或法務局保管自筆遺囑則免檢認。本文整理流程、遺囑執行人與專業人士分工。",
+        "category": "繼承手續（行政書士實務）",
+        "content": "**結論（先說要點）**：發現遺囑時，首先確認種類與有無封印。須檢認之遺囑，保管人或發現遺囑之繼承人，應於知悉遺囑人死亡後，儘速向家庭裁判所提出並請求檢認。封印遺囑不可於家庭裁判所外擅自開封。自宅保管自筆遺囑原則須檢認，公證遺囑或法務局保管自筆遺囑免檢認。檢認非判斷遺囑有效無效之手續。遺囑執行人就任後，執行實現遺囑內容之任務。四葉行政書士事務所辦理戶籍蒐集、繼承人調查、財產調查、遺囑內容・財產資料整理、權利義務書類等製作，但不製作檢認聲請書、判斷遺囑有效性・解釋、處理遺留分・紛爭、代理不動產登記。\n\n## 發現遺囑時，先勿開封並確認種類\n\n發現遺囑時，首先確認種類與有無封印。**封印遺囑不可於家庭裁判所外擅自開封**（民法第1004條）。\n\n須檢認之遺囑，保管人或發現遺囑之繼承人，應於知悉遺囑人死亡後，儘速向家庭裁判所提出並請求檢認。\n\n依民法第1005條，怠於提出遺囑、未經檢認即執行遺囑、於家庭裁判所外開封封印遺囑等，可能處5萬日圓以下過料。\n\n惟並非所有僅放入信封之文件均一律不得開封。此處係指「封印遺囑」。\n\n## 有遺囑即不需遺產分割協議？\n\n不能稱「有遺囑即一切遺產分割協議均不需要」。\n\n有效遺囑已定取得人或分法之財產，原則上依遺囑內容辦理。遺囑未記載或未定分法之財產，可能須遺產分割協議。\n\n依民法第908條，遺囑人得禁止繼承開始起5年內遺產分割。欲與遺囑不同分法時，遺囑執行人、受遺贈人、禁止分割、第三人關係等可能成為問題，不能斷言「全體合意即必可能」。個別判斷請洽律師。\n\n遺產分割協議基本見[遺產分割協議書可以自己製作嗎？](https://luck428.com/legal/column/isan-bunkatsu-kyougisho)。\n\n## 自筆遺囑・公證遺囑・法務局保管有何不同？\n\n依遺囑種類，檢認要否不同。\n\n| 遺囑種類 | 檢認 |\n| --- | --- |\n| 公證遺囑 | 免 |\n| 法務局保管之自筆遺囑 | 免 |\n| 自宅等保管之自筆遺囑 | 原則必要 |\n| 秘密遺囑 | 原則必要 |\n\n自筆遺囑與公證遺囑之差異見[自筆證書遺囑與公證遺囑的差異](https://luck428.com/legal/column/jihitsu-kosei-yuigon)。\n\n另，2026年6月24日公布令和8年法律第45號，惟2026年8月現在遺囑制度改正尚未全面施行。押印任意化等為公布起1年內政令指定日，保管證書遺囑創設等為公布起3年內政令指定日。並非「新制度已可使用」。本文依2026年8月現在之現行制度。\n\n## 何謂檢認？並非判斷有效性之手續\n\n檢認並非判斷遺囑有效無效之手續。目的在使繼承人知悉遺囑存在・內容，明確遺囑書形狀、加除訂正、日期、簽名等狀態，防止偽造・變造。\n\n聲請處為遺囑人最後住所地之家庭裁判所。費用為每通遺囑收入印花800日圓＋郵資。檢認済證明書每通遺囑收入印花150日圓。繼承人全體無須出席檢認期日。\n\n檢認後，為執行遺囑取得檢認済證明書。\n\n家庭裁判所提出書類製作屬司法書士或律師，程序代理・爭議屬律師。四葉行政書士事務所不業為製作檢認聲請書。\n\n## 封印遺囑不得自行開封？\n\n封印遺囑不得於家庭裁判所外擅自開封。應於家庭裁判所，由繼承人或代理人會同下開封。\n\n於家庭裁判所外開封封印遺囑等，可能處5萬日圓以下過料。發現遺囑後，勿開封並向專業人士或家庭裁判所確認。\n\n## 不知是否法務局保管時之確認方法\n\n確認法務局是否保管遺囑，使用**遺囑書保管事實證明書**。此為確認遺囑是否保管於法務局之制度。\n\n繼承開始後，可取得**遺囑書資訊證明書**。遺囑書資訊證明書係含遺囑書影像之內容證明，預定可代替原本用於各種繼承手續。\n\n繼承人・受遺贈人・遺囑執行人等，繼承開始後得請求。法務局保管遺囑免檢認。\n\n## 發現多份遺囑時？\n\n有後日期遺囑，並非舊遺囑全部當然無效。\n\n依民法第1022條・第1023條，前遺囑與後遺囑牴觸時，牴觸部分視為後遺囑撤回前遺囑。多份遺囑有效性・牴觸・解釋請洽律師。\n\n## 何謂遺囑執行人？被指定時做什麼？\n\n遺囑執行人係實現遺囑內容者（民法第1006條〜第1016條）。遺囑執行人**就任後**，執行實現遺囑內容之任務。被指定者未必就任。\n\n依民法第1009條，未成年人・破產人不得為遺囑執行人。律師・司法書士・行政書士等資格本身並非必要。因此行政書士經遺囑指定並就任亦可能。惟並非「具有行政書士資格即被授予特別遺囑執行權限」。\n\n遺囑執行人就任後，儘速將遺囑內容通知繼承人，並儘速製作繼承財產目錄交付繼承人。為實現遺囑內容，管理繼承財產及為其他必要行為。有遺囑執行人時，繼承人不得為妨礙遺囑執行之繼承財產處分等。\n\n## 無遺囑執行人時？\n\n未指定遺囑執行人或遺囑執行人不存在時，家庭裁判所得依利害關係人聲請選任遺囑執行人。\n\n惟並非「無遺囑執行人，所有遺囑均必經家庭裁判所選任」。遺囑內容不同，遺囑執行人必要性亦異。\n\n家庭裁判所提出書類製作屬司法書士或律師，法律判斷・代理屬律師。\n\n## 遺囑之不動產名義變更──繼承登記與遺贈登記\n\n遺囑取得不動產並非全部為「繼承登記」。依遺囑文字、取得人是否繼承人、屬「使繼承」或「遺贈」等，登記原因・申請方法不同。\n\n依法務局2026年版「申請繼承登記・遺贈登記之繼承人」確認。2023年4月1日以後，對繼承人之遺贈，受遺贈之繼承人得單獨申請所有權移轉登記。2023年4月1日前開始之繼承遺贈，於同日以後申請者，亦可能利用此單獨申請制度。\n\n個別登記判斷・申請代理・申請書製作屬司法書士或律師。繼承登記流程見[繼承登記如何進行？](https://luck428.com/legal/column/souzoku-touki-nagare)。\n\n## 特定財產承繼遺囑\n\n特定財產承繼遺囑，依民法第1014條第2項，遺囑執行人得為因該遺囑取得之繼承人具備對抗要件所需行為。\n\n惟並非「行政書士得作為司法書士業務代理登記」。個別登記實務請向司法書士等確認。\n\n## 遺留分・遺囑有效性・爭議\n\n有遺囑不表示遺留分問題消失。\n\n遺留分侵害額請求、遺囑能力、方式、偽造、多份遺囑效力、遺囑解釋、繼承人・受遺贈人間爭議屬律師。遺留分亦見[自筆證書遺囑與公證遺囑的差異](https://luck428.com/legal/column/jihitsu-kosei-yuigon)。\n\n## 行政書士・司法書士・律師・稅理士之分工\n\n四葉行政書士事務所於合法範圍內，辦理戶籍蒐集、繼承人調查、財產調查、繼承關係整理、遺囑內容・財產資料整理、權利義務書類等製作。\n\n另，經遺囑指定時，就任遺囑執行人本身可能。惟即使以遺囑執行人進行，亦不辦理律師法、司法書士法、稅理士法等限定於他士業之業務。\n\n- 紛爭・個別法律判斷 → 律師\n- 不動產登記代理 → 司法書士或律師\n- 家庭裁判所提出書類製作 → 司法書士或律師\n- 稅務 → 稅理士\n- 不動產估價・仲介 → 四葉不動產株式會社\n\n四葉行政書士事務所與四葉不動產株式會社為別事業體・別契約，分別處理。本事務所不收取介紹費。\n\n## 在文京區發現遺囑後之手續流程\n\n四葉行政書士事務所（文京區小日向・茗荷谷站步行約5分鐘）階段式引導遺囑種類・內容整理、戶籍蒐集、繼承人調查、財產調查、遺囑執行所需資料整理、權利義務書類等製作。\n\n受任流程見[受任流程](https://luck428.com/legal/nagare)；費用見[報酬額表](https://luck428.com/legal/ryokin)；繼承業務全貌見[繼承・遺囑・信託服務](https://luck428.com/legal/services/inheritance)。\n\n## 常見問題\n\n**Q. 家人可以開封封印遺囑嗎？**\nA. 封印遺囑不得於家庭裁判所外擅自開封。應於家庭裁判所由繼承人或代理人會同下開封。\n\n**Q. 自筆遺囑必經檢認嗎？**\nA. 自宅等保管之自筆遺囑原則須檢認。法務局保管之自筆遺囑免檢認。\n\n**Q. 檢認後遺囑即被認定有效嗎？**\nA. 檢認非判斷遺囑有效無效之手續。係明確遺囑存在・內容・狀態，防止偽造・變造之手續。\n\n**Q. 有遺囑即不需遺產分割協議嗎？**\nA. 有效遺囑已定分法之財產原則依遺囑，但遺囑未記載或未定分法之財產可能須遺產分割協議。\n\n**Q. 發現多份遺囑時只有新的有效嗎？**\nA. 前後遺囑牴觸時，牴觸部分視為後遺囑撤回前遺囑。舊遺囑並非全部當然無效。\n\n**Q. 未指定遺囑執行人時該怎麼辦？**\nA. 可向家庭裁判所聲請選任遺囑執行人。惟並非所有遺囑均必選任。\n\n**Q. 行政書士可擔任遺囑執行人嗎？**\nA. 經遺囑指定且無欠格事由，行政書士就任遺囑執行人本身可能。惟不辦理他士業限定業務。\n\n**Q. 誤開封印遺囑會無效嗎？**\nA. 僅因家庭裁判所外開封，不直接使遺囑無效。惟可能該當民法第1005條過料，且須檢認之遺囑開封後仍應確認檢認手續。遺囑有效性請洽律師。\n\n## 本文出處（一次資訊）\n\n- e-Gov 民法第908條、第1004條、第1005條、第1006條〜第1016條、第1022條、第1023條、第1042條以下（必要範圍）\n- 裁判所「遺囑書之檢認」\n- 裁判所「遺囑執行人選任」\n- 法務省「自筆證書遺囑書保管制度」\n- 法務省「繼承人等手續」\n- 法務省「遺囑書資訊證明書」\n- 法務省「遺囑書保管事實證明書」\n- 法務局「申請繼承登記・遺贈登記之繼承人」（2026年版）\n- 司法書士法第3條\n- 行政書士法現行條文\n- 律師法第72條\n\n本文為一般資訊提供，不保證個別遺囑有效性、方式、檢認、遺囑執行、遺贈、繼承登記、遺留分、紛爭。檢認聲請書等家庭裁判所提出書類製作屬司法書士或律師；遺囑有效性・解釋・遺留分・紛爭屬律師；不動產登記代理屬司法書士或律師；稅務屬稅理士；不動產估價・仲介屬四葉不動產株式會社，均為獨立的事業體，以個別契約處理。本事務所不收取介紹費。個別判斷由資格者面談後進行。執筆者為[浦松丈二](https://luck428.com/about/uramatsu)（行政書士・宅地建物交易士）。",
+        "faq": [
+          {
+            "question": "家人可以開封封印遺囑嗎？",
+            "answer": "封印遺囑不得於家庭裁判所外擅自開封。應於家庭裁判所由繼承人或代理人會同下開封。"
+          },
+          {
+            "question": "自筆遺囑必經檢認嗎？",
+            "answer": "自宅等保管之自筆遺囑原則須檢認。法務局保管之自筆遺囑免檢認。"
+          },
+          {
+            "question": "檢認後遺囑即被認定有效嗎？",
+            "answer": "檢認非判斷遺囑有效無效之手續。係明確遺囑存在・內容・狀態，防止偽造・變造之手續。"
+          },
+          {
+            "question": "有遺囑即不需遺產分割協議嗎？",
+            "answer": "有效遺囑已定分法之財產原則依遺囑，但遺囑未記載或未定分法之財產可能須遺產分割協議。"
+          },
+          {
+            "question": "發現多份遺囑時只有新的有效嗎？",
+            "answer": "前後遺囑牴觸時，牴觸部分視為後遺囑撤回前遺囑。舊遺囑並非全部當然無效。"
+          },
+          {
+            "question": "未指定遺囑執行人時該怎麼辦？",
+            "answer": "可向家庭裁判所聲請選任遺囑執行人。惟並非所有遺囑均必選任。"
+          },
+          {
+            "question": "行政書士可擔任遺囑執行人嗎？",
+            "answer": "經遺囑指定且無欠格事由，行政書士就任遺囑執行人本身可能。惟不辦理他士業限定業務。"
+          },
+          {
+            "question": "誤開封印遺囑會無效嗎？",
+            "answer": "僅因家庭裁判所外開封，不直接使遺囑無效。惟可能該當民法第1005條過料，且須檢認之遺囑開封後仍應確認檢認手續。遺囑有效性請洽律師。"
+          }
+        ]
+      },
+      "zh": {
+        "title": "发现遗嘱时该怎么办？检认・遗嘱执行・不动产登记流程与行政书士可协助事项",
+        "excerpt": "发现遗嘱时，首先确认种类与有无封印。封印遗嘱不可于家庭裁判所外擅自开封。自宅保管自笔遗嘱原则须检认，公证遗嘱或法务局保管自笔遗嘱则免检认。本文整理流程、遗嘱执行人与专业人士分工。",
+        "category": "继承手续（行政书士实务）",
+        "content": "**结论（先说要点）**：发现遗嘱时，首先确认种类与有无封印。须检认之遗嘱，保管人或发现遗嘱之继承人，应于知悉遗嘱人死亡后，尽速向家庭裁判所提出并请求检认。封印遗嘱不可于家庭裁判所外擅自开封。自宅保管自笔遗嘱原则须检认，公证遗嘱或法务局保管自笔遗嘱免检认。检认非判断遗嘱有效无效之手续。遗嘱执行人上任后，执行实现遗嘱内容之任务。四叶行政书士事务所办理户籍收集、继承人调查、财产调查、遗嘱内容・财产资料整理、权利义务书类等制作，但不制作检认申请书、判断遗嘱有效性・解释、处理特留份・纠纷、代理不动产登记。\n\n## 发现遗嘱时，先勿开封并确认种类\n\n发现遗嘱时，首先确认种类与有无封印。**封印遗嘱不可于家庭裁判所外擅自开封**（民法第1004条）。\n\n须检认之遗嘱，保管人或发现遗嘱之继承人，应于知悉遗嘱人死亡后，尽速向家庭裁判所提出并请求检认。\n\n依民法第1005条，怠于提出遗嘱、未经检认即执行遗嘱、于家庭裁判所外开封印遗嘱等，可能处5万日元以下过料。\n\n惟并非所有仅放入信封之文件均一律不得开封。此处系指“封印遗嘱”。\n\n## 有遗嘱即不需遗产分割协议？\n\n不能称“有遗嘱即一切遗产分割协议均不需要”。\n\n有效遗嘱已定取得人或分法之财产，原则上依遗嘱内容办理。遗嘱未记载或未定分法之财产，可能须遗产分割协议。\n\n依民法第908条，遗嘱人得禁止继承开始起5年内遗产分割。欲与遗嘱不同分法时，遗嘱执行人、受遗赠人、禁止分割、第三人关系等可能成为问题，不能断言“全体合意即必可能”。个别判断请洽律师。\n\n遗产分割协议基本见[遗产分割协议书可以自己制作吗？](https://luck428.com/legal/column/isan-bunkatsu-kyougisho)。\n\n## 自笔遗嘱・公证遗嘱・法务局保管有何不同？\n\n依遗嘱种类，检认要否不同。\n\n| 遗嘱种类 | 检认 |\n| --- | --- |\n| 公证遗嘱 | 免 |\n| 法务局保管之自笔遗嘱 | 免 |\n| 自宅等保管之自笔遗嘱 | 原则必要 |\n| 秘密遗嘱 | 原则必要 |\n\n自笔遗嘱与公证遗嘱之差异见[自书遗嘱与公证遗嘱的区别](https://luck428.com/legal/column/jihitsu-kosei-yuigon)。\n\n另，2026年6月24日公布令和8年法律第45号，惟2026年8月现在遗嘱制度改正尚未全面施行。押印任意化等为公布起1年内政令指定日，保管证书遗嘱创设等为公布起3年内政令指定日。并非“新制度已可使用”。本文依2026年8月现在之现行制度。\n\n## 何谓检认？并非判断有效性之手续\n\n检认并非判断遗嘱有效无效之手续。目的在使继承人知悉遗嘱存在・内容，明确遗嘱书形状、加除订正、日期、签名等状态，防止伪造・变造。\n\n申请处为遗嘱人最后住所地之家庭裁判所。费用为每通遗嘱收入印花800日元＋邮资。检认済证明书每通遗嘱收入印花150日元。继承人全体无须出席检认期日。\n\n检认后，为执行遗嘱取得检认済证明书。\n\n家庭裁判所提出书类制作属司法书士或律师，程序代理・争议属律师。四叶行政书士事务所不业为制作检认申请书。\n\n## 封印遗嘱不得自行开封？\n\n封印遗嘱不得于家庭裁判所外擅自开封。应于家庭裁判所，由继承人或代理人会同下开封。\n\n于家庭裁判所外开封印遗嘱等，可能处5万日元以下过料。发现遗嘱后，勿开封并向专业人士或家庭裁判所确认。\n\n## 不知是否法务局保管时之确认方法\n\n确认法务局是否保管遗嘱，使用**遗嘱书保管事实证明书**。此为确认遗嘱是否保管于法务局之制度。\n\n继承开始后，可取得**遗嘱书信息证明书**。遗嘱书信息证明书系含遗嘱书影像之内容证明，预定可代替原本用于各种继承手续。\n\n继承人・受遗赠人・遗嘱执行人等，继承开始后得请求。法务局保管遗嘱免检认。\n\n## 发现多份遗嘱时？\n\n有后日期遗嘱，并非旧遗嘱全部当然无效。\n\n依民法第1022条・第1023条，前遗嘱与后遗嘱抵触时，抵触部分视为后遗嘱撤回前遗嘱。多份遗嘱有效性・抵触・解释请洽律师。\n\n## 何谓遗嘱执行人？被指定时做什么？\n\n遗嘱执行人系实现遗嘱内容者（民法第1006条〜第1016条）。遗嘱执行人**上任后**，执行实现遗嘱内容之任务。被指定者未必上任。\n\n依民法第1009条，未成年人・破产人不得为遗嘱执行人。律师・司法书士・行政书士等资格本身并非必要。因此行政书士经遗嘱指定并上任亦可能。惟并非“具有行政书士资格即被授予特别遗嘱执行权限”。\n\n遗嘱执行人上任后，尽速将遗嘱内容通知继承人，并尽速制作继承财产目录交付继承人。为实现遗嘱内容，管理继承财产及为其他必要行为。有遗嘱执行人时，继承人不得为妨碍遗嘱执行之继承财产处分等。\n\n## 无遗嘱执行人时？\n\n未指定遗嘱执行人或遗嘱执行人不存在时，家庭裁判所得依利害关系人申请选任遗嘱执行人。\n\n惟并非“无遗嘱执行人，所有遗嘱均必经家庭裁判所选任”。遗嘱内容不同，遗嘱执行人必要性亦异。\n\n家庭裁判所提出书类制作属司法书士或律师，法律判断・代理属律师。\n\n## 遗嘱之不动产名义变更──继承登记与遗赠登记\n\n遗嘱取得不动产并非全部为“继承登记”。依遗嘱文字、取得人是否继承人、属“使继承”或“遗赠”等，登记原因・申请方法不同。\n\n依法务局2026年版“申请继承登记・遗赠登记之继承人”确认。2023年4月1日以后，对继承人之遗赠，受遗赠之继承人得单独申请所有权移转登记。2023年4月1日前开始之继承遗赠，于同日以后申请者，亦可能利用此单独申请制度。\n\n个别登记判断・申请代理・申请书制作属司法书士或律师。继承登记流程见[继承登记如何进行？](https://luck428.com/legal/column/souzoku-touki-nagare)。\n\n## 特定财产承继遗嘱\n\n特定财产承继遗嘱，依民法第1014条第2项，遗嘱执行人得为因该遗嘱取得之继承人具备对抗要件所需行为。\n\n惟并非“行政书士得作为司法书士业务代理登记”。个别登记实务请向司法书士等确认。\n\n## 特留份・遗嘱有效性・争议\n\n有遗嘱不表示特留份问题消失。\n\n特留份侵害额请求、遗嘱能力、方式、伪造、多份遗嘱效力、遗嘱解释、继承人・受遗赠人之间争议属律师。特留份亦见[自书遗嘱与公证遗嘱的区别](https://luck428.com/legal/column/jihitsu-kosei-yuigon)。\n\n## 行政书士・司法书士・律师・税理士之分工\n\n四叶行政书士事务所于合法范围内，办理户籍收集、继承人调查、财产调查、继承关系整理、遗嘱内容・财产资料整理、权利义务书类等制作。\n\n另，经遗嘱指定时，上任遗嘱执行人本身可能。惟即使以遗嘱执行人进行，亦不办理律师法、司法书士法、税理士法等限定于他士业之业务。\n\n- 纠纷・个别法律判断 → 律师\n- 不动产登记代理 → 司法书士或律师\n- 家庭裁判所提出书类制作 → 司法书士或律师\n- 税务 → 税理士\n- 不动产估价・中介 → 四叶不动产株式会社\n\n四叶行政书士事务所与四叶不动产株式会社为别事业体・别合同，分别处理。本事务所不收取介绍费。\n\n## 在文京区发现遗嘱后之手续流程\n\n四叶行政书士事务所（文京区小日向・茗荷谷站步行约5分钟）阶段式引导遗嘱种类・内容整理、户籍收集、继承人调查、财产调查、遗嘱执行所需资料整理、权利义务书类等制作。\n\n受任流程见[受任流程](https://luck428.com/legal/nagare)；费用见[报酬额表](https://luck428.com/legal/ryokin)；继承业务全貌见[继承・遗嘱・信托服务](https://luck428.com/legal/services/inheritance)。\n\n## 常见问题\n\n**Q. 家人可以开封印遗嘱吗？**\nA. 封印遗嘱不得于家庭裁判所外擅自开封。应于家庭裁判所由继承人或代理人会同下开封。\n\n**Q. 自笔遗嘱必经检认吗？**\nA. 自宅等保管之自笔遗嘱原则须检认。法务局保管之自笔遗嘱免检认。\n\n**Q. 检认后遗嘱即被认定有效吗？**\nA. 检认非判断遗嘱有效无效之手续。系明确遗嘱存在・内容・状态，防止伪造・变造之手续。\n\n**Q. 有遗嘱即不需遗产分割协议吗？**\nA. 有效遗嘱已定分法之财产原则依遗嘱，但遗嘱未记载或未定分法之财产可能须遗产分割协议。\n\n**Q. 发现多份遗嘱时只有新的有效吗？**\nA. 前后遗嘱抵触时，抵触部分视为后遗嘱撤回前遗嘱。旧遗嘱并非全部当然无效。\n\n**Q. 未指定遗嘱执行人时该怎么办？**\nA. 可向家庭裁判所申请选任遗嘱执行人。惟并非所有遗嘱均必选任。\n\n**Q. 行政书士可担任遗嘱执行人吗？**\nA. 经遗嘱指定且无欠格事由，行政书士上任遗嘱执行人本身可能。惟不办理他士业限定业务。\n\n**Q. 误开封印遗嘱会无效吗？**\nA. 仅因家庭裁判所外开，不直接使遗嘱无效。惟可能该当民法第1005条过料，且须检认之遗嘱开后仍应确认检认手续。遗嘱有效性请洽律师。\n\n## 本文出处（一次信息）\n\n- e-Gov 民法第908条、第1004条、第1005条、第1006条〜第1016条、第1022条、第1023条、第1042条以下（必要范围）\n- 裁判所“遗嘱书之检认”\n- 裁判所“遗嘱执行人选任”\n- 法务省“自笔证书遗嘱书保管制度”\n- 法务省“继承人等手续”\n- 法务省“遗嘱书信息证明书”\n- 法务省“遗嘱书保管事实证明书”\n- 法务局“申请继承登记・遗赠登记之继承人”（2026年版）\n- 司法书士法第3条\n- 行政书士法现行条文\n- 律师法第72条\n\n本文为一般信息提供，不保证个别遗嘱有效性、方式、检认、遗嘱执行、遗赠、继承登记、特留份、纠纷。检认申请书等家庭裁判所提出书类制作属司法书士或律师；遗嘱有效性・解释・特留份・纠纷属律师；不动产登记代理属司法书士或律师；税务属税理士；不动产估价・中介属四叶不动产株式会社，均为独立的事业体，以个别合同处理。本事务所不收取介绍费。个别判断由资格者面谈后进行。执笔者为[浦松丈二](https://luck428.com/about/uramatsu)（行政书士・宅地建物交易士）。",
+        "faq": [
+          {
+            "question": "家人可以开封印遗嘱吗？",
+            "answer": "封印遗嘱不得于家庭裁判所外擅自开封。应于家庭裁判所由继承人或代理人会同下开封。"
+          },
+          {
+            "question": "自笔遗嘱必经检认吗？",
+            "answer": "自宅等保管之自笔遗嘱原则须检认。法务局保管之自笔遗嘱免检认。"
+          },
+          {
+            "question": "检认后遗嘱即被认定有效吗？",
+            "answer": "检认非判断遗嘱有效无效之手续。系明确遗嘱存在・内容・状态，防止伪造・变造之手续。"
+          },
+          {
+            "question": "有遗嘱即不需遗产分割协议吗？",
+            "answer": "有效遗嘱已定分法之财产原则依遗嘱，但遗嘱未记载或未定分法之财产可能须遗产分割协议。"
+          },
+          {
+            "question": "发现多份遗嘱时只有新的有效吗？",
+            "answer": "前后遗嘱抵触时，抵触部分视为后遗嘱撤回前遗嘱。旧遗嘱并非全部当然无效。"
+          },
+          {
+            "question": "未指定遗嘱执行人时该怎么办？",
+            "answer": "可向家庭裁判所申请选任遗嘱执行人。惟并非所有遗嘱均必选任。"
+          },
+          {
+            "question": "行政书士可担任遗嘱执行人吗？",
+            "answer": "经遗嘱指定且无欠格事由，行政书士上任遗嘱执行人本身可能。惟不办理他士业限定业务。"
+          },
+          {
+            "question": "误开封印遗嘱会无效吗？",
+            "answer": "仅因家庭裁判所外开，不直接使遗嘱无效。惟可能该当民法第1005条过料，且须检认之遗嘱开后仍应确认检认手续。遗嘱有效性请洽律师。"
+          }
+        ]
+      }
+    }
   }
 ];

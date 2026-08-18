@@ -1,5 +1,5 @@
 /**
- * 相続コラム（行政書士）シリーズ（第1号〜第13号・4言語）投入スクリプト
+ * 相続コラム（行政書士）シリーズ（第1号〜第14号・4言語）投入スクリプト
  *
  * 対象＝luck428.com /legal/column（business=legal）。
  * 原稿＝scripts/legal-columns/NN-*.md（ja）＋{en,zh-tw,zh}/NN-*.md（翻訳）。
@@ -194,6 +194,15 @@ const REQUIRED_HUB_LINKS: Record<string, string[]> = {
     "/legal/column/souzoku-kigen-matome",
     "/legal/column/souzoku-touki-nagare",
     "/legal/column/souzoku-tochi-kokko-kizoku",
+  ],
+  "souzoku-yuigon-hakken-tetsuzuki": [
+    "/legal/services/inheritance",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/souzoku",
+    "/legal/column/isan-bunkatsu-kyougisho",
+    "/legal/column/jihitsu-kosei-yuigon",
+    "/legal/column/souzoku-touki-nagare",
   ],
 };
 
@@ -434,6 +443,28 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "別事業体",
     "独立した事業体",
   ],
+  "souzoku-yuigon-hakken-tetsuzuki": [
+    "封印のある遺言書",
+    "遅滞なく家庭裁判所へ提出し、検認を請求します",
+    "5万円以下の過料",
+    "検認は、遺言の有効・無効を判断する手続ではありません",
+    "公正証書遺言",
+    "法務局保管の自筆証書遺言",
+    "秘密証書遺言",
+    "遺言書保管事実証明書",
+    "遺言書情報証明書",
+    "民法第1022条・第1023条",
+    "遺言執行者が就任した場合",
+    "未成年者・破産者は遺言執行者になれません",
+    "民法第1013条",
+    "民法第1014条第2項",
+    "検認済証明書",
+    "収入印紙150円",
+    "相続登記",
+    "遺贈登記",
+    "別事業体",
+    "独立した事業体",
+  ],
 };
 
 /** 記事ごとに含めてはならない表現 */
@@ -485,6 +516,7 @@ const FORBIDDEN_PHRASES: Record<string, string[]> = {
   "souzoku-hoki-gentei-shonin": [],
   "souzoku-tochi-kokko-kizoku": [],
   "souzoku-tochi-kokko-hiyo-kikan": [],
+  "souzoku-yuigon-hakken-tetsuzuki": [],
 };
 
 /** 本セット外へ張る既存legalコラムslug（リポジトリの他シードで実在確認済み） */
@@ -723,6 +755,23 @@ const ARTICLES: Array<{
       "国庫帰属 固定資産税",
     ],
     tags: ["相続土地国庫帰属", "国庫帰属", "費用", "期間", "負担金", "審査手数料"],
+  },
+  {
+    file: "15-souzoku-yuigon-hakken-tetsuzuki.md",
+    slug: "souzoku-yuigon-hakken-tetsuzuki",
+    title: "遺言書が見つかったら？検認・遺言執行・不動産登記の流れと行政書士に頼めること",
+    category: "相続の手続き（行政書士の実務から）",
+    excerpt:
+      "遺言書が見つかったら、まず封印の有無と種類を確認します。封印のある遺言書は家庭裁判所外で開封してはいけません。自宅保管の自筆証書遺言は原則検認が必要ですが、公正証書遺言・法務局保管の自筆証書遺言は不要です。遺言執行、遺贈登記、遺留分、行政書士に頼める範囲を文京区の実務に沿って整理しました。",
+    keywords: [
+      "遺言書 見つかった どうする",
+      "遺言 検認 手続き",
+      "自筆証書遺言 検認 必要",
+      "遺言執行者 行政書士",
+      "遺言 相続登記 遺贈登記",
+      "法務局保管 自筆証書遺言",
+    ],
+    tags: ["遺言", "検認", "遺言執行者", "遺贈登記", "相続登記", "行政書士"],
   },
 ];
 
