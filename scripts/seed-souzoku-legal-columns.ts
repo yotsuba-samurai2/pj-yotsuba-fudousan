@@ -1,5 +1,5 @@
 /**
- * 相続コラム（行政書士）シリーズ（第1号〜第11号・4言語）投入スクリプト
+ * 相続コラム（行政書士）シリーズ（第1号〜第12号・4言語）投入スクリプト
  *
  * 対象＝luck428.com /legal/column（business=legal）。
  * 原稿＝scripts/legal-columns/NN-*.md（ja）＋{en,zh-tw,zh}/NN-*.md（翻訳）。
@@ -174,6 +174,16 @@ const REQUIRED_HUB_LINKS: Record<string, string[]> = {
     "/legal/column/houtei-souzoku-bun",
     "/legal/column/souzoku-kigen-matome",
     "/legal/column/souzoku-touki-nagare",
+  ],
+  "souzoku-tochi-kokko-kizoku": [
+    "/legal/services/inheritance",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/souzoku",
+    "/legal/column/souzoku-zaisan-mokuroku",
+    "/legal/column/souzoku-kigen-matome",
+    "/legal/column/souzoku-touki-nagare",
+    "/legal/column/souzoku-hoki-gentei-shonin",
   ],
 };
 
@@ -372,6 +382,26 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "譲渡があったものとみなされる",
     "独立した事業体",
   ],
+  "souzoku-tochi-kokko-kizoku": [
+    "相続土地国庫帰属制度",
+    "相続又は相続人に対する遺贈",
+    "共有者全員で共同申請する必要があります",
+    "2023年4月27日",
+    "戸籍事項証明書等",
+    "却下事由",
+    "不承認事由",
+    "建物が存在する土地",
+    "14,000円",
+    "20万円",
+    "30日以内",
+    "納付した時点",
+    "土地家屋調査士",
+    "申請者本人が申請主体",
+    "代理申請」とは表現しません",
+    "国が土地を買い取る制度ではありません",
+    "別事業体",
+    "独立した事業体",
+  ],
 };
 
 /** 記事ごとに含めてはならない表現 */
@@ -421,6 +451,7 @@ const FORBIDDEN_PHRASES: Record<string, string[]> = {
     "すべての100万円以下の不動産が免税",
   ],
   "souzoku-hoki-gentei-shonin": [],
+  "souzoku-tochi-kokko-kizoku": [],
 };
 
 /** 本セット外へ張る既存legalコラムslug（リポジトリの他シードで実在確認済み） */
@@ -625,6 +656,23 @@ const ARTICLES: Array<{
       "相続放棄 行政書士",
     ],
     tags: ["相続放棄", "限定承認", "単純承認", "熟慮期間", "家庭裁判所", "相続"],
+  },
+  {
+    file: "13-souzoku-tochi-kokko-kizoku.md",
+    slug: "souzoku-tochi-kokko-kizoku",
+    title: "不要な土地を相続したらどうする？相続土地国庫帰属制度と相続放棄の違い",
+    category: "相続の手続き（行政書士の実務から）",
+    excerpt:
+      "相続土地国庫帰属制度は、相続等で取得した一定の土地を要件を満たしたうえで国庫へ帰属させる制度です。一方、相続放棄はその相続について初めから相続人でなかったものとされる制度です。申請できる人、引き取れない土地、費用、相続登記・売却との違い、行政書士に頼める範囲を文京区の実務に沿って整理しました。",
+    keywords: [
+      "相続土地国庫帰属制度",
+      "相続 不要な土地",
+      "相続放棄 国庫帰属 違い",
+      "相続 土地 いらない",
+      "国庫帰属 申請 費用",
+      "相続土地国庫帰属 行政書士",
+    ],
+    tags: ["相続土地国庫帰属", "相続放棄", "不要な土地", "国庫帰属", "土地", "相続"],
   },
 ];
 
