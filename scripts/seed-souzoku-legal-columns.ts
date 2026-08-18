@@ -1,5 +1,5 @@
 /**
- * 相続コラム（行政書士）シリーズ（第1号〜第14号・4言語）投入スクリプト
+ * 相続コラム（行政書士）シリーズ（第1号〜第15号・4言語）投入スクリプト
  *
  * 対象＝luck428.com /legal/column（business=legal）。
  * 原稿＝scripts/legal-columns/NN-*.md（ja）＋{en,zh-tw,zh}/NN-*.md（翻訳）。
@@ -203,6 +203,21 @@ const REQUIRED_HUB_LINKS: Record<string, string[]> = {
     "/legal/column/isan-bunkatsu-kyougisho",
     "/legal/column/jihitsu-kosei-yuigon",
     "/legal/column/souzoku-touki-nagare",
+  ],
+  "souzoku-tejun-checklist": [
+    "/legal/services/inheritance",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/souzoku",
+    "/legal/column/souzoku-hajime-koseki-chosa-bunkyo",
+    "/legal/column/isan-bunkatsu-kyougisho",
+    "/legal/column/souzoku-zaisan-mokuroku",
+    "/legal/column/souzoku-kigen-matome",
+    "/legal/column/souzoku-zei-shinkoku-hitsuyo",
+    "/legal/column/souzoku-touki-nagare",
+    "/legal/column/souzoku-hoki-gentei-shonin",
+    "/legal/column/souzoku-tochi-kokko-kizoku",
+    "/legal/column/souzoku-yuigon-hakken-tetsuzuki",
   ],
 };
 
@@ -465,6 +480,26 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "別事業体",
     "独立した事業体",
   ],
+  "souzoku-tejun-checklist": [
+    "相続が発生したらやることチェックリスト",
+    "相続放棄・限定承認",
+    "法定単純承認",
+    "死亡の事実を知った日から7日以内",
+    "自己のために相続開始があったことを知った時から原則3か月",
+    "相続開始を知った日の翌日から4か月以内",
+    "相続開始を知った日の翌日から10か月以内",
+    "所有権を取得したことを知った日から3年以内",
+    "おくやみハンドブック",
+    "おくやみコーナー",
+    "生命保険",
+    "証券",
+    "道路運送車両法第13条",
+    "本人申請",
+    "司法書士又は弁護士",
+    "合意済み内容に基づく遺産分割協議書",
+    "別事業体",
+    "独立した事業体",
+  ],
 };
 
 /** 記事ごとに含めてはならない表現 */
@@ -517,6 +552,7 @@ const FORBIDDEN_PHRASES: Record<string, string[]> = {
   "souzoku-tochi-kokko-kizoku": [],
   "souzoku-tochi-kokko-hiyo-kikan": [],
   "souzoku-yuigon-hakken-tetsuzuki": [],
+  "souzoku-tejun-checklist": [],
 };
 
 /** 本セット外へ張る既存legalコラムslug（リポジトリの他シードで実在確認済み） */
@@ -772,6 +808,22 @@ const ARTICLES: Array<{
       "法務局保管 自筆証書遺言",
     ],
     tags: ["遺言", "検認", "遺言執行者", "遺贈登記", "相続登記", "行政書士"],
+  },
+  {
+    file: "16-souzoku-tejun-checklist.md",
+    slug: "souzoku-tejun-checklist",
+    title: "相続が発生したらやることチェックリスト──期限・名義変更・解約・届出を順番に整理",
+    category: "相続の手続き（行政書士の実務から）",
+    excerpt:
+      "相続手続きは、死亡後の行政手続と相続財産の手続を分けて進めます。期限の早見表、戸籍・遺言・財産調査、銀行・保険・証券、自動車・不動産、税務、公共料金等を順番に整理し、第1号〜第14号の各論と専門家の分担へつなぐハブ記事です。",
+    keywords: [
+      "相続 やること チェックリスト",
+      "相続 名義変更 手続き",
+      "相続 銀行口座 解約",
+      "相続 届出 期限",
+      "相続 行政書士 司法書士 税理士",
+    ],
+    tags: ["相続", "チェックリスト", "名義変更", "届出", "期限", "行政書士"],
   },
 ];
 
