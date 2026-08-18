@@ -2469,5 +2469,213 @@ export const SOUZOKU_LEGAL_COLUMNS_SEED: SouzokuLegalSeedColumn[] = [
         ]
       }
     }
+  },
+  {
+    "business": "legal",
+    "slug": "souzoku-isanbunkatsu-chotei-shinpan",
+    "title": "相続人の意見がまとまらないときは？遺産分割調停・審判の流れと弁護士に相談するタイミング",
+    "date": "2026-08-16",
+    "category": "相続の手続き（行政書士の実務から）",
+    "excerpt": "共同相続人間で遺産分割協議が調わない、又は協議できない場合、家庭裁判所の遺産分割調停又は審判を利用できます。調停は合意を目指す話合いの手続で、不成立になると自動的に遺産分割審判手続が開始されます。管轄、費用、必要書類、弁護士へ相談するタイミングと行政書士に頼める範囲を文京区の実務に沿って整理しました。",
+    "content": "**結論（先に要点）**：共同相続人間で遺産分割協議が調わない、又は協議できない場合、家庭裁判所の遺産分割調停又は審判を利用できます。遺産分割調停は、裁判官・調停委員会の関与のもとで合意を目指す話合いの手続です。遺産分割調停が不成立になった場合、自動的に遺産分割審判手続が開始されます。本人による申立ても可能です。四葉行政書士事務所では、紛争のない範囲で、戸籍収集、相続人調査、相続関係整理、財産資料整理、法定相続情報一覧図関係、合意成立後の遺産分割協議書等の作成を扱います。相続人間の交渉、紛争の法律判断、調停・審判の代理、相手方との示談交渉は行政書士業務として案内しません。\n\n## 協議がまとまらない場合\n\n共同相続人間で遺産分割協議が調わない、又は協議できない場合、家庭裁判所の遺産分割調停又は審判を利用できます（民法第907条）。\n\n本人による申立ても可能です。「弁護士を付けなければ家庭裁判所を利用できない」わけではありません。\n\n遺産分割協議の基本は[遺産分割協議書は自分で作れる？](/legal/column/isan-bunkatsu-kyougisho)、相続人の範囲は[法定相続人と相続分の基本](/legal/column/houtei-souzoku-bun)をご覧ください。\n\n## 遺産分割の当事者\n\n共同相続人や包括受遺者など、遺産分割の当事者となる者を漏れなく手続に参加させる必要があります。\n\n調停では、申立人以外の共同相続人等を相手方として申し立てます。相続分譲受人等がいる場合は当事者関係が変わることがあるため、個別に家庭裁判所又は弁護士へ確認してください。\n\n## 遺産分割調停とは\n\n遺産分割調停は、家庭裁判所で、裁判官・調停委員会の関与のもと、各当事者の事情、分割希望、遺産資料、必要に応じ鑑定等を確認しながら合意を目指す話合いの手続です。\n\n「調停委員がどちらが正しいか判決する」手続ではありません。\n\n## 調停の申立先\n\n調停の申立先は、原則として、相手方のうち1人の住所地を管轄する家庭裁判所、又は当事者が合意で定める家庭裁判所です。\n\n## 調停の費用と必要書類\n\n遺産分割調停の申立手数料は、被相続人1人につき収入印紙1,200円＋連絡用郵便料です。郵便料は裁判所ごとに異なります。\n\n必要書類は相続関係等により異なります。基本資料として、申立書、当事者目録、遺産目録、戸籍、住民票又は戸籍附票、不動産・預貯金等の遺産資料などがあります。法定相続情報一覧図の写しを戸籍等に代えて提出できる場合があります。\n\n## 調停が不成立になると\n\n遺産分割調停で話合いがまとまらず不成立になった場合、**自動的に遺産分割審判手続が開始されます**。\n\n審判では、裁判官が遺産の種類、性質、各当事者の事情、その他一切の事情などを考慮して分割方法を判断します。\n\n## 遺留分調停との違い\n\n遺産分割調停と遺留分侵害額請求調停は異なります。遺産分割調停が不成立になった場合、自動的に遺産分割審判手続が開始されます。一方、遺留分侵害額請求調停は同じ扱いではありません。\n\n遺留分侵害額請求調停が不成立になった場合、遺産分割のように当然に遺留分審判へ移行するとはいえません。遺留分の基本は[遺留分とは？](/legal/column/souzoku-iryubun-kiso)をご覧ください。\n\n## 最初から審判を申し立てる場合\n\n遺産分割は、最初から審判を申し立てることも可能です。「必ず調停を先に経なければならない」とはいえません。\n\nただし、裁判官がまず話合いによる解決を図る方がよいと判断した場合、調停に付されることがあります。最初から審判の場合の申立先は、被相続人の最後の住所地を管轄する家庭裁判所、又は当事者が合意で定める家庭裁判所です。\n\n## 審判後の流れ\n\n審判は裁判官による判断です。審判に不服がある場合、即時抗告が認められる事件については、原則として審判の告知を受けた日の翌日から2週間以内に即時抗告する制度があります。\n\n「審判が出た瞬間に必ず確定する」とはいえません。不服申立ての可否・期間管理は弁護士にご確認ください。\n\n## 裁判所は遺産探索機関ではない\n\n遺産分割手続は、遺産を探し出すこと自体を目的とした手続ではありません。裁判所が資料提出を促す場合はありますが、他の遺産の存在を主張する者は、原則として自ら裏付け資料を提出する必要があります。\n\n財産調査は[相続財産の調査と財産目録](/legal/column/souzoku-zaisan-mokuroku)をご覧ください。\n\n## 遺産の範囲に争いがある場合\n\n「何をどう分けるか」と「そもそも遺産なのか」は区別します。例えば、相続人名義の不動産について、実質的には被相続人の財産だとの争いがある場合です。\n\n遺産の有無、範囲、権利関係自体に争いがある場合、遺産に関する紛争調整調停、民事訴訟等が問題になる場合があります。個別の手続選択は弁護士にご確認ください。\n\n## 不動産の評価で争う場合\n\n遺産不動産の評価額について、当事者間で合意できれば、その合意額を用いることがあります。評価について合意できない場合、鑑定が必要になる場合があります。\n\n固定資産税評価額、不動産会社査定額、相続税評価額等のいずれか1つで必ず決まるとはいえません。鑑定評価は不動産鑑定士です。鑑定を実施する場合には鑑定費用が発生することにも注意してください。\n\n## 相続放棄との関係\n\n遺産分割協議・調停が進行中でも、相続放棄の熟慮期間は別問題です。相続放棄は、自己のために相続開始があったことを知った時から原則3か月です。\n\n「話合い中だから相続放棄の3か月も自動的に止まる」とはいえません。詳しくは[相続放棄・限定承認を検討する前に知っておきたいこと](/legal/column/souzoku-hoki-gentei-shonin)をご覧ください。\n\n## 10年ルールとの関係\n\n相続開始から10年を経過しても、遺産分割そのものが一切できなくなるわけではありません。原則として、特別受益・寄与分を反映した具体的相続分による分割に制限が生じます。\n\n経過措置・例外は[相続手続きの期限まとめ](/legal/column/souzoku-kigen-matome)をご覧ください。個別判断は弁護士です。\n\n## 弁護士へ相談するタイミング\n\n次のような場合は、弁護士への相談を検討します。\n\n- 相続人が分割案を明確に拒否する\n- 特別受益、寄与分で対立している\n- 遺言の効力、解釈に争いがある\n- 遺産の範囲、所有権に争いがある\n- 遺留分請求がある\n- 調停申立てを考えている\n- 相手方に弁護士が付いた\n- 相続人間の直接交渉が困難\n\n## 行政書士に頼めること・頼めないこと\n\n相続人間の意見対立が具体的な紛争となっている場合、法的判断、交渉、調停・審判代理、紛争対応は弁護士です。\n\n四葉行政書士事務所では、紛争のない範囲で、戸籍収集、相続人調査、相続関係整理、財産資料整理、法定相続情報一覧図関係、合意成立後の遺産分割協議書等の作成を扱います。紛争当事者の一方を代理し、他の相続人と交渉・説得・調整するとはしません。\n\n## 専門家の担当\n\n- 本人 → 自ら調停・審判を申し立てることは可能\n- 家庭裁判所提出書類作成を専門家へ依頼 → 司法書士又は弁護士\n- 調停・審判代理、交渉、個別法的判断、紛争対応 → 弁護士\n- 不動産鑑定 → 不動産鑑定士\n- 相続登記 → 本人／司法書士又は弁護士\n- 税務 → 本人／税理士\n- 不動産売却査定・媒介 → 四葉不動産株式会社\n\n四葉行政書士事務所と四葉不動産株式会社は別事業体・別契約で対応します。当事務所は紹介料を受け取りません。\n\n相続登記の流れは[相続登記はどう進める？](/legal/column/souzoku-touki-nagare)をご覧ください。\n\n## 文京区で相続紛争の相談を進める流れ\n\n四葉行政書士事務所（文京区小日向・茗荷谷駅徒歩約5分）では、紛争の判断材料となる戸籍収集、相続人調査、財産調査、財産資料整理、合意成立後の遺産分割協議書等の作成を段階的に案内します。\n\n受任の流れは[受任の流れ](/legal/nagare)、料金は[報酬額表](/legal/ryokin)、相続業務の全体像は[相続・遺言・信託サービス](/legal/services/inheritance)をご覧ください。\n\n## よくある質問\n\n**Q. 兄弟の1人が遺産分割協議に同意しない場合は？**\nA. 共同相続人間で協議が調わない場合、家庭裁判所の遺産分割調停又は審判を利用できます。本人による申立ても可能です。\n\n**Q. 遺産分割調停をすると裁判になりますか？**\nA. 遺産分割調停は、合意を目指す話合いの手続です。調停が不成立になると、自動的に遺産分割審判手続が開始されます。\n\n**Q. 調停が不成立になるとどうなりますか？**\nA. 遺産分割調停が不成立になった場合、自動的に遺産分割審判手続が開始されます。\n\n**Q. 最初から遺産分割審判を申し立てられますか？**\nA. 最初から審判を申し立てることも可能です。ただし、裁判官がまず話合いによる解決を図る方がよいと判断した場合、調停に付されることがあります。\n\n**Q. 相続人全員が調停に参加する必要がありますか？**\nA. 共同相続人や包括受遺者など、遺産分割の当事者となる者を漏れなく手続に参加させる必要があります。\n\n**Q. 裁判所が隠し財産を調べてくれますか？**\nA. 遺産分割手続は遺産を探し出すこと自体を目的とした手続ではありません。他の遺産の存在を主張する者は、原則として自ら裏付け資料を提出する必要があります。\n\n**Q. 不動産の価格でもめた場合はどうしますか？**\nA. 当事者間で合意できれば合意額を用いることがあります。合意できない場合は鑑定が必要になる場合があります。鑑定評価は不動産鑑定士で、鑑定費用も発生します。\n\n**Q. 遺産分割調停と遺留分調停は同じですか？**\nA. 異なります。遺産分割調停が不成立になった場合、自動的に遺産分割審判手続が開始されますが、遺留分侵害額請求調停は同じ扱いではありません。\n\n**Q. 行政書士が相続人の間に入って交渉できますか？**\nA. 四葉行政書士事務所では、紛争当事者の一方を代理し、他の相続人と交渉・説得・調整することはしません。相続人間の交渉、調停・審判代理、紛争対応は弁護士です。\n\n## この記事の出典（一次情報）\n\n- e-Gov 民法第903条、第904条の2、第904条の3、第906条、第907条\n- 家事事件手続法の遺産分割関係・調停不成立後の審判移行規定\n- 裁判所「遺産分割調停」\n- 裁判所「調停手続一般」\n- 裁判所「遺産に関する紛争調整調停」\n- 裁判所「遺産分割に関するQ&A」\n- 東京家庭裁判所「遺産分割調停」\n- 司法書士法第3条\n- 行政書士法現行条文\n- 弁護士法第72条\n\n本記事は一般的な情報提供であり、個別の遺産分割調停・審判の手続、管轄、費用、当事者、遺産の範囲、評価、相続放棄、10年ルールを保証するものではありません。調停・審判での代理、相続人間の交渉、個別法的判断、紛争対応は弁護士、家庭裁判所提出書類作成は司法書士又は弁護士、相続登記は本人又は司法書士若しくは弁護士、税務は本人又は税理士、不動産鑑定は不動産鑑定士、不動産の売却査定・媒介は四葉不動産株式会社が、それぞれ独立した事業体として別契約で対応します。当事務所は紹介料を受け取りません。個別の判断は、面談のうえ資格者が行います。執筆は[浦松 丈二](/about/uramatsu)（行政書士・宅地建物取引士）です。",
+    "status": "published",
+    "author": {
+      "name": "浦松 丈二",
+      "title": "行政書士・宅地建物取引士（四葉行政書士事務所／四葉不動産株式会社）"
+    },
+    "keywords": [
+      "相続人 意見がまとまらない",
+      "遺産分割調停 手続き",
+      "遺産分割審判",
+      "遺産分割調停 不成立",
+      "相続 弁護士 相談 タイミング",
+      "遺産分割 行政書士"
+    ],
+    "tags": [
+      "遺産分割調停",
+      "遺産分割審判",
+      "相続紛争",
+      "家庭裁判所",
+      "弁護士",
+      "相続"
+    ],
+    "locales": [
+      "ja",
+      "en",
+      "zh-tw",
+      "zh"
+    ],
+    "faq": [
+      {
+        "question": "兄弟の1人が遺産分割協議に同意しない場合は？",
+        "answer": "共同相続人間で協議が調わない場合、家庭裁判所の遺産分割調停又は審判を利用できます。本人による申立ても可能です。"
+      },
+      {
+        "question": "遺産分割調停をすると裁判になりますか？",
+        "answer": "遺産分割調停は、合意を目指す話合いの手続です。調停が不成立になると、自動的に遺産分割審判手続が開始されます。"
+      },
+      {
+        "question": "調停が不成立になるとどうなりますか？",
+        "answer": "遺産分割調停が不成立になった場合、自動的に遺産分割審判手続が開始されます。"
+      },
+      {
+        "question": "最初から遺産分割審判を申し立てられますか？",
+        "answer": "最初から審判を申し立てることも可能です。ただし、裁判官がまず話合いによる解決を図る方がよいと判断した場合、調停に付されることがあります。"
+      },
+      {
+        "question": "相続人全員が調停に参加する必要がありますか？",
+        "answer": "共同相続人や包括受遺者など、遺産分割の当事者となる者を漏れなく手続に参加させる必要があります。"
+      },
+      {
+        "question": "裁判所が隠し財産を調べてくれますか？",
+        "answer": "遺産分割手続は遺産を探し出すこと自体を目的とした手続ではありません。他の遺産の存在を主張する者は、原則として自ら裏付け資料を提出する必要があります。"
+      },
+      {
+        "question": "不動産の価格でもめた場合はどうしますか？",
+        "answer": "当事者間で合意できれば合意額を用いることがあります。合意できない場合は鑑定が必要になる場合があります。鑑定評価は不動産鑑定士で、鑑定費用も発生します。"
+      },
+      {
+        "question": "遺産分割調停と遺留分調停は同じですか？",
+        "answer": "異なります。遺産分割調停が不成立になった場合、自動的に遺産分割審判手続が開始されますが、遺留分侵害額請求調停は同じ扱いではありません。"
+      },
+      {
+        "question": "行政書士が相続人の間に入って交渉できますか？",
+        "answer": "四葉行政書士事務所では、紛争当事者の一方を代理し、他の相続人と交渉・説得・調整することはしません。相続人間の交渉、調停・審判代理、紛争対応は弁護士です。"
+      }
+    ],
+    "translations": {
+      "en": {
+        "title": "What to do when heirs cannot agree: the flow of estate division conciliation and adjudication, and when to consult an attorney",
+        "excerpt": "If co-heirs cannot reach an estate division agreement, estate division conciliation or adjudication at the Family Court can be used. Estate division conciliation aims at agreement through discussion. If conciliation fails, estate division adjudication proceedings automatically begin. This article explains the flow and the division of work among specialists.",
+        "category": "Inheritance Procedures (From the Practice of an Administrative Scrivener)",
+        "content": "**In short:** if co-heirs cannot reach or hold an estate division agreement, estate division conciliation or adjudication at the Family Court can be used. Estate division conciliation is a discussion procedure aiming at agreement under the involvement of a judge and a conciliation committee. If estate division conciliation fails, estate division adjudication proceedings automatically begin. The person concerned may file personally. Yotsuba Administrative Scrivener Office, in a non-disputed scope, collects family registers, investigates heirs, organises the inheritance relationship, organises estate materials, handles the certified list of statutory heirs and prepares an estate division agreement after agreement is reached. It does not negotiate among heirs, judge legal disputes, act as an agent in conciliation or adjudication, or negotiate a settlement with the other party as administrative-scrivener work.\n\n## When an agreement cannot be reached\n\nIf co-heirs cannot reach or hold an estate division agreement, estate division conciliation or adjudication at the Family Court can be used (Civil Code, Article 907).\n\nThe person may file personally. It is not the case that \"an attorney must be retained to use the Family Court\".\n\n## Parties to estate division\n\nThe persons who are parties to estate division, such as co-heirs and comprehensive devisees, must all participate in the procedure.\n\nIn conciliation, a co-heir other than the petitioner files against the other co-heirs and other parties. If there is an assignee of an inheritance share or another person, the parties may differ; confirm individually with the Family Court or an attorney.\n\n## What is estate division conciliation?\n\nEstate division conciliation is a discussion procedure at the Family Court aiming at agreement under the involvement of a judge and a conciliation committee, while confirming each party's circumstances, desired division, estate materials and, as necessary, appraisal.\n\nIt is not a procedure in which \"a conciliation committee decides which party is right\".\n\n## Where to file conciliation\n\nConciliation is filed, in principle, with the Family Court having jurisdiction over the address of one of the other parties, or a Family Court agreed by the parties.\n\n## Costs and required documents for conciliation\n\nThe filing fee for estate division conciliation is a revenue stamp of 1,200 yen per deceased person plus contact postage. The postage differs by court.\n\nThe required documents differ depending on the inheritance relationship. Basic materials include the petition, a list of parties, an inventory of the estate, family registers, a certificate of residence or family register attachment, and estate materials such as real estate and deposits. A copy of the certified list of statutory heirs may be submitted instead of family registers in some cases.\n\n## What happens if conciliation fails?\n\nIf discussion does not reach agreement and conciliation fails, **estate division adjudication proceedings automatically begin**.\n\nIn adjudication, the judge decides the method of division in consideration of the type and nature of the estate, the circumstances of each party and all other circumstances.\n\n## Difference from conciliation for the legally reserved portion\n\nEstate division conciliation is different from conciliation for a claim for the legally reserved portion. If estate division conciliation fails, estate division adjudication proceedings automatically begin. Conciliation for a claim for the legally reserved portion is not treated the same way.\n\nIf conciliation for a claim for the legally reserved portion fails, it does not automatically move to adjudication for the legally reserved portion as in estate division. For the basics of the legally reserved portion, see [What is the legally reserved portion?](https://luck428.com/legal/column/souzoku-iryubun-kiso).\n\n## Filing directly for adjudication\n\nEstate division may be filed directly for adjudication. It is not the case that \"conciliation must always come first\".\n\nHowever, if the judge decides that it is better to first seek a solution through discussion, the case may be referred to conciliation. When filing directly for adjudication, the filing is made with the Family Court having jurisdiction over the deceased's last address, or a Family Court agreed by the parties.\n\n## After adjudication\n\nAdjudication is a decision by a judge. If a party is dissatisfied with the adjudication, for cases in which an immediate appeal is allowed, there is a system to file an immediate appeal in principle within two weeks from the day after receiving notice of the adjudication.\n\nIt is not the case that \"an adjudication necessarily becomes final the moment it is issued\". Whether an appeal is possible and management of the period should be confirmed with an attorney.\n\n## The court is not an estate search agency\n\nEstate division proceedings are not a system whose purpose is to find the estate itself. The court may encourage submission of materials, but a person claiming that there is other estate must in principle submit supporting materials.\n\nFor estate investigation, see [Investigating the inherited estate and preparing an inventory of assets](https://luck428.com/legal/column/souzoku-zaisan-mokuroku).\n\n## When the scope of the estate is disputed\n\nDistinguish \"what and how to divide\" from \"whether something is part of the estate in the first place\". For example, there may be a dispute that real estate in an heir's name is substantially the deceased's asset.\n\nIf the existence, scope or rights of the estate themselves are disputed, a separate procedure such as conciliation for dispute adjustment concerning the estate or a civil lawsuit may be relevant. Confirm the choice of procedure with an attorney.\n\n## When the valuation of real estate is disputed\n\nFor the valuation of inherited real estate, if the parties can agree, the agreed value may be used. If they cannot agree, an appraisal may be necessary.\n\nIt is not the case that the value is necessarily decided by any one of the fixed asset tax value, a real estate company's appraisal or the inheritance tax value. Appraisal is performed by a real estate appraiser. Appraisal costs also arise.\n\n## Relationship with renunciation of inheritance\n\nEven while estate division agreement or conciliation is proceeding, the period for consideration of renunciation is a separate matter. Renunciation is in principle three months from when the heir became aware that inheritance had commenced for him or her.\n\nIt is not the case that \"because discussions are ongoing, the three-month period for renunciation automatically stops\". For details, see [What to know before considering renunciation or qualified acceptance](https://luck428.com/legal/column/souzoku-hoki-gentei-shonin).\n\n## Relationship with the ten-year rule\n\nEven after ten years from the commencement of inheritance, estate division itself does not become entirely impossible. In principle, division based on the specific shares reflecting special benefits and contributions is restricted.\n\nFor transitional measures and exceptions, see [A guide to inheritance procedure deadlines](https://luck428.com/legal/column/souzoku-kigen-matome). Individual judgement is an attorney.\n\n## When to consult an attorney\n\nIn the following cases, consider consulting an attorney.\n\n- An heir clearly refuses a division proposal.\n- There is conflict over special benefits or contributions.\n- The validity or interpretation of a will is disputed.\n- The scope or ownership of the estate is disputed.\n- There is a claim for the legally reserved portion.\n- Filing for conciliation is being considered.\n- The other party has retained an attorney.\n- Direct negotiation among heirs is difficult.\n\n## What an administrative scrivener can and cannot do\n\nIf disagreement among heirs has become a concrete dispute, legal judgement, negotiation, agency in conciliation or adjudication and dispute handling are an attorney.\n\nYotsuba Administrative Scrivener Office, in a non-disputed scope, collects family registers, investigates heirs, organises the inheritance relationship, organises estate materials, handles the certified list of statutory heirs and prepares an estate division agreement after agreement is reached. It does not act as an agent for one party to the dispute and negotiate, persuade or coordinate with other heirs.\n\n## Roles of specialists\n\n- The person concerned → may file conciliation or adjudication personally\n- Preparation of documents to be filed with the Family Court by a specialist → a judicial scrivener or attorney\n- Agency in conciliation or adjudication, negotiation, individual legal judgement and dispute handling → an attorney\n- Real estate appraisal → a real estate appraiser\n- Inheritance registration → the person concerned / a judicial scrivener or attorney\n- Tax → the person concerned / a tax accountant\n- Real estate sale appraisal and brokerage → Yotsuba Real Estate Co., Ltd.\n\nYotsuba Administrative Scrivener Office and Yotsuba Real Estate Co., Ltd. handle their work under separate businesses and separate contracts. Our office receives no referral fee.\n\n## How to proceed with a consultation on an inheritance dispute in Bunkyo\n\nYotsuba Administrative Scrivener Office (Kohinata, Bunkyo, about five minutes' walk from Myogadani Station) guides you in stages through family register collection, heir investigation, estate investigation, organisation of estate materials and preparation of an estate division agreement after agreement is reached, as materials for judging the dispute.\n\nFor the flow of engagement, see [Engagement Flow](https://luck428.com/legal/nagare); for fees, see [Fee Schedule](https://luck428.com/legal/ryokin); and for the whole picture, see [Inheritance, Wills and Trusts](https://luck428.com/legal/services/inheritance).\n\n## FAQ\n\n**Q. What if one sibling does not agree to the estate division agreement?**\nA. If co-heirs cannot reach an agreement, estate division conciliation or adjudication at the Family Court can be used. The person may file personally.\n\n**Q. Does estate division conciliation become a lawsuit?**\nA. Estate division conciliation is a discussion procedure aiming at agreement. If conciliation fails, estate division adjudication proceedings automatically begin.\n\n**Q. What happens if conciliation fails?**\nA. If estate division conciliation fails, estate division adjudication proceedings automatically begin.\n\n**Q. Can I file directly for estate division adjudication?**\nA. Direct filing for adjudication is possible. However, if the judge decides that it is better to first seek a solution through discussion, the case may be referred to conciliation.\n\n**Q. Must all heirs participate in conciliation?**\nA. All persons who are parties to estate division, such as co-heirs and comprehensive devisees, must participate in the procedure.\n\n**Q. Will the court search for hidden assets?**\nA. Estate division proceedings are not a system whose purpose is to find the estate itself. A person claiming that there is other estate must in principle submit supporting materials.\n\n**Q. What if there is a dispute over the value of real estate?**\nA. If the parties agree, the agreed value may be used. If not, an appraisal may be necessary. Appraisal is performed by a real estate appraiser, and appraisal costs arise.\n\n**Q. Are estate division conciliation and conciliation for the legally reserved portion the same?**\nA. They are different. If estate division conciliation fails, estate division adjudication automatically begins, but conciliation for a claim for the legally reserved portion is not treated the same way.\n\n**Q. Can an administrative scrivener negotiate between heirs?**\nA. Yotsuba Administrative Scrivener Office does not act as an agent for one party to the dispute and negotiate, persuade or coordinate with other heirs. Negotiation among heirs, agency in conciliation or adjudication and dispute handling are an attorney.\n\n## Sources (Primary Information)\n\n- e-Gov, Civil Code, Articles 903, 904-2, 904-3, 906 and 907\n- Domestic Relations Case Procedure Act, provisions on estate division and transition from conciliation to adjudication\n- Courts, \"Estate division conciliation\"\n- Courts, \"General conciliation procedure\"\n- Courts, \"Conciliation for dispute adjustment concerning the estate\"\n- Courts, \"Q&A on estate division\"\n- Tokyo Family Court, \"Estate division conciliation\"\n- Judicial Scrivener Act, Article 3\n- Administrative Scrivener Act, current provisions\n- Attorney Act, Article 72\n\nThis article is general information and does not guarantee the procedure, jurisdiction, costs, parties, scope of the estate, valuation, renunciation or ten-year rule of any individual estate division conciliation or adjudication. Agency in conciliation or adjudication, negotiation among heirs, individual legal judgement and dispute handling are handled by an attorney; preparation of documents to be filed with the Family Court by a judicial scrivener or attorney; inheritance registration by the person concerned or a judicial scrivener or attorney; tax by the person concerned or a tax accountant; real estate appraisal by a real estate appraiser; and real estate sale appraisal and brokerage by Yotsuba Real Estate Co., Ltd., each as an independent business under a separate contract. Our office receives no referral fee. Individual judgements are made by a qualified professional after a meeting. Written by [Joji Uramatsu](https://luck428.com/about/uramatsu), administrative scrivener and licensed real estate broker.",
+        "faq": [
+          {
+            "question": "What if one sibling does not agree to the estate division agreement?",
+            "answer": "If co-heirs cannot reach an agreement, estate division conciliation or adjudication at the Family Court can be used. The person may file personally."
+          },
+          {
+            "question": "Does estate division conciliation become a lawsuit?",
+            "answer": "Estate division conciliation is a discussion procedure aiming at agreement. If conciliation fails, estate division adjudication proceedings automatically begin."
+          },
+          {
+            "question": "What happens if conciliation fails?",
+            "answer": "If estate division conciliation fails, estate division adjudication proceedings automatically begin."
+          },
+          {
+            "question": "Can I file directly for estate division adjudication?",
+            "answer": "Direct filing for adjudication is possible. However, if the judge decides that it is better to first seek a solution through discussion, the case may be referred to conciliation."
+          },
+          {
+            "question": "Must all heirs participate in conciliation?",
+            "answer": "All persons who are parties to estate division, such as co-heirs and comprehensive devisees, must participate in the procedure."
+          },
+          {
+            "question": "Will the court search for hidden assets?",
+            "answer": "Estate division proceedings are not a system whose purpose is to find the estate itself. A person claiming that there is other estate must in principle submit supporting materials."
+          },
+          {
+            "question": "What if there is a dispute over the value of real estate?",
+            "answer": "If the parties agree, the agreed value may be used. If not, an appraisal may be necessary. Appraisal is performed by a real estate appraiser, and appraisal costs arise."
+          },
+          {
+            "question": "Are estate division conciliation and conciliation for the legally reserved portion the same?",
+            "answer": "They are different. If estate division conciliation fails, estate division adjudication automatically begins, but conciliation for a claim for the legally reserved portion is not treated the same way."
+          },
+          {
+            "question": "Can an administrative scrivener negotiate between heirs?",
+            "answer": "Yotsuba Administrative Scrivener Office does not act as an agent for one party to the dispute and negotiate, persuade or coordinate with other heirs. Negotiation among heirs, agency in conciliation or adjudication and dispute handling are an attorney."
+          }
+        ]
+      },
+      "zh-tw": {
+        "title": "繼承人意見無法一致時該怎麼辦？遺產分割調停・審判流程與諮詢律師的時機",
+        "excerpt": "共同繼承人間無法達成遺產分割協議時，可利用家庭裁判所之遺產分割調停或審判。遺產分割調停係於法官・調停委員會參與下以合意為目標之對話程序。調停不成立時，自動開始遺產分割審判程序。本文整理流程與專業人士分工。",
+        "category": "繼承手續（行政書士實務）",
+        "content": "**結論（先說要點）**：共同繼承人間無法達成或無法進行遺產分割協議時，可利用家庭裁判所之遺產分割調停或審判。遺產分割調停係於法官・調停委員會參與下以合意為目標之對話程序。遺產分割調停不成立時，自動開始遺產分割審判程序。本人亦得聲請。四葉行政書士事務所於無紛爭範圍，辦理戶籍蒐集、繼承人調查、繼承關係整理、財產資料整理、法定繼承資訊一覽圖相關、合意成立後遺產分割協議書等製作。不辦理繼承人間交涉、紛爭法律判斷、調停・審判代理、與對方和解交涉等行政書士業務。\n\n## 無法達成協議時\n\n共同繼承人間無法達成或無法進行遺產分割協議時，可利用家庭裁判所之遺產分割調停或審判（民法第907條）。\n\n本人亦得聲請。並非「未委任律師即無法利用家庭裁判所」。\n\n## 遺產分割之當事人\n\n共同繼承人、概括受遺贈人等遺產分割當事人，須全體參與程序。\n\n調停係由聲請人以外之共同繼承人等為對造聲請。有繼承分受讓人等時，當事人關係可能改變，應個別向家庭裁判所或律師確認。\n\n## 何謂遺產分割調停\n\n遺產分割調停，係於家庭裁判所，在法官・調停委員會參與下，確認各當事人情況、分割希望、遺產資料、必要時鑑定等，以合意為目標之對話程序。\n\n並非「調停委員判決何者正確」之程序。\n\n## 調停聲請處\n\n調停原則上向對造其中一人住所地管轄之家庭裁判所，或當事人合意定之家庭裁判所聲請。\n\n## 調停費用與必要文件\n\n遺產分割調停聲請手續費為每被繼承人收入印花1,200日圓＋聯絡用郵資。郵資各裁判所不同。\n\n必要文件依繼承關係等而異。基本資料有聲請書、當事人目錄、遺產目錄、戶籍、住民票或戶籍附票、不動產・存款等遺產資料。法定繼承資訊一覽圖影本於一定情形可代替戶籍等提出。\n\n## 調停不成立時\n\n遺產分割調停無法達成合意而不成立時，**自動開始遺產分割審判程序**。\n\n審判係法官考量遺產種類、性質、各當事人情況及其他一切情事，判斷分割方法。\n\n## 與遺留分調停之差異\n\n遺產分割調停與遺留分侵害額請求調停不同。遺產分割調停不成立時，自動開始遺產分割審判程序。遺留分侵害額請求調停則非相同處理。\n\n遺留分侵害額請求調停不成立時，並非如遺產分割當然移行遺留分審判。遺留分基本見[何謂遺留分？](https://luck428.com/legal/column/souzoku-iryubun-kiso)。\n\n## 直接聲請審判\n\n遺產分割亦得直接聲請審判。並非「必先經調停」。\n\n惟法官判斷宜先以對話解決時，可能付調停。直接聲請審判時，向被繼承人最後住所地管轄之家庭裁判所，或當事人合意定之家庭裁判所聲請。\n\n## 審判後之流程\n\n審判為法官判斷。不服審判時，就允許即時抗告之事件，原則上有自審判告知日翌日起2週內即時抗告之制度。\n\n並非「審判作成瞬間必確定」。可否不服、期間管理請洽律師。\n\n## 裁判所非遺產探索機關\n\n遺產分割程序並非以尋找遺產本身為目的之程序。裁判所可能促使提出資料，但主張尚有其他遺產者，原則上應自行提出佐證資料。\n\n財產調查見[繼承財產調查與財產目錄製作](https://luck428.com/legal/column/souzoku-zaisan-mokuroku)。\n\n## 遺產範圍有爭議時\n\n應區分「如何分配」與「是否屬遺產」。例如繼承人名義不動產，實質為被繼承人財產之爭議。\n\n遺產有無、範圍、權利關係本身有爭議時，遺產紛爭調整調停、民事訴訟等可能成為問題。個別程序選擇請洽律師。\n\n## 不動產估價有爭議時\n\n遺產不動產估價，當事人間合意時可用合意額。無法合意時，可能需鑑定。\n\n並非固定資產稅估價額、不動產公司查定額、遺產稅估價額等任一事必決定。鑑定估價屬不動產鑑定士，鑑定亦生費用。\n\n## 與拋棄繼承之關係\n\n遺產分割協議・調停進行中，拋棄繼承熟慮期間為另一問題。拋棄繼承原則為自己知悉繼承開始時起3個月。\n\n並非「對話中拋棄繼承3個月自動停止」。詳見[考慮拋棄繼承・限定承認前應知道的事](https://luck428.com/legal/column/souzoku-hoki-gentei-shonin)。\n\n## 與10年規則之關係\n\n繼承開始經過10年，遺產分割本身並非完全不能。原則上，反映特別受益・寄與分之具體應繼分分割受限制。\n\n過渡措施・例外見[繼承手續期限整理](https://luck428.com/legal/column/souzoku-kigen-matome)。個別判斷屬律師。\n\n## 諮詢律師時機\n\n下列情況可考慮諮詢律師。\n\n- 繼承人明確拒絕分割案\n- 特別受益、寄與分對立\n- 遺囑效力、解釋有爭議\n- 遺產範圍、所有權有爭議\n- 有遺留分請求\n- 考慮聲請調停\n- 對造已委任律師\n- 繼承人間直接交涉困難\n\n## 行政書士可協助與不可協助之事項\n\n繼承人間意見對立已成具體紛爭時，法律判斷、交涉、調停・審判代理、紛爭處理屬律師。\n\n四葉行政書士事務所於無紛爭範圍，辦理戶籍蒐集、繼承人調查、繼承關係整理、財產資料整理、法定繼承資訊一覽圖相關、合意成立後遺產分割協議書等製作。不代理紛爭當事人一方與其他繼承人交涉・說服・調整。\n\n## 專業人士分工\n\n- 本人 → 得自行聲請調停・審判\n- 委託專業人士製作家庭裁判所提出書類 → 司法書士或律師\n- 調停・審判代理、交涉、個別法律判斷、紛爭處理 → 律師\n- 不動產鑑定 → 不動產鑑定士\n- 繼承登記 → 本人／司法書士或律師\n- 稅務 → 本人／稅理士\n- 不動產出售估價・仲介 → 四葉不動產株式會社\n\n四葉行政書士事務所與四葉不動產株式會社為別事業體・別契約，分別處理。本事務所不收取介紹費。\n\n## 在文京區進行繼承紛爭諮詢\n\n四葉行政書士事務所（文京區小日向・茗荷谷站步行約5分鐘）階段式引導作為紛爭判斷材料之戶籍蒐集、繼承人調查、財產調查、財產資料整理、合意成立後遺產分割協議書等製作。\n\n受任流程見[受任流程](https://luck428.com/legal/nagare)；費用見[報酬額表](https://luck428.com/legal/ryokin)；繼承業務全貌見[繼承・遺囑・信託服務](https://luck428.com/legal/services/inheritance)。\n\n## 常見問題\n\n**Q. 兄弟一人不同意遺產分割協議時？**\nA. 共同繼承人間無法達成協議時，可利用家庭裁判所遺產分割調停或審判。本人亦得聲請。\n\n**Q. 遺產分割調停會變成訴訟嗎？**\nA. 遺產分割調停係以合意為目標之對話程序。調停不成立時，自動開始遺產分割審判程序。\n\n**Q. 調停不成立會如何？**\nA. 遺產分割調停不成立時，自動開始遺產分割審判程序。\n\n**Q. 可直接聲請遺產分割審判嗎？**\nA. 可直接聲請審判。惟法官判斷宜先對話解決時，可能付調停。\n\n**Q. 全體繼承人都須參加調停嗎？**\nA. 共同繼承人、概括受遺贈人等遺產分割當事人須全體參與程序。\n\n**Q. 裁判所會調查隱藏財產嗎？**\nA. 遺產分割程序並非以尋找遺產本身為目的。主張有其他遺產者，原則上應自行提出佐證資料。\n\n**Q. 不動產價格有爭議時？**\nA. 當事人合意可用合意額。無法合意時可能需鑑定。鑑定屬不動產鑑定士，鑑定費用亦生。\n\n**Q. 遺產分割調停與遺留分調停相同嗎？**\nA. 不同。遺產分割調停不成立時自動開始遺產分割審判，遺留分侵害額請求調停則非相同。\n\n**Q. 行政書士可介入繼承人間交涉嗎？**\nA. 四葉行政書士事務所不代理紛爭當事人一方與其他繼承人交涉・說服・調整。繼承人間交涉、調停・審判代理、紛爭處理屬律師。\n\n## 本文出處（一次資訊）\n\n- e-Gov 民法第903條、第904條之2、第904條之3、第906條、第907條\n- 家事事件程序法遺產分割關係・調停不成立後審判移行規定\n- 裁判所「遺產分割調停」\n- 裁判所「調停程序一般」\n- 裁判所「遺產紛爭調整調停」\n- 裁判所「遺產分割Q&A」\n- 東京家庭裁判所「遺產分割調停」\n- 司法書士法第3條\n- 行政書士法現行條文\n- 律師法第72條\n\n本文為一般資訊提供，不保證個別遺產分割調停・審判程序、管轄、費用、當事人、遺產範圍、估價、拋棄繼承、10年規則。調停・審判代理、繼承人間交涉、個別法律判斷、紛爭處理屬律師；家庭裁判所提出書類製作屬司法書士或律師；繼承登記屬本人或司法書士或律師；稅務屬本人或稅理士；不動產鑑定屬不動產鑑定士；不動產出售估價・仲介屬四葉不動產株式會社，均為獨立的事業體，以個別契約處理。本事務所不收取介紹費。個別判斷由資格者面談後進行。執筆者為[浦松丈二](https://luck428.com/about/uramatsu)（行政書士・宅地建物交易士）。",
+        "faq": [
+          {
+            "question": "兄弟一人不同意遺產分割協議時？",
+            "answer": "共同繼承人間無法達成協議時，可利用家庭裁判所遺產分割調停或審判。本人亦得聲請。"
+          },
+          {
+            "question": "遺產分割調停會變成訴訟嗎？",
+            "answer": "遺產分割調停係以合意為目標之對話程序。調停不成立時，自動開始遺產分割審判程序。"
+          },
+          {
+            "question": "調停不成立會如何？",
+            "answer": "遺產分割調停不成立時，自動開始遺產分割審判程序。"
+          },
+          {
+            "question": "可直接聲請遺產分割審判嗎？",
+            "answer": "可直接聲請審判。惟法官判斷宜先對話解決時，可能付調停。"
+          },
+          {
+            "question": "全體繼承人都須參加調停嗎？",
+            "answer": "共同繼承人、概括受遺贈人等遺產分割當事人須全體參與程序。"
+          },
+          {
+            "question": "裁判所會調查隱藏財產嗎？",
+            "answer": "遺產分割程序並非以尋找遺產本身為目的。主張有其他遺產者，原則上應自行提出佐證資料。"
+          },
+          {
+            "question": "不動產價格有爭議時？",
+            "answer": "當事人合意可用合意額。無法合意時可能需鑑定。鑑定屬不動產鑑定士，鑑定費用亦生。"
+          },
+          {
+            "question": "遺產分割調停與遺留分調停相同嗎？",
+            "answer": "不同。遺產分割調停不成立時自動開始遺產分割審判，遺留分侵害額請求調停則非相同。"
+          },
+          {
+            "question": "行政書士可介入繼承人間交涉嗎？",
+            "answer": "四葉行政書士事務所不代理紛爭當事人一方與其他繼承人交涉・說服・調整。繼承人間交涉、調停・審判代理、紛爭處理屬律師。"
+          }
+        ]
+      },
+      "zh": {
+        "title": "继承人意见无法一致时该怎么办？遗产分割调停・审判流程与咨询律师的时机",
+        "excerpt": "共同继承人之间无法达成遗产分割协议时，可利用家庭裁判所之遗产分割调停或审判。遗产分割调停系于法官・调停委员会参与下以合意为目标之对话程序。调停不成立时，自动开始遗产分割审判程序。本文整理流程与专业人士分工。",
+        "category": "继承手续（行政书士实务）",
+        "content": "**结论（先说要点）**：共同继承人之间无法达成或无法进行遗产分割协议时，可利用家庭裁判所之遗产分割调停或审判。遗产分割调停系于法官・调停委员会参与下以合意为目标之对话程序。遗产分割调停不成立时，自动开始遗产分割审判程序。本人亦得申请。四叶行政书士事务所于无纠纷范围，办理户籍收集、继承人调查、继承关系整理、财产资料整理、法定继承信息一览图相关、合意成立后遗产分割协议书等制作。不办理继承人之间交涉、纠纷法律判断、调停・审判代理、与对方和解交涉等行政书士业务。\n\n## 无法达成协议时\n\n共同继承人之间无法达成或无法进行遗产分割协议时，可利用家庭裁判所之遗产分割调停或审判（民法第907条）。\n\n本人亦得申请。并非“未委托律师即无法利用家庭裁判所”。\n\n## 遗产分割之当事人\n\n共同继承人、概括受遗赠人等遗产分割当事人，须全体参与程序。\n\n调停系由申请人以外之共同继承人等为对方申请。有继承份额受让人等时，当事人关系可能改变，应个别向家庭裁判所或律师确认。\n\n## 何谓遗产分割调停\n\n遗产分割调停，系于家庭裁判所，在法官・调停委员会参与下，确认各当事人情况、分割希望、遗产资料、必要时鉴定等，以合意为目标之对话程序。\n\n并非“调停委员判决何者正确”之程序。\n\n## 调停申请处\n\n调停原则上向对方其中一人住所地管辖之家庭裁判所，或当事人合意定之家庭裁判所申请。\n\n## 调停费用与必要文件\n\n遗产分割调停申请手续费为每被继承人收入印花1,200日元＋联络用邮资。邮资各裁判所不同。\n\n必要文件依继承关系等而异。基本资料有申请书、当事人目录、遗产目录、户籍、住民票或户籍附票、不动产・存款等遗产资料。法定继承信息一览图副本于一定情形可代替户籍等提出。\n\n## 调停不成立时\n\n遗产分割调停无法达成合意而不成立时，**自动开始遗产分割审判程序**。\n\n审判系法官考量遗产种类、性质、各当事人情况及其他一切情事，判断分割方法。\n\n## 与特留份调停之差异\n\n遗产分割调停与特留份侵害额请求调停不同。遗产分割调停不成立时，自动开始遗产分割审判程序。特留份侵害额请求调停则非相同处理。\n\n特留份侵害额请求调停不成立时，并非如遗产分割当然移行特留份审判。特留份基本见[何谓特留份？](https://luck428.com/legal/column/souzoku-iryubun-kiso)。\n\n## 直接申请审判\n\n遗产分割亦得直接申请审判。并非“必先经调停”。\n\n惟法官判断宜先以对话解决时，可能付调停。直接申请审判时，向被继承人最后住所地管辖之家庭裁判所，或当事人合意定之家庭裁判所申请。\n\n## 审判后之流程\n\n审判为法官判断。不服审判时，就允许即时抗告之事件，原则上有自审判告知日翌日起2周内即时抗告之制度。\n\n并非“审判作成瞬间必确定”。可否不服、期间管理请洽律师。\n\n## 裁判所非遗产探索机关\n\n遗产分割程序并非以寻找遗产本身为目的之程序。裁判所可能促使提出资料，但主张尚有其他遗产者，原则上应自行提出佐证资料。\n\n财产调查见[继承财产调查与财产目录制作](https://luck428.com/legal/column/souzoku-zaisan-mokuroku)。\n\n## 遗产范围有争议时\n\n应区分“如何分配”与“是否属遗产”。例如继承人名义不动产，实质为被继承人财产之争议。\n\n遗产有无、范围、权利关系本身有争议时，遗产纠纷调整调停、民事诉讼等可能成为问题。个别程序选择请洽律师。\n\n## 不动产估价有争议时\n\n遗产不动产估价，当事人之间合意时可用合意额。无法合意时，可能需鉴定。\n\n并非固定资产税估价额、不动产公司查定额、遗产税估价额等任一事必决定。鉴定估价属不动产鉴定士，鉴定亦生费用。\n\n## 与放弃继承之关系\n\n遗产分割协议・调停进行中，放弃继承熟虑期间为另一问题。放弃继承原则为自己知悉继承开始时起3个月。\n\n并非“对话中放弃继承3个月自动停止”。详见[考虑放弃继承・限定承认前应知道的事](https://luck428.com/legal/column/souzoku-hoki-gentei-shonin)。\n\n## 与10年规则之关系\n\n继承开始经过10年，遗产分割本身并非完全不能。原则上，反映特别受益・寄与分之具体继承份额分割受限制。\n\n过渡措施・例外见[继承手续期限整理](https://luck428.com/legal/column/souzoku-kigen-matome)。个别判断属律师。\n\n## 咨询律师时机\n\n下列情况可考虑咨询律师。\n\n- 继承人明确拒绝分割案\n- 特别受益、寄与分对立\n- 遗嘱效力、解释有争议\n- 遗产范围、所有权有争议\n- 有特留份请求\n- 考虑申请调停\n- 对方已委托律师\n- 继承人之间直接交涉困难\n\n## 行政书士可协助与不可协助之事项\n\n继承人之间意见对立已成具体纠纷时，法律判断、交涉、调停・审判代理、纠纷处理属律师。\n\n四叶行政书士事务所于无纠纷范围，办理户籍收集、继承人调查、继承关系整理、财产资料整理、法定继承信息一览图相关、合意成立后遗产分割协议书等制作。不代理纠纷当事人一方与其他继承人交涉・说服・调整。\n\n## 专业人士分工\n\n- 本人 → 得自行申请调停・审判\n- 委托专业人士制作家庭裁判所提出书类 → 司法书士或律师\n- 调停・审判代理、交涉、个别法律判断、纠纷处理 → 律师\n- 不动产鉴定 → 不动产鉴定士\n- 继承登记 → 本人／司法书士或律师\n- 税务 → 本人／税理士\n- 不动产出售估价・中介 → 四叶不动产株式会社\n\n四叶行政书士事务所与四叶不动产株式会社为别事业体・别合同，分别处理。本事务所不收取介绍费。\n\n## 在文京区进行继承纠纷咨询\n\n四叶行政书士事务所（文京区小日向・茗荷谷站步行约5分钟）阶段式引导作为纠纷判断材料之户籍收集、继承人调查、财产调查、财产资料整理、合意成立后遗产分割协议书等制作。\n\n受任流程见[受任流程](https://luck428.com/legal/nagare)；费用见[报酬额表](https://luck428.com/legal/ryokin)；继承业务全貌见[继承・遗嘱・信托服务](https://luck428.com/legal/services/inheritance)。\n\n## 常见问题\n\n**Q. 兄弟一人不同意遗产分割协议时？**\nA. 共同继承人之间无法达成协议时，可利用家庭裁判所遗产分割调停或审判。本人亦得申请。\n\n**Q. 遗产分割调停会变成诉讼吗？**\nA. 遗产分割调停系以合意为目标之对话程序。调停不成立时，自动开始遗产分割审判程序。\n\n**Q. 调停不成立会如何？**\nA. 遗产分割调停不成立时，自动开始遗产分割审判程序。\n\n**Q. 可直接申请遗产分割审判吗？**\nA. 可直接申请审判。惟法官判断宜先对话解决时，可能付调停。\n\n**Q. 全体继承人都须参加调停吗？**\nA. 共同继承人、概括受遗赠人等遗产分割当事人须全体参与程序。\n\n**Q. 裁判所会调查隐藏财产吗？**\nA. 遗产分割程序并非以寻找遗产本身为目的。主张有其他遗产者，原则上应自行提出佐证资料。\n\n**Q. 不动产价格有争议时？**\nA. 当事人合意可用合意额。无法合意时可能需鉴定。鉴定属不动产鉴定士，鉴定费用亦生。\n\n**Q. 遗产分割调停与特留份调停相同吗？**\nA. 不同。遗产分割调停不成立时自动开始遗产分割审判，特留份侵害额请求调停则非相同。\n\n**Q. 行政书士可介入继承人之间交涉吗？**\nA. 四叶行政书士事务所不代理纠纷当事人一方与其他继承人交涉・说服・调整。继承人之间交涉、调停・审判代理、纠纷处理属律师。\n\n## 本文出处（一次信息）\n\n- e-Gov 民法第903条、第904条之2、第904条之3、第906条、第907条\n- 家事事件程序法遗产分割关系・调停不成立后审判移行规定\n- 裁判所“遗产分割调停”\n- 裁判所“调停程序一般”\n- 裁判所“遗产纠纷调整调停”\n- 裁判所“遗产分割Q&A”\n- 东京家庭裁判所“遗产分割调停”\n- 司法书士法第3条\n- 行政书士法现行条文\n- 律师法第72条\n\n本文为一般信息提供，不保证个别遗产分割调停・审判程序、管辖、费用、当事人、遗产范围、估价、放弃继承、10年规则。调停・审判代理、继承人之间交涉、个别法律判断、纠纷处理属律师；家庭裁判所提出书类制作属司法书士或律师；继承登记属本人或司法书士或律师；税务属本人或税理士；不动产鉴定属不动产鉴定士；不动产出售估价・中介属四叶不动产株式会社，均为独立的事业体，以个别合同处理。本事务所不收取介绍费。个别判断由资格者面谈后进行。执笔者为[浦松丈二](https://luck428.com/about/uramatsu)（行政书士・宅地建物交易士）。",
+        "faq": [
+          {
+            "question": "兄弟一人不同意遗产分割协议时？",
+            "answer": "共同继承人之间无法达成协议时，可利用家庭裁判所遗产分割调停或审判。本人亦得申请。"
+          },
+          {
+            "question": "遗产分割调停会变成诉讼吗？",
+            "answer": "遗产分割调停系以合意为目标之对话程序。调停不成立时，自动开始遗产分割审判程序。"
+          },
+          {
+            "question": "调停不成立会如何？",
+            "answer": "遗产分割调停不成立时，自动开始遗产分割审判程序。"
+          },
+          {
+            "question": "可直接申请遗产分割审判吗？",
+            "answer": "可直接申请审判。惟法官判断宜先对话解决时，可能付调停。"
+          },
+          {
+            "question": "全体继承人都须参加调停吗？",
+            "answer": "共同继承人、概括受遗赠人等遗产分割当事人须全体参与程序。"
+          },
+          {
+            "question": "裁判所会调查隐藏财产吗？",
+            "answer": "遗产分割程序并非以寻找遗产本身为目的。主张有其他遗产者，原则上应自行提出佐证资料。"
+          },
+          {
+            "question": "不动产价格有争议时？",
+            "answer": "当事人合意可用合意额。无法合意时可能需鉴定。鉴定属不动产鉴定士，鉴定费用亦生。"
+          },
+          {
+            "question": "遗产分割调停与特留份调停相同吗？",
+            "answer": "不同。遗产分割调停不成立时自动开始遗产分割审判，特留份侵害额请求调停则非相同。"
+          },
+          {
+            "question": "行政书士可介入继承人之间交涉吗？",
+            "answer": "四叶行政书士事务所不代理纠纷当事人一方与其他继承人交涉・说服・调整。继承人之间交涉、调停・审判代理、纠纷处理属律师。"
+          }
+        ]
+      }
+    }
   }
 ];

@@ -1,5 +1,5 @@
 /**
- * 相続コラム（行政書士）シリーズ（第1号〜第16号・4言語）投入スクリプト
+ * 相続コラム（行政書士）シリーズ（第1号〜第17号・4言語）投入スクリプト
  *
  * 対象＝luck428.com /legal/column（business=legal）。
  * 原稿＝scripts/legal-columns/NN-*.md（ja）＋{en,zh-tw,zh}/NN-*.md（翻訳）。
@@ -230,6 +230,18 @@ const REQUIRED_HUB_LINKS: Record<string, string[]> = {
     "/legal/column/isan-bunkatsu-kyougisho",
     "/legal/column/souzoku-hoki-gentei-shonin",
     "/legal/column/souzoku-zei-shinkoku-hitsuyo",
+  ],
+  "souzoku-isanbunkatsu-chotei-shinpan": [
+    "/legal/services/inheritance",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/isan-bunkatsu-kyougisho",
+    "/legal/column/souzoku-iryubun-kiso",
+    "/legal/column/houtei-souzoku-bun",
+    "/legal/column/souzoku-kigen-matome",
+    "/legal/column/souzoku-zaisan-mokuroku",
+    "/legal/column/souzoku-hoki-gentei-shonin",
+    "/legal/column/souzoku-touki-nagare",
   ],
 };
 
@@ -533,6 +545,26 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "別事業体",
     "独立した事業体",
   ],
+  "souzoku-isanbunkatsu-chotei-shinpan": [
+    "遺産分割調停",
+    "遺産分割審判",
+    "民法第907条",
+    "本人による申立ても可能です",
+    "共同相続人や包括受遺者",
+    "自動的に遺産分割審判手続が開始されます",
+    "遺留分侵害額請求調停",
+    "最初から審判を申し立てることも可能",
+    "即時抗告",
+    "2週間以内",
+    "遺産を探し出すこと自体を目的とした手続ではありません",
+    "遺産に関する紛争調整調停",
+    "不動産鑑定士",
+    "鑑定費用",
+    "相続放棄",
+    "10年",
+    "別事業体",
+    "独立した事業体",
+  ],
 };
 
 /** 記事ごとに含めてはならない表現 */
@@ -587,6 +619,7 @@ const FORBIDDEN_PHRASES: Record<string, string[]> = {
   "souzoku-yuigon-hakken-tetsuzuki": [],
   "souzoku-tejun-checklist": [],
   "souzoku-iryubun-kiso": [],
+  "souzoku-isanbunkatsu-chotei-shinpan": [],
 };
 
 /** 本セット外へ張る既存legalコラムslug（リポジトリの他シードで実在確認済み） */
@@ -875,6 +908,23 @@ const ARTICLES: Array<{
       "遺留分 遺言 無効",
     ],
     tags: ["遺留分", "遺留分侵害額請求", "相続分", "遺言", "相続", "行政書士"],
+  },
+  {
+    file: "18-souzoku-isanbunkatsu-chotei-shinpan.md",
+    slug: "souzoku-isanbunkatsu-chotei-shinpan",
+    title: "相続人の意見がまとまらないときは？遺産分割調停・審判の流れと弁護士に相談するタイミング",
+    category: "相続の手続き（行政書士の実務から）",
+    excerpt:
+      "共同相続人間で遺産分割協議が調わない、又は協議できない場合、家庭裁判所の遺産分割調停又は審判を利用できます。調停は合意を目指す話合いの手続で、不成立になると自動的に遺産分割審判手続が開始されます。管轄、費用、必要書類、弁護士へ相談するタイミングと行政書士に頼める範囲を文京区の実務に沿って整理しました。",
+    keywords: [
+      "相続人 意見がまとまらない",
+      "遺産分割調停 手続き",
+      "遺産分割審判",
+      "遺産分割調停 不成立",
+      "相続 弁護士 相談 タイミング",
+      "遺産分割 行政書士",
+    ],
+    tags: ["遺産分割調停", "遺産分割審判", "相続紛争", "家庭裁判所", "弁護士", "相続"],
   },
 ];
 
