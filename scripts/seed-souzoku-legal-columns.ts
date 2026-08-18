@@ -1,5 +1,5 @@
 /**
- * 相続コラム（行政書士）シリーズ（第1号〜第15号・4言語）投入スクリプト
+ * 相続コラム（行政書士）シリーズ（第1号〜第16号・4言語）投入スクリプト
  *
  * 対象＝luck428.com /legal/column（business=legal）。
  * 原稿＝scripts/legal-columns/NN-*.md（ja）＋{en,zh-tw,zh}/NN-*.md（翻訳）。
@@ -218,6 +218,18 @@ const REQUIRED_HUB_LINKS: Record<string, string[]> = {
     "/legal/column/souzoku-hoki-gentei-shonin",
     "/legal/column/souzoku-tochi-kokko-kizoku",
     "/legal/column/souzoku-yuigon-hakken-tetsuzuki",
+  ],
+  "souzoku-iryubun-kiso": [
+    "/legal/services/inheritance",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/jihitsu-kosei-yuigon",
+    "/legal/column/houtei-souzoku-bun",
+    "/legal/column/souzoku-kigen-matome",
+    "/legal/column/souzoku-yuigon-hakken-tetsuzuki",
+    "/legal/column/isan-bunkatsu-kyougisho",
+    "/legal/column/souzoku-hoki-gentei-shonin",
+    "/legal/column/souzoku-zei-shinkoku-hitsuyo",
   ],
 };
 
@@ -500,6 +512,27 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "別事業体",
     "独立した事業体",
   ],
+  "souzoku-iryubun-kiso": [
+    "遺留分",
+    "兄弟姉妹",
+    "直系尊属",
+    "3分の1",
+    "2分の1",
+    "遺留分算定基礎財産",
+    "民法第1046条第2項",
+    "民法第1043条",
+    "民法第1044条",
+    "民法第1048条",
+    "民法第1047条",
+    "民法第1049条",
+    "1年",
+    "10年",
+    "内容証明郵便",
+    "調停申立て",
+    "遺留分侵害額請求",
+    "別事業体",
+    "独立した事業体",
+  ],
 };
 
 /** 記事ごとに含めてはならない表現 */
@@ -553,6 +586,7 @@ const FORBIDDEN_PHRASES: Record<string, string[]> = {
   "souzoku-tochi-kokko-hiyo-kikan": [],
   "souzoku-yuigon-hakken-tetsuzuki": [],
   "souzoku-tejun-checklist": [],
+  "souzoku-iryubun-kiso": [],
 };
 
 /** 本セット外へ張る既存legalコラムslug（リポジトリの他シードで実在確認済み） */
@@ -824,6 +858,23 @@ const ARTICLES: Array<{
       "相続 行政書士 司法書士 税理士",
     ],
     tags: ["相続", "チェックリスト", "名義変更", "届出", "期限", "行政書士"],
+  },
+  {
+    file: "17-souzoku-iryubun-kiso.md",
+    slug: "souzoku-iryubun-kiso",
+    title: "遺留分とは？対象となる相続人・割合・1年の期限と遺留分侵害額請求",
+    category: "相続の手続き（行政書士の実務から）",
+    excerpt:
+      "遺留分は、兄弟姉妹以外の一定の相続人について法律上保障される最低限の利益です。2019年7月1日以後開始の相続では、遺留分侵害額に相当する金銭の支払を請求する制度となります。遺留分権利者、割合、算定基礎、生前贈与、1年・10年の期間、行政書士に頼める範囲を文京区の実務に沿って整理しました。",
+    keywords: [
+      "遺留分 とは",
+      "遺留分 相続人 割合",
+      "遺留分侵害額請求",
+      "遺留分 期限 1年",
+      "遺留分 行政書士",
+      "遺留分 遺言 無効",
+    ],
+    tags: ["遺留分", "遺留分侵害額請求", "相続分", "遺言", "相続", "行政書士"],
   },
 ];
 

@@ -2277,5 +2277,197 @@ export const SOUZOKU_LEGAL_COLUMNS_SEED: SouzokuLegalSeedColumn[] = [
         ]
       }
     }
+  },
+  {
+    "business": "legal",
+    "slug": "souzoku-iryubun-kiso",
+    "title": "遺留分とは？対象となる相続人・割合・1年の期限と遺留分侵害額請求",
+    "date": "2026-08-16",
+    "category": "相続の手続き（行政書士の実務から）",
+    "excerpt": "遺留分は、兄弟姉妹以外の一定の相続人について法律上保障される最低限の利益です。2019年7月1日以後開始の相続では、遺留分侵害額に相当する金銭の支払を請求する制度となります。遺留分権利者、割合、算定基礎、生前贈与、1年・10年の期間、行政書士に頼める範囲を文京区の実務に沿って整理しました。",
+    "content": "**結論（先に要点）**：遺留分とは、兄弟姉妹以外の一定の相続人について法律上保障される最低限の利益です。2019年7月1日以後に開始した相続では、遺留分を侵害する遺言・贈与等があった場合、遺留分侵害額に相当する金銭の支払を請求する制度となります。「遺留分を侵害する遺言は無効」「遺留分相当の不動産が自動的に戻る」という説明はしません。四葉行政書士事務所では、戸籍収集、相続人調査、財産調査、財産資料整理、相続関係整理、合意済み内容に基づく遺産分割協議書等の作成を扱います。遺留分の有無判断、割合・侵害額の算定、請求すべきかの判断、遺留分侵害額請求、交渉、紛争対応は弁護士の領域です。\n\n## 遺留分の基本\n\n遺留分は、兄弟姉妹以外の一定の相続人について、法律上保障される最低限の利益です。\n\nただし、「遺留分を侵害する遺言は無効」「遺留分相当の不動産が自動的に戻る」とはいえません。2019年7月1日以後に開始した相続では、現行制度は遺留分侵害額に相当する**金銭の支払を請求する制度**です。\n\n## 遺留分権利者\n\n民法第1042条上、遺留分があるのは次の相続人です。\n\n- 配偶者\n- 子等の直系卑属\n- 相続人となる直系尊属\n\n一方、兄弟姉妹、兄弟姉妹の代襲相続人である甥・姪には遺留分がありません。実際に誰が相続人かは、相続順位・代襲相続等によります。詳しくは[法定相続人と相続分の基本](/legal/column/houtei-souzoku-bun)をご覧ください。\n\n## 遺留分の割合\n\n民法第1042条に基づく遺留分の割合は、次のとおりです。\n\n- 直系尊属のみが相続人の場合 → 遺留分全体が3分の1\n- それ以外の場合 → 遺留分全体が2分の1\n\n相続人が複数の場合、各人の遺留分は「上記割合×その者の法定相続分」を基本とします。例えば、配偶者＋子1人の場合、遺留分全体は2分の1、配偶者は4分の1、子は4分の1です。\n\nただし、遺留分割合はそのまま請求できる割合ではありません。基本構造は次のとおりです。\n\n**遺留分算定基礎財産 × 各人の遺留分割合 → 遺留分額**\n\nその後、民法第1046条第2項に基づき、遺留分権利者が受けた遺贈、一定の贈与、相続により取得すべき遺産、遺留分権利者が承継する相続債務等を考慮して、遺留分侵害額を算定します。「配偶者の遺留分4分の1＝遺産総額の4分の1を必ず請求できる」とはいえません。\n\n## 遺留分の算定基礎\n\n遺留分の算定基礎は、民法第1043条に基づき、次の構造を基本とします。\n\n**相続開始時の財産価額 ＋ 算入対象となる贈与財産価額 － 債務全額**\n\n「相続開始時の遺産だけを見れば計算できる」とはいえません。\n\n## 生前贈与の扱い\n\n民法第1044条に基づく生前贈与の扱いは、おおむね次のとおりです。\n\n- 一般の贈与 → 原則として相続開始前1年間の贈与\n- 当事者双方が遺留分権利者に損害を加えることを知って贈与した場合 → 1年より前の贈与も算入対象となり得る\n- 相続人への特別受益に当たる贈与 → 婚姻・養子縁組・生計の資本として受けた贈与について10年間のルールあり\n\n「過去10年の贈与は全部入る」「全ての生前贈与が入る」とはいえません。個別算定は弁護士にご確認ください。\n\n## 遺留分を侵害する遺言は無効になる？\n\n遺留分を侵害したことだけを理由として、遺言・遺贈・贈与が当然に無効になるとは説明しません。現行制度は、受遺者・受贈者に対し、侵害額相当の金銭支払を請求する制度です。\n\n遺言については[自筆証書遺言と公正証書遺言の違いとは？](/legal/column/jihitsu-kosei-yuigon)、遺言発見後の手続は[遺言書が見つかったら？](/legal/column/souzoku-yuigon-hakken-tetsuzuki)をご覧ください。\n\n## 2019年改正の注意\n\n2019年7月1日以後に開始した相続では、遺留分侵害額請求が問題となります。2019年6月30日以前に開始した相続では、改正前制度の遺留分減殺請求が問題となります。本記事は、2019年7月1日以後開始の相続を中心に説明します。\n\n## 遺留分侵害額請求の期間\n\n遺留分侵害額請求には、次の2つの期間があります（民法第1048条）。\n\n- **1年**：遺留分権利者が、相続の開始と、遺留分を侵害する贈与又は遺贈があったことを知った時から1年間\n- **10年**：相続開始時から10年\n\n「遺言を発見した日から必ず1年」「死亡日から必ず1年」とはいえません。\n\n相続手続きの期限との関係は[相続手続きの期限まとめ](/legal/column/souzoku-kigen-matome)をご覧ください。\n\n## 権利行使の意思表示\n\n1年以内に必要なのは、相手方に対する遺留分に関する権利行使の意思表示です。家庭裁判所への調停申立てだけでは、相手方への意思表示にはなりません。\n\n裁判所は、内容証明郵便等による意思表示を案内しています。ただし、「内容証明郵便という方式自体が法律上必須」とはいえません。\n\n遺留分権利者本人が、自ら相手方へ意思表示し、自ら調停を申し立てることは可能です。「遺留分侵害額請求そのものが弁護士しかできない」わけではありません。誰に、いつ、どの内容で請求するかという個別法的判断は弁護士にご確認ください。\n\n## 複数の受遺者・受贈者がいる場合\n\n受遺者・受贈者が複数の場合、誰がどの順序・限度で負担するかについて、民法第1047条のルールがあります。\n\n例えば、受遺者と受贈者がいる場合は、受遺者が先に負担します。異なる時期の複数贈与がある場合は、後の贈与の受贈者から順次負担します。\n\n複数人がいる場合に「誰か1人へ請求すればよい」とは断定しません。請求相手の特定は弁護士にご確認ください。\n\n## 遺留分侵害額の請求調停\n\n話合いがつかない場合、家庭裁判所の遺留分侵害額の請求調停を利用できます。申立先は、相手方住所地の家庭裁判所又は当事者が合意で定める家庭裁判所です。裁判所の公式案内では、申立手数料は収入印紙1,200円＋郵便料です。\n\n本人による申立ても可能です。遺留分侵害額請求調停は遺産分割調停とは別です。調停が不成立の場合に、遺産分割のように当然に審判へ移行して裁判官が侵害額を決定するとはいえません。最終解決のため、別途訴訟が必要になる場合があります。法的判断・訴訟代理は弁護士です。\n\n## 遺産分割との違い\n\n遺産分割は、相続財産を共同相続人間でどう取得するかを決める手続です。遺留分侵害額請求は、遺贈・贈与等によって遺留分を侵害された場合に、侵害額相当の金銭を請求する制度です。両者を同一手続として説明しません。\n\nまた、「遺産分割協議をすれば遺留分請求は不要」とも断定しません。遺産分割協議の基本は[遺産分割協議書は自分で作れる？](/legal/column/isan-bunkatsu-kyougisho)をご覧ください。\n\n## 相続放棄との関係\n\n相続放棄をした者は、その相続について初めから相続人でなかったものとみなされます。したがって、本人にはその相続についての遺留分もありません。\n\n相続放棄の基本は[相続放棄・限定承認を検討する前に知っておきたいこと](/legal/column/souzoku-hoki-gentei-shonin)をご覧ください。\n\n## 遺留分放棄との関係\n\n相続放棄とは別に、遺留分だけを放棄する制度があります。民法第1049条により、相続開始前の遺留分放棄は家庭裁判所の許可が必要です。\n\n遺留分だけを放棄しても、相続人の地位そのものを相続放棄する制度とは異なります。共同相続人1人の遺留分放棄は、他の共同相続人の遺留分に影響しません。個別判断は弁護士にご確認ください。\n\n## 欠格・廃除との関係\n\n欠格・廃除によって相続権を失った本人には、遺留分はありません。代襲相続等により誰が新たに相続人となるかは別問題です。詳しくは[法定相続人と相続分の基本](/legal/column/houtei-souzoku-bun)をご覧ください。個別判断は弁護士です。\n\n## 税務との関係\n\n遺留分侵害額が確定した後は、金銭を受ける側と支払う側の双方について、相続税の修正申告・更正の請求等が問題になる場合があります。\n\nまた、金銭に代えて土地等を移転して弁済した場合、支払側に譲渡所得課税が生じる場合があります。個別税務は税理士にご確認ください。相続税の基本は[相続税の申告は必要？](/legal/column/souzoku-zei-shinkoku-hitsuyo)をご覧ください。\n\n## 行政書士に頼めること・頼めないこと\n\n四葉行政書士事務所では、適法な範囲で、戸籍収集、相続人調査、財産調査、財産資料整理、相続関係整理、合意済み内容に基づく遺産分割協議書等の作成を扱います。\n\n一方、次の業務は扱いません。\n\n- 遺留分有無の個別判断\n- 侵害額の個別算定\n- 請求すべきかの判断\n- 相手方への遺留分請求通知の受任\n- 交渉\n- 代理\n- 紛争対応\n\n専門家へ個別法的判断・請求・交渉・代理・紛争対応を依頼する場合は弁護士です。\n\n## 専門家の担当\n\n- 遺留分の個別法的判断・請求・交渉・紛争 → 弁護士\n- 家庭裁判所提出書類作成 → 司法書士又は弁護士\n- 相続登記 → 本人／司法書士又は弁護士\n- 税務 → 本人／税理士\n- 戸籍・相続人・財産資料整理、合意済み内容の文書化 → 本人／行政書士等\n- 不動産査定・媒介 → 四葉不動産株式会社\n\n四葉行政書士事務所と四葉不動産株式会社は別事業体・別契約で対応します。当事務所は紹介料を受け取りません。\n\n## 文京区で遺留分の相談を進める流れ\n\n四葉行政書士事務所（文京区小日向・茗荷谷駅徒歩約5分）では、遺留分の判断材料となる戸籍収集、相続人調査、財産調査、財産資料整理、合意済み内容に基づく遺産分割協議書等の作成を段階的に案内します。\n\n受任の流れは[受任の流れ](/legal/nagare)、料金は[報酬額表](/legal/ryokin)、相続業務の全体像は[相続・遺言・信託サービス](/legal/services/inheritance)をご覧ください。\n\n## よくある質問\n\n**Q. 兄弟姉妹にも遺留分がありますか？**\nA. 兄弟姉妹、兄弟姉妹の代襲相続人である甥・姪には遺留分がありません。\n\n**Q. 遺留分を侵害する遺言は無効ですか？**\nA. 遺留分侵害だけを理由として遺言が当然に無効になるとは説明しません。現行制度は侵害額相当の金銭支払を請求する制度です。\n\n**Q. 遺留分は遺産の半分ですか？**\nA. 直系尊属のみが相続人の場合は3分の1、それ以外は2分の1が遺留分全体の基本です。相続人が複数の場合は、法定相続分を掛けて各人の遺留分を考えます。\n\n**Q. 生前贈与は全部遺留分の計算に入りますか？**\nA. 全ての生前贈与が入るわけではありません。相続開始前1年間の贈与や、特別受益等の一定の贈与が対象となり得ます。個別算定は弁護士にご確認ください。\n\n**Q. 遺留分侵害額請求はいつまでにすればよいですか？**\nA. 相続の開始と、遺留分を侵害する贈与又は遺贈があったことを知った時から1年、相続開始時から10年という期間があります。\n\n**Q. 家庭裁判所へ調停を申し立てれば1年の期限は大丈夫ですか？**\nA. 調停の申立てだけでは、相手方への権利行使の意思表示とはなりません。内容証明郵便等による意思表示が必要ですが、その方式自体が法律上必須ではありません。個別判断は弁護士にご確認ください。\n\n**Q. 相続放棄をした人にも遺留分がありますか？**\nA. 相続放棄をした者は初めから相続人でなかったものとみなされるため、本人にはその相続についての遺留分もありません。\n\n**Q. 生前に遺留分だけ放棄できますか？**\nA. 相続開始前の遺留分放棄は家庭裁判所の許可が必要です。相続放棄とは異なる制度です。\n\n## この記事の出典（一次情報）\n\n- e-Gov 民法第1042条、第1043条、第1044条、第1046条、第1047条、第1048条、第1049条\n- 裁判所「遺留分侵害額の請求調停」\n- 裁判所「調停手続一般」\n- 法務省「相続法の改正」\n- 国税庁「遺留分侵害額請求に関する相続税資料」\n- 国税庁「代物弁済の譲渡所得資料」\n- 行政書士法現行条文\n\n本記事は一般的な情報提供であり、個別の遺留分の有無、割合、算定、侵害額、請求方法、期間、税務を保証するものではありません。遺留分の個別法的判断・請求・交渉・紛争対応は弁護士、家庭裁判所提出書類作成は司法書士又は弁護士、相続登記は本人又は司法書士若しくは弁護士、税務は本人又は税理士、不動産の査定・媒介は四葉不動産株式会社が、それぞれ独立した事業体として別契約で対応します。当事務所は紹介料を受け取りません。個別の判断は、面談のうえ資格者が行います。執筆は[浦松 丈二](/about/uramatsu)（行政書士・宅地建物取引士）です。",
+    "status": "published",
+    "author": {
+      "name": "浦松 丈二",
+      "title": "行政書士・宅地建物取引士（四葉行政書士事務所／四葉不動産株式会社）"
+    },
+    "keywords": [
+      "遺留分 とは",
+      "遺留分 相続人 割合",
+      "遺留分侵害額請求",
+      "遺留分 期限 1年",
+      "遺留分 行政書士",
+      "遺留分 遺言 無効"
+    ],
+    "tags": [
+      "遺留分",
+      "遺留分侵害額請求",
+      "相続分",
+      "遺言",
+      "相続",
+      "行政書士"
+    ],
+    "locales": [
+      "ja",
+      "en",
+      "zh-tw",
+      "zh"
+    ],
+    "faq": [
+      {
+        "question": "兄弟姉妹にも遺留分がありますか？",
+        "answer": "兄弟姉妹、兄弟姉妹の代襲相続人である甥・姪には遺留分がありません。"
+      },
+      {
+        "question": "遺留分を侵害する遺言は無効ですか？",
+        "answer": "遺留分侵害だけを理由として遺言が当然に無効になるとは説明しません。現行制度は侵害額相当の金銭支払を請求する制度です。"
+      },
+      {
+        "question": "遺留分は遺産の半分ですか？",
+        "answer": "直系尊属のみが相続人の場合は3分の1、それ以外は2分の1が遺留分全体の基本です。相続人が複数の場合は、法定相続分を掛けて各人の遺留分を考えます。"
+      },
+      {
+        "question": "生前贈与は全部遺留分の計算に入りますか？",
+        "answer": "全ての生前贈与が入るわけではありません。相続開始前1年間の贈与や、特別受益等の一定の贈与が対象となり得ます。個別算定は弁護士にご確認ください。"
+      },
+      {
+        "question": "遺留分侵害額請求はいつまでにすればよいですか？",
+        "answer": "相続の開始と、遺留分を侵害する贈与又は遺贈があったことを知った時から1年、相続開始時から10年という期間があります。"
+      },
+      {
+        "question": "家庭裁判所へ調停を申し立てれば1年の期限は大丈夫ですか？",
+        "answer": "調停の申立てだけでは、相手方への権利行使の意思表示とはなりません。内容証明郵便等による意思表示が必要ですが、その方式自体が法律上必須ではありません。個別判断は弁護士にご確認ください。"
+      },
+      {
+        "question": "相続放棄をした人にも遺留分がありますか？",
+        "answer": "相続放棄をした者は初めから相続人でなかったものとみなされるため、本人にはその相続についての遺留分もありません。"
+      },
+      {
+        "question": "生前に遺留分だけ放棄できますか？",
+        "answer": "相続開始前の遺留分放棄は家庭裁判所の許可が必要です。相続放棄とは異なる制度です。"
+      }
+    ],
+    "translations": {
+      "en": {
+        "title": "What is the legally reserved portion? Eligible heirs, shares, the one-year period and a claim for the legally reserved portion",
+        "excerpt": "The legally reserved portion is the minimum benefit guaranteed by law for certain heirs other than siblings. For inheritances commencing on or after 1 July 2019, a claim can be made for payment of money equivalent to the infringed amount. This article explains the basics, eligible heirs, shares and the one-year period.",
+        "category": "Inheritance Procedures (From the Practice of an Administrative Scrivener)",
+        "content": "**In short:** the legally reserved portion is the minimum benefit guaranteed by law for certain heirs other than siblings. For inheritances commencing on or after 1 July 2019, if a will, gift or other act infringes the legally reserved portion, the system allows a claim for payment of money equivalent to the infringed amount. It is not the case that \"a will infringing the legally reserved portion is invalid\" or that \"real estate equivalent to the legally reserved portion automatically returns\". Yotsuba Administrative Scrivener Office collects family registers, investigates heirs, investigates the estate, organises estate materials, organises the inheritance relationship and prepares an estate division agreement based on agreed content. Judgement of whether a legally reserved portion exists, calculation of the share and infringed amount, judgement of whether to claim, a claim for the legally reserved portion, negotiation and dispute handling are the domain of an attorney.\n\n## Basics of the legally reserved portion\n\nThe legally reserved portion is the minimum benefit guaranteed by law for certain heirs other than siblings.\n\nHowever, it is not the case that \"a will infringing the legally reserved portion is invalid\" or that \"real estate equivalent to the legally reserved portion automatically returns\". For inheritances commencing on or after 1 July 2019, the current system is a system to claim **payment of money** equivalent to the infringed amount.\n\n## Persons entitled to the legally reserved portion\n\nUnder Civil Code, Article 1042, the following heirs have a legally reserved portion.\n\n- Spouse\n- Children and other lineal descendants\n- Lineal ascendants who are heirs\n\nOn the other hand, siblings and nieces or nephews who inherit by representation from siblings have no legally reserved portion. Who is actually an heir depends on the order of succession, inheritance by representation and other matters. For details, see [Statutory heirs and statutory shares](https://luck428.com/legal/column/houtei-souzoku-bun).\n\n## Shares of the legally reserved portion\n\nUnder Civil Code, Article 1042, the shares are as follows.\n\n- Where only lineal ascendants are heirs → the total legally reserved portion is one-third\n- In other cases → the total legally reserved portion is one-half\n\nIf there are several heirs, each heir's legally reserved portion is basically \"the above share × that person's statutory share\". For example, if the heirs are a spouse and one child, the total legally reserved portion is one-half, the spouse's is one-fourth and the child's is one-fourth.\n\nHowever, the legally reserved share is not the share that can be claimed as is. The basic structure is:\n\n**Base assets for calculating the legally reserved portion × each person's legally reserved share → the amount of the legally reserved portion**\n\nAfter that, under Civil Code, Article 1046, paragraph 2, the amount of the infringed legally reserved portion is calculated by considering the testamentary gift received by the entitled person, certain gifts, assets to be acquired by inheritance and inherited debts assumed by the entitled person. It cannot be said that \"a spouse's legally reserved share of one-fourth means one-fourth of the total estate can always be claimed\".\n\n## Base for calculating the legally reserved portion\n\nUnder Civil Code, Article 1043, the basic structure is:\n\n**Value of assets at the commencement of inheritance + value of gift assets to be included - all debts**\n\nIt cannot be said that \"the legally reserved portion can be calculated by looking only at the estate at the commencement of inheritance\".\n\n## Treatment of lifetime gifts\n\nUnder Civil Code, Article 1044, the treatment of lifetime gifts is roughly as follows.\n\n- Ordinary gifts → in principle, gifts within one year before the commencement of inheritance\n- Where both parties gifted knowing that they would harm the person entitled to the legally reserved portion → gifts more than one year earlier may also be included\n- Gifts to an heir as special benefits → a ten-year rule applies to gifts received as capital for marriage, adoption or livelihood\n\nIt cannot be said that \"all gifts within the past ten years are included\" or \"all lifetime gifts are included\". Consult an attorney for individual calculation.\n\n## Is a will infringing the legally reserved portion invalid?\n\nThe mere fact of infringement of the legally reserved portion does not automatically make a will, devise or gift invalid. The current system is a system to claim payment of money equivalent to the infringed amount from the devisee or donee.\n\nFor wills, see [Holograph wills vs notarised wills](https://luck428.com/legal/column/jihitsu-kosei-yuigon); for procedures after a will is found, see [What to do when a will is found](https://luck428.com/legal/column/souzoku-yuigon-hakken-tetsuzuki).\n\n## Note on the 2019 amendment\n\nFor inheritances commencing on or after 1 July 2019, a claim for the legally reserved portion is relevant. For inheritances commencing on or before 30 June 2019, the former system of reduction of the legally reserved portion is relevant. This article focuses on inheritances commencing on or after 1 July 2019.\n\n## Period for a claim for the legally reserved portion\n\nA claim for the legally reserved portion has the following two periods (Civil Code, Article 1048).\n\n- **One year**: one year from when the entitled person became aware of the commencement of inheritance and of the gift or devise infringing the legally reserved portion\n- **Ten years**: ten years from the commencement of inheritance\n\nIt cannot be said that \"the period is always one year from the date the will is found\" or \"always one year from the date of death\".\n\n## Declaration of intention to exercise the right\n\nWhat is required within one year is a declaration of intention to the other party to exercise the right to the legally reserved portion. Merely filing a petition for conciliation with the Family Court is not a declaration to the other party.\n\nThe court explains that a declaration by content-certified mail or another method is used. However, it is not the case that \"the form of content-certified mail itself is legally required\".\n\nThe entitled person can personally declare the intention to the other party and personally file a petition for conciliation. It is not the case that \"a claim for the legally reserved portion can only be made by an attorney\". Who, when and what content to claim are individual legal judgements; consult an attorney.\n\n## When there are several devisees or donees\n\nWhere there are several devisees or donees, Civil Code, Article 1047 provides rules on who bears the burden, in what order and to what extent.\n\nFor example, if there are a devisee and a donee, the devisee bears the burden first. If there are several gifts at different times, the donee of the later gift bears the burden in order.\n\nWhere there are several persons, it cannot be asserted that \"a claim may be made against any one of them\". Consult an attorney to identify the person to claim against.\n\n## Conciliation for a claim for the legally reserved portion\n\nIf agreement cannot be reached, conciliation for a claim for the legally reserved portion may be used at the Family Court. The application is made to the Family Court with jurisdiction over the other party's address or a Family Court agreed by the parties. The court's official guidance states a filing fee of a revenue stamp of 1,200 yen plus postage.\n\nThe person may file personally. Conciliation for a claim for the legally reserved portion is different from estate division conciliation. If conciliation fails, it does not automatically move to adjudication and have a judge decide the infringed amount as in estate division. A separate lawsuit may be necessary for final resolution. Legal judgement and litigation agency are an attorney.\n\n## Difference from estate division\n\nEstate division is a procedure to decide how the inherited assets are acquired among co-heirs. A claim for the legally reserved portion is a system to claim money equivalent to the infringed amount when the legally reserved portion is infringed by a devise or gift. The two are not the same procedure.\n\nIt cannot be asserted that \"if estate division is agreed, a claim for the legally reserved portion is unnecessary\". For the basics of estate division, see [Can you prepare an estate division agreement yourself?](https://luck428.com/legal/column/isan-bunkatsu-kyougisho).\n\n## Relationship with renunciation of inheritance\n\nA person who renounces an inheritance is deemed never to have been an heir for that inheritance. Therefore, that person has no legally reserved portion for that inheritance.\n\nFor the basics of renunciation, see [What to know before considering renunciation or qualified acceptance](https://luck428.com/legal/column/souzoku-hoki-gentei-shonin).\n\n## Relationship with renunciation of the legally reserved portion\n\nSeparately from renunciation of inheritance, there is a system to renounce only the legally reserved portion. Under Civil Code, Article 1049, renunciation of the legally reserved portion before the commencement of inheritance requires the permission of the Family Court.\n\nRenouncing only the legally reserved portion is different from renouncing the status of heir itself. Renunciation of the legally reserved portion by one co-heir does not affect the legally reserved portion of other co-heirs. Consult an attorney for individual judgement.\n\n## Relationship with disqualification and exclusion\n\nA person who lost the right of inheritance by disqualification or exclusion has no legally reserved portion. Who becomes a new heir by inheritance by representation is a separate matter. For details, see [Statutory heirs and statutory shares](https://luck428.com/legal/column/houtei-souzoku-bun). Individual judgement is an attorney.\n\n## Relationship with tax\n\nAfter the amount of the infringed legally reserved portion is determined, an amended inheritance tax return or a request for correction may become an issue for both the person receiving money and the person paying.\n\nIf land or another asset is transferred instead of money, capital gains tax may arise on the paying side. Consult a tax accountant for individual tax treatment. For the basics of inheritance tax, see [Is an inheritance tax return required?](https://luck428.com/legal/column/souzoku-zei-shinkoku-hitsuyo).\n\n## What an administrative scrivener can and cannot do\n\nYotsuba Administrative Scrivener Office, within the lawful scope, collects family registers, investigates heirs, investigates the estate, organises estate materials, organises the inheritance relationship and prepares an estate division agreement based on agreed content.\n\nOn the other hand, the office does not handle the following.\n\n- Individual judgement of whether a legally reserved portion exists\n- Individual calculation of the infringed amount\n- Judgement of whether to claim\n- Acceptance of a claim notice for the legally reserved portion to the other party\n- Negotiation\n- Agency\n- Dispute handling\n\nIf asking a specialist for individual legal judgement, claim, negotiation, agency or dispute handling, use an attorney.\n\n## Roles of specialists\n\n- Individual legal judgement, claim, negotiation and disputes over the legally reserved portion → an attorney\n- Preparation of documents to be filed with the Family Court → a judicial scrivener or attorney\n- Inheritance registration → the person concerned / a judicial scrivener or attorney\n- Tax → the person concerned / a tax accountant\n- Organisation of family registers, heirs and estate materials, and documentation of agreed content → the person concerned / an administrative scrivener or another specialist\n- Real estate appraisal and brokerage → Yotsuba Real Estate Co., Ltd.\n\nYotsuba Administrative Scrivener Office and Yotsuba Real Estate Co., Ltd. handle their work under separate businesses and separate contracts. Our office receives no referral fee.\n\n## How to proceed with a consultation on the legally reserved portion in Bunkyo\n\nYotsuba Administrative Scrivener Office (Kohinata, Bunkyo, about five minutes' walk from Myogadani Station) guides you in stages through family register collection, heir investigation, estate investigation, organisation of estate materials and preparation of an estate division agreement based on agreed content, as materials for judging the legally reserved portion.\n\nFor the flow of engagement, see [Engagement Flow](https://luck428.com/legal/nagare); for fees, see [Fee Schedule](https://luck428.com/legal/ryokin); and for the whole picture, see [Inheritance, Wills and Trusts](https://luck428.com/legal/services/inheritance).\n\n## FAQ\n\n**Q. Do siblings also have a legally reserved portion?**\nA. Siblings and nieces or nephews who inherit by representation from siblings have no legally reserved portion.\n\n**Q. Is a will infringing the legally reserved portion invalid?**\nA. The mere infringement does not automatically make the will invalid. The current system is a claim for payment of money equivalent to the infringed amount.\n\n**Q. Is the legally reserved portion half of the estate?**\nA. Where only lineal ascendants are heirs, the total is one-third; in other cases, one-half. If there are several heirs, multiply by each person's statutory share.\n\n**Q. Are all lifetime gifts included in the calculation?**\nA. Not all lifetime gifts are included. Gifts within one year before the commencement of inheritance and certain gifts as special benefits may be included. Consult an attorney for individual calculation.\n\n**Q. By when must a claim for the legally reserved portion be made?**\nA. There is a one-year period from awareness of the commencement of inheritance and of the gift or devise infringing the legally reserved portion, and a ten-year period from the commencement of inheritance.\n\n**Q. If I file a petition for conciliation with the Family Court, is the one-year period safe?**\nA. Merely filing a petition for conciliation is not a declaration of intention to the other party. A declaration by content-certified mail or another method is required, but that form itself is not legally required. Consult an attorney for individual judgement.\n\n**Q. Does a person who renounced the inheritance also have a legally reserved portion?**\nA. A person who renounced is deemed never to have been an heir, so that person has no legally reserved portion for that inheritance.\n\n**Q. Can only the legally reserved portion be renounced during life?**\nA. Renunciation of the legally reserved portion before the commencement of inheritance requires the permission of the Family Court. It is different from renunciation of inheritance.\n\n## Sources (Primary Information)\n\n- e-Gov, Civil Code, Articles 1042, 1043, 1044, 1046, 1047, 1048 and 1049\n- Courts, \"Conciliation for a claim for the legally reserved portion\"\n- Courts, \"General conciliation procedure\"\n- Ministry of Justice, \"Amendment of the succession law\"\n- National Tax Agency, \"Materials on inheritance tax concerning a claim for the legally reserved portion\"\n- National Tax Agency, \"Materials on capital gains by performance in lieu\"\n- Administrative Scrivener Act, current provisions\n\nThis article is general information and does not guarantee the existence, share, calculation, infringed amount, method, period or tax treatment of any individual legally reserved portion. Individual legal judgement, claim, negotiation and dispute handling over the legally reserved portion are handled by an attorney; preparation of documents to be filed with the Family Court by a judicial scrivener or attorney; inheritance registration by the person concerned or a judicial scrivener or attorney; tax by the person concerned or a tax accountant; and real estate appraisal and brokerage by Yotsuba Real Estate Co., Ltd., each as an independent business under a separate contract. Our office receives no referral fee. Individual judgements are made by a qualified professional after a meeting. Written by [Joji Uramatsu](https://luck428.com/about/uramatsu), administrative scrivener and licensed real estate broker.",
+        "faq": [
+          {
+            "question": "Do siblings also have a legally reserved portion?",
+            "answer": "Siblings and nieces or nephews who inherit by representation from siblings have no legally reserved portion."
+          },
+          {
+            "question": "Is a will infringing the legally reserved portion invalid?",
+            "answer": "The mere infringement does not automatically make the will invalid. The current system is a claim for payment of money equivalent to the infringed amount."
+          },
+          {
+            "question": "Is the legally reserved portion half of the estate?",
+            "answer": "Where only lineal ascendants are heirs, the total is one-third; in other cases, one-half. If there are several heirs, multiply by each person's statutory share."
+          },
+          {
+            "question": "Are all lifetime gifts included in the calculation?",
+            "answer": "Not all lifetime gifts are included. Gifts within one year before the commencement of inheritance and certain gifts as special benefits may be included. Consult an attorney for individual calculation."
+          },
+          {
+            "question": "By when must a claim for the legally reserved portion be made?",
+            "answer": "There is a one-year period from awareness of the commencement of inheritance and of the gift or devise infringing the legally reserved portion, and a ten-year period from the commencement of inheritance."
+          },
+          {
+            "question": "If I file a petition for conciliation with the Family Court, is the one-year period safe?",
+            "answer": "Merely filing a petition for conciliation is not a declaration of intention to the other party. A declaration by content-certified mail or another method is required, but that form itself is not legally required. Consult an attorney for individual judgement."
+          },
+          {
+            "question": "Does a person who renounced the inheritance also have a legally reserved portion?",
+            "answer": "A person who renounced is deemed never to have been an heir, so that person has no legally reserved portion for that inheritance."
+          },
+          {
+            "question": "Can only the legally reserved portion be renounced during life?",
+            "answer": "Renunciation of the legally reserved portion before the commencement of inheritance requires the permission of the Family Court. It is different from renunciation of inheritance."
+          }
+        ]
+      },
+      "zh-tw": {
+        "title": "何謂遺留分？對象繼承人・比例・1年期限與遺留分侵害額請求",
+        "excerpt": "遺留分係法律保障兄弟姊妹以外一定繼承人之最低利益。2019年7月1日以後開始之繼承，可請求相當於遺留分侵害額之金錢給付。本文整理基本、對象繼承人、比例與1年期限。",
+        "category": "繼承手續（行政書士實務）",
+        "content": "**結論（先說要點）**：遺留分係法律保障兄弟姊妹以外一定繼承人之最低利益。2019年7月1日以後開始之繼承，若有侵害遺留分之遺囑・贈與等，可請求相當於侵害額之**金錢給付**。並非「侵害遺留分之遺囑無效」「遺留分相當不動產自動返還」。四葉行政書士事務所辦理戶籍蒐集、繼承人調查、財產調查、財產資料整理、繼承關係整理、基於合意內容之遺產分割協議書等製作。遺留分有無判斷、比例・侵害額算定、應否請求判斷、遺留分侵害額請求、交涉、紛爭屬律師。\n\n## 遺留分基本\n\n遺留分係法律保障兄弟姊妹以外一定繼承人之最低利益。\n\n惟並非「侵害遺留分之遺囑無效」「遺留分相當不動產自動返還」。2019年7月1日以後開始之繼承，現行制度為請求相當於侵害額之**金錢給付**。\n\n## 遺留分權利人\n\n依民法第1042條，有遺留分者如下。\n\n- 配偶\n- 子女等直系卑親屬\n- 為繼承人之直系尊親屬\n\n另，兄弟姊妹、兄弟姊妹代位繼承人之甥姪無遺留分。實際誰為繼承人依繼承順位・代位繼承等。詳見[法定繼承人與應繼分的基本](https://luck428.com/legal/column/houtei-souzoku-bun)。\n\n## 遺留分比例\n\n依民法第1042條，比例如下。\n\n- 僅直系尊親屬為繼承人 → 全體遺留分3分之1\n- 其他 → 全體遺留分2分之1\n\n繼承人複數時，各人遺留分基本為「上述比例×其法定應繼分」。例如配偶＋子女1人，全體2分之1、配偶4分之1、子女4分之1。\n\n惟遺留分比例並非可直接請求之比例。基本結構：\n\n**遺留分算定基礎財產 × 各人遺留分比例 → 遺留分額**\n\n其後依民法第1046條第2項，考量權利人受領之遺贈、一定贈與、因繼承應取得之遺產、權利人承繼之繼承債務等，算定侵害額。不能稱「配偶遺留分4分之1＝必可請求遺產總額4分之1」。\n\n## 遺留分算定基礎\n\n依民法第1043條，基本結構：\n\n**繼承開始時財產價額 ＋ 應算入贈與財產價額 － 全部債務**\n\n不能稱「僅看繼承開始時遺產即可計算」。\n\n## 生前贈與處理\n\n依民法第1044條，大致如下。\n\n- 一般贈與 → 原則繼承開始前1年內\n- 雙方知悉損害遺留分權利人而贈與 → 1年前贈與亦可能算入\n- 對繼承人之特別受益贈與 → 婚姻・收養・生計資本所受贈與有10年規則\n\n不能稱「過去10年贈與全部算入」「全部生前贈與算入」。個別算定請洽律師。\n\n## 侵害遺留分之遺囑無效？\n\n僅因侵害遺留分，不使遺囑・遺贈・贈與當然無效。現行制度係向受遺贈人・受贈人請求相當於侵害額之金錢給付。\n\n遺囑見[自筆證書遺囑與公證遺囑的差異](https://luck428.com/legal/column/jihitsu-kosei-yuigon)；遺囑發見後見[發現遺囑時該怎麼辦？](https://luck428.com/legal/column/souzoku-yuigon-hakken-tetsuzuki)。\n\n## 2019年改正注意\n\n2019年7月1日以後開始之繼承，為遺留分侵害額請求。2019年6月30日以前開始之繼承，為改正前遺留分減殺請求。本文以2019年7月1日以後開始之繼承為中心。\n\n## 遺留分侵害額請求期間\n\n有下列兩期間（民法第1048條）。\n\n- **1年**：權利人知悉繼承開始及侵害遺留分之贈與或遺贈時起1年\n- **10年**：繼承開始時起10年\n\n不能稱「發現遺囑日起必1年」「死亡日起必1年」。\n\n## 權利行使之意思表示\n\n1年內所需者，係向對方為行使遺留分權利之意思表示。僅向家庭裁判所聲請調停，並非向對方之意思表示。\n\n裁判所說明以內容證明郵件等意思表示。惟「內容證明郵件方式本身法律上必須」並非如此。\n\n權利人本人得自行向對方意思表示，並自行聲請調停。並非「遺留分侵害額請求僅律師能為」。向誰、何時、何內容請求為個別法律判斷，請洽律師。\n\n## 複數受遺贈人・受贈人\n\n受遺贈人・受贈人複數時，民法第1047條有誰依何順序・限度負擔之規則。\n\n例如受遺贈人與受贈人，受遺贈人先負擔。不同時期複數贈與，由後贈與之受贈人依序負擔。\n\n複數人時，不臆斷「向任一人請求即可」。請求對象特定請洽律師。\n\n## 遺留分侵害額請求調停\n\n無法合意時，可利用家庭裁判所遺留分侵害額請求調停。聲請處為對方住所地家庭裁判所或當事人合意定之家庭裁判所。裁判所官方案內，聲請手續費為收入印花1,200日圓＋郵資。\n\n本人得聲請。遺留分侵害額請求調停與遺產分割調停不同。調停不成立時，未必如遺產分割當然移行審判由法官決定侵害額。最終解決可能需另行訴訟。法律判斷・訴訟代理屬律師。\n\n## 與遺產分割之差異\n\n遺產分割係決定共同繼承人間如何取得繼承財產之手續。遺留分侵害額請求係因遺贈・贈與等侵害遺留分時，請求相當於侵害額之金錢。兩者非同一步驟。\n\n不臆斷「遺產分割協議成立即不需遺留分請求」。遺產分割協議基本見[遺產分割協議書可以自己製作嗎？](https://luck428.com/legal/column/isan-bunkatsu-kyougisho)。\n\n## 與拋棄繼承之關係\n\n拋棄繼承者視為自始非繼承人，故本人就該繼承無遺留分。\n\n拋棄繼承基本見[考慮拋棄繼承・限定承認前應知道的事](https://luck428.com/legal/column/souzoku-hoki-gentei-shonin)。\n\n## 與遺留分放棄之關係\n\n另有僅放棄遺留分之制度。依民法第1049條，繼承開始前遺留分放棄須家庭裁判所許可。\n\n僅放棄遺留分，與放棄繼承人地位本身不同。共同繼承人1人放棄遺留分，不影響其他共同繼承人遺留分。個別判斷請洽律師。\n\n## 與欠格・廢除之關係\n\n因欠格・廢除喪失繼承權者，無遺留分。代位繼承等誰為新繼承人為另一問題。詳見[法定繼承人與應繼分的基本](https://luck428.com/legal/column/houtei-souzoku-bun)。個別判斷屬律師。\n\n## 與稅務之關係\n\n遺留分侵害額確定後，受領金錢方與支付方雙方，遺產稅修正申報・更正請求等可能成為問題。\n\n以土地等代替金錢移轉清償，支付方可能生讓渡所得課稅。個別稅務請洽稅理士。遺產稅基本見[需要申報遺產稅嗎？](https://luck428.com/legal/column/souzoku-zei-shinkoku-hitsuyo)。\n\n## 行政書士可協助與不可協助之事項\n\n四葉行政書士事務所於合法範圍，辦理戶籍蒐集、繼承人調查、財產調查、財產資料整理、繼承關係整理、基於合意內容之遺產分割協議書等製作。\n\n另不辦理下列。\n\n- 遺留分有無個別判斷\n- 侵害額個別算定\n- 應否請求判斷\n- 受任向對方為遺留分請求通知\n- 交涉\n- 代理\n- 紛爭處理\n\n委託專業人士個別法律判斷・請求・交涉・代理・紛爭處理時為律師。\n\n## 專業人士分工\n\n- 遺留分個別法律判斷・請求・交涉・紛爭 → 律師\n- 家庭裁判所提出書類製作 → 司法書士或律師\n- 繼承登記 → 本人／司法書士或律師\n- 稅務 → 本人／稅理士\n- 戶籍・繼承人・財產資料整理、合意內容文書化 → 本人／行政書士等\n- 不動產估價・仲介 → 四葉不動產株式會社\n\n四葉行政書士事務所與四葉不動產株式會社為別事業體・別契約，分別處理。本事務所不收取介紹費。\n\n## 在文京區進行遺留分諮詢\n\n四葉行政書士事務所（文京區小日向・茗荷谷站步行約5分鐘）階段式引導作為遺留分判斷材料之戶籍蒐集、繼承人調查、財產調查、財產資料整理、基於合意內容之遺產分割協議書等製作。\n\n受任流程見[受任流程](https://luck428.com/legal/nagare)；費用見[報酬額表](https://luck428.com/legal/ryokin)；繼承業務全貌見[繼承・遺囑・信託服務](https://luck428.com/legal/services/inheritance)。\n\n## 常見問題\n\n**Q. 兄弟姊妹也有遺留分嗎？**\nA. 兄弟姊妹、兄弟姊妹代位繼承人之甥姪無遺留分。\n\n**Q. 侵害遺留分之遺囑無效嗎？**\nA. 僅侵害不使遺囑當然無效。現行制度係請求相當於侵害額之金錢給付。\n\n**Q. 遺留分是遺產一半嗎？**\nA. 僅直系尊親屬為繼承人時全體3分之1，其他2分之1。複數繼承人時乘以各人法定應繼分。\n\n**Q. 生前贈與全部算入遺留分計算嗎？**\nA. 並非全部。繼承開始前1年內贈與、特別受益等一定贈與可能算入。個別算定請洽律師。\n\n**Q. 遺留分侵害額請求何時前？**\nA. 知悉繼承開始及侵害遺留分贈與或遺贈時起1年、繼承開始時起10年。\n\n**Q. 向家庭裁判所聲請調停，1年期限就安全嗎？**\nA. 僅聲請調停非向對方意思表示。須內容證明郵件等意思表示，但該方式本身非法律必須。個別判斷請洽律師。\n\n**Q. 拋棄繼承者也有遺留分嗎？**\nA. 拋棄者視為自始非繼承人，故本人就該繼承無遺留分。\n\n**Q. 生前可只放棄遺留分嗎？**\nA. 繼承開始前遺留分放棄須家庭裁判所許可。與拋棄繼承不同。\n\n## 本文出處（一次資訊）\n\n- e-Gov 民法第1042條、第1043條、第1044條、第1046條、第1047條、第1048條、第1049條\n- 裁判所「遺留分侵害額請求調停」\n- 裁判所「調停程序一般」\n- 法務省「繼承法改正」\n- 國稅廳「遺留分侵害額請求相關遺產稅資料」\n- 國稅廳「代物清償之讓渡所得資料」\n- 行政書士法現行條文\n\n本文為一般資訊提供，不保證個別遺留分有無、比例、算定、侵害額、請求方法、期間、稅務。遺留分個別法律判斷・請求・交涉・紛爭屬律師；家庭裁判所提出書類製作屬司法書士或律師；繼承登記屬本人或司法書士或律師；稅務屬本人或稅理士；不動產估價・仲介屬四葉不動產株式會社，均為獨立的事業體，以個別契約處理。本事務所不收取介紹費。個別判斷由資格者面談後進行。執筆者為[浦松丈二](https://luck428.com/about/uramatsu)（行政書士・宅地建物交易士）。",
+        "faq": [
+          {
+            "question": "兄弟姊妹也有遺留分嗎？",
+            "answer": "兄弟姊妹、兄弟姊妹代位繼承人之甥姪無遺留分。"
+          },
+          {
+            "question": "侵害遺留分之遺囑無效嗎？",
+            "answer": "僅侵害不使遺囑當然無效。現行制度係請求相當於侵害額之金錢給付。"
+          },
+          {
+            "question": "遺留分是遺產一半嗎？",
+            "answer": "僅直系尊親屬為繼承人時全體3分之1，其他2分之1。複數繼承人時乘以各人法定應繼分。"
+          },
+          {
+            "question": "生前贈與全部算入遺留分計算嗎？",
+            "answer": "並非全部。繼承開始前1年內贈與、特別受益等一定贈與可能算入。個別算定請洽律師。"
+          },
+          {
+            "question": "遺留分侵害額請求何時前？",
+            "answer": "知悉繼承開始及侵害遺留分贈與或遺贈時起1年、繼承開始時起10年。"
+          },
+          {
+            "question": "向家庭裁判所聲請調停，1年期限就安全嗎？",
+            "answer": "僅聲請調停非向對方意思表示。須內容證明郵件等意思表示，但該方式本身非法律必須。個別判斷請洽律師。"
+          },
+          {
+            "question": "拋棄繼承者也有遺留分嗎？",
+            "answer": "拋棄者視為自始非繼承人，故本人就該繼承無遺留分。"
+          },
+          {
+            "question": "生前可只放棄遺留分嗎？",
+            "answer": "繼承開始前遺留分放棄須家庭裁判所許可。與拋棄繼承不同。"
+          }
+        ]
+      },
+      "zh": {
+        "title": "何谓特留份？对象继承人・比例・1年期限与特留份侵害额请求",
+        "excerpt": "特留份系法律保障兄弟姐妹以外一定继承人之最低利益。2019年7月1日以后开始之继承，可请求相当于特留份侵害额之金钱给付。本文整理基本、对象继承人、比例与1年期限。",
+        "category": "继承手续（行政书士实务）",
+        "content": "**结论（先说要点）**：特留份系法律保障兄弟姐妹以外一定继承人之最低利益。2019年7月1日以后开始之继承，若有侵害特留份之遗嘱・赠与等，可请求相当于侵害额之**金钱给付**。并非“侵害特留份之遗嘱无效”“特留份相当不动产自动返还”。四叶行政书士事务所办理户籍收集、继承人调查、财产调查、财产资料整理、继承关系整理、基于合意内容之遗产分割协议书等制作。特留份有无判断、比例・侵害额算定、应否请求判断、特留份侵害额请求、交涉、纠纷属律师。\n\n## 特留份基本\n\n特留份系法律保障兄弟姐妹以外一定继承人之最低利益。\n\n惟并非“侵害特留份之遗嘱无效”“特留份相当不动产自动返还”。2019年7月1日以后开始之继承，现行制度为请求相当于侵害额之**金钱给付**。\n\n## 特留份权利人\n\n依民法第1042条，有特留份者如下。\n\n- 配偶\n- 子女等直系卑亲属\n- 为继承人之直系尊亲属\n\n另，兄弟姐妹、兄弟姐妹代位继承人之外甥侄女无特留份。实际谁为继承人依继承顺位・代位继承等。详见[法定继承人与应继分的基本](https://luck428.com/legal/column/houtei-souzoku-bun)。\n\n## 特留份比例\n\n依民法第1042条，比例如下。\n\n- 仅直系尊亲属为继承人 → 全体特留份3分之1\n- 其他 → 全体特留份2分之1\n\n继承人复数时，各人特留份基本为“上述比例×其法定继承份额”。例如配偶＋子女1人，全体2分之1、配偶4分之1、子女4分之1。\n\n惟特留份比例并非可直接请求之比例。基本结构：\n\n**特留份算定基础财产 × 各人特留份比例 → 特留份额**\n\n其后依民法第1046条第2项，考量权利人受领之遗赠、一定赠与、因继承应取得之遗产、权利人承继之继承债务等，算定侵害额。不能称“配偶特留份4分之1＝必可请求遗产总额4分之1”。\n\n## 特留份算定基础\n\n依民法第1043条，基本结构：\n\n**继承开始时财产价额 ＋ 应算入赠与财产价额 － 全部债务**\n\n不能称“仅看继承开始时遗产即可计算”。\n\n## 生前赠与处理\n\n依民法第1044条，大致如下。\n\n- 一般赠与 → 原则继承开始前1年内\n- 双方知悉损害特留份权利人而赠与 → 1年前赠与亦可能算入\n- 对继承人之特别受益赠与 → 婚姻・收养・生计资本所受赠与有10年规则\n\n不能称“过去10年赠与全部算入”“全部生前赠与算入”。个别算定请洽律师。\n\n## 侵害特留份之遗嘱无效？\n\n仅因侵害特留份，不使遗嘱・遗赠・赠与当然无效。现行制度系向受遗赠人・受赠人请求相当于侵害额之金钱给付。\n\n遗嘱见[自书遗嘱与公证遗嘱的区别](https://luck428.com/legal/column/jihitsu-kosei-yuigon)；遗嘱发现后见[发现遗嘱时该怎么办？](https://luck428.com/legal/column/souzoku-yuigon-hakken-tetsuzuki)。\n\n## 2019年改正注意\n\n2019年7月1日以后开始之继承，为特留份侵害额请求。2019年6月30日以前开始之继承，为改正前特留份减杀请求。本文以2019年7月1日以后开始之继承为中心。\n\n## 特留份侵害额请求期间\n\n有下列两期间（民法第1048条）。\n\n- **1年**：权利人知悉继承开始及侵害特留份之赠与或遗赠时起1年\n- **10年**：继承开始时起10年\n\n不能称“发现遗嘱日起必1年”“死亡日起必1年”。\n\n## 权利行使之意思表示\n\n1年内所需者，系向对方为行使特留份权利之意思表示。仅向家庭裁判所申请调停，并非向对方之意思表示。\n\n裁判所说明以内容证明邮件等意思表示。惟“内容证明邮件方式本身法律上必须”并非如此。\n\n权利人本人得自行向对方意思表示，并自行申请调停。并非“特留份侵害额请求仅律师能为”。向谁、何时、何内容请求为个别法律判断，请洽律师。\n\n## 复数受遗赠人・受赠人\n\n受遗赠人・受赠人复数时，民法第1047条有谁依何顺序・限度负担之规则。\n\n例如受遗赠人与受赠人，受遗赠人先负担。不同时期复数赠与，由后赠与之受赠人依序负担。\n\n复数人时，不臆断“向任一人请求即可”。请求对象特定请洽律师。\n\n## 特留份侵害额请求调停\n\n无法合意时，可利用家庭裁判所特留份侵害额请求调停。申请处为对方住所地家庭裁判所或当事人合意定之家庭裁判所。裁判所官方说明，申请手续费为收入印花1,200日元＋邮资。\n\n本人得申请。特留份侵害额请求调停与遗产分割调停不同。调停不成立时，未必如遗产分割当然移行审判由法官决定侵害额。最终解决可能需另行诉讼。法律判断・诉讼代理属律师。\n\n## 与遗产分割之差异\n\n遗产分割系决定共同继承人之间如何取得继承财产之手续。特留份侵害额请求系因遗赠・赠与等侵害特留份时，请求相当于侵害额之金钱。两者非同一步骤。\n\n不臆断“遗产分割协议成立即不需特留份请求”。遗产分割协议基本见[遗产分割协议书可以自己制作吗？](https://luck428.com/legal/column/isan-bunkatsu-kyougisho)。\n\n## 与放弃继承之关系\n\n放弃继承者视为自始非继承人，故本人就该继承无特留份。\n\n放弃继承基本见[考虑放弃继承・限定承认前应知道的事](https://luck428.com/legal/column/souzoku-hoki-gentei-shonin)。\n\n## 与特留份放弃之关系\n\n另有仅放弃特留份之制度。依民法第1049条，继承开始前特留份放弃须家庭裁判所许可。\n\n仅放弃特留份，与放弃继承人地位本身不同。共同继承人1人放弃特留份，不影响其他共同继承人特留份。个别判断请洽律师。\n\n## 与欠格・废除之关系\n\n因欠格・废除丧失继承权者，无特留份。代位继承等谁为新继承人为另一问题。详见[法定继承人与应继分的基本](https://luck428.com/legal/column/houtei-souzoku-bun)。个别判断属律师。\n\n## 与税务之关系\n\n特留份侵害额确定后，受领金钱方与支付方双方，遗产税修正申报・更正请求等可能成为问题。\n\n以土地等代替金钱移转清偿，支付方可能生让渡所得课税。个别税务请洽税理士。遗产税基本见[需要申报遗产税吗？](https://luck428.com/legal/column/souzoku-zei-shinkoku-hitsuyo)。\n\n## 行政书士可协助与不可协助之事项\n\n四叶行政书士事务所于合法范围，办理户籍收集、继承人调查、财产调查、财产资料整理、继承关系整理、基于合意内容之遗产分割协议书等制作。\n\n另不办理下列。\n\n- 特留份有无个别判断\n- 侵害额个别算定\n- 应否请求判断\n- 受任向对方为特留份请求通知\n- 交涉\n- 代理\n- 纠纷处理\n\n委托专业人士个别法律判断・请求・交涉・代理・纠纷处理时为律师。\n\n## 专业人士分工\n\n- 特留份个别法律判断・请求・交涉・纠纷 → 律师\n- 家庭裁判所提出书类制作 → 司法书士或律师\n- 继承登记 → 本人／司法书士或律师\n- 税务 → 本人／税理士\n- 户籍・继承人・财产资料整理、合意内容文书化 → 本人／行政书士等\n- 不动产估价・中介 → 四叶不动产株式会社\n\n四叶行政书士事务所与四叶不动产株式会社为别事业体・别合同，分别处理。本事务所不收取介绍费。\n\n## 在文京区进行特留份咨询\n\n四叶行政书士事务所（文京区小日向・茗荷谷站步行约5分钟）阶段式引导作为特留份判断材料之户籍收集、继承人调查、财产调查、财产资料整理、基于合意内容之遗产分割协议书等制作。\n\n受任流程见[受任流程](https://luck428.com/legal/nagare)；费用见[报酬额表](https://luck428.com/legal/ryokin)；继承业务全貌见[继承・遗嘱・信托服务](https://luck428.com/legal/services/inheritance)。\n\n## 常见问题\n\n**Q. 兄弟姐妹也有特留份吗？**\nA. 兄弟姐妹、兄弟姐妹代位继承人之外甥侄女无特留份。\n\n**Q. 侵害特留份之遗嘱无效吗？**\nA. 仅侵害不使遗嘱当然无效。现行制度系请求相当于侵害额之金钱给付。\n\n**Q. 特留份是遗产一半吗？**\nA. 仅直系尊亲属为继承人时全体3分之1，其他2分之1。复数继承人时乘以各人法定继承份额。\n\n**Q. 生前赠与全部算入特留份计算吗？**\nA. 并非全部。继承开始前1年内赠与、特别受益等一定赠与可能算入。个别算定请洽律师。\n\n**Q. 特留份侵害额请求何时前？**\nA. 知悉继承开始及侵害特留份赠与或遗赠时起1年、继承开始时起10年。\n\n**Q. 向家庭裁判所申请调停，1年期限就安全吗？**\nA. 仅申请调停非向对方意思表示。须内容证明邮件等意思表示，但该方式本身非法律必须。个别判断请洽律师。\n\n**Q. 放弃继承者也有特留份吗？**\nA. 放弃者视为自始非继承人，故本人就该继承无特留份。\n\n**Q. 生前可只放弃特留份吗？**\nA. 继承开始前特留份放弃须家庭裁判所许可。与放弃继承不同。\n\n## 本文出处（一次信息）\n\n- e-Gov 民法第1042条、第1043条、第1044条、第1046条、第1047条、第1048条、第1049条\n- 裁判所“特留份侵害额请求调停”\n- 裁判所“调停程序一般”\n- 法务省“继承法改正”\n- 国税厅“特留份侵害额请求相关遗产税资料”\n- 国税厅“代物清偿之让渡所得资料”\n- 行政书士法现行条文\n\n本文为一般信息提供，不保证个别特留份有无、比例、算定、侵害额、请求方法、期间、税务。特留份个别法律判断・请求・交涉・纠纷属律师；家庭裁判所提出书类制作属司法书士或律师；继承登记属本人或司法书士或律师；税务属本人或税理士；不动产估价・中介属四叶不动产株式会社，均为独立的事业体，以个别合同处理。本事务所不收取介绍费。个别判断由资格者面谈后进行。执笔者为[浦松丈二](https://luck428.com/about/uramatsu)（行政书士・宅地建物交易士）。",
+        "faq": [
+          {
+            "question": "兄弟姐妹也有特留份吗？",
+            "answer": "兄弟姐妹、兄弟姐妹代位继承人之外甥侄女无特留份。"
+          },
+          {
+            "question": "侵害特留份之遗嘱无效吗？",
+            "answer": "仅侵害不使遗嘱当然无效。现行制度系请求相当于侵害额之金钱给付。"
+          },
+          {
+            "question": "特留份是遗产一半吗？",
+            "answer": "仅直系尊亲属为继承人时全体3分之1，其他2分之1。复数继承人时乘以各人法定继承份额。"
+          },
+          {
+            "question": "生前赠与全部算入特留份计算吗？",
+            "answer": "并非全部。继承开始前1年内赠与、特别受益等一定赠与可能算入。个别算定请洽律师。"
+          },
+          {
+            "question": "特留份侵害额请求何时前？",
+            "answer": "知悉继承开始及侵害特留份赠与或遗赠时起1年、继承开始时起10年。"
+          },
+          {
+            "question": "向家庭裁判所申请调停，1年期限就安全吗？",
+            "answer": "仅申请调停非向对方意思表示。须内容证明邮件等意思表示，但该方式本身非法律必须。个别判断请洽律师。"
+          },
+          {
+            "question": "放弃继承者也有特留份吗？",
+            "answer": "放弃者视为自始非继承人，故本人就该继承无特留份。"
+          },
+          {
+            "question": "生前可只放弃特留份吗？",
+            "answer": "继承开始前特留份放弃须家庭裁判所许可。与放弃继承不同。"
+          }
+        ]
+      }
+    }
   }
 ];
