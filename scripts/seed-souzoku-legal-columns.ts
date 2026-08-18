@@ -1,5 +1,5 @@
 /**
- * 相続コラム（行政書士）シリーズ（第1号〜第12号・4言語）投入スクリプト
+ * 相続コラム（行政書士）シリーズ（第1号〜第13号・4言語）投入スクリプト
  *
  * 対象＝luck428.com /legal/column（business=legal）。
  * 原稿＝scripts/legal-columns/NN-*.md（ja）＋{en,zh-tw,zh}/NN-*.md（翻訳）。
@@ -184,6 +184,16 @@ const REQUIRED_HUB_LINKS: Record<string, string[]> = {
     "/legal/column/souzoku-kigen-matome",
     "/legal/column/souzoku-touki-nagare",
     "/legal/column/souzoku-hoki-gentei-shonin",
+  ],
+  "souzoku-tochi-kokko-hiyo-kikan": [
+    "/legal/services/inheritance",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/souzoku",
+    "/legal/column/souzoku-zaisan-mokuroku",
+    "/legal/column/souzoku-kigen-matome",
+    "/legal/column/souzoku-touki-nagare",
+    "/legal/column/souzoku-tochi-kokko-kizoku",
   ],
 };
 
@@ -402,6 +412,28 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "別事業体",
     "独立した事業体",
   ],
+  "souzoku-tochi-kokko-hiyo-kikan": [
+    "審査手数料",
+    "負担金",
+    "土地1筆につき14,000円",
+    "14,000円×10＝140,000円",
+    "20万円が基本",
+    "10年分の標準的管理費用",
+    "登記記録上の地積",
+    "地積更正又は地積変更",
+    "同じ種目",
+    "申出により",
+    "承認申請書の提出時から承認されるまで",
+    "承認申請後の審査の標準処理期間は8か月",
+    "8か月を超えることがあります",
+    "負担金の通知が到達した日の翌日から30日以内",
+    "納付した時点で土地所有権が国庫へ帰属します",
+    "承認は失効します",
+    "土地家屋調査士",
+    "申請者本人名義の申請書・添付書類作成",
+    "別事業体",
+    "独立した事業体",
+  ],
 };
 
 /** 記事ごとに含めてはならない表現 */
@@ -452,6 +484,7 @@ const FORBIDDEN_PHRASES: Record<string, string[]> = {
   ],
   "souzoku-hoki-gentei-shonin": [],
   "souzoku-tochi-kokko-kizoku": [],
+  "souzoku-tochi-kokko-hiyo-kikan": [],
 };
 
 /** 本セット外へ張る既存legalコラムslug（リポジトリの他シードで実在確認済み） */
@@ -673,6 +706,23 @@ const ARTICLES: Array<{
       "相続土地国庫帰属 行政書士",
     ],
     tags: ["相続土地国庫帰属", "相続放棄", "不要な土地", "国庫帰属", "土地", "相続"],
+  },
+  {
+    file: "14-souzoku-tochi-kokko-hiyo-kikan.md",
+    slug: "souzoku-tochi-kokko-hiyo-kikan",
+    title: "相続土地国庫帰属にかかる費用と期間──審査手数料・負担金・標準処理期間8か月",
+    category: "相続の手続き（行政書士の実務から）",
+    excerpt:
+      "相続土地国庫帰属には、申請時の審査手数料と承認後の負担金があります。審査手数料は土地1筆14,000円、負担金は20万円が基本ですが土地の種目・面積で増える場合があります。標準処理期間8か月、30日以内の負担金納付、隣接土地の合算特例、申請中・承認後の土地管理までを文京区の実務に沿って整理しました。",
+    keywords: [
+      "相続土地国庫帰属 費用",
+      "国庫帰属 審査手数料",
+      "国庫帰属 負担金",
+      "国庫帰属 期間 8か月",
+      "国庫帰属 隣接土地 負担金",
+      "国庫帰属 固定資産税",
+    ],
+    tags: ["相続土地国庫帰属", "国庫帰属", "費用", "期間", "負担金", "審査手数料"],
   },
 ];
 

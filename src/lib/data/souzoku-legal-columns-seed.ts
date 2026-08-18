@@ -1718,5 +1718,197 @@ export const SOUZOKU_LEGAL_COLUMNS_SEED: SouzokuLegalSeedColumn[] = [
         ]
       }
     }
+  },
+  {
+    "business": "legal",
+    "slug": "souzoku-tochi-kokko-hiyo-kikan",
+    "title": "相続土地国庫帰属にかかる費用と期間──審査手数料・負担金・標準処理期間8か月",
+    "date": "2026-08-16",
+    "category": "相続の手続き（行政書士の実務から）",
+    "excerpt": "相続土地国庫帰属には、申請時の審査手数料と承認後の負担金があります。審査手数料は土地1筆14,000円、負担金は20万円が基本ですが土地の種目・面積で増える場合があります。標準処理期間8か月、30日以内の負担金納付、隣接土地の合算特例、申請中・承認後の土地管理までを文京区の実務に沿って整理しました。",
+    "content": "**結論（先に要点）**：相続土地国庫帰属には、申請時の審査手数料と、承認後の負担金という2段階の費用があります。審査手数料は土地1筆につき14,000円です。負担金は20万円が基本ですが、市街化区域等の一定の宅地・農地、森林などでは面積に応じて20万円を超える場合があります。承認申請後の審査の標準処理期間は8か月とされていますが、申請内容・実地調査・土地の状況・補正などによって8か月を超えることがあります。承認後は、負担金通知が到達した日の翌日から30日以内に納付し、納付した時点で土地所有権が国庫へ帰属します。個別の処理期間・負担金額・承認結果は、法務局の審査によるものであり、当事務所が保証するものではありません。\n\n## 費用は「審査手数料」と「負担金」の2段階\n\n国庫帰属の費用は、大きく次の2つに分かれます。\n\n| 段階 | 費用 | 支払時期 |\n| --- | --- | --- |\n| 申請時 | 審査手数料 | 申請書に収入印紙を貼付して納付 |\n| 承認後 | 負担金 | 負担金の通知が到達した日の翌日から30日以内 |\n\nこのほか、戸籍等の取得費、郵送費、行政書士等への書類作成報酬、土地家屋調査士への調査・測量等の費用などが発生する場合があります。\n\n## 審査手数料は土地1筆につき14,000円\n\n審査手数料は、**土地1筆につき14,000円**です。申請書に収入印紙を貼付して納付します。\n\n取下げ、却下、不承認となった場合でも、審査手数料は返還されません。複数筆をまとめて申請しても、審査手数料の軽減はありません。\n\n例えば10筆の土地を申請する場合、審査手数料は「14,000円×10＝140,000円」です。ただし、これは審査手数料だけの金額であり、負担金その他の費用を含みません。\n\n## 負担金は20万円が基本だが、土地の種目・面積で増える場合がある\n\n負担金は20万円が基本です。ただし、市街化区域等の一定の宅地、市街化区域等の一定の農地、森林などは、面積に応じて20万円を超える場合があります。\n\n負担金は、国が管理することとなる土地について、国有地の種目ごとの10年分の標準的管理費用を考慮して算定されます。「どの土地も20万円」ではありません。\n\n## 面積は登記記録上の地積を基準にする\n\n面積に応じて負担金を算定する場合、法務省Q&Aに基づき、**登記記録上の地積**を基準とします。現況を目測した面積ではありません。\n\n現況面積が登記地積と異なる場合、法務省Q&Aでは、原則として承認前に地積更正又は地積変更の登記を行うとしています。その場合、土地の調査・測量、地積更正等の表示登記による追加費用・準備期間が発生する可能性があります。これらの調査・測量、表示登記は土地家屋調査士へ確認してください。\n\n## 隣接する複数の土地は負担金をまとめられる場合がある\n\n隣接する2筆以上の土地が**同じ種目**である場合、**申出により**一つの土地とみなして負担金を算定できる特例があります。自動的に適用されるわけではありません。\n\n申出ができる期間は、承認申請書の提出時から承認されるまでです。\n\n混同しないでください。\n\n- 審査手数料 → 各筆14,000円のまま\n- 負担金 → 一定の隣接土地について合算算定特例あり\n- 面積比例型では、対象土地の面積を合算して算定\n\n## 「総費用」を断定しない\n\n制度上の主要費用は審査手数料と負担金です。これとは別に、案件によって次のような費用が発生する可能性があります。\n\n- 戸籍等取得費\n- 印鑑証明書等の取得費\n- 郵送費\n- 行政書士等への書類作成報酬\n- 土地家屋調査士への調査・測量等の費用\n- 申請要件を満たすために土地の状態を整理する費用\n\n「総額234,000円で必ず終わる」などとはいえません。測量・解体等も、すべての案件で必須ではありません。\n\n## 期間は3段階で考える\n\n国庫帰属の期間は、次の3段階に分けて考えます。\n\n### A 申請前\n\n事前相談、土地・境界・権利関係確認、資料収集、申請書・添付資料作成を行います。必要期間は案件ごとに異なります。事前相談は推奨ですが、相談から申請までの法定期限があるわけではありません。\n\n### B 申請後\n\n**承認申請後の審査の標準処理期間は8か月**とされています。これは通常の審査期間の目安です。書面調査、必要に応じて実地調査などが行われます。\n\nただし、申請内容、実地調査、天候、土地の状況、補正などによって8か月を超えることがあります。8か月経過後に自動的に承認される制度ではありません。一部の法務局では、申請の補正に要する期間は標準処理期間に含まれないと案内しています。\n\n### C 承認後\n\n承認通知と負担金納入告知書が届きます。負担金通知が到達した日の翌日から30日以内に納付します。負担金を納付した時点で土地所有権が国庫へ帰属します。\n\n「8か月で必ず終わる」「申請から8か月後に必ず国庫帰属する」とはいえません。\n\n## 申請中・承認後も土地管理は申請者の責任\n\n申請後も、承認通知後も、負担金を納付するまでは、土地所有権は申請者にあります。その間、草刈り等を含め、申請者が土地を管理します。\n\n「申請すれば管理義務から解放される」わけではありません。\n\n## 負担金を納めないとどうなる？\n\n負担金通知が到達した日の翌日から30日以内に納付しなければ、承認は失効します。\n\n同じ土地について再度国庫帰属を希望する場合は、最初から申請し直す必要があります。その場合、以前の審査手数料も返還されません。所有権が国へ移るのは承認通知時ではなく、負担金納付時です。\n\n## 行政書士に頼めること・頼めないこと\n\n申請主体は、本人又は法定代理人です。任意代理人による申請手続全部の代理はできません。\n\n申請書・添付書類を業として作成代行できる資格者は、弁護士・司法書士・行政書士です。四葉行政書士事務所では、申請者本人名義の申請書・添付書類作成、必要資料の収集・整理を扱います。\n\n承認時期、処理期間短縮、負担金額、承認結果を保証しません。\n\n## 専門家の担当はこう分かれる\n\n- 国庫帰属申請書等作成 → 行政書士・司法書士・弁護士\n- 相続登記 → 司法書士又は弁護士\n- 土地の筆界に関する調査・測量、表示に関する登記等 → 土地家屋調査士\n- 個別法的紛争 → 弁護士\n- 税務 → 税理士\n- 売却査定・媒介 → 四葉不動産株式会社\n\n四葉行政書士事務所と四葉不動産株式会社は別事業体・別契約で対応します。当事務所は紹介料を受け取りません。\n\n相続した土地の売却・管理は[相続不動産の完全ガイド（四葉不動産）](/souzoku)をご覧ください。四葉不動産株式会社は四葉行政書士事務所とは別事業体・別契約で対応します。\n\n## 国庫帰属できる土地・できない土地も事前に確認\n\n制度を利用できる人、共有者全員共同、却下事由、不承認事由、建物付き土地などの詳しい説明は[相続土地国庫帰属制度と相続放棄](/legal/column/souzoku-tochi-kokko-kizoku)をご覧ください。\n\n財産調査は[相続財産の調査と財産目録](/legal/column/souzoku-zaisan-mokuroku)、相続手続きの期限は[相続手続きの期限まとめ](/legal/column/souzoku-kigen-matome)、相続登記は[相続登記はどう進める？](/legal/column/souzoku-touki-nagare)をご覧ください。受任の流れは[受任の流れ](/legal/nagare)、料金は[報酬額表](/legal/ryokin)、相続業務の全体像は[相続・遺言・信託サービス](/legal/services/inheritance)をご覧ください。\n\n## よくある質問\n\n**Q. 国庫帰属は申請から何か月かかりますか？**\nA. 承認申請後の審査の標準処理期間は8か月とされています。ただし、申請内容、実地調査、天候、土地の状況、補正などによって8か月を超えることがあります。\n\n**Q. 8か月で必ず国庫帰属できますか？**\nA. 8か月で必ず終わるわけではありません。また、承認後は負担金通知から30日以内の納付が必要で、納付時に国庫へ帰属します。\n\n**Q. 10筆の土地なら審査手数料はいくらですか？**\nA. 審査手数料は各筆14,000円のため、10筆なら140,000円です。複数筆でも軽減はありません。これは審査手数料だけの金額です。\n\n**Q. 負担金は必ず20万円ですか？**\nA. 20万円が基本ですが、市街化区域等の一定の宅地・農地、森林などでは面積に応じて20万円を超える場合があります。\n\n**Q. 隣り合う複数の土地なら負担金をまとめられますか？**\nA. 隣接する2筆以上の土地が同じ種目である場合、申出により一つの土地とみなして負担金を算定できる特例があります。自動適用ではなく、承認申請書の提出時から承認されるまでに申し出ます。審査手数料は各筆14,000円のままです。\n\n**Q. 申請中も草刈りなどの管理が必要ですか？**\nA. 申請後も、承認通知後も、負担金を納付するまでは土地所有権は申請者にあります。草刈り等を含め、申請者が管理します。\n\n**Q. 承認後30日以内に負担金を払わないとどうなりますか？**\nA. 承認は失効します。再度国庫帰属を希望する場合は、最初から申請し直す必要があります。以前の審査手数料も返還されません。\n\n**Q. 国庫帰属したら翌年の固定資産税は必ずかからない？**\nA. 固定資産税は、1月1日時点の固定資産課税台帳上の所有者によるものです。年末に国庫帰属し、国への登記が翌年1月となった場合には、翌年度分を従前の所有者が負担する場合があります。個別の課税関係は自治体等へ確認してください。\n\n## この記事の出典（一次情報）\n\n- 法務省「相続土地国庫帰属制度の概要」\n- 法務省「相続土地国庫帰属制度に関するQ&A」\n- 法務省「相続土地国庫帰属制度の負担金」\n- 法務省「相続土地国庫帰属制度の相談対応について」\n- 東京法務局「相続土地国庫帰属制度」（標準処理期間8か月）\n- 相続土地国庫帰属法\n- 相続土地国庫帰属法施行令\n\n本記事は一般的な情報提供であり、個別の国庫帰属申請の処理期間、負担金額、承認の可否、費用総額を保証するものではありません。国庫帰属申請の最終的な承認・不承認、費用算定は法務局の審査・通知によるものです。国庫帰属申請書等の作成は行政書士・司法書士・弁護士、相続登記は司法書士又は弁護士、土地の筆界に関する調査・測量、表示に関する登記等は土地家屋調査士、個別法的紛争は弁護士、税務は税理士、売却査定・媒介は四葉不動産株式会社が、それぞれ独立した事業体として別契約で対応します。当事務所は紹介料を受け取りません。個別の判断は、面談のうえ資格者が行います。執筆は[浦松 丈二](/about/uramatsu)（行政書士・宅地建物取引士）です。",
+    "status": "published",
+    "author": {
+      "name": "浦松 丈二",
+      "title": "行政書士・宅地建物取引士（四葉行政書士事務所／四葉不動産株式会社）"
+    },
+    "keywords": [
+      "相続土地国庫帰属 費用",
+      "国庫帰属 審査手数料",
+      "国庫帰属 負担金",
+      "国庫帰属 期間 8か月",
+      "国庫帰属 隣接土地 負担金",
+      "国庫帰属 固定資産税"
+    ],
+    "tags": [
+      "相続土地国庫帰属",
+      "国庫帰属",
+      "費用",
+      "期間",
+      "負担金",
+      "審査手数料"
+    ],
+    "locales": [
+      "ja",
+      "en",
+      "zh-tw",
+      "zh"
+    ],
+    "faq": [
+      {
+        "question": "国庫帰属は申請から何か月かかりますか？",
+        "answer": "承認申請後の審査の標準処理期間は8か月とされています。ただし、申請内容、実地調査、天候、土地の状況、補正などによって8か月を超えることがあります。"
+      },
+      {
+        "question": "8か月で必ず国庫帰属できますか？",
+        "answer": "8か月で必ず終わるわけではありません。また、承認後は負担金通知から30日以内の納付が必要で、納付時に国庫へ帰属します。"
+      },
+      {
+        "question": "10筆の土地なら審査手数料はいくらですか？",
+        "answer": "審査手数料は各筆14,000円のため、10筆なら140,000円です。複数筆でも軽減はありません。これは審査手数料だけの金額です。"
+      },
+      {
+        "question": "負担金は必ず20万円ですか？",
+        "answer": "20万円が基本ですが、市街化区域等の一定の宅地・農地、森林などでは面積に応じて20万円を超える場合があります。"
+      },
+      {
+        "question": "隣り合う複数の土地なら負担金をまとめられますか？",
+        "answer": "隣接する2筆以上の土地が同じ種目である場合、申出により一つの土地とみなして負担金を算定できる特例があります。自動適用ではなく、承認申請書の提出時から承認されるまでに申し出ます。審査手数料は各筆14,000円のままです。"
+      },
+      {
+        "question": "申請中も草刈りなどの管理が必要ですか？",
+        "answer": "申請後も、承認通知後も、負担金を納付するまでは土地所有権は申請者にあります。草刈り等を含め、申請者が管理します。"
+      },
+      {
+        "question": "承認後30日以内に負担金を払わないとどうなりますか？",
+        "answer": "承認は失効します。再度国庫帰属を希望する場合は、最初から申請し直す必要があります。以前の審査手数料も返還されません。"
+      },
+      {
+        "question": "国庫帰属したら翌年の固定資産税は必ずかからない？",
+        "answer": "固定資産税は、1月1日時点の固定資産課税台帳上の所有者によるものです。年末に国庫帰属し、国への登記が翌年1月となった場合には、翌年度分を従前の所有者が負担する場合があります。個別の課税関係は自治体等へ確認してください。"
+      }
+    ],
+    "translations": {
+      "en": {
+        "title": "Costs and duration of reversion of inherited land to the national treasury: review fee, burden charge and the standard processing period of eight months",
+        "excerpt": "Reversion of inherited land to the national treasury involves a review fee and a burden charge. The review fee is 14,000 yen per parcel. The burden charge is 200,000 yen as a basis but may exceed that depending on the type and area of the land. This article explains the costs, the standard processing period of eight months and the timing of payment.",
+        "category": "Inheritance Procedures (From the Practice of an Administrative Scrivener)",
+        "content": "**In short:** reversion of inherited land to the national treasury involves two stages of costs: a review fee at application and a burden charge after approval. The review fee is 14,000 yen per parcel. The burden charge is 200,000 yen as a basis, but may exceed 200,000 yen for certain residential or agricultural land in an urbanisation promotion area, forest and other land depending on the area. The standard processing period for examination after an application for approval is stated as eight months, but may exceed eight months depending on the application content, on-site inspection, land conditions, correction and other matters. After approval, the burden charge must be paid within 30 days from the day after the notice of the burden charge arrives, and ownership of the land reverts to the national treasury at the time of payment. The individual processing period, burden charge and result are decided by the Legal Affairs Bureau, and our office does not guarantee them.\n\n## Costs consist of two stages: the review fee and the burden charge\n\nThe costs of reversion to the national treasury are broadly divided into the following two.\n\n| Stage | Cost | Timing of payment |\n| --- | --- | --- |\n| At application | Review fee | Paid by affixing a revenue stamp to the application |\n| After approval | Burden charge | Within 30 days from the day after the notice of the burden charge arrives |\n\nIn addition, costs such as fees for obtaining family registers, postage, fees for document preparation by an administrative scrivener or another professional, and fees for survey and measurement by a land and house investigator may arise depending on the case.\n\n## The review fee is 14,000 yen per parcel\n\nThe review fee is **14,000 yen per parcel of land**. It is paid by affixing a revenue stamp to the application.\n\nThe review fee is not refunded even if the application is withdrawn, rejected or not approved. There is no reduction of the review fee even if several parcels are applied for together.\n\nFor example, if ten parcels are applied for, the review fee is 14,000 yen × 10 = 140,000 yen. However, this is only the review fee and does not include the burden charge or other costs.\n\n## The burden charge is 200,000 yen as a basis, but may increase depending on the type and area of land\n\nThe burden charge is 200,000 yen as a basis. However, certain residential land in an urbanisation promotion area, certain agricultural land in an urbanisation promotion area, forest and other land may exceed 200,000 yen depending on the area.\n\nThe burden charge is calculated in consideration of the standard management costs for ten years, by type of state-owned land, for the land that the national government will manage. It is not the case that \"any land costs 200,000 yen\".\n\n## The area is based on the registered land area\n\nWhen the burden charge is calculated according to area, the area used is **the registered land area** under the Ministry of Justice Q&A. It is not an area measured visually from the current state.\n\nIf the current area differs from the registered area, the Ministry of Justice Q&A states that, in principle, registration of area correction or area change should be made before approval. In that case, additional costs and preparation time for survey, measurement and registration of description may arise. For survey, measurement and registration of description, consult a land and house investigator.\n\n## Multiple adjacent parcels may be combined for the burden charge\n\nIf two or more adjacent parcels are of the **same type**, there is a special rule that, **upon a request**, they are regarded as one parcel and the burden charge is calculated. The special rule is not automatically applied.\n\nThe request may be made from the time of submitting the approval application until approval.\n\nDo not confuse the following.\n\n- Review fee → 14,000 yen per parcel remains unchanged\n- Burden charge → a special rule for combined calculation exists for certain adjacent parcels\n- In the area-proportional type, the areas of the target parcels are added together\n\n## Do not assert the \"total cost\"\n\nThe main system costs are the review fee and the burden charge. Apart from these, the following costs may arise depending on the case.\n\n- Fees for obtaining family registers and the like\n- Fees for obtaining a seal certificate and the like\n- Postage\n- Fees for document preparation by an administrative scrivener or another professional\n- Fees for survey and measurement by a land and house investigator\n- Costs to arrange the condition of the land to satisfy the application requirements\n\nIt cannot be said that \"the total will certainly be 234,000 yen\". Survey or demolition is not required in every case.\n\n## Consider the period in three stages\n\nThe period for reversion to the national treasury can be divided into the following three stages.\n\n### A. Before application\n\nPrior consultation, confirmation of the land, boundary and rights, collection of materials, and preparation of the application and attached materials are carried out. The required period differs by case. Prior consultation is recommended, but there is no statutory deadline from consultation to application.\n\n### B. After application\n\n**The standard processing period for examination after an application for approval is eight months**. This is a guide to the ordinary examination period. Document examination and, as necessary, on-site inspection are carried out.\n\nHowever, it may exceed eight months depending on the application content, on-site inspection, weather, land conditions, correction and other matters. The system does not automatically approve after eight months. Some Legal Affairs Bureaus state that the period required for correction of an application is not included in the standard processing period.\n\n### C. After approval\n\nThe approval notice and the notice of payment of the burden charge arrive. The burden charge must be paid within 30 days from the day after the notice of the burden charge arrives. At the time the burden charge is paid, ownership of the land reverts to the national treasury.\n\nIt is not the case that \"it will certainly finish in eight months\" or \"the land will certainly revert eight months after application\".\n\n## The applicant manages the land even during and after the examination\n\nEven after the application and after the approval notice, until the burden charge is paid, ownership of the land remains with the applicant. During that period, the applicant manages the land, including cutting grass and similar work.\n\nIt is not the case that \"an application releases the applicant from the management obligation\".\n\n## What happens if the burden charge is not paid?\n\nIf the burden charge is not paid within 30 days from the day after the notice of the burden charge arrives, the approval lapses.\n\nTo seek reversion of the same land again, the applicant must apply again from the beginning. In that case, the previous review fee is not refunded. Ownership of the land does not move to the national government at the time of the approval notice, but at the time the burden charge is paid.\n\n## What an administrative scrivener can and cannot do\n\nThe applicant is the person concerned or a statutory agent. The entire application procedure cannot be delegated to a voluntary agent.\n\nThe professionals who can prepare the application and attached documents as a business are attorneys, judicial scriveners and administrative scriveners. Yotsuba Administrative Scrivener Office prepares the application and attached documents in the applicant's own name and collects and organises the required materials.\n\nThe office does not guarantee the time of approval, shortening of the processing period, the amount of the burden charge or the result of approval.\n\n## How the work of specialists is divided\n\n- Preparation of the reversion application and related documents → an administrative scrivener, judicial scrivener or attorney\n- Inheritance registration → a judicial scrivener or attorney\n- Investigation and survey of parcel boundaries, registration of description and similar matters → a land and house investigator\n- Individual legal disputes → an attorney\n- Tax → a tax accountant\n- Sale appraisal and brokerage → Yotsuba Real Estate Co., Ltd.\n\nYotsuba Administrative Scrivener Office and Yotsuba Real Estate Co., Ltd. handle their work under separate businesses and separate contracts. Our office receives no referral fee.\n\n## Also confirm in advance which land can or cannot revert to the national treasury\n\nFor details on who can use the system, joint application by all co-owners, grounds for rejection, grounds for non-approval and land with a building, see [The system for reversion of inherited land to the national treasury and renunciation of inheritance](https://luck428.com/legal/column/souzoku-tochi-kokko-kizoku).\n\nFor estate investigation, see [Investigating the inherited estate and preparing an inventory of assets](https://luck428.com/legal/column/souzoku-zaisan-mokuroku); for inheritance procedure deadlines, see [A guide to inheritance procedure deadlines](https://luck428.com/legal/column/souzoku-kigen-matome); and for inheritance registration, see [How to proceed with inheritance registration](https://luck428.com/legal/column/souzoku-touki-nagare). For the flow of engagement, see [Engagement Flow](https://luck428.com/legal/nagare); for fees, see [Fee Schedule](https://luck428.com/legal/ryokin); and for the whole picture, see [Inheritance, Wills and Trusts](https://luck428.com/legal/services/inheritance).\n\n## FAQ\n\n**Q. How many months does reversion take from application?**\nA. The standard processing period for examination after an application for approval is stated as eight months. However, it may exceed eight months depending on the application content, on-site inspection, weather, land conditions, correction and other matters.\n\n**Q. Will reversion certainly be completed in eight months?**\nA. It will not certainly finish in eight months. After approval, the burden charge must be paid within 30 days from the notice, and reversion occurs at the time of payment.\n\n**Q. How much is the review fee for ten parcels?**\nA. The review fee is 14,000 yen per parcel, so 140,000 yen for ten parcels. There is no reduction for several parcels. This is only the review fee.\n\n**Q. Is the burden charge always 200,000 yen?**\nA. 200,000 yen is the basis, but certain residential or agricultural land in an urbanisation promotion area, forest and other land may exceed 200,000 yen depending on the area.\n\n**Q. Can the burden charge be combined for several adjacent parcels?**\nA. If two or more adjacent parcels are of the same type, a request may regard them as one parcel and calculate the burden charge. The special rule is not automatic; the request is made from submission of the approval application until approval. The review fee remains 14,000 yen per parcel.\n\n**Q. Must I manage the land, such as cutting grass, during the application?**\nA. Even after the application and after the approval notice, until the burden charge is paid, ownership of the land remains with the applicant, and the applicant manages the land, including cutting grass and similar work.\n\n**Q. What happens if the burden charge is not paid within 30 days after approval?**\nA. The approval lapses. To seek reversion again, the applicant must apply again from the beginning. The previous review fee is not refunded.\n\n**Q. After reversion, will fixed asset tax always cease in the following year?**\nA. Fixed asset tax is borne by the owner on the fixed asset tax ledger as of 1 January. If the land reverts at the end of the year and registration in the national government's name is made in January of the following year, the former owner may bear the following year's tax. Confirm individual tax treatment with the municipality or other authority.\n\n## Sources (Primary Information)\n\n- Ministry of Justice, \"Overview of the system for reversion of inherited land to the national treasury\"\n- Ministry of Justice, \"Q&A on the system for reversion of inherited land to the national treasury\"\n- Ministry of Justice, \"Burden charge under the system for reversion of inherited land to the national treasury\"\n- Ministry of Justice, \"Consultation under the system for reversion of inherited land to the national treasury\"\n- Tokyo Legal Affairs Bureau, \"System for reversion of inherited land to the national treasury\" (standard processing period of eight months)\n- Act on Reversion of Ownership of Land Acquired by Inheritance and Other Grounds to the National Treasury\n- Order for Enforcement of the Act on Reversion of Ownership of Land Acquired by Inheritance and Other Grounds to the National Treasury\n\nThis article is general information and does not guarantee the processing period, burden charge, approval or total cost of any individual reversion application. The final approval or non-approval and cost calculation of a reversion application are made by the Legal Affairs Bureau. Preparation of the reversion application and related documents is handled by an administrative scrivener, judicial scrivener or attorney; inheritance registration by a judicial scrivener or attorney; survey and measurement of parcel boundaries and registration of description by a land and house investigator; individual legal disputes by an attorney; tax by a tax accountant; and sale appraisal and brokerage by Yotsuba Real Estate Co., Ltd., each as an independent business under a separate contract. Our office receives no referral fee. Individual judgements are made by a qualified professional after a meeting. Written by [Joji Uramatsu](https://luck428.com/about/uramatsu), administrative scrivener and licensed real estate broker.",
+        "faq": [
+          {
+            "question": "How many months does reversion take from application?",
+            "answer": "The standard processing period for examination after an application for approval is stated as eight months. However, it may exceed eight months depending on the application content, on-site inspection, weather, land conditions, correction and other matters."
+          },
+          {
+            "question": "Will reversion certainly be completed in eight months?",
+            "answer": "It will not certainly finish in eight months. After approval, the burden charge must be paid within 30 days from the notice, and reversion occurs at the time of payment."
+          },
+          {
+            "question": "How much is the review fee for ten parcels?",
+            "answer": "The review fee is 14,000 yen per parcel, so 140,000 yen for ten parcels. There is no reduction for several parcels. This is only the review fee."
+          },
+          {
+            "question": "Is the burden charge always 200,000 yen?",
+            "answer": "200,000 yen is the basis, but certain residential or agricultural land in an urbanisation promotion area, forest and other land may exceed 200,000 yen depending on the area."
+          },
+          {
+            "question": "Can the burden charge be combined for several adjacent parcels?",
+            "answer": "If two or more adjacent parcels are of the same type, a request may regard them as one parcel and calculate the burden charge. The special rule is not automatic; the request is made from submission of the approval application until approval. The review fee remains 14,000 yen per parcel."
+          },
+          {
+            "question": "Must I manage the land, such as cutting grass, during the application?",
+            "answer": "Even after the application and after the approval notice, until the burden charge is paid, ownership of the land remains with the applicant, and the applicant manages the land, including cutting grass and similar work."
+          },
+          {
+            "question": "What happens if the burden charge is not paid within 30 days after approval?",
+            "answer": "The approval lapses. To seek reversion again, the applicant must apply again from the beginning. The previous review fee is not refunded."
+          },
+          {
+            "question": "After reversion, will fixed asset tax always cease in the following year?",
+            "answer": "Fixed asset tax is borne by the owner on the fixed asset tax ledger as of 1 January. If the land reverts at the end of the year and registration in the national government's name is made in January of the following year, the former owner may bear the following year's tax. Confirm individual tax treatment with the municipality or other authority."
+          }
+        ]
+      },
+      "zh-tw": {
+        "title": "繼承土地國庫歸屬的費用與期間──審查手續費・負擔金・標準處理期間8個月",
+        "excerpt": "繼承土地國庫歸屬有審查手續費與負擔金。審查手續費每筆土地14,000日圓。負擔金基本20萬日圓，但依土地種目・面積可能超過。本文整理費用、標準處理期間8個月與繳納時點。",
+        "category": "繼承手續（行政書士實務）",
+        "content": "**結論（先說要點）**：繼承土地國庫歸屬有申請時審查手續費與承認後負擔金兩階段費用。審查手續費每筆土地14,000日圓。負擔金基本20萬日圓，但市街化區域等一定宅地・農地、森林等依面積可能超過20萬日圓。承認申請後審查之標準處理期間為8個月，惟依申請內容・實地調查・土地狀況・補正等可能超過8個月。承認後，應於負擔金通知到達日之翌日起30日內繳納，繳納時土地所有權歸屬國庫。個別處理期間・負擔金額・承認結果由法務局審查，本事務所不保證。\n\n## 費用分為「審查手續費」與「負擔金」兩階段\n\n國庫歸屬費用大致分為下列兩項。\n\n| 階段 | 費用 | 繳納時期 |\n| --- | --- | --- |\n| 申請時 | 審查手續費 | 於申請書貼收入印花繳納 |\n| 承認後 | 負擔金 | 負擔金通知到達日之翌日起30日內 |\n\n另依案件可能發生戶籍等取得費、郵資、行政書士等文件製作報酬、土地家屋調查士調查・測量費等。\n\n## 審查手續費每筆土地14,000日圓\n\n審查手續費為**每筆土地14,000日圓**。於申請書貼收入印花繳納。\n\n撤回、駁回、不承認時，審查手續費不退還。多筆同時申請亦無減免。\n\n例如申請10筆土地，審查手續費為「14,000日圓×10＝140,000日圓」。惟此僅審查手續費，不含負擔金及其他費用。\n\n## 負擔金基本20萬日圓，但依土地種目・面積可能增加\n\n負擔金基本20萬日圓。惟市街化區域等一定宅地、市街化區域等一定農地、森林等，依面積可能超過20萬日圓。\n\n負擔金係就國家將管理之土地，依國有地種目別之10年標準管理費用考量計算。並非「任何土地都20萬日圓」。\n\n## 面積以登記記錄上之地積為基準\n\n依面積計算負擔金時，依法務省Q&A以**登記記錄上之地積**為基準。並非目測現況面積。\n\n現況面積與登記地積不同時，法務省Q&A表示原則上應於承認前辦理地積更正或地積變更登記。此時可能因土地調查・測量、地積更正等表示登記發生追加費用與準備期間。調查・測量、表示登記請向土地家屋調查士確認。\n\n## 相鄰多筆土地可能合併計算負擔金\n\n相鄰2筆以上土地為**相同種目**時，**經申出**可視為一筆土地計算負擔金之特例。並非自動適用。\n\n申出期間為承認申請書提出時至承認為止。\n\n勿混淆下列事項。\n\n- 審查手續費 → 每筆14,000日圓不變\n- 負擔金 → 一定相鄰土地有合併計算特例\n- 面積比例型 → 合算對象土地面積計算\n\n## 不臆斷「總費用」\n\n制度主要費用為審查手續費與負擔金。另依案件可能發生下列費用。\n\n- 戶籍等取得費\n- 印鑑證明書等取得費\n- 郵資\n- 行政書士等文件製作報酬\n- 土地家屋調查士調查・測量費\n- 為符合申請要件整理土地狀態之費用\n\n不能稱「總額234,000日圓必完成」。測量・拆除等亦非所有案件必要。\n\n## 期間分三階段思考\n\n國庫歸屬期間可分下列三階段。\n\n### A 申請前\n\n進行事前諮詢、土地・境界・權利關係確認、資料收集、申請書・附件製作。所需期間依案件而異。事前諮詢建議進行，但諮詢至申請無法定期限。\n\n### B 申請後\n\n**承認申請後審查之標準處理期間為8個月**。此為通常審查期間之基準。進行書面調查、必要時實地調查等。\n\n惟依申請內容、實地調查、天候、土地狀況、補正等可能超過8個月。並非經過8個月即自動承認。部分法務局表示申請補正所需期間不計入標準處理期間。\n\n### C 承認後\n\n收到承認通知與負擔金繳納告知書。應於負擔金通知到達日之翌日起30日內繳納。繳納負擔金時，土地所有權歸屬國庫。\n\n並非「8個月必完成」「申請後8個月必國庫歸屬」。\n\n## 申請中・承認後土地管理仍為申請人責任\n\n申請後、承認通知後，至繳納負擔金前，土地所有權仍屬申請人。此期間含除草等土地管理由申請人負責。\n\n並非「申請即免除管理義務」。\n\n## 未繳納負擔金會如何？\n\n未於負擔金通知到達日之翌日起30日內繳納，承認失效。\n\n欲就同一土地再次國庫歸屬，須從頭重新申請。該情形先前審查手續費亦不退還。所有權移轉國家係於負擔金繳納時，而非承認通知時。\n\n## 行政書士可協助與不可協助之事項\n\n申請主體為本人或法定代理人。任意代理人不得代理申請手續全部。\n\n可業為製作申請書・附件文件之資格者為律師・司法書士・行政書士。四葉行政書士事務所製作申請者本人名義之申請書・附件文件，並收集・整理必要資料。\n\n不保證承認時期、縮短處理期間、負擔金額、承認結果。\n\n## 專業人士分工\n\n- 國庫歸屬申請書等製作 → 行政書士・司法書士・律師\n- 繼承登記 → 司法書士或律師\n- 土地筆界調查・測量、表示登記等 → 土地家屋調查士\n- 個別法律紛爭 → 律師\n- 稅務 → 稅理士\n- 出售估價・仲介 → 四葉不動產株式會社\n\n四葉行政書士事務所與四葉不動產株式會社為別事業體・別契約，分別處理。本事務所不收取介紹費。\n\n## 可國庫歸屬・不可國庫歸屬之土地亦應事先確認\n\n制度利用者、全體共有人共同申請、駁回事由、不承認事由、有建物土地等詳情，見[繼承土地國庫歸屬制度與拋棄繼承](https://luck428.com/legal/column/souzoku-tochi-kokko-kizoku)。\n\n財產調查見[繼承財產調查與財產目錄製作](https://luck428.com/legal/column/souzoku-zaisan-mokuroku)；繼承手續期限見[繼承手續期限整理](https://luck428.com/legal/column/souzoku-kigen-matome)；繼承登記見[繼承登記如何進行？](https://luck428.com/legal/column/souzoku-touki-nagare)。受任流程見[受任流程](https://luck428.com/legal/nagare)；費用見[報酬額表](https://luck428.com/legal/ryokin)；繼承業務全貌見[繼承・遺囑・信託服務](https://luck428.com/legal/services/inheritance)。\n\n## 常見問題\n\n**Q. 國庫歸屬自申請起需幾個月？**\nA. 承認申請後審查之標準處理期間為8個月。惟依申請內容、實地調查、天候、土地狀況、補正等可能超過8個月。\n\n**Q. 8個月必可國庫歸屬嗎？**\nA. 並非8個月必完成。且承認後須於負擔金通知起30日內繳納，繳納時始國庫歸屬。\n\n**Q. 10筆土地審查手續費多少？**\nA. 每筆14,000日圓，10筆為140,000日圓。多筆亦無減免。此僅審查手續費。\n\n**Q. 負擔金必為20萬日圓嗎？**\nA. 20萬日圓為基本，市街化區域等一定宅地・農地、森林等依面積可能超過20萬日圓。\n\n**Q. 相鄰多筆土地可合併負擔金嗎？**\nA. 相鄰2筆以上土地為相同種目時，可申出視為一筆計算負擔金。非自動適用，申出期間為承認申請書提出時至承認為止。審查手續費每筆14,000日圓不變。\n\n**Q. 申請中亦須除草等管理嗎？**\nA. 申請後、承認通知後，至繳納負擔金前，土地所有權仍屬申請人，含除草等管理由申請人負責。\n\n**Q. 承認後30日內未繳納負擔金會如何？**\nA. 承認失效。欲再次國庫歸屬，須從頭重新申請。先前審查手續費亦不退還。\n\n**Q. 國庫歸屬後翌年固定資產稅必不課徵？**\nA. 固定資產稅依1月1日時點固定資產課稅台帳上之所有者。若年末國庫歸屬，國名義登記於翌年1月，翌年度可能由原所有人負擔。個別課稅請向自治體等確認。\n\n## 本文出處（一次資訊）\n\n- 法務省「繼承土地國庫歸屬制度概要」\n- 法務省「繼承土地國庫歸屬制度Q&A」\n- 法務省「繼承土地國庫歸屬制度之負擔金」\n- 法務省「繼承土地國庫歸屬制度之諮詢對應」\n- 東京法務局「繼承土地國庫歸屬制度」（標準處理期間8個月）\n- 繼承土地國庫歸屬法\n- 繼承土地國庫歸屬法施行令\n\n本文為一般資訊提供，不保證個別國庫歸屬申請之處理期間、負擔金額、承認可否、總費用。國庫歸屬申請最終承認・不承認、費用計算由法務局審查・通知。國庫歸屬申請書等製作屬行政書士・司法書士・律師；繼承登記屬司法書士或律師；土地筆界調查・測量、表示登記等屬土地家屋調查士；個別法律紛爭屬律師；稅務屬稅理士；出售估價・仲介屬四葉不動產株式會社，均為獨立的事業體，以個別契約處理。本事務所不收取介紹費。個別判斷由資格者面談後進行。執筆者為[浦松丈二](https://luck428.com/about/uramatsu)（行政書士・宅地建物交易士）。",
+        "faq": [
+          {
+            "question": "國庫歸屬自申請起需幾個月？",
+            "answer": "承認申請後審查之標準處理期間為8個月。惟依申請內容、實地調查、天候、土地狀況、補正等可能超過8個月。"
+          },
+          {
+            "question": "8個月必可國庫歸屬嗎？",
+            "answer": "並非8個月必完成。且承認後須於負擔金通知起30日內繳納，繳納時始國庫歸屬。"
+          },
+          {
+            "question": "10筆土地審查手續費多少？",
+            "answer": "每筆14,000日圓，10筆為140,000日圓。多筆亦無減免。此僅審查手續費。"
+          },
+          {
+            "question": "負擔金必為20萬日圓嗎？",
+            "answer": "20萬日圓為基本，市街化區域等一定宅地・農地、森林等依面積可能超過20萬日圓。"
+          },
+          {
+            "question": "相鄰多筆土地可合併負擔金嗎？",
+            "answer": "相鄰2筆以上土地為相同種目時，可申出視為一筆計算負擔金。非自動適用，申出期間為承認申請書提出時至承認為止。審查手續費每筆14,000日圓不變。"
+          },
+          {
+            "question": "申請中亦須除草等管理嗎？",
+            "answer": "申請後、承認通知後，至繳納負擔金前，土地所有權仍屬申請人，含除草等管理由申請人負責。"
+          },
+          {
+            "question": "承認後30日內未繳納負擔金會如何？",
+            "answer": "承認失效。欲再次國庫歸屬，須從頭重新申請。先前審查手續費亦不退還。"
+          },
+          {
+            "question": "國庫歸屬後翌年固定資產稅必不課徵？",
+            "answer": "固定資產稅依1月1日時點固定資產課稅台帳上之所有者。若年末國庫歸屬，國名義登記於翌年1月，翌年度可能由原所有人負擔。個別課稅請向自治體等確認。"
+          }
+        ]
+      },
+      "zh": {
+        "title": "继承土地国库归属的费用与期间──审查手续费・负担金・标准处理期间8个月",
+        "excerpt": "继承土地国库归属有审查手续费与负担金。审查手续费每笔土地14,000日元。负担金基本20万日元，但依土地种类・面积可能超过。本文整理费用、标准处理期间8个月与缴纳时点。",
+        "category": "继承手续（行政书士实务）",
+        "content": "**结论（先说要点）**：继承土地国库归属有申请时审查手续费与承认后负担金两阶段费用。审查手续费每笔土地14,000日元。负担金基本20万日元，但市街化区域等一定宅地・农地、森林等依面积可能超过20万日元。承认申请后审查之标准处理期间为8个月，惟依申请内容・实地调查・土地状况・补正等可能超过8个月。承认后，应于负担金通知到达日之翌日起30日内缴纳，缴纳时土地所有权归属国库。个别处理期间・负担金额・承认结果由法务局审查，本事务所不保证。\n\n## 费用分为“审查手续费”与“负担金”两阶段\n\n国库归属费用大致分为下列两项。\n\n| 阶段 | 费用 | 缴纳时期 |\n| --- | --- | --- |\n| 申请时 | 审查手续费 | 于申请书贴收入印花缴纳 |\n| 承认后 | 负担金 | 负担金通知到达日之翌日起30日内 |\n\n另依案件可能发生户籍等取得费、邮资、行政书士等文件制作报酬、土地家屋调查士调查・测量费等。\n\n## 审查手续费每笔土地14,000日元\n\n审查手续费为**每笔土地14,000日元**。于申请书贴收入印花缴纳。\n\n撤回、驳回、不承认时，审查手续费不退还。多笔同时申请亦无减免。\n\n例如申请10笔土地，审查手续费为“14,000日元×10＝140,000日元”。惟此仅审查手续费，不含负担金及其他费用。\n\n## 负担金基本20万日元，但依土地种类・面积可能增加\n\n负担金基本20万日元。惟市街化区域等一定宅地、市街化区域等一定农地、森林等，依面积可能超过20万日元。\n\n负担金系就国家将管理之土地，依国有地种类别之10年标准管理费用考量计算。并非“任何土地都20万日元”。\n\n## 面积以登记记录上之地积为基准\n\n依面积计算负担金时，依法务省Q&A以**登记记录上之地积**为基准。并非目测现况面积。\n\n现况面积与登记地积不同时，法务省Q&A表示原则上应于承认前办理地积更正或地积变更登记。此时可能因土地调查・测量、地积更正等表示登记发生追加费用与准备期间。调查・测量、表示登记请向土地家屋调查士确认。\n\n## 相邻多笔土地可能合并计算负担金\n\n相邻2笔以上土地为**相同种类**时，**经申出**可视为一笔土地计算负担金之特例。并非自动适用。\n\n申出期间为承认申请书提出时至承认为止。\n\n勿混淆下列事项。\n\n- 审查手续费 → 每笔14,000日元不变\n- 负担金 → 一定相邻土地有合并计算特例\n- 面积比例型 → 合算对象土地面积计算\n\n## 不臆断“总费用”\n\n制度主要费用为审查手续费与负担金。另依案件可能发生下列费用。\n\n- 户籍等取得费\n- 印章证明书等取得费\n- 邮资\n- 行政书士等文件制作报酬\n- 土地家屋调查士调查・测量费\n- 为符合申请要件整理土地状态之费用\n\n不能称“总额234,000日元必完成”。测量・拆除等亦非所有案件必要。\n\n## 期间分三阶段思考\n\n国库归属期间可分下列三阶段。\n\n### A 申请前\n\n进行事前咨询、土地・边界・权利关系确认、资料收集、申请书・附件制作。所需期间依案件而异。事前咨询建议进行，但咨询至申请无法定期限。\n\n### B 申请后\n\n**承认申请后审查之标准处理期间为8个月**。此为通常审查期间之基准。进行书面调查、必要时实地调查等。\n\n惟依申请内容、实地调查、天气、土地状况、补正等可能超过8个月。并非经过8个月即自动承认。部分法务局表示申请补正所需期间不计入标准处理期间。\n\n### C 承认后\n\n收到承认通知与负担金缴纳告知书。应于负担金通知到达日之翌日起30日内缴纳。缴纳负担金时，土地所有权归属国库。\n\n并非“8个月必完成”“申请后8个月必国库归属”。\n\n## 申请中・承认后土地管理仍为申请人责任\n\n申请后、承认通知后，至缴纳负担金前，土地所有权仍属申请人。此期间含除草等土地管理由申请人负责。\n\n并非“申请即免除管理义务”。\n\n## 未缴纳负担金会如何？\n\n未于负担金通知到达日之翌日起30日内缴纳，承认失效。\n\n欲就同一土地再次国库归属，须从头重新申请。该情形先前审查手续费亦不退还。所有权移转国家系于负担金缴纳时，而非承认通知时。\n\n## 行政书士可协助与不可协助之事项\n\n申请主体为本人或法定代理人。任意代理人不得代理申请手续全部。\n\n可业为制作申请书・附件文件之资格者为律师・司法书士・行政书士。四叶行政书士事务所制作申请者本人名义之申请书・附件文件，并收集・整理必要资料。\n\n不保证承认时期、缩短处理期间、负担金额、承认结果。\n\n## 专业人士分工\n\n- 国库归属申请书等制作 → 行政书士・司法书士・律师\n- 继承登记 → 司法书士或律师\n- 土地笔界调查・测量、表示登记等 → 土地家屋调查士\n- 个别法律纠纷 → 律师\n- 税务 → 税理士\n- 出售估价・中介 → 四叶不动产株式会社\n\n四叶行政书士事务所与四叶不动产株式会社为别事业体・别合同，分别处理。本事务所不收取介绍费。\n\n## 可国库归属・不可国库归属之土地亦应事先确认\n\n制度利用者、全体共有人共同申请、驳回事由、不承认事由、有建物土地等详情，见[继承土地国库归属制度与放弃继承](https://luck428.com/legal/column/souzoku-tochi-kokko-kizoku)。\n\n财产调查见[继承财产调查与财产目录制作](https://luck428.com/legal/column/souzoku-zaisan-mokuroku)；继承手续期限见[继承手续期限整理](https://luck428.com/legal/column/souzoku-kigen-matome)；继承登记见[继承登记如何进行？](https://luck428.com/legal/column/souzoku-touki-nagare)。受任流程见[受任流程](https://luck428.com/legal/nagare)；费用见[报酬额表](https://luck428.com/legal/ryokin)；继承业务全貌见[继承・遗嘱・信托服务](https://luck428.com/legal/services/inheritance)。\n\n## 常见问题\n\n**Q. 国库归属自申请起需几个月？**\nA. 承认申请后审查之标准处理期间为8个月。惟依申请内容、实地调查、天气、土地状况、补正等可能超过8个月。\n\n**Q. 8个月必可国库归属吗？**\nA. 并非8个月必完成。且承认后须于负担金通知起30日内缴纳，缴纳时始国库归属。\n\n**Q. 10笔土地审查手续费多少？**\nA. 每笔14,000日元，10笔为140,000日元。多笔亦无减免。此仅审查手续费。\n\n**Q. 负担金必为20万日元吗？**\nA. 20万日元为基本，市街化区域等一定宅地・农地、森林等依面积可能超过20万日元。\n\n**Q. 相邻多笔土地可合并负担金吗？**\nA. 相邻2笔以上土地为相同种类时，可申出视为一笔计算负担金。非自动适用，申出期间为承认申请书提出时至承认为止。审查手续费每笔14,000日元不变。\n\n**Q. 申请中亦须除草等管理吗？**\nA. 申请后、承认通知后，至缴纳负担金前，土地所有权仍属申请人，含除草等管理由申请人负责。\n\n**Q. 承认后30日内未缴纳负担金会如何？**\nA. 承认失效。欲再次国库归属，须从头重新申请。先前审查手续费亦不退还。\n\n**Q. 国库归属后翌年固定资产税必不课征？**\nA. 固定资产税依1月1日时点固定资产课税台账上之所有者。若年末国库归属，国家名义登记于翌年1月，翌年度可能由原所有人负担。个别课税请向自治体等确认。\n\n## 本文出处（一次信息）\n\n- 法务省“继承土地国库归属制度概要”\n- 法务省“继承土地国库归属制度Q&A”\n- 法务省“继承土地国库归属制度之负担金”\n- 法务省“继承土地国库归属制度之咨询对应”\n- 东京法务局“继承土地国库归属制度”（标准处理期间8个月）\n- 继承土地国库归属法\n- 继承土地国库归属法施行令\n\n本文为一般信息提供，不保证个别国库归属申请之处理期间、负担金额、承认可否、总费用。国库归属申请最终承认・不承认、费用计算由法务局审查・通知。国库归属申请书等制作属行政书士・司法书士・律师；继承登记属司法书士或律师；土地笔界调查・测量、表示登记等属土地家屋调查士；个别法律纠纷属律师；税务属税理士；出售估价・中介属四叶不动产株式会社，均为独立的事业体，以个别合同处理。本事务所不收取介绍费。个别判断由资格者面谈后进行。执笔者为[浦松丈二](https://luck428.com/about/uramatsu)（行政书士・宅地建物交易士）。",
+        "faq": [
+          {
+            "question": "国库归属自申请起需几个月？",
+            "answer": "承认申请后审查之标准处理期间为8个月。惟依申请内容、实地调查、天气、土地状况、补正等可能超过8个月。"
+          },
+          {
+            "question": "8个月必可国库归属吗？",
+            "answer": "并非8个月必完成。且承认后须于负担金通知起30日内缴纳，缴纳时始国库归属。"
+          },
+          {
+            "question": "10笔土地审查手续费多少？",
+            "answer": "每笔14,000日元，10笔为140,000日元。多笔亦无减免。此仅审查手续费。"
+          },
+          {
+            "question": "负担金必为20万日元吗？",
+            "answer": "20万日元为基本，市街化区域等一定宅地・农地、森林等依面积可能超过20万日元。"
+          },
+          {
+            "question": "相邻多笔土地可合并负担金吗？",
+            "answer": "相邻2笔以上土地为相同种类时，可申出视为一笔计算负担金。非自动适用，申出期间为承认申请书提出时至承认为止。审查手续费每笔14,000日元不变。"
+          },
+          {
+            "question": "申请中亦须除草等管理吗？",
+            "answer": "申请后、承认通知后，至缴纳负担金前，土地所有权仍属申请人，含除草等管理由申请人负责。"
+          },
+          {
+            "question": "承认后30日内未缴纳负担金会如何？",
+            "answer": "承认失效。欲再次国库归属，须从头重新申请。先前审查手续费亦不退还。"
+          },
+          {
+            "question": "国库归属后翌年固定资产税必不课征？",
+            "answer": "固定资产税依1月1日时点固定资产课税台账上之所有者。若年末国库归属，国家名义登记于翌年1月，翌年度可能由原所有人负担。个别课税请向自治体等确认。"
+          }
+        ]
+      }
+    }
   }
 ];
