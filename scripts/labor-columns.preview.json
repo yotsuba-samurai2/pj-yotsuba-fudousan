@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-16T09:42:03.836Z",
+  "generatedAt": "2026-08-19T01:22:10.320Z",
   "note": "労務コラム（4本）。報酬額表 v18 の決定と相場調査から起こした原稿md（scripts/labor-columns/）から生成。--write でupsert。",
-  "articleCount": 48,
+  "articleCount": 49,
   "verification": [
     "OK: 全チェック通過"
   ],
@@ -8709,6 +8709,185 @@
             {
               "question": "社会保险・雇用保险的手续，何时、向何处申报？",
               "answer": "需要的申报与期限，不仅依方式，也依法人・事业所存续或新设・消灭而不同。请以日本年金机构・Hello Work的一次资料个别确认。"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "business": "labor",
+      "slug": "shakaihoken-tekiyo-kakudai-2027",
+      "title": "社会保険の適用拡大、2027年10月から36人以上へ──パート・アルバイトの加入要件と会社の準備",
+      "date": "2026-09-01",
+      "category": "社会保険",
+      "excerpt": "2027年10月から、短時間労働者の社会保険加入の「企業規模要件」が「51人以上」から「36人以上」へ拡大します。規模は原則として厚生年金保険の被保険者数で判定し（法人は同一法人全体）、2029年10月21人以上、2032年10月11人以上と段階的に縮小、2035年10月に企業規模要件は撤廃されます。賃金要件（月額8.8万円以上）は2026年10月撤廃予定です。対象者と加入手続、会社が準備すべきことを整理します。",
+      "content": "**結論（先に要点）**：2027年10月から、短時間労働者の社会保険（厚生年金・健康保険）加入で「企業規模要件」が変わります。対象となる会社の範囲が、現在の「厚生年金保険の被保険者数が51人以上」から「36人以上」へ広がります。その後も2029年10月に21人以上、2032年10月に11人以上と段階的に縮小され、2035年10月には企業規模要件が撤廃されます。この「人数」は、単純な従業員の総数で…（全5393字）",
+      "status": "published",
+      "author": {
+        "name": "浦松 丈二",
+        "title": "社会保険労務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+      },
+      "keywords": [
+        "社会保険 適用拡大 2027",
+        "社会保険 36人以上 2027年10月",
+        "パート 社会保険 企業規模要件",
+        "短時間労働者 社会保険 加入要件",
+        "社会保険 適用拡大 スケジュール",
+        "保険料調整制度 社会保険"
+      ],
+      "tags": [
+        "社会保険",
+        "パート",
+        "適用拡大",
+        "企業規模要件",
+        "社会保険労務士"
+      ],
+      "locales": [],
+      "faq": [
+        {
+          "question": "2027年10月から、うちの会社は必ず対象になりますか？",
+          "answer": "厚生年金保険の被保険者数が36人以上（法人は同一法人全体で判定、個人は事業所単位）になる会社が対象です。単純な従業員の総数ではなく、厚生年金保険の被保険者数で判定する点に注意してください。"
+        },
+        {
+          "question": "従業員36人いれば、パートは全員社会保険に入りますか？",
+          "answer": "いいえ。企業規模の条件に加えて、週の所定労働時間20時間以上、学生でない、雇用期間2か月超の見込み（2026年10月まで賃金要件月額8.8万円以上）を満たす人が対象です。「36人いれば必ず対象」「パート全員が加入」ではありません。"
+        },
+        {
+          "question": "保険料の負担は、会社が全部持つのですか？",
+          "answer": "社会保険料は原則として本人と会社が折半です。保険料調整制度を利用すると、事業主が被保険者の保険料を一時的に負担して通算3年間本人負担を軽減できますが、詳細は制度の要件を確認してください。"
+        },
+        {
+          "question": "50人以下の会社は、まだ何もしなくてよいですか？",
+          "answer": "2027年10月時点で対象にならない会社もありますが、企業規模要件は2029年・2032年と段階的に下がり、2035年10月に撤廃されます。「いま対象外だから関係ない」ではなく、自社がいつ対象になり得るかを把握し、就業規則・給与計算の体制を整えておくことをおすすめします。"
+        }
+      ],
+      "translations": {
+        "en": {
+          "title": "Social insurance coverage expands from October 2027 to companies with 36 or more employees. Part-time worker requirements and what a company should prepare",
+          "excerpt": "From October 2027, the company-size requirement for short-time workers to enroll in social insurance (employees' pension and health insurance) will expand from \"51 or more\" to \"36 or more.\" The size is measured in principle by the number of Employees' Pension Insurance insured persons (counted across the entire company for corporations), and will be lowered in stages to 21 in October 2029 and 11 in October 2032, then abolished in October 2035. The wage requirement (monthly pay of 88,000 yen or more) is scheduled for abolition in October 2026. This article explains who becomes subject and what a company should prepare.",
+          "content": "**In short:** From October 2027, the \"company-size requirement\" for social insurance (employees' pension and health insurance) enrollment of short-time workers will change. The range of companies subject to the requirement will expand from the current \"51 or more Employees' Pension Insurance insured persons\" to \"36 or more.\" It will then be lowered in stages to 21 or more in October 2029 and 11 or more in October 2032, and the company-size requirement will be abolished in October 2035. This \"number\" is not simply the total number of employees; in principle, it is the **number of Employees' Pension Insurance insured persons**, and for a corporation it is counted across the entire company. In addition, the **wage requirement (monthly pay of 88,000 yen or more)** is scheduled for abolition in October 2026. What a company should first check is: (1) when it becomes subject, (2) which part-time/casual workers may be covered, (3) explanation to those workers and enrollment procedures, and (4) the insurance-premium burden.\n\nEven if you think \"we have 50 or fewer employees, so it doesn't affect us,\" the company-size requirement will be lowered in stages, so your company could become subject within a few years. This article explains, for business owners who employ part-time/casual workers, especially small and medium-sized company managers, the change in the company-size requirement from October 2027 and what a company should prepare.\n\n## From October 2027, how does the range of companies subject to social insurance change?\n\nFor short-time workers (part-time and casual workers, etc.), social insurance enrollment requires not only the worker's conditions (20 or more prescribed hours a week, employment period, pay, etc.) but also the \"company size\" of the workplace. This company-size requirement will be lowered in stages from October 2027.\n\n| Period | Company size subject to the requirement (number of Employees' Pension Insurance insured persons) |\n|---|---|\n| Currently | 51 or more |\n| October 2027 | **36 or more** |\n| October 2029 | **21 or more** |\n| October 2032 | **11 or more** |\n| October 2035 | **Company-size requirement abolished** (subject regardless of size) |\n\nIn other words, companies that are currently \"not subject because they have fewer than 51\" may become subject in stages from October 2027. It is important to look not only at \"whether we are subject now\" but also at \"when we may become subject.\"\n\n## How is \"36 employees\" counted?\n\nThe company size is not simply the total number of employees. In principle, it is judged by the **total number of Employees' Pension Insurance insured persons** (short-time workers are not included in this total).\n\n- **Corporation:** judged by adding up the insured persons of all applicable workplaces belonging to the same corporation (same corporate number). Even if there are a head office and branches/sales offices, they are counted as one number for the entire corporation.\n- **Sole proprietorship:** judged by the number of insured persons per applicable workplace.\n\nTherefore, \"having 36 employees\" does not necessarily mean the company is subject. Conversely, even a company with many part-time/casual workers can become subject if it has 36 or more full-time-equivalent (at least three-quarters of a full-time worker) insured persons.\n\n## What are the conditions for part-time/casual workers who become subject?\n\nAmong short-time workers at a company that meets the company-size requirement, those who meet the following conditions become subject to social insurance enrollment.\n\n- At least **20 hours** of prescribed working time per week\n- **Not a student** (those expecting to graduate, evening courses, part-time high schools, or on leave of absence may be exceptionally subject)\n- An employment period **expected to exceed two months** (those hired for a fixed period of two months or less are not subject)\n- Prescribed pay of **88,000 yen or more per month** (this wage requirement is scheduled for abolition in October 2026)\n\nWhen the wage requirement is abolished in October 2026, a worker at a company meeting the company-size requirement will become subject regardless of pay if they satisfy \"20 or more hours a week, not a student, and an employment period expected to exceed two months.\" However, this abolition of the wage requirement is **scheduled for October 2026** and is not yet in effect.\n\nFor the basics of enrollment decisions, see [what happens to social insurance when you hire someone for short hours](/en/labor/column/tanjikan-koyo-shakaihoken-4bunno3). For details of the October 2026 abolition of the wage requirement, see [the \"1.06 million yen wall\" is abolished in October 2026. What a business owner should do](/en/labor/column/106man-no-kabe-teppai-jigyousha-yaru-koto).\n\n## How does a company identify, and explain to, the affected workers?\n\nWhen the company-size requirement changes, the practical work a company does roughly follows this flow.\n\n1. **Check your company's size:** check whether the number of Employees' Pension Insurance insured persons will be 36 or more as of October 2027 (for a corporation, add up all workplaces; for a sole proprietorship, per workplace).\n2. **Identify the people who may become subject:** cross-check short-time workers who work 20 or more hours a week, the employment period, and student status against the employment contract, work rules, and attendance records.\n3. **Explain to the workers:** explain the timing of enrollment, premiums, and future benefits (employees' pension, injury and sickness allowance, childbirth allowance, etc.) to those who become subject. The Ministry of Health, Labour and Welfare also advises companies to explain in advance and prepare internally.\n4. **Reflect in notifications and payroll:** submit the insured-person acquisition notification, calculate premiums and deduct them from pay, and keep attendance records.\n\nFor putting work rules and employment contracts in order, see [from how many employees are work rules mandatory](/en/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo). For the choice between outsourcing and in-house payroll, see [how much does it cost to entrust payroll to a Shakai Hoken Roumushi](/en/labor/column/kyuyo-keisan-soba-sharoushi) and [what to ask a Shakai Hoken Roumushi when you want to handle payroll in-house with freee](/en/labor/column/kyuyo-keisan-freee-naisei).\n\n## How does the insurance-premium burden change? What is the insurance premium adjustment system?\n\nAs coverage expands, both the worker and the company bear social insurance premiums. As a mechanism to ease this burden for a certain period, there is the **insurance premium adjustment system (Hokenryo Chosei Seido)**.\n\nThe insurance premium adjustment system is a system that may apply to workplaces that newly become subject due to the expansion of coverage from October 2027. By the business owner temporarily bearing the premiums of the eligible insured persons, the insured person's health insurance and employees' pension insurance premium burden can be reduced for a total of three years. The target is insured persons who enroll as short-time workers and whose standard monthly remuneration is 126,000 yen or less. The business owner must make the application within two years from the day the workplace became subject to the system.\n\nFor details and forms of the insurance premium adjustment system, see the materials published by the Ministry of Health, Labour and Welfare and the Japan Pension Service. For premium estimates and post-enrollment payroll, you can consult a Shakai Hoken Roumushi.\n\n## For companies that are not subject now, when do they become subject?\n\nThe company-size requirement will be abolished in stages by October 2035. Therefore, rather than thinking \"we have 50 or fewer employees, so it doesn't matter,\" it is necessary to understand at which stage your company's size becomes subject.\n\nAlso, even a company whose number of Employees' Pension Insurance insured persons falls short of the threshold can, by the business owner's application based on the consent of the insured persons, become a \"voluntarily designated applicable workplace\" in which short-time workers become subject. Because all short-time workers who meet the enrollment requirements become subject, this mechanism is also an option for companies that want to prepare the system ahead of schedule.\n\nThe rise in the minimum wage also has the effect of increasing the number of people whose prescribed pay reaches 88,000 yen a month. For trends in the minimum wage, see [the 2026 minimum wage increase guideline of 55 yen. What a small business should check first](/en/labor/column/saitei-chingin-2026-55en-hikiage).\n\n## What should a company ultimately do?\n\nResponding to the regulatory change proceeds in the flow of \"follow the news → check primary sources → apply it to your company → reflect it in payroll, attendance, and social insurance procedures.\" Specifically, start with the following four points.\n\n1. **Check your company's size and the date it becomes subject:** check the number of Employees' Pension Insurance insured persons (for a corporation, add up all workplaces; for a sole proprietorship, per workplace) and understand at which stage from October 2027 your company becomes subject.\n2. **Identify short-time workers who may become subject:** check 20 or more hours a week, employment period, and student status.\n3. **Explain to workers and prepare internally:** explain the enrollment timing, premiums, and benefits, and put the work rules and payroll system in order.\n4. **Consider using the insurance premium adjustment system:** if applicable, consider it in light of the two-year application requirement.\n\n四葉社会保険労務士事務所 values **following regulatory changes and, for each company, sorting out \"what should we actually do?\"** Social insurance enrollment decisions, payroll, attendance management, and the preparation of work rules are the work of a Shakai Hoken Roumushi. **Consultation is free.** For fees, see [the fee schedule](/en/labor/ryokin).\n\n## Frequently asked questions\n\n**Q. From October 2027, will our company necessarily become subject?**\nA. Companies whose number of Employees' Pension Insurance insured persons is 36 or more (for a corporation, judged across the entire company; for a sole proprietorship, per workplace) become subject. Note that the judgment is based on the number of Employees' Pension Insurance insured persons, not simply the total number of employees.\n\n**Q. If we have 36 employees, do all part-timers enroll in social insurance?**\nA. No. In addition to the company-size condition, a worker is subject if they work 20 or more prescribed hours a week, are not a student, and have an employment period expected to exceed two months (and, until October 2026, a wage requirement of 88,000 yen or more per month). \"36 employees means subject\" and \"all part-timers enroll\" are not correct.\n\n**Q. Does the company bear the entire insurance-premium burden?**\nA. In principle, social insurance premiums are split between the worker and the company. By using the insurance premium adjustment system, the business owner temporarily bears the insured person's premiums and can reduce the worker's burden for a total of three years, but check the system requirements for details.\n\n**Q. If we have 50 or fewer employees, do we not need to do anything yet?**\nA. Some companies will not be subject as of October 2027, but the company-size requirement will be lowered in stages in 2029 and 2032, and will be abolished in October 2035. Rather than \"we are not subject now, so it doesn't matter,\" we recommend understanding when your company may become subject and putting the work rules and payroll system in order in advance.\n\n## Sources\n\n- Expansion of health insurance and employees' pension insurance coverage for short-time workers: Japan Pension Service, \"Expansion of Health Insurance and Employees' Pension Insurance Coverage for Short-time Workers\" (updated April 17, 2026). In principle, a designated applicable workplace is one with 51 or more Employees' Pension Insurance insured persons in total (excluding short-time workers), and this will expand to 36 or more from October 2027.\n- Staged reduction of the company-size requirement: October 2027: 36 or more → October 2029: 21 or more → October 2032: 11 or more → October 2035: company-size requirement abolished (materials published by the Ministry of Health, Labour and Welfare and the Japan Pension Service; please check the implementation dates each time).\n- Judgment of company size: for a corporation, the total number of insured persons of all applicable workplaces belonging to the same corporation; for a sole proprietorship, per applicable workplace (Japan Pension Service).\n- Enrollment requirements for short-time workers: 20 or more prescribed hours a week / not a student / employment period expected to exceed two months / prescribed pay of 88,000 yen or more per month (the wage requirement is scheduled for abolition in October 2026) (Japan Pension Service).\n- Insurance premium adjustment system: applies to workplaces newly subject due to the expansion of coverage from October 2027. For insured persons with a standard monthly remuneration of 126,000 yen or less, the business owner temporarily bears the premiums and reduces the worker's burden for a total of three years. Application within two years from the day of becoming subject (Japan Pension Service, \"Guide to the Insurance Premium Adjustment System,\" updated April 1, 2026).\n- Voluntarily designated applicable workplace: even a company whose number of insured persons falls short of the threshold can become a subject workplace by the business owner's application based on the consent of the insured persons (Japan Pension Service).\n\nThis article does not decide whom to consult. Social insurance enrollment decisions, payroll, attendance management, and the preparation of work rules are the work of a Shakai Hoken Roumushi. Tax matters are the domain of a tax accountant. For fees when consulting 四葉社会保険労務士事務所, see [the fee schedule](/en/labor/ryokin); for frequently asked questions, see [the FAQ](/en/labor/faq).\n\nThis article is general information. Whether the system applies and individual enrollment decisions are made by a qualified professional after a consultation, in light of the latest primary sources (the Ministry of Health, Labour and Welfare, the Japan Pension Service, etc.) and individual circumstances. Written by [Joji Uramatsu](/en/about/uramatsu) (Shakai Hoken Roumushi, Gyoseishoshi, Registered Real Estate Transaction Specialist).",
+          "category": "Social insurance",
+          "keywords": [
+            "social insurance expansion 36 employees",
+            "social insurance 2027 October company size",
+            "part-time social insurance 36 employees",
+            "social insurance coverage expansion schedule",
+            "short-time worker social insurance requirements",
+            "insurance premium adjustment system"
+          ],
+          "tags": [
+            "Social insurance",
+            "Part-time work",
+            "Coverage expansion",
+            "Company-size requirement",
+            "Shakai Hoken Roumushi"
+          ],
+          "author": {
+            "name": "Joji Uramatsu",
+            "title": "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所"
+          },
+          "faq": [
+            {
+              "question": "From October 2027, will our company necessarily become subject?",
+              "answer": "Companies whose number of Employees' Pension Insurance insured persons is 36 or more (for a corporation, judged across the entire company; for a sole proprietorship, per workplace) become subject. Note that the judgment is based on the number of Employees' Pension Insurance insured persons, not simply the total number of employees."
+            },
+            {
+              "question": "If we have 36 employees, do all part-timers enroll in social insurance?",
+              "answer": "No. In addition to the company-size condition, a worker is subject if they work 20 or more prescribed hours a week, are not a student, and have an employment period expected to exceed two months (and, until October 2026, a wage requirement of 88,000 yen or more per month). \"36 employees means subject\" and \"all part-timers enroll\" are not correct."
+            },
+            {
+              "question": "Does the company bear the entire insurance-premium burden?",
+              "answer": "In principle, social insurance premiums are split between the worker and the company. By using the insurance premium adjustment system, the business owner temporarily bears the insured person's premiums and can reduce the worker's burden for a total of three years, but check the system requirements for details."
+            },
+            {
+              "question": "If we have 50 or fewer employees, do we not need to do anything yet?",
+              "answer": "Some companies will not be subject as of October 2027, but the company-size requirement will be lowered in stages in 2029 and 2032, and will be abolished in October 2035. Rather than \"we are not subject now, so it doesn't matter,\" we recommend understanding when your company may become subject and putting the work rules and payroll system in order in advance."
+            }
+          ]
+        },
+        "zh-tw": {
+          "title": "社會保險適用擴大，2027年10月起擴大至36人以上——兼職、打工的加入要件與公司的準備",
+          "excerpt": "從2027年10月起，短時間勞工加入社會保險（厚生年金、健康保險）的「企業規模要件」將從「51人以上」擴大至「36人以上」。規模原則上以厚生年金保險的被保險者人數判定（法人以同一法人整體計算），並於2029年10月階段性縮小至21人以上、2032年10月至11人以上、2035年10月撤廢。賃金要件（月薪8萬8000日圓以上）預定於2026年10月撤廢。本文整理誰會成為對象，以及公司該準備什麼。",
+          "content": "**先講結論**：從2027年10月起，短時間勞工加入社會保險（厚生年金、健康保險）的**「企業規模要件」**將改變。對象公司的範圍將從現在的「厚生年金保險的被保險者數51人以上」擴大至「36人以上」。之後將於2029年10月階段性縮小至21人以上、2032年10月至11人以上，並於2035年10月撤廢企業規模要件。這個「人數」不是單純的員工總數，**原則上以厚生年金保險的被保險者數**判定，法人以同一法人整體計算。此外，**「賃金要件（月薪8萬8000日圓以上）」預定於2026年10月撤廢**。公司首先該確認的是：(1) 自家何時成為對象、(2) 可能成為對象的兼職、打工是誰、(3) 對本人的說明與加入手續、(4) 保險費負擔，這四點。\n\n就算認為「我們50人以下所以沒關係」，企業規模要件今後會階段性下降，因此數年內自家成為對象的可能性存在。本文是為了僱用兼職、打工員工的事業主，特別是中小企業的經營者，整理2027年10月以後企業規模要件的變化，以及公司該準備的事。\n\n## 2027年10月起，社會保險的對象公司會怎麼變？\n\n短時間勞工（兼職、打工等）加入社會保險，除了工作者的條件（每週20小時以上、僱用期間、薪資等）之外，還必須滿足工作場所的「企業規模」。這個企業規模要件將從2027年10月起階段性縮小。\n\n| 時期 | 對象企業規模（厚生年金保險的被保險者數） |\n|---|---|\n| 現在 | 51人以上 |\n| 2027年10月 | **36人以上** |\n| 2029年10月 | **21人以上** |\n| 2032年10月 | **11人以上** |\n| 2035年10月 | **撤廢企業規模要件**（不論規模皆為對象） |\n\n也就是說，現在「未滿51人所以不是對象」的公司，從2027年10月起可能依序成為對象。重要的是，不只是看「現在是否為對象」，還要看「何時可能成為對象」。\n\n## 「員工36人」要怎麼算？\n\n企業規模的判定不是單純的員工總數。原則上以**厚生年金保險的被保險者總數**判定（短時間勞工不計入這個總數）。\n\n- **法人**：以屬於同一法人格（法人編號同一）的所有適用事業所的被保險者數合計判定。即使分為總公司與分公司、營業所，也以法人整體算成一個數字。\n- **個人事業**：以每個適用事業所的被保險者數判定。\n\n因此，「有36名員工所以一定是對象」未必成立。相反地，兼職、打工較多的公司，只要全職相當（全職的4分之3以上）的被保險者有36人以上，也可能成為對象。\n\n## 成為對象的兼職、打工的條件是？\n\n在滿足企業規模要件的公司工作的短時間勞工中，符合下列要件的人將成為社會保險的加入對象。\n\n- 每週約定工作時間**20小時以上**\n- **非學生**（預定畢業、夜間課程、定時制、休學中等可能例外地成為加入對象）\n- 僱用期間**超過2個月的預期**（以2個月以內期間為限僱用者為對象外）\n- 約定內薪資**月薪8萬8000日圓以上**（這個賃金要件預定於2026年10月撤廢）\n\n2026年10月賃金要件被撤廢後，在滿足企業規模要件的公司，只要符合「每週20小時以上、非學生、僱用期間超過2個月的預期」，就不分薪資多寡成為加入對象。不過，這個賃金要件的撤廢是**2026年10月的預定**，目前並非「已經施行」。\n\n加入判定的基礎請見[以短時間僱用員工時，社會保險會怎麼樣](/zh-tw/labor/column/tanjikan-koyo-shakaihoken-4bunno3)。2026年10月賃金要件撤廢的詳細，請見[2026年10月「106萬圓之牆」撤廢。事業主該做什麼](/zh-tw/labor/column/106man-no-kabe-teppai-jigyousha-yaru-koto)。\n\n## 公司要怎麼找出對象者並說明？\n\n企業規模要件改變時，公司進行的實務大致如下。\n\n1. **確認自家規模**：確認厚生年金保險的被保險者數在2027年10月時是否達36人以上（法人為所有事業所合計、個人為事業所單位）。\n2. **找出可能成為對象的人**：將每週工作20小時以上的短時間勞工、僱用期間、是否為學生，與僱用契約書、就業規則、出勤紀錄比對。\n3. **向本人說明**：向成為對象的人說明加入時期、保險費、將來的保障（厚生年金、傷病手當金、出產手當金等）。厚生勞動省也呼籲企業事前說明與社內準備。\n4. **反映到屆出、薪資計算**：提出被保險者資格取得屆、計算保險費並從薪資扣除、記錄出勤。\n\n就業規則與僱用契約的整備，請見[就業規則是幾人以上的義務](/zh-tw/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo)。薪資計算的委託與自辦判斷，請見[把薪資計算委託給社會保險勞務士，要花多少錢](/zh-tw/labor/column/kyuyo-keisan-soba-sharoushi)／[想用freee自辦薪資計算。該委託社會保險勞務士什麼](/zh-tw/labor/column/kyuyo-keisan-freee-naisei)。\n\n## 保險費負擔會怎麼變？保險費調整制度是什麼？\n\n加入對象擴大後，本人與公司都會產生社會保險費的負擔。作為在一定期間緩和這個負擔的機制，有**保險費調整制度**。\n\n保險費調整制度是可能適用於因2027年10月以後適用擴大而新成為加入對象的事業所的制度。由事業主暫時負擔對象被保險者的保險費，讓被保險者（本人）的健康保險、厚生年金保險的保險費負擔得以通算3年輕減。對象是以短時間勞工身分加入、標準報酬月額12萬6000日圓以下的被保險者。事業所成為制度對象之日起2年內，須由事業主提出申出。\n\n保險費調整制度的詳細與屆書樣式，請確認厚生勞動省、日本年金機構公布的資料。保險費的試算與加入後的薪資計算，可洽社會保險勞務士。\n\n## 現在不是對象的公司，何時會成為對象？\n\n企業規模要件預定於2035年10月前階段性撤廢。因此，不是「我們50人以下所以沒關係」，而是要掌握自家規模在哪個階段會成為對象。\n\n此外，厚生年金保險的被保險者數未達基準的企業，也可以透過基於被保險者同意的事業主申出，成為讓短時間勞工成為加入對象的「任意特定適用事業所」。由於符合加入要件的所有短時間勞工都會成為對象，想提前整備制度的公司，也可以考慮利用這個機制。\n\n最低薪資上升，也會使約定內薪資達到月薪8萬8000日圓的人增加。最低薪資的動向請見[2026年度最低薪資，調升目安55日圓。小規模事業主該先確認的事](/zh-tw/labor/column/saitei-chingin-2026-55en-hikiage)。\n\n## 公司最終該做什麼？\n\n制度改正的對應，以「追新聞 → 確認一次資料 → 套用到自家 → 反映到薪資、出勤、社會保險手續」的流程進行。具體來說，請先從以下4點開始。\n\n1. **確認自家規模與適用開始時期**：確認厚生年金保險的被保險者數（法人為所有事業所合計、個人為事業所單位），掌握2027年10月以後在哪個階段成為對象。\n2. **找出可能成為對象的短時間勞工**：確認每週20小時以上、僱用期間、是否為學生。\n3. **向本人說明與社內準備**：說明加入時期、保險費、保障內容，整備就業規則、薪資計算體制。\n4. **檢討利用保險費調整制度**：若為對象，配合2年以內申出的要件檢討。\n\n四葉社会保険労務士事務所重視**追蹤制度改正，並針對每家公司整理「結論上，我們該做什麼」**。社會保險的加入判定、薪資計算、出勤管理、就業規則的整備是社會保險勞務士的業務。**諮詢免費**，費用整理在[報酬金額表](/zh-tw/labor/ryokin)。\n\n## 常見問題\n\n**Q. 2027年10月起，我們公司一定會成為對象嗎？**\nA. 厚生年金保險的被保險者數達36人以上（法人以同一法人整體判定、個人為事業所單位）的公司會成為對象。請注意是以厚生年金保險的被保險者數判定，而不是單純的員工總數。\n\n**Q. 有36名員工的話，兼職全部都要加入社會保險嗎？**\nA. 不是。除了企業規模要件之外，還須符合每週約定工作時間20小時以上、非學生、僱用期間超過2個月的預期（2026年10月前另有賃金要件月薪8萬8000日圓以上）。「36人就是對象」「兼職全部加入」並非正確。\n\n**Q. 保險費負擔全部由公司負擔嗎？**\nA. 社會保險費原則上由本人與公司各半。若利用保險費調整制度，事業主可暫時負擔被保險者的保險費，通算3年輕減本人負擔，但詳細請確認制度要件。\n\n**Q. 50人以下的公司還不用做任何事嗎？**\nA. 有些公司在2027年10月時不會成為對象，但企業規模要件將於2029年、2032年階段性下降，並於2035年10月撤廢。建議不要認為「現在不是對象所以沒關係」，而是掌握自家何時可能成為對象，事先整備就業規則與薪資計算體制。\n\n## 本文依據\n\n- 短時間勞工的健康保險、厚生年金保險適用擴大：日本年金機構「短時間勞工的健康保險、厚生年金保險適用擴大」（更新日2026年4月17日）。特定適用事業所原則上為厚生年金保險的被保險者總數51人以上（短時間勞工除外），將於令和9年10月（2027年10月）起擴大至36人以上。\n- 企業規模要件的階段性縮小：2027年10月36人以上 → 2029年10月21人以上 → 2032年10月11人以上 → 2035年10月撤廢企業規模要件（厚生勞動省、日本年金機構公布的資料。施行時期請隨時確認）。\n- 企業規模的判定：法人為屬於同一法人格的所有適用事業所的被保險者總數，個人為適用事業所單位（日本年金機構）。\n- 短時間勞工的加入要件：每週約定工作時間20小時以上／非學生／僱用期間超過2個月的預期／約定內薪資月薪8萬8000日圓以上（賃金要件預定於令和8年10月＝2026年10月撤廢）（日本年金機構）。\n- 保險費調整制度：以因2027年10月以後適用擴大而新成為加入對象的事業所為對象。標準報酬月額12萬6000日圓以下的被保險者，由事業主暫時負擔保險費，通算3年輕減本人負擔。成為對象之日起2年內申出（日本年金機構「保險費調整制度的說明」更新日2026年4月1日）。\n- 任意特定適用事業所：被保險者數未達基準的企業，也可基於被保險者同意的事業主申出成為對象事業所（日本年金機構）。\n\n本文並不替讀者決定該諮詢誰。社會保險的加入判定、薪資計算、出勤管理、就業規則的整備是社會保險勞務士的業務。稅務是稅理士的領域。向四葉社会保険労務士事務所諮詢時的費用請見[報酬金額表](/zh-tw/labor/ryokin)，常見問題請見[常見問題](/zh-tw/labor/faq)。\n\n本文為一般資訊提供。制度的適用與個別加入判定，請依最新一次資料（厚生勞動省、日本年金機構等）與個別情況，在面談後由資格者進行。執筆者為[浦松丈二](/zh-tw/about/uramatsu)（社會保險勞務士・行政書士・宅地建物取引士）。",
+          "category": "社會保險",
+          "keywords": [
+            "社會保險 適用擴大 36人",
+            "社會保險 2027年10月 企業規模",
+            "兼職 社會保險 36人",
+            "社會保險 適用擴大 時程",
+            "短時間勞工 社會保險 要件",
+            "保險費調整制度"
+          ],
+          "tags": [
+            "社會保險",
+            "兼職",
+            "適用擴大",
+            "企業規模要件",
+            "社會保險勞務士"
+          ],
+          "author": {
+            "name": "浦松 丈二",
+            "title": "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+          },
+          "faq": [
+            {
+              "question": "2027年10月起，我們公司一定會成為對象嗎？",
+              "answer": "厚生年金保險的被保險者數達36人以上（法人以同一法人整體判定、個人為事業所單位）的公司會成為對象。請注意是以厚生年金保險的被保險者數判定，而不是單純的員工總數。"
+            },
+            {
+              "question": "有36名員工的話，兼職全部都要加入社會保險嗎？",
+              "answer": "不是。除了企業規模要件之外，還須符合每週約定工作時間20小時以上、非學生、僱用期間超過2個月的預期（2026年10月前另有賃金要件月薪8萬8000日圓以上）。「36人就是對象」「兼職全部加入」並非正確。"
+            },
+            {
+              "question": "保險費負擔全部由公司負擔嗎？",
+              "answer": "社會保險費原則上由本人與公司各半。若利用保險費調整制度，事業主可暫時負擔被保險者的保險費，通算3年輕減本人負擔，但詳細請確認制度要件。"
+            },
+            {
+              "question": "50人以下的公司還不用做任何事嗎？",
+              "answer": "有些公司在2027年10月時不會成為對象，但企業規模要件將於2029年、2032年階段性下降，並於2035年10月撤廢。建議不要認為「現在不是對象所以沒關係」，而是掌握自家何時可能成為對象，事先整備就業規則與薪資計算體制。"
+            }
+          ]
+        },
+        "zh": {
+          "title": "社会保险适用扩大，2027年10月起扩大至36人以上——兼职、打工的加入要件与公司的准备",
+          "excerpt": "从2027年10月起，短时间劳动者加入社会保险（厚生年金、健康保险）的「企业规模要件」将从「51人以上」扩大至「36人以上」。规模原则上以厚生年金保险的被保险人人数判定（法人以同一法人整体计算），并于2029年10月阶段性缩小至21人以上、2032年10月至11人以上、2035年10月撤废。工资要件（月薪8.8万日元以上）预定于2026年10月撤废。本文整理谁会成为对象，以及公司该准备什么。",
+          "content": "**先讲结论**：从2027年10月起，短时间劳动者加入社会保险（厚生年金、健康保险）的**「企业规模要件」**将改变。对象公司的范围将从现在的「厚生年金保险的被保险人人数51人以上」扩大至「36人以上」。之后将于2029年10月阶段性缩小至21人以上、2032年10月至11人以上，并于2035年10月撤废企业规模要件。这个「人数」不是单纯的员工总数，**原则上以厚生年金保险的被保险人人数**判定，法人以同一法人整体计算。此外，**「工资要件（月薪8.8万日元以上）」预定于2026年10月撤废**。公司首先该确认的是：(1) 自家何时成为对象、(2) 可能成为对象的兼职、打工是谁、(3) 对本人的说明与加入手续、(4) 保险费负担，这四点。\n\n就算认为「我们50人以下所以没关系」，企业规模要件今后会阶段性下降，因此数年内自家成为对象的可能性存在。本文是为了雇用兼职、打工员工的企业主，特别是中小企业的经营者，整理2027年10月以后企业规模要件的变化，以及公司该准备的事。\n\n## 2027年10月起，社会保险的对象公司会怎么变？\n\n短时间劳动者（兼职、打工等）加入社会保险，除了工作者的条件（每周20小时以上、雇用期间、工资等）之外，还必须满足工作场所的「企业规模」。这个企业规模要件将从2027年10月起阶段性缩小。\n\n| 时期 | 对象企业规模（厚生年金保险的被保险人人数） |\n|---|---|\n| 现在 | 51人以上 |\n| 2027年10月 | **36人以上** |\n| 2029年10月 | **21人以上** |\n| 2032年10月 | **11人以上** |\n| 2035年10月 | **撤废企业规模要件**（不论规模皆为对象） |\n\n也就是说，现在「未满51人所以不是对象」的公司，从2027年10月起可能依序成为对象。重要的是，不只是看「现在是否为对象」，还要看「何时可能成为对象」。\n\n## 「员工36人」要怎么算？\n\n企业规模的判定不是单纯的员工总数。原则上以**厚生年金保险的被保险人总数**判定（短时间劳动者不计入这个总数）。\n\n- **法人**：以属于同一法人格（法人编号同一）的所有适用事务所的被保险人人数合计判定。即使分为总公司与分公司、营业所，也以法人整体算成一个数字。\n- **个人事业**：以每个适用事务所的被保险人人数判定。\n\n因此，「有36名员工所以一定是对象」未必成立。相反地，兼职、打工较多的公司，只要全职相当（全职的4分之3以上）的被保险人有36人以上，也可能成为对象。\n\n## 成为对象的兼职、打工的条件是？\n\n在满足企业规模要件的公司工作的短时间劳动者中，符合下列要件的人将成为社会保险的加入对象。\n\n- 每周约定工作时间**20小时以上**\n- **非学生**（预定毕业、夜间课程、定时制、休学中等可能例外地成为加入对象）\n- 雇用期间**超过2个月的预期**（以2个月以内期间为限雇用者为对象外）\n- 约定内工资**月薪8.8万日元以上**（这个工资要件预定于2026年10月撤废）\n\n2026年10月工资要件被撤废后，在满足企业规模要件的公司，只要符合「每周20小时以上、非学生、雇用期间超过2个月的预期」，就不分工资多寡成为加入对象。不过，这个工资要件的撤废是**2026年10月的预定**，目前并非「已经施行」。\n\n加入判定的基础请见[以短时间雇用员工时，社会保险会怎么样](/zh/labor/column/tanjikan-koyo-shakaihoken-4bunno3)。2026年10月工资要件撤废的详细，请见[2026年10月「106万日元之墙」撤废。企业主该做什么](/zh/labor/column/106man-no-kabe-teppai-jigyousha-yaru-koto)。\n\n## 公司要怎么找出对象者并说明？\n\n企业规模要件改变时，公司进行的实务大致如下。\n\n1. **确认自家规模**：确认厚生年金保险的被保险人人数在2027年10月时是否达36人以上（法人为所有事务所合计、个人为事务所单位）。\n2. **找出可能成为对象的人**：将每周工作20小时以上的短时间劳动者、雇用期间、是否为学生，与雇用契约书、就业规则、出勤记录比对。\n3. **向本人说明**：向成为对象的人说明加入时期、保险费、将来的保障（厚生年金、伤病手当金、出产手当金等）。厚生劳动省也呼吁企业事前说明与社内准备。\n4. **反映到届出、工资计算**：提出被保险人资格取得届、计算保险费并从工资扣除、记录出勤。\n\n就业规则与雇用契约的整备，请见[就业规则是几人以上的义务](/zh/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo)。工资计算的委托与自办判断，请见[把工资计算委托给社会保险劳务士，要花多少钱](/zh/labor/column/kyuyo-keisan-soba-sharoushi)／[想用freee自办工资计算。该委托社会保险劳务士什么](/zh/labor/column/kyuyo-keisan-freee-naisei)。\n\n## 保险费负担会怎么变？保险费调整制度是什么？\n\n加入对象扩大后，本人与公司都会产生社会保险费的负担。作为在一定期间缓和这个负担的机制，有**保险费调整制度**。\n\n保险费调整制度是可能适用于因2027年10月以后适用扩大而新成为加入对象的事务所的制度。由企业主暂时负担对象被保险人的保险费，让被保险人（本人）的健康保险、厚生年金保险的保险费负担得以通算3年轻减。对象是以短时间劳动者身分加入、标准报酬月额12.6万日元以下的被保险人。事务所成为制度对象之日起2年内，须由企业主提出申请。\n\n保险费调整制度的详细与届书样式，请确认厚生劳动省、日本年金机构公布的资料。保险费的试算与加入后的工资计算，可洽社会保险劳务士。\n\n## 现在不是对象的公司，何时会成为对象？\n\n企业规模要件预定于2035年10月前阶段性撤废。因此，不是「我们50人以下所以没关系」，而是要掌握自家规模在哪个阶段会成为对象。\n\n此外，厚生年金保险的被保险人人数未达基准的企业，也可以通过基于被保险人同意的企业主申请，成为让短时间劳动者成为加入对象的「任意特定适用事务所」。由于符合加入要件的所有短时间劳动者都会成为对象，想提前整备制度的公司，也可以考虑利用这个机制。\n\n最低工资上升，也会使约定内工资达到月薪8.8万日元的人增加。最低工资的动向请见[2026年度最低工资，调升目安55日元。小规模企业主该先确认的事](/zh/labor/column/saitei-chingin-2026-55en-hikiage)。\n\n## 公司最终该做什么？\n\n制度改正的对应，以「追新闻 → 确认一次资料 → 套用到自家 → 反映到工资、出勤、社会保险手续」的流程进行。具体来说，请先从以下4点开始。\n\n1. **确认自家规模与适用开始时期**：确认厚生年金保险的被保险人人数（法人为所有事务所合计、个人为事务所单位），掌握2027年10月以后在哪个阶段成为对象。\n2. **找出可能成为对象的短时间劳动者**：确认每周20小时以上、雇用期间、是否为学生。\n3. **向本人说明与社内准备**：说明加入时期、保险费、保障内容，整备就业规则、工资计算体制。\n4. **检讨利用保险费调整制度**：若为对象，配合2年以内申请的要件检讨。\n\n四葉社会保険労務士事務所重视**追踪制度改正，并针对每家公司整理「结论上，我们该做什么」**。社会保险的加入判定、工资计算、出勤管理、就业规则的整备是社会保险劳务士的业务。**咨询免费**，费用整理在[报酬金额表](/zh/labor/ryokin)。\n\n## 常见问题\n\n**Q. 2027年10月起，我们公司一定会成为对象吗？**\nA. 厚生年金保险的被保险人人数达36人以上（法人以同一法人整体判定、个人为事务所单位）的公司会成为对象。请注意是以厚生年金保险的被保险人人数判定，而不是单纯的员工总数。\n\n**Q. 有36名员工的话，兼职全部都要加入社会保险吗？**\nA. 不是。除了企业规模要件之外，还须符合每周约定工作时间20小时以上、非学生、雇用期间超过2个月的预期（2026年10月前另有工资要件月薪8.8万日元以上）。「36人就是对象」「兼职全部加入」并非正确。\n\n**Q. 保险费负担全部由公司负担吗？**\nA. 社会保险费原则上由本人与公司各半。若利用保险费调整制度，企业主可暂时负担被保险人的保险费，通算3年轻减本人负担，但详细请确认制度要件。\n\n**Q. 50人以下的公司还不用做任何事吗？**\nA. 有些公司在2027年10月时不会成为对象，但企业规模要件将于2029年、2032年阶段性下降，并于2035年10月撤废。建议不要认为「现在不是对象所以没关系」，而是掌握自家何时可能成为对象，事先整备就业规则与工资计算体制。\n\n## 本文依据\n\n- 短时间劳动者的健康保险、厚生年金保险适用扩大：日本年金机构「短时间劳动者的健康保险、厚生年金保险适用扩大」（更新日2026年4月17日）。特定适用事务所原则上为厚生年金保险的被保险人总数51人以上（短时间劳动者除外），将于令和9年10月（2027年10月）起扩大至36人以上。\n- 企业规模要件的阶段性缩小：2027年10月36人以上 → 2029年10月21人以上 → 2032年10月11人以上 → 2035年10月撤废企业规模要件（厚生劳动省、日本年金机构公布的资料。施行时期请随时确认）。\n- 企业规模的判定：法人为属于同一法人格的所有适用事务所的被保险人总数，个人为适用事务所单位（日本年金机构）。\n- 短时间劳动者的加入要件：每周约定工作时间20小时以上／非学生／雇用期间超过2个月的预期／约定内工资月薪8.8万日元以上（工资要件预定于令和8年10月＝2026年10月撤废）（日本年金机构）。\n- 保险费调整制度：以因2027年10月以后适用扩大而新成为加入对象的事务所为对象。标准报酬月额12.6万日元以下的被保险人，由企业主暂时负担保险费，通算3年轻减本人负担。成为对象之日起2年内申请（日本年金机构「保险费调整制度的说明」更新日2026年4月1日）。\n- 任意特定适用事务所：被保险人人数未达基准的企业，也可基于被保险人同意的企业主申请成为对象事务所（日本年金机构）。\n\n本文并不替读者决定该咨询谁。社会保险的加入判定、工资计算、出勤管理、就业规则的整备是社会保险劳务士的业务。税务是税务师（税理士）的领域。向四葉社会保険労務士事務所咨询时的费用请见[报酬金额表](/zh/labor/ryokin)，常见问题请见[常见问题](/zh/labor/faq)。\n\n本文为一般信息提供。制度的适用与个别加入判定，请依最新一次资料（厚生劳动省、日本年金机构等）与个别情况，在面谈后由资格者进行。执笔者为[浦松丈二](/zh/about/uramatsu)（社会保险劳务士・行政书士・宅地建物取引士）。",
+          "category": "社会保险",
+          "keywords": [
+            "社会保险 适用扩大 36人",
+            "社会保险 2027年10月 企业规模",
+            "兼职 社会保险 36人",
+            "社会保险 适用扩大 时程",
+            "短时间劳动者 社会保险 要件",
+            "保险费调整制度"
+          ],
+          "tags": [
+            "社会保险",
+            "兼职",
+            "适用扩大",
+            "企业规模要件",
+            "社会保险劳务士"
+          ],
+          "author": {
+            "name": "浦松 丈二",
+            "title": "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+          },
+          "faq": [
+            {
+              "question": "2027年10月起，我们公司一定会成为对象吗？",
+              "answer": "厚生年金保险的被保险人人数达36人以上（法人以同一法人整体判定、个人为事务所单位）的公司会成为对象。请注意是以厚生年金保险的被保险人人数判定，而不是单纯的员工总数。"
+            },
+            {
+              "question": "有36名员工的话，兼职全部都要加入社会保险吗？",
+              "answer": "不是。除了企业规模要件之外，还须符合每周约定工作时间20小时以上、非学生、雇用期间超过2个月的预期（2026年10月前另有工资要件月薪8.8万日元以上）。「36人就是对象」「兼职全部加入」并非正确。"
+            },
+            {
+              "question": "保险费负担全部由公司负担吗？",
+              "answer": "社会保险费原则上由本人与公司各半。若利用保险费调整制度，企业主可暂时负担被保险人的保险费，通算3年轻减本人负担，但详细请确认制度要件。"
+            },
+            {
+              "question": "50人以下的公司还不用做任何事吗？",
+              "answer": "有些公司在2027年10月时不会成为对象，但企业规模要件将于2029年、2032年阶段性下降，并于2035年10月撤废。建议不要认为「现在不是对象所以没关系」，而是掌握自家何时可能成为对象，事先整备就业规则与工资计算体制。"
             }
           ]
         }
