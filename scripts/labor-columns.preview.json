@@ -1,9 +1,10 @@
 {
-  "generatedAt": "2026-08-19T05:47:45.708Z",
+  "generatedAt": "2026-08-19T15:31:59.020Z",
   "note": "労務コラム（4本）。報酬額表 v18 の決定と相場調査から起こした原稿md（scripts/labor-columns/）から生成。--write でupsert。",
-  "articleCount": 50,
+  "articleCount": 51,
   "verification": [
-    "WARN: ikuji-kaigo-kyugyo-ho-2025-kaisei のFAQが5件（想定4件）"
+    "WARN: ikuji-kaigo-kyugyo-ho-2025-kaisei のFAQが5件（想定4件）",
+    "WARN: stress-check-50nin-miman-2028 のFAQが8件（想定4件）"
   ],
   "articles": [
     {
@@ -9087,6 +9088,250 @@
             {
               "question": "护理的40岁信息提供何时进行？",
               "answer": "在劳动者到达40岁之日（生日前一天）所属的年度，或从到达40岁之日的翌日（生日）起1年间的任一时期，提供护理休假、护理两立支援制度等、申请处、护理休假给付金等信息。"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "business": "labor",
+      "slug": "stress-check-50nin-miman-2028",
+      "title": "2028年4月から50人未満の事業場もストレスチェック義務化──小規模事業場が準備すること",
+      "date": "2026-09-01",
+      "category": "労働法の基本",
+      "excerpt": "ストレスチェックは労働安全衛生法第66条の10に基づく検査で、現在は常時50人以上の事業場が義務、50人未満は努力義務です。令和7年法律第33号により、50人未満の事業場にも実施義務が2028年4月1日から拡大します（施行期日＝令和8年政令第195号）。実施は1年以内ごとに1回で、2028年4月に1回行えば終わりではありません。「50人」は会社単位ではなく事業場単位で判定し、50人に数える人と受検対象者は同じではありません。厚生労働省の小規模事業場向けマニュアル（2026年2月25日公表）を踏まえ、義務化の範囲と準備の10ステップを整理します。",
+      "content": "**結論（先に要点）**：ストレスチェックは、労働安全衛生法第66条の10に基づき、現在は**常時50人以上の事業場が義務、50人未満の事業場は努力義務**です。労働安全衛生法及び作業環境測定法の一部を改正する法律（令和7年法律第33号、2025年5月14日公布）により、**これまで努力義務だった労働者数50人未満の事業場にもストレスチェックの実施義務が2028年4月1日から拡大**します（施行期…（全7592字）",
+      "status": "published",
+      "author": {
+        "name": "浦松 丈二",
+        "title": "社会保険労務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+      },
+      "keywords": [
+        "ストレスチェック 50人未満 義務化",
+        "ストレスチェック 2028年4月 いつから",
+        "ストレスチェック 事業場単位 数え方",
+        "ストレスチェック 対象者 4分の3",
+        "小規模事業場 ストレスチェック マニュアル",
+        "ストレスチェック 労働基準監督署 報告"
+      ],
+      "tags": [
+        "ストレスチェック",
+        "労働安全衛生法",
+        "小規模事業場",
+        "メンタルヘルス",
+        "事業場単位",
+        "労務管理"
+      ],
+      "locales": [],
+      "faq": [
+        {
+          "question": "50人未満の事業場も、2028年4月からストレスチェックは義務ですか？",
+          "answer": "はい。これまで努力義務だった労働者数50人未満の事業場にも、2028年4月1日からストレスチェックの実施義務が拡大します。対象事業場では毎年1回（1年以内ごとに1回、定期に）実施し、2028年4月に1回実施すれば終わりではありません。ただし、個々の受検対象者には別の要件があります。"
+        },
+        {
+          "question": "「50人」は、会社全体で数えるのですか？",
+          "answer": "いいえ。原則として会社単位ではなく事業場単位で判定します。本社と営業所を単純に会社全体で合算して「50人以上」と判定するものではありません。事業場は主として場所的な単位で判断しますが、出張所・支所等で規模が著しく小さく独立性がないものは、直近上位の機構と一括して一の事業場として取り扱われる場合があります。"
+        },
+        {
+          "question": "50人に数える人と、受検対象者は同じですか？",
+          "answer": "同じではありません。人数判定には、継続雇用され常態として使用しているパート等も含まれ得ますが、法定の受検対象者は原則として「期間の定めのない労働契約（1年以上の使用予定・使用実績等を含む）」と「1週間の労働時間数が同種の業務に従事する通常の労働者の1週間の所定労働時間数の4分の3以上」の双方を満たす人です。"
+        },
+        {
+          "question": "産業医がいなくても、ストレスチェックは実施できますか？",
+          "answer": "実施できます。実施者は医師・保健師のほか、所定研修を修了した歯科医師・看護師・精神保健福祉士・公認心理師です。必ずしも産業医である必要はありません。産業医の選任義務が50人未満の事業場へ一律に拡大されるわけでもありません。"
+        },
+        {
+          "question": "社員は必ず受検しなければならないのですか？",
+          "answer": "労働者に法律上の受検義務はありません。義務は事業者がストレスチェックを実施することです。受検しないこと等を理由とする不利益取扱いは禁止されています。"
+        },
+        {
+          "question": "会社は、ストレスチェックの個人結果を見られるのですか？",
+          "answer": "個人結果は実施者から労働者本人に直接通知します。本人の同意なしに事業者へ提供してはいけません。同意がある場合に事業者が記録を作成して5年間保存し、同意がない場合は実施者又は実施事務従事者が保存します。"
+        },
+        {
+          "question": "高ストレスと判定されたら、必ず面接指導を受けますか？",
+          "answer": "高ストレス判定が自動的に面接指導につながるわけではありません。実施者が必要性を判断して本人へ案内し、本人が申し出た場合に、事業者が医師による面接指導を実施します。申出は結果通知後おおむね1か月以内、面接指導は申出後おおむね1か月以内、医師からの意見聴取は面接指導後おおむね1か月以内が実務上の目安です。"
+        },
+        {
+          "question": "50人未満でも、労働基準監督署へ報告するのですか？",
+          "answer": "実施結果の労働基準監督署への報告義務は、常時50人以上の労働者を使用する事業者に限られます（労働安全衛生規則第52条の21）。50人未満の事業場に報告義務まで拡大されたわけではありません。"
+        }
+      ],
+      "translations": {
+        "en": {
+          "title": "Stress checks become mandatory for workplaces with fewer than 50 employees from April 2028. What small workplaces should prepare",
+          "excerpt": "Stress checks are based on Article 66-10 of the Industrial Safety and Health Act. At present they are mandatory for workplaces with 50 or more ordinarily employed workers and a best-effort obligation for workplaces with fewer than 50. Under the Act Partially Amending the Industrial Safety and Health Act and the Working Environment Measurement Act (Act No. 33 of 2025), the obligation to conduct stress checks will be extended to workplaces with fewer than 50 employees from April 1, 2028. A stress check is conducted once a year, so conducting it once in April 2028 is not the end of it. The \"50\" is judged by workplace, not by company, and \"people counted in the 50\" do not necessarily match \"workers subject to the check.\" This article organizes the scope of the mandate and what small workplaces should prepare, based on the MHLW manual for small workplaces (published February 2026).",
+          "content": "**In short:** Stress checks are based on Article 66-10 of the Industrial Safety and Health Act. At present, workplaces with **50 or more ordinarily employed workers are mandatory**, while workplaces with fewer than 50 are a **best-effort obligation**. Under the Act Partially Amending the Industrial Safety and Health Act and the Working Environment Measurement Act (Act No. 33 of 2025, promulgated May 14, 2025), **the obligation to conduct stress checks will be extended to workplaces with fewer than 50 employees, which were previously a best-effort obligation, from April 1, 2028** (the enforcement date is set by Cabinet Order No. 195 of 2026, promulgated June 10, 2026). A stress check is conducted **once a year** at subject workplaces, so conducting it once in April 2028 is not the end of it. This \"50\" is judged **by workplace, not by company**, and \"people counted in the 50\" do not necessarily match \"workers subject to the stress check.\" The Ministry of Health, Labour and Welfare has published an implementation manual for small workplaces (published February 25, 2026), and by the time of enforcement, companies must, in order, \"confirm the workers and headcount → decide the implementation method and person who conducts the check → notify results and manage records → establish a route for interview guidance for high-stress workers.\" This article organizes the scope of the mandate and the procedures small workplaces should prepare.\n\nThis article is written for managers and HR/personnel staff of workplaces with fewer than 50 workers (judged by workplace). Its purpose is to answer \"what changes from April 2028,\" \"is our workplace subject,\" and \"what should we prepare now.\"\n\n## What changes in stress checks from April 2028?\n\nA stress check is an examination to grasp the degree of psychological burden on workers, and it is conducted **once a year** at subject workplaces (in statutory terms, \"at least once within each period of one year, on a regular basis\"; Article 52-9 of the Ordinance on Industrial Safety and Health). Under the current system, workplaces using 50 or more ordinarily employed workers are subject to the obligation, while workplaces with fewer than 50 have been a \"best-effort obligation.\"\n\nUnder the 2025 amendment to the Industrial Safety and Health Act, **the obligation to conduct stress checks will be extended to workplaces with fewer than 50 employees, which were previously a best-effort obligation**. The enforcement date is April 1, 2028 (set by Cabinet Order No. 195 of 2026). It is not the case that conducting the check once in April 2028 is sufficient; implementation every year becomes the subject.\n\nHowever, this does not mean \"all workplaces and all workers are uniformly made mandatory.\" While the implementation obligation for workplaces is extended, **workers subject to the check have separate requirements** (described later). In addition, there are points, such as the obligation to report the implementation results to the Labor Standards Inspection Office, where the treatment differs between workplaces with 50 or more and those with fewer than 50.\n\n| Item | Workplaces with 50 or more ordinarily employed workers | Workplaces with fewer than 50 (from April 1, 2028) |\n|---|---|---|\n| Conducting the stress check | Mandatory | Mandatory (a best-effort obligation until then) |\n| Frequency | Once a year (at least once within each period of one year, on a regular basis) | Once a year (at least once within each period of one year, on a regular basis) |\n| Physician interview guidance when a worker meeting the requirements requests it | Mandatory | Mandatory |\n| Group tabulation and analysis, workplace environment improvement | Best-effort obligation | Best-effort obligation |\n| Reporting the implementation results to the Labor Standards Inspection Office | Mandatory | Not applicable |\n\n## How is \"50\" counted by workplace? Is it different from the workers subject to the check?\n\nThe judgment of \"50\" is in principle **by workplace, not by company**. Even if the head office has 30 workers and a sales office has 25, you do not simply add them up across the whole company and judge \"50 or more.\"\n\nA workplace is judged mainly as a locational unit. However, it is not the case that a different location is always a separate workplace. Even where locations are separate, a branch or sub-office that is extremely small in scale and lacks the degree of independence required to be regarded as one workplace, judged by its organizational connection and administrative capability, **may be treated together with the next-higher organizational unit as a single workplace** (Enforcement of the Industrial Safety and Health Act, Hatsuki No. 91 of September 18, 1972). Which category your own site falls into should be confirmed against the actual situation.\n\nIn addition, this headcount is not simply a count of regular employees. **Part-time and casual workers who work even one day a week may be included in the headcount if they are continuously employed and used as a regular practice.**\n\nOn the other hand, **workers legally subject to the stress check** are, in principle, workers who meet both of the following.\n\n- They are employed under an employment contract without a fixed term (including those whose contract period is one year or more, those expected to be used for one year or more through contract renewal, and those who have been continuously used for one year or more)\n- Their weekly working hours are at least three-quarters of the **prescribed weekly working hours** of a regular worker engaged in the same type of work at that workplace\n\nIn other words, \"people counted in the 50\" and \"workers subject to the stress check\" are not the same. Even for short-time workers below three-quarters, if they meet the contract-period requirement and their weekly working hours are roughly one-half or more of the prescribed weekly working hours of a regular worker, it is desirable to conduct the stress check for them.\n\n## Who conducts the stress check, and what is the procedure?\n\nThe person who conducts the stress check is **a physician or a public health nurse**. In addition, **dentists, nurses, psychiatric social workers, and certified public psychologists** who have completed the prescribed training can also conduct the check (Article 52-10 of the Ordinance on Industrial Safety and Health). The person conducting the check **does not necessarily have to be an occupational physician**. It is not the case that \"only an occupational physician can conduct it.\"\n\nBased on the Ministry of Health, Labour and Welfare's manual for small workplaces, the flow of the stress check can be organized roughly into the following five stages.\n\n1. Preparation for implementation (confirming workers and headcount, considering the implementation method)\n2. Building the system (deciding the in-house person in charge, the person who conducts the check, and the person who handles the administrative work)\n3. Conducting the stress check (mandatory)\n4. Physician interview guidance and post-measures (mandatory when a worker meeting the requirements requests it)\n5. Group analysis and workplace environment improvement (best-effort obligation)\n\nFor small workplaces, **outsourcing to an external organization is in principle recommended from the viewpoint of privacy protection**. However, outsourcing does not mean the employer's responsibility to implement disappears. It is necessary to decide in advance the division of roles among the in-house person in charge, the external person who conducts the check, and the person who handles the administrative work.\n\n## How are results notified and privacy protected?\n\nThe individual results of the stress check are **notified by the person who conducts the check directly to the worker themselves**. The individual results must not be provided to the employer without the worker's consent.\n\nIf the worker consents, the employer prepares a record of the results and keeps it for **five years** (Article 52-13, paragraph 2 of the Ordinance on Industrial Safety and Health). If there is no consent, the employer cannot receive the individual results, so the person who conducts the check or the person who handles the administrative work keeps them appropriately. Where there is no consent, it does not follow that the employer has a uniform statutory obligation to keep the records for five years. In either case, the employer must establish an appropriate management system, such as the storage location and security. The employer must not coerce the worker into consent.\n\nNote that if the worker requests interview guidance, the worker may be treated as having consented to the provision of results, provided the handling has been notified to the worker in advance (Stress Check Guidelines).\n\nWorkers do not have a legal **obligation to take the check**. What is imposed on the employer is \"the obligation to conduct the stress check.\" In addition, disadvantageous treatment for the following reasons is prohibited.\n\n- Not taking the check\n- Not consenting to the provision of results to the company\n- Requesting interview guidance\n- Not requesting interview guidance\n\n## What does a company do when a worker is judged to be a high-stress worker?\n\nThe fact that a worker is judged to be high-stress does **not automatically lead to physician interview guidance**. The flow is as follows.\n\n1. The person who conducts the check judges the necessity of interview guidance\n2. The worker is informed of the interview guidance\n3. The worker requests interview guidance\n4. The employer implements physician interview guidance\n5. The employer hears the physician's opinion on necessary measures\n6. The employer considers employment measures as necessary\n\nThe time guidelines are as follows. In statutory terms each step must be taken \"without delay,\" and the \"within approximately one month\" figures below are practical guidelines shown in the Ministry of Health, Labour and Welfare's manuals.\n\n| Step | Practical guideline | Statutory wording |\n|---|---|---|\n| The worker requests interview guidance | Within approximately one month after notification of the results | Without delay after receiving the notification (Ordinance Article 52-16, paragraph 1) |\n| The employer implements physician interview guidance | Within approximately one month after the request | Without delay when a request is made (Ordinance Article 52-16, paragraph 2) |\n| The employer hears the physician's opinion | Within approximately one month after the interview guidance | Without delay after the interview guidance is conducted (Ordinance Article 52-19) |\n\nInterview guidance and medical judgment are performed by a physician. The employer must not engage in disadvantageous treatment on the grounds of requesting interview guidance.\n\nFor small workplaces with fewer than 50 workers, the **Regional Occupational Health Center may be usable** for physician interview guidance for high-stress workers and others. Under the current MHLW guidance, this interview guidance is free of charge. However, the Regional Occupational Health Center does not itself conduct stress checks. Its use is mainly as a receiving point for interview guidance.\n\n## Are group analysis and workplace environment improvement mandatory or best-effort?\n\nWithin the stress check system, the mandatory and best-effort obligations are divided as follows.\n\n- Conducting the stress check → **mandatory**\n- Physician interview guidance when a worker meeting certain requirements requests it → **mandatory**\n- Group tabulation and analysis, and workplace environment improvement → **best-effort obligation** (Article 52-14 of the Ordinance on Industrial Safety and Health)\n\nIn addition, under the Ministerial Ordinance Partially Amending the Ordinance on Industrial Safety and Health (Ministry of Health, Labour and Welfare Ordinance No. 112 of 2026, promulgated June 30, 2026), **from April 1, 2027**, it will be expressly provided that group analysis, when conducted, must be carried out **in a way that cannot identify a specific individual** (amendment to Article 52-14, paragraph 1 of the same Ordinance; enforcement circular Kihatsu 0630 No. 2). This puts the existing interpretation into express wording, but because small workplaces with fewer than 50 have fewer people, particular attention to privacy is necessary.\n\n## Do workplaces with fewer than 50 need to report to the Labor Standards Inspection Office?\n\nFrom April 2028, the **implementation obligation** of the stress check will be extended to workplaces with fewer than 50. However, the **obligation to report the implementation results to the Labor Standards Inspection Office applies only to employers using 50 or more ordinarily employed workers** (Article 52-21 of the Ordinance on Industrial Safety and Health). The reporting obligation has not been extended to workplaces with fewer than 50. Do not confuse this point.\n\n## What should a workplace with fewer than 50 prepare now?\n\nPreparation before enforcement proceeds in the following 10 steps.\n\n1. Confirm the number of workers in your own workplace, by workplace\n2. Identify the workers legally subject to the check\n3. Decide the in-house person in charge\n4. Decide whether to outsource or conduct in-house\n5. Decide the person who conducts the check and the person who handles the administrative work\n6. Establish rules for privacy and record management\n7. Conduct the stress check (once a year)\n8. Establish a route for high-stress workers to request interview guidance\n9. Confirm how to use the Regional Occupational Health Center and other resources\n10. Also consider group analysis and workplace environment improvement (best-effort obligation)\n\nNote that the obligation to appoint an occupational physician is not uniformly extended to workplaces with fewer than 50. The person who conducts the stress check and the appointment of an occupational physician are separate systems.\n\n四葉社会保険労務士事務所 can advise on organizing the labor-management aspects of introducing the stress check system, in-house rules and regulations, management of eligible workers, and in-house operations. The person who conducts the stress check is a physician or other person meeting the legal qualification requirements, and interview guidance and medical judgment for high-stress workers are the domain of a physician. Consultation is free, and fees are set out in the [fee schedule](/en/labor/ryokin). For the steps of the process, see [How consultation and contracting work](/en/labor/nagare). Individual disputes are the domain of a lawyer (Bengoshi), and tax matters are the domain of a tax accountant. If a different professional is needed, each is contracted separately, and there is no referral fee.\n\n## Frequently asked questions\n\n**Q. Are stress checks mandatory for workplaces with fewer than 50 from April 2028?**\nA. Yes. The obligation to conduct stress checks will be extended to workplaces with fewer than 50 employees, which were previously a best-effort obligation, from April 1, 2028. It is conducted once a year at subject workplaces (at least once within each period of one year, on a regular basis), so conducting it once in April 2028 is not the end of it. However, workers subject to the check have separate requirements.\n\n**Q. Is \"50\" counted across the whole company?**\nA. No. In principle, it is judged by workplace, not by company. You do not simply add the head office and a sales office across the whole company and judge \"50 or more.\" A workplace is judged mainly as a locational unit, but a branch or sub-office that is extremely small in scale and lacks independence may be treated together with the next-higher organizational unit as a single workplace.\n\n**Q. Are the people counted in the 50 the same as the workers subject to the check?**\nA. They are not the same. The headcount may include part-time workers who are continuously employed and used as a regular practice, but workers legally subject to the check are, in principle, those who meet both \"an employment contract without a fixed term (including an expectation or record of use for one year or more)\" and \"weekly working hours of at least three-quarters of the prescribed weekly working hours of a regular worker engaged in the same type of work.\"\n\n**Q. Can a stress check be conducted without an occupational physician?**\nA. Yes. The person who conducts the check is a physician or public health nurse, or a dentist, nurse, psychiatric social worker, or certified public psychologist who has completed the prescribed training. It does not necessarily have to be an occupational physician, and the obligation to appoint an occupational physician is not uniformly extended to workplaces with fewer than 50 either.\n\n**Q. Must employees take the check?**\nA. Workers do not have a legal obligation to take the check. The obligation is for the employer to conduct the stress check. Disadvantageous treatment on the grounds of not taking the check is prohibited.\n\n**Q. Can the company see the individual results of the stress check?**\nA. Individual results are notified by the person who conducts the check directly to the worker themselves. They must not be provided to the employer without the worker's consent. If the worker consents, the employer prepares a record and keeps it for five years; if there is no consent, the person who conducts the check or the person who handles the administrative work keeps it.\n\n**Q. If judged high-stress, is interview guidance mandatory?**\nA. Being judged high-stress does not automatically lead to interview guidance. The person who conducts the check judges the necessity and informs the worker, and if the worker requests it, the employer implements physician interview guidance. As practical guidelines, the request is within approximately one month after notification of the results, the interview guidance within approximately one month after the request, and hearing the physician's opinion within approximately one month after the interview guidance.\n\n**Q. Do workplaces with fewer than 50 need to report to the Labor Standards Inspection Office?**\nA. The obligation to report the implementation results to the Labor Standards Inspection Office applies only to employers using 50 or more ordinarily employed workers (Article 52-21 of the Ordinance on Industrial Safety and Health). The reporting obligation has not been extended to workplaces with fewer than 50.\n\n## Sources for this article\n\n- Industrial Safety and Health Act, Article 66-10 (examinations to grasp the degree of psychological burden)\n- Act Partially Amending the Industrial Safety and Health Act and the Working Environment Measurement Act (Act No. 33 of 2025, promulgated May 14, 2025) — extension of the implementation obligation to workplaces with fewer than 50\n- Cabinet Order setting the enforcement date of part of the Act Partially Amending the Industrial Safety and Health Act and the Working Environment Measurement Act (Cabinet Order No. 195 of 2026, promulgated June 10, 2026) — extension of the obligation to workplaces with fewer than 50 takes effect April 1, 2028\n- Ordinance on Industrial Safety and Health, Article 52-9 (at least once within each period of one year, on a regular basis) / Article 52-10 (person who conducts the check) / Article 52-13, paragraph 2 (consent and five-year retention of records) / Article 52-14 (group tabulation and analysis = best-effort obligation) / Article 52-16, paragraphs 1 and 2 (request for and implementation of interview guidance) / Article 52-19 (hearing the physician's opinion) / Article 52-21 (reporting = 50 or more ordinarily employed workers)\n- Ministerial Ordinance Partially Amending the Ordinance on Industrial Safety and Health (Ministry of Health, Labour and Welfare Ordinance No. 112 of 2026, promulgated June 30, 2026, effective April 1, 2027) — express provision that group analysis is conducted in a way that cannot identify a specific individual (Article 52-14, paragraph 1). Enforcement circular Kihatsu 0630 No. 2 (June 30, 2026)\n- Enforcement of the Industrial Safety and Health Act (Hatsuki No. 91 of September 18, 1972) — how the unit of \"workplace\" is determined\n- Ministry of Health, Labour and Welfare, \"Small Workplace Stress Check System Implementation Manual\" (February 2026; published February 25, 2026)\n- Ministry of Health, Labour and Welfare, \"Guidelines on examinations to grasp the degree of psychological burden, the implementation of interview guidance, and measures employers should take based on the results of interview guidance,\" and \"Stress Check System Q&A\"\n- Public materials confirmed on August 19, 2026\n\nThis article does not decide whom to consult. 四葉社会保険労務士事務所 can advise on organizing the labor-management aspects of introducing the stress check system, in-house rules and regulations, management of eligible workers, and in-house operations. The person who conducts the stress check is a physician or other person meeting the legal qualification requirements, interview guidance and medical judgment for high-stress workers are the domain of a physician, individual disputes are the domain of a lawyer (Bengoshi), and tax matters are the domain of a tax accountant. If a different professional is needed, each is contracted separately, and there is no referral fee. For frequently asked questions, see the [FAQ](/en/labor/faq).\n\nThis article is general information. Whether the system applies and individual determinations are made by a qualified professional after a consultation, in light of the latest primary sources (the Ministry of Health, Labour and Welfare, Prefectural Labour Bureaus, etc.) and individual circumstances. Written by [Joji Uramatsu](/en/about/uramatsu) (Shakai Hoken Roumushi, Gyoseishoshi, Registered Real Estate Transaction Specialist).",
+          "category": "Labor law basics",
+          "keywords": [
+            "stress check under 50 employees mandatory 2028",
+            "stress check small workplace obligation",
+            "stress check implementation manual",
+            "stress check 2028 April workplace",
+            "stress check eligible workers 3/4"
+          ],
+          "tags": [
+            "Stress check",
+            "Industrial Safety and Health Act",
+            "Small workplace",
+            "Mental health",
+            "Workplace unit",
+            "Labor management"
+          ],
+          "author": {
+            "name": "Joji Uramatsu",
+            "title": "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所"
+          },
+          "faq": [
+            {
+              "question": "Are stress checks mandatory for workplaces with fewer than 50 from April 2028?",
+              "answer": "Yes. The obligation to conduct stress checks will be extended to workplaces with fewer than 50 employees, which were previously a best-effort obligation, from April 1, 2028. It is conducted once a year at subject workplaces (at least once within each period of one year, on a regular basis), so conducting it once in April 2028 is not the end of it. However, workers subject to the check have separate requirements."
+            },
+            {
+              "question": "Is \"50\" counted across the whole company?",
+              "answer": "No. In principle, it is judged by workplace, not by company. You do not simply add the head office and a sales office across the whole company and judge \"50 or more.\" A workplace is judged mainly as a locational unit, but a branch or sub-office that is extremely small in scale and lacks independence may be treated together with the next-higher organizational unit as a single workplace."
+            },
+            {
+              "question": "Are the people counted in the 50 the same as the workers subject to the check?",
+              "answer": "They are not the same. The headcount may include part-time workers who are continuously employed and used as a regular practice, but workers legally subject to the check are, in principle, those who meet both \"an employment contract without a fixed term (including an expectation or record of use for one year or more)\" and \"weekly working hours of at least three-quarters of the prescribed weekly working hours of a regular worker engaged in the same type of work.\""
+            },
+            {
+              "question": "Can a stress check be conducted without an occupational physician?",
+              "answer": "Yes. The person who conducts the check is a physician or public health nurse, or a dentist, nurse, psychiatric social worker, or certified public psychologist who has completed the prescribed training. It does not necessarily have to be an occupational physician, and the obligation to appoint an occupational physician is not uniformly extended to workplaces with fewer than 50 either."
+            },
+            {
+              "question": "Must employees take the check?",
+              "answer": "Workers do not have a legal obligation to take the check. The obligation is for the employer to conduct the stress check. Disadvantageous treatment on the grounds of not taking the check is prohibited."
+            },
+            {
+              "question": "Can the company see the individual results of the stress check?",
+              "answer": "Individual results are notified by the person who conducts the check directly to the worker themselves. They must not be provided to the employer without the worker's consent. If the worker consents, the employer prepares a record and keeps it for five years; if there is no consent, the person who conducts the check or the person who handles the administrative work keeps it."
+            },
+            {
+              "question": "If judged high-stress, is interview guidance mandatory?",
+              "answer": "Being judged high-stress does not automatically lead to interview guidance. The person who conducts the check judges the necessity and informs the worker, and if the worker requests it, the employer implements physician interview guidance. As practical guidelines, the request is within approximately one month after notification of the results, the interview guidance within approximately one month after the request, and hearing the physician's opinion within approximately one month after the interview guidance."
+            },
+            {
+              "question": "Do workplaces with fewer than 50 need to report to the Labor Standards Inspection Office?",
+              "answer": "The obligation to report the implementation results to the Labor Standards Inspection Office applies only to employers using 50 or more ordinarily employed workers (Article 52-21 of the Ordinance on Industrial Safety and Health). The reporting obligation has not been extended to workplaces with fewer than 50."
+            }
+          ]
+        },
+        "zh-tw": {
+          "title": "2028年4月起，未滿50人的事業場也將義務化壓力檢查──小規模事業場該準備的事",
+          "excerpt": "壓力檢查以勞動安全衛生法第66條之10為依據，目前常時50人以上的事業場為義務、未滿50人為努力義務。依勞動安全衛生法及作業環境測定法一部修正法律（令和7年法律第33號），自2028年4月1日起，實施義務將擴大到未滿50人的事業場。壓力檢查每年實施1次，並非2028年4月做1次就結束。「50人」以事業場為單位判定，而非公司單位，「算入50人的人」與「受檢對象者」未必一致。本文依厚生勞動省小規模事業場手冊（2026年2月公表），整理義務化的範圍與小規模事業場該準備的事。",
+          "content": "**先講結論**：壓力檢查以勞動安全衛生法第66條之10為依據，目前**常時50人以上的事業場為義務、未滿50人的事業場為努力義務**。依勞動安全衛生法及作業環境測定法一部修正法律（令和7年法律第33號，2025年5月14日公布），**自2028年4月1日起，壓力檢查的實施義務將擴大到迄今為努力義務的未滿50人事業場**（施行期日依令和8年政令第195號，2026年6月10日公布）。壓力檢查在對象事業場**每年實施1次**，並非2028年4月做1次就結束。這個「50人」以**事業場為單位而非公司單位**判定，「算入50人的人」與「壓力檢查的受檢對象者」未必一致。厚生勞動省已公布小規模事業場專用實施手冊（2026年2月25日公表），公司在施行前必須依序整備「對象者・人數的確認 → 實施方法・實施者的決定 → 結果通知・記錄管理 → 高壓力者的面談指導管道」。本文整理義務化的範圍，以及小規模事業場該準備的手續。\n\n本文以勞動者數未滿50人的事業場（以事業場為單位判定）之經營者、人事勞務負責人為對象。目的在回答「2028年4月起會改什麼」「我們的事業場是否為對象」「現在該準備什麼」。\n\n## 壓力檢查在2028年4月起會改變什麼？\n\n壓力檢查是掌握勞動者心理負擔程度的檢查，在對象事業場**每年實施1次**（法令上為「每1年以內1次、定期實施」。勞動安全衛生規則第52條之9）。現行制度中，常時使用50人以上勞動者的事業場負有實施義務，未滿50人的事業場則為「努力義務」。\n\n依令和7年修正勞動安全衛生法，**壓力檢查的實施義務將擴大到迄今為努力義務的未滿50人事業場**。施行日為2028年4月1日（施行期日由令和8年政令第195號訂定）。並非2028年4月實施1次就結束，而是每年實施都成為對象。\n\n不過，這並不表示「全部事業場、全部勞動者一律義務化」。事業場的實施義務擴大的同時，**個別受檢對象勞動者另有要件**（後述）。此外，實施結果向勞動基準監督署的報告義務等，50人以上與未滿50人的處理也有所不同。\n\n| 項目 | 常時50人以上的事業場 | 未滿50人的事業場（2028年4月1日以後） |\n|---|---|---|\n| 壓力檢查的實施 | 義務 | 義務（在此之前為努力義務） |\n| 實施頻率 | 每年1次（每1年以內1次、定期） | 每年1次（每1年以內1次、定期） |\n| 符合要件的勞動者提出申請時的醫師面談指導 | 義務 | 義務 |\n| 群體的彙整・分析、職場環境改善 | 努力義務 | 努力義務 |\n| 實施結果向勞動基準監督署的報告 | 義務 | 非對象 |\n\n## 「50人」以事業場為單位怎麼計算？與受檢對象者不同嗎？\n\n「50人」的判定原則上**以事業場為單位而非公司單位**。即使總公司30人、營業所25人，也不是單純以公司整體合計判定為「50人以上」。\n\n事業場主要以場所的單位判斷。不過，並非所在地不同就必然是不同的事業場。即使場所分散，出張所、支所等規模顯著較小，從組織上的關聯、事務能力等來看不具備作為一個事業場的獨立性者，**可能與最近上位的機構合併視為一個事業場**（勞動安全衛生法之施行＝昭和47年9月18日發基第91號）。自家據點屬於何者，須對照實際狀況確認。\n\n此外，這個人數判定並非單純只計算正職員工。**每週上班1次的兼職・工讀等，只要持續受雇並常態使用，也可能列入人數判定**。\n\n另一方面，**法定的壓力檢查對象者**原則上是同時符合下列兩項的勞動者。\n\n- 以無固定期限的勞動契約受雇者（包含契約期間為1年以上者、因契約更新預定使用1年以上者、已持續使用1年以上者）\n- 1週間的勞動時間數，達該事業場從事同種業務的通常勞動者**1週間所定勞動時間數**的4分之3以上\n\n也就是說，「算入50人的人」與「壓力檢查的受檢對象者」並不相同。即使是未達4分之3的短時間勞動者，只要符合契約期間要件，且1週間的勞動時間數達通常勞動者1週間所定勞動時間數的大致2分之1以上，也以實施壓力檢查為宜。\n\n## 壓力檢查由誰、以何種程序實施？\n\n壓力檢查的實施者為**醫師或保健師**。此外，修畢所定研修的**牙醫師・護理師・精神保健福祉士・公認心理師**也可以成為實施者（勞動安全衛生規則第52條之10）。實施者**未必須為產業醫**。並非「非產業醫不能實施」。\n\n依厚生勞動省的小規模事業場專用手冊，壓力檢查的流程大致可整理為以下5個階段。\n\n1. 實施準備（對象者・人數的確認、實施方法的檢討）\n2. 體制整備（事業場內的負責人、實施者、實施事務從業者的決定）\n3. 壓力檢查的實施（義務）\n4. 醫師面談指導・事後措置（符合要件的勞動者提出申請時為義務）\n5. 群體分析・職場環境改善（努力義務）\n\n小規模事業場**基於隱私保護的觀點，原則上建議委託外部機構**。不過，委託外部並不表示事業者的實施責任消失。事業場內的負責人、外部的實施者、實施事務從業者等的角色分擔，必須事先決定。\n\n## 結果的通知與隱私保護該如何進行？\n\n壓力檢查的個人結果由**實施者直接通知勞動者本人**。未經本人同意，不得將個人結果提供給事業者。\n\n本人同意的情況下，事業者作成結果的記錄並**保存5年**（勞動安全衛生規則第52條之13第2項）。未同意的情況下，事業者無法取得個人結果，因此由實施者或實施事務從業者妥適保存。關於未同意的情況，並非法令上一律課予事業者「保存5年的義務」。無論何種情況，事業者都必須就保存場所、資安等整備妥適的管理體制。不得強迫本人同意。\n\n另外，勞動者提出面談指導申請的情況，在事先向本人周知該處理方式的前提下，可將該申請視為同意向事業者提供結果（壓力檢查指針）。\n\n勞動者在法律上**沒有受檢義務**。課予事業者的是「實施壓力檢查的義務」。此外，禁止以下列事由作為不利益處遇的理由。\n\n- 不受檢\n- 不同意向公司提供結果\n- 提出面談指導申請\n- 不提出面談指導申請\n\n## 被判定為高壓力者時，公司要做什麼？\n\n被判定為高壓力者**並不會自動連結到醫師的面談指導**。流程如下。\n\n1. 實施者判斷面談指導的必要性\n2. 向本人通知面談指導\n3. 本人提出面談指導申請\n4. 事業者實施醫師的面談指導\n5. 聽取醫師對必要措置的意見\n6. 視需要檢討工作上的措置\n\n時間的標準如下。法令上均規定為「不得遲延」，下表的「大致1個月內」是厚生勞動省手冊等所示的實務標準。\n\n| 場面 | 實務上的標準 | 法令上的規定 |\n|---|---|---|\n| 本人提出面談指導申請 | 結果通知後大致1個月內 | 收到通知後，不得遲延（規則第52條之16第1項） |\n| 事業者實施醫師的面談指導 | 申請後大致1個月內 | 有申請時，不得遲延（規則第52條之16第2項） |\n| 事業者聽取醫師的意見 | 面談指導後大致1個月內 | 面談指導實施後，不得遲延（規則第52條之19） |\n\n面談指導與醫學判斷由醫師進行。事業者不得以提出面談指導申請為由進行不利益處遇。\n\n未滿50人的小規模事業場，高壓力者等的醫師面談指導**可能可以利用地域產業保健中心**。依現行厚生勞動省的說明，此面談指導為免費。不過，地域產業保健中心並不實施壓力檢查本身。其利用主要是作為面談指導的承接管道。\n\n## 群體分析・職場環境改善是義務還是努力義務？\n\n壓力檢查制度中，義務與努力義務區分如下。\n\n- 壓力檢查的實施 → **義務**\n- 符合一定要件者提出申請時的醫師面談指導 → **義務**\n- 群體的彙整・分析、職場環境改善 → **努力義務**（勞動安全衛生規則第52條之14）\n\n此外，依勞動安全衛生規則一部修正省令（令和8年厚生勞動省令第112號，2026年6月30日公布），**自2027年4月1日起**，實施群體分析時**須以無法識別特定個人的方法實施**，此點於省令上明文化（同規則第52條之14第1項的修正。施行通達＝基發0630第2號）。這是將既有解釋明文化，但未滿50人的小規模事業場人數較少，尤其需要顧及隱私。\n\n## 未滿50人也需要向勞動基準監督署報告嗎？\n\n自2028年4月起，壓力檢查的**實施義務**擴大到未滿50人的事業場。不過，實施結果**向勞動基準監督署的報告義務，僅限常時使用50人以上勞動者的事業者**（勞動安全衛生規則第52條之21）。報告義務並未擴大到未滿50人的事業場。請勿混淆此點。\n\n## 未滿50人的事業場現在該準備什麼？\n\n施行前的準備，依下列10個步驟進行。\n\n1. 以事業場為單位確認自家事業場的勞動者數\n2. 盤點法定的受檢對象者\n3. 決定公司內部的負責人\n4. 決定委託外部或自行實施\n5. 決定實施者・實施事務從業者\n6. 整備隱私・記錄管理的規則\n7. 實施壓力檢查（每年1次）\n8. 整備高壓力者提出面談指導申請的管道\n9. 確認地域產業保健中心等的利用方式\n10. 也檢討群體分析・職場環境改善（努力義務）\n\n另外，產業醫的選任義務並未一律擴大到未滿50人的事業場。壓力檢查的實施者與產業醫的選任是不同的制度。\n\n四葉社会保険労務士事務所可就壓力檢查制度導入相關的勞務面體制整理、社內規程・規則、對象者管理與社內運用提供諮詢。壓力檢查的實施者為符合資格要件的醫師等，高壓力者的面談指導・醫學判斷為醫師的領域。諮詢免費，費用整理於[報酬額表](/zh-tw/labor/ryokin)。手續流程請見[利用流程](/zh-tw/labor/nagare)。個別紛爭為律師（弁護士）、稅務為稅理士的領域。若需要其他專業人士，分別另行簽約，沒有介紹費。\n\n## 常見問題\n\n**Q. 未滿50人的事業場，自2028年4月起壓力檢查也是義務嗎？**\nA. 是的。迄今為努力義務的未滿50人事業場，自2028年4月1日起壓力檢查的實施義務也將擴大。對象事業場每年實施1次（每1年以內1次、定期），並非2028年4月做1次就結束。不過，個別受檢對象者另有要件。\n\n**Q.「50人」是以公司整體計算嗎？**\nA. 不是。原則上以事業場為單位而非公司單位判定。並非把總公司與營業所單純以公司整體合計判定為「50人以上」。事業場主要以場所的單位判斷，但出張所、支所等規模顯著較小而不具獨立性者，可能與最近上位的機構合併視為一個事業場。\n\n**Q. 算入50人的人與受檢對象者相同嗎？**\nA. 並不相同。人數判定可能包含持續受雇並常態使用的兼職等，但法定的受檢對象者原則上須同時符合「無固定期限的勞動契約（含預定或實際使用1年以上）」與「1週間的勞動時間數達從事同種業務的通常勞動者1週間所定勞動時間數的4分之3以上」。\n\n**Q. 沒有產業醫也能實施壓力檢查嗎？**\nA. 可以實施。實施者除醫師・保健師外，還有修畢所定研修的牙醫師・護理師・精神保健福祉士・公認心理師。未必須為產業醫。產業醫的選任義務也並未一律擴大到未滿50人的事業場。\n\n**Q. 員工一定要受檢嗎？**\nA. 勞動者在法律上沒有受檢義務。義務是事業者實施壓力檢查。禁止以不受檢等為由進行不利益處遇。\n\n**Q. 公司能看到壓力檢查的個人結果嗎？**\nA. 個人結果由實施者直接通知勞動者本人。未經本人同意，不得向事業者提供。同意的情況下由事業者作成記錄並保存5年，不同意的情況下由實施者或實施事務從業者保存。\n\n**Q. 被判定為高壓力者，就必須接受面談指導嗎？**\nA. 高壓力判定不會自動連結到面談指導。實施者判斷必要性並向本人通知，本人提出申請後，由事業者實施醫師面談指導。實務標準為：申請在結果通知後大致1個月內、面談指導在申請後大致1個月內、聽取醫師意見在面談指導後大致1個月內。\n\n**Q. 未滿50人也要向勞動基準監督署報告嗎？**\nA. 實施結果向勞動基準監督署的報告義務，僅限常時使用50人以上勞動者的事業者（勞動安全衛生規則第52條之21）。報告義務並未擴大到未滿50人的事業場。\n\n## 本文依據\n\n- 勞動安全衛生法 第66條之10（掌握心理負擔程度的檢查等）\n- 勞動安全衛生法及作業環境測定法一部修正法律（令和7年法律第33號，2025年5月14日公布）— 實施義務擴大到未滿50人的事業場\n- 訂定勞動安全衛生法及作業環境測定法一部修正法律一部施行期日的政令（令和8年政令第195號，2026年6月10日公布）— 未滿50人的義務擴大於2028年（令和10年）4月1日施行\n- 勞動安全衛生規則 第52條之9（每1年以內1次、定期）／第52條之10（實施者）／第52條之13第2項（同意・記錄保存5年）／第52條之14（群體的彙整・分析＝努力義務）／第52條之16第1項・第2項（面談指導的申請・實施）／第52條之19（聽取醫師的意見）／第52條之21（報告＝常時50人以上）\n- 勞動安全衛生規則一部修正省令（令和8年厚生勞動省令第112號，2026年6月30日公布，2027年4月1日施行）— 明文化群體分析須以無法識別特定個人的方法實施（第52條之14第1項）。施行通達＝基發0630第2號（令和8年6月30日）\n- 勞動安全衛生法之施行（昭和47年9月18日發基第91號）— 事業場單位的判斷方式\n- 厚生勞動省「小規模事業場壓力檢查制度實施手冊」（令和8年2月。2026年2月25日公表）\n- 厚生勞動省「掌握心理負擔程度的檢查及面談指導之實施，暨事業者依面談指導結果應採取措置之指針」「壓力檢查制度Q&A」\n- 公家資料於2026年8月19日確認\n\n本文並不替讀者決定該諮詢誰。四葉社会保険労務士事務所可就壓力檢查制度導入相關的勞務面體制整理、社內規程・規則、對象者管理與社內運用提供諮詢。壓力檢查實施者為符合資格要件的醫師等，高壓力者的面談指導、醫學判斷為醫師，個別紛爭為律師（弁護士），稅務為稅理士的領域。若需要其他專業人士，分別另行簽約，沒有介紹費。常見問題見[常見問題](/zh-tw/labor/faq)。\n\n本文為一般資訊提供。制度的適用與個別判斷，請依最新一次資料（厚生勞動省、都道府縣勞動局等）與個別情況，在面談後由資格者進行。執筆者為[浦松丈二](/zh-tw/about/uramatsu)（社會保險勞務士・行政書士・宅地建物取引士）。",
+          "category": "勞動法基礎",
+          "keywords": [
+            "壓力檢查 未滿50人 義務化 2028",
+            "壓力檢查 小規模事業場 義務",
+            "壓力檢查 實施手冊",
+            "壓力檢查 2028年4月 事業場",
+            "壓力檢查 對象者 4分之3"
+          ],
+          "tags": [
+            "壓力檢查",
+            "勞動安全衛生法",
+            "小規模事業場",
+            "心理健康",
+            "事業場單位",
+            "勞務管理"
+          ],
+          "author": {
+            "name": "浦松 丈二",
+            "title": "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+          },
+          "faq": [
+            {
+              "question": "未滿50人的事業場，自2028年4月起壓力檢查也是義務嗎？",
+              "answer": "是的。迄今為努力義務的未滿50人事業場，自2028年4月1日起壓力檢查的實施義務也將擴大。對象事業場每年實施1次（每1年以內1次、定期），並非2028年4月做1次就結束。不過，個別受檢對象者另有要件。"
+            },
+            {
+              "question": "「50人」是以公司整體計算嗎？",
+              "answer": "不是。原則上以事業場為單位而非公司單位判定。並非把總公司與營業所單純以公司整體合計判定為「50人以上」。事業場主要以場所的單位判斷，但出張所、支所等規模顯著較小而不具獨立性者，可能與最近上位的機構合併視為一個事業場。"
+            },
+            {
+              "question": "算入50人的人與受檢對象者相同嗎？",
+              "answer": "並不相同。人數判定可能包含持續受雇並常態使用的兼職等，但法定的受檢對象者原則上須同時符合「無固定期限的勞動契約（含預定或實際使用1年以上）」與「1週間的勞動時間數達從事同種業務的通常勞動者1週間所定勞動時間數的4分之3以上」。"
+            },
+            {
+              "question": "沒有產業醫也能實施壓力檢查嗎？",
+              "answer": "可以實施。實施者除醫師・保健師外，還有修畢所定研修的牙醫師・護理師・精神保健福祉士・公認心理師。未必須為產業醫。產業醫的選任義務也並未一律擴大到未滿50人的事業場。"
+            },
+            {
+              "question": "員工一定要受檢嗎？",
+              "answer": "勞動者在法律上沒有受檢義務。義務是事業者實施壓力檢查。禁止以不受檢等為由進行不利益處遇。"
+            },
+            {
+              "question": "公司能看到壓力檢查的個人結果嗎？",
+              "answer": "個人結果由實施者直接通知勞動者本人。未經本人同意，不得向事業者提供。同意的情況下由事業者作成記錄並保存5年，不同意的情況下由實施者或實施事務從業者保存。"
+            },
+            {
+              "question": "被判定為高壓力者，就必須接受面談指導嗎？",
+              "answer": "高壓力判定不會自動連結到面談指導。實施者判斷必要性並向本人通知，本人提出申請後，由事業者實施醫師面談指導。實務標準為：申請在結果通知後大致1個月內、面談指導在申請後大致1個月內、聽取醫師意見在面談指導後大致1個月內。"
+            },
+            {
+              "question": "未滿50人也要向勞動基準監督署報告嗎？",
+              "answer": "實施結果向勞動基準監督署的報告義務，僅限常時使用50人以上勞動者的事業者（勞動安全衛生規則第52條之21）。報告義務並未擴大到未滿50人的事業場。"
+            }
+          ]
+        },
+        "zh": {
+          "title": "2028年4月起，未满50人的事业场也将义务化压力检查──小规模事业场该准备的事",
+          "excerpt": "压力检查以劳动安全卫生法第66条之10为依据，目前常时50人以上的事业场为义务、未满50人为努力义务。依劳动安全卫生法及作业环境测定法一部修正法律（令和7年法律第33号），自2028年4月1日起，实施义务将扩大到未满50人的事业场。压力检查每年实施1次，并非2028年4月做1次就结束。「50人」以事业场为单位判定，而非公司单位，「算入50人的人」与「受检对象者」未必一致。本文依厚生劳动省小规模事业场手册（2026年2月公表），整理义务化的范围与小规模事业场该准备的事。",
+          "content": "**先讲结论**：压力检查以劳动安全卫生法第66条之10为依据，目前**常时50人以上的事业场为义务、未满50人的事业场为努力义务**。依劳动安全卫生法及作业环境测定法一部修正法律（令和7年法律第33号，2025年5月14日公布），**自2028年4月1日起，压力检查的实施义务将扩大到迄今为努力义务的未满50人事业场**（施行期日依令和8年政令第195号，2026年6月10日公布）。压力检查在对象事业场**每年实施1次**，并非2028年4月做1次就结束。这个「50人」以**事业场为单位而非公司单位**判定，「算入50人的人」与「压力检查的受检对象者」未必一致。厚生劳动省已公布小规模事业场专用实施手册（2026年2月25日公表），公司在施行前必须依序整备「对象者・人数的确认 → 实施方法・实施者的决定 → 结果通知・记录管理 → 高压力者的面谈指导管道」。本文整理义务化的范围，以及小规模事业场该准备的手续。\n\n本文以劳动者数未满50人的事业场（以事业场为单位判定）之经营者、人事劳务负责人为对象。目的在回答「2028年4月起会改什么」「我们的事业场是否为对象」「现在该准备什么」。\n\n## 压力检查在2028年4月起会改变什么？\n\n压力检查是掌握劳动者心理负担程度的检查，在对象事业场**每年实施1次**（法令上为「每1年以内1次、定期实施」。劳动安全卫生规则第52条之9）。现行制度中，常时使用50人以上劳动者的事业场负有实施义务，未满50人的事业场则为「努力义务」。\n\n依令和7年修正劳动安全卫生法，**压力检查的实施义务将扩大到迄今为努力义务的未满50人事业场**。施行日为2028年4月1日（施行期日由令和8年政令第195号订定）。并非2028年4月实施1次就结束，而是每年实施都成为对象。\n\n不过，这并不表示「全部事业场、全部劳动者一律义务化」。事业场的实施义务扩大的同时，**个别受检对象劳动者另有要件**（后述）。此外，实施结果向劳动基准监督署的报告义务等，50人以上与未满50人的处理也有所不同。\n\n| 项目 | 常时50人以上的事业场 | 未满50人的事业场（2028年4月1日以后） |\n|---|---|---|\n| 压力检查的实施 | 义务 | 义务（在此之前为努力义务） |\n| 实施频率 | 每年1次（每1年以内1次、定期） | 每年1次（每1年以内1次、定期） |\n| 符合要件的劳动者提出申请时的医师面谈指导 | 义务 | 义务 |\n| 群体的汇整・分析、职场环境改善 | 努力义务 | 努力义务 |\n| 实施结果向劳动基准监督署的报告 | 义务 | 非对象 |\n\n## 「50人」以事业场为单位怎么计算？与受检对象者不同吗？\n\n「50人」的判定原则上**以事业场为单位而非公司单位**。即使总公司30人、营业所25人，也不是单纯以公司整体合计判定为「50人以上」。\n\n事业场主要以场所的单位判断。不过，并非所在地不同就必然是不同的事业场。即使场所分散，出张所、支所等规模显著较小，从组织上的关联、事务能力等来看不具备作为一个事业场的独立性者，**可能与最近上位的机构合并视为一个事业场**（劳动安全卫生法之施行＝昭和47年9月18日发基第91号）。自家据点属于何者，须对照实际状况确认。\n\n此外，这个人数判定并非单纯只计算正职员工。**每周上班1次的兼职・工读等，只要持续受雇并常态使用，也可能列入人数判定**。\n\n另一方面，**法定的压力检查对象者**原则上是同时符合下列两项的劳动者。\n\n- 以无固定期限的劳动契约受雇者（包含契约期间为1年以上者、因契约更新预定使用1年以上者、已持续使用1年以上者）\n- 1周间的劳动时间数，达该事业场从事同种业务的通常劳动者**1周间所定劳动时间数**的4分之3以上\n\n也就是说，「算入50人的人」与「压力检查的受检对象者」并不相同。即使是未达4分之3的短时间劳动者，只要符合契约期间要件，且1周间的劳动时间数达通常劳动者1周间所定劳动时间数的大致2分之1以上，也以实施压力检查为宜。\n\n## 压力检查由谁、以何种进程实施？\n\n压力检查的实施者为**医师或保健师**。此外，修毕所定研修的**牙医师・护理师・精神保健福祉士・公认心理师**也可以成为实施者（劳动安全卫生规则第52条之10）。实施者**未必须为产业医**。并非「非产业医不能实施」。\n\n依厚生劳动省的小规模事业场专用手册，压力检查的流程大致可整理为以下5个阶段。\n\n1. 实施准备（对象者・人数的确认、实施方法的检讨）\n2. 体制整备（事业场内的负责人、实施者、实施事务从业者的决定）\n3. 压力检查的实施（义务）\n4. 医师面谈指导・事后措置（符合要件的劳动者提出申请时为义务）\n5. 群体分析・职场环境改善（努力义务）\n\n小规模事业场**基于隐私保护的观点，原则上建议委托外部机构**。不过，委托外部并不表示事业者的实施责任消失。事业场内的负责人、外部的实施者、实施事务从业者等的角色分担，必须事先决定。\n\n## 结果的通知与隐私保护该如何进行？\n\n压力检查的个人结果由**实施者直接通知劳动者本人**。未经本人同意，不得将个人结果提供给事业者。\n\n本人同意的情况下，事业者作成结果的记录并**保存5年**（劳动安全卫生规则第52条之13第2项）。未同意的情况下，事业者无法取得个人结果，因此由实施者或实施事务从业者妥适保存。关于未同意的情况，并非法令上一律课予事业者「保存5年的义务」。无论何种情况，事业者都必须就保存场所、资安等整备妥适的管理体制。不得强迫本人同意。\n\n另外，劳动者提出面谈指导申请的情况，在事先向本人周知该处理方式的前提下，可将该申请视为同意向事业者提供结果（压力检查指针）。\n\n劳动者在法律上**没有受检义务**。课予事业者的是「实施压力检查的义务」。此外，禁止以下列事由作为不利益处遇的理由。\n\n- 不受检\n- 不同意向公司提供结果\n- 提出面谈指导申请\n- 不提出面谈指导申请\n\n## 被判定为高压力者时，公司要做什么？\n\n被判定为高压力者**并不会自动链接到医师的面谈指导**。流程如下。\n\n1. 实施者判断面谈指导的必要性\n2. 向本人通知面谈指导\n3. 本人提出面谈指导申请\n4. 事业者实施医师的面谈指导\n5. 听取医师对必要措置的意见\n6. 视需要检讨工作上的措置\n\n时间的标准如下。法令上均规定为「不得迟延」，下表的「大致1个月内」是厚生劳动省手册等所示的实务标准。\n\n| 场面 | 实务上的标准 | 法令上的规定 |\n|---|---|---|\n| 本人提出面谈指导申请 | 结果通知后大致1个月内 | 收到通知后，不得迟延（规则第52条之16第1项） |\n| 事业者实施医师的面谈指导 | 申请后大致1个月内 | 有申请时，不得迟延（规则第52条之16第2项） |\n| 事业者听取医师的意见 | 面谈指导后大致1个月内 | 面谈指导实施后，不得迟延（规则第52条之19） |\n\n面谈指导与医学判断由医师进行。事业者不得以提出面谈指导申请为由进行不利益处遇。\n\n未满50人的小规模事业场，高压力者等的医师面谈指导**可能可以利用地域产业保健中心**。依现行厚生劳动省的说明，此面谈指导为免费。不过，地域产业保健中心并不实施压力检查本身。其利用主要是作为面谈指导的承接管道。\n\n## 群体分析・职场环境改善是义务还是努力义务？\n\n压力检查制度中，义务与努力义务区分如下。\n\n- 压力检查的实施 → **义务**\n- 符合一定要件者提出申请时的医师面谈指导 → **义务**\n- 群体的汇整・分析、职场环境改善 → **努力义务**（劳动安全卫生规则第52条之14）\n\n此外，依劳动安全卫生规则一部修正省令（令和8年厚生劳动省令第112号，2026年6月30日公布），**自2027年4月1日起**，实施群体分析时**须以无法识别特定个人的方法实施**，此点于省令上明文化（同规则第52条之14第1项的修正。施行通达＝基发0630第2号）。这是将既有解释明文化，但未满50人的小规模事业场人数较少，尤其需要顾及隐私。\n\n## 未满50人也需要向劳动基准监督署报告吗？\n\n自2028年4月起，压力检查的**实施义务**扩大到未满50人的事业场。不过，实施结果**向劳动基准监督署的报告义务，仅限常时使用50人以上劳动者的事业者**（劳动安全卫生规则第52条之21）。报告义务并未扩大到未满50人的事业场。请勿混淆此点。\n\n## 未满50人的事业场现在该准备什么？\n\n施行前的准备，依下列10个步骤进行。\n\n1. 以事业场为单位确认自家事业场的劳动者数\n2. 盘点法定的受检对象者\n3. 决定公司内部的负责人\n4. 决定委托外部或自行实施\n5. 决定实施者・实施事务从业者\n6. 整备隐私・记录管理的规则\n7. 实施压力检查（每年1次）\n8. 整备高压力者提出面谈指导申请的管道\n9. 确认地域产业保健中心等的利用方式\n10. 也检讨群体分析・职场环境改善（努力义务）\n\n另外，产业医的选任义务并未一律扩大到未满50人的事业场。压力检查的实施者与产业医的选任是不同的制度。\n\n四葉社会保険労務士事務所可就压力检查制度导入相关的劳务面体制整理、社内规程・规则、对象者管理与社内运用提供咨询。压力检查的实施者为符合资格要件的医师等，高压力者的面谈指导・医学判断为医师的领域。咨询免费，费用整理于[报酬额表](/zh/labor/ryokin)。手续流程请见[利用流程](/zh/labor/nagare)。个别纷争为律师（弁護士）、税务为税务师（税理士）的领域。若需要其他专业人士，分别另行签约，没有介绍费。\n\n## 常见问题\n\n**Q. 未满50人的事业场，自2028年4月起压力检查也是义务吗？**\nA. 是的。迄今为努力义务的未满50人事业场，自2028年4月1日起压力检查的实施义务也将扩大。对象事业场每年实施1次（每1年以内1次、定期），并非2028年4月做1次就结束。不过，个别受检对象者另有要件。\n\n**Q.「50人」是以公司整体计算吗？**\nA. 不是。原则上以事业场为单位而非公司单位判定。并非把总公司与营业所单纯以公司整体合计判定为「50人以上」。事业场主要以场所的单位判断，但出张所、支所等规模显著较小而不具独立性者，可能与最近上位的机构合并视为一个事业场。\n\n**Q. 算入50人的人与受检对象者相同吗？**\nA. 并不相同。人数判定可能包含持续受雇并常态使用的兼职等，但法定的受检对象者原则上须同时符合「无固定期限的劳动契约（含预定或实际使用1年以上）」与「1周间的劳动时间数达从事同种业务的通常劳动者1周间所定劳动时间数的4分之3以上」。\n\n**Q. 没有产业医也能实施压力检查吗？**\nA. 可以实施。实施者除医师・保健师外，还有修毕所定研修的牙医师・护理师・精神保健福祉士・公认心理师。未必须为产业医。产业医的选任义务也并未一律扩大到未满50人的事业场。\n\n**Q. 员工一定要受检吗？**\nA. 劳动者在法律上没有受检义务。义务是事业者实施压力检查。禁止以不受检等为由进行不利益处遇。\n\n**Q. 公司能看到压力检查的个人结果吗？**\nA. 个人结果由实施者直接通知劳动者本人。未经本人同意，不得向事业者提供。同意的情况下由事业者作成记录并保存5年，不同意的情况下由实施者或实施事务从业者保存。\n\n**Q. 被判定为高压力者，就必须接受面谈指导吗？**\nA. 高压力判定不会自动链接到面谈指导。实施者判断必要性并向本人通知，本人提出申请后，由事业者实施医师面谈指导。实务标准为：申请在结果通知后大致1个月内、面谈指导在申请后大致1个月内、听取医师意见在面谈指导后大致1个月内。\n\n**Q. 未满50人也要向劳动基准监督署报告吗？**\nA. 实施结果向劳动基准监督署的报告义务，仅限常时使用50人以上劳动者的事业者（劳动安全卫生规则第52条之21）。报告义务并未扩大到未满50人的事业场。\n\n## 本文依据\n\n- 劳动安全卫生法 第66条之10（掌握心理负担程度的检查等）\n- 劳动安全卫生法及作业环境测定法一部修正法律（令和7年法律第33号，2025年5月14日公布）— 实施义务扩大到未满50人的事业场\n- 订定劳动安全卫生法及作业环境测定法一部修正法律一部施行期日的政令（令和8年政令第195号，2026年6月10日公布）— 未满50人的义务扩大于2028年（令和10年）4月1日施行\n- 劳动安全卫生规则 第52条之9（每1年以内1次、定期）／第52条之10（实施者）／第52条之13第2项（同意・记录保存5年）／第52条之14（群体的汇整・分析＝努力义务）／第52条之16第1项・第2项（面谈指导的申请・实施）／第52条之19（听取医师的意见）／第52条之21（报告＝常时50人以上）\n- 劳动安全卫生规则一部修正省令（令和8年厚生劳动省令第112号，2026年6月30日公布，2027年4月1日施行）— 明文化群体分析须以无法识别特定个人的方法实施（第52条之14第1项）。施行通达＝基发0630第2号（令和8年6月30日）\n- 劳动安全卫生法之施行（昭和47年9月18日发基第91号）— 事业场单位的判断方式\n- 厚生劳动省「小规模事业场压力检查制度实施手册」（令和8年2月。2026年2月25日公表）\n- 厚生劳动省「掌握心理负担程度的检查及面谈指导之实施，暨事业者依面谈指导结果应采取措置之指针」「压力检查制度Q&A」\n- 公家资料于2026年8月19日确认\n\n本文并不替读者决定该咨询谁。四葉社会保険労務士事務所可就压力检查制度导入相关的劳务面体制整理、社内规程・规则、对象者管理与社内运用提供咨询。压力检查实施者为符合资格要件的医师等，高压力者的面谈指导、医学判断为医师，个别纷争为律师（弁護士），税务为税务师（税理士）的领域。若需要其他专业人士，分别另行签约，没有介绍费。常见问题见[常见问题](/zh/labor/faq)。\n\n本文为一般信息提供。制度的适用与个别判断，请依最新一次资料（厚生劳动省、都道府县劳动局等）与个别情况，在面谈后由资格者进行。执笔者为[浦松丈二](/zh/about/uramatsu)（社会保险劳务士・行政书士・宅地建物取引士）。",
+          "category": "劳动法基础",
+          "keywords": [
+            "压力检查 未满50人 义务化 2028",
+            "压力检查 小规模事业场 义务",
+            "压力检查 实施手册",
+            "压力检查 2028年4月 事业场",
+            "压力检查 对象者 4分之3"
+          ],
+          "tags": [
+            "压力检查",
+            "劳动安全卫生法",
+            "小规模事业场",
+            "心理健康",
+            "事业场单位",
+            "劳务管理"
+          ],
+          "author": {
+            "name": "浦松 丈二",
+            "title": "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+          },
+          "faq": [
+            {
+              "question": "未满50人的事业场，自2028年4月起压力检查也是义务吗？",
+              "answer": "是的。迄今为努力义务的未满50人事业场，自2028年4月1日起压力检查的实施义务也将扩大。对象事业场每年实施1次（每1年以内1次、定期），并非2028年4月做1次就结束。不过，个别受检对象者另有要件。"
+            },
+            {
+              "question": "「50人」是以公司整体计算吗？",
+              "answer": "不是。原则上以事业场为单位而非公司单位判定。并非把总公司与营业所单纯以公司整体合计判定为「50人以上」。事业场主要以场所的单位判断，但出张所、支所等规模显著较小而不具独立性者，可能与最近上位的机构合并视为一个事业场。"
+            },
+            {
+              "question": "算入50人的人与受检对象者相同吗？",
+              "answer": "并不相同。人数判定可能包含持续受雇并常态使用的兼职等，但法定的受检对象者原则上须同时符合「无固定期限的劳动契约（含预定或实际使用1年以上）」与「1周间的劳动时间数达从事同种业务的通常劳动者1周间所定劳动时间数的4分之3以上」。"
+            },
+            {
+              "question": "没有产业医也能实施压力检查吗？",
+              "answer": "可以实施。实施者除医师・保健师外，还有修毕所定研修的牙医师・护理师・精神保健福祉士・公认心理师。未必须为产业医。产业医的选任义务也并未一律扩大到未满50人的事业场。"
+            },
+            {
+              "question": "员工一定要受检吗？",
+              "answer": "劳动者在法律上没有受检义务。义务是事业者实施压力检查。禁止以不受检等为由进行不利益处遇。"
+            },
+            {
+              "question": "公司能看到压力检查的个人结果吗？",
+              "answer": "个人结果由实施者直接通知劳动者本人。未经本人同意，不得向事业者提供。同意的情况下由事业者作成记录并保存5年，不同意的情况下由实施者或实施事务从业者保存。"
+            },
+            {
+              "question": "被判定为高压力者，就必须接受面谈指导吗？",
+              "answer": "高压力判定不会自动链接到面谈指导。实施者判断必要性并向本人通知，本人提出申请后，由事业者实施医师面谈指导。实务标准为：申请在结果通知后大致1个月内、面谈指导在申请后大致1个月内、听取医师意见在面谈指导后大致1个月内。"
+            },
+            {
+              "question": "未满50人也要向劳动基准监督署报告吗？",
+              "answer": "实施结果向劳动基准监督署的报告义务，仅限常时使用50人以上劳动者的事业者（劳动安全卫生规则第52条之21）。报告义务并未扩大到未满50人的事业场。"
             }
           ]
         }
