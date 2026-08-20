@@ -283,14 +283,14 @@ const COPY: Record<LangCode, ShogaiFukushiCopy> = {
               </tr>
               <tr>
                 <td className="border border-border px-3 py-2">Facility and operational standards</td>
-                <td className="border border-border px-3 py-2">The property's structure, floor area, fire safety, etc., plus well-drafted operational rules</td>
+                <td className="border border-border px-3 py-2">The property&apos;s structure, floor area, fire safety, etc., plus well-drafted operational rules</td>
                 <td className="border border-border px-3 py-2">Non-compliance sometimes comes to light after the property contract is signed</td>
               </tr>
             </tbody>
           </table>
         </div>
         <p className="mt-3 text-sm leading-relaxed text-text-muted">
-          The legal basis is the designation standards under the Act on Comprehensive Support for Persons with Disabilities and the Child Welfare Act (including each municipality's ordinances and guidelines). Missing documents or a misreading of the standards leads directly to delayed designation or a re-filed application. 四葉行政書士事務所 sorts out the requirements in advance and prepares and files the application documents on your behalf.
+          The legal basis is the designation standards under the Act on Comprehensive Support for Persons with Disabilities and the Child Welfare Act (including each municipality&apos;s ordinances and guidelines). Missing documents or a misreading of the standards leads directly to delayed designation or a re-filed application. 四葉行政書士事務所 sorts out the requirements in advance and prepares and files the application documents on your behalf.
         </p>
         <p className="mt-2 text-sm text-text-muted">
           Examples of covered services: shared-living support (group homes), after-school day services, child development support, daily-life care, and more
@@ -344,7 +344,7 @@ const COPY: Record<LangCode, ShogaiFukushiCopy> = {
       <>
         <p className="mt-3 leading-relaxed text-text">
           <strong>Before you commit to a property—the concept stage—is best</strong>
-          . Designation for disability-welfare services requires the property's location, structure, floor area, and fire-safety equipment to meet the standards, and there are real cases where it turns out, only after the lease is signed, that designation cannot be obtained for that property. Working with our affiliated company 四葉不動産株式会社 (Yotsuba Fudosan), we can take consultations{" "}
+          . Designation for disability-welfare services requires the property&apos;s location, structure, floor area, and fire-safety equipment to meet the standards, and there are real cases where it turns out, only after the lease is signed, that designation cannot be obtained for that property. Working with our affiliated company 四葉不動産株式会社 (Yotsuba Fudosan), we can take consultations{" "}
           <strong>from the property-search stage, with the designation standards in view</strong> (the real estate transaction itself is accepted by Yotsuba Fudosan as a separate business entity).
         </p>
         <p className="mt-3 text-sm text-text-muted">
@@ -381,7 +381,7 @@ const COPY: Record<LangCode, ShogaiFukushiCopy> = {
     meritH2: "Why entrust this field to 四葉行政書士事務所?",
     meritBody: (
       <p className="mt-3 leading-relaxed text-text">
-        Our representative, 浦松 丈二 (Joji Uramatsu), is a gyoseishoshi who spent <strong>34 years organizing complex facts and making them understood</strong>—most recently as China General Bureau Chief of the Mainichi Shimbun. Disability-welfare designation involves many requirements, and interpretations differ from one municipality to the next. Sorting out the issues and turning them into a well-grounded application—this is exactly where a reporter's craft pays off. On top of that, our tie-up with the affiliated 四葉不動産株式会社 lets you consult{" "}
+        Our representative, 浦松 丈二 (Joji Uramatsu), is a gyoseishoshi who spent <strong>34 years organizing complex facts and making them understood</strong>—most recently as China General Bureau Chief of the Mainichi Shimbun. Disability-welfare designation involves many requirements, and interpretations differ from one municipality to the next. Sorting out the issues and turning them into a well-grounded application—this is exactly where a reporter&apos;s craft pays off. On top of that, our tie-up with the affiliated 四葉不動産株式会社 lets you consult{" "}
         <strong>one desk from securing a property through the designation application</strong>. Few offices offer this combination.
         <Placeholder reason="浦松＝公開可能な実績・件数（確定分のみ。無ければ数値は書かない）" />
       </p>

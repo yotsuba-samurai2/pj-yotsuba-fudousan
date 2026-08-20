@@ -9,16 +9,29 @@ import { getLocalizedColumn, type Column } from "@/lib/column-shared";
 
 export function LaborColumnListPageContent() {
   const { t, locale } = useTranslation();
-  const [columns, setColumns] = useState<Column[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [fetched, setFetched] = useState<{
+    locale: string;
+    columns: Column[];
+  } | null>(null);
 
   useEffect(() => {
-    setLoading(true);
+    let cancelled = false;
     getLatestLaborColumns(20, locale).then((cols) => {
-      setColumns(cols.map((c) => getLocalizedColumn(c, locale)));
-      setLoading(false);
+      if (cancelled) return;
+      setFetched({
+        locale,
+        columns: cols.map((c) => getLocalizedColumn(c, locale)),
+      });
     });
+    return () => {
+      cancelled = true;
+    };
   }, [locale]);
+
+  // effect 冒頭の setLoading(true) をやめ、取得済みロケールとの一致で導出する。
+  // ロケールを連続で切り替えたとき、古いレスポンスが新しい表示を上書きするレースも防げる。
+  const loading = fetched?.locale !== locale;
+  const columns = loading ? [] : (fetched?.columns ?? []);
 
   return (
     <>
