@@ -66,6 +66,11 @@ export function LanguageProvider({
       window.location.pathname,
     );
     if (pathLocale !== locale) {
+      // ブラウザ実URL（外部システム）との同期。usePathname() はミドルウェアのリライト後の
+      // パスを返すため window.location.pathname を正とする必要があり、これをレンダー中に
+      // 読むとハイドレーション不一致を招く。マウント後の effect で同期するのが正しいため、
+      // set-state-in-effect はここでは意図的に許容する。
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setLocaleState(pathLocale);
     }
     if (pendingRefreshRef.current) {

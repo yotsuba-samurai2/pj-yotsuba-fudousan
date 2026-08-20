@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useState, useEffect } from "react";
+import { createContext, useContext, useMemo } from "react";
 import type { LangCode } from "@/config/languages";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -27,18 +27,17 @@ export function TranslationProvider({
 }) {
   const { locale } = useLanguage();
 
-  const [dictionary, setDictionary] = useState<Record<string, unknown>>(
+  // 辞書は initialData と locale から一意に決まる派生値。
+  // state + useEffect で同期すると余分な再レンダーが1回挟まるため useMemo で導出する。
+  const dictionary = useMemo(
     () => initialData[locale] ?? initialData.ja ?? {},
+    [initialData, locale],
   );
-
-  useEffect(() => {
-    setDictionary(initialData[locale] ?? initialData.ja ?? {});
-  }, [locale, initialData]);
-
-  const fallback = initialData.ja ?? {};
+  const fallback = useMemo(() => initialData.ja ?? {}, [initialData]);
+  const value = useMemo(() => ({ dictionary, fallback }), [dictionary, fallback]);
 
   return (
-    <TranslationContext.Provider value={{ dictionary, fallback }}>
+    <TranslationContext.Provider value={value}>
       {children}
     </TranslationContext.Provider>
   );

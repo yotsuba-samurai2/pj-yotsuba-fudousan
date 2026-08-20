@@ -478,9 +478,14 @@ function TenantHeader({ businessKey }: { businessKey: string }) {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  useEffect(() => {
+  // ページ遷移時にメニューを閉じる。
+  // useEffect 内の同期 setState（react-hooks/set-state-in-effect）を避けるため、
+  // React 公式の「値の変更に合わせてレンダー中に state を調整する」パターンを使う。
+  const [lastPathname, setLastPathname] = useState(pathname);
+  if (pathname !== lastPathname) {
+    setLastPathname(pathname);
     setIsOpen(false);
-  }, [pathname]);
+  }
 
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "";

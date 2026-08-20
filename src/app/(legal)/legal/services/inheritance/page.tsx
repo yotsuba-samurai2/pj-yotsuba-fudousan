@@ -117,7 +117,7 @@ const COPY: Record<LangCode, InheritanceCopy> = {
     fudosanHeading: "Can you also help with inherited real estate?",
     fudosanBody: (
       <>
-        Yes. Managing, using, or selling inherited real estate is handled by our affiliated company, <strong>四葉不動産株式会社 (Yotsuba Real Estate Co., Ltd.)</strong>, a licensed real estate brokerage. <strong>The paperwork (gyoseishoshi) and the property (real estate brokerage) are each engaged under a separate contract</strong>. Your first inquiry can start in one place. Yotsuba Real Estate's complete guide walks you through what to do with inherited property.
+        Yes. Managing, using, or selling inherited real estate is handled by our affiliated company, <strong>四葉不動産株式会社 (Yotsuba Real Estate Co., Ltd.)</strong>, a licensed real estate brokerage. <strong>The paperwork (gyoseishoshi) and the property (real estate brokerage) are each engaged under a separate contract</strong>. Your first inquiry can start in one place. Yotsuba Real Estate&apos;s complete guide walks you through what to do with inherited property.
       </>
     ),
     souzokuGuideLabel:
