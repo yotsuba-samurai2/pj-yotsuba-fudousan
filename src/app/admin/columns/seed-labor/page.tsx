@@ -14,13 +14,17 @@ type ItemResult = {
 };
 
 /**
- * 労務コラム（4本）のバルクupsert投入。
+ * 労務コラムのバルクupsert投入。
  *
- * scripts/office-columns/*.md（浦松検収済みドラフト 2026-07-25 準拠）から
- * `npx tsx scripts/seed-office-columns.ts --emit-ts` で焼き込んだ
- * src/lib/data/office-columns-seed.ts を、ブラウザの管理者セッション経由で
+ * scripts/labor-columns/*.md（日本語原稿）と en/ zh-tw/ zh/ の翻訳から
+ * `npm run column:emit`（= npx tsx scripts/seed-labor-columns.ts --emit-ts）で焼き込んだ
+ * src/lib/data/labor-columns-seed.ts を、ブラウザの管理者セッション経由で
  * slug基準の冪等upsertで投入する（seed-gh と同型・再実行しても重複しない）。
- * status="published"（検収済みのため公開状態で投入。business=labor / locales=["ja"]）。
+ * status="published" / business=labor。locales は4言語が揃っていれば [] ＝全言語公開、
+ * 揃っていなければ ["ja"]（seed-labor-columns.ts 側で判定）。
+ *
+ * 件数は LABOR_COLUMNS_SEED.length に追随させ、画面に固定値を書かない
+ * （4本時代の「（4本）」が52本になっても残っていたため）。
  */
 export default function SeedLaborPage() {
   const [running, setRunning] = useState(false);
@@ -64,10 +68,13 @@ export default function SeedLaborPage() {
 
   return (
     <div className="p-6">
-      <h1 className="mb-1 text-lg font-bold">労務コラム（4本）バルク投入</h1>
+      <h1 className="mb-1 text-lg font-bold">
+        労務コラム（{LABOR_COLUMNS_SEED.length}本）バルク投入
+      </h1>
       <p className="mb-4 text-sm text-text-muted">
-        business=labor／locales=[&quot;ja&quot;]／status=published でupsert投入します（slug基準・冪等）。
-        再実行しても重複しません。原稿の正本＝scripts/labor-columns/*.md（報酬額表 v18 の決定と相場調査から起草）。
+        business=labor／status=published でupsert投入します（slug基準・冪等）。再実行しても重複しません。
+        locales は4言語が揃っていれば []（＝全言語公開）、揃っていなければ [&quot;ja&quot;] で入ります。
+        原稿の正本＝scripts/labor-columns/*.md。
       </p>
 
       <div className="max-w-2xl rounded-xl border border-border bg-surface p-6">
@@ -106,7 +113,11 @@ export default function SeedLaborPage() {
             disabled={running}
             className="rounded-lg bg-primary px-4 py-2 text-sm font-medium text-white disabled:opacity-50"
           >
-            {running ? "投入中…" : allDone && !hasError ? "再実行（冪等）" : "4本を投入する"}
+            {running
+              ? "投入中…"
+              : allDone && !hasError
+                ? "再実行（冪等）"
+                : `${LABOR_COLUMNS_SEED.length}本を投入する`}
           </button>
           <button
             type="button"
