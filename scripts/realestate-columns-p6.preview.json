@@ -1,0 +1,26 @@
+{
+  "generatedAt": "2026-08-20T10:17:07.525Z",
+  "note": "不動産コラム第6弾（1本＝台湾企業の日本拠点づくり×オフィス・住まい／4言語）。投入は /admin/columns/seed-realestate-p6。",
+  "verification": [
+    "OK: 全チェック通過"
+  ],
+  "articles": [
+    {
+      "slug": "taiwan-kigyo-nihon-kyoten-office-sumai",
+      "title": "台湾企業が日本に拠点を構えるとき、オフィスと住まいで何が起きるか──外国法人名義の審査と順番",
+      "locales": [
+        "ja",
+        "en",
+        "zh-tw",
+        "zh"
+      ],
+      "faq": 4,
+      "contentChars": 5099,
+      "translationChars": {
+        "en": 12652,
+        "zh-tw": 4187,
+        "zh": 4185
+      }
+    }
+  ]
+}
