@@ -16,6 +16,10 @@ on:
         description: "true にすると PR を作らず成果物をartifactに残すだけ"
         type: boolean
         default: false
+      limit:
+        description: "書く本数の上限（テスト時は1にすると安く全工程を通せる）"
+        type: string
+        default: "6"
 
 concurrency:
   group: daily-columns
@@ -54,7 +58,11 @@ jobs:
           show_full_output: true
           prompt: |
             docs/daily-columns-pipeline.md と CLAUDE.md を読み、その規程に従って
-            今日のコラム企画を6本作る（不動産2・行政書士2・社労士2）。
+            今日のコラム企画を**9本**作る（不動産3・行政書士3・社労士3）。
+
+            9本にするのは、次の工程（企画チェック）で業際や分離受任の不備で
+            落ちるものが出たときに、予備から補えるようにするため。
+            **最終的に採用されるのは各士業2本ずつの計6本。**
 
             着手前に必ず実在確認をする：
             - .tmp/sitemap-ja.txt に本番の日本語URLが入っている
@@ -71,7 +79,11 @@ jobs:
               どう役割が違うかを1文で","outline":["H2は疑問文"],
               "primary_sources":["確認すべき一次資料"]}]
 
-            6本揃わないなら揃わないまま出す。基準を緩めて数を埋めない。
+            **業際に触れる企画には、誰に振るかを intent に必ず書く。**
+            例：農地転用の許可申請＝行政書士／登記＝司法書士／評価・税務＝税理士／
+            紛争＝弁護士。**振り先を書かない企画は次の工程で落ちる。**
+
+            9本揃わないなら揃わないまま出す。基準を緩めて数を埋めない。
             ファイルを書いたら終了。git 操作はしない。
           claude_args: |
             --model claude-opus-4-8
@@ -91,8 +103,6 @@ jobs:
     needs: plan
     runs-on: ubuntu-latest
     timeout-minutes: 30
-    outputs:
-      approved: ${{ steps.check.outputs.structured_output }}
     steps:
       - uses: actions/checkout@v6
         with:
@@ -121,28 +131,62 @@ jobs:
             --model claude-opus-4-8
             --max-turns 25
             --allowedTools "Read,Glob,Grep"
-            --json-schema '{"type":"object","properties":{"approved":{"type":"boolean"},"reasons":{"type":"array","items":{"type":"string"}}},"required":["approved","reasons"]}'
+            --json-schema '{"type":"object","properties":{"verdicts":{"type":"array","items":{"type":"object","properties":{"slug":{"type":"string"},"approved":{"type":"boolean"},"reason":{"type":"string"}},"required":["slug","approved","reason"]}}},"required":["verdicts"]}'
 
-      # 式の中で fromJSON を使わない。構造化出力が空だったときに
-      # 「条件式の評価に失敗」という読めないエラーになるのを避けるため
-      - name: 却下なら止める
+      # 1本の不備で6本全部を落とさない。通ったものだけを残して先へ送る。
+      # 式の中で fromJSON を使わない（構造化出力が空だと読めないエラーになるため）
+      - name: 通った企画だけを残す
         env:
           OUT: ${{ steps.check.outputs.structured_output }}
+          LIMIT: ${{ inputs.limit || '6' }}
         run: |
           if [ -z "${OUT:-}" ]; then
             echo "::error::構造化出力が空です（--json-schema が効いていない可能性）"
             exit 1
           fi
-          printf '%s' "$OUT" > /tmp/plan-check.json
-          cat /tmp/plan-check.json
+          printf '%s' "$OUT" > /tmp/verdicts.json
           node -e '
-            const o = JSON.parse(require("fs").readFileSync("/tmp/plan-check.json","utf8"));
-            if (o.approved !== true) {
-              console.error("::error::企画チェックで却下: " + (o.reasons || []).join(" / "));
+            const fs = require("fs");
+            const plan = JSON.parse(fs.readFileSync(".tmp/plan.json","utf8"));
+            const v = JSON.parse(fs.readFileSync("/tmp/verdicts.json","utf8")).verdicts || [];
+            const ok = new Map(v.map(x => [x.slug, x]));
+            const limit = Math.max(1, parseInt(process.env.LIMIT || "6", 10));
+
+            const dropped = [];
+            const passed = [];
+            for (const p of plan) {
+              const d = ok.get(p.slug);
+              if (d && d.approved === true) passed.push(p);
+              else dropped.push({ slug: p.slug, reason: d ? d.reason : "判定が返らなかった" });
+            }
+
+            // 士業ごとに順に取り、limit に達するまで（1本ずつ回して偏らせない）
+            const by = { realestate: [], legal: [], labor: [] };
+            for (const p of passed) if (by[p.shigyo]) by[p.shigyo].push(p);
+            const out = [];
+            outer: for (let i = 0; i < 3; i++) {
+              for (const s of ["realestate","legal","labor"]) {
+                if (by[s][i]) { out.push(by[s][i]); if (out.length >= limit) break outer; }
+              }
+            }
+
+            for (const d of dropped) console.log(`::warning::落とした企画 ${d.slug}: ${d.reason}`);
+            console.log(`承認 ${passed.length} / 企画 ${plan.length}　→ 採用 ${out.length}本（上限 ${limit}）`);
+            for (const p of out) console.log(`  採用 [${p.shigyo}] ${p.slug}  ${p.title}`);
+
+            if (out.length === 0) {
+              console.error("::error::承認された企画が1本もありません");
               process.exit(1);
             }
-            console.log("企画チェック通過");
+            fs.writeFileSync(".tmp/plan.json", JSON.stringify(out, null, 2));
           '
+
+      # 絞り込んだ plan.json を後段へ渡す（元の plan artifact は残したまま別名で）
+      - uses: actions/upload-artifact@v4
+        with:
+          name: plan-approved
+          path: .tmp/plan.json
+          if-no-files-found: error
 
   # ─────────────────────────────────────────────────────────────
   # 3. 執筆 ── 士業ごとに分ける。同じseedスクリプトを2ジョブで触らせないため
@@ -163,15 +207,23 @@ jobs:
           fetch-depth: 0
       - uses: actions/download-artifact@v5
         with:
-          name: plan
+          name: plan-approved
           path: .tmp
 
-      - uses: anthropics/claude-code-action@v1
+      # この士業の企画が0本なら、Claudeを起動せずに抜ける（課金と時間の無駄を避ける）
+      - id: has
+        run: |
+          n=$(node -e 'const p=require("./.tmp/plan.json");console.log(p.filter(x=>x.shigyo==="${{ matrix.shigyo }}").length)')
+          echo "count=$n" >> "$GITHUB_OUTPUT"
+          echo "${{ matrix.shigyo }} の採用本数: $n"
+
+      - if: steps.has.outputs.count != '0'
+        uses: anthropics/claude-code-action@v1
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           show_full_output: true
           prompt: |
-            .tmp/plan.json のうち shigyo == "${{ matrix.shigyo }}" の企画（2本）を
+            .tmp/plan.json のうち shigyo == "${{ matrix.shigyo }}" の企画を
             執筆する。docs/daily-columns-pipeline.md の「サイト別の作法」に厳密に従うこと。
             **士業ごとに作法が真逆の箇所がある。取り違えると必ずバリデータで落ちる。**
 
@@ -287,7 +339,7 @@ jobs:
       - run: tar -xzf .out/validated.tar.gz
       - uses: actions/download-artifact@v5
         with:
-          name: plan
+          name: plan-approved
           path: .tmp
 
       - id: review
