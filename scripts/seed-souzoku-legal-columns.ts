@@ -1,8 +1,18 @@
 /**
- * 相続コラム（行政書士）シリーズ（第1号〜第17号・4言語）投入スクリプト
+ * 相続コラム（行政書士）シリーズ（第1号〜第19号・原稿ファイル 02〜20・4言語）投入スクリプト
  *
  * 対象＝luck428.com /legal/column（business=legal）。
  * 原稿＝scripts/legal-columns/NN-*.md（ja）＋{en,zh-tw,zh}/NN-*.md（翻訳）。
+ * 2026-08-22追加分（19・20）の一次確認：
+ *   - e-Gov 民法第4条・第7条・第10条・第11条・第15条・第25条第1項・第28条・第30条・第31条・
+ *     第826条・第851条第4号・第860条・第907条第1項・第909条の2・第915条第1項・第921条第1号・第951条
+ *   - e-Gov 家事事件手続法第200条第3項／民法第909条の2に規定する法務省令で定める額を定める省令
+ *     （平成30年法務省令第29号＝150万円）
+ *   - 法務省「民法及び家事事件手続法の一部を改正する法律について（相続法の改正）」
+ *   - 裁判所「後見開始」「特別代理人選任（親権者とその子との利益相反の場合）」
+ *     「成年被後見人（被保佐人、被補助人）に関する特別代理人（臨時保佐人・臨時補助人）の選任」
+ *     「不在者財産管理人選任」「失踪宣告」「相続財産清算人の選任」
+ *   - 一般社団法人全国銀行協会「預金相続の手続に必要な書類」ほか（いずれも参照日 2026-08-22）
  * 法令・公的資料は実装時に一次確認済み（2026-08-16）：
  *   - 文京区「【受付は午後4時まで】戸籍証明書等の広域交付」（更新日 2026年4月9日）
  *   - 法務局「法定相続情報証明制度の具体的な手続について」（更新日 2024年4月1日）
@@ -242,6 +252,37 @@ const REQUIRED_HUB_LINKS: Record<string, string[]> = {
     "/legal/column/souzoku-zaisan-mokuroku",
     "/legal/column/souzoku-hoki-gentei-shonin",
     "/legal/column/souzoku-touki-nagare",
+  ],
+  "souzoku-yochokin-karibarai": [
+    "/legal/services/inheritance",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/souzoku",
+    "/legal/column/souzoku-tejun-checklist",
+    "/legal/column/houtei-souzoku-bun",
+    "/legal/column/isan-bunkatsu-kyougisho",
+    "/legal/column/souzoku-isanbunkatsu-chotei-shinpan",
+    "/legal/column/souzoku-hoki-gentei-shonin",
+    "/legal/column/houtei-souzoku-jouhou-ichiran-zu",
+    "/legal/column/souzoku-zaisan-mokuroku",
+    "/legal/column/souzoku-zei-shinkoku-hitsuyo",
+    "/legal/column/souzoku-kigen-matome",
+    "/legal/column/souzoku-touki-nagare",
+  ],
+  "souzoku-ninchisho-yukuefumei-miseinen": [
+    "/legal/services/inheritance",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/souzoku",
+    "/legal/column/souzoku-hajime-koseki-chosa-bunkyo",
+    "/legal/column/houtei-souzoku-bun",
+    "/legal/column/souzoku-isanbunkatsu-chotei-shinpan",
+    "/legal/column/souzoku-hoki-gentei-shonin",
+    "/legal/column/souzoku-kigen-matome",
+    "/legal/column/souzoku-zei-shinkoku-hitsuyo",
+    "/legal/column/souzoku-touki-nagare",
+    "/legal/column/souzoku-yochokin-karibarai",
+    "/legal/column/souzoku-zaisan-mokuroku",
   ],
 };
 
@@ -565,6 +606,56 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "別事業体",
     "独立した事業体",
   ],
+  "souzoku-yochokin-karibarai": [
+    "民法第909条の2",
+    "相続開始の時の債権額の3分の1",
+    "同一の金融機関に対する権利行使は150万円が限度",
+    "預貯金債権の債務者ごとに法務省令で定める額を限度とする",
+    "遺産の一部の分割によりこれを取得したものとみなす",
+    "平成30年法律第72号",
+    "2019年7月1日",
+    "平成30年法務省令第29号",
+    "家事事件手続法第200条第3項",
+    "他の共同相続人の利益を害するときは、この限りでない",
+    "民法第921条第1号",
+    "法定単純承認",
+    "民法第915条第1項",
+    "金融機関ごとに必要書類が異なります",
+    "当事務所は払戻しの可否を保証しません",
+    "税務相談を行いません",
+    "別事業体",
+    "独立した事業体",
+  ],
+  "souzoku-ninchisho-yukuefumei-miseinen": [
+    "民法第907条第1項",
+    "民法第4条",
+    "民法第7条",
+    "民法第11条",
+    "民法第15条",
+    "民法第10条",
+    "民法第25条第1項",
+    "民法第28条",
+    "民法第30条",
+    "民法第31条",
+    "民法第826条第1項",
+    "民法第826条第2項",
+    "民法第851条第4号",
+    "民法第860条",
+    "民法第915条第1項",
+    "民法第951条",
+    "権限外行為許可",
+    "特別代理人",
+    "不在者財産管理人",
+    "失踪宣告",
+    "相続財産清算人",
+    "収入印紙800円分",
+    "収入印紙2,600円分",
+    "官報公告料5,298円",
+    "官報公告料5,582円",
+    "本記事では期間の目安を示しません",
+    "別事業体",
+    "独立した事業体",
+  ],
 };
 
 /** 記事ごとに含めてはならない表現 */
@@ -620,6 +711,8 @@ const FORBIDDEN_PHRASES: Record<string, string[]> = {
   "souzoku-tejun-checklist": [],
   "souzoku-iryubun-kiso": [],
   "souzoku-isanbunkatsu-chotei-shinpan": [],
+  "souzoku-yochokin-karibarai": [],
+  "souzoku-ninchisho-yukuefumei-miseinen": [],
 };
 
 /** 本セット外へ張る既存legalコラムslug（リポジトリの他シードで実在確認済み） */
@@ -925,6 +1018,48 @@ const ARTICLES: Array<{
       "遺産分割 行政書士",
     ],
     tags: ["遺産分割調停", "遺産分割審判", "相続紛争", "家庭裁判所", "弁護士", "相続"],
+  },
+  {
+    file: "19-souzoku-yochokin-karibarai.md",
+    slug: "souzoku-yochokin-karibarai",
+    title: "亡くなった人の預貯金はいつ引き出せる？遺産分割前の払戻し制度と銀行手続の進め方",
+    category: "相続の手続き（行政書士の実務から）",
+    excerpt:
+      "金融機関が預金者の死亡を確認すると、その口座からの入出金は停止される取扱いが一般的です。2019年7月1日以後は、遺産分割の前でも各共同相続人が単独で払戻しを受けられる制度があります（民法第909条の2）。計算方法と150万円の限度、家庭裁判所の保全処分との違い、必要書類、相続放棄との関係、行政書士に頼める範囲を文京区の実務に沿って整理しました。",
+    keywords: [
+      "亡くなった人 預貯金 引き出し",
+      "相続 預金 仮払い 150万円",
+      "遺産分割前 払戻し制度 必要書類",
+      "口座凍結 葬儀費用",
+      "民法909条の2 上限",
+      "相続 預金 行政書士 文京区",
+    ],
+    tags: ["相続預貯金", "払戻し制度", "民法第909条の2", "口座凍結", "葬儀費用", "行政書士"],
+  },
+  {
+    file: "20-souzoku-ninchisho-yukuefumei-miseinen.md",
+    slug: "souzoku-ninchisho-yukuefumei-miseinen",
+    title:
+      "相続人に認知症の方・行方不明の方・未成年者がいるときは？成年後見・不在者財産管理人・特別代理人の使い分け",
+    category: "相続の手続き（行政書士の実務から）",
+    excerpt:
+      "遺産分割の協議は共同相続人が当事者となる手続です。相続人の中に判断能力が不十分な方、行方不明の方、未成年者がいる場合、その方を欠いたまま協議を進めることはできません。後見・保佐・補助、不在者財産管理人、失踪宣告、特別代理人の根拠条文と実費、期限との関係、行政書士に頼める範囲を文京区の実務に沿って整理しました。",
+    keywords: [
+      "相続人 認知症 遺産分割協議",
+      "相続人 行方不明 遺産分割",
+      "未成年 相続 特別代理人",
+      "不在者財産管理人 権限外行為許可",
+      "失踪宣告 7年",
+      "成年後見 申立て 費用",
+    ],
+    tags: [
+      "遺産分割協議",
+      "成年後見",
+      "不在者財産管理人",
+      "失踪宣告",
+      "特別代理人",
+      "家庭裁判所",
+    ],
   },
 ];
 
