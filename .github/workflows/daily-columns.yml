@@ -245,10 +245,16 @@ jobs:
       - name: 変更ファイルだけを集める
         run: |
           mkdir -p .out
-          git ls-files -mo --exclude-standard \
-            -- scripts/ src/ > .out/changed.txt || true
+          git ls-files -z --others --exclude-standard -- 'scripts/*.preview.json' | xargs -0 -r rm -f
+          git ls-files -mo --exclude-standard -- scripts/ src/ \
+            | grep -v '\.preview\.json$' > .out/changed.txt || true
           cat .out/changed.txt
-          tar -czf .out/${{ matrix.shigyo }}.tar.gz -T .out/changed.txt || tar -czf .out/${{ matrix.shigyo }}.tar.gz --files-from /dev/null
+          if [ -s .out/changed.txt ]; then
+            tar -czf .out/${{ matrix.shigyo }}.tar.gz -T .out/changed.txt
+          else
+            # この士業の採用が0本だったとき。空のtarを置いて後段のmergeを壊さない
+            tar -czf .out/${{ matrix.shigyo }}.tar.gz --files-from /dev/null
+          fi
 
       - uses: actions/upload-artifact@v4
         with:
@@ -305,13 +311,25 @@ jobs:
       - run: npx eslint $(git diff --name-only -- '*.ts' '*.tsx' | tr '\n' ' ') || true
       - run: npx vitest run
 
+      # 追跡されている preview.json は「消す」のではなく「元に戻す」。
+      # 消すと git が削除扱いで拾い、tar が stat できずに落ちる（2026-08-22に実際に発生）
       - name: preview.json を成果物から外す
-        run: git checkout -- 'scripts/*.preview.json' 2>/dev/null || true; rm -f scripts/*.preview.json 2>/dev/null || true; git status --porcelain
+        run: |
+          git ls-files -z 'scripts/*.preview.json' | xargs -0 -r git checkout --
+          git ls-files -z --others --exclude-standard -- 'scripts/*.preview.json' | xargs -0 -r rm -f
+          git status --porcelain | head -30
 
       - name: 検証済みの差分を保存
         run: |
           mkdir -p .out
-          git ls-files -mo --exclude-standard -- scripts/ src/ > .out/changed.txt
+          git ls-files -mo --exclude-standard -- scripts/ src/ \
+            | grep -v '\.preview\.json$' > .out/changed.txt || true
+          if [ ! -s .out/changed.txt ]; then
+            echo "::error::保存すべき差分がありません（執筆結果が引き継がれていない可能性）"
+            exit 1
+          fi
+          echo "保存するファイル $(wc -l < .out/changed.txt) 件"
+          cat .out/changed.txt
           tar -czf .out/validated.tar.gz -T .out/changed.txt
       - uses: actions/upload-artifact@v4
         with:
@@ -442,14 +460,21 @@ jobs:
             grep -q '^NG' "/tmp/$s.log" && { grep '^NG' "/tmp/$s.log"; fail=1; }
             npx tsx "scripts/$s.ts" --emit-ts
           done
-          rm -f scripts/*.preview.json
           exit $fail
       - run: npx vitest run
 
       - name: 修正版を保存
         run: |
           mkdir -p .out
-          git ls-files -mo --exclude-standard -- scripts/ src/ > .out/changed.txt
+          git ls-files -z 'scripts/*.preview.json' | xargs -0 -r git checkout --
+          git ls-files -z --others --exclude-standard -- 'scripts/*.preview.json' | xargs -0 -r rm -f
+          git ls-files -mo --exclude-standard -- scripts/ src/ \
+            | grep -v '\.preview\.json$' > .out/changed.txt || true
+          if [ ! -s .out/changed.txt ]; then
+            echo "::error::修正後の差分がありません"
+            exit 1
+          fi
+          cat .out/changed.txt
           tar -czf .out/fixed.tar.gz -T .out/changed.txt
       - uses: actions/upload-artifact@v4
         with:
