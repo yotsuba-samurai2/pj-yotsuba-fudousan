@@ -63,6 +63,23 @@ cd ~/pj-yotsuba-fudousan && git pull --ff-only origin main
 
 **バリデータに引っかかったら、まずバリデータ側を疑う。** 2026-08-14、社労士法第27条の条文（「社会保険労務士**又は社会保険労務士法人**でない者は」）の訳出が誤検知でNGになった。**記事を歪めて検査を通さない。**
 
+## 5-2. 不動産コラムを追加する手順（追記型・2026-08-22〜）
+
+不動産コラム（`/column`・business=`realestate`）は **`scripts/seed-realestate-columns-daily.ts` の ARTICLES に追記する**。
+**枝番スクリプト（`-p7`・`-p8` …）と専用の管理画面ページを新規に作らない。** 枝番方式は1本あたり seed 約294行＋管理画面 約121行＝**約415行の新規作成**が必要で、毎日2本なら1か月で `-p66` まで増える。追記型では**1本あたり約17行**で済む。
+
+1. 原稿 `scripts/realestate-columns/NN-slug.md` を書く（H1なし・「**結論（先に要点）**：」開始・H2は疑問文・FAQ4問以上・「## この記事の出典（一次情報）」節・末尾に「一般的な情報提供」の判断留保・分離受任の明示・紹介料の扱い）
+2. 翻訳する言語だけ `scripts/realestate-columns/{en,zh-tw,zh}/NN-slug.md`（フロントマターに title / excerpt / category。**内部リンクは絶対URL**。相対パスはNG）
+3. `scripts/seed-realestate-columns-daily.ts` の ARTICLES に1エントリ追記（**`publishedAt` と `category` は記事ごとに持つ**。バッチ共通の定数にしない）
+4. `npx tsx scripts/seed-realestate-columns-daily.ts` → **「OK: 全チェック通過」を確認**
+5. `npx tsx scripts/seed-realestate-columns-daily.ts --emit-ts` → **忘れると管理画面に並ばない**
+6. PRを出す（マージは指示を受けてから）
+7. マージ・デプロイ後に `/admin/columns/seed-realestate-daily` から投入（`--write` は用意していない・拒否される）
+
+**既存記事をこのスクリプトへ移管しない。** `scripts/gh-columns/06-youto-henko.md` は2つのスクリプトから同一slugを生成しており、片方だけ再emitすると本文が巻き戻る。既存の枝番スクリプトと生成物（`realestate-columns{,-p2〜-p6}-seed.ts`）は触らない。ARTICLES に入れるのは**このスクリプトで新規に足した記事だけ**。
+
+内部リンク先の許可リスト（`EXISTING_COLUMN_SLUGS`）は**手で維持しない**。`src/lib/data/` の realestate 系シード生成物から実行時に集めている（`/column` は business=`realestate` 専用ルート＝社労士は `/labor/column`、行政書士は `/legal/column` なので business で絞る）。**記事を1本足すときにこのリストを触る必要はない。**
+
 ## 6. 出す前の検証
 
 ```bash
