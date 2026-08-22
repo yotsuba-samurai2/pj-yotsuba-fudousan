@@ -97,8 +97,22 @@ const FORBIDDEN_WORDS = ["ワンストップ", "一括対応", "一体で", "一
  *
  * ここに並ぶのは「realestate のコラムを1本でも含む src/lib/data の生成物」。
  * 枝番スクリプトを新設しない限り増えない（増やさないのが本スクリプトの目的）。
+ *
+ * ■ ただしリポジトリ由来だけでは足りない（2026-08-23 追記）
+ *   管理画面から直接作られてリポジトリに原稿が無い記事が本番に実在する。
+ *   例: /column/inuki-bukken-keiyakumae-hokenjo は本番で200を返すが、
+ *   どの seed 生成物にも定義がないためこの Set に載らない。
+ *   その結果 2026-08-23 に GitHub Actions の検証が
+ *   「NG: shinya-shurui-inshoku-bukken-tekihi → 不明slug inuki-bukken-keiyakumae-hokenjo」
+ *   で落ちた（2026-08-22 にも同じNGが出て、そのときは記事側のリンクを
+ *   差し替えて回避している。原因が消えていないので再発した）。
+ *   実在するURLを弾くのは検査の誤りなので、main() で本番 sitemap 由来の
+ *   /column/<slug> を union して埋める（下の fetchPublishedColumnSlugs）。
+ *   これは緩和ではない。実在しない slug は今までどおり NG で落ちる。
+ *
+ * union するので const ではなく let。
  */
-const EXISTING_COLUMN_SLUGS: ReadonlySet<string> = new Set(
+let EXISTING_COLUMN_SLUGS: Set<string> = new Set(
   [
     REALESTATE_COLUMNS_SEED,
     REALESTATE_COLUMNS_P2_SEED,
@@ -117,6 +131,49 @@ const EXISTING_COLUMN_SLUGS: ReadonlySet<string> = new Set(
     .filter((c) => c.business === "realestate")
     .map((c) => c.slug),
 );
+
+const SITEMAP_URL = "https://luck428.com/sitemap.xml";
+const SITEMAP_TIMEOUT_MS = 15_000;
+
+/**
+ * 本番 sitemap に実在する /column/<slug> を集める。
+ *
+ * 拾うのは日本語の実体URL（`<loc>https://luck428.com/column/<slug></loc>`）だけ。
+ * - ロケール接頭辞つき（/en/column/ /zh-tw/column/ /zh/column/）は拾わない。
+ *   記事本文の内部リンクは日本語URLで書く決まりなので、許可リストに入れる意味がない。
+ * - 他士業の /legal/column/ も拾わない（/column は business=realestate 専用ルート）。
+ * - `<xhtml:link rel="alternate" href="…">` は `<loc>` ではないので、この正規表現には入らない。
+ *
+ * 取得に失敗しても検証は止めない。sitemap が引けないのは記事の不備ではないので
+ * NG ではなく WARN を出し、リポジトリ由来の許可リストだけで続行する
+ * （実在しない slug はその場合も NG のまま落ちる）。
+ *
+ * @returns 取得できた slug の配列。取得できなかったときは null。
+ */
+async function fetchPublishedColumnSlugs(): Promise<string[] | null> {
+  let res: Response;
+  try {
+    res = await fetch(SITEMAP_URL, { signal: AbortSignal.timeout(SITEMAP_TIMEOUT_MS) });
+  } catch (e) {
+    const reason = e instanceof Error ? `${e.name}: ${e.message}` : String(e);
+    console.log(`WARN: sitemap を取得できませんでした（${reason}）。リポジトリ由来の許可リストだけで検証を続行します。`);
+    return null;
+  }
+  if (!res.ok) {
+    console.log(`WARN: sitemap の取得に失敗（HTTP ${res.status}）。リポジトリ由来の許可リストだけで検証を続行します。`);
+    return null;
+  }
+  let xml: string;
+  try {
+    xml = await res.text();
+  } catch (e) {
+    const reason = e instanceof Error ? `${e.name}: ${e.message}` : String(e);
+    console.log(`WARN: sitemap の読み出しに失敗（${reason}）。リポジトリ由来の許可リストだけで検証を続行します。`);
+    return null;
+  }
+  const re = /<loc>https:\/\/luck428\.com\/column\/([a-z0-9-]+)<\/loc>/g;
+  return [...xml.matchAll(re)].map((m) => m[1]);
+}
 
 type ArticleSpec = {
   /** scripts/realestate-columns/ 配下のファイル名（翻訳も同名で {en,zh-tw,zh}/ 配下に置く） */
@@ -376,7 +433,7 @@ export type RealestateSeedColumnDaily = {
 
 export const REALESTATE_COLUMNS_DAILY_SEED: RealestateSeedColumnDaily[] = `;
 
-function main() {
+async function main() {
   const emitTs = process.argv.includes("--emit-ts");
   if (process.argv.includes("--write")) {
     console.error("--write は用意していません。本番投入は /admin/columns/seed-realestate-daily を正とします。");
@@ -385,6 +442,20 @@ function main() {
 
   // ARTICLES が空でも例外を投げない（追記型なので「まだ0本」は正常な状態）。
   const cols = ARTICLES.map(buildColumn);
+
+  // 許可リストは「リポジトリ由来 ∪ 本番sitemap由来」。verify() より前に union する。
+  // 管理画面から直接作られた記事はリポジトリに原稿が無く、sitemap でしか実在を確認できない。
+  const sitemapSlugs = await fetchPublishedColumnSlugs();
+  if (sitemapSlugs) {
+    const before = EXISTING_COLUMN_SLUGS.size;
+    EXISTING_COLUMN_SLUGS = new Set([...EXISTING_COLUMN_SLUGS, ...sitemapSlugs]);
+    const added = EXISTING_COLUMN_SLUGS.size - before;
+    console.log(
+      `sitemap: /column/ を ${sitemapSlugs.length} 件検出、` +
+        `うち ${added} 件を許可リストに追加（許可リスト合計 ${EXISTING_COLUMN_SLUGS.size} 件）`,
+    );
+  }
+
   const notes = verify(cols, ARTICLES);
 
   if (emitTs) {
@@ -426,4 +497,7 @@ function main() {
   console.log(preview.verification.join("\n"));
 }
 
-main();
+main().catch((e) => {
+  console.error(e);
+  process.exit(1);
+});
