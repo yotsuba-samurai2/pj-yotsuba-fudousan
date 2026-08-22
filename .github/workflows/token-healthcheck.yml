@@ -37,17 +37,25 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           gh issue create --repo "${{ github.repository }}" \
-            --title "CLAUDE_CODE_OAUTH_TOKEN が失効している可能性" \
+            --title "Claude の疎通確認が失敗（トークン失効 or GitHub App 未導入）" \
             --body "$(cat <<'EOM'
           週次のヘルスチェックが失敗しました。Daily Columns も止まっている可能性があります。
+          **ヘルスチェックは原因を区別できません。実行ログのエラー文を先に読んでください。**
 
-          **対処**
+          **A. ログに「Claude Code is not installed on this repository」と出ている場合**
+          → GitHub App が外れています。https://github.com/apps/claude を開き、
+             Install →「Only select repositories」→ `pj-yotsuba-fudousan` を選び直す
+
+          **B. ログに認証エラー（`CLAUDE_CODE_OAUTH_TOKEN is required` 等）が出ている場合**
+          → トークンが失効しています。
           1. Mac で `claude setup-token` を実行して新しいトークンを発行する
-             （コマンドはトークンを保存しないので、その場でコピーする）
+             （コマンドはトークンを保存しないので、その場でコピーする。**チャットに貼らない**）
           2. リポジトリの Settings → Secrets and variables → Actions で
              `CLAUDE_CODE_OAUTH_TOKEN` を更新する
-          3. Actions から Claude Token Healthcheck を workflow_dispatch で手動実行し、
-             緑になることを確認する
+
+          **どちらの場合も最後に**
+          Actions から Claude Token Healthcheck を workflow_dispatch で手動実行し、
+          緑になることを確認する
 
           実行ログ: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
           EOM
