@@ -1,0 +1,477 @@
+name: Daily Columns
+
+# 3士業のコラムを1日6本（不動産2・行政書士2・社労士2）、4言語で追加し、
+# 検証を通して draft PR まで出す。マージと本番DB投入は人間が行う。
+#
+# 設計の正本は docs/daily-columns-pipeline.md。
+# 有効化の手順（シークレット登録・GitHub App導入）も同ファイルに書いてある。
+
+on:
+  schedule:
+    # 12:00 UTC = 21:00 JST。cron は UTC 固定。
+    - cron: "0 12 * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "true にすると PR を作らず成果物をartifactに残すだけ"
+        type: boolean
+        default: false
+
+concurrency:
+  group: daily-columns
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+  id-token: write
+  actions: read
+
+jobs:
+  # ─────────────────────────────────────────────────────────────
+  # 1. 企画 ── 6本のプロットを作る
+  # ─────────────────────────────────────────────────────────────
+  plan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: 既存URLの棚卸し（本番sitemap）
+        run: |
+          mkdir -p .tmp
+          curl -s https://luck428.com/sitemap.xml \
+            | grep -oE 'https://luck428\.com/[^"<]*' \
+            | grep -vE '/(en|zh-tw|zh)/' | sort -u > .tmp/sitemap-ja.txt
+          wc -l .tmp/sitemap-ja.txt
+
+      - uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          show_full_output: true
+          prompt: |
+            docs/daily-columns-pipeline.md と CLAUDE.md を読み、その規程に従って
+            今日のコラム企画を6本作る（不動産2・行政書士2・社労士2）。
+
+            着手前に必ず実在確認をする：
+            - .tmp/sitemap-ja.txt に本番の日本語URLが入っている
+            - /labor は本番404なので scripts/labor-columns/ と
+              scripts/seed-labor-columns.ts の ARTICLES で確認する
+            - 「無いから作る」と判断した瞬間が最も危ない
+
+            重点3レーン＝A物件×許認可／B相続／C中国語×プロ層。
+            配分は docs/daily-columns-pipeline.md の「重点レーン」に従う。
+
+            結果を .tmp/plan.json に Write で書く。形式：
+            [{"shigyo":"realestate|legal|labor","slug":"...","title":"...",
+              "reader":"...","intent":"...","cannibalization":"既存のどれと
+              どう役割が違うかを1文で","outline":["H2は疑問文"],
+              "primary_sources":["確認すべき一次資料"]}]
+
+            6本揃わないなら揃わないまま出す。基準を緩めて数を埋めない。
+            ファイルを書いたら終了。git 操作はしない。
+          claude_args: |
+            --model claude-opus-4-8
+            --max-turns 40
+            --allowedTools "Read,Write,Glob,Grep,WebSearch,WebFetch"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: plan
+          path: .tmp/plan.json
+          if-no-files-found: error
+
+  # ─────────────────────────────────────────────────────────────
+  # 2. 企画チェック ── カニバリと業際。ここで落ちたら執筆に進まない
+  # ─────────────────────────────────────────────────────────────
+  plan-check:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    outputs:
+      approved: ${{ steps.check.outputs.structured_output }}
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - uses: actions/download-artifact@v5
+        with:
+          name: plan
+          path: .tmp
+
+      - id: check
+        uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          show_full_output: true
+          prompt: |
+            .tmp/plan.json を読み、docs/daily-columns-pipeline.md の役割分担表と
+            1本ずつ突合して審査する。**ファイルは一切変更しない。**
+
+            落とす条件：
+            - 既存記事と検索意図が同じ（＝新記事ではなく既存の強化が正しい）
+            - 他士業の独占業務に踏み込んでいる
+            - 具体的な法的判断を出力する構成になっている
+            - 分離受任の明示が設計に入っていない
+            - 社労士以外の記事で「助成金」の語を使う設計になっている
+          claude_args: |
+            --model claude-opus-4-8
+            --max-turns 25
+            --allowedTools "Read,Glob,Grep"
+            --json-schema '{"type":"object","properties":{"approved":{"type":"boolean"},"reasons":{"type":"array","items":{"type":"string"}}},"required":["approved","reasons"]}'
+
+      # 式の中で fromJSON を使わない。構造化出力が空だったときに
+      # 「条件式の評価に失敗」という読めないエラーになるのを避けるため
+      - name: 却下なら止める
+        env:
+          OUT: ${{ steps.check.outputs.structured_output }}
+        run: |
+          if [ -z "${OUT:-}" ]; then
+            echo "::error::構造化出力が空です（--json-schema が効いていない可能性）"
+            exit 1
+          fi
+          printf '%s' "$OUT" > /tmp/plan-check.json
+          cat /tmp/plan-check.json
+          node -e '
+            const o = JSON.parse(require("fs").readFileSync("/tmp/plan-check.json","utf8"));
+            if (o.approved !== true) {
+              console.error("::error::企画チェックで却下: " + (o.reasons || []).join(" / "));
+              process.exit(1);
+            }
+            console.log("企画チェック通過");
+          '
+
+  # ─────────────────────────────────────────────────────────────
+  # 3. 執筆 ── 士業ごとに分ける。同じseedスクリプトを2ジョブで触らせないため
+  # ─────────────────────────────────────────────────────────────
+  write:
+    needs: plan-check
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    strategy:
+      fail-fast: false
+      # サブスクのレート制限を一気に焼かないため直列。実測を見て2まで上げてよい
+      max-parallel: 1
+      matrix:
+        shigyo: [realestate, legal, labor]
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - uses: actions/download-artifact@v5
+        with:
+          name: plan
+          path: .tmp
+
+      - uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          show_full_output: true
+          prompt: |
+            .tmp/plan.json のうち shigyo == "${{ matrix.shigyo }}" の企画（2本）を
+            執筆する。docs/daily-columns-pipeline.md の「サイト別の作法」に厳密に従うこと。
+            **士業ごとに作法が真逆の箇所がある。取り違えると必ずバリデータで落ちる。**
+
+            一次資料の裏取り：法令は条項号＋施行日＋最終改正、公的資料は参照日。
+            e-Gov法令検索で条文を直接取得するのが確実。
+            **裏取りできない事実は書かず「未検証」に落とす。本数を守るために事実を薄めない。**
+
+            やること：
+            1. 日本語原稿を書く
+            2. en / zh-tw / zh の3言語に訳す
+            3. 該当するseedスクリプトの ARTICLES（行政書士は4箇所）に登録する
+
+            **git 操作はしない。--emit-ts も実行しない**（後段のジョブがやる）。
+          claude_args: |
+            --model claude-opus-4-8
+            --max-turns 120
+            --allowedTools "Read,Write,Edit,Glob,Grep,WebSearch,WebFetch"
+
+      - name: 変更ファイルだけを集める
+        run: |
+          mkdir -p .out
+          git ls-files -mo --exclude-standard \
+            -- scripts/ src/ > .out/changed.txt || true
+          cat .out/changed.txt
+          tar -czf .out/${{ matrix.shigyo }}.tar.gz -T .out/changed.txt || tar -czf .out/${{ matrix.shigyo }}.tar.gz --files-from /dev/null
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: draft-${{ matrix.shigyo }}
+          path: .out/${{ matrix.shigyo }}.tar.gz
+
+  # ─────────────────────────────────────────────────────────────
+  # 4. 機械検証 ── LLMを使わない。ここが本当のゲート
+  # ─────────────────────────────────────────────────────────────
+  validate:
+    needs: write
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/download-artifact@v5
+        with:
+          pattern: draft-*
+          merge-multiple: true
+          path: .out
+      - name: 原稿を展開
+        run: for f in .out/*.tar.gz; do tar -xzf "$f"; done && git status --porcelain | head -40
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+
+      # 成功条件は「NG で始まる行が0 かつ exit 0」。
+      # OK: 全チェック通過 を条件にしてはいけない（社労士のスクリプトは出力しない）
+      - name: seed dry-run（3サイト）
+        run: |
+          set -o pipefail
+          fail=0
+          for s in seed-realestate-columns-daily seed-souzoku-legal-columns seed-labor-columns; do
+            echo "::group::$s"
+            if ! npx tsx "scripts/$s.ts" 2>&1 | tee "/tmp/$s.log"; then fail=1; fi
+            if grep -q '^NG' "/tmp/$s.log"; then
+              echo "::error::$s に NG があります"; grep '^NG' "/tmp/$s.log"; fail=1
+            fi
+            echo "::endgroup::"
+          done
+          exit $fail
+
+      - name: emit-ts（忘れると管理画面に並ばない）
+        run: |
+          for s in seed-realestate-columns-daily seed-souzoku-legal-columns seed-labor-columns; do
+            npx tsx "scripts/$s.ts" --emit-ts
+          done
+          git diff --stat -- src/lib/data/
+
+      - run: npx tsc --noEmit -p tsconfig.json
+      - run: npx eslint $(git diff --name-only -- '*.ts' '*.tsx' | tr '\n' ' ') || true
+      - run: npx vitest run
+
+      - name: preview.json を成果物から外す
+        run: git checkout -- 'scripts/*.preview.json' 2>/dev/null || true; rm -f scripts/*.preview.json 2>/dev/null || true; git status --porcelain
+
+      - name: 検証済みの差分を保存
+        run: |
+          mkdir -p .out
+          git ls-files -mo --exclude-standard -- scripts/ src/ > .out/changed.txt
+          tar -czf .out/validated.tar.gz -T .out/changed.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: validated
+          path: .out/validated.tar.gz
+
+  # ─────────────────────────────────────────────────────────────
+  # 5. レビュー ── 書いた役とは別セッション・読み取り専用
+  # ─────────────────────────────────────────────────────────────
+  review:
+    needs: validate
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    outputs:
+      pass: ${{ steps.gate.outputs.pass }}
+      result: ${{ steps.review.outputs.structured_output }}
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - uses: actions/download-artifact@v5
+        with:
+          name: validated
+          path: .out
+      - run: tar -xzf .out/validated.tar.gz
+      - uses: actions/download-artifact@v5
+        with:
+          name: plan
+          path: .tmp
+
+      - id: review
+        uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          show_full_output: true
+          prompt: |
+            今日追加された原稿を審査する。**ファイルは絶対に変更しない。**
+            `git diff --name-only origin/main` で対象を特定する。
+
+            観点：
+            1. 一次資料の裏取り（条項号・施行日・参照日が書かれているか。
+               書かれていない事実が本文にないか）
+            2. AIが具体的な法的判断を下していないか
+            3. 他士業の独占業務への抵触。分離受任の明示があるか
+            4. 4言語の内容一致（日本語にない主張が訳文に混じっていないか）
+            5. .tmp/plan.json のカニバリ回避の理由が、実際の本文でも成立しているか
+            6. 禁止表現（「街の不動産屋」／実績数字／ワンストップの一括受任的用法）
+
+            severity は blocker / major / minor の3段階。
+            blocker が1件でもあれば pass は false。
+          claude_args: |
+            --model claude-opus-4-8
+            --max-turns 50
+            --allowedTools "Read,Glob,Grep,Bash(git diff *),Bash(git log *),Bash(git status *)"
+            --json-schema '{"type":"object","properties":{"pass":{"type":"boolean"},"findings":{"type":"array","items":{"type":"object","properties":{"file":{"type":"string"},"severity":{"type":"string"},"issue":{"type":"string"},"fix":{"type":"string"}},"required":["file","severity","issue","fix"]}}},"required":["pass","findings"]}'
+
+      # 判定を平易な文字列にしてから後段へ渡す。式の中で fromJSON を使わない
+      - id: gate
+        env:
+          OUT: ${{ steps.review.outputs.structured_output }}
+        run: |
+          if [ -z "${OUT:-}" ]; then
+            echo "::warning::レビューの構造化出力が空でした。修正ジョブは走りません"
+            echo "pass=unknown" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          printf '%s' "$OUT" > /tmp/review.json
+          node -e '
+            const o = JSON.parse(require("fs").readFileSync("/tmp/review.json","utf8"));
+            const blockers = (o.findings || []).filter(f => f.severity === "blocker");
+            const pass = o.pass === true && blockers.length === 0;
+            console.log("pass=" + pass);
+            for (const f of (o.findings || [])) {
+              console.log(`::${f.severity === "minor" ? "notice" : "warning"} file=${f.file}::[${f.severity}] ${f.issue}`);
+            }
+            require("fs").appendFileSync(process.env.GITHUB_OUTPUT, "pass=" + pass + "\n");
+          '
+
+  # ─────────────────────────────────────────────────────────────
+  # 6. 修正 ── レビューがNGのときだけ走る
+  # ─────────────────────────────────────────────────────────────
+  fix:
+    needs: [validate, review]
+    if: needs.review.outputs.pass == 'false'
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/download-artifact@v5
+        with:
+          name: validated
+          path: .out
+      - run: tar -xzf .out/validated.tar.gz
+
+      - name: 指摘をファイルに落とす
+        run: |
+          mkdir -p .tmp
+          cat > .tmp/findings.json <<'FINDINGS'
+          ${{ needs.review.outputs.result }}
+          FINDINGS
+          cat .tmp/findings.json
+
+      - uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          show_full_output: true
+          prompt: |
+            .tmp/findings.json の severity が blocker と major の指摘をすべて解消する。
+            **指摘されていない箇所を書き換えない。**
+            **バリデータに引っかかったら、まずバリデータ側を疑う。記事を歪めて検査を通さない。**
+            git 操作はしない。
+          claude_args: |
+            --model claude-opus-4-8
+            --max-turns 60
+            --allowedTools "Read,Write,Edit,Glob,Grep,WebSearch,WebFetch"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - name: 修正後にもう一度 seed dry-run
+        run: |
+          set -o pipefail
+          fail=0
+          for s in seed-realestate-columns-daily seed-souzoku-legal-columns seed-labor-columns; do
+            if ! npx tsx "scripts/$s.ts" 2>&1 | tee "/tmp/$s.log"; then fail=1; fi
+            grep -q '^NG' "/tmp/$s.log" && { grep '^NG' "/tmp/$s.log"; fail=1; }
+            npx tsx "scripts/$s.ts" --emit-ts
+          done
+          rm -f scripts/*.preview.json
+          exit $fail
+      - run: npx vitest run
+
+      - name: 修正版を保存
+        run: |
+          mkdir -p .out
+          git ls-files -mo --exclude-standard -- scripts/ src/ > .out/changed.txt
+          tar -czf .out/fixed.tar.gz -T .out/changed.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: fixed
+          path: .out/fixed.tar.gz
+
+  # ─────────────────────────────────────────────────────────────
+  # 7. draft PR ── LLMを使わない。確実に動く
+  # ─────────────────────────────────────────────────────────────
+  open-pr:
+    needs: [validate, review, fix]
+    if: always() && needs.validate.result == 'success' && needs.review.result == 'success' && (needs.fix.result == 'success' || needs.fix.result == 'skipped') && inputs.dry_run != true
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - uses: actions/download-artifact@v5
+        with:
+          name: ${{ needs.fix.result == 'success' && 'fixed' || 'validated' }}
+          path: .out
+      - run: tar -xzf .out/*.tar.gz
+
+      - name: コミットして draft PR を出す
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REVIEW: ${{ needs.review.outputs.result }}
+        run: |
+          set -euo pipefail
+          D=$(TZ=Asia/Tokyo date +%Y%m%d)
+          BR="feat/columns-$D"
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$BR"
+          git add -A scripts/ src/
+          git commit -m "feat(columns): コラム6本を追加（3士業×2本・4言語・$D）"
+          git push -u origin "$BR"
+          {
+            echo "## 自動生成されたコラム（$D）"
+            echo
+            echo "- 検証：seed dry-run（NG行0）／--emit-ts／tsc／eslint／vitest すべて通過"
+            echo "- レビュー：下記のJSONのとおり"
+            echo
+            echo '### レビュー結果'
+            echo '```json'
+            echo "$REVIEW"
+            echo '```'
+            echo
+            echo "### 浦松さんへ"
+            echo "1. 内容を確認して Ready for review → マージ"
+            echo "2. デプロイ後、管理画面から投入："
+            echo "   - /admin/columns/seed-realestate-daily"
+            echo "   - /admin/columns/seed-souzoku-legal"
+            echo "   - /admin/columns/seed-labor"
+            echo "3. 200を確認してから GSC のインデックス登録（日本語のみ・1日4本まで）"
+          } > /tmp/body.md
+          gh pr create --draft --base main --head "$BR" \
+            --title "コラム6本（3士業×2本・4言語） $D" \
+            --body-file /tmp/body.md
+
+  # ─────────────────────────────────────────────────────────────
+  # 失敗したら Issue を立てる（黙って止まらせない）
+  # ─────────────────────────────────────────────────────────────
+  notify-failure:
+    needs: [plan, plan-check, write, validate, review, fix, open-pr]
+    if: failure()
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh issue create --repo "${{ github.repository }}" \
+            --title "Daily Columns が失敗（$(TZ=Asia/Tokyo date +%Y-%m-%d)）" \
+            --body "実行ログ: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"

@@ -1,0 +1,193 @@
+# Daily Columns パイプライン
+
+3士業のコラムを **1日6本（不動産2・行政書士2・社労士2）× 4言語（ja / en / zh-tw / zh）** 追加し、
+検証を通して draft PR まで出す仕組み。**マージと本番DB投入は人間が行う。**
+
+- ワークフロー：`.github/workflows/daily-columns.yml`（毎日 21:00 JST ＝ `0 12 * * *` UTC）
+- 見張り：`.github/workflows/token-healthcheck.yml`（週1回・トークン失効の検知）
+
+このファイルはワークフローのプロンプトから直接読まれる。**ここに書いてあることが実行時の規程になる。**
+
+---
+
+## 1. なぜ GitHub Actions なのか
+
+Claudeのクラウド定期タスクからは、実行セッションにデスクトップブリッジが繋がらない（2026-08-22 実測）。
+リポジトリ・npm・gh に確実に届く実行基盤が要る。GitHub Actions のランナーはリポジトリそのものの上で動くため、この問題が起きない。
+
+このリポジトリは public なので **Actions の実行時間は無料**。
+
+---
+
+## 2. 工程
+
+```
+plan ──→ plan-check ──→ write(×3) ──→ validate ──→ review ──→ fix* ──→ open-pr
+ 企画      企画チェック    執筆・翻訳     機械検証     レビュー   修正      draft PR
+ LLM       LLM(ゲート)     LLM          非LLM(ゲート) LLM       LLM       非LLM
+                                                                          ↓
+                                                            浦松がマージ → 投入
+```
+
+`fix` は review が pass しなかったときだけ走る。
+
+**ゲートは2種類ある。**
+
+| ゲート | 何を止めるか | 落ちたら |
+|---|---|---|
+| `plan-check`（LLM） | カニバリ・業際・法的判断の出力 | 執筆に進まない。Issueが立つ |
+| `validate`（非LLM） | seedバリデータ・型・lint・テスト | PRが出ない。Issueが立つ |
+
+`review` は止めない。指摘を `fix` に渡し、結果は PR 本文に載せる。**人間が読む前提のレビューであって、自動で握りつぶさない。**
+
+### 役割の分離
+
+`write` は `Read,Write,Edit,...`、`review` は `Read,Glob,Grep` と `git diff` 系だけ。
+**レビュー役には書き込みツールを渡していない。** 別ジョブ＝別セッションなので、書いた文脈も引き継がない。
+
+### 執筆を士業ごとに分ける理由
+
+3本の seed スクリプトはそれぞれ別ファイルだが、**同じスクリプトを2ジョブが同時に編集すると衝突する**。
+士業単位（1ジョブ＝2本＋同じseedスクリプト）で切れば、ファイル単位で交わらない。
+
+`max-parallel: 1`（直列）にしてあるのは、サブスクのレート制限を一度に焼かないため。実測を見て2まで上げてよい。
+
+---
+
+## 3. 重点レーン
+
+| レーン | 内容 |
+|---|---|
+| **A 物件×許認可** | 事業用物件の要件（障害福祉・介護・医療・民泊・飲食など）と、その許認可 |
+| **B 相続** | 相続不動産・空き家・実家・遺産分割の実務 |
+| **C 中国語×プロ層** | 繁体字／簡体字。日本の不動産・相続を扱う現地の専門家が読む前提 |
+
+Cは記事数が最も少ない。配分に迷ったらCに寄せる。
+
+---
+
+## 4. サイト別の作法
+
+**★ここが士業ごとに真逆になっている。取り違えると必ずバリデータで落ちる。**
+
+| | 社労士 `/labor/column` | 行政書士 `/legal/column` | 不動産 `/column` |
+|---|---|---|---|
+| 原稿 | `scripts/labor-columns/NN-slug.md` | `scripts/legal-columns/NN-slug.md` | `scripts/realestate-columns/NN-slug.md` |
+| 翻訳 | `scripts/labor-columns/{en,zh-tw,zh}/NN-slug.md` | 同左 | 同左 |
+| seed | `seed-labor-columns.ts` の ARTICLES に1エントリ | `seed-souzoku-legal-columns.ts` の**4箇所**（`REQUIRED_HUB_LINKS` / `REQUIRED_PHRASES` / `FORBIDDEN_PHRASES`（空でも宣言）/ `ARTICLES`） | `seed-realestate-columns-daily.ts` の ARTICLES に1エントリ（`publishedAt` と `category` は記事ごと） |
+| 管理画面 | `/admin/columns/seed-labor` | `/admin/columns/seed-souzoku-legal` | `/admin/columns/seed-realestate-daily` |
+| **翻訳の内部リンク** | **ロケール接頭辞つき相対** `](/zh/labor/ryokin)` | **絶対URL** `](https://luck428.com/legal/ryokin)`。相対はNG | **絶対URL**。相対はNG |
+| **翻訳frontmatter必須** | `title` / `excerpt` / **`faqHeading`** | `title` / `excerpt` / **`category`** | `title` / `excerpt` / **`category`** |
+| frontmatterのクォート | **囲まない**（パーサが剥がさず、クォートごとタイトルになる） | 囲んでよい | 囲んでよい |
+| frontmatterのキー名 | **ハイフン不可**（`^([A-Za-z]+):` でしか読まない） | ハイフン可 | ハイフン可 |
+| 出典節の見出し | `## この記事の根拠` | `## この記事の出典（一次情報）` | `## この記事の出典（一次情報）` |
+| 翻訳のH2本数・FAQ件数 | 検査なし | **jaと一致していないとNG** | 検査なし |
+| FAQ見出し（翻訳） | frontmatterの `faqHeading` | en=`## FAQ` / zh-tw=`## 常見問題` / zh=`## 常见问题` | — |
+| 「助成金」の語 | 使ってよい | **NG** | **NG** |
+
+**不動産は枝番スクリプト（`-p7` など）を新規に作らない。** `seed-realestate-columns-daily.ts` に追記する。
+以前は1本ごとにスクリプト294行＋管理画面121行を新規作成していた（1本あたり約415行）。2026-08-22に追記型へ是正済み。
+
+---
+
+## 5. 記事の型
+
+1. 冒頭80〜120字の**直答ブロック**（本文を `**結論（先に要点）**：` で始める）
+2. **H2は疑問文**
+3. 数値・期限・費用は**表**
+4. 末尾に**出典節**（見出しは上表のとおり士業で違う）
+5. 浦松署名＋著者ページリンク（`/about/uramatsu`）
+6. FAQ 4問（`**Q. **` 改行 `A. `）
+7. H1は書かない（日本語原稿にfrontmatterは付けない。メタはseedスクリプトが持つ）
+
+---
+
+## 6. 一次資料
+
+- 法令は**条文番号＋項＋号＋施行日＋最終改正**。e-Gov法令検索で条文を直接取得するのが確実
+- 公的資料は**参照日**を明記
+- **裏取りできない事実は書かず「未検証」に落とす。本数を守るために事実を薄めない**
+- 行政の受付状況・期限は、書く直前に当該公式ページを直接取得して確認する
+
+---
+
+## 7. 書いてはいけないこと
+
+- **具体的な法的判断**。AIは資料・情報まで。最終判断は有資格者
+- **分離受任に反する文面**。「一括受任」「まとめて契約」型は不可。事業体をまたぐ言及には「独立した事業体」「別々にご契約」等の明示を必ず併記する（短縮形は不可）
+- 「ワンストップ」「一気通貫」の一括受任的用法。ただし「一つの窓口／同じ窓口／伴走」は可
+- 「街の不動産屋」／実績数字／安易な問いかけ型見出し
+- 「記者歴34年」「中国総局長として中国や台湾、タイに駐在」
+- 他士業の独占業務への踏み込み。登記＝司法書士、税務＝税理士、紛争＝弁護士に振る
+
+---
+
+## 8. 検証の成功条件
+
+**`NG` で始まる行が0 かつ exit 0。**
+
+`OK: 全チェック通過` を成功条件にしてはいけない。`seed-labor-columns.ts` はこの文字列を標準出力に出す実装を持たない（preview JSON の `verification` にしか入らず、既存のWARNがあるためそこにも入らない）。
+
+既存のWARNは増減しなければよい。**バリデータに引っかかったら、まずバリデータ側を疑う。記事を歪めて検査を通さない。**
+
+`--emit-ts` を忘れると管理画面に並ばない。ワークフローの `validate` ジョブが必ず実行する。
+
+---
+
+## 9. 有効化の手順（人間の作業）
+
+ワークフローをマージしただけでは動かない。次の3つが要る。
+
+### ① Claude GitHub App を入れる
+
+https://github.com/apps/claude をこのリポジトリにインストールする。
+
+### ② `CLAUDE_CODE_OAUTH_TOKEN` を登録する
+
+```
+claude setup-token
+```
+
+Mac のターミナルで実行し、出力されたトークンをコピーする（**コマンドはトークンを保存しないので、その場でコピーする**）。
+リポジトリの **Settings → Secrets and variables → Actions → New repository secret** で、
+名前 `CLAUDE_CODE_OAUTH_TOKEN`、値にそのトークンを入れる。
+
+- このトークンは**サブスクリプションの枠**で動く（API課金は発生しない）
+- **トークンを実行した本人のプランに紐づく。** 日常のClaude利用と枠を食い合う
+- 失効すると Daily Columns が毎晩失敗する。`token-healthcheck.yml` が週1回見張る
+
+### ③ 手動で1回通してから schedule を有効にする
+
+**`schedule:` はデフォルトブランチにあるワークフローファイルからしか走らない。**
+ブランチ上でいくら直しても定期実行のテストにはならない。
+
+1. このPRをマージする
+2. Actions タブ → Daily Columns → **Run workflow**（`dry_run` を true にすると PR を作らず成果物だけ残す）
+3. 通ることを確認してから、翌日の定期実行を待つ
+
+---
+
+## 10. 既知の落とし穴
+
+| # | 内容 |
+|---|---|
+| 1 | **`schedule` はデフォルトブランチからしか走らない。** ブランチ上のYAML変更は定期実行に反映されない |
+| 2 | **cron はUTC固定・指定時刻の保証なし。** 21:00 JST = `0 12 * * *`。混雑時は数分〜数十分遅れる |
+| 3 | **public リポジトリは60日間リポジトリ無活動でスケジュールが自動無効化される。** 毎日PRが出ていれば当たらない |
+| 4 | **`--allowedTools` に挙げていないツールは「使えない」のではなく「確認待ちで止まる」。** 無人実行では実質デッドロック。Bash はデフォルト無効 |
+| 5 | **Bash の許可はサブコマンド単位。** `Bash(git diff *)` は `git diff && git log` を許可しない。`*` の前のスペースが語境界を作る |
+| 6 | **claude-code-action は PR を自動で作らない。** ブランチにpushしてPR作成ページのリンクを出すだけ。このワークフローは `open-pr` ジョブの `gh pr create` で作っている |
+| 7 | **`GITHUB_TOKEN` で作ったコミットは他のワークフローを起動しない。** 将来 `on: pull_request` のCIを足すときはPATか独自Appのトークンが要る |
+| 8 | **スケジュール実行の actor が bot だと action に弾かれる。** GitHubはスケジュール実行を「最後に `cron:` 行を変更したユーザー」に帰属させる。Renovate/Dependabot がYAMLを触ると全滅する。その場合は `allowed_bots` を足す |
+| 9 | **matrix の `fail-fast` は既定 true。** 1本コケると残りが全部キャンセルされる。このワークフローでは `false` にしてある |
+| 10 | **`timeout-minutes` をジョブに書かないと最大6時間ぶん走り得る。** 全ジョブに明示してある |
+| 11 | **サブスクのレート制限は一気に焼ける。** 「A single burst (like large workflow fanout) can exhaust the weekly allowance」。`max-parallel: 1` から始める |
+
+---
+
+## 11. 未検証
+
+1. **OAuthトークンの実際の有効期限。** 公式は「one-year」、一方 GitHub Actions 上で短時間に失効したという報告（`anthropics/claude-code#11016`、Closed as not planned）がある。どちらが現行挙動か確認できていない。`token-healthcheck.yml` はこの不確実性への保険
+2. **`--json-schema` と `structured_output` の挙動**（`plan-check` と `review` のゲートが依存している）。ドキュメント記載のみで、このリポジトリでの実測はまだ
+3. **1日6本×4言語がランナーのジョブ時間内に収まるか。** `write` に `timeout-minutes: 180` を置いたが実測値ではない
+4. **`claude_args` の文字列パース**（カンマ区切り1文字列 vs スペース区切り複数クォート）。公式例に両方の形があり、Action経由での確定した挙動は未確認

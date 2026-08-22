@@ -1,0 +1,54 @@
+name: Claude Token Healthcheck
+
+# CLAUDE_CODE_OAUTH_TOKEN が生きているかを週1回だけ確認する。
+# 失効すると Daily Columns が毎晩失敗し続けるため、それより先に気づくための見張り。
+# 公式は「one-year OAuth token」と書いているが、GitHub Actions 上で短時間で
+# 失効したという報告（anthropics/claude-code#11016）があり、実挙動が確定していない。
+
+on:
+  schedule:
+    # 月曜 22:10 UTC = 火曜 07:10 JST
+    - cron: "10 22 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+  id-token: write
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - id: ping
+        continue-on-error: true
+        uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          prompt: "Reply with the single word: alive"
+          claude_args: |
+            --model claude-haiku-4-5
+            --max-turns 1
+
+      - name: 落ちていたら Issue を立てる
+        if: steps.ping.outcome != 'success'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh issue create --repo "${{ github.repository }}" \
+            --title "CLAUDE_CODE_OAUTH_TOKEN が失効している可能性" \
+            --body "$(cat <<'EOM'
+          週次のヘルスチェックが失敗しました。Daily Columns も止まっている可能性があります。
+
+          **対処**
+          1. Mac で `claude setup-token` を実行して新しいトークンを発行する
+             （コマンドはトークンを保存しないので、その場でコピーする）
+          2. リポジトリの Settings → Secrets and variables → Actions で
+             `CLAUDE_CODE_OAUTH_TOKEN` を更新する
+          3. Actions から Claude Token Healthcheck を workflow_dispatch で手動実行し、
+             緑になることを確認する
+
+          実行ログ: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          EOM
+          )"
