@@ -154,7 +154,28 @@ type ArticleSpec = {
  *     hubLinks: ["/toushi"],
  *   },
  */
-const ARTICLES: ArticleSpec[] = [];
+const ARTICLES: ArticleSpec[] = [
+  {
+    file: "12-clinic-bukken-youto-chiiki-kaisetsu-todokede.md",
+    slug: "clinic-bukken-youto-chiiki-kaisetsu-todokede",
+    title: "クリニックの物件は、契約前に何を確認するのか──用途地域・用途変更・開設届の順番",
+    publishedAt: "2026-08-22",
+    category: "投資・事業用不動産",
+    excerpt:
+      "診療所は用途地域の制限では13地域すべてで建てられます。物件で詰まるのは用途地域ではなく、有床か無床か、用途変更の確認申請の要否、消防用設備の現況、そして開設者が個人か医療法人か。東京都文京区の宅地建物取引士兼行政書士が、契約前に確認できることを条文と自治体の案内から順に整理します。",
+    keywords: [
+      "クリニック 物件",
+      "診療所 用途地域",
+      "診療所 用途変更 確認申請",
+      "診療所開設届",
+      "医療法人 診療所 開設許可",
+    ],
+    tags: ["事業用不動産", "許認可", "用途地域", "消防法"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/toushi", "/office"],
+  },
+];
 
 function toPlainText(md: string): string {
   return md
