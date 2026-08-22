@@ -1,5 +1,5 @@
 ---
-title: "What is the difference between the santei kiso todoke and the getsugaku henko todoke? How the standard monthly remuneration changes"
+title: What is the difference between the santei kiso todoke and the getsugaku henko todoke? How the standard monthly remuneration changes
 excerpt: The santei kiso todoke (notification of base calculation) is the annual review; the getsugaku henko todoke (notification of change in monthly remuneration) is a mid-year change when pay moves significantly through a raise or a cut. Both decide the standard monthly remuneration, but their purpose and timing differ. The annual notification uses remuneration paid in April, May and June and applies from September through August of the following year. The mid-year notification applies only when fixed wages changed, the three-month average differs by two grades or more, and the payment basis days requirement is met in all three months. An increase in overtime pay alone is not, in principle, a trigger.
 category: Social insurance
 faqHeading: Frequently asked questions

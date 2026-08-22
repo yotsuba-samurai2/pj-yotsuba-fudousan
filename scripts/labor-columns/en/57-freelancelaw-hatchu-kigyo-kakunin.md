@@ -1,5 +1,5 @@
 ---
-title: "What a client company has to get right under the Freelance Act: terms, payment, and harassment response"
+title: What a client company has to get right under the Freelance Act: terms, payment, and harassment response
 excerpt: When you commission work from a freelancer, "it is a commissioning contract, so labour law does not apply" is not the end of it. Disclosure of transaction terms applies to every order, the payment deadline to every order placed by a specified commissioning business, the seven prohibited acts to commissions of one month or more, and childcare and nursing-care consideration and 30 days' notice of termination to commissions of six months or more. Not every obligation applies to every client. From 1 January 2026, deducting bank transfer fees from the fee counts as a reduction in remuneration regardless of agreement.
 category: Labor law basics
 faqHeading: Frequently asked questions
