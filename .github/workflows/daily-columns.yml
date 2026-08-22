@@ -85,10 +85,14 @@ jobs:
 
             9本揃わないなら揃わないまま出す。基準を緩めて数を埋めない。
             ファイルを書いたら終了。git 操作はしない。
+
+            **これは無人の1回きりの実行です。次のターンはありません。**
+            `.tmp/plan.json` を書き終えてから終了すること。
           claude_args: |
             --model claude-opus-4-8
             --max-turns 40
             --allowedTools "Read,Write,Glob,Grep,WebSearch,WebFetch"
+            --disallowedTools "Task"
 
       - uses: actions/upload-artifact@v4
         with:
@@ -237,10 +241,18 @@ jobs:
             3. 該当するseedスクリプトの ARTICLES（行政書士は4箇所）に登録する
 
             **git 操作はしない。--emit-ts も実行しない**（後段のジョブがやる）。
+
+            ## ★これは無人の1回きりの実行です
+            **次のターンはありません。**「あとで書きます」「結果を待ちます」で
+            ターンを終えると、ファイルが1つも残らないまま失敗します
+            （2026-08-23にサブエージェントの結果待ちで実際に発生）。
+            調査は自分で完結させ、**原稿と翻訳をすべて書き終えてから終了すること。**
+            途中経過の報告でターンを終えない。
           claude_args: |
             --model claude-opus-4-8
             --max-turns 120
             --allowedTools "Read,Write,Edit,Glob,Grep,WebSearch,WebFetch"
+            --disallowedTools "Task"
 
       - name: 変更ファイルだけを集める
         run: |
@@ -251,6 +263,11 @@ jobs:
           cat .out/changed.txt
           if [ -s .out/changed.txt ]; then
             tar -czf .out/${{ matrix.shigyo }}.tar.gz -T .out/changed.txt
+          elif [ "${{ steps.has.outputs.count }}" != "0" ]; then
+            # 書くはずの企画があったのに1ファイルも出ていない。
+            # 空のtarで黙って先に進めると validate まで気づけないのでここで落とす
+            echo "::error::${{ matrix.shigyo }} は ${{ steps.has.outputs.count }} 本書くはずが、ファイルが1つも作られていません"
+            exit 1
           else
             # この士業の採用が0本だったとき。空のtarを置いて後段のmergeを壊さない
             tar -czf .out/${{ matrix.shigyo }}.tar.gz --files-from /dev/null
@@ -380,10 +397,14 @@ jobs:
 
             severity は blocker / major / minor の3段階。
             blocker が1件でもあれば pass は false。
+
+            **これは無人の1回きりの実行です。次のターンはありません。**
+            審査を終えてから終了すること。途中経過の報告でターンを終えない。
           claude_args: |
             --model claude-opus-4-8
             --max-turns 50
             --allowedTools "Read,Glob,Grep,Bash(git diff *),Bash(git log *),Bash(git status *)"
+            --disallowedTools "Task"
             --json-schema '{"type":"object","properties":{"pass":{"type":"boolean"},"findings":{"type":"array","items":{"type":"object","properties":{"file":{"type":"string"},"severity":{"type":"string"},"issue":{"type":"string"},"fix":{"type":"string"}},"required":["file","severity","issue","fix"]}}},"required":["pass","findings"]}'
 
       # 判定を平易な文字列にしてから後段へ渡す。式の中で fromJSON を使わない
@@ -441,10 +462,14 @@ jobs:
             **指摘されていない箇所を書き換えない。**
             **バリデータに引っかかったら、まずバリデータ側を疑う。記事を歪めて検査を通さない。**
             git 操作はしない。
+
+            **これは無人の1回きりの実行です。次のターンはありません。**
+            修正を書き終えてから終了すること。途中経過の報告でターンを終えない。
           claude_args: |
             --model claude-opus-4-8
             --max-turns 60
             --allowedTools "Read,Write,Edit,Glob,Grep,WebSearch,WebFetch"
+            --disallowedTools "Task"
 
       - uses: actions/setup-node@v4
         with:
