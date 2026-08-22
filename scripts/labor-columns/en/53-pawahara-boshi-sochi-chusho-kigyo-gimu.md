@@ -1,5 +1,5 @@
 ---
-title: "Power harassment prevention measures are mandatory for small and medium-sized companies too — consultation desks, internal rules, and what to do after an incident"
+title: Power harassment prevention measures are mandatory for small and medium-sized companies too — consultation desks, internal rules, and what to do after an incident
 excerpt: Power harassment prevention measures are a legal obligation regardless of company size or industry. Small and medium-sized companies have been covered since 1 April 2022, and the grace period is over. Writing "harassment is prohibited" in the work rules is not enough. The law requires a policy that is made clear and communicated, a consultation desk, fact-finding after a report, consideration for the person harmed, action toward the person responsible, measures to prevent recurrence, protection of privacy, and communication that no one will be treated disadvantageously for making a report. From 1 October 2026 the guideline also addresses so-called jibaku eigyo (forced purchase of the employer's own products) and the prohibition or coercion of disclosure of sensitive personal information.
 category: Labor law basics
 faqHeading: Frequently asked questions

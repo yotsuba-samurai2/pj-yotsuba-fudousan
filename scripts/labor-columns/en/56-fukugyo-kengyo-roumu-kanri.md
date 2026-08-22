@@ -1,5 +1,5 @@
 ---
-title: "Managing a workforce that moonlights: work rules, aggregating working hours, and health management"
+title: Managing a workforce that moonlights: work rules, aggregating working hours, and health management
 excerpt: No provision of Japanese law says an employer must permit side jobs, but the Ministry of Health, Labour and Welfare guidelines say permitting them in principle is appropriate, and list four grounds on which an employer may prohibit or restrict them. Article 38, paragraph 1 of the Labour Standards Act aggregates working hours even across different employers, so a company that permits side jobs must design how it collects reports, who pays the premium wage, and how it protects health. The management model reduces that burden. As of 20 August 2026 the aggregation rule has not changed, and no bill to amend the Labour Standards Act has been submitted to the Diet.
 category: Labor law basics
 faqHeading: Frequently asked questions

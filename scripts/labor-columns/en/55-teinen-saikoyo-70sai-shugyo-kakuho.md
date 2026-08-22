@@ -1,5 +1,5 @@
 ---
-title: "Is it all right to keep the mandatory retirement age at 60? Employment securing measures to 65 and employment opportunities to 70"
+title: Is it all right to keep the mandatory retirement age at 60? Employment securing measures to 65 and employment opportunities to 70
 excerpt: An obligation to employ people until 65 is not the same as an obligation to set the mandatory retirement age at 65. A company may keep a retirement age of 60 and meet the requirement through a continued employment system that covers everyone who wants to stay until 65. Up to 70, what applies is a duty to endeavour, and it covers work opportunities that are not limited to employment. The transitional measure that once allowed selection criteria ended on 31 March 2025. From April 2026, the threshold for the in-service old-age pension moved from 510,000 yen to 650,000 yen, and a new duty to endeavour on the safety of older workers took effect under the Industrial Safety and Health Act.
 category: Labor law basics
 faqHeading: Frequently asked questions
