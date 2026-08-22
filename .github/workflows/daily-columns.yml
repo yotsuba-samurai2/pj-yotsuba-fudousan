@@ -507,7 +507,7 @@ jobs:
           path: .out/fixed.tar.gz
 
   # ─────────────────────────────────────────────────────────────
-  # 7. draft PR ── LLMを使わない。確実に動く
+  # 7. PR作成＋自動マージ ── LLMを使わない。確実に動く
   # ─────────────────────────────────────────────────────────────
   open-pr:
     needs: [validate, review, fix]
@@ -524,10 +524,12 @@ jobs:
           path: .out
       - run: tar -xzf .out/*.tar.gz
 
-      - name: コミットして draft PR を出す
+      - name: コミットしてPRを出し、ゲートが全部通っていればマージする
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REVIEW: ${{ needs.review.outputs.result }}
+          REVIEW_PASS: ${{ needs.review.outputs.pass }}
+          FIX_RESULT: ${{ needs.fix.result }}
         run: |
           set -euo pipefail
           D=$(TZ=Asia/Tokyo date +%Y%m%d)
@@ -538,28 +540,51 @@ jobs:
           git add -A scripts/ src/
           git commit -m "feat(columns): コラム6本を追加（3士業×2本・4言語・$D）"
           git push -u origin "$BR"
+
+          # マージしてよいのは、レビューが通ったか、修正ジョブが通り直したときだけ。
+          # 判定が取れなかった（unknown）ときは人間に回す
+          MERGE=no
+          if [ "$REVIEW_PASS" = "true" ] || [ "$FIX_RESULT" = "success" ]; then MERGE=yes; fi
+
           {
             echo "## 自動生成されたコラム（$D）"
             echo
             echo "- 検証：seed dry-run（NG行0）／--emit-ts／tsc／eslint／vitest すべて通過"
-            echo "- レビュー：下記のJSONのとおり"
+            echo "- レビュー判定：\`${REVIEW_PASS:-unknown}\` ／ 修正ジョブ：\`${FIX_RESULT}\`"
+            echo "- 自動マージ：$MERGE"
             echo
-            echo '### レビュー結果'
+            echo '<details><summary>レビュー結果</summary>'
+            echo
             echo '```json'
             echo "$REVIEW"
             echo '```'
             echo
+            echo '</details>'
+            echo
             echo "### 浦松さんへ"
-            echo "1. 内容を確認して Ready for review → マージ"
-            echo "2. デプロイ後、管理画面から投入："
-            echo "   - /admin/columns/seed-realestate-daily"
-            echo "   - /admin/columns/seed-souzoku-legal"
-            echo "   - /admin/columns/seed-labor"
-            echo "3. 200を確認してから GSC のインデックス登録（日本語のみ・1日4本まで）"
+            if [ "$MERGE" = "yes" ]; then
+              echo "このPRは自動マージされます。**朝7:00に6本を読めるGoogleドキュメントが届きます。**"
+              echo "読んだうえで、管理画面から投入してください（投入は浦松さんの作業）。"
+            else
+              echo "**レビューの判定が取れなかったため、マージしていません。** 内容を確認してからマージしてください。"
+            fi
+            echo
+            echo "投入先（デプロイ後）："
+            echo "- https://luck428.com/admin/columns/seed-realestate-daily"
+            echo "- https://luck428.com/admin/columns/seed-souzoku-legal"
+            echo "- https://luck428.com/admin/columns/seed-labor"
           } > /tmp/body.md
-          gh pr create --draft --base main --head "$BR" \
-            --title "コラム6本（3士業×2本・4言語） $D" \
-            --body-file /tmp/body.md
+
+          if [ "$MERGE" = "yes" ]; then
+            gh pr create --base main --head "$BR" \
+              --title "コラム6本（3士業×2本・4言語） $D" --body-file /tmp/body.md
+            gh pr merge "$BR" --squash --delete-branch
+            echo "squashマージしました"
+          else
+            gh pr create --draft --base main --head "$BR" \
+              --title "【要確認】コラム6本（3士業×2本・4言語） $D" --body-file /tmp/body.md
+            echo "::warning::レビュー判定が取れなかったため draft のまま残しました"
+          fi
 
   # ─────────────────────────────────────────────────────────────
   # 失敗したら Issue を立てる（黙って止まらせない）
