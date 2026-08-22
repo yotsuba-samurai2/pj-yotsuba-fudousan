@@ -175,6 +175,26 @@ const ARTICLES: ArticleSpec[] = [
     localesWithTranslations: ["en", "zh-tw", "zh"],
     hubLinks: ["/toushi", "/office"],
   },
+  {
+    file: "13-souzoku-shakuchi-jinushi-shodaku-baikyaku.md",
+    slug: "souzoku-shakuchi-jinushi-shodaku-baikyaku",
+    title: "相続した家が借地だった──地主の承諾がいる場面・いらない場面と、売るときの順番",
+    publishedAt: "2026-08-22",
+    category: "相続",
+    excerpt:
+      "相続で借地上の建物を引き継ぐこと自体に、地主の承諾は要りません。承諾が要るのは売るときです。旧法と新法の分かれ目、建物の登記が対抗力の土台になること、売る前に集める書類まで、東京都文京区の宅地建物取引士兼行政書士が条文から整理します。",
+    keywords: [
+      "借地権 相続",
+      "借地 地主 承諾",
+      "借地権 売却",
+      "借地非訟 承諾に代わる許可",
+      "旧借地法 借地借家法 違い",
+    ],
+    tags: ["相続", "借地権", "売却"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/souzoku"],
+  },
 ];
 
 function toPlainText(md: string): string {
