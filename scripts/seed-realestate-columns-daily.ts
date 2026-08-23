@@ -272,6 +272,46 @@ const ARTICLES: ArticleSpec[] = [
     localesWithTranslations: ["en", "zh-tw", "zh"],
     hubLinks: ["/toushi", "/office"],
   },
+  {
+    file: "15-souzoku-nochi-baikyaku-kashidashi-nagare.md",
+    slug: "souzoku-nochi-baikyaku-kashidashi-nagare",
+    title: "相続した農地を売る・貸すときに最初に確認すること",
+    publishedAt: "2026-08-23",
+    category: "相続",
+    excerpt:
+      "相続した農地は、売る・貸す前に「農地のままか、宅地などに転用するか」で手続きが分かれます。農地のまま耕作目的で売買・貸借するには農業委員会の許可（農地法第3条）、転用して売るには都道府県知事等の許可（第4条・第5条）が要り、市街化区域内なら届出で足ります。東京都文京区の宅地建物取引士兼行政書士が、契約前に確認できることを条文と農林水産省の資料から順に整理します。",
+    keywords: [
+      "農地 相続 売却",
+      "農地 貸す 農業委員会",
+      "農地法 3条 4条 5条",
+      "農地 転用 市街化区域 届出",
+      "相続 農地 3条の3 届出",
+    ],
+    tags: ["相続", "農地", "農地法", "売却"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/souzoku"],
+  },
+  {
+    file: "16-chugokugo-buyer-juyojiko-check-toushi-bukken.md",
+    slug: "chugokugo-buyer-juyojiko-check-toushi-bukken",
+    title: "中国語圏の買主に日本の収益物件を紹介する前に読む重要事項説明の要点",
+    publishedAt: "2026-08-23",
+    category: "投資・事業用不動産",
+    excerpt:
+      "日本の収益物件を中国語圏の買主に紹介する前に読むべきは、宅地建物取引業法第35条の重要事項説明です。登記された権利・法令上の制限・私道負担・供給施設が並び、非居住者が買主になるときは外為法の報告と税務の確認が先に重なります。東京都文京区の宅地建物取引士兼行政書士が、買主側デューデリの観点を条文と公的資料から整理します。",
+    keywords: [
+      "重要事項説明 宅建業法35条",
+      "収益物件 買主 デューデリ",
+      "非居住者 不動産 外為法 報告",
+      "非居住者 賃料 源泉徴収",
+      "中国語圏 買主 日本 不動産",
+    ],
+    tags: ["投資・事業用不動産", "重要事項説明", "非居住者", "外為法"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/toushi"],
+  },
 ];
 
 function toPlainText(md: string): string {

@@ -284,6 +284,21 @@ const REQUIRED_HUB_LINKS: Record<string, string[]> = {
     "/legal/column/souzoku-yochokin-karibarai",
     "/legal/column/souzoku-zaisan-mokuroku",
   ],
+  "houkago-day-jido-hattatsu-shitei-shinsei-nagare": [
+    "/legal/services/shogai-fukushi",
+    "/legal/nagare",
+    "/legal/ryokin",
+  ],
+  "souzoku-nochi-noringyoiinkai-todoke-3jo3": [
+    "/legal/services/inheritance",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/souzoku",
+    "/legal/column/souzoku-touki-nagare",
+    "/legal/column/souzoku-kigen-matome",
+    "/legal/column/souzoku-tochi-kokko-kizoku",
+    "/legal/column/souzoku-hoki-gentei-shonin",
+  ],
 };
 
 /** 表示コンプライアンス上の禁止語 */
@@ -656,6 +671,36 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "別事業体",
     "独立した事業体",
   ],
+  "houkago-day-jido-hattatsu-shitei-shinsei-nagare": [
+    "児童福祉法第21条の5の3",
+    "指定通所支援",
+    "都道府県知事",
+    "児童発達支援",
+    "放課後等デイサービス",
+    "平成24年厚生労働省令第15号",
+    "児童発達支援管理責任者",
+    "常勤換算",
+    "事前協議",
+    "指導訓練室",
+    "紹介料を受け取りません",
+    "別事業体",
+    "独立した事業体",
+  ],
+  "souzoku-nochi-noringyoiinkai-todoke-3jo3": [
+    "農地法第3条の3",
+    "農業委員会",
+    "おおむね10か月以内",
+    "10万円以下の過料",
+    "権利取得の効力を発生させるものではありません",
+    "現況で判断",
+    "不動産登記法第76条の2",
+    "3年以内",
+    "2024年4月1日",
+    "農地法第3条",
+    "紹介料を受け取りません",
+    "別事業体",
+    "独立した事業体",
+  ],
 };
 
 /** 記事ごとに含めてはならない表現 */
@@ -713,6 +758,8 @@ const FORBIDDEN_PHRASES: Record<string, string[]> = {
   "souzoku-isanbunkatsu-chotei-shinpan": [],
   "souzoku-yochokin-karibarai": [],
   "souzoku-ninchisho-yukuefumei-miseinen": [],
+  "houkago-day-jido-hattatsu-shitei-shinsei-nagare": [],
+  "souzoku-nochi-noringyoiinkai-todoke-3jo3": [],
 };
 
 /** 本セット外へ張る既存legalコラムslug（リポジトリの他シードで実在確認済み） */
@@ -1059,6 +1106,55 @@ const ARTICLES: Array<{
       "失踪宣告",
       "特別代理人",
       "家庭裁判所",
+    ],
+  },
+  {
+    file: "21-houkago-day-jido-hattatsu-shitei-shinsei-nagare.md",
+    slug: "houkago-day-jido-hattatsu-shitei-shinsei-nagare",
+    title:
+      "放課後等デイサービス・児童発達支援の指定申請の流れと必要書類──物件・労務・税務は誰に頼むか",
+    category: "障害福祉の許認可（行政書士の実務から）",
+    excerpt:
+      "放課後等デイサービスと児童発達支援は、児童福祉法にもとづく障害児通所支援で、開業には指定通所支援事業者の指定（第21条の5の3）が必要です。指定権者・スケジュール・人員基準・設備基準・事前協議・必要書類の流れと、物件は不動産、労務は社会保険労務士、税務は税理士へ分離受任で振る分担を整理しました。",
+    keywords: [
+      "放課後等デイサービス 指定申請 流れ",
+      "児童発達支援 指定申請 必要書類",
+      "障害児通所支援 指定 児童福祉法",
+      "児童発達支援管理責任者 人員基準",
+      "指定通所支援 事前協議",
+      "放課後等デイ 開業 行政書士",
+    ],
+    tags: [
+      "放課後等デイサービス",
+      "児童発達支援",
+      "指定申請",
+      "障害児通所支援",
+      "人員基準",
+      "行政書士",
+    ],
+  },
+  {
+    file: "22-souzoku-nochi-noringyoiinkai-todoke-3jo3.md",
+    slug: "souzoku-nochi-noringyoiinkai-todoke-3jo3",
+    title: "相続した農地は農業委員会へ届出が要る──農地法3条の3の手続きと必要書類",
+    category: "相続の手続き（行政書士の実務から）",
+    excerpt:
+      "農地を相続したら、通常の相続手続とは別に、農業委員会への届出（農地法第3条の3）が必要です。相続・遺産分割・包括遺贈などで農地の権利を取得した人が、知った時点からおおむね10か月以内に届け出ます。期限・書類・怠った場合の過料、相続登記（不動産登記法第76条の2）・相続税・売却との順番と分離受任の分担を整理しました。",
+    keywords: [
+      "農地 相続 農業委員会 届出",
+      "農地法 3条の3 届出",
+      "相続 農地 10か月 過料",
+      "農地 相続 登記 順番",
+      "農地 相続 売る 貸す 転用",
+      "農地 相続 行政書士",
+    ],
+    tags: [
+      "農地相続",
+      "農地法第3条の3",
+      "農業委員会",
+      "相続登記",
+      "農地転用",
+      "行政書士",
     ],
   },
 ];
