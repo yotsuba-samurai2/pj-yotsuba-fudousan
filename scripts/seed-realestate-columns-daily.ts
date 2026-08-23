@@ -252,6 +252,26 @@ const ARTICLES: ArticleSpec[] = [
     localesWithTranslations: ["en", "zh-tw", "zh"],
     hubLinks: ["/souzoku"],
   },
+  {
+    file: "14-unsou-eigyosho-shako-bukken-yoken.md",
+    slug: "unsou-eigyosho-shako-bukken-yoken",
+    title: "運送業を始めるなら、営業所と車庫の物件はどこを見て選ぶか",
+    publishedAt: "2026-08-23",
+    category: "投資・事業用不動産",
+    excerpt:
+      "運送業（緑ナンバー）の物件で詰まるのは用途地域ではありません。営業所と車庫が市街化調整区域でないか、両者の直線距離が公示の範囲内か、車庫が全車両を収容でき前面道路が通れる幅員か、休憩施設を営業所か車庫に併設できるか。東京都文京区の宅地建物取引士兼行政書士が、契約前に確認できることを条文と公示から順に整理します。",
+    keywords: [
+      "運送業 物件",
+      "一般貨物 営業所 車庫",
+      "運送業 車庫 要件",
+      "営業所 車庫 距離",
+      "運送業 市街化調整区域",
+    ],
+    tags: ["事業用不動産", "許認可", "運送業", "市街化調整区域"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/toushi", "/office"],
+  },
 ];
 
 function toPlainText(md: string): string {
