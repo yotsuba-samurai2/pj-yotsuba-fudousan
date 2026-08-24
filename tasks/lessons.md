@@ -103,3 +103,10 @@
 - **prisma dev 使い捨てDBは最大10接続＝静的生成の並列に耐えない**: 9ワーカー×プール接続で P1001/P1017 が多発する。`connection_limit=1&pool_timeout=0&connect_timeout=0`（prisma dev 推奨値+pgbouncer=true）にし、next.config の `experimental.cpus` を `NEXT_BUILD_WORKERS` 環境変数で絞るノブを追加して 2 ワーカーでビルドすると安定。Vercel 本番ビルドは Supabase pooler なので絞り不要。
 - **VercelのISRページのヘッダーは `cache-control: public, max-age=0, must-revalidate` + `x-vercel-cache: PRERENDER→HIT`**: 監査指示書の受け入れ基準「s-maxage が見える」はローカル next start の挙動で、Vercel は s-maxage をCDN側で消費してクライアントには出さない。合否は x-vercel-cache と Age/TTFB で判定する。本番実測 TTFB 0.07〜0.08秒（キャッシュHIT時）。
 - **`.next/dev/types` はディレクトリ移動後に腐って tsc を落とす**: ルート大移動の後は `rm -rf .next/dev` してから `tsc --noEmit`。vitest はレイアウトに依存しないので素通りする＝型エラーの検知はtscだけが頼り。
+
+## 2026-08-24 Daily Columns validate 失敗（ルート接頭辞の取り違え）
+
+- **slug が実在することと、そのルートに実在することは別**: 新原稿17が行政書士側の記事へ `/column/group-home-bukken-sagashikata-youto-chiiki` でリンクし、本番404（正しくは `/legal/column/…`、200を実測確認）。`/column` は `business=realestate` 専用ルート。既存 gh-columns 4本は正しく `/legal/column/` を使っており、誤りは新原稿だけ。バリデータは正しく機能した（sitemap union も本番と一致）＝**検査ではなく執筆側の是正が要る種類の失敗**。
+- **NG文面に「直し方」が無いと人間の復旧が遅れる**: 「不明slug X」だけでは、slugの綴り間違いなのか接頭辞の取り違えなのか読み取れない。sitemap の `/legal/column/` `/labor/column/` を**許可リストとは別枠**で集め、不明slugがそこに実在したら「行政書士側 /legal/column/X に実在。ルート接頭辞の誤り」とNGに添える形にした（落とす条件は不変・緩和ではない）。
+- **翻訳3言語は同じ誤りを書いても自動では止まらない**: 不明slug検査の正規表現は `](/column/...)` の相対形しか見ず、翻訳は絶対URL（`https://luck428.com/column/…`）なので一致しない。**ja を直したら翻訳3本も必ず同じだけ直す**を執筆規程に明記した。
+- **validate で落ちると review / fix / open-pr が走らず、その日の原稿は1本もマージされない**: 執筆済み原稿は Run の artifact にしか残らない。validate だけの re-run は同じ壊れた artifact を読むので無意味、全体 re-run は企画からやり直し。**artifact を落として1箇所直し、通常のPRに乗せるのが最短のサルベージ**。
