@@ -138,7 +138,6 @@ export default async function Page() {
       heroAlt="外国人材の受け入れと監査のイメージ"
       h1="育成就労の外部監査人は、誰に依頼するのか —— 要件と2027年4月の施行"
       lead={<p>{JA_LEAD}</p>}
-      governmentService
       internalLinks={[
         { href: "/legal/services/visa", label: "在留資格・ビザ申請" },
         { href: "/legal/services/gaikokujin-shain", label: "外国人社員の受け入れ（企業向け）" },

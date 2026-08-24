@@ -384,7 +384,6 @@ export default async function Page() {
       heroAlt={c.heroAlt}
       h1={c.h1}
       lead={c.lead}
-      governmentService
       internalLinks={c.internalLinks}
     >
       {c.sections(locale)}

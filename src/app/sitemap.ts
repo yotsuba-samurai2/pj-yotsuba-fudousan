@@ -40,17 +40,20 @@ function alternatesFor(businessKey: string, path: string, locales: readonly stri
  * それぞれに全4言語の hreflang alternates を付与する
  * （Next.js は配列1要素につき <url> 1件・<loc>=url のみを出すため、ロケール別に要素化しないと
  *  /en・/zh が <loc> として現れない）。
+ *
+ * lastmod は出力しない（SEO監査2026-08-24 P1-2）：固定ページは実更新日を保持しておらず、
+ * 旧実装の「サイトマップ生成時刻」では取得のたびに全固定ページが「今更新した」ように見えて
+ * Googleに lastmod 全体を信用されなくなる。実更新日を持たないページは省略が正
+ * （https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap）。
  */
 function expandStatic(
   businessKey: string,
   page: StaticPage,
-  lastModified: string,
 ): MetadataRoute.Sitemap {
   const locales = page.locales ?? ALL_LOCALES;
   const alternates = alternatesFor(businessKey, page.path, locales);
   return locales.map((loc) => ({
     url: canonicalUrl(businessKey, page.path, loc),
-    lastModified,
     changeFrequency: page.changeFrequency,
     priority: page.priority,
     alternates,
@@ -60,20 +63,20 @@ function expandStatic(
 /**
  * コラムを、そのコラムが実際に公開されているロケール（col.locales）のみ展開する
  * （存在しないロケールのURLを機械生成して404を量産しない）。locales 未設定＝後方互換で全4言語。
- * lastModified は frontmatter 相当の modifiedDate → date の順で採用（両方欠落時のみビルド時刻）。
+ * lastModified は frontmatter 相当の modifiedDate → date の順で採用。両方欠落時は省略
+ * （SEO監査2026-08-24 P1-2：旧実装の「生成時刻」フォールバックは虚偽の更新日になる）。
  */
 function expandColumn(
   businessKey: string,
   path: string,
   col: Column,
-  fallbackModified: string,
 ): MetadataRoute.Sitemap {
   const active = col.locales && col.locales.length > 0 ? col.locales : [...ALL_LOCALES];
   const alternates = alternatesFor(businessKey, path, active);
-  const lastModified = col.modifiedDate ?? col.date ?? fallbackModified;
+  const lastModified = col.modifiedDate ?? col.date;
   return active.map((loc) => ({
     url: canonicalUrl(businessKey, path, loc),
-    lastModified,
+    ...(lastModified ? { lastModified } : {}),
     changeFrequency: "yearly" as const,
     priority: 0.6,
     alternates,
@@ -218,34 +221,31 @@ const STATIC_LABOR: StaticPage[] = [
 /** 社労士サイトマップ。**SR_LAUNCHED=false の間は空配列を返す**（開業前は1件も出さない） */
 async function buildLaborSitemap(): Promise<MetadataRoute.Sitemap> {
   if (process.env.NEXT_PUBLIC_SR_LAUNCHED !== "true") return [];
-  const now = new Date().toISOString();
   const laborColumns = await getAllLaborColumnsAllLocales();
   return [
-    ...STATIC_LABOR.flatMap((page) => expandStatic("labor", page, now)),
+    ...STATIC_LABOR.flatMap((page) => expandStatic("labor", page)),
     ...laborColumns.flatMap((col) =>
-      expandColumn("labor", `/column/${col.slug}`, col, now),
+      expandColumn("labor", `/column/${col.slug}`, col),
     ),
   ];
 }
 
 async function buildRealestateSitemap(): Promise<MetadataRoute.Sitemap> {
-  const now = new Date().toISOString();
   const columns = await getAllColumnsAllLocales();
   return [
-    ...STATIC_REALESTATE.flatMap((page) => expandStatic("realestate", page, now)),
+    ...STATIC_REALESTATE.flatMap((page) => expandStatic("realestate", page)),
     ...columns.flatMap((col) =>
-      expandColumn("realestate", `/column/${col.slug}`, col, now),
+      expandColumn("realestate", `/column/${col.slug}`, col),
     ),
   ];
 }
 
 async function buildLegalSitemap(): Promise<MetadataRoute.Sitemap> {
-  const now = new Date().toISOString();
   const legalColumns = await getAllLegalColumnsAllLocales();
   return [
-    ...STATIC_LEGAL.flatMap((page) => expandStatic("legal", page, now)),
+    ...STATIC_LEGAL.flatMap((page) => expandStatic("legal", page)),
     ...legalColumns.flatMap((col) =>
-      expandColumn("legal", `/column/${col.slug}`, col, now),
+      expandColumn("legal", `/column/${col.slug}`, col),
     ),
   ];
 }

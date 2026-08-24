@@ -1,265 +1,38 @@
-# タスクB-2：代表者プロフィールページ /about/uramatsu 新設（ja先行公開）
+# SEO・LLMO・AIO監査(2026-08-24)対応 — fix/seo-audit-2026-08-24
 
-## 方針（B-1 /ryokin と同方式）
-- `src/app/(realestate)/about/uramatsu/page.tsx` 新規（COPY: Record<LangCode,…>＋getRequestLocale、現フェーズja のみ）
-- `availableLocales:["ja"]` で hreflang を実在ロケールに限定／sitemap も `locales:["ja"]`
-- JSON-LD：ProfilePage＋Person（@id=PERSON_ID・B-2指定のサブセット：jobTitle=代表取締役／worksFor=四葉不動産／knowsLanguage 4値／hasCredential=宅建士・行政書士の2件／sameAs=Wikidata・ORCID・士業ドットコム予約ページの3本）
-  ※Personフルノードの正は /about の ProfilePageJsonLd（seo.ts PERSON_JSONLD）のまま。@id同一のためKG上でマージされる
-- FAQPage（3問）＝Faq部品 withJsonLd（「FAQPageは/faqのみ」規則のB-2指示による例外＝B-1と同じ扱い）
-- BreadcrumbList＝Breadcrumb部品（ホーム＞会社概要＞代表プロフィール）
-- 経歴事実の一次資料：llms.txt route・/global・/ryokin authorBio（記者34年／中国総局長として中国や台湾、タイに駐在／中華圏12年／国立台湾師範大学留学／2025年設立）。国数表記は不使用
-- 社労士＝「2026年9月開業予定・現時点では未開業」注記を維持
+監査指示書: ~/Downloads/luck428-seo-llmo-aio-audit-2026-08-24.md
 
-## チェックリスト
-- [x] リポジトリ構成確認（App Router／locale接頭辞方式／JSON-LD記述場所／既存/about構成）
-- [x] /about/uramatsu ページ新規作成
-- [x] sitemap.ts に /about/uramatsu（locales:["ja"]）追加
-- [x] /about（AboutPageContent）に「代表プロフィールを見る」リンク追加（最小差分。経歴本文はDB翻訳値のため今回不変）
-- [x] `npm run build` 通過＋ローカル実測（title/H1/回答ブロック/JSON-LD/内部リンク/sitemap反映）
-- [x] 禁止語チェック（ワンストップ・一体・一括・まとめて・国数表記）出力HTML実測0件
-- [ ] 差分提示 → 浦松承認待ち（承認までcommit/push/デプロイしない）
+## P0 技術修正
 
-## レビュー（2026-07-19 実装完了・承認待ち）
+- [x] P0-1a proxy.ts: set-cookieを「既存Cookieの値がURLとズレたときだけ」に限定(初回Cookie付与はLanguageContextのクライアントeffectへ移設＝クローラーにset-cookieが一切出ない)
+- [x] P0-1b proxy.ts: 公開GETページに `s-maxage=3600, stale-while-revalidate=86400` を付与(ローカルnext startでmiddlewareヘッダーがNextのno-storeを上書きすることを実測確認)
+- [x] P0-1c vercel.json: 関数リージョンをhnd1(東京)に固定(現状iad1・DBはap-northeast-1で毎クエリ太平洋往復)
+- [x] P0-2 layout.tsx: 3フォントすべて `preload: false`(204件→0件・実測0)
+- [x] P0-3a BlogPostingJsonLd: Blog @id/url を canonicalUrl で生成(/legal/legal/column解消・実測0件)
+- [x] P0-3b BlogPostingJsonLd: image を実在画像URL(文字列)に(legalコラム実測=legal-og.png・200/image/png)
+- [x] P0-3c GovernmentService 削除(LegalServicePage + shogai-fukushi/visa/company/gaikokujin-shain/ikuseishuro-gaibu-kansa・実測0件)
 
-### 変更ファイル
-- `src/app/(realestate)/about/uramatsu/page.tsx` — 新規（COPY方式・ja先行。ProfilePage＋Person／FAQPage 3問／BreadcrumbList／内部リンク5本／CtaBand）
-- `src/app/sitemap.ts` — /about/uramatsu を locales:["ja"] で追加
-- `src/app/(realestate)/about/AboutPageContent.tsx` — 代表紹介セクション末尾に「代表プロフィールを見る」リンク追加（それ以外不変）
+## P1 構造整理
 
-### 検証結果（ローカル本番ビルド PORT=3122 実測）
-- `tsc --noEmit` exit 0／`npm run build` exit 0（prisma dev 使い捨てDB＋pgbouncer=true・本番DB非接続）
-- title＝「代表・浦松丈二プロフィール｜元新聞記者の宅建士・行政書士 | 四葉不動産」／H1・冒頭回答ブロック＝指定文言と完全一致（grep 1件）
-- JSON-LD：ProfilePage（@id=…/about/uramatsu#profilepage）＋Person（@id=PERSON_ID・hasCredential 2件・knowsLanguage 4値・sameAs 3本）／FAQPage 3問／BreadcrumbList 3階層＝すべてパース確認
-- hreflang＝ja＋x-default のみ（/ryokin と同形）／canonical=https://luck428.com/about/uramatsu
-- sitemap.xml に https://luck428.com/about/uramatsu（ja のみ・1件）出力確認
-- 禁止語（ワンストップ・一体で・一括対応・まとめて対応・カ国/ヵ国/か国/ヶ国）＝出力HTML実測0件
-- /about 回帰なし（200・AboutPage+ProfilePage JSON-LD 不変・新リンク表示確認）
+- [x] P1-1 WebSite name を「四葉グループ」単一ノードに(realestate layoutのみ出力・legal/laborから削除・ColumnCollectionのisPartOfも統一)
+- [x] P1-2 sitemap.ts: 固定ページのlastmod省略・コラムはdateModified/dateのみ(フォールバックnow廃止)
+- [x] P1-4 legal用OG画像(1200×630)生成 → BUSINESS_SEO.legal.ogImage設定・twitter card=summary_large_image(og:imageは正規ホスト絶対URLで出力)
 
-### ビルド検証の補足（lessons更新候補）
-- build には DATABASE_URL に加え **DIRECT_URL** も必要（schema.prisma が directUrl 参照）。db push は素URL、next build は pgbouncer=true 付きURLで実行
+## 判断メモ
 
----
-
-# コラム内部リンク欠落の修正（feat/column-internal-links）
-
-## 背景
-`/column` 一覧が `ColumnListPageContent`（`"use client"`）の `useEffect` で記事を
-クライアント取得しているため、SSR HTML に記事リンクが 0 本。
-実測（2026-07-14）: `curl https://luck428.com/column | grep 'href="/column/'` → 0 件。
-詳細ページは server fetch 済みで prev/next リンクが SSR されている（9件確認）。
-
-## 根本原因
-一覧ページだけが server-fetch パターンに従っていない（技術的制約ではなく実装漏れ）。
-データ層 `lib/columns.ts` は isomorphic Firebase SDK + React `cache()` で server 実行可能。
-
-## 計画（論理コミット4分割）
-
-### ① 一覧ページの SSR 修正
-- [ ] `column/page.tsx` を async 化し `getRequestLocale()` + `getColumns(locale)` で server fetch
-- [ ] `ColumnListPageContent` を props 受け取りに変更（useEffect/spinner 削除）
-- [ ] 英語（記事0本）は既存 empty-state を維持（他言語記事の混入はしない＝hreflang汚染回避）
-
-### ② 一覧ページの構造化データ
-- [ ] `ColumnCollectionJsonLd`（CollectionPage + 入れ子 ItemList）を新規作成し `column/page.tsx` で出力
-- [ ] BreadcrumbList は既存（据え置き）
-
-### ③ 詳細ページの関連記事
-- [ ] `pickRelatedColumns()` ヘルパ（同一ロケール・タグ一致→カテゴリ一致→新着、自身除外、最大3）
-- [ ] `RelatedColumnsSection` 新規プレゼンテーション（server/client 両用・next/link + addLocalePrefix）
-- [ ] `column/[slug]/page.tsx` で related を算出し prop 渡し／`ColumnDetailContent` に節を追加
-
-### ④ ハブページからの文脈リンク
-- [ ] `filterColumnsByTheme()` ヘルパ（相続/投資/global をキーワードで横断マッチ）
-- [ ] `/souzoku`・`/toushi`・`/global`・トップに RelatedColumnsSection を設置
-- [ ] 該当コラムが無いテーマは「不足コラム」として報告
+- robots.txt の `/_next/static/media/` ブロックは**維持**(2026-07-30浦松承認・GSC woff2問題対策。preload削減後に再評価)
+- ISR/SSG全面化は今回見送り(全ページがheaders()依存＝ロケール設計の大改修が必要)。CDNキャッシュ(s-maxage)で受け入れ基準を満たす
 
 ## 検証
-- [ ] `npm run build` 通過
-- [ ] local `npm run dev` → `curl /column | grep -o 'href="/column/[^"]*"' | sort -u | wc -l` = 公開記事数
-- [ ] 各ロケール一覧でも同様
-- [ ] `/column` の JSON-LD がパース可能・ItemList 要素数 = 記事数
-- [ ] 詳細ページに関連記事3本
-- [ ] 既存ページの JSON-LD/meta/hreflang 不変（差分確認）
 
-## レビュー（2026-07-14 実装完了）
+- [x] npm test(231件) / tsc --noEmit / npx next build 通過(prisma dev使い捨てDB＋pgbouncer=true＋seed-local-sample)
+- [x] next start + curl: cache-control / set-cookie / preload件数 / schema出力 / canonical・hreflang・lang属性・410 をすべて実測確認
 
-### 根本原因
-`column/page.tsx` が薄い server shell → 本体 `ColumnListPageContent`（`"use client"`）が
-`useEffect` で `getLatestColumns` をクライアント取得。SSR HTML には spinner のみ・記事リンク0。
-データ層は isomorphic Firebase SDK + `cache()` で server 実行可能＝実装漏れだった。
+## レビュー
 
-### 変更ファイル
-- `src/lib/columns.ts` — `pickRelatedColumns()` / `filterColumnsByTheme()` 追加
-- `src/components/column/RelatedColumnsSection.tsx` — 新規（server/client 両用の関連リンク節）
-- `src/components/seo/ColumnCollectionJsonLd.tsx` — 新規（CollectionPage + 入れ子 ItemList）
-- `src/app/(realestate)/column/page.tsx` — async 化・server fetch・JSON-LD 出力
-- `src/app/(realestate)/column/ColumnListPageContent.tsx` — props 化・useEffect 削除
-- `src/app/(realestate)/column/[slug]/page.tsx` — related 算出・prop 渡し
-- `src/app/(realestate)/column/[slug]/ColumnDetailContent.tsx` — 関連記事節を追加
-- `src/components/shared/RealestateServicePage.tsx` — `relatedColumns` prop（compact nav card）
-- `src/app/(realestate)/souzoku/SouzokuPageContent.tsx` — 相続テーマ関連コラム
-- `src/app/(realestate)/toushi/page.tsx` — 投資テーマ
-- `src/app/(realestate)/global/page.tsx` — 外国人向けテーマ
-- `src/app/(realestate)/HomePageContent.tsx` — 最新コラム3本
-
-### 検証結果（`npm run start` 実測）
-- `npm run build` exit 0 / `tsc --noEmit` exit 0
-- `/column` SSR 記事リンク: ja=2, en=2, zh=2, zh-tw=11（旧=0）。ロケール接頭辞も正しい
-- `/column` JSON-LD: CollectionPage + ItemList、`numberOfItems` = 表示リンク数（ja=2 / zh-tw=11）で一致
-- 詳細（zh-tw）: 関連記事セクションにちょうど3本
-- ハブ: toushi=1・global=2・home=2・souzoku=0
-- 既存の canonical・hreflang(5言語)・RealEstateAgent/WebSite/BreadcrumbList/Article/FAQPage/Service JSON-LD すべて不変
-
-### 不足コラム（後続の執筆計画用）
-- **相続（souzoku）テーマの ja コラムが0本**。既存 ja コラムは `お知らせ`・`海外オーナー向け` のみ。
-  `/souzoku`（相続ピラー）に張れる関連コラムが無い＝「文京区×相続」「相続登記の義務化」等の執筆が必要。
-- en/zh は多言語対応済みの2本のみ＝英語独自コラムは依然不足（レポートP1-2どおり）。
-
-
----
-
-# タスクC-3：/global/chinese 新設（中国語圏特化ハブ・ja先行公開）
-
-## チェックリスト
-- [x] リポジトリ構成確認（/global現行実装・overseas-owners-guideコラムslug・B-4 CannotHandle・B-3 faqJa）
-- [x] 第1段階：本文5セクション草稿の提示 → 浦松検収（2026-07-19承認・Q3はB-3既存文言「海外在住のまま〜」を採用）
-- [x] /global/chinese ページ新規作成（RealestateServicePage方式・手本=C-2 shitei-shinsei）
-- [x] faqJa.ts に新規2問追加（「中国語で相続不動産の相談ができますか？」「相続登記まで頼めますか？」）＝46問
-- [x] /global（ja）に内部リンク追加・sitemap.ts に locales:["ja"] で追加
-- [x] `tsc --noEmit` exit 0／`npm run build` exit 0（prisma dev 使い捨てDB＋pgbouncer=true・本番DB非接続）
-- [x] 差分提示 → 浦松承認（2026-07-19第2段階承認済み・コミット実施）
-
-## レビュー（2026-07-19 実装完了・浦松承認済み）
-
-### 変更ファイル
-- `src/app/(realestate)/global/chinese/page.tsx` — 新規（ja先行。回答ブロック確定文言／本文5セクション／FAQPage 4問／Service＋BreadcrumbList／CannotHandle／内部リンク6本）
-- `src/data/faqJa.ts` — 外国人・中国語対応分野に2問追加（44→46問）
-- `src/app/(realestate)/global/page.tsx` — ja internalLinks に /global/chinese を追加（それ以外不変）
-- `src/app/sitemap.ts` — /global/chinese を locales:["ja"] で追加
-
-### 検証結果（ローカル本番ビルド PORT=3123 実測）
-- title＝「中国語で相談できる不動産・相続｜繁体字・簡体字対応 | 四葉不動産」／H1・冒頭回答ブロック＝指定文言と完全一致（grep 1件）
-- JSON-LD：Service（@id=…/global/chinese#service）／FAQPage 4問／BreadcrumbList 3階層（ホーム＞外国人・多言語のお部屋探し＞中国語対応）＝すべてパース確認
-- hreflang＝ja＋x-default のみ／canonical=https://luck428.com/global/chinese
-- sitemap.xml に https://luck428.com/global/chinese（ja のみ）出力確認
-- 禁止語（ワンストップ・一体で・一括対応・まとめて対応・カ国/ヵ国/か国/ヶ国/ケ国）＝出力HTML実測0件
-- 準拠法（通則法36条）＝一般的枠組みのみ・「専門家にご相談ください」注記1件／CannotHandle（社労士未開業注記）1件
-- /global 回帰なし（200・新リンク1件のみ追加）／/faq に新規2問表示確認／vitest 30件 pass
-
----
-
-# タスクC-6-1：/global/chinese 中国語版（繁体字/zh-tw・簡体字/zh）
-
-## チェックリスト
-- [x] 多言語ルーティング実装の確認（proxy.ts のロケール接頭辞剥がし＋x-localeヘッダ／page内COPYマップ方式／DB翻訳はUI文言のみ）
-- [x] 第1段階：訳語提案＋繁体字版全文草稿の提示 → 浦松検収（2026-07-19承認）
-- [x] 「別契約で受任します」の訳を統一（zh-tw=「另行簽訂契約承辦」／zh=「另行签订合同承办」）
-- [x] page.tsx を Record<LangCode, Copy> 構造へ組替え・zh-tw/zh 追加（ja文言は一字一句不変）
-- [x] availableLocales と sitemap の locales を ["ja","zh-tw","zh"] に拡張（en版は未作成のため除外）
-- [x] FAQPage JSON-LD を各言語で出力・inLanguage 設定（Faq に任意prop追加）
-- [x] `tsc --noEmit` exit 0／`npm run build` exit 0（prisma dev 使い捨てDB＋pgbouncer=true・本番DB非接続）
-- [x] 差分提示 → 浦松承認（2026-07-19第2段階。CannotHandleは中国語版で非表示に方針変更）
-
-## レビュー（2026-07-19 実装完了・浦松承認済み）
-
-### 変更ファイル
-- `src/app/(realestate)/global/chinese/page.tsx` — ja/zh-tw/zh の3ロケール化（COPYマップ方式・手本=HomePageContent）。en は COPY 未定義＝ja へフォールバック
-- `src/app/sitemap.ts` — /global/chinese を locales:["ja","zh-tw","zh"] に拡張
-- `src/lib/seo.ts` — HREFLANG_ATTR を BCP47_BY_LOCALE として export（hreflang と JSON-LD inLanguage を単一情報源に）
-- `src/components/shared/Faq.tsx` — 任意 inLanguage / ariaLabel prop 追加（未指定時は出力不変）
-- `src/components/shared/RealestateServicePage.tsx` — internalLinks に任意 noLocalePrefix 追加（未指定時は従来どおり addLocalePrefix）
-
-### 翻訳方針（浦松確定）
-- 法令名は「中国語訳（日本語：〇〇法）」形式で原名併記（通則法・宅地建物取引業）
-- 事業体名「四葉不動産株式会社」「四葉行政書士事務所」は日本語表記を維持・初出時に役割の括弧説明
-- 繁体字=台湾語彙（不動產・租屋・契約）／簡体字=大陸語彙（不动产・租房・合同）。簡体字の「不动产」は
-  相続登記の法律用語と揃えるため房地产を不採用（ページ内統一）
-- 台湾・大陸への言及は中立表現・繁簡で内容差なし／駐在歴は国名を具体列挙（国数表記は使わない）
-- CannotHandle は中国語版で非表示（呼び出し側 locale==="ja" 判定。2026-07-19浦松判断）
-
-### 検証結果（ローカル本番ビルド PORT=3132 実測）
-- 3ロケール HTTP 200／canonical＝/global/chinese・/zh-tw/global/chinese・/zh/global/chinese
-- hreflang＝ja・zh-Hant・zh-Hans・x-default(ja) の4本を3ページで相互一致（en は含めない）
-- `<html lang>`＝ja/zh-tw/zh・og:locale＝ja_JP/zh_TW/zh_CN
-- FAQPage inLanguage＝ja/zh-Hant/zh-Hans（各4問）／Service・BreadcrumbList も各言語でパース確認
-- sitemap.xml に3ロケールURL出力（各々に3本のhreflang alternates）
-- 内部リンク＝/zh-tw(zh)配下4本＋日本語版固定2本（/ryokin・overseas-ownersコラム＝当該言語版なし）
-- 禁止語（ワンストップ・一体で・一括対応・one-stop・一站式・一條龍/一条龙）＝全ロケール0件
-- NAP・電話・宅建業免許番号・行政書士登録番号＝3ロケール完全一致
-- 社労士「2026年9月開業予定」注記＝中国語版でも維持（署名欄）
-- 日本語版の回帰なし（旧ファイルの日本語文字列リテラル欠落0件・内部リンク6本同一）
-
-### 申し送り（別タスク候補）
-- `src/app/(realestate)/layout.tsx` の locale 判定が Cookie のみ（他は getRequestLocale のヘッダ優先）。
-  /zh-tw/... へ直接着地したクローラーで layout 側 title.template・og:locale が ja に解決される。
-- 言語切替UIの EN は /en/global/chinese を指し ja 文言へフォールバック（hreflang・sitemap 非掲載のため
-  Googleには広告されない）。EN版が必要なら別タスク。
-
----
-
-## 不動産コラム3本の追加（/column・business=realestate）
-
-### 背景
-
-`/column` の既存7本は相続・空き家クラスタに4本が偏在し、コラムトップの meta description が謳う
-「部屋探しのコツ／敷金・礼金／契約書の読み方」と、H1リード文の「外国人の住まい探し／文京区の地域情報」に
-対応する記事が **0本** だった。支えるサービスページのうち `/global`・`/services`・`/toushi`・`/kaigo` は
-被リンクとなるコラムを持っていない。本タスクはこの空白クラスタを埋める。
-
-グループホーム・クラスタの役割分担（luck428-column-seo 第2条）は崩さない
-＝02は通所/訪問系に限定し、居住系は `/group-home` へ送出するのみ。
-
-### 計画
-
-- [x] 原稿3本を house style（結論先出し／`## よくある質問` 4問／`## この記事の出典（一次情報）`／執筆者節）で作成
-- [x] `scripts/seed-realestate-columns.ts` を seed-office-columns.ts と同型で作成（business=realestate）
-- [x] dry-run → `scripts/realestate-columns.preview.json`・verify 全通過
-- [x] `--emit-ts` → `src/lib/data/realestate-columns-seed.ts`
-- [x] `/admin/columns/seed-realestate` を seed-office と同型で作成
-- [x] `npx tsc --noEmit` exit 0／`npx eslint` exit 0
-- [ ] 本番投入（`/admin/columns/seed-realestate` をブラウザで実行）＝浦松の承認後
-
-### 変更ファイル
-
-- `scripts/realestate-columns/01-gaikokujin-nyukyo-oya-no-fuan.md`（新規・5,389字）
-- `scripts/realestate-columns/02-kaigo-jigyousho-bukken-youto-chiiki.md`（新規・5,662字）
-- `scripts/realestate-columns/03-chintaishaku-keiyakusho-doko-wo-yomu.md`（新規・5,024字）
-- `scripts/seed-realestate-columns.ts`（新規。dry-run既定／--write／--emit-ts）
-- `scripts/realestate-columns.preview.json`（生成物）
-- `src/lib/data/realestate-columns-seed.ts`（生成物・直接編集しない）
-- `src/app/admin/columns/seed-realestate/page.tsx`（新規）
-
-### 内部リンク設計（評価の集約先。seed の verify() で機械検査）
-
-| slug | ハブ必須リンク | 姉妹コラム |
-|---|---|---|
-| gaikokujin-nyukyo-oya-no-fuan | `/global`・`/services`（＋`/global/chinese`） | 03 |
-| kaigo-jigyousho-bukken-youto-chiiki | `/kaigo`・`/toushi`・`/group-home` | —— |
-| chintaishaku-keiyakusho-doko-wo-yomu | `/services`・`/faq`（＋`/global`） | 01 |
-
-### 検証結果
-
-- verify() 全チェック通過（結論先出し・ハブリンク・相互リンクslug実在・FAQ各4問・出典節・判断留保）
-- 禁止語（ワンストップ／一括対応／一体で／one-stop）＝0件
-- 独占業務表現＝「作成・提出＝独占業務」の誤表現なし（lessons 2026-07-19 C-2 の再発防止チェックを
-  seed の verify() に機械化して組み込み済み）
-- `npx tsc --noEmit` exit 0／`npx eslint`（新規3ファイル）exit 0
-- sitemap は `getAllColumnsAllLocales()` 由来のため、投入後に自動で `/column/<slug>` が載る（コード変更不要）
-
-### 裏取り済みの主要事実
-
-- 在留外国人 4,125,395人（令和7年末・前年末比+356,418人／9.5%増）＝出入国在留管理庁公表
-- 用途変更の確認申請＝200㎡超（令和元年6月25日施行の改正建築基準法。従前100㎡超）
-- (6)項ロの社会福祉施設等のスプリンクラー＝面積によらず原則設置義務（平成27年4月1日施行。既存は平成30年3月31日まで経過措置）
-- 通常損耗補修特約の有効要件＝最判平成17年12月16日／自力救済の禁止＝最判昭和40年12月7日／
-  いわゆる追い出し条項の無効＝最判令和4年12月12日（消費者契約法10条）
-- 敷金＝民法622条の2（令和2年4月1日施行）／定期借家の説明書面＝借地借家法38条（電磁的方法は令和4年5月18日施行の改正）
-
-### 申し送り
-
-- **未検証1件**：訪問介護事業所を「老人福祉センターその他これに類するもの」として扱う国交省技術的助言の
-  文書番号（平成27年11月10日付・国住指第107号）は二次情報を含む確認による。公開前に発出元の原典で番号を確認する。
-  記事02の出典節に **未検証** と明記済み。
-- 本3本は `locales: ["ja"]`＝日本語のみ公開。多言語展開（en / zh-tw / zh）は別タスク。
-- 記事01は外国人賃貸クラスタの1本目。将来「借り手向け（外国人が部屋を借りるとき）」を追加する場合は、
-  本記事＝貸し手向けとの検索意図の重複に注意し、luck428-column-seo に役割分担表を追記する。
+- 全ロケールの公開GETページ: `cache-control: public, s-maxage=3600, stale-while-revalidate=86400`・set-cookieなし。
+  set-cookieが出るのは「既存Cookieの値とURLロケールがズレた同期時」のみ(このときはno-store維持=正しい)
+- /admin・/api・/thanks等の動的ルートはno-storeのまま
+- sitemap: lastmodはコラム(dateModified/date保持分)のみ。固定ページから消え、連続取得で不変
+- 残タスク(監査書のうち今回未実施): §4コンテンツ・内部リンク改善(inheritance/souzoku強化・CTA整理)、§6ローカルSEO(GBP・外部NAP統一=サイト外作業)、§7翻訳品質、robots.txtのmedia解除判断(preload削減後のGSC推移を見て再評価)
+- デプロイ後確認: x-vercel-cache=HIT/STALE、x-vercel-id がhnd1実行になること、GSC URL検査、Rich Results Test

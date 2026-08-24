@@ -85,6 +85,18 @@ export function LanguageProvider({
     document.documentElement.lang = locale;
   }, [locale]);
 
+  // Cookie を現在ロケールに同期（SEO監査2026-08-24 P0-1）。
+  // 旧実装は middleware が全レスポンスで set-cookie しており、公開ページが
+  // CDNキャッシュ不可（no-store・毎回MISS）になっていた。middleware は
+  // 「既存Cookieの値がURLとズレたときだけ」setする方式に変更したため、
+  // Cookie未所持の非ja初回訪問（実ブラウザ）はここで補完する。
+  // クローラーはCookieを送らない＝サーバー側 set-cookie が発生せずキャッシュ可能のまま。
+  useEffect(() => {
+    if (getLocaleFromCookie() !== locale) {
+      document.cookie = `${LOCALE_COOKIE}=${locale}; path=/; max-age=${60 * 60 * 24 * 365}; samesite=lax`;
+    }
+  }, [locale]);
+
   /** ロケール変更: URL遷移で切替 */
   const setLocale = (newLocale: LangCode) => {
     if (newLocale === locale) return;

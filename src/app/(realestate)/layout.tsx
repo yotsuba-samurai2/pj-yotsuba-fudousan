@@ -62,7 +62,8 @@ export default function RealEstateLayout({
   return (
     <TenantLayoutShell businessKey="realestate">
       <OrganizationJsonLd businessKey="realestate" />
-      <WebSiteJsonLd businessKey="realestate" />
+      {/* WebSite（サイト名）＝ホスト全体で「四葉グループ」1ノード。出力はこのlayoutだけ（P1-1） */}
+      <WebSiteJsonLd />
       {children}
     </TenantLayoutShell>
   );

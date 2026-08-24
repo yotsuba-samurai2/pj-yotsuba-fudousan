@@ -104,6 +104,47 @@ function isSharedPath(pathname: string): boolean {
   );
 }
 
+// ── Cookie / Cache ──
+
+/**
+ * 公開ページのCDNキャッシュ方針（SEO監査2026-08-24 P0-1）。
+ * 本文はURLだけで決まる（locale判定はURL→x-localeリクエストヘッダー経由・Cookie非依存）ため、
+ * URL単位のキャッシュは安全。認証・個人化ルート（/api・/admin）は shouldSkip で本関数まで来ない。
+ */
+const PUBLIC_CACHE_CONTROL = "public, s-maxage=3600, stale-while-revalidate=86400";
+
+/**
+ * ロケールCookieの同期とキャッシュヘッダー付与（SEO監査2026-08-24 P0-1）。
+ *
+ * 旧実装は全レスポンスで set-cookie していたが、set-cookie 付きレスポンスは
+ * Vercel CDN にキャッシュされず、全公開ページが no-store / 毎回MISSになっていた。
+ * - Cookieは「既存Cookieの値がURLロケールとズレたときだけ」set（素のリンクで /zh-tw→/ に
+ *   戻った際の同期）。Cookie未所持の初回訪問には付与しない＝クローラー（Cookieを送らない）と
+ *   初回アクセスに set-cookie が出ない。実ブラウザの初回Cookie付与は
+ *   LanguageContext のクライアント側 effect が担う。
+ * - set-cookie が不要なGET/HEADにのみ s-maxage を付与（Cookie設定時はキャッシュさせない）
+ */
+function withLocaleCookieAndCache(
+  request: NextRequest,
+  response: NextResponse,
+  locale: string,
+): NextResponse {
+  const current = request.cookies.get(LOCALE_COOKIE)?.value;
+  const needsCookie = current !== undefined && current !== locale;
+
+  if (needsCookie) {
+    response.cookies.set(LOCALE_COOKIE, locale, {
+      path: "/",
+      maxAge: 60 * 60 * 24 * 365,
+      sameSite: "lax",
+    });
+  } else if (request.method === "GET" || request.method === "HEAD") {
+    response.headers.set("Cache-Control", PUBLIC_CACHE_CONTROL);
+  }
+
+  return response;
+}
+
 // ── Proxy ──
 
 export function proxy(request: NextRequest) {
@@ -153,15 +194,9 @@ export function proxy(request: NextRequest) {
       ? NextResponse.rewrite(url, requestInit)
       : NextResponse.next(requestInit);
 
-    // ロケール情報をCookieとヘッダーで伝搬
+    // ロケール情報をヘッダーで伝搬（Cookieは値が変わるときだけ＝withLocaleCookieAndCache）
     response.headers.set("x-locale", locale);
-    response.cookies.set(LOCALE_COOKIE, locale, {
-      path: "/",
-      maxAge: 60 * 60 * 24 * 365,
-      sameSite: "lax",
-    });
-
-    return response;
+    return withLocaleCookieAndCache(request, response, locale);
   }
 
   // テナントリライトのみ必要な場合
@@ -172,25 +207,21 @@ export function proxy(request: NextRequest) {
   ) {
     const url = request.nextUrl.clone();
     url.pathname = `${tenantPrefix}${stripped}`;
-    const response = NextResponse.rewrite(url, requestInit);
-    response.cookies.set(LOCALE_COOKIE, locale, {
-      path: "/",
-      maxAge: 60 * 60 * 24 * 365,
-      sameSite: "lax",
-    });
-    return response;
+    return withLocaleCookieAndCache(
+      request,
+      NextResponse.rewrite(url, requestInit),
+      locale,
+    );
   }
 
-  // ja・リライトなしでもCookieを常に同期する（URLが言語の正）。
+  // ja・リライトなし。Cookieの同期（URLが言語の正）は値がズレたときだけ行う：
   // 素のリンクで /zh-tw/... → /... に戻った際、古いCookieが残ると
-  // クライアント側の言語状態がURLとズレるため。
-  const response = NextResponse.next(requestInit);
-  response.cookies.set(LOCALE_COOKIE, locale, {
-    path: "/",
-    maxAge: 60 * 60 * 24 * 365,
-    sameSite: "lax",
-  });
-  return response;
+  // クライアント側の言語状態がURLとズレるため（一致していれば set-cookie 不要）。
+  return withLocaleCookieAndCache(
+    request,
+    NextResponse.next(requestInit),
+    locale,
+  );
 }
 
 export const config = {

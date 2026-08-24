@@ -11,11 +11,15 @@ import { fetchAllTranslations } from "@/lib/getTranslationData";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { stripSrEntities } from "@/lib/shared/sr-strip";
 
+// preload: false（SEO監査2026-08-24 P0-2）：日本語フォントはunicode-range分割が多く、
+// preload有効だと3書体×8ウェイトで204件の<link rel=preload>がHTMLヘッダーを肥大化させていた。
+// display:swap のCSS @font-face 経由で必要なスライスだけがオンデマンド取得される。
 const zenKaku = Zen_Kaku_Gothic_New({
   variable: "--font-zen-kaku-gothic-new",
   weight: ["400", "500", "700"],
   subsets: ["latin"],
   display: "swap",
+  preload: false,
 });
 
 // DESIGN.md §3：見出し＝Noto Serif JP（editorial）／本文・UI＝Noto Sans JP
@@ -24,6 +28,7 @@ const notoSerifJP = Noto_Serif_JP({
   weight: ["600", "700"],
   subsets: ["latin"],
   display: "swap",
+  preload: false,
 });
 
 const notoSansJP = Noto_Sans_JP({
@@ -31,6 +36,7 @@ const notoSansJP = Noto_Sans_JP({
   weight: ["400", "500", "700"],
   subsets: ["latin"],
   display: "swap",
+  preload: false,
 });
 
 export const metadata: Metadata = {

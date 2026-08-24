@@ -119,7 +119,6 @@ export default async function Page() {
       heroAlt="海外から社員を迎える企業のイメージ"
       h1="外国人社員を海外から迎えるとき —— 企業が押さえる手続きと期限"
       lead={<p>{JA_LEAD}</p>}
-      governmentService
       internalLinks={[
         { href: "/legal/services/visa", label: "在留資格・ビザ申請（本人向けの詳細）" },
         { href: "/shataku", label: "借り上げ社宅の導入" },

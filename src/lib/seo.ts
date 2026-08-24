@@ -315,6 +315,9 @@ export type BusinessSEOConfig = {
   description: string;
   schemaType: string;
   ogImage: string;
+  /** ogImage の実寸（og:image:width/height・twitter用）。実画像と必ず一致させる */
+  ogImageWidth?: number;
+  ogImageHeight?: number;
   /** JSON-LDのlogo/image用・正方形ロゴ（ルート相対。SNS共有用ogImageとは独立＝ogImage値は変更しない） */
   squareLogo?: string;
   /** GBP直リンク（JSON-LD hasMap・地図リンク用）。正本=office-public.tsのGBP_URL。labor＝GBP未整備のため未設定 */
@@ -337,6 +340,8 @@ export const BUSINESS_SEO: Record<string, BusinessSEOConfig> = {
       "元新聞記者が中国や台湾、タイでの駐在経験を活かして立ち上げた、東京都文京区にある不動産屋。賃貸・売買・管理から相続不動産まで、多言語（日本語・英語・中国語繁体字・中国語簡体字）対応と専門家ネットワークで住まい探しから契約まで対応。相続書類・許認可は併設の四葉行政書士事務所が別契約で受任します。ご相談は無料、お気軽にどうぞ。",
     schemaType: "RealEstateAgent",
     ogImage: "/og.png",
+    ogImageWidth: 1322,
+    ogImageHeight: 834,
     squareLogo: "/yotsuba/realestate-square.png",
     gbpUrl: GBP_URL.realestate,
     columnBasePath: "/column",
@@ -363,7 +368,12 @@ export const BUSINESS_SEO: Record<string, BusinessSEOConfig> = {
     description:
       "東京都文京区小日向・茗荷谷駅徒歩5分の四葉行政書士事務所。障害福祉サービスの指定申請、在留資格・ビザ、相続、会社設立、補助金申請に対応。元毎日新聞中国総局長の行政書士が、中国語・英語も交え、書類作成から申請までお手伝いします。",
     schemaType: "LegalService",
-    ogImage: "",
+    // 行政書士サイト既定のOG画像（SEO監査2026-08-24 P1-4で新設・1200×630）。
+    // 旧実装は "" ＝ legal 全ページで og:image / twitter:image が出ず、
+    // BlogPosting の image が /legal そのもの（非画像URL）になっていた。
+    ogImage: "/yotsuba/legal-og.png",
+    ogImageWidth: 1200,
+    ogImageHeight: 630,
     squareLogo: "/yotsuba/legal-square.png",
     gbpUrl: GBP_URL.legal,
     columnBasePath: "/legal/column",
@@ -538,9 +548,17 @@ export function buildPageMetadata({
 
   const biz = BUSINESS_SEO[businessKey];
   const url = canonicalUrl(businessKey, path, locale);
-  const ogImage = image ?? biz?.ogImage ?? "";
+  // ルート相対は正規ホストの絶対URLに解決する（legal配下は layout の metadataBase が
+  // luck428gyosei.com のため、相対のままだと og:image が非正規ホストで出力される）
+  const rawImage = image ?? biz?.ogImage ?? "";
+  const ogImage = rawImage.startsWith("/") ? `${SITE_URL}${rawImage}` : rawImage;
   const hasImage = Boolean(ogImage);
-  const isRealestate = businessKey === "realestate";
+  // 寸法は「事業既定のogImageを使うとき」だけ主張する（ページ個別画像は実寸不明のため出さない）
+  const isDefaultImage = hasImage && rawImage === biz?.ogImage;
+  const imageDims =
+    isDefaultImage && biz?.ogImageWidth && biz?.ogImageHeight
+      ? { width: biz.ogImageWidth, height: biz.ogImageHeight }
+      : {};
 
   const ogBase = {
     title,
@@ -554,8 +572,7 @@ export function buildPageMetadata({
           images: [
             {
               url: ogImage,
-              width: isRealestate ? 1322 : 512,
-              height: isRealestate ? 834 : 512,
+              ...imageDims,
               alt: title,
             },
           ],
@@ -582,7 +599,8 @@ export function buildPageMetadata({
     },
     openGraph: { ...ogBase, ...articleFields },
     twitter: {
-      card: hasImage && isRealestate ? "summary_large_image" : "summary",
+      // 1200×630級の横長画像を持つため大型カード（SEO監査2026-08-24 P1-4）
+      card: hasImage ? "summary_large_image" : "summary",
       title,
       description,
       ...(hasImage ? { images: [ogImage] } : {}),

@@ -198,7 +198,6 @@ export default async function Page() {
           <Placeholder reason="浦松＝対応する許認可種別の確定／石井弁護士＝業際表現" />
         </p>
       }
-      governmentService
       internalLinks={c.internalLinks}
       ctaVariant="property"
     >
