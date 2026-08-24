@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { TenantLayoutShell } from "@/components/layout/TenantLayout";
 import { OrganizationJsonLd } from "@/components/seo/OrganizationJsonLd";
-import { WebSiteJsonLd } from "@/components/seo/WebSiteJsonLd";
 import { BUSINESS_SEO } from "@/lib/seo";
 
 // 社労士は開業（2026年9月・浦松指示 2026-07-07）まで全非表示。
@@ -43,7 +42,8 @@ export default function LaborLayout({
   return (
     <TenantLayoutShell businessKey="labor">
       <OrganizationJsonLd businessKey="labor" />
-      <WebSiteJsonLd businessKey="labor" />
+      {/* WebSiteノードは出力しない（SEO監査2026-08-24 P1-1）：サイト名はホスト単位＝「四葉グループ」
+          （(realestate)/layout.tsx で出力）。事業体は ProfessionalService（Organization）で表現 */}
       {children}
     </TenantLayoutShell>
   );

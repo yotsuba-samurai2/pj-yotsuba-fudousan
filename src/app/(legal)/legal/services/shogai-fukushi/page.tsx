@@ -772,7 +772,8 @@ function jsonLd() {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": ["Service", "GovernmentService"],
+        // GovernmentService は政府提供サービスの型のため誤用（SEO監査2026-08-24 P0-3）＝Serviceのみ
+        "@type": "Service",
         "@id": PAGE_URL + "#service",
         name: "障害福祉サービス事業者の指定申請 支援",
         serviceType: "障害福祉サービス指定申請の代行・支援（法人設立〜加算届〜運営支援）",

@@ -1,5 +1,5 @@
 import { JsonLd } from "./JsonLd";
-import { canonicalUrl, BUSINESS_SEO, PERSON_ID, SHARED_ORG_INFO } from "@/lib/seo";
+import { canonicalUrl, BUSINESS_SEO, PERSON_ID, SHARED_ORG_INFO, SITE_URL } from "@/lib/seo";
 import type { Column } from "@/lib/columns";
 import type { LangCode } from "@/config/languages";
 
@@ -20,9 +20,13 @@ export function BlogPostingJsonLd({
   if (!biz) return null;
 
   const url = canonicalUrl(businessKey, `${biz.columnBasePath}/${column.slug}`);
-  const imageUrl = column.ogImage
-    ? `${biz.url}${column.ogImage}`
-    : `${biz.url}${biz.ogImage}`;
+  // 静的アセットはルート配信のため SITE_URL に結合する（SEO監査2026-08-24 P0-3）。
+  // 旧実装の biz.url 結合は legal で https://luck428.com/legal + パス という実在しないURLを生んでいた
+  // （さらに legal は ogImage:"" だったため image が /legal そのものになっていた）。
+  const imagePath = column.ogImage || biz.ogImage;
+  const imageUrl = imagePath ? `${SITE_URL}${imagePath}` : undefined;
+  // コラム一覧のURL。旧実装 `${biz.url}${biz.columnBasePath}` は legal で /legal/legal/column に二重化していた
+  const blogUrl = canonicalUrl(businessKey, biz.columnBasePath);
 
   // 優先順位: 明示 props > column.author > フォールバック
   const resolvedAuthorName =
@@ -40,12 +44,8 @@ export function BlogPostingJsonLd({
         description: column.excerpt,
         datePublished: column.date,
         dateModified: column.modifiedDate ?? column.date,
-        image: {
-          "@type": "ImageObject",
-          url: imageUrl,
-          width: 512,
-          height: 512,
-        },
+        // 実画像の寸法を保持していないため URL 文字列で出力（誤った width/height を主張しない）
+        ...(imageUrl ? { image: imageUrl } : {}),
         // 浦松本人の記事は共通Personノード（/aboutのProfilePageで定義）を@id参照。
         // ローカライズ済み記事はスペース無し表記（例: zh-twの「浦松丈二」）のためスペースを無視して照合。
         // 別名義の寄稿はインラインPersonのまま（@idを誤って共有しない）
@@ -66,9 +66,9 @@ export function BlogPostingJsonLd({
         publisher: { "@id": `${biz.url}/#organization` },
         isPartOf: {
           "@type": "Blog",
-          "@id": `${biz.url}${biz.columnBasePath}#blog`,
+          "@id": `${blogUrl}#blog`,
           name: `${biz.name} コラム`,
-          url: `${biz.url}${biz.columnBasePath}`,
+          url: blogUrl,
         },
         mainEntityOfPage: { "@type": "WebPage", "@id": url },
         articleSection: column.category,

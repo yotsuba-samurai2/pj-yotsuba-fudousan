@@ -32,8 +32,6 @@ export type LegalServicePageProps = {
   heroSrc?: string;
   h1: string;
   lead: ReactNode; // 結論（回答ファースト）
-  /** 原稿で GovernmentService 指定のあるページ（shogai-fukushi/visa/company）で true */
-  governmentService?: boolean;
   internalLinks: { href: string; label: string }[];
   /**
    * CtaBandバリアント（2026-07-24 CTA刷新v2）。"property"=物件条件インテーク（4ロケール）。
@@ -64,7 +62,9 @@ export async function LegalServicePage(p: LegalServicePageProps) {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": p.governmentService ? ["Service", "GovernmentService"] : "Service",
+        // GovernmentService は「政府が提供する行政サービス」の型であり、行政書士事務所の
+        // 申請支援業務には誤用（SEO監査2026-08-24 P0-3）＝全ページ Service に統一
+        "@type": "Service",
         "@id": url + "#service",
         name: p.serviceName,
         provider: { "@id": SITE + "/legal/#organization" },
