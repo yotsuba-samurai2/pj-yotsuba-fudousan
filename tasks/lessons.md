@@ -94,3 +94,12 @@
 - **Vercelでは middleware から動的ページをCDNキャッシュ可能にできない**: `next start`（ローカル）ではproxy.tsで set した `Cache-Control: s-maxage=…` が最終レスポンスに乗るが、Vercel本番ではEdge Middlewareが**キャッシュ層より前段**で実行され、キャッシュ判定は**関数レスポンスのヘッダー**（動的ページ＝常にno-store）で行われる。`Vercel-CDN-Cache-Control` をmiddlewareで付けても同様に無効（プレビューデプロイ実測・2回目もMISS）。一方 `x-locale` 等の一般ヘッダーは本番でもクライアントまで届く＝「middlewareヘッダーが届く」ことと「CDNがそれを見る」ことは別。`x-vercel-cache: HIT` を実現するにはロケールをURLセグメント化して headers() 依存を外すリファクタが必要（未着手・別プロジェクト）。
 - **TTFB約6秒の主因はキャッシュではなくリージョン跨ぎだった**: 関数がiad1（米国東部）・Supabaseがap-northeast-1（東京）で毎クエリ太平洋往復。`vercel.json` の `"regions": ["hnd1"]` 1行で **TTFB 6.6秒→0.19〜0.46秒**（本番実測）。遅いSSRサイトはキャッシュ談義の前に `x-vercel-id`（`<エッジ>::<関数リージョン>::…`）とDBリージョンの一致を先に見る。
 - **set-cookie はCDNキャッシュの敵**: 全レスポンスへのlocale Cookie付与が no-store の一因だった。「既存Cookieの値がURLとズレた同期時のみサーバーで set、初回付与はクライアントeffect」に分離すると、クローラー（Cookie非送信）には set-cookie が一切出なくなる。
+
+## 2026-08-24 ISR化リファクタ（PR #297）ロケールURLセグメント化の実測学
+
+- **next/root-params の「root params」はルートレイアウトのセグメント以上の動的パラメータだけ**: `app/layout.tsx` を残したまま `app/[locale]/` を作っても root param にならず、Turbopack が「Export locale doesn't exist（module has no exports）」で落ちる。ルートレイアウト自体を `app/[locale]/layout.tsx` に移し、`[locale]` 外の `/admin`・`/facilitator` には独自のルートレイアウト（`<html>` 持ち）を与えるマルチルートレイアウト構成が必須。`experimental.rootParams: true` も必要（Next 16.2）。
+- **not-found.tsx の headers() が「全laborページ動的化」の犯人だった**: SR_LAUNCHED ゲートの `notFound()` がビルド時に404をレンダーするため、404側のリクエストAPIがゲート対象ページ全部を動的に降格させる。しかも**通常ビルドはエラーも警告も出さず黙って ƒ に降格する**。`[locale]/layout.tsx` に `export const dynamic = "error"` を置くと「Route X couldn't be rendered statically because it used headers()」とルート名・API名つきでビルドが落ちる＝最強の診断法なので、恒久ガードとしても残した。
+- **prerender-manifest.json が静的化の正**: ビルド表の ●/ƒ 表示や「Generating static pages (356/356)」だけでは判断できない（356全部がadmin+特殊ページだけのこともある）。`.next/prerender-manifest.json` の routes 件数と `initialRevalidateSeconds` を見る。
+- **prisma dev 使い捨てDBは最大10接続＝静的生成の並列に耐えない**: 9ワーカー×プール接続で P1001/P1017 が多発する。`connection_limit=1&pool_timeout=0&connect_timeout=0`（prisma dev 推奨値+pgbouncer=true）にし、next.config の `experimental.cpus` を `NEXT_BUILD_WORKERS` 環境変数で絞るノブを追加して 2 ワーカーでビルドすると安定。Vercel 本番ビルドは Supabase pooler なので絞り不要。
+- **VercelのISRページのヘッダーは `cache-control: public, max-age=0, must-revalidate` + `x-vercel-cache: PRERENDER→HIT`**: 監査指示書の受け入れ基準「s-maxage が見える」はローカル next start の挙動で、Vercel は s-maxage をCDN側で消費してクライアントには出さない。合否は x-vercel-cache と Age/TTFB で判定する。本番実測 TTFB 0.07〜0.08秒（キャッシュHIT時）。
+- **`.next/dev/types` はディレクトリ移動後に腐って tsc を落とす**: ルート大移動の後は `rm -rf .next/dev` してから `tsc --noEmit`。vitest はレイアウトに依存しないので素通りする＝型エラーの検知はtscだけが頼り。
