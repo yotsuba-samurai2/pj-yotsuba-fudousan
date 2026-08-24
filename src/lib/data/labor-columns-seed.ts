@@ -11215,5 +11215,365 @@ export const LABOR_COLUMNS_SEED: LaborSeedColumn[] = [
         ]
       }
     }
+  },
+  {
+    "business": "labor",
+    "slug": "ikuji-jitan-shugyo-kyufu-2025-yoken",
+    "title": "育児時短就業給付は、いつ・いくら・誰がもらえるのか",
+    "date": "2026-09-01",
+    "category": "労働保険",
+    "excerpt": "育児時短就業給付は、2歳未満の子を養育するために時短勤務する雇用保険の被保険者に、時短中の各月の賃金の10%を上限に支給する給付です（雇用保険法第61条の12、2025年4月1日施行）。受け取るのは会社ではなく本人ですが、申請は原則として事業主が2か月ごとにハローワークへ出します。要件・金額の計算・申請の順序と、時短で下がる社会保険料の扱いを整理します。",
+    "content": "**結論（先に要点）**：育児時短就業給付は、2歳未満の子を養育するために所定労働時間を短縮して働く雇用保険の被保険者に、時短中に支払われた各月の賃金の10%を上限に支給する給付です（雇用保険法第61条の12、2025年4月1日施行）。受け取るのは会社ではなく本人ですが、申請は原則として事業主が2か月ごとにハローワークへ出します。もらえるのは、①2歳未満の子を養育するための時短勤務であること、②育児休業給付の対象となった育児休業に続けて時短を始めたか、時短開始日前2年間に被保険者期間が12か月以上あること——の両方を満たす場合です。10%は時短中に実際に支払われた賃金にかかり、賃金と給付の合計が時短前の賃金水準（支給限度額）を超えないよう、賃金が高いほど給付は逓減します。この記事では、要件・金額の計算・申請の順序と、時短で下がる社会保険料の扱いを順に整理します。\n\nこの記事は、2歳未満の子を育てる社員を抱える、または今後抱える可能性がある中小企業の労務担当者・経営者を想定しています。時短給付は雇用保険の給付なので、会社が代わりに受け取るものではありませんが、申請実務は会社を経由します。「誰が・いつ・何にかかるのか」を取り違えないことが実務のポイントです。\n\n## 育児時短就業給付は何を条件にもらえるのか？\n\n育児時短就業給付は、2025年4月1日に創設された雇用保険の給付です（雇用保険法第61条の12）。対象は、2歳に満たない子を養育するために「育児時短就業」（所定労働時間を短縮した働き方）をする被保険者本人です。次の2つの要件を両方満たす人が対象になります。\n\n| 要件 | 内容 |\n|---|---|\n| ① 時短就業の目的 | 2歳未満の子を養育するために、所定労働時間を短縮して働いていること |\n| ② 被保険者期間 | 育児休業給付の対象となった育児休業に引き続いて時短就業を始めたこと。または、時短就業を始めた日の前2年間に、被保険者期間が通算12か月以上あること |\n\n「育児休業から復帰してそのまま時短に入る」ケースは①のルートで対象になり、「休業を取らずに時短だけ始める」ケースでも、過去2年間に被保険者期間が12か月以上あれば対象になります。子が2歳に達すると対象から外れます。\n\nなお、受給者は本人であって会社ではありません。会社が受け取るものではない点は、雇用関係助成金（会社に支給される助成金）とはっきり違います。育児・介護休業法そのものの改正内容は[育児・介護休業法2025年改正で何が変わった？会社が整える就業規則・個別周知・意向確認](/labor/column/ikuji-kaigo-kyugyo-ho-2025-kaisei)で整理しています。\n\n## 給付率10%はどの賃金にかかるのか？\n\n給付率は、支給対象月に実際に支払われた賃金の額の10%です。時短で賃金が下がった月に、その月の賃金に対して1割を上乗せするイメージです。ボーナスのような賞与ではなく、月々の賃金にかかります。\n\nただし、無条件に賃金の10%がもらえるわけではありません。支払われた賃金の額と給付額の合計が「支給限度額」を超える場合、その超える部分は支給されません。これは、時短で賃金が下がった人を支えるための給付なので、賃金が時短前の水準に近いほど給付が小さくなる（逓減する）仕組みになっているためです。\n\n| 賃金の状況 | 給付の考え方 |\n|---|---|\n| 時短で賃金がしっかり下がった | おおむね賃金の10%が支給される |\n| 賃金が時短前に近い（下げ幅が小さい） | 賃金＋給付が支給限度額を超えないよう逓減する |\n| 賃金が支給限度額を上回る | 給付は支給されない |\n\n支給限度額や賃金日額の上限・下限は毎年8月に改定されます。具体的な金額は、申請の直前に厚生労働省・ハローワークの最新資料で確認してください。時短で賃金が下がると標準報酬月額の扱いも動くため、そちらは後の見出しで整理します。標準報酬月額の変わり方そのものは[算定基礎届と月額変更届は何が違う？標準報酬月額が変わる仕組みを整理](/labor/column/santei-kiso-getsu-gaku-henko-chigai)をご覧ください。\n\n## 申請は誰がいつ出すのか？\n\n申請の主体は本人ですが、実務上は事業主が本人に代わってハローワークへ手続きします。時系列で整理すると次のようになります。\n\n1. 時短就業を始める前後に、受給資格の確認（受給資格確認票・初回申請）をハローワークへ提出する\n2. その後は、原則2か月ごとに、対象月の賃金の額を記した支給申請書を提出する\n3. 支給が決定すると、本人の指定口座に給付が振り込まれる\n\n会社は、対象月に支払った賃金の額を正確に把握しておく必要があります。賃金の額が給付額を左右するため、給与計算の締めと支給申請のタイミングを合わせておくと事務が楽になります。会社の給与計算をどう回すかは[給与計算を社会保険労務士に頼むと、いくらかかるのか](/labor/column/kyuyo-keisan-soba-sharoushi)でも触れています。\n\n出生直後の育児休業に上乗せされる出生後休業支援給付とは、対象となる時期も計算も異なります。両親の育休と組み合わせて手取りを支える給付については[出生後休業支援給付の「手取り10割」相当は、どう計算するのか](/labor/column/shussei-go-kyugyo-shien-kyufu-2025)で扱います。\n\n## 時短で社会保険料の扱いはどう変わるのか？\n\n時短で賃金が下がると、社会保険料（健康保険・厚生年金保険）の扱いも動きます。ここは雇用保険の時短給付とは別の制度で、社会保険の側の手続きです。会社が押さえておくべき点は次の2つです。\n\n| 制度 | 何のためか |\n|---|---|\n| 育児休業等終了時改定 | 3歳未満の子を養育する被保険者が、育児休業の終了後に時短などで報酬が下がったとき、復帰後3か月の報酬の平均で標準報酬月額を改定できる。通常の随時改定と違い、2等級以上の差がなくても改定できる |\n| 養育期間の従前標準報酬月額のみなし措置 | 3歳未満の子を養育する期間は、時短で標準報酬月額が下がっても、年金額の計算上は従前の高い標準報酬月額とみなす。将来の年金額が時短で下がらないようにするための特例 |\n\nどちらも本人からの申出を受けて、事業主が年金事務所（日本年金機構）へ手続きします。前者は当面の保険料を実態に合わせ、後者は将来の年金を守るためのものです（2026年8月24日時点、日本年金機構の案内による）。保険料の負担が下がる一方で、年金は下げない——この2つを両方使えるかを確認しておくと、社員への説明がしやすくなります。\n\n雇用保険の時短給付と、社会保険の標準報酬月額の手続きは別々に走ります。時短を始めるときは、雇用保険（時短給付）・健康保険と厚生年金（標準報酬月額）・労働時間の管理という3つを同時に確認しておくのが安全です。\n\n## 会社は、結局何をすればいいのか？\n\n時短を申し出た社員が出たら、次の順序で進めると漏れが出ません。\n\n1. 2歳未満の子の養育のための時短就業か、被保険者期間の要件を満たすかを確認する\n2. 時短後の所定労働時間・賃金を確定し、労働条件を明示する\n3. 育児時短就業給付の受給資格確認をハローワークへ提出する\n4. 3歳未満の子なら、標準報酬月額の改定・従前標準報酬月額のみなし措置を年金事務所へ申し出る\n5. 2か月ごとに賃金の額を確定し、支給申請を出す\n\n四葉社会保険労務士事務所では、育児時短就業給付の要件確認・申請、時短に伴う労働条件の整備、社会保険の手続きについてご相談いただけます。ご相談は無料で、費用は[報酬額表](/labor/ryokin)にまとめています。手続の流れは[ご利用の流れ](/labor/nagare)をご覧ください。時短をめぐって個別の労働紛争が生じた場合の代理・交渉は弁護士、税務判断は税理士の領域です。別の専門家が必要な場合は、それぞれ別契約となり、紹介料はありません。\n\n## よくある質問\n\n**Q. 育児時短就業給付は、会社がもらえるのですか？**\nA. いいえ。受給者は時短で働く本人です。会社に支給される雇用関係助成金とは別のものです。ただし申請は原則として事業主が本人に代わってハローワークへ行うため、会社の事務は発生します。\n\n**Q. 賃金の10%が必ずもらえるのですか？**\nA. いつも満額とは限りません。支給対象月に支払われた賃金の額の10%が上限で、賃金の額と給付額の合計が支給限度額を超える場合は、その超える部分は支給されません。時短前に近い賃金のときほど給付は小さくなります。個別の金額は、最新の一次情報と本人の賃金に照らして資格者が確認します。\n\n**Q. 育児休業を取らずに時短だけ始めても対象になりますか？**\nA. なり得ます。育児休業給付の対象となった育児休業に引き続いて時短を始めた場合のほか、時短開始日の前2年間に被保険者期間が通算12か月以上あれば対象です。いずれも2歳未満の子の養育のための時短であることが前提です。\n\n**Q. 時短で賃金が下がると、社会保険料や将来の年金はどうなりますか？**\nA. 育児休業等終了時改定で標準報酬月額を実態に合わせて下げられる一方、養育期間の従前標準報酬月額のみなし措置を使えば、3歳未満の子を養育する期間は年金額の計算上は従前の高い標準報酬月額とみなされます。保険料は下げつつ年金は守る、という2つの手続きを本人の申出を受けて事業主が年金事務所へ行います。\n\n## この記事の根拠\n\n- 雇用保険法第61条の12（育児時短就業給付金）。2025年4月1日施行（令和6年雇用保険法改正）。条番号は e-Gov 法令検索（雇用保険法・昭和49年法律第116号）の目次構造で確認（2026年8月24日参照）。第三章の二第四節「育児時短就業給付」＝第61条の12・第61条の13\n- 支給要件（①2歳未満の子を養育するための育児時短就業、②育児休業給付の対象となった育児休業に引き続いて時短就業を開始、または時短就業開始日前2年間に被保険者期間12か月以上）：厚生労働省「育児休業等給付について」・都道府県労働局／ハローワークの育児時短就業給付案内（2026年8月24日参照）\n- 給付率＝支給対象月に支払われた賃金の額の10%を限度。賃金の額と給付額の合計が支給限度額を超える場合は超える部分は不支給（逓減）：同上の厚生労働省・ハローワーク資料\n- 支給限度額・賃金日額の上限下限は毎年8月改定。具体的な金額は申請直前に厚生労働省・ハローワークの最新資料で確認する\n- 育児休業等終了時改定・養育期間の従前標準報酬月額のみなし措置：日本年金機構の案内（2026年8月24日参照）。3歳未満の子を養育する被保険者が対象\n- 育児・介護休業法の改正全体像は別記事[育児・介護休業法2025年改正で何が変わった？会社が整える就業規則・個別周知・意向確認](/labor/column/ikuji-kaigo-kyugyo-ho-2025-kaisei)で扱う\n\nこの記事は、誰に相談するかまで決めるものではありません。四葉社会保険労務士事務所では、育児時短就業給付の要件確認・申請、時短に伴う労働条件の整備、社会保険の手続きについてご相談いただけます。時短をめぐる個別の労働紛争の代理・交渉は弁護士、税務判断は税理士の領域です。別の専門家が必要な場合は、それぞれ別契約となり、紹介料はありません。よくいただくご質問は[よくあるご質問](/labor/faq)にまとめています。\n\n本記事は一般的な情報提供です。制度の適用や個別の判断は、最新の一次情報（厚生労働省・ハローワーク・日本年金機構など）と個別のご事情に照らし、面談のうえ資格者が行います。執筆は[浦松丈二](/about/uramatsu)（社会保険労務士・行政書士・宅地建物取引士）です。",
+    "status": "published",
+    "author": {
+      "name": "浦松 丈二",
+      "title": "社会保険労務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+    },
+    "keywords": [
+      "育児時短就業給付 要件",
+      "育児時短就業給付 10% 賃金",
+      "育児時短就業給付 いつから もらえる",
+      "2歳未満 時短勤務 給付",
+      "時短 社会保険料 標準報酬月額",
+      "育児時短就業給付 申請 事業主"
+    ],
+    "tags": [
+      "育児時短就業給付",
+      "雇用保険",
+      "時短勤務",
+      "標準報酬月額",
+      "社会保険",
+      "労働保険"
+    ],
+    "locales": [],
+    "faq": [
+      {
+        "question": "育児時短就業給付は、会社がもらえるのですか？",
+        "answer": "いいえ。受給者は時短で働く本人です。会社に支給される雇用関係助成金とは別のものです。ただし申請は原則として事業主が本人に代わってハローワークへ行うため、会社の事務は発生します。"
+      },
+      {
+        "question": "賃金の10%が必ずもらえるのですか？",
+        "answer": "いつも満額とは限りません。支給対象月に支払われた賃金の額の10%が上限で、賃金の額と給付額の合計が支給限度額を超える場合は、その超える部分は支給されません。時短前に近い賃金のときほど給付は小さくなります。個別の金額は、最新の一次情報と本人の賃金に照らして資格者が確認します。"
+      },
+      {
+        "question": "育児休業を取らずに時短だけ始めても対象になりますか？",
+        "answer": "なり得ます。育児休業給付の対象となった育児休業に引き続いて時短を始めた場合のほか、時短開始日の前2年間に被保険者期間が通算12か月以上あれば対象です。いずれも2歳未満の子の養育のための時短であることが前提です。"
+      },
+      {
+        "question": "時短で賃金が下がると、社会保険料や将来の年金はどうなりますか？",
+        "answer": "育児休業等終了時改定で標準報酬月額を実態に合わせて下げられる一方、養育期間の従前標準報酬月額のみなし措置を使えば、3歳未満の子を養育する期間は年金額の計算上は従前の高い標準報酬月額とみなされます。保険料は下げつつ年金は守る、という2つの手続きを本人の申出を受けて事業主が年金事務所へ行います。"
+      }
+    ],
+    "translations": {
+      "en": {
+        "title": "Childcare short-time work benefit — when, how much, and who receives it",
+        "excerpt": "The childcare short-time work benefit (ikuji jitan shugyo kyufu), created on April 1, 2025 under the Employment Insurance Act (Article 61-12), pays up to 10% of the monthly wage actually paid to an insured worker who shortens their prescribed working hours to raise a child under age 2. The recipient is the worker, not the company, but the employer usually files the application with Hello Work every two months. This article organizes the requirements, how the 10% is calculated, the order of the application, and how social insurance premiums change when hours are shortened.",
+        "content": "**In short:** The childcare short-time work benefit is an employment-insurance benefit that pays up to 10% of each month's wage actually paid to an insured worker who shortens their prescribed working hours to raise a child under age 2 (Employment Insurance Act, Article 61-12, effective April 1, 2025). The recipient is the worker, not the company, but the application is, in principle, filed by the employer with Hello Work every two months. You can receive it when both of the following are met: (1) the short-time work is for raising a child under age 2, and (2) the short-time work began immediately after childcare leave that was covered by childcare leave benefits, or the worker had an insured period of 12 months or more in the two years before the short-time work began. The 10% applies to the wage actually paid during short-time work, and because the total of wage plus benefit must not exceed the pre-short-time wage level (the payment limit), the benefit tapers off as the wage rises. This article organizes the requirements, the calculation, the order of the application, and the handling of social insurance premiums that fall with shorter hours.\n\nThis article is written for HR staff and managers of small and medium-sized companies that have, or may come to have, an employee raising a child under age 2. The benefit is an employment-insurance benefit, so the company does not receive it on the worker's behalf, but the application process passes through the company. The practical point is not to confuse who receives it, when, and what it applies to.\n\n## On what conditions can you receive the childcare short-time work benefit?\n\nThe childcare short-time work benefit is an employment-insurance benefit created on April 1, 2025 (Employment Insurance Act, Article 61-12). It targets the insured worker who engages in \"childcare short-time work\" (a working style with shortened prescribed working hours) to raise a child under age 2. A worker who meets both of the following is eligible.\n\n| Requirement | Details |\n|---|---|\n| (1) Purpose of short-time work | Shortening prescribed working hours to raise a child under age 2 |\n| (2) Insured period | Began short-time work immediately after childcare leave covered by childcare leave benefits; or had an insured period totaling 12 months or more in the two years before short-time work began |\n| Ineligible | The child reaches age 2 (the worker then falls out of scope) |\n\nThe \"return from leave straight into short-time work\" case qualifies via route (1); the \"start short-time work without taking leave\" case can still qualify if the insured period was 12 months or more in the past two years.\n\nNote that the recipient is the worker, not the company. This is clearly different from employment-related subsidies (which are paid to the company). The overall picture of the amended Child Care and Family Care Leave Act is organized in [What changed in the 2025 revision of the Child Care and Family Care Leave Act](/en/labor/column/ikuji-kaigo-kyugyo-ho-2025-kaisei).\n\n## What wage does the 10% rate apply to?\n\nThe rate is 10% of the wage actually paid in the payment-target month. In a month when the wage dropped because of short-time work, the image is that 10% is added on top of that month's wage. It applies to the monthly wage, not to a bonus.\n\nHowever, you do not receive 10% of the wage unconditionally. If the total of the wage paid and the benefit exceeds the \"payment limit,\" the excess portion is not paid. Because this is a benefit to support a worker whose wage fell because of short-time work, it is designed so that the closer the wage is to the pre-short-time level, the smaller the benefit becomes (it tapers off).\n\n| Wage situation | How the benefit works |\n|---|---|\n| Wage fell clearly under short-time work | Roughly 10% of the wage is paid |\n| Wage is close to the pre-short-time level (small drop) | Tapers so wage + benefit does not exceed the payment limit |\n| Wage exceeds the payment limit | No benefit is paid |\n\nThe payment limit and the upper and lower limits of the daily wage are revised each August. Confirm the specific figures against the latest materials from the Ministry of Health, Labour and Welfare and Hello Work just before applying. Because a lower wage under short-time work also moves the treatment of the standard monthly remuneration, that is organized in a later heading. For how the standard monthly remuneration itself changes, see [What is the difference between the standard remuneration report and the monthly change report](/en/labor/column/santei-kiso-getsu-gaku-henko-chigai).\n\n## Who files the application and when?\n\nThe subject of the application is the worker, but in practice the employer files with Hello Work on the worker's behalf. In chronological order:\n\n1. Around when short-time work begins, submit the eligibility confirmation (eligibility confirmation form and first application) to Hello Work\n2. After that, in principle every two months, submit a payment application stating the wage amount for the target months\n3. Once payment is decided, the benefit is transferred to the worker's designated account\n\nThe company must accurately grasp the wage paid in the target months. Because the wage amount affects the benefit, aligning the payroll close-off with the timing of the payment application makes the paperwork easier. How to run company payroll is also touched on in [How much does it cost to have a Certified Social Insurance and Labor Consultant do payroll](/en/labor/column/kyuyo-keisan-soba-sharoushi).\n\nThe postnatal leave support benefit, which is added on top of childcare leave immediately after birth, differs in both timing and calculation. For the benefit that supports take-home pay by combining both parents' leave, see [How is the \"100% of take-home pay\" equivalent of the postnatal leave support benefit calculated](/en/labor/column/shussei-go-kyugyo-shien-kyufu-2025).\n\n## How does the treatment of social insurance premiums change with short-time work?\n\nWhen the wage falls under short-time work, the treatment of social insurance premiums (health insurance and employees' pension insurance) also moves. This is a separate system from the employment-insurance short-time benefit; it is a procedure on the social insurance side. The two points a company should keep in mind are as follows.\n\n| System | What it is for |\n|---|---|\n| Revision at the end of childcare leave | When an insured person raising a child under age 3 has a lower remuneration after childcare leave because of short-time work, etc., the standard monthly remuneration can be revised using the average remuneration for the three months after return. Unlike an ordinary occasional revision, it can be revised even without a difference of two grades or more |\n| Deeming of the former standard monthly remuneration during the child-rearing period | During the period of raising a child under age 3, even if the standard monthly remuneration falls under short-time work, the former higher standard monthly remuneration is deemed to apply for pension calculation. A special measure so that the future pension does not fall because of short-time work |\n\nBoth are handled by the employer with the pension office (Japan Pension Service) upon the worker's request. The former matches the immediate premium to reality; the latter protects the future pension (as of August 24, 2026, per Japan Pension Service guidance). Lowering the premium burden while not lowering the pension — confirming that both can be used makes it easier to explain to the employee.\n\nThe employment-insurance short-time benefit and the social-insurance standard-monthly-remuneration procedures run separately. When starting short-time work, it is safest to confirm three things at once: employment insurance (the short-time benefit), health and employees' pension insurance (standard monthly remuneration), and working-hour management.\n\n## In the end, what should a company do?\n\nWhen an employee requests short-time work, proceeding in the following order avoids omissions.\n\n1. Confirm whether it is short-time work to raise a child under age 2, or whether the insured-period requirement is met\n2. Fix the post-short-time prescribed working hours and wage, and clarify the working conditions\n3. Submit the eligibility confirmation for the childcare short-time work benefit to Hello Work\n4. For a child under age 3, request the revision of the standard monthly remuneration and the deeming of the former standard monthly remuneration from the pension office\n5. Every two months, fix the wage amount and file the payment application\n\n四葉社会保険労務士事務所 can advise on confirming eligibility for and applying for the childcare short-time work benefit, arranging the working conditions that accompany short-time work, and social insurance procedures. Consultation is free, and fees are set out in the [fee schedule](/en/labor/ryokin). For the steps of the process, see [How consultation and contracting work](/en/labor/nagare). Representation and negotiation in an individual labor dispute over short-time work are the domain of a lawyer (Bengoshi), and tax determinations are the domain of a tax accountant. If a different professional is needed, each is contracted separately, and there is no referral fee.\n\n## Frequently asked questions\n\n**Q. Can the company receive the childcare short-time work benefit?**\nA. No. The recipient is the worker who works short hours. It is different from an employment-related subsidy paid to the company. However, because the application is, in principle, filed by the employer on the worker's behalf with Hello Work, paperwork arises for the company.\n\n**Q. Do you always receive 10% of the wage?**\nA. Not always the full amount. The cap is 10% of the wage paid in the payment-target month, and if the total of the wage and the benefit exceeds the payment limit, the excess portion is not paid. The closer the wage is to the pre-short-time level, the smaller the benefit. Individual amounts are confirmed by a qualified professional against the latest primary sources and the worker's wage.\n\n**Q. Can you qualify by starting short-time work without taking childcare leave?**\nA. It is possible. Besides starting short-time work immediately after childcare leave covered by childcare leave benefits, you can qualify if the insured period totaled 12 months or more in the two years before short-time work began. In both cases, it must be short-time work to raise a child under age 2.\n\n**Q. When the wage falls under short-time work, what happens to social insurance premiums and the future pension?**\nA. While the standard monthly remuneration can be lowered to match reality by the revision at the end of childcare leave, if you use the deeming of the former standard monthly remuneration during the child-rearing period, the former higher standard monthly remuneration is deemed to apply for pension calculation during the period of raising a child under age 3. The employer carries out both procedures with the pension office upon the worker's request — lowering the premium while protecting the pension.\n\n## Sources for this article\n\n- Employment Insurance Act, Article 61-12 (childcare short-time work benefit). Effective April 1, 2025 (2024 amendment to the Employment Insurance Act). Article numbers confirmed against the table-of-contents structure of e-Gov law search (Employment Insurance Act, Act No. 116 of 1974; referenced August 24, 2026): Chapter 3-2, Section 4 \"childcare short-time work benefit\" = Articles 61-12 and 61-13.\n- Eligibility (1) short-time work to raise a child under age 2, and (2) started immediately after childcare leave covered by childcare leave benefits, or an insured period of 12 months or more in the two years before short-time work began: Ministry of Health, Labour and Welfare \"About childcare leave and other benefits\" and the Prefectural Labour Bureau / Hello Work guidance on the childcare short-time work benefit (referenced August 24, 2026).\n- Benefit rate = up to 10% of the wage paid in the payment-target month; if wage plus benefit exceeds the payment limit, the excess is not paid (tapering): the same Ministry and Hello Work materials.\n- The payment limit and the upper and lower limits of the daily wage are revised each August; confirm the specific figures against the latest materials just before applying.\n- Revision at the end of childcare leave and deeming of the former standard monthly remuneration during the child-rearing period: Japan Pension Service guidance (referenced August 24, 2026); for insured persons raising a child under age 3.\n- The overall picture of the amended Child Care and Family Care Leave Act is covered in [What changed in the 2025 revision of the Child Care and Family Care Leave Act](/en/labor/column/ikuji-kaigo-kyugyo-ho-2025-kaisei).\n\nThis article does not decide whom to consult. 四葉社会保険労務士事務所 can advise on confirming eligibility for and applying for the childcare short-time work benefit, arranging working conditions for short-time work, and social insurance procedures. Representation and negotiation in an individual labor dispute over short-time work are the domain of a lawyer (Bengoshi), and tax determinations are the domain of a tax accountant. If a different professional is needed, each is contracted separately, and there is no referral fee. For frequently asked questions, see the [FAQ](/en/labor/faq).\n\nThis article is general information. Whether the system applies and individual determinations are made by a qualified professional after a consultation, in light of the latest primary sources (the Ministry of Health, Labour and Welfare, Hello Work, the Japan Pension Service, etc.) and individual circumstances. Written by [Joji Uramatsu](/en/about/uramatsu) (Shakai Hoken Roumushi, Gyoseishoshi, Registered Real Estate Transaction Specialist).",
+        "category": "Labor law basics",
+        "keywords": [
+          "childcare short-time work benefit 2025",
+          "ikuji jitan shugyo kyufu requirements",
+          "10% benefit rate short-time work",
+          "child under age 2 short-time work",
+          "social insurance premiums short-time work"
+        ],
+        "tags": [
+          "Childcare short-time work benefit",
+          "Employment insurance",
+          "Short-time work",
+          "Child under age 2",
+          "Standard monthly remuneration",
+          "Labor management"
+        ],
+        "author": {
+          "name": "Joji Uramatsu",
+          "title": "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所"
+        },
+        "faq": [
+          {
+            "question": "Can the company receive the childcare short-time work benefit?",
+            "answer": "No. The recipient is the worker who works short hours. It is different from an employment-related subsidy paid to the company. However, because the application is, in principle, filed by the employer on the worker's behalf with Hello Work, paperwork arises for the company."
+          },
+          {
+            "question": "Do you always receive 10% of the wage?",
+            "answer": "Not always the full amount. The cap is 10% of the wage paid in the payment-target month, and if the total of the wage and the benefit exceeds the payment limit, the excess portion is not paid. The closer the wage is to the pre-short-time level, the smaller the benefit. Individual amounts are confirmed by a qualified professional against the latest primary sources and the worker's wage."
+          },
+          {
+            "question": "Can you qualify by starting short-time work without taking childcare leave?",
+            "answer": "It is possible. Besides starting short-time work immediately after childcare leave covered by childcare leave benefits, you can qualify if the insured period totaled 12 months or more in the two years before short-time work began. In both cases, it must be short-time work to raise a child under age 2."
+          },
+          {
+            "question": "When the wage falls under short-time work, what happens to social insurance premiums and the future pension?",
+            "answer": "While the standard monthly remuneration can be lowered to match reality by the revision at the end of childcare leave, if you use the deeming of the former standard monthly remuneration during the child-rearing period, the former higher standard monthly remuneration is deemed to apply for pension calculation during the period of raising a child under age 3. The employer carries out both procedures with the pension office upon the worker's request — lowering the premium while protecting the pension."
+          }
+        ]
+      },
+      "zh-tw": {
+        "title": "育兒縮短工時就業給付——何時、多少、由誰領取",
+        "excerpt": "育兒縮短工時就業給付（育児時短就業給付）於2025年4月1日依雇用保險法第61條之12創設，針對為養育未滿2歲子女而縮短既定工時的雇用保險被保險者，以各月實際支付薪資的10%為上限支付。領取者是本人而非公司，但原則上由雇主每兩個月向Hello Work提出申請。本文依序整理領取要件、10%的計算方式、申請順序，以及縮短工時後社會保險費的處理。",
+        "content": "**先講結論**：育兒縮短工時就業給付，是針對為養育未滿2歲子女而縮短既定工時的雇用保險被保險者，以縮短工時期間各月實際支付薪資的10%為上限所支付的給付（雇用保險法第61條之12，2025年4月1日施行）。領取者是本人而非公司，但申請原則上由雇主每兩個月向Hello Work提出。可以領取的條件是同時滿足以下兩點：①縮短工時是為了養育未滿2歲的子女；②緊接著領取育兒休業給付的育兒休業之後開始縮短工時，或在縮短工時開始日前2年間被保險者期間合計滿12個月以上。10%適用於縮短工時期間實際支付的薪資，且因薪資與給付合計不得超過縮短工時前的薪資水準（支付上限額），薪資越高給付越遞減。本文依序整理要件、計算、申請順序，以及縮短工時後下降的社會保險費處理。\n\n本文以擁有一名以上正在養育未滿2歲子女的員工，或今後可能出現這類員工的中小企業人事勞務負責人、經營者為對象。此給付是雇用保險的給付，公司不會代為領取，但申請實務會經過公司。不搞錯「由誰領取、何時、適用於什麼」是實務重點。\n\n## 育兒縮短工時就業給付要在什麼條件下才能領？\n\n育兒縮短工時就業給付是2025年4月1日創設的雇用保險給付（雇用保險法第61條之12）。對象是為養育未滿2歲子女而進行「育兒縮短工時就業」（縮短既定工時的工作方式）的被保險者本人。同時滿足以下兩項的人為對象。\n\n| 要件 | 內容 |\n|---|---|\n| ① 縮短工時的目的 | 為養育未滿2歲的子女而縮短既定工時 |\n| ② 被保險者期間 | 緊接著育兒休業給付對象的育兒休業之後開始縮短工時；或在縮短工時開始日前2年間，被保險者期間合計滿12個月以上 |\n| 不適用 | 子女滿2歲後脫離對象 |\n\n「從育兒休業復職後直接進入縮短工時」屬於①的路徑；「未取得休業而只開始縮短工時」的情形，只要過去2年間被保險者期間滿12個月以上，也可能成為對象。\n\n領取者是本人而非公司，這點與支付給公司的雇用關係補助金明顯不同。育兒・介護休業法本身的修正內容，整理於[育兒・介護休業法2025年修正改了什麼？公司要整備的就業規則・個別通知・意向確認](/zh-tw/labor/column/ikuji-kaigo-kyugyo-ho-2025-kaisei)。\n\n## 給付率10%適用於哪一筆薪資？\n\n給付率是支付對象月實際支付薪資的10%。在因縮短工時而薪資下降的月份，對該月薪資加上1成的概念。它適用於每月薪資，而非獎金。\n\n不過並非無條件領取薪資的10%。若支付薪資額與給付額的合計超過「支付上限額」，超過部分不予支付。因為這是為了支撐因縮短工時而薪資下降者的給付，故設計成薪資越接近縮短工時前的水準、給付越小（遞減）。\n\n| 薪資狀況 | 給付的思路 |\n|---|---|\n| 因縮短工時薪資明顯下降 | 大致支付薪資的10% |\n| 薪資接近縮短工時前（降幅小） | 遞減，使薪資＋給付不超過支付上限額 |\n| 薪資超過支付上限額 | 不支付給付 |\n\n支付上限額、薪資日額的上下限每年8月修訂。具體金額請在申請前，以厚生勞動省・Hello Work的最新資料確認。因縮短工時薪資下降時，標準報酬月額的處理也會變動，此點於後段整理。標準報酬月額本身如何變化，請參閱[算定基礎屆與月額變更屆有何不同？整理標準報酬月額改變的機制](/zh-tw/labor/column/santei-kiso-getsu-gaku-henko-chigai)。\n\n## 申請由誰、何時提出？\n\n申請主體是本人，但實務上由雇主代本人向Hello Work辦理。依時間順序：\n\n1. 在縮短工時開始前後，向Hello Work提出受給資格確認（受給資格確認票・首次申請）\n2. 之後原則上每兩個月，提出記載對象月薪資額的支付申請書\n3. 確定支付後，給付匯入本人指定帳戶\n\n公司需正確掌握對象月支付的薪資額。因薪資額左右給付額，將薪資計算的結算與支付申請的時點配合，事務會較輕鬆。公司薪資計算如何運作，於[將薪資計算委託社會保險勞務士要花多少錢](/zh-tw/labor/column/kyuyo-keisan-soba-sharoushi)亦有觸及。\n\n與出生後直接加上的出生後休業支援給付，對象時期與計算皆不同。關於結合雙親育休支撐實得收入的給付，於[出生後休業支援給付的「實得10成」相當如何計算](/zh-tw/labor/column/shussei-go-kyugyo-shien-kyufu-2025)說明。\n\n## 縮短工時後社會保險費的處理如何改變？\n\n因縮短工時薪資下降時，社會保險費（健康保險・厚生年金保險）的處理也會變動。這與雇用保險的縮短工時給付是不同制度，屬於社會保險側的手續。公司應掌握的兩點如下。\n\n| 制度 | 用途 |\n|---|---|\n| 育兒休業結束時改定 | 養育未滿3歲子女的被保險者，於育兒休業結束後因縮短工時等使報酬下降時，可用復職後3個月報酬平均改定標準報酬月額。與一般的隨時改定不同，即使沒有2等級以上的差距也能改定 |\n| 養育期間從前標準報酬月額的視為措施 | 養育未滿3歲子女的期間，即使因縮短工時使標準報酬月額下降，年金額計算上仍視為從前較高的標準報酬月額。是為使將來年金不因縮短工時而下降的特例 |\n\n兩者皆由雇主受本人申請後，向年金事務所（日本年金機構）辦理。前者使當下保險費貼近實態，後者保護將來年金（2026年8月24日時點，依日本年金機構的說明）。降低保險費負擔、同時不降低年金——確認兩者是否都能使用，向員工說明時會更容易。\n\n雇用保險的縮短工時給付，與社會保險的標準報酬月額手續各自獨立進行。開始縮短工時時，同時確認雇用保險（縮短工時給付）、健康保險與厚生年金（標準報酬月額）、勞動時間管理這三項，較為安全。\n\n## 公司到頭來該做什麼？\n\n有員工申請縮短工時時，依以下順序進行可避免遺漏。\n\n1. 確認是否為養育未滿2歲子女的縮短工時，或是否滿足被保險者期間要件\n2. 確定縮短後的既定工時・薪資，並明示勞動條件\n3. 向Hello Work提出育兒縮短工時就業給付的受給資格確認\n4. 若為未滿3歲子女，向年金事務所申請標準報酬月額改定・從前標準報酬月額的視為措施\n5. 每兩個月確定薪資額，提出支付申請\n\n四葉社会保険労務士事務所可就育兒縮短工時就業給付的要件確認・申請、伴隨縮短工時的勞動條件整備、社會保險手續提供諮詢。諮詢免費，費用整理於[報酬額表](/zh-tw/labor/ryokin)。手續流程請見[使用流程](/zh-tw/labor/nagare)。縮短工時引發個別勞動糾紛時的代理・交涉屬律師領域，稅務判斷屬稅理士領域。若需要其他專家，將各自另行簽約，且無介紹費。\n\n## 常見問題\n\n**Q. 育兒縮短工時就業給付是公司可以領的嗎？**\nA. 不是。領取者是縮短工時工作的本人，與支付給公司的雇用關係補助金不同。不過因申請原則上由雇主代本人向Hello Work辦理，公司會產生事務。\n\n**Q. 薪資的10%一定能領到嗎？**\nA. 未必是全額。上限是支付對象月支付薪資的10%，若薪資額與給付額合計超過支付上限額，超過部分不予支付。薪資越接近縮短工時前，給付越小。個別金額由有資格者依最新一次資訊與本人薪資確認。\n\n**Q. 沒有取得育兒休業、只開始縮短工時也能成為對象嗎？**\nA. 有可能。除了緊接著育兒休業給付對象的育兒休業之後開始縮短工時外，只要縮短工時開始日前2年間被保險者期間合計滿12個月以上即為對象。兩者皆以養育未滿2歲子女的縮短工時為前提。\n\n**Q. 因縮短工時薪資下降，社會保險費與將來的年金會怎樣？**\nA. 一方面可用育兒休業結束時改定使標準報酬月額貼近實態而下降，另一方面若使用養育期間從前標準報酬月額的視為措施，養育未滿3歲子女的期間，年金額計算上仍視為從前較高的標準報酬月額。由雇主受本人申請後向年金事務所辦理這兩項手續，做到降保險費、保年金。\n\n## 本文的依據\n\n- 雇用保險法第61條之12（育兒縮短工時就業給付金）。2025年4月1日施行（令和6年雇用保險法修正）。條號依 e-Gov 法令檢索（雇用保險法・昭和49年法律第116號）的目次結構確認（2026年8月24日參照）：第三章之二第四節「育兒縮短工時就業給付」＝第61條之12・第61條之13。\n- 支付要件（①為養育未滿2歲子女的縮短工時就業，②緊接著育兒休業給付對象的育兒休業之後開始，或縮短工時開始日前2年間被保險者期間滿12個月以上）：厚生勞動省「育兒休業等給付相關」與都道府縣勞動局／Hello Work的育兒縮短工時就業給付說明（2026年8月24日參照）。\n- 給付率＝支付對象月支付薪資額的10%為上限；薪資額與給付額合計超過支付上限額時超過部分不支付（遞減）：同上的厚生勞動省・Hello Work資料。\n- 支付上限額・薪資日額上下限每年8月修訂，具體金額於申請前以最新資料確認。\n- 育兒休業結束時改定・養育期間從前標準報酬月額的視為措施：日本年金機構的說明（2026年8月24日參照）。以養育未滿3歲子女的被保險者為對象。\n- 育兒・介護休業法的修正全貌於另篇[育兒・介護休業法2025年修正改了什麼？公司要整備的就業規則・個別通知・意向確認](/zh-tw/labor/column/ikuji-kaigo-kyugyo-ho-2025-kaisei)說明。\n\n本文並不決定要向誰諮詢。四葉社会保険労務士事務所可就育兒縮短工時就業給付的要件確認・申請、伴隨縮短工時的勞動條件整備、社會保險手續提供諮詢。縮短工時的個別勞動糾紛代理・交涉屬律師領域，稅務判斷屬稅理士領域。若需要其他專家，將各自另行簽約，且無介紹費。常見問題整理於[常見問答](/zh-tw/labor/faq)。\n\n本文為一般性資訊提供。制度的適用與個別判斷，將依最新一次資訊（厚生勞動省・Hello Work・日本年金機構等）與個別情形，於面談後由有資格者進行。撰文為[浦松丈二](/zh-tw/about/uramatsu)（社會保險勞務士・行政書士・宅地建物取引士）。",
+        "category": "勞動法基礎",
+        "keywords": [
+          "育兒縮短工時就業給付 2025",
+          "育児時短就業給付 要件",
+          "縮短工時 給付率 10%",
+          "未滿2歲 子女 縮短工時",
+          "縮短工時 社會保險費"
+        ],
+        "tags": [
+          "育兒縮短工時就業給付",
+          "雇用保險",
+          "縮短工時",
+          "未滿2歲子女",
+          "標準報酬月額",
+          "勞務管理"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "育兒縮短工時就業給付是公司可以領的嗎？",
+            "answer": "不是。領取者是縮短工時工作的本人，與支付給公司的雇用關係補助金不同。不過因申請原則上由雇主代本人向Hello Work辦理，公司會產生事務。"
+          },
+          {
+            "question": "薪資的10%一定能領到嗎？",
+            "answer": "未必是全額。上限是支付對象月支付薪資的10%，若薪資額與給付額合計超過支付上限額，超過部分不予支付。薪資越接近縮短工時前，給付越小。個別金額由有資格者依最新一次資訊與本人薪資確認。"
+          },
+          {
+            "question": "沒有取得育兒休業、只開始縮短工時也能成為對象嗎？",
+            "answer": "有可能。除了緊接著育兒休業給付對象的育兒休業之後開始縮短工時外，只要縮短工時開始日前2年間被保險者期間合計滿12個月以上即為對象。兩者皆以養育未滿2歲子女的縮短工時為前提。"
+          },
+          {
+            "question": "因縮短工時薪資下降，社會保險費與將來的年金會怎樣？",
+            "answer": "一方面可用育兒休業結束時改定使標準報酬月額貼近實態而下降，另一方面若使用養育期間從前標準報酬月額的視為措施，養育未滿3歲子女的期間，年金額計算上仍視為從前較高的標準報酬月額。由雇主受本人申請後向年金事務所辦理這兩項手續，做到降保險費、保年金。"
+          }
+        ]
+      },
+      "zh": {
+        "title": "育儿缩短工时就业给付——何时、多少、由谁领取",
+        "excerpt": "育儿缩短工时就业给付（育児時短就業給付）于2025年4月1日依雇用保险法第61条之12创设，针对为养育未满2岁子女而缩短既定工时的雇用保险被保险者，以各月实际支付薪资的10%为上限支付。领取者是本人而非公司，但原则上由雇主每两个月向Hello Work提出申请。本文依序整理领取要件、10%的计算方式、申请顺序，以及缩短工时后社会保险费的处理。",
+        "content": "**先讲结论**：育儿缩短工时就业给付，是针对为养育未满2岁子女而缩短既定工时的雇用保险被保险者，以缩短工时期间各月实际支付薪资的10%为上限所支付的给付（雇用保险法第61条之12，2025年4月1日施行）。领取者是本人而非公司，但申请原则上由雇主每两个月向Hello Work提出。可以领取的条件是同时满足以下两点：①缩短工时是为了养育未满2岁的子女；②紧接着领取育儿休业给付的育儿休业之后开始缩短工时，或在缩短工时开始日前2年间被保险者期间合计满12个月以上。10%适用于缩短工时期间实际支付的薪资，且因薪资与给付合计不得超过缩短工时前的薪资水准（支付上限额），薪资越高给付越递减。本文依序整理要件、计算、申请顺序，以及缩短工时后下降的社会保险费处理。\n\n本文以拥有一名以上正在养育未满2岁子女的员工，或今后可能出现这类员工的中小企业人事劳务负责人、经营者为对象。此给付是雇用保险的给付，公司不会代为领取，但申请实务会经过公司。不搞错「由谁领取、何时、适用于什么」是实务重点。\n\n## 育儿缩短工时就业给付要在什么条件下才能领？\n\n育儿缩短工时就业给付是2025年4月1日创设的雇用保险给付（雇用保险法第61条之12）。对象是为养育未满2岁子女而进行「育儿缩短工时就业」（缩短既定工时的工作方式）的被保险者本人。同时满足以下两项的人为对象。\n\n| 要件 | 内容 |\n|---|---|\n| ① 缩短工时的目的 | 为养育未满2岁的子女而缩短既定工时 |\n| ② 被保险者期间 | 紧接着育儿休业给付对象的育儿休业之后开始缩短工时；或在缩短工时开始日前2年间，被保险者期间合计满12个月以上 |\n| 不适用 | 子女满2岁后脱离对象 |\n\n「从育儿休业复职后直接进入缩短工时」属于①的路径；「未取得休业而只开始缩短工时」的情形，只要过去2年间被保险者期间满12个月以上，也可能成为对象。\n\n领取者是本人而非公司，这点与支付给公司的雇用关系补助金明显不同。育儿・护理休假法本身的修正内容，整理于[育儿・护理休假法2025年修正改了什么？公司要整备的就业规则・个别通知・意向确认](/zh/labor/column/ikuji-kaigo-kyugyo-ho-2025-kaisei)。\n\n## 给付率10%适用于哪一笔薪资？\n\n给付率是支付对象月实际支付薪资的10%。在因缩短工时而薪资下降的月份，对该月薪资加上1成的概念。它适用于每月薪资，而非奖金。\n\n不过并非无条件领取薪资的10%。若支付薪资额与给付额的合计超过「支付上限额」，超过部分不予支付。因为这是为了支撑因缩短工时而薪资下降者的给付，故设计成薪资越接近缩短工时前的水准、给付越小（递减）。\n\n| 薪资状况 | 给付的思路 |\n|---|---|\n| 因缩短工时薪资明显下降 | 大致支付薪资的10% |\n| 薪资接近缩短工时前（降幅小） | 递减，使薪资＋给付不超过支付上限额 |\n| 薪资超过支付上限额 | 不支付给付 |\n\n支付上限额、薪资日额的上下限每年8月修订。具体金额请在申请前，以厚生劳动省・Hello Work的最新资料确认。因缩短工时薪资下降时，标准报酬月额的处理也会变动，此点于后段整理。标准报酬月额本身如何变化，请参阅[算定基础届与月额变更届有何不同？整理标准报酬月额改变的机制](/zh/labor/column/santei-kiso-getsu-gaku-henko-chigai)。\n\n## 申请由谁、何时提出？\n\n申请主体是本人，但实务上由雇主代本人向Hello Work办理。依时间顺序：\n\n1. 在缩短工时开始前后，向Hello Work提出受给资格确认（受给资格确认票・首次申请）\n2. 之后原则上每两个月，提出记载对象月薪资额的支付申请书\n3. 确定支付后，给付汇入本人指定账户\n\n公司需正确掌握对象月支付的薪资额。因薪资额左右给付额，将薪资计算的结算与支付申请的时点配合，事务会较轻松。公司薪资计算如何运作，于[将薪资计算委托社会保险劳务士要花多少钱](/zh/labor/column/kyuyo-keisan-soba-sharoushi)亦有触及。\n\n与出生后直接加上的出生后休业支援给付，对象时期与计算皆不同。关于结合双亲育休支撑实得收入的给付，于[出生后休业支援给付的「实得10成」相当如何计算](/zh/labor/column/shussei-go-kyugyo-shien-kyufu-2025)说明。\n\n## 缩短工时后社会保险费的处理如何改变？\n\n因缩短工时薪资下降时，社会保险费（健康保险・厚生年金保险）的处理也会变动。这与雇用保险的缩短工时给付是不同制度，属于社会保险侧的手续。公司应掌握的两点如下。\n\n| 制度 | 用途 |\n|---|---|\n| 育儿休业结束时改定 | 养育未满3岁子女的被保险者，于育儿休业结束后因缩短工时等使报酬下降时，可用复职后3个月报酬平均改定标准报酬月额。与一般的随时改定不同，即使没有2等级以上的差距也能改定 |\n| 养育期间从前标准报酬月额的视为措施 | 养育未满3岁子女的期间，即使因缩短工时使标准报酬月额下降，年金额计算上仍视为从前较高的标准报酬月额。是为使将来年金不因缩短工时而下降的特例 |\n\n两者皆由雇主受本人申请后，向年金事务所（日本年金机构）办理。前者使当下保险费贴近实态，后者保护将来年金（2026年8月24日时点，依日本年金机构的说明）。降低保险费负担、同时不降低年金——确认两者是否都能使用，向员工说明时会更容易。\n\n雇用保险的缩短工时给付，与社会保险的标准报酬月额手续各自独立进行。开始缩短工时时，同时确认雇用保险（缩短工时给付）、健康保险与厚生年金（标准报酬月额）、劳动时间管理这三项，较为安全。\n\n## 公司到头来该做什么？\n\n有员工申请缩短工时时，依以下顺序进行可避免遗漏。\n\n1. 确认是否为养育未满2岁子女的缩短工时，或是否满足被保险者期间要件\n2. 确定缩短后的既定工时・薪资，并明示劳动条件\n3. 向Hello Work提出育儿缩短工时就业给付的受给资格确认\n4. 若为未满3岁子女，向年金事务所申请标准报酬月额改定・从前标准报酬月额的视为措施\n5. 每两个月确定薪资额，提出支付申请\n\n四葉社会保険労務士事務所可就育儿缩短工时就业给付的要件确认・申请、伴随缩短工时的劳动条件整备、社会保险手续提供咨询。咨询免费，费用整理于[报酬额表](/zh/labor/ryokin)。手续流程请见[使用流程](/zh/labor/nagare)。缩短工时引发个别劳动纠纷时的代理・交涉属律师领域，税务判断属税理士领域。若需要其他专家，将各自另行签约，且无介绍费。\n\n## 常见问题\n\n**Q. 育儿缩短工时就业给付是公司可以领的吗？**\nA. 不是。领取者是缩短工时工作的本人，与支付给公司的雇用关系补助金不同。不过因申请原则上由雇主代本人向Hello Work办理，公司会产生事务。\n\n**Q. 薪资的10%一定能领到吗？**\nA. 未必是全额。上限是支付对象月支付薪资的10%，若薪资额与给付额合计超过支付上限额，超过部分不予支付。薪资越接近缩短工时前，给付越小。个别金额由有资格者依最新一次资讯与本人薪资确认。\n\n**Q. 没有取得育儿休业、只开始缩短工时也能成为对象吗？**\nA. 有可能。除了紧接着育儿休业给付对象的育儿休业之后开始缩短工时外，只要缩短工时开始日前2年间被保险者期间合计满12个月以上即为对象。两者皆以养育未满2岁子女的缩短工时为前提。\n\n**Q. 因缩短工时薪资下降，社会保险费与将来的年金会怎样？**\nA. 一方面可用育儿休业结束时改定使标准报酬月额贴近实态而下降，另一方面若使用养育期间从前标准报酬月额的视为措施，养育未满3岁子女的期间，年金额计算上仍视为从前较高的标准报酬月额。由雇主受本人申请后向年金事务所办理这两项手续，做到降保险费、保年金。\n\n## 本文的依据\n\n- 雇用保险法第61条之12（育儿缩短工时就业给付金）。2025年4月1日施行（令和6年雇用保险法修正）。条号依 e-Gov 法令检索（雇用保险法・昭和49年法律第116号）的目次结构确认（2026年8月24日参照）：第三章之二第四节「育儿缩短工时就业给付」＝第61条之12・第61条之13。\n- 支付要件（①为养育未满2岁子女的缩短工时就业，②紧接着育儿休业给付对象的育儿休业之后开始，或缩短工时开始日前2年间被保险者期间满12个月以上）：厚生劳动省「育儿休业等给付相关」与都道府县劳动局／Hello Work的育儿缩短工时就业给付说明（2026年8月24日参照）。\n- 给付率＝支付对象月支付薪资额的10%为上限；薪资额与给付额合计超过支付上限额时超过部分不支付（递减）：同上的厚生劳动省・Hello Work资料。\n- 支付上限额・薪资日额上下限每年8月修订，具体金额于申请前以最新资料确认。\n- 育儿休业结束时改定・养育期间从前标准报酬月额的视为措施：日本年金机构的说明（2026年8月24日参照）。以养育未满3岁子女的被保险者为对象。\n- 育儿・护理休假法的修正全貌于另篇[育儿・护理休假法2025年修正改了什么？公司要整备的就业规则・个别通知・意向确认](/zh/labor/column/ikuji-kaigo-kyugyo-ho-2025-kaisei)说明。\n\n本文并不决定要向谁咨询。四葉社会保険労務士事務所可就育儿缩短工时就业给付的要件确认・申请、伴随缩短工时的劳动条件整备、社会保险手续提供咨询。缩短工时的个别劳动纠纷代理・交涉属律师领域，税务判断属税理士领域。若需要其他专家，将各自另行签约，且无介绍费。常见问题整理于[常见问答](/zh/labor/faq)。\n\n本文为一般性资讯提供。制度的适用与个别判断，将依最新一次资讯（厚生劳动省・Hello Work・日本年金机构等）与个别情形，于面谈后由有资格者进行。撰文为[浦松丈二](/zh/about/uramatsu)（社会保险劳务士・行政书士・宅地建物取引士）。",
+        "category": "劳动法基础",
+        "keywords": [
+          "育儿缩短工时就业给付 2025",
+          "育児時短就業給付 要件",
+          "缩短工时 给付率 10%",
+          "未满2岁 子女 缩短工时",
+          "缩短工时 社会保险费"
+        ],
+        "tags": [
+          "育儿缩短工时就业给付",
+          "雇用保险",
+          "缩短工时",
+          "未满2岁子女",
+          "标准报酬月额",
+          "劳务管理"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "育儿缩短工时就业给付是公司可以领的吗？",
+            "answer": "不是。领取者是缩短工时工作的本人，与支付给公司的雇用关系补助金不同。不过因申请原则上由雇主代本人向Hello Work办理，公司会产生事务。"
+          },
+          {
+            "question": "薪资的10%一定能领到吗？",
+            "answer": "未必是全额。上限是支付对象月支付薪资的10%，若薪资额与给付额合计超过支付上限额，超过部分不予支付。薪资越接近缩短工时前，给付越小。个别金额由有资格者依最新一次资讯与本人薪资确认。"
+          },
+          {
+            "question": "没有取得育儿休业、只开始缩短工时也能成为对象吗？",
+            "answer": "有可能。除了紧接着育儿休业给付对象的育儿休业之后开始缩短工时外，只要缩短工时开始日前2年间被保险者期间合计满12个月以上即为对象。两者皆以养育未满2岁子女的缩短工时为前提。"
+          },
+          {
+            "question": "因缩短工时薪资下降，社会保险费与将来的年金会怎样？",
+            "answer": "一方面可用育儿休业结束时改定使标准报酬月额贴近实态而下降，另一方面若使用养育期间从前标准报酬月额的视为措施，养育未满3岁子女的期间，年金额计算上仍视为从前较高的标准报酬月额。由雇主受本人申请后向年金事务所办理这两项手续，做到降保险费、保年金。"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "business": "labor",
+    "slug": "shussei-go-kyugyo-shien-kyufu-2025",
+    "title": "出生後休業支援給付の「手取り10割」相当は、どう計算するのか",
+    "date": "2026-09-01",
+    "category": "労働保険",
+    "excerpt": "出生後休業支援給付は、子の出生直後に両親がそろって育児休業を取ると、育児休業給付（原則67%）に13%を上乗せする雇用保険の給付です（雇用保険法第61条の10、2025年4月1日施行）。上乗せ後は80%ですが、給付が非課税で育休中は社会保険料も免除されるため、休業前の手取りと比べると実質10割相当になります。28日の数え方・両親14日以上の要件・育児休業給付との重なりを整理します。",
+    "content": "**結論（先に要点）**：出生後休業支援給付は、子の出生直後に両親がそろって育児休業を取ったとき、育児休業給付（原則67%）に13%を上乗せする雇用保険の給付です（雇用保険法第61条の10、2025年4月1日施行）。上乗せ後の給付は賃金の80%になりますが、育児休業給付も出生後休業支援給付も非課税で、育休中は社会保険料も免除されるため、休業前の「手取り」と比べると実質10割相当になります。もらえる条件は、本人と配偶者がともに、子の出生後（母は産後休業後）の一定期間内に14日以上の育児休業を取ることです。ひとり親や、配偶者が育児休業の対象とならない働き方をしている場合などは、本人の取得だけで支給されます。上乗せの対象になるのは通算28日分が限度です。この記事では、給付の中身・手取り10割相当になる仕組み・28日の数え方・育児休業給付との重なりを順に整理します。\n\nこの記事は、男性育休を進めたい、または進める必要が出てきた中小企業の労務担当者・経営者を想定しています。「両親がそろって取ると手取りが実質減らない」という点が、社員に育休を勧めるうえでの説明材料になります。制度の中身を正確に押さえておくことが実務のポイントです。\n\n## 出生後休業支援給付はどんな給付なのか？\n\n出生後休業支援給付は、2025年4月1日に創設された雇用保険の給付です（雇用保険法第61条の10）。共働き・共育てを進める目的で、子の出生直後に両親がそろって育児休業を取った場合に、育児休業給付や出生時育児休業給付金（いわゆる産後パパ育休の給付）に上乗せして支給されます。\n\n上乗せ率は、休業開始時賃金日額の13%です。育児休業給付・出生時育児休業給付金は原則として休業開始時賃金日額の67%なので、13%が上乗せされると合計80%になります。\n\n| 給付 | 率 | 根拠 |\n|---|---|---|\n| 育児休業給付金・出生時育児休業給付金 | 原則67% | 雇用保険法第61条の7・第61条の8 |\n| 出生後休業支援給付 | 13%（上乗せ） | 雇用保険法第61条の10 |\n| 合計 | 80% | — |\n\n受け取るのは本人であって会社ではありません。会社に支給される雇用関係助成金とは別の、本人向けの給付です。育児・介護休業法そのものの改正内容は[育児・介護休業法2025年改正で何が変わった？会社が整える就業規則・個別周知・意向確認](/labor/column/ikuji-kaigo-kyugyo-ho-2025-kaisei)で整理しています。\n\n## 手取り10割相当になる条件は何か？\n\n「80%なのに、なぜ手取り10割相当なのか」は、税と社会保険料の扱いで説明できます。ポイントは2つです。\n\n- 育児休業給付・出生後休業支援給付は非課税である（所得税・住民税がかからない）\n- 育児休業期間中は、本人負担・会社負担とも社会保険料が免除される\n\n働いているときの賃金は、額面から所得税・社会保険料などが引かれて手取りになります。手取りは、多くの場合で額面の8割前後です。一方、育休中の給付は額面80%がそのまま入り、そこから税も社会保険料も引かれません。そのため、休業前の手取りと、育休中の給付（額面80%）を比べると、実質的に手取り10割相当になる、という説明になります。\n\n| 比較 | 内訳 |\n|---|---|\n| 働いているとき | 額面100% − 税・社会保険料 ＝ 手取りは概ね8割前後 |\n| 出生後休業支援給付の対象期間 | 額面80%の給付（非課税・社会保険料免除）＝ 差し引きがない |\n\nあくまで「相当」であって、額面どおり10割が振り込まれるわけではありません。個々人の税率・社会保険料率によって割合は前後します。断定的な金額の説明ではなく、目安として社員に伝えるのが安全です。\n\n## 対象28日の数え方と両親の要件は？\n\n上乗せの対象になるのは、通算して28日分（4週間分）が限度です。両親がそろって育児休業を取ることが基本の条件で、次のように整理できます。\n\n| 項目 | 内容 |\n|---|---|\n| 本人・配偶者の要件 | 両親ともに、子の出生後（母は産後休業後）の一定期間内に14日以上の育児休業を取得すること |\n| 配偶者要件の例外 | ひとり親である、配偶者が育児休業の対象とならない働き方（自営業など）である、といった場合は、本人の取得だけで支給される |\n| 支給の限度 | 本人の育児休業について、通算28日分を限度に13%を上乗せ |\n\n「一定期間」の数え方は、父と母で起点が違います。配偶者が出産した父の場合は子の出生日から、本人が出産した母の場合は産後休業を終えた日の翌日から、それぞれ8週間の期間内で数えます。配偶者要件が不要となる具体的なケースは細かく定められているため、自社の社員が該当するかは、厚生労働省・ハローワークの最新のリーフレットで確認してください。男性育休をどう就業規則に落とし込むかは[育児・介護休業法2025年改正で何が変わった？会社が整える就業規則・個別周知・意向確認](/labor/column/ikuji-kaigo-kyugyo-ho-2025-kaisei)でも触れています。\n\n## 育児休業給付とどう重なって計算するのか？\n\n出生後休業支援給付は、単独で出る給付ではありません。育児休業給付金または出生時育児休業給付金の対象になっている休業に「上乗せ」する形で計算します。土台の給付があって、その上に13%が乗る、という順序です。\n\n計算のイメージは次のとおりです。\n\n1. 土台：休業開始時賃金日額 × 支給日数 × 67%（育児休業給付金・出生時育児休業給付金）\n2. 上乗せ：休業開始時賃金日額 × 支給日数（通算28日まで） × 13%（出生後休業支援給付）\n3. 合計：同じ休業日数について、実質80%が支給される\n\n申請は、土台となる育児休業給付の申請とあわせて、原則として事業主がハローワークへ行います。会社は、育児休業の取得日数と、配偶者の育児休業取得の状況を把握しておく必要があります。時短で働きながら受ける育児時短就業給付とは、対象時期も計算も別です。時短給付については[育児時短就業給付は、いつ・いくら・誰がもらえるのか](/labor/column/ikuji-jitan-shugyo-kyufu-2025-yoken)で整理しています。給与計算と申請の事務をどう回すかは[給与計算を社会保険労務士に頼むと、いくらかかるのか](/labor/column/kyuyo-keisan-soba-sharoushi)もあわせてご覧ください。\n\n## 会社は、結局何をすればいいのか？\n\n社員から出生直後の育休の相談があったら、次の順序で進めると漏れが出ません。\n\n1. 本人と配偶者が、それぞれ一定期間内に14日以上の育児休業を取るかを確認する（ひとり親等の例外に当たるかも確認）\n2. 育児休業給付・出生時育児休業給付金の受給資格を確認する\n3. 出生後休業支援給付の上乗せ（通算28日まで）の対象になるかを確認する\n4. 育児休業給付の申請とあわせて、事業主がハローワークへ支給申請を出す\n5. 社会保険料の免除手続き（育児休業等取得者申出書）を年金事務所へ出す\n\n四葉社会保険労務士事務所では、出生後休業支援給付の要件確認・申請、育児休業の就業規則・社内運用の整備、社会保険料免除の手続きについてご相談いただけます。ご相談は無料で、費用は[報酬額表](/labor/ryokin)にまとめています。手続の流れは[ご利用の流れ](/labor/nagare)をご覧ください。育休をめぐって個別の労働紛争が生じた場合の代理・交渉は弁護士、税務判断は税理士の領域です。別の専門家が必要な場合は、それぞれ別契約となり、紹介料はありません。\n\n## よくある質問\n\n**Q. 出生後休業支援給付は、父親だけが対象ですか？**\nA. いいえ。父・母のどちらも対象になり得ます。基本は両親がともに一定期間内に14日以上の育児休業を取ることが条件で、母の場合は産後休業を終えた日の翌日から数えます。ひとり親や、配偶者が育児休業の対象とならない働き方をしている場合などは、本人の取得だけで支給されます。\n\n**Q. なぜ80%の給付で「手取り10割相当」と言えるのですか？**\nA. 育児休業給付・出生後休業支援給付は非課税で、育休中は社会保険料も免除されるためです。働いているときの手取りは額面の8割前後になりますが、給付は額面80%がそのまま入るので、休業前の手取りと比べると実質10割相当になる、という説明です。あくまで目安で、個々人の税率・保険料率で前後します。\n\n**Q. 上乗せは何日分まで受けられますか？**\nA. 通算28日分（4週間分）が限度です。この28日について、休業開始時賃金日額の13%が育児休業給付に上乗せされます。育児休業そのものの期間や育児休業給付の日数とは別に、上乗せ対象が28日で区切られる点に注意してください。\n\n**Q. 育児時短就業給付とは何が違うのですか？**\nA. 対象になる時期と目的が違います。出生後休業支援給付は子の出生直後に「休業」した場合の給付で、育児時短就業給付は2歳未満の子を養育するために「時短で働く」場合の給付です。計算も申請も別々に行います。個別のあてはめは、最新の一次情報と本人の状況に照らして資格者が確認します。\n\n## この記事の根拠\n\n- 雇用保険法第61条の10（出生後休業支援給付金）。2025年4月1日施行（令和6年雇用保険法改正）。条番号は e-Gov 法令検索（雇用保険法・昭和49年法律第116号）の目次構造で確認（2026年8月24日参照）。第三章の二第三節「出生後休業支援給付」＝第61条の10・第61条の11\n- 育児休業給付金・出生時育児休業給付金の給付率（原則67%）：雇用保険法第61条の7・第61条の8\n- 支給要件（両親ともに、子の出生後＝母は産後休業後の一定期間内に14日以上の育児休業を取得。配偶者が就労していない等の場合は本人の取得のみで可）、上乗せ13%、通算28日を限度：厚生労働省「育児休業等給付について」・都道府県労働局／ハローワークの出生後休業支援給付案内（2026年8月24日参照）\n- 育児休業給付・出生後休業支援給付が非課税であること、育児休業期間中の社会保険料が免除されること（手取り10割相当の根拠）：厚生労働省・日本年金機構の案内（2026年8月24日参照）\n- 配偶者要件が不要となる具体的なケースは施行規則・リーフレットで定められており、該当性は最新資料で確認する\n- 育児・介護休業法の改正全体像は別記事[育児・介護休業法2025年改正で何が変わった？会社が整える就業規則・個別周知・意向確認](/labor/column/ikuji-kaigo-kyugyo-ho-2025-kaisei)で扱う\n\nこの記事は、誰に相談するかまで決めるものではありません。四葉社会保険労務士事務所では、出生後休業支援給付の要件確認・申請、育児休業の社内運用の整備、社会保険料免除の手続きについてご相談いただけます。育休をめぐる個別の労働紛争の代理・交渉は弁護士、税務判断は税理士の領域です。別の専門家が必要な場合は、それぞれ別契約となり、紹介料はありません。よくいただくご質問は[よくあるご質問](/labor/faq)にまとめています。\n\n本記事は一般的な情報提供です。制度の適用や個別の判断は、最新の一次情報（厚生労働省・ハローワーク・日本年金機構など）と個別のご事情に照らし、面談のうえ資格者が行います。執筆は[浦松丈二](/about/uramatsu)（社会保険労務士・行政書士・宅地建物取引士）です。",
+    "status": "published",
+    "author": {
+      "name": "浦松 丈二",
+      "title": "社会保険労務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+    },
+    "keywords": [
+      "出生後休業支援給付 計算",
+      "出生後休業支援給付 13% 上乗せ",
+      "出生後休業支援給付 手取り10割",
+      "両親 育児休業 14日 28日",
+      "男性育休 給付 手取り",
+      "出生後休業支援給付 配偶者 要件"
+    ],
+    "tags": [
+      "出生後休業支援給付",
+      "雇用保険",
+      "育児休業給付",
+      "男性育休",
+      "手取り",
+      "労働保険"
+    ],
+    "locales": [],
+    "faq": [
+      {
+        "question": "出生後休業支援給付は、父親だけが対象ですか？",
+        "answer": "いいえ。父・母のどちらも対象になり得ます。基本は両親がともに一定期間内に14日以上の育児休業を取ることが条件で、母の場合は産後休業を終えた日の翌日から数えます。ひとり親や、配偶者が育児休業の対象とならない働き方をしている場合などは、本人の取得だけで支給されます。"
+      },
+      {
+        "question": "なぜ80%の給付で「手取り10割相当」と言えるのですか？",
+        "answer": "育児休業給付・出生後休業支援給付は非課税で、育休中は社会保険料も免除されるためです。働いているときの手取りは額面の8割前後になりますが、給付は額面80%がそのまま入るので、休業前の手取りと比べると実質10割相当になる、という説明です。あくまで目安で、個々人の税率・保険料率で前後します。"
+      },
+      {
+        "question": "上乗せは何日分まで受けられますか？",
+        "answer": "通算28日分（4週間分）が限度です。この28日について、休業開始時賃金日額の13%が育児休業給付に上乗せされます。育児休業そのものの期間や育児休業給付の日数とは別に、上乗せ対象が28日で区切られる点に注意してください。"
+      },
+      {
+        "question": "育児時短就業給付とは何が違うのですか？",
+        "answer": "対象になる時期と目的が違います。出生後休業支援給付は子の出生直後に「休業」した場合の給付で、育児時短就業給付は2歳未満の子を養育するために「時短で働く」場合の給付です。計算も申請も別々に行います。個別のあてはめは、最新の一次情報と本人の状況に照らして資格者が確認します。"
+      }
+    ],
+    "translations": {
+      "en": {
+        "title": "How is the \"100% of take-home pay\" equivalent of the postnatal leave support benefit calculated?",
+        "excerpt": "The postnatal leave support benefit (shussei-go kyugyo shien kyufu), created on April 1, 2025 under the Employment Insurance Act (Article 61-10), adds 13% on top of childcare leave benefits (in principle 67%) when both parents take childcare leave immediately after a child's birth. The combined 80% is non-taxable and, because social insurance premiums are exempt during leave, comes to roughly 100% of pre-leave take-home pay. This article organizes the benefit, the mechanism behind the \"100% of take-home\" equivalent, how the 28 days are counted, and how it overlaps with childcare leave benefits.",
+        "content": "**In short:** The postnatal leave support benefit is an employment-insurance benefit that adds 13% on top of childcare leave benefits (in principle 67%) when both parents take childcare leave immediately after a child's birth (Employment Insurance Act, Article 61-10, effective April 1, 2025). After the addition, the benefit is 80% of the wage, but because both childcare leave benefits and the postnatal leave support benefit are non-taxable, and social insurance premiums are exempt during childcare leave, it comes to roughly 100% of pre-leave take-home pay. You can receive it when both the worker and their spouse take 14 days or more of childcare leave within a certain period after the child's birth (for the mother, after postpartum leave). For a single parent, or when the spouse works in a way not covered by childcare leave, the worker's own leave alone qualifies. The addition is capped at 28 days in total. This article organizes the benefit, the mechanism behind the \"100% of take-home\" equivalent, how the 28 days are counted, and the overlap with childcare leave benefits.\n\nThis article is written for HR staff and managers of small and medium-sized companies that want to, or now need to, promote fathers' childcare leave. The point that \"when both parents take leave, take-home pay is effectively not reduced\" is material for encouraging employees to take leave. The practical point is to grasp the details of the system accurately.\n\n## What kind of benefit is the postnatal leave support benefit?\n\nThe postnatal leave support benefit is an employment-insurance benefit created on April 1, 2025 (Employment Insurance Act, Article 61-10). With the aim of promoting shared work and shared childcare, it is paid on top of childcare leave benefits or the postnatal paternity leave benefit (the benefit for so-called postnatal paternity leave) when both parents take childcare leave immediately after a child's birth.\n\nThe addition rate is 13% of the daily wage at the start of leave. Because childcare leave benefits and the postnatal paternity leave benefit are, in principle, 67% of the daily wage at the start of leave, adding 13% brings the total to 80%.\n\n| Benefit | Rate | Basis |\n|---|---|---|\n| Childcare leave benefit / postnatal paternity leave benefit | In principle 67% | Employment Insurance Act, Articles 61-7 and 61-8 |\n| Postnatal leave support benefit | 13% (added) | Employment Insurance Act, Article 61-10 |\n| Total | 80% | — |\n\nThe recipient is the worker, not the company. It is a benefit for the worker, separate from an employment-related subsidy paid to the company. The overall picture of the amended Child Care and Family Care Leave Act is organized in [What changed in the 2025 revision of the Child Care and Family Care Leave Act](/en/labor/column/ikuji-kaigo-kyugyo-ho-2025-kaisei).\n\n## What is the condition for the \"100% of take-home pay\" equivalent?\n\n\"Why is 80% equivalent to 100% of take-home pay\" can be explained by the treatment of tax and social insurance premiums. There are two points.\n\n- Childcare leave benefits and the postnatal leave support benefit are non-taxable (no income tax or resident tax applies)\n- During the childcare leave period, social insurance premiums are exempt for both the worker's and the company's shares\n\nWhen you are working, the wage has income tax, social insurance premiums, and so on deducted from the gross to arrive at take-home pay. In many cases, take-home pay is around 80% of the gross. On the other hand, the benefit during leave is 80% of the gross paid as-is, with no tax or social insurance premiums deducted. That is why, comparing pre-leave take-home pay with the benefit during leave (80% of gross), it comes to roughly 100% of take-home pay.\n\n| Comparison | Breakdown |\n|---|---|\n| While working | Gross 100% − tax and social insurance premiums = take-home is roughly around 80% |\n| During the postnatal leave support benefit period | An 80%-of-gross benefit (non-taxable, premium-exempt) = no deductions |\n\nIt is \"equivalent,\" not that a full 100% of the gross is transferred. The ratio varies with each person's tax and premium rates. It is safer to convey it to employees as a guide, not as a definitive figure.\n\n## How are the 28 days counted, and what are the both-parent requirements?\n\nThe addition is capped at 28 days (four weeks) in total. Both parents taking childcare leave is the basic condition, organized as follows.\n\n| Item | Details |\n|---|---|\n| Worker/spouse requirement | Both parents take 14 days or more of childcare leave within a certain period after the child's birth (for the mother, after postpartum leave) |\n| Exception to the spouse requirement | For a single parent, or when the spouse works in a way not covered by childcare leave (such as self-employment), the worker's own leave alone qualifies |\n| Payment cap | Up to 28 days in total of the worker's childcare leave, with the 13% addition |\n\nThe starting point of the \"certain period\" differs for father and mother. For a father whose spouse gave birth, it is counted from the child's date of birth; for a mother who gave birth herself, from the day after her postpartum leave ends — each within an eight-week period. Because the specific cases where the spouse requirement is waived are set out in detail, confirm whether your employee falls under one against the latest leaflet from the Ministry of Health, Labour and Welfare and Hello Work. How to incorporate fathers' childcare leave into the work rules is also touched on in [What changed in the 2025 revision of the Child Care and Family Care Leave Act](/en/labor/column/ikuji-kaigo-kyugyo-ho-2025-kaisei).\n\n## How does it overlap with childcare leave benefits in the calculation?\n\nThe postnatal leave support benefit is not paid on its own. It is calculated as an \"addition\" to leave that is already covered by the childcare leave benefit or the postnatal paternity leave benefit. The order is that there is a base benefit, and 13% is layered on top of it.\n\nThe calculation image is as follows.\n\n1. Base: daily wage at the start of leave × payment days × 67% (childcare leave benefit / postnatal paternity leave benefit)\n2. Addition: daily wage at the start of leave × payment days (up to 28 in total) × 13% (postnatal leave support benefit)\n3. Total: for the same leave days, 80% is effectively paid\n\nThe application is, in principle, filed by the employer with Hello Work together with the application for the base childcare leave benefit. The company must grasp the number of days of childcare leave taken and the status of the spouse's childcare leave. It differs from the childcare short-time work benefit received while working short hours in both timing and calculation. For the short-time benefit, see [Childcare short-time work benefit — when, how much, and who receives it](/en/labor/column/ikuji-jitan-shugyo-kyufu-2025-yoken). For how to run the payroll and application paperwork, see also [How much does it cost to have a Certified Social Insurance and Labor Consultant do payroll](/en/labor/column/kyuyo-keisan-soba-sharoushi).\n\n## In the end, what should a company do?\n\nWhen an employee consults about leave immediately after birth, proceeding in the following order avoids omissions.\n\n1. Confirm whether the worker and spouse will each take 14 days or more of childcare leave within a certain period (and whether an exception such as single parenthood applies)\n2. Confirm eligibility for the childcare leave benefit and the postnatal paternity leave benefit\n3. Confirm whether the addition of the postnatal leave support benefit (up to 28 days in total) applies\n4. Together with the childcare leave benefit application, have the employer file the payment application with Hello Work\n5. Submit the social insurance premium exemption procedure (the notification of a person taking childcare leave, etc.) to the pension office\n\n四葉社会保険労務士事務所 can advise on confirming eligibility for and applying for the postnatal leave support benefit, arranging the work rules and in-house operations for childcare leave, and the social insurance premium exemption procedure. Consultation is free, and fees are set out in the [fee schedule](/en/labor/ryokin). For the steps of the process, see [How consultation and contracting work](/en/labor/nagare). Representation and negotiation in an individual labor dispute over leave are the domain of a lawyer (Bengoshi), and tax determinations are the domain of a tax accountant. If a different professional is needed, each is contracted separately, and there is no referral fee.\n\n## Frequently asked questions\n\n**Q. Is the postnatal leave support benefit only for the father?**\nA. No. Both the father and the mother can be eligible. The basic condition is that both parents take 14 days or more of childcare leave within a certain period; for the mother, it is counted from the day after her postpartum leave ends. For a single parent, or when the spouse works in a way not covered by childcare leave, the worker's own leave alone qualifies.\n\n**Q. Why can an 80% benefit be called \"100% of take-home pay equivalent\"?**\nA. Because childcare leave benefits and the postnatal leave support benefit are non-taxable, and social insurance premiums are exempt during childcare leave. Take-home pay while working is around 80% of the gross, but the benefit is 80% of the gross paid as-is, so compared with pre-leave take-home pay it comes to roughly 100%. It is a guide, and varies with each person's tax and premium rates.\n\n**Q. Up to how many days can the addition be received?**\nA. Up to 28 days (four weeks) in total. For these 28 days, 13% of the daily wage at the start of leave is added on top of the childcare leave benefit. Note that the addition target is capped at 28 days, separate from the period of childcare leave itself and the number of days of the childcare leave benefit.\n\n**Q. How does it differ from the childcare short-time work benefit?**\nA. The timing and purpose differ. The postnatal leave support benefit is a benefit for \"leave\" immediately after a child's birth, while the childcare short-time work benefit is a benefit for \"working short hours\" to raise a child under age 2. The calculation and the application are done separately. Individual application is confirmed by a qualified professional against the latest primary sources and the worker's situation.\n\n## Sources for this article\n\n- Employment Insurance Act, Article 61-10 (postnatal leave support benefit). Effective April 1, 2025 (2024 amendment to the Employment Insurance Act). Article numbers confirmed against the table-of-contents structure of e-Gov law search (Employment Insurance Act, Act No. 116 of 1974; referenced August 24, 2026): Chapter 3-2, Section 3 \"postnatal leave support benefit\" = Articles 61-10 and 61-11.\n- Rate of the childcare leave benefit and the postnatal paternity leave benefit (in principle 67%): Employment Insurance Act, Articles 61-7 and 61-8.\n- Eligibility (both parents take 14 days or more of childcare leave within a certain period after the child's birth — for the mother, after postpartum leave; the worker's own leave alone qualifies when the spouse is not working, etc.), the 13% addition, and the 28-day total cap: Ministry of Health, Labour and Welfare \"About childcare leave and other benefits\" and the Prefectural Labour Bureau / Hello Work guidance on the postnatal leave support benefit (referenced August 24, 2026).\n- That childcare leave benefits and the postnatal leave support benefit are non-taxable, and that social insurance premiums are exempt during the childcare leave period (the basis for the \"100% of take-home\" equivalent): Ministry of Health, Labour and Welfare and Japan Pension Service guidance (referenced August 24, 2026).\n- The specific cases where the spouse requirement is waived are set out in the enforcement regulations and leaflets; confirm applicability against the latest materials.\n- The overall picture of the amended Child Care and Family Care Leave Act is covered in [What changed in the 2025 revision of the Child Care and Family Care Leave Act](/en/labor/column/ikuji-kaigo-kyugyo-ho-2025-kaisei).\n\nThis article does not decide whom to consult. 四葉社会保険労務士事務所 can advise on confirming eligibility for and applying for the postnatal leave support benefit, arranging in-house operations for childcare leave, and the social insurance premium exemption procedure. Representation and negotiation in an individual labor dispute over leave are the domain of a lawyer (Bengoshi), and tax determinations are the domain of a tax accountant. If a different professional is needed, each is contracted separately, and there is no referral fee. For frequently asked questions, see the [FAQ](/en/labor/faq).\n\nThis article is general information. Whether the system applies and individual determinations are made by a qualified professional after a consultation, in light of the latest primary sources (the Ministry of Health, Labour and Welfare, Hello Work, the Japan Pension Service, etc.) and individual circumstances. Written by [Joji Uramatsu](/en/about/uramatsu) (Shakai Hoken Roumushi, Gyoseishoshi, Registered Real Estate Transaction Specialist).",
+        "category": "Labor law basics",
+        "keywords": [
+          "postnatal leave support benefit 2025",
+          "shussei-go kyugyo shien kyufu 13%",
+          "both parents childcare leave 14 days",
+          "100% of take-home pay equivalent",
+          "up to 28 days postnatal support"
+        ],
+        "tags": [
+          "Postnatal leave support benefit",
+          "Employment insurance",
+          "Childcare leave benefits",
+          "Both-parent leave",
+          "Take-home pay",
+          "Labor management"
+        ],
+        "author": {
+          "name": "Joji Uramatsu",
+          "title": "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所"
+        },
+        "faq": [
+          {
+            "question": "Is the postnatal leave support benefit only for the father?",
+            "answer": "No. Both the father and the mother can be eligible. The basic condition is that both parents take 14 days or more of childcare leave within a certain period; for the mother, it is counted from the day after her postpartum leave ends. For a single parent, or when the spouse works in a way not covered by childcare leave, the worker's own leave alone qualifies."
+          },
+          {
+            "question": "Why can an 80% benefit be called \"100% of take-home pay equivalent\"?",
+            "answer": "Because childcare leave benefits and the postnatal leave support benefit are non-taxable, and social insurance premiums are exempt during childcare leave. Take-home pay while working is around 80% of the gross, but the benefit is 80% of the gross paid as-is, so compared with pre-leave take-home pay it comes to roughly 100%. It is a guide, and varies with each person's tax and premium rates."
+          },
+          {
+            "question": "Up to how many days can the addition be received?",
+            "answer": "Up to 28 days (four weeks) in total. For these 28 days, 13% of the daily wage at the start of leave is added on top of the childcare leave benefit. Note that the addition target is capped at 28 days, separate from the period of childcare leave itself and the number of days of the childcare leave benefit."
+          },
+          {
+            "question": "How does it differ from the childcare short-time work benefit?",
+            "answer": "The timing and purpose differ. The postnatal leave support benefit is a benefit for \"leave\" immediately after a child's birth, while the childcare short-time work benefit is a benefit for \"working short hours\" to raise a child under age 2. The calculation and the application are done separately. Individual application is confirmed by a qualified professional against the latest primary sources and the worker's situation."
+          }
+        ]
+      },
+      "zh-tw": {
+        "title": "出生後休業支援給付的「實得10成」相當如何計算？",
+        "excerpt": "出生後休業支援給付（出生後休業支援給付）於2025年4月1日依雇用保險法第61條之10創設，當雙親在子女出生後同時取得育兒休業時，於育兒休業給付（原則67%）之上再加13%。加算後合計80%，因給付非課稅、且育休期間社會保險費免除，與休業前的「實得薪資」相比實質相當於10成。本文依序整理給付內容、實得10成相當的機制、28日的計算方式，以及與育兒休業給付的重疊。",
+        "content": "**先講結論**：出生後休業支援給付，是當雙親在子女出生後同時取得育兒休業時，於育兒休業給付（原則67%）之上再加13%的雇用保險給付（雇用保險法第61條之10，2025年4月1日施行）。加算後給付為薪資的80%，但因育兒休業給付與出生後休業支援給付均非課稅，且育休期間社會保險費也免除，與休業前的「實得薪資」相比實質相當於10成。可以領取的條件是本人與配偶均在子女出生後（母親為產後休業後）的一定期間內取得14日以上的育兒休業。單親、或配偶從事非育兒休業對象的工作方式等情形，僅本人取得即可支付。加算對象以通算28日為上限。本文依序整理給付內容、實得10成相當的機制、28日的計算方式，以及與育兒休業給付的重疊。\n\n本文以想推動、或必須推動男性育休的中小企業人事勞務負責人、經營者為對象。「雙親一同取得時實得收入實質不減」這點，是向員工建議育休時的說明材料。正確掌握制度內容是實務重點。\n\n## 出生後休業支援給付是什麼樣的給付？\n\n出生後休業支援給付是2025年4月1日創設的雇用保險給付（雇用保險法第61條之10）。以推進共同工作・共同育兒為目的，當雙親在子女出生後同時取得育兒休業時，於育兒休業給付或出生時育兒休業給付金（即所謂產後爸爸育休的給付）之上加算支付。\n\n加算率是休業開始時薪資日額的13%。育兒休業給付・出生時育兒休業給付金原則上為休業開始時薪資日額的67%，故加算13%後合計為80%。\n\n| 給付 | 率 | 依據 |\n|---|---|---|\n| 育兒休業給付金・出生時育兒休業給付金 | 原則67% | 雇用保險法第61條之7・第61條之8 |\n| 出生後休業支援給付 | 13%（加算） | 雇用保險法第61條之10 |\n| 合計 | 80% | — |\n\n領取者是本人而非公司。這是本人向的給付，與支付給公司的雇用關係補助金不同。育兒・介護休業法本身的修正內容，整理於[育兒・介護休業法2025年修正改了什麼？公司要整備的就業規則・個別通知・意向確認](/zh-tw/labor/column/ikuji-kaigo-kyugyo-ho-2025-kaisei)。\n\n## 實得10成相當的條件是什麼？\n\n「明明是80%，為何說是實得10成相當」，可用稅與社會保險費的處理來說明。重點有兩個。\n\n- 育兒休業給付・出生後休業支援給付均非課稅（不課所得稅・住民稅）\n- 育兒休業期間，本人負擔・公司負擔的社會保險費均免除\n\n工作時的薪資，會從面額扣除所得稅・社會保險費等後成為實得。實得多數情形約為面額的8成。另一方面，育休中的給付是面額80%原樣入帳，且不扣稅也不扣社會保險費。因此，將休業前的實得與育休中的給付（面額80%）相比，實質相當於實得10成。\n\n| 比較 | 內容 |\n|---|---|\n| 工作時 | 面額100% − 稅・社會保險費 ＝ 實得約8成前後 |\n| 出生後休業支援給付的對象期間 | 面額80%的給付（非課稅・社會保險費免除）＝ 無扣除 |\n\n終究是「相當」，並非面額10成原樣匯入。比例會因各人的稅率・社會保險費率而前後浮動。建議以概略值向員工傳達，而非斷定金額，較為安全。\n\n## 對象28日如何計算、雙親要件為何？\n\n加算對象以通算28日（4週）為上限。雙親一同取得育兒休業是基本條件，可整理如下。\n\n| 項目 | 內容 |\n|---|---|\n| 本人・配偶要件 | 雙親均在子女出生後（母親為產後休業後）的一定期間內取得14日以上的育兒休業 |\n| 配偶要件的例外 | 單親、或配偶從事非育兒休業對象的工作方式（如自營業）等情形，僅本人取得即可支付 |\n| 支付上限 | 就本人的育兒休業，以通算28日為上限加算13% |\n\n「一定期間」的計算起點，父與母不同。配偶生產的父親從子女出生日起算，本人生產的母親從產後休業結束日的翌日起算，各在8週的期間內計算。配偶要件不需要的具體情形有細緻規定，自家員工是否符合，請以厚生勞動省・Hello Work的最新宣傳單確認。男性育休如何落實到就業規則，於[育兒・介護休業法2025年修正改了什麼？公司要整備的就業規則・個別通知・意向確認](/zh-tw/labor/column/ikuji-kaigo-kyugyo-ho-2025-kaisei)亦有觸及。\n\n## 與育兒休業給付在計算上如何重疊？\n\n出生後休業支援給付並非單獨支付的給付。它是以「加算」的形式，計算於已是育兒休業給付金或出生時育兒休業給付金對象的休業之上。順序是先有基底給付，再於其上疊加13%。\n\n計算的概念如下。\n\n1. 基底：休業開始時薪資日額 × 支付日數 × 67%（育兒休業給付金・出生時育兒休業給付金）\n2. 加算：休業開始時薪資日額 × 支付日數（通算至28日） × 13%（出生後休業支援給付）\n3. 合計：就同一休業日數，實質支付80%\n\n申請原則上由雇主連同基底的育兒休業給付申請，一併向Hello Work辦理。公司需掌握育兒休業的取得日數，以及配偶育兒休業的取得狀況。與一邊工作一邊領取的育兒縮短工時就業給付，對象時期與計算皆不同。縮短工時給付於[育兒縮短工時就業給付——何時、多少、由誰領取](/zh-tw/labor/column/ikuji-jitan-shugyo-kyufu-2025-yoken)整理。薪資計算與申請事務如何運作，亦請參閱[將薪資計算委託社會保險勞務士要花多少錢](/zh-tw/labor/column/kyuyo-keisan-soba-sharoushi)。\n\n## 公司到頭來該做什麼？\n\n有員工諮詢出生後的育休時，依以下順序進行可避免遺漏。\n\n1. 確認本人與配偶是否各在一定期間內取得14日以上的育兒休業（並確認是否符合單親等例外）\n2. 確認育兒休業給付・出生時育兒休業給付金的受給資格\n3. 確認是否符合出生後休業支援給付的加算（通算至28日）對象\n4. 連同育兒休業給付申請，由雇主向Hello Work提出支付申請\n5. 向年金事務所提出社會保險費免除手續（育兒休業等取得者申出書）\n\n四葉社会保険労務士事務所可就出生後休業支援給付的要件確認・申請、育兒休業的就業規則・社內運作整備、社會保險費免除手續提供諮詢。諮詢免費，費用整理於[報酬額表](/zh-tw/labor/ryokin)。手續流程請見[使用流程](/zh-tw/labor/nagare)。育休引發個別勞動糾紛時的代理・交涉屬律師領域，稅務判斷屬稅理士領域。若需要其他專家，將各自另行簽約，且無介紹費。\n\n## 常見問題\n\n**Q. 出生後休業支援給付只有父親是對象嗎？**\nA. 不是。父・母皆可能成為對象。基本是雙親均在一定期間內取得14日以上的育兒休業，母親的情形從產後休業結束日的翌日起算。單親、或配偶從事非育兒休業對象的工作方式等情形，僅本人取得即可支付。\n\n**Q. 為何80%的給付可以說是「實得10成相當」？**\nA. 因為育兒休業給付・出生後休業支援給付非課稅，且育休期間社會保險費也免除。工作時的實得約為面額的8成，但給付是面額80%原樣入帳，故與休業前的實得相比實質相當於10成。這是概略值，會因各人的稅率・保險費率而前後浮動。\n\n**Q. 加算最多可領幾日份？**\nA. 以通算28日（4週）為上限。就這28日，於育兒休業給付之上加算休業開始時薪資日額的13%。請注意，加算對象以28日區隔，與育兒休業本身的期間及育兒休業給付的日數是分開的。\n\n**Q. 與育兒縮短工時就業給付有何不同？**\nA. 對象時期與目的不同。出生後休業支援給付是子女出生後「休業」時的給付，育兒縮短工時就業給付是為養育未滿2歲子女而「縮短工時工作」時的給付。計算與申請皆分開進行。個別的套用，由有資格者依最新一次資訊與本人狀況確認。\n\n## 本文的依據\n\n- 雇用保險法第61條之10（出生後休業支援給付金）。2025年4月1日施行（令和6年雇用保險法修正）。條號依 e-Gov 法令檢索（雇用保險法・昭和49年法律第116號）的目次結構確認（2026年8月24日參照）：第三章之二第三節「出生後休業支援給付」＝第61條之10・第61條之11。\n- 育兒休業給付金・出生時育兒休業給付金的給付率（原則67%）：雇用保險法第61條之7・第61條之8。\n- 支付要件（雙親均在子女出生後＝母親為產後休業後的一定期間內取得14日以上育兒休業；配偶未就業等情形僅本人取得即可）、加算13%、通算28日為上限：厚生勞動省「育兒休業等給付相關」與都道府縣勞動局／Hello Work的出生後休業支援給付說明（2026年8月24日參照）。\n- 育兒休業給付・出生後休業支援給付為非課稅、育兒休業期間社會保險費免除（實得10成相當的依據）：厚生勞動省・日本年金機構的說明（2026年8月24日參照）。\n- 配偶要件不需要的具體情形，於施行規則・宣傳單規定，符合與否以最新資料確認。\n- 育兒・介護休業法的修正全貌於另篇[育兒・介護休業法2025年修正改了什麼？公司要整備的就業規則・個別通知・意向確認](/zh-tw/labor/column/ikuji-kaigo-kyugyo-ho-2025-kaisei)說明。\n\n本文並不決定要向誰諮詢。四葉社会保険労務士事務所可就出生後休業支援給付的要件確認・申請、育兒休業的社內運作整備、社會保險費免除手續提供諮詢。育休的個別勞動糾紛代理・交涉屬律師領域，稅務判斷屬稅理士領域。若需要其他專家，將各自另行簽約，且無介紹費。常見問題整理於[常見問答](/zh-tw/labor/faq)。\n\n本文為一般性資訊提供。制度的適用與個別判斷，將依最新一次資訊（厚生勞動省・Hello Work・日本年金機構等）與個別情形，於面談後由有資格者進行。撰文為[浦松丈二](/zh-tw/about/uramatsu)（社會保險勞務士・行政書士・宅地建物取引士）。",
+        "category": "勞動法基礎",
+        "keywords": [
+          "出生後休業支援給付 2025",
+          "出生後休業支援給付 13%",
+          "雙親 育兒休業 14日",
+          "實得10成 相當",
+          "通算28日 上乗"
+        ],
+        "tags": [
+          "出生後休業支援給付",
+          "雇用保險",
+          "育兒休業給付",
+          "雙親育休",
+          "實得薪資",
+          "勞務管理"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "出生後休業支援給付只有父親是對象嗎？",
+            "answer": "不是。父・母皆可能成為對象。基本是雙親均在一定期間內取得14日以上的育兒休業，母親的情形從產後休業結束日的翌日起算。單親、或配偶從事非育兒休業對象的工作方式等情形，僅本人取得即可支付。"
+          },
+          {
+            "question": "為何80%的給付可以說是「實得10成相當」？",
+            "answer": "因為育兒休業給付・出生後休業支援給付非課稅，且育休期間社會保險費也免除。工作時的實得約為面額的8成，但給付是面額80%原樣入帳，故與休業前的實得相比實質相當於10成。這是概略值，會因各人的稅率・保險費率而前後浮動。"
+          },
+          {
+            "question": "加算最多可領幾日份？",
+            "answer": "以通算28日（4週）為上限。就這28日，於育兒休業給付之上加算休業開始時薪資日額的13%。請注意，加算對象以28日區隔，與育兒休業本身的期間及育兒休業給付的日數是分開的。"
+          },
+          {
+            "question": "與育兒縮短工時就業給付有何不同？",
+            "answer": "對象時期與目的不同。出生後休業支援給付是子女出生後「休業」時的給付，育兒縮短工時就業給付是為養育未滿2歲子女而「縮短工時工作」時的給付。計算與申請皆分開進行。個別的套用，由有資格者依最新一次資訊與本人狀況確認。"
+          }
+        ]
+      },
+      "zh": {
+        "title": "出生后休业支援给付的「实得10成」相当如何计算？",
+        "excerpt": "出生后休业支援给付（出生後休業支援給付）于2025年4月1日依雇用保险法第61条之10创设，当双亲在子女出生后同时取得育儿休业时，于育儿休业给付（原则67%）之上再加13%。加算后合计80%，因给付非课税、且育休期间社会保险费免除，与休业前的「实得薪资」相比实质相当于10成。本文依序整理给付内容、实得10成相当的机制、28日的计算方式，以及与育儿休业给付的重叠。",
+        "content": "**先讲结论**：出生后休业支援给付，是当双亲在子女出生后同时取得育儿休业时，于育儿休业给付（原则67%）之上再加13%的雇用保险给付（雇用保险法第61条之10，2025年4月1日施行）。加算后给付为薪资的80%，但因育儿休业给付与出生后休业支援给付均非课税，且育休期间社会保险费也免除，与休业前的「实得薪资」相比实质相当于10成。可以领取的条件是本人与配偶均在子女出生后（母亲为产后休业后）的一定期间内取得14日以上的育儿休业。单亲、或配偶从事非育儿休业对象的工作方式等情形，仅本人取得即可支付。加算对象以通算28日为上限。本文依序整理给付内容、实得10成相当的机制、28日的计算方式，以及与育儿休业给付的重叠。\n\n本文以想推动、或必须推动男性育休的中小企业人事劳务负责人、经营者为对象。「双亲一同取得时实得收入实质不减」这点，是向员工建议育休时的说明材料。正确掌握制度内容是实务重点。\n\n## 出生后休业支援给付是什么样的给付？\n\n出生后休业支援给付是2025年4月1日创设的雇用保险给付（雇用保险法第61条之10）。以推进共同工作・共同育儿为目的，当双亲在子女出生后同时取得育儿休业时，于育儿休业给付或出生时育儿休业给付金（即所谓产后爸爸育休的给付）之上加算支付。\n\n加算率是休业开始时薪资日额的13%。育儿休业给付・出生时育儿休业给付金原则上为休业开始时薪资日额的67%，故加算13%后合计为80%。\n\n| 给付 | 率 | 依据 |\n|---|---|---|\n| 育儿休业给付金・出生时育儿休业给付金 | 原则67% | 雇用保险法第61条之7・第61条之8 |\n| 出生后休业支援给付 | 13%（加算） | 雇用保险法第61条之10 |\n| 合计 | 80% | — |\n\n领取者是本人而非公司。这是本人向的给付，与支付给公司的雇用关系补助金不同。育儿・护理休假法本身的修正内容，整理于[育儿・护理休假法2025年修正改了什么？公司要整备的就业规则・个别通知・意向确认](/zh/labor/column/ikuji-kaigo-kyugyo-ho-2025-kaisei)。\n\n## 实得10成相当的条件是什么？\n\n「明明是80%，为何说是实得10成相当」，可用税与社会保险费的处理来说明。重点有两个。\n\n- 育儿休业给付・出生后休业支援给付均非课税（不课所得税・住民税）\n- 育儿休业期间，本人负担・公司负担的社会保险费均免除\n\n工作时的薪资，会从面额扣除所得税・社会保险费等后成为实得。实得多数情形约为面额的8成。另一方面，育休中的给付是面额80%原样入账，且不扣税也不扣社会保险费。因此，将休业前的实得与育休中的给付（面额80%）相比，实质相当于实得10成。\n\n| 比较 | 内容 |\n|---|---|\n| 工作时 | 面额100% − 税・社会保险费 ＝ 实得约8成前后 |\n| 出生后休业支援给付的对象期间 | 面额80%的给付（非课税・社会保险费免除）＝ 无扣除 |\n\n终究是「相当」，并非面额10成原样汇入。比例会因各人的税率・社会保险费率而前后浮动。建议以概略值向员工传达，而非断定金额，较为安全。\n\n## 对象28日如何计算、双亲要件为何？\n\n加算对象以通算28日（4周）为上限。双亲一同取得育儿休业是基本条件，可整理如下。\n\n| 项目 | 内容 |\n|---|---|\n| 本人・配偶要件 | 双亲均在子女出生后（母亲为产后休业后）的一定期间内取得14日以上的育儿休业 |\n| 配偶要件的例外 | 单亲、或配偶从事非育儿休业对象的工作方式（如自营业）等情形，仅本人取得即可支付 |\n| 支付上限 | 就本人的育儿休业，以通算28日为上限加算13% |\n\n「一定期间」的计算起点，父与母不同。配偶生产的父亲从子女出生日起算，本人生产的母亲从产后休业结束日的翌日起算，各在8周的期间内计算。配偶要件不需要的具体情形有细致规定，自家员工是否符合，请以厚生劳动省・Hello Work的最新宣传单确认。男性育休如何落实到就业规则，于[育儿・护理休假法2025年修正改了什么？公司要整备的就业规则・个别通知・意向确认](/zh/labor/column/ikuji-kaigo-kyugyo-ho-2025-kaisei)亦有触及。\n\n## 与育儿休业给付在计算上如何重叠？\n\n出生后休业支援给付并非单独支付的给付。它是以「加算」的形式，计算于已是育儿休业给付金或出生时育儿休业给付金对象的休业之上。顺序是先有基底给付，再于其上叠加13%。\n\n计算的概念如下。\n\n1. 基底：休业开始时薪资日额 × 支付日数 × 67%（育儿休业给付金・出生时育儿休业给付金）\n2. 加算：休业开始时薪资日额 × 支付日数（通算至28日） × 13%（出生后休业支援给付）\n3. 合计：就同一休业日数，实质支付80%\n\n申请原则上由雇主连同基底的育儿休业给付申请，一并向Hello Work办理。公司需掌握育儿休业的取得日数，以及配偶育儿休业的取得状况。与一边工作一边领取的育儿缩短工时就业给付，对象时期与计算皆不同。缩短工时给付于[育儿缩短工时就业给付——何时、多少、由谁领取](/zh/labor/column/ikuji-jitan-shugyo-kyufu-2025-yoken)整理。薪资计算与申请事务如何运作，亦请参阅[将薪资计算委托社会保险劳务士要花多少钱](/zh/labor/column/kyuyo-keisan-soba-sharoushi)。\n\n## 公司到头来该做什么？\n\n有员工咨询出生后的育休时，依以下顺序进行可避免遗漏。\n\n1. 确认本人与配偶是否各在一定期间内取得14日以上的育儿休业（并确认是否符合单亲等例外）\n2. 确认育儿休业给付・出生时育儿休业给付金的受给资格\n3. 确认是否符合出生后休业支援给付的加算（通算至28日）对象\n4. 连同育儿休业给付申请，由雇主向Hello Work提出支付申请\n5. 向年金事务所提出社会保险费免除手续（育儿休业等取得者申出书）\n\n四葉社会保険労務士事務所可就出生后休业支援给付的要件确认・申请、育儿休业的就业规则・社内运作整备、社会保险费免除手续提供咨询。咨询免费，费用整理于[报酬额表](/zh/labor/ryokin)。手续流程请见[使用流程](/zh/labor/nagare)。育休引发个别劳动纠纷时的代理・交涉属律师领域，税务判断属税理士领域。若需要其他专家，将各自另行签约，且无介绍费。\n\n## 常见问题\n\n**Q. 出生后休业支援给付只有父亲是对象吗？**\nA. 不是。父・母皆可能成为对象。基本是双亲均在一定期间内取得14日以上的育儿休业，母亲的情形从产后休业结束日的翌日起算。单亲、或配偶从事非育儿休业对象的工作方式等情形，仅本人取得即可支付。\n\n**Q. 为何80%的给付可以说是「实得10成相当」？**\nA. 因为育儿休业给付・出生后休业支援给付非课税，且育休期间社会保险费也免除。工作时的实得约为面额的8成，但给付是面额80%原样入账，故与休业前的实得相比实质相当于10成。这是概略值，会因各人的税率・保险费率而前后浮动。\n\n**Q. 加算最多可领几日份？**\nA. 以通算28日（4周）为上限。就这28日，于育儿休业给付之上加算休业开始时薪资日额的13%。请注意，加算对象以28日区隔，与育儿休业本身的期间及育儿休业给付的日数是分开的。\n\n**Q. 与育儿缩短工时就业给付有何不同？**\nA. 对象时期与目的不同。出生后休业支援给付是子女出生后「休业」时的给付，育儿缩短工时就业给付是为养育未满2岁子女而「缩短工时工作」时的给付。计算与申请皆分开进行。个别的套用，由有资格者依最新一次资讯与本人状况确认。\n\n## 本文的依据\n\n- 雇用保险法第61条之10（出生后休业支援给付金）。2025年4月1日施行（令和6年雇用保险法修正）。条号依 e-Gov 法令检索（雇用保险法・昭和49年法律第116号）的目次结构确认（2026年8月24日参照）：第三章之二第三节「出生后休业支援给付」＝第61条之10・第61条之11。\n- 育儿休业给付金・出生时育儿休业给付金的给付率（原则67%）：雇用保险法第61条之7・第61条之8。\n- 支付要件（双亲均在子女出生后＝母亲为产后休业后的一定期间内取得14日以上育儿休业；配偶未就业等情形仅本人取得即可）、加算13%、通算28日为上限：厚生劳动省「育儿休业等给付相关」与都道府县劳动局／Hello Work的出生后休业支援给付说明（2026年8月24日参照）。\n- 育儿休业给付・出生后休业支援给付为非课税、育儿休业期间社会保险费免除（实得10成相当的依据）：厚生劳动省・日本年金机构的说明（2026年8月24日参照）。\n- 配偶要件不需要的具体情形，于施行规则・宣传单规定，符合与否以最新资料确认。\n- 育儿・护理休假法的修正全貌于另篇[育儿・护理休假法2025年修正改了什么？公司要整备的就业规则・个别通知・意向确认](/zh/labor/column/ikuji-kaigo-kyugyo-ho-2025-kaisei)说明。\n\n本文并不决定要向谁咨询。四葉社会保険労務士事務所可就出生后休业支援给付的要件确认・申请、育儿休业的社内运作整备、社会保险费免除手续提供咨询。育休的个别劳动纠纷代理・交涉属律师领域，税务判断属税理士领域。若需要其他专家，将各自另行签约，且无介绍费。常见问题整理于[常见问答](/zh/labor/faq)。\n\n本文为一般性资讯提供。制度的适用与个别判断，将依最新一次资讯（厚生劳动省・Hello Work・日本年金机构等）与个别情形，于面谈后由有资格者进行。撰文为[浦松丈二](/zh/about/uramatsu)（社会保险劳务士・行政书士・宅地建物取引士）。",
+        "category": "劳动法基础",
+        "keywords": [
+          "出生后休业支援给付 2025",
+          "出生後休業支援給付 13%",
+          "双亲 育儿休业 14日",
+          "实得10成 相当",
+          "通算28日 上乗"
+        ],
+        "tags": [
+          "出生后休业支援给付",
+          "雇用保险",
+          "育儿休业给付",
+          "双亲育休",
+          "实得薪资",
+          "劳务管理"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "出生后休业支援给付只有父亲是对象吗？",
+            "answer": "不是。父・母皆可能成为对象。基本是双亲均在一定期间内取得14日以上的育儿休业，母亲的情形从产后休业结束日的翌日起算。单亲、或配偶从事非育儿休业对象的工作方式等情形，仅本人取得即可支付。"
+          },
+          {
+            "question": "为何80%的给付可以说是「实得10成相当」？",
+            "answer": "因为育儿休业给付・出生后休业支援给付非课税，且育休期间社会保险费也免除。工作时的实得约为面额的8成，但给付是面额80%原样入账，故与休业前的实得相比实质相当于10成。这是概略值，会因各人的税率・保险费率而前后浮动。"
+          },
+          {
+            "question": "加算最多可领几日份？",
+            "answer": "以通算28日（4周）为上限。就这28日，于育儿休业给付之上加算休业开始时薪资日额的13%。请注意，加算对象以28日区隔，与育儿休业本身的期间及育儿休业给付的日数是分开的。"
+          },
+          {
+            "question": "与育儿缩短工时就业给付有何不同？",
+            "answer": "对象时期与目的不同。出生后休业支援给付是子女出生后「休业」时的给付，育儿缩短工时就业给付是为养育未满2岁子女而「缩短工时工作」时的给付。计算与申请皆分开进行。个别的套用，由有资格者依最新一次资讯与本人状况确认。"
+          }
+        ]
+      }
+    }
   }
 ];

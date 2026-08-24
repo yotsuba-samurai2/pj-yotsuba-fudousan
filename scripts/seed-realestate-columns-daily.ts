@@ -136,21 +136,50 @@ const SITEMAP_URL = "https://luck428.com/sitemap.xml";
 const SITEMAP_TIMEOUT_MS = 15_000;
 
 /**
+ * 他士業ルートに実在する slug（slug → その士業のルート接頭辞）。
+ *
+ * 用途は「NGメッセージに理由を添える」ことだけ。許可リストには入れない。
+ * /column は business=realestate 専用ルートなので、行政書士・社労士の記事へ
+ * /column/<slug> でリンクしたものは今までどおり NG で落とす（緩和しない）。
+ *
+ * 2026-08-24 の Daily Columns はこれで落ちた。slug は実在するのに
+ * ルート接頭辞だけ間違っている、というのは NG 文面からは読み取れなかった。
+ */
+let OTHER_BUSINESS_COLUMN_SLUGS: Map<string, { prefix: string; label: string }> = new Map();
+
+/** sitemap から拾う他士業ルート（/column は realestate 専用なのでここには入れない）。 */
+const OTHER_BUSINESS_ROUTES = [
+  { prefix: "/legal/column", label: "行政書士側" },
+  { prefix: "/labor/column", label: "社労士側" },
+] as const;
+
+type PublishedSlugs = {
+  /** 許可リストに union する realestate の slug。 */
+  realestate: string[];
+  /** ヒント専用。他士業ルートに実在する slug → そのルート接頭辞。 */
+  other: Map<string, { prefix: string; label: string }>;
+};
+
+/**
  * 本番 sitemap に実在する /column/<slug> を集める。
  *
  * 拾うのは日本語の実体URL（`<loc>https://luck428.com/column/<slug></loc>`）だけ。
  * - ロケール接頭辞つき（/en/column/ /zh-tw/column/ /zh/column/）は拾わない。
  *   記事本文の内部リンクは日本語URLで書く決まりなので、許可リストに入れる意味がない。
- * - 他士業の /legal/column/ も拾わない（/column は business=realestate 専用ルート）。
+ * - 他士業の /legal/column/ /labor/column/ は許可リストには入れない
+ *   （/column は business=realestate 専用ルート）。ただし「slug は実在するが
+ *   ルート接頭辞が別士業」という取り違えを NG 文面で言い当てるために、
+ *   別枠（other）で集めて返す。許可リストが緩むわけではない。
  * - `<xhtml:link rel="alternate" href="…">` は `<loc>` ではないので、この正規表現には入らない。
  *
  * 取得に失敗しても検証は止めない。sitemap が引けないのは記事の不備ではないので
  * NG ではなく WARN を出し、リポジトリ由来の許可リストだけで続行する
  * （実在しない slug はその場合も NG のまま落ちる）。
  *
- * @returns 取得できた slug の配列。取得できなかったときは null。
+ * @returns realestate= 許可リストに union する slug、other= 他士業ルートに実在する
+ *   slug の対応表（ヒント専用、許可リストには入れない）。取得できなかったときは null。
  */
-async function fetchPublishedColumnSlugs(): Promise<string[] | null> {
+async function fetchPublishedColumnSlugs(): Promise<PublishedSlugs | null> {
   let res: Response;
   try {
     res = await fetch(SITEMAP_URL, { signal: AbortSignal.timeout(SITEMAP_TIMEOUT_MS) });
@@ -172,7 +201,20 @@ async function fetchPublishedColumnSlugs(): Promise<string[] | null> {
     return null;
   }
   const re = /<loc>https:\/\/luck428\.com\/column\/([a-z0-9-]+)<\/loc>/g;
-  return [...xml.matchAll(re)].map((m) => m[1]);
+  const realestate = [...xml.matchAll(re)].map((m) => m[1]);
+
+  // 他士業ルートは許可リストではなくヒント用に集める（用途の違いは上の宣言のコメント参照）。
+  const other = new Map<string, { prefix: string; label: string }>();
+  for (const route of OTHER_BUSINESS_ROUTES) {
+    const rx = new RegExp(
+      `<loc>https://luck428\\.com${route.prefix.replace(/\//g, "\\/")}/([a-z0-9-]+)</loc>`,
+      "g",
+    );
+    for (const m of xml.matchAll(rx)) {
+      if (!other.has(m[1])) other.set(m[1], route);
+    }
+  }
+  return { realestate, other };
 }
 
 type ArticleSpec = {
@@ -312,6 +354,66 @@ const ARTICLES: ArticleSpec[] = [
     localesWithTranslations: ["en", "zh-tw", "zh"],
     hubLinks: ["/toushi"],
   },
+  {
+    file: "17-hoiku-shoukibo-bukken-youto-chiiki.md",
+    slug: "hoiku-shoukibo-bukken-youto-chiiki",
+    title: "小規模保育事業の物件を貸す・探すとき、用途地域と面積で何を確認するのか",
+    publishedAt: "2026-08-24",
+    category: "投資・事業用不動産",
+    excerpt:
+      "小規模保育の物件は用途地域では詰まりません。保育所は最も厳しい第一種低層住居専用地域でも建てられます。詰まるのは居室の面積（満2歳未満は1人3.3㎡、満2歳以上は1人1.98㎡）、用途変更の確認申請の要否、消防用設備、2階以上の避難の4点。東京都文京区の宅地建物取引士兼行政書士が、契約前に確認できることを条文と省令から順に整理します。",
+    keywords: [
+      "小規模保育 物件",
+      "保育所 用途地域",
+      "保育所 用途変更 確認申請",
+      "小規模保育 面積 基準",
+      "保育所 消防設備",
+    ],
+    tags: ["事業用不動産", "許認可", "用途地域", "保育"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/toushi", "/office"],
+  },
+  {
+    file: "18-souzoku-saikenchiku-fuka-baikyaku.md",
+    slug: "souzoku-saikenchiku-fuka-baikyaku",
+    title: "相続した再建築不可の物件は、売る前に何を確かめるのか",
+    publishedAt: "2026-08-24",
+    category: "相続",
+    excerpt:
+      "相続した再建築不可の物件は、まず接道を確かめます。建築基準法第43条は敷地が道路に2m以上接することを求め、幅員4m未満のみなし道路（2項道路）ではセットバックが要ります。接道が足りなくても、隣地の買い増しや第43条第2項の認定・許可という道があります。東京都文京区の宅地建物取引士兼行政書士が、売る前に確認できることを条文から整理します。",
+    keywords: [
+      "再建築不可 相続 売却",
+      "接道義務 建築基準法 43条",
+      "43条2項 認定 許可 建築審査会",
+      "2項道路 セットバック",
+      "無道路地 評価 財産評価基本通達",
+    ],
+    tags: ["相続", "再建築不可", "接道義務", "売却"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/souzoku"],
+  },
+  {
+    file: "19-chuka-souzoku-akiya-shodo-genchi.md",
+    slug: "chuka-souzoku-akiya-shodo-genchi",
+    title: "中華圏の相続人が日本の空き家を相続したとき、不動産会社が最初にできることは何か",
+    publishedAt: "2026-08-24",
+    category: "相続",
+    excerpt:
+      "中華圏の相続人が日本の空き家を相続したとき、不動産会社が相続直後にできるのは現地確認・査定・維持管理・売却準備の4つです。日本にいなくても現地を見て査定を出せ、相続登記や遺産分割の前でも並行できます。東京都文京区の宅地建物取引士兼行政書士が、不動産会社の範囲と他士業に振る境目を条文から整理します。",
+    keywords: [
+      "海外 相続人 日本 空き家",
+      "相続登記 義務化 3年 不動産登記法",
+      "空き家 固定資産税 住宅用地特例",
+      "管理不全空家 特定空家 勧告",
+      "在外相続人 署名証明 印鑑証明",
+    ],
+    tags: ["相続", "空き家", "中国語圏", "非居住者"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/souzoku"],
+  },
 ];
 
 function toPlainText(md: string): string {
@@ -404,7 +506,16 @@ function verify(cols: SeedColumn[], specs: ArticleSpec[]): string[] {
     const links = [...c.content.matchAll(/\]\(\/column\/([a-z0-9-]+)\)/g)].map((x) => x[1]);
     for (const l of links) {
       if (l !== c.slug && !batchSlugs.has(l) && !EXISTING_COLUMN_SLUGS.has(l)) {
-        notes.push(`NG: ${spec.slug} → 不明slug ${l}`);
+        // slug 自体は実在して、ルート接頭辞だけ間違っている場合がある。
+        // 落とす条件は変えない。NG文面に直し方を書き足すだけ。
+        const other = OTHER_BUSINESS_COLUMN_SLUGS.get(l);
+        notes.push(
+          other
+            ? `NG: ${spec.slug} → 不明slug ${l}` +
+                `（${other.label} ${other.prefix}/${l} に実在。ルート接頭辞の誤り。` +
+                `リンクを ${other.prefix}/${l} に直す）`
+            : `NG: ${spec.slug} → 不明slug ${l}`,
+        );
       }
     }
     if (!c.content.includes("## この記事の出典（一次情報）")) notes.push(`NG: ${spec.slug} に出典節なし`);
@@ -505,15 +616,23 @@ async function main() {
 
   // 許可リストは「リポジトリ由来 ∪ 本番sitemap由来」。verify() より前に union する。
   // 管理画面から直接作られた記事はリポジトリに原稿が無く、sitemap でしか実在を確認できない。
-  const sitemapSlugs = await fetchPublishedColumnSlugs();
-  if (sitemapSlugs) {
+  const published = await fetchPublishedColumnSlugs();
+  if (published) {
     const before = EXISTING_COLUMN_SLUGS.size;
-    EXISTING_COLUMN_SLUGS = new Set([...EXISTING_COLUMN_SLUGS, ...sitemapSlugs]);
+    EXISTING_COLUMN_SLUGS = new Set([...EXISTING_COLUMN_SLUGS, ...published.realestate]);
     const added = EXISTING_COLUMN_SLUGS.size - before;
     console.log(
-      `sitemap: /column/ を ${sitemapSlugs.length} 件検出、` +
+      `sitemap: /column/ を ${published.realestate.length} 件検出、` +
         `うち ${added} 件を許可リストに追加（許可リスト合計 ${EXISTING_COLUMN_SLUGS.size} 件）`,
     );
+    // 許可リストではない。NG になったときに理由を言い当てるための対応表。
+    OTHER_BUSINESS_COLUMN_SLUGS = published.other;
+    if (OTHER_BUSINESS_COLUMN_SLUGS.size) {
+      console.log(
+        `sitemap: 他士業ルートを ${OTHER_BUSINESS_COLUMN_SLUGS.size} 件検出` +
+          `（許可リストには入れない。ルート接頭辞の取り違えを指摘するためだけに使う）`,
+      );
+    }
   }
 
   const notes = verify(cols, ARTICLES);
