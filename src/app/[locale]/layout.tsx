@@ -1,43 +1,50 @@
 import type { Metadata } from "next";
-import { Zen_Kaku_Gothic_New, Noto_Serif_JP, Noto_Sans_JP } from "next/font/google";
-import "./globals.css";
+import { notFound } from "next/navigation";
+import "../globals.css";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { TranslationProvider } from "@/contexts/TranslationContext";
 import { SkipToContent } from "@/components/ui/SkipToContent";
-import { getRequestLocale } from "@/lib/getRequestLocale";
 import type { LangCode } from "@/config/languages";
 import ScatteredIcons from "@/components/ui/ScatteredIcons";
 import { fetchAllTranslations } from "@/lib/getTranslationData";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { stripSrEntities } from "@/lib/shared/sr-strip";
+import { fontVariables } from "@/app/fonts";
+import { SUPPORTED_LOCALES, isValidLocale } from "@/lib/locale";
 
-// preload: false（SEO監査2026-08-24 P0-2）：日本語フォントはunicode-range分割が多く、
-// preload有効だと3書体×8ウェイトで204件の<link rel=preload>がHTMLヘッダーを肥大化させていた。
-// display:swap のCSS @font-face 経由で必要なスライスだけがオンデマンド取得される。
-const zenKaku = Zen_Kaku_Gothic_New({
-  variable: "--font-zen-kaku-gothic-new",
-  weight: ["400", "500", "700"],
-  subsets: ["latin"],
-  display: "swap",
-  preload: false,
-});
+/**
+ * 公開サイトのルートレイアウト＝ロケールURLセグメント（SEO監査2026-08-24 P0-1の根本対応）。
+ *
+ * 旧構成は app/layout.tsx が proxy.ts の x-locale ヘッダーを headers() で読んでおり、
+ * リクエストAPIの使用で全公開ページが動的レンダリング（常に no-store・CDNキャッシュ不可）
+ * だった。ルートレイアウト自体を app/[locale]/ に置くことで locale は「root param」＝
+ * 静的なルートアドレスの一部になり、公開ページをSSG/ISRとして配信できる。
+ * 各Server Componentからの取得は next/root-params 経由（getRequestLocale.ts 参照。
+ * root params はルートレイアウトのセグメント以上の動的パラメータのみが対象のため、
+ * この配置が必須）。admin・facilitator は別系統のルートレイアウトを持つ。
+ *
+ * URL規約は不変（ja=素パス・/en・/zh-tw・/zh）。ja の内部ルート /ja/... への
+ * 振替と、/ja 直アクセスの素パスへの301は proxy.ts が担う。
+ */
 
-// DESIGN.md §3：見出し＝Noto Serif JP（editorial）／本文・UI＝Noto Sans JP
-const notoSerifJP = Noto_Serif_JP({
-  variable: "--font-noto-serif-jp",
-  weight: ["600", "700"],
-  subsets: ["latin"],
-  display: "swap",
-  preload: false,
-});
+// 公開ページのISR再検証間隔。コラム等の即時反映は
+// /api/admin/revalidate の revalidatePath が担う（1時間は自己修復の上限）。
+export const revalidate = 3600;
 
-const notoSansJP = Noto_Sans_JP({
-  variable: "--font-noto-sans-jp",
-  weight: ["400", "500", "700"],
-  subsets: ["latin"],
-  display: "swap",
-  preload: false,
-});
+// 公開ツリーでのリクエストAPI（headers/cookies等）使用をビルドエラーにするガード。
+// 黙って動的（no-store）に降格して全ページのCDNキャッシュが剥がれる事故を、
+// ビルド時に「どのルートが何のAPIを使ったか」のエラーで検出する
+// （実例: 移設直後の not-found.tsx の headers() が全laborページを動的化していた）。
+export const dynamic = "error";
+
+// generateStaticParams に無いロケール（/xyz 等の任意文字列）は動的レンダリング
+// せず404にする。proxy.ts が非ロケール接頭辞を /ja/... に振替えるため、
+// ここに来る不正値は直リンク・内部バグのみ。
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return SUPPORTED_LOCALES.map((locale) => ({ locale }));
+}
 
 export const metadata: Metadata = {
   title: {
@@ -57,12 +64,14 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: Promise<{ locale: string }>;
 }>) {
-  // x-localeリクエストヘッダー優先（URL基準・middlewareが常に設定）、Cookieはフォールバック。
-  // Cookieだけに頼ると初回アクセス・クローラー・素のリンク遷移でURLと言語がズレる。
-  const locale: LangCode = await getRequestLocale();
+  const { locale: rawLocale } = await params;
+  if (!isValidLocale(rawLocale)) notFound();
+  const locale: LangCode = rawLocale;
 
   const allTranslations = await fetchAllTranslations();
 
@@ -87,7 +96,7 @@ export default async function RootLayout({
   }
 
   return (
-    <html lang={locale} className={`${zenKaku.variable} ${notoSerifJP.variable} ${notoSansJP.variable}`}>
+    <html lang={locale} className={fontVariables}>
       <body className="relative bg-surface text-text antialiased">
         <GoogleAnalytics />
         <ScatteredIcons />

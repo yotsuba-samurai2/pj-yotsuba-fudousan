@@ -1,16 +1,19 @@
 import { NextRequest, NextResponse } from "next/server";
 
 /**
- * Proxy（旧 middleware）: ロケール検出 → テナントリライト
+ * Proxy（旧 middleware）: ロケール検出 → app/[locale]/ 内部ルートへのリライト
  *
- * 1. ロケールプレフィックスの検出・ストリップ (/en/services → /services, locale=en)
- * 2. ホスト名ベースのテナントリライト (luck428gyosei.com/about → /legal/about)
+ * 外部URL規約は不変（ja=素パス・/en・/zh-tw・/zh）。ファイルシステム上の実ルートは
+ * app/[locale]/... のため、全公開リクエストを /<locale>/<path> へリライトする
+ * （SEO監査2026-08-24 P0-1: locale を URL＝静的ルートアドレスに乗せ、公開ページを
+ * ISRキャッシュ可能にする根本対応。旧構成の x-locale ヘッダー伝搬は headers() 参照で
+ * 全ページを動的化していた）。
  *
- * 2026-07-12：Next.js 16.2 で `middleware` ファイル規約が非推奨になったため
- * `src/middleware.ts` → `src/proxy.ts` へ改名（公式移行＝ファイル名と関数名のみ変更。
- * https://nextjs.org/docs/messages/middleware-to-proxy ）。**ロジックは一切変更していない**。
- * ※本ファイルはロケール判定（x-locale ヘッダー）とテナント振り分けの根幹。
- *   「URLが言語の正」＝接頭辞なしパスは ja とみなしCookieも ja に同期する（末尾コメント参照）。
+ * 1. ロケールプレフィックスの検出・ストリップ (/en/services → services, locale=en)
+ * 2. ホスト名ベースのテナントプレフィックス (luck428gyosei.com/about → /legal/about)
+ * 3. /<locale> を先頭に付けて内部ルートへ (→ /en/legal/about)
+ *
+ * /ja/... への直アクセスは素パスへ301（正規URLの重複を作らない）。
  */
 
 // ── Locale ──
@@ -89,6 +92,7 @@ function shouldSkip(pathname: string): boolean {
     pathname.startsWith("/_next") ||
     pathname.startsWith("/api") ||
     pathname.startsWith("/admin") ||
+    pathname.startsWith("/facilitator") || // [locale]外のルート（内部ツール）
     pathname.includes(".")
   ) {
     return true;
@@ -104,42 +108,30 @@ function isSharedPath(pathname: string): boolean {
   );
 }
 
-// ── Cookie / Cache ──
+// ── Cookie sync ──
 
 /**
- * 公開ページのCDNキャッシュ方針（SEO監査2026-08-24 P0-1）。
- * 本文はURLだけで決まる（locale判定はURL→x-localeリクエストヘッダー経由・Cookie非依存）ため、
- * URL単位のキャッシュは安全。認証・個人化ルート（/api・/admin）は shouldSkip で本関数まで来ない。
- */
-const PUBLIC_CACHE_CONTROL = "public, s-maxage=3600, stale-while-revalidate=86400";
-
-/**
- * ロケールCookieの同期とキャッシュヘッダー付与（SEO監査2026-08-24 P0-1）。
+ * ロケールCookieの同期（SEO監査2026-08-24 P0-1）。
  *
- * 旧実装は全レスポンスで set-cookie していたが、set-cookie 付きレスポンスは
- * Vercel CDN にキャッシュされず、全公開ページが no-store / 毎回MISSになっていた。
- * - Cookieは「既存Cookieの値がURLロケールとズレたときだけ」set（素のリンクで /zh-tw→/ に
- *   戻った際の同期）。Cookie未所持の初回訪問には付与しない＝クローラー（Cookieを送らない）と
- *   初回アクセスに set-cookie が出ない。実ブラウザの初回Cookie付与は
- *   LanguageContext のクライアント側 effect が担う。
- * - set-cookie が不要なGET/HEADにのみ s-maxage を付与（Cookie設定時はキャッシュさせない）
+ * Cookieは「既存Cookieの値がURLロケールとズレたときだけ」set（素のリンクで /zh-tw→/ に
+ * 戻った際の同期）。Cookie未所持の初回訪問には付与しない＝クローラー（Cookieを送らない）と
+ * 初回アクセスに set-cookie が出ない（set-cookie付きレスポンスはCDNキャッシュ不可のため）。
+ * 実ブラウザの初回Cookie付与は LanguageContext のクライアント側 effect が担う。
+ * キャッシュヘッダーはISR（app/[locale]/layout.tsx の revalidate）がルート側で設定する。
  */
-function withLocaleCookieAndCache(
+function withLocaleCookieSync(
   request: NextRequest,
   response: NextResponse,
   locale: string,
 ): NextResponse {
   const current = request.cookies.get(LOCALE_COOKIE)?.value;
-  const needsCookie = current !== undefined && current !== locale;
 
-  if (needsCookie) {
+  if (current !== undefined && current !== locale) {
     response.cookies.set(LOCALE_COOKIE, locale, {
       path: "/",
       maxAge: 60 * 60 * 24 * 365,
       sameSite: "lax",
     });
-  } else if (request.method === "GET" || request.method === "HEAD") {
-    response.headers.set("Cache-Control", PUBLIC_CACHE_CONTROL);
   }
 
   return response;
@@ -155,73 +147,40 @@ export function proxy(request: NextRequest) {
     return new NextResponse("Gone", { status: 410 });
   }
 
-  // スキップ（静的ファイル、API、管理画面）
+  // スキップ（静的ファイル、API、管理画面、[locale]外ルート）
   if (shouldSkip(pathname)) return NextResponse.next();
+
+  // ja の正規URLは素パス。内部ルート /ja/... への直アクセスは素パスへ恒久移転して
+  // 正規URLの重複を作らない（statusCode 301＝next.config.ts の redirects と同じ作法）
+  if (pathname === "/ja" || pathname.startsWith("/ja/")) {
+    const url = request.nextUrl.clone();
+    url.pathname = pathname.slice(3) || "/";
+    return NextResponse.redirect(url, 301);
+  }
 
   // Step 1: ロケール検出・ストリップ
   const { locale, stripped } = detectAndStripLocale(pathname);
 
-  // Step 2: テナント検出
+  // Step 2: テナント検出（共有ページは全テナント共通のためプレフィックスを付けない）
   const host = request.headers.get("host") || "";
   const tenantPrefix = getTenantPrefix(host);
 
-  // リライト先パスを決定
-  let rewritePath = stripped;
-
+  let basePath = stripped;
   if (
     tenantPrefix &&
     !stripped.startsWith(tenantPrefix) &&
     !isSharedPath(stripped)
   ) {
-    rewritePath = `${tenantPrefix}${stripped}`;
+    basePath = `${tenantPrefix}${stripped}`;
   }
 
-  // ロケールプレフィックスがあった場合、またはCookie設定が必要な場合
-  const needsRewrite = rewritePath !== pathname;
+  // Step 3: app/[locale]/ の内部ルートへ（ja 素パス含め常にロケールを先頭に付ける。
+  // これにより /xyz 等の非ロケール接頭辞は /ja/xyz → 404 になり、[locale] が
+  // 任意文字列にマッチすることはない）
+  const url = request.nextUrl.clone();
+  url.pathname = `/${locale}${basePath === "/" ? "" : basePath}`;
 
-  // Server Component の headers() から同一リクエスト内で確実にlocaleを読めるよう、
-  // レスポンス側（Cookie/ヘッダー）に加えリクエストヘッダーにも転送する
-  // （Cookieはブラウザの次回リクエストからしか反映されず、初回アクセス・クローラーでは読めないため）
-  const requestHeaders = new Headers(request.headers);
-  requestHeaders.set("x-locale", locale);
-  const requestInit = { request: { headers: requestHeaders } };
-
-  if (needsRewrite || locale !== "ja") {
-    const url = request.nextUrl.clone();
-    url.pathname = rewritePath;
-
-    const response = needsRewrite
-      ? NextResponse.rewrite(url, requestInit)
-      : NextResponse.next(requestInit);
-
-    // ロケール情報をヘッダーで伝搬（Cookieは値が変わるときだけ＝withLocaleCookieAndCache）
-    response.headers.set("x-locale", locale);
-    return withLocaleCookieAndCache(request, response, locale);
-  }
-
-  // テナントリライトのみ必要な場合
-  if (
-    tenantPrefix &&
-    !stripped.startsWith(tenantPrefix) &&
-    !isSharedPath(stripped)
-  ) {
-    const url = request.nextUrl.clone();
-    url.pathname = `${tenantPrefix}${stripped}`;
-    return withLocaleCookieAndCache(
-      request,
-      NextResponse.rewrite(url, requestInit),
-      locale,
-    );
-  }
-
-  // ja・リライトなし。Cookieの同期（URLが言語の正）は値がズレたときだけ行う：
-  // 素のリンクで /zh-tw/... → /... に戻った際、古いCookieが残ると
-  // クライアント側の言語状態がURLとズレるため（一致していれば set-cookie 不要）。
-  return withLocaleCookieAndCache(
-    request,
-    NextResponse.next(requestInit),
-    locale,
-  );
+  return withLocaleCookieSync(request, NextResponse.rewrite(url), locale);
 }
 
 export const config = {

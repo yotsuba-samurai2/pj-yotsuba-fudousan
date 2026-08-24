@@ -1,24 +1,26 @@
+"use client";
+
 import Link from "next/link";
-import { headers } from "next/headers";
-import type { Metadata } from "next";
+import { useSyncExternalStore } from "react";
 import { ArrowRight, Home } from "lucide-react";
 
-export const metadata: Metadata = {
-  title: "ページが見つかりません",
-  description: "お探しのページは見つかりませんでした。",
-  robots: { index: false, follow: false },
-};
+// hostnameは遷移しない＝購読不要（no-op subscribe）。SSR時は false（＝不動産既定）
+const subscribeNoop = () => () => {};
+const isLegalHost = () =>
+  window.location.hostname.includes("luck428gyosei.com");
+const isLegalHostServer = () => false;
 
 /**
- * グローバル 404 ページ
- *
- * - 不動産ドメイン: 不動産向けの404
- * - 行政書士ドメイン: TODO 社労士開業（2026年9月）後に専用デザイン
+ * 404本文（クライアント）。行政書士ドメイン（luck428gyosei.com）だけリンク先を
+ * 差し替える。サーバー側でホストを見る（headers()）と404レンダーが動的化して
+ * ISR/静的生成を壊すため、クライアントで hostname を判定する（既定＝不動産）。
  */
-export default async function NotFound() {
-  const h = await headers();
-  const host = h.get("host") || "";
-  const isLegal = host.includes("luck428gyosei.com");
+export default function NotFoundContent() {
+  const isLegal = useSyncExternalStore(
+    subscribeNoop,
+    isLegalHost,
+    isLegalHostServer,
+  );
 
   // TODO: 行政書士・社労士ドメイン専用の404（社労士開業（2026年9月）後に実装）
   const homeHref = isLegal ? "/legal" : "/";
