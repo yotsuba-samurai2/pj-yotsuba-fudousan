@@ -5,7 +5,6 @@ import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { CtaBand } from "@/components/shared/CtaBand";
 import { LaborColumnListPageContent } from "./PageContent";
 
-export const dynamic = "force-dynamic";
 
 const META_BY_LOCALE: Record<string, { title: string; description: string }> = {
   ja: {

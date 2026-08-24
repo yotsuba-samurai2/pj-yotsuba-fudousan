@@ -1,47 +1,39 @@
 import { notFound } from "next/navigation";
-import { cookies } from "next/headers";
-import {
-  getLaborColumnBySlug,
-  getLaborColumns,
-  getLocalizedColumn,
-  getAllLaborSlugs,
-  isLocaleAllowed,
-} from "@/lib/columns";
+import { getColumnBySlug, getColumns, getLocalizedColumn, getAllSlugs, isLocaleAllowed, pickRelatedColumns } from "@/lib/columns";
 import { buildPageMetadata } from "@/lib/seo";
-import { LOCALE_COOKIE, DEFAULT_LOCALE, isValidLocale } from "@/lib/locale";
-import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
+import { getRequestLocale } from "@/lib/getRequestLocale";
 import { BlogPostingJsonLd } from "@/components/seo/BlogPostingJsonLd";
+import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { FAQJsonLd } from "@/components/seo/FAQJsonLd";
 import { SpeakableJsonLd } from "@/components/seo/SpeakableJsonLd";
 import { CtaBand } from "@/components/shared/CtaBand";
 
-import { LaborColumnDetailPageContent } from "./PageContent";
 import type { Metadata } from "next";
 import type { LangCode } from "@/config/languages";
+import ColumnDetailContent from "./ColumnDetailContent";
 
-export const dynamic = "force-dynamic";
 
-type Props = { params: Promise<{ slug: string }> };
+type Props = {
+  params: Promise<{ slug: string }>;
+};
 
 export async function generateStaticParams() {
-  const slugs = await getAllLaborSlugs();
+  const slugs = await getAllSlugs();
   return slugs.map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const base = await getLaborColumnBySlug(slug);
+  const base = await getColumnBySlug(slug);
   if (!base) return {};
-  const cookieStore = await cookies();
-  const lc = cookieStore.get(LOCALE_COOKIE)?.value;
-  const locale: LangCode = lc && isValidLocale(lc) ? lc : DEFAULT_LOCALE;
+  const locale: LangCode = await getRequestLocale();
   if (!isLocaleAllowed(base, locale)) return {};
   const col = getLocalizedColumn(base, locale);
   return buildPageMetadata({
-    businessKey: "labor",
+    businessKey: "realestate",
     title: col.title,
     description: col.excerpt,
-    path: `/labor/column/${col.slug}`,
+    path: `/column/${col.slug}`,
     keywords: col.keywords,
     type: "article",
     publishedTime: col.date,
@@ -49,55 +41,55 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     section: col.category,
     locale,
     // hreflang を公開ロケールのみに限定（未公開ロケールの404 URLをGoogleに広告しない）。
+    // locales 未設定＝全ロケール許可（後方互換・isLocaleAllowed と同じ判定）。
     availableLocales: base.locales,
   });
 }
 
-export default async function LaborColumnDetailPage({ params }: Props) {
+export default async function ColumnDetailPage({ params }: Props) {
   const { slug } = await params;
-  const base = await getLaborColumnBySlug(slug);
+  const base = await getColumnBySlug(slug);
   if (!base) notFound();
 
-  const cookieStore = await cookies();
-  const lc = cookieStore.get(LOCALE_COOKIE)?.value;
-  const locale: LangCode = lc && isValidLocale(lc) ? lc : DEFAULT_LOCALE;
+  const locale: LangCode = await getRequestLocale();
   if (!isLocaleAllowed(base, locale)) notFound();
   const col = getLocalizedColumn(base, locale);
 
-  const allLaborColumns = await getLaborColumns(locale);
-  const sorted = [...allLaborColumns].sort((a, b) =>
-    b.date.localeCompare(a.date),
-  );
+  // Find prev/next
+  const allColumns = await getColumns(locale);
+  const sorted = [...allColumns].sort((a, b) => b.date.localeCompare(a.date));
   const idx = sorted.findIndex((c) => c.slug === slug);
   const prev = idx < sorted.length - 1 ? sorted[idx + 1] : null;
   const next = idx > 0 ? sorted[idx - 1] : null;
 
+  // Related columns（同一ロケール・タグ一致→カテゴリ一致→新着、自身除外、最大3）。
+  // 照合は同一ロケール空間で行うため localize 済み配列で比較する。
+  const localizedAll = allColumns.map((c) => getLocalizedColumn(c, locale));
+  const related = pickRelatedColumns(localizedAll, {
+    excludeSlug: slug,
+    category: col.category,
+    tags: col.tags,
+    limit: 3,
+  });
+
   return (
     <div>
-      <BlogPostingJsonLd businessKey="labor" column={col} locale={locale} />
-      <BreadcrumbJsonLd
-        businessKey="labor"
-        items={[
-          { name: "ホーム", href: "/labor" },
-          { name: "コラム", href: "/labor/column" },
-          { name: col.title, href: `/labor/column/${col.slug}` },
-        ]}
-      />
+      <BlogPostingJsonLd businessKey="realestate" column={col} locale={locale} />
+      <BreadcrumbJsonLd businessKey="realestate" items={[
+        { name: "ホーム", href: "/" },
+        { name: "コラム", href: "/column" },
+        { name: col.title, href: `/column/${col.slug}` },
+      ]} />
       {col.faq && col.faq.length > 0 && <FAQJsonLd items={col.faq} />}
-      <SpeakableJsonLd
-        businessKey="labor"
-        path={`/labor/column/${col.slug}`}
-        headline={col.title}
-        summary={col.excerpt}
-      />
-      <LaborColumnDetailPageContent col={col} prev={prev} next={next} />
+      <SpeakableJsonLd businessKey="realestate" path={`/column/${col.slug}`} headline={col.title} summary={col.excerpt} />
+      <ColumnDetailContent col={col} prev={prev} next={next} related={related} />
       {/* ★2026-08-13 追加：コラム記事の末尾にCTA帯を置く。
           3レーンとも column/[slug]・column・about にだけ CtaBand が無く、
           PCではLINEへの導線が出ていなかった（SPは MobileStickyBar があるので出る）。
           コラムは検索・AIから直接入ってくる入口で、読み終えた直後がいちばん動く。
           contact / thanks には入れない（フォームの前後で導線が割れるため）。 */}
       <div className="mx-auto max-w-3xl px-4">
-        <CtaBand businessKey="labor" />
+        <CtaBand businessKey="realestate" />
       </div>
     </div>
   );

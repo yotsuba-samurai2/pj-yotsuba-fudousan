@@ -1,20 +1,24 @@
-import { cookies, headers } from "next/headers";
+import { locale as localeRootParam } from "next/root-params";
 import type { LangCode } from "@/config/languages";
-import { DEFAULT_LOCALE, LOCALE_COOKIE, isValidLocale } from "@/lib/locale";
+import { DEFAULT_LOCALE, isValidLocale } from "@/lib/locale";
 
 /**
  * Server Componentからリクエストのlocaleを取得する。
- * proxy.ts（旧 middleware.ts・Next.js 16.2で改名）が設定する `x-locale` リクエストヘッダーを優先する
- * （Cookieは次回リクエストからしか反映されず、初回アクセス・クローラーでは読めないため）。
+ *
+ * app/[locale]/ ルートセグメントの値を next/root-params で読む
+ * （next.config.ts の experimental.rootParams で有効化）。
+ *
+ * 旧実装は proxy.ts が付与する x-locale ヘッダー＋Cookieを headers()/cookies() で
+ * 読んでいたが、リクエストAPIの使用は配下ルート全体を動的レンダリングにし、
+ * 全公開ページが no-store・CDNキャッシュ不可になっていた（SEO監査2026-08-24 P0-1）。
+ * root params は静的なルートアドレスの一部のため、SSG/ISRと両立する。
+ *
+ * 注意: Route Handler・Server Action では next/root-params は使えない（Next 16.2時点）。
+ * そこでは URL やリクエストボディから locale を受け取ること。
+ * [locale] セグメント外のルート（/admin 等）では undefined が返り、ja にフォールバックする。
  */
 export async function getRequestLocale(): Promise<LangCode> {
-  const headerStore = await headers();
-  const headerLocale = headerStore.get("x-locale");
-  if (headerLocale && isValidLocale(headerLocale)) return headerLocale;
-
-  const cookieStore = await cookies();
-  const cookieLocale = cookieStore.get(LOCALE_COOKIE)?.value;
-  if (cookieLocale && isValidLocale(cookieLocale)) return cookieLocale;
-
+  const locale = await localeRootParam();
+  if (locale && isValidLocale(locale)) return locale;
   return DEFAULT_LOCALE;
 }

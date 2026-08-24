@@ -6,7 +6,6 @@ import { ColumnCollectionJsonLd } from "@/components/seo/ColumnCollectionJsonLd"
 import { CtaBand } from "@/components/shared/CtaBand";
 import ColumnListPageContent from "./ColumnListPageContent";
 
-export const dynamic = "force-dynamic";
 
 const META_BY_LOCALE: Record<string, { title: string; description: string }> = {
   ja: {

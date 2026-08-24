@@ -1,18 +1,16 @@
 import type { Metadata } from "next";
-import { cookies } from "next/headers";
 import { TenantLayoutShell } from "@/components/layout/TenantLayout";
 import { OrganizationJsonLd } from "@/components/seo/OrganizationJsonLd";
 import { WebSiteJsonLd } from "@/components/seo/WebSiteJsonLd";
-import { LOCALE_COOKIE, DEFAULT_LOCALE, isValidLocale } from "@/lib/locale";
 import { fetchTranslations } from "@/lib/getTranslationData";
 import { getNestedValue, BUSINESS_SEO, BUSINESS_URLS } from "@/lib/seo";
+import { getRequestLocale } from "@/lib/getRequestLocale";
 import type { LangCode } from "@/config/languages";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const cookieStore = await cookies();
-  const localeCookie = cookieStore.get(LOCALE_COOKIE)?.value;
-  const locale: LangCode =
-    localeCookie && isValidLocale(localeCookie) ? localeCookie : DEFAULT_LOCALE;
+  // 旧実装のCookie参照はリクエストAPI＝配下全ルートを動的化するため、
+  // [locale] ルートセグメント（root params）から取得する（SEO監査2026-08-24 P0-1）
+  const locale: LangCode = await getRequestLocale();
   const t = await fetchTranslations(locale);
 
   const title = getNestedValue(t, "realestate.meta.title") || "四葉不動産";

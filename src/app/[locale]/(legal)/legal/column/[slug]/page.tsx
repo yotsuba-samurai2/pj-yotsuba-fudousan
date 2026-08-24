@@ -1,8 +1,7 @@
 import { notFound } from "next/navigation";
-import { cookies } from "next/headers";
 import { getLegalColumnBySlug, getLegalColumns, getLocalizedColumn, getAllLegalSlugs, isLocaleAllowed } from "@/lib/columns";
 import { buildPageMetadata } from "@/lib/seo";
-import { LOCALE_COOKIE, DEFAULT_LOCALE, isValidLocale } from "@/lib/locale";
+import { getRequestLocale } from "@/lib/getRequestLocale";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { BlogPostingJsonLd } from "@/components/seo/BlogPostingJsonLd";
 import { FAQJsonLd } from "@/components/seo/FAQJsonLd";
@@ -13,7 +12,6 @@ import LegalColumnDetailContent from "./LegalColumnDetailContent";
 import type { Metadata } from "next";
 import type { LangCode } from "@/config/languages";
 
-export const dynamic = "force-dynamic";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -26,9 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const base = await getLegalColumnBySlug(slug);
   if (!base) return {};
-  const cookieStore = await cookies();
-  const lc = cookieStore.get(LOCALE_COOKIE)?.value;
-  const locale: LangCode = lc && isValidLocale(lc) ? lc : DEFAULT_LOCALE;
+  const locale: LangCode = await getRequestLocale();
   if (!isLocaleAllowed(base, locale)) return {};
   const col = getLocalizedColumn(base, locale);
   return buildPageMetadata({
@@ -52,9 +48,7 @@ export default async function LegalColumnDetailPage({ params }: Props) {
   const base = await getLegalColumnBySlug(slug);
   if (!base) notFound();
 
-  const cookieStore = await cookies();
-  const lc = cookieStore.get(LOCALE_COOKIE)?.value;
-  const locale: LangCode = lc && isValidLocale(lc) ? lc : DEFAULT_LOCALE;
+  const locale: LangCode = await getRequestLocale();
   if (!isLocaleAllowed(base, locale)) notFound();
   const col = getLocalizedColumn(base, locale);
 

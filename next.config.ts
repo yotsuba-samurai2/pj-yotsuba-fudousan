@@ -8,6 +8,16 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  experimental: {
+    // app/[locale]/ の値を任意のServer Componentから next/root-params で読むため
+    // （getRequestLocale.ts）。リクエストAPI（headers/cookies）と違い静的生成と両立する。
+    rootParams: true,
+    // ローカルのビルド検証用ノブ：prisma dev の使い捨てDBは最大10接続のため、
+    // NEXT_BUILD_WORKERS=2 等で静的生成ワーカー数を絞る（未設定＝Vercel本番はデフォルト）。
+    ...(process.env.NEXT_BUILD_WORKERS
+      ? { cpus: Number(process.env.NEXT_BUILD_WORKERS) }
+      : {}),
+  },
   async headers() {
     return [
       {
