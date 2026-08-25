@@ -414,6 +414,46 @@ const ARTICLES: ArticleSpec[] = [
     localesWithTranslations: ["en", "zh-tw", "zh"],
     hubLinks: ["/souzoku"],
   },
+  {
+    file: "20-biyoshitsu-riyojo-bukken-hokenjo-todokede.md",
+    slug: "biyoshitsu-riyojo-bukken-hokenjo-todokede",
+    title: "美容室・理容所を開くための物件は何を確認する？──保健所の構造設備基準と用途地域",
+    publishedAt: "2026-08-25",
+    category: "投資・事業用不動産",
+    excerpt:
+      "美容室・理容所の物件で保健所が見るのは、作業場と待合を明確に区分できるか、洗場・消毒・採光照明換気が整うかの2点です。飲食店やクリニックと違い、美容院・理髪店は建築基準法の用途地域制限を受けます。開設届はあらかじめ出し、構造設備の検査・確認を受けてからでなければ使えません。東京都文京区の宅地建物取引士兼行政書士が、契約前に確認できることを条文と厚生労働省の要領から整理します。",
+    keywords: [
+      "美容室 物件 保健所",
+      "美容所 構造設備基準",
+      "理容所 開設届",
+      "美容院 用途地域 兼用住宅",
+      "美容所 検査確認 使用",
+    ],
+    tags: ["事業用不動産", "許認可", "用途地域", "美容師法"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/toushi", "/office"],
+  },
+  {
+    file: "21-souzoku-kyutaishin-mansion-baikyaku.md",
+    slug: "souzoku-kyutaishin-mansion-baikyaku",
+    title: "相続した旧耐震マンションは売れる？──新耐震基準と買主の住宅ローンの壁",
+    publishedAt: "2026-08-25",
+    category: "相続",
+    excerpt:
+      "相続した旧耐震マンションは売れます。境目は1981年6月1日で、この日以降に建築確認を受けた建物が新耐震です。売却の鍵は買主が住宅ローンを組めるか。買主の住宅ローン控除は登記簿上の建築日付が昭和57年1月1日以降かで変わり、旧耐震では耐震基準適合証明が要りますが区分マンションでは取得が難しいことが多い点まで、東京都文京区の宅地建物取引士兼行政書士が条文と国税庁の資料から整理します。",
+    keywords: [
+      "旧耐震 マンション 相続 売却",
+      "新耐震基準 1981年6月1日",
+      "耐震基準適合証明書 住宅ローン控除",
+      "空き家 3000万円控除 区分所有 対象外",
+      "旧耐震 住宅ローン 買主",
+    ],
+    tags: ["相続", "旧耐震", "マンション", "売却"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/souzoku"],
+  },
 ];
 
 function toPlainText(md: string): string {

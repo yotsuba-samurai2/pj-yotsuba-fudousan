@@ -313,6 +313,21 @@ const REQUIRED_HUB_LINKS: Record<string, string[]> = {
     "/legal/column/souzoku-tochi-kokko-kizoku",
     "/legal/column/souzoku-hoki-gentei-shonin",
   ],
+  "sanpai-shushu-unpan-kyoka-torikata": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+  ],
+  "suuji-souzoku-isanbunkatsu-kyogisho": [
+    "/legal/services/inheritance",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/souzoku",
+    "/legal/column/souzoku-hajime-koseki-chosa-bunkyo",
+    "/legal/column/isan-bunkatsu-kyougisho",
+    "/legal/column/souzoku-touki-nagare",
+    "/legal/column/souzoku-kigen-matome",
+  ],
 };
 
 /** 表示コンプライアンス上の禁止語 */
@@ -753,6 +768,45 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "別事業体",
     "独立した事業体",
   ],
+  "sanpai-shushu-unpan-kyoka-torikata": [
+    "廃棄物の処理及び清掃に関する法律",
+    "第14条第1項",
+    "都道府県知事の許可",
+    "第14条第5項",
+    "第14条第5項第2号",
+    "第7条第5項第4号",
+    "欠格要件",
+    "拘禁刑以上の刑",
+    "公益財団法人日本産業廃棄物処理振興センター",
+    "自社運搬",
+    "積替え保管",
+    "積卸しを行う区域",
+    "5年ごと",
+    "優良産廃処理業者認定制度",
+    "紹介料を受け取りません",
+    "別事業体",
+    "独立した事業体",
+  ],
+  "suuji-souzoku-isanbunkatsu-kyogisho": [
+    "数次相続",
+    "代襲相続",
+    "民法第887条第2項",
+    "民法第896条",
+    "民法第898条",
+    "民法第907条",
+    "相続人兼被相続人",
+    "中間省略",
+    "単独相続",
+    "昭和30年12月16日民事甲第2670号",
+    "平成29年3月30日法務省民二第237号",
+    "不動産登記法第76条の2",
+    "2024年4月1日",
+    "3年以内",
+    "相続人申告登記",
+    "紹介料を受け取りません",
+    "別事業体",
+    "独立した事業体",
+  ],
 };
 
 /** 記事ごとに含めてはならない表現 */
@@ -818,6 +872,8 @@ const FORBIDDEN_PHRASES: Record<string, string[]> = {
   "houkago-day-jido-hattatsu-shitei-shinsei-nagare": [],
   "seikatsu-kaigo-shitei-bukken-yoken": [],
   "souzoku-nochi-noringyoiinkai-todoke-3jo3": [],
+  "sanpai-shushu-unpan-kyoka-torikata": [],
+  "suuji-souzoku-isanbunkatsu-kyogisho": [],
 };
 
 /** 本セット外へ張る既存legalコラムslug（リポジトリの他シードで実在確認済み） */
@@ -1266,6 +1322,58 @@ const ARTICLES: Array<{
       "世帯変更届",
       "葬祭費",
       "埋葬料",
+      "行政書士",
+    ],
+  },
+  {
+    file: "25-sanpai-shushu-unpan-kyoka-torikata.md",
+    slug: "sanpai-shushu-unpan-kyoka-torikata",
+    date: "2026-08-25",
+    title:
+      "産業廃棄物収集運搬業の許可はどう取る？──欠格要件・講習・車庫の要件と分離受任",
+    category: "許認可の手続き（行政書士の実務から）",
+    excerpt:
+      "建設・解体・運送から産廃運搬に事業を広げるには、廃棄物処理法第14条にもとづく都道府県知事の許可が必要です。施設・能力の基準と欠格要件（第14条第5項・第7条第5項第4号）、JWセンターの講習、積替え保管と車庫の要件、都道府県ごとの許可と5年ごとの更新を整理し、物件は不動産、登記は司法書士、労務は社会保険労務士へ分離受任で振る分担を示しました。",
+    keywords: [
+      "産業廃棄物収集運搬業 許可 取り方",
+      "産廃 収集運搬業 欠格要件",
+      "産廃 収集運搬 講習会 JWセンター",
+      "産廃 収集運搬 積替え保管 車庫",
+      "産廃 収集運搬業 許可 都道府県 更新",
+      "産廃 収集運搬 許可 行政書士",
+    ],
+    tags: [
+      "産業廃棄物収集運搬業",
+      "許認可",
+      "欠格要件",
+      "廃棄物処理法",
+      "積替え保管",
+      "行政書士",
+    ],
+  },
+  {
+    file: "26-suuji-souzoku-isanbunkatsu-kyogisho.md",
+    slug: "suuji-souzoku-isanbunkatsu-kyogisho",
+    date: "2026-08-25",
+    title:
+      "祖父名義のままの不動産、遺産分割協議書はどう書く？──数次相続の実務",
+    category: "相続の手続き（行政書士の実務から）",
+    excerpt:
+      "登記が何代も放置され、祖父名義のままの不動産は「数次相続」として扱います。代襲相続との違い、協議書に署名する当事者（相続人兼被相続人）、中間の相続を1枚にまとめられるか、中間省略登記の可否、集める戸籍の範囲、相続登記の義務化（不動産登記法第76条の2）と相続税を整理し、登記は司法書士、税務は税理士、紛争は弁護士へ分離受任で振る分担を示しました。",
+    keywords: [
+      "数次相続 遺産分割協議書 書き方",
+      "祖父名義 不動産 相続 放置",
+      "数次相続 代襲相続 違い",
+      "数次相続 中間省略登記",
+      "相続人兼被相続人 協議書",
+      "数次相続 戸籍 どこまで",
+    ],
+    tags: [
+      "数次相続",
+      "遺産分割協議書",
+      "代襲相続",
+      "中間省略登記",
+      "相続登記",
       "行政書士",
     ],
   },
