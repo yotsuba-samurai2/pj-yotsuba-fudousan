@@ -92,6 +92,7 @@
 
 東京都大田区・杉並区で葬儀を承る「感謝のお葬式」では、葬儀後に必要となる手続きの流れと相談先の選び方をまとめた記事が公開され、その中で当事務所をご紹介いただきました。あわせてご覧ください。
 
+- [葬儀後の相続手続きを相談できる行政書士事務所【東京】](https://kansha-suginami.com/articles/tokyo-inheritance-gyoseishoshi/)
 - [感謝のお葬式（大田区）](https://kansha-ohta.com/)
 - [感謝のお葬式（杉並区）](https://kansha-suginami.com/)
 
