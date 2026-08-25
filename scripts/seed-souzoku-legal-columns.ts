@@ -330,6 +330,7 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "第19条第1項",
     "弁護士法第72条",
     "法律上の期限は定められていません",
+    "kansha-suginami.com/articles/tokyo-inheritance-gyoseishoshi/",
     "kansha-ohta.com",
     "kansha-suginami.com",
     "相互に紹介料その他の金銭の授受はありません",
