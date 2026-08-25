@@ -77,6 +77,14 @@ const DATE = "2026-08-16";
 
 /** 各記事が評価を集約すべきハブ（本文に必須の内部リンク）。verify() で機械検査する */
 const REQUIRED_HUB_LINKS: Record<string, string[]> = {
+  "sougi-go-tetsuzuki-dare-ni-soudan": [
+    "/legal/services/inheritance",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/souzoku",
+    "/legal/column/souzoku-tejun-checklist",
+    "/legal/column/souzoku-kigen-matome",
+  ],
   "souzoku-hajime-koseki-chosa-bunkyo": [
     "/legal/services/inheritance",
     "/legal/nagare",
@@ -312,6 +320,22 @@ const FORBIDDEN_WORDS = ["ワンストップ", "一括対応", "一体で", "one
 
 /** 記事ごとに必ず含めるべき表現（機械ゲート。最低限の合否判定） */
 const REQUIRED_PHRASES: Record<string, string[]> = {
+  "sougi-go-tetsuzuki-dare-ni-soudan": [
+    "戸籍法第86条第1項",
+    "戸籍法第87条第1項",
+    "墓地、埋葬等に関する法律第5条第1項",
+    "住民基本台帳法第25条",
+    "健康保険法第193条第1項",
+    "行政書士法第1条の3第1項",
+    "第19条第1項",
+    "弁護士法第72条",
+    "法律上の期限は定められていません",
+    "kansha-ohta.com",
+    "kansha-suginami.com",
+    "相互に紹介料その他の金銭の授受はありません",
+    "別事業体",
+    "独立した事業体",
+  ],
   "souzoku-hajime-koseki-chosa-bunkyo": [
     "courts.go.jp/saiban/syurui/syurui_kazi/kazi_06_13",
     "nta.go.jp/taxes/shiraberu/taxanswer/sozoku/4205",
@@ -732,6 +756,11 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
 
 /** 記事ごとに含めてはならない表現 */
 const FORBIDDEN_PHRASES: Record<string, string[]> = {
+  "sougi-go-tetsuzuki-dare-ni-soudan": [
+    "期限の定められた手続き",
+    "提携",
+    "葬儀のご相談も承ります",
+  ],
   "souzoku-hajime-koseki-chosa-bunkyo": ["トレードオフ"],
   "isan-bunkatsu-kyougisho": ["独占業務"],
   "houtei-souzoku-jouhou-ichiran-zu": [
@@ -800,6 +829,8 @@ const KNOWN_EXISTING_LEGAL_SLUGS = new Set([
 const ARTICLES: Array<{
   file: string;
   slug: string;
+  /** 記事ごとの公開日。省略時は DATE（シリーズ既定日） */
+  date?: string;
   title: string;
   category: string;
   excerpt: string;
@@ -1210,6 +1241,33 @@ const ARTICLES: Array<{
       "行政書士",
     ],
   },
+  {
+    file: "24-sougi-go-tetsuzuki-dare-ni-soudan.md",
+    slug: "sougi-go-tetsuzuki-dare-ni-soudan",
+    date: "2026-08-25",
+    title:
+      "葬儀のあとの手続きは誰に相談する？──葬儀社・区役所・行政書士の役割分担と7日・14日・2年の期限",
+    category: "相続の手続き（行政書士の実務から）",
+    excerpt:
+      "葬儀のあとの手続きは、場面ごとに窓口が分かれます。葬儀の手配は葬儀社、死亡届の受理・火葬許可証の交付・世帯変更届・葬祭費は市区町村の窓口、相続の書類作成は行政書士の領域です。死亡届7日（戸籍法第86条第1項）、世帯変更届14日（住民基本台帳法第25条）、葬祭費・埋葬料2年（健康保険法第193条第1項）という葬儀直後の期限と、遺産分割協議書の作成・預貯金の名義変更のように法律上の期限が定められていない手続きを切り分けて整理しました。",
+    keywords: [
+      "葬儀後 手続き 誰に相談",
+      "葬儀社 相続 相談 どこまで",
+      "死亡届 7日以内 届出人",
+      "世帯変更届 14日 世帯主 死亡",
+      "葬祭費 埋葬料 2年 期限",
+      "葬儀後 相続 行政書士 文京区",
+    ],
+    tags: [
+      "葬儀後の手続き",
+      "死亡届",
+      "火葬許可証",
+      "世帯変更届",
+      "葬祭費",
+      "埋葬料",
+      "行政書士",
+    ],
+  },
 ];
 
 /** Markdownリンク・強調を平文化（FAQ JSON-LD用。本文には適用しない） */
@@ -1280,7 +1338,7 @@ function buildColumns(): SeedColumn[] {
       business: "legal" as const,
       slug: a.slug,
       title: a.title,
-      date: DATE,
+      date: a.date ?? DATE,
       category: a.category,
       excerpt: a.excerpt,
       content,
