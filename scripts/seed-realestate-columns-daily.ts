@@ -454,6 +454,46 @@ const ARTICLES: ArticleSpec[] = [
     localesWithTranslations: ["en", "zh-tw", "zh"],
     hubLinks: ["/souzoku"],
   },
+  {
+    file: "22-doubutsu-toriatsukai-bukken-youken.md",
+    slug: "doubutsu-toriatsukai-bukken-youken",
+    title: "トリミング・ペットショップの物件、開業前に何を確認する？──第一種動物取扱業の飼養施設と物件の条件",
+    publishedAt: "2026-08-26",
+    category: "投資・事業用不動産",
+    excerpt:
+      "トリミングサロン・ペットショップの物件で先に詰まるのは、飼養施設の基準（ケージ・洗浄・消毒・換気・排水）を満たせるか、臭気・鳴き声で近隣とぶつからないか、賃貸借契約で「動物の飼養」が禁じられていないかの3点です。第一種動物取扱業の登録は事業所ごとで、物件が飼養施設の基準を満たせることが前提。東京都文京区の宅地建物取引士兼行政書士が、動物の愛護及び管理に関する法律の条文と環境省・自治体の案内から、契約前に確認できることを整理します。",
+    keywords: [
+      "トリミングサロン 物件",
+      "ペットショップ 開業 物件",
+      "第一種動物取扱業 登録 飼養施設",
+      "動物取扱業 ケージ 数値規制",
+      "動物取扱業 用途地域 賃貸",
+    ],
+    tags: ["事業用不動産", "許認可", "動物取扱業", "用途地域"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/toushi", "/office"],
+  },
+  {
+    file: "23-sakoju-bukken-youken-toroku.md",
+    slug: "sakoju-bukken-youken-toroku",
+    title: "サ高住にできる物件の条件は？各戸25㎡・バリアフリーの実際──高齢者住まい法の登録基準",
+    publishedAt: "2026-08-26",
+    category: "投資・事業用不動産",
+    excerpt:
+      "サービス付き高齢者向け住宅（サ高住）として登録できる物件の骨格は、各戸原則25㎡以上（共用部分が十分なら18㎡以上）、各戸または共用部分の台所・便所・洗面・浴室・収納、廊下幅・段差・手すりのバリアフリー、少なくとも安否確認と生活相談の提供の4つです。既存建物でも満たせますが、床面積と共用設備の作りで可否が決まります。東京都文京区の宅地建物取引士兼行政書士が、高齢者の居住の安定確保に関する法律と国交省・厚労省の案内から物件条件を整理します。",
+    keywords: [
+      "サ高住 物件 条件",
+      "サービス付き高齢者向け住宅 登録基準",
+      "サ高住 25㎡ 18㎡ 床面積",
+      "サ高住 バリアフリー 既存建物 改修",
+      "高齢者住まい法 登録",
+    ],
+    tags: ["事業用不動産", "許認可", "サ高住", "バリアフリー"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/toushi", "/office"],
+  },
 ];
 
 function toPlainText(md: string): string {

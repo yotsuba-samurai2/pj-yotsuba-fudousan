@@ -11941,5 +11941,363 @@ export const LABOR_COLUMNS_SEED: LaborSeedColumn[] = [
         ]
       }
     }
+  },
+  {
+    "business": "labor",
+    "slug": "130man-kabe-ichijiteki-shomei",
+    "title": "130万円の壁、一時的な収入増は事業主証明で乗り切れる？",
+    "date": "2026-09-01",
+    "category": "社会保険",
+    "excerpt": "パート従業員の年収が一時的に130万円を超えても、その超過が残業や繁忙など一時的な事情によるものであれば、事業主が証明することで被扶養者の認定を続けられる場合があります（事業主の証明による被扶養者認定の円滑化）。原則として連続2回（連続する2年間）までが目安です。ただし最終的に被扶養者と認めるかを判断するのは会社ではなく保険者（協会けんぽ・健康保険組合）で、会社にできるのは一時的な事情を証明することまで。106万円の壁（加入基準）とは別制度である点も整理します。",
+    "content": "**結論（先に要点）**：パート従業員の年収が一時的に130万円を超えても、その超過が**残業や繁忙など一時的な事情によるもの**であれば、**事業主が証明することで被扶養者の認定を続けられる**場合があります。この「事業主の証明による被扶養者認定の円滑化」は**原則として連続2回（連続する2年間）まで**が目安です。ただし、**最終的に被扶養者と認めるかを判断するのは会社ではなく保険者（協会けんぽ・健康保険組合）**です。会社にできるのは、一時的な事情を正しく証明することまでです。\n\n「うちのパートさん、今年は人手が足りなくて残業が続き、気づいたら年収130万円を超えそうだ。扶養から外れてしまうのか」——人手不足の職場で、こうした相談が増えています。この記事は、パート・アルバイトの扶養を管理する中小企業の事業主・人事担当の方に向けて、130万円の壁で一時的に収入が超えたときの取扱いと、会社がどこまで担い、どこからが保険者の判断なのかを整理します。\n\n## 130万円の壁は、106万円の壁と何が違うのか？\n\n「年収の壁」には複数あり、混同されがちです。とくに**106万円と130万円は、対象になる制度そのものが違います**。\n\n| | 106万円の壁 | 130万円の壁 |\n|---|---|---|\n| 何の基準か | 短時間労働者が**自分の勤務先で社会保険に加入**する基準（適用拡大） | 配偶者などの**扶養に入れるかどうか**（被扶養者認定）の収入基準 |\n| 根拠 | 厚生年金保険法・健康保険法の適用拡大の要件 | 健康保険法第3条第7項（被扶養者の定義）と認定基準（収入の目安） |\n| 判断するのは | 勤務先の会社 | 被保険者が加入する**保険者**（協会けんぽ・健康保険組合） |\n| 金額の性格 | 月額賃金8.8万円以上（2026年10月に賃金要件は撤廃予定） | 見込み年収130万円未満（60歳以上・一定の障害者は180万円未満） |\n\n106万円の壁は「働く本人が勤務先で社会保険に入るかどうか」の話で、2026年10月に賃金要件が撤廃される見込みです。詳しくは[106万円の壁が撤廃されると、事業主は何をすればいいのか](/labor/column/106man-no-kabe-teppai-jigyousha-yaru-koto)をご覧ください。一方、この記事で扱う**130万円の壁は「配偶者などの扶養に入れるかどうか」の話**で、106万円の壁とは別の制度です。106万円が撤廃されても、130万円の扶養基準はなくなりません。\n\nなお、130万円という金額そのものは、健康保険法の条文に数字で書かれているわけではありません。条文（第3条第7項）は「主として被保険者により生計を維持する一定範囲の親族で、日本国内に住所を有するもの」を被扶養者と定め、**「130万円未満」は生計維持の目安として示された認定基準**です。だからこそ、機械的に「130万円を超えたら即アウト」ではなく、実態に照らした判断の余地があります。\n\n## 一時的に超えたとき、事業主証明で認定は続けられるのか？\n\n続けられる場合があります。国は、いわゆる「年収の壁・支援強化パッケージ」の一つとして、**「事業主の証明による被扶養者認定の円滑化」**という取扱いを設けました。人手不足による残業などで**一時的に**収入が増え、見込み年収が130万円相当を超えても、**その超過が一時的なものであることを事業主が証明**すれば、被扶養者の認定を続けられる、という仕組みです。\n\n「一時的な事情」として想定されているのは、たとえば次のようなケースです。\n\n- ほかの従業員が**退職・休職**したため、その分の業務量が増えた\n- 当該事業所が**繁忙期**で業務量が増えた\n- **突発的な大口案件**が入り、一時的に業務量が増えた\n\nこの取扱いは2023年（令和5年）10月に「当面の措置」として始まりましたが、**2025年（令和7年）10月に恒久的な取扱いへ移行**しました。時限措置ではなくなったため、毎年の収入確認の場面で使えます。\n\nただし注意が必要です。**恒久的な事情による収入増（時給の恒常的な引上げ、勤務日数を継続的に増やす契約変更など）は「一時的」に当たりません。** あくまで「今年は特別な事情で増えたが、来年は元に戻る見込み」という場合の取扱いです。恒常的に130万円を超えるなら、本来は扶養から外れて自分で社会保険に加入する（あるいは勤務先で加入する）方向になります。\n\n## 証明の回数・書き方で気をつけることは？\n\n事業主証明を使うときのポイントを整理します。\n\n| 項目 | 内容 |\n|---|---|\n| 回数の目安 | **原則として連続2回（連続する2年間の収入確認）まで**。3年続けて使うことは想定されていない |\n| 誰が書くか | **被扶養者本人ではなく、その人を雇っている事業主**が、一時的な収入増であることを証明する |\n| 何を書くか | 収入増の理由（他の従業員の退職・繁忙・大口案件など）が**一時的**であること |\n| 提出先 | 被保険者（扶養する側）が加入する**保険者**（協会けんぽ・健康保険組合）。会社が保険者へ提出する |\n| 恒久的な増加の扱い | 一時的でない収入増には**使えない**。翌年以降も続く見込みなら扶養継続はできない |\n\n証明は「事実を証明する」ものであって、「認定を約束する」ものではありません。**書いたから必ず認定が続く、というものではない**点に注意してください。\n\nあわせて、2026年4月からは、**労働契約の内容（労働条件通知書など）に基づく見込み年収**で被扶養者認定を判断する取扱いも整理されました。契約上の労働時間・賃金から見込み年収を確認する場面が増えるため、**労働条件通知書の整備**がこれまで以上に大切になります。労働条件の明示については[パート・有期雇用の労働条件、2026年10月から何を明示するのか](/labor/column/part-yuki-2026-10-meiji-taigu-setsumei)もご確認ください。\n\n## 最終的に認定するのは、会社か、保険者か？\n\n**保険者です。** ここが最も誤解されやすいところです。\n\n会社（事業主）ができるのは、**「一時的な収入増であること」を証明する**ところまでです。その証明を踏まえて、**実際に被扶養者と認めるかどうかを判断するのは、被保険者が加入する保険者（協会けんぽ・健康保険組合）**です。健康保険組合によっては独自の運用や追加書類を求める場合もあります。\n\nしたがって、従業員から「扶養は続けられますか」と聞かれても、会社が「大丈夫、続けられます」と断言することはできません。**言えるのは「一時的な事情を証明することはできます。認定の可否は保険者の判断です」まで**です。ここを取り違えると、後から認定されなかったときにトラブルになります。\n\n会社が実務で確認する流れは、次のとおりです。\n\n1. **一時的な事情かどうかを見極める**：残業・繁忙・欠員補充など、来年は元に戻る見込みか。恒常的な増加なら証明の対象外。\n2. **回数を確認する**：すでに前年に証明を使っていないか（連続2回までが目安）。\n3. **保険者の様式・締切を確認する**：協会けんぽか健康保険組合かで様式や添付書類が異なる。被保険者を通じて確認する。\n4. **判断は保険者に委ねる**：会社は証明まで。認定の可否は保険者が決める。\n\n社会保険の加入判定の基礎については[短い時間で雇うと、社会保険はどうなるか](/labor/column/tanjikan-koyo-shakaihoken-4bunno3)に、標準報酬月額の考え方は[算定基礎届と月額変更届は何が違うのか](/labor/column/santei-kiso-getsu-gaku-henko-chigai)にまとめています。あわせてご確認ください。\n\n## よくある質問\n\n**Q. 事業主証明を出せば、必ず扶養のままでいられますか？**\nA. いいえ。事業主証明は「一時的な収入増であること」を証明するものであって、認定を約束するものではありません。最終的に被扶養者と認めるかを判断するのは、被保険者が加入する保険者（協会けんぽ・健康保険組合）です。会社ができるのは証明までです。\n\n**Q. 何年でも事業主証明を使えますか？**\nA. 使えません。この取扱いは「一時的な事情」による収入増を対象とするもので、**原則として連続2回（連続する2年間の収入確認）まで**が目安とされています。時給の恒常的な引上げや勤務日数を継続的に増やす契約変更など、恒常的な収入増には使えません。\n\n**Q. 130万円を1円でも超えたら、その時点で扶養から外れますか？**\nA. 必ずしもそうではありません。130万円は健康保険法の条文に数字で定められているのではなく、生計維持の目安として示された認定基準です。一時的な収入増であれば、事業主証明による円滑化の対象になり得ます。ただし恒常的に超えるなら、扶養から外れて社会保険に加入する方向になります。\n\n**Q. パートの扶養と、税金の配偶者控除（103万円など）は同じ話ですか？**\nA. 別の話です。130万円の壁は健康保険の被扶養者認定（社会保険）の基準、配偶者控除・配偶者特別控除（103万円・150万円など）は所得税・住民税の基準で、制度が異なります。税務に関する判断は税理士の領域です。\n\n## この記事の根拠\n\n- **健康保険法第3条第7項**（被扶養者の定義）。被扶養者を「主として被保険者により生計を維持する一定範囲の親族で、日本国内に住所を有するもの」等と定めています。「130万円未満（60歳以上・一定の障害者は180万円未満）」という金額は、条文の数字ではなく、生計維持関係を判断するための収入の目安（認定基準）です（e-Gov法令検索、健康保険法・大正11年法律第70号、2026年8月26日参照）\n- **「年収の壁・支援強化パッケージ」における事業主の証明による被扶養者認定の円滑化**。一時的な収入増（他の従業員の退職・休職による業務量増加、繁忙、突発的な大口案件など）で見込み年収が130万円相当を超えても、事業主が一時的であることを証明すれば被扶養者認定を継続できる取扱いです。当初は令和5年（2023年）10月20日付通知（保保発1020第3号）による当面の措置として始まり、令和7年（2025年）10月に恒久的な取扱いへ移行しました。原則として連続2回（連続する2年間の収入確認）までが目安とされています（厚生労働省「『年収の壁』への対応」、2026年8月26日参照）\n- **2026年4月からの労働契約内容に基づく被扶養者認定**。労働条件通知書など労働契約の内容に基づく見込み年収で認定を判断する取扱いが整理されています（厚生労働省・日本年金機構の公表情報、2026年8月26日参照）\n- 最終的な被扶養者認定は、被保険者が加入する保険者（協会けんぽ・健康保険組合）が行います。健康保険組合によっては独自の運用・添付書類がある場合があります。具体的な様式・締切は各保険者の案内でご確認ください（協会けんぽ・各健康保険組合の被扶養者認定の案内、2026年8月26日参照）\n\nこの記事は、誰に相談するかまで決めるものではありません。被扶養者認定に関する事業主証明の作成や社会保険の手続は社会保険労務士の業務です。税務（配偶者控除など）は税理士の領域です。四葉社会保険労務士事務所にご相談いただく場合の費用は[報酬額表](/labor/ryokin)に、よくいただくご質問は[よくあるご質問](/labor/faq)にまとめています。\n\n本記事は一般的な情報提供です。個別の被扶養者認定の可否は保険者が判断します。制度の適用や個別の手続は、最新の一次情報（厚生労働省・日本年金機構・各保険者など）と個別のご事情に照らし、面談のうえ資格者が行います。執筆は[浦松丈二](/about/uramatsu)（社会保険労務士・行政書士・宅地建物取引士）です。",
+    "status": "published",
+    "author": {
+      "name": "浦松 丈二",
+      "title": "社会保険労務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+    },
+    "keywords": [
+      "130万円の壁 事業主証明",
+      "被扶養者認定 円滑化 連続2回",
+      "一時的な収入変動 扶養 証明",
+      "130万円の壁 106万円の壁 違い",
+      "被扶養者 収入基準 130万円",
+      "扶養 認定 保険者 判断"
+    ],
+    "tags": [
+      "社会保険",
+      "被扶養者",
+      "年収の壁",
+      "パート",
+      "社会保険労務士"
+    ],
+    "locales": [],
+    "faq": [
+      {
+        "question": "事業主証明を出せば、必ず扶養のままでいられますか？",
+        "answer": "いいえ。事業主証明は「一時的な収入増であること」を証明するものであって、認定を約束するものではありません。最終的に被扶養者と認めるかを判断するのは、被保険者が加入する保険者（協会けんぽ・健康保険組合）です。会社ができるのは証明までです。"
+      },
+      {
+        "question": "何年でも事業主証明を使えますか？",
+        "answer": "使えません。この取扱いは「一時的な事情」による収入増を対象とするもので、原則として連続2回（連続する2年間の収入確認）までが目安とされています。時給の恒常的な引上げや勤務日数を継続的に増やす契約変更など、恒常的な収入増には使えません。"
+      },
+      {
+        "question": "130万円を1円でも超えたら、その時点で扶養から外れますか？",
+        "answer": "必ずしもそうではありません。130万円は健康保険法の条文に数字で定められているのではなく、生計維持の目安として示された認定基準です。一時的な収入増であれば、事業主証明による円滑化の対象になり得ます。ただし恒常的に超えるなら、扶養から外れて社会保険に加入する方向になります。"
+      },
+      {
+        "question": "パートの扶養と、税金の配偶者控除（103万円など）は同じ話ですか？",
+        "answer": "別の話です。130万円の壁は健康保険の被扶養者認定（社会保険）の基準、配偶者控除・配偶者特別控除（103万円・150万円など）は所得税・住民税の基準で、制度が異なります。税務に関する判断は税理士の領域です。"
+      }
+    ],
+    "translations": {
+      "en": {
+        "title": "The 1.3 million yen wall — can an employer's certification carry you through a temporary rise in income?",
+        "excerpt": "Even if a part-timer's annual income temporarily exceeds 1.3 million yen, if the excess is due to a temporary circumstance such as overtime or a busy period, the employer can certify this and the person may keep their dependent status. This \"smoothing of dependent certification through the employer's certification\" is, in principle, available up to two consecutive years. However, it is the insurer (Kyokai Kenpo or a health insurance society), not the company, that ultimately decides whether to recognize a person as a dependent. All the company can do is correctly certify a temporary circumstance.",
+        "content": "**In short:** Even if a part-timer's annual income temporarily exceeds 1.3 million yen, if the excess is due to a **temporary circumstance such as overtime or a busy period**, the **employer can certify this and the person may keep their dependent status**. This \"smoothing of dependent certification through the employer's certification\" is, in principle, available **up to two consecutive years**. However, it is the **insurer (Kyokai Kenpo or a health insurance society), not the company, that ultimately decides** whether to recognize a person as a dependent. All the company can do is correctly certify a temporary circumstance.\n\n\"This year we were short-handed, our part-timer kept working overtime, and before we knew it her annual income was about to pass 1.3 million yen. Does she lose her dependent status?\" — questions like this are increasing in short-handed workplaces. This article, for the business owners and HR staff who manage the dependent status of part-time employees, sets out how a temporary rise past the 1.3 million yen wall is treated, and where the company's role ends and the insurer's judgment begins.\n\n## How does the 1.3 million yen wall differ from the 1.06 million yen wall?\n\nThere are several \"income walls,\" and they are easily confused. In particular, **the 1.06 million yen and 1.3 million yen walls concern entirely different systems**.\n\n| | 1.06 million yen wall | 1.3 million yen wall |\n|---|---|---|\n| What it is a standard for | Whether a short-time worker **enrolls in social insurance at their own workplace** (expansion of coverage) | The income standard for whether someone can be a **dependent** of a spouse etc. |\n| Basis | Enrollment requirements under the Employees' Pension Insurance Act and the Health Insurance Act | Health Insurance Act, Article 3, Paragraph 7 (definition of a dependent) and the certification standard (income guideline) |\n| Who decides | The person's own workplace | The **insurer** the insured person belongs to (Kyokai Kenpo or a health insurance society) |\n| Nature of the figure | Monthly pay of 88,000 yen or more (the wage requirement is to be abolished in October 2026) | Expected annual income under 1.3 million yen (under 1.8 million yen for those aged 60+ or with certain disabilities) |\n\nThe 1.06 million yen wall is about \"whether the worker themselves enrolls in social insurance at their workplace,\" and its wage requirement is expected to be abolished in October 2026. For details, see [what a business owner should do when the 1.06 million yen wall is abolished](/en/labor/column/106man-no-kabe-teppai-jigyousha-yaru-koto). By contrast, the **1.3 million yen wall discussed here is about \"whether someone can become a dependent of a spouse or the like\"** — a separate system from the 1.06 million yen wall. Even if the 1.06 million yen wall goes, the 1.3 million yen dependent standard does not.\n\nNote that the figure of 1.3 million yen itself is not written as a number in the Health Insurance Act. The statute (Article 3, Paragraph 7) defines a dependent as \"a relative within a certain range whose livelihood is chiefly maintained by the insured person and who has an address in Japan,\" and **\"under 1.3 million yen\" is a certification standard shown as a guideline for maintenance of livelihood**. Precisely for this reason, it is not a mechanical \"exceed 1.3 million yen and you are out immediately\"; there is room for a judgment grounded in the actual situation.\n\n## When income temporarily exceeds it, can certification continue through the employer?\n\nIt can, in some cases. As one of the measures in the so-called \"income-wall support-strengthening package,\" the government established a treatment called **\"smoothing of dependent certification through the employer's certification.\"** Even if income rises **temporarily** due to overtime caused by a labor shortage and expected annual income exceeds the equivalent of 1.3 million yen, if the **employer certifies that the excess is temporary**, the person may keep their dependent status.\n\nThe following are examples envisaged as \"temporary circumstances.\"\n\n- Another employee **left or took leave**, so that person's workload increased\n- The workplace was in a **busy period** and workload increased\n- A **sudden large order** came in and workload temporarily increased\n\nThis treatment began in October 2023 (Reiwa 5) as a \"provisional measure,\" but **shifted to a permanent treatment in October 2025 (Reiwa 7)**. As it is no longer a time-limited measure, it can be used at each annual income check.\n\nCare is needed, however. **A permanent rise in income (a permanent increase in the hourly wage, a contract change to continuously increase working days, and so on) does not count as \"temporary.\"** This treatment is only for cases where \"income rose this year for a special reason but is expected to return to normal next year.\" If income permanently exceeds 1.3 million yen, the direction is essentially to leave the dependent status and enroll in social insurance on one's own (or at one's workplace).\n\n## What to watch out for in the number of certifications and how to write them?\n\nHere are the key points when using the employer's certification.\n\n| Item | Content |\n|---|---|\n| Guideline on frequency | In principle, **up to two consecutive years (income checks in two consecutive years)**. Using it for three years in a row is not envisaged |\n| Who writes it | **Not the dependent themselves, but the employer** who employs that person certifies that the rise in income is temporary |\n| What to write | That the reason for the rise in income (another employee's departure, a busy period, a large order, etc.) is **temporary** |\n| Where to submit | The **insurer** (Kyokai Kenpo or a health insurance society) the insured person (the one providing support) belongs to. The company submits it to the insurer |\n| Treatment of a permanent increase | It **cannot be used** for a rise in income that is not temporary. If it is expected to continue in later years, dependent status cannot continue |\n\nThe certification \"certifies a fact\"; it does not \"promise certification.\" Note that **writing it does not necessarily mean certification will continue**.\n\nIn addition, from April 2026, a treatment was set out for judging dependent certification based on **expected annual income drawn from the content of the labor contract (such as the written notice of working conditions)**. As there will be more occasions to confirm expected annual income from the contractual working hours and pay, **putting the written notice of working conditions in order** becomes more important than ever. For the disclosure of working conditions, see also [what must be disclosed for part-time and fixed-term employment from October 2026](/en/labor/column/part-yuki-2026-10-meiji-taigu-setsumei).\n\n## In the end, who certifies — the company or the insurer?\n\n**The insurer.** This is the point most easily misunderstood.\n\nWhat the company (employer) can do is **certify that \"the rise in income is temporary,\"** and no further. Taking that certification into account, it is the **insurer the insured person belongs to (Kyokai Kenpo or a health insurance society) that decides whether to actually recognize the person as a dependent**. Depending on the health insurance society, there may be its own practice or additional documents.\n\nAccordingly, even when an employee asks \"can I keep my dependent status?\", the company cannot declare \"yes, you can.\" **All it can say is \"we can certify a temporary circumstance; whether it is recognized is the insurer's decision.\"** Getting this wrong leads to trouble later if certification is not granted.\n\nThe flow a company confirms in practice is as follows.\n\n1. **Judge whether it is a temporary circumstance:** overtime, a busy period, covering for a vacancy — is it expected to return to normal next year? A permanent increase is outside the scope of certification.\n2. **Check the frequency:** has certification already been used in the previous year (the guideline being up to two consecutive years)?\n3. **Check the insurer's form and deadline:** the form and required documents differ between Kyokai Kenpo and a health insurance society. Confirm through the insured person.\n4. **Leave the decision to the insurer:** the company goes as far as certification. Whether to certify is decided by the insurer.\n\nFor the basics of social-insurance enrollment decisions, see [what happens to social insurance when you hire someone for short hours](/en/labor/column/tanjikan-koyo-shakaihoken-4bunno3); for the idea of the standard monthly remuneration, see [how the standard-remuneration base notification and the monthly-change notification differ](/en/labor/column/santei-kiso-getsu-gaku-henko-chigai).\n\n## Frequently asked questions\n\n**Q. If we submit the employer's certification, can the person definitely stay a dependent?**\nA. No. The employer's certification certifies that \"the rise in income is temporary\"; it does not promise certification. The one that ultimately decides whether to recognize a person as a dependent is the insurer the insured person belongs to (Kyokai Kenpo or a health insurance society). What the company can do goes as far as certification.\n\n**Q. Can the employer's certification be used for any number of years?**\nA. No. This treatment is for a rise in income due to a \"temporary circumstance,\" and the guideline is, in principle, **up to two consecutive years (income checks in two consecutive years)**. It cannot be used for a permanent rise in income, such as a permanent increase in the hourly wage or a contract change to continuously increase working days.\n\n**Q. If income exceeds 1.3 million yen by even one yen, does the person lose their dependent status at that point?**\nA. Not necessarily. The 1.3 million yen is not laid down as a number in the Health Insurance Act; it is a certification standard shown as a guideline for maintenance of livelihood. A temporary rise in income can be subject to the smoothing through the employer's certification. If it permanently exceeds the figure, however, the direction is to leave the dependent status and enroll in social insurance.\n\n**Q. Is a part-timer's dependent status the same thing as the spousal deduction for tax (1.03 million yen, etc.)?**\nA. It is a separate matter. The 1.3 million yen wall is the standard for health-insurance dependent certification (social insurance), while the spousal deduction and special spousal deduction (1.03 million yen, 1.5 million yen, etc.) are income-tax and local-tax standards; they are different systems. Tax matters are the domain of a tax accountant.\n\n## Sources\n\n- **Health Insurance Act, Article 3, Paragraph 7** (definition of a dependent). It defines a dependent as, among others, \"a relative within a certain range whose livelihood is chiefly maintained by the insured person and who has an address in Japan.\" The figure \"under 1.3 million yen (under 1.8 million yen for those aged 60+ or with certain disabilities)\" is not a number in the statute but a guideline of income (a certification standard) for judging the maintenance-of-livelihood relationship (e-Gov Law Search, Health Insurance Act, Act No. 70 of 1922; accessed 26 August 2026).\n- **Smoothing of dependent certification through the employer's certification under the \"income-wall support-strengthening package.\"** Even if a temporary rise in income (increased workload due to another employee's departure or leave, a busy period, a sudden large order, etc.) causes expected annual income to exceed the equivalent of 1.3 million yen, dependent certification can continue if the employer certifies that it is temporary. It began as a provisional measure under a notice dated 20 October 2023 (Reiwa 5) (Hoho-hatsu No. 1020-3) and shifted to a permanent treatment in October 2025 (Reiwa 7). The guideline is, in principle, up to two consecutive years (income checks in two consecutive years) (Ministry of Health, Labour and Welfare, \"Response to the income wall\"; accessed 26 August 2026).\n- **Dependent certification based on the labor-contract content from April 2026.** A treatment has been set out for judging certification based on expected annual income drawn from the content of the labor contract, such as the written notice of working conditions (information published by the Ministry of Health, Labour and Welfare and the Japan Pension Service; accessed 26 August 2026).\n- Dependent certification is ultimately made by the insurer the insured person belongs to (Kyokai Kenpo or a health insurance society). Depending on the health insurance society there may be its own practice and additional documents. Please confirm the specific form and deadline in each insurer's guidance (guidance on dependent certification from Kyokai Kenpo and each health insurance society; accessed 26 August 2026).\n\nThis article does not decide whom to consult. Preparing the employer's certification for dependent certification and social-insurance procedures are the work of a Shakai Hoken Roumushi. Tax matters (such as the spousal deduction) are the domain of a tax accountant. For fees when consulting 四葉社会保険労務士事務所, see [the fee schedule](/en/labor/ryokin); for frequently asked questions, see [the FAQ](/en/labor/faq).\n\nThis article is general information. Whether an individual is certified as a dependent is decided by the insurer. Whether the system applies and individual procedures are handled by a qualified professional after a consultation, in light of the latest primary sources (the Ministry of Health, Labour and Welfare, the Japan Pension Service, each insurer, etc.) and individual circumstances. Written by [Joji Uramatsu](/en/about/uramatsu) (Shakai Hoken Roumushi, Gyoseishoshi, Registered Real Estate Transaction Specialist).",
+        "category": "Social insurance",
+        "keywords": [
+          "1.3 million yen wall",
+          "employer certification dependent",
+          "temporary income increase dependent",
+          "dependent certification smoothing",
+          "1.3 million yen wall vs 1.06 million yen",
+          "dependent income standard 1.3 million yen"
+        ],
+        "tags": [
+          "Social insurance",
+          "Dependents",
+          "Income wall",
+          "Part-time work",
+          "Shakai Hoken Roumushi"
+        ],
+        "author": {
+          "name": "Joji Uramatsu",
+          "title": "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所"
+        },
+        "faq": [
+          {
+            "question": "If we submit the employer's certification, can the person definitely stay a dependent?",
+            "answer": "No. The employer's certification certifies that \"the rise in income is temporary\"; it does not promise certification. The one that ultimately decides whether to recognize a person as a dependent is the insurer the insured person belongs to (Kyokai Kenpo or a health insurance society). What the company can do goes as far as certification."
+          },
+          {
+            "question": "Can the employer's certification be used for any number of years?",
+            "answer": "No. This treatment is for a rise in income due to a \"temporary circumstance,\" and the guideline is, in principle, up to two consecutive years (income checks in two consecutive years). It cannot be used for a permanent rise in income, such as a permanent increase in the hourly wage or a contract change to continuously increase working days."
+          },
+          {
+            "question": "If income exceeds 1.3 million yen by even one yen, does the person lose their dependent status at that point?",
+            "answer": "Not necessarily. The 1.3 million yen is not laid down as a number in the Health Insurance Act; it is a certification standard shown as a guideline for maintenance of livelihood. A temporary rise in income can be subject to the smoothing through the employer's certification. If it permanently exceeds the figure, however, the direction is to leave the dependent status and enroll in social insurance."
+          },
+          {
+            "question": "Is a part-timer's dependent status the same thing as the spousal deduction for tax (1.03 million yen, etc.)?",
+            "answer": "It is a separate matter. The 1.3 million yen wall is the standard for health-insurance dependent certification (social insurance), while the spousal deduction and special spousal deduction (1.03 million yen, 1.5 million yen, etc.) are income-tax and local-tax standards; they are different systems. Tax matters are the domain of a tax accountant."
+          }
+        ]
+      },
+      "zh-tw": {
+        "title": "130萬圓之牆——一時性的收入增加，能靠事業主證明撐過去嗎？",
+        "excerpt": "兼職員工的年收入即使一時超過130萬日圓，只要該超過是加班、繁忙等一時性事由所致，事業主便可加以證明，該員工有機會繼續維持被扶養者身分。這項「以事業主證明使被扶養者認定順暢化」的做法，原則上以連續2年為限。不過，最終認定是否為被扶養者的，是保險者（協會健保・健康保險組合），而非公司。公司能做的，僅止於正確證明一時性事由。",
+        "content": "**先講結論**：兼職員工的年收入即使一時超過130萬日圓，只要該超過是**加班、繁忙等一時性事由**所致，**事業主便可加以證明，該員工有機會繼續維持被扶養者身分**。這項「以事業主證明使被扶養者認定順暢化」的做法，原則上**以連續2年為限**。不過，**最終認定是否為被扶養者的，是保險者（協會健保・健康保險組合），而非公司**。公司能做的，僅止於正確證明一時性事由。\n\n「今年人手不足，我們的兼職員工一直加班，回過神來年收入眼看就要超過130萬日圓了。她會脫離扶養嗎？」——在人手不足的職場，這類諮詢正在增加。本文為管理兼職員工扶養的中小企業事業主・人事負責人，整理130萬圓之牆一時超過時的處理方式，以及公司該負責到哪裡、從哪裡開始是保險者的判斷。\n\n## 130萬圓之牆，和106萬圓之牆有什麼不同？\n\n「收入之牆」有好幾種，容易混淆。尤其**106萬圓與130萬圓，所涉及的制度本身就不同**。\n\n| | 106萬圓之牆 | 130萬圓之牆 |\n|---|---|---|\n| 是什麼的基準 | 短時間勞工**在自己任職處加入社會保險**的基準（適用擴大） | 能否進入配偶等**扶養**（被扶養者認定）的收入基準 |\n| 依據 | 厚生年金保險法・健康保險法的適用擴大要件 | 健康保険法第3條第7項（被扶養者的定義）與認定基準（收入的目安） |\n| 由誰判斷 | 任職處的公司 | 被保險人所加入的**保險者**（協會健保・健康保險組合） |\n| 金額的性質 | 月薪8萬8000日圓以上（賃金要件預定2026年10月撤廢） | 預估年收入未滿130萬日圓（60歲以上・一定障礙者為未滿180萬日圓） |\n\n106萬圓之牆講的是「工作的本人是否在任職處加入社會保險」，其賃金要件預定於2026年10月撤廢。詳情請見[106萬圓之牆撤廢後，事業主該做什麼](/zh-tw/labor/column/106man-no-kabe-teppai-jigyousha-yaru-koto)。相對地，本文所談的**130萬圓之牆講的是「能否進入配偶等的扶養」**，與106萬圓之牆是不同制度。即使106萬圓撤廢，130萬圓的扶養基準也不會消失。\n\n另外，130萬日圓這個金額本身，並未以數字寫在健康保險法的條文裡。條文（第3條第7項）將被扶養者定義為「主要由被保險人維持生計、具一定範圍親屬關係，並在日本國內設有住所者」，**「未滿130萬日圓」是作為維持生計目安而示出的認定基準**。正因如此，並非機械式地「一超過130萬日圓就立刻出局」，而是有依實態判斷的餘地。\n\n## 一時超過時，能透過事業主證明繼續認定嗎？\n\n有機會。國家作為所謂「收入之牆・支援強化配套」的措施之一，設立了**「以事業主證明使被扶養者認定順暢化」**的做法。因人手不足導致加班等而**一時**增加收入、預估年收入超過相當於130萬日圓時，只要**事業主證明該超過屬一時性**，即有機會繼續維持被扶養者認定。\n\n被設想為「一時性事由」的，例如以下情況。\n\n- 其他員工**離職・休職**，其份量的業務量因而增加\n- 該事業所處於**繁忙期**，業務量增加\n- 臨時接到**突發大口案件**，業務量一時增加\n\n此做法於2023年（令和5年）10月以「當前措施」形式起步，但於**2025年（令和7年）10月轉為恆久性做法**。由於不再是限時措施，可在每年的收入確認場合使用。\n\n不過需要留意。**恆久性事由所致的收入增加（時薪的恆常性調升、持續增加出勤日數的契約變更等）並不算「一時性」。** 此做法僅適用於「今年因特別事由而增加，但明年預計會回復原狀」的情形。若恆常性地超過130萬日圓，原則上就是脫離扶養、自行加入社會保險（或在任職處加入）的方向。\n\n## 證明的次數・寫法上要注意什麼？\n\n整理使用事業主證明時的重點。\n\n| 項目 | 內容 |\n|---|---|\n| 次數的目安 | 原則上**以連續2年（連續2年的收入確認）為限**。並未設想連續3年使用 |\n| 由誰書寫 | **並非被扶養者本人，而是僱用該人的事業主**證明收入增加屬一時性 |\n| 寫什麼 | 收入增加的理由（他員工離職・繁忙・大口案件等）屬**一時性** |\n| 提交對象 | 被保險人（扶養方）所加入的**保險者**（協會健保・健康保險組合）。由公司向保險者提交 |\n| 恆久性增加的處理 | 對非一時性的收入增加**無法使用**。若預計翌年以後仍持續，則無法繼續扶養 |\n\n證明是「證明事實」，而非「承諾認定」。請注意**寫了也不代表認定必定會延續**。\n\n此外，自2026年4月起，也整理出依**勞動契約內容（勞動條件通知書等）所得的預估年收入**來判斷被扶養者認定的做法。由於依契約上的工作時間・薪資確認預估年收入的場合會增加，**整備勞動條件通知書**比以往更為重要。關於勞動條件的明示，另請參見[兼職・有期僱用的勞動條件，2026年10月起須明示什麼](/zh-tw/labor/column/part-yuki-2026-10-meiji-taigu-setsumei)。\n\n## 最終認定的，是公司還是保險者？\n\n**是保險者。** 這是最容易被誤解之處。\n\n公司（事業主）能做的，僅止於**證明「收入增加屬一時性」**。在該證明的基礎上，**實際認定是否為被扶養者的，是被保險人所加入的保險者（協會健保・健康保險組合）**。依健康保險組合不同，可能有其自訂的運用或追加書類。\n\n因此，即使員工詢問「還能繼續維持扶養嗎」，公司也無法斷言「沒問題，能繼續」。**能說的，僅止於「我們可以證明一時性事由。認定與否是保險者的判斷」**。若此處取錯，日後未獲認定時容易產生糾紛。\n\n公司在實務上確認的流程如下。\n\n1. **判別是否為一時性事由**：加班・繁忙・補足缺員等，明年是否預計回復原狀？恆常性增加不在證明對象內。\n2. **確認次數**：前一年是否已使用過證明（目安為連續2年為限）。\n3. **確認保險者的樣式・期限**：協會健保或健康保險組合，其樣式與附件書類不同。透過被保險人確認。\n4. **將判斷交給保險者**：公司負責到證明為止。認定與否由保險者決定。\n\n關於社會保險加入判定的基礎，請見[以短時間僱用時，社會保險會如何](/zh-tw/labor/column/tanjikan-koyo-shakaihoken-4bunno3)；標準報酬月額的觀念，請見[算定基礎屆與月額變更屆有何不同](/zh-tw/labor/column/santei-kiso-getsu-gaku-henko-chigai)。\n\n## 常見問題\n\n**Q. 只要提交事業主證明，就一定能維持扶養嗎？**\nA. 不是。事業主證明是證明「收入增加屬一時性」，而非承諾認定。最終認定是否為被扶養者的，是被保險人所加入的保險者（協會健保・健康保險組合）。公司能做的僅止於證明。\n\n**Q. 事業主證明可以用無限多年嗎？**\nA. 不行。此做法以「一時性事由」的收入增加為對象，原則上以**連續2年（連續2年的收入確認）為限**為目安。對於時薪的恆常性調升、持續增加出勤日數的契約變更等恆常性收入增加，無法使用。\n\n**Q. 只要超過130萬日圓1日圓，是否在該時點就脫離扶養？**\nA. 未必如此。130萬日圓並非以數字明訂於健康保險法條文，而是作為維持生計目安示出的認定基準。若屬一時性收入增加，有機會成為以事業主證明順暢化的對象。但若恆常性超過，則是脫離扶養、加入社會保險的方向。\n\n**Q. 兼職的扶養，和稅金的配偶扣除（103萬圓等）是同一回事嗎？**\nA. 是不同的事。130萬圓之牆是健康保險被扶養者認定（社會保險）的基準，配偶扣除・配偶特別扣除（103萬圓・150萬圓等）是所得稅・住民稅的基準，制度不同。與稅務有關的判斷屬稅理士的領域。\n\n## 本文依據\n\n- **健康保険法第3條第7項**（被扶養者的定義）。將被扶養者定義為「主要由被保險人維持生計、具一定範圍親屬關係，並在日本國內設有住所者」等。「未滿130萬日圓（60歲以上・一定障礙者為未滿180萬日圓）」並非條文中的數字，而是用以判斷維持生計關係的收入目安（認定基準）（e-Gov法令檢索、健康保険法・大正11年法律第70號，2026年8月26日參照）\n- **「收入之牆・支援強化配套」中以事業主證明使被扶養者認定順暢化**。因一時性收入增加（他員工離職・休職導致業務量增加、繁忙、突發大口案件等）而使預估年收入超過相當於130萬日圓時，只要事業主證明其為一時性，即可繼續被扶養者認定。最初以令和5年（2023年）10月20日通知（保保發1020第3號）作為當前措施起步，並於令和7年（2025年）10月轉為恆久性做法。原則上以連續2年（連續2年的收入確認）為限為目安（厚生勞働省「對『收入之牆』的因應」，2026年8月26日參照）\n- **2026年4月起依勞動契約內容判斷被扶養者認定**。已整理出依勞動條件通知書等勞動契約內容所得的預估年收入來判斷認定的做法（厚生勞働省・日本年金機構公表資訊，2026年8月26日參照）\n- 最終的被扶養者認定，由被保險人所加入的保險者（協會健保・健康保險組合）進行。依健康保險組合不同，可能有其自訂運用・附件書類。具體樣式・期限請以各保險者的案內確認（協會健保・各健康保險組合的被扶養者認定案內，2026年8月26日參照）\n\n本文並不代替您決定該向誰諮詢。與被扶養者認定有關的事業主證明製作及社會保險手續，屬社會保險勞務士的業務。稅務（配偶扣除等）屬稅理士的領域。向四葉社会保険労務士事務所諮詢時的費用，整理於[報酬額表](/zh-tw/labor/ryokin)；常見問題整理於[常見問答](/zh-tw/labor/faq)。\n\n本文為一般性資訊提供。個別被扶養者認定與否，由保險者判斷。制度的適用與個別手續，將依最新的一手資訊（厚生勞働省・日本年金機構・各保險者等）與個別情形，於面談後由有資格者為之。撰文為[浦松丈二](/zh-tw/about/uramatsu)（社會保險勞務士・行政書士・宅地建物取引士）。",
+        "category": "社會保險",
+        "keywords": [
+          "130萬圓之牆",
+          "事業主證明 被扶養者",
+          "一時性 收入增加 扶養",
+          "被扶養者認定 順暢化",
+          "130萬 106萬 差異",
+          "被扶養者 收入基準 130萬"
+        ],
+        "tags": [
+          "社會保險",
+          "被扶養者",
+          "收入之牆",
+          "兼職",
+          "社會保險勞務士"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "只要提交事業主證明，就一定能維持扶養嗎？",
+            "answer": "不是。事業主證明是證明「收入增加屬一時性」，而非承諾認定。最終認定是否為被扶養者的，是被保險人所加入的保險者（協會健保・健康保險組合）。公司能做的僅止於證明。"
+          },
+          {
+            "question": "事業主證明可以用無限多年嗎？",
+            "answer": "不行。此做法以「一時性事由」的收入增加為對象，原則上以連續2年（連續2年的收入確認）為限為目安。對於時薪的恆常性調升、持續增加出勤日數的契約變更等恆常性收入增加，無法使用。"
+          },
+          {
+            "question": "只要超過130萬日圓1日圓，是否在該時點就脫離扶養？",
+            "answer": "未必如此。130萬日圓並非以數字明訂於健康保險法條文，而是作為維持生計目安示出的認定基準。若屬一時性收入增加，有機會成為以事業主證明順暢化的對象。但若恆常性超過，則是脫離扶養、加入社會保險的方向。"
+          },
+          {
+            "question": "兼職的扶養，和稅金的配偶扣除（103萬圓等）是同一回事嗎？",
+            "answer": "是不同的事。130萬圓之牆是健康保險被扶養者認定（社會保險）的基準，配偶扣除・配偶特別扣除（103萬圓・150萬圓等）是所得稅・住民稅的基準，制度不同。與稅務有關的判斷屬稅理士的領域。"
+          }
+        ]
+      },
+      "zh": {
+        "title": "130万日元之墙——一时性的收入增加，能靠事业主证明撑过去吗？",
+        "excerpt": "兼职员工的年收入即使一时超过130万日元，只要该超过是加班、繁忙等一时性事由所致，事业主便可加以证明，该员工有机会继续维持被扶养者身分。这项「以事业主证明使被扶养者认定顺畅化」的做法，原则上以连续2年为限。不过，最终认定是否为被扶养者的，是保险者（协会健保・健康保险组合），而非公司。公司能做的，仅止于正确证明一时性事由。",
+        "content": "**先讲结论**：兼职员工的年收入即使一时超过130万日元，只要该超过是**加班、繁忙等一时性事由**所致，**事业主便可加以证明，该员工有机会继续维持被扶养者身分**。这项「以事业主证明使被扶养者认定顺畅化」的做法，原则上**以连续2年为限**。不过，**最终认定是否为被扶养者的，是保险者（协会健保・健康保险组合），而非公司**。公司能做的，仅止于正确证明一时性事由。\n\n「今年人手不足，我们的兼职员工一直加班，回过神来年收入眼看就要超过130万日元了。她会脱离扶养吗？」——在人手不足的职场，这类咨询正在增加。本文为管理兼职员工扶养的中小企业事业主・人事负责人，整理130万日元之墙一时超过时的处理方式，以及公司该负责到哪里、从哪里开始是保险者的判断。\n\n## 130万日元之墙，和106万日元之墙有什么不同？\n\n「收入之墙」有好几种，容易混淆。尤其**106万日元与130万日元，所涉及的制度本身就不同**。\n\n| | 106万日元之墙 | 130万日元之墙 |\n|---|---|---|\n| 是什么的基准 | 短时间劳动者**在自己任职处加入社会保险**的基准（适用扩大） | 能否进入配偶等**扶养**（被扶养者认定）的收入基准 |\n| 依据 | 厚生年金保险法・健康保险法的适用扩大要件 | 健康保険法第3条第7项（被扶养者的定义）与认定基准（收入的目安） |\n| 由谁判断 | 任职处的公司 | 被保险人所加入的**保险者**（协会健保・健康保险组合） |\n| 金额的性质 | 月薪8万8000日元以上（工资要件预定2026年10月撤废） | 预估年收入未满130万日元（60岁以上・一定障碍者为未满180万日元） |\n\n106万日元之墙讲的是「工作的本人是否在任职处加入社会保险」，其工资要件预定于2026年10月撤废。详情请见[106万日元之墙撤废后，事业主该做什么](/zh/labor/column/106man-no-kabe-teppai-jigyousha-yaru-koto)。相对地，本文所谈的**130万日元之墙讲的是「能否进入配偶等的扶养」**，与106万日元之墙是不同制度。即使106万日元撤废，130万日元的扶养基准也不会消失。\n\n另外，130万日元这个金额本身，并未以数字写在健康保险法的条文里。条文（第3条第7项）将被扶养者定义为「主要由被保险人维持生计、具一定范围亲属关系，并在日本国内设有住所者」，**「未满130万日元」是作为维持生计目安而示出的认定基准**。正因如此，并非机械式地「一超过130万日元就立刻出局」，而是有依实态判断的余地。\n\n## 一时超过时，能透过事业主证明继续认定吗？\n\n有机会。国家作为所谓「收入之墙・支援强化配套」的措施之一，设立了**「以事业主证明使被扶养者认定顺畅化」**的做法。因人手不足导致加班等而**一时**增加收入、预估年收入超过相当于130万日元时，只要**事业主证明该超过属一时性**，即有机会继续维持被扶养者认定。\n\n被设想为「一时性事由」的，例如以下情况。\n\n- 其他员工**离职・休职**，其份量的业务量因而增加\n- 该事业所处于**繁忙期**，业务量增加\n- 临时接到**突发大口案件**，业务量一时增加\n\n此做法于2023年（令和5年）10月以「当前措施」形式起步，但于**2025年（令和7年）10月转为恒久性做法**。由于不再是限时措施，可在每年的收入确认场合使用。\n\n不过需要留意。**恒久性事由所致的收入增加（时薪的恒常性调升、持续增加出勤日数的契约变更等）并不算「一时性」。** 此做法仅适用于「今年因特别事由而增加，但明年预计会回复原状」的情形。若恒常性地超过130万日元，原则上就是脱离扶养、自行加入社会保险（或在任职处加入）的方向。\n\n## 证明的次数・写法上要注意什么？\n\n整理使用事业主证明时的重点。\n\n| 项目 | 内容 |\n|---|---|\n| 次数的目安 | 原则上**以连续2年（连续2年的收入确认）为限**。并未设想连续3年使用 |\n| 由谁书写 | **并非被扶养者本人，而是雇用该人的事业主**证明收入增加属一时性 |\n| 写什么 | 收入增加的理由（他员工离职・繁忙・大口案件等）属**一时性** |\n| 提交对象 | 被保险人（扶养方）所加入的**保险者**（协会健保・健康保险组合）。由公司向保险者提交 |\n| 恒久性增加的处理 | 对非一时性的收入增加**无法使用**。若预计翌年以后仍持续，则无法继续扶养 |\n\n证明是「证明事实」，而非「承诺认定」。请注意**写了也不代表认定必定会延续**。\n\n此外，自2026年4月起，也整理出依**劳动契约内容（劳动条件通知书等）所得的预估年收入**来判断被扶养者认定的做法。由于依契约上的工作时间・薪资确认预估年收入的场合会增加，**整备劳动条件通知书**比以往更为重要。关于劳动条件的明示，另请参见[兼职・有期雇用的劳动条件，2026年10月起须明示什么](/zh/labor/column/part-yuki-2026-10-meiji-taigu-setsumei)。\n\n## 最终认定的，是公司还是保险者？\n\n**是保险者。** 这是最容易被误解之处。\n\n公司（事业主）能做的，仅止于**证明「收入增加属一时性」**。在该证明的基础上，**实际认定是否为被扶养者的，是被保险人所加入的保险者（协会健保・健康保险组合）**。依健康保险组合不同，可能有其自订的运用或追加书类。\n\n因此，即使员工询问「还能继续维持扶养吗」，公司也无法断言「没问题，能继续」。**能说的，仅止于「我们可以证明一时性事由。认定与否是保险者的判断」**。若此处取错，日后未获认定时容易产生纠纷。\n\n公司在实务上确认的流程如下。\n\n1. **判别是否为一时性事由**：加班・繁忙・补足缺员等，明年是否预计回复原状？恒常性增加不在证明对象内。\n2. **确认次数**：前一年是否已使用过证明（目安为连续2年为限）。\n3. **确认保险者的样式・期限**：协会健保或健康保险组合，其样式与附件书类不同。透过被保险人确认。\n4. **将判断交给保险者**：公司负责到证明为止。认定与否由保险者决定。\n\n关于社会保险加入判定的基础，请见[以短时间雇用时，社会保险会如何](/zh/labor/column/tanjikan-koyo-shakaihoken-4bunno3)；标准报酬月额的观念，请见[算定基础届与月额变更届有何不同](/zh/labor/column/santei-kiso-getsu-gaku-henko-chigai)。\n\n## 常见问题\n\n**Q. 只要提交事业主证明，就一定能维持扶养吗？**\nA. 不是。事业主证明是证明「收入增加属一时性」，而非承诺认定。最终认定是否为被扶养者的，是被保险人所加入的保险者（协会健保・健康保险组合）。公司能做的仅止于证明。\n\n**Q. 事业主证明可以用无限多年吗？**\nA. 不行。此做法以「一时性事由」的收入增加为对象，原则上以**连续2年（连续2年的收入确认）为限**为目安。对于时薪的恒常性调升、持续增加出勤日数的契约变更等恒常性收入增加，无法使用。\n\n**Q. 只要超过130万日元1日元，是否在该时点就脱离扶养？**\nA. 未必如此。130万日元并非以数字明订于健康保险法条文，而是作为维持生计目安示出的认定基准。若属一时性收入增加，有机会成为以事业主证明顺畅化的对象。但若恒常性超过，则是脱离扶养、加入社会保险的方向。\n\n**Q. 兼职的扶养，和税金的配偶扣除（103万日元等）是同一回事吗？**\nA. 是不同的事。130万日元之墙是健康保险被扶养者认定（社会保险）的基准，配偶扣除・配偶特别扣除（103万日元・150万日元等）是所得税・住民税的基准，制度不同。与税务有关的判断属税理士的领域。\n\n## 本文依据\n\n- **健康保険法第3条第7项**（被扶养者的定义）。将被扶养者定义为「主要由被保险人维持生计、具一定范围亲属关系，并在日本国内设有住所者」等。「未满130万日元（60岁以上・一定障碍者为未满180万日元）」并非条文中的数字，而是用以判断维持生计关系的收入目安（认定基准）（e-Gov法令检索、健康保険法・大正11年法律第70号，2026年8月26日参照）\n- **「收入之墙・支援强化配套」中以事业主证明使被扶养者认定顺畅化**。因一时性收入增加（他员工离职・休职导致业务量增加、繁忙、突发大口案件等）而使预估年收入超过相当于130万日元时，只要事业主证明其为一时性，即可继续被扶养者认定。最初以令和5年（2023年）10月20日通知（保保发1020第3号）作为当前措施起步，并于令和7年（2025年）10月转为恒久性做法。原则上以连续2年（连续2年的收入确认）为限为目安（厚生劳働省「对『收入之墙』的因应」，2026年8月26日参照）\n- **2026年4月起依劳动契约内容判断被扶养者认定**。已整理出依劳动条件通知书等劳动契约内容所得的预估年收入来判断认定的做法（厚生劳働省・日本年金机构公表资讯，2026年8月26日参照）\n- 最终的被扶养者认定，由被保险人所加入的保险者（协会健保・健康保险组合）进行。依健康保险组合不同，可能有其自订运用・附件书类。具体样式・期限请以各保险者的案内确认（协会健保・各健康保险组合的被扶养者认定案内，2026年8月26日参照）\n\n本文并不代替您决定该向谁咨询。与被扶养者认定有关的事业主证明制作及社会保险手续，属社会保险劳务士的业务。税务（配偶扣除等）属税理士的领域。向四葉社会保険労務士事務所咨询时的费用，整理于[报酬额表](/zh/labor/ryokin)；常见问题整理于[常见问答](/zh/labor/faq)。\n\n本文为一般性资讯提供。个别被扶养者认定与否，由保险者判断。制度的适用与个别手续，将依最新的一手资讯（厚生劳働省・日本年金机构・各保险者等）与个别情形，于面谈后由有资格者为之。撰文为[浦松丈二](/zh/about/uramatsu)（社会保险劳务士・行政书士・宅地建物取引士）。",
+        "category": "社会保险",
+        "keywords": [
+          "130万日元之墙",
+          "事业主证明 被扶养者",
+          "一时性 收入增加 扶养",
+          "被扶养者认定 顺畅化",
+          "130万 106万 差异",
+          "被扶养者 收入基准 130万"
+        ],
+        "tags": [
+          "社会保险",
+          "被扶养者",
+          "收入之墙",
+          "兼职",
+          "社会保险劳务士"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "只要提交事业主证明，就一定能维持扶养吗？",
+            "answer": "不是。事业主证明是证明「收入增加属一时性」，而非承诺认定。最终认定是否为被扶养者的，是被保险人所加入的保险者（协会健保・健康保险组合）。公司能做的仅止于证明。"
+          },
+          {
+            "question": "事业主证明可以用无限多年吗？",
+            "answer": "不行。此做法以「一时性事由」的收入增加为对象，原则上以连续2年（连续2年的收入确认）为限为目安。对于时薪的恒常性调升、持续增加出勤日数的契约变更等恒常性收入增加，无法使用。"
+          },
+          {
+            "question": "只要超过130万日元1日元，是否在该时点就脱离扶养？",
+            "answer": "未必如此。130万日元并非以数字明订于健康保险法条文，而是作为维持生计目安示出的认定基准。若属一时性收入增加，有机会成为以事业主证明顺畅化的对象。但若恒常性超过，则是脱离扶养、加入社会保险的方向。"
+          },
+          {
+            "question": "兼职的扶养，和税金的配偶扣除（103万日元等）是同一回事吗？",
+            "answer": "是不同的事。130万日元之墙是健康保险被扶养者认定（社会保险）的基准，配偶扣除・配偶特别扣除（103万日元・150万日元等）是所得税・住民税的基准，制度不同。与税务有关的判断属税理士的领域。"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "business": "labor",
+    "slug": "fuyousha-kokunai-kyoju-gaikokujin",
+    "title": "外国人社員の海外の家族、健康保険の扶養に入れられる？",
+    "date": "2026-09-01",
+    "category": "社会保険",
+    "excerpt": "外国人社員が母国に残してきた家族を健康保険の扶養に入れられるかは、2020年（令和2年）4月から加わった「国内居住要件」が分かれ目です。原則として日本国内に住所（住民票）がある家族でないと被扶養者になれませんが、留学中の子など「海外特例要件」に当たる家族は海外にいても入れる場合があります。就労のために海外にいる家族は原則対象外です。認定するのは会社ではなく保険者。在留資格の手続は行政書士の業務で、社会保険（社会保険労務士）とは担当が分かれます。",
+    "content": "**結論（先に要点）**：外国人社員が母国に残してきた家族を健康保険の扶養に入れられるかは、**2020年（令和2年）4月から加わった「国内居住要件」**が分かれ目です。原則として**日本国内に住所（住民票）がある家族**でないと被扶養者になれません。ただし、**留学中の子など「海外特例要件」に当たる家族は、海外にいても扶養に入れる**場合があります。就労のために海外にいる家族は原則として対象外です。認定するのは会社ではなく保険者です。\n\n「ベトナムから来た社員が、母国の妻子を健康保険の扶養に入れたいと言っている。海外に住んでいても入れるのか」——外国人材の採用が増えるなかで、こうした相談が増えています。この記事は、外国人材を雇用する事業主・人事担当の方に向けて、健康保険の被扶養者の「国内居住要件」と海外特例、そして入社時に確認すべきことを整理します。\n\n## 健康保険の扶養に「国内居住要件」ができたのは、いつから？\n\n**2020年（令和2年）4月1日から**です。この日に施行された改正で、健康保険の被扶養者の要件に「**日本国内に住所を有すること**（国内居住要件）」が加わりました。それまでは海外に住む家族でも生計維持などの要件を満たせば扶養に入れましたが、改正後は**原則として日本国内に住民票がある家族**でないと被扶養者になれません。\n\nここでいう「住所」は、**住民基本台帳に住民登録があるか（住民票があるか）**で判断されます。日本国内に住民票がある人は、原則として国内居住要件を満たします。\n\nつまり、外国人社員の家族についても、**その家族が日本に来て住民登録をしていれば**、他の要件（生計維持など）を満たすことで被扶養者になれます。逆に、家族が母国に住んだままの場合は、次に述べる「海外特例要件」に当たらない限り、原則として扶養に入れません。\n\n## 海外にいる家族でも、扶養に入れる例外はあるのか？\n\nあります。国内居住要件には**「海外特例要件」**が定められており、次のいずれかに当たる家族は、海外にいても被扶養者と認められる場合があります。\n\n| 海外特例要件（いずれかに該当） | 具体例 |\n|---|---|\n| 外国において留学をする学生 | 海外の学校に留学している子 |\n| 外国に赴任する被保険者に同行する者 | 海外赴任する社員に同行する配偶者・子 |\n| 観光・保養・ボランティア活動その他就労以外の目的で一時的に海外に渡航する者 | 一時的な渡航中の家族 |\n| 被保険者が外国に赴任している間に当該被保険者との身分関係が生じた者 | 海外赴任中に生まれた子など |\n| 渡航目的その他の事情を考慮して日本国内に生活の基礎があると認められる者 | 上記に準じて生活の基礎が日本にあると認められる家族 |\n\n重要なのは、**「就労以外の目的」**という点です。**海外で働くために現地にいる家族は、原則として海外特例要件に当たりません。** また、外国人社員が母国に残してきた妻子が、これまで日本に住んだことがなく母国で生活している場合、上記の類型に当てはまらないことが多く、そのままでは扶養に入れないのが一般的です。\n\n「家族が海外にいるが扶養に入れたい」という相談では、まず**その家族が海外特例要件のどれに当たるのか（当たらないのか）**を、実態に照らして確認することが出発点になります。判断に迷うケースは少なくありません。\n\n## 外国人社員の入社時、扶養の手続で何を確認する？\n\n外国人社員を採用したとき、扶養に関して確認・準備することを整理します。\n\n| 確認事項 | ポイント |\n|---|---|\n| 家族の居住地 | 日本に住民票があるか、海外か。海外なら海外特例要件に当たるか |\n| 続柄・生計維持 | 被保険者との身分関係（続柄）と、主として生計を維持されているか |\n| 収入 | 被扶養者となる家族の収入が認定基準内か（見込み年収の確認） |\n| 添付書類 | 続柄・生計維持を確認できる書類。外国語の書類は**日本語の翻訳文**を添える |\n| 海外特例の書類 | 該当する場合、査証・学生証・海外赴任辞令・居住証明書の写しや「被扶養者現況申立書」など |\n\n外国人社員の場合、続柄や生計維持を証明する書類が**外国語**であることが多く、その場合は**日本語の翻訳文**の添付が求められます。書類の準備に時間がかかるため、入社時に早めに確認しておくと手続がスムーズです。\n\nなお、収入の考え方（130万円などの認定基準）や、一時的に収入が増えたときの取扱いは、日本人の家族と同じ枠組みで判断されます。詳しくは[130万円の壁、一時的な収入増は事業主証明で乗り切れるか](/labor/column/130man-kabe-ichijiteki-shomei)をご覧ください。外国人雇用の入社手続全体は[外国人を雇うとき、どの窓口に何を届け出るのか](/labor/column/gaikokujin-koyo-jokyo-todokede)にまとめています。\n\n被扶養者認定を最終的に判断するのは、**会社ではなく保険者（協会けんぽ・健康保険組合）**です。会社は書類をそろえて届け出るところまでで、認定の可否は保険者が決めます。健康保険組合によっては独自の運用や追加書類を求める場合があります。\n\nなお、これは日本国内で働く外国人社員の**海外にいる家族**を扶養に入れられるかという論点です。逆に、日本人社員が海外へ駐在するときの社会保険（社会保障協定・二重加入の防止）は別の話で、[海外赴任で社会保険はどうなるか──社会保障協定と二重加入](/labor/column/chugoku-chuzai-shakaihosho-kyotei-nijukanyu)にまとめています。対象者も論点も逆なので、混同しないようご注意ください。\n\n## 在留資格の手続は、誰に頼めばいいのか？\n\n外国人材の採用では、社会保険・労働保険の手続（社会保険労務士の業務）とは別に、**在留資格（ビザ）の手続**が発生します。在留資格認定証明書の交付申請、在留期間の更新、在留資格の変更などの**出入国在留管理庁への申請取次は、行政書士の業務**です。\n\n四葉には社会保険労務士事務所（四葉社会保険労務士事務所）と行政書士事務所（四葉行政書士事務所）がありますが、**両者は独立した事業体であり、それぞれ別々にご契約いただきます。** 一方の契約が他方の契約を兼ねることはありません。社会保険・扶養の手続は社会保険労務士、在留資格の手続は行政書士と、担当が分かれる点をあらかじめご理解ください。\n\n外国人雇用で、社会保険・労働・在留資格のどこを誰に相談すればよいか迷ったときは、まず[外国人を雇うとき、相談の窓口はどう分かれるのか](/labor/column/gaikokujin-koyo-madoguchi-wakekata)をご覧ください。\n\n## よくある質問\n\n**Q. 外国人社員が母国に残した妻子を、健康保険の扶養に入れられますか？**\nA. 原則として、その家族が日本国内に住民票を持っていることが必要です（国内居住要件）。母国で生活している家族は、留学・海外赴任への同行など「海外特例要件」に当たらない限り、原則として扶養に入れません。最終的な認定は保険者（協会けんぽ・健康保険組合）が判断します。\n\n**Q. 海外に留学している子は、扶養に入れますか？**\nA. 「外国において留学をする学生」は海外特例要件に当たり、海外にいても被扶養者と認められる場合があります。学生証や在学証明などで留学の事実を確認できる書類が必要です。ただし就労を目的として海外にいる家族は、原則として対象外です。\n\n**Q. 添付書類が外国語のときはどうすればよいですか？**\nA. 続柄や生計維持を証明する書類が外国語の場合は、日本語の翻訳文を添えて届け出るのが一般的です。翻訳の準備に時間がかかることがあるため、入社時に早めに確認しておくことをおすすめします。\n\n**Q. 社会保険の手続と、在留資格（ビザ）の手続は同じところに頼めますか？**\nA. 担当が分かれます。社会保険・扶養の手続は社会保険労務士、在留資格の手続は行政書士の業務です。四葉社会保険労務士事務所と四葉行政書士事務所は独立した事業体で、別々にご契約いただきます。\n\n## この記事の根拠\n\n- **健康保険法第3条第7項**（被扶養者の定義・国内居住要件）。2020年（令和2年）4月1日施行の改正（医療保険制度の適正かつ効率的な運営を図るための健康保険法等の一部を改正する法律・令和元年法律第9号）により、被扶養者の要件に「日本国内に住所を有すること」が加わりました。「住所」は住民基本台帳への住民登録の有無で判断されます（e-Gov法令検索、健康保険法・大正11年法律第70号、2026年8月26日参照）\n- **海外特例要件**。国内居住要件の例外として、(1) 外国において留学をする学生、(2) 外国に赴任する被保険者に同行する者、(3) 観光・保養・ボランティア活動その他就労以外の目的で一時的に海外に渡航する者、(4) 被保険者が外国に赴任している間に当該被保険者との身分関係が生じた者、(5) 渡航目的その他の事情を考慮して日本国内に生活の基礎があると認められる者、が定められています。該当する場合は被扶養者（異動）届に「被扶養者現況申立書」や身分関係・生計維持関係を確認できる書類の添付が必要です（日本年金機構「従業員の家族が海外居住の場合の手続き」／厚生労働省「被扶養者の国内居住要件等について」令和元年11月13日保保発1113第1号、2026年8月26日参照）\n- 続柄・生計維持を証明する書類が外国語の場合は、日本語の翻訳文の添付が求められるのが一般的です。具体的な様式・添付書類は各保険者の案内でご確認ください（協会けんぽ・各健康保険組合の被扶養者（異動）届の案内、2026年8月26日参照）\n- 被扶養者認定を最終的に判断するのは、被保険者が加入する保険者（協会けんぽ・健康保険組合）です。健康保険組合によっては独自の運用・添付書類がある場合があります\n- 在留資格（ビザ）に関する出入国在留管理庁への申請取次は行政書士の業務であり、社会保険・扶養の手続（社会保険労務士の業務）とは担当が分かれます\n\nこの記事は、誰に相談するかまで決めるものではありません。社会保険・被扶養者認定の手続は社会保険労務士の業務、在留資格の手続は行政書士の業務です。四葉社会保険労務士事務所にご相談いただく場合の費用は[報酬額表](/labor/ryokin)に、よくいただくご質問は[よくあるご質問](/labor/faq)にまとめています。\n\n本記事は一般的な情報提供です。個別の被扶養者認定の可否は保険者が判断します。制度の適用や個別の手続は、最新の一次情報（厚生労働省・日本年金機構・各保険者など）と個別のご事情に照らし、面談のうえ資格者が行います。執筆は[浦松丈二](/about/uramatsu)（社会保険労務士・行政書士・宅地建物取引士）です。",
+    "status": "published",
+    "author": {
+      "name": "浦松 丈二",
+      "title": "社会保険労務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+    },
+    "keywords": [
+      "外国人 家族 健康保険 扶養",
+      "被扶養者 国内居住要件 2020年4月",
+      "海外特例要件 留学 扶養",
+      "外国人社員 扶養 海外居住",
+      "被扶養者 外国語 翻訳文 添付",
+      "在留資格 行政書士 社会保険 社労士"
+    ],
+    "tags": [
+      "社会保険",
+      "被扶養者",
+      "外国人雇用",
+      "国内居住要件",
+      "社会保険労務士"
+    ],
+    "locales": [],
+    "faq": [
+      {
+        "question": "外国人社員が母国に残した妻子を、健康保険の扶養に入れられますか？",
+        "answer": "原則として、その家族が日本国内に住民票を持っていることが必要です（国内居住要件）。母国で生活している家族は、留学・海外赴任への同行など「海外特例要件」に当たらない限り、原則として扶養に入れません。最終的な認定は保険者（協会けんぽ・健康保険組合）が判断します。"
+      },
+      {
+        "question": "海外に留学している子は、扶養に入れますか？",
+        "answer": "「外国において留学をする学生」は海外特例要件に当たり、海外にいても被扶養者と認められる場合があります。学生証や在学証明などで留学の事実を確認できる書類が必要です。ただし就労を目的として海外にいる家族は、原則として対象外です。"
+      },
+      {
+        "question": "添付書類が外国語のときはどうすればよいですか？",
+        "answer": "続柄や生計維持を証明する書類が外国語の場合は、日本語の翻訳文を添えて届け出るのが一般的です。翻訳の準備に時間がかかることがあるため、入社時に早めに確認しておくことをおすすめします。"
+      },
+      {
+        "question": "社会保険の手続と、在留資格（ビザ）の手続は同じところに頼めますか？",
+        "answer": "担当が分かれます。社会保険・扶養の手続は社会保険労務士、在留資格の手続は行政書士の業務です。四葉社会保険労務士事務所と四葉行政書士事務所は独立した事業体で、別々にご契約いただきます。"
+      }
+    ],
+    "translations": {
+      "en": {
+        "title": "Can a foreign employee's overseas family be added as health-insurance dependents?",
+        "excerpt": "Whether a foreign employee can add the family they left in their home country as health-insurance dependents turns on the \"domestic residence requirement\" added in April 2020 (Reiwa 2). In principle, only family members who have an address (a residence record) in Japan can be dependents. However, family members who fall under an \"overseas special exception,\" such as a child studying abroad, may be added even while overseas. Family members overseas for the purpose of working are, in principle, outside the scope. It is the insurer, not the company, that certifies.",
+        "content": "**In short:** Whether a foreign employee can add the family they left in their home country as health-insurance dependents turns on the **\"domestic residence requirement\" added in April 2020 (Reiwa 2)**. In principle, only **family members who have an address (a residence record) in Japan** can be dependents. However, **family members who fall under an \"overseas special exception,\" such as a child studying abroad, may be added even while overseas**. Family members overseas for the purpose of working are, in principle, outside the scope. It is the insurer, not the company, that certifies.\n\n\"An employee who came from Vietnam says he wants to add the wife and child he left at home as health-insurance dependents. Can he do that even though they live overseas?\" — as hiring of foreign talent increases, questions like this are on the rise. This article, for the business owners and HR staff who employ foreign talent, sets out the \"domestic residence requirement\" for health-insurance dependents, the overseas exceptions, and what to check at the time of hiring.\n\n## Since when has there been a \"domestic residence requirement\" for health-insurance dependents?\n\n**Since 1 April 2020 (Reiwa 2).** On that day, an amendment took effect that added \"having an address in Japan (the domestic residence requirement)\" to the requirements for health-insurance dependents. Until then, family members living overseas could be dependents if they met requirements such as maintenance of livelihood, but after the amendment, in principle **only family members who have a residence record in Japan** can be dependents.\n\nThe \"address\" here is judged by **whether there is a residence registration in the Basic Resident Register (whether there is a residence record)**. A person with a residence record in Japan is, in principle, treated as meeting the domestic residence requirement.\n\nIn other words, for the family of a foreign employee too, **if that family comes to Japan and registers residence**, they can become dependents by meeting the other requirements (such as maintenance of livelihood). Conversely, if the family remains living in the home country, they cannot in principle be added unless they fall under the \"overseas special exception\" described next.\n\n## Is there an exception for family living overseas?\n\nYes. The domestic residence requirement has an **\"overseas special exception,\"** under which a family member who falls into any of the following may be recognized as a dependent even while overseas.\n\n| Overseas special exception (falling under any one) | Example |\n|---|---|\n| A student studying abroad | A child studying at a school overseas |\n| A person accompanying an insured person posted abroad | A spouse or child accompanying an employee posted overseas |\n| A person who travels overseas temporarily for sightseeing, recuperation, volunteer activity, or another purpose other than work | Family during a temporary overseas trip |\n| A person whose status relationship with the insured person arose while the insured person was posted abroad | A child born while the insured person was posted overseas, etc. |\n| A person who, taking into account the purpose of travel and other circumstances, is recognized as having the basis of their life in Japan | Family recognized, in line with the above, as having the basis of their life in Japan |\n\nThe important point is the phrase **\"for a purpose other than work.\"** **Family members who are overseas in order to work there do not, in principle, fall under the overseas special exception.** Also, where a foreign employee's wife and children whom they left in their home country have never lived in Japan and are living in the home country, they often do not fit the above categories, and it is generally the case that they cannot be added as dependents as things stand.\n\nIn a consultation where \"the family is overseas but I want to add them as dependents,\" the starting point is first to confirm, in light of the actual situation, **which of the overseas special exceptions the family falls under (or does not)**. There are quite a few cases where the judgment is difficult.\n\n## What to check about dependent procedures when hiring a foreign employee?\n\nHere is what to check and prepare regarding dependents when you hire a foreign employee.\n\n| Item to check | Point |\n|---|---|\n| Family's place of residence | Do they have a residence record in Japan, or are they overseas? If overseas, do they fall under an overseas special exception? |\n| Relationship / maintenance of livelihood | The status relationship (kinship) with the insured person, and whether their livelihood is chiefly maintained |\n| Income | Whether the income of the family member to become a dependent is within the certification standard (confirm expected annual income) |\n| Attached documents | Documents that confirm kinship and maintenance of livelihood. For documents in a foreign language, attach a **Japanese translation** |\n| Documents for the overseas exception | Where applicable, copies of a visa, student ID, overseas-posting order or residence certificate, or a \"dependent status statement,\" etc. |\n\nFor a foreign employee, the documents proving kinship and maintenance of livelihood are often in a **foreign language**, in which case a **Japanese translation** is required. Because preparing the documents takes time, confirming this early at the time of hiring makes the procedure smoother.\n\nThe idea of income (the 1.3 million yen and other certification standards) and the treatment when income temporarily rises are judged within the same framework as for Japanese family members. For details, see [can an employer's certification carry you through a temporary rise in income past the 1.3 million yen wall](/en/labor/column/130man-kabe-ichijiteki-shomei). For the whole picture of hiring procedures for foreign workers, see [when hiring a foreign worker, which office do you notify of what](/en/labor/column/gaikokujin-koyo-jokyo-todokede).\n\nThe one that ultimately decides dependent certification is **the insurer (Kyokai Kenpo or a health insurance society), not the company**. The company only goes as far as assembling the documents and filing; whether to certify is decided by the insurer. Depending on the health insurance society, there may be its own practice or additional documents.\n\nNote that this is the question of whether a foreign employee working in Japan can add their **overseas family** as dependents. Conversely, social insurance when a Japanese employee is posted overseas (the social security agreement and the prevention of dual enrollment) is a separate matter, set out in [what happens to social insurance on an overseas posting — the social security agreement and dual enrollment](/en/labor/column/chugoku-chuzai-shakaihosho-kyotei-nijukanyu). The persons concerned and the issues are the reverse, so please do not confuse the two.\n\n## Who should handle the residence-status procedures?\n\nIn hiring foreign talent, separately from the social-insurance and labor-insurance procedures (the work of a Shakai Hoken Roumushi), **residence-status (visa) procedures** arise. The **application to the Immigration Services Agency** — applying for a certificate of eligibility, renewing the period of stay, changing the status of residence, and so on — **is the work of a Gyoseishoshi**.\n\nYotsuba has a Shakai Hoken Roumushi office (四葉社会保険労務士事務所) and a Gyoseishoshi office (四葉行政書士事務所), but **the two are independent entities, and you contract with each separately.** A contract with one does not double as a contract with the other. Please understand in advance that the responsibilities are divided: social-insurance and dependent procedures are handled by the Shakai Hoken Roumushi, and residence-status procedures by the Gyoseishoshi.\n\nWhen you are unsure, in foreign employment, whom to consult for social insurance, labor, or residence status, first see [when hiring a foreign worker, how the consultation windows are divided](/en/labor/column/gaikokujin-koyo-madoguchi-wakekata).\n\n## Frequently asked questions\n\n**Q. Can a foreign employee add the wife and children they left in their home country as health-insurance dependents?**\nA. In principle, the family must have a residence record in Japan (the domestic residence requirement). Family living in the home country cannot, in principle, be added unless they fall under an \"overseas special exception\" such as studying abroad or accompanying an overseas posting. The final certification is decided by the insurer (Kyokai Kenpo or a health insurance society).\n\n**Q. Can a child studying abroad be added as a dependent?**\nA. A \"student studying abroad\" falls under an overseas special exception and may be recognized as a dependent even while overseas. Documents that confirm the fact of studying abroad, such as a student ID or a certificate of enrollment, are required. However, a family member who is overseas for the purpose of working is, in principle, outside the scope.\n\n**Q. What should we do when the attached documents are in a foreign language?**\nA. When documents proving kinship or maintenance of livelihood are in a foreign language, it is generally required to attach a Japanese translation and file. Because preparing translations can take time, we recommend confirming this early at the time of hiring.\n\n**Q. Can we entrust the social-insurance procedures and the residence-status (visa) procedures to the same place?**\nA. The responsibilities are divided. Social-insurance and dependent procedures are the work of a Shakai Hoken Roumushi, and residence-status procedures are the work of a Gyoseishoshi. 四葉社会保険労務士事務所 and 四葉行政書士事務所 are independent entities, and you contract with each separately.\n\n## Sources\n\n- **Health Insurance Act, Article 3, Paragraph 7** (definition of a dependent; the domestic residence requirement). Under the amendment that took effect on 1 April 2020 (Reiwa 2) (the Act partially amending the Health Insurance Act, etc., for appropriate and efficient operation of the medical insurance system; Act No. 9 of 2019), \"having an address in Japan\" was added to the requirements for a dependent. \"Address\" is judged by whether there is a residence registration in the Basic Resident Register (e-Gov Law Search, Health Insurance Act, Act No. 70 of 1922; accessed 26 August 2026).\n- **The overseas special exception.** As exceptions to the domestic residence requirement, the following are provided: (1) a student studying abroad, (2) a person accompanying an insured person posted abroad, (3) a person who travels overseas temporarily for sightseeing, recuperation, volunteer activity, or another purpose other than work, (4) a person whose status relationship with the insured person arose while the insured person was posted abroad, and (5) a person who, taking into account the purpose of travel and other circumstances, is recognized as having the basis of their life in Japan. Where applicable, the dependent (change) notification must be accompanied by a \"dependent status statement\" and documents confirming the kinship and maintenance-of-livelihood relationship (Japan Pension Service, \"Procedures when an employee's family lives overseas\" / Ministry of Health, Labour and Welfare, \"On the domestic residence requirement for dependents, etc.,\" 13 November 2019, Hoho-hatsu No. 1113-1; accessed 26 August 2026).\n- Where documents proving kinship or maintenance of livelihood are in a foreign language, attaching a Japanese translation is generally required. Please confirm the specific form and attached documents in each insurer's guidance (guidance on the dependent (change) notification from Kyokai Kenpo and each health insurance society; accessed 26 August 2026).\n- Dependent certification is ultimately decided by the insurer the insured person belongs to (Kyokai Kenpo or a health insurance society). Depending on the health insurance society there may be its own practice and additional documents.\n- Application to the Immigration Services Agency regarding residence status (visa) is the work of a Gyoseishoshi, and the responsibility is divided from the social-insurance and dependent procedures (the work of a Shakai Hoken Roumushi).\n\nThis article does not decide whom to consult. Social-insurance and dependent-certification procedures are the work of a Shakai Hoken Roumushi, and residence-status procedures are the work of a Gyoseishoshi. For fees when consulting 四葉社会保険労務士事務所, see [the fee schedule](/en/labor/ryokin); for frequently asked questions, see [the FAQ](/en/labor/faq).\n\nThis article is general information. Whether an individual is certified as a dependent is decided by the insurer. Whether the system applies and individual procedures are handled by a qualified professional after a consultation, in light of the latest primary sources (the Ministry of Health, Labour and Welfare, the Japan Pension Service, each insurer, etc.) and individual circumstances. Written by [Joji Uramatsu](/en/about/uramatsu) (Shakai Hoken Roumushi, Gyoseishoshi, Registered Real Estate Transaction Specialist).",
+        "category": "Social insurance",
+        "keywords": [
+          "foreign employee dependent",
+          "overseas family health insurance",
+          "domestic residence requirement dependent",
+          "overseas special exception dependent",
+          "foreign worker social insurance enrollment",
+          "dependent notification foreign worker"
+        ],
+        "tags": [
+          "Social insurance",
+          "Dependents",
+          "Foreign employment",
+          "Domestic residence requirement",
+          "Shakai Hoken Roumushi"
+        ],
+        "author": {
+          "name": "Joji Uramatsu",
+          "title": "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所"
+        },
+        "faq": [
+          {
+            "question": "Can a foreign employee add the wife and children they left in their home country as health-insurance dependents?",
+            "answer": "In principle, the family must have a residence record in Japan (the domestic residence requirement). Family living in the home country cannot, in principle, be added unless they fall under an \"overseas special exception\" such as studying abroad or accompanying an overseas posting. The final certification is decided by the insurer (Kyokai Kenpo or a health insurance society)."
+          },
+          {
+            "question": "Can a child studying abroad be added as a dependent?",
+            "answer": "A \"student studying abroad\" falls under an overseas special exception and may be recognized as a dependent even while overseas. Documents that confirm the fact of studying abroad, such as a student ID or a certificate of enrollment, are required. However, a family member who is overseas for the purpose of working is, in principle, outside the scope."
+          },
+          {
+            "question": "What should we do when the attached documents are in a foreign language?",
+            "answer": "When documents proving kinship or maintenance of livelihood are in a foreign language, it is generally required to attach a Japanese translation and file. Because preparing translations can take time, we recommend confirming this early at the time of hiring."
+          },
+          {
+            "question": "Can we entrust the social-insurance procedures and the residence-status (visa) procedures to the same place?",
+            "answer": "The responsibilities are divided. Social-insurance and dependent procedures are the work of a Shakai Hoken Roumushi, and residence-status procedures are the work of a Gyoseishoshi. 四葉社会保険労務士事務所 and 四葉行政書士事務所 are independent entities, and you contract with each separately."
+          }
+        ]
+      },
+      "zh-tw": {
+        "title": "外國員工在海外的家人，能加入健康保險的扶養嗎？",
+        "excerpt": "外國員工能否將留在母國的家人加入健康保險扶養，關鍵在於2020年（令和2年）4月起加入的「國內居住要件」。原則上，必須是在日本國內設有住所（住民票）的家人才能成為被扶養者。不過，如留學中的子女等符合「海外特例要件」的家人，即使人在海外也有機會加入扶養。為了工作而在海外的家人，原則上不在對象內。認定的是保險者，而非公司。",
+        "content": "**先講結論**：外國員工能否將留在母國的家人加入健康保險扶養，關鍵在於**2020年（令和2年）4月起加入的「國內居住要件」**。原則上，必須是**在日本國內設有住所（住民票）的家人**才能成為被扶養者。不過，**如留學中的子女等符合「海外特例要件」的家人，即使人在海外也有機會加入扶養**。為了工作而在海外的家人，原則上不在對象內。認定的是保險者，而非公司。\n\n「從越南來的員工，說想把留在母國的妻小加入健康保險的扶養。人住在海外也能加入嗎？」——在外國人材僱用增加的同時，這類諮詢正在增加。本文為僱用外國人材的事業主・人事負責人，整理健康保險被扶養者的「國內居住要件」與海外特例，以及入職時應確認的事項。\n\n## 健康保險的扶養有「國內居住要件」，是從何時開始的？\n\n**是從2020年（令和2年）4月1日起。** 這一天施行的修正，在健康保險被扶養者的要件中加入了「**在日本國內設有住所**（國內居住要件）」。在此之前，住在海外的家人只要符合維持生計等要件也可加入扶養，但修正後，原則上**必須是在日本國內設有住民票的家人**才能成為被扶養者。\n\n這裡所說的「住所」，是依**住民基本台帳中是否有住民登記（是否有住民票）**判斷。在日本國內設有住民票者，原則上即被視為符合國內居住要件。\n\n換言之，外國員工的家人也一樣，**只要該家人來到日本並辦理住民登記**，即可透過符合其他要件（維持生計等）而成為被扶養者。反之，若家人仍住在母國，除非符合下述「海外特例要件」，否則原則上無法加入扶養。\n\n## 人在海外的家人，有能加入扶養的例外嗎？\n\n有。國內居住要件設有**「海外特例要件」**，符合以下任一者的家人，即使人在海外也有機會被認定為被扶養者。\n\n| 海外特例要件（符合任一） | 具體例 |\n|---|---|\n| 在外國留學的學生 | 在海外學校留學的子女 |\n| 同行赴外國赴任的被保險人者 | 隨海外赴任員工同行的配偶・子女 |\n| 因觀光・保養・志工活動等就勞以外目的一時渡航海外者 | 一時渡航中的家人 |\n| 於被保險人在外國赴任期間與該被保險人發生身分關係者 | 海外赴任期間出生的子女等 |\n| 考量渡航目的及其他情事，認定生活基礎在日本國內者 | 準此而被認定生活基礎在日本的家人 |\n\n重要的是**「就勞以外目的」**這一點。**為了在海外工作而人在當地的家人，原則上不符合海外特例要件。** 此外，外國員工留在母國的妻小，若至今未曾住過日本、於母國生活，多半不符合上述類型，通常在現狀下無法加入扶養。\n\n在「家人在海外但想加入扶養」的諮詢中，出發點是先依實態確認**該家人符合（或不符合）哪一項海外特例要件**。判斷困難的情形並不少見。\n\n## 外國員工入職時，扶養手續要確認什麼？\n\n整理僱用外國員工時，關於扶養要確認・準備的事項。\n\n| 確認事項 | 重點 |\n|---|---|\n| 家人的居住地 | 是否在日本設有住民票，或人在海外。若在海外，是否符合海外特例要件 |\n| 續柄・維持生計 | 與被保險人的身分關係（續柄），及是否主要由其維持生計 |\n| 收入 | 將成為被扶養者的家人收入是否在認定基準內（確認預估年收入） |\n| 附件書類 | 可確認續柄・維持生計的書類。外語書類須附上**日文翻譯文** |\n| 海外特例的書類 | 符合時，簽證・學生證・海外赴任辭令・居住證明的影本或「被扶養者現況申立書」等 |\n\n外國員工的情況，證明續柄・維持生計的書類多為**外語**，此時須附上**日文翻譯文**。由於書類準備需要時間，於入職時及早確認能使手續更順暢。\n\n至於收入的觀念（130萬圓等認定基準）及一時性收入增加時的處理，與日本人家人在同一架構下判斷。詳情請見[130萬圓之牆，一時性收入增加能靠事業主證明撐過去嗎](/zh-tw/labor/column/130man-kabe-ichijiteki-shomei)。外國人僱用的入職手續全貌，整理於[僱用外國人時，要向哪個窗口申報什麼](/zh-tw/labor/column/gaikokujin-koyo-jokyo-todokede)。\n\n最終判斷被扶養者認定的，是**保險者（協會健保・健康保險組合），而非公司**。公司負責到備齊書類並申報為止，認定與否由保險者決定。依健康保險組合不同，可能有其自訂運用或追加書類。\n\n另外，這是「在日本國內工作的外國員工，能否將**在海外的家人**加入扶養」的論點。反之，日本人員工赴海外赴任時的社會保險（社會保障協定・防止雙重加入）是另一回事，整理於[海外赴任時社會保險會如何──社會保障協定與雙重加入](/zh-tw/labor/column/chugoku-chuzai-shakaihosho-kyotei-nijukanyu)。對象者與論點皆相反，請勿混淆。\n\n## 在留資格的手續，該委託誰？\n\n在僱用外國人材時，除了社會保險・勞動保險的手續（社會保險勞務士的業務）之外，還會產生**在留資格（簽證）的手續**。在留資格認定證明書的交付申請、在留期間的更新、在留資格的變更等**向出入國在留管理廳的申請取次，屬行政書士的業務**。\n\n四葉設有社會保險勞務士事務所（四葉社会保険労務士事務所）與行政書士事務所（四葉行政書士事務所），但**兩者為各自獨立的事業體，須分別承接、另行簽約。** 一方的契約並不兼含另一方的契約。社會保險・扶養手續由社會保險勞務士、在留資格手續由行政書士負責，擔當有所區分，敬請事先理解。\n\n在外國人僱用中，若不確定社會保險、勞動、在留資格該向誰諮詢，請先參見[僱用外國人時，諮詢窗口如何區分](/zh-tw/labor/column/gaikokujin-koyo-madoguchi-wakekata)。\n\n## 常見問題\n\n**Q. 外國員工能將留在母國的妻小加入健康保險扶養嗎？**\nA. 原則上，該家人須在日本國內持有住民票（國內居住要件）。在母國生活的家人，除非符合留學、隨海外赴任同行等「海外特例要件」，否則原則上無法加入扶養。最終認定由保險者（協會健保・健康保險組合）判斷。\n\n**Q. 在海外留學的子女能加入扶養嗎？**\nA. 「在外國留學的學生」符合海外特例要件，即使人在海外也有機會被認定為被扶養者。須有可確認留學事實的書類，如學生證或在學證明。但以就勞為目的而人在海外的家人，原則上不在對象內。\n\n**Q. 附件書類為外語時該怎麼辦？**\nA. 證明續柄或維持生計的書類為外語時，一般須附上日文翻譯文再行申報。翻譯的準備有時需要時間，建議於入職時及早確認。\n\n**Q. 社會保險手續與在留資格（簽證）手續，能委託同一處嗎？**\nA. 擔當有所區分。社會保險・扶養手續屬社會保險勞務士的業務，在留資格手續屬行政書士的業務。四葉社会保険労務士事務所與四葉行政書士事務所為各自獨立的事業體，須分別承接、另行簽約。\n\n## 本文依據\n\n- **健康保険法第3條第7項**（被扶養者的定義・國內居住要件）。依2020年（令和2年）4月1日施行的修正（為醫療保險制度適正且有效率之運作而修正健康保険法等一部之法律・令和元年法律第9號），在被扶養者的要件中加入了「在日本國內設有住所」。「住所」依住民基本台帳是否有住民登記判斷（e-Gov法令檢索、健康保険法・大正11年法律第70號，2026年8月26日參照）\n- **海外特例要件**。作為國內居住要件的例外，訂有：(1) 在外國留學的學生、(2) 同行赴外國赴任的被保險人者、(3) 因觀光・保養・志工活動等就勞以外目的一時渡航海外者、(4) 於被保險人在外國赴任期間與該被保險人發生身分關係者、(5) 考量渡航目的及其他情事認定生活基礎在日本國內者。符合時，被扶養者（異動）屆須附上「被扶養者現況申立書」及可確認身分關係・維持生計關係的書類（日本年金機構「員工家人在海外居住時的手續」／厚生勞働省「關於被扶養者的國內居住要件等」令和元年11月13日保保發1113第1號，2026年8月26日參照）\n- 證明續柄或維持生計的書類為外語時，一般須附上日文翻譯文。具體樣式・附件書類請以各保險者的案內確認（協會健保・各健康保險組合的被扶養者（異動）屆案內，2026年8月26日參照）\n- 最終判斷被扶養者認定的，是被保險人所加入的保險者（協會健保・健康保險組合）。依健康保險組合不同，可能有其自訂運用・附件書類\n- 關於在留資格（簽證）向出入國在留管理廳的申請取次屬行政書士的業務，與社會保險・扶養手續（社會保險勞務士的業務）擔當有所區分\n\n本文並不代替您決定該向誰諮詢。社會保險・被扶養者認定手續屬社會保險勞務士的業務，在留資格手續屬行政書士的業務。向四葉社会保険労務士事務所諮詢時的費用，整理於[報酬額表](/zh-tw/labor/ryokin)；常見問題整理於[常見問答](/zh-tw/labor/faq)。\n\n本文為一般性資訊提供。個別被扶養者認定與否，由保險者判斷。制度的適用與個別手續，將依最新的一手資訊（厚生勞働省・日本年金機構・各保險者等）與個別情形，於面談後由有資格者為之。撰文為[浦松丈二](/zh-tw/about/uramatsu)（社會保險勞務士・行政書士・宅地建物取引士）。",
+        "category": "社會保險",
+        "keywords": [
+          "外國員工 被扶養者",
+          "海外家人 健康保險",
+          "國內居住要件 被扶養者",
+          "海外特例要件 扶養",
+          "外國人 社會保險 加入",
+          "被扶養者屆 外國人"
+        ],
+        "tags": [
+          "社會保險",
+          "被扶養者",
+          "外國人僱用",
+          "國內居住要件",
+          "社會保險勞務士"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "外國員工能將留在母國的妻小加入健康保險扶養嗎？",
+            "answer": "原則上，該家人須在日本國內持有住民票（國內居住要件）。在母國生活的家人，除非符合留學、隨海外赴任同行等「海外特例要件」，否則原則上無法加入扶養。最終認定由保險者（協會健保・健康保險組合）判斷。"
+          },
+          {
+            "question": "在海外留學的子女能加入扶養嗎？",
+            "answer": "「在外國留學的學生」符合海外特例要件，即使人在海外也有機會被認定為被扶養者。須有可確認留學事實的書類，如學生證或在學證明。但以就勞為目的而人在海外的家人，原則上不在對象內。"
+          },
+          {
+            "question": "附件書類為外語時該怎麼辦？",
+            "answer": "證明續柄或維持生計的書類為外語時，一般須附上日文翻譯文再行申報。翻譯的準備有時需要時間，建議於入職時及早確認。"
+          },
+          {
+            "question": "社會保險手續與在留資格（簽證）手續，能委託同一處嗎？",
+            "answer": "擔當有所區分。社會保險・扶養手續屬社會保險勞務士的業務，在留資格手續屬行政書士的業務。四葉社会保険労務士事務所與四葉行政書士事務所為各自獨立的事業體，須分別承接、另行簽約。"
+          }
+        ]
+      },
+      "zh": {
+        "title": "外国员工在海外的家人，能加入健康保险的扶养吗？",
+        "excerpt": "外国员工能否将留在母国的家人加入健康保险扶养，关键在于2020年（令和2年）4月起加入的「国内居住要件」。原则上，必须是在日本国内设有住所（住民票）的家人才能成为被扶养者。不过，如留学中的子女等符合「海外特例要件」的家人，即使人在海外也有机会加入扶养。为了工作而在海外的家人，原则上不在对象内。认定的是保险者，而非公司。",
+        "content": "**先讲结论**：外国员工能否将留在母国的家人加入健康保险扶养，关键在于**2020年（令和2年）4月起加入的「国内居住要件」**。原则上，必须是**在日本国内设有住所（住民票）的家人**才能成为被扶养者。不过，**如留学中的子女等符合「海外特例要件」的家人，即使人在海外也有机会加入扶养**。为了工作而在海外的家人，原则上不在对象内。认定的是保险者，而非公司。\n\n「从越南来的员工，说想把留在母国的妻小加入健康保险的扶养。人住在海外也能加入吗？」——在外国人材雇用增加的同时，这类咨询正在增加。本文为雇用外国人材的事业主・人事负责人，整理健康保险被扶养者的「国内居住要件」与海外特例，以及入职时应确认的事项。\n\n## 健康保险的扶养有「国内居住要件」，是从何时开始的？\n\n**是从2020年（令和2年）4月1日起。** 这一天施行的修正，在健康保险被扶养者的要件中加入了「**在日本国内设有住所**（国内居住要件）」。在此之前，住在海外的家人只要符合维持生计等要件也可加入扶养，但修正后，原则上**必须是在日本国内设有住民票的家人**才能成为被扶养者。\n\n这里所说的「住所」，是依**住民基本台帐中是否有住民登记（是否有住民票）**判断。在日本国内设有住民票者，原则上即被视为符合国内居住要件。\n\n换言之，外国员工的家人也一样，**只要该家人来到日本并办理住民登记**，即可透过符合其他要件（维持生计等）而成为被扶养者。反之，若家人仍住在母国，除非符合下述「海外特例要件」，否则原则上无法加入扶养。\n\n## 人在海外的家人，有能加入扶养的例外吗？\n\n有。国内居住要件设有**「海外特例要件」**，符合以下任一者的家人，即使人在海外也有机会被认定为被扶养者。\n\n| 海外特例要件（符合任一） | 具体例 |\n|---|---|\n| 在外国留学的学生 | 在海外学校留学的子女 |\n| 同行赴外国赴任的被保险人者 | 随海外赴任员工同行的配偶・子女 |\n| 因观光・保养・志工活动等就劳以外目的一时渡航海外者 | 一时渡航中的家人 |\n| 于被保险人在外国赴任期间与该被保险人发生身分关系者 | 海外赴任期间出生的子女等 |\n| 考量渡航目的及其他情事，认定生活基础在日本国内者 | 准此而被认定生活基础在日本的家人 |\n\n重要的是**「就劳以外目的」**这一点。**为了在海外工作而人在当地的家人，原则上不符合海外特例要件。** 此外，外国员工留在母国的妻小，若至今未曾住过日本、于母国生活，多半不符合上述类型，通常在现状下无法加入扶养。\n\n在「家人在海外但想加入扶养」的咨询中，出发点是先依实态确认**该家人符合（或不符合）哪一项海外特例要件**。判断困难的情形并不少见。\n\n## 外国员工入职时，扶养手续要确认什么？\n\n整理雇用外国员工时，关于扶养要确认・准备的事项。\n\n| 确认事项 | 重点 |\n|---|---|\n| 家人的居住地 | 是否在日本设有住民票，或人在海外。若在海外，是否符合海外特例要件 |\n| 续柄・维持生计 | 与被保险人的身分关系（续柄），及是否主要由其维持生计 |\n| 收入 | 将成为被扶养者的家人收入是否在认定基准内（确认预估年收入） |\n| 附件书类 | 可确认续柄・维持生计的书类。外语书类须附上**日文翻译文** |\n| 海外特例的书类 | 符合时，签证・学生证・海外赴任辞令・居住证明的影本或「被扶养者现况申立书」等 |\n\n外国员工的情况，证明续柄・维持生计的书类多为**外语**，此时须附上**日文翻译文**。由于书类准备需要时间，于入职时及早确认能使手续更顺畅。\n\n至于收入的观念（130万日元等认定基准）及一时性收入增加时的处理，与日本人家人在同一架构下判断。详情请见[130万日元之墙，一时性收入增加能靠事业主证明撑过去吗](/zh/labor/column/130man-kabe-ichijiteki-shomei)。外国人雇用的入职手续全貌，整理于[雇用外国人时，要向哪个窗口申报什么](/zh/labor/column/gaikokujin-koyo-jokyo-todokede)。\n\n最终判断被扶养者认定的，是**保险者（协会健保・健康保险组合），而非公司**。公司负责到备齐书类并申报为止，认定与否由保险者决定。依健康保险组合不同，可能有其自订运用或追加书类。\n\n另外，这是「在日本国内工作的外国员工，能否将**在海外的家人**加入扶养」的论点。反之，日本人员工赴海外赴任时的社会保险（社会保障协定・防止双重加入）是另一回事，整理于[海外赴任时社会保险会如何──社会保障协定与双重加入](/zh/labor/column/chugoku-chuzai-shakaihosho-kyotei-nijukanyu)。对象者与论点皆相反，请勿混淆。\n\n## 在留资格的手续，该委托谁？\n\n在雇用外国人材时，除了社会保险・劳动保险的手续（社会保险劳务士的业务）之外，还会产生**在留资格（签证）的手续**。在留资格认定证明书的交付申请、在留期间的更新、在留资格的变更等**向出入国在留管理厅的申请取次，属行政书士的业务**。\n\n四葉设有社会保险劳务士事务所（四葉社会保険労務士事務所）与行政书士事务所（四葉行政書士事務所），但**两者为各自独立的事业体，须分别承接、另行签约。** 一方的契约并不兼含另一方的契约。社会保险・扶养手续由社会保险劳务士、在留资格手续由行政书士负责，担当有所区分，敬请事先理解。\n\n在外国人雇用中，若不确定社会保险、劳动、在留资格该向谁咨询，请先参见[雇用外国人时，咨询窗口如何区分](/zh/labor/column/gaikokujin-koyo-madoguchi-wakekata)。\n\n## 常见问题\n\n**Q. 外国员工能将留在母国的妻小加入健康保险扶养吗？**\nA. 原则上，该家人须在日本国内持有住民票（国内居住要件）。在母国生活的家人，除非符合留学、随海外赴任同行等「海外特例要件」，否则原则上无法加入扶养。最终认定由保险者（协会健保・健康保险组合）判断。\n\n**Q. 在海外留学的子女能加入扶养吗？**\nA. 「在外国留学的学生」符合海外特例要件，即使人在海外也有机会被认定为被扶养者。须有可确认留学事实的书类，如学生证或在学证明。但以就劳为目的而人在海外的家人，原则上不在对象内。\n\n**Q. 附件书类为外语时该怎么办？**\nA. 证明续柄或维持生计的书类为外语时，一般须附上日文翻译文再行申报。翻译的准备有时需要时间，建议于入职时及早确认。\n\n**Q. 社会保险手续与在留资格（签证）手续，能委托同一处吗？**\nA. 担当有所区分。社会保险・扶养手续属社会保险劳务士的业务，在留资格手续属行政书士的业务。四葉社会保険労務士事務所与四葉行政書士事務所为各自独立的事业体，须分别承接、另行签约。\n\n## 本文依据\n\n- **健康保険法第3条第7项**（被扶养者的定义・国内居住要件）。依2020年（令和2年）4月1日施行的修正（为医疗保险制度适正且有效率之运作而修正健康保険法等一部之法律・令和元年法律第9号），在被扶养者的要件中加入了「在日本国内设有住所」。「住所」依住民基本台帐是否有住民登记判断（e-Gov法令检索、健康保険法・大正11年法律第70号，2026年8月26日参照）\n- **海外特例要件**。作为国内居住要件的例外，订有：(1) 在外国留学的学生、(2) 同行赴外国赴任的被保险人者、(3) 因观光・保养・志工活动等就劳以外目的一时渡航海外者、(4) 于被保险人在外国赴任期间与该被保险人发生身分关系者、(5) 考量渡航目的及其他情事认定生活基础在日本国内者。符合时，被扶养者（异动）届须附上「被扶养者现况申立书」及可确认身分关系・维持生计关系的书类（日本年金机构「员工家人在海外居住时的手续」／厚生劳働省「关于被扶养者的国内居住要件等」令和元年11月13日保保发1113第1号，2026年8月26日参照）\n- 证明续柄或维持生计的书类为外语时，一般须附上日文翻译文。具体样式・附件书类请以各保险者的案内确认（协会健保・各健康保险组合的被扶养者（异动）届案内，2026年8月26日参照）\n- 最终判断被扶养者认定的，是被保险人所加入的保险者（协会健保・健康保险组合）。依健康保险组合不同，可能有其自订运用・附件书类\n- 关于在留资格（签证）向出入国在留管理厅的申请取次属行政书士的业务，与社会保险・扶养手续（社会保险劳务士的业务）担当有所区分\n\n本文并不代替您决定该向谁咨询。社会保险・被扶养者认定手续属社会保险劳务士的业务，在留资格手续属行政书士的业务。向四葉社会保険労務士事務所咨询时的费用，整理于[报酬额表](/zh/labor/ryokin)；常见问题整理于[常见问答](/zh/labor/faq)。\n\n本文为一般性资讯提供。个别被扶养者认定与否，由保险者判断。制度的适用与个别手续，将依最新的一手资讯（厚生劳働省・日本年金机构・各保险者等）与个别情形，于面谈后由有资格者为之。撰文为[浦松丈二](/zh/about/uramatsu)（社会保险劳务士・行政书士・宅地建物取引士）。",
+        "category": "社会保险",
+        "keywords": [
+          "外国员工 被扶养者",
+          "海外家人 健康保险",
+          "国内居住要件 被扶养者",
+          "海外特例要件 扶养",
+          "外国人 社会保险 加入",
+          "被扶养者届 外国人"
+        ],
+        "tags": [
+          "社会保险",
+          "被扶养者",
+          "外国人雇用",
+          "国内居住要件",
+          "社会保险劳务士"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "外国员工能将留在母国的妻小加入健康保险扶养吗？",
+            "answer": "原则上，该家人须在日本国内持有住民票（国内居住要件）。在母国生活的家人，除非符合留学、随海外赴任同行等「海外特例要件」，否则原则上无法加入扶养。最终认定由保险者（协会健保・健康保险组合）判断。"
+          },
+          {
+            "question": "在海外留学的子女能加入扶养吗？",
+            "answer": "「在外国留学的学生」符合海外特例要件，即使人在海外也有机会被认定为被扶养者。须有可确认留学事实的书类，如学生证或在学证明。但以就劳为目的而人在海外的家人，原则上不在对象内。"
+          },
+          {
+            "question": "附件书类为外语时该怎么办？",
+            "answer": "证明续柄或维持生计的书类为外语时，一般须附上日文翻译文再行申报。翻译的准备有时需要时间，建议于入职时及早确认。"
+          },
+          {
+            "question": "社会保险手续与在留资格（签证）手续，能委托同一处吗？",
+            "answer": "担当有所区分。社会保险・扶养手续属社会保险劳务士的业务，在留资格手续属行政书士的业务。四葉社会保険労務士事務所与四葉行政書士事務所为各自独立的事业体，须分别承接、另行签约。"
+          }
+        ]
+      }
+    }
   }
 ];

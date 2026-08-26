@@ -328,6 +328,16 @@ const REQUIRED_HUB_LINKS: Record<string, string[]> = {
     "/legal/column/souzoku-touki-nagare",
     "/legal/column/souzoku-kigen-matome",
   ],
+  "shinya-shurui-teikyo-todokede-yoken": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+  ],
+  "kobutsusho-kyoka-eigyosho-yoken": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+  ],
 };
 
 /** 表示コンプライアンス上の禁止語 */
@@ -807,6 +817,42 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "別事業体",
     "独立した事業体",
   ],
+  "shinya-shurui-teikyo-todokede-yoken": [
+    "風俗営業等の規制及び業務の適正化等に関する法律",
+    "第33条第1項",
+    "第33条第4項",
+    "第2条第13項第4号",
+    "午前0時から午前6時",
+    "10日前",
+    "公安委員会",
+    "所轄警察署",
+    "住居系用途地域",
+    "9.5㎡以上",
+    "20ルクス",
+    "飲食店営業許可",
+    "食品衛生法",
+    "紹介料を受け取りません",
+    "別事業体",
+    "独立した事業体",
+  ],
+  "kobutsusho-kyoka-eigyosho-yoken": [
+    "古物営業法",
+    "第3条第1項",
+    "都道府県公安委員会",
+    "第4条",
+    "第5条第1項第6号",
+    "第13条第1項",
+    "管理者",
+    "使用承諾",
+    "19,000円",
+    "40日",
+    "拘禁刑以上の刑",
+    "2025年6月1日",
+    "所轄警察署",
+    "紹介料を受け取りません",
+    "別事業体",
+    "独立した事業体",
+  ],
 };
 
 /** 記事ごとに含めてはならない表現 */
@@ -874,6 +920,8 @@ const FORBIDDEN_PHRASES: Record<string, string[]> = {
   "souzoku-nochi-noringyoiinkai-todoke-3jo3": [],
   "sanpai-shushu-unpan-kyoka-torikata": [],
   "suuji-souzoku-isanbunkatsu-kyogisho": [],
+  "shinya-shurui-teikyo-todokede-yoken": [],
+  "kobutsusho-kyoka-eigyosho-yoken": [],
 };
 
 /** 本セット外へ張る既存legalコラムslug（リポジトリの他シードで実在確認済み） */
@@ -1374,6 +1422,58 @@ const ARTICLES: Array<{
       "代襲相続",
       "中間省略登記",
       "相続登記",
+      "行政書士",
+    ],
+  },
+  {
+    file: "27-shinya-shurui-teikyo-todokede-yoken.md",
+    slug: "shinya-shurui-teikyo-todokede-yoken",
+    date: "2026-08-26",
+    title:
+      "深夜0時以降にお酒を出す店、届出は何がいる？──深夜酒類提供飲食店営業の届出・用途地域・営業所の要件",
+    category: "許認可の手続き（行政書士の実務から）",
+    excerpt:
+      "バーや居酒屋を午前0時以降に営業してお酒をメインに提供するには、風営法第33条第1項にもとづく「深夜における酒類提供飲食店営業」の開始届出が必要です。届出先（公安委員会・所轄警察署）と営業開始10日前までの提出、住居系用途地域での営業制限、客室9.5㎡・照度20ルクスなどの営業所の構造設備基準、飲食店営業許可（食品衛生法）や賃貸借との役割分担を整理し、届出は行政書士、物件は不動産、飲食店営業許可は保健所へ分離受任で振る分担を示しました。",
+    keywords: [
+      "深夜酒類提供飲食店営業 届出",
+      "深夜 0時以降 酒 届出 必要",
+      "深夜酒類 営業 用途地域 制限",
+      "深夜酒類提供飲食店 営業所 構造設備 平面図",
+      "深夜酒類提供 飲食店営業許可 違い",
+      "深夜酒類提供飲食店営業 行政書士",
+    ],
+    tags: [
+      "深夜酒類提供飲食店営業",
+      "風営法",
+      "許認可",
+      "用途地域",
+      "飲食店営業許可",
+      "行政書士",
+    ],
+  },
+  {
+    file: "28-kobutsusho-kyoka-eigyosho-yoken.md",
+    slug: "kobutsusho-kyoka-eigyosho-yoken",
+    date: "2026-08-26",
+    title:
+      "古物商許可、営業所には何が必要？──営業所要件・使用承諾・管理者・URL届出の申請実務",
+    category: "許認可の手続き（行政書士の実務から）",
+    excerpt:
+      "中古品売買・リユース・中古車販売などで開業するには、古物営業法第3条第1項にもとづく都道府県公安委員会の古物商許可が必要です。営業所として認められる物件、賃貸物件の賃貸借契約書の写しと使用承諾、営業所ごとの管理者の選任（第13条第1項）、ホームページ利用取引のURL届出（第5条第1項第6号）、手数料19,000円・標準処理期間40日を整理し、許可申請は行政書士、物件の賃貸借・使用承諾は不動産、法人設立登記は司法書士へ分離受任で振る分担を示しました。",
+    keywords: [
+      "古物商許可 営業所 要件",
+      "古物商許可 賃貸 使用承諾書",
+      "古物商許可 管理者 選任",
+      "古物商許可 URL 届出 ホームページ",
+      "古物商許可 手数料 19000円 期間 40日",
+      "古物商許可 申請 行政書士",
+    ],
+    tags: [
+      "古物商許可",
+      "古物営業法",
+      "許認可",
+      "営業所要件",
+      "使用承諾",
       "行政書士",
     ],
   },
