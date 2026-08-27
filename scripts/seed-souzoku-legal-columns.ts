@@ -338,6 +338,17 @@ const REQUIRED_HUB_LINKS: Record<string, string[]> = {
     "/legal/nagare",
     "/legal/ryokin",
   ],
+  "minpaku-jutaku-shukuhaku-todokede-yoken": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+  ],
+  "shigojimu-inin-keiyaku-ohitorisama": [
+    "/legal/services/inheritance",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/souzoku",
+  ],
 };
 
 /** 表示コンプライアンス上の禁止語 */
@@ -853,6 +864,40 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "別事業体",
     "独立した事業体",
   ],
+  "minpaku-jutaku-shukuhaku-todokede-yoken": [
+    "住宅宿泊事業法",
+    "平成29年法律第65号",
+    "第3条第1項",
+    "第2条第3項",
+    "第13条",
+    "第18条",
+    "第11条",
+    "旅館業法",
+    "180日",
+    "宿泊者名簿",
+    "住宅宿泊管理業者",
+    "都道府県知事",
+    "消防法令適合通知書",
+    "管理規約",
+    "紹介料を受け取りません",
+    "別事業体",
+    "独立した事業体",
+  ],
+  "shigojimu-inin-keiyaku-ohitorisama": [
+    "死後事務委任契約",
+    "民法第643条",
+    "民法第653条第1号",
+    "最判平成4年9月22日",
+    "任意規定",
+    "任意後見契約に関する法律",
+    "第3条",
+    "公正証書",
+    "遺言",
+    "相続登記は司法書士又は弁護士",
+    "紹介料を受け取りません",
+    "別事業体",
+    "独立した事業体",
+  ],
 };
 
 /** 記事ごとに含めてはならない表現 */
@@ -922,6 +967,8 @@ const FORBIDDEN_PHRASES: Record<string, string[]> = {
   "suuji-souzoku-isanbunkatsu-kyogisho": [],
   "shinya-shurui-teikyo-todokede-yoken": [],
   "kobutsusho-kyoka-eigyosho-yoken": [],
+  "minpaku-jutaku-shukuhaku-todokede-yoken": [],
+  "shigojimu-inin-keiyaku-ohitorisama": [],
 };
 
 /** 本セット外へ張る既存legalコラムslug（リポジトリの他シードで実在確認済み） */
@@ -1474,6 +1521,58 @@ const ARTICLES: Array<{
       "許認可",
       "営業所要件",
       "使用承諾",
+      "行政書士",
+    ],
+  },
+  {
+    file: "29-minpaku-jutaku-shukuhaku-todokede-yoken.md",
+    slug: "minpaku-jutaku-shukuhaku-todokede-yoken",
+    date: "2026-08-27",
+    title:
+      "民泊を始めるには何が必要？──住宅宿泊事業法の届出と旅館業許可の違い・180日規制・消防・管理規約",
+    category: "許認可の手続き（行政書士の実務から）",
+    excerpt:
+      "自宅や所有する住宅で民泊（住宅宿泊事業）を始めるには、住宅宿泊事業法第3条第1項にもとづく都道府県知事等への届出が必要です。旅館業法の許可との違い、年間180日の上限と第18条の上乗せ条例、消防法令適合通知書などの添付書類、家主不在型での住宅宿泊管理業者への委託、分譲マンションの管理規約や賃貸借の確認を整理し、届出は行政書士、物件の適合判断は不動産、消防は消防署・消防設備士、旅館業許可が要る場合の建築確認は建築士へ分離受任で振る分担を示しました。",
+    keywords: [
+      "民泊 始める 届出 必要",
+      "住宅宿泊事業法 届出 旅館業法 違い",
+      "民泊 180日 上乗せ条例",
+      "民泊 消防法令適合通知書 添付書類",
+      "民泊 分譲マンション 管理規約 賃貸借",
+      "住宅宿泊事業 届出 行政書士",
+    ],
+    tags: [
+      "民泊",
+      "住宅宿泊事業法",
+      "許認可",
+      "旅館業法",
+      "消防法令適合通知書",
+      "行政書士",
+    ],
+  },
+  {
+    file: "30-shigojimu-inin-keiyaku-ohitorisama.md",
+    slug: "shigojimu-inin-keiyaku-ohitorisama",
+    date: "2026-08-27",
+    title:
+      "死後事務委任契約とは何を頼める契約？──おひとりさまの生前の備え・遺言・任意後見との違い",
+    category: "相続の手続き（行政書士の実務から）",
+    excerpt:
+      "死後事務委任契約は、葬儀・納骨・行政手続・契約解約など自分の死後の事務を、生前に信頼できる相手へ委任しておく契約です。委任は委任者の死亡で終了するのが原則（民法第653条第1号）ですが、この規定は任意規定で、死亡後も終了させない特約は有効とされます（最判平成4年9月22日）。頼める事務の範囲、遺言・任意後見との違い、公正証書や費用の預託、相続登記は司法書士・税務は税理士・紛争は弁護士へ振る分離受任を整理しました。",
+    keywords: [
+      "死後事務委任契約 とは 何を頼める",
+      "死後事務委任契約 遺言 任意後見 違い",
+      "おひとりさま 死後 手続き 備え",
+      "死後事務委任契約 公正証書 費用 預託",
+      "死後事務委任契約 民法653条 特約 有効",
+      "死後事務委任契約 行政書士",
+    ],
+    tags: [
+      "死後事務委任契約",
+      "任意後見",
+      "遺言",
+      "おひとりさま",
+      "相続",
       "行政書士",
     ],
   },

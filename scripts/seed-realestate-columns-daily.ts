@@ -494,6 +494,46 @@ const ARTICLES: ArticleSpec[] = [
     localesWithTranslations: ["en", "zh-tw", "zh"],
     hubLinks: ["/toushi", "/office"],
   },
+  {
+    file: "24-houkago-day-bukken-youto-chiiki-1kai.md",
+    slug: "houkago-day-bukken-youto-chiiki-1kai",
+    title: "放課後等デイサービスの物件は、用途地域・1階・面積・採光で決まる",
+    publishedAt: "2026-08-27",
+    category: "投資・事業用不動産",
+    excerpt:
+      "放課後等デイサービスに使える物件は、用途地域（工業専用地域では児童福祉施設等を建てられず、それ以外の12地域は原則可）、指導訓練室と面積、避難（児童の活動室を2階以上に置くなら要確認）、消防（消防法施行令別表第一(6)項ロ・ハ）、耐震の5点で決まります。東京都文京区の宅地建物取引士兼行政書士が、貸主・借主が物件を選ぶ段階で確認できる適合条件を条文と自治体の運用から整理します。",
+    keywords: [
+      "放課後等デイサービス 物件",
+      "児童発達支援 用途地域",
+      "放課後等デイ 訓練室 面積",
+      "放課後等デイ 用途変更 確認申請",
+      "児童福祉施設等 消防 (6)項ロ",
+    ],
+    tags: ["事業用不動産", "許認可", "用途地域", "障害福祉"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/toushi", "/office"],
+  },
+  {
+    file: "25-souzoku-akiya-kaitai-koyatsuki-dochira.md",
+    slug: "souzoku-akiya-kaitai-koyatsuki-dochira",
+    title: "相続した空き家は、解体して更地で売るか古家付き土地で売るか",
+    publishedAt: "2026-08-27",
+    category: "相続",
+    excerpt:
+      "相続した空き家を「解体して更地」で売るか「古家付き土地（現況）」で売るかは、解体費と更地後に上がる固定資産税、買主層、契約不適合責任と解体費の負担、空き家3000万円特別控除（租税特別措置法35条3項）の適用のさせ方で決まります。控除は令和6年から買主が引渡し後に除却する形でも使える余地があり、解体のタイミングが手取りを左右します。東京都文京区の宅地建物取引士兼行政書士が売り方の比較を整理します。",
+    keywords: [
+      "相続 空き家 解体 更地",
+      "古家付き土地 売却",
+      "空き家 3000万円 特別控除",
+      "更地 固定資産税 住宅用地特例",
+      "契約不適合責任 現況渡し",
+    ],
+    tags: ["相続", "空き家", "売却", "税制特例"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/souzoku"],
+  },
 ];
 
 function toPlainText(md: string): string {
