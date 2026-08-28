@@ -37,10 +37,19 @@ export const revalidate = 3600;
 // （実例: 移設直後の not-found.tsx の headers() が全laborページを動的化していた）。
 export const dynamic = "error";
 
-// generateStaticParams に無いロケール（/xyz 等の任意文字列）は動的レンダリング
-// せず404にする。proxy.ts が非ロケール接頭辞を /ja/... に振替えるため、
-// ここに来る不正値は直リンク・内部バグのみ。
-export const dynamicParams = false;
+// dynamicParams は既定の true のまま（ここで false にしない）。
+//
+// この設定はロケールだけでなく配下の全動的セグメント（コラム詳細の [slug] 等）に
+// 及ぶ。false にすると、ビルド時の generateStaticParams に含まれない slug は
+// 恒久的に404になり、DBへ投入しても再デプロイするまで公開されない。
+// revalidatePath でも直せない（存在しない経路は再検証できないため）。
+//
+// 2026-08-25〜08-28、投入済みコラムが sitemap には載るのに詳細ページだけ404、
+// という事象が3日続いた。そのつど再デプロイで回避していたが（ee6bbf0・#302）、
+// 原因はこの1行だった。
+//
+// 不正なロケール（/xyz 等）は下の RootLayout が isValidLocale で notFound() する
+// ので、この設定が無くても404になる。実行時ガードが正本。
 
 export function generateStaticParams() {
   return SUPPORTED_LOCALES.map((locale) => ({ locale }));
