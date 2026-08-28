@@ -618,7 +618,47 @@ jobs:
     steps:
       - env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          LOG: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: |
-          gh issue create --repo "${{ github.repository }}" \
-            --title "Daily Columns が失敗（$(TZ=Asia/Tokyo date +%Y-%m-%d)）" \
-            --body "実行ログ: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          set -euo pipefail
+          DATE="$(TZ=Asia/Tokyo date +%Y-%m-%d)"
+
+          gh label create daily-columns-failure --repo "$REPO" \
+            --color B60205 --description "Daily Columns の失敗（成功実行で自動クローズ）" 2>/dev/null || true
+
+          EXISTING="$(gh issue list --repo "$REPO" --label daily-columns-failure \
+            --state open --limit 1 --json number --jq '.[0].number // empty')"
+
+          if [ -n "$EXISTING" ]; then
+            gh issue comment "$EXISTING" --repo "$REPO" \
+              --body "${DATE} も失敗しました。実行ログ: ${LOG}"
+          else
+            gh issue create --repo "$REPO" \
+              --title "Daily Columns が失敗（${DATE}）" \
+              --label daily-columns-failure \
+              --body "実行ログ: ${LOG}"
+          fi
+
+  # 成功したら、開いたままの失敗Issueを閉じる（2026-08-28 追加）
+  close-failure-issues:
+    needs: [open-pr]
+    if: success()
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          LOG: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          set -euo pipefail
+          DATE="$(TZ=Asia/Tokyo date +%Y-%m-%d)"
+          NUMS="$(gh issue list --repo "$REPO" --label daily-columns-failure \
+            --state open --limit 50 --json number --jq '.[].number')"
+          if [ -z "$NUMS" ]; then echo "開いている失敗Issueはありません。"; exit 0; fi
+          for n in $NUMS; do
+            gh issue close "$n" --repo "$REPO" \
+              --comment "${DATE} の実行が成功したため自動クローズします。実行ログ: ${LOG}"
+          done
