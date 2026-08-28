@@ -534,6 +534,46 @@ const ARTICLES: ArticleSpec[] = [
     localesWithTranslations: ["en", "zh-tw", "zh"],
     hubLinks: ["/souzoku"],
   },
+  {
+    file: "26-yakkyoku-bukken-youken-kozo-setsubi.md",
+    slug: "yakkyoku-bukken-youken-kozo-setsubi",
+    title: "調剤薬局を開くための物件は何が必要？──用途地域と構造設備基準（面積・調剤室・清潔区域）の確認点",
+    publishedAt: "2026-08-28",
+    category: "投資・事業用不動産",
+    excerpt:
+      "調剤薬局の物件で先に効くのは、①用途地域（薬局は「店舗」扱いで、診療所と違い用途地域の制限を受ける）②薬局等構造設備規則が求める面積おおむね19.8㎡以上・調剤室6.6㎡以上・清潔な区画、の2点です。医療モールやクリニック併設なら処方箋の応需と動線も見ます。東京都文京区の宅地建物取引士兼行政書士が、契約前に確認できることを薬機法と構造設備規則の条文から整理します。",
+    keywords: [
+      "調剤薬局 物件",
+      "薬局開設許可 構造設備規則",
+      "薬局 調剤室 6.6平方メートル",
+      "薬局 用途地域 店舗",
+      "医療モール 薬局 併設",
+    ],
+    tags: ["事業用不動産", "許認可", "用途地域", "薬機法"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/toushi", "/office"],
+  },
+  {
+    file: "27-kanka-bunkatsu-fudosan-baikyaku-nagare.md",
+    slug: "kanka-bunkatsu-fudosan-baikyaku-nagare",
+    title: "相続した不動産を換価分割で売る流れは？──名義・登記・譲渡税の按分まで",
+    publishedAt: "2026-08-28",
+    category: "相続",
+    excerpt:
+      "相続した不動産を「売って現金で分ける」のが換価分割です。代表者名義で登記して売る場合でも、換価のための便宜で代金を協議どおりに分けるなら贈与税は問題にならず（国税庁の質疑応答事例）、売却益にかかる譲渡所得税は各相続人が持分に応じて申告します。相続登記は2024年4月1日から義務化され、売る前提でも避けて通れません。東京都文京区の宅地建物取引士兼行政書士が、民法・所得税法・不動産登記法の条文から実務の順序を整理します。",
+    keywords: [
+      "換価分割 不動産 売却",
+      "換価分割 代表者名義 贈与税",
+      "換価分割 譲渡所得税 按分",
+      "相続登記 義務化 3年 売却",
+      "現物分割 代償分割 換価分割 違い",
+    ],
+    tags: ["相続", "換価分割", "譲渡所得税", "売却"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/souzoku"],
+  },
 ];
 
 function toPlainText(md: string): string {

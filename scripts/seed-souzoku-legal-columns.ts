@@ -349,6 +349,24 @@ const REQUIRED_HUB_LINKS: Record<string, string[]> = {
     "/legal/ryokin",
     "/souzoku",
   ],
+  "nochi-tenyo-4jo-5jo-kyoka-nagare": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/souzoku",
+    "/legal/column/souzoku-nochi-noringyoiinkai-todoke-3jo3",
+    "/legal/column/souzoku-kigen-matome",
+    "/legal/column/souzoku-touki-nagare",
+  ],
+  "kazoku-shintaku-gyosei-yakuwari-kumisei": [
+    "/legal/services/inheritance",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/souzoku",
+    "/legal/column/jihitsu-kosei-yuigon",
+    "/legal/column/souzoku-ninchisho-yukuefumei-miseinen",
+    "/legal/column/shigojimu-inin-keiyaku-ohitorisama",
+  ],
 };
 
 /** 表示コンプライアンス上の禁止語 */
@@ -898,6 +916,37 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "別事業体",
     "独立した事業体",
   ],
+  "nochi-tenyo-4jo-5jo-kyoka-nagare": [
+    "農地法",
+    "第4条第1項第7号",
+    "第5条第1項第6号",
+    "市街化区域",
+    "市街化調整区域",
+    "農業委員会",
+    "都道府県知事",
+    "農地法第2条第1項",
+    "第64条",
+    "第67条",
+    "紹介料を受け取りません",
+    "別事業体",
+    "独立した事業体",
+  ],
+  "kazoku-shintaku-gyosei-yakuwari-kumisei": [
+    "信託法",
+    "平成18年法律第108号",
+    "2007年9月30日",
+    "信託法第3条",
+    "信託法第4条第3項",
+    "信託法第91条",
+    "不動産登記法第98条",
+    "相続税法第9条の2",
+    "公正証書",
+    "自益信託",
+    "受益者等課税信託",
+    "紹介料を受け取りません",
+    "別事業体",
+    "独立した事業体",
+  ],
 };
 
 /** 記事ごとに含めてはならない表現 */
@@ -969,6 +1018,8 @@ const FORBIDDEN_PHRASES: Record<string, string[]> = {
   "kobutsusho-kyoka-eigyosho-yoken": [],
   "minpaku-jutaku-shukuhaku-todokede-yoken": [],
   "shigojimu-inin-keiyaku-ohitorisama": [],
+  "nochi-tenyo-4jo-5jo-kyoka-nagare": [],
+  "kazoku-shintaku-gyosei-yakuwari-kumisei": [],
 };
 
 /** 本セット外へ張る既存legalコラムslug（リポジトリの他シードで実在確認済み） */
@@ -1573,6 +1624,58 @@ const ARTICLES: Array<{
       "遺言",
       "おひとりさま",
       "相続",
+      "行政書士",
+    ],
+  },
+  {
+    file: "31-nochi-tenyo-4jo-5jo-kyoka-nagare.md",
+    slug: "nochi-tenyo-4jo-5jo-kyoka-nagare",
+    date: "2026-08-28",
+    title:
+      "農地を宅地に変えるには？──農地法4条・5条の転用許可の流れと必要書類・用途地域・期間",
+    category: "許認可の手続き（行政書士の実務から）",
+    excerpt:
+      "農地を宅地・駐車場などに変える「農地転用」には、農地法にもとづく許可か届出が必要です。自己転用は第4条、権利移動を伴う転用は第5条で、市街化区域内なら農業委員会への届出で足ります（第4条第1項第7号・第5条第1項第6号）。市街化調整区域など区域外は都道府県知事等の許可が必要です。4条許可と5条許可の違い、区域による許可／届出の別、農業委員会への申請書類、期間の目安、無断転用の罰則（第64条）を整理し、許可・届出書類は行政書士、登記は司法書士・土地家屋調査士、売買は不動産、税務は税理士へ分離受任で振る分担を示しました。",
+    keywords: [
+      "農地転用 4条 5条 違い",
+      "農地 宅地 変える 許可 届出",
+      "農地転用 市街化区域 届出 農業委員会",
+      "農地転用 必要書類 申請",
+      "農地転用 許可 期間 どのくらい",
+      "農地転用 許可 行政書士",
+    ],
+    tags: [
+      "農地転用",
+      "農地法",
+      "許認可",
+      "用途地域",
+      "農業委員会",
+      "行政書士",
+    ],
+  },
+  {
+    file: "32-kazoku-shintaku-gyosei-yakuwari-kumisei.md",
+    slug: "kazoku-shintaku-gyosei-yakuwari-kumisei",
+    date: "2026-08-28",
+    title:
+      "家族信託を組むとき行政書士は何をする？──信託契約書・公正証書・信託登記の役割分担と遺言・後見との違い",
+    category: "相続の手続き（行政書士の実務から）",
+    excerpt:
+      "家族信託（民事信託）は、委託者が信頼できる家族（受託者）に財産の管理・処分を託し、受益者のために運用してもらう仕組みです（信託法・2007年9月30日施行）。認知症などで判断能力が下がっても受託者が契約に沿って管理できます。行政書士が関われる信託契約書作成の範囲、公正証書にする理由、信託の登記（不動産登記法第98条）、受益者課税（相続税法第9条の2）、遺言・任意後見との違いを整理し、書面作成は行政書士、公正証書化は公証人、登記は司法書士、税務は税理士、紛争は弁護士へ分離受任で振る分担を示しました。",
+    keywords: [
+      "家族信託 行政書士 何をする",
+      "家族信託 信託契約書 作成 範囲",
+      "家族信託 公正証書 信託登記 誰",
+      "家族信託 遺言 任意後見 違い",
+      "家族信託 課税 受益者等課税信託",
+      "家族信託 民事信託 仕組み",
+    ],
+    tags: [
+      "家族信託",
+      "民事信託",
+      "信託法",
+      "遺言",
+      "任意後見",
       "行政書士",
     ],
   },

@@ -12665,5 +12665,371 @@ export const LABOR_COLUMNS_SEED: LaborSeedColumn[] = [
         ]
       }
     }
+  },
+  {
+    "business": "labor",
+    "slug": "homon-kaigo-idou-jikan-roudou-jikan",
+    "title": "訪問介護ヘルパーの移動時間・待機時間は労働時間か。賃金の払い方と規程整備",
+    "date": "2026-09-01",
+    "category": "労働時間",
+    "excerpt": "訪問介護ヘルパーの移動時間は、使用者が業務のために移動を命じ、その時間の自由利用が保障されていなければ労働時間にあたります。事業場等で待つよう命じた待機時間も同じ考え方です。通達「訪問介護労働者の法定労働条件の確保について」（平成16年8月27日基発第0827001号）は移動時間・待機時間・報告書作成時間がそれぞれどんな場合に労働時間に該当するかを示しています。労働時間にあたる時間は賃金の支払対象で、時間あたりに直したとき最低賃金（最低賃金法第4条）を下回れません。移動時間・待機時間・キャンセル時間の扱い、最低賃金の確認方法、賃金規程と直行直帰ルールの整え方を整理します。個別の労働時間該当性の最終判断は労働基準監督署・裁判所です。",
+    "content": "**結論（先に要点）**：訪問介護ヘルパーの移動時間は、使用者が業務のために移動を命じ、その時間の自由利用が保障されていないと認められる場合は労働時間にあたります。事業場や利用者宅で待つよう命じた待機時間も同じ考え方です。労働時間にあたる時間は、賃金の支払対象になり、時間あたりに直したときに最低賃金（最低賃金法第4条）を下回ってはいけません。ただし個別の時間が労働時間に該当するかの最終判断は、労働基準監督署や裁判所が行います。\n\n「訪問と訪問の合間の移動には給料を払っていない」「直行直帰だから移動は労働時間ではないと思っていた」——訪問介護の現場では、移動時間・待機時間の扱いがあいまいなまま運用され、あとから未払いを指摘される例が少なくありません。この記事は、訪問介護事業所の管理者・経営者と、直行直帰やサービス間移動の多い現場の労務担当の方に向けて、どの時間が労働時間にあたり、賃金規程にどう落とし込むのかを整理します。\n\n## 訪問介護の移動時間は労働時間にあたる？\n\nあたる場合があります。判断の軸は「使用者の指揮監督下にあるか（自由に使える時間か）」です。\n\n厚生労働省の通達「訪問介護労働者の法定労働条件の確保について」（平成16年8月27日基発第0827001号）は、移動時間について、**使用者が業務に従事するために必要な移動を命じ、当該時間の自由利用が労働者に保障されていないと認められる場合には、労働時間に該当する**としています。利用者宅から次の利用者宅への移動や、事業所から利用者宅への移動が、これにあたる典型です。\n\n| 時間の種類 | 労働時間にあたるか（原則） |\n|---|---|\n| 利用者宅から次の利用者宅への移動 | 業務上必要な移動を命じられ、自由利用が保障されていなければ**労働時間** |\n| 事業所から利用者宅への移動 | 同上。移動を命じられていれば**労働時間**にあたり得る |\n| 自宅から最初の利用者宅への移動（直行）、最後の利用者宅から自宅への移動（直帰） | 通常の**通勤**に準じ、原則として労働時間ではない |\n| 業務報告書などの作成時間 | 制度・業務規定で義務づけられ、指揮監督に基づき作成する場合は**労働時間** |\n\n通達も、移動時間や待機時間を一律に労働時間として扱っていない事業者があることを問題として挙げています。「一律に払わない」という運用は、実態が指揮監督下にあれば通りません。\n\n労働時間そのものの考え方は労働基準法第32条にあります。所定の労働時間や残業の管理については[残業をさせるには何がいるのか（36協定はどこまで）](/labor/column/36-kyotei-zangyo-sharoushi-doko-made)もあわせてご確認ください。\n\n## 待機時間やキャンセル時の時間はどう扱う？\n\n待機時間も、労働時間にあたるかは「自由に使えるか」で決まります。\n\n同じ通達は、待機時間について、**使用者が急な需要等に対応するため事業場等において待機を命じ、当該時間の自由利用が労働者に保障されていないと認められる場合には、労働時間に該当する**としています。事業所で次の指示を待つよう命じられている時間は、労働時間にあたる典型です。反対に、次の訪問まで数時間空き、その間は自宅に帰るなど自由に過ごしてよいのであれば、労働時間ではない扱いになり得ます。\n\nキャンセルが出たときの扱いは、状況で分かれます。\n\n| 場面 | 考え方 |\n|---|---|\n| 事業所で待機を命じたままキャンセルが出た | 待機の自由利用が保障されていなければ、その待機時間は**労働時間** |\n| 利用者都合で急にキャンセルになり、他の業務も命じず帰した | 使用者の責に帰すべき事由による休業なら、**休業手当**（労働基準法第26条・平均賃金の6割以上）の検討対象 |\n| 予定が空き、労働者が自由に過ごしてよい | 原則として労働時間ではない |\n\nキャンセル時間を「働いていないから無給」と一律に処理するのではなく、**待機を命じていたか／使用者の都合による休業か**を確認することが要点です。個別事案の労働時間該当性・休業手当の要否は、労働基準監督署や裁判所の判断領域です。\n\n## 移動時間を含めて計算すると最低賃金を割らないか？\n\nここが実務でいちばん見落とされる点です。**移動時間・待機時間を労働時間に含めたうえで、時間あたりの賃金が最低賃金を下回っていないか**を確かめる必要があります。\n\nサービス提供1件ごとに時給を払い、移動時間には賃金を払っていない、という設計だと、移動を含めた総労働時間で割り直したときに最低賃金を割ることがあります。最低賃金法第4条は、使用者に最低賃金額以上の賃金の支払を義務づけています。移動時間分の賃金を別建てで定める場合でも、**総額を総労働時間で割った額が最低賃金以上**でなければなりません。\n\n考え方を単純化すると、次のようになります。\n\n| 項目 | 内容 |\n|---|---|\n| 分子（賃金） | サービス提供分の賃金＋移動時間・待機時間分の賃金＋各種手当 |\n| 分母（労働時間） | サービス提供時間＋労働時間にあたる移動・待機・報告書作成時間 |\n| 判定 | 分子÷分母が、その地域の**最低賃金額以上**であること |\n\n介護報酬は、サービスに要する平均的な費用（人件費を含む）を勘案して包括的に設定されています。移動時間分の賃金の定め方は労使で工夫の余地がありますが、**最低賃金を下回らないことが前提**です。なお、移動時間の賃金単価をサービス提供分と別に定めること自体は可能ですが、その水準の当否や個別の設計は、実態と最新の一次情報に照らした判断が要るため、ここでは一般論にとどめます。\n\n## 賃金規程と直行直帰のルールはどう整える？\n\n「あとで払っていないと言われない」ためには、どの時間を労働時間として扱い、どう賃金を計算するかを、書面で明確にしておくことが有効です。\n\n整える順序は次のとおりです。\n\n1. **労働時間の範囲を定義する**：移動時間・待機時間・報告書作成時間のうち、どれを労働時間として扱うかを、通達の考え方に沿って明文化する。\n2. **賃金の計算方法を賃金規程に書く**：サービス提供分・移動分・待機分の単価や計算式を定め、総額が最低賃金以上になることを確認する。手当を使う場合は算入の可否に注意する。\n3. **直行直帰のルールを決める**：どこからが業務の移動で、どこまでが通勤かを線引きし、移動記録（開始・終了・経路）を残す運用にする。\n4. **労働時間を記録する**：移動・待機を含めて始業・終業を客観的に把握する。記録がないと、あとで争いになったとき事業所側が不利になりやすい。\n\n就業規則・賃金規程の整備そのものは[就業規則は何人から義務なのか（何を書くのか）](/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo)を、介護分野の賃金規程は[介護職員等処遇改善加算は賃金規程にどう落とすのか](/labor/column/kaigo-shogu-kaizen-kasan-chingin-kitei)をご覧ください。夜勤や宿直がある事業所は[夜勤と宿直は労働時間の扱いがどう違うのか](/labor/column/group-home-yakin-shukuchoku-roudou-chigai)もあわせてご確認ください。\n\nなお、賃金規程・36協定・労働時間管理は社会保険労務士の業務です。事業所の指定基準・人員配置の届出は行政書士（四葉行政書士事務所は当事務所とは独立した事業体で、別々にご契約いただきます）、すでに発生した未払い賃金の請求など争いになった案件は弁護士の領域です。\n\n## よくある質問\n\n**Q. 訪問と訪問の合間の移動時間は、必ず賃金を払わなければいけませんか？**\nA. その移動が使用者の指示による業務上の移動で、時間の自由利用が保障されていなければ、労働時間にあたり賃金の支払対象になります。通達（平成16年8月27日基発第0827001号）も、移動時間を一律に労働時間として扱わない運用を問題として挙げています。個別の該当性の最終判断は労働基準監督署・裁判所が行います。\n\n**Q. 直行直帰なら、自宅から利用者宅への移動も労働時間ですか？**\nA. 自宅から最初の利用者宅への移動、最後の利用者宅から自宅への移動は、原則として通常の通勤に準じ、労働時間ではない扱いが一般的です。一方、利用者宅の間の移動や、事業所から利用者宅への移動を命じている場合は労働時間にあたり得ます。実態に照らした確認が必要です。\n\n**Q. 利用者都合でキャンセルになった時間の賃金はどうなりますか？**\nA. 事業所で待機を命じたままなら、その待機時間は労働時間にあたり得ます。他の業務も命じずに帰した場合で、使用者の責に帰すべき事由による休業といえるときは、休業手当（労働基準法第26条・平均賃金の6割以上）の検討対象になります。状況により結論が変わるため、個別に確認してください。\n\n**Q. サービス提供分だけ時給を払っていれば、最低賃金は問題ありませんか？**\nA. 必ずしも問題ないとはいえません。移動時間・待機時間が労働時間にあたる場合、その時間も含めた総労働時間で賃金総額を割り直したときに、最低賃金（最低賃金法第4条）以上でなければなりません。移動分を別建てにする場合でも、総額での最低賃金充足を確認してください。\n\n## この記事の根拠\n\n- **労働基準法第32条**（労働時間）。使用者は、原則として1日8時間・1週40時間を超えて労働させてはならないと定めています（e-Gov法令検索、労働基準法・昭和22年法律第49号、2026年8月28日参照）\n- **「訪問介護労働者の法定労働条件の確保について」（平成16年8月27日基発第0827001号）**。移動時間について「使用者が、業務に従事するために必要な移動を命じ、当該時間の自由利用が労働者に保障されていないと認められる場合には、労働時間に該当する」、待機時間について「使用者が急な需要等に対応するため事業場等において待機を命じ、当該時間の自由利用が労働者に保障されていないと認められる場合には、労働時間に該当する」、業務報告書等の作成時間について「業務上義務付けられ、使用者の指揮監督に基づき、事業場や利用者宅等において作成している場合には、労働時間に該当する」としています（厚生労働省、2026年8月28日参照）\n- **最低賃金法第4条**（最低賃金の効力）。使用者は、最低賃金の適用を受ける労働者に、最低賃金額以上の賃金を支払わなければならないと定めています。移動時間分を別建てで定める場合でも、総額を総労働時間で割った額が最低賃金以上である必要があります（e-Gov法令検索、最低賃金法・昭和34年法律第137号、2026年8月28日参照）\n- **労働基準法第26条**（休業手当）。使用者の責に帰すべき事由による休業の場合、平均賃金の100分の60以上の手当の支払を義務づけています。キャンセル時の扱いの検討で参照されます（e-Gov法令検索、労働基準法・昭和22年法律第49号、2026年8月28日参照）\n- 個別の時間が労働時間に該当するか、休業手当の要否は、実態に照らして労働基準監督署・裁判所が判断します。移動時間の賃金単価の設計や労使協定の当否は、最新の一次情報と個別事情に照らした確認が必要です\n\nこの記事は、誰に相談するかまで決めるものではありません。就業規則・賃金規程の整備、労働時間管理、36協定の締結は社会保険労務士の業務です。事業所の指定基準・人員配置に関する届出は行政書士、未払い賃金の請求など争いになった案件は弁護士の領域です。四葉社会保険労務士事務所にご相談いただく場合の費用は[報酬額表](/labor/ryokin)に、よくいただくご質問は[よくあるご質問](/labor/faq)にまとめています。\n\n本記事は一般的な情報提供です。個別の時間の労働時間該当性は労働基準監督署・裁判所が判断します。制度の適用や個別の手続は、最新の一次情報（厚生労働省など）と個別のご事情に照らし、面談のうえ資格者が行います。執筆は[浦松丈二](/about/uramatsu)（社会保険労務士・行政書士・宅地建物取引士）です。",
+    "status": "published",
+    "author": {
+      "name": "浦松 丈二",
+      "title": "社会保険労務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+    },
+    "keywords": [
+      "訪問介護 移動時間 労働時間",
+      "訪問介護 待機時間 労働時間 賃金",
+      "訪問介護 移動時間 最低賃金 割る",
+      "訪問介護 キャンセル 休業手当",
+      "訪問介護労働者 法定労働条件 基発0827001",
+      "訪問介護 賃金規程 直行直帰 社労士"
+    ],
+    "tags": [
+      "訪問介護",
+      "労働時間",
+      "移動時間",
+      "最低賃金",
+      "賃金規程",
+      "社会保険労務士"
+    ],
+    "locales": [],
+    "faq": [
+      {
+        "question": "訪問と訪問の合間の移動時間は、必ず賃金を払わなければいけませんか？",
+        "answer": "その移動が使用者の指示による業務上の移動で、時間の自由利用が保障されていなければ、労働時間にあたり賃金の支払対象になります。通達（平成16年8月27日基発第0827001号）も、移動時間を一律に労働時間として扱わない運用を問題として挙げています。個別の該当性の最終判断は労働基準監督署・裁判所が行います。"
+      },
+      {
+        "question": "直行直帰なら、自宅から利用者宅への移動も労働時間ですか？",
+        "answer": "自宅から最初の利用者宅への移動、最後の利用者宅から自宅への移動は、原則として通常の通勤に準じ、労働時間ではない扱いが一般的です。一方、利用者宅の間の移動や、事業所から利用者宅への移動を命じている場合は労働時間にあたり得ます。実態に照らした確認が必要です。"
+      },
+      {
+        "question": "利用者都合でキャンセルになった時間の賃金はどうなりますか？",
+        "answer": "事業所で待機を命じたままなら、その待機時間は労働時間にあたり得ます。他の業務も命じずに帰した場合で、使用者の責に帰すべき事由による休業といえるときは、休業手当（労働基準法第26条・平均賃金の6割以上）の検討対象になります。状況により結論が変わるため、個別に確認してください。"
+      },
+      {
+        "question": "サービス提供分だけ時給を払っていれば、最低賃金は問題ありませんか？",
+        "answer": "必ずしも問題ないとはいえません。移動時間・待機時間が労働時間にあたる場合、その時間も含めた総労働時間で賃金総額を割り直したときに、最低賃金（最低賃金法第4条）以上でなければなりません。移動分を別建てにする場合でも、総額での最低賃金充足を確認してください。"
+      }
+    ],
+    "translations": {
+      "en": {
+        "title": "Is a home-care helper's travel and standby time working time? How to pay wages and set up rules",
+        "excerpt": "A home-care helper's travel time counts as working time when the employer orders the travel for work and the free use of that time is not guaranteed to the worker. Standby time the worker is ordered to spend at the office or elsewhere is judged the same way. Time that counts as working time is subject to wages, and when converted to an hourly figure it must not fall below the minimum wage (Minimum Wage Act, Article 4). Whether a specific block of time counts as working time is ultimately decided by the Labour Standards Inspection Office or the courts.",
+        "content": "**In short:** A home-care helper's travel time counts as working time when the **employer orders the travel for work and the free use of that time is not guaranteed** to the worker. Standby time the worker is ordered to spend at the office or elsewhere is judged the same way. Time that counts as working time is **subject to wages**, and when converted to an hourly figure it must not fall below the **minimum wage (Minimum Wage Act, Article 4)**. Whether a specific block of time counts as working time is ultimately decided by the Labour Standards Inspection Office or the courts.\n\n\"We don't pay for the travel between visits,\" \"since they go straight there and straight home, we assumed the travel isn't working time\" — in home-care workplaces, travel and standby time are often handled loosely, and unpaid-wage problems are pointed out later. This article, for the managers and owners of home-care offices and the HR staff of workplaces with a lot of direct commuting and inter-visit travel, sets out which time counts as working time and how to put it into the wage rules.\n\n## Does a home-care helper's travel time count as working time?\n\nIt can. The axis of the judgment is \"whether the worker is under the employer's direction and supervision (whether the time is theirs to use freely).\"\n\nThe Ministry of Health, Labour and Welfare's circular \"On securing the statutory working conditions of home-care workers\" (27 August 2004, Kihatsu No. 0827001) states, on travel time, that **when the employer orders the travel necessary to engage in work and the free use of that time is not guaranteed to the worker, it counts as working time**. Travel from one user's home to the next, or from the office to a user's home, is a typical case.\n\n| Type of time | Does it count as working time (in principle)? |\n|---|---|\n| Travel from one user's home to the next | If ordered as necessary work travel and free use is not guaranteed, it is **working time** |\n| Travel from the office to a user's home | Same. If the travel is ordered, it **can be** working time |\n| Travel from home to the first user (direct) and from the last user to home (direct return) | Treated like ordinary **commuting**; in principle not working time |\n| Time to prepare work reports, etc. | If obligated by the system or work rules and prepared under direction, it is **working time** |\n\nThe circular itself flags that some employers do not treat travel or standby time as working time across the board. A practice of \"never paying\" does not hold if the reality is that the worker is under direction and supervision.\n\nThe concept of working time itself is in the Labour Standards Act, Article 32. For managing set hours and overtime, see also [what you need to have workers do overtime (how far a 36 agreement goes)](/en/labor/column/36-kyotei-zangyo-sharoushi-doko-made).\n\n## How are standby time and cancellation time treated?\n\nStandby time, too, is judged by \"whether it is theirs to use freely.\"\n\nThe same circular states, on standby time, that **when the employer orders the worker to stand by at the office or elsewhere to respond to sudden demand and the free use of that time is not guaranteed, it counts as working time**. Time spent at the office waiting for the next instruction is a typical case. Conversely, if there is a gap of several hours before the next visit and the worker may go home and spend it freely, it can be treated as not working time.\n\nHow cancellation time is handled depends on the situation.\n\n| Situation | Approach |\n|---|---|\n| A cancellation occurs while the worker is still ordered to stand by at the office | If free use of the standby is not guaranteed, that standby time is **working time** |\n| A user cancels suddenly and the worker is sent home with no other work ordered | If it is a leave due to a cause attributable to the employer, it is a candidate for **leave allowance** (Labour Standards Act, Article 26; 60% or more of average wage) |\n| The schedule opens up and the worker may spend it freely | In principle not working time |\n\nRather than processing cancellation time as \"unpaid because they were not working,\" the key is to confirm **whether standby was ordered and whether it is a leave due to the employer's circumstances**. Whether a specific case counts as working time, and whether leave allowance is due, is the domain of the Labour Standards Inspection Office and the courts.\n\n## When you include travel time, does it fall below the minimum wage?\n\nThis is the point most easily overlooked in practice. You must confirm **whether, once travel and standby time are included as working time, the hourly wage falls below the minimum wage**.\n\nA design that pays an hourly rate per service visit but pays nothing for travel time can fall below the minimum wage when recalculated over the total working time including travel. The Minimum Wage Act, Article 4 obligates the employer to pay wages at or above the minimum wage. Even when the wage for travel time is set separately, **the amount obtained by dividing the total by the total working time** must be at or above the minimum wage.\n\nSimplified, the idea is as follows.\n\n| Item | Content |\n|---|---|\n| Numerator (wages) | Wages for service delivery + wages for travel/standby time + various allowances |\n| Denominator (working time) | Service delivery time + travel/standby/report-preparation time that counts as working time |\n| Judgment | The numerator ÷ the denominator must be **at or above** the region's minimum wage |\n\nLong-term care fees are set comprehensively by taking into account the average cost of the service (including labor costs). There is room for labor and management to design how the wage for travel time is set, but **not falling below the minimum wage is the premise**. Setting the wage unit for travel time separately from service delivery is itself possible, but whether that level is appropriate and any individual design require a judgment grounded in the actual situation and the latest primary sources, so we keep to general points here.\n\n## How do you set up the wage rules and the direct-commuting rules?\n\nTo avoid being told later that \"you didn't pay,\" it helps to make clear, in writing, which time is treated as working time and how wages are calculated.\n\nThe order for setting this up is as follows.\n\n1. **Define the scope of working time:** among travel, standby, and report-preparation time, state in writing which is treated as working time, in line with the circular's approach.\n2. **Write the wage calculation method in the wage rules:** set the unit or formula for service delivery, travel, and standby, and confirm the total is at or above the minimum wage. If allowances are used, watch whether they can be counted.\n3. **Decide the direct-commuting rules:** draw the line between work travel and commuting, and keep travel records (start, end, route).\n4. **Record working time:** grasp start and end times objectively, including travel and standby. Without records, the office tends to be at a disadvantage if a dispute arises later.\n\nFor putting the work rules and wage rules themselves in order, see [from how many people are work rules required (and what to write)](/en/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo); for wage rules in the care field, see [how to put the care-worker treatment-improvement addition into the wage rules](/en/labor/column/kaigo-shogu-kaizen-kasan-chingin-kitei). For offices with night or on-call duty, see also [how night duty and on-call duty differ in the treatment of working time](/en/labor/column/group-home-yakin-shukuchoku-roudou-chigai).\n\nNote that wage rules, 36 agreements, and working-time management are the work of a Shakai Hoken Roumushi. Notifications on an office's designation standards and staffing are handled by a Gyoseishoshi (Yotsuba Gyoseishoshi Office is an entity independent of this office, engaged under a separate contract), and cases that have become disputes, such as claims for already-accrued unpaid wages, are the domain of an attorney.\n\n## Frequently asked questions\n\n**Q. Do we always have to pay wages for travel time between visits?**\nA. If that travel is work travel on the employer's instruction and free use of the time is not guaranteed, it counts as working time and is subject to wages. The circular (27 August 2004, Kihatsu No. 0827001) itself flags a practice of not treating travel time as working time across the board. The final decision on whether a specific case applies is made by the Labour Standards Inspection Office or the courts.\n\n**Q. With direct commuting, is travel from home to a user's house also working time?**\nA. Travel from home to the first user's house, and from the last user's house back home, is in principle treated like ordinary commuting and generally not working time. On the other hand, travel between users' homes, or from the office to a user's home when ordered, can count as working time. Confirmation grounded in the actual situation is needed.\n\n**Q. What about wages for time cancelled at a user's convenience?**\nA. If standby was still ordered at the office, that standby time can count as working time. If the worker is sent home with no other work ordered and it can be called a leave due to a cause attributable to the employer, it becomes a candidate for leave allowance (Labour Standards Act, Article 26; 60% or more of average wage). Because the conclusion changes with the situation, please confirm case by case.\n\n**Q. If we pay an hourly rate only for service delivery, is the minimum wage no problem?**\nA. Not necessarily. When travel and standby time count as working time, the total wage recalculated over the total working time including that time must be at or above the minimum wage (Minimum Wage Act, Article 4). Even when travel is set separately, confirm that the minimum wage is met on a total basis.\n\n## Sources\n\n- **Labour Standards Act, Article 32** (working hours). It provides that, in principle, an employer must not have a worker work more than 8 hours a day or 40 hours a week (e-Gov Law Search, Labour Standards Act, Act No. 49 of 1947; accessed 28 August 2026).\n- **\"On securing the statutory working conditions of home-care workers\" (27 August 2004, Kihatsu No. 0827001).** On travel time, \"when the employer orders the travel necessary to engage in work and the free use of that time is not guaranteed to the worker, it counts as working time\"; on standby time, \"when the employer orders the worker to stand by at the office or elsewhere to respond to sudden demand and the free use of that time is not guaranteed, it counts as working time\"; on report-preparation time, \"when it is obligated for work and prepared under the employer's direction and supervision at the office or a user's home, it counts as working time\" (Ministry of Health, Labour and Welfare; accessed 28 August 2026).\n- **Minimum Wage Act, Article 4** (effect of the minimum wage). The employer must pay a worker to whom the minimum wage applies wages at or above the minimum wage. Even when the wage for travel is set separately, the amount obtained by dividing the total by the total working time must be at or above the minimum wage (e-Gov Law Search, Minimum Wage Act, Act No. 137 of 1959; accessed 28 August 2026).\n- **Labour Standards Act, Article 26** (leave allowance). For a leave due to a cause attributable to the employer, it obligates the payment of an allowance of 60/100 or more of the average wage. Referred to in considering the treatment of cancellation time (e-Gov Law Search, Labour Standards Act, Act No. 49 of 1947; accessed 28 August 2026).\n- Whether a specific block of time counts as working time, and whether leave allowance is due, is decided by the Labour Standards Inspection Office and the courts in light of the actual situation. The design of the wage unit for travel time and the appropriateness of a labor-management agreement require confirmation grounded in the latest primary sources and individual circumstances.\n\nThis article does not decide whom to consult. Putting the work rules and wage rules in order, working-time management, and concluding a 36 agreement are the work of a Shakai Hoken Roumushi. Notifications on an office's designation standards and staffing are the domain of a Gyoseishoshi, and claims for unpaid wages and other disputes are the domain of an attorney. For fees when consulting 四葉社会保険労務士事務所, see [the fee schedule](/en/labor/ryokin); for frequently asked questions, see [the FAQ](/en/labor/faq).\n\nThis article is general information. Whether an individual block of time counts as working time is decided by the Labour Standards Inspection Office or the courts. Whether the system applies and individual procedures are handled by a qualified professional after a consultation, in light of the latest primary sources (the Ministry of Health, Labour and Welfare, etc.) and individual circumstances. Written by [Joji Uramatsu](/en/about/uramatsu) (Shakai Hoken Roumushi, Gyoseishoshi, Registered Real Estate Transaction Specialist).",
+        "category": "Working hours",
+        "keywords": [
+          "home care travel time working time",
+          "home care standby time wages",
+          "home care travel minimum wage",
+          "home care cancellation leave allowance",
+          "home-care worker statutory conditions circular",
+          "home care wage rules commuting"
+        ],
+        "tags": [
+          "Home care",
+          "Working hours",
+          "Travel time",
+          "Minimum wage",
+          "Wage rules",
+          "Shakai Hoken Roumushi"
+        ],
+        "author": {
+          "name": "Joji Uramatsu",
+          "title": "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所"
+        },
+        "faq": [
+          {
+            "question": "Do we always have to pay wages for travel time between visits?",
+            "answer": "If that travel is work travel on the employer's instruction and free use of the time is not guaranteed, it counts as working time and is subject to wages. The circular (27 August 2004, Kihatsu No. 0827001) itself flags a practice of not treating travel time as working time across the board. The final decision on whether a specific case applies is made by the Labour Standards Inspection Office or the courts."
+          },
+          {
+            "question": "With direct commuting, is travel from home to a user's house also working time?",
+            "answer": "Travel from home to the first user's house, and from the last user's house back home, is in principle treated like ordinary commuting and generally not working time. On the other hand, travel between users' homes, or from the office to a user's home when ordered, can count as working time. Confirmation grounded in the actual situation is needed."
+          },
+          {
+            "question": "What about wages for time cancelled at a user's convenience?",
+            "answer": "If standby was still ordered at the office, that standby time can count as working time. If the worker is sent home with no other work ordered and it can be called a leave due to a cause attributable to the employer, it becomes a candidate for leave allowance (Labour Standards Act, Article 26; 60% or more of average wage). Because the conclusion changes with the situation, please confirm case by case."
+          },
+          {
+            "question": "If we pay an hourly rate only for service delivery, is the minimum wage no problem?",
+            "answer": "Not necessarily. When travel and standby time count as working time, the total wage recalculated over the total working time including that time must be at or above the minimum wage (Minimum Wage Act, Article 4). Even when travel is set separately, confirm that the minimum wage is met on a total basis."
+          }
+        ]
+      },
+      "zh-tw": {
+        "title": "到宅照護員的移動時間・待機時間算工時嗎？工資的支付方式與規程整備",
+        "excerpt": "到宅照護員的移動時間，只要是雇主為業務而命令移動、且該時間的自由使用未受保障，即屬工時。被命令於事業場所等待的待機時間，判斷方式相同。屬工時的時間即為工資支付對象，換算成每小時後不得低於最低工資（最低工資法第4條）。個別時間是否屬工時，最終由勞動基準監督署或法院判斷。",
+        "content": "**先講結論**：到宅照護員的移動時間，只要是**雇主為業務而命令移動、且該時間的自由使用未受保障**，即屬工時。被命令於事業場所等待的待機時間，判斷方式相同。屬工時的時間即為**工資支付對象**，換算成每小時後不得低於**最低工資（最低工資法第4條）**。個別時間是否屬工時，最終由勞動基準監督署或法院判斷。\n\n「訪視與訪視之間的移動不付工資」「因為是直接前往・直接返家，就以為移動不算工時」——在到宅照護的現場，移動時間・待機時間常在含糊中運作，事後才被指出有未付工資。本文為到宅照護事業所的管理者・經營者，以及直行直歸與訪視間移動較多之現場的勞務負責人，整理哪些時間屬工時，以及如何落實到工資規程中。\n\n## 到宅照護員的移動時間算工時嗎？\n\n有可能算。判斷的軸線是「是否處於雇主的指揮監督之下（是否為可自由運用的時間）」。\n\n厚生勞働省通達「到宅照護勞工法定勞動條件之確保」（平成16年8月27日基發第0827001號）就移動時間指出，**雇主命令為從事業務所必要之移動，且該時間之自由使用未獲保障者，即屬工時**。由一名使用者住處移動至下一位使用者住處，或由事業所移動至使用者住處，即為典型情形。\n\n| 時間種類 | 是否屬工時（原則） |\n|---|---|\n| 由使用者住處移動至下一位使用者住處 | 若被命令為必要業務移動、且自由使用未獲保障，屬**工時** |\n| 由事業所移動至使用者住處 | 同上。若已被命令移動，**得**認定為工時 |\n| 由自宅前往首位使用者（直行）、由末位使用者返家（直歸） | 比照一般**通勤**，原則上非工時 |\n| 業務報告書等之製作時間 | 若依制度・業務規定被義務化，並在指揮監督下製作，屬**工時** |\n\n該通達本身亦指出，有事業者未一律將移動時間或待機時間視為工時。若實態處於指揮監督之下，「一律不付」的做法並不成立。\n\n工時本身的概念見於勞動基準法第32條。關於既定工時與加班的管理，另請參閱[要讓員工加班需要什麼（36協定到哪裡）](/zh-tw/labor/column/36-kyotei-zangyo-sharoushi-doko-made)。\n\n## 待機時間與取消時的時間如何處理？\n\n待機時間是否屬工時，同樣以「是否可自由運用」決定。\n\n同一通達就待機時間指出，**雇主為因應突發需求等，命令於事業場所等待，且該時間之自由使用未獲保障者，即屬工時**。於事業所等待下一項指示的時間，即為典型情形。反之，若距下次訪視尚有數小時、其間可返家自由運用，則得認定為非工時。\n\n出現取消時的處理，依情形而分。\n\n| 情形 | 思路 |\n|---|---|\n| 仍被命令於事業所待機期間出現取消 | 若待機的自由使用未獲保障，該待機時間屬**工時** |\n| 因使用者因素臨時取消，且未命令其他業務而讓其返家 | 若屬可歸責於雇主之事由的休業，即為**休業津貼**（勞動基準法第26條・平均工資六成以上）的檢討對象 |\n| 行程空出，勞工可自由運用 | 原則上非工時 |\n\n與其一律將取消時間視為「未工作故不給薪」，重點在於確認**是否命令待機／是否為雇主因素之休業**。個別事案是否屬工時、是否需給付休業津貼，屬勞動基準監督署與法院的判斷領域。\n\n## 把移動時間算進去後，會不會低於最低工資？\n\n這是實務上最容易疏忽之處。必須確認**將移動時間・待機時間計入工時後，每小時工資是否低於最低工資**。\n\n若採「每件服務給時薪、移動時間不給薪」的設計，把移動計入後以總工時重新換算時，有可能低於最低工資。最低工資法第4條課予雇主支付最低工資額以上工資之義務。即使將移動時間工資另行訂定，**以總額除以總工時所得之數額**，仍須在最低工資以上。\n\n將思路簡化如下。\n\n| 項目 | 內容 |\n|---|---|\n| 分子（工資） | 服務提供部分工資＋移動・待機時間部分工資＋各項津貼 |\n| 分母（工時） | 服務提供時間＋屬工時之移動・待機・報告書製作時間 |\n| 判定 | 分子÷分母須在該地區**最低工資額以上** |\n\n照護報酬係參酌服務所需之平均費用（含人事費）而綜合設定。移動時間工資的訂定方式，勞資之間尚有斟酌空間，但**不低於最低工資是前提**。將移動時間的工資單價與服務提供分開訂定本身雖屬可行，惟其水準是否妥適、個別設計如何，仍須依實態與最新一手資訊判斷，故此處僅止於一般論。\n\n## 工資規程與直行直歸規則如何整備？\n\n為了「日後不被指稱未付」，將哪些時間視為工時、如何計算工資，以書面明確化甚為有效。\n\n整備的順序如下。\n\n1. **界定工時範圍**：於移動・待機・報告書製作時間中，依通達思路以書面明定何者視為工時。\n2. **於工資規程載明工資計算方式**：訂定服務提供・移動・待機之單價或算式，並確認總額在最低工資以上。使用津貼時須留意可否計入。\n3. **訂定直行直歸規則**：劃分何處起為業務移動、何處止為通勤，並保留移動紀錄（開始・結束・路徑）。\n4. **記錄工時**：含移動・待機在內，客觀掌握上下班時間。無紀錄時，日後爭執時事業所一方易居劣勢。\n\n工作規則・工資規程本身的整備請參閱[工作規則從幾人起義務（該寫什麼）](/zh-tw/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo)；照護領域的工資規程請參閱[照護職員等待遇改善加算如何落實到工資規程](/zh-tw/labor/column/kaigo-shogu-kaizen-kasan-chingin-kitei)。設有夜勤或宿直的事業所，另請參閱[夜勤與宿直在工時處理上有何不同](/zh-tw/labor/column/group-home-yakin-shukuchoku-roudou-chigai)。\n\n又，工資規程・36協定・工時管理屬社會保險勞務士的業務。事業所的指定基準・人員配置之申報屬行政書士（四葉行政書士事務所與本事務所為各自獨立之事業體，另行簽約）；已發生之未付工資請求等已成爭執之案件，屬律師的領域。\n\n## 常見問題\n\n**Q. 訪視之間的移動時間，一定要付工資嗎？**\nA. 若該移動屬雇主指示的業務移動、且時間的自由使用未獲保障，即屬工時而為工資支付對象。通達（平成16年8月27日基發第0827001號）本身亦指出「不一律將移動時間視為工時」的做法有問題。個別是否適用，最終由勞動基準監督署・法院判斷。\n\n**Q. 若為直行直歸，由自宅前往使用者住處的移動也算工時嗎？**\nA. 由自宅前往首位使用者住處、由末位使用者住處返家，原則上比照一般通勤，一般不算工時。另一方面，使用者住處之間的移動，或被命令由事業所前往使用者住處時，得認定為工時。仍須依實態確認。\n\n**Q. 因使用者因素取消的時間，工資如何處理？**\nA. 若仍被命令於事業所待機，該待機時間得認定為工時。若未命令其他業務而讓其返家，且屬可歸責於雇主之事由的休業，即為休業津貼（勞動基準法第26條・平均工資六成以上）的檢討對象。因情形而結論不同，請個別確認。\n\n**Q. 只要就服務提供部分付時薪，最低工資就沒問題嗎？**\nA. 未必沒問題。若移動時間・待機時間屬工時，將該時間計入以總工時重新換算工資總額時，須在最低工資（最低工資法第4條）以上。即使將移動另行訂定，仍請確認以總額計是否達最低工資。\n\n## 本文依據\n\n- **勞動基準法第32條**（工時）。規定雇主原則上不得使勞工每日工作逾8小時、每週逾40小時（e-Gov法令檢索、勞動基準法・昭和22年法律第49號，2026年8月28日參照）\n- **「到宅照護勞工法定勞動條件之確保」（平成16年8月27日基發第0827001號）**。就移動時間為「雇主命令為從事業務所必要之移動、且該時間之自由使用未獲保障者，即屬工時」；就待機時間為「雇主為因應突發需求等命令於事業場所等待、且該時間之自由使用未獲保障者，即屬工時」；就報告書等製作時間為「係業務上被義務化，並在雇主指揮監督下於事業場所或使用者住處等製作者，即屬工時」（厚生勞働省，2026年8月28日參照）\n- **最低工資法第4條**（最低工資之效力）。雇主對於適用最低工資之勞工，須支付最低工資額以上之工資。即使將移動時間另行訂定，以總額除以總工時所得之數額仍須在最低工資以上（e-Gov法令檢索、最低工資法・昭和34年法律第137號，2026年8月28日參照）\n- **勞動基準法第26條**（休業津貼）。因可歸責於雇主之事由而休業時，課予支付平均工資百分之六十以上津貼之義務。於取消時處理之檢討時參照（e-Gov法令檢索、勞動基準法・昭和22年法律第49號，2026年8月28日參照）\n- 個別時間是否屬工時、是否須給付休業津貼，由勞動基準監督署・法院依實態判斷。移動時間工資單價之設計與勞資協定之妥適與否，須依最新一手資訊與個別情形確認\n\n本文並不代替您決定該向誰諮詢。工作規則・工資規程的整備、工時管理、締結36協定，屬社會保險勞務士的業務。事業所的指定基準・人員配置之申報屬行政書士，未付工資請求等爭執屬律師的領域。向四葉社会保険労務士事務所諮詢時的費用，整理於[報酬額表](/zh-tw/labor/ryokin)；常見問題整理於[常見問答](/zh-tw/labor/faq)。\n\n本文為一般性資訊提供。個別時間是否屬工時，由勞動基準監督署・法院判斷。制度的適用與個別手續，將依最新一手資訊（厚生勞働省等）與個別情形，於面談後由有資格者為之。撰文為[浦松丈二](/zh-tw/about/uramatsu)（社會保險勞務士・行政書士・宅地建物取引士）。",
+        "category": "工時",
+        "keywords": [
+          "到宅照護 移動時間 工時",
+          "到宅照護 待機時間 工資",
+          "到宅照護 移動時間 最低工資",
+          "到宅照護 取消 休業津貼",
+          "到宅照護勞工 法定勞動條件 通達",
+          "到宅照護 工資規程 直行直歸"
+        ],
+        "tags": [
+          "到宅照護",
+          "工時",
+          "移動時間",
+          "最低工資",
+          "工資規程",
+          "社會保險勞務士"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "訪視之間的移動時間，一定要付工資嗎？",
+            "answer": "若該移動屬雇主指示的業務移動、且時間的自由使用未獲保障，即屬工時而為工資支付對象。通達（平成16年8月27日基發第0827001號）本身亦指出「不一律將移動時間視為工時」的做法有問題。個別是否適用，最終由勞動基準監督署・法院判斷。"
+          },
+          {
+            "question": "若為直行直歸，由自宅前往使用者住處的移動也算工時嗎？",
+            "answer": "由自宅前往首位使用者住處、由末位使用者住處返家，原則上比照一般通勤，一般不算工時。另一方面，使用者住處之間的移動，或被命令由事業所前往使用者住處時，得認定為工時。仍須依實態確認。"
+          },
+          {
+            "question": "因使用者因素取消的時間，工資如何處理？",
+            "answer": "若仍被命令於事業所待機，該待機時間得認定為工時。若未命令其他業務而讓其返家，且屬可歸責於雇主之事由的休業，即為休業津貼（勞動基準法第26條・平均工資六成以上）的檢討對象。因情形而結論不同，請個別確認。"
+          },
+          {
+            "question": "只要就服務提供部分付時薪，最低工資就沒問題嗎？",
+            "answer": "未必沒問題。若移動時間・待機時間屬工時，將該時間計入以總工時重新換算工資總額時，須在最低工資（最低工資法第4條）以上。即使將移動另行訂定，仍請確認以總額計是否達最低工資。"
+          }
+        ]
+      },
+      "zh": {
+        "title": "上门护理员的移动时间・待机时间算工时吗？工资的支付方式与规程整备",
+        "excerpt": "上门护理员的移动时间，只要是雇主为业务而命令移动、且该时间的自由使用未受保障，即属工时。被命令于事业场所等待的待机时间，判断方式相同。属工时的时间即为工资支付对象，换算成每小时后不得低于最低工资（最低工资法第4条）。个别时间是否属工时，最终由劳动基准监督署或法院判断。",
+        "content": "**先讲结论**：上门护理员的移动时间，只要是**雇主为业务而命令移动、且该时间的自由使用未受保障**，即属工时。被命令于事业场所等待的待机时间，判断方式相同。属工时的时间即为**工资支付对象**，换算成每小时后不得低于**最低工资（最低工资法第4条）**。个别时间是否属工时，最终由劳动基准监督署或法院判断。\n\n「上门与上门之间的移动不付工资」「因为是直接前往・直接返家，就以为移动不算工时」——在上门护理的现场，移动时间・待机时间常在含糊中运作，事后才被指出有未付工资。本文为上门护理事业所的管理者・经营者，以及直行直归与上门间移动较多之现场的劳务负责人，整理哪些时间属工时，以及如何落实到工资规程中。\n\n## 上门护理员的移动时间算工时吗？\n\n有可能算。判断的轴线是「是否处于雇主的指挥监督之下（是否为可自由运用的时间）」。\n\n厚生劳働省通达「上门护理劳工法定劳动条件之确保」（平成16年8月27日基发第0827001号）就移动时间指出，**雇主命令为从事业务所必要之移动，且该时间之自由使用未获保障者，即属工时**。由一名使用者住处移动至下一位使用者住处，或由事业所移动至使用者住处，即为典型情形。\n\n| 时间种类 | 是否属工时（原则） |\n|---|---|\n| 由使用者住处移动至下一位使用者住处 | 若被命令为必要业务移动、且自由使用未获保障，属**工时** |\n| 由事业所移动至使用者住处 | 同上。若已被命令移动，**得**认定为工时 |\n| 由自宅前往首位使用者（直行）、由末位使用者返家（直归） | 比照一般**通勤**，原则上非工时 |\n| 业务报告书等之制作时间 | 若依制度・业务规定被义务化，并在指挥监督下制作，属**工时** |\n\n该通达本身亦指出，有事业者未一律将移动时间或待机时间视为工时。若实态处于指挥监督之下，「一律不付」的做法并不成立。\n\n工时本身的概念见于劳动基准法第32条。关于既定工时与加班的管理，另请参阅[要让员工加班需要什么（36协定到哪里）](/zh/labor/column/36-kyotei-zangyo-sharoushi-doko-made)。\n\n## 待机时间与取消时的时间如何处理？\n\n待机时间是否属工时，同样以「是否可自由运用」决定。\n\n同一通达就待机时间指出，**雇主为因应突发需求等，命令于事业场所等待，且该时间之自由使用未获保障者，即属工时**。于事业所等待下一项指示的时间，即为典型情形。反之，若距下次上门尚有数小时、其间可返家自由运用，则得认定为非工时。\n\n出现取消时的处理，依情形而分。\n\n| 情形 | 思路 |\n|---|---|\n| 仍被命令于事业所待机期间出现取消 | 若待机的自由使用未获保障，该待机时间属**工时** |\n| 因使用者因素临时取消，且未命令其他业务而让其返家 | 若属可归责于雇主之事由的休业，即为**休业津贴**（劳动基准法第26条・平均工资六成以上）的检讨对象 |\n| 行程空出，劳工可自由运用 | 原则上非工时 |\n\n与其一律将取消时间视为「未工作故不给薪」，重点在于确认**是否命令待机／是否为雇主因素之休业**。个别事案是否属工时、是否需给付休业津贴，属劳动基准监督署与法院的判断领域。\n\n## 把移动时间算进去后，会不会低于最低工资？\n\n这是实务上最容易疏忽之处。必须确认**将移动时间・待机时间计入工时后，每小时工资是否低于最低工资**。\n\n若采「每件服务给时薪、移动时间不给薪」的设计，把移动计入后以总工时重新换算时，有可能低于最低工资。最低工资法第4条课予雇主支付最低工资额以上工资之义务。即使将移动时间工资另行订定，**以总额除以总工时所得之数额**，仍须在最低工资以上。\n\n将思路简化如下。\n\n| 项目 | 内容 |\n|---|---|\n| 分子（工资） | 服务提供部分工资＋移动・待机时间部分工资＋各项津贴 |\n| 分母（工时） | 服务提供时间＋属工时之移动・待机・报告书制作时间 |\n| 判定 | 分子÷分母须在该地区**最低工资额以上** |\n\n护理报酬系参酌服务所需之平均费用（含人事费）而综合设定。移动时间工资的订定方式，劳资之间尚有斟酌空间，但**不低于最低工资是前提**。将移动时间的工资单价与服务提供分开订定本身虽属可行，惟其水准是否妥适、个别设计如何，仍须依实态与最新一手资讯判断，故此处仅止于一般论。\n\n## 工资规程与直行直归规则如何整备？\n\n为了「日后不被指称未付」，将哪些时间视为工时、如何计算工资，以书面明确化甚为有效。\n\n整备的顺序如下。\n\n1. **界定工时范围**：于移动・待机・报告书制作时间中，依通达思路以书面明定何者视为工时。\n2. **于工资规程载明工资计算方式**：订定服务提供・移动・待机之单价或算式，并确认总额在最低工资以上。使用津贴时须留意可否计入。\n3. **订定直行直归规则**：划分何处起为业务移动、何处止为通勤，并保留移动纪录（开始・结束・路径）。\n4. **记录工时**：含移动・待机在内，客观掌握上下班时间。无纪录时，日后争执时事业所一方易居劣势。\n\n工作规则・工资规程本身的整备请参阅[工作规则从几人起义务（该写什么）](/zh/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo)；护理领域的工资规程请参阅[护理职员等待遇改善加算如何落实到工资规程](/zh/labor/column/kaigo-shogu-kaizen-kasan-chingin-kitei)。设有夜勤或宿直的事业所，另请参阅[夜勤与宿直在工时处理上有何不同](/zh/labor/column/group-home-yakin-shukuchoku-roudou-chigai)。\n\n又，工资规程・36协定・工时管理属社会保险劳务士的业务。事业所的指定基准・人员配置之申报属行政书士（四葉行政書士事務所与本事务所为各自独立之事业体，另行签约）；已发生之未付工资请求等已成争执之案件，属律师的领域。\n\n## 常见问题\n\n**Q. 上门之间的移动时间，一定要付工资吗？**\nA. 若该移动属雇主指示的业务移动、且时间的自由使用未获保障，即属工时而为工资支付对象。通达（平成16年8月27日基发第0827001号）本身亦指出「不一律将移动时间视为工时」的做法有问题。个别是否适用，最终由劳动基准监督署・法院判断。\n\n**Q. 若为直行直归，由自宅前往使用者住处的移动也算工时吗？**\nA. 由自宅前往首位使用者住处、由末位使用者住处返家，原则上比照一般通勤，一般不算工时。另一方面，使用者住处之间的移动，或被命令由事业所前往使用者住处时，得认定为工时。仍须依实态确认。\n\n**Q. 因使用者因素取消的时间，工资如何处理？**\nA. 若仍被命令于事业所待机，该待机时间得认定为工时。若未命令其他业务而让其返家，且属可归责于雇主之事由的休业，即为休业津贴（劳动基准法第26条・平均工资六成以上）的检讨对象。因情形而结论不同，请个别确认。\n\n**Q. 只要就服务提供部分付时薪，最低工资就没问题吗？**\nA. 未必没问题。若移动时间・待机时间属工时，将该时间计入以总工时重新换算工资总额时，须在最低工资（最低工资法第4条）以上。即使将移动另行订定，仍请确认以总额计是否达最低工资。\n\n## 本文依据\n\n- **劳动基准法第32条**（工时）。规定雇主原则上不得使劳工每日工作逾8小时、每周逾40小时（e-Gov法令检索、劳动基准法・昭和22年法律第49号，2026年8月28日参照）\n- **「上门护理劳工法定劳动条件之确保」（平成16年8月27日基发第0827001号）**。就移动时间为「雇主命令为从事业务所必要之移动、且该时间之自由使用未获保障者，即属工时」；就待机时间为「雇主为因应突发需求等命令于事业场所等待、且该时间之自由使用未获保障者，即属工时」；就报告书等制作时间为「系业务上被义务化，并在雇主指挥监督下于事业场所或使用者住处等制作者，即属工时」（厚生劳働省，2026年8月28日参照）\n- **最低工资法第4条**（最低工资之效力）。雇主对于适用最低工资之劳工，须支付最低工资额以上之工资。即使将移动时间另行订定，以总额除以总工时所得之数额仍须在最低工资以上（e-Gov法令检索、最低工资法・昭和34年法律第137号，2026年8月28日参照）\n- **劳动基准法第26条**（休业津贴）。因可归责于雇主之事由而休业时，课予支付平均工资百分之六十以上津贴之义务。于取消时处理之检讨时参照（e-Gov法令检索、劳动基准法・昭和22年法律第49号，2026年8月28日参照）\n- 个别时间是否属工时、是否须给付休业津贴，由劳动基准监督署・法院依实态判断。移动时间工资单价之设计与劳资协定之妥适与否，须依最新一手资讯与个别情形确认\n\n本文并不代替您决定该向谁咨询。工作规则・工资规程的整备、工时管理、缔结36协定，属社会保险劳务士的业务。事业所的指定基准・人员配置之申报属行政书士，未付工资请求等争执属律师的领域。向四葉社会保険労務士事務所咨询时的费用，整理于[报酬额表](/zh/labor/ryokin)；常见问题整理于[常见问答](/zh/labor/faq)。\n\n本文为一般性资讯提供。个别时间是否属工时，由劳动基准监督署・法院判断。制度的适用与个别手续，将依最新一手资讯（厚生劳働省等）与个别情形，于面谈后由有资格者为之。撰文为[浦松丈二](/zh/about/uramatsu)（社会保险劳务士・行政书士・宅地建物取引士）。",
+        "category": "工时",
+        "keywords": [
+          "上门护理 移动时间 工时",
+          "上门护理 待机时间 工资",
+          "上门护理 移动时间 最低工资",
+          "上门护理 取消 休业津贴",
+          "上门护理劳工 法定劳动条件 通达",
+          "上门护理 工资规程 直行直归"
+        ],
+        "tags": [
+          "上门护理",
+          "工时",
+          "移动时间",
+          "最低工资",
+          "工资规程",
+          "社会保险劳务士"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "上门之间的移动时间，一定要付工资吗？",
+            "answer": "若该移动属雇主指示的业务移动、且时间的自由使用未获保障，即属工时而为工资支付对象。通达（平成16年8月27日基发第0827001号）本身亦指出「不一律将移动时间视为工时」的做法有问题。个别是否适用，最终由劳动基准监督署・法院判断。"
+          },
+          {
+            "question": "若为直行直归，由自宅前往使用者住处的移动也算工时吗？",
+            "answer": "由自宅前往首位使用者住处、由末位使用者住处返家，原则上比照一般通勤，一般不算工时。另一方面，使用者住处之间的移动，或被命令由事业所前往使用者住处时，得认定为工时。仍须依实态确认。"
+          },
+          {
+            "question": "因使用者因素取消的时间，工资如何处理？",
+            "answer": "若仍被命令于事业所待机，该待机时间得认定为工时。若未命令其他业务而让其返家，且属可归责于雇主之事由的休业，即为休业津贴（劳动基准法第26条・平均工资六成以上）的检讨对象。因情形而结论不同，请个别确认。"
+          },
+          {
+            "question": "只要就服务提供部分付时薪，最低工资就没问题吗？",
+            "answer": "未必没问题。若移动时间・待机时间属工时，将该时间计入以总工时重新换算工资总额时，须在最低工资（最低工资法第4条）以上。即使将移动另行订定，仍请确认以总额计是否达最低工资。"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "business": "labor",
+    "slug": "mynumber-hokensho-shikaku-kakuninsho",
+    "title": "マイナ保険証への一本化で会社は何をするか。資格確認書と被扶養者の手続き",
+    "date": "2026-09-01",
+    "category": "社会保険",
+    "excerpt": "従来の健康保険証は2024年（令和6年）12月2日に新規発行が終了し、発行済みの保険証も最長1年間の経過措置が過ぎました。マイナ保険証を持たない従業員には保険者から資格確認書が交付され、提示すれば従来どおり保険診療を受けられます。健康保険法第51条の3は、資格確認書を申請により交付するほか、当分の間は職権で交付できるとし、有効期限は交付日から5年を超えない範囲で保険者が定めるとしています。会社ができるのは資格取得届・被扶養者異動届を正しく行うことまでで、資格の判定は保険者が行います。資格確認書の交付対象、被扶養者・新規加入者の手続、従業員への案内のポイントを整理します。",
+    "content": "**結論（先に要点）**：従来の健康保険証は、2024年（令和6年）12月2日に新規発行が終了しました。発行済みの保険証は最長1年間（有効期限が先に来る場合はその日まで）使えましたが、その期間はすでに過ぎています。マイナ保険証（健康保険証利用登録を済ませたマイナンバーカード）を持たない人には、保険者から「資格確認書」が交付され、これを提示すれば従来どおり保険診療を受けられます。会社にできるのは資格取得・被扶養者の届出を正しく行うことまでで、資格の判定は保険者が行います。\n\n「保険証が廃止されたと聞いたが、うちの従業員はマイナ保険証を持っていない。会社は何をすればいいのか」——マイナ保険証への移行をめぐって、総務・人事の現場ではこうした確認が続いています。この記事は、従業員の社会保険手続を担う中小企業の担当者に向けて、資格確認書の交付対象と、被扶養者・新規加入者の手続、従業員への案内のポイントを整理します。\n\n## 従来の健康保険証はいつ使えなくなった？\n\n新規発行が終わったのは**2024年（令和6年）12月2日**です。\n\nこの日以降、従来の紙・カード型の健康保険証は新たに発行されなくなりました。ただし、それまでに発行済みの保険証は、**発行日から最長1年間**（保険証に記載の有効期限が先に来る場合はその日まで）は使える経過措置がとられていました。\n\n| 区分 | 内容 |\n|---|---|\n| 新規発行の終了 | 2024年（令和6年）12月2日 |\n| 発行済み保険証の経過措置 | 発行から最長1年間（有効期限が先に来る場合はその日まで）使用可 |\n| 現在（2026年8月時点） | 経過措置期間は終了。受診はマイナ保険証または資格確認書で行う |\n\nつまり今は、従業員が医療機関を受診するときは、**マイナ保険証を使うか、資格確認書を提示するか**のいずれかになります。会社としては、自社の従業員がどちらで受診できる状態にあるかを把握しておくことが出発点です。\n\n## マイナ保険証を持たない従業員には何が交付される？\n\n**資格確認書**が交付されます。\n\n健康保険法第51条の3は、被保険者が電子資格確認（マイナ保険証による確認）を受けられない状況にあるとき、保険者が資格確認書を交付・提供する仕組みを定めています。申請による交付が原則ですが、同条は、必要があると認めるときは、**当分の間、職権で（申請によらず）交付できる**としています。マイナ保険証を持たない人に、申請を待たずに交付が行われるのはこのためです。\n\n| 項目 | 内容（健康保険法第51条の3ほか） |\n|---|---|\n| 交付するのは | 保険者（協会けんぽ・健康保険組合など） |\n| 対象 | マイナ保険証（利用登録済みマイナンバーカード）を持たない被保険者・被扶養者 |\n| 交付の方法 | 申請による交付が原則。当分の間、職権交付も可能 |\n| 有効期限 | 交付日から起算して5年を超えない範囲で保険者が定める（職権交付などで短く設定される場合がある） |\n| できること | 医療機関の窓口で提示すれば、従来どおり保険診療を受けられる |\n\n資格確認書があれば、マイナンバーカードがなくても保険診療は受けられます。**「マイナ保険証を作らないと受診できなくなる」わけではない**点を、従業員に正しく伝えることが大切です。\n\nなお、資格取得届に個人番号（マイナンバー）が正確に記載されていないと、保険者が職権交付を行い、有効期限が短く設定される場合があります。**入社時の資格取得届でマイナンバーを正しく記載すること**が、結果として従業員の手続をスムーズにします。社会保険の加入判定そのものは[短い時間で雇うと、社会保険はどうなるか](/labor/column/tanjikan-koyo-shakaihoken-4bunno3)にまとめています。\n\n## 被扶養者や新規加入者の手続はどう変わる？\n\n会社が行う**届出の中身そのものは、従来と大きくは変わりません**。変わったのは「保険証という現物を配る」から「マイナ保険証で確認する／資格確認書が交付される」という受診の入口です。\n\n| 場面 | 会社の手続 | ポイント |\n|---|---|---|\n| 新しく従業員が入社した | 被保険者資格取得届 | 個人番号を正確に記載。マイナ保険証を持たない人には保険者から資格確認書が交付される |\n| 従業員に扶養家族ができた | 被扶養者（異動）届 | 被扶養者分の資格確認書は被保険者宛に送られる運用。被扶養者の認定可否は保険者が判断 |\n| 従業員が退職した | 被保険者資格喪失届 | 資格喪失後は資格確認書も使えない。返納の要否は保険者の案内に従う |\n\n被扶養者分の資格確認書は、被保険者（従業員本人）あてにまとめて送付される運用です。ただし、被保険者・被扶養者のうちマイナ保険証を利用する人には発行されません。**誰がマイナ保険証を持ち、誰が資格確認書を要するか**を家族単位で押さえておくと、問い合わせに答えやすくなります。\n\n被扶養者の認定基準そのものは、収入の壁とあわせて[年収130万円の壁を一時的に超えたらどうなるか](/labor/column/130man-kabe-ichijiteki-shomei)や[被扶養者は国内に住んでいないと認められないのか](/labor/column/fuyousha-kokunai-kyoju-gaikokujin)をご確認ください。加入の適用拡大については[社会保険の適用拡大で2027年に何が変わるのか](/labor/column/shakaihoken-tekiyo-kakudai-2027)にまとめています。\n\n## 会社が従業員に案内すべきことは？\n\n会社が伝えるべきは、**「受診の入口が変わったこと」と「マイナ保険証がなくても資格確認書で受診できること」**の2点です。\n\n案内の要点は次のとおりです。\n\n1. **受診の方法を伝える**：マイナ保険証を利用登録している人はマイナンバーカードで、していない人は資格確認書で受診する。従来の保険証はもう使えない。\n2. **資格確認書は自動で届くことを伝える**：マイナ保険証を持たない人には、申請しなくても保険者から資格確認書が交付される（当分の間の職権交付）。届いたら大切に保管する。\n3. **カード作成は本人・自治体の手続であることを伝える**：マイナンバーカードそのものの申請は、会社ではなく本人が市区町村に対して行う。会社が代行するものではない。\n4. **手続に必要な情報を集める**：資格取得届・被扶養者異動届のために、個人番号や被扶養者の情報を正確に把握する。\n\n会社ができるのは、**資格取得・被扶養者の届出を正しく行い、受診の入口の変更を従業員に案内すること**までです。誰を被保険者・被扶養者と認めるかという資格の最終判断は、保険者（協会けんぽ・健康保険組合など）が行います。\n\nなお、資格取得・被扶養者の届出は社会保険労務士の業務です。マイナンバーカードそのものの申請は従業員本人と市区町村の手続で、会社が代わりに行うものではありません。\n\n## よくある質問\n\n**Q. 従来の健康保険証は、今はもう使えませんか？**\nA. 使えません。新規発行は2024年（令和6年）12月2日に終了し、発行済みの保険証も最長1年間（有効期限が先に来る場合はその日まで）の経過措置期間が過ぎています。現在はマイナ保険証または資格確認書で受診します。\n\n**Q. マイナ保険証を持たない従業員は、受診できなくなりますか？**\nA. 受診できます。マイナ保険証を持たない被保険者・被扶養者には、保険者から資格確認書が交付され、窓口で提示すれば従来どおり保険診療を受けられます。申請しなくても当分の間は職権で交付されます（健康保険法第51条の3）。\n\n**Q. 資格確認書は会社が発行するのですか？**\nA. いいえ。資格確認書を交付するのは保険者（協会けんぽ・健康保険組合など）です。会社が行うのは資格取得届・被扶養者異動届などの手続で、個人番号を正確に記載することが、従業員への交付をスムーズにします。\n\n**Q. マイナンバーカードは会社が申請してあげるべきですか？**\nA. マイナンバーカードそのものの申請は、従業員本人が市区町村に対して行う手続で、会社が代行するものではありません。会社の役割は、社会保険の資格取得・被扶養者の届出を正しく行い、受診の入口が変わったことを案内することです。\n\n## この記事の根拠\n\n- **従来の健康保険証の新規発行終了**。2024年（令和6年）12月2日に、従来の紙・カード型健康保険証の新規発行が終了しました。発行済みの保険証は、発行から最長1年間（保険証に記載の有効期限が先に来る場合はその日まで）使える経過措置がとられました（厚生労働省・政府広報オンライン「マイナ保険証」に関する案内、2026年8月28日参照）\n- **健康保険法第51条の3**（資格確認書）。被保険者が電子資格確認を受けられない状況にあるとき、保険者に資格確認書の交付・提供を求めることができ、保険者は速やかに交付・提供するとしています。有効期限は交付日から起算して5年を超えない範囲で保険者が定めます。また、必要があると認めるときは、当分の間、職権で交付・提供できるとされています（e-Gov法令検索、健康保険法・大正11年法律第70号、2026年8月28日参照）\n- **資格確認書の交付運用**。マイナ保険証を持たない被保険者・被扶養者には、申請によらず資格確認書が交付されます。被扶養者分は被保険者あてに送付される運用で、マイナ保険証を利用する人には発行されません。職権交付の場合など、有効期限が短く設定されることがあります（協会けんぽ「マイナ保険証・資格確認書について」、2026年8月28日参照）\n- **マイナンバーカードの申請主体**。マイナンバーカードそのものの申請・交付は、本人と市区町村による手続です（デジタル庁・総務省のマイナンバーカードに関する案内、2026年8月28日参照）\n- 誰を被保険者・被扶養者と認めるかの最終判断は、保険者（協会けんぽ・健康保険組合など）が行います。具体的な様式・締切・返納の要否は各保険者の案内でご確認ください\n\nこの記事は、誰に相談するかまで決めるものではありません。社会保険の資格取得・被扶養者の届出は社会保険労務士の業務です。マイナンバーカードそのものの申請は従業員本人と市区町村の手続です。四葉社会保険労務士事務所にご相談いただく場合の費用は[報酬額表](/labor/ryokin)に、よくいただくご質問は[よくあるご質問](/labor/faq)にまとめています。\n\n本記事は一般的な情報提供です。個別の資格・被扶養者の認定は保険者が判断します。制度の適用や個別の手続は、最新の一次情報（厚生労働省・日本年金機構・各保険者・デジタル庁など）と個別のご事情に照らし、面談のうえ資格者が行います。執筆は[浦松丈二](/about/uramatsu)（社会保険労務士・行政書士・宅地建物取引士）です。",
+    "status": "published",
+    "author": {
+      "name": "浦松 丈二",
+      "title": "社会保険労務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+    },
+    "keywords": [
+      "マイナ保険証 一本化 会社 手続き",
+      "健康保険証 廃止 2024年12月2日",
+      "資格確認書 交付 対象 職権",
+      "マイナ保険証 被扶養者 資格確認書",
+      "健康保険法 第51条の3 資格確認書",
+      "資格確認書 有効期限 会社 案内"
+    ],
+    "tags": [
+      "社会保険",
+      "マイナ保険証",
+      "資格確認書",
+      "健康保険",
+      "被扶養者",
+      "社会保険労務士"
+    ],
+    "locales": [],
+    "faq": [
+      {
+        "question": "従来の健康保険証は、今はもう使えませんか？",
+        "answer": "使えません。新規発行は2024年（令和6年）12月2日に終了し、発行済みの保険証も最長1年間（有効期限が先に来る場合はその日まで）の経過措置期間が過ぎています。現在はマイナ保険証または資格確認書で受診します。"
+      },
+      {
+        "question": "マイナ保険証を持たない従業員は、受診できなくなりますか？",
+        "answer": "受診できます。マイナ保険証を持たない被保険者・被扶養者には、保険者から資格確認書が交付され、窓口で提示すれば従来どおり保険診療を受けられます。申請しなくても当分の間は職権で交付されます（健康保険法第51条の3）。"
+      },
+      {
+        "question": "資格確認書は会社が発行するのですか？",
+        "answer": "いいえ。資格確認書を交付するのは保険者（協会けんぽ・健康保険組合など）です。会社が行うのは資格取得届・被扶養者異動届などの手続で、個人番号を正確に記載することが、従業員への交付をスムーズにします。"
+      },
+      {
+        "question": "マイナンバーカードは会社が申請してあげるべきですか？",
+        "answer": "マイナンバーカードそのものの申請は、従業員本人が市区町村に対して行う手続で、会社が代行するものではありません。会社の役割は、社会保険の資格取得・被扶養者の届出を正しく行い、受診の入口が変わったことを案内することです。"
+      }
+    ],
+    "translations": {
+      "en": {
+        "title": "With the shift to the My Number health card, what does the company do? The qualification-confirmation certificate and dependent procedures",
+        "excerpt": "The conventional health insurance card stopped being newly issued on 2 December 2024. Already-issued cards were usable for up to one year, but that period has now passed. Employees who do not hold a My Number health card (a My Number Card registered for health-insurance use) are issued a \"qualification-confirmation certificate\" by the insurer, and by presenting it they can receive insured medical care as before. All the company can do is correctly file the acquisition and dependent notifications; the qualification decision is made by the insurer.",
+        "content": "**In short:** The conventional health insurance card **stopped being newly issued on 2 December 2024 (Reiwa 6)**. Already-issued cards were usable for up to one year (or until the stated expiry if that came first), but that period has now passed. Employees who do not hold a **My Number health card** (a My Number Card registered for health-insurance use) are issued a **\"qualification-confirmation certificate\" by the insurer**, and by presenting it they can receive insured medical care as before. All the company can do is correctly file the acquisition and dependent notifications; the **qualification decision is made by the insurer**.\n\n\"I hear the health insurance card has been abolished, but our employees don't hold a My Number health card. What is the company supposed to do?\" — around the shift to the My Number health card, questions like this continue in the general-affairs and HR field. This article, for the staff of small and medium-sized companies who handle employees' social-insurance procedures, sets out who receives the qualification-confirmation certificate, the procedures for dependents and new enrollees, and the points to convey to employees.\n\n## When did the conventional health insurance card stop being usable?\n\nNew issuance ended on **2 December 2024 (Reiwa 6)**.\n\nFrom that day, the conventional paper and card-type health insurance cards were no longer newly issued. However, cards already issued by then were covered by a transitional measure making them usable for **up to one year from issuance** (or until the expiry stated on the card if that came first).\n\n| Category | Content |\n|---|---|\n| End of new issuance | 2 December 2024 (Reiwa 6) |\n| Transitional measure for issued cards | Usable for up to one year from issuance (or until the stated expiry if earlier) |\n| Present (as of August 2026) | The transitional period has ended; care is received with a My Number health card or a qualification-confirmation certificate |\n\nIn other words, when an employee now sees a doctor, they either **use a My Number health card or present a qualification-confirmation certificate**. As a company, grasping which state each of your employees is in is the starting point.\n\n## What is issued to employees who do not hold a My Number health card?\n\nA **qualification-confirmation certificate** is issued.\n\nThe Health Insurance Act, Article 51-3 provides a mechanism whereby, when an insured person is in a situation where they cannot receive electronic qualification confirmation (confirmation via a My Number health card), the insurer issues or provides a qualification-confirmation certificate. Issuance on application is the principle, but the same article provides that, when deemed necessary, the insurer may **issue it ex officio (without an application) for the time being**. This is why the certificate is issued to those without a My Number health card without waiting for an application.\n\n| Item | Content (Health Insurance Act, Article 51-3, etc.) |\n|---|---|\n| Who issues it | The insurer (Kyokai Kenpo, a health insurance society, etc.) |\n| Who is covered | Insured persons and dependents who do not hold a My Number health card (a registered My Number Card) |\n| Method of issuance | Issuance on application is the principle; ex officio issuance is also possible for the time being |\n| Validity | Set by the insurer within a range not exceeding five years from the date of issuance (it may be set shorter, e.g. for ex officio issuance) |\n| What it enables | Presenting it at a medical institution's counter, insured medical care is received as before |\n\nWith a qualification-confirmation certificate, insured medical care can be received even without a My Number Card. It is important to convey correctly to employees that it is **not the case that \"you cannot see a doctor unless you make a My Number health card.\"**\n\nNote that if the individual number (My Number) is not correctly stated on the acquisition notification, the insurer may issue the certificate ex officio and set a shorter validity. **Stating the My Number correctly on the acquisition notification at the time of joining** therefore, in the end, makes the employee's procedure go smoothly. The social-insurance enrollment decision itself is summarized in [what happens to social insurance when you hire someone for short hours](/en/labor/column/tanjikan-koyo-shakaihoken-4bunno3).\n\n## How do the procedures for dependents and new enrollees change?\n\nThe **content of the notifications the company files does not change much** from before. What changed is the entrance to receiving care — from \"handing out a physical card\" to \"confirming with a My Number health card / having a qualification-confirmation certificate issued.\"\n\n| Situation | Company's procedure | Point |\n|---|---|---|\n| A new employee joins | Notification of acquisition of insured status | State the individual number correctly. For those without a My Number health card, the insurer issues a qualification-confirmation certificate |\n| An employee gains a dependent | Notification of dependent (change) | The dependent's certificate is sent to the insured person. Whether to certify the dependent is decided by the insurer |\n| An employee leaves | Notification of loss of insured status | After loss of status, the certificate can no longer be used. Follow the insurer's guidance on whether it must be returned |\n\nThe dependents' certificates are, in practice, sent together to the insured person (the employee themselves). However, they are not issued to those, among the insured person and dependents, who use a My Number health card. Grasping, by household, **who holds a My Number health card and who needs a qualification-confirmation certificate** makes it easier to answer inquiries.\n\nFor the dependent-certification standard itself, together with the income walls, see [what happens if you temporarily exceed the 1.3 million yen wall](/en/labor/column/130man-kabe-ichijiteki-shomei) and [are dependents not recognized unless they live in Japan](/en/labor/column/fuyousha-kokunai-kyoju-gaikokujin). For the expansion of coverage, see [what changes with the expansion of social-insurance coverage in 2027](/en/labor/column/shakaihoken-tekiyo-kakudai-2027).\n\n## What should the company convey to employees?\n\nWhat the company should convey are two things: **that the entrance to receiving care has changed, and that care can be received with a qualification-confirmation certificate even without a My Number health card**.\n\nThe key points of the guidance are as follows.\n\n1. **Convey the method of receiving care:** those who have registered a My Number health card use their My Number Card; those who have not use a qualification-confirmation certificate. The conventional card is no longer usable.\n2. **Convey that the certificate arrives automatically:** those without a My Number health card are issued a qualification-confirmation certificate by the insurer without applying (ex officio issuance for the time being). Keep it safe when it arrives.\n3. **Convey that making the card is the individual's and municipality's procedure:** the application for the My Number Card itself is made by the person to their municipality, not by the company. It is not something the company does on their behalf.\n4. **Gather the information needed for procedures:** accurately grasp individual numbers and dependent information for the acquisition and dependent-change notifications.\n\nWhat the company can do goes as far as **correctly filing the acquisition and dependent notifications and informing employees of the change in the entrance to care**. The final decision on who is recognized as an insured person or a dependent is made by the insurer (Kyokai Kenpo, a health insurance society, etc.).\n\nNote that the acquisition and dependent notifications are the work of a Shakai Hoken Roumushi. The application for the My Number Card itself is a procedure between the employee and the municipality, not something the company does on their behalf.\n\n## Frequently asked questions\n\n**Q. Can the conventional health insurance card no longer be used now?**\nA. It cannot. New issuance ended on 2 December 2024 (Reiwa 6), and even for issued cards the transitional period of up to one year (or until the stated expiry if earlier) has passed. Care is now received with a My Number health card or a qualification-confirmation certificate.\n\n**Q. Can employees who do not hold a My Number health card no longer see a doctor?**\nA. They can. Insured persons and dependents without a My Number health card are issued a qualification-confirmation certificate by the insurer, and by presenting it at the counter they receive insured medical care as before. It is issued ex officio for the time being, without an application (Health Insurance Act, Article 51-3).\n\n**Q. Does the company issue the qualification-confirmation certificate?**\nA. No. The one that issues the qualification-confirmation certificate is the insurer (Kyokai Kenpo, a health insurance society, etc.). What the company does is procedures such as the acquisition and dependent-change notifications, and stating the individual number correctly makes issuance to the employee go smoothly.\n\n**Q. Should the company apply for the My Number Card on the employee's behalf?**\nA. The application for the My Number Card itself is a procedure the employee makes to their municipality; it is not something the company does on their behalf. The company's role is to correctly file the social-insurance acquisition and dependent notifications and to inform employees that the entrance to care has changed.\n\n## Sources\n\n- **End of new issuance of the conventional health insurance card.** New issuance of the conventional paper and card-type health insurance cards ended on 2 December 2024 (Reiwa 6). Already-issued cards were covered by a transitional measure making them usable for up to one year from issuance (or until the expiry stated on the card if that came first) (Ministry of Health, Labour and Welfare and Government Public Relations Online guidance on the \"My Number health card\"; accessed 28 August 2026).\n- **Health Insurance Act, Article 51-3** (qualification-confirmation certificate). When an insured person is in a situation where they cannot receive electronic qualification confirmation, they may request the insurer to issue or provide a qualification-confirmation certificate, and the insurer issues or provides it promptly. The validity is set by the insurer within a range not exceeding five years from the date of issuance. Also, when deemed necessary, the insurer may issue or provide it ex officio for the time being (e-Gov Law Search, Health Insurance Act, Act No. 70 of 1922; accessed 28 August 2026).\n- **Practice of issuing the qualification-confirmation certificate.** Insured persons and dependents who do not hold a My Number health card are issued a certificate without applying. In practice, dependents' certificates are sent to the insured person, and they are not issued to those who use a My Number health card. For ex officio issuance and the like, the validity may be set shorter (Kyokai Kenpo, \"About the My Number health card and the qualification-confirmation certificate\"; accessed 28 August 2026).\n- **The party applying for the My Number Card.** The application for and issuance of the My Number Card itself is a procedure between the person and the municipality (Digital Agency and Ministry of Internal Affairs and Communications guidance on the My Number Card; accessed 28 August 2026).\n- The final decision on who is recognized as an insured person or a dependent is made by the insurer (Kyokai Kenpo, a health insurance society, etc.). Please confirm the specific forms, deadlines, and whether the certificate must be returned in each insurer's guidance.\n\nThis article does not decide whom to consult. The social-insurance acquisition and dependent notifications are the work of a Shakai Hoken Roumushi. The application for the My Number Card itself is a procedure between the employee and the municipality. For fees when consulting 四葉社会保険労務士事務所, see [the fee schedule](/en/labor/ryokin); for frequently asked questions, see [the FAQ](/en/labor/faq).\n\nThis article is general information. The certification of individual qualification and dependent status is decided by the insurer. Whether the system applies and individual procedures are handled by a qualified professional after a consultation, in light of the latest primary sources (the Ministry of Health, Labour and Welfare, the Japan Pension Service, each insurer, the Digital Agency, etc.) and individual circumstances. Written by [Joji Uramatsu](/en/about/uramatsu) (Shakai Hoken Roumushi, Gyoseishoshi, Registered Real Estate Transaction Specialist).",
+        "category": "Social insurance",
+        "keywords": [
+          "My Number health card company procedures",
+          "health insurance card abolition December 2024",
+          "qualification-confirmation certificate issuance",
+          "My Number health card dependents",
+          "Health Insurance Act Article 51-3",
+          "qualification-confirmation certificate validity company notice"
+        ],
+        "tags": [
+          "Social insurance",
+          "My Number health card",
+          "Qualification-confirmation certificate",
+          "Health insurance",
+          "Dependents",
+          "Shakai Hoken Roumushi"
+        ],
+        "author": {
+          "name": "Joji Uramatsu",
+          "title": "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所"
+        },
+        "faq": [
+          {
+            "question": "Can the conventional health insurance card no longer be used now?",
+            "answer": "It cannot. New issuance ended on 2 December 2024 (Reiwa 6), and even for issued cards the transitional period of up to one year (or until the stated expiry if earlier) has passed. Care is now received with a My Number health card or a qualification-confirmation certificate."
+          },
+          {
+            "question": "Can employees who do not hold a My Number health card no longer see a doctor?",
+            "answer": "They can. Insured persons and dependents without a My Number health card are issued a qualification-confirmation certificate by the insurer, and by presenting it at the counter they receive insured medical care as before. It is issued ex officio for the time being, without an application (Health Insurance Act, Article 51-3)."
+          },
+          {
+            "question": "Does the company issue the qualification-confirmation certificate?",
+            "answer": "No. The one that issues the qualification-confirmation certificate is the insurer (Kyokai Kenpo, a health insurance society, etc.). What the company does is procedures such as the acquisition and dependent-change notifications, and stating the individual number correctly makes issuance to the employee go smoothly."
+          },
+          {
+            "question": "Should the company apply for the My Number Card on the employee's behalf?",
+            "answer": "The application for the My Number Card itself is a procedure the employee makes to their municipality; it is not something the company does on their behalf. The company's role is to correctly file the social-insurance acquisition and dependent notifications and to inform employees that the entrance to care has changed."
+          }
+        ]
+      },
+      "zh-tw": {
+        "title": "整合為My Number健保卡後公司要做什麼？資格確認書與被扶養者的手續",
+        "excerpt": "傳統健康保險證已於2024年（令和6年）12月2日停止新發行，已發行者最長可用一年的過渡期也已結束。未持有My Number健保卡（已登錄健保使用的My Number卡）的員工，由保險者交付「資格確認書」，出示即可如同以往接受保險診療。公司能做的僅止於正確辦理資格取得・被扶養者的申報，資格的判定由保險者為之。",
+        "content": "**先講結論**：傳統健康保險證已於**2024年（令和6年）12月2日停止新發行**，已發行者最長可用一年（若記載之有效期限先到則以該日為準）的過渡期也已結束。未持有**My Number健保卡**（已登錄健保使用的My Number卡）的員工，由**保險者交付「資格確認書」**，出示即可如同以往接受保險診療。公司能做的僅止於正確辦理資格取得・被扶養者的申報，**資格的判定由保險者為之**。\n\n「聽說健康保險證已廢止，但我們的員工沒有My Number健保卡。公司該做什麼？」——圍繞轉向My Number健保卡，在總務・人事的現場，這類確認仍在持續。本文為處理員工社會保險手續的中小企業負責人，整理資格確認書的交付對象、被扶養者・新加入者的手續，以及對員工說明的重點。\n\n## 傳統健康保險證何時起無法使用？\n\n新發行結束於**2024年（令和6年）12月2日**。\n\n自該日起，傳統的紙・卡片型健康保險證不再新發行。不過，在此之前已發行的保險證，有一項過渡措施，**自發行起最長一年**（若保險證記載之有效期限先到則以該日為準）內仍可使用。\n\n| 區分 | 內容 |\n|---|---|\n| 新發行結束 | 2024年（令和6年）12月2日 |\n| 已發行保險證的過渡措施 | 自發行起最長一年（若有效期限先到則以該日為準）可使用 |\n| 現況（2026年8月時點） | 過渡期已結束。就診以My Number健保卡或資格確認書為之 |\n\n換言之，員工現在就醫時，係**使用My Number健保卡，或出示資格確認書**兩者之一。公司方面，掌握自家員工各處於何種狀態，是出發點。\n\n## 未持有My Number健保卡的員工，會交付什麼？\n\n會交付**資格確認書**。\n\n健康保險法第51條之3就被保險人處於無法接受電子資格確認（以My Number健保卡確認）之情形時，訂有由保險者交付・提供資格確認書之機制。以申請交付為原則，惟同條規定，於認有必要時，**得於當分期間內以職權（不待申請）交付**。未持有My Number健保卡者不待申請即獲交付，即因於此。\n\n| 項目 | 內容（健康保險法第51條之3等） |\n|---|---|\n| 交付者 | 保險者（協會健保・健康保險組合等） |\n| 對象 | 未持有My Number健保卡（已登錄之My Number卡）之被保險人・被扶養者 |\n| 交付方式 | 以申請交付為原則。當分期間內亦得職權交付 |\n| 有效期限 | 由保險者於自交付日起不逾五年之範圍內訂定（職權交付等情形，可能訂為較短） |\n| 可為之事 | 於醫療機構窗口出示，即如同以往接受保險診療 |\n\n有資格確認書，即使無My Number卡亦可接受保險診療。應向員工正確傳達的是，**並非「不製作My Number健保卡就無法就醫」**。\n\n又，若資格取得申報書上未正確記載個人番號（My Number），保險者可能以職權交付，並將有效期限訂為較短。因此，**於入職時的資格取得申報書上正確記載My Number**，結果上能使員工的手續更為順暢。社會保險的加入判定本身，整理於[短時間僱用時社會保險如何處理](/zh-tw/labor/column/tanjikan-koyo-shakaihoken-4bunno3)。\n\n## 被扶養者與新加入者的手續有何改變？\n\n公司所辦理**申報的內容本身，與以往並無太大改變**。改變的是「發放實體保險證」轉為「以My Number健保卡確認／交付資格確認書」這一就診的入口。\n\n| 情形 | 公司的手續 | 重點 |\n|---|---|---|\n| 有新員工入職 | 被保險人資格取得申報 | 正確記載個人番號。未持My Number健保卡者，由保險者交付資格確認書 |\n| 員工新增扶養家屬 | 被扶養者（異動）申報 | 被扶養者分的資格確認書寄送予被保險人。被扶養者認定與否由保險者判斷 |\n| 員工離職 | 被保險人資格喪失申報 | 資格喪失後，資格確認書亦不可使用。是否須繳回，依保險者案內辦理 |\n\n被扶養者分的資格確認書，係彙整寄送予被保險人（員工本人）。惟於被保險人・被扶養者之中，使用My Number健保卡者不予發行。以家庭為單位掌握**誰持有My Number健保卡、誰需要資格確認書**，較易回應詢問。\n\n被扶養者的認定基準本身，連同收入之牆，請參閱[年收入一時超過130萬圓之牆會如何](/zh-tw/labor/column/130man-kabe-ichijiteki-shomei)與[被扶養者不居住國內就不予認定嗎](/zh-tw/labor/column/fuyousha-kokunai-kyoju-gaikokujin)。關於適用擴大，整理於[社會保險適用擴大於2027年有何改變](/zh-tw/labor/column/shakaihoken-tekiyo-kakudai-2027)。\n\n## 公司應向員工說明什麼？\n\n公司應傳達的是兩點：**就診的入口已改變，以及即使無My Number健保卡，也可用資格確認書就醫**。\n\n說明的重點如下。\n\n1. **傳達就醫方式**：已登錄My Number健保卡者以My Number卡就醫，未登錄者以資格確認書就醫。傳統保險證已不可使用。\n2. **傳達資格確認書會自動送達**：未持My Number健保卡者，不必申請即由保險者交付資格確認書（當分期間內之職權交付）。送達後妥善保管。\n3. **傳達製卡屬本人・市區町村之手續**：My Number卡本身的申請，係由本人向市區町村辦理，而非由公司代為辦理。\n4. **蒐集手續所需資訊**：為資格取得申報・被扶養者異動申報，正確掌握個人番號與被扶養者資訊。\n\n公司能做的，僅止於**正確辦理資格取得・被扶養者的申報，並向員工說明就診入口的改變**。認定何人為被保險人・被扶養者之最終判斷，由保險者（協會健保・健康保險組合等）為之。\n\n又，資格取得・被扶養者的申報，屬社會保險勞務士的業務。My Number卡本身的申請，係員工本人與市區町村之手續，非由公司代為辦理。\n\n## 常見問題\n\n**Q. 傳統健康保險證現在已不能使用了嗎？**\nA. 不能。新發行於2024年（令和6年）12月2日結束，已發行者最長一年（若有效期限先到則以該日為準）的過渡期亦已過。現以My Number健保卡或資格確認書就診。\n\n**Q. 未持有My Number健保卡的員工，會無法就醫嗎？**\nA. 可以就醫。未持My Number健保卡的被保險人・被扶養者，由保險者交付資格確認書，於窗口出示即如同以往接受保險診療。當分期間內不待申請即以職權交付（健康保險法第51條之3）。\n\n**Q. 資格確認書是由公司發行嗎？**\nA. 不是。交付資格確認書者為保險者（協會健保・健康保險組合等）。公司辦理的是資格取得申報・被扶養者異動申報等手續，正確記載個人番號可使對員工的交付更順暢。\n\n**Q. My Number卡應由公司代為申請嗎？**\nA. My Number卡本身的申請，係員工本人向市區町村辦理之手續，非由公司代為辦理。公司的角色，是正確辦理社會保險的資格取得・被扶養者申報，並說明就診入口已改變。\n\n## 本文依據\n\n- **傳統健康保險證新發行之結束**。傳統紙・卡片型健康保險證的新發行，於2024年（令和6年）12月2日結束。已發行者有一項過渡措施，自發行起最長一年（若保險證記載之有效期限先到則以該日為準）內可使用（厚生勞働省・政府廣報Online就「My Number健保卡」之案內，2026年8月28日參照）\n- **健康保險法第51條之3**（資格確認書）。被保險人處於無法接受電子資格確認之情形時，得請求保險者交付・提供資格確認書，保險者速予交付・提供。有效期限由保險者於自交付日起不逾五年之範圍內訂定。又，於認有必要時，得於當分期間內以職權交付・提供（e-Gov法令檢索、健康保險法・大正11年法律第70號，2026年8月28日參照）\n- **資格確認書之交付運用**。未持My Number健保卡之被保險人・被扶養者，不待申請即獲交付資格確認書。被扶養者分係寄送予被保險人之運用，使用My Number健保卡者不予發行。職權交付等情形，有效期限可能訂為較短（協會健保「關於My Number健保卡・資格確認書」，2026年8月28日參照）\n- **My Number卡之申請主體**。My Number卡本身的申請・交付，係本人與市區町村之手續（數位廳・總務省就My Number卡之案內，2026年8月28日參照）\n- 認定何人為被保險人・被扶養者之最終判斷，由保險者（協會健保・健康保險組合等）為之。具體樣式・期限・是否須繳回，請以各保險者的案內確認\n\n本文並不代替您決定該向誰諮詢。社會保險的資格取得・被扶養者申報，屬社會保險勞務士的業務。My Number卡本身的申請，係員工本人與市區町村之手續。向四葉社会保険労務士事務所諮詢時的費用，整理於[報酬額表](/zh-tw/labor/ryokin)；常見問題整理於[常見問答](/zh-tw/labor/faq)。\n\n本文為一般性資訊提供。個別資格・被扶養者的認定，由保險者判斷。制度的適用與個別手續，將依最新一手資訊（厚生勞働省・日本年金機構・各保險者・數位廳等）與個別情形，於面談後由有資格者為之。撰文為[浦松丈二](/zh-tw/about/uramatsu)（社會保險勞務士・行政書士・宅地建物取引士）。",
+        "category": "社會保險",
+        "keywords": [
+          "My Number健保卡 一本化 公司手續",
+          "健康保險證 廢止 2024年12月2日",
+          "資格確認書 交付 對象",
+          "My Number健保卡 被扶養者",
+          "健康保險法 第51條之3",
+          "資格確認書 有效期限 公司 案內"
+        ],
+        "tags": [
+          "社會保險",
+          "My Number健保卡",
+          "資格確認書",
+          "健康保險",
+          "被扶養者",
+          "社會保險勞務士"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "傳統健康保險證現在已不能使用了嗎？",
+            "answer": "不能。新發行於2024年（令和6年）12月2日結束，已發行者最長一年（若有效期限先到則以該日為準）的過渡期亦已過。現以My Number健保卡或資格確認書就診。"
+          },
+          {
+            "question": "未持有My Number健保卡的員工，會無法就醫嗎？",
+            "answer": "可以就醫。未持My Number健保卡的被保險人・被扶養者，由保險者交付資格確認書，於窗口出示即如同以往接受保險診療。當分期間內不待申請即以職權交付（健康保險法第51條之3）。"
+          },
+          {
+            "question": "資格確認書是由公司發行嗎？",
+            "answer": "不是。交付資格確認書者為保險者（協會健保・健康保險組合等）。公司辦理的是資格取得申報・被扶養者異動申報等手續，正確記載個人番號可使對員工的交付更順暢。"
+          },
+          {
+            "question": "My Number卡應由公司代為申請嗎？",
+            "answer": "My Number卡本身的申請，係員工本人向市區町村辦理之手續，非由公司代為辦理。公司的角色，是正確辦理社會保險的資格取得・被扶養者申報，並說明就診入口已改變。"
+          }
+        ]
+      },
+      "zh": {
+        "title": "整合为My Number健保卡后公司要做什么？资格确认书与被扶养者的手续",
+        "excerpt": "传统健康保险证已于2024年（令和6年）12月2日停止新发行，已发行者最长可用一年的过渡期也已结束。未持有My Number健保卡（已登录健保使用的My Number卡）的员工，由保险者交付「资格确认书」，出示即可如同以往接受保险诊疗。公司能做的仅止于正确办理资格取得・被扶养者的申报，资格的判定由保险者为之。",
+        "content": "**先讲结论**：传统健康保险证已于**2024年（令和6年）12月2日停止新发行**，已发行者最长可用一年（若记载之有效期限先到则以该日为准）的过渡期也已结束。未持有**My Number健保卡**（已登录健保使用的My Number卡）的员工，由**保险者交付「资格确认书」**，出示即可如同以往接受保险诊疗。公司能做的仅止于正确办理资格取得・被扶养者的申报，**资格的判定由保险者为之**。\n\n「听说健康保险证已废止，但我们的员工没有My Number健保卡。公司该做什么？」——围绕转向My Number健保卡，在总务・人事的现场，这类确认仍在持续。本文为处理员工社会保险手续的中小企业负责人，整理资格确认书的交付对象、被扶养者・新加入者的手续，以及对员工说明的重点。\n\n## 传统健康保险证何时起无法使用？\n\n新发行结束于**2024年（令和6年）12月2日**。\n\n自该日起，传统的纸・卡片型健康保险证不再新发行。不过，在此之前已发行的保险证，有一项过渡措施，**自发行起最长一年**（若保险证记载之有效期限先到则以该日为准）内仍可使用。\n\n| 区分 | 内容 |\n|---|---|\n| 新发行结束 | 2024年（令和6年）12月2日 |\n| 已发行保险证的过渡措施 | 自发行起最长一年（若有效期限先到则以该日为准）可使用 |\n| 现况（2026年8月时点） | 过渡期已结束。就诊以My Number健保卡或资格确认书为之 |\n\n换言之，员工现在就医时，系**使用My Number健保卡，或出示资格确认书**两者之一。公司方面，掌握自家员工各处于何种状态，是出发点。\n\n## 未持有My Number健保卡的员工，会交付什么？\n\n会交付**资格确认书**。\n\n健康保险法第51条之3就被保险人处于无法接受电子资格确认（以My Number健保卡确认）之情形时，订有由保险者交付・提供资格确认书之机制。以申请交付为原则，惟同条规定，于认有必要时，**得于当分期间内以职权（不待申请）交付**。未持有My Number健保卡者不待申请即获交付，即因于此。\n\n| 项目 | 内容（健康保险法第51条之3等） |\n|---|---|\n| 交付者 | 保险者（协会健保・健康保险组合等） |\n| 对象 | 未持有My Number健保卡（已登录之My Number卡）之被保险人・被扶养者 |\n| 交付方式 | 以申请交付为原则。当分期间内亦得职权交付 |\n| 有效期限 | 由保险者于自交付日起不逾五年之范围内订定（职权交付等情形，可能订为较短） |\n| 可为之事 | 于医疗机构窗口出示，即如同以往接受保险诊疗 |\n\n有资格确认书，即使无My Number卡亦可接受保险诊疗。应向员工正确传达的是，**并非「不制作My Number健保卡就无法就医」**。\n\n又，若资格取得申报书上未正确记载个人番号（My Number），保险者可能以职权交付，并将有效期限订为较短。因此，**于入职时的资格取得申报书上正确记载My Number**，结果上能使员工的手续更为顺畅。社会保险的加入判定本身，整理于[短时间雇用时社会保险如何处理](/zh/labor/column/tanjikan-koyo-shakaihoken-4bunno3)。\n\n## 被扶养者与新加入者的手续有何改变？\n\n公司所办理**申报的内容本身，与以往并无太大改变**。改变的是「发放实体保险证」转为「以My Number健保卡确认／交付资格确认书」这一就诊的入口。\n\n| 情形 | 公司的手续 | 重点 |\n|---|---|---|\n| 有新员工入职 | 被保险人资格取得申报 | 正确记载个人番号。未持My Number健保卡者，由保险者交付资格确认书 |\n| 员工新增扶养家属 | 被扶养者（异动）申报 | 被扶养者分的资格确认书寄送予被保险人。被扶养者认定与否由保险者判断 |\n| 员工离职 | 被保险人资格丧失申报 | 资格丧失后，资格确认书亦不可使用。是否须缴回，依保险者案内办理 |\n\n被扶养者分的资格确认书，系汇整寄送予被保险人（员工本人）。惟于被保险人・被扶养者之中，使用My Number健保卡者不予发行。以家庭为单位掌握**谁持有My Number健保卡、谁需要资格确认书**，较易回应询问。\n\n被扶养者的认定基准本身，连同收入之墙，请参阅[年收入一时超过130万圆之墙会如何](/zh/labor/column/130man-kabe-ichijiteki-shomei)与[被扶养者不居住国内就不予认定吗](/zh/labor/column/fuyousha-kokunai-kyoju-gaikokujin)。关于适用扩大，整理于[社会保险适用扩大于2027年有何改变](/zh/labor/column/shakaihoken-tekiyo-kakudai-2027)。\n\n## 公司应向员工说明什么？\n\n公司应传达的是两点：**就诊的入口已改变，以及即使无My Number健保卡，也可用资格确认书就医**。\n\n说明的重点如下。\n\n1. **传达就医方式**：已登录My Number健保卡者以My Number卡就医，未登录者以资格确认书就医。传统保险证已不可使用。\n2. **传达资格确认书会自动送达**：未持My Number健保卡者，不必申请即由保险者交付资格确认书（当分期间内之职权交付）。送达后妥善保管。\n3. **传达制卡属本人・市区町村之手续**：My Number卡本身的申请，系由本人向市区町村办理，而非由公司代为办理。\n4. **搜集手续所需资讯**：为资格取得申报・被扶养者异动申报，正确掌握个人番号与被扶养者资讯。\n\n公司能做的，仅止于**正确办理资格取得・被扶养者的申报，并向员工说明就诊入口的改变**。认定何人为被保险人・被扶养者之最终判断，由保险者（协会健保・健康保险组合等）为之。\n\n又，资格取得・被扶养者的申报，属社会保险劳务士的业务。My Number卡本身的申请，系员工本人与市区町村之手续，非由公司代为办理。\n\n## 常见问题\n\n**Q. 传统健康保险证现在已不能使用了吗？**\nA. 不能。新发行于2024年（令和6年）12月2日结束，已发行者最长一年（若有效期限先到则以该日为准）的过渡期亦已过。现以My Number健保卡或资格确认书就诊。\n\n**Q. 未持有My Number健保卡的员工，会无法就医吗？**\nA. 可以就医。未持My Number健保卡的被保险人・被扶养者，由保险者交付资格确认书，于窗口出示即如同以往接受保险诊疗。当分期间内不待申请即以职权交付（健康保险法第51条之3）。\n\n**Q. 资格确认书是由公司发行吗？**\nA. 不是。交付资格确认书者为保险者（协会健保・健康保险组合等）。公司办理的是资格取得申报・被扶养者异动申报等手续，正确记载个人番号可使对员工的交付更顺畅。\n\n**Q. My Number卡应由公司代为申请吗？**\nA. My Number卡本身的申请，系员工本人向市区町村办理之手续，非由公司代为办理。公司的角色，是正确办理社会保险的资格取得・被扶养者申报，并说明就诊入口已改变。\n\n## 本文依据\n\n- **传统健康保险证新发行之结束**。传统纸・卡片型健康保险证的新发行，于2024年（令和6年）12月2日结束。已发行者有一项过渡措施，自发行起最长一年（若保险证记载之有效期限先到则以该日为准）内可使用（厚生劳働省・政府广报Online就「My Number健保卡」之案内，2026年8月28日参照）\n- **健康保险法第51条之3**（资格确认书）。被保险人处于无法接受电子资格确认之情形时，得请求保险者交付・提供资格确认书，保险者速予交付・提供。有效期限由保险者于自交付日起不逾五年之范围内订定。又，于认有必要时，得于当分期间内以职权交付・提供（e-Gov法令检索、健康保险法・大正11年法律第70号，2026年8月28日参照）\n- **资格确认书之交付运用**。未持My Number健保卡之被保险人・被扶养者，不待申请即获交付资格确认书。被扶养者分系寄送予被保险人之运用，使用My Number健保卡者不予发行。职权交付等情形，有效期限可能订为较短（协会健保「关于My Number健保卡・资格确认书」，2026年8月28日参照）\n- **My Number卡之申请主体**。My Number卡本身的申请・交付，系本人与市区町村之手续（数位厅・总务省就My Number卡之案内，2026年8月28日参照）\n- 认定何人为被保险人・被扶养者之最终判断，由保险者（协会健保・健康保险组合等）为之。具体样式・期限・是否须缴回，请以各保险者的案内确认\n\n本文并不代替您决定该向谁咨询。社会保险的资格取得・被扶养者申报，属社会保险劳务士的业务。My Number卡本身的申请，系员工本人与市区町村之手续。向四葉社会保険労務士事務所咨询时的费用，整理于[报酬额表](/zh/labor/ryokin)；常见问题整理于[常见问答](/zh/labor/faq)。\n\n本文为一般性资讯提供。个别资格・被扶养者的认定，由保险者判断。制度的适用与个别手续，将依最新一手资讯（厚生劳働省・日本年金机构・各保险者・数位厅等）与个别情形，于面谈后由有资格者为之。撰文为[浦松丈二](/zh/about/uramatsu)（社会保险劳务士・行政书士・宅地建物取引士）。",
+        "category": "社会保险",
+        "keywords": [
+          "My Number健保卡 一本化 公司手续",
+          "健康保险证 废止 2024年12月2日",
+          "资格确认书 交付 对象",
+          "My Number健保卡 被扶养者",
+          "健康保险法 第51条之3",
+          "资格确认书 有效期限 公司 案内"
+        ],
+        "tags": [
+          "社会保险",
+          "My Number健保卡",
+          "资格确认书",
+          "健康保险",
+          "被扶养者",
+          "社会保险劳务士"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "传统健康保险证现在已不能使用了吗？",
+            "answer": "不能。新发行于2024年（令和6年）12月2日结束，已发行者最长一年（若有效期限先到则以该日为准）的过渡期亦已过。现以My Number健保卡或资格确认书就诊。"
+          },
+          {
+            "question": "未持有My Number健保卡的员工，会无法就医吗？",
+            "answer": "可以就医。未持My Number健保卡的被保险人・被扶养者，由保险者交付资格确认书，于窗口出示即如同以往接受保险诊疗。当分期间内不待申请即以职权交付（健康保险法第51条之3）。"
+          },
+          {
+            "question": "资格确认书是由公司发行吗？",
+            "answer": "不是。交付资格确认书者为保险者（协会健保・健康保险组合等）。公司办理的是资格取得申报・被扶养者异动申报等手续，正确记载个人番号可使对员工的交付更顺畅。"
+          },
+          {
+            "question": "My Number卡应由公司代为申请吗？",
+            "answer": "My Number卡本身的申请，系员工本人向市区町村办理之手续，非由公司代为办理。公司的角色，是正确办理社会保险的资格取得・被扶养者申报，并说明就诊入口已改变。"
+          }
+        ]
+      }
+    }
   }
 ];
