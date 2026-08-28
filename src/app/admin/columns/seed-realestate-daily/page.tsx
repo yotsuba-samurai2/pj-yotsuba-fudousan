@@ -2,8 +2,40 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { upsertColumnBySlug } from "@/lib/admin-api";
+import { upsertColumnBySlug, getAccessToken } from "@/lib/admin-api";
 import { REALESTATE_COLUMNS_DAILY_SEED } from "@/lib/data/realestate-columns-daily-seed";
+
+/**
+ * 投入後に一覧・サイトマップ・各詳細ページを再検証する。
+ *
+ * 単体保存（admin/columns/new・[id]/edit）と seed-souzoku-legal（#302）は
+ * /api/admin/revalidate を呼んでいるが、このページは呼んでいなかった。
+ * 新規slugの404は [locale]/layout.tsx の dynamicParams を外して解消したが、
+ * 既存slugの更新は最大1時間（layout の revalidate=3600）古いままになるため、
+ * 投入した全slugをまとめて投げて即時反映させる。
+ */
+async function revalidateSeeded(slugs: string[]) {
+  try {
+    const token = await getAccessToken();
+    await fetch("/api/admin/revalidate", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        ...(token && { Authorization: `Bearer ${token}` }),
+      },
+      body: JSON.stringify({
+        paths: [
+          "/column",
+          "/sitemap.xml",
+          ...slugs.map((slug) => `/column/${slug}`),
+        ],
+      }),
+    });
+  } catch (err) {
+    console.error("Revalidation failed:", err);
+  }
+}
+
 
 type ItemResult = {
   slug: string;
@@ -37,6 +69,7 @@ export default function SeedRealestateDailyPage() {
 
   const handleRun = async () => {
     setRunning(true);
+    const succeeded: string[] = [];
     for (let i = 0; i < REALESTATE_COLUMNS_DAILY_SEED.length; i++) {
       const article = REALESTATE_COLUMNS_DAILY_SEED[i];
       try {
@@ -45,6 +78,7 @@ export default function SeedRealestateDailyPage() {
           article.slug,
           article,
         );
+        succeeded.push(article.slug);
         setResults((prev) =>
           prev.map((r, idx) =>
             idx === i ? { ...r, status: "done", action } : r,
@@ -57,6 +91,9 @@ export default function SeedRealestateDailyPage() {
           ),
         );
       }
+    }
+    if (succeeded.length > 0) {
+      await revalidateSeeded(succeeded);
     }
     setRunning(false);
   };
