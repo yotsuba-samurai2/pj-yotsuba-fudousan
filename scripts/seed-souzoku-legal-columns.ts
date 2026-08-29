@@ -367,6 +367,19 @@ const REQUIRED_HUB_LINKS: Record<string, string[]> = {
     "/legal/column/souzoku-ninchisho-yukuefumei-miseinen",
     "/legal/column/shigojimu-inin-keiyaku-ohitorisama",
   ],
+  "ippan-kamotsu-unso-kyoka-eigyosho-shako-yoken": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+  ],
+  "yuigon-shikkosha-shokumu-sennin-dare": [
+    "/legal/services/inheritance",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/souzoku",
+    "/legal/column/jihitsu-kosei-yuigon",
+    "/legal/column/souzoku-yuigon-hakken-tetsuzuki",
+  ],
 };
 
 /** 表示コンプライアンス上の禁止語 */
@@ -947,6 +960,39 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "別事業体",
     "独立した事業体",
   ],
+  "ippan-kamotsu-unso-kyoka-eigyosho-shako-yoken": [
+    "貨物自動車運送事業法",
+    "第3条",
+    "第6条",
+    "第5条",
+    "5両",
+    "50センチメートル",
+    "2.5㎡",
+    "標準処理期間",
+    "車両制限令",
+    "運輸支局",
+    "緑ナンバー",
+    "紹介料を受け取りません",
+    "別事業体",
+    "独立した事業体",
+  ],
+  "yuigon-shikkosha-shokumu-sennin-dare": [
+    "遺言執行者",
+    "民法第1006条",
+    "民法第1007条",
+    "民法第1010条",
+    "民法第1012条",
+    "民法第1013条",
+    "民法第1014条",
+    "民法第1016条",
+    "特定財産承継遺言",
+    "検認",
+    "民法第1004条",
+    "家事事件手続法",
+    "紹介料を受け取りません",
+    "別事業体",
+    "独立した事業体",
+  ],
 };
 
 /** 記事ごとに含めてはならない表現 */
@@ -1020,6 +1066,8 @@ const FORBIDDEN_PHRASES: Record<string, string[]> = {
   "shigojimu-inin-keiyaku-ohitorisama": [],
   "nochi-tenyo-4jo-5jo-kyoka-nagare": [],
   "kazoku-shintaku-gyosei-yakuwari-kumisei": [],
+  "ippan-kamotsu-unso-kyoka-eigyosho-shako-yoken": [],
+  "yuigon-shikkosha-shokumu-sennin-dare": [],
 };
 
 /** 本セット外へ張る既存legalコラムslug（リポジトリの他シードで実在確認済み） */
@@ -1676,6 +1724,58 @@ const ARTICLES: Array<{
       "信託法",
       "遺言",
       "任意後見",
+      "行政書士",
+    ],
+  },
+  {
+    file: "33-ippan-kamotsu-unso-kyoka-eigyosho-shako-yoken.md",
+    slug: "ippan-kamotsu-unso-kyoka-eigyosho-shako-yoken",
+    date: "2026-08-29",
+    title:
+      "一般貨物自動車運送事業の許可で、営業所と車庫はどんな要件を満たす？──5両・車庫・前面道路・標準処理期間",
+    category: "許認可の手続き（行政書士の実務から）",
+    excerpt:
+      "トラック運送業（一般貨物自動車運送事業）を始めるには、貨物自動車運送事業法第3条にもとづく許可が必要です。許可の基準（第6条）、事業用自動車の最低5両、営業所・休憩睡眠施設・車庫の位置と広さ（睡眠1人2.5㎡以上、車両相互間・境界50センチメートル以上）、車庫と営業所の距離（原則10km以内）、前面道路の車両制限令適合と幅員証明、市街化調整区域・農地の扱い、標準処理期間（おおむね3〜5か月）を整理し、許可申請は行政書士、物件探しは不動産、労務は社労士、緑ナンバーの登録は運輸支局へ分離受任で振る分担を示しました。",
+    keywords: [
+      "一般貨物自動車運送事業 許可 要件",
+      "運送業 許可 営業所 車庫 要件",
+      "運送業 許可 5両 標準処理期間",
+      "車庫 前面道路 車両制限令 幅員証明",
+      "運送業 営業所 市街化調整区域 農地",
+      "一般貨物 許可 行政書士",
+    ],
+    tags: [
+      "一般貨物自動車運送事業",
+      "運送業許可",
+      "許認可",
+      "営業所",
+      "車庫",
+      "行政書士",
+    ],
+  },
+  {
+    file: "34-yuigon-shikkosha-shokumu-sennin-dare.md",
+    slug: "yuigon-shikkosha-shokumu-sennin-dare",
+    date: "2026-08-29",
+    title:
+      "遺言執行者は誰にする？職務と選任の仕組みをわかりやすく──指定・家裁選任・解任と誰に振るか",
+    category: "相続の手続き（行政書士の実務から）",
+    excerpt:
+      "遺言執行者は遺言の内容を実現する人で、相続財産の管理その他遺言の執行に必要な一切の行為をする権利義務を持ちます（民法第1012条第1項）。遺言での指定（民法第1006条第1項）と家庭裁判所による選任（民法第1010条）、就職後の相続人への通知（民法第1007条第2項）、動かないときの解任・辞任（民法第1019条）、特定財産承継遺言での対抗要件具備や預貯金の払戻し（民法第1014条）、自筆証書遺言の検認（民法第1004条）を整理し、相続登記は司法書士、相続税は税理士、争いは弁護士へ分離受任で振る分担を示しました。",
+    keywords: [
+      "遺言執行者 とは 職務 権限",
+      "遺言執行者 指定 家庭裁判所 選任",
+      "遺言執行者 行政書士 第三者",
+      "遺言執行者 解任 辞任 動かない",
+      "遺言執行者 相続登記 司法書士",
+      "遺言執行者 選任 行政書士",
+    ],
+    tags: [
+      "遺言執行者",
+      "遺言",
+      "相続",
+      "検認",
+      "特定財産承継遺言",
       "行政書士",
     ],
   },

@@ -13031,5 +13031,371 @@ export const LABOR_COLUMNS_SEED: LaborSeedColumn[] = [
         ]
       }
     }
+  },
+  {
+    "business": "labor",
+    "slug": "konenrei-koyo-keizoku-kyufu-shukusho-2025",
+    "title": "高年齢雇用継続給付が2025年に縮小。賃金設計はどう見直すか",
+    "date": "2026-09-01",
+    "category": "雇用保険",
+    "excerpt": "高年齢雇用継続給付は、2025年（令和7年）4月1日から最大の給付率が15%から10%に引き下げられました。対象は2025年4月1日以降に新たに60歳に達する人で、2025年3月31日までに60歳になった人は従来の最大15%が続きます。最大率が適用される賃金低下も60歳到達時賃金の61%以下から64%以下に変わり、在職老齢年金との併給調整で年金が停止される上限も標準報酬月額の最大6%から4%に縮小しました。給付を前提に60歳以降の賃金を低く設計していた事業所が、何をどう見直すべきかを、支給要件・手続とあわせて整理します。",
+    "content": "**結論（先に要点）**：高年齢雇用継続給付は、2025年（令和7年）4月1日から最大の給付率が15%から10%に引き下げられました。対象は2025年4月1日以降に新たに60歳に達する人で、2025年3月31日までに60歳になった人は従来の最大15%が続きます。60歳以降の賃金を給付前提で低く設計していた事業所は、給付が薄くなる分を織り込んで再雇用時の賃金を見直す必要があります。給付率の計算や支給申請は社会保険労務士の業務で、制度の適用可否の最終判断はハローワーク（公共職業安定所）が行います。\n\n「再雇用の人の賃金は、高年齢雇用継続給付が出る前提で決めていた。給付が減ると手取りはどうなるのか」——2025年4月の縮小をきっかけに、60歳以降の賃金設計を見直す相談が増えています。この記事は、60歳以降の再雇用者を抱える中小企業の経営者・人事担当に向けて、何がどう変わったのか、誰から10%になるのか、賃金と手続をどう整えるのかを整理します。\n\n## 高年齢雇用継続給付は2025年から何がどう変わった？\n\n**最大の給付率が15%から10%に引き下げられました。**\n\n高年齢雇用継続給付は、60歳以降も働き続ける人の賃金が60歳到達時点より下がったとき、その各月の賃金に一定率を掛けた額を支給する雇用保険の給付です。雇用保険法第61条の高年齢雇用継続基本給付金と、第61条の2の高年齢再就職給付金の2種類があります。2025年4月1日から、この給付率の上限が引き下げられました。\n\n| 区分 | 改正前（〜2025年3月31日に60歳到達） | 改正後（2025年4月1日以降に60歳到達） |\n|---|---|---|\n| 最大の給付率 | 各月の賃金の15% | 各月の賃金の10% |\n| 最大率が適用される賃金低下 | 60歳到達時賃金の61%以下まで低下 | 60歳到達時賃金の64%以下まで低下 |\n| 逓減する範囲 | 61%超75%未満 | 64%超75%未満 |\n| 支給されない賃金水準 | 60歳到達時賃金の75%以上 | 同左 |\n\nこの引き下げは、雇用保険法等の一部を改正する法律（令和2年法律第14号）で定められたもので、高年齢雇用継続給付は段階的に縮小し、将来的には廃止する方向が示されています。65歳までの雇用確保が高年齢者雇用安定法で義務づけられ定着したことを受けた見直しです。60歳以降の雇用そのものを支える枠組みは、[70歳までの就業機会をどう確保するか](/labor/column/teinen-saikoyo-70sai-shugyo-kakuho)に整理しています。\n\n## 給付率10%はいつ生まれの人から適用される？\n\n**2025年（令和7年）4月1日以降に新たに60歳に達する人からです。**\n\n分岐点は「いつ60歳に達したか」です。2025年3月31日までに60歳に達した人は、その後も従来の最大15%の給付率が続きます。2025年4月1日以降に60歳に達した人から、最大10%が適用されます。\n\n| 60歳に達した時期 | 適用される最大給付率 |\n|---|---|\n| 2025年3月31日まで | 最大15%（従来どおり） |\n| 2025年4月1日以降 | 最大10%（縮小後） |\n\n同じ職場で同じように働いていても、60歳の誕生日の時期で給付率が変わります。再雇用者ごとに「いつ60歳になったか」を確認し、給付前提の賃金設計だった人ほど、手取りへの影響を早めに見ておくことが大切です。\n\n## 縮小で再雇用時の賃金はどう見直せばいい？\n\n**「給付を含めた手取り」で組んでいた条件を、「給付が薄くなった前提」で組み直します。**\n\nこれまで、60歳以降の賃金をあえて低くし、その分を高年齢雇用継続給付で補う形の設計が広く行われてきました。給付率が10%に下がると、この補いが薄くなり、本人の手取りが従来より減る場合があります。見直しの視点は次のとおりです。\n\n| 見直しの視点 | 内容 |\n|---|---|\n| 賃金水準の再設定 | 給付を含めた手取りを維持するなら、基本給・手当そのものの引き上げを検討する |\n| 給付ありきの設計の点検 | 60歳到達時賃金の61%〜64%付近に賃金を置いていた場合、給付率の段差で影響が出やすい |\n| 就業規則・賃金規程の整合 | 再雇用時の賃金の決め方を規程に落とし込み、口頭運用のまま放置しない |\n| 助成金の活用 | 縮小分を賃金改善で補う事業主向けに、高年齢労働者処遇改善促進助成金が用意されている |\n\n賃金を下げると[在職老齢年金](/labor/column/nenkin-jukyuchu-koyo-zaishoku-rorei)や社会保険料にも波及します。給付だけを見て賃金を決めず、年金・社会保険・給付を合わせた手取りで判断することが要点です。\n\n## 在職老齢年金や他の給付との関係はどうなる？\n\n**高年齢雇用継続給付を受けると、老齢厚生年金の一部が支給停止されますが、この停止額も縮小されました。**\n\n特別支給の老齢厚生年金や繰上げ支給の老齢厚生年金を受けながら高年齢雇用継続給付を受ける場合、年金の一部が支給停止される併給調整があります。この支給停止額の上限も、給付率の引き下げに合わせて縮小されました。\n\n| 区分 | 年金の支給停止額の上限 |\n|---|---|\n| 改正前（2025年3月31日までに60歳到達） | 標準報酬月額の最大6% |\n| 改正後（2025年4月1日以降に60歳到達） | 標準報酬月額の最大4% |\n\n給付が減る一方で、年金から差し引かれる額の上限も下がります。手取りは「賃金＋給付－年金の支給停止－社会保険料」で見る必要があり、給付の縮小だけを取り出して損得を判断すると実態を見誤ります。\n\n## 手続と支給申請で気をつける点は？\n\n**支給申請はハローワークへの2か月ごとの手続で、初回は「60歳到達時等賃金証明書」の提出が起点になります。**\n\n高年齢雇用継続給付は、原則として2か月ごとに支給申請を行います。最初に60歳到達時点の賃金を届け出て（60歳到達時等賃金証明書）、その後の各月の賃金がそれと比べて75%未満に下がっているかで支給の可否と額が決まります。実務上の要点は次のとおりです。\n\n1. **60歳到達時賃金を正しく届け出る**：この額が基準になるため、初回の証明書の内容が以降の給付額を左右します。\n2. **申請期限を守る**：2か月ごとの支給対象月の翌々月末が一つの目安です。期限管理を怠ると支給を受けられない月が出ます。\n3. **賃金の変動を反映する**：昇給・降給や手当の増減で75%以上に戻れば不支給になります。賃金台帳と申請内容を一致させます。\n\n支給要件は、60歳以上65歳未満の雇用保険の一般被保険者で、被保険者であった期間が通算5年以上あることです。この確認と支給申請は社会保険労務士の業務です。制度の適用可否や個別の支給決定はハローワークが行います。\n\n## よくある質問\n\n**Q. 給付率はすべての人が10%に下がったのですか？**\nA. いいえ。2025年3月31日までに60歳に達した人は、その後も従来の最大15%の給付率が続きます。最大10%が適用されるのは、2025年4月1日以降に新たに60歳に達した人です。\n\n**Q. 賃金をいくらまで下げると給付が最大になりますか？**\nA. 改正後は、60歳到達時の賃金の64%以下まで下がると最大10%が支給されます。64%超75%未満は逓減し、75%以上では支給されません。改正前はこの分岐が61%でした。\n\n**Q. 年金をもらいながら働くと、給付の分だけ年金が減りますか？**\nA. 特別支給の老齢厚生年金などを受けている場合、高年齢雇用継続給付を受けると年金の一部が支給停止されます。停止額の上限は、改正後は標準報酬月額の最大4%（改正前は6%）です。\n\n**Q. 給付が減った分を補う助成金はありますか？**\nA. 縮小分を賃金の引き上げで補う事業主向けに、高年齢労働者処遇改善促進助成金が用意されています。要件や支給額は制度改正で変わるため、申請前に最新の内容を確認してください。\n\n## この記事の根拠\n\n- **雇用保険法第61条・第61条の2**（高年齢雇用継続基本給付金・高年齢再就職給付金）。60歳以上65歳未満で被保険者期間が通算5年以上ある一般被保険者について、各月の賃金が60歳到達時等の賃金の75%未満に低下した場合に給付を行う仕組みを定めています（e-Gov法令検索、雇用保険法・昭和49年法律第116号、2026年8月29日参照）\n- **給付率の引き下げ**。2025年（令和7年）4月1日以降に新たに60歳に達する人について、最大の給付率が15%から10%に引き下げられました。最大率が適用される賃金低下は、60歳到達時賃金の61%以下から64%以下に変わりました。雇用保険法等の一部を改正する法律（令和2年法律第14号）に基づく段階的縮小です（厚生労働省「高年齢雇用継続給付の支給率変更」に関する案内、2026年8月29日参照）\n- **在職老齢年金との併給調整**。高年齢雇用継続給付を受けると、特別支給の老齢厚生年金などの一部が支給停止されます。停止額の上限は、改正前は標準報酬月額の最大6%、改正後は最大4%です（厚生労働省・日本年金機構の高年齢雇用継続給付と年金の調整に関する案内、2026年8月29日参照）\n- **高年齢者雇用安定法との関係**。65歳までの雇用確保が義務づけられ定着したことが、給付縮小の背景にあります（e-Gov法令検索、高年齢者等の雇用の安定等に関する法律、2026年8月29日参照）\n- 支給要件の該当性や個別の支給決定は、ハローワーク（公共職業安定所）が行います。具体的な申請様式・期限は管轄ハローワークの案内でご確認ください\n\nこの記事は、誰に相談するかまで決めるものではありません。高年齢雇用継続給付の支給申請と賃金設計の見直しは社会保険労務士の業務です。四葉社会保険労務士事務所にご相談いただく場合の費用は[報酬額表](/labor/ryokin)に、よくいただくご質問は[よくあるご質問](/labor/faq)にまとめています。\n\n本記事は一般的な情報提供です。制度の適用や個別の支給の可否は、最新の一次情報（厚生労働省・ハローワーク・日本年金機構など）と個別のご事情に照らし、面談のうえ資格者が行います。執筆は[浦松丈二](/about/uramatsu)（社会保険労務士・行政書士・宅地建物取引士）です。",
+    "status": "published",
+    "author": {
+      "name": "浦松 丈二",
+      "title": "社会保険労務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+    },
+    "keywords": [
+      "高年齢雇用継続給付 2025 縮小",
+      "高年齢雇用継続給付 15% 10% 引き下げ",
+      "高年齢雇用継続給付 対象 いつから 60歳",
+      "高年齢雇用継続給付 賃金 見直し",
+      "高年齢雇用継続給付 在職老齢年金 併給調整",
+      "高年齢雇用継続給付 支給申請 ハローワーク"
+    ],
+    "tags": [
+      "高年齢雇用継続給付",
+      "雇用保険",
+      "再雇用",
+      "賃金設計",
+      "在職老齢年金",
+      "社会保険労務士"
+    ],
+    "locales": [],
+    "faq": [
+      {
+        "question": "給付率はすべての人が10%に下がったのですか？",
+        "answer": "いいえ。2025年3月31日までに60歳に達した人は、その後も従来の最大15%の給付率が続きます。最大10%が適用されるのは、2025年4月1日以降に新たに60歳に達した人です。"
+      },
+      {
+        "question": "賃金をいくらまで下げると給付が最大になりますか？",
+        "answer": "改正後は、60歳到達時の賃金の64%以下まで下がると最大10%が支給されます。64%超75%未満は逓減し、75%以上では支給されません。改正前はこの分岐が61%でした。"
+      },
+      {
+        "question": "年金をもらいながら働くと、給付の分だけ年金が減りますか？",
+        "answer": "特別支給の老齢厚生年金などを受けている場合、高年齢雇用継続給付を受けると年金の一部が支給停止されます。停止額の上限は、改正後は標準報酬月額の最大4%（改正前は6%）です。"
+      },
+      {
+        "question": "給付が減った分を補う助成金はありますか？",
+        "answer": "縮小分を賃金の引き上げで補う事業主向けに、高年齢労働者処遇改善促進助成金が用意されています。要件や支給額は制度改正で変わるため、申請前に最新の内容を確認してください。"
+      }
+    ],
+    "translations": {
+      "en": {
+        "title": "The Older Worker Continued Employment Benefit was reduced in 2025 — how should you review wage design?",
+        "excerpt": "From 1 April 2025, the maximum rate of the Older Worker Continued Employment Benefit was cut from 15% to 10%. It applies to those who newly reach age 60 on or after 1 April 2025; those who reached 60 by 31 March 2025 keep the former maximum of 15%. Workplaces that set post-60 wages low on the assumption of the benefit need to review re-employment wages to absorb the thinner benefit. Calculating the rate and filing claims is the work of a Shakai Hoken Roumushi; the final decision on whether the system applies is made by Hello Work.",
+        "content": "**In short:** From **1 April 2025 (Reiwa 7)**, the maximum rate of the Older Worker Continued Employment Benefit was cut from **15% to 10%**. It applies to those who **newly reach age 60 on or after 1 April 2025**; those who reached 60 by 31 March 2025 keep the former maximum of 15%. Workplaces that set post-60 wages low on the assumption of the benefit need to review re-employment wages to absorb the thinner benefit. Calculating the rate and filing claims is the work of a Shakai Hoken Roumushi; the final decision on whether the system applies is made by Hello Work (the public employment security office).\n\n\"We set the re-employed person's wage assuming the Older Worker Continued Employment Benefit would be paid. If the benefit shrinks, what happens to take-home pay?\" — prompted by the April 2025 reduction, consultations to review post-60 wage design are increasing. This article, for the owners and HR staff of small and medium-sized companies with re-employed workers aged 60 and over, sets out what changed, who is subject to the 10% rate, and how to arrange wages and procedures.\n\n## What changed in the Older Worker Continued Employment Benefit from 2025?\n\n**The maximum benefit rate was cut from 15% to 10%.**\n\nThe Older Worker Continued Employment Benefit is an employment-insurance benefit that pays a set rate on each month's wage when a person aged 60 and over keeps working at a wage lower than at the point they reached 60. There are two kinds: the basic continued-employment benefit under Article 61 of the Employment Insurance Act, and the re-employment benefit under Article 61-2. From 1 April 2025, the upper limit of this rate was lowered.\n\n| Category | Before (reached 60 by 31 March 2025) | After (reached 60 on/after 1 April 2025) |\n|---|---|---|\n| Maximum benefit rate | 15% of each month's wage | 10% of each month's wage |\n| Wage drop for the maximum rate | Down to 61% or less of the age-60 wage | Down to 64% or less of the age-60 wage |\n| Tapering range | Over 61% and under 75% | Over 64% and under 75% |\n| Wage level with no benefit | 75% or more of the age-60 wage | Same |\n\nThis cut was set by the Act Partially Amending the Employment Insurance Act, etc. (Act No. 14 of 2020), which points toward a phased reduction and eventual abolition of the benefit. It is a review reflecting that securing employment up to age 65 has become established and mandatory under the Act on Stabilization of Employment of Elderly Persons. The framework supporting post-60 employment itself is set out in [how to secure work opportunities up to age 70](/en/labor/column/teinen-saikoyo-70sai-shugyo-kakuho).\n\n## From which birth date is the 10% rate applied?\n\n**From those who newly reach age 60 on or after 1 April 2025 (Reiwa 7).**\n\nThe dividing line is \"when you reached 60.\" Those who reached 60 by 31 March 2025 keep the former maximum of 15% thereafter. Those who reach 60 on or after 1 April 2025 have the maximum of 10% applied.\n\n| When age 60 was reached | Maximum benefit rate applied |\n|---|---|\n| By 31 March 2025 | Maximum 15% (as before) |\n| On/after 1 April 2025 | Maximum 10% (after the cut) |\n\nEven for people working the same way in the same workplace, the rate differs by the timing of the 60th birthday. Check \"when each re-employed worker reached 60,\" and the more a wage was designed around the benefit, the earlier you should assess the effect on take-home pay.\n\n## How should re-employment wages be reviewed after the cut?\n\n**Rework conditions that had been built \"including the benefit\" on the assumption that \"the benefit is now thinner.\"**\n\nUntil now, it was common to deliberately set post-60 wages low and make up the rest with the Older Worker Continued Employment Benefit. When the rate falls to 10%, this top-up thins, and the person's take-home pay may fall below before. The points to review are as follows.\n\n| Point to review | Content |\n|---|---|\n| Resetting the wage level | To keep take-home pay including the benefit, consider raising base pay and allowances themselves |\n| Checking benefit-dependent design | If wages were set near 61%–64% of the age-60 wage, the rate step affects them easily |\n| Aligning rules of employment / wage rules | Put how re-employment wages are decided into the rules; do not leave it to verbal practice |\n| Using subsidies | For employers making up the cut with wage improvement, the Subsidy for Promoting Better Treatment of Older Workers is provided |\n\nLowering wages also affects [the pension while working (zaishoku rorei)](/en/labor/column/nenkin-jukyuchu-koyo-zaishoku-rorei) and social-insurance premiums. Do not decide wages by looking only at the benefit; judge by take-home pay combining pension, social insurance, and the benefit.\n\n## How does it relate to the pension while working and other benefits?\n\n**Receiving the Older Worker Continued Employment Benefit causes part of the employees' pension to be suspended, but that suspension was also reduced.**\n\nWhen you receive the benefit while also receiving a specially provided old-age employees' pension or an early-drawn old-age employees' pension, there is a coordination that suspends part of the pension. The upper limit of this suspension was also reduced in line with the rate cut.\n\n| Category | Upper limit of pension suspension |\n|---|---|\n| Before (reached 60 by 31 March 2025) | Up to 6% of the standard monthly remuneration |\n| After (reached 60 on/after 1 April 2025) | Up to 4% of the standard monthly remuneration |\n\nThe benefit falls, but the upper limit of what is deducted from the pension also falls. Take-home pay must be seen as \"wage + benefit − pension suspension − social-insurance premiums\"; judging gain or loss by taking only the benefit cut out of context misreads reality.\n\n## What to watch in procedures and benefit claims?\n\n**Claims are filed with Hello Work every two months, and the first starts from submitting the \"wage certificate at the point of reaching 60.\"**\n\nThe benefit is, in principle, claimed every two months. First, you report the wage at the point of reaching 60 (the wage certificate), and thereafter whether each month's wage has fallen below 75% of it determines whether the benefit is paid and how much. The practical points are as follows.\n\n1. **Report the age-60 wage correctly:** as this amount is the baseline, the content of the first certificate governs later benefit amounts.\n2. **Keep to the claim deadline:** the end of the second month after each target month is one guide. Neglecting deadline management leaves months with no benefit.\n3. **Reflect wage changes:** if a raise or a cut brings the wage back to 75% or more, no benefit is paid. Match the wage ledger with the claim content.\n\nThe eligibility requirement is being a general insured person of employment insurance aged 60 to under 65, with an insured period totaling five years or more. Confirming this and filing the claim is the work of a Shakai Hoken Roumushi. Whether the system applies and individual benefit decisions are made by Hello Work.\n\n## Frequently asked questions\n\n**Q. Did everyone's rate fall to 10%?**\nA. No. Those who reached 60 by 31 March 2025 keep the former maximum of 15% thereafter. The maximum of 10% applies to those who newly reach 60 on or after 1 April 2025.\n\n**Q. How far must I lower the wage for the benefit to be at its maximum?**\nA. After the amendment, the maximum of 10% is paid when the wage falls to 64% or less of the age-60 wage. Over 64% and under 75% tapers, and at 75% or more no benefit is paid. Before the amendment this dividing line was 61%.\n\n**Q. If I work while drawing a pension, is the pension reduced by the benefit amount?**\nA. If you receive a specially provided old-age employees' pension, etc., receiving the benefit suspends part of the pension. The upper limit of the suspension is, after the amendment, up to 4% of the standard monthly remuneration (6% before).\n\n**Q. Is there a subsidy to make up the reduced benefit?**\nA. For employers making up the cut with wage increases, the Subsidy for Promoting Better Treatment of Older Workers is provided. As the requirements and amounts change with reforms, confirm the latest content before applying.\n\n## Sources\n\n- **Employment Insurance Act, Articles 61 and 61-2** (basic continued-employment benefit and re-employment benefit). They provide a benefit for a general insured person aged 60 to under 65 with an insured period totaling five years or more, when each month's wage falls below 75% of the wage at the point of reaching 60 (e-Gov Law Search, Employment Insurance Act, Act No. 116 of 1974; accessed 29 August 2026).\n- **The rate cut.** For those who newly reach 60 on or after 1 April 2025 (Reiwa 7), the maximum rate was cut from 15% to 10%. The wage drop for the maximum rate changed from 61% or less to 64% or less of the age-60 wage. It is a phased reduction under the Act Partially Amending the Employment Insurance Act, etc. (Act No. 14 of 2020) (Ministry of Health, Labour and Welfare guidance on the rate change of the Older Worker Continued Employment Benefit; accessed 29 August 2026).\n- **Coordination with the pension while working.** Receiving the benefit suspends part of a specially provided old-age employees' pension, etc. The upper limit of the suspension is up to 6% of the standard monthly remuneration before and up to 4% after (Ministry of Health, Labour and Welfare and Japan Pension Service guidance on the coordination of the benefit and the pension; accessed 29 August 2026).\n- **Relation to the Act on Stabilization of Employment of Elderly Persons.** The background to the cut is that securing employment up to age 65 has become established and mandatory (e-Gov Law Search, Act on Stabilization of Employment of Elderly Persons; accessed 29 August 2026).\n- Eligibility and individual benefit decisions are made by Hello Work (the public employment security office). Please confirm the specific claim forms and deadlines in the guidance of your governing Hello Work.\n\nThis article does not decide whom to consult. Filing the benefit claim and reviewing wage design are the work of a Shakai Hoken Roumushi. For fees when consulting 四葉社会保険労務士事務所, see [the fee schedule](/en/labor/ryokin); for frequently asked questions, see [the FAQ](/en/labor/faq).\n\nThis article is general information. Whether the system applies and whether a benefit is payable are handled by a qualified professional after a consultation, in light of the latest primary sources (the Ministry of Health, Labour and Welfare, Hello Work, the Japan Pension Service, etc.) and individual circumstances. Written by [Joji Uramatsu](/en/about/uramatsu) (Shakai Hoken Roumushi, Gyoseishoshi, Registered Real Estate Transaction Specialist).",
+        "category": "Employment insurance",
+        "keywords": [
+          "Older Worker Continued Employment Benefit 2025 reduction",
+          "employment benefit rate 15% 10%",
+          "who is subject age 60 2025 April",
+          "re-employment wage review",
+          "pension coordination suspension rate",
+          "benefit claim Hello Work"
+        ],
+        "tags": [
+          "Older worker benefit",
+          "Employment insurance",
+          "Re-employment",
+          "Wage design",
+          "Pension coordination",
+          "Shakai Hoken Roumushi"
+        ],
+        "author": {
+          "name": "Joji Uramatsu",
+          "title": "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所"
+        },
+        "faq": [
+          {
+            "question": "Did everyone's rate fall to 10%?",
+            "answer": "No. Those who reached 60 by 31 March 2025 keep the former maximum of 15% thereafter. The maximum of 10% applies to those who newly reach 60 on or after 1 April 2025."
+          },
+          {
+            "question": "How far must I lower the wage for the benefit to be at its maximum?",
+            "answer": "After the amendment, the maximum of 10% is paid when the wage falls to 64% or less of the age-60 wage. Over 64% and under 75% tapers, and at 75% or more no benefit is paid. Before the amendment this dividing line was 61%."
+          },
+          {
+            "question": "If I work while drawing a pension, is the pension reduced by the benefit amount?",
+            "answer": "If you receive a specially provided old-age employees' pension, etc., receiving the benefit suspends part of the pension. The upper limit of the suspension is, after the amendment, up to 4% of the standard monthly remuneration (6% before)."
+          },
+          {
+            "question": "Is there a subsidy to make up the reduced benefit?",
+            "answer": "For employers making up the cut with wage increases, the Subsidy for Promoting Better Treatment of Older Workers is provided. As the requirements and amounts change with reforms, confirm the latest content before applying."
+          }
+        ]
+      },
+      "zh-tw": {
+        "title": "高年齡雇用繼續給付於2025年縮小，薪資設計該如何重新檢視？",
+        "excerpt": "自2025年（令和7年）4月1日起，高年齡雇用繼續給付的最高給付率由15%調降為10%。適用對象為2025年4月1日以後新滿60歲者；2025年3月31日前已滿60歲者仍維持原本最高15%。原本以給付為前提而將60歲以後薪資壓低的事業所，須將給付變薄的部分納入考量，重新檢視再雇用時的薪資。給付率的計算與支給申請屬社會保險勞務士的業務，制度適用與否的最終判斷由Hello Work（公共職業安定所）為之。",
+        "content": "**先講結論**：自**2025年（令和7年）4月1日**起，高年齡雇用繼續給付的最高給付率由**15%調降為10%**。適用對象為**2025年4月1日以後新滿60歲者**；2025年3月31日前已滿60歲者仍維持原本最高15%。原本以給付為前提而將60歲以後薪資壓低的事業所，須將給付變薄的部分納入考量，重新檢視再雇用時的薪資。給付率的計算與支給申請屬社會保險勞務士的業務，制度適用與否的最終判斷由Hello Work（公共職業安定所）為之。\n\n「再雇用者的薪資，原本是以會領到高年齡雇用繼續給付為前提來決定的。給付減少後，實領會如何？」——以2025年4月的縮小為契機，重新檢視60歲以後薪資設計的諮詢正在增加。本文為僱有60歲以上再雇用者的中小企業經營者・人事負責人，整理改了什麼、從誰開始變10%，以及薪資與手續該如何整備。\n\n## 高年齡雇用繼續給付從2025年起有何改變？\n\n**最高給付率由15%調降為10%。**\n\n高年齡雇用繼續給付，是當60歲以後仍持續工作者的薪資較60歲到達時降低時，就其各月薪資乘以一定比率而支給的雇用保險給付。有雇用保險法第61條的高年齡雇用繼續基本給付金，與第61條之2的高年齡再就職給付金兩種。自2025年4月1日起，此給付率的上限被調降。\n\n| 區分 | 改正前（〜2025年3月31日到達60歲） | 改正後（2025年4月1日以後到達60歲） |\n|---|---|---|\n| 最高給付率 | 各月薪資的15% | 各月薪資的10% |\n| 適用最高率的薪資降幅 | 降至60歲到達時薪資的61%以下 | 降至60歲到達時薪資的64%以下 |\n| 逐減的範圍 | 逾61%未滿75% | 逾64%未滿75% |\n| 不予支給的薪資水準 | 60歲到達時薪資的75%以上 | 同左 |\n\n此調降係由雇用保險法等一部改正之法律（令和2年法律第14號）所定，顯示高年齡雇用繼續給付將階段性縮小，並朝將來廢止之方向。此為反映依高年齡者雇用安定法確保至65歲雇用已成義務並定著後的檢討。支撐60歲以後雇用本身的框架，整理於[如何確保至70歲的就業機會](/zh-tw/labor/column/teinen-saikoyo-70sai-shugyo-kakuho)。\n\n## 給付率10%從幾年幾月出生者開始適用？\n\n**從2025年（令和7年）4月1日以後新滿60歲者開始。**\n\n分歧點在於「何時滿60歲」。2025年3月31日前已滿60歲者，其後仍延續原本最高15%的給付率。2025年4月1日以後滿60歲者，開始適用最高10%。\n\n| 到達60歲的時期 | 適用的最高給付率 |\n|---|---|\n| 2025年3月31日前 | 最高15%（一如以往） |\n| 2025年4月1日以後 | 最高10%（縮小後） |\n\n即使在同一職場以同樣方式工作，也會因60歲生日的時期而給付率不同。請逐一確認各再雇用者「何時滿60歲」，越是以給付為前提設計薪資者，越應及早檢視對實領的影響。\n\n## 縮小後再雇用時的薪資該如何檢視？\n\n**將原本以「含給付的實領」所組成的條件，改以「給付已變薄」為前提重新組合。**\n\n至今為止，將60歲以後薪資刻意壓低、以高年齡雇用繼續給付來填補的設計相當普遍。當給付率降至10%，此填補變薄，本人的實領可能較以往減少。檢視的視角如下。\n\n| 檢視的視角 | 內容 |\n|---|---|\n| 重設薪資水準 | 若要維持含給付的實領，則檢討提高基本薪・津貼本身 |\n| 檢查以給付為前提的設計 | 若將薪資置於60歲到達時薪資的61%〜64%附近，易受給付率的段差影響 |\n| 就業規則・薪資規程的整合 | 將再雇用時薪資的決定方式落實於規程，勿以口頭運用放置 |\n| 活用助成金 | 為以薪資改善填補縮小部分的事業主，備有高年齡勞働者處遇改善促進助成金 |\n\n調降薪資也會波及[在職老齡年金](/zh-tw/labor/column/nenkin-jukyuchu-koyo-zaishoku-rorei)與社會保險費。勿僅看給付即決定薪資，應以合計年金・社會保險・給付後的實領來判斷。\n\n## 與在職老齡年金及其他給付有何關係？\n\n**領取高年齡雇用繼續給付時，老齡厚生年金的一部分會被支給停止，但此停止額亦被縮小。**\n\n在領取特別支給的老齡厚生年金或提前支給的老齡厚生年金的同時領取高年齡雇用繼續給付時，會有停止年金一部分的併給調整。此支給停止額的上限，亦配合給付率的調降而縮小。\n\n| 區分 | 年金支給停止額的上限 |\n|---|---|\n| 改正前（2025年3月31日前到達60歲） | 標準報酬月額的最高6% |\n| 改正後（2025年4月1日以後到達60歲） | 標準報酬月額的最高4% |\n\n給付減少的同時，自年金扣除之額的上限亦下降。實領須以「薪資＋給付－年金支給停止－社會保險費」來看，若僅抽出給付的縮小來判斷損益，將誤讀實情。\n\n## 手續與支給申請該注意什麼？\n\n**支給申請係向Hello Work每兩個月辦理的手續，首次以提出「60歲到達時等薪資證明書」為起點。**\n\n高年齡雇用繼續給付原則上每兩個月辦理支給申請。首先申報60歲到達時點的薪資（60歲到達時等薪資證明書），其後以各月薪資是否較此降至75%未滿，來決定支給與否及金額。實務上的要點如下。\n\n1. **正確申報60歲到達時薪資**：此額為基準，首次證明書的內容左右其後的給付額。\n2. **遵守申請期限**：各支給對象月的次次月月底為一項標準。怠於期限管理，會出現無法領取的月份。\n3. **反映薪資的變動**：因加薪・減薪或津貼增減而回到75%以上時，則不予支給。使薪資帳簿與申請內容一致。\n\n支給要件為60歲以上未滿65歲的雇用保險一般被保險人，且被保險人期間通算5年以上。此確認與支給申請屬社會保險勞務士的業務。制度的適用與否及個別的支給決定由Hello Work為之。\n\n## 常見問題\n\n**Q. 給付率是所有人都降至10%了嗎？**\nA. 不是。2025年3月31日前已滿60歲者，其後仍延續原本最高15%的給付率。適用最高10%者，為2025年4月1日以後新滿60歲者。\n\n**Q. 薪資要降到多少，給付才會達到最高？**\nA. 改正後，降至60歲到達時薪資的64%以下即支給最高10%。逾64%未滿75%逐減，75%以上則不予支給。改正前此分歧為61%。\n\n**Q. 一邊領年金一邊工作，年金會依給付的部分減少嗎？**\nA. 若領有特別支給的老齡厚生年金等，領取高年齡雇用繼續給付時年金的一部分會被支給停止。停止額的上限，改正後為標準報酬月額的最高4%（改正前為6%）。\n\n**Q. 有填補給付減少部分的助成金嗎？**\nA. 為以薪資調升填補縮小部分的事業主，備有高年齡勞働者處遇改善促進助成金。要件與支給額會因制度改正而變動，申請前請確認最新內容。\n\n## 本文依據\n\n- **雇用保險法第61條・第61條之2**（高年齡雇用繼續基本給付金・高年齡再就職給付金）。就60歲以上未滿65歲、被保險人期間通算5年以上的一般被保險人，於各月薪資較60歲到達時等薪資降至75%未滿時給付之機制（e-Gov法令檢索、雇用保險法・昭和49年法律第116號，2026年8月29日參照）\n- **給付率的調降**。就2025年（令和7年）4月1日以後新滿60歲者，最高給付率由15%調降為10%。適用最高率的薪資降幅，由60歲到達時薪資的61%以下改為64%以下。係依雇用保險法等一部改正之法律（令和2年法律第14號）的階段性縮小（厚生勞働省就「高年齡雇用繼續給付支給率變更」之案內，2026年8月29日參照）\n- **與在職老齡年金的併給調整**。領取高年齡雇用繼續給付時，特別支給的老齡厚生年金等的一部分會被支給停止。停止額的上限，改正前為標準報酬月額的最高6%，改正後為最高4%（厚生勞働省・日本年金機構就高年齡雇用繼續給付與年金調整之案內，2026年8月29日參照）\n- **與高年齡者雇用安定法的關係**。確保至65歲雇用已成義務並定著，是給付縮小的背景（e-Gov法令檢索、高年齡者等之雇用安定等相關法律，2026年8月29日參照）\n- 支給要件的該當性及個別的支給決定，由Hello Work（公共職業安定所）為之。具體申請樣式・期限，請以管轄Hello Work的案內確認\n\n本文並不代替您決定該向誰諮詢。高年齡雇用繼續給付的支給申請與薪資設計的檢視，屬社會保險勞務士的業務。向四葉社会保険労務士事務所諮詢時的費用，整理於[報酬額表](/zh-tw/labor/ryokin)；常見問題整理於[常見問答](/zh-tw/labor/faq)。\n\n本文為一般性資訊提供。制度的適用與個別給付之可否，將依最新一手資訊（厚生勞働省・Hello Work・日本年金機構等）與個別情形，於面談後由有資格者為之。撰文為[浦松丈二](/zh-tw/about/uramatsu)（社會保險勞務士・行政書士・宅地建物取引士）。",
+        "category": "雇用保險",
+        "keywords": [
+          "高年齡雇用繼續給付 2025 縮小",
+          "給付率 15% 10%",
+          "適用對象 60歲 2025年4月",
+          "再雇用 薪資 檢視",
+          "在職老齡年金 併給調整",
+          "支給申請 Hello Work"
+        ],
+        "tags": [
+          "高年齡給付",
+          "雇用保險",
+          "再雇用",
+          "薪資設計",
+          "年金併給調整",
+          "社會保險勞務士"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "給付率是所有人都降至10%了嗎？",
+            "answer": "不是。2025年3月31日前已滿60歲者，其後仍延續原本最高15%的給付率。適用最高10%者，為2025年4月1日以後新滿60歲者。"
+          },
+          {
+            "question": "薪資要降到多少，給付才會達到最高？",
+            "answer": "改正後，降至60歲到達時薪資的64%以下即支給最高10%。逾64%未滿75%逐減，75%以上則不予支給。改正前此分歧為61%。"
+          },
+          {
+            "question": "一邊領年金一邊工作，年金會依給付的部分減少嗎？",
+            "answer": "若領有特別支給的老齡厚生年金等，領取高年齡雇用繼續給付時年金的一部分會被支給停止。停止額的上限，改正後為標準報酬月額的最高4%（改正前為6%）。"
+          },
+          {
+            "question": "有填補給付減少部分的助成金嗎？",
+            "answer": "為以薪資調升填補縮小部分的事業主，備有高年齡勞働者處遇改善促進助成金。要件與支給額會因制度改正而變動，申請前請確認最新內容。"
+          }
+        ]
+      },
+      "zh": {
+        "title": "高年龄雇用继续给付于2025年缩小，薪资设计该如何重新检视？",
+        "excerpt": "自2025年（令和7年）4月1日起，高年龄雇用继续给付的最高给付率由15%调降为10%。适用对象为2025年4月1日以后新满60岁者；2025年3月31日前已满60岁者仍维持原本最高15%。原本以给付为前提而将60岁以后薪资压低的事业所，须将给付变薄的部分纳入考量，重新检视再雇用时的薪资。给付率的计算与支给申请属社会保险劳务士的业务，制度适用与否的最终判断由Hello Work（公共职业安定所）为之。",
+        "content": "**先讲结论**：自**2025年（令和7年）4月1日**起，高年龄雇用继续给付的最高给付率由**15%调降为10%**。适用对象为**2025年4月1日以后新满60岁者**；2025年3月31日前已满60岁者仍维持原本最高15%。原本以给付为前提而将60岁以后薪资压低的事业所，须将给付变薄的部分纳入考量，重新检视再雇用时的薪资。给付率的计算与支给申请属社会保险劳务士的业务，制度适用与否的最终判断由Hello Work（公共职业安定所）为之。\n\n「再雇用者的薪资，原本是以会领到高年龄雇用继续给付为前提来决定的。给付减少后，实领会如何？」——以2025年4月的缩小为契机，重新检视60岁以后薪资设计的咨询正在增加。本文为雇有60岁以上再雇用者的中小企业经营者・人事负责人，整理改了什么、从谁开始变10%，以及薪资与手续该如何整备。\n\n## 高年龄雇用继续给付从2025年起有何改变？\n\n**最高给付率由15%调降为10%。**\n\n高年龄雇用继续给付，是当60岁以后仍持续工作者的薪资较60岁到达时降低时，就其各月薪资乘以一定比率而支给的雇用保险给付。有雇用保险法第61条的高年龄雇用继续基本给付金，与第61条之2的高年龄再就职给付金两种。自2025年4月1日起，此给付率的上限被调降。\n\n| 区分 | 改正前（〜2025年3月31日到达60岁） | 改正后（2025年4月1日以后到达60岁） |\n|---|---|---|\n| 最高给付率 | 各月薪资的15% | 各月薪资的10% |\n| 适用最高率的薪资降幅 | 降至60岁到达时薪资的61%以下 | 降至60岁到达时薪资的64%以下 |\n| 逐减的范围 | 逾61%未满75% | 逾64%未满75% |\n| 不予支给的薪资水准 | 60岁到达时薪资的75%以上 | 同左 |\n\n此调降系由雇用保险法等一部改正之法律（令和2年法律第14号）所定，显示高年龄雇用继续给付将阶段性缩小，并朝将来废止之方向。此为反映依高年龄者雇用安定法确保至65岁雇用已成义务并定着后的检讨。支撑60岁以后雇用本身的框架，整理于[如何确保至70岁的就业机会](/zh/labor/column/teinen-saikoyo-70sai-shugyo-kakuho)。\n\n## 给付率10%从几年几月出生者开始适用？\n\n**从2025年（令和7年）4月1日以后新满60岁者开始。**\n\n分歧点在于「何时满60岁」。2025年3月31日前已满60岁者，其后仍延续原本最高15%的给付率。2025年4月1日以后满60岁者，开始适用最高10%。\n\n| 到达60岁的时期 | 适用的最高给付率 |\n|---|---|\n| 2025年3月31日前 | 最高15%（一如以往） |\n| 2025年4月1日以后 | 最高10%（缩小后） |\n\n即使在同一职场以同样方式工作，也会因60岁生日的时期而给付率不同。请逐一确认各再雇用者「何时满60岁」，越是以给付为前提设计薪资者，越应及早检视对实领的影响。\n\n## 缩小后再雇用时的薪资该如何检视？\n\n**将原本以「含给付的实领」所组成的条件，改以「给付已变薄」为前提重新组合。**\n\n至今为止，将60岁以后薪资刻意压低、以高年龄雇用继续给付来填补的设计相当普遍。当给付率降至10%，此填补变薄，本人的实领可能较以往减少。检视的视角如下。\n\n| 检视的视角 | 内容 |\n|---|---|\n| 重设薪资水准 | 若要维持含给付的实领，则检讨提高基本薪・津贴本身 |\n| 检查以给付为前提的设计 | 若将薪资置于60岁到达时薪资的61%〜64%附近，易受给付率的段差影响 |\n| 就业规则・薪资规程的整合 | 将再雇用时薪资的决定方式落实于规程，勿以口头运用放置 |\n| 活用助成金 | 为以薪资改善填补缩小部分的事业主，备有高年龄劳働者处遇改善促进助成金 |\n\n调降薪资也会波及[在职老龄年金](/zh/labor/column/nenkin-jukyuchu-koyo-zaishoku-rorei)与社会保险费。勿仅看给付即决定薪资，应以合计年金・社会保险・给付后的实领来判断。\n\n## 与在职老龄年金及其他给付有何关系？\n\n**领取高年龄雇用继续给付时，老龄厚生年金的一部分会被支给停止，但此停止额亦被缩小。**\n\n在领取特别支给的老龄厚生年金或提前支给的老龄厚生年金的同时领取高年龄雇用继续给付时，会有停止年金一部分的并给调整。此支给停止额的上限，亦配合给付率的调降而缩小。\n\n| 区分 | 年金支给停止额的上限 |\n|---|---|\n| 改正前（2025年3月31日前到达60岁） | 标准报酬月额的最高6% |\n| 改正后（2025年4月1日以后到达60岁） | 标准报酬月额的最高4% |\n\n给付减少的同时，自年金扣除之额的上限亦下降。实领须以「薪资＋给付－年金支给停止－社会保险费」来看，若仅抽出给付的缩小来判断损益，将误读实情。\n\n## 手续与支给申请该注意什么？\n\n**支给申请系向Hello Work每两个月办理的手续，首次以提出「60岁到达时等薪资证明书」为起点。**\n\n高年龄雇用继续给付原则上每两个月办理支给申请。首先申报60岁到达时点的薪资（60岁到达时等薪资证明书），其后以各月薪资是否较此降至75%未满，来决定支给与否及金额。实务上的要点如下。\n\n1. **正确申报60岁到达时薪资**：此额为基准，首次证明书的内容左右其后的给付额。\n2. **遵守申请期限**：各支给对象月的次次月月底为一项标准。怠于期限管理，会出现无法领取的月份。\n3. **反映薪资的变动**：因加薪・减薪或津贴增减而回到75%以上时，则不予支给。使薪资帐簿与申请内容一致。\n\n支给要件为60岁以上未满65岁的雇用保险一般被保险人，且被保险人期间通算5年以上。此确认与支给申请属社会保险劳务士的业务。制度的适用与否及个别的支给决定由Hello Work为之。\n\n## 常见问题\n\n**Q. 给付率是所有人都降至10%了吗？**\nA. 不是。2025年3月31日前已满60岁者，其后仍延续原本最高15%的给付率。适用最高10%者，为2025年4月1日以后新满60岁者。\n\n**Q. 薪资要降到多少，给付才会达到最高？**\nA. 改正后，降至60岁到达时薪资的64%以下即支给最高10%。逾64%未满75%逐减，75%以上则不予支给。改正前此分歧为61%。\n\n**Q. 一边领年金一边工作，年金会依给付的部分减少吗？**\nA. 若领有特别支给的老龄厚生年金等，领取高年龄雇用继续给付时年金的一部分会被支给停止。停止额的上限，改正后为标准报酬月额的最高4%（改正前为6%）。\n\n**Q. 有填补给付减少部分的助成金吗？**\nA. 为以薪资调升填补缩小部分的事业主，备有高年龄劳働者处遇改善促进助成金。要件与支给额会因制度改正而变动，申请前请确认最新内容。\n\n## 本文依据\n\n- **雇用保险法第61条・第61条之2**（高年龄雇用继续基本给付金・高年龄再就职给付金）。就60岁以上未满65岁、被保险人期间通算5年以上的一般被保险人，于各月薪资较60岁到达时等薪资降至75%未满时给付之机制（e-Gov法令检索、雇用保险法・昭和49年法律第116号，2026年8月29日参照）\n- **给付率的调降**。就2025年（令和7年）4月1日以后新满60岁者，最高给付率由15%调降为10%。适用最高率的薪资降幅，由60岁到达时薪资的61%以下改为64%以下。系依雇用保险法等一部改正之法律（令和2年法律第14号）的阶段性缩小（厚生劳働省就「高年龄雇用继续给付支给率变更」之案内，2026年8月29日参照）\n- **与在职老龄年金的并给调整**。领取高年龄雇用继续给付时，特别支给的老龄厚生年金等的一部分会被支给停止。停止额的上限，改正前为标准报酬月额的最高6%，改正后为最高4%（厚生劳働省・日本年金机构就高年龄雇用继续给付与年金调整之案内，2026年8月29日参照）\n- **与高年龄者雇用安定法的关系**。确保至65岁雇用已成义务并定着，是给付缩小的背景（e-Gov法令检索、高年龄者等之雇用安定等相关法律，2026年8月29日参照）\n- 支给要件的该当性及个别的支给决定，由Hello Work（公共职业安定所）为之。具体申请样式・期限，请以管辖Hello Work的案内确认\n\n本文并不代替您决定该向谁咨询。高年龄雇用继续给付的支给申请与薪资设计的检视，属社会保险劳务士的业务。向四葉社会保険労務士事務所咨询时的费用，整理于[报酬额表](/zh/labor/ryokin)；常见问题整理于[常见问答](/zh/labor/faq)。\n\n本文为一般性资讯提供。制度的适用与个别给付之可否，将依最新一手资讯（厚生劳働省・Hello Work・日本年金机构等）与个别情形，于面谈后由有资格者为之。撰文为[浦松丈二](/zh/about/uramatsu)（社会保险劳务士・行政书士・宅地建物取引士）。",
+        "category": "雇用保险",
+        "keywords": [
+          "高年龄雇用继续给付 2025 缩小",
+          "给付率 15% 10%",
+          "适用对象 60岁 2025年4月",
+          "再雇用 薪资 检视",
+          "在职老龄年金 并给调整",
+          "支给申请 Hello Work"
+        ],
+        "tags": [
+          "高年龄给付",
+          "雇用保险",
+          "再雇用",
+          "薪资设计",
+          "年金并给调整",
+          "社会保险劳务士"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "给付率是所有人都降至10%了吗？",
+            "answer": "不是。2025年3月31日前已满60岁者，其后仍延续原本最高15%的给付率。适用最高10%者，为2025年4月1日以后新满60岁者。"
+          },
+          {
+            "question": "薪资要降到多少，给付才会达到最高？",
+            "answer": "改正后，降至60岁到达时薪资的64%以下即支给最高10%。逾64%未满75%逐减，75%以上则不予支给。改正前此分歧为61%。"
+          },
+          {
+            "question": "一边领年金一边工作，年金会依给付的部分减少吗？",
+            "answer": "若领有特别支给的老龄厚生年金等，领取高年龄雇用继续给付时年金的一部分会被支给停止。停止额的上限，改正后为标准报酬月额的最高4%（改正前为6%）。"
+          },
+          {
+            "question": "有填补给付减少部分的助成金吗？",
+            "answer": "为以薪资调升填补缩小部分的事业主，备有高年龄劳働者处遇改善促进助成金。要件与支给额会因制度改正而变动，申请前请确认最新内容。"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "business": "labor",
+    "slug": "kaigo-tokutei-ginou-gaikokujin-roumu-shakaihoken",
+    "title": "介護で特定技能「介護」の外国人を雇う。労務と社会保険の要点",
+    "date": "2026-09-01",
+    "category": "外国人雇用",
+    "excerpt": "特定技能1号「介護」の外国人は、介護技能評価試験と介護日本語評価試験に合格して入国するため、原則として就労開始と同時に介護保険の人員配置基準に算入できます（技能実習・EPA候補者は原則6か月経過後）。労働条件は日本人が従事する場合と同等額以上でなければならず、社会保険は国籍を問わず要件を満たせば強制適用です。帰国時の脱退一時金と社会保障協定の通算の選び方、登録支援機関の支援と事業所の労務の分担、在留・指定・労務を誰に振るかを整理します。在留資格の申請や支援計画は行政書士、労務・社会保険は社会保険労務士の業務です。",
+    "content": "**結論（先に要点）**：特定技能1号「介護」の外国人は、介護技能評価試験と介護日本語評価試験に合格して入国するため、原則として就労開始と同時に介護保険の人員配置基準に算入できます（技能実習・EPA候補者は原則6か月経過後）。労働条件は日本人が従事する場合と同等額以上でなければならず、社会保険は国籍を問わず要件を満たせば強制適用です。在留資格の申請や支援計画は行政書士、労務管理・社会保険・脱退一時金は社会保険労務士の業務で、在留可否や指定基準の適否の判断は行政書士・自治体に留保されます。\n\n「特定技能『介護』の職員を採ったが、いつから人員基準に数えられるのか。給料は日本人と同じにしないといけないのか」——受け入れが広がるにつれ、こうした労務・社会保険の確認が増えています。この記事は、特定技能「介護」の外国人職員を受け入れる介護・障害福祉サービス事業所の管理者に向けて、人員算入の時期、労働条件、社会保険と脱退一時金、支援と労務の分担を整理します。\n\n## 特定技能「介護」の職員はいつから人員基準に算入できる？\n\n**原則として、就労開始と同時に算入できます。**\n\n介護保険の人員配置基準に外国人職員をいつから数えられるかは、在留資格や日本語能力で異なります。特定技能1号「介護」は、入国前に介護技能評価試験と介護日本語評価試験（または相当する試験）に合格していることが前提のため、就労開始と同時に配置基準に算入できる扱いです。一方、技能実習やEPA介護福祉士候補者は原則として就労開始から6か月を経過した後に算入され、日本語能力試験N2以上を持つ人は就労開始から算入できます。\n\n| 在留資格・区分 | 人員配置基準への算入の時期 |\n|---|---|\n| 特定技能1号「介護」 | 原則、就労開始から算入可能 |\n| 技能実習「介護」 | 原則、就労開始から6か月経過後（N2以上は開始から） |\n| EPA介護福祉士候補者 | 原則、就労開始から6か月経過後（N2以上は開始から） |\n\nただし算入できることと、いきなり単独で夜勤に就けることは別です。ケアの安全と定着のため、当初は日本人職員とチームで対応する体制を整えることが求められます。事業所の人員基準そのものの考え方は、障害福祉の[就労支援A型・B型の人員基準と労務](/labor/column/shuro-shien-ab-jinin-kijun-roumu)にも通じます。\n\n## 労働条件は日本人と同等以上でなければならない？\n\n**はい。報酬額が日本人と同等額以上であることが、受け入れの要件です。**\n\n特定技能の受け入れでは、外国人と結ぶ特定技能雇用契約が適切であることが受入れ機関（特定技能所属機関）の基準とされ、その中に「報酬額が、日本人が従事する場合の報酬の額と同等額以上であること」が含まれます。これは出入国管理及び難民認定法とその基準を定める省令に根拠があります。もちろん、労働基準法・最低賃金法・労働安全衛生法などの労働法令も、日本人と同じく当然に適用されます。\n\n| 項目 | 内容 |\n|---|---|\n| 報酬額 | 日本人が従事する場合と同等額以上（入管法・基準省令） |\n| 雇用形態 | フルタイムの直接雇用が原則 |\n| 労働条件明示 | 労働基準法に基づき書面等で明示。本人が理解できる方法での説明が望ましい |\n| 適用される法令 | 労働基準法・最低賃金法・労働安全衛生法など日本人と同一 |\n\n「外国人だから安く雇える」という設計は要件に反します。募集・採用の段階から、同じ職務の日本人職員との賃金の整合を確認しておくことが要点です。外国人雇用の入口の整理は[外国人を雇うとき、窓口をどう分けるか](/labor/column/gaikokujin-koyo-madoguchi-wakekata)にまとめています。\n\n## 社会保険と社会保障協定、脱退一時金はどう扱う？\n\n**社会保険は国籍を問わず強制適用で、帰国時には脱退一時金か社会保障協定の通算かを選ぶことになります。**\n\n健康保険・厚生年金保険は、国籍にかかわらず適用要件を満たせば加入します。外国人だからといって除外されることはありません。帰国する場合の年金の扱いには、次の2つの経路があります。\n\n| 経路 | 内容 | 注意点 |\n|---|---|---|\n| 脱退一時金 | 帰国後、厚生年金保険法附則第29条に基づき一時金を請求する | 日本に住所を有しなくなった日から2年以内に請求。受けた期間は年金加入期間に算入されない |\n| 社会保障協定による通算 | 母国と日本の年金加入期間を通算し、将来の年金につなげる | 母国と社会保障協定が発効している場合に限る。介護の主要送出国では未締結・未発効の国も多い |\n\n脱退一時金を受けると、その期間は日本の年金加入期間に算入されなくなります。将来また日本で働く可能性や、母国との社会保障協定の有無を踏まえて選ぶ必要があり、本人が誤解しやすい部分です。帰国時の年金の精算は[帰国する外国人社員の年金精算](/labor/column/gaikokujin-shain-kikoku-nenkin-seisan)に、協定による二重加入の回避は[海外駐在と社会保障協定](/labor/column/chugoku-chuzai-shakaihosho-kyotei-nijukanyu)にまとめています。協定の有無は国ごとに違うため、日本年金機構の協定発効状況の一覧で確認します。\n\n## 登録支援機関の支援と事業所の労務はどう分担する？\n\n**在留に関わる支援は登録支援機関、雇用としての労務管理は事業所が担い、専門家への振り分けが分かれます。**\n\n特定技能1号の外国人には、生活・就労に関する支援計画の実施が義務づけられ、これを登録支援機関に委託することができます。一方、労働時間の管理・給与計算・社会保険の手続といった雇用としての労務管理は、事業所（受入れ機関）が使用者として担います。両者は別の役割です。\n\n| 役割 | 主に担う主体 | 専門家の関与 |\n|---|---|---|\n| 在留資格の申請・支援計画 | 登録支援機関・事業所 | 行政書士 |\n| 事業所の指定・人員基準の申請 | 事業所 | 行政書士 |\n| 労働時間・給与計算・社会保険 | 事業所 | 社会保険労務士 |\n| 脱退一時金・帰国時の年金 | 本人・事業所 | 社会保険労務士 |\n\n支援計画の作成・在留資格の申請と、日々の労務管理は、担当する専門家が分かれます。窓口を分けずに一体で進めようとすると、どちらの業務も中途半端になりがちです。\n\n## 在留・指定・労務は誰に振ればいい？\n\n**在留資格・支援計画・指定は行政書士、労務・社会保険・脱退一時金は社会保険労務士に振ります。**\n\n業務の境目を整理すると、次のようになります。\n\n1. **在留資格の申請・支援計画・事業所の指定** → 行政書士の業務です。在留可否の判断や指定基準の適否は、最終的に出入国在留管理庁・自治体が判断します。\n2. **労働条件の設計・給与計算・社会保険・脱退一時金** → 社会保険労務士の業務です。\n3. **人員配置基準への算入の可否そのもの** → 指定権者（自治体）が判断します。事業所は、算入時期の考え方を押さえたうえで、算入を前提にしすぎない人員体制を組みます。\n\n四葉社会保険労務士事務所と四葉行政書士事務所は独立した事業体であり、労務は社会保険労務士事務所、在留資格や支援計画・指定は行政書士事務所と、別々にご契約いただきます。ひとつの契約でまとめて受けることはできません。それぞれの独占業務が法律で分かれているためです。\n\n## よくある質問\n\n**Q. 特定技能「介護」の職員は、入職してすぐ人員基準に数えられますか？**\nA. 原則として、就労開始と同時に算入できます。特定技能1号は介護技能評価試験と介護日本語評価試験に合格して入国するためです。技能実習やEPA候補者は原則6か月経過後で、日本語能力試験N2以上を持つ人は開始から算入できます。\n\n**Q. 給料は日本人より安く設定してもいいですか？**\nA. できません。特定技能雇用契約の基準として、報酬額が日本人が従事する場合と同等額以上であることが求められます（入管法・基準省令）。最低賃金法や労働基準法も日本人と同じく適用されます。\n\n**Q. 外国人職員も厚生年金に入りますか。帰国したら掛け捨てですか？**\nA. 国籍を問わず要件を満たせば加入します。帰国する場合は、厚生年金保険法附則第29条の脱退一時金を日本を離れてから2年以内に請求するか、母国との社会保障協定が発効していれば加入期間を通算する選択があります。\n\n**Q. 在留資格の申請と労務管理は同じ人に頼めますか？**\nA. いいえ。在留資格の申請や支援計画は行政書士、労務管理・社会保険は社会保険労務士と、それぞれの独占業務で担当が分かれます。四葉では独立した事業体として別々にご契約いただきます。\n\n## この記事の根拠\n\n- **特定技能の在留資格と運用要領**。特定技能「介護」は、出入国管理及び難民認定法の在留資格「特定技能1号」の分野の一つで、介護技能評価試験・介護日本語評価試験などの合格が入国の要件とされています（出入国在留管理庁「特定技能制度」・厚生労働省「介護分野における特定技能外国人の受入れについて」、2026年8月29日参照）\n- **人員配置基準への算入**。特定技能1号「介護」は原則として就労開始から人員配置基準に算入でき、技能実習・EPA介護福祉士候補者は原則6か月経過後（日本語能力試験N2以上は開始から）とされています（厚生労働省「外国人介護人材に係る人員配置基準上の取扱いについて」、2026年8月29日参照）\n- **報酬の同等要件**。特定技能雇用契約は、報酬額が日本人が従事する場合の報酬の額と同等額以上であることが受入れ機関の基準に含まれます（出入国在留管理庁「特定技能制度の概要」、および出入国管理及び難民認定法・基準省令、2026年8月29日参照）\n- **脱退一時金**。国籍が日本になく、公的年金の被保険者でなく、厚生年金の加入が6か月以上あり、老齢年金の受給資格期間（10年）を満たさない人は、日本に住所を有しなくなった日から2年以内に脱退一時金を請求できます。受けた期間は年金加入期間に算入されません（e-Gov法令検索、厚生年金保険法附則第29条・昭和29年法律第115号、および日本年金機構の脱退一時金の案内、2026年8月29日参照）\n- **社会保障協定**。母国と日本の社会保障協定が発効している場合、年金加入期間の通算や二重加入の回避ができます。協定の有無は国により異なります（日本年金機構「社会保障協定」の一覧、2026年8月29日参照）\n- 在留可否や指定基準の適否の最終判断は、出入国在留管理庁・自治体が行います。個別の要件は最新の運用要領・自治体の案内でご確認ください\n\nこの記事は、誰に相談するかまで決めるものではありません。労務管理・社会保険・脱退一時金は社会保険労務士の業務です。在留資格の申請や支援計画・事業所の指定は行政書士の業務で、四葉社会保険労務士事務所と四葉行政書士事務所は独立した事業体として別々にご契約いただきます。四葉社会保険労務士事務所にご相談いただく場合の費用は[報酬額表](/labor/ryokin)に、よくいただくご質問は[よくあるご質問](/labor/faq)にまとめています。\n\n本記事は一般的な情報提供です。制度の適用や個別の手続は、最新の一次情報（出入国在留管理庁・厚生労働省・日本年金機構など）と個別のご事情に照らし、面談のうえ資格者が行います。執筆は[浦松丈二](/about/uramatsu)（社会保険労務士・行政書士・宅地建物取引士）です。",
+    "status": "published",
+    "author": {
+      "name": "浦松 丈二",
+      "title": "社会保険労務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+    },
+    "keywords": [
+      "特定技能 介護 人員配置基準 算入",
+      "特定技能 介護 労務 社会保険",
+      "特定技能 介護 就労開始 算入 6か月",
+      "特定技能 報酬 日本人 同等以上",
+      "特定技能 介護 脱退一時金 社会保障協定",
+      "特定技能 介護 登録支援機関 労務 分担"
+    ],
+    "tags": [
+      "特定技能",
+      "介護",
+      "外国人雇用",
+      "社会保険",
+      "脱退一時金",
+      "社会保険労務士"
+    ],
+    "locales": [],
+    "faq": [
+      {
+        "question": "特定技能「介護」の職員は、入職してすぐ人員基準に数えられますか？",
+        "answer": "原則として、就労開始と同時に算入できます。特定技能1号は介護技能評価試験と介護日本語評価試験に合格して入国するためです。技能実習やEPA候補者は原則6か月経過後で、日本語能力試験N2以上を持つ人は開始から算入できます。"
+      },
+      {
+        "question": "給料は日本人より安く設定してもいいですか？",
+        "answer": "できません。特定技能雇用契約の基準として、報酬額が日本人が従事する場合と同等額以上であることが求められます（入管法・基準省令）。最低賃金法や労働基準法も日本人と同じく適用されます。"
+      },
+      {
+        "question": "外国人職員も厚生年金に入りますか。帰国したら掛け捨てですか？",
+        "answer": "国籍を問わず要件を満たせば加入します。帰国する場合は、厚生年金保険法附則第29条の脱退一時金を日本を離れてから2年以内に請求するか、母国との社会保障協定が発効していれば加入期間を通算する選択があります。"
+      },
+      {
+        "question": "在留資格の申請と労務管理は同じ人に頼めますか？",
+        "answer": "いいえ。在留資格の申請や支援計画は行政書士、労務管理・社会保険は社会保険労務士と、それぞれの独占業務で担当が分かれます。四葉では独立した事業体として別々にご契約いただきます。"
+      }
+    ],
+    "translations": {
+      "en": {
+        "title": "Hiring a Specified Skilled Worker (Care) foreign national in care and disability welfare — the key points of labor and social insurance",
+        "excerpt": "A Specified Skilled Worker (i) \"Care\" foreign national enters after passing the Care Skills Evaluation Test and the Care Japanese Evaluation Test, so in principle they can be counted in the care-insurance staffing standard from the start of employment (technical intern trainees and EPA candidates in principle after six months). Working conditions must be equal to or better than for a Japanese person, and social insurance applies compulsorily regardless of nationality when the requirements are met. The residence-status application and support plan are the work of a Gyoseishoshi; labor management, social insurance, and the lump-sum withdrawal payment are the work of a Shakai Hoken Roumushi.",
+        "content": "**In short:** A Specified Skilled Worker (i) \"Care\" foreign national enters after passing the Care Skills Evaluation Test and the Care Japanese Evaluation Test, so in principle they **can be counted in the care-insurance staffing standard from the start of employment** (technical intern trainees and EPA candidates in principle after six months). Working conditions must be **equal to or better than for a Japanese person**, and social insurance applies compulsorily regardless of nationality when the requirements are met. The residence-status application and support plan are the work of a Gyoseishoshi; labor management, social insurance, and the lump-sum withdrawal payment are the work of a Shakai Hoken Roumushi; and the decisions on residence eligibility and on conformity with designation standards are reserved to the Gyoseishoshi and the local government.\n\n\"We hired a Specified Skilled Worker (Care) staff member, but from when can we count them in the staffing standard? Do we have to pay the same as a Japanese person?\" — as acceptance spreads, such labor and social-insurance questions increase. This article, for the managers of care and disability-welfare service offices accepting Specified Skilled Worker (Care) staff, sets out the timing of staffing inclusion, working conditions, social insurance and the lump-sum withdrawal payment, and the division of support and labor.\n\n## From when can a Specified Skilled Worker (Care) staff member be counted in the staffing standard?\n\n**In principle, from the start of employment.**\n\nWhen you can count a foreign staff member in the care-insurance staffing standard differs by residence status and Japanese ability. Because a Specified Skilled Worker (i) \"Care\" must have passed the Care Skills Evaluation Test and the Care Japanese Evaluation Test (or an equivalent test) before entry, they can be counted in the staffing standard from the start of employment. In contrast, technical intern trainees and EPA care-worker candidates are, in principle, counted after six months from the start of employment, and those holding the Japanese-Language Proficiency Test N2 or above can be counted from the start.\n\n| Residence status / category | Timing of inclusion in the staffing standard |\n|---|---|\n| Specified Skilled Worker (i) \"Care\" | In principle, from the start of employment |\n| Technical intern \"Care\" | In principle, after six months (N2 or above from the start) |\n| EPA care-worker candidate | In principle, after six months (N2 or above from the start) |\n\nHowever, being countable and being able to work a night shift alone from the outset are different. For care safety and settling in, at first you should set up a structure of working in a team with Japanese staff. The very idea of an office's staffing standard also connects to [the staffing standard and labor of employment support type A and B](/en/labor/column/shuro-shien-ab-jinin-kijun-roumu) in disability welfare.\n\n## Must working conditions be equal to or better than for a Japanese person?\n\n**Yes. That the remuneration is equal to or above that for a Japanese person is a requirement of acceptance.**\n\nIn accepting a Specified Skilled Worker, that the specified-skilled-worker employment contract with the foreign national is appropriate is a standard for the accepting organization (the specified-skilled-worker affiliating organization), and it includes that \"the remuneration is equal to or above the amount for a Japanese person doing the work.\" This is grounded in the Immigration Control and Refugee Recognition Act and the ministerial ordinance setting its standards. Of course, labor laws such as the Labor Standards Act, the Minimum Wage Act, and the Industrial Safety and Health Act apply just as for Japanese people.\n\n| Item | Content |\n|---|---|\n| Remuneration | Equal to or above that for a Japanese person doing the work (Immigration Act, standards ordinance) |\n| Employment type | Full-time direct employment as a principle |\n| Disclosure of conditions | Disclosed in writing, etc. under the Labor Standards Act; explanation in a way the person can understand is desirable |\n| Applicable laws | Labor Standards Act, Minimum Wage Act, Industrial Safety and Health Act, etc., same as for Japanese people |\n\nA design of \"hiring cheaply because they are foreign\" breaches the requirement. From the recruitment and hiring stage, confirm alignment with the wages of Japanese staff in the same job. Organizing the entrance to foreign employment is set out in [how to divide the counters when hiring foreign nationals](/en/labor/column/gaikokujin-koyo-madoguchi-wakekata).\n\n## How are social insurance, social security agreements, and the lump-sum withdrawal payment handled?\n\n**Social insurance applies compulsorily regardless of nationality, and on return home the person chooses between the lump-sum withdrawal payment and totalizing under a social security agreement.**\n\nHealth insurance and employees' pension insurance apply, regardless of nationality, when the coverage requirements are met. Being foreign is not a ground for exclusion. There are two routes for the pension when returning home.\n\n| Route | Content | Note |\n|---|---|---|\n| Lump-sum withdrawal payment | After return, claim a lump sum under Article 29 of the Supplementary Provisions of the Employees' Pension Insurance Act | Claim within two years from the day of ceasing to have an address in Japan. The covered period is not counted as a pension period |\n| Totalizing under a social security agreement | Totalize the Japanese and home-country pension periods, connecting to a future pension | Only where a social security agreement with the home country is in force. Many major care-sending countries have none in force |\n\nIf the lump-sum withdrawal payment is received, that period is no longer counted as a Japanese pension period. The choice must weigh the chance of working in Japan again and whether there is a social security agreement with the home country, and it is a part the person easily misunderstands. Settling the pension on return is set out in [settling the pension of a returning foreign employee](/en/labor/column/gaikokujin-shain-kikoku-nenkin-seisan), and avoiding double coverage through an agreement in [overseas assignment and the social security agreement](/en/labor/column/chugoku-chuzai-shakaihosho-kyotei-nijukanyu). As the presence of an agreement differs by country, confirm it in the Japan Pension Service list of agreements in force.\n\n## How do the registered support organization's support and the office's labor divide?\n\n**Support relating to residence is borne by the registered support organization, and labor management as employment is borne by the office, and the referral to professionals divides accordingly.**\n\nA Specified Skilled Worker (i) foreign national must have a support plan for daily life and work carried out, and this can be entrusted to a registered support organization. On the other hand, labor management as employment — managing working hours, payroll, and social-insurance procedures — is borne by the office (the accepting organization) as the employer. The two are different roles.\n\n| Role | Mainly borne by | Professional involved |\n|---|---|---|\n| Residence-status application / support plan | Registered support organization / office | Gyoseishoshi |\n| Office designation / staffing standard application | Office | Gyoseishoshi |\n| Working hours / payroll / social insurance | Office | Shakai Hoken Roumushi |\n| Lump-sum withdrawal payment / pension on return | Person / office | Shakai Hoken Roumushi |\n\nDrafting the support plan and applying for the residence status, and day-to-day labor management, are handled by different professionals. Trying to run them as one without dividing the counter tends to leave both jobs half-done.\n\n## Residence, designation, labor — to whom should they be referred?\n\n**Refer residence status, support plan, and designation to a Gyoseishoshi, and labor, social insurance, and the lump-sum withdrawal payment to a Shakai Hoken Roumushi.**\n\nOrganizing the boundaries of the work gives the following.\n\n1. **Residence-status application / support plan / office designation** → the work of a Gyoseishoshi. The decision on residence eligibility and on conformity with designation standards is ultimately made by the Immigration Services Agency and the local government.\n2. **Working-condition design / payroll / social insurance / lump-sum withdrawal payment** → the work of a Shakai Hoken Roumushi.\n3. **Whether a person can be counted in the staffing standard itself** → decided by the designating authority (the local government). The office grasps the idea of the inclusion timing and builds a staffing structure that does not over-rely on inclusion.\n\n四葉社会保険労務士事務所 and 四葉行政書士事務所 are independent business entities, and labor is contracted with the Shakai Hoken Roumushi office and residence status, support plan, and designation with the Gyoseishoshi office, separately. They cannot be taken on together in one contract. This is because their exclusive services are divided by law.\n\n## Frequently asked questions\n\n**Q. Can a Specified Skilled Worker (Care) staff member be counted in the staffing standard right after joining?**\nA. In principle, from the start of employment. This is because a Specified Skilled Worker (i) enters after passing the Care Skills Evaluation Test and the Care Japanese Evaluation Test. Technical intern trainees and EPA candidates are in principle after six months, and those holding the JLPT N2 or above can be counted from the start.\n\n**Q. May I set the pay lower than for a Japanese person?**\nA. You may not. As a standard of the specified-skilled-worker employment contract, the remuneration must be equal to or above that for a Japanese person doing the work (Immigration Act, standards ordinance). The Minimum Wage Act and the Labor Standards Act also apply the same as for Japanese people.\n\n**Q. Do foreign staff join the employees' pension? Is it thrown away if they return home?**\nA. They join, regardless of nationality, when the requirements are met. On returning home, they may claim the lump-sum withdrawal payment under Article 29 of the Supplementary Provisions of the Employees' Pension Insurance Act within two years of leaving Japan, or, if a social security agreement with the home country is in force, totalize the covered period.\n\n**Q. Can the residence-status application and labor management be asked of the same person?**\nA. No. The residence-status application and support plan are for a Gyoseishoshi, and labor management and social insurance for a Shakai Hoken Roumushi, divided by their exclusive services. At Yotsuba they are contracted as independent business entities, separately.\n\n## Sources\n\n- **The Specified Skilled Worker residence status and the operation guidelines.** Specified Skilled Worker \"Care\" is one field of the residence status \"Specified Skilled Worker (i)\" under the Immigration Control and Refugee Recognition Act, with passing the Care Skills Evaluation Test and the Care Japanese Evaluation Test, etc., as entry requirements (Immigration Services Agency \"Specified Skilled Worker system\"; Ministry of Health, Labour and Welfare \"On accepting Specified Skilled Worker foreign nationals in the care field\"; accessed 29 August 2026).\n- **Inclusion in the staffing standard.** A Specified Skilled Worker (i) \"Care\" can, in principle, be counted in the staffing standard from the start of employment, and technical intern trainees and EPA care-worker candidates in principle after six months (from the start with JLPT N2 or above) (Ministry of Health, Labour and Welfare \"On the treatment of foreign care personnel in the staffing standard\"; accessed 29 August 2026).\n- **The equal-remuneration requirement.** A specified-skilled-worker employment contract includes, as a standard for the accepting organization, that the remuneration is equal to or above the amount for a Japanese person doing the work (Immigration Services Agency \"Overview of the Specified Skilled Worker system,\" and the Immigration Control and Refugee Recognition Act and standards ordinance; accessed 29 August 2026).\n- **Lump-sum withdrawal payment.** A person who is not a Japanese national, is not an insured person of a public pension, has six months or more of employees'-pension coverage, and does not meet the qualifying period for the old-age pension (ten years) may claim the lump-sum withdrawal payment within two years from the day of ceasing to have an address in Japan. The covered period is not counted as a pension period (e-Gov Law Search, Employees' Pension Insurance Act, Supplementary Provisions Article 29, Act No. 115 of 1954, and the Japan Pension Service guidance on the lump-sum withdrawal payment; accessed 29 August 2026).\n- **Social security agreements.** Where a social security agreement between the home country and Japan is in force, pension periods can be totalized and double coverage avoided. Whether an agreement exists differs by country (Japan Pension Service \"Social security agreements\" list; accessed 29 August 2026).\n- The final decision on residence eligibility and on conformity with designation standards is made by the Immigration Services Agency and the local government. Please confirm individual requirements in the latest operation guidelines and the local government's guidance.\n\nThis article does not decide whom to consult. Labor management, social insurance, and the lump-sum withdrawal payment are the work of a Shakai Hoken Roumushi. The residence-status application, support plan, and office designation are the work of a Gyoseishoshi, and 四葉社会保険労務士事務所 and 四葉行政書士事務所 are independent business entities contracted separately. For fees when consulting 四葉社会保険労務士事務所, see [the fee schedule](/en/labor/ryokin); for frequently asked questions, see [the FAQ](/en/labor/faq).\n\nThis article is general information. Whether the system applies and individual procedures are handled by a qualified professional after a consultation, in light of the latest primary sources (the Immigration Services Agency, the Ministry of Health, Labour and Welfare, the Japan Pension Service, etc.) and individual circumstances. Written by [Joji Uramatsu](/en/about/uramatsu) (Shakai Hoken Roumushi, Gyoseishoshi, Registered Real Estate Transaction Specialist).",
+        "category": "Foreign employment",
+        "keywords": [
+          "Specified Skilled Worker care staffing standard",
+          "foreign care worker labor social insurance",
+          "care staffing inclusion start of employment",
+          "Specified Skilled Worker wage equal Japanese",
+          "lump-sum withdrawal payment social security agreement",
+          "registered support organization labor division"
+        ],
+        "tags": [
+          "Specified Skilled Worker",
+          "Care",
+          "Foreign employment",
+          "Social insurance",
+          "Lump-sum withdrawal payment",
+          "Shakai Hoken Roumushi"
+        ],
+        "author": {
+          "name": "Joji Uramatsu",
+          "title": "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所"
+        },
+        "faq": [
+          {
+            "question": "Can a Specified Skilled Worker (Care) staff member be counted in the staffing standard right after joining?",
+            "answer": "In principle, from the start of employment. This is because a Specified Skilled Worker (i) enters after passing the Care Skills Evaluation Test and the Care Japanese Evaluation Test. Technical intern trainees and EPA candidates are in principle after six months, and those holding the JLPT N2 or above can be counted from the start."
+          },
+          {
+            "question": "May I set the pay lower than for a Japanese person?",
+            "answer": "You may not. As a standard of the specified-skilled-worker employment contract, the remuneration must be equal to or above that for a Japanese person doing the work (Immigration Act, standards ordinance). The Minimum Wage Act and the Labor Standards Act also apply the same as for Japanese people."
+          },
+          {
+            "question": "Do foreign staff join the employees' pension? Is it thrown away if they return home?",
+            "answer": "They join, regardless of nationality, when the requirements are met. On returning home, they may claim the lump-sum withdrawal payment under Article 29 of the Supplementary Provisions of the Employees' Pension Insurance Act within two years of leaving Japan, or, if a social security agreement with the home country is in force, totalize the covered period."
+          },
+          {
+            "question": "Can the residence-status application and labor management be asked of the same person?",
+            "answer": "No. The residence-status application and support plan are for a Gyoseishoshi, and labor management and social insurance for a Shakai Hoken Roumushi, divided by their exclusive services. At Yotsuba they are contracted as independent business entities, separately."
+          }
+        ]
+      },
+      "zh-tw": {
+        "title": "在照護・身障福祉僱用特定技能「照護」外國人，勞務與社會保險的要點為何？",
+        "excerpt": "特定技能1號「照護」的外國人，因通過照護技能評價測驗與照護日語評價測驗後入國，原則上自就勞開始即可計入照護保險的人員配置基準（技能實習・EPA候選人原則為6個月經過後）。勞動條件須與日本人同等以上，社會保險不問國籍，只要符合要件即強制適用。在留資格的申請與支援計畫屬行政書士，勞務管理・社會保險・脫退一時金屬社會保險勞務士的業務，在留可否與指定基準之適否的判斷，保留予行政書士・自治體。",
+        "content": "**先講結論**：特定技能1號「照護」的外國人，因通過照護技能評價測驗與照護日語評價測驗後入國，**原則上自就勞開始即可計入照護保險的人員配置基準**（技能實習・EPA候選人原則為6個月經過後）。勞動條件須**與日本人同等以上**，社會保險不問國籍，只要符合要件即強制適用。在留資格的申請與支援計畫屬行政書士，勞務管理・社會保險・脫退一時金屬社會保險勞務士的業務，在留可否與指定基準之適否的判斷，保留予行政書士・自治體。\n\n「採用了特定技能『照護』的職員，但何時起可計入人員基準？薪水必須和日本人一樣嗎？」——隨著受入擴大，這類勞務・社會保險的確認正在增加。本文為受入特定技能「照護」外國人職員的照護・身障福祉服務事業所的管理者，整理人員算入的時期、勞動條件、社會保險與脫退一時金，以及支援與勞務的分擔。\n\n## 特定技能「照護」的職員從何時起可計入人員基準？\n\n**原則上，自就勞開始即可計入。**\n\n外國人職員何時起可計入照護保險的人員配置基準，因在留資格與日語能力而異。特定技能1號「照護」以入國前通過照護技能評價測驗與照護日語評價測驗（或相當之測驗）為前提，故自就勞開始即可計入配置基準。另一方面，技能實習及EPA照護福祉士候選人原則上自就勞開始經過6個月後方計入，持有日語能力試驗N2以上者可自就勞開始計入。\n\n| 在留資格・區分 | 計入人員配置基準的時期 |\n|---|---|\n| 特定技能1號「照護」 | 原則，自就勞開始可計入 |\n| 技能實習「照護」 | 原則，就勞開始6個月經過後（N2以上自開始） |\n| EPA照護福祉士候選人 | 原則，就勞開始6個月經過後（N2以上自開始） |\n\n惟可計入與能否立即單獨值夜班是兩回事。為照護的安全與定著，起初應整備與日本人職員以團隊對應的體制。事業所人員基準本身的思考方式，亦與身障福祉的[就勞支援A型・B型的人員基準與勞務](/zh-tw/labor/column/shuro-shien-ab-jinin-kijun-roumu)相通。\n\n## 勞動條件必須與日本人同等以上嗎？\n\n**是。報酬額與日本人同等以上，是受入的要件。**\n\n在特定技能的受入中，與外國人所締結的特定技能雇用契約適當，係受入機關（特定技能所屬機關）的基準，其中包含「報酬額與日本人從事時的報酬額同等以上」。此於出入國管理及難民認定法及定其基準之省令有據。當然，勞動基準法・最低薪資法・勞動安全衛生法等勞動法令，亦與日本人相同當然適用。\n\n| 項目 | 內容 |\n|---|---|\n| 報酬額 | 與日本人從事時同等以上（入管法・基準省令） |\n| 雇用形態 | 原則全職直接雇用 |\n| 勞動條件明示 | 依勞動基準法以書面等明示。以本人可理解之方式說明為宜 |\n| 適用法令 | 勞動基準法・最低薪資法・勞動安全衛生法等，與日本人相同 |\n\n「因為是外國人所以能便宜僱用」的設計違反要件。自招募・採用階段起，即應確認與同職務日本人職員薪資的整合。外國人雇用入口的整理，彙整於[僱用外國人時，窗口該如何分](/zh-tw/labor/column/gaikokujin-koyo-madoguchi-wakekata)。\n\n## 社會保險與社會保障協定、脫退一時金該如何處理？\n\n**社會保險不問國籍強制適用，回國時須在脫退一時金或社會保障協定的通算之間選擇。**\n\n健康保險・厚生年金保險不問國籍，只要符合適用要件即加入。並不因是外國人而被排除。回國時年金的處理有以下兩種途徑。\n\n| 途徑 | 內容 | 注意點 |\n|---|---|---|\n| 脫退一時金 | 回國後，依厚生年金保險法附則第29條請求一時金 | 自不再於日本有住所之日起2年內請求。所領期間不計入年金加入期間 |\n| 社會保障協定的通算 | 通算母國與日本的年金加入期間，銜接至將來的年金 | 限母國與日本社會保障協定已生效之情形。照護主要送出國中亦有未締結・未生效之國 |\n\n領取脫退一時金後，該期間即不再計入日本的年金加入期間。須衡量將來再度於日本工作的可能性，以及母國與社會保障協定之有無來選擇，係本人易誤解之處。回國時的年金精算，彙整於[回國外國人員工的年金精算](/zh-tw/labor/column/gaikokujin-shain-kikoku-nenkin-seisan)；透過協定避免雙重加入，彙整於[海外駐在與社會保障協定](/zh-tw/labor/column/chugoku-chuzai-shakaihosho-kyotei-nijukanyu)。協定之有無因國而異，以日本年金機構的協定生效狀況一覽確認。\n\n## 登錄支援機關的支援與事業所的勞務該如何分擔？\n\n**與在留相關的支援由登錄支援機關承擔，作為雇用的勞務管理由事業所承擔，向專家的分派亦隨之分開。**\n\n特定技能1號的外國人，被課予實施關於生活・就勞的支援計畫之義務，此可委託登錄支援機關。另一方面，工時管理・薪資計算・社會保險手續等作為雇用的勞務管理，由事業所（受入機關）以雇主身分承擔。兩者為不同的角色。\n\n| 角色 | 主要承擔者 | 專家的參與 |\n|---|---|---|\n| 在留資格申請・支援計畫 | 登錄支援機關・事業所 | 行政書士 |\n| 事業所的指定・人員基準申請 | 事業所 | 行政書士 |\n| 工時・薪資計算・社會保險 | 事業所 | 社會保險勞務士 |\n| 脫退一時金・回國時的年金 | 本人・事業所 | 社會保險勞務士 |\n\n支援計畫的製作・在留資格的申請，與每日的勞務管理，由承辦的專家分開。若不分窗口而欲一體推進，兩方業務都易流於半途。\n\n## 在留・指定・勞務該分派給誰？\n\n**在留資格・支援計畫・指定分派給行政書士，勞務・社會保險・脫退一時金分派給社會保險勞務士。**\n\n整理業務的界線，如下。\n\n1. **在留資格的申請・支援計畫・事業所的指定** → 屬行政書士的業務。在留可否的判斷與指定基準之適否，最終由出入國在留管理廳・自治體判斷。\n2. **勞動條件的設計・薪資計算・社會保險・脫退一時金** → 屬社會保險勞務士的業務。\n3. **計入人員配置基準之可否本身** → 由指定權者（自治體）判斷。事業所在掌握算入時期的思考方式後，組成不過度依賴算入的人員體制。\n\n四葉社会保険労務士事務所與四葉行政書士事務所為各自獨立的事業體，勞務向社會保險勞務士事務所、在留資格與支援計畫・指定向行政書士事務所，分別承接、另行簽約。無法以一份契約一併承接。因各自的獨占業務於法律上有所區分。\n\n## 常見問題\n\n**Q. 特定技能「照護」的職員，入職後可立即計入人員基準嗎？**\nA. 原則上，自就勞開始即可計入。因特定技能1號係通過照護技能評價測驗與照護日語評價測驗後入國。技能實習及EPA候選人原則為6個月經過後，持有日語能力試驗N2以上者可自開始計入。\n\n**Q. 薪水可以設定得比日本人低嗎？**\nA. 不可以。作為特定技能雇用契約的基準，報酬額須與日本人從事時同等以上（入管法・基準省令）。最低薪資法與勞動基準法亦與日本人相同適用。\n\n**Q. 外國人職員也要加入厚生年金嗎？回國就等於白繳嗎？**\nA. 不問國籍，只要符合要件即加入。回國時，可依厚生年金保險法附則第29條的脫退一時金於離開日本後2年內請求，或若母國與社會保障協定已生效，則可通算加入期間。\n\n**Q. 在留資格的申請與勞務管理可以委託同一人嗎？**\nA. 不可。在留資格的申請與支援計畫屬行政書士，勞務管理・社會保險屬社會保險勞務士，依各自的獨占業務區分承辦。四葉以各自獨立的事業體，分別承接、另行簽約。\n\n## 本文依據\n\n- **特定技能的在留資格與運用要領**。特定技能「照護」係出入國管理及難民認定法之在留資格「特定技能1號」的分野之一，以通過照護技能評價測驗・照護日語評價測驗等為入國要件（出入國在留管理廳「特定技能制度」・厚生勞働省「關於照護分野特定技能外國人的受入」，2026年8月29日參照）\n- **計入人員配置基準**。特定技能1號「照護」原則上自就勞開始可計入人員配置基準，技能實習・EPA照護福祉士候選人原則為6個月經過後（日語能力試驗N2以上自開始）（厚生勞働省「關於外國人照護人材之人員配置基準上的取扱」，2026年8月29日參照）\n- **報酬的同等要件**。特定技能雇用契約，以報酬額與日本人從事時的報酬額同等以上，列入受入機關的基準（出入國在留管理廳「特定技能制度概要」，以及出入國管理及難民認定法・基準省令，2026年8月29日參照）\n- **脫退一時金**。國籍非日本、非公的年金之被保險人、厚生年金加入6個月以上、且未滿足老齡年金受給資格期間（10年）者，得自不再於日本有住所之日起2年內請求脫退一時金。所領期間不計入年金加入期間（e-Gov法令檢索、厚生年金保險法附則第29條・昭和29年法律第115號，以及日本年金機構就脫退一時金之案內，2026年8月29日參照）\n- **社會保障協定**。母國與日本的社會保障協定已生效時，可通算年金加入期間並避免雙重加入。協定之有無因國而異（日本年金機構「社會保障協定」一覽，2026年8月29日參照）\n- 在留可否與指定基準之適否的最終判斷，由出入國在留管理廳・自治體為之。個別要件請以最新運用要領・自治體的案內確認\n\n本文並不代替您決定該向誰諮詢。勞務管理・社會保險・脫退一時金屬社會保險勞務士的業務。在留資格的申請與支援計畫・事業所的指定屬行政書士的業務，四葉社会保険労務士事務所與四葉行政書士事務所為各自獨立的事業體、分別承接。向四葉社会保険労務士事務所諮詢時的費用，整理於[報酬額表](/zh-tw/labor/ryokin)；常見問題整理於[常見問答](/zh-tw/labor/faq)。\n\n本文為一般性資訊提供。制度的適用與個別手續，將依最新一手資訊（出入國在留管理廳・厚生勞働省・日本年金機構等）與個別情形，於面談後由有資格者為之。撰文為[浦松丈二](/zh-tw/about/uramatsu)（社會保險勞務士・行政書士・宅地建物取引士）。",
+        "category": "外國人雇用",
+        "keywords": [
+          "特定技能 照護 人員配置基準",
+          "外國人照護 勞務 社會保險",
+          "人員算入 就勞開始",
+          "特定技能 報酬 日本人同等",
+          "脫退一時金 社會保障協定",
+          "登錄支援機關 勞務 分擔"
+        ],
+        "tags": [
+          "特定技能",
+          "照護",
+          "外國人雇用",
+          "社會保險",
+          "脫退一時金",
+          "社會保險勞務士"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "特定技能「照護」的職員，入職後可立即計入人員基準嗎？",
+            "answer": "原則上，自就勞開始即可計入。因特定技能1號係通過照護技能評價測驗與照護日語評價測驗後入國。技能實習及EPA候選人原則為6個月經過後，持有日語能力試驗N2以上者可自開始計入。"
+          },
+          {
+            "question": "薪水可以設定得比日本人低嗎？",
+            "answer": "不可以。作為特定技能雇用契約的基準，報酬額須與日本人從事時同等以上（入管法・基準省令）。最低薪資法與勞動基準法亦與日本人相同適用。"
+          },
+          {
+            "question": "外國人職員也要加入厚生年金嗎？回國就等於白繳嗎？",
+            "answer": "不問國籍，只要符合要件即加入。回國時，可依厚生年金保險法附則第29條的脫退一時金於離開日本後2年內請求，或若母國與社會保障協定已生效，則可通算加入期間。"
+          },
+          {
+            "question": "在留資格的申請與勞務管理可以委託同一人嗎？",
+            "answer": "不可。在留資格的申請與支援計畫屬行政書士，勞務管理・社會保險屬社會保險勞務士，依各自的獨占業務區分承辦。四葉以各自獨立的事業體，分別承接、另行簽約。"
+          }
+        ]
+      },
+      "zh": {
+        "title": "在照护・身障福祉雇用特定技能「照护」外国人，劳务与社会保险的要点为何？",
+        "excerpt": "特定技能1号「照护」的外国人，因通过照护技能评价测验与照护日语评价测验后入国，原则上自就劳开始即可计入照护保险的人员配置基准（技能实习・EPA候选人原则为6个月经过后）。劳动条件须与日本人同等以上，社会保险不问国籍，只要符合要件即强制适用。在留资格的申请与支援计画属行政书士，劳务管理・社会保险・脱退一时金属社会保险劳务士的业务，在留可否与指定基准之适否的判断，保留予行政书士・自治体。",
+        "content": "**先讲结论**：特定技能1号「照护」的外国人，因通过照护技能评价测验与照护日语评价测验后入国，**原则上自就劳开始即可计入照护保险的人员配置基准**（技能实习・EPA候选人原则为6个月经过后）。劳动条件须**与日本人同等以上**，社会保险不问国籍，只要符合要件即强制适用。在留资格的申请与支援计画属行政书士，劳务管理・社会保险・脱退一时金属社会保险劳务士的业务，在留可否与指定基准之适否的判断，保留予行政书士・自治体。\n\n「采用了特定技能『照护』的职员，但何时起可计入人员基准？薪水必须和日本人一样吗？」——随着受入扩大，这类劳务・社会保险的确认正在增加。本文为受入特定技能「照护」外国人职员的照护・身障福祉服务事业所的管理者，整理人员算入的时期、劳动条件、社会保险与脱退一时金，以及支援与劳务的分担。\n\n## 特定技能「照护」的职员从何时起可计入人员基准？\n\n**原则上，自就劳开始即可计入。**\n\n外国人职员何时起可计入照护保险的人员配置基准，因在留资格与日语能力而异。特定技能1号「照护」以入国前通过照护技能评价测验与照护日语评价测验（或相当之测验）为前提，故自就劳开始即可计入配置基准。另一方面，技能实习及EPA照护福祉士候选人原则上自就劳开始经过6个月后方计入，持有日语能力试验N2以上者可自就劳开始计入。\n\n| 在留资格・区分 | 计入人员配置基准的时期 |\n|---|---|\n| 特定技能1号「照护」 | 原则，自就劳开始可计入 |\n| 技能实习「照护」 | 原则，就劳开始6个月经过后（N2以上自开始） |\n| EPA照护福祉士候选人 | 原则，就劳开始6个月经过后（N2以上自开始） |\n\n惟可计入与能否立即单独值夜班是两回事。为照护的安全与定着，起初应整备与日本人职员以团队对应的体制。事业所人员基准本身的思考方式，亦与身障福祉的[就劳支援A型・B型的人员基准与劳务](/zh/labor/column/shuro-shien-ab-jinin-kijun-roumu)相通。\n\n## 劳动条件必须与日本人同等以上吗？\n\n**是。报酬额与日本人同等以上，是受入的要件。**\n\n在特定技能的受入中，与外国人所缔结的特定技能雇用契约适当，系受入机关（特定技能所属机关）的基准，其中包含「报酬额与日本人从事时的报酬额同等以上」。此于出入国管理及难民认定法及定其基准之省令有据。当然，劳动基准法・最低薪资法・劳动安全卫生法等劳动法令，亦与日本人相同当然适用。\n\n| 项目 | 内容 |\n|---|---|\n| 报酬额 | 与日本人从事时同等以上（入管法・基准省令） |\n| 雇用形态 | 原则全职直接雇用 |\n| 劳动条件明示 | 依劳动基准法以书面等明示。以本人可理解之方式说明为宜 |\n| 适用法令 | 劳动基准法・最低薪资法・劳动安全卫生法等，与日本人相同 |\n\n「因为是外国人所以能便宜雇用」的设计违反要件。自招募・采用阶段起，即应确认与同职务日本人职员薪资的整合。外国人雇用入口的整理，汇整于[雇用外国人时，窗口该如何分](/zh/labor/column/gaikokujin-koyo-madoguchi-wakekata)。\n\n## 社会保险与社会保障协定、脱退一时金该如何处理？\n\n**社会保险不问国籍强制适用，回国时须在脱退一时金或社会保障协定的通算之间选择。**\n\n健康保险・厚生年金保险不问国籍，只要符合适用要件即加入。并不因是外国人而被排除。回国时年金的处理有以下两种途径。\n\n| 途径 | 内容 | 注意点 |\n|---|---|---|\n| 脱退一时金 | 回国后，依厚生年金保险法附则第29条请求一时金 | 自不再于日本有住所之日起2年内请求。所领期间不计入年金加入期间 |\n| 社会保障协定的通算 | 通算母国与日本的年金加入期间，衔接至将来的年金 | 限母国与日本社会保障协定已生效之情形。照护主要送出国中亦有未缔结・未生效之国 |\n\n领取脱退一时金后，该期间即不再计入日本的年金加入期间。须衡量将来再度于日本工作的可能性，以及母国与社会保障协定之有无来选择，系本人易误解之处。回国时的年金精算，汇整于[回国外国人员工的年金精算](/zh/labor/column/gaikokujin-shain-kikoku-nenkin-seisan)；透过协定避免双重加入，汇整于[海外驻在与社会保障协定](/zh/labor/column/chugoku-chuzai-shakaihosho-kyotei-nijukanyu)。协定之有无因国而异，以日本年金机构的协定生效状况一览确认。\n\n## 登录支援机关的支援与事业所的劳务该如何分担？\n\n**与在留相关的支援由登录支援机关承担，作为雇用的劳务管理由事业所承担，向专家的分派亦随之分开。**\n\n特定技能1号的外国人，被课予实施关于生活・就劳的支援计画之义务，此可委托登录支援机关。另一方面，工时管理・薪资计算・社会保险手续等作为雇用的劳务管理，由事业所（受入机关）以雇主身分承担。两者为不同的角色。\n\n| 角色 | 主要承担者 | 专家的参与 |\n|---|---|---|\n| 在留资格申请・支援计画 | 登录支援机关・事业所 | 行政书士 |\n| 事业所的指定・人员基准申请 | 事业所 | 行政书士 |\n| 工时・薪资计算・社会保险 | 事业所 | 社会保险劳务士 |\n| 脱退一时金・回国时的年金 | 本人・事业所 | 社会保险劳务士 |\n\n支援计画的制作・在留资格的申请，与每日的劳务管理，由承办的专家分开。若不分窗口而欲一体推进，两方业务都易流于半途。\n\n## 在留・指定・劳务该分派给谁？\n\n**在留资格・支援计画・指定分派给行政书士，劳务・社会保险・脱退一时金分派给社会保险劳务士。**\n\n整理业务的界线，如下。\n\n1. **在留资格的申请・支援计画・事业所的指定** → 属行政书士的业务。在留可否的判断与指定基准之适否，最终由出入国在留管理厅・自治体判断。\n2. **劳动条件的设计・薪资计算・社会保险・脱退一时金** → 属社会保险劳务士的业务。\n3. **计入人员配置基准之可否本身** → 由指定权者（自治体）判断。事业所在掌握算入时期的思考方式后，组成不过度依赖算入的人员体制。\n\n四葉社会保険労務士事務所与四葉行政書士事務所为各自独立的事业体，劳务向社会保险劳务士事务所、在留资格与支援计画・指定向行政书士事务所，分别承接、另行签约。无法以一份契约一并承接。因各自的独占业务于法律上有所区分。\n\n## 常见问题\n\n**Q. 特定技能「照护」的职员，入职后可立即计入人员基准吗？**\nA. 原则上，自就劳开始即可计入。因特定技能1号系通过照护技能评价测验与照护日语评价测验后入国。技能实习及EPA候选人原则为6个月经过后，持有日语能力试验N2以上者可自开始计入。\n\n**Q. 薪水可以设定得比日本人低吗？**\nA. 不可以。作为特定技能雇用契约的基准，报酬额须与日本人从事时同等以上（入管法・基准省令）。最低薪资法与劳动基准法亦与日本人相同适用。\n\n**Q. 外国人职员也要加入厚生年金吗？回国就等于白缴吗？**\nA. 不问国籍，只要符合要件即加入。回国时，可依厚生年金保险法附则第29条的脱退一时金于离开日本后2年内请求，或若母国与社会保障协定已生效，则可通算加入期间。\n\n**Q. 在留资格的申请与劳务管理可以委托同一人吗？**\nA. 不可。在留资格的申请与支援计画属行政书士，劳务管理・社会保险属社会保险劳务士，依各自的独占业务区分承办。四葉以各自独立的事业体，分别承接、另行签约。\n\n## 本文依据\n\n- **特定技能的在留资格与运用要领**。特定技能「照护」系出入国管理及难民认定法之在留资格「特定技能1号」的分野之一，以通过照护技能评价测验・照护日语评价测验等为入国要件（出入国在留管理厅「特定技能制度」・厚生劳働省「关于照护分野特定技能外国人的受入」，2026年8月29日参照）\n- **计入人员配置基准**。特定技能1号「照护」原则上自就劳开始可计入人员配置基准，技能实习・EPA照护福祉士候选人原则为6个月经过后（日语能力试验N2以上自开始）（厚生劳働省「关于外国人照护人材之人员配置基准上的取扱」，2026年8月29日参照）\n- **报酬的同等要件**。特定技能雇用契约，以报酬额与日本人从事时的报酬额同等以上，列入受入机关的基准（出入国在留管理厅「特定技能制度概要」，以及出入国管理及难民认定法・基准省令，2026年8月29日参照）\n- **脱退一时金**。国籍非日本、非公的年金之被保险人、厚生年金加入6个月以上、且未满足老龄年金受给资格期间（10年）者，得自不再于日本有住所之日起2年内请求脱退一时金。所领期间不计入年金加入期间（e-Gov法令检索、厚生年金保险法附则第29条・昭和29年法律第115号，以及日本年金机构就脱退一时金之案内，2026年8月29日参照）\n- **社会保障协定**。母国与日本的社会保障协定已生效时，可通算年金加入期间并避免双重加入。协定之有无因国而异（日本年金机构「社会保障协定」一览，2026年8月29日参照）\n- 在留可否与指定基准之适否的最终判断，由出入国在留管理厅・自治体为之。个别要件请以最新运用要领・自治体的案内确认\n\n本文并不代替您决定该向谁咨询。劳务管理・社会保险・脱退一时金属社会保险劳务士的业务。在留资格的申请与支援计画・事业所的指定属行政书士的业务，四葉社会保険労務士事務所与四葉行政書士事務所为各自独立的事业体、分别承接。向四葉社会保険労務士事務所咨询时的费用，整理于[报酬额表](/zh/labor/ryokin)；常见问题整理于[常见问答](/zh/labor/faq)。\n\n本文为一般性资讯提供。制度的适用与个别手续，将依最新一手资讯（出入国在留管理厅・厚生劳働省・日本年金机构等）与个别情形，于面谈后由有资格者为之。撰文为[浦松丈二](/zh/about/uramatsu)（社会保险劳务士・行政书士・宅地建物取引士）。",
+        "category": "外国人雇用",
+        "keywords": [
+          "特定技能 照护 人员配置基准",
+          "外国人照护 劳务 社会保险",
+          "人员算入 就劳开始",
+          "特定技能 报酬 日本人同等",
+          "脱退一时金 社会保障协定",
+          "登录支援机关 劳务 分担"
+        ],
+        "tags": [
+          "特定技能",
+          "照护",
+          "外国人雇用",
+          "社会保险",
+          "脱退一时金",
+          "社会保险劳务士"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "特定技能「照护」的职员，入职后可立即计入人员基准吗？",
+            "answer": "原则上，自就劳开始即可计入。因特定技能1号系通过照护技能评价测验与照护日语评价测验后入国。技能实习及EPA候选人原则为6个月经过后，持有日语能力试验N2以上者可自开始计入。"
+          },
+          {
+            "question": "薪水可以设定得比日本人低吗？",
+            "answer": "不可以。作为特定技能雇用契约的基准，报酬额须与日本人从事时同等以上（入管法・基准省令）。最低薪资法与劳动基准法亦与日本人相同适用。"
+          },
+          {
+            "question": "外国人职员也要加入厚生年金吗？回国就等于白缴吗？",
+            "answer": "不问国籍，只要符合要件即加入。回国时，可依厚生年金保险法附则第29条的脱退一时金于离开日本后2年内请求，或若母国与社会保障协定已生效，则可通算加入期间。"
+          },
+          {
+            "question": "在留资格的申请与劳务管理可以委托同一人吗？",
+            "answer": "不可。在留资格的申请与支援计画属行政书士，劳务管理・社会保险属社会保险劳务士，依各自的独占业务区分承办。四葉以各自独立的事业体，分别承接、另行签约。"
+          }
+        ]
+      }
+    }
   }
 ];

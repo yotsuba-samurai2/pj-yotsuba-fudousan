@@ -574,6 +574,46 @@ const ARTICLES: ArticleSpec[] = [
     localesWithTranslations: ["en", "zh-tw", "zh"],
     hubLinks: ["/souzoku"],
   },
+  {
+    file: "28-shinkyu-seikotsuin-bukken-youto-hokenjo-todokede.md",
+    slug: "shinkyu-seikotsuin-bukken-youto-hokenjo-todokede",
+    title: "鍼灸院・整骨院の物件を探すとき、用途地域と保健所の開設届で何を確認する？",
+    publishedAt: "2026-08-29",
+    category: "投資・事業用不動産",
+    excerpt:
+      "鍼灸院・整骨院（あはき・柔整の施術所）の物件で先に効くのは、①用途地域（施術所は診療所と違い「サービス業を営む店舗」に準じて扱われるのが一般的で、用途地域の制限を受ける）②施術所の構造設備基準（専用施術室6.6㎡以上・待合室3.3㎡以上・換気・消毒設備）を満たせるか、の2点です。開設届は「開設後10日以内」に施術者本人が保健所へ出すもので、届出書類の作成は行政書士が承ります。東京都文京区の宅地建物取引士兼行政書士が、契約前に確認できることをあはき法・柔道整復師法の条文と省令から整理します。",
+    keywords: [
+      "鍼灸院 物件",
+      "整骨院 接骨院 開業 物件",
+      "施術所 構造設備基準 6.6平方メートル",
+      "施術所 用途地域 サービス業を営む店舗",
+      "あはき法 柔道整復師法 施術所 届出 10日以内",
+    ],
+    tags: ["事業用不動産", "許認可", "用途地域", "施術所"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/toushi", "/office"],
+  },
+  {
+    file: "29-taiwan-senmonka-nihon-fudosan-touki-kenrisho-chigai.md",
+    slug: "taiwan-senmonka-nihon-fudosan-touki-kenrisho-chigai",
+    title: "台湾の専門家が日本の不動産取引で戸惑う登記と権利証の違いはどこ？",
+    publishedAt: "2026-08-29",
+    category: "相続",
+    excerpt:
+      "台湾の「權狀（権利証）」と日本の「登記識別情報」は、どちらも所有者の本人性を示す道具ですが性格が違います。日本は2004年の不動産登記法改正で紙の権利証（登記済証）を廃止し、英数字12桁の登記識別情報に切り替えました。所有権を公示する正本は登記簿で、権利証や識別情報を失っても事前通知や資格者代理人の本人確認情報で売れます。所有権移転登記を代理できるのは日本では司法書士で、台湾の地政士は代理できません。東京都文京区の宅地建物取引士兼行政書士が、専門家間の前提知識として条文から整理します。",
+    keywords: [
+      "台湾 地政士 日本 不動産 登記",
+      "登記識別情報 登記済証 権利証 廃止",
+      "権利証 なくても 売れる 事前通知",
+      "司法書士 登記申請 代理 地政士",
+      "台湾 相続人 日本 不動産 相続登記",
+    ],
+    tags: ["相続", "登記", "非居住者", "中国語圏"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/souzoku"],
+  },
 ];
 
 function toPlainText(md: string): string {
