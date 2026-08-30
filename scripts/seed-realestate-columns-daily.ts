@@ -614,6 +614,46 @@ const ARTICLES: ArticleSpec[] = [
     localesWithTranslations: ["en", "zh-tw", "zh"],
     hubLinks: ["/souzoku"],
   },
+  {
+    file: "30-gakudou-houkago-jido-club-bukken-youken.md",
+    slug: "gakudou-houkago-jido-club-bukken-youken",
+    title: "放課後児童クラブ（学童保育）に使える物件は？用途地域と面積・避難の目安",
+    publishedAt: "2026-08-30",
+    category: "投資・事業用不動産",
+    excerpt:
+      "放課後児童クラブ（学童保育＝放課後児童健全育成事業）に使える物件は、用途地域（工業専用地域では児童福祉施設等を建てられず、それ以外の12地域は原則可）、専用区画の面積（放課後児童健全育成事業の設備及び運営に関する基準〈平成26年厚生労働省令第63号〉第9条＝児童1人おおむね1.65㎡以上・静養区画を含む）、避難、消防、耐震の5点で決まります。放課後等デイサービスとは別制度です。東京都文京区の宅地建物取引士兼行政書士が、契約前に確認できることを条文と省令から整理します。",
+    keywords: [
+      "放課後児童クラブ 物件",
+      "学童保育 物件 用途地域",
+      "放課後児童健全育成事業 面積 1.65平方メートル",
+      "学童 届出 市町村 34条の8",
+      "放課後児童クラブ 放課後等デイ 違い",
+    ],
+    tags: ["事業用不動産", "許認可", "用途地域", "学童保育"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/toushi", "/office"],
+  },
+  {
+    file: "31-chousei-kuiki-souzoku-tochi-baikyaku.md",
+    slug: "chousei-kuiki-souzoku-tochi-baikyaku",
+    title: "相続した市街化調整区域の土地は売れる？既存宅地・開発許可の見分け方",
+    publishedAt: "2026-08-30",
+    category: "相続",
+    excerpt:
+      "相続した市街化調整区域の土地は、売ること自体はできます。所有権の移転に開発許可は要りません。価格を左右するのは「買主がそこに建てられるか」です。かつての既存宅地制度は2001年に廃止されており、建て替え可否は今は条例区域（都市計画法34条11号）や個別の開発許可（29条）・建築許可（43条）で決まります。東京都文京区の宅地建物取引士兼行政書士が、売る前に確認できることを条文と自治体の運用から整理します。",
+    keywords: [
+      "市街化調整区域 相続 売却",
+      "既存宅地 廃止 2001年",
+      "都市計画法 34条 43条 建築許可",
+      "市街化調整区域 開発許可 29条",
+      "調整区域 土地 査定 建て替え",
+    ],
+    tags: ["相続", "市街化調整区域", "都市計画法", "売却"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/souzoku"],
+  },
 ];
 
 function toPlainText(md: string): string {

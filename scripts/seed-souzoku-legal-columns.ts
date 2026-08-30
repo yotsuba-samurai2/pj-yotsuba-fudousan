@@ -380,6 +380,23 @@ const REQUIRED_HUB_LINKS: Record<string, string[]> = {
     "/legal/column/jihitsu-kosei-yuigon",
     "/legal/column/souzoku-yuigon-hakken-tetsuzuki",
   ],
+  "keikamotsu-kei-jidosha-unso-todokede": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/ippan-kamotsu-unso-kyoka-eigyosho-shako-yoken",
+  ],
+  "souzoku-tokubetsu-jueki-kiyobun": [
+    "/legal/services/inheritance",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/souzoku",
+    "/legal/column/houtei-souzoku-bun",
+    "/legal/column/isan-bunkatsu-kyougisho",
+    "/legal/column/souzoku-iryubun-kiso",
+    "/legal/column/souzoku-isanbunkatsu-chotei-shinpan",
+    "/legal/column/souzoku-kigen-matome",
+  ],
 };
 
 /** 表示コンプライアンス上の禁止語 */
@@ -993,6 +1010,44 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "別事業体",
     "独立した事業体",
   ],
+  "keikamotsu-kei-jidosha-unso-todokede": [
+    "貨物自動車運送事業法",
+    "第2条第4項",
+    "第36条第1項",
+    "第36条の2",
+    "貨物軽自動車運送事業",
+    "貨物軽自動車安全管理者",
+    "令和6年法律第23号",
+    "2025年4月1日",
+    "2027年3月31日",
+    "貨物軽自動車運送事業経営届出書",
+    "事業用自動車等連絡書",
+    "軽自動車検査協会",
+    "黒ナンバー",
+    "運行管理者",
+    "紹介料を受け取りません",
+    "別事業体",
+    "独立した事業体",
+  ],
+  "souzoku-tokubetsu-jueki-kiyobun": [
+    "特別受益",
+    "寄与分",
+    "具体的相続分",
+    "民法第903条",
+    "民法第904条",
+    "民法第904条の2",
+    "民法第904条の3",
+    "民法第1050条",
+    "持戻し免除",
+    "婚姻期間が20年以上",
+    "相続開始の時から10年",
+    "2023年4月1日",
+    "2028年3月31日",
+    "特別寄与料",
+    "紹介料を受け取りません",
+    "別事業体",
+    "独立した事業体",
+  ],
 };
 
 /** 記事ごとに含めてはならない表現 */
@@ -1068,6 +1123,8 @@ const FORBIDDEN_PHRASES: Record<string, string[]> = {
   "kazoku-shintaku-gyosei-yakuwari-kumisei": [],
   "ippan-kamotsu-unso-kyoka-eigyosho-shako-yoken": [],
   "yuigon-shikkosha-shokumu-sennin-dare": [],
+  "keikamotsu-kei-jidosha-unso-todokede": [],
+  "souzoku-tokubetsu-jueki-kiyobun": [],
 };
 
 /** 本セット外へ張る既存legalコラムslug（リポジトリの他シードで実在確認済み） */
@@ -1776,6 +1833,58 @@ const ARTICLES: Array<{
       "相続",
       "検認",
       "特定財産承継遺言",
+      "行政書士",
+    ],
+  },
+  {
+    file: "35-keikamotsu-kei-jidosha-unso-todokede.md",
+    slug: "keikamotsu-kei-jidosha-unso-todokede",
+    date: "2026-08-30",
+    title:
+      "貨物軽自動車運送事業（黒ナンバー）の届出は？──一般貨物との違いと2025年の安全管理",
+    category: "許認可の手続き（行政書士の実務から）",
+    excerpt:
+      "軽バン1台からの配送・宅配（貨物軽自動車運送事業＝黒ナンバー）は、一般貨物のような許可ではなく、貨物自動車運送事業法第36条第1項の届出で始められます。第2条第4項の定義、経営届出書と事業用自動車等連絡書、軽自動車検査協会での黒ナンバー登録、2025年4月1日施行の貨物軽自動車安全管理者（第36条の2・令和6年法律第23号）の選任義務と2027年3月31日までの経過措置、物件は不動産・労務は社会保険労務士へ分離受任で振る分担を整理しました。",
+    keywords: [
+      "貨物軽自動車運送事業 届出 黒ナンバー",
+      "軽貨物 届出 一般貨物 違い",
+      "貨物軽自動車安全管理者 2025年 選任",
+      "黒ナンバー 取り方 事業用自動車等連絡書",
+      "軽バン 配送 開業 届出",
+      "貨物軽自動車運送事業 行政書士",
+    ],
+    tags: [
+      "貨物軽自動車運送事業",
+      "黒ナンバー",
+      "許認可",
+      "貨物軽自動車安全管理者",
+      "運送業",
+      "行政書士",
+    ],
+  },
+  {
+    file: "36-souzoku-tokubetsu-jueki-kiyobun.md",
+    slug: "souzoku-tokubetsu-jueki-kiyobun",
+    date: "2026-08-30",
+    title:
+      "特別受益と寄与分とは？──相続分の増減と2023年施行の10年ルール",
+    category: "相続の手続き（行政書士の実務から）",
+    excerpt:
+      "特別受益（民法第903条）と寄与分（民法第904条の2）は、法定相続分をそのまま適用すると不公平になる場面で、相続人ごとの取り分（具体的相続分）を調整する仕組みです。生前贈与の持戻しと持戻し免除、介護・家業の貢献、2023年4月1日施行の民法第904条の3による相続開始から10年の主張制限と経過措置（2028年3月31日）を整理し、評価・税務は税理士、争いは弁護士、登記は司法書士へ分離受任で振る分担を示しました。",
+    keywords: [
+      "特別受益 寄与分 とは",
+      "特別受益 生前贈与 持戻し",
+      "寄与分 介護 家業 認められる",
+      "民法904条の3 10年ルール 遺産分割",
+      "特別受益 持戻し免除 配偶者 居住用",
+      "特別受益 寄与分 行政書士",
+    ],
+    tags: [
+      "特別受益",
+      "寄与分",
+      "具体的相続分",
+      "遺産分割",
+      "民法904条の3",
       "行政書士",
     ],
   },

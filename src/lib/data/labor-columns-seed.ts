@@ -13397,5 +13397,371 @@ export const LABOR_COLUMNS_SEED: LaborSeedColumn[] = [
         ]
       }
     }
+  },
+  {
+    "business": "labor",
+    "slug": "chingin-digital-barai-roushi-kyotei",
+    "title": "給与のデジタル払いを導入するには？労使協定と実務の落とし穴",
+    "date": "2026-09-01",
+    "category": "労務のしくみ",
+    "excerpt": "給与のデジタル払いは、労働者の同意を前提に、厚生労働大臣が指定した資金移動業者（いわゆる〇〇Pay）の口座へ賃金を支払える仕組みです。2023年4月に労働基準法施行規則が改正されて可能になりました。導入には労使協定と本人ごとの同意が必要で、賃金の全額を移す義務はありません。労使協定・本人同意の中身、口座残高100万円の上限、指定業者の確認方法、就業規則と給与システムで整えることを整理します。",
+    "content": "**結論（先に要点）**：給与のデジタル払いは、労働者の同意を前提に、厚生労働大臣が指定した資金移動業者（いわゆる〇〇Pay）の口座へ賃金を支払える仕組みです。2023年4月に労働基準法施行規則が改正されて可能になりました。導入には労使協定の締結と本人ごとの同意が必要で、賃金の全額を移す義務はありません。\n\n## 給与のデジタル払いはどんな条件で認められる？\n\n賃金は、通貨で、直接労働者に、その全額を支払わなければなりません（労働基準法第24条第1項）。いわゆる賃金支払の5原則のうち「通貨払」「直接払」「全額払」です。銀行口座への振込みも、本来はこの通貨払原則の例外として、労働者の同意を得た場合に認められてきました。\n\n給与のデジタル払いは、この例外に「指定資金移動業者の口座への支払」を加えたものです。労働基準法施行規則第7条の2を改正する省令（令和4年厚生労働省令第158号、2022年11月28日公布）により、**2023年4月1日から**可能になりました。使えるのは、資金決済に関する法律上の第二種資金移動業者のうち、**厚生労働大臣の指定を受けた業者**の口座に限られます。\n\n賃金の受取方法は、いま3つの選択肢があります。\n\n| 受取方法 | 根拠 | 前提 |\n|---|---|---|\n| 銀行その他の金融機関の口座 | 労基則第7条の2第1項第1号 | 労働者の同意 |\n| 証券総合口座（一定の要件） | 同第2号 | 労働者の同意 |\n| 指定資金移動業者の口座（デジタル払い） | 同第3号 | 労働者の同意＋労使協定 |\n\nいずれも会社が一方的に決めるものではなく、労働者の同意が出発点です。デジタル払いだけは、これに加えて事業場での労使協定が必要になります。\n\n## 労使協定と本人の同意には何を盛り込む？\n\nデジタル払いには、労使協定と本人の同意という2段構えの手続が要ります。役割が違うので、片方だけでは足りません。\n\n| 手続 | 誰と | 主な内容 |\n|---|---|---|\n| 労使協定 | 過半数労働組合、または過半数代表者 | 対象となる労働者の範囲／取扱指定資金移動業者の範囲 など |\n| 本人の同意 | デジタル払いを希望する労働者ごと | 資金移動業者口座番号／受取額／代替口座（銀行口座等）の指定 など |\n\n本人の同意で見落としやすいのが、**代替口座（銀行口座等）の指定**です。指定資金移動業者は、口座残高の上限を超えた分などを労働者があらかじめ指定した銀行口座等へ移せる仕組みを備えており、そのための口座を本人に登録してもらいます。銀行口座を一切持たない形での運用は想定されていません。\n\nもう一つの前提が、**強制できない**ことです。会社が「今後は全員デジタル払いにする」と決めることはできません。希望しない労働者は従来どおり銀行口座で受け取れます。また、賃金の全額をデジタル払いにする必要はなく、一部だけを回すこともできます。\n\n## 口座残高100万円の上限はどう管理する？\n\n指定を受ける資金移動業者には、労働者に対する債務（口座残高）の額が**100万円を超えないようにする措置**、または超えた場合に速やかに100万円以下にする措置を講じていることが求められます（労基則第7条の2第1項第3号）。上限を超えそうな分は、本人が指定した銀行口座等へ自動的に出金される設計です。この100万円が、破綻時にも残高が保護される前提になっています。\n\nここが実務での落とし穴です。**「100万円」は口座残高の上限であって、1回に受け取れる金額の上限ではありません。** 各社はこれとは別に、1回あたりの受取上限などを独自に低く設定していることがあります（下の一覧の「受取上限の例」）。給与の額が各社の受取上限を上回る場合、その月の給与をまるごとデジタル払いにはできないことがあります。\n\n指定業者には、このほかにも次の保護措置が求められています。\n\n- 破綻した場合に、**6営業日以内**に労働者へ弁済される保証の仕組み\n- 不正な引き出し等による損失を補償する仕組み\n- 少なくとも**毎月1回は手数料の負担なく**、1円単位で現金として払い出せること（ATM等での現金化を含む）\n\n## 指定資金移動業者かどうかはどこで確認する？\n\n指定を受けた業者は、厚生労働省のウェブサイトの「指定資金移動業者一覧」に掲載されます。**令和8年（2026年）7月1日現在、指定は次の4社**です（2026年8月30日参照）。\n\n| 指定番号 | 業者 | サービス | 指定年月日 |\n|---|---|---|---|\n| 第00001号 | PayPay株式会社 | PayPay給与受取 | 2024年8月9日 |\n| 第00002号 | 株式会社リクルートMUFGビジネス | COIN+ | 2024年12月13日 |\n| 第00003号 | 楽天Edy株式会社 | 楽天ペイ給与受取 | 2025年3月19日 |\n| 第00004号 | auフィナンシャルサービス株式会社 | au PAY 給与受取 | 2025年4月4日 |\n\n受取上限の例は、公表資料の参照時点でPayPayが20万円、COIN+が30万円、楽天ペイとau PAYが各10万円とされていますが、**上限や指定業者は追加・変更され得ます**。導入を検討するときは、その時点の一覧と各社の条件を厚生労働省と各社の公式情報で確認してください。\n\n注意したいのは、**指定を受けていない〇〇Payは、賃金の支払には使えない**ことです。同じ名前の決済サービスでも、給与受取専用のサービスとして指定を受けた口座でなければなりません。従業員から「このアプリで受け取りたい」と言われても、指定の有無を確認するのが先です。\n\n## 導入前に就業規則・給与システムで整えることは？\n\n賃金の支払方法は、就業規則の絶対的必要記載事項です（労働基準法第89条第2号「賃金の…支払の方法」）。デジタル払いを導入するなら、就業規則の賃金の支払方法に関する定めへの反映が必要になります。就業規則の作成・届出義務そのものは[就業規則は何人から義務か。義務でないものは何か](/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo)に整理しています。\n\nそのうえで、実務として整えるのは次の点です。\n\n- 給与計算・振込のシステムがデジタル払いに対応しているか（振込先を分けて処理できるか）\n- 本人ごとの同意書と代替口座の情報を、どこにどう保管するか\n- 受取方法を選べることの周知（希望しない人への配慮を含む）\n\n給与計算をどう回すか、代行か内製かで整え方は変わります。代行に頼む場合の相場は[給与計算を社会保険労務士に頼むと、いくらかかるのか](/labor/column/kyuyo-keisan-soba-sharoushi)に、自社で処理する体制づくりは[給与計算をfreeeで内製したい](/labor/column/kyuyo-keisan-freee-naisei)にまとめています。あわせて、2024年4月に変わった[労働条件の明示ルール](/labor/column/roudou-joken-meiji-2024-henko-han-i)の見直しと同じタイミングで、賃金まわりの規程を点検しておくと二度手間になりません。\n\n## よくある質問\n\n**Q. 従業員から「〇〇Payで給与を受け取りたい」と言われました。すぐ対応できますか？**\nA. その場ですぐには始められません。まず、その〇〇Payが厚生労働大臣の指定を受けた資金移動業者かを厚生労働省の一覧で確認します。指定業者であっても、事業場で労使協定を締結し、本人から代替口座（銀行口座等）の指定を含む同意を得る手続が必要です。就業規則の賃金の支払方法への反映も要ります。手順を踏めば導入できますが、いくつかの準備が前提になります。\n\n**Q. 会社の方針として、全員をデジタル払いに切り替えられますか？**\nA. できません。デジタル払いは労働者の同意が前提で、希望しない人に強制することはできません。銀行口座での受取を選ぶ人が残っても、それを理由に不利益な取扱いをすることはできません。また、賃金の全額を移す必要はなく、一部だけをデジタル払いにする形も選べます。\n\n**Q. 口座残高の上限が100万円だと、給与全額を受け取れないことがありますか？**\nA. 100万円は口座残高の上限で、上限を超えそうな分はあらかじめ指定した銀行口座等へ移される設計です。ただし各社は、これとは別に1回あたりの受取上限を独自に低く設定していることがあります。給与額がその受取上限を上回る場合、その月の給与をまるごとデジタル払いにはできないことがあります。各社の条件を導入前に確認してください。\n\n**Q. 資金移動業者の口座を開設したり、どのサービスがよいかを助言してもらえますか？**\nA. 資金移動業者の口座開設や、金融商品としての有利不利の助言は、当事務所の業務ではありません。当事務所がご支援するのは、労使協定の整備、就業規則の見直し、本人同意の書式と運用フローの設計といった、労務・賃金実務の部分です。サービスの選択そのものは、各社の公式情報や適切な専門家にご確認ください。\n\n## この記事の根拠\n\n- 労働基準法（昭和22年法律第49号）第24条第1項 ── 賃金は、通貨で、直接労働者に、その全額を支払わなければならない（通貨払・直接払・全額払）。ただし法令若しくは労働協約に別段の定めがある場合等の例外がある\n- 労働基準法施行規則（昭和22年厚生省令第23号）第7条の2 ── 使用者は、労働者の同意を得た場合には、賃金の支払について、①金融機関の預貯金口座への振込み、②一定の要件を満たす証券総合口座、③厚生労働大臣が指定する資金移動業者の口座への資金移動、の方法によることができる。第1項第3号は、指定資金移動業者について、労働者に対して負担する為替取引に関する債務の額が100万円を超えないようにする措置、又は超えた場合に速やかに100万円以下とする措置を講じていることを要件とする\n- 労働基準法施行規則の一部を改正する省令（令和4年厚生労働省令第158号、2022年11月28日公布） ── 賃金のデジタル払いを可能とする第7条の2の改正。**2023年4月1日施行**\n- 労働基準法第89条第2号 ── 賃金の決定、計算及び支払の方法等は就業規則の絶対的必要記載事項\n- 厚生労働省「資金移動業者の口座への賃金支払（賃金のデジタル払い）について」 ── 導入には過半数労働組合又は過半数代表者との労使協定（対象労働者の範囲・取扱指定資金移動業者の範囲等）と、労働者ごとの同意（代替口座＝銀行口座等の指定を含む）が必要。指定業者の要件として、口座残高上限100万円、破綻時に6営業日以内に弁済される保証の仕組み、不正引き出し等の補償、少なくとも毎月1回は手数料負担なく現金として払い出せること等がある（2026年8月30日参照）\n- 厚生労働省「指定資金移動業者一覧」 ── 令和8年7月1日現在、指定は4社（第00001号 PayPay株式会社／第00002号 株式会社リクルートMUFGビジネス〔COIN+〕／第00003号 楽天Edy株式会社〔楽天ペイ給与受取〕／第00004号 auフィナンシャルサービス株式会社〔au PAY 給与受取〕）。各社の受取上限や指定業者は追加・変更され得るため、最新は厚生労働省及び各社の公式情報で確認する（2026年8月30日参照）\n- 資金決済に関する法律（平成21年法律第59号） ── 資金移動業者の登録・種別（第二種資金移動業）の根拠\n\n各社の受取上限額や指定の有無は今後変わる可能性があるため、導入時点でその都度確認してください。\n\n四葉不動産株式会社、四葉行政書士事務所、四葉社会保険労務士事務所は、それぞれ独立した事業体として業務を受任します。他の専門家をご紹介する場合も、お客様に直接ご契約いただく形をご案内し、当事務所は紹介料を受け取りません。デジタル払いに関して当事務所がご支援するのは、労使協定の整備、就業規則の見直し、本人同意の書式・運用フローの設計です。費用は[報酬額表](/labor/ryokin)に、よくいただくご質問は[よくあるご質問](/labor/faq)にまとめています。\n\n本記事は一般的な情報提供です。個別のご事情に応じた判断は、最新の一次資料（厚生労働省、e-Gov等）を踏まえ、面談のうえ資格者が行います。執筆は[浦松丈二](/about/uramatsu)（社会保険労務士・行政書士・宅地建物取引士）です。",
+    "status": "published",
+    "author": {
+      "name": "浦松 丈二",
+      "title": "社会保険労務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+    },
+    "keywords": [
+      "給与 デジタル払い 導入",
+      "賃金 デジタル払い 労使協定",
+      "デジタル払い 指定資金移動業者 一覧",
+      "デジタル払い 100万円 上限",
+      "給与 〇〇Pay 受け取り 同意",
+      "賃金 デジタル払い 就業規則"
+    ],
+    "tags": [
+      "賃金",
+      "デジタル払い",
+      "労使協定",
+      "就業規則",
+      "資金移動業者",
+      "給与計算"
+    ],
+    "locales": [],
+    "faq": [
+      {
+        "question": "従業員から「〇〇Payで給与を受け取りたい」と言われました。すぐ対応できますか？",
+        "answer": "その場ですぐには始められません。まず、その〇〇Payが厚生労働大臣の指定を受けた資金移動業者かを厚生労働省の一覧で確認します。指定業者であっても、事業場で労使協定を締結し、本人から代替口座（銀行口座等）の指定を含む同意を得る手続が必要です。就業規則の賃金の支払方法への反映も要ります。手順を踏めば導入できますが、いくつかの準備が前提になります。"
+      },
+      {
+        "question": "会社の方針として、全員をデジタル払いに切り替えられますか？",
+        "answer": "できません。デジタル払いは労働者の同意が前提で、希望しない人に強制することはできません。銀行口座での受取を選ぶ人が残っても、それを理由に不利益な取扱いをすることはできません。また、賃金の全額を移す必要はなく、一部だけをデジタル払いにする形も選べます。"
+      },
+      {
+        "question": "口座残高の上限が100万円だと、給与全額を受け取れないことがありますか？",
+        "answer": "100万円は口座残高の上限で、上限を超えそうな分はあらかじめ指定した銀行口座等へ移される設計です。ただし各社は、これとは別に1回あたりの受取上限を独自に低く設定していることがあります。給与額がその受取上限を上回る場合、その月の給与をまるごとデジタル払いにはできないことがあります。各社の条件を導入前に確認してください。"
+      },
+      {
+        "question": "資金移動業者の口座を開設したり、どのサービスがよいかを助言してもらえますか？",
+        "answer": "資金移動業者の口座開設や、金融商品としての有利不利の助言は、当事務所の業務ではありません。当事務所がご支援するのは、労使協定の整備、就業規則の見直し、本人同意の書式と運用フローの設計といった、労務・賃金実務の部分です。サービスの選択そのものは、各社の公式情報や適切な専門家にご確認ください。"
+      }
+    ],
+    "translations": {
+      "en": {
+        "title": "How to introduce digital wage payment — the labour-management agreement and practical pitfalls",
+        "excerpt": "Digital wage payment lets an employer pay wages into the account of a fund transfer service operator designated by the Minister of Health, Labour and Welfare (a so-called \"〇〇Pay\"), provided the worker consents. It became possible in April 2023 when the Ordinance for Enforcement of the Labour Standards Act was revised. Introduction requires a labour-management agreement and the individual consent of each worker, and there is no duty to move the whole of the wages. This article organises what to include in the agreement and the consent, the 1-million-yen account balance cap, how to check whether an operator is designated, and what to put in order in the work rules and payroll system.",
+        "content": "**In short:** Digital wage payment lets an employer pay wages into the account of a fund transfer service operator designated by the Minister of Health, Labour and Welfare (a so-called \"〇〇Pay\"), provided the worker consents. It became possible in April 2023 when the Ordinance for Enforcement of the Labour Standards Act was revised. Introduction requires a labour-management agreement and the individual consent of each worker, and there is no duty to move the whole of the wages.\n\n## Under what conditions is digital wage payment allowed?\n\nWages must be paid in currency, directly to the worker, in full (Labour Standards Act, Article 24, paragraph 1). These are three of the five principles of wage payment: payment in currency, payment directly, and payment in full. Even transfer to a bank account has, in principle, been permitted as an exception to the currency-payment principle where the worker consents.\n\nDigital wage payment adds \"payment into the account of a designated fund transfer operator\" to this exception. Under the ordinance amending Article 7-2 of the Ordinance for Enforcement of the Labour Standards Act (Ministry of Health, Labour and Welfare Ordinance No. 158 of 2022, promulgated on 28 November 2022), it became possible **from 1 April 2023**. It may be used only for the account of an operator that is a Type II fund transfer operator under the Payment Services Act **and has received the designation of the Minister of Health, Labour and Welfare**.\n\nThere are now three options for receiving wages.\n\n| Method of receipt | Basis | Precondition |\n|---|---|---|\n| Account at a bank or other financial institution | Enforcement Ordinance, Art. 7-2, para. 1, item 1 | Worker's consent |\n| Securities comprehensive account (certain requirements) | Same, item 2 | Worker's consent |\n| Account of a designated fund transfer operator (digital payment) | Same, item 3 | Worker's consent + labour-management agreement |\n\nNone of these can be decided unilaterally by the company; the worker's consent is the starting point. Digital payment alone additionally requires a labour-management agreement at the workplace.\n\n## What should the labour-management agreement and the individual consent include?\n\nDigital payment requires a two-step procedure: a labour-management agreement and the worker's individual consent. They have different roles, so one alone is not enough.\n\n| Procedure | With whom | Main contents |\n|---|---|---|\n| Labour-management agreement | The majority union, or the representative of a majority of workers | The scope of covered workers / the scope of the designated fund transfer operators to be used, etc. |\n| Individual consent | Each worker who wishes to use digital payment | Fund transfer operator account number / amount to be received / designation of an alternative account (a bank account, etc.) |\n\nThe point easily overlooked in the individual consent is the **designation of an alternative account (a bank account, etc.)**. A designated fund transfer operator has a mechanism to move the amount exceeding the account balance cap, and the like, to a bank account, etc. designated in advance by the worker, and the worker registers the account for that purpose. An arrangement with no bank account at all is not envisaged.\n\nAnother premise is that it **cannot be compelled**. A company cannot decide that \"everyone will be paid digitally from now on.\" Workers who do not wish to do so can still be paid into a bank account as before. There is also no need to move the whole of the wages digitally; only a part may be routed.\n\n## How is the 1-million-yen account balance cap managed?\n\nA designated operator is required to take measures to ensure that the amount of its debt to the worker (the account balance) does not exceed **1 million yen**, or measures to bring it promptly to 1 million yen or less if it is exceeded (Enforcement Ordinance, Art. 7-2, para. 1, item 3). Any portion likely to exceed the cap is automatically paid out to the bank account, etc. designated by the worker. This 1 million yen is the premise on which the balance is protected even in the event of the operator's failure.\n\nHere lies a practical pitfall. **The \"1 million yen\" is a cap on the account balance, not a cap on the amount receivable at one time.** Separately from this, each operator may set its own, lower cap on the amount receivable at one time (see the \"example receipt caps\" below). If the wage amount exceeds an operator's receipt cap, that month's wages may not be payable digitally in full.\n\nDesignated operators are also required to have the following protections.\n\n- A guarantee mechanism under which the worker is reimbursed **within six business days** in the event of failure\n- A mechanism to compensate for losses from unauthorised withdrawals and the like\n- The ability to cash out (withdraw) at least **once a month with no fee**, in units of one yen (including cashing out at ATMs, etc.)\n\n## Where can I check whether a fund transfer operator is designated?\n\nDesignated operators are posted on the \"list of designated fund transfer operators\" on the website of the Ministry of Health, Labour and Welfare. **As of 1 July 2026, four operators are designated** (confirmed on 30 August 2026).\n\n| Designation No. | Operator | Service | Date of designation |\n|---|---|---|---|\n| No. 00001 | PayPay Corporation | PayPay salary receipt | 9 August 2024 |\n| No. 00002 | Recruit MUFG Business Co., Ltd. | COIN+ | 13 December 2024 |\n| No. 00003 | Rakuten Edy, Inc. | Rakuten Pay salary receipt | 19 March 2025 |\n| No. 00004 | au Financial Service Corporation | au PAY salary receipt | 4 April 2025 |\n\nThe example receipt caps, at the time the public materials were consulted, are said to be 200,000 yen for PayPay, 300,000 yen for COIN+, and 100,000 yen each for Rakuten Pay and au PAY, but **the caps and the designated operators may be added to or changed**. When considering introduction, check the list at that time and each operator's conditions against the official information of the Ministry and each operator.\n\nWhat to watch for is that **a 〇〇Pay that has not received a designation cannot be used for wage payment**. Even a payment service with the same name must be an account designated as a salary-receipt service. Even if an employee says \"I want to receive it in this app,\" checking whether it is designated comes first.\n\n## What should be put in order in the work rules and payroll system?\n\nThe method of paying wages is an item that must be stated in the work rules (Labour Standards Act, Art. 89, item 2, \"the method of ... payment of wages\"). If digital payment is introduced, it must be reflected in the provisions on the method of wage payment in the work rules. The duty to draw up and file work rules itself is organised in [from how many employees are work rules mandatory, and what is not mandatory](/en/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo).\n\nOn that basis, the practical matters to put in order are as follows.\n\n- Whether the payroll and transfer system supports digital payment (whether it can process split transfer destinations)\n- Where and how to keep each worker's consent form and alternative account information\n- Informing workers that they can choose the method of receipt (including consideration for those who do not wish to)\n\nHow payroll is run, and whether it is outsourced or in-house, changes how you prepare. The market rate for outsourcing is organised in [how much does it cost to have a Shakai Hoken Roumushi handle payroll](/en/labor/column/kyuyo-keisan-soba-sharoushi), and building an in-house arrangement in [running payroll in-house with freee](/en/labor/column/kyuyo-keisan-freee-naisei). Reviewing the wage-related regulations at the same time as the [2024 change to the working-conditions notice rules](/en/labor/column/roudou-joken-meiji-2024-henko-han-i) avoids duplicated work.\n\n## Frequently asked questions\n\n**Q. An employee said \"I want to receive my salary via a 〇〇Pay.\" Can I respond straight away?**\nA. You cannot start on the spot. First, check whether that 〇〇Pay is a fund transfer operator designated by the Minister of Health, Labour and Welfare, using the Ministry's list. Even for a designated operator, you must conclude a labour-management agreement at the workplace and obtain the worker's consent, including the designation of an alternative account (a bank account, etc.). It also needs to be reflected in the method of wage payment in the work rules. It can be introduced once the steps are followed, but several preparations are the premise.\n\n**Q. As a company policy, can we switch everyone to digital payment?**\nA. No. Digital payment is premised on the worker's consent and cannot be forced on those who do not wish it. Even if some workers choose to be paid into a bank account, they cannot be treated disadvantageously for that reason. There is also no need to move the whole of the wages; a form in which only a part is paid digitally can be chosen.\n\n**Q. If the account balance cap is 1 million yen, are there cases where the full salary cannot be received?**\nA. The 1 million yen is a cap on the account balance, and any portion likely to exceed it is designed to be moved to the bank account, etc. designated in advance. However, separately from this, each operator may set its own, lower cap on the amount receivable at one time. If the salary exceeds that receipt cap, that month's salary may not be payable digitally in full. Check each operator's conditions before introduction.\n\n**Q. Can you open a fund transfer operator account for me, or advise which service is best?**\nA. Opening a fund transfer operator account, or advising on the merits of a service as a financial product, is not our work. What we support is the labour and wage-practice side: preparing the labour-management agreement, reviewing the work rules, and designing the format and operational flow for the individual consent. The choice of service itself should be confirmed with each operator's official information or an appropriate professional.\n\n## Sources\n\n- Labour Standards Act (Act No. 49 of 1947), Article 24, paragraph 1 — wages must be paid in currency, directly to the worker, in full (payment in currency / directly / in full), subject to exceptions where laws or a collective agreement provide otherwise, etc.\n- Ordinance for Enforcement of the Labour Standards Act (Ministry of Health and Welfare Ordinance No. 23 of 1947), Article 7-2 — where the worker consents, the employer may pay wages by (1) transfer to a deposit account at a financial institution, (2) a securities comprehensive account meeting certain requirements, or (3) a fund transfer to the account of a fund transfer operator designated by the Minister of Health, Labour and Welfare. Paragraph 1, item 3 requires, of a designated operator, measures to ensure the amount of its exchange-transaction debt to the worker does not exceed 1 million yen, or measures to bring it promptly to 1 million yen or less if exceeded\n- Ordinance Partially Amending the Ordinance for Enforcement of the Labour Standards Act (Ministry of Health, Labour and Welfare Ordinance No. 158 of 2022, promulgated on 28 November 2022) — the amendment to Article 7-2 enabling digital wage payment. **In force from 1 April 2023**\n- Labour Standards Act, Article 89, item 2 — the decision, calculation and method of payment of wages, etc. are matters that must be stated in the work rules\n- Ministry of Health, Labour and Welfare, \"On wage payment into the account of a fund transfer operator (digital wage payment)\" — introduction requires a labour-management agreement with the majority union or majority representative (scope of covered workers, scope of designated operators used, etc.) and each worker's consent (including the designation of an alternative account, a bank account, etc.). Operator requirements include the 1-million-yen account balance cap, a guarantee mechanism reimbursing within six business days on failure, compensation for unauthorised withdrawals and the like, and the ability to cash out at least once a month with no fee (confirmed on 30 August 2026)\n- Ministry of Health, Labour and Welfare, \"list of designated fund transfer operators\" — as of 1 July 2026, four operators are designated (No. 00001 PayPay Corporation / No. 00002 Recruit MUFG Business Co., Ltd. [COIN+] / No. 00003 Rakuten Edy, Inc. [Rakuten Pay salary receipt] / No. 00004 au Financial Service Corporation [au PAY salary receipt]). Because each operator's receipt cap and the roster of designated operators may change, confirm the latest from the Ministry and each operator's official information (confirmed on 30 August 2026)\n- Payment Services Act (Act No. 59 of 2009) — the basis for the registration and category (Type II fund transfer business) of fund transfer operators\n\nBecause each operator's receipt cap and the fact of designation may change, confirm them each time at the point of introduction.\n\nThis article is general information. Individual judgments, in light of the latest primary sources (Ministry of Health, Labour and Welfare, e-Gov, etc.), are made by a qualified professional after a consultation. What 四葉社会保険労務士事務所 supports on digital payment is preparing the labour-management agreement, reviewing the work rules, and designing the format and operational flow for the individual consent. For fees, see [the fee schedule](/en/labor/ryokin); for frequently asked questions, see [the FAQ](/en/labor/faq). Written by [Joji Uramatsu](/en/about/uramatsu) (Shakai Hoken Roumushi, Gyoseishoshi, Registered Real Estate Transaction Specialist).",
+        "category": "How labour works",
+        "keywords": [
+          "introduce digital wage payment",
+          "digital wage payment labour-management agreement",
+          "designated fund transfer operator list",
+          "digital wage payment 1 million yen cap",
+          "receive salary via 〇〇Pay consent",
+          "digital wage payment work rules"
+        ],
+        "tags": [
+          "wages",
+          "digital wage payment",
+          "labour-management agreement",
+          "work rules",
+          "fund transfer operator",
+          "payroll"
+        ],
+        "author": {
+          "name": "Joji Uramatsu",
+          "title": "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所"
+        },
+        "faq": [
+          {
+            "question": "An employee said \"I want to receive my salary via a 〇〇Pay.\" Can I respond straight away?",
+            "answer": "You cannot start on the spot. First, check whether that 〇〇Pay is a fund transfer operator designated by the Minister of Health, Labour and Welfare, using the Ministry's list. Even for a designated operator, you must conclude a labour-management agreement at the workplace and obtain the worker's consent, including the designation of an alternative account (a bank account, etc.). It also needs to be reflected in the method of wage payment in the work rules. It can be introduced once the steps are followed, but several preparations are the premise."
+          },
+          {
+            "question": "As a company policy, can we switch everyone to digital payment?",
+            "answer": "No. Digital payment is premised on the worker's consent and cannot be forced on those who do not wish it. Even if some workers choose to be paid into a bank account, they cannot be treated disadvantageously for that reason. There is also no need to move the whole of the wages; a form in which only a part is paid digitally can be chosen."
+          },
+          {
+            "question": "If the account balance cap is 1 million yen, are there cases where the full salary cannot be received?",
+            "answer": "The 1 million yen is a cap on the account balance, and any portion likely to exceed it is designed to be moved to the bank account, etc. designated in advance. However, separately from this, each operator may set its own, lower cap on the amount receivable at one time. If the salary exceeds that receipt cap, that month's salary may not be payable digitally in full. Check each operator's conditions before introduction."
+          },
+          {
+            "question": "Can you open a fund transfer operator account for me, or advise which service is best?",
+            "answer": "Opening a fund transfer operator account, or advising on the merits of a service as a financial product, is not our work. What we support is the labour and wage-practice side: preparing the labour-management agreement, reviewing the work rules, and designing the format and operational flow for the individual consent. The choice of service itself should be confirmed with each operator's official information or an appropriate professional."
+          }
+        ]
+      },
+      "zh-tw": {
+        "title": "要導入薪資的數位給付該怎麼做？勞資協定與實務上的陷阱",
+        "excerpt": "薪資的數位給付，是以勞工同意為前提，把薪資支付到厚生勞動大臣所指定的資金移動業者（俗稱〇〇Pay）帳戶的機制。2023年4月勞動基準法施行規則修正後成為可能。導入需要締結勞資協定，並取得每一位勞工的同意，且沒有把薪資全額轉入的義務。本文整理勞資協定與本人同意該寫什麼、帳戶餘額100萬圓的上限、如何確認是否為指定業者，以及在就業規則與薪資系統上該整備的事項。",
+        "content": "**先講結論**：薪資的數位給付，是以勞工同意為前提，把薪資支付到厚生勞動大臣所指定的資金移動業者（俗稱〇〇Pay）帳戶的機制。2023年4月勞動基準法施行規則修正後成為可能。導入需要締結勞資協定，並取得每一位勞工的同意，且沒有把薪資全額轉入的義務。\n\n## 薪資的數位給付在什麼條件下被允許？\n\n薪資必須以通貨、直接向勞工、全額支付（勞動基準法第24條第1項）。這是薪資支付五原則當中的「通貨支付」「直接支付」「全額支付」。原本連匯入銀行帳戶，也是作為通貨支付原則的例外，在取得勞工同意時才被允許。\n\n薪資的數位給付，就是在這項例外中，再加上「支付到指定資金移動業者的帳戶」。依修正勞動基準法施行規則第7條之2的省令（令和4年厚生勞動省令第158號，2022年11月28日公布），自**2023年4月1日**起成為可能。可使用的，僅限於資金結算法上的第二種資金移動業者當中，**取得厚生勞動大臣指定**的業者帳戶。\n\n現在領取薪資有三種選項。\n\n| 領取方法 | 依據 | 前提 |\n|---|---|---|\n| 銀行等金融機關的帳戶 | 施行規則第7條之2第1項第1號 | 勞工的同意 |\n| 證券綜合帳戶（一定要件） | 同條第2號 | 勞工的同意 |\n| 指定資金移動業者的帳戶（數位給付） | 同條第3號 | 勞工的同意＋勞資協定 |\n\n以上都不是公司單方面能決定的，勞工的同意是出發點。只有數位給付，還額外需要在事業場締結勞資協定。\n\n## 勞資協定與本人的同意該寫什麼？\n\n數位給付需要勞資協定與本人的個別同意這兩道手續。兩者角色不同，只有其中一項並不足夠。\n\n| 手續 | 對象 | 主要內容 |\n|---|---|---|\n| 勞資協定 | 過半數工會，或過半數代表者 | 對象勞工的範圍／使用的指定資金移動業者的範圍等 |\n| 本人的同意 | 希望數位給付的每一位勞工 | 資金移動業者帳戶號碼／領取金額／代替帳戶（銀行帳戶等）的指定 |\n\n本人同意中最容易漏掉的，是**代替帳戶（銀行帳戶等）的指定**。指定資金移動業者具備把超過帳戶餘額上限的部分等，轉入勞工事先指定的銀行帳戶等的機制，要請本人登錄該用途的帳戶。完全不持有銀行帳戶的運作方式並不在預設之內。\n\n另一個前提是**不能強制**。公司不能決定「今後全員改為數位給付」。不希望的勞工仍可如以往一樣以銀行帳戶領取。此外，也不需要把薪資全額改為數位給付，只把一部分轉入亦可。\n\n## 帳戶餘額100萬圓的上限該如何管理？\n\n取得指定的資金移動業者，須採取讓對勞工的債務（帳戶餘額）不超過**100萬圓**的措施，或在超過時迅速降至100萬圓以下的措施（施行規則第7條之2第1項第3號）。可能超過上限的部分，會自動出金到本人指定的銀行帳戶等。這個100萬圓，正是破產時餘額仍受保護的前提。\n\n這裡是實務上的陷阱。**「100萬圓」是帳戶餘額的上限，不是一次可領取金額的上限。** 各家業者另外可能自行把一次的領取上限設得更低（見下方「領取上限的例子」）。當薪資金額超過某業者的領取上限時，那個月的薪資就可能無法整筆以數位方式給付。\n\n指定業者還被要求具備下列保護措施。\n\n- 破產時，於**6個營業日內**向勞工清償的保證機制\n- 對不正提領等損失予以補償的機制\n- 至少**每月1次可免手續費**，以1圓為單位提領現金（含在ATM等現金化）\n\n## 如何確認是否為指定資金移動業者？\n\n取得指定的業者，會刊載於厚生勞動省網站的「指定資金移動業者一覽」。**截至令和8年（2026年）7月1日，指定為以下4家**（2026年8月30日參照）。\n\n| 指定號碼 | 業者 | 服務 | 指定年月日 |\n|---|---|---|---|\n| 第00001號 | PayPay株式会社 | PayPay薪資領取 | 2024年8月9日 |\n| 第00002號 | 株式会社Recruit MUFG Business | COIN+ | 2024年12月13日 |\n| 第00003號 | 楽天Edy株式会社 | 樂天Pay薪資領取 | 2025年3月19日 |\n| 第00004號 | au Financial Service株式会社 | au PAY薪資領取 | 2025年4月4日 |\n\n領取上限的例子，在參照公開資料的時點，PayPay為20萬圓、COIN+為30萬圓、樂天Pay與au PAY各為10萬圓，但**上限與指定業者可能新增・變更**。考慮導入時，請以厚生勞動省與各家業者的官方資訊，確認當時的一覽與各家的條件。\n\n要留意的是，**未取得指定的〇〇Pay，不能用於薪資的支付**。即使是同名的支付服務，也必須是取得薪資領取專用服務指定的帳戶。就算員工說「想用這個App領取」，先確認是否已取得指定才是順序。\n\n## 導入前在就業規則與薪資系統上要整備什麼？\n\n薪資的支付方法是就業規則的絕對必要記載事項（勞動基準法第89條第2號「薪資的……支付方法」）。若要導入數位給付，就需要反映到就業規則中關於薪資支付方法的規定。就業規則本身的制定・申報義務，整理於[就業規則從幾人開始成為義務？不是義務的又是哪些？](/zh-tw/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo)。\n\n在此之上，實務上要整備的是以下幾點。\n\n- 薪資計算・匯款系統是否對應數位給付（能否把匯款目的地分開處理）\n- 每位勞工的同意書與代替帳戶資訊，要在哪裡、如何保管\n- 可以選擇領取方法的周知（含對不希望者的體貼）\n\n薪資計算怎麼跑、委外還是內製，整備方式會不同。委外的行情整理於[把薪資計算委託給社會保險勞務士要花多少錢](/zh-tw/labor/column/kyuyo-keisan-soba-sharoushi)，自社處理的體制建置整理於[想用freee內製薪資計算](/zh-tw/labor/column/kyuyo-keisan-freee-naisei)。與[2024年變更的勞動條件明示規則](/zh-tw/labor/column/roudou-joken-meiji-2024-henko-han-i)的檢視在同一時機一併點檢薪資相關規程，可避免重複作業。\n\n## 常見問題\n\n**Q. 員工說「想用〇〇Pay領薪」，可以馬上對應嗎？**\nA. 沒辦法當場就開始。首先，用厚生勞動省的一覽確認該〇〇Pay是否為厚生勞動大臣指定的資金移動業者。即使是指定業者，也需要在事業場締結勞資協定，並取得本人含代替帳戶（銀行帳戶等）指定的同意。還要反映到就業規則的薪資支付方法。走完這些步驟就能導入，但需要幾項前置準備。\n\n**Q. 能以公司方針把全員改為數位給付嗎？**\nA. 不能。數位給付以勞工同意為前提，不能對不希望的人強制。就算有人選擇以銀行帳戶領取，也不能以此為由做不利對待。此外，也不需要把薪資全額轉入，可選擇只把一部分以數位方式給付的形式。\n\n**Q. 帳戶餘額上限是100萬圓的話，會有無法領到薪資全額的情形嗎？**\nA. 100萬圓是帳戶餘額的上限，可能超過的部分會被設計成轉入事先指定的銀行帳戶等。不過，各家業者另外可能自行把一次的領取上限設得更低。當薪資金額超過該領取上限時，那個月的薪資就可能無法整筆以數位方式給付。請在導入前確認各家的條件。\n\n**Q. 可以幫我開資金移動業者的帳戶，或建議哪個服務比較好嗎？**\nA. 開立資金移動業者帳戶，或就服務作為金融商品的有利與否提供建議，都不是本事務所的業務。本事務所支援的，是勞資協定的整備、就業規則的檢視、本人同意的書式與運作流程的設計等勞務・薪資實務部分。服務本身的選擇，請以各家業者的官方資訊或適當的專家確認。\n\n## 本文的依據\n\n- 勞動基準法（昭和22年法律第49號）第24條第1項 ── 薪資必須以通貨、直接向勞工、全額支付（通貨支付・直接支付・全額支付）。但法令或勞動協約另有規定等情形為例外\n- 勞動基準法施行規則（昭和22年厚生省令第23號）第7條之2 ── 使用者在取得勞工同意時，得以①匯入金融機關存款帳戶、②滿足一定要件的證券綜合帳戶、③資金移動至厚生勞動大臣指定的資金移動業者帳戶等方法支付薪資。第1項第3號要求指定業者採取讓對勞工的匯兌交易債務不超過100萬圓的措施，或超過時迅速降至100萬圓以下的措施\n- 修正勞動基準法施行規則之一部分的省令（令和4年厚生勞動省令第158號，2022年11月28日公布） ── 使數位給付成為可能的第7條之2修正。**2023年4月1日施行**\n- 勞動基準法第89條第2號 ── 薪資的決定、計算及支付方法等，是就業規則的絕對必要記載事項\n- 厚生勞動省「資金移動業者帳戶的薪資支付（薪資的數位給付）」 ── 導入需要與過半數工會或過半數代表者締結的勞資協定（對象勞工範圍・使用的指定業者範圍等），以及每位勞工的同意（含代替帳戶＝銀行帳戶等的指定）。指定業者的要件包括帳戶餘額上限100萬圓、破產時6個營業日內清償的保證機制、對不正提領等的補償、至少每月1次可免手續費提領現金等（2026年8月30日參照）\n- 厚生勞動省「指定資金移動業者一覽」 ── 截至令和8年7月1日，指定為4家（第00001號 PayPay株式会社／第00002號 株式会社Recruit MUFG Business〔COIN+〕／第00003號 楽天Edy株式会社〔樂天Pay薪資領取〕／第00004號 au Financial Service株式会社〔au PAY薪資領取〕）。因各家的領取上限與指定業者可能新增・變更，最新資訊請以厚生勞動省及各家業者的官方資訊確認（2026年8月30日參照）\n- 資金結算相關法律（平成21年法律第59號） ── 資金移動業者的登錄・種別（第二種資金移動業）的依據\n\n因各家業者的領取上限與指定與否今後可能改變，請於導入時每次確認。\n\n本文為一般資訊提供。個別判斷，請依最新一次資料（厚生勞動省、e-Gov等），在面談後由資格者進行。四葉社会保険労務士事務所就數位給付所支援的，是勞資協定的整備、就業規則的檢視、本人同意的書式與運作流程的設計。費用請見[報酬金額表](/zh-tw/labor/ryokin)，常見問題請見[常見問題](/zh-tw/labor/faq)。執筆者為[浦松丈二](/zh-tw/about/uramatsu)（社會保險勞務士・行政書士・宅地建物取引士）。",
+        "category": "勞務的運作",
+        "keywords": [
+          "薪資 數位給付 導入",
+          "薪資 數位給付 勞資協定",
+          "數位給付 指定資金移動業者 一覽",
+          "數位給付 100萬圓 上限",
+          "薪資 〇〇Pay 領取 同意",
+          "薪資 數位給付 就業規則"
+        ],
+        "tags": [
+          "薪資",
+          "數位給付",
+          "勞資協定",
+          "就業規則",
+          "資金移動業者",
+          "薪資計算"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "員工說「想用〇〇Pay領薪」，可以馬上對應嗎？",
+            "answer": "沒辦法當場就開始。首先，用厚生勞動省的一覽確認該〇〇Pay是否為厚生勞動大臣指定的資金移動業者。即使是指定業者，也需要在事業場締結勞資協定，並取得本人含代替帳戶（銀行帳戶等）指定的同意。還要反映到就業規則的薪資支付方法。走完這些步驟就能導入，但需要幾項前置準備。"
+          },
+          {
+            "question": "能以公司方針把全員改為數位給付嗎？",
+            "answer": "不能。數位給付以勞工同意為前提，不能對不希望的人強制。就算有人選擇以銀行帳戶領取，也不能以此為由做不利對待。此外，也不需要把薪資全額轉入，可選擇只把一部分以數位方式給付的形式。"
+          },
+          {
+            "question": "帳戶餘額上限是100萬圓的話，會有無法領到薪資全額的情形嗎？",
+            "answer": "100萬圓是帳戶餘額的上限，可能超過的部分會被設計成轉入事先指定的銀行帳戶等。不過，各家業者另外可能自行把一次的領取上限設得更低。當薪資金額超過該領取上限時，那個月的薪資就可能無法整筆以數位方式給付。請在導入前確認各家的條件。"
+          },
+          {
+            "question": "可以幫我開資金移動業者的帳戶，或建議哪個服務比較好嗎？",
+            "answer": "開立資金移動業者帳戶，或就服務作為金融商品的有利與否提供建議，都不是本事務所的業務。本事務所支援的，是勞資協定的整備、就業規則的檢視、本人同意的書式與運作流程的設計等勞務・薪資實務部分。服務本身的選擇，請以各家業者的官方資訊或適當的專家確認。"
+          }
+        ]
+      },
+      "zh": {
+        "title": "要导入薪资的数字支付该怎么做？劳资协定与实务上的陷阱",
+        "excerpt": "薪资的数字支付，是以劳工同意为前提，把薪资支付到厚生劳动大臣所指定的资金移动业者（俗称〇〇Pay）账户的机制。2023年4月劳动基准法施行规则修正后成为可能。导入需要缔结劳资协定，并取得每一位劳工的同意，且没有把薪资全额转入的义务。本文整理劳资协定与本人同意该写什么、账户余额100万日元的上限、如何确认是否为指定业者，以及在就业规则与薪资系统上该整备的事项。",
+        "content": "**先讲结论**：薪资的数字支付，是以劳工同意为前提，把薪资支付到厚生劳动大臣所指定的资金移动业者（俗称〇〇Pay）账户的机制。2023年4月劳动基准法施行规则修正后成为可能。导入需要缔结劳资协定，并取得每一位劳工的同意，且没有把薪资全额转入的义务。\n\n## 薪资的数字支付在什么条件下被允许？\n\n薪资必须以通货、直接向劳工、全额支付（劳动基准法第24条第1项）。这是薪资支付五原则当中的「通货支付」「直接支付」「全额支付」。原本连汇入银行账户，也是作为通货支付原则的例外，在取得劳工同意时才被允许。\n\n薪资的数字支付，就是在这项例外中，再加上「支付到指定资金移动业者的账户」。依修正劳动基准法施行规则第7条之2的省令（令和4年厚生劳动省令第158号，2022年11月28日公布），自**2023年4月1日**起成为可能。可使用的，仅限于资金结算法上的第二种资金移动业者当中，**取得厚生劳动大臣指定**的业者账户。\n\n现在领取薪资有三种选项。\n\n| 领取方法 | 依据 | 前提 |\n|---|---|---|\n| 银行等金融机关的账户 | 施行规则第7条之2第1项第1号 | 劳工的同意 |\n| 证券综合账户（一定要件） | 同条第2号 | 劳工的同意 |\n| 指定资金移动业者的账户（数字支付） | 同条第3号 | 劳工的同意＋劳资协定 |\n\n以上都不是公司单方面能决定的，劳工的同意是出发点。只有数字支付，还额外需要在事业场缔结劳资协定。\n\n## 劳资协定与本人的同意该写什么？\n\n数字支付需要劳资协定与本人的个别同意这两道手续。两者角色不同，只有其中一项并不足够。\n\n| 手续 | 对象 | 主要内容 |\n|---|---|---|\n| 劳资协定 | 过半数工会，或过半数代表者 | 对象劳工的范围／使用的指定资金移动业者的范围等 |\n| 本人的同意 | 希望数字支付的每一位劳工 | 资金移动业者账户号码／领取金额／替代账户（银行账户等）的指定 |\n\n本人同意中最容易漏掉的，是**替代账户（银行账户等）的指定**。指定资金移动业者具备把超过账户余额上限的部分等，转入劳工事先指定的银行账户等的机制，要请本人登录该用途的账户。完全不持有银行账户的运作方式并不在预设之内。\n\n另一个前提是**不能强制**。公司不能决定「今后全员改为数字支付」。不希望的劳工仍可如以往一样以银行账户领取。此外，也不需要把薪资全额改为数字支付，只把一部分转入亦可。\n\n## 账户余额100万日元的上限该如何管理？\n\n取得指定的资金移动业者，须采取让对劳工的债务（账户余额）不超过**100万日元**的措施，或在超过时迅速降至100万日元以下的措施（施行规则第7条之2第1项第3号）。可能超过上限的部分，会自动出金到本人指定的银行账户等。这个100万日元，正是破产时余额仍受保护的前提。\n\n这里是实务上的陷阱。**「100万日元」是账户余额的上限，不是一次可领取金额的上限。** 各家业者另外可能自行把一次的领取上限设得更低（见下方「领取上限的例子」）。当薪资金额超过某业者的领取上限时，那个月的薪资就可能无法整笔以数字方式支付。\n\n指定业者还被要求具备下列保护措施。\n\n- 破产时，于**6个营业日内**向劳工清偿的保证机制\n- 对不正提领等损失予以补偿的机制\n- 至少**每月1次可免手续费**，以1日元为单位提领现金（含在ATM等现金化）\n\n## 如何确认是否为指定资金移动业者？\n\n取得指定的业者，会刊载于厚生劳动省网站的「指定资金移动业者一览」。**截至令和8年（2026年）7月1日，指定为以下4家**（2026年8月30日参照）。\n\n| 指定号码 | 业者 | 服务 | 指定年月日 |\n|---|---|---|---|\n| 第00001号 | PayPay株式会社 | PayPay薪资领取 | 2024年8月9日 |\n| 第00002号 | 株式会社Recruit MUFG Business | COIN+ | 2024年12月13日 |\n| 第00003号 | 楽天Edy株式会社 | 乐天Pay薪资领取 | 2025年3月19日 |\n| 第00004号 | au Financial Service株式会社 | au PAY薪资领取 | 2025年4月4日 |\n\n领取上限的例子，在参照公开资料的时点，PayPay为20万日元、COIN+为30万日元、乐天Pay与au PAY各为10万日元，但**上限与指定业者可能新增・变更**。考虑导入时，请以厚生劳动省与各家业者的官方信息，确认当时的一览与各家的条件。\n\n要留意的是，**未取得指定的〇〇Pay，不能用于薪资的支付**。即使是同名的支付服务，也必须是取得薪资领取专用服务指定的账户。就算员工说「想用这个App领取」，先确认是否已取得指定才是顺序。\n\n## 导入前在就业规则与薪资系统上要整备什么？\n\n薪资的支付方法是就业规则的绝对必要记载事项（劳动基准法第89条第2号「薪资的……支付方法」）。若要导入数字支付，就需要反映到就业规则中关于薪资支付方法的规定。就业规则本身的制定・申报义务，整理于[就业规则从几人开始成为义务？不是义务的又是哪些？](/zh/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo)。\n\n在此之上，实务上要整备的是以下几点。\n\n- 薪资计算・汇款系统是否对应数字支付（能否把汇款目的地分开处理）\n- 每位劳工的同意书与替代账户信息，要在哪里、如何保管\n- 可以选择领取方法的周知（含对不希望者的体贴）\n\n薪资计算怎么跑、委外还是内制，整备方式会不同。委外的行情整理于[把薪资计算委托给社会保险劳务士要花多少钱](/zh/labor/column/kyuyo-keisan-soba-sharoushi)，自社处理的体制建置整理于[想用freee内制薪资计算](/zh/labor/column/kyuyo-keisan-freee-naisei)。与[2024年变更的劳动条件明示规则](/zh/labor/column/roudou-joken-meiji-2024-henko-han-i)的检视在同一时机一并点检薪资相关规程，可避免重复作业。\n\n## 常见问题\n\n**Q. 员工说「想用〇〇Pay领薪」，可以马上对应吗？**\nA. 没办法当场就开始。首先，用厚生劳动省的一览确认该〇〇Pay是否为厚生劳动大臣指定的资金移动业者。即使是指定业者，也需要在事业场缔结劳资协定，并取得本人含替代账户（银行账户等）指定的同意。还要反映到就业规则的薪资支付方法。走完这些步骤就能导入，但需要几项前置准备。\n\n**Q. 能以公司方针把全员改为数字支付吗？**\nA. 不能。数字支付以劳工同意为前提，不能对不希望的人强制。就算有人选择以银行账户领取，也不能以此为由做不利对待。此外，也不需要把薪资全额转入，可选择只把一部分以数字方式支付的形式。\n\n**Q. 账户余额上限是100万日元的话，会有无法领到薪资全额的情形吗？**\nA. 100万日元是账户余额的上限，可能超过的部分会被设计成转入事先指定的银行账户等。不过，各家业者另外可能自行把一次的领取上限设得更低。当薪资金额超过该领取上限时，那个月的薪资就可能无法整笔以数字方式支付。请在导入前确认各家的条件。\n\n**Q. 可以帮我开资金移动业者的账户，或建议哪个服务比较好吗？**\nA. 开立资金移动业者账户，或就服务作为金融商品的有利与否提供建议，都不是本事务所的业务。本事务所支援的，是劳资协定的整备、就业规则的检视、本人同意的书式与运作流程的设计等劳务・薪资实务部分。服务本身的选择，请以各家业者的官方信息或适当的专家确认。\n\n## 本文的依据\n\n- 劳动基准法（昭和22年法律第49号）第24条第1项 ── 薪资必须以通货、直接向劳工、全额支付（通货支付・直接支付・全额支付）。但法令或劳动协约另有规定等情形为例外\n- 劳动基准法施行规则（昭和22年厚生省令第23号）第7条之2 ── 使用者在取得劳工同意时，得以①汇入金融机关存款账户、②满足一定要件的证券综合账户、③资金移动至厚生劳动大臣指定的资金移动业者账户等方法支付薪资。第1项第3号要求指定业者采取让对劳工的汇兑交易债务不超过100万日元的措施，或超过时迅速降至100万日元以下的措施\n- 修正劳动基准法施行规则之一部分的省令（令和4年厚生劳动省令第158号，2022年11月28日公布） ── 使数字支付成为可能的第7条之2修正。**2023年4月1日施行**\n- 劳动基准法第89条第2号 ── 薪资的决定、计算及支付方法等，是就业规则的绝对必要记载事项\n- 厚生劳动省「资金移动业者账户的薪资支付（薪资的数字支付）」 ── 导入需要与过半数工会或过半数代表者缔结的劳资协定（对象劳工范围・使用的指定业者范围等），以及每位劳工的同意（含替代账户＝银行账户等的指定）。指定业者的要件包括账户余额上限100万日元、破产时6个营业日内清偿的保证机制、对不正提领等的补偿、至少每月1次可免手续费提领现金等（2026年8月30日参照）\n- 厚生劳动省「指定资金移动业者一览」 ── 截至令和8年7月1日，指定为4家（第00001号 PayPay株式会社／第00002号 株式会社Recruit MUFG Business〔COIN+〕／第00003号 楽天Edy株式会社〔乐天Pay薪资领取〕／第00004号 au Financial Service株式会社〔au PAY薪资领取〕）。因各家的领取上限与指定业者可能新增・变更，最新信息请以厚生劳动省及各家业者的官方信息确认（2026年8月30日参照）\n- 资金结算相关法律（平成21年法律第59号） ── 资金移动业者的登录・种别（第二种资金移动业）的依据\n\n因各家业者的领取上限与指定与否今后可能改变，请于导入时每次确认。\n\n本文为一般信息提供。个别判断，请依最新一次资料（厚生劳动省、e-Gov等），在面谈后由资格者进行。四葉社会保険労務士事務所就数字支付所支援的，是劳资协定的整备、就业规则的检视、本人同意的书式与运作流程的设计。费用请见[报酬金额表](/zh/labor/ryokin)，常见问题请见[常见问题](/zh/labor/faq)。执笔者为[浦松丈二](/zh/about/uramatsu)（社会保险劳务士・行政书士・宅地建物取引士）。",
+        "category": "劳务的运作",
+        "keywords": [
+          "薪资 数字支付 导入",
+          "薪资 数字支付 劳资协定",
+          "数字支付 指定资金移动业者 一览",
+          "数字支付 100万日元 上限",
+          "薪资 〇〇Pay 领取 同意",
+          "薪资 数字支付 就业规则"
+        ],
+        "tags": [
+          "薪资",
+          "数字支付",
+          "劳资协定",
+          "就业规则",
+          "资金移动业者",
+          "薪资计算"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "员工说「想用〇〇Pay领薪」，可以马上对应吗？",
+            "answer": "没办法当场就开始。首先，用厚生劳动省的一览确认该〇〇Pay是否为厚生劳动大臣指定的资金移动业者。即使是指定业者，也需要在事业场缔结劳资协定，并取得本人含替代账户（银行账户等）指定的同意。还要反映到就业规则的薪资支付方法。走完这些步骤就能导入，但需要几项前置准备。"
+          },
+          {
+            "question": "能以公司方针把全员改为数字支付吗？",
+            "answer": "不能。数字支付以劳工同意为前提，不能对不希望的人强制。就算有人选择以银行账户领取，也不能以此为由做不利对待。此外，也不需要把薪资全额转入，可选择只把一部分以数字方式支付的形式。"
+          },
+          {
+            "question": "账户余额上限是100万日元的话，会有无法领到薪资全额的情形吗？",
+            "answer": "100万日元是账户余额的上限，可能超过的部分会被设计成转入事先指定的银行账户等。不过，各家业者另外可能自行把一次的领取上限设得更低。当薪资金额超过该领取上限时，那个月的薪资就可能无法整笔以数字方式支付。请在导入前确认各家的条件。"
+          },
+          {
+            "question": "可以帮我开资金移动业者的账户，或建议哪个服务比较好吗？",
+            "answer": "开立资金移动业者账户，或就服务作为金融商品的有利与否提供建议，都不是本事务所的业务。本事务所支援的，是劳资协定的整备、就业规则的检视、本人同意的书式与运作流程的设计等劳务・薪资实务部分。服务本身的选择，请以各家业者的官方信息或适当的专家确认。"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "business": "labor",
+    "slug": "roudou-joken-meiji-2024-henko-han-i",
+    "title": "労働条件の明示ルールはどう変わった？就業場所・業務の変更の範囲と有期の更新上限",
+    "date": "2026-09-01",
+    "category": "労働法の基本",
+    "excerpt": "2024年4月から、労働条件の明示ルールが変わりました。すべての労働者に「就業場所・業務の変更の範囲」を、有期契約の労働者にはさらに「更新上限」「無期転換の申込機会」「無期転換後の労働条件」を明示する必要があります。だれに・いつ明示するかは事項ごとに違います。労働条件通知書のひな型を差し替えるだけでは終わらず、就業規則・雇用契約書と実態を合わせて整えることが本質です。",
+    "content": "**結論（先に要点）**：2024年4月から、労働条件の明示ルールが変わりました。すべての労働者に「就業場所・業務の変更の範囲」を、有期契約の労働者にはさらに「更新上限」「無期転換の申込機会」「無期転換後の労働条件」を明示する必要があります。労働条件通知書のひな型を差し替えるだけでは終わらず、実態と合わせて整えることが本質です。\n\n## 2024年4月から労働条件の明示は何が増えた？\n\n使用者は、労働契約を結ぶときに、賃金・労働時間その他の労働条件を明示しなければなりません（労働基準法第15条第1項）。この明示事項を定める労働基準法施行規則第5条が改正され（令和5年厚生労働省令第39号、2023年3月30日公布）、**2024年4月1日から**、明示事項が追加されました。\n\n追加されたのは、次の4つです。だれに・いつ明示するかが事項ごとに違います。\n\n| 追加された明示事項 | 対象 | 明示のタイミング |\n|---|---|---|\n| 就業場所・業務の変更の範囲 | すべての労働者 | 労働契約の締結時／有期契約の更新時 |\n| 更新上限（通算契約期間または更新回数の上限）の有無と内容 | 有期契約の労働者 | 有期契約の締結時／更新時 |\n| 無期転換を申し込むことができる旨（無期転換申込機会） | 有期契約の労働者 | 無期転換申込権が発生する更新のタイミングごと |\n| 無期転換後の労働条件 | 有期契約の労働者 | 同上 |\n\n上の1つ目は正社員を含むすべての労働者が対象で、残る3つは有期契約の労働者だけが対象です。この線引きを取り違えると、正社員の通知書に無期転換の話を書いてしまったり、逆にパートの通知書で更新上限を書き漏らしたりします。\n\n## 「就業場所・業務の変更の範囲」はどこまで書く？\n\n従来から明示していたのは、「雇入れ直後」の就業場所と従事すべき業務でした。2024年4月からは、これに加えて**「変更の範囲」**、つまりその労働契約が続くあいだに配置転換などで変わり得る就業場所・業務の範囲を示します。\n\nポイントは、「雇入れ直後」と「変更の範囲」を分けて書くことです。将来の可能性まで含めた範囲を示すため、書き方は会社の運用によって幅があります。\n\n- 全国転勤があり得るなら、その旨がわかる範囲を示す\n- 転勤や職種変更を想定していないなら、その範囲にとどまることがわかるように書く\n\nここで実態と離れた広い範囲を書くと、後の配置転換の場面で「そんな範囲は聞いていない」という食い違いのもとになります。逆に狭く書きすぎると、必要な異動がしにくくなります。就業規則の配置転換に関する定めと通知書の記載をそろえておくことが要点で、就業規則の作成・届出義務そのものは[就業規則は何人から義務か。義務でないものは何か](/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo)に整理しています。特定の異動が有効かどうかといった個別の判断には、この記事は踏み込みません。\n\n## 有期契約の更新上限はいつ・どう示す？\n\n有期契約の労働者には、**更新上限の有無と内容**（通算契約期間または更新回数の上限）を、契約の締結時と更新時に明示します。「更新は通算3年まで」「更新は4回まで」といった上限があるなら、それを示すということです。\n\nあわせて、通達で**説明の努力義務**が設けられています。最初の契約より後に更新上限を新しく設けたり、上限を短くしたりする場合は、その理由をあらかじめ労働者に説明するよう努めることとされています。\n\n更新上限の設定そのものが違法になるわけではありませんが、上限に達したときの雇止めが有効かどうかは、また別の判断です。ここは紛争になりやすい部分で、個別の可否は当事務所では扱いません。契約形態の入口の設計は[助成金を狙うなら、最初の契約形態で決まる](/labor/column/joseikin-yuki-muki-keiyaku-katachi)も参考になります。\n\n## 無期転換の申込機会と転換後の労働条件明示とは？\n\n有期労働契約が反復更新されて**通算5年**を超えると、労働者は申込みによって無期労働契約に転換できます（労働契約法第18条。これが無期転換ルールです）。\n\n2024年4月からは、この無期転換申込権が発生する更新のタイミングごとに、次の2つを明示します。\n\n1. **無期転換を申し込むことができる旨**（無期転換申込機会）\n2. **無期転換した後の労働条件**\n\nつまり、「申し込めば無期になれます」という案内と、「無期になったらどういう労働条件になるか」の両方を、権利が生じる更新のたびに示すということです。転換後の労働条件を決めるにあたっては、正社員など他の労働者との均衡を考慮した事項について説明するよう努めることも、通達で求められています。\n\n無期転換は「正社員になる」ことと同じではありません。契約期間が有期から無期に変わるだけで、労働条件は転換前と同じでも構いません。ここを混同すると、社内の説明が食い違います。有期・無期と待遇の関係は[2026年10月、パート・有期雇用のルールはどう変わる？](/labor/column/part-yuki-2026-10-meiji-taigu-setsumei)にも整理しています。\n\n## 通知書・雇用契約書のどこを直せばよい？\n\nまず、労働条件通知書のひな型を最新のものに差し替えます。厚生労働省がモデルの様式を公表しており、追加された明示事項を反映した欄が設けられています。明示は書面の交付が原則で、労働者が希望した場合はファクシミリや電子メール等の方法によることもできます。\n\nそのうえで、通知書だけを直しても実務は回りません。次を突き合わせて確認します。\n\n- **労働条件通知書**：追加された4事項が漏れなく、様式が最新か\n- **雇用契約書**：通知書と矛盾していないか\n- **就業規則・賃金規程**：配置転換・更新・無期転換に関する定めが実態と合っているか\n\n募集の段階で示す求人票の明示（職業安定法）は、入社時の明示（労働基準法）とは別の義務です。両者の関係は[求人票に書かなければならないこと](/labor/column/kyujin-hyo-meiji-jiko-roudou-joken)にまとめています。賃金の支払方法を見直すなら、[給与のデジタル払い](/labor/column/chingin-digital-barai-roushi-kyotei)の導入と同じ機会に、通知書と規程をまとめて点検すると二度手間になりません。\n\n## よくある質問\n\n**Q. 労働条件通知書のひな型を新しくすれば、それで対応は終わりますか？**\nA. ひな型の差し替えは出発点で、それだけでは終わりません。追加された「就業場所・業務の変更の範囲」や有期契約の「更新上限」は、就業規則の配置転換・更新の定めや実際の運用と一致している必要があります。通知書と雇用契約書、就業規則の三つがずれていないかを突き合わせて確認することが本質です。\n\n**Q. 「変更の範囲」は、あり得る配置転換をすべて広く書いておけばよいですか？**\nA. 実態と離れた広い範囲を書くと、後の配置転換の場面で「そんな範囲は聞いていない」という食い違いのもとになります。逆に狭く書きすぎると、必要な異動がしにくくなります。会社の運用や就業規則の定めに沿った範囲を示すのが要点です。特定の異動が有効かどうかの個別判断は、この記事の範囲を超えます。\n\n**Q. 更新上限を新しく設けると、違法になりますか？**\nA. 更新上限を設けること自体が直ちに違法になるわけではありません。ただし、最初の契約より後に更新上限を新設したり短縮したりする場合は、その理由をあらかじめ説明するよう努めることとされています。また、上限に達したときの雇止めが有効かどうかは別の判断で、紛争性のある場面は弁護士への相談をご案内します。\n\n**Q. 無期転換すると、パートも正社員になるのですか？**\nA. 無期転換は契約期間が有期から無期に変わるだけで、正社員になることと同じではありません。労働条件は転換前と同じでも構いません。ただし2024年4月からは、無期転換申込権が生じる更新のたびに、申し込める旨と転換後の労働条件を明示する必要があります。\n\n## この記事の根拠\n\n- 労働基準法（昭和22年法律第49号）第15条第1項 ── 使用者は、労働契約の締結に際し、労働者に対して賃金、労働時間その他の労働条件を明示しなければならない\n- 労働基準法施行規則（昭和22年厚生省令第23号）第5条 ── 明示すべき労働条件を定める規定。改正により、就業の場所及び従事すべき業務の変更の範囲、通算契約期間又は有期労働契約の更新回数の上限、無期転換申込機会、無期転換後の労働条件が明示事項に追加された\n- 労働基準法施行規則等の一部を改正する省令（令和5年厚生労働省令第39号、2023年3月30日公布） ── 労働基準法第15条第1項前段に基づき明示すべき労働条件に、通算契約期間又は有期労働契約の更新回数の上限、及び就業の場所・従事すべき業務の変更の範囲を追加。**2024年4月1日施行**\n- 労働契約法（平成19年法律第128号）第18条 ── 同一の使用者との間の有期労働契約が通算5年を超えて反復更新された場合、労働者の申込みにより無期労働契約に転換する（無期転換ルール）\n- 厚生労働省「2024年4月からの労働条件明示のルール変更」 ── ①すべての労働者に「就業場所・業務の変更の範囲」を、労働契約の締結時と有期契約の更新時に明示、②有期契約の労働者に「更新上限」を締結時・更新時に明示、③無期転換申込権が発生する更新のタイミングごとに「無期転換申込機会」と「無期転換後の労働条件」を明示。あわせて、更新上限を新設・短縮する場合の理由の説明、無期転換後の労働条件を決定するにあたって他の労働者との均衡を考慮した事項の説明が努力義務とされている。明示は書面の交付が原則で、労働者が希望した場合はファクシミリ・電子メール等の方法も可（2026年8月30日参照）\n- 公的資料・条文は2026年8月30日に確認。上限に達したときの雇止めが有効かどうか、特定の配置転換が有効かどうかといった個別の該当性は、事情によって判断が分かれます。本記事は制度の枠組みの紹介にとどまり、個別の可否を判断するものではありません\n\n四葉不動産株式会社、四葉行政書士事務所、四葉社会保険労務士事務所は、それぞれ独立した事業体として業務を受任します。他の専門家をご紹介する場合も、お客様に直接ご契約いただく形をご案内し、当事務所は紹介料を受け取りません。労働条件明示について当事務所がご支援するのは、労働条件通知書・雇用契約書のひな型改訂と、就業規則・賃金規程との整合の点検です。個別の紛争や訴訟は弁護士の領域としてご案内します。費用は[報酬額表](/labor/ryokin)に、よくいただくご質問は[よくあるご質問](/labor/faq)にまとめています。\n\n本記事は一般的な情報提供です。個別のご事情に応じた判断は、最新の一次資料（厚生労働省、e-Gov等）を踏まえ、面談のうえ資格者が行います。執筆は[浦松丈二](/about/uramatsu)（社会保険労務士・行政書士・宅地建物取引士）です。",
+    "status": "published",
+    "author": {
+      "name": "浦松 丈二",
+      "title": "社会保険労務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+    },
+    "keywords": [
+      "労働条件明示 2024年4月 変更",
+      "就業場所 業務の変更の範囲 明示",
+      "有期契約 更新上限 明示",
+      "無期転換 申込機会 明示",
+      "労働条件通知書 改正 ひな型",
+      "労働基準法施行規則5条 改正"
+    ],
+    "tags": [
+      "労働条件明示",
+      "労働条件通知書",
+      "有期契約",
+      "無期転換",
+      "労働基準法",
+      "就業規則"
+    ],
+    "locales": [],
+    "faq": [
+      {
+        "question": "労働条件通知書のひな型を新しくすれば、それで対応は終わりますか？",
+        "answer": "ひな型の差し替えは出発点で、それだけでは終わりません。追加された「就業場所・業務の変更の範囲」や有期契約の「更新上限」は、就業規則の配置転換・更新の定めや実際の運用と一致している必要があります。通知書と雇用契約書、就業規則の三つがずれていないかを突き合わせて確認することが本質です。"
+      },
+      {
+        "question": "「変更の範囲」は、あり得る配置転換をすべて広く書いておけばよいですか？",
+        "answer": "実態と離れた広い範囲を書くと、後の配置転換の場面で「そんな範囲は聞いていない」という食い違いのもとになります。逆に狭く書きすぎると、必要な異動がしにくくなります。会社の運用や就業規則の定めに沿った範囲を示すのが要点です。特定の異動が有効かどうかの個別判断は、この記事の範囲を超えます。"
+      },
+      {
+        "question": "更新上限を新しく設けると、違法になりますか？",
+        "answer": "更新上限を設けること自体が直ちに違法になるわけではありません。ただし、最初の契約より後に更新上限を新設したり短縮したりする場合は、その理由をあらかじめ説明するよう努めることとされています。また、上限に達したときの雇止めが有効かどうかは別の判断で、紛争性のある場面は弁護士への相談をご案内します。"
+      },
+      {
+        "question": "無期転換すると、パートも正社員になるのですか？",
+        "answer": "無期転換は契約期間が有期から無期に変わるだけで、正社員になることと同じではありません。労働条件は転換前と同じでも構いません。ただし2024年4月からは、無期転換申込権が生じる更新のたびに、申し込める旨と転換後の労働条件を明示する必要があります。"
+      }
+    ],
+    "translations": {
+      "en": {
+        "title": "How did the working-conditions notice rules change? The scope of changes to workplace and duties, and the renewal cap for fixed-term contracts",
+        "excerpt": "From April 2024, the rules for stating working conditions changed. For all workers, you must state \"the scope of changes to the place of work and duties\"; for fixed-term workers, you must additionally state the \"renewal cap,\" the \"opportunity to apply for conversion to open-ended employment,\" and the \"working conditions after conversion.\" Who must be told, and when, differs by item. It is not enough to swap out the template of the working-conditions notice — the essence is to put it in order so that it matches the reality, together with the work rules and employment contract.",
+        "content": "**In short:** From April 2024, the rules for stating working conditions changed. For all workers, you must state **\"the scope of changes to the place of work and duties\"**; for fixed-term workers, you must additionally state the **\"renewal cap,\" the \"opportunity to apply for conversion to open-ended employment,\" and the \"working conditions after conversion.\"** It is not enough to swap out the template of the working-conditions notice — the essence is to put it in order so that it matches the reality.\n\n## What was added to the statement of working conditions from April 2024?\n\nWhen concluding a labour contract, an employer must state the wages, working hours and other working conditions (Labour Standards Act, Article 15, paragraph 1). Article 5 of the Ordinance for Enforcement of the Labour Standards Act, which prescribes these matters, was amended (Ministry of Health, Labour and Welfare Ordinance No. 39 of 2023, promulgated on 30 March 2023), and **from 1 April 2024** the matters to be stated were added to.\n\nFour items were added. Who must be told, and when, differs by item.\n\n| Added matter to be stated | Covered | Timing of statement |\n|---|---|---|\n| The scope of changes to the place of work and duties | All workers | At conclusion of the labour contract / at renewal of a fixed-term contract |\n| The presence and content of a renewal cap (a cap on the total contract period or the number of renewals) | Fixed-term workers | At conclusion / at renewal of a fixed-term contract |\n| The fact that conversion to open-ended employment may be applied for (the conversion application opportunity) | Fixed-term workers | Each time a renewal at which the conversion application right arises occurs |\n| Working conditions after conversion to open-ended employment | Fixed-term workers | Same as above |\n\nThe first item above covers all workers, including regular employees; the remaining three cover only fixed-term workers. Confusing this line leads to writing about open-ended conversion in a regular employee's notice, or, conversely, omitting the renewal cap in a part-timer's notice.\n\n## How far must \"the scope of changes to the place of work and duties\" be written?\n\nWhat was stated previously was the place of work and duties \"immediately after hiring.\" From April 2024, in addition, you state **\"the scope of changes\"** — that is, the range within which the place of work and duties may change, through reassignment and the like, during the term of that labour contract.\n\nThe point is to write \"immediately after hiring\" and \"the scope of changes\" separately. Because it shows the range including future possibilities, there is latitude in how it is written depending on the company's operation.\n\n- If nationwide transfers are possible, indicate a range that makes this clear\n- If transfers or changes of job type are not envisaged, write it so that it is clear the range stays within those bounds\n\nWriting a broad range divorced from the reality here sows the seeds of a discrepancy later at the reassignment stage — \"I never heard of such a range.\" Conversely, writing it too narrowly makes necessary transfers difficult. The point is to align the provisions on reassignment in the work rules with the statement in the notice; the duty to draw up and file work rules itself is organised in [from how many employees are work rules mandatory, and what is not mandatory](/en/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo). This article does not go into individual judgments such as whether a particular transfer is valid.\n\n## When and how must the renewal cap for a fixed-term contract be shown?\n\nFor fixed-term workers, you state the **presence and content of a renewal cap** (a cap on the total contract period or the number of renewals) at the conclusion and at the renewal of the contract. If there is a cap such as \"renewals up to a total of three years\" or \"renewals up to four times,\" you show it.\n\nAlongside this, an **effort duty to explain** is provided by administrative notice. Where you newly set a renewal cap, or shorten a cap, after the initial contract, you are to endeavour to explain the reason to the worker in advance.\n\nSetting a renewal cap is not itself unlawful, but whether a non-renewal (refusal to renew) when the cap is reached is valid is a separate judgment. This is an area prone to disputes, and we do not handle individual determinations of whether it is permissible. The design of the contract type at the entry point is also covered in [if you are aiming for a subsidy, it is decided by the first contract type](/en/labor/column/joseikin-yuki-muki-keiyaku-katachi).\n\n## What are the conversion application opportunity and the statement of post-conversion working conditions?\n\nWhen a fixed-term labour contract is repeatedly renewed and exceeds a total of **five years**, the worker can, by application, convert to an open-ended labour contract (Labour Contract Act, Article 18 — this is the open-ended conversion rule).\n\nFrom April 2024, each time a renewal at which this conversion application right arises occurs, you state the following two.\n\n1. **The fact that conversion to open-ended employment may be applied for** (the conversion application opportunity)\n2. **The working conditions after conversion to open-ended employment**\n\nIn other words, you show both the notice that \"if you apply, you can become open-ended,\" and \"what the working conditions will be if you become open-ended,\" each time a renewal at which the right arises occurs. When determining the post-conversion working conditions, you are also required by administrative notice to endeavour to explain the matters considered for balance with other workers, such as regular employees.\n\nOpen-ended conversion is not the same as \"becoming a regular employee.\" Only the contract term changes from fixed to open-ended; the working conditions may remain the same as before conversion. Confusing this leads to inconsistent explanations within the company. The relationship between fixed-term/open-ended status and treatment is also organised in [how do the rules for part-time and fixed-term employment change in October 2026?](/en/labor/column/part-yuki-2026-10-meiji-taigu-setsumei).\n\n## Where should the notice and the employment contract be fixed?\n\nFirst, replace the template of the working-conditions notice with the latest one. The Ministry of Health, Labour and Welfare has published a model form, with fields reflecting the added matters to be stated. Statement is in principle by delivery of a written document; where the worker so wishes, methods such as facsimile or e-mail may also be used.\n\nOn top of that, fixing only the notice does not make the practice work. Cross-check the following.\n\n- **Working-conditions notice:** whether the four added matters are complete and the form is up to date\n- **Employment contract:** whether it contradicts the notice\n- **Work rules and wage regulations:** whether the provisions on reassignment, renewal and open-ended conversion match the reality\n\nThe statement shown at the recruitment stage in a job advertisement (Employment Security Act) is a separate duty from the statement at hiring (Labour Standards Act). Their relationship is organised in [what must be written in a job advertisement](/en/labor/column/kyujin-hyo-meiji-jiko-roudou-joken). If you are reviewing the method of wage payment, checking the notice and the regulations together at the same opportunity as introducing [digital wage payment](/en/labor/column/chingin-digital-barai-roushi-kyotei) avoids duplicated work.\n\n## Frequently asked questions\n\n**Q. If I renew the template of the working-conditions notice, is the response then complete?**\nA. Replacing the template is the starting point, and that alone does not complete it. The added \"scope of changes to the place of work and duties\" and the \"renewal cap\" for fixed-term contracts must be consistent with the reassignment and renewal provisions of the work rules and with actual practice. The essence is to cross-check that the notice, the employment contract and the work rules do not diverge.\n\n**Q. For \"the scope of changes,\" is it enough to write every conceivable reassignment broadly?**\nA. Writing a broad range divorced from the reality sows the seeds of a discrepancy later at the reassignment stage — \"I never heard of such a range.\" Conversely, writing it too narrowly makes necessary transfers difficult. The point is to show a range in line with the company's operation and the provisions of the work rules. Individual judgments on whether a particular transfer is valid are beyond the scope of this article.\n\n**Q. If I newly set a renewal cap, is it unlawful?**\nA. Setting a renewal cap is not itself immediately unlawful. However, where you newly set, or shorten, a renewal cap after the initial contract, you are to endeavour to explain the reason in advance. Also, whether a non-renewal when the cap is reached is valid is a separate judgment, and for matters with a dispute nature we point you to a consultation with a lawyer.\n\n**Q. If a part-timer converts to open-ended, do they become a regular employee?**\nA. Open-ended conversion only changes the contract term from fixed to open-ended; it is not the same as becoming a regular employee. The working conditions may remain the same as before conversion. From April 2024, however, each time a renewal at which the conversion application right arises occurs, you must state the fact that an application may be made and the post-conversion working conditions.\n\n## Sources\n\n- Labour Standards Act (Act No. 49 of 1947), Article 15, paragraph 1 — an employer must, on concluding a labour contract, state to the worker the wages, working hours and other working conditions\n- Ordinance for Enforcement of the Labour Standards Act (Ministry of Health and Welfare Ordinance No. 23 of 1947), Article 5 — the provision prescribing the working conditions to be stated. By amendment, the scope of changes to the place of work and duties, the cap on the total contract period or the number of renewals of a fixed-term contract, the conversion application opportunity, and the working conditions after conversion were added to the matters to be stated\n- Ordinance Partially Amending the Ordinance for Enforcement of the Labour Standards Act and others (Ministry of Health, Labour and Welfare Ordinance No. 39 of 2023, promulgated on 30 March 2023) — adds, to the working conditions to be stated under the first sentence of Article 15, paragraph 1 of the Labour Standards Act, the cap on the total contract period or the number of renewals of a fixed-term contract, and the scope of changes to the place of work and duties. **In force from 1 April 2024**\n- Labour Contract Act (Act No. 128 of 2007), Article 18 — where a fixed-term labour contract with the same employer is repeatedly renewed and exceeds a total of five years, it converts to an open-ended labour contract on the worker's application (the open-ended conversion rule)\n- Ministry of Health, Labour and Welfare, \"Change to the working-conditions notice rules from April 2024\" — (1) state \"the scope of changes to the place of work and duties\" to all workers at conclusion of the labour contract and at renewal of a fixed-term contract; (2) state the \"renewal cap\" to fixed-term workers at conclusion and renewal; (3) state the \"conversion application opportunity\" and the \"working conditions after conversion\" each time a renewal at which the conversion application right arises occurs. In addition, explaining the reason for newly setting or shortening a renewal cap, and explaining the matters considered for balance with other workers when determining the post-conversion working conditions, are made effort duties. Statement is in principle by delivery of a written document; where the worker so wishes, methods such as facsimile or e-mail are also permitted (confirmed on 30 August 2026)\n- The validity of a particular transfer or a non-renewal, and other individual determinations of applicability, are not handled in this article. They vary with the circumstances; this article is limited to introducing the framework of the system\n\nThis article is general information. Individual judgments, in light of the latest primary sources (Ministry of Health, Labour and Welfare, e-Gov, etc.), are made by a qualified professional after a consultation. What 四葉社会保険労務士事務所 supports on the statement of working conditions is revising the templates of the working-conditions notice and the employment contract, and checking their consistency with the work rules and wage regulations. Individual disputes and litigation are pointed to the domain of a lawyer. For fees, see [the fee schedule](/en/labor/ryokin); for frequently asked questions, see [the FAQ](/en/labor/faq). Written by [Joji Uramatsu](/en/about/uramatsu) (Shakai Hoken Roumushi, Gyoseishoshi, Registered Real Estate Transaction Specialist).",
+        "category": "Labour law basics",
+        "keywords": [
+          "working conditions notice 2024 change",
+          "scope of changes workplace duties",
+          "fixed-term contract renewal cap",
+          "open-ended conversion application opportunity",
+          "working-conditions notice template revision",
+          "Labour Standards Act Enforcement Ordinance Article 5"
+        ],
+        "tags": [
+          "working conditions notice",
+          "notice of working conditions",
+          "fixed-term contract",
+          "open-ended conversion",
+          "Labour Standards Act",
+          "work rules"
+        ],
+        "author": {
+          "name": "Joji Uramatsu",
+          "title": "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所"
+        },
+        "faq": [
+          {
+            "question": "If I renew the template of the working-conditions notice, is the response then complete?",
+            "answer": "Replacing the template is the starting point, and that alone does not complete it. The added \"scope of changes to the place of work and duties\" and the \"renewal cap\" for fixed-term contracts must be consistent with the reassignment and renewal provisions of the work rules and with actual practice. The essence is to cross-check that the notice, the employment contract and the work rules do not diverge."
+          },
+          {
+            "question": "For \"the scope of changes,\" is it enough to write every conceivable reassignment broadly?",
+            "answer": "Writing a broad range divorced from the reality sows the seeds of a discrepancy later at the reassignment stage — \"I never heard of such a range.\" Conversely, writing it too narrowly makes necessary transfers difficult. The point is to show a range in line with the company's operation and the provisions of the work rules. Individual judgments on whether a particular transfer is valid are beyond the scope of this article."
+          },
+          {
+            "question": "If I newly set a renewal cap, is it unlawful?",
+            "answer": "Setting a renewal cap is not itself immediately unlawful. However, where you newly set, or shorten, a renewal cap after the initial contract, you are to endeavour to explain the reason in advance. Also, whether a non-renewal when the cap is reached is valid is a separate judgment, and for matters with a dispute nature we point you to a consultation with a lawyer."
+          },
+          {
+            "question": "If a part-timer converts to open-ended, do they become a regular employee?",
+            "answer": "Open-ended conversion only changes the contract term from fixed to open-ended; it is not the same as becoming a regular employee. The working conditions may remain the same as before conversion. From April 2024, however, each time a renewal at which the conversion application right arises occurs, you must state the fact that an application may be made and the post-conversion working conditions."
+          }
+        ]
+      },
+      "zh-tw": {
+        "title": "勞動條件的明示規則如何改變了？工作場所・業務變更的範圍，以及有期契約的更新上限",
+        "excerpt": "自2024年4月起，勞動條件的明示規則改變了。對所有勞工，必須明示「工作場所・業務變更的範圍」；對有期契約的勞工，還要明示「更新上限」「無期轉換的申請機會」「無期轉換後的勞動條件」。該對誰、在何時明示，依事項而不同。只把勞動條件通知書的範本換掉並不算完成，本質在於與就業規則・僱用契約書及實態對齊。",
+        "content": "**先講結論**：自2024年4月起，勞動條件的明示規則改變了。對所有勞工，必須明示**「工作場所・業務變更的範圍」**；對有期契約的勞工，還要明示**「更新上限」「無期轉換的申請機會」「無期轉換後的勞動條件」**。只把勞動條件通知書的範本換掉並不算完成，本質在於與實態對齊。\n\n## 2024年4月起，勞動條件的明示增加了什麼？\n\n締結勞動契約時，使用者必須明示薪資、勞動時間及其他勞動條件（勞動基準法第15條第1項）。規定這些事項的勞動基準法施行規則第5條經修正（令和5年厚生勞動省令第39號，2023年3月30日公布），自**2024年4月1日**起，明示事項有所追加。\n\n追加的有以下4項。該對誰、在何時明示，依事項而不同。\n\n| 追加的明示事項 | 對象 | 明示時機 |\n|---|---|---|\n| 工作場所・業務變更的範圍 | 所有勞工 | 勞動契約締結時／有期契約更新時 |\n| 更新上限（通算契約期間或更新次數的上限）的有無與內容 | 有期契約的勞工 | 有期契約締結時／更新時 |\n| 可申請無期轉換的意旨（無期轉換申請機會） | 有期契約的勞工 | 無期轉換申請權發生的每次更新時機 |\n| 無期轉換後的勞動條件 | 有期契約的勞工 | 同上 |\n\n上面第1項的對象是含正職員在內的所有勞工，其餘3項只以有期契約的勞工為對象。若取錯這條界線，就會在正職員的通知書寫上無期轉換的內容，或反過來在兼職的通知書漏掉更新上限。\n\n## 「工作場所・業務變更的範圍」該寫到什麼程度？\n\n以往明示的，是「僱入直後」的工作場所與應從事的業務。自2024年4月起，還要加上**「變更的範圍」**，也就是在該勞動契約存續期間，因配置轉換等而可能變動的工作場所・業務的範圍。\n\n要點是把「僱入直後」與「變更的範圍」分開寫。由於要顯示含未來可能性在內的範圍，寫法會因公司運作而有幅度。\n\n- 若可能有全國調動，就顯示能看出這點的範圍\n- 若未設想調動或職種變更，就寫得讓人看出範圍會停留在此\n\n在此寫上與實態脫節的寬範圍，會成為日後配置轉換場面「沒聽過那種範圍」的分歧根源。反之寫得太窄，必要的調動就難以進行。要點是讓就業規則中關於配置轉換的規定與通知書的記載對齊；就業規則本身的制定・申報義務，整理於[就業規則從幾人開始成為義務？不是義務的又是哪些？](/zh-tw/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo)。特定調動是否有效等個別判斷，本文不涉入。\n\n## 有期契約的更新上限該在何時・如何顯示？\n\n對有期契約的勞工，要在契約締結時與更新時，明示**更新上限的有無與內容**（通算契約期間或更新次數的上限）。若有「更新至通算3年為止」「更新至4次為止」這類上限，就要顯示。\n\n此外，通達設有**說明的努力義務**。若在最初的契約之後才新設更新上限，或縮短上限，應事先向勞工說明理由並為此努力。\n\n設定更新上限本身並不違法，但達到上限時的雇止め（不更新）是否有效，是另一個判斷。此處容易產生紛爭，個別可否本事務所不予處理。契約形態的入口設計，可參考[要爭取補助金，取決於最初的契約形態](/zh-tw/labor/column/joseikin-yuki-muki-keiyaku-katachi)。\n\n## 無期轉換的申請機會與轉換後的勞動條件明示是什麼？\n\n有期勞動契約反覆更新而超過**通算5年**時，勞工可依申請轉換為無期勞動契約（勞動契約法第18條，即無期轉換規則）。\n\n自2024年4月起，在此無期轉換申請權發生的每次更新時機，要明示下列兩項。\n\n1. **可申請無期轉換的意旨**（無期轉換申請機會）\n2. **無期轉換後的勞動條件**\n\n也就是說，要在權利發生的每次更新時，同時顯示「只要申請就能轉為無期」的告知，以及「轉為無期後勞動條件會如何」。在決定轉換後的勞動條件時，通達也要求就與正職員等其他勞工均衡考量的事項，努力加以說明。\n\n無期轉換與「成為正職員」並不相同。只是契約期間由有期變為無期，勞動條件維持與轉換前相同亦可。混淆此點會使公司內部的說明產生分歧。有期・無期與待遇的關係，也整理於[2026年10月，兼職・有期僱用的規則如何改變？](/zh-tw/labor/column/part-yuki-2026-10-meiji-taigu-setsumei)。\n\n## 通知書・僱用契約書該修正哪裡？\n\n首先，把勞動條件通知書的範本換成最新版。厚生勞動省公布了模範樣式，設有反映追加明示事項的欄位。明示以交付書面為原則，勞工希望時，也可用傳真或電子郵件等方法。\n\n在此之上，只修正通知書實務仍轉不動。請比對確認以下各點。\n\n- **勞動條件通知書**：追加的4事項是否齊備、樣式是否為最新\n- **僱用契約書**：是否與通知書矛盾\n- **就業規則・薪資規程**：關於配置轉換・更新・無期轉換的規定是否與實態一致\n\n招募階段以徵才廣告顯示的明示（職業安定法），與僱用時的明示（勞動基準法）是不同的義務。兩者的關係整理於[徵才廣告必須寫什麼](/zh-tw/labor/column/kyujin-hyo-meiji-jiko-roudou-joken)。若要檢視薪資的支付方法，可在導入[薪資的數位給付](/zh-tw/labor/column/chingin-digital-barai-roushi-kyotei)的同一機會，一併點檢通知書與規程，避免重複作業。\n\n## 常見問題\n\n**Q. 只要把勞動條件通知書的範本更新，對應就算完成了嗎？**\nA. 更換範本是出發點，僅此並不算完成。追加的「工作場所・業務變更的範圍」與有期契約的「更新上限」，須與就業規則的配置轉換・更新規定及實際運作一致。本質是比對確認通知書、僱用契約書、就業規則三者沒有偏離。\n\n**Q. 「變更的範圍」是不是把可能的配置轉換全部寫得很寬就好？**\nA. 寫上與實態脫節的寬範圍，會成為日後配置轉換場面「沒聽過那種範圍」的紛爭源頭。反之寫得太窄，必要的調動就難以進行。要點是顯示與公司運作及就業規則規定相符的範圍。特定調動是否有效的個別判斷，超出本文範圍。\n\n**Q. 新設更新上限會違法嗎？**\nA. 設定更新上限本身並不立即違法。不過，若在最初的契約之後才新設或縮短更新上限，應事先說明理由並為此努力。此外，達到上限時的雇止め是否有效是另一個判斷，具紛爭性的場面，我們會引導向律師諮詢。\n\n**Q. 兼職轉為無期後，就會成為正職員嗎？**\nA. 無期轉換只是契約期間由有期變為無期，與成為正職員並不相同。勞動條件維持與轉換前相同亦可。不過自2024年4月起，在無期轉換申請權發生的每次更新時，須明示可申請的意旨與轉換後的勞動條件。\n\n## 本文的依據\n\n- 勞動基準法（昭和22年法律第49號）第15條第1項 ── 使用者於締結勞動契約之際，須向勞工明示薪資、勞動時間及其他勞動條件\n- 勞動基準法施行規則（昭和22年厚生省令第23號）第5條 ── 規定應明示的勞動條件。經修正，工作場所及應從事業務的變更範圍、有期勞動契約的通算契約期間或更新次數的上限、無期轉換申請機會、無期轉換後的勞動條件，均被追加為明示事項\n- 修正勞動基準法施行規則等之一部分的省令（令和5年厚生勞動省令第39號，2023年3月30日公布） ── 在依勞動基準法第15條第1項前段應明示的勞動條件中，追加有期勞動契約的通算契約期間或更新次數的上限，以及工作場所・應從事業務的變更範圍。**2024年4月1日施行**\n- 勞動契約法（平成19年法律第128號）第18條 ── 與同一使用者之間的有期勞動契約，反覆更新而超過通算5年時，依勞工的申請轉換為無期勞動契約（無期轉換規則）\n- 厚生勞動省「2024年4月起勞動條件明示規則的變更」 ── ①對所有勞工，於勞動契約締結時與有期契約更新時明示「工作場所・業務變更的範圍」；②對有期契約勞工，於締結時・更新時明示「更新上限」；③於無期轉換申請權發生的每次更新時機，明示「無期轉換申請機會」與「無期轉換後的勞動條件」。此外，新設・縮短更新上限時說明理由、決定無期轉換後勞動條件時就與其他勞工均衡考量的事項加以說明，均為努力義務。明示以交付書面為原則，勞工希望時亦可用傳真・電子郵件等方法（2026年8月30日參照）\n- 特定調動或雇止め的有效性等個別該當性的判斷，本文不予處理。其依情況而有所不同，本文僅止於介紹制度的框架\n\n本文為一般資訊提供。個別判斷，請依最新一次資料（厚生勞動省、e-Gov等），在面談後由資格者進行。四葉社会保険労務士事務所就勞動條件明示所支援的，是勞動條件通知書・僱用契約書範本的修訂，以及與就業規則・薪資規程整合的點檢。個別紛爭・訴訟，會引導向律師的領域。費用請見[報酬金額表](/zh-tw/labor/ryokin)，常見問題請見[常見問題](/zh-tw/labor/faq)。執筆者為[浦松丈二](/zh-tw/about/uramatsu)（社會保險勞務士・行政書士・宅地建物取引士）。",
+        "category": "勞動法基礎",
+        "keywords": [
+          "勞動條件明示 2024年4月 變更",
+          "工作場所 業務變更的範圍 明示",
+          "有期契約 更新上限 明示",
+          "無期轉換 申請機會 明示",
+          "勞動條件通知書 改正 範本",
+          "勞動基準法施行規則5條 改正"
+        ],
+        "tags": [
+          "勞動條件明示",
+          "勞動條件通知書",
+          "有期契約",
+          "無期轉換",
+          "勞動基準法",
+          "就業規則"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "只要把勞動條件通知書的範本更新，對應就算完成了嗎？",
+            "answer": "更換範本是出發點，僅此並不算完成。追加的「工作場所・業務變更的範圍」與有期契約的「更新上限」，須與就業規則的配置轉換・更新規定及實際運作一致。本質是比對確認通知書、僱用契約書、就業規則三者沒有偏離。"
+          },
+          {
+            "question": "「變更的範圍」是不是把可能的配置轉換全部寫得很寬就好？",
+            "answer": "寫上與實態脫節的寬範圍，會成為日後配置轉換場面「沒聽過那種範圍」的紛爭源頭。反之寫得太窄，必要的調動就難以進行。要點是顯示與公司運作及就業規則規定相符的範圍。特定調動是否有效的個別判斷，超出本文範圍。"
+          },
+          {
+            "question": "新設更新上限會違法嗎？",
+            "answer": "設定更新上限本身並不立即違法。不過，若在最初的契約之後才新設或縮短更新上限，應事先說明理由並為此努力。此外，達到上限時的雇止め是否有效是另一個判斷，具紛爭性的場面，我們會引導向律師諮詢。"
+          },
+          {
+            "question": "兼職轉為無期後，就會成為正職員嗎？",
+            "answer": "無期轉換只是契約期間由有期變為無期，與成為正職員並不相同。勞動條件維持與轉換前相同亦可。不過自2024年4月起，在無期轉換申請權發生的每次更新時，須明示可申請的意旨與轉換後的勞動條件。"
+          }
+        ]
+      },
+      "zh": {
+        "title": "劳动条件的明示规则如何改变了？工作场所・业务变更的范围，以及有期契约的更新上限",
+        "excerpt": "自2024年4月起，劳动条件的明示规则改变了。对所有劳工，必须明示「工作场所・业务变更的范围」；对有期契约的劳工，还要明示「更新上限」「无期转换的申请机会」「无期转换后的劳动条件」。该对谁、在何时明示，依事项而不同。只把劳动条件通知书的范本换掉并不算完成，本质在于与就业规则・雇用契约书及实态对齐。",
+        "content": "**先讲结论**：自2024年4月起，劳动条件的明示规则改变了。对所有劳工，必须明示**「工作场所・业务变更的范围」**；对有期契约的劳工，还要明示**「更新上限」「无期转换的申请机会」「无期转换后的劳动条件」**。只把劳动条件通知书的范本换掉并不算完成，本质在于与实态对齐。\n\n## 2024年4月起，劳动条件的明示增加了什么？\n\n缔结劳动契约时，使用者必须明示薪资、劳动时间及其他劳动条件（劳动基准法第15条第1项）。规定这些事项的劳动基准法施行规则第5条经修正（令和5年厚生劳动省令第39号，2023年3月30日公布），自**2024年4月1日**起，明示事项有所追加。\n\n追加的有以下4项。该对谁、在何时明示，依事项而不同。\n\n| 追加的明示事项 | 对象 | 明示时机 |\n|---|---|---|\n| 工作场所・业务变更的范围 | 所有劳工 | 劳动契约缔结时／有期契约更新时 |\n| 更新上限（通算契约期间或更新次数的上限）的有无与内容 | 有期契约的劳工 | 有期契约缔结时／更新时 |\n| 可申请无期转换的意旨（无期转换申请机会） | 有期契约的劳工 | 无期转换申请权发生的每次更新时机 |\n| 无期转换后的劳动条件 | 有期契约的劳工 | 同上 |\n\n上面第1项的对象是含正职员在内的所有劳工，其余3项只以有期契约的劳工为对象。若取错这条界线，就会在正职员的通知书写上无期转换的内容，或反过来在兼职的通知书漏掉更新上限。\n\n## 「工作场所・业务变更的范围」该写到什么程度？\n\n以往明示的，是「雇入直后」的工作场所与应从事的业务。自2024年4月起，还要加上**「变更的范围」**，也就是在该劳动契约存续期间，因配置转换等而可能变动的工作场所・业务的范围。\n\n要点是把「雇入直后」与「变更的范围」分开写。由于要显示含未来可能性在内的范围，写法会因公司运作而有幅度。\n\n- 若可能有全国调动，就显示能看出这点的范围\n- 若未设想调动或职种变更，就写得让人看出范围会停留在此\n\n在此写上与实态脱节的宽范围，会成为日后配置转换场面「没听过那种范围」的分歧根源。反之写得太窄，必要的调动就难以进行。要点是让就业规则中关于配置转换的规定与通知书的记载对齐；就业规则本身的制定・申报义务，整理于[就业规则从几人开始成为义务？不是义务的又是哪些？](/zh/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo)。特定调动是否有效等个别判断，本文不涉入。\n\n## 有期契约的更新上限该在何时・如何显示？\n\n对有期契约的劳工，要在契约缔结时与更新时，明示**更新上限的有无与内容**（通算契约期间或更新次数的上限）。若有「更新至通算3年为止」「更新至4次为止」这类上限，就要显示。\n\n此外，通达设有**说明的努力义务**。若在最初的契约之后才新设更新上限，或缩短上限，应事先向劳工说明理由并为此努力。\n\n设定更新上限本身并不违法，但达到上限时的不更新（雇止め）是否有效，是另一个判断。此处容易产生纠纷，个别可否本事务所不予处理。契约形态的入口设计，可参考[要争取补助金，取决于最初的契约形态](/zh/labor/column/joseikin-yuki-muki-keiyaku-katachi)。\n\n## 无期转换的申请机会与转换后的劳动条件明示是什么？\n\n有期劳动契约反复更新而超过**通算5年**时，劳工可依申请转换为无期劳动契约（劳动契约法第18条，即无期转换规则）。\n\n自2024年4月起，在此无期转换申请权发生的每次更新时机，要明示下列两项。\n\n1. **可申请无期转换的意旨**（无期转换申请机会）\n2. **无期转换后的劳动条件**\n\n也就是说，要在权利发生的每次更新时，同时显示「只要申请就能转为无期」的告知，以及「转为无期后劳动条件会如何」。在决定转换后的劳动条件时，通达也要求就与正职员等其他劳工均衡考量的事项，努力加以说明。\n\n无期转换与「成为正职员」并不相同。只是契约期间由有期变为无期，劳动条件维持与转换前相同亦可。混淆此点会使公司内部的说明产生分歧。有期・无期与待遇的关系，也整理于[2026年10月，兼职・有期雇用的规则如何改变？](/zh/labor/column/part-yuki-2026-10-meiji-taigu-setsumei)。\n\n## 通知书・雇用契约书该修正哪里？\n\n首先，把劳动条件通知书的范本换成最新版。厚生劳动省公布了模范样式，设有反映追加明示事项的栏位。明示以交付书面为原则，劳工希望时，也可用传真或电子邮件等方法。\n\n在此之上，只修正通知书实务仍转不动。请比对确认以下各点。\n\n- **劳动条件通知书**：追加的4事项是否齐备、样式是否为最新\n- **雇用契约书**：是否与通知书矛盾\n- **就业规则・薪资规程**：关于配置转换・更新・无期转换的规定是否与实态一致\n\n招募阶段以徵才广告显示的明示（职业安定法），与雇用时的明示（劳动基准法）是不同的义务。两者的关系整理于[徵才广告必须写什么](/zh/labor/column/kyujin-hyo-meiji-jiko-roudou-joken)。若要检视薪资的支付方法，可在导入[薪资的数字支付](/zh/labor/column/chingin-digital-barai-roushi-kyotei)的同一机会，一并点检通知书与规程，避免重复作业。\n\n## 常见问题\n\n**Q. 只要把劳动条件通知书的范本更新，对应就算完成了吗？**\nA. 更换范本是出发点，仅此并不算完成。追加的「工作场所・业务变更的范围」与有期契约的「更新上限」，须与就业规则的配置转换・更新规定及实际运作一致。本质是比对确认通知书、雇用契约书、就业规则三者没有偏离。\n\n**Q. 「变更的范围」是不是把可能的配置转换全部写得很宽就好？**\nA. 写上与实态脱节的宽范围，会成为日后配置转换场面「没听过那种范围」的纠纷源头。反之写得太窄，必要的调动就难以进行。要点是显示与公司运作及就业规则规定相符的范围。特定调动是否有效的个别判断，超出本文范围。\n\n**Q. 新设更新上限会违法吗？**\nA. 设定更新上限本身并不立即违法。不过，若在最初的契约之后才新设或缩短更新上限，应事先说明理由并为此努力。此外，达到上限时的不更新是否有效是另一个判断，具纠纷性的场面，我们会引导向律师咨询。\n\n**Q. 兼职转为无期后，就会成为正职员吗？**\nA. 无期转换只是契约期间由有期变为无期，与成为正职员并不相同。劳动条件维持与转换前相同亦可。不过自2024年4月起，在无期转换申请权发生的每次更新时，须明示可申请的意旨与转换后的劳动条件。\n\n## 本文的依据\n\n- 劳动基准法（昭和22年法律第49号）第15条第1项 ── 使用者于缔结劳动契约之际，须向劳工明示薪资、劳动时间及其他劳动条件\n- 劳动基准法施行规则（昭和22年厚生省令第23号）第5条 ── 规定应明示的劳动条件。经修正，工作场所及应从事业务的变更范围、有期劳动契约的通算契约期间或更新次数的上限、无期转换申请机会、无期转换后的劳动条件，均被追加为明示事项\n- 修正劳动基准法施行规则等之一部分的省令（令和5年厚生劳动省令第39号，2023年3月30日公布） ── 在依劳动基准法第15条第1项前段应明示的劳动条件中，追加有期劳动契约的通算契约期间或更新次数的上限，以及工作场所・应从事业务的变更范围。**2024年4月1日施行**\n- 劳动契约法（平成19年法律第128号）第18条 ── 与同一使用者之间的有期劳动契约，反复更新而超过通算5年时，依劳工的申请转换为无期劳动契约（无期转换规则）\n- 厚生劳动省「2024年4月起劳动条件明示规则的变更」 ── ①对所有劳工，于劳动契约缔结时与有期契约更新时明示「工作场所・业务变更的范围」；②对有期契约劳工，于缔结时・更新时明示「更新上限」；③于无期转换申请权发生的每次更新时机，明示「无期转换申请机会」与「无期转换后的劳动条件」。此外，新设・缩短更新上限时说明理由、决定无期转换后劳动条件时就与其他劳工均衡考量的事项加以说明，均为努力义务。明示以交付书面为原则，劳工希望时亦可用传真・电子邮件等方法（2026年8月30日参照）\n- 特定调动或不更新的有效性等个别该当性的判断，本文不予处理。其依情况而有所不同，本文仅止于介绍制度的框架\n\n本文为一般信息提供。个别判断，请依最新一次资料（厚生劳动省、e-Gov等），在面谈后由资格者进行。四葉社会保険労務士事務所就劳动条件明示所支援的，是劳动条件通知书・雇用契约书范本的修订，以及与就业规则・薪资规程整合的点检。个别纠纷・诉讼，会引导向律师的领域。费用请见[报酬金额表](/zh/labor/ryokin)，常见问题请见[常见问题](/zh/labor/faq)。执笔者为[浦松丈二](/zh/about/uramatsu)（社会保险劳务士・行政书士・宅地建物取引士）。",
+        "category": "劳动法基础",
+        "keywords": [
+          "劳动条件明示 2024年4月 变更",
+          "工作场所 业务变更的范围 明示",
+          "有期契约 更新上限 明示",
+          "无期转换 申请机会 明示",
+          "劳动条件通知书 改正 范本",
+          "劳动基准法施行规则5条 改正"
+        ],
+        "tags": [
+          "劳动条件明示",
+          "劳动条件通知书",
+          "有期契约",
+          "无期转换",
+          "劳动基准法",
+          "就业规则"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "只要把劳动条件通知书的范本更新，对应就算完成了吗？",
+            "answer": "更换范本是出发点，仅此并不算完成。追加的「工作场所・业务变更的范围」与有期契约的「更新上限」，须与就业规则的配置转换・更新规定及实际运作一致。本质是比对确认通知书、雇用契约书、就业规则三者没有偏离。"
+          },
+          {
+            "question": "「变更的范围」是不是把可能的配置转换全部写得很宽就好？",
+            "answer": "写上与实态脱节的宽范围，会成为日后配置转换场面「没听过那种范围」的纠纷源头。反之写得太窄，必要的调动就难以进行。要点是显示与公司运作及就业规则规定相符的范围。特定调动是否有效的个别判断，超出本文范围。"
+          },
+          {
+            "question": "新设更新上限会违法吗？",
+            "answer": "设定更新上限本身并不立即违法。不过，若在最初的契约之后才新设或缩短更新上限，应事先说明理由并为此努力。此外，达到上限时的不更新是否有效是另一个判断，具纠纷性的场面，我们会引导向律师咨询。"
+          },
+          {
+            "question": "兼职转为无期后，就会成为正职员吗？",
+            "answer": "无期转换只是契约期间由有期变为无期，与成为正职员并不相同。劳动条件维持与转换前相同亦可。不过自2024年4月起，在无期转换申请权发生的每次更新时，须明示可申请的意旨与转换后的劳动条件。"
+          }
+        ]
+      }
+    }
   }
 ];
