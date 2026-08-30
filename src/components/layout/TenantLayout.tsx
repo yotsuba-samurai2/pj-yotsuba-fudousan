@@ -16,7 +16,7 @@ import { normalizePath } from "@/lib/normalize-path"; // cross-links直importは
 import { MobileStickyBar } from "@/components/shared/MobileStickyBar";
 import { LinkaFab } from "@/components/shared/LinkaFab";
 import type { BusinessKey } from "@/lib/shared/office";
-import { SR_OFFICE_NAME } from "@/lib/shared/sr-name"; // 事務所名は実行時結合（法27条ソース漏れ対策）
+import { SR_OFFICE_NAME, SR_OFFICE_NAME_ZH_TW, SR_OFFICE_NAME_ZH } from "@/lib/shared/sr-name"; // 事務所名は実行時結合（法27条ソース漏れ対策）
 import type { LangCode } from "@/config/languages";
 import {
   SERVICE_NAV_CATEGORIES,
@@ -213,9 +213,10 @@ const FOOTER_NAV_HREFS: Record<
 const INDEPENDENT_NOTE: Record<string, string> = {
   ja: `四葉不動産株式会社・四葉行政書士事務所・${SR_OFFICE_NAME}（2026年9月開業予定）は、それぞれ独立した事業体として業務を受任します。`,
   en: "Yotsuba Real Estate Co., Ltd., Yotsuba Gyoseishoshi (Administrative Scrivener) Office, and Yotsuba Sharoushi (Certified Social Insurance and Labor Consultant) Office (opening September 2026) operate as independent business entities, each accepting engagements separately.",
-  // 中文でも日本語事務所名の連続リテラルは書けないためSR_OFFICE_NAMEを挿入
-  "zh-tw": `四葉不動產株式會社、四葉行政書士事務所、${SR_OFFICE_NAME}（預定2026年9月開業）為各自獨立之事業體，分別承接業務。`,
-  zh: `四葉不動産株式会社、四葉行政書士事務所、${SR_OFFICE_NAME}（预定2026年9月开业）为各自独立的事业体，分别承接业务。`,
+  // 中文でも事務所名の連続リテラルは書けないため実行時結合の定数を挿入する。
+  // zh-tw／zh はそれぞれの字体の事務所名を使う（翻訳DBの labor.name と一致させた）。
+  "zh-tw": `四葉不動產株式會社、四葉行政書士事務所、${SR_OFFICE_NAME_ZH_TW}（預定2026年9月開業）為各自獨立之事業體，分別承接業務。`,
+  zh: `四葉不動産株式会社、四葉行政书士事务所、${SR_OFFICE_NAME_ZH}（预定2026年9月开业）为各自独立的事业体，分别承接业务。`,
 };
 
 /**
