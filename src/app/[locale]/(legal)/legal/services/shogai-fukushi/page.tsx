@@ -121,6 +121,9 @@ const COPY: Record<LangCode, ShogaiFukushiCopy> = {
           対象サービスの例：共同生活援助（グループホーム）、放課後等デイサービス、児童発達支援、生活介護 ほか
           <Placeholder reason="浦松＝実際に対応するサービス種別の確定" />
         </p>
+        <p className="mt-2 text-sm text-text-muted">
+          対応エリア：東京都内。指定権者は自治体ごとに運用が異なるため、着手時に管轄の窓口で確認します。
+        </p>
       </>
     ),
     sec2Body: (locale) => (
@@ -296,6 +299,9 @@ const COPY: Record<LangCode, ShogaiFukushiCopy> = {
           Examples of covered services: shared-living support (group homes), after-school day services, child development support, daily-life care, and more
           <Placeholder reason="浦松＝実際に対応するサービス種別の確定" />
         </p>
+        <p className="mt-2 text-sm text-text-muted">
+          Service area: within Tokyo. Because the designating authority differs by municipality in how it operates, we confirm the details at the competent counter when we begin.
+        </p>
       </>
     ),
     sec2Body: (locale) => (
@@ -469,6 +475,9 @@ const COPY: Record<LangCode, ShogaiFukushiCopy> = {
         <p className="mt-2 text-sm text-text-muted">
           對象服務範例：共同生活援助（團體家屋）、放學後等日間服務、兒童發展支援、生活照護等
           <Placeholder reason="浦松＝実際に対応するサービス種別の確定" />
+        </p>
+        <p className="mt-2 text-sm text-text-muted">
+          服務區域：東京都內。指定權者依各自治體而運用不同，因此在著手時會向主管窗口確認。
         </p>
       </>
     ),
@@ -644,6 +653,9 @@ const COPY: Record<LangCode, ShogaiFukushiCopy> = {
         <p className="mt-2 text-sm text-text-muted">
           对象服务示例：共同生活援助（团体家屋）、放学后等日间服务、儿童发展支援、生活照护等
           <Placeholder reason="浦松＝実際に対応するサービス種別の確定" />
+        </p>
+        <p className="mt-2 text-sm text-text-muted">
+          服务区域：东京都内。指定权者依各自治体而运用不同，因此在着手时会向主管窗口确认。
         </p>
       </>
     ),
