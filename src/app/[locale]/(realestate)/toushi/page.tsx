@@ -109,11 +109,10 @@ const COPY: Record<LangCode, ToushiCopy> = {
               </span>
             </li>
             <li>
-              <strong>収益物件（区分・一棟）</strong>
-              <Placeholder reason="浦松＝収益物件の対応範囲" />
+              <strong>収益物件（区分・一棟）</strong>——区分・一棟いずれも。エリアは東京都内、価格帯はご相談ください
             </li>
             <li>
-              <strong>対応エリア</strong>——文京区とその周辺
+              <strong>対応エリア</strong>——媒介は文京区とその周辺。投資用・収益物件は東京都内
             </li>
           </ul>
         </div>
@@ -267,13 +266,73 @@ const COPY: Record<LangCode, ToushiCopy> = {
               <Link href={addLocalePrefix("/shataku", locale)} className="text-primary underline">Company Housing & Corporate Lease Support</Link>
             </li>
             <li>
-              <strong>Income properties (condominium units & whole buildings)</strong>
-              <Placeholder reason="浦松＝収益物件の対応範囲" />
+              <strong>Income properties (condominium units & whole buildings)</strong>—both units and whole buildings, within Tokyo. Price range: please ask
             </li>
             <li>
-              <strong>Service area</strong>—Bunkyo City, Tokyo, and the surrounding area
+              <strong>Service area</strong>—brokerage in Bunkyo City and the surrounding area; investment and income properties throughout Tokyo
             </li>
           </ul>
+        </div>
+
+        <div>
+          <ReH2>What should you check first about a property, by type of business?</ReH2>
+          <p className="mt-3 leading-relaxed text-text">
+            The condition that bites first differs by the type of business. Some are settled by the use district, some by floor area and structural-equipment standards, some by the road frontage or by fire safety. Finding out after the interior work is done that the standards are not met means doing it over. <strong>We have set out, by type of business, what can be checked before you sign.</strong>
+          </p>
+          <ul className="mt-3 space-y-2 text-sm leading-relaxed text-text">
+            <li>
+              <strong>Group homes & disability-welfare facilities</strong>—property selection with the designation standards in view →{" "}
+              <Link href={addLocalePrefix("/toushi/group-home", locale)} className="text-primary underline">Read more</Link>
+            </li>
+            <li>
+              <strong>After-school day services</strong>—use district, ground floor, floor area, daylighting →{" "}
+              <Link href={addLocalePrefix("/column/houkago-day-bukken-youto-chiiki-1kai", locale)} className="text-primary underline">Read more</Link>
+            </li>
+            <li>
+              <strong>Small-scale childcare</strong>—use district and floor area →{" "}
+              <Link href={addLocalePrefix("/column/hoiku-shoukibo-bukken-youto-chiiki", locale)} className="text-primary underline">Read more</Link>
+            </li>
+            <li>
+              <strong>Housing with services for the elderly</strong>—25 m2 per unit and the barrier-free registration standards →{" "}
+              <Link href={addLocalePrefix("/column/sakoju-bukken-youken-toroku", locale)} className="text-primary underline">Read more</Link>
+            </li>
+            <li>
+              <strong>Clinics</strong>—use district, change of use, and the order of the opening notification →{" "}
+              <Link href={addLocalePrefix("/column/clinic-bukken-youto-chiiki-kaisetsu-todokede", locale)} className="text-primary underline">Read more</Link>
+            </li>
+            <li>
+              <strong>Acupuncture & judo-therapy clinics</strong>—a 6.6 m2 treatment room, a 3.3 m2 waiting room, and the notification →{" "}
+              <Link href={addLocalePrefix("/column/shinkyu-seikotsuin-bukken-youto-hokenjo-todokede", locale)} className="text-primary underline">Read more</Link>
+            </li>
+            <li>
+              <strong>Dispensing pharmacies</strong>—floor area, dispensing room, clean zone →{" "}
+              <Link href={addLocalePrefix("/column/yakkyoku-bukken-youken-kozo-setsubi", locale)} className="text-primary underline">Read more</Link>
+            </li>
+            <li>
+              <strong>Hair & barber salons</strong>—the structural-equipment standards set by the public health center →{" "}
+              <Link href={addLocalePrefix("/column/biyoshitsu-riyojo-bukken-hokenjo-todokede", locale)} className="text-primary underline">Read more</Link>
+            </li>
+            <li>
+              <strong>Grooming & pet shops</strong>—housing facilities under a Class 1 animal-handling business →{" "}
+              <Link href={addLocalePrefix("/column/doubutsu-toriatsukai-bukken-youken", locale)} className="text-primary underline">Read more</Link>
+            </li>
+            <li>
+              <strong>Trucking</strong>—the business office, the garage, and the road frontage →{" "}
+              <Link href={addLocalePrefix("/column/unsou-eigyosho-shako-bukken-yoken", locale)} className="text-primary underline">Read more</Link>
+            </li>
+            <li>
+              <strong>Restaurants in a second-hand fit-out</strong>—go to the public health center before you sign →{" "}
+              <Link href={addLocalePrefix("/column/inuki-bukken-keiyakumae-hokenjo", locale)} className="text-primary underline">Read more</Link>
+            </li>
+            <li>
+              <strong>Company formation & offices</strong>—office requirements and how they relate to permits →{" "}
+              <Link href={addLocalePrefix("/office", locale)} className="text-primary underline">Read more</Link>
+            </li>
+          </ul>
+          <p className="mt-2 text-xs text-text-muted">Only articles published in this language are listed here.</p>
+          <p className="mt-3 text-sm leading-relaxed text-text-muted">
+            Investigating and brokering the property, and the sale or lease contract, are undertaken by 四葉不動産株式会社 (Real Estate Broker License, Governor of Tokyo (1) No. 113304). The preparation of documents submitted to public offices is undertaken by 四葉行政書士事務所. The two are independent business entities and are engaged under separate contracts. Neither receives or pays referral fees. Final confirmation is made at the counter of the competent administrative agency, public health center, or fire department.
+          </p>
         </div>
 
         <div>
@@ -357,13 +416,73 @@ const COPY: Record<LangCode, ToushiCopy> = {
               <Link href={addLocalePrefix("/shataku", locale)} className="text-primary underline">員工宿舍・法人租賃支援</Link>
             </li>
             <li>
-              <strong>收益物件（區分・整棟）</strong>
-              <Placeholder reason="浦松＝収益物件の対応範囲" />
+              <strong>收益物件（區分・整棟）</strong>——區分・整棟皆可承辦。區域為東京都內，價格帶請洽詢
             </li>
             <li>
-              <strong>服務區域</strong>——文京區及其周邊
+              <strong>服務區域</strong>——仲介為文京區及其周邊。投資用・收益物件為東京都內
             </li>
           </ul>
+        </div>
+
+        <div>
+          <ReH2>依業種不同，物件要先確認什麼？</ReH2>
+          <p className="mt-3 leading-relaxed text-text">
+            依業種不同，物件上最先生效的條件也不同。有的由用途地域決定，有的由面積與構造設備基準決定，有的則取決於前面道路或消防。裝潢完成後才發現不符基準，就得重來。<strong>我們依業種整理了簽約前可以確認的事項。</strong>
+          </p>
+          <ul className="mt-3 space-y-2 text-sm leading-relaxed text-text">
+            <li>
+              <strong>團體家屋・障礙福祉事業所</strong>——著眼指定基準的物件選擇 →{" "}
+              <Link href={addLocalePrefix("/toushi/group-home", locale)} className="text-primary underline">詳細</Link>
+            </li>
+            <li>
+              <strong>放課後兒童日間服務</strong>——用途地域・1樓・面積・採光 →{" "}
+              <Link href={addLocalePrefix("/column/houkago-day-bukken-youto-chiiki-1kai", locale)} className="text-primary underline">詳細</Link>
+            </li>
+            <li>
+              <strong>小規模保育事業</strong>——用途地域與面積 →{" "}
+              <Link href={addLocalePrefix("/column/hoiku-shoukibo-bukken-youto-chiiki", locale)} className="text-primary underline">詳細</Link>
+            </li>
+            <li>
+              <strong>附服務高齡者住宅</strong>——每戶25㎡・無障礙的登錄基準 →{" "}
+              <Link href={addLocalePrefix("/column/sakoju-bukken-youken-toroku", locale)} className="text-primary underline">詳細</Link>
+            </li>
+            <li>
+              <strong>診所</strong>——用途地域・用途變更・開設申報的順序 →{" "}
+              <Link href={addLocalePrefix("/column/clinic-bukken-youto-chiiki-kaisetsu-todokede", locale)} className="text-primary underline">詳細</Link>
+            </li>
+            <li>
+              <strong>針灸院・整骨院</strong>——施術室6.6㎡・候診室3.3㎡與開設申報 →{" "}
+              <Link href={addLocalePrefix("/column/shinkyu-seikotsuin-bukken-youto-hokenjo-todokede", locale)} className="text-primary underline">詳細</Link>
+            </li>
+            <li>
+              <strong>調劑藥局</strong>——面積・調劑室・清潔區域 →{" "}
+              <Link href={addLocalePrefix("/column/yakkyoku-bukken-youken-kozo-setsubi", locale)} className="text-primary underline">詳細</Link>
+            </li>
+            <li>
+              <strong>美容院・理容所</strong>——保健所的構造設備基準 →{" "}
+              <Link href={addLocalePrefix("/column/biyoshitsu-riyojo-bukken-hokenjo-todokede", locale)} className="text-primary underline">詳細</Link>
+            </li>
+            <li>
+              <strong>寵物美容・寵物店</strong>——第一種動物取扱業的飼養設施 →{" "}
+              <Link href={addLocalePrefix("/column/doubutsu-toriatsukai-bukken-youken", locale)} className="text-primary underline">詳細</Link>
+            </li>
+            <li>
+              <strong>運送業</strong>——營業所・車庫・前面道路 →{" "}
+              <Link href={addLocalePrefix("/column/unsou-eigyosho-shako-bukken-yoken", locale)} className="text-primary underline">詳細</Link>
+            </li>
+            <li>
+              <strong>餐飲店的居抜物件</strong>——簽約前先洽保健所 →{" "}
+              <Link href={addLocalePrefix("/column/inuki-bukken-keiyakumae-hokenjo", locale)} className="text-primary underline">詳細</Link>
+            </li>
+            <li>
+              <strong>公司設立・辦公室</strong>——事務所要件與許認可的關係 →{" "}
+              <Link href={addLocalePrefix("/office", locale)} className="text-primary underline">詳細</Link>
+            </li>
+          </ul>
+          <p className="mt-2 text-xs text-text-muted">此處僅列出以本語言公開的文章。</p>
+          <p className="mt-3 text-sm leading-relaxed text-text-muted">
+            物件的調查・仲介以及買賣・租賃契約，由四葉不動産株式会社（宅地建物取引業 東京都知事(1)第113304號）承辦；申報・許認可等提交行政機關的文件製作，由四葉行政書士事務所承辦。這兩者是各自獨立的事業體，請分別簽訂契約。本公司・本事務所不收取也不支付介紹費。可否的最終確認，請至主管的行政廳・保健所・消防署窗口辦理。
+          </p>
         </div>
 
         <div>
@@ -447,13 +566,73 @@ const COPY: Record<LangCode, ToushiCopy> = {
               <Link href={addLocalePrefix("/shataku", locale)} className="text-primary underline">员工宿舍・法人租赁支援</Link>
             </li>
             <li>
-              <strong>收益物件（区分・整栋）</strong>
-              <Placeholder reason="浦松＝収益物件の対応範囲" />
+              <strong>收益物件（区分・整栋）</strong>——区分・整栋皆可承办。区域为东京都内，价格带请洽询
             </li>
             <li>
-              <strong>服务区域</strong>——文京区及周边
+              <strong>服务区域</strong>——中介为文京区及周边。投资用・收益物件为东京都内
             </li>
           </ul>
+        </div>
+
+        <div>
+          <ReH2>依业种不同，物件要先确认什么？</ReH2>
+          <p className="mt-3 leading-relaxed text-text">
+            依业种不同，物件上最先生效的条件也不同。有的由用途地域决定，有的由面积与构造设备基准决定，有的则取决于前面道路或消防。装修完成后才发现不符基准，就得重来。<strong>我们依业种整理了签约前可以确认的事项。</strong>
+          </p>
+          <ul className="mt-3 space-y-2 text-sm leading-relaxed text-text">
+            <li>
+              <strong>团体家屋・残障福祉事业所</strong>——着眼指定基准的物件选择 →{" "}
+              <Link href={addLocalePrefix("/toushi/group-home", locale)} className="text-primary underline">详情</Link>
+            </li>
+            <li>
+              <strong>放学后儿童日间服务</strong>——用途地域・1层・面积・采光 →{" "}
+              <Link href={addLocalePrefix("/column/houkago-day-bukken-youto-chiiki-1kai", locale)} className="text-primary underline">详情</Link>
+            </li>
+            <li>
+              <strong>小规模保育事业</strong>——用途地域与面积 →{" "}
+              <Link href={addLocalePrefix("/column/hoiku-shoukibo-bukken-youto-chiiki", locale)} className="text-primary underline">详情</Link>
+            </li>
+            <li>
+              <strong>附服务高龄者住宅</strong>——每户25㎡・无障碍的登录基准 →{" "}
+              <Link href={addLocalePrefix("/column/sakoju-bukken-youken-toroku", locale)} className="text-primary underline">详情</Link>
+            </li>
+            <li>
+              <strong>诊所</strong>——用途地域・用途变更・开设申报的顺序 →{" "}
+              <Link href={addLocalePrefix("/column/clinic-bukken-youto-chiiki-kaisetsu-todokede", locale)} className="text-primary underline">详情</Link>
+            </li>
+            <li>
+              <strong>针灸院・整骨院</strong>——施术室6.6㎡・候诊室3.3㎡与开设申报 →{" "}
+              <Link href={addLocalePrefix("/column/shinkyu-seikotsuin-bukken-youto-hokenjo-todokede", locale)} className="text-primary underline">详情</Link>
+            </li>
+            <li>
+              <strong>调剂药局</strong>——面积・调剂室・清洁区域 →{" "}
+              <Link href={addLocalePrefix("/column/yakkyoku-bukken-youken-kozo-setsubi", locale)} className="text-primary underline">详情</Link>
+            </li>
+            <li>
+              <strong>美容院・理容所</strong>——保健所的构造设备基准 →{" "}
+              <Link href={addLocalePrefix("/column/biyoshitsu-riyojo-bukken-hokenjo-todokede", locale)} className="text-primary underline">详情</Link>
+            </li>
+            <li>
+              <strong>宠物美容・宠物店</strong>——第一种动物取扱业的饲养设施 →{" "}
+              <Link href={addLocalePrefix("/column/doubutsu-toriatsukai-bukken-youken", locale)} className="text-primary underline">详情</Link>
+            </li>
+            <li>
+              <strong>运输业</strong>——营业所・车库・前面道路 →{" "}
+              <Link href={addLocalePrefix("/column/unsou-eigyosho-shako-bukken-yoken", locale)} className="text-primary underline">详情</Link>
+            </li>
+            <li>
+              <strong>餐饮店的居抜物件</strong>——签约前先洽保健所 →{" "}
+              <Link href={addLocalePrefix("/column/inuki-bukken-keiyakumae-hokenjo", locale)} className="text-primary underline">详情</Link>
+            </li>
+            <li>
+              <strong>公司设立・办公室</strong>——事务所要件与许认可的关系 →{" "}
+              <Link href={addLocalePrefix("/office", locale)} className="text-primary underline">详情</Link>
+            </li>
+          </ul>
+          <p className="mt-2 text-xs text-text-muted">此处仅列出以本语言公开的文章。</p>
+          <p className="mt-3 text-sm leading-relaxed text-text-muted">
+            物件的调查・中介以及买卖・租赁合同，由四葉不動産株式会社（宅地建物取引业 东京都知事(1)第113304号）承办；申报・许认可等提交行政机关的文件制作，由四葉行政书士事务所承办。这两者是各自独立的事业体，请分别签订合同。本公司・本事务所不收取也不支付介绍费。可否的最终确认，请至主管的行政厅・保健所・消防署窗口办理。
+          </p>
         </div>
 
         <div>
