@@ -113,10 +113,77 @@ const COPY: Record<LangCode, ToushiCopy> = {
               <Placeholder reason="浦松＝収益物件の対応範囲" />
             </li>
             <li>
-              対応エリア
-              <Placeholder reason="浦松＝対応エリアの確定" />
+              <strong>対応エリア</strong>——文京区とその周辺
             </li>
           </ul>
+        </div>
+
+        <div>
+          <ReH2>業種ごとに、物件で先に確認することは何ですか？</ReH2>
+          <p className="mt-3 leading-relaxed text-text">
+            業種によって、物件で先に効く条件が違います。用途地域で決まるもの、面積や構造設備の基準で決まるもの、前面道路や消防で決まるもの。内装が終わってから基準に足りないと分かると、やり直しになります。<strong>契約前に確認できることを、業種ごとに整理しています。</strong>
+          </p>
+          <ul className="mt-3 space-y-2 text-sm leading-relaxed text-text">
+            <li>
+              <strong>介護事業所</strong>——用途地域と消防法、大家さんの誤解 →{" "}
+              <Link href={addLocalePrefix("/column/kaigo-jigyousho-bukken-youto-chiiki", locale)} className="text-primary underline">くわしく</Link>
+            </li>
+            <li>
+              <strong>グループホーム・障害福祉事業所</strong>——指定基準を見据えた物件選び →{" "}
+              <Link href={addLocalePrefix("/toushi/group-home", locale)} className="text-primary underline">くわしく</Link>
+            </li>
+            <li>
+              <strong>放課後等デイサービス</strong>——用途地域・1階・面積・採光 →{" "}
+              <Link href={addLocalePrefix("/column/houkago-day-bukken-youto-chiiki-1kai", locale)} className="text-primary underline">くわしく</Link>
+            </li>
+            <li>
+              <strong>小規模保育事業</strong>——用途地域と面積 →{" "}
+              <Link href={addLocalePrefix("/column/hoiku-shoukibo-bukken-youto-chiiki", locale)} className="text-primary underline">くわしく</Link>
+            </li>
+            <li>
+              <strong>サービス付き高齢者向け住宅</strong>——各戸25㎡・バリアフリーの登録基準 →{" "}
+              <Link href={addLocalePrefix("/column/sakoju-bukken-youken-toroku", locale)} className="text-primary underline">くわしく</Link>
+            </li>
+            <li>
+              <strong>クリニック</strong>——用途地域・用途変更・開設届の順番 →{" "}
+              <Link href={addLocalePrefix("/column/clinic-bukken-youto-chiiki-kaisetsu-todokede", locale)} className="text-primary underline">くわしく</Link>
+            </li>
+            <li>
+              <strong>鍼灸院・整骨院</strong>——施術室6.6㎡・待合室3.3㎡と開設届 →{" "}
+              <Link href={addLocalePrefix("/column/shinkyu-seikotsuin-bukken-youto-hokenjo-todokede", locale)} className="text-primary underline">くわしく</Link>
+            </li>
+            <li>
+              <strong>調剤薬局</strong>——面積・調剤室・清潔区域 →{" "}
+              <Link href={addLocalePrefix("/column/yakkyoku-bukken-youken-kozo-setsubi", locale)} className="text-primary underline">くわしく</Link>
+            </li>
+            <li>
+              <strong>美容室・理容所</strong>——保健所の構造設備基準 →{" "}
+              <Link href={addLocalePrefix("/column/biyoshitsu-riyojo-bukken-hokenjo-todokede", locale)} className="text-primary underline">くわしく</Link>
+            </li>
+            <li>
+              <strong>トリミング・ペットショップ</strong>——第一種動物取扱業の飼養施設 →{" "}
+              <Link href={addLocalePrefix("/column/doubutsu-toriatsukai-bukken-youken", locale)} className="text-primary underline">くわしく</Link>
+            </li>
+            <li>
+              <strong>運送業</strong>——営業所・車庫・前面道路 →{" "}
+              <Link href={addLocalePrefix("/column/unsou-eigyosho-shako-bukken-yoken", locale)} className="text-primary underline">くわしく</Link>
+            </li>
+            <li>
+              <strong>民泊</strong>——条例の区域・管理規約・消防設備 →{" "}
+              <Link href={addLocalePrefix("/column/minpaku-bukken-joken-kakunin", locale)} className="text-primary underline">くわしく</Link>
+            </li>
+            <li>
+              <strong>飲食店の居抜き</strong>——契約前に保健所へ →{" "}
+              <Link href={addLocalePrefix("/column/inuki-bukken-keiyakumae-hokenjo", locale)} className="text-primary underline">くわしく</Link>
+            </li>
+            <li>
+              <strong>会社設立・オフィス</strong>——事務所要件と許認可の関係 →{" "}
+              <Link href={addLocalePrefix("/office", locale)} className="text-primary underline">くわしく</Link>
+            </li>
+          </ul>
+          <p className="mt-3 text-sm leading-relaxed text-text-muted">
+            物件の調査・媒介および売買・賃貸借契約は四葉不動産株式会社（宅地建物取引業 東京都知事(1)第113304号）が、届出・許認可など官公署に提出する書類の作成は四葉行政書士事務所が承ります。この2つはそれぞれ独立した事業体で、別々にご契約いただきます。当社・当事務所は紹介料・送客手数料を受け取ることも支払うこともありません。可否の最終確認は、所管の行政庁・保健所・消防署の窓口で行います。
+          </p>
         </div>
 
         <div>
@@ -204,8 +271,7 @@ const COPY: Record<LangCode, ToushiCopy> = {
               <Placeholder reason="浦松＝収益物件の対応範囲" />
             </li>
             <li>
-              Service area
-              <Placeholder reason="浦松＝対応エリアの確定" />
+              <strong>Service area</strong>—Bunkyo City, Tokyo, and the surrounding area
             </li>
           </ul>
         </div>
@@ -295,8 +361,7 @@ const COPY: Record<LangCode, ToushiCopy> = {
               <Placeholder reason="浦松＝収益物件の対応範囲" />
             </li>
             <li>
-              服務區域
-              <Placeholder reason="浦松＝対応エリアの確定" />
+              <strong>服務區域</strong>——文京區及其周邊
             </li>
           </ul>
         </div>
@@ -386,8 +451,7 @@ const COPY: Record<LangCode, ToushiCopy> = {
               <Placeholder reason="浦松＝収益物件の対応範囲" />
             </li>
             <li>
-              服务区域
-              <Placeholder reason="浦松＝対応エリアの確定" />
+              <strong>服务区域</strong>——文京区及周边
             </li>
           </ul>
         </div>
