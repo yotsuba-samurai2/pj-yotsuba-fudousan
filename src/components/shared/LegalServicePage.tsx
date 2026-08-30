@@ -69,7 +69,7 @@ export async function LegalServicePage(p: LegalServicePageProps) {
         name: p.serviceName,
         provider: { "@id": SITE + "/legal/#organization" },
         author: { "@id": PERSON_ID },
-        areaServed: "東京都およびその周辺",
+        areaServed: "東京都",
         url,
       },
     ],
@@ -106,6 +106,10 @@ export async function LegalServicePage(p: LegalServicePageProps) {
 
         {/* 本文 H2 群 */}
         <section className="mt-8 space-y-8">{p.children}</section>
+
+        <p className="mt-8 text-sm text-text-muted">
+          対応エリア：東京都内。手続の窓口・運用は自治体ごとに異なるため、着手時に管轄の窓口で確認します。
+        </p>
 
         {/* 内部リンク束（サイロ内・コンパクト） */}
         <nav aria-label="関連リンク" className="mt-8 rounded-xl border border-border bg-surface p-4 text-sm">
