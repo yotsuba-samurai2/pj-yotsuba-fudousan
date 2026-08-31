@@ -224,17 +224,19 @@ const STATIC_LEGAL: StaticPage[] = [
  *   （18_言語別存在マトリクス.md の突合対象）。
  */
 const STATIC_LABOR: StaticPage[] = [
-  { path: "/labor", changeFrequency: "monthly", priority: 0.9 }, // 2026-09-01 4言語公開（第1波）
-  { path: "/labor/services", changeFrequency: "monthly", priority: 0.8 }, // 2026-09-01 4言語公開（第1波）
+  // 2026-09-01 4言語公開（第1波）。4ロケールとも本番200を実測（2026-09-01）。
+  // locales の明示は sitemap-labor.test.ts の規約（存在しないロケールURLを広告しない）に合わせるため。
+  { path: "/labor", changeFrequency: "monthly", priority: 0.9, locales: ["ja", "en", "zh-tw", "zh"] },
+  { path: "/labor/services", changeFrequency: "monthly", priority: 0.8, locales: ["ja", "en", "zh-tw", "zh"] }, // 2026-09-01 4言語公開（第1波）
   { path: "/labor/services/kaigo-roumu", changeFrequency: "monthly", priority: 0.8, locales: ["ja"] },
   { path: "/labor/services/jinin-kijun-roumu", changeFrequency: "monthly", priority: 0.8, locales: ["ja"] },
   { path: "/labor/services/shogu-kaizen", changeFrequency: "monthly", priority: 0.8, locales: ["ja"] },
   { path: "/labor/services/joseikin", changeFrequency: "monthly", priority: 0.7, locales: ["ja"] },
-  { path: "/labor/services/gaikokujin-koyo", changeFrequency: "monthly", priority: 0.8 }, // 2026-09-01 4言語公開（第2波）
-  { path: "/labor/services/gaibu-kansanin", changeFrequency: "monthly", priority: 0.8 }, // 2026-09-01 4言語公開（第2波）
-  { path: "/labor/services/saiyo", changeFrequency: "monthly", priority: 0.8 }, // 2026-09-01 4言語公開（第2波）
-  { path: "/labor/ryokin", changeFrequency: "monthly", priority: 0.7 }, // 2026-09-01 4言語公開（第1波）
-  { path: "/labor/nagare", changeFrequency: "yearly", priority: 0.6 }, // 2026-09-01 4言語公開（第1波）
+  { path: "/labor/services/gaikokujin-koyo", changeFrequency: "monthly", priority: 0.8, locales: ["ja", "en", "zh-tw", "zh"] }, // 2026-09-01 4言語公開（第2波）
+  { path: "/labor/services/gaibu-kansanin", changeFrequency: "monthly", priority: 0.8, locales: ["ja", "en", "zh-tw", "zh"] }, // 2026-09-01 4言語公開（第2波）
+  { path: "/labor/services/saiyo", changeFrequency: "monthly", priority: 0.8, locales: ["ja", "en", "zh-tw", "zh"] }, // 2026-09-01 4言語公開（第2波）
+  { path: "/labor/ryokin", changeFrequency: "monthly", priority: 0.7, locales: ["ja", "en", "zh-tw", "zh"] }, // 2026-09-01 4言語公開（第1波）
+  { path: "/labor/nagare", changeFrequency: "yearly", priority: 0.6, locales: ["ja", "en", "zh-tw", "zh"] }, // 2026-09-01 4言語公開（第1波）
   { path: "/labor/faq", changeFrequency: "monthly", priority: 0.6, locales: ["ja"] },
   { path: "/labor/about", changeFrequency: "yearly", priority: 0.6, locales: ["ja"] },
   { path: "/labor/column", changeFrequency: "daily", priority: 0.7, locales: ["ja"] },
