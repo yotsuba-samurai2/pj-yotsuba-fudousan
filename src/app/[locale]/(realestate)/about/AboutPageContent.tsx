@@ -6,10 +6,18 @@ import { ArrowRight, MapPin } from "lucide-react";
 import { useTranslation } from "@/hooks/useTranslation";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 
-// 社労士カードは法人化（2026-09開業予定）まで非表示（浦松指示 2026-07-07）。
-// 復元: "/yotsuba/labor-square.png" をこの配列へ戻すだけでよい（Firestore側の
-// realestate.aboutPage.groupBusinesses も3件に戻す必要あり）。
-const groupLogos = ["/yotsuba/realestate-square.png", "/yotsuba/legal-square.png"];
+// 社労士カードは開業（SR_LAUNCHED=true・2026-09-01）まで非表示。
+// 翻訳DB側の realestate.aboutPage.groupBusinesses は3件あり、開業前は
+// [locale]/layout.tsx の stripSrEntities が社労士エントリを落とす（法27条）。
+// カードの描画は groupBusinesses.slice(0, groupLogos.length) なので、
+// この配列の長さが「出す枚数」になる＝ここも同じ条件で出し分ける。
+const groupLogos = [
+  "/yotsuba/realestate-square.png",
+  "/yotsuba/legal-square.png",
+  ...(process.env.NEXT_PUBLIC_SR_LAUNCHED === "true"
+    ? ["/yotsuba/labor-square.png"]
+    : []),
+];
 
 // 代表プロフィール導線のロケール別ラベル（翻訳チェック§J1・2026-07-20）。
 // Firestoreに新キーを増やさずコード内直書き（B-1フッター「料金」等と同方式）。

@@ -15,6 +15,9 @@ import { useTranslation } from "@/hooks/useTranslation";
 
 const serviceIcons = [Coins, Plane, Building2, FileCheck, ScrollText, ShieldCheck];
 
+/** 社労士（2026-09-01 開業）の露出可否。開業前は false ＝グループ紹介に出さない（法27条）。 */
+const SR_LAUNCHED = process.env.NEXT_PUBLIC_SR_LAUNCHED === "true";
+
 export default function LegalPageContent() {
   const { t, tArray } = useTranslation();
 
@@ -138,7 +141,11 @@ export default function LegalPageContent() {
             {t("legal.homePage.oneStopDescription2")}
           </p>
 
-          <div className="mx-auto mt-12 grid max-w-2xl gap-4 sm:grid-cols-2">
+          <div
+            className={`mx-auto mt-12 grid gap-4 ${
+              SR_LAUNCHED ? "max-w-4xl sm:grid-cols-3" : "max-w-2xl sm:grid-cols-2"
+            }`}
+          >
             {(() => {
               const businesses = tArray<{ name: string; description: string }>("legal.homePage.groupBusinesses");
               return (
@@ -172,24 +179,26 @@ export default function LegalPageContent() {
                       {t("common.thisPage")}
                     </p>
                   </div>
-                  {/* TODO: 社労士開業（2026年9月）後に復活
-                  <Link
-                    href="/labor"
-                    className="rounded-xl border border-border bg-surface p-6 transition-all hover:border-primary/30 hover:shadow-md"
-                  >
-                    <Image
-                      src="/yotsuba/labor-square.png"
-                      alt={businesses[2]?.name ?? ""}
-                      width={56}
-                      height={56}
-                      className="mx-auto h-14 w-14 object-contain"
-                    />
-                    <p className="mt-3 text-sm font-bold">{businesses[2]?.name}</p>
-                    <p className="mt-1 text-xs text-text-muted">
-                      {businesses[2]?.description}
-                    </p>
-                  </Link>
-                  */}
+                  {/* 社労士カードは開業（SR_LAUNCHED=true・2026-09-01）から出す。
+                      開業前は businesses[2] 自体が stripSrEntities で落ちている（法27条）。 */}
+                  {SR_LAUNCHED && businesses[2] && (
+                    <Link
+                      href="/labor"
+                      className="rounded-xl border border-border bg-surface p-6 transition-all hover:border-primary/30 hover:shadow-md"
+                    >
+                      <Image
+                        src="/yotsuba/labor-square.png"
+                        alt={businesses[2]?.name ?? ""}
+                        width={56}
+                        height={56}
+                        className="mx-auto h-14 w-14 object-contain"
+                      />
+                      <p className="mt-3 text-sm font-bold">{businesses[2]?.name}</p>
+                      <p className="mt-1 text-xs text-text-muted">
+                        {businesses[2]?.description}
+                      </p>
+                    </Link>
+                  )}
                 </>
               );
             })()}

@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { groupBusinesses } from "@/config/group";
-import { SR_OFFICE_NAME } from "@/lib/shared/sr-name";
+import {
+  SR_OFFICE_NAME,
+  SR_OFFICE_NAME_ZH,
+  SR_OFFICE_NAME_ZH_TW,
+} from "@/lib/shared/sr-name";
 import { GBP_URL } from "@/lib/shared/office-public";
 import { DEFAULT_LOCALE, isValidLocale } from "@/lib/locale";
 import type { LangCode } from "@/config/languages";
@@ -396,8 +400,23 @@ export const BUSINESS_SEO: Record<string, BusinessSEOConfig> = {
           description:
             `東京都文京区小日向・茗荷谷駅徒歩5分の${SR_OFFICE_NAME}。障害福祉・介護事業所の労務管理、処遇改善加算、社会保険手続き、雇用関係助成金、外国人介護人材の労務に対応。元新聞記者の社労士が、複雑な労務を整理してお手伝いします。`,
           schemaType: "ProfessionalService",
-          ogImage: "",
+          // OG画像（2026-08-31 新設・1200×630）。legal と同じ体裁で作成。
+          // 旧実装は "" ＝ labor 全ページで og:image / twitter:image が出ず、
+          // OrganizationJsonLd の logo が `SITE_URL + ""`（＝サイトURL）に潰れていた。
+          ogImage: "/yotsuba/labor-og.png",
+          ogImageWidth: 1200,
+          ogImageHeight: 630,
+          squareLogo: "/yotsuba/labor-square.png",
           columnBasePath: "/labor/column",
+          // 登録番号は2026年9月下旬交付予定のため identifiers はまだ置かない。
+          // 交付後に { propertyID: "社会保険労務士登録番号", value: … } を追加する。
+          // 事務所名は実行時結合のものだけを並べる。英訳は裏取りできていないため置かない
+          // （英語の連続リテラルは sr-strip.ts の除去対象＝開業前にクライアントへ載せない）。
+          alternateNames: [
+            SR_OFFICE_NAME,
+            SR_OFFICE_NAME_ZH_TW,
+            SR_OFFICE_NAME_ZH,
+          ],
         },
       }
     : {}),
