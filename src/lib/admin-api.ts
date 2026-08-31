@@ -165,12 +165,73 @@ export async function setAiModel(model: string): Promise<void> {
   });
 }
 
+// ── Bukken (properties) ──
+
+import type {
+  AdminProperty,
+  PropertyInput,
+  PropertyStatus,
+} from "@/lib/property-shared";
+
+export type { AdminProperty, PropertyInput, PropertyStatus };
+
+/** 全物件取得（ステータス別） */
+export async function getBukkenList(status?: PropertyStatus): Promise<AdminProperty[]> {
+  const qs = status ? `?status=${encodeURIComponent(status)}` : "";
+  const { properties } = await apiFetch<{ properties: AdminProperty[] }>(
+    `/api/admin/bukken${qs}`,
+  );
+  return properties;
+}
+
+/** ID で物件取得 */
+export async function getBukkenById(id: string): Promise<AdminProperty | null> {
+  const res = await fetch(`/api/admin/bukken/${encodeURIComponent(id)}`, {
+    headers: await authHeaders(),
+  });
+  if (res.status === 404) return null;
+  if (!res.ok) {
+    const body = (await res.json().catch(() => ({}))) as { error?: string };
+    throw new Error(body.error || `APIエラー (${res.status})`);
+  }
+  const { property } = (await res.json()) as { property: AdminProperty };
+  return property;
+}
+
+/** 物件作成 */
+export async function createBukken(data: PropertyInput): Promise<string> {
+  const { id } = await apiFetch<{ id: string }>("/api/admin/bukken", {
+    method: "POST",
+    body: JSON.stringify(data),
+  });
+  return id;
+}
+
+/** 物件更新（成約＝status:"closed" への更新もこれで行う） */
+export async function updateBukken(
+  id: string,
+  data: Partial<PropertyInput>,
+): Promise<void> {
+  await apiFetch(`/api/admin/bukken/${encodeURIComponent(id)}`, {
+    method: "PATCH",
+    body: JSON.stringify(data),
+  });
+}
+
+/** 物件削除（下書きのみ許可＝サーバー側で拒否される） */
+export async function deleteBukken(id: string): Promise<void> {
+  await apiFetch(`/api/admin/bukken/${encodeURIComponent(id)}`, {
+    method: "DELETE",
+  });
+}
+
 // ── Upload ──
 
 /** 画像をSupabase Storageへアップロードし公開URLを返す */
-export async function uploadImage(file: File): Promise<string> {
+export async function uploadImage(file: File, folder?: "columns" | "bukken"): Promise<string> {
   const formData = new FormData();
   formData.append("file", file);
+  if (folder) formData.append("folder", folder);
   const res = await fetch("/api/admin/upload", {
     method: "POST",
     headers: await authHeaders(), // Content-Typeはブラウザが boundary 付きで自動設定

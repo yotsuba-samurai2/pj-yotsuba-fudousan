@@ -49,6 +49,76 @@ model Column {
   @@map("columns")
 }
 
+enum PropertyStatus {
+  draft
+  published
+  closed
+}
+
+// 物件の種別（不動産の表示に関する公正競争規約 施行規則第3条の区分に対応）
+// land=別表3（売地1区画）／house=別表5（新築・中古住宅1戸）／condo=別表7（中古マンション等1戸）
+// wholeBuilding=別表5（一棟売りマンション・アパート）／businessBuilding=事業用建物（専用別表なし・
+// 別表5相当の自主基準表示＝2026-09-01浦松承認①）。賃貸の将来拡張はこのenumへ追加する。
+enum PropertyDealType {
+  land
+  house
+  condo
+  wholeBuilding
+  businessBuilding
+}
+
+// 掲載カテゴリ（勝ち筋対応）：gh=障害福祉GH向け／jigyo=事業用・店舗／souzoku=相続・売却／toushi=投資用
+enum PropertyCategory {
+  gh
+  jigyo
+  souzoku
+  toushi
+  other
+}
+
+// 取引態様（売主・代理・媒介（仲介）の別）＝規約別表の必須表示。宅建業法第34条の明示義務にも対応
+enum PropertyTradeMode {
+  seller
+  agent
+  broker
+}
+
+model Property {
+  id            String            @id @default(uuid())
+  slug          String            @unique
+  status        PropertyStatus    @default(draft)
+  dealType      PropertyDealType  @map("deal_type")
+  category      PropertyCategory
+  // 取引態様は広告許可物件（元付あり）も「媒介」表示（2026-09-01浦松承認③）
+  tradeMode     PropertyTradeMode @map("trade_mode")
+  title         String
+  // 円単位。Int(上限約21.4億)では桁あふれするためBigInt（2026-09-01浦松修正指示2）
+  priceYen      BigInt            @map("price_yen")
+  priceNote     String?           @map("price_note") // 消費税・非課税、負担金等の注記
+  // 町又は字の名称まで（地番なし）＝別表の「物件の所在地」
+  locationText  String            @map("location_text")
+  // [{ line, station, distanceM }] 徒歩分数は保存せず表示時に80m=1分で算出（規則第9条(9)＝算出根拠を保持）
+  access        Json              @default("[]")
+  // 種別ごとの必須表示項目（property-validation.ts の discriminated union で検証）
+  spec          Json
+  images        Json              @default("[]") // [{ url, alt }]
+  description   String            @db.Text
+  // 情報公開日・情報更新日・次回更新予定日＝インターネット広告の必須表示（別表3-16／5-19／7-19）
+  publishedAt   String?           @map("published_at")
+  infoUpdatedAt String            @map("info_updated_at")
+  nextUpdateAt  String            @map("next_update_at")
+  locales       String[]          @default(["ja"])
+  translations  Json? // { en?, "zh-tw"?, zh? } 各 PropertyTranslation（任意）
+  // ★内部専用（媒介/広告許可の別・元付情報・経緯メモ等）。公開面・JSON-LD・OGPに一切出さない
+  // （公開系は toPublicProperty() のホワイトリスト経由のみ＝yotsuba-customer-doc-gate 第5条）
+  internal      Json?
+  createdAt     DateTime          @default(now()) @map("created_at")
+  updatedAt     DateTime          @updatedAt @map("updated_at")
+
+  @@index([status, category])
+  @@map("properties")
+}
+
 model Translation {
   locale    String   @id // "ja" | "en" | "zh-tw" | "zh"
   data      Json // ロケール全体を丸ごと（全体上書きと同義に保つ）

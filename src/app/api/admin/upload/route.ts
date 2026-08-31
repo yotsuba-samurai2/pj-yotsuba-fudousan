@@ -20,6 +20,9 @@ const EXT_MAP: Record<string, string> = {
 
 const MAX_SIZE = 10 * 1024 * 1024; // 10MB
 
+// 保存先フォルダの許可リスト（既定=columns。物件画像は bukken/ 配下に分ける）
+const ALLOWED_FOLDERS = ["columns", "bukken"] as const;
+
 function handleError(err: unknown) {
   if (err instanceof AuthError) {
     return NextResponse.json({ error: err.message }, { status: err.status });
@@ -65,8 +68,15 @@ export async function POST(req: NextRequest) {
       auth: { autoRefreshToken: false, persistSession: false },
     });
 
+    const folderParam = formData.get("folder");
+    const folder =
+      typeof folderParam === "string" &&
+      (ALLOWED_FOLDERS as readonly string[]).includes(folderParam)
+        ? folderParam
+        : "columns";
+
     const yyyymm = new Date().toISOString().slice(0, 7).replace("-", "");
-    const path = `columns/${yyyymm}/${crypto.randomUUID()}.${ext}`;
+    const path = `${folder}/${yyyymm}/${crypto.randomUUID()}.${ext}`;
     const bytes = new Uint8Array(await file.arrayBuffer());
 
     const { error } = await supabase.storage.from(BUCKET).upload(path, bytes, {

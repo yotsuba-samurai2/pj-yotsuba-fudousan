@@ -7,6 +7,8 @@ import {
 } from "@/lib/columns";
 import { canonicalUrl } from "@/lib/seo";
 import type { Column } from "@/lib/columns";
+import { getAllPublishedPropertiesAllLocales } from "@/lib/properties";
+import { isListable, type PublicProperty } from "@/lib/property-shared";
 
 export const revalidate = 300;
 
@@ -83,8 +85,28 @@ function expandColumn(
   }));
 }
 
+/**
+ * 物件詳細を、その物件が公開されているロケール（p.locales・既定 ja）のみ展開する。
+ * published のみ収載（取得関数が status:"published" 限定＋isListable の二重ガード）。
+ * closed は成約時の revalidate で即時に外れる（おとり広告の構造的回避）。
+ */
+function expandProperty(p: PublicProperty): MetadataRoute.Sitemap {
+  const active = p.locales && p.locales.length > 0 ? p.locales : (["ja"] as const);
+  const path = `/bukken/${p.slug}`;
+  const alternates = alternatesFor("realestate", path, active);
+  return active.map((loc) => ({
+    url: canonicalUrl("realestate", path, loc),
+    lastModified: p.infoUpdatedAt,
+    changeFrequency: "weekly" as const,
+    priority: 0.7,
+    alternates,
+  }));
+}
+
 const STATIC_REALESTATE: StaticPage[] = [
   { path: "", changeFrequency: "weekly", priority: 1.0 },
+  // 2026-09-01：物件紹介（/bukken）。ja先行公開＝ページ側 PAGE_LOCALES と一致させる
+  { path: "/bukken", changeFrequency: "weekly", priority: 0.8, locales: ["ja"] },
   { path: "/souzoku", changeFrequency: "monthly", priority: 0.9 },
   { path: "/souzoku/nagare", changeFrequency: "monthly", priority: 0.7 },
   // タスクC-4（2026-07-19）：相続空き家。C-6-2で zh-tw・zh を公開。
@@ -233,11 +255,13 @@ async function buildLaborSitemap(): Promise<MetadataRoute.Sitemap> {
 
 async function buildRealestateSitemap(): Promise<MetadataRoute.Sitemap> {
   const columns = await getAllColumnsAllLocales();
+  const properties = await getAllPublishedPropertiesAllLocales();
   return [
     ...STATIC_REALESTATE.flatMap((page) => expandStatic("realestate", page)),
     ...columns.flatMap((col) =>
       expandColumn("realestate", `/column/${col.slug}`, col),
     ),
+    ...properties.filter(isListable).flatMap(expandProperty),
   ];
 }
 

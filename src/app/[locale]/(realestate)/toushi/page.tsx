@@ -73,6 +73,8 @@ const COPY: Record<LangCode, ToushiCopy> = {
     ),
     internalLinks: [
       { href: "/toushi/group-home", label: "グループホーム物件" },
+      // 2026-09-01：物件紹介（/bukken）新設。ja本文のみ追加＝/bukkenはja先行公開のため他ロケールは対象外。
+      { href: "/bukken", label: "取扱物件のご紹介" },
       { href: "/column/yosekiritsu-hosei-tochine", label: "土地値と容積率の考え方" },
       { href: "/shataku", label: "借り上げ社宅の導入" },
       // 2026-07-24：定点#15強化（内部リンク補強）。ja本文のみ追加＝/officeはja先行公開のため他ロケールは対象外。
