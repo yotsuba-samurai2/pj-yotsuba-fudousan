@@ -208,9 +208,9 @@ const STATIC_LABOR: StaticPage[] = [
   { path: "/labor/services/jinin-kijun-roumu", changeFrequency: "monthly", priority: 0.8, locales: ["ja"] },
   { path: "/labor/services/shogu-kaizen", changeFrequency: "monthly", priority: 0.8, locales: ["ja"] },
   { path: "/labor/services/joseikin", changeFrequency: "monthly", priority: 0.7, locales: ["ja"] },
-  { path: "/labor/services/gaikokujin-koyo", changeFrequency: "monthly", priority: 0.8, locales: ["ja"] },
-  { path: "/labor/services/gaibu-kansanin", changeFrequency: "monthly", priority: 0.8, locales: ["ja"] },
-  { path: "/labor/services/saiyo", changeFrequency: "monthly", priority: 0.8, locales: ["ja"] },
+  { path: "/labor/services/gaikokujin-koyo", changeFrequency: "monthly", priority: 0.8 }, // 2026-09-01 4言語公開（第2波）
+  { path: "/labor/services/gaibu-kansanin", changeFrequency: "monthly", priority: 0.8 }, // 2026-09-01 4言語公開（第2波）
+  { path: "/labor/services/saiyo", changeFrequency: "monthly", priority: 0.8 }, // 2026-09-01 4言語公開（第2波）
   { path: "/labor/ryokin", changeFrequency: "monthly", priority: 0.7 }, // 2026-09-01 4言語公開（第1波）
   { path: "/labor/nagare", changeFrequency: "yearly", priority: 0.6 }, // 2026-09-01 4言語公開（第1波）
   { path: "/labor/faq", changeFrequency: "monthly", priority: 0.6, locales: ["ja"] },

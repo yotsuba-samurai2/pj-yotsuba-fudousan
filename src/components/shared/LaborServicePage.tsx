@@ -17,8 +17,52 @@ import { Placeholder } from "@/components/shared/Placeholder";
 import { getCrossLinks } from "@/lib/cross-links";
 import { SR_LAUNCHED } from "@/lib/shared/office";
 import { PERSON_ID } from "@/lib/seo";
+import type { LangCode } from "@/config/languages";
 
 const SITE = "https://luck428.com";
+
+/**
+ * シェル直書き部分の4ロケール文言（2026-09-01 第2波）。
+ * パンくず・関連リンク見出し・署名。本文（children）は各ページが持つ。
+ * 未翻訳ページ（本文ja）でも、シェルはロケールに追従して問題ない。
+ */
+const SHELL_I18N: Record<
+  LangCode,
+  { bcHome: string; bcServices: string; related: string; authorTitle: string; authorBody1: string; authorBody2: string }
+> = {
+  ja: {
+    bcHome: "ホーム",
+    bcServices: "業務案内",
+    related: "このページの関連リンク",
+    authorTitle: "この記事の著者",
+    authorBody1: " 浦松 丈二｜四葉社会保険労務士事務所 代表 社会保険労務士",
+    authorBody2: "・行政書士（登録番号 第25087022号）・宅地建物取引士。元毎日新聞中国総局長（記者歴34年）。",
+  },
+  en: {
+    bcHome: "Home",
+    bcServices: "Services",
+    related: "Related pages",
+    authorTitle: "Author",
+    authorBody1: " Joji Uramatsu | Representative, 四葉社会保険労務士事務所; Certified Social Insurance and Labor Consultant",
+    authorBody2: "; Administrative Scrivener (Reg. No. 25087022); Licensed Real Estate Transaction Specialist. Former China General Bureau Chief of the Mainichi Shimbun (34 years as a journalist).",
+  },
+  "zh-tw": {
+    bcHome: "首頁",
+    bcServices: "業務案內",
+    related: "本頁的相關連結",
+    authorTitle: "本文作者",
+    authorBody1: " 浦松 丈二｜四葉社會保險勞務士事務所 代表 社會保險勞務士",
+    authorBody2: "・行政書士（登錄號 第25087022號）・宅地建物取引士。曾任每日新聞中國總局長（記者資歷34年）。",
+  },
+  zh: {
+    bcHome: "首页",
+    bcServices: "业务指南",
+    related: "本页的相关链接",
+    authorTitle: "本文作者",
+    authorBody1: " 浦松 丈二｜四葉社会保険労務士事務所 代表 社会保险劳务士",
+    authorBody2: "・行政书士（登录号 第25087022号）・宅地建物取引士。曾任每日新闻中国总局长（记者经历34年）。",
+  },
+};
 
 export type LaborServicePageProps = {
   slug: string; // "shogu-kaizen" 等
@@ -34,6 +78,7 @@ export type LaborServicePageProps = {
 
 export async function LaborServicePage(p: LaborServicePageProps) {
   const locale = await getRequestLocale();
+  const sh = SHELL_I18N[locale] ?? SHELL_I18N.ja;
   const path = `/labor/services/${p.slug}`;
   const url = SITE + path;
   const crossLinks = getCrossLinks(path, SR_LAUNCHED);
@@ -59,8 +104,8 @@ export async function LaborServicePage(p: LaborServicePageProps) {
 
       <Breadcrumb
         items={[
-          { name: "ホーム", href: "/labor" },
-          { name: "業務案内", href: "/labor/services" },
+          { name: sh.bcHome, href: "/labor" },
+          { name: sh.bcServices, href: "/labor/services" },
           { name: p.crumbLabel },
         ]}
       />
@@ -83,7 +128,7 @@ export async function LaborServicePage(p: LaborServicePageProps) {
         <section className="mt-8 space-y-8">{p.children}</section>
 
         <nav aria-label="関連リンク" className="mt-8 rounded-xl border border-border bg-surface p-4 text-sm">
-          <div className="font-medium text-ink">このページの関連リンク</div>
+          <div className="font-medium text-ink">{sh.related}</div>
           <ul className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-primary">
             {p.internalLinks.map((l) => (
               <li key={l.href}>
@@ -107,9 +152,10 @@ export async function LaborServicePage(p: LaborServicePageProps) {
             className="h-12 w-12 flex-shrink-0 rounded-full object-cover"
           />
           <p className="text-xs leading-relaxed text-text-muted">
-            <strong>この記事の著者</strong> 浦松 丈二｜四葉社会保険労務士事務所 代表 社会保険労務士
-            <Placeholder reason="開業時確定＝社労士登録番号" />
-            ・行政書士（登録番号 第25087022号）・宅地建物取引士。元毎日新聞中国総局長（記者歴34年）。
+            <strong>{sh.authorTitle}</strong>
+            {sh.authorBody1}
+            <Placeholder reason="9月下旬確定＝社労士登録番号" />
+            {sh.authorBody2}
           </p>
         </aside>
       </article>
