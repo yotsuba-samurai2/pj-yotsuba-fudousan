@@ -312,6 +312,50 @@ export const LEGAL_MEMBER_OF = [
   },
 ] as const;
 
+/**
+ * 四葉社会保険労務士事務所（ProfessionalService）の外部プロフィールURL。
+ *
+ * 【空である理由＝監査原則】sameAs は「同一エンティティの別ページ」を宣言する場所であり、
+ * 裏取りできたものだけを出す。2026-09-01 時点で当事務所には次のいずれも存在しない。
+ *   - Wikidata エンティティ（既存4件は 浦松個人 Q139738129／不動産 Q139738235／
+ *     行政書士 Q139738259／士業ドットコム Q139738269。社労士事務所のQ番号は未作成）
+ *   - Google ビジネスプロフィール（GBP 3件は不動産・行政書士・士業ドットコムのみ）
+ *   - 士業ドットコムの事務所単体ページ（浦松個人ページは Person.sameAs 経由で接続する）
+ *
+ * 【重要・2026-09-01の事故】この定数が無かったため OrganizationJsonLd の分岐が
+ * 「realestate 以外は LEGAL」の二分岐となり、**社労士事務所が行政書士事務所の
+ * sameAs（Wikidata Q139738259・GBP・いい相続等）をそのまま出力していた**。
+ * 機械には「四葉社会保険労務士事務所＝四葉行政書士事務所」と読める状態だった。
+ * 別事業体を同一視する出力は業法分離と真っ向から矛盾する。空配列でも必ず明示的に持たせ、
+ * 暗黙のフォールバックで他事業体の識別子を借りない。
+ *
+ * Wikidata・GBP を整備したらここに足す（値の二重管理を避けるため GBP は GBP_URL.labor を参照）。
+ */
+export const LABOR_SAME_AS = [] as const;
+
+/**
+ * 四葉社会保険労務士事務所の memberOf（公的所属団体）。
+ *
+ * 社会保険労務士は登録により当然に都道府県会および連合会に所属する（社労士法25条の29等）。
+ * 浦松は2026-09-01付で登録され、同日 四葉社会保険労務士事務所を開設した。
+ * URLは2026-09-01に実ページのtitleで裏取りした（東京都社会保険労務士会／全国社会保険労務士会連合会）。
+ *
+ * 【未検証】会員名簿ページでの個別掲載は未確認。登録番号の交付が2026年9月下旬のため、
+ * 名簿反映はそれ以降になる見込み。掲載を確認できたら、その会員ページURLを sameAs 側へ移す。
+ */
+export const LABOR_MEMBER_OF = [
+  {
+    "@type": "Organization",
+    name: "東京都社会保険労務士会",
+    url: "https://www.tokyosr.jp/",
+  },
+  {
+    "@type": "Organization",
+    name: "全国社会保険労務士会連合会",
+    url: "https://www.shakaihokenroumushi.jp/",
+  },
+] as const;
+
 export type BusinessSEOConfig = {
   url: string;
   name: string;
@@ -333,6 +377,12 @@ export type BusinessSEOConfig = {
   taxID?: string;
   /** 公的識別子（JSON-LD identifier=PropertyValue）。法人番号・免許/登録番号など */
   identifiers?: { propertyID: string; value: string }[];
+  /**
+   * 事業体ごとの設立・開設日（JSON-LD foundingDate）。
+   * 未設定なら SHARED_ORG_INFO.foundingDate（グループとしての "2025"）にフォールバックする。
+   * 開設時期が異なる事業体は必ず自分の値を持つ（社労士事務所＝2026-09-01）。
+   */
+  foundingDate?: string;
 };
 
 export const BUSINESS_SEO: Record<string, BusinessSEOConfig> = {
@@ -420,6 +470,8 @@ export const BUSINESS_SEO: Record<string, BusinessSEOConfig> = {
             SR_OFFICE_NAME_ZH_TW,
             SR_OFFICE_NAME_ZH,
           ],
+          // 開設日＝2026-09-01（登録日と同日）。グループ共通の "2025" を継がせない。
+          foundingDate: "2026-09-01",
         },
       }
     : {}),
