@@ -35,7 +35,7 @@ import { Faq } from "@/components/shared/Faq";
 import { pickFaqJa } from "@/data/faqJa";
 import { InlineCtaProperty } from "@/components/shared/InlineCtaProperty";
 import type { LangCode } from "@/config/languages";
-import { SR_ENTITY_LABEL, SR_ROLE_SENTENCE } from "@/lib/shared/sr-label";
+import { SR_ENTITY_LABEL, SR_ENTITY_LABEL_I18N, SR_ROLE_SENTENCE, SR_BIO } from "@/lib/shared/sr-label";
 
 // 冒頭の回答ブロック（H1直下）。当方が今できるのは物件＝宅建業に限定し、労務・税務は分離受任で振り分け（監修前ドラフト・浦松承認）
 const JA_ANSWER_BLOCK =
@@ -152,7 +152,7 @@ const COPY: Record<LangCode, ShatakuCopy> = {
     authorAlt: "四葉不動産株式会社 代表取締役 浦松丈二",
     authorLabel: "この記事の著者",
     authorBio:
-      "浦松 丈二｜四葉不動産株式会社 代表取締役・専任宅地建物取引士。行政書士。元毎日新聞中国総局長（記者歴34年）。中国や台湾、タイに駐在。社会保険労務士試験合格（2026年9月開業予定）。",
+      `浦松 丈二｜四葉不動産株式会社 代表取締役・専任宅地建物取引士。行政書士。元毎日新聞中国総局長（記者歴34年）。中国や台湾、タイに駐在。${SR_BIO.ja}。`,
   },
   en: {
     metaTitle: "Company Housing & Corporate Leasing Support | 四葉不動産 (Yotsuba Real Estate)",
@@ -192,7 +192,7 @@ const COPY: Record<LangCode, ShatakuCopy> = {
     rolesThWho: "Handled by",
     roles: [
       { work: "Introduction and brokerage of company-housing properties; checking corporate contracts and sublease consent (real estate brokerage)", who: "Yotsuba Real Estate Co., Ltd." },
-      { work: "Company-housing rules, in-kind remuneration, and social insurance (labor)", who: "Yotsuba Social Insurance and Labor Consultant Office (opening scheduled for September 2026; not yet in operation) / a partner licensed social insurance and labor consultant, under a separate contract" },
+      { work: "Company-housing rules, in-kind remuneration, and social insurance (labor)", who: `${SR_ENTITY_LABEL_I18N.en} / a licensed social insurance and labor consultant, under a separate contract` },
       { work: "Payroll taxation and rent-equivalent amounts (tax representation and tax consultation are the exclusive domain of certified tax accountants)", who: "We introduce a partner certified tax accountant" },
       { work: "Preparation of residence-status application documents for international employees (preparation is the exclusive domain of gyoseishoshi; separate contract)", who: "The co-located Yotsuba Gyoseishoshi Office" },
       { work: "Registration", who: "We introduce a judicial scrivener" },
@@ -245,7 +245,7 @@ const COPY: Record<LangCode, ShatakuCopy> = {
     rolesThWho: "承辦",
     roles: [
       { work: "承租型員工宿舍物件的介紹・仲介，法人契約・轉租承諾的確認（宅地建物取引業）", who: "四葉不動産株式会社" },
-      { work: "員工宿舍規程的整備・實物給付・社會保險的處理（勞務）", who: "四葉社会保険労務士事務所（預定2026年9月開業・現階段尚未開業）／合作的社會保險勞務士另行簽約承辦" },
+      { work: "員工宿舍規程的整備・實物給付・社會保險的處理（勞務）", who: `${SR_ENTITY_LABEL_I18N.zhTw}／其他社會保險勞務士另行簽約承辦` },
       { work: "薪資課稅・租金相當額等稅務（稅務代理・稅務諮詢為稅理士的獨占業務）", who: "介紹稅理士" },
       { work: "外國員工在留資格申請文件的製作（製作為行政書士的獨占業務・另行簽約）", who: "併設的四葉行政書士事務所" },
       { work: "登記", who: "介紹司法書士" },
@@ -256,7 +256,7 @@ const COPY: Record<LangCode, ShatakuCopy> = {
     authorAlt: "四葉不動産株式会社 代表取締役 浦松丈二",
     authorLabel: "本文作者",
     authorBio:
-      "浦松 丈二｜四葉不動産株式会社 代表取締役・專任宅地建物取引士。行政書士。曾任每日新聞中國總局長（記者資歷34年）・曾派駐中國、台灣、泰國。已通過社會保險勞務士考試（預定2026年9月開業）。",
+      `浦松 丈二｜四葉不動産株式会社 代表取締役・專任宅地建物取引士。行政書士。曾任每日新聞中國總局長（記者資歷34年）・曾派駐中國、台灣、泰國。${SR_BIO.zhTw}。`,
   },
   zh: {
     metaTitle: "员工宿舍・企业租赁支持｜四葉不動産",
@@ -297,7 +297,7 @@ const COPY: Record<LangCode, ShatakuCopy> = {
     rolesThWho: "承办",
     roles: [
       { work: "承租型员工宿舍物件的介绍・中介，法人合同・转租承诺的确认（宅地建物取引业）", who: "四葉不動産株式会社" },
-      { work: "员工宿舍规程的整备・实物给付・社会保险的处理（劳务）", who: "四葉社会保険労務士事務所（预定2026年9月开业・现阶段尚未开业）／合作的社会保险劳务士另行签约承办" },
+      { work: "员工宿舍规程的整备・实物给付・社会保险的处理（劳务）", who: `${SR_ENTITY_LABEL_I18N.zh}／其他社会保险劳务士另行签约承办` },
       { work: "工资课税・租金相当额等税务（税务代理・税务咨询为税理士的独占业务）", who: "介绍税理士" },
       { work: "外国员工在留资格申请文件的制作（制作为行政书士的独占业务・另行签约）", who: "并设的四葉行政書士事務所" },
       { work: "登记", who: "介绍司法书士" },
@@ -308,7 +308,7 @@ const COPY: Record<LangCode, ShatakuCopy> = {
     authorAlt: "四葉不動産株式会社 代表取缔役 浦松丈二",
     authorLabel: "本文作者",
     authorBio:
-      "浦松 丈二｜四葉不動産株式会社 代表取缔役・专任宅地建物取引士。行政书士。曾任每日新闻中国总局长（记者经历34年）・曾派驻中国、台湾、泰国。已通过社会保险劳务士考试（预定2026年9月开业）。",
+      `浦松 丈二｜四葉不動産株式会社 代表取缔役・专任宅地建物取引士。行政书士。曾任每日新闻中国总局长（记者经历34年）・曾派驻中国、台湾、泰国。${SR_BIO.zh}。`,
   },
 };
 

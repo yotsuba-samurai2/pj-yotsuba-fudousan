@@ -22,6 +22,7 @@ import { Faq, buildFaqJsonLd, type FaqItem } from "@/components/shared/Faq";
 import { CtaBand } from "@/components/shared/CtaBand";
 import { JA_FAQ_SECTIONS } from "@/data/faqJa";
 import type { LangCode } from "@/config/languages";
+import { SR_BIO } from "@/lib/shared/sr-label";
 
 type FaqPageCopy = {
   metaTitle: string;
@@ -48,7 +49,7 @@ const COPY: Record<LangCode, FaqPageCopy> = {
     authorAlt: "四葉不動産株式会社 代表取締役 浦松丈二",
     authorLabel: "この記事の著者",
     authorBio:
-      "浦松 丈二｜四葉不動産株式会社 代表取締役・専任宅地建物取引士。行政書士。元毎日新聞中国総局長（記者歴34年）。中国や台湾、タイに駐在。社会保険労務士試験合格（2026年9月開業予定）。",
+      `浦松 丈二｜四葉不動産株式会社 代表取締役・専任宅地建物取引士。行政書士。元毎日新聞中国総局長（記者歴34年）。中国や台湾、タイに駐在。${SR_BIO.ja}。`,
   },
   en: {
     metaTitle: "FAQ | 四葉不動産株式会社 (Yotsuba Real Estate) — Bunkyo & Myogadani, Tokyo",
@@ -140,7 +141,7 @@ const COPY: Record<LangCode, FaqPageCopy> = {
     authorAlt: "四葉不動産株式会社 代表取締役 浦松丈二",
     authorLabel: "本文作者",
     authorBio:
-      "浦松 丈二｜四葉不動産株式会社 代表取締役・專任宅地建物取引士。行政書士。曾任每日新聞中國總局長（記者資歷34年）・曾派駐中國、台灣、泰國。已通過社會保險勞務士考試（預定2026年9月開業）。",
+      `浦松 丈二｜四葉不動産株式会社 代表取締役・專任宅地建物取引士。行政書士。曾任每日新聞中國總局長（記者資歷34年）・曾派駐中國、台灣、泰國。${SR_BIO.zhTw}。`,
   },
   zh: {
     metaTitle: "常见问题｜文京区・茗荷谷的四葉不動産株式会社",
@@ -186,7 +187,7 @@ const COPY: Record<LangCode, FaqPageCopy> = {
     authorAlt: "四葉不動産株式会社 代表取缔役 浦松丈二",
     authorLabel: "本文作者",
     authorBio:
-      "浦松 丈二｜四葉不動産株式会社 代表取缔役・专任宅地建物取引士。行政书士。曾任每日新闻中国总局长（记者经历34年）・曾派驻中国、台湾、泰国。已通过社会保险劳务士考试（预定2026年9月开业）。",
+      `浦松 丈二｜四葉不動産株式会社 代表取缔役・专任宅地建物取引士。行政书士。曾任每日新闻中国总局长（记者经历34年）・曾派驻中国、台湾、泰国。${SR_BIO.zh}。`,
   },
 };
 

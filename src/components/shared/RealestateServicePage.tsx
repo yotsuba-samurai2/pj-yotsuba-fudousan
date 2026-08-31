@@ -19,6 +19,7 @@ import { SR_LAUNCHED } from "@/lib/shared/office";
 import { PERSON_ID } from "@/lib/seo";
 import type { Column } from "@/lib/columns";
 import type { LangCode } from "@/config/languages";
+import { SR_BIO } from "@/lib/shared/sr-label";
 
 const SITE = "https://luck428.com";
 
@@ -186,7 +187,7 @@ export async function RealestateServicePage(p: RealestateServicePageProps) {
           <p className="text-xs leading-relaxed text-text-muted">
             <strong>{p.authorLabel ?? "この記事の著者"}</strong>{" "}
             {p.authorBio ??
-              "浦松 丈二｜四葉不動産株式会社 代表取締役・専任宅地建物取引士。行政書士。元毎日新聞中国総局長（記者歴34年）。中国や台湾、タイに駐在。社会保険労務士試験合格（2026年9月開業予定）。"}
+              `浦松 丈二｜四葉不動産株式会社 代表取締役・専任宅地建物取引士。行政書士。元毎日新聞中国総局長（記者歴34年）。中国や台湾、タイに駐在。${SR_BIO.ja}。`}
           </p>
         </aside>
       </article>

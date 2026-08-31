@@ -43,6 +43,7 @@ import { RealestateServicePage, ReH2 } from "@/components/shared/RealestateServi
 import { CannotHandle } from "@/components/shared/CannotHandle";
 import { ArticleJsonLd } from "@/components/seo/ArticleJsonLd";
 import type { LangCode } from "@/config/languages";
+import { SR_BIO } from "@/lib/shared/sr-label";
 
 const PUBLISHED_ISO = "2026-08-09";
 const LAST_UPDATED_ISO = "2026-08-09";
@@ -760,7 +761,7 @@ const ZH: Copy = {
   crossLead: "随撤出日本业务发生的行政许可注销、各类申报文件的制作，由关联机构四叶行政书士事务所另行签约受理。",
   authorLabel: "本文作者",
   authorBio:
-    "浦松丈二｜四叶不动产株式会社 代表取缔役·专任宅地建物取引士、行政书士。原日本《每日新闻》中国总局长（记者生涯34年，曾驻中国、台湾、泰国）。社会保险劳务士考试合格（2026年9月开业预定）。",
+    `浦松丈二｜四叶不动产株式会社 代表取缔役·专任宅地建物取引士、行政书士。原日本《每日新闻》中国总局长（记者生涯34年，曾驻中国、台湾、泰国）。${SR_BIO.zh}。`,
   relatedAria: "相关链接",
   relatedHeading: "本页相关链接",
 };
@@ -1061,7 +1062,7 @@ const EN: Copy = {
     "License cancellations and other filings that accompany a withdrawal from Japan are handled by the affiliated Yotsuba Administrative Scrivener Office under a separate contract.",
   authorLabel: "About the author",
   authorBio:
-    "Joji Uramatsu | Representative Director, Yotsuba Real Estate Co., Ltd.; licensed real estate transaction specialist and Administrative Scrivener (gyoseishoshi). Former China General Bureau Chief of the Mainichi Newspapers (34 years as a journalist; postings in China, Taiwan, and Thailand). Passed the Licensed Social Insurance and Labor Consultant examination (office opening September 2026).",
+    `Joji Uramatsu | Representative Director, Yotsuba Real Estate Co., Ltd.; licensed real estate transaction specialist and Administrative Scrivener (gyoseishoshi). Former China General Bureau Chief of the Mainichi Newspapers (34 years as a journalist; postings in China, Taiwan, and Thailand). ${SR_BIO.en}.`,
   relatedAria: "Related links",
   relatedHeading: "Related links on this page",
 };
@@ -1360,7 +1361,7 @@ const ZHTW: Copy = {
   crossLead: "隨撤出日本業務發生的行政許可註銷、各類申報文件的製作，由關聯機構四葉行政書士事務所另行簽約受理。",
   authorLabel: "本文作者",
   authorBio:
-    "浦松丈二｜四葉不動產株式會社 代表取締役・專任宅地建物取引士、行政書士。原日本《每日新聞》中國總局長（記者生涯34年，曾駐中國、台灣、泰國）。社會保險勞務士考試合格（2026年9月開業預定）。",
+    `浦松丈二｜四葉不動產株式會社 代表取締役・專任宅地建物取引士、行政書士。原日本《每日新聞》中國總局長（記者生涯34年，曾駐中國、台灣、泰國）。${SR_BIO.zhTw}。`,
   relatedAria: "相關連結",
   relatedHeading: "本頁相關連結",
 };

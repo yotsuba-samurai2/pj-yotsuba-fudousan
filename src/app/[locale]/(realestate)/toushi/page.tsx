@@ -15,6 +15,7 @@ import { Faq, type FaqItem } from "@/components/shared/Faq";
 import { pickFaqJa } from "@/data/faqJa";
 import { getColumns, getLocalizedColumn, filterColumnsByTheme } from "@/lib/columns";
 import type { LangCode } from "@/config/languages";
+import { SR_BIO } from "@/lib/shared/sr-label";
 
 // ─── B-4（2026-07-19浦松検収済み・日本語版のみ）─────────────────────────
 // 冒頭の回答ブロック（H1直下・168字）＝誰に・何を・どの地域で・誰が担当・分離受任を1段落に収める。
@@ -87,7 +88,7 @@ const COPY: Record<LangCode, ToushiCopy> = {
     authorAlt: "四葉不動産株式会社 代表取締役 浦松丈二",
     authorLabel: "この記事の著者",
     authorBio:
-      "浦松 丈二｜四葉不動産株式会社 代表取締役・専任宅地建物取引士。行政書士。元毎日新聞中国総局長（記者歴34年）。中国や台湾、タイに駐在。社会保険労務士試験合格（2026年9月開業予定）。",
+      `浦松 丈二｜四葉不動産株式会社 代表取締役・専任宅地建物取引士。行政書士。元毎日新聞中国総局長（記者歴34年）。中国や台湾、タイに駐在。${SR_BIO.ja}。`,
     faqHeading: "よくある質問",
     faqAria: "よくあるご質問",
     sections: (locale) => (
@@ -381,7 +382,7 @@ const COPY: Record<LangCode, ToushiCopy> = {
     authorAlt: "四葉不動産株式会社 代表取締役 浦松丈二",
     authorLabel: "本文作者",
     authorBio:
-      "浦松 丈二｜四葉不動産株式会社 代表取締役・專任宅地建物取引士。行政書士。曾任每日新聞中國總局長（記者資歷34年）・曾派駐中國、台灣、泰國。已通過社會保險勞務士考試（預定2026年9月開業）。",
+      `浦松 丈二｜四葉不動産株式会社 代表取締役・專任宅地建物取引士。行政書士。曾任每日新聞中國總局長（記者資歷34年）・曾派駐中國、台灣、泰國。${SR_BIO.zhTw}。`,
     faqHeading: "常見問題",
     faqAria: "常見問題",
     faq: [
@@ -531,7 +532,7 @@ const COPY: Record<LangCode, ToushiCopy> = {
     authorAlt: "四葉不動産株式会社 代表取缔役 浦松丈二",
     authorLabel: "本文作者",
     authorBio:
-      "浦松 丈二｜四葉不動産株式会社 代表取缔役・专任宅地建物取引士。行政书士。曾任每日新闻中国总局长（记者经历34年）・曾派驻中国、台湾、泰国。已通过社会保险劳务士考试（预定2026年9月开业）。",
+      `浦松 丈二｜四葉不動産株式会社 代表取缔役・专任宅地建物取引士。行政书士。曾任每日新闻中国总局长（记者经历34年）・曾派驻中国、台湾、泰国。${SR_BIO.zh}。`,
     faqHeading: "常见问题",
     faqAria: "常见问题",
     faq: [

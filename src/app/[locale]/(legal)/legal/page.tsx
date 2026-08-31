@@ -9,6 +9,7 @@ import { addLocalePrefix } from "@/lib/locale";
 import Link from "next/link";
 import { CtaBand } from "@/components/shared/CtaBand";
 import type { LangCode } from "@/config/languages";
+import { SR_BIO } from "@/lib/shared/sr-label";
 
 type LegalTopCopy = {
   metaTitle: string;
@@ -51,7 +52,7 @@ const COPY: Record<LangCode, LegalTopCopy> = {
     ],
     repName: "浦松 丈二（うらまつ・じょうじ）",
     repBio:
-      "元毎日新聞中国総局長（記者歴34年）。行政書士（登録番号 第25087022号）・宅地建物取引士。社会保険労務士試験合格（2026年9月開業予定）。「事実を整理して、伝わる形にする」——記者として34年続けた仕事を、いまは行政書士の書類と申請に注いでいます。",
+      `元毎日新聞中国総局長（記者歴34年）。行政書士（登録番号 第25087022号）・宅地建物取引士。${SR_BIO.ja}。「事実を整理して、伝わる形にする」——記者として34年続けた仕事を、いまは行政書士の書類と申請に注いでいます。`,
     profileLabel: "プロフィール：",
     membershipsHeading: "所属団体",
     nav: [
@@ -113,7 +114,7 @@ const COPY: Record<LangCode, LegalTopCopy> = {
     ],
     repName: "浦松 丈二（Uramatsu Joji）",
     repBio:
-      "曾任每日新聞中國總局長（記者資歷34年）。行政書士（登錄編號 第25087022號）・宅地建物取引士。已通過社會保險勞務士考試（預定2026年9月開業）。「把事實整理成能傳達的形式」——34年的記者功夫，現在傾注於行政書士的文件與申請。",
+      `曾任每日新聞中國總局長（記者資歷34年）。行政書士（登錄編號 第25087022號）・宅地建物取引士。${SR_BIO.zhTw}。「把事實整理成能傳達的形式」——34年的記者功夫，現在傾注於行政書士的文件與申請。`,
     profileLabel: "個人檔案：",
     membershipsHeading: "所屬團體",
     nav: [
@@ -144,7 +145,7 @@ const COPY: Record<LangCode, LegalTopCopy> = {
     ],
     repName: "浦松 丈二（Uramatsu Joji）",
     repBio:
-      "曾任每日新闻中国总局长（记者经历34年）。行政书士（登录编号 第25087022号）・宅地建物取引士。已通过社会保险劳务士考试（预定2026年9月开业）。“把事实整理成能传达的形式”——34年的记者功夫，现在倾注于行政书士的文件与申请。",
+      `曾任每日新闻中国总局长（记者经历34年）。行政书士（登录编号 第25087022号）・宅地建物取引士。${SR_BIO.zh}。“把事实整理成能传达的形式”——34年的记者功夫，现在倾注于行政书士的文件与申请。`,
     profileLabel: "个人简介：",
     membershipsHeading: "所属团体",
     nav: [

@@ -12,6 +12,7 @@ import { Faq, type FaqItem } from "@/components/shared/Faq";
 import { CtaBand } from "@/components/shared/CtaBand";
 import { SR_OFFICE_NAME } from "@/lib/shared/sr-name";
 import type { LangCode } from "@/config/languages";
+import { SR_BIO } from "@/lib/shared/sr-label";
 
 // 社労士は2026年9月開業予定。受任できると読める現在形は SR_LAUNCHED の内側にのみ置く
 // （/reasons と同じ扱い。事務所名は必ず SR_OFFICE_NAME 経由で取得する）
@@ -278,7 +279,7 @@ export default async function Page() {
             className="h-12 w-12 flex-shrink-0 rounded-full object-cover"
           />
           <p className="text-xs leading-relaxed text-text-muted">
-            <strong>この記事の著者</strong> 浦松 丈二｜四葉行政書士事務所 代表行政書士（登録番号 第25087022号）・宅地建物取引士。元毎日新聞中国総局長（記者歴34年）。社会保険労務士試験合格（2026年9月開業予定）。
+            <strong>この記事の著者</strong> 浦松 丈二｜四葉行政書士事務所 代表行政書士（登録番号 第25087022号）・宅地建物取引士。元毎日新聞中国総局長（記者歴34年）。{SR_BIO.ja}。
           </p>
         </aside>
         <CtaBand businessKey="legal" />

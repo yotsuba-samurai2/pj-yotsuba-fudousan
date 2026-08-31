@@ -14,6 +14,7 @@ import { CrossLinkBanner } from "@/components/shared/CrossLinkBanner";
 import { getCrossLinks } from "@/lib/cross-links";
 import { SR_LAUNCHED } from "@/lib/shared/office";
 import type { LangCode } from "@/config/languages";
+import { SR_BIO } from "@/lib/shared/sr-label";
 
 const SITE = "https://luck428.com";
 
@@ -560,7 +561,7 @@ export default async function Page() {
             className="h-12 w-12 flex-shrink-0 rounded-full object-cover"
           />
           <p className="text-xs leading-relaxed text-text-muted">
-            <strong>この記事の著者</strong> 浦松 丈二｜四葉行政書士事務所 代表行政書士（登録番号 第25087022号）・宅地建物取引士。元毎日新聞中国総局長（記者歴34年）。社会保険労務士試験合格（2026年9月開業予定）。
+            <strong>この記事の著者</strong> 浦松 丈二｜四葉行政書士事務所 代表行政書士（登録番号 第25087022号）・宅地建物取引士。元毎日新聞中国総局長（記者歴34年）。{SR_BIO.ja}。
           </p>
         </aside>
       </main>

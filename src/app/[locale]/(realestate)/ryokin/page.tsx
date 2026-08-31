@@ -24,6 +24,7 @@ import { Breadcrumb } from "@/components/shared/Breadcrumb";
 import { Faq, type FaqItem } from "@/components/shared/Faq";
 import { CtaBand } from "@/components/shared/CtaBand";
 import type { LangCode } from "@/config/languages";
+import { SR_BIO } from "@/lib/shared/sr-label";
 
 type Section = { h2: string; body: React.ReactNode };
 // 2026-08-11 追加：料金を文章でなく表で示す（浦松判断）。
@@ -234,7 +235,7 @@ const JA: RyokinCopy = {
   authorAlt: "四葉不動産株式会社 代表取締役 浦松丈二",
   authorLabel: "この記事の著者",
   authorBio:
-    "浦松 丈二｜四葉不動産株式会社 代表取締役・専任宅地建物取引士。行政書士。元毎日新聞中国総局長（記者歴34年）。中国や台湾、タイに駐在。社会保険労務士試験合格（2026年9月開業予定）。",
+    `浦松 丈二｜四葉不動産株式会社 代表取締役・専任宅地建物取引士。行政書士。元毎日新聞中国総局長（記者歴34年）。中国や台湾、タイに駐在。${SR_BIO.ja}。`,
 };
 
 // 英語（C-6-3 第1段階で浦松承認の統一訳語）：
@@ -353,7 +354,7 @@ const EN: RyokinCopy = {
   authorAlt: "Joji Uramatsu, Representative Director of Yotsuba Real Estate Co., Ltd.",
   authorLabel: "About the author",
   authorBio:
-    "Joji Uramatsu｜Representative Director of Yotsuba Real Estate Co., Ltd.; full-time Licensed Real Estate Transaction Specialist (宅地建物取引士). Gyoseishoshi (Administrative Scrivener). Former China General Bureau Chief of the Mainichi Shimbun (34 years as a journalist). Stationed in China, Taiwan, and Thailand. Passed the Certified Social Insurance and Labor Consultant (Sharoushi) examination (office opening scheduled for September 2026).",
+    `Joji Uramatsu｜Representative Director of Yotsuba Real Estate Co., Ltd.; full-time Licensed Real Estate Transaction Specialist (宅地建物取引士). Gyoseishoshi (Administrative Scrivener). Former China General Bureau Chief of the Mainichi Shimbun (34 years as a journalist). Stationed in China, Taiwan, and Thailand. ${SR_BIO.en}.`,
 };
 
 // 繁体字（C-6-1・C-6-2 の確定語彙を踏襲。宅地建物取引業法＝宅地建物交易業法（日本語：宅地建物取引業法））
@@ -471,7 +472,7 @@ const ZH_TW: RyokinCopy = {
   authorLabel: "本文作者",
   // C-6-2 で確定した繁体字の署名文言（日本語原文が同一のため一字一句そのまま使用）
   authorBio:
-    "浦松 丈二｜四葉不動産株式会社 代表取締役（負責人）・專任宅地建物交易士（日本語：宅地建物取引士）。行政書士。前每日新聞中國總局長（記者資歷34年）。曾派駐中國、台灣與泰國。社會保險勞務士考試合格（預計2026年9月開業）。",
+    `浦松 丈二｜四葉不動産株式会社 代表取締役（負責人）・專任宅地建物交易士（日本語：宅地建物取引士）。行政書士。前每日新聞中國總局長（記者資歷34年）。曾派駐中國、台灣與泰國。${SR_BIO.zhTw}。`,
 };
 
 // 簡体字（C-6-1・C-6-2 の確定語彙を踏襲。大陸読者に自然な語彙＝中介手续费・合同）
@@ -589,7 +590,7 @@ const ZH: RyokinCopy = {
   authorLabel: "本文作者",
   // C-6-2 で確定した簡体字の署名文言（日本語原文が同一のため一字一句そのまま使用）
   authorBio:
-    "浦松 丈二｜四葉不動産株式会社 代表取締役（负责人）・专任宅地建物交易士（日本語：宅地建物取引士）。行政书士。前每日新闻中国总局长（记者资历34年）。曾派驻中国、台湾与泰国。社会保险劳务士考试合格（预计2026年9月开业）。",
+    `浦松 丈二｜四葉不動産株式会社 代表取締役（负责人）・专任宅地建物交易士（日本語：宅地建物取引士）。行政书士。前每日新闻中国总局长（记者资历34年）。曾派驻中国、台湾与泰国。${SR_BIO.zh}。`,
 };
 
 const COPY: Record<LangCode, RyokinCopy> = { ja: JA, en: EN, "zh-tw": ZH_TW, zh: ZH };

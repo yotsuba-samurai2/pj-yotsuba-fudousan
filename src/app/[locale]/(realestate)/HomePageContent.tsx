@@ -24,6 +24,7 @@ import { fetchTranslations } from "@/lib/getTranslationData";
 import { getNestedValue } from "@/lib/seo";
 import { getLatestColumns, getLocalizedColumn } from "@/lib/columns";
 import type { LangCode } from "@/config/languages";
+import { SR_BIO } from "@/lib/shared/sr-label";
 
 const HOME_COLUMNS_HEADING: Record<LangCode, { title: string; all: string }> = {
   ja: { title: "お役立ちコラム", all: "コラム一覧へ" },
@@ -101,7 +102,7 @@ const COPY: Record<LangCode, TopCopy> = {
     repAlt: "四葉不動産株式会社 代表取締役 浦松丈二",
     repName: "浦松 丈二（うらまつ・じょうじ）",
     repBio:
-      "元毎日新聞中国総局長（記者歴34年）。中国や台湾、タイに駐在。宅地建物取引士・行政書士。社会保険労務士試験合格（2026年9月開業予定）。34年、記者として人の話を聞いてきました。あなたの事情を整理するところから、一緒に。",
+      `元毎日新聞中国総局長（記者歴34年）。中国や台湾、タイに駐在。宅地建物取引士・行政書士。${SR_BIO.ja}。34年、記者として人の話を聞いてきました。あなたの事情を整理するところから、一緒に。`,
     profileLabel: "プロフィール：",
     qa: [
       {
@@ -249,7 +250,7 @@ const COPY: Record<LangCode, TopCopy> = {
     repAlt: "四葉不動産株式会社 代表取締役 浦松丈二",
     repName: "浦松 丈二（Uramatsu Joji）",
     repBio:
-      "曾任每日新聞中國總局長（記者資歷34年）、曾派駐中國、台灣、泰國。宅地建物取引士・行政書士。已通過社會保險勞務士考試（預定2026年9月開業）。34年來，我以記者的身分傾聽人們的故事。就從整理您的狀況開始，一起前進。",
+      `曾任每日新聞中國總局長（記者資歷34年）、曾派駐中國、台灣、泰國。宅地建物取引士・行政書士。${SR_BIO.zhTw}。34年來，我以記者的身分傾聽人們的故事。就從整理您的狀況開始，一起前進。`,
     profileLabel: "個人檔案：",
     qa: [
       {
@@ -323,7 +324,7 @@ const COPY: Record<LangCode, TopCopy> = {
     repAlt: "四葉不動産株式会社 代表取缔役 浦松丈二",
     repName: "浦松 丈二（Uramatsu Joji）",
     repBio:
-      "曾任每日新闻中国总局长（记者经历34年）、曾派驻中国、台湾、泰国。宅地建物取引士・行政书士。已通过社会保险劳务士考试（预定2026年9月开业）。34年来，我以记者的身份倾听人们的故事。就从整理您的情况开始，一起前进。",
+      `曾任每日新闻中国总局长（记者经历34年）、曾派驻中国、台湾、泰国。宅地建物取引士・行政书士。${SR_BIO.zh}。34年来，我以记者的身份倾听人们的故事。就从整理您的情况开始，一起前进。`,
     profileLabel: "个人简介：",
     qa: [
       {

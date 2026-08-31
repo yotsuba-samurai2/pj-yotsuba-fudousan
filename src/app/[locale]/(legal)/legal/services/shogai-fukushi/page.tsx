@@ -20,6 +20,7 @@ import { Placeholder } from "@/components/shared/Placeholder";
 import { getCrossLinks } from "@/lib/cross-links";
 import { SR_LAUNCHED } from "@/lib/shared/office";
 import type { LangCode } from "@/config/languages";
+import { SR_BIO } from "@/lib/shared/sr-label";
 
 const PATH = "/legal/services/shogai-fukushi";
 const PAGE_URL = "https://luck428.com" + PATH;
@@ -224,7 +225,7 @@ const COPY: Record<LangCode, ShogaiFukushiCopy> = {
     ],
     authorBody: (
       <>
-        <strong>この記事の著者</strong> 浦松 丈二｜四葉行政書士事務所 代表行政書士（登録番号 第25087022号）・宅地建物取引士。元毎日新聞中国総局長（記者歴34年）。社会保険労務士試験合格（2026年9月開業予定）。
+        <strong>この記事の著者</strong> 浦松 丈二｜四葉行政書士事務所 代表行政書士（登録番号 第25087022号）・宅地建物取引士。元毎日新聞中国総局長（記者歴34年）。{SR_BIO.ja}。
       </>
     ),
   },
@@ -579,7 +580,7 @@ const COPY: Record<LangCode, ShogaiFukushiCopy> = {
     ],
     authorBody: (
       <>
-        <strong>本文作者</strong> 浦松 丈二｜四葉行政書士事務所 代表行政書士（登錄編號 第25087022號）・宅地建物取引士。曾任每日新聞中國總局長（記者資歷34年）。已通過社會保險勞務士考試（預定2026年9月開業）。
+        <strong>本文作者</strong> 浦松 丈二｜四葉行政書士事務所 代表行政書士（登錄編號 第25087022號）・宅地建物取引士。曾任每日新聞中國總局長（記者資歷34年）。{SR_BIO.zhTw}。
       </>
     ),
   },
@@ -757,7 +758,7 @@ const COPY: Record<LangCode, ShogaiFukushiCopy> = {
     ],
     authorBody: (
       <>
-        <strong>本文作者</strong> 浦松 丈二｜四葉行政書士事務所 代表行政书士（登录编号 第25087022号）・宅地建物取引士。曾任每日新闻中国总局长（记者经历34年）。已通过社会保险劳务士考试（预定2026年9月开业）。
+        <strong>本文作者</strong> 浦松 丈二｜四葉行政書士事務所 代表行政书士（登录编号 第25087022号）・宅地建物取引士。曾任每日新闻中国总局长（记者经历34年）。{SR_BIO.zh}。
       </>
     ),
   },

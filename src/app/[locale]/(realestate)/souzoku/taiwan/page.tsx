@@ -23,6 +23,7 @@ import { CannotHandle } from "@/components/shared/CannotHandle";
 import { Faq, type FaqItem } from "@/components/shared/Faq";
 import { pickFaqJa } from "@/data/faqJa";
 import type { LangCode } from "@/config/languages";
+import { SR_BIO } from "@/lib/shared/sr-label";
 
 // 本ページの提供ロケール（en/zh は ja へフォールバック＝従前挙動）
 type PageLocale = "ja" | "zh-tw";
@@ -268,7 +269,7 @@ export default async function Page() {
       authorLabel={isTw ? "本文作者" : undefined}
       authorBio={
         isTw
-          ? "浦松 丈二｜四葉不動産株式会社 代表取締役・專任宅地建物取引士。行政書士。曾任每日新聞中國總局長（記者資歷34年），曾派駐中國、台灣、泰國。已通過社會保險勞務士考試（預定2026年9月開業）。"
+          ? `浦松 丈二｜四葉不動産株式会社 代表取締役・專任宅地建物取引士。行政書士。曾任每日新聞中國總局長（記者資歷34年），曾派駐中國、台灣、泰國。${SR_BIO.zhTw}。`
           : undefined
       }
     >
