@@ -407,6 +407,9 @@ export const BUSINESS_SEO: Record<string, BusinessSEOConfig> = {
           ogImageWidth: 1200,
           ogImageHeight: 630,
           squareLogo: "/yotsuba/labor-square.png",
+          // GBP＝office-public.tsのGBP_URL.labor（cid設定後に自動で入る）。未設定のあいだは
+          // OrganizationJsonLd が geo からの地図検索URLへフォールバックする
+          gbpUrl: GBP_URL.labor,
           columnBasePath: "/labor/column",
           // 登録番号は2026年9月下旬交付予定のため identifiers はまだ置かない。
           // 交付後に { propertyID: "社会保険労務士登録番号", value: … } を追加する。
