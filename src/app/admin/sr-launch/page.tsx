@@ -13,6 +13,7 @@ import {
   REGISTRATION_NUMBER,
   IS_PLACEHOLDER,
   SR_LAUNCH_TRANSLATION_PATCHES,
+  SR_LAUNCH_ENTITY_FIX,
   SR_LAUNCH_COLUMN_PATCHES,
   SR_LAUNCH_SCAN_TERMS,
   SR_LAUNCH_KEEP_AS_IS,
@@ -236,7 +237,6 @@ export default function SrLaunchPage() {
 
   /** (A) 翻訳データの適用 */
   const runTranslations = async () => {
-    if (IS_PLACEHOLDER) return;
     setTrRunning(true);
     const out: Result[] = [];
     try {
@@ -263,9 +263,26 @@ export default function SrLaunchPage() {
           setNested(working, p.path, p.to);
           applied++;
         }
-        if (applied > 0) {
-          await saveTranslations(loc, working as never);
-          out.push({ label: `${loc} 翻訳データ`, status: "applied", detail: `${applied}件を適用（スキップ${skipped}）` });
+        // M-7：配列の中に残る「四葉社会保険労務士法人」を部分一致で是正する。
+        // path 指定では配列要素に届かないため、ツリー全体を走査する。
+        let entityFixed = 0;
+        const fixed = applySubstring(
+          working,
+          SR_LAUNCH_ENTITY_FIX.map((patch, index) => ({ patch, index })),
+          loc,
+          (path, _e, occ) => {
+            entityFixed += occ;
+            out.push({ label: `${loc} 法人→事務所`, status: "applied", detail: `${path}（${occ}件）` });
+          },
+        ) as Record<string, unknown>;
+
+        if (applied > 0 || entityFixed > 0) {
+          await saveTranslations(loc, fixed as never);
+          out.push({
+            label: `${loc} 翻訳データ`,
+            status: "applied",
+            detail: `${applied}件を適用（法人→事務所 ${entityFixed}件／スキップ${skipped}）`,
+          });
         } else {
           out.push({ label: `${loc} 翻訳データ`, status: "skipped", detail: `適用0件（スキップ${skipped}）` });
         }
@@ -356,7 +373,7 @@ export default function SrLaunchPage() {
 
   /** (C) コラムの適用：1件ずつ保存し、失敗したら止める */
   const applyColumns = async () => {
-    if (!dryRun || IS_PLACEHOLDER) return;
+    if (!dryRun) return;
     setApplying(true);
     const out: Result[] = [];
     try {
@@ -409,21 +426,32 @@ export default function SrLaunchPage() {
 
       <div
         className={`mt-6 rounded-lg border p-4 ${
-          IS_PLACEHOLDER ? "border-red-400 bg-red-50" : "border-green-400 bg-green-50"
+          IS_PLACEHOLDER ? "border-amber-400 bg-amber-50" : "border-green-400 bg-green-50"
         }`}
       >
         <p className="font-bold">
-          {IS_PLACEHOLDER ? "⛔ 登録番号が未設定です。適用できません。" : "✅ 登録番号が設定されています。"}
+          {IS_PLACEHOLDER
+            ? "🟡 第1波（番号未交付モード）。このまま適用できます。"
+            : "✅ 登録番号が設定されています。第2波（番号入り）で適用します。"}
         </p>
         <p className="mt-1">
           現在の値：<code className="rounded bg-white px-1">{REGISTRATION_NUMBER}</code>
         </p>
-        {IS_PLACEHOLDER && (
+        {IS_PLACEHOLDER ? (
           <p className="mt-2">
-            <code>src/lib/data/sr-launch-patches.ts</code> の <code>REGISTRATION_NUMBER</code> を、
-            <b>登録証で確認した実数</b>に差し替えてデプロイしてください。
+            登録日（2026年9月1日）と登録番号の交付（9月下旬）はずれます。
+            <b>第1波では番号を書かず、資格名だけを出します</b>（例：「社会保険労務士」）。
+            <br />
+            9月下旬に登録番号が交付されたら、
+            <code>src/lib/data/sr-launch-patches.ts</code> の <code>REGISTRATION_NUMBER</code> を
+            <b>登録証で確認した実数</b>に差し替えてデプロイし、本画面をもう一度実行してください（第2波）。
             <br />
             ※ 試験合格番号「令和7年 第202500525号」と取り違えないこと。
+          </p>
+        ) : (
+          <p className="mt-2">
+            第2波です。<b>from は第1波の適用結果</b>（＝現在の本番値）である必要があります。
+            ドライランの差分を必ず目視してから適用してください。
           </p>
         )}
       </div>
@@ -479,7 +507,7 @@ export default function SrLaunchPage() {
         </p>
         <button
           onClick={runTranslations}
-          disabled={trRunning || IS_PLACEHOLDER}
+          disabled={trRunning}
           className="mt-3 rounded bg-primary px-4 py-2 font-bold text-white disabled:opacity-40"
         >
           {trRunning ? "適用中…" : "翻訳データに適用"}
@@ -569,7 +597,7 @@ export default function SrLaunchPage() {
               </button>
               <button
                 onClick={applyColumns}
-                disabled={applying || IS_PLACEHOLDER}
+                disabled={applying}
                 className="rounded bg-primary px-4 py-2 font-bold text-white disabled:opacity-40"
               >
                 {applying ? "適用中…" : "③ 適用する"}

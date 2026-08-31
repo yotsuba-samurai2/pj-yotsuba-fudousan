@@ -14,9 +14,16 @@
 // ■ 適用画面
 //   /admin/sr-launch （ドライラン → 差分確認 → 適用 の3段）
 //
-// ■ 登録番号
-//   REGISTRATION_NUMBER が唯一の差し替え箇所。9月1日はここだけ書き換える。
-//   プレースホルダーのままでは適用画面が実行を拒否する（sr-launch-patches.test.ts でも検査）。
+// ■ 登録番号と2波運用（2026-08-31 改訂）
+//   登録日は2026年9月1日（日付到来による自動登録・東京都社会保険労務士会に確認済み）だが、
+//   **登録番号の交付は9月下旬**。両者がずれる。
+//
+//   第1波（9/1）  … 番号を書かず、資格名だけを出す。IS_PLACEHOLDER=true のまま適用してよい
+//   第2波（9月下旬）… REGISTRATION_NUMBER を登録証で確認した実数へ差し替えて再適用する
+//
+//   第2波の from は「第1波の適用結果＝そのときの本番の実測値」になる。
+//   本ファイルの原則どおり、**9月下旬に本番を実測してから from を書く**。
+//   REGISTRATION_NUMBER は試験合格番号（令和7年 第202500525号）ではない。
 
 import type { LangCode } from "@/config/languages";
 
@@ -31,10 +38,72 @@ import type { LangCode } from "@/config/languages";
  */
 export const REGISTRATION_NUMBER = "【登録番号】";
 
-/** プレースホルダーのままかどうか。true の間は適用してはならない。 */
+/**
+ * プレースホルダーのままか＝**登録番号が未交付か**。
+ *
+ * ★ 2026-08-31 に意味を変えた。以前は「true の間は適用してはならない」だったが、
+ *   登録日（9/1）と番号の交付（9月下旬）がずれるため、それでは開業日に
+ *   1件も適用できない。現在は **true でも第1波は適用してよい**（番号を書かない文面になる）。
+ *   適用画面（/admin/sr-launch）は、true のとき「番号未交付モード」として表示する。
+ */
 export const IS_PLACEHOLDER = REGISTRATION_NUMBER.includes("【");
 
+/** 番号未交付か（IS_PLACEHOLDER の読みやすい別名） */
+export const IS_NUMBER_PENDING = IS_PLACEHOLDER;
+
 const N = REGISTRATION_NUMBER;
+
+/**
+ * ★ 2波運用（2026-08-31 浦松決定）
+ *
+ * 登録日（2026年9月1日）と登録番号の交付（9月下旬）がずれる。
+ * **第1波（9/1）は資格名だけを出し、番号も登録日も添えない。**
+ * 第2波（9月下旬）で REGISTRATION_NUMBER を実数に差し替えると、
+ * 同じ箇所が番号入りの文面に変わる。
+ *
+ * 「（2026年9月1日登録）」のような補足を第1波で足すと、番号交付後に
+ * それを消す作業が4書体×全ページで発生し、取りこぼす（正本スキル第13条）。
+ * 事務所概要（/labor/about の officeInfo）だけは
+ * labor-office-info-patches.ts 側で「番号は9月下旬に交付予定」と明示する。
+ */
+type SrLang = "ja" | "en" | "zh-tw" | "zh";
+
+const QUAL: Record<SrLang, string> = {
+  ja: "社会保険労務士",
+  en: "Certified Social Insurance and Labor Consultant",
+  "zh-tw": "社會保險勞務士",
+  zh: "社会保险劳务士",
+};
+
+/** 資格名＋登録番号（読点なしの並列形）。未交付のあいだは資格名だけ。 */
+function withReg(lang: SrLang): string {
+  if (IS_PLACEHOLDER) return QUAL[lang];
+  switch (lang) {
+    case "ja":
+      return `${QUAL.ja} 登録番号第${N}号`;
+    case "en":
+      return `${QUAL.en}, Registration No. ${N}`;
+    case "zh-tw":
+      return `${QUAL["zh-tw"]} 登錄號第${N}號`;
+    case "zh":
+      return `${QUAL.zh} 登录号第${N}号`;
+  }
+}
+
+/** 名称のうしろに付ける登録番号の括弧。未交付のあいだは空文字＝何も付けない。 */
+function regParen(lang: SrLang): string {
+  if (IS_PLACEHOLDER) return "";
+  switch (lang) {
+    case "ja":
+      return `（登録番号第${N}号）`;
+    case "en":
+      return ` (Registration No. ${N})`;
+    case "zh-tw":
+      return `（登錄號第${N}號）`;
+    case "zh":
+      return `（登录号第${N}号）`;
+  }
+}
 
 /** 翻訳データ：キー単位の全値置換（from照合・不一致はスキップ） */
 export type SrLaunchTranslationPatch = {
@@ -70,7 +139,7 @@ export const SR_LAUNCH_TRANSLATION_PATCHES: Record<
     {
       path: "common.footer.laborRepRegistration",
       from: "社会保険労務士試験合格（2026年9月開業予定）",
-      to: `社会保険労務士 登録番号第${N}号`,
+      to: withReg("ja"),
     },
     {
       path: "representative.srExamNote",
@@ -177,7 +246,7 @@ export const SR_LAUNCH_TRANSLATION_PATCHES: Record<
     {
       path: "common.footer.laborRepRegistration",
       from: "Passed the Certified Social Insurance and Labor Consultant Examination (opening planned for September 2026)",
-      to: `Certified Social Insurance and Labor Consultant, Registration No. ${N}`,
+      to: withReg("en"),
     },
     {
       path: "representative.srExamNote",
@@ -283,7 +352,7 @@ export const SR_LAUNCH_TRANSLATION_PATCHES: Record<
     {
       path: "common.footer.laborRepRegistration",
       from: "社會保險勞務士考試合格（預定2026年9月開業）",
-      to: `社會保險勞務士 登錄號第${N}號`,
+      to: withReg("zh-tw"),
     },
     {
       path: "representative.srExamNote",
@@ -389,7 +458,7 @@ export const SR_LAUNCH_TRANSLATION_PATCHES: Record<
     {
       path: "common.footer.laborRepRegistration",
       from: "社会保险劳务士考试合格（预定2026年9月开业）",
-      to: `社会保险劳务士 登录号第${N}号`,
+      to: withReg("zh"),
     },
     {
       path: "representative.srExamNote",
@@ -494,17 +563,17 @@ export const SR_LAUNCH_COLUMN_PATCHES: SrLaunchColumnPatch[] = [
   // ── 長い複合形を先に ──────────────────────────────
   {
     from: "四葉社会保険労務士事務所は2026年9月開業予定・現時点では未開業",
-    to: `四葉社会保険労務士事務所（登録番号第${N}号）`,
+    to: `四葉社会保険労務士事務所${regParen("ja")}`,
     note: "/column/kikoku-karikage-shataku-shain 等の本文",
   },
   {
     from: "四葉社会保険労務士事務所（預定2026年9月開業・現階段尚未開業）",
-    to: `四葉社会保険労務士事務所（登錄號第${N}號）`,
+    to: `四葉社会保険労務士事務所${regParen("zh-tw")}`,
     note: "zh-tw。事務所名が日本語表記のままである点は現状維持",
   },
   {
     from: "四葉社会保険労務士事務所（预定2026年9月开业・现阶段尚未开业）",
-    to: `四葉社会保険労務士事務所（登录号第${N}号）`,
+    to: `四葉社会保険労務士事務所${regParen("zh")}`,
   },
   {
     from: "社会保険労務士業務は2026年9月の開業までお受けできません",
@@ -521,63 +590,63 @@ export const SR_LAUNCH_COLUMN_PATCHES: SrLaunchColumnPatch[] = [
   },
   {
     from: "社会保険労務士試験合格・2026年9月開業予定",
-    to: `社会保険労務士・登録番号第${N}号`,
+    to: withReg("ja"),
     note: "著者紹介の中黒つなぎ形",
   },
   {
     from: "社會保險勞務士考試合格・預定2026年9月開業",
-    to: `社會保險勞務士・登錄號第${N}號`,
+    to: withReg("zh-tw"),
   },
   {
     from: "社会保险劳务士考试合格・预定2026年9月开业",
-    to: `社会保险劳务士・登录号第${N}号`,
+    to: withReg("zh"),
   },
   {
     from: "登録番号 第25087022号、社会保険労務士試験合格（2026年9月開業予定）",
-    to: `登録番号 第25087022号、社会保険労務士 登録番号第${N}号`,
+    to: `登録番号 第25087022号、${withReg("ja")}`,
   },
   {
     from: "登錄號　第25087022號、社會保險勞務士考試合格（預定2026年9月開業）",
-    to: `登錄號　第25087022號、社會保險勞務士 登錄號第${N}號`,
+    to: `登錄號　第25087022號、${withReg("zh-tw")}`,
   },
   {
     from: "登录号 第25087022号、社会保险劳务士考试合格（预定2026年9月开业）",
-    to: `登录号 第25087022号、社会保险劳务士 登录号第${N}号`,
+    to: `登录号 第25087022号、${withReg("zh")}`,
   },
   {
     from: "已通過社會保險勞務士考試（預定2026年9月開業）",
-    to: `社會保險勞務士（登錄號第${N}號）`,
+    to: `社會保險勞務士${regParen("zh-tw")}`,
   },
   {
     from: "已通过社会保险劳务士考试（预定2026年9月开业）",
-    to: `社会保险劳务士（登录号第${N}号）`,
+    to: `社会保险劳务士${regParen("zh")}`,
   },
   {
     from: "Passed the Certified Social Insurance and Labor Consultant Examination (office opening September 2026)",
-    to: `Certified Social Insurance and Labor Consultant (Registration No. ${N})`,
+    to: `Certified Social Insurance and Labor Consultant${regParen("en")}`,
   },
   {
     from: "Certified Social Insurance and Labor Consultant Examination (office opening September 2026)",
-    to: `Certified Social Insurance and Labor Consultant (Registration No. ${N})`,
+    to: `Certified Social Insurance and Labor Consultant${regParen("en")}`,
   },
   // ── ★ 語順違い。完全一致だと落とすため個別に置く ──────────
   {
     from: "社會保險勞務士考試合格（2026年9月開業預定）",
-    to: `社會保險勞務士（登錄號第${N}號）`,
+    to: `社會保險勞務士${regParen("zh-tw")}`,
     note: "★ /zh-tw/leaving-japan だけ語順が違う（他は「預定2026年9月開業」）。2026-08-09 実測",
   },
   // ── 一般形（最後に置く）─────────────────────────────
   {
     from: "社会保険労務士試験合格（2026年9月開業予定）",
-    to: `社会保険労務士（登録番号第${N}号）`,
+    to: `社会保険労務士${regParen("ja")}`,
   },
   {
     from: "社會保險勞務士考試合格（預定2026年9月開業）",
-    to: `社會保險勞務士（登錄號第${N}號）`,
+    to: `社會保險勞務士${regParen("zh-tw")}`,
   },
   {
     from: "社会保险劳务士考试合格（预定2026年9月开业）",
-    to: `社会保险劳务士（登录号第${N}号）`,
+    to: `社会保险劳务士${regParen("zh")}`,
   },
 ];
 
@@ -608,6 +677,13 @@ export const SR_LAUNCH_SCAN_TERMS: string[] = [
   "scheduled to open",
   // プレースホルダー
   "【登録番号】",
+  // M-7：翻訳DBの groupBusinesses 等に残る「法人」。
+  // 開業で stripSrEntities が止まると 4ロケールのHTMLに出る。
+  // 一般論として社労士法人に言及する記事を巻き込まないよう「四葉／四叶」で固定する。
+  "四葉社会保険労務士法人",
+  "四葉社會保險勞務士法人",
+  "四葉社会保险劳务士法人",
+  "四叶社会保险劳务士法人",
 ];
 
 /**
@@ -617,4 +693,39 @@ export const SR_LAUNCH_SCAN_TERMS: string[] = [
 export const SR_LAUNCH_KEEP_AS_IS: string[] = [
   "令和7年10月 社会保険労務士試験合格", // /about/uramatsu の経歴年表＝事実の記録
   "令和7年 第202500525号", // 試験合格番号。hasCredential は 9/1 に別途差し替える
+];
+
+/**
+ * ★ M-7：翻訳DBに残る「四葉社会保険労務士**法人**」を「事務所」に直す。
+ *
+ * 開設するのは**個人事務所**であり、法人化の予定はない。
+ * この文字列は `legal.homePage.groupBusinesses[2].name` ／
+ * `realestate.aboutPage.groupBusinesses[2].name` のような**配列の中**にあり、
+ * `path` 指定のパッチでは扱いにくい。開業までは `stripSrEntities`（app/[locale]/layout.tsx）が
+ * 配列要素ごと落としているため本番HTMLに出ないが、**開業で除去が止まると可視化する**。
+ *
+ * そこで翻訳ツリー全体に**部分一致**で当てる。
+ * 「四葉／四叶」で始まる形だけを対象にし、社労士法人の一般論に言及する記事を巻き込まない。
+ */
+export const SR_LAUNCH_ENTITY_FIX: SrLaunchColumnPatch[] = [
+  {
+    from: "四葉社会保険労務士法人",
+    to: "四葉社会保険労務士事務所",
+    note: "ja／zh（zhの事務所名は日本語表記のまま）",
+  },
+  {
+    from: "四葉社會保險勞務士法人",
+    to: "四葉社會保險勞務士事務所",
+    note: "zh-tw",
+  },
+  {
+    from: "四葉社会保险劳务士法人",
+    to: "四葉社会保险劳务士事务所",
+    note: "zh（簡体字表記が使われている場合の保険）",
+  },
+  {
+    from: "四叶社会保险劳务士法人",
+    to: "四叶社会保险劳务士事务所",
+    note: "zh（四叶表記が使われている場合の保険）",
+  },
 ];
