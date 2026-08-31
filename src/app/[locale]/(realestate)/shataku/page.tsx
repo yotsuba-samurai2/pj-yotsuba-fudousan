@@ -35,6 +35,7 @@ import { Faq } from "@/components/shared/Faq";
 import { pickFaqJa } from "@/data/faqJa";
 import { InlineCtaProperty } from "@/components/shared/InlineCtaProperty";
 import type { LangCode } from "@/config/languages";
+import { SR_ENTITY_LABEL, SR_ROLE_SENTENCE } from "@/lib/shared/sr-label";
 
 // 冒頭の回答ブロック（H1直下）。当方が今できるのは物件＝宅建業に限定し、労務・税務は分離受任で振り分け（監修前ドラフト・浦松承認）
 const JA_ANSWER_BLOCK =
@@ -140,7 +141,7 @@ const COPY: Record<LangCode, ShatakuCopy> = {
     rolesThWho: "担当",
     roles: [
       { work: "借り上げ社宅の物件の紹介・仲介、法人契約・転貸承諾の確認（宅地建物取引業）", who: "四葉不動産株式会社" },
-      { work: "社宅規程の整備・現物給与・社会保険の取り扱い（労務）", who: "四葉社会保険労務士事務所（2026年9月開業予定・現時点では未開業）／他の社会保険労務士が別契約で対応" },
+      { work: "社宅規程の整備・現物給与・社会保険の取り扱い（労務）", who: `${SR_ENTITY_LABEL}／他の社会保険労務士が別契約で対応` },
       { work: "給与課税・賃貸料相当額など税務（税務代理・税務相談は税理士の独占業務）", who: "税理士をご紹介" },
       { work: "外国人従業員の在留資格の申請書類の作成（作成は行政書士の独占業務・別契約）", who: "併設の四葉行政書士事務所" },
       { work: "登記", who: "司法書士をご紹介" },
@@ -408,7 +409,7 @@ export default async function Page() {
               借り上げ社宅を制度として運用するには、社宅規程で「対象者・入居資格、社宅使用料（従業員の負担）の決め方、上限家賃、対応エリア、入退去・入替、原状回復や費用負担」などを定めます。とくに従業員の負担割合は、次に述べる税務・社会保険の取り扱いに直結します。
             </p>
             <p className="mt-3 leading-relaxed text-text">
-              社宅規程の内容の作り込みは労務の判断にあたります。四葉社会保険労務士事務所（2026年9月開業予定・現時点では未開業）の開業後、または他の社会保険労務士が別契約で対応します。
+              社宅規程の内容の作り込みは労務の判断にあたります。{SR_ROLE_SENTENCE.shataku}
             </p>
           </div>
 

@@ -16,6 +16,7 @@ import { CannotHandle } from "@/components/shared/CannotHandle";
 import { Faq } from "@/components/shared/Faq";
 import { pickFaqJa } from "@/data/faqJa";
 import { InlineCtaProperty } from "@/components/shared/InlineCtaProperty";
+import { SR_ENTITY_LABEL } from "@/lib/shared/sr-label";
 
 // 冒頭の回答ブロック（H1直下）。浦松指定の確定文言（2026-07-19検収＝「作成」を独占業務とする修正済み）
 // ＝一字一句変更しないこと。
@@ -200,7 +201,7 @@ export default async function Page() {
             </tr>
             <tr>
               <td className="border border-border px-3 py-2">労務・人員配置のご相談</td>
-              <td className="border border-border px-3 py-2">四葉社会保険労務士事務所（2026年9月開業予定・現時点では未開業）</td>
+              <td className="border border-border px-3 py-2">{SR_ENTITY_LABEL}</td>
             </tr>
             <tr>
               <td className="border border-border px-3 py-2">不動産登記</td>

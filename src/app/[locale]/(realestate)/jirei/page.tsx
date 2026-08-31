@@ -21,6 +21,7 @@ import Link from "next/link";
 import { buildPageMetadata } from "@/lib/seo";
 import { RealestateServicePage, ReH2 } from "@/components/shared/RealestateServicePage";
 import { CannotHandle } from "@/components/shared/CannotHandle";
+import { SR_ROLE_SENTENCE } from "@/lib/shared/sr-label";
 
 const SITE = "https://luck428.com";
 const PATH = "/jirei";
@@ -69,7 +70,7 @@ const CASES: ModelCase[] = [
       },
       {
         heading: "他の専門家との連携",
-        body: "労務や人員配置に関するご相談は、四葉社会保険労務士事務所（2026年9月開業予定・現時点では未開業）が、開業後に別契約で受任する予定です。",
+        body: SR_ROLE_SENTENCE.jirei,
       },
       {
         heading: "想定される進め方のまとめ",

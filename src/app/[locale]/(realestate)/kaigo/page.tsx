@@ -19,6 +19,7 @@ import { InlineCtaProperty } from "@/components/shared/InlineCtaProperty";
 import { CannotHandle } from "@/components/shared/CannotHandle";
 import { Faq } from "@/components/shared/Faq";
 import { pickFaqJa } from "@/data/faqJa";
+import { SR_ENTITY_LABEL, SR_ROLE_SENTENCE } from "@/lib/shared/sr-label";
 
 // 冒頭の回答ブロック（H1直下）。分離受任の型＝shitei-shinsei確定文言に準拠（監修前ドラフト）
 const JA_ANSWER_BLOCK =
@@ -53,7 +54,7 @@ const JA_CHECKS: { title: string; body: string }[] = [
 const JA_ROLES: { work: string; who: string }[] = [
   { work: "物件の紹介・仲介（宅地建物取引業）", who: "四葉不動産株式会社" },
   { work: "指定申請書類の作成・提出（作成は行政書士の独占業務・別契約）", who: "併設の四葉行政書士事務所" },
-  { work: "労務・人員配置のご相談", who: "四葉社会保険労務士事務所（2026年9月開業予定・現時点では未開業）" },
+  { work: "労務・人員配置のご相談", who: SR_ENTITY_LABEL },
   { work: "登記", who: "司法書士をご紹介" },
   { work: "税務（税務申告等）", who: "税理士をご紹介" },
 ];
@@ -164,7 +165,7 @@ export default async function Page() {
       <div>
         <ReH2>人員基準と労務——開設後を見据えて</ReH2>
         <p className="mt-3 leading-relaxed text-text">
-          介護事業の指定は、管理者・サービス提供責任者・介護職員など人員基準の充足が核になります。採用・雇用契約・処遇改善加算など労務の設計は社会保険労務士の領域です。四葉社会保険労務士事務所（2026年9月開業予定・現時点では未開業）の開業後は、労務・人員配置のご相談にも対応する予定です。
+          介護事業の指定は、管理者・サービス提供責任者・介護職員など人員基準の充足が核になります。採用・雇用契約・処遇改善加算など労務の設計は社会保険労務士の領域です。{SR_ROLE_SENTENCE.kaigo}
         </p>
       </div>
 
