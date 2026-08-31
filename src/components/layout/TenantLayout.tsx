@@ -15,7 +15,7 @@ import { gaEvent } from "@/lib/gtag";
 import { normalizePath } from "@/lib/normalize-path"; // cross-links直importはC7文言のクライアント同梱を招くため禁止
 import { MobileStickyBar } from "@/components/shared/MobileStickyBar";
 import { LinkaFab } from "@/components/shared/LinkaFab";
-import type { BusinessKey } from "@/lib/shared/office";
+import { SR_LAUNCHED, type BusinessKey } from "@/lib/shared/office";
 import { SR_OFFICE_NAME, SR_OFFICE_NAME_ZH_TW, SR_OFFICE_NAME_ZH } from "@/lib/shared/sr-name"; // 事務所名は実行時結合（法27条ソース漏れ対策）
 import type { LangCode } from "@/config/languages";
 import {
@@ -208,15 +208,27 @@ const FOOTER_NAV_HREFS: Record<
  * 返す（truthy）ため `||` フォールバックが不発＝生キーが表示されていた。Firestoreに
  * 依存せず、labelsパターンと同じくコード内ロケールマップで表示する。
  * 社労士事務所名は連続リテラル禁止（法27条ソース漏れ対策）＝SR_OFFICE_NAMEで実行時結合。
- * TODO: 社労士開業（2026年9月）後に「（2026年9月開業予定）」系の文言（ja/en/zh-tw/zh）を削除する。
+ * 開業（SR_LAUNCHED=true・2026-09-01）で「（2026年9月開業予定）」の注記が外れる。
+ * この注記は**全ページのフッター**に出るため、開業後も残ると
+ * サイト全体が「まだ開業していない」と言い続けることになる（2026-08-31 に発見して是正）。
  */
+/** 開業前だけ事務所名のうしろに付く注記。開業後は空文字。 */
+const SR_PENDING_NOTE: Record<string, string> = SR_LAUNCHED
+  ? { ja: "", en: "", "zh-tw": "", zh: "" }
+  : {
+      ja: "（2026年9月開業予定）",
+      en: " (opening September 2026)",
+      "zh-tw": "（預定2026年9月開業）",
+      zh: "（预定2026年9月开业）",
+    };
+
 const INDEPENDENT_NOTE: Record<string, string> = {
-  ja: `四葉不動産株式会社・四葉行政書士事務所・${SR_OFFICE_NAME}（2026年9月開業予定）は、それぞれ独立した事業体として業務を受任します。`,
-  en: "Yotsuba Real Estate Co., Ltd., Yotsuba Gyoseishoshi (Administrative Scrivener) Office, and Yotsuba Sharoushi (Certified Social Insurance and Labor Consultant) Office (opening September 2026) operate as independent business entities, each accepting engagements separately.",
+  ja: `四葉不動産株式会社・四葉行政書士事務所・${SR_OFFICE_NAME}${SR_PENDING_NOTE.ja}は、それぞれ独立した事業体として業務を受任します。`,
+  en: `Yotsuba Real Estate Co., Ltd., Yotsuba Gyoseishoshi (Administrative Scrivener) Office, and Yotsuba Sharoushi (Certified Social Insurance and Labor Consultant) Office${SR_PENDING_NOTE.en} operate as independent business entities, each accepting engagements separately.`,
   // 中文でも事務所名の連続リテラルは書けないため実行時結合の定数を挿入する。
   // zh-tw／zh はそれぞれの字体の事務所名を使う（翻訳DBの labor.name と一致させた）。
-  "zh-tw": `四葉不動產株式會社、四葉行政書士事務所、${SR_OFFICE_NAME_ZH_TW}（預定2026年9月開業）為各自獨立之事業體，分別承接業務。`,
-  zh: `四葉不動産株式会社、四葉行政书士事务所、${SR_OFFICE_NAME_ZH}（预定2026年9月开业）为各自独立的事业体，分别承接业务。`,
+  "zh-tw": `四葉不動產株式會社、四葉行政書士事務所、${SR_OFFICE_NAME_ZH_TW}${SR_PENDING_NOTE["zh-tw"]}為各自獨立之事業體，分別承接業務。`,
+  zh: `四葉不動産株式会社、四葉行政书士事务所、${SR_OFFICE_NAME_ZH}${SR_PENDING_NOTE.zh}为各自独立的事业体，分别承接业务。`,
 };
 
 /**
