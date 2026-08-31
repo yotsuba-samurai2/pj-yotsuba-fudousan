@@ -1,6 +1,6 @@
 import { cache } from "react";
 import { prisma } from "@/lib/prisma";
-import type { Property as PropertyRow } from "@prisma/client";
+import { Prisma, type Property as PropertyRow } from "@prisma/client";
 import type { LangCode } from "@/config/languages";
 import {
   toPublicProperty,
@@ -45,25 +45,49 @@ function rowToPublic(row: PropertyRow): PublicProperty {
   return toPublicProperty(admin);
 }
 
+/**
+ * properties テーブル未作成（`prisma migrate deploy` 前）のビルドを壊さないためのガード。
+ * デプロイ順は「コードのデプロイ→マイグレーション適用」（浦松管理）であり、
+ * PRプレビュー・マージ直後の本番ビルドはテーブルが無い状態で generateStaticParams・
+ * sitemap・一覧のプリレンダーを実行する（2026-09-01 Vercelプレビューで P2021 を実測）。
+ * P2021（テーブル不存在）だけを空扱いに落とし、それ以外のエラーはそのまま投げる。
+ * マイグレーション適用後は次の revalidate / ビルドで自動的に通常動作へ戻る。
+ */
+function isPropertiesTableMissing(err: unknown): boolean {
+  return (
+    err instanceof Prisma.PrismaClientKnownRequestError && err.code === "P2021"
+  );
+}
+
 /** 公開中（published）の物件一覧。現在ロケールで公開されているもののみ */
 export const getPublishedProperties = cache(
   async (locale: LangCode): Promise<PublicProperty[]> => {
-    const rows = await prisma.property.findMany({
-      where: { status: "published" },
-      orderBy: { infoUpdatedAt: "desc" },
-    });
-    return rows.map(rowToPublic).filter((p) => isPropertyLocaleAllowed(p, locale));
+    try {
+      const rows = await prisma.property.findMany({
+        where: { status: "published" },
+        orderBy: { infoUpdatedAt: "desc" },
+      });
+      return rows.map(rowToPublic).filter((p) => isPropertyLocaleAllowed(p, locale));
+    } catch (err) {
+      if (isPropertiesTableMissing(err)) return [];
+      throw err;
+    }
   },
 );
 
 /** sitemap.ts・generateStaticParams 専用（全ロケール横断・published のみ） */
 export const getAllPublishedPropertiesAllLocales = cache(
   async (): Promise<PublicProperty[]> => {
-    const rows = await prisma.property.findMany({
-      where: { status: "published" },
-      orderBy: { infoUpdatedAt: "desc" },
-    });
-    return rows.map(rowToPublic);
+    try {
+      const rows = await prisma.property.findMany({
+        where: { status: "published" },
+        orderBy: { infoUpdatedAt: "desc" },
+      });
+      return rows.map(rowToPublic);
+    } catch (err) {
+      if (isPropertiesTableMissing(err)) return [];
+      throw err;
+    }
   },
 );
 
@@ -73,9 +97,14 @@ export const getAllPublishedPropertiesAllLocales = cache(
  */
 export const getPublicPropertyBySlug = cache(
   async (slug: string): Promise<PublicProperty | undefined> => {
-    const row = await prisma.property.findFirst({
-      where: { slug, status: { in: ["published", "closed"] } },
-    });
-    return row ? rowToPublic(row) : undefined;
+    try {
+      const row = await prisma.property.findFirst({
+        where: { slug, status: { in: ["published", "closed"] } },
+      });
+      return row ? rowToPublic(row) : undefined;
+    } catch (err) {
+      if (isPropertiesTableMissing(err)) return undefined;
+      throw err;
+    }
   },
 );
