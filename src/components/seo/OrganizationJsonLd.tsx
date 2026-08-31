@@ -2,6 +2,8 @@ import { JsonLd } from "./JsonLd";
 import {
   BUSINESS_HOURS,
   BUSINESS_SEO,
+  LABOR_MEMBER_OF,
+  LABOR_SAME_AS,
   LEGAL_MEMBER_OF,
   LEGAL_SAME_AS,
   PERSON_ID,
@@ -11,11 +13,45 @@ import {
   SITE_URL,
 } from "@/lib/seo";
 
+type OrgRef = {
+  readonly "@type": string;
+  readonly name: string;
+  readonly url: string;
+};
+
+/**
+ * 事業体ごとの sameAs / memberOf。
+ *
+ * 【フォールバック禁止・2026-09-01の事故を受けて明示的な表にした】
+ * 旧実装は `isRealEstate ? realestate : legal` の二分岐で、**realestate 以外はすべて
+ * 行政書士事務所の識別子を受け取っていた**。社労士事務所を追加した2026-09-01、
+ * /labor が Wikidata Q139738259（四葉行政書士事務所）・行政書士のGBP・
+ * 東京都行政書士会を自分のものとして出力し、機械には
+ * 「四葉社会保険労務士事務所＝四葉行政書士事務所」と読める状態になった。
+ * 別事業体の同一視は業法分離と矛盾し、AI検索のエンティティ認識を直接壊す。
+ *
+ * よって既定値を持たせない。**未登録のキーは sameAs も memberOf も出力しない**。
+ * 新しい事業体を足すときは、ここに1行足すまで何も出ないのが正しい挙動。
+ */
+const SAME_AS_BY_BUSINESS: Record<string, readonly string[]> = {
+  realestate: REALESTATE_SAME_AS,
+  legal: LEGAL_SAME_AS,
+  labor: LABOR_SAME_AS,
+};
+
+const MEMBER_OF_BY_BUSINESS: Record<string, readonly OrgRef[]> = {
+  realestate: REALESTATE_MEMBER_OF,
+  legal: LEGAL_MEMBER_OF,
+  labor: LABOR_MEMBER_OF,
+};
+
 export function OrganizationJsonLd({ businessKey }: { businessKey: string }) {
   const biz = BUSINESS_SEO[businessKey];
   if (!biz) return null;
 
   const isRealEstate = businessKey === "realestate";
+  const sameAs = SAME_AS_BY_BUSINESS[businessKey] ?? [];
+  const memberOf = MEMBER_OF_BY_BUSINESS[businessKey] ?? [];
 
   return (
     <JsonLd
@@ -46,17 +82,14 @@ export function OrganizationJsonLd({ businessKey }: { businessKey: string }) {
         telephone: SHARED_ORG_INFO.telephone,
         faxNumber: SHARED_ORG_INFO.faxNumber,
         priceRange: "¥¥",
-        foundingDate: SHARED_ORG_INFO.foundingDate,
+        // 事業体ごとの開設日。未設定はグループ共通値へフォールバック（社労士＝2026-09-01）
+        foundingDate: biz.foundingDate ?? SHARED_ORG_INFO.foundingDate,
         ...(isRealEstate
-          ? {
-              slogan: "元新聞記者×行政書士がつくる、東京都文京区の不動産屋",
-              sameAs: REALESTATE_SAME_AS,
-              memberOf: REALESTATE_MEMBER_OF,
-            }
-          : {
-              sameAs: LEGAL_SAME_AS,
-              memberOf: LEGAL_MEMBER_OF,
-            }),
+          ? { slogan: "元新聞記者×行政書士がつくる、東京都文京区の不動産屋" }
+          : {}),
+        // 空配列のときはキーごと出さない（空の sameAs / memberOf を出力しない）
+        ...(sameAs.length > 0 ? { sameAs } : {}),
+        ...(memberOf.length > 0 ? { memberOf } : {}),
         address: {
           "@type": "PostalAddress",
           postalCode: SHARED_ORG_INFO.postalCode,
