@@ -635,6 +635,54 @@ export const SR_LAUNCH_COLUMN_PATCHES: SrLaunchColumnPatch[] = [
     to: `社會保險勞務士${regParen("zh-tw")}`,
     note: "★ /zh-tw/leaving-japan だけ語順が違う（他は「預定2026年9月開業」）。2026-08-09 実測",
   },
+  // ── 第2陣（2026-09-01 深夜・本番全URLスキャンで実測した残存形）──────
+  // 第1陣が知らなかった言い回し。fromはすべて本番HTMLからの実測値（推測で書かない・第13条）。
+  {
+    from: "四葉社会保険労務士事務所（2026年9月開業予定）",
+    to: "四葉社会保険労務士事務所",
+    note: "不動産コラムの分離受任注記（34本）。実測 2026-09-01",
+  },
+  {
+    from: "四葉社會保險勞務士事務所（預定2026年9月開業）",
+    to: "四葉社會保險勞務士事務所",
+    note: "行政書士コラム zh-tw（台湾相続クラスタ等）",
+  },
+  {
+    from: "四叶社会保险劳务士事务所（预定2026年9月开业）",
+    to: "四叶社会保险劳务士事务所",
+    note: "★四叶表記（簡体字）。四葉表記とは別に実在した",
+  },
+  {
+    from: "労務は社会保険労務士（2026年9月開業予定）へ",
+    to: "労務は社会保険労務士へ",
+    note: "「登記は司法書士、税務は税理士、労務は…」の並び（47か所）",
+  },
+  {
+    from: "勞務找社會保險勞務士（2026年9月開業預定）",
+    to: "勞務找社會保險勞務士",
+  },
+  {
+    from: "劳务请找社会保险劳务士（2026年9月开业预定）",
+    to: "劳务请找社会保险劳务士",
+  },
+  {
+    from: "勞務請找社會保險勞務士（2026年9月開業預定）",
+    to: "勞務請找社會保險勞務士",
+  },
+  {
+    from: "社会保险劳务士（日本語：社会保険労务士）业务在2026年9月开业之前无法受理",
+    to: "社会保险劳务士（日本語：社会保険労務士）业务由四葉社会保険労務士事務所另行签约承办",
+    note: "★注記内が「労务士」（労＋务の混植）。第1陣は「労務士」で書いて空振りした",
+  },
+  {
+    from: "Passed the Social Insurance and Labor Consultant Examination (opening planned for September 2026)",
+    to: "Certified Social Insurance and Labor Consultant",
+    note: "en。第1陣の形（Certified…/office opening）とは別の言い回し",
+  },
+  {
+    from: "labour matters to a certified social insurance labour consultant (opening planned September 2026)",
+    to: "labour matters to a certified social insurance labour consultant",
+  },
   // ── 一般形（最後に置く）─────────────────────────────
   {
     from: "社会保険労務士試験合格（2026年9月開業予定）",

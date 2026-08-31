@@ -196,13 +196,14 @@ const STATIC_LEGAL: StaticPage[] = [
  * Search Console へ送れない（発見は内部リンク頼み）。
  *
  * ロケールは実装の availableLocales と一致させる。
- * ※ /labor 配下は現時点で ja のみ公開。多言語版を出すときは
+ * ※ /labor 配下は段階的に多言語化中（第1波=トップ・services・ryokin・nagare は4言語）。
+ * 　残りを多言語化するときは
  *   ページ側の availableLocales と本表の両方を同時に直す
  *   （18_言語別存在マトリクス.md の突合対象）。
  */
 const STATIC_LABOR: StaticPage[] = [
-  { path: "/labor", changeFrequency: "monthly", priority: 0.9, locales: ["ja"] },
-  { path: "/labor/services", changeFrequency: "monthly", priority: 0.8, locales: ["ja"] },
+  { path: "/labor", changeFrequency: "monthly", priority: 0.9 }, // 2026-09-01 4言語公開（第1波）
+  { path: "/labor/services", changeFrequency: "monthly", priority: 0.8 }, // 2026-09-01 4言語公開（第1波）
   { path: "/labor/services/kaigo-roumu", changeFrequency: "monthly", priority: 0.8, locales: ["ja"] },
   { path: "/labor/services/jinin-kijun-roumu", changeFrequency: "monthly", priority: 0.8, locales: ["ja"] },
   { path: "/labor/services/shogu-kaizen", changeFrequency: "monthly", priority: 0.8, locales: ["ja"] },
@@ -210,8 +211,8 @@ const STATIC_LABOR: StaticPage[] = [
   { path: "/labor/services/gaikokujin-koyo", changeFrequency: "monthly", priority: 0.8, locales: ["ja"] },
   { path: "/labor/services/gaibu-kansanin", changeFrequency: "monthly", priority: 0.8, locales: ["ja"] },
   { path: "/labor/services/saiyo", changeFrequency: "monthly", priority: 0.8, locales: ["ja"] },
-  { path: "/labor/ryokin", changeFrequency: "monthly", priority: 0.7, locales: ["ja"] },
-  { path: "/labor/nagare", changeFrequency: "yearly", priority: 0.6, locales: ["ja"] },
+  { path: "/labor/ryokin", changeFrequency: "monthly", priority: 0.7 }, // 2026-09-01 4言語公開（第1波）
+  { path: "/labor/nagare", changeFrequency: "yearly", priority: 0.6 }, // 2026-09-01 4言語公開（第1波）
   { path: "/labor/faq", changeFrequency: "monthly", priority: 0.6, locales: ["ja"] },
   { path: "/labor/about", changeFrequency: "yearly", priority: 0.6, locales: ["ja"] },
   { path: "/labor/column", changeFrequency: "daily", priority: 0.7, locales: ["ja"] },

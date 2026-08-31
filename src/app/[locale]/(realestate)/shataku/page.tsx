@@ -39,7 +39,7 @@ import { SR_ENTITY_LABEL, SR_ENTITY_LABEL_I18N, SR_ROLE_SENTENCE, SR_BIO } from 
 
 // 冒頭の回答ブロック（H1直下）。当方が今できるのは物件＝宅建業に限定し、労務・税務は分離受任で振り分け（監修前ドラフト・浦松承認）
 const JA_ANSWER_BLOCK =
-  "企業が従業員の住まいとして借り上げ社宅を導入するときは、「物件」と「社宅規程」を並行して検討するのが安全です。借り上げ社宅は、会社が賃貸物件を契約して従業員に住まわせる仕組みで、貸主の転貸承諾や法人契約の可否が物件選びの段階で決まり、社宅規程で定める従業員の負担割合は税務・社会保険の取り扱いに直結するからです。法人契約・借り上げの物件の紹介・仲介は四葉不動産株式会社が担当します。社宅規程の整備や現物給与・社会保険の取り扱いは労務の論点として整理してお伝えし、実務は社会保険労務士（四葉社会保険労務士事務所は2026年9月開業予定・現時点では未開業のため、他の社会保険労務士）が別契約で対応します。給与課税など税務の判断は税理士におつなぎします。文京区・茗荷谷を中心に東京都内に対応します。";
+  `企業が従業員の住まいとして借り上げ社宅を導入するときは、「物件」と「社宅規程」を並行して検討するのが安全です。借り上げ社宅は、会社が賃貸物件を契約して従業員に住まわせる仕組みで、貸主の転貸承諾や法人契約の可否が物件選びの段階で決まり、社宅規程で定める従業員の負担割合は税務・社会保険の取り扱いに直結するからです。法人契約・借り上げの物件の紹介・仲介は四葉不動産株式会社が担当します。社宅規程の整備や現物給与・社会保険の取り扱いは労務の論点として整理してお伝えし、実務は社会保険労務士（${SR_ENTITY_LABEL}、または他の社会保険労務士）が別契約で対応します。給与課税など税務の判断は税理士におつなぎします。文京区・茗荷谷を中心に東京都内に対応します。`;
 
 // FAQPage＝faqJa参照（kaigyo新設2問＋既存2問＋10Cで /toushi/shataku から移設2問）
 const JA_FAQ_QUESTIONS = [
@@ -104,7 +104,7 @@ const COPY: Record<LangCode, ShatakuCopy> = {
   ja: {
     metaTitle: "東京で借り上げ社宅を導入するなら｜物件・法人契約と社宅規程の完全ガイド | 四葉不動産",
     metaDesc:
-      "借り上げ社宅の導入は「物件（法人契約・転貸承諾）」と「社宅規程・現物給与・社会保険の論点」が同時に動きます。法人契約の物件の紹介・仲介は四葉不動産株式会社が担当し、社宅規程や労務の実務は社会保険労務士（四葉社会保険労務士事務所は2026年9月開業予定・現時点では未開業／他の社会保険労務士）、給与課税など税務は税理士が、それぞれ別契約で対応します。文京区小日向・茗荷谷駅徒歩5分。",
+      `借り上げ社宅の導入は「物件（法人契約・転貸承諾）」と「社宅規程・現物給与・社会保険の論点」が同時に動きます。法人契約の物件の紹介・仲介は四葉不動産株式会社が担当し、社宅規程や労務の実務は社会保険労務士（${SR_ENTITY_LABEL}／他の社会保険労務士）、給与課税など税務は税理士が、それぞれ別契約で対応します。文京区小日向・茗荷谷駅徒歩5分。`,
     crumbHome: "ホーム",
     crumbCurrent: "借り上げ社宅の導入",
     serviceName: "借り上げ社宅の導入を見据えた物件の紹介・仲介",
@@ -204,7 +204,7 @@ const COPY: Record<LangCode, ShatakuCopy> = {
     authorAlt: "Joji Uramatsu, Representative Director of Yotsuba Real Estate Co., Ltd.",
     authorLabel: "About the author",
     authorBio:
-      "Joji Uramatsu | Representative Director of Yotsuba Real Estate Co., Ltd.; full-time Licensed Real Estate Transaction Specialist (宅地建物取引士); Gyoseishoshi (Administrative Scrivener). Former China General Bureau Chief of the Mainichi Shimbun (34 years as a journalist), stationed in China, Taiwan, and Thailand. Passed the national exam for licensed social insurance and labor consultant (office opening scheduled for September 2026).",
+      `Joji Uramatsu | Representative Director of Yotsuba Real Estate Co., Ltd.; full-time Licensed Real Estate Transaction Specialist (宅地建物取引士); Gyoseishoshi (Administrative Scrivener). Former China General Bureau Chief of the Mainichi Shimbun (34 years as a journalist), stationed in China, Taiwan, and Thailand. ${SR_BIO.en}.`,
   },
   "zh-tw": {
     metaTitle: "員工宿舍・法人租賃支援｜四葉不動産",

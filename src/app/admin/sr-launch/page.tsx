@@ -40,7 +40,9 @@ import type { LangCode } from "@/config/languages";
 
 const LOCALES: LangCode[] = ["ja", "en", "zh-tw", "zh"];
 const PER_COLUMN_WARN_THRESHOLD = 10;
-const FIELDS = ["title", "excerpt", "content", "faq", "keywords"] as const;
+// ★2026-09-01：author を追加。著者肩書（author.title）に「試験合格（2026年9月開業予定）」が
+// 残っていたのは、走査対象に author が無かったため（本番実測16件）。
+const FIELDS = ["title", "excerpt", "content", "faq", "keywords", "author"] as const;
 
 type Result = { label: string; status: "applied" | "skipped" | "error"; detail?: string };
 type ScanHit = { where: string; term: string; excerpt: string };

@@ -92,7 +92,8 @@ const YAKUWARI_BASE: Yakuwari[] = [
 const YAKUWARI_SR_LAUNCHED: Yakuwari = {
   office: SR_OFFICE_NAME,
   work: "労働・社会保険の手続き、就業規則をはじめとする社内規程の作成、労務管理の相談",
-  license: "社会保険労務士 登録番号【登録完了後に記載】",
+  // 登録番号の交付は2026年9月下旬（yotsuba-sharoushi-kaigyo 第14条）。それまで番号もプレースホルダーも出さない。
+  license: "社会保険労務士（登録番号は2026年9月下旬に交付予定）",
 };
 
 /** 開業前＝未開業であることを表の中で明示する（現在形で受任できると読ませない） */
