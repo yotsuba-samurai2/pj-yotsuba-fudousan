@@ -10,7 +10,9 @@
 //   受賞歴・著書・講演実績などリポジトリで確認できない事実は書かない。国数表記（「4カ国」等）は使用禁止（タスクA-1で全廃済み）。
 // 表示コンプライアンス（宅建業法・分離受任）：業務一体提供を示唆する語（ワンストップ等）は全文で使用禁止。
 //   行政書士業務は「併設の四葉行政書士事務所が別契約で受任」の形でのみ記載。
-// 社労士＝「2026年9月開業予定・現時点では未開業」の注記を維持（登録済み資格と横並びにしない）。
+// 社労士＝開業（SR_LAUNCHED・2026-09-01）で注記が切り替わる（SR_META／SR_NOTE／SR_FAQ）。
+//   開業前は「2026年9月開業予定・現時点では未開業」、開業後は資格名と事務所名のみ。
+//   **開業後も登録番号は書かない**（交付は2026年9月下旬）。hasCredential も9月下旬まで社労士を出さない。
 // JSON-LD：
 //   - ProfilePage＋Person（mainEntity）。Personは既存founderと同一 @id（PERSON_ID）のサブセットノード
 //     ＝B-2指定フィールドのみ（hasCredential=宅建士・行政書士の2件。社労士試験合格は本文注記のみで出力しない）。
@@ -23,6 +25,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { buildPageMetadata, BCP47_BY_LOCALE, PERSON_ID, SAMURAI_URAMATSU_URL, SITE_URL } from "@/lib/seo";
 import { getRequestLocale } from "@/lib/getRequestLocale";
+import { SR_LAUNCHED } from "@/lib/shared/office";
+import { SR_OFFICE_NAME, SR_OFFICE_NAME_ZH_TW, SR_OFFICE_NAME_ZH } from "@/lib/shared/sr-name";
 import { addLocalePrefix } from "@/lib/locale";
 import { Breadcrumb } from "@/components/shared/Breadcrumb";
 import { Faq, type FaqItem } from "@/components/shared/Faq";
@@ -49,6 +53,58 @@ type ProfileCopy = {
   relatedLinks: { href: string; label: string }[];
 };
 
+/**
+ * 社労士の状態表記。開業（SR_LAUNCHED=true・2026年9月1日）で切り替わる。
+ *
+ * ★ 開業後も**登録番号は書かない**。番号の交付は2026年9月下旬で、登録日とずれるため
+ *   （スキル yotsuba-sharoushi-kaigyo 第14条・2026-08-31 浦松決定）。
+ * ★ 事務所名は連続リテラル禁止（法27条ソース漏れ対策）＝sr-name.ts の実行時結合を使う。
+ * ★ 経歴年表の「令和7年10月 社会保険労務士試験合格」は**事実の記録として残す**（置換対象外）。
+ */
+const SR_META: Record<string, string> = SR_LAUNCHED
+  ? {
+      ja: `2026年9月に${SR_OFFICE_NAME}を開業しました。`,
+      en: "In September 2026 he opened a Certified Social Insurance and Labor Consultant (Sharoushi) office.",
+      "zh-tw": `於2026年9月開設了${SR_OFFICE_NAME_ZH_TW}。`,
+      zh: `于2026年9月开设了${SR_OFFICE_NAME_ZH}。`,
+    }
+  : {
+      ja: "2026年9月に社会保険労務士事務所の開業を予定しています。",
+      en: "He plans to open a Certified Social Insurance and Labor Consultant (Sharoushi) office in September 2026.",
+      "zh-tw": "預計於2026年9月開設社會保險勞務士事務所。",
+      zh: "预计于2026年9月开设社会保险劳务士事务所。",
+    };
+
+/** 資格欄の下に別立てで置く注記。 */
+const SR_NOTE: Record<string, string> = SR_LAUNCHED
+  ? {
+      ja: `社会保険労務士。${SR_OFFICE_NAME}を開業しています。`,
+      en: "Certified Social Insurance and Labor Consultant (Sharoushi, 社会保険労務士). He operates a Certified Social Insurance and Labor Consultant office.",
+      "zh-tw": `社會保險勞務士（日本語：社会保険労務士）。開設有${SR_OFFICE_NAME_ZH_TW}。`,
+      zh: `社会保险劳务士（日本語：社会保険労務士）。开设有${SR_OFFICE_NAME_ZH}。`,
+    }
+  : {
+      ja: "社会保険労務士試験合格（令和7年 第202500525号）。2026年9月に社会保険労務士事務所の開業を予定しており、現時点では未開業です。",
+      en: "Passed the Certified Social Insurance and Labor Consultant (Sharoushi, 社会保険労務士) examination (Reiwa 7 [2025], No. 202500525). He plans to open a Certified Social Insurance and Labor Consultant office in September 2026 and has not opened one at this time.",
+      "zh-tw": "社會保險勞務士（日本語：社会保険労務士）考試合格（令和7年〔2025年〕第202500525號）。預計於2026年9月開設社會保險勞務士事務所，目前尚未開業。",
+      zh: "社会保险劳务士（日本語：社会保険労務士）考试合格（令和7年〔2025年〕第202500525号）。预计于2026年9月开设社会保险劳务士事务所，目前尚未开业。",
+    };
+
+/** 「どんな資格を持っていますか」への回答。 */
+const SR_FAQ: Record<string, string> = SR_LAUNCHED
+  ? {
+      ja: "宅地建物取引士（東京・第293544号）と行政書士（登録番号第25087022号）、そして社会保険労務士です。",
+      en: "He is a Licensed Real Estate Transaction Specialist (Tokyo, No. 293544), a Gyoseishoshi (Administrative Scrivener) (Registration No. 25087022), and a Certified Social Insurance and Labor Consultant (Sharoushi).",
+      "zh-tw": "宅地建物交易士（日本語：宅地建物取引士／東京・第293544號）、行政書士（登錄號碼第25087022號），以及社會保險勞務士（日本語：社会保険労務士）。",
+      zh: "宅地建物交易士（日本語：宅地建物取引士／东京・第293544号）、行政书士（登录号码第25087022号），以及社会保险劳务士（日本語：社会保険労務士）。",
+    }
+  : {
+      ja: "宅地建物取引士（東京・第293544号）と行政書士（登録番号第25087022号）です。社会保険労務士は試験に合格しており（令和7年 第202500525号）、2026年9月に事務所の開業を予定しています（現時点では未開業）。",
+      en: "He is a Licensed Real Estate Transaction Specialist (Tokyo, No. 293544) and a Gyoseishoshi (Administrative Scrivener) (Registration No. 25087022). He has passed the Certified Social Insurance and Labor Consultant examination (Reiwa 7 [2025], No. 202500525) and plans to open an office in September 2026 (not yet open at this time).",
+      "zh-tw": "宅地建物交易士（日本語：宅地建物取引士／東京・第293544號）與行政書士（登錄號碼第25087022號）。社會保險勞務士已通過考試（令和7年〔2025年〕第202500525號），預計於2026年9月開設事務所（目前尚未開業）。",
+      zh: "宅地建物交易士（日本語：宅地建物取引士／东京・第293544号）与行政书士（登录号码第25087022号）。社会保险劳务士已通过考试（令和7年〔2025年〕第202500525号），预计于2026年9月开设事务所（目前尚未开业）。",
+    };
+
 const JA: ProfileCopy = {
   metaTitle: "代表・浦松丈二プロフィール｜元新聞記者の宅建士・行政書士",
   metaDesc:
@@ -58,7 +114,7 @@ const JA: ProfileCopy = {
   breadcrumbCurrent: "代表プロフィール",
   h1: "浦松丈二（うらまつ・じょうじ）",
   answerBlock:
-    "浦松丈二は四葉不動産株式会社の代表取締役で、宅地建物取引士（東京・第293544号）および行政書士（登録番号第25087022号）です。毎日新聞で記者を34年務め、中国総局長として中国や台湾、タイに駐在しました。2026年9月に社会保険労務士事務所の開業を予定しています。相続や外国人対応の相談に、日本語・英語・中国語で応じます。不動産取引は四葉不動産、法務手続きは四葉行政書士事務所がそれぞれ別契約で担当します。",
+    `浦松丈二は四葉不動産株式会社の代表取締役で、宅地建物取引士（東京・第293544号）および行政書士（登録番号第25087022号）です。毎日新聞で記者を34年務め、中国総局長として中国や台湾、タイに駐在しました。${SR_META.ja}相続や外国人対応の相談に、日本語・英語・中国語で応じます。不動産取引は四葉不動産、法務手続きは四葉行政書士事務所がそれぞれ別契約で担当します。`,
   portraitAlt: "四葉不動産株式会社 代表取締役 浦松丈二",
   sections: [
     {
@@ -84,7 +140,7 @@ const JA: ProfileCopy = {
           </ul>
           {/* 社労士は「試験合格」のみ別立て表記（登録済み資格と横並びにしない・社労士_試験合格表記_実装指示_v1 §0） */}
           <p className="mt-3 rounded-lg border border-border bg-surface p-4 text-sm leading-relaxed text-text-muted">
-            社会保険労務士試験合格（令和7年 第202500525号）。2026年9月に社会保険労務士事務所の開業を予定しており、現時点では未開業です。
+            {SR_NOTE.ja}
           </p>
         </>
       ),
@@ -127,7 +183,7 @@ const JA: ProfileCopy = {
     },
     {
       q: "保有資格は何ですか？",
-      a: "宅地建物取引士（東京・第293544号）と行政書士（登録番号第25087022号）です。社会保険労務士は試験に合格しており（令和7年 第202500525号）、2026年9月に事務所の開業を予定しています（現時点では未開業）。",
+      a: SR_FAQ.ja,
     },
     {
       q: "中国語対応の背景は？",
@@ -157,7 +213,7 @@ const EN: ProfileCopy = {
   breadcrumbCurrent: "Representative's Profile",
   h1: "Joji Uramatsu (Uramatsu Joji)",
   answerBlock:
-    "Joji Uramatsu is Representative Director of Yotsuba Real Estate Co., Ltd., a Licensed Real Estate Transaction Specialist (Tokyo, No. 293544) and a Gyoseishoshi (Administrative Scrivener) (Registration No. 25087022). He spent 34 years as a journalist at the Mainichi Shimbun and was stationed in China, Taiwan, and Thailand as its China General Bureau Chief. He plans to open a Certified Social Insurance and Labor Consultant (Sharoushi) office in September 2026. He handles consultations on inheritance and support for non-Japanese clients in Japanese, English, and Chinese. Real estate transactions are handled by Yotsuba Real Estate Co., Ltd. and legal procedures by Yotsuba Gyoseishoshi Office, each engaged under a separate contract.",
+    `Joji Uramatsu is Representative Director of Yotsuba Real Estate Co., Ltd., a Licensed Real Estate Transaction Specialist (Tokyo, No. 293544) and a Gyoseishoshi (Administrative Scrivener) (Registration No. 25087022). He spent 34 years as a journalist at the Mainichi Shimbun and was stationed in China, Taiwan, and Thailand as its China General Bureau Chief. ${SR_META.en} He handles consultations on inheritance and support for non-Japanese clients in Japanese, English, and Chinese. Real estate transactions are handled by Yotsuba Real Estate Co., Ltd. and legal procedures by Yotsuba Gyoseishoshi Office, each engaged under a separate contract.`,
   portraitAlt: "Joji Uramatsu, Representative Director of Yotsuba Real Estate Co., Ltd.",
   sections: [
     {
@@ -183,7 +239,7 @@ const EN: ProfileCopy = {
           </ul>
           {/* 社労士は「試験合格」のみ別立て表記（登録済み資格と横並びにしない） */}
           <p className="mt-3 rounded-lg border border-border bg-surface p-4 text-sm leading-relaxed text-text-muted">
-            Passed the Certified Social Insurance and Labor Consultant (Sharoushi, 社会保険労務士) examination (Reiwa 7 [2025], No. 202500525). He plans to open a Certified Social Insurance and Labor Consultant office in September 2026 and has not opened one at this time.
+            {SR_NOTE.en}
           </p>
         </>
       ),
@@ -226,7 +282,7 @@ const EN: ProfileCopy = {
     },
     {
       q: "What qualifications does he hold?",
-      a: "He is a Licensed Real Estate Transaction Specialist (Tokyo, No. 293544) and a Gyoseishoshi (Administrative Scrivener) (Registration No. 25087022). He has passed the Certified Social Insurance and Labor Consultant examination (Reiwa 7 [2025], No. 202500525) and plans to open an office in September 2026 (not yet open at this time).",
+      a: SR_FAQ.en,
     },
     {
       q: "What is the background to your Chinese-language support?",
@@ -254,7 +310,7 @@ const ZH_TW: ProfileCopy = {
   breadcrumbCurrent: "代表簡介",
   h1: "浦松丈二（Joji Uramatsu）",
   answerBlock:
-    "浦松丈二是四葉不動産株式会社的代表取締役（負責人），並具備宅地建物交易士（日本語：宅地建物取引士／東京・第293544號）及行政書士（登錄號碼第25087022號）資格。在每日新聞擔任記者34年，以中國總局長身分派駐中國、台灣與泰國。預計於2026年9月開設社會保險勞務士事務所。以日語・英語・中文回應繼承與外國人對應的諮詢。不動產交易由四葉不動産、法務手續由四葉行政書士事務所各自另行簽訂契約負責。",
+    `浦松丈二是四葉不動産株式会社的代表取締役（負責人），並具備宅地建物交易士（日本語：宅地建物取引士／東京・第293544號）及行政書士（登錄號碼第25087022號）資格。在每日新聞擔任記者34年，以中國總局長身分派駐中國、台灣與泰國。${SR_META["zh-tw"]}以日語・英語・中文回應繼承與外國人對應的諮詢。不動產交易由四葉不動産、法務手續由四葉行政書士事務所各自另行簽訂契約負責。`,
   portraitAlt: "四葉不動産株式会社 代表取締役 浦松丈二",
   sections: [
     {
@@ -279,7 +335,7 @@ const ZH_TW: ProfileCopy = {
             <li>行政書士 登錄號碼第25087022號</li>
           </ul>
           <p className="mt-3 rounded-lg border border-border bg-surface p-4 text-sm leading-relaxed text-text-muted">
-            社會保險勞務士（日本語：社会保険労務士）考試合格（令和7年〔2025年〕第202500525號）。預計於2026年9月開設社會保險勞務士事務所，目前尚未開業。
+            {SR_NOTE["zh-tw"]}
           </p>
         </>
       ),
@@ -321,7 +377,7 @@ const ZH_TW: ProfileCopy = {
     },
     {
       q: "持有哪些資格？",
-      a: "宅地建物交易士（日本語：宅地建物取引士／東京・第293544號）與行政書士（登錄號碼第25087022號）。社會保險勞務士已通過考試（令和7年〔2025年〕第202500525號），預計於2026年9月開設事務所（目前尚未開業）。",
+      a: SR_FAQ["zh-tw"],
     },
     {
       q: "中文對應的背景是什麼？",
@@ -349,7 +405,7 @@ const ZH: ProfileCopy = {
   breadcrumbCurrent: "代表简介",
   h1: "浦松丈二（Joji Uramatsu）",
   answerBlock:
-    "浦松丈二是四葉不動産株式会社的代表取締役（负责人），并具备宅地建物交易士（日本語：宅地建物取引士／东京・第293544号）及行政书士（登录号码第25087022号）资格。在每日新闻担任记者34年，以中国总局长身份派驻中国、台湾与泰国。预计于2026年9月开设社会保险劳务士事务所。以日语・英语・中文回应继承与外国人对应的咨询。不动产交易由四葉不動産、法务手续由四葉行政书士事务所各自另行签订合同负责。",
+    `浦松丈二是四葉不動産株式会社的代表取締役（负责人），并具备宅地建物交易士（日本語：宅地建物取引士／东京・第293544号）及行政书士（登录号码第25087022号）资格。在每日新闻担任记者34年，以中国总局长身份派驻中国、台湾与泰国。${SR_META.zh}以日语・英语・中文回应继承与外国人对应的咨询。不动产交易由四葉不動産、法务手续由四葉行政书士事务所各自另行签订合同负责。`,
   portraitAlt: "四葉不動産株式会社 代表取締役 浦松丈二",
   sections: [
     {
@@ -374,7 +430,7 @@ const ZH: ProfileCopy = {
             <li>行政书士 登录号码第25087022号</li>
           </ul>
           <p className="mt-3 rounded-lg border border-border bg-surface p-4 text-sm leading-relaxed text-text-muted">
-            社会保险劳务士（日本語：社会保険労務士）考试合格（令和7年〔2025年〕第202500525号）。预计于2026年9月开设社会保险劳务士事务所，目前尚未开业。
+            {SR_NOTE.zh}
           </p>
         </>
       ),
@@ -416,7 +472,7 @@ const ZH: ProfileCopy = {
     },
     {
       q: "持有哪些资格？",
-      a: "宅地建物交易士（日本語：宅地建物取引士／东京・第293544号）与行政书士（登录号码第25087022号）。社会保险劳务士已通过考试（令和7年〔2025年〕第202500525号），预计于2026年9月开设事务所（目前尚未开业）。",
+      a: SR_FAQ.zh,
     },
     {
       q: "中文对应的背景是什么？",
