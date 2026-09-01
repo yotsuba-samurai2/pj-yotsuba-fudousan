@@ -8,7 +8,6 @@
 // 2026-07-24 CTA刷新v2：conciergeのjoken（物件条件の要約）カードを追加＝「コピーしてLINEで送る」導線。
 //   LINKAは送信も記録もしない（利用者が自分で送る）＝守秘設計は不変。GA4はクリック種別のみ計測（内容を送らない）。
 import { useState } from "react";
-import { LINE_URL } from "@/lib/shared/office-public";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { addLocalePrefix } from "@/lib/locale";
 import { linkaUi } from "@/lib/linka/ui-copy";
@@ -164,10 +163,9 @@ export function ResultView({
             >
               {jokenCopied ? t.jokenCopied : t.jokenCopy}
             </button>
+            {/* 2026-09-01 LINE中継ページ化：直リンクをやめ内部 /line 経由（WebViewのLINE起動ブロック対策） */}
             <a
-              href={LINE_URL}
-              target="_blank"
-              rel="noreferrer"
+              href={localizeHref("/line")}
               onClick={() => gaEvent("cta_line_click", { location: "linka_joken" })}
               className="rounded-md bg-primary px-3 py-1.5 text-xs font-semibold text-white"
             >
@@ -192,10 +190,9 @@ export function ResultView({
               {s.reason && <div className="mt-0.5 text-xs text-stone-500">{s.reason}</div>}
             </a>
           ))}
+          {/* 2026-09-01 LINE中継ページ化：直リンクをやめ内部 /line 経由（WebViewのLINE起動ブロック対策） */}
           <a
-            href={LINE_URL}
-            target="_blank"
-            rel="noreferrer"
+            href={localizeHref("/line")}
             onClick={() => gaEvent("cta_line_click", { location: "linka_services" })}
             className="mt-1 inline-block rounded-md bg-primary px-3 py-1.5 text-xs text-white"
           >

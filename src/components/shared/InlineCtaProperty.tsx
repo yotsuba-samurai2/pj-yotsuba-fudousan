@@ -3,7 +3,7 @@
 // 「契約前チェック」等の高意欲セクション直後に1か所だけ挿入する（本文末CtaBandの複製ではなく軽量帯）。
 // ja固定コピー＝挿入先ピラーはja先行公開（他ロケールもja本文表示）のため既存方針に整合。
 // クライアント安全：office-public のみ参照（SR名なし）。
-import { LINE_URL } from "@/lib/shared/office-public";
+import { LocaleLink } from "@/components/ui/LocaleLink";
 import { gaEvent } from "@/lib/gtag";
 
 type Props = {
@@ -23,15 +23,14 @@ export function InlineCtaProperty({ gh = false, page }: Props) {
       className="flex flex-col items-start justify-between gap-3 rounded-xl border border-border bg-primary-tint p-4 sm:flex-row sm:items-center"
     >
       <p className="text-sm leading-relaxed text-text">{text}</p>
-      <a
-        href={LINE_URL}
-        target="_blank"
-        rel="noreferrer"
+      {/* 2026-09-01 LINE中継ページ化：直リンクをやめ内部 /line 経由（WebViewのLINE起動ブロック対策） */}
+      <LocaleLink
+        href="/line"
         onClick={() => gaEvent("cta_line_click", { location: "inline", page })}
         className="inline-flex min-h-[40px] flex-shrink-0 items-center rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-focus"
       >
         LINEで希望条件を送る（無料）
-      </a>
+      </LocaleLink>
     </aside>
   );
 }

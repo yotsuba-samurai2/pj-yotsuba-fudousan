@@ -17,7 +17,6 @@
 //     ctaLineNote確定文言と同趣旨。en/zh=監修前ドラフト）。
 //   - ボタン・コピー操作は CtaBandActions（client）に分離＝GA4クリック計測。office.tsはserver側のまま。
 import {
-  LINE_URL,
   OFFICE,
   TENANT,
   TENANT_CTA_I18N,
@@ -147,8 +146,10 @@ export async function CtaBand({
     <section aria-label={l.aria} className="my-6 rounded-2xl bg-primary-tint px-6 py-8 text-center">
       <h2 className="font-serif text-xl font-semibold text-ink">{heading ?? vHeading ?? c.ctaHeading}</h2>
       {lead && <p className="mx-auto mt-2 max-w-xl text-sm text-text-muted">{lead}</p>}
+      {/* 2026-09-01 LINE中継ページ化：LINE直リンクをやめ内部 /line を経由（WebViewのLINE起動
+          ブロック対策）。内部リンク＝ここで1回だけ接頭辞付与（contactHrefと同じ規約） */}
       <CtaBandActions
-        lineUrl={LINE_URL}
+        lineHref={addLocalePrefix("/line", locale)}
         lineLabel={vLineLabel ?? l.line}
         contactHref={contactHref}
         contactLabel={l.contact}
