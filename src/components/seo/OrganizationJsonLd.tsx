@@ -7,6 +7,7 @@ import {
   LEGAL_MEMBER_OF,
   LEGAL_SAME_AS,
   PERSON_ID,
+  PERSON_JSONLD,
   REALESTATE_MEMBER_OF,
   REALESTATE_SAME_AS,
   SHARED_ORG_INFO,
@@ -130,29 +131,17 @@ export function OrganizationJsonLd({ businessKey }: { businessKey: string }) {
           "@type": "Person",
           "@id": PERSON_ID,
           name: SHARED_ORG_INFO.representative,
-          // 社会保険労務士は登録未了（2026年9月開業予定）のため出力しない
-          hasCredential: [
-            {
-              "@type": "EducationalOccupationalCredential",
-              credentialCategory: "国家資格",
-              name: "宅地建物取引士",
-              identifier: "登録番号（東京）第293544号",
-              recognizedBy: {
-                "@type": "GovernmentOrganization",
-                name: "東京都",
-              },
-            },
-            {
-              "@type": "EducationalOccupationalCredential",
-              credentialCategory: "国家資格",
-              name: "行政書士",
-              identifier: "登録番号 第25087022号",
-              recognizedBy: {
-                "@type": "Organization",
-                name: "日本行政書士会連合会",
-              },
-            },
-          ],
+          // 資格は seo.ts の PERSON_JSONLD.hasCredential を**そのまま**使う（2026-09-01）。
+          //
+          // 旧実装はここに2件を独自の形で持っていた（credentialCategory="国家資格"＋name=資格名、
+          // identifier に「登録番号」の語を含める）。PERSON_JSONLD は別の形（credentialCategory=資格名、
+          // identifier は番号のみ）で、**同一 @id の Person が出力するページによって違う中身になっていた**
+          //   - 全ページ（このfounder）＝国家資格2件
+          //   - /about/uramatsu（ページ内定義）＝2件
+          //   - /about（PERSON_JSONLD）＝3件
+          // さらに旧コメント「社会保険労務士は登録未了（2026年9月開業予定）」は開業日（2026-09-01）に
+          // 事実でなくなった。値を二重管理せず正本1本を指すことで、この2つを同時に解消する。
+          hasCredential: PERSON_JSONLD.hasCredential,
           sameAs: [
             "https://www.wikidata.org/wiki/Q139738129",
             "https://orcid.org/0009-0007-0460-3473",
