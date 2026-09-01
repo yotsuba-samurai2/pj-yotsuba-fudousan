@@ -14,10 +14,14 @@
 // お問い合わせページや各ピラーはサーバーコンポーネントのため onClick を直接書けない。
 // そこで TelLink と同じくクライアント部品として切り出す。
 // 以後、新しく LINE リンクを置くときは素の <a> ではなく必ずこの部品を使うこと。
+//
+// 2026-09-01 LINE中継ページ化（浦松指示）：X等のアプリ内ブラウザ（WebView）がLINE起動用URLの
+// 遷移をブロックするため、LINE直リンクをやめ内部 /line を経由する。cta_line_click（location=
+// page_cta等）は「/lineへの入口タップ」になり、実際のLINE起動は/line側（location=line_bridge）で計測。
 "use client";
 
 import type { ReactNode } from "react";
-import { LINE_URL } from "@/lib/shared/office-public";
+import { LocaleLink } from "@/components/ui/LocaleLink";
 import { gaEvent } from "@/lib/gtag";
 
 type Props = {
@@ -31,16 +35,14 @@ type Props = {
 
 export function LineLink({ location, page, className, children }: Props) {
   return (
-    <a
-      href={LINE_URL}
-      target="_blank"
-      rel="noopener noreferrer"
+    <LocaleLink
+      href="/line"
       onClick={() =>
         gaEvent("cta_line_click", page ? { location, page } : { location })
       }
       className={className}
     >
       {children}
-    </a>
+    </LocaleLink>
   );
 }

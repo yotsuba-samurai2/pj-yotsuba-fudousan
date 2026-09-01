@@ -8,7 +8,8 @@ import Link from "next/link";
 import { gaEvent } from "@/lib/gtag";
 
 type Props = {
-  lineUrl: string;
+  /** /line（LINE中継ページ）へのロケール接頭辞付与済みhref（2026-09-01 WebView対策で直リンクから変更） */
+  lineHref: string;
   lineLabel: string;
   /** ロケール接頭辞・intentクエリ付与済みのhrefを受け取る（ここでは変換しない） */
   contactHref: string;
@@ -53,16 +54,16 @@ export function CtaBandActions(p: Props) {
         </div>
       )}
       <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
-        {/* 主CTA＝LINE（塗り・主色）＝外部URL・ロケール変換しない */}
-        <a
-          href={p.lineUrl}
-          target="_blank"
-          rel="noreferrer"
+        {/* 主CTA＝LINE（塗り・主色）＝内部 /line 経由（2026-09-01 WebViewのLINE起動ブロック対策）。
+            cta_line_click(location=cta_band)は「/lineへの入口タップ」、実際のLINE起動は
+            /line側の location=line_bridge で計測する */}
+        <Link
+          href={p.lineHref}
           onClick={() => gaEvent("cta_line_click", { location: "cta_band" })}
           className="inline-flex min-h-[44px] items-center rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-focus"
         >
           {p.lineLabel}
-        </a>
+        </Link>
         {/* 補助＝お問い合わせ（アウトライン中立） */}
         <Link
           href={p.contactHref}

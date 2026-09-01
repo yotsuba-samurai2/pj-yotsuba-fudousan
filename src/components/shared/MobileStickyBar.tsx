@@ -13,7 +13,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { gaEvent } from "@/lib/gtag";
 import type { LangCode } from "@/config/languages";
 // ⚠️ office.ts（テナント名・文言入り）はimportしない＝クライアントJSへの社労士名同梱を防ぐ（office-public参照）
-import { CONTACT_HREF, LINE_URL, MAP_URL, OFFICE, type BusinessKey } from "@/lib/shared/office-public";
+import { CONTACT_HREF, MAP_URL, OFFICE, type BusinessKey } from "@/lib/shared/office-public";
 
 // 4ロケールラベル（ja=現行文字列そのまま＝バイト不変。「LINE」は固有名＝全ロケール共通表記）
 const LABELS: Record<LangCode, { aria: string; line: string; contact: string; tel: string; map: string }> = {
@@ -37,16 +37,16 @@ export function MobileStickyBar({ businessKey }: Props) {
       className="fixed inset-x-0 bottom-0 z-40 flex border-t border-border bg-surface md:hidden"
       style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
     >
-      <a
-        href={LINE_URL}
-        target="_blank"
-        rel="noreferrer"
+      {/* 2026-09-01 LINE中継ページ化：直リンクをやめ内部 /line 経由（WebViewのLINE起動ブロック対策）。
+          内部リンク＝LocaleLinkが接頭辞を付与。実際のLINE起動は/line側(location=line_bridge)で計測 */}
+      <Link
+        href="/line"
         onClick={() => gaEvent("cta_line_click", { location: "sticky_bar" })}
         className={`${item} bg-primary text-white`}
       >
         <span aria-hidden>💬</span>
         {l.line}
-      </a>
+      </Link>
       <Link
         href={contactHref}
         onClick={() => gaEvent("cta_contact_click", { location: "sticky_bar" })}
