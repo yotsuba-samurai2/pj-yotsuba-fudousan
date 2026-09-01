@@ -83,7 +83,8 @@ Cは記事数が最も少ない。配分に迷ったらCに寄せる。
 |---|---|---|---|
 | 原稿 | `scripts/labor-columns/NN-slug.md` | `scripts/legal-columns/NN-slug.md` | `scripts/realestate-columns/NN-slug.md` |
 | 翻訳 | `scripts/labor-columns/{en,zh-tw,zh}/NN-slug.md` | 同左 | 同左 |
-| seed | `seed-labor-columns.ts` の ARTICLES に1エントリ | `seed-souzoku-legal-columns.ts` の**4箇所**（`REQUIRED_HUB_LINKS` / `REQUIRED_PHRASES` / `FORBIDDEN_PHRASES`（空でも宣言）/ `ARTICLES`） | `seed-realestate-columns-daily.ts` の ARTICLES に1エントリ（`publishedAt` と `category` は記事ごと） |
+| seed | `seed-labor-columns.ts` の ARTICLES に1エントリ | `seed-souzoku-legal-columns.ts` の**4箇所**（`REQUIRED_HUB_LINKS` / `REQUIRED_PHRASES` / `FORBIDDEN_PHRASES`（空でも宣言）/ `ARTICLES`） | `seed-realestate-columns-daily.ts` の ARTICLES に1エントリ（`category` は記事ごと） |
+| **公開日（3サイトとも記事ごとに必須）** | `date: "YYYY-MM-DD"`。**省略すると開業クラスタと同じ 2026-09-01 で入る**（既定値が残っているのは開業75本のため）。日次で足す記事は必ず書く | `date: "YYYY-MM-DD"`。**必須**。既定値は2026-09-01に廃止したので、省略すると `verify()` が NG を出す | `publishedAt: "YYYY-MM-DD"` |
 | 管理画面 | `/admin/columns/seed-labor` | `/admin/columns/seed-souzoku-legal` | `/admin/columns/seed-realestate-daily` |
 | **翻訳の内部リンク** | **ロケール接頭辞つき相対** `](/zh/labor/ryokin)` | **絶対URL** `](https://luck428.com/legal/ryokin)`。相対はNG | **絶対URL**。相対はNG |
 | **翻訳frontmatter必須** | `title` / `excerpt` / **`faqHeading`** | `title` / `excerpt` / **`category`** | `title` / `excerpt` / **`category`** |

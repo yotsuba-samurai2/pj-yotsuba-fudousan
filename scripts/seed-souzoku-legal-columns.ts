@@ -73,7 +73,12 @@ const AUTHOR = {
   title: "行政書士・宅地建物取引士（四葉行政書士事務所／四葉不動産株式会社）",
 } as const;
 
-const DATE = "2026-08-16";
+// ★シリーズ既定日（旧 `const DATE = "2026-08-16"`）は廃止した（2026-09-01）。
+//   `date: a.date ?? DATE` という形で既定値を持たせていたため、日次パイプラインが date を
+//   書き忘れた記事が**エラーも警告も出さずに 2026-08-16 で本番へ入る**状態だった。
+//   既定値を消し、date は ARTICLES で必ず指定する。未指定・書式不正は verify() が NG にする。
+//   既存35本のうち date を持たなかった22本には、同日に既定値と同値の "2026-08-16" を
+//   明示的に書き込んである（＝この変更で出力は1バイトも変わらない）。
 
 /** 各記事が評価を集約すべきハブ（本文に必須の内部リンク）。verify() で機械検査する */
 const REQUIRED_HUB_LINKS: Record<string, string[]> = {
@@ -1137,8 +1142,11 @@ const KNOWN_EXISTING_LEGAL_SLUGS = new Set([
 const ARTICLES: Array<{
   file: string;
   slug: string;
-  /** 記事ごとの公開日。省略時は DATE（シリーズ既定日） */
-  date?: string;
+  /**
+   * 記事ごとの公開日（YYYY-MM-DD）。**必須。省略できない。**
+   * 既定値へのフォールバックは 2026-09-01 に廃止した。省略すると verify() が NG を出す。
+   */
+  date: string;
   title: string;
   category: string;
   excerpt: string;
@@ -1148,6 +1156,7 @@ const ARTICLES: Array<{
   {
     file: "02-souzoku-hajime-koseki-chosa-bunkyo.md",
     slug: "souzoku-hajime-koseki-chosa-bunkyo",
+    date: "2026-08-16",
     title: "相続は何から始める？文京区で進める戸籍収集・相続人調査と行政書士に頼めること",
     category: "相続の手続き（行政書士の実務から）",
     excerpt:
@@ -1165,6 +1174,7 @@ const ARTICLES: Array<{
   {
     file: "03-isan-bunkatsu-kyougisho.md",
     slug: "isan-bunkatsu-kyougisho",
+    date: "2026-08-16",
     title: "遺産分割協議書は自分で作れる？必要書類・書き方のポイントと行政書士に頼めること",
     category: "相続の手続き（行政書士の実務から）",
     excerpt:
@@ -1182,6 +1192,7 @@ const ARTICLES: Array<{
   {
     file: "04-houtei-souzoku-jouhou-ichiran-zu.md",
     slug: "houtei-souzoku-jouhou-ichiran-zu",
+    date: "2026-08-16",
     title: "法定相続情報一覧図とは？戸籍一式の代わりに利用できる制度と申出のしかた",
     category: "相続の手続き（行政書士の実務から）",
     excerpt:
@@ -1199,6 +1210,7 @@ const ARTICLES: Array<{
   {
     file: "05-jihitsu-kosei-yuigon.md",
     slug: "jihitsu-kosei-yuigon",
+    date: "2026-08-16",
     title: "自筆証書遺言と公正証書遺言の違いとは？文京区で作る遺言と行政書士に頼めること",
     category: "相続の手続き（行政書士の実務から）",
     excerpt:
@@ -1216,6 +1228,7 @@ const ARTICLES: Array<{
   {
     file: "06-souzoku-kaigai-gaikokuseki.md",
     slug: "souzoku-kaigai-gaikokuseki",
+    date: "2026-08-16",
     title: "相続人が海外在住・外国籍の場合は？必要書類・署名証明と行政書士に頼めること",
     category: "相続の手続き（行政書士の実務から）",
     excerpt:
@@ -1233,6 +1246,7 @@ const ARTICLES: Array<{
   {
     file: "07-souzoku-zaisan-mokuroku.md",
     slug: "souzoku-zaisan-mokuroku",
+    date: "2026-08-16",
     title: "相続財産の調査と財産目録の作り方──何を・どう調べる？行政書士に頼めること",
     category: "相続の手続き（行政書士の実務から）",
     excerpt:
@@ -1250,6 +1264,7 @@ const ARTICLES: Array<{
   {
     file: "08-houtei-souzoku-bun.md",
     slug: "houtei-souzoku-bun",
+    date: "2026-08-16",
     title: "法定相続人と相続分の基本──相続順位・代襲相続・法定相続分を整理",
     category: "相続の手続き（行政書士の実務から）",
     excerpt:
@@ -1267,6 +1282,7 @@ const ARTICLES: Array<{
   {
     file: "09-souzoku-kigen-matome.md",
     slug: "souzoku-kigen-matome",
+    date: "2026-08-16",
     title: "相続手続きの期限まとめ──相続放棄・準確定申告・相続税・相続登記・遺留分",
     category: "相続の手続き（行政書士の実務から）",
     excerpt:
@@ -1284,6 +1300,7 @@ const ARTICLES: Array<{
   {
     file: "10-souzoku-zei-shinkoku-hitsuyo.md",
     slug: "souzoku-zei-shinkoku-hitsuyo",
+    date: "2026-08-16",
     title: "相続税の申告は必要？基礎控除・10か月の期限と申告要否の考え方",
     category: "相続の手続き（行政書士の実務から）",
     excerpt:
@@ -1301,6 +1318,7 @@ const ARTICLES: Array<{
   {
     file: "11-souzoku-touki-nagare.md",
     slug: "souzoku-touki-nagare",
+    date: "2026-08-16",
     title: "相続登記はどう進める？3年ルール・必要書類・自分で申請する場合と司法書士に頼む場合",
     category: "相続の手続き（行政書士の実務から）",
     excerpt:
@@ -1318,6 +1336,7 @@ const ARTICLES: Array<{
   {
     file: "12-souzoku-hoki-gentei-shonin.md",
     slug: "souzoku-hoki-gentei-shonin",
+    date: "2026-08-16",
     title: "相続放棄・限定承認を検討する前に知っておきたいこと──3か月・財産調査・手続きの流れ",
     category: "相続の手続き（行政書士の実務から）",
     excerpt:
@@ -1335,6 +1354,7 @@ const ARTICLES: Array<{
   {
     file: "13-souzoku-tochi-kokko-kizoku.md",
     slug: "souzoku-tochi-kokko-kizoku",
+    date: "2026-08-16",
     title: "不要な土地を相続したらどうする？相続土地国庫帰属制度と相続放棄の違い",
     category: "相続の手続き（行政書士の実務から）",
     excerpt:
@@ -1352,6 +1372,7 @@ const ARTICLES: Array<{
   {
     file: "14-souzoku-tochi-kokko-hiyo-kikan.md",
     slug: "souzoku-tochi-kokko-hiyo-kikan",
+    date: "2026-08-16",
     title: "相続土地国庫帰属にかかる費用と期間──審査手数料・負担金・標準処理期間8か月",
     category: "相続の手続き（行政書士の実務から）",
     excerpt:
@@ -1369,6 +1390,7 @@ const ARTICLES: Array<{
   {
     file: "15-souzoku-yuigon-hakken-tetsuzuki.md",
     slug: "souzoku-yuigon-hakken-tetsuzuki",
+    date: "2026-08-16",
     title: "遺言書が見つかったら？検認・遺言執行・不動産登記の流れと行政書士に頼めること",
     category: "相続の手続き（行政書士の実務から）",
     excerpt:
@@ -1386,6 +1408,7 @@ const ARTICLES: Array<{
   {
     file: "16-souzoku-tejun-checklist.md",
     slug: "souzoku-tejun-checklist",
+    date: "2026-08-16",
     title: "相続が発生したらやることチェックリスト──期限・名義変更・解約・届出を順番に整理",
     category: "相続の手続き（行政書士の実務から）",
     excerpt:
@@ -1402,6 +1425,7 @@ const ARTICLES: Array<{
   {
     file: "17-souzoku-iryubun-kiso.md",
     slug: "souzoku-iryubun-kiso",
+    date: "2026-08-16",
     title: "遺留分とは？対象となる相続人・割合・1年の期限と遺留分侵害額請求",
     category: "相続の手続き（行政書士の実務から）",
     excerpt:
@@ -1419,6 +1443,7 @@ const ARTICLES: Array<{
   {
     file: "18-souzoku-isanbunkatsu-chotei-shinpan.md",
     slug: "souzoku-isanbunkatsu-chotei-shinpan",
+    date: "2026-08-16",
     title: "相続人の意見がまとまらないときは？遺産分割調停・審判の流れと弁護士に相談するタイミング",
     category: "相続の手続き（行政書士の実務から）",
     excerpt:
@@ -1436,6 +1461,7 @@ const ARTICLES: Array<{
   {
     file: "19-souzoku-yochokin-karibarai.md",
     slug: "souzoku-yochokin-karibarai",
+    date: "2026-08-16",
     title: "亡くなった人の預貯金はいつ引き出せる？遺産分割前の払戻し制度と銀行手続の進め方",
     category: "相続の手続き（行政書士の実務から）",
     excerpt:
@@ -1453,6 +1479,7 @@ const ARTICLES: Array<{
   {
     file: "20-souzoku-ninchisho-yukuefumei-miseinen.md",
     slug: "souzoku-ninchisho-yukuefumei-miseinen",
+    date: "2026-08-16",
     title:
       "相続人に認知症の方・行方不明の方・未成年者がいるときは？成年後見・不在者財産管理人・特別代理人の使い分け",
     category: "相続の手続き（行政書士の実務から）",
@@ -1478,6 +1505,7 @@ const ARTICLES: Array<{
   {
     file: "21-houkago-day-jido-hattatsu-shitei-shinsei-nagare.md",
     slug: "houkago-day-jido-hattatsu-shitei-shinsei-nagare",
+    date: "2026-08-16",
     title:
       "放課後等デイサービス・児童発達支援の指定申請の流れと必要書類──物件・労務・税務は誰に頼むか",
     category: "障害福祉の許認可（行政書士の実務から）",
@@ -1503,6 +1531,7 @@ const ARTICLES: Array<{
   {
     file: "22-souzoku-nochi-noringyoiinkai-todoke-3jo3.md",
     slug: "souzoku-nochi-noringyoiinkai-todoke-3jo3",
+    date: "2026-08-16",
     title: "相続した農地は農業委員会へ届出が要る──農地法3条の3の手続きと必要書類",
     category: "相続の手続き（行政書士の実務から）",
     excerpt:
@@ -1527,6 +1556,7 @@ const ARTICLES: Array<{
   {
     file: "23-seikatsu-kaigo-shitei-bukken-yoken.md",
     slug: "seikatsu-kaigo-shitei-bukken-yoken",
+    date: "2026-08-16",
     title:
       "生活介護（障害福祉）の指定を受けるとき、物件は何を満たすのか──面積・設備・用途変更・消防と分離受任",
     category: "障害福祉の許認可（行政書士の実務から）",
@@ -1958,7 +1988,7 @@ function buildColumns(): SeedColumn[] {
       business: "legal" as const,
       slug: a.slug,
       title: a.title,
-      date: a.date ?? DATE,
+      date: a.date,
       category: a.category,
       excerpt: a.excerpt,
       content,
@@ -2004,6 +2034,23 @@ function verify(cols: SeedColumn[]): string[] {
 
     for (const w of FORBIDDEN_WORDS) {
       if (c.content.includes(w)) notes.push(`NG: ${c.slug} に禁止語「${w}」あり`);
+    }
+
+    // 公開日は必須（既定値へのフォールバックは2026-09-01に廃止）。
+    // scripts/ は tsconfig の exclude に入っていて `tsc --noEmit` では捕まらないため、
+    // 未指定を検出できるのはここだけ。
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(c.date || "")) {
+      notes.push(`NG: ${c.slug} の date が未指定または YYYY-MM-DD 形式でない（${String(c.date)}）`);
+    }
+
+    // 業際：助成金＝社会保険労務士の領域、補助金＝行政書士の領域。
+    // 四葉社会保険労務士事務所は2026-09-01に開業しており、助成金はそちらが別契約で受任する。
+    // 行政書士のコラムで助成金を自分の業務として書かない（llms.txt の同旨の宣言と対で管理）。
+    // 不動産側（seed-realestate-columns-daily.ts）には同じ検査が以前からあり、
+    // 行政書士側にだけ無かったのを揃えた。2026-09-01時点の legal 原稿(ja)での「助成金」は
+    // 0件＝この検査を足しても既存記事は落ちない（実測）。
+    if (/助成金/.test(c.content)) {
+      notes.push(`NG: ${c.slug} に「助成金」（社労士の領域＝業際）あり`);
     }
 
     // 事業体をまたぐ言及には分離受任の明示（JA判定語）
