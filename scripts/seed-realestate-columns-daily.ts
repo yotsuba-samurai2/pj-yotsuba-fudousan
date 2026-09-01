@@ -672,6 +672,46 @@ const ARTICLES: ArticleSpec[] = [
     localesWithTranslations: ["en", "zh-tw", "zh"],
     hubLinks: ["/souzoku"],
   },
+  {
+    file: "32-jidosha-tokutei-seibi-ninsho-koujou-bukken-youken.md",
+    slug: "jidosha-tokutei-seibi-ninsho-koujou-bukken-youken",
+    title: "自動車整備工場（特定整備の認証工場）に使える物件の要件は？──面積・天井高・用途地域",
+    publishedAt: "2026-08-31",
+    category: "投資・事業用不動産",
+    excerpt:
+      "特定整備の認証工場（道路運送車両法第78条）に使える物件は、①用途地域で自動車修理工場を建てられる区域か②認証基準（第80条）の車両整備作業場・点検作業場が取れる広さと天井高か③リフト作業に耐える床と前面道路か、の3点で決まります。認証基準の作業場と用途地域の作業場床面積は別の物差しで、準工業・工業系が向くのはこのため。東京都文京区の宅地建物取引士兼行政書士が、契約前に確認できることを道路運送車両法・建築基準法の条文から整理します。",
+    keywords: [
+      "自動車整備工場 物件",
+      "特定整備 認証工場 要件",
+      "認証工場 作業場 面積 天井高",
+      "自動車修理工場 用途地域 建築基準法",
+      "認証工場 指定工場 民間車検場 違い",
+    ],
+    tags: ["事業用不動産", "許認可", "用途地域", "自動車整備"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/toushi", "/office"],
+  },
+  {
+    file: "33-baibai-keiyaku-teppukin-loan-tokuyaku-chugokugo-buyer.md",
+    slug: "baibai-keiyaku-teppukin-loan-tokuyaku-chugokugo-buyer",
+    title: "中国語圏の買主が日本の売買契約で誤解しやすい条項（手付・ローン特約・契約不適合）は？",
+    publishedAt: "2026-08-31",
+    category: "投資・事業用不動産",
+    excerpt:
+      "中国語圏の買主が日本の売買契約でつまずきやすいのは、①手付が中国の「定金」と役割が違うこと（民法第557条＝解約手付）②ローン特約で契約が無条件に白紙へ戻る仕組み③契約不適合責任を「知った時から1年以内の通知」で行使する期間（民法第566条）、の3つです。東京都文京区の宅地建物取引士兼行政書士が、中国の商習慣との違いをふまえ、契約書と重要事項説明書のどの条項を先に読むかを条文から整理します。",
+    keywords: [
+      "日本 不動産 売買契約 手付 定金 違い",
+      "ローン特約 融資利用の特約 白紙解除",
+      "契約不適合責任 民法566条 1年 通知",
+      "宅建業法 35条 37条 重要事項説明",
+      "中国語圏 買主 非居住者 売買契約",
+    ],
+    tags: ["投資・事業用不動産", "売買契約", "非居住者", "中国語圏"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/toushi"],
+  },
 ];
 
 function toPlainText(md: string): string {

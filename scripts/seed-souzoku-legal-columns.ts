@@ -402,6 +402,20 @@ const REQUIRED_HUB_LINKS: Record<string, string[]> = {
     "/legal/column/souzoku-isanbunkatsu-chotei-shinpan",
     "/legal/column/souzoku-kigen-matome",
   ],
+  "jidosha-tokutei-seibi-ninsho-shinsei-nagare-youken": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+  ],
+  "haiguusha-kyojuuken-settei-isanbunkatsu-touki": [
+    "/legal/services/inheritance",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/souzoku",
+    "/legal/column/isan-bunkatsu-kyougisho",
+    "/legal/column/souzoku-touki-nagare",
+    "/legal/column/houtei-souzoku-bun",
+  ],
 };
 
 /** 表示コンプライアンス上の禁止語 */
@@ -1053,6 +1067,54 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "別事業体",
     "独立した事業体",
   ],
+  "jidosha-tokutei-seibi-ninsho-shinsei-nagare-youken": [
+    "道路運送車両法第78条",
+    "道路運送車両法施行規則第3条",
+    "電子制御装置整備",
+    "分解整備",
+    "第80条",
+    "整備主任者",
+    "道路運送車両法施行規則第62条の2の2",
+    "別表第四",
+    "スキャンツール",
+    "エーミング",
+    "地方運輸局長",
+    "運輸支局",
+    // 本文は和暦を括弧書きにする表記（「2020年（令和2年）4月1日」）で統一されているため、
+    // 必須表現も同じ形にする。`"令和2年4月1日"` の連続一致を求めると、記事が正しく
+    // 西暦・和暦を併記しているのに落ちる（2026-08-31の実行がこれ1件で6本すべて破棄された）。
+    // 記事側を歪めて検査を通さない（daily-columns-pipeline.md の原則）。
+    "2020年（令和2年）4月1日",
+    "令和6年3月31日",
+    "第94条の2",
+    "指定自動車整備事業",
+    "特定整備記録簿",
+    "紹介料を受け取りません",
+    "別事業体",
+    "独立した事業体",
+  ],
+  "haiguusha-kyojuuken-settei-isanbunkatsu-touki": [
+    "配偶者居住権",
+    "民法第1028条",
+    "民法第1029条",
+    "民法第1030条",
+    "民法第1031条",
+    "民法第1032条",
+    "民法第1034条",
+    "配偶者短期居住権",
+    "民法第1037条",
+    "相続税法第23条の2",
+    "不動産登記法第81条の2",
+    "敷地利用権",
+    "令和2年4月1日",
+    "終身",
+    "遺贈",
+    "対抗",
+    "譲渡",
+    "紹介料を受け取りません",
+    "別事業体",
+    "独立した事業体",
+  ],
 };
 
 /** 記事ごとに含めてはならない表現 */
@@ -1130,6 +1192,8 @@ const FORBIDDEN_PHRASES: Record<string, string[]> = {
   "yuigon-shikkosha-shokumu-sennin-dare": [],
   "keikamotsu-kei-jidosha-unso-todokede": [],
   "souzoku-tokubetsu-jueki-kiyobun": [],
+  "jidosha-tokutei-seibi-ninsho-shinsei-nagare-youken": [],
+  "haiguusha-kyojuuken-settei-isanbunkatsu-touki": [],
 };
 
 /** 本セット外へ張る既存legalコラムslug（リポジトリの他シードで実在確認済み） */
@@ -1915,6 +1979,58 @@ const ARTICLES: Array<{
       "具体的相続分",
       "遺産分割",
       "民法904条の3",
+      "行政書士",
+    ],
+  },
+  {
+    file: "37-jidosha-tokutei-seibi-ninsho-shinsei-nagare-youken.md",
+    slug: "jidosha-tokutei-seibi-ninsho-shinsei-nagare-youken",
+    date: "2026-08-31",
+    title:
+      "自動車の特定整備（分解整備）の認証申請は、どんな要件でどう進める？──整備主任者・設備・運輸支局の手続き",
+    category: "許認可の手続き（行政書士の実務から）",
+    excerpt:
+      "自動車の特定整備（従来の分解整備に電子制御装置整備を加えたもの）を業として行うには、道路運送車両法第78条にもとづく地方運輸局長の認証が事業場ごとに必要です。認証基準（第80条）、整備主任者などの人的要件（施行規則第62条の2の2）、作業場・車両置場やスキャンツールなどの設備、2020年（令和2年）4月1日施行の特定整備制度（電子制御装置整備の追加）、運輸支局への申請の流れを整理し、物件は不動産、登記は司法書士、労務は社会保険労務士、税務は税理士へ分離受任で振る分担を示しました。",
+    keywords: [
+      "自動車 特定整備 認証 取り方",
+      "特定整備 認証 要件 整備主任者",
+      "電子制御装置整備 認証 エーミング",
+      "分解整備 特定整備 違い 2020年",
+      "特定整備 認証 運輸支局 書類",
+      "自動車整備 認証 行政書士",
+    ],
+    tags: [
+      "自動車特定整備",
+      "認証工場",
+      "許認可",
+      "電子制御装置整備",
+      "整備主任者",
+      "行政書士",
+    ],
+  },
+  {
+    file: "38-haiguusha-kyojuuken-settei-isanbunkatsu-touki.md",
+    slug: "haiguusha-kyojuuken-settei-isanbunkatsu-touki",
+    date: "2026-08-31",
+    title:
+      "配偶者居住権を設定するとき、遺産分割協議書と登記はどう進める？──成立要件・存続期間・評価の分担",
+    category: "相続の手続き（行政書士の実務から）",
+    excerpt:
+      "配偶者居住権は、被相続人の配偶者が相続開始時に住んでいた被相続人所有の建物に、終身または一定期間、無償で住み続けられる権利です（民法第1028条、令和2年4月1日施行）。遺産分割・遺贈・審判による設定（第1029条）、存続期間（第1030条）、遺産分割協議書への記載、建物の設定登記と対抗要件（第1031条・不動産登記法第81条の2）、配偶者短期居住権（第1037条）との違いを整理し、設定登記は司法書士、評価・相続税は税理士、争いは弁護士へ分離受任で振る分担を示しました。",
+    keywords: [
+      "配偶者居住権 設定 遺産分割協議書",
+      "配偶者居住権 登記 対抗要件",
+      "配偶者居住権 存続期間 終身",
+      "配偶者居住権 評価 相続税 敷地利用権",
+      "配偶者短期居住権 違い",
+      "配偶者居住権 行政書士",
+    ],
+    tags: [
+      "配偶者居住権",
+      "配偶者短期居住権",
+      "遺産分割協議書",
+      "相続登記",
+      "相続税",
       "行政書士",
     ],
   },

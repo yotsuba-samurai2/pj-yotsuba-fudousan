@@ -13763,5 +13763,371 @@ export const LABOR_COLUMNS_SEED: LaborSeedColumn[] = [
         ]
       }
     }
+  },
+  {
+    "business": "labor",
+    "slug": "gaikokujin-roudou-joken-meiji-bogoko-2024",
+    "title": "外国人労働者への労働条件明示は、母国語でどこまで必要か",
+    "date": "2026-09-01",
+    "category": "採用と雇用",
+    "excerpt": "労働条件の明示そのものは労働基準法第15条第1項の義務ですが、条文は言語を指定していないため、日本語の通知書でも法律上の明示は成り立ち得ます。ただし外国人指針（平成19年厚生労働省告示第276号）は、母国語又は平易な日本語で理解できるよう明示するよう努めることを求めています。義務が二段構えである点を押さえ、モデル通知書の外国語版で「渡した・理解した」を残すのが実務です。2024年4月の追加事項が外国人雇用でどう効くかもあわせて整理します。",
+    "content": "**結論（先に要点）**：労働条件の明示そのものは労働基準法第15条第1項の義務ですが、条文は言語を指定していないため、日本語の通知書を交付するだけでも「法律上の明示」は成り立ち得ます。ただし「外国人労働者の雇用管理の改善等に関して事業主が適切に対処するための指針」（平成19年厚生労働省告示第276号）は、外国人が理解できるよう、母国語又は平易な日本語を用いる等の方法で明示するよう**努める**こととしています。義務のレベルが二段構えである点を押さえ、モデル通知書の外国語版を使って「渡した・理解した」を残すのが実務です。\n\n## 労働条件通知書は、外国人にも日本語だけで渡してよいのですか？\n\nまず制度の骨格から分けます。使用者は、労働契約を結ぶときに賃金・労働時間その他の労働条件を明示しなければなりません（労働基準法第15条第1項、明示事項は労働基準法施行規則第5条）。この条文は**明示すべき事項**を定めていますが、**どの言語で書くか**は指定していません。したがって、日本語の労働条件通知書を交付すること自体が直ちに違法になるわけではありません。\n\n一方で、外国人の雇用には別の規範が重なります。「外国人労働者の雇用管理の改善等に関して事業主が適切に対処するための指針」（平成19年厚生労働省告示第276号）は、外国人労働者が理解できるよう、**母国語又は平易な日本語を用いる等の方法**により労働条件を明示するよう努めることを求めています。ここは「努める」＝努力義務です。\n\nつまり、義務のレベルは二段構えです。\n\n| 何を | 根拠 | 義務のレベル |\n|---|---|---|\n| 労働条件を明示すること | 労働基準法第15条第1項・労基則第5条 | 法的義務（相手が外国人でも同じ） |\n| 明示する言語・方法（母国語・平易な日本語等） | 外国人指針（厚生労働省告示第276号） | 努力義務 |\n\n「日本語で渡せば足りる」と読むと、努力義務の部分を落とします。逆に「必ず母国語でなければ違法」と読むのも正確ではありません。実務の勘どころは、法的義務は満たしたうえで、努力義務として理解できる方法を尽くし、後で「聞いていない」と食い違わない証跡を残すことです。\n\n## 2024年4月改正で追加された明示事項は、外国人雇用でどこが実務に効きますか？\n\n2024年4月から、明示事項が追加されました（労働基準法施行規則第5条の改正、令和5年厚生労働省令第39号、2024年4月1日施行）。すべての労働者に「就業場所・業務の変更の範囲」を、有期契約の労働者にはさらに「更新上限」「無期転換の申込機会」「無期転換後の労働条件」を明示します。改正の全体像は[労働条件の明示ルールはどう変わった？](/labor/column/roudou-joken-meiji-2024-henko-han-i)に整理しています。\n\nこの改正は、外国人雇用で特に効きます。技能実習・特定技能・留学生アルバイトなど、有期契約で働く人が多いためです。有期の3事項は、契約の締結時だけでなく**更新のたび**に関わります。更新のたびに、更新上限や無期転換の話を、理解できる言語で伝え直す場面が増えるということです。\n\n- **更新上限**：「更新は通算〇年まで」を、在留期間の更新とは別物として理解してもらう必要があります。在留期限と契約期間の関係は[在留期限と雇用契約期間は、どちらが先に切れるか](/labor/column/zairyu-kigen-koyo-keiyaku-kikan)に整理しています。\n- **無期転換の申込機会**：通算5年を超えると無期転換を申し込める、という案内は、言葉の壁があると伝わりにくい部分です。\n- **就業場所・業務の変更の範囲**：配置転換の可能性を、母国語で正確に示しておかないと、後の異動で行き違いになります。\n\n日本人と同じひな型を日本語のまま渡すだけでは、追加事項ほど伝わりにくくなります。外国語版のひな型に、追加事項の欄が反映されているかを確認することが要点です。\n\n## 母国語や平易な日本語で示すとき、何を根拠にどこまで対応すればよいですか？\n\n根拠は前記の外国人指針（努力義務）です。「どこまで」は、努力義務である以上、一律の正解はありません。実務では、次の順で対応を組み立てると過不足が出にくくなります。\n\n1. **厚生労働省のモデル労働条件通知書の外国語版を使う**。厚生労働省は、労働条件通知書のモデル様式を英語・中国語・ベトナム語などの外国語版で公表しています（2026年8月31日参照）。追加された明示事項を反映した最新版を使います。\n2. **母国語版と日本語版を併せて交付する**。母国語版だけだと、法的に効力を持つのは日本語版か外国語版かで解釈が分かれ得ます。両方を渡し、内容が対応していることを確認します。\n3. **「理解したこと」を残す**。読み合わせをした、質問を受けた、といった事実を記録に残しておくと、後日の食い違いを防げます。翻訳の正確性を法令が保証してくれるわけではないため、専門用語（無期転換・変更の範囲など）の訳し方は慎重に扱います。\n\n平易な日本語で示す場合も、追加事項は抽象的で伝わりにくいので、具体例を添えるのが実務です。募集の段階で示す求人票の明示（職業安定法）も同様に理解できる方法で行うことが求められており、入社時の明示との関係は[求人票に書かなければならないこと](/labor/column/kyujin-hyo-meiji-jiko-roudou-joken)にまとめています。\n\nなお、翻訳版を渡したかどうかにかかわらず、労働条件通知書の内容が就業規則・雇用契約書と食い違っていては意味がありません。多言語対応は「翻訳」よりも「実態との整合」が先です。\n\n## 在留資格の申請・変更と労働条件明示は、どこで担当が分かれますか？\n\n外国人を1人雇うと、在留資格・労働社会保険・住まいという別々の手続が同時に動きます。全体像は[外国人を1人雇うと、窓口はいくつ必要か](/labor/column/gaikokujin-koyo-madoguchi-wakekata)に整理しています。担当は、手続の性質で分かれます。\n\n| 手続 | 担当 |\n|---|---|\n| 在留資格の申請・変更・更新（入管への申請書類の作成・取次） | 行政書士（四葉行政書士事務所） |\n| 労働条件の明示、労働・社会保険の加入と届出、就業規則 | 社会保険労務士（当事務所） |\n| 雇い入れ・離職時の外国人雇用状況の届出 | 事業主の義務。社会保険労務士が代行できます |\n\n労働条件の明示は、在留資格が「就労できる資格か」を確かめたうえで行う労務の手続で、社会保険労務士の領域です。在留資格そのものを取る・変える手続は行政書士の領域で、当事務所とは別の事業体です。雇い入れ後のハローワークへの届出については[外国人を雇ったら、ハローワークに届け出る](/labor/column/gaikokujin-koyo-jokyo-todokede)にまとめています。\n\n## 明示不足がトラブルになったとき、誰に相談すればよいですか？\n\n明示が不十分だったこと自体は、まず労務の問題として、通知書・雇用契約書・就業規則の整合を点検し、以後の運用を整えることで対処します。ここは社会保険労務士がご支援できる範囲です。\n\n一方、「聞いていない条件で不利益を受けた」「雇止めや配置転換が無効だ」といった**個別の紛争**になった場合、その有効性の判断や交渉・訴訟は弁護士の領域です。この記事は制度の枠組みの紹介にとどまり、個別の可否を判断するものではありません。紛争性のある場面は、弁護士への相談をご案内します。\n\nトラブルを未然に防ぐ観点では、外国語版のひな型整備と、更新のたびの明示の運用設計を、雇い入れの前に決めておくことが最も効きます。\n\n## よくある質問\n\n**Q. 労働条件通知書を日本語だけで渡したら、それだけで違法になりますか？**\nA. 労働条件を明示すること自体は労働基準法第15条第1項の義務ですが、条文は言語を指定していないため、日本語で明示したことが直ちに違法になるわけではありません。ただし外国人指針（厚生労働省告示第276号）は、母国語又は平易な日本語を用いる等、理解できる方法で明示するよう努めることを求めており、これは努力義務です。トラブル予防の観点からは、外国語版を併せて交付するのが実務です。\n\n**Q. 母国語版と日本語版で内容がずれていたら、どちらが優先しますか？**\nA. 一般には、どちらの書面が労働条件を定めたものかという解釈の問題になり、事情によって判断が分かれます。だからこそ、母国語版と日本語版の内容を対応させ、翻訳の正確性を確認しておくことが重要です。個別の書面の効力をめぐる争いは、弁護士への相談をご案内します。\n\n**Q. 平易な日本語で口頭で説明すれば、書面は要りませんか？**\nA. 明示事項のうち、労働基準法施行規則第5条が定める主要な事項は、書面の交付（本人が希望した場合はファクシミリや電子メール等）による明示が原則です。口頭の説明は理解を助ける補助であり、書面の交付に代えることはできません。平易な日本語での説明は、書面を渡したうえで理解を確認するために行います。\n\n**Q. 在留資格の変更も、労働条件の通知書と一緒に社労士に頼めますか？**\nA. 在留資格の申請・変更は行政書士の業務で、当事務所（社会保険労務士事務所）とは別の事業体である四葉行政書士事務所が担当します。それぞれ別々にご契約いただく形です。労働条件の明示・労働社会保険の手続は当事務所が、在留資格は行政書士がと、担当を分けてご案内します。\n\n## この記事の根拠\n\n- 労働基準法（昭和22年法律第49号）第15条第1項 ── 使用者は、労働契約の締結に際し、労働者に対して賃金、労働時間その他の労働条件を明示しなければならない。言語の指定はない\n- 労働基準法施行規則（昭和22年厚生省令第23号）第5条 ── 明示すべき労働条件を定める規定。主要な事項は書面の交付（労働者が希望した場合はファクシミリ・電子メール等）による。2024年4月1日施行の改正（令和5年厚生労働省令第39号）で、就業場所・業務の変更の範囲、有期契約の更新上限、無期転換申込機会、無期転換後の労働条件が追加された\n- 外国人労働者の雇用管理の改善等に関して事業主が適切に対処するための指針（平成19年8月3日厚生労働省告示第276号） ── 事業主は、外国人労働者が理解できるよう、その内容について、外国人労働者が使用する言語又は平易な日本語を用いる等、外国人労働者が理解できる方法により、労働条件を明示するよう努めること。募集に当たっての明示についても同様に、理解できる方法で行うよう努めることとされている（2026年8月31日参照）\n- 厚生労働省 モデル労働条件通知書（外国語版） ── 労働条件通知書のモデル様式が英語・中国語等の外国語版で公表されている。追加された明示事項を反映した最新版を使う（2026年8月31日参照）\n- 公的資料・条文は2026年8月31日に確認。翻訳版と日本語版の内容がずれた場合にどちらが効力を持つか、特定の雇止め・配置転換が有効かどうかといった個別の該当性は、事情によって判断が分かれます。本記事は制度の枠組みの紹介にとどまり、個別の可否を判断するものではありません\n\n四葉不動産株式会社、四葉行政書士事務所、四葉社会保険労務士事務所は、それぞれ独立した事業体として業務を受任します。他の専門家をご紹介する場合も、お客様に直接ご契約いただく形をご案内し、当事務所は紹介料を受け取りません。外国人の労働条件明示について当事務所がご支援するのは、外国語版を含む労働条件通知書・雇用契約書のひな型整備と、就業規則との整合の点検です。在留資格の申請・変更は四葉行政書士事務所が別々にご契約のうえ担当し、個別の紛争や訴訟は弁護士の領域としてご案内します。費用は[報酬額表](/labor/ryokin)に、よくいただくご質問は[よくあるご質問](/labor/faq)にまとめています。\n\n本記事は一般的な情報提供です。個別のご事情に応じた判断は、最新の一次資料（厚生労働省、e-Gov等）を踏まえ、面談のうえ資格者が行います。執筆は[浦松丈二](/about/uramatsu)（社会保険労務士・行政書士・宅地建物取引士）です。",
+    "status": "published",
+    "author": {
+      "name": "浦松 丈二",
+      "title": "社会保険労務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+    },
+    "keywords": [
+      "外国人 労働条件 明示 母国語",
+      "労働条件通知書 外国人 日本語のみ",
+      "外国人労働者 指針 告示276号",
+      "労働基準法15条 外国人 明示",
+      "モデル労働条件通知書 外国語版",
+      "外国人 有期契約 更新上限 明示"
+    ],
+    "tags": [
+      "外国人雇用",
+      "労働条件明示",
+      "労働条件通知書",
+      "労働基準法",
+      "在留資格",
+      "業際"
+    ],
+    "locales": [],
+    "faq": [
+      {
+        "question": "労働条件通知書を日本語だけで渡したら、それだけで違法になりますか？",
+        "answer": "労働条件を明示すること自体は労働基準法第15条第1項の義務ですが、条文は言語を指定していないため、日本語で明示したことが直ちに違法になるわけではありません。ただし外国人指針（厚生労働省告示第276号）は、母国語又は平易な日本語を用いる等、理解できる方法で明示するよう努めることを求めており、これは努力義務です。トラブル予防の観点からは、外国語版を併せて交付するのが実務です。"
+      },
+      {
+        "question": "母国語版と日本語版で内容がずれていたら、どちらが優先しますか？",
+        "answer": "一般には、どちらの書面が労働条件を定めたものかという解釈の問題になり、事情によって判断が分かれます。だからこそ、母国語版と日本語版の内容を対応させ、翻訳の正確性を確認しておくことが重要です。個別の書面の効力をめぐる争いは、弁護士への相談をご案内します。"
+      },
+      {
+        "question": "平易な日本語で口頭で説明すれば、書面は要りませんか？",
+        "answer": "明示事項のうち、労働基準法施行規則第5条が定める主要な事項は、書面の交付（本人が希望した場合はファクシミリや電子メール等）による明示が原則です。口頭の説明は理解を助ける補助であり、書面の交付に代えることはできません。平易な日本語での説明は、書面を渡したうえで理解を確認するために行います。"
+      },
+      {
+        "question": "在留資格の変更も、労働条件の通知書と一緒に社労士に頼めますか？",
+        "answer": "在留資格の申請・変更は行政書士の業務で、当事務所（社会保険労務士事務所）とは別の事業体である四葉行政書士事務所が担当します。それぞれ別々にご契約いただく形です。労働条件の明示・労働社会保険の手続は当事務所が、在留資格は行政書士がと、担当を分けてご案内します。"
+      }
+    ],
+    "translations": {
+      "en": {
+        "title": "How far must working conditions be stated to foreign workers in their native language?",
+        "excerpt": "Stating working conditions is itself a duty under Article 15, paragraph 1 of the Labour Standards Act, but the article does not specify a language, so delivering a Japanese-only notice can satisfy the legal duty of statement. However, the guideline for the proper treatment of foreign workers (Ministry of Health, Labour and Welfare Notification No. 276 of 2007) asks employers to endeavour to state the conditions in a way the worker can understand, using the native language or plain Japanese. The duty is in two tiers; the practical move is to use the foreign-language version of the model notice and to leave a record that it was delivered and understood.",
+        "content": "**In short:** Stating working conditions is itself a duty under Article 15, paragraph 1 of the Labour Standards Act, but the article does not specify a language, so delivering a Japanese-only notice can satisfy the \"legal statement.\" However, the guideline for the proper treatment of foreign workers (Ministry of Health, Labour and Welfare Notification No. 276 of 2007) asks employers to **endeavour** to state the conditions using the native language or plain Japanese so that the worker can understand. Grasp that the duty is in two tiers, and use the foreign-language model notice to leave a record that it was \"delivered and understood.\"\n\n## May a working-conditions notice be given to a foreign worker in Japanese only?\n\nStart by separating the framework. When concluding a labour contract, an employer must state the wages, working hours and other working conditions (Labour Standards Act, Article 15, paragraph 1; the matters to be stated are set by Article 5 of the Ordinance for Enforcement of the Labour Standards Act). This provision sets **what** must be stated, but does not specify **in which language**. Accordingly, delivering a working-conditions notice in Japanese is not in itself unlawful.\n\nOn the other hand, a separate norm overlaps for the employment of foreigners. The \"Guideline for employers to properly respond regarding the improvement of employment management of foreign workers\" (Ministry of Health, Labour and Welfare Notification No. 276 of 3 August 2007) asks employers to endeavour to state the working conditions in a way the foreign worker can understand — **using the native language or plain Japanese**. Here it is \"endeavour\" — an effort duty.\n\nIn other words, the duty is in two tiers.\n\n| What | Basis | Level of duty |\n|---|---|---|\n| To state the working conditions | Labour Standards Act, Article 15(1); Ordinance Article 5 | Legal duty (the same even if the worker is foreign) |\n| The language/method of statement (native language, plain Japanese, etc.) | The guideline for foreign workers (Notification No. 276) | Effort duty |\n\nReading it as \"Japanese is enough\" drops the effort-duty part. Conversely, reading it as \"it is unlawful unless in the native language\" is not accurate either. The practical knack is to satisfy the legal duty and, on top of that, to exhaust an understandable method as the effort duty, leaving evidence that avoids a later \"I never heard that.\"\n\n## What did the April 2024 amendment add, and where does it bite in foreign employment?\n\nFrom April 2024, the matters to be stated were added to (amendment of Article 5 of the Ordinance for Enforcement of the Labour Standards Act, Ministry of Health, Labour and Welfare Ordinance No. 39 of 2023, in force 1 April 2024). For all workers, you state \"the scope of changes to the place of work and duties\"; for fixed-term workers, you additionally state the \"renewal cap,\" the \"conversion application opportunity,\" and the \"working conditions after conversion.\" The full picture of the amendment is organised in [how did the working-conditions notice rules change?](/en/labor/column/roudou-joken-meiji-2024-henko-han-i).\n\nThis amendment bites especially in foreign employment, because many foreign workers — technical intern trainees, specified skilled workers, students working part-time — work on fixed-term contracts. The three fixed-term items relate not only at conclusion but **at each renewal**. That means more occasions to re-explain the renewal cap and open-ended conversion in an understandable language.\n\n- **Renewal cap:** the worker must understand \"renewals up to a total of X years\" as something separate from the renewal of the residence status. The relationship between the residence period and the contract period is organised in [which expires first, the residence period or the contract term](/en/labor/column/zairyu-kigen-koyo-keiyaku-kikan).\n- **Conversion application opportunity:** the notice that \"you can apply for open-ended conversion once the total exceeds five years\" is hard to convey across a language barrier.\n- **Scope of changes to place of work and duties:** unless the possibility of reassignment is shown accurately in the native language, later transfers lead to misunderstanding.\n\nMerely handing over the same template in Japanese as for Japanese workers conveys the added items least well. The point is to confirm that the fields for the added items are reflected in the foreign-language version.\n\n## On what basis, and how far, do you respond when showing it in the native language or plain Japanese?\n\nThe basis is the foreign-worker guideline (an effort duty). \"How far\" has no single correct answer, since it is an effort duty. In practice, building the response in the following order avoids excess or shortfall.\n\n1. **Use the foreign-language version of the Ministry's model working-conditions notice.** The Ministry of Health, Labour and Welfare publishes a model form in English, Chinese, Vietnamese and other languages (confirmed 31 August 2026). Use the latest version reflecting the added matters.\n2. **Deliver the native-language version together with the Japanese version.** With only the native-language version, interpretation can split over which version has legal effect. Deliver both, and confirm that the contents correspond.\n3. **Leave a record of \"understanding.\"** Recording that a read-through was done and questions were taken prevents a later discrepancy. Because the law does not guarantee the accuracy of a translation, handle the wording of technical terms (open-ended conversion, scope of changes) carefully.\n\nEven when showing it in plain Japanese, the added items are abstract and hard to convey, so adding concrete examples is the practical move. The statement in a job advertisement shown at the recruitment stage (Employment Security Act) is likewise required to be made in an understandable way; its relationship with the statement at hiring is organised in [what must be written in a job advertisement](/en/labor/column/kyujin-hyo-meiji-jiko-roudou-joken).\n\nWhether or not a translated version was handed over, it is meaningless if the notice diverges from the work rules and the employment contract. For multilingual handling, \"consistency with reality\" comes before \"translation.\"\n\n## Where do the application/change of residence status and the statement of working conditions divide?\n\nWhen you hire one foreign worker, separate procedures for residence status, labour and social insurance, and housing move at the same time. The whole picture is organised in [how many windows do you need to hire one foreign worker](/en/labor/column/gaikokujin-koyo-madoguchi-wakekata). The assignment divides by the nature of the procedure.\n\n| Procedure | In charge |\n|---|---|\n| Application/change/renewal of residence status (drafting and submission of documents to immigration) | Gyoseishoshi (四葉行政書士事務所) |\n| Statement of working conditions, enrolment and notification for labour and social insurance, work rules | Shakai Hoken Roumushi (our office) |\n| Notification of the employment status of a foreign worker at hiring/separation | The employer's duty; a Shakai Hoken Roumushi can act as agent |\n\nThe statement of working conditions is a labour procedure done after confirming that the residence status permits work, and is the domain of the Shakai Hoken Roumushi. Obtaining or changing the residence status itself is the domain of the Gyoseishoshi, a separate business from our office. Notification to Hello Work after hiring is organised in [when you hire a foreign worker, notify Hello Work](/en/labor/column/gaikokujin-koyo-jokyo-todokede).\n\n## Whom should you consult when insufficient statement becomes a problem?\n\nThat the statement was insufficient is, first, dealt with as a labour matter — by cross-checking the notice, the employment contract and the work rules, and putting the going-forward operation in order. This is a scope a Shakai Hoken Roumushi can support.\n\nOn the other hand, if it becomes an **individual dispute** — \"I suffered a disadvantage under a condition I never heard of,\" \"the non-renewal or reassignment is void\" — the judgment of its validity, and the negotiation or litigation, are the domain of a lawyer. This article is limited to introducing the framework of the system and does not judge individual permissibility. For matters with a dispute nature, we point you to a consultation with a lawyer.\n\nTo prevent trouble, deciding the foreign-language template and the operation of statement at each renewal before hiring is what bites most.\n\n## Frequently asked questions\n\n**Q. If I give the working-conditions notice in Japanese only, is that in itself unlawful?**\nA. Stating the working conditions is itself a duty under Article 15(1) of the Labour Standards Act, but since the article does not specify a language, stating them in Japanese is not in itself unlawful. However, the foreign-worker guideline (Notification No. 276) asks employers to endeavour to state them in an understandable way using the native language or plain Japanese, which is an effort duty. To prevent trouble, the practical move is to deliver a foreign-language version as well.\n\n**Q. If the native-language version and the Japanese version differ, which prevails?**\nA. Generally this becomes an interpretive question of which document set the working conditions, and the answer varies with the circumstances. That is precisely why it is important to make the native-language and Japanese versions correspond and to confirm the accuracy of the translation. A dispute over the effect of a particular document is one we point to a consultation with a lawyer.\n\n**Q. If I explain it orally in plain Japanese, is a written document unnecessary?**\nA. Of the matters to be stated, the principal items set by Article 5 of the Ordinance are, in principle, stated by delivery of a written document (or, where the worker so wishes, by facsimile or e-mail). An oral explanation is a supplement that aids understanding and cannot replace delivery of the document. Explanation in plain Japanese is done to confirm understanding after the document has been delivered.\n\n**Q. Can I ask a Shakai Hoken Roumushi for the residence-status change together with the working-conditions notice?**\nA. Application and change of residence status is the business of a Gyoseishoshi, and 四葉行政書士事務所 — a separate business from our office (a Shakai Hoken Roumushi office) — handles it. You engage each under a separate contract. We divide the assignment: our office for the statement of working conditions and the labour and social insurance procedures, and the Gyoseishoshi for the residence status.\n\n## Sources\n\n- Labour Standards Act (Act No. 49 of 1947), Article 15, paragraph 1 — an employer must, on concluding a labour contract, state to the worker the wages, working hours and other working conditions. No language is specified\n- Ordinance for Enforcement of the Labour Standards Act (Ministry of Health and Welfare Ordinance No. 23 of 1947), Article 5 — prescribes the working conditions to be stated. Principal items are stated by delivery of a written document (or, where the worker wishes, facsimile/e-mail). The amendment in force 1 April 2024 (Ordinance No. 39 of 2023) added the scope of changes to the place of work and duties, the renewal cap for fixed-term contracts, the conversion application opportunity, and the working conditions after conversion\n- Guideline for employers to properly respond regarding the improvement of employment management of foreign workers (Ministry of Health, Labour and Welfare Notification No. 276 of 3 August 2007) — employers are to endeavour to state the working conditions in a way the foreign worker can understand, using the language the foreign worker uses or plain Japanese, and likewise to endeavour to make the statement at recruitment in an understandable way (confirmed 31 August 2026)\n- Ministry of Health, Labour and Welfare, model working-conditions notice (foreign-language versions) — the model form is published in foreign-language versions such as English and Chinese. Use the latest version reflecting the added matters (confirmed 31 August 2026)\n- Public materials and provisions confirmed on 31 August 2026. Which version has effect if the translated and Japanese versions diverge, and whether a particular non-renewal or reassignment is valid, are individual determinations that vary with the circumstances. This article is limited to introducing the framework and does not judge individual permissibility\n\n四葉不動産株式会社, 四葉行政書士事務所 and 四葉社会保険労務士事務所 each undertake work as independent businesses, under separate contracts. When we introduce another professional, we arrange for you to contract directly, and our office receives no referral fee. What 四葉社会保険労務士事務所 supports on the statement of working conditions to foreign workers is preparing the templates of the working-conditions notice and employment contract, including foreign-language versions, and checking their consistency with the work rules. Application and change of residence status is handled by 四葉行政書士事務所 under a separate contract, and individual disputes and litigation are pointed to the domain of a lawyer. For fees, see [the fee schedule](/en/labor/ryokin); for frequently asked questions, see [the FAQ](/en/labor/faq).\n\nThis article is general information. Individual judgments, in light of the latest primary sources (Ministry of Health, Labour and Welfare, e-Gov, etc.), are made by a qualified professional after a consultation. Written by [Joji Uramatsu](/en/about/uramatsu) (Shakai Hoken Roumushi, Gyoseishoshi, Registered Real Estate Transaction Specialist).",
+        "category": "Labour law basics",
+        "keywords": [
+          "foreign worker working conditions notice native language",
+          "working conditions statement plain Japanese",
+          "Labour Standards Act Article 15 foreign",
+          "guideline for foreign workers Notification 276",
+          "model working conditions notice foreign language",
+          "2024 working conditions statement foreign employment"
+        ],
+        "tags": [
+          "foreign employment",
+          "working conditions notice",
+          "native language statement",
+          "Labour Standards Act",
+          "residence status",
+          "separate engagement"
+        ],
+        "author": {
+          "name": "Joji Uramatsu",
+          "title": "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所"
+        },
+        "faq": [
+          {
+            "question": "If I give the working-conditions notice in Japanese only, is that in itself unlawful?",
+            "answer": "Stating the working conditions is itself a duty under Article 15(1) of the Labour Standards Act, but since the article does not specify a language, stating them in Japanese is not in itself unlawful. However, the foreign-worker guideline (Notification No. 276) asks employers to endeavour to state them in an understandable way using the native language or plain Japanese, which is an effort duty. To prevent trouble, the practical move is to deliver a foreign-language version as well."
+          },
+          {
+            "question": "If the native-language version and the Japanese version differ, which prevails?",
+            "answer": "Generally this becomes an interpretive question of which document set the working conditions, and the answer varies with the circumstances. That is precisely why it is important to make the native-language and Japanese versions correspond and to confirm the accuracy of the translation. A dispute over the effect of a particular document is one we point to a consultation with a lawyer."
+          },
+          {
+            "question": "If I explain it orally in plain Japanese, is a written document unnecessary?",
+            "answer": "Of the matters to be stated, the principal items set by Article 5 of the Ordinance are, in principle, stated by delivery of a written document (or, where the worker so wishes, by facsimile or e-mail). An oral explanation is a supplement that aids understanding and cannot replace delivery of the document. Explanation in plain Japanese is done to confirm understanding after the document has been delivered."
+          },
+          {
+            "question": "Can I ask a Shakai Hoken Roumushi for the residence-status change together with the working-conditions notice?",
+            "answer": "Application and change of residence status is the business of a Gyoseishoshi, and 四葉行政書士事務所 — a separate business from our office (a Shakai Hoken Roumushi office) — handles it. You engage each under a separate contract. We divide the assignment: our office for the statement of working conditions and the labour and social insurance procedures, and the Gyoseishoshi for the residence status."
+          }
+        ]
+      },
+      "zh-tw": {
+        "title": "對外國勞工的勞動條件明示，母語需要做到什麼程度？",
+        "excerpt": "勞動條件的明示本身是勞動基準法第15條第1項的義務，但條文並未指定語言，因此只交付日文的通知書也可能成立「法律上的明示」。不過「關於外國勞工雇用管理改善等事業主應妥善對應的指針」（平成19年厚生勞動省告示第276號）要求，為使外國勞工能理解，應以母語或平易的日文等方法明示並為此努力。義務分為兩層，實務上是使用範本通知書的外語版，並留下「已交付・已理解」的紀錄。",
+        "content": "**先講結論**：勞動條件的明示本身是勞動基準法第15條第1項的義務，但條文並未指定語言，因此只交付日文的通知書也可能成立「法律上的明示」。不過「關於外國勞工雇用管理改善等事業主應妥善對應的指針」（平成19年厚生勞動省告示第276號）要求，為使外國勞工能理解，應以母語或平易的日文等方法明示並**為此努力**。請掌握義務為兩層，並以範本通知書的外語版，留下「已交付・已理解」的紀錄。\n\n## 勞動條件通知書可以只用日文交給外國勞工嗎？\n\n先把制度骨架分開。使用者於締結勞動契約時，須明示薪資、勞動時間及其他勞動條件（勞動基準法第15條第1項，明示事項由勞動基準法施行規則第5條規定）。此條文規定**應明示什麼事項**，但並未指定**用什麼語言**。因此，交付日文的勞動條件通知書本身並不立即違法。\n\n另一方面，外國人的雇用另有規範重疊。「關於外國勞工雇用管理改善等事業主應妥善對應的指針」（平成19年8月3日厚生勞動省告示第276號）要求，為使外國勞工能理解，應以外國勞工使用的語言或平易的日文等方法明示勞動條件並為此努力。這裡是「努力」＝努力義務。\n\n也就是說，義務為兩層。\n\n| 什麼 | 依據 | 義務層級 |\n|---|---|---|\n| 明示勞動條件 | 勞動基準法第15條第1項・施行規則第5條 | 法律義務（對象為外國人亦同） |\n| 明示的語言・方法（母語・平易日文等） | 外國人指針（告示第276號） | 努力義務 |\n\n讀成「用日文交付即足」，就漏掉了努力義務的部分；反之讀成「非母語即違法」也不正確。實務的要領是先滿足法律義務，再作為努力義務盡量採取能理解的方法，並留下可避免日後「沒聽過」爭執的證跡。\n\n## 2024年4月改正追加的明示事項，在外國人雇用哪裡最有影響？\n\n自2024年4月起，明示事項有所追加（勞動基準法施行規則第5條的改正，令和5年厚生勞動省令第39號，2024年4月1日施行）。對所有勞工明示「工作場所・業務變更的範圍」，對有期契約勞工還要明示「更新上限」「無期轉換的申請機會」「無期轉換後的勞動條件」。改正的全貌，整理於[勞動條件的明示規則如何改變了？](/zh-tw/labor/column/roudou-joken-meiji-2024-henko-han-i)。\n\n此改正在外國人雇用尤其有影響，因為技能實習・特定技能・留學生兼職等，以有期契約工作者居多。有期的3事項，不只在締結時，而是在**每次更新時**都會涉及，也就是需要以能理解的語言重新說明更新上限與無期轉換的場面增多。\n\n- **更新上限**：須讓勞工理解「更新至通算〇年為止」與在留期間的更新是兩回事。在留期限與契約期間的關係，整理於[在留期限與雇用契約期間，哪一個先到期](/zh-tw/labor/column/zairyu-kigen-koyo-keiyaku-kikan)。\n- **無期轉換的申請機會**：「通算超過5年即可申請無期轉換」的說明，在語言隔閡下較難傳達。\n- **工作場所・業務變更的範圍**：若未以母語正確顯示配置轉換的可能性，日後調動便會產生行差。\n\n只把與日本人相同的日文範本原樣交付，追加事項最難傳達。要點是確認外語版是否反映了追加事項的欄位。\n\n## 以母語或平易日文顯示時，依據什麼、要做到什麼程度？\n\n依據是前述的外國人指針（努力義務）。既是努力義務，「做到什麼程度」並無單一正解。實務上按下列順序組成對應，較不易過與不及。\n\n1. **使用厚生勞動省範本勞動條件通知書的外語版**。厚生勞動省以英語・中文・越南語等外語版公布範本樣式（2026年8月31日參照）。使用反映追加明示事項的最新版。\n2. **母語版與日文版一併交付**。若只有母語版，關於哪一版具法律效力可能解釋分歧。兩版一併交付，並確認內容相對應。\n3. **留下「已理解」的紀錄**。記錄曾對讀、曾受提問等事實，可防止日後行差。由於法律並不保證翻譯的正確性，對專業用語（無期轉換・變更的範圍等）的譯法須慎重處理。\n\n以平易日文顯示時，追加事項較抽象、難以傳達，故加上具體例是實務作法。募集階段於求人票的明示（職業安定法）同樣要求以能理解的方法為之，其與入社時明示的關係，整理於[求人票必須寫的事項](/zh-tw/labor/column/kyujin-hyo-meiji-jiko-roudou-joken)。\n\n不論是否交付翻譯版，若通知書內容與就業規則・僱用契約書相互矛盾便失去意義。多語對應，「與實態的整合」先於「翻譯」。\n\n## 在留資格的申請・變更與勞動條件明示，在哪裡分工？\n\n雇用1名外國人時，在留資格、勞動社會保險、住居等各自的手續會同時進行。全貌整理於[雇用1名外國人需要幾個窗口](/zh-tw/labor/column/gaikokujin-koyo-madoguchi-wakekata)。分工依手續的性質而定。\n\n| 手續 | 負責 |\n|---|---|\n| 在留資格的申請・變更・更新（入管申請書類的作成・取次） | 行政書士（四葉行政書士事務所） |\n| 勞動條件的明示、勞動社會保險的加入與申報、就業規則 | 社會保險勞務士（本事務所） |\n| 雇入・離職時的外國人雇用狀況申報 | 事業主的義務。社會保險勞務士可代行 |\n\n勞動條件的明示，是在確認在留資格是否為可就勞資格之後進行的勞務手續，屬社會保險勞務士的領域。取得・變更在留資格本身屬行政書士的領域，與本事務所為不同事業體。雇入後向Hello Work的申報，整理於[雇用外國人後，要向Hello Work申報](/zh-tw/labor/column/gaikokujin-koyo-jokyo-todokede)。\n\n## 明示不足演變為糾紛時，該找誰諮詢？\n\n明示不足本身，首先作為勞務問題處理──比對確認通知書・僱用契約書・就業規則的整合，並整頓其後的運作。這是社會保險勞務士可支援的範圍。\n\n另一方面，若演變為「因未聽過的條件受到不利」「雇止め或配置轉換無效」等**個別糾紛**，其有效性的判斷、交涉或訴訟屬律師的領域。本文僅止於介紹制度的框架，不對個別可否加以判斷。具紛爭性的場面，會引導向律師諮詢。\n\n就防患未然而言，於雇入前先決定外語版範本與每次更新時的明示運作設計，最為有效。\n\n## 常見問題\n\n**Q. 只用日文交付勞動條件通知書，本身就違法嗎？**\nA. 明示勞動條件本身是勞動基準法第15條第1項的義務，但因條文未指定語言，以日文明示並不立即違法。不過外國人指針（告示第276號）要求以母語或平易日文等能理解的方法明示並為此努力，這是努力義務。就防止糾紛而言，實務作法是一併交付外語版。\n\n**Q. 母語版與日文版內容有落差時，以哪一版為準？**\nA. 一般會成為「哪一份書面定了勞動條件」的解釋問題，並依情況而判斷分歧。正因如此，使母語版與日文版內容相對應、確認翻譯正確性甚為重要。就特定書面效力的爭議，會引導向律師諮詢。\n\n**Q. 以平易日文口頭說明的話，就不需要書面了嗎？**\nA. 明示事項中，施行規則第5條所定的主要事項，原則上以交付書面（本人希望時得以傳真或電子郵件等）明示。口頭說明是輔助理解的補充，不能代替書面的交付。以平易日文說明，是在交付書面之後用以確認理解。\n\n**Q. 在留資格的變更，也能連同勞動條件通知書一起委託社勞士嗎？**\nA. 在留資格的申請・變更屬行政書士的業務，由與本事務所（社會保險勞務士事務所）不同事業體的四葉行政書士事務所負責，須分別承接、各自獨立地另行簽約。我們分工：本事務所負責勞動條件的明示與勞動社會保險手續，行政書士負責在留資格。\n\n## 本文的依據\n\n- 勞動基準法（昭和22年法律第49號）第15條第1項 ── 使用者於締結勞動契約之際，須向勞工明示薪資、勞動時間及其他勞動條件。未指定語言\n- 勞動基準法施行規則（昭和22年厚生省令第23號）第5條 ── 規定應明示的勞動條件。主要事項以交付書面（勞工希望時得以傳真・電子郵件等）明示。2024年4月1日施行的改正（令和5年厚生勞動省令第39號）追加了工作場所・業務變更的範圍、有期契約的更新上限、無期轉換申請機會、無期轉換後的勞動條件\n- 關於外國勞工雇用管理改善等事業主應妥善對應的指針（平成19年8月3日厚生勞動省告示第276號） ── 事業主應為使外國勞工能理解，以外國勞工使用的語言或平易的日文等能理解的方法明示勞動條件並為此努力；募集時的明示亦同（2026年8月31日參照）\n- 厚生勞動省 範本勞動條件通知書（外語版） ── 範本樣式以英語・中文等外語版公布。使用反映追加事項的最新版（2026年8月31日參照）\n- 公的資料・條文於2026年8月31日確認。翻譯版與日文版落差時以何者為準、特定雇止め・配置轉換是否有效等個別該當性，依情況而判斷分歧。本文僅止於介紹制度框架，不判斷個別可否\n\n四葉不動產股份有限公司、四葉行政書士事務所、四葉社会保険労務士事務所，各自獨立為不同事業體並分別承接業務，須另行簽約。介紹其他專家時，亦安排由客戶直接締約，本事務所不收取介紹費。本事務所就外國勞工的勞動條件明示所支援的，是含外語版的勞動條件通知書・僱用契約書範本整備，以及與就業規則整合的點檢。在留資格的申請・變更由四葉行政書士事務所另行簽約負責，個別糾紛或訴訟則引導向律師的領域。費用請見[報酬金額表](/zh-tw/labor/ryokin)，常見問題請見[常見問題](/zh-tw/labor/faq)。\n\n本文為一般資訊提供。個別判斷，請依最新一次資料（厚生勞動省、e-Gov等），在面談後由資格者進行。執筆者為[浦松丈二](/zh-tw/about/uramatsu)（社會保險勞務士・行政書士・宅地建物取引士）。",
+        "category": "勞動法基礎",
+        "keywords": [
+          "外國勞工 勞動條件明示 母語",
+          "勞動條件明示 平易日文",
+          "勞動基準法第15條 外國人",
+          "外國人指針 告示第276號",
+          "範本勞動條件通知書 外語版",
+          "2024 勞動條件明示 外國人雇用"
+        ],
+        "tags": [
+          "外國人雇用",
+          "勞動條件通知書",
+          "母語明示",
+          "勞動基準法",
+          "在留資格",
+          "分別承接"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "只用日文交付勞動條件通知書，本身就違法嗎？",
+            "answer": "明示勞動條件本身是勞動基準法第15條第1項的義務，但因條文未指定語言，以日文明示並不立即違法。不過外國人指針（告示第276號）要求以母語或平易日文等能理解的方法明示並為此努力，這是努力義務。就防止糾紛而言，實務作法是一併交付外語版。"
+          },
+          {
+            "question": "母語版與日文版內容有落差時，以哪一版為準？",
+            "answer": "一般會成為「哪一份書面定了勞動條件」的解釋問題，並依情況而判斷分歧。正因如此，使母語版與日文版內容相對應、確認翻譯正確性甚為重要。就特定書面效力的爭議，會引導向律師諮詢。"
+          },
+          {
+            "question": "以平易日文口頭說明的話，就不需要書面了嗎？",
+            "answer": "明示事項中，施行規則第5條所定的主要事項，原則上以交付書面（本人希望時得以傳真或電子郵件等）明示。口頭說明是輔助理解的補充，不能代替書面的交付。以平易日文說明，是在交付書面之後用以確認理解。"
+          },
+          {
+            "question": "在留資格的變更，也能連同勞動條件通知書一起委託社勞士嗎？",
+            "answer": "在留資格的申請・變更屬行政書士的業務，由與本事務所（社會保險勞務士事務所）不同事業體的四葉行政書士事務所負責，須分別承接、各自獨立地另行簽約。我們分工：本事務所負責勞動條件的明示與勞動社會保險手續，行政書士負責在留資格。"
+          }
+        ]
+      },
+      "zh": {
+        "title": "对外国劳工的劳动条件明示，母语需要做到什么程度？",
+        "excerpt": "劳动条件的明示本身是劳动基准法第15条第1项的义务，但条文并未指定语言，因此只交付日文的通知书也可能成立「法律上的明示」。不过「关于外国劳工雇用管理改善等事业主应妥善对应的指针」（平成19年厚生劳动省告示第276号）要求，为使外国劳工能理解，应以母语或平易的日文等方法明示并为此努力。义务分为两层，实务上是使用范本通知书的外语版，并留下「已交付・已理解」的记录。",
+        "content": "**先讲结论**：劳动条件的明示本身是劳动基准法第15条第1项的义务，但条文并未指定语言，因此只交付日文的通知书也可能成立「法律上的明示」。不过「关于外国劳工雇用管理改善等事业主应妥善对应的指针」（平成19年厚生劳动省告示第276号）要求，为使外国劳工能理解，应以母语或平易的日文等方法明示并**为此努力**。请掌握义务为两层，并以范本通知书的外语版，留下「已交付・已理解」的记录。\n\n## 劳动条件通知书可以只用日文交给外国劳工吗？\n\n先把制度骨架分开。使用者于缔结劳动契约时，须明示薪资、劳动时间及其他劳动条件（劳动基准法第15条第1项，明示事项由劳动基准法施行规则第5条规定）。此条文规定**应明示什么事项**，但并未指定**用什么语言**。因此，交付日文的劳动条件通知书本身并不立即违法。\n\n另一方面，外国人的雇用另有规范重叠。「关于外国劳工雇用管理改善等事业主应妥善对应的指针」（平成19年8月3日厚生劳动省告示第276号）要求，为使外国劳工能理解，应以外国劳工使用的语言或平易的日文等方法明示劳动条件并为此努力。这里是「努力」＝努力义务。\n\n也就是说，义务为两层。\n\n| 什么 | 依据 | 义务层级 |\n|---|---|---|\n| 明示劳动条件 | 劳动基准法第15条第1项・施行规则第5条 | 法律义务（对象为外国人亦同） |\n| 明示的语言・方法（母语・平易日文等） | 外国人指针（告示第276号） | 努力义务 |\n\n读成「用日文交付即足」，就漏掉了努力义务的部分；反之读成「非母语即违法」也不正确。实务的要领是先满足法律义务，再作为努力义务尽量采取能理解的方法，并留下可避免日后「没听过」争执的证迹。\n\n## 2024年4月改正追加的明示事项，在外国人雇用哪里最有影响？\n\n自2024年4月起，明示事项有所追加（劳动基准法施行规则第5条的改正，令和5年厚生劳动省令第39号，2024年4月1日施行）。对所有劳工明示「工作场所・业务变更的范围」，对有期契约劳工还要明示「更新上限」「无期转换的申请机会」「无期转换后的劳动条件」。改正的全貌，整理于[劳动条件的明示规则如何改变了？](/zh/labor/column/roudou-joken-meiji-2024-henko-han-i)。\n\n此改正在外国人雇用尤其有影响，因为技能实习・特定技能・留学生兼职等，以有期契约工作者居多。有期的3事项，不只在缔结时，而是在**每次更新时**都会涉及，也就是需要以能理解的语言重新说明更新上限与无期转换的场面增多。\n\n- **更新上限**：须让劳工理解「更新至通算〇年为止」与在留期间的更新是两回事。在留期限与契约期间的关系，整理于[在留期限与雇用契约期间，哪一个先到期](/zh/labor/column/zairyu-kigen-koyo-keiyaku-kikan)。\n- **无期转换的申请机会**：「通算超过5年即可申请无期转换」的说明，在语言隔阂下较难传达。\n- **工作场所・业务变更的范围**：若未以母语正确显示配置转换的可能性，日后调动便会产生行差。\n\n只把与日本人相同的日文范本原样交付，追加事项最难传达。要点是确认外语版是否反映了追加事项的栏位。\n\n## 以母语或平易日文显示时，依据什么、要做到什么程度？\n\n依据是前述的外国人指针（努力义务）。既是努力义务，「做到什么程度」并无单一正解。实务上按下列顺序组成对应，较不易过与不及。\n\n1. **使用厚生劳动省范本劳动条件通知书的外语版**。厚生劳动省以英语・中文・越南语等外语版公布范本样式（2026年8月31日参照）。使用反映追加明示事项的最新版。\n2. **母语版与日文版一并交付**。若只有母语版，关于哪一版具法律效力可能解释分歧。两版一并交付，并确认内容相对应。\n3. **留下「已理解」的记录**。记录曾对读、曾受提问等事实，可防止日后行差。由于法律并不保证翻译的正确性，对专业用语（无期转换・变更的范围等）的译法须慎重处理。\n\n以平易日文显示时，追加事项较抽象、难以传达，故加上具体例是实务做法。募集阶段于求人票的明示（职业安定法）同样要求以能理解的方法为之，其与入社时明示的关系，整理于[求人票必须写的事项](/zh/labor/column/kyujin-hyo-meiji-jiko-roudou-joken)。\n\n不论是否交付翻译版，若通知书内容与就业规则・雇用契约书相互矛盾便失去意义。多语对应，「与实态的整合」先于「翻译」。\n\n## 在留资格的申请・变更与劳动条件明示，在哪里分工？\n\n雇用1名外国人时，在留资格、劳动社会保险、住居等各自的手续会同时进行。全貌整理于[雇用1名外国人需要几个窗口](/zh/labor/column/gaikokujin-koyo-madoguchi-wakekata)。分工依手续的性质而定。\n\n| 手续 | 负责 |\n|---|---|\n| 在留资格的申请・变更・更新（入管申请书类的作成・取次） | 行政书士（四葉行政書士事務所） |\n| 劳动条件的明示、劳动社会保险的加入与申报、就业规则 | 社会保险劳务士（本事务所） |\n| 雇入・离职时的外国人雇用状况申报 | 事业主的义务。社会保险劳务士可代行 |\n\n劳动条件的明示，是在确认在留资格是否为可就劳资格之后进行的劳务手续，属社会保险劳务士的领域。取得・变更在留资格本身属行政书士的领域，与本事务所为不同事业体。雇入后向Hello Work的申报，整理于[雇用外国人后，要向Hello Work申报](/zh/labor/column/gaikokujin-koyo-jokyo-todokede)。\n\n## 明示不足演变为纠纷时，该找谁咨询？\n\n明示不足本身，首先作为劳务问题处理──比对确认通知书・雇用契约书・就业规则的整合，并整顿其后的运作。这是社会保险劳务士可支援的范围。\n\n另一方面，若演变为「因未听过的条件受到不利」「雇止め或配置转换无效」等**个别纠纷**，其有效性的判断、交涉或诉讼属律师的领域。本文仅止于介绍制度的框架，不对个别可否加以判断。具纠纷性的场面，会引导向律师咨询。\n\n就防患未然而言，于雇入前先决定外语版范本与每次更新时的明示运作设计，最为有效。\n\n## 常见问题\n\n**Q. 只用日文交付劳动条件通知书，本身就违法吗？**\nA. 明示劳动条件本身是劳动基准法第15条第1项的义务，但因条文未指定语言，以日文明示并不立即违法。不过外国人指针（告示第276号）要求以母语或平易日文等能理解的方法明示并为此努力，这是努力义务。就防止纠纷而言，实务做法是一并交付外语版。\n\n**Q. 母语版与日文版内容有落差时，以哪一版为准？**\nA. 一般会成为「哪一份书面定了劳动条件」的解释问题，并依情况而判断分歧。正因如此，使母语版与日文版内容相对应、确认翻译正确性甚为重要。就特定书面效力的争议，会引导向律师咨询。\n\n**Q. 以平易日文口头说明的话，就不需要书面了吗？**\nA. 明示事项中，施行规则第5条所定的主要事项，原则上以交付书面（本人希望时得以传真或电子邮件等）明示。口头说明是辅助理解的补充，不能代替书面的交付。以平易日文说明，是在交付书面之后用以确认理解。\n\n**Q. 在留资格的变更，也能连同劳动条件通知书一起委托社劳士吗？**\nA. 在留资格的申请・变更属行政书士的业务，由与本事务所（社会保险劳务士事务所）不同事业体的四葉行政書士事務所负责，须分别承接、各自独立地另行签约。我们分工：本事务所负责劳动条件的明示与劳动社会保险手续，行政书士负责在留资格。\n\n## 本文的依据\n\n- 劳动基准法（昭和22年法律第49号）第15条第1项 ── 使用者于缔结劳动契约之际，须向劳工明示薪资、劳动时间及其他劳动条件。未指定语言\n- 劳动基准法施行规则（昭和22年厚生省令第23号）第5条 ── 规定应明示的劳动条件。主要事项以交付书面（劳工希望时得以传真・电子邮件等）明示。2024年4月1日施行的改正（令和5年厚生劳动省令第39号）追加了工作场所・业务变更的范围、有期契约的更新上限、无期转换申请机会、无期转换后的劳动条件\n- 关于外国劳工雇用管理改善等事业主应妥善对应的指针（平成19年8月3日厚生劳动省告示第276号） ── 事业主应为使外国劳工能理解，以外国劳工使用的语言或平易的日文等能理解的方法明示劳动条件并为此努力；募集时的明示亦同（2026年8月31日参照）\n- 厚生劳动省 范本劳动条件通知书（外语版） ── 范本样式以英语・中文等外语版公布。使用反映追加事项的最新版（2026年8月31日参照）\n- 公的资料・条文于2026年8月31日确认。翻译版与日文版落差时以何者为准、特定雇止め・配置转换是否有效等个别该当性，依情况而判断分歧。本文仅止于介绍制度框架，不判断个别可否\n\n四葉不動産股份有限公司、四葉行政書士事務所、四葉社会保険労務士事務所，各自独立为不同事业体并分别承接业务，须另行签约。介绍其他专家时，亦安排由客户直接缔约，本事务所不收取介绍费。本事务所就外国劳工的劳动条件明示所支援的，是含外语版的劳动条件通知书・雇用契约书范本整备，以及与就业规则整合的点检。在留资格的申请・变更由四葉行政書士事務所另行签约负责，个别纠纷或诉讼则引导向律师的领域。费用请见[报酬金额表](/zh/labor/ryokin)，常见问题请见[常见问题](/zh/labor/faq)。\n\n本文为一般信息提供。个别判断，请依最新一次资料（厚生劳动省、e-Gov等），在面谈后由资格者进行。执笔者为[浦松丈二](/zh/about/uramatsu)（社会保险劳务士・行政书士・宅地建物取引士）。",
+        "category": "劳动法基础",
+        "keywords": [
+          "外国劳工 劳动条件明示 母语",
+          "劳动条件明示 平易日文",
+          "劳动基准法第15条 外国人",
+          "外国人指针 告示第276号",
+          "范本劳动条件通知书 外语版",
+          "2024 劳动条件明示 外国人雇用"
+        ],
+        "tags": [
+          "外国人雇用",
+          "劳动条件通知书",
+          "母语明示",
+          "劳动基准法",
+          "在留资格",
+          "分别承接"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "只用日文交付劳动条件通知书，本身就违法吗？",
+            "answer": "明示劳动条件本身是劳动基准法第15条第1项的义务，但因条文未指定语言，以日文明示并不立即违法。不过外国人指针（告示第276号）要求以母语或平易日文等能理解的方法明示并为此努力，这是努力义务。就防止纠纷而言，实务做法是一并交付外语版。"
+          },
+          {
+            "question": "母语版与日文版内容有落差时，以哪一版为准？",
+            "answer": "一般会成为「哪一份书面定了劳动条件」的解释问题，并依情况而判断分歧。正因如此，使母语版与日文版内容相对应、确认翻译正确性甚为重要。就特定书面效力的争议，会引导向律师咨询。"
+          },
+          {
+            "question": "以平易日文口头说明的话，就不需要书面了吗？",
+            "answer": "明示事项中，施行规则第5条所定的主要事项，原则上以交付书面（本人希望时得以传真或电子邮件等）明示。口头说明是辅助理解的补充，不能代替书面的交付。以平易日文说明，是在交付书面之后用以确认理解。"
+          },
+          {
+            "question": "在留资格的变更，也能连同劳动条件通知书一起委托社劳士吗？",
+            "answer": "在留资格的申请・变更属行政书士的业务，由与本事务所（社会保险劳务士事务所）不同事业体的四葉行政書士事務所负责，须分别承接、各自独立地另行签约。我们分工：本事务所负责劳动条件的明示与劳动社会保险手续，行政书士负责在留资格。"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "business": "labor",
+    "slug": "roudouhoken-nendo-koushin-gaisan-kakutei",
+    "title": "労働保険の年度更新（概算・確定保険料）は、いつ何をどう計算するか",
+    "date": "2026-09-01",
+    "category": "労働保険",
+    "excerpt": "労働保険の年度更新は、毎年6月1日から7月10日までに、前年度の確定保険料を精算し、当年度の概算保険料を申告・納付する手続です（徴収法第15条・第19条）。保険料は「賃金総額×保険料率」で、賃金総額に何を含めるかで金額が変わります。概算保険料が40万円以上等なら延納（3期分割）ができます。賃金総額に含める・含めない手当の分かれ目、延納の要件と納期限、自社で回す場合と社労士に頼む場合の違いを表で整理します。",
+    "content": "**結論（先に要点）**：労働保険の年度更新は、毎年6月1日から7月10日までに、前年度の**確定保険料**を精算し、当年度の**概算保険料**を申告・納付する手続です（労働保険の保険料の徴収等に関する法律第15条・第19条）。保険料は「賃金総額×保険料率」で、どの賃金を総額に含めるかで金額が変わります。概算保険料が一定額以上なら延納（3期分割）ができます。数字は表で押さえておけば、自社で回すか社労士に頼むかの判断もしやすくなります。\n\n## 労働保険の年度更新とは、いつまでに何を出す手続きですか？\n\n労働保険（労災保険・雇用保険）の保険料は、保険年度（4月1日から翌年3月31日まで）の初めに概算で納め、年度末が確定したところで精算する仕組みです。この「前年度の精算」と「当年度の概算の申告」を一度に行うのが年度更新です。\n\n継続事業の事業主は、その保険年度の**6月1日から40日以内**、すなわち**7月10日まで**に、概算保険料を申告・納付します（徴収法第15条第1項）。あわせて、前保険年度の確定保険料も同じ期間に申告・納付します（第19条第1項）。実務ではこの二つを1枚の年度更新申告書で処理します。\n\n| 項目 | 内容 |\n|---|---|\n| 対象 | 労災保険・雇用保険の保険料（一括して労働保険料として申告） |\n| 対象期間 | 保険年度＝4月1日〜翌年3月31日 |\n| 申告・納付の期間 | 毎年6月1日〜7月10日 |\n| 内容 | 前年度の確定保険料の精算＋当年度の概算保険料の申告・納付 |\n\n期限を過ぎると、政府が保険料の額を決定し、追徴金が課されることがあります（徴収法第21条）。設立した年に何をいつ出すかは[会社をつくったら、いつまでに何を出すのか](/labor/column/kaisha-setsuritsu-shakaihoken-roudouhoken-kigen)に、会社をたたむときの確定保険料の扱いは[会社をたたむとき、社会保険と労働保険はどうするか](/labor/column/kaisha-tatamu-shakaihoken-zenso-tetsuzuki)に整理しています。\n\n## 確定保険料と概算保険料は、どの賃金をもとにどう計算しますか？\n\nどちらも「賃金総額×保険料率」で計算します。違いは、どの期間の賃金を使うかです。\n\n- **確定保険料**＝前年度に**実際に支払った**賃金総額 × 前年度の保険料率\n- **概算保険料**＝当年度に**支払う見込み**の賃金総額 × 当年度の保険料率\n\n概算の見込み賃金総額は、前年度と大きく変わらない見込みであれば、前年度の確定賃金総額をそのまま用います。具体的には、見込額が前年度の確定額の100分の50以上100分の200以下に収まる場合は、前年度と同額を見込み額として使う扱いです。\n\n保険料率は、労災保険率（事業の種類ごとに異なり、全額が事業主負担）と雇用保険率（労使で分担）の合計です。**率は年度や業種で改定されるため、その年度の公式リーフレットで確認します**（率の具体的な数値は本記事では固定しません。2026年8月31日参照）。\n\n計算の順序は次のとおりです。\n\n1. 前年度に支払った賃金を月ごとに集計し、確定賃金総額を出す\n2. 確定賃金総額 × 前年度の料率＝確定保険料。すでに納めた概算保険料と比べ、差額を精算する\n3. 当年度の見込み賃金総額 × 当年度の料率＝概算保険料\n4. （前年度の精算の不足＋当年度の概算）を7月10日までに納付する\n\n## 賃金総額に含める・含めない手当は、どこで判断が分かれますか？\n\n賃金総額の「賃金」は、労働の対償として事業主が労働者に支払うすべてのものを指します（徴収法第2条第2項）。含めるか含めないかは、この「労働の対償か」で分かれます。税や社会保険料を控除する**前**の額で数えます。\n\n| 含めるもの（例） | 含めないもの（例） |\n|---|---|\n| 基本給・固定給 | 役員報酬（労働者でない役員に対するもの） |\n| 通勤手当・時間外手当・家族手当・住宅手当など諸手当 | 退職金、退職を事由に支払われるもの |\n| 賞与・一時金 | 結婚祝金・見舞金など恩恵的・任意的な給付 |\n| 通勤定期券・回数券など現物で支給する通勤費 | 出張旅費・宿泊費など実費弁償的なもの |\n\n判断が分かれやすいのは、名目が手当でも実費弁償の性格が強いもの（出張旅費など）や、恩恵的な給付です。ここを取り違えると賃金総額がずれ、保険料も過不足になります。役員でも、取締役でありながら労働者としての性格を併せ持つ使用人兼務役員の賃金部分は取り扱いが分かれるため、注意が要ります。役員と労災の関係は[社長には労災が出ない。そして1人だと特別加入もできない](/labor/column/shacho-rosai-tokubetsu-kanyu-hitori)にまとめています。個別の手当が賃金に当たるかどうかの最終的な当てはめは、実態に即して判断します。\n\n## 納付が高額なとき、分割（延納）はどこまでできますか？\n\n概算保険料が一定額以上のときは、延納（分割納付）ができます（徴収法第18条）。要件と回数は次のとおりです。\n\n| 区分 | 内容 |\n|---|---|\n| 延納できる場合 | 概算保険料額が40万円以上（労災保険・雇用保険のいずれか一方のみ成立している事業は20万円以上）、又は労働保険事務組合に労働保険事務の処理を委託している場合 |\n| 分割回数 | 3期に分割（継続事業・年度更新の場合） |\n| 各期の納期限（原則） | 第1期＝7月10日、第2期＝10月31日、第3期＝翌年1月31日 |\n| 事務組合に委託している場合 | 第2期・第3期の納期限が延長される（原則として11月14日・2月14日） |\n\n納期限が土日・祝日に当たるときは翌開庁日にずれるため、実際の期日はその年度の公式リーフレットで確認します（2026年8月31日参照）。労働保険事務組合への委託は、中小事業主等の特別加入の前提にもなる仕組みで、委託の可否は事業者のご判断です。\n\n延納しない場合は、確定の精算分と概算の全額を7月10日までに一括で納付します。資金繰りを考えるなら、要件に当たるかどうかを早めに確認しておくと選択肢が増えます。\n\n## 計算や申告を自社でやる場合と社労士に頼む場合で、何が変わりますか？\n\n年度更新は、賃金を正しく集計できれば自社でも申告できる手続です。実際、多くの事業所が自社で対応しています。自社で行う場合に効くのは、賃金総額の集計精度と、料率・様式が最新かどうかの確認です。\n\n社会保険労務士に頼む場合に変わるのは、次の点です。\n\n- 賃金総額に含める・含めないの当てはめを、実態に即して整理する\n- 概算と確定の差額の精算、延納の要否を含めて申告書を作成し、代理・代行する\n- 給与計算や社会保険の手続とあわせて、賃金データを一つの流れで扱う\n\n報酬を得て他人の労働保険の申告書を作成・提出する代行は、社会保険労務士の業務です。会社の会計・法人税は税理士の領域で、労働保険料の計算とは担当が分かれます。当事務所の関与は労働・社会保険の手続に限られ、税務は税理士へ、個別の紛争は弁護士へご案内します。費用の目安は[報酬額表](/labor/ryokin)にまとめています。\n\n## よくある質問\n\n**Q. 年度更新は、いつからいつまでに出せばよいですか？**\nA. 継続事業では、毎年6月1日から7月10日までに、前年度の確定保険料の精算と当年度の概算保険料の申告・納付を行います（徴収法第15条・第19条）。この二つを1枚の年度更新申告書で処理します。期限を過ぎると、政府による保険料の決定と追徴金の対象になることがあります。\n\n**Q. 通勤手当や賞与は、賃金総額に入れるのですか？**\nA. 通勤手当・時間外手当・家族手当などの諸手当や賞与は、労働の対償として支払うものなので、原則として賃金総額に含めます。一方、退職金、恩恵的な慶弔見舞金、出張旅費などの実費弁償的なものは含めません。名目ではなく「労働の対償か」で判断し、税・社会保険料を控除する前の額で数えます。\n\n**Q. 保険料が高額です。分割して納められますか？**\nA. 概算保険料額が40万円以上（労災・雇用の一方のみ成立の事業は20万円以上）、又は労働保険事務組合に委託している場合は、3期に分割して納められます（徴収法第18条）。各期の納期限は原則として第1期7月10日・第2期10月31日・第3期翌年1月31日で、事務組合委託の場合は第2期・第3期が延長されます。実際の期日は土日祝で前後するため、その年度のリーフレットで確認します。\n\n**Q. 保険料率は毎年同じですか？**\nA. 労災保険率は事業の種類ごとに定められ、雇用保険率とあわせて年度や情勢に応じて改定されます。前年度と同じ率とは限らないため、年度更新のたびに、その年度の公式リーフレットで最新の率を確認してから計算します。本記事では率の具体的な数値は固定していません。\n\n## この記事の根拠\n\n- 労働保険の保険料の徴収等に関する法律（昭和44年法律第84号）第15条第1項 ── 継続事業の事業主は、その保険年度ごとに、概算保険料を、その保険年度の6月1日から40日以内（保険年度の中途に保険関係が成立した場合は成立日から50日以内）に申告・納付しなければならない\n- 同法第19条第1項 ── 確定保険料の申告・納付。前保険年度の確定保険料を、次の保険年度の6月1日から40日以内等に申告・納付する。既に納付した概算保険料との差額を精算する\n- 同法第2条第2項 ── 「賃金」とは、賃金、給料、手当、賞与その他名称のいかんを問わず、労働の対償として事業主が労働者に支払うすべてのものをいう（賃金総額の範囲の根拠）\n- 同法第18条・同法施行規則 ── 概算保険料額が40万円（労災保険・雇用保険の一方のみ成立の事業は20万円）以上、又は労働保険事務組合に委託している場合、概算保険料を延納（3期分割）できる\n- 厚生労働省 労働保険 年度更新のリーフレット・申告書の書き方 ── 年度更新の申告・納付期間は毎年6月1日から7月10日まで。延納の各期の納期限（原則）は第1期7月10日・第2期10月31日・第3期翌年1月31日、事務組合委託の場合は第2期・第3期が延長される。土日祝により実際の期日は前後する。保険料率は年度・業種により改定される（2026年8月31日参照）\n- 公的資料・条文は2026年8月31日に確認。個別の手当が賃金に当たるかどうか、延納の要件に当たるかどうかといった当てはめは、実態や年度の取扱いによって判断が分かれます。本記事は制度の枠組みの紹介にとどまり、個別の可否を判断するものではありません\n\n四葉不動産株式会社、四葉行政書士事務所、四葉社会保険労務士事務所は、それぞれ独立した事業体として業務を受任します。他の専門家をご紹介する場合も、お客様に直接ご契約いただく形をご案内し、当事務所は紹介料を受け取りません。年度更新について当事務所がご支援するのは、賃金総額の整理と申告書の作成・代行、延納の要否の確認です。会社の会計・法人税は税理士に、個別の紛争や訴訟は弁護士にご案内します。費用は[報酬額表](/labor/ryokin)に、よくいただくご質問は[よくあるご質問](/labor/faq)にまとめています。\n\n本記事は一般的な情報提供です。個別のご事情に応じた判断は、最新の一次資料（厚生労働省、e-Gov等）を踏まえ、面談のうえ資格者が行います。執筆は[浦松丈二](/about/uramatsu)（社会保険労務士・行政書士・宅地建物取引士）です。",
+    "status": "published",
+    "author": {
+      "name": "浦松 丈二",
+      "title": "社会保険労務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+    },
+    "keywords": [
+      "労働保険 年度更新 いつ",
+      "概算保険料 確定保険料 計算",
+      "労働保険 賃金総額 含めるもの",
+      "労働保険料 延納 40万円 分割",
+      "年度更新 6月 7月10日 期限",
+      "労働保険料率 年度 改定"
+    ],
+    "tags": [
+      "労働保険",
+      "年度更新",
+      "概算保険料",
+      "確定保険料",
+      "賃金総額",
+      "延納"
+    ],
+    "locales": [],
+    "faq": [
+      {
+        "question": "年度更新は、いつからいつまでに出せばよいですか？",
+        "answer": "継続事業では、毎年6月1日から7月10日までに、前年度の確定保険料の精算と当年度の概算保険料の申告・納付を行います（徴収法第15条・第19条）。この二つを1枚の年度更新申告書で処理します。期限を過ぎると、政府による保険料の決定と追徴金の対象になることがあります。"
+      },
+      {
+        "question": "通勤手当や賞与は、賃金総額に入れるのですか？",
+        "answer": "通勤手当・時間外手当・家族手当などの諸手当や賞与は、労働の対償として支払うものなので、原則として賃金総額に含めます。一方、退職金、恩恵的な慶弔見舞金、出張旅費などの実費弁償的なものは含めません。名目ではなく「労働の対償か」で判断し、税・社会保険料を控除する前の額で数えます。"
+      },
+      {
+        "question": "保険料が高額です。分割して納められますか？",
+        "answer": "概算保険料額が40万円以上（労災・雇用の一方のみ成立の事業は20万円以上）、又は労働保険事務組合に委託している場合は、3期に分割して納められます（徴収法第18条）。各期の納期限は原則として第1期7月10日・第2期10月31日・第3期翌年1月31日で、事務組合委託の場合は第2期・第3期が延長されます。実際の期日は土日祝で前後するため、その年度のリーフレットで確認します。"
+      },
+      {
+        "question": "保険料率は毎年同じですか？",
+        "answer": "労災保険率は事業の種類ごとに定められ、雇用保険率とあわせて年度や情勢に応じて改定されます。前年度と同じ率とは限らないため、年度更新のたびに、その年度の公式リーフレットで最新の率を確認してから計算します。本記事では率の具体的な数値は固定していません。"
+      }
+    ],
+    "translations": {
+      "en": {
+        "title": "The annual update of labour insurance premiums (estimated and finalized) — when, what, and how do you calculate?",
+        "excerpt": "The annual update of labour insurance is the procedure, each year from 1 June to 10 July, of settling the previous year's finalized premium and declaring and paying the current year's estimated premium (Act on Collection of Labour Insurance Premiums, Articles 15 and 19). The premium is \"total wages x premium rate,\" and the amount changes with which wages are included in the total. If the estimated premium is above a certain amount, you can pay in installments (deferred payment). Once you have the figures in a table, it is easier to judge whether to run it in house or ask a Shakai Hoken Roumushi.",
+        "content": "**In short:** The annual update of labour insurance is the procedure, each year from 1 June to 10 July, of settling the previous year's **finalized premium** and declaring and paying the current year's **estimated premium** (Act on Collection of Labour Insurance Premiums, Articles 15 and 19). The premium is \"total wages x premium rate,\" and the amount changes with which wages you include in the total. If the estimated premium is above a certain amount, deferred payment (three installments) is available. Once you hold the figures in a table, judging whether to run it in house or ask a Shakai Hoken Roumushi also becomes easier.\n\n## What is the annual update of labour insurance, and by when do you file it?\n\nThe premium for labour insurance (industrial accident insurance and employment insurance) is paid, at the start of the insurance year (1 April to 31 March of the next year), as an estimate, and settled once the year-end is finalized. Doing this \"settlement of the previous year\" and \"declaration of the current year's estimate\" together is the annual update.\n\nThe employer of a continuing business declares and pays the estimated premium **within 40 days from 1 June** of that insurance year — that is, **by 10 July** (Act on Collection of Labour Insurance Premiums, Article 15, paragraph 1). Together with this, the previous insurance year's finalized premium is also declared and paid within the same period (Article 19, paragraph 1). In practice, the two are processed on a single annual-update declaration form.\n\n| Item | Content |\n|---|---|\n| Subject | Premiums for industrial accident insurance and employment insurance (declared together as labour insurance premiums) |\n| Covered period | Insurance year = 1 April to 31 March of the next year |\n| Declaration/payment period | Each year, 1 June to 10 July |\n| Content | Settlement of the previous year's finalized premium + declaration/payment of the current year's estimated premium |\n\nIf you miss the deadline, the government may determine the premium amount and impose an additional charge (Article 21). What to file and by when in the year of incorporation is organised in [once you have set up a company, by when must you file what](/en/labor/column/kaisha-setsuritsu-shakaihoken-roudouhoken-kigen); the treatment of the finalized premium when closing a company is in [when you close a company, what do you do about social and labour insurance](/en/labor/column/kaisha-tatamu-shakaihoken-zenso-tetsuzuki).\n\n## How are the finalized and estimated premiums calculated, and from which wages?\n\nBoth are calculated as \"total wages x premium rate.\" The difference is which period's wages you use.\n\n- **Finalized premium** = the total wages **actually paid** in the previous year x the previous year's premium rate\n- **Estimated premium** = the total wages **expected to be paid** in the current year x the current year's premium rate\n\nFor the estimated total wages, if the outlook is not much different from the previous year, you use the previous year's finalized total wages as they are. Specifically, if the estimate falls within 50/100 to 200/100 of the previous year's finalized amount, you use the same amount as the previous year for the estimate.\n\nThe premium rate is the sum of the industrial accident insurance rate (which differs by type of business and is borne entirely by the employer) and the employment insurance rate (shared between labour and management). **Because the rates are revised by year and by industry, confirm them in that year's official leaflet** (the specific rate figures are not fixed in this article; confirmed 31 August 2026).\n\nThe order of calculation is as follows.\n\n1. Aggregate the wages paid in the previous year month by month to obtain the finalized total wages\n2. Finalized total wages x previous year's rate = finalized premium. Compare with the estimated premium already paid and settle the difference\n3. Current year's expected total wages x current year's rate = estimated premium\n4. Pay (the shortfall on the previous year's settlement + the current year's estimate) by 10 July\n\n## Which allowances are included in or excluded from total wages, and where does the judgment split?\n\nThe \"wages\" in total wages means everything the employer pays to the worker as remuneration for labour (Act on Collection of Labour Insurance Premiums, Article 2, paragraph 2). Whether to include or exclude splits on this \"is it remuneration for labour.\" Count the amount **before** deducting tax and social insurance premiums.\n\n| Included (examples) | Excluded (examples) |\n|---|---|\n| Basic pay / fixed pay | Directors' remuneration (to a director who is not a worker) |\n| Commuting, overtime, family, housing and other allowances | Retirement allowance, and payments on account of retirement |\n| Bonuses / lump sums | Congratulatory or condolence gifts and other benevolent, discretionary payments |\n| Commuter passes and coupons provided in kind | Business travel and lodging expenses and other reimbursement of actual expenses |\n\nWhat splits most easily is an item that is nominally an allowance but is strongly reimbursement in nature (business travel expenses, etc.) and benevolent benefits. Getting this wrong shifts the total wages, and the premium is over- or under-stated. Even for a director, the wage portion of a working director who also has the character of a worker is treated in a way that splits, so caution is needed. The relationship between directors and industrial accident insurance is organised in [an owner gets no industrial accident benefits — and alone, cannot even take special enrolment](/en/labor/column/shacho-rosai-tokubetsu-kanyu-hitori). The final application of whether a particular allowance is a wage is judged in line with reality.\n\n## When the payment is large, how far can you split it (deferred payment)?\n\nWhen the estimated premium is above a certain amount, deferred payment (installments) is available (Article 18). The requirements and the number of installments are as follows.\n\n| Category | Content |\n|---|---|\n| When deferral is available | The estimated premium is 400,000 yen or more (200,000 yen or more for a business where only one of industrial accident or employment insurance has arisen), or the labour insurance affairs are entrusted to a labour insurance affairs association |\n| Number of installments | Three installments (for a continuing business at the annual update) |\n| Payment deadlines of each installment (in principle) | 1st = 10 July, 2nd = 31 October, 3rd = 31 January of the next year |\n| Where entrusted to an association | The deadlines for the 2nd and 3rd installments are extended (in principle to 14 November and 14 February) |\n\nWhere a deadline falls on a weekend or public holiday, it shifts to the next business day, so confirm the actual date in that year's official leaflet (confirmed 31 August 2026). Entrusting labour insurance affairs to an association is also the premise for special enrolment of small and medium-sized business owners; whether to entrust is the business's own decision.\n\nIf you do not defer, you pay the settlement of the finalized amount and the full estimated amount together by 10 July. If you are thinking about cash flow, confirming early whether you meet the requirements widens your options.\n\n## What changes between doing the calculation and filing in house and asking a Shakai Hoken Roumushi?\n\nThe annual update is a procedure you can file in house if you can aggregate the wages correctly. In fact, many establishments handle it in house. What bites when doing it in house is the accuracy of aggregating total wages, and confirming that the rates and forms are up to date.\n\nWhat changes when you ask a Shakai Hoken Roumushi is the following.\n\n- Organising the inclusion/exclusion of total wages in line with reality\n- Preparing the declaration form, including the settlement of the difference between estimate and finalized amount and the need for deferral, and acting as agent\n- Handling the wage data in a single flow together with payroll and social insurance procedures\n\nPreparing and submitting another's labour insurance declaration for remuneration is the business of a Shakai Hoken Roumushi. A company's accounting and corporate tax are the domain of a tax accountant, and the assignment divides from the calculation of the labour insurance premium. Our office's involvement is limited to labour and social insurance procedures; tax matters are pointed to a tax accountant, and individual disputes to a lawyer. A guide to fees is organised in [the fee schedule](/en/labor/ryokin).\n\n## Frequently asked questions\n\n**Q. From when to when must the annual update be filed?**\nA. For a continuing business, each year from 1 June to 10 July you settle the previous year's finalized premium and declare and pay the current year's estimated premium (Articles 15 and 19). The two are processed on a single annual-update declaration form. If you miss the deadline, you may become subject to a government determination of the premium and an additional charge.\n\n**Q. Do commuting allowance and bonuses go into total wages?**\nA. Commuting, overtime, family and other allowances and bonuses are paid as remuneration for labour, so as a rule they are included in total wages. On the other hand, retirement allowance, benevolent congratulatory or condolence gifts, and reimbursement such as business travel expenses are not included. Judge by \"is it remuneration for labour,\" not by the name, and count the amount before deducting tax and social insurance premiums.\n\n**Q. The premium is large. Can I pay in installments?**\nA. If the estimated premium is 400,000 yen or more (200,000 yen or more for a business where only one of industrial accident or employment insurance has arisen), or the affairs are entrusted to an association, you can pay in three installments (Article 18). The deadlines are, in principle, 1st on 10 July, 2nd on 31 October, and 3rd on 31 January of the next year; where entrusted to an association, the 2nd and 3rd are extended. Because the actual dates shift with weekends and holidays, confirm in that year's leaflet.\n\n**Q. Is the premium rate the same every year?**\nA. The industrial accident insurance rate is set by type of business and, together with the employment insurance rate, is revised by year and by circumstances. It is not necessarily the same rate as the previous year, so at each annual update, confirm the latest rate in that year's official leaflet before calculating. This article does not fix the specific rate figures.\n\n## Sources\n\n- Act on Collection of Labour Insurance Premiums, etc. (Act No. 84 of 1969), Article 15, paragraph 1 — the employer of a continuing business must, each insurance year, declare and pay the estimated premium within 40 days from 1 June of that insurance year (or within 50 days from the date the insurance relationship arises, if it arose mid-year)\n- Same Act, Article 19, paragraph 1 — declaration and payment of the finalized premium. The previous insurance year's finalized premium is declared and paid within 40 days from 1 June of the next insurance year, etc. The difference from the estimated premium already paid is settled\n- Same Act, Article 2, paragraph 2 — \"wages\" means wages, salary, allowances, bonuses and everything else, whatever the name, paid by the employer to the worker as remuneration for labour (the basis for the scope of total wages)\n- Same Act, Article 18 and its enforcement ordinance — where the estimated premium is 400,000 yen (200,000 yen for a business where only one of industrial accident or employment insurance has arisen) or more, or the labour insurance affairs are entrusted to an association, the estimated premium may be deferred (three installments)\n- Ministry of Health, Labour and Welfare, labour insurance annual-update leaflet and how to fill in the declaration form — the annual-update declaration/payment period is 1 June to 10 July each year. The deadlines of each deferred installment (in principle) are 1st on 10 July, 2nd on 31 October, 3rd on 31 January of the next year; where entrusted to an association, the 2nd and 3rd are extended. Actual dates shift with weekends and holidays. Premium rates are revised by year and industry (confirmed 31 August 2026)\n- Public materials and provisions confirmed on 31 August 2026. Whether a particular allowance is a wage, and whether the deferral requirements are met, are applications that vary with reality and the year's handling. This article is limited to introducing the framework and does not judge individual permissibility\n\n四葉不動産株式会社, 四葉行政書士事務所 and 四葉社会保険労務士事務所 each undertake work as independent businesses, under separate contracts. When we introduce another professional, we arrange for you to contract directly, and our office receives no referral fee. What our office supports on the annual update is organising total wages, preparing and filing the declaration as agent, and confirming the need for deferral. A company's accounting and corporate tax are pointed to a tax accountant, and individual disputes and litigation to a lawyer. For fees, see [the fee schedule](/en/labor/ryokin); for frequently asked questions, see [the FAQ](/en/labor/faq).\n\nThis article is general information. Individual judgments, in light of the latest primary sources (Ministry of Health, Labour and Welfare, e-Gov, etc.), are made by a qualified professional after a consultation. Written by [Joji Uramatsu](/en/about/uramatsu) (Shakai Hoken Roumushi, Gyoseishoshi, Registered Real Estate Transaction Specialist).",
+        "category": "Labour insurance",
+        "keywords": [
+          "labour insurance annual update 2026",
+          "estimated premium finalized premium calculation",
+          "total wages included excluded",
+          "deferred payment installment 400000 yen",
+          "annual update deadline 10 July",
+          "labour insurance premium rate"
+        ],
+        "tags": [
+          "labour insurance",
+          "annual update",
+          "estimated premium",
+          "finalized premium",
+          "total wages",
+          "deferred payment"
+        ],
+        "author": {
+          "name": "Joji Uramatsu",
+          "title": "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所"
+        },
+        "faq": [
+          {
+            "question": "From when to when must the annual update be filed?",
+            "answer": "For a continuing business, each year from 1 June to 10 July you settle the previous year's finalized premium and declare and pay the current year's estimated premium (Articles 15 and 19). The two are processed on a single annual-update declaration form. If you miss the deadline, you may become subject to a government determination of the premium and an additional charge."
+          },
+          {
+            "question": "Do commuting allowance and bonuses go into total wages?",
+            "answer": "Commuting, overtime, family and other allowances and bonuses are paid as remuneration for labour, so as a rule they are included in total wages. On the other hand, retirement allowance, benevolent congratulatory or condolence gifts, and reimbursement such as business travel expenses are not included. Judge by \"is it remuneration for labour,\" not by the name, and count the amount before deducting tax and social insurance premiums."
+          },
+          {
+            "question": "The premium is large. Can I pay in installments?",
+            "answer": "If the estimated premium is 400,000 yen or more (200,000 yen or more for a business where only one of industrial accident or employment insurance has arisen), or the affairs are entrusted to an association, you can pay in three installments (Article 18). The deadlines are, in principle, 1st on 10 July, 2nd on 31 October, and 3rd on 31 January of the next year; where entrusted to an association, the 2nd and 3rd are extended. Because the actual dates shift with weekends and holidays, confirm in that year's leaflet."
+          },
+          {
+            "question": "Is the premium rate the same every year?",
+            "answer": "The industrial accident insurance rate is set by type of business and, together with the employment insurance rate, is revised by year and by circumstances. It is not necessarily the same rate as the previous year, so at each annual update, confirm the latest rate in that year's official leaflet before calculating. This article does not fix the specific rate figures."
+          }
+        ]
+      },
+      "zh-tw": {
+        "title": "勞動保險的年度更新（概算・確定保險費），何時、算什麼、怎麼算？",
+        "excerpt": "勞動保險的年度更新，是每年6月1日至7月10日，精算前年度的確定保險費，並申報・繳納當年度概算保險費的手續（勞動保險費徵收法第15條・第19條）。保險費為「工資總額×保險費率」，工資總額納入哪些工資會影響金額。概算保險費達一定金額以上時，可延納（3期分割）。把數字用表掌握好，也較易判斷自行處理或委託社勞士。",
+        "content": "**先講結論**：勞動保險的年度更新，是每年6月1日至7月10日，精算前年度的**確定保險費**，並申報・繳納當年度**概算保險費**的手續（勞動保險費徵收法第15條・第19條）。保險費為「工資總額×保險費率」，工資總額納入哪些工資會影響金額。概算保險費達一定金額以上時，可延納（3期分割）。把數字用表掌握好，判斷自行處理或委託社勞士也更容易。\n\n## 勞動保險的年度更新，是何時之前要提出什麼手續？\n\n勞動保險（勞災保險・雇用保險）的保險費，在保險年度（4月1日至翌年3月31日）之初以概算繳納，於年度末確定後精算。把「前年度的精算」與「當年度的概算申報」一起辦理，就是年度更新。\n\n繼續事業的事業主，須在該保險年度的**6月1日起40日內**、亦即**7月10日之前**，申報・繳納概算保險費（勞動保險費徵收法第15條第1項）。同時，前保險年度的確定保險費亦於同一期間申報・繳納（第19條第1項）。實務上以1張年度更新申報書處理二者。\n\n| 項目 | 內容 |\n|---|---|\n| 對象 | 勞災保險・雇用保險的保險費（合併作為勞動保險費申報） |\n| 對象期間 | 保險年度＝4月1日〜翌年3月31日 |\n| 申報・繳納期間 | 每年6月1日〜7月10日 |\n| 內容 | 前年度確定保險費的精算＋當年度概算保險費的申報・繳納 |\n\n逾期時，政府可能核定保險費額並課徵追徵金（第21條）。設立當年何時提出什麼，整理於[設立公司後，何時之前要提出什麼](/zh-tw/labor/column/kaisha-setsuritsu-shakaihoken-roudouhoken-kigen)；結束公司時確定保險費的處理，整理於[結束公司時，社會保險與勞動保險該如何處理](/zh-tw/labor/column/kaisha-tatamu-shakaihoken-zenso-tetsuzuki)。\n\n## 確定保險費與概算保險費，依哪些工資、怎麼算？\n\n二者皆以「工資總額×保險費率」計算，差別在於使用哪個期間的工資。\n\n- **確定保險費**＝前年度**實際支付**的工資總額 × 前年度保險費率\n- **概算保險費**＝當年度**預定支付**的工資總額 × 當年度保險費率\n\n概算的預定工資總額，若與前年度預計無大差異，即直接沿用前年度的確定工資總額。具體而言，預定額落在前年度確定額的100分之50以上100分之200以下時，以前年度同額作為預定額。\n\n保險費率為勞災保險率（依事業種類而異，全額由事業主負擔）與雇用保險率（勞資分擔）之合計。**費率會依年度・業種改定，故須以該年度的官方傳單確認**（本文不固定具體費率數值。2026年8月31日參照）。\n\n計算順序如下。\n\n1. 將前年度支付的工資按月彙總，得出確定工資總額\n2. 確定工資總額 × 前年度費率＝確定保險費。與已繳的概算保險費比較，精算差額\n3. 當年度預定工資總額 × 當年度費率＝概算保險費\n4. 於7月10日前繳納（前年度精算的不足＋當年度的概算）\n\n## 工資總額納入・不納入的津貼，在哪裡分界？\n\n工資總額的「工資」，指事業主作為勞動的對價支付給勞工的一切（勞動保險費徵收法第2條第2項）。納入與否，以此「是否為勞動的對價」分界。以扣除稅・社會保險費**前**的金額計算。\n\n| 納入者（例） | 不納入者（例） |\n|---|---|\n| 基本薪・固定薪 | 董監事報酬（對非勞工的董監事者） |\n| 通勤津貼・加班津貼・家庭津貼・住宅津貼等各項津貼 | 退職金、以退職為事由支付者 |\n| 獎金・一次金 | 結婚祝金・慰問金等恩惠性・任意性的給付 |\n| 通勤定期票・回數票等實物支給的通勤費 | 出差旅費・住宿費等實費彌補性者 |\n\n最易分歧的，是名目為津貼但實費彌補性質較強者（出差旅費等）與恩惠性給付。此處若取錯，工資總額便會偏移，保險費也隨之過與不足。即使是董監事，兼具勞工性格的使用人兼務役員之工資部分，處理方式亦有分歧，須注意。董監事與勞災的關係，整理於[社長不出勞災。且僅1人時連特別加入也不行](/zh-tw/labor/column/shacho-rosai-tokubetsu-kanyu-hitori)。特定津貼是否屬工資的最終認定，依實態判斷。\n\n## 繳納高額時，分割（延納）可以到什麼程度？\n\n概算保險費達一定金額以上時，可延納（分割繳納）（第18條）。要件與次數如下。\n\n| 區分 | 內容 |\n|---|---|\n| 可延納的情形 | 概算保險費額達40萬圓以上（勞災保險・雇用保險僅一方成立的事業為20萬圓以上），或已委託勞動保險事務組合處理勞動保險事務 |\n| 分割次數 | 3期分割（繼續事業・年度更新的情形） |\n| 各期繳納期限（原則） | 第1期＝7月10日、第2期＝10月31日、第3期＝翌年1月31日 |\n| 已委託事務組合的情形 | 第2期・第3期的繳納期限延長（原則為11月14日・2月14日） |\n\n繳納期限遇週六日・假日時順延至次一辦公日，故實際期日須以該年度官方傳單確認（2026年8月31日參照）。向勞動保險事務組合委託，亦是中小事業主等特別加入的前提，是否委託由事業者判斷。\n\n不延納時，於7月10日前一次繳清確定精算分與概算全額。若考量資金週轉，及早確認是否符合要件可增加選項。\n\n## 自行計算申報與委託社勞士，有什麼不同？\n\n年度更新，只要能正確彙總工資，自行申報也可行。實際上許多事業所自行處理。自行處理時最有影響的，是工資總額的彙總精度，以及費率・樣式是否為最新。\n\n委託社會保險勞務士時所改變的，是下列各點。\n\n- 就工資總額納入・不納入的認定，依實態整理\n- 含概算與確定差額的精算、延納要否，作成申報書並代理・代行\n- 與薪資計算及社會保險手續一併，以單一流程處理工資資料\n\n有償為他人作成・提出勞動保險申報書的代行，屬社會保險勞務士的業務。公司的會計・法人稅屬稅理士的領域，與勞動保險費的計算分工不同。本事務所的關與限於勞動・社會保險手續，稅務引導向稅理士，個別糾紛引導向律師。費用的參考，整理於[報酬金額表](/zh-tw/labor/ryokin)。\n\n## 常見問題\n\n**Q. 年度更新，何時至何時之間提出即可？**\nA. 繼續事業於每年6月1日至7月10日，辦理前年度確定保險費的精算與當年度概算保險費的申報・繳納（第15條・第19條）。以1張年度更新申報書處理二者。逾期時，可能成為政府核定保險費與追徵金的對象。\n\n**Q. 通勤津貼或獎金，要納入工資總額嗎？**\nA. 通勤津貼・加班津貼・家庭津貼等各項津貼及獎金，係作為勞動的對價支付，故原則上納入工資總額。另一方面，退職金、恩惠性的結婚祝金・慰問金、出差旅費等實費彌補性者則不納入。以「是否為勞動的對價」而非名目判斷，並以扣除稅・社會保險費前的金額計算。\n\n**Q. 保險費高額。可以分割繳納嗎？**\nA. 概算保險費額達40萬圓以上（勞災・雇用僅一方成立的事業為20萬圓以上），或已委託勞動保險事務組合時，可分3期繳納（第18條）。各期繳納期限原則為第1期7月10日・第2期10月31日・第3期翌年1月31日，委託事務組合時第2期・第3期延長。實際期日因週末假日而前後，須以該年度傳單確認。\n\n**Q. 保險費率每年都相同嗎？**\nA. 勞災保險率依事業種類而定，與雇用保險率一併，依年度・情勢而改定。未必與前年度費率相同，故每次年度更新時，須以該年度官方傳單確認最新費率後再計算。本文不固定具體費率數值。\n\n## 本文的依據\n\n- 勞動保險費徵收法（勞動保險の保険料の徴収等に関する法律，昭和44年法律第84號）第15條第1項 ── 繼續事業的事業主，須在各保險年度，於該保險年度的6月1日起40日內（保險年度中途成立保險關係者為成立日起50日內）申報・繳納概算保險費\n- 同法第19條第1項 ── 確定保險費的申報・繳納。前保險年度的確定保險費，於次一保險年度的6月1日起40日內等申報・繳納，與已繳概算保險費之差額精算\n- 同法第2條第2項 ── 「工資」指工資、薪給、津貼、獎金及其他不問名稱，由事業主作為勞動的對價支付給勞工的一切（工資總額範圍的依據）\n- 同法第18條・同法施行規則 ── 概算保險費額達40萬圓（勞災保險・雇用保險僅一方成立的事業為20萬圓）以上，或已委託事務組合時，概算保險費可延納（3期分割）\n- 厚生勞動省 勞動保險 年度更新傳單・申報書寫法 ── 年度更新的申報・繳納期間為每年6月1日至7月10日。延納各期繳納期限（原則）為第1期7月10日・第2期10月31日・第3期翌年1月31日，委託事務組合時第2期・第3期延長。週末假日使實際期日前後。保險費率依年度・業種改定（2026年8月31日參照）\n- 公的資料・條文於2026年8月31日確認。特定津貼是否屬工資、是否符合延納要件等認定，依實態與該年度處理而判斷分歧。本文僅止於介紹制度框架，不判斷個別可否\n\n四葉不動產股份有限公司、四葉行政書士事務所、四葉社会保険労務士事務所，各自獨立為不同事業體並分別承接業務，須另行簽約。介紹其他專家時，亦安排由客戶直接締約，本事務所不收取介紹費。本事務所就年度更新所支援的，是工資總額的整理與申報書的作成・代行，以及延納要否的確認。公司的會計・法人稅引導向稅理士，個別糾紛或訴訟引導向律師。費用請見[報酬金額表](/zh-tw/labor/ryokin)，常見問題請見[常見問題](/zh-tw/labor/faq)。\n\n本文為一般資訊提供。個別判斷，請依最新一次資料（厚生勞動省、e-Gov等），在面談後由資格者進行。執筆者為[浦松丈二](/zh-tw/about/uramatsu)（社會保險勞務士・行政書士・宅地建物取引士）。",
+        "category": "勞動保險",
+        "keywords": [
+          "勞動保險 年度更新 2026",
+          "概算保險費 確定保險費 計算",
+          "工資總額 納入 不納入",
+          "延納 分割繳納 40萬圓",
+          "年度更新 期限 7月10日",
+          "勞動保險費率"
+        ],
+        "tags": [
+          "勞動保險",
+          "年度更新",
+          "概算保險費",
+          "確定保險費",
+          "工資總額",
+          "延納"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "年度更新，何時至何時之間提出即可？",
+            "answer": "繼續事業於每年6月1日至7月10日，辦理前年度確定保險費的精算與當年度概算保險費的申報・繳納（第15條・第19條）。以1張年度更新申報書處理二者。逾期時，可能成為政府核定保險費與追徵金的對象。"
+          },
+          {
+            "question": "通勤津貼或獎金，要納入工資總額嗎？",
+            "answer": "通勤津貼・加班津貼・家庭津貼等各項津貼及獎金，係作為勞動的對價支付，故原則上納入工資總額。另一方面，退職金、恩惠性的結婚祝金・慰問金、出差旅費等實費彌補性者則不納入。以「是否為勞動的對價」而非名目判斷，並以扣除稅・社會保險費前的金額計算。"
+          },
+          {
+            "question": "保險費高額。可以分割繳納嗎？",
+            "answer": "概算保險費額達40萬圓以上（勞災・雇用僅一方成立的事業為20萬圓以上），或已委託勞動保險事務組合時，可分3期繳納（第18條）。各期繳納期限原則為第1期7月10日・第2期10月31日・第3期翌年1月31日，委託事務組合時第2期・第3期延長。實際期日因週末假日而前後，須以該年度傳單確認。"
+          },
+          {
+            "question": "保險費率每年都相同嗎？",
+            "answer": "勞災保險率依事業種類而定，與雇用保險率一併，依年度・情勢而改定。未必與前年度費率相同，故每次年度更新時，須以該年度官方傳單確認最新費率後再計算。本文不固定具體費率數值。"
+          }
+        ]
+      },
+      "zh": {
+        "title": "劳动保险的年度更新（概算・确定保险费），何时、算什么、怎么算？",
+        "excerpt": "劳动保险的年度更新，是每年6月1日至7月10日，精算前年度的确定保险费，并申报・缴纳当年度概算保险费的手续（劳动保险费征收法第15条・第19条）。保险费为「工资总额×保险费率」，工资总额纳入哪些工资会影响金额。概算保险费达一定金额以上时，可延纳（3期分割）。把数字用表掌握好，也较易判断自行处理或委托社劳士。",
+        "content": "**先讲结论**：劳动保险的年度更新，是每年6月1日至7月10日，精算前年度的**确定保险费**，并申报・缴纳当年度**概算保险费**的手续（劳动保险费征收法第15条・第19条）。保险费为「工资总额×保险费率」，工资总额纳入哪些工资会影响金额。概算保险费达一定金额以上时，可延纳（3期分割）。把数字用表掌握好，判断自行处理或委托社劳士也更容易。\n\n## 劳动保险的年度更新，是何时之前要提出什么手续？\n\n劳动保险（劳灾保险・雇用保险）的保险费，在保险年度（4月1日至翌年3月31日）之初以概算缴纳，于年度末确定后精算。把「前年度的精算」与「当年度的概算申报」一起办理，就是年度更新。\n\n继续事业的事业主，须在该保险年度的**6月1日起40日内**、亦即**7月10日之前**，申报・缴纳概算保险费（劳动保险费征收法第15条第1项）。同时，前保险年度的确定保险费亦于同一期间申报・缴纳（第19条第1项）。实务上以1张年度更新申报书处理二者。\n\n| 项目 | 内容 |\n|---|---|\n| 对象 | 劳灾保险・雇用保险的保险费（合并作为劳动保险费申报） |\n| 对象期间 | 保险年度＝4月1日〜翌年3月31日 |\n| 申报・缴纳期间 | 每年6月1日〜7月10日 |\n| 内容 | 前年度确定保险费的精算＋当年度概算保险费的申报・缴纳 |\n\n逾期时，政府可能核定保险费额并课征追征金（第21条）。设立当年何时提出什么，整理于[设立公司后，何时之前要提出什么](/zh/labor/column/kaisha-setsuritsu-shakaihoken-roudouhoken-kigen)；结束公司时确定保险费的处理，整理于[结束公司时，社会保险与劳动保险该如何处理](/zh/labor/column/kaisha-tatamu-shakaihoken-zenso-tetsuzuki)。\n\n## 确定保险费与概算保险费，依哪些工资、怎么算？\n\n二者皆以「工资总额×保险费率」计算，差别在于使用哪个期间的工资。\n\n- **确定保险费**＝前年度**实际支付**的工资总额 × 前年度保险费率\n- **概算保险费**＝当年度**预定支付**的工资总额 × 当年度保险费率\n\n概算的预定工资总额，若与前年度预计无大差异，即直接沿用前年度的确定工资总额。具体而言，预定额落在前年度确定额的100分之50以上100分之200以下时，以前年度同额作为预定额。\n\n保险费率为劳灾保险率（依事业种类而异，全额由事业主负担）与雇用保险率（劳资分担）之合计。**费率会依年度・业种改定，故须以该年度的官方传单确认**（本文不固定具体费率数值。2026年8月31日参照）。\n\n计算顺序如下。\n\n1. 将前年度支付的工资按月汇总，得出确定工资总额\n2. 确定工资总额 × 前年度费率＝确定保险费。与已缴的概算保险费比较，精算差额\n3. 当年度预定工资总额 × 当年度费率＝概算保险费\n4. 于7月10日前缴纳（前年度精算的不足＋当年度的概算）\n\n## 工资总额纳入・不纳入的津贴，在哪里分界？\n\n工资总额的「工资」，指事业主作为劳动的对价支付给劳工的一切（劳动保险费征收法第2条第2项）。纳入与否，以此「是否为劳动的对价」分界。以扣除税・社会保险费**前**的金额计算。\n\n| 纳入者（例） | 不纳入者（例） |\n|---|---|\n| 基本薪・固定薪 | 董监事报酬（对非劳工的董监事者） |\n| 通勤津贴・加班津贴・家庭津贴・住宅津贴等各项津贴 | 退职金、以退职为事由支付者 |\n| 奖金・一次金 | 结婚祝金・慰问金等恩惠性・任意性的给付 |\n| 通勤定期票・回数票等实物支给的通勤费 | 出差旅费・住宿费等实费弥补性者 |\n\n最易分歧的，是名目为津贴但实费弥补性质较强者（出差旅费等）与恩惠性给付。此处若取错，工资总额便会偏移，保险费也随之过与不足。即使是董监事，兼具劳工性格的使用人兼务役员之工资部分，处理方式亦有分歧，须注意。董监事与劳灾的关系，整理于[社长不出劳灾。且仅1人时连特别加入也不行](/zh/labor/column/shacho-rosai-tokubetsu-kanyu-hitori)。特定津贴是否属工资的最终认定，依实态判断。\n\n## 缴纳高额时，分割（延纳）可以到什么程度？\n\n概算保险费达一定金额以上时，可延纳（分割缴纳）（第18条）。要件与次数如下。\n\n| 区分 | 内容 |\n|---|---|\n| 可延纳的情形 | 概算保险费额达40万圆以上（劳灾保险・雇用保险仅一方成立的事业为20万圆以上），或已委托劳动保险事务组合处理劳动保险事务 |\n| 分割次数 | 3期分割（继续事业・年度更新的情形） |\n| 各期缴纳期限（原则） | 第1期＝7月10日、第2期＝10月31日、第3期＝翌年1月31日 |\n| 已委托事务组合的情形 | 第2期・第3期的缴纳期限延长（原则为11月14日・2月14日） |\n\n缴纳期限遇周六日・假日时顺延至次一办公日，故实际期日须以该年度官方传单确认（2026年8月31日参照）。向劳动保险事务组合委托，亦是中小事业主等特别加入的前提，是否委托由事业者判断。\n\n不延纳时，于7月10日前一次缴清确定精算分与概算全额。若考量资金周转，及早确认是否符合要件可增加选项。\n\n## 自行计算申报与委托社劳士，有什么不同？\n\n年度更新，只要能正确汇总工资，自行申报也可行。实际上许多事业所自行处理。自行处理时最有影响的，是工资总额的汇总精度，以及费率・样式是否为最新。\n\n委托社会保险劳务士时所改变的，是下列各点。\n\n- 就工资总额纳入・不纳入的认定，依实态整理\n- 含概算与确定差额的精算、延纳要否，作成申报书并代理・代行\n- 与薪资计算及社会保险手续一并，以单一流程处理工资资料\n\n有偿为他人作成・提出劳动保险申报书的代行，属社会保险劳务士的业务。公司的会计・法人税属税理士的领域，与劳动保险费的计算分工不同。本事务所的关与限于劳动・社会保险手续，税务引导向税理士，个别纠纷引导向律师。费用的参考，整理于[报酬金额表](/zh/labor/ryokin)。\n\n## 常见问题\n\n**Q. 年度更新，何时至何时之间提出即可？**\nA. 继续事业于每年6月1日至7月10日，办理前年度确定保险费的精算与当年度概算保险费的申报・缴纳（第15条・第19条）。以1张年度更新申报书处理二者。逾期时，可能成为政府核定保险费与追征金的对象。\n\n**Q. 通勤津贴或奖金，要纳入工资总额吗？**\nA. 通勤津贴・加班津贴・家庭津贴等各项津贴及奖金，系作为劳动的对价支付，故原则上纳入工资总额。另一方面，退职金、恩惠性的结婚祝金・慰问金、出差旅费等实费弥补性者则不纳入。以「是否为劳动的对价」而非名目判断，并以扣除税・社会保险费前的金额计算。\n\n**Q. 保险费高额。可以分割缴纳吗？**\nA. 概算保险费额达40万圆以上（劳灾・雇用仅一方成立的事业为20万圆以上），或已委托劳动保险事务组合时，可分3期缴纳（第18条）。各期缴纳期限原则为第1期7月10日・第2期10月31日・第3期翌年1月31日，委托事务组合时第2期・第3期延长。实际期日因周末假日而前后，须以该年度传单确认。\n\n**Q. 保险费率每年都相同吗？**\nA. 劳灾保险率依事业种类而定，与雇用保险率一并，依年度・情势而改定。未必与前年度费率相同，故每次年度更新时，须以该年度官方传单确认最新费率后再计算。本文不固定具体费率数值。\n\n## 本文的依据\n\n- 劳动保险费征收法（労働保険の保険料の徴収等に関する法律，昭和44年法律第84号）第15条第1项 ── 继续事业的事业主，须在各保险年度，于该保险年度的6月1日起40日内（保险年度中途成立保险关系者为成立日起50日内）申报・缴纳概算保险费\n- 同法第19条第1项 ── 确定保险费的申报・缴纳。前保险年度的确定保险费，于次一保险年度的6月1日起40日内等申报・缴纳，与已缴概算保险费之差额精算\n- 同法第2条第2项 ── 「工资」指工资、薪给、津贴、奖金及其他不问名称，由事业主作为劳动的对价支付给劳工的一切（工资总额范围的依据）\n- 同法第18条・同法施行规则 ── 概算保险费额达40万圆（劳灾保险・雇用保险仅一方成立的事业为20万圆）以上，或已委托事务组合时，概算保险费可延纳（3期分割）\n- 厚生劳动省 劳动保险 年度更新传单・申报书写法 ── 年度更新的申报・缴纳期间为每年6月1日至7月10日。延纳各期缴纳期限（原则）为第1期7月10日・第2期10月31日・第3期翌年1月31日，委托事务组合时第2期・第3期延长。周末假日使实际期日前后。保险费率依年度・业种改定（2026年8月31日参照）\n- 公的资料・条文于2026年8月31日确认。特定津贴是否属工资、是否符合延纳要件等认定，依实态与该年度处理而判断分歧。本文仅止于介绍制度框架，不判断个别可否\n\n四葉不動産股份有限公司、四葉行政書士事務所、四葉社会保険労務士事務所，各自独立为不同事业体并分别承接业务，须另行签约。介绍其他专家时，亦安排由客户直接缔约，本事务所不收取介绍费。本事务所就年度更新所支援的，是工资总额的整理与申报书的作成・代行，以及延纳要否的确认。公司的会计・法人税引导向税理士，个别纠纷或诉讼引导向律师。费用请见[报酬金额表](/zh/labor/ryokin)，常见问题请见[常见问题](/zh/labor/faq)。\n\n本文为一般信息提供。个别判断，请依最新一次资料（厚生劳动省、e-Gov等），在面谈后由资格者进行。执笔者为[浦松丈二](/zh/about/uramatsu)（社会保险劳务士・行政书士・宅地建物取引士）。",
+        "category": "劳动保险",
+        "keywords": [
+          "劳动保险 年度更新 2026",
+          "概算保险费 确定保险费 计算",
+          "工资总额 纳入 不纳入",
+          "延纳 分割缴纳 40万圆",
+          "年度更新 期限 7月10日",
+          "劳动保险费率"
+        ],
+        "tags": [
+          "劳动保险",
+          "年度更新",
+          "概算保险费",
+          "确定保险费",
+          "工资总额",
+          "延纳"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "年度更新，何时至何时之间提出即可？",
+            "answer": "继续事业于每年6月1日至7月10日，办理前年度确定保险费的精算与当年度概算保险费的申报・缴纳（第15条・第19条）。以1张年度更新申报书处理二者。逾期时，可能成为政府核定保险费与追征金的对象。"
+          },
+          {
+            "question": "通勤津贴或奖金，要纳入工资总额吗？",
+            "answer": "通勤津贴・加班津贴・家庭津贴等各项津贴及奖金，系作为劳动的对价支付，故原则上纳入工资总额。另一方面，退职金、恩惠性的结婚祝金・慰问金、出差旅费等实费弥补性者则不纳入。以「是否为劳动的对价」而非名目判断，并以扣除税・社会保险费前的金额计算。"
+          },
+          {
+            "question": "保险费高额。可以分割缴纳吗？",
+            "answer": "概算保险费额达40万圆以上（劳灾・雇用仅一方成立的事业为20万圆以上），或已委托劳动保险事务组合时，可分3期缴纳（第18条）。各期缴纳期限原则为第1期7月10日・第2期10月31日・第3期翌年1月31日，委托事务组合时第2期・第3期延长。实际期日因周末假日而前后，须以该年度传单确认。"
+          },
+          {
+            "question": "保险费率每年都相同吗？",
+            "answer": "劳灾保险率依事业种类而定，与雇用保险率一并，依年度・情势而改定。未必与前年度费率相同，故每次年度更新时，须以该年度官方传单确认最新费率后再计算。本文不固定具体费率数值。"
+          }
+        ]
+      }
+    }
   }
 ];
