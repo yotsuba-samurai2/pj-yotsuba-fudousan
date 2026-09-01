@@ -307,15 +307,39 @@ jobs:
         run: |
           set -o pipefail
           fail=0
+          : > /tmp/ng.txt
           for s in seed-realestate-columns-daily seed-souzoku-legal-columns seed-labor-columns; do
             echo "::group::$s"
-            if ! npx tsx "scripts/$s.ts" 2>&1 | tee "/tmp/$s.log"; then fail=1; fi
+            if ! npx tsx "scripts/$s.ts" 2>&1 | tee "/tmp/$s.log"; then
+              fail=1
+              echo "[$s] スクリプトが異常終了した（NG行が無くても失敗扱い）" >> /tmp/ng.txt
+            fi
             if grep -q '^NG' "/tmp/$s.log"; then
-              echo "::error::$s に NG があります"; grep '^NG' "/tmp/$s.log"; fail=1
+              echo "::error::$s に NG があります"; grep '^NG' "/tmp/$s.log"
+              grep '^NG' "/tmp/$s.log" | sed "s|^|[$s] |" >> /tmp/ng.txt
+              fail=1
             fi
             echo "::endgroup::"
           done
           exit $fail
+
+      # 落ちたときだけ、NG行と各スクリプトの出力を残す。修復ジョブ（validate-repair）が読む。
+      # ここを残さないと、修復役は「何がNGだったか」を自分で再実行して調べ直すことになる。
+      - name: NG行を成果物に残す（修復ジョブが読む）
+        if: failure()
+        run: |
+          mkdir -p .ng
+          cp /tmp/ng.txt .ng/ng.txt 2>/dev/null || true
+          for s in seed-realestate-columns-daily seed-souzoku-legal-columns seed-labor-columns; do
+            cp "/tmp/$s.log" ".ng/$s.log" 2>/dev/null || true
+          done
+          echo "--- 修復ジョブへ渡すNG ---"; cat .ng/ng.txt || true
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: validate-ng
+          path: .ng/
+          if-no-files-found: warn
 
       - name: emit-ts（忘れると管理画面に並ばない）
         run: |
@@ -354,10 +378,148 @@ jobs:
           path: .out/validated.tar.gz
 
   # ─────────────────────────────────────────────────────────────
+  # 4b. 修復 ── validate が落ちたときだけ走る。1回だけ。
+  #
+  # なぜ要るか：validate は「NG行0 かつ exit 0」の非LLMゲートで、**1件でもNGが出ると
+  # その夜の6本×4言語がまるごと捨てられる**。実績＝2026-08-31（必須表現1件で6本全損）・
+  # 2026-08-24・2026-08-22×3。しかも 2026-08-31 の1件は、本文が「2020年（令和2年）4月1日」と
+  # 西暦・和暦を併記して**正しく書けていた**のに、REQUIRED_PHRASES が「令和2年4月1日」の
+  # 連続一致を求めていたため落ちた＝**記事ではなく検査の指定が実態と合っていなかった**。
+  #
+  # plan-check には「9本作って6本採る」という予備があるが、validate には無かった。
+  # ここが唯一、機械が落としたものを拾い直す場所。
+  #
+  # ★validate 自体は LLM を使わないまま維持する（本当のゲートを曖昧にしない）。
+  #   修復は別ジョブに分け、修復後は**同じ非LLM検証をもう一度通してから**先へ送る。
+  #   修復は1回だけ。2周目は無い（直らなければ失敗させ、Issueを立てて人間に回す）。
+  # ─────────────────────────────────────────────────────────────
+  validate-repair:
+    needs: [write, validate]
+    if: always() && needs.validate.result == 'failure'
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/download-artifact@v5
+        with:
+          pattern: draft-*
+          merge-multiple: true
+          path: .out
+      - name: 原稿を展開
+        run: for f in .out/*.tar.gz; do tar -xzf "$f"; done && git status --porcelain | head -40
+      - uses: actions/download-artifact@v5
+        with:
+          name: validate-ng
+          path: .ng
+      - name: 何がNGだったかを表示
+        run: cat .ng/ng.txt
+
+      - uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          show_full_output: true
+          prompt: |
+            `.ng/ng.txt` に、seedバリデータが出した NG 行が入っている（`[スクリプト名] NG: …` の形式）。
+            各スクリプトの全出力は `.ng/<スクリプト名>.log`。**これをすべて解消する。**
+
+            ## 最初に判断すること：記事が悪いのか、検査の指定が悪いのか
+
+            **バリデータに引っかかったら、まずバリデータ側を疑う。記事を歪めて検査を通さない。**
+            docs/daily-columns-pipeline.md の原則であり、実例がある：
+
+              2026-08-31 `NG: … に必須表現「令和2年4月1日」なし`
+              → 本文は「2020年（令和2年）4月1日」と西暦・和暦を併記して**正しく書けていた**。
+                `REQUIRED_PHRASES` が連続一致を求めていたため一致しなかっただけ。
+                正しい対処は**必須表現の指定を本文の表記に合わせる**ことであって、
+                本文から「（令和2年）」の括弧を外すことではない。
+
+            判断の基準：
+            - **事実が本文に無い** → 記事を直す。一次資料（e-Gov法令検索・官公庁）で裏を取ってから書く
+            - **事実は本文にあるが、検査の文字列指定と表記が違うだけ** → 検査の指定を本文に合わせる
+            - **検査が要求している事実そのものが誤り** → 検査から外し、**理由をコメントで残す**
+
+            直したら `npx tsx scripts/<該当スクリプト>.ts` を自分で流し、NG行が消えたことを確認する。
+
+            ## やってはいけないこと
+            - NG判定そのものを削ってゲートを緩める
+            - 裏取りできていない条文番号・日付・告示番号を書き足して通す
+            - 指摘されていない記事・箇所を書き換える
+            - git 操作をする／`--emit-ts` を実行する（後段のステップがやる）
+
+            ## ★これは無人の1回きりの実行です
+            **次のターンはありません。** 修正を書き終えてから終了すること。
+            途中経過の報告でターンを終えない。
+          claude_args: |
+            --model claude-opus-4-8
+            --max-turns 60
+            --allowedTools "Read,Write,Edit,Glob,Grep,WebSearch,WebFetch,Bash(npx tsx *)"
+            --disallowedTools "Task"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+
+      # 修復後は validate と同じ非LLM検証をもう一度通す。ここで落ちたら諦める（2周目は無い）。
+      - name: seed dry-run（修復後の再検証）
+        run: |
+          set -o pipefail
+          fail=0
+          for s in seed-realestate-columns-daily seed-souzoku-legal-columns seed-labor-columns; do
+            echo "::group::$s"
+            if ! npx tsx "scripts/$s.ts" 2>&1 | tee "/tmp/$s.log"; then fail=1; fi
+            if grep -q '^NG' "/tmp/$s.log"; then
+              echo "::error::$s に NG が残っています（修復は1回だけ）"; grep '^NG' "/tmp/$s.log"; fail=1
+            fi
+            echo "::endgroup::"
+          done
+          exit $fail
+
+      - name: emit-ts（忘れると管理画面に並ばない）
+        run: |
+          for s in seed-realestate-columns-daily seed-souzoku-legal-columns seed-labor-columns; do
+            npx tsx "scripts/$s.ts" --emit-ts
+          done
+          git diff --stat -- src/lib/data/
+
+      - run: npx tsc --noEmit -p tsconfig.json
+      - run: npx eslint $(git diff --name-only -- '*.ts' '*.tsx' | tr '\n' ' ') || true
+      - run: npx vitest run
+
+      - name: preview.json を成果物から外す
+        run: |
+          git ls-files -z 'scripts/*.preview.json' | xargs -0 -r git checkout --
+          git ls-files -z --others --exclude-standard -- 'scripts/*.preview.json' | xargs -0 -r rm -f
+          git status --porcelain | head -30
+
+      # 成功したら validate と**同じ名前**で上げる＝後段（review / fix / open-pr）は分岐不要
+      - name: 検証済みの差分を保存
+        run: |
+          mkdir -p .out
+          git ls-files -mo --exclude-standard -- scripts/ src/ \
+            | grep -v '\.preview\.json$' > .out/changed.txt || true
+          if [ ! -s .out/changed.txt ]; then
+            echo "::error::修復後の差分がありません（執筆結果が引き継がれていない可能性）"
+            exit 1
+          fi
+          echo "保存するファイル $(wc -l < .out/changed.txt) 件"
+          cat .out/changed.txt
+          tar -czf .out/validated.tar.gz -T .out/changed.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: validated
+          path: .out/validated.tar.gz
+
+  # ─────────────────────────────────────────────────────────────
   # 5. レビュー ── 書いた役とは別セッション・読み取り専用
   # ─────────────────────────────────────────────────────────────
   review:
-    needs: validate
+    # validate が一発で通ったか、validate-repair が直して通したか、どちらでも進む。
+    # ★ジョブIDにハイフンが入るので式では needs['validate-repair'] と書く
+    #   （needs.validate-repair は引き算として解釈される）
+    needs: [validate, validate-repair]
+    if: always() && (needs.validate.result == 'success' || needs['validate-repair'].result == 'success')
     runs-on: ubuntu-latest
     timeout-minutes: 60
     outputs:
@@ -433,7 +595,9 @@ jobs:
   # 6. 修正 ── レビューがNGのときだけ走る
   # ─────────────────────────────────────────────────────────────
   fix:
-    needs: [validate, review]
+    # validate を needs に残すと、修復経路（validate=failure）のときに常にスキップされる。
+    # review は「どちらかの検証が通った」ときにしか走らないので、review だけで足りる。
+    needs: [review]
     if: needs.review.outputs.pass == 'false'
     runs-on: ubuntu-latest
     timeout-minutes: 90
@@ -510,8 +674,13 @@ jobs:
   # 7. PR作成＋自動マージ ── LLMを使わない。確実に動く
   # ─────────────────────────────────────────────────────────────
   open-pr:
-    needs: [validate, review, fix]
-    if: always() && needs.validate.result == 'success' && needs.review.result == 'success' && (needs.fix.result == 'success' || needs.fix.result == 'skipped') && inputs.dry_run != true
+    needs: [validate, validate-repair, review, fix]
+    if: >-
+      always()
+      && (needs.validate.result == 'success' || needs['validate-repair'].result == 'success')
+      && needs.review.result == 'success'
+      && (needs.fix.result == 'success' || needs.fix.result == 'skipped')
+      && inputs.dry_run != true
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
@@ -610,8 +779,20 @@ jobs:
   # 失敗したら Issue を立てる（黙って止まらせない）
   # ─────────────────────────────────────────────────────────────
   notify-failure:
-    needs: [plan, plan-check, write, validate, review, fix, open-pr]
-    if: failure()
+    needs: [plan, plan-check, write, validate, validate-repair, review, fix, open-pr]
+    # `failure()` は使えない。**validate の失敗は修復ジョブで回復しうるようになった**ため、
+    # 修復に成功した夜まで「失敗」としてIssueを立ててしまう（failure() は祖先ジョブの
+    # 失敗も拾う）。validate だけは「修復も成功しなかったとき」に限って失敗と数える。
+    if: >-
+      always()
+      && (needs.plan.result == 'failure'
+        || needs['plan-check'].result == 'failure'
+        || needs.write.result == 'failure'
+        || needs['validate-repair'].result == 'failure'
+        || needs.review.result == 'failure'
+        || needs.fix.result == 'failure'
+        || needs['open-pr'].result == 'failure'
+        || (needs.validate.result == 'failure' && needs['validate-repair'].result != 'success'))
     runs-on: ubuntu-latest
     permissions:
       issues: write
@@ -643,7 +824,9 @@ jobs:
   # 成功したら、開いたままの失敗Issueを閉じる（2026-08-28 追加）
   close-failure-issues:
     needs: [open-pr]
-    if: success()
+    # `success()` は祖先ジョブ全部の成功を要求するため、**修復経路で通った夜**
+    # （validate=failure → validate-repair=success）に閉じてくれない。open-pr の結果で判定する。
+    if: always() && needs['open-pr'].result == 'success'
     runs-on: ubuntu-latest
     permissions:
       issues: write
