@@ -1,5 +1,5 @@
 /**
- * 労務コラム（4本）投入スクリプト
+ * 労務コラム投入スクリプト（開業クラスタ75本＋日次パイプラインの追加分）
  *
  * 設計＝01_設計書と進行表/60_QAとコラム_設計見直し.md「4-2 決定済みから導出するコラム」（C-1・C-3・C-4・C-6）。
  * 原稿＝scripts/labor-columns/*.md。報酬額表 v18 の決定30件と相場調査から起こしている。
@@ -11,12 +11,15 @@
  *   npx tsx scripts/seed-labor-columns.ts --emit-ts  # src/lib/data/labor-columns-seed.ts を生成（/admin/columns/seed-labor 用）
  *
  * 設計メモ:
- *   - business="labor"。SR_LAUNCHED=false の間は (labor)/layout.tsx が notFound() を返すため、
- *     status="published" で投入しても開業日（2026-09-01）まで表に出ない。sitemap にも出ない。
- *   - date="2026-09-01"＝開業日。クラスタの公開と足並みを揃える。
+ *   - business="labor"。**2026-09-01に開業済み**＝(labor)/layout.tsx のゲートは開いており、
+ *     status="published" で投入すればそのまま公開される（同日実測＝/labor は HTTP 200、
+ *     sitemap.xml に /labor/column/ が375件）。開業前の「投入しても表に出ない」前提はもう無い。
+ *   - date は記事ごとに ARTICLES で指定する。省略時のみ DATE（2026-09-01＝開業クラスタの
+ *     既定日）にフォールバックする。**日次で足す記事は必ず date を書く。**
  *   - FAQ は本文md「## よくある質問」から自動パース＝本文が単一ソース。各記事4問。
  *   - upsert キー＝ @@unique([business, slug])。再実行しても重複しない。
- *   - locales: ["ja"]＝日本語のみ（浦松判断 2026-08-12・開業前の多言語展開は見送り）。
+ *   - locales は翻訳の充足で決まる：en/zh-tw/zh が揃った記事は []（＝全言語公開）、
+ *     欠けている記事は ["ja"] のまま（非日本語URLをsitemapに出さない）。buildColumns() 参照。
  *   - 表示コンプライアンス＝「ワンストップ」等の一体提供語を使わない／事業体をまたぐ記述には分離受任を明示／
  *     裏取りできない条文番号・告示番号を書かない（shigyo-compliance-gate 第4条）。
  */
@@ -68,6 +71,14 @@ const DATE = "2026-09-01"; // 開業日＝クラスタ公開日
 const ARTICLES: Array<{
   file: string;
   slug: string;
+  /**
+   * 記事ごとの公開日。省略時は DATE（＝開業クラスタの既定日 2026-09-01）。
+   * **日次パイプラインで追加する記事は必ず指定する。** 省略すると開業日の75本と
+   * 同じ日付で出力され、sitemap の lastModified（src/app/sitemap.ts＝modifiedDate ?? date）も
+   * 2026-09-01 のまま動かない。不動産は publishedAt、行政書士は date を記事ごとに持っており、
+   * 社労士だけ固定だったのを揃えた（2026-09-01）。
+   */
+  date?: string;
   title: string;
   category: string;
   excerpt: string;
@@ -1654,7 +1665,9 @@ function buildColumns(): SeedColumn[] {
       business: "labor" as const,
       slug: a.slug,
       title: a.title,
-      date: DATE,
+      // 既存75本は date を持たない＝DATE（2026-09-01）にフォールバックする。
+      // したがってこの変更で出力は1バイトも変わらない（--emit-ts の差分ゼロで確認）。
+      date: a.date ?? DATE,
       category: a.category,
       excerpt: a.excerpt,
       content,

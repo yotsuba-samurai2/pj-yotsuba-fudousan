@@ -89,6 +89,24 @@ const AUTHOR = {
 const FORBIDDEN_WORDS = ["ワンストップ", "一括対応", "一体で", "一気通貫", "one-stop", "一站式"];
 
 /**
+ * 社会保険労務士の開業（2026-09-01）。**開業を前提にしていた検査**だけをこのフラグで切る。
+ *
+ * 正本は src/lib/shared/office.ts の SR_LAUNCHED（NEXT_PUBLIC_SR_LAUNCHED 由来）だが、
+ * ここから import しない：
+ *   - office.ts は `@/` エイリアスを使うサーバ専用モジュールで、このseedスクリプトの
+ *     相対import（../src/lib/data/*）とは解決経路が違う
+ *   - **CI は NEXT_PUBLIC_SR_LAUNCHED を設定していない**（.github/ 全体で0件＝2026-09-01実測）。
+ *     env だけを見ると validate ジョブで常に false になり、切ったつもりが切れていない
+ * そのため env があればそれを優先し、無ければ開業日（JST）で判定する。
+ * 開業日は過ぎているので以後は常に true。ローカルで開業前の挙動を再現したいときだけ
+ * NEXT_PUBLIC_SR_LAUNCHED を使わずに SR_LAUNCH_DATE を未来日へ差し替える。
+ */
+const SR_LAUNCH_DATE = "2026-09-01";
+const SR_LAUNCHED =
+  process.env.NEXT_PUBLIC_SR_LAUNCHED === "true" ||
+  new Date().toLocaleDateString("sv-SE", { timeZone: "Asia/Tokyo" }) >= SR_LAUNCH_DATE;
+
+/**
  * 内部リンク先（/column/<slug>）の許可リスト。
  *
  * 手で維持しない。既存の realestate 系シード生成物から実行時に集める。
@@ -765,11 +783,21 @@ function verify(cols: SeedColumn[], specs: ArticleSpec[]): string[] {
       notes.push(`NG: ${spec.slug} に分離受任の明示なし`);
     }
     if (!/紹介料/.test(c.content)) notes.push(`NG: ${spec.slug} に紹介料の扱いの記載なし`);
-    // 社労士は2026年9月開業予定。開業前に社労士としての業務・立場を書かない
-    if (/社会保険労務士/.test(c.content) && !/開業予定/.test(c.content)) {
+    // 社労士は2026-09-01に開業した。開業**前**は「開業予定」の但し書きを必須にしていたが、
+    // 開業後も掛け続けると、事実でない但し書きを本文に強制することになる。SR_LAUNCHED で切る。
+    //
+    // ★逆向きの検査（本文に「開業予定」「未開業」が残っていたらNG）は、ここに足さないこと。
+    //   開業前に書かれた realestate 原稿6本（20/22/23/26/27/28）が「開業予定」を含んでおり、
+    //   掃除より先に反転規則を入れると既存記事が一斉にNGになって seed dry-run が落ちる。
+    //   順序は ①ここで切る → ②別PRで既存記事から「開業予定」を掃除 → ③そのあと反転規則
+    //   （2026-09-01 浦松判断）。
+    if (!SR_LAUNCHED && /社会保険労務士/.test(c.content) && !/開業予定/.test(c.content)) {
       notes.push(`NG: ${spec.slug} の社労士表記に「開業予定」の但し書きなし`);
     }
-    if (/助成金/.test(c.content)) notes.push(`NG: ${spec.slug} に「助成金」（社労士領域・開業前）あり`);
+    // 助成金＝社会保険労務士の領域、補助金＝行政書士の領域。**業際の線であって開業の前後で
+    // 変わる話ではない**ため、SR_LAUNCHED では切らない（2026-09-01：理由文が「開業前」に
+    // なっていたのを業際に直しただけ。判定の挙動は変えていない）。
+    if (/助成金/.test(c.content)) notes.push(`NG: ${spec.slug} に「助成金」（社労士の領域＝業際）あり`);
 
     if (c.translations) {
       for (const loc of ["en", "zh", "zh-tw"] as const) {

@@ -66,8 +66,11 @@ jobs:
 
             着手前に必ず実在確認をする：
             - .tmp/sitemap-ja.txt に本番の日本語URLが入っている
-            - /labor は本番404なので scripts/labor-columns/ と
-              scripts/seed-labor-columns.ts の ARTICLES で確認する
+            - /labor も本番公開済み（2026-09-01開業。同日実測＝HTTP 200・
+              sitemap.xml に /labor/column/ が375件）。社労士コラムのURLも
+              sitemap-ja.txt に入っているので、棚卸しの対象から外さない
+            - 原稿の有無は scripts/labor-columns/ と
+              scripts/seed-labor-columns.ts の ARTICLES でも確認する
             - 「無いから作る」と判断した瞬間が最も危ない
 
             重点3レーン＝A物件×許認可／B相続／C中国語×プロ層。
