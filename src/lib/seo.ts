@@ -146,20 +146,29 @@ export const PERSON_JSONLD = {
     },
   ],
   // jobTitle＝役職／資格はhasCredentialへ分離。
-  // **jobTitle には社労士を入れない**（開業まで役職としては名乗らない）。
   //
-  // 2026-08-09 訂正：旧コメントは「社労士関連は開業まで出力しない」と書いていたが、
-  // 下の hasCredential には「社会保険労務士試験合格」を**意図的に出力している**（浦松判断）。
-  // 実装とコメントが食い違っていたため、コメント側を実装に合わせた。
-  // 試験に合格した事実は正確であり、credentialCategory に「試験合格」と明記して
-  // 登録資格と区別している。可視テキストも4言語で「試験合格（2026年9月開業予定）」。
-  jobTitle: ["四葉不動産株式会社 代表取締役", "四葉行政書士事務所 代表行政書士"],
+  // 2026-09-01 開業：**社労士を役職として名乗る**ようになった。
+  // 旧ルールは「jobTitle には社労士を入れない（開業まで役職としては名乗らない）」で、
+  // sr-credential.test.ts がそれを検査していた。開業日をもって前提が反転したため、
+  // 3件目を追加し、テスト側も同時に反転させている（片方だけ変えると必ず落ちる）。
+  // 登録は2026-09-01付の自動登録（東京都社会保険労務士会に確認済み）。
+  // 登録番号の交付は9月下旬だが、名乗り・役職表記の妨げにはならない。
+  jobTitle: [
+    "四葉不動産株式会社 代表取締役",
+    "四葉行政書士事務所 代表行政書士",
+    "四葉社会保険労務士事務所 代表社会保険労務士",
+  ],
   description:
-    "元毎日新聞中国総局長（記者歴34年）。文京区小日向で四葉不動産株式会社・四葉行政書士事務所を営む。",
+    "元毎日新聞中国総局長（記者歴34年）。文京区小日向で四葉不動産株式会社・四葉行政書士事務所・四葉社会保険労務士事務所を営む。",
   url: "https://luck428.com/about",
+  // 3事業体はそれぞれ独立した事業体（一括受任はしない）。@id で各Organizationノードを指す。
+  // labor は SR_LAUNCHED まで /labor 自体が404だったため、BUSINESS_URLS と同じ条件で出す。
   worksFor: [
     { "@id": "https://luck428.com/#organization" },
     { "@id": "https://luck428.com/legal/#organization" },
+    ...(process.env.NEXT_PUBLIC_SR_LAUNCHED === "true"
+      ? [{ "@id": "https://luck428.com/labor/#organization" }]
+      : []),
   ],
   // samurai.co.jp本番のPerson.hasCredentialと完全同一構造（クロスサイト整合・2026-07-16実測に合わせた）
   hasCredential: [
@@ -179,22 +188,37 @@ export const PERSON_JSONLD = {
       identifier: "（東京）第293544号",
       recognizedBy: { "@type": "Organization", name: "登録先の都道府県知事" },
     },
-    // ★★ 2026年9月1日に差し替えるとき、この2行は**必ず同時に**変える ★★
-    //   credentialCategory: "社会保険労務士試験合格" → "社会保険労務士"
-    //   identifier:         "令和7年 第202500525号"   → "第【登録番号】号"（登録番号）
-    //   recognizedBy:       （なし）                  → 全国社会保険労務士会連合会
+    // 社会保険労務士＝2026-09-01 登録（日付到来による自動登録・東京都社会保険労務士会に確認済み）。
+    // 同日「社会保険労務士試験合格／令和7年 第202500525号」から差し替えた。
     //
-    // 第202500525号は**試験合格番号であって登録番号ではない**。
-    // 登録番号と同じ形の欄に同じ形の番号が入っているため取り違えやすい。
-    // 片方だけ変えると「社会保険労務士：第202500525号（試験合格番号）」または
-    // 「社会保険労務士試験合格：第【登録番号】号」という不整合になる。
-    // → sr-credential.test.ts が両者の整合を検査する。
+    // ■ 第1波（2026-09-01・ここ）＝資格名だけを出し、identifier は**出さない**
+    //   登録番号の交付は9月下旬で、今日は手元にない。
+    //   ★プレースホルダー「第【登録番号】号」を入れてはいけない。**本番に出せない値**であり、
+    //     sr-credential.test.ts の「プレースホルダーが本番に残っていない」で落ちる。
+    //     旧コメントは identifier を "第【登録番号】号" に差し替えろと指示していたが、
+    //     それに従うと本番にプレースホルダーが出る。番号が出るまで identifier ごと省くのが正。
+    //     （sr-launch-patches.ts の第1波＝「番号を書かず、資格名だけを出す」と同じ方針）
+    // ■ 第2波（9月下旬）＝登録証で確認した実数を identifier に入れる。
+    //   sr-launch-patches.ts の REGISTRATION_NUMBER と同時に更新する。
+    //
+    // 令和7年 第202500525号は**試験合格番号であって登録番号ではない**。
+    // 登録番号と同じ形の欄に同じ形の番号が入るため取り違えやすい。ここへ戻さないこと。
+    // → sr-credential.test.ts が category と identifier の整合を検査する。
     {
       "@type": "EducationalOccupationalCredential",
-      credentialCategory: "社会保険労務士試験合格",
-      identifier: "令和7年 第202500525号",
+      credentialCategory: "社会保険労務士",
+      recognizedBy: {
+        "@type": "Organization",
+        name: "全国社会保険労務士会連合会",
+        // LABOR_MEMBER_OF と同一URL（2026-09-01に実ページで裏取り済み）。
+        // LABOR_MEMBER_OF はこの下で定義されるため、ここでは参照せず同じ値を書く。
+        url: "https://www.shakaihokenroumushi.jp/",
+      },
     },
   ],
+  // 士業の会所属は**登録により当然に発生する個人の所属**（行政書士法・社労士法）。
+  // 事務所（Organization）側の memberOf とは別に、Person にも持たせる。
+  // 社労士2件は2026-09-01の登録で追加（URLは LABOR_MEMBER_OF と同一・同日に実ページで裏取り）。
   memberOf: [
     {
       "@type": "Organization",
@@ -205,6 +229,16 @@ export const PERSON_JSONLD = {
       "@type": "Organization",
       name: "日本行政書士会連合会",
       url: "https://www.gyosei.or.jp/",
+    },
+    {
+      "@type": "Organization",
+      name: "東京都社会保険労務士会",
+      url: "https://www.tokyosr.jp/",
+    },
+    {
+      "@type": "Organization",
+      name: "全国社会保険労務士会連合会",
+      url: "https://www.shakaihokenroumushi.jp/",
     },
   ],
   affiliation: [

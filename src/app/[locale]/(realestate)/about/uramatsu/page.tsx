@@ -12,10 +12,15 @@
 //   行政書士業務は「併設の四葉行政書士事務所が別契約で受任」の形でのみ記載。
 // 社労士＝開業（SR_LAUNCHED・2026-09-01）で注記が切り替わる（SR_META／SR_NOTE／SR_FAQ）。
 //   開業前は「2026年9月開業予定・現時点では未開業」、開業後は資格名と事務所名のみ。
-//   **開業後も登録番号は書かない**（交付は2026年9月下旬）。hasCredential も9月下旬まで社労士を出さない。
+//   **開業後も登録番号は書かない**（交付は2026年9月下旬）。これは今も有効。
+//   ※2026-09-01 変更：旧規則の後半「hasCredential も9月下旬まで社労士を出さない」は撤回した（浦松判断）。
+//     理由＝可視テキストは開業日に「保有資格…社会保険労務士」へ切り替わっており（本番実測）、
+//     構造化データだけ社労士を欠くと**可視と構造化データがズレる**。規則の趣旨は「番号を出さない」ことで、
+//     実装は identifier を出さないので趣旨は保たれる。sr-launch-patches.ts の第1波方針
+//     （番号を書かず、資格名だけを出す・2026-08-31改訂）とも一致する。
 // JSON-LD：
 //   - ProfilePage＋Person（mainEntity）。Personは既存founderと同一 @id（PERSON_ID）のサブセットノード
-//     ＝B-2指定フィールドのみ（hasCredential=宅建士・行政書士の2件。社労士試験合格は本文注記のみで出力しない）。
+//     ＝B-2指定フィールドのみ（hasCredential=宅建士・行政書士＋開業後は社労士。登録番号は社労士のみ付けない）。
 //     Personフルノードの正は従来どおり /about の ProfilePageJsonLd（seo.ts PERSON_JSONLD）＝@id同一でKG上マージ。
 //   - FAQPage（3問）＝Faq部品 withJsonLd。※既存規則「FAQPage は各サイト1本＝/faq のみ」（委任§4-6）の
 //     例外＝タスクB-2指示による（B-1 /ryokin と同じ扱い）。
@@ -494,8 +499,9 @@ const COPY: Record<LangCode, ProfileCopy> = { ja: JA, en: EN, "zh-tw": ZH_TW, zh
 
 /**
  * ProfilePage＋Person（B-2指定のサブセットノード）のロケール別ノード。
- * hasCredential＝宅建士・行政書士の2件のみ（seo.ts PERSON_JSONLD と同一構造。
- * 社労士試験合格は本文注記のみ＝ここには含めない）。sameAs＝B-2指定の3本のみ
+ * hasCredential＝宅建士・行政書士＋**開業後（SR_LAUNCHED）は社労士**の3件
+ * （seo.ts PERSON_JSONLD と同一構造・同一状態。社労士だけ identifier を付けない＝
+ * 登録番号の交付が2026年9月下旬のため）。sameAs＝B-2指定の3本のみ
  * （フルセットは /about の PERSON_JSONLD.sameAs が正＝@id同一でマージされる）。
  *
  * C-6-3（多言語化）の規則：
@@ -514,6 +520,11 @@ type PersonL10n = {
   orgName: string;
   credentialTakken: string;
   credentialGyosei: string;
+  /**
+   * 社労士の資格名（開業後のみ JSON-LD に出す）。
+   * 文言は**このファイルの可視テキスト（SR_FAQ の開業後版）と同一のものを使う**＝訳を創作しない。
+   */
+  credentialSharoushi: string;
 };
 
 const PERSON_L10N: Record<LangCode, PersonL10n> = {
@@ -524,6 +535,7 @@ const PERSON_L10N: Record<LangCode, PersonL10n> = {
     orgName: "四葉不動産株式会社",
     credentialTakken: "宅地建物取引士",
     credentialGyosei: "行政書士",
+    credentialSharoushi: "社会保険労務士",
   },
   en: {
     pageName:
@@ -533,6 +545,8 @@ const PERSON_L10N: Record<LangCode, PersonL10n> = {
     orgName: "Yotsuba Real Estate Co., Ltd.",
     credentialTakken: "Licensed Real Estate Transaction Specialist (宅地建物取引士)",
     credentialGyosei: "Gyoseishoshi (Administrative Scrivener) (行政書士)",
+    credentialSharoushi:
+      "Certified Social Insurance and Labor Consultant (Sharoushi, 社会保険労務士)",
   },
   "zh-tw": {
     pageName: "代表・浦松丈二簡介｜前報社記者的宅地建物交易士・行政書士 | 四葉不動産",
@@ -541,6 +555,7 @@ const PERSON_L10N: Record<LangCode, PersonL10n> = {
     orgName: "四葉不動産株式会社",
     credentialTakken: "宅地建物交易士（日本語：宅地建物取引士）",
     credentialGyosei: "行政書士",
+    credentialSharoushi: "社會保險勞務士（日本語：社会保険労務士）",
   },
   zh: {
     pageName: "代表・浦松丈二简介｜前报社记者的宅地建物交易士・行政书士 | 四葉不動産",
@@ -549,6 +564,7 @@ const PERSON_L10N: Record<LangCode, PersonL10n> = {
     orgName: "四葉不動産株式会社",
     credentialTakken: "宅地建物交易士（日本語：宅地建物取引士）",
     credentialGyosei: "行政书士（日本語：行政書士）",
+    credentialSharoushi: "社会保险劳务士（日本語：社会保険労務士）",
   },
 };
 
@@ -591,6 +607,23 @@ function buildProfilePageJsonLd(locale: LangCode) {
             url: "https://www.gyosei.or.jp/",
           },
         },
+        // 社労士＝開業（SR_LAUNCHED・2026-09-01）で出す。可視テキスト（保有資格・SR_FAQ）が
+        // 同じフラグで切り替わるので、**可視と構造化データが必ず同時に動く**。
+        // identifier（登録番号）は付けない＝交付が2026年9月下旬のため。第2波で追加する。
+        // seo.ts の PERSON_JSONLD.hasCredential と同じ状態（＝@id が同じPersonの中身が食い違わない）。
+        ...(SR_LAUNCHED
+          ? [
+              {
+                "@type": "EducationalOccupationalCredential",
+                credentialCategory: l.credentialSharoushi,
+                recognizedBy: {
+                  "@type": "Organization",
+                  name: "全国社会保険労務士会連合会",
+                  url: "https://www.shakaihokenroumushi.jp/",
+                },
+              },
+            ]
+          : []),
       ],
       sameAs: [
         "https://www.wikidata.org/wiki/Q139738129",

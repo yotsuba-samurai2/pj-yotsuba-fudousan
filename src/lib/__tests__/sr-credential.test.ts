@@ -4,11 +4,14 @@ import { PERSON_JSONLD } from "@/lib/seo";
 /**
  * 社会保険労務士の hasCredential の整合ガード。
  *
- * 【前提】2026-08-09 浦松判断により、社労士の hasCredential は**外さない**。
- * 「社会保険労務士試験合格」として出力し続ける。
+ * 【前提】2026-09-01 に登録（日付到来による自動登録）。同日「社会保険労務士試験合格」から
+ * 「社会保険労務士」へ差し替えた。**登録番号の交付は9月下旬**のため、第1波では
+ * identifier を出さない（プレースホルダーを本番に出さないことが優先）。
  *
- * 【守るもの】9月1日の差し替えで credentialCategory と identifier が
- * ちぐはぐになるのを防ぐ。
+ * 【守るもの】credentialCategory と identifier がちぐはぐになるのを防ぐ。
+ * あわせて、資格（hasCredential）と役職（jobTitle）の**状態が食い違わない**ことを検査する。
+ * 開業日には両方を同時に動かす必要があり、片方だけ動かすと
+ * 「社労士として登録済みだが役職としては名乗っていない」中途半端な出力になる。
  *
  *   第202500525号は **試験合格番号であって登録番号ではない**。
  *   登録番号と同じ形の欄に同じ形の番号が入っているため取り違えやすい。
@@ -82,9 +85,36 @@ describe("他2資格は登録済みとして正しく出ている", () => {
   });
 });
 
-describe("jobTitle には社労士を入れない（開業まで役職として名乗らない）", () => {
-  it("jobTitle に社会保険労務士が含まれない", () => {
+/**
+ * 2026-09-01 反転。旧テストは「jobTitle に社会保険労務士が含まれない（開業まで役職として
+ * 名乗らない）」を検査していた。開業日をもって前提が逆になったため、逆向きに検査する。
+ * 開業前の状態へ戻すときは、hasCredential の credentialCategory も同時に戻すこと
+ * （下の整合テストが片側だけの変更を落とす）。
+ */
+describe("開業後は jobTitle でも社労士を名乗る", () => {
+  it("jobTitle に「四葉社会保険労務士事務所 代表社会保険労務士」が含まれる", () => {
     const titles = PERSON_JSONLD.jobTitle as readonly string[];
-    expect(titles.some((t) => t.includes("社会保険労務士"))).toBe(false);
+    expect(titles).toContain("四葉社会保険労務士事務所 代表社会保険労務士");
+  });
+
+  it("資格と役職の状態が一致している（登録済みなら役職でも名乗る／逆も同じ）", () => {
+    const titles = PERSON_JSONLD.jobTitle as readonly string[];
+    const registeredCredential = sr?.credentialCategory === REGISTERED_CATEGORY;
+    const namedInJobTitle = titles.some((t) => t.includes("社会保険労務士"));
+    expect(namedInJobTitle).toBe(registeredCredential);
+  });
+});
+
+/**
+ * 第1波（2026-09-01）＝資格名だけを出し、identifier は出さない。
+ * 登録番号の交付は9月下旬。第2波でここに実数が入るまで、identifier は未設定が正。
+ */
+describe("登録番号の第1波／第2波", () => {
+  it("identifier を出すなら、それは登録番号であって試験合格番号でもプレースホルダーでもない", () => {
+    const id = sr?.identifier;
+    if (id !== undefined) {
+      expect(id).not.toContain(EXAM_NUMBER);
+      expect(id).not.toContain("【登録番号】");
+    }
   });
 });
