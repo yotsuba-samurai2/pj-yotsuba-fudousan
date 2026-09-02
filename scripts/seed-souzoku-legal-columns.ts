@@ -416,6 +416,20 @@ const REQUIRED_HUB_LINKS: Record<string, string[]> = {
     "/legal/column/souzoku-touki-nagare",
     "/legal/column/houtei-souzoku-bun",
   ],
+  "shinryojo-kaisetsu-todokede-iryoho-8jo": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+  ],
+  "nini-koken-keiyaku-ikogata": [
+    "/legal/services/inheritance",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/souzoku",
+    "/legal/column/shigojimu-inin-keiyaku-ohitorisama",
+    "/legal/column/kazoku-shintaku-gyosei-yakuwari-kumisei",
+    "/legal/column/souzoku-ninchisho-yukuefumei-miseinen",
+  ],
 };
 
 /** 表示コンプライアンス上の禁止語 */
@@ -1115,6 +1129,46 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "別事業体",
     "独立した事業体",
   ],
+  "shinryojo-kaisetsu-todokede-iryoho-8jo": [
+    "医療法第8条第1項",
+    "医療法第7条",
+    "医療法第1条の5",
+    "医療法第44条第1項",
+    "臨床研修等修了医師",
+    "開設後10日以内",
+    "都道府県知事",
+    "保健所",
+    "20人以上",
+    "19人以下",
+    "健康保険法第65条第1項",
+    "保険医療機関の指定",
+    "地方厚生（支）局",
+    "医療法人",
+    "紹介料を受け取りません",
+    "別事業体",
+    "独立した事業体",
+  ],
+  "nini-koken-keiyaku-ikogata": [
+    "任意後見契約に関する法律",
+    "任意後見契約に関する法律第3条",
+    "任意後見契約に関する法律第4条第1項",
+    "任意後見契約に関する法律第10条第1項",
+    "公正証書",
+    "任意後見監督人",
+    "法定後見",
+    "移行型",
+    "財産管理委任契約",
+    "見守り契約",
+    "民法第7条",
+    "民法第11条",
+    "民法第15条",
+    "民法第643条",
+    "家族信託",
+    "信託法",
+    "紹介料を受け取りません",
+    "別事業体",
+    "独立した事業体",
+  ],
 };
 
 /** 記事ごとに含めてはならない表現 */
@@ -1194,6 +1248,8 @@ const FORBIDDEN_PHRASES: Record<string, string[]> = {
   "souzoku-tokubetsu-jueki-kiyobun": [],
   "jidosha-tokutei-seibi-ninsho-shinsei-nagare-youken": [],
   "haiguusha-kyojuuken-settei-isanbunkatsu-touki": [],
+  "shinryojo-kaisetsu-todokede-iryoho-8jo": [],
+  "nini-koken-keiyaku-ikogata": [],
 };
 
 /** 本セット外へ張る既存legalコラムslug（リポジトリの他シードで実在確認済み） */
@@ -2031,6 +2087,58 @@ const ARTICLES: Array<{
       "遺産分割協議書",
       "相続登記",
       "相続税",
+      "行政書士",
+    ],
+  },
+  {
+    file: "39-shinryojo-kaisetsu-todokede-iryoho-8jo.md",
+    slug: "shinryojo-kaisetsu-todokede-iryoho-8jo",
+    date: "2026-09-02",
+    title:
+      "診療所（クリニック）を開くときの開設届──医療法8条の届出と、病院の許可はどう違うのか",
+    category: "許認可の手続き（行政書士の実務から）",
+    excerpt:
+      "無床または19床以下の診療所（クリニック）は、病院と違って開設の許可ではなく届出で始められます。臨床研修等修了医師等が診療所を開設したときは開設後10日以内に都道府県知事（保健所）へ届け出ます（医療法第8条第1項）。病院・有床・医師以外の開設との違い（医療法第7条・第1条の5）、保険診療に要る保険医療機関の指定（健康保険法第65条第1項）、医療法人での開業（医療法第44条第1項）を整理し、物件は不動産、登記は司法書士、税務は税理士、労務は社会保険労務士へ分離受任で振る分担を示しました。",
+    keywords: [
+      "診療所 開設届 10日以内",
+      "クリニック 開業 届出 許可 違い",
+      "医療法 8条 診療所 開設届",
+      "保険医療機関 指定 申請 地方厚生局",
+      "医療法人 設立 認可 診療所",
+      "診療所 開設届 行政書士",
+    ],
+    tags: [
+      "診療所開設届",
+      "医療法",
+      "許認可",
+      "保険医療機関",
+      "医療法人",
+      "行政書士",
+    ],
+  },
+  {
+    file: "40-nini-koken-keiyaku-ikogata.md",
+    slug: "nini-koken-keiyaku-ikogata",
+    date: "2026-09-02",
+    title:
+      "任意後見契約とは──移行型の仕組みと、法定後見・家族信託との違い",
+    category: "相続の手続き（行政書士の実務から）",
+    excerpt:
+      "任意後見契約は、判断能力があるうちに将来の財産管理・療養看護の担い手を自分で決め、代理権を与えておく契約です（任意後見契約に関する法律第2条）。公正証書で結び（第3条）、家庭裁判所が任意後見監督人を選任したときから効力が生じます（第4条）。判断能力があるうちの財産管理委任契約と組み合わせる移行型、見守り契約、家庭裁判所が担い手を選ぶ法定後見（民法第7条・第11条・第15条）との違い、家族信託との使い分けを整理し、監督人選任の申立ては弁護士・司法書士、税務は税理士へ分離受任で振る分担を示しました。",
+    keywords: [
+      "任意後見契約 とは 移行型",
+      "任意後見 法定後見 違い",
+      "任意後見 公正証書 効力 いつから",
+      "財産管理委任契約 見守り契約",
+      "任意後見 家族信託 使い分け",
+      "任意後見契約 行政書士",
+    ],
+    tags: [
+      "任意後見契約",
+      "移行型",
+      "財産管理委任契約",
+      "法定後見",
+      "家族信託",
       "行政書士",
     ],
   },

@@ -712,6 +712,46 @@ const ARTICLES: ArticleSpec[] = [
     localesWithTranslations: ["en", "zh-tw", "zh"],
     hubLinks: ["/toushi"],
   },
+  {
+    file: "34-inshokuten-skeleton-bukken-haiki-grease.md",
+    slug: "inshokuten-skeleton-bukken-haiki-grease",
+    title: "スケルトン物件で飲食店を開くとき、排気・グリストラップ・防火で物件選びはどこまで決まるか",
+    publishedAt: "2026-09-02",
+    category: "投資・事業用不動産",
+    excerpt:
+      "スケルトン（内装なし）物件で飲食店を開けるかは、契約前の4点でほぼ決まります。①用途地域（第一種低層住居専用地域・工業専用地域では原則不可）②排気ダクトを外壁・屋上まで通せる経路と貸主の許可③グリストラップを後付けできる給排水の素地④防火区画・スプリンクラー・避難経路が階数と面積で成立するか。東京都文京区の宅地建物取引士兼行政書士が、契約前に確認できることを食品衛生法・建築基準法・消防法・風営法の条文から順に整理します。",
+    keywords: [
+      "スケルトン物件 飲食店",
+      "飲食店 排気ダクト 物件",
+      "グリストラップ 後付け",
+      "飲食店 用途地域 工業専用地域",
+      "深夜酒類提供飲食店営業 届出",
+    ],
+    tags: ["事業用不動産", "許認可", "用途地域", "消防法"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/toushi"],
+  },
+  {
+    file: "35-souzoku-kyoyu-fudosan-uru-doui.md",
+    slug: "souzoku-kyoyu-fudosan-uru-doui",
+    title: "相続した共有の不動産を売る——全員の同意が要る場面と、自分の持分だけを売る場合の実務",
+    publishedAt: "2026-09-02",
+    category: "相続",
+    excerpt:
+      "相続した共有の不動産を「まるごと」売るには共有者全員の同意が要ります（民法第251条第1項）。一方、自分の持分だけなら他の共有者の同意なしに第三者へ売れますが、使い道が限られるため価格が下がりやすく買主も限られます。話し合いがまとまらないときは共有物分割（民法第256条・第258条）に進み、争いになれば弁護士へ。売る前提として相続登記（2024年4月から義務）を先に済ませます。東京都文京区の宅地建物取引士兼行政書士が条文から整理します。",
+    keywords: [
+      "共有 不動産 売却",
+      "共有持分 売却",
+      "共有物分割 民法258条",
+      "相続 共有 全員同意",
+      "相続登記 義務化 2024",
+    ],
+    tags: ["相続", "共有", "売却"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/souzoku"],
+  },
 ];
 
 function toPlainText(md: string): string {
