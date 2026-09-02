@@ -7,9 +7,16 @@ export const NON_DEFAULT_LOCALES: LangCode[] = ["en", "zh-tw", "zh"];
 /** Cookie名 */
 export const LOCALE_COOKIE = "yotsuba-locale";
 
-/** パスの先頭からロケールプレフィックスを検出 */
+/**
+ * パスの先頭からロケールプレフィックスを検出。
+ * 【2026-09-02修正】PR#297のロケールURLセグメント化以降、サーバ描画時の usePathname は
+ * ja でも内部セグメント込みの「/ja/...」を返す。ja を剥がさないと
+ * addLocalePrefix との合成で「/en/ja/...」という二重ロケールURL（404）を生む
+ * （言語スイッチャーが全ページで404リンクを出力していた本番実測 2026-09-02）。
+ * そのため既定ロケール ja もここで剥がす。公開URLに「/ja」は存在しない（存在時は301）ため副作用はない。
+ */
 export function detectLocaleFromPath(pathname: string): { locale: LangCode; strippedPath: string } {
-  for (const loc of NON_DEFAULT_LOCALES) {
+  for (const loc of SUPPORTED_LOCALES) {
     if (pathname === `/${loc}` || pathname.startsWith(`/${loc}/`)) {
       const stripped = pathname.slice(loc.length + 1) || "/";
       return { locale: loc, strippedPath: stripped };
