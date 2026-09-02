@@ -90,8 +90,14 @@ describe("memberOf は資格ごとに正しい会である", () => {
 });
 
 describe("社労士の sameAs は裏取りできたものだけを出す", () => {
-  it("Wikidata・GBPが未整備のあいだは空である", () => {
-    // 整備できたらこのテストを更新して足す。空のまま他事業体から借りないことが要点。
-    expect(LABOR_SAME_AS).toEqual([]);
+  it("自前の Wikidata Q141252134（2026-09-02 作成）を含む", () => {
+    expect(LABOR_SAME_AS as readonly string[]).toContain(
+      "https://www.wikidata.org/wiki/Q141252134",
+    );
+  });
+  it("Wikidata と GBP 以外を含まない（GBP は cid 設定後に GBP_URL.labor から入る）", () => {
+    for (const u of LABOR_SAME_AS as readonly string[]) {
+      expect(u.startsWith("https://www.wikidata.org/wiki/Q141252134") || u.startsWith("https://maps.google.com/?cid=")).toBe(true);
+    }
   });
 });
