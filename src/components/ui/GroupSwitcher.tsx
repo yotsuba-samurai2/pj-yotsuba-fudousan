@@ -6,13 +6,15 @@ import Image from "next/image";
 import { LocaleLink as Link } from "@/components/ui/LocaleLink";
 import { Grid3X3 } from "lucide-react";
 import { groupBusinesses, getBusinessByPath } from "@/config/group";
+import { stripLocalePrefix } from "@/lib/locale";
 import { useTranslation } from "@/hooks/useTranslation";
 
 export function GroupSwitcher() {
   const [isOpen, setIsOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
-  const currentBiz = getBusinessByPath(pathname);
+  // ロケールセグメント（/ja 含む）を剥がしてから事業体判定（2026-09-02・二重ロケール是正と同根）
+  const currentBiz = getBusinessByPath(stripLocalePrefix(pathname));
   const { t } = useTranslation();
 
   useEffect(() => {

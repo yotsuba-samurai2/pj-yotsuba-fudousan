@@ -4,6 +4,7 @@ import Image from "next/image";
 import { LocaleLink as Link } from "@/components/ui/LocaleLink";
 import { useState, useEffect, useCallback, useMemo, useRef } from "react";
 import { usePathname } from "next/navigation";
+import { stripLocalePrefix } from "@/lib/locale";
 import { Menu, X, CalendarDays, ChevronDown } from "lucide-react";
 import { groupBusinesses } from "@/config/group";
 import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher";
@@ -466,7 +467,10 @@ function ServicesMobileAccordion({
 function TenantHeader({ businessKey }: { businessKey: string }) {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const pathname = usePathname();
+  const rawPathname = usePathname();
+  // ロケールセグメント（/ja 含む）を剥がしてから使う。剥がさないとナビのアクティブ判定が
+  // 全ロケールで不一致になる（2026-09-02・言語スイッチャー二重ロケール是正と同根）。
+  const pathname = stripLocalePrefix(rawPathname);
   const { t } = useTranslation();
   const { locale } = useLanguage();
 
