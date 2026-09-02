@@ -235,6 +235,7 @@ const STATIC_LABOR: StaticPage[] = [
   { path: "/labor/services/gaikokujin-koyo", changeFrequency: "monthly", priority: 0.8, locales: ["ja", "en", "zh-tw", "zh"] }, // 2026-09-01 4言語公開（第2波）
   { path: "/labor/services/gaibu-kansanin", changeFrequency: "monthly", priority: 0.8, locales: ["ja", "en", "zh-tw", "zh"] }, // 2026-09-01 4言語公開（第2波）
   { path: "/labor/services/saiyo", changeFrequency: "monthly", priority: 0.8, locales: ["ja", "en", "zh-tw", "zh"] }, // 2026-09-01 4言語公開（第2波）
+  { path: "/labor/services/shogai-nenkin", changeFrequency: "monthly", priority: 0.8, locales: ["ja"] }, // 2026-09-02 新設・ja のみ
   { path: "/labor/ryokin", changeFrequency: "monthly", priority: 0.7, locales: ["ja", "en", "zh-tw", "zh"] }, // 2026-09-01 4言語公開（第1波）
   { path: "/labor/nagare", changeFrequency: "yearly", priority: 0.6, locales: ["ja", "en", "zh-tw", "zh"] }, // 2026-09-01 4言語公開（第1波）
   { path: "/labor/faq", changeFrequency: "monthly", priority: 0.6, locales: ["ja"] },

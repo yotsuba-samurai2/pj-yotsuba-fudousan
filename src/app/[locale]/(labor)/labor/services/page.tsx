@@ -77,6 +77,8 @@ const JA: Copy = {
     { href: "/labor/services/gaikokujin-koyo", label: "外国人雇用（介護・育成就労）の労務", audience: "外国人材の雇用契約・社会保険・受入準備を整えたい事業者" },
     { href: "/labor/services/gaibu-kansanin", label: "外部監査で見られる労務", audience: "育成就労の外部監査に備える監理支援機関・受入企業" },
     { href: "/labor/services/saiyo", label: "募集・採用の労務", audience: "求人票の労働条件と、内定から入社までの書面・手続きを整えたい事業者" },
+    // 唯一のB2C（個人のお客さま）。顧問契約を前提としない点が他と異なるため audience に明記する。
+    { href: "/labor/services/shogai-nenkin", label: "障害年金の裁定請求", audience: "障害年金の請求を考えるご本人・ご家族（顧問契約は不要です）" },
   ],
   audiencePrefix: "こんな方に：",
   footerFee: "料金は",
