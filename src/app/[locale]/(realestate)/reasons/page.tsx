@@ -37,6 +37,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { FAQJsonLd } from "@/components/seo/FAQJsonLd";
 import { CannotHandle } from "@/components/shared/CannotHandle";
 import { SR_OFFICE_NAME } from "@/lib/shared/sr-name";
+import { SR_REGISTRATION_ID } from "@/lib/shared/sr-registration";
 
 const SR_LAUNCHED = process.env.NEXT_PUBLIC_SR_LAUNCHED === "true";
 
@@ -92,8 +93,8 @@ const YAKUWARI_BASE: Yakuwari[] = [
 const YAKUWARI_SR_LAUNCHED: Yakuwari = {
   office: SR_OFFICE_NAME,
   work: "労働・社会保険の手続き、就業規則をはじめとする社内規程の作成、労務管理の相談",
-  // 登録番号の交付は2026年9月下旬（yotsuba-sharoushi-kaigyo 第14条）。それまで番号もプレースホルダーも出さない。
-  license: "社会保険労務士（登録番号は2026年9月下旬に交付予定）",
+  // 登録番号＝2026-09-01 登録証で確認（正本 sr-registration.ts）。行政書士の行と同じ体裁。
+  license: `社会保険労務士 登録番号${SR_REGISTRATION_ID}`,
 };
 
 /** 開業前＝未開業であることを表の中で明示する（現在形で受任できると読ませない） */

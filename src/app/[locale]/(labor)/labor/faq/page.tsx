@@ -6,7 +6,7 @@ import { getRequestLocale } from "@/lib/getRequestLocale";
 import { Breadcrumb } from "@/components/shared/Breadcrumb";
 import { Faq, type FaqItem } from "@/components/shared/Faq";
 import { CtaBand } from "@/components/shared/CtaBand";
-import { Placeholder } from "@/components/shared/Placeholder";
+import { SR_REG_PAREN } from "@/lib/shared/sr-registration";
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getRequestLocale();
@@ -110,7 +110,7 @@ export default function Page() {
           />
           <p className="text-xs leading-relaxed text-text-muted">
             <strong>この記事の著者</strong> 浦松 丈二｜四葉社会保険労務士事務所 代表 社会保険労務士
-            <Placeholder reason="開業時確定＝社労士登録番号" />
+            {SR_REG_PAREN.ja}
             ・行政書士（登録番号 第25087022号）・宅地建物取引士。元毎日新聞中国総局長（記者歴34年）。
           </p>
         </aside>

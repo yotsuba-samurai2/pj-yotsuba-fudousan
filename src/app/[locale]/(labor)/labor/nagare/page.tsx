@@ -15,9 +15,9 @@ import { addLocalePrefix } from "@/lib/locale";
 import Link from "next/link";
 import { Breadcrumb } from "@/components/shared/Breadcrumb";
 import { CtaBand } from "@/components/shared/CtaBand";
-import { Placeholder } from "@/components/shared/Placeholder";
 import { HowToJsonLd } from "@/components/seo/HowToJsonLd";
 import type { LangCode } from "@/config/languages";
+import { srRegParen } from "@/lib/shared/sr-registration";
 
 type Step = { name: string; text: string };
 type QA = { q: string; a: string };
@@ -387,7 +387,7 @@ export default async function Page() {
 
         <p className="mt-12 text-sm text-text-muted">{c.noteServices}</p>
 
-        {/* 署名（登録番号＝9月下旬の交付まで非出力） */}
+        {/* 署名（登録番号＝sr-registration.ts） */}
         <aside className="mt-8 flex items-start gap-3 rounded-xl border border-border bg-surface p-4">
           <img
             src="/staff/uramatsu-square.webp"
@@ -399,7 +399,7 @@ export default async function Page() {
           <p className="text-xs leading-relaxed text-text-muted">
             <strong>{c.authorTitle}</strong>
             {c.authorBody1}
-            <Placeholder reason="9月下旬確定＝社労士登録番号" />
+            {srRegParen(locale)}
             {c.authorBody2}
           </p>
         </aside>

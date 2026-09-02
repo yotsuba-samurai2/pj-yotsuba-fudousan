@@ -13,11 +13,11 @@ import { addLocalePrefix } from "@/lib/locale";
 import { Breadcrumb } from "@/components/shared/Breadcrumb";
 import { CtaBand } from "@/components/shared/CtaBand";
 import { CrossLinkBanner } from "@/components/shared/CrossLinkBanner";
-import { Placeholder } from "@/components/shared/Placeholder";
 import { getCrossLinks } from "@/lib/cross-links";
 import { SR_LAUNCHED } from "@/lib/shared/office";
 import { PERSON_ID } from "@/lib/seo";
 import type { LangCode } from "@/config/languages";
+import { srRegParen } from "@/lib/shared/sr-registration";
 
 const SITE = "https://luck428.com";
 
@@ -142,7 +142,7 @@ export async function LaborServicePage(p: LaborServicePageProps) {
           <CrossLinkBanner key={c.id} link={c} lead={p.crossLinkLead} />
         ))}
 
-        {/* 署名（E-E-A-T・原稿_社労士サイト共通。登録番号＝開業時確定まで非出力） */}
+        {/* 署名（E-E-A-T・原稿_社労士サイト共通。登録番号＝sr-registration.ts） */}
         <aside className="mt-8 flex items-start gap-3 rounded-xl border border-border bg-surface p-4">
           <img
             src="/staff/uramatsu-square.webp"
@@ -154,7 +154,7 @@ export async function LaborServicePage(p: LaborServicePageProps) {
           <p className="text-xs leading-relaxed text-text-muted">
             <strong>{sh.authorTitle}</strong>
             {sh.authorBody1}
-            <Placeholder reason="9月下旬確定＝社労士登録番号" />
+            {srRegParen(locale)}
             {sh.authorBody2}
           </p>
         </aside>

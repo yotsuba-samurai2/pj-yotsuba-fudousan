@@ -195,11 +195,10 @@ export default function FixLaborOfficeInfoPage() {
 
       {results.length > 0 && (
         <p className="mt-4 max-w-2xl text-xs text-text-muted">
-          ★登録番号の行は「2026年9月1日 登録予定」で入っています。
-          <strong className="text-text">開業後に、実際の登録番号へ差し替えてください。</strong>
-          差し替えは <span className="font-mono">src/lib/data/labor-office-info-patches.ts</span> の
-          <span className="font-mono"> REGISTRATION_PENDING </span>
-          を書き換えて、このページをもう一度実行する形になります。
+          ★登録番号の行は実番号（第13260359号・2026年9月1日登録）で入ります。
+          正本は <span className="font-mono">src/lib/shared/sr-registration.ts</span>、
+          行の体裁は <span className="font-mono">labor-office-info-patches.ts</span> の
+          <span className="font-mono"> REGISTRATION_ROW </span> です。
         </p>
       )}
     </div>

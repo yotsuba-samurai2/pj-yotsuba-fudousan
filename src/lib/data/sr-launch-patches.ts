@@ -19,27 +19,29 @@
 //   **登録番号の交付は9月下旬**。両者がずれる。
 //
 //   第1波（9/1）  … 番号を書かず、資格名だけを出す。IS_PLACEHOLDER=true のまま適用してよい
-//   第2波（9月下旬）… REGISTRATION_NUMBER を登録証で確認した実数へ差し替えて再適用する
+//   第2波（2026-09-01 登録証到着・予定より早く同日到着）… REGISTRATION_NUMBER が実数になり、
+//               footer の資格表記に登録番号が付く。再適用は /admin/sr-launch の A から
 //
 //   第2波の from は「第1波の適用結果＝そのときの本番の実測値」になる。
 //   本ファイルの原則どおり、**9月下旬に本番を実測してから from を書く**。
 //   REGISTRATION_NUMBER は試験合格番号（令和7年 第202500525号）ではない。
 
 import type { LangCode } from "@/config/languages";
+import { SR_REGISTRATION_NUMBER } from "@/lib/shared/sr-registration";
 
 /**
  * 社会保険労務士の登録番号。
  *
- * ★ 2026年9月1日（登録日）に、登録証で確認した**実数**へ差し替える。
- *   ここ1か所だけを直せば、下の全パッチに反映される。
+ * ★ 正本は src/lib/shared/sr-registration.ts（2026-09-01 登録証で実数を確認＝第13260359号）。
+ *   ここは互換のための再輸出。数字を直書きしない。
  *
  * ★ 登録番号であって**試験合格番号ではない**。
  *   試験合格番号は「令和7年 第202500525号」。取り違えないこと。
  */
-export const REGISTRATION_NUMBER = "【登録番号】";
+export const REGISTRATION_NUMBER: string = SR_REGISTRATION_NUMBER;
 
 /**
- * プレースホルダーのままか＝**登録番号が未交付か**。
+ * プレースホルダーのままか＝**登録番号が未交付か**。2026-09-01 登録証到着により false。
  *
  * ★ 2026-08-31 に意味を変えた。以前は「true の間は適用してはならない」だったが、
  *   登録日（9/1）と番号の交付（9月下旬）がずれるため、それでは開業日に
@@ -80,7 +82,7 @@ function withReg(lang: SrLang): string {
   if (IS_PLACEHOLDER) return QUAL[lang];
   switch (lang) {
     case "ja":
-      return `${QUAL.ja} 登録番号第${N}号`;
+      return `${QUAL.ja} 登録番号 第${N}号`;
     case "en":
       return `${QUAL.en}, Registration No. ${N}`;
     case "zh-tw":
@@ -95,7 +97,7 @@ function regParen(lang: SrLang): string {
   if (IS_PLACEHOLDER) return "";
   switch (lang) {
     case "ja":
-      return `（登録番号第${N}号）`;
+      return `（登録番号 第${N}号）`;
     case "en":
       return ` (Registration No. ${N})`;
     case "zh-tw":
@@ -138,8 +140,9 @@ export const SR_LAUNCH_TRANSLATION_PATCHES: Record<
     },
     {
       path: "common.footer.laborRepRegistration",
-      from: "社会保険労務士試験合格（2026年9月開業予定）",
+      from: QUAL.ja,
       to: withReg("ja"),
+      note: "第2波（2026-09-01 登録証到着）：第1波で資格名だけにした値へ登録番号を足す",
     },
     {
       path: "representative.srExamNote",
@@ -245,7 +248,7 @@ export const SR_LAUNCH_TRANSLATION_PATCHES: Record<
     },
     {
       path: "common.footer.laborRepRegistration",
-      from: "Passed the Certified Social Insurance and Labor Consultant Examination (opening planned for September 2026)",
+      from: QUAL.en,
       to: withReg("en"),
     },
     {
@@ -351,7 +354,7 @@ export const SR_LAUNCH_TRANSLATION_PATCHES: Record<
     },
     {
       path: "common.footer.laborRepRegistration",
-      from: "社會保險勞務士考試合格（預定2026年9月開業）",
+      from: QUAL["zh-tw"],
       to: withReg("zh-tw"),
     },
     {
@@ -457,7 +460,7 @@ export const SR_LAUNCH_TRANSLATION_PATCHES: Record<
     },
     {
       path: "common.footer.laborRepRegistration",
-      from: "社会保险劳务士考试合格（预定2026年9月开业）",
+      from: QUAL.zh,
       to: withReg("zh"),
     },
     {

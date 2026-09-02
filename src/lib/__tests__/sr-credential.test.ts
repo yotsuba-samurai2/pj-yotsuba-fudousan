@@ -1,12 +1,13 @@
 import { describe, it, expect } from "vitest";
 import { PERSON_JSONLD } from "@/lib/seo";
+import { SR_REGISTRATION_ID } from "@/lib/shared/sr-registration";
 
 /**
  * 社会保険労務士の hasCredential の整合ガード。
  *
  * 【前提】2026-09-01 に登録（日付到来による自動登録）。同日「社会保険労務士試験合格」から
- * 「社会保険労務士」へ差し替えた。**登録番号の交付は9月下旬**のため、第1波では
- * identifier を出さない（プレースホルダーを本番に出さないことが優先）。
+ * 「社会保険労務士」へ差し替えた（第1波＝identifier なし）。同日 登録証が到着し、
+ * 第2波で identifier＝第13260359号（正本 src/lib/shared/sr-registration.ts）を出す。
  *
  * 【守るもの】credentialCategory と identifier がちぐはぐになるのを防ぐ。
  * あわせて、資格（hasCredential）と役職（jobTitle）の**状態が食い違わない**ことを検査する。
@@ -69,6 +70,24 @@ describe("社労士 hasCredential：試験合格と登録の取り違えを防�
 
   it("プレースホルダーが本番に残っていない", () => {
     expect(sr?.identifier ?? "").not.toContain("【登録番号】");
+  });
+});
+
+describe("第2波：登録番号（2026-09-01 登録証）が正本と一致している", () => {
+  it("identifier が sr-registration.ts の SR_REGISTRATION_ID と同一", () => {
+    expect(sr?.identifier).toBe(SR_REGISTRATION_ID);
+    expect(SR_REGISTRATION_ID).toBe("第13260359号");
+  });
+
+  it("Person.identifier にも社労士登録番号が同じ値で入っている", () => {
+    const ids = PERSON_JSONLD.identifier as readonly { propertyID: string; value: string }[];
+    const v = ids.find((i) => i.propertyID === "社会保険労務士登録番号")?.value;
+    expect(v).toBe(SR_REGISTRATION_ID);
+  });
+
+  it("正本の番号は試験合格番号ではない", () => {
+    expect(SR_REGISTRATION_ID).not.toContain(EXAM_NUMBER);
+    expect(SR_REGISTRATION_ID).not.toContain("【");
   });
 });
 

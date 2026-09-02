@@ -12,7 +12,7 @@
 //   行政書士業務は「併設の四葉行政書士事務所が別契約で受任」の形でのみ記載。
 // 社労士＝開業（SR_LAUNCHED・2026-09-01）で注記が切り替わる（SR_META／SR_NOTE／SR_FAQ）。
 //   開業前は「2026年9月開業予定・現時点では未開業」、開業後は資格名と事務所名のみ。
-//   **開業後も登録番号は書かない**（交付は2026年9月下旬）。これは今も有効。
+//   登録番号は 2026-09-01 の登録証到着後に出す（第2波・sr-registration.ts）。
 //   ※2026-09-01 変更：旧規則の後半「hasCredential も9月下旬まで社労士を出さない」は撤回した（浦松判断）。
 //     理由＝可視テキストは開業日に「保有資格…社会保険労務士」へ切り替わっており（本番実測）、
 //     構造化データだけ社労士を欠くと**可視と構造化データがズレる**。規則の趣旨は「番号を出さない」ことで、
@@ -38,6 +38,7 @@ import { Faq, type FaqItem } from "@/components/shared/Faq";
 import { CtaBand } from "@/components/shared/CtaBand";
 import { JsonLd } from "@/components/seo/JsonLd";
 import type { LangCode } from "@/config/languages";
+import { SR_REGISTRATION_ID, SR_REGISTRATION_NUMBER } from "@/lib/shared/sr-registration";
 
 type Section = { h2: string; body: React.ReactNode };
 type ProfileCopy = {
@@ -61,8 +62,8 @@ type ProfileCopy = {
 /**
  * 社労士の状態表記。開業（SR_LAUNCHED=true・2026年9月1日）で切り替わる。
  *
- * ★ 開業後も**登録番号は書かない**。番号の交付は2026年9月下旬で、登録日とずれるため
- *   （スキル yotsuba-sharoushi-kaigyo 第14条・2026-08-31 浦松決定）。
+ * ★ 登録番号は 2026-09-01 の登録証到着（第13260359号・正本 sr-registration.ts）で出すようになった。
+ *   0時の第1波では書かなかった（番号未交付）。
  * ★ 事務所名は連続リテラル禁止（法27条ソース漏れ対策）＝sr-name.ts の実行時結合を使う。
  * ★ 経歴年表の「令和7年10月 社会保険労務士試験合格」は**事実の記録として残す**（置換対象外）。
  */
@@ -83,10 +84,10 @@ const SR_META: Record<string, string> = SR_LAUNCHED
 /** 資格欄の下に別立てで置く注記。 */
 const SR_NOTE: Record<string, string> = SR_LAUNCHED
   ? {
-      ja: `社会保険労務士。${SR_OFFICE_NAME}を開業しています。`,
-      en: "Certified Social Insurance and Labor Consultant (Sharoushi, 社会保険労務士). He operates a Certified Social Insurance and Labor Consultant office.",
-      "zh-tw": `社會保險勞務士（日本語：社会保険労務士）。開設有${SR_OFFICE_NAME_ZH_TW}。`,
-      zh: `社会保险劳务士（日本語：社会保険労務士）。开设有${SR_OFFICE_NAME_ZH}。`,
+      ja: `社会保険労務士（登録番号 ${SR_REGISTRATION_ID}）。${SR_OFFICE_NAME}を開業しています。`,
+      en: `Certified Social Insurance and Labor Consultant (Sharoushi, 社会保険労務士; Registration No. ${SR_REGISTRATION_NUMBER}). He operates a Certified Social Insurance and Labor Consultant office.`,
+      "zh-tw": `社會保險勞務士（日本語：社会保険労務士／登錄號 第${SR_REGISTRATION_NUMBER}號）。開設有${SR_OFFICE_NAME_ZH_TW}。`,
+      zh: `社会保险劳务士（日本語：社会保険労務士／登录号 第${SR_REGISTRATION_NUMBER}号）。开设有${SR_OFFICE_NAME_ZH}。`,
     }
   : {
       ja: "社会保険労務士試験合格（令和7年 第202500525号）。2026年9月に社会保険労務士事務所の開業を予定しており、現時点では未開業です。",
@@ -98,10 +99,10 @@ const SR_NOTE: Record<string, string> = SR_LAUNCHED
 /** 「どんな資格を持っていますか」への回答。 */
 const SR_FAQ: Record<string, string> = SR_LAUNCHED
   ? {
-      ja: "宅地建物取引士（東京・第293544号）と行政書士（登録番号第25087022号）、そして社会保険労務士です。",
-      en: "He is a Licensed Real Estate Transaction Specialist (Tokyo, No. 293544), a Gyoseishoshi (Administrative Scrivener) (Registration No. 25087022), and a Certified Social Insurance and Labor Consultant (Sharoushi).",
-      "zh-tw": "宅地建物交易士（日本語：宅地建物取引士／東京・第293544號）、行政書士（登錄號碼第25087022號），以及社會保險勞務士（日本語：社会保険労務士）。",
-      zh: "宅地建物交易士（日本語：宅地建物取引士／东京・第293544号）、行政书士（登录号码第25087022号），以及社会保险劳务士（日本語：社会保険労務士）。",
+      ja: `宅地建物取引士（東京・第293544号）と行政書士（登録番号第25087022号）、そして社会保険労務士（登録番号第${SR_REGISTRATION_NUMBER}号）です。`,
+      en: `He is a Licensed Real Estate Transaction Specialist (Tokyo, No. 293544), a Gyoseishoshi (Administrative Scrivener) (Registration No. 25087022), and a Certified Social Insurance and Labor Consultant (Sharoushi) (Registration No. ${SR_REGISTRATION_NUMBER}).`,
+      "zh-tw": `宅地建物交易士（日本語：宅地建物取引士／東京・第293544號）、行政書士（登錄號碼第25087022號），以及社會保險勞務士（日本語：社会保険労務士／登錄號碼第${SR_REGISTRATION_NUMBER}號）。`,
+      zh: `宅地建物交易士（日本語：宅地建物取引士／东京・第293544号）、行政书士（登录号码第25087022号），以及社会保险劳务士（日本語：社会保険労務士／登录号码第${SR_REGISTRATION_NUMBER}号）。`,
     }
   : {
       ja: "宅地建物取引士（東京・第293544号）と行政書士（登録番号第25087022号）です。社会保険労務士は試験に合格しており（令和7年 第202500525号）、2026年9月に事務所の開業を予定しています（現時点では未開業）。",
@@ -609,13 +610,14 @@ function buildProfilePageJsonLd(locale: LangCode) {
         },
         // 社労士＝開業（SR_LAUNCHED・2026-09-01）で出す。可視テキスト（保有資格・SR_FAQ）が
         // 同じフラグで切り替わるので、**可視と構造化データが必ず同時に動く**。
-        // identifier（登録番号）は付けない＝交付が2026年9月下旬のため。第2波で追加する。
+        // identifier＝登録番号（2026-09-01 登録証で確認・正本 sr-registration.ts）。
         // seo.ts の PERSON_JSONLD.hasCredential と同じ状態（＝@id が同じPersonの中身が食い違わない）。
         ...(SR_LAUNCHED
           ? [
               {
                 "@type": "EducationalOccupationalCredential",
                 credentialCategory: l.credentialSharoushi,
+                identifier: SR_REGISTRATION_ID,
                 recognizedBy: {
                   "@type": "Organization",
                   name: "全国社会保険労務士会連合会",

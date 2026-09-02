@@ -1,6 +1,6 @@
 // /labor（型F・社労士トップ・開業版）＝原稿_社労士 #1
 // JSON-LD＝layoutの OrganizationJsonLd（ProfessionalService）＋WebSiteJsonLd が出力済み＝重複出力しない。
-// 登録番号は9月下旬の交付まで出力しない（yotsuba-sharoushi-kaigyo 第14条）。
+// 登録番号は 2026-09-01 の登録証到着後に出す（正本 sr-registration.ts）。
 // 2026-09-01 多言語化（第1波）：COPY: Record<LangCode,…>＋getRequestLocale。
 //   ・キャッチ「人の手続きを、事業の力に。」は各言語で意訳（直訳しない）。
 //   ・一体提供を示唆する語（ワンストップ／一站式／one-stop 等）は全言語で不使用（第6条）。
@@ -12,8 +12,8 @@ import { getRequestLocale } from "@/lib/getRequestLocale";
 import { addLocalePrefix } from "@/lib/locale";
 import Link from "next/link";
 import { CtaBand } from "@/components/shared/CtaBand";
-import { Placeholder } from "@/components/shared/Placeholder";
 import type { LangCode } from "@/config/languages";
+import { srRegParen } from "@/lib/shared/sr-registration";
 
 type Service = { href: string; label: string; sub: string };
 type PriceRow = [string, string, string];
@@ -467,7 +467,7 @@ export default async function LaborTopPage() {
           ))}
         </section>
 
-        {/* 代表紹介（E-E-A-T・登録番号は9月下旬の交付まで非出力） */}
+        {/* 代表紹介（E-E-A-T・登録番号＝sr-registration.ts） */}
         <section className="mt-10 flex flex-col items-start gap-4 rounded-2xl border border-border bg-surface p-5 sm:flex-row">
           <img
             src="/staff/uramatsu.webp"
@@ -480,7 +480,7 @@ export default async function LaborTopPage() {
             <h2 className="font-serif text-lg font-semibold text-ink">{c.repName}</h2>
             <p className="mt-1 text-sm leading-relaxed text-text-muted">
               {c.repBody1}
-              <Placeholder reason="9月下旬確定＝社労士登録番号" />
+              {srRegParen(locale)}
               {c.repBody2}
             </p>
             <p className="mt-2 text-xs">

@@ -391,7 +391,7 @@ export const JA_FAQ_SECTIONS: FaqSection[] = [
       {
         q: "代表はどんな人ですか？",
         // 社労士の資格表記は SR_BIO.ja（/about/uramatsu と同一ソース）。
-        // 開業後は資格名のみ＝登録番号は書かない（交付は2026年9月下旬・yotsuba-sharoushi-kaigyo 第14条）。
+        // 開業後は資格名のみ（この文では行政書士のみ番号付き。社労士番号は /about/uramatsu と JSON-LD に出す）。
         a: `代表取締役の浦松丈二は、元毎日新聞記者（記者歴34年）で、中国総局長として中国や台湾、タイに駐在しました。専任の宅地建物取引士であり、行政書士（登録番号第25087022号）、そして${SR_BIO.ja}でもあります。取材で培った調査力と多言語対応が強みです。`,
         links: [{ href: "/about/uramatsu", label: "代表プロフィール" }],
       },

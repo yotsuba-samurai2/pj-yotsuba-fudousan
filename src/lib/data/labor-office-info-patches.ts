@@ -25,31 +25,32 @@
 //   ★変更するときは office.ts・legal と3か所を必ず揃える。
 
 import type { LangCode } from "@/config/languages";
+import { SR_REGISTRATION_ID, SR_REGISTRATION_NUMBER } from "@/lib/shared/sr-registration";
 
 export type OfficeInfoRow = { label: string; value: string };
 
 /**
- * 登録番号の欄に入れる暫定値。
+ * 登録番号の欄の値。
  *
- * 2026-08-13 訂正：新規登録入会研修会は8月4日に受講済みで、9月1日の登録は自動。
- * ★番号の交付は9月下旬の見込みのため、登録日と交付時期を分けて書く。
- * 「登録予定」だと9月1日を過ぎた時点で事実と合わなくなる。
- *
- * 番号が交付されたら、ここを実番号（例：社会保険労務士 第◯◯号／東京都社会保険労務士会）へ
- * 差し替えて /admin/translations/fix-labor-office-info を再実行する。
+ * 2026-09-01 登録証到着＝実番号 第13260359号（正本 sr-registration.ts）。
+ * 2026-08-13〜08-31 は「2026年9月1日 登録（番号は9月下旬に交付予定）」の暫定値だった。
+ * 実番号に差し替えたら /admin/translations/fix-labor-office-info を再実行する。
  */
-export const REGISTRATION_PENDING: Record<LangCode, string> = {
-  ja: "2026年9月1日 登録（番号は9月下旬に交付予定）",
-  en: "Registered 1 September 2026 (number to be issued in late September)",
-  "zh-tw": "2026年9月1日登錄（號碼預定於9月下旬核發）",
-  zh: "2026年9月1日登录（号码预定于9月下旬核发）",
+export const REGISTRATION_ROW: Record<LangCode, string> = {
+  ja: `${SR_REGISTRATION_ID}（2026年9月1日 登録）`,
+  en: `No. ${SR_REGISTRATION_NUMBER} (registered 1 September 2026)`,
+  "zh-tw": `第${SR_REGISTRATION_NUMBER}號（2026年9月1日登錄）`,
+  zh: `第${SR_REGISTRATION_NUMBER}号（2026年9月1日登录）`,
 };
+
+/** @deprecated 旧名。実番号に切り替えた後も参照が残らないよう同じ値を指す */
+export const REGISTRATION_PENDING = REGISTRATION_ROW;
 
 export const LABOR_OFFICE_INFO: Record<LangCode, OfficeInfoRow[]> = {
   ja: [
     { label: "名称", value: "四葉社会保険労務士事務所" },
     { label: "代表", value: "浦松 丈二（社会保険労務士）" },
-    { label: "登録番号", value: REGISTRATION_PENDING.ja },
+    { label: "登録番号", value: REGISTRATION_ROW.ja },
     { label: "所在地", value: "〒112-0006 東京都文京区小日向４丁目２－５ 小日向安田ビル ２０３" },
     { label: "最寄駅", value: "東京メトロ丸ノ内線 茗荷谷駅 徒歩5分" },
     { label: "電話番号", value: "03-6161-9428" },
@@ -66,7 +67,7 @@ export const LABOR_OFFICE_INFO: Record<LangCode, OfficeInfoRow[]> = {
   en: [
     { label: "Name", value: "四葉社会保険労務士事務所" },
     { label: "Representative", value: "Joji Uramatsu, Certified Social Insurance and Labour Consultant" },
-    { label: "Registration number", value: REGISTRATION_PENDING.en },
+    { label: "Registration number", value: REGISTRATION_ROW.en },
     { label: "Address", value: "203 Kohinata Yasuda Building, 4-2-5 Kohinata, Bunkyo-ku, Tokyo 112-0006" },
     { label: "Nearest station", value: "Myogadani Station, Tokyo Metro Marunouchi Line — 5 minutes on foot" },
     { label: "Phone", value: "03-6161-9428" },
@@ -83,7 +84,7 @@ export const LABOR_OFFICE_INFO: Record<LangCode, OfficeInfoRow[]> = {
   "zh-tw": [
     { label: "名稱", value: "四葉社会保険労務士事務所" },
     { label: "代表", value: "浦松丈二（社會保險勞務士）" },
-    { label: "登錄號碼", value: REGISTRATION_PENDING["zh-tw"] },
+    { label: "登錄號碼", value: REGISTRATION_ROW["zh-tw"] },
     { label: "地址", value: "〒112-0006 東京都文京區小日向４丁目２－５ 小日向安田大樓 ２０３" },
     { label: "最近車站", value: "東京Metro丸之內線 茗荷谷站 步行5分鐘" },
     { label: "電話號碼", value: "03-6161-9428" },
@@ -100,7 +101,7 @@ export const LABOR_OFFICE_INFO: Record<LangCode, OfficeInfoRow[]> = {
   zh: [
     { label: "名称", value: "四葉社会保険労務士事務所" },
     { label: "代表", value: "浦松丈二（社会保险劳务士）" },
-    { label: "登录号码", value: REGISTRATION_PENDING.zh },
+    { label: "登录号码", value: REGISTRATION_ROW.zh },
     { label: "地址", value: "〒112-0006 东京都文京区小日向４丁目２－５ 小日向安田大厦 ２０３" },
     { label: "最近车站", value: "东京Metro丸之内线 茗荷谷站 步行5分钟" },
     { label: "电话号码", value: "03-6161-9428" },

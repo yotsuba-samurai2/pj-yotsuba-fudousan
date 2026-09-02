@@ -6,6 +6,7 @@ import {
   SR_OFFICE_NAME_ZH_TW,
 } from "@/lib/shared/sr-name";
 import { GBP_URL } from "@/lib/shared/office-public";
+import { SR_REGISTRATION_ID } from "@/lib/shared/sr-registration";
 import { DEFAULT_LOCALE, isValidLocale } from "@/lib/locale";
 import type { LangCode } from "@/config/languages";
 
@@ -144,6 +145,12 @@ export const PERSON_JSONLD = {
       propertyID: "宅地建物取引士登録番号",
       value: "（東京）第293544号",
     },
+    // 社労士登録番号（2026-09-01 登録証で確認・正本 sr-registration.ts）。試験合格番号ではない。
+    {
+      "@type": "PropertyValue",
+      propertyID: "社会保険労務士登録番号",
+      value: SR_REGISTRATION_ID,
+    },
   ],
   // jobTitle＝役職／資格はhasCredentialへ分離。
   //
@@ -152,7 +159,7 @@ export const PERSON_JSONLD = {
   // sr-credential.test.ts がそれを検査していた。開業日をもって前提が反転したため、
   // 3件目を追加し、テスト側も同時に反転させている（片方だけ変えると必ず落ちる）。
   // 登録は2026-09-01付の自動登録（東京都社会保険労務士会に確認済み）。
-  // 登録番号の交付は9月下旬だが、名乗り・役職表記の妨げにはならない。
+  // 登録証は同日到着（第13260359号・正本 sr-registration.ts）。
   jobTitle: [
     "四葉不動産株式会社 代表取締役",
     "四葉行政書士事務所 代表行政書士",
@@ -191,15 +198,9 @@ export const PERSON_JSONLD = {
     // 社会保険労務士＝2026-09-01 登録（日付到来による自動登録・東京都社会保険労務士会に確認済み）。
     // 同日「社会保険労務士試験合格／令和7年 第202500525号」から差し替えた。
     //
-    // ■ 第1波（2026-09-01・ここ）＝資格名だけを出し、identifier は**出さない**
-    //   登録番号の交付は9月下旬で、今日は手元にない。
-    //   ★プレースホルダー「第【登録番号】号」を入れてはいけない。**本番に出せない値**であり、
-    //     sr-credential.test.ts の「プレースホルダーが本番に残っていない」で落ちる。
-    //     旧コメントは identifier を "第【登録番号】号" に差し替えろと指示していたが、
-    //     それに従うと本番にプレースホルダーが出る。番号が出るまで identifier ごと省くのが正。
-    //     （sr-launch-patches.ts の第1波＝「番号を書かず、資格名だけを出す」と同じ方針）
-    // ■ 第2波（9月下旬）＝登録証で確認した実数を identifier に入れる。
-    //   sr-launch-patches.ts の REGISTRATION_NUMBER と同時に更新する。
+    // ■ 第1波（2026-09-01 0時）＝資格名だけを出し、identifier は出さなかった（番号未交付）。
+    // ■ 第2波（2026-09-01 登録証到着）＝identifier に実数（正本 sr-registration.ts）を入れた。
+    //   ★プレースホルダー「第【登録番号】号」は本番に出せない値（sr-credential.test.ts が検査）。
     //
     // 令和7年 第202500525号は**試験合格番号であって登録番号ではない**。
     // 登録番号と同じ形の欄に同じ形の番号が入るため取り違えやすい。ここへ戻さないこと。
@@ -207,6 +208,7 @@ export const PERSON_JSONLD = {
     {
       "@type": "EducationalOccupationalCredential",
       credentialCategory: "社会保険労務士",
+      identifier: SR_REGISTRATION_ID,
       recognizedBy: {
         "@type": "Organization",
         name: "全国社会保険労務士会連合会",
@@ -374,8 +376,8 @@ export const LABOR_SAME_AS = [] as const;
  * 浦松は2026-09-01付で登録され、同日 四葉社会保険労務士事務所を開設した。
  * URLは2026-09-01に実ページのtitleで裏取りした（東京都社会保険労務士会／全国社会保険労務士会連合会）。
  *
- * 【未検証】会員名簿ページでの個別掲載は未確認。登録番号の交付が2026年9月下旬のため、
- * 名簿反映はそれ以降になる見込み。掲載を確認できたら、その会員ページURLを sameAs 側へ移す。
+ * 【未検証】会員名簿ページでの個別掲載は未確認（登録証は2026-09-01到着・第13260359号）。
+ * 掲載を確認できたら、その会員ページURLを sameAs 側へ移す。
  */
 export const LABOR_MEMBER_OF = [
   {
@@ -495,8 +497,10 @@ export const BUSINESS_SEO: Record<string, BusinessSEOConfig> = {
           // OrganizationJsonLd が geo からの地図検索URLへフォールバックする
           gbpUrl: GBP_URL.labor,
           columnBasePath: "/labor/column",
-          // 登録番号は2026年9月下旬交付予定のため identifiers はまだ置かない。
-          // 交付後に { propertyID: "社会保険労務士登録番号", value: … } を追加する。
+          // 登録番号（2026-09-01 登録証で確認・正本 sr-registration.ts）。legal の行政書士登録番号と同じ体裁。
+          identifiers: [
+            { propertyID: "社会保険労務士登録番号", value: SR_REGISTRATION_ID },
+          ],
           // 事務所名は実行時結合のものだけを並べる。英訳は裏取りできていないため置かない
           // （英語の連続リテラルは sr-strip.ts の除去対象＝開業前にクライアントへ載せない）。
           alternateNames: [
