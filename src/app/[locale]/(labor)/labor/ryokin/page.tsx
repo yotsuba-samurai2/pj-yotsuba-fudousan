@@ -104,7 +104,7 @@ const JA: Copy = {
     {
       title: "顧問（ご相談）",
       lead: "顧問料は、労務のご相談に対する対価です。ご相談は回数・時間の制限なく承ります。給与計算などの毎月の作業をfreeeで自社処理（内製）に切り替える体制づくりの支援も、ご相談の一部として顧問料に含みます。",
-      note: "人数帯は目安です。顧問料はご相談の対価のため、ご相談の内容と量に応じた帯でお見積りします。人数は、役員と従業員の合計です（アルバイト・パートの方を含みます。社会保険の被保険者数ではありません）。手続・給与計算・規程の作成は顧問料に含まれません（下記のとおり別途申し受けます）。30人以上の会社は、就業実態と規程の本数を伺ったうえで個別にお見積りします。",
+      note: "人数帯は目安です。顧問料はご相談の対価のため、ご相談の内容と量に応じた帯でお見積りします。人数は、役員と従業員の合計です（アルバイト・パートの方を含みます。社会保険の被保険者数ではありません）。手続・給与計算・規程の作成は顧問料に含まれません（下記のとおり別途申し受けます）。30人以上の会社は、就業実態と規程の本数を伺ったうえで個別にお見積りします。就業規則の翻訳や外国語での説明、在留資格の確認など、多言語対応・在留資格対応を伴う場合は、上記の顧問料に50％を加算します。",
       rows: [
         { name: "〜4人", unit: "月額", price: "22,000円", value: 22000 },
         { name: "5〜9人", unit: "月額", price: "33,000円", value: 33000 },
@@ -113,6 +113,7 @@ const JA: Copy = {
         { name: "20〜24人", unit: "月額", price: "66,000円", value: 66000 },
         { name: "25〜29人", unit: "月額", price: "77,000円", value: 77000 },
         { name: "30人〜", unit: "月額", price: "お見積り" },
+        { name: "多言語対応・在留資格対応を伴う場合", unit: "月額", price: "上記の50％加算" },
       ],
     },
     {
@@ -321,7 +322,7 @@ const EN: Copy = {
     {
       title: "Advisory (consultations)",
       lead: "The advisory fee is consideration for labor consultations, unlimited in frequency and time. Support for moving monthly work such as payroll in-house on freee is included as part of the consultations.",
-      note: "Headcount bands are a guide. Because the fee is consideration for consultations, we quote the band according to the substance and volume of your consultations. Headcount is directors plus employees, including part-timers (not the number of insured persons). Procedures, payroll, and drafting of rules are not included (charged separately as below). Companies of 30 or more are quoted individually.",
+      note: "Headcount bands are a guide. Because the fee is consideration for consultations, we quote the band according to the substance and volume of your consultations. Headcount is directors plus employees, including part-timers (not the number of insured persons). Procedures, payroll, and drafting of rules are not included (charged separately as below). Companies of 30 or more are quoted individually. Where the engagement involves multilingual support (such as translating work rules or explaining them in another language) or checks relating to residence status, 50% is added to the advisory fee above.",
       rows: [
         { name: "Up to 4 people", unit: "per month", price: "¥22,000", value: 22000 },
         { name: "5–9 people", unit: "per month", price: "¥33,000", value: 33000 },
@@ -330,6 +331,7 @@ const EN: Copy = {
         { name: "20–24 people", unit: "per month", price: "¥66,000", value: 66000 },
         { name: "25–29 people", unit: "per month", price: "¥77,000", value: 77000 },
         { name: "30 people or more", unit: "per month", price: "individual quote" },
+        { name: "With multilingual support or residence-status handling", unit: "per month", price: "above fee + 50%" },
       ],
     },
     {
@@ -538,7 +540,7 @@ const ZH_TW: Copy = {
     {
       title: "顧問（諮詢）",
       lead: "顧問費是勞務諮詢的對價，諮詢不限次數與時間。把薪資計算等每月作業改為在freee上自行處理（內製）的體制建立支援，也作為諮詢的一部分包含在顧問費內。",
-      note: "人數帶為參考。顧問費是諮詢的對價，將依諮詢的內容與份量報價。人數為董監事與員工的合計（含兼職人員；並非社會保險的被保險者數）。手續・薪資計算・規程製作不包含在顧問費內（如下另計）。30人以上的公司，將於了解工作實態與規程數量後個別報價。",
+      note: "人數帶為參考。顧問費是諮詢的對價，將依諮詢的內容與份量報價。人數為董監事與員工的合計（含兼職人員；並非社會保險的被保險者數）。手續・薪資計算・規程製作不包含在顧問費內（如下另計）。30人以上的公司，將於了解工作實態與規程數量後個別報價。如需就業規則翻譯、以外語說明、在留資格確認等多語言對應・在留資格對應，顧問費按上述金額加計50％。",
       rows: [
         { name: "〜4人", unit: "月額", price: "22,000日圓", value: 22000 },
         { name: "5〜9人", unit: "月額", price: "33,000日圓", value: 33000 },
@@ -547,6 +549,7 @@ const ZH_TW: Copy = {
         { name: "20〜24人", unit: "月額", price: "66,000日圓", value: 66000 },
         { name: "25〜29人", unit: "月額", price: "77,000日圓", value: 77000 },
         { name: "30人〜", unit: "月額", price: "個別報價" },
+        { name: "伴隨多語言對應・在留資格確認時", unit: "月額", price: "上述費用加計50％" },
       ],
     },
     {
@@ -755,7 +758,7 @@ const ZH: Copy = {
     {
       title: "顾问（咨询）",
       lead: "顾问费是劳务咨询的对价，咨询不限次数与时间。把工资计算等每月作业改为在freee上自行处理（内制）的体制建立支援，也作为咨询的一部分包含在顾问费内。",
-      note: "人数带为参考。顾问费是咨询的对价，将按咨询的内容与份量报价。人数为董事与员工的合计（含兼职人员；并非社会保险的被保险者数）。手续・工资计算・规程制作不包含在顾问费内（如下另计）。30人以上的公司，将在了解工作实态与规程数量后个别报价。",
+      note: "人数带为参考。顾问费是咨询的对价，将按咨询的内容与份量报价。人数为董事与员工的合计（含兼职人员；并非社会保险的被保险者数）。手续・工资计算・规程制作不包含在顾问费内（如下另计）。30人以上的公司，将在了解工作实态与规程数量后个别报价。如需就业规则翻译、以外语说明、在留资格确认等多语言对应・在留资格对应，顾问费按上述金额加计50％。",
       rows: [
         { name: "〜4人", unit: "月额", price: "22,000日元", value: 22000 },
         { name: "5〜9人", unit: "月额", price: "33,000日元", value: 33000 },
@@ -764,6 +767,7 @@ const ZH: Copy = {
         { name: "20〜24人", unit: "月额", price: "66,000日元", value: 66000 },
         { name: "25〜29人", unit: "月额", price: "77,000日元", value: 77000 },
         { name: "30人〜", unit: "月额", price: "个别报价" },
+        { name: "伴随多语言对应・在留资格确认时", unit: "月额", price: "上述费用加计50％" },
       ],
     },
     {
