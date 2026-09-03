@@ -94,6 +94,31 @@ export function isLocaleAllowed(column: Column, locale: LangCode): boolean {
   );
 }
 
+/**
+ * 管理画面フォーム「公開する言語」チェックボックスの初期値。
+ *
+ * DBの `locales` は **空配列＝全言語公開**（上の isLocaleAllowed・sitemap.ts の
+ * expandColumn と同じ規約）。seed-labor-columns.ts は翻訳3言語が揃った記事に
+ * `locales: []` を書き込むため、社労士コラムの多くが空配列で保存されている。
+ *
+ * ColumnForm は初期値を `initialData?.locales ?? 全言語` としていたが、`??` は
+ * null/undefined しか拾わず **空配列が素通り**する。その結果、全4言語で公開中の
+ * 記事がフォーム上「1言語もチェックなし」と表示され、「最低1言語は選択してください」
+ * が出て保存ボタンまで無効化されていた。表示を信じて日本語だけにチェックして保存すると
+ * `locales: ["ja"]` が確定し、en/zh-tw/zh の3言語が404に落ちる（翻訳はDBに残るため
+ * 気づきにくい）。
+ *
+ * 空配列を undefined と同じ「未設定」として扱い、全言語チェック済みで復元する。
+ * `["ja","en","zh-tw","zh"]` は `[]` と挙動が等価なので、そのまま保存しても既存の
+ * 公開状態は変わらない。
+ */
+export function initialLocaleSelection(
+  locales: LangCode[] | undefined,
+  allLocales: readonly LangCode[],
+): LangCode[] {
+  return locales && locales.length > 0 ? [...locales] : [...allLocales];
+}
+
 export function getLocalizedColumn(column: Column, locale: LangCode): Column {
   if (locale === "ja" || !column.translations) return column;
 

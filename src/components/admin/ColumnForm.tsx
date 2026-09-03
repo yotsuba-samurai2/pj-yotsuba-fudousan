@@ -9,6 +9,7 @@ import {
   type ColumnStatus,
 } from "@/lib/admin-api";
 import { languages, type LangCode } from "@/config/languages";
+import { initialLocaleSelection } from "@/lib/column-shared";
 import MarkdownEditor from "./MarkdownEditor";
 import ColumnBody from "@/components/column/ColumnBody";
 
@@ -93,8 +94,13 @@ export default function ColumnForm({
     initialData?.date ?? new Date().toISOString().slice(0, 10),
   );
   const [category, setCategory] = useState(initialData?.category ?? "");
-  const [locales, setLocales] = useState<LangCode[]>(
-    initialData?.locales ?? languages.map((l) => l.code),
+  // 空配列＝全言語公開。`??` では空配列が素通りし、全4言語で公開中の記事が
+  // 「1言語もチェックなし」に見えていた（詳細は initialLocaleSelection のコメント）。
+  const [locales, setLocales] = useState<LangCode[]>(() =>
+    initialLocaleSelection(
+      initialData?.locales,
+      languages.map((l) => l.code),
+    ),
   );
 
   // Japanese content
