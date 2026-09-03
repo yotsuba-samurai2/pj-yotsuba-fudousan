@@ -1,37 +1,31 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { LocaleLink as Link } from "@/components/ui/LocaleLink";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { useTranslation } from "@/hooks/useTranslation";
-import { getLatestLaborColumns } from "@/lib/columns-actions";
-import { getLocalizedColumn, type Column } from "@/lib/column-shared";
+import type { Column } from "@/lib/column-shared";
 
-export function LaborColumnListPageContent() {
-  const { t, locale } = useTranslation();
-  const [fetched, setFetched] = useState<{
-    locale: string;
-    columns: Column[];
-  } | null>(null);
+type Props = {
+  /** サーバー側（page.tsx）で取得・ローカライズ済みのコラム */
+  columns: Column[];
+};
 
-  useEffect(() => {
-    let cancelled = false;
-    getLatestLaborColumns(20, locale).then((cols) => {
-      if (cancelled) return;
-      setFetched({
-        locale,
-        columns: cols.map((c) => getLocalizedColumn(c, locale)),
-      });
-    });
-    return () => {
-      cancelled = true;
-    };
-  }, [locale]);
-
-  // effect 冒頭の setLoading(true) をやめ、取得済みロケールとの一致で導出する。
-  // ロケールを連続で切り替えたとき、古いレスポンスが新しい表示を上書きするレースも防げる。
-  const loading = fetched?.locale !== locale;
-  const columns = loading ? [] : (fetched?.columns ?? []);
+/**
+ * 2026-09-03：クライアント取得（useEffect + getLatestLaborColumns）をやめ、
+ * page.tsx がサーバーで取得したものを受け取る形にした。
+ *
+ * 旧実装は初期HTMLに記事リンクを1本も含まないため、クローラーから一覧が空に見え、
+ * 社労士コラムを内部リンクから発見できなかった（実測：静的ページは全てインデックス
+ * 済みなのに、新着コラムだけが未登録）。不動産（(realestate)/column/page.tsx）と
+ * 行政書士（(legal)/legal/column/page.tsx）は元からサーバー取得で、社労士だけが
+ * 例外だった。その2レーンと同じ形に揃える。
+ *
+ * `t()` を使うためクライアントコンポーネントのままにし、データだけを props で受ける
+ * （不動産の ColumnListPageContent と同じ構成）。ロケール切り替え時の取得レースも、
+ * サーバー取得になったことで構造的に消える。
+ */
+export function LaborColumnListPageContent({ columns }: Props) {
+  const { t } = useTranslation();
 
   return (
     <>
@@ -46,11 +40,7 @@ export function LaborColumnListPageContent() {
 
       <section className="py-14 sm:py-20 md:py-28">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          {loading ? (
-            <div className="flex justify-center py-12">
-              <div className="h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent" />
-            </div>
-          ) : columns.length === 0 ? (
+          {columns.length === 0 ? (
             <div className="rounded-xl border border-dashed border-border bg-surface p-12 text-center sm:p-16">
               <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-primary/10">
                 <ArrowRight size={24} className="text-primary" />
