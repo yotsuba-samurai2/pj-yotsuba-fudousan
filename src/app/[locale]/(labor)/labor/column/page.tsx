@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo";
 import { getRequestLocale } from "@/lib/getRequestLocale";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
+import { ColumnCollectionJsonLd } from "@/components/seo/ColumnCollectionJsonLd";
 import { CtaBand } from "@/components/shared/CtaBand";
+import { getLatestLaborColumns, getLocalizedColumn } from "@/lib/columns";
 import { LaborColumnListPageContent } from "./PageContent";
 
 
@@ -41,14 +43,35 @@ export async function generateMetadata(): Promise<Metadata> {
   });
 }
 
-export default function LaborColumnListPage() {
+/**
+ * 2026-09-03：コラム一覧をサーバー取得に変更。
+ * 旧実装は PageContent がクライアントで取得しており、初期HTMLに記事リンクが
+ * 1本も無かった（クローラーから一覧が空に見え、コラムが内部リンクで発見されない）。
+ * 不動産・行政書士の一覧と同じく、ここで取得して props で渡す。
+ * 件数は従来の挙動を維持して最新20件。
+ */
+export default async function LaborColumnListPage() {
+  const locale = await getRequestLocale();
+  const cols = await getLatestLaborColumns(20, locale);
+  const columns = cols.map((c) => getLocalizedColumn(c, locale));
+  const m = META_BY_LOCALE[locale] ?? META_BY_LOCALE.ja;
+
   return (
     <div>
       <BreadcrumbJsonLd businessKey="labor" items={[
         { name: "ホーム", href: "/labor" },
         { name: "コラム", href: "/labor/column" },
       ]} />
-      <LaborColumnListPageContent />
+      {columns.length > 0 && (
+        <ColumnCollectionJsonLd
+          businessKey="labor"
+          columns={columns}
+          name={m.title}
+          description={m.description}
+          locale={locale}
+        />
+      )}
+      <LaborColumnListPageContent columns={columns} />
       {/* ★2026-08-13 追加：CTA帯（LINE・お問い合わせ・電話）。
           3レーンとも column/[slug]・column・about だけ CtaBand が無く、
           PCでLINEへの導線が出ていなかった。contact / thanks には入れない。 */}
