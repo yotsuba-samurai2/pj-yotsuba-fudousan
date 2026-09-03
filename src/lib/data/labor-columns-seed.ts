@@ -14495,5 +14495,371 @@ export const LABOR_COLUMNS_SEED: LaborSeedColumn[] = [
         ]
       }
     }
+  },
+  {
+    "business": "labor",
+    "slug": "homon-kango-oncall-teate-jokin-kansan",
+    "title": "訪問看護のオンコール（待機）手当は、どう設計すればよいですか",
+    "date": "2026-09-03",
+    "category": "労働時間",
+    "excerpt": "オンコール（呼出待機）の時間が労働時間にあたるかは、待機中に労働者が指揮命令下に置かれ、時間の自由利用が保障されていないといえるかで決まります。判断の枠組みは大星ビル管理事件（最高裁平成14年2月28日）が示しています。実際に呼び出されて働いた時間は労働時間で、時間外・深夜・休日にあたれば割増賃金（労働基準法第37条）が必要です。待機手当を払っていても、それだけで割増賃金の義務はなくなりません。常勤換算2.5への数え方、移動・記録時間の扱いとあわせて整理します。個別の労働時間該当性は労働基準監督署・裁判所が判断します。",
+    "content": "**結論（先に要点）**：オンコール（呼出待機）の時間が労働時間にあたるかは、待機中に労働者が指揮命令下に置かれ、時間の自由利用が保障されていないといえるかで決まります。実際に呼び出されて働いた時間は労働時間で、時間外・深夜・休日にあたれば割増賃金（労働基準法第37条）が必要です。待機手当を払っていても、それだけで割増賃金の義務がなくなるわけではありません。個別の待機が労働時間にあたるかの最終判断は、労働基準監督署や裁判所が行います。\n\n「オンコールは手当を月いくらで払っているから、それで足りているはず」「呼び出されなかった夜は働いていないから賃金は要らない」——訪問看護ステーションの現場では、待機と実働の切り分けがあいまいなまま運用され、あとから未払い割増賃金を指摘される例があります。この記事は、訪問看護ステーションの管理者・経営者の方に向けて、オンコール待機の労働時間性、待機手当と割増賃金の分け方、常勤換算2.5への数え方、移動・記録時間の扱いを整理します。\n\n## オンコール（待機）の時間は、労働時間に当たりますか？\n\n「自由に使える時間か」で決まります。一律に「待機は労働時間ではない」とも「待機はすべて労働時間だ」とも言えません。\n\n判断の枠組みは、仮眠時間の労働時間性が争われた**大星ビル管理事件（最高裁第一小法廷 平成14年2月28日判決）**が示しています。最高裁は、仮眠時間中に警報への対応など実作業への従事が義務づけられ、その時間の自由利用が保障されていないなど、労働者が使用者の指揮命令下に置かれていると認められる場合には、その時間は労働基準法第32条の労働時間にあたるとしました。\n\nオンコールにあてはめると、次のように分かれます。\n\n| 待機の状態 | 労働時間にあたるか（考え方） |\n|---|---|\n| 事業所に泊まり込むなど、拘束され自由に過ごせない待機 | 指揮命令下にあれば**労働時間**にあたり得る |\n| 自宅で待機し、電話を受けたら出動するが、それまでは食事・入浴・睡眠など通常の私生活を送れる | 拘束の程度が低ければ、待機そのものは**労働時間にあたらない**扱いが一般的 |\n| 待機中に電話対応・記録・オンライン助言など実作業を命じられている | その実作業の時間は**労働時間** |\n| 呼び出されて利用者宅へ出動し、看護を行った | 出動から帰所までの実働は**労働時間** |\n\n自宅でのオンコールは、拘束の程度が低ければ待機自体は労働時間にあたらないと整理されることが多い一方、電話対応の頻度が高い、飲酒や外出を禁じるなど拘束が強い場合は評価が変わり得ます。**個別の待機が労働時間にあたるかは、実態に照らして労働基準監督署・裁判所が判断します。**\n\n## 待機手当と、呼び出されたときの割増賃金はどう分けますか？\n\n分けて設計するのが基本です。「待機したこと」への手当と、「実際に働いたこと」への賃金は、性質が違います。\n\n多くのステーションは、待機1回（一晩）あたりの**オンコール手当**を定額で支払い、実際に呼び出されて出動した時間には**実働分の賃金**を別に支払っています。出動が深夜（午後10時〜午前5時）にかかれば深夜割増、法定時間外にかかれば時間外割増、法定休日にかかれば休日割増が必要です。\n\n| 支払いの種類 | 性質 | 割増の要否 |\n|---|---|---|\n| オンコール手当（待機1回あたり定額） | 待機に応じたことへの手当 | 待機が労働時間でなければ割増の対象外。就業規則・賃金規程で定める |\n| 呼出出動の実働賃金 | 実際に働いた時間への賃金 | 時間外・深夜・休日にあたれば**割増賃金（労働基準法第37条）** |\n\n注意が要るのは、**待機手当を払っているから割増賃金は不要、という取り扱いはできない**点です。待機手当は待機への対価、割増賃金は実働への法定の支払いで、別物です。割増賃金の考え方や時間外労働の管理は[残業をさせるには何がいるのか（36協定はどこまで）](/labor/column/36-kyotei-zangyo-sharoushi-doko-made)を、夜勤・宿直との切り分けは[夜勤と宿直は労働時間の扱いがどう違うのか](/labor/column/group-home-yakin-shukuchoku-roudou-chigai)もあわせてご確認ください。\n\n## 常勤換算2.5人に、オンコール担当はどう数えますか？\n\n常勤換算は、その職員の**勤務時間**を常勤職員の所定勤務時間で割って求めます。だから、オンコールを常勤換算に数えられるかは「その待機時間が勤務時間（労働時間）にあたるか」と同じ問題になります。\n\n指定訪問看護ステーションの人員基準は、指定居宅サービス等の基準（平成11年厚生省令第37号）で、看護職員（保健師・看護師・准看護師）を**常勤換算方法で2.5以上**置くこと、うち1人以上は常勤とすること、管理者は原則として常勤の保健師又は看護師とすることを定めています。\n\n| 時間 | 常勤換算への数え方（考え方） |\n|---|---|\n| 自宅待機で、待機自体が労働時間にあたらないオンコール | 勤務時間に含まれないため、**常勤換算には数えない** |\n| 呼び出されて出動し看護を行った実働 | 労働時間として**勤務時間に算入**する |\n| 待機中に命じられた記録・電話対応などの実作業 | 労働時間にあたれば勤務時間に算入する |\n\nつまり「オンコール担当がいる」こと自体では2.5にカウントされず、**実際に勤務した時間**が積み上がります。人員基準の充足や常勤換算の具体的なカウント方法は指定権者（都道府県等）の解釈にもよるため、個別の算定は最新の一次情報と指定権者の手引きで確認してください。\n\n## 移動時間・記録時間の賃金は、どう扱いますか？\n\n呼び出されて事業所や利用者宅へ向かう移動、看護後の記録作成の時間も、指揮命令下にあれば労働時間にあたり、賃金の対象になります。\n\n呼出出動は、使用者の指示で業務のために移動するものですから、その移動時間は原則として労働時間です。訪問後の看護記録・報告の作成も、業務として義務づけられ指揮監督のもとで行うなら労働時間にあたります。これらを含めた総労働時間で時間あたりの賃金が最低賃金を下回らないかも確認が必要です。\n\n整える順序は次のとおりです。\n\n1. **待機と実働を定義する**：どの状態を待機（手当の対象）とし、どこからを実働（賃金・割増の対象）とするかを、大星ビル管理事件の枠組みに沿って明文化する。\n2. **オンコール手当と実働賃金を賃金規程に書く**：待機1回あたりの手当額、実働の単価、深夜・時間外・休日の割増を定める。\n3. **出動・移動・記録を記録する**：呼出時刻、出動から帰所までの時間、記録作成の時間を客観的に残す。記録がないと、あとで争いになったとき事業所側が不利になりやすい。\n4. **最低賃金を割らないか確認する**：実働・移動・記録を含む総労働時間で割った額が、その地域の最低賃金以上であることを確かめる。\n\n賃金規程・36協定・労働時間管理の整備は社会保険労務士の業務です。訪問と訪問の合間の移動時間の考え方は[訪問介護の移動時間・待機時間は労働時間にあたるのか](/labor/column/homon-kaigo-idou-jikan-roudou-jikan)もご覧ください。\n\n## 指定申請・賃金の紛争・税務は、それぞれ誰に頼みますか？\n\n訪問看護ステーションの立ち上げと運営には、複数の資格者が別々の役割で関わります。\n\n| 相談内容 | 担当 |\n|---|---|\n| オンコール手当・割増賃金の設計、就業規則・賃金規程、36協定、労働時間管理 | 社会保険労務士 |\n| 指定申請（人員2.5・管理者などの基準を満たす書類）、指定権者への届出 | 行政書士 |\n| すでに発生した未払い割増賃金の請求など、争いになった案件 | 弁護士 |\n| 賃金設計に伴う源泉徴収・税務 | 税理士 |\n\n指定基準・人員配置の届出は行政書士（四葉行政書士事務所は当事務所とは独立した事業体で、別々にご契約いただきます）、未払い賃金をめぐる紛争は弁護士、税務は税理士の領域です。指定の可否そのものは指定権者（都道府県等）が判断します。\n\n## よくある質問\n\n**Q. オンコール手当を月額で払っていれば、割増賃金は払わなくてよいですか？**\nA. いいえ。オンコール手当は待機に応じたことへの手当で、実際に呼び出されて働いた時間の割増賃金（労働基準法第37条）とは別物です。出動が深夜・時間外・休日にかかれば、実働分に割増賃金の支払いが必要です。手当の支払いだけで割増の義務がなくなるわけではありません。\n\n**Q. 自宅で待機しているオンコールの時間は、すべて労働時間になりますか？**\nA. 必ずしもそうではありません。自宅で待機し、電話を受けたら出動するが、それまでは食事・入浴・睡眠など通常の私生活を送れる程度の拘束であれば、待機自体は労働時間にあたらないと整理されることが多いです。一方、電話対応が頻繁、外出や飲酒を禁じるなど拘束が強い場合は評価が変わり得ます。個別の判断は労働基準監督署・裁判所が行います。\n\n**Q. オンコール担当を置けば、常勤換算2.5人に数えられますか？**\nA. 待機していること自体では数えられません。常勤換算はその職員の勤務時間（労働時間）を常勤の所定勤務時間で割って求めるため、労働時間にあたらない自宅待機は算入されません。呼び出されて働いた実働時間や、待機中に命じられた実作業の時間が労働時間として積み上がります。\n\n**Q. 呼び出されて利用者宅へ向かう移動時間には、賃金が要りますか？**\nA. 呼出出動の移動は、使用者の指示による業務上の移動ですから、原則として労働時間にあたり賃金の対象です。看護後の記録作成も、業務として義務づけられ指揮監督のもとで行うなら労働時間です。これらを含めた総労働時間で、時間あたりの賃金が最低賃金を下回らないかも確認してください。\n\n## この記事の根拠\n\n- **労働基準法第32条**（労働時間）。使用者は、原則として1日8時間・1週40時間を超えて労働させてはならないと定めています（e-Gov法令検索、労働基準法・昭和22年法律第49号、2026年9月3日参照）\n- **労働基準法第37条**（時間外・休日及び深夜の割増賃金）。時間外・休日・深夜（午後10時〜午前5時）の労働に対し、政令で定める率以上の割増賃金の支払を義務づけています。実際に呼び出されて働いた時間がこれにあたれば割増賃金が必要です（e-Gov法令検索、労働基準法・昭和22年法律第49号、2026年9月3日参照）\n- **大星ビル管理事件（最高裁第一小法廷 平成14年2月28日判決、民集56巻2号361頁）**。仮眠時間中に実作業への従事が義務づけられ、その時間の自由利用が保障されていないなど、労働者が使用者の指揮命令下に置かれていると認められる場合には、その時間は労働基準法第32条の労働時間にあたるとしました。オンコール待機の労働時間性を判断する枠組みとして参照されます（最高裁判所、2026年9月3日参照）\n- **指定居宅サービス等の事業の人員、設備及び運営に関する基準（平成11年厚生省令第37号）**。指定訪問看護ステーションの看護職員（保健師・看護師・准看護師）を常勤換算方法で2.5以上置くこと、うち1人以上を常勤とすること、管理者を原則として常勤の保健師又は看護師とすることを定めています（e-Gov法令検索、2026年9月3日参照）\n- 個別のオンコール待機が労働時間にあたるか、常勤換算の具体的なカウント方法は、実態と指定権者の解釈に照らして判断されます。人員基準の充足や割増賃金の設計は、最新の一次情報（厚生労働省・指定権者の手引きなど）と個別事情に照らした確認が必要です\n\nこの記事は、誰に相談するかまで決めるものではありません。オンコール手当・割増賃金の設計、就業規則・賃金規程の整備、36協定、労働時間管理は社会保険労務士の業務です。指定申請・人員配置の届出は行政書士、未払い賃金の請求など争いになった案件は弁護士、税務は税理士の領域です。四葉社会保険労務士事務所にご相談いただく場合の費用は[報酬額表](/labor/ryokin)に、よくいただくご質問は[よくあるご質問](/labor/faq)にまとめています。\n\n本記事は一般的な情報提供です。個別の待機が労働時間に該当するかは労働基準監督署・裁判所が判断します。制度の適用や個別の手続は、最新の一次情報（厚生労働省など）と個別のご事情に照らし、面談のうえ資格者が行います。執筆は[浦松丈二](/about/uramatsu)（社会保険労務士・行政書士・宅地建物取引士）です。",
+    "status": "published",
+    "author": {
+      "name": "浦松 丈二",
+      "title": "社会保険労務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+    },
+    "keywords": [
+      "訪問看護 オンコール 手当 設計",
+      "オンコール 待機時間 労働時間",
+      "訪問看護 割増賃金 深夜 呼び出し",
+      "大星ビル管理事件 仮眠 労働時間",
+      "訪問看護 常勤換算 2.5 オンコール",
+      "待機手当 割増賃金 違い"
+    ],
+    "tags": [
+      "訪問看護",
+      "オンコール",
+      "労働時間",
+      "割増賃金",
+      "常勤換算",
+      "社会保険労務士"
+    ],
+    "locales": [],
+    "faq": [
+      {
+        "question": "オンコール手当を月額で払っていれば、割増賃金は払わなくてよいですか？",
+        "answer": "いいえ。オンコール手当は待機に応じたことへの手当で、実際に呼び出されて働いた時間の割増賃金（労働基準法第37条）とは別物です。出動が深夜・時間外・休日にかかれば、実働分に割増賃金の支払いが必要です。手当の支払いだけで割増の義務がなくなるわけではありません。"
+      },
+      {
+        "question": "自宅で待機しているオンコールの時間は、すべて労働時間になりますか？",
+        "answer": "必ずしもそうではありません。自宅で待機し、電話を受けたら出動するが、それまでは食事・入浴・睡眠など通常の私生活を送れる程度の拘束であれば、待機自体は労働時間にあたらないと整理されることが多いです。一方、電話対応が頻繁、外出や飲酒を禁じるなど拘束が強い場合は評価が変わり得ます。個別の判断は労働基準監督署・裁判所が行います。"
+      },
+      {
+        "question": "オンコール担当を置けば、常勤換算2.5人に数えられますか？",
+        "answer": "待機していること自体では数えられません。常勤換算はその職員の勤務時間（労働時間）を常勤の所定勤務時間で割って求めるため、労働時間にあたらない自宅待機は算入されません。呼び出されて働いた実働時間や、待機中に命じられた実作業の時間が労働時間として積み上がります。"
+      },
+      {
+        "question": "呼び出されて利用者宅へ向かう移動時間には、賃金が要りますか？",
+        "answer": "呼出出動の移動は、使用者の指示による業務上の移動ですから、原則として労働時間にあたり賃金の対象です。看護後の記録作成も、業務として義務づけられ指揮監督のもとで行うなら労働時間です。これらを含めた総労働時間で、時間あたりの賃金が最低賃金を下回らないかも確認してください。"
+      }
+    ],
+    "translations": {
+      "en": {
+        "title": "How should a home-visit nursing station design its on-call (standby) allowance?",
+        "excerpt": "Whether on-call (standby) time counts as working time turns on whether the worker is under the employer's direction during standby and the free use of that time is not guaranteed. Time actually spent working after a call-out is working time, and overtime, late-night, or holiday work requires premium wages (Labour Standards Act, Article 37). Paying a standby allowance does not by itself remove the duty to pay premium wages. Whether a specific standby period counts as working time is ultimately decided by the Labour Standards Inspection Office or the courts.",
+        "content": "**In short:** Whether on-call (standby) time counts as working time turns on whether the worker is **under the employer's direction during standby and the free use of that time is not guaranteed**. Time actually spent working after a call-out is working time, and if it falls in overtime, late-night, or holiday hours it requires **premium wages (Labour Standards Act, Article 37)**. Paying a standby allowance does not by itself remove the duty to pay premium wages. Whether a specific standby period counts as working time is ultimately decided by the Labour Standards Inspection Office or the courts.\n\n\"We pay a set monthly amount for on-call, so that should be enough,\" \"on nights with no call-out they weren't working, so no wages are due\" — in home-visit nursing workplaces, standby and actual work are often blurred, and unpaid premium wages get pointed out later. This article, for managers and owners of home-visit nursing stations, sets out the working-time nature of on-call standby, how to separate the standby allowance from premium wages, how it counts toward the 2.5 full-time equivalent, and how to treat travel and record-keeping time.\n\n## Does on-call (standby) time count as working time?\n\nIt is decided by \"whether the time is theirs to use freely.\" You cannot say across the board that \"standby is never working time\" or that \"all standby is working time.\"\n\nThe framework is set by the **Osaka-Building Management case (Supreme Court, First Petty Bench, judgment of 28 February 2002, Minshu Vol. 56 No. 2 p. 361)**, where the working-time nature of nap time was disputed. The Supreme Court held that where the worker is obligated to engage in actual work during nap time, such as responding to alarms, and free use of that time is not guaranteed — so the worker is found to be under the employer's direction — that time counts as working time under Article 32 of the Labour Standards Act.\n\nApplied to on-call, it divides as follows.\n\n| Standby state | Does it count as working time (approach)? |\n|---|---|\n| Standby confined to the office, unable to spend the time freely | If under direction, it **can be** working time |\n| Standby at home: they respond when a call comes, but until then can eat, bathe, sleep, and live an ordinary private life | If the degree of restraint is low, the standby itself is **generally not** working time |\n| Ordered to do actual work during standby — phone response, records, online advice | That actual-work time is **working time** |\n| Called out to a user's home and provided nursing care | The actual work from dispatch to return is **working time** |\n\nOn-call from home, where the degree of restraint is low, is often treated as not working time for the standby itself; but where restraint is strong — frequent calls, a ban on drinking or going out — the assessment can change. **Whether a specific standby counts as working time is decided by the Labour Standards Inspection Office or the courts in light of the actual situation.**\n\n## How do you separate the standby allowance from premium wages when called out?\n\nDesign them separately. An allowance for \"having stood by\" and wages for \"having actually worked\" are different in nature.\n\nMany stations pay a fixed **on-call allowance** per standby (per night) and pay **wages for the actual work** separately for the time actually spent after a call-out. If the dispatch falls in late-night hours (10 p.m. to 5 a.m.), late-night premium applies; if it exceeds statutory hours, overtime premium; if it falls on a statutory holiday, holiday premium.\n\n| Type of payment | Nature | Premium needed? |\n|---|---|---|\n| On-call allowance (fixed per standby) | Allowance for responding to standby | Not subject to premium if the standby is not working time; set it in the work and wage rules |\n| Wages for call-out work | Wages for time actually worked | If it falls in overtime, late-night, or holiday hours, **premium wages (Labour Standards Act, Article 37)** |\n\nThe point to watch is that **you cannot treat \"we pay a standby allowance, so no premium wages are due.\"** The standby allowance is consideration for standby; premium wages are the statutory payment for actual work — they are different. For the concept of premium wages and overtime management, see [what you need to have workers do overtime (how far a 36 agreement goes)](/en/labor/column/36-kyotei-zangyo-sharoushi-doko-made); for separating this from night and on-call duty, see also [how night duty and on-call duty differ in the treatment of working time](/en/labor/column/group-home-yakin-shukuchoku-roudou-chigai).\n\n## How does the on-call staffer count toward the 2.5 full-time equivalent?\n\nThe full-time equivalent is found by dividing that staffer's **working hours** by a full-time worker's set hours. So whether on-call can be counted toward the equivalent is the same question as \"does that standby time count as working (working-time) hours.\"\n\nThe staffing standard for a designated home-visit nursing station is set by the standards for designated home services (Ministry of Health and Welfare Ordinance No. 37 of 1999): nursing staff (public health nurses, nurses, assistant nurses) must be placed at **2.5 or more by the full-time-equivalent method**, at least one of them full-time, and the manager is in principle a full-time public health nurse or nurse.\n\n| Time | How it counts toward the equivalent (approach) |\n|---|---|\n| At-home standby where the standby itself is not working time | Not included in working hours, so **not counted** toward the equivalent |\n| Actual work providing care after a call-out | **Counted** as working hours |\n| Ordered actual work during standby — records, phone response | Counted if it amounts to working time |\n\nIn other words, merely \"having an on-call staffer\" is not counted toward the 2.5; **the time actually worked** accumulates. Because meeting the staffing standard and the concrete way of counting the equivalent also depend on the interpretation of the designating authority (the prefecture, etc.), confirm individual calculations with the latest primary sources and the authority's guidance.\n\n## How are travel time and record-keeping time treated?\n\nTravel to the office or a user's home after a call-out, and the time to write up nursing records afterward, also count as working time if under direction, and are subject to wages.\n\nA call-out dispatch is travel for work on the employer's instruction, so that travel time is in principle working time. Writing up nursing records and reports after a visit also counts as working time if obligated as work and done under direction and supervision. You also need to confirm that the hourly wage over the total working time including these does not fall below the minimum wage.\n\nThe order for setting this up is as follows.\n\n1. **Define standby and actual work:** state in writing which state is standby (subject to the allowance) and where actual work (subject to wages and premium) begins, in line with the Osaka-Building Management framework.\n2. **Write the on-call allowance and actual-work wages in the wage rules:** set the allowance per standby, the unit for actual work, and the late-night, overtime, and holiday premiums.\n3. **Record call-outs, travel, and records:** keep the call time, the time from dispatch to return, and the record-keeping time objectively. Without records, the office tends to be at a disadvantage if a dispute arises.\n4. **Confirm you do not fall below the minimum wage:** check that the amount divided over total working time including actual work, travel, and records is at or above the region's minimum wage.\n\nPutting the wage rules, a 36 agreement, and working-time management in order is the work of a Shakai Hoken Roumushi. For the treatment of travel between visits, see also [does home-care travel and standby time count as working time](/en/labor/column/homon-kaigo-idou-jikan-roudou-jikan).\n\n## Who handles the designation application, wage disputes, and tax?\n\nSetting up and running a home-visit nursing station involves several qualified professionals in separate roles.\n\n| Matter | In charge |\n|---|---|\n| Design of the on-call allowance and premium wages, work and wage rules, 36 agreement, working-time management | Shakai Hoken Roumushi |\n| Designation application (documents meeting the 2.5 staffing and manager standards), notifications to the authority | Gyoseishoshi |\n| Cases that have become disputes, such as claims for already-accrued unpaid premium wages | Attorney |\n| Withholding and tax arising from the wage design | Tax accountant |\n\nNotifications on designation standards and staffing are handled by a Gyoseishoshi (Yotsuba Gyoseishoshi Office is an entity independent of this office, engaged under a separate contract), disputes over unpaid wages are the domain of an attorney, and tax is the domain of a tax accountant. Whether the designation itself is granted is decided by the designating authority (the prefecture, etc.).\n\n## Frequently asked questions\n\n**Q. If we pay a monthly on-call allowance, do we not have to pay premium wages?**\nA. No. The on-call allowance is an allowance for responding to standby, and is different from the premium wages (Labour Standards Act, Article 37) for time actually worked after a call-out. If the dispatch falls in late-night, overtime, or holiday hours, premium wages are due on the actual work. Paying the allowance alone does not remove the premium duty.\n\n**Q. Is all at-home on-call standby time working time?**\nA. Not necessarily. If the worker stands by at home, responds when a call comes, and until then can eat, bathe, sleep, and live an ordinary private life, the standby itself is often treated as not working time. On the other hand, where calls are frequent or going out and drinking are banned, the assessment can change. The individual decision is made by the Labour Standards Inspection Office or the courts.\n\n**Q. If we assign an on-call staffer, do they count toward the 2.5 full-time equivalent?**\nA. Merely standing by is not counted. Because the equivalent is found by dividing the staffer's working (working-time) hours by full-time set hours, at-home standby that is not working time is not included. The actual work time after a call-out, and ordered actual work during standby, accumulate as working time.\n\n**Q. Are wages needed for travel time to a user's home after a call-out?**\nA. Call-out travel is work travel on the employer's instruction, so it is in principle working time and subject to wages. Writing up records after a visit is also working time if obligated as work and done under direction and supervision. Confirm too that the hourly wage over the total working time including these does not fall below the minimum wage.\n\n## Sources\n\n- **Labour Standards Act, Article 32** (working hours). It provides that, in principle, an employer must not have a worker work more than 8 hours a day or 40 hours a week (e-Gov Law Search, Labour Standards Act, Act No. 49 of 1947; accessed 3 September 2026).\n- **Labour Standards Act, Article 37** (premium wages for overtime, holiday, and late-night work). It obligates premium wages at or above the rate set by cabinet order for overtime, holiday, and late-night (10 p.m. to 5 a.m.) work. If the time actually worked after a call-out falls in these, premium wages are due (e-Gov Law Search, Labour Standards Act, Act No. 49 of 1947; accessed 3 September 2026).\n- **Osaka-Building Management case (Supreme Court, First Petty Bench, judgment of 28 February 2002, Minshu Vol. 56 No. 2 p. 361).** It held that where a worker is obligated to engage in actual work during nap time and free use of that time is not guaranteed — so the worker is under the employer's direction — that time counts as working time under Article 32. It is referred to as the framework for judging the working-time nature of on-call standby (Supreme Court of Japan; accessed 3 September 2026).\n- **Standards for personnel, equipment, and operation of designated home services (Ministry of Health and Welfare Ordinance No. 37 of 1999).** It provides that a designated home-visit nursing station place nursing staff (public health nurses, nurses, assistant nurses) at 2.5 or more by the full-time-equivalent method, at least one full-time, with the manager in principle a full-time public health nurse or nurse (e-Gov Law Search; accessed 3 September 2026).\n- Whether a specific on-call standby counts as working time, and the concrete way of counting the full-time equivalent, are judged in light of the actual situation and the designating authority's interpretation. Meeting the staffing standard and designing premium wages require confirmation grounded in the latest primary sources (the Ministry of Health, Labour and Welfare, the designating authority's guidance, etc.) and individual circumstances.\n\nThis article does not decide whom to consult. Designing the on-call allowance and premium wages, putting the work and wage rules in order, the 36 agreement, and working-time management are the work of a Shakai Hoken Roumushi. The designation application and staffing notifications are the domain of a Gyoseishoshi, disputes such as unpaid-wage claims are the domain of an attorney, and tax is the domain of a tax accountant. For fees when consulting 四葉社会保険労務士事務所, see [the fee schedule](/en/labor/ryokin); for frequently asked questions, see [the FAQ](/en/labor/faq).\n\nThis article is general information. Whether an individual standby counts as working time is decided by the Labour Standards Inspection Office or the courts. Whether the system applies and individual procedures are handled by a qualified professional after a consultation, in light of the latest primary sources (the Ministry of Health, Labour and Welfare, etc.) and individual circumstances. Written by [Joji Uramatsu](/en/about/uramatsu) (Shakai Hoken Roumushi, Gyoseishoshi, Registered Real Estate Transaction Specialist).",
+        "category": "Working hours",
+        "keywords": [
+          "home nursing on-call allowance",
+          "home nursing standby working time",
+          "on-call premium wages",
+          "home nursing full-time-equivalent 2.5",
+          "home visit nursing wage rules",
+          "oncall night call-out wages"
+        ],
+        "tags": [
+          "Home-visit nursing",
+          "On-call",
+          "Working hours",
+          "Premium wages",
+          "Full-time equivalent",
+          "Shakai Hoken Roumushi"
+        ],
+        "author": {
+          "name": "Joji Uramatsu",
+          "title": "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所"
+        },
+        "faq": [
+          {
+            "question": "If we pay a monthly on-call allowance, do we not have to pay premium wages?",
+            "answer": "No. The on-call allowance is an allowance for responding to standby, and is different from the premium wages (Labour Standards Act, Article 37) for time actually worked after a call-out. If the dispatch falls in late-night, overtime, or holiday hours, premium wages are due on the actual work. Paying the allowance alone does not remove the premium duty."
+          },
+          {
+            "question": "Is all at-home on-call standby time working time?",
+            "answer": "Not necessarily. If the worker stands by at home, responds when a call comes, and until then can eat, bathe, sleep, and live an ordinary private life, the standby itself is often treated as not working time. On the other hand, where calls are frequent or going out and drinking are banned, the assessment can change. The individual decision is made by the Labour Standards Inspection Office or the courts."
+          },
+          {
+            "question": "If we assign an on-call staffer, do they count toward the 2.5 full-time equivalent?",
+            "answer": "Merely standing by is not counted. Because the equivalent is found by dividing the staffer's working (working-time) hours by full-time set hours, at-home standby that is not working time is not included. The actual work time after a call-out, and ordered actual work during standby, accumulate as working time."
+          },
+          {
+            "question": "Are wages needed for travel time to a user's home after a call-out?",
+            "answer": "Call-out travel is work travel on the employer's instruction, so it is in principle working time and subject to wages. Writing up records after a visit is also working time if obligated as work and done under direction and supervision. Confirm too that the hourly wage over the total working time including these does not fall below the minimum wage."
+          }
+        ]
+      },
+      "zh-tw": {
+        "title": "到宅訪問看護站的待命（on-call）津貼該如何設計？",
+        "excerpt": "待命（on-call）時間是否屬工時，取決於待命中勞工是否處於雇主指揮命令之下、且該時間的自由使用未受保障。被呼叫出動後實際工作的時間屬工時，若落在延長工時、深夜或休日，即須支付加給工資（勞動基準法第37條）。縱使支付待命津貼，也不因此免除加給工資的義務。個別待命是否屬工時，最終由勞動基準監督署或法院判斷。",
+        "content": "**先講結論**：待命（on-call）時間是否屬工時，取決於待命中勞工是否**處於雇主指揮命令之下、且該時間的自由使用未受保障**。被呼叫出動後實際工作的時間屬工時，若落在延長工時、深夜或休日，即須支付**加給工資（勞動基準法第37條）**。縱使支付待命津貼，也不因此免除加給工資的義務。個別待命是否屬工時，最終由勞動基準監督署或法院判斷。\n\n「on-call是按月支付津貼，應該就夠了」「沒被呼叫的夜晚沒在工作，就不必給薪」——在到宅訪問看護的現場，待命與實際工作常在含糊中運作，事後才被指出有未付加給工資。本文為到宅訪問看護站的管理者・經營者，整理待命的工時性、待命津貼與加給工資的區分、對常勤換算2.5的計入方式，以及移動・記錄時間的處理。\n\n## 待命（on-call）時間算工時嗎？\n\n以「是否為可自由運用的時間」決定。既不能一律說「待命不算工時」，也不能一律說「待命全都算工時」。\n\n判斷的框架見於仮眠（值班小睡）時間工時性受爭議的**大星大樓管理事件（最高法院第一小法庭 平成14年2月28日判決，民集56卷2號361頁）**。最高法院認為，值班小睡時間中被義務化須從事實際作業（如因應警報），且該時間之自由使用未獲保障，以致勞工可認定處於雇主指揮命令之下者，該時間即屬勞動基準法第32條的工時。\n\n套用於on-call，可區分如下。\n\n| 待命狀態 | 是否屬工時（思路） |\n|---|---|\n| 於事業所留守、受拘束而無法自由度過的待命 | 若處於指揮命令之下，**得**認定為工時 |\n| 於自宅待命，接到電話即出動，在此之前可用餐・入浴・睡眠等過一般私生活 | 拘束程度低者，待命本身**一般不算**工時 |\n| 待命中被命令為電話對應・記錄・線上諮詢等實際作業 | 該實際作業時間屬**工時** |\n| 被呼叫出動至使用者住處並提供看護 | 由出動至返所的實際工作屬**工時** |\n\n自宅on-call在拘束程度低時，待命本身常被整理為非工時；惟若電話對應頻繁、禁止飲酒或外出等拘束較強，評價即可能改變。**個別待命是否屬工時，由勞動基準監督署・法院依實態判斷。**\n\n## 待命津貼與被呼叫時的加給工資如何區分？\n\n以分開設計為基本。對「有待命」的津貼，與對「實際工作」的工資，性質不同。\n\n多數看護站按待命一次（一晚）支付定額的**on-call津貼**，並就實際被呼叫出動的時間另行支付**實際工作的工資**。出動若落在深夜（22時至翌日5時）即深夜加給，逾法定工時即延長工時加給，落在法定休日即休日加給。\n\n| 支付種類 | 性質 | 是否需加給 |\n|---|---|---|\n| on-call津貼（按待命一次定額） | 對回應待命的津貼 | 若待命非工時則非加給對象；於工作規則・工資規程訂定 |\n| 呼叫出動的實際工作工資 | 對實際工作時間的工資 | 若落在延長工時・深夜・休日，須付**加給工資（勞動基準法第37條）** |\n\n須留意者為：**不得以「已付待命津貼故不必付加給工資」處理**。待命津貼是對待命的對價，加給工資是對實際工作的法定給付，兩者不同。加給工資的思路與延長工時的管理，請參閱[要讓員工加班需要什麼（36協定到哪裡）](/zh-tw/labor/column/36-kyotei-zangyo-sharoushi-doko-made)；與夜勤・宿直的切分，另請參閱[夜勤與宿直在工時處理上有何不同](/zh-tw/labor/column/group-home-yakin-shukuchoku-roudou-chigai)。\n\n## on-call擔當該如何計入常勤換算2.5人？\n\n常勤換算係以該職員的**勤務時間**除以常勤職員的所定勤務時間求得。因此，on-call能否計入常勤換算，與「該待命時間是否屬勤務時間（工時）」是同一問題。\n\n指定訪問看護站的人員基準，依指定居宅服務等之基準（平成11年厚生省令第37號），須以**常勤換算方法置看護職員（保健師・看護師・准看護師）2.5以上**，其中1人以上為常勤，管理者原則上為常勤的保健師或看護師。\n\n| 時間 | 計入常勤換算的方式（思路） |\n|---|---|\n| 自宅待命、且待命本身不屬工時的on-call | 不計入勤務時間，故**不計入**常勤換算 |\n| 被呼叫出動並提供看護的實際工作 | 作為工時**計入**勤務時間 |\n| 待命中被命令的記錄・電話對應等實際作業 | 若屬工時則計入勤務時間 |\n\n換言之，「有on-call擔當」本身不計入2.5，累積的是**實際工作的時間**。人員基準的充足與常勤換算的具體計法，亦取決於指定權者（都道府縣等）的解釋，個別算定請以最新一手資訊與指定權者的手引確認。\n\n## 移動時間・記錄時間的工資如何處理？\n\n被呼叫後前往事業所或使用者住處的移動、看護後製作記錄的時間，若處於指揮命令之下即屬工時，為工資對象。\n\n呼叫出動係依雇主指示為業務而移動，其移動時間原則上屬工時。訪視後的看護記錄・報告製作，若係業務上被義務化並在指揮監督下為之，亦屬工時。並須確認含此在內的總工時，每小時工資是否低於最低工資。\n\n整備順序如下。\n\n1. **界定待命與實際工作**：依大星大樓管理事件的框架，以書面明定何種狀態為待命（津貼對象）、自何處起為實際工作（工資・加給對象）。\n2. **於工資規程載明on-call津貼與實際工作工資**：訂定按待命一次的津貼額、實際工作的單價，以及深夜・延長工時・休日加給。\n3. **記錄出動・移動・記錄**：客觀保留呼叫時刻、由出動至返所的時間、記錄製作的時間。無紀錄時，日後爭執時事業所一方易居劣勢。\n4. **確認不低於最低工資**：確認含實際工作・移動・記錄之總工時所除得之數額，在該地區最低工資以上。\n\n工資規程・36協定・工時管理的整備屬社會保險勞務士的業務。關於訪視之間的移動時間，另請參閱[到宅照護的移動時間・待機時間算工時嗎](/zh-tw/labor/column/homon-kaigo-idou-jikan-roudou-jikan)。\n\n## 指定申請・工資紛爭・稅務，分別該找誰？\n\n到宅訪問看護站的設立與營運，會有多位有資格者以各自的角色參與。\n\n| 諮詢內容 | 擔當 |\n|---|---|\n| on-call津貼・加給工資的設計、工作規則・工資規程、36協定、工時管理 | 社會保險勞務士 |\n| 指定申請（滿足人員2.5・管理者等基準的書類）、向指定權者申報 | 行政書士 |\n| 已發生之未付加給工資請求等已成爭執之案件 | 律師 |\n| 伴隨工資設計的源泉徵收・稅務 | 稅理士 |\n\n指定基準・人員配置之申報屬行政書士（四葉行政書士事務所與本事務所為各自獨立之事業體，另行簽約）；未付工資之紛爭屬律師領域；稅務屬稅理士領域。指定的可否本身由指定權者（都道府縣等）判斷。\n\n## 常見問題\n\n**Q. 只要按月支付on-call津貼，就不必付加給工資嗎？**\nA. 並非如此。on-call津貼是對回應待命的津貼，與被呼叫出動後實際工作時間的加給工資（勞動基準法第37條）為兩回事。出動若落在深夜・延長工時・休日，實際工作部分即須付加給工資。僅支付津貼，並不因此免除加給義務。\n\n**Q. 於自宅待命的on-call時間，全都算工時嗎？**\nA. 未必。若於自宅待命、接到電話即出動，在此之前可用餐・入浴・睡眠等過一般私生活，其拘束程度者，待命本身常被整理為非工時。另一方面，電話對應頻繁、禁止外出或飲酒等拘束較強時，評價可能改變。個別判斷由勞動基準監督署・法院為之。\n\n**Q. 只要配置on-call擔當，就能計入常勤換算2.5人嗎？**\nA. 僅是待命本身無法計入。常勤換算係以該職員的勤務時間（工時）除以常勤所定勤務時間求得，故不屬工時的自宅待命不予計入。被呼叫後實際工作的時間，以及待命中被命令的實際作業時間，才作為工時累積。\n\n**Q. 被呼叫後前往使用者住處的移動時間，需要工資嗎？**\nA. 呼叫出動的移動係依雇主指示的業務移動，原則上屬工時而為工資對象。看護後的記錄製作，若係業務上被義務化並在指揮監督下為之，亦屬工時。並請確認含此在內的總工時，每小時工資是否低於最低工資。\n\n## 本文依據\n\n- **勞動基準法第32條**（工時）。規定雇主原則上不得使勞工每日工作逾8小時、每週逾40小時（e-Gov法令檢索、勞動基準法・昭和22年法律第49號，2026年9月3日參照）\n- **勞動基準法第37條**（延長工時・休日及深夜的加給工資）。就延長工時・休日・深夜（22時至翌日5時）的工作，課予支付政令所定比率以上加給工資的義務。被呼叫出動後實際工作的時間若落於此，即須付加給工資（e-Gov法令檢索、勞動基準法・昭和22年法律第49號，2026年9月3日參照）\n- **大星大樓管理事件（最高法院第一小法庭 平成14年2月28日判決，民集56卷2號361頁）**。認為值班小睡時間中被義務化須從事實際作業、且該時間之自由使用未獲保障，以致勞工可認定處於雇主指揮命令之下者，該時間即屬第32條的工時。作為判斷on-call待命工時性的框架而參照（最高法院，2026年9月3日參照）\n- **指定居宅服務等之事業的人員、設備及營運相關基準（平成11年厚生省令第37號）**。規定指定訪問看護站以常勤換算方法置看護職員（保健師・看護師・准看護師）2.5以上、其中1人以上為常勤，管理者原則上為常勤的保健師或看護師（e-Gov法令檢索，2026年9月3日參照）\n- 個別on-call待命是否屬工時、常勤換算的具體計法，須依實態與指定權者的解釋判斷。人員基準的充足與加給工資的設計，須依最新一手資訊（厚生勞働省・指定權者手引等）與個別情形確認\n\n本文並不代替您決定該向誰諮詢。on-call津貼・加給工資的設計、工作規則・工資規程的整備、36協定、工時管理，屬社會保險勞務士的業務。指定申請・人員配置之申報屬行政書士，未付工資請求等爭執屬律師領域，稅務屬稅理士領域。向四葉社会保険労務士事務所諮詢時的費用，整理於[報酬額表](/zh-tw/labor/ryokin)；常見問題整理於[常見問答](/zh-tw/labor/faq)。\n\n本文為一般性資訊提供。個別待命是否屬工時，由勞動基準監督署・法院判斷。制度的適用與個別手續，將依最新一手資訊（厚生勞働省等）與個別情形，於面談後由有資格者為之。撰文為[浦松丈二](/zh-tw/about/uramatsu)（社會保險勞務士・行政書士・宅地建物取引士）。",
+        "category": "工時",
+        "keywords": [
+          "訪問看護 待命津貼",
+          "訪問看護 待機 工時",
+          "待命 加給工資",
+          "訪問看護 常勤換算 2.5",
+          "訪問看護 工資規程",
+          "on-call 深夜出動 工資"
+        ],
+        "tags": [
+          "到宅訪問看護",
+          "待命",
+          "工時",
+          "加給工資",
+          "常勤換算",
+          "社會保險勞務士"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "只要按月支付on-call津貼，就不必付加給工資嗎？",
+            "answer": "並非如此。on-call津貼是對回應待命的津貼，與被呼叫出動後實際工作時間的加給工資（勞動基準法第37條）為兩回事。出動若落在深夜・延長工時・休日，實際工作部分即須付加給工資。僅支付津貼，並不因此免除加給義務。"
+          },
+          {
+            "question": "於自宅待命的on-call時間，全都算工時嗎？",
+            "answer": "未必。若於自宅待命、接到電話即出動，在此之前可用餐・入浴・睡眠等過一般私生活，其拘束程度者，待命本身常被整理為非工時。另一方面，電話對應頻繁、禁止外出或飲酒等拘束較強時，評價可能改變。個別判斷由勞動基準監督署・法院為之。"
+          },
+          {
+            "question": "只要配置on-call擔當，就能計入常勤換算2.5人嗎？",
+            "answer": "僅是待命本身無法計入。常勤換算係以該職員的勤務時間（工時）除以常勤所定勤務時間求得，故不屬工時的自宅待命不予計入。被呼叫後實際工作的時間，以及待命中被命令的實際作業時間，才作為工時累積。"
+          },
+          {
+            "question": "被呼叫後前往使用者住處的移動時間，需要工資嗎？",
+            "answer": "呼叫出動的移動係依雇主指示的業務移動，原則上屬工時而為工資對象。看護後的記錄製作，若係業務上被義務化並在指揮監督下為之，亦屬工時。並請確認含此在內的總工時，每小時工資是否低於最低工資。"
+          }
+        ]
+      },
+      "zh": {
+        "title": "到宅访问看护站的待命（on-call）津贴该如何设计？",
+        "excerpt": "待命（on-call）时间是否属工时，取决于待命中劳工是否处于雇主指挥命令之下、且该时间的自由使用未受保障。被呼叫出动后实际工作的时间属工时，若落在延长工时、深夜或休日，即须支付加给工资（劳动基准法第37条）。纵使支付待命津贴，也不因此免除加给工资的义务。个别待命是否属工时，最终由劳动基准监督署或法院判断。",
+        "content": "**先讲结论**：待命（on-call）时间是否属工时，取决于待命中劳工是否**处于雇主指挥命令之下、且该时间的自由使用未受保障**。被呼叫出动后实际工作的时间属工时，若落在延长工时、深夜或休日，即须支付**加给工资（劳动基准法第37条）**。纵使支付待命津贴，也不因此免除加给工资的义务。个别待命是否属工时，最终由劳动基准监督署或法院判断。\n\n「on-call是按月支付津贴，应该就够了」「没被呼叫的夜晚没在工作，就不必给薪」——在到宅访问看护的现场，待命与实际工作常在含糊中运作，事后才被指出有未付加给工资。本文为到宅访问看护站的管理者・经营者，整理待命的工时性、待命津贴与加给工资的区分、对常勤换算2.5的计入方式，以及移动・记录时间的处理。\n\n## 待命（on-call）时间算工时吗？\n\n以「是否为可自由运用的时间」决定。既不能一律说「待命不算工时」，也不能一律说「待命全都算工时」。\n\n判断的框架见于假眠（值班小睡）时间工时性受争议的**大星大楼管理事件（最高法院第一小法庭 平成14年2月28日判决，民集56卷2号361页）**。最高法院认为，值班小睡时间中被义务化须从事实际作业（如因应警报），且该时间之自由使用未获保障，以致劳工可认定处于雇主指挥命令之下者，该时间即属劳动基准法第32条的工时。\n\n套用于on-call，可区分如下。\n\n| 待命状态 | 是否属工时（思路） |\n|---|---|\n| 于事业所留守、受拘束而无法自由度过的待命 | 若处于指挥命令之下，**得**认定为工时 |\n| 于自宅待命，接到电话即出动，在此之前可用餐・入浴・睡眠等过一般私生活 | 拘束程度低者，待命本身**一般不算**工时 |\n| 待命中被命令为电话对应・记录・在线咨询等实际作业 | 该实际作业时间属**工时** |\n| 被呼叫出动至使用者住处并提供看护 | 由出动至返所的实际工作属**工时** |\n\n自宅on-call在拘束程度低时，待命本身常被整理为非工时；惟若电话对应频繁、禁止饮酒或外出等拘束较强，评价即可能改变。**个别待命是否属工时，由劳动基准监督署・法院依实态判断。**\n\n## 待命津贴与被呼叫时的加给工资如何区分？\n\n以分开设计为基本。对「有待命」的津贴，与对「实际工作」的工资，性质不同。\n\n多数看护站按待命一次（一晚）支付定额的**on-call津贴**，并就实际被呼叫出动的时间另行支付**实际工作的工资**。出动若落在深夜（22时至翌日5时）即深夜加给，逾法定工时即延长工时加给，落在法定休日即休日加给。\n\n| 支付种类 | 性质 | 是否需加给 |\n|---|---|---|\n| on-call津贴（按待命一次定额） | 对回应待命的津贴 | 若待命非工时则非加给对象；于工作规则・工资规程订定 |\n| 呼叫出动的实际工作工资 | 对实际工作时间的工资 | 若落在延长工时・深夜・休日，须付**加给工资（劳动基准法第37条）** |\n\n须留意者为：**不得以「已付待命津贴故不必付加给工资」处理**。待命津贴是对待命的对价，加给工资是对实际工作的法定给付，两者不同。加给工资的思路与延长工时的管理，请参阅[要让员工加班需要什么（36协定到哪里）](/zh/labor/column/36-kyotei-zangyo-sharoushi-doko-made)；与夜勤・宿直的切分，另请参阅[夜勤与宿直在工时处理上有何不同](/zh/labor/column/group-home-yakin-shukuchoku-roudou-chigai)。\n\n## on-call担当该如何计入常勤换算2.5人？\n\n常勤换算系以该职员的**勤务时间**除以常勤职员的所定勤务时间求得。因此，on-call能否计入常勤换算，与「该待命时间是否属勤务时间（工时）」是同一问题。\n\n指定访问看护站的人员基准，依指定居宅服务等之基准（平成11年厚生省令第37号），须以**常勤换算方法置看护职员（保健师・看护师・准看护师）2.5以上**，其中1人以上为常勤，管理者原则上为常勤的保健师或看护师。\n\n| 时间 | 计入常勤换算的方式（思路） |\n|---|---|\n| 自宅待命、且待命本身不属工时的on-call | 不计入勤务时间，故**不计入**常勤换算 |\n| 被呼叫出动并提供看护的实际工作 | 作为工时**计入**勤务时间 |\n| 待命中被命令的记录・电话对应等实际作业 | 若属工时则计入勤务时间 |\n\n换言之，「有on-call担当」本身不计入2.5，累积的是**实际工作的时间**。人员基准的充足与常勤换算的具体计法，亦取决于指定权者（都道府县等）的解释，个别算定请以最新一手资讯与指定权者的手引确认。\n\n## 移动时间・记录时间的工资如何处理？\n\n被呼叫后前往事业所或使用者住处的移动、看护后制作记录的时间，若处于指挥命令之下即属工时，为工资对象。\n\n呼叫出动系依雇主指示为业务而移动，其移动时间原则上属工时。访视后的看护记录・报告制作，若系业务上被义务化并在指挥监督下为之，亦属工时。并须确认含此在内的总工时，每小时工资是否低于最低工资。\n\n整备顺序如下。\n\n1. **界定待命与实际工作**：依大星大楼管理事件的框架，以书面明定何种状态为待命（津贴对象）、自何处起为实际工作（工资・加给对象）。\n2. **于工资规程载明on-call津贴与实际工作工资**：订定按待命一次的津贴额、实际工作的单价，以及深夜・延长工时・休日加给。\n3. **记录出动・移动・记录**：客观保留呼叫时刻、由出动至返所的时间、记录制作的时间。无纪录时，日后争执时事业所一方易居劣势。\n4. **确认不低于最低工资**：确认含实际工作・移动・记录之总工时所除得之数额，在该地区最低工资以上。\n\n工资规程・36协定・工时管理的整备属社会保险劳务士的业务。关于访视之间的移动时间，另请参阅[到宅照护的移动时间・待机时间算工时吗](/zh/labor/column/homon-kaigo-idou-jikan-roudou-jikan)。\n\n## 指定申请・工资纠纷・税务，分别该找谁？\n\n到宅访问看护站的设立与营运，会有多位有资格者以各自的角色参与。\n\n| 咨询内容 | 担当 |\n|---|---|\n| on-call津贴・加给工资的设计、工作规则・工资规程、36协定、工时管理 | 社会保险劳务士 |\n| 指定申请（满足人员2.5・管理者等基准的书类）、向指定权者申报 | 行政书士 |\n| 已发生之未付加给工资请求等已成争执之案件 | 律师 |\n| 伴随工资设计的源泉征收・税务 | 税理士 |\n\n指定基准・人员配置之申报属行政书士（四葉行政書士事務所与本事务所为各自独立之事业体，另行签约）；未付工资之纠纷属律师领域；税务属税理士领域。指定的可否本身由指定权者（都道府县等）判断。\n\n## 常见问题\n\n**Q. 只要按月支付on-call津贴，就不必付加给工资吗？**\nA. 并非如此。on-call津贴是对回应待命的津贴，与被呼叫出动后实际工作时间的加给工资（劳动基准法第37条）为两回事。出动若落在深夜・延长工时・休日，实际工作部分即须付加给工资。仅支付津贴，并不因此免除加给义务。\n\n**Q. 于自宅待命的on-call时间，全都算工时吗？**\nA. 未必。若于自宅待命、接到电话即出动，在此之前可用餐・入浴・睡眠等过一般私生活，其拘束程度者，待命本身常被整理为非工时。另一方面，电话对应频繁、禁止外出或饮酒等拘束较强时，评价可能改变。个别判断由劳动基准监督署・法院为之。\n\n**Q. 只要配置on-call担当，就能计入常勤换算2.5人吗？**\nA. 仅是待命本身无法计入。常勤换算系以该职员的勤务时间（工时）除以常勤所定勤务时间求得，故不属工时的自宅待命不予计入。被呼叫后实际工作的时间，以及待命中被命令的实际作业时间，才作为工时累积。\n\n**Q. 被呼叫后前往使用者住处的移动时间，需要工资吗？**\nA. 呼叫出动的移动系依雇主指示的业务移动，原则上属工时而为工资对象。看护后的记录制作，若系业务上被义务化并在指挥监督下为之，亦属工时。并请确认含此在内的总工时，每小时工资是否低于最低工资。\n\n## 本文依据\n\n- **劳动基准法第32条**（工时）。规定雇主原则上不得使劳工每日工作逾8小时、每周逾40小时（e-Gov法令检索、劳动基准法・昭和22年法律第49号，2026年9月3日参照）\n- **劳动基准法第37条**（延长工时・休日及深夜的加给工资）。就延长工时・休日・深夜（22时至翌日5时）的工作，课予支付政令所定比率以上加给工资的义务。被呼叫出动后实际工作的时间若落于此，即须付加给工资（e-Gov法令检索、劳动基准法・昭和22年法律第49号，2026年9月3日参照）\n- **大星大楼管理事件（最高法院第一小法庭 平成14年2月28日判决，民集56卷2号361页）**。认为值班小睡时间中被义务化须从事实际作业、且该时间之自由使用未获保障，以致劳工可认定处于雇主指挥命令之下者，该时间即属第32条的工时。作为判断on-call待命工时性的框架而参照（最高法院，2026年9月3日参照）\n- **指定居宅服务等之事业的人员、设备及营运相关基准（平成11年厚生省令第37号）**。规定指定访问看护站以常勤换算方法置看护职员（保健师・看护师・准看护师）2.5以上、其中1人以上为常勤，管理者原则上为常勤的保健师或看护师（e-Gov法令检索，2026年9月3日参照）\n- 个别on-call待命是否属工时、常勤换算的具体计法，须依实态与指定权者的解释判断。人员基准的充足与加给工资的设计，须依最新一手资讯（厚生劳働省・指定权者手引等）与个别情形确认\n\n本文并不代替您决定该向谁咨询。on-call津贴・加给工资的设计、工作规则・工资规程的整备、36协定、工时管理，属社会保险劳务士的业务。指定申请・人员配置之申报属行政书士，未付工资请求等争执属律师领域，税务属税理士领域。向四葉社会保険労務士事務所咨询时的费用，整理于[报酬额表](/zh/labor/ryokin)；常见问题整理于[常见问答](/zh/labor/faq)。\n\n本文为一般性资讯提供。个别待命是否属工时，由劳动基准监督署・法院判断。制度的适用与个别手续，将依最新一手资讯（厚生劳働省等）与个别情形，于面谈后由有资格者为之。撰文为[浦松丈二](/zh/about/uramatsu)（社会保险劳务士・行政书士・宅地建物取引士）。",
+        "category": "工时",
+        "keywords": [
+          "访问看护 待命津贴",
+          "访问看护 待机 工时",
+          "待命 加给工资",
+          "访问看护 常勤换算 2.5",
+          "访问看护 工资规程",
+          "on-call 深夜出动 工资"
+        ],
+        "tags": [
+          "到宅访问看护",
+          "待命",
+          "工时",
+          "加给工资",
+          "常勤换算",
+          "社会保险劳务士"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "只要按月支付on-call津贴，就不必付加给工资吗？",
+            "answer": "并非如此。on-call津贴是对回应待命的津贴，与被呼叫出动后实际工作时间的加给工资（劳动基准法第37条）为两回事。出动若落在深夜・延长工时・休日，实际工作部分即须付加给工资。仅支付津贴，并不因此免除加给义务。"
+          },
+          {
+            "question": "于自宅待命的on-call时间，全都算工时吗？",
+            "answer": "未必。若于自宅待命、接到电话即出动，在此之前可用餐・入浴・睡眠等过一般私生活，其拘束程度者，待命本身常被整理为非工时。另一方面，电话对应频繁、禁止外出或饮酒等拘束较强时，评价可能改变。个别判断由劳动基准监督署・法院为之。"
+          },
+          {
+            "question": "只要配置on-call担当，就能计入常勤换算2.5人吗？",
+            "answer": "仅是待命本身无法计入。常勤换算系以该职员的勤务时间（工时）除以常勤所定勤务时间求得，故不属工时的自宅待命不予计入。被呼叫后实际工作的时间，以及待命中被命令的实际作业时间，才作为工时累积。"
+          },
+          {
+            "question": "被呼叫后前往使用者住处的移动时间，需要工资吗？",
+            "answer": "呼叫出动的移动系依雇主指示的业务移动，原则上属工时而为工资对象。看护后的记录制作，若系业务上被义务化并在指挥监督下为之，亦属工时。并请确认含此在内的总工时，每小时工资是否低于最低工资。"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "business": "labor",
+    "slug": "gaikokujin-rosai-kikoku-go-hosho",
+    "title": "外国人労働者が労災に遭い帰国したら、補償はどうなりますか",
+    "date": "2026-09-03",
+    "category": "労働保険",
+    "excerpt": "労災保険は、日本国内の事業で働く労働者であれば、国籍や在留資格を問わず適用されます。仕事が原因のけが・病気で受ける療養・休業・障害などの給付は、被災者が帰国したあとでも受けられ、海外の口座への送金も可能です。ただし請求には時効があり、療養・休業などは2年、障害・遺族は5年です（労働者災害補償保険法第42条）。海外送金・通訳・書類の翻訳の準備、帰国後に請求できる厚生年金の脱退一時金とあわせて整理します。労災にあたるかの認定は労働基準監督署が行います。",
+    "content": "**結論（先に要点）**：労災保険は、日本国内の事業で働く労働者であれば、国籍や在留資格を問わず適用されます。仕事が原因のけが・病気で受ける療養・休業・障害などの給付は、被災者が帰国したあとでも受けられ、海外の口座への送金も可能です。ただし請求には時効があり、療養・休業などは2年、障害・遺族は5年です。労災にあたるかの認定は労働基準監督署が行います。\n\n「外国人だから労災は使えないのでは」「帰国してしまったら、もう給付は受けられないのでは」——外国人を雇う事業者や、被災後に帰国した/帰国予定の労働者を支える方から、こうした不安をよく聞きます。この記事は、国内で被災した外国人労働者が帰国後も給付を受け続けるための、適用・時効・送金・通訳の要点を整理します。\n\n## 外国人労働者にも労災保険は適用されますか？\n\n適用されます。国籍や在留資格による区別はありません。\n\n労災保険は、日本国内の事業に使用され賃金を受ける労働者であれば、国籍を問わず適用されます。労働基準法第3条は、使用者が労働者の国籍を理由に賃金・労働時間その他の労働条件について差別的取扱いをしてはならないと定めており、労災保険の適用も同じ考え方に立ちます。厚生労働省の取扱いでも、在留期限の切れた人や就労資格に適合しない就労など、いわゆる不法就労の状態にある人であっても、仕事が原因のけが・病気であれば労災保険給付の対象になるとされています。\n\n| 項目 | 取扱い |\n|---|---|\n| 適用の対象 | 日本国内の事業で働く労働者。**国籍・在留資格を問わない** |\n| 保険料の負担 | 全額**事業主**が負担する（労働者の自己負担はない） |\n| 不法就労の状態にある人 | 仕事が原因のけが・病気であれば**給付の対象** |\n| 給付を受ける権利 | 帰国しても消滅しない |\n\n労災保険の未加入や、私傷病と業務上の切り分けなど、手続の入口は[労災の手続と私傷病の報告はどう違うのか](/labor/column/rousai-tetsuzuki-shishobyo-houkoku)もあわせてご確認ください。\n\n## 帰国後でも、療養・休業・障害の給付は受けられますか？\n\n受けられます。給付を受ける権利は、被災者が日本を離れても消滅しません。\n\n労災保険給付は、被災した労働者本人の権利です。帰国後は、海外の住所・口座を届け出ることで、給付金を海外送金で受け取ることができます。療養（治療費）、休業（働けない間の補償）、障害（後遺障害が残ったときの補償）、遺族（死亡したときの遺族への補償）といった給付が、要件を満たす限り帰国後も対象になります。\n\nただし、帰国後は日本の医療機関にかかれないため、療養（補償）給付の現物給付（労災指定病院での治療）は使えず、海外で治療を受けた費用の請求などは、書類や証明の準備が国内より手間がかかります。海外出張・海外派遣中の被災など、そもそも国内の労災保険が及ぶかどうかが問題になる場面については[海外出張と海外派遣で労災の扱いはどう違うのか](/labor/column/kaigai-shucho-haken-rosai-chigai)を参照してください。\n\n## 労災の請求には時効（2年・5年）がありますか？\n\nあります。給付の種類によって、時効の期間が2年と5年に分かれます。\n\n労働者災害補償保険法第42条は、請求権が消滅する時効を次のように定めています。**帰国して時間が経つと、請求できたはずの給付が時効で受けられなくなる**ため、早めの手続が要点です。\n\n| 給付の種類 | 時効 | 起算点（原則） |\n|---|---|---|\n| 療養（補償）給付、休業（補償）給付、葬祭料（葬祭給付）、介護（補償）給付 | **2年** | それぞれの権利を行使できる時から |\n| 障害（補償）給付、遺族（補償）給付 | **5年** | それぞれの権利を行使できる時から |\n\n休業給付は、賃金を受けない日ごとに請求権が生じ、その日ごとに2年の時効が進みます。帰国後にまとめて請求しようとすると、古い分から時効にかかることがあるため注意が要ります。\n\n## 海外送金や通訳、書類の翻訳はどうすればよいですか？\n\n給付金の受取り、請求書類の作成、労働基準監督署とのやり取りには、送金と言語の準備が要ります。\n\n| 場面 | 準備 |\n|---|---|\n| 給付金の受取り | 海外の住所・銀行口座を届け出れば、**海外送金**で受け取れる |\n| 請求書類の記入 | 本人・事業主・医師の証明欄がある。帰国後は事業主側の協力が要る場面が多い |\n| 通訳・翻訳 | 厚生労働省は外国人労働者向けに多言語の労災保険給付の案内を公表している（参照日を確認して使う）。医証など外国語の書類は翻訳の添付を求められることがある |\n| 会社の協力 | 事業主には、労災の証明や手続への協力が求められる |\n\n帰国後の請求は、事業主の証明・協力が得られるかで進みやすさが変わります。雇用の入口で誰が何を担当するかは[外国人を雇うとき、社労士・行政書士のどちらの窓口かを分ける](/labor/column/gaikokujin-koyo-madoguchi-wakekata)も参考になります。なお、給付の具体的な手続や必要書類は、被災地を管轄する労働基準監督署と最新の一次情報で確認してください。\n\n## 在留・帰国手続や会社への賠償請求は、誰に相談しますか？\n\n労災の給付そのものは社会保険労務士が扱いますが、周辺の手続は資格ごとに担当が分かれます。\n\n| 相談内容 | 担当 |\n|---|---|\n| 労災保険給付の請求、休業・障害などの手続 | 社会保険労務士 |\n| 在留資格の変更・帰国に伴う入管手続（申請取次） | 行政書士 |\n| 会社の安全配慮義務違反を理由とする損害賠償など、争いになった案件 | 弁護士 |\n| 年金の脱退一時金、源泉徴収された税の還付など税務 | 社会保険労務士・税理士 |\n\n在留資格の変更や帰国に伴う入管手続は行政書士（四葉行政書士事務所は当事務所とは独立した事業体で、別々にご契約いただきます）、会社の安全配慮義務違反をめぐる損害賠償の紛争は弁護士の領域です。労災にあたるかの認定は労働基準監督署が行います。帰国する外国人は、厚生年金の**脱退一時金**を請求できる場合があり（日本国籍がない・被保険者期間6か月以上・老齢厚生年金の受給資格期間10年を満たしていない・日本に住所がない・日本に住所を有しなくなった日から2年以内に請求、などが要件）、これは労災とは別の年金の制度です。詳しくは[帰国する外国人社員の年金はどう精算するのか](/labor/column/gaikokujin-shain-kikoku-nenkin-seisan)をご覧ください。\n\n## よくある質問\n\n**Q. 在留資格のない外国人が働いていてけがをした場合、労災は使えますか？**\nA. 仕事が原因のけが・病気であれば、労災保険給付の対象になります。労災保険は日本国内の事業で働く労働者に国籍・在留資格を問わず適用され、厚生労働省の取扱いでも、いわゆる不法就労の状態にある人も給付の対象とされています。労災にあたるかの認定は労働基準監督署が行います。\n\n**Q. すでに帰国してしまいましたが、休業や障害の給付はまだ請求できますか？**\nA. 給付を受ける権利は帰国では消滅しません。ただし時効があり、休業（補償）給付などは2年、障害（補償）給付・遺族（補償）給付は5年です。休業給付は賃金を受けない日ごとに時効が進むため、古い分から受けられなくなることがあります。早めに労働基準監督署へ確認してください。\n\n**Q. 給付金は海外の口座で受け取れますか？**\nA. 受け取れます。海外の住所・銀行口座を届け出れば、給付金を海外送金で受け取れます。請求書類の記入や医証の翻訳など、帰国後は国内より準備の手間がかかる場面があるため、事業主の協力を得ながら進めてください。\n\n**Q. 労災の給付とは別に、会社に損害賠償を求めることはできますか？**\nA. 労災保険給付は法定の補償で、会社の安全配慮義務違反を理由とする損害賠償請求は、これとは別に問題になり得ます。ただし損害賠償をめぐって争いになった案件は弁護士の領域です。労災の給付手続は社会保険労務士、在留・帰国の入管手続は行政書士と、担当が分かれます。\n\n## この記事の根拠\n\n- **労働者災害補償保険法第42条**（時効）。療養補償給付・休業補償給付・葬祭料・介護補償給付などを受ける権利は2年、障害補償給付・遺族補償給付などを受ける権利は5年を経過したときに時効で消滅すると定めています（e-Gov法令検索、労働者災害補償保険法・昭和22年法律第50号、2026年9月3日参照）\n- **労働基準法第3条**（均等待遇）。使用者は、労働者の国籍・信条・社会的身分を理由として、賃金・労働時間その他の労働条件について差別的取扱いをしてはならないと定めています。労災保険の適用も国籍・在留資格を問いません（e-Gov法令検索、労働基準法・昭和22年法律第49号、2026年9月3日参照）\n- **厚生労働省による外国人労働者への労災保険の取扱い**。労災保険は国籍・在留資格を問わず日本国内の事業で働く労働者に適用され、いわゆる不法就労の状態にある人も仕事が原因のけが・病気であれば給付の対象とされています。保険料は全額事業主が負担します。多言語の労災保険給付の案内も公表されています（厚生労働省、2026年9月3日参照）\n- **厚生年金保険法（脱退一時金）**。日本国籍がなく、厚生年金の被保険者期間が6か月以上あり、老齢厚生年金の受給資格期間（10年）を満たしていない人が、日本に住所を有しなくなった日から2年以内に請求できる制度です。2021年（令和3年）4月以降に最後の保険料を納付した人は、計算に用いる月数の上限が60月（従来は36月）になりました。労災とは別の制度です（日本年金機構、2026年9月3日参照）\n- 労災にあたるかの認定は労働基準監督署が行います。個別の給付の要否・必要書類・海外での証明の取り方は、最新の一次情報（厚生労働省・労働基準監督署など）と個別事情に照らした確認が必要です\n\nこの記事は、誰に相談するかまで決めるものではありません。労災保険給付の請求・休業・障害の手続は社会保険労務士の業務です。在留資格の変更・帰国に伴う入管手続は行政書士、会社の安全配慮義務違反をめぐる損害賠償の紛争は弁護士、税の還付など税務は税理士の領域です。四葉社会保険労務士事務所にご相談いただく場合の費用は[報酬額表](/labor/ryokin)に、よくいただくご質問は[よくあるご質問](/labor/faq)にまとめています。\n\n本記事は一般的な情報提供です。労災にあたるかの認定は労働基準監督署が行います。制度の適用や個別の手続は、最新の一次情報（厚生労働省など）と個別のご事情に照らし、面談のうえ資格者が行います。執筆は[浦松丈二](/about/uramatsu)（社会保険労務士・行政書士・宅地建物取引士）です。",
+    "status": "published",
+    "author": {
+      "name": "浦松 丈二",
+      "title": "社会保険労務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+    },
+    "keywords": [
+      "外国人 労災 帰国後 補償",
+      "労災保険 外国人 適用 在留資格",
+      "労災 時効 2年 5年 帰国",
+      "労災 給付 海外送金 通訳",
+      "外国人 労災 不法就労 適用",
+      "帰国 脱退一時金 労災 違い"
+    ],
+    "tags": [
+      "外国人雇用",
+      "労災保険",
+      "時効",
+      "海外送金",
+      "帰国",
+      "業際"
+    ],
+    "locales": [],
+    "faq": [
+      {
+        "question": "在留資格のない外国人が働いていてけがをした場合、労災は使えますか？",
+        "answer": "仕事が原因のけが・病気であれば、労災保険給付の対象になります。労災保険は日本国内の事業で働く労働者に国籍・在留資格を問わず適用され、厚生労働省の取扱いでも、いわゆる不法就労の状態にある人も給付の対象とされています。労災にあたるかの認定は労働基準監督署が行います。"
+      },
+      {
+        "question": "すでに帰国してしまいましたが、休業や障害の給付はまだ請求できますか？",
+        "answer": "給付を受ける権利は帰国では消滅しません。ただし時効があり、休業（補償）給付などは2年、障害（補償）給付・遺族（補償）給付は5年です。休業給付は賃金を受けない日ごとに時効が進むため、古い分から受けられなくなることがあります。早めに労働基準監督署へ確認してください。"
+      },
+      {
+        "question": "給付金は海外の口座で受け取れますか？",
+        "answer": "受け取れます。海外の住所・銀行口座を届け出れば、給付金を海外送金で受け取れます。請求書類の記入や医証の翻訳など、帰国後は国内より準備の手間がかかる場面があるため、事業主の協力を得ながら進めてください。"
+      },
+      {
+        "question": "労災の給付とは別に、会社に損害賠償を求めることはできますか？",
+        "answer": "労災保険給付は法定の補償で、会社の安全配慮義務違反を理由とする損害賠償請求は、これとは別に問題になり得ます。ただし損害賠償をめぐって争いになった案件は弁護士の領域です。労災の給付手続は社会保険労務士、在留・帰国の入管手続は行政書士と、担当が分かれます。"
+      }
+    ],
+    "translations": {
+      "en": {
+        "title": "If a foreign worker is injured at work and returns home, what happens to the compensation?",
+        "excerpt": "Workers' accident compensation insurance applies to any worker employed at a business in Japan, regardless of nationality or residence status. Medical, leave, and disability benefits for a work-caused injury or illness can be received even after the worker has returned home, and can be remitted to an overseas account. But claims have time limits — two years for medical and leave benefits, five years for disability and survivors' benefits. Whether it counts as a work accident is decided by the Labour Standards Inspection Office.",
+        "content": "**In short:** Workers' accident compensation insurance applies to any worker employed at a business in Japan, **regardless of nationality or residence status**. Medical, leave, and disability benefits for a work-caused injury or illness can be received **even after the worker has returned home**, and can be remitted to an overseas account. But claims have time limits: two years for medical and leave benefits, five years for disability and survivors' benefits. Whether it counts as a work accident is decided by the Labour Standards Inspection Office.\n\n\"Since they're a foreigner, surely they can't use workers' accident insurance,\" \"once they've gone home, surely they can no longer receive benefits\" — we often hear these worries from employers of foreign workers and from those supporting a worker who was injured and has returned home or plans to. This article sets out the key points — coverage, time limits, remittance, interpretation — so a foreign worker injured in Japan can keep receiving benefits after returning home.\n\n## Does workers' accident insurance apply to foreign workers?\n\nIt does. There is no distinction by nationality or residence status.\n\nWorkers' accident insurance applies to any worker employed at a business in Japan and paid wages, regardless of nationality. Article 3 of the Labour Standards Act provides that an employer must not discriminate over wages, working hours, or other working conditions on the basis of a worker's nationality, and the application of accident insurance rests on the same idea. Under the Ministry of Health, Labour and Welfare's handling, even a person whose residence period has expired or whose work does not match their status — a so-called undocumented worker — is covered by accident insurance benefits if the injury or illness was caused by work.\n\n| Item | Handling |\n|---|---|\n| Who is covered | Workers employed at a business in Japan. **Nationality and residence status do not matter** |\n| Premium burden | The **employer** bears it in full (no worker contribution) |\n| Person in an undocumented status | **Covered** if the injury or illness was caused by work |\n| The right to benefits | Not extinguished by returning home |\n\nFor the entry to procedures, such as non-enrollment in accident insurance and separating work-related from private illness, see also [how the accident-insurance procedure differs from a private-illness report](/en/labor/column/rousai-tetsuzuki-shishobyo-houkoku).\n\n## Can medical, leave, and disability benefits still be received after returning home?\n\nThey can. The right to benefits is not extinguished when the worker leaves Japan.\n\nAccident insurance benefits are the right of the injured worker. After returning home, by registering an overseas address and account, the worker can receive benefit payments by overseas remittance. Medical benefits (treatment costs), leave benefits (compensation while unable to work), disability benefits (compensation where an after-effect remains), and survivors' benefits (compensation to survivors on death) remain available after returning home as long as the requirements are met.\n\nHowever, since the worker cannot attend a Japanese medical institution after returning home, the in-kind provision of medical benefits (treatment at an accident-insurance-designated hospital) cannot be used, and claiming costs for treatment received overseas takes more preparation of documents and certificates than in Japan. For situations where whether Japan's accident insurance reaches at all is at issue — injury during an overseas business trip or overseas posting — see [how accident insurance differs between an overseas business trip and an overseas posting](/en/labor/column/kaigai-shucho-haken-rosai-chigai).\n\n## Is there a time limit on accident-insurance claims (2 years / 5 years)?\n\nThere is. The time limit differs — two years or five years — by the type of benefit.\n\nArticle 42 of the Workers' Accident Compensation Insurance Act sets the time limits at which the right to claim is extinguished. Because **the benefits you could have claimed become time-barred as time passes after returning home**, prompt procedures are the key point.\n\n| Type of benefit | Time limit | Starting point (in principle) |\n|---|---|---|\n| Medical (compensation) benefits, leave (compensation) benefits, funeral rites, nursing-care (compensation) benefits | **2 years** | From when each right can be exercised |\n| Disability (compensation) benefits, survivors' (compensation) benefits | **5 years** | From when each right can be exercised |\n\nLeave benefits accrue day by day for each day on which no wage is received, and the two-year time limit runs from each such day. If the worker tries to claim in a lump after returning home, the oldest portions can become time-barred, so caution is needed.\n\n## How do you handle overseas remittance, interpretation, and document translation?\n\nReceiving the benefit, preparing the claim documents, and dealing with the Labour Standards Inspection Office require preparation for remittance and language.\n\n| Situation | Preparation |\n|---|---|\n| Receiving the benefit | Register an overseas address and bank account to receive it by **overseas remittance** |\n| Filling in the claim documents | There are certification fields for the worker, the employer, and the doctor. After returning home, the employer's cooperation is often needed |\n| Interpretation / translation | The Ministry of Health, Labour and Welfare publishes multilingual guidance on accident-insurance benefits for foreign workers (check the access date before using). A translation may be required for medical certificates and other foreign-language documents |\n| Company cooperation | The employer is asked to cooperate with accident certification and procedures |\n\nClaims after returning home go more smoothly depending on whether the employer's certification and cooperation can be obtained. For who is in charge of what at the entry to employment, [dividing whether it is the Shakai Hoken Roumushi or the Gyoseishoshi window when hiring a foreigner](/en/labor/column/gaikokujin-koyo-madoguchi-wakekata) is also useful. Confirm the concrete procedures and required documents with the Labour Standards Inspection Office with jurisdiction over the place of injury and the latest primary sources.\n\n## Who do you consult about residence and return procedures and claims against the company?\n\nThe accident benefits themselves are handled by a Shakai Hoken Roumushi, but the surrounding procedures divide by qualification.\n\n| Matter | In charge |\n|---|---|\n| Claiming accident-insurance benefits; leave and disability procedures | Shakai Hoken Roumushi |\n| Change of residence status; immigration procedures on returning home (application agency) | Gyoseishoshi |\n| Cases that have become disputes, such as damages for breach of the company's duty of care | Attorney |\n| Pension lump-sum withdrawal; refund of withheld tax and other tax matters | Shakai Hoken Roumushi / tax accountant |\n\nA change of residence status or immigration procedures on returning home is handled by a Gyoseishoshi (Yotsuba Gyoseishoshi Office is an entity independent of this office, engaged under a separate contract), and disputes over damages for breach of the company's duty of care are the domain of an attorney. Whether it counts as a work accident is decided by the Labour Standards Inspection Office. A foreigner returning home may be able to claim the employees' pension **lump-sum withdrawal payment** (requirements include: no Japanese nationality; six months or more of insured periods; not meeting the ten-year qualifying period for the old-age employees' pension; no address in Japan; and claiming within two years of the day one no longer has an address in Japan) — this is a pension scheme separate from accident insurance. For details, see [how to settle the pension of a foreign employee returning home](/en/labor/column/gaikokujin-shain-kikoku-nenkin-seisan).\n\n## Frequently asked questions\n\n**Q. If a foreign worker without residence status is working and gets injured, can accident insurance be used?**\nA. If the injury or illness was caused by work, it is covered by accident-insurance benefits. Accident insurance applies to workers employed at a business in Japan regardless of nationality or residence status, and under the Ministry of Health, Labour and Welfare's handling, a person in a so-called undocumented status is also covered. Whether it counts as a work accident is decided by the Labour Standards Inspection Office.\n\n**Q. I have already returned home — can I still claim leave or disability benefits?**\nA. The right to benefits is not extinguished by returning home. However, there are time limits — two years for leave (compensation) benefits, five years for disability (compensation) and survivors' (compensation) benefits. Leave benefits run day by day for each day no wage is received, so the oldest portions can become unavailable. Confirm with the Labour Standards Inspection Office promptly.\n\n**Q. Can the benefit be received in an overseas account?**\nA. Yes. Register an overseas address and bank account and the benefit can be received by overseas remittance. Because filling in the claim documents and translating medical certificates take more preparation than in Japan after returning home, proceed with the employer's cooperation.\n\n**Q. Separate from the accident benefits, can I claim damages against the company?**\nA. Accident-insurance benefits are statutory compensation, and a claim for damages for breach of the company's duty of care can arise separately from these. However, a case that has become a dispute over damages is the domain of an attorney. The accident-benefit procedure is handled by a Shakai Hoken Roumushi and the residence and return immigration procedures by a Gyoseishoshi — the roles divide.\n\n## Sources\n\n- **Workers' Accident Compensation Insurance Act, Article 42** (time limits). The right to medical compensation benefits, leave compensation benefits, funeral rites, nursing-care compensation benefits, and the like is extinguished by prescription after two years; the right to disability compensation benefits, survivors' compensation benefits, and the like after five years (e-Gov Law Search, Workers' Accident Compensation Insurance Act, Act No. 50 of 1947; accessed 3 September 2026).\n- **Labour Standards Act, Article 3** (equal treatment). An employer must not discriminate over wages, working hours, or other working conditions on the basis of a worker's nationality, creed, or social status. The application of accident insurance likewise does not turn on nationality or residence status (e-Gov Law Search, Labour Standards Act, Act No. 49 of 1947; accessed 3 September 2026).\n- **The Ministry of Health, Labour and Welfare's handling of accident insurance for foreign workers.** Accident insurance applies regardless of nationality or residence status to workers employed at a business in Japan, and a person in a so-called undocumented status is covered by benefits if the injury or illness was caused by work. The premium is borne in full by the employer. Multilingual guidance on accident-insurance benefits is also published (Ministry of Health, Labour and Welfare; accessed 3 September 2026).\n- **Employees' Pension Insurance Act (lump-sum withdrawal payment).** A scheme under which a person without Japanese nationality, with six months or more of employees' pension insured periods, who does not meet the ten-year qualifying period for the old-age employees' pension, can claim within two years of the day they no longer have an address in Japan. For a person whose last premium was paid on or after April 2021 (Reiwa 3), the cap on the number of months used in the calculation became 60 months (previously 36). This is a scheme separate from accident insurance (Japan Pension Service; accessed 3 September 2026).\n- Whether it counts as a work accident is decided by the Labour Standards Inspection Office. Whether an individual benefit is due, the required documents, and how to obtain overseas certification require confirmation grounded in the latest primary sources (the Ministry of Health, Labour and Welfare, the Labour Standards Inspection Office, etc.) and individual circumstances.\n\nThis article does not decide whom to consult. Claiming accident-insurance benefits and the leave and disability procedures are the work of a Shakai Hoken Roumushi. A change of residence status and return immigration procedures are the domain of a Gyoseishoshi, disputes over damages for breach of the duty of care are the domain of an attorney, and tax refunds and other tax matters are the domain of a tax accountant. For fees when consulting 四葉社会保険労務士事務所, see [the fee schedule](/en/labor/ryokin); for frequently asked questions, see [the FAQ](/en/labor/faq).\n\nThis article is general information. Whether it counts as a work accident is decided by the Labour Standards Inspection Office. Whether the system applies and individual procedures are handled by a qualified professional after a consultation, in light of the latest primary sources (the Ministry of Health, Labour and Welfare, etc.) and individual circumstances. Written by [Joji Uramatsu](/en/about/uramatsu) (Shakai Hoken Roumushi, Gyoseishoshi, Registered Real Estate Transaction Specialist).",
+        "category": "Labour insurance",
+        "keywords": [
+          "foreign worker accident insurance",
+          "work injury after returning home",
+          "labour accident time limit 2 years 5 years",
+          "undocumented worker labour insurance",
+          "overseas remittance of benefits",
+          "foreign worker pension lump-sum withdrawal"
+        ],
+        "tags": [
+          "Foreign employment",
+          "Workers' accident insurance",
+          "Time limit",
+          "Overseas remittance",
+          "Return home",
+          "Shakai Hoken Roumushi"
+        ],
+        "author": {
+          "name": "Joji Uramatsu",
+          "title": "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所"
+        },
+        "faq": [
+          {
+            "question": "If a foreign worker without residence status is working and gets injured, can accident insurance be used?",
+            "answer": "If the injury or illness was caused by work, it is covered by accident-insurance benefits. Accident insurance applies to workers employed at a business in Japan regardless of nationality or residence status, and under the Ministry of Health, Labour and Welfare's handling, a person in a so-called undocumented status is also covered. Whether it counts as a work accident is decided by the Labour Standards Inspection Office."
+          },
+          {
+            "question": "I have already returned home — can I still claim leave or disability benefits?",
+            "answer": "The right to benefits is not extinguished by returning home. However, there are time limits — two years for leave (compensation) benefits, five years for disability (compensation) and survivors' (compensation) benefits. Leave benefits run day by day for each day no wage is received, so the oldest portions can become unavailable. Confirm with the Labour Standards Inspection Office promptly."
+          },
+          {
+            "question": "Can the benefit be received in an overseas account?",
+            "answer": "Yes. Register an overseas address and bank account and the benefit can be received by overseas remittance. Because filling in the claim documents and translating medical certificates take more preparation than in Japan after returning home, proceed with the employer's cooperation."
+          },
+          {
+            "question": "Separate from the accident benefits, can I claim damages against the company?",
+            "answer": "Accident-insurance benefits are statutory compensation, and a claim for damages for breach of the company's duty of care can arise separately from these. However, a case that has become a dispute over damages is the domain of an attorney. The accident-benefit procedure is handled by a Shakai Hoken Roumushi and the residence and return immigration procedures by a Gyoseishoshi — the roles divide."
+          }
+        ]
+      },
+      "zh-tw": {
+        "title": "外國勞工發生職災後返國，補償會怎麼樣？",
+        "excerpt": "勞災保險適用於在日本國內事業工作的勞工，不問國籍或在留資格。因工作導致之傷病所領取的療養・休業・障害等給付，即使被災者返國後仍可領取，也能匯至海外帳戶。惟請求有時效，療養・休業等為2年，障害・遺族為5年。是否屬職災的認定由勞動基準監督署為之。",
+        "content": "**先講結論**：勞災保險適用於在日本國內事業工作的勞工，**不問國籍或在留資格**。因工作導致之傷病所領取的療養・休業・障害等給付，**即使被災者返國後仍可領取**，也能匯至海外帳戶。惟請求有時效，療養・休業等為2年，障害・遺族為5年。是否屬職災的認定由勞動基準監督署為之。\n\n「因為是外國人，勞災大概用不了吧」「都已經返國了，應該領不到給付了吧」——雇用外國人的事業者，以及支援被災後返國/預定返國之勞工的人，常抱有這類不安。本文整理在日本國內被災的外國勞工返國後仍能持續領取給付的要點：適用・時效・匯款・翻譯。\n\n## 外國勞工也適用勞災保險嗎？\n\n適用。並無依國籍或在留資格的區別。\n\n勞災保險適用於在日本國內事業受僱並領取工資的勞工，不問國籍。勞動基準法第3條規定，雇主不得以勞工的國籍為由，就工資・工時及其他勞動條件為差別待遇，勞災保險的適用亦立於相同思路。依厚生勞働省的處理，即使是在留期限已過、或所從事工作與資格不符等所謂不法就勞狀態之人，只要傷病係因工作導致，亦為勞災保險給付的對象。\n\n| 項目 | 處理 |\n|---|---|\n| 適用對象 | 在日本國內事業工作的勞工。**不問國籍・在留資格** |\n| 保險費負擔 | 由**事業主**全額負擔（勞工無自付） |\n| 處於不法就勞狀態之人 | 傷病若因工作導致，即為**給付對象** |\n| 領取給付的權利 | 不因返國而消滅 |\n\n關於勞災保險未加入、業務上與私傷病之切分等手續入口，另請參閱[勞災的手續與私傷病的報告有何不同](/zh-tw/labor/column/rousai-tetsuzuki-shishobyo-houkoku)。\n\n## 返國後，療養・休業・障害的給付還能領嗎？\n\n能領。領取給付的權利，不因被災者離開日本而消滅。\n\n勞災保險給付是被災勞工本人的權利。返國後，透過申報海外的住所・帳戶，即可以海外匯款領取給付金。療養（治療費）、休業（無法工作期間的補償）、障害（留有後遺障害時的補償）、遺族（死亡時對遺族的補償）等給付，只要符合要件，返國後仍為對象。\n\n惟返國後無法就診於日本的醫療機構，療養（補償）給付的現物給付（於勞災指定醫院就診）無法使用，而請求於海外就診的費用等，書類與證明的準備較國內費事。至於海外出差・海外派遣中被災、亦即國內勞災保險是否及於其上本身即成問題的情形，請參閱[海外出差與海外派遣的勞災處理有何不同](/zh-tw/labor/column/kaigai-shucho-haken-rosai-chigai)。\n\n## 勞災的請求有時效嗎（2年・5年）？\n\n有。依給付種類，時效分為2年與5年。\n\n勞動者災害補償保險法第42條就請求權消滅的時效定有明文。**返國後隨時間經過，原本可請求的給付會因時效而無法領取**，故及早辦理為要點。\n\n| 給付種類 | 時效 | 起算點（原則） |\n|---|---|---|\n| 療養（補償）給付、休業（補償）給付、葬祭料（葬祭給付）、介護（補償）給付 | **2年** | 自各該權利得行使時 |\n| 障害（補償）給付、遺族（補償）給付 | **5年** | 自各該權利得行使時 |\n\n休業給付於未領工資之每一日各自發生請求權，並自各該日起進行2年時效。若返國後欲一併請求，較早的部分可能已罹於時效，須留意。\n\n## 海外匯款・翻譯・口譯該怎麼辦？\n\n給付金的領取、請求書類的製作、與勞動基準監督署的往來，需就匯款與語言預作準備。\n\n| 場面 | 準備 |\n|---|---|\n| 給付金的領取 | 申報海外的住所・銀行帳戶，即可以**海外匯款**領取 |\n| 請求書類的填寫 | 有本人・事業主・醫師的證明欄。返國後多需事業主一方的協力 |\n| 口譯・翻譯 | 厚生勞働省就外國勞工公開有多語言的勞災保險給付案內（使用前確認參照日）。醫證等外文書類可能被要求附翻譯 |\n| 公司的協力 | 事業主被要求就勞災的證明與手續予以協力 |\n\n返國後的請求，能否取得事業主的證明・協力，會影響進行的順暢程度。關於雇用入口由誰擔任何事，[雇用外國人時，切分該找社勞士或行政書士的窗口](/zh-tw/labor/column/gaikokujin-koyo-madoguchi-wakekata)亦可參考。又，給付的具體手續與必要書類，請以管轄被災地的勞動基準監督署與最新一手資訊確認。\n\n## 在留・返國手續與對公司的賠償請求，該找誰？\n\n勞災的給付本身由社會保險勞務士處理，惟周邊手續依資格而分擔當。\n\n| 諮詢內容 | 擔當 |\n|---|---|\n| 勞災保險給付的請求、休業・障害等手續 | 社會保險勞務士 |\n| 在留資格的變更、返國所伴隨的入管手續（申請取次） | 行政書士 |\n| 以公司違反安全照顧義務為由的損害賠償等已成爭執之案件 | 律師 |\n| 年金的脫退一時金、被源泉徵收之稅的退還等稅務 | 社會保險勞務士・稅理士 |\n\n在留資格的變更或返國所伴隨的入管手續屬行政書士（四葉行政書士事務所與本事務所為各自獨立之事業體，另行簽約）；以公司違反安全照顧義務為由的損害賠償紛爭屬律師領域。是否屬職災的認定由勞動基準監督署為之。返國的外國人，於符合要件時可請求厚生年金的**脫退一時金**（要件包括：無日本國籍・被保險者期間6個月以上・未滿足老齡厚生年金的受給資格期間10年・於日本無住所・自在日本無住所之日起2年內請求等），此為與勞災不同的年金制度。詳情請參閱[返國的外國員工年金如何結算](/zh-tw/labor/column/gaikokujin-shain-kikoku-nenkin-seisan)。\n\n## 常見問題\n\n**Q. 無在留資格的外國人在工作時受傷，能用勞災嗎？**\nA. 傷病若因工作導致，即為勞災保險給付的對象。勞災保險適用於在日本國內事業工作的勞工，不問國籍・在留資格；依厚生勞働省的處理，所謂不法就勞狀態之人亦為對象。是否屬職災的認定由勞動基準監督署為之。\n\n**Q. 我已經返國了，休業或障害的給付還能請求嗎？**\nA. 領取給付的權利不因返國而消滅。惟有時效，休業（補償）給付等為2年，障害（補償）給付・遺族（補償）給付為5年。休業給付於未領工資之每一日進行時效，較早的部分可能已無法領取。請及早向勞動基準監督署確認。\n\n**Q. 給付金能以海外帳戶領取嗎？**\nA. 能。申報海外的住所・銀行帳戶，即可以海外匯款領取給付金。請求書類的填寫與醫證的翻譯等，返國後較國內費事，請在取得事業主協力下進行。\n\n**Q. 除勞災給付外，還能向公司請求損害賠償嗎？**\nA. 勞災保險給付是法定的補償，而以公司違反安全照顧義務為由的損害賠償請求，得與此另外成立。惟就損害賠償已成爭執之案件屬律師領域。勞災的給付手續由社會保險勞務士、在留・返國的入管手續由行政書士，擔當有所區分。\n\n## 本文依據\n\n- **勞動者災害補償保險法第42條**（時效）。領取療養補償給付・休業補償給付・葬祭料・介護補償給付等的權利，經過2年時效消滅；領取障害補償給付・遺族補償給付等的權利，經過5年時效消滅（e-Gov法令檢索、勞動者災害補償保險法・昭和22年法律第50號，2026年9月3日參照）\n- **勞動基準法第3條**（均等待遇）。雇主不得以勞工的國籍・信條・社會身分為由，就工資・工時及其他勞動條件為差別待遇。勞災保險的適用亦不問國籍・在留資格（e-Gov法令檢索、勞動基準法・昭和22年法律第49號，2026年9月3日參照）\n- **厚生勞働省就外國勞工的勞災保險處理**。勞災保險不問國籍・在留資格，適用於在日本國內事業工作的勞工；所謂不法就勞狀態之人，傷病若因工作導致亦為給付對象。保險費由事業主全額負擔。並公開有多語言的勞災保險給付案內（厚生勞働省，2026年9月3日參照）\n- **厚生年金保險法（脫退一時金）**。無日本國籍、厚生年金被保險者期間6個月以上、未滿足老齡厚生年金受給資格期間（10年）之人，得於在日本無住所之日起2年內請求的制度。最後於2021年（令和3年）4月以後繳納保險費者，計算所用月數上限成為60月（原為36月）。此為與勞災不同的制度（日本年金機構，2026年9月3日參照）\n- 是否屬職災的認定由勞動基準監督署為之。個別給付之要否・必要書類・海外證明的取得方式，須依最新一手資訊（厚生勞働省・勞動基準監督署等）與個別情形確認\n\n本文並不代替您決定該向誰諮詢。勞災保險給付的請求、休業・障害的手續，屬社會保險勞務士的業務。在留資格的變更・返國入管手續屬行政書士，違反安全照顧義務的損害賠償紛爭屬律師領域，稅的退還等稅務屬稅理士領域。向四葉社会保険労務士事務所諮詢時的費用，整理於[報酬額表](/zh-tw/labor/ryokin)；常見問題整理於[常見問答](/zh-tw/labor/faq)。\n\n本文為一般性資訊提供。是否屬職災的認定由勞動基準監督署為之。制度的適用與個別手續，將依最新一手資訊（厚生勞働省等）與個別情形，於面談後由有資格者為之。撰文為[浦松丈二](/zh-tw/about/uramatsu)（社會保險勞務士・行政書士・宅地建物取引士）。",
+        "category": "勞動保險",
+        "keywords": [
+          "外國勞工 勞災保險",
+          "返國後 職災 給付",
+          "勞災 時效 2年 5年",
+          "不法就勞 勞災適用",
+          "給付 海外匯款",
+          "外國人 脫退一時金"
+        ],
+        "tags": [
+          "外國人雇用",
+          "勞災保險",
+          "時效",
+          "海外匯款",
+          "返國",
+          "社會保險勞務士"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "無在留資格的外國人在工作時受傷，能用勞災嗎？",
+            "answer": "傷病若因工作導致，即為勞災保險給付的對象。勞災保險適用於在日本國內事業工作的勞工，不問國籍・在留資格；依厚生勞働省的處理，所謂不法就勞狀態之人亦為對象。是否屬職災的認定由勞動基準監督署為之。"
+          },
+          {
+            "question": "我已經返國了，休業或障害的給付還能請求嗎？",
+            "answer": "領取給付的權利不因返國而消滅。惟有時效，休業（補償）給付等為2年，障害（補償）給付・遺族（補償）給付為5年。休業給付於未領工資之每一日進行時效，較早的部分可能已無法領取。請及早向勞動基準監督署確認。"
+          },
+          {
+            "question": "給付金能以海外帳戶領取嗎？",
+            "answer": "能。申報海外的住所・銀行帳戶，即可以海外匯款領取給付金。請求書類的填寫與醫證的翻譯等，返國後較國內費事，請在取得事業主協力下進行。"
+          },
+          {
+            "question": "除勞災給付外，還能向公司請求損害賠償嗎？",
+            "answer": "勞災保險給付是法定的補償，而以公司違反安全照顧義務為由的損害賠償請求，得與此另外成立。惟就損害賠償已成爭執之案件屬律師領域。勞災的給付手續由社會保險勞務士、在留・返國的入管手續由行政書士，擔當有所區分。"
+          }
+        ]
+      },
+      "zh": {
+        "title": "外国劳工发生工伤后返国，补偿会怎么样？",
+        "excerpt": "劳灾保险适用于在日本国内事业工作的劳工，不问国籍或在留资格。因工作导致之伤病所领取的疗养・休业・障害等给付，即使被灾者返国后仍可领取，也能汇至海外账户。惟请求有时效，疗养・休业等为2年，障害・遗族为5年。是否属工伤的认定由劳动基准监督署为之。",
+        "content": "**先讲结论**：劳灾保险适用于在日本国内事业工作的劳工，**不问国籍或在留资格**。因工作导致之伤病所领取的疗养・休业・障害等给付，**即使被灾者返国后仍可领取**，也能汇至海外账户。惟请求有时效，疗养・休业等为2年，障害・遗族为5年。是否属工伤的认定由劳动基准监督署为之。\n\n「因为是外国人，劳灾大概用不了吧」「都已经返国了，应该领不到给付了吧」——雇用外国人的事业者，以及支援被灾后返国/预定返国之劳工的人，常抱有这类不安。本文整理在日本国内被灾的外国劳工返国后仍能持续领取给付的要点：适用・时效・汇款・翻译。\n\n## 外国劳工也适用劳灾保险吗？\n\n适用。并无依国籍或在留资格的区别。\n\n劳灾保险适用于在日本国内事业受雇并领取工资的劳工，不问国籍。劳动基准法第3条规定，雇主不得以劳工的国籍为由，就工资・工时及其他劳动条件为差别待遇，劳灾保险的适用亦立于相同思路。依厚生劳働省的处理，即使是在留期限已过、或所从事工作与资格不符等所谓不法就劳状态之人，只要伤病系因工作导致，亦为劳灾保险给付的对象。\n\n| 项目 | 处理 |\n|---|---|\n| 适用对象 | 在日本国内事业工作的劳工。**不问国籍・在留资格** |\n| 保险费负担 | 由**事业主**全额负担（劳工无自付） |\n| 处于不法就劳状态之人 | 伤病若因工作导致，即为**给付对象** |\n| 领取给付的权利 | 不因返国而消灭 |\n\n关于劳灾保险未加入、业务上与私伤病之切分等手续入口，另请参阅[劳灾的手续与私伤病的报告有何不同](/zh/labor/column/rousai-tetsuzuki-shishobyo-houkoku)。\n\n## 返国后，疗养・休业・障害的给付还能领吗？\n\n能领。领取给付的权利，不因被灾者离开日本而消灭。\n\n劳灾保险给付是被灾劳工本人的权利。返国后，透过申报海外的住所・账户，即可以海外汇款领取给付金。疗养（治疗费）、休业（无法工作期间的补偿）、障害（留有后遗障害时的补偿）、遗族（死亡时对遗族的补偿）等给付，只要符合要件，返国后仍为对象。\n\n惟返国后无法就诊于日本的医疗机构，疗养（补偿）给付的现物给付（于劳灾指定医院就诊）无法使用，而请求于海外就诊的费用等，书类与证明的准备较国内费事。至于海外出差・海外派遣中被灾、亦即国内劳灾保险是否及于其上本身即成问题的情形，请参阅[海外出差与海外派遣的劳灾处理有何不同](/zh/labor/column/kaigai-shucho-haken-rosai-chigai)。\n\n## 劳灾的请求有时效吗（2年・5年）？\n\n有。依给付种类，时效分为2年与5年。\n\n劳动者灾害补偿保险法第42条就请求权消灭的时效定有明文。**返国后随时间经过，原本可请求的给付会因时效而无法领取**，故及早办理为要点。\n\n| 给付种类 | 时效 | 起算点（原则） |\n|---|---|---|\n| 疗养（补偿）给付、休业（补偿）给付、葬祭料（葬祭给付）、介护（补偿）给付 | **2年** | 自各该权利得行使时 |\n| 障害（补偿）给付、遗族（补偿）给付 | **5年** | 自各该权利得行使时 |\n\n休业给付于未领工资之每一日各自发生请求权，并自各该日起进行2年时效。若返国后欲一并请求，较早的部分可能已罹于时效，须留意。\n\n## 海外汇款・翻译・口译该怎么办？\n\n给付金的领取、请求书类的制作、与劳动基准监督署的往来，需就汇款与语言预作准备。\n\n| 场面 | 准备 |\n|---|---|\n| 给付金的领取 | 申报海外的住所・银行账户，即可以**海外汇款**领取 |\n| 请求书类的填写 | 有本人・事业主・医师的证明栏。返国后多需事业主一方的协力 |\n| 口译・翻译 | 厚生劳働省就外国劳工公开有多语言的劳灾保险给付案内（使用前确认参照日）。医证等外文书类可能被要求附翻译 |\n| 公司的协力 | 事业主被要求就劳灾的证明与手续予以协力 |\n\n返国后的请求，能否取得事业主的证明・协力，会影响进行的顺畅程度。关于雇用入口由谁担任何事，[雇用外国人时，切分该找社劳士或行政书士的窗口](/zh/labor/column/gaikokujin-koyo-madoguchi-wakekata)亦可参考。又，给付的具体手续与必要书类，请以管辖被灾地的劳动基准监督署与最新一手资讯确认。\n\n## 在留・返国手续与对公司的赔偿请求，该找谁？\n\n劳灾的给付本身由社会保险劳务士处理，惟周边手续依资格而分担当。\n\n| 咨询内容 | 担当 |\n|---|---|\n| 劳灾保险给付的请求、休业・障害等手续 | 社会保险劳务士 |\n| 在留资格的变更、返国所伴随的入管手续（申请取次） | 行政书士 |\n| 以公司违反安全照顾义务为由的损害赔偿等已成争执之案件 | 律师 |\n| 年金的脱退一时金、被源泉征收之税的退还等税务 | 社会保险劳务士・税理士 |\n\n在留资格的变更或返国所伴随的入管手续属行政书士（四葉行政書士事務所与本事务所为各自独立之事业体，另行签约）；以公司违反安全照顾义务为由的损害赔偿纠纷属律师领域。是否属工伤的认定由劳动基准监督署为之。返国的外国人，于符合要件时可请求厚生年金的**脱退一时金**（要件包括：无日本国籍・被保险者期间6个月以上・未满足老龄厚生年金的受给资格期间10年・于日本无住所・自在日本无住所之日起2年内请求等），此为与劳灾不同的年金制度。详情请参阅[返国的外国员工年金如何结算](/zh/labor/column/gaikokujin-shain-kikoku-nenkin-seisan)。\n\n## 常见问题\n\n**Q. 无在留资格的外国人在工作时受伤，能用劳灾吗？**\nA. 伤病若因工作导致，即为劳灾保险给付的对象。劳灾保险适用于在日本国内事业工作的劳工，不问国籍・在留资格；依厚生劳働省的处理，所谓不法就劳状态之人亦为对象。是否属工伤的认定由劳动基准监督署为之。\n\n**Q. 我已经返国了，休业或障害的给付还能请求吗？**\nA. 领取给付的权利不因返国而消灭。惟有时效，休业（补偿）给付等为2年，障害（补偿）给付・遗族（补偿）给付为5年。休业给付于未领工资之每一日进行时效，较早的部分可能已无法领取。请及早向劳动基准监督署确认。\n\n**Q. 给付金能以海外账户领取吗？**\nA. 能。申报海外的住所・银行账户，即可以海外汇款领取给付金。请求书类的填写与医证的翻译等，返国后较国内费事，请在取得事业主协力下进行。\n\n**Q. 除劳灾给付外，还能向公司请求损害赔偿吗？**\nA. 劳灾保险给付是法定的补偿，而以公司违反安全照顾义务为由的损害赔偿请求，得与此另外成立。惟就损害赔偿已成争执之案件属律师领域。劳灾的给付手续由社会保险劳务士、在留・返国的入管手续由行政书士，担当有所区分。\n\n## 本文依据\n\n- **劳动者灾害补偿保险法第42条**（时效）。领取疗养补偿给付・休业补偿给付・葬祭料・介护补偿给付等的权利，经过2年时效消灭；领取障害补偿给付・遗族补偿给付等的权利，经过5年时效消灭（e-Gov法令检索、劳动者灾害补偿保险法・昭和22年法律第50号，2026年9月3日参照）\n- **劳动基准法第3条**（均等待遇）。雇主不得以劳工的国籍・信条・社会身分为由，就工资・工时及其他劳动条件为差别待遇。劳灾保险的适用亦不问国籍・在留资格（e-Gov法令检索、劳动基准法・昭和22年法律第49号，2026年9月3日参照）\n- **厚生劳働省就外国劳工的劳灾保险处理**。劳灾保险不问国籍・在留资格，适用于在日本国内事业工作的劳工；所谓不法就劳状态之人，伤病若因工作导致亦为给付对象。保险费由事业主全额负担。并公开有多语言的劳灾保险给付案内（厚生劳働省，2026年9月3日参照）\n- **厚生年金保险法（脱退一时金）**。无日本国籍、厚生年金被保险者期间6个月以上、未满足老龄厚生年金受给资格期间（10年）之人，得于在日本无住所之日起2年内请求的制度。最后于2021年（令和3年）4月以后缴纳保险费者，计算所用月数上限成为60月（原为36月）。此为与劳灾不同的制度（日本年金机构，2026年9月3日参照）\n- 是否属工伤的认定由劳动基准监督署为之。个别给付之要否・必要书类・海外证明的取得方式，须依最新一手资讯（厚生劳働省・劳动基准监督署等）与个别情形确认\n\n本文并不代替您决定该向谁咨询。劳灾保险给付的请求、休业・障害的手续，属社会保险劳务士的业务。在留资格的变更・返国入管手续属行政书士，违反安全照顾义务的损害赔偿纠纷属律师领域，税的退还等税务属税理士领域。向四葉社会保険労務士事務所咨询时的费用，整理于[报酬额表](/zh/labor/ryokin)；常见问题整理于[常见问答](/zh/labor/faq)。\n\n本文为一般性资讯提供。是否属工伤的认定由劳动基准监督署为之。制度的适用与个别手续，将依最新一手资讯（厚生劳働省等）与个别情形，于面谈后由有资格者为之。撰文为[浦松丈二](/zh/about/uramatsu)（社会保险劳务士・行政书士・宅地建物取引士）。",
+        "category": "劳动保险",
+        "keywords": [
+          "外国劳工 劳灾保险",
+          "返国后 工伤 给付",
+          "劳灾 时效 2年 5年",
+          "不法就劳 劳灾适用",
+          "给付 海外汇款",
+          "外国人 脱退一时金"
+        ],
+        "tags": [
+          "外国人雇用",
+          "劳灾保险",
+          "时效",
+          "海外汇款",
+          "返国",
+          "社会保险劳务士"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "无在留资格的外国人在工作时受伤，能用劳灾吗？",
+            "answer": "伤病若因工作导致，即为劳灾保险给付的对象。劳灾保险适用于在日本国内事业工作的劳工，不问国籍・在留资格；依厚生劳働省的处理，所谓不法就劳状态之人亦为对象。是否属工伤的认定由劳动基准监督署为之。"
+          },
+          {
+            "question": "我已经返国了，休业或障害的给付还能请求吗？",
+            "answer": "领取给付的权利不因返国而消灭。惟有时效，休业（补偿）给付等为2年，障害（补偿）给付・遗族（补偿）给付为5年。休业给付于未领工资之每一日进行时效，较早的部分可能已无法领取。请及早向劳动基准监督署确认。"
+          },
+          {
+            "question": "给付金能以海外账户领取吗？",
+            "answer": "能。申报海外的住所・银行账户，即可以海外汇款领取给付金。请求书类的填写与医证的翻译等，返国后较国内费事，请在取得事业主协力下进行。"
+          },
+          {
+            "question": "除劳灾给付外，还能向公司请求损害赔偿吗？",
+            "answer": "劳灾保险给付是法定的补偿，而以公司违反安全照顾义务为由的损害赔偿请求，得与此另外成立。惟就损害赔偿已成争执之案件属律师领域。劳灾的给付手续由社会保险劳务士、在留・返国的入管手续由行政书士，担当有所区分。"
+          }
+        ]
+      }
+    }
   }
 ];

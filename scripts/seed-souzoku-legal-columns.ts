@@ -430,6 +430,17 @@ const REQUIRED_HUB_LINKS: Record<string, string[]> = {
     "/legal/column/kazoku-shintaku-gyosei-yakuwari-kumisei",
     "/legal/column/souzoku-ninchisho-yukuefumei-miseinen",
   ],
+  "homon-kango-station-shitei-shinsei-jinin": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+  ],
+  "ryokangyo-kani-shukujo-kyoka-shinsei": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/minpaku-jutaku-shukuhaku-todokede-yoken",
+  ],
 };
 
 /** 表示コンプライアンス上の禁止語 */
@@ -1169,6 +1180,40 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "別事業体",
     "独立した事業体",
   ],
+  "homon-kango-station-shitei-shinsei-jinin": [
+    "指定居宅サービス等の事業の人員、設備及び運営に関する基準",
+    "平成11年厚生省令第37号",
+    "常勤換算",
+    "2.5",
+    "介護保険法第70条第1項",
+    "都道府県知事",
+    "健康保険法第88条第1項",
+    "健康保険法第89条第2項",
+    "みなし指定",
+    "地方厚生（支）局",
+    "管理者",
+    "事務室",
+    "紹介料を受け取りません",
+    "別事業体",
+    "独立した事業体",
+  ],
+  "ryokangyo-kani-shukujo-kyoka-shinsei": [
+    "旅館業法第3条第1項",
+    "旅館業法施行令第1条第2項",
+    "簡易宿所",
+    "33㎡",
+    "3.3㎡",
+    "保健所",
+    "消防法令適合通知書",
+    "住宅宿泊事業法",
+    "180日",
+    "建築基準法別表第2",
+    "用途地域",
+    "建築基準法第87条第1項",
+    "紹介料を受け取りません",
+    "別事業体",
+    "独立した事業体",
+  ],
 };
 
 /** 記事ごとに含めてはならない表現 */
@@ -1250,6 +1295,8 @@ const FORBIDDEN_PHRASES: Record<string, string[]> = {
   "haiguusha-kyojuuken-settei-isanbunkatsu-touki": [],
   "shinryojo-kaisetsu-todokede-iryoho-8jo": [],
   "nini-koken-keiyaku-ikogata": [],
+  "homon-kango-station-shitei-shinsei-jinin": [],
+  "ryokangyo-kani-shukujo-kyoka-shinsei": [],
 };
 
 /** 本セット外へ張る既存legalコラムslug（リポジトリの他シードで実在確認済み） */
@@ -2139,6 +2186,58 @@ const ARTICLES: Array<{
       "財産管理委任契約",
       "法定後見",
       "家族信託",
+      "行政書士",
+    ],
+  },
+  {
+    file: "41-homon-kango-station-shitei-shinsei-jinin.md",
+    slug: "homon-kango-station-shitei-shinsei-jinin",
+    date: "2026-09-03",
+    title:
+      "訪問看護ステーションの指定申請は、どんな流れで進みますか──介護保険の指定と医療保険のみなし指定",
+    category: "許認可の手続き（行政書士の実務から）",
+    excerpt:
+      "訪問看護ステーションを始めるには、指定訪問看護事業者の指定が要ります。介護保険では事業所ごとに都道府県知事の指定を受け（介護保険法第70条第1項）、医療保険の指定訪問看護は厚生労働大臣の指定ですが（健康保険法第88条第1項・第89条第1項）、介護保険の指定を受ければ医療保険側の指定があったものとみなされます（健康保険法第89条第2項のみなし指定）。人員は看護職員を常勤換算方法で2.5以上、管理者は原則保健師又は看護師（平成11年厚生省令第37号）。申請の流れと必要書類を整理し、物件は不動産、労務は社会保険労務士、登記は司法書士、税務は税理士へ分離受任で振る分担を示しました。",
+    keywords: [
+      "訪問看護ステーション 指定申請 流れ",
+      "訪問看護 人員基準 常勤換算 2.5",
+      "訪問看護 介護保険 医療保険 みなし指定",
+      "指定訪問看護事業者 都道府県知事 地方厚生局",
+      "訪問看護 事務室 設備基準",
+      "訪問看護 指定申請 行政書士",
+    ],
+    tags: [
+      "訪問看護ステーション",
+      "指定申請",
+      "介護保険",
+      "みなし指定",
+      "常勤換算",
+      "行政書士",
+    ],
+  },
+  {
+    file: "42-ryokangyo-kani-shukujo-kyoka-shinsei.md",
+    slug: "ryokangyo-kani-shukujo-kyoka-shinsei",
+    date: "2026-09-03",
+    title:
+      "簡易宿所の旅館業許可は、どんな条件と流れで取りますか──民泊の届出との違い・構造設備・用途地域・消防",
+    category: "許認可の手続き（行政書士の実務から）",
+    excerpt:
+      "戸建てや空きビルで素泊まりの宿を営むには、簡易宿所営業として都道府県知事（保健所設置市・特別区は市長・区長）の許可が要ります（旅館業法第3条第1項）。客室延べ床面積33㎡以上（宿泊者10人未満なら3.3㎡×人数）などの構造設備は旅館業法施行令第1条第2項に、用途地域は建築基準法別表第2に、用途変更は建築基準法第87条第1項にあり、消防法令適合通知書の添付も求められます。年営業日数に上限がない点が住宅宿泊事業法の民泊（届出・年180日上限）との違いです。建築・消防・物件は建築士・特定行政庁・消防機関・不動産へ分離受任で振る分担を示しました。",
+    keywords: [
+      "簡易宿所 旅館業許可 取り方",
+      "簡易宿所 構造設備 客室 33平米",
+      "旅館業 許可 民泊 届出 違い",
+      "旅館業 用途地域 用途変更 建築基準法",
+      "消防法令適合通知書 旅館業",
+      "簡易宿所 許可 行政書士",
+    ],
+    tags: [
+      "簡易宿所",
+      "旅館業法",
+      "許認可",
+      "用途地域",
+      "消防法令適合通知書",
       "行政書士",
     ],
   },
