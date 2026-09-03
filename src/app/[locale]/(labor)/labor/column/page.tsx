@@ -4,7 +4,7 @@ import { getRequestLocale } from "@/lib/getRequestLocale";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { ColumnCollectionJsonLd } from "@/components/seo/ColumnCollectionJsonLd";
 import { CtaBand } from "@/components/shared/CtaBand";
-import { getLatestLaborColumns, getLocalizedColumn } from "@/lib/columns";
+import { getLaborColumns, getLocalizedColumn } from "@/lib/columns";
 import { LaborColumnListPageContent } from "./PageContent";
 
 
@@ -52,7 +52,7 @@ export async function generateMetadata(): Promise<Metadata> {
  */
 export default async function LaborColumnListPage() {
   const locale = await getRequestLocale();
-  const cols = await getLatestLaborColumns(20, locale);
+  const cols = await getLaborColumns(locale);
   const columns = cols.map((c) => getLocalizedColumn(c, locale));
   const m = META_BY_LOCALE[locale] ?? META_BY_LOCALE.ja;
 
