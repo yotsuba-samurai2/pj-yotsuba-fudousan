@@ -792,6 +792,46 @@ const ARTICLES: ArticleSpec[] = [
     localesWithTranslations: ["en", "zh-tw", "zh"],
     hubLinks: ["/souzoku"],
   },
+  {
+    file: "38-jutakugata-yuryo-roujin-home-bukken-youken.md",
+    slug: "jutakugata-yuryo-roujin-home-bukken-youken",
+    title: "住宅型有料老人ホームの物件を探す：用途地域・消防・面積の要件",
+    publishedAt: "2026-09-04",
+    category: "投資・事業用不動産",
+    excerpt:
+      "住宅型有料老人ホームの物件で先に効くのは、①用途地域（有料老人ホームは「老人ホーム」として児童福祉施設等に含まれ、工業専用地域を除くすべての用途地域で建てられる）②消防（消防法施行令別表第一(6)項ロか(6)項ハかで、スプリンクラー設備が延べ面積に関わらず要るか6,000㎡以上で要るかが変わる）③居室の面積（老人福祉法上の一律基準はないが、標準指導指針は個室・1人13㎡以上を目安とする）の3点です。東京都文京区の宅地建物取引士兼行政書士が、契約前に確認できることを条文と国の資料から順に整理します。",
+    keywords: [
+      "住宅型有料老人ホーム 物件",
+      "有料老人ホーム 用途地域 児童福祉施設等",
+      "有料老人ホーム スプリンクラー 6項ロ 6項ハ",
+      "有料老人ホーム 届出 老人福祉法29条",
+      "住宅型 サ高住 介護付 違い",
+    ],
+    tags: ["事業用不動産", "許認可", "用途地域", "消防法"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/toushi", "/office"],
+  },
+  {
+    file: "39-souzoku-fudosan-kyoukai-kakutei-sokuryo-baikyaku.md",
+    slug: "souzoku-fudosan-kyoukai-kakutei-sokuryo-baikyaku",
+    title: "相続した土地、境界が未確定のまま売れる？確定測量が要る場面",
+    publishedAt: "2026-09-04",
+    category: "相続",
+    excerpt:
+      "相続した土地は、境界が未確定でも売ること自体はできます。ただし買主・金融機関は確定測量図を求めることが多く、ないと価格が下がったり引渡しが遅れたりします。境界が争いになれば筆界特定制度（不動産登記法第123条以下・平成18年施行）や分筆の登記へ進み、これらは土地家屋調査士が担います。確定測量図・現況測量図・地積測量図の読み分けから、相続登記・譲渡税と測量の順番まで、東京都文京区の宅地建物取引士兼行政書士が条文と国の資料から整理します。",
+    keywords: [
+      "相続 土地 境界 未確定 売却",
+      "確定測量図 現況測量図 地積測量図 違い",
+      "筆界特定制度 不動産登記法 123条",
+      "確定測量 土地家屋調査士 費用 期間",
+      "取得費加算 租税特別措置法39条 相続 売却",
+    ],
+    tags: ["相続", "境界確定", "確定測量", "売却"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/souzoku"],
+  },
 ];
 
 function toPlainText(md: string): string {

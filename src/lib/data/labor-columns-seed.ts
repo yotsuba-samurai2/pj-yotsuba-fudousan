@@ -14861,5 +14861,371 @@ export const LABOR_COLUMNS_SEED: LaborSeedColumn[] = [
         ]
       }
     }
+  },
+  {
+    "business": "labor",
+    "slug": "kotei-zangyodai-tekiho-youken-sagaku-seisan",
+    "title": "固定残業代（定額残業代）は適法か。明示・区別・差額精算の3要件",
+    "date": "2026-09-04",
+    "category": "労働法の基本",
+    "excerpt": "固定残業代（定額残業代）は、要件を満たせば適法です。ただし「払えば何時間でも追加不要」ではありません。有効と認められるには、通常の賃金と割増分が判別できること（明確区分）と、固定分が時間外労働等の対価であること（対価性）が必要で、固定分を超えた残業には差額を必ず精算します（労働基準法第37条・日本ケミカル事件・国際自動車事件）。求人票と雇用契約書の書き方、無効とされたときの未払い・付加金のリスクまで整理します。",
+    "content": "**結論（先に要点）**：固定残業代（定額残業代）は、要件を満たせば適法です。ただし「払えば何時間でも追加不要」ではありません。有効と認められるには、通常の賃金と割増分が判別できること（明確区分）と、固定分が時間外労働等の対価であること（対価性）が必要で、固定分を超えた残業には差額を必ず精算します。無効とされると固定分が基礎賃金に算入され、割増賃金の再計算で未払いが膨らみます。個別の有効性の判断は資格者が行います。\n\n「固定残業代を入れているから残業代の管理は要らない」「求人票に『みなし残業40時間分込み』と書けば十分」——こう考える経営者は少なくありません。しかし最高裁は、固定残業代が有効となる線引きを示しており、書き方と運用を誤ると全額が未払い残業代として跳ね返ります。この記事は、労働基準法第37条と最高裁判例をもとに、固定残業代の有効要件・求人と契約書の書き方・差額精算の運用を整理します。\n\n## 固定残業代を払えば、何時間残業しても追加は要らない？\n\nいいえ。固定残業代は「一定時間分の割増賃金をあらかじめ払っておく」しくみであり、その時間を超えた分は別に支払う必要があります。\n\n労働基準法第37条は、時間外・休日・深夜の労働に割増賃金を支払うことを使用者に義務づけています。この義務は強行規定で、当事者の合意で下回ることはできません。固定残業代は第37条の割増賃金を「定額であらかじめ支払う」方法にすぎず、想定した時間（例：月40時間分）を超えて残業させれば、その超過分の割増賃金は別途発生します。したがって「固定残業代を払っているから青天井で残業させてよい」という理解は誤りです。労働時間の把握と36協定の枠は依然として必要で、上限規制は[36協定で残業は何時間まで認められるのか](/labor/column/36-kyotei-zangyo-sharoushi-doko-made)を参照してください。\n\n| 割増の種類 | 割増率（労働基準法第37条・政令） |\n|---|---|\n| 時間外（法定労働時間を超える） | **2割5分以上** |\n| 時間外のうち1か月60時間超の部分 | **5割以上**（中小企業も2023年4月1日から適用） |\n| 深夜（原則22時〜翌5時） | **2割5分以上**（時間外と重なれば加算） |\n| 法定休日 | **3割5分以上** |\n\n## 有効な固定残業代に必要な3つの要件（明示・区別・差額精算）は何？\n\n固定残業代が有効と認められるには、次の3点がそろっている必要があります。\n\n| 要件 | 内容 |\n|---|---|\n| ①明確区分（判別可能性） | 賃金のうち、通常の労働時間の賃金にあたる部分と、割増賃金（固定残業代）にあたる部分とが判別できること |\n| ②対価性 | 固定残業代が、時間外・休日・深夜の労働に対する対価として支払われていること |\n| ③差額精算 | 固定分に対応する時間を超えて残業させた場合に、その差額を別途支払うこと |\n\n①②は最高裁が示した判断枠組みです。日本ケミカル事件（最高裁平成30年7月19日判決）は、ある手当が割増賃金にあたるかは、雇用契約の定めや実態から、通常の労働時間の賃金部分と割増賃金部分とを判別でき、割増賃金として支払われたといえるかで判断するとしました。国際自動車事件（最高裁令和2年3月30日判決）も、通常の労働時間の賃金にあたる部分と割増賃金にあたる部分とを判別できることが必要だとしています。③は第37条が強行規定であることの帰結で、固定分は「上限」ではなく「前払い」であるため、超えた分の支払いは避けられません。労働条件の明示ルール自体は[労働条件の明示ルールはどう変わったか](/labor/column/roudou-joken-meiji-2024-henko-han-i)もあわせてご確認ください。\n\n## 求人票と雇用契約書には、固定残業代をどう書けばいい？\n\n固定残業代を採用の場面で示すときは、次の3点を明示します。これは職業安定法に基づく募集時の明示の考え方でもあります。\n\n| 明示する項目 | 例 |\n|---|---|\n| 固定残業代を除いた基本給 | 基本給 20万円（固定残業代を含まない） |\n| 固定残業代の額と、対応する時間数 | 固定残業手当 5万円（時間外40時間分として支給） |\n| 固定分を超えた場合の取扱い | 40時間を超える時間外・休日・深夜労働分は別途支給する |\n\n「月給25万円（みなし残業込み）」のように、いくらが基本給でいくらが割増分かが分からない書き方は、①明確区分を満たさず無効と判断されるおそれがあります。雇用契約書・賃金規程でも、固定残業代の額と対応時間数、超過分を別途支払う旨を明記します。金額や時間数を明示できない場合は、その数値を書かず、社内で確定してから記載してください（裏取りできない数値を仮で書かない）。\n\n## 固定分を超えた残業の差額精算は、どう運用する？\n\n固定残業代を入れていても、労働時間の把握と、超過分の差額精算はセットで必要です。\n\n1. 始業・終業時刻を客観的な方法で記録し、実際の時間外・休日・深夜労働の時間を把握する\n2. 固定残業代が対応する時間数（例：40時間）を実際の残業時間が超えたら、超過分の割増賃金を計算する\n3. 超過分を、その賃金締切期間の賃金として支払う（翌月へ繰り越して相殺しない）\n\n固定分を「毎月使い切っていない月があるから、多い月と相殺する」という運用はできません。割増賃金は賃金計算期間ごとに支払う必要があるためです。差額精算をしていない事実は、固定残業代そのものの有効性を疑わせる事情にもなり得ます。\n\n## 固定残業代が無効とされると、会社は何を失う？\n\n無効と判断されると、固定分は割増賃金として認められず、通常の労働時間の賃金（＝割増計算の基礎）に算入されます。\n\nその結果、割増賃金の単価が上がり、過去分にさかのぼって未払い残業代が計算し直されます。賃金請求権の消滅時効は、当分の間3年（労働基準法第115条・附則）とされているため、影響する期間も長くなります。さらに、裁判所が悪質と判断した場合には、未払い額と同額を上限とする付加金（労働基準法第114条）の支払いが命じられることがあります。「固定残業代を入れたつもりが、まるごと基礎賃金に足し戻される」——これが最も重いリスクです。なお、未払い残業代の請求や訴訟、個別の紛争交渉は弁護士の領域で、税務上の取扱いは税理士に相談してください。\n\n## よくある質問\n\n**Q. 固定残業代を導入すれば、残業代を毎月計算しなくてよくなりますか？**\nA. なりません。固定残業代は一定時間分の割増賃金の前払いであり、実際の時間外・休日・深夜労働の時間を把握したうえで、固定分に対応する時間を超えたら差額を支払う必要があります。労働時間の把握義務も36協定も、固定残業代の有無にかかわらず必要です。\n\n**Q. 「月給25万円（みなし残業込み）」という記載でも有効ですか？**\nA. いくらが通常の賃金で、いくらが割増分かを判別できない書き方は、明確区分の要件を満たさず無効と判断されるおそれがあります。最高裁（日本ケミカル事件・国際自動車事件）は、通常の労働時間の賃金部分と割増賃金部分とを判別できることを求めています。基本給と固定残業代の額・対応時間数を分けて明示してください。\n\n**Q. 固定残業代が余った月は、翌月の残業と相殺できますか？**\nA. できません。割増賃金は賃金計算期間ごとに支払う必要があり、ある月の未使用分を別の月の超過分と相殺する運用は認められません。超えた月はその期間の賃金として差額を支払います。\n\n**Q. 固定残業代が無効になると、具体的に何が起きますか？**\nA. 固定分が割増計算の基礎賃金に算入され、割増単価が上がって過去分の未払い残業代が計算し直されます。賃金請求権の時効は当分の間3年です。悪質と判断されれば付加金（未払い額と同額が上限）が命じられることもあります。\n\n## この記事の根拠\n\n- **労働基準法第37条**（時間外・休日・深夜の割増賃金）。時間外・休日労働には通常の賃金の2割5分以上5割以下の範囲で政令の定める率以上、1か月60時間を超える時間外労働には5割以上、深夜労働には2割5分以上の割増賃金を支払う義務を定めます。60時間超5割の中小企業への適用は2023年（令和5年）4月1日から。強行規定であり合意で下回れません（e-Gov法令検索、労働基準法・昭和22年法律第49号、2026年9月4日参照）\n- **最高裁判決 日本ケミカル事件（平成30年7月19日）**。ある手当が割増賃金にあたるかは、雇用契約の定めや実態から通常の労働時間の賃金部分と割増賃金部分とを判別でき、割増賃金として支払われたといえるかで判断するとしました（裁判所ウェブサイト、2026年9月4日参照）\n- **最高裁判決 国際自動車事件（令和2年3月30日）**。通常の労働時間の賃金にあたる部分と割増賃金にあたる部分とを判別できることが必要だと示しました（裁判所ウェブサイト、2026年9月4日参照）\n- **労働基準法第114条（付加金）・第115条（時効）**。裁判所は未払い割増賃金と同額までの付加金の支払いを命じることができ、賃金請求権の消滅時効は当分の間3年です（e-Gov法令検索、労働基準法・昭和22年法律第49号、2026年9月4日参照）\n- **厚生労働省による固定残業代の募集時明示の考え方**。固定残業代を採用募集で示す際は、固定残業代を除いた基本給、固定残業代の額と対応時間数、超過分を別途支払う旨を明示するとされています（厚生労働省、2026年9月4日参照）\n- 個別の手当が有効な固定残業代にあたるかは、契約内容・賃金規程・支給実態に照らした判断が必要です。最新の一次情報（e-Gov法令検索・裁判所ウェブサイト・厚生労働省など）と個別事情に照らして確認してください\n\nこの記事は、誰に相談するかまで決めるものではありません。就業規則・賃金規程の設計と固定残業代の運用設計は社会保険労務士の業務です。未払い残業代の請求・訴訟や個別紛争の交渉は弁護士、税務上の取扱いは税理士の領域です。四葉社会保険労務士事務所にご相談いただく場合の費用は[報酬額表](/labor/ryokin)に、よくいただくご質問は[よくあるご質問](/labor/faq)にまとめています。\n\n本記事は一般的な情報提供です。個別の有効性や設計の適否は、最新の一次情報（e-Gov法令検索・裁判所ウェブサイト・厚生労働省など）と個別のご事情に照らし、面談のうえ資格者が行います。執筆は[浦松丈二](/about/uramatsu)（社会保険労務士・行政書士・宅地建物取引士）です。",
+    "status": "published",
+    "author": {
+      "name": "浦松 丈二",
+      "title": "社会保険労務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+    },
+    "keywords": [
+      "固定残業代 適法 要件",
+      "定額残業代 明確区分 対価性",
+      "固定残業代 差額精算 運用",
+      "求人票 固定残業代 明示 書き方",
+      "固定残業代 無効 未払い残業代",
+      "みなし残業 有効 判例"
+    ],
+    "tags": [
+      "固定残業代",
+      "割増賃金",
+      "労働基準法第37条",
+      "最高裁判例",
+      "労働条件明示",
+      "労働法の基本"
+    ],
+    "locales": [],
+    "faq": [
+      {
+        "question": "固定残業代を導入すれば、残業代を毎月計算しなくてよくなりますか？",
+        "answer": "なりません。固定残業代は一定時間分の割増賃金の前払いであり、実際の時間外・休日・深夜労働の時間を把握したうえで、固定分に対応する時間を超えたら差額を支払う必要があります。労働時間の把握義務も36協定も、固定残業代の有無にかかわらず必要です。"
+      },
+      {
+        "question": "「月給25万円（みなし残業込み）」という記載でも有効ですか？",
+        "answer": "いくらが通常の賃金で、いくらが割増分かを判別できない書き方は、明確区分の要件を満たさず無効と判断されるおそれがあります。最高裁（日本ケミカル事件・国際自動車事件）は、通常の労働時間の賃金部分と割増賃金部分とを判別できることを求めています。基本給と固定残業代の額・対応時間数を分けて明示してください。"
+      },
+      {
+        "question": "固定残業代が余った月は、翌月の残業と相殺できますか？",
+        "answer": "できません。割増賃金は賃金計算期間ごとに支払う必要があり、ある月の未使用分を別の月の超過分と相殺する運用は認められません。超えた月はその期間の賃金として差額を支払います。"
+      },
+      {
+        "question": "固定残業代が無効になると、具体的に何が起きますか？",
+        "answer": "固定分が割増計算の基礎賃金に算入され、割増単価が上がって過去分の未払い残業代が計算し直されます。賃金請求権の時効は当分の間3年です。悪質と判断されれば付加金（未払い額と同額が上限）が命じられることもあります。"
+      }
+    ],
+    "translations": {
+      "en": {
+        "title": "Is fixed overtime pay lawful? The disclosure and difference-settlement requirements",
+        "excerpt": "Fixed (flat-rate) overtime pay is lawful if the requirements are met — but it does not mean \"pay it and no more is owed however many hours are worked.\" To be valid, the ordinary wage and the premium portion must be distinguishable (clear separation) and the fixed portion must be consideration for overtime, and any overtime beyond the fixed portion must always be settled as a difference. If it is held invalid, the fixed portion is folded back into the base wage and unpaid overtime balloons on recalculation. Whether a given allowance qualifies is judged by a qualified professional.",
+        "content": "**In short:** Fixed (flat-rate) overtime pay is lawful if the requirements are met. But it does not mean \"pay it and no more is owed however many hours are worked.\" To be valid, the ordinary wage and the premium portion must be distinguishable (clear separation) and the fixed portion must be consideration for overtime, and overtime beyond the fixed portion must always be settled as a difference. If it is held invalid, the fixed portion is folded into the base wage and unpaid overtime balloons on recalculation. Whether a given allowance qualifies is judged by a qualified professional.\n\n\"We use fixed overtime pay, so we don't need to manage overtime,\" \"writing '40 hours of deemed overtime included' in the job ad is enough\" — many owners think this way. But the Supreme Court has drawn the line for when fixed overtime pay is valid, and getting the wording and operation wrong can rebound as unpaid overtime in full. This article sets out, based on Article 37 of the Labour Standards Act and Supreme Court precedent, the requirements for valid fixed overtime pay, how to write the job ad and the contract, and how to run the difference settlement.\n\n## Does paying fixed overtime pay mean no extra is owed no matter how many hours are worked?\n\nNo. Fixed overtime pay is a mechanism to \"pay the premium for a set number of hours in advance\"; hours beyond that must be paid separately.\n\nArticle 37 of the Labour Standards Act obliges the employer to pay premium wages for overtime, holiday, and night work. This obligation is mandatory and cannot be undercut by agreement of the parties. Fixed overtime pay is merely a way to \"pay the Article 37 premium in advance at a flat rate\"; if the worker is made to work overtime beyond the assumed hours (e.g. 40 hours a month), the premium for the excess arises separately. So the idea that \"since we pay fixed overtime pay, we can work them without limit\" is wrong. Grasping working hours and the ceiling under the Article 36 agreement are still required; for the upper limits see [how many overtime hours an Article 36 agreement allows](/en/labor/column/36-kyotei-zangyo-sharoushi-doko-made).\n\n| Type of premium | Rate (Article 37 of the Labour Standards Act and the cabinet order) |\n|---|---|\n| Overtime (beyond statutory working hours) | **25% or more** |\n| The part of overtime exceeding 60 hours a month | **50% or more** (applies to SMEs too from 1 April 2023) |\n| Night work (in principle 22:00–05:00) | **25% or more** (added when it overlaps with overtime) |\n| Statutory holiday | **35% or more** |\n\n## What are the three requirements (disclosure, separation, difference settlement) for valid fixed overtime pay?\n\nFor fixed overtime pay to be valid, the following three must all be present.\n\n| Requirement | Content |\n|---|---|\n| ① Clear separation (distinguishability) | The part of the wage that is the ordinary working-hour wage and the part that is the premium (fixed overtime pay) can be distinguished |\n| ② Consideration | The fixed overtime pay is paid as consideration for overtime, holiday, and night work |\n| ③ Difference settlement | Where overtime exceeds the hours corresponding to the fixed portion, the difference is paid separately |\n\n①② are the framework the Supreme Court set out. The Nihon Chemical case (Supreme Court judgment of 19 July 2018) held that whether an allowance is a premium wage is judged by whether, from the contract terms and the reality, the ordinary working-hour wage portion and the premium wage portion can be distinguished and it can be said to have been paid as a premium wage. The Kokusai Jidosha case (Supreme Court judgment of 30 March 2020) likewise held that the portion that is the ordinary working-hour wage and the portion that is the premium wage must be distinguishable. ③ follows from Article 37 being mandatory: because the fixed portion is a \"prepayment,\" not a \"ceiling,\" payment for the excess cannot be avoided. On the disclosure rules themselves, see also [how the working-condition disclosure rules changed](/en/labor/column/roudou-joken-meiji-2024-henko-han-i).\n\n## How should fixed overtime pay be written in the job ad and the employment contract?\n\nWhen presenting fixed overtime pay at recruitment, disclose the following three. This also reflects the disclosure-at-recruitment approach under the Employment Security Act.\n\n| Item to disclose | Example |\n|---|---|\n| Base pay excluding fixed overtime pay | Base pay ¥200,000 (does not include fixed overtime pay) |\n| The amount of fixed overtime pay and the hours it corresponds to | Fixed overtime allowance ¥50,000 (paid as 40 hours of overtime) |\n| Handling when the fixed portion is exceeded | Overtime, holiday, and night work beyond 40 hours is paid separately |\n\nWording like \"monthly pay ¥250,000 (deemed overtime included),\" where it is unclear how much is base pay and how much is premium, risks being held invalid for failing ① clear separation. In the contract and the wage rules too, state the amount and corresponding hours of the fixed overtime pay and that the excess is paid separately. If the amount or hours cannot be fixed yet, do not write those figures; fix them internally first (do not enter placeholder figures you cannot verify).\n\n## How do you run the difference settlement for overtime beyond the fixed portion?\n\nEven with fixed overtime pay, grasping working hours and settling the difference for the excess are required together.\n\n1. Record start and end times by an objective method and grasp the actual overtime, holiday, and night hours\n2. When actual overtime exceeds the hours the fixed overtime pay corresponds to (e.g. 40 hours), calculate the premium for the excess\n3. Pay the excess as wages for that pay-closing period (do not carry it over to the next month to offset)\n\nYou cannot run it as \"some months don't use up the fixed portion, so we offset it against the heavier months.\" Premium wages must be paid per wage-calculation period. Not settling the difference can itself be a circumstance that casts doubt on the validity of the fixed overtime pay.\n\n## If fixed overtime pay is held invalid, what does the company lose?\n\nIf held invalid, the fixed portion is not recognized as a premium wage and is folded into the ordinary working-hour wage (the base for the premium calculation).\n\nAs a result, the unit price of the premium rises, and unpaid overtime is recalculated retroactively. Because the extinctive prescription for wage claims is, for the time being, three years (Article 115 of the Labour Standards Act and its supplementary provisions), the affected period is also long. Further, where the court finds the conduct malicious, it may order payment of an additional payment capped at the same amount as the unpaid sum (Article 114 of the Labour Standards Act). \"What was meant as fixed overtime pay is added back into the base wage in full\" — this is the heaviest risk. Claims for unpaid overtime, litigation, and negotiation of individual disputes are the domain of an attorney, and tax treatment should be discussed with a tax accountant.\n\n## Frequently asked questions\n\n**Q. If we introduce fixed overtime pay, do we no longer have to calculate overtime each month?**\nA. No. Fixed overtime pay is a prepayment of the premium for a set number of hours; you must grasp the actual overtime, holiday, and night hours and, when the hours corresponding to the fixed portion are exceeded, pay the difference. The duty to grasp working hours and the Article 36 agreement are required regardless of whether fixed overtime pay exists.\n\n**Q. Is \"monthly pay ¥250,000 (deemed overtime included)\" valid?**\nA. Wording that does not let you distinguish how much is the ordinary wage and how much is the premium risks being held invalid for failing the clear-separation requirement. The Supreme Court (Nihon Chemical, Kokusai Jidosha) requires that the ordinary working-hour wage portion and the premium wage portion be distinguishable. Disclose the base pay and the amount and corresponding hours of the fixed overtime pay separately.\n\n**Q. In a month where the fixed overtime pay is left over, can we offset it against next month's overtime?**\nA. No. Premium wages must be paid per wage-calculation period, and offsetting an unused portion of one month against the excess of another month is not permitted. In a month that exceeds, pay the difference as wages for that period.\n\n**Q. Concretely, what happens if fixed overtime pay becomes invalid?**\nA. The fixed portion is folded into the base wage for the premium calculation, the unit premium rises, and past unpaid overtime is recalculated. The prescription for wage claims is, for the time being, three years. If found malicious, an additional payment (capped at the same amount as the unpaid sum) may be ordered.\n\n## この記事の根拠\n\n- **Labour Standards Act, Article 37** (premium wages for overtime, holiday, and night work). It requires premium wages of at least the rate set by cabinet order within a band of 25% to 50% of the ordinary wage for overtime and holiday work, at least 50% for overtime exceeding 60 hours a month, and at least 25% for night work. The 50% for over-60-hours applies to SMEs from 1 April 2023 (Reiwa 5). It is mandatory and cannot be undercut by agreement (e-Gov Law Search, Labour Standards Act, Act No. 49 of 1947; accessed 4 September 2026).\n- **Supreme Court judgment, Nihon Chemical case (19 July 2018).** Held that whether an allowance is a premium wage is judged by whether, from the contract terms and reality, the ordinary working-hour wage portion and the premium wage portion can be distinguished and it can be said to have been paid as a premium wage (Courts in Japan website; accessed 4 September 2026).\n- **Supreme Court judgment, Kokusai Jidosha case (30 March 2020).** Held that the portion that is the ordinary working-hour wage and the portion that is the premium wage must be distinguishable (Courts in Japan website; accessed 4 September 2026).\n- **Labour Standards Act, Article 114 (additional payment) and Article 115 (prescription).** The court may order an additional payment of up to the same amount as the unpaid premium wages, and the prescription for wage claims is, for the time being, three years (e-Gov Law Search, Labour Standards Act, Act No. 49 of 1947; accessed 4 September 2026).\n- **The Ministry of Health, Labour and Welfare's approach to disclosing fixed overtime pay at recruitment.** When presenting fixed overtime pay in recruitment, disclose the base pay excluding fixed overtime pay, the amount and corresponding hours of the fixed overtime pay, and that the excess is paid separately (Ministry of Health, Labour and Welfare; accessed 4 September 2026).\n- Whether a given allowance qualifies as valid fixed overtime pay requires a judgment in light of the contract, the wage rules, and the reality of payment. Confirm against the latest primary sources (e-Gov Law Search, the Courts in Japan website, the Ministry of Health, Labour and Welfare, etc.) and individual circumstances.\n\nThis article does not decide whom to consult. Designing the work rules and wage rules and the operational design of fixed overtime pay are the work of a Shakai Hoken Roumushi. Claims for unpaid overtime, litigation, and negotiation of individual disputes are the domain of an attorney, and tax treatment is the domain of a tax accountant. For fees when consulting 四葉社会保険労務士事務所, see [the fee schedule](/en/labor/ryokin); for frequently asked questions, see [the FAQ](/en/labor/faq).\n\nThis article is general information. The validity in an individual case and whether a design is appropriate are handled by a qualified professional after a consultation, in light of the latest primary sources (e-Gov Law Search, the Courts in Japan website, the Ministry of Health, Labour and Welfare, etc.) and individual circumstances. Written by [Joji Uramatsu](/en/about/uramatsu) (Shakai Hoken Roumushi, Gyoseishoshi, Registered Real Estate Transaction Specialist).",
+        "category": "Labour law basics",
+        "keywords": [
+          "fixed overtime pay lawful",
+          "flat-rate overtime requirements",
+          "clear separation consideration difference settlement",
+          "job ad fixed overtime disclosure",
+          "fixed overtime invalid unpaid wages",
+          "Article 37 Labour Standards Act"
+        ],
+        "tags": [
+          "Fixed overtime pay",
+          "Premium wages",
+          "Article 37",
+          "Supreme Court precedent",
+          "Wage rules",
+          "Shakai Hoken Roumushi"
+        ],
+        "author": {
+          "name": "Joji Uramatsu",
+          "title": "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所"
+        },
+        "faq": [
+          {
+            "question": "If we introduce fixed overtime pay, do we no longer have to calculate overtime each month?",
+            "answer": "No. Fixed overtime pay is a prepayment of the premium for a set number of hours; you must grasp the actual overtime, holiday, and night hours and, when the hours corresponding to the fixed portion are exceeded, pay the difference. The duty to grasp working hours and the Article 36 agreement are required regardless of whether fixed overtime pay exists."
+          },
+          {
+            "question": "Is \"monthly pay ¥250,000 (deemed overtime included)\" valid?",
+            "answer": "Wording that does not let you distinguish how much is the ordinary wage and how much is the premium risks being held invalid for failing the clear-separation requirement. The Supreme Court (Nihon Chemical, Kokusai Jidosha) requires that the ordinary working-hour wage portion and the premium wage portion be distinguishable. Disclose the base pay and the amount and corresponding hours of the fixed overtime pay separately."
+          },
+          {
+            "question": "In a month where the fixed overtime pay is left over, can we offset it against next month's overtime?",
+            "answer": "No. Premium wages must be paid per wage-calculation period, and offsetting an unused portion of one month against the excess of another month is not permitted. In a month that exceeds, pay the difference as wages for that period."
+          },
+          {
+            "question": "Concretely, what happens if fixed overtime pay becomes invalid?",
+            "answer": "The fixed portion is folded into the base wage for the premium calculation, the unit premium rises, and past unpaid overtime is recalculated. The prescription for wage claims is, for the time being, three years. If found malicious, an additional payment (capped at the same amount as the unpaid sum) may be ordered."
+          }
+        ]
+      },
+      "zh-tw": {
+        "title": "固定加班費（定額加班費）合法嗎？明示與差額結算的要件",
+        "excerpt": "固定加班費（定額加班費）若符合要件即為合法，但並非「付了就不論加班幾小時都不必再付」。要被認定有效，須能區分通常工資與加成部分（明確區分），且固定部分係加班等的對價，超過固定部分的加班則務必結算差額。一旦被認定無效，固定部分將被計入基礎工資，重算加成工資後未付款項膨脹。個別的有效性判斷由有資格者為之。",
+        "content": "**先講結論**：固定加班費（定額加班費）若符合要件即為合法，但並非「付了就不論加班幾小時都不必再付」。要被認定有效，須能區分通常工資與加成部分（明確區分），且固定部分係加班等的對價，超過固定部分的加班則務必結算差額。一旦被認定無效，固定部分將被計入基礎工資，重算加成工資後未付款項膨脹。個別的有效性判斷由有資格者為之。\n\n「因為導入了固定加班費，所以不必管理加班」「在徵才票寫『含視為加班40小時分』就夠了」——這樣想的經營者不在少數。但最高法院已就固定加班費何時有效劃出界線，寫法與運用一旦有誤，可能整筆反彈為未付加班費。本文依勞動基準法第37條與最高法院判例，整理固定加班費的有效要件、徵才與契約書的寫法，以及差額結算的運用。\n\n## 付了固定加班費，不論加班幾小時都不必再付嗎？\n\n不是。固定加班費是「就一定時數的加成工資預先支付」的機制，超過該時數的部分須另外支付。\n\n勞動基準法第37條課予雇主就加班・假日・深夜勞動支付加成工資的義務。此義務為強行規定，不得以當事人合意低於之。固定加班費不過是「就第37條的加成工資以定額預先支付」的方法，若使勞工加班超過所預設的時數（例：每月40小時），超過部分的加成工資即另外發生。因此「因為付了固定加班費，就可讓其無上限加班」的理解為誤。掌握勞動時間與36協定的額度仍屬必要，關於上限規制請參閱[36協定下加班可到幾小時](/zh-tw/labor/column/36-kyotei-zangyo-sharoushi-doko-made)。\n\n| 加成種類 | 加成率（勞動基準法第37條・政令） |\n|---|---|\n| 加班（超過法定勞動時間） | **2成5以上** |\n| 加班中每月超過60小時的部分 | **5成以上**（中小企業亦自2023年4月1日適用） |\n| 深夜（原則22時〜翌5時） | **2成5以上**（與加班重疊則加計） |\n| 法定假日 | **3成5以上** |\n\n## 有效的固定加班費所需的3個要件（明示・區分・差額結算）是什麼？\n\n固定加班費要被認定有效，須具備以下3點。\n\n| 要件 | 內容 |\n|---|---|\n| ①明確區分（可判別性） | 工資中屬通常勞動時間工資的部分，與屬加成工資（固定加班費）的部分，能予區分 |\n| ②對價性 | 固定加班費係作為加班・假日・深夜勞動的對價而支付 |\n| ③差額結算 | 使其加班超過固定部分所對應的時數時，另外支付該差額 |\n\n①②為最高法院所示的判斷架構。日本化學事件（最高法院平成30年7月19日判決）認為，某手當是否屬加成工資，應依雇用契約的約定與實態，就能否區分通常勞動時間工資部分與加成工資部分，並能否謂係作為加成工資而支付來判斷。國際自動車事件（最高法院令和2年3月30日判決）亦認為，須能區分屬通常勞動時間工資的部分與屬加成工資的部分。③為第37條屬強行規定的當然結果——固定部分係「預付」而非「上限」，故超過部分的支付無可迴避。關於勞動條件明示規則本身，另請參閱[勞動條件的明示規則有何變更](/zh-tw/labor/column/roudou-joken-meiji-2024-henko-han-i)。\n\n## 徵才票與雇用契約書上，固定加班費該怎麼寫？\n\n於招募場面呈現固定加班費時，須明示以下3點。這也是依職業安定法於招募時明示的思路。\n\n| 明示項目 | 例 |\n|---|---|\n| 不含固定加班費的基本工資 | 基本工資20萬圓（不含固定加班費） |\n| 固定加班費的金額，以及所對應的時數 | 固定加班津貼5萬圓（作為加班40小時分支給） |\n| 超過固定部分時的處理 | 超過40小時的加班・假日・深夜勞動分另行支給 |\n\n如「月薪25萬圓（含視為加班）」般、無從得知多少是基本工資、多少是加成部分的寫法，有因不符①明確區分而被認定無效之虞。於雇用契約書・工資規程亦須明記固定加班費的金額與對應時數，以及超過部分另行支付之旨。若尚無法確定金額或時數，請勿寫入該等數值，於社內確定後再記載（勿以暫定填入無法查證的數值）。\n\n## 超過固定部分的加班，其差額結算該如何運用？\n\n即使導入固定加班費，掌握勞動時間與超過部分的差額結算仍須成套進行。\n\n1. 以客觀方法記錄上班・下班時刻，掌握實際的加班・假日・深夜勞動時數\n2. 實際加班超過固定加班費所對應的時數（例：40小時）時，計算超過部分的加成工資\n3. 將超過部分作為該工資結算期間的工資支付（勿結轉至次月相抵）\n\n不得以「有些月份沒用完固定部分，故與較多的月份相抵」的方式運用。因加成工資須就各工資計算期間支付。未進行差額結算的事實，亦可能成為使固定加班費本身的有效性受質疑的情事。\n\n## 固定加班費被認定無效，公司會失去什麼？\n\n一旦被認定無效，固定部分即不被認可為加成工資，而被計入通常勞動時間工資（＝加成計算的基礎）。\n\n其結果，加成工資的單價上升，並溯及既往重算未付加班費。工資請求權的消滅時效目前為3年（勞動基準法第115條・附則），故受影響的期間亦長。此外，法院若認定情節惡質，得命支付以未付額同額為上限的附加金（勞動基準法第114條）。「本欲導入固定加班費，卻整筆被加回基礎工資」——這是最重的風險。又，未付加班費的請求與訴訟、個別紛爭的交涉屬律師領域，稅務上的處理請諮詢稅理士。\n\n## 常見問題\n\n**Q. 導入固定加班費，就不必每月計算加班費了嗎？**\nA. 不是。固定加班費是就一定時數加成工資的預付，仍須掌握實際的加班・假日・深夜勞動時數，並於超過固定部分所對應的時數時支付差額。掌握勞動時間的義務與36協定，不論有無固定加班費皆屬必要。\n\n**Q.「月薪25萬圓（含視為加班）」的記載也有效嗎？**\nA. 無從判別多少是通常工資、多少是加成部分的寫法，有因不符明確區分要件而被認定無效之虞。最高法院（日本化學事件・國際自動車事件）要求能區分通常勞動時間工資部分與加成工資部分。請將基本工資與固定加班費的金額・對應時數分開明示。\n\n**Q. 固定加班費有剩的月份，能與次月的加班相抵嗎？**\nA. 不能。加成工資須就各工資計算期間支付，不容許以某月的未使用分與他月的超過分相抵的運用。超過的月份，就該期間的工資支付差額。\n\n**Q. 固定加班費變成無效，具體會發生什麼？**\nA. 固定部分被計入加成計算的基礎工資，加成單價上升，過去分的未付加班費被重算。工資請求權的時效目前為3年。若被認定惡質，亦可能被命附加金（以未付額同額為上限）。\n\n## この記事の根拠\n\n- **勞動基準法第37條**（加班・假日・深夜的加成工資）。就加班・假日勞動，須支付通常工資2成5以上5成以下範圍內、政令所定率以上的加成；每月超過60小時的加班須5成以上；深夜勞動須2成5以上。超過60小時5成對中小企業的適用自2023年（令和5年）4月1日起。屬強行規定，不得以合意低於之（e-Gov法令檢索、勞動基準法・昭和22年法律第49號，2026年9月4日參照）\n- **最高法院判決 日本化學事件（平成30年7月19日）**。認為某手當是否屬加成工資，應依雇用契約的約定與實態，就能否區分通常勞動時間工資部分與加成工資部分，並能否謂係作為加成工資而支付來判斷（裁判所網站，2026年9月4日參照）\n- **最高法院判決 國際自動車事件（令和2年3月30日）**。示明須能區分屬通常勞動時間工資的部分與屬加成工資的部分（裁判所網站，2026年9月4日參照）\n- **勞動基準法第114條（附加金）・第115條（時效）**。法院得命支付與未付加成工資同額為上限的附加金，工資請求權的消滅時效目前為3年（e-Gov法令檢索、勞動基準法・昭和22年法律第49號，2026年9月4日參照）\n- **厚生勞働省就固定加班費於招募時明示的思路**。於招募呈現固定加班費時，須明示不含固定加班費的基本工資、固定加班費的金額與對應時數，以及超過部分另行支付之旨（厚生勞働省，2026年9月4日參照）\n- 個別手當是否屬有效的固定加班費，須依契約內容・工資規程・支給實態判斷。請依最新一手資訊（e-Gov法令檢索・裁判所網站・厚生勞働省等）與個別情形確認\n\n本文並不代替您決定該向誰諮詢。工作規則・工資規程的設計與固定加班費的運用設計，屬社會保險勞務士的業務。未付加班費的請求・訴訟與個別紛爭的交涉屬律師，稅務上的處理屬稅理士領域。向四葉社会保険労務士事務所諮詢時的費用，整理於[報酬額表](/zh-tw/labor/ryokin)；常見問題整理於[常見問答](/zh-tw/labor/faq)。\n\n本文為一般性資訊提供。個別的有效性與設計的妥適與否，將依最新一手資訊（e-Gov法令檢索・裁判所網站・厚生勞働省等）與個別情形，於面談後由有資格者為之。撰文為[浦松丈二](/zh-tw/about/uramatsu)（社會保險勞務士・行政書士・宅地建物取引士）。",
+        "category": "勞動法基礎",
+        "keywords": [
+          "固定加班費 合法",
+          "定額加班費 要件",
+          "明確區分 對價性 差額結算",
+          "徵才 固定加班費 明示",
+          "固定加班費 無效 未付工資",
+          "勞動基準法第37條"
+        ],
+        "tags": [
+          "固定加班費",
+          "加成工資",
+          "第37條",
+          "最高法院判例",
+          "勞動條件明示",
+          "社會保險勞務士"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "導入固定加班費，就不必每月計算加班費了嗎？",
+            "answer": "不是。固定加班費是就一定時數加成工資的預付，仍須掌握實際的加班・假日・深夜勞動時數，並於超過固定部分所對應的時數時支付差額。掌握勞動時間的義務與36協定，不論有無固定加班費皆屬必要。"
+          },
+          {
+            "question": "「月薪25萬圓（含視為加班）」的記載也有效嗎？",
+            "answer": "無從判別多少是通常工資、多少是加成部分的寫法，有因不符明確區分要件而被認定無效之虞。最高法院（日本化學事件・國際自動車事件）要求能區分通常勞動時間工資部分與加成工資部分。請將基本工資與固定加班費的金額・對應時數分開明示。"
+          },
+          {
+            "question": "固定加班費有剩的月份，能與次月的加班相抵嗎？",
+            "answer": "不能。加成工資須就各工資計算期間支付，不容許以某月的未使用分與他月的超過分相抵的運用。超過的月份，就該期間的工資支付差額。"
+          },
+          {
+            "question": "固定加班費變成無效，具體會發生什麼？",
+            "answer": "固定部分被計入加成計算的基礎工資，加成單價上升，過去分的未付加班費被重算。工資請求權的時效目前為3年。若被認定惡質，亦可能被命附加金（以未付額同額為上限）。"
+          }
+        ]
+      },
+      "zh": {
+        "title": "固定加班费（定额加班费）合法吗？明示与差额结算的要件",
+        "excerpt": "固定加班费（定额加班费）若符合要件即为合法，但并非「付了就不论加班几小时都不必再付」。要被认定有效，须能区分通常工资与加成部分（明确区分），且固定部分系加班等的对价，超过固定部分的加班则务必结算差额。一旦被认定无效，固定部分将被计入基础工资，重算加成工资后未付款项膨胀。个别的有效性判断由有资格者为之。",
+        "content": "**先讲结论**：固定加班费（定额加班费）若符合要件即为合法，但并非「付了就不论加班几小时都不必再付」。要被认定有效，须能区分通常工资与加成部分（明确区分），且固定部分系加班等的对价，超过固定部分的加班则务必结算差额。一旦被认定无效，固定部分将被计入基础工资，重算加成工资后未付款项膨胀。个别的有效性判断由有资格者为之。\n\n「因为导入了固定加班费，所以不必管理加班」「在招募票写『含视为加班40小时分』就够了」——这样想的经营者不在少数。但最高法院已就固定加班费何时有效划出界线，写法与运用一旦有误，可能整笔反弹为未付加班费。本文依劳动基准法第37条与最高法院判例，整理固定加班费的有效要件、招募与契约书的写法，以及差额结算的运用。\n\n## 付了固定加班费，不论加班几小时都不必再付吗？\n\n不是。固定加班费是「就一定时数的加成工资预先支付」的机制，超过该时数的部分须另外支付。\n\n劳动基准法第37条课予雇主就加班・假日・深夜劳动支付加成工资的义务。此义务为强行规定，不得以当事人合意低于之。固定加班费不过是「就第37条的加成工资以定额预先支付」的方法，若使劳工加班超过所预设的时数（例：每月40小时），超过部分的加成工资即另外发生。因此「因为付了固定加班费，就可让其无上限加班」的理解为误。掌握劳动时间与36协定的额度仍属必要，关于上限规制请参阅[36协定下加班可到几小时](/zh/labor/column/36-kyotei-zangyo-sharoushi-doko-made)。\n\n| 加成种类 | 加成率（劳动基准法第37条・政令） |\n|---|---|\n| 加班（超过法定劳动时间） | **2成5以上** |\n| 加班中每月超过60小时的部分 | **5成以上**（中小企业亦自2023年4月1日适用） |\n| 深夜（原则22时〜翌5时） | **2成5以上**（与加班重叠则加计） |\n| 法定假日 | **3成5以上** |\n\n## 有效的固定加班费所需的3个要件（明示・区分・差额结算）是什么？\n\n固定加班费要被认定有效，须具备以下3点。\n\n| 要件 | 内容 |\n|---|---|\n| ①明确区分（可判别性） | 工资中属通常劳动时间工资的部分，与属加成工资（固定加班费）的部分，能予区分 |\n| ②对价性 | 固定加班费系作为加班・假日・深夜劳动的对价而支付 |\n| ③差额结算 | 使其加班超过固定部分所对应的时数时，另外支付该差额 |\n\n①②为最高法院所示的判断架构。日本化学事件（最高法院平成30年7月19日判决）认为，某手当是否属加成工资，应依雇用契约的约定与实态，就能否区分通常劳动时间工资部分与加成工资部分，并能否谓系作为加成工资而支付来判断。国际自动车事件（最高法院令和2年3月30日判决）亦认为，须能区分属通常劳动时间工资的部分与属加成工资的部分。③为第37条属强行规定的当然结果——固定部分系「预付」而非「上限」，故超过部分的支付无可回避。关于劳动条件明示规则本身，另请参阅[劳动条件的明示规则有何变更](/zh/labor/column/roudou-joken-meiji-2024-henko-han-i)。\n\n## 招募票与雇用契约书上，固定加班费该怎么写？\n\n于招募场面呈现固定加班费时，须明示以下3点。这也是依职业安定法于招募时明示的思路。\n\n| 明示项目 | 例 |\n|---|---|\n| 不含固定加班费的基本工资 | 基本工资20万圆（不含固定加班费） |\n| 固定加班费的金额，以及所对应的时数 | 固定加班津贴5万圆（作为加班40小时分支给） |\n| 超过固定部分时的处理 | 超过40小时的加班・假日・深夜劳动分另行支给 |\n\n如「月薪25万圆（含视为加班）」般、无从得知多少是基本工资、多少是加成部分的写法，有因不符①明确区分而被认定无效之虞。于雇用契约书・工资规程亦须明记固定加班费的金额与对应时数，以及超过部分另行支付之旨。若尚无法确定金额或时数，请勿写入该等数值，于社内确定后再记载（勿以暂定填入无法查证的数值）。\n\n## 超过固定部分的加班，其差额结算该如何运用？\n\n即使导入固定加班费，掌握劳动时间与超过部分的差额结算仍须成套进行。\n\n1. 以客观方法记录上班・下班时刻，掌握实际的加班・假日・深夜劳动时数\n2. 实际加班超过固定加班费所对应的时数（例：40小时）时，计算超过部分的加成工资\n3. 将超过部分作为该工资结算期间的工资支付（勿结转至次月相抵）\n\n不得以「有些月份没用完固定部分，故与较多的月份相抵」的方式运用。因加成工资须就各工资计算期间支付。未进行差额结算的事实，亦可能成为使固定加班费本身的有效性受质疑的情事。\n\n## 固定加班费被认定无效，公司会失去什么？\n\n一旦被认定无效，固定部分即不被认可为加成工资，而被计入通常劳动时间工资（＝加成计算的基础）。\n\n其结果，加成工资的单价上升，并溯及既往重算未付加班费。工资请求权的消灭时效目前为3年（劳动基准法第115条・附则），故受影响的期间亦长。此外，法院若认定情节恶质，得命支付以未付额同额为上限的附加金（劳动基准法第114条）。「本欲导入固定加班费，却整笔被加回基础工资」——这是最重的风险。又，未付加班费的请求与诉讼、个别纷争的交涉属律师领域，税务上的处理请咨询税理士。\n\n## 常见问题\n\n**Q. 导入固定加班费，就不必每月计算加班费了吗？**\nA. 不是。固定加班费是就一定时数加成工资的预付，仍须掌握实际的加班・假日・深夜劳动时数，并于超过固定部分所对应的时数时支付差额。掌握劳动时间的义务与36协定，不论有无固定加班费皆属必要。\n\n**Q.「月薪25万圆（含视为加班）」的记载也有效吗？**\nA. 无从判别多少是通常工资、多少是加成部分的写法，有因不符明确区分要件而被认定无效之虞。最高法院（日本化学事件・国际自动车事件）要求能区分通常劳动时间工资部分与加成工资部分。请将基本工资与固定加班费的金额・对应时数分开明示。\n\n**Q. 固定加班费有剩的月份，能与次月的加班相抵吗？**\nA. 不能。加成工资须就各工资计算期间支付，不容许以某月的未使用分与他月的超过分相抵的运用。超过的月份，就该期间的工资支付差额。\n\n**Q. 固定加班费变成无效，具体会发生什么？**\nA. 固定部分被计入加成计算的基础工资，加成单价上升，过去分的未付加班费被重算。工资请求权的时效目前为3年。若被认定恶质，亦可能被命附加金（以未付额同额为上限）。\n\n## この記事の根拠\n\n- **劳动基准法第37条**（加班・假日・深夜的加成工资）。就加班・假日劳动，须支付通常工资2成5以上5成以下范围内、政令所定率以上的加成；每月超过60小时的加班须5成以上；深夜劳动须2成5以上。超过60小时5成对中小企业的适用自2023年（令和5年）4月1日起。属强行规定，不得以合意低于之（e-Gov法令检索、劳动基准法・昭和22年法律第49号，2026年9月4日参照）\n- **最高法院判决 日本化学事件（平成30年7月19日）**。认为某手当是否属加成工资，应依雇用契约的约定与实态，就能否区分通常劳动时间工资部分与加成工资部分，并能否谓系作为加成工资而支付来判断（裁判所网站，2026年9月4日参照）\n- **最高法院判决 国际自动车事件（令和2年3月30日）**。示明须能区分属通常劳动时间工资的部分与属加成工资的部分（裁判所网站，2026年9月4日参照）\n- **劳动基准法第114条（附加金）・第115条（时效）**。法院得命支付与未付加成工资同额为上限的附加金，工资请求权的消灭时效目前为3年（e-Gov法令检索、劳动基准法・昭和22年法律第49号，2026年9月4日参照）\n- **厚生劳働省就固定加班费于招募时明示的思路**。于招募呈现固定加班费时，须明示不含固定加班费的基本工资、固定加班费的金额与对应时数，以及超过部分另行支付之旨（厚生劳働省，2026年9月4日参照）\n- 个别手当是否属有效的固定加班费，须依契约内容・工资规程・支给实态判断。请依最新一手资讯（e-Gov法令检索・裁判所网站・厚生劳働省等）与个别情形确认\n\n本文并不代替您决定该向谁咨询。工作规则・工资规程的设计与固定加班费的运用设计，属社会保险劳务士的业务。未付加班费的请求・诉讼与个别纷争的交涉属律师，税务上的处理属税理士领域。向四葉社会保険労務士事務所咨询时的费用，整理于[报酬额表](/zh/labor/ryokin)；常见问题整理于[常见问答](/zh/labor/faq)。\n\n本文为一般性资讯提供。个别的有效性与设计的妥适与否，将依最新一手资讯（e-Gov法令检索・裁判所网站・厚生劳働省等）与个别情形，于面谈后由有资格者为之。撰文为[浦松丈二](/zh/about/uramatsu)（社会保险劳务士・行政书士・宅地建物取引士）。",
+        "category": "劳动法基础",
+        "keywords": [
+          "固定加班费 合法",
+          "定额加班费 要件",
+          "明确区分 对价性 差额结算",
+          "招募 固定加班费 明示",
+          "固定加班费 无效 未付工资",
+          "劳动基准法第37条"
+        ],
+        "tags": [
+          "固定加班费",
+          "加成工资",
+          "第37条",
+          "最高法院判例",
+          "劳动条件明示",
+          "社会保险劳务士"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "导入固定加班费，就不必每月计算加班费了吗？",
+            "answer": "不是。固定加班费是就一定时数加成工资的预付，仍须掌握实际的加班・假日・深夜劳动时数，并于超过固定部分所对应的时数时支付差额。掌握劳动时间的义务与36协定，不论有无固定加班费皆属必要。"
+          },
+          {
+            "question": "「月薪25万圆（含视为加班）」的记载也有效吗？",
+            "answer": "无从判别多少是通常工资、多少是加成部分的写法，有因不符明确区分要件而被认定无效之虞。最高法院（日本化学事件・国际自动车事件）要求能区分通常劳动时间工资部分与加成工资部分。请将基本工资与固定加班费的金额・对应时数分开明示。"
+          },
+          {
+            "question": "固定加班费有剩的月份，能与次月的加班相抵吗？",
+            "answer": "不能。加成工资须就各工资计算期间支付，不容许以某月的未使用分与他月的超过分相抵的运用。超过的月份，就该期间的工资支付差额。"
+          },
+          {
+            "question": "固定加班费变成无效，具体会发生什么？",
+            "answer": "固定部分被计入加成计算的基础工资，加成单价上升，过去分的未付加班费被重算。工资请求权的时效目前为3年。若被认定恶质，亦可能被命附加金（以未付额同额为上限）。"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "business": "labor",
+    "slug": "taishoku-daiko-kaisha-taio-nenkyu-kashiyohin",
+    "title": "退職代行から連絡が来た。会社側の実務対応と離職手続",
+    "date": "2026-09-04",
+    "category": "労働法の基本",
+    "excerpt": "退職代行から連絡が来ても、退職の意思表示自体は受理して差し支えありません。期間の定めのない雇用は、労働者からの解約申入れの日から2週間で終了します（民法第627条第1項）。ただし、代行業者が退職条件の交渉まで行うと弁護士法第72条に触れるおそれがあるため、業者の種別（民間・労働組合・弁護士）を確認します。賃金は本人に直接払い（労働基準法第24条）、退職に伴う金品の返還は請求から7日以内（同第23条）、資格喪失や離職票の手続の期限まで整理します。",
+    "content": "**結論（先に要点）**：退職代行から連絡が来ても、退職の意思表示自体は受理して差し支えありません。期間の定めのない雇用は、労働者からの解約申入れの日から2週間で終了します（民法第627条第1項）。ただし、代行業者が「退職条件の交渉」まで行うと弁護士法第72条に触れるおそれがあるため、業者の種別（民間・労働組合・弁護士）を確認します。賃金は本人に直接払い（労働基準法第24条）、退職に伴う金品の返還は請求から7日以内（同第23条）、資格喪失や離職票の手続には期限があります。個別の対応は資格者が行います。\n\nある朝、従業員本人ではなく「退職代行サービス」を名乗る第三者から退職の連絡が入る——中小企業では珍しくなくなりました。「本人と話せないまま辞められるのか」「有給や貸与品はどうなるのか」と戸惑う経営者・人事の方へ、この記事は、会社側が受理・有給・貸与品回収・離職手続をどう進めるかを、民法・労働基準法・弁護士法の条文に沿って整理します。\n\n## 退職代行からの連絡は、そのまま受理していい？\n\n退職の意思表示そのものは、受理して差し支えありません。退職は労働者の権利であり、会社の承諾は要件ではないからです。\n\n期間の定めのない雇用契約では、民法第627条第1項により、労働者はいつでも解約の申入れができ、申入れの日から2週間を経過すれば雇用契約は終了します。就業規則に「退職は1か月前に申し出る」と定めていても、この2週間の効力を会社の規則で延ばすことはできないと解されています。なお、月給制など期間によって報酬を定めている場合の予告に関する第627条第2項・第3項は、2020年（令和2年）4月1日施行の民法改正で、使用者からの解約にのみ適用されるよう改められました。したがって、労働者側からの退職は賃金の定め方にかかわらず2週間で足ります（有期雇用は別で、原則は期間途中の一方的解約はできず、やむを得ない事由が必要です＝民法第628条）。会社側からの解雇との違い、社労士と弁護士のどちらに相談するかは[解雇は社会保険労務士と弁護士のどちらに頼むのか](/labor/column/kaiko-sharoushi-bengoshi-dochira)もあわせてご確認ください。\n\n## 本人と直接やり取りしてはいけない？（代行業者の種別で何が変わる？）\n\n「本人に連絡するな」と言われても、会社が本人へ事務連絡をすること自体が禁じられるわけではありません。ただし、代行業者が何をできるかは、その種別で大きく変わります。\n\n| 業者の種別 | できること | 根拠・注意 |\n|---|---|---|\n| 民間の退職代行業者 | 退職の意思の**伝達**（使者）まで | 退職条件（有給・退職日・金銭）の**交渉**を報酬を得て行うと、弁護士法第72条（非弁行為）に触れるおそれ |\n| 労働組合（合同労組など） | 団体交渉としての**交渉** | 憲法第28条・労働組合法に基づく団体交渉。会社は正当な理由なく拒めない |\n| 弁護士 | 交渉・請求・訴訟の**代理** | 法律事務の代理が本来業務 |\n\nつまり、相手が民間業者であれば、有給の日数や退職日、未払い賃金などの「交渉」に応じる相手ではない可能性があります。会社としては、退職の意思が本人のものかを確認し（本人の署名した委任状・退職届の有無など）、事務的な連絡は本人にも行える、という整理が基本です。退職条件をめぐる交渉・請求が必要な場面は弁護士の領域で、非弁の疑いがある業者と条件交渉を進めないよう注意します。\n\n## 退職日までの有給消化と欠勤、賃金はどう扱う？\n\n退職日までに残る年次有給休暇を、退職日までにまとめて取得したいという申出は、原則として認めることになります。\n\n年休は労働者が請求する時季に与えるのが原則で、会社の時季変更権は「他の時季に与える」ことが前提です。退職で他の時季がない以上、退職日を超えて変更する余地がなく、事実上拒めません。未消化分の「買取り」は、法律上の義務ではありませんが、退職時の未消化分に限って任意に買い取ること自体は違法ではありません。有給を使わず欠勤扱いのまま退職日を迎えた場合、その分の賃金は発生しません。年休の付与や5日取得義務の全体像は[年5日の年休取得義務が取りきれないときどうするか](/labor/column/nenji-yukyu-5nichi-torikirenai)を参照してください。\n\n| 項目 | 取扱い |\n|---|---|\n| 退職日までの年休の一括取得 | 時季変更の余地がなく、原則**拒めない** |\n| 未消化年休の買取り | 義務ではないが、退職時分の任意の買取りは違法ではない |\n| 有給を取らず欠勤のまま退職 | その日の賃金は**発生しない** |\n| 最後の賃金の支払い | 通常の賃金支払日に支払えばよい（第23条の請求がある場合は7日以内） |\n\n## 貸与品の返却や引き継ぎは、どこまで求められる？\n\n会社が貸与したパソコン・制服・社員証・鍵などは、会社の所有物なので返還を求められます。一方、賃金と相殺したり、引き継ぎを法的に強制したりすることはできません。\n\n労働基準法第24条は賃金の全額払いと直接払いを定めており、貸与品の未返却や損害を理由に、賃金から一方的に控除することはできません（賃金は本人に直接支払い、代行業者に払うものでもありません）。引き継ぎは退職の自由の範囲にあり、就業規則に定めても、引き継ぎをしないことだけで当然に損害賠償が認められるわけではありません。貸与品の返却は、着払いでの郵送など現実的な方法を案内し、返還請求は別途行うのが穏当です。\n\n## 離職票・社会保険と雇用保険の資格喪失は、いつまでに出す？\n\n退職の受理とは別に、会社には期限のある手続が残ります。本人に連絡が取りにくくても、会社の義務として進めます。\n\n| 手続 | 提出先 | 期限 |\n|---|---|---|\n| 健康保険・厚生年金の被保険者資格喪失届 | 年金事務所（日本年金機構） | 退職日の翌日から**5日以内** |\n| 雇用保険の被保険者資格喪失届・離職証明書 | ハローワーク | 資格喪失日（退職日の翌日）の翌日から起算して**10日以内** |\n| 離職票の交付 | 会社→本人 | 本人が離職票を希望する場合は交付する（原則交付。転職先が決まっていても本人の請求があれば必要） |\n| 源泉徴収票・退職所得の手続 | 会社→本人／税務 | 税務の取扱いは税理士に確認 |\n\n離職証明書の離職理由欄は、失業給付の内容に影響するため、事実に基づいて記載します。本人と連絡が取りにくい場合でも、これらの届出は会社の義務として期限内に行います。給付の具体的な要否・記載方法は、管轄のハローワーク・年金事務所と最新の一次情報で確認してください。\n\n## よくある質問\n\n**Q. 退職代行から「本人に連絡するな」と言われました。従わないと違法ですか？**\nA. 会社が本人へ事務連絡をすること自体が違法になるわけではありません。ただし退職の意思が本人のものかの確認は必要です。相手が民間業者の場合、退職条件の「交渉」に応じる相手ではない可能性があり、条件交渉が必要なら弁護士の領域です。嫌がらせ的な連絡は避け、事務的な範囲にとどめてください。\n\n**Q. 「明日から出社しない」と言われました。2週間は来てもらえますか？**\nA. 期間の定めのない雇用では、解約申入れから2週間で契約は終了します（民法第627条第1項）。出社を強制することはできませんが、残りの年休を充てる、欠勤扱いとする、などの整理になります。欠勤分の賃金は発生しません。\n\n**Q. 貸与品を返さないので、最後の給料から天引きしていいですか？**\nA. できません。労働基準法第24条の全額払い・直接払いにより、貸与品の未返却や損害を理由に賃金から一方的に控除することはできません。賃金は本人に直接支払い、貸与品の返還は別途請求してください。\n\n**Q. 離職票や資格喪失の届出は、本人と連絡が取れなくても出す必要がありますか？**\nA. あります。健康保険・厚生年金の資格喪失届は退職日の翌日から5日以内、雇用保険の資格喪失届・離職証明書は10日以内が期限です。本人に連絡が取りにくくても、会社の義務として期限内に手続してください。\n\n## この記事の根拠\n\n- **民法第627条**（期間の定めのない雇用の解約の申入れ）。第1項で、各当事者はいつでも解約の申入れができ、雇用は解約の申入れの日から2週間を経過することによって終了すると定めます。期間によって報酬を定めた場合の予告に関する第2項・第3項は、2020年（令和2年）4月1日施行の民法（債権関係）改正で、使用者からの解約にのみ適用されるよう改められました（e-Gov法令検索、民法・明治29年法律第89号、2026年9月4日参照）\n- **弁護士法第72条**（非弁護士の法律事務の取扱い等の禁止）。弁護士等でない者が、報酬を得る目的で、法律事件に関して代理・交渉その他の法律事務を業とすることを禁じます。退職条件の交渉は法律事務にあたり得るため、民間の退職代行業者が交渉まで行うと同条に触れるおそれがあります（e-Gov法令検索、弁護士法・昭和24年法律第205号、2026年9月4日参照）\n- **労働基準法第23条**（金品の返還）。労働者の退職の場合において、権利者の請求があれば7日以内に賃金を支払い、労働者の権利に属する金品を返還しなければならないと定めます（e-Gov法令検索、労働基準法・昭和22年法律第49号、2026年9月4日参照）\n- **労働基準法第24条**（賃金の支払）。賃金は通貨で、直接労働者に、その全額を支払わなければなりません。貸与品の未返却や損害を理由に賃金から一方的に控除することはできません（e-Gov法令検索、労働基準法・昭和22年法律第49号、2026年9月4日参照）\n- **資格喪失届の提出期限**。健康保険・厚生年金保険の被保険者資格喪失届は退職日の翌日から5日以内（日本年金機構）、雇用保険の被保険者資格喪失届・離職証明書は資格喪失日の翌日から起算して10日以内（ハローワーク）が期限です（日本年金機構・厚生労働省、2026年9月4日参照）\n- 有期雇用の期間途中の解約はやむを得ない事由が必要（民法第628条）など、事案により扱いが異なります。個別の届出の要否・記載方法・提出先は、最新の一次情報（e-Gov法令検索・厚生労働省・日本年金機構・ハローワークなど）と個別事情に照らして確認してください\n\nこの記事は、誰に相談するかまで決めるものではありません。退職に伴う社会保険・雇用保険の資格喪失、離職票の作成は社会保険労務士の業務です。退職条件や損害賠償の交渉・請求は弁護士、税務上の取扱いは税理士の領域です。四葉社会保険労務士事務所にご相談いただく場合の費用は[報酬額表](/labor/ryokin)に、よくいただくご質問は[よくあるご質問](/labor/faq)にまとめています。\n\n本記事は一般的な情報提供です。退職条件の交渉・請求は弁護士の領域で、当事務所は行いません。個別の手続の適否は、最新の一次情報（e-Gov法令検索・厚生労働省・日本年金機構など）と個別のご事情に照らし、面談のうえ資格者が行います。執筆は[浦松丈二](/about/uramatsu)（社会保険労務士・行政書士・宅地建物取引士）です。",
+    "status": "published",
+    "author": {
+      "name": "浦松 丈二",
+      "title": "社会保険労務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+    },
+    "keywords": [
+      "退職代行 会社側 対応",
+      "退職代行 民法627条 2週間",
+      "退職代行 弁護士法72条 非弁",
+      "退職 有給消化 貸与品",
+      "退職 資格喪失届 離職票 期限",
+      "退職代行 賃金 直接払い"
+    ],
+    "tags": [
+      "退職代行",
+      "退職",
+      "民法第627条",
+      "年次有給休暇",
+      "資格喪失",
+      "業際"
+    ],
+    "locales": [],
+    "faq": [
+      {
+        "question": "退職代行から「本人に連絡するな」と言われました。従わないと違法ですか？",
+        "answer": "会社が本人へ事務連絡をすること自体が違法になるわけではありません。ただし退職の意思が本人のものかの確認は必要です。相手が民間業者の場合、退職条件の「交渉」に応じる相手ではない可能性があり、条件交渉が必要なら弁護士の領域です。嫌がらせ的な連絡は避け、事務的な範囲にとどめてください。"
+      },
+      {
+        "question": "「明日から出社しない」と言われました。2週間は来てもらえますか？",
+        "answer": "期間の定めのない雇用では、解約申入れから2週間で契約は終了します（民法第627条第1項）。出社を強制することはできませんが、残りの年休を充てる、欠勤扱いとする、などの整理になります。欠勤分の賃金は発生しません。"
+      },
+      {
+        "question": "貸与品を返さないので、最後の給料から天引きしていいですか？",
+        "answer": "できません。労働基準法第24条の全額払い・直接払いにより、貸与品の未返却や損害を理由に賃金から一方的に控除することはできません。賃金は本人に直接支払い、貸与品の返還は別途請求してください。"
+      },
+      {
+        "question": "離職票や資格喪失の届出は、本人と連絡が取れなくても出す必要がありますか？",
+        "answer": "あります。健康保険・厚生年金の資格喪失届は退職日の翌日から5日以内、雇用保険の資格喪失届・離職証明書は10日以内が期限です。本人に連絡が取りにくくても、会社の義務として期限内に手続してください。"
+      }
+    ],
+    "translations": {
+      "en": {
+        "title": "A resignation-agency has contacted us: the company's practical response and separation procedures",
+        "excerpt": "Even if a resignation agency contacts you, you may accept the notice of resignation itself. An indefinite-term employment ends two weeks after the worker gives notice of termination (Civil Code Article 627(1)). But if the agency goes as far as \"negotiating resignation terms,\" it may fall foul of Attorney Act Article 72, so check the agency's type (private, labour union, attorney). Pay wages directly to the worker (Labour Standards Act Article 24), return money and goods within seven days of a demand (Article 23), and note the deadlines for loss-of-status and separation-slip procedures. Individual responses are handled by a qualified professional.",
+        "content": "**In short:** Even if a resignation agency contacts you, you may accept the notice of resignation itself. An indefinite-term employment ends two weeks after the worker gives notice of termination (Civil Code Article 627(1)). But if the agency goes as far as \"negotiating resignation terms,\" it may fall foul of Attorney Act Article 72, so check the agency's type (private, labour union, attorney). Pay wages directly to the worker (Labour Standards Act Article 24), return money and goods within seven days of a demand (Article 23), and note that loss-of-status and separation-slip procedures have deadlines. Individual responses are handled by a qualified professional.\n\nOne morning, a resignation comes in not from the employee but from a third party calling itself a \"resignation agency service\" — this is no longer rare among small and medium companies. For owners and HR staff who are unsure — \"can they quit without our ever speaking to them?\", \"what happens to annual leave and company property?\" — this article sets out how the company should handle acceptance, annual leave, recovery of company property, and separation procedures, following the Civil Code, the Labour Standards Act, and the Attorney Act.\n\n## Can we simply accept a resignation-agency's notice?\n\nYou may accept the notice of resignation itself. Resignation is the worker's right, and the company's consent is not a requirement.\n\nUnder an indefinite-term employment contract, Article 627(1) of the Civil Code lets the worker give notice of termination at any time, and the contract ends two weeks after the notice. Even if the work rules say \"give notice one month in advance,\" the company's rules are understood not to be able to extend this two-week effect. Note that Article 627(2)–(3), on notice where remuneration is set by period such as monthly pay, was amended by the Civil Code reform effective 1 April 2020 (Reiwa 2) so that it applies only to termination by the employer. So resignation by the worker suffices at two weeks regardless of how wages are set. (Fixed-term employment is different: in principle a party cannot unilaterally terminate mid-term, and an unavoidable reason is required — Civil Code Article 628.) For how this differs from dismissal by the company, and whether to consult a Shakai Hoken Roumushi or an attorney, see also [whether to ask a Shakai Hoken Roumushi or an attorney about dismissal](/en/labor/column/kaiko-sharoushi-bengoshi-dochira).\n\n## Must we not deal with the worker directly? (What changes with the agency's type?)\n\nEven if told \"do not contact the worker,\" the company is not forbidden from making administrative contact with the worker. But what the agency can do changes greatly by its type.\n\n| Type of agency | What it can do | Basis / caution |\n|---|---|---|\n| Private resignation agency | Only **conveying** the intent to resign (as a messenger) | If it **negotiates** resignation terms (leave, resignation date, money) for a fee, it may fall foul of Attorney Act Article 72 (non-lawyer legal work) |\n| Labour union (a general union, etc.) | **Negotiation** as collective bargaining | Collective bargaining under Constitution Article 28 and the Labour Union Act; the company cannot refuse without a legitimate reason |\n| Attorney | **Representation** in negotiation, claims, and litigation | Representation in legal work is its proper business |\n\nIn other words, if the counterpart is a private agency, it may not be a party you should negotiate with over the number of leave days, the resignation date, or unpaid wages. The company's basic approach is to confirm that the intent to resign is the worker's own (whether there is a power of attorney or resignation letter signed by the worker) and to note that administrative contact can also be made to the worker. Where negotiation or a claim over resignation terms is needed, that is the domain of an attorney; take care not to proceed with terms negotiation with an agency suspected of non-lawyer practice.\n\n## How do we handle annual leave, absence, and wages up to the resignation date?\n\nA request to take the remaining annual paid leave in a block by the resignation date will, in principle, have to be granted.\n\nAnnual leave is, in principle, given at the time the worker requests, and the company's right to change the time presupposes \"giving it at another time.\" Since there is no other time once the worker resigns, there is no room to move it beyond the resignation date, and in effect it cannot be refused. \"Buying out\" unused leave is not a legal obligation, but voluntarily buying out only the unused portion at resignation is not in itself unlawful. If the worker reaches the resignation date treated as absent without using leave, no wage arises for that portion. For the overall picture of granting leave and the five-day obligation, see [what to do when the five-day annual-leave obligation cannot be met](/en/labor/column/nenji-yukyu-5nichi-torikirenai).\n\n| Item | Handling |\n|---|---|\n| Taking annual leave in a block up to the resignation date | No room to change the time; in principle **cannot be refused** |\n| Buying out unused annual leave | Not an obligation, but a voluntary buy-out at resignation is not unlawful |\n| Resigning as absent without taking leave | No wage arises for those days |\n| Payment of the final wage | Pay it on the usual wage payment day (within seven days if there is a demand under Article 23) |\n\n## How far can we require return of company property and handover?\n\nCompany-lent items such as PCs, uniforms, ID cards, and keys are company property, so their return can be required. On the other hand, you cannot offset them against wages or legally compel a handover.\n\nArticle 24 of the Labour Standards Act requires full and direct payment of wages, so you cannot unilaterally deduct from wages on the ground of unreturned items or damage (wages are paid directly to the worker and are not paid to the agency). Handover is within the freedom to resign; even if set in the work rules, damages are not automatically recognized merely because a handover was not done. For return of lent items, it is prudent to guide a realistic method such as mailing carriage-forward and to make the return demand separately.\n\n## By when must we file loss of insured status and the separation slip?\n\nSeparate from accepting the resignation, the company is left with deadline-bound procedures. Even if the worker is hard to reach, proceed with them as the company's duty.\n\n| Procedure | Filed with | Deadline |\n|---|---|---|\n| Health-insurance and employees'-pension notice of loss of insured status | Pension office (Japan Pension Service) | Within **5 days** of the day after the resignation date |\n| Employment-insurance notice of loss of insured status and separation certificate | Hello Work | Within **10 days** counted from the day after the loss-of-status date (the day after the resignation date) |\n| Issuing the separation slip | Company → worker | Issue it if the worker wants the separation slip (issued in principle; needed on the worker's demand even if a new job is arranged) |\n| Withholding slip / retirement-income procedure | Company → worker / tax | Confirm the tax treatment with a tax accountant |\n\nBecause the separation-reason field of the separation certificate affects unemployment benefits, fill it in based on the facts. Even where the worker is hard to reach, these filings are the company's duty and must be done within the deadlines. Confirm the concrete need and how to fill in the forms with the Hello Work and pension office with jurisdiction and the latest primary sources.\n\n## Frequently asked questions\n\n**Q. The resignation agency said \"do not contact the worker.\" Is it unlawful not to comply?**\nA. It is not itself unlawful for the company to make administrative contact with the worker. But you do need to confirm that the intent to resign is the worker's own. If the counterpart is a private agency, it may not be a party to negotiate resignation terms with, and if terms negotiation is needed, that is the domain of an attorney. Avoid harassing contact and keep it to the administrative scope.\n\n**Q. They said \"I won't come in from tomorrow.\" Can we make them come for two weeks?**\nA. Under indefinite-term employment, the contract ends two weeks after the notice of termination (Civil Code Article 627(1)). You cannot compel attendance, but it is arranged by applying the remaining annual leave or treating it as absence. No wage arises for the absent portion.\n\n**Q. They won't return company property, so may we deduct it from the final pay?**\nA. No. Under the full and direct payment of wages in Labour Standards Act Article 24, you cannot unilaterally deduct from wages on the ground of unreturned items or damage. Pay wages directly to the worker and demand return of the property separately.\n\n**Q. Must we file the separation slip and loss of insured status even if we cannot reach the worker?**\nA. Yes. The health-insurance and employees'-pension loss-of-status notice is due within five days of the day after the resignation date, and the employment-insurance loss-of-status notice and separation certificate within ten days. Even if the worker is hard to reach, complete the procedures within the deadlines as the company's duty.\n\n## この記事の根拠\n\n- **Civil Code, Article 627** (notice of termination of indefinite-term employment). Paragraph 1 provides that either party may give notice of termination at any time, and the employment ends two weeks after the notice. Paragraphs 2–3, on notice where remuneration is set by period, were amended by the Civil Code (law of obligations) reform effective 1 April 2020 (Reiwa 2) so that they apply only to termination by the employer (e-Gov Law Search, Civil Code, Act No. 89 of 1896; accessed 4 September 2026).\n- **Attorney Act, Article 72** (prohibition on non-lawyers handling legal work). It prohibits a person who is not an attorney from engaging, for the purpose of obtaining a fee, in representation, negotiation, or other legal work in relation to legal cases. Because negotiating resignation terms can amount to legal work, a private resignation agency that goes as far as negotiation may fall foul of the Article (e-Gov Law Search, Attorney Act, Act No. 205 of 1949; accessed 4 September 2026).\n- **Labour Standards Act, Article 23** (return of money and goods). On a worker's resignation, if the rightful person demands, the employer must within seven days pay wages and return money and goods belonging to the worker (e-Gov Law Search, Labour Standards Act, Act No. 49 of 1947; accessed 4 September 2026).\n- **Labour Standards Act, Article 24** (payment of wages). Wages must be paid in currency, directly to the worker, in full. You cannot unilaterally deduct from wages on the ground of unreturned items or damage (e-Gov Law Search, Labour Standards Act, Act No. 49 of 1947; accessed 4 September 2026).\n- **Deadlines for loss-of-status notices.** The health-insurance and employees'-pension loss-of-status notice is due within five days of the day after the resignation date (Japan Pension Service); the employment-insurance loss-of-status notice and separation certificate are due within ten days counted from the day after the loss-of-status date (Hello Work) (Japan Pension Service; Ministry of Health, Labour and Welfare; accessed 4 September 2026).\n- Handling differs by case, for example that mid-term termination of fixed-term employment requires an unavoidable reason (Civil Code Article 628). Confirm the need for individual filings, how to fill them in, and where to file against the latest primary sources (e-Gov Law Search, the Ministry of Health, Labour and Welfare, the Japan Pension Service, Hello Work, etc.) and individual circumstances.\n\nThis article does not decide whom to consult. Loss of social-insurance and employment-insurance status on resignation and preparing the separation slip are the work of a Shakai Hoken Roumushi. Negotiating and claiming resignation terms and damages are the domain of an attorney, and tax treatment is the domain of a tax accountant. For fees when consulting 四葉社会保険労務士事務所, see [the fee schedule](/en/labor/ryokin); for frequently asked questions, see [the FAQ](/en/labor/faq).\n\nThis article is general information. Negotiating and claiming resignation terms are the domain of an attorney and are not done by this office. Whether an individual procedure is appropriate is handled by a qualified professional after a consultation, in light of the latest primary sources (e-Gov Law Search, the Ministry of Health, Labour and Welfare, the Japan Pension Service, etc.) and individual circumstances. Written by [Joji Uramatsu](/en/about/uramatsu) (Shakai Hoken Roumushi, Gyoseishoshi, Registered Real Estate Transaction Specialist).",
+        "category": "Labour law basics",
+        "keywords": [
+          "resignation agency company response",
+          "Civil Code Article 627 two weeks",
+          "Attorney Act Article 72 non-lawyer",
+          "annual leave on resignation",
+          "company property return wages",
+          "loss of insured status separation slip deadline"
+        ],
+        "tags": [
+          "Resignation agency",
+          "Resignation",
+          "Civil Code Article 627",
+          "Annual leave",
+          "Loss of insured status",
+          "Shakai Hoken Roumushi"
+        ],
+        "author": {
+          "name": "Joji Uramatsu",
+          "title": "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所"
+        },
+        "faq": [
+          {
+            "question": "The resignation agency said \"do not contact the worker.\" Is it unlawful not to comply?",
+            "answer": "It is not itself unlawful for the company to make administrative contact with the worker. But you do need to confirm that the intent to resign is the worker's own. If the counterpart is a private agency, it may not be a party to negotiate resignation terms with, and if terms negotiation is needed, that is the domain of an attorney. Avoid harassing contact and keep it to the administrative scope."
+          },
+          {
+            "question": "They said \"I won't come in from tomorrow.\" Can we make them come for two weeks?",
+            "answer": "Under indefinite-term employment, the contract ends two weeks after the notice of termination (Civil Code Article 627(1)). You cannot compel attendance, but it is arranged by applying the remaining annual leave or treating it as absence. No wage arises for the absent portion."
+          },
+          {
+            "question": "They won't return company property, so may we deduct it from the final pay?",
+            "answer": "No. Under the full and direct payment of wages in Labour Standards Act Article 24, you cannot unilaterally deduct from wages on the ground of unreturned items or damage. Pay wages directly to the worker and demand return of the property separately."
+          },
+          {
+            "question": "Must we file the separation slip and loss of insured status even if we cannot reach the worker?",
+            "answer": "Yes. The health-insurance and employees'-pension loss-of-status notice is due within five days of the day after the resignation date, and the employment-insurance loss-of-status notice and separation certificate within ten days. Even if the worker is hard to reach, complete the procedures within the deadlines as the company's duty."
+          }
+        ]
+      },
+      "zh-tw": {
+        "title": "收到離職代辦的聯絡：公司方的實務因應與離職手續",
+        "excerpt": "即使收到離職代辦的聯絡，離職的意思表示本身可予受理。無期限的雇用，自勞工提出解約申入之日起2週終了（民法第627條第1項）。惟代辦業者若連「離職條件的交涉」都做，恐觸及律師法第72條，故須確認業者的種別（民間・工會・律師）。工資須直接支付本人（勞動基準法第24條），離職所伴隨的金品返還須於請求起7日內（同第23條），資格喪失與離職票的手續均有期限。個別的因應由有資格者為之。",
+        "content": "**先講結論**：即使收到離職代辦的聯絡，離職的意思表示本身可予受理。無期限的雇用，自勞工提出解約申入之日起2週終了（民法第627條第1項）。惟代辦業者若連「離職條件的交涉」都做，恐觸及律師法第72條，故須確認業者的種別（民間・工會・律師）。工資須直接支付本人（勞動基準法第24條），離職所伴隨的金品返還須於請求起7日內（同第23條），資格喪失與離職票的手續均有期限。個別的因應由有資格者為之。\n\n某天早上，離職的聯絡並非來自員工本人，而是來自自稱「離職代辦服務」的第三方——在中小企業已不罕見。對於「員工不與我們對話就能離職嗎」「有給與借用品怎麼辦」而困惑的經營者・人事，本文依民法・勞動基準法・律師法的條文，整理公司方如何進行受理・有給・借用品回收・離職手續。\n\n## 離職代辦的聯絡，能就這樣受理嗎？\n\n離職的意思表示本身，可予受理。因為離職是勞工的權利，公司的承諾並非要件。\n\n在無期限的雇用契約，依民法第627條第1項，勞工可隨時提出解約申入，自申入之日起經過2週，雇用契約即終了。即使工作規則定有「離職須於1個月前提出」，一般認為公司的規則無法延長此2週的效力。又，就月薪制等依期間定報酬時之預告的第627條第2項・第3項，於2020年（令和2年）4月1日施行的民法改正中，被改為僅適用於使用者一方的解約。因此，勞工一方的離職，不論工資如何定，2週即足。（有期雇用則不同，原則上不得於期間途中單方解約，須有不得已之事由＝民法第628條。）關於與公司方解僱的差異、該找社勞士或律師諮詢，另請參閱[解僱該找社會保險勞務士還是律師](/zh-tw/labor/column/kaiko-sharoushi-bengoshi-dochira)。\n\n## 不可與本人直接往來嗎？（依代辦業者的種別會有何不同？）\n\n即使被告知「別聯絡本人」，公司對本人為事務性聯絡本身並非被禁止。惟代辦業者能做什麼，依其種別而大有不同。\n\n| 業者種別 | 能做的事 | 依據・注意 |\n|---|---|---|\n| 民間離職代辦業者 | 離職意思的**傳達**（使者）為止 | 若為報酬而就離職條件（有給・離職日・金錢）為**交涉**，恐觸及律師法第72條（非律師行為） |\n| 工會（合同工會等） | 作為團體交涉的**交涉** | 依憲法第28條・工會法之團體交涉。公司無正當理由不得拒絕 |\n| 律師 | 交涉・請求・訴訟的**代理** | 法律事務的代理為其本來業務 |\n\n亦即，若對方為民間業者，其可能並非可就有給日數、離職日、未付工資等「交涉」的對象。公司方的基本整理為：確認離職意思是否為本人所為（有無本人簽署的委任狀・離職申請書等），而事務性聯絡亦可對本人為之。就離職條件的交涉・請求有必要的場面屬律師領域，須注意勿與有非律師之虞的業者進行條件交涉。\n\n## 離職日前的有給消化與缺勤、工資該如何處理？\n\n就離職日前尚餘的年次有給休假，欲於離職日前一併取得的申請，原則上須予認可。\n\n年休原則上於勞工請求的時季給予，公司的時季變更權以「於他時季給予」為前提。因離職而無他時季，即無將其移至離職日之後的餘地，事實上不得拒絕。未消化分的「買取」並非法律上的義務，但僅就離職時的未消化分任意買取，本身並不違法。若未使用有給、以缺勤狀態迎接離職日，該部分的工資不發生。關於年休的給予與5日取得義務的全貌，請參閱[年5日的年休取得義務取不完時怎麼辦](/zh-tw/labor/column/nenji-yukyu-5nichi-torikirenai)。\n\n| 項目 | 處理 |\n|---|---|\n| 離職日前年休的一併取得 | 無時季變更的餘地，原則**不得拒絕** |\n| 未消化年休的買取 | 並非義務，但離職時分的任意買取並不違法 |\n| 未取有給、以缺勤離職 | 該日的工資**不發生** |\n| 最後工資的支付 | 於通常的工資支付日支付即可（有第23條的請求時為7日內） |\n\n## 借用品的返還與交接，能要求到什麼程度？\n\n公司所借出的電腦・制服・員工證・鑰匙等，因屬公司所有物，可要求返還。另一方面，不得與工資相抵，亦不得於法律上強制交接。\n\n勞動基準法第24條定有工資的全額支付與直接支付，不得以借用品未返還或損害為由，單方自工資扣除（工資須直接支付本人，亦非支付予代辦業者）。交接屬離職自由的範圍，即使定於工作規則，亦不因未交接一事即當然認可損害賠償。就借用品的返還，宜以貨到付款郵寄等現實方法引導，返還請求則另行為之較為穩當。\n\n## 離職票・社會保險與雇用保險的資格喪失，須於何時前提出？\n\n與離職的受理另外，公司仍留有有期限的手續。即使難與本人聯絡，仍作為公司的義務進行。\n\n| 手續 | 提出處 | 期限 |\n|---|---|---|\n| 健康保險・厚生年金的被保險者資格喪失屆 | 年金事務所（日本年金機構） | 自離職日的翌日起**5日內** |\n| 雇用保險的被保險者資格喪失屆・離職證明書 | Hello Work | 自資格喪失日（離職日的翌日）的翌日起算**10日內** |\n| 離職票的交付 | 公司→本人 | 本人希望離職票時交付（原則交付。縱已定下轉職處，本人請求時仍需要） |\n| 源泉徵收票・退職所得的手續 | 公司→本人／稅務 | 稅務上的處理向稅理士確認 |\n\n離職證明書的離職理由欄，因影響失業給付的內容，須依事實記載。縱難與本人聯絡，此等申報仍屬公司的義務，須於期限內為之。給付的具體要否・記載方法，請以管轄的Hello Work・年金事務所與最新一手資訊確認。\n\n## 常見問題\n\n**Q. 離職代辦說「別聯絡本人」。不從即違法嗎？**\nA. 公司對本人為事務性聯絡本身並不違法。惟仍須確認離職意思是否為本人所為。若對方為民間業者，其可能並非可就離職條件「交涉」的對象，若需條件交涉則屬律師領域。請避免騷擾性聯絡，止於事務性範圍。\n\n**Q. 被告知「明天起不來上班」。能要求其來2週嗎？**\nA. 於無期限雇用，自解約申入起2週契約即終了（民法第627條第1項）。無法強制出勤，惟可整理為以剩餘年休充抵、或作缺勤處理等。缺勤分的工資不發生。\n\n**Q. 因不返還借用品，能從最後的薪水扣除嗎？**\nA. 不能。依勞動基準法第24條的全額支付・直接支付，不得以借用品未返還或損害為由，單方自工資扣除。工資須直接支付本人，借用品的返還請另行請求。\n\n**Q. 離職票或資格喪失的申報，即使聯絡不上本人也須提出嗎？**\nA. 須提出。健康保險・厚生年金的資格喪失屆為自離職日翌日起5日內，雇用保險的資格喪失屆・離職證明書為10日內。縱難與本人聯絡，仍請作為公司的義務於期限內辦理。\n\n## この記事の根拠\n\n- **民法第627條**（無期限雇用之解約申入）。第1項規定，各當事人得隨時提出解約申入，雇用自解約申入之日起經過2週終了。就依期間定報酬時之預告的第2項・第3項，於2020年（令和2年）4月1日施行的民法（債權關係）改正中，被改為僅適用於使用者一方的解約（e-Gov法令檢索、民法・明治29年法律第89號，2026年9月4日參照）\n- **律師法第72條**（禁止非律師處理法律事務等）。禁止非律師等之人，為獲報酬之目的，就法律事件為代理・交涉及其他法律事務為業。因離職條件的交涉得屬法律事務，民間離職代辦業者若連交涉都做，恐觸及該條（e-Gov法令檢索、律師法・昭和24年法律第205號，2026年9月4日參照）\n- **勞動基準法第23條**（金品的返還）。於勞工離職之情形，權利者若請求，須於7日內支付工資，並返還屬勞工權利之金品（e-Gov法令檢索、勞動基準法・昭和22年法律第49號，2026年9月4日參照）\n- **勞動基準法第24條**（工資的支付）。工資須以通貨、直接向勞工、全額支付。不得以借用品未返還或損害為由，單方自工資扣除（e-Gov法令檢索、勞動基準法・昭和22年法律第49號，2026年9月4日參照）\n- **資格喪失屆的提出期限**。健康保險・厚生年金保險的被保險者資格喪失屆為自離職日翌日起5日內（日本年金機構），雇用保險的被保險者資格喪失屆・離職證明書為自資格喪失日翌日起算10日內（Hello Work）（日本年金機構・厚生勞働省，2026年9月4日參照）\n- 有期雇用之期間途中解約須有不得已之事由（民法第628條）等，因事案而處理各異。個別申報之要否・記載方法・提出處，請依最新一手資訊（e-Gov法令檢索・厚生勞働省・日本年金機構・Hello Work等）與個別情形確認\n\n本文並不代替您決定該向誰諮詢。離職所伴隨的社會保險・雇用保險資格喪失、離職票的製作，屬社會保險勞務士的業務。離職條件與損害賠償的交涉・請求屬律師，稅務上的處理屬稅理士領域。向四葉社会保険労務士事務所諮詢時的費用，整理於[報酬額表](/zh-tw/labor/ryokin)；常見問題整理於[常見問答](/zh-tw/labor/faq)。\n\n本文為一般性資訊提供。離職條件的交涉・請求屬律師領域，本事務所不予進行。個別手續的妥適與否，將依最新一手資訊（e-Gov法令檢索・厚生勞働省・日本年金機構等）與個別情形，於面談後由有資格者為之。撰文為[浦松丈二](/zh-tw/about/uramatsu)（社會保險勞務士・行政書士・宅地建物取引士）。",
+        "category": "勞動法基礎",
+        "keywords": [
+          "離職代辦 公司因應",
+          "民法第627條 2週",
+          "律師法第72條 非律師",
+          "離職時 有給消化",
+          "借用品 返還 工資",
+          "資格喪失 離職票 期限"
+        ],
+        "tags": [
+          "離職代辦",
+          "離職",
+          "民法第627條",
+          "年休",
+          "資格喪失",
+          "社會保險勞務士"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "離職代辦說「別聯絡本人」。不從即違法嗎？",
+            "answer": "公司對本人為事務性聯絡本身並不違法。惟仍須確認離職意思是否為本人所為。若對方為民間業者，其可能並非可就離職條件「交涉」的對象，若需條件交涉則屬律師領域。請避免騷擾性聯絡，止於事務性範圍。"
+          },
+          {
+            "question": "被告知「明天起不來上班」。能要求其來2週嗎？",
+            "answer": "於無期限雇用，自解約申入起2週契約即終了（民法第627條第1項）。無法強制出勤，惟可整理為以剩餘年休充抵、或作缺勤處理等。缺勤分的工資不發生。"
+          },
+          {
+            "question": "因不返還借用品，能從最後的薪水扣除嗎？",
+            "answer": "不能。依勞動基準法第24條的全額支付・直接支付，不得以借用品未返還或損害為由，單方自工資扣除。工資須直接支付本人，借用品的返還請另行請求。"
+          },
+          {
+            "question": "離職票或資格喪失的申報，即使聯絡不上本人也須提出嗎？",
+            "answer": "須提出。健康保險・厚生年金的資格喪失屆為自離職日翌日起5日內，雇用保險的資格喪失屆・離職證明書為10日內。縱難與本人聯絡，仍請作為公司的義務於期限內辦理。"
+          }
+        ]
+      },
+      "zh": {
+        "title": "收到离职代办的联络：公司方的实务因应与离职手续",
+        "excerpt": "即使收到离职代办的联络，离职的意思表示本身可予受理。无期限的雇用，自劳工提出解约申入之日起2周终了（民法第627条第1项）。惟代办业者若连「离职条件的交涉」都做，恐触及律师法第72条，故须确认业者的种别（民间・工会・律师）。工资须直接支付本人（劳动基准法第24条），离职所伴随的金品返还须于请求起7日内（同第23条），资格丧失与离职票的手续均有期限。个别的因应由有资格者为之。",
+        "content": "**先讲结论**：即使收到离职代办的联络，离职的意思表示本身可予受理。无期限的雇用，自劳工提出解约申入之日起2周终了（民法第627条第1项）。惟代办业者若连「离职条件的交涉」都做，恐触及律师法第72条，故须确认业者的种别（民间・工会・律师）。工资须直接支付本人（劳动基准法第24条），离职所伴随的金品返还须于请求起7日内（同第23条），资格丧失与离职票的手续均有期限。个别的因应由有资格者为之。\n\n某天早上，离职的联络并非来自员工本人，而是来自自称「离职代办服务」的第三方——在中小企业已不罕见。对于「员工不与我们对话就能离职吗」「有给与借用品怎么办」而困惑的经营者・人事，本文依民法・劳动基准法・律师法的条文，整理公司方如何进行受理・有给・借用品回收・离职手续。\n\n## 离职代办的联络，能就这样受理吗？\n\n离职的意思表示本身，可予受理。因为离职是劳工的权利，公司的承诺并非要件。\n\n在无期限的雇用契约，依民法第627条第1项，劳工可随时提出解约申入，自申入之日起经过2周，雇用契约即终了。即使工作规则定有「离职须于1个月前提出」，一般认为公司的规则无法延长此2周的效力。又，就月薪制等依期间定报酬时之预告的第627条第2项・第3项，于2020年（令和2年）4月1日施行的民法改正中，被改为仅适用于使用者一方的解约。因此，劳工一方的离职，不论工资如何定，2周即足。（有期雇用则不同，原则上不得于期间途中单方解约，须有不得已之事由＝民法第628条。）关于与公司方解雇的差异、该找社劳士或律师咨询，另请参阅[解雇该找社会保险劳务士还是律师](/zh/labor/column/kaiko-sharoushi-bengoshi-dochira)。\n\n## 不可与本人直接往来吗？（依代办业者的种别会有何不同？）\n\n即使被告知「别联络本人」，公司对本人为事务性联络本身并非被禁止。惟代办业者能做什么，依其种别而大有不同。\n\n| 业者种别 | 能做的事 | 依据・注意 |\n|---|---|---|\n| 民间离职代办业者 | 离职意思的**传达**（使者）为止 | 若为报酬而就离职条件（有给・离职日・金钱）为**交涉**，恐触及律师法第72条（非律师行为） |\n| 工会（合同工会等） | 作为团体交涉的**交涉** | 依宪法第28条・工会法之团体交涉。公司无正当理由不得拒绝 |\n| 律师 | 交涉・请求・诉讼的**代理** | 法律事务的代理为其本来业务 |\n\n亦即，若对方为民间业者，其可能并非可就有给日数、离职日、未付工资等「交涉」的对象。公司方的基本整理为：确认离职意思是否为本人所为（有无本人签署的委任状・离职申请书等），而事务性联络亦可对本人为之。就离职条件的交涉・请求有必要的场面属律师领域，须注意勿与有非律师之虞的业者进行条件交涉。\n\n## 离职日前的有给消化与缺勤、工资该如何处理？\n\n就离职日前尚余的年次有给休假，欲于离职日前一并取得的申请，原则上须予认可。\n\n年休原则上于劳工请求的时季给予，公司的时季变更权以「于他时季给予」为前提。因离职而无他时季，即无将其移至离职日之后的余地，事实上不得拒绝。未消化分的「买取」并非法律上的义务，但仅就离职时的未消化分任意买取，本身并不违法。若未使用有给、以缺勤状态迎接离职日，该部分的工资不发生。关于年休的给予与5日取得义务的全貌，请参阅[年5日的年休取得义务取不完时怎么办](/zh/labor/column/nenji-yukyu-5nichi-torikirenai)。\n\n| 项目 | 处理 |\n|---|---|\n| 离职日前年休的一并取得 | 无时季变更的余地，原则**不得拒绝** |\n| 未消化年休的买取 | 并非义务，但离职时分的任意买取并不违法 |\n| 未取有给、以缺勤离职 | 该日的工资**不发生** |\n| 最后工资的支付 | 于通常的工资支付日支付即可（有第23条的请求时为7日内） |\n\n## 借用品的返还与交接，能要求到什么程度？\n\n公司所借出的电脑・制服・员工证・钥匙等，因属公司所有物，可要求返还。另一方面，不得与工资相抵，亦不得于法律上强制交接。\n\n劳动基准法第24条定有工资的全额支付与直接支付，不得以借用品未返还或损害为由，单方自工资扣除（工资须直接支付本人，亦非支付予代办业者）。交接属离职自由的范围，即使定于工作规则，亦不因未交接一事即当然认可损害赔偿。就借用品的返还，宜以货到付款邮寄等现实方法引导，返还请求则另行为之较为稳当。\n\n## 离职票・社会保险与雇用保险的资格丧失，须于何时前提出？\n\n与离职的受理另外，公司仍留有有期限的手续。即使难与本人联络，仍作为公司的义务进行。\n\n| 手续 | 提出处 | 期限 |\n|---|---|---|\n| 健康保险・厚生年金的被保险者资格丧失届 | 年金事务所（日本年金机构） | 自离职日的翌日起**5日内** |\n| 雇用保险的被保险者资格丧失届・离职证明书 | Hello Work | 自资格丧失日（离职日的翌日）的翌日起算**10日内** |\n| 离职票的交付 | 公司→本人 | 本人希望离职票时交付（原则交付。纵已定下转职处，本人请求时仍需要） |\n| 源泉征收票・退职所得的手续 | 公司→本人／税务 | 税务上的处理向税理士确认 |\n\n离职证明书的离职理由栏，因影响失业给付的内容，须依事实记载。纵难与本人联络，此等申报仍属公司的义务，须于期限内为之。给付的具体要否・记载方法，请以管辖的Hello Work・年金事务所与最新一手资讯确认。\n\n## 常见问题\n\n**Q. 离职代办说「别联络本人」。不从即违法吗？**\nA. 公司对本人为事务性联络本身并不违法。惟仍须确认离职意思是否为本人所为。若对方为民间业者，其可能并非可就离职条件「交涉」的对象，若需条件交涉则属律师领域。请避免骚扰性联络，止于事务性范围。\n\n**Q. 被告知「明天起不来上班」。能要求其来2周吗？**\nA. 于无期限雇用，自解约申入起2周契约即终了（民法第627条第1项）。无法强制出勤，惟可整理为以剩余年休充抵、或作缺勤处理等。缺勤分的工资不发生。\n\n**Q. 因不返还借用品，能从最后的薪水扣除吗？**\nA. 不能。依劳动基准法第24条的全额支付・直接支付，不得以借用品未返还或损害为由，单方自工资扣除。工资须直接支付本人，借用品的返还请另行请求。\n\n**Q. 离职票或资格丧失的申报，即使联络不上本人也须提出吗？**\nA. 须提出。健康保险・厚生年金的资格丧失届为自离职日翌日起5日内，雇用保险的资格丧失届・离职证明书为10日内。纵难与本人联络，仍请作为公司的义务于期限内办理。\n\n## この記事の根拠\n\n- **民法第627条**（无期限雇用之解约申入）。第1项规定，各当事人得随时提出解约申入，雇用自解约申入之日起经过2周终了。就依期间定报酬时之预告的第2项・第3项，于2020年（令和2年）4月1日施行的民法（债权关系）改正中，被改为仅适用于使用者一方的解约（e-Gov法令检索、民法・明治29年法律第89号，2026年9月4日参照）\n- **律师法第72条**（禁止非律师处理法律事务等）。禁止非律师等之人，为获报酬之目的，就法律事件为代理・交涉及其他法律事务为业。因离职条件的交涉得属法律事务，民间离职代办业者若连交涉都做，恐触及该条（e-Gov法令检索、律师法・昭和24年法律第205号，2026年9月4日参照）\n- **劳动基准法第23条**（金品的返还）。于劳工离职之情形，权利者若请求，须于7日内支付工资，并返还属劳工权利之金品（e-Gov法令检索、劳动基准法・昭和22年法律第49号，2026年9月4日参照）\n- **劳动基准法第24条**（工资的支付）。工资须以通货、直接向劳工、全额支付。不得以借用品未返还或损害为由，单方自工资扣除（e-Gov法令检索、劳动基准法・昭和22年法律第49号，2026年9月4日参照）\n- **资格丧失届的提出期限**。健康保险・厚生年金保险的被保险者资格丧失届为自离职日翌日起5日内（日本年金机构），雇用保险的被保险者资格丧失届・离职证明书为自资格丧失日翌日起算10日内（Hello Work）（日本年金机构・厚生劳働省，2026年9月4日参照）\n- 有期雇用之期间途中解约须有不得已之事由（民法第628条）等，因事案而处理各异。个别申报之要否・记载方法・提出处，请依最新一手资讯（e-Gov法令检索・厚生劳働省・日本年金机构・Hello Work等）与个别情形确认\n\n本文并不代替您决定该向谁咨询。离职所伴随的社会保险・雇用保险资格丧失、离职票的制作，属社会保险劳务士的业务。离职条件与损害赔偿的交涉・请求属律师，税务上的处理属税理士领域。向四葉社会保険労務士事務所咨询时的费用，整理于[报酬额表](/zh/labor/ryokin)；常见问题整理于[常见问答](/zh/labor/faq)。\n\n本文为一般性资讯提供。离职条件的交涉・请求属律师领域，本事务所不予进行。个别手续的妥适与否，将依最新一手资讯（e-Gov法令检索・厚生劳働省・日本年金机构等）与个别情形，于面谈后由有资格者为之。撰文为[浦松丈二](/zh/about/uramatsu)（社会保险劳务士・行政书士・宅地建物取引士）。",
+        "category": "劳动法基础",
+        "keywords": [
+          "离职代办 公司因应",
+          "民法第627条 2周",
+          "律师法第72条 非律师",
+          "离职时 有给消化",
+          "借用品 返还 工资",
+          "资格丧失 离职票 期限"
+        ],
+        "tags": [
+          "离职代办",
+          "离职",
+          "民法第627条",
+          "年休",
+          "资格丧失",
+          "社会保险劳务士"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "离职代办说「别联络本人」。不从即违法吗？",
+            "answer": "公司对本人为事务性联络本身并不违法。惟仍须确认离职意思是否为本人所为。若对方为民间业者，其可能并非可就离职条件「交涉」的对象，若需条件交涉则属律师领域。请避免骚扰性联络，止于事务性范围。"
+          },
+          {
+            "question": "被告知「明天起不来上班」。能要求其来2周吗？",
+            "answer": "于无期限雇用，自解约申入起2周契约即终了（民法第627条第1项）。无法强制出勤，惟可整理为以剩余年休充抵、或作缺勤处理等。缺勤分的工资不发生。"
+          },
+          {
+            "question": "因不返还借用品，能从最后的薪水扣除吗？",
+            "answer": "不能。依劳动基准法第24条的全额支付・直接支付，不得以借用品未返还或损害为由，单方自工资扣除。工资须直接支付本人，借用品的返还请另行请求。"
+          },
+          {
+            "question": "离职票或资格丧失的申报，即使联络不上本人也须提出吗？",
+            "answer": "须提出。健康保险・厚生年金的资格丧失届为自离职日翌日起5日内，雇用保险的资格丧失届・离职证明书为10日内。纵难与本人联络，仍请作为公司的义务于期限内办理。"
+          }
+        ]
+      }
+    }
   }
 ];

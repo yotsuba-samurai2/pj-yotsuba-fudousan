@@ -441,6 +441,20 @@ const REQUIRED_HUB_LINKS: Record<string, string[]> = {
     "/legal/ryokin",
     "/legal/column/minpaku-jutaku-shukuhaku-todokede-yoken",
   ],
+  "inshokuten-eigyo-kyoka-hokenjo-setsubi-kijun-shokuhin-eisei": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/shinya-shurui-teikyo-todokede-yoken",
+  ],
+  "chugoku-tairiku-souzokunin-shinzoku-koshosho-ryoji-ninsho": [
+    "/legal/services/inheritance",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/souzoku",
+    "/legal/column/souzoku-kaigai-gaikokuseki",
+    "/legal/column/isan-bunkatsu-kyougisho",
+  ],
 };
 
 /** 表示コンプライアンス上の禁止語 */
@@ -1214,6 +1228,42 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "別事業体",
     "独立した事業体",
   ],
+  "inshokuten-eigyo-kyoka-hokenjo-setsubi-kijun-shokuhin-eisei": [
+    "食品衛生法",
+    "食品衛生法第55条第1項",
+    "食品衛生法施行令第35条",
+    "第54条",
+    "第57条",
+    "第51条第1項",
+    "食品衛生責任者",
+    "HACCPに沿った衛生管理",
+    // 本文は「2021年（令和3年）6月1日」と西暦・和暦を括弧で併記している。
+    // 「令和3年6月1日」の連続一致を求めると括弧に阻まれて落ちるので、本文と同じ表記で照合する。
+    "2021年（令和3年）6月1日",
+    "別表第17",
+    "保健所",
+    "飲食店営業",
+    "紹介料を受け取りません",
+    "別事業体",
+    "独立した事業体",
+  ],
+  "chugoku-tairiku-souzokunin-shinzoku-koshosho-ryoji-ninsho": [
+    "法の適用に関する通則法第36条",
+    "通則法第41条",
+    "反致",
+    // 中国の準拠法（簡体字の正式名称）。souzoku-kaigai-gaikokuseki と同じく本文に簡体字表記を持たせる。
+    "涉外民事关系法律适用法",
+    "第31条",
+    "親族関係公証書",
+    "アポスティーユ",
+    "2023年11月7日",
+    "領事認証",
+    "被相続人の本国法",
+    "遺産分割協議書",
+    "紹介料を受け取りません",
+    "別事業体",
+    "独立した事業体",
+  ],
 };
 
 /** 記事ごとに含めてはならない表現 */
@@ -1297,6 +1347,8 @@ const FORBIDDEN_PHRASES: Record<string, string[]> = {
   "nini-koken-keiyaku-ikogata": [],
   "homon-kango-station-shitei-shinsei-jinin": [],
   "ryokangyo-kani-shukujo-kyoka-shinsei": [],
+  "inshokuten-eigyo-kyoka-hokenjo-setsubi-kijun-shokuhin-eisei": [],
+  "chugoku-tairiku-souzokunin-shinzoku-koshosho-ryoji-ninsho": [],
 };
 
 /** 本セット外へ張る既存legalコラムslug（リポジトリの他シードで実在確認済み） */
@@ -2238,6 +2290,58 @@ const ARTICLES: Array<{
       "許認可",
       "用途地域",
       "消防法令適合通知書",
+      "行政書士",
+    ],
+  },
+  {
+    file: "43-inshokuten-eigyo-kyoka-hokenjo-setsubi-kijun-shokuhin-eisei.md",
+    slug: "inshokuten-eigyo-kyoka-hokenjo-setsubi-kijun-shokuhin-eisei",
+    date: "2026-09-04",
+    title:
+      "飲食店の営業許可を取る：保健所の施設基準と食品衛生責任者",
+    category: "許認可の手続き（行政書士の実務から）",
+    excerpt:
+      "カフェ・居酒屋・レストランを開くには、食品衛生法にもとづく飲食店営業の許可（第55条第1項・施行令第35条）が要ります。保健所が見る施設基準（第54条・各自治体条例）、施設ごとに置く食品衛生責任者（第51条第1項・施行規則別表第17）、2021年（令和3年）6月1日のHACCP完全施行と許可業種の再編・営業届出制度（第57条）、申請から営業開始までの流れを整理し、物件・工事・消防・登記・税務は分離受任で振る分担を示しました。",
+    keywords: [
+      "飲食店 営業許可 取り方",
+      "飲食店 営業許可 施設基準 保健所",
+      "食品衛生責任者 なり方 講習",
+      "飲食店 営業許可 食品衛生法 55条",
+      "食品衛生法 改正 2021 HACCP 営業届出",
+      "飲食店 営業許可 行政書士",
+    ],
+    tags: [
+      "飲食店営業許可",
+      "食品衛生法",
+      "許認可",
+      "施設基準",
+      "食品衛生責任者",
+      "行政書士",
+    ],
+  },
+  {
+    file: "44-chugoku-tairiku-souzokunin-shinzoku-koshosho-ryoji-ninsho.md",
+    slug: "chugoku-tairiku-souzokunin-shinzoku-koshosho-ryoji-ninsho",
+    date: "2026-09-04",
+    title:
+      "中国本土の相続人が日本の相続に加わるとき：親族関係公証書と認証",
+    category: "相続の手続き（行政書士の実務から）",
+    excerpt:
+      "相続人や被相続人の一部が中国本土に居る相続では、戸籍がない中国で「誰が相続人か」を公証処の親族関係公証書で証明します。中国のハーグ条約発効（2023年11月7日）で領事認証に代わるアポスティーユ、遺産分割協議書への署名・委任の整え方、準拠法（通則法第36条・中国の渉外民事関係法律適用法第31条・反致＝通則法第41条）の考え方を整理し、準拠法の最終判断は弁護士・司法書士、登記は司法書士、相続税は税理士へ分離受任で振る分担を示しました。",
+    keywords: [
+      "中国 相続人 日本 相続 手続き",
+      "親族関係公証書 中国 相続",
+      "中国 アポスティーユ 領事認証 相続",
+      "中国 相続 準拠法 反致 通則法",
+      "中国本土 遺産分割協議書 委任状 公証",
+      "中国 相続 行政書士",
+    ],
+    tags: [
+      "中国相続",
+      "親族関係公証書",
+      "アポスティーユ",
+      "準拠法",
+      "反致",
       "行政書士",
     ],
   },
