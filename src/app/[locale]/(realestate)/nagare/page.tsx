@@ -203,6 +203,8 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(buildFaqJsonLd(FAQS, "ja")) }}
       />
+      {/* 2026-09-05 月次点検（NEW-SALE-2）：末尾CTAを物件探しリード（property-general＋intent=sale）から
+          売却・相続向けの sale バリアント（intent 既定 "sale"）へ。売主向けページに買い手・借り手向け文言を出さない。 */}
       <RealestateServicePage
         path="/nagare"
         answerBlock={ANSWER_BLOCK}
@@ -211,8 +213,7 @@ export default function Page() {
         heroSrc="/hero/realestate-souzoku-16x9.webp"
         heroAlt="四葉不動産の、ご依頼から引渡しまでの流れ"
         h1="ご依頼から引渡しまでの流れ"
-        ctaVariant="property-general"
-        ctaIntent="sale"
+        ctaVariant="sale"
         lead="頼んだあと、何がどの順番で進むのか。いつ何を用意すればよくて、費用はどの時点で発生するのか。決める前に知っておきたいことを、順番に並べました。"
         internalLinks={[
           { href: "/ryokin", label: "料金のご案内", noLocalePrefix: true },

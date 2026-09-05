@@ -120,6 +120,8 @@ const COPY: Partial<Record<LangCode, Copy>> = {
       { href: "/souzoku/akiya/koishikawa", label: "小石川の空き家" },
       { href: "/souzoku", label: "文京区で不動産を相続したら｜完全ガイド" },
       { href: "/souzoku/nagare", label: "売却までの流れ" },
+      // 2026-09-05 月次点検（NEW-SALE-1）：契約後の手続・書類・費用の時期は /nagare（ja先行・上の /souzoku/nagare とは役割が別）。
+      { href: "/nagare", label: "ご依頼から引渡しまでの流れ（書類・費用の時期）" },
       { href: "/toushi/group-home", label: "グループホームに使える物件探し" },
       { href: "/global/chinese", label: "華人・中国語圏のお客様へ" },
       { href: "/ryokin", label: "料金のご案内" },
@@ -261,8 +263,9 @@ const COPY: Partial<Record<LangCode, Copy>> = {
     relatedHeading: "Related links on this page",
     authorAlt: "Joji Uramatsu, Representative Director of Yotsuba Real Estate Co., Ltd.",
     authorLabel: "About the author",
+    // 2026-09-05 月次点検（INIT-06）：開業予定の直書きを SR_BIO.en に（ja/zh-tw/zh と同方式・開業後は資格名のみ）
     authorBio:
-      "Joji Uramatsu | Representative Director of Yotsuba Real Estate Co., Ltd.; full-time Licensed Real Estate Transaction Specialist (宅地建物取引士); Gyoseishoshi (Administrative Scrivener). Former China General Bureau Chief of the Mainichi Shimbun (34 years as a journalist), stationed in China, Taiwan, and Thailand. Passed the national exam for licensed social insurance and labor consultant (office opening scheduled for September 2026).",
+      `Joji Uramatsu | Representative Director of Yotsuba Real Estate Co., Ltd.; full-time Licensed Real Estate Transaction Specialist (宅地建物取引士); Gyoseishoshi (Administrative Scrivener). Former China General Bureau Chief of the Mainichi Shimbun (34 years as a journalist), stationed in China, Taiwan, and Thailand. ${SR_BIO.en}.`,
     s1: {
       h2: "Risks Under the System When a Vacant House Is Left Unattended",
       p1: "If a vacant house continues to be inadequately managed, it may become subject to guidance or a recommendation from the municipality under the Act on Special Measures concerning the Promotion of Countermeasures against Vacant Houses (空家等対策の推進に関する特別措置法; the 'Vacant Houses Act'). If, after receiving a recommendation, it is designated as a 'Specified Vacant House' (特定空家等) or a 'Poorly Managed Vacant House' (管理不全空家等), it is excluded from the fixed asset tax residential land special exception—the measure under which small-scale residential land (the portion of 200㎡ or less) has its taxable base reduced to one-sixth—and the land's fixed asset tax can become up to six times higher.",

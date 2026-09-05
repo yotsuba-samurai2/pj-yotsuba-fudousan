@@ -118,6 +118,12 @@ const FOOTER_NAV_HREFS: Record<
       items: [
         { href: "/global", key: "foreignResidents", labels: { ja: "外国人の部屋探し", en: "Room hunting for international residents", "zh-tw": "外國人租屋・找房", zh: "外国人租房・找房" } },
         { href: "/global/chinese", key: "chinese", labels: { ja: "中国語相談", "zh-tw": "中文諮詢", zh: "中文咨询" }, locales: ["ja", "zh-tw", "zh"] },
+        // 2026-09-05 月次点検（INIT-06）：海外オーナー・出国前の売却入口。/leaving-japan は4ロケール実在（sitemap.ts locales未指定）＝locales未指定。
+        {
+          href: "/leaving-japan",
+          key: "leavingJapan",
+          labels: { ja: "出国前の不動産売却", en: "Selling before leaving Japan", "zh-tw": "出國前的不動產出售", zh: "出国前的不动产出售" },
+        },
         // 2026-07-11修正の踏襲：基本業務（賃貸・売買・管理）は/servicesへ集約（表現規程＝コンサル型方針）
         { href: "/services", key: "management", labels: { ja: "賃貸・売買・管理", en: "Rental, Sale & Management", "zh-tw": "租賃・買賣・管理", zh: "租赁・买卖・管理" } },
       ],
@@ -133,6 +139,8 @@ const FOOTER_NAV_HREFS: Record<
         { href: "/faq", key: "faq", labels: { ja: "よくある質問", en: "FAQ", "zh-tw": "常見問題", zh: "常见问题" } },
         // タスクB-1（2026-07-19）：料金ページ新設。2026-07-20（翻訳チェック§B）で en/zh-tw/zh を追加。
         { href: "/ryokin", key: "ryokin", labels: { ja: "料金", en: "Fees", "zh-tw": "費用", zh: "费用" } },
+        // 2026-09-05 月次点検（INIT-06/NEW-SALE-1）：孤立していた /nagare を料金の隣へ。ja先行（sitemap.ts locales:["ja"]・services-nav.ts の SERVICE_NAV_UTILITY_LINKS と同じ）。
+        { href: "/nagare", key: "nagare", labels: { ja: "ご依頼から引渡しまでの流れ" }, locales: ["ja"] },
         // 2026-07-10浦松指示のラベルをNAV_HREFSから踏襲（ヘッダー・フッターで表記統一）
         { href: "/access", key: "access", labels: { ja: "アクセス", en: "Access", "zh-tw": "交通位置", zh: "交通位置" } },
         { href: "/contact", key: "contact", labels: { ja: "お問い合わせ", en: "Contact", "zh-tw": "聯絡我們", zh: "联系我们" } },

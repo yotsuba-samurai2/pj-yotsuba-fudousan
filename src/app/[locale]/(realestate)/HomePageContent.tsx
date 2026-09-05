@@ -58,6 +58,10 @@ type TopCopy = {
 const PILLAR_HREFS: [string, string, string] = ["/souzoku", "/toushi", "/global"];
 // 2026-07-22：GHのトップ導線を開設ピラー /group-home（物件＋指定申請の完全ガイド）へ。物件 spoke /toushi/group-home は他ページから継続被リンク。
 const QA_HREFS = ["/souzoku", "/group-home", "/global", "/about"];
+// 2026-09-05 月次点検（INIT-06/NEW-SALE-1）：5問目＝売主向け入口（相続以外・海外在住も）。
+// /nagare は ja 先行（sitemap.ts locales:["ja"]）のため ja だけ /nagare、en/zh-tw/zh は4ロケール実在の /leaving-japan へ。
+const QA_HREFS_JA = [...QA_HREFS, "/nagare"];
+const QA_HREFS_INTL = [...QA_HREFS, "/leaving-japan"];
 
 const COPY: Record<LangCode, TopCopy> = {
   ja: {
@@ -125,8 +129,14 @@ const COPY: Record<LangCode, TopCopy> = {
         a: "文京区小日向の宅地建物取引業者で、相続不動産と投資・事業用不動産が専門です。",
         anchor: "わたしたち",
       },
+      {
+        // 2026-09-05 月次点検（INIT-06/NEW-SALE-1）：売主向け入口。ja は /nagare（QA_HREFS_JA）へ。
+        q: "相続以外でも、不動産の売却を相談できますか？",
+        a: "ご相談いただけます。査定は無料で、海外在住の方のご相談にも対応しています。ご依頼から引渡しまでの手続き・書類・費用の時期は流れのページへ。",
+        anchor: "ご依頼から引渡しまでの流れ",
+      },
     ],
-    qaHrefs: QA_HREFS,
+    qaHrefs: QA_HREFS_JA,
     nav: [
       { href: "/services", label: "サービス一覧" },
       { href: "/column", label: "コラム" },
@@ -175,8 +185,9 @@ const COPY: Record<LangCode, TopCopy> = {
       "Hi, I'm LINKA, Yotsuba Real Estate's AI concierge. Tell me your situation anonymously—inheritance, investment or business-use property, or room hunting. Looking for a property? Just your conditions—station, rent, size—are enough: I'll organize them into a message you can send us on LINE as-is.",
     repAlt: "Joji Uramatsu, Representative Director of Yotsuba Real Estate Co., Ltd.",
     repName: "Joji Uramatsu",
+    // 2026-09-05 月次点検（INIT-06）：開業予定の直書きを SR_BIO.en に（ja/zh-tw/zh と同方式・開業後は資格名のみ）
     repBio:
-      "Former China General Bureau Chief of the Mainichi Shimbun (34 years as a journalist), stationed in China, Taiwan, and Thailand. Licensed Real Estate Transaction Specialist and Gyoseishoshi (Administrative Scrivener). Passed the national exam for licensed social insurance and labor consultant (office opening scheduled for September 2026). For 34 years I listened to people's stories as a journalist—let's start by sorting out yours, together.",
+      `Former China General Bureau Chief of the Mainichi Shimbun (34 years as a journalist), stationed in China, Taiwan, and Thailand. Licensed Real Estate Transaction Specialist and Gyoseishoshi (Administrative Scrivener). ${SR_BIO.en}. For 34 years I listened to people's stories as a journalist—let's start by sorting out yours, together.`,
     profileLabel: "Profile: ",
     qa: [
       {
@@ -199,8 +210,14 @@ const COPY: Record<LangCode, TopCopy> = {
         a: "A licensed real estate brokerage in Kohinata, Bunkyo-ku, specializing in inherited properties and investment / business-use properties.",
         anchor: "About us",
       },
+      {
+        // 2026-09-05 月次点検（INIT-06/NEW-SALE-1）：売主向け入口。/nagare は ja 限定のため /leaving-japan（QA_HREFS_INTL）へ。監修前ドラフト。
+        q: "Can you help me sell a property that isn't inherited—for example, before I leave Japan?",
+        a: "Yes. Appraisal is free, and we also work with owners living overseas. If you are still in Japan and leaving soon, start with our feature on selling even with only 30 days left.",
+        anchor: "Selling before leaving Japan",
+      },
     ],
-    qaHrefs: QA_HREFS,
+    qaHrefs: QA_HREFS_INTL,
     nav: [
       { href: "/services", label: "Services" },
       { href: "/column", label: "Column" },
@@ -273,8 +290,14 @@ const COPY: Record<LangCode, TopCopy> = {
         a: "位於文京區小日向的宅地建物取引業者，專精繼承不動產與投資・事業用不動產。",
         anchor: "關於我們",
       },
+      {
+        // 2026-09-05 月次点検（INIT-06/NEW-SALE-1）：売主向け入口。/leaving-japan（QA_HREFS_INTL）へ。監修前ドラフト。
+        q: "不是繼承的不動產，也能委託出售嗎？人在海外或即將出境也可以嗎？",
+        a: "可以。估價免費，人在海外的屋主也能諮詢。若您人尚在日本且即將出境，請先參考「距離出境只剩30天也能賣」的專題。",
+        anchor: "出國前的不動產出售",
+      },
     ],
-    qaHrefs: QA_HREFS,
+    qaHrefs: QA_HREFS_INTL,
     nav: [
       { href: "/services", label: "服務總覽" },
       { href: "/column", label: "專欄" },
@@ -347,8 +370,14 @@ const COPY: Record<LangCode, TopCopy> = {
         a: "位于文京区小日向的宅地建物取引业者，专精继承不动产与投资・事业用不动产。",
         anchor: "关于我们",
       },
+      {
+        // 2026-09-05 月次点検（INIT-06/NEW-SALE-1）：売主向け入口。/leaving-japan（QA_HREFS_INTL）へ。監修前ドラフト。
+        q: "不是继承的不动产，也能委托出售吗？人在海外或即将出境也可以吗？",
+        a: "可以。估价免费，人在海外的业主也能咨询。若您人尚在日本且即将出境，请先参考“距离出境只剩30天也能卖”的专题。",
+        anchor: "出国前的不动产出售",
+      },
     ],
-    qaHrefs: QA_HREFS,
+    qaHrefs: QA_HREFS_INTL,
     nav: [
       { href: "/services", label: "服务总览" },
       { href: "/column", label: "专栏" },

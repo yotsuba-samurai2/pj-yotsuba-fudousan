@@ -1069,7 +1069,7 @@ const EN: Copy = {
 
 const ZHTW: Copy = {
   answerBlock:
-    "請把房產地址和在留卡照片傳給我們。今天需要做的只有這一件事。我們當天核查登記，同步向5〜10家收購業者詢價。數日內各家報價到齊，與出價最高的買家爭取最快2週完成交割。房款全額銀行匯款，只進您本人名下的帳戶。公寓大廈、獨棟（一戶建）都可以辦。第二年的報稅繳稅由本公司作為納稅管理人辦完（稅額計算・申報文件製作由稅理士直接簽約負責），到此全部結束。適用範圍：首都圈內市場流動性好的房產、距出境2週以上、無未還清房貸。中文（繁體・簡體）、日語、英語由代表本人直接溝通。",
+    "請把房產地址和在留卡照片傳給我們。今天需要做的只有這一件事。我們當天核查登記，同步向5〜10家收購業者詢價。數日內各家報價到齊，與出價最高的買家爭取最快2週完成交割。房款全額銀行匯款，只進您本人名下的帳戶。公寓大廈、獨棟（一戶建）都可以辦。出境前我們會把納稅管理人（稅理士）的申報安排妥當，交割完成，本公司的工作即告結束。第二年的報稅由稅理士與您本人直接簽約辦理。適用範圍：首都圈內市場流動性好的房產、距出境2週以上、無未還清房貸。中文（繁體・簡體）、日語、英語由代表本人直接溝通。",
   crumb: "緊急回國・不動產快速變現",
   serviceName: "出境前不動產快速出售（收購業者競價仲介）",
   heroAlt: "出境前出售日本房產的示意圖",
@@ -1488,6 +1488,8 @@ export default async function Page() {
         datePublished={PUBLISHED_ISO}
         dateModified={LAST_UPDATED_ISO}
       />
+      {/* 2026-09-05 月次点検（NEW-SALE-2）：末尾CTAを物件探しリード（property-general＋intent=sale）から
+          売却・相続向けの sale バリアント（intent 既定 "sale"）へ。売主向けページに買い手・借り手向け文言を出さない。 */}
       <RealestateServicePage
         path="/leaving-japan"
         answerBlock={c.answerBlock}
@@ -1496,8 +1498,7 @@ export default async function Page() {
         heroSrc="/hero/realestate-global-16x9.webp"
         heroAlt={c.heroAlt}
         h1={c.h1}
-        ctaVariant="property-general"
-        ctaIntent="sale"
+        ctaVariant="sale"
         lead={c.lead}
         internalLinks={c.links.map((x) => ({
           href: x.noLocalePrefix ? x.href : addLocalePrefix(x.href, locale),

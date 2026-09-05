@@ -23,6 +23,7 @@ import {
   PROPERTY_CONDITIONS_CTA_I18N,
   PROPERTY_CONDITIONS_CTA_HOME_I18N,
   PROPERTY_CONDITIONS_CTA_GROUPHOME_JA,
+  SALE_CONSULT_CTA_I18N,
   type BusinessKey,
 } from "@/lib/shared/office";
 import {
@@ -40,8 +41,9 @@ import type { LangCode } from "@/config/languages";
  * CTA帯のバリアント（2026-07-24）。
  * property=物件条件インテーク（事業用寄り・4ロケール）／property-general=トップ等の入口向け
  * （住まい・事業用の両対応・4ロケール）／property-gh=GH向け（jaのみ・他ロケールは既定）
+ * ／sale=売却・相続向け（4ロケール・テンプレなし・intent既定"sale"。2026-09-05 月次点検 INIT-04/NEW-SALE-2）
  */
-export type CtaBandVariant = "property" | "property-general" | "property-gh";
+export type CtaBandVariant = "property" | "property-general" | "property-gh" | "sale";
 
 // 部品内共通ラベル（SR名なし・汎用語のみ）。ja=現行文字列そのまま（バイト不変）。
 // en=HomePageContent既存訳（Chat on LINE (free)/Contact/Call）準拠。zh系=監修前ドラフト。
@@ -130,12 +132,23 @@ export async function CtaBand({
     vLineLabel = PROPERTY_CONDITIONS_CTA_GROUPHOME_JA.lineLabel;
     template = PROPERTY_TEMPLATE_GH_JA;
     intent = "bukken-gh";
+  } else if (variant === "sale") {
+    // 2026-09-05 月次点検（INIT-04/NEW-SALE-2）：売却・相続向け（売る側・相続人・海外オーナー）。
+    // 物件条件のテンプレ（コピー欄）は出さない。intent 既定は "sale"（コラムは intentProp で souzoku／management に上書き）。
+    const p = SALE_CONSULT_CTA_I18N[locale] ?? SALE_CONSULT_CTA_I18N.ja;
+    vHeading = p.ctaHeading;
+    vLead = p.ctaLead;
+    vLineLabel = p.lineLabel;
+    intent = "sale";
   }
 
   // 2026-07-27：明示のintentはvariant由来より優先する。
   // 例＝/global は property-general のテンプレ（住まい／事業用の受け分け）を活かしたまま、
   // カテゴリだけ「外国人のお部屋探し・多言語対応」に着地させたい。
   if (intentProp) intent = intentProp;
+  // 2026-09-05：sale バリアントを management（海外オーナー向け）で使うときは、LINEラベル
+  // 「売却・相続の相談」が記事と噛み合わないため既定ラベル（l.line）に戻す。見出し・リードはそのまま。
+  if (variant === "sale" && intent === "management") vLineLabel = undefined;
 
   const copyLabels = TEMPLATE_COPY_LABELS[locale] ?? TEMPLATE_COPY_LABELS.ja;
   const lead = subtext ?? vLead ?? c.ctaLead;

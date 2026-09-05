@@ -270,3 +270,43 @@ export const PROPERTY_CONDITIONS_CTA_GROUPHOME_JA = {
     "エリア・駅、賃料の目安、面積や用途地域など——わかる範囲で構いません。条件をお預けいただければ、指定基準を見据えて四葉不動産が全力で物件をお探しします。",
   lineLabel: "LINEで希望条件を送る（無料）",
 };
+
+/**
+ * 売却・相続向けバリアント（2026-09-05 月次点検 INIT-04/NEW-SALE-2）。
+ * 売る側・相続人・海外オーナーの読者（不動産コラム「相続」「離日・売却」「海外オーナー向け」、
+ * /nagare・/leaving-japan）に、既定の物件紹介リード（TENANT.realestate.ctaLead）や
+ * 物件探しの希望条件リード（PROPERTY_CONDITIONS_CTA_*）が噛み合わなかったため分離。
+ * 査定・媒介は四葉不動産株式会社が単独でお受けする旨を明記（分離受任・業際の原則。弱めないこと）。
+ * CtaBand variant="sale" が参照。テンプレ（コピー欄）は無し。
+ * ja=確定文言案。en/zh-tw/zh=監修前ドラフト（en の「宅地建物取引士」は既存ページに合わせ
+ * Licensed Real Estate Transaction Specialist＝broker（宅建業者）と混同させない）。
+ */
+export const SALE_CONSULT_CTA_I18N: Record<
+  LangCode,
+  { ctaHeading: string; ctaLead: string; lineLabel: string }
+> = {
+  ja: {
+    ctaHeading: "売る・貸す・持ち続ける——決める前のご相談からで大丈夫です。",
+    ctaLead:
+      "相続した実家、海外に住んだまま持っている物件、入居者がいるままの一棟——いまの状況をLINEで一言お送りください。代表（宅地建物取引士）が直接お返事し、売却・賃貸・そのまま持つ場合の見通しを整理します。査定・媒介は四葉不動産株式会社が単独でお受けします。",
+    lineLabel: "LINEで売却・相続の相談（無料）",
+  },
+  en: {
+    ctaHeading: "Sell, rent out, or keep — start with a conversation before you decide.",
+    ctaLead:
+      "An inherited family home, a property you own while living abroad, a tenanted building — send us a line on LINE about your situation. Our representative (a Licensed Real Estate Transaction Specialist) replies personally and lays out the outlook for selling, renting out, or keeping it. Appraisal and brokerage are handled solely by Yotsuba Real Estate Co., Ltd.",
+    lineLabel: "Ask about selling or inheritance on LINE (free)",
+  },
+  "zh-tw": {
+    ctaHeading: "賣・出租・繼續持有——在決定之前先諮詢就可以。",
+    ctaLead:
+      "繼承的老家、人在海外持有的物件、有租客在住的整棟——請用LINE簡單告訴我們目前狀況。代表（宅地建物取引士）將親自回覆，為您整理出售・出租・繼續持有的展望。估價與仲介由四葉不動産株式会社單獨承辦。",
+    lineLabel: "用LINE諮詢出售・繼承（免費）",
+  },
+  zh: {
+    ctaHeading: "卖・出租・继续持有——在决定之前先咨询就可以。",
+    ctaLead:
+      "继承的老家、人在海外持有的物件、有租客在住的整栋——请用LINE简单告诉我们目前状况。代表（宅地建物取引士）将亲自回复，为您整理出售・出租・继续持有的展望。估价与中介由四葉不動産株式会社单独承办。",
+    lineLabel: "用LINE咨询出售・继承（免费）",
+  },
+};
