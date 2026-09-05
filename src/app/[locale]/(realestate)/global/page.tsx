@@ -8,7 +8,9 @@
 // 対応言語表記＝D2確定（2026-07-10）「日本語・英語・中国語（繁体字・簡体字）」系。jaの既存表示文言は一字一句不変。
 // keywords＝ja固定（統合ピラー8語に更新：物件×在留資格の横断クラスタを反映）。
 // FAQ＝faqItems を FAQJsonLd と <details> 表示の単一ソースに（souzoku/group-home 同型・ロケールごとに一致）。ページ内 FAQPage は1つのみ。
-// gaikokujin-koyo（外国人雇用・労務）は sitemap 未掲載＝公開状態が不確実のため本文リンクせず、社労士2026年9月開業前として言及に留める。
+// gaikokujin-koyo（外国人雇用・労務）は本文リンクせず言及に留める。
+// 2026-09-05 月次点検（NEW-SR-1）：社労士は2026-09-01開業済み。journeyBody 第3段落の第2文を SR_ROLE_SENTENCE_I18N.global（SR_LAUNCHED 連動）に切替、
+//   第2段落の「提携する専門家」系は4書体とも「おつなぎ／ご紹介」表現へ（U12＝書面での提携なし）。en 著者紹介も ${SR_BIO.en} に統一。
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo";
 import { getRequestLocale } from "@/lib/getRequestLocale";
@@ -20,7 +22,7 @@ import { CannotHandle } from "@/components/shared/CannotHandle";
 import { FAQJsonLd } from "@/components/seo/FAQJsonLd";
 import { getColumns, getLocalizedColumn, filterColumnsByTheme } from "@/lib/columns";
 import type { LangCode } from "@/config/languages";
-import { SR_BIO } from "@/lib/shared/sr-label";
+import { SR_BIO, SR_ROLE_SENTENCE_I18N } from "@/lib/shared/sr-label";
 
 // ─── B-4（2026-07-19浦松検収済み・日本語版のみ）─────────────────────────
 // 冒頭の回答ブロック（H1直下・165字）。対応言語＝D2確定「日本語・英語・中国語（繁体字・簡体字）」を必須記載。
@@ -185,8 +187,8 @@ const COPY: Record<LangCode, GlobalCopy> = {
     journeyHeading: "お部屋探しから、その後の暮らしまで",
     journeyBody: [
       "四葉が伴走する範囲は、お部屋探しだけではありません。住まい → 在留資格 → 会社設立・経営管理ビザ → 将来の相続不動産まで、同じ窓口で続けてご相談いただけます。",
-      "「日本に住む」の入口から、その後の人生の手続きまで。必要に応じて、併設の四葉行政書士事務所や提携する専門家と連携してお手伝いします（それぞれ別契約で、紹介料等の授受はありません）。",
-      "企業の外国人雇用にともなう労務や助成金は、専門分野が分かれます。社会保険労務士業務は代表の開業（2026年9月予定）前のため、現時点では連携する専門家を一般的にご案内する形になります。",
+      "「日本に住む」の入口から、その後の人生の手続きまで。必要に応じて、併設の四葉行政書士事務所におつなぎし、登記・税務など他の分野は各専門家をご紹介します（それぞれ別契約で、紹介料等の授受はありません）。",
+      `企業の外国人雇用にともなう労務や助成金は、専門分野が分かれます。${SR_ROLE_SENTENCE_I18N.global.ja}`,
     ],
     fieldHeading: "現場の実感——外国人対応も、丁寧な対話が最短ルート",
     fieldBody: [
@@ -378,8 +380,8 @@ const COPY: Record<LangCode, GlobalCopy> = {
     journeyHeading: "From your home search to the life that follows",
     journeyBody: [
       "What Yotsuba walks with you through is not only the home search. From housing → residence status → company formation and the Business Manager visa → future inherited real estate, you can keep consulting the same window.",
-      "From the entry point of 'living in Japan' to the procedures for the rest of your life. Where needed, we help in coordination with our affiliated Yotsuba Gyoseishoshi Office and partner professionals (each under a separate contract, with no referral fees exchanged).",
-      "Labor matters and subsidies related to a company's employment of foreign staff fall into a separate specialty. Because licensed social insurance and labor consultant (shakai hoken romushi) work is before our representative's office opening (scheduled for September 2026), for now we introduce partner professionals in general terms.",
+      "From the entry point of 'living in Japan' to the procedures for the rest of your life. Where needed, we connect you with our affiliated Yotsuba Gyoseishoshi Office and refer you to other specialists (each under a separate contract, with no referral fees exchanged).",
+      `Labor matters and subsidies related to a company's employment of foreign staff fall into a separate specialty. ${SR_ROLE_SENTENCE_I18N.global.en}`,
     ],
     fieldHeading: "What the field teaches — even here, careful dialogue is the shortest route",
     fieldBody: [
@@ -466,7 +468,7 @@ const COPY: Record<LangCode, GlobalCopy> = {
     authorAlt: "Joji Uramatsu, Representative Director of Yotsuba Real Estate Co., Ltd.",
     authorLabel: "About the author",
     authorBio:
-      "Joji Uramatsu | Representative Director of Yotsuba Real Estate Co., Ltd.; full-time Licensed Real Estate Transaction Specialist (宅地建物取引士); Gyoseishoshi (Administrative Scrivener). Former China General Bureau Chief of the Mainichi Shimbun (34 years as a journalist), stationed in China, Taiwan, and Thailand. Passed the national exam for licensed social insurance and labor consultant (office opening scheduled for September 2026).",
+      `Joji Uramatsu | Representative Director of Yotsuba Real Estate Co., Ltd.; full-time Licensed Real Estate Transaction Specialist (宅地建物取引士); Gyoseishoshi (Administrative Scrivener). Former China General Bureau Chief of the Mainichi Shimbun (34 years as a journalist), stationed in China, Taiwan, and Thailand. ${SR_BIO.en}.`,
   },
   "zh-tw": {
     metaTitle: "外國人在東京租房｜住居與在留資格一次諮詢的完全指南｜四葉不動産",
@@ -567,8 +569,8 @@ const COPY: Record<LangCode, GlobalCopy> = {
     journeyHeading: "從找房，到之後的生活",
     journeyBody: [
       "四葉陪伴的範圍不只是找房。住居 → 在留資格 → 公司設立・經營管理簽證 → 未來的繼承不動產，都能在同一窗口持續諮詢。",
-      "從「在日本生活」的入口，到之後人生的手續。必要時，將與併設的四葉行政書士事務所及合作的專業人士聯手協助（各自另行簽約，不收受介紹費等）。",
-      "企業因僱用外國人而衍生的勞務與補助金，屬於不同的專業領域。社會保險勞務士業務在代表開業（預定2026年9月）之前，現階段將以一般性介紹合作專業人士的方式對應。",
+      "從「在日本生活」的入口，到之後人生的手續。必要時，將為您引介併設的四葉行政書士事務所及其他專業人士（各自另行簽約，不收受介紹費等）。",
+      `企業因僱用外國人而衍生的勞務與補助金，屬於不同的專業領域。${SR_ROLE_SENTENCE_I18N.global.zhTw}`,
     ],
     fieldHeading: "現場的體會——外國人對應，細緻的對話也是最短路徑",
     fieldBody: [
@@ -758,8 +760,8 @@ const COPY: Record<LangCode, GlobalCopy> = {
     journeyHeading: "从找房，到之后的生活",
     journeyBody: [
       "四葉陪伴的范围不只是找房。住房 → 在留资格 → 公司设立・经营管理签证 → 未来的继承不动产，都能在同一窗口持续咨询。",
-      "从“在日本生活”的入口，到之后人生的手续。必要时，将与併设的四葉行政書士事務所及合作的专业人士协作提供协助（各自另行签约，不收受介绍费等）。",
-      "企业因雇用外国人而产生的劳务与补助金，属于不同的专业领域。社会保险劳务士业务在代表开业（预定2026年9月）之前，现阶段将以一般性介绍合作专业人士的方式对应。",
+      "从“在日本生活”的入口，到之后人生的手续。必要时，将为您引介并设的四葉行政書士事務所及其他专业人士（各自另行签约，不收受介绍费等）。",
+      `企业因雇用外国人而产生的劳务与补助金，属于不同的专业领域。${SR_ROLE_SENTENCE_I18N.global.zh}`,
     ],
     fieldHeading: "现场的体会——外国人对应，细致的对话也是最短路径",
     fieldBody: [

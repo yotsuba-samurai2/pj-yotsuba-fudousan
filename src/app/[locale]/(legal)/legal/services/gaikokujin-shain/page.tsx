@@ -32,6 +32,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { buildPageMetadata } from "@/lib/seo";
 import { LegalServicePage, H2 } from "@/components/shared/LegalServicePage";
+// 2026-09-05 月次点検（INIT-02）：§8 の社労士の li を SR_LAUNCHED 連動にし、開業後は /labor へ案内する
+import { SR_LAUNCHED } from "@/lib/shared/office";
+import { SR_ROLE_SENTENCE } from "@/lib/shared/sr-label";
 
 // 冒頭の回答ブロック（H1直下・AIが最初に拾う位置）
 const JA_LEAD =
@@ -291,10 +294,19 @@ export default async function Page() {
           <li><strong className="text-ink">アポスティーユ・公印確認を発行すること</strong>：発行するのは<strong className="text-ink">外務省</strong>です。当事務所が行うのは申請の代行までです</li>
           <li><strong className="text-ink">提出先に受理されることの保証</strong>：提出先が求める要件は個別に異なります。<strong className="text-ink">提出先への事前確認</strong>が要ります</li>
           <li>会社の<strong className="text-ink">登記</strong>：司法書士／<strong className="text-ink">税務</strong>：税理士／<strong className="text-ink">法的紛争・法律判断</strong>：弁護士</li>
-          <li><strong className="text-ink">雇用にともなう労務・社会保険</strong>：社会保険労務士業務は代表の開業（2026年9月予定）前のため、現時点ではお受けできません</li>
+          {/* 2026-09-05 月次点検（INIT-02）：文は SR_ROLE_SENTENCE.gaikokujinKoyo（SR_LAUNCHED 連動）。開業後のみ /labor の該当ページへ案内 */}
+          <li>
+            <strong className="text-ink">雇用にともなう労務・社会保険</strong>：{SR_ROLE_SENTENCE.gaikokujinKoyo}
+            {SR_LAUNCHED && (
+              <>
+                （→ <Link href="/labor/services/gaikokujin-koyo" className="text-primary underline">外国人雇用の労務</Link>）
+              </>
+            )}
+          </li>
         </ul>
         <p className="mt-3 leading-relaxed text-text">
-          必要な場合は提携する専門家をご紹介します。<strong className="text-ink">紹介料の授受は一切ありません。</strong>各専門家と貴社に直接ご契約いただく形をとっています。
+          {/* 2026-09-05 月次点検（INIT-02）：「提携する専門家」→「専門家」（U12＝書面での提携なし） */}
+          必要な場合は専門家をご紹介します。<strong className="text-ink">紹介料の授受は一切ありません。</strong>各専門家と貴社に直接ご契約いただく形をとっています。
         </p>
         <p className="mt-3 text-sm leading-relaxed text-text-muted">
           このページは一般的な情報提供です。入管の実務は個別性が高く、同じ職務内容でも本人の学歴・職歴により結論が変わります。個別のご事情に応じた判断は、面談のうえ資格者が行います。

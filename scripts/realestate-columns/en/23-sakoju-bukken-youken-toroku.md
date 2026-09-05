@@ -76,7 +76,7 @@ Cost and time vary greatly with the property's state (new build or existing reno
 
 Investigation, acquisition/lease brokerage, and the sale or lease contract are handled by Yotsuba Real Estate Co., Ltd. (licensed real estate agent, Tokyo Governor (1) No. 113304). Preparation of documents submitted to public offices, such as the Sakoju registration, is handled by Yotsuba Administrative Scrivener Office. Barrier-free conformity and use-change design and building confirmation are handled by an architect; the care-insurance service designation is a separate procedure.
 
-**These two (the real estate agent and the administrative scrivener office) are independent business entities. You engage each directly.** We neither pay nor accept referral fees or introduction commissions. Design/building confirmation goes to an architect, registration to a judicial scrivener, tax to a tax accountant, and labour matters to a certified social insurance labour consultant (opening planned September 2026) — each engaged by you directly. Consultation is free of charge.
+**These two (the real estate agent and the administrative scrivener office) are independent business entities. You engage each directly.** We neither pay nor accept referral fees or introduction commissions. Design/building confirmation goes to an architect, registration to a judicial scrivener, tax to a tax accountant, and labour matters to a certified social insurance labour consultant — each engaged by you directly. Consultation is free of charge.
 
 ## Frequently asked questions
 

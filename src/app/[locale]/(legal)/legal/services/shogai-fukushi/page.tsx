@@ -164,7 +164,7 @@ const COPY: Record<LangCode, ShogaiFukushiCopy> = {
           <strong>
             処遇改善加算は工程で分かれます——加算体制届・計画書・実績報告など指定権者（自治体）への提出書類の作成＝行政書士／就業規則・賃金規程・キャリアパス要件など賃金制度の設計＝社会保険労務士
           </strong>
-          。四葉では両事務所が<strong>分離受任</strong>で担当します（社労士は2026年9月開業後）。四葉行政書士事務所は行政書士業務の範囲で対応し、それ以外は連携する専門家におつなぎします。
+          。四葉では両事務所が<strong>分離受任</strong>で担当します{/* 2026-09-05 月次点検（NEW-SR-2）：開業前の括弧書きを SR_LAUNCHED でゲート */}{SR_LAUNCHED ? "" : "（社労士は2026年9月開業後）"}。四葉行政書士事務所は行政書士業務の範囲で対応し、それ以外は連携する専門家におつなぎします。
           <Placeholder reason="石井弁護士＝業際表現の最終確認（両サイトで断定しない）" />
         </blockquote>
       </>
@@ -342,7 +342,7 @@ const COPY: Record<LangCode, ShogaiFukushiCopy> = {
           <strong>
             The treatment-improvement add-on splits by stage—preparing documents filed with the designating authority (the municipality), such as the add-on structure notification, plans, and performance reports, is gyoseishoshi work, while designing the wage system itself (work rules, wage regulations, career-path requirements) is work for a licensed social insurance and labor consultant
           </strong>
-          . At Yotsuba, the two offices take these on under <strong>separate engagements</strong> (the labor-consultant office opens in September 2026). 四葉行政書士事務所 acts within the scope of gyoseishoshi work and connects you with partner professionals for everything else.
+          . At Yotsuba, the two offices take these on under <strong>separate engagements</strong>{/* 2026-09-05 月次点検（NEW-SR-2） */}{SR_LAUNCHED ? "" : " (the labor-consultant office opens in September 2026)"}. 四葉行政書士事務所 acts within the scope of gyoseishoshi work and connects you with other specialists for everything else.
           <Placeholder reason="石井弁護士＝業際表現の最終確認（両サイトで断定しない）" />
         </blockquote>
       </>
@@ -402,7 +402,8 @@ const COPY: Record<LangCode, ShogaiFukushiCopy> = {
     ],
     authorBody: (
       <>
-        <strong>About the author</strong> 浦松 丈二 (Joji Uramatsu)｜Representative gyoseishoshi (administrative scrivener), 四葉行政書士事務所 (Reg. No. 25087022); Licensed Real Estate Transaction Specialist. Former China General Bureau Chief of the Mainichi Shimbun (34 years as a journalist). Passed the national exam for licensed social insurance and labor consultant (office opening scheduled for September 2026).
+        {/* 2026-09-05 月次点検（NEW-SR-3）：社労士表記は SR_BIO.en（SR_LAUNCHED 連動） */}
+        <strong>About the author</strong> 浦松 丈二 (Joji Uramatsu)｜Representative gyoseishoshi (administrative scrivener), 四葉行政書士事務所 (Reg. No. 25087022); Licensed Real Estate Transaction Specialist. Former China General Bureau Chief of the Mainichi Shimbun (34 years as a journalist). {SR_BIO.en}.
       </>
     ),
   },
@@ -519,7 +520,7 @@ const COPY: Record<LangCode, ShogaiFukushiCopy> = {
           <strong>
             處遇改善加算依工序劃分——加算體制申報、計畫書、實績報告等向指定權者（自治體）提出之文件的製作＝行政書士／就業規則、薪資規程、職涯路徑要件等薪資制度的設計＝社會保險勞務士
           </strong>
-          。在四葉，由兩事務所以<strong>分別受任</strong>的方式承辦（社會保險勞務士為2026年9月開業後）。四葉行政書士事務所在行政書士業務範圍內對應，其餘部分將為您轉介合作的專業人士。
+          。在四葉，由兩事務所以<strong>分別受任</strong>的方式承辦{/* 2026-09-05 月次点検（NEW-SR-2） */}{SR_LAUNCHED ? "" : "（社會保險勞務士為2026年9月開業後）"}。四葉行政書士事務所在行政書士業務範圍內對應，其餘部分將為您引介其他專業人士。
           <Placeholder reason="石井弁護士＝業際表現の最終確認（両サイトで断定しない）" />
         </blockquote>
       </>
@@ -697,7 +698,7 @@ const COPY: Record<LangCode, ShogaiFukushiCopy> = {
           <strong>
             处遇改善加算按工序划分——加算体制申报、计划书、实绩报告等向指定权者（自治体）提交之文件的制作＝行政书士／就业规则、工资规程、职业发展路径要件等工资制度的设计＝社会保险劳务士
           </strong>
-          。在四葉，由两家事务所以<strong>分别受任</strong>的方式承办（社会保险劳务士为2026年9月开业后）。四葉行政書士事務所在行政书士业务范围内对应，其余部分将为您转介合作的专业人士。
+          。在四葉，由两家事务所以<strong>分别受任</strong>的方式承办{/* 2026-09-05 月次点検（NEW-SR-2） */}{SR_LAUNCHED ? "" : "（社会保险劳务士为2026年9月开业后）"}。四葉行政書士事務所在行政书士业务范围内对应，其余部分将为您引介其他专业人士。
           <Placeholder reason="石井弁護士＝業際表現の最終確認（両サイトで断定しない）" />
         </blockquote>
       </>

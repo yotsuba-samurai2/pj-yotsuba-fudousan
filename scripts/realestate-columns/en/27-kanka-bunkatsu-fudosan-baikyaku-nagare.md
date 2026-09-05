@@ -62,7 +62,7 @@ In computing capital gains, the acquisition cost and the acquisition date are ca
 
 Valuation, brokerage and the sale contract of the real estate are handled by Yotsuba Real Estate Co., Ltd. (licensed real estate agent, Tokyo Governor (1) No. 113304). Preparation of documents such as the estate-division agreement is handled by Yotsuba Administrative Scrivener Office. Inheritance registration is handled by a judicial scrivener, the capital-gains filing by a tax accountant, and, where there is a dispute over division, by a lawyer — each within its exclusive field.
 
-**These are independent business entities. You engage each directly.** We neither pay nor accept referral fees or introduction commissions. Labour matters go to a certified social insurance labour consultant (opening planned September 2026), engaged by you directly. Consultation is free of charge.
+**These are independent business entities. You engage each directly.** We neither pay nor accept referral fees or introduction commissions. Labour matters go to a certified social insurance labour consultant, engaged by you directly. Consultation is free of charge.
 
 ## Frequently asked questions
 

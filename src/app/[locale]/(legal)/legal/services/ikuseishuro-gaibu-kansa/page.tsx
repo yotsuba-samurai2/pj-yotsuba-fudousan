@@ -279,7 +279,8 @@ export default async function Page() {
           <li>法人の<strong className="text-ink">登記</strong>：司法書士／<strong className="text-ink">税務</strong>：税理士／<strong className="text-ink">法的紛争・法律判断</strong>：弁護士</li>
         </ul>
         <p className="mt-3 leading-relaxed text-text">
-          必要な場合は提携する専門家をご紹介します。<strong className="text-ink">紹介料の授受は一切ありません。</strong>各専門家と貴社に直接ご契約いただく形をとっています。
+          {/* 2026-09-05 月次点検（NEW-SR-6）：「提携する専門家」→「専門家」（U12＝書面での提携なし） */}
+          必要な場合は専門家をご紹介します。<strong className="text-ink">紹介料の授受は一切ありません。</strong>各専門家と貴社に直接ご契約いただく形をとっています。
         </p>
         <p className="mt-5 leading-relaxed text-text">
           なお外部監査人は、施行規則が<strong className="text-ink">弁護士・社会保険労務士・行政書士</strong>を列挙しているとおり、いずれの資格でも就任できます。四葉では

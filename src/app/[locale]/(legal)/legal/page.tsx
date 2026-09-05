@@ -82,8 +82,9 @@ const COPY: Record<LangCode, LegalTopCopy> = {
       { href: "/legal/services/subsidy", label: "Subsidy Application Support", sub: "Business plans that persuade, written by a former journalist" },
     ],
     repName: "Joji Uramatsu",
+    // 2026-09-05 月次点検（NEW-SR-3）：社労士表記は SR_BIO.en（SR_LAUNCHED 連動）。12c8022 で en だけ取りこぼしていた
     repBio:
-      "Former China General Bureau Chief of the Mainichi Shimbun (34 years as a journalist). Gyoseishoshi (Reg. No. 25087022) and Licensed Real Estate Transaction Specialist. Passed the national exam for licensed social insurance and labor consultant (office opening scheduled for September 2026). Thirty-four years of turning facts into clear writing now go into every application we file.",
+      `Former China General Bureau Chief of the Mainichi Shimbun (34 years as a journalist). Gyoseishoshi (Reg. No. 25087022) and Licensed Real Estate Transaction Specialist. ${SR_BIO.en}. Thirty-four years of turning facts into clear writing now go into every application we file.`,
     profileLabel: "Profile: ",
     membershipsHeading: "Memberships",
     nav: [

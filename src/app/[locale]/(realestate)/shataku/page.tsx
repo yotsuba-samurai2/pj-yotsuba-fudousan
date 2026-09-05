@@ -36,6 +36,8 @@ import { pickFaqJa } from "@/data/faqJa";
 import { InlineCtaProperty } from "@/components/shared/InlineCtaProperty";
 import type { LangCode } from "@/config/languages";
 import { SR_ENTITY_LABEL, SR_ENTITY_LABEL_I18N, SR_ROLE_SENTENCE, SR_BIO } from "@/lib/shared/sr-label";
+// 2026-09-05 月次点検（NEW-SR-4）：crossLinkLead の「（開業後）」を SR_LAUNCHED でゲート
+import { SR_LAUNCHED } from "@/lib/shared/office";
 
 // 冒頭の回答ブロック（H1直下）。当方が今できるのは物件＝宅建業に限定し、労務・税務は分離受任で振り分け（監修前ドラフト・浦松承認）
 const JA_ANSWER_BLOCK =
@@ -122,7 +124,7 @@ const COPY: Record<LangCode, ShatakuCopy> = {
       { href: "/contact", label: "お問い合わせ" },
     ],
     crossLinkLead:
-      "社宅規程や現物給与・社会保険は労務の論点として整理し、実務は社会保険労務士（開業後）、税務は税理士が、それぞれ別契約で担当します。",
+      `社宅規程や現物給与・社会保険は労務の論点として整理し、実務は社会保険労務士${SR_LAUNCHED ? "" : "（開業後）"}、税務は税理士が、それぞれ別契約で担当します。`,
     gaikokujinH2: "外国人従業員の社宅も対応できますか？",
     gaikokujinBody: (locale) => (
       <>
@@ -174,7 +176,8 @@ const COPY: Record<LangCode, ShatakuCopy> = {
       { href: "/access", label: "Access & Fees" },
     ],
     crossLinkLead:
-      "Company-housing rules, in-kind remuneration, and social insurance are labor matters: the practical work is handled by a licensed social insurance and labor consultant, and tax matters by our partner certified tax accountant, each under a separate contract.",
+      // 2026-09-05 月次点検（NEW-SR-4）：「our partner certified tax accountant」→「a certified tax accountant」（U12＝書面での提携なし）
+      "Company-housing rules, in-kind remuneration, and social insurance are labor matters: the practical work is handled by a licensed social insurance and labor consultant, and tax matters by a certified tax accountant, each under a separate contract.",
     gaikokujinH2: "Can you handle company housing for international employees?",
     gaikokujinBody: (locale) => (
       <>
@@ -193,7 +196,7 @@ const COPY: Record<LangCode, ShatakuCopy> = {
     roles: [
       { work: "Introduction and brokerage of company-housing properties; checking corporate contracts and sublease consent (real estate brokerage)", who: "Yotsuba Real Estate Co., Ltd." },
       { work: "Company-housing rules, in-kind remuneration, and social insurance (labor)", who: `${SR_ENTITY_LABEL_I18N.en} / a licensed social insurance and labor consultant, under a separate contract` },
-      { work: "Payroll taxation and rent-equivalent amounts (tax representation and tax consultation are the exclusive domain of certified tax accountants)", who: "We introduce a partner certified tax accountant" },
+      { work: "Payroll taxation and rent-equivalent amounts (tax representation and tax consultation are the exclusive domain of certified tax accountants)", who: "We introduce a certified tax accountant" }, // 2026-09-05 月次点検（NEW-SR-4）：「partner」削除（U12）
       { work: "Preparation of residence-status application documents for international employees (preparation is the exclusive domain of gyoseishoshi; separate contract)", who: "The co-located Yotsuba Gyoseishoshi Office" },
       { work: "Registration", who: "We introduce a judicial scrivener" },
     ],
@@ -226,7 +229,7 @@ const COPY: Record<LangCode, ShatakuCopy> = {
       { href: "/access", label: "交通與費用" },
     ],
     crossLinkLead:
-      "員工宿舍規程與實物給付・社會保險屬於勞務的論點，實務由社會保險勞務士（開業後）承辦，稅務由稅理士承辦，各自另行簽約。",
+      `員工宿舍規程與實物給付・社會保險屬於勞務的論點，實務由社會保險勞務士${SR_LAUNCHED ? "" : "（開業後）"}承辦，稅務由稅理士承辦，各自另行簽約。`,
     gaikokujinH2: "外國員工的員工宿舍，也能協助安排嗎？",
     gaikokujinBody: (locale) => (
       <>
@@ -278,7 +281,7 @@ const COPY: Record<LangCode, ShatakuCopy> = {
       { href: "/access", label: "交通与费用" },
     ],
     crossLinkLead:
-      "员工宿舍规程与实物给付・社会保险属于劳务的论点，实务由社会保险劳务士（开业后）承办，税务由税理士承办，各自另行签约。",
+      `员工宿舍规程与实物给付・社会保险属于劳务的论点，实务由社会保险劳务士${SR_LAUNCHED ? "" : "（开业后）"}承办，税务由税理士承办，各自另行签约。`,
     gaikokujinH2: "外国员工的员工宿舍，也能协助安排吗？",
     gaikokujinBody: (locale) => (
       <>
@@ -361,11 +364,11 @@ export default async function Page() {
     >
       {isJa && (
         <>
-          {/* §1 導入の全体像。順序の目安＝断定せず、各判断は資格者・提携専門家へ */}
+          {/* §1 導入の全体像。順序の目安＝断定せず、各判断は資格者・専門家へ */}
           <div>
             <ReH2>借り上げ社宅とは——導入の全体像</ReH2>
             <p className="mt-3 leading-relaxed text-text">
-              借り上げ社宅は、<strong>会社が賃貸物件を契約して従業員に住まわせる</strong>仕組みです。会社が物件を所有する社有社宅と違い、初期投資が小さく、撤退も柔軟に行えるため、中小企業では借り上げ型が主流です。導入の流れは、おおむね次のとおりです（順序の目安であり、各判断は資格者・提携専門家の確認を踏まえて進めます）。
+              借り上げ社宅は、<strong>会社が賃貸物件を契約して従業員に住まわせる</strong>仕組みです。会社が物件を所有する社有社宅と違い、初期投資が小さく、撤退も柔軟に行えるため、中小企業では借り上げ型が主流です。導入の流れは、おおむね次のとおりです（順序の目安であり、各判断は資格者・専門家の確認を踏まえて進めます）。
             </p>
             <ul className="mt-4 space-y-3">
               {JA_STEPS.map((s) => (
@@ -423,7 +426,8 @@ export default async function Page() {
               税務では、借り上げ社宅を全額会社負担にすると、原則として従業員への<strong>給与として課税</strong>され得ます。従業員から「賃貸料相当額」（実際の賃料ではなく、建物・敷地の固定資産税の課税標準額をもとに計算する取り扱いが示されています）の一定割合以上を受け取っている場合に、給与課税されない取り扱いがあります。該当性・計算・徴収額の水準の判断は税務にあたり、<strong>税務代理・税務相談は税理士の独占業務</strong>です。税理士が別契約で対応します。
             </p>
             <p className="mt-3 text-sm leading-relaxed text-text-muted">
-              ※本ページは一般的な情報提供です。具体的な価額・計算の当てはめや、個別の税務・社会保険の判断は、資格者・提携専門家の確認を要します。
+              {/* 2026-09-05 月次点検（NEW-SR-6）：「提携専門家」→「専門家」（U12＝書面での提携なし） */}
+              ※本ページは一般的な情報提供です。具体的な価額・計算の当てはめや、個別の税務・社会保険の判断は、資格者・専門家の確認を要します。
             </p>
           </div>
         </>

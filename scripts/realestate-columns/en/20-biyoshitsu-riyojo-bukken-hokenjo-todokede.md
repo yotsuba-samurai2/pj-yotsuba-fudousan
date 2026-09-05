@@ -97,7 +97,7 @@ Further, you may not use the premises until the structural inspection and confir
 
 Investigation of the property, brokerage, and the sale or lease contract are handled by Yotsuba Real Estate Co., Ltd. (licensed real estate agent, Tokyo Governor (1) No. 113304). Preparation of documents submitted to public offices, such as the opening notification for a beauty or barber shop, is handled by Yotsuba Administrative Scrivener Office. Where a use change or building confirmation is involved, the design is handled by an architect; the plumbing and ventilation design of the fit-out, by the contractor.
 
-**These two (the real estate agent and the administrative scrivener office) are independent business entities. You engage each directly.** We neither pay nor accept referral fees or introduction commissions. Registration goes to a judicial scrivener, tax to a tax accountant, and labour matters to a certified social insurance labour consultant (opening planned September 2026) — each engaged by you directly. Consultation is free of charge.
+**These two (the real estate agent and the administrative scrivener office) are independent business entities. You engage each directly.** We neither pay nor accept referral fees or introduction commissions. Registration goes to a judicial scrivener, tax to a tax accountant, and labour matters to a certified social insurance labour consultant — each engaged by you directly. Consultation is free of charge.
 
 ## Frequently asked questions
 
