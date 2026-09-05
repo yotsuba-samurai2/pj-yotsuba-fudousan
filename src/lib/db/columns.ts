@@ -7,6 +7,7 @@ import type {
   ColumnStatus,
   ColumnTranslation,
 } from "@/lib/column-shared";
+import { resolveModifiedDate, touchesMaterialFields } from "@/lib/column-modified-date";
 
 /**
  * admin CRUD用のサーバー専用データ層（旧 src/lib/firestore/columns.ts の役割）。
@@ -145,9 +146,38 @@ export async function createColumn(data: ColumnInput): Promise<string> {
   return row.id;
 }
 
-/** コラム更新 */
+/**
+ * コラム更新。
+ *
+ * 本文（title / excerpt / content / faq / translations）が実際に変わったときだけ
+ * `modifiedDate` を当日にする。sitemap の lastmod（`modifiedDate ?? date`）を
+ * 改稿に追随させるための処理（src/lib/column-modified-date.ts の冒頭コメント参照）。
+ *
+ * ここに置く理由：seed の upsert（upsertColumnBySlug）・管理画面の単体編集・
+ * fix-* 系の一括修正・PATCH /api/admin/columns/[id] は、すべて最終的に本関数を通る。
+ * upsertColumnBySlug だけに入れると、手直しと一括修正が漏れる。
+ *
+ * - 呼び出し側が `modifiedDate` を明示していればそれを尊重し、比較は行わない
+ * - status だけ・locales だけ等、本文に触れない更新は DB 読み取りもしない
+ * - 同一内容の再 upsert では `modifiedDate` を触らない（全件再 upsert しても動かない）
+ */
+async function decideModifiedDate(
+  id: string,
+  data: Partial<Column>,
+): Promise<string | undefined> {
+  if (data.modifiedDate !== undefined) return undefined; // 明示値は toUpdateInput がそのまま書く
+  if (!touchesMaterialFields(data)) return undefined;
+  const existing = await prisma.column.findUnique({
+    where: { id },
+    select: { title: true, excerpt: true, content: true, faq: true, translations: true },
+  });
+  return resolveModifiedDate({ existing, incoming: data });
+}
+
 export async function updateColumn(id: string, data: Partial<Column>): Promise<void> {
-  await prisma.column.update({ where: { id }, data: toUpdateInput(data) });
+  const modifiedDate = await decideModifiedDate(id, data);
+  const payload = modifiedDate === undefined ? data : { ...data, modifiedDate };
+  await prisma.column.update({ where: { id }, data: toUpdateInput(payload) });
 }
 
 /** コラム削除 */
