@@ -4,6 +4,8 @@
 // 全リンクに「独立受任注記」を添付（別事業体・紹介料等の授受なし＝非弁・業際配慮）。
 import type { BusinessKey } from "@/lib/shared/office";
 import type { LangCode } from "@/config/languages";
+// 2026-09-05 月次点検（NEW-WELFARE-3）: C16 の ja アンカーは事務所名を実行時結合で組み立てる（sr-label.ts の決まりごとに合わせる）
+import { SR_OFFICE_NAME } from "@/lib/shared/sr-name";
 
 export type CrossTarget = {
   href: string;
@@ -151,6 +153,12 @@ export const CROSS_LINKS: CrossLink[] = [
   { id: "C15", from: ["/labor/services/saiyo"], launchFlag: "SR_LAUNCHED", targets: [
       { href: "/legal/services/visa", anchor: "在留資格・ビザ申請（四葉行政書士事務所）", anchorI18n: A_VISA, business: "legal" },
       { href: "/shataku", anchor: "借り上げ社宅の導入（四葉不動産）", anchorI18n: A_SHATAKU, business: "realestate" },
+    ] },
+  // 2026-09-05 月次点検（NEW-WELFARE-3）新設。realestate→labor が1件も無く C9/C13 と非対称だった。
+  // GH・介護の開設ページから、開業後の社労士ページ（労務管理・雇用関係助成金）へ送る。別契約＝CrossLinkBanner が3者版注記を出す。
+  { id: "C16", from: ["/group-home", "/kaigo", "/toushi/group-home", "/toushi/shitei-shinsei"], launchFlag: "SR_LAUNCHED", targets: [
+      { href: "/labor/services/kaigo-roumu", anchor: `介護・障害福祉の労務管理（${SR_OFFICE_NAME}）`, anchorI18n: A_SR_KAIGO, business: "labor" },
+      { href: "/labor/services/joseikin", anchor: `雇用関係助成金の申請（${SR_OFFICE_NAME}）`, anchorI18n: A_SR_JOSEIKIN, business: "labor" },
     ] },
 ];
 

@@ -7,7 +7,7 @@
 //   ・具体的な金額・成約価格・期間・地名番地・人物属性の詳細を創作しない
 //   ・各事例は「想定される進め方」として記述する（「〜を想定しています」「〜します」）
 //   ・冒頭注記（NOTICE）と各事例末尾の「※モデルケースです」は必須。一字一句変更しないこと
-//   ・社会保険労務士＝「2026年9月開業予定・現時点では未開業」の注記を維持（登録済み資格と横並びにしない）
+//   ・社会保険労務士の分担文は SR_ROLE_SENTENCE.jirei、リンクは SR_LAUNCHED ゲート（2026-09-05 更新。開業前は「未開業」注記を維持していた）
 //
 // 表示コンプライアンス（宅建業法・分離受任）：業務一体提供を示唆する語（ワンストップ／一体で／
 //   一括対応／まとめて対応 等）は全文・全メタデータで使用禁止。
@@ -22,6 +22,9 @@ import { buildPageMetadata } from "@/lib/seo";
 import { RealestateServicePage, ReH2 } from "@/components/shared/RealestateServicePage";
 import { CannotHandle } from "@/components/shared/CannotHandle";
 import { SR_ROLE_SENTENCE } from "@/lib/shared/sr-label";
+// 2026-09-05 月次点検（NEW-WELFARE-4）: モデルケース①の末尾リンクに社労士ページを開業後のみ追加（事務所名は実行時結合）
+import { SR_LAUNCHED } from "@/lib/shared/office";
+import { SR_OFFICE_NAME } from "@/lib/shared/sr-name";
 
 const SITE = "https://luck428.com";
 const PATH = "/jirei";
@@ -77,9 +80,15 @@ const CASES: ModelCase[] = [
         body: "想定される進め方は、要件の整理、指定権者への事前相談、物件のご契約、指定申請という順序です。ご契約は事業体ごとに分かれ、物件は四葉不動産株式会社との媒介契約、指定申請は四葉行政書士事務所との別契約となります。各事業体・専門家とは分離受任・個別契約であり、当社が紹介料を受け取ることはありません。",
       },
     ],
+    // 2026-09-05 月次点検（NEW-WELFARE-4）: ピラー（/group-home）・行政書士側（shogai-fukushi）・社労士側（kaigo-roumu＝開業後のみ）へ辿れるようにした
     links: [
+      { href: "/group-home", label: "グループホーム開設の完全ガイド" },
       { href: "/toushi/group-home", label: "グループホームに使える物件探し" },
       { href: "/toushi/shitei-shinsei", label: "指定申請と物件の関係" },
+      { href: "/legal/services/shogai-fukushi", label: "障害福祉サービスの指定申請（四葉行政書士事務所）" },
+      ...(SR_LAUNCHED
+        ? [{ href: "/labor/services/kaigo-roumu", label: `介護・障害福祉の労務管理（${SR_OFFICE_NAME}）` }]
+        : []),
     ],
   },
   {

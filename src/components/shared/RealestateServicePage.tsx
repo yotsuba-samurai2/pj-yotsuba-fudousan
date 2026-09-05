@@ -14,7 +14,7 @@ import { addLocalePrefix } from "@/lib/locale";
 import { Breadcrumb, type Crumb } from "@/components/shared/Breadcrumb";
 import { CtaBand, type CtaBandVariant } from "@/components/shared/CtaBand";
 import { CrossLinkBanner } from "@/components/shared/CrossLinkBanner";
-import { getCrossLinks } from "@/lib/cross-links";
+import { getCrossLinks, involvesLabor } from "@/lib/cross-links";
 import { SR_LAUNCHED } from "@/lib/shared/office";
 import { PERSON_ID } from "@/lib/seo";
 import type { Column } from "@/lib/columns";
@@ -172,7 +172,9 @@ export async function RealestateServicePage(p: RealestateServicePageProps) {
         )}
 
         {crossLinks.map((c) => (
-          <CrossLinkBanner key={c.id} link={c} lead={p.crossLinkLead} />
+          // 2026-09-05 月次点検（NEW-WELFARE-3）：crossLinkLead は行政書士ページ向けの導入文（「四葉行政書士事務所のページで解説」）なので、
+          // 社労士リンク（C16）には渡さず CrossLinkBanner の既定リード（「関連サービスもご覧いただけます」）を使う。
+          <CrossLinkBanner key={c.id} link={c} lead={involvesLabor(c) ? undefined : p.crossLinkLead} />
         ))}
 
         {/* 署名（E-E-A-T・原稿_不動産サイト共通） */}
