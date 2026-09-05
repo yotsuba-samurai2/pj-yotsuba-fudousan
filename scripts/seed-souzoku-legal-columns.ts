@@ -455,6 +455,18 @@ const REQUIRED_HUB_LINKS: Record<string, string[]> = {
     "/legal/column/souzoku-kaigai-gaikokuseki",
     "/legal/column/isan-bunkatsu-kyougisho",
   ],
+  "iryohojin-setsuritsu-ninka-nagare-shorui": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/shinryojo-kaisetsu-todokede-iryoho-8jo",
+  ],
+  "shokuhin-seizogyo-kyoka-bukken-setsubi-kijun": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/inshokuten-eigyo-kyoka-hokenjo-setsubi-kijun-shokuhin-eisei",
+  ],
 };
 
 /** 表示コンプライアンス上の禁止語 */
@@ -1264,6 +1276,49 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "別事業体",
     "独立した事業体",
   ],
+  "iryohojin-setsuritsu-ninka-nagare-shorui": [
+    "医療法第39条",
+    "医療法第44条第1項",
+    "医療法第46条",
+    "医療法第46条の5第1項",
+    "医療法第54条",
+    "都道府県知事",
+    "定款又は寄附行為",
+    "都道府県医療審議会",
+    "設立の登記",
+    "2週間以内",
+    "理事3人以上",
+    "監事1人以上",
+    "剰余金の配当",
+    "持分の定めのない医療法人",
+    "平成19年4月1日",
+    "設立登記は司法書士",
+    "紹介料を受け取りません",
+    "別事業体",
+    "独立した事業体",
+  ],
+  "shokuhin-seizogyo-kyoka-bukken-setsubi-kijun": [
+    "食品衛生法第55条第1項",
+    "食品衛生法第54条",
+    "食品衛生法第51条第1項",
+    "食品衛生法第57条第1項",
+    "食品衛生法施行令第35条",
+    "菓子製造業",
+    "そうざい製造業",
+    "複合型そうざい製造業",
+    "第11号",
+    "第25号",
+    "HACCPに沿った衛生管理",
+    // 本文は「2021年（令和3年）6月1日」と西暦・和暦を括弧で併記している（inshokuten と同じ表記）。
+    // 「令和3年6月1日」の連続一致を求めると括弧に阻まれて落ちるので、本文と同じ表記で照合する。
+    "2021年（令和3年）6月1日",
+    "飲食店営業",
+    "保健所",
+    "食品衛生責任者",
+    "紹介料を受け取りません",
+    "別事業体",
+    "独立した事業体",
+  ],
 };
 
 /** 記事ごとに含めてはならない表現 */
@@ -1349,6 +1404,8 @@ const FORBIDDEN_PHRASES: Record<string, string[]> = {
   "ryokangyo-kani-shukujo-kyoka-shinsei": [],
   "inshokuten-eigyo-kyoka-hokenjo-setsubi-kijun-shokuhin-eisei": [],
   "chugoku-tairiku-souzokunin-shinzoku-koshosho-ryoji-ninsho": [],
+  "iryohojin-setsuritsu-ninka-nagare-shorui": [],
+  "shokuhin-seizogyo-kyoka-bukken-setsubi-kijun": [],
 };
 
 /** 本セット外へ張る既存legalコラムslug（リポジトリの他シードで実在確認済み） */
@@ -2342,6 +2399,58 @@ const ARTICLES: Array<{
       "アポスティーユ",
       "準拠法",
       "反致",
+      "行政書士",
+    ],
+  },
+  {
+    file: "45-iryohojin-setsuritsu-ninka-nagare-shorui.md",
+    slug: "iryohojin-setsuritsu-ninka-nagare-shorui",
+    date: "2026-09-05",
+    title:
+      "医療法人の設立認可の流れと必要書類｜個人開業から法人化まで",
+    category: "許認可の手続き（行政書士の実務から）",
+    excerpt:
+      "個人で開業しているクリニックを法人化するには、まず医療法人の設立認可が要ります。医療法人は主たる事務所の所在地の都道府県知事の認可を受けなければ設立できず（医療法第44条第1項）、認可の後に設立の登記をすることで成立します（医療法第46条）。都道府県医療審議会への諮問を経る認可のスケジュール、定款又は寄附行為・事業計画・財産目録などの必要書類、剰余金の配当禁止（医療法第54条）や持分の定めのない医療法人といった論点を整理し、設立登記は司法書士、税務は税理士、労務は社会保険労務士へ分離受任で振る分担を示しました。",
+    keywords: [
+      "医療法人 設立認可 流れ",
+      "医療法人 設立 必要書類",
+      "医療法人 設立認可 都道府県知事",
+      "医療法人 定款 寄附行為 財産目録",
+      "医療法人 剰余金 配当 禁止",
+      "医療法人 設立 行政書士",
+    ],
+    tags: [
+      "医療法人",
+      "設立認可",
+      "医療法",
+      "許認可",
+      "都道府県医療審議会",
+      "行政書士",
+    ],
+  },
+  {
+    file: "46-shokuhin-seizogyo-kyoka-bukken-setsubi-kijun.md",
+    slug: "shokuhin-seizogyo-kyoka-bukken-setsubi-kijun",
+    date: "2026-09-05",
+    title:
+      "菓子・そうざい製造業の営業許可と物件の設備基準｜飲食営業との違い",
+    category: "許認可の手続き（行政書士の実務から）",
+    excerpt:
+      "焼き菓子やケーキを作って売る菓子工房、弁当・惣菜を作って売る店を始めるには、店内で食事を出す飲食店営業とは別に、菓子製造業（食品衛生法施行令第35条第11号）やそうざい製造業（同条第25号）の営業許可が要ります。飲食店営業との違い、2021年（令和3年）6月1日の食品衛生法改正による許可業種の再編、製造業で求められる物件の設備基準、小規模事業者のHACCP対応を整理し、物件・工事・消防・登記・税務・労務は分離受任で振る分担を示しました。",
+    keywords: [
+      "菓子製造業 許可 取り方",
+      "そうざい製造業 営業許可 設備基準",
+      "菓子製造業 飲食店営業 違い",
+      "食品衛生法 施行令 第35条 製造業",
+      "菓子工房 自宅 許可 保健所",
+      "菓子 そうざい 製造業 行政書士",
+    ],
+    tags: [
+      "菓子製造業",
+      "そうざい製造業",
+      "食品衛生法",
+      "許認可",
+      "設備基準",
       "行政書士",
     ],
   },

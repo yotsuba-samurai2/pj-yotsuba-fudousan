@@ -15227,5 +15227,188 @@ export const LABOR_COLUMNS_SEED: LaborSeedColumn[] = [
         ]
       }
     }
+  },
+  {
+    "business": "labor",
+    "slug": "unso-2024-mondai-kaizen-kijun-kokuji",
+    "title": "運送業の2024年問題と改善基準告示｜トラック運転者の拘束時間の上限",
+    "date": "2026-09-05",
+    "category": "労働時間",
+    "excerpt": "運送業の「2024年問題」とは、令和6年（2024年）4月1日から自動車運転の業務にも時間外労働の上限規制が適用され、改善基準告示（拘束時間・休息期間の基準）が改正されて効き始めたことを指します。トラック運転者は、時間外労働が特別条項でも年960時間以内（労働基準法附則第140条）、拘束時間は1年3,300時間・1か月284時間・1日13時間（最大15時間）、休息期間は継続11時間以上を基本とし9時間を下回らないというラインで管理します。上限規制と改善基準告示という2つの物差し、36協定・就業規則の直しどころ、そして誰に何を頼むかを整理します。",
+    "content": "**結論（先に要点）**：運送業の「2024年問題」とは、令和6年（2024年）4月1日から、自動車運転の業務にも**時間外労働の上限規制**が適用され、あわせて**改善基準告示**（拘束時間・休息期間の基準）が改正されて実際に効き始めたことを指します。トラック運転者は、時間外労働が特別条項でも**年960時間以内**（労働基準法附則第140条）、拘束時間は**1年3,300時間・1か月284時間・1日13時間（最大15時間）**、休息期間は**継続11時間以上を基本とし9時間を下回らない**というラインで管理する必要があります。この記事では、何が変わったのか、拘束時間の上限、36協定の直しどころ、そして誰に何を頼むかを整理します。\n\n「うちは運送業だから残業規制は関係ない」という時代は終わりました。このページは、トラック運送事業者と運行管理者の方に向けて、2024年問題の中身、改善基準告示の拘束時間・休息期間、時間外労働の上限規制、そして就業規則・36協定のどこを直すかを、社会保険労務士の労務管理の視点で整理します。\n\n## 運送業の2024年問題とは、何が変わったことを指すのか？\n\n2024年問題とは、次の2つが令和6年（2024年）4月1日から同時に効き始めたことをまとめた呼び方です。\n\n1. **時間外労働の上限規制の適用**。自動車運転の業務は、働き方改革関連法の施行時に5年間の猶予が置かれていましたが、その猶予が2024年3月末で終わりました。\n2. **改善基準告示の改正の適用**。「自動車運転者の労働時間等の改善のための基準」（改善基準告示）が令和4年（2022年）12月23日に改正され、令和6年（2024年）4月1日から適用されています。拘束時間の上限が縮まり、休息期間が長くなりました。\n\nつまり「上限規制」と「改善基準告示」は別の物差しで、**両方を同時に満たさなければなりません**。片方だけ守っても足りません。運転者以外の労働時間の一般ルールは[36協定と残業の上限](/labor/column/36-kyotei-zangyo-sharoushi-doko-made)もあわせてご覧ください。\n\n## 改善基準告示の拘束時間と休息期間は、どこまで許されるのか？\n\n改善基準告示は、始業から終業までの「**拘束時間**」（労働時間＋休憩・手待ち時間）と、勤務と勤務の間の「**休息期間**」に上限・下限を定めています。トラック運転者の主な基準は次のとおりです。\n\n| 項目 | 原則 | 例外・上限 |\n|---|---|---|\n| 1年の拘束時間 | 3,300時間 | 労使協定により、年6か月まで3,400時間 |\n| 1か月の拘束時間 | 284時間 | 労使協定により、年6か月まで310時間（284時間超は連続3か月まで／月の時間外・休日労働が100時間未満となるよう努める） |\n| 1日の拘束時間 | 13時間 | 最大15時間（長距離貨物運送は、1週2回まで16時間） |\n| 休息期間 | 勤務終了後、継続11時間以上を基本 | 継続9時間を下回らない |\n| 連続運転時間 | 4時間以内 | やむを得ない場合は最大30分まで延長可 |\n\n改善基準告示は労働基準法そのものではなく厚生労働大臣の告示ですが、違反すれば労働基準監督署の是正指導の対象になり、運輸行政の処分（車両停止など）にもつながります。**「協定さえ結べば青天井」ではない**という点が、上限規制との大きな違いです。\n\n## 時間外労働の上限規制は、運送業にどう適用されたのか？\n\n自動車運転の業務にも、令和6年4月1日から時間外労働の上限規制が適用されます。ただし、一般の業種とは適用のされ方が一部違います。\n\n| 区分 | 内容 | 根拠 |\n|---|---|---|\n| 原則（限度時間） | 1か月45時間・1年360時間 | 労働基準法第36条第4項 |\n| 特別条項の年間上限 | 年960時間以内 | 労働基準法附則第140条第1項（第36条第5項の「720時間」を「960時間」と読み替え） |\n| 単月・複数月の規制 | 単月100時間未満・複数月平均80時間以内（いずれも休日労働を含む）の規制は**適用されない**（当分の間） | 労働基準法附則第140条第1項（第36条第6項第2号・第3号の不適用） |\n| 月45時間超の回数 | 月45時間を超えられるのは年6回まで | 労働基準法第36条第5項 |\n\n一般の業種の上限は年720時間ですが、自動車運転の業務は**当分の間、年960時間**とされています。また、一般の業種にある「単月100時間未満・複数月平均80時間以内」の規制は運転者には適用されません。ただし960時間はあくまで**特別条項の上限**で、原則は月45時間・年360時間である点は変わりません。将来的に一般則へ近づける方向で見直しが予定されている点も、制度設計の前提にしておく必要があります。\n\n## 36協定と就業規則は、どこを直せばよいのか？\n\n上限規制と改善基準告示の両方を満たすには、書面のつくり込みが要ります。直しどころは次のとおりです。\n\n| すること | 見直すポイント |\n|---|---|\n| 36協定（特別条項） | 年間の時間外労働を960時間以内で設計し、特別条項の回数（年6回まで）・理由・手続を明記する |\n| 就業規則・賃金規程 | 拘束時間・休息期間の考え方を反映し、割増賃金の計算（時間外25%以上・休日35%以上・深夜25%以上）と整合させる |\n| 労働時間・拘束時間の記録 | デジタコ等の記録と勤怠を突き合わせ、1日15時間・1か月284時間・休息9時間のラインを日々管理する運用にする |\n| 過半数代表者の選出 | 管理監督者でない者を適正な手続で選び、記録を残す（労働基準法施行規則第6条の2） |\n\n割増賃金は運転者にも当然に発生します。拘束時間が長い業種ほど、手待ち時間の扱いや歩合給と固定給の切り分けで未払いが生じやすいため、**上限の管理と割増賃金の計算はセットで整える**必要があります。就業規則を何人から備えるかは[就業規則は何人から義務か](/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo)をご覧ください。\n\n## 誰に、何を頼めばよいのか？\n\n運送業の2024年対応は、労務だけで完結しません。業務ごとに担い手が分かれます。\n\n| すること | 誰の業務か |\n|---|---|\n| 36協定・就業規則・賃金規程の作成、拘束時間・労働時間の管理体制の整備、割増賃金の計算 | **社会保険労務士**（当事務所） |\n| 一般貨物自動車運送事業の許可申請、事業計画変更の認可・届出などの許認可書類 | **行政書士** |\n| 運行・車両・運送約款など運輸行政の許可判断 | **運輸支局（地方運輸局）** |\n| 未払い残業代の請求、労使紛争、労働審判・訴訟 | **弁護士** |\n| 割増賃金の源泉徴収・年末調整の税務判断 | **税理士** |\n\n当事務所は労務管理の情報提供・手続に限ります。運送業の許可や事業計画変更については、四葉行政書士事務所へおつなぎすることもできますが、**社会保険労務士業務と行政書士業務はそれぞれ独立した事業体が担い、別々にご契約いただく**前提です。一括受任はしません。\n\n## 四葉社会保険労務士事務所は、何ができますか？\n\n文京区小日向の四葉社会保険労務士事務所は、運送業の**36協定（特別条項）の設計・届出、就業規則・賃金規程の改善基準告示への対応、拘束時間・労働時間の管理体制の整備、割増賃金の計算**をお受けします。**ご相談は無料です。** 内容と人数に応じてお見積りし、料金の考え方は[報酬額表](/labor/ryokin)をご覧ください。よくいただくご質問は[よくあるご質問](/labor/faq)にまとめています。\n\nすでに未払い残業代の請求や紛争になっている場合は、弁護士へ直接ご依頼いただく形をご案内します。当事務所は紹介料を受け取りません。\n\n## よくある質問\n\n**Q. 年960時間を守っていれば、改善基準告示は気にしなくてよいですか？**\nA. いいえ。時間外労働の上限規制（年960時間）と改善基準告示（拘束時間・休息期間）は別の物差しで、両方を同時に満たす必要があります。年960時間の範囲内でも、1日の拘束時間が15時間を超えたり、休息期間が9時間を下回れば改善基準告示違反です。\n\n**Q. 改善基準告示に違反すると、どうなりますか？**\nA. 改善基準告示は労働基準法そのものではありませんが、違反すると労働基準監督署の是正指導の対象になり、悪質・重大な場合は運輸行政の処分（車両の使用停止など）につながることがあります。労務と運輸の両面でリスクがある点にご注意ください。\n\n**Q. 手待ち時間は拘束時間に入りますか？**\nA. 入ります。改善基準告示の拘束時間は、労働時間だけでなく休憩時間や荷待ち等の手待ち時間も含む、始業から終業までの時間です。荷待ちが長い現場では、拘束時間が想定より膨らみやすいため、記録で実態を把握することが出発点になります。\n\n**Q. 運送業の許可も一緒にお願いできますか？**\nA. 労務管理は社会保険労務士、運送業の許可や事業計画変更の書類は行政書士の業務です。それぞれ独立した事業体として別々にご契約いただく前提で、四葉行政書士事務所へおつなぎすることはできます。まとめて一括で受任する形はとっていません。\n\n## この記事の根拠\n\n- 「自動車運転者の労働時間等の改善のための基準」（改善基準告示。平成元年労働省告示第7号、令和4年12月23日厚生労働省告示第367号により改正、令和6年4月1日適用）。トラック運転者の拘束時間（1年3,300時間・1か月284時間・1日13時間、労使協定で年3,400時間・月310時間・最大15時間、長距離は週2回16時間）、休息期間（継続11時間以上を基本・9時間を下回らない）、連続運転時間（4時間以内）\n- 労働基準法（昭和22年法律第49号）第32条、第36条第4項・第5項・第6項（第2号・第3号）、第37条、附則第140条第1項（自動車の運転の業務への時間外労働の上限規制の適用／年960時間・単月100時間未満等の不適用）\n- 労働基準法施行規則（昭和22年厚生省令第23号）第6条の2（過半数代表者の要件）\n- 自動車運転の業務への上限規制の適用開始日は令和6年（2024年）4月1日（厚生労働省・国土交通省の公表資料により確認、2026年9月参照）\n- 拘束時間・休息期間の数値は、厚生労働省「自動車運転者の長時間労働改善に向けたポータルサイト」トラック運転者の改善基準告示のページにより確認（2026年9月参照）\n\nこの記事は、誰に相談するかまでは決めていません。36協定・就業規則・賃金規程の作成、拘束時間・労働時間の管理体制の整備、割増賃金の計算は社会保険労務士の業務です。一般貨物自動車運送事業の許可申請や事業計画変更の書類は行政書士の業務、未払い残業代の請求・紛争は弁護士の業務、割増賃金の源泉徴収・年末調整の税務判断は税理士の業務です。社会保険労務士業務と行政書士業務は、それぞれ独立した事業体として別々にご契約いただきます。当事務所は紹介料を受け取りません。四葉社会保険労務士事務所にご相談いただく場合の費用は[報酬額表](/labor/ryokin)に、よくいただくご質問は[よくあるご質問](/labor/faq)にまとめています。\n\n本記事は一般的な情報提供です。個別のご事情に応じた判断は、面談のうえ資格者が行います。執筆は[浦松丈二](/about/uramatsu)（社会保険労務士・行政書士・宅地建物取引士）です。",
+    "status": "published",
+    "author": {
+      "name": "浦松 丈二",
+      "title": "社会保険労務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+    },
+    "keywords": [
+      "運送業 2024年問題",
+      "改善基準告示 拘束時間",
+      "トラック運転者 時間外 960時間",
+      "トラック運転者 休息期間 11時間",
+      "36協定 運送業 特別条項",
+      "自動車運転 上限規制 2024"
+    ],
+    "tags": [
+      "2024年問題",
+      "運送業",
+      "改善基準告示",
+      "時間外労働の上限",
+      "拘束時間",
+      "社会保険労務士"
+    ],
+    "locales": [],
+    "faq": [
+      {
+        "question": "年960時間を守っていれば、改善基準告示は気にしなくてよいですか？",
+        "answer": "いいえ。時間外労働の上限規制（年960時間）と改善基準告示（拘束時間・休息期間）は別の物差しで、両方を同時に満たす必要があります。年960時間の範囲内でも、1日の拘束時間が15時間を超えたり、休息期間が9時間を下回れば改善基準告示違反です。"
+      },
+      {
+        "question": "改善基準告示に違反すると、どうなりますか？",
+        "answer": "改善基準告示は労働基準法そのものではありませんが、違反すると労働基準監督署の是正指導の対象になり、悪質・重大な場合は運輸行政の処分（車両の使用停止など）につながることがあります。労務と運輸の両面でリスクがある点にご注意ください。"
+      },
+      {
+        "question": "手待ち時間は拘束時間に入りますか？",
+        "answer": "入ります。改善基準告示の拘束時間は、労働時間だけでなく休憩時間や荷待ち等の手待ち時間も含む、始業から終業までの時間です。荷待ちが長い現場では、拘束時間が想定より膨らみやすいため、記録で実態を把握することが出発点になります。"
+      },
+      {
+        "question": "運送業の許可も一緒にお願いできますか？",
+        "answer": "労務管理は社会保険労務士、運送業の許可や事業計画変更の書類は行政書士の業務です。それぞれ独立した事業体として別々にご契約いただく前提で、四葉行政書士事務所へおつなぎすることはできます。まとめて一括で受任する形はとっていません。"
+      }
+    ],
+    "translations": {
+      "en": {
+        "title": "The \"2024 problem\" in trucking and the Improvement Standards Notice — the ceiling on drivers' on-duty hours",
+        "excerpt": "The trucking industry's \"2024 problem\" refers to the fact that, from April 1, 2024, the cap on overtime work began to apply to motor-vehicle driving, and at the same time the amended Improvement Standards Notice (standards on on-duty hours and rest periods) took effect. Truck drivers must be managed within a line of up to 960 hours of overtime a year even under a special clause (Labor Standards Act, Supplementary Provisions, Article 140), on-duty hours of 3,300 a year / 284 a month / 13 (up to 15) a day, and a rest period based on a continuous 11 hours and never below 9. This page sets out what changed, the on-duty ceilings, where to fix the 36 Agreement, and whom to ask for what.",
+        "content": "**In short:** The trucking industry's \"2024 problem\" refers to the fact that, from April 1, 2024 (Reiwa 6), the cap on overtime work began to apply to motor-vehicle driving as well, and at the same time the amended **Improvement Standards Notice** (standards on on-duty hours and rest periods) started to bite. Truck drivers must be managed within a line of **up to 960 hours of overtime a year** even under a special clause (Labor Standards Act, Supplementary Provisions, Article 140), on-duty hours of **3,300 a year / 284 a month / 13 a day (up to 15)**, and a rest period that is **based on a continuous 11 hours and does not fall below 9**. This page sets out what changed, the on-duty ceilings, where to fix the 36 Agreement, and whom to ask for what.\n\nThe era of \"we're in trucking, so overtime rules don't concern us\" is over. This page is for truck-transport operators and operation managers. From the viewpoint of a shakai hoken roumushi's labour management, it sets out the substance of the 2024 problem, the on-duty hours and rest periods under the Improvement Standards Notice, the overtime cap, and where to fix the work rules and the 36 Agreement.\n\n## What does the trucking \"2024 problem\" mean has changed?\n\nThe 2024 problem is a shorthand for two things that started to bite together from April 1, 2024 (Reiwa 6).\n\n1. **Application of the overtime cap.** When the Work Style Reform legislation came into force, motor-vehicle driving was given a five-year grace period. That grace period ended at the end of March 2024.\n2. **Application of the amended Improvement Standards Notice.** The \"Standards for Improving the Working Hours, etc., of Motor Vehicle Drivers\" (the Improvement Standards Notice) was amended on December 23, 2022 (Reiwa 4) and has applied since April 1, 2024 (Reiwa 6). The ceiling on on-duty hours was tightened and rest periods were lengthened.\n\nIn other words, the \"overtime cap\" and the \"Improvement Standards Notice\" are two different yardsticks, and **you must satisfy both at the same time**. Meeting only one is not enough. For the general rules on working hours for staff other than drivers, see also [The 36 Agreement and the overtime ceiling](/en/labor/column/36-kyotei-zangyo-sharoushi-doko-made).\n\n## How far are on-duty hours and rest periods allowed under the Improvement Standards Notice?\n\nThe Improvement Standards Notice sets upper and lower limits on \"**on-duty hours**\" (working hours plus breaks and standby time, from start to finish of duty) and on the \"**rest period**\" between shifts. The main standards for truck drivers are as follows.\n\n| Item | Principle | Exception / limit |\n|---|---|---|\n| On-duty hours per year | 3,300 hours | Up to 3,400 hours for up to 6 months a year under a labour-management agreement |\n| On-duty hours per month | 284 hours | Up to 310 hours for up to 6 months a year under a labour-management agreement (over 284 hours for no more than 3 consecutive months; strive to keep monthly overtime and holiday work under 100 hours) |\n| On-duty hours per day | 13 hours | Up to 15 hours (long-distance freight: up to 16 hours twice a week) |\n| Rest period | Based on a continuous 11 hours or more after duty | Not below a continuous 9 hours |\n| Continuous driving time | Within 4 hours | May be extended by up to 30 minutes where unavoidable |\n\nThe Improvement Standards Notice is not the Labor Standards Act itself but a notice of the Minister of Health, Labour and Welfare; still, a breach is subject to corrective guidance from the Labor Standards Inspection Office and can lead to transport-administration sanctions (such as suspension of vehicle use). The big difference from the overtime cap is that **it is not \"unlimited as long as you have an agreement.\"**\n\n## How was the overtime cap applied to trucking?\n\nThe overtime cap applies to motor-vehicle driving as well from April 1, 2024. However, the way it applies differs in part from ordinary industries.\n\n| Category | Content | Basis |\n|---|---|---|\n| Principle (ceiling hours) | 45 hours a month and 360 hours a year | Labor Standards Act, Article 36, paragraph 4 |\n| Annual limit under the special clause | Within 960 hours a year | Labor Standards Act, Supplementary Provisions, Article 140, paragraph 1 (reading \"720 hours\" in Article 36, paragraph 5 as \"960 hours\") |\n| Single-month / multi-month rules | The rules of under 100 hours in a single month and within 80 hours averaged over several months (both including holiday work) **do not apply** (for the time being) | Labor Standards Act, Supplementary Provisions, Article 140, paragraph 1 (non-application of Article 36, paragraph 6, items 2 and 3) |\n| Frequency of exceeding 45 hours a month | Exceeding 45 hours in a month is allowed up to 6 times a year | Labor Standards Act, Article 36, paragraph 5 |\n\nThe cap for ordinary industries is 720 hours a year, but motor-vehicle driving is set at **960 hours a year for the time being**. Also, the \"under 100 hours in a single month and within 80 hours averaged over several months\" rule that applies to ordinary industries does not apply to drivers. That said, 960 hours is only the ceiling **under the special clause**; the principle remains 45 hours a month and 360 hours a year. You should also build into your design the fact that a future review is expected, moving this closer to the general rule.\n\n## Where should you fix the 36 Agreement and the work rules?\n\nSatisfying both the overtime cap and the Improvement Standards Notice requires careful drafting. The points to fix are as follows.\n\n| What to do | Point to review |\n|---|---|\n| 36 Agreement (special clause) | Design annual overtime within 960 hours, and state the frequency of the special clause (up to 6 times a year), the reasons, and the procedure |\n| Work rules and wage rules | Reflect the thinking on on-duty hours and rest periods, and align them with the calculation of premium wages (25%+ for overtime, 35%+ for holiday work, 25%+ for late-night work) |\n| Records of working and on-duty hours | Cross-check digital tachograph records against attendance, and run day-to-day management against the lines of 15 hours a day, 284 hours a month, and a 9-hour rest |\n| Selection of the majority representative | Select someone who is not in a managerial position through a proper procedure, and keep a record (Ordinance for Enforcement of the Labor Standards Act, Article 6-2) |\n\nPremium wages naturally arise for drivers too. The longer the on-duty hours in an industry, the more easily unpaid wages arise in the treatment of standby time and in dividing commission pay from fixed pay, so **managing the ceiling and calculating premium wages must be put in place together**. For how many employees make work rules mandatory, see [How many employees make work rules mandatory](/en/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo).\n\n## Whom should you ask, and for what?\n\nThe 2024 response for trucking is not completed by labour matters alone. The party in charge differs by task.\n\n| What to do | Whose work it is |\n|---|---|\n| Drafting the 36 Agreement, work rules and wage rules; putting on-duty and working-hour management in place; calculating premium wages | **A Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant)** (this office) |\n| Licence applications for general trucking business, and authorisation/notification of changes to the business plan | **A Gyoseishoshi (Certified Administrative Procedures Legal Specialist)** |\n| Transport-administration decisions on operations, vehicles, and transport terms | **The District Transport Bureau (Un'yu Shikyoku)** |\n| Claims for unpaid overtime, labour disputes, labor tribunal proceedings or litigation | **An attorney** |\n| Tax decisions on withholding and year-end adjustment of premium wages | **A tax accountant** |\n\nThis office is limited to providing information and handling procedures for labour management. For licences and business-plan changes in trucking, we can connect you to 四葉行政書士事務所; on the premise that **shakai hoken roumushi work and gyoseishoshi work are each carried out by an independent business entity and are contracted separately**. We do not take on everything under a single contract.\n\n## What can 四葉社会保険労務士事務所 do for you?\n\n四葉社会保険労務士事務所 in Kohinata, Bunkyo Ward, handles, for trucking, **designing and filing the 36 Agreement (special clause), aligning the work rules and wage rules with the Improvement Standards Notice, putting on-duty and working-hour management in place, and calculating premium wages**. **The initial consultation is free.** We quote according to the content and the number of employees; for how fees are thought about, see the [fee schedule](/en/labor/ryokin), and the questions we are asked most often are collected on the [FAQ page](/en/labor/faq).\n\nWhere a claim for unpaid overtime or a dispute has already arisen, we will guide you to engage an attorney directly. This office does not accept referral fees.\n\n## Frequently asked questions\n\n**Q. If we keep within 960 hours a year, can we ignore the Improvement Standards Notice?**\nA. No. The overtime cap (960 hours a year) and the Improvement Standards Notice (on-duty hours and rest periods) are different yardsticks, and both must be satisfied at the same time. Even within 960 hours, if a day's on-duty hours exceed 15 or the rest period falls below 9, it is a breach of the Improvement Standards Notice.\n\n**Q. What happens if we breach the Improvement Standards Notice?**\nA. The Improvement Standards Notice is not the Labor Standards Act itself, but a breach is subject to corrective guidance from the Labor Standards Inspection Office and, in serious cases, can lead to transport-administration sanctions such as suspension of vehicle use. Note that the risk sits on both the labour and the transport sides.\n\n**Q. Does standby time count as on-duty time?**\nA. Yes. On-duty hours under the Improvement Standards Notice cover the time from the start to the end of duty, including not only working hours but also breaks and standby time such as waiting to load. Where waiting to load is long, on-duty hours swell more than expected, so grasping the reality through records is the starting point.\n\n**Q. Can you also handle the trucking licence?**\nA. Labour management is the work of a shakai hoken roumushi, and the papers for a trucking licence or a change to the business plan are the work of a gyoseishoshi. On the premise that each is an independent business entity contracted separately, we can connect you to 四葉行政書士事務所. We do not take these on together under a single contract.\n\n## Sources for this article\n\n- \"Standards for Improving the Working Hours, etc., of Motor Vehicle Drivers\" (the Improvement Standards Notice; Labour Ministry Notice No. 7 of 1989, amended by Ministry of Health, Labour and Welfare Notice No. 367 of December 23, 2022, applied from April 1, 2024). Truck drivers' on-duty hours (3,300 a year / 284 a month / 13 a day; up to 3,400 a year, 310 a month, 15 a day under a labour-management agreement; 16 hours twice a week for long-distance), rest periods (based on a continuous 11 hours or more, not below 9), continuous driving time (within 4 hours)\n- Labor Standards Act (労働基準法, Act No. 49 of 1947), Article 32, Article 36 paragraphs 4, 5 and 6 (items 2 and 3), Article 37, and Supplementary Provisions Article 140, paragraph 1 (application of the overtime cap to motor-vehicle driving / 960 hours a year and non-application of the under-100-hours-a-single-month rule, etc.)\n- Ordinance for Enforcement of the Labor Standards Act (労働基準法施行規則, Ordinance No. 23 of 1947), Article 6-2 (requirements for the majority representative)\n- The start date for applying the overtime cap to motor-vehicle driving is April 1, 2024 (confirmed from materials published by the Ministry of Health, Labour and Welfare and the Ministry of Land, Infrastructure, Transport and Tourism; referenced September 2026)\n- The figures for on-duty hours and rest periods were checked against the Ministry of Health, Labour and Welfare's portal site on improving long working hours of motor vehicle drivers, the page on the Improvement Standards Notice for truck drivers (referenced September 2026)\n\nThis article does not go so far as to decide whom you should consult. Drafting the 36 Agreement, work rules and wage rules, putting on-duty and working-hour management in place, and calculating premium wages are the work of a shakai hoken roumushi. Licence applications for general trucking business and papers for business-plan changes are the work of a gyoseishoshi; claims for unpaid overtime and disputes are the work of an attorney; tax decisions on withholding and the year-end adjustment of premium wages are the work of a tax accountant. Shakai hoken roumushi work and gyoseishoshi work are each carried out by an independent business entity and contracted separately. This office does not accept referral fees. The cost of consulting 四葉社会保険労務士事務所 is set out in the [fee schedule](/en/labor/ryokin), and the questions we are asked most often are collected on the [FAQ page](/en/labor/faq).\n\nThis article is general information. Judgments that fit your particular circumstances are made by a qualified professional after a meeting. Written by [Joji Uramatsu](/en/about/uramatsu) (Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist).",
+        "category": "Labour management by sector",
+        "keywords": [
+          "trucking 2024 problem",
+          "Improvement Standards Notice on-duty hours",
+          "driver overtime 960 hours",
+          "truck driver rest period 11 hours",
+          "36 agreement trucking special clause",
+          "drivers overtime cap 2024"
+        ],
+        "tags": [
+          "2024 problem",
+          "trucking",
+          "Improvement Standards Notice",
+          "overtime cap",
+          "on-duty hours",
+          "Shakai Hoken Roumushi"
+        ],
+        "author": {
+          "name": "Joji Uramatsu",
+          "title": "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所"
+        },
+        "faq": [
+          {
+            "question": "If we keep within 960 hours a year, can we ignore the Improvement Standards Notice?",
+            "answer": "No. The overtime cap (960 hours a year) and the Improvement Standards Notice (on-duty hours and rest periods) are different yardsticks, and both must be satisfied at the same time. Even within 960 hours, if a day's on-duty hours exceed 15 or the rest period falls below 9, it is a breach of the Improvement Standards Notice."
+          },
+          {
+            "question": "What happens if we breach the Improvement Standards Notice?",
+            "answer": "The Improvement Standards Notice is not the Labor Standards Act itself, but a breach is subject to corrective guidance from the Labor Standards Inspection Office and, in serious cases, can lead to transport-administration sanctions such as suspension of vehicle use. Note that the risk sits on both the labour and the transport sides."
+          },
+          {
+            "question": "Does standby time count as on-duty time?",
+            "answer": "Yes. On-duty hours under the Improvement Standards Notice cover the time from the start to the end of duty, including not only working hours but also breaks and standby time such as waiting to load. Where waiting to load is long, on-duty hours swell more than expected, so grasping the reality through records is the starting point."
+          },
+          {
+            "question": "Can you also handle the trucking licence?",
+            "answer": "Labour management is the work of a shakai hoken roumushi, and the papers for a trucking licence or a change to the business plan are the work of a gyoseishoshi. On the premise that each is an independent business entity contracted separately, we can connect you to 四葉行政書士事務所. We do not take these on together under a single contract."
+          }
+        ]
+      },
+      "zh-tw": {
+        "title": "運輸業的「2024年問題」與改善基準告示——卡車駕駛拘束時間的上限",
+        "excerpt": "運輸業的「2024年問題」，是指從2024年（令和6年）4月1日起，時間外勞動的上限規制也開始適用於汽車駕駛業務，同時修正後的「改善基準告示」（拘束時間・休息期間的基準）正式生效。卡車駕駛必須在下列界線內管理：即使是特別條款，時間外勞動也在1年960小時以內（勞動基準法附則第140條）；拘束時間為1年3,300小時・1個月284小時・1天13小時（最多15小時）；休息期間以連續11小時為基本，不低於9小時。本文整理改變了什麼、拘束時間的上限、36協定的修改處，以及該委託誰做什麼。",
+        "content": "**結論（先講重點）**：運輸業的「2024年問題」，是指從2024年（令和6年）4月1日起，時間外勞動的**上限規制**也開始適用於汽車駕駛業務，同時修正後的**改善基準告示**（拘束時間・休息期間的基準）正式生效。卡車駕駛必須在下列界線內管理：即使是特別條款，時間外勞動也在**1年960小時以內**（勞動基準法附則第140條）；拘束時間為**1年3,300小時・1個月284小時・1天13小時（最多15小時）**；休息期間**以連續11小時為基本，不低於9小時**。本文整理改變了什麼、拘束時間的上限、36協定的修改處，以及該委託誰做什麼。\n\n「我們是運輸業，加班規制與我們無關」的時代已經結束。本頁面是為卡車運輸業者與運行管理者而寫，以社會保險勞務士的勞務管理視角，整理2024年問題的內容、改善基準告示的拘束時間・休息期間、時間外勞動的上限規制，以及就業規則・36協定該修改哪裡。\n\n## 運輸業的「2024年問題」是指改變了什麼？\n\n2024年問題，是把以下兩件從2024年（令和6年）4月1日起同時生效的事情合起來的說法。\n\n1. **時間外勞動上限規制的適用**。汽車駕駛業務在工作方式改革相關法施行時，被給予5年的緩衝期，該緩衝期已於2024年3月底結束。\n2. **改善基準告示修正的適用**。「汽車駕駛者的勞動時間等的改善基準」（改善基準告示）於2022年（令和4年）12月23日修正，自2024年（令和6年）4月1日起適用。拘束時間的上限縮短，休息期間拉長。\n\n也就是說，「上限規制」與「改善基準告示」是不同的尺度，**必須同時滿足兩者**，只守住其中一個並不夠。駕駛以外員工的勞動時間一般規則，請一併參閱[36協定與加班的上限](/zh-tw/labor/column/36-kyotei-zangyo-sharoushi-doko-made)。\n\n## 改善基準告示的拘束時間與休息期間，容許到哪裡？\n\n改善基準告示對「**拘束時間**」（勞動時間＋休息・待機時間，從上班到下班的整段時間）與班次之間的「**休息期間**」，設有上限與下限。卡車駕駛的主要基準如下。\n\n| 項目 | 原則 | 例外・上限 |\n|---|---|---|\n| 1年的拘束時間 | 3,300小時 | 依勞資協定，1年最多6個月可延長至3,400小時 |\n| 1個月的拘束時間 | 284小時 | 依勞資協定，1年最多6個月可延長至310小時（超過284小時最多連續3個月／努力使當月時間外・休假日勞動未滿100小時） |\n| 1天的拘束時間 | 13小時 | 最多15小時（長距離貨物運送每週2次可至16小時） |\n| 休息期間 | 下班後以連續11小時以上為基本 | 不低於連續9小時 |\n| 連續駕駛時間 | 4小時以內 | 不得已時最多可延長30分鐘 |\n\n改善基準告示並非勞動基準法本身，而是厚生勞動大臣的告示；但一旦違反，會成為勞動基準監督署糾正指導的對象，也可能導致運輸行政的處分（如車輛停止使用）。與上限規制最大的不同在於，**並非「只要締結協定就可以無上限」**。\n\n## 時間外勞動的上限規制，如何適用於運輸業？\n\n汽車駕駛業務自2024年4月1日起也適用時間外勞動的上限規制，但適用方式與一般行業有部分不同。\n\n| 區分 | 內容 | 依據 |\n|---|---|---|\n| 原則（限度時間） | 1個月45小時・1年360小時 | 勞動基準法第36條第4項 |\n| 特別條款的年間上限 | 1年960小時以內 | 勞動基準法附則第140條第1項（將第36條第5項的「720小時」讀作「960小時」） |\n| 單月・複數月的規制 | 單月未滿100小時・複數月平均80小時以內（皆含休假日勞動）的規制**不適用**（在相當期間內） | 勞動基準法附則第140條第1項（不適用第36條第6項第2號・第3號） |\n| 超過月45小時的次數 | 超過月45小時每年最多6次 | 勞動基準法第36條第5項 |\n\n一般行業的上限是1年720小時，但汽車駕駛業務在相當期間內為**1年960小時**。此外，一般行業的「單月未滿100小時・複數月平均80小時以內」規制不適用於駕駛。不過960小時終究是**特別條款的上限**，原則仍是1個月45小時・1年360小時。制度設計上也須把「將來預計朝一般規則靠攏的修正」納入前提。\n\n## 36協定與就業規則，該修改哪裡？\n\n要同時滿足上限規制與改善基準告示，需要仔細打造書面。修改處如下。\n\n| 要做的事 | 檢視重點 |\n|---|---|\n| 36協定（特別條款） | 將年間時間外勞動設計在960小時以內，並明記特別條款的次數（每年最多6次）・理由・手續 |\n| 就業規則・工資規程 | 反映拘束時間・休息期間的思維，並與加班費計算（時間外25%以上・休假日35%以上・深夜25%以上）保持一致 |\n| 勞動時間・拘束時間的記錄 | 將數位式運行記錄器等記錄與出勤對照，以每日15小時・每月284小時・休息9小時的界線做日常管理 |\n| 過半數代表者的選出 | 以正當手續選出非管理監督者，並保留記錄（勞動基準法施行規則第6條之2） |\n\n加班費對駕駛當然也會發生。拘束時間越長的行業，越容易在待機時間的處理、以及抽成工資與固定工資的區分上產生未付款，因此**上限的管理與加班費的計算必須成套整備**。就業規則從幾人開始成為義務，請參閱[就業規則從幾人開始成為義務](/zh-tw/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo)。\n\n## 該委託誰、做什麼？\n\n運輸業的2024年因應，無法僅靠勞務完成，各項業務的擔當者不同。\n\n| 要做的事 | 是誰的業務 |\n|---|---|\n| 36協定・就業規則・工資規程的製作、拘束時間・勞動時間管理體制的整備、加班費的計算 | **社會保險勞務士**（本事務所） |\n| 一般貨物汽車運送事業的許可申請、事業計畫變更的認可・申報等許認可書類 | **行政書士** |\n| 運行・車輛・運送約款等運輸行政的許可判斷 | **運輸支局（地方運輸局）** |\n| 未付加班費的請求、勞資糾紛、勞動審判・訴訟 | **律師** |\n| 加班費的源泉徵收・年終調整的稅務判斷 | **稅理士** |\n\n本事務所僅限於勞務管理的資訊提供與手續。關於運輸業的許可或事業計畫變更，也可為您轉介四葉行政書士事務所；但前提是**社會保險勞務士業務與行政書士業務各自由獨立的事業體承擔，須另行簽約**。本事務所不做一括受任。\n\n## 四葉社会保険労務士事務所能為您做什麼？\n\n位於文京區小日向的四葉社会保険労務士事務所，就運輸業提供**36協定（特別條款）的設計・申報、就業規則・工資規程對應改善基準告示、拘束時間・勞動時間管理體制的整備、加班費的計算**。**諮詢免費。** 依內容與人數估價，收費的思考方式請參閱[報酬額表](/zh-tw/labor/ryokin)，常被詢問的問題整理於[常見問答](/zh-tw/labor/faq)。\n\n若已進入未付加班費的請求或糾紛，將為您安排直接委託律師的方式。本事務所不收取轉介費。\n\n## 常見問題\n\n**Q. 只要守住1年960小時，就可以不管改善基準告示嗎？**\nA. 不行。時間外勞動的上限規制（1年960小時）與改善基準告示（拘束時間・休息期間）是不同的尺度，必須同時滿足兩者。即使在960小時範圍內，只要1天的拘束時間超過15小時、或休息期間低於9小時，就是違反改善基準告示。\n\n**Q. 違反改善基準告示會怎樣？**\nA. 改善基準告示雖非勞動基準法本身，但違反時會成為勞動基準監督署糾正指導的對象，情節重大時可能導致運輸行政的處分（如車輛停止使用）。請注意在勞務與運輸兩方面都有風險。\n\n**Q. 待機時間算進拘束時間嗎？**\nA. 算。改善基準告示的拘束時間，是從上班到下班的整段時間，不只勞動時間，也包含休息時間與等候裝卸等待機時間。等候裝卸較久的現場，拘束時間容易超出預期，因此以記錄掌握實際狀況是出發點。\n\n**Q. 運輸業的許可也可以一起委託嗎？**\nA. 勞務管理是社會保險勞務士的業務，運輸業的許可或事業計畫變更的書類是行政書士的業務。在各自獨立的事業體、須分別承接（另行簽約）的前提下，可為您轉介四葉行政書士事務所。本事務所不採一括受任的形式。\n\n## 這篇文章的根據\n\n- 「汽車駕駛者的勞動時間等的改善基準」（改善基準告示。平成元年勞動省告示第7號，經2022年（令和4年）12月23日厚生勞動省告示第367號修正，自2024年（令和6年）4月1日適用）。卡車駕駛的拘束時間（1年3,300小時・1個月284小時・1天13小時；依勞資協定為1年3,400小時・1個月310小時・最多15小時；長距離每週2次16小時）、休息期間（以連續11小時以上為基本、不低於9小時）、連續駕駛時間（4小時以內）\n- 勞動基準法（昭和22年法律第49號）第32條、第36條第4項・第5項・第6項（第2號・第3號）、第37條、附則第140條第1項（時間外勞動上限規制對汽車駕駛業務的適用／1年960小時、單月未滿100小時等的不適用）\n- 勞動基準法施行規則（昭和22年厚生省令第23號）第6條之2（過半數代表者的要件）\n- 對汽車駕駛業務適用上限規制的起始日為2024年（令和6年）4月1日（依厚生勞動省・國土交通省的公開資料確認，2026年9月參照）\n- 拘束時間・休息期間的數值，依厚生勞動省「汽車駕駛者長時間勞動改善入口網站」中卡車駕駛的改善基準告示頁面確認（2026年9月參照）\n\n本文並未決定該向誰諮詢。36協定・就業規則・工資規程的製作、拘束時間・勞動時間管理體制的整備、加班費的計算，是社會保險勞務士的業務。一般貨物汽車運送事業的許可申請、事業計畫變更的書類是行政書士的業務；未付加班費的請求・糾紛是律師的業務；加班費的源泉徵收・年終調整的稅務判斷是稅理士的業務。社會保險勞務士業務與行政書士業務，各自由獨立的事業體、須分別承接（另行簽約）。本事務所不收取轉介費。向四葉社会保険労務士事務所諮詢的費用整理於[報酬額表](/zh-tw/labor/ryokin)，常被詢問的問題整理於[常見問答](/zh-tw/labor/faq)。\n\n本文為一般性資訊提供。因應個別情況的判斷，由具資格者於面談後進行。撰文者為[浦松丈二](/zh-tw/about/uramatsu)（社會保險勞務士・行政書士・宅地建物取引士）。",
+        "category": "分行業的勞務管理",
+        "keywords": [
+          "運輸業 2024年問題",
+          "改善基準告示 拘束時間",
+          "卡車駕駛 時間外 960小時",
+          "卡車駕駛 休息期間 11小時",
+          "36協定 運輸業 特別條款",
+          "汽車駕駛 上限規制 2024"
+        ],
+        "tags": [
+          "2024年問題",
+          "運輸業",
+          "改善基準告示",
+          "時間外上限",
+          "拘束時間",
+          "社會保險勞務士"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "只要守住1年960小時，就可以不管改善基準告示嗎？",
+            "answer": "不行。時間外勞動的上限規制（1年960小時）與改善基準告示（拘束時間・休息期間）是不同的尺度，必須同時滿足兩者。即使在960小時範圍內，只要1天的拘束時間超過15小時、或休息期間低於9小時，就是違反改善基準告示。"
+          },
+          {
+            "question": "違反改善基準告示會怎樣？",
+            "answer": "改善基準告示雖非勞動基準法本身，但違反時會成為勞動基準監督署糾正指導的對象，情節重大時可能導致運輸行政的處分（如車輛停止使用）。請注意在勞務與運輸兩方面都有風險。"
+          },
+          {
+            "question": "待機時間算進拘束時間嗎？",
+            "answer": "算。改善基準告示的拘束時間，是從上班到下班的整段時間，不只勞動時間，也包含休息時間與等候裝卸等待機時間。等候裝卸較久的現場，拘束時間容易超出預期，因此以記錄掌握實際狀況是出發點。"
+          },
+          {
+            "question": "運輸業的許可也可以一起委託嗎？",
+            "answer": "勞務管理是社會保險勞務士的業務，運輸業的許可或事業計畫變更的書類是行政書士的業務。在各自獨立的事業體、須分別承接（另行簽約）的前提下，可為您轉介四葉行政書士事務所。本事務所不採一括受任的形式。"
+          }
+        ]
+      },
+      "zh": {
+        "title": "运输业的「2024年问题」与改善基准告示——卡车驾驶拘束时间的上限",
+        "excerpt": "运输业的「2024年问题」，是指从2024年（令和6年）4月1日起，时间外劳动的上限规制也开始适用于汽车驾驶业务，同时修正后的「改善基准告示」（拘束时间・休息期间的基准）正式生效。卡车驾驶必须在下列界线内管理：即使是特别条款，时间外劳动也在1年960小时以内（劳动基准法附则第140条）；拘束时间为1年3,300小时・1个月284小时・1天13小时（最多15小时）；休息期间以连续11小时为基本，不低于9小时。本文整理改变了什么、拘束时间的上限、36协定的修改处，以及该委托谁做什么。",
+        "content": "**结论（先讲重点）**：运输业的「2024年问题」，是指从2024年（令和6年）4月1日起，时间外劳动的**上限规制**也开始适用于汽车驾驶业务，同时修正后的**改善基准告示**（拘束时间・休息期间的基准）正式生效。卡车驾驶必须在下列界线内管理：即使是特别条款，时间外劳动也在**1年960小时以内**（劳动基准法附则第140条）；拘束时间为**1年3,300小时・1个月284小时・1天13小时（最多15小时）**；休息期间**以连续11小时为基本，不低于9小时**。本文整理改变了什么、拘束时间的上限、36协定的修改处，以及该委托谁做什么。\n\n「我们是运输业，加班规制与我们无关」的时代已经结束。本页面是为卡车运输业者与运行管理者而写，以社会保险劳务士的劳务管理视角，整理2024年问题的内容、改善基准告示的拘束时间・休息期间、时间外劳动的上限规制，以及就业规则・36协定该修改哪里。\n\n## 运输业的「2024年问题」是指改变了什么？\n\n2024年问题，是把以下两件从2024年（令和6年）4月1日起同时生效的事情合起来的说法。\n\n1. **时间外劳动上限规制的适用**。汽车驾驶业务在工作方式改革相关法施行时，被给予5年的缓冲期，该缓冲期已于2024年3月底结束。\n2. **改善基准告示修正的适用**。「汽车驾驶者的劳动时间等的改善基准」（改善基准告示）于2022年（令和4年）12月23日修正，自2024年（令和6年）4月1日起适用。拘束时间的上限缩短，休息期间拉长。\n\n也就是说，「上限规制」与「改善基准告示」是不同的尺度，**必须同时满足两者**，只守住其中一个并不够。驾驶以外员工的劳动时间一般规则，请一并参阅[36协定与加班的上限](/zh/labor/column/36-kyotei-zangyo-sharoushi-doko-made)。\n\n## 改善基准告示的拘束时间与休息期间，容许到哪里？\n\n改善基准告示对「**拘束时间**」（劳动时间＋休息・待机时间，从上班到下班的整段时间）与班次之间的「**休息期间**」，设有上限与下限。卡车驾驶的主要基准如下。\n\n| 项目 | 原则 | 例外・上限 |\n|---|---|---|\n| 1年的拘束时间 | 3,300小时 | 依劳资协定，1年最多6个月可延长至3,400小时 |\n| 1个月的拘束时间 | 284小时 | 依劳资协定，1年最多6个月可延长至310小时（超过284小时最多连续3个月／努力使当月时间外・休假日劳动未满100小时） |\n| 1天的拘束时间 | 13小时 | 最多15小时（长距离货物运送每周2次可至16小时） |\n| 休息期间 | 下班后以连续11小时以上为基本 | 不低于连续9小时 |\n| 连续驾驶时间 | 4小时以内 | 不得已时最多可延长30分钟 |\n\n改善基准告示并非劳动基准法本身，而是厚生劳动大臣的告示；但一旦违反，会成为劳动基准监督署纠正指导的对象，也可能导致运输行政的处分（如车辆停止使用）。与上限规制最大的不同在于，**并非「只要缔结协定就可以无上限」**。\n\n## 时间外劳动的上限规制，如何适用于运输业？\n\n汽车驾驶业务自2024年4月1日起也适用时间外劳动的上限规制，但适用方式与一般行业有部分不同。\n\n| 区分 | 内容 | 依据 |\n|---|---|---|\n| 原则（限度时间） | 1个月45小时・1年360小时 | 劳动基准法第36条第4项 |\n| 特别条款的年间上限 | 1年960小时以内 | 劳动基准法附则第140条第1项（将第36条第5项的「720小时」读作「960小时」） |\n| 单月・复数月的规制 | 单月未满100小时・复数月平均80小时以内（皆含休假日劳动）的规制**不适用**（在相当期间内） | 劳动基准法附则第140条第1项（不适用第36条第6项第2号・第3号） |\n| 超过月45小时的次数 | 超过月45小时每年最多6次 | 劳动基准法第36条第5项 |\n\n一般行业的上限是1年720小时，但汽车驾驶业务在相当期间内为**1年960小时**。此外，一般行业的「单月未满100小时・复数月平均80小时以内」规制不适用于驾驶。不过960小时终究是**特别条款的上限**，原则仍是1个月45小时・1年360小时。制度设计上也须把「将来预计朝一般规则靠拢的修正」纳入前提。\n\n## 36协定与就业规则，该修改哪里？\n\n要同时满足上限规制与改善基准告示，需要仔细打造书面。修改处如下。\n\n| 要做的事 | 检视重点 |\n|---|---|\n| 36协定（特别条款） | 将年间时间外劳动设计在960小时以内，并明记特别条款的次数（每年最多6次）・理由・手续 |\n| 就业规则・工资规程 | 反映拘束时间・休息期间的思维，并与加班费计算（时间外25%以上・休假日35%以上・深夜25%以上）保持一致 |\n| 劳动时间・拘束时间的记录 | 将数字式运行记录器等记录与出勤对照，以每日15小时・每月284小时・休息9小时的界线做日常管理 |\n| 过半数代表者的选出 | 以正当手续选出非管理监督者，并保留记录（劳动基准法施行规则第6条之2） |\n\n加班费对驾驶当然也会发生。拘束时间越长的行业，越容易在待机时间的处理、以及抽成工资与固定工资的区分上产生未付款，因此**上限的管理与加班费的计算必须成套整备**。就业规则从几人开始成为义务，请参阅[就业规则从几人开始成为义务](/zh/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo)。\n\n## 该委托谁、做什么？\n\n运输业的2024年因应，无法仅靠劳务完成，各项业务的担当者不同。\n\n| 要做的事 | 是谁的业务 |\n|---|---|\n| 36协定・就业规则・工资规程的制作、拘束时间・劳动时间管理体制的整备、加班费的计算 | **社会保险劳务士**（本事务所） |\n| 一般货物汽车运送事业的许可申请、事业计划变更的认可・申报等许认可书类 | **行政书士** |\n| 运行・车辆・运送约款等运输行政的许可判断 | **运输支局（地方运输局）** |\n| 未付加班费的请求、劳资纠纷、劳动审判・诉讼 | **律师** |\n| 加班费的源泉征收・年终调整的税务判断 | **税理士** |\n\n本事务所仅限于劳务管理的资讯提供与手续。关于运输业的许可或事业计划变更，也可为您转介四葉行政书士事务所；但前提是**社会保险劳务士业务与行政书士业务各自由独立的事业体承担，须另行签约**。本事务所不做一括受任。\n\n## 四葉社会保険労務士事務所能为您做什么？\n\n位于文京区小日向的四葉社会保険労務士事務所，就运输业提供**36协定（特别条款）的设计・申报、就业规则・工资规程对应改善基准告示、拘束时间・劳动时间管理体制的整备、加班费的计算**。**咨询免费。** 依内容与人数估价，收费的思考方式请参阅[报酬额表](/zh/labor/ryokin)，常被询问的问题整理于[常见问答](/zh/labor/faq)。\n\n若已进入未付加班费的请求或纠纷，将为您安排直接委托律师的方式。本事务所不收取转介费。\n\n## 常见问题\n\n**Q. 只要守住1年960小时，就可以不管改善基准告示吗？**\nA. 不行。时间外劳动的上限规制（1年960小时）与改善基准告示（拘束时间・休息期间）是不同的尺度，必须同时满足两者。即使在960小时范围内，只要1天的拘束时间超过15小时、或休息期间低于9小时，就是违反改善基准告示。\n\n**Q. 违反改善基准告示会怎样？**\nA. 改善基准告示虽非劳动基准法本身，但违反时会成为劳动基准监督署纠正指导的对象，情节重大时可能导致运输行政的处分（如车辆停止使用）。请注意在劳务与运输两方面都有风险。\n\n**Q. 待机时间算进拘束时间吗？**\nA. 算。改善基准告示的拘束时间，是从上班到下班的整段时间，不只劳动时间，也包含休息时间与等候装卸等待机时间。等候装卸较久的现场，拘束时间容易超出预期，因此以记录掌握实际状况是出发点。\n\n**Q. 运输业的许可也可以一起委托吗？**\nA. 劳务管理是社会保险劳务士的业务，运输业的许可或事业计划变更的书类是行政书士的业务。在各自独立的事业体、须分别承接（另行签约）的前提下，可为您转介四葉行政书士事务所。本事务所不采一括受任的形式。\n\n## 这篇文章的根据\n\n- 「汽车驾驶者的劳动时间等的改善基准」（改善基准告示。平成元年劳动省告示第7号，经2022年（令和4年）12月23日厚生劳动省告示第367号修正，自2024年（令和6年）4月1日适用）。卡车驾驶的拘束时间（1年3,300小时・1个月284小时・1天13小时；依劳资协定为1年3,400小时・1个月310小时・最多15小时；长距离每周2次16小时）、休息期间（以连续11小时以上为基本、不低于9小时）、连续驾驶时间（4小时以内）\n- 劳动基准法（昭和22年法律第49号）第32条、第36条第4项・第5项・第6项（第2号・第3号）、第37条、附则第140条第1项（时间外劳动上限规制对汽车驾驶业务的适用／1年960小时、单月未满100小时等的不适用）\n- 劳动基准法施行规则（昭和22年厚生省令第23号）第6条之2（过半数代表者的要件）\n- 对汽车驾驶业务适用上限规制的起始日为2024年（令和6年）4月1日（依厚生劳动省・国土交通省的公开资料确认，2026年9月参照）\n- 拘束时间・休息期间的数值，依厚生劳动省「汽车驾驶者长时间劳动改善入口网站」中卡车驾驶的改善基准告示页面确认（2026年9月参照）\n\n本文并未决定该向谁咨询。36协定・就业规则・工资规程的制作、拘束时间・劳动时间管理体制的整备、加班费的计算，是社会保险劳务士的业务。一般货物汽车运送事业的许可申请、事业计划变更的书类是行政书士的业务；未付加班费的请求・纠纷是律师的业务；加班费的源泉征收・年终调整的税务判断是税理士的业务。社会保险劳务士业务与行政书士业务，各自由独立的事业体、须分别承接（另行签约）。本事务所不收取转介费。向四葉社会保険労務士事務所咨询的费用整理于[报酬额表](/zh/labor/ryokin)，常被询问的问题整理于[常见问答](/zh/labor/faq)。\n\n本文为一般性资讯提供。因应个别情况的判断，由具资格者于面谈后进行。撰文者为[浦松丈二](/zh/about/uramatsu)（社会保险劳务士・行政书士・宅地建物取引士）。",
+        "category": "分行业的劳务管理",
+        "keywords": [
+          "运输业 2024年问题",
+          "改善基准告示 拘束时间",
+          "卡车驾驶 时间外 960小时",
+          "卡车驾驶 休息期间 11小时",
+          "36协定 运输业 特别条款",
+          "汽车驾驶 上限规制 2024"
+        ],
+        "tags": [
+          "2024年问题",
+          "运输业",
+          "改善基准告示",
+          "时间外上限",
+          "拘束时间",
+          "社会保险劳务士"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "只要守住1年960小时，就可以不管改善基准告示吗？",
+            "answer": "不行。时间外劳动的上限规制（1年960小时）与改善基准告示（拘束时间・休息期间）是不同的尺度，必须同时满足两者。即使在960小时范围内，只要1天的拘束时间超过15小时、或休息期间低于9小时，就是违反改善基准告示。"
+          },
+          {
+            "question": "违反改善基准告示会怎样？",
+            "answer": "改善基准告示虽非劳动基准法本身，但违反时会成为劳动基准监督署纠正指导的对象，情节重大时可能导致运输行政的处分（如车辆停止使用）。请注意在劳务与运输两方面都有风险。"
+          },
+          {
+            "question": "待机时间算进拘束时间吗？",
+            "answer": "算。改善基准告示的拘束时间，是从上班到下班的整段时间，不只劳动时间，也包含休息时间与等候装卸等待机时间。等候装卸较久的现场，拘束时间容易超出预期，因此以记录掌握实际状况是出发点。"
+          },
+          {
+            "question": "运输业的许可也可以一起委托吗？",
+            "answer": "劳务管理是社会保险劳务士的业务，运输业的许可或事业计划变更的书类是行政书士的业务。在各自独立的事业体、须分别承接（另行签约）的前提下，可为您转介四葉行政书士事务所。本事务所不采一括受任的形式。"
+          }
+        ]
+      }
+    }
   }
 ];

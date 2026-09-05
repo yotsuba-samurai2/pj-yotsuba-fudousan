@@ -832,6 +832,46 @@ const ARTICLES: ArticleSpec[] = [
     localesWithTranslations: ["en", "zh-tw", "zh"],
     hubLinks: ["/souzoku"],
   },
+  {
+    file: "40-kensazumisho-nashi-bukken-fukushi-youto-henko.md",
+    slug: "kensazumisho-nashi-bukken-fukushi-youto-henko",
+    title: "検査済証のない中古物件を福祉施設に転用できるか──物件選びで先に見る点",
+    publishedAt: "2026-09-05",
+    category: "投資・事業用不動産",
+    excerpt:
+      "検査済証のない中古物件でも、障害福祉やデイの施設に転用できることはあります。物件を選ぶ段階で見るのは、その用途に使う部分の床面積が200㎡を超えるか（用途変更の確認申請の要否）、検査済証がなければ法適合状況調査で建築時の適法性を確かめられるか、既存不適格か違反建築か、の3点です。東京都文京区の宅地建物取引士兼行政書士が、内見の前に書類で絞り込める点を条文と国の資料から整理します。",
+    keywords: [
+      "検査済証 ない 物件 福祉 用途変更",
+      "用途変更 確認申請 200平方メートル 建築基準法87条",
+      "既存不適格 違反建築 違い",
+      "法適合状況調査 既存建築物 現況調査ガイドライン",
+      "障害福祉 デイサービス 物件 転用",
+    ],
+    tags: ["事業用不動産", "許認可", "用途変更", "検査済証"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/toushi", "/office"],
+  },
+  {
+    file: "41-hikyojusha-shisan-kanri-hojin-shuueki-bukken.md",
+    slug: "hikyojusha-shisan-kanri-hojin-shuueki-bukken",
+    title: "中国・台湾の買主は日本の収益物件を法人で持つべきか個人で持つべきか",
+    publishedAt: "2026-09-05",
+    category: "投資・事業用不動産",
+    excerpt:
+      "中華圏の非居住者が日本の収益物件を持つとき、法人（日本の資産管理会社）で持つか個人で持つかは買う前に決めておく論点です。分かれ目は、非居住者本人が受け取る賃料の源泉徴収と確定申告、内国法人が受け取る賃料が非居住者源泉の対象外になること、どちらでも要る納税管理人の3つ。最終的な有利不利は税理士の領域で、東京都文京区の宅地建物取引士兼行政書士が物件取得と管理の実務の側から整理します。",
+    keywords: [
+      "非居住者 日本 収益物件 法人 個人",
+      "資産管理会社 設立 非居住者 不動産",
+      "非居住者 賃料 源泉徴収 所得税法212条",
+      "納税管理人 国税通則法117条",
+      "中華圏 投資家 日本 不動産 保有",
+    ],
+    tags: ["投資用不動産", "非居住者", "中国語", "税務"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/toushi"],
+  },
 ];
 
 function toPlainText(md: string): string {
