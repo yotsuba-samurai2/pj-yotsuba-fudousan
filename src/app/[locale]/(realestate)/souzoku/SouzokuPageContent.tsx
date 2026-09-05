@@ -27,6 +27,8 @@ import type { LangCode } from "@/config/languages";
  * - JSON-LDは既存3種（Article・FAQPage・Breadcrumb）のみ＝新規出力しない。構造・日付は不変、文字列のみロケール別。
  * - 他士業をサイト前面で宣伝しない: 相続手続き・登記・税務は「提携する専門家
  *   （行政書士・司法書士・税理士等）」と一般化し、特定の事務所名は出さない。
+ *   2026-09-05 月次点検（NEW-SALE-1）：書面での提携が無いため「提携する」と断定せず、売却カードは
+ *   「専門家をご紹介し、それぞれ別契約で」の形に改めた（他の箇所の「提携する専門家」は未対応・要別対応）。
  * - 具体的な法的判断・税額計算は書かない（最終判断は有資格者）。
  *   法令は条文番号＋項＋号・施行日を併記。最終改正日など裏取り不能は「未検証」。
  */
@@ -193,7 +195,7 @@ const COPY: Record<LangCode, SouzokuCopy> = {
         id: "sale",
         title: "売却",
         description:
-          "住む予定がない、維持費や税負担が重い、相続人の間で分けたい——そんなときの現実的な出口が売却です。文京区に加えて豊島区（大塚・巣鴨・駒込・池袋など）の相場もふまえた査定から、売却に伴う手続きの段取りまで、提携する専門家（行政書士・司法書士・税理士等）と連携して進めます。「文京区の実家と豊島区の貸家」のように物件が区をまたぐ相続も、あわせて査定します。相続した一棟アパート・ビルなど収益不動産の売却もご相談ください。",
+          "住む予定がない、維持費や税負担が重い、相続人の間で分けたい——そんなときの現実的な出口が売却です。文京区に加えて豊島区（大塚・巣鴨・駒込・池袋など）の相場もふまえた査定から、売却に伴う手続きの段取りまでお手伝いします。登記や税務など専門家の関与が必要な場面では、行政書士・司法書士・税理士などの専門家をご紹介し、それぞれ別契約で進めます。「文京区の実家と豊島区の貸家」のように物件が区をまたぐ相続も、あわせて査定します。相続した一棟アパート・ビルなど収益不動産の売却もご相談ください。",
       },
     ],
     internalHeading: "あわせてご覧いただきたいページ",
@@ -211,6 +213,13 @@ const COPY: Record<LangCode, SouzokuCopy> = {
         label: "中国語で相談できる不動産相続",
         description:
           "在日中国人の方の相続や、中国大陸・台湾に相続人がいる相続の書類・手続き・売却を、中国語（繁体字・簡体字）対応で解説しています。",
+      },
+      {
+        // 2026-09-05 月次点検（NEW-SALE-1）：孤立していた /nagare（契約後の手続・書類・費用の時期）への入口。ja先行公開のためjaのみ。
+        href: "/nagare",
+        label: "ご依頼から引渡しまでの流れ",
+        description:
+          "売却（仲介・買取）と賃貸で何がどの順で進むか、ご用意いただく書類と、費用をお支払いいただく時期を整理しています。",
       },
       {
         href: "/services",
@@ -382,7 +391,7 @@ const COPY: Record<LangCode, SouzokuCopy> = {
         id: "sale",
         title: "Sale",
         description:
-          "No plans to live there, heavy maintenance costs and tax burden, or heirs who want to divide the proceeds—in such cases, selling is the realistic exit. From an appraisal that reflects market conditions in Bunkyo-ku and also in Toshima-ku (Otsuka, Sugamo, Komagome, Ikebukuro and other areas), to organizing the procedures involved in a sale, we move forward in coordination with our partner professionals (gyoseishoshi (administrative scriveners), judicial scriveners, licensed tax accountants, and others). Where an inheritance spans wards—for example a family home in Bunkyo-ku and a rented house in Toshima-ku—we appraise them together. We also welcome consultations on selling inherited income properties such as whole apartment buildings and office buildings.",
+          "No plans to live there, heavy maintenance costs and tax burden, or heirs who want to divide the proceeds—in such cases, selling is the realistic exit. From an appraisal that reflects market conditions in Bunkyo-ku and also in Toshima-ku (Otsuka, Sugamo, Komagome, Ikebukuro and other areas), to organizing the procedures involved in a sale, we support you throughout. Where registration, tax matters, or other specialist work is needed, we introduce professionals such as gyoseishoshi (administrative scriveners), judicial scriveners, and licensed tax accountants, each engaged under a separate contract. Where an inheritance spans wards—for example a family home in Bunkyo-ku and a rented house in Toshima-ku—we appraise them together. We also welcome consultations on selling inherited income properties such as whole apartment buildings and office buildings.",
       },
     ],
     internalHeading: "Pages you may also want to see",
@@ -552,7 +561,7 @@ const COPY: Record<LangCode, SouzokuCopy> = {
         id: "sale",
         title: "出售",
         description:
-          "沒有居住的打算、維持費與稅負沉重、想在繼承人之間分配——這些時候，出售就是務實的出口。從依文京區以及豐島區（大塚・巢鴨・駒込・池袋等）行情的估價，到出售相關手續的安排，皆與合作的專業人士（行政書士・司法書士・稅理士等）聯手進行。像是「文京區的老家與豐島區的出租房」這種物件橫跨不同區的繼承，也會一併估價。繼承而來的整棟公寓・大樓等收益不動產的出售，也歡迎洽詢。",
+          "沒有居住的打算、維持費與稅負沉重、想在繼承人之間分配——這些時候，出售就是務實的出口。從依文京區以及豐島區（大塚・巢鴨・駒込・池袋等）行情的估價，到出售相關手續的安排，我們都會協助。需要登記・稅務等專業人士介入時，將為您介紹行政書士・司法書士・稅理士等專業人士，並分別另行簽約進行。像是「文京區的老家與豐島區的出租房」這種物件橫跨不同區的繼承，也會一併估價。繼承而來的整棟公寓・大樓等收益不動產的出售，也歡迎洽詢。",
       },
     ],
     internalHeading: "建議一併閱覽的頁面",
@@ -721,7 +730,7 @@ const COPY: Record<LangCode, SouzokuCopy> = {
         id: "sale",
         title: "出售",
         description:
-          "没有居住的打算、维持费与税负沉重、想在继承人之间分配——这些时候，出售就是务实的出口。从依据文京区以及丰岛区（大塚・巢鸭・驹込・池袋等）行情的估价，到出售相关手续的安排，均与合作的专业人士（行政书士・司法书士・税理士等）协作推进。像是“文京区的老家与丰岛区的出租房”这种物件横跨不同区的继承，也会一并估价。继承而来的整栋公寓・大楼等收益不动产的出售，也欢迎咨询。",
+          "没有居住的打算、维持费与税负沉重、想在继承人之间分配——这些时候，出售就是务实的出口。从依据文京区以及丰岛区（大塚・巢鸭・驹込・池袋等）行情的估价，到出售相关手续的安排，我们都会协助。需要登记・税务等专业人士介入时，将为您介绍行政书士・司法书士・税理士等专业人士，并分别另行签约推进。像是“文京区的老家与丰岛区的出租房”这种物件横跨不同区的继承，也会一并估价。继承而来的整栋公寓・大楼等收益不动产的出售，也欢迎咨询。",
       },
     ],
     internalHeading: "建议一并浏览的页面",

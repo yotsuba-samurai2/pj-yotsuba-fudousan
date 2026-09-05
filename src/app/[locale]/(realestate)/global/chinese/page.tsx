@@ -219,8 +219,9 @@ const COPY: Partial<Record<LangCode, Copy>> = {
     relatedHeading: "Related links on this page",
     authorAlt: "Joji Uramatsu, Representative Director of Yotsuba Real Estate Co., Ltd.",
     authorLabel: "About the author",
+    // 2026-09-05 月次点検（NEW-SR-3）：社労士表記は SR_BIO.en（SR_LAUNCHED 連動）。12c8022 で en だけ取りこぼしていた
     authorBio:
-      "Joji Uramatsu | Representative Director of Yotsuba Real Estate Co., Ltd.; full-time Licensed Real Estate Transaction Specialist (宅地建物取引士); Gyoseishoshi (Administrative Scrivener). Former China General Bureau Chief of the Mainichi Shimbun (34 years as a journalist), stationed in China, Taiwan, and Thailand. Passed the national exam for licensed social insurance and labor consultant (office opening scheduled for September 2026).",
+      `Joji Uramatsu | Representative Director of Yotsuba Real Estate Co., Ltd.; full-time Licensed Real Estate Transaction Specialist (宅地建物取引士); Gyoseishoshi (Administrative Scrivener). Former China General Bureau Chief of the Mainichi Shimbun (34 years as a journalist), stationed in China, Taiwan, and Thailand. ${SR_BIO.en}.`,
     s1: {
       h2: "What you can consult about in Chinese — inheritance, sale, and room hunting",
       p1: "四葉不動産株式会社 (Yotsuba Real Estate Co., Ltd.) handles consultations on the inheritance of real estate in Japan, sales (including appraisal), and rental room hunting, in Chinese. We support both Traditional and Simplified Chinese: for clients in Taiwan and Hong Kong we can assist in Traditional Chinese, and for clients in mainland China in Simplified Chinese.",

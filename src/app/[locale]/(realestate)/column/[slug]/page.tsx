@@ -7,6 +7,7 @@ import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { FAQJsonLd } from "@/components/seo/FAQJsonLd";
 import { SpeakableJsonLd } from "@/components/seo/SpeakableJsonLd";
 import { CtaBand } from "@/components/shared/CtaBand";
+import { resolveRealestateColumnCta } from "@/lib/column-shared";
 
 import type { Metadata } from "next";
 import type { LangCode } from "@/config/languages";
@@ -72,6 +73,11 @@ export default async function ColumnDetailPage({ params }: Props) {
     limit: 3,
   });
 
+  // 2026-09-05 月次点検（INIT-04）：売却・相続系（相続／離日・売却／海外オーナー向け）の記事は
+  // 末尾CTAを sale バリアントに切り替え、/contact に ?intent= を付ける。それ以外は現行既定のまま。
+  // ★判定は ja 正本の base で行う（col は翻訳済み＝category が "Inheritance"／"继承" に差し替わる）。
+  const cta = resolveRealestateColumnCta(base);
+
   return (
     <div>
       <BlogPostingJsonLd businessKey="realestate" column={col} locale={locale} />
@@ -89,7 +95,7 @@ export default async function ColumnDetailPage({ params }: Props) {
           コラムは検索・AIから直接入ってくる入口で、読み終えた直後がいちばん動く。
           contact / thanks には入れない（フォームの前後で導線が割れるため）。 */}
       <div className="mx-auto max-w-3xl px-4">
-        <CtaBand businessKey="realestate" />
+        <CtaBand businessKey="realestate" variant={cta?.variant} intent={cta?.intent} />
       </div>
     </div>
   );

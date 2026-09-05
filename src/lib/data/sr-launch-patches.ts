@@ -229,6 +229,37 @@ export const SR_LAUNCH_TRANSLATION_PATCHES: Record<
       to: "四葉社会保険労務士事務所のコラム。社会保険、助成金、労務管理など、人事・労務にまつわるお役立ち情報をお届けします。",
       note: "法人→事務所",
     },
+    // ── 第3陣（開業後残存・2026-09-05 本番実測）。ja ──
+    // 2026-09-05 月次点検（INIT-03/NEW-ABOUT-3）。
+    // 7/8 の開業前非表示（32a5d94）で「3つ→2つ」に落とした /about のグループ説明と、
+    // /about・/legal/about の「資格」行（representative.qualifications* は描画されず、
+    // 実際に出るのは *.aboutPage.highlights.qualifications.value）が開業パッチに無く本番に残っていた。
+    // from は 2026-09-05 に本番 RSC ペイロードから実測した現行値（推測で書かない・第13条）。
+    // ★ SR_LAUNCH_SCAN_TERMS には入れない：「2つの事業」は労務コラム（副業・兼業）の「2つの事業所」に当たる。
+    {
+      path: "realestate.aboutPage.partnersDescription1",
+      from: "不動産・行政書士。",
+      to: "不動産・行政書士・社会保険労務士。",
+      note: "/about グループ紹介1行目。直下に社労士カードが3枚目として出ているのに2事業のままだった（2026-09-05 実測）",
+    },
+    {
+      path: "realestate.aboutPage.partnersDescription2",
+      from: "2つの事業がそれぞれ別契約で受任し、お客さまの課題を解決します。",
+      to: "3つの事業がそれぞれ別契約で受任し、お客さまの課題を解決します。",
+      note: "同2行目。「それぞれ別契約で受任」（分離受任）は残し、数だけ3にする（2026-09-05 実測）",
+    },
+    {
+      path: "realestate.aboutPage.highlights.qualifications.value",
+      from: "宅地建物取引士・行政書士",
+      to: "宅地建物取引士・行政書士・社会保険労務士",
+      note: "/about 代表紹介の「資格」。AboutPageContent は tObject('realestate.aboutPage.highlights') を描画する。並びは representative.qualificationsRealestate の to に揃える（2026-09-05 実測）",
+    },
+    {
+      path: "legal.aboutPage.highlights.qualifications.value",
+      from: "行政書士・宅地建物取引士",
+      to: "行政書士・社会保険労務士・宅地建物取引士",
+      note: "/legal/about 代表紹介の「資格」（LegalAboutPageContent）。並びは representative.qualificationsLegal の to に揃える（2026-09-05 実測）",
+    },
   ],
   en: [
     {
@@ -334,6 +365,31 @@ export const SR_LAUNCH_TRANSLATION_PATCHES: Record<
       from: "Columns from 四葉社会保険労務士法人. Useful information on social insurance, subsidies, labor management, and other HR & labor topics.",
       to: "Columns from 四葉社会保険労務士事務所. Useful information on social insurance, subsidies, labor management, and other HR & labor topics.",
       note: "法人→事務所",
+    },
+    // ── 第3陣（開業後残存・2026-09-05 本番実測）。en ── 2026-09-05 月次点検（INIT-03/NEW-ABOUT-3）。to は監修前ドラフト
+    {
+      path: "realestate.aboutPage.partnersDescription1",
+      from: "Real estate and administrative scrivener.",
+      to: "Real estate, administrative scrivener, and certified social insurance and labor consultant.",
+      note: "/about グループ紹介1行目。既存文が小文字体のため QUAL.en（大文字表記）ではなく小文字で揃える（2026-09-05 実測）",
+    },
+    {
+      path: "realestate.aboutPage.partnersDescription2",
+      from: "Two businesses, each engaged under a separate contract, working to solve your challenges.",
+      to: "Three businesses, each engaged under a separate contract, working to solve your challenges.",
+      note: "同2行目。separate contract（分離受任）は残し、数だけ3にする（2026-09-05 実測）",
+    },
+    {
+      path: "realestate.aboutPage.highlights.qualifications.value",
+      from: "Licensed Real Estate Transaction Specialist, Administrative Scrivener (Gyoseishoshi)",
+      to: "Licensed Real Estate Transaction Specialist, Administrative Scrivener (Gyoseishoshi), Certified Social Insurance and Labor Consultant",
+      note: "/about「Qualifications」。representative.qualificationsRealestate の to と同一（2026-09-05 実測）",
+    },
+    {
+      path: "legal.aboutPage.highlights.qualifications.value",
+      from: "Administrative Scrivener (Gyoseishoshi), Licensed Real Estate Transaction Specialist",
+      to: "Administrative Scrivener (Gyoseishoshi), Certified Social Insurance and Labor Consultant, Licensed Real Estate Transaction Specialist",
+      note: "/legal/about「Qualifications」。representative.qualificationsLegal の to と同一（2026-09-05 実測）",
     },
   ],
   "zh-tw": [
@@ -441,6 +497,31 @@ export const SR_LAUNCH_TRANSLATION_PATCHES: Record<
       to: "四葉社會保險勞務士事務所的專欄。社會保險、助成金、勞務管理等，為您提供人事・勞務相關的實用資訊。",
       note: "法人→事務所",
     },
+    // ── 第3陣（開業後残存・2026-09-05 本番実測）。zh-tw ── 2026-09-05 月次点検（INIT-03/NEW-ABOUT-3）。to は監修前ドラフト
+    {
+      path: "realestate.aboutPage.partnersDescription1",
+      from: "不動產・行政書士。",
+      to: "不動產・行政書士・社會保險勞務士。",
+      note: "/about グループ紹介1行目（2026-09-05 実測）",
+    },
+    {
+      path: "realestate.aboutPage.partnersDescription2",
+      from: "兩大業務各自另行簽約受任，為客戶解決問題。",
+      to: "三大業務各自另行簽約受任，為客戶解決問題。",
+      note: "同2行目。「各自另行簽約受任」（分離受任）は残し、数だけ三にする（2026-09-05 実測）",
+    },
+    {
+      path: "realestate.aboutPage.highlights.qualifications.value",
+      from: "不動產交易士・行政書士",
+      to: "不動產交易士・行政書士・社會保險勞務士",
+      note: "/about「資格／證照」。representative.qualificationsRealestate の to と同一（2026-09-05 実測）",
+    },
+    {
+      path: "legal.aboutPage.highlights.qualifications.value",
+      from: "行政書士・不動產交易士",
+      to: "行政書士・社會保險勞務士・不動產交易士",
+      note: "/legal/about「資格／證照」。representative.qualificationsLegal の to と同一（2026-09-05 実測）",
+    },
   ],
   zh: [
     {
@@ -546,6 +627,31 @@ export const SR_LAUNCH_TRANSLATION_PATCHES: Record<
       from: "四葉社会保険労務士法人的专栏。社会保险、助成金、劳务管理等，为您提供人事・劳务相关的实用资讯。",
       to: "四葉社会保険労務士事務所的专栏。社会保险、助成金、劳务管理等，为您提供人事・劳务相关的实用资讯。",
       note: "法人→事務所",
+    },
+    // ── 第3陣（開業後残存・2026-09-05 本番実測）。zh ── 2026-09-05 月次点検（INIT-03/NEW-ABOUT-3）。to は監修前ドラフト
+    {
+      path: "realestate.aboutPage.partnersDescription1",
+      from: "不动产・行政书士。",
+      to: "不动产・行政书士・社会保险劳务士。",
+      note: "/about グループ紹介1行目（2026-09-05 実測）",
+    },
+    {
+      path: "realestate.aboutPage.partnersDescription2",
+      from: "两大业务各自另行签约受任，为客户解决问题。",
+      to: "三大业务各自另行签约受任，为客户解决问题。",
+      note: "同2行目。「各自另行签约受任」（分離受任）は残し、数だけ三にする（2026-09-05 実測）",
+    },
+    {
+      path: "realestate.aboutPage.highlights.qualifications.value",
+      from: "不动产交易士・行政书士",
+      to: "不动产交易士・行政书士・社会保险劳务士",
+      note: "/about「资格／证照」。representative.qualificationsRealestate の to と同一（2026-09-05 実測）",
+    },
+    {
+      path: "legal.aboutPage.highlights.qualifications.value",
+      from: "行政书士・不动产交易士",
+      to: "行政书士・社会保险劳务士・不动产交易士",
+      note: "/legal/about「资格／证照」。representative.qualificationsLegal の to と同一（2026-09-05 実測）",
     },
   ],
 };

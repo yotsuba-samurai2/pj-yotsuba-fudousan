@@ -5,9 +5,11 @@ import { OFFICE } from "@/lib/shared/office-public";
 import { buildPageMetadata } from "@/lib/seo";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 
+// 2026-09-05 月次点検（NEW-TECH-1）: (labor)/layout.tsx の template `%s｜事務所名` が事務所名を付けるため、
+// ここで事務所名を足すと <title> が二重になっていた（本番実測）。legal/contact・labor/about と同じく見出しだけ渡す。
 export const metadata = buildPageMetadata({
   businessKey: "labor",
-  title: "お問い合わせ | 四葉社会保険労務士事務所",
+  title: "お問い合わせ",
   description: "社会保険手続き、助成金活用、就業規則の相談はこちら。電話・フォーム・オンライン予約で対応。文京区の四葉社会保険労務士事務所。",
   path: "/labor/contact",
 });

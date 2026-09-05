@@ -212,3 +212,32 @@ export function filterColumnsByTheme(
     .sort((a, b) => b.date.localeCompare(a.date))
     .slice(0, limit);
 }
+
+// ── 不動産コラム末尾CTAの出し分け（2026-09-05 月次点検 INIT-04） ──
+
+/** column/[slug] の末尾 CtaBand に渡す variant / intent（intent は contact-intake.ts の realestate キー） */
+export type RealestateColumnCta = {
+  variant: "sale";
+  intent: "souzoku" | "sale" | "management";
+};
+
+/**
+ * 不動産コラム詳細の末尾 CtaBand を、売る側・相続人向けの "sale" バリアントに切り替えるかを決める純関数。
+ * 判定は **ja 正本の category のみ**（tags は見ない。tags「非居住者」等で判定すると、買主向け記事
+ * （投資・事業用不動産）に売主向けCTAが出る誤爆が起きるため）。
+ * ★呼び出し側は getLocalizedColumn 前の base（ja）を渡すこと。en/zh の category は
+ *   "Inheritance"／"继承" 等に差し替わるため一致しない＝既定CTAに落ちる。
+ * - 「相続」で始まる（相続／相続不動産ガイド 等）→ intent "souzoku"
+ * - 「離日・売却」→ intent "sale"
+ * - 「海外オーナー向け」→ intent "management"
+ * - それ以外（投資・事業用不動産／グループホーム／賃貸の基礎 等）→ undefined＝現行既定のCTAのまま
+ */
+export function resolveRealestateColumnCta(
+  col: Pick<Column, "category">,
+): RealestateColumnCta | undefined {
+  const category = (col.category ?? "").trim();
+  if (category.startsWith("相続")) return { variant: "sale", intent: "souzoku" };
+  if (category === "離日・売却") return { variant: "sale", intent: "sale" };
+  if (category === "海外オーナー向け") return { variant: "sale", intent: "management" };
+  return undefined;
+}

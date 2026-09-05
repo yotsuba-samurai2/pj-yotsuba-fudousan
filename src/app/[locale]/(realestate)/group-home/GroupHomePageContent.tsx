@@ -16,6 +16,12 @@ import { getRequestLocale } from "@/lib/getRequestLocale";
 import { getColumns, getLocalizedColumn, filterColumnsByTheme } from "@/lib/columns";
 import { RelatedColumnsSection } from "@/components/column/RelatedColumnsSection";
 import { CannotHandle } from "@/components/shared/CannotHandle";
+import { CrossLinkBanner } from "@/components/shared/CrossLinkBanner";
+import { Placeholder } from "@/components/shared/Placeholder";
+import { getCrossLinks } from "@/lib/cross-links";
+import { SR_LAUNCHED } from "@/lib/shared/office";
+import { SR_OFFICE_NAME } from "@/lib/shared/sr-name";
+import { SR_ENTITY_LABEL_I18N } from "@/lib/shared/sr-label";
 import type { LangCode } from "@/config/languages";
 
 /**
@@ -32,8 +38,18 @@ import type { LangCode } from "@/config/languages";
  * - JSON-LDは既存3種（Article・FAQPage・Breadcrumb）のみ＝新規出力しない。構造・日付は不変、文字列のみロケール別。
  * - 独自性の核＝「物件（不動産）×指定申請（行政手続）を同一窓口」。他士業をサイト前面で宣伝せず、
  *   労務・雇用助成金（社労士の業務範囲）は「連携する専門家」と一般化。特定事務所名は出さない。
+ *   → 2026-09-05 月次点検（NEW-WELFARE-2）: 社労士事務所は 2026-09-01 開業済み。SR_LAUNCHED=true のときは
+ *     労務・雇用助成金の文脈（補助金節・FAQ・代表紹介）で SR_OFFICE_NAME を名指しし「別契約で承ります」とする。
+ *     事務所名は連続リテラルを書かず SR_OFFICE_NAME / SR_ENTITY_LABEL_I18N で組み立てる（sr-label.ts の決まりごと）。
+ *     法人設立文脈の「連携する専門家と進めます」（司法書士等）は労務ではないため据え置き。
+ *     /labor/services/kaigo-roumu・joseikin への導線は cross-links.ts C16（CrossLinkBanner）で描画。
  * - 断定・効果保証はしない。数値・法令は「2026年7月時点の一般情報・最新は自治体窓口で確認」を注記。
  */
+
+// 2026-09-05 月次点検（NEW-WELFARE-5）: 根拠欄の「裏取りしていません（未検証）」の一文が本番HTMLに露出していたため、
+// 4ロケールとも sourcesNote から外し Placeholder（本番で null）へ退避。浦松の裏取り後にこの定数ごと削除する。
+const SOURCES_UNVERIFIED_NOTE =
+  "浦松＝根拠欄5項目の最新の内容・最終改正日の裏取り。退避した文：『※各法令・制度の最新の内容・最終改正日は本ページ作成時点で個別に裏取りしていません（未検証）。』（en/zh-tw/zh の同文も同時に外した）";
 
 type TypeCardId = "detached" | "apartment" | "satellite";
 type TypeCard = { id: TypeCardId; title: string; description: string };
@@ -362,7 +378,11 @@ const COPY: Record<LangCode, GroupHomeCopy> = {
     subsidyHeading: "補助金・資金の全体像",
     subsidyBody: [
       "文京区には、区独自の整備費補助・運営費補助の制度があり、対象・要件・締切は年度で変わります。まずは区窓口で最新の適用可否を確認します。事業計画書の作成は、元記者の「伝わる書き方」でサポートします。",
-      "なお、補助金（行政書士の業務範囲）と、雇用に関わる助成金（社会保険労務士の業務範囲）は別物です。労務・雇用助成金については、連携する専門家をご案内します。",
+      // 2026-09-05 月次点検（NEW-WELFARE-2）: 開業後は社労士事務所を名指し（別契約）。開業前文は据え置き
+      "なお、補助金（行政書士の業務範囲）と、雇用に関わる助成金（社会保険労務士の業務範囲）は別物です。" +
+        (SR_LAUNCHED
+          ? `雇用関係の助成金と労務は、${SR_OFFICE_NAME}が別契約で承ります。`
+          : "労務・雇用助成金については、連携する専門家をご案内します。"),
     ],
     subsidyNote:
       "※補助金・助成金の制度内容・適用可否は年度や状況で変わります。最新は各窓口でご確認ください。本ガイドは2026年7月時点の一般的な情報です。",
@@ -416,7 +436,11 @@ const COPY: Record<LangCode, GroupHomeCopy> = {
       {
         question: "補助金は使えますか？",
         answer:
-          "文京区には区独自の整備費補助・運営費補助の制度があり、対象・要件・締切は年度で変わります。まず区窓口で最新の適用可否を確認します。事業計画書の作成は、元記者の「伝わる書き方」でサポートします。なお、雇用に関わる助成金（社会保険労務士の業務範囲）は補助金とは別で、連携する専門家をご案内します。",
+          // 2026-09-05 月次点検（NEW-WELFARE-2）: 開業後は社労士事務所を名指し（別契約）
+          "文京区には区独自の整備費補助・運営費補助の制度があり、対象・要件・締切は年度で変わります。まず区窓口で最新の適用可否を確認します。事業計画書の作成は、元記者の「伝わる書き方」でサポートします。なお、雇用に関わる助成金（社会保険労務士の業務範囲）は補助金とは別で、" +
+          (SR_LAUNCHED
+            ? `${SR_OFFICE_NAME}が別契約で承ります。`
+            : "連携する専門家をご案内します。"),
       },
       {
         question: "自治体によって手続きは違いますか？",
@@ -613,10 +637,17 @@ const COPY: Record<LangCode, GroupHomeCopy> = {
       "文京区の区独自制度（障害者グループホーム整備費等補助、精神障害者グループホーム運営費補助金交付要綱等）——対象・要件・締切は年度により変わる（文京区福祉部障害福祉課で要確認）。",
     ],
     sourcesNote:
-      "※各法令・制度の最新の内容・最終改正日は本ページ作成時点で個別に裏取りしていません（未検証）。数値・法制度は2026年7月時点の一般的な情報であり、最新は必ず管轄自治体・消防署・建築部署の窓口でご確認ください。本ページは一般的な情報の提供を目的とするもので、個別の可否判断・効果の保証を行うものではありません。",
+      // 2026-09-05 月次点検（NEW-WELFARE-5）: 「裏取りしていません（未検証）」の一文は SOURCES_UNVERIFIED_NOTE（Placeholder）へ退避
+      "※数値・法制度は2026年7月時点の一般的な情報であり、最新は必ず管轄自治体・消防署・建築部署の窓口でご確認ください。本ページは一般的な情報の提供を目的とするもので、個別の可否判断・効果の保証を行うものではありません。",
 
     repBio:
-      "元毎日新聞記者として国内外の現場を歩き、中国総局長を務めたのち、地元・文京区小日向で四葉不動産と四葉行政書士事務所を営んでいます。グループホーム開設のご相談は、物件（不動産）と指定申請（行政手続）、そして自治体との対話が絡み合った「整理」から始まります。取材で培った、聞いて・整理して・分かりやすく伝える力と、宅地建物取引士・行政書士としての知識を土台に、物件探しから開設後の運営まで一つの窓口で伴走します。労務・雇用助成金など専門外の場面では、連携する専門家をご案内します。",
+      // 2026-09-05 月次点検（NEW-WELFARE-2）: 開業後は3事業体・労務は社労士事務所が別契約。開業前文は据え置き
+      `元毎日新聞記者として国内外の現場を歩き、中国総局長を務めたのち、地元・文京区小日向で${
+        SR_LAUNCHED ? `四葉不動産・四葉行政書士事務所・${SR_OFFICE_NAME}` : "四葉不動産と四葉行政書士事務所"
+      }を営んでいます。グループホーム開設のご相談は、物件（不動産）と指定申請（行政手続）、そして自治体との対話が絡み合った「整理」から始まります。取材で培った、聞いて・整理して・分かりやすく伝える力と、宅地建物取引士・行政書士としての知識を土台に、物件探しから開設後の運営まで一つの窓口で伴走します。` +
+        (SR_LAUNCHED
+          ? `労務・雇用助成金は、${SR_OFFICE_NAME}が別契約で承ります。`
+          : "労務・雇用助成金など専門外の場面では、連携する専門家をご案内します。"),
     repRole: "代表",
     ctaHeading: "希望条件だけでも、お聞かせください。",
     ctaLead:
@@ -849,7 +880,11 @@ const COPY: Record<LangCode, GroupHomeCopy> = {
     subsidyHeading: "The big picture of subsidies and funding",
     subsidyBody: [
       "Bunkyo has its own ward development-cost and operating-cost subsidy schemes, and the targets, requirements, and deadlines change by fiscal year. First, confirm the latest eligibility at the ward window. We support the preparation of the business plan with a former reporter's 'writing that gets through.'",
-      "Note that a subsidy (hojokin; within the scope of gyoseishoshi practice) and an employment-related grant (joseikin; within the scope of a certified social insurance labor consultant) are different things. For labor matters and employment grants, we introduce a partner professional.",
+      // 2026-09-05 月次点検（NEW-WELFARE-2）: 開業後は社労士事務所を名指し（別契約）。監修前ドラフト
+      "Note that a subsidy (hojokin; within the scope of gyoseishoshi practice) and an employment-related grant (joseikin; within the scope of a certified social insurance labor consultant) are different things. " +
+        (SR_LAUNCHED
+          ? `Employment-related grants and labor matters are handled by ${SR_ENTITY_LABEL_I18N.en} under a separate contract.`
+          : "For labor matters and employment grants, we introduce a partner professional."),
     ],
     subsidyNote:
       "Note: The content and eligibility of subsidies and grants change with the fiscal year and circumstances. Confirm the latest at each window. This guide is general information as of July 2026.",
@@ -896,7 +931,11 @@ const COPY: Record<LangCode, GroupHomeCopy> = {
       {
         question: "Can I use a subsidy?",
         answer:
-          "Bunkyo has its own ward development-cost and operating-cost subsidy schemes, and the targets, requirements, and deadlines change by fiscal year. First, confirm the latest eligibility at the ward window. We support the preparation of the business plan with a former reporter's 'writing that gets through.' Note that an employment-related grant (within the scope of a certified social insurance labor consultant) is separate from a subsidy, and we introduce a partner professional.",
+          // 2026-09-05 月次点検（NEW-WELFARE-2）: 開業後は社労士事務所を名指し（別契約）。監修前ドラフト
+          "Bunkyo has its own ward development-cost and operating-cost subsidy schemes, and the targets, requirements, and deadlines change by fiscal year. First, confirm the latest eligibility at the ward window. We support the preparation of the business plan with a former reporter's 'writing that gets through.' Note that an employment-related grant (within the scope of a certified social insurance labor consultant) is separate from a subsidy, " +
+          (SR_LAUNCHED
+            ? `and is handled by ${SR_ENTITY_LABEL_I18N.en} under a separate contract.`
+            : "and we introduce a partner professional."),
       },
       {
         question: "Do the procedures differ by municipality?",
@@ -947,10 +986,19 @@ const COPY: Record<LangCode, GroupHomeCopy> = {
       "Bunkyo's ward-specific schemes (the subsidy for the development costs of group homes for persons with disabilities, the grant guidelines for the operating-cost subsidy for group homes for persons with mental disabilities, and others)—the targets, requirements, and deadlines change by fiscal year (confirm with the Disability Welfare Section, Welfare Department, Bunkyo Ward).",
     ],
     sourcesNote:
-      "Note: The latest content and dates of the most recent amendments to each law and scheme have not been individually verified as of the time this page was prepared (unverified). The figures and legal systems are general information as of July 2026; always confirm the latest at the window of the municipality, fire station, and building division having jurisdiction. This page is intended to provide general information and does not make individual eligibility judgments or guarantee outcomes.",
+      // 2026-09-05 月次点検（NEW-WELFARE-5）: 「have not been individually verified (unverified)」の一文は Placeholder へ退避
+      "Note: The figures and legal systems are general information as of July 2026; always confirm the latest at the window of the municipality, fire station, and building division having jurisdiction. This page is intended to provide general information and does not make individual eligibility judgments or guarantee outcomes.",
 
     repBio:
-      "After walking the field in Japan and abroad as a reporter for the Mainichi Shimbun and serving as its China General Bureau Chief, I now run Yotsuba Real Estate and Yotsuba Gyoseishoshi Office in my home neighborhood of Kohinata, Bunkyo. Consultations about opening a group home begin with 'untangling' the property (real estate), the designation application (administrative procedure), and the dialogue with the municipality that are intertwined in it. Building on the listening, organizing, and plain-spoken communication skills honed through reporting, and on my knowledge as a Licensed Real Estate Transaction Specialist and Gyoseishoshi (Administrative Scrivener), I walk with you in one window from the property search to post-opening operation. Where matters fall outside my scope, such as labor and employment grants, I introduce a partner professional.",
+      // 2026-09-05 月次点検（NEW-WELFARE-2）: 開業後は3事業体・労務は社労士事務所が別契約。監修前ドラフト
+      `After walking the field in Japan and abroad as a reporter for the Mainichi Shimbun and serving as its China General Bureau Chief, I now run ${
+        SR_LAUNCHED
+          ? `Yotsuba Real Estate, Yotsuba Gyoseishoshi Office, and ${SR_ENTITY_LABEL_I18N.en}`
+          : "Yotsuba Real Estate and Yotsuba Gyoseishoshi Office"
+      } in my home neighborhood of Kohinata, Bunkyo. Consultations about opening a group home begin with 'untangling' the property (real estate), the designation application (administrative procedure), and the dialogue with the municipality that are intertwined in it. Building on the listening, organizing, and plain-spoken communication skills honed through reporting, and on my knowledge as a Licensed Real Estate Transaction Specialist and Gyoseishoshi (Administrative Scrivener), I walk with you in one window from the property search to post-opening operation. ` +
+        (SR_LAUNCHED
+          ? `Labor matters and employment grants are handled by ${SR_ENTITY_LABEL_I18N.en} under a separate contract.`
+          : "Where matters fall outside my scope, such as labor and employment grants, I introduce a partner professional."),
     repRole: "Representative",
     ctaHeading: "Feel free to consult us first",
     ctaLead:
@@ -1183,7 +1231,11 @@ const COPY: Record<LangCode, GroupHomeCopy> = {
     subsidyHeading: "補助金・資金的全貌",
     subsidyBody: [
       "文京區有區獨自的整備費補助・營運費補助制度，對象・要件・截止日會逐年度變動。首先在區窗口確認最新的適用可否。事業計畫書的製作，以前記者「能傳達的寫法」為您支援。",
-      "另外，補助金（行政書士的業務範圍）與雇用相關的助成金（社會保險勞務士的業務範圍）是不同的事物。關於勞務・雇用助成金，將為您介紹合作的專業人士。",
+      // 2026-09-05 月次点検（NEW-WELFARE-2）: 開業後は社労士事務所を名指し（別契約）。監修前ドラフト
+      "另外，補助金（行政書士的業務範圍）與雇用相關的助成金（社會保險勞務士的業務範圍）是不同的事物。" +
+        (SR_LAUNCHED
+          ? `雇用相關的助成金與勞務，由${SR_ENTITY_LABEL_I18N.zhTw}另行簽約承辦。`
+          : "關於勞務・雇用助成金，將為您介紹合作的專業人士。"),
     ],
     subsidyNote:
       "※補助金・助成金的制度內容・適用可否會因年度與情況而變。最新請向各窗口確認。本指南為2026年7月時點的一般性資訊。",
@@ -1230,7 +1282,11 @@ const COPY: Record<LangCode, GroupHomeCopy> = {
       {
         question: "可以使用補助金嗎？",
         answer:
-          "文京區有區獨自的整備費補助・營運費補助制度，對象・要件・截止日會逐年度變動。首先在區窗口確認最新的適用可否。事業計畫書的製作，以前記者「能傳達的寫法」為您支援。另外，雇用相關的助成金（社會保險勞務士的業務範圍）與補助金不同，將為您介紹合作的專業人士。",
+          // 2026-09-05 月次点検（NEW-WELFARE-2）: 開業後は社労士事務所を名指し（別契約）。監修前ドラフト
+          "文京區有區獨自的整備費補助・營運費補助制度，對象・要件・截止日會逐年度變動。首先在區窗口確認最新的適用可否。事業計畫書的製作，以前記者「能傳達的寫法」為您支援。另外，雇用相關的助成金（社會保險勞務士的業務範圍）與補助金不同，" +
+          (SR_LAUNCHED
+            ? `由${SR_ENTITY_LABEL_I18N.zhTw}另行簽約承辦。`
+            : "將為您介紹合作的專業人士。"),
       },
       {
         question: "手續會因自治體而不同嗎？",
@@ -1281,10 +1337,17 @@ const COPY: Record<LangCode, GroupHomeCopy> = {
       "文京區的區獨自制度（身心障礙者團體家屋整備費等補助、精神障礙者團體家屋營運費補助金交付要綱等）——對象・要件・截止日會逐年度變動（請向文京區福祉部障礙福祉課確認）。",
     ],
     sourcesNote:
-      "※各法令・制度的最新內容・最終修正日期，於本頁製作時點未逐一查證（未經查證）。數值・法制度為2026年7月時點的一般性資訊，最新請務必向管轄自治體・消防署・建築部署的窗口確認。本頁以提供一般資訊為目的，不進行個別可否判斷或效果保證。",
+      // 2026-09-05 月次点検（NEW-WELFARE-5）: 「未逐一查證（未經查證）」の一文は Placeholder へ退避
+      "※數值・法制度為2026年7月時點的一般性資訊，最新請務必向管轄自治體・消防署・建築部署的窗口確認。本頁以提供一般資訊為目的，不進行個別可否判斷或效果保證。",
 
     repBio:
-      "曾以每日新聞記者的身分走訪國內外現場，並擔任中國總局長，之後在家鄉・文京區小日向經營四葉不動産與四葉行政書士事務所。團體家屋開設的諮詢，往往從整理物件（不動產）・指定申請（行政手續）以及與自治體的對話相互交織的狀態開始。以採訪培養出的傾聽・整理・淺白傳達的能力，加上宅地建物取引士・行政書士的知識為基礎，於同一窗口從物件挑選陪伴到開設後的營運。在勞務・雇用助成金等專業以外的場面，將為您介紹合作的專業人士。",
+      // 2026-09-05 月次点検（NEW-WELFARE-2）: 開業後は3事業体・労務は社労士事務所が別契約。監修前ドラフト
+      `曾以每日新聞記者的身分走訪國內外現場，並擔任中國總局長，之後在家鄉・文京區小日向經營${
+        SR_LAUNCHED ? `四葉不動産、四葉行政書士事務所與${SR_ENTITY_LABEL_I18N.zhTw}` : "四葉不動産與四葉行政書士事務所"
+      }。團體家屋開設的諮詢，往往從整理物件（不動產）・指定申請（行政手續）以及與自治體的對話相互交織的狀態開始。以採訪培養出的傾聽・整理・淺白傳達的能力，加上宅地建物取引士・行政書士的知識為基礎，於同一窗口從物件挑選陪伴到開設後的營運。` +
+        (SR_LAUNCHED
+          ? `勞務・雇用助成金由${SR_ENTITY_LABEL_I18N.zhTw}另行簽約承辦。`
+          : "在勞務・雇用助成金等專業以外的場面，將為您介紹合作的專業人士。"),
     repRole: "代表",
     ctaHeading: "歡迎先輕鬆諮詢",
     ctaLead:
@@ -1517,7 +1580,11 @@ const COPY: Record<LangCode, GroupHomeCopy> = {
     subsidyHeading: "补助金・资金的全貌",
     subsidyBody: [
       "文京区有区独自的整备费补助・运营费补助制度，对象・要件・截止日会逐年度变动。首先在区窗口确认最新的适用可否。事业计划书的制作，以前记者“能传达的写法”为您支援。",
-      "另外，补助金（行政书士的业务范围）与雇用相关的助成金（社会保险劳务士的业务范围）是不同的事物。关于劳务・雇用助成金，将为您介绍合作的专业人士。",
+      // 2026-09-05 月次点検（NEW-WELFARE-2）: 開業後は社労士事務所を名指し（別契約）。監修前ドラフト
+      "另外，补助金（行政书士的业务范围）与雇用相关的助成金（社会保险劳务士的业务范围）是不同的事物。" +
+        (SR_LAUNCHED
+          ? `雇用相关的助成金与劳务，由${SR_ENTITY_LABEL_I18N.zh}另行签约承办。`
+          : "关于劳务・雇用助成金，将为您介绍合作的专业人士。"),
     ],
     subsidyNote:
       "※补助金・助成金的制度内容・适用可否会因年度与情况而变。最新请向各窗口确认。本指南为2026年7月时点的一般性信息。",
@@ -1564,7 +1631,11 @@ const COPY: Record<LangCode, GroupHomeCopy> = {
       {
         question: "可以使用补助金吗？",
         answer:
-          "文京区有区独自的整备费补助・运营费补助制度，对象・要件・截止日会逐年度变动。首先在区窗口确认最新的适用可否。事业计划书的制作，以前记者“能传达的写法”为您支援。另外，雇用相关的助成金（社会保险劳务士的业务范围）与补助金不同，将为您介绍合作的专业人士。",
+          // 2026-09-05 月次点検（NEW-WELFARE-2）: 開業後は社労士事務所を名指し（別契約）。監修前ドラフト
+          "文京区有区独自的整备费补助・运营费补助制度，对象・要件・截止日会逐年度变动。首先在区窗口确认最新的适用可否。事业计划书的制作，以前记者“能传达的写法”为您支援。另外，雇用相关的助成金（社会保险劳务士的业务范围）与补助金不同，" +
+          (SR_LAUNCHED
+            ? `由${SR_ENTITY_LABEL_I18N.zh}另行签约承办。`
+            : "将为您介绍合作的专业人士。"),
       },
       {
         question: "手续会因自治体而不同吗？",
@@ -1615,10 +1686,17 @@ const COPY: Record<LangCode, GroupHomeCopy> = {
       "文京区的区独自制度（残障者团体家屋整备费等补助、精神残障者团体家屋运营费补助金交付要纲等）——对象・要件・截止日会逐年度变动（请向文京区福祉部残障福祉科确认）。",
     ],
     sourcesNote:
-      "※各法令・制度的最新内容・最终修订日期，在本页制作时点未逐一核实（未经核实）。数值・法制度为2026年7月时点的一般性信息，最新请务必向管辖自治体・消防署・建筑部门的窗口确认。本页以提供一般信息为目的，不进行个别可否判断或效果保证。",
+      // 2026-09-05 月次点検（NEW-WELFARE-5）: 「未逐一核实（未经核实）」の一文は Placeholder へ退避
+      "※数值・法制度为2026年7月时点的一般性信息，最新请务必向管辖自治体・消防署・建筑部门的窗口确认。本页以提供一般信息为目的，不进行个别可否判断或效果保证。",
 
     repBio:
-      "曾以每日新闻记者的身份走访国内外现场，并担任中国总局长，之后在家乡・文京区小日向经营四葉不動産与四葉行政書士事務所。团体家屋开设的咨询，往往从整理物件（不动产）・指定申请（行政手续）以及与自治体的对话相互交织的状态开始。以采访培养出的倾听・梳理・浅显传达的能力，加上宅地建物取引士・行政书士的知识为基础，在同一窗口从物件挑选陪伴到开设后的运营。在劳务・雇用助成金等专业以外的场面，将为您介绍合作的专业人士。",
+      // 2026-09-05 月次点検（NEW-WELFARE-2）: 開業後は3事業体・労務は社労士事務所が別契約。監修前ドラフト
+      `曾以每日新闻记者的身份走访国内外现场，并担任中国总局长，之后在家乡・文京区小日向经营${
+        SR_LAUNCHED ? `四葉不動産、四葉行政書士事務所与${SR_ENTITY_LABEL_I18N.zh}` : "四葉不動産与四葉行政書士事務所"
+      }。团体家屋开设的咨询，往往从整理物件（不动产）・指定申请（行政手续）以及与自治体的对话相互交织的状态开始。以采访培养出的倾听・梳理・浅显传达的能力，加上宅地建物取引士・行政书士的知识为基础，在同一窗口从物件挑选陪伴到开设后的运营。` +
+        (SR_LAUNCHED
+          ? `劳务・雇用助成金由${SR_ENTITY_LABEL_I18N.zh}另行签约承办。`
+          : "在劳务・雇用助成金等专业以外的场面，将为您介绍合作的专业人士。"),
     repRole: "代表",
     ctaHeading: "欢迎先轻松咨询",
     ctaLead:
@@ -2050,6 +2128,12 @@ export default async function GroupHomePageContent() {
         </div>
       </section>
 
+      {/* 2026-09-05 月次点検（NEW-WELFARE-2/3）: C16＝開業後の社労士ページ（労務管理・雇用関係助成金）への導線。
+          SR_LAUNCHED=false の間は getCrossLinks が空を返す＝非表示。3者版の独立受任注記は CrossLinkBanner が出す */}
+      {getCrossLinks("/group-home", SR_LAUNCHED).map((cl) => (
+        <CrossLinkBanner key={cl.id} link={cl} />
+      ))}
+
       {/* ─── 根拠欄 ─── */}
       <section className="border-t border-border py-14 sm:py-20 md:py-28">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
@@ -2059,6 +2143,8 @@ export default async function GroupHomePageContent() {
               <li key={source}>{source}</li>
             ))}
           </ul>
+          {/* 2026-09-05 月次点検（NEW-WELFARE-5）: 未検証の一文は本番で null になる Placeholder へ退避（浦松の裏取り待ち） */}
+          <Placeholder reason={SOURCES_UNVERIFIED_NOTE} />
           <p className="mt-4 text-xs leading-relaxed text-text-muted">
             {c.sourcesNote}
           </p>

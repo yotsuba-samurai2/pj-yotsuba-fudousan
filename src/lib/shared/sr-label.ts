@@ -40,6 +40,16 @@ export const SR_ROLE_SENTENCE = {
   jirei: SR_LAUNCHED
     ? `労務や人員配置に関するご相談は、${SR_OFFICE_NAME}が別契約で受任します。`
     : `労務や人員配置に関するご相談は、${SR_ENTITY_LABEL}が、開業後に別契約で受任する予定です。`,
+
+  /**
+   * /legal/services/gaikokujin-shain §8「当事務所の業務ではありません」の li。
+   * 「雇用にともなう労務・社会保険：」の直後に置く（同 ul の他の li に揃えて句点なし）。
+   * 未開業側は 2026-09-05 以前の直書き文をそのまま保持（env 未設定時の描画を変えない）。
+   * 2026-09-05 月次点検（INIT-02）で新設。
+   */
+  gaikokujinKoyo: SR_LAUNCHED
+    ? `${SR_OFFICE_NAME}が別契約で承ります`
+    : "社会保険労務士業務は代表の開業（2026年9月予定）前のため、現時点ではお受けできません",
 } as const;
 
 /**
@@ -73,4 +83,31 @@ export const SR_ENTITY_LABEL_I18N = {
     : "Yotsuba Social Insurance and Labor Consultant Office (opening scheduled for September 2026; not yet in operation)",
   zhTw: SR_LAUNCHED ? SR_OFFICE_NAME : `${SR_OFFICE_NAME}（預定2026年9月開業・現階段尚未開業）`,
   zh: SR_LAUNCHED ? SR_OFFICE_NAME : `${SR_OFFICE_NAME}（预定2026年9月开业・现阶段尚未开业）`,
+} as const;
+
+/**
+ * 本文の一文を4書体で持つ用途別定数（2026-09-05 月次点検 NEW-SR-1 で新設）。
+ *
+ * global: /global「お部屋探しから、その後の暮らしまで」第3段落の**第2文**。
+ *   第1文（「…専門分野が分かれます。」）は呼び出し側に残す。
+ *   開業後の事務所名は SR_OFFICE_NAME／SR_ENTITY_LABEL_I18N 経由（連続リテラルを書かない）。
+ *   zh-tw／zh は同段落が四葉行政書士事務所を日本語表記で書いているため、SR_ENTITY_LABEL_I18N の慣行（日本語表記）に揃える。
+ *   未開業側は 2026-09-05 以前の直書き文をそのまま保持（env 未設定時の描画を変えない）。
+ *   en/zh-tw/zh の開業後文は監修前ドラフト。
+ */
+export const SR_ROLE_SENTENCE_I18N = {
+  global: {
+    ja: SR_LAUNCHED
+      ? `社会保険労務士業務は、${SR_OFFICE_NAME}が別契約で承ります。`
+      : "社会保険労務士業務は代表の開業（2026年9月予定）前のため、現時点では連携する専門家を一般的にご案内する形になります。",
+    en: SR_LAUNCHED
+      ? `Work of a Certified Social Insurance and Labor Consultant (Sharoushi) is undertaken by ${SR_ENTITY_LABEL_I18N.en} under a separate contract.`
+      : "Because licensed social insurance and labor consultant (shakai hoken romushi) work is before our representative's office opening (scheduled for September 2026), for now we introduce partner professionals in general terms.",
+    zhTw: SR_LAUNCHED
+      ? `社會保險勞務士業務由${SR_ENTITY_LABEL_I18N.zhTw}另行簽約承辦。`
+      : "社會保險勞務士業務在代表開業（預定2026年9月）之前，現階段將以一般性介紹合作專業人士的方式對應。",
+    zh: SR_LAUNCHED
+      ? `社会保险劳务士业务由${SR_ENTITY_LABEL_I18N.zh}另行签约承办。`
+      : "社会保险劳务士业务在代表开业（预定2026年9月）之前，现阶段将以一般性介绍合作专业人士的方式对应。",
+  },
 } as const;

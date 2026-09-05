@@ -77,7 +77,7 @@ A pharmacy permit is granted after the structure and equipment are in place and 
 
 Investigation of the property, brokerage, and the sale or lease contract are handled by Yotsuba Real Estate Co., Ltd. (licensed real estate agent, Tokyo Governor (1) No. 113304). Preparation of documents submitted to public offices, such as the pharmacy permit application, is handled by Yotsuba Administrative Scrivener Office. Building confirmation and the design of the dispensing room are handled by an architect; the plumbing and HVAC design, by the contractor. The final decision on conformity under the PMD Act rests with the health centre; tax goes to a tax accountant.
 
-**These two (the real estate agent and the administrative scrivener office) are independent business entities. You engage each directly.** We neither pay nor accept referral fees or introduction commissions. Registration goes to a judicial scrivener, tax to a tax accountant, and labour matters to a certified social insurance labour consultant (opening planned September 2026) — each engaged by you directly. Consultation is free of charge.
+**These two (the real estate agent and the administrative scrivener office) are independent business entities. You engage each directly.** We neither pay nor accept referral fees or introduction commissions. Registration goes to a judicial scrivener, tax to a tax accountant, and labour matters to a certified social insurance labour consultant — each engaged by you directly. Consultation is free of charge.
 
 ## Frequently asked questions
 

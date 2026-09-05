@@ -187,8 +187,9 @@ const COPY: Record<LangCode, AccessCopy> = {
     ],
     authorAlt: "Joji Uramatsu, Representative Director of Yotsuba Real Estate Co., Ltd.",
     authorLabel: "About the author",
+    // 2026-09-05 月次点検（NEW-SR-3）：社労士表記は SR_BIO.en（SR_LAUNCHED 連動）。12c8022 で en だけ取りこぼしていた
     authorBio:
-      "Joji Uramatsu | Representative Director of Yotsuba Real Estate Co., Ltd.; full-time Licensed Real Estate Transaction Specialist (宅地建物取引士); Gyoseishoshi (Administrative Scrivener). Former China General Bureau Chief of the Mainichi Shimbun (34 years as a journalist), stationed in China, Taiwan, and Thailand. Passed the national exam for licensed social insurance and labor consultant (office opening scheduled for September 2026).",
+      `Joji Uramatsu | Representative Director of Yotsuba Real Estate Co., Ltd.; full-time Licensed Real Estate Transaction Specialist (宅地建物取引士); Gyoseishoshi (Administrative Scrivener). Former China General Bureau Chief of the Mainichi Shimbun (34 years as a journalist), stationed in China, Taiwan, and Thailand. ${SR_BIO.en}.`,
   },
   "zh-tw": {
     metaTitle: "交通與費用｜茗荷谷站步行5分的四葉不動産株式会社",

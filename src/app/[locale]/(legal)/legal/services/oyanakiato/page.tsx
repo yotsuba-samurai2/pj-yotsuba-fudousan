@@ -286,7 +286,8 @@ export default async function Page() {
           <li><strong className="text-ink">家庭裁判所への申立ての代理、法的紛争の解決、法律判断</strong>：弁護士</li>
         </ul>
         <p className="mt-3 leading-relaxed text-text">
-          必要な場合は提携する専門家をご紹介します。<strong className="text-ink">紹介料の授受は一切ありません。</strong>各専門家とお客様に直接ご契約いただく形をとっています。
+          {/* 2026-09-05 月次点検（NEW-SR-6）：「提携する専門家」→「専門家」（U12＝書面での提携なし） */}
+          必要な場合は専門家をご紹介します。<strong className="text-ink">紹介料の授受は一切ありません。</strong>各専門家とお客様に直接ご契約いただく形をとっています。
         </p>
         <p className="mt-3 text-sm leading-relaxed text-text-muted">
           このページは一般的な情報提供です。個別のご事情に応じた判断は、面談のうえ資格者が行います。ここに記した制度の適用可否も、ご本人の障害の種別・程度、お住まいの自治体、財産の状況によって変わります。

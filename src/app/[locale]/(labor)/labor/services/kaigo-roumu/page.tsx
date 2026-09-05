@@ -176,9 +176,11 @@ export default async function Page() {
             </tbody>
           </table>
         </div>
+        {/* 2026-09-05 月次点検（NEW-WELFARE-5）: 「一次確認していません（未検証）」の一文が本番HTMLに露出していたため
+            Placeholder（本番で null）へ退避。浦松の一次確認後に Placeholder ごと削除する。案内文は残す */}
+        <Placeholder reason="浦松＝届出期限日数の一次確認（雇用保険・社会保険・労働保険の各届出）。退避した文：『※届出の具体的な期限日数は、本ページ作成時点で個別に一次確認していません（未検証）。』" />
         <p className="mt-3 text-xs leading-relaxed text-text-muted">
-          ※届出の具体的な期限日数は、本ページ作成時点で個別に一次確認していません（<strong>未検証</strong>
-          ）。実際の期限は面談のうえご案内します。
+          ※届出の具体的な期限は、面談のうえご案内します。
         </p>
       </div>
 

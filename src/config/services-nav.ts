@@ -117,4 +117,7 @@ export const SERVICE_NAV_UTILITY_LINKS: ServiceNavLink[] = [
   { href: "/faq", label: { ja: "よくある質問", en: "FAQ", "zh-tw": "常見問題", zh: "常见问题" } },
   { href: "/jirei", label: { ja: "相談事例" }, locales: ["ja"] },
   { href: "/ryokin", label: { ja: "料金", en: "Fees", "zh-tw": "費用", zh: "费用" } },
+  // 2026-09-05 月次点検（INIT-06/NEW-SALE-1）：孤立していた /nagare（売却・賃貸の実務の流れ・ja先行）を転換側リンク群へ。
+  // locales は sitemap.ts の /nagare（["ja"]）と一致。souzoku カテゴリには入れない（/souzoku/nagare と「流れ」が二重になる）。
+  { href: "/nagare", label: { ja: "ご依頼から引渡しまでの流れ" }, locales: ["ja"] },
 ];
