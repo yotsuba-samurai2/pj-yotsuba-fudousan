@@ -467,6 +467,18 @@ const REQUIRED_HUB_LINKS: Record<string, string[]> = {
     "/legal/ryokin",
     "/legal/column/inshokuten-eigyo-kyoka-hokenjo-setsubi-kijun-shokuhin-eisei",
   ],
+  "kaigo-taxi-fukushi-yuso-kyoka-shako-yoken": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/ippan-kamotsu-unso-kyoka-eigyosho-shako-yoken",
+  ],
+  "shurui-kouri-menkyo-tenpo-bukken-yoken": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/shinya-shurui-teikyo-todokede-yoken",
+  ],
 };
 
 /** 表示コンプライアンス上の禁止語 */
@@ -1319,6 +1331,45 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "別事業体",
     "独立した事業体",
   ],
+  "kaigo-taxi-fukushi-yuso-kyoka-shako-yoken": [
+    "道路運送法",
+    "第4条",
+    "第3条",
+    "第6条",
+    "第7条",
+    "一般乗用旅客自動車運送事業",
+    "福祉輸送事業限定",
+    "第二種運転免許",
+    "道路交通法第86条",
+    "第84条",
+    "訪問介護員",
+    "福祉自動車",
+    "車両1両",
+    "登録免許税",
+    "標準処理期間",
+    "緑ナンバー",
+    "紹介料を受け取りません",
+    "別事業体",
+    "独立した事業体",
+  ],
+  "shurui-kouri-menkyo-tenpo-bukken-yoken": [
+    "酒税法",
+    "第9条",
+    "第10条",
+    "販売場ごとに",
+    "所轄税務署長",
+    "酒類販売業免許",
+    "一般酒類小売業免許",
+    "通信販売酒類小売業免許",
+    "3,000キロリットル",
+    "登録免許税",
+    "3万円",
+    "標準処理期間",
+    "二十歳未満ノ者ノ飲酒ノ禁止ニ関スル法律",
+    "紹介料を受け取りません",
+    "別事業体",
+    "独立した事業体",
+  ],
 };
 
 /** 記事ごとに含めてはならない表現 */
@@ -1406,6 +1457,8 @@ const FORBIDDEN_PHRASES: Record<string, string[]> = {
   "chugoku-tairiku-souzokunin-shinzoku-koshosho-ryoji-ninsho": [],
   "iryohojin-setsuritsu-ninka-nagare-shorui": [],
   "shokuhin-seizogyo-kyoka-bukken-setsubi-kijun": [],
+  "kaigo-taxi-fukushi-yuso-kyoka-shako-yoken": [],
+  "shurui-kouri-menkyo-tenpo-bukken-yoken": [],
 };
 
 /** 本セット外へ張る既存legalコラムslug（リポジトリの他シードで実在確認済み） */
@@ -2451,6 +2504,58 @@ const ARTICLES: Array<{
       "食品衛生法",
       "許認可",
       "設備基準",
+      "行政書士",
+    ],
+  },
+  {
+    file: "47-kaigo-taxi-fukushi-yuso-kyoka-shako-yoken.md",
+    slug: "kaigo-taxi-fukushi-yuso-kyoka-shako-yoken",
+    date: "2026-09-06",
+    title:
+      "介護タクシー（福祉輸送）を始めるには？許可・営業所・車庫・二種免許の要件",
+    category: "許認可の手続き（行政書士の実務から）",
+    excerpt:
+      "介護タクシー（要介護者らの通院・外出を有償で運ぶ事業）を始めるには、道路運送法第4条にもとづく一般旅客自動車運送事業の許可が必要です。多くは一般乗用旅客自動車運送事業のうち「福祉輸送事業限定」の許可で、福祉自動車なら車両1両から申請できます。一般タクシーとの違い、営業所・車庫（物件）の要件、第二種運転免許（道路交通法第86条）とセダン型で求められる介護福祉士・訪問介護員などの資格、登録免許税3万円と標準処理期間の目安を整理し、物件・免許・労務は分離受任で振る分担を示しました。",
+    keywords: [
+      "介護タクシー 開業 許可",
+      "福祉輸送事業限定 一般乗用旅客自動車運送事業",
+      "介護タクシー 車両 1台 営業所 車庫",
+      "介護タクシー 二種免許 介護福祉士 訪問介護員",
+      "福祉自動車 セダン型 資格",
+      "介護タクシー 許可 行政書士",
+    ],
+    tags: [
+      "介護タクシー",
+      "福祉輸送",
+      "道路運送法",
+      "第二種運転免許",
+      "許認可",
+      "行政書士",
+    ],
+  },
+  {
+    file: "48-shurui-kouri-menkyo-tenpo-bukken-yoken.md",
+    slug: "shurui-kouri-menkyo-tenpo-bukken-yoken",
+    date: "2026-09-06",
+    title:
+      "お酒を売るにはどの免許が要る？一般酒類小売業免許と通信販売免許の違い",
+    category: "許認可の手続き（行政書士の実務から）",
+    excerpt:
+      "酒類を継続して販売するには、酒税法第9条にもとづき、販売場ごとに、その所在地の所轄税務署長の酒類販売業免許が必要です。店頭で売る一般酒類小売業免許と、2以上の都道府県の消費者にネット販売する通信販売酒類小売業免許の違い、通信販売で扱える酒類の制限（国産は課税移出数量3,000キロリットル未満の製造者の酒類）、販売場ごとの場所的要件、酒税法第10条の人的・経営基礎要件、登録免許税3万円と標準処理期間の目安を整理し、物件・税務・通関は分離受任で振る分担を示しました。",
+    keywords: [
+      "酒類販売業免許 取り方",
+      "一般酒類小売業免許 通信販売酒類小売業免許 違い",
+      "酒 ネット販売 免許 3000キロリットル",
+      "酒税法 第9条 販売場ごとに 所轄税務署長",
+      "酒販免許 場所的要件 販売場",
+      "酒類 販売 免許 行政書士",
+    ],
+    tags: [
+      "酒類販売業免許",
+      "一般酒類小売業免許",
+      "通信販売酒類小売業免許",
+      "酒税法",
+      "許認可",
       "行政書士",
     ],
   },

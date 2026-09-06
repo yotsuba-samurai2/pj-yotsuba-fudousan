@@ -872,6 +872,46 @@ const ARTICLES: ArticleSpec[] = [
     localesWithTranslations: ["en", "zh-tw", "zh"],
     hubLinks: ["/toushi"],
   },
+  {
+    file: "42-ninchisho-taiogata-grouphome-bukken-youken.md",
+    slug: "ninchisho-taiogata-grouphome-bukken-youken",
+    title: "認知症グループホームはどんな物件なら開設できる？用途地域・面積・消防の要件",
+    publishedAt: "2026-09-06",
+    category: "投資・事業用不動産",
+    excerpt:
+      "認知症グループホーム（認知症対応型共同生活介護）は、どんな物件でも開設できるわけではありません。効くのは、市町村の日常生活圏域ごとの必要利用定員総数の空き（総量規制）、消防法施行令別表第一(6)項ロとしてのスプリンクラー等、1ユニット5〜9人という規模、既存建物の用途変更の要否の4点です。東京都文京区の宅地建物取引士兼行政書士が、内見の前に書類で絞り込める点を条文と公的資料から整理します。",
+    keywords: [
+      "認知症グループホーム 物件 要件",
+      "認知症対応型共同生活介護 開設",
+      "地域密着型サービス 総量規制 日常生活圏域",
+      "グループホーム スプリンクラー 消防法施行令 6項ロ",
+      "グループホーム 用途変更 確認申請 200平方メートル",
+    ],
+    tags: ["事業用不動産", "許認可", "介護", "消防法"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/toushi", "/office"],
+  },
+  {
+    file: "43-souzoku-mitouki-tatemono-hyodai-touki-baikyaku.md",
+    slug: "souzoku-mitouki-tatemono-hyodai-touki-baikyaku",
+    title: "相続した実家に未登記の建物がある。そのまま売れる？表題登記からの流れ",
+    publishedAt: "2026-09-06",
+    category: "相続",
+    excerpt:
+      "相続した実家に未登記の建物があっても、売ること自体はできます。ただし買主・金融機関は登記を求めるため、売る前に表題登記（土地家屋調査士）と所有権保存登記（司法書士）を入れ、相続の名義に整えるのが実務です。固定資産税は払っているのに未登記、という状態がなぜ起きるかも含め、東京都文京区の宅地建物取引士兼行政書士が条文から整理します。",
+    keywords: [
+      "未登記建物 相続 売却",
+      "表題登記 所有権保存登記 不動産登記法47条 74条",
+      "未登記家屋 固定資産税 家屋補充課税台帳",
+      "相続登記 義務化 76条の2 令和6年4月1日",
+      "未登記 建物 土地家屋調査士 司法書士",
+    ],
+    tags: ["相続", "登記", "未登記建物", "売却"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/souzoku"],
+  },
 ];
 
 function toPlainText(md: string): string {
