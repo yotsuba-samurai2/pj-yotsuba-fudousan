@@ -912,6 +912,26 @@ const ARTICLES: ArticleSpec[] = [
     localesWithTranslations: ["en", "zh-tw", "zh"],
     hubLinks: ["/souzoku"],
   },
+  {
+    file: "44-souzoku-sublease-master-lease-chii-shokei.md",
+    slug: "souzoku-sublease-master-lease-chii-shokei",
+    title: "サブリース中の賃貸物件を相続したら、契約と賃料はどう引き継がれるか",
+    publishedAt: "2026-09-07",
+    category: "相続",
+    excerpt:
+      "サブリース（一括借上げ）中の賃貸物件を相続すると、貸主の地位はそのまま相続人に承継されます（民法第896条）。相続を理由に契約をすぐ解約することはできず（借地借家法第28条）、賃料保証が付いていてもサブリース業者からの賃料減額請求はあり得ます（借地借家法第32条第1項・最高裁平成15年10月21日判決）。サブリース新法で確認すべき書面と登録業者の調べ方まで、東京都文京区の宅地建物取引士兼行政書士が条文から整理します。",
+    keywords: [
+      "サブリース 相続",
+      "一括借上げ 相続 賃貸人たる地位",
+      "サブリース 中途解約 正当事由 借地借家法28条",
+      "サブリース 賃料減額請求 借地借家法32条",
+      "賃貸住宅管理業法 重要事項説明 特定賃貸借契約",
+    ],
+    tags: ["相続", "サブリース", "賃貸経営", "借地借家法"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/souzoku"],
+  },
 ];
 
 function toPlainText(md: string): string {
