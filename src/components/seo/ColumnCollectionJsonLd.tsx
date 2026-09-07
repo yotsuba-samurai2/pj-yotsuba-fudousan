@@ -4,7 +4,7 @@
 import { JsonLd } from "./JsonLd";
 import { WEBSITE_ID } from "./WebSiteJsonLd";
 import { canonicalUrl, BUSINESS_SEO, SITE_URL } from "@/lib/seo";
-import type { Column } from "@/lib/columns";
+import type { ColumnSummary } from "@/lib/columns";
 import type { LangCode } from "@/config/languages";
 
 export function ColumnCollectionJsonLd({
@@ -13,18 +13,24 @@ export function ColumnCollectionJsonLd({
   name,
   description,
   locale = "ja",
+  page = 1,
+  pageSize = 20,
+  total = columns.length,
 }: {
   businessKey: string;
   /** 現在ロケールで公開・並び替え済みのコラム配列 */
-  columns: Column[];
+  columns: ColumnSummary[];
   name: string;
   description: string;
   locale?: LangCode;
+  page?: number;
+  pageSize?: number;
+  total?: number;
 }) {
   const biz = BUSINESS_SEO[businessKey];
   if (!biz) return null;
 
-  const listUrl = canonicalUrl(businessKey, biz.columnBasePath, locale);
+  const listUrl = canonicalUrl(businessKey, page === 1 ? biz.columnBasePath : `${biz.columnBasePath}/page/${page}`, locale);
 
   return (
     <JsonLd
@@ -49,10 +55,10 @@ export function ColumnCollectionJsonLd({
         mainEntity: {
           "@type": "ItemList",
           "@id": `${listUrl}#itemlist`,
-          numberOfItems: columns.length,
+          numberOfItems: total,
           itemListElement: columns.map((col, i) => ({
             "@type": "ListItem",
-            position: i + 1,
+            position: (page - 1) * pageSize + i + 1,
             url: canonicalUrl(
               businessKey,
               `${biz.columnBasePath}/${col.slug}`,

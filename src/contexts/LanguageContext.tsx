@@ -8,7 +8,7 @@ import {
   LOCALE_COOKIE,
   detectLocaleFromPath,
   addLocalePrefix,
-  stripLocalePrefix,
+  localeSwitchBasePath,
 } from "@/lib/locale";
 
 type LanguageContextType = {
@@ -107,7 +107,7 @@ export function LanguageProvider({
     //    その場合 strip が効かず同一URLへのpush（no-op）や誤ったパスになる。
     const currentPath =
       typeof window !== "undefined" ? window.location.pathname : pathname;
-    const basePath = stripLocalePrefix(currentPath);
+    const basePath = localeSwitchBasePath(currentPath);
     const newPath = addLocalePrefix(basePath, newLocale);
 
     // Cookie を設定

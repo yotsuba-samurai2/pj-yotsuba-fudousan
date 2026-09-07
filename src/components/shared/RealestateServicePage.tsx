@@ -17,7 +17,7 @@ import { CrossLinkBanner } from "@/components/shared/CrossLinkBanner";
 import { getCrossLinks, involvesLabor } from "@/lib/cross-links";
 import { SR_LAUNCHED } from "@/lib/shared/office";
 import { PERSON_ID } from "@/lib/seo";
-import type { Column } from "@/lib/columns";
+import type { ColumnSummary } from "@/lib/columns";
 import type { LangCode } from "@/config/languages";
 import { SR_BIO } from "@/lib/shared/sr-label";
 
@@ -70,7 +70,7 @@ export type RealestateServicePageProps = {
   authorLabel?: string;
   authorBio?: string;
   /** テーマ関連コラム（内部リンク）。省略・空配列なら非表示。current locale で localize 済みを渡す */
-  relatedColumns?: Column[];
+  relatedColumns?: ColumnSummary[];
   /** 関連コラム見出し（省略時「関連コラム」） */
   relatedColumnsHeading?: string;
   /**

@@ -6,13 +6,13 @@ import { ArrowRight } from "lucide-react";
 import { useTranslation } from "@/hooks/useTranslation";
 import ColumnBody from "@/components/column/ColumnBody";
 import { RelatedColumnsSection } from "@/components/column/RelatedColumnsSection";
-import type { Column } from "@/lib/column-shared";
+import type { Column, ColumnSummary } from "@/lib/column-shared";
 
 type Props = {
   col: Column;
-  prev: Column | null;
-  next: Column | null;
-  related: Column[];
+  prev: ColumnSummary | null;
+  next: ColumnSummary | null;
+  related: ColumnSummary[];
 };
 
 const RELATED_HEADING: Record<string, string> = {
