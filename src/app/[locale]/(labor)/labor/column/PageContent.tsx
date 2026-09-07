@@ -1,13 +1,17 @@
 "use client";
 
 import { LocaleLink as Link } from "@/components/ui/LocaleLink";
-import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { ColumnPagination } from "@/components/column/ColumnPagination";
 import { useTranslation } from "@/hooks/useTranslation";
-import type { Column } from "@/lib/column-shared";
+import type { ColumnSummary } from "@/lib/column-shared";
 
 type Props = {
   /** サーバー側（page.tsx）で取得・ローカライズ済みのコラム */
-  columns: Column[];
+  columns: ColumnSummary[];
+  page: number;
+  total: number;
+  totalPages: number;
 };
 
 /**
@@ -24,7 +28,7 @@ type Props = {
  * （不動産の ColumnListPageContent と同じ構成）。ロケール切り替え時の取得レースも、
  * サーバー取得になったことで構造的に消える。
  */
-export function LaborColumnListPageContent({ columns }: Props) {
+export function LaborColumnListPageContent({ columns, page, total, totalPages }: Props) {
   const { t } = useTranslation();
 
   return (
@@ -65,11 +69,7 @@ export function LaborColumnListPageContent({ columns }: Props) {
                   </Link>
                 ))}
               </div>
-              <div className="mt-12 flex items-center justify-center gap-2">
-                <button disabled className="flex h-10 w-10 items-center justify-center rounded-lg border border-border bg-surface text-text-muted transition-colors disabled:opacity-30" aria-label={t("common.prevPage")}><ChevronLeft size={18} /></button>
-                <span className="gradient-line flex h-10 w-10 items-center justify-center rounded-lg text-sm font-bold text-white">1</span>
-                <button disabled className="flex h-10 w-10 items-center justify-center rounded-lg border border-border bg-surface text-text-muted transition-colors disabled:opacity-30" aria-label={t("common.nextPage")}><ChevronRight size={18} /></button>
-              </div>
+              <ColumnPagination path="/labor/column" page={page} total={total} totalPages={totalPages} />
             </>
           )}
         </div>

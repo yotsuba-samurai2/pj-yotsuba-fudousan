@@ -8,21 +8,21 @@
  */
 
 import type { LangCode } from "@/config/languages";
-import type { Column } from "@/lib/column-shared";
+import type { ColumnSummary } from "@/lib/column-shared";
 import {
   getLatestColumns as fetchLatestRealestate,
   getLatestLegalColumns as fetchLatestLegal,
   getLatestLaborColumns as fetchLatestLabor,
 } from "@/lib/columns";
 
-export async function getLatestColumns(n: number, locale: LangCode): Promise<Column[]> {
+export async function getLatestColumns(n: number, locale: LangCode): Promise<ColumnSummary[]> {
   return fetchLatestRealestate(n, locale);
 }
 
-export async function getLatestLegalColumns(n: number, locale: LangCode): Promise<Column[]> {
+export async function getLatestLegalColumns(n: number, locale: LangCode): Promise<ColumnSummary[]> {
   return fetchLatestLegal(n, locale);
 }
 
-export async function getLatestLaborColumns(n: number, locale: LangCode): Promise<Column[]> {
+export async function getLatestLaborColumns(n: number, locale: LangCode): Promise<ColumnSummary[]> {
   return fetchLatestLabor(n, locale);
 }

@@ -36,3 +36,20 @@
 - sitemap: lastmodはコラム(dateModified/date保持分)のみ。固定ページから消え、連続取得で不変
 - 残タスク(監査書のうち今回未実施): §4コンテンツ・内部リンク改善(inheritance/souzoku強化・CTA整理)、§6ローカルSEO(GBP・外部NAP統一=サイト外作業)、§7翻訳品質、robots.txtのmedia解除判断(preload削減後のGSC推移を見て再評価)
 - デプロイ後確認: x-vercel-cache=HIT/STALE、x-vercel-id がhnd1実行になること、GSC URL検査、Rich Results Test
+
+
+## 2026-09-07 コラム一覧Egress削減
+- [x] 接続ref・適用規程・AI共有メモリを確認
+- [x] SQL投影・20件ページ分割・翻訳フォールバックを実装
+- [x] SQL・データ量・4言語一覧/詳細/移動を検証
+- [x] lint/typecheck/test/build、レビュー用差分を出力
+
+### レビュー記録
+- 接続確認: luck428-corporate / lxsnklqwysakhnmvdivh。基点 origin/main 3f7c969。
+- 20件/ページ。本文・全翻訳JSONをSQLから除外。補助インデックスは100件/SQLで全候補を維持。
+- 369テスト・型チェック・本番build成功。lint error 0（既存warning 38）。
+- 本番読取SQLで先頭一覧のJSON換算値2.95〜5.31MB→13.1〜22.0KB。課金Egressの実測ではない。
+- ローカルPostgresで3事業×4言語、ページ境界・公開条件・翻訳欠損・詳細・SEOを検証。
+- 実機ブラウザのページ移動・言語切替確認。SR_LAUNCHED=falseの8ルート404確認。
+- 本番接続のローカル資格情報は認証拒否。本番SQLは認証済みSupabaseコネクタ、ビルド/表示はローカルfixture DBで検証。
+- commit/push/deploy未実施。別セッションレビュー用のpatch・SQL・検証報告を本タスクoutputsに保存。

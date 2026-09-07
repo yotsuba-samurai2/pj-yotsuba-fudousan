@@ -3,7 +3,7 @@
 import { usePathname } from "next/navigation";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { languages } from "@/config/languages";
-import { addLocalePrefix, stripLocalePrefix } from "@/lib/locale";
+import { addLocalePrefix, localeSwitchBasePath } from "@/lib/locale";
 
 export function LanguageSwitcher() {
   const { locale, setLocale } = useLanguage();
@@ -14,7 +14,7 @@ export function LanguageSwitcher() {
   // SSR時は usePathname（リライト後＝ロケール除去済みパス）、クライアントでは
   // window.location.pathname を基準にする。どちらも stripLocalePrefix 後は同じ
   // ベースパスに収束する（テナントドメインのみ僅かに異なるため suppressHydrationWarning）。
-  const basePath = stripLocalePrefix(
+  const basePath = localeSwitchBasePath(
     typeof window !== "undefined" ? window.location.pathname : pathname,
   );
 

@@ -6,7 +6,7 @@ import {
   getAllLaborColumnsAllLocales,
 } from "@/lib/columns";
 import { canonicalUrl } from "@/lib/seo";
-import type { Column } from "@/lib/columns";
+import type { ColumnIndexEntry } from "@/lib/columns";
 import { getAllPublishedPropertiesAllLocales } from "@/lib/properties";
 import { isListable, type PublicProperty } from "@/lib/property-shared";
 
@@ -71,7 +71,7 @@ function expandStatic(
 function expandColumn(
   businessKey: string,
   path: string,
-  col: Column,
+  col: ColumnIndexEntry,
 ): MetadataRoute.Sitemap {
   const active = col.locales && col.locales.length > 0 ? col.locales : [...ALL_LOCALES];
   const alternates = alternatesFor(businessKey, path, active);

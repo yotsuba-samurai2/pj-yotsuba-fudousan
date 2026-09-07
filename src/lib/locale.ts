@@ -40,3 +40,8 @@ export function stripLocalePrefix(pathname: string): string {
 export function isValidLocale(code: string): code is LangCode {
   return (SUPPORTED_LOCALES as string[]).includes(code);
 }
+
+/** コラムの総ページ数は言語ごとに異なるため、言語切替時は一覧先頭へ戻す。 */
+export function localeSwitchBasePath(pathname: string): string {
+  return stripLocalePrefix(pathname).replace(/^(\/(?:legal\/|labor\/)?column)\/page\/[1-9]\d*$/, "$1");
+}

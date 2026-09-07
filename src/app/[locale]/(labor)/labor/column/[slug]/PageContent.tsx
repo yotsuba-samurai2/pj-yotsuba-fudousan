@@ -4,12 +4,12 @@ import { LocaleLink as Link } from "@/components/ui/LocaleLink";
 import Image from "next/image";
 import { useTranslation } from "@/hooks/useTranslation";
 import ColumnBody from "@/components/column/ColumnBody";
-import type { Column } from "@/lib/column-shared";
+import type { Column, ColumnSummary } from "@/lib/column-shared";
 
 type Props = {
   col: Column;
-  prev: Column | null;
-  next: Column | null;
+  prev: ColumnSummary | null;
+  next: ColumnSummary | null;
 };
 
 export function LaborColumnDetailPageContent({ col, prev, next }: Props) {

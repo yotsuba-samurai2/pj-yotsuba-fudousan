@@ -5,7 +5,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { addLocalePrefix } from "@/lib/locale";
 import type { LangCode } from "@/config/languages";
-import type { Column } from "@/lib/columns";
+import type { ColumnSummary } from "@/lib/columns";
 
 const DEFAULT_HEADING: Record<LangCode, string> = {
   ja: "関連コラム",
@@ -15,7 +15,7 @@ const DEFAULT_HEADING: Record<LangCode, string> = {
 };
 
 type Props = {
-  columns: Column[];
+  columns: ColumnSummary[];
   locale: LangCode;
   /** 見出し。省略時はロケール別の「関連コラム」 */
   heading?: string;

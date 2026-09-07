@@ -1,16 +1,20 @@
 "use client";
 
 import { LocaleLink as Link } from "@/components/ui/LocaleLink";
-import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { ColumnPagination } from "@/components/column/ColumnPagination";
 import { useTranslation } from "@/hooks/useTranslation";
-import type { Column } from "@/lib/column-shared";
+import type { ColumnSummary } from "@/lib/column-shared";
 
 type Props = {
   /** server（page.tsx）で取得・ローカライズ済みのコラム配列。SSR HTML にリンクを出すため props で受け取る */
-  columns: Column[];
+  columns: ColumnSummary[];
+  page: number;
+  total: number;
+  totalPages: number;
 };
 
-export default function LegalColumnListContent({ columns }: Props) {
+export default function LegalColumnListContent({ columns, page, total, totalPages }: Props) {
   const { t } = useTranslation();
 
   return (
@@ -51,11 +55,7 @@ export default function LegalColumnListContent({ columns }: Props) {
                   </Link>
                 ))}
               </div>
-              <div className="mt-12 flex items-center justify-center gap-2">
-                <button disabled className="flex h-10 w-10 items-center justify-center rounded-lg border border-border bg-surface text-text-muted transition-colors disabled:opacity-30" aria-label={t("common.prevPage")}><ChevronLeft size={18} /></button>
-                <span className="gradient-line flex h-10 w-10 items-center justify-center rounded-lg text-sm font-bold text-white">1</span>
-                <button disabled className="flex h-10 w-10 items-center justify-center rounded-lg border border-border bg-surface text-text-muted transition-colors disabled:opacity-30" aria-label={t("common.nextPage")}><ChevronRight size={18} /></button>
-              </div>
+              <ColumnPagination path="/legal/column" page={page} total={total} totalPages={totalPages} />
             </>
           )}
         </div>

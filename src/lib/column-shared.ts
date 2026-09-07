@@ -49,6 +49,13 @@ export type Column = {
   };
 };
 
+/** DBでローカライズ済みの一覧専用型。本文・翻訳オブジェクトを含めない。 */
+export type ColumnSummary = Pick<Column,
+  "business" | "slug" | "title" | "date" | "category" | "excerpt" | "tags"
+>;
+
+export type ColumnIndexEntry = Pick<Column, "slug" | "date" | "modifiedDate" | "locales">;
+
 /** admin CRUD用のコラム型（旧 FirestoreColumn と同形。timestampはISO文字列） */
 export type AdminColumn = {
   id: string;
@@ -86,7 +93,7 @@ export type ColumnInput = Omit<AdminColumn, "id" | "createdAt" | "updatedAt">;
 // ── Locale-aware helpers ──
 
 /** locales 空配列（旧: 未設定）＝全言語許可。設定済みなら現在ロケールを含むかで判定 */
-export function isLocaleAllowed(column: Column, locale: LangCode): boolean {
+export function isLocaleAllowed(column: Pick<Column, "locales">, locale: LangCode): boolean {
   return (
     !column.locales ||
     column.locales.length === 0 ||
@@ -119,7 +126,11 @@ export function initialLocaleSelection(
   return locales && locales.length > 0 ? [...locales] : [...allLocales];
 }
 
-export function getLocalizedColumn(column: Column, locale: LangCode): Column {
+export function getLocalizedColumn(column: Column, locale: LangCode): Column;
+export function getLocalizedColumn(column: ColumnSummary, locale: LangCode): ColumnSummary;
+export function getLocalizedColumn(column: Column | ColumnSummary, locale: LangCode): Column | ColumnSummary {
+  // 一覧は既にSQL側でローカライズ済み。
+  if (!("content" in column)) return column;
   if (locale === "ja" || !column.translations) return column;
 
   const trans = column.translations[locale as keyof typeof column.translations];
@@ -148,12 +159,12 @@ export function getLocalizedColumn(column: Column, locale: LangCode): Column {
  * 優先度: タグ一致数（重み2）→ カテゴリ一致（重み1）→ 公開日の新しい順。自身は除外。
  * 呼び出し側は現在ロケールで取得済み・ローカライズ済みの配列を渡す想定。
  */
-export function pickRelatedColumns(
-  all: Column[],
+export function pickRelatedColumns<T extends ColumnSummary>(
+  all: T[],
   opts: { excludeSlug?: string; category?: string; tags?: string[]; limit?: number },
-): Column[] {
+): T[] {
   const { excludeSlug, category, tags, limit = 3 } = opts;
-  const score = (c: Column): number => {
+  const score = (c: T): number => {
     let s = 0;
     if (tags?.length && c.tags?.length) {
       s += c.tags.filter((t) => tags.includes(t)).length * 2;
@@ -194,13 +205,13 @@ const THEME_KEYWORDS: Record<ColumnTheme, string[]> = {
  * テーマに合致するコラムを新着順で最大 `limit` 本返す。
  * category・tags のいずれかにキーワード（部分一致・大文字小文字無視）が含まれれば合致とみなす。
  */
-export function filterColumnsByTheme(
-  all: Column[],
+export function filterColumnsByTheme<T extends ColumnSummary>(
+  all: T[],
   theme: ColumnTheme,
   limit = 3,
-): Column[] {
+): T[] {
   const keywords = THEME_KEYWORDS[theme].map((k) => k.toLowerCase());
-  const matches = (c: Column): boolean => {
+  const matches = (c: T): boolean => {
     const haystack = [c.category, ...(c.tags ?? [])]
       .join(" ")
       .toLowerCase();
