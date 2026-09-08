@@ -7,10 +7,14 @@ import {
   type ColumnStatus,
 } from "@/lib/db/columns";
 import type { ColumnInput } from "@/lib/column-shared";
+import { refreshColumnPublication, ColumnPublicationRefreshError } from "@/lib/column-publication-cache";
 
 const STATUSES: ColumnStatus[] = ["draft", "published", "deleted"];
 
 function handleError(err: unknown) {
+  if (err instanceof ColumnPublicationRefreshError) {
+    return NextResponse.json({ error: err.message, mutationSucceeded: true }, { status: 503 });
+  }
   if (err instanceof AuthError) {
     return NextResponse.json({ error: err.message }, { status: err.status });
   }
@@ -49,9 +53,11 @@ export async function POST(req: NextRequest) {
     }
     if (req.nextUrl.searchParams.get("upsert")) {
       const result = await upsertColumnBySlug(body.business, body.slug, body);
+      await refreshColumnPublication([body]);
       return NextResponse.json(result);
     }
     const id = await createColumn(body);
+    await refreshColumnPublication([body]);
     return NextResponse.json({ id }, { status: 201 });
   } catch (err) {
     return handleError(err);

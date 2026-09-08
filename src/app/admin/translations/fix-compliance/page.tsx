@@ -6,7 +6,6 @@ import {
   saveTranslations,
   getColumns,
   updateColumn,
-  getAccessToken,
   type FirestoreColumn,
 } from "@/lib/admin-api";
 import {
@@ -219,29 +218,6 @@ function patchesFor(slug: string, field: ColumnPatchField) {
   );
 }
 
-async function revalidateColumns(targets: Array<{ business: string; slug: string }>) {
-  try {
-    const token = await getAccessToken();
-    const paths = new Set<string>();
-    for (const { business, slug } of targets) {
-      const businessPath = business === "realestate" ? "" : `/${business}`;
-      paths.add(`${businessPath}/column`);
-      paths.add(`${businessPath}/column/${slug}`);
-      paths.add(`${businessPath}/sitemap.xml`);
-    }
-    await fetch("/api/admin/revalidate", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        ...(token && { Authorization: `Bearer ${token}` }),
-      },
-      body: JSON.stringify({ paths: [...paths] }),
-    });
-  } catch (err) {
-    console.error("Revalidation failed:", err);
-  }
-}
-
 export default function FixCompliancePage() {
   const [running, setRunning] = useState(false);
   const [results, setResults] = useState<Result[]>([]);
@@ -422,12 +398,10 @@ export default function FixCompliancePage() {
     if (!dryRun) return; // 安全装置5-1（UI側でも disabled）
     setApplying(true);
     const out: Result[] = [];
-    const done: Array<{ business: string; slug: string }> = [];
 
     for (const u of dryRun.updates) {
       try {
         await updateColumn(u.columnId, u.data);
-        done.push({ business: u.business, slug: u.slug });
         out.push({
           label: `columns/${u.slug}`,
           status: "applied",
@@ -439,7 +413,6 @@ export default function FixCompliancePage() {
       }
     }
 
-    if (done.length > 0) await revalidateColumns(done);
 
     // 適用後の再スキャン
     const hits: ScanHit[] = [];

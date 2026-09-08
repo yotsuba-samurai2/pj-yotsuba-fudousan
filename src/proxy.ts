@@ -87,9 +87,9 @@ function isGone(pathname: string): boolean {
 
 // ── Skip patterns ──
 
-// ドットを含む記事slug（例: 雇用率2.7）も公開ページとしてリライトする。
-// public/ のアセットとメタデータ用ファイルは、末尾の拡張子で判定する。
-const STATIC_FILE = /\.(?:avif|webp|png|jpe?g|gif|svg|ico|css|m?js|map|woff2?|ttf|otf|eot|pdf|txt|xml|json|webmanifest|mp4|webm|mp3|wav)$/i;
+// コラム詳細だけをファイル判定の例外にする（例: 雇用率2.7）。
+// 他のパスは従来どおり素通しし、HTML確認ファイルやCSV等の配信を変えない。
+const COLUMN_DETAIL_PATH = /^\/(?:(?:ja|en|zh-tw|zh)\/)?(?:(?:legal|labor)\/)?column\/[^/]+\/?$/;
 
 function shouldSkip(pathname: string): boolean {
   if (
@@ -97,7 +97,7 @@ function shouldSkip(pathname: string): boolean {
     pathname.startsWith("/api") ||
     pathname.startsWith("/admin") ||
     pathname.startsWith("/facilitator") || // [locale]外のルート（内部ツール）
-    STATIC_FILE.test(pathname)
+    (pathname.includes(".") && !COLUMN_DETAIL_PATH.test(pathname))
   ) {
     return true;
   }
