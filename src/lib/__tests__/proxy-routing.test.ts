@@ -29,6 +29,8 @@ describe("public locale routing", () => {
   it.each([
     "/robots.txt", "/sitemap.xml", "/icon-192.png", "/hero/photo.webp",
     "/images/photo.jpg", "/images/photo.jpeg", "/logo.svg", "/document.pdf",
+    "/google-site-verification.html", "/downloads/list.csv", "/archive.zip", "/manual.docx",
+    "/.well-known/example.bin", "/assets.v2/resource",
     "/_next/static/media/font.woff2?dpl=example", "/_next/image?url=example",
     "/api/admin/revalidate", "/admin/columns", "/facilitator",
   ])("preserves resources and non-public routes: %s", path => {
@@ -38,6 +40,10 @@ describe("public locale routing", () => {
   it("keeps nonexistent articles in the normal page router for a real 404", () => {
     expect(getRewrittenUrl(proxy(request("/column/missing-2.7"))))
       .toBe("https://luck428.com/ja/column/missing-2.7");
+  });
+
+  it.each(["/column/article.json", "/legal/column/article.html", "/labor/column/article.csv"])("treats a file-like article slug as a page: %s", path => {
+    expect(getRewrittenUrl(proxy(request(path)))).toBe(`https://luck428.com/ja${path}`);
   });
 
   it.each(["/test1", "/en/comments/feed", "/en/comments/feed/"])("preserves 410 for %s", path => {

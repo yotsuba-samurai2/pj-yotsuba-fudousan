@@ -214,8 +214,8 @@ export default function ColumnForm({
       };
 
       await onSubmit(data);
-    } catch {
-      setError("保存に失敗しました");
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "保存に失敗しました");
       setSaving(false);
     }
   };
