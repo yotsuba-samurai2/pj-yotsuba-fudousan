@@ -5,14 +5,16 @@ import Image from "next/image";
 import { useTranslation } from "@/hooks/useTranslation";
 import ColumnBody from "@/components/column/ColumnBody";
 import type { Column, ColumnSummary } from "@/lib/column-shared";
+import type { ColumnLinkOverrides } from "@/lib/column-language-links";
 
 type Props = {
   col: Column;
   prev: ColumnSummary | null;
   next: ColumnSummary | null;
+  linkOverrides: ColumnLinkOverrides;
 };
 
-export function LaborColumnDetailPageContent({ col, prev, next }: Props) {
+export function LaborColumnDetailPageContent({ col, prev, next, linkOverrides }: Props) {
   const { t } = useTranslation();
 
   return (
@@ -59,7 +61,7 @@ export function LaborColumnDetailPageContent({ col, prev, next }: Props) {
             </div>
           </div>
           <p className="article-summary sr-only">{col.excerpt}</p>
-          <ColumnBody content={col.content} />
+          <ColumnBody content={col.content} linkOverrides={linkOverrides} />
           <div className="mt-16 grid gap-4 border-t border-border pt-8 sm:grid-cols-2">
             {prev ? (
               <Link

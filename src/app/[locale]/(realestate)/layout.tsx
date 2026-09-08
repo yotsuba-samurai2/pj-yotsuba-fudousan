@@ -6,6 +6,7 @@ import { fetchTranslations } from "@/lib/getTranslationData";
 import { getNestedValue, BUSINESS_SEO, BUSINESS_URLS } from "@/lib/seo";
 import { getRequestLocale } from "@/lib/getRequestLocale";
 import type { LangCode } from "@/config/languages";
+import { getColumnLanguageIndex } from "@/lib/column-language-index";
 
 export async function generateMetadata(): Promise<Metadata> {
   // 旧実装のCookie参照はリクエストAPI＝配下全ルートを動的化するため、
@@ -52,13 +53,14 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-export default function RealEstateLayout({
+export default async function RealEstateLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const columnLocales = await getColumnLanguageIndex("realestate");
   return (
-    <TenantLayoutShell businessKey="realestate">
+    <TenantLayoutShell businessKey="realestate" columnLocales={columnLocales}>
       <OrganizationJsonLd businessKey="realestate" />
       {/* WebSite（サイト名）＝ホスト全体で「四葉グループ」1ノード。出力はこのlayoutだけ（P1-1） */}
       <WebSiteJsonLd />

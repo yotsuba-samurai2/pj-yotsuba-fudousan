@@ -1,8 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
-import { revalidatePath } from "next/cache";
+import { revalidatePath, revalidateTag } from "next/cache";
 import { verifyAdminRequest, AuthError } from "@/lib/api-auth";
 import { submitToIndexNow } from "@/lib/indexnow";
 import { SUPPORTED_LOCALES } from "@/lib/locale";
+import { COLUMN_LOCALE_CACHE_TAG } from "@/lib/column-language-links";
 
 export async function POST(req: NextRequest) {
   try {
@@ -10,6 +11,10 @@ export async function POST(req: NextRequest) {
     const { paths } = (await req.json()) as { paths: string[] };
     if (!Array.isArray(paths)) {
       return NextResponse.json({ error: "paths must be an array" }, { status: 400 });
+    }
+    // 翻訳の公開・非公開をヘッダーにも反映する。旧データを再利用しない即時失効。
+    if (paths.some(p => /(?:^|\/)column(?:\/|$)/.test(p))) {
+      revalidateTag(COLUMN_LOCALE_CACHE_TAG, { expire: 0 });
     }
     for (const p of paths) {
       // 内部ルートは app/[locale]/... のため、外部パス（/column/x 等）を

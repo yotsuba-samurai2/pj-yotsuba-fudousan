@@ -87,13 +87,17 @@ function isGone(pathname: string): boolean {
 
 // ── Skip patterns ──
 
+// ドットを含む記事slug（例: 雇用率2.7）も公開ページとしてリライトする。
+// public/ のアセットとメタデータ用ファイルは、末尾の拡張子で判定する。
+const STATIC_FILE = /\.(?:avif|webp|png|jpe?g|gif|svg|ico|css|m?js|map|woff2?|ttf|otf|eot|pdf|txt|xml|json|webmanifest|mp4|webm|mp3|wav)$/i;
+
 function shouldSkip(pathname: string): boolean {
   if (
     pathname.startsWith("/_next") ||
     pathname.startsWith("/api") ||
     pathname.startsWith("/admin") ||
     pathname.startsWith("/facilitator") || // [locale]外のルート（内部ツール）
-    pathname.includes(".")
+    STATIC_FILE.test(pathname)
   ) {
     return true;
   }

@@ -4,8 +4,9 @@ import { usePathname } from "next/navigation";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { languages } from "@/config/languages";
 import { addLocalePrefix, localeSwitchBasePath } from "@/lib/locale";
+import { getColumnSwitchLocales, type ColumnLocaleIndex } from "@/lib/column-language-links";
 
-export function LanguageSwitcher() {
+export function LanguageSwitcher({ columnLocales }: { columnLocales: ColumnLocaleIndex }) {
   const { locale, setLocale } = useLanguage();
   const pathname = usePathname();
 
@@ -17,10 +18,12 @@ export function LanguageSwitcher() {
   const basePath = localeSwitchBasePath(
     typeof window !== "undefined" ? window.location.pathname : pathname,
   );
+  const available = getColumnSwitchLocales(basePath, columnLocales, locale);
+  const visibleLanguages = languages.filter(({ code }) => available.includes(code));
 
   return (
     <div className="flex items-center gap-1">
-      {languages.map(({ code, label }, i) => (
+      {visibleLanguages.map(({ code, label }, i) => (
         <span key={code} className="flex items-center">
           {i > 0 && (
             <span className="mx-1 text-border">|</span>
