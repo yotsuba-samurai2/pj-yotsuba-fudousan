@@ -932,6 +932,46 @@ const ARTICLES: ArticleSpec[] = [
     localesWithTranslations: ["en", "zh-tw", "zh"],
     hubLinks: ["/souzoku"],
   },
+  {
+    file: "45-souzoku-haiguusha-kyojuuken-tatemono-baikyaku.md",
+    slug: "souzoku-haiguusha-kyojuuken-tatemono-baikyaku",
+    title: "配偶者居住権が設定された相続建物は売れるのか──評価・買い手・消滅の実務",
+    publishedAt: "2026-09-08",
+    category: "相続",
+    excerpt:
+      "配偶者居住権が付いた相続建物も、所有権を相続した人は売れます。ただし居住権が登記されていれば買主に対抗でき（民法第1031条）、居住権は第三者に譲渡できない（民法第1032条第2項）ため、実務では配偶者に放棄・合意消滅してもらい抹消登記を入れてから売るのが通例です。抹消登記は司法書士、消滅の対価にかかる譲渡所得やみなし贈与は税理士、遺産分割の紛争は弁護士に振り分けます。東京都文京区の宅地建物取引士兼行政書士が、売却の可否と段取りを条文と国税庁の資料から整理します。",
+    keywords: [
+      "配偶者居住権 建物 売却",
+      "配偶者居住権 登記 対抗 民法1031条",
+      "配偶者居住権 譲渡できない 民法1032条",
+      "配偶者居住権 合意 消滅 抹消登記",
+      "配偶者居住権 消滅 譲渡所得 みなし贈与",
+    ],
+    tags: ["相続", "配偶者居住権", "売却", "登記"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/souzoku"],
+  },
+  {
+    file: "46-hikyojusha-buyer-apart-loan-yushi-kanou.md",
+    slug: "hikyojusha-buyer-apart-loan-yushi-kanou",
+    title: "非居住者の中華圏バイヤーは日本の収益物件でアパートローンを組めるか",
+    publishedAt: "2026-09-08",
+    category: "投資・事業用不動産",
+    excerpt:
+      "海外に住む非居住者（中国・台湾）が日本の収益物件を買うとき、国内金融機関のアパートローン・プロパーローンは、日本国内の住所・永住資格・国内の連帯保証人などを求めることが多く、本人が単独で使える先は限られます。可否は各金融機関の審査次第。このため現金決済が中心になり、海外送金の着金から決済日を逆算する段取りが要点です。融資は各金融機関、送金は取引銀行、源泉・確定申告・納税管理人は税理士、在留資格は行政書士に振り分けます。東京都文京区の宅地建物取引士兼行政書士が、購入時の融資と現金決済の実務を条文と公的資料から整理します。",
+    keywords: [
+      "非居住者 日本 収益物件 ローン",
+      "外国人 アパートローン 非居住者 融資",
+      "非居住者 不動産 現金決済 海外送金",
+      "非居住者 不動産取得 外為法 報告 20日",
+      "非居住者 不動産 譲渡 源泉徴収 10.21%",
+    ],
+    tags: ["投資・事業用不動産", "非居住者", "融資", "中国語圏"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/toushi"],
+  },
 ];
 
 function toPlainText(md: string): string {
