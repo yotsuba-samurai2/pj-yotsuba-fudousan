@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { TenantLayoutShell } from "@/components/layout/TenantLayout";
 import { OrganizationJsonLd } from "@/components/seo/OrganizationJsonLd";
 import { BUSINESS_SEO } from "@/lib/seo";
+import { getColumnLanguageIndex } from "@/lib/column-language-index";
 
 // 社労士は開業（2026年9月・浦松指示 2026-07-07）まで全非表示。
 // SR_LAUNCHED=false（既定）＝全ルート404・noindex。ローカル検証時のみ NEXT_PUBLIC_SR_LAUNCHED=true で表示。
@@ -30,7 +31,7 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-export default function LaborLayout({
+export default async function LaborLayout({
   children,
 }: {
   children: React.ReactNode;
@@ -39,8 +40,9 @@ export default function LaborLayout({
     notFound();
   }
 
+  const columnLocales = await getColumnLanguageIndex("labor");
   return (
-    <TenantLayoutShell businessKey="labor">
+    <TenantLayoutShell businessKey="labor" columnLocales={columnLocales}>
       <OrganizationJsonLd businessKey="labor" />
       {/* WebSiteノードは出力しない（SEO監査2026-08-24 P1-1）：サイト名はホスト単位＝「四葉グループ」
           （(realestate)/layout.tsx で出力）。事業体は ProfessionalService（Organization）で表現 */}

@@ -3,15 +3,22 @@
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import remarkBreaks from "remark-breaks";
+import type { ColumnLinkOverrides } from "@/lib/column-language-links";
 
 type Props = {
   content: string;
+  linkOverrides?: ColumnLinkOverrides;
 };
 
-export default function ColumnBody({ content }: Props) {
+export default function ColumnBody({ content, linkOverrides = {} }: Props) {
   return (
     <div className="prose prose-sm sm:prose-base max-w-none prose-headings:text-text prose-p:text-text-muted prose-p:leading-[2] prose-a:text-primary prose-strong:text-text prose-blockquote:text-text-muted prose-li:text-text-muted">
-      <ReactMarkdown remarkPlugins={[remarkGfm, remarkBreaks]}>
+      <ReactMarkdown remarkPlugins={[remarkGfm, remarkBreaks]} components={{
+        a: ({ href, children, title }) => {
+          const replacement = href ? linkOverrides[href] : undefined;
+          return <a href={replacement?.href ?? href} title={title}>{children}{replacement && ` (${replacement.language})`}</a>;
+        },
+      }}>
         {content}
       </ReactMarkdown>
     </div>

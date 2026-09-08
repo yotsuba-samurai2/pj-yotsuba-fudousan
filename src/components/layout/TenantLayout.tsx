@@ -19,6 +19,7 @@ import { LinkaFab } from "@/components/shared/LinkaFab";
 import { SR_LAUNCHED, type BusinessKey } from "@/lib/shared/office";
 import { SR_OFFICE_NAME, SR_OFFICE_NAME_ZH_TW, SR_OFFICE_NAME_ZH } from "@/lib/shared/sr-name"; // 事務所名は実行時結合（法27条ソース漏れ対策）
 import type { LangCode } from "@/config/languages";
+import type { ColumnLocaleIndex } from "@/lib/column-language-links";
 import {
   SERVICE_NAV_CATEGORIES,
   SERVICE_NAV_UTILITY_LINKS,
@@ -472,7 +473,7 @@ function ServicesMobileAccordion({
   );
 }
 
-function TenantHeader({ businessKey }: { businessKey: string }) {
+function TenantHeader({ businessKey, columnLocales }: { businessKey: string; columnLocales: ColumnLocaleIndex }) {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const rawPathname = usePathname();
@@ -583,7 +584,7 @@ function TenantHeader({ businessKey }: { businessKey: string }) {
             )}
 
             <div className="ml-2 border-l border-border pl-3">
-              <LanguageSwitcher />
+              <LanguageSwitcher columnLocales={columnLocales} />
             </div>
 
             {contactItem && (
@@ -657,7 +658,7 @@ function TenantHeader({ businessKey }: { businessKey: string }) {
         {/* 下部固定バー(64px・z-40)に隠れないよう底上げ（言語切替＋お問い合わせを可視域に） */}
         <div className="border-t border-border px-4 py-4 pb-[88px]">
           <div className="mb-4 flex justify-center">
-            <LanguageSwitcher />
+            <LanguageSwitcher columnLocales={columnLocales} />
           </div>
           {contactItem && (
             <Link
@@ -1030,9 +1031,11 @@ function TenantFooter({ businessKey }: { businessKey: string }) {
 
 export function TenantLayoutShell({
   businessKey,
+  columnLocales,
   children,
 }: {
   businessKey: BusinessKey;
+  columnLocales: ColumnLocaleIndex;
   children: React.ReactNode;
 }) {
   const pathname = usePathname();
@@ -1042,7 +1045,7 @@ export function TenantLayoutShell({
   return (
     // A-2: テナント主色を route group 単位で --color-primary に割当（fixed子要素にも継承）
     <div style={tenantThemeVars(businessKey)}>
-      <TenantHeader businessKey={businessKey} />
+      <TenantHeader businessKey={businessKey} columnLocales={columnLocales} />
       {/* pb: SPの固定バー（MobileStickyBar）に本文が隠れないための余白 */}
       <main id="main-content" className="relative z-[1] pt-16 pb-[64px] sm:pt-20 md:pb-0">
         {children}

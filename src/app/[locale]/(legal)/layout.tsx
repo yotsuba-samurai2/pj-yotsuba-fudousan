@@ -5,6 +5,7 @@ import { fetchTranslations } from "@/lib/getTranslationData";
 import { getNestedValue, BUSINESS_SEO, BUSINESS_URLS, SITE_URL } from "@/lib/seo";
 import { getRequestLocale } from "@/lib/getRequestLocale";
 import type { LangCode } from "@/config/languages";
+import { getColumnLanguageIndex } from "@/lib/column-language-index";
 
 export async function generateMetadata(): Promise<Metadata> {
   // 旧実装のCookie参照はリクエストAPI＝配下全ルートを動的化するため、
@@ -46,13 +47,14 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-export default function LegalLayout({
+export default async function LegalLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const columnLocales = await getColumnLanguageIndex("legal");
   return (
-    <TenantLayoutShell businessKey="legal">
+    <TenantLayoutShell businessKey="legal" columnLocales={columnLocales}>
       <OrganizationJsonLd businessKey="legal" />
       {/* WebSiteノードは出力しない（SEO監査2026-08-24 P1-1）：Googleのサイト名はホスト単位のため、
           サブディレクトリ /legal に別サイト名を主張しない。サイト名＝「四葉グループ」は

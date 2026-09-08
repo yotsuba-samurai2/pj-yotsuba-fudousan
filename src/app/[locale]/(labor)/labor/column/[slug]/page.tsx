@@ -17,6 +17,7 @@ import { CtaBand } from "@/components/shared/CtaBand";
 import { LaborColumnDetailPageContent } from "./PageContent";
 import type { Metadata } from "next";
 import type { LangCode } from "@/config/languages";
+import { getColumnLinkOverrides } from "@/lib/column-link-overrides";
 
 
 type Props = { params: Promise<{ slug: string }> };
@@ -58,7 +59,10 @@ export default async function LaborColumnDetailPage({ params }: Props) {
   if (!isLocaleAllowed(base, locale)) notFound();
   const col = getLocalizedColumn(base, locale);
 
-  const allLaborColumns = await getLaborColumns(locale);
+  const [allLaborColumns, linkOverrides] = await Promise.all([
+    getLaborColumns(locale),
+    getColumnLinkOverrides(col.content),
+  ]);
   const sorted = [...allLaborColumns].sort((a, b) =>
     b.date.localeCompare(a.date),
   );
@@ -84,7 +88,7 @@ export default async function LaborColumnDetailPage({ params }: Props) {
         headline={col.title}
         summary={col.excerpt}
       />
-      <LaborColumnDetailPageContent col={col} prev={prev} next={next} />
+      <LaborColumnDetailPageContent col={col} prev={prev} next={next} linkOverrides={linkOverrides} />
       {/* ★2026-08-13 追加：コラム記事の末尾にCTA帯を置く。
           3レーンとも column/[slug]・column・about にだけ CtaBand が無く、
           PCではLINEへの導線が出ていなかった（SPは MobileStickyBar があるので出る）。
