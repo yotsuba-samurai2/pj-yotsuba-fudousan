@@ -6,10 +6,14 @@ import {
   deleteColumn,
   type Column,
 } from "@/lib/db/columns";
+import { refreshColumnPublication, ColumnPublicationRefreshError } from "@/lib/column-publication-cache";
 
 type Ctx = { params: Promise<{ id: string }> };
 
 function handleError(err: unknown) {
+  if (err instanceof ColumnPublicationRefreshError) {
+    return NextResponse.json({ error: err.message, mutationSucceeded: true }, { status: 503 });
+  }
   if (err instanceof AuthError) {
     return NextResponse.json({ error: err.message }, { status: err.status });
   }
@@ -41,6 +45,10 @@ export async function PATCH(req: NextRequest, ctx: Ctx) {
       return NextResponse.json({ error: "コラムが見つかりません" }, { status: 404 });
     }
     await updateColumn(id, data);
+    refreshColumnPublication([existing, {
+      business: data.business ?? existing.business,
+      slug: data.slug ?? existing.slug,
+    }]);
     return NextResponse.json({ ok: true });
   } catch (err) {
     return handleError(err);
@@ -56,6 +64,7 @@ export async function DELETE(req: NextRequest, ctx: Ctx) {
       return NextResponse.json({ error: "コラムが見つかりません" }, { status: 404 });
     }
     await deleteColumn(id);
+    refreshColumnPublication([existing]);
     return NextResponse.json({ ok: true });
   } catch (err) {
     return handleError(err);

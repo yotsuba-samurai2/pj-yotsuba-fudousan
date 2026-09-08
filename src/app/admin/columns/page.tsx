@@ -93,7 +93,7 @@ export default function ColumnsListPage() {
       );
     } catch (err) {
       console.error("Failed to soft-delete:", err);
-      alert("削除に失敗しました");
+      alert(err instanceof Error ? err.message : "削除に失敗しました");
     } finally {
       setDeleting(null);
     }
