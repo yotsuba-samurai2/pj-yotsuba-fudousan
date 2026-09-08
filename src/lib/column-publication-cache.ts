@@ -1,5 +1,6 @@
 import { revalidatePath, revalidateTag } from "next/cache";
 import { after } from "next/server";
+import { flushRevalidation } from "@/lib/flush-revalidation";
 import type { AdminColumn } from "@/lib/column-shared";
 import { COLUMN_LOCALE_CACHE_TAG } from "@/lib/column-language-links";
 import { SUPPORTED_LOCALES, addLocalePrefix } from "@/lib/locale";
@@ -14,7 +15,7 @@ export class ColumnPublicationRefreshError extends Error {
 }
 
 /** DB更新に成功した管理APIから呼ぶ。ブラウザの追加リクエストに依存しない。 */
-export function refreshColumnPublication(locations: readonly ColumnLocation[]) {
+export async function refreshColumnPublication(locations: readonly ColumnLocation[]) {
   const paths = [...new Set(locations.map(({ business, slug }) =>
     `${business === "realestate" ? "" : `/${business}`}/column/${slug}`,
   ))];
@@ -30,6 +31,7 @@ export function refreshColumnPublication(locations: readonly ColumnLocation[]) {
     }
     // サイトマップはapp/[locale]外にある。
     revalidatePath("/sitemap.xml");
+    await flushRevalidation();
   } catch (error) {
     console.error("Column publication refresh failed after database mutation:", error);
     throw new ColumnPublicationRefreshError();

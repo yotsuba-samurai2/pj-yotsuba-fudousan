@@ -53,11 +53,11 @@ export async function POST(req: NextRequest) {
     }
     if (req.nextUrl.searchParams.get("upsert")) {
       const result = await upsertColumnBySlug(body.business, body.slug, body);
-      refreshColumnPublication([body]);
+      await refreshColumnPublication([body]);
       return NextResponse.json(result);
     }
     const id = await createColumn(body);
-    refreshColumnPublication([body]);
+    await refreshColumnPublication([body]);
     return NextResponse.json({ id }, { status: 201 });
   } catch (err) {
     return handleError(err);

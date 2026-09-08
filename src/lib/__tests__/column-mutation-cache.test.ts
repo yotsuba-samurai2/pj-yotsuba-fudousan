@@ -3,7 +3,7 @@ import { NextRequest } from "next/server";
 
 const mocks = vi.hoisted(() => ({
   auth: vi.fn(), get: vi.fn(), create: vi.fn(), upsert: vi.fn(), update: vi.fn(), remove: vi.fn(),
-  tag: vi.fn(), path: vi.fn(), after: vi.fn(), indexnow: vi.fn(),
+  tag: vi.fn(), path: vi.fn(), flush: vi.fn(), after: vi.fn(), indexnow: vi.fn(),
 }));
 vi.mock("@/lib/api-auth", () => ({ verifyAdminRequest: mocks.auth,
   AuthError: class extends Error { constructor(message: string, public status: number) { super(message); } },
@@ -11,6 +11,7 @@ vi.mock("@/lib/api-auth", () => ({ verifyAdminRequest: mocks.auth,
 vi.mock("@/lib/db/columns", () => ({ getColumnById: mocks.get, getColumns: vi.fn(),
   createColumn: mocks.create, upsertColumnBySlug: mocks.upsert, updateColumn: mocks.update, deleteColumn: mocks.remove,
 }));
+vi.mock("@/lib/flush-revalidation", () => ({ flushRevalidation: mocks.flush }));
 vi.mock("next/cache", () => ({ revalidateTag: mocks.tag, revalidatePath: mocks.path }));
 vi.mock("next/server", async importOriginal => ({ ...await importOriginal<typeof import("next/server")>(), after: mocks.after }));
 vi.mock("@/lib/indexnow", () => ({ submitToIndexNow: mocks.indexnow }));
@@ -118,4 +119,27 @@ it("isolates unexpected errors in the notification callback", async () => {
   mocks.indexnow.mockRejectedValue(new Error("notification unavailable"));
   await PATCH(request("PATCH", { status: "draft" }), ctx);
   await expect(mocks.after.mock.calls[0][0]()).resolves.toBeUndefined();
+});
+
+
+it.each(["POST", "UPSERT", "PATCH", "DELETE"])("awaits asynchronous cache failure and reports the mutation as saved: %s", async method => {
+  mocks.flush.mockRejectedValue(new Error("asynchronous storage rejection"));
+  const response = method === "POST" || method === "UPSERT"
+    ? await POST(request("POST", column, method === "UPSERT" ? "?upsert=1" : ""))
+    : method === "PATCH" ? await PATCH(request("PATCH", { status: "draft" }), ctx) : await DELETE(request("DELETE"), ctx);
+  expect(response.status).toBe(503);
+  expect(await response.json()).toMatchObject({ mutationSucceeded: true, error: expect.stringContaining("保存・削除は完了") });
+  expect(mocks.after).not.toHaveBeenCalled();
+});
+
+it("does not send a successful mutation response before invalidation completes", async () => {
+  let release!: () => void;
+  let completed = false;
+  mocks.flush.mockImplementation(() => new Promise<void>(resolve => { release = resolve; }));
+  const result = PATCH(request("PATCH", { status: "draft" }), ctx).then(response => { completed = true; return response; });
+  await vi.waitFor(() => expect(mocks.flush).toHaveBeenCalledOnce());
+  expect(completed).toBe(false);
+  expect(mocks.after).not.toHaveBeenCalled();
+  release();
+  expect((await result).status).toBe(200);
 });

@@ -45,7 +45,7 @@ export async function PATCH(req: NextRequest, ctx: Ctx) {
       return NextResponse.json({ error: "コラムが見つかりません" }, { status: 404 });
     }
     await updateColumn(id, data);
-    refreshColumnPublication([existing, {
+    await refreshColumnPublication([existing, {
       business: data.business ?? existing.business,
       slug: data.slug ?? existing.slug,
     }]);
@@ -64,7 +64,7 @@ export async function DELETE(req: NextRequest, ctx: Ctx) {
       return NextResponse.json({ error: "コラムが見つかりません" }, { status: 404 });
     }
     await deleteColumn(id);
-    refreshColumnPublication([existing]);
+    await refreshColumnPublication([existing]);
     return NextResponse.json({ ok: true });
   } catch (err) {
     return handleError(err);
