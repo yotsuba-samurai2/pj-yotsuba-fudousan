@@ -7,6 +7,7 @@ import {
   type ColumnStatus,
 } from "@/lib/db/columns";
 import type { ColumnInput } from "@/lib/column-shared";
+import { revalidateColumn } from "@/lib/revalidate-column";
 
 const STATUSES: ColumnStatus[] = ["draft", "published", "deleted"];
 
@@ -49,9 +50,11 @@ export async function POST(req: NextRequest) {
     }
     if (req.nextUrl.searchParams.get("upsert")) {
       const result = await upsertColumnBySlug(body.business, body.slug, body);
+      await revalidateColumn(body);
       return NextResponse.json(result);
     }
     const id = await createColumn(body);
+    await revalidateColumn(body);
     return NextResponse.json({ id }, { status: 201 });
   } catch (err) {
     return handleError(err);

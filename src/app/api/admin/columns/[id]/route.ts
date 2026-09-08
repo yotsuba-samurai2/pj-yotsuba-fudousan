@@ -6,6 +6,7 @@ import {
   deleteColumn,
   type Column,
 } from "@/lib/db/columns";
+import { revalidateColumn } from "@/lib/revalidate-column";
 
 type Ctx = { params: Promise<{ id: string }> };
 
@@ -41,6 +42,10 @@ export async function PATCH(req: NextRequest, ctx: Ctx) {
       return NextResponse.json({ error: "コラムが見つかりません" }, { status: 404 });
     }
     await updateColumn(id, data);
+    await revalidateColumn(existing, {
+      business: data.business ?? existing.business,
+      slug: data.slug ?? existing.slug,
+    });
     return NextResponse.json({ ok: true });
   } catch (err) {
     return handleError(err);
@@ -56,6 +61,7 @@ export async function DELETE(req: NextRequest, ctx: Ctx) {
       return NextResponse.json({ error: "コラムが見つかりません" }, { status: 404 });
     }
     await deleteColumn(id);
+    await revalidateColumn(existing);
     return NextResponse.json({ ok: true });
   } catch (err) {
     return handleError(err);

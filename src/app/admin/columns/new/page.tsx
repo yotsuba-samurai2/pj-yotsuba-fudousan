@@ -4,30 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import ColumnForm from "@/components/admin/ColumnForm";
-import { createColumn, getAccessToken } from "@/lib/admin-api";
-
-async function revalidateColumn(business: string, slug: string) {
-  try {
-    const token = await getAccessToken();
-    const businessPath = business === "realestate" ? "" : `/${business}`;
-    await fetch("/api/admin/revalidate", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        ...(token && { Authorization: `Bearer ${token}` }),
-      },
-      body: JSON.stringify({
-        paths: [
-          `${businessPath}/column`,
-          `${businessPath}/column/${slug}`,
-          `${businessPath}/sitemap.xml`,
-        ],
-      }),
-    });
-  } catch (err) {
-    console.error("Revalidation failed:", err);
-  }
-}
+import { createColumn } from "@/lib/admin-api";
 
 export default function NewColumnPage() {
   const router = useRouter();
@@ -57,7 +34,6 @@ export default function NewColumnPage() {
           setError("");
           try {
             await createColumn(data);
-            await revalidateColumn(data.business, data.slug);
             router.push("/admin/columns");
           } catch (err) {
             console.error("Failed to create column:", err);
