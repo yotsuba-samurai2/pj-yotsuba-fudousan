@@ -12,12 +12,9 @@ export function LanguageSwitcher({ columnLocales }: { columnLocales: ColumnLocal
 
   // ハイドレーション完了前のクリックでも動くよう、実リンク（<a href>）として描画する
   // （onClick未接続の間は素のページ遷移になり、完了後は preventDefault + SPA切替）。
-  // SSR時は usePathname（リライト後＝ロケール除去済みパス）、クライアントでは
-  // window.location.pathname を基準にする。どちらも stripLocalePrefix 後は同じ
-  // ベースパスに収束する（テナントドメインのみ僅かに異なるため suppressHydrationWarning）。
-  const basePath = localeSwitchBasePath(
-    typeof window !== "undefined" ? window.location.pathname : pathname,
-  );
+  // 画面遷移中の window.location は旧URLのことがあるため、ルーターのパスを使う。
+  // 内部 /ja の除去とコラム一覧のページ番号の正規化は共通ヘルパーに任せる。
+  const basePath = localeSwitchBasePath(pathname);
   const available = getColumnSwitchLocales(basePath, columnLocales, locale);
   const visibleLanguages = languages.filter(({ code }) => available.includes(code));
 
@@ -32,6 +29,10 @@ export function LanguageSwitcher({ columnLocales }: { columnLocales: ColumnLocal
             href={addLocalePrefix(basePath, code)}
             suppressHydrationWarning
             onClick={(e) => {
+              // 別タブ・別ウィンドウ等はブラウザー標準のリンク操作を維持する。
+              if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) {
+                return;
+              }
               e.preventDefault();
               setLocale(code);
             }}
