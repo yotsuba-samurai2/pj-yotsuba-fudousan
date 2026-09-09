@@ -111,8 +111,20 @@
 - [x] Private HTTP checks: 28 labor URLs return 404/noindex; 12 legal URLs return 200 with no labor links.
 - [x] Final build compilation and TypeScript passed; DB authentication blocked page-data collection (exit 1, not build success).
 - [x] Mobile and desktop checks of plan fees, responsibility boundaries, controlled table scrolling and reciprocal links.
-- [ ] Finish production build with valid DB configuration; placeholder credentials currently block column pre-rendering and shared translations.
-- [ ] PR5: three Japanese revisions and review input prepared in the calling task outputs; await human-mediated ARTICLE_REVIEW_OUTPUT before translation/seed.
+- [x] Resolved in PR5: production-mode build passed with a disposable local DB; current production translations still require release-time verification.
+- [x] PR5 proceeded after direct user approval; external-model review is not claimed. Final five-article implementation and checks are recorded below.
 - [ ] Confirm V10 PART L and perform the separate-session primary review before release.
 
 No commit, push, PR, merge, deployment or DB writes were performed. Worktrees are based on e7e952316403f954c6eb82f39dac43e01718ce13. Existing unrelated working files are preserved. Detailed final verification and resume instructions are in the calling task outputs; raw logs and environment settings are not part of the distribution.
+
+## 2026-09-09 V10 PR5 — columns and local verification
+
+- [x] User directly approved the three presented Japanese revisions (04, 16, 37). No external-model review result is claimed.
+- [x] Final consistency scan found two further old-price references (03, 38); align only the affected office-service passages with the already approved V10 terms.
+- [x] Preserve article identity, original publication dates and topics; do not change unrelated articles.
+- [x] Use the repository's disposable local DB workflow to validate page generation without accessing production data.
+- [x] Final: 5 articles × 4 locales; 607 tests passed; typecheck/build passed; lint 0 errors; 120 public/private URL checks passed.
+- [x] Generated seed changes only 5 of 90 articles; 85 remain unchanged. CJK emphasis rendering corrected and tested.
+- [ ] Separate-session primary review, PART L confirmation and production-data comparison before publication.
+
+Only a task-owned loopback database receives fixture writes. No production DB writes, commits, PRs or deployments. Final evidence is saved in the calling task outputs.

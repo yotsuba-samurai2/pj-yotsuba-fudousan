@@ -1,13 +1,13 @@
 ---
 title: What does it cost to have a shakai hoken roumushi run your payroll?
-excerpt: Outsourced payroll is usually priced as a base fee plus an amount per employee, and the per-employee figure is most often quoted at 200-500 yen a month before tax. We set out why there is a base fee, how to tell full outsourcing from support for running payroll yourself, and the four things to line up before you compare. At Yotsuba there is no base fee: 1,100 yen per employee, tax included.
+excerpt: Outsourced payroll is usually priced as a base fee plus an amount per employee. This article explains how to compare outsourcing and in-house support. 四葉's HR Outsourcing Plan starts at 33,000 yen per month for 1–3 people, plus initial setup and workflow design from 88,000 yen, both including tax.
 category: How fees work
 faqHeading: Frequently asked questions
 keywords: payroll shakai hoken roumushi market rate | payroll outsourcing cost japan | payroll service fee per employee | payroll base fee headcount | is payroll exclusive to social insurance labor consultant | year-end tax adjustment tax accountant payroll
 tags: Payroll | Fees | Market rates | Outsourcing | Shakai Hoken Roumushi
 ---
 
-**In short:** Outsourced payroll is generally priced as **"a base fee plus so much per employee."** The per-employee figure is most often described as 200-500 yen a month (before tax), which comes to roughly 220-550 yen including tax. The base fee sits on top of that. It is a structure in which **the fewer people you have, the heavier the cost per person becomes**.
+**In short:** Outsourced payroll is generally priced as **"a base fee plus so much per employee."** The per-employee figure is most often described as 200-500 yen a month (before tax), which comes to roughly 220-550 yen including tax. The base fee sits on top of that. It is a structure in which **the fewer people you have, the heavier the cost per person becomes**. 四葉's HR Outsourcing Plan is **from 33,000 yen per month for 1–3 people on the payroll, including tax / initial setup and workflow design from 88,000 yen, including tax**.
 
 When people set out to have payroll handled elsewhere and start reading fee schedules, we often hear that the amounts are put together so differently from office to office that they cannot be compared. Look into it and you find that the differences lie less in the prices themselves than in **how the fee is assembled**.
 
@@ -23,7 +23,7 @@ When people set out to have payroll handled elsewhere and start reading fee sche
 
 The third row calls for care. Even where you see "payroll from 6,980 yen a month," whether that is **outsourcing or help with doing it yourself** changes the work required entirely. When you compare, line that up first.
 
-As in the fourth row, there is also the option of adopting software and not outsourcing at all. What you would still ask a shakai hoken roumushi for in that case, and what stays with you, is set out in [We've brought in freee HR. So what does a retained shakai hoken roumushi actually do?](/en/labor/column/freee-jinji-roumu-sharoushi-doko-made). At Yotsuba, we support the switch to this "run it yourselves" shape within the retainer agreement (more below).
+As in the fourth row, there is also the option of adopting software and not outsourcing at all. What you would still ask a shakai hoken roumushi for in that case, and what stays with you, is set out in [We've brought in freee HR. So what does a retained shakai hoken roumushi actually do?](/en/labor/column/freee-jinji-roumu-sharoushi-doko-made). If you switch to in-house processing, the support scope, fees and data transfer conditions are confirmed individually.
 
 ## Why is there a "base fee"?
 
@@ -46,20 +46,21 @@ Because of the latter, most offices set a base fee. Even at a company with one e
 
 ## What does Yotsuba do?
 
-| | |
-|---|---|
-| Outsourcing fee | **1,100 yen per employee per month (tax incl.)** |
-| Base fee | **None** |
-| Condition | ★**Bundled with a retainer agreement.** We do not accept payroll on its own |
-| Support for going in-house | ★Support for building a setup to run payroll yourselves on freee is **included in the retainer** (there is no separate charge) |
+The main service is the **HR Outsourcing Plan, covering payroll, routine filings and labor advice**. We present **from 33,000 yen per month for 1–3 people on the payroll, including tax / initial setup and workflow design from 88,000 yen, including tax** together.
 
-1,100 yen per person is twice the top of the market (around 550 yen including tax). In exchange, there is no base fee. At 20 employees the amount comes out the same as the common market shape of "an 11,000 yen base fee + 550 yen per person." Below 20 people Yotsuba is cheaper; above that, more expensive.
+| Number of people on the payroll | Monthly fee, including tax |
+|---|---:|
+| 1–3 | 33,000 yen |
+| 4–5 | 44,000 yen |
+| 6–10 | 55,000 yen |
+| 11–30 | 55,000 yen + 2,200 yen for each person above 10 |
+| 31 or more | Individual quotation |
 
-**We can do without a base fee because we do not take payroll on its own.** A retainer agreement is a precondition, so the situation of "taking on a company with one employee for 1,100 yen a month" does not arise. The smallest configuration is a 22,000 yen retainer plus 1,100 yen for payroll: 23,100 yen a month (tax incl.).
+The monthly fee includes freee人事労務 Standard, LINE time clock, online payslips, payroll, routine labor advice and routine social insurance and employment insurance filings. It excludes freee会計. The initial fee includes freee configuration, LINE time clock setup, pay structure and allowance/deduction settings, employee registration, social insurance information, the first payroll test and workflow design.
 
-In other words, **the engagement policy plays the part that the base fee would otherwise play**.
+**The company is responsible for checking and finalizing attendance and giving final approval of payroll results.** Initial insurance registration, residence status applications, year-end tax adjustment, full recruitment process outsourcing (RPO), specialist translation and extended interpreting are charged separately. 四葉行政書士事務所 handles residence status applications under a separate contract. Each office is an independent business, with direct contracting, direct billing and direct payment. No referral fees are paid or received.
 
-There is also **the choice of not outsourcing at all**. We support the build-up to running payroll in-house on freee — designing the initial settings, sorting out pay items and deductions, checking the months when premium rates are revised, and consulting on each month's close — within the retainer agreement. There is no separate charge for this support. You can also start by working out with us which suits you better: outsourcing (1,100 yen per person) or in-house.
+Compare the scope of payroll calculation alone with this plan, which also includes routine filings, advice and software. For a switch to in-house processing, support scope, fees and data transfer conditions require individual confirmation. We do not promise universally free support or an automatic fee reduction. See [our article on in-house payroll with freee](/en/labor/column/kyuyo-keisan-freee-naisei) for comparison points.
 
 ## Four things to line up when you compare
 
@@ -68,7 +69,7 @@ Setting the figures from fee schedules side by side is not yet a comparison. Lin
 1. **Outsourcing, or support alongside you** — whether your own staff do the data entry
 2. **Tax included or tax excluded** — 500 yen and 550 yen per person can be the same amount
 3. **How bonuses are treated** — whether a charge arises separately from the monthly fee
-4. **How the year-end tax adjustment is treated** — the year-end tax adjustment is the work of a tax accountant. It is never included in a payroll fee
+4. **How the year-end tax adjustment is treated** — check whether it is included, who handles the tax-related work and what it costs
 
 The fourth is easily missed. We do not handle the year-end tax adjustment either; we refer you to a tax accountant.
 
@@ -77,18 +78,20 @@ The fees as a whole, payroll included, are on [the fee schedule](/en/labor/ryoki
 ## Frequently asked questions
 
 **Q. Can we ask you for payroll alone?**
-A. We do not accept that. Payroll is taken on together with a retainer agreement. If we handled the calculations without also handling the consultations, we would risk processing the work on mistaken assumptions without knowing the actual situation. We do, however, support switching to calculating payroll yourselves on freee, with the support included in the retainer. Policies differ between offices, so looking for an office that takes payroll on its own is one reasonable option.
+A. 四葉's main service is the HR Outsourcing Plan, including payroll, routine filings and labor advice. We discuss the work you need before explaining the available scope. Support for in-house processing and its fees are confirmed separately; it is not universally free.
 
 **Q. Is payroll work that only a shakai hoken roumushi may do?**
 A. No. Payroll itself is not exclusive to shakai hoken roumushi. However, the procedures that arise alongside payroll — acquiring and losing social insurance coverage, the standard remuneration base notification, notifications of monthly remuneration changes — require registration as a shakai hoken roumushi if they are carried out for a fee (Article 27 of 社会保険労務士法).
 
 **Q. Is there a separate charge when bonuses are paid?**
-A. At Yotsuba the calculation of the bonus itself is included in payroll. Filing the bonus payment notification, however, is a labor and social insurance procedure, so the fee in the fee schedule is charged separately. Other offices treat this differently, so please check before you sign.
+A. Routine filings under the HR Outsourcing Plan include bonus payment reports. Conditions that have not been finalized, such as fees from the third bonus onward, are confirmed individually before signing.
 
 **Q. Does this assume employees enter their own data?**
 A. If you use a cloud HR and labor management system, the basic arrangement is for employees themselves to enter their details and My Number when they join. Where you receive the information on paper and we enter it on your behalf, the volume of work changes, so please raise it with us individually.
 
 ## Sources for this article
+
+- The description of 四葉's services and fees has been updated to the V10 specification dated September 9, 2026. See the [fee schedule](/en/labor/ryokin) for the current scope.
 
 - 社会保険労務士法 (Act No. 89 of 1968), Article 2, paragraph 1, item 1; Article 27
 - The market figures are drawn together from the fee schedules and explanatory articles published by several social insurance and labor consultant offices and services as of August 2026. Conditions differ from office to office, so please treat them as a guide.

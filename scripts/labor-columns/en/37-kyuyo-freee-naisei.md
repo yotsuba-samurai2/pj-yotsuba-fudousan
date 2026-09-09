@@ -1,94 +1,96 @@
 ---
 title: We want to run payroll in-house on freee — what do we ask a shakai hoken roumushi for?
-excerpt: Switching payroll to in-house processing on freee requires no licence. What trips companies up is not the software but the initial design of the settings and the monthly judgement calls. At Yotsuba, support for building the in-house setup is included in the retainer fee. We set out what the support covers, how to compare outsourcing with in-house, and why it fits inside the retainer.
+excerpt: Compare in-house payroll with outsourcing by the work that remains with the company, software costs and support scope. 四葉's HR Outsourcing Plan starts at 33,000 yen per month plus initial setup from 88,000 yen, both including tax. In-house support and transition fees require individual confirmation; there is no automatic fixed discount.
 category: Who to ask
 faqHeading: Frequently asked questions
-keywords: payroll in-house freee shakai hoken roumushi | bring payroll in-house support | freee payroll setup social insurance labor consultant | stop outsourcing payroll | wage deduction labor-management agreement payroll | payroll outsourcing vs in-house
-tags: freee | Payroll | Going in-house | Retainer agreement | Wage-deduction agreement | How fees work
+keywords: payroll in-house freee shakai hoken roumushi | bring payroll in-house support | freee payroll setup | HR outsourcing plan | wage deduction labor-management agreement | payroll outsourcing vs in-house
+tags: freee | payroll | in-house processing | HR outsourcing | wage-deduction agreement | fees
 ---
 
-**In short:** switching payroll to in-house processing on freee requires no licence. What trips companies up is not the operation of the software but **the initial design of the settings, and the judgement calls that come up each month**. 四葉社会保険労務士事務所 provides **support for building this in-house setup, included in the retainer fee**. The point is that outsourcing is not the only way to "engage" a shakai hoken roumushi.
+**Key points:** When deciding whether to process payroll in-house with freee or outsource it, compare who will check attendance, manage changes and approve the results, as well as who runs the calculation. The main service of 四葉社会保険労務士事務所 is the **HR Outsourcing Plan, which includes payroll processing**. For 1–3 people on the payroll, fees are **from 33,000 yen per month, including tax / initial setup and workflow design from 88,000 yen, including tax**. We do not describe all in-house support as free or promise an automatic fixed reduction when payroll moves in-house.
 
-This page is for owners and back-office staff of small companies who want to process payroll themselves on freee rather than outsource it — or who want to bring payroll back in-house from a current provider. Market rates for outsourcing are in [What does it cost to have a shakai hoken roumushi run your payroll?](/en/labor/column/kyuyo-keisan-soba-sharoushi), and the line between software and licence in [We've brought in freee HR. So what does a retained shakai hoken roumushi actually do?](/en/labor/column/freee-jinji-roumu-sharoushi-doko-made). This article is about **what the in-house option involves**.
+This article sets out comparison points for business owners and back-office staff who want to continue processing payroll internally or bring it back from an external provider. Processing your own company's payroll does not itself require qualification as a Japanese Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant). Checking employment terms, insurance information and the basis for settings remains necessary.
 
-## If we go in-house, what stays with us?
+## What work remains inside the company with in-house payroll?
 
-The calculation itself is the software's job. Three things stay with you.
+Write out the work from collecting attendance to paying wages, assigning a person and deadline to each task. Software can perform calculations, but the work before and after those calculations remains.
 
-- **Entry** — finalising attendance, reflecting hires, departures and changes of dependants
-- **Checking** — when a result differs from last month, telling a correct difference from a wrong one
-- **Judgement** — handling the irregular cases
-
-The third is the tricky one. From which month's pay do you start deducting social insurance premiums for a new hire? How do you handle the departure month's proration and premiums? What happens to premiums during leave? These situations do not arise every month — but when they do, the software only asks you *how to set it*, never *what is right*. This is where the questions of companies that went in-house pile up.
-
-## Where does in-house payroll go wrong?
-
-In our experience of switchovers, the stumbles come before the operations.
-
-| Stumbling point | What becomes a problem |
+| Task | What the company checks |
 |---|---|
-| **Designing pay items and allowances** | An allowance's nature decides whether it enters the base for overtime premiums or counts as remuneration for social insurance. Get the initial setting wrong and the same error is copied every month |
-| **The basis for deductions** | Deductions with no statutory basis — company housing charges, social-club dues — require a **labor-management agreement on wage deductions** (proviso to Article 24, paragraph 1 of the Labor Standards Act). A deduction with no agreement will still go through as a software setting |
-| **Cut-off and payday** | The relationship between the days from cut-off to payment and the timing of monthly-change and standard-remuneration determinations |
-| **Reflecting revisions** | From which month's pay to reflect revised social and employment insurance premium rates |
+| Checking, correcting and finalizing attendance | Missing time entries, leave, actual work performed and approval status |
+| Organizing changes | Hires, departures and changes in working conditions, allowances and dependents |
+| Updating payroll settings | Basis for changes, applicable month and consistency with insurance information |
+| Checking results | Differences from the previous month, prorated amounts and deductions |
+| Final approval and payment | Approver, payment deadline and correction procedure |
 
-None of these is answered by looking up how to operate the software. The setting you can do yourselves; grounding it takes labour-law knowledge — in-house support is the work of filling exactly that gap.
+Another comparison point is whether someone else can check the work when the usual person is absent. Even if one person knows how to operate the software, handovers become difficult if only that person understands why settings have changed.
 
-## What does "in-house support" get us?
+## What should you decide before configuring freee?
 
-At Yotsuba the scope is as follows, and **all of it is included in the retainer fee**.
+Organize the pay structure, allowances and deductions, cutoff and payment dates, attendance approver, social insurance information and the first-run checking method. Comparing settings with current employment contracts, work rules, payslips and employee information helps identify points to confirm.
 
-1. **Designing the initial settings** — sorting out pay items, allowances and deductions and grounding each one (including identifying which deductions need a wage-deduction agreement, and putting it in place)
-2. **Walking alongside during the transition** — for the first few months we reconcile the results at each close and trace any differences with you
-3. **Monthly consultation** — judgement calls when hires, departures, leave or bonuses come up. No limit on the number of times
-4. **Checks at revision time** — confirming the months when premium rates change are reflected correctly
+For example, when company housing costs or similar items are deducted from wages, check the basis for the deduction rather than deciding its treatment simply because the software allows the setting. Article 24, paragraph 1 of Japan's Labor Standards Act establishes payment of wages in full as the general rule and provides for partial deductions where otherwise specified by law or where the prescribed written labor-management agreement exists. Treatment of particular deductions and preparation of documents are matters to confirm with a qualified professional.
 
-We also draw the line clearly. **The fine detail of screen operations belongs to freee's official help and support.** What we support is the design of the settings and the labour-law judgement. And after you go in-house, if you ask us to **file procedures on your behalf** — acquisition notifications, the standard remuneration base notification — the fees in the [fee schedule](/en/labor/ryokin) are charged per filing (you can also file them yourselves electronically — [the line-drawing](/en/labor/column/freee-jinji-roumu-sharoushi-doko-made)).
+Use freee's official help for operating instructions and consult a Shakai Hoken Roumushi about questions on the labor-related basis or timing of processing. Direct the question to the appropriate source according to its subject.
 
-## Outsourcing or in-house — which suits us?
+## How should you compare in-house processing with the HR Outsourcing Plan?
 
-| | Outsourcing | In-house (freee + support) |
+| Comparison point | Processing payroll in-house | 四葉's HR Outsourcing Plan |
 |---|---|---|
-| Monthly cost | Retainer + **1,100 yen per person per month (tax incl.)** | Retainer only (+ the freee subscription; the amount depends on the plan, so check the official site) |
-| Work inside the company | Handing over attendance data | Entry, checking and the close, all in-house |
-| Suits | Companies that cannot or do not want to staff someone on payroll | Companies with a back-office person who want the monthly cycle completed internally |
-| Switching | — | **You can switch mid-stream, and switch back from in-house to outsourcing** |
+| Calculations and payslips | Performed internally | Included in the monthly fee |
+| Routine social insurance and employment insurance filings | Perform internally or agree the outsourced scope individually | Specified routine filings included in the monthly fee |
+| Software and attendance | Check your own usage contract and plan | Includes freee人事労務 Standard, LINE time clock and online payslips |
+| Checking and finalizing attendance | Company responsibility | Company responsibility |
+| Final approval of payroll results | Company responsibility | Company responsibility |
+| Initial setup and ongoing support | Confirm support scope and costs individually | Initial fee and monthly headcount-band fees presented in advance |
 
-The retainer is the same either way. The design lets you switch when circumstances change — a back-office hire, a departure. You are welcome to start from the sorting-out stage while still undecided.
+Even with outsourcing, **the company is responsible for checking and finalizing attendance and giving final approval of payroll results**. Under the plan, 四葉 handles payroll and routine filings, while the company provides personnel changes and finalized attendance and obtains necessary internal approvals. Points requiring further judgment are organized for labor consultation.
 
-## Why does the retainer alone cover it?
+When comparing the cost of in-house processing, include the operator's time, the checker's time, handovers during leave or staff departures, and quotations for initial setup and individual support, as well as software fees. A policy of building knowledge inside the company can also be a reason to choose in-house processing.
 
-The trick, revealed, is a consequence of the fee design. [Yotsuba's retainer is the price of labour consultation](/en/labor/column/sharoushi-komonryo-nan-no-taika); it does not bundle filings or payroll. And in-house support — consulting on the design of the settings, consulting on each month's judgement calls — is precisely what the Certified Social Insurance and Labor Consultant Act defines as **"responding to consultation, or providing guidance"** (Article 2, paragraph 1, item 3). For Yotsuba, in-house support is one scene of the consultation we already provide every month under the retainer, not a separate service.
+## How much is needed at the start if you outsource to 四葉?
 
-At offices that bundle filings and payroll into the retainer, the more a client goes in-house, the thinner the grounds for the retainer become. Yotsuba separates the price of consultation from the price of procedures, so **recommending in-house does not cut our own throat** — which is why it can sit inside the retainer.
+Fees are **from 33,000 yen per month for 1–3 people on the payroll, including tax / initial setup and workflow design from 88,000 yen, including tax**. The initial fee includes freee configuration, LINE time clock setup, pay structure and allowance/deduction settings, employee registration, social insurance information, the first payroll test and workflow design.
 
-## What can 四葉社会保険労務士事務所 do?
+Monthly fees are 44,000 yen for 4–5 people and 55,000 yen for 6–10. For 11–30 people, the fee is 55,000 yen plus 2,200 yen for each person above 10; for 31 or more, an individual quotation applies. All figures include tax, with headcount bands reflecting payroll, filings, usage capacity and inquiries.
 
-四葉社会保険労務士事務所, in Kohinata, Bunkyo City, supports — within the retainer agreement — the build-up to in-house payroll on freee: designing the initial settings, putting the wage-deduction agreement in place, walking alongside during the transition, and consulting on each month's close and at revision time. If you prefer outsourcing, we take it on at 1,100 yen per employee per month (tax incl.). **Consultation is free of charge.** Bring your current provider's fee schedule and a freee quote, and we will start from comparing the totals. Fees as a whole are in the [fee schedule](/en/labor/ryokin), and the steps to engagement in [How consultation and contracting work](/en/labor/nagare).
+The monthly fee includes payroll, updates such as social insurance rates, everyday labor advice and routine filings. Routine filings cover enrollment and withdrawal, dependent changes, monthly remuneration change reports, bonus payment reports, annual remuneration reports and annual labor insurance renewal. freee会計, initial insurance registration, residence status applications, year-end tax adjustment, full recruitment process outsourcing (RPO), specialist translation and extended interpreting are outside the scope. See the [fee schedule](/en/labor/ryokin) for details.
 
-### Whom to consult
+## What should you check before moving payroll in-house later?
 
-The year-end tax adjustment is tax territory, the work of **a tax accountant** ([whose job is freee's year-end adjustment feature?](/en/labor/column/freee-nenmatsu-chosei-dare-no-shigoto)). Bookkeeping and closing on freee accounting also go to **a tax accountant**. Residence-status applications and subsidies are handled by **四葉行政書士事務所** (a separate business from this office, engaged under a separate contract). In every case, no referral fees change hands.
+Confirm the following before contracting for a transition.
+
+1. Which payroll month the company will begin calculating, and who handles the preceding month.
+2. Who will hold the freee contract and what access rights will apply.
+3. Which employee information, payroll settings and historical data will be transferred, and in what format.
+4. The scope and price of advice, filings and configuration support after the transition.
+
+Data transfer conditions and costs at the end of the contract require individual confirmation. The previous approach of simply subtracting a per-person payroll outsourcing charge cannot be applied to this plan. If circumstances change because an employee joins or leaves the back-office team, first reassess the division of work.
+
+## Can we consult you about foreign employees or welfare-sector payroll?
+
+The priority clients for the HR Outsourcing Plan are companies employing foreign nationals, followed by disability welfare and group home (GH) operators. We directly provide basic consultations with owners and basic explanations of payroll and social insurance in Chinese. Other foreign languages use AI and translation assistance; specialist translation and extended interpreting are charged separately.
+
+四葉行政書士事務所 handles residence status applications and applications for designation as a GH service provider. 四葉社会保険労務士事務所 handles payroll, social insurance and labor matters. They are independent businesses, with separate contracts, direct billing and direct payment to each office. For tax, we guide clients to consult a Japanese tax accountant directly; for registration, a judicial scrivener; and for contentious matters, an attorney. No referral fees are paid or received.
 
 ## Frequently asked questions
 
-**Q. Can we consult before we have even adopted freee?**
-A. Yes. Starting from the design — your cut-off, headcount and allowance structure — is in fact the shortest route. Which software to choose is your company's decision, and please check freee's official site and help pages for current features and pricing.
+**Q. Can we consult you before adopting freee?**
+A. Yes. You can consult us once you have begun organizing headcount, the payroll cutoff date, pay structure and your current process. The first consultation is free for up to 60 minutes.
 
-**Q. If we go in-house, is there anything left to ask a shakai hoken roumushi for?**
-A. Yes. The monthly calculation moves in-house, but the judgement — whether a procedure is needed and by when — and the procedures themselves remain. You can have us file them, or [file them yourselves electronically](/en/labor/column/freee-jinji-roumu-sharoushi-doko-made). And the support for building the in-house setup is itself part of what the retainer buys.
+**Q. Is all support for in-house processing included in the monthly fee?**
+A. We do not offer that as a general inclusion. The main service is the HR Outsourcing Plan, under which payroll is entrusted to us. Support scope, implementation fees and ongoing fees for in-house processing are confirmed individually.
 
-**Q. Will you teach us how to operate freee?**
-A. The fine detail of screen operations belongs to freee's official help and support. What we support sits before and after that — the design of pay items and deductions, the legal basis for deductions (the labor-management agreement), and the judgement calls at the close and at revision time. Splitting the roles is what makes the switch reliable.
+**Q. If we outsource, can we stop checking attendance?**
+A. The company remains responsible for checking, correcting and finalizing attendance and giving final approval of payroll results. We establish the responsible people and deadlines during setup.
 
-**Q. If we switch to in-house, what happens to the outsourcing fee?**
-A. From the month you stop outsourcing, the 1,100 yen per person no longer arises. The retainer, being the price of consultation, does not change. Monthly consultation and revision-time checks after going in-house are included in the retainer.
+**Q. How much does the monthly fee fall when we move payroll in-house?**
+A. There is no preset automatic discount. We review the contract and fees after confirming the post-transition scope of advice and filings, software licensing and data transfer conditions.
 
 ## Sources for this article
 
-- 社会保険労務士法 (Act No. 89 of 1968), **Article 2, paragraph 1, item 3** (consultation and guidance on labour management and other labour matters) and **Article 27** — current text confirmed on e-Gov on 14 August 2026. Note that what Article 27 reserves to shakai hoken roumushi is the work in Article 2, paragraph 1, items 1 through 2; payroll itself and consultation/guidance (item 3) are not exclusive work
-- 労働基準法 (Act No. 49 of 1947), **proviso to Article 24, paragraph 1** (deductions from wages require a written labor-management agreement) — current text confirmed on e-Gov the same day
-- freee HR's features, coverage and pricing are revised over time. This article does not go into feature detail; please check freee's official site and help pages for current information (the electronic-filing coverage is set out in [a separate article](/en/labor/column/freee-jinji-roumu-sharoushi-doko-made), based on materials published as of August 2026)
-- 四葉社会保険労務士事務所's fees are published in the [fee schedule](/en/labor/ryokin). All amounts include tax
+- [Labor Standards Act](https://laws.e-gov.go.jp/law/322AC0000000049), Article 24, paragraph 1. The text and supplementary provisions were checked using the e-Gov legislation API on September 9, 2026. The latest promulgated amendment to the Act as a whole is Act No. 60 of 2026, with its principal provisions effective April 1, 2027 and some supplementary provisions effective July 17, 2026. Amendments that have not yet taken effect are not treated here as already applicable.
+- 四葉's services and prices follow the V10 specification dated September 9, 2026. See the [fee schedule](/en/labor/ryokin) and [retainer comparison points](/en/labor/column/sharoushi-komonryo-nan-no-taika).
+- [The roles of freee HR and a Shakai Hoken Roumushi](/en/labor/column/freee-jinji-roumu-sharoushi-doko-made) explains software, qualifications and electronic filing. Check freee's official website and help for current functions and usage conditions.
 
-This article is general information. Judgments that fit your particular circumstances are made by a qualified professional after a meeting. Written by [Joji Uramatsu](/en/about/uramatsu) (Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist).
+This article provides general information. A qualified professional makes judgments about individual circumstances after a consultation. Written by [浦松丈二](/en/about/uramatsu), a Japanese Certified Social Insurance and Labor Consultant, Administrative Scrivener and Real Estate Transaction Specialist.
