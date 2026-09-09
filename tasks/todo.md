@@ -97,3 +97,22 @@
 - [x] 既存の検証済み統合候補を#327へ反映
 - [ ] テスト・型検査・Preview build・公開URL確認
 - [ ] 重複PR整理（本番マージは別途）
+
+## 2026-09-09 V10 implementation — PR1 through PR4
+
+- [x] Centralize HR plan fees, setup costs and responsibility boundaries in four locales.
+- [x] Rebuild labor home, pricing, FAQ and workflow pages; keep unrelated existing fees.
+- [x] Rebuild legal home and qualification-gated foreign-employer/GH links.
+- [x] Align foreign-employment and visa LPs; correct language-support claims in the existing Japanese employer guide.
+- [x] Translate care/GH and treatment-improvement LPs; separate wage work from administrative submissions.
+- [x] Align the FAQ and two translated GH routes with sitemap hreflang entries.
+- [x] Integrated unit/regression tests: 587 passed; typecheck passed; full lint: 0 errors, 36 warnings.
+- [x] Public HTTP checks: 40 URLs (10 pages × 4 locales), all 200 with one H1 and matching canonical/hreflang.
+- [x] Private HTTP checks: 28 labor URLs return 404/noindex; 12 legal URLs return 200 with no labor links.
+- [x] Final build compilation and TypeScript passed; DB authentication blocked page-data collection (exit 1, not build success).
+- [x] Mobile and desktop checks of plan fees, responsibility boundaries, controlled table scrolling and reciprocal links.
+- [ ] Finish production build with valid DB configuration; placeholder credentials currently block column pre-rendering and shared translations.
+- [ ] PR5: three Japanese revisions and review input prepared in the calling task outputs; await human-mediated ARTICLE_REVIEW_OUTPUT before translation/seed.
+- [ ] Confirm V10 PART L and perform the separate-session primary review before release.
+
+No commit, push, PR, merge, deployment or DB writes were performed. Worktrees are based on e7e952316403f954c6eb82f39dac43e01718ce13. Existing unrelated working files are preserved. Detailed final verification and resume instructions are in the calling task outputs; raw logs and environment settings are not part of the distribution.

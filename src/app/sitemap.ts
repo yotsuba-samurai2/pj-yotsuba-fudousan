@@ -228,9 +228,9 @@ const STATIC_LABOR: StaticPage[] = [
   // locales の明示は sitemap-labor.test.ts の規約（存在しないロケールURLを広告しない）に合わせるため。
   { path: "/labor", changeFrequency: "monthly", priority: 0.9, locales: ["ja", "en", "zh-tw", "zh"] },
   { path: "/labor/services", changeFrequency: "monthly", priority: 0.8, locales: ["ja", "en", "zh-tw", "zh"] }, // 2026-09-01 4言語公開（第1波）
-  { path: "/labor/services/kaigo-roumu", changeFrequency: "monthly", priority: 0.8, locales: ["ja"] },
+  { path: "/labor/services/kaigo-roumu", changeFrequency: "monthly", priority: 0.8, locales: ["ja", "en", "zh-tw", "zh"] },
   { path: "/labor/services/jinin-kijun-roumu", changeFrequency: "monthly", priority: 0.8, locales: ["ja"] },
-  { path: "/labor/services/shogu-kaizen", changeFrequency: "monthly", priority: 0.8, locales: ["ja"] },
+  { path: "/labor/services/shogu-kaizen", changeFrequency: "monthly", priority: 0.8, locales: ["ja", "en", "zh-tw", "zh"] },
   { path: "/labor/services/joseikin", changeFrequency: "monthly", priority: 0.7, locales: ["ja"] },
   { path: "/labor/services/gaikokujin-koyo", changeFrequency: "monthly", priority: 0.8, locales: ["ja", "en", "zh-tw", "zh"] }, // 2026-09-01 4言語公開（第2波）
   { path: "/labor/services/gaibu-kansanin", changeFrequency: "monthly", priority: 0.8, locales: ["ja", "en", "zh-tw", "zh"] }, // 2026-09-01 4言語公開（第2波）

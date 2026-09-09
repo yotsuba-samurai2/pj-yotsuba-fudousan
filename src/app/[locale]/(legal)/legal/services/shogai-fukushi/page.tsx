@@ -21,6 +21,8 @@ import { getCrossLinks } from "@/lib/cross-links";
 import { SR_LAUNCHED } from "@/lib/shared/office";
 import type { LangCode } from "@/config/languages";
 import { SR_BIO } from "@/lib/shared/sr-label";
+import { GhOpeningSupport } from "@/components/labor/GhOpeningSupport";
+import { GH_SERVICE_COPY } from "@/lib/labor/gh-service-copy";
 
 const PATH = "/legal/services/shogai-fukushi";
 const PAGE_URL = "https://luck428.com" + PATH;
@@ -835,6 +837,8 @@ export default async function Page() {
           <p className="mt-4 leading-relaxed text-text">{c.lead}</p>
         </header>
 
+        <GhOpeningSupport locale={locale} srLaunched={SR_LAUNCHED} />
+
         {/* 2. 疑問文H2 一問一答（表示のみ） */}
         <section className="mt-8 space-y-8">
           <div>
@@ -883,7 +887,7 @@ export default async function Page() {
 
         {/* クロスリンク（C2→/toushi/group-home・独立受任注記） */}
         {crossLinks.map((cl) => (
-          <CrossLinkBanner key={cl.id} link={cl} />
+          <CrossLinkBanner key={cl.id} link={cl} lead={cl.targets.some(target => target.business === "labor") ? GH_SERVICE_COPY[locale].after : undefined} />
         ))}
 
         {/* 署名（E-E-A-T・Person @id は全事業共通 https://luck428.com/#uramatsu-joji／本体は不動産 /about） */}

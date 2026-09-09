@@ -1,0 +1,93 @@
+import type { LangCode } from "@/config/languages";
+
+type ShoguCopy = {
+  title: string; description: string; heroAlt: string; lead: string;
+  flowTitle: string; flowIntro: string; steps: readonly string[];
+  boundaryTitle: string; boundaryIntro: string; headings: readonly string[];
+  rows: readonly (readonly string[])[]; contracts: string; articleLink: string;
+  feesTitle: string; fees: string; data: string; ongoingTitle: string; ongoing: string;
+};
+
+/** V10: our engagement policy, without extending statutory exclusivity claims. */
+export const SHOGU_SERVICE_COPY: Record<LangCode, ShoguCopy> = {
+  ja: {
+    title: "処遇改善加算の賃金設計サポート",
+    description: "障害福祉・介護・グループホームの処遇改善加算について、四葉社会保険労務士事務所が就業規則・賃金規程・賃金改善額の設計と算定を支援。計画書・実績報告書など行政提出書類の作成は四葉行政書士事務所が別契約で受任します。",
+    heroAlt: "処遇改善加算のサポートのイメージ（賃金規程の整備）",
+    lead: "障害福祉・介護・グループホームの処遇改善では、届出と日々の給与・賃金体系との整合を整理することが大切です。四葉社会保険労務士事務所は、就業規則・賃金規程・キャリアパス要件などの賃金制度設計と賃金改善額の算定を支援します。計画書・実績報告書など指定権者へ提出する書類の作成は、四葉行政書士事務所に別契約でご依頼いただきます。",
+    flowTitle: "処遇改善加算は、どのような工程で進めますか？",
+    flowIntro: "一般的な流れは次のとおりです。加算区分・要件・提出期限はサービス種別や年度で異なるため、最新の告示・通知と指定権者の案内を確認します。取得を保証するものではありません。",
+    steps: ["現状整理：賃金体系・キャリアパス・研修体制を確認します。", "規程整備：社労士が就業規則・賃金規程と賃金要件の整合を整理します。", "計画書・届出：行政提出書類は行政書士が別契約で作成・提出を支援します。", "実行と記録：事業所が賃金改善を実施し、勤怠・給与の確認と記録を行います。社労士は賃金改善額の算定を支援します。", "実績報告：事業所が確定した実績をもとに、行政書士が別契約で提出書類の作成を支援します。"],
+    boundaryTitle: "行政書士と社労士には、何を分けて依頼しますか？",
+    boundaryIntro: "四葉では、賃金制度の設計・算定と、指定権者に提出する書類の作成を、次の契約範囲に分けてご案内します。個別の業務範囲は資格者が確認します。",
+    headings: ["工程", "担当", "受任内容"],
+    rows: [["賃金制度の設計・賃金改善額の算定", "社会保険労務士（四葉社会保険労務士事務所）", "就業規則・賃金規程・キャリアパス要件などの整理、賃金改善額の算定支援"], ["指定権者（自治体）への提出書類", "行政書士（四葉行政書士事務所）", "加算体制届・計画書・実績報告書など行政提出書類の作成"]],
+    contracts: "両方をご依頼いただく場合は、各事務所と別々に契約します。同じ代表者が営んでいますが、独立した事業体で、料金・請求も分かれます。事務所間で紹介料の授受はなく、一方へのご依頼が他方へのご依頼の条件になることもありません。",
+    articleLink: "処遇改善加算は、社労士と行政書士のどちらに頼むのか",
+    feesTitle: "処遇改善の賃金設計・算定支援の費用",
+    fees: "賃金要件の設計・算定支援は個別見積りです。事業所の規模、サービス種別、既存の賃金規程の整備状況を確認し、着手前に金額と作業範囲を書面でお出しします。就業規則・賃金規程の作成費用は報酬額表をご案内します。処遇改善の専門的な設計・算定支援や行政提出書類の作成が、人事部丸投げプランの月額に一律に含まれるものではありません。",
+    data: "手続と給与計算はfreee人事労務を使い、顧問先と同じデータを見ながら進めます。賃金改善額の算定では給与データを活用し、対象期間や既存資料に応じて必要な確認資料をご案内します。勤怠の確認・修正・確定、給与計算結果の最終承認、賃金の支払いと社内承認は事業所側で行います。",
+    ongoingTitle: "開設後の日常的な人事労務をまとめて相談したい場合",
+    ongoing: "給与計算・通常手続・日常の労務相談には、人事部丸投げプランをご案内します。以下は日常の人事労務の料金です。処遇改善の個別案件は上記の見積り・契約範囲を別途確認します。",
+  },
+  en: {
+    title: "Wage design for treatment-improvement add-ons",
+    description: "四葉社会保険労務士事務所 supports work rules, wage systems and wage-improvement calculations for disability-welfare, care and group-home providers. Plans and performance reports submitted to authorities are prepared by 四葉行政書士事務所 under separate contracts.",
+    heroAlt: "Preparing wage rules for treatment-improvement add-on support",
+    lead: "For disability-welfare, care and group-home providers, treatment improvement connects filings with everyday payroll and wage systems. 四葉社会保険労務士事務所 supports wage-system design, work rules, wage rules, career-path requirements and wage-improvement calculations. Documents submitted to the designating authority, including plans and performance reports, require a separate engagement with 四葉行政書士事務所.",
+    flowTitle: "What are the stages of treatment-improvement support?",
+    flowIntro: "The general sequence is below. Categories, requirements and deadlines vary by service and fiscal year, so current notices and guidance from the designating authority are checked. Obtaining an add-on is not guaranteed.",
+    steps: ["Assess the current wage system, career paths and training arrangements.", "Align rules: the labor consultant helps align work and wage rules with wage requirements.", "Plans and filings: the administrative scrivener supports preparation and filing of administrative documents under a separate contract.", "Implement and record: the provider implements wage improvements and reviews and records attendance and payroll. The labor consultant supports wage-improvement calculations.", "Performance reports: the administrative scrivener helps prepare filing documents under a separate contract, using the results finalized by the provider."],
+    boundaryTitle: "What is assigned to each professional?",
+    boundaryIntro: "At Yotsuba, wage design and calculations are separated from preparing documents for the designating authority as shown below. A qualified professional confirms the scope in each case.",
+    headings: ["Stage", "Responsible office", "Engagement scope"],
+    rows: [["Wage-system design and wage-improvement calculations", "Social insurance and labor consultant — 四葉社会保険労務士事務所", "Work rules, wage rules, career-path requirements and support for wage-improvement calculations"], ["Documents for the designating authority", "Administrative scrivener — 四葉行政書士事務所", "Administrative documents such as add-on structure notifications, plans and performance reports"]],
+    contracts: "When you request both, you contract with each office separately. They share a representative but are independent businesses with separate fees and invoices. No referral fees are exchanged, and engaging one office is not a condition of engaging the other.",
+    articleLink: "Treatment-improvement add-ons: labor consultant or administrative scrivener?",
+    feesTitle: "Fees for wage design and calculation support",
+    fees: "Wage-requirement design and calculation support are individually quoted. We check your size, service type and existing wage rules, then provide the scope and fee in writing before starting. Work-rule and wage-rule drafting fees are shown in the fee schedule. Specialist treatment-improvement design, calculation support and administrative document preparation are not automatically included in the Outsourced HR monthly fee.",
+    data: "Procedures and payroll use shared freee HR data. Wage-improvement calculations use payroll data, with any additional documents identified according to the period and existing records. Your company reviews, corrects and finalizes attendance, approves payroll results, pays wages and obtains internal approvals.",
+    ongoingTitle: "For ongoing HR after opening",
+    ongoing: "Our Outsourced HR Department Service covers payroll, routine procedures and everyday labor consultations. The fees below are for that ongoing HR service. Each treatment-improvement project requires separate confirmation of its quote and scope.",
+  },
+  "zh-tw": {
+    title: "處遇改善加算的薪資設計支援",
+    description: "四葉社会保険労務士事務所支援障礙福祉、照護與團體家屋的就業規則、薪資規程及薪資改善額設計與計算。計畫書、實績報告等行政提交文件，由四葉行政書士事務所另行簽約製作。",
+    heroAlt: "處遇改善加算支援示意圖（薪資規程整備）",
+    lead: "障礙福祉、照護與團體家屋的處遇改善，需要整理申報與日常薪資、薪資制度之間的整合。四葉社会保険労務士事務所支援就業規則、薪資規程、職涯路徑要件等薪資制度設計及薪資改善額計算。計畫書、實績報告書等向指定權者提交的文件，須另行與四葉行政書士事務所簽約委託。",
+    flowTitle: "處遇改善加算的支援如何進行？",
+    flowIntro: "一般流程如下。加算區分、要件與期限依服務類別及年度而異，須確認最新通知與指定權者的說明。並不保證取得加算。",
+    steps: ["現況整理：確認薪資制度、職涯路徑與培訓體制。", "規程整備：由社會保險勞務士整理就業規則、薪資規程與薪資要件的整合。", "計畫與申報：行政提交文件由行政書士另行簽約支援製作與提交。", "執行與記錄：事業所實施薪資改善，確認與記錄出勤、薪資；社會保險勞務士支援薪資改善額計算。", "實績報告：依事業所確定的實績，行政書士另行簽約協助製作提交文件。"],
+    boundaryTitle: "行政書士與社會保險勞務士分別承辦什麼？",
+    boundaryIntro: "四葉將薪資制度設計、計算與向指定權者提交文件的製作，分為下列契約範圍。個別承辦範圍由具資格者確認。",
+    headings: ["工序", "承辦者", "委託範圍"],
+    rows: [["薪資制度設計・薪資改善額計算", "社會保險勞務士（四葉社会保険労務士事務所）", "就業規則、薪資規程、職涯路徑要件的整理與薪資改善額計算支援"], ["向指定權者（自治體）提交的文件", "行政書士（四葉行政書士事務所）", "加算體制申報、計畫書、實績報告書等行政提交文件的製作"]],
+    contracts: "如需委託雙方，須分別與各事務所簽約。雖由同一代表經營，仍屬獨立事業體，費用及請款亦分開。事務所間不收付介紹費，委託一方也不是委託另一方的前提。",
+    articleLink: "處遇改善加算應委託社會保險勞務士還是行政書士？",
+    feesTitle: "薪資設計與計算支援的費用",
+    fees: "薪資要件設計與計算支援採個別報價。確認事業所規模、服務類別與現有薪資規程後，於著手前以書面提出費用及範圍。就業規則、薪資規程製作費用請參閱報酬額表。處遇改善的專業設計、計算支援及行政文件製作，並非一律包含於人事部全包方案月費。",
+    data: "手續與薪資計算採用freee人事勞務，與顧問客戶查看相同資料。薪資改善額計算會運用薪資資料，並依對象期間、現有記錄說明所需的補充資料。出勤確認、修正、確定，薪資計算結果的最終核准、薪資支付及內部核准由事業所負責。",
+    ongoingTitle: "希望一併諮詢開設後的日常人事勞務時",
+    ongoing: "薪資計算、一般手續及日常勞務諮詢，可使用人事部全包方案。下列費用適用於日常人事勞務；處遇改善個別案件的報價與契約範圍須另外確認。",
+  },
+  zh: {
+    title: "处遇改善加算的工资设计支持",
+    description: "四葉社会保険労務士事務所支持残障福祉、护理与团体家屋的就业规则、工资规程及工资改善额设计与计算。计划书、实绩报告等行政提交文件，由四葉行政書士事務所另行签约制作。",
+    heroAlt: "处遇改善加算支持示意图（工资规程完善）",
+    lead: "残障福祉、护理与团体家屋的处遇改善，需要整理申报与日常工资、工资制度之间的一致性。四葉社会保険労務士事務所支持就业规则、工资规程、职业发展路径要件等工资制度设计及工资改善额计算。计划书、实绩报告书等向指定权者提交的文件，须另行与四葉行政書士事務所签约委托。",
+    flowTitle: "处遇改善加算的支持如何进行？",
+    flowIntro: "一般流程如下。加算区分、要件与期限按服务类别及年度而异，须确认最新通知与指定权者的说明。并不保证取得加算。",
+    steps: ["现状整理：确认工资制度、职业发展路径与培训体制。", "规程完善：由社会保险劳务士整理就业规则、工资规程与工资要件的一致性。", "计划与申报：行政提交文件由行政书士另行签约支持制作与提交。", "执行与记录：事业所实施工资改善，确认与记录出勤、工资；社会保险劳务士支持工资改善额计算。", "实绩报告：按事业所确定的实绩，行政书士另行签约协助制作提交文件。"],
+    boundaryTitle: "行政书士与社会保险劳务士分别承办什么？",
+    boundaryIntro: "四葉将工资制度设计、计算与向指定权者提交文件的制作，分为下列合同范围。个别承办范围由具资格者确认。",
+    headings: ["工序", "承办者", "委托范围"],
+    rows: [["工资制度设计・工资改善额计算", "社会保险劳务士（四葉社会保険労務士事務所）", "就业规则、工资规程、职业发展路径要件的整理与工资改善额计算支持"], ["向指定权者（自治体）提交的文件", "行政书士（四葉行政書士事務所）", "加算体制申报、计划书、实绩报告书等行政提交文件的制作"]],
+    contracts: "如需委托双方，须分别与各事务所签约。虽由同一代表经营，仍属独立事业体，费用及收款亦分开。事务所间不收付介绍费，委托一方也不是委托另一方的前提。",
+    articleLink: "处遇改善加算应委托社会保险劳务士还是行政书士？",
+    feesTitle: "工资设计与计算支持的费用",
+    fees: "工资要件设计与计算支持采用个别报价。确认事业所规模、服务类别与现有工资规程后，于着手前以书面提出费用及范围。就业规则、工资规程制作费用请参阅报酬额表。处遇改善的专业设计、计算支持及行政文件制作，并非一律包含于人事部全包方案月费。",
+    data: "手续与工资计算采用freee人事劳务，与顾问客户查看相同资料。工资改善额计算会使用工资资料，并按对象期间、现有记录说明所需的补充资料。出勤确认、修正、确定，工资计算结果的最终批准、工资支付及内部批准由事业所负责。",
+    ongoingTitle: "希望一并咨询开设后的日常人事劳务时",
+    ongoing: "工资计算、一般手续及日常劳务咨询，可使用人事部全包方案。下列费用适用于日常人事劳务；处遇改善个别案件的报价与合同范围须另外确认。",
+  },
+};
