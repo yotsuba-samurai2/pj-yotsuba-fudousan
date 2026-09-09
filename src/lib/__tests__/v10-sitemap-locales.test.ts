@@ -14,7 +14,7 @@ vi.mock("@/lib/properties", () => ({
 
 afterEach(() => vi.unstubAllEnvs());
 
-const translatedPaths = ["/labor/faq"];
+const translatedPaths = ["/labor/faq", "/labor/services/kaigo-roumu", "/labor/services/shogu-kaizen"];
 
 it("lists every translated V10 route with the matching hreflang alternatives", async () => {
   vi.stubEnv("NEXT_PUBLIC_SR_LAUNCHED", "true");
