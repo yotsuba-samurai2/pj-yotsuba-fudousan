@@ -21,7 +21,7 @@ import { getLaborPriceStructuredData } from "@/lib/labor/structured-data";
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getRequestLocale();
   const c = LABOR_SERVICE_COPY[locale];
-  return buildPageMetadata({ businessKey: "labor", title: `${c.fees}｜四葉社会保険労務士事務所`, description: c.intro, path: "/labor/ryokin", locale, absoluteTitle: true });
+  return buildPageMetadata({ businessKey: "labor", title: `${c.pricingHeading}｜四葉社会保険労務士事務所`, description: c.intro, path: "/labor/ryokin", locale, absoluteTitle: true });
 }
 
 export default async function Page() {
@@ -35,7 +35,7 @@ export default async function Page() {
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(getLaborPriceStructuredData(locale)) }} />
     <Breadcrumb items={[{ name: c.home, href: "/labor" }, { name: c.fees }]} />
     <div className="mx-auto max-w-3xl px-4 pb-16">
-      <h1 className="font-serif text-3xl font-semibold text-ink">{c.fees}</h1>
+      <h1 className="font-serif text-3xl font-semibold text-ink">{c.pricingHeading}</h1>
       <p className="mt-3 leading-relaxed text-text">{c.intro}</p>
       <div className="mt-6"><LaborPlanPricing locale={locale} /></div>
       <p className="mt-3 text-sm leading-relaxed text-text">{c.units}</p>

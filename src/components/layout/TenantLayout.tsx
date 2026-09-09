@@ -55,6 +55,7 @@ const NAV_HREFS: Record<string, { href: string; key: string; labels?: Record<str
   // 社労士：ページ自体が SR_LAUNCHED=false の間は404（(labor)/layout.tsx）＝ここは labor ページ表示時のみ使われる
   labor: [
     { href: "/labor/services", key: "services" },
+    { href: "/labor/ryokin", key: "fees", labels: { ja: "料金", en: "Fees", "zh-tw": "費用", zh: "费用" } },
     { href: "/labor/about", key: "about" },
     { href: "/labor/column", key: "column" },
     // B4：/labor/contact ページ実在（src/app/(labor)/labor/contact/page.tsx）＝テナント内導線へ
@@ -559,7 +560,7 @@ function TenantHeader({ businessKey, columnLocales }: { businessKey: string; col
           </div>
 
           <nav
-            className="hidden items-center gap-1 md:flex"
+            className={`hidden items-center gap-1 ${businessKey === "labor" ? "xl:flex" : "md:flex"}`}
             aria-label={t("common.navigation.mainNav")}
           >
             {navItems.map(({ href, label }) =>
@@ -599,7 +600,7 @@ function TenantHeader({ businessKey, columnLocales }: { businessKey: string; col
 
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="relative z-50 flex h-10 w-10 items-center justify-center rounded-lg text-text transition-colors hover:bg-surface-dim md:hidden"
+            className={`relative z-50 flex h-10 w-10 items-center justify-center rounded-lg text-text transition-colors hover:bg-surface-dim ${businessKey === "labor" ? "xl:hidden" : "md:hidden"}`}
             aria-label={
               isOpen
                 ? t("common.navigation.closeMenu")
@@ -612,7 +613,7 @@ function TenantHeader({ businessKey, columnLocales }: { businessKey: string; col
       </header>
 
       <div
-        className={`fixed inset-0 z-40 bg-black/20 backdrop-blur-sm transition-opacity duration-300 md:hidden ${
+        className={`fixed inset-0 z-40 bg-black/20 backdrop-blur-sm transition-opacity duration-300 ${businessKey === "labor" ? "xl:hidden" : "md:hidden"} ${
           isOpen ? "opacity-100" : "pointer-events-none opacity-0"
         }`}
         onClick={() => setIsOpen(false)}
@@ -620,7 +621,7 @@ function TenantHeader({ businessKey, columnLocales }: { businessKey: string; col
 
       <nav
         aria-label={t("common.navigation.mobileMenu")}
-        className={`fixed right-0 top-0 z-40 flex h-full w-[min(18rem,85vw)] flex-col bg-surface pt-16 shadow-2xl transition-transform duration-300 ease-out sm:pt-20 md:hidden ${
+        className={`fixed right-0 top-0 z-40 flex h-full w-[min(18rem,85vw)] flex-col bg-surface pt-16 shadow-2xl transition-transform duration-300 ease-out sm:pt-20 ${businessKey === "labor" ? "xl:hidden" : "md:hidden"} ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >

@@ -12,6 +12,7 @@ export type LaborPlanCopy = {
   payrollHeadline: (monthlyFee: string) => readonly [string, string];
   payrollEligibility: string;
   payrollIncluded: string;
+  lineClockBenefit: string;
   scopeHeadings: readonly [string, string, string];
   scopeRows: readonly (readonly [string, string, string])[];
   system: string;
@@ -20,6 +21,7 @@ export type LaborPlanCopy = {
 
 export const LABOR_PLAN_COPY: Record<LangCode, LaborPlanCopy> = {
   ja: {
+    lineClockBenefit: "LINE打刻込みで、毎日の勤怠を手軽に。",
     name: "人事部丸投げプラン（外部人事部サービス）",
     responsibility: "勤怠の確認・確定と給与計算結果の最終承認は会社側",
     monthly: "月額", setup: "初期導入費", tax: "税込", from: "〜",
@@ -35,13 +37,14 @@ export const LABOR_PLAN_COPY: Record<LangCode, LaborPlanCopy> = {
       ["日常的な労務相談", "人事変更情報の提供", "在留資格申請"],
       ["採用条件・求人票等の相談・レビュー", "必要な社内承認", "年末調整"],
       ["中国語での基本説明", "—", "本格採用RPO"],
-      ["外国人雇用の基本相談", "—", "専門翻訳・長時間通訳"],
+      ["外国人雇用・在留資格の基本相談（顧問契約内・追加料金なし）", "—", "専門翻訳・長時間通訳"],
       ["freee設定・毎月の運用支援（初期導入は別料金）", "—", "—"],
     ],
     system: "月額料金にはfreee人事労務スタンダードの利用料とLINE打刻機能を含みます。freee会計その他のfreee製品は含まれません。",
     separate: "社会保険情報の設定に新規適用申請は含まれません。在留資格申請は行政書士業務として別契約、年末調整は税理士へ別途ご案内します。",
   },
   en: {
+    lineClockBenefit: "Make daily attendance recording easier with included LINE clock-in.",
     name: "Outsourced HR Department Service",
     responsibility: "Your company reviews and finalizes attendance records and gives final approval of payroll results.",
     monthly: "Monthly fee", setup: "Initial setup fee", tax: "tax included", from: "from ",
@@ -57,13 +60,14 @@ export const LABOR_PLAN_COPY: Record<LangCode, LaborPlanCopy> = {
       ["Day-to-day labor consultations", "Providing personnel change information", "Residence status applications"],
       ["Advice and review of hiring terms and job postings", "Required internal approvals", "Year-end tax adjustment"],
       ["Basic explanations in Chinese", "—", "Full recruitment process outsourcing"],
-      ["Basic foreign-employment consultations", "—", "Specialist translation and extended interpreting"],
+      ["Basic foreign-employment and residence status advice (included in the HR retainer)", "—", "Specialist translation and extended interpreting"],
       ["freee setup and ongoing operation support (initial setup is separately charged)", "—", "—"],
     ],
     system: "The monthly fee includes freee HR Standard and LINE clock-in. freee Accounting and other freee products are excluded.",
     separate: "Social insurance information setup does not include initial registration applications. Residence status applications require a separate administrative scrivener contract; year-end tax adjustment is referred separately to a tax accountant.",
   },
   "zh-tw": {
+    lineClockBenefit: "包含LINE打卡，讓每日出勤紀錄更方便。",
     name: "人事部全包方案（外部人事部服務）",
     responsibility: "出勤資料的確認與確定，以及薪資計算結果的最終核准，由公司負責。",
     monthly: "月費", setup: "初期導入費", tax: "含稅", from: "起",
@@ -79,13 +83,14 @@ export const LABOR_PLAN_COPY: Record<LangCode, LaborPlanCopy> = {
       ["日常勞務諮詢", "提供人事異動資訊", "在留資格申請"],
       ["招聘條件與職缺內容的諮詢、審閱", "必要的公司內部核准", "年末調整"],
       ["中文基本說明", "—", "完整招聘流程外包（RPO）"],
-      ["外國人雇用基本諮詢", "—", "專業翻譯與長時間口譯"],
+      ["外國人雇用與在留資格基本諮詢（顧問契約內不另收費）", "—", "專業翻譯與長時間口譯"],
       ["freee設定與每月操作支援（初期導入另行收費）", "—", "—"],
     ],
     system: "月費包含freee人事勞務Standard使用費及LINE打卡功能，不含freee會計或其他freee產品。",
     separate: "社會保險資料設定不包含新規適用申請。在留資格申請以行政書士業務另行簽約；年末調整另行轉介稅理士。",
   },
   zh: {
+    lineClockBenefit: "包含LINE打卡，让每日出勤记录更方便。",
     name: "人事部全包方案（外部人事部服务）",
     responsibility: "出勤资料的确认与确定，以及工资计算结果的最终批准，由公司负责。",
     monthly: "月费", setup: "初期导入费", tax: "含税", from: "起",
@@ -101,7 +106,7 @@ export const LABOR_PLAN_COPY: Record<LangCode, LaborPlanCopy> = {
       ["日常劳务咨询", "提供人事变动信息", "在留资格申请"],
       ["招聘条件与职位内容的咨询、审阅", "必要的公司内部批准", "年末调整"],
       ["中文基本说明", "—", "完整招聘流程外包（RPO）"],
-      ["外国人雇用基本咨询", "—", "专业翻译与长时间口译"],
+      ["外国人雇用与在留资格基本咨询（顾问合同内不另收费）", "—", "专业翻译与长时间口译"],
       ["freee设置与每月操作支持（初期导入另行收费）", "—", "—"],
     ],
     system: "月费包含freee人事劳务Standard使用费及LINE打卡功能，不含freee会计或其他freee产品。",

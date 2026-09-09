@@ -24,6 +24,7 @@ export function LaborPlanPriceSummary({ locale, emphasizePayroll = false }: { lo
         </p>
         <p className="text-sm font-medium text-ink">{c.payrollEligibility}</p>
         <p className="text-base font-semibold leading-relaxed text-ink sm:text-lg">{c.payrollIncluded}</p>
+        <p className="text-base font-medium leading-relaxed text-primary">{c.lineClockBenefit}</p>
       </div>}
       <dl className="grid gap-4 rounded-xl border border-border bg-surface p-4 md:grid-cols-3">
         <div>

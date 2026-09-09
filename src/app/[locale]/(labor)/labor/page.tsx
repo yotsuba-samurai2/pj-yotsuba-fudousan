@@ -532,8 +532,10 @@ export default async function LaborTopPage() {
         </section>
         <section className="mt-10 rounded-2xl border border-border p-5">
           <p className="text-sm font-medium text-primary">{v.industryLabel}</p>
-          <h2 className="mt-2 font-serif text-xl font-semibold text-ink">{v.foreignTitle}</h2>
-          <p className="mt-3 leading-relaxed text-text">{v.foreignBody}</p>
+          <h2 className="mt-2 font-serif text-xl font-semibold text-ink">{v.foreignHighlightTitle}</h2>
+          <p className="mt-3 font-semibold text-primary">{v.chineseTitle}</p>
+          <p className="mt-3 leading-relaxed text-text">{v.foreignHighlightBody}</p>
+          <p className="mt-3 text-sm font-semibold leading-relaxed text-ink">{v.visaContractNotice}</p>
           <div className="mt-4 flex flex-wrap gap-4 text-primary">
             <Link className="underline" href={addLocalePrefix("/labor/services/gaikokujin-koyo", locale)}>{v.foreignLink}</Link>
             <Link className="underline" href={addLocalePrefix("/legal/services/visa", locale)}>{v.visaLink}</Link>
@@ -553,7 +555,7 @@ export default async function LaborTopPage() {
           <p className="leading-relaxed text-text">{LABOR_PLAN_COPY[locale].system}</p>
           <p className="leading-relaxed text-text">{v.ai}</p>
         </section>
-        {[{title:v.payrollTitle,body:v.payroll},{title:v.socialTitle,body:v.social},{title:v.recruitmentTitle,body:v.recruitmentBoundary},{title:v.chineseTitle,body:v.chineseBody}].map(s => <section key={s.title} className="mt-10">
+        {[{title:v.payrollTitle,body:v.payroll},{title:v.socialTitle,body:v.social},{title:v.chineseTitle,body:v.chineseBody},{title:v.recruitmentTitle,body:v.recruitmentBoundary}].map(s => <section key={s.title} className="mt-10">
           <h2 className="font-serif text-xl font-semibold text-ink">{s.title}</h2>
           <p className="mt-3 leading-relaxed text-text">{s.body}</p>
         </section>) }
