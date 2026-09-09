@@ -96,16 +96,18 @@ We use AI for organising materials, surfacing the issues, checking wording again
 
 **And here is what we most want to say in this article.**
 
-What 畠山 did was **reduce the work inside his own office**. What this office puts its effort into is **reducing the work inside the client's company**. We support the build-up to processing payroll in-house on freee, included in the retainer fee. There is no separate charge. For detail, see [We want to run payroll in-house on freee — what do we ask a shakai hoken roumushi for?](/en/labor/column/kyuyo-keisan-freee-naisei).
+What 畠山 did was **reduce the work inside his own office**. What this office focuses on is **supporting the practical work of the client's company**. Our main service is the HR Outsourcing Plan, which includes payroll, routine filings and labor advice, together with freee人事労務 Standard and LINE time clock. It excludes freee会計.
 
-Taking the work on ourselves would earn this office more. **We still put in-house support inside the retainer because we have defined the retainer as the price of consultation.** Less work does not mean less need to consult. If anything it increases — as consultation on the design of the settings, and on each month's close. The reason for this design is in [What is a shakai hoken roumushi's retainer actually paying for?](/en/labor/column/sharoushi-komonryo-nan-no-taika).
+For 1–3 people on the payroll, fees are **from 33,000 yen per month, including tax / initial setup and workflow design from 88,000 yen, including tax**. The initial fee includes freee configuration, LINE time clock setup, pay structure and allowance/deduction settings, employee registration, social insurance information, the first payroll test and workflow design.
 
-**Consultation is free of charge, the first time and every time after.** The vague stage — "could we do something with AI too?" — is perfectly fine.
+**The company is responsible for checking and finalizing attendance and giving final approval of payroll results.** Adopting AI or software does not remove the need to establish facts and give approval. Support scope, fees and data transfer when switching to in-house processing are confirmed individually. We do not promise universally free support or an automatic fee reduction. See also the [comparison with in-house processing](/en/labor/column/kyuyo-keisan-freee-naisei) and [how to assess retainer fees](/en/labor/column/sharoushi-komonryo-nan-no-taika).
+
+**The first consultation is free for up to 60 minutes.** If it does not lead to a retainer agreement, consultations from the second visit onward cost 11,000 yen per hour, including tax. You can start with a question as broad as whether your company could use AI.
 
 ## Frequently asked questions
 
 **Q. If you use AI, does the retainer get cheaper?**
-A. Because this office sets the retainer as the price of consultation, the retainer does not change when the amount of work goes down. On the other hand, **fees that are set by volume of work — payroll, for instance — do go down if you switch to in-house**. Stop the outsourcing (1,100 yen per employee per month, tax included) and process it yourselves, and that part disappears. The support for switching is itself included in the retainer, so we charge nothing extra for the support.
+A. Fees do not automatically fall simply because AI is used. The HR Outsourcing Plan is a fixed-fee service including payroll, routine filings, advice and software. Moving payroll in-house changes the scope of work, so the support and fees are confirmed individually.
 
 **Q. Won't a shakai hoken roumushi's work be replaced by AI in the end?**
 A. We expect the volume of work to fall. But labour has establishing the facts at the centre of it, and that does not move forward without asking people. The law also provides that carrying out procedures for another person for remuneration is not open to anyone who is not a shakai hoken roumushi (社会保険労務士法, Article 27). **Rather than being replaced, what changes is where the qualified professional spends time — that is how we see it.**
@@ -118,6 +120,8 @@ A. The fewer employees you have, the more easily the benefit of going in-house s
 
 ## Sources for this article
 
+- The description of 四葉's services and fees has been updated to the V10 specification dated September 9, 2026. The discussion of the third-party published case study remains based on the original reference date.
+
 - freee, 「スタッフ0人、顧問先60社、17時退勤。一人税理士が実践する『責任あるAI』」 (customer case study, 畠山謙人税理士事務所). **Viewed 14 August 2026.** The size of the office, the number of client companies, the methods and the remarks quoted all come from this published case study
 - The quoted remarks are in Japanese in the original; the English here is our translation, with nothing added and nothing removed. We have written no speculation about his intentions beyond what is published
 - 社会保険労務士法 (Shakai Hoken Roumushi Act, Act No. 89 of 1968), **Article 2, paragraph 1, item 1 and Article 27** — **confirmed on e-Gov法令検索 on 14 August 2026.** The English of the statutory text quoted above is our translation
@@ -125,6 +129,6 @@ A. The fewer employees you have, the more easily the benefit of going in-house s
 - The comparison between the nature of accounting work and that of labour and social insurance procedures is **our own analysis**. It is not laid down as such by the system
 - **畠山謙人税理士事務所 is a tax accountant's office and has no relationship whatsoever with this office.** We have taken up a published case study entirely on our own initiative
 
-**This article does not go so far as to decide whom you should consult.** Bookkeeping, closing the books and tax returns are the work of **a tax accountant**. This office does not handle them, so we will point you to a tax accountant and you engage them directly. This office does not accept referral fees. Labour and social insurance procedures, work rules, payroll and support for bringing it in-house are handled by 四葉社会保険労務士事務所. Fees are set out in the [fee schedule](/en/labor/ryokin), and the questions we are asked most often are collected on the [FAQ page](/en/labor/faq).
+**This article does not go so far as to decide whom you should consult.** Tax representation, preparation of tax documents and tax advice are the work of **a tax accountant**. This office does not handle them, so we will point you to a tax accountant and you engage them directly. This office does not accept referral fees. Labour and social insurance procedures, work rules, payroll and support for bringing it in-house are handled by 四葉社会保険労務士事務所. Fees are set out in the [fee schedule](/en/labor/ryokin), and the questions we are asked most often are collected on the [FAQ page](/en/labor/faq).
 
 This article is general information. Judgments that fit your particular circumstances are made by a qualified professional after a meeting. Written by [Joji Uramatsu](/en/about/uramatsu) (Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist).

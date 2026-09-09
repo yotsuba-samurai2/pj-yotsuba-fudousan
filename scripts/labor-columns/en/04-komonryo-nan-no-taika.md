@@ -1,91 +1,93 @@
 ---
 title: What does a Shakai Hoken Roumushi retainer fee actually pay for?
-excerpt: What a retainer fee covers differs from office to office. Most offices charge an inclusive fee bundling consultation plus basic procedural filings, but 四葉 made the retainer the price of consultation alone and bills filings each time, even for retainer clients. Here is why we designed it that way, and what changes compared with the inclusive model, set out plainly.
+excerpt: Compare a retainer by its scope, including payroll, routine filings, advice and software fees. 四葉社会保険労務士事務所 offers the HR Outsourcing Plan from 33,000 yen per month, plus initial setup and workflow design from 88,000 yen, both including tax. This article explains the included work, company responsibilities and separately priced services.
 category: How fees work
 faqHeading: Frequently asked questions
-keywords: Shakai Hoken Roumushi retainer fee | what a retainer fee includes | scope of a labor consultant retainer agreement | requesting filings only | retainer fee and number of employees | limit on the number of consultations
-tags: retainer fee | fees | engagement policy | work rules | Shakai Hoken Roumushi
+keywords: Shakai Hoken Roumushi retainer fee | what a retainer fee includes | HR outsourcing plan | payroll and routine filings | freee HR LINE time clock | initial setup fee
+tags: retainer fee | fees | HR outsourcing | payroll | Shakai Hoken Roumushi
 ---
 
-**In short:** The retainer fee charged by a Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant) **covers different things at different offices**. Most offices charge an inclusive fee bundling "consultation plus basic procedural filings," but at 四葉 the retainer is **the price of consultation only**. Filings are billed each time they arise, even for retainer clients. Two offices can both charge 33,000 yen a month and include entirely different things.
+**Key points:** Compare the retainer fee of a Shakai Hoken Roumushi, a Japanese Certified Social Insurance and Labor Consultant, by how much payroll processing, routine filing, advice and software use it covers, as well as by price. The main service of 四葉社会保険労務士事務所 is the **HR Outsourcing Plan**, which brings these services together. For 1–3 people on the payroll, fees are **from 33,000 yen per month, including tax / initial setup and workflow design from 88,000 yen, including tax**. The company is responsible for checking and finalizing attendance and giving final approval of the payroll results.
 
-When you set out to compare retainer fees, the headline amounts all sit within a similar range, yet the total you actually pay differs from office to office. The reason is simple: **there is no common standard for what the retainer fee includes**.
+Two retainers with the same monthly fee can produce different annual totals and leave different amounts of work with your company. Before comparing them, use your existing contracts and invoices to separate monthly charges, initial charges and charges that arise when specific work is requested.
 
-## What is normally included in a retainer fee?
+## What should you compare on the same basis?
 
-At most offices, the retainer fee bundles the following.
+The scope of a contract differs by office. Do not assume that the word “retainer” includes filings or payroll. Compare the following under the same conditions.
 
-- consultation on labor and employment matters
-- notice of amendments to the law
-- **basic filings such as those on hiring and departure**
-- annual filings such as the 算定基礎届 (standard monthly remuneration calculation report) and the 年度更新 (annual labor insurance premium declaration)
+| Item to check | What to establish in the quotation |
+|---|---|
+| Everyday advice | Who answers, through which channels, and on which topics |
+| Payroll | Number of people, payslips, insurance rate updates and checks performed by the company |
+| Routine filings | Treatment of hires, departures, dependent changes, annual remuneration reports and annual labor insurance renewal |
+| Software | Whether attendance and payroll software fees are included in the monthly fee |
+| Initial setup | Scope and cost of configuration, employee registration and the first payroll test |
+| Individual projects | Additional fees for initial insurance registration, work rules, subsidies and other work |
 
-The third and fourth items are commonly included. That is why so many offices can say, "if you are paying the retainer, the filing for one new hire costs nothing extra."
+Look for a specific list of included work and separately priced work, rather than relying on a claim that “everything is included.” If you want to keep your existing software, confirm any required changes and data migration before signing.
 
-There is sense in this. From the employer's side, a fixed monthly amount that also covers filings is easier to grasp. From the office's side, it reduces the administrative work of billing item by item.
+## What does 四葉's HR Outsourcing Plan include?
 
-## Why did 四葉 not take that form?
+The monthly fee includes **freee人事労務 Standard, LINE time clock, online payslips, monthly payroll processing, routine labor advice, and routine social insurance and employment insurance filings**. It does not include freee会計.
 
-The retainer fee of 四葉社会保険労務士事務所 is **the price of labor and employment consultation, and only that**. For labor and social insurance filings, we charge retainer clients the rates in the [fee schedule](/en/labor/ryokin) each time they arise.
+Routine filings cover enrollment and withdrawal, dependent changes, monthly remuneration change reports, bonus payment reports, annual remuneration reports and annual labor insurance renewal. Initial social insurance registration for a new establishment, establishment of labor insurance coverage and registration of an employment insurance establishment are separately priced work.
 
-There were three reasons.
+Basic advice on employing foreign nationals, checks on social insurance and employment insurance, and labor advice after hiring are also within the monthly scope. We directly provide basic consultations with business owners and basic explanations of payroll and social insurance in Chinese. Other foreign languages use AI and translation assistance; specialist translation and extended interpreting are charged separately.
 
-**First, we wanted to avoid consultation becoming an afterthought.** With a retainer that includes filings, a month in which no filing arises tends to feel like "paying for nothing." We wanted to make it clear that consultation is the main thing and filings are secondary.
+The monthly recruitment-related scope consists of advice on job postings, hiring terms and pay conditions, plus review of employment contracts and written notices of working conditions. It does not extend to recruitment operations or full recruitment outsourcing. Recruitment and labor support is an option **from 22,000 yen per month, including tax**; full recruitment process outsourcing (RPO) requires a separate consultation.
 
-**Second, we wanted to avoid unfairness arising from the volume of filings.** If a workplace with many arrivals and departures and one with few pay the same retainer, one of them loses out. The more turnover an industry has, the more it benefits from an inclusive fee. Turned around, that means the workplaces with little turnover are carrying it.
+## How much are the monthly and initial fees?
 
-On how we price payroll calculation, see [What does it cost to have a Shakai Hoken Roumushi do your payroll calculation?](/en/labor/column/kyuyo-keisan-soba-sharoushi).
+Fees are **from 33,000 yen per month for 1–3 people on the payroll, including tax / initial setup and workflow design from 88,000 yen, including tax**. The initial fee includes freee configuration, LINE time clock setup, pay structure and allowance/deduction settings, employee registration, social insurance information, the first payroll test and workflow design.
 
-**Third, we did not want to place limits on consultation.** In return for not including filings, **we accept consultation with no limit on the number of times or the length of time**. We have not set any "up to so many times" or "up to so many hours."
+| Number of people on the payroll | Monthly fee, including tax |
+|---|---:|
+| 1–3 | 33,000 yen |
+| 4–5 | 44,000 yen |
+| 6–10 | 55,000 yen |
+| 11–30 | 55,000 yen + 2,200 yen for each person above 10 |
+| 31 or more | Individual quotation |
 
-This design has a sequel. **Support for switching monthly work such as payroll to in-house processing on freee is included in the retainer fee.** At offices that bundle filings and payroll into the retainer, the more a client moves in-house, the thinner the grounds for the retainer become. Because 四葉's retainer is the price of consultation, supporting the switch to in-house does not change what the retainer means — if anything, the weight of consultation grows, in the form of designing the settings and talking through each month's close. What the in-house option involves is set out in [We want to run payroll in-house on freee — what do we ask a shakai hoken roumushi for?](/en/labor/column/kyuyo-keisan-freee-naisei).
+The fixed fee varies by headcount band because payroll, filings, freee usage capacity and inquiry handling increase with the number of people. For example, the monthly fee is 66,000 yen for 15 people, 77,000 yen for 20 and 99,000 yen for 30. All figures include tax; the initial fee is additional.
 
-## Does the total change even when the monthly amount is the same?
-
-We will state this plainly. **Because filings are billed separately, in a year with many filings the total will come out higher than at an office with an inclusive fee.**
-
-| | Typical inclusive model | 四葉 |
+| Work you can entrust to us | Work the company performs | Separately priced work |
 |---|---|---|
-| Retainer fee | Consultation + basic filings | **Consultation only** |
-| Filings on hiring and departure | Usually included in the retainer | Billed each time |
-| 算定基礎届 and 年度更新 | Usually included in the retainer | Billed each time |
-| Number and length of consultations | Some offices set limits | **No limit** |
-| Payroll calculation | Usually charged separately | Charged separately (paired with a retainer agreement). Support for switching to in-house on freee is **included in the retainer** |
+| Payroll, routine filings and everyday labor advice | Checking, correcting and finalizing attendance; final approval of payroll results | Initial social insurance registration, establishment of labor insurance coverage and employment insurance establishment registration |
+| Advice and review on hiring terms and job postings | Providing personnel change information and obtaining necessary internal approvals | Residence status applications, year-end tax adjustment and full recruitment RPO |
+| Basic explanations in Chinese and basic advice on employing foreign nationals | Internal fact-checking and decision-making | Specialist translation and extended interpreting |
 
-If you line up only the monthly figures on the fee schedules, 四葉 looks inexpensive. **That reading is not correct.** The filings are added on top. When you are weighing this up, estimate how many filings are likely to arise over a year and compare the totals.
+Confirm the scope and quotation before requesting work that incurs an additional fee. Amounts requiring individual confirmation, such as year-end tax adjustment or initial registration fees, cannot be inferred from the monthly fee. See the [fee schedule](/en/labor/ryokin) for details.
 
-## Can you ask us to handle filings only?
+## Does the company still have work to do under the outsourcing plan?
 
-We do not accept that. **The reason we do not take filing-only work is the risk of processing a matter on mistaken assumptions without knowing the actual situation.**
+Yes. The company first checks facts such as why a time entry is missing, how leave is treated, who has joined or left, and which allowances have changed. 四葉 performs the work using the information supplied and finalized attendance data, but **the company is responsible for checking and finalizing attendance and giving final approval of payroll results**.
 
-Suppose we receive a request to "submit the 資格取得届 (notification of acquisition of insured status)." Filling in the form is simple enough, but how many hours a week does this person work? What does the employment contract say? Is the treatment balanced against that of the other employees? Processing the filing without knowing these things can mean leaving out someone who should be enrolled, or enrolling someone who is outside the scope. Going back and correcting it afterwards takes far more time and money.
+At setup, establish who finalizes attendance and when, the deadline for sharing changes, and who approves payroll results. A contact for times when the usual person is unavailable also helps keep the monthly close on schedule.
 
-For corporate clients and sole proprietors, we accept work on the premise of a retainer agreement. However, **consultation on disability pensions (individual clients) is not premised on a retainer agreement**. We accept those directly from the person concerned or their family.
+## Is there a different product for foreign employees or group homes?
 
-## Is there a charge each time regulations have to be updated for an amendment to the law?
+The main service is the HR Outsourcing Plan. Its priority clients are **companies employing foreign nationals, followed by disability welfare and group home operators**. Disability welfare and group homes (GH) are focus industries in which we support operations with their work patterns and staff management needs in mind.
 
-There is not. **For regulations that we drafted ourselves, we revise the affected provisions and make the required filings in response to amendments to the law within the retainer fee. There is no limit on the number of times.**
-
-Labor-related legislation is amended almost every year. If each round of corrections to the work rules cost money, having had the rules drawn up would itself become a liability. Revisions made for the company's own reasons are charged at the "work rules — amendment" rate, but keeping up with amendments to the law is done within the retainer fee.
+四葉行政書士事務所 handles residence status applications and applications for designation as a GH service provider. 四葉社会保険労務士事務所 handles payroll, social insurance and labor matters after opening. They are independent businesses, with separate contracts, direct billing and direct payment to each office. Residence status applications are not included in the monthly labor service fee. For tax, registration and disputes, we guide clients to engage a Japanese tax accountant, judicial scrivener or attorney directly, respectively. No referral fees are paid or received.
 
 ## Frequently asked questions
 
-**Q. How many consultations can I have in a month?**
-A. We set no limit on the number of times or the length of time. The retainer fee is the price of consultation, so placing a limit would be inconsistent with what it is for.
+**Q. Is there an extra routine filing fee each time someone joins or leaves?**
+A. The HR Outsourcing Plan includes routine enrollment and withdrawal filings in its monthly fee. Work such as initial insurance registration for a new establishment is charged separately.
 
-**Q. Is there a charge from the very first consultation?**
-A. The first consultation is free for up to 60 minutes. If it does not lead to a retainer agreement, the second and subsequent consultations are charged at 11,000 yen per hour (tax included). Consultations after a retainer agreement is in place are covered by the retainer fee.
+**Q. Are freee and LINE time clock fees separate from the monthly fee?**
+A. The plan includes freee人事労務 Standard and LINE time clock. freee会計 is excluded. Matters such as the software contracting party and data transfer when the contract ends are confirmed individually before signing.
 
-**Q. Is the retainer fee decided by the number of employees?**
-A. It is decided by bands. It starts at 22,000 yen a month (tax included) for up to 4 people and runs to 77,000 yen a month (tax included) for 25 to 29 people, in steps of 5 people. For 30 or more, we quote individually. The number counted is officers plus employees, including part-timers and casual staff — not the number of people enrolled in social insurance. The bands are a guide: because the retainer is payment for consultation, we quote the band that matches the content and volume of your consultations.
+**Q. Does the initial fee only cover configuration?**
+A. It covers employee and social insurance information preparation, the first payroll test, and design of the monthly closing and approval workflow, as well as configuration. It starts at 88,000 yen, including tax, and is presented together with the monthly fee.
 
-**Q. Do retainer clients get a discount on filings?**
-A. No. Filings are accepted only from retainer clients, so there is nothing to compare them against. Because we never take filing-only work from anyone without a retainer agreement, we do not use the notion of a "retainer client price."
+**Q. Is it the same contract if we want to bring payroll back in-house?**
+A. In-house processing and outsourcing leave different work with the company and change the scope entrusted to us. We individually confirm the transition date, settings and data transfer, support scope and fees. [This article](/en/labor/column/kyuyo-keisan-freee-naisei) summarizes the points to compare when processing payroll in-house.
 
 ## Sources for this article
 
-- the Certified Social Insurance and Labor Consultant Act (社会保険労務士法, Act No. 89 of 1968), Article 2, paragraph 1, items 1, 2 and 3; Article 27
-- The fees of 四葉社会保険労務士事務所 are published in the [fee schedule](/en/labor/ryokin). All amounts include tax.
-- The description of other offices' fee structures sets out general tendencies compiled from the fee schedules of several Shakai Hoken Roumushi offices published as of August 2026. It does not represent the terms of any individual office's agreement.
+- 四葉's services and prices are based on the V10 specification dated September 9, 2026. See the [fee schedule](/en/labor/ryokin) for current information and the [consultation-to-contract process](/en/labor/nagare) for the steps involved.
+- The comparison items organize what to check in a contract. They do not describe other offices' market prices or the prevalence of particular contract types.
+- [The roles of freee HR and a Shakai Hoken Roumushi](/en/labor/column/freee-jinji-roumu-sharoushi-doko-made) explains the distinction between software and professional qualifications.
 
-This article is general information. Judgments that depend on your particular circumstances are made by a qualified professional after a meeting. Written by [Joji Uramatsu](/en/about/uramatsu) (Shakai Hoken Roumushi, Gyoseishoshi, Registered Real Estate Transaction Specialist).
+This article provides general information. A qualified professional makes judgments about individual circumstances after a consultation. Written by [浦松丈二](/en/about/uramatsu), a Japanese Certified Social Insurance and Labor Consultant, Administrative Scrivener and Real Estate Transaction Specialist.
