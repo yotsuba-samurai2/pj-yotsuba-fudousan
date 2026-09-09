@@ -80,7 +80,7 @@ export const TENANT: Record<
     // 書いたが誤りだった。参照しているのは TENANT_CTA_I18N.labor.ja だけで、
     // en / zh-tw / zh は個別の文字列を持っており、7月29日の修正が届いていなかった
     // （en "at once" / 繁簡「一次整理好」が残存）。3言語とも書き換え済み。
-    ctaHeading: "「人」のことから、整理しませんか。",
+    ctaHeading: "「働き方」から、整理しませんか。",
     ctaLead:
       "四葉社会保険労務士事務所（文京区小日向・東京メトロ丸ノ内線「茗荷谷」駅 徒歩5分）が、労務の現状整理からお手伝いします。",
   },
@@ -160,19 +160,19 @@ export const TENANT_CTA_I18N: Record<
     // 「1か所の修正で全言語に効く」という当時のコメントは誤りだった。3言語とも書き換える。
     // ★事務所名は繁体字・簡体字でも日本語表記のまま。英語も同様に統一した。
     en: {
-      ctaHeading: "Let’s start by sorting out where things stand.",
+      ctaHeading: "Shall we start by reviewing how you work?",
       ctaLead:
         "四葉社会保険労務士事務所 (Kohinata, Bunkyo-ku; a 5-minute walk from Myogadani Station on the Tokyo Metro Marunouchi Line) helps you, starting with a review of your current labour practices.",
       hours: "Tue & Wed 10:00–19:00 / Mon, Thu–Sun 18:00–19:00",
     },
     "zh-tw": {
-      ctaHeading: "從整理「人」的現狀開始吧。",
+      ctaHeading: "先從梳理「工作方式」開始，好嗎？",
       ctaLead:
         "四葉社会保険労務士事務所（文京區小日向・東京Metro丸之內線「茗荷谷」站 步行5分）從勞務現狀的整理開始協助您。",
       hours: "週二・週三 10:00〜19:00／週一・週四〜週日 18:00〜19:00",
     },
     zh: {
-      ctaHeading: "从整理“人”的现状开始吧。",
+      ctaHeading: "先从梳理“工作方式”开始，好吗？",
       ctaLead:
         "四葉社会保険労務士事務所（文京区小日向・东京Metro丸之内线“茗荷谷”站 步行5分）从劳务现状的整理开始协助您。",
       hours: "周二・周三 10:00〜19:00／周一・周四〜周日 18:00〜19:00",
