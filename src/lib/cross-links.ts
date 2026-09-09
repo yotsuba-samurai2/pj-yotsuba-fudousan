@@ -125,6 +125,26 @@ const A_SR_JOSEIKIN: Partial<Record<LangCode, string>> = {
 };
 
 export const CROSS_LINKS: CrossLink[] = [
+  // V10: legal top has distinct links for international employers and welfare providers.
+  // Reuse the existing launch gate and independently contracted business banner.
+  { id: "C17", from: ["/legal"], launchFlag: "SR_LAUNCHED", targets: [{
+    href: "/labor", business: "labor",
+    anchor: `入社後の社保・給与・労務（${SR_OFFICE_NAME}）`,
+    anchorI18n: {
+      en: "Social insurance, payroll and labor matters after hiring (labor office)",
+      "zh-tw": "入職後的社保・薪資・勞務（社勞士事務所）",
+      zh: "入职后的社保・工资・劳务（社劳士事务所）",
+    },
+  }] },
+  { id: "C18", from: ["/legal"], launchFlag: "SR_LAUNCHED", targets: [{
+    href: "/labor/services/kaigo-roumu", business: "labor",
+    anchor: `開設後の人事労務・給与（${SR_OFFICE_NAME}）`,
+    anchorI18n: {
+      en: "HR, labor management and payroll after opening a welfare facility (labor office)",
+      "zh-tw": "開設後的人事勞務・薪資（社勞士事務所）",
+      zh: "开设后的人事劳务・工资（社劳士事务所）",
+    },
+  }] },
   // ── 即時開通（C1〜C6） ──
   { id: "C1", from: ["/legal/services/inheritance"], targets: [{ href: "/souzoku", anchor: "文京区で不動産を相続したら——管理・活用・売却の完全ガイド（四葉不動産）", anchorI18n: A_SOUZOKU, business: "realestate" }] },
   { id: "C2", from: ["/legal/services/shogai-fukushi"], targets: [{ href: "/toushi/group-home", anchor: "グループホームに使える物件探し（四葉不動産）", anchorI18n: A_GROUP_HOME, business: "realestate" }] },

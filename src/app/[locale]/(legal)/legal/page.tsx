@@ -1,21 +1,23 @@
 // /legal（型F・士業トップ）＝原稿_行政書士 #10（D-4改修）＋フェーズI多言語化（2026-07-10）
 // 方式＝COPY: Record<LangCode,…>＋getRequestLocale（手本=HomePageContent b68871d）。Firestoreは書き換えない。
-// H1＝事務所名のみ（業法分離・全ロケール同一表記）。en/zh-tw/zh訳＝監修前ドラフト（フェーズI後半で台湾監修）。
+// V10: 在留資格を主軸に再構成。事務所名はHero内に維持し、社労士訴求は既存の公開フラグで制御。
 // 業際：全ロケールで社労士側の金銭支援用語を書かない（「補助金」のみ）。JSON-LDはlayout出力＝ここでは出さない。
 import type { Metadata } from "next";
-import { buildPageMetadata } from "@/lib/seo";
+import { BCP47_BY_LOCALE, buildPageMetadata } from "@/lib/seo";
 import { getRequestLocale } from "@/lib/getRequestLocale";
 import { addLocalePrefix } from "@/lib/locale";
 import Link from "next/link";
 import { CtaBand } from "@/components/shared/CtaBand";
 import type { LangCode } from "@/config/languages";
 import { SR_BIO } from "@/lib/shared/sr-label";
+import { SR_LAUNCHED } from "@/lib/shared/office";
+import { LEGAL_TOP_V10_COPY } from "@/lib/legal/top-copy";
+import { getCrossLinks } from "@/lib/cross-links";
+import { CrossLinkBanner } from "@/components/shared/CrossLinkBanner";
+import { Faq } from "@/components/shared/Faq";
 
 type LegalTopCopy = {
-  metaTitle: string;
-  metaDesc: string;
   heroAlt: string;
-  lead: React.ReactNode;
   services: { href: string; label: string; sub: string }[];
   repName: string;
   repBio: string;
@@ -32,15 +34,7 @@ const MEMBERSHIPS = [
 
 const COPY: Record<LangCode, LegalTopCopy> = {
   ja: {
-    metaTitle: "文京区・茗荷谷の行政書士｜障害福祉・相続・ビザ | 四葉行政書士事務所",
-    metaDesc:
-      "東京都文京区小日向・茗荷谷駅徒歩5分の四葉行政書士事務所。障害福祉サービスの指定申請、在留資格・ビザ、相続、会社設立、補助金申請に対応。元毎日新聞中国総局長の行政書士が、中国語・英語も交え、書類作成から申請までお手伝いします。",
     heroAlt: "四葉行政書士事務所のイメージ（文京区の事務所）",
-    lead: (
-      <>
-        <strong>東京都文京区小日向の行政書士事務所です。</strong>複雑な手続きを、整理して前に進める。——障害福祉サービスの指定申請、在留資格・ビザ、相続、会社設立、補助金申請を、元毎日新聞中国総局長の行政書士がお手伝いします。中国語・英語での相談にも対応します。
-      </>
-    ),
     services: [
       { href: "/legal/services/shogai-fukushi", label: "障害福祉サービスの指定申請", sub: "グループホーム開設を法人設立から運営まで" },
       { href: "/legal/services/visa", label: "在留資格・ビザ申請", sub: "中国語・英語で相談できる申請取次" },
@@ -64,15 +58,7 @@ const COPY: Record<LangCode, LegalTopCopy> = {
     ],
   },
   en: {
-    metaTitle: "Gyoseishoshi (Administrative Scrivener) Office in Bunkyo, Tokyo | 四葉行政書士事務所",
-    metaDesc:
-      "Yotsuba Gyoseishoshi Office, a 5-minute walk from Myogadani Station in Kohinata, Bunkyo-ku, Tokyo. Disability-welfare service designation, visas and residence status, inheritance paperwork, company formation, and subsidy applications—handled by a former Mainichi Shimbun China bureau chief, with support in Chinese and English.",
     heroAlt: "Yotsuba Gyoseishoshi Office in Bunkyo, Tokyo",
-    lead: (
-      <>
-        <strong>A gyoseishoshi (administrative scrivener) office in Kohinata, Bunkyo-ku, Tokyo.</strong> We untangle complex procedures and move them forward—disability-welfare service designation, visas and residence status, inheritance, company formation, and subsidy applications, handled by a former Mainichi Shimbun China bureau chief. Consultations available in Chinese and English.
-      </>
-    ),
     services: [
       { href: "/legal/services/shogai-fukushi", label: "Disability-Welfare Service Designation", sub: "From incorporation to opening and running a group home" },
       { href: "/legal/services/visa", label: "Visa & Residence Status", sub: "Certified application agent—consultations in Chinese and English" },
@@ -96,15 +82,7 @@ const COPY: Record<LangCode, LegalTopCopy> = {
     ],
   },
   "zh-tw": {
-    metaTitle: "文京區・茗荷谷的行政書士｜障礙福祉・繼承・簽證 | 四葉行政書士事務所",
-    metaDesc:
-      "位於東京都文京區小日向、茗荷谷站步行5分鐘的四葉行政書士事務所。受理障礙福祉服務指定申請、在留資格（簽證）、繼承、公司設立、補助金申請。曾任每日新聞中國總局長的行政書士，提供中文・英文諮詢，從文件製作到申請全程協助。",
     heroAlt: "四葉行政書士事務所（東京文京區）",
-    lead: (
-      <>
-        <strong>位於東京都文京區小日向的行政書士事務所。</strong>把複雜的手續整理清楚、向前推進。——障礙福祉服務的指定申請、在留資格（簽證）、繼承、公司設立、補助金申請，由曾任每日新聞中國總局長的行政書士為您協助。提供中文・英文諮詢。
-      </>
-    ),
     services: [
       { href: "/legal/services/shogai-fukushi", label: "障礙福祉服務指定申請", sub: "從法人設立到團體家屋的開設與營運" },
       { href: "/legal/services/visa", label: "在留資格（簽證）申請", sub: "可用中文・英文諮詢的申請取次" },
@@ -127,15 +105,7 @@ const COPY: Record<LangCode, LegalTopCopy> = {
     ],
   },
   zh: {
-    metaTitle: "文京区・茗荷谷的行政书士｜残障福祉・继承・签证 | 四葉行政書士事務所",
-    metaDesc:
-      "位于东京都文京区小日向、茗荷谷站步行5分钟的四葉行政書士事務所。受理残障福祉服务指定申请、在留资格（签证）、继承、公司设立、补助金申请。曾任每日新闻中国总局长的行政书士，提供中文・英文咨询，从文件制作到申请全程协助。",
     heroAlt: "四葉行政書士事務所（东京文京区）",
-    lead: (
-      <>
-        <strong>位于东京都文京区小日向的行政书士事务所。</strong>把复杂的手续整理清楚、向前推进。——残障福祉服务的指定申请、在留资格（签证）、继承、公司设立、补助金申请，由曾任每日新闻中国总局长的行政书士为您协助。提供中文・英文咨询。
-      </>
-    ),
     services: [
       { href: "/legal/services/shogai-fukushi", label: "残障福祉服务指定申请", sub: "从法人设立到团体家屋的开设与运营" },
       { href: "/legal/services/visa", label: "在留资格（签证）申请", sub: "可用中文・英文咨询的申请取次" },
@@ -161,17 +131,15 @@ const COPY: Record<LangCode, LegalTopCopy> = {
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getRequestLocale();
-  const c = COPY[locale] ?? COPY.ja;
   return buildPageMetadata({
     businessKey: "legal",
-    title: c.metaTitle,
-    description: c.metaDesc,
+    title: LEGAL_TOP_V10_COPY[locale].title,
+    description: LEGAL_TOP_V10_COPY[locale].description,
     path: "/legal",
     locale,
     // absoluteTitle=true 維持：サイトトップ（/・/legal）は title に社名を含める方式で統一しているため、
     // レイアウトの「%s | 四葉行政書士事務所」テンプレートは付与しない（社名重複防止）。
-    // metaTitle 側では社名を末尾へ（2026-07-25）＝先頭に検索語「文京区・茗荷谷の行政書士」を置きつつ、
-    // og:title / twitter:title にも社名が残る（buildPageMetadata は absoluteTitle に関係なく title を使う）。
+    // V10の訴求語を先頭、事務所名を末尾に置く。OG/Twitterにも同じtitleを使用する。
     absoluteTitle: true,
   });
 }
@@ -179,41 +147,65 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function LegalPage() {
   const locale = await getRequestLocale();
   const c = COPY[locale] ?? COPY.ja;
+  const v = LEGAL_TOP_V10_COPY[locale];
+  const crossLinks = getCrossLinks("/legal", SR_LAUNCHED);
+  const foreignCross = crossLinks.find(link => link.id === "C17");
+  const ghCross = crossLinks.find(link => link.id === "C18");
+  const faqs = [...v.faqs, { q: v.laborQuestion, a: SR_LAUNCHED ? v.labor : v.unavailable }];
+  const featuredPaths = new Set(["/legal/services/visa", "/legal/services/gaikokujin-shain", "/legal/services/company", "/legal/services/shogai-fukushi"]);
+  const otherServices = c.services.filter(service => !featuredPaths.has(service.href));
   return (
     <>
-      {/* ヒーロー（H1＝事務所名のみ・全ロケール同一＝業法分離。30%透過・SP縦積みは現状維持） */}
       <section className="relative">
-        <div className="relative mx-auto max-w-6xl overflow-hidden rounded-b-3xl sm:mt-4 sm:rounded-3xl">
-          <img
-            src="/hero/legal-top-16x9.webp"
-            alt={c.heroAlt}
-            width={1600}
-            height={900}
-            className="h-[52vw] max-h-[440px] w-full object-cover sm:h-auto"
-            fetchPriority="high"
-          />
-          <div className="md:absolute md:inset-0 md:flex md:items-center">
-            <div className="bg-surface p-5 md:m-8 md:max-w-xl md:rounded-2xl md:bg-white/30 md:p-7 md:backdrop-blur-sm">
-              <h1 className="font-serif text-2xl font-bold text-ink sm:text-3xl">四葉行政書士事務所</h1>
-              <p className="mt-3 text-sm leading-relaxed text-text sm:text-base">{c.lead}</p>
+        <div className="mx-auto grid max-w-6xl overflow-hidden rounded-b-3xl bg-surface md:grid-cols-2 sm:mt-4 sm:rounded-3xl">
+          <div className="p-5 sm:p-8 md:py-12">
+            <p className="text-sm font-semibold text-primary">四葉行政書士事務所</p>
+            <h1 className="mt-3 font-serif text-3xl font-bold leading-snug text-ink sm:text-4xl">{SR_LAUNCHED ? v.hero : v.beforeLaunchHero}</h1>
+            <p className="mt-4 leading-relaxed text-text">{v.sub}</p>
+            {SR_LAUNCHED && <p className="mt-3 text-sm leading-relaxed text-text">{v.dual}</p>}
+            <p className="mt-3 font-semibold text-primary">{v.chineseShort}</p>
+            <div className="mt-5 flex flex-wrap gap-3">
+              <Link href={addLocalePrefix("/legal/services/visa", locale)} className="rounded-xl bg-primary px-4 py-3 text-sm font-semibold text-white">{v.visaCta}</Link>
+              <Link href={addLocalePrefix("/legal/contact", locale)} className="rounded-xl border border-primary px-4 py-3 text-sm font-semibold text-primary">{v.contactCta}</Link>
             </div>
+            <p className="mt-4 text-sm"><Link href={addLocalePrefix("/legal/services/gaikokujin-shain", locale)} className="text-primary underline">{v.foreignCta}</Link></p>
           </div>
+          <img src="/hero/legal-top-16x9.webp" alt={c.heroAlt} width={1600} height={900} className="h-full max-h-[420px] w-full object-cover md:max-h-none" fetchPriority="high" />
         </div>
       </section>
 
       <main className="mx-auto max-w-5xl px-4">
-        {/* 取扱業務カード */}
-        <section className="mt-10 grid gap-3 sm:grid-cols-2">
-          {c.services.map((s) => (
-            <Link
-              key={s.href}
-              href={addLocalePrefix(s.href, locale)}
-              className="block rounded-2xl border border-border bg-surface p-4 transition-shadow hover:shadow-sm"
-            >
-              <div className="font-serif text-lg font-semibold text-ink">{s.label}</div>
-              <div className="mt-1 text-sm text-text-muted">{s.sub}</div>
-            </Link>
-          ))}
+        <section className="mt-10 max-w-3xl">
+          <h2 className="font-serif text-2xl font-semibold text-ink">{v.visaTitle}</h2>
+          <p className="mt-3 leading-relaxed text-text">{v.visa}</p>
+          <p className="mt-3 leading-relaxed text-text">{v.consistency}</p>
+          <p className="mt-4"><Link href={addLocalePrefix("/legal/services/visa", locale)} className="text-primary underline">{v.visaCta}</Link></p>
+        </section>
+        <section className="mt-10 max-w-3xl">
+          <h2 className="font-serif text-2xl font-semibold text-ink">{v.foreignTitle}</h2>
+          <p className="mt-3 leading-relaxed text-text">{v.foreign}</p>
+          <p className="mt-4"><Link href={addLocalePrefix("/legal/services/gaikokujin-shain", locale)} className="text-primary underline">{v.foreignCta}</Link></p>
+          {foreignCross && <CrossLinkBanner link={foreignCross} lead={v.labor} />}
+        </section>
+        <section className="mt-10 rounded-2xl border border-border bg-surface p-5">
+          <h2 className="font-serif text-2xl font-semibold text-ink">{v.chineseTitle}</h2>
+          <p className="mt-3 leading-relaxed text-text">{v.chinese}</p>
+        </section>
+        <section className="mt-10 max-w-3xl">
+          <h2 className="font-serif text-2xl font-semibold text-ink">{v.companyTitle}</h2>
+          <p className="mt-3 leading-relaxed text-text">{v.company}</p>
+          <p className="mt-4"><Link href={addLocalePrefix("/legal/services/company", locale)} className="text-primary underline">{v.companyLink}</Link></p>
+        </section>
+        <section className="mt-10 rounded-2xl border border-border bg-surface p-5">
+          <p className="text-sm font-semibold text-primary">{v.industry}</p>
+          <h2 className="mt-2 font-serif text-2xl font-semibold text-ink">{v.ghTitle}</h2>
+          <p className="mt-3 leading-relaxed text-text">{v.gh}</p>
+          <p className="mt-4"><Link href={addLocalePrefix("/legal/services/shogai-fukushi", locale)} className="text-primary underline">{v.ghLink}</Link></p>
+          {ghCross && <CrossLinkBanner link={ghCross} lead={v.ghLabor} />}
+        </section>
+        <section className="mt-10 max-w-3xl">
+          <h2 className="font-serif text-2xl font-semibold text-ink">{v.filingTitle}</h2>
+          <p className="mt-3 leading-relaxed text-text">{v.filing}</p>
         </section>
 
         {/* 代表紹介（E-E-A-T） */}
@@ -226,6 +218,7 @@ export default async function LegalPage() {
             className="w-32 flex-shrink-0 rounded-xl object-cover sm:w-40"
           />
           <div>
+            {SR_LAUNCHED && <p className="mb-2 text-sm font-semibold text-primary">{v.dualTitle}</p>}
             <h2 className="font-serif text-lg font-semibold text-ink">{c.repName}</h2>
             <p className="mt-1 text-sm leading-relaxed text-text-muted">{c.repBio}</p>
             <p className="mt-2 text-xs">
@@ -251,6 +244,23 @@ export default async function LegalPage() {
           </div>
         </section>
 
+        <section className="mt-10 max-w-3xl">
+          <h2 className="font-serif text-2xl font-semibold text-ink">{v.laborTitle}</h2>
+          <p className="mt-3 leading-relaxed text-text">{SR_LAUNCHED ? v.labor : v.unavailable}</p>
+          {foreignCross && <CrossLinkBanner link={foreignCross} lead={v.dual} />}
+        </section>
+        <section className="mt-10">
+          <h2 className="font-serif text-2xl font-semibold text-ink">{v.otherTitle}</h2>
+          <div className="mt-4 grid gap-3 sm:grid-cols-2">
+            {otherServices.map(service => <Link key={service.href} href={addLocalePrefix(service.href, locale)} className="rounded-2xl border border-border bg-surface p-4">
+              <h3 className="font-serif text-lg font-semibold text-ink">{service.label}</h3>
+              <p className="mt-1 text-sm text-text-muted">{service.sub}</p>
+            </Link>)}
+          </div>
+        </section>
+        <div className="mt-10"><Faq bare items={faqs} heading={v.faqTitle} ariaLabel={v.faqTitle} withJsonLd inLanguage={BCP47_BY_LOCALE[locale]} /></div>
+        <p className="mt-4 text-sm leading-relaxed text-text-muted">{v.disclaimer}</p>
+
         {/* 所属団体（固有名詞＝全ロケール日本語正式名） */}
         <section className="mt-10 rounded-2xl border border-border bg-surface p-4 text-sm">
           <h2 className="font-serif text-base font-semibold text-ink">{c.membershipsHeading}</h2>
@@ -275,7 +285,7 @@ export default async function LegalPage() {
         </nav>
       </main>
 
-      {/* CTA帯＝共通部品（ja固定）＝フェーズI後半の翻訳キー対応まで既知の残課題 */}
+      {/* 既存の言語別問い合わせ導線 */}
       <div className="mx-auto max-w-5xl px-4">
         <CtaBand businessKey="legal" />
       </div>
