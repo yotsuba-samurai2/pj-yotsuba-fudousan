@@ -52,6 +52,12 @@ for (const locale of ["ja", "en", "zh-tw", "zh"] as const) {
       expect(html).toContain("33,000");
       expect(html).toContain("55,000");
       expect(html).toContain("88,000");
+      const setup = LABOR_SETUP_COPY[locale];
+      expect(html).toContain(setup.freeeSupport);
+      expect(html).toContain(`href="https://www.freee.co.jp/hr/contacts/"`);
+      expect(html.indexOf(setup.comparisonTitle)).toBeGreaterThan(html.indexOf("88,000"));
+      expect(html.indexOf(setup.comparisonTitle)).toBeLessThan(html.indexOf(p.scopeHeadings[0]));
+      expect(html).not.toContain("https://www.freee.co.jp/accounting/smb/support/");
       const prefix = locale === "ja" ? "" : `/${locale}`;
       expect(html).toContain(`href="${prefix}/legal/services/visa"`);
       expect(html).toContain(`href="${prefix}/legal/services/shogai-fukushi"`);
@@ -85,6 +91,7 @@ for (const locale of ["ja", "en", "zh-tw", "zh"] as const) {
       expect(html).toContain(setup.freeeSupport);
       expect(html).toContain(setup.comparison);
       expect(html).toContain(`href="${FREEE_SUPPORT_URL}"`);
+      expect(html).not.toContain("https://www.freee.co.jp/accounting/smb/support/");
       expect(html).not.toContain("<main");
       expect(html).not.toContain("31+");
     });
