@@ -1,3 +1,4 @@
+import { LABOR_SETUP_COPY, FREEE_SUPPORT_URL } from "@/lib/labor/setup-copy";
 import { describe, it, expect, vi, afterAll } from "vitest";
 import { renderToStaticMarkup } from "react-dom/server";
 import type { LangCode } from "@/config/languages";
@@ -36,17 +37,28 @@ for (const locale of ["ja", "en", "zh-tw", "zh"] as const) {
       const html = renderToStaticMarkup(await Top());
       const c = LABOR_SERVICE_COPY[locale];
       const p = LABOR_PLAN_COPY[locale];
+      expect(html).toContain(c.hero);
+      expect(html).toContain(c.sub);
+      expect(html).toContain(c.foreignHighlightBody);
+      expect(html).toContain(c.visaContractNotice);
+      expect(html.indexOf(c.visaContractNotice)).toBeLessThan(html.indexOf(c.visaLink));
+      expect(html.indexOf(c.chineseTitle)).toBeLessThan(html.indexOf(c.recruitmentTitle));
+      expect(html.indexOf(p.scopeHeadings[1])).toBeLessThan(html.indexOf(c.foreignHighlightTitle));
+      expect(html).not.toContain("<main");
       expect(html.indexOf(p.responsibility)).toBeGreaterThan(html.indexOf("<h1"));
-      expect(html.indexOf(p.responsibility)).toBeLessThan(html.indexOf(c.foreignTitle));
-      expect(html.indexOf(p.name)).toBeLessThan(html.indexOf(c.foreignTitle));
-      expect(html.indexOf(c.foreignTitle)).toBeLessThan(html.indexOf(c.ghTitle));
+      expect(html.indexOf(p.responsibility)).toBeLessThan(html.indexOf(c.foreignHighlightTitle));
+      expect(html.indexOf(p.name)).toBeLessThan(html.indexOf(c.foreignHighlightTitle));
+      expect(html.indexOf(c.foreignHighlightTitle)).toBeLessThan(html.indexOf(c.ghTitle));
       expect(html).toContain("33,000");
+      expect(html).toContain("55,000");
       expect(html).toContain("88,000");
       const prefix = locale === "ja" ? "" : `/${locale}`;
       expect(html).toContain(`href="${prefix}/legal/services/visa"`);
       expect(html).toContain(`href="${prefix}/legal/services/shogai-fukushi"`);
       expect(html).toContain(`href="${prefix}/labor/contact"`);
       const metadata = await topMetadata();
+      expect(metadata.title).toEqual({ absolute: c.title });
+      expect(metadata.description).toBe(c.intro);
       expect(JSON.stringify(metadata.alternates)).toContain(`${prefix}/labor`);
     });
 
@@ -54,10 +66,27 @@ for (const locale of ["ja", "en", "zh-tw", "zh"] as const) {
       state.locale = locale;
       const html = renderToStaticMarkup(await Page());
       expect(html).toContain("33,000");
+      expect(html).toContain("55,000");
       expect(html).toContain("88,000");
       expect(html).toContain("freee");
       expect(html).toContain("LINE");
       expect(html).not.toMatch(/23,100|50％|50%|顧問料は、労務のご相談に対する対価|ご相談だけです|in-house|内製|内制|內製/);
+    });
+
+    it("shows both conditional setup tiers and a fair freee comparison", async () => {
+      state.locale = locale;
+      const html = renderToStaticMarkup(await Prices());
+      const setup = LABOR_SETUP_COPY[locale];
+      expect(html).toContain(setup.standardTitle);
+      expect(html).toContain(setup.standardCondition);
+      expect(html).toContain(setup.migrationTitle);
+      expect(html).toContain(setup.migrationCondition);
+      expect(html).toContain(setup.quoteNote);
+      expect(html).toContain(setup.freeeSupport);
+      expect(html).toContain(setup.comparison);
+      expect(html).toContain(`href="${FREEE_SUPPORT_URL}"`);
+      expect(html).not.toContain("<main");
+      expect(html).not.toContain("31+");
     });
 
     it("has fixed offers from the canonical calculation and no invented setup price", () => {

@@ -6,7 +6,7 @@
 //   ・一体提供を示唆する語（ワンストップ／一站式／one-stop 等）は全言語で不使用（第6条）。
 //   ・「どの事務所が、何を担いますか？」の節は分離受任の明示（別の契約で）を4言語とも維持。
 //   ・国数表記（4カ国等）は不使用。「中国や台湾、タイに駐在」と国名で書く。
-import { LaborPlanPricing, LaborPlanPriceSummary, LaborPlanResponsibility } from "@/components/labor/LaborPlanPricing";
+import { LaborPlanPricing, LaborPlanPriceSummary, LaborPlanResponsibility, LaborPlanResponsibilities } from "@/components/labor/LaborPlanPricing";
 import { LABOR_SERVICE_COPY, getLaborPlanFaqs } from "@/lib/labor/service-copy";
 import { LABOR_PLAN_COPY } from "@/lib/labor/plan-copy";
 import { Faq } from "@/components/shared/Faq";
@@ -21,14 +21,7 @@ import { srRegParen } from "@/lib/shared/sr-registration";
 
 type Service = { href: string; label: string; sub: string };
 type Copy = {
-  metaTitle: string;
-  metaDescription: string;
   heroAlt: string;
-  h1: string;
-  leadStrong: string;
-  leadRest: string;
-  answerStrong: string;
-  answerRest: string;
   whenH2: string;
   whenItems: { strong: string; rest: string }[];
   whenColumnPre: string;
@@ -58,14 +51,7 @@ type Copy = {
 };
 
 const JA: Copy = {
-  "metaTitle": "人事部丸投げ・外国人雇用・障害福祉に強い社労士｜四葉社会保険労務士事務所",
-  "metaDescription": "給与計算・通常手続・労務相談をまとめて任せられる外部人事部サービスです。freee人事労務・LINE打刻を使い、会社側と役割を分けて毎月の人事労務を支援します。",
   "heroAlt": "四葉社会保険労務士事務所のイメージ（文京区の事務所）",
-  "h1": "人事部を、丸ごと外注。",
-  "leadStrong": "給与計算、社会保険手続、労務相談、採用、外国人雇用までまとめて対応。",
-  "leadRest": "",
-  "answerStrong": "",
-  "answerRest": "給与計算・通常手続・労務相談をまとめて任せられる外部人事部サービスです。freee人事労務・LINE打刻を使い、会社側と役割を分けて毎月の人事労務を支援します。",
   "whenH2": "こんなときに、ご相談ください",
   "whenItems": [
     {
@@ -171,14 +157,7 @@ const JA: Copy = {
 };
 
 const EN: Copy = {
-  "metaTitle": "Outsourced HR, foreign employment & disability welfare | 四葉社会保険労務士事務所",
-  "metaDescription": "An external HR service covering payroll, routine procedures and labor advice. We use freee HR and LINE clock-in, with clearly defined responsibilities for your company and our office.",
   "heroAlt": "四葉社会保険労務士事務所 (office in Bunkyo City, Tokyo)",
-  "h1": "Outsource your HR department.",
-  "leadStrong": "Payroll, social insurance, labor advice, hiring and foreign-employment support in one HR service.",
-  "leadRest": "",
-  "answerStrong": "",
-  "answerRest": "An external HR service covering payroll, routine procedures and labor advice. We use freee HR and LINE clock-in, with clearly defined responsibilities for your company and our office.",
   "whenH2": "Talk to us when…",
   "whenItems": [
     {
@@ -284,14 +263,7 @@ const EN: Copy = {
 };
 
 const ZH_TW: Copy = {
-  "metaTitle": "人事部外包・外國人雇用・障害福祉｜四葉社会保険労務士事務所",
-  "metaDescription": "整合薪資計算、一般手續與勞務諮詢的外部人事部服務。透過freee人事勞務與LINE打卡，明確區分公司與事務所的責任，支援每月的人事作業。",
   "heroAlt": "四葉社會保險勞務士事務所（東京都文京區）",
-  "h1": "把人事部交給外部專業團隊。",
-  "leadStrong": "薪資計算、社會保險手續、勞務諮詢、招聘與外國人雇用，一併支援。",
-  "leadRest": "",
-  "answerStrong": "",
-  "answerRest": "整合薪資計算、一般手續與勞務諮詢的外部人事部服務。透過freee人事勞務與LINE打卡，明確區分公司與事務所的責任，支援每月的人事作業。",
   "whenH2": "這些時候，歡迎諮詢",
   "whenItems": [
     {
@@ -397,14 +369,7 @@ const ZH_TW: Copy = {
 };
 
 const ZH: Copy = {
-  "metaTitle": "人事部外包・外国人雇用・障害福祉｜四葉社会保険労務士事務所",
-  "metaDescription": "整合工资计算、一般手续与劳务咨询的外部人事部服务。通过freee人事劳务与LINE打卡，明确区分公司与事务所的责任，支持每月的人事工作。",
   "heroAlt": "四葉社会保険労務士事務所（东京都文京区）",
-  "h1": "把人事部交给外部专业团队。",
-  "leadStrong": "工资计算、社会保险手续、劳务咨询、招聘与外国人雇用，一并支持。",
-  "leadRest": "",
-  "answerStrong": "",
-  "answerRest": "整合工资计算、一般手续与劳务咨询的外部人事部服务。通过freee人事劳务与LINE打卡，明确区分公司与事务所的责任，支持每月的人事工作。",
   "whenH2": "这些时候，欢迎咨询",
   "whenItems": [
     {
@@ -513,11 +478,11 @@ const COPY: Record<LangCode, Copy> = { ja: JA, en: EN, "zh-tw": ZH_TW, zh: ZH };
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getRequestLocale();
-  const c = COPY[locale] ?? JA;
+  const c = LABOR_SERVICE_COPY[locale];
   return buildPageMetadata({
     businessKey: "labor",
-    title: c.metaTitle,
-    description: c.metaDescription,
+    title: c.title,
+    description: c.intro,
     path: "/labor",
     keywords: ["社労士 文京区", "人事部丸投げ", "外国人雇用", "中国語 社労士", "freee 社労士", "グループホーム 社労士", "障害福祉 社労士"],
     locale,
@@ -544,30 +509,33 @@ export default async function LaborTopPage() {
           />
           <div className="md:absolute md:inset-0 md:flex md:items-center">
             <div className="bg-surface p-5 md:m-8 md:max-w-xl md:rounded-2xl md:bg-white/30 md:p-7 md:backdrop-blur-sm">
-              <h1 className="font-serif text-2xl font-bold text-ink sm:text-3xl">{c.h1}</h1>
+              <h1 className="font-serif text-2xl font-bold text-ink sm:text-3xl">{v.hero}</h1>
               <p className="mt-3 text-sm leading-relaxed text-text sm:text-base">
-                <strong>{c.leadStrong}</strong>
-                {c.leadRest}
+                <strong>{v.sub}</strong>
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <main className="mx-auto max-w-5xl px-4">
+      <div className="mx-auto max-w-5xl px-4">
         <div className="mt-4"><LaborPlanResponsibility locale={locale} /></div>
         <section className="mt-8 space-y-4 rounded-2xl border-l-4 border-primary bg-primary-tint p-5">
           <h2 className="font-serif text-xl font-semibold text-ink">{LABOR_PLAN_COPY[locale].name}</h2>
           <p className="leading-relaxed text-text">{v.intro}</p>
-          <LaborPlanPriceSummary locale={locale} />
+          <LaborPlanPriceSummary locale={locale} emphasizePayroll />
+          <LaborPlanResponsibilities locale={locale} />
           <div className="flex flex-wrap gap-3">
             <Link href={addLocalePrefix("/labor/ryokin", locale)} className="rounded-lg bg-primary px-4 py-3 text-white">{v.viewPlan}</Link>
             <Link href={addLocalePrefix("/labor/contact", locale)} className="rounded-lg border border-primary px-4 py-3 text-primary">{v.consult}</Link>
           </div>
         </section>
         <section className="mt-10 rounded-2xl border border-border p-5">
-          <h2 className="font-serif text-xl font-semibold text-ink">{v.foreignTitle}</h2>
-          <p className="mt-3 leading-relaxed text-text">{v.foreignBody}</p>
+          <p className="text-sm font-medium text-primary">{v.industryLabel}</p>
+          <h2 className="mt-2 font-serif text-xl font-semibold text-ink">{v.foreignHighlightTitle}</h2>
+          <p className="mt-3 font-semibold text-primary">{v.chineseTitle}</p>
+          <p className="mt-3 leading-relaxed text-text">{v.foreignHighlightBody}</p>
+          <p className="mt-3 text-sm font-semibold leading-relaxed text-ink">{v.visaContractNotice}</p>
           <div className="mt-4 flex flex-wrap gap-4 text-primary">
             <Link className="underline" href={addLocalePrefix("/labor/services/gaikokujin-koyo", locale)}>{v.foreignLink}</Link>
             <Link className="underline" href={addLocalePrefix("/legal/services/visa", locale)}>{v.visaLink}</Link>
@@ -587,7 +555,7 @@ export default async function LaborTopPage() {
           <p className="leading-relaxed text-text">{LABOR_PLAN_COPY[locale].system}</p>
           <p className="leading-relaxed text-text">{v.ai}</p>
         </section>
-        {[{title:v.payrollTitle,body:v.payroll},{title:v.socialTitle,body:v.social},{title:v.recruitmentTitle,body:v.recruitmentBoundary},{title:v.chineseTitle,body:v.chineseBody}].map(s => <section key={s.title} className="mt-10">
+        {[{title:v.payrollTitle,body:v.payroll},{title:v.socialTitle,body:v.social},{title:v.chineseTitle,body:v.chineseBody},{title:v.recruitmentTitle,body:v.recruitmentBoundary}].map(s => <section key={s.title} className="mt-10">
           <h2 className="font-serif text-xl font-semibold text-ink">{s.title}</h2>
           <p className="mt-3 leading-relaxed text-text">{s.body}</p>
         </section>) }
@@ -709,7 +677,7 @@ export default async function LaborTopPage() {
           <Link href={addLocalePrefix("/labor/faq", locale)} className="underline">{c.navFaq}</Link>
           <Link href={addLocalePrefix("/labor/about", locale)} className="underline">{c.navAbout}</Link>
         </nav>
-      </main>
+      </div>
 
       <div className="mx-auto max-w-5xl px-4">
         <CtaBand businessKey="labor" />

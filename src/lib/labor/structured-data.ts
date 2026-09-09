@@ -10,11 +10,12 @@ export function getLaborPriceStructuredData(locale: LangCode) {
     "@type": "Offer", name,
     priceSpecification: { "@type": "PriceSpecification", price, priceCurrency: LABOR_PRICING.currency, valueAddedTaxIncluded: LABOR_PRICING.taxIncluded },
   });
-  const recurring = Array.from({ length: LABOR_PRICING.individualQuoteFrom - 1 }, (_, i) => {
+  const recurring = Array.from({ length: 30 }, (_, i) => {
     const people = i + 1;
-    return fixedOffer(`${c.name} / ${c.people}: ${people} / ${c.monthly}`, getLaborMonthlyFee(people)!);
+    return fixedOffer(`${c.name} / ${c.people}: ${people} / ${c.monthly}`, getLaborMonthlyFee(people));
   });
-  // Setup, optional services and 31+ are quoted "from" or individually; never emit them as fixed prices.
+  // Representative exact monthly fees, not a headcount limit.
+  // Conditional setup tiers and optional services are described on-page, not as unconditional fixed offers.
   const ancillary = LABOR_ANCILLARY_FEES[locale].sections.flatMap(section => section.rows.flatMap(row =>
     "value" in row && typeof row.value === "number" ? [fixedOffer(`${section.title} / ${row.name}`, row.value)] : [],
   ));

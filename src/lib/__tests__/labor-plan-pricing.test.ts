@@ -1,3 +1,4 @@
+import { LABOR_SETUP_COPY } from "@/lib/labor/setup-copy";
 import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { describe, expect, it } from "vitest";
@@ -11,19 +12,22 @@ describe("V10 plan presentation", () => {
     const c = LABOR_PLAN_COPY[code];
     expect(html).toContain(formatLaborYen(33000, code));
     expect(html).toContain(formatLaborYen(88000, code));
+    expect(html).toContain(formatLaborYen(55000, code));
     expect(html).toContain(c.monthly);
     expect(html).toContain(c.setup);
     expect(html).toContain(c.tax);
     expect(html).toContain(c.responsibility);
-    expect(html).toContain(c.individualQuote);
-    expect(html).toContain("11–30");
-    expect(html).toContain("31+");
-    for (const item of c.setupItems) expect(html).toContain(item);
+    expect(html).toContain(LABOR_SETUP_COPY[code].standardCondition);
+    expect(html).toContain(LABOR_SETUP_COPY[code].migrationCondition);
+    expect(html).toContain(LABOR_SETUP_COPY[code].quoteNote);
+    expect(html).toContain("11+");
+    expect(html).not.toContain("31+");
+    for (const item of [...LABOR_SETUP_COPY[code].standardItems, ...LABOR_SETUP_COPY[code].migrationItems]) expect(html).toContain(item);
     for (const heading of c.scopeHeadings) expect(html).toContain(heading);
     expect(html).toContain(c.system);
     expect(html).toContain(c.separate);
     expect(html).not.toMatch(/<details|hidden|role="tab"/);
-    expect(html.indexOf(c.setupHeading)).toBeLessThan(html.indexOf("<table"));
+    expect(html.indexOf(LABOR_SETUP_COPY[code].heading)).toBeLessThan(html.indexOf("<table"));
     expect(html.indexOf("</table>")).toBeLessThan(html.indexOf(c.scopeHeadings[0]));
   });
 
