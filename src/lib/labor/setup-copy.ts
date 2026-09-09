@@ -15,7 +15,9 @@ type SetupCopy = {
   freeeLink: string;
 };
 
-export const FREEE_SUPPORT_URL = "https://www.freee.co.jp/accounting/smb/support/";
+// Linked from the implementation-support section of https://www.freee.co.jp/hr/.
+// The destination accepts pre-sales inquiries from corporations (checked 2026-09-09).
+export const FREEE_SUPPORT_URL = "https://www.freee.co.jp/hr/contacts/";
 
 export const LABOR_SETUP_COPY: Record<LangCode, SetupCopy> = {
   ja: {
@@ -27,10 +29,10 @@ export const LABOR_SETUP_COPY: Record<LangCode, SetupCopy> = {
     migrationCondition: "既存データの移行や、複雑な手当・勤務形態・承認フローなどがある場合。",
     migrationItems: ["標準導入の内容", "既存データの移行", "給与体系・手当控除・勤務形態の設定", "承認フローを含む運用フロー設計", "初回給与テスト・計算"],
     quoteNote: "作業前に内容を確認し、月額料金・初期導入費・別料金の業務をまとめて書面でお見積りします。",
-    comparisonTitle: "freeeへの直接依頼とも比較できます",
-    freeeSupport: "freeeにも有償の導入・活用支援があり、業務フロー整理、初期設定・データ移行、担当者トレーニングなどを直接相談できます。対象製品・支援範囲・費用はfreeeへご確認ください。",
+    comparisonTitle: "freee人事労務の導入支援とも比較できます",
+    freeeSupport: "freee人事労務にも、初期設定からの導入支援があります。支援内容・対象プラン・費用・見積りは、freeeの導入前相談窓口で直接ご確認ください。",
     comparison: "四葉では初期設定だけで終わらせず、その後も給与計算・通常手続・日常の労務相談まで一貫して支援します。freeeへの直接依頼を含め、内容と費用を比べたうえでお選びください。",
-    freeeLink: "freee公式の導入・活用支援を見る",
+    freeeLink: "freee人事労務に導入・見積りを相談（法人向け）",
   },
   en: {
     heading: "Two setup options to suit your current operations",
@@ -41,10 +43,10 @@ export const LABOR_SETUP_COPY: Record<LangCode, SetupCopy> = {
     migrationCondition: "For existing data migration or complex allowances, work patterns or approval workflows.",
     migrationItems: ["Standard setup services", "Existing data migration", "Pay structure, allowances, deductions and work-pattern configuration", "Operating and approval workflow design", "Initial payroll testing and calculation"],
     quoteNote: "Before work begins, we confirm the scope and provide a written quote showing monthly fees, setup fees and separately charged services together.",
-    comparisonTitle: "You can also compare support directly from freee",
-    freeeSupport: "freee offers paid implementation and usage support, including workflow planning, initial setup and data migration, and staff training. Contact freee directly to confirm eligible products, scope and fees.",
+    comparisonTitle: "Compare implementation support from freee HR",
+    freeeSupport: "freee HR also offers implementation support from initial setup. Contact the freee pre-sales team directly to confirm support scope, eligible plans, fees and a quote.",
     comparison: "Yotsuba supports you beyond initial setup, continuing with payroll, routine procedures and day-to-day labor advice. Compare the scope and costs, including support directly from freee, before choosing.",
-    freeeLink: "View freee's official implementation and usage support (Japanese)",
+    freeeLink: "Ask freee HR about setup and a quote (corporations only; Japanese)",
   },
   "zh-tw": {
     heading: "依目前狀況選擇兩種初期導入方式",
@@ -55,10 +57,10 @@ export const LABOR_SETUP_COPY: Record<LangCode, SetupCopy> = {
     migrationCondition: "適用於既有資料移轉，或津貼、工作型態、核准流程較複雜的情況。",
     migrationItems: ["標準導入的內容", "既有資料移轉", "薪資制度、津貼、扣除項目與工作型態設定", "含核准流程的作業流程設計", "首次薪資測試與計算"],
     quoteNote: "開始作業前先確認工作內容，並以書面一併列出月費、初期導入費與另行收費的業務。",
-    comparisonTitle: "也可比較直接向freee委託支援的方案",
-    freeeSupport: "freee亦提供付費導入與使用支援，可直接洽詢作業流程整理、初期設定、資料移轉、承辦人員訓練等。適用產品、支援範圍與費用請向freee確認。",
+    comparisonTitle: "也可比較freee人事勞務的導入支援",
+    freeeSupport: "freee人事勞務亦提供從初期設定開始的導入支援。支援內容、適用方案、費用與報價，請直接向freee的導入前諮詢窗口確認。",
     comparison: "四葉不只協助初期設定，後續也持續支援薪資計算、一般手續與日常勞務諮詢。請一併考慮直接委託freee的選項，比較內容與費用後再選擇。",
-    freeeLink: "查看freee官方導入與使用支援（日文）",
+    freeeLink: "向freee人事勞務洽詢導入與報價（限法人・日文）",
   },
   zh: {
     heading: "按目前情况选择两种初期导入方式",
@@ -69,9 +71,9 @@ export const LABOR_SETUP_COPY: Record<LangCode, SetupCopy> = {
     migrationCondition: "适用于既有数据迁移，或津贴、工作形式、审批流程较复杂的情况。",
     migrationItems: ["标准导入的内容", "既有数据迁移", "工资制度、津贴、扣除项目与工作形式设置", "含审批流程的工作流程设计", "首次工资测试与计算"],
     quoteNote: "开始工作前先确认工作内容，并以书面一并列出月费、初期导入费与另行收费的业务。",
-    comparisonTitle: "也可比较直接向freee委托支持的方案",
-    freeeSupport: "freee也提供付费导入与使用支持，可直接咨询工作流程整理、初期设置、数据迁移、经办人员培训等。适用产品、支持范围与费用请向freee确认。",
+    comparisonTitle: "也可比较freee人事劳务的导入支持",
+    freeeSupport: "freee人事劳务也提供从初期设置开始的导入支持。支持内容、适用方案、费用与报价，请直接向freee的导入前咨询窗口确认。",
     comparison: "四叶不仅协助初期设置，后续也持续支持工资计算、一般手续与日常劳务咨询。请一并考虑直接委托freee的选项，比较内容与费用后再选择。",
-    freeeLink: "查看freee官方导入与使用支持（日文）",
+    freeeLink: "向freee人事劳务咨询导入与报价（仅限法人・日文）",
   },
 };

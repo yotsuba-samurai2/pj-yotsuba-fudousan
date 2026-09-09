@@ -7,6 +7,7 @@
 //   ・「どの事務所が、何を担いますか？」の節は分離受任の明示（別の契約で）を4言語とも維持。
 //   ・国数表記（4カ国等）は不使用。「中国や台湾、タイに駐在」と国名で書く。
 import { LaborPlanPricing, LaborPlanPriceSummary, LaborPlanResponsibility, LaborPlanResponsibilities } from "@/components/labor/LaborPlanPricing";
+import { LaborSetupComparison } from "@/components/labor/LaborSetupComparison";
 import { LABOR_SERVICE_COPY, getLaborPlanFaqs } from "@/lib/labor/service-copy";
 import { LABOR_PLAN_COPY } from "@/lib/labor/plan-copy";
 import { Faq } from "@/components/shared/Faq";
@@ -524,6 +525,7 @@ export default async function LaborTopPage() {
           <h2 className="font-serif text-xl font-semibold text-ink">{LABOR_PLAN_COPY[locale].name}</h2>
           <p className="leading-relaxed text-text">{v.intro}</p>
           <LaborPlanPriceSummary locale={locale} emphasizePayroll />
+          <LaborSetupComparison locale={locale} headingLevel="h3" />
           <LaborPlanResponsibilities locale={locale} />
           <div className="flex flex-wrap gap-3">
             <Link href={addLocalePrefix("/labor/ryokin", locale)} className="rounded-lg bg-primary px-4 py-3 text-white">{v.viewPlan}</Link>
