@@ -9,17 +9,15 @@ import { getRequestLocale } from "@/lib/getRequestLocale";
 import { addLocalePrefix } from "@/lib/locale";
 import Link from "next/link";
 import { LaborServicePage, LaborH2 } from "@/components/shared/LaborServicePage";
-import { Placeholder } from "@/components/shared/Placeholder";
+import { LaborPlanPricing, LaborPlanPriceSummary, LaborPlanResponsibility } from "@/components/labor/LaborPlanPricing";
+import { LABOR_SERVICE_COPY } from "@/lib/labor/service-copy";
 import type { LangCode } from "@/config/languages";
 
 type Copy = {
   metaTitle: string;
-  metaDescription: string;
   crumbLabel: string;
   serviceName: string;
   heroAlt: string;
-  h1: string;
-  leadParts: [string, string, string, string, string, string, string];
   internalLinks: { href: string; label: string }[];
   crossLinkLead: string;
   s1H2: string;
@@ -47,7 +45,6 @@ type Copy = {
   s5Body1a: string;
   s5Strong1: string;
   s5Body1b: string;
-  s5Body2: string;
   s5Note: string;
   s6H2: string;
   s6Items: string[];
@@ -57,21 +54,9 @@ type Copy = {
 
 const JA: Copy = {
   metaTitle: "外国人雇用の労務｜四葉社会保険労務士事務所",
-  metaDescription:
-    "外国人（介護・育成就労）の雇用に伴う労務・社会保険手続きを、文京区の四葉社会保険労務士事務所が承ります。日本語・英語・中国語（繁体字・簡体字）に対応。2027年4月施行の育成就労制度への受入準備も。在留資格の申請書類は四葉行政書士事務所が別契約で受任します。",
   crumbLabel: "外国人雇用（介護・育成就労）の労務",
   serviceName: "外国人雇用（介護・育成就労）の労務・社会保険サポート",
   heroAlt: "外国人雇用の労務のイメージ（多国籍の介護スタッフ）",
-  h1: "外国人雇用（介護・育成就労）の労務",
-  leadParts: [
-    "外国人——とくに介護分野・育成就労——の雇用に伴う",
-    "労務・社会保険手続き",
-    "は、社会保険労務士に依頼できます。四葉社会保険労務士事務所は、雇用契約・社会保険・労働条件の説明を",
-    "日本語・英語・中国語（繁体字・簡体字）",
-    "で支援できるのが特長です。",
-    "2027年4月施行の育成就労制度",
-    "への受入準備にも対応します。",
-  ],
   internalLinks: [
     { href: "/labor/ryokin", label: "外国人雇用の労務の料金" },
     { href: "/labor/nagare", label: "ご相談から契約までの流れ" },
@@ -100,7 +85,7 @@ const JA: Copy = {
   s2Note: "※各届出の期限日数は、本ページ作成時点で個別に一次確認していません（未検証）。実際の期限は面談のうえご案内します。",
   s3H2: "在留資格の申請と社会保険の届出は、同じ人に頼めますか？",
   s3Parts: [
-    "資格が違うため、同じ契約にまとめることはできません。在留資格の申請取次は行政書士、労働・社会保険の手続きは社会保険労務士の業務です。四葉では前者を四葉行政書士事務所が、後者を当事務所が、",
+    "代表者は社会保険労務士と申請取次行政書士の資格を併有しています。四葉では業務ごとに受任主体を分けます。在留資格の申請取次は行政書士、労働・社会保険の手続きは社会保険労務士の業務です。四葉では前者を四葉行政書士事務所が、後者を当事務所が、",
     "それぞれ別の契約で",
     "受任します。契約書・請求書・お振込先も分かれます。必要な部分だけをご依頼いただけますし、他の部分を他社にご依頼いただいても差し支えありません。",
     "",
@@ -115,7 +100,6 @@ const JA: Copy = {
   s5Body1a: "法令上、就業規則を外国語に翻訳することが義務づけられているわけではありません。ただし就業規則は",
   s5Strong1: "周知して初めて効力を持つ",
   s5Body1b: "とされており（労働基準法第106条第1項）、内容を理解できない言語でのみ掲示している状態は、周知として十分かどうかが問われる場面があります。",
-  s5Body2: "当事務所は、日本語・英語・中国語（繁体字・簡体字）で内容をご説明できます。代表が中国語と英語に対応するため、外部の翻訳会社を挟みません。",
   s5Note: "翻訳・翻訳証明は行政書士や社会保険労務士の独占業務ではありません。公的機関へ提出する書類の翻訳が必要な場合は、内容に応じて別途ご相談ください。",
   s6H2: "このページの根拠",
   s6Items: [
@@ -131,21 +115,9 @@ const JA: Copy = {
 
 const EN: Copy = {
   metaTitle: "Labor for employing foreign nationals｜四葉社会保険労務士事務所",
-  metaDescription:
-    "Labor and social-insurance procedures for employing foreign nationals (care work and Employment for Skill Development), handled by 四葉社会保険労務士事務所 in Bunkyo City, Tokyo — in Japanese, English, and Chinese (traditional and simplified). We also support preparation for the Employment for Skill Development system starting April 2027. Residence-status application documents are handled by 四葉行政書士事務所 under a separate contract.",
   crumbLabel: "Employing foreign nationals (care / Employment for Skill Development)",
   serviceName: "Labor & social-insurance support for employing foreign nationals",
   heroAlt: "Employing foreign nationals (multinational care staff)",
-  h1: "Employing foreign nationals: labor matters (care / Employment for Skill Development)",
-  leadParts: [
-    "The ",
-    "labor and social-insurance procedures",
-    " that come with employing foreign nationals — especially in care work and Employment for Skill Development — can be entrusted to a Certified Social Insurance and Labor Consultant. The strength of 四葉社会保険労務士事務所 is that we can explain employment contracts, social insurance, and working conditions in ",
-    "Japanese, English, and Chinese (traditional and simplified)",
-    ". ",
-    "We also support preparation for the Employment for Skill Development system taking effect in April 2027",
-    ".",
-  ],
   internalLinks: [
     { href: "/labor/ryokin", label: "Fees for foreign-employment labor matters" },
     { href: "/labor/nagare", label: "From consultation to contract" },
@@ -176,7 +148,7 @@ const EN: Copy = {
   s2Note: "* Deadlines for each filing have not been individually verified as of writing (unverified). Actual deadlines are advised at the consultation.",
   s3H2: "Can the residence-status application and the insurance filings be asked of the same person?",
   s3Parts: [
-    "Because the qualifications differ, they cannot be combined into one contract. Residence-status application services are the work of administrative scriveners; labor and social-insurance procedures are the work of Certified Social Insurance and Labor Consultants. At Yotsuba, the former is handled by 四葉行政書士事務所 and the latter by this office, ",
+    "Our representative holds both the Certified Social Insurance and Labor Consultant qualification and the administrative scrivener qualification with immigration application intermediary authorization. At Yotsuba, each office accepts its own engagement. Residence-status application services are the work of administrative scriveners; labor and social-insurance procedures are the work of Certified Social Insurance and Labor Consultants. At Yotsuba, the former is handled by 四葉行政書士事務所 and the latter by this office, ",
     "each under a separate contract",
     ". Contracts, invoices, and payment accounts are separate. You may engage only the part you need, and you are free to place the other part elsewhere.",
     "",
@@ -192,8 +164,6 @@ const EN: Copy = {
   s5Strong1: "take effect only when made known to employees",
   s5Body1b:
     " (Labor Standards Act, Article 106, Paragraph 1), and posting them only in a language employees cannot understand can raise the question of whether that counts as sufficient notification.",
-  s5Body2:
-    "This office can explain the content in Japanese, English, and Chinese (traditional and simplified). Because the representative works in Chinese and English, no outside translation agency is involved.",
   s5Note:
     "Translation and translation certification are not the exclusive work of administrative scriveners or labor consultants. If you need documents translated for submission to public agencies, please consult us separately.",
   s6H2: "Sources for this page",
@@ -211,21 +181,9 @@ const EN: Copy = {
 
 const ZH_TW: Copy = {
   metaTitle: "外國人僱用的勞務｜四葉社會保險勞務士事務所",
-  metaDescription:
-    "外國人（介護・育成就勞）僱用相關的勞務・社會保險手續，由東京都文京區的四葉社會保險勞務士事務所承辦。對應日語・英語・中文（繁體字・簡體字）。也支援2027年4月施行的育成就勞制度受入準備。在留資格申請文件由四葉行政書士事務所另行簽約承接。",
   crumbLabel: "外國人僱用（介護・育成就勞）的勞務",
   serviceName: "外國人僱用（介護・育成就勞）的勞務・社會保險支援",
   heroAlt: "外國人僱用的勞務（多國籍介護人員）",
-  h1: "外國人僱用（介護・育成就勞）的勞務",
-  leadParts: [
-    "僱用外國人——尤其是介護領域・育成就勞——所伴隨的",
-    "勞務・社會保險手續",
-    "，可以委託社會保險勞務士。四葉社會保險勞務士事務所的特長，是能以",
-    "日語・英語・中文（繁體字・簡體字）",
-    "說明僱用契約・社會保險・勞動條件。",
-    "2027年4月施行的育成就勞制度",
-    "的受入準備也可對應。",
-  ],
   internalLinks: [
     { href: "/labor/ryokin", label: "外國人僱用勞務的費用" },
     { href: "/labor/nagare", label: "從諮詢到簽約的流程" },
@@ -254,7 +212,7 @@ const ZH_TW: Copy = {
   s2Note: "※各申報的期限天數，本頁製作時點未逐一經一次資料確認（未驗證）。實際期限將於面談時說明。",
   s3H2: "在留資格申請與社會保險申報，可以委託同一個人嗎？",
   s3Parts: [
-    "因為資格不同，無法合併為同一份契約。在留資格的申請取次是行政書士、勞動・社會保險手續是社會保險勞務士的業務。在四葉，前者由四葉行政書士事務所、後者由本事務所，",
+    "代表兼具社會保險勞務士與申請取次行政書士資格。四葉依業務區分委託主體。在留資格的申請取次是行政書士、勞動・社會保險手續是社會保險勞務士的業務。在四葉，前者由四葉行政書士事務所、後者由本事務所，",
     "各自以另行簽訂的契約",
     "承接。契約書・請款單・匯款帳戶也分開。您可以只委託需要的部分，其他部分委託其他公司也沒有問題。",
     "",
@@ -268,7 +226,6 @@ const ZH_TW: Copy = {
   s5Body1a: "法令上並未義務化將工作規則翻譯為外語。不過工作規則",
   s5Strong1: "須周知才生效",
   s5Body1b: "（勞動基準法〔日本語：労働基準法〕第106條第1項），只以員工無法理解的語言公告的狀態，可能被質疑是否構成充分的周知。",
-  s5Body2: "本事務所能以日語・英語・中文（繁體字・簡體字）說明內容。因代表對應中文與英語，不經外部翻譯公司。",
   s5Note: "翻譯・翻譯證明並非行政書士或社會保險勞務士的獨占業務。若需要翻譯提交給公家機關的文件，請依內容另行諮詢。",
   s6H2: "本頁的依據",
   s6Items: [
@@ -284,21 +241,9 @@ const ZH_TW: Copy = {
 
 const ZH: Copy = {
   metaTitle: "外国人雇用的劳务｜四葉社会保険労務士事務所",
-  metaDescription:
-    "外国人（介护・育成就劳）雇用相关的劳务・社会保险手续，由东京都文京区的四葉社会保険労務士事務所承办。对应日语・英语・中文（繁体字・简体字）。也支援2027年4月施行的育成就劳制度接收准备。在留资格申请文件由四葉行政書士事務所分别签约承接。",
   crumbLabel: "外国人雇用（介护・育成就劳）的劳务",
   serviceName: "外国人雇用（介护・育成就劳）的劳务・社会保险支援",
   heroAlt: "外国人雇用的劳务（多国籍介护人员）",
-  h1: "外国人雇用（介护・育成就劳）的劳务",
-  leadParts: [
-    "雇用外国人——尤其是介护领域・育成就劳——所伴随的",
-    "劳务・社会保险手续",
-    "，可以委托社会保险劳务士。四葉社会保険労務士事務所的特长，是能以",
-    "日语・英语・中文（繁体字・简体字）",
-    "说明雇用合同・社会保险・劳动条件。",
-    "2027年4月施行的育成就劳制度",
-    "的接收准备也可对应。",
-  ],
   internalLinks: [
     { href: "/labor/ryokin", label: "外国人雇用劳务的费用" },
     { href: "/labor/nagare", label: "从咨询到签约的流程" },
@@ -327,7 +272,7 @@ const ZH: Copy = {
   s2Note: "※各申报的期限天数，本页制作时点未逐一经一次资料确认（未验证）。实际期限将于面谈时说明。",
   s3H2: "在留资格申请与社会保险申报，可以委托同一个人吗？",
   s3Parts: [
-    "因为资格不同，无法合并为同一份合同。在留资格的申请取次是行政书士、劳动・社会保险手续是社会保险劳务士的业务。在四葉，前者由四葉行政書士事務所、后者由本事务所，",
+    "代表兼具社会保险劳务士与申请取次行政书士资格。四葉按业务区分受托主体。在留资格的申请取次是行政书士、劳动・社会保险手续是社会保险劳务士的业务。在四葉，前者由四葉行政書士事務所、后者由本事务所，",
     "各自以分别签订的合同",
     "承接。合同・请款单・汇款账户也分开。您可以只委托需要的部分，其他部分委托其他公司也没有问题。",
     "",
@@ -341,7 +286,6 @@ const ZH: Copy = {
   s5Body1a: "法令上并未义务化将就业规则翻译为外语。不过就业规则",
   s5Strong1: "须周知才生效",
   s5Body1b: "（劳动基准法〔日本語：労働基準法〕第106条第1项），只以员工无法理解的语言公告的状态，可能被质疑是否构成充分的周知。",
-  s5Body2: "本事务所能以日语・英语・中文（繁体字・简体字）说明内容。因代表对应中文与英语，不经外部翻译公司。",
   s5Note: "翻译・翻译证明并非行政书士或社会保险劳务士的独占业务。若需要翻译提交给公家机关的文件，请按内容另行咨询。",
   s6H2: "本页的依据",
   s6Items: [
@@ -363,7 +307,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return buildPageMetadata({
     businessKey: "labor",
     title: c.metaTitle,
-    description: c.metaDescription,
+    description: LABOR_SERVICE_COPY[locale].foreignBody + " " + LABOR_SERVICE_COPY[locale].chineseTitle,
     path: "/labor/services/gaikokujin-koyo",
     keywords: ["外国人 雇用 社労士", "育成就労 受入 準備", "介護 外国人材 労務"],
     locale,
@@ -374,25 +318,21 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function Page() {
   const locale = await getRequestLocale();
   const c = COPY[locale] ?? JA;
+  const v = LABOR_SERVICE_COPY[locale];
   return (
     <LaborServicePage
       slug="gaikokujin-koyo"
       crumbLabel={c.crumbLabel}
       serviceName={c.serviceName}
       heroAlt={c.heroAlt}
-      h1={c.h1}
-      lead={
-        <p>
-          {c.leadParts[0]}
-          <strong>{c.leadParts[1]}</strong>
-          {c.leadParts[2]}
-          <strong>{c.leadParts[3]}</strong>
-          {c.leadParts[4]}
-          <strong>{c.leadParts[5]}</strong>
-          {c.leadParts[6]}
-          <Placeholder reason="浦松＝育成就労対応の範囲" />
-        </p>
-      }
+      h1={v.foreignTitle}
+      lead={<div className="space-y-4">
+        <p>{v.foreignBody}</p>
+        <LaborPlanResponsibility locale={locale} />
+        <LaborPlanPriceSummary locale={locale} />
+        <p><strong>{v.chineseTitle}</strong><br />{v.chineseBody}</p>
+        <Link href={addLocalePrefix("/labor/ryokin", locale)} className="inline-block text-primary underline">{v.viewPlan}</Link>
+      </div>}
       internalLinks={c.internalLinks}
       crossLinkLead={c.crossLinkLead}
     >
@@ -478,10 +418,17 @@ export default async function Page() {
           <strong>{c.s5Strong1}</strong>
           {c.s5Body1b}
         </p>
-        <p className="mt-3 leading-relaxed text-text">{c.s5Body2}</p>
+        <p className="mt-3 leading-relaxed text-text">{v.chineseBody}</p>
         <p className="mt-3 text-sm leading-relaxed text-text-muted">{c.s5Note}</p>
       </div>
 
+      <div className="space-y-5">
+        <LaborPlanPricing locale={locale} />
+        <h2 className="font-serif text-xl font-semibold text-ink">{v.recruitmentTitle}</h2>
+        <p className="leading-relaxed text-text">{v.recruitmentBoundary}</p>
+        <h2 className="font-serif text-xl font-semibold text-ink">{v.payrollTitle}</h2>
+        <p className="leading-relaxed text-text">{v.payroll}</p>
+      </div>
       <div>
         <LaborH2>{c.s6H2}</LaborH2>
         <ul className="mt-3 space-y-2 text-sm leading-relaxed text-text-muted">

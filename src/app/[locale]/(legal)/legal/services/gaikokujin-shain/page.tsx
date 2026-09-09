@@ -12,7 +12,7 @@
 //   ・アポスティーユ／公印確認を**発行するのは外務省**。「当事務所が発行」と書かない。
 //   ・提出先の受理可否は保証できない。「提出先への事前確認が要ります」を必ず添える。
 //   ・**翻訳・翻訳証明は行政書士の独占業務ではない**（2026-07-25浦松指示）。優位は
-//     「代表が中国語（繁体字・簡体字）・英語に対応するため外部の翻訳会社を挟まない」こと。
+//     中国語での直接相談。その他の外国語はAI・翻訳支援、専門翻訳等は別料金。
 //   ・独占業務の境界：登記＝司法書士／税＝税理士／紛争・法的判断＝弁護士。分離受任・紹介料なし。
 //   ・禁止語「ワンストップ」は本文で使用しない。
 //   ・入管実務は個別性が高いため断定せず「一般に」「〜場合があります」で書く。
@@ -35,6 +35,7 @@ import { LegalServicePage, H2 } from "@/components/shared/LegalServicePage";
 // 2026-09-05 月次点検（INIT-02）：§8 の社労士の li を SR_LAUNCHED 連動にし、開業後は /labor へ案内する
 import { SR_LAUNCHED } from "@/lib/shared/office";
 import { SR_ROLE_SENTENCE } from "@/lib/shared/sr-label";
+import { LEGAL_TOP_V10_COPY } from "@/lib/legal/top-copy";
 
 // 冒頭の回答ブロック（H1直下・AIが最初に拾う位置）
 const JA_LEAD =
@@ -112,6 +113,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function Page() {
+  const v = LEGAL_TOP_V10_COPY.ja;
   return (
     <LegalServicePage
       slug="gaikokujin-shain"
@@ -121,7 +123,7 @@ export default async function Page() {
       heroSrc="/hero/legal-visa-16x9.webp"
       heroAlt="海外から社員を迎える企業のイメージ"
       h1="外国人社員を海外から迎えるとき —— 企業が押さえる手続きと期限"
-      lead={<p>{JA_LEAD}</p>}
+      lead={<div className="space-y-3"><p>{JA_LEAD}</p><p>{v.chineseShort}</p>{SR_LAUNCHED && <p>{v.dual}</p>}<p>{v.consistency}</p></div>}
       internalLinks={[
         { href: "/legal/services/visa", label: "在留資格・ビザ申請（本人向けの詳細）" },
         { href: "/shataku", label: "借り上げ社宅の導入" },
@@ -259,7 +261,7 @@ export default async function Page() {
           外国語の証明書は、<strong className="text-ink">日本語訳の添付</strong>を求められるのが一般的です。逆に、日本の書類を海外に出すときは現地語への訳が要ります。
         </p>
         <p className="mt-3 leading-relaxed text-text">
-          翻訳と翻訳証明は資格を要する業務ではありません。ただ当事務所の場合、代表が<strong className="text-ink">中国語（繁体字・簡体字）・英語に対応する</strong>ため、外部の翻訳会社を挟まずに、訳文の作成から認証手続きの代行までを続けて進められます。窓口が分かれないぶん、やり取りの往復が減ります。
+          {v.chinese}
         </p>
       </div>
 

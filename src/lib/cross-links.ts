@@ -127,7 +127,7 @@ const A_SR_JOSEIKIN: Partial<Record<LangCode, string>> = {
 export const CROSS_LINKS: CrossLink[] = [
   // V10: legal top has distinct links for international employers and welfare providers.
   // Reuse the existing launch gate and independently contracted business banner.
-  { id: "C17", from: ["/legal"], launchFlag: "SR_LAUNCHED", targets: [{
+  { id: "C17", from: ["/legal", "/legal/services/visa", "/legal/services/gaikokujin-shain"], launchFlag: "SR_LAUNCHED", targets: [{
     href: "/labor", business: "labor",
     anchor: `入社後の社保・給与・労務（${SR_OFFICE_NAME}）`,
     anchorI18n: {
