@@ -972,6 +972,46 @@ const ARTICLES: ArticleSpec[] = [
     localesWithTranslations: ["en", "zh-tw", "zh"],
     hubLinks: ["/toushi"],
   },
+  {
+    file: "47-eigyo-souko-touroku-bukken-youken.md",
+    slug: "eigyo-souko-touroku-bukken-youken",
+    title: "営業倉庫にできる物件の条件は？倉庫業登録の施設基準から逆算する",
+    publishedAt: "2026-09-09",
+    category: "投資・事業用不動産",
+    excerpt:
+      "営業倉庫にできる物件は、まず「他人の物品を寄託されて保管する倉庫業か、単に倉庫スペースを貸す不動産賃貸か」で分かれます。倉庫業を営むには国土交通大臣の登録が要り（倉庫業法第3条）、倉庫の施設・設備が種類ごとの基準に適合していることが登録の要件です（第6条第1項第4号、施行規則）。東京都文京区の宅地建物取引士兼行政書士が、契約前に確認できることを条文と国土交通省の資料から整理します。",
+    keywords: [
+      "営業倉庫 物件 条件",
+      "倉庫業登録 施設設備基準",
+      "倉庫業法 第3条 第6条",
+      "倉庫の種類 一類 冷蔵倉庫",
+      "貸倉庫 倉庫業 違い",
+    ],
+    tags: ["事業用不動産", "許認可", "倉庫業", "用途地域"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/toushi", "/office"],
+  },
+  {
+    file: "48-souzoku-sanrin-genya-baikyaku-nagare.md",
+    slug: "souzoku-sanrin-genya-baikyaku-nagare",
+    title: "相続した山林・原野は売れるのか？境界不明と規制の壁をどう越えるか",
+    publishedAt: "2026-09-09",
+    category: "相続",
+    excerpt:
+      "相続した山林・原野は売ること自体はできますが、宅地とは違います。詰まる理由は、境界も地番もあいまいで面積が確定しないこと、保安林（森林法第34条）や林地開発の規制、伐採前の市町村長への届出（森林法第10条の8）です。売れないと判断したら相続土地国庫帰属（令和3年法律第25号）を検討する道もあります。東京都文京区の宅地建物取引士兼行政書士が、条文と公的資料から順に整理します。",
+    keywords: [
+      "相続 山林 原野 売却",
+      "森林法 第10条の8 伐採届",
+      "保安林 森林法 第34条 都道府県知事 許可",
+      "相続土地国庫帰属 山林 要件",
+      "山林 境界 未確定 測量 土地家屋調査士",
+    ],
+    tags: ["相続", "山林", "森林法", "売却"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/souzoku"],
+  },
 ];
 
 function toPlainText(md: string): string {
