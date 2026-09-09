@@ -12,14 +12,14 @@ import Link from "next/link";
 import { LegalServicePage, H2 } from "@/components/shared/LegalServicePage";
 import { Placeholder } from "@/components/shared/Placeholder";
 import type { LangCode } from "@/config/languages";
+import { LEGAL_TOP_V10_COPY } from "@/lib/legal/top-copy";
+import { SR_LAUNCHED } from "@/lib/shared/office";
 
 type VisaCopy = {
   metaTitle: string;
-  metaDesc: string;
   crumbLabel: string;
   heroAlt: string;
   h1: string;
-  lead: React.ReactNode;
   internalLinks: { href: string; label: string }[];
   sections: (locale: LangCode) => React.ReactNode;
 };
@@ -27,17 +27,9 @@ type VisaCopy = {
 const COPY: Record<LangCode, VisaCopy> = {
   ja: {
     metaTitle: "在留資格・ビザ申請の取次｜四葉行政書士事務所",
-    metaDesc:
-      "在留資格の認定・変更・更新、永住・帰化のご相談を、文京区の四葉行政書士事務所が支援します。中国語・英語対応。元新聞記者で中国や台湾、タイでの駐在経験を持つ行政書士が、外国人の在留手続きを言葉と制度の両面からお手伝いします。",
     crumbLabel: "在留資格・ビザ申請",
     heroAlt: "在留資格・ビザ申請のイメージ（パスポートと地球儀）",
     h1: "在留資格・ビザ申請",
-    lead: (
-      <p>
-        在留資格（ビザ）の認定・変更・更新の手続きは、<strong>申請取次行政書士に依頼できます</strong>。四葉行政書士事務所は、就労・経営管理・家族滞在などの在留資格申請と、永住・帰化のご相談に対応します。代表の浦松 丈二は<strong>中国や台湾、タイでの駐在経験</strong>を持ち、<strong>日本語・英語・中国語（繁体字・簡体字）</strong>で相談できます。
-        <Placeholder reason="浦松＝申請取次の届出有無・対応する在留資格種別の確定" />
-      </p>
-    ),
     internalLinks: [
       { href: "/legal/ryokin", label: "報酬額表" },
       { href: "/legal/nagare", label: "受任の流れ" },
@@ -67,12 +59,7 @@ const COPY: Record<LangCode, VisaCopy> = {
           </ul>
         </div>
 
-        <div>
-          <H2>中国語・英語での相談はできますか？</H2>
-          <p className="mt-3 leading-relaxed text-text">
-            できます。代表の浦松 丈二は元毎日新聞中国総局長で、日本語・英語・中国語（繁体字・簡体字）で相談に対応します。在留手続きは、言語と制度の両方でつまずきやすい分野です。四葉行政書士事務所は、<strong>母語での相談</strong>と<strong>制度の整理</strong>の両面からお手伝いします。
-          </p>
-        </div>
+        <div><H2>{LEGAL_TOP_V10_COPY[locale].chineseTitle}</H2><p className="mt-3 leading-relaxed text-text">{LEGAL_TOP_V10_COPY[locale].chinese}</p></div>
 
         <div>
           <H2>住まいや会社設立も一緒に相談できますか？</H2>
@@ -110,17 +97,9 @@ const COPY: Record<LangCode, VisaCopy> = {
   },
   en: {
     metaTitle: "Visa & Residence Status Applications｜四葉行政書士事務所",
-    metaDesc:
-      "Support for Certificate of Eligibility applications, changes and renewals of residence status, and consultations on permanent residency and naturalization, from 四葉行政書士事務所 (Yotsuba Gyoseishoshi Office) in Bunkyo, Tokyo. Chinese and English available. A gyoseishoshi (administrative scrivener) and former newspaper journalist who was stationed in China, Taiwan, and Thailand supports foreign residents with both the language and the system.",
     crumbLabel: "Visa & Residence Status",
     heroAlt: "Visa and residence status applications (passport and globe)",
     h1: "Visa & Residence Status Applications",
-    lead: (
-      <p>
-        Applications for a Certificate of Eligibility and for changes and renewals of residence status <strong>can be entrusted to a certified application agent</strong> — a gyoseishoshi (administrative scrivener) authorized to submit immigration applications on your behalf. 四葉行政書士事務所 (Yotsuba Gyoseishoshi Office) handles residence status applications such as work-related statuses, Business Manager, and Dependent, along with consultations on permanent residency and naturalization. Our representative, 浦松 丈二 (Joji Uramatsu), <strong>was stationed in China, Taiwan, and Thailand</strong> and offers consultations in <strong>Japanese, English, Traditional Chinese, and Simplified Chinese</strong>.
-        <Placeholder reason="浦松＝申請取次の届出有無・対応する在留資格種別の確定" />
-      </p>
-    ),
     internalLinks: [
       { href: "/legal/ryokin", label: "Fees" },
       { href: "/legal/nagare", label: "How Engagement Works" },
@@ -150,12 +129,7 @@ const COPY: Record<LangCode, VisaCopy> = {
           </ul>
         </div>
 
-        <div>
-          <H2>Can I consult in Chinese or English?</H2>
-          <p className="mt-3 leading-relaxed text-text">
-            Yes. Our representative, 浦松 丈二 (Joji Uramatsu), formerly China General Bureau Chief of the Mainichi Shimbun, handles consultations in Japanese, English, Traditional Chinese, and Simplified Chinese. Residence procedures are a field where people stumble over both the language and the system. 四葉行政書士事務所 supports you on both fronts: <strong>consultation in your own language</strong> and <strong>a clear map of the procedures</strong>.
-          </p>
-        </div>
+        <div><H2>{LEGAL_TOP_V10_COPY[locale].chineseTitle}</H2><p className="mt-3 leading-relaxed text-text">{LEGAL_TOP_V10_COPY[locale].chinese}</p></div>
 
         <div>
           <H2>Can we also discuss housing or company formation together?</H2>
@@ -193,17 +167,9 @@ const COPY: Record<LangCode, VisaCopy> = {
   },
   "zh-tw": {
     metaTitle: "在留資格（簽證）申請取次｜四葉行政書士事務所",
-    metaDesc:
-      "在留資格（簽證）的認定・變更・更新，以及永住・歸化的諮詢，由東京都文京區的四葉行政書士事務所協助。提供中文・英文服務。曾任新聞記者、擁有海外4國居住經驗的行政書士，從語言與制度兩方面協助外國人的在留手續。",
     crumbLabel: "在留資格（簽證）申請",
     heroAlt: "在留資格（簽證）申請的示意圖（護照與地球儀）",
     h1: "在留資格（簽證）申請",
-    lead: (
-      <p>
-        在留資格（簽證）的認定・變更・更新手續，<strong>可以委託申請取次行政書士辦理</strong>。四葉行政書士事務所受理工作、經營管理、家族滯在等在留資格申請，並提供永住・歸化的諮詢。代表浦松 丈二<strong>擁有海外4國的居住經驗</strong>，可用<strong>日文・英文・中文（繁體・簡體）</strong>諮詢。
-        <Placeholder reason="浦松＝申請取次の届出有無・対応する在留資格種別の確定" />
-      </p>
-    ),
     internalLinks: [
       { href: "/legal/ryokin", label: "報酬額表" },
       { href: "/legal/nagare", label: "受任流程" },
@@ -233,12 +199,7 @@ const COPY: Record<LangCode, VisaCopy> = {
           </ul>
         </div>
 
-        <div>
-          <H2>可以用中文或英文諮詢嗎？</H2>
-          <p className="mt-3 leading-relaxed text-text">
-            可以。代表浦松 丈二曾任每日新聞中國總局長，能以日文・英文・中文（繁體・簡體）對應諮詢。在留手續是語言與制度兩方面都容易卡關的領域。四葉行政書士事務所從<strong>母語諮詢</strong>與<strong>制度梳理</strong>兩方面協助您。
-          </p>
-        </div>
+        <div><H2>{LEGAL_TOP_V10_COPY[locale].chineseTitle}</H2><p className="mt-3 leading-relaxed text-text">{LEGAL_TOP_V10_COPY[locale].chinese}</p></div>
 
         <div>
           <H2>住居或公司設立也可以一併諮詢嗎？</H2>
@@ -276,17 +237,9 @@ const COPY: Record<LangCode, VisaCopy> = {
   },
   zh: {
     metaTitle: "在留资格（签证）申请取次｜四葉行政書士事務所",
-    metaDesc:
-      "在留资格（签证）的认定・变更・更新，以及永住・归化的咨询，由东京都文京区的四葉行政書士事務所协助。提供中文・英文服务。曾任新闻记者、拥有海外4国居住经验的行政书士，从语言与制度两方面协助外国人的在留手续。",
     crumbLabel: "在留资格（签证）申请",
     heroAlt: "在留资格（签证）申请的示意图（护照与地球仪）",
     h1: "在留资格（签证）申请",
-    lead: (
-      <p>
-        在留资格（签证）的认定・变更・更新手续，<strong>可以委托申请取次行政书士办理</strong>。四葉行政書士事務所受理工作、经营管理、家族滞在等在留资格申请，并提供永住・归化的咨询。代表浦松 丈二<strong>拥有海外4国的居住经验</strong>，可用<strong>日语・英语・中文（繁体・简体）</strong>咨询。
-        <Placeholder reason="浦松＝申請取次の届出有無・対応する在留資格種別の確定" />
-      </p>
-    ),
     internalLinks: [
       { href: "/legal/ryokin", label: "报酬额表" },
       { href: "/legal/nagare", label: "受任流程" },
@@ -316,12 +269,7 @@ const COPY: Record<LangCode, VisaCopy> = {
           </ul>
         </div>
 
-        <div>
-          <H2>可以用中文或英文咨询吗？</H2>
-          <p className="mt-3 leading-relaxed text-text">
-            可以。代表浦松 丈二曾任每日新闻中国总局长，能以日语・英语・中文（繁体・简体）对应咨询。在留手续是语言与制度两方面都容易遇到困难的领域。四葉行政書士事務所从<strong>母语咨询</strong>与<strong>制度梳理</strong>两方面协助您。
-          </p>
-        </div>
+        <div><H2>{LEGAL_TOP_V10_COPY[locale].chineseTitle}</H2><p className="mt-3 leading-relaxed text-text">{LEGAL_TOP_V10_COPY[locale].chinese}</p></div>
 
         <div>
           <H2>住房或公司设立也可以一并咨询吗？</H2>
@@ -365,7 +313,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return buildPageMetadata({
     businessKey: "legal",
     title: c.metaTitle,
-    description: c.metaDesc,
+    description: LEGAL_TOP_V10_COPY[locale].visa + " " + LEGAL_TOP_V10_COPY[locale].chineseShort,
     path: "/legal/services/visa",
     locale,
     absoluteTitle: true,
@@ -383,10 +331,19 @@ export default async function Page() {
       serviceName="在留資格・ビザ申請の取次・支援"
       heroAlt={c.heroAlt}
       h1={c.h1}
-      lead={c.lead}
+      lead={<div className="space-y-3">
+        <p>{LEGAL_TOP_V10_COPY[locale].visa}</p>
+        <p>{LEGAL_TOP_V10_COPY[locale].chineseShort}</p>
+        {SR_LAUNCHED && <p>{LEGAL_TOP_V10_COPY[locale].dual}</p>}
+        <p>{LEGAL_TOP_V10_COPY[locale].consistency}</p>
+      </div>}
       internalLinks={c.internalLinks}
     >
       {c.sections(locale)}
+      <div>
+        <H2>{LEGAL_TOP_V10_COPY[locale].laborTitle}</H2>
+        <p className="mt-3 leading-relaxed text-text">{SR_LAUNCHED ? LEGAL_TOP_V10_COPY[locale].labor : LEGAL_TOP_V10_COPY[locale].unavailable}</p>
+      </div>
     </LegalServicePage>
   );
 }
