@@ -10,29 +10,38 @@ export function LaborPlanResponsibility({ locale }: { locale: LangCode }) {
 }
 
 /** Server-rendered: recurring and both setup fees remain visible together. */
-export function LaborPlanPriceSummary({ locale }: { locale: LangCode }) {
+export function LaborPlanPriceSummary({ locale, emphasizePayroll = false }: { locale: LangCode; emphasizePayroll?: boolean }) {
   const c = LABOR_PLAN_COPY[locale];
   const setup = LABOR_SETUP_COPY[locale];
   const from = (amount: number) => locale === "en"
     ? `${c.from}${formatLaborYen(amount, locale)}`
     : `${formatLaborYen(amount, locale)}${c.from}`;
   return (
-    <dl className="grid gap-4 rounded-xl border border-border bg-surface p-4 md:grid-cols-3">
-      <div>
-        <dt className="text-sm text-text">{c.monthly} · {c.people} 1–3</dt>
-        <dd className="mt-1 text-lg font-semibold text-ink">{from(LABOR_PRICING.bands[0].monthly)} <span className="text-sm font-normal">({c.tax})</span></dd>
-      </div>
-      <div>
-        <dt className="text-sm text-text">{c.setup} · {setup.standardTitle}</dt>
-        <dd className="mt-1 text-lg font-semibold text-ink">{formatLaborYen(LABOR_PRICING.initialSetupStandard, locale)} <span className="text-sm font-normal">({c.tax})</span></dd>
-        <dd className="mt-2 text-sm leading-relaxed text-text">{setup.standardCondition}</dd>
-      </div>
-      <div>
-        <dt className="text-sm text-text">{c.setup} · {setup.migrationTitle}</dt>
-        <dd className="mt-1 text-lg font-semibold text-ink">{from(LABOR_PRICING.initialSetupWithMigrationFrom)} <span className="text-sm font-normal">({c.tax})</span></dd>
-        <dd className="mt-2 text-sm leading-relaxed text-text">{setup.migrationCondition}</dd>
-      </div>
-    </dl>
+    <div className="space-y-4">
+      {emphasizePayroll && <div className="space-y-3 rounded-xl border border-primary/30 bg-surface p-5 sm:p-6">
+        <p className="font-serif text-2xl font-bold leading-snug text-primary sm:text-4xl">
+          {c.payrollHeadline(formatLaborYen(LABOR_PRICING.bands[0].monthly, locale)).map((part, index) => <span key={index} className={`inline-block max-w-full${locale === "en" && index === 0 ? " mr-2" : ""}`}>{part}</span>)}
+        </p>
+        <p className="text-sm font-medium text-ink">{c.payrollEligibility}</p>
+        <p className="text-base font-semibold leading-relaxed text-ink sm:text-lg">{c.payrollIncluded}</p>
+      </div>}
+      <dl className="grid gap-4 rounded-xl border border-border bg-surface p-4 md:grid-cols-3">
+        <div>
+          <dt className="text-sm text-text">{c.monthly} · {c.people} 1–3</dt>
+          <dd className="mt-1 text-lg font-semibold text-ink">{from(LABOR_PRICING.bands[0].monthly)} <span className="text-sm font-normal">({c.tax})</span></dd>
+        </div>
+        <div>
+          <dt className="text-sm text-text">{c.setup} · {setup.standardTitle}</dt>
+          <dd className="mt-1 text-lg font-semibold text-ink">{formatLaborYen(LABOR_PRICING.initialSetupStandard, locale)} <span className="text-sm font-normal">({c.tax})</span></dd>
+          <dd className="mt-2 text-sm leading-relaxed text-text">{setup.standardCondition}</dd>
+        </div>
+        <div>
+          <dt className="text-sm text-text">{c.setup} · {setup.migrationTitle}</dt>
+          <dd className="mt-1 text-lg font-semibold text-ink">{from(LABOR_PRICING.initialSetupWithMigrationFrom)} <span className="text-sm font-normal">({c.tax})</span></dd>
+          <dd className="mt-2 text-sm leading-relaxed text-text">{setup.migrationCondition}</dd>
+        </div>
+      </dl>
+    </div>
   );
 }
 

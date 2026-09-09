@@ -523,7 +523,7 @@ export default async function LaborTopPage() {
         <section className="mt-8 space-y-4 rounded-2xl border-l-4 border-primary bg-primary-tint p-5">
           <h2 className="font-serif text-xl font-semibold text-ink">{LABOR_PLAN_COPY[locale].name}</h2>
           <p className="leading-relaxed text-text">{v.intro}</p>
-          <LaborPlanPriceSummary locale={locale} />
+          <LaborPlanPriceSummary locale={locale} emphasizePayroll />
           <LaborPlanResponsibilities locale={locale} />
           <div className="flex flex-wrap gap-3">
             <Link href={addLocalePrefix("/labor/ryokin", locale)} className="rounded-lg bg-primary px-4 py-3 text-white">{v.viewPlan}</Link>
