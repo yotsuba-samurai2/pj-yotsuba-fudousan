@@ -1,3 +1,4 @@
+import { LABOR_SETUP_COPY } from "@/lib/labor/setup-copy";
 import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { it, expect, vi, afterEach } from "vitest";
@@ -20,7 +21,7 @@ for(const locale of ["ja","en","zh-tw","zh"] as const){
   const {LaborServicePage}=await import("@/components/shared/LaborServicePage");
   const e=await mod.default();const html=renderToStaticMarkup(await LaborServicePage(e.props));
   for(const text of [LABOR_SERVICE_COPY[locale].foreignTitle,LABOR_SERVICE_COPY[locale].chineseTitle,LABOR_SERVICE_COPY[locale].chineseBody,LABOR_PLAN_COPY[locale].responsibility,LABOR_SERVICE_COPY[locale].recruitmentBoundary])expect(html).toContain(encode(text));
-  for(const item of LABOR_PLAN_COPY[locale].setupItems)expect(html).toContain(encode(item));
+  for(const item of [...LABOR_SETUP_COPY[locale].standardItems, ...LABOR_SETUP_COPY[locale].migrationItems])expect(html).toContain(encode(item));
   expect(html).toContain("33,000");expect(html).toContain("88,000");
   expect(html.match(/<h1\b/g)).toHaveLength(1);
   const prefix=locale==="ja"?"":`/${locale}`;

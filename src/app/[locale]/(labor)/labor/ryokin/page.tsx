@@ -15,6 +15,7 @@ import { LABOR_PRICING, formatLaborYen } from "@/lib/labor/pricing";
 import { LABOR_PLAN_COPY } from "@/lib/labor/plan-copy";
 import { LABOR_SERVICE_COPY, getLaborPlanFaqs } from "@/lib/labor/service-copy";
 import { LABOR_ANCILLARY_FEES, type AncillarySection } from "@/lib/labor/ancillary-fees";
+import { LABOR_SETUP_COPY, FREEE_SUPPORT_URL } from "@/lib/labor/setup-copy";
 import { getLaborPriceStructuredData } from "@/lib/labor/structured-data";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -27,17 +28,24 @@ export default async function Page() {
   const locale = await getRequestLocale();
   const c = LABOR_SERVICE_COPY[locale];
   const p = LABOR_PLAN_COPY[locale];
+  const setup = LABOR_SETUP_COPY[locale];
   const a = LABOR_ANCILLARY_FEES[locale];
   const extra = formatLaborYen(LABOR_PRICING.recruitmentSupportFrom, locale);
   return <>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(getLaborPriceStructuredData(locale)) }} />
     <Breadcrumb items={[{ name: c.home, href: "/labor" }, { name: c.fees }]} />
-    <main className="mx-auto max-w-3xl px-4 pb-16">
+    <div className="mx-auto max-w-3xl px-4 pb-16">
       <h1 className="font-serif text-3xl font-semibold text-ink">{c.fees}</h1>
       <p className="mt-3 leading-relaxed text-text">{c.intro}</p>
       <div className="mt-6"><LaborPlanPricing locale={locale} /></div>
       <p className="mt-3 text-sm leading-relaxed text-text">{c.units}</p>
       <p className="mt-3 text-sm leading-relaxed text-text">{c.setupDetail}</p>
+      <section className="mt-8 space-y-3 rounded-xl border border-border bg-surface p-5">
+        <h2 className="font-serif text-xl font-semibold text-ink">{setup.comparisonTitle}</h2>
+        <p className="leading-relaxed text-text">{setup.freeeSupport}</p>
+        <p className="leading-relaxed text-text">{setup.comparison}</p>
+        <a href={FREEE_SUPPORT_URL} className="inline-block text-primary underline">{setup.freeeLink}</a>
+      </section>
       <div className="mt-8 grid gap-6 sm:grid-cols-2">
         {[{ title: c.includedTitle, items: c.included }, { title: c.excludedTitle, items: c.excluded }].map(group => <section key={group.title}>
           <h2 className="font-serif text-xl font-semibold text-ink">{group.title}</h2>
@@ -76,7 +84,7 @@ export default async function Page() {
       <p className="mt-4"><Link href={addLocalePrefix("/labor/nagare", locale)} className="text-primary underline">{c.flow}</Link></p>
       <aside className="mt-8 text-sm leading-relaxed text-text-muted">{a.authorTitle}: {a.authorBody1}{srRegParen(locale)}{a.authorBody2}</aside>
       <p className="mt-4 text-sm leading-relaxed text-text-muted">{c.disclaimer}</p>
-    </main>
+    </div>
     <div className="mx-auto max-w-3xl px-4"><CtaBand businessKey="labor" /></div>
   </>;
 }

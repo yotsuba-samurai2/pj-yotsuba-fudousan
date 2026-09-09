@@ -1,3 +1,4 @@
+import { LABOR_SETUP_COPY } from "@/lib/labor/setup-copy";
 import { cloneElement, isValidElement, type ReactElement, type ReactNode } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { afterAll, describe, expect, it, vi } from "vitest";
@@ -60,12 +61,12 @@ for (const locale of ["ja", "en", "zh-tw", "zh"] as const) {
       expect(html.indexOf(p.responsibility)).toBeLessThan(html.indexOf(g.sector));
       expect(html).toContain("33,000");
       expect(html).toContain("88,000");
-      expect(html).toContain("11–30");
+      expect(html).toContain("11+");
       expect(html).toContain("2,200");
-      expect(html).toContain("31+");
+      expect(html).not.toContain("31+");
       for (const text of [p.tax, p.setup, p.system, p.separate, g.routine, g.excluded, g.recruitment, g.setupDetail, g.judgment, c.specialistScope]) expect(html).toContain(text);
-      for (const text of [...p.setupItems, ...p.scopeHeadings, c.employmentTitle, c.nightTitle, c.openingTitle, c.beforeOpeningTitle]) expect(html).toContain(text);
-      expect(html.indexOf(p.setupItems[0])).toBeLessThan(html.indexOf("<table"));
+      for (const text of [...LABOR_SETUP_COPY[locale].standardItems, ...LABOR_SETUP_COPY[locale].migrationItems, ...p.scopeHeadings, c.employmentTitle, c.nightTitle, c.openingTitle, c.beforeOpeningTitle]) expect(html).toContain(text);
+      expect(html.indexOf(LABOR_SETUP_COPY[locale].standardItems[0])).toBeLessThan(html.indexOf("<table"));
       expect(html.indexOf("</table>")).toBeLessThan(html.indexOf(p.scopeHeadings[0]));
       expect(html).not.toMatch(/顧問料は.*ご相談に対する対価|手続だけのご依頼は承っておりません|報酬額表の料金を都度/);
     });

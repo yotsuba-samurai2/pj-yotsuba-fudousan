@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { getLaborMonthlyFee, LABOR_PRICING } from "@/lib/labor/pricing";
 
-describe("V10 labor pricing (JPY, tax included)", () => {
+describe("Small-company HR pricing (JPY, tax included)", () => {
   it.each([
     [1, 33000], [2, 33000], [3, 33000], [4, 44000], [5, 44000],
     [6, 55000], [7, 55000], [8, 55000], [9, 55000], [10, 55000],
@@ -13,17 +13,18 @@ describe("V10 labor pricing (JPY, tax included)", () => {
     expect(getLaborMonthlyFee(people)).toBe(yen);
   });
 
-  it.each([31, 32, 100, 1000])("requires a separate quote for %i recipients", (people) => {
-    expect(getLaborMonthlyFee(people)).toBeNull();
+  it.each([[31, 101200], [32, 103400], [100, 253000], [1000, 2233000]])("applies the same formula beyond 30 recipients (%i)", (people, yen) => {
+    expect(getLaborMonthlyFee(people)).toBe(yen);
   });
 
-  it.each([0, -1, 1.5, NaN, Infinity, -Infinity, Number.MAX_SAFE_INTEGER + 1])(
+  it.each([0, -1, 1.5, NaN, Infinity, -Infinity, Number.MAX_SAFE_INTEGER, Number.MAX_SAFE_INTEGER + 1])(
     "rejects invalid payroll counts (%s) instead of displaying a misleading quote",
     (people) => expect(() => getLaborMonthlyFee(people)).toThrow(RangeError),
   );
 
   it("keeps setup and recruitment separate from the recurring fee", () => {
-    expect(LABOR_PRICING.initialSetupFrom).toBe(88000);
+    expect(LABOR_PRICING.initialSetupStandard).toBe(55000);
+    expect(LABOR_PRICING.initialSetupWithMigrationFrom).toBe(88000);
     expect(LABOR_PRICING.recruitmentSupportFrom).toBe(22000);
     expect(LABOR_PRICING.currency).toBe("JPY");
     expect(LABOR_PRICING.taxIncluded).toBe(true);
