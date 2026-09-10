@@ -1,13 +1,15 @@
+import Image from "next/image";
 // フェーズK-3｜実写LINKAアバター（テナント色リング＝--color-primary）
 // 画像＝/public/linka/linka-512.webp（設計書§7・配置済）。
 export function LinkaAvatar({ size = 32, talking = false }: { size?: number; talking?: boolean }) {
   return (
     <span className="relative inline-block flex-shrink-0" style={{ width: size, height: size }}>
-      <img
+      <Image
         src="/linka/linka-512.webp"
         alt="LINKA"
         width={size}
         height={size}
+        sizes={`${size}px`}
         className="rounded-full object-cover ring-2 ring-primary"
         style={{ width: size, height: size }}
       />

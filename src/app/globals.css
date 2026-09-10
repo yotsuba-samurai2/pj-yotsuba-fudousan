@@ -221,5 +221,5 @@ html {
 
   /* タイポ：見出し Noto Serif JP／本文 Noto Sans JP（Zen Kaku はフォールバック） */
   --font-serif: var(--font-noto-serif-jp), serif;
-  --font-sans: var(--font-noto-sans-jp), var(--font-zen-kaku-gothic-new), sans-serif;
+  --font-sans: var(--font-noto-sans-jp), sans-serif;
 }

@@ -1,3 +1,4 @@
+import Image from "next/image";
 // /（型F・二本柱トップ）本文＝原稿_不動産 #1（E-1差し戻し対応・2026-07-10）
 // 【差し戻し対応の要点】
 //  1. i18n退行禁止：トップは既存が多言語＝新セクションのコピーを ja/en/zh-tw/zh の4ロケール分、
@@ -417,12 +418,14 @@ export default async function HomePageContent() {
       {/* ヒーロー（H1＝全ロケール先頭に社名・回答ファースト・桜=bunkyo-sakura） */}
       <section className="relative">
         <div className="relative mx-auto max-w-6xl overflow-hidden rounded-b-3xl sm:mt-4 sm:rounded-3xl">
-          <img
+          <Image
             src="/hero/bunkyo-sakura-16x9.webp"
             alt={c.heroAlt}
             width={1600}
             height={900}
             className="h-[60vw] max-h-[480px] w-full object-cover sm:h-auto"
+            sizes="(min-width: 1152px) 1152px, 100vw"
+            loading="eager"
             fetchPriority="high"
           />
           {/* SP・小タブレット＝画像の下に縦積み（DESIGN.md§8「モバイルのヒーローは縦積み」＝パネルのクリップ/ヘッダーかぶり防止）／md+＝画像上のオーバーレイ */}
@@ -475,11 +478,12 @@ export default async function HomePageContent() {
 
         {/* 代表紹介（E-E-A-T） */}
         <section className="mt-10 flex flex-col items-start gap-4 rounded-2xl border border-border bg-surface p-5 sm:flex-row">
-          <img
+          <Image
             src="/staff/uramatsu.webp"
             alt={c.repAlt}
             width={160}
             height={213}
+            sizes="(min-width: 640px) 160px, 128px"
             className="w-32 flex-shrink-0 rounded-xl object-cover sm:w-40"
           />
           <div>
