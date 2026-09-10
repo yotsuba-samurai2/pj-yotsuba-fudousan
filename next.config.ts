@@ -8,6 +8,11 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  images: {
+    // 小型端末のDPR 1でも640pxを取得していたため420pxを追加。
+    // 高DPR端末・PC用の標準サイズは維持する。
+    deviceSizes: [420, 640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+  },
   experimental: {
     // app/[locale]/ の値を任意のServer Componentから next/root-params で読むため
     // （getRequestLocale.ts）。リクエストAPI（headers/cookies）と違い静的生成と両立する。
