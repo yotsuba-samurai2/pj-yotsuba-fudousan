@@ -12,6 +12,13 @@ import type { LangCode } from "@/config/languages";
 
 type BreadcrumbItem = { name: string; href: string };
 
+const NAV_LABEL: Record<LangCode, string> = {
+  ja: "パンくずリスト",
+  en: "Breadcrumbs",
+  "zh-tw": "麵包屑導覽",
+  zh: "面包屑导航",
+};
+
 export function BreadcrumbJsonLd({
   items,
   businessKey,
@@ -41,7 +48,7 @@ export function BreadcrumbJsonLd({
       />
       {/* Visible breadcrumb UI — sits between header and hero */}
       <nav
-        aria-label="パンくずリスト"
+        aria-label={NAV_LABEL[locale]}
         className="relative z-10 mx-auto max-w-7xl px-4 pt-20 pb-3 sm:px-6 md:pt-24 lg:px-8"
       >
         <ol className="flex flex-wrap items-center gap-1 text-xs text-text-muted">
