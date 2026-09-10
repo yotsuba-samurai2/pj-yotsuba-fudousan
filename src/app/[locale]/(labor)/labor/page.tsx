@@ -1,3 +1,4 @@
+import Image from "next/image";
 // /labor（型F・社労士トップ・開業版）＝原稿_社労士 #1
 // JSON-LD＝layoutの OrganizationJsonLd（ProfessionalService）＋WebSiteJsonLd が出力済み＝重複出力しない。
 // 登録番号は 2026-09-01 の登録証到着後に出す（正本 sr-registration.ts）。
@@ -500,12 +501,14 @@ export default async function LaborTopPage() {
       {/* 主訴求と会社側の責任を近接表示 */}
       <section className="relative">
         <div className="relative mx-auto max-w-6xl overflow-hidden rounded-b-3xl sm:mt-4 sm:rounded-3xl">
-          <img
+          <Image
             src="/hero/labor-top-16x9.webp"
             alt={c.heroAlt}
             width={1600}
             height={900}
             className="h-[52vw] max-h-[440px] w-full object-cover sm:h-auto"
+            sizes="(min-width: 1152px) 1152px, 100vw"
+            loading="eager"
             fetchPriority="high"
           />
           <div className="md:absolute md:inset-0 md:flex md:items-center">
@@ -598,11 +601,12 @@ export default async function LaborTopPage() {
 
         {/* 代表紹介（E-E-A-T・登録番号＝sr-registration.ts） */}
         <section className="mt-10 flex flex-col items-start gap-4 rounded-2xl border border-border bg-surface p-5 sm:flex-row">
-          <img
+          <Image
             src="/staff/uramatsu.webp"
             alt="四葉社会保険労務士事務所 代表 浦松丈二"
             width={160}
             height={213}
+            sizes="(min-width: 640px) 160px, 128px"
             className="w-32 flex-shrink-0 rounded-xl object-cover sm:w-40"
           />
           <div>

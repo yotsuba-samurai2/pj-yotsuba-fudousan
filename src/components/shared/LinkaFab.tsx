@@ -76,6 +76,7 @@ export function LinkaFab({
               alt="LINKA"
               width={168}
               height={168}
+              sizes="(min-width: 768px) 168px, 84px"
               className="h-full w-full object-cover"
             />
           </span>

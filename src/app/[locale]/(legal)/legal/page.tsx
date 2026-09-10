@@ -1,3 +1,4 @@
+import Image from "next/image";
 // /legal（型F・士業トップ）＝原稿_行政書士 #10（D-4改修）＋フェーズI多言語化（2026-07-10）
 // 方式＝COPY: Record<LangCode,…>＋getRequestLocale（手本=HomePageContent b68871d）。Firestoreは書き換えない。
 // V10: 在留資格を主軸に再構成。事務所名はHero内に維持し、社労士訴求は既存の公開フラグで制御。
@@ -170,7 +171,16 @@ export default async function LegalPage() {
             </div>
             <p className="mt-4 text-sm"><Link href={addLocalePrefix("/legal/services/gaikokujin-shain", locale)} className="text-primary underline">{v.foreignCta}</Link></p>
           </div>
-          <img src="/hero/legal-top-16x9.webp" alt={c.heroAlt} width={1600} height={900} className="h-full max-h-[420px] w-full object-cover md:max-h-none" fetchPriority="high" />
+          <Image
+            src="/hero/legal-top-16x9.webp"
+            alt={c.heroAlt}
+            width={1600}
+            height={900}
+            className="h-full max-h-[420px] w-full object-cover md:max-h-none"
+            sizes="(min-width: 1152px) 576px, (min-width: 768px) 50vw, 100vw"
+            loading="eager"
+            fetchPriority="high"
+          />
         </div>
       </section>
 
@@ -210,11 +220,12 @@ export default async function LegalPage() {
 
         {/* 代表紹介（E-E-A-T） */}
         <section className="mt-10 flex flex-col items-start gap-4 rounded-2xl border border-border bg-surface p-5 sm:flex-row">
-          <img
+          <Image
             src="/staff/uramatsu.webp"
             alt="四葉行政書士事務所 代表 浦松丈二"
             width={160}
             height={213}
+            sizes="(min-width: 640px) 160px, 128px"
             className="w-32 flex-shrink-0 rounded-xl object-cover sm:w-40"
           />
           <div>

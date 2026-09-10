@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+import type { CSSProperties } from "react";
 import { usePathname } from "next/navigation";
 
 /**
@@ -44,20 +46,27 @@ export default function ScatteredIcons() {
       className="pointer-events-none absolute inset-0 z-0 overflow-hidden"
       aria-hidden="true"
     >
+      {/* SPは3点・幅44vw。装飾の取得で主要な内容を待たせない。 */}
       {placements.map((p, i) => (
-        <img
+        <Image
           key={i}
           src="/icon-512.png"
           alt=""
-          className="absolute"
-          style={{
-            top: p.top,
-            left: p.left,
-            width: p.size,
-            height: p.size,
-            opacity: 0.025,
-            transform: `rotate(${p.rotate}deg)`,
-          }}
+          width={512}
+          height={512}
+          sizes={`(min-width: 640px) ${p.size}px, 44vw`}
+          loading="lazy"
+          fetchPriority="low"
+          className={`absolute h-auto max-w-none w-[min(var(--decoration-size),44vw)] sm:w-[var(--decoration-size)] ${i % 3 === 0 ? "" : "hidden sm:block"}`}
+          style={
+            {
+              top: p.top,
+              left: p.left,
+              "--decoration-size": `${p.size}px`,
+              opacity: 0.025,
+              transform: `rotate(${p.rotate}deg)`,
+            } as CSSProperties
+          }
         />
       ))}
     </div>
