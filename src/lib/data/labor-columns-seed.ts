@@ -16874,5 +16874,371 @@ export const LABOR_COLUMNS_SEED: LaborSeedColumn[] = [
         ]
       }
     }
+  },
+  {
+    "business": "labor",
+    "slug": "iryo-kaigo-shukujitchoku-kyoka-kijun",
+    "title": "医療・介護の『宿日直許可』は、どんな勤務なら取れる？",
+    "date": "2026-09-10",
+    "category": "労働法の基本",
+    "excerpt": "医療機関や介護施設の夜間・休日勤務を『宿日直』として労働時間の規制から外すには、所轄労働基準監督署長の許可が要ります（労働基準法第41条第3号、同法施行規則第23条・様式第10号）。許可の対象は、定時的巡視・緊急の電話や文書の収受・非常時待機など、常態としてほとんど労働する必要のない断続的業務に限られます（昭和22年9月13日発基第17号）。名称が『宿直』でも実態が通常の診療や介護なら許可は受けられず、その時間は労働時間として深夜割増などの対象です。医師には別の細目基準（令和元年7月1日基発0701第8号）があり、令和6年4月1日の時間外上限規制ともつながります。許可の可否は労働基準監督署、紛争は弁護士という切り分けも整理します。",
+    "content": "**結論（先に要点）**：医療機関や介護施設の夜間・休日の勤務を「宿日直」として労働時間の規制から外すには、**所轄労働基準監督署長の許可**が要ります（労働基準法第41条第3号、同法施行規則第23条）。許可の対象は、定時的巡視・緊急の電話や文書の収受・非常事態に備えた待機など、**常態としてほとんど労働する必要のない断続的な業務**に限られます（昭和22年9月13日発基第17号）。名称を「宿直」にしていても、実態が通常の診療や介護なら許可は受けられず、その時間は**労働時間**として扱われます。医師については別に細目の許可基準があります（令和元年7月1日基発0701第8号）。この記事では、宿日直許可の基準と申請、許可後の勤務設計、割増賃金への影響を、実務目線で整理します。\n\n「当直を宿直にすれば残業代は要らないと聞いた」「介護施設の夜勤は宿直でよいのか」——クリニック・病院・介護施設の開設者や管理者から、よく受ける質問です。このページは、夜間や休日に職員を置く医療・介護の事業者に向けて、宿日直許可の基準・申請の勘所・許可後の勤務設計を整理します。許可の可否そのものは所轄労働基準監督署が判断し、夜間の診療体制や配置人数の医療上の判断は事業者が行うため、この記事はその手前の労務の考え方に絞ります。\n\n## 宿直・日直と通常勤務は、労働時間の扱いがどう違う？\n\nまず、同じ「夜間・休日に施設にいる」でも、通常勤務と許可を受けた宿日直では、労働基準法上の扱いがまったく違います。\n\n| 観点 | 通常勤務（夜勤・日勤） | 宿日直（許可を受けた場合） |\n|---|---|---|\n| 業務の実態 | 通常の診療・看護・介護・見守り | 定時的巡視・緊急の電話や文書の収受・非常時待機など断続的業務 |\n| 労働時間 | 労働時間に該当する | 労働時間・休憩・休日の規制が適用除外 |\n| 深夜割増（22時〜5時） | 25%以上が必要 | 原則不要（労働時間でないため） |\n| 時間外・休日割増 | 必要（36協定も要る） | 原則不要（労働時間でないため） |\n| 許可・届出 | 不要（労働時間として管理） | 所轄労働基準監督署長の許可が必要 |\n| 賃金 | 通常賃金＋割増 | 宿直手当・日直手当（後述の最低額あり） |\n\n宿日直が労働時間規制の適用除外になる根拠は、労働基準法第41条第3号です。監視又は断続的労働に従事する者で、使用者が行政官庁の許可を受けたものには、労働時間・休憩・休日の規定を適用しないと定めています。宿直・日直については、同法施行規則第23条が、断続的な業務について様式第10号によって所轄労働基準監督署長の許可を受けた場合に、法第32条（法定労働時間）の規定にかかわらず従事させられると定めています。夜勤・宿直の切り分けは、障害福祉のグループホームでも同じ論点になります。詳しくは[グループホームの夜勤と宿直は労務でまったく違う](/labor/column/group-home-yakin-shukuchoku-roudou-chigai)をご覧ください。\n\n## 労基署が宿日直を許可する基準は、どこにある？\n\n一般的な宿日直の許可基準は、昭和22年9月13日発基第17号（宿日直勤務の許可基準）に示されています。おおむね次の4点が前提です。\n\n| 項目 | 一般の許可基準（発基第17号） |\n|---|---|\n| 業務内容 | 常態としてほとんど労働する必要のない勤務。本来の業務は行わず、定時的巡視・緊急の文書や電話の収受・非常事態に備えた待機などに限る |\n| 手当 | 宿日直勤務1回あたりの手当の最低額は、同種の労働者に支払われる賃金の1人1日平均額の3分の1を下回らないこと |\n| 回数 | 原則として、宿直は週1回、日直は月1回が限度 |\n| 睡眠 | 宿直については、相当の睡眠設備を設けること |\n\n許可は、申請書の記載だけで機械的に出るものではありません。**業務の実態を踏まえて、所轄労働基準監督署が個別に判断します**。介護施設で夜間に頻繁に介助・見守りを行う勤務や、来院者への通常の診療を続ける当直は、この要件を満たしにくく、許可の対象にならないのが通常です。手当の考え方や割増との関係は、[給与計算を社会保険労務士に頼むと、いくらかかるのか](/labor/column/kyuyo-keisan-soba-sharoushi)もあわせてご覧ください。\n\n## 医師の宿日直許可は、働き方改革でどう変わった？\n\n医師については、一般の基準に加えて細目の許可基準が示されています（令和元年7月1日基発0701第8号「医師、看護師等の宿日直許可基準について」）。ポイントは次のとおりです。\n\n- 通常の勤務時間の拘束から**完全に解放された後**のものであること\n- 一般の宿日直業務のほかに、**特殊の措置を必要としない軽度又は短時間の業務**（問診等による診察・看護師等への指示・軽度の処置など）に限って従事するもので、夜間に**十分な睡眠**がとり得ること\n- 上記が満たされない、通常の診療の延長といえる時間は、労働時間として扱う\n\nこの基準は、令和3年3月31日基監発0331第1号（参考資料）や令和6年1月15日基監発0115第2号（一部改正）でも補足されています。あわせて、令和6年4月1日から**医師の時間外労働の上限規制**が施行されました。宿日直許可を受けた時間は、この上限規制の時間数の算定に含まれない扱いになりますが、**許可を受けていても、実際に通常の診療などを行った時間は労働時間**として賃金の対象になります。「許可があるから労働時間の管理は不要」という理解は誤りです。クリニック開設時の宿日直・看護師の社会保険は[クリニックを開くときの労務と宿日直](/labor/column/clinic-kaigyo-roumu-shukunikkin-kangoshi-shakaihoken)に、訪問看護のオンコール手当は[訪問看護のオンコール手当と月給への換算](/labor/column/homon-kango-oncall-teate-jokin-kansan)に整理しています。\n\n## 許可なしで宿直させると、どんな未払いリスクがある？\n\n宿日直の許可を受けずに、あるいは実態が通常勤務なのに「宿直」と呼んで割増を払わないでいると、その時間は労働時間と判断され、未払い賃金の請求対象になります。想定される内容は次のとおりです。\n\n- **深夜割増（25%以上）**：22時から5時までの深夜に労働させた分（労働基準法第37条第3項）\n- **時間外・休日割増**：法定労働時間（1日8時間・1週40時間）を超える時間外や法定休日の労働に対する割増（同条第1項。36協定の締結・届出も前提）\n- **手待時間の扱い**：呼び出しに備えて待機している時間や、応答義務のある仮眠時間は、実作業がなくても労働時間（手待時間）とされ得る\n\n未払い賃金の請求権の消滅時効は、当分の間5年ではなく**3年**とされています（労働基準法第115条・附則）。3年分の割増賃金がまとめて請求される可能性があるため、**勤務表の数字と実態を一致させ、始業・終業時刻を客観的に記録する**ことが前提になります。個別の未払い請求への対応は弁護士の業務で、この記事の範囲外です。\n\n## 許可申請と勤務設計、紛争対応は、それぞれ誰の領分？\n\n宿日直をめぐる場面は、判断する主体が分かれます。\n\n| すること | 誰の領分か |\n|---|---|\n| 宿日直許可を受けられるかどうかの判断・許可 | **所轄労働基準監督署**（申請は事業者） |\n| 夜間の診療体制・配置人数など医療上の判断 | **事業者**（医療機関・介護施設） |\n| 就業規則・宿日直規程・36協定・勤怠の整備、割増賃金の計算 | **社会保険労務士**（当事務所） |\n| 未払い賃金の請求、紛争、労働審判・訴訟 | **弁護士** |\n\n宿日直の労務整理は社会保険労務士の業務です。当事務所は、**実態に合った勤務設計、宿日直規程・就業規則・36協定の整備、勤怠記録の仕組みづくり、許可申請書（様式第10号）の作成支援**までを担います。許可を出すかどうかは労働基準監督署が判断し、未払い賃金をめぐる紛争は弁護士が担うため、それぞれ別の立場として切り分けます。\n\n## 四葉社会保険労務士事務所は、何ができますか？\n\n文京区小日向の四葉社会保険労務士事務所は、**宿日直の実態整理、宿日直規程・就業規則・36協定・変形労働時間制の整備、勤怠管理の設計、割増賃金の計算、許可申請書の作成支援**をお受けします。介護・障害福祉の労務管理は[介護・障害福祉の労務管理](/labor/services/kaigo-roumu)に、変形労働時間制の選び方は[変形労働時間制とフレックスの選び方](/labor/column/henkei-roudoujikan-flextime-erabikata)にまとめています。**ご相談は無料です。** 費用は[報酬額表](/labor/ryokin)を、よくいただくご質問は[よくあるご質問](/labor/faq)をご覧ください。\n\n## よくある質問\n\n**Q. 当直を「宿直」と呼べば、深夜割増や残業代は要らなくなりますか？**\nA. なりません。呼び名ではなく実態で判断されます。宿日直許可を受けられるのは、常態としてほとんど労働する必要のない断続的業務で、宿直なら十分な睡眠が確保できる場合に限られます（発基第17号）。実態が通常の診療や介護なら、その時間は労働時間として割増賃金の対象です。\n\n**Q. 宿日直の許可を受けていれば、実際に働いた時間も無給でよいのですか？**\nA. いけません。許可は「常態として労働の必要がない」時間についての適用除外です。許可を受けていても、実際に通常の診療・処置・介護などを行った時間は労働時間として、深夜や時間外に当たる分は割増賃金を支払う必要があります。\n\n**Q. 医師の宿日直は、令和6年の働き方改革で扱いが変わりましたか？**\nA. 令和6年4月1日から医師の時間外労働の上限規制が施行されました。宿日直許可を受けた時間はその上限の時間数に算入されない扱いですが、通常の診療の延長といえる時間は労働時間です。医師の許可基準は基発0701第8号（令和元年7月1日）に細目が示されています。\n\n**Q. 宿直手当は、いくら払えばよいですか？**\nA. 一般の許可基準では、宿日直勤務1回あたりの手当の最低額は、同種の労働者に支払われる賃金の1人1日平均額の3分の1を下回らないこととされています（発基第17号）。具体額は事業場の賃金水準によって変わるため、賃金台帳をもとに算定します。\n\n## この記事の根拠\n\n- 労働基準法（昭和22年法律第49号）第37条（割増賃金・深夜25%以上）、第41条第3号（監視又は断続的労働に従事する者の適用除外）、第115条・附則（賃金請求権の消滅時効・当分の間3年）\n- 労働基準法施行規則（昭和22年厚生省令第23号）第23条（宿直又は日直の勤務で断続的な業務についての許可・様式第10号）\n- 一般の宿日直許可基準＝昭和22年9月13日発基第17号（常態としてほとんど労働の必要がないこと／手当は1人1日平均賃金額の3分の1以上／宿直は週1回・日直は月1回が限度／宿直は相当の睡眠設備）\n- 医師、看護師等の宿日直許可基準について＝令和元年7月1日基発0701第8号（通常勤務からの完全な解放・軽度又は短時間の業務・十分な睡眠）。補足＝令和3年3月31日基監発0331第1号（参考資料）、令和6年1月15日基監発0115第2号（一部改正）\n- 医師の時間外労働の上限規制は令和6年4月1日施行。宿日直許可を受けた時間の算定上の扱いは厚生労働省の公表資料により確認しています（2026年9月時点）\n- 手待時間・仮眠時間の労働時間該当性は「使用者の指揮命令下にあるか」による行政解釈・裁判例の一般論です\n\nこの記事は、誰に相談するかまでは決めていません。宿日直規程・就業規則・36協定の整備、勤怠管理の設計、割増賃金の計算、許可申請書の作成支援は社会保険労務士の業務です。許可の可否は所轄労働基準監督署が判断し、夜間の診療体制などの医療上の判断は事業者が行います。未払い賃金の請求や紛争は弁護士の業務です。四葉社会保険労務士事務所にご相談いただく場合の費用は[報酬額表](/labor/ryokin)に、よくいただくご質問は[よくあるご質問](/labor/faq)にまとめています。\n\n本記事は一般的な情報提供です。個別のご事情に応じた判断は、面談のうえ資格者が行います。執筆は[浦松丈二](/about/uramatsu)（社会保険労務士・行政書士・宅地建物取引士）です。",
+    "status": "published",
+    "author": {
+      "name": "浦松 丈二",
+      "title": "社会保険労務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+    },
+    "keywords": [
+      "宿日直許可 基準",
+      "宿直 日直 違い 労働時間",
+      "医療 介護 宿日直 許可",
+      "医師 宿日直 働き方改革",
+      "宿直手当 3分の1",
+      "宿日直 許可なし 未払い 残業代"
+    ],
+    "tags": [
+      "宿日直",
+      "宿直",
+      "医療",
+      "介護",
+      "労働基準法",
+      "割増賃金"
+    ],
+    "locales": [],
+    "faq": [
+      {
+        "question": "当直を「宿直」と呼べば、深夜割増や残業代は要らなくなりますか？",
+        "answer": "なりません。呼び名ではなく実態で判断されます。宿日直許可を受けられるのは、常態としてほとんど労働する必要のない断続的業務で、宿直なら十分な睡眠が確保できる場合に限られます（発基第17号）。実態が通常の診療や介護なら、その時間は労働時間として割増賃金の対象です。"
+      },
+      {
+        "question": "宿日直の許可を受けていれば、実際に働いた時間も無給でよいのですか？",
+        "answer": "いけません。許可は「常態として労働の必要がない」時間についての適用除外です。許可を受けていても、実際に通常の診療・処置・介護などを行った時間は労働時間として、深夜や時間外に当たる分は割増賃金を支払う必要があります。"
+      },
+      {
+        "question": "医師の宿日直は、令和6年の働き方改革で扱いが変わりましたか？",
+        "answer": "令和6年4月1日から医師の時間外労働の上限規制が施行されました。宿日直許可を受けた時間はその上限の時間数に算入されない扱いですが、通常の診療の延長といえる時間は労働時間です。医師の許可基準は基発0701第8号（令和元年7月1日）に細目が示されています。"
+      },
+      {
+        "question": "宿直手当は、いくら払えばよいですか？",
+        "answer": "一般の許可基準では、宿日直勤務1回あたりの手当の最低額は、同種の労働者に支払われる賃金の1人1日平均額の3分の1を下回らないこととされています（発基第17号）。具体額は事業場の賃金水準によって変わるため、賃金台帳をもとに算定します。"
+      }
+    ],
+    "translations": {
+      "en": {
+        "title": "Night-duty (shukujitchoku) permission in medical and care settings: what kind of duty qualifies?",
+        "excerpt": "To treat night-time or holiday duty at a clinic, hospital or care facility as \"night/day duty (shukujitchoku)\" and exempt it from the working-hours rules, you need the permission of the director of the labour standards inspection office (Labor Standards Act, Article 41, item 3; Enforcement Ordinance, Article 23). Permission covers only intermittent work with ordinarily almost no need to work, such as scheduled rounds, receiving urgent calls and documents, and standing by for emergencies (Notice Hatsuki No. 17 of 13 September 1947). Even if it is called \"night duty,\" if the reality is ordinary medical care or nursing, permission cannot be obtained and the time is treated as working time. There is a separate detailed standard for physicians (Notice Kihatsu 0701 No. 8 of 1 July 2019). This article sets out the permission standards, the application, the post-permission work design, and the effect on premium wages.",
+        "content": "**In short:** To take night-time or holiday duty at a medical institution or care facility out of the working-hours rules as \"night/day duty (shukujitchoku),\" you need the **permission of the director of the labour standards inspection office** (Labor Standards Act, Article 41, item 3; Enforcement Ordinance of the Act, Article 23). Permission is limited to **intermittent work with ordinarily almost no need to work**, such as scheduled rounds, receiving urgent calls and documents, and standing by for emergencies (Notice Hatsuki No. 17 of 13 September 1947). Even if it is labelled \"night duty,\" if the reality is ordinary medical care or nursing, permission cannot be obtained and the time is treated as **working time**. There is a separate detailed standard for physicians (Notice Kihatsu 0701 No. 8 of 1 July 2019). This article sets out, with a practical eye, the permission standards and application, the post-permission work design, and the effect on premium wages.\n\n\"I heard that if we make on-call duty into night duty we don't need to pay overtime,\" and \"should a care facility's night work be night duty?\" — these are questions we often hear from the owners and managers of clinics, hospitals and care facilities. This page is for medical and care operators who place staff at night or on holidays, and sets out the permission standards, the key points of the application, and the post-permission work design. Whether permission is granted is decided by the labour standards inspection office, and the medical judgment about night-time treatment arrangements and staffing is made by the operator; this article focuses on the labour thinking that comes before that.\n\n## How do night/day duty and ordinary work differ in the treatment of working time?\n\nEven where staff are \"at the facility at night or on a holiday,\" ordinary work and permitted night/day duty are treated completely differently under the Labor Standards Act.\n\n| Aspect | Ordinary work (night/day shift) | Night/day duty (where permission is granted) |\n|---|---|---|\n| Actual work | Ordinary treatment, nursing, care and monitoring | Scheduled rounds, receiving urgent calls and documents, standing by for emergencies, etc. |\n| Working time | Counts as working time | Exempt from the rules on working hours, breaks and days off |\n| Late-night premium (10 p.m.–5 a.m.) | 25% or more required | In principle not required (not working time) |\n| Overtime / holiday premium | Required (a 36 Agreement is also needed) | In principle not required (not working time) |\n| Permission / filing | Not required (managed as working time) | Permission of the director of the labour standards inspection office required |\n| Pay | Ordinary wage plus premium | Night-duty / day-duty allowance (with a minimum, below) |\n\nThe basis on which night/day duty is exempt from the working-hours rules is Article 41, item 3 of the Labor Standards Act. It provides that the rules on working hours, breaks and days off do not apply to a person engaged in surveillance or intermittent work for whom the employer has obtained the permission of the administrative agency. For night duty and day duty, Article 23 of the Enforcement Ordinance provides that, where permission is obtained from the director of the labour standards inspection office by Form No. 10 for intermittent work, workers may be engaged notwithstanding Article 32 (statutory working hours). The night-shift/night-duty distinction is the same issue at a disability group home; see [night shifts and night duty at a group home differ completely for labour management](/en/labor/column/group-home-yakin-shukuchoku-roudou-chigai).\n\n## Where do the standards for granting night/day duty permission come from?\n\nThe general standards for night/day duty permission are set out in Notice Hatsuki No. 17 of 13 September 1947 (standards for permitting night/day duty). Roughly the following four points are premised.\n\n| Item | General permission standard (Notice Hatsuki No. 17) |\n|---|---|\n| Content of work | A duty with ordinarily almost no need to work. The worker does not perform the ordinary duties, and is limited to scheduled rounds, receiving urgent documents and calls, standing by for emergencies, and the like |\n| Allowance | The minimum amount of the allowance per night/day duty must not be less than one-third of the average daily wage per person paid to workers of the same kind |\n| Frequency | In principle, night duty is limited to once a week and day duty to once a month |\n| Sleep | For night duty, adequate sleeping facilities must be provided |\n\nPermission is not granted mechanically based on what is written in the application. **The labour standards inspection office judges each case on the basis of the actual work.** Duty at a care facility that frequently involves assistance and monitoring at night, or on-call duty that continues ordinary treatment of patients, is unlikely to meet these requirements and generally does not qualify. For how the allowance relates to premium pay, see also [how much does it cost to entrust payroll to a Shakai Hoken Roumushi](/en/labor/column/kyuyo-keisan-soba-sharoushi).\n\n## How did physicians' night-duty permission change with the work-style reform?\n\nFor physicians, a detailed standard is set out in addition to the general one (Notice Kihatsu 0701 No. 8 of 1 July 2019, \"On the standards for permitting night/day duty of physicians, nurses and others\"). The key points are as follows.\n\n- It must be duty **after being completely released** from the ordinary working-hours constraint\n- In addition to general night/day duty, the physician is limited to **light or short-duration work requiring no special measures** (examination by interview, instructions to nurses, minor treatment, and the like), and can secure **sufficient sleep** at night\n- Time that does not meet the above and can be said to be an extension of ordinary treatment is treated as working time\n\nThis standard is supplemented by Notice Kikanhatsu 0331 No. 1 of 31 March 2021 (reference material) and Notice Kikanhatsu 0115 No. 2 of 15 January 2024 (partial amendment). In addition, the **upper limit on physicians' overtime** took effect on 1 April 2024. Time for which night-duty permission is granted is not counted in the hours under this upper limit; however, **even with permission, time actually spent on ordinary treatment and the like is working time** and is subject to wages. The idea that \"because there is permission, working-hours management is unnecessary\" is mistaken. For night duty and nurses' social insurance when opening a clinic, see [labour and night duty when opening a clinic](/en/labor/column/clinic-kaigyo-roumu-shukunikkin-kangoshi-shakaihoken); for on-call allowances in home nursing, see [on-call allowances in home nursing and conversion to monthly pay](/en/labor/column/homon-kango-oncall-teate-jokin-kansan).\n\n## What are the unpaid-wage risks of night duty without permission?\n\nIf you have workers on night duty without permission, or call it \"night duty\" while the reality is ordinary work and do not pay premiums, that time is judged to be working time and becomes subject to unpaid-wage claims. The likely contents are as follows.\n\n- **Late-night premium (25% or more):** for late-night work between 10 p.m. and 5 a.m. (Labor Standards Act, Article 37, paragraph 3)\n- **Overtime / holiday premium:** the premium for overtime beyond the statutory hours (8 hours a day, 40 hours a week) or work on a statutory holiday (Article 37, paragraph 1; concluding and filing a 36 Agreement is also premised)\n- **Treatment of hand-waiting time:** time on standby ready to be called, and nap time with an obligation to respond, can count as working time (hand-waiting time) even without actual work\n\nThe extinctive prescription of a wage claim is, for the time being, **three years** rather than five (Labor Standards Act, Article 115 and Supplementary Provisions). Because three years' worth of premium wages may be claimed together, the premise is to **match the figures on the schedule with the reality and record start and end times objectively.** Handling an individual unpaid-wage claim is the work of an attorney and is outside the scope of this article.\n\n## Who is responsible for the application, the work design and disputes?\n\nThe situations around night/day duty divide by who decides.\n\n| What is done | Whose responsibility |\n|---|---|\n| Deciding and granting whether night/day duty permission can be obtained | **Labour standards inspection office** (the operator applies) |\n| Medical judgment such as night-time treatment arrangements and staffing | **Operator** (medical institution / care facility) |\n| Putting in order work rules, a night-duty regulation, the 36 Agreement and attendance; calculating premium wages | **Shakai Hoken Roumushi** (this office) |\n| Claims for unpaid wages, disputes, labour tribunal proceedings and litigation | **Attorney** |\n\nPutting night/day duty labour matters in order is the work of a Shakai Hoken Roumushi. This office handles **designing work that matches the reality, putting in order the night-duty regulation, work rules and the 36 Agreement, building the attendance-recording structure, and supporting preparation of the permission application (Form No. 10)**. Whether to grant permission is decided by the labour standards inspection office, and disputes over unpaid wages are handled by an attorney, so these are separated as different roles.\n\n## What can 四葉社会保険労務士事務所 do?\n\n四葉社会保険労務士事務所, in Kohinata, Bunkyo City, handles **sorting out the reality of night/day duty, putting in order the night-duty regulation, work rules, the 36 Agreement and a variable working-hours system, designing attendance management, calculating premium wages, and supporting the permission application**. For labour management in care and disability welfare, see [labour management for care and disability welfare](/en/labor/services/kaigo-roumu); for how to choose a variable working-hours system, see [how to choose between a variable working-hours system and flextime](/en/labor/column/henkei-roudoujikan-flextime-erabikata). **Consultation is free.** For fees, see [the fee schedule](/en/labor/ryokin); for frequently asked questions, see [the FAQ](/en/labor/faq).\n\n## Frequently asked questions\n\n**Q. If we call on-call duty \"night duty,\" do the late-night premium and overtime become unnecessary?**\nA. No. It is judged by the reality, not the label. Night/day duty permission can be obtained only for intermittent work with ordinarily almost no need to work, and for night duty only where sufficient sleep can be secured (Notice Hatsuki No. 17). If the reality is ordinary treatment or care, that time is working time subject to premium wages.\n\n**Q. If we have night-duty permission, may the time actually worked also be unpaid?**\nA. No. Permission is an exemption for time with ordinarily no need to work. Even with permission, time actually spent on ordinary treatment, procedures or care is working time, and the portion falling in the late-night or overtime hours must be paid a premium.\n\n**Q. Did physicians' night duty change with the 2024 work-style reform?**\nA. The upper limit on physicians' overtime took effect on 1 April 2024. Time with night-duty permission is not counted toward that upper limit, but time that can be said to be an extension of ordinary treatment is working time. The detailed standard for physicians is set out in Notice Kihatsu 0701 No. 8 of 1 July 2019.\n\n**Q. How much should the night-duty allowance be?**\nA. Under the general permission standard, the minimum per night/day duty must not be less than one-third of the average daily wage per person paid to workers of the same kind (Notice Hatsuki No. 17). The specific amount varies with the establishment's wage level, so it is calculated from the wage ledger.\n\n## Sources\n\n- Labor Standards Act (Act No. 49 of 1947), Article 37 (premium wages; late-night 25% or more under paragraph 3), Article 41, item 3 (exemption for persons engaged in surveillance or intermittent work), Article 115 and Supplementary Provisions (extinctive prescription of wage claims; three years for the time being)\n- Ordinance for Enforcement of the Labor Standards Act (Ministry of Health and Welfare Ordinance No. 23 of 1947), Article 23 (permission for intermittent work in night or day duty; Form No. 10)\n- General night/day duty permission standard = Notice Hatsuki No. 17 of 13 September 1947 (ordinarily almost no need to work; the allowance is one-third or more of the average daily wage per person; night duty is limited to once a week and day duty to once a month; adequate sleeping facilities for night duty)\n- On the standards for permitting night/day duty of physicians, nurses and others = Notice Kihatsu 0701 No. 8 of 1 July 2019 (complete release from ordinary duty; light or short-duration work; sufficient sleep). Supplemented by Notice Kikanhatsu 0331 No. 1 of 31 March 2021 (reference material) and Notice Kikanhatsu 0115 No. 2 of 15 January 2024 (partial amendment)\n- The upper limit on physicians' overtime took effect on 1 April 2024. The treatment of night-duty-permitted time in the calculation is confirmed from materials published by the Ministry of Health, Labour and Welfare (as of September 2026)\n- Whether hand-waiting time and nap time count as working time depends on whether the worker is \"under the employer's direction and supervision\"; this is a general proposition based on administrative interpretation and case law\n\nThis article does not decide whom to consult. Putting in order the night-duty regulation, work rules and the 36 Agreement, designing attendance management, calculating premium wages, and supporting the permission application are the work of a Shakai Hoken Roumushi. Whether permission is granted is decided by the labour standards inspection office, and medical judgment such as night-time treatment arrangements is made by the operator. Claims for unpaid wages and disputes are the work of an attorney. For fees when consulting 四葉社会保険労務士事務所, see [the fee schedule](/en/labor/ryokin); for frequently asked questions, see [the FAQ](/en/labor/faq).\n\nThis article is general information. A judgment on individual circumstances is made by a qualified professional after a consultation. Written by [Joji Uramatsu](/en/about/uramatsu) (Shakai Hoken Roumushi, Gyoseishoshi, Registered Real Estate Transaction Specialist).",
+        "category": "Labor law basics",
+        "keywords": [
+          "night duty permission medical care",
+          "shukujitchoku permission standards",
+          "physician night duty work style reform",
+          "care facility night duty working hours",
+          "night duty allowance one-third",
+          "labour standards inspection office night duty permission"
+        ],
+        "tags": [
+          "night duty",
+          "shukujitchoku",
+          "medical",
+          "care",
+          "working hours",
+          "Shakai Hoken Roumushi"
+        ],
+        "author": {
+          "name": "Joji Uramatsu",
+          "title": "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所"
+        },
+        "faq": [
+          {
+            "question": "If we call on-call duty \"night duty,\" do the late-night premium and overtime become unnecessary?",
+            "answer": "No. It is judged by the reality, not the label. Night/day duty permission can be obtained only for intermittent work with ordinarily almost no need to work, and for night duty only where sufficient sleep can be secured (Notice Hatsuki No. 17). If the reality is ordinary treatment or care, that time is working time subject to premium wages."
+          },
+          {
+            "question": "If we have night-duty permission, may the time actually worked also be unpaid?",
+            "answer": "No. Permission is an exemption for time with ordinarily no need to work. Even with permission, time actually spent on ordinary treatment, procedures or care is working time, and the portion falling in the late-night or overtime hours must be paid a premium."
+          },
+          {
+            "question": "Did physicians' night duty change with the 2024 work-style reform?",
+            "answer": "The upper limit on physicians' overtime took effect on 1 April 2024. Time with night-duty permission is not counted toward that upper limit, but time that can be said to be an extension of ordinary treatment is working time. The detailed standard for physicians is set out in Notice Kihatsu 0701 No. 8 of 1 July 2019."
+          },
+          {
+            "question": "How much should the night-duty allowance be?",
+            "answer": "Under the general permission standard, the minimum per night/day duty must not be less than one-third of the average daily wage per person paid to workers of the same kind (Notice Hatsuki No. 17). The specific amount varies with the establishment's wage level, so it is calculated from the wage ledger."
+          }
+        ]
+      },
+      "zh-tw": {
+        "title": "醫療、照護的「宿日直許可」，什麼樣的勤務才能取得？",
+        "excerpt": "要把醫療機構、照護設施的夜間、休日勤務當作「宿日直」而免除勞動時間規定，需要所轄勞動基準監督署長的許可（勞動基準法第41條第3項、同法施行規則第23條）。許可對象僅限於定時巡視、收受緊急電話或文書、待命應對緊急狀況等常態上幾乎不需要勞動的斷續性業務（昭和22年9月13日發基第17號）。即使名稱是「宿直」，只要實態是一般診療或照護，就無法取得許可，該時間會被當作勞動時間。醫師另有細目的許可基準（令和元年7月1日基發0701第8號）。本文整理宿日直許可的基準與申請、許可後的勤務設計，以及對加成薪資的影響。",
+        "content": "**先講結論**：要把醫療機構或照護設施的夜間、休日勤務，當作「宿日直」而免除勞動時間規定，需要**所轄勞動基準監督署長的許可**（勞動基準法第41條第3項、同法施行規則第23條）。許可對象僅限於**常態上幾乎不需要勞動的斷續性業務**，例如定時巡視、收受緊急電話或文書、待命應對緊急狀況（昭和22年9月13日發基第17號）。**即使名稱是「宿直」，只要實態是一般診療或照護，就無法取得許可**，該時間會被當作**勞動時間**。醫師另有細目的許可基準（令和元年7月1日基發0701第8號）。本文以實務角度，整理宿日直許可的基準與申請、許可後的勤務設計，以及對加成薪資的影響。\n\n「聽說把值班改成宿直就不用付加班費」「照護設施的夜班可以算宿直嗎」——這是診所、醫院、照護設施的開設者、管理者常問的問題。本頁面是為了在夜間或休日安排職員的醫療、照護事業者，整理宿日直許可的基準、申請的要點、許可後的勤務設計。許可與否由所轄勞動基準監督署判斷，夜間診療體制與配置人數等醫療上的判斷由事業者進行，本文聚焦在其前一步的勞務想法。\n\n## 宿直、日直與一般勤務，在勞動時間的處理上有何不同？\n\n即使同樣是「夜間、休日待在設施裡」，一般勤務與取得許可的宿日直，在勞動基準法上的處理完全不同。\n\n| 項目 | 一般勤務（夜班、日班） | 宿日直（取得許可時） |\n|---|---|---|\n| 業務實態 | 一般的診療、看護、照護、看守 | 定時巡視、收受緊急電話或文書、待命應對緊急狀況等斷續性業務 |\n| 勞動時間 | 屬於勞動時間 | 不受勞動時間、休息、休日的規定拘束 |\n| 深夜加成（22點～5點） | 需要25%以上 | 原則上不需要（因為不是勞動時間） |\n| 延長工時、休假日加成 | 需要（也需要36協定） | 原則上不需要（因為不是勞動時間） |\n| 許可、申報 | 不需要（當作勞動時間管理） | 需要所轄勞動基準監督署長的許可 |\n| 薪資 | 一般薪資＋加成 | 宿直津貼、日直津貼（有下述最低額） |\n\n宿日直可不受勞動時間規定拘束的依據，是勞動基準法第41條第3項。該條規定，從事監視或斷續性勞動、且雇主取得行政官署許可者，不適用勞動時間、休息、休日的規定。關於宿直、日直，同法施行規則第23條規定，就斷續性業務以樣式第10號取得所轄勞動基準監督署長許可時，可不受第32條（法定勞動時間）拘束而使其從事。夜班與宿直的切分，在身心障礙的團體家屋也是同樣的論點，詳情請見[團體家屋的夜班與宿直在勞務上完全不同](/zh-tw/labor/column/group-home-yakin-shukuchoku-roudou-chigai)。\n\n## 勞基署許可宿日直的基準，依據在哪裡？\n\n一般宿日直的許可基準，載於昭和22年9月13日發基第17號（宿日直勤務的許可基準）。大致有以下4點前提。\n\n| 項目 | 一般的許可基準（發基第17號） |\n|---|---|\n| 業務內容 | 常態上幾乎不需要勞動的勤務。不處理原本的業務，僅限定時巡視、收受緊急文書或電話、待命應對緊急狀況等 |\n| 津貼 | 宿日直勤務每1次的津貼最低額，不得低於同種勞工每人1日平均薪資額的三分之一 |\n| 次數 | 原則上，宿直以每週1次、日直以每月1次為限 |\n| 睡眠 | 宿直須設置相當的睡眠設備 |\n\n許可不會只憑申請書的記載就機械式核發。**所轄勞動基準監督署會依業務實態個別判斷**。在照護設施夜間頻繁進行協助、看守的勤務，或持續對來院者進行一般診療的值班，很難符合這些要件，通常不會成為許可對象。津貼與加成的關係，請一併參考[把薪資計算委託給社會保險勞務士，要花多少錢](/zh-tw/labor/column/kyuyo-keisan-soba-sharoushi)。\n\n## 醫師的宿日直許可，因工作方式改革有何改變？\n\n關於醫師，除了一般基準之外，另有細目的許可基準（令和元年7月1日基發0701第8號「關於醫師、看護師等的宿日直許可基準」）。重點如下。\n\n- 必須是**完全從一般工作時間的拘束中解放**之後的勤務\n- 除一般宿日直業務外，僅限於**不需要特殊措施的輕度或短時間業務**（以問診等進行的診察、對看護師等的指示、輕度處置等），且夜間能取得**充分睡眠**\n- 不符合上述、可謂一般診療延長的時間，當作勞動時間處理\n\n此基準另以令和3年3月31日基監發0331第1號（參考資料）與令和6年1月15日基監發0115第2號（一部修正）補充。此外，自令和6年4月1日起，施行**醫師的延長工時上限規制**。取得宿日直許可的時間不計入該上限的時數，不過，**即使取得許可，實際進行一般診療等的時間仍屬勞動時間**，是薪資的對象。「因為有許可，就不用管理勞動時間」的理解是錯誤的。開設診所時的宿日直與看護師社會保險，請見[開設診所時的勞務與宿日直](/zh-tw/labor/column/clinic-kaigyo-roumu-shukunikkin-kangoshi-shakaihoken)；居家看護的待命（on-call）津貼，請見[居家看護的待命津貼與月薪換算](/zh-tw/labor/column/homon-kango-oncall-teate-jokin-kansan)。\n\n## 沒有許可就讓員工宿直，有什麼未支付薪資的風險？\n\n未取得宿日直許可，或實態是一般勤務卻稱作「宿直」而不付加成，該時間會被判斷為勞動時間，成為未支付薪資的請求對象。可能的內容如下。\n\n- **深夜加成（25%以上）**：讓勞工在22點到5點的深夜勞動的部分（勞動基準法第37條第3項）\n- **延長工時、休假日加成**：超過法定勞動時間（1天8小時、1週40小時）的延長工時，或法定休假日勞動的加成（同條第1項。締結、申報36協定也是前提）\n- **等待時間的處理**：為應對呼叫而待命的時間，或負有應答義務的假寐時間，即使沒有實際作業，也可能被當作勞動時間（等待時間）\n\n薪資請求權的消滅時效，目前並非5年，而是**3年**（勞動基準法第115條、附則）。可能一次被請求3年份的加成薪資，因此前提是**讓排班表的數字與實態一致，並以客觀方法記錄開始、結束時間**。個別未支付薪資請求的應對，是律師的業務，不在本文範圍內。\n\n## 許可申請、勤務設計、糾紛應對，各屬誰的領域？\n\n宿日直的相關場面，判斷的主體各自不同。\n\n| 事項 | 屬誰的領域 |\n|---|---|\n| 判斷、核發能否取得宿日直許可 | **所轄勞動基準監督署**（申請由事業者） |\n| 夜間診療體制、配置人數等醫療上的判斷 | **事業者**（醫療機構、照護設施） |\n| 就業規則、宿日直規程、36協定、出勤的整備，加成薪資的計算 | **社會保險勞務士**（本事務所） |\n| 未支付薪資的請求、糾紛、勞動審判、訴訟 | **律師** |\n\n整理宿日直的勞務，是社會保險勞務士的業務。本事務所負責**符合實態的勤務設計，宿日直規程、就業規則、36協定的整備，出勤紀錄的機制建立，以及許可申請書（樣式第10號）的製作支援**。是否核發許可由勞動基準監督署判斷，未支付薪資的糾紛由律師負責，因此分別作為不同的立場切分。\n\n## 四葉社会保険労務士事務所能做什麼？\n\n位於文京區小日向的四葉社会保険労務士事務所，承辦**宿日直的實態整理，宿日直規程、就業規則、36協定、變形勞動時間制的整備，出勤管理的設計，加成薪資的計算，以及許可申請書的製作支援**。照護、身心障礙福利的勞務管理，請見[照護、身心障礙福利的勞務管理](/zh-tw/labor/services/kaigo-roumu)；變形勞動時間制的選法，請見[變形勞動時間制與彈性工時的選法](/zh-tw/labor/column/henkei-roudoujikan-flextime-erabikata)。**諮詢免費。** 費用請見[報酬金額表](/zh-tw/labor/ryokin)，常見問題請見[常見問題](/zh-tw/labor/faq)。\n\n## 常見問題\n\n**Q. 把值班稱作「宿直」，就不需要深夜加成或加班費了嗎？**\nA. 不會。看的是實態，不是名稱。宿日直許可只限於常態上幾乎不需要勞動的斷續性業務，宿直還須能確保充分睡眠（發基第17號）。若實態是一般診療或照護，該時間就是勞動時間，屬於加成薪資的對象。\n\n**Q. 取得宿日直許可的話，實際工作的時間也可以無給嗎？**\nA. 不行。許可是針對常態上不需要勞動的時間的適用除外。即使取得許可，實際進行一般診療、處置、照護等的時間仍屬勞動時間，落在深夜或延長工時的部分必須支付加成。\n\n**Q. 醫師的宿日直，因令和6年的工作方式改革有改變嗎？**\nA. 自令和6年4月1日起，施行醫師的延長工時上限規制。取得宿日直許可的時間不計入該上限時數，但可謂一般診療延長的時間仍屬勞動時間。醫師的許可基準，細目載於基發0701第8號（令和元年7月1日）。\n\n**Q. 宿直津貼該付多少？**\nA. 一般的許可基準規定，宿日直勤務每1次的津貼最低額，不得低於同種勞工每人1日平均薪資額的三分之一（發基第17號）。具體金額因事業場的薪資水準而異，會依薪資台帳計算。\n\n## 本文依據\n\n- 勞動基準法（昭和22年法律第49號）第37條（加成薪資、深夜以第3項規定25%以上）、第41條第3項（從事監視或斷續性勞動者的適用除外）、第115條、附則（薪資請求權的消滅時效、目前為3年）\n- 勞動基準法施行規則（昭和22年厚生省令第23號）第23條（宿直或日直勤務的斷續性業務的許可、樣式第10號）\n- 一般宿日直許可基準＝昭和22年9月13日發基第17號（常態上幾乎不需要勞動；津貼為每人1日平均薪資額的三分之一以上；宿直每週1次、日直每月1次為限；宿直須設相當的睡眠設備）\n- 關於醫師、看護師等的宿日直許可基準＝令和元年7月1日基發0701第8號（從一般勤務完全解放、輕度或短時間業務、充分睡眠）。補充＝令和3年3月31日基監發0331第1號（參考資料）、令和6年1月15日基監發0115第2號（一部修正）\n- 醫師的延長工時上限規制自令和6年4月1日施行。取得宿日直許可時間在計算上的處理，已依厚生勞動省的公布資料確認（2026年9月時點）\n- 等待時間、假寐時間是否屬於勞動時間，取決於是否「處於雇主指揮命令下」，此為依行政解釋、判例的一般見解\n\n本文不替讀者決定該諮詢誰。宿日直規程、就業規則、36協定的整備，出勤管理的設計，加成薪資的計算，許可申請書的製作支援，是社會保險勞務士的業務。許可與否由所轄勞動基準監督署判斷，夜間診療體制等醫療上的判斷由事業者進行。未支付薪資的請求、糾紛，是律師的業務。向四葉社会保険労務士事務所諮詢時的費用請見[報酬金額表](/zh-tw/labor/ryokin)，常見問題請見[常見問題](/zh-tw/labor/faq)。\n\n本文為一般資訊提供。個別情況的判斷，請在面談後由資格者進行。執筆者為[浦松丈二](/zh-tw/about/uramatsu)（社會保險勞務士・行政書士・宅地建物取引士）。",
+        "category": "勞動法基礎",
+        "keywords": [
+          "宿日直許可 醫療 照護",
+          "宿日直 許可基準",
+          "醫師 宿日直 工作方式改革",
+          "照護設施 宿直 勞動時間",
+          "宿直津貼 三分之一",
+          "勞動基準監督署 宿日直許可"
+        ],
+        "tags": [
+          "宿日直",
+          "醫療",
+          "照護",
+          "勞動時間",
+          "深夜加成",
+          "社會保險勞務士"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "把值班稱作「宿直」，就不需要深夜加成或加班費了嗎？",
+            "answer": "不會。看的是實態，不是名稱。宿日直許可只限於常態上幾乎不需要勞動的斷續性業務，宿直還須能確保充分睡眠（發基第17號）。若實態是一般診療或照護，該時間就是勞動時間，屬於加成薪資的對象。"
+          },
+          {
+            "question": "取得宿日直許可的話，實際工作的時間也可以無給嗎？",
+            "answer": "不行。許可是針對常態上不需要勞動的時間的適用除外。即使取得許可，實際進行一般診療、處置、照護等的時間仍屬勞動時間，落在深夜或延長工時的部分必須支付加成。"
+          },
+          {
+            "question": "醫師的宿日直，因令和6年的工作方式改革有改變嗎？",
+            "answer": "自令和6年4月1日起，施行醫師的延長工時上限規制。取得宿日直許可的時間不計入該上限時數，但可謂一般診療延長的時間仍屬勞動時間。醫師的許可基準，細目載於基發0701第8號（令和元年7月1日）。"
+          },
+          {
+            "question": "宿直津貼該付多少？",
+            "answer": "一般的許可基準規定，宿日直勤務每1次的津貼最低額，不得低於同種勞工每人1日平均薪資額的三分之一（發基第17號）。具體金額因事業場的薪資水準而異，會依薪資台帳計算。"
+          }
+        ]
+      },
+      "zh": {
+        "title": "医疗、护理的「宿日直许可」，什么样的勤务才能取得？",
+        "excerpt": "要把医疗机构、护理设施的夜间、休日勤务当作「宿日直」而免除劳动时间规定，需要所辖劳动基准监督署长的许可（劳动基准法第41条第3项、同法施行规则第23条）。许可对象仅限于定时巡视、收受紧急电话或文书、待命应对紧急状况等常态上几乎不需要劳动的断续性业务（昭和22年9月13日发基第17号）。即使名称是「宿直」，只要实态是一般诊疗或护理，就无法取得许可，该时间会被当作劳动时间。医师另有细目的许可基准（令和元年7月1日基发0701第8号）。本文整理宿日直许可的基准与申请、许可后的勤务设计，以及对加成薪资的影响。",
+        "content": "**先讲结论**：要把医疗机构或护理设施的夜间、休日勤务，当作「宿日直」而免除劳动时间规定，需要**所辖劳动基准监督署长的许可**（劳动基准法第41条第3项、同法施行规则第23条）。许可对象仅限于**常态上几乎不需要劳动的断续性业务**，例如定时巡视、收受紧急电话或文书、待命应对紧急状况（昭和22年9月13日发基第17号）。**即使名称是「宿直」，只要实态是一般诊疗或护理，就无法取得许可**，该时间会被当作**劳动时间**。医师另有细目的许可基准（令和元年7月1日基发0701第8号）。本文以实务角度，整理宿日直许可的基准与申请、许可后的勤务设计，以及对加成薪资的影响。\n\n「听说把值班改成宿直就不用付加班费」「护理设施的夜班可以算宿直吗」——这是诊所、医院、护理设施的开设者、管理者常问的问题。本页面是为了在夜间或休日安排职员的医疗、护理事业者，整理宿日直许可的基准、申请的要点、许可后的勤务设计。许可与否由所辖劳动基准监督署判断，夜间诊疗体制与配置人数等医疗上的判断由事业者进行，本文聚焦在其前一步的劳务想法。\n\n## 宿直、日直与一般勤务，在劳动时间的处理上有何不同？\n\n即使同样是「夜间、休日待在设施里」，一般勤务与取得许可的宿日直，在劳动基准法上的处理完全不同。\n\n| 项目 | 一般勤务（夜班、日班） | 宿日直（取得许可时） |\n|---|---|---|\n| 业务实态 | 一般的诊疗、看护、护理、看守 | 定时巡视、收受紧急电话或文书、待命应对紧急状况等断续性业务 |\n| 劳动时间 | 属于劳动时间 | 不受劳动时间、休息、休日的规定拘束 |\n| 深夜加成（22点～5点） | 需要25%以上 | 原则上不需要（因为不是劳动时间） |\n| 延长工时、休假日加成 | 需要（也需要36协定） | 原则上不需要（因为不是劳动时间） |\n| 许可、申报 | 不需要（当作劳动时间管理） | 需要所辖劳动基准监督署长的许可 |\n| 薪资 | 一般薪资＋加成 | 宿直津贴、日直津贴（有下述最低额） |\n\n宿日直可不受劳动时间规定拘束的依据，是劳动基准法第41条第3项。该条规定，从事监视或断续性劳动、且雇主取得行政官署许可者，不适用劳动时间、休息、休日的规定。关于宿直、日直，同法施行规则第23条规定，就断续性业务以样式第10号取得所辖劳动基准监督署长许可时，可不受第32条（法定劳动时间）拘束而使其从事。夜班与宿直的切分，在残障的团体家屋也是同样的论点，详情请见[团体家屋的夜班与宿直在劳务上完全不同](/zh/labor/column/group-home-yakin-shukuchoku-roudou-chigai)。\n\n## 劳基署许可宿日直的基准，依据在哪里？\n\n一般宿日直的许可基准，载于昭和22年9月13日发基第17号（宿日直勤务的许可基准）。大致有以下4点前提。\n\n| 项目 | 一般的许可基准（发基第17号） |\n|---|---|\n| 业务内容 | 常态上几乎不需要劳动的勤务。不处理原本的业务，仅限定时巡视、收受紧急文书或电话、待命应对紧急状况等 |\n| 津贴 | 宿日直勤务每1次的津贴最低额，不得低于同种劳工每人1日平均薪资额的三分之一 |\n| 次数 | 原则上，宿直以每周1次、日直以每月1次为限 |\n| 睡眠 | 宿直须设置相当的睡眠设备 |\n\n许可不会只凭申请书的记载就机械式核发。**所辖劳动基准监督署会依业务实态个别判断**。在护理设施夜间频繁进行协助、看守的勤务，或持续对来院者进行一般诊疗的值班，很难符合这些要件，通常不会成为许可对象。津贴与加成的关系，请一并参考[把薪资计算委托给社会保险劳务士，要花多少钱](/zh/labor/column/kyuyo-keisan-soba-sharoushi)。\n\n## 医师的宿日直许可，因工作方式改革有何改变？\n\n关于医师，除了一般基准之外，另有细目的许可基准（令和元年7月1日基发0701第8号「关于医师、看护师等的宿日直许可基准」）。重点如下。\n\n- 必须是**完全从一般工作时间的拘束中解放**之后的勤务\n- 除一般宿日直业务外，仅限于**不需要特殊措施的轻度或短时间业务**（以问诊等进行的诊察、对看护师等的指示、轻度处置等），且夜间能取得**充分睡眠**\n- 不符合上述、可谓一般诊疗延长的时间，当作劳动时间处理\n\n此基准另以令和3年3月31日基监发0331第1号（参考资料）与令和6年1月15日基监发0115第2号（部分修正）补充。此外，自令和6年4月1日起，施行**医师的延长工时上限规制**。取得宿日直许可的时间不计入该上限的时数，不过，**即使取得许可，实际进行一般诊疗等的时间仍属劳动时间**，是薪资的对象。「因为有许可，就不用管理劳动时间」的理解是错误的。开设诊所时的宿日直与看护师社会保险，请见[开设诊所时的劳务与宿日直](/zh/labor/column/clinic-kaigyo-roumu-shukunikkin-kangoshi-shakaihoken)；居家看护的待命（on-call）津贴，请见[居家看护的待命津贴与月薪换算](/zh/labor/column/homon-kango-oncall-teate-jokin-kansan)。\n\n## 没有许可就让员工宿直，有什么未支付薪资的风险？\n\n未取得宿日直许可，或实态是一般勤务却称作「宿直」而不付加成，该时间会被判断为劳动时间，成为未支付薪资的请求对象。可能的内容如下。\n\n- **深夜加成（25%以上）**：让劳工在22点到5点的深夜劳动的部分（劳动基准法第37条第3项）\n- **延长工时、休假日加成**：超过法定劳动时间（1天8小时、1周40小时）的延长工时，或法定休假日劳动的加成（同条第1项。缔结、申报36协定也是前提）\n- **等待时间的处理**：为应对呼叫而待命的时间，或负有应答义务的假寐时间，即使没有实际作业，也可能被当作劳动时间（等待时间）\n\n薪资请求权的消灭时效，目前并非5年，而是**3年**（劳动基准法第115条、附则）。可能一次被请求3年份的加成薪资，因此前提是**让排班表的数字与实态一致，并以客观方法记录开始、结束时间**。个别未支付薪资请求的应对，是律师的业务，不在本文范围内。\n\n## 许可申请、勤务设计、纠纷应对，各属谁的领域？\n\n宿日直的相关场面，判断的主体各自不同。\n\n| 事项 | 属谁的领域 |\n|---|---|\n| 判断、核发能否取得宿日直许可 | **所辖劳动基准监督署**（申请由事业者） |\n| 夜间诊疗体制、配置人数等医疗上的判断 | **事业者**（医疗机构、护理设施） |\n| 就业规则、宿日直规程、36协定、出勤的整备，加成薪资的计算 | **社会保险劳务士**（本事务所） |\n| 未支付薪资的请求、纠纷、劳动审判、诉讼 | **律师** |\n\n整理宿日直的劳务，是社会保险劳务士的业务。本事务所负责**符合实态的勤务设计，宿日直规程、就业规则、36协定的整备，出勤纪录的机制建立，以及许可申请书（样式第10号）的制作支援**。是否核发许可由劳动基准监督署判断，未支付薪资的纠纷由律师负责，因此分别作为不同的立场切分。\n\n## 四葉社会保険労務士事務所能做什么？\n\n位于文京区小日向的四葉社会保険労務士事務所，承办**宿日直的实态整理，宿日直规程、就业规则、36协定、变形劳动时间制的整备，出勤管理的设计，加成薪资的计算，以及许可申请书的制作支援**。护理、残障福利的劳务管理，请见[护理、残障福利的劳务管理](/zh/labor/services/kaigo-roumu)；变形劳动时间制的选法，请见[变形劳动时间制与弹性工时的选法](/zh/labor/column/henkei-roudoujikan-flextime-erabikata)。**咨询免费。** 费用请见[报酬金额表](/zh/labor/ryokin)，常见问题请见[常见问题](/zh/labor/faq)。\n\n## 常见问题\n\n**Q. 把值班称作「宿直」，就不需要深夜加成或加班费了吗？**\nA. 不会。看的是实态，不是名称。宿日直许可只限于常态上几乎不需要劳动的断续性业务，宿直还须能确保充分睡眠（发基第17号）。若实态是一般诊疗或护理，该时间就是劳动时间，属于加成薪资的对象。\n\n**Q. 取得宿日直许可的话，实际工作的时间也可以无给吗？**\nA. 不行。许可是针对常态上不需要劳动的时间的适用除外。即使取得许可，实际进行一般诊疗、处置、护理等的时间仍属劳动时间，落在深夜或延长工时的部分必须支付加成。\n\n**Q. 医师的宿日直，因令和6年的工作方式改革有改变吗？**\nA. 自令和6年4月1日起，施行医师的延长工时上限规制。取得宿日直许可的时间不计入该上限时数，但可谓一般诊疗延长的时间仍属劳动时间。医师的许可基准，细目载于基发0701第8号（令和元年7月1日）。\n\n**Q. 宿直津贴该付多少？**\nA. 一般的许可基准规定，宿日直勤务每1次的津贴最低额，不得低于同种劳工每人1日平均薪资额的三分之一（发基第17号）。具体金额因事业场的薪资水准而异，会依薪资台帐计算。\n\n## 本文依据\n\n- 劳动基准法（昭和22年法律第49号）第37条（加成薪资、深夜以第3项规定25%以上）、第41条第3项（从事监视或断续性劳动者的适用除外）、第115条、附则（薪资请求权的消灭时效、目前为3年）\n- 劳动基准法施行规则（昭和22年厚生省令第23号）第23条（宿直或日直勤务的断续性业务的许可、样式第10号）\n- 一般宿日直许可基准＝昭和22年9月13日发基第17号（常态上几乎不需要劳动；津贴为每人1日平均薪资额的三分之一以上；宿直每周1次、日直每月1次为限；宿直须设相当的睡眠设备）\n- 关于医师、看护师等的宿日直许可基准＝令和元年7月1日基发0701第8号（从一般勤务完全解放、轻度或短时间业务、充分睡眠）。补充＝令和3年3月31日基监发0331第1号（参考资料）、令和6年1月15日基监发0115第2号（部分修正）\n- 医师的延长工时上限规制自令和6年4月1日施行。取得宿日直许可时间在计算上的处理，已依厚生劳动省的公布资料确认（2026年9月时点）\n- 等待时间、假寐时间是否属于劳动时间，取决于是否「处于雇主指挥命令下」，此为依行政解释、判例的一般见解\n\n本文不替读者决定该咨询谁。宿日直规程、就业规则、36协定的整备，出勤管理的设计，加成薪资的计算，许可申请书的制作支援，是社会保险劳务士的业务。许可与否由所辖劳动基准监督署判断，夜间诊疗体制等医疗上的判断由事业者进行。未支付薪资的请求、纠纷，是律师的业务。向四葉社会保険労務士事務所咨询时的费用请见[报酬金额表](/zh/labor/ryokin)，常见问题请见[常见问题](/zh/labor/faq)。\n\n本文为一般资讯提供。个别情况的判断，请在面谈后由资格者进行。执笔者为[浦松丈二](/zh/about/uramatsu)（社会保险劳务士・行政书士・宅地建物取引士）。",
+        "category": "劳动法基础",
+        "keywords": [
+          "宿日直许可 医疗 护理",
+          "宿日直 许可基准",
+          "医师 宿日直 工作方式改革",
+          "护理设施 宿直 劳动时间",
+          "宿直津贴 三分之一",
+          "劳动基准监督署 宿日直许可"
+        ],
+        "tags": [
+          "宿日直",
+          "医疗",
+          "护理",
+          "劳动时间",
+          "深夜加成",
+          "社会保险劳务士"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "把值班称作「宿直」，就不需要深夜加成或加班费了吗？",
+            "answer": "不会。看的是实态，不是名称。宿日直许可只限于常态上几乎不需要劳动的断续性业务，宿直还须能确保充分睡眠（发基第17号）。若实态是一般诊疗或护理，该时间就是劳动时间，属于加成薪资的对象。"
+          },
+          {
+            "question": "取得宿日直许可的话，实际工作的时间也可以无给吗？",
+            "answer": "不行。许可是针对常态上不需要劳动的时间的适用除外。即使取得许可，实际进行一般诊疗、处置、护理等的时间仍属劳动时间，落在深夜或延长工时的部分必须支付加成。"
+          },
+          {
+            "question": "医师的宿日直，因令和6年的工作方式改革有改变吗？",
+            "answer": "自令和6年4月1日起，施行医师的延长工时上限规制。取得宿日直许可的时间不计入该上限时数，但可谓一般诊疗延长的时间仍属劳动时间。医师的许可基准，细目载于基发0701第8号（令和元年7月1日）。"
+          },
+          {
+            "question": "宿直津贴该付多少？",
+            "answer": "一般的许可基准规定，宿日直勤务每1次的津贴最低额，不得低于同种劳工每人1日平均薪资额的三分之一（发基第17号）。具体金额因事业场的薪资水准而异，会依薪资台帐计算。"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "business": "labor",
+    "slug": "kanri-kantokusha-nabakari-warimashi-shinya",
+    "title": "『管理監督者』はどこで線を引く？（名ばかり管理職と割増・深夜手当）",
+    "date": "2026-09-10",
+    "category": "労働法の基本",
+    "excerpt": "労働基準法上の『管理監督者』に当たると、労働時間・休憩・休日の規定が適用除外になり、時間外・休日の割増賃金は不要です（第41条第2号）。ただし深夜割増（第37条第3項）と年次有給休暇（第39条）は管理監督者でも適用されます。該当は役職名では決まらず、職務内容と権限・労働時間の裁量・待遇の3点を実態で判断します（昭和22年発基第17号、昭和63年基発第150号）。名ばかり管理職と評価されると、消滅時効3年（第115条・附則）の未払い割増賃金や付加金（第114条）を遡って請求されることがあります。深夜割増の残存を認めたことぶき事件（最判平成21年12月18日）、店長を管理監督者と認めなかった日本マクドナルド事件（東京地判平成20年1月28日）を踏まえ、線の引き方と就業規則・賃金の整え方を整理します。",
+    "content": "**結論（先に要点）**：労働基準法上の「管理監督者」に当たると、労働時間・休憩・休日の規定が適用除外になり、時間外・休日の割増賃金は不要になります（労働基準法第41条第2号）。ただし、**深夜割増（第37条第3項）と年次有給休暇（第39条）は、管理監督者でも適用されます**。そして、当たるかどうかは役職名では決まりません。**職務内容と権限・労働時間の裁量・待遇**の3点を実態で見て判断します（昭和22年9月13日発基第17号、昭和63年3月14日基発第150号）。店長・課長といった肩書きだけで残業代を払っていないと、実態が伴わなければ「名ばかり管理職」として未払い割増賃金を遡って請求されることがあります。この記事では、線の引き方と、就業規則・賃金の整え方を、実務目線で整理します。\n\n「店長には役職手当を払っているから残業代は要らないですよね」「課長は管理職だから深夜手当も不要では」——中小企業の経営者・人事の方から、よく受ける質問です。このページは、役職者に手当を払い残業代を支給していない事業者に向けて、管理監督者の判断要素、深夜割増・年次有給の扱い、遡及リスク、就業規則の整え方を整理します。個別の未払い残業代請求や訴訟への対応はこの記事の範囲外です。\n\n## 管理監督者に当たると、残業代はまったく要らない？\n\n「管理監督者＝残業代ゼロ」ではありません。適用が除外されるものと、除外されないものを分けて考えます。\n\n| 項目 | 管理監督者の扱い |\n|---|---|\n| 法定労働時間（1日8時間・1週40時間） | 適用除外（時間外の概念がない） |\n| 時間外割増（第37条第1項） | 不要 |\n| 休憩・法定休日、休日割増 | 適用除外 |\n| **深夜割増（第37条第3項・22時〜5時）** | **必要（適用除外されない）** |\n| **年次有給休暇（第39条）** | **必要（適用除外されない）** |\n\n労働基準法第41条第2号は、「監督若しくは管理の地位にある者」について、労働時間・休憩・休日に関する規定を適用しないと定めています。ここで除外されるのは労働時間・休憩・休日に関する規定であって、深夜割増と年次有給休暇はこれに含まれません。割増賃金の定額払い（固定残業代）とも別の論点です。固定残業代の適法要件は[固定残業代が有効になる要件と差額精算](/labor/column/kotei-zangyodai-tekiho-youken-sagaku-seisan)を、みなし労働時間制は[裁量労働制と本人同意の2024年改正](/labor/column/sairyo-roudo-honnin-doui-2024)をご覧ください。\n\n## 労基署・裁判所は、何を見て管理監督者性を判断する？\n\n判断は役職名ではなく実態で行われます。行政解釈（昭和22年9月13日発基第17号、昭和63年3月14日基発第150号）や裁判例は、おおむね次の3つの要素で見ています。\n\n| 要素 | 見られる中身 |\n|---|---|\n| 職務内容・責任と権限 | 経営者と一体的な立場で、採用・人事・労務・予算など重要な事項に実質的な権限を持っているか。部門の方針に関与しているか |\n| 労働時間の裁量 | 出退勤の時刻を自分の裁量で決められるか。厳格な時間管理・遅刻早退の控除を受けていないか |\n| 待遇 | 地位にふさわしい基本給・役職手当・賞与などの処遇を受けているか。時間外手当が支給されないことを十分に補う待遇か |\n\n3つとも満たして初めて管理監督者と評価されやすくなります。とくに多店舗展開する小売業・飲食業などの店舗の店長については、平成20年9月9日基発0909001号が、権限が実質的に乏しい・労働時間の裁量がない・待遇が不十分といった要素があれば管理監督者性が否定される方向に働くと整理しています。裁判例でも、ハンバーガーチェーンの店長について管理監督者に当たらないとされた例があります（日本マクドナルド事件・東京地判平成20年1月28日）。\n\n## 管理監督者でも深夜割増と年次有給が必要なのは、なぜ？\n\n労働基準法第41条第2号が適用を除外するのは、労働時間・休憩・休日に関する規定に限られるからです。深夜割増を定めた第37条第3項は、深夜業に対する健康配慮の趣旨で、労働時間の長さの規制とは別に置かれています。最高裁も、管理監督者に該当する労働者であっても第37条第3項に基づく深夜割増賃金を請求できると判断しています（ことぶき事件・最判平成21年12月18日）。したがって、管理監督者に22時から5時までの深夜に労働させた場合は、25%以上の深夜割増を支払う必要があります。年次有給休暇（第39条）も同じく適用除外の対象外で、管理監督者にも付与し、取得させなければなりません。\n\n## 名ばかり管理職と指摘されると、どんな遡及リスクがある？\n\n肩書きだけの管理職に残業代を払わずにいて、後から管理監督者性が否定されると、支払っていなかった割増賃金を遡って請求される可能性があります。\n\n- **未払いの時間外・休日・深夜割増**：本来支払うべきだった割増賃金\n- **消滅時効**：賃金請求権の消滅時効は、当分の間5年ではなく**3年**とされています（労働基準法第115条・附則）。3年分がまとめて請求され得ます\n- **付加金**：裁判所は、割増賃金の未払いについて、労働者の請求により未払金と同一額までの付加金の支払を命じることができます（第114条）\n\n役職手当が実際の残業時間に見合わない場合、差額が生じることもあります。まずは実態の把握と、就業規則・賃金規程の整備で予防することが前提です。就業規則の作成義務は[就業規則は何人から義務か](/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo)をご覧ください。\n\n## 就業規則の整備と、未払い請求の紛争対応は、それぞれ誰の領分？\n\n管理監督者をめぐる場面は、担当が分かれます。\n\n| すること | 誰の領分か |\n|---|---|\n| 役職と権限・待遇の設計、就業規則・賃金規程の整備、深夜割増・年休の運用設計、勤怠管理 | **社会保険労務士**（当事務所） |\n| 個別の未払い残業代請求、団体交渉、労働審判・訴訟 | **弁護士** |\n| 労働基準監督署の調査（臨検）への対応方針の助言 | **社会保険労務士**（是正勧告への対応・帳簿整備） |\n\n管理監督者性の設計と就業規則の整備は社会保険労務士の業務です。当事務所は、**役職の権限と待遇の整理、就業規則・賃金規程の整備、深夜割増と年次有給の運用、勤怠記録の仕組みづくり**までを担います。個別の未払い請求や訴訟・団体交渉は弁護士が担うため、別の立場として切り分けます。\n\n## 四葉社会保険労務士事務所は、何ができますか？\n\n文京区小日向の四葉社会保険労務士事務所は、**管理監督者性の実態整理、役職・権限・待遇の設計、就業規則・賃金規程の整備、深夜割増と年次有給の運用設計、勤怠管理の設計**をお受けします。パワハラ防止措置の義務は[パワハラ防止措置は中小企業も義務](/labor/column/pawahara-boshi-sochi-chusho-kigyo-gimu)に、給与計算の考え方は[給与計算を社会保険労務士に頼むと、いくらかかるのか](/labor/column/kyuyo-keisan-soba-sharoushi)にまとめています。**ご相談は無料です。** 費用は[報酬額表](/labor/ryokin)を、よくいただくご質問は[よくあるご質問](/labor/faq)をご覧ください。\n\n## よくある質問\n\n**Q. 店長や課長は、管理職だから残業代を払わなくてよいのですか？**\nA. 役職名だけでは決まりません。労働基準法の管理監督者に当たるには、経営者と一体的な立場での権限、出退勤の裁量、地位にふさわしい待遇の3点を実態で満たす必要があります。満たさなければ、時間外・休日の割増賃金の支払い義務が残ります。\n\n**Q. 管理監督者に当たれば、深夜手当も要りませんか？**\nA. いいえ。深夜割増（22時〜5時・25%以上）は、管理監督者でも適用されます。最高裁も、管理監督者に該当しても深夜割増賃金を請求できると判断しています（ことぶき事件・平成21年12月18日）。年次有給休暇も同じく付与・取得が必要です。\n\n**Q. 「名ばかり管理職」と指摘されると、どこまで遡って請求されますか？**\nA. 賃金請求権の消滅時効は、当分の間3年とされています（労働基準法第115条・附則）。管理監督者性が否定されると、3年分の未払い割増賃金に加え、裁判所の判断で同額までの付加金（第114条）が命じられることもあります。\n\n**Q. 役職手当を払っていれば、残業代の代わりになりますか？**\nA. 役職手当を固定残業代（割増賃金の定額払い）として扱うには、通常の賃金と割増部分が判別でき、不足があれば差額を精算するなどの要件を満たす必要があります。管理監督者性とは別の論点で、単に手当を付ければ足りるわけではありません。\n\n## この記事の根拠\n\n- 労働基準法（昭和22年法律第49号）第37条（割増賃金。第1項＝時間外・休日、第3項＝深夜25%以上）、第39条（年次有給休暇）、第41条第2号（監督若しくは管理の地位にある者の適用除外）、第114条（付加金）、第115条・附則（賃金請求権の消滅時効・当分の間3年）\n- 管理監督者の範囲に関する行政解釈＝昭和22年9月13日発基第17号、昭和63年3月14日基発第150号（職務内容・責任と権限／勤務態様＝労働時間の裁量／待遇の3要素）\n- 多店舗展開する小売業、飲食業等の店舗における管理監督者の範囲の適正化について＝平成20年9月9日基発0909001号（基本的な判断基準を変えるものではなく、否定される要素を整理したもの）\n- 管理監督者に該当しても深夜割増賃金を請求できるとした判例＝ことぶき事件・最高裁第二小法廷判決平成21年12月18日\n- 店舗の店長の管理監督者性を否定した裁判例の一般的な考え方＝日本マクドナルド事件・東京地方裁判所判決平成20年1月28日。個別の可否は事情により判断が分かれます\n- 深夜割増率・年次有給休暇の付与要件は、厚生労働省の公表資料により確認しています（2026年9月時点）\n\nこの記事は、誰に相談するかまでは決めていません。役職・権限・待遇の設計、就業規則・賃金規程の整備、深夜割増と年次有給の運用、勤怠管理の設計は社会保険労務士の業務です。個別の未払い残業代請求や団体交渉、労働審判・訴訟は弁護士の業務です。四葉社会保険労務士事務所にご相談いただく場合の費用は[報酬額表](/labor/ryokin)に、よくいただくご質問は[よくあるご質問](/labor/faq)にまとめています。\n\n本記事は一般的な情報提供です。個別のご事情に応じた判断は、面談のうえ資格者が行います。執筆は[浦松丈二](/about/uramatsu)（社会保険労務士・行政書士・宅地建物取引士）です。",
+    "status": "published",
+    "author": {
+      "name": "浦松 丈二",
+      "title": "社会保険労務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+    },
+    "keywords": [
+      "管理監督者 判断基準",
+      "名ばかり管理職 残業代",
+      "管理監督者 深夜割増 必要",
+      "管理監督者 年次有給休暇",
+      "店長 管理監督者 該当しない",
+      "管理監督者 遡及 3年 付加金"
+    ],
+    "tags": [
+      "管理監督者",
+      "名ばかり管理職",
+      "割増賃金",
+      "深夜割増",
+      "就業規則",
+      "労働基準法"
+    ],
+    "locales": [],
+    "faq": [
+      {
+        "question": "店長や課長は、管理職だから残業代を払わなくてよいのですか？",
+        "answer": "役職名だけでは決まりません。労働基準法の管理監督者に当たるには、経営者と一体的な立場での権限、出退勤の裁量、地位にふさわしい待遇の3点を実態で満たす必要があります。満たさなければ、時間外・休日の割増賃金の支払い義務が残ります。"
+      },
+      {
+        "question": "管理監督者に当たれば、深夜手当も要りませんか？",
+        "answer": "いいえ。深夜割増（22時〜5時・25%以上）は、管理監督者でも適用されます。最高裁も、管理監督者に該当しても深夜割増賃金を請求できると判断しています（ことぶき事件・平成21年12月18日）。年次有給休暇も同じく付与・取得が必要です。"
+      },
+      {
+        "question": "「名ばかり管理職」と指摘されると、どこまで遡って請求されますか？",
+        "answer": "賃金請求権の消滅時効は、当分の間3年とされています（労働基準法第115条・附則）。管理監督者性が否定されると、3年分の未払い割増賃金に加え、裁判所の判断で同額までの付加金（第114条）が命じられることもあります。"
+      },
+      {
+        "question": "役職手当を払っていれば、残業代の代わりになりますか？",
+        "answer": "役職手当を固定残業代（割増賃金の定額払い）として扱うには、通常の賃金と割増部分が判別でき、不足があれば差額を精算するなどの要件を満たす必要があります。管理監督者性とは別の論点で、単に手当を付ければ足りるわけではありません。"
+      }
+    ],
+    "translations": {
+      "en": {
+        "title": "Where is the line for a \"manager or supervisor\"? (Manager in name only, premiums and the late-night premium)",
+        "excerpt": "Being a \"manager or supervisor\" under the Labor Standards Act exempts the person from the rules on working hours, breaks and days off, and no overtime or holiday premium is required (Article 41, item 2). But the late-night premium (Article 37, paragraph 3) and annual paid leave (Article 39) still apply even to a manager or supervisor. And whether someone qualifies is not decided by the job title. It is judged by the reality of three points — job content and authority, discretion over working hours, and treatment (Notice Hatsuki No. 17 of 13 September 1947; Notice Kihatsu No. 150 of 14 March 1988). Paying only a post allowance to a store or section manager and no overtime can, where the reality does not match, lead to a retroactive claim for unpaid premium wages as a \"manager in name only.\" This article sets out how to draw the line and how to arrange work rules and wages.",
+        "content": "**In short:** Being a \"manager or supervisor\" under the Labor Standards Act exempts the person from the rules on working hours, breaks and days off, and no overtime or holiday premium is required (Labor Standards Act, Article 41, item 2). However, **the late-night premium (Article 37, paragraph 3) and annual paid leave (Article 39) still apply even to a manager or supervisor.** And whether someone qualifies is not decided by the job title. It is judged by the reality of three points — **job content and authority, discretion over working hours, and treatment** (Notice Hatsuki No. 17 of 13 September 1947; Notice Kihatsu No. 150 of 14 March 1988). Paying only a post allowance to a store manager or section manager and no overtime can, where the reality does not follow, lead to a retroactive claim for unpaid premium wages as a \"manager in name only.\" This article sets out, with a practical eye, how to draw the line and how to arrange work rules and wages.\n\n\"We pay a post allowance to store managers, so overtime isn't needed, right?\" and \"a section manager is a manager, so a late-night premium shouldn't be needed either\" — these are questions we often hear from the owners and HR staff of small and medium enterprises. This page is for operators who pay allowances to those in posts but pay no overtime, and sets out the elements for judging manager-or-supervisor status, the treatment of the late-night premium and annual paid leave, the retroactive risk, and how to arrange work rules. Handling an individual unpaid-overtime claim or litigation is outside the scope of this article.\n\n## If someone is a manager or supervisor, is no overtime pay at all needed?\n\n\"Manager or supervisor = zero overtime\" is not the case. Separate what is exempt from what is not.\n\n| Item | Treatment of a manager or supervisor |\n|---|---|\n| Statutory working hours (8 hours a day, 40 hours a week) | Exempt (no concept of overtime) |\n| Overtime premium (Article 37, paragraph 1) | Not required |\n| Breaks, statutory days off, holiday premium | Exempt |\n| **Late-night premium (Article 37, paragraph 3; 10 p.m.–5 a.m.)** | **Required (not exempt)** |\n| **Annual paid leave (Article 39)** | **Required (not exempt)** |\n\nArticle 41, item 2 of the Labor Standards Act provides that the rules on working hours, breaks and days off do not apply to \"a person in a supervisory or managerial position.\" What is exempt here are the rules on working hours, breaks and days off; the late-night premium and annual paid leave are not included. This is also a separate issue from a fixed-overtime-pay arrangement (a lump-sum premium). For the requirements for a valid fixed-overtime-pay arrangement, see [the requirements for a valid fixed-overtime-pay arrangement and the difference settlement](/en/labor/column/kotei-zangyodai-tekiho-youken-sagaku-seisan); for the deemed-working-hours system, see [the discretionary work system and the 2024 reform on individual consent](/en/labor/column/sairyo-roudo-honnin-doui-2024).\n\n## What do the inspection office and the courts look at to judge manager-or-supervisor status?\n\nThe judgment is by the reality, not the job title. Administrative interpretation (Notice Hatsuki No. 17 of 13 September 1947; Notice Kihatsu No. 150 of 14 March 1988) and case law look at roughly the following three elements.\n\n| Element | What is looked at |\n|---|---|\n| Job content, responsibility and authority | Whether the person, in a position integrated with management, has substantive authority over important matters such as hiring, personnel, labour and budget; whether they take part in the department's policy |\n| Discretion over working hours | Whether the person can decide their own start and finish times at their discretion; whether they are free of strict time management and deductions for lateness or early leaving |\n| Treatment | Whether they receive treatment befitting the position — base pay, a post allowance, bonuses; treatment that sufficiently makes up for the absence of overtime pay |\n\nA person is more readily evaluated as a manager or supervisor only when all three are satisfied. In particular, for store managers of stores in multi-location retail, food service and similar businesses, Notice Kihatsu 0909001 No. 1 of 9 September 2008 sets out that elements such as substantively poor authority, no discretion over working hours, and insufficient treatment work in the direction of denying manager-or-supervisor status. In case law too, there is an example in which the manager of a hamburger chain store was held not to be a manager or supervisor (McDonald's Japan case, Tokyo District Court judgment of 28 January 2008).\n\n## Why are the late-night premium and annual paid leave required even for a manager or supervisor?\n\nBecause what Article 41, item 2 of the Labor Standards Act exempts is limited to the rules on working hours, breaks and days off. Article 37, paragraph 3, which provides for the late-night premium, is placed with the aim of health consideration for late-night work, separately from the regulation on the length of working hours. The Supreme Court has also held that even a worker who qualifies as a manager or supervisor can claim the late-night premium under Article 37, paragraph 3 (Kotobuki case, Supreme Court judgment of 18 December 2009). Accordingly, if a manager or supervisor is made to work at night between 10 p.m. and 5 a.m., a late-night premium of 25% or more must be paid. Annual paid leave (Article 39) is likewise outside the exemption, and must be granted to, and taken by, a manager or supervisor.\n\n## What retroactive risk arises if someone is pointed out as a \"manager in name only\"?\n\nIf you pay no overtime to a manager in title only, and manager-or-supervisor status is later denied, the premium wages you had not paid may be claimed retroactively.\n\n- **Unpaid overtime, holiday and late-night premiums:** the premium wages that should have been paid\n- **Extinctive prescription:** the extinctive prescription of a wage claim is, for the time being, **three years** rather than five (Labor Standards Act, Article 115 and Supplementary Provisions). Three years' worth may be claimed together\n- **Additional payment:** on an unpaid premium wage, the court may, on the worker's claim, order payment of an additional payment up to the same amount as the unpaid sum (Article 114)\n\nWhere the post allowance does not match the actual overtime hours, a shortfall may also arise. The premise is to grasp the reality first, and to prevent problems by putting the work rules and wage regulations in order. For when work rules are mandatory, see [from how many employees are work rules mandatory](/en/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo).\n\n## Who is responsible for arranging the work rules and for handling an unpaid-wage dispute?\n\nThe situations around a manager or supervisor divide by responsibility.\n\n| What is done | Whose responsibility |\n|---|---|\n| Designing posts, authority and treatment; putting in order work rules and wage regulations; designing the operation of the late-night premium and annual leave; attendance management | **Shakai Hoken Roumushi** (this office) |\n| An individual unpaid-overtime claim, collective bargaining, labour tribunal proceedings and litigation | **Attorney** |\n| Advice on the policy for responding to a labour standards inspection | **Shakai Hoken Roumushi** (responding to guidance; putting ledgers in order) |\n\nDesigning manager-or-supervisor status and putting the work rules in order is the work of a Shakai Hoken Roumushi. This office handles **sorting out the authority and treatment of a post, putting in order the work rules and wage regulations, operating the late-night premium and annual leave, and building the attendance-recording structure**. An individual claim, litigation and collective bargaining are handled by an attorney, so they are separated as different roles.\n\n## What can 四葉社会保険労務士事務所 do?\n\n四葉社会保険労務士事務所, in Kohinata, Bunkyo City, handles **sorting out the reality of manager-or-supervisor status, designing posts, authority and treatment, putting in order work rules and wage regulations, designing the operation of the late-night premium and annual leave, and designing attendance management**. For the duty of power-harassment prevention measures, see [power-harassment prevention measures are mandatory for SMEs too](/en/labor/column/pawahara-boshi-sochi-chusho-kigyo-gimu); for the approach to payroll, see [how much does it cost to entrust payroll to a Shakai Hoken Roumushi](/en/labor/column/kyuyo-keisan-soba-sharoushi). **Consultation is free.** For fees, see [the fee schedule](/en/labor/ryokin); for frequently asked questions, see [the FAQ](/en/labor/faq).\n\n## Frequently asked questions\n\n**Q. Since store managers and section managers are \"managers,\" do we not need to pay them overtime?**\nA. The title alone does not decide it. To be a manager or supervisor under the Labor Standards Act, the person must satisfy, in reality, three points: authority in a position integrated with management, discretion over start and finish times, and treatment befitting the position. If these are not met, the duty to pay overtime and holiday premiums remains.\n\n**Q. If someone qualifies as a manager or supervisor, is the late-night premium also unnecessary?**\nA. No. The late-night premium (10 p.m.–5 a.m.; 25% or more) applies even to a manager or supervisor. The Supreme Court has held that a late-night premium can be claimed even by someone who qualifies as a manager or supervisor (Kotobuki case, 18 December 2009). Annual paid leave must likewise be granted and taken.\n\n**Q. If we are pointed out as having a \"manager in name only,\" how far back can claims go?**\nA. The extinctive prescription of a wage claim is, for the time being, three years (Labor Standards Act, Article 115 and Supplementary Provisions). If manager-or-supervisor status is denied, in addition to three years' worth of unpaid premium wages, the court may, at its discretion, order an additional payment up to the same amount (Article 114).\n\n**Q. If we pay a post allowance, does it substitute for overtime pay?**\nA. To treat a post allowance as fixed overtime pay (a lump-sum premium), you must meet requirements such as being able to distinguish the ordinary wage from the premium part and settling any shortfall. This is a separate issue from manager-or-supervisor status; simply adding an allowance is not enough.\n\n## Sources\n\n- Labor Standards Act (Act No. 49 of 1947), Article 37 (premium wages; paragraph 1 = overtime/holiday, paragraph 3 = late-night 25% or more), Article 39 (annual paid leave), Article 41, item 2 (exemption for a person in a supervisory or managerial position), Article 114 (additional payment), Article 115 and Supplementary Provisions (extinctive prescription of wage claims; three years for the time being)\n- Administrative interpretation on the scope of managers and supervisors = Notice Hatsuki No. 17 of 13 September 1947; Notice Kihatsu No. 150 of 14 March 1988 (the three elements of job content, responsibility and authority; work arrangements = discretion over working hours; treatment)\n- On the appropriate scope of managers and supervisors at stores of multi-location retail, food service and similar businesses = Notice Kihatsu 0909001 No. 1 of 9 September 2008 (it does not change the basic judgment criteria, but organizes the elements that deny the status)\n- The judgment that a late-night premium can be claimed even by one who qualifies as a manager or supervisor = Kotobuki case, Supreme Court Second Petty Bench judgment of 18 December 2009\n- The general approach that denied manager-or-supervisor status of a store manager = McDonald's Japan case, Tokyo District Court judgment of 28 January 2008. Whether an individual case qualifies is judged differently depending on the circumstances\n- The late-night premium rate and the requirements for granting annual paid leave are confirmed from materials published by the Ministry of Health, Labour and Welfare (as of September 2026)\n\nThis article does not decide whom to consult. Designing posts, authority and treatment, putting in order work rules and wage regulations, operating the late-night premium and annual leave, and designing attendance management are the work of a Shakai Hoken Roumushi. An individual unpaid-overtime claim, collective bargaining, labour tribunal proceedings and litigation are the work of an attorney. For fees when consulting 四葉社会保険労務士事務所, see [the fee schedule](/en/labor/ryokin); for frequently asked questions, see [the FAQ](/en/labor/faq).\n\nThis article is general information. A judgment on individual circumstances is made by a qualified professional after a consultation. Written by [Joji Uramatsu](/en/about/uramatsu) (Shakai Hoken Roumushi, Gyoseishoshi, Registered Real Estate Transaction Specialist).",
+        "category": "Labor law basics",
+        "keywords": [
+          "manager or supervisor line",
+          "manager in name only overtime",
+          "late-night premium manager supervisor",
+          "Labor Standards Act Article 41 item 2",
+          "McDonald's Japan case store manager",
+          "unpaid overtime retroactive three years"
+        ],
+        "tags": [
+          "manager or supervisor",
+          "manager in name only",
+          "overtime premium",
+          "late-night premium",
+          "work rules",
+          "Shakai Hoken Roumushi"
+        ],
+        "author": {
+          "name": "Joji Uramatsu",
+          "title": "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所"
+        },
+        "faq": [
+          {
+            "question": "Since store managers and section managers are \"managers,\" do we not need to pay them overtime?",
+            "answer": "The title alone does not decide it. To be a manager or supervisor under the Labor Standards Act, the person must satisfy, in reality, three points: authority in a position integrated with management, discretion over start and finish times, and treatment befitting the position. If these are not met, the duty to pay overtime and holiday premiums remains."
+          },
+          {
+            "question": "If someone qualifies as a manager or supervisor, is the late-night premium also unnecessary?",
+            "answer": "No. The late-night premium (10 p.m.–5 a.m.; 25% or more) applies even to a manager or supervisor. The Supreme Court has held that a late-night premium can be claimed even by someone who qualifies as a manager or supervisor (Kotobuki case, 18 December 2009). Annual paid leave must likewise be granted and taken."
+          },
+          {
+            "question": "If we are pointed out as having a \"manager in name only,\" how far back can claims go?",
+            "answer": "The extinctive prescription of a wage claim is, for the time being, three years (Labor Standards Act, Article 115 and Supplementary Provisions). If manager-or-supervisor status is denied, in addition to three years' worth of unpaid premium wages, the court may, at its discretion, order an additional payment up to the same amount (Article 114)."
+          },
+          {
+            "question": "If we pay a post allowance, does it substitute for overtime pay?",
+            "answer": "To treat a post allowance as fixed overtime pay (a lump-sum premium), you must meet requirements such as being able to distinguish the ordinary wage from the premium part and settling any shortfall. This is a separate issue from manager-or-supervisor status; simply adding an allowance is not enough."
+          }
+        ]
+      },
+      "zh-tw": {
+        "title": "「管理監督者」的界線在哪裡？（名義上的管理職與加成、深夜津貼）",
+        "excerpt": "屬於勞動基準法上的「管理監督者」，就不受勞動時間、休息、休日規定的拘束，不需要延長工時或休假日加成（第41條第2項）。不過，深夜加成（第37條第3項）與年次有給休假（第39條），即使是管理監督者也適用。而且，是否符合並非由職稱決定。要以職務內容與權限、勞動時間的裁量、待遇這3點的實態來判斷（昭和22年9月13日發基第17號、昭和63年3月14日基發第150號）。若只付店長、課長役職津貼而不付加班費，一旦實態不符，就可能以「名義上的管理職」被追溯請求未支付的加成薪資。本文整理界線的畫法，以及就業規則、薪資的整備。",
+        "content": "**先講結論**：屬於勞動基準法上的「管理監督者」，就不受勞動時間、休息、休日規定的拘束，不需要延長工時或休假日的加成薪資（勞動基準法第41條第2項）。不過，**深夜加成（第37條第3項）與年次有給休假（第39條），即使是管理監督者也適用**。而且，是否符合並非由職稱決定。要以**職務內容與權限、勞動時間的裁量、待遇**這3點的實態來判斷（昭和22年9月13日發基第17號、昭和63年3月14日基發第150號）。若只以店長、課長等職稱付役職津貼而不付加班費，一旦實態不符，就可能以「名義上的管理職」被追溯請求未支付的加成薪資。本文以實務角度，整理界線的畫法，以及就業規則、薪資的整備。\n\n「店長有付役職津貼，所以不用付加班費吧？」「課長是管理職，所以深夜津貼也不用吧」——這是中小企業的經營者、人事常問的問題。本頁面是為了對職務者付津貼卻不付加班費的事業者，整理管理監督者的判斷要素、深夜加成與年次有給的處理、追溯風險，以及就業規則的整備。個別未支付加班費請求或訴訟的應對，不在本文範圍內。\n\n## 只要是管理監督者，就完全不用付加班費嗎？\n\n「管理監督者＝加班費零」並非如此。要把適用除外的與不除外的分開來看。\n\n| 項目 | 管理監督者的處理 |\n|---|---|\n| 法定勞動時間（1天8小時、1週40小時） | 適用除外（沒有延長工時的概念） |\n| 延長工時加成（第37條第1項） | 不需要 |\n| 休息、法定休日、休假日加成 | 適用除外 |\n| **深夜加成（第37條第3項・22點～5點）** | **需要（不適用除外）** |\n| **年次有給休假（第39條）** | **需要（不適用除外）** |\n\n勞動基準法第41條第2項規定，對「處於監督或管理地位者」，不適用勞動時間、休息、休日的規定。這裡除外的是勞動時間、休息、休日的規定，深夜加成與年次有給休假不包含在內。這與加成薪資的定額支付（固定加班費）也是不同的論點。固定加班費的合法要件，請見[固定加班費有效的要件與差額精算](/zh-tw/labor/column/kotei-zangyodai-tekiho-youken-sagaku-seisan)；擬制勞動時間制，請見[裁量勞動制與本人同意的2024年修正](/zh-tw/labor/column/sairyo-roudo-honnin-doui-2024)。\n\n## 勞基署、法院看什麼來判斷管理監督者性？\n\n判斷是以實態、而非職稱來進行。行政解釋（昭和22年9月13日發基第17號、昭和63年3月14日基發第150號）與判例，大致以下列3個要素來看。\n\n| 要素 | 所看的內容 |\n|---|---|\n| 職務內容、責任與權限 | 是否處於與經營者一體的立場，對招募、人事、勞務、預算等重要事項握有實質權限；是否參與部門的方針 |\n| 勞動時間的裁量 | 是否能以自己的裁量決定出退勤時刻；是否未受嚴格的時間管理、遲到早退扣薪 |\n| 待遇 | 是否受到與地位相稱的基本薪、役職津貼、獎金等待遇；是否為足以彌補不支付加班費的待遇 |\n\n3項都滿足，才較容易被評價為管理監督者。特別是多店舖展開的零售業、餐飲業等店舖的店長，平成20年9月9日基發0909001號整理指出，若有權限實質貧乏、無勞動時間裁量、待遇不足等要素，會朝否定管理監督者性的方向作用。判例中也有把漢堡連鎖店店長認定為不屬於管理監督者的例子（日本麥當勞事件・東京地方法院平成20年1月28日判決）。\n\n## 為何管理監督者也需要深夜加成與年次有給？\n\n因為勞動基準法第41條第2項所除外的，僅限於勞動時間、休息、休日的規定。規定深夜加成的第37條第3項，是以對深夜業的健康照顧為宗旨，與勞動時間長度的規制分別設置。最高法院也判斷，即使是符合管理監督者的勞工，也能依第37條第3項請求深夜加成薪資（ことぶき事件・最高法院平成21年12月18日判決）。因此，讓管理監督者在22點到5點的深夜勞動時，必須支付25%以上的深夜加成。年次有給休假（第39條）同樣不在適用除外的對象內，須對管理監督者給予並使其取得。\n\n## 被指為名義上的管理職，會有什麼追溯風險？\n\n若對只有職稱的管理職不付加班費，之後管理監督者性被否定，就可能被追溯請求先前未支付的加成薪資。\n\n- **未支付的延長工時、休假日、深夜加成**：本應支付的加成薪資\n- **消滅時效**：薪資請求權的消滅時效，目前並非5年，而是**3年**（勞動基準法第115條、附則）。可能一次被請求3年份\n- **附加金**：對於加成薪資的未支付，法院可依勞工的請求，命令支付與未支付金額相同額度以內的附加金（第114條）\n\n當役職津貼與實際加班時間不相稱時，也可能產生差額。首先掌握實態，並以就業規則、薪資規程的整備來預防，是前提。就業規則的製作義務，請見[就業規則是幾人以上的義務](/zh-tw/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo)。\n\n## 就業規則的整備與未支付請求的糾紛應對，各屬誰的領域？\n\n管理監督者的相關場面，負責的主體各自不同。\n\n| 事項 | 屬誰的領域 |\n|---|---|\n| 職稱與權限、待遇的設計，就業規則、薪資規程的整備，深夜加成與年休的運用設計，出勤管理 | **社會保險勞務士**（本事務所） |\n| 個別未支付加班費請求、團體交涉、勞動審判、訴訟 | **律師** |\n| 勞動基準監督署調查（臨檢）的應對方針建議 | **社會保險勞務士**（對是正勸告的應對、帳簿整備） |\n\n管理監督者性的設計與就業規則的整備，是社會保險勞務士的業務。本事務所負責**職稱權限與待遇的整理，就業規則、薪資規程的整備，深夜加成與年次有給的運用，出勤紀錄的機制建立**。個別未支付請求、訴訟、團體交涉由律師負責，因此作為不同的立場切分。\n\n## 四葉社会保険労務士事務所能做什麼？\n\n位於文京區小日向的四葉社会保険労務士事務所，承辦**管理監督者性的實態整理，職稱、權限、待遇的設計，就業規則、薪資規程的整備，深夜加成與年次有給的運用設計，出勤管理的設計**。防止職權騷擾措施的義務，請見[防止職權騷擾措施中小企業也是義務](/zh-tw/labor/column/pawahara-boshi-sochi-chusho-kigyo-gimu)；薪資計算的想法，請見[把薪資計算委託給社會保險勞務士，要花多少錢](/zh-tw/labor/column/kyuyo-keisan-soba-sharoushi)。**諮詢免費。** 費用請見[報酬金額表](/zh-tw/labor/ryokin)，常見問題請見[常見問題](/zh-tw/labor/faq)。\n\n## 常見問題\n\n**Q. 店長、課長是管理職，就不用付加班費嗎？**\nA. 不會只憑職稱決定。要屬於勞動基準法的管理監督者，須在實態上滿足與經營者一體立場的權限、出退勤的裁量、與地位相稱的待遇這3點。不滿足的話，延長工時、休假日的加成薪資支付義務仍然存在。\n\n**Q. 只要屬於管理監督者，深夜津貼也不用嗎？**\nA. 不是。深夜加成（22點～5點・25%以上），即使是管理監督者也適用。最高法院也判斷，即使符合管理監督者，也能請求深夜加成薪資（ことぶき事件・平成21年12月18日）。年次有給休假同樣須給予、使其取得。\n\n**Q. 被指為「名義上的管理職」，會被追溯到何時？**\nA. 薪資請求權的消滅時效目前為3年（勞動基準法第115條、附則）。管理監督者性被否定時，除了3年份的未支付加成薪資，還可能由法院裁量命令相同額度以內的附加金（第114條）。\n\n**Q. 只要付役職津貼，就能代替加班費嗎？**\nA. 要把役職津貼當作固定加班費（加成薪資的定額支付），必須滿足一般薪資與加成部分可以區分、有不足時精算差額等要件。這與管理監督者性是不同的論點，並非只要付津貼就足夠。\n\n## 本文依據\n\n- 勞動基準法（昭和22年法律第49號）第37條（加成薪資。第1項＝延長工時、休假日，第3項＝深夜25%以上）、第39條（年次有給休假）、第41條第2項（處於監督或管理地位者的適用除外）、第114條（附加金）、第115條、附則（薪資請求權的消滅時效、目前為3年）\n- 管理監督者範圍的行政解釋＝昭和22年9月13日發基第17號、昭和63年3月14日基發第150號（職務內容與責任及權限／勤務態樣＝勞動時間的裁量／待遇3要素）\n- 關於多店舖展開的零售業、餐飲業等店舖的管理監督者範圍適正化＝平成20年9月9日基發0909001號（並非改變基本判斷基準，而是整理否定該性質的要素）\n- 認定即使符合管理監督者也能請求深夜加成薪資的判例＝ことぶき事件・最高法院第二小法庭平成21年12月18日判決\n- 否定店舖店長管理監督者性的裁判例的一般想法＝日本麥當勞事件・東京地方法院平成20年1月28日判決。個別的可否，依情況而判斷各異\n- 深夜加成率、年次有給休假的給予要件，已依厚生勞動省的公布資料確認（2026年9月時點）\n\n本文不替讀者決定該諮詢誰。職稱、權限、待遇的設計，就業規則、薪資規程的整備，深夜加成與年次有給的運用，出勤管理的設計，是社會保險勞務士的業務。個別未支付加班費請求、團體交涉、勞動審判、訴訟，是律師的業務。向四葉社会保険労務士事務所諮詢時的費用請見[報酬金額表](/zh-tw/labor/ryokin)，常見問題請見[常見問題](/zh-tw/labor/faq)。\n\n本文為一般資訊提供。個別情況的判斷，請在面談後由資格者進行。執筆者為[浦松丈二](/zh-tw/about/uramatsu)（社會保險勞務士・行政書士・宅地建物取引士）。",
+        "category": "勞動法基礎",
+        "keywords": [
+          "管理監督者 界線",
+          "名義上管理職 加班費",
+          "深夜加成 管理監督者",
+          "勞動基準法第41條第2項",
+          "日本麥當勞事件 店長",
+          "未支付加班費 追溯 3年"
+        ],
+        "tags": [
+          "管理監督者",
+          "名義上管理職",
+          "加成薪資",
+          "深夜加成",
+          "就業規則",
+          "社會保險勞務士"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "店長、課長是管理職，就不用付加班費嗎？",
+            "answer": "不會只憑職稱決定。要屬於勞動基準法的管理監督者，須在實態上滿足與經營者一體立場的權限、出退勤的裁量、與地位相稱的待遇這3點。不滿足的話，延長工時、休假日的加成薪資支付義務仍然存在。"
+          },
+          {
+            "question": "只要屬於管理監督者，深夜津貼也不用嗎？",
+            "answer": "不是。深夜加成（22點～5點・25%以上），即使是管理監督者也適用。最高法院也判斷，即使符合管理監督者，也能請求深夜加成薪資（ことぶき事件・平成21年12月18日）。年次有給休假同樣須給予、使其取得。"
+          },
+          {
+            "question": "被指為「名義上的管理職」，會被追溯到何時？",
+            "answer": "薪資請求權的消滅時效目前為3年（勞動基準法第115條、附則）。管理監督者性被否定時，除了3年份的未支付加成薪資，還可能由法院裁量命令相同額度以內的附加金（第114條）。"
+          },
+          {
+            "question": "只要付役職津貼，就能代替加班費嗎？",
+            "answer": "要把役職津貼當作固定加班費（加成薪資的定額支付），必須滿足一般薪資與加成部分可以區分、有不足時精算差額等要件。這與管理監督者性是不同的論點，並非只要付津貼就足夠。"
+          }
+        ]
+      },
+      "zh": {
+        "title": "「管理监督者」的界线在哪里？（名义上的管理职与加成、深夜津贴）",
+        "excerpt": "属于劳动基准法上的「管理监督者」，就不受劳动时间、休息、休日规定的拘束，不需要延长工时或休假日加成（第41条第2项）。不过，深夜加成（第37条第3项）与年次有给休假（第39条），即使是管理监督者也适用。而且，是否符合并非由职称决定。要以职务内容与权限、劳动时间的裁量、待遇这3点的实态来判断（昭和22年9月13日发基第17号、昭和63年3月14日基发第150号）。若只付店长、课长役职津贴而不付加班费，一旦实态不符，就可能以「名义上的管理职」被追溯请求未支付的加成薪资。本文整理界线的画法，以及就业规则、薪资的整备。",
+        "content": "**先讲结论**：属于劳动基准法上的「管理监督者」，就不受劳动时间、休息、休日规定的拘束，不需要延长工时或休假日的加成薪资（劳动基准法第41条第2项）。不过，**深夜加成（第37条第3项）与年次有给休假（第39条），即使是管理监督者也适用**。而且，是否符合并非由职称决定。要以**职务内容与权限、劳动时间的裁量、待遇**这3点的实态来判断（昭和22年9月13日发基第17号、昭和63年3月14日基发第150号）。若只以店长、课长等职称付役职津贴而不付加班费，一旦实态不符，就可能以「名义上的管理职」被追溯请求未支付的加成薪资。本文以实务角度，整理界线的画法，以及就业规则、薪资的整备。\n\n「店长有付役职津贴，所以不用付加班费吧？」「课长是管理职，所以深夜津贴也不用吧」——这是中小企业的经营者、人事常问的问题。本页面是为了对职务者付津贴却不付加班费的事业者，整理管理监督者的判断要素、深夜加成与年次有给的处理、追溯风险，以及就业规则的整备。个别未支付加班费请求或诉讼的应对，不在本文范围内。\n\n## 只要是管理监督者，就完全不用付加班费吗？\n\n「管理监督者＝加班费零」并非如此。要把适用除外的与不除外的分开来看。\n\n| 项目 | 管理监督者的处理 |\n|---|---|\n| 法定劳动时间（1天8小时、1周40小时） | 适用除外（没有延长工时的概念） |\n| 延长工时加成（第37条第1项） | 不需要 |\n| 休息、法定休日、休假日加成 | 适用除外 |\n| **深夜加成（第37条第3项・22点～5点）** | **需要（不适用除外）** |\n| **年次有给休假（第39条）** | **需要（不适用除外）** |\n\n劳动基准法第41条第2项规定，对「处于监督或管理地位者」，不适用劳动时间、休息、休日的规定。这里除外的是劳动时间、休息、休日的规定，深夜加成与年次有给休假不包含在内。这与加成薪资的定额支付（固定加班费）也是不同的论点。固定加班费的合法要件，请见[固定加班费有效的要件与差额精算](/zh/labor/column/kotei-zangyodai-tekiho-youken-sagaku-seisan)；拟制劳动时间制，请见[裁量劳动制与本人同意的2024年修正](/zh/labor/column/sairyo-roudo-honnin-doui-2024)。\n\n## 劳基署、法院看什么来判断管理监督者性？\n\n判断是以实态、而非职称来进行。行政解释（昭和22年9月13日发基第17号、昭和63年3月14日基发第150号）与判例，大致以下列3个要素来看。\n\n| 要素 | 所看的内容 |\n|---|---|\n| 职务内容、责任与权限 | 是否处于与经营者一体的立场，对招募、人事、劳务、预算等重要事项握有实质权限；是否参与部门的方针 |\n| 劳动时间的裁量 | 是否能以自己的裁量决定出退勤时刻；是否未受严格的时间管理、迟到早退扣薪 |\n| 待遇 | 是否受到与地位相称的基本薪、役职津贴、奖金等待遇；是否为足以弥补不支付加班费的待遇 |\n\n3项都满足，才较容易被评价为管理监督者。特别是多店铺展开的零售业、餐饮业等店铺的店长，平成20年9月9日基发0909001号整理指出，若有权限实质贫乏、无劳动时间裁量、待遇不足等要素，会朝否定管理监督者性的方向作用。判例中也有把汉堡连锁店店长认定为不属于管理监督者的例子（日本麦当劳事件・东京地方法院平成20年1月28日判决）。\n\n## 为何管理监督者也需要深夜加成与年次有给？\n\n因为劳动基准法第41条第2项所除外的，仅限于劳动时间、休息、休日的规定。规定深夜加成的第37条第3项，是以对深夜业的健康照顾为宗旨，与劳动时间长度的规制分别设置。最高法院也判断，即使是符合管理监督者的劳工，也能依第37条第3项请求深夜加成薪资（ことぶき事件・最高法院平成21年12月18日判决）。因此，让管理监督者在22点到5点的深夜劳动时，必须支付25%以上的深夜加成。年次有给休假（第39条）同样不在适用除外的对象内，须对管理监督者给予并使其取得。\n\n## 被指为名义上的管理职，会有什么追溯风险？\n\n若对只有职称的管理职不付加班费，之后管理监督者性被否定，就可能被追溯请求先前未支付的加成薪资。\n\n- **未支付的延长工时、休假日、深夜加成**：本应支付的加成薪资\n- **消灭时效**：薪资请求权的消灭时效，目前并非5年，而是**3年**（劳动基准法第115条、附则）。可能一次被请求3年份\n- **附加金**：对于加成薪资的未支付，法院可依劳工的请求，命令支付与未支付金额相同额度以内的附加金（第114条）\n\n当役职津贴与实际加班时间不相称时，也可能产生差额。首先掌握实态，并以就业规则、薪资规程的整备来预防，是前提。就业规则的制作义务，请见[就业规则是几人以上的义务](/zh/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo)。\n\n## 就业规则的整备与未支付请求的纠纷应对，各属谁的领域？\n\n管理监督者的相关场面，负责的主体各自不同。\n\n| 事项 | 属谁的领域 |\n|---|---|\n| 职称与权限、待遇的设计，就业规则、薪资规程的整备，深夜加成与年休的运用设计，出勤管理 | **社会保险劳务士**（本事务所） |\n| 个别未支付加班费请求、团体交涉、劳动审判、诉讼 | **律师** |\n| 劳动基准监督署调查（临检）的应对方针建议 | **社会保险劳务士**（对是正劝告的应对、帐簿整备） |\n\n管理监督者性的设计与就业规则的整备，是社会保险劳务士的业务。本事务所负责**职称权限与待遇的整理，就业规则、薪资规程的整备，深夜加成与年次有给的运用，出勤纪录的机制建立**。个别未支付请求、诉讼、团体交涉由律师负责，因此作为不同的立场切分。\n\n## 四葉社会保険労務士事務所能做什么？\n\n位于文京区小日向的四葉社会保険労務士事務所，承办**管理监督者性的实态整理，职称、权限、待遇的设计，就业规则、薪资规程的整备，深夜加成与年次有给的运用设计，出勤管理的设计**。防止职权骚扰措施的义务，请见[防止职权骚扰措施中小企业也是义务](/zh/labor/column/pawahara-boshi-sochi-chusho-kigyo-gimu)；薪资计算的想法，请见[把薪资计算委托给社会保险劳务士，要花多少钱](/zh/labor/column/kyuyo-keisan-soba-sharoushi)。**咨询免费。** 费用请见[报酬金额表](/zh/labor/ryokin)，常见问题请见[常见问题](/zh/labor/faq)。\n\n## 常见问题\n\n**Q. 店长、课长是管理职，就不用付加班费吗？**\nA. 不会只凭职称决定。要属于劳动基准法的管理监督者，须在实态上满足与经营者一体立场的权限、出退勤的裁量、与地位相称的待遇这3点。不满足的话，延长工时、休假日的加成薪资支付义务仍然存在。\n\n**Q. 只要属于管理监督者，深夜津贴也不用吗？**\nA. 不是。深夜加成（22点～5点・25%以上），即使是管理监督者也适用。最高法院也判断，即使符合管理监督者，也能请求深夜加成薪资（ことぶき事件・平成21年12月18日）。年次有给休假同样须给予、使其取得。\n\n**Q. 被指为「名义上的管理职」，会被追溯到何时？**\nA. 薪资请求权的消灭时效目前为3年（劳动基准法第115条、附则）。管理监督者性被否定时，除了3年份的未支付加成薪资，还可能由法院裁量命令相同额度以内的附加金（第114条）。\n\n**Q. 只要付役职津贴，就能代替加班费吗？**\nA. 要把役职津贴当作固定加班费（加成薪资的定额支付），必须满足一般薪资与加成部分可以区分、有不足时精算差额等要件。这与管理监督者性是不同的论点，并非只要付津贴就足够。\n\n## 本文依据\n\n- 劳动基准法（昭和22年法律第49号）第37条（加成薪资。第1项＝延长工时、休假日，第3项＝深夜25%以上）、第39条（年次有给休假）、第41条第2项（处于监督或管理地位者的适用除外）、第114条（附加金）、第115条、附则（薪资请求权的消灭时效、目前为3年）\n- 管理监督者范围的行政解释＝昭和22年9月13日发基第17号、昭和63年3月14日基发第150号（职务内容与责任及权限／勤务态样＝劳动时间的裁量／待遇3要素）\n- 关于多店铺展开的零售业、餐饮业等店铺的管理监督者范围适正化＝平成20年9月9日基发0909001号（并非改变基本判断基准，而是整理否定该性质的要素）\n- 认定即使符合管理监督者也能请求深夜加成薪资的判例＝ことぶき事件・最高法院第二小法庭平成21年12月18日判决\n- 否定店铺店长管理监督者性的裁判例的一般想法＝日本麦当劳事件・东京地方法院平成20年1月28日判决。个别的可否，依情况而判断各异\n- 深夜加成率、年次有给休假的给予要件，已依厚生劳动省的公布资料确认（2026年9月时点）\n\n本文不替读者决定该咨询谁。职称、权限、待遇的设计，就业规则、薪资规程的整备，深夜加成与年次有给的运用，出勤管理的设计，是社会保险劳务士的业务。个别未支付加班费请求、团体交涉、劳动审判、诉讼，是律师的业务。向四葉社会保険労務士事務所咨询时的费用请见[报酬金额表](/zh/labor/ryokin)，常见问题请见[常见问题](/zh/labor/faq)。\n\n本文为一般资讯提供。个别情况的判断，请在面谈后由资格者进行。执笔者为[浦松丈二](/zh/about/uramatsu)（社会保险劳务士・行政书士・宅地建物取引士）。",
+        "category": "劳动法基础",
+        "keywords": [
+          "管理监督者 界线",
+          "名义上管理职 加班费",
+          "深夜加成 管理监督者",
+          "劳动基准法第41条第2项",
+          "日本麦当劳事件 店长",
+          "未支付加班费 追溯 3年"
+        ],
+        "tags": [
+          "管理监督者",
+          "名义上管理职",
+          "加成薪资",
+          "深夜加成",
+          "就业规则",
+          "社会保险劳务士"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "店长、课长是管理职，就不用付加班费吗？",
+            "answer": "不会只凭职称决定。要属于劳动基准法的管理监督者，须在实态上满足与经营者一体立场的权限、出退勤的裁量、与地位相称的待遇这3点。不满足的话，延长工时、休假日的加成薪资支付义务仍然存在。"
+          },
+          {
+            "question": "只要属于管理监督者，深夜津贴也不用吗？",
+            "answer": "不是。深夜加成（22点～5点・25%以上），即使是管理监督者也适用。最高法院也判断，即使符合管理监督者，也能请求深夜加成薪资（ことぶき事件・平成21年12月18日）。年次有给休假同样须给予、使其取得。"
+          },
+          {
+            "question": "被指为「名义上的管理职」，会被追溯到何时？",
+            "answer": "薪资请求权的消灭时效目前为3年（劳动基准法第115条、附则）。管理监督者性被否定时，除了3年份的未支付加成薪资，还可能由法院裁量命令相同额度以内的附加金（第114条）。"
+          },
+          {
+            "question": "只要付役职津贴，就能代替加班费吗？",
+            "answer": "要把役职津贴当作固定加班费（加成薪资的定额支付），必须满足一般薪资与加成部分可以区分、有不足时精算差额等要件。这与管理监督者性是不同的论点，并非只要付津贴就足够。"
+          }
+        ]
+      }
+    }
   }
 ];

@@ -1012,6 +1012,46 @@ const ARTICLES: ArticleSpec[] = [
     localesWithTranslations: ["en", "zh-tw", "zh"],
     hubLinks: ["/souzoku"],
   },
+  {
+    file: "49-shika-gikoujo-kaisetsu-bukken-youken.md",
+    slug: "shika-gikoujo-kaisetsu-bukken-youken",
+    title: "歯科技工所を開くには、どんな物件が要る？──用途地域・構造設備基準と保健所への開設届",
+    publishedAt: "2026-09-10",
+    category: "投資・事業用不動産",
+    excerpt:
+      "歯科技工所の物件で先に効くのは3点です。①用途地域——歯科技工所は診療所と違い、原動機を使う「作業場（工場）」として建築基準法の用途制限を受けうる。②構造設備基準——歯科技工士法施行規則第13条の2が、十平方メートル以上の面積・適切な照明換気・じんあいや微生物汚染の防止を求める。③開設届——歯科技工士法第21条は開設後10日以内に保健所（都道府県知事等）へ届け出る事後届出。東京都文京区の宅地建物取引士兼行政書士が、契約前に不動産の側から確認できることを条文と保健所の案内から整理します。",
+    keywords: [
+      "歯科技工所 物件",
+      "歯科技工所 開設届 保健所 10日以内",
+      "歯科技工士法施行規則 13条の2 構造設備基準",
+      "歯科技工所 用途地域 工場 作業場",
+      "歯科技工所 換気 防塵 給排水",
+    ],
+    tags: ["事業用不動産", "許認可", "用途地域", "歯科技工"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/toushi", "/office"],
+  },
+  {
+    file: "50-souzoku-shido-mochibun-ichitei-doro-baikyaku.md",
+    slug: "souzoku-shido-mochibun-ichitei-doro-baikyaku",
+    title: "相続した『私道の持分（位置指定道路）』は、どう売る？──宅地との一体売却・通行掘削承諾・評価",
+    publishedAt: "2026-09-10",
+    category: "相続",
+    excerpt:
+      "相続した私道の持分は、原則として前面の宅地と一体として売ります。持分だけを切り離すと買主の使い道が狭まり価格が下がりやすいからです。売却では、買主が求める通行・掘削の承諾を私道の共有者から取れるか、位置指定道路（建築基準法第42条第1項第5号）か2項道路（同第2項）かで説明が変わること、私道の相続税評価（財産評価基本通達24）は不特定多数が通るか特定の者だけかで扱いが分かれること、を押さえます。東京都文京区の宅地建物取引士兼行政書士が、条文と国の資料から整理します。",
+    keywords: [
+      "私道 持分 相続 売却",
+      "位置指定道路 建築基準法 42条1項5号",
+      "2項道路 セットバック 42条2項",
+      "私道 通行 掘削 承諾書",
+      "私道 評価 財産評価基本通達24 30%",
+    ],
+    tags: ["相続", "私道", "位置指定道路", "売却"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/souzoku"],
+  },
 ];
 
 function toPlainText(md: string): string {
