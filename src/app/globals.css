@@ -220,6 +220,24 @@ html {
   --color-focus: color-mix(in srgb, var(--color-primary) 40%, transparent);
 
   /* タイポ：見出し Noto Serif JP／本文 Noto Sans JP（Zen Kaku はフォールバック） */
-  --font-serif: var(--font-noto-serif-jp), serif;
-  --font-sans: var(--font-noto-sans-jp), sans-serif;
+  --font-serif: var(--font-noto-serif-jp, "Yotsuba Serif Fallback"), serif;
+  --font-sans: var(--font-noto-sans-jp, "Yotsuba Sans Fallback"), sans-serif;
+}
+
+/* Match next/font 16.2.10 fallback metrics before the deferred font sheet arrives. */
+@font-face {
+  font-family: "Yotsuba Serif Fallback";
+  src: local("Times New Roman");
+  ascent-override: 95.04%;
+  descent-override: 23.62%;
+  line-gap-override: 0%;
+  size-adjust: 121.11%;
+}
+@font-face {
+  font-family: "Yotsuba Sans Fallback";
+  src: local("Arial");
+  ascent-override: 110.73%;
+  descent-override: 27.49%;
+  line-gap-override: 0%;
+  size-adjust: 104.76%;
 }

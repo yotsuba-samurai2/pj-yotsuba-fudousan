@@ -9,7 +9,7 @@ import ScatteredIcons from "@/components/ui/ScatteredIcons";
 import { fetchAllTranslations } from "@/lib/getTranslationData";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { stripSrEntities } from "@/lib/shared/sr-strip";
-import { fontVariables } from "@/app/fonts";
+import { DeferredBrandFonts } from "@/components/ui/DeferredBrandFonts";
 import { SUPPORTED_LOCALES, isValidLocale } from "@/lib/locale";
 
 /**
@@ -105,8 +105,9 @@ export default async function RootLayout({
   }
 
   return (
-    <html lang={locale} className={fontVariables}>
+    <html lang={locale}>
       <body className="relative bg-surface text-text antialiased">
+        <DeferredBrandFonts />
         <GoogleAnalytics />
         <ScatteredIcons />
         <LanguageProvider initialLocale={locale}>
