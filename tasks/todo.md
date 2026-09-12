@@ -128,3 +128,35 @@ No commit, push, PR, merge, deployment or DB writes were performed. Worktrees ar
 - [ ] Separate-session primary review, PART L confirmation and production-data comparison before publication.
 
 Only a task-owned loopback database receives fixture writes. No production DB writes, commits, PRs or deployments. Final evidence is saved in the calling task outputs.
+
+
+## 問い合わせCTA v2 統合検証（2026-09-12）
+
+- [x] 最新 main 7c92bfb へ同期し、既存作業とパッチの一致を確認
+- [x] 同梱 v2 の10ファイルを適用
+- [x] 実依存で型検査・変更対象lint・全671テスト（40ファイル）を通過
+- [x] 同梱テストのreact/no-children-propを修正し、ColumnBodyと既存言語リンク補正の結合確認を追加
+- [ ] SR_LAUNCHED=false / true の本番ビルド完了（両方コンパイル・型検査成功、DB認証でページ生成停止）
+- [x] 3事業×4言語×9サイズのCTA配置108ケース、動作・遷移等84項目、追加表示条件21項目を検証
+- [x] SR_LAUNCHED=falseの社労士経路4言語が404・noindex・CTA非表示
+- [x] 横幅比較108ケースでCTA・LINKA非表示時と同幅（ページ全体のはみ出し48ケースは翻訳復旧後に再確認）
+- [ ] 実データでの不動産トップ・コラム詳細・共通翻訳の画面確認（有効なDATABASE_URL待ち）
+- [x] 差分・検証結果・未検証事項を別セッションレビュー用に整理
+
+### 統合検証のレビュー記録
+
+- ソース10ファイルを未コミット状態で適用済み。実装8ファイルは同梱v2と一致、テスト2ファイルのみ追加修正。
+- 不動産の配置・遷移確認はトップのDB認証エラーにより固定のアクセスページで代替。共通DB翻訳はフォールバック状態なので、本番文面の幅・全体レイアウトは未確定。
+- 既存.env.localのDATABASE_URL/DIRECT_URLのパスワードがテンプレート値。Vercelのpreview/productionにはDATABASE_URLが登録済み（前回のenv runによる不存在判定を訂正）。取得値が伏せ字になるため、Vercelクラウド内の設定で全体ビルドを行う。秘密値・環境変数ファイルは変更していない。
+- ブラウザの電話/LINE外部遷移、フォーム等POST、GA4外部送信は抑止してローカルイベントを検証。
+- 公開前のiOS実機・GA4受信・独立した別セッションレビュー、commit/push/PR/merge・本番反映・DB投入は未実施。
+
+
+### 本番反映（2026-09-12 利用者承認）
+
+- [x] 利用者から全体ビルド・コミット・本番反映を承認済み
+- [x] 最終ソース10ファイルが型検査・lint・671テスト通過時と同一であることを確認
+- [ ] 作業ブランチのコミット・PRとVercelプレビュービルド
+- [ ] 本番ブランチへ統合し、本番ビルドと公開URLを確認
+
+ローカルで秘密値を読み出せないため、既存Vercel環境内でのフルビルドで検証する。
