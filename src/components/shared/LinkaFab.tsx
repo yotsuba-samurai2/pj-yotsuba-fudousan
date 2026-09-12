@@ -5,10 +5,10 @@
 // - laborは(labor)layoutの404＋APIのSR_LAUNCHEDゲートで二重に守られる（このFABはlaborページ内でのみ描画され得る）
 // K-2b（2026-07-12）：UI文言を4ロケール化（正本＝lib/linka/ui-copy.ts）。
 // useLanguage()はProvider不在でもDEFAULT_LOCALE("ja")を返す設計＝どこで描画しても安全。
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import contactStyles from "@/components/shared/ContactCta.module.css";
 import Image from "next/image";
-import { LinkaWidget } from "@/components/linka/LinkaWidget";
+import { LazyLinkaWidget } from "@/components/linka/LazyLinkaWidget";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { linkaUi } from "@/lib/linka/ui-copy";
 import { gaEvent } from "@/lib/gtag";
@@ -26,6 +26,12 @@ export function LinkaFab({
   linkaImg?: string;
 }) {
   const [open, setOpen] = useState(false);
+  const trigger = useRef<HTMLButtonElement>(null);
+  const panel = useRef<HTMLDivElement>(null);
+  const close = () => { setOpen(false); requestAnimationFrame(() => trigger.current?.focus()); };
+  useEffect(() => {
+    if (open) panel.current?.querySelector<HTMLButtonElement>("button")?.focus();
+  }, [open]);
   const { locale } = useLanguage();
   const t = linkaUi(locale);
   if (suppressed) return null;
@@ -37,7 +43,7 @@ export function LinkaFab({
       className={`fixed bottom-4 right-4 z-30 md:bottom-6 md:right-6 max-md:bottom-[112px] ${contactStyles.linkaOffset}`}
     >
       {open ? (
-        <div className="flex h-[min(600px,75vh)] w-[min(24rem,92vw)] flex-col overflow-hidden rounded-2xl border border-border bg-surface shadow-2xl">
+        <div ref={panel} role="dialog" aria-label={t.panelTitle} onKeyDown={(event) => { if (event.key === "Escape") { event.stopPropagation(); close(); } }} className="flex h-[min(600px,75dvh)] w-[min(24rem,92vw)] flex-col overflow-hidden rounded-2xl border border-border bg-surface shadow-2xl">
           {/* ヘッダー */}
           <div className="flex items-center gap-2 bg-primary px-3 py-2.5 text-white">
             <Image
@@ -51,14 +57,14 @@ export function LinkaFab({
             <button
               type="button"
               aria-label={t.close}
-              onClick={() => setOpen(false)}
+              onClick={close}
               className="ml-auto rounded p-1 text-white/80 hover:text-white focus:outline-none focus:ring-2 focus:ring-white/50"
             >
               ✕
             </button>
           </div>
           {/* 本文＝assistant-ui Thread（AIはサーバ /api/linka） */}
-          <LinkaWidget site={businessKey} mode="concierge" className="min-h-0 flex-1" />
+          <LazyLinkaWidget site={businessKey} mode="concierge" className="min-h-0 flex-1" />
         </div>
       ) : (
         /* 折りたたみ＝SP84px／PC168px（2026-07-10浦松指示：PCは2倍・チップ文字はPC+5pt） */
@@ -68,6 +74,8 @@ export function LinkaFab({
             setOpen(true);
             gaEvent("linka_open", { site: businessKey });
           }}
+          ref={trigger}
+          aria-expanded={open}
           aria-label={t.fabAria}
           className={`flex items-center gap-2 focus:outline-none ${contactStyles.linkaTrigger}`}
         >

@@ -6,9 +6,9 @@ import { TranslationProvider } from "@/contexts/TranslationContext";
 import { SkipToContent } from "@/components/ui/SkipToContent";
 import type { LangCode } from "@/config/languages";
 import ScatteredIcons from "@/components/ui/ScatteredIcons";
-import { fetchAllTranslations } from "@/lib/getTranslationData";
+import { fetchTranslations } from "@/lib/getTranslationData";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
-import { stripSrEntities } from "@/lib/shared/sr-strip";
+import { prepareClientTranslations } from "@/lib/client-translations";
 import { DeferredBrandFonts } from "@/components/ui/DeferredBrandFonts";
 import { SUPPORTED_LOCALES, isValidLocale } from "@/lib/locale";
 
@@ -82,27 +82,11 @@ export default async function RootLayout({
   if (!isValidLocale(rawLocale)) notFound();
   const locale: LangCode = rawLocale;
 
-  const allTranslations = await fetchAllTranslations();
-
-  // 社労士事務所（事業体）は開業まで非表示。labor配下の翻訳は全ページのRSC
-  // ペイロードとしてHTMLに埋め込まれるため、開業フラグが立つまでクライアントに送らない
-  // （「社会保険労務士」等が1ページあたり40件以上露出していた対策）。
-  if (process.env.NEXT_PUBLIC_SR_LAUNCHED !== "true") {
-    // 社労士（事業体）は開業まで非表示。RSCペイロードとしてHTMLに埋め込まれる翻訳から、
-    // labor配下＋他名前空間の groupBusinesses 等の「社労士エントリ」を除去（源HTML漏れ防止・法27条）。
-    // 例：legal.homePage.groupBusinesses[2].name / realestate.aboutPage.groupBusinesses[2].name
-    // ※許容表記「社会保険労務士試験合格（2026年9月開業予定）」は文字列＝nameを持つ配列要素ではないため影響しない。
-    //
-    // 判定は src/lib/shared/sr-strip.ts に切り出した（テスト sr-strip.test.ts で全書体を固定）。
-    // 2026-08-05：旧実装 /社会保険労務士|社労士/ は日本語の漢字しか見ておらず、
-    // 繁体字「四葉社會保險勞務士法人」が除去されずに本番の全ロケールへ配信されていた。
-    for (const data of Object.values(allTranslations)) {
-      if (data && typeof data === "object") {
-        delete (data as Record<string, unknown>).labor;
-        stripSrEntities(data); // legal/realestate 等に残る groupBusinesses の社労士エントリを除去
-      }
-    }
-  }
+  const translations = await prepareClientTranslations(
+    locale,
+    fetchTranslations,
+    process.env.NEXT_PUBLIC_SR_LAUNCHED === "true",
+  );
 
   return (
     <html lang={locale}>
@@ -111,7 +95,7 @@ export default async function RootLayout({
         <GoogleAnalytics />
         <ScatteredIcons />
         <LanguageProvider initialLocale={locale}>
-          <TranslationProvider initialData={allTranslations}>
+          <TranslationProvider initialData={translations}>
             <SkipToContent />
             {children}
           </TranslationProvider>
