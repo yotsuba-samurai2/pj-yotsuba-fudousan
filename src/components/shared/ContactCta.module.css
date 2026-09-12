@@ -1,0 +1,153 @@
+/* 既存テーマ変数を利用。末尾までスクロールしてもフッターを固定バーで隠さない。 */
+.spacer {
+  height: var(--yotsuba-contact-height, calc(64px + env(safe-area-inset-bottom, 0px)));
+}
+.sticky {
+  position: fixed;
+  inset: auto 0 0;
+  z-index: 30;
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
+  gap: 8px;
+  padding: 4px 12px calc(4px + env(safe-area-inset-bottom, 0px));
+  border-top: 1px solid var(--color-border);
+  background: var(--color-surface, white);
+  box-shadow: 0 -3px 18px rgb(0 0 0 / 0.06);
+}
+.primary,
+.secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 0;
+  min-height: 56px;
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+.primary {
+  color: white;
+  background: var(--color-primary);
+}
+.secondary {
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  background: var(--color-surface, white);
+}
+.primary:hover { filter: brightness(0.95); }
+.secondary:hover { border-color: var(--color-primary); }
+.primary:focus-visible,
+.secondary:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
+}
+.primary svg,
+.secondary svg { flex: 0 0 auto; }
+.topic,
+.desktopContact { display: none; }
+
+/* 固定バーの内側へフォーカス先・アンカーが隠れないようスクロール余白を確保。
+   ローカルクラスを:has()内に残し、CSS Modulesのスコープを維持する。 */
+:global(html):has(.sticky) {
+  scroll-padding-bottom: calc(var(--yotsuba-contact-height, 64px) + 48px);
+}
+
+/* 任意のCookie/UIバナーは表示中のみdata-contact-cta-obstruction="true"を付ける。 */
+:global(body:has([data-contact-cta-obstruction="true"]:not([hidden]))) .sticky,
+:global(body:has([role="dialog"][aria-modal="true"]:not([hidden]):not([aria-hidden="true"]):not([data-state="closed"]), dialog[open])) .sticky,
+:global(body:has([data-yotsuba-linka-open="true"])) .sticky {
+  display: none;
+}
+/* LINKAの開閉は従来どおり。開いている間はCTAを消し、パネルを画面内へ戻す。 */
+.linkaOffset[data-yotsuba-linka-open="true"] {
+  bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+}
+
+.inline {
+  margin-block: 32px;
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  background: var(--color-surface, white);
+  padding: 20px;
+  color: var(--color-text);
+}
+.inlineHeading { margin: 0; font-size: 16px; line-height: 1.6; font-weight: 700; }
+.inlineBody { margin: 8px 0 0; font-size: 14px; line-height: 1.8; }
+.inlineActions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px; }
+.inlineActions .primary,
+.inlineActions .secondary { min-height: 44px; }
+
+@media (max-width: 767px) {
+  /* キーボード表示中に本文・入力欄を覆わない。 */
+  :global(body:has(input:focus, textarea:focus, select:focus, [contenteditable="true"]:focus)) .sticky {
+    display: none;
+  }
+  .sticky ~ .linkaOffset[data-yotsuba-linka-open="false"] {
+    bottom: calc(var(--yotsuba-contact-height, 64px) + 16px);
+  }
+}
+@media (min-width: 768px) {
+  .spacer { height: 0; }
+  .sticky {
+    inset: auto 24px 24px auto;
+    grid-template-columns: 1fr;
+    width: 240px;
+    max-width: calc(100vw - 48px);
+    padding: 12px;
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgb(0 0 0 / 0.1);
+  }
+  .topic { display: block; margin: 0; font-size: 12px; line-height: 1.5; text-align: center; }
+  .primary,
+  .secondary { min-height: 44px; }
+  .phone { display: none; }
+  .desktopContact { display: inline-flex; }
+  /* DOM上で後続の既存LINKAだけを退避。CTAがないページの配置は変えない。 */
+  .sticky ~ .linkaOffset[data-yotsuba-linka-open="false"] {
+    bottom: calc(var(--yotsuba-contact-height, 154px) + 40px);
+  }
+  .linkaOffset[data-yotsuba-linka-open="true"] { bottom: 24px; }
+}
+/* 横向きスマホ・高さの低いPCでは、既存の大きなLINKA画像をそのまま
+   持ち上げると画面上端からはみ出す。小さい操作ボタンに切り替える。 */
+@media (max-height: 540px) {
+  .linkaOffset .linkaAvatar { width: 56px; height: 56px; flex: 0 0 56px; }
+  .linkaOffset .linkaChip {
+    max-width: calc(100vw - 120px);
+    padding: 6px 12px;
+    font-size: 12px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+  }
+}
+@media (min-width: 768px) and (max-height: 540px) {
+  .sticky {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    width: 360px;
+    right: 16px;
+    bottom: 12px;
+  }
+  .topic { display: none; }
+  .sticky ~ .linkaOffset[data-yotsuba-linka-open="false"] {
+    bottom: calc(var(--yotsuba-contact-height, 70px) + 28px);
+  }
+}
+.linkaTrigger:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 4px;
+  border-radius: 12px;
+}
+
+@media print {
+  .sticky,
+  .spacer,
+  .linkaOffset,
+  .inline { display: none !important; }
+}

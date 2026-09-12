@@ -1,11 +1,12 @@
 "use client";
 // フェーズK-4｜LINKA 追従FAB（コーポレート3サイト・開くとassistant-uiのThread＝LinkaWidget）
 // - 【1ページ1LINKA】不動産トップは本文の60秒診断がLINKA＝suppressedでFABなし（TenantLayoutShellが制御）
-// - パネル内に代表LINEを内包（LINE専用の別FABは置かない）。意匠正本＝wireframe_linka-floating.html
+// - パネル内の代表LINEを維持。2026-09-12：追従CTAと共存し、パネル表示中はCTAを退避。
 // - laborは(labor)layoutの404＋APIのSR_LAUNCHEDゲートで二重に守られる（このFABはlaborページ内でのみ描画され得る）
 // K-2b（2026-07-12）：UI文言を4ロケール化（正本＝lib/linka/ui-copy.ts）。
 // useLanguage()はProvider不在でもDEFAULT_LOCALE("ja")を返す設計＝どこで描画しても安全。
 import { useState } from "react";
+import contactStyles from "@/components/shared/ContactCta.module.css";
 import Image from "next/image";
 import { LinkaWidget } from "@/components/linka/LinkaWidget";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -31,7 +32,10 @@ export function LinkaFab({
 
   return (
     // z-30＝モバイルメニュー(z-40)より下＝メニューを開いてもLINKAが言語切替を覆わない。SPはbottom-[112px]で上へ退避
-    <div className="fixed bottom-4 right-4 z-30 md:bottom-6 md:right-6 max-md:bottom-[112px]">
+    <div
+      data-yotsuba-linka-open={open ? "true" : "false"}
+      className={`fixed bottom-4 right-4 z-30 md:bottom-6 md:right-6 max-md:bottom-[112px] ${contactStyles.linkaOffset}`}
+    >
       {open ? (
         <div className="flex h-[min(600px,75vh)] w-[min(24rem,92vw)] flex-col overflow-hidden rounded-2xl border border-border bg-surface shadow-2xl">
           {/* ヘッダー */}
@@ -65,12 +69,12 @@ export function LinkaFab({
             gaEvent("linka_open", { site: businessKey });
           }}
           aria-label={t.fabAria}
-          className="flex items-center gap-2 focus:outline-none"
+          className={`flex items-center gap-2 focus:outline-none ${contactStyles.linkaTrigger}`}
         >
-          <span className="rounded-full border border-border bg-surface px-3 py-1.5 text-xs text-text-muted shadow-sm md:px-4 md:py-2 md:text-[17px]">
+          <span className={`rounded-full border border-border bg-surface px-3 py-1.5 text-xs text-text-muted shadow-sm md:px-4 md:py-2 md:text-[17px] ${contactStyles.linkaChip}`}>
             {t.fabChip}
           </span>
-          <span className="grid h-[84px] w-[84px] place-items-center overflow-hidden rounded-full bg-primary shadow-lg ring-2 ring-primary md:h-[168px] md:w-[168px]">
+          <span className={`grid h-[84px] w-[84px] place-items-center overflow-hidden rounded-full bg-primary shadow-lg ring-2 ring-primary md:h-[168px] md:w-[168px] ${contactStyles.linkaAvatar}`}>
             <Image
               src={linkaImg}
               alt="LINKA"
