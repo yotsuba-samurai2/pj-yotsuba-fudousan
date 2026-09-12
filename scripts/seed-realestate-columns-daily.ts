@@ -1092,6 +1092,46 @@ const ARTICLES: ArticleSpec[] = [
     localesWithTranslations: ["en", "zh-tw", "zh"],
     hubLinks: ["/souzoku"],
   },
+  {
+    file: "53-hikyojusha-buyer-torihiki-kakunin-hanshuho.md",
+    slug: "hikyojusha-buyer-torihiki-kakunin-hanshuho",
+    title: "中国語圏の非居住バイヤーの取引時確認（犯収法）｜宅建業者の本人確認と実質的支配者",
+    publishedAt: "2026-09-12",
+    category: "投資・事業用不動産",
+    excerpt:
+      "非居住のバイヤーでも、宅地建物の売買を締結・代理・媒介する宅建業者は犯罪収益移転防止法第4条の取引時確認を省けません。本人特定事項・取引の目的・職業または事業の内容を確かめ、法人が買主なら実質的支配者まで確認し、確認記録・取引記録を7年間保存します。東京都文京区の宅地建物取引士兼行政書士が、宅建業者自身が犯収法で行う取引時確認の実務を条文と国の資料から整理します。",
+    keywords: [
+      "犯罪収益移転防止法 宅建業者 取引時確認",
+      "非居住者 買主 本人確認 パスポート",
+      "実質的支配者 議決権 25% 法人買主",
+      "疑わしい取引の届出 宅建業者 国土交通大臣",
+      "確認記録 取引記録 7年 保存",
+    ],
+    tags: ["投資・事業用不動産", "非居住者", "犯収法", "中国語圏"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/toushi"],
+  },
+  {
+    file: "54-tokku-minpaku-bukken-youken-nintei.md",
+    slug: "tokku-minpaku-bukken-youken-nintei",
+    title: "特区民泊（国家戦略特区・外国人滞在施設経営事業）の物件要件と認定の流れ",
+    publishedAt: "2026-09-12",
+    category: "投資・事業用不動産",
+    excerpt:
+      "特区民泊（国家戦略特別区域外国人滞在施設経営事業）に使える物件は、自治体が認める区域・用途地域か、一居室おおむね25㎡以上で台所・浴室・便所・洗面などの設備が整うか、近隣への周知と苦情対応の体制を置けるかの3点でほぼ決まります。滞在は原則2泊3日以上。東京都文京区の宅地建物取引士兼行政書士が、物件の用途地域・居室面積・設備を条文と自治体の資料から整理します。",
+    keywords: [
+      "特区民泊 物件 要件",
+      "国家戦略特別区域法 13条 外国人滞在施設経営事業",
+      "特区民泊 居室 床面積 25平方メートル",
+      "特区民泊 2泊3日 用途地域 大田区",
+      "特区民泊 民泊 旅館業 違い",
+    ],
+    tags: ["事業用不動産", "許認可", "民泊", "用途地域"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/toushi", "/office"],
+  },
 ];
 
 function toPlainText(md: string): string {
