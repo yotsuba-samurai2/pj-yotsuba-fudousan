@@ -91,9 +91,10 @@ export const EXTRA_CATEGORY_LABELS: Record<string, Record<LangCode, string>> = {
  *
  * 2026-07-27 浦松承認：行政書士フォームには賃貸・売買・管理を出さない（不動産側の用件のため）。
  * 「社会保険・労務」は2026年9月開業まで現状維持のご指示につき、両事業とも従来どおり残す。
- * labor 事業（/labor/*・非公開）は定義を置かず CATEGORY_ORDER_DEFAULT ＝従来の並びのまま。
+ * labor 事業は社会保険・労務を先頭にする（2026-09-13改善計画）。
  */
 export const CATEGORY_ORDER_BY_BUSINESS: Record<string, string[]> = {
+  labor: ["labor", "subsidy", "visa", "bukken", "rental", "sale", "management", "other"],
   realestate: [
     "bukken",
     "rental",

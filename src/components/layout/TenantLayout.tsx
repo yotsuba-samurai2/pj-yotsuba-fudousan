@@ -345,7 +345,7 @@ function ServicesMegaMenu({
                     <Link
                       href={cat.hubHref}
                       onClick={() => setOpen(false)}
-                      className="text-sm font-bold text-ink transition-colors hover:text-primary"
+                      className="text-sm font-bold text-ink transition-colors hover:text-primary-dark"
                     >
                       {resolveNavLabel(cat.categoryLabel, locale)}
                     </Link>
@@ -357,7 +357,7 @@ function ServicesMegaMenu({
                             <Link
                               href={child.href}
                               onClick={() => setOpen(false)}
-                              className="text-sm text-text-muted transition-colors hover:text-primary"
+                              className="text-sm text-text-muted transition-colors hover:text-primary-dark"
                             >
                               {resolveNavLabel(child.label, locale)}
                             </Link>
@@ -373,7 +373,7 @@ function ServicesMegaMenu({
                     key={link.href}
                     href={link.href}
                     onClick={() => setOpen(false)}
-                    className="text-xs font-medium text-text-muted transition-colors hover:text-primary"
+                    className="text-xs font-medium text-text-muted transition-colors hover:text-primary-dark"
                   >
                     {resolveNavLabel(link.label, locale)}
                   </Link>
@@ -735,17 +735,17 @@ function TenantFooter({ businessKey }: { businessKey: string }) {
             <p className="cta-gradient-text mt-1 text-xs font-medium tracking-[0.15em]">
               {t(`${businessKey}.tagline`)}
             </p>
-            <p className="mt-4 text-sm leading-relaxed text-text/50">
+            <p className="mt-4 text-sm leading-relaxed text-text-muted">
               {t(`${businessKey}.footerDescription1`)}
               <br />
               {t(`${businessKey}.footerDescription2`)}
             </p>
-            <address className="mt-4 text-xs not-italic leading-relaxed text-text/50">
+            <address className="mt-4 text-xs not-italic leading-relaxed text-text-muted">
               {t("address.postalCode")}
               <br />
               {t("address.full")}
             </address>
-            <div className="mt-3 text-xs text-text/50">
+            <div className="mt-3 text-xs text-text-muted">
               {/* 2026-08-14：フッターの電話は全ページに出るのに未計測だった。
                   tel: リンク7か所のうち計測されていたのは CtaBandActions と
                   MobileStickyBar の2か所だけで、GA4の cta_tel_click が28日間0件
@@ -821,7 +821,7 @@ function TenantFooter({ businessKey }: { businessKey: string }) {
                 // 「予約」は士業ドットコムの予約ページへ遷移する自社導線のため、
                 // 外部SNSのブランド色ではなくテナントの主色（--color-primary）を用いる。
                 // route group が割り当てる値を読むのでテナント非依存（不動産＝緑系／行政書士＝別色）。
-                className="flex h-9 items-center gap-1.5 rounded-lg border border-border bg-surface px-3 text-primary transition-colors hover:border-primary/40 hover:bg-primary/5"
+                className="flex h-9 items-center gap-1.5 rounded-lg border border-border bg-surface px-3 text-primary-dark transition-colors hover:border-primary/40 hover:bg-primary/5"
                 aria-label={t("common.footer.samuraiName")}
               >
                 <CalendarDays size={16} />
@@ -848,7 +848,7 @@ function TenantFooter({ businessKey }: { businessKey: string }) {
                     <li key={`${href}-${i}`}>
                       <Link
                         href={href}
-                        className="group inline-flex items-center text-sm text-text/50 transition-colors duration-200"
+                        className="group inline-flex items-center text-sm text-text-muted transition-colors duration-200"
                       >
                         <span className="gradient-line mr-2 inline-block h-px w-0 transition-all duration-200 group-hover:w-3" />
                         <span className="footer-link-text">{label}</span>
@@ -948,10 +948,10 @@ function TenantFooter({ businessKey }: { businessKey: string }) {
       {/* Legal */}
       <div className="border-t border-border">
         <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-          <p className="text-[11px] font-medium text-text/40">
+          <p className="text-[11px] font-medium text-text-muted">
             {t("common.footer.legalHeadquartersLine")}
           </p>
-          <div className="mt-3 space-y-1 text-[10px] leading-relaxed text-text/30">
+          <div className="mt-3 space-y-1 text-[10px] leading-relaxed text-text-muted">
             <p>{t("common.footer.realestateRegistration")}</p>
             <p>{t("common.footer.realestateRepRegistration")}</p>
             <p>{t("common.footer.legalRepRegistration")}</p>
@@ -1003,10 +1003,10 @@ function TenantFooter({ businessKey }: { businessKey: string }) {
       {/* Copyright */}
       <div className="border-t border-border">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 py-6 sm:flex-row sm:px-6 lg:px-8">
-          <p className="text-xs text-text/30">
+          <p className="text-xs text-text-muted">
             &copy; {currentYear} {t("common.footer.copyright")}
           </p>
-          <div className="flex items-center gap-6 text-xs text-text/30">
+          <div className="flex items-center gap-6 text-xs text-text-muted">
             <Link
               href="/privacy-policy"
               className="group/legal transition-colors duration-200"

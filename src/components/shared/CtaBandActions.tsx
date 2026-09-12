@@ -47,7 +47,7 @@ export function CtaBandActions(p: Props) {
           <button
             type="button"
             onClick={copyTemplate}
-            className="mt-3 inline-flex min-h-[36px] items-center rounded-lg border border-primary px-4 py-1.5 text-xs font-semibold text-primary transition-colors hover:bg-primary hover:text-white focus:outline-none focus:ring-2 focus:ring-focus"
+            className="mt-3 inline-flex min-h-[36px] items-center rounded-lg border border-primary px-4 py-1.5 text-xs font-semibold text-primary-dark transition-colors hover:bg-primary-dark hover:text-white focus:outline-none focus:ring-2 focus:ring-focus"
           >
             {copied ? p.copiedLabel : p.copyLabel}
           </button>
@@ -60,7 +60,7 @@ export function CtaBandActions(p: Props) {
         <Link
           href={p.lineHref}
           onClick={() => gaEvent("cta_line_click", { location: "cta_band" })}
-          className="inline-flex min-h-[44px] items-center rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-focus"
+          className="inline-flex min-h-[44px] items-center rounded-lg bg-primary-dark px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-focus"
         >
           {p.lineLabel}
         </Link>
@@ -68,7 +68,7 @@ export function CtaBandActions(p: Props) {
         <Link
           href={p.contactHref}
           onClick={() => gaEvent("cta_contact_click", { location: "cta_band" })}
-          className="inline-flex min-h-[44px] items-center rounded-lg border border-border px-5 py-3 text-sm font-medium text-text-muted transition-colors hover:border-primary hover:text-primary"
+          className="inline-flex min-h-[44px] items-center rounded-lg border border-border px-5 py-3 text-sm font-medium text-text-muted transition-colors hover:border-primary hover:text-primary-dark"
         >
           {p.contactLabel}
         </Link>
@@ -76,7 +76,7 @@ export function CtaBandActions(p: Props) {
         <a
           href={p.telHref}
           onClick={() => gaEvent("cta_tel_click", { location: "cta_band" })}
-          className="inline-flex min-h-[44px] items-center rounded-lg border border-border px-5 py-3 text-sm font-medium text-text-muted transition-colors hover:border-primary hover:text-primary"
+          className="inline-flex min-h-[44px] items-center rounded-lg border border-border px-5 py-3 text-sm font-medium text-text-muted transition-colors hover:border-primary hover:text-primary-dark"
         >
           {p.telLabel}
         </a>

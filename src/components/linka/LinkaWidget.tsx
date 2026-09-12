@@ -243,7 +243,7 @@ export function LinkaWidget({
                         onClick={() => setInqType(t.key)}
                         className={
                           "flex-1 rounded-lg border px-2 py-2 text-xs " +
-                          (inqType === t.key ? "border-primary bg-primary text-white" : "border-stone-300 bg-white text-stone-700")
+                          (inqType === t.key ? "border-primary bg-primary-dark text-white" : "border-stone-300 bg-white text-stone-700")
                         }
                       >
                         <div className="font-semibold">{t.label}</div>
@@ -255,7 +255,7 @@ export function LinkaWidget({
                     type="button"
                     onClick={makeDraft}
                     disabled={drafting}
-                    className="w-full rounded-lg border border-primary py-2.5 text-sm font-semibold text-primary disabled:opacity-40"
+                    className="w-full rounded-lg border border-primary py-2.5 text-sm font-semibold text-primary-dark disabled:opacity-40"
                   >
                     {drafting ? "下書きを作成しています…" : "下書きを作成"}
                   </button>
@@ -265,7 +265,7 @@ export function LinkaWidget({
                         {draft}
                       </div>
                       <div className="flex items-center gap-3">
-                        <button type="button" onClick={copy} className="rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-white">
+                        <button type="button" onClick={copy} className="rounded-lg bg-primary-dark px-4 py-2 text-sm font-semibold text-white">
                           {copied ? "コピーしました" : "本文をコピー"}
                         </button>
                         <span className="text-xs text-stone-500">送信はご自身から。実運用ではオプトイン取得後の会員のみに照会します。</span>
@@ -286,7 +286,7 @@ export function LinkaWidget({
                     href={selectedCard.profileUrl}
                     target="_blank"
                     rel="noreferrer"
-                    className="block w-full rounded-lg bg-primary py-2.5 text-center text-sm font-semibold text-white"
+                    className="block w-full rounded-lg bg-primary-dark py-2.5 text-center text-sm font-semibold text-white"
                   >
                     samurai.co.jp で相談を予約する
                   </a>
@@ -322,7 +322,7 @@ export function LinkaWidget({
                     }
                     className="flex-1 resize-none rounded-xl border border-stone-300 p-3 text-sm leading-relaxed focus:outline-none focus:ring-2 focus:ring-focus"
                   />
-                  <ComposerPrimitive.Send className="flex-shrink-0 rounded-xl bg-primary px-4 py-3 text-sm font-semibold text-white disabled:opacity-40">
+                  <ComposerPrimitive.Send className="flex-shrink-0 rounded-xl bg-primary-dark px-4 py-3 text-sm font-semibold text-white disabled:opacity-40">
                     {t.send}
                   </ComposerPrimitive.Send>
                 </ComposerPrimitive.Root>

@@ -45,7 +45,7 @@ export function ContactForm({ thanksPath = "/thanks", business = "realestate" }:
   const lang = locale as LangCode;
 
   // 2026-07-27：相談カテゴリを事業別に出し分ける。
-  // 定義が無い事業（labor 等）は CATEGORY_ORDER_DEFAULT ＝従来の並びで挙動を変えない。
+  // 定義が無い事業は CATEGORY_ORDER_DEFAULT ＝従来の並びで挙動を変えない。
   const categoryKeys = CATEGORY_ORDER_BY_BUSINESS[business] ?? CATEGORY_ORDER_DEFAULT;
 
   // ラベルの解決順：bukken（property-intake）→ 新カテゴリ（contact-intake）→ Firestore辞書。
