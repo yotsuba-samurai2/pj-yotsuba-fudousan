@@ -143,7 +143,7 @@ export function getLaborPlanFaqs(locale: LangCode) {
   const bands = LABOR_PRICING.bands.map(b => `${b.min}–${b.max}: ${money(b.monthly)}`).join(" / ");
   const setup = LABOR_SETUP_COPY[locale];
   const from = (amount: number) => locale === "en" ? `${p.from}${money(amount)}` : `${money(amount)}${p.from}`;
-  const setupAnswer = `${p.setup}: ${setup.standardTitle} ${money(LABOR_PRICING.initialSetupStandard)} (${p.tax}). ${setup.standardCondition} ${setup.standardItems.join(" / ")}. ${setup.migrationTitle} ${from(LABOR_PRICING.initialSetupWithMigrationFrom)} (${p.tax}). ${setup.migrationCondition} ${setup.migrationItems.join(" / ")}. ${setup.quoteNote} ${c.setupDetail}`;
+  const setupAnswer = `${p.setup}: ${setup.standardTitle} ${money(LABOR_PRICING.initialSetupStandard)} (${p.tax}). ${setup.standardWaiverNote} ${setup.standardCondition} ${setup.standardItems.join(" / ")}. ${setup.migrationTitle} ${from(LABOR_PRICING.initialSetupWithMigrationFrom)} (${p.tax}). ${setup.migrationCondition} ${setup.migrationItems.join(" / ")}. ${setup.quoteNote} ${c.setupDetail}`;
   const answers = [
     c.included.join(" / "),
     `${bands} (${p.monthly}, ${p.tax}). ${p.additional(10, money(LABOR_PRICING.additionalRecipientFee))}. ${c.quote}`,

@@ -3,6 +3,7 @@ import type { LangCode } from "@/config/languages";
 type SetupCopy = {
   heading: string;
   standardTitle: string;
+  standardWaiverNote: string;
   standardCondition: string;
   standardItems: readonly string[];
   migrationTitle: string;
@@ -23,6 +24,7 @@ export const LABOR_SETUP_COPY: Record<LangCode, SetupCopy> = {
   ja: {
     heading: "初期導入は、状況に合わせて2つの区分から",
     standardTitle: "標準導入",
+    standardWaiverNote: "（一定期間の顧問契約で無料になる場合もあります）",
     standardCondition: "新規導入・既存データの移行なし・標準的な給与と勤怠の場合。",
     standardItems: ["freee基本設定（権限・社会保険情報を含む）", "従業員登録", "通常の手当・通勤費の設定", "LINE打刻の設定", "初回給与計算・基本操作説明"],
     migrationTitle: "運用設計・移行あり",
@@ -37,6 +39,7 @@ export const LABOR_SETUP_COPY: Record<LangCode, SetupCopy> = {
   en: {
     heading: "Two setup options to suit your current operations",
     standardTitle: "Standard setup",
+    standardWaiverNote: "(The fee may be waived under an advisory contract for a specified period.)",
     standardCondition: "For a new implementation without data migration, using standard payroll and attendance arrangements.",
     standardItems: ["Basic freee configuration, including permissions and social insurance information", "Employee registration", "Standard allowances and commuting expenses", "LINE clock-in setup", "First payroll calculation and basic operation guidance"],
     migrationTitle: "Workflow design and migration",
@@ -51,6 +54,7 @@ export const LABOR_SETUP_COPY: Record<LangCode, SetupCopy> = {
   "zh-tw": {
     heading: "依目前狀況選擇兩種初期導入方式",
     standardTitle: "標準導入",
+    standardWaiverNote: "（簽訂一定期間的顧問契約時，也可能免收此費用。）",
     standardCondition: "適用於全新導入、無既有資料移轉，且薪資與出勤制度屬於標準設定的情況。",
     standardItems: ["freee基本設定（含權限與社會保險資料）", "員工登錄", "一般津貼與通勤費設定", "LINE打卡設定", "首次薪資計算與基本操作說明"],
     migrationTitle: "流程設計・資料移轉",
@@ -65,6 +69,7 @@ export const LABOR_SETUP_COPY: Record<LangCode, SetupCopy> = {
   zh: {
     heading: "按目前情况选择两种初期导入方式",
     standardTitle: "标准导入",
+    standardWaiverNote: "（签订一定期限的顾问合同时，也可能免收此费用。）",
     standardCondition: "适用于全新导入、无既有数据迁移，且工资与出勤制度属于标准设置的情况。",
     standardItems: ["freee基本设置（含权限与社会保险资料）", "员工登记", "一般津贴与通勤费设置", "LINE打卡设置", "首次工资计算与基本操作说明"],
     migrationTitle: "流程设计・数据迁移",

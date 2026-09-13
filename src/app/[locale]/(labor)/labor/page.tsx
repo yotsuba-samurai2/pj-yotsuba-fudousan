@@ -7,10 +7,11 @@ import Image from "next/image";
 //   ・一体提供を示唆する語（ワンストップ／一站式／one-stop 等）は全言語で不使用（第6条）。
 //   ・「どの事務所が、何を担いますか？」の節は分離受任の明示（別の契約で）を4言語とも維持。
 //   ・国数表記（4カ国等）は不使用。「中国や台湾、タイに駐在」と国名で書く。
-import { LaborPlanPricing, LaborPlanPriceSummary, LaborPlanResponsibility, LaborPlanResponsibilities } from "@/components/labor/LaborPlanPricing";
+import { LaborPlanPricing } from "@/components/labor/LaborPlanPricing";
 import { LaborSetupComparison } from "@/components/labor/LaborSetupComparison";
 import { LABOR_SERVICE_COPY, getLaborPlanFaqs } from "@/lib/labor/service-copy";
-import { LABOR_PLAN_COPY } from "@/lib/labor/plan-copy";
+import { LABOR_ENGAGEMENT_COPY } from "@/lib/labor/engagement-copy";
+import { LaborEngagementCtas, LaborStandaloneServices, LaborEngagementComparison, LaborSharedWorkflow } from "@/components/labor/LaborEngagement";
 import { Faq } from "@/components/shared/Faq";
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo";
@@ -480,13 +481,13 @@ const COPY: Record<LangCode, Copy> = { ja: JA, en: EN, "zh-tw": ZH_TW, zh: ZH };
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getRequestLocale();
-  const c = LABOR_SERVICE_COPY[locale];
+  const c = LABOR_ENGAGEMENT_COPY[locale];
   return buildPageMetadata({
     businessKey: "labor",
     title: c.title,
-    description: c.intro,
+    description: c.description,
     path: "/labor",
-    keywords: ["社労士 文京区", "人事部丸投げ", "外国人雇用", "中国語 社労士", "freee 社労士", "グループホーム 社労士", "障害福祉 社労士"],
+    keywords: ["社労士 文京区", "入退社 手続き", "給与計算 顧問契約なし", "外国人雇用", "中国語 社労士", "freee 社労士", "グループホーム 社労士", "障害福祉 社労士"],
     locale,
     absoluteTitle: true,
   });
@@ -496,44 +497,43 @@ export default async function LaborTopPage() {
   const locale = await getRequestLocale();
   const c = COPY[locale] ?? JA;
   const v = LABOR_SERVICE_COPY[locale];
+  const e = LABOR_ENGAGEMENT_COPY[locale];
   return (
     <>
-      {/* 主訴求と会社側の責任を近接表示 */}
-      <section className="relative">
-        <div className="relative mx-auto max-w-6xl overflow-hidden rounded-b-3xl sm:mt-4 sm:rounded-3xl">
-          <Image
-            src="/hero/labor-top-16x9.webp"
-            alt={c.heroAlt}
-            width={1600}
-            height={900}
-            className="h-[52vw] max-h-[440px] w-full object-cover sm:h-auto"
-            sizes="(min-width: 1152px) 1152px, 100vw"
-            loading="eager"
-            fetchPriority="high"
-          />
-          <div className="md:absolute md:inset-0 md:flex md:items-center">
-            <div className="bg-surface p-5 md:m-8 md:max-w-xl md:rounded-2xl md:bg-white/30 md:p-7 md:backdrop-blur-sm">
-              <h1 className="font-serif text-2xl font-bold text-ink sm:text-3xl">{v.hero}</h1>
-              <p className="mt-3 text-sm leading-relaxed text-text sm:text-base">
-                <strong>{v.sub}</strong>
-              </p>
-            </div>
+      <section className="mx-auto max-w-6xl px-4 pt-4 sm:pt-6">
+        <div className="grid overflow-hidden rounded-3xl bg-primary-tint md:grid-cols-[1.15fr_1fr]">
+          <div className="flex flex-col justify-center p-5 sm:p-8 lg:p-10">
+            <p className="font-serif text-[1.375rem] font-bold leading-snug text-balance text-[#b52a6b] sm:text-[1.75rem]">{e.tagline}</p>
+            <h1 className="mt-4 font-serif text-3xl font-bold leading-snug text-balance text-ink lg:text-4xl">{e.hero}</h1>
+            <p className="mt-5 text-sm leading-relaxed text-text sm:text-base">{e.lead}</p>
+            <div className="mt-6"><LaborEngagementCtas locale={locale} showAdvisory /></div>
           </div>
+          <Image src="/hero/labor-top-16x9.webp" alt={c.heroAlt} width={1600} height={900}
+            className="h-48 w-full object-cover sm:h-64 md:h-full" sizes="(min-width: 1152px) 520px, (min-width: 768px) 45vw, 100vw"
+            loading="eager" fetchPriority="high" />
         </div>
       </section>
 
-      <div className="mx-auto max-w-5xl px-4">
-        <div className="mt-4"><LaborPlanResponsibility locale={locale} /></div>
-        <section className="mt-8 space-y-4 rounded-2xl border-l-4 border-primary bg-primary-tint p-5">
-          <h2 className="font-serif text-xl font-semibold text-ink">{LABOR_PLAN_COPY[locale].name}</h2>
-          <p className="leading-relaxed text-text">{v.intro}</p>
-          <LaborPlanPriceSummary locale={locale} emphasizePayroll />
+      <div className="mx-auto max-w-6xl px-4 lg:pr-72">
+        <div className="mt-12"><LaborStandaloneServices locale={locale} /></div>
+        <div className="mt-14"><LaborEngagementComparison locale={locale} /></div>
+        <div className="mt-12"><LaborSharedWorkflow locale={locale} /></div>
+        <section id="advisory-plan" className="mt-12 scroll-mt-24 space-y-6">
+          <LaborPlanPricing locale={locale} />
           <LaborSetupComparison locale={locale} headingLevel="h3" />
-          <LaborPlanResponsibilities locale={locale} />
-          <div className="flex flex-wrap gap-3">
-            <Link href={addLocalePrefix("/labor/ryokin", locale)} className="rounded-lg bg-primary px-4 py-3 text-white">{v.viewPlan}</Link>
-            <Link href={addLocalePrefix("/labor/contact", locale)} className="rounded-lg border border-primary px-4 py-3 text-primary">{v.consult}</Link>
+          <p className="text-sm leading-relaxed text-text">{v.ai}</p>
+          <div className="grid gap-6 md:grid-cols-2">
+            {[
+              { title: v.payrollTitle, body: v.payroll },
+              { title: v.socialTitle, body: v.social },
+              { title: v.chineseTitle, body: v.chineseBody },
+              { title: v.recruitmentTitle, body: v.recruitmentBoundary },
+            ].map(service => <section key={service.title} className="space-y-3">
+              <h3 className="font-serif text-lg font-semibold text-ink">{service.title}</h3>
+              <p className="text-sm leading-relaxed text-text">{service.body}</p>
+            </section>)}
           </div>
+          <Link href={addLocalePrefix("/labor/ryokin", locale)} className="inline-block text-primary underline">{c.feeLink1}</Link>
         </section>
         <section className="mt-10 rounded-2xl border border-border p-5">
           <p className="text-sm font-medium text-primary">{v.industryLabel}</p>
@@ -555,15 +555,7 @@ export default async function LaborTopPage() {
             <Link className="underline" href={addLocalePrefix("/legal/services/shogai-fukushi", locale)}>{v.ghLegalLink}</Link>
           </div>
         </section>
-        <section className="mt-10 space-y-3">
-          <h2 className="font-serif text-xl font-semibold text-ink">freee + LINE</h2>
-          <p className="leading-relaxed text-text">{LABOR_PLAN_COPY[locale].system}</p>
-          <p className="leading-relaxed text-text">{v.ai}</p>
-        </section>
-        {[{title:v.payrollTitle,body:v.payroll},{title:v.socialTitle,body:v.social},{title:v.chineseTitle,body:v.chineseBody},{title:v.recruitmentTitle,body:v.recruitmentBoundary}].map(s => <section key={s.title} className="mt-10">
-          <h2 className="font-serif text-xl font-semibold text-ink">{s.title}</h2>
-          <p className="mt-3 leading-relaxed text-text">{s.body}</p>
-        </section>) }
+
 
         {/* こんなときにご相談ください */}
         <section className="mt-10">
@@ -670,10 +662,9 @@ export default async function LaborTopPage() {
           </ul>
         </section>
 
-        <div className="mt-10"><LaborPlanPricing locale={locale} /></div>
-        <p className="mt-4"><Link className="text-primary underline" href={addLocalePrefix("/labor/ryokin",locale)}>{c.feeLink1}</Link></p>
-        <div className="mt-10"><Faq bare items={getLaborPlanFaqs(locale).slice(0,4)} heading={v.faq} ariaLabel={v.faq} /></div>
+        <div className="mt-10"><Faq bare items={[...e.faqs, getLaborPlanFaqs(locale)[7]]} heading={v.faq} ariaLabel={v.faq} /></div>
 
+        <div className="mt-6"><LaborEngagementCtas locale={locale} /></div>
         <p className="mt-10 text-xs leading-relaxed text-text-muted">{c.disclaimer}</p>
 
         {/* 導線 */}
