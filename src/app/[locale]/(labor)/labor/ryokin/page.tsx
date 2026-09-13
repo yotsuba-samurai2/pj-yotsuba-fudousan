@@ -7,6 +7,7 @@ import { getRequestLocale } from "@/lib/getRequestLocale";
 import { addLocalePrefix } from "@/lib/locale";
 import { Breadcrumb } from "@/components/shared/Breadcrumb";
 import { CtaBand } from "@/components/shared/CtaBand";
+import { ZehitomoLinks } from "@/components/labor/ZehitomoLinks";
 import { Faq } from "@/components/shared/Faq";
 import { CrossLinkBanner } from "@/components/shared/CrossLinkBanner";
 import { getCrossLinks } from "@/lib/cross-links";
@@ -84,5 +85,6 @@ export default async function Page() {
       <p className="mt-4 text-sm leading-relaxed text-text-muted">{c.disclaimer}</p>
     </div>
     <div className="mx-auto max-w-3xl px-4"><CtaBand businessKey="labor" /></div>
+    {locale === "ja" && <ZehitomoLinks />}
   </>;
 }
