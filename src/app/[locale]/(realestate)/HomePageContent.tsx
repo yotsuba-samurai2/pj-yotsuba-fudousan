@@ -457,7 +457,7 @@ export default async function HomePageContent() {
               </span>
               <div className="mt-2 font-serif text-lg font-semibold leading-snug text-ink">{p.title}</div>
               <p className="mt-2 text-sm leading-relaxed text-text-muted">{p.body}</p>
-              <div className="mt-3 text-sm font-medium text-primary">→ {p.anchor}</div>
+              <div className="mt-3 text-sm font-medium text-primary-dark">→ {p.anchor}</div>
             </Link>
           ))}
         </section>
@@ -496,7 +496,7 @@ export default async function HomePageContent() {
                 href="https://www.samurai.co.jp/samurai/reserve/uramatsu-joji"
                 target="_blank"
                 rel="noreferrer"
-                className="text-primary underline"
+                className="text-primary-dark underline"
               >
                 士業ドットコム
               </a>
@@ -505,7 +505,7 @@ export default async function HomePageContent() {
                 href="https://www.wikidata.org/wiki/Q139738129"
                 target="_blank"
                 rel="noreferrer"
-                className="text-primary underline"
+                className="text-primary-dark underline"
               >
                 Wikidata
               </a>
@@ -520,7 +520,7 @@ export default async function HomePageContent() {
               <h2 className="font-serif text-lg font-semibold text-ink">{item.q}</h2>
               <p className="mt-1.5 text-sm leading-relaxed text-text">
                 {item.a}{" "}
-                <Link href={addLocalePrefix(c.qaHrefs[i], locale)} className="text-primary underline">
+                <Link href={addLocalePrefix(c.qaHrefs[i], locale)} className="text-primary-dark underline">
                   {item.anchor}
                 </Link>
               </p>
@@ -529,7 +529,7 @@ export default async function HomePageContent() {
         </section>
 
         {/* 導線 */}
-        <nav aria-label="site links" className="mt-10 flex flex-wrap gap-x-4 gap-y-1 text-sm text-primary">
+        <nav aria-label="site links" className="mt-10 flex flex-wrap gap-x-4 gap-y-1 text-sm text-primary-dark">
           {c.nav.map((n) => (
             <Link key={n.href} href={addLocalePrefix(n.href, locale)} className="underline">
               {n.label}
@@ -556,7 +556,7 @@ export default async function HomePageContent() {
                     <span className="text-xs text-text-muted">
                       {col.date.replace(/-/g, ".")}
                     </span>
-                    <p className="mt-0.5 text-sm font-medium text-ink group-hover:text-primary">
+                    <p className="mt-0.5 text-sm font-medium text-ink group-hover:text-primary-dark">
                       {col.title}
                     </p>
                   </Link>
@@ -565,7 +565,7 @@ export default async function HomePageContent() {
             </ul>
             <Link
               href={addLocalePrefix("/column", locale)}
-              className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary hover:text-primary-dark"
+              className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary-dark hover:text-primary-dark"
             >
               {columnsCopy.all}
             </Link>

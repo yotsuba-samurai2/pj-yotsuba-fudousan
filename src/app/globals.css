@@ -52,7 +52,7 @@ html {
 .cta-gradient-text {
   position: relative;
   z-index: 1;
-  color: var(--color-primary);
+  color: var(--color-primary-dark);
   transition: color 0.3s ease;
 }
 
@@ -114,7 +114,7 @@ html {
 .header-nav-link:hover,
 .header-nav-active {
   background: none;
-  color: var(--color-primary);
+  color: var(--color-primary-dark);
 }
 
 /* ─── Footer link hover（主色文字） ─── */
@@ -124,7 +124,7 @@ html {
 .group:hover .footer-link-text,
 .group\/legal:hover .footer-link-text {
   background: none;
-  color: var(--color-primary);
+  color: var(--color-primary-dark);
   font-weight: 500;
 }
 
@@ -190,7 +190,8 @@ html {
   background: var(--color-primary);
 }
 
-@theme {
+/* tenantThemeVars references these names at runtime, outside Tailwind's CSS graph. */
+@theme static {
   /* テナント主色（DESIGN.md §2.2・route group で --color-primary に割当＝A-2） */
   --brand-realestate: #07913a;
   --brand-realestate-dark: #067a31;
@@ -201,7 +202,9 @@ html {
   --brand-labor: #167c6b;
   --brand-labor-dark: #0f6153;
   --brand-labor-tint: #e6f1ee; /* 開業まで生成対象外・定義のみ */
+}
 
+@theme {
   /* 既定＝不動産（各 group layout で上書き＝A-2） */
   --color-primary: var(--brand-realestate);
   --color-primary-dark: var(--brand-realestate-dark);

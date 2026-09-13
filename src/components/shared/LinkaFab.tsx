@@ -45,7 +45,7 @@ export function LinkaFab({
       {open ? (
         <div ref={panel} role="dialog" aria-label={t.panelTitle} onKeyDown={(event) => { if (event.key === "Escape") { event.stopPropagation(); close(); } }} className="flex h-[min(600px,75dvh)] w-[min(24rem,92vw)] flex-col overflow-hidden rounded-2xl border border-border bg-surface shadow-2xl">
           {/* ヘッダー */}
-          <div className="flex items-center gap-2 bg-primary px-3 py-2.5 text-white">
+          <div className="flex items-center gap-2 bg-primary-dark px-3 py-2.5 text-white">
             <Image
               src={linkaImg}
               alt="LINKA"
@@ -82,7 +82,7 @@ export function LinkaFab({
           <span className={`rounded-full border border-border bg-surface px-3 py-1.5 text-xs text-text-muted shadow-sm md:px-4 md:py-2 md:text-[17px] ${contactStyles.linkaChip}`}>
             {t.fabChip}
           </span>
-          <span className={`grid h-[84px] w-[84px] place-items-center overflow-hidden rounded-full bg-primary shadow-lg ring-2 ring-primary md:h-[168px] md:w-[168px] ${contactStyles.linkaAvatar}`}>
+          <span className={`grid h-[84px] w-[84px] place-items-center overflow-hidden rounded-full bg-primary-dark shadow-lg ring-2 ring-primary md:h-[168px] md:w-[168px] ${contactStyles.linkaAvatar}`}>
             <Image
               src={linkaImg}
               alt="LINKA"
