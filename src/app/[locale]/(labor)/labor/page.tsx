@@ -11,7 +11,11 @@ import { LaborPlanPricing } from "@/components/labor/LaborPlanPricing";
 import { LaborSetupComparison } from "@/components/labor/LaborSetupComparison";
 import { LABOR_SERVICE_COPY, getLaborPlanFaqs } from "@/lib/labor/service-copy";
 import { LABOR_ENGAGEMENT_COPY } from "@/lib/labor/engagement-copy";
-import { LaborEngagementCtas, LaborStandaloneServices, LaborEngagementComparison, LaborSharedWorkflow } from "@/components/labor/LaborEngagement";
+import { LaborEngagementCtas, LaborEngagementComparison } from "@/components/labor/LaborEngagement";
+import { LaborTopHero, LaborRequestMethods } from "@/components/labor/LaborTopIntro";
+import warmStyles from "@/components/labor/LaborWarm.module.css";
+import { LaborWorkflowBanner } from "@/components/labor/LaborWorkflow";
+import { LABOR_TOP_COPY } from "@/lib/labor/top-copy";
 import { Faq } from "@/components/shared/Faq";
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo";
@@ -500,26 +504,12 @@ export default async function LaborTopPage() {
   const e = LABOR_ENGAGEMENT_COPY[locale];
   return (
     <>
-      <section className="mx-auto max-w-6xl px-4 pt-4 sm:pt-6">
-        <div className="grid overflow-hidden rounded-3xl bg-primary-tint md:grid-cols-[1.15fr_1fr]">
-          <div className="flex flex-col justify-center p-5 sm:p-8 lg:p-10">
-            <p className="font-serif text-[1.375rem] font-bold leading-snug text-balance text-[#b52a6b] sm:text-[1.75rem]">{e.tagline}</p>
-            <h1 className="mt-4 font-serif text-3xl font-bold leading-snug text-balance text-ink lg:text-4xl">{e.hero}</h1>
-            <p className="mt-5 text-sm leading-relaxed text-text sm:text-base">{e.lead}</p>
-            <div className="mt-6"><LaborEngagementCtas locale={locale} showAdvisory /></div>
-            <p className="mt-3 text-sm font-semibold text-ink">{e.consultationNote}</p>
-          </div>
-          <Image src="/hero/labor-top-16x9.webp" alt={c.heroAlt} width={1600} height={900}
-            className="h-48 w-full object-cover sm:h-64 md:h-full" quality={60}
-            sizes="(min-width: 1152px) 520px, (min-width: 768px) calc((100vw - 32px) / 2.15), calc(100vw - 32px)"
-            loading="eager" fetchPriority="high" />
-        </div>
-      </section>
+      <LaborTopHero locale={locale} />
 
-      <div className="mx-auto max-w-6xl px-4 lg:pr-72">
-        <div className="mt-12"><LaborStandaloneServices locale={locale} /></div>
+      <div className={warmStyles.content}>
+        <LaborRequestMethods locale={locale} />
+        <LaborWorkflowBanner locale={locale} />
         <div className="mt-14"><LaborEngagementComparison locale={locale} /></div>
-        <div className="mt-12"><LaborSharedWorkflow locale={locale} /></div>
         <section id="advisory-plan" className="mt-12 scroll-mt-24 space-y-6">
           <LaborPlanPricing locale={locale} />
           <LaborSetupComparison locale={locale} headingLevel="h3" />
@@ -597,7 +587,7 @@ export default async function LaborTopPage() {
         <section className="mt-10 flex flex-col items-start gap-4 rounded-2xl border border-border bg-surface p-5 sm:flex-row">
           <Image
             src="/staff/uramatsu.webp"
-            alt="四葉社会保険労務士事務所 代表 浦松丈二"
+            alt={LABOR_TOP_COPY[locale].portraitAlt}
             width={160}
             height={213}
             sizes="(min-width: 640px) 160px, 128px"
@@ -670,7 +660,7 @@ export default async function LaborTopPage() {
         <p className="mt-10 text-xs leading-relaxed text-text-muted">{c.disclaimer}</p>
 
         {/* 導線 */}
-        <nav aria-label="サイト内導線" className="mt-10 flex flex-wrap gap-x-4 gap-y-1 text-sm text-primary">
+        <nav aria-label={LABOR_TOP_COPY[locale].nav} className="mt-10 flex flex-wrap gap-x-4 gap-y-1 text-sm text-primary">
           <Link href={addLocalePrefix("/labor/ryokin", locale)} className="underline">{c.navFee}</Link>
           <Link href={addLocalePrefix("/labor/nagare", locale)} className="underline">{c.navFlow}</Link>
           <Link href={addLocalePrefix("/labor/faq", locale)} className="underline">{c.navFaq}</Link>

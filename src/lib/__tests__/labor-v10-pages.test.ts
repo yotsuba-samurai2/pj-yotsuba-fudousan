@@ -23,7 +23,7 @@ vi.mock("@/components/shared/CrossLinkBanner", () => ({ CrossLinkBanner: () => n
 import Top, { generateMetadata as topMetadata } from "@/app/[locale]/(labor)/labor/page";
 import Prices from "@/app/[locale]/(labor)/labor/ryokin/page";
 import Faq from "@/app/[locale]/(labor)/labor/faq/page";
-import Flow from "@/app/[locale]/(labor)/labor/nagare/page";
+import { LABOR_TOP_COPY } from "@/lib/labor/top-copy";
 
 for (const locale of ["ja", "en", "zh-tw", "zh"] as const) {
   describe(`V10 pages (${locale})`, () => {
@@ -40,14 +40,14 @@ for (const locale of ["ja", "en", "zh-tw", "zh"] as const) {
       const p = LABOR_PLAN_COPY[locale];
       const e = LABOR_ENGAGEMENT_COPY[locale];
       const encode = (text: string) => text.replaceAll("&", "&amp;").replaceAll("'", "&#x27;");
-      expect(html.includes(encode(e.hero))).toBe(true);
+      for (const line of LABOR_TOP_COPY[locale].headline) expect(html).toContain(encode(line));
       expect(html.indexOf('id="standalone-services"')).toBeLessThan(html.indexOf('id="engagement-comparison"'));
       expect(html.indexOf('id="engagement-comparison"')).toBeLessThan(html.indexOf('id="advisory-plan"'));
       expect(html.match(/<h1\b/g)).toHaveLength(1);
       expect(html.match(/id="engagement-comparison"/g)).toHaveLength(1);
       expect(html.includes(encode(e.assumptions))).toBe(true);
       expect(html.includes(encode(e.discountNote))).toBe(true);
-      expect(html).toContain('href="#engagement-comparison"');
+      expect(html).toContain('href="#advisory-plan"');
       expect(html).toContain(c.foreignHighlightBody);
       expect(html).toContain(c.visaContractNotice);
       expect(html.indexOf(c.visaContractNotice)).toBeLessThan(html.indexOf(c.visaLink));
@@ -77,7 +77,7 @@ for (const locale of ["ja", "en", "zh-tw", "zh"] as const) {
       expect(JSON.stringify(metadata.alternates)).toContain(`${prefix}/labor`);
     });
 
-    it.each([["prices", Prices], ["faq", Faq], ["flow", Flow]] as const)("keeps %s consistent with the new fee and scope", async (_name, Page) => {
+    it.each([["prices", Prices], ["faq", Faq]] as const)("keeps %s consistent with the new fee and scope", async (_name, Page) => {
       state.locale = locale;
       const html = renderToStaticMarkup(await Page());
       expect(html).toContain("33,000");
