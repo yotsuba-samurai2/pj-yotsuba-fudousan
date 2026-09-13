@@ -553,8 +553,8 @@ function TenantHeader({ businessKey, columnLocales }: { businessKey: string; col
                 alt={t(`${businessKey}.name`)}
                 width={businessKey === "labor" ? 5020 : 260}
                 height={businessKey === "labor" ? 713 : 72}
-                sizes={businessKey === "labor" ? "(min-width: 640px) 395px, 282px" : undefined}
-                className="h-10 w-auto sm:h-14"
+                sizes={businessKey === "labor" ? "(min-width: 640px) 395px, (min-width: 370px) 282px, calc(100vw - 88px)" : undefined}
+                className={businessKey === "labor" ? "h-auto w-[min(282px,calc(100vw-88px))] sm:h-14 sm:w-auto" : "h-10 w-auto sm:h-14"}
                 priority
               />
             </Link>
