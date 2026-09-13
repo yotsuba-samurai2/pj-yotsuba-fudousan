@@ -1,0 +1,79 @@
+{
+  "labor": {
+    "name": "四葉社会保険労務士事務所",
+    "description": "社会保険・労務管理・助成金申請",
+    "tagline": "企業の「人」に関するお困りごとを解決。",
+    "nav": {
+      "home": "ホーム",
+      "about": "事務所概要",
+      "column": "コラム",
+      "contact": "お問い合わせ",
+      "services": "サービス"
+    },
+    "footerDescription1": "社会保険・労務管理・助成金申請を",
+    "footerDescription2": "トータルサポートします。",
+    "footerNav": {
+      "other": {
+        "title": "その他",
+        "contact": "お問い合わせ"
+      },
+      "office": {
+        "about": "事務所概要",
+        "title": "事務所情報",
+        "column": "コラム"
+      },
+      "services": {
+        "rules": "就業規則作成",
+        "title": "サービス",
+        "payroll": "給与計算",
+        "subsidy": "助成金申請",
+        "socialInsurance": "社会保険・労働保険"
+      }
+    }
+  },
+  "legal": {
+    "name": "四葉行政書士事務所",
+    "description": "相続・遺言・信託・補助金申請、在留資格・ビザ、法務手続き"
+  },
+  "realestate": {
+    "name": "四葉不動産",
+    "description": "不動産賃貸・売買・管理"
+  },
+  "common": {
+    "booking": "予約",
+    "current": "現在",
+    "currentSite": "現在のサイト",
+    "skipToContent": "メインコンテンツにスキップ",
+    "navigation": {
+      "mainNav": "メインナビゲーション",
+      "openMenu": "メニューを開く",
+      "closeMenu": "メニューを閉じる",
+      "mobileMenu": "モバイルメニュー",
+      "showGroupBusinesses": "グループ事業を表示"
+    },
+    "footer": {
+      "terms": "利用規約",
+      "copyright": "四葉グループ All rights reserved.",
+      "samuraiName": "士業ドットコム",
+      "privacyPolicy": "プライバシーポリシー",
+      "managedServices": "運営サービス",
+      "samuraiDescription": "士業の予約・マッチングプラットフォーム",
+      "legalRepRegistration": "四葉行政書士事務所 代表行政書士 浦松丈二　登録番号：第25087022号",
+      "legalHeadquartersLine": "運営本部：四葉グループ（本部・東京都文京区、代表・浦松丈二）",
+      "realestateRegistration": "四葉不動産株式会社　免許番号：東京都知事（1）第113304号",
+      "realestateRepRegistration": "四葉不動産 代表取締役・専任宅建士 浦松丈二　宅地建物取引士登録番号：（東京）第293544号"
+    }
+  },
+  "address": {
+    "postalCode": "〒112-0006",
+    "full": "東京都文京区小日向４丁目２－５ 小日向安田ビル ２０３",
+    "phone": "03-6161-9428"
+  },
+  "brand": {
+    "groupName": "四葉グループ",
+    "groupNameEn": "YOTSUBA GROUP"
+  },
+  "representative": {
+    "srExamNote": ""
+  }
+}

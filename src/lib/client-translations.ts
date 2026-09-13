@@ -1,5 +1,6 @@
 import type { LangCode } from "@/config/languages";
 import { stripSrEntities } from "@/lib/shared/sr-strip";
+import { withLayoutTranslations } from "@/lib/layout-translations";
 
 type Dictionary = Record<string, unknown>;
 export type ClientTranslations = Partial<Record<LangCode, Dictionary>>;
@@ -12,7 +13,7 @@ export async function prepareClientTranslations(
 ): Promise<ClientTranslations> {
   const locales: LangCode[] = locale === "ja" ? ["ja"] : [locale, "ja"];
   const entries = await Promise.all(locales.map(async (language) => {
-    const dictionary = structuredClone(await fetchDictionary(language));
+    const dictionary = withLayoutTranslations(language, structuredClone(await fetchDictionary(language)));
     if (!srLaunched) {
       delete dictionary.labor;
       stripSrEntities(dictionary);

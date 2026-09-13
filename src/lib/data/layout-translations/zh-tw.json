@@ -1,0 +1,79 @@
+{
+  "labor": {
+    "name": "四葉社會保險勞務士事務所",
+    "description": "社會保險・勞務管理・助成金申請",
+    "tagline": "解決企業與「人」相關的一切困擾。",
+    "nav": {
+      "home": "首頁",
+      "about": "事務所概況",
+      "column": "專欄",
+      "contact": "聯絡我們",
+      "services": "服務內容"
+    },
+    "footerDescription1": "為您提供社會保險・勞務管理・",
+    "footerDescription2": "助成金申請的全方位支援。",
+    "footerNav": {
+      "other": {
+        "title": "其他",
+        "contact": "聯絡我們"
+      },
+      "office": {
+        "about": "事務所概況",
+        "title": "事務所資訊",
+        "column": "專欄"
+      },
+      "services": {
+        "rules": "就業規則編製",
+        "title": "服務內容",
+        "payroll": "薪資核算",
+        "subsidy": "助成金申請",
+        "socialInsurance": "社會保險・勞動保險"
+      }
+    }
+  },
+  "legal": {
+    "name": "四葉行政書士事務所",
+    "description": "補助金申請、在留資格・簽證、法務手續"
+  },
+  "realestate": {
+    "name": "四葉不動産",
+    "description": "不動產租賃・買賣・管理"
+  },
+  "common": {
+    "booking": "預約",
+    "current": "目前",
+    "currentSite": "目前站點",
+    "skipToContent": "跳轉到主要內容",
+    "navigation": {
+      "mainNav": "主導航",
+      "openMenu": "開啟選單",
+      "closeMenu": "關閉選單",
+      "mobileMenu": "行動端選單",
+      "showGroupBusinesses": "顯示集團業務"
+    },
+    "footer": {
+      "terms": "使用條款",
+      "copyright": "四葉グループ All rights reserved.",
+      "samuraiName": "士業ドットコム",
+      "privacyPolicy": "隱私政策",
+      "managedServices": "營運服務",
+      "samuraiDescription": "專業士業的預約與媒合平台",
+      "legalRepRegistration": "四葉行政書士事務所 代表行政書士 浦松丈二　登記號：第25087022號",
+      "legalHeadquartersLine": "營運總部：四葉グループ（總部・東京都文京區、代表・浦松丈二）",
+      "realestateRegistration": "四葉不動産株式會社　許可證號：東京都知事（1）第113304號",
+      "realestateRepRegistration": "四葉不動産 代表董事・專任不動產交易士 浦松丈二　不動產交易士登記號：（東京）第293544號"
+    }
+  },
+  "address": {
+    "postalCode": "〒112-0006",
+    "full": "東京都文京區小日向４丁目２－５ 小日向安田ビル ２０３",
+    "phone": "03-6161-9428"
+  },
+  "brand": {
+    "groupName": "四葉グループ",
+    "groupNameEn": "YOTSUBA GROUP"
+  },
+  "representative": {
+    "srExamNote": ""
+  }
+}
