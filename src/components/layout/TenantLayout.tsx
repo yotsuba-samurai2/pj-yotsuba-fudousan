@@ -551,8 +551,9 @@ function TenantHeader({ businessKey, columnLocales }: { businessKey: string; col
               <Image
                 src={biz.logo.horizontal}
                 alt={t(`${businessKey}.name`)}
-                width={260}
-                height={72}
+                width={businessKey === "labor" ? 5020 : 260}
+                height={businessKey === "labor" ? 713 : 72}
+                sizes={businessKey === "labor" ? "(min-width: 640px) 395px, 282px" : undefined}
                 className="h-10 w-auto sm:h-14"
                 priority
               />

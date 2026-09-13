@@ -13,8 +13,8 @@ export function LaborEngagementCtas({ locale, showAdvisory = false }: { locale: 
   const placement = showAdvisory ? "hero" : "faq_end";
   return <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
     <LaborEngagementLink href={contact} locale={locale} serviceType="procedure" placement={placement} className="rounded-lg bg-primary px-4 py-3 text-center text-sm font-semibold text-white transition-colors hover:bg-primary-dark focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary">{c.procedureCta}</LaborEngagementLink>
-    <LaborEngagementLink href={contact} locale={locale} serviceType="payroll_only" placement={placement} className="rounded-lg border border-primary bg-surface px-4 py-3 text-center text-sm font-semibold text-primary transition-colors hover:bg-primary-tint focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary">{c.payrollCta}</LaborEngagementLink>
-    {showAdvisory && <LaborEngagementLink href="#engagement-comparison" locale={locale} serviceType="advisory" placement={placement} className="self-center px-1 py-2 text-sm font-medium text-primary underline underline-offset-4">{c.advisoryCta}</LaborEngagementLink>}
+    <LaborEngagementLink href={contact} locale={locale} serviceType="payroll_only" placement={placement} className="rounded-lg border border-primary bg-surface px-4 py-3 text-center text-sm font-semibold text-primary-dark transition-colors hover:bg-primary-tint focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary">{c.payrollCta}</LaborEngagementLink>
+    {showAdvisory && <LaborEngagementLink href="#engagement-comparison" locale={locale} serviceType="advisory" placement={placement} className="self-center px-1 py-2 text-sm font-medium text-primary-dark underline underline-offset-4">{c.advisoryCta}</LaborEngagementLink>}
   </div>;
 }
 
@@ -28,8 +28,8 @@ export function LaborStandaloneServices({ locale }: { locale: LangCode }) {
     <div className="rounded-2xl border border-primary/25 bg-primary-tint p-5 sm:p-6">
       <h3 className="font-serif text-xl font-semibold text-ink">{c.payrollTitle}</h3>
       <p className="mt-3 leading-relaxed text-text">{c.payrollBody}</p>
-      <p className="mt-3 font-semibold text-primary">{c.quoted}</p>
-      <LaborEngagementLink href={`${addLocalePrefix("/labor/contact", locale)}?intent=labor`} locale={locale} serviceType="payroll_only" placement="standalone" className="mt-4 inline-block text-primary underline underline-offset-4">{c.payrollCta}</LaborEngagementLink>
+      <p className="mt-3 font-semibold text-primary-dark">{c.quoted}</p>
+      <LaborEngagementLink href={`${addLocalePrefix("/labor/contact", locale)}?intent=labor`} locale={locale} serviceType="payroll_only" placement="standalone" className="mt-4 inline-block text-primary-dark underline underline-offset-4">{c.payrollCta}</LaborEngagementLink>
     </div>
   </section>;
 }
@@ -51,8 +51,8 @@ function ComparisonTable({ locale, id, caption, rows }: { locale: LangCode; id: 
     <tbody role="rowgroup" className="block md:table-row-group">
       {rows.map(row => <tr role="row" key={row.key} className={`grid grid-cols-2 border-t border-border md:table-row ${row.emphasized ? "bg-primary-tint" : "bg-surface"}`}>
         <th role="rowheader" id={`${id}-${row.key}`} scope="row" className="col-span-2 border-border px-3 pt-3 font-medium leading-relaxed text-ink sm:px-4 md:border-t md:p-4">{row.label}</th>
-        <td role="cell" headers={`${id}-${row.key} ${id}-standalone`} className={`min-w-0 border-border p-3 leading-relaxed sm:p-4 md:border-t ${row.emphasized ? "font-semibold text-primary" : "text-text"}`}>{row.standalone}</td>
-        <td role="cell" headers={`${id}-${row.key} ${id}-advisory`} className={`min-w-0 border-l border-border p-3 leading-relaxed sm:p-4 md:border-t ${row.emphasized ? "font-semibold text-primary" : "text-text"}`}>{row.advisory}</td>
+        <td role="cell" headers={`${id}-${row.key} ${id}-standalone`} className={`min-w-0 border-border p-3 leading-relaxed sm:p-4 md:border-t ${row.emphasized ? "font-semibold text-primary-dark" : "text-text"}`}>{row.standalone}</td>
+        <td role="cell" headers={`${id}-${row.key} ${id}-advisory`} className={`min-w-0 border-l border-border p-3 leading-relaxed sm:p-4 md:border-t ${row.emphasized ? "font-semibold text-primary-dark" : "text-text"}`}>{row.advisory}</td>
       </tr>)}
     </tbody>
   </table>;
@@ -76,7 +76,7 @@ export function LaborEngagementComparison({ locale }: { locale: LangCode }) {
   breakdown.push(rows[2], rows[3]);
   return <section id="engagement-comparison" className="scroll-mt-24 space-y-6">
     <div>
-      <p className="text-sm font-semibold text-primary">{c.standard}</p>
+      <p className="text-sm font-semibold text-primary-dark">{c.standard}</p>
       <h2 className="mt-2 font-serif text-2xl font-semibold leading-snug text-ink sm:text-3xl">{c.comparisonTitle}</h2>
       <p className="mt-4 leading-relaxed text-text">{c.comparisonIntro}</p>
       <p className="mt-4 rounded-xl bg-primary-tint p-4 text-sm leading-relaxed text-text">{c.assumptions}</p>
@@ -111,7 +111,7 @@ export function LaborSharedWorkflow({ locale }: { locale: LangCode }) {
     <p className="leading-relaxed text-text">{c.workflowBody}</p>
     <ol className="grid gap-4 md:grid-cols-3">
       {c.steps.map((step, index) => <li key={step.title} className="rounded-xl border border-border bg-surface p-5">
-        <span aria-hidden="true" className="mb-3 inline-flex h-8 w-8 items-center justify-center rounded-full bg-primary-tint text-sm font-semibold text-primary">{index + 1}</span>
+        <span aria-hidden="true" className="mb-3 inline-flex h-8 w-8 items-center justify-center rounded-full bg-primary-tint text-sm font-semibold text-primary-dark">{index + 1}</span>
         <h3 className="font-semibold leading-relaxed text-ink">{step.title}</h3>
         <p className="mt-2 text-sm leading-relaxed text-text">{step.body}</p>
       </li>)}
