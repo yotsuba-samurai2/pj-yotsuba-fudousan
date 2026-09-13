@@ -58,8 +58,8 @@ const JA: Copy = {
   "whenH2": "こんなときに、ご相談ください",
   "whenItems": [
     {
-      "strong": "給与計算を毎月の運用まで",
-      "rest": " — 従業員がLINE打刻を行い、会社側が確認・修正・確定。freeeの給与計算結果を四葉が確認し、会社側が最終承認します。"
+      "strong": "毎月の給与計算を外に出したい",
+      "rest": "——人数と締日・支払日を伺えば、初期費用と月額をご案内します。"
     },
     {
       "strong": "業務委託でお願いしている方が、実は雇用ではないかと気になっている",
@@ -108,7 +108,7 @@ const JA: Copy = {
     {
       "href": "/labor/services/gaikokujin-koyo",
       "label": "外国人雇用（介護・育成就労）の労務",
-      "sub": "経営者との基本相談、給与・社会保険の説明、入社時の基本説明は月額内です。その他の外国語はAI・翻訳支援を活用した基本案内に対応します。専門翻訳・長時間通訳は別料金です。"
+      "sub": "在留資格から入社後の給与・社会保険まで／中国語対応"
     },
     {
       "href": "/labor/services/gaibu-kansanin",
@@ -164,8 +164,8 @@ const EN: Copy = {
   "whenH2": "Talk to us when…",
   "whenItems": [
     {
-      "strong": "A clear monthly payroll workflow",
-      "rest": " — Employees clock in through LINE. Your company reviews, corrects and finalizes attendance. We review the payroll calculated in freee, and your company gives final approval."
+      "strong": "You want to outsource monthly payroll",
+      "rest": " — Tell us your headcount, payroll cutoff and payday, and we will quote setup and monthly fees."
     },
     {
       "strong": "You wonder whether a contractor is actually an employee",
@@ -214,7 +214,7 @@ const EN: Copy = {
     {
       "href": "/labor/services/gaikokujin-koyo",
       "label": "Employing foreign nationals (care / Employment for Skill Development)",
-      "sub": "Basic management consultations, payroll and social insurance explanations, and onboarding explanations in Chinese are included. Basic guidance in other languages uses AI and translation assistance. Specialist translation and extended interpreting carry separate fees."
+      "sub": "From residence status to payroll and social insurance after hiring / Chinese available"
     },
     {
       "href": "/labor/services/gaibu-kansanin",
@@ -270,8 +270,8 @@ const ZH_TW: Copy = {
   "whenH2": "這些時候，歡迎諮詢",
   "whenItems": [
     {
-      "strong": "明確的每月薪資流程",
-      "rest": " — 員工以LINE打卡，公司確認、修正並確定出勤。四葉確認freee計算的薪資內容，由公司最終核准。"
+      "strong": "想委託每月薪資計算",
+      "rest": "——告知人數、結算日與發薪日後，即可提供初期費用與月費報價。"
     },
     {
       "strong": "以業務委託合作的人，擔心實際上是否屬於僱用",
@@ -320,7 +320,7 @@ const ZH_TW: Copy = {
     {
       "href": "/labor/services/gaikokujin-koyo",
       "label": "外國人僱用（介護・育成就勞）的勞務",
-      "sub": "經營者基本諮詢、薪資與社會保險說明、入職基本說明均包含於月費。其他外語透過AI及翻譯支援提供基本指引。專業翻譯與長時間口譯另行收費。"
+      "sub": "從在留資格到入職後的薪資與社會保險／可用中文諮詢"
     },
     {
       "href": "/labor/services/gaibu-kansanin",
@@ -376,8 +376,8 @@ const ZH: Copy = {
   "whenH2": "这些时候，欢迎咨询",
   "whenItems": [
     {
-      "strong": "明确的每月工资流程",
-      "rest": " — 员工以LINE打卡，公司确认、修正并确定出勤。四叶确认freee计算的工资内容，由公司最终批准。"
+      "strong": "想委托每月工资计算",
+      "rest": "——告知人数、结算日与发薪日后，即可提供初期费用与月费报价。"
     },
     {
       "strong": "以业务委托合作的人，担心实际上是否属于雇用",
@@ -426,7 +426,7 @@ const ZH: Copy = {
     {
       "href": "/labor/services/gaikokujin-koyo",
       "label": "外国人雇用（介护・育成就劳）的劳务",
-      "sub": "经营者基本咨询、工资与社会保险说明、入职基本说明均包含于月费。其他外语通过AI及翻译支持提供基本指引。专业翻译与长时间口译另行收费。"
+      "sub": "从在留资格到入职后的工资与社会保险／可用中文咨询"
     },
     {
       "href": "/labor/services/gaibu-kansanin",
@@ -507,6 +507,7 @@ export default async function LaborTopPage() {
             <h1 className="mt-4 font-serif text-3xl font-bold leading-snug text-balance text-ink lg:text-4xl">{e.hero}</h1>
             <p className="mt-5 text-sm leading-relaxed text-text sm:text-base">{e.lead}</p>
             <div className="mt-6"><LaborEngagementCtas locale={locale} showAdvisory /></div>
+            <p className="mt-3 text-sm font-semibold text-ink">{e.consultationNote}</p>
           </div>
           <Image src="/hero/labor-top-16x9.webp" alt={c.heroAlt} width={1600} height={900}
             className="h-48 w-full object-cover sm:h-64 md:h-full" sizes="(min-width: 1152px) 520px, (min-width: 768px) 45vw, 100vw"
