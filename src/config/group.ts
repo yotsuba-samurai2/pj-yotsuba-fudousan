@@ -2,6 +2,9 @@ import { SR_OFFICE_NAME } from "@/lib/shared/sr-name";
 
 export type NavItem = { href: string; label: string };
 
+// Canonical host for cross-site navigation, including visits from a tenant alias domain.
+export const GROUP_SITE_ORIGIN = "https://luck428.com";
+
 export const groupBusinesses = [
   {
     key: "realestate",

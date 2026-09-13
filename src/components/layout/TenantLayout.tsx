@@ -6,7 +6,7 @@ import { useState, useEffect, useCallback, useMemo, useRef } from "react";
 import { usePathname } from "next/navigation";
 import { addLocalePrefix, stripLocalePrefix } from "@/lib/locale";
 import { Menu, X, CalendarDays, ChevronDown } from "lucide-react";
-import { groupBusinesses } from "@/config/group";
+import { groupBusinesses, GROUP_SITE_ORIGIN } from "@/config/group";
 import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { GroupSwitcher } from "@/components/ui/GroupSwitcher";
@@ -601,6 +601,8 @@ function TenantHeader({ businessKey, columnLocales }: { businessKey: string; col
 
           <button
             onClick={() => setIsOpen(!isOpen)}
+            aria-expanded={isOpen}
+            aria-controls="mobile-site-menu"
             className={`relative z-50 flex h-10 w-10 items-center justify-center rounded-lg text-text transition-colors hover:bg-surface-dim ${businessKey === "labor" ? "xl:hidden" : "md:hidden"}`}
             aria-label={
               isOpen
@@ -621,44 +623,75 @@ function TenantHeader({ businessKey, columnLocales }: { businessKey: string; col
       />
 
       <nav
+        id="mobile-site-menu"
+        inert={!isOpen}
         aria-label={t("common.navigation.mobileMenu")}
         className={`fixed right-0 top-0 z-40 flex h-full w-[min(18rem,85vw)] flex-col bg-surface pt-16 shadow-2xl transition-transform duration-300 ease-out sm:pt-20 ${businessKey === "labor" ? "xl:hidden" : "md:hidden"} ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="flex flex-1 flex-col gap-1 px-4 py-4">
-          {navItems.map(({ href, label }, i) =>
-            businessKey === "realestate" && href === "/services" ? (
-              <ServicesMobileAccordion
-                key={href}
-                label={label}
-                isActive={isActive(href)}
-                locale={locale}
-                style={{ transitionDelay: isOpen ? `${i * 50}ms` : "0ms" }}
-                onNavigate={() => setIsOpen(false)}
-              />
-            ) : (
-              <Link
-                key={href}
-                href={href}
-                onClick={() => setIsOpen(false)}
-                className={`header-nav-link flex items-center rounded-lg px-4 py-3 text-sm font-medium transition-all duration-200 ${
-                  isActive(href)
-                    ? "bg-primary/5 header-nav-active"
-                    : "text-text-muted hover:bg-surface-dim"
-                }`}
-                style={{ transitionDelay: isOpen ? `${i * 50}ms` : "0ms" }}
-              >
-                {isActive(href) && (
-                  <span className="gradient-line mr-2 h-4 w-0.5 rounded-full" />
-                )}
-                {label}
-              </Link>
-            ),
-          )}
+        <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-4 py-4">
+          <div className="space-y-1">
+            {navItems.map(({ href, label }, i) =>
+              businessKey === "realestate" && href === "/services" ? (
+                <ServicesMobileAccordion
+                  key={href}
+                  label={label}
+                  isActive={isActive(href)}
+                  locale={locale}
+                  style={{ transitionDelay: isOpen ? `${i * 50}ms` : "0ms" }}
+                  onNavigate={() => setIsOpen(false)}
+                />
+              ) : (
+                <Link
+                  key={href}
+                  href={href}
+                  onClick={() => setIsOpen(false)}
+                  className={`header-nav-link flex items-center rounded-lg px-4 py-3 text-sm font-medium transition-all duration-200 ${
+                    isActive(href)
+                      ? "bg-primary/5 header-nav-active"
+                      : "text-text-muted hover:bg-surface-dim"
+                  }`}
+                  style={{ transitionDelay: isOpen ? `${i * 50}ms` : "0ms" }}
+                >
+                  {isActive(href) && (
+                    <span className="gradient-line mr-2 h-4 w-0.5 rounded-full" />
+                  )}
+                  {label}
+                </Link>
+              ),
+            )}
+          </div>
+          <section aria-labelledby="mobile-group-sites-title" className="mt-4 border-t border-border pt-4">
+            <h2 id="mobile-group-sites-title" className="px-4 text-xs font-semibold text-text-muted">
+              {t("common.navigation.groupSites")}
+            </h2>
+            <ul className="mt-2 space-y-1">
+              {groupBusinesses.filter((other) => other.key !== businessKey).map((other) => (
+                <li key={other.key}>
+                  <a
+                    href={`${GROUP_SITE_ORIGIN}${addLocalePrefix(other.href, locale)}`}
+                    onClick={() => setIsOpen(false)}
+                    className="flex min-h-14 items-center rounded-lg px-4 py-3 text-sm font-medium leading-relaxed text-text hover:bg-surface-dim"
+                  >
+                    {t(`${other.key}.name`)}
+                  </a>
+                </li>
+              ))}
+              <li>
+                <a
+                  href="https://www.samurai.co.jp/"
+                  onClick={() => setIsOpen(false)}
+                  className="flex min-h-14 items-center rounded-lg px-4 py-3 text-sm font-medium leading-relaxed text-text hover:bg-surface-dim"
+                >
+                  {t("common.footer.samuraiName")}
+                </a>
+              </li>
+            </ul>
+          </section>
         </div>
         {/* 下部固定バー(64px・z-40)に隠れないよう底上げ（言語切替＋お問い合わせを可視域に） */}
-        <div className="border-t border-border px-4 py-4 pb-[88px]">
+        <div className="shrink-0 border-t border-border px-4 py-4 pb-[88px]">
           <div className="mb-4 flex justify-center">
             <LanguageSwitcher columnLocales={columnLocales} />
           </div>
