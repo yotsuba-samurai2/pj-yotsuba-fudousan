@@ -17,7 +17,7 @@ import Image from "next/image";
 //   - 60秒診断：LINKA挨拶に条件インテークの誘いを追記し、チップ「物件の希望条件を伝える」を追加
 //     （LINKA側はpropertyIntake＋joken実装済み＝条件を整理してコピー→LINE導線につながる）。
 import Link from "next/link";
-import { LinkaWidget } from "@/components/linka/LinkaWidget";
+import { LazyLinkaWidget } from "@/components/linka/LazyLinkaWidget";
 import { CtaBand } from "@/components/shared/CtaBand";
 import { getRequestLocale } from "@/lib/getRequestLocale";
 import { addLocalePrefix } from "@/lib/locale";
@@ -466,7 +466,8 @@ export default async function HomePageContent() {
         <section aria-label="60-second diagnosis" className="mt-10 rounded-2xl bg-primary-tint p-4 sm:p-6">
           <h2 className="text-center font-serif text-xl font-semibold text-ink">{c.diagnosisH2}</h2>
           <div className="mx-auto mt-4 h-[520px] max-w-2xl overflow-hidden rounded-2xl border border-border bg-surface">
-            <LinkaWidget
+            <LazyLinkaWidget
+              deferUntilVisible
               site="realestate"
               mode="concierge"
               greeting={c.diagnosisNote}

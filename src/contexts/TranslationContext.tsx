@@ -16,13 +16,13 @@ const TranslationContext = createContext<TranslationContextType>({
 
 /**
  * 翻訳辞書を提供する Provider
- * Firestoreから取得した辞書をRootLayoutから受け取る
+ * 現在の言語と日本語フォールバックだけをRootLayoutから受け取る
  */
 export function TranslationProvider({
   initialData,
   children,
 }: {
-  initialData: Record<LangCode, Record<string, unknown>>;
+  initialData: Partial<Record<LangCode, Record<string, unknown>>>;
   children: React.ReactNode;
 }) {
   const { locale } = useLanguage();
