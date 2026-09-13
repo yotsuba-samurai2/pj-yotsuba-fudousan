@@ -13,6 +13,7 @@ import { BlogPostingJsonLd } from "@/components/seo/BlogPostingJsonLd";
 import { FAQJsonLd } from "@/components/seo/FAQJsonLd";
 import { SpeakableJsonLd } from "@/components/seo/SpeakableJsonLd";
 import { CtaBand } from "@/components/shared/CtaBand";
+import { ZehitomoLinks } from "@/components/labor/ZehitomoLinks";
 
 import { LaborColumnDetailPageContent } from "./PageContent";
 import type { Metadata } from "next";
@@ -97,6 +98,7 @@ export default async function LaborColumnDetailPage({ params }: Props) {
       <div className="mx-auto max-w-3xl px-4">
         <CtaBand businessKey="labor" />
       </div>
+      {locale === "ja" && slug === "sharoushi-komonryo-nan-no-taika" && <ZehitomoLinks />}
     </div>
   );
 }
