@@ -49,7 +49,8 @@
       "openMenu": "メニューを開く",
       "closeMenu": "メニューを閉じる",
       "mobileMenu": "モバイルメニュー",
-      "showGroupBusinesses": "グループ事業を表示"
+      "showGroupBusinesses": "グループ事業を表示",
+      "groupSites": "グループサイト"
     },
     "footer": {
       "terms": "利用規約",

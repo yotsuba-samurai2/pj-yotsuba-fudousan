@@ -49,7 +49,8 @@
       "openMenu": "開啟選單",
       "closeMenu": "關閉選單",
       "mobileMenu": "行動端選單",
-      "showGroupBusinesses": "顯示集團業務"
+      "showGroupBusinesses": "顯示集團業務",
+      "groupSites": "集團網站"
     },
     "footer": {
       "terms": "使用條款",

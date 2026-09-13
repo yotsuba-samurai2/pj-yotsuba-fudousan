@@ -49,7 +49,8 @@
       "openMenu": "打开菜单",
       "closeMenu": "关闭菜单",
       "mobileMenu": "移动端菜单",
-      "showGroupBusinesses": "显示集团业务"
+      "showGroupBusinesses": "显示集团业务",
+      "groupSites": "集团网站"
     },
     "footer": {
       "terms": "使用条款",
