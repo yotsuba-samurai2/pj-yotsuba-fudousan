@@ -9,6 +9,8 @@ const securityHeaders = [
 
 const nextConfig: NextConfig = {
   images: {
+    // The labor hero uses a lighter quality; existing images keep the default 75.
+    qualities: [60, 75],
     // 小型端末のDPR 1でも640pxを取得していたため420pxを追加。
     // 高DPR端末・PC用の標準サイズは維持する。
     deviceSizes: [420, 640, 750, 828, 1080, 1200, 1920, 2048, 3840],

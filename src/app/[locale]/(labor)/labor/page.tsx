@@ -510,7 +510,8 @@ export default async function LaborTopPage() {
             <p className="mt-3 text-sm font-semibold text-ink">{e.consultationNote}</p>
           </div>
           <Image src="/hero/labor-top-16x9.webp" alt={c.heroAlt} width={1600} height={900}
-            className="h-48 w-full object-cover sm:h-64 md:h-full" sizes="(min-width: 1152px) 520px, (min-width: 768px) 45vw, 100vw"
+            className="h-48 w-full object-cover sm:h-64 md:h-full" quality={60}
+            sizes="(min-width: 1152px) 520px, (min-width: 768px) calc((100vw - 32px) / 2.15), calc(100vw - 32px)"
             loading="eager" fetchPriority="high" />
         </div>
       </section>
