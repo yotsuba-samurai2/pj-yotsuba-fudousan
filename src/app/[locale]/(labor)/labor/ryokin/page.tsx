@@ -1,3 +1,5 @@
+import { LABOR_ENGAGEMENT_COPY } from "@/lib/labor/engagement-copy";
+import { LaborStandaloneServices, LaborEngagementComparison } from "@/components/labor/LaborEngagement";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { buildPageMetadata, BCP47_BY_LOCALE } from "@/lib/seo";
@@ -21,7 +23,7 @@ import { getLaborPriceStructuredData } from "@/lib/labor/structured-data";
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getRequestLocale();
   const c = LABOR_SERVICE_COPY[locale];
-  return buildPageMetadata({ businessKey: "labor", title: `${c.pricingHeading}｜四葉社会保険労務士事務所`, description: c.intro, path: "/labor/ryokin", locale, absoluteTitle: true });
+  return buildPageMetadata({ businessKey: "labor", title: `${c.pricingHeading}｜四葉社会保険労務士事務所`, description: LABOR_ENGAGEMENT_COPY[locale].description, path: "/labor/ryokin", locale, absoluteTitle: true });
 }
 
 export default async function Page() {
@@ -33,9 +35,11 @@ export default async function Page() {
   return <>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(getLaborPriceStructuredData(locale)) }} />
     <Breadcrumb items={[{ name: c.home, href: "/labor" }, { name: c.fees }]} />
-    <div className="mx-auto max-w-3xl px-4 pb-16">
+    <div className="mx-auto max-w-6xl px-4 pb-16 lg:pr-72">
       <h1 className="font-serif text-3xl font-semibold text-ink">{c.pricingHeading}</h1>
-      <p className="mt-3 leading-relaxed text-text">{c.intro}</p>
+      <div className="mt-8"><LaborStandaloneServices locale={locale} /></div>
+      <div className="mt-12"><LaborEngagementComparison locale={locale} /></div>
+      <p className="mt-12 leading-relaxed text-text">{c.intro}</p>
       <div className="mt-6"><LaborPlanPricing locale={locale} /></div>
       <p className="mt-3 text-sm leading-relaxed text-text">{c.units}</p>
       <p className="mt-3 text-sm leading-relaxed text-text">{c.setupDetail}</p>
@@ -72,7 +76,7 @@ export default async function Page() {
         <ul className="mt-3 space-y-3 text-sm leading-relaxed">{a.notRows.map(row => <li key={row.name}>{row.name} → {row.to}</li>)}</ul>
         <p className="mt-3 text-sm leading-relaxed text-text-muted">{a.notNote}</p>
       </section>
-      <div className="mt-10"><Faq bare items={getLaborPlanFaqs(locale)} heading={c.faq} ariaLabel={c.faq} withJsonLd inLanguage={BCP47_BY_LOCALE[locale]} /></div>
+      <div className="mt-10"><Faq bare items={[...LABOR_ENGAGEMENT_COPY[locale].faqs, ...getLaborPlanFaqs(locale)]} heading={c.faq} ariaLabel={c.faq} withJsonLd inLanguage={BCP47_BY_LOCALE[locale]} /></div>
       <p className="mt-6 text-sm leading-relaxed text-text-muted">{a.taxNote}</p>
       {getCrossLinks("/labor/ryokin", SR_LAUNCHED).map(cl => <CrossLinkBanner key={cl.id} link={cl} lead={a.crossLead} />)}
       <p className="mt-4"><Link href={addLocalePrefix("/labor/nagare", locale)} className="text-primary underline">{c.flow}</Link></p>

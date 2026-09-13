@@ -1,3 +1,5 @@
+import { LaborStandaloneServices } from "@/components/labor/LaborEngagement";
+import { LABOR_ENGAGEMENT_COPY } from "@/lib/labor/engagement-copy";
 // /labor/services（型E・業務ハブ）＝ページ割v2 §2-C・ワイヤwireframe_labor_services.html準拠
 // 文言＝原稿_社労士#1の業務カード。旧実装のFAQPage/HowTo/Service JSON-LDは廃止
 // （FAQPageは/labor/faq専用・BreadcrumbListはBreadcrumb部品のみ＝委任§4-6）。
@@ -24,9 +26,6 @@ type Copy = {
   h1: string;
   leadStrong: string;
   leadRest: string;
-  premiseStrong1: string;
-  premiseRest1: string;
-  premiseStrong2: string;
   flow1: string;
   flowLink: string;
   flow2: string;
@@ -52,10 +51,6 @@ const JA: Copy = {
   h1: "業務案内",
   leadStrong: "四葉社会保険労務士事務所の取扱業務の一覧です。",
   leadRest: "各業務の詳しい内容・費用・流れは、それぞれのページをご覧ください。",
-  premiseStrong1: "法人・個人事業主のお客さまは、顧問契約を前提としてお受けします。",
-  premiseRest1:
-    "手続だけ、給与計算だけのご依頼は承っておりません。実情を知らないまま届出だけをお受けすると、誤りに気づけないためです。",
-  premiseStrong2: "障害年金（個人のお客さま）と外部監査人（監理支援機関）は、顧問契約を前提としません。",
   flow1: "手続きと給与計算は freee人事労務 で行い、顧問先と同じデータを見ながら進めます。料金は着手前に書面でお出しします。",
   flowLink: "進め方",
   flow2: "に、AIをどこまで使うか（と、使わないところ）を書いています。",
@@ -77,7 +72,7 @@ const JA: Copy = {
     { href: "/labor/services/gaikokujin-koyo", label: "外国人雇用（介護・育成就労）の労務", audience: "外国人材の雇用契約・社会保険・受入準備を整えたい事業者" },
     { href: "/labor/services/gaibu-kansanin", label: "外部監査で見られる労務", audience: "育成就労の外部監査に備える監理支援機関・受入企業" },
     { href: "/labor/services/saiyo", label: "募集・採用の労務", audience: "求人票の労働条件と、内定から入社までの書面・手続きを整えたい事業者" },
-    // 唯一のB2C（個人のお客さま）。顧問契約を前提としない点が他と異なるため audience に明記する。
+    // 個人のお客さま向けの対象を明記。
     { href: "/labor/services/shogai-nenkin", label: "障害年金の裁定請求", audience: "障害年金の請求を考えるご本人・ご家族（顧問契約は不要です）" },
   ],
   audiencePrefix: "こんな方に：",
@@ -97,11 +92,6 @@ const EN: Copy = {
   h1: "Services",
   leadStrong: "This is the list of services handled by 四葉社会保険労務士事務所.",
   leadRest: "For details, fees, and the process of each service, please see the individual pages.",
-  premiseStrong1: "For companies and sole proprietors, we accept engagements on the premise of an advisory (komon) contract.",
-  premiseRest1:
-    "We do not accept requests for filings alone or payroll alone. If we handled paperwork without knowing your actual working arrangements, we could not notice errors.",
-  premiseStrong2:
-    "Disability pension claims (individual clients) and external auditor engagements (supervising support organizations) do not require an advisory contract.",
   flow1:
     "Procedures and payroll are handled on freee人事労務 (freee's HR & payroll software), working from the same data as the client. Fees are quoted in writing before we start.",
   flowLink: "How we work",
@@ -143,9 +133,6 @@ const ZH_TW: Copy = {
   h1: "業務案內",
   leadStrong: "這是四葉社會保險勞務士事務所的業務一覽。",
   leadRest: "各項業務的詳細內容、費用與流程，請見各自的頁面。",
-  premiseStrong1: "法人・個人事業主的客戶，以顧問契約為前提承接。",
-  premiseRest1: "不承接只辦手續、只做薪資計算的委託。在不了解實際狀況的情況下只代辦申報，將無法察覺錯誤。",
-  premiseStrong2: "障害年金（個人客戶）與外部監查人（監理支援機關），不以顧問契約為前提。",
   flow1: "手續與薪資計算在 freee人事労務 上進行，與顧問客戶看著同一份資料推進。費用在著手前以書面提出。",
   flowLink: "進行方式",
   flow2: "頁面說明了AI用到哪裡（以及不用在哪裡）。",
@@ -185,9 +172,6 @@ const ZH: Copy = {
   h1: "业务指南",
   leadStrong: "这是四葉社会保険労務士事務所的业务一览。",
   leadRest: "各项业务的详细内容、费用与流程，请见各自的页面。",
-  premiseStrong1: "法人・个体经营者客户，以顾问合同为前提承接。",
-  premiseRest1: "不承接只办手续、只做工资计算的委托。在不了解实际情况的状态下只代办申报，将无法察觉错误。",
-  premiseStrong2: "障害年金（个人客户）与外部监查人（监理支援机关），不以顾问合同为前提。",
   flow1: "手续与工资计算在 freee人事労務 上进行，与顾问客户看着同一份数据推进。费用在着手前以书面提出。",
   flowLink: "进行方式",
   flow2: "页面说明了AI用到哪里（以及不用在哪里）。",
@@ -226,7 +210,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return buildPageMetadata({
     businessKey: "labor",
     title: c.metaTitle,
-    description: c.metaDescription,
+    description: LABOR_ENGAGEMENT_COPY[locale].description,
     path: "/labor/services",
     locale,
     absoluteTitle: true,
@@ -247,11 +231,7 @@ export default async function LaborServicesPage() {
             <strong>{c.leadStrong}</strong> {c.leadRest}
           </p>
           <div className="mt-5 rounded-xl border border-border bg-surface p-4 text-sm leading-relaxed text-text">
-            <p>
-              <strong>{c.premiseStrong1}</strong>
-              {c.premiseRest1}
-              <strong>{c.premiseStrong2}</strong>
-            </p>
+            <LaborStandaloneServices locale={locale} />
             <p className="mt-3">
               {c.flow1}
               <Link href={addLocalePrefix("/labor/nagare", locale)} className="text-primary underline">

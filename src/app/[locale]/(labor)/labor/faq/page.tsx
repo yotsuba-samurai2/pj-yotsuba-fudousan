@@ -1,3 +1,4 @@
+import { LABOR_ENGAGEMENT_COPY } from "@/lib/labor/engagement-copy";
 import { getAdditionalLaborFaqs } from "@/lib/labor/additional-faqs";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -14,7 +15,7 @@ import { srRegParen } from "@/lib/shared/sr-registration";
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getRequestLocale();
   const c = LABOR_SERVICE_COPY[locale];
-  return buildPageMetadata({ businessKey: "labor", title: `${c.faq}｜四葉社会保険労務士事務所`, description: c.intro, path: "/labor/faq", locale, absoluteTitle: true });
+  return buildPageMetadata({ businessKey: "labor", title: `${c.faq}｜四葉社会保険労務士事務所`, description: LABOR_ENGAGEMENT_COPY[locale].description, path: "/labor/faq", locale, absoluteTitle: true });
 }
 
 export default async function Page() {
@@ -25,7 +26,7 @@ export default async function Page() {
     <Breadcrumb items={[{ name: c.home, href: "/labor" }, { name: c.faq }]} />
     <main className="mx-auto max-w-3xl px-4 pb-8">
       <h1 className="font-serif text-3xl font-semibold text-ink">{c.faq}</h1>
-      <div className="mt-6"><Faq items={[...getLaborPlanFaqs(locale), ...getAdditionalLaborFaqs(locale)]} bare withJsonLd ariaLabel={c.faq} inLanguage={BCP47_BY_LOCALE[locale]} /></div>
+      <div className="mt-6"><Faq items={[...LABOR_ENGAGEMENT_COPY[locale].faqs, ...getLaborPlanFaqs(locale), ...getAdditionalLaborFaqs(locale)]} bare withJsonLd ariaLabel={c.faq} inLanguage={BCP47_BY_LOCALE[locale]} /></div>
       <p className="mt-4"><Link className="text-primary underline" href={addLocalePrefix("/labor/ryokin",locale)}>{c.fees}</Link></p>
       <aside className="mt-8 text-sm leading-relaxed text-text-muted">{a.authorTitle}: {a.authorBody1}{srRegParen(locale)}{a.authorBody2}</aside>
       <p className="mt-4 text-sm text-text-muted">{c.disclaimer}</p>

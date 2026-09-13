@@ -34,6 +34,7 @@ export function LaborPlanPriceSummary({ locale, emphasizePayroll = false }: { lo
         <div>
           <dt className="text-sm text-text">{c.setup} · {setup.standardTitle}</dt>
           <dd className="mt-1 text-lg font-semibold text-ink">{formatLaborYen(LABOR_PRICING.initialSetupStandard, locale)} <span className="text-sm font-normal">({c.tax})</span></dd>
+          <dd className="mt-2 text-sm leading-relaxed text-text">{setup.standardWaiverNote}</dd>
           <dd className="mt-2 text-sm leading-relaxed text-text">{setup.standardCondition}</dd>
         </div>
         <div>

@@ -1,3 +1,4 @@
+import { LABOR_ENGAGEMENT_COPY } from "@/lib/labor/engagement-copy";
 import { LABOR_SETUP_COPY, FREEE_SUPPORT_URL } from "@/lib/labor/setup-copy";
 import { describe, it, expect, vi, afterAll } from "vitest";
 import { renderToStaticMarkup } from "react-dom/server";
@@ -32,13 +33,21 @@ for (const locale of ["ja", "en", "zh-tw", "zh"] as const) {
       expect(rows.filter(row => "value" in row && row.value === 6050)).toHaveLength(2);
       expect(rows.some(row => "value" in row && row.value === 11550)).toBe(true);
     });
-    it("shows the Hero boundary and prioritizes the plan, foreign employers, then GH", async () => {
+    it("prioritizes engagement choices while preserving advisory scope, foreign employers and GH", async () => {
       state.locale = locale;
       const html = renderToStaticMarkup(await Top());
       const c = LABOR_SERVICE_COPY[locale];
       const p = LABOR_PLAN_COPY[locale];
-      expect(html).toContain(c.hero);
-      expect(html).toContain(c.sub);
+      const e = LABOR_ENGAGEMENT_COPY[locale];
+      const encode = (text: string) => text.replaceAll("&", "&amp;").replaceAll("'", "&#x27;");
+      expect(html.includes(encode(e.hero))).toBe(true);
+      expect(html.indexOf('id="standalone-services"')).toBeLessThan(html.indexOf('id="engagement-comparison"'));
+      expect(html.indexOf('id="engagement-comparison"')).toBeLessThan(html.indexOf('id="advisory-plan"'));
+      expect(html.match(/<h1\b/g)).toHaveLength(1);
+      expect(html.match(/id="engagement-comparison"/g)).toHaveLength(1);
+      expect(html.includes(encode(e.assumptions))).toBe(true);
+      expect(html.includes(encode(e.discountNote))).toBe(true);
+      expect(html).toContain('href="#engagement-comparison"');
       expect(html).toContain(c.foreignHighlightBody);
       expect(html).toContain(c.visaContractNotice);
       expect(html.indexOf(c.visaContractNotice)).toBeLessThan(html.indexOf(c.visaLink));
@@ -56,15 +65,15 @@ for (const locale of ["ja", "en", "zh-tw", "zh"] as const) {
       expect(html).toContain(setup.freeeSupport);
       expect(html).toContain(`href="https://www.freee.co.jp/hr/contacts/"`);
       expect(html.indexOf(setup.comparisonTitle)).toBeGreaterThan(html.indexOf("88,000"));
-      expect(html.indexOf(setup.comparisonTitle)).toBeLessThan(html.indexOf(p.scopeHeadings[0]));
+      expect(html.indexOf(setup.comparisonTitle)).toBeLessThan(html.indexOf(c.foreignHighlightTitle));
       expect(html).not.toContain("https://www.freee.co.jp/accounting/smb/support/");
       const prefix = locale === "ja" ? "" : `/${locale}`;
       expect(html).toContain(`href="${prefix}/legal/services/visa"`);
       expect(html).toContain(`href="${prefix}/legal/services/shogai-fukushi"`);
-      expect(html).toContain(`href="${prefix}/labor/contact"`);
+      expect(html).toContain(`href="${prefix}/labor/contact?intent=labor"`);
       const metadata = await topMetadata();
-      expect(metadata.title).toEqual({ absolute: c.title });
-      expect(metadata.description).toBe(c.intro);
+      expect(metadata.title).toEqual({ absolute: e.title });
+      expect(metadata.description).toBe(e.description);
       expect(JSON.stringify(metadata.alternates)).toContain(`${prefix}/labor`);
     });
 
