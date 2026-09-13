@@ -4,7 +4,7 @@ import type { EngagementItemKey } from "./engagement-pricing";
 
 export type EngagementCopy = {
   title: string; description: string; tagline: string; hero: string; lead: string;
-  procedureCta: string; payrollCta: string; advisoryCta: string;
+  procedureCta: string; payrollCta: string; advisoryCta: string; consultationNote: string;
   procedureTitle: string; procedureBody: string; payrollTitle: string; payrollBody: string; quoted: string;
   comparisonTitle: string; comparisonIntro: string; assumptions: string;
   standard: string; item: string; standalone: string; advisory: string;
@@ -22,10 +22,11 @@ export type EngagementCopy = {
 };
 
 const JA: EngagementCopy = {
+  consultationNote: "初回相談（60分）無料",
   title: "入退社の手続き・給与計算｜顧問契約なしでも対応｜文京区の四葉社会保険労務士事務所",
   description: "文京区の四葉社会保険労務士事務所。入退社の手続きや毎月の給与計算を、顧問契約なしでもご依頼いただけます。社長1人・従業員1人のモデルで、手続きのみと顧問の費用を比較。freee人事労務と共有フォルダで資料のやり取りもスムーズに。",
   tagline: "小さな会社にも、人事部を", hero: "入退社の手続きも、毎月の給与計算も。必要な業務から頼めます。",
-  lead: "「入社1名の手続きだけ」「給与計算を毎月お願いしたい」「労務相談までまとめて任せたい」。四葉社会保険労務士事務所では、顧問契約なしのご依頼から、給与・手続き・相談を含む継続サポートまで、会社に合った頼み方を選べます。必要な業務と費用を、着手前にお見積もりします。",
+  lead: "「入社1名の手続きだけ」「給与計算を毎月お願いしたい」「労務相談まで含めて任せたい」。四葉社会保険労務士事務所では、顧問契約なしのご依頼から、給与・手続き・相談を含む継続サポートまで、会社に合った頼み方を選べます。必要な業務と費用を、着手前にお見積もりします。",
   procedureCta: "入退社の手続きを相談する", payrollCta: "給与計算だけを相談する", advisoryCta: "顧問の内容・料金を見る",
   procedureTitle: "入社・退社1名の手続きから、顧問契約なしで。",
   procedureBody: "すでに社会保険・雇用保険に加入している会社の、入社・退社に伴う手続きや扶養家族の変更も、必要な業務だけご依頼いただけます。会社の新規加入から相談することもできます。対象人数、届出の種類、資料の準備状況を確認してお見積もりします。",
@@ -67,6 +68,7 @@ const JA: EngagementCopy = {
 };
 
 const EN: EngagementCopy = {
+  consultationNote: "Free initial consultation (up to 60 minutes)",
   title: "Onboarding, offboarding & payroll without a retainer | Bunkyo, Tokyo | 四葉社会保険労務士事務所",
   description: "Commission employee insurance filings or monthly payroll without an advisory retainer. Compare standalone work and ongoing advisory support using a company with one director and one employee. Work efficiently with freee HR and access-controlled shared folders.",
   tagline: "An HR department for small businesses, too", hero: "Employee filings and monthly payroll. Start with the work you need.",
@@ -112,6 +114,7 @@ const EN: EngagementCopy = {
 };
 
 const ZH_TW: EngagementCopy = {
+  consultationNote: "首次諮詢（60分鐘內）免費",
   title: "入離職手續・薪資計算｜無須顧問契約｜文京區・四葉社会保険労務士事務所",
   description: "四葉社会保険労務士事務所位於文京區，無須顧問契約即可委託入離職手續或每月薪資計算。以社長1人、員工1人的公司為例，比較單次委託與顧問費用，運用freee人事勞務及權限管理的共享資料夾簡化資料交接。",
   tagline: "讓小公司也有人事部", hero: "入離職手續、每月薪資計算，從您需要的業務開始委託。",
@@ -157,6 +160,7 @@ const ZH_TW: EngagementCopy = {
 };
 
 const ZH: EngagementCopy = {
+  consultationNote: "首次咨询（60分钟内）免费",
   title: "入离职手续・工资计算｜无需顾问合同｜文京区・四葉社会保険労務士事務所",
   description: "四葉社会保険労務士事務所位于文京区，无需顾问合同即可委托入离职手续或每月工资计算。以社长1人、员工1人的公司为例，比较单次委托与顾问费用，运用freee人事劳务及权限管理的共享文件夹简化资料交接。",
   tagline: "让小公司也有人事部", hero: "入离职手续、每月工资计算，从您需要的业务开始委托。",
