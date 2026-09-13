@@ -4,7 +4,7 @@ import Image from "next/image";
 import { LocaleLink as Link } from "@/components/ui/LocaleLink";
 import { useState, useEffect, useCallback, useMemo, useRef } from "react";
 import { usePathname } from "next/navigation";
-import { stripLocalePrefix } from "@/lib/locale";
+import { addLocalePrefix, stripLocalePrefix } from "@/lib/locale";
 import { Menu, X, CalendarDays, ChevronDown } from "lucide-react";
 import { groupBusinesses } from "@/config/group";
 import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher";
@@ -192,10 +192,10 @@ const FOOTER_NAV_HREFS: Record<
     {
       sectionKey: "services",
       items: [
-        { href: "/labor/services", key: "socialInsurance" },
-        { href: "/labor/services", key: "subsidy" },
-        { href: "/labor/services", key: "rules" },
-        { href: "/labor/services", key: "payroll" },
+        { href: "/labor/services#standalone-services", key: "socialInsurance" },
+        { href: "/labor/services/joseikin", key: "subsidy" },
+        { href: "/labor/ryokin#work-rules", key: "rules" },
+        { href: "/labor/services#payroll", key: "payroll" },
       ],
     },
     {
@@ -845,17 +845,20 @@ function TenantFooter({ businessKey }: { businessKey: string }) {
                   {section.title}
                 </h3>
                 <ul className="mt-4 space-y-3">
-                  {section.links.map(({ href, label }, i) => (
-                    <li key={`${href}-${i}`}>
-                      <Link
-                        href={href}
+                  {section.links.map(({ href, label }, i) => {
+                    // Native anchors also scroll when the same fragment is clicked again.
+                    const isLaborAnchor = businessKey === "labor" && href.includes("#");
+                    const FooterLink = isLaborAnchor ? "a" : Link;
+                    return <li key={`${href}-${i}`}>
+                      <FooterLink
+                        href={isLaborAnchor ? addLocalePrefix(href, locale) : href}
                         className="group inline-flex items-center text-sm text-text-muted transition-colors duration-200"
                       >
                         <span className="gradient-line mr-2 inline-block h-px w-0 transition-all duration-200 group-hover:w-3" />
                         <span className="footer-link-text">{label}</span>
-                      </Link>
-                    </li>
-                  ))}
+                      </FooterLink>
+                    </li>;
+                  })}
                 </ul>
               </div>
             ))}

@@ -1,6 +1,6 @@
 import type { LangCode } from "@/config/languages";
 export type AncillaryRow = { name: string; unit: string; price: string; value?: number };
-export type AncillarySection = { title: string; lead?: string; note?: string; rows: AncillaryRow[] };
+export type AncillarySection = { id?: string; title: string; lead?: string; note?: string; rows: AncillaryRow[] };
 export const LABOR_ANCILLARY_FEES = {
   "ja": {
     "sections": [
@@ -118,6 +118,7 @@ export const LABOR_ANCILLARY_FEES = {
         ]
       },
       {
+        "id": "work-rules",
         "title": "規程",
         "note": "当事務所が作成した規程の法改正対応（該当条文の改定と届出）は、顧問料に含まれます。回数の制限はありません。会社の都合による改定は「就業規則 変更」の料金を申し受けます。",
         "rows": [
@@ -396,6 +397,7 @@ export const LABOR_ANCILLARY_FEES = {
         ]
       },
       {
+        "id": "work-rules",
         "title": "Rules and regulations",
         "note": "For rules drafted by this office, amendments required by legal changes (revision of the affected articles and filing) are covered by the advisory fee, with no limit on frequency. Revisions at the company's own initiative are charged as \"work rules: revision\".",
         "rows": [
@@ -674,6 +676,7 @@ export const LABOR_ANCILLARY_FEES = {
         ]
       },
       {
+        "id": "work-rules",
         "title": "規程",
         "note": "本事務所製作的規程，因法令修正所需的對應（相關條文修訂與申報）包含在顧問費內，不限次數。因公司自身需要的修訂，按「工作規則 變更」收費。",
         "rows": [
@@ -952,6 +955,7 @@ export const LABOR_ANCILLARY_FEES = {
         ]
       },
       {
+        "id": "work-rules",
         "title": "规程",
         "note": "本事务所制作的规程，因法令修订所需的对应（相关条文修订与申报）包含在顾问费内，不限次数。因公司自身需要的修订，按「就业规则 变更」收费。",
         "rows": [

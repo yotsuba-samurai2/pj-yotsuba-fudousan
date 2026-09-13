@@ -47,6 +47,12 @@ describe("labor layout when DB translations are unavailable", () => {
     expect(html).toContain(booking);
     expect(html).toContain("112-0006");
     expect(html).toContain('href="tel:03-6161-9428"');
+    const footer = html.slice(html.indexOf("<footer"));
+    const prefix = locale === "ja" ? "" : `/${locale}`;
+    for (const destination of ["/labor/services#standalone-services", "/labor/services/joseikin", "/labor/ryokin#work-rules", "/labor/services#payroll"]) {
+      expect(footer).toContain(`href="${prefix}${destination}"`);
+    }
+    expect(footer).not.toContain(`href="${prefix}/labor/services"`);
     expect(html).not.toMatch(/(?:labor|legal|realestate|common|address|brand|representative)\.[a-zA-Z]+/);
     expect(Object.keys(initialData)).toEqual(locale === "ja" ? ["ja"] : [locale, "ja"]);
   });
