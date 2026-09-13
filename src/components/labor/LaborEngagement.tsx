@@ -25,7 +25,7 @@ export function LaborStandaloneServices({ locale }: { locale: LangCode }) {
       <h2 className="font-serif text-2xl font-semibold leading-snug text-ink">{c.procedureTitle}</h2>
       <p className="mt-3 leading-relaxed text-text">{c.procedureBody}</p>
     </div>
-    <div className="rounded-2xl border border-primary/25 bg-primary-tint p-5 sm:p-6">
+    <div id="payroll" className="scroll-mt-24 rounded-2xl border border-primary/25 bg-primary-tint p-5 sm:p-6">
       <h3 className="font-serif text-xl font-semibold text-ink">{c.payrollTitle}</h3>
       <p className="mt-3 leading-relaxed text-text">{c.payrollBody}</p>
       <p className="mt-3 font-semibold text-primary-dark">{c.quoted}</p>

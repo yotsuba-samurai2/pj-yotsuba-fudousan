@@ -22,11 +22,26 @@ vi.mock("@/components/shared/Breadcrumb", () => ({ Breadcrumb: () => null }));
 vi.mock("@/components/shared/CrossLinkBanner", () => ({ CrossLinkBanner: () => null }));
 import Top, { generateMetadata as topMetadata } from "@/app/[locale]/(labor)/labor/page";
 import Prices from "@/app/[locale]/(labor)/labor/ryokin/page";
+import Services from "@/app/[locale]/(labor)/labor/services/page";
 import Faq from "@/app/[locale]/(labor)/labor/faq/page";
 import { LABOR_TOP_COPY } from "@/lib/labor/top-copy";
 
 for (const locale of ["ja", "en", "zh-tw", "zh"] as const) {
   describe(`V10 pages (${locale})`, () => {
+    it("provides visible targets for the footer's insurance, payroll and work-rule links", async () => {
+      state.locale = locale;
+      const services = renderToStaticMarkup(await Services());
+      const prices = renderToStaticMarkup(await Prices());
+      for (const id of ["standalone-services", "payroll"]) {
+        expect(services.match(new RegExp(`id="${id}"`, "g"))).toHaveLength(1);
+      }
+      expect(services.slice(services.indexOf('id="payroll"'))).toContain(LABOR_ENGAGEMENT_COPY[locale].payrollTitle);
+      expect(prices.match(/id="work-rules"/g)).toHaveLength(1);
+      const rules = LABOR_ANCILLARY_FEES[locale].sections.find(section => "id" in section && section.id === "work-rules")!;
+      const rulesSection = prices.match(/<section[^>]*id="work-rules"[^>]*>([\s\S]*?)<\/section>/)?.[1];
+      expect(rulesSection).toContain(rules.title);
+      expect(rulesSection).toContain(rules.rows[0].name);
+    });
     it("preserves resident tax and workplace change/closure fees", () => {
       const rows = LABOR_ANCILLARY_FEES[locale].sections.flatMap(section => section.rows);
       expect(rows.some(row => "value" in row && row.value === 550)).toBe(true);

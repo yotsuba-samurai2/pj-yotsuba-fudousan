@@ -59,7 +59,7 @@ export default async function Page() {
       </section>
       <p className="mt-6 leading-relaxed text-text">{c.quote}</p>
       <div className="mt-10 space-y-8">
-        {(a.sections as AncillarySection[]).map(section => <section key={section.title}>
+        {(a.sections as AncillarySection[]).map(section => <section key={section.title} id={section.id} className="scroll-mt-24">
           <h2 className="border-l-4 border-primary pl-2 font-serif text-lg font-semibold text-ink">{section.title}</h2>
           {section.lead && <p className="mt-2 text-sm leading-relaxed text-text">{section.lead}</p>}
           <dl className="mt-3 divide-y divide-border rounded-xl border border-border">
