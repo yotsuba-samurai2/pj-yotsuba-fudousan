@@ -25,12 +25,12 @@ describe("client translation payload", () => {
     expect(privateData.ja).not.toHaveProperty("labor");
     expect(dictionary).toEqual(original);
     const publicData = await prepareClientTranslations("en", fetch, true);
-    expect(publicData.en).toEqual(original);
+    expect(publicData.en).toMatchObject(original);
     expect(publicData.en).not.toBe(dictionary);
   });
-  it("retains Japanese fallback if an active dictionary cannot be fetched", async () => {
+  it("retains Japanese fallback and English navigation if an active dictionary cannot be fetched", async () => {
     const data = await prepareClientTranslations("en", async (lang) => lang === "en" ? {} : dictionary, true);
-    expect(data.en).toEqual({});
-    expect(data.ja?.common).toEqual(dictionary.common);
+    expect(data.en?.labor).toMatchObject({ nav: { services: "Services" } });
+    expect(data.ja?.common).toMatchObject(dictionary.common);
   });
 });

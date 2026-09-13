@@ -1,0 +1,79 @@
+{
+  "labor": {
+    "name": "四葉社会保険労務士事務所",
+    "description": "Social insurance, labor management & subsidy applications",
+    "tagline": "Solving your business challenges related to people.",
+    "nav": {
+      "home": "Home",
+      "about": "About Us",
+      "column": "Column",
+      "contact": "Contact",
+      "services": "Services"
+    },
+    "footerDescription1": "Comprehensive support for social insurance,",
+    "footerDescription2": "labor management, and subsidy applications.",
+    "footerNav": {
+      "other": {
+        "title": "Other",
+        "contact": "Contact"
+      },
+      "office": {
+        "about": "About Us",
+        "title": "Office",
+        "column": "Column"
+      },
+      "services": {
+        "rules": "Work Rules Creation",
+        "title": "Services",
+        "payroll": "Payroll Processing",
+        "subsidy": "Subsidy Applications",
+        "socialInsurance": "Social & Labor Insurance"
+      }
+    }
+  },
+  "legal": {
+    "name": "四葉行政書士事務所",
+    "description": "Subsidies & grants, residence status & visas, legal procedures"
+  },
+  "realestate": {
+    "name": "四葉不動産",
+    "description": "Real estate leasing, sales & property management"
+  },
+  "common": {
+    "booking": "Booking",
+    "current": "Current",
+    "currentSite": "Current site",
+    "skipToContent": "Skip to main content",
+    "navigation": {
+      "mainNav": "Main navigation",
+      "openMenu": "Open menu",
+      "closeMenu": "Close menu",
+      "mobileMenu": "Mobile menu",
+      "showGroupBusinesses": "Show group businesses"
+    },
+    "footer": {
+      "terms": "Terms of Use",
+      "copyright": "四葉グループ All rights reserved.",
+      "samuraiName": "士業ドットコム",
+      "privacyPolicy": "Privacy Policy",
+      "managedServices": "Managed Services",
+      "samuraiDescription": "Professional services booking & matching platform",
+      "legalRepRegistration": "四葉行政書士事務所 Chief Administrative Scrivener 浦松丈二　Registration No.: 第25087022号",
+      "legalHeadquartersLine": "Headquarters: 四葉グループ (Head Office: Bunkyo-ku, Tokyo / Representative: 浦松丈二)",
+      "realestateRegistration": "四葉不動産株式会社　License No.: 東京都知事（1）第113304号",
+      "realestateRepRegistration": "四葉不動産 Representative Director & Chief Licensed Real Estate Transaction Specialist 浦松丈二　Registration No.: （東京）第293544号"
+    }
+  },
+  "address": {
+    "postalCode": "〒112-0006",
+    "full": "Kohinata 4-2-5, Bunkyo-ku, Tokyo 112-0006, Kohinata Yasuda Bldg. 203",
+    "phone": "03-6161-9428"
+  },
+  "brand": {
+    "groupName": "四葉グループ",
+    "groupNameEn": "YOTSUBA GROUP"
+  },
+  "representative": {
+    "srExamNote": ""
+  }
+}
