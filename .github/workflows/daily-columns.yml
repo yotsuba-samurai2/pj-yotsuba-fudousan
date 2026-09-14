@@ -598,10 +598,11 @@ jobs:
   # 6. 修正 ── レビューがNGのときだけ走る
   # ─────────────────────────────────────────────────────────────
   fix:
-    # validate を needs に残すと、修復経路（validate=failure）のときに常にスキップされる。
-    # review は「どちらかの検証が通った」ときにしか走らないので、review だけで足りる。
+    # review の祖先には必ず失敗またはスキップした検証経路がある。
+    # 暗黙の success() で修正まで飛ばさないよう、状態関数を明示する。
+    # レビュー失敗・判定不明・キャンセル時は修正せず、人間の確認に回す。
     needs: [review]
-    if: needs.review.outputs.pass == 'false'
+    if: ${{ !cancelled() && needs.review.result == 'success' && needs.review.outputs.pass == 'false' }}
     runs-on: ubuntu-latest
     timeout-minutes: 90
     steps:
@@ -748,7 +749,7 @@ jobs:
               echo "このPRは自動マージされます。**朝7:00に6本を読めるGoogleドキュメントが届きます。**"
               echo "読んだうえで、管理画面から投入してください（投入は浦松さんの作業）。"
             else
-              echo "**レビューの判定が取れなかったため、マージしていません。** 内容を確認してからマージしてください。"
+              echo "**レビュー・修正ゲートを通過していないため、マージしていません。** 上のレビュー判定と修正ジョブの結果を確認してください。"
             fi
             echo
             echo "投入先（デプロイ後）："
@@ -773,9 +774,9 @@ jobs:
           else
             git push -u origin "$BR"
             gh issue create --repo "${{ github.repository }}" \
-              --title "【要確認】コラムのレビュー判定が取れませんでした（$D）" \
+              --title "【要確認】コラムのレビュー・修正ゲート未通過（$D）" \
               --body-file /tmp/body.md
-            echo "::warning::レビュー判定が取れなかったため、ブランチ $BR を残してIssueを立てました"
+            echo "::warning::レビュー・修正ゲート未通過のため、ブランチ $BR を残してIssueを立てました"
           fi
 
   # ─────────────────────────────────────────────────────────────
