@@ -341,8 +341,15 @@ jobs:
         if: failure()
         with:
           name: validate-ng
-          path: .ng/
-          if-no-files-found: warn
+          # .ng は隠しディレクトリ。既定では除外され、修復ジョブが起動できない。
+          # 診断ファイルだけを明示し、他の隠しファイルを含めない。
+          path: |
+            .ng/ng.txt
+            .ng/seed-realestate-columns-daily.log
+            .ng/seed-souzoku-legal-columns.log
+            .ng/seed-labor-columns.log
+          include-hidden-files: true
+          if-no-files-found: error
 
       - name: emit-ts（忘れると管理画面に並ばない）
         run: |
@@ -598,10 +605,11 @@ jobs:
   # 6. 修正 ── レビューがNGのときだけ走る
   # ─────────────────────────────────────────────────────────────
   fix:
-    # validate を needs に残すと、修復経路（validate=failure）のときに常にスキップされる。
-    # review は「どちらかの検証が通った」ときにしか走らないので、review だけで足りる。
+    # review の祖先には必ず失敗またはスキップした検証経路がある。
+    # 暗黙の success() で修正まで飛ばさないよう、状態関数を明示する。
+    # レビュー失敗・判定不明・キャンセル時は修正せず、人間の確認に回す。
     needs: [review]
-    if: needs.review.outputs.pass == 'false'
+    if: ${{ !cancelled() && needs.review.result == 'success' && needs.review.outputs.pass == 'false' }}
     runs-on: ubuntu-latest
     timeout-minutes: 90
     steps:
@@ -630,11 +638,22 @@ jobs:
             **バリデータに引っかかったら、まずバリデータ側を疑う。記事を歪めて検査を通さない。**
             git 操作はしない。
 
+            ## 編集する正本と生成物を区別する
+            - 指摘された記事の scripts/*-columns/ の原稿・翻訳と、対応する
+              scripts/seed-*.ts の記事定義・必須表現だけを必要に応じて直す。
+            - src/lib/data/*-seed.ts と *.preview.json は生成物。
+              **読み込み・直接編集・--emit-ts は行わない。** 後続の非LLMステップが
+              修正済み原稿から --emit-ts で再生成する。巨大な生成ファイルを全文読まない。
+            - 指摘が生成物を指している場合も、slugで対応する原稿・記事定義を特定する。
+            - 一次資料は WebSearch / WebFetch で確認する。許可されていない
+              Bash/curl/パッケージ追加は試行せず、取得できない場合は未検証事項を記す。
+            - ターンは指摘の根拠確認と正本の修正に使い、後工程の機械検証を重複しない。
+
             **これは無人の1回きりの実行です。次のターンはありません。**
             修正を書き終えてから終了すること。途中経過の報告でターンを終えない。
           claude_args: |
             --model claude-opus-4-8
-            --max-turns 60
+            --max-turns 120
             --allowedTools "Read,Write,Edit,Glob,Grep,WebSearch,WebFetch"
             --disallowedTools "Task"
 
@@ -748,7 +767,7 @@ jobs:
               echo "このPRは自動マージされます。**朝7:00に6本を読めるGoogleドキュメントが届きます。**"
               echo "読んだうえで、管理画面から投入してください（投入は浦松さんの作業）。"
             else
-              echo "**レビューの判定が取れなかったため、マージしていません。** 内容を確認してからマージしてください。"
+              echo "**レビュー・修正ゲートを通過していないため、マージしていません。** 上のレビュー判定と修正ジョブの結果を確認してください。"
             fi
             echo
             echo "投入先（デプロイ後）："
@@ -773,9 +792,9 @@ jobs:
           else
             git push -u origin "$BR"
             gh issue create --repo "${{ github.repository }}" \
-              --title "【要確認】コラムのレビュー判定が取れませんでした（$D）" \
+              --title "【要確認】コラムのレビュー・修正ゲート未通過（$D）" \
               --body-file /tmp/body.md
-            echo "::warning::レビュー判定が取れなかったため、ブランチ $BR を残してIssueを立てました"
+            echo "::warning::レビュー・修正ゲート未通過のため、ブランチ $BR を残してIssueを立てました"
           fi
 
   # ─────────────────────────────────────────────────────────────
