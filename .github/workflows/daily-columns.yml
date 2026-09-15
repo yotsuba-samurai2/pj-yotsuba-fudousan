@@ -5,6 +5,10 @@ name: Daily Columns
 #
 # 設計の正本は docs/daily-columns-pipeline.md。
 # 有効化の手順（シークレット登録・GitHub App導入）も同ファイルに書いてある。
+#
+# actions/* のバージョンは node24 で動くものに揃えてある（2026-09-15）。
+# Node 20 を使う版は「forced to run on Node.js 24」の警告付きで動いているだけで、
+# GitHub が Node 20 を落とした時点で毎晩落ちる。checkout@v6 は既に node24。
 
 on:
   schedule:
@@ -97,7 +101,7 @@ jobs:
             --allowedTools "Read,Write,Glob,Grep,WebSearch,WebFetch"
             --disallowedTools "Task"
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: plan
           path: .tmp/plan.json
@@ -114,7 +118,7 @@ jobs:
       - uses: actions/checkout@v6
         with:
           fetch-depth: 0
-      - uses: actions/download-artifact@v5
+      - uses: actions/download-artifact@v8
         with:
           name: plan
           path: .tmp
@@ -189,7 +193,7 @@ jobs:
           '
 
       # 絞り込んだ plan.json を後段へ渡す（元の plan artifact は残したまま別名で）
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: plan-approved
           path: .tmp/plan.json
@@ -212,7 +216,7 @@ jobs:
       - uses: actions/checkout@v6
         with:
           fetch-depth: 0
-      - uses: actions/download-artifact@v5
+      - uses: actions/download-artifact@v8
         with:
           name: plan-approved
           path: .tmp
@@ -276,7 +280,7 @@ jobs:
             tar -czf .out/${{ matrix.shigyo }}.tar.gz --files-from /dev/null
           fi
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: draft-${{ matrix.shigyo }}
           path: .out/${{ matrix.shigyo }}.tar.gz
@@ -290,7 +294,7 @@ jobs:
     timeout-minutes: 40
     steps:
       - uses: actions/checkout@v6
-      - uses: actions/download-artifact@v5
+      - uses: actions/download-artifact@v8
         with:
           pattern: draft-*
           merge-multiple: true
@@ -298,7 +302,7 @@ jobs:
       - name: 原稿を展開
         run: for f in .out/*.tar.gz; do tar -xzf "$f"; done && git status --porcelain | head -40
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version: 20
           cache: npm
@@ -337,7 +341,7 @@ jobs:
             cp "/tmp/$s.log" ".ng/$s.log" 2>/dev/null || true
           done
           echo "--- 修復ジョブへ渡すNG ---"; cat .ng/ng.txt || true
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         if: failure()
         with:
           name: validate-ng
@@ -382,7 +386,7 @@ jobs:
           echo "保存するファイル $(wc -l < .out/changed.txt) 件"
           cat .out/changed.txt
           tar -czf .out/validated.tar.gz -T .out/changed.txt
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: validated
           path: .out/validated.tar.gz
@@ -410,14 +414,14 @@ jobs:
     timeout-minutes: 90
     steps:
       - uses: actions/checkout@v6
-      - uses: actions/download-artifact@v5
+      - uses: actions/download-artifact@v8
         with:
           pattern: draft-*
           merge-multiple: true
           path: .out
       - name: 原稿を展開
         run: for f in .out/*.tar.gz; do tar -xzf "$f"; done && git status --porcelain | head -40
-      - uses: actions/download-artifact@v5
+      - uses: actions/download-artifact@v8
         with:
           name: validate-ng
           path: .ng
@@ -465,7 +469,7 @@ jobs:
             --allowedTools "Read,Write,Edit,Glob,Grep,WebSearch,WebFetch,Bash(npx tsx *)"
             --disallowedTools "Task"
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version: 20
           cache: npm
@@ -516,7 +520,7 @@ jobs:
           echo "保存するファイル $(wc -l < .out/changed.txt) 件"
           cat .out/changed.txt
           tar -czf .out/validated.tar.gz -T .out/changed.txt
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: validated
           path: .out/validated.tar.gz
@@ -539,12 +543,12 @@ jobs:
       - uses: actions/checkout@v6
         with:
           fetch-depth: 0
-      - uses: actions/download-artifact@v5
+      - uses: actions/download-artifact@v8
         with:
           name: validated
           path: .out
       - run: tar -xzf .out/validated.tar.gz
-      - uses: actions/download-artifact@v5
+      - uses: actions/download-artifact@v8
         with:
           name: plan-approved
           path: .tmp
@@ -614,7 +618,7 @@ jobs:
     timeout-minutes: 90
     steps:
       - uses: actions/checkout@v6
-      - uses: actions/download-artifact@v5
+      - uses: actions/download-artifact@v8
         with:
           name: validated
           path: .out
@@ -657,7 +661,7 @@ jobs:
             --allowedTools "Read,Write,Edit,Glob,Grep,WebSearch,WebFetch"
             --disallowedTools "Task"
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version: 20
           cache: npm
@@ -687,7 +691,7 @@ jobs:
           fi
           cat .out/changed.txt
           tar -czf .out/fixed.tar.gz -T .out/changed.txt
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: fixed
           path: .out/fixed.tar.gz
@@ -709,7 +713,7 @@ jobs:
       - uses: actions/checkout@v6
         with:
           fetch-depth: 0
-      - uses: actions/download-artifact@v5
+      - uses: actions/download-artifact@v8
         with:
           name: ${{ needs.fix.result == 'success' && 'fixed' || 'validated' }}
           path: .out
