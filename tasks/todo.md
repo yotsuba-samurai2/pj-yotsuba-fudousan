@@ -280,3 +280,12 @@ Only a task-owned loopback database receives fixture writes. No production DB wr
 - [x] 3サイト×4言語の実表示、公開フラグの両状態の回帰テスト、型検査・lint（error 0、既存warning 1）・730テスト・build（371ページ）を確認
 - [x] 三本線メニューから4つの公式サイトへ実際に移動できることを確認
 - [ ] 検証資料を保存し、既存の指示に従ってPR・マージ
+
+
+## 2026-09-15 Daily Columns 修復経路
+- [x] 実行34877853793・PR #353・原稿artifactを照合
+- [x] 検証ログが隠しディレクトリ除外で消える不具合を修正
+- [x] PR #353のfix条件修正を先行して適用（原稿は含めない）
+- [x] GitHub公式glob・式評価器で旧動作と修正後を検証
+- [x] actionlint・差分検査
+- [ ] mainへのマージと修正後workflowの実走（承認後）
