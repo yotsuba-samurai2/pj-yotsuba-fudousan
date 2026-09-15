@@ -1132,6 +1132,46 @@ const ARTICLES: ArticleSpec[] = [
     localesWithTranslations: ["en", "zh-tw", "zh"],
     hubLinks: ["/toushi", "/office"],
   },
+  {
+    file: "55-chuko-sha-kobutsusho-tenjijo-hokan-bukken.md",
+    slug: "chuko-sha-kobutsusho-tenjijo-hokan-bukken",
+    title: "中古車販売店・古物商の展示場と保管場所──賃貸物件を探すときの用途地域と車庫の届出",
+    publishedAt: "2026-09-13",
+    category: "投資・事業用不動産",
+    excerpt:
+      "中古車販売や古物商の展示場に使える物件は、まず用途地域で絞られます。物品を売る店舗は建築基準法別表第二の用途制限を受け、第一種低層住居専用地域と工業専用地域では原則建てられません。整備を伴えば自動車修理工場としての作業場床面積制限が別に効きます。東京都文京区の宅地建物取引士兼行政書士が、契約前に確認できることを建築基準法・古物営業法・車庫法の条文から順に整理します。",
+    keywords: [
+      "中古車販売 物件",
+      "古物商 展示場 用途地域",
+      "中古車 展示場 建築基準法 別表第二",
+      "車庫証明 販売 在庫車",
+      "古物商 営業所 賃貸 契約",
+    ],
+    tags: ["事業用不動産", "許認可", "用途地域", "古物営業法"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/toushi", "/office"],
+  },
+  {
+    file: "56-souzoku-sokochi-jinushi-baikyaku.md",
+    slug: "souzoku-sokochi-jinushi-baikyaku",
+    title: "相続した底地（そこち）を売るには──借地人との関係・地代・売却ルート",
+    publishedAt: "2026-09-13",
+    category: "相続",
+    excerpt:
+      "底地（そこち）とは借地権が付いた土地の所有権です。相続で引き継ぐこと自体に借地人の承諾は要りません（民法第896条）。売る相手は主に借地人・第三者で、借地人が買えば借地関係は解消します。価格は地代の水準・残存期間・借地権割合で変わり一律ではありません。東京都文京区の宅地建物取引士兼行政書士が、売る相手・価格の考え方・進める順番を条文と国税庁の資料から整理します。",
+    keywords: [
+      "底地 相続 売却",
+      "底地 借地権 違い",
+      "底地 借地人 売る",
+      "底地 評価 財産評価基本通達 25",
+      "底地 地代 借地権割合",
+    ],
+    tags: ["相続", "底地", "借地権", "売却"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/souzoku"],
+  },
 ];
 
 function toPlainText(md: string): string {
