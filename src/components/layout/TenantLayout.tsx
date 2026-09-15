@@ -16,6 +16,8 @@ import { gaEvent } from "@/lib/gtag";
 import { normalizePath } from "@/lib/normalize-path"; // cross-links直importはC7文言のクライアント同梱を招くため禁止
 import { MobileStickyBar } from "@/components/shared/MobileStickyBar";
 import { LinkaFab } from "@/components/shared/LinkaFab";
+import { footerSrRegistration } from "@/lib/shared/footer-sr-registration";
+import contactStyles from "@/components/shared/ContactCta.module.css";
 import { SR_LAUNCHED, type BusinessKey } from "@/lib/shared/office";
 import { SR_OFFICE_NAME, SR_OFFICE_NAME_ZH_TW, SR_OFFICE_NAME_ZH } from "@/lib/shared/sr-name"; // 事務所名は実行時結合（法27条ソース漏れ対策）
 import type { LangCode } from "@/config/languages";
@@ -992,11 +994,12 @@ function TenantFooter({ businessKey }: { businessKey: string }) {
             <p>{t("common.footer.realestateRegistration")}</p>
             <p>{t("common.footer.realestateRepRegistration")}</p>
             <p>{t("common.footer.legalRepRegistration")}</p>
-            {/* 個人の"試験合格"は表示可・事務所は開業まで非表示（社労士_試験合格表記_実装指示_v1）。
-                representative.srExamNote は /admin/fix-sr-notation 適用後に値が入る（未投入時は非表示） */}
-            {t("representative.srExamNote") && (
+            {/* 公開後は3事業共通で代表個人の登録表示。DBに旧試験合格文が残っても併記しない。 */}
+            {SR_LAUNCHED ? (
+              <p className="break-words">{footerSrRegistration(locale)}</p>
+            ) : t("representative.srExamNote") ? (
               <p>{t("representative.srExamNote")}</p>
-            )}
+            ) : null}
           </div>
 
           {/* いい相続（株式会社鎌倉新書・東証プライム 6184）との相互リンク
@@ -1010,7 +1013,7 @@ function TenantFooter({ businessKey }: { businessKey: string }) {
                 legal テナント／ja／パスが /legal トップ本体、の3条件すべて。
                 フッターは共通部品のため、条件を付けないと legal 配下の全ページに出る。
                 浦松指示（2026-08-07）によりトップ1ページだけに限定している。
-              ・配置＝資格表記（社会保険労務士試験合格）の直下（浦松指示 2026-08-07）。
+              ・配置＝資格表記の直下（浦松指示 2026-08-07）。
                 相談導線より前に外部サイトへの出口を置かない。先方PPTは位置・大きさを指定していない。
               ・rel は noopener のみ。nofollow を付けない（相互リンクの趣旨を損なうため）。
                 noreferrer も付けない（先方側で当サイトからの流入を計測できるようにするため）。 */}
@@ -1039,7 +1042,7 @@ function TenantFooter({ businessKey }: { businessKey: string }) {
 
       {/* Copyright */}
       <div className="border-t border-border">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 py-6 sm:flex-row sm:px-6 lg:px-8">
+        <div className={`mx-auto flex max-w-7xl flex-col flex-wrap items-center justify-between gap-3 px-4 py-6 sm:flex-row sm:px-6 lg:px-8 ${contactStyles.footerEnd}`}>
           <p className="text-xs text-text-muted">
             &copy; {currentYear} {t("common.footer.copyright")}
           </p>
