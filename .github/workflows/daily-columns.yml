@@ -341,8 +341,15 @@ jobs:
         if: failure()
         with:
           name: validate-ng
-          path: .ng/
-          if-no-files-found: warn
+          # .ng は隠しディレクトリ。既定では除外され、修復ジョブが起動できない。
+          # 診断ファイルだけを明示し、他の隠しファイルを含めない。
+          path: |
+            .ng/ng.txt
+            .ng/seed-realestate-columns-daily.log
+            .ng/seed-souzoku-legal-columns.log
+            .ng/seed-labor-columns.log
+          include-hidden-files: true
+          if-no-files-found: error
 
       - name: emit-ts（忘れると管理画面に並ばない）
         run: |

@@ -289,3 +289,12 @@ Only a task-owned loopback database receives fixture writes. No production DB wr
 - [x] seed dry-run／emit-ts（3分野、NG 0・no-op）、lint（error 0）、tsc、730テスト、使い捨てDBでの本番ビルド（371ページ）、Actions 条件7ケースを確認
 - [x] `recover/columns-20260914` で draft PR を作成（マージ・デプロイ・DB投入は浦松の指示待ち）
 - [ ] 資格者レビュー（法務省通知の本文確認を含む）→ マージ → デプロイ → 管理画面から3分野を投入 → 24URLの200・言語・canonical・sitemap を確認 → Issue #350 を閉じる
+
+
+## 2026-09-15 Daily Columns 修復経路
+- [x] 実行34877853793・PR #353・原稿artifactを照合
+- [x] 検証ログが隠しディレクトリ除外で消える不具合を修正
+- [x] PR #353のfix条件修正を先行して適用（原稿は含めない）
+- [x] GitHub公式glob・式評価器で旧動作と修正後を検証
+- [x] actionlint・差分検査
+- [ ] mainへのマージと修正後workflowの実走（承認後）
