@@ -598,6 +598,19 @@ const REQUIRED_HUB_LINKS: Record<string, string[]> = {
     "/legal/column/souzoku-touki-nagare",
     "/legal/column/yuigon-shikkosha-shokumu-sennin-dare",
   ],
+  "kamotsu-riyo-unso-1shu-2shu-touroku-kyoka": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/ippan-kamotsu-unso-kyoka-eigyosho-shako-yoken",
+    "/legal/column/keikamotsu-kei-jidosha-unso-todokede",
+  ],
+  "keieikanri-zairyu-chuka-kigyousha-kaisha-setsuritsu": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/group-home-gaikokujin-keieikanri-zairyushikaku",
+  ],
 };
 
 /** 表示コンプライアンス上の禁止語 */
@@ -1912,6 +1925,43 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "別事業体",
     "独立した事業体",
   ],
+  "kamotsu-riyo-unso-1shu-2shu-touroku-kyoka": [
+    "貨物利用運送事業法",
+    "第一種貨物利用運送事業",
+    "第二種貨物利用運送事業",
+    "第3条第1項",
+    "第20条",
+    "国土交通大臣",
+    "純資産額300万円以上",
+    "貨物利用運送事業法施行規則第8条",
+    "登録免許税",
+    "標準処理期間",
+    "貨物自動車運送事業法第3条",
+    "別事業体",
+    "独立した事業体",
+    "紹介料を受け取りません",
+  ],
+  "keieikanri-zairyu-chuka-kigyousha-kaisha-setsuritsu": [
+    "経営・管理",
+    "出入国管理及び難民認定法",
+    "別表第一の二",
+    "第7条第1項第2号",
+    "3,000万円以上",
+    "常勤職員",
+    "日本語教育の参照枠",
+    "B2相当以上",
+    "中小企業診断士",
+    "2025年（令和7年）10月16日",
+    "令和10年",
+    "申請取次",
+    "出入国在留管理庁",
+    "司法書士",
+    "税理士",
+    "社会保険労務士",
+    "別事業体",
+    "独立した事業体",
+    "紹介料を受け取りません",
+  ],
 };
 
 /** 記事ごとに含めてはならない表現 */
@@ -2016,6 +2066,8 @@ const FORBIDDEN_PHRASES: Record<string, string[]> = {
   "saishi-shokei-haka-butsudan-isanbunkatsu": [],
   "kaihatsu-kyoka-toshikeikakuho-29jo-nagare": [],
   "tokutei-zaisan-shokei-yuigon-izo-chigai": [],
+  "kamotsu-riyo-unso-1shu-2shu-touroku-kyoka": [],
+  "keieikanri-zairyu-chuka-kigyousha-kaisha-setsuritsu": [],
 };
 
 /** 本セット外へ張る既存legalコラムslug（リポジトリの他シードで実在確認済み） */
@@ -2023,6 +2075,7 @@ const KNOWN_EXISTING_LEGAL_SLUGS = new Set([
   "taiwan-koseki-jokoseki-shutoku",
   "taiwan-inkan-shomei-isan-bunkatsu",
   "denshi-keiyaku-enpo-inin-kami",
+  "group-home-gaikokujin-keieikanri-zairyushikaku",
 ]);
 
 const ARTICLES: Array<{
@@ -3509,6 +3562,58 @@ const ARTICLES: Array<{
       "相続",
       "対抗要件",
       "遺留分",
+      "行政書士",
+    ],
+  },
+  {
+    file: "64-kamotsu-riyo-unso-1shu-2shu-touroku-kyoka.md",
+    slug: "kamotsu-riyo-unso-1shu-2shu-touroku-kyoka",
+    date: "2026-09-15",
+    title:
+      "貨物利用運送事業の第一種登録と第二種許可、どちらが要る？──車両を持たず運送を手配する事業の手続き",
+    category: "許認可の手続き（行政書士の実務から）",
+    excerpt:
+      "自社でトラックを持たず、他社の運送を手配して荷物を運ぶ利用運送には、貨物利用運送事業法の手続きが必要です。トラック等の利用運送や集配を伴わない利用運送は第一種登録（法第3条第1項）、船舶・航空・鉄道の運送と集配を一貫して引き受ける場合は第二種許可（法第20条）に分かれます。財産的基礎（純資産300万円以上）、営業所・保管施設の要件、登録免許税、一般貨物（緑ナンバー）・軽貨物（黒ナンバー）との違いを整理し、会社設立の登記は司法書士、営業所・保管施設の物件は不動産へ分離受任で振る分担を示しました。",
+    keywords: [
+      "貨物利用運送事業 第一種 第二種 違い",
+      "第一種貨物利用運送事業 登録 要件",
+      "第二種貨物利用運送事業 許可 国際",
+      "利用運送 純資産 300万円 財産的基礎",
+      "利用運送 一般貨物 緑ナンバー 違い",
+      "貨物利用運送 登録 行政書士",
+    ],
+    tags: [
+      "貨物利用運送事業",
+      "第一種貨物利用運送事業",
+      "第二種貨物利用運送事業",
+      "利用運送",
+      "許認可",
+      "行政書士",
+    ],
+  },
+  {
+    file: "65-keieikanri-zairyu-chuka-kigyousha-kaisha-setsuritsu.md",
+    slug: "keieikanri-zairyu-chuka-kigyousha-kaisha-setsuritsu",
+    date: "2026-09-15",
+    title:
+      "中国・台湾の起業家が日本で「経営・管理」在留資格を取るには？──2025年10月改正後の要件と申請取次",
+    category: "許認可の手続き（行政書士の実務から）",
+    excerpt:
+      "中国・台湾などの起業家が日本で会社を作り経営するために目指すのが在留資格「経営・管理」です。2025年（令和7年）10月16日施行の改正で、資本金3,000万円以上、常勤職員1人以上、申請者本人または常勤職員の日本語能力（B2相当以上）、経営経験3年以上または学位、事業計画の専門家確認、独立した事業所の確保が求められるようになりました。要件の全体像と申請取次を行う行政書士の役割を整理し、会社設立の登記は司法書士、税務は税理士、物件は不動産、雇用の社会保険は社労士へ分離受任で振る分担を示しました。",
+    keywords: [
+      "経営・管理 在留資格 要件 2025 改正",
+      "経営管理ビザ 資本金 3000万円",
+      "経営・管理 事業所 自宅兼用",
+      "外国人 会社設立 在留資格 順序",
+      "経営・管理 日本語能力 B2 N2",
+      "経営・管理 申請取次 行政書士",
+    ],
+    tags: [
+      "経営・管理",
+      "在留資格",
+      "外国人",
+      "会社設立",
+      "申請取次",
       "行政書士",
     ],
   },
