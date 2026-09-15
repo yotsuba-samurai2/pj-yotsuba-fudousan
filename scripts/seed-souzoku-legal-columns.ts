@@ -603,6 +603,51 @@ const REQUIRED_HUB_LINKS: Record<string, string[]> = {
 /** 表示コンプライアンス上の禁止語 */
 const FORBIDDEN_WORDS = ["ワンストップ", "一括対応", "一体で", "one-stop", "一気通貫"];
 
+/**
+ * 条文番号の必須表現を、本文の列挙表記にも合わせて判定する。
+ *
+ * 既定は連続一致（`includes`）。ただし本文では条文が
+ * 「民法第898条・第899条」のようにまとめて挙げられることがあり、
+ * 「民法第899条」の連続一致だけを求めると、条文が正しく書かれていても落ちる。
+ * この誤判定で夜間バッチが2度止まっている
+ * （2026-08-31＝和暦の括弧書き、2026-09-14＝条文の列挙）。
+ *
+ * そこで「<法令名>第N条（のM）」形の必須表現に限り、同じ法令名のもとで
+ * 当該条が列挙されている場合も一致とみなす。連続一致が成立する場合の挙動は
+ * 変えないので、条文以外の必須表現の判定には影響しない。
+ *
+ * 記事側を歪めて検査を通すことはしない（docs/daily-columns-pipeline.md の原則）。
+ */
+const ARTICLE_PATTERN = "第[0-9０-９]+条(?:の[0-9０-９]+)*";
+const ARTICLE_SEPARATOR_PATTERN = "(?:[・、，,]|及び|および|並びに|ならびに|\\s)+";
+
+function escapeRegExp(s: string): string {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function matchesRequiredPhrase(content: string, phrase: string): boolean {
+  // 連続一致が成立するなら従来どおり合格。ここが大多数の経路。
+  if (content.includes(phrase)) return true;
+
+  // 「<法令名>第N条（のM）」形でなければ、従来どおり不一致。
+  const parsed = phrase.match(new RegExp(`^(.+?)(${ARTICLE_PATTERN})$`));
+  if (!parsed) return false;
+  const [, lawName, article] = parsed;
+  if (!content.includes(lawName)) return false;
+
+  // 同じ法令名に条が続けて挙がっている範囲を取り出し、対象の条が含まれるか見る。
+  // 例：「民法第898条・第899条」→ ["第898条", "第899条"]
+  const runPattern = new RegExp(
+    `${escapeRegExp(lawName)}${ARTICLE_PATTERN}(?:${ARTICLE_SEPARATOR_PATTERN}${ARTICLE_PATTERN})*`,
+    "g",
+  );
+  for (const run of content.match(runPattern) ?? []) {
+    const articles = run.match(new RegExp(ARTICLE_PATTERN, "g")) ?? [];
+    if (articles.includes(article)) return true;
+  }
+  return false;
+}
+
 /** 記事ごとに必ず含めるべき表現（機械ゲート。最低限の合否判定） */
 const REQUIRED_PHRASES: Record<string, string[]> = {
   "sougi-go-tetsuzuki-dare-ni-soudan": [
@@ -3626,7 +3671,9 @@ function verify(cols: SeedColumn[]): string[] {
 
     // 記事ごとの必須表現・禁止表現
     for (const phrase of REQUIRED_PHRASES[c.slug] ?? []) {
-      if (!c.content.includes(phrase)) notes.push(`NG: ${c.slug} に必須表現「${phrase}」なし`);
+      if (!matchesRequiredPhrase(c.content, phrase)) {
+        notes.push(`NG: ${c.slug} に必須表現「${phrase}」なし`);
+      }
     }
     for (const phrase of FORBIDDEN_PHRASES[c.slug] ?? []) {
       if (c.content.includes(phrase)) notes.push(`NG: ${c.slug} に禁止表現「${phrase}」あり`);
