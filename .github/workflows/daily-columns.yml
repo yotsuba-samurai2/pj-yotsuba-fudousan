@@ -638,11 +638,22 @@ jobs:
             **バリデータに引っかかったら、まずバリデータ側を疑う。記事を歪めて検査を通さない。**
             git 操作はしない。
 
+            ## 編集する正本と生成物を区別する
+            - 指摘された記事の scripts/*-columns/ の原稿・翻訳と、対応する
+              scripts/seed-*.ts の記事定義・必須表現だけを必要に応じて直す。
+            - src/lib/data/*-seed.ts と *.preview.json は生成物。
+              **読み込み・直接編集・--emit-ts は行わない。** 後続の非LLMステップが
+              修正済み原稿から --emit-ts で再生成する。巨大な生成ファイルを全文読まない。
+            - 指摘が生成物を指している場合も、slugで対応する原稿・記事定義を特定する。
+            - 一次資料は WebSearch / WebFetch で確認する。許可されていない
+              Bash/curl/パッケージ追加は試行せず、取得できない場合は未検証事項を記す。
+            - ターンは指摘の根拠確認と正本の修正に使い、後工程の機械検証を重複しない。
+
             **これは無人の1回きりの実行です。次のターンはありません。**
             修正を書き終えてから終了すること。途中経過の報告でターンを終えない。
           claude_args: |
             --model claude-opus-4-8
-            --max-turns 60
+            --max-turns 120
             --allowedTools "Read,Write,Edit,Glob,Grep,WebSearch,WebFetch"
             --disallowedTools "Task"
 
