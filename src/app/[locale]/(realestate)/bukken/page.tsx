@@ -23,8 +23,10 @@ import type { LangCode } from "@/config/languages";
  * ページネーションなし（初期掲載3〜5件のシンプル構成＝委任プロンプト確定仕様）。
  */
 
-// ja先行公開（sitemap.ts の STATIC_REALESTATE と必ず一致させる）
-const PAGE_LOCALES: LangCode[] = ["ja"];
+// 2026-09-16：ja先行→4ロケール公開へ。UI文言（COPY）は当初から4ロケール分あり、
+// 物件詳細（/bukken/[slug]）は物件ごとの翻訳有無で4ロケール出力済み。1件目が4言語で公開されたため
+// 一覧も揃える（sitemap.ts の STATIC_REALESTATE と必ず一致させる）
+const PAGE_LOCALES: LangCode[] = ["ja", "en", "zh-tw", "zh"];
 
 // カテゴリの表示順（勝ち筋優先）
 const CATEGORY_ORDER: PropertyCategory[] = ["gh", "jigyo", "souzoku", "toushi", "other"];
