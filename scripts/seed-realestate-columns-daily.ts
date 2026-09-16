@@ -1212,6 +1212,46 @@ const ARTICLES: ArticleSpec[] = [
     localesWithTranslations: ["en", "zh-tw", "zh"],
     hubLinks: ["/souzoku"],
   },
+  {
+    file: "59-koshu-yokujo-sauna-bukken-youken.md",
+    slug: "koshu-yokujo-sauna-bukken-youken",
+    title: "サウナ・銭湯（公衆浴場）を開くための物件要件は？——公衆浴場法と用途地域",
+    publishedAt: "2026-09-16",
+    category: "投資・事業用不動産",
+    excerpt:
+      "サウナ・銭湯・スパの物件で最初に効くのは、①用途地域（公衆浴場は個室付浴場業に係るものを除き幅広い用途地域で建てられ、ここは詰まりにくい）②公衆浴場法が求める構造設備の基準（都道府県の条例で定まり自治体で違う）③用途変更の確認申請（公衆浴場は建築基準法の特殊建築物なので当該用途200㎡超では原則必要）④給排水・換気・レジオネラ対策、の4点です。物件選びの本当の関門は用途地域ではなく構造設備と用途変更・消防にあります。東京都文京区の宅地建物取引士兼行政書士が、契約前に確認できることを条文と厚生労働省の要領から順に整理します。",
+    keywords: [
+      "サウナ 物件 公衆浴場法",
+      "銭湯 スパ 開業 物件",
+      "公衆浴場 用途地域 個室付浴場業",
+      "公衆浴場 用途変更 確認申請 特殊建築物",
+      "サウナ 消防法施行令 別表第一 9項",
+    ],
+    tags: ["事業用不動産", "許認可", "用途地域", "公衆浴場法"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/toushi", "/office"],
+  },
+  {
+    file: "60-souzoku-tsukigime-coin-parking-tochi-baikyaku.md",
+    slug: "souzoku-tsukigime-coin-parking-tochi-baikyaku",
+    title: "相続した月極駐車場・コインパーキングの土地は売れる？——契約引継ぎと売却の順序",
+    publishedAt: "2026-09-16",
+    category: "相続",
+    excerpt:
+      "相続した稼働中の駐車場は、今の契約が付いたままでも売れます。月極もコインパーキング運営委託も契約上の地位は相続で承継され（民法第896条）、そのまま買主に引き継ぐことも、解約して更地で売ることもできます。月極は建物所有目的でない土地の賃貸借なので借地借家法の保護がなく、貸主からの解約に正当事由は要りません。駐車場用地は原則「自用地」評価で、貸宅地のような借地権割合の控除はありません。東京都文京区の宅地建物取引士兼行政書士が、契約引継ぎと売却の順序を条文と国税庁の資料から整理します。",
+    keywords: [
+      "相続 駐車場 土地 売却",
+      "月極駐車場 借地借家法 適用外 解約",
+      "コインパーキング 運営委託 一括借上げ 相続",
+      "駐車場 相続税評価 自用地 財産評価基本通達",
+      "駐車場 遺産分割前 売却 換価分割",
+    ],
+    tags: ["相続", "駐車場", "コインパーキング", "売却"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/souzoku"],
+  },
 ];
 
 function toPlainText(md: string): string {

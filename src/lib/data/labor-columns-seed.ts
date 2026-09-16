@@ -18688,5 +18688,371 @@ export const LABOR_COLUMNS_SEED: LaborSeedColumn[] = [
         ]
       }
     }
+  },
+  {
+    "business": "labor",
+    "slug": "inshokuten-kaigyo-roumu-shinya-shift-minashi",
+    "title": "飲食店を開くときの労務設計——深夜割増・シフト・固定残業代は？",
+    "date": "2026-09-16",
+    "category": "労働法の基本",
+    "excerpt": "飲食店の労務は、深夜割増・シフト・固定残業代の3つを開業前に設計しておくと、あとの未払いトラブルを防げます。午後10時から午前5時の労働には25%以上の深夜割増が必要で（労働基準法第37条第4項）、時間外に重なれば50%以上になります。シフト制でも1日8時間・1週40時間の法定労働時間と休憩は動かず、超えるには36協定が要ります。固定残業代は何時間分でいくらかを示し、超えた分の差額を精算してはじめて有効です。アルバイトの社会保険と、営業許可・物件の担当分けまで整理します。",
+    "content": "**結論（先に要点）**：飲食店の労務は、深夜割増・シフト・固定残業代の3つを開業前に設計しておくと、あとの未払いトラブルを防げます。午後10時から午前5時の労働には25%以上の深夜割増が必要で（労働基準法第37条第4項）、その時間帯が時間外にも当たれば時間外25%以上と重なって50%以上になります。シフト制でも1日8時間・1週40時間の法定労働時間と休憩（第32条・第34条）は動かず、これを超えて働かせるには36協定が要ります（第36条）。固定残業代（みなし残業代）は「何時間分でいくらか」を賃金と割増部分に分けて示し、超えた分は差額を精算してはじめて有効になります。この記事では、飲食店の店長・オーナーに向けて、開業時に決めておく労働時間と賃金の型を実務目線で整理します。\n\n「うちは深夜まで営業するけど、割増はどう払えばいいのか」「シフトを自由に組んでいるが、休憩や上限はどうなるのか」「固定残業代を付ければ残業代は払わなくてよいのか」——居酒屋・レストラン・カフェを新しく開く方から、よく受ける質問です。このページは、営業許可を取って店を開く前の段階で、労働時間・深夜割増・固定残業代・アルバイトの社会保険をどう設計するかに絞って整理します。個別の未払い残業代の請求や訴訟への対応は、この記事の範囲外です。\n\n## 飲食店の深夜割増（22時以降）はどう計算する？\n\n深夜割増は、午後10時から午前5時までに働かせたときに、通常の賃金の25%以上を上乗せするものです（労働基準法第37条第4項）。時間外割増（第37条第1項）とは別の割増なので、深夜かつ時間外なら両方が重なります。\n\n| 働き方 | 上乗せ率の目安 |\n|---|---|\n| 法定内の深夜（22時〜5時） | 深夜25%以上 |\n| 時間外（1日8時間超）が深夜に重なる | 時間外25%＋深夜25%＝50%以上 |\n| 法定休日の労働が深夜に重なる | 休日35%＋深夜25%＝60%以上 |\n| 月60時間を超える時間外部分が深夜に重なる | 時間外50%＋深夜25%＝75%以上 |\n\n時間外の割増率は原則25%以上ですが、1か月60時間を超えた時間外労働の部分は50%以上になります（第37条第1項ただし書。中小企業も2023年4月から適用）。時給制のアルバイトでも考え方は同じで、深夜に入る時間帯は時給に深夜割増を上乗せします。管理職だから深夜手当は不要、という扱いはできません。深夜割増は管理監督者にも適用されるためで、詳しくは[名ばかり管理職と深夜割増の扱い](/labor/column/kanri-kantokusha-nabakari-warimashi-shinya)をご覧ください。\n\n## シフト制でも労働時間の上限や休憩は必要か？\n\n必要です。シフト制は勤務の時間帯を柔軟に組む仕組みであって、法定労働時間や休憩の義務を外す仕組みではありません。\n\n| 項目 | 原則 |\n|---|---|\n| 法定労働時間（第32条） | 1日8時間・1週40時間。これを超えるには36協定が必要 |\n| 休憩（第34条） | 労働6時間超で45分、8時間超で60分を労働時間の途中に与える |\n| 一斉休憩の例外 | 飲食業は一斉付与の例外業種にあたり、交替で休憩を取らせられる（第40条・同法施行規則第31条） |\n| 36協定（第36条） | 法定労働時間を超える・法定休日に働かせるには締結・届出が必要 |\n\n繁忙期に労働時間が集中する店では、1か月単位・1年単位の変形労働時間制を使うと、期間を平均して週40時間に収める設計ができます。制度の選び方は[変形労働時間制とフレックスタイムの選び方](/labor/column/henkei-roudoujikan-flextime-erabikata)にまとめています。36協定の上限規制（特別条項でも年720時間以内・単月100時間未満・複数月平均80時間以内・月45時間超は年6回まで）は[36協定はどこまで社労士に頼めるか](/labor/column/36-kyotei-zangyo-sharoushi-doko-made)をご覧ください。\n\n## 固定残業代（みなし残業代）を適法に設計するには？\n\n固定残業代（定額残業代・みなし残業代）は、毎月一定額の残業代をあらかじめ払っておく仕組みです。付けること自体は認められますが、有効とされるには要件があります。\n\n- **判別できること**：通常の労働時間の賃金部分と、割増賃金にあたる部分を、契約や給与明細で区別できること\n- **対価性**：その手当が時間外労働などの対価として支払われるものであること（日本ケミカル事件・最高裁第一小法廷判決平成30年7月19日）\n- **差額精算**：固定額に相当する時間を超えて働かせたら、その超えた分の割増賃金を追加で支払うこと\n\n「固定残業代を付けたから、いくら働かせても追加はゼロ」という運用はできません。何時間分でいくらかを示し、その時間を超えた月は差額を払う——ここまでそろって有効になります。飲食店は繁閑の差が大きく、想定した時間を超える月が出やすいので、深夜割増との重なりも含めた計算のあて先をあらかじめ決めておくと安全です。要件と差額精算の実務は[固定残業代が有効になる要件と差額精算](/labor/column/kotei-zangyodai-tekiho-youken-sagaku-seisan)で詳しく扱っています。\n\n## アルバイト・パートの社会保険はどこから加入する？\n\n飲食店はアルバイト・パートが多く、加入の分かれ目を人ごとに見る必要があります。労災保険は勤務時間の長短にかかわらず全員が対象です。雇用保険・社会保険（健康保険・厚生年金）は、労働時間などの要件で決まります。\n\n| 保険 | 加入の目安 |\n|---|---|\n| 労災保険 | 労働者は全員対象（アルバイト・学生を含む） |\n| 雇用保険 | 週の所定労働時間20時間以上かつ31日以上の雇用見込み（昼間学生は原則対象外） |\n| 社会保険（4分の3基準） | 週の所定労働時間・月の所定労働日数がともに通常の労働者の4分の3以上 |\n| 社会保険（特定適用事業所） | 従業員51人以上の事業所では、週20時間以上・月額88,000円以上・2か月超の見込み・学生でないの要件で加入 |\n\n社会保険の企業規模要件は段階的に引き下げ・撤廃が予定されています。学生アルバイト中心の店でも、掛け持ちや卒業後の勤務で要件を満たすことがあるため、契約時の所定労働時間の決め方が加入の可否を左右します。判定の詳細は[短い時間で雇うと社会保険はどうなるか](/labor/column/tanjikan-koyo-shakaihoken-4bunno3)にまとめています。外国人スタッフを雇う場合の労務と社会保険は、専門性の高い人材については[高度専門職の外国人を雇うときの労務と社会保険](/labor/column/koudo-senmonshoku-gaikokujin-it-koyo-roumu)もあわせてご覧ください。\n\n## 労務・営業許可・物件はそれぞれ誰に頼むのか？\n\n飲食店の開業では、動く手続の担当が資格ごとに分かれます。\n\n| すること | 誰の領分か |\n|---|---|\n| 就業規則・36協定・シフトと固定残業代の設計、社会保険・雇用保険の手続、給与計算 | **社会保険労務士**（当事務所） |\n| 飲食店営業許可・食品衛生の届出、深夜酒類提供飲食店営業の届出 | **行政書士**（保健所・警察署への手続） |\n| 店舗物件の紹介・条件確認、賃貸借契約 | **宅地建物取引業者** |\n| 個別の未払い残業代請求・団体交渉・労働審判 | **弁護士** |\n\n就業規則・36協定・固定残業代の設計と社会保険の手続は社会保険労務士の業務です。営業許可や食品衛生の届出は行政書士、物件は宅地建物取引業者の領域で、それぞれ独立した事業体として別々にご契約いただきます。当事務所から他の事業体を紹介する場合も、紹介料のやり取りはありません。\n\n## 四葉社会保険労務士事務所は、何ができますか？\n\n文京区小日向の四葉社会保険労務士事務所は、**飲食店の労働時間設計、深夜割増を含む賃金規程・固定残業代の設計、シフトと変形労働時間制の設計、36協定の作成・届出、アルバイト・パートの社会保険と雇用保険の手続、給与計算**をお受けします。開業前に労働条件と賃金の型を決めておくと、あとからの是正やトラブルを防げます。**ご相談は無料です。** 費用は[報酬額表](/labor/ryokin)を、よくいただくご質問は[よくあるご質問](/labor/faq)をご覧ください。\n\n## よくある質問\n\n**Q. 深夜まで営業する店では、割増はどうなりますか？**\nA. 午後10時から午前5時の労働には、通常の賃金の25%以上の深夜割増が必要です（労働基準法第37条第4項）。その時間帯が1日8時間を超える時間外にも当たれば、時間外25%以上と深夜25%以上が重なって50%以上になります。時給制のアルバイトでも同じ考え方です。\n\n**Q. シフト制なら、休憩や労働時間の上限はないのですか？**\nA. あります。シフト制でも1日8時間・1週40時間の法定労働時間は動かず、6時間超で45分・8時間超で60分の休憩が必要です。これを超えて働かせるには36協定の締結・届出が要ります。飲食業は一斉休憩の例外業種にあたるため、交替で休憩を取らせることはできます。\n\n**Q. 固定残業代を付ければ、残業代の追加払いは要りませんか？**\nA. 要ることがあります。固定残業代は、通常の賃金部分と割増部分を判別でき、時間外の対価であることが明確で、相当する時間を超えたら差額を精算する——という要件を満たしてはじめて有効です。何時間分でいくらかを示さず、超えた月に差額を払わないと、有効と認められないことがあります。\n\n**Q. 学生アルバイトも社会保険に入れる必要がありますか？**\nA. 昼間学生は雇用保険・社会保険とも原則として対象外ですが、労災保険は全員が対象です。卒業後の勤務や掛け持ち、労働時間の増加で要件を満たすことがあるため、契約時の所定労働時間の決め方が加入の分かれ目になります。\n\n## この記事の根拠\n\n- 労働基準法（昭和22年法律第49号）第32条（法定労働時間＝1日8時間・1週40時間）、第34条（休憩＝6時間超45分・8時間超60分・途中付与・一斉付与）、第36条（時間外・休日労働に関する協定と上限規制）、第37条（割増賃金。第1項＝時間外25%以上／月60時間超50%以上・休日35%以上、第4項＝午後10時〜午前5時の深夜25%以上）、第40条・同法施行規則第31条（一斉休憩の適用除外業種＝接客娯楽業等）\n- 固定残業代（定額の手当）が時間外労働の対価と認められるかの判断＝日本ケミカル事件・最高裁第一小法廷判決平成30年7月19日。個別の可否は事情により判断が分かれます\n- 短時間労働者の社会保険（健康保険法・厚生年金保険法）＝4分の3基準、特定適用事業所での週20時間以上・月額88,000円以上・2か月超の見込み・学生でないの要件。企業規模要件の段階的な引き下げ・撤廃を含む\n- 雇用保険（雇用保険法）＝週の所定労働時間20時間以上かつ31日以上の雇用見込み、昼間学生の適用除外\n- 割増賃金率・社会保険と雇用保険の加入要件は、厚生労働省・日本年金機構の公表資料により確認しています（2026年9月時点）\n\nこの記事は、誰に相談するかまでは決めていません。就業規則・36協定・固定残業代の設計と社会保険・雇用保険の手続は社会保険労務士の業務、飲食店営業許可・食品衛生の届出は行政書士の業務、店舗物件は宅地建物取引業者の領域、個別の未払い残業代請求や労働審判・訴訟は弁護士の業務で、それぞれ独立した事業体として別々にご契約いただきます。四葉社会保険労務士事務所にご相談いただく場合の費用は[報酬額表](/labor/ryokin)に、よくいただくご質問は[よくあるご質問](/labor/faq)にまとめています。\n\n本記事は一般的な情報提供です。個別のご事情に応じた判断は、面談のうえ資格者が行います。執筆は[浦松丈二](/about/uramatsu)（社会保険労務士・行政書士・宅地建物取引士）です。",
+    "status": "published",
+    "author": {
+      "name": "浦松 丈二",
+      "title": "社会保険労務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+    },
+    "keywords": [
+      "飲食店 深夜割増 計算",
+      "飲食店 開業 労務",
+      "シフト制 労働時間 上限 休憩",
+      "固定残業代 みなし残業 適法 要件",
+      "飲食店 アルバイト 社会保険 加入",
+      "居酒屋 深夜 割増 25%"
+    ],
+    "tags": [
+      "飲食店",
+      "深夜割増",
+      "シフト制",
+      "固定残業代",
+      "社会保険",
+      "労働時間"
+    ],
+    "locales": [],
+    "faq": [
+      {
+        "question": "深夜まで営業する店では、割増はどうなりますか？",
+        "answer": "午後10時から午前5時の労働には、通常の賃金の25%以上の深夜割増が必要です（労働基準法第37条第4項）。その時間帯が1日8時間を超える時間外にも当たれば、時間外25%以上と深夜25%以上が重なって50%以上になります。時給制のアルバイトでも同じ考え方です。"
+      },
+      {
+        "question": "シフト制なら、休憩や労働時間の上限はないのですか？",
+        "answer": "あります。シフト制でも1日8時間・1週40時間の法定労働時間は動かず、6時間超で45分・8時間超で60分の休憩が必要です。これを超えて働かせるには36協定の締結・届出が要ります。飲食業は一斉休憩の例外業種にあたるため、交替で休憩を取らせることはできます。"
+      },
+      {
+        "question": "固定残業代を付ければ、残業代の追加払いは要りませんか？",
+        "answer": "要ることがあります。固定残業代は、通常の賃金部分と割増部分を判別でき、時間外の対価であることが明確で、相当する時間を超えたら差額を精算する——という要件を満たしてはじめて有効です。何時間分でいくらかを示さず、超えた月に差額を払わないと、有効と認められないことがあります。"
+      },
+      {
+        "question": "学生アルバイトも社会保険に入れる必要がありますか？",
+        "answer": "昼間学生は雇用保険・社会保険とも原則として対象外ですが、労災保険は全員が対象です。卒業後の勤務や掛け持ち、労働時間の増加で要件を満たすことがあるため、契約時の所定労働時間の決め方が加入の分かれ目になります。"
+      }
+    ],
+    "translations": {
+      "en": {
+        "title": "Labor design when opening a restaurant — the late-night premium, shifts and fixed overtime pay",
+        "excerpt": "For a restaurant, designing three things before you open — the late-night premium, shifts and fixed overtime pay — prevents later unpaid-wage trouble. Work between 10 p.m. and 5 a.m. needs a late-night premium of 25% or more (Labor Standards Act, Article 37, paragraph 4), and where that time is also overtime it stacks with the 25%-plus overtime premium to reach 50% or more. Even under a shift system the statutory limits of 8 hours a day and 40 hours a week and the breaks (Articles 32 and 34) do not move, and a Article 36 agreement is required to exceed them. Fixed overtime pay (deemed overtime) is valid only when you show \"how many hours for how much,\" separated into ordinary wage and premium, and settle any shortfall when the hours are exceeded.",
+        "content": "**In short:** For a restaurant, designing three things before you open — the late-night premium, shifts and fixed overtime pay — prevents later unpaid-wage trouble. Work between 10 p.m. and 5 a.m. needs a late-night premium of 25% or more (Labor Standards Act, Article 37, paragraph 4), and where that time is also overtime it stacks with the overtime premium of 25% or more to reach 50% or more. Even under a shift system the statutory working hours of 8 hours a day and 40 hours a week and the breaks (Articles 32 and 34) do not move, and an Article 36 agreement is required to exceed them (Article 36). Fixed overtime pay (deemed overtime) is valid only when you show \"how many hours for how much,\" split between the ordinary wage and the premium part, and settle any shortfall once the hours are exceeded. This article sets out, for restaurant managers and owners, the design of working hours and wages to decide at opening.\n\n\"We stay open late — how do we pay the premium?\" \"We build shifts freely, so what about breaks and limits?\" \"If we add fixed overtime pay, do we not have to pay overtime?\" — these are questions we often hear from people opening an izakaya, restaurant or café. This page focuses on how to design working hours, the late-night premium, fixed overtime pay and part-timers' social insurance before you open with a business permit. Handling an individual unpaid-overtime claim or litigation is outside its scope.\n\n## How is the late-night premium (after 10 p.m.) calculated at a restaurant?\n\nThe late-night premium adds 25% or more to the ordinary wage for work between 10 p.m. and 5 a.m. (Labor Standards Act, Article 37, paragraph 4). It is a separate premium from the overtime premium (Article 37, paragraph 1), so if the work is both late-night and overtime, both apply.\n\n| Way of working | Approximate add-on rate |\n|---|---|\n| Late-night within statutory hours (10 p.m.–5 a.m.) | Late-night 25% or more |\n| Overtime (over 8 hours a day) overlapping late-night | Overtime 25% + late-night 25% = 50% or more |\n| Statutory-holiday work overlapping late-night | Holiday 35% + late-night 25% = 60% or more |\n| Overtime over 60 hours a month overlapping late-night | Overtime 50% + late-night 25% = 75% or more |\n\nThe overtime rate is 25% or more in principle, but the portion of overtime exceeding 60 hours a month is 50% or more (Article 37, paragraph 1, proviso; applied to SMEs too since April 2023). The idea is the same for hourly-paid part-timers: you add the late-night premium to the hourly wage for the late-night band. You cannot treat a manager as exempt from the late-night premium, because it applies even to a manager or supervisor — see [the treatment of a \"manager in name only\" and the late-night premium](/en/labor/column/kanri-kantokusha-nabakari-warimashi-shinya).\n\n## Under a shift system, are there still limits on hours and breaks?\n\nYes. A shift system is a way to arrange the time bands of work flexibly; it is not a way to remove the statutory working hours or the duty to give breaks.\n\n| Item | Principle |\n|---|---|\n| Statutory working hours (Article 32) | 8 hours a day, 40 hours a week. An Article 36 agreement is needed to exceed them |\n| Breaks (Article 34) | 45 minutes for work over 6 hours, 60 minutes for work over 8 hours, given during the working time |\n| Exception to simultaneous breaks | The food-service business is an exempt business for simultaneous breaks, so breaks may be taken in rotation (Article 40; Enforcement Regulations Article 31) |\n| Article 36 agreement (Article 36) | Concluding and filing it is required to exceed statutory hours or work on a statutory day off |\n\nFor a shop where hours concentrate in busy periods, a monthly or yearly variable working-hours system lets you keep to an average of 40 hours a week over the period. For how to choose the system, see [choosing between the variable working-hours system and flextime](/en/labor/column/henkei-roudoujikan-flextime-erabikata). For the upper-limit rules on an Article 36 agreement (even with a special clause, within 720 hours a year, under 100 hours in a single month, an average of 80 hours or less over multiple months, and over 45 hours only up to six times a year), see [how far an Article 36 agreement can be entrusted to a Shakai Hoken Roumushi](/en/labor/column/36-kyotei-zangyo-sharoushi-doko-made).\n\n## How do you design fixed overtime pay (deemed overtime) so it is valid?\n\nFixed overtime pay (a fixed premium, deemed overtime) is a way of paying a set amount of overtime pay in advance each month. Adding it is allowed, but it is valid only if it meets requirements.\n\n- **Distinguishable:** the ordinary-wage part and the part that is premium wage can be told apart in the contract and the pay slip\n- **Nature of consideration:** the allowance is paid as consideration for overtime and similar work (Nihon Chemical case, Supreme Court First Petty Bench judgment of 19 July 2018)\n- **Shortfall settlement:** if the person works beyond the hours the fixed amount corresponds to, the premium for the excess is paid additionally\n\nYou cannot run it as \"we added fixed overtime pay, so no matter how much they work there is nothing more.\" You show how many hours for how much, and in a month that exceeds those hours you pay the difference — it is valid only when this is all in place. Restaurants have large swings in busy and slack periods, so months exceeding the assumed hours arise easily; deciding in advance how to calculate, including the overlap with the late-night premium, is safer. For the requirements and shortfall-settlement practice, see [the requirements for valid fixed overtime pay and the difference settlement](/en/labor/column/kotei-zangyodai-tekiho-youken-sagaku-seisan).\n\n## From what point do part-timers join social insurance?\n\nRestaurants have many part-timers, so you must look at the joining threshold person by person. Workers' accident compensation insurance covers everyone regardless of hours. Employment insurance and social insurance (health insurance and employees' pension) are decided by requirements such as working hours.\n\n| Insurance | Approximate joining threshold |\n|---|---|\n| Workers' accident insurance | All workers (including part-timers and students) |\n| Employment insurance | Prescribed working hours of 20 a week or more and an expected employment of 31 days or more (daytime students are in principle excluded) |\n| Social insurance (three-quarters rule) | Prescribed weekly hours and monthly days both three-quarters or more of an ordinary worker's |\n| Social insurance (specified workplace) | At a workplace with 51 or more employees: 20 hours or more a week, monthly wage of 88,000 yen or more, an expected employment over 2 months, and not a student |\n\nThe firm-size requirement for social insurance is scheduled to be lowered and abolished in stages. Even at a shop centered on student part-timers, requirements can be met through second jobs or work after graduation, so how you set the prescribed hours in the contract governs whether they join. For the details of the test, see [what happens to social insurance when you hire for short hours](/en/labor/column/tanjikan-koyo-shakaihoken-4bunno3). For the labor and social insurance of foreign staff, especially highly skilled people, see also [labor and social insurance when hiring a highly skilled foreign professional](/en/labor/column/koudo-senmonshoku-gaikokujin-it-koyo-roumu).\n\n## Who handles the labor, the business permit and the premises?\n\nIn opening a restaurant, the procedures that move are divided by qualification.\n\n| What is done | Whose responsibility |\n|---|---|\n| Designing work rules, the Article 36 agreement, shifts and fixed overtime pay; social and employment insurance procedures; payroll | **Shakai Hoken Roumushi** (this office) |\n| Restaurant business permit, food-hygiene notification, notification for late-night alcohol-serving business | **Gyoseishoshi** (procedures at the public health center and police) |\n| Introducing premises, checking conditions, the lease | **Real estate transaction agent** |\n| An individual unpaid-overtime claim, collective bargaining, a labor tribunal | **Attorney** |\n\nDesigning the work rules, the Article 36 agreement and fixed overtime pay and the social-insurance procedures is the work of a Shakai Hoken Roumushi. The business permit and food-hygiene notification are for a Gyoseishoshi, and the premises are for a real estate transaction agent — each is an independent entity and you contract with them separately. Even when this office refers you to another entity, there is no referral fee.\n\n## What can 四葉社会保険労務士事務所 do?\n\n四葉社会保険労務士事務所, in Kohinata, Bunkyo City, handles **designing a restaurant's working hours, wage regulations and fixed overtime pay including the late-night premium, designing shifts and the variable working-hours system, drafting and filing the Article 36 agreement, the social and employment insurance procedures for part-timers, and payroll**. Deciding the working conditions and wage pattern before you open prevents later corrections and trouble. **Consultation is free.** For fees, see [the fee schedule](/en/labor/ryokin); for frequently asked questions, see [the FAQ](/en/labor/faq).\n\n## Frequently asked questions\n\n**Q. At a shop that stays open late, what happens with the premium?**\nA. Work between 10 p.m. and 5 a.m. needs a late-night premium of 25% or more of the ordinary wage (Labor Standards Act, Article 37, paragraph 4). If that band is also overtime over 8 hours a day, the overtime 25% or more and the late-night 25% or more stack to 50% or more. The same applies to hourly-paid part-timers.\n\n**Q. Under a shift system, are there no breaks or limits on hours?**\nA. There are. Even under a shift system, the statutory hours of 8 a day and 40 a week do not move, and a break of 45 minutes for over 6 hours and 60 minutes for over 8 hours is required. An Article 36 agreement must be concluded and filed to exceed them. Because the food-service business is exempt from simultaneous breaks, breaks may be taken in rotation.\n\n**Q. If we add fixed overtime pay, is there no extra overtime to pay?**\nA. There can be. Fixed overtime pay is valid only when the ordinary-wage part and the premium part are distinguishable, it is clearly consideration for overtime, and any shortfall is settled once the corresponding hours are exceeded. If you do not show how many hours for how much and do not pay the difference in a month that exceeds them, it may not be recognized as valid.\n\n**Q. Do student part-timers need to join social insurance?**\nA. Daytime students are in principle excluded from both employment insurance and social insurance, but workers' accident insurance covers everyone. Requirements can be met through work after graduation, second jobs or increased hours, so how you set the prescribed hours in the contract is the dividing line for joining.\n\n## Sources\n\n- Labor Standards Act (Act No. 49 of 1947), Article 32 (statutory working hours = 8 hours a day, 40 hours a week), Article 34 (breaks = 45 minutes over 6 hours, 60 minutes over 8 hours, given during work, simultaneous grant), Article 36 (agreement on overtime and holiday work and the upper-limit rules), Article 37 (premium wages; paragraph 1 = overtime 25% or more / over 60 hours a month 50% or more, holiday 35% or more; paragraph 4 = late-night 10 p.m.–5 a.m. 25% or more), Article 40 and Enforcement Regulations Article 31 (businesses exempt from simultaneous breaks, such as the entertainment-and-hospitality business)\n- Whether fixed overtime pay (a fixed allowance) is recognized as consideration for overtime = Nihon Chemical case, Supreme Court First Petty Bench judgment of 19 July 2018. Whether an individual case qualifies is judged differently depending on the circumstances\n- Social insurance for short-time workers (Health Insurance Act, Employees' Pension Insurance Act) = the three-quarters rule, and at a specified workplace the requirements of 20 hours or more a week, a monthly wage of 88,000 yen or more, an expected employment over 2 months, and not being a student, including the staged lowering and abolition of the firm-size requirement\n- Employment insurance (Employment Insurance Act) = prescribed working hours of 20 a week or more and an expected employment of 31 days or more, with daytime students excluded\n- The premium rates and the joining requirements for social and employment insurance are confirmed from materials published by the Ministry of Health, Labour and Welfare and the Japan Pension Service (as of September 2026)\n\nThis article does not decide whom to consult. Designing the work rules, the Article 36 agreement and fixed overtime pay and the social and employment insurance procedures are the work of a Shakai Hoken Roumushi; the restaurant business permit and food-hygiene notification are the work of a Gyoseishoshi; the premises are the field of a real estate transaction agent; and an individual unpaid-overtime claim, a labor tribunal or litigation is the work of an attorney — each is an independent entity and you contract with them separately. For fees when consulting 四葉社会保険労務士事務所, see [the fee schedule](/en/labor/ryokin); for frequently asked questions, see [the FAQ](/en/labor/faq).\n\nThis article is general information. A judgment on individual circumstances is made by a qualified professional after a consultation. Written by [Joji Uramatsu](/en/about/uramatsu) (Shakai Hoken Roumushi, Gyoseishoshi, Registered Real Estate Transaction Specialist).",
+        "category": "Labor law basics",
+        "keywords": [
+          "restaurant late-night premium",
+          "shift work breaks limits",
+          "fixed overtime pay valid requirements",
+          "part-timer social insurance",
+          "Labor Standards Act Article 37",
+          "restaurant opening labor design"
+        ],
+        "tags": [
+          "restaurant",
+          "late-night premium",
+          "shift work",
+          "fixed overtime pay",
+          "social insurance",
+          "Shakai Hoken Roumushi"
+        ],
+        "author": {
+          "name": "Joji Uramatsu",
+          "title": "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所"
+        },
+        "faq": [
+          {
+            "question": "At a shop that stays open late, what happens with the premium?",
+            "answer": "Work between 10 p.m. and 5 a.m. needs a late-night premium of 25% or more of the ordinary wage (Labor Standards Act, Article 37, paragraph 4). If that band is also overtime over 8 hours a day, the overtime 25% or more and the late-night 25% or more stack to 50% or more. The same applies to hourly-paid part-timers."
+          },
+          {
+            "question": "Under a shift system, are there no breaks or limits on hours?",
+            "answer": "There are. Even under a shift system, the statutory hours of 8 a day and 40 a week do not move, and a break of 45 minutes for over 6 hours and 60 minutes for over 8 hours is required. An Article 36 agreement must be concluded and filed to exceed them. Because the food-service business is exempt from simultaneous breaks, breaks may be taken in rotation."
+          },
+          {
+            "question": "If we add fixed overtime pay, is there no extra overtime to pay?",
+            "answer": "There can be. Fixed overtime pay is valid only when the ordinary-wage part and the premium part are distinguishable, it is clearly consideration for overtime, and any shortfall is settled once the corresponding hours are exceeded. If you do not show how many hours for how much and do not pay the difference in a month that exceeds them, it may not be recognized as valid."
+          },
+          {
+            "question": "Do student part-timers need to join social insurance?",
+            "answer": "Daytime students are in principle excluded from both employment insurance and social insurance, but workers' accident insurance covers everyone. Requirements can be met through work after graduation, second jobs or increased hours, so how you set the prescribed hours in the contract is the dividing line for joining."
+          }
+        ]
+      },
+      "zh-tw": {
+        "title": "開餐飲店時的勞務設計——深夜加成、排班與固定加班費",
+        "excerpt": "餐飲店的勞務，只要在開業前先設計好深夜加成、排班與固定加班費這三項，就能預防日後的未付工資糾紛。晚上10點到清晨5點的勞動須支付25%以上的深夜加成（勞動基準法第37條第4項），若該時段同時屬於延長工時，還會與25%以上的延長加成疊加而達到50%以上。即使採排班制，1日8小時、1週40小時的法定工時與休息（第32條、第34條）也不會改變，要超過必須有第36條協定。固定加班費（視為加班）須把「幾小時、多少錢」拆成工資與加成部分明示，並在超過時結算差額，才會有效。",
+        "content": "**結論（先講重點）：** 餐飲店的勞務，只要在開業前先設計好深夜加成、排班與固定加班費這三項，就能預防日後的未付工資糾紛。晚上10點到清晨5點的勞動須支付25%以上的深夜加成（勞動基準法第37條第4項），若該時段同時屬於延長工時，會與25%以上的延長加成疊加而達到50%以上。即使採排班制，1日8小時、1週40小時的法定工時與休息（第32條、第34條）也不會改變，要超過必須訂立第36條協定。固定加班費（視為加班）須把「幾小時、多少錢」拆成一般工資與加成部分明示，並在超過對應時數時結算差額，才會有效。本文站在社會保險勞務士的角度，為餐飲店的店長與經營者整理開業時應先決定的工時與工資設計。\n\n「我們營業到深夜，加成要怎麼付」「排班很自由，那休息和上限怎麼算」「加了固定加班費，是不是就不必再付加班費」——這是我們常從開居酒屋、餐廳、咖啡店的人那裡聽到的問題。本頁聚焦在取得營業許可開店之前，如何設計工時、深夜加成、固定加班費與兼職者的社會保險。個別的未付加班費請求或訴訟不在本文範圍內。\n\n## 餐飲店的深夜加成（22點以後）怎麼計算？\n\n深夜加成是在晚上10點到清晨5點使勞工工作時，於一般工資上加計25%以上（勞動基準法第37條第4項）。它與延長加成（第37條第1項）是不同的加成，因此若同時屬於深夜又屬於延長，兩者都要付。\n\n| 工作方式 | 加計比率參考 |\n|---|---|\n| 法定內的深夜（22點～5點） | 深夜25%以上 |\n| 延長工時（超過1日8小時）與深夜重疊 | 延長25%＋深夜25%＝50%以上 |\n| 法定休假日勞動與深夜重疊 | 休假日35%＋深夜25%＝60%以上 |\n| 每月超過60小時的延長部分與深夜重疊 | 延長50%＋深夜25%＝75%以上 |\n\n延長加成原則為25%以上，但每月超過60小時的延長部分為50%以上（第37條第1項但書，中小企業自2023年4月起亦適用）。時薪制的兼職者觀念相同，進入深夜的時段就在時薪上加計深夜加成。不能因為是主管就免付深夜津貼，因為深夜加成連管理監督者也適用，詳見[名義主管與深夜加成的處理](/zh-tw/labor/column/kanri-kantokusha-nabakari-warimashi-shinya)。\n\n## 採排班制，工時上限與休息還需要嗎？\n\n需要。排班制是彈性安排上班時段的做法，並不是免除法定工時或休息義務的制度。\n\n| 項目 | 原則 |\n|---|---|\n| 法定工時（第32條） | 1日8小時、1週40小時。要超過須有第36條協定 |\n| 休息（第34條） | 工作超過6小時給45分鐘、超過8小時給60分鐘，於工作時間中途給予 |\n| 一齊休息的例外 | 餐飲業屬一齊給予的例外行業，可輪流讓員工休息（第40條、同法施行規則第31條） |\n| 第36條協定（第36條） | 要超過法定工時或於法定休假日工作，須訂立並申報 |\n\n在旺季工時集中的店，採1個月或1年為單位的變形工時制，可讓期間平均落在每週40小時。制度的選擇請見[變形工時制與彈性工時的選法](/zh-tw/labor/column/henkei-roudoujikan-flextime-erabikata)。第36條協定的上限規制（即使有特別條款，仍須一年720小時以內、單月未滿100小時、跨月平均80小時以內、超過月45小時一年至多6次）請見[第36條協定能委託社會保險勞務士到什麼程度](/zh-tw/labor/column/36-kyotei-zangyo-sharoushi-doko-made)。\n\n## 如何合法設計固定加班費（視為加班）？\n\n固定加班費（定額加班費、視為加班）是每月先付一定金額加班費的做法。加設本身是被允許的，但要有效須符合要件。\n\n- **可判別**：能在契約與薪資明細上，區分一般工時的工資部分與屬於加成工資的部分\n- **對價性**：該津貼是作為延長工時等的對價而支付（日本化學公司案，最高法院第一小法庭2018年7月19日判決）\n- **差額結算**：使勞工工作超過固定金額所對應的時數時，須就超過部分另行支付加成工資\n\n不能採取「加了固定加班費，不管做多久都不再多付」的做法。要明示幾小時多少錢，超過的月份就付差額——具備到這裡才有效。餐飲店旺淡差距大，容易出現超過預估時數的月份，事先連同與深夜加成的重疊一起決定計算方式較為安全。要件與差額結算的實務請見[固定加班費有效的要件與差額結算](/zh-tw/labor/column/kotei-zangyodai-tekiho-youken-sagaku-seisan)。\n\n## 兼職、部分工時者的社會保險從何時開始加入？\n\n餐飲店兼職、部分工時者多，須逐人判斷加入的分界。勞災保險不論工時長短全員都適用。就業保險與社會保險（健康保險、厚生年金）則依工時等要件決定。\n\n| 保險 | 加入的參考 |\n|---|---|\n| 勞災保險 | 勞工全員適用（含兼職、學生） |\n| 就業保險 | 每週約定工時20小時以上且預計僱用31日以上（日間在學學生原則不適用） |\n| 社會保險（四分之三基準） | 每週約定工時與每月約定日數皆達一般勞工的四分之三以上 |\n| 社會保險（特定適用事業所） | 員工51人以上的事業所，以週20小時以上、月薪88,000日圓以上、預計僱用逾2個月、非學生為要件加入 |\n\n社會保險的企業規模要件預定分階段調降與廢除。即使是以學生兼職為主的店，也可能因兼差或畢業後任職而符合要件，因此簽約時約定工時的訂法會左右能否加入。判定細節請見[以短工時僱用時社會保險如何處理](/zh-tw/labor/column/tanjikan-koyo-shakaihoken-4bunno3)。僱用外國員工的勞務與社會保險，就專業性高的人才，另請參閱[僱用高度專業外國人才時的勞務與社會保險](/zh-tw/labor/column/koudo-senmonshoku-gaikokujin-it-koyo-roumu)。\n\n## 勞務、營業許可與物件各自該找誰？\n\n開餐飲店時，會啟動的手續依資格分擔。\n\n| 要做的事 | 屬誰的領域 |\n|---|---|\n| 工作規則、第36條協定、排班與固定加班費的設計；社會、就業保險手續；薪資計算 | **社會保險勞務士**（本事務所） |\n| 餐飲店營業許可、食品衛生申報、深夜提供酒類飲食店營業申報 | **行政書士**（向保健所、警察署辦理） |\n| 店面物件的介紹與條件確認、租賃契約 | **宅地建物取引業者** |\n| 個別未付加班費請求、團體協商、勞動審判 | **律師** |\n\n工作規則、第36條協定與固定加班費的設計及社會保險手續是社會保險勞務士的業務。營業許可與食品衛生申報屬行政書士、物件屬宅地建物取引業者的領域，各為獨立事業體，須各自獨立、分別承接、另行簽約。本事務所若介紹其他事業體，也不會有介紹費往來。\n\n## 四葉社会保険労務士事務所能做什麼？\n\n位於文京區小日向的四葉社会保険労務士事務所，承接**餐飲店的工時設計、含深夜加成的工資規程與固定加班費設計、排班與變形工時制的設計、第36條協定的製作與申報、兼職與部分工時者的社會與就業保險手續、薪資計算**。開業前先定好勞動條件與工資型態，可預防日後的更正與糾紛。**諮詢免費。** 費用請見[報酬額表](/zh-tw/labor/ryokin)，常見問題請見[常見問答](/zh-tw/labor/faq)。\n\n## 常見問題\n\n**Q. 營業到深夜的店，加成怎麼算？**\nA. 晚上10點到清晨5點的勞動須付一般工資25%以上的深夜加成（勞動基準法第37條第4項）。若該時段又超過1日8小時屬延長，延長25%以上與深夜25%以上會疊加為50%以上。時薪制兼職者觀念相同。\n\n**Q. 排班制就沒有休息或工時上限嗎？**\nA. 有。即使排班，1日8小時、1週40小時的法定工時不變，超過6小時給45分鐘、超過8小時給60分鐘的休息也必要。要超過須訂立並申報第36條協定。因餐飲業屬一齊休息的例外行業，可輪流讓員工休息。\n\n**Q. 加了固定加班費，就不必再付加班費了嗎？**\nA. 可能仍要付。固定加班費須在一般工資部分與加成部分可判別、明確屬於延長對價、且超過對應時數時結算差額——具備這些才有效。若未明示幾小時多少錢、超過的月份不付差額，可能不被認定有效。\n\n**Q. 學生兼職也要加入社會保險嗎？**\nA. 日間在學學生就業保險與社會保險原則都不適用，但勞災保險全員適用。可能因畢業後任職、兼差或工時增加而符合要件，因此簽約時約定工時的訂法是加入與否的分界。\n\n## 出處\n\n- 勞動基準法（1947年法律第49號）第32條（法定工時＝1日8小時、1週40小時）、第34條（休息＝超過6小時45分鐘、超過8小時60分鐘、中途給予、一齊給予）、第36條（延長與休假日勞動的協定與上限規制）、第37條（加成工資；第1項＝延長25%以上／月逾60小時50%以上、休假日35%以上，第4項＝晚上10點～清晨5點深夜25%以上）、第40條與同法施行規則第31條（一齊休息的適用除外行業＝接待娛樂業等）\n- 固定加班費（定額津貼）是否被認定為延長工時對價＝日本化學公司案，最高法院第一小法庭2018年7月19日判決。個別能否成立依情形而異\n- 短工時勞工的社會保險（健康保險法、厚生年金保險法）＝四分之三基準，特定適用事業所的週20小時以上、月薪88,000日圓以上、預計僱用逾2個月、非學生等要件，含企業規模要件的分階段調降與廢除\n- 就業保險（就業保險法）＝每週約定工時20小時以上且預計僱用31日以上，日間在學學生除外\n- 加成比率與社會、就業保險的加入要件，係依厚生勞動省、日本年金機構的公開資料確認（2026年9月時點）\n\n本文並未替您決定該找誰諮詢。工作規則、第36條協定與固定加班費的設計及社會、就業保險手續是社會保險勞務士的業務，餐飲店營業許可與食品衛生申報是行政書士的業務，店面物件是宅地建物取引業者的領域，個別未付加班費請求或勞動審判、訴訟是律師的業務，各為獨立事業體，須各自獨立、分別承接、另行簽約。委託四葉社会保険労務士事務所時的費用整理於[報酬額表](/zh-tw/labor/ryokin)，常見問題整理於[常見問答](/zh-tw/labor/faq)。\n\n本文為一般資訊提供。依個別情形所作的判斷，由具備資格者於面談後進行。撰稿為[浦松丈二](/zh-tw/about/uramatsu)（社會保險勞務士・行政書士・宅地建物取引士）。",
+        "category": "勞動法基礎",
+        "keywords": [
+          "餐飲店 深夜加成",
+          "排班制 休息 上限",
+          "固定加班費 有效要件",
+          "兼職 社會保險",
+          "勞動基準法 第37條",
+          "開餐飲店 勞務設計"
+        ],
+        "tags": [
+          "餐飲店",
+          "深夜加成",
+          "排班制",
+          "固定加班費",
+          "社會保險",
+          "社會保險勞務士"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "營業到深夜的店，加成怎麼算？",
+            "answer": "晚上10點到清晨5點的勞動須付一般工資25%以上的深夜加成（勞動基準法第37條第4項）。若該時段又超過1日8小時屬延長，延長25%以上與深夜25%以上會疊加為50%以上。時薪制兼職者觀念相同。"
+          },
+          {
+            "question": "排班制就沒有休息或工時上限嗎？",
+            "answer": "有。即使排班，1日8小時、1週40小時的法定工時不變，超過6小時給45分鐘、超過8小時給60分鐘的休息也必要。要超過須訂立並申報第36條協定。因餐飲業屬一齊休息的例外行業，可輪流讓員工休息。"
+          },
+          {
+            "question": "加了固定加班費，就不必再付加班費了嗎？",
+            "answer": "可能仍要付。固定加班費須在一般工資部分與加成部分可判別、明確屬於延長對價、且超過對應時數時結算差額——具備這些才有效。若未明示幾小時多少錢、超過的月份不付差額，可能不被認定有效。"
+          },
+          {
+            "question": "學生兼職也要加入社會保險嗎？",
+            "answer": "日間在學學生就業保險與社會保險原則都不適用，但勞災保險全員適用。可能因畢業後任職、兼差或工時增加而符合要件，因此簽約時約定工時的訂法是加入與否的分界。"
+          }
+        ]
+      },
+      "zh": {
+        "title": "开餐饮店时的劳务设计——深夜加成、排班与固定加班费",
+        "excerpt": "餐饮店的劳务，只要在开业前先设计好深夜加成、排班与固定加班费这三项，就能预防日后的欠薪纠纷。晚上10点到凌晨5点的劳动须支付25%以上的深夜加成（劳动基准法第37条第4项），若该时段同时属于延长工时，还会与25%以上的延长加成叠加而达到50%以上。即使采排班制，1日8小时、1周40小时的法定工时与休息（第32条、第34条）也不会改变，要超过必须有第36条协定。固定加班费（视为加班）须把「几小时、多少钱」拆成工资与加成部分明示，并在超过时结算差额，才会有效。",
+        "content": "**结论（先讲重点）：** 餐饮店的劳务，只要在开业前先设计好深夜加成、排班与固定加班费这三项，就能预防日后的欠薪纠纷。晚上10点到凌晨5点的劳动须支付25%以上的深夜加成（劳动基准法第37条第4项），若该时段同时属于延长工时，会与25%以上的延长加成叠加而达到50%以上。即使采排班制，1日8小时、1周40小时的法定工时与休息（第32条、第34条）也不会改变，要超过必须订立第36条协定。固定加班费（视为加班）须把「几小时、多少钱」拆成一般工资与加成部分明示，并在超过对应时数时结算差额，才会有效。本文站在社会保险劳务士的角度，为餐饮店的店长与经营者整理开业时应先决定的工时与工资设计。\n\n「我们营业到深夜，加成要怎么付」「排班很自由，那休息和上限怎么算」「加了固定加班费，是不是就不必再付加班费」——这是我们常从开居酒屋、餐厅、咖啡店的人那里听到的问题。本页聚焦在取得营业许可开店之前，如何设计工时、深夜加成、固定加班费与兼职者的社会保险。个别的欠付加班费请求或诉讼不在本文范围内。\n\n## 餐饮店的深夜加成（22点以后）怎么计算？\n\n深夜加成是在晚上10点到凌晨5点使劳工工作时，于一般工资上加计25%以上（劳动基准法第37条第4项）。它与延长加成（第37条第1项）是不同的加成，因此若同时属于深夜又属于延长，两者都要付。\n\n| 工作方式 | 加计比率参考 |\n|---|---|\n| 法定内的深夜（22点～5点） | 深夜25%以上 |\n| 延长工时（超过1日8小时）与深夜重叠 | 延长25%＋深夜25%＝50%以上 |\n| 法定休假日劳动与深夜重叠 | 休假日35%＋深夜25%＝60%以上 |\n| 每月超过60小时的延长部分与深夜重叠 | 延长50%＋深夜25%＝75%以上 |\n\n延长加成原则为25%以上，但每月超过60小时的延长部分为50%以上（第37条第1项但书，中小企业自2023年4月起亦适用）。时薪制的兼职者观念相同，进入深夜的时段就在时薪上加计深夜加成。不能因为是主管就免付深夜津贴，因为深夜加成连管理监督者也适用，详见[名义主管与深夜加成的处理](/zh/labor/column/kanri-kantokusha-nabakari-warimashi-shinya)。\n\n## 采排班制，工时上限与休息还需要吗？\n\n需要。排班制是弹性安排上班时段的做法，并不是免除法定工时或休息义务的制度。\n\n| 项目 | 原则 |\n|---|---|\n| 法定工时（第32条） | 1日8小时、1周40小时。要超过须有第36条协定 |\n| 休息（第34条） | 工作超过6小时给45分钟、超过8小时给60分钟，于工作时间中途给予 |\n| 一齐休息的例外 | 餐饮业属一齐给予的例外行业，可轮流让员工休息（第40条、同法施行规则第31条） |\n| 第36条协定（第36条） | 要超过法定工时或于法定休假日工作，须订立并申报 |\n\n在旺季工时集中的店，采1个月或1年为单位的变形工时制，可让期间平均落在每周40小时。制度的选择请见[变形工时制与弹性工时的选法](/zh/labor/column/henkei-roudoujikan-flextime-erabikata)。第36条协定的上限规制（即使有特别条款，仍须一年720小时以内、单月未满100小时、跨月平均80小时以内、超过月45小时一年至多6次）请见[第36条协定能委托社会保险劳务士到什么程度](/zh/labor/column/36-kyotei-zangyo-sharoushi-doko-made)。\n\n## 如何合法设计固定加班费（视为加班）？\n\n固定加班费（定额加班费、视为加班）是每月先付一定金额加班费的做法。加设本身是被允许的，但要有效须符合要件。\n\n- **可判别**：能在契约与薪资明细上，区分一般工时的工资部分与属于加成工资的部分\n- **对价性**：该津贴是作为延长工时等的对价而支付（日本化学公司案，最高法院第一小法庭2018年7月19日判决）\n- **差额结算**：使劳工工作超过固定金额所对应的时数时，须就超过部分另行支付加成工资\n\n不能采取「加了固定加班费，不管做多久都不再多付」的做法。要明示几小时多少钱，超过的月份就付差额——具备到这里才有效。餐饮店旺淡差距大，容易出现超过预估时数的月份，事先连同与深夜加成的重叠一起决定计算方式较为安全。要件与差额结算的实务请见[固定加班费有效的要件与差额结算](/zh/labor/column/kotei-zangyodai-tekiho-youken-sagaku-seisan)。\n\n## 兼职、部分工时者的社会保险从何时开始加入？\n\n餐饮店兼职、部分工时者多，须逐人判断加入的分界。劳灾保险不论工时长短全员都适用。就业保险与社会保险（健康保险、厚生年金）则依工时等要件决定。\n\n| 保险 | 加入的参考 |\n|---|---|\n| 劳灾保险 | 劳工全员适用（含兼职、学生） |\n| 就业保险 | 每周约定工时20小时以上且预计雇用31日以上（日间在学学生原则不适用） |\n| 社会保险（四分之三基准） | 每周约定工时与每月约定日数皆达一般劳工的四分之三以上 |\n| 社会保险（特定适用事业所） | 员工51人以上的事业所，以周20小时以上、月薪88,000日元以上、预计雇用逾2个月、非学生为要件加入 |\n\n社会保险的企业规模要件预定分阶段调降与废除。即使是以学生兼职为主的店，也可能因兼差或毕业后任职而符合要件，因此签约时约定工时的订法会左右能否加入。判定细节请见[以短工时雇用时社会保险如何处理](/zh/labor/column/tanjikan-koyo-shakaihoken-4bunno3)。雇用外国员工的劳务与社会保险，就专业性高的人才，另请参阅[雇用高度专业外国人才时的劳务与社会保险](/zh/labor/column/koudo-senmonshoku-gaikokujin-it-koyo-roumu)。\n\n## 劳务、营业许可与物件各自该找谁？\n\n开餐饮店时，会启动的手续依资格分担。\n\n| 要做的事 | 属谁的领域 |\n|---|---|\n| 工作规则、第36条协定、排班与固定加班费的设计；社会、就业保险手续；薪资计算 | **社会保险劳务士**（本事务所） |\n| 餐饮店营业许可、食品卫生申报、深夜提供酒类饮食店营业申报 | **行政书士**（向保健所、警察署办理） |\n| 店面物件的介绍与条件确认、租赁契约 | **宅地建物取引业者** |\n| 个别欠付加班费请求、团体协商、劳动审判 | **律师** |\n\n工作规则、第36条协定与固定加班费的设计及社会保险手续是社会保险劳务士的业务。营业许可与食品卫生申报属行政书士、物件属宅地建物取引业者的领域，各为独立事业体，须各自独立、分别承接、另行签约。本事务所若介绍其他事业体，也不会有介绍费往来。\n\n## 四葉社会保険労務士事務所能做什么？\n\n位于文京区小日向的四葉社会保険労務士事務所，承接**餐饮店的工时设计、含深夜加成的工资规程与固定加班费设计、排班与变形工时制的设计、第36条协定的制作与申报、兼职与部分工时者的社会与就业保险手续、薪资计算**。开业前先定好劳动条件与工资型态，可预防日后的更正与纠纷。**咨询免费。** 费用请见[报酬额表](/zh/labor/ryokin)，常见问题请见[常见问答](/zh/labor/faq)。\n\n## 常见问题\n\n**Q. 营业到深夜的店，加成怎么算？**\nA. 晚上10点到凌晨5点的劳动须付一般工资25%以上的深夜加成（劳动基准法第37条第4项）。若该时段又超过1日8小时属延长，延长25%以上与深夜25%以上会叠加为50%以上。时薪制兼职者观念相同。\n\n**Q. 排班制就没有休息或工时上限吗？**\nA. 有。即使排班，1日8小时、1周40小时的法定工时不变，超过6小时给45分钟、超过8小时给60分钟的休息也必要。要超过须订立并申报第36条协定。因餐饮业属一齐休息的例外行业，可轮流让员工休息。\n\n**Q. 加了固定加班费，就不必再付加班费了吗？**\nA. 可能仍要付。固定加班费须在一般工资部分与加成部分可判别、明确属于延长对价、且超过对应时数时结算差额——具备这些才有效。若未明示几小时多少钱、超过的月份不付差额，可能不被认定有效。\n\n**Q. 学生兼职也要加入社会保险吗？**\nA. 日间在学学生就业保险与社会保险原则都不适用，但劳灾保险全员适用。可能因毕业后任职、兼差或工时增加而符合要件，因此签约时约定工时的订法是加入与否的分界。\n\n## 出处\n\n- 劳动基准法（1947年法律第49号）第32条（法定工时＝1日8小时、1周40小时）、第34条（休息＝超过6小时45分钟、超过8小时60分钟、中途给予、一齐给予）、第36条（延长与休假日劳动的协定与上限规制）、第37条（加成工资；第1项＝延长25%以上／月逾60小时50%以上、休假日35%以上，第4项＝晚上10点～凌晨5点深夜25%以上）、第40条与同法施行规则第31条（一齐休息的适用除外行业＝接待娱乐业等）\n- 固定加班费（定额津贴）是否被认定为延长工时对价＝日本化学公司案，最高法院第一小法庭2018年7月19日判决。个别能否成立依情形而异\n- 短工时劳工的社会保险（健康保险法、厚生年金保险法）＝四分之三基准，特定适用事业所的周20小时以上、月薪88,000日元以上、预计雇用逾2个月、非学生等要件，含企业规模要件的分阶段调降与废除\n- 就业保险（就业保险法）＝每周约定工时20小时以上且预计雇用31日以上，日间在学学生除外\n- 加成比率与社会、就业保险的加入要件，系依厚生劳动省、日本年金机构的公开资料确认（2026年9月时点）\n\n本文并未替您决定该找谁咨询。工作规则、第36条协定与固定加班费的设计及社会、就业保险手续是社会保险劳务士的业务，餐饮店营业许可与食品卫生申报是行政书士的业务，店面物件是宅地建物取引业者的领域，个别欠付加班费请求或劳动审判、诉讼是律师的业务，各为独立事业体，须各自独立、分别承接、另行签约。委托四葉社会保険労務士事務所时的费用整理于[报酬额表](/zh/labor/ryokin)，常见问题整理于[常见问答](/zh/labor/faq)。\n\n本文为一般资讯提供。依个别情形所作的判断，由具备资格者于面谈后进行。撰稿为[浦松丈二](/zh/about/uramatsu)（社会保险劳务士・行政书士・宅地建物取引士）。",
+        "category": "社会保险",
+        "keywords": [
+          "餐饮店 深夜加成",
+          "排班制 休息 上限",
+          "固定加班费 有效要件",
+          "兼职 社会保险",
+          "劳动基准法 第37条",
+          "开餐饮店 劳务设计"
+        ],
+        "tags": [
+          "餐饮店",
+          "深夜加成",
+          "排班制",
+          "固定加班费",
+          "社会保险",
+          "社会保险劳务士"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "营业到深夜的店，加成怎么算？",
+            "answer": "晚上10点到凌晨5点的劳动须付一般工资25%以上的深夜加成（劳动基准法第37条第4项）。若该时段又超过1日8小时属延长，延长25%以上与深夜25%以上会叠加为50%以上。时薪制兼职者观念相同。"
+          },
+          {
+            "question": "排班制就没有休息或工时上限吗？",
+            "answer": "有。即使排班，1日8小时、1周40小时的法定工时不变，超过6小时给45分钟、超过8小时给60分钟的休息也必要。要超过须订立并申报第36条协定。因餐饮业属一齐休息的例外行业，可轮流让员工休息。"
+          },
+          {
+            "question": "加了固定加班费，就不必再付加班费了吗？",
+            "answer": "可能仍要付。固定加班费须在一般工资部分与加成部分可判别、明确属于延长对价、且超过对应时数时结算差额——具备这些才有效。若未明示几小时多少钱、超过的月份不付差额，可能不被认定有效。"
+          },
+          {
+            "question": "学生兼职也要加入社会保险吗？",
+            "answer": "日间在学学生就业保险与社会保险原则都不适用，但劳灾保险全员适用。可能因毕业后任职、兼差或工时增加而符合要件，因此签约时约定工时的订法是加入与否的分界。"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "business": "labor",
+    "slug": "koudo-senmonshoku-gaikokujin-it-koyo-roumu",
+    "title": "高度専門職（外国人IT・技術者）を採用するときの労務と社会保険は？",
+    "date": "2026-09-16",
+    "category": "社会保険",
+    "excerpt": "高度専門職や技術・人文知識・国際業務の在留資格でIT技術者を雇っても、労働・社会保険の扱いは日本人と同じです。適用事業所に常時使用される限り国籍や在留資格を問わず健康保険・厚生年金の被保険者になり、労災は全員、雇用保険も要件を満たせば加入します。母国の制度との二重加入は社会保障協定を結んだ相手国とだけ適用証明書で調整できます。労働条件明示は日本語で足りますが、理解できる言語で示すのが安全です。給与設計が在留資格に影響する点と、在留資格・税務の担当分けまで整理します。",
+    "content": "**結論（先に要点）**：高度専門職や技術・人文知識・国際業務の在留資格でIT技術者を雇っても、労働・社会保険の扱いは日本人と同じです。適用事業所に常時使用される限り、国籍や在留資格を問わず健康保険・厚生年金保険の被保険者になり（労災は全員、雇用保険は要件を満たせば加入）、給与から保険料を控除します。母国の制度との二重加入は、社会保障協定を結んだ相手国との間でのみ、適用証明書によって調整できます。労働条件の明示は日本語で足りますが、内容を理解できる言語で示すことが実務上は安全です。この記事では、外国人の高度人材・IT技術者を採用する企業の人事担当と本人に向けて、労務と社会保険の要点を社会保険労務士の観点で整理します。\n\n「高度人材だから社会保険は入らなくてよいのか」「本国の年金と二重に払うのか」「雇用契約書は英語や中国語で作らないといけないのか」——外国人エンジニアを採用する企業から、よく受ける質問です。このページは、在留資格の申請そのものではなく、採用したあとの労働条件・社会保険・給与設計に絞って整理します。在留資格の該当性や許可の見込みの判断は、この記事の範囲外です。\n\n## 高度専門職・技術者でも社会保険は必ず加入するのか？\n\n原則として加入します。健康保険・厚生年金保険は、適用事業所に常時使用される人であれば、国籍や在留資格の種類を問わず被保険者になります。高度専門職だから、あるいは短期の在留予定だから加入しない、という扱いはできません。\n\n| 保険 | 高度人材・IT技術者の扱い |\n|---|---|\n| 労災保険 | 労働者は全員対象（国籍・在留資格を問わない） |\n| 雇用保険 | 週の所定労働時間20時間以上かつ31日以上の雇用見込みで加入 |\n| 健康保険・厚生年金 | 適用事業所に常時使用される正社員は原則加入。短時間の場合は4分の3基準・特定適用事業所の要件で判定 |\n\n外国人を雇い入れたときは、ハローワークへの外国人雇用状況の届出も必要です。届出の様式と期限は在留資格・雇用保険の加入の有無で変わります。窓口が資格ごとに分かれる全体像は[外国人を1人雇うと、窓口はいくつ必要か](/labor/column/gaikokujin-koyo-madoguchi-wakekata)にまとめています。\n\n## 母国の社会保障との二重加入はどう防ぐのか？\n\n二重加入を調整できるのは、日本が社会保障協定を結んだ相手国との間だけです。協定がある国から一時的に派遣されてくる人は、派遣元国の制度に継続加入し、日本の制度への加入が免除される場合があります。その証明が、派遣元国が発行する適用証明書です。\n\n- **一時派遣（原則5年以内）**：協定相手国から日本の事業所へ一時的に派遣される場合、適用証明書があれば日本の制度への加入が免除されることがある\n- **現地採用（日本法人が直接雇用）**：派遣ではないため、原則として日本の制度に加入する\n- **期間通算**：協定によっては、両国の年金加入期間を通算して受給資格を判断できる\n\n協定の対象になる制度（年金のみか、医療も含むか）や、加入期間を通算できるかは相手国ごとに異なります。たとえば中国との協定は対象が年金に限られ、加入期間の通算の規定がありません。仕組みの詳しい整理は[中国駐在と社会保障協定による二重加入の調整](/labor/column/chugoku-chuzai-shakaihosho-kyotei-nijukanyu)を、退職して帰国する社員の年金は[帰国する社員の年金はどうなるのか](/labor/column/gaikokujin-shain-kikoku-nenkin-seisan)をご覧ください。協定の相手国と対象制度の最新の一覧は、日本年金機構の公表資料でご確認ください。\n\n## 労働条件明示は外国語でどこまで必要か？\n\n労働条件の明示（労働基準法第15条・同法施行規則第5条）は、日本語で行えば法律上の義務は満たします。外国語で作成する義務まではありません。ただし本人が内容を理解できないまま働き始めると、後の認識のずれが争いの火種になります。厚生労働省は、本人が理解できる言語での明示を勧め、多言語のモデル労働条件通知書を公開しています。\n\n2024年4月からは、明示する事項が増えました。全ての労働契約で就業場所・業務の変更の範囲を、有期契約では更新上限と無期転換の機会を明示する必要があります。外国人労働者への母国語での明示と改正の詳細は[外国人の労働条件明示と母国語対応](/labor/column/gaikokujin-roudou-joken-meiji-bogoko-2024)にまとめています。企業内転勤や出向で受け入れる場合の社会保険の扱いは[企業内転勤・出向で受け入れる外国人の社会保険](/labor/column/kigyonai-tenkin-shukko-gaikokujin-shakaihoken-nyu)をご覧ください。\n\n## 給与・手当の設計で在留資格に影響する点はあるか？\n\nあります。技術・人文知識・国際業務や高度専門職の在留資格では、報酬が「日本人が同じ仕事をした場合に受ける報酬と同等額以上」であることが求められます。給与を日本人より低く設定すると、在留資格の該当性や更新に影響することがあります。\n\n| 論点 | 労務・社会保険の側で見る点 |\n|---|---|\n| 報酬水準 | 同種の日本人と同等額以上か。基本給・手当の構成が明確か |\n| 手当の性質 | 通勤手当・住宅手当・現物給与などが標準報酬に算入されるか |\n| 賞与・変動給 | 社会保険料や割増賃金の基礎への算入の扱い |\n\nただし、その報酬水準が在留資格の基準を満たすかどうか、許可されるかどうかの判断は、出入国在留管理庁が行い、申請は行政書士の業務です。社会保険労務士が扱うのは、労働条件としての賃金設計、標準報酬月額の算定、社会保険・雇用保険の手続の側です。役割の切り分けは次の項で整理します。\n\n## 在留資格と労務・社保はそれぞれ誰に頼むのか？\n\n高度人材の採用では、在留資格・労務・税務の担当が資格ごとに分かれます。\n\n| すること | 誰の領分か |\n|---|---|\n| 労働条件の明示、就業規則、社会保険・雇用保険の加入と届出、給与計算、標準報酬の算定 | **社会保険労務士**（当事務所） |\n| 在留資格の認定・変更・更新の申請、ポイント計算の確認 | **行政書士**（申請取次） |\n| 所得税・租税条約の適用、年末調整 | **税理士** |\n| 個別の労使紛争・解雇の可否の判断 | **弁護士** |\n\n労働条件と社会保険の手続は社会保険労務士の業務です。在留資格の申請は行政書士、所得税や租税条約の取扱いは税理士の領域で、それぞれ独立した事業体として別々にご契約いただきます。当事務所から他の事業体を紹介する場合も、紹介料のやり取りはありません。在留資格の該当性や許可の見込みといった具体的な法的判断は、この記事では行いません。\n\n## 四葉社会保険労務士事務所は、何ができますか？\n\n文京区小日向の四葉社会保険労務士事務所は、**高度人材・IT技術者の労働条件の設計と明示、就業規則、社会保険・雇用保険の加入と届出、標準報酬月額の算定、給与計算、社会保障協定に関する適用証明書の申請の実務**をお受けします。中国語（繁体字・簡体字）でのご相談にも対応します。**ご相談は無料です。** 費用は[報酬額表](/labor/ryokin)を、よくいただくご質問は[よくあるご質問](/labor/faq)をご覧ください。\n\n## よくある質問\n\n**Q. 高度専門職の外国人でも、社会保険に入る必要がありますか？**\nA. 原則として入ります。健康保険・厚生年金保険は、適用事業所に常時使用される人であれば、国籍や在留資格の種類を問わず被保険者になります。労災保険は全員が対象、雇用保険は週20時間以上・31日以上の雇用見込みで加入します。高度人材や短期在留を理由に外すことはできません。\n\n**Q. 本国の年金と日本の年金の二重加入は、どう防ぎますか？**\nA. 日本が社会保障協定を結んだ相手国との間でのみ調整できます。協定相手国から一時的に派遣される人は、派遣元国が発行する適用証明書があれば、日本の制度への加入が免除されることがあります。協定の対象制度や期間通算の可否は国ごとに異なり、日本法人が現地で直接雇用する場合は原則として日本の制度に加入します。\n\n**Q. 雇用契約書は、英語や中国語で作らないといけませんか？**\nA. 法律上は日本語で明示すれば義務を満たし、外国語で作成する義務はありません。ただし本人が理解できる言語で示すことが実務上は安全で、厚生労働省も多言語のモデル労働条件通知書を公開しています。2024年4月からは変更の範囲・更新上限・無期転換の機会の明示も必要です。\n\n**Q. 給与を日本人より低く設定すると、在留資格に影響しますか？**\nA. 影響することがあります。技術・人文知識・国際業務や高度専門職では、日本人が同じ仕事をした場合と同等額以上の報酬が求められます。ただし基準を満たすか、許可されるかの判断は出入国在留管理庁が行い、申請は行政書士の業務です。社会保険労務士は労働条件としての賃金設計と社会保険の手続を担います。\n\n## この記事の根拠\n\n- 出入国管理及び難民認定法（昭和26年政令第319号）別表第一の二の表（高度専門職）・別表第一の五の表等（技術・人文知識・国際業務）。高度専門職はポイント制で、報酬は日本人と同等額以上であることが在留資格の基準に含まれる（該当性・許可の判断は出入国在留管理庁が行う）\n- 健康保険法・厚生年金保険法＝適用事業所に常時使用される者は国籍・在留資格を問わず被保険者。短時間労働者は4分の3基準・特定適用事業所の要件で判定\n- 労働者災害補償保険法＝労働者は国籍・在留資格を問わず全員が対象／雇用保険法＝週の所定労働時間20時間以上かつ31日以上の雇用見込みで被保険者\n- 社会保障協定＝二重加入の防止（適用証明書）と加入期間の通算。対象制度・通算の可否は相手国ごとに異なる（中国との協定は年金のみ・期間通算の規定なし）。発効している相手国と対象制度は日本年金機構の公表資料により確認しています（2026年9月参照）\n- 労働基準法第15条・同法施行規則第5条（労働条件の明示）。2024年4月から就業場所・業務の変更の範囲、有期契約の更新上限、無期転換申込機会の明示が追加。外国語での明示は義務ではないが、厚生労働省が多言語のモデル労働条件通知書を公表（2026年9月参照）\n\nこの記事は、誰に相談するかまでは決めていません。労働条件と社会保険・雇用保険の手続は社会保険労務士の業務、在留資格の申請は行政書士の業務、所得税・租税条約は税理士の領域、個別の労使紛争は弁護士の業務で、それぞれ独立した事業体として別々にご契約いただきます。四葉社会保険労務士事務所にご相談いただく場合の費用は[報酬額表](/labor/ryokin)に、よくいただくご質問は[よくあるご質問](/labor/faq)にまとめています。\n\n本記事は一般的な情報提供です。個別のご事情に応じた判断は、面談のうえ資格者が行います。執筆は[浦松丈二](/about/uramatsu)（社会保険労務士・行政書士・宅地建物取引士）です。",
+    "status": "published",
+    "author": {
+      "name": "浦松 丈二",
+      "title": "社会保険労務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+    },
+    "keywords": [
+      "高度専門職 外国人 社会保険",
+      "外国人 IT技術者 労務",
+      "社会保障協定 二重加入 適用証明書",
+      "外国人 労働条件明示 外国語",
+      "高度人材 給与 在留資格 影響",
+      "技術 人文知識 国際業務 社会保険"
+    ],
+    "tags": [
+      "外国人雇用",
+      "高度専門職",
+      "社会保障協定",
+      "社会保険",
+      "労働条件明示",
+      "在留資格"
+    ],
+    "locales": [],
+    "faq": [
+      {
+        "question": "高度専門職の外国人でも、社会保険に入る必要がありますか？",
+        "answer": "原則として入ります。健康保険・厚生年金保険は、適用事業所に常時使用される人であれば、国籍や在留資格の種類を問わず被保険者になります。労災保険は全員が対象、雇用保険は週20時間以上・31日以上の雇用見込みで加入します。高度人材や短期在留を理由に外すことはできません。"
+      },
+      {
+        "question": "本国の年金と日本の年金の二重加入は、どう防ぎますか？",
+        "answer": "日本が社会保障協定を結んだ相手国との間でのみ調整できます。協定相手国から一時的に派遣される人は、派遣元国が発行する適用証明書があれば、日本の制度への加入が免除されることがあります。協定の対象制度や期間通算の可否は国ごとに異なり、日本法人が現地で直接雇用する場合は原則として日本の制度に加入します。"
+      },
+      {
+        "question": "雇用契約書は、英語や中国語で作らないといけませんか？",
+        "answer": "法律上は日本語で明示すれば義務を満たし、外国語で作成する義務はありません。ただし本人が理解できる言語で示すことが実務上は安全で、厚生労働省も多言語のモデル労働条件通知書を公開しています。2024年4月からは変更の範囲・更新上限・無期転換の機会の明示も必要です。"
+      },
+      {
+        "question": "給与を日本人より低く設定すると、在留資格に影響しますか？",
+        "answer": "影響することがあります。技術・人文知識・国際業務や高度専門職では、日本人が同じ仕事をした場合と同等額以上の報酬が求められます。ただし基準を満たすか、許可されるかの判断は出入国在留管理庁が行い、申請は行政書士の業務です。社会保険労務士は労働条件としての賃金設計と社会保険の手続を担います。"
+      }
+    ],
+    "translations": {
+      "en": {
+        "title": "Labor and social insurance when hiring a highly skilled foreign professional (IT engineer)",
+        "excerpt": "Even if you hire an IT engineer under the Highly Skilled Professional or the Engineer/Specialist in Humanities/International Services status, the labor and social insurance treatment is the same as for a Japanese national. As long as the person is continuously employed at a covered workplace, regardless of nationality or status, they become an insured person under health insurance and employees' pension (accident insurance covers everyone; employment insurance applies if the requirements are met), and premiums are deducted from pay. Double coverage with the home country's system can be adjusted only with a country that has a social security agreement, through a certificate of coverage. Notice of working conditions in Japanese satisfies the law, but showing it in a language the person understands is safer in practice.",
+        "content": "**In short:** Even if you hire an IT engineer under the Highly Skilled Professional or the Engineer/Specialist in Humanities/International Services status, the labor and social insurance treatment is the same as for a Japanese national. As long as the person is continuously employed at a covered workplace, regardless of nationality or residence status, they become an insured person under health insurance and employees' pension (accident insurance covers everyone; employment insurance applies if the requirements are met), and premiums are deducted from pay. Double coverage with the home country's system can be adjusted, through a certificate of coverage, only with a country that has concluded a social security agreement with Japan. Notice of working conditions in Japanese satisfies the law, but showing it in a language the person can understand is safer in practice. This article sets out, from a Shakai Hoken Roumushi's viewpoint, the key points of labor and social insurance for HR staff hiring highly skilled foreign professionals and IT engineers, and for the individuals themselves.\n\n\"Since they are highly skilled, don't they skip social insurance?\" \"Do they pay pension twice, home and here?\" \"Do we have to make the employment contract in English or Chinese?\" — these are questions we often hear from companies hiring foreign engineers. This page focuses not on the residence-status application itself but on the working conditions, social insurance and pay design after hiring. Judging whether a status applies or is likely to be granted is outside its scope.\n\n## Do highly skilled professionals and engineers always join social insurance?\n\nIn principle they do. Health insurance and employees' pension make an insured person of anyone continuously employed at a covered workplace, regardless of nationality or the type of residence status. You cannot treat someone as not joining because they are a highly skilled professional or because their stay is expected to be short.\n\n| Insurance | Treatment of highly skilled people / IT engineers |\n|---|---|\n| Workers' accident insurance | All workers are covered (regardless of nationality or status) |\n| Employment insurance | Joins with prescribed working hours of 20 a week or more and an expected employment of 31 days or more |\n| Health insurance / employees' pension | A regular employee continuously employed at a covered workplace joins in principle; for short hours, judged by the three-quarters rule and the specified-workplace requirements |\n\nWhen you hire a foreign national, you must also file a notification of the foreign national's employment status with Hello Work. The form and deadline vary with the residence status and whether the person joins employment insurance. For the whole picture of how the windows divide by qualification, see [how many windows are needed to hire one foreign national](/en/labor/column/gaikokujin-koyo-madoguchi-wakekata).\n\n## How do you prevent double coverage with the home country's social security?\n\nDouble coverage can be adjusted only with a country that has concluded a social security agreement with Japan. A person sent temporarily from a country with an agreement may continue in the sending country's system and be exempt from Japan's system in some cases. The proof of this is the certificate of coverage issued by the sending country.\n\n- **Temporary posting (in principle within 5 years):** where the person is temporarily posted from an agreement partner to a Japanese workplace, a certificate of coverage may exempt them from Japan's system\n- **Local hire (directly employed by the Japanese entity):** as this is not a posting, they join Japan's system in principle\n- **Aggregation of periods:** depending on the agreement, the pension periods of both countries can be aggregated to judge eligibility\n\nWhich systems an agreement covers (pension only, or medical too) and whether periods can be aggregated differ by country. For example, the agreement with China is limited to pension and has no provision to aggregate periods. For a fuller treatment of the mechanism, see [adjusting double coverage under a social security agreement for a China posting](/en/labor/column/chugoku-chuzai-shakaihosho-kyotei-nijukanyu); for the pension of an employee who resigns and returns home, see [what happens to the pension of an employee returning home](/en/labor/column/gaikokujin-shain-kikoku-nenkin-seisan). For the current list of agreement partners and covered systems, check the materials published by the Japan Pension Service.\n\n## To what extent must the notice of working conditions be in a foreign language?\n\nNotice of working conditions (Labor Standards Act, Article 15; Enforcement Regulations, Article 5) satisfies the legal duty if given in Japanese; there is no duty to prepare it in a foreign language. However, if the person starts work without understanding the content, a later mismatch of understanding becomes the seed of a dispute. The Ministry of Health, Labour and Welfare recommends notice in a language the person can understand and publishes multilingual model notices of working conditions.\n\nFrom April 2024, the items to be shown increased. For all labor contracts you must show the scope of change to the workplace and duties; for fixed-term contracts you must show the renewal cap and the opportunity for conversion to open-ended employment. For notice in the mother tongue to foreign workers and the details of the reform, see [notice of working conditions to foreign workers and mother-tongue handling](/en/labor/column/gaikokujin-roudou-joken-meiji-bogoko-2024). For social insurance when receiving people through an intra-company transfer or secondment, see [social insurance for foreign nationals received by intra-company transfer or secondment](/en/labor/column/kigyonai-tenkin-shukko-gaikokujin-shakaihoken-nyu).\n\n## In pay and allowance design, is there anything that affects the residence status?\n\nYes. Under the Engineer/Specialist in Humanities/International Services and the Highly Skilled Professional statuses, the remuneration must be \"equal to or higher than what a Japanese national would receive for the same work.\" Setting pay lower than a Japanese national's can affect whether the status applies or is renewed.\n\n| Point | What the labor / social-insurance side looks at |\n|---|---|\n| Remuneration level | Is it equal to or above a comparable Japanese national's? Is the make-up of base pay and allowances clear? |\n| Nature of allowances | Are commuting, housing or in-kind allowances counted into the standard remuneration? |\n| Bonus / variable pay | Treatment of inclusion in the base for social insurance premiums and premium wages |\n\nHowever, whether that remuneration level meets the status criteria and whether it is granted is judged by the Immigration Services Agency, and the application is the work of a Gyoseishoshi. What a Shakai Hoken Roumushi handles is the wage design as a working condition, the calculation of the standard monthly remuneration, and the social and employment insurance procedures. The division of roles is set out in the next section.\n\n## Who handles the residence status, the labor and the social insurance?\n\nIn hiring highly skilled people, the residence status, labor and tax responsibilities divide by qualification.\n\n| What is done | Whose responsibility |\n|---|---|\n| Notice of working conditions, work rules, joining and notifying social and employment insurance, payroll, standard-remuneration calculation | **Shakai Hoken Roumushi** (this office) |\n| Application for certification, change or renewal of the residence status; checking the point calculation | **Gyoseishoshi** (application agent) |\n| Income tax, application of tax treaties, year-end adjustment | **Tax accountant** |\n| An individual labor dispute; judging whether a dismissal is possible | **Attorney** |\n\nWorking conditions and social-insurance procedures are the work of a Shakai Hoken Roumushi. The residence-status application is for a Gyoseishoshi, and income tax and tax treaties are the field of a tax accountant — each is an independent entity and you contract with them separately. Even when this office refers you to another entity, there is no referral fee. This article does not make concrete legal judgments such as whether a status applies or is likely to be granted.\n\n## What can 四葉社会保険労務士事務所 do?\n\n四葉社会保険労務士事務所, in Kohinata, Bunkyo City, handles **designing and giving notice of working conditions for highly skilled people and IT engineers, work rules, joining and notifying social and employment insurance, calculating the standard monthly remuneration, payroll, and the practice of applying for a certificate of coverage under a social security agreement**. We also handle consultations in Chinese (traditional and simplified). **Consultation is free.** For fees, see [the fee schedule](/en/labor/ryokin); for frequently asked questions, see [the FAQ](/en/labor/faq).\n\n## Frequently asked questions\n\n**Q. Do highly skilled foreign professionals need to join social insurance?**\nA. In principle yes. Health insurance and employees' pension make an insured person of anyone continuously employed at a covered workplace, regardless of nationality or the type of residence status. Workers' accident insurance covers everyone, and employment insurance is joined with 20 hours or more a week and an expected employment of 31 days or more. You cannot exclude them because they are highly skilled or short-term.\n\n**Q. How do you prevent double coverage between the home country's and Japan's pension?**\nA. It can be adjusted only with a country that has a social security agreement with Japan. A person temporarily posted from an agreement partner may be exempt from Japan's system with a certificate of coverage issued by the sending country. Which systems are covered and whether periods aggregate differ by country, and a person directly hired locally by the Japanese entity joins Japan's system in principle.\n\n**Q. Must the employment contract be made in English or Chinese?**\nA. Legally, giving notice in Japanese satisfies the duty, and there is no duty to prepare it in a foreign language. But showing it in a language the person understands is safer in practice, and the Ministry of Health, Labour and Welfare publishes multilingual model notices of working conditions. From April 2024, you must also show the scope of change, the renewal cap and the conversion opportunity.\n\n**Q. Does setting pay lower than a Japanese national's affect the residence status?**\nA. It can. Under the Engineer/Specialist in Humanities/International Services and the Highly Skilled Professional statuses, remuneration equal to or above a Japanese national's for the same work is required. But whether the criteria are met and whether it is granted is judged by the Immigration Services Agency, and the application is the work of a Gyoseishoshi. A Shakai Hoken Roumushi handles the wage design as a working condition and the social-insurance procedures.\n\n## Sources\n\n- Immigration Control and Refugee Recognition Act (Cabinet Order No. 319 of 1951), Appended Table I-2 (Highly Skilled Professional) and Appended Table I-5 etc. (Engineer/Specialist in Humanities/International Services). The Highly Skilled Professional uses a point system, and remuneration equal to or above a Japanese national's is included in the status criteria (whether it applies or is granted is judged by the Immigration Services Agency)\n- Health Insurance Act, Employees' Pension Insurance Act = a person continuously employed at a covered workplace is an insured person regardless of nationality or status; short-time workers are judged by the three-quarters rule and the specified-workplace requirements\n- Workers' Accident Compensation Insurance Act = all workers are covered regardless of nationality or status; Employment Insurance Act = an insured person with prescribed working hours of 20 a week or more and an expected employment of 31 days or more\n- Social security agreements = prevention of double coverage (certificate of coverage) and aggregation of periods. Covered systems and whether periods aggregate differ by country (the agreement with China is pension only, with no provision to aggregate periods). The agreement partners in force and the covered systems are confirmed from materials published by the Japan Pension Service (referenced September 2026)\n- Labor Standards Act, Article 15 and Enforcement Regulations Article 5 (notice of working conditions). From April 2024, the scope of change to the workplace and duties, the renewal cap of fixed-term contracts, and the opportunity for conversion to open-ended employment were added. Notice in a foreign language is not a duty, but the Ministry of Health, Labour and Welfare publishes multilingual model notices of working conditions (referenced September 2026)\n\nThis article does not decide whom to consult. Working conditions and the social and employment insurance procedures are the work of a Shakai Hoken Roumushi; the residence-status application is the work of a Gyoseishoshi; income tax and tax treaties are the field of a tax accountant; and an individual labor dispute is the work of an attorney — each is an independent entity and you contract with them separately. For fees when consulting 四葉社会保険労務士事務所, see [the fee schedule](/en/labor/ryokin); for frequently asked questions, see [the FAQ](/en/labor/faq).\n\nThis article is general information. A judgment on individual circumstances is made by a qualified professional after a consultation. Written by [Joji Uramatsu](/en/about/uramatsu) (Shakai Hoken Roumushi, Gyoseishoshi, Registered Real Estate Transaction Specialist).",
+        "category": "Social insurance",
+        "keywords": [
+          "highly skilled professional social insurance",
+          "foreign IT engineer labor",
+          "social security agreement double coverage",
+          "notice of working conditions foreign language",
+          "residence status remuneration",
+          "2024 working conditions reform"
+        ],
+        "tags": [
+          "foreign employment",
+          "highly skilled professional",
+          "social security agreement",
+          "social insurance",
+          "notice of working conditions",
+          "Shakai Hoken Roumushi"
+        ],
+        "author": {
+          "name": "Joji Uramatsu",
+          "title": "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所"
+        },
+        "faq": [
+          {
+            "question": "Do highly skilled foreign professionals need to join social insurance?",
+            "answer": "In principle yes. Health insurance and employees' pension make an insured person of anyone continuously employed at a covered workplace, regardless of nationality or the type of residence status. Workers' accident insurance covers everyone, and employment insurance is joined with 20 hours or more a week and an expected employment of 31 days or more. You cannot exclude them because they are highly skilled or short-term."
+          },
+          {
+            "question": "How do you prevent double coverage between the home country's and Japan's pension?",
+            "answer": "It can be adjusted only with a country that has a social security agreement with Japan. A person temporarily posted from an agreement partner may be exempt from Japan's system with a certificate of coverage issued by the sending country. Which systems are covered and whether periods aggregate differ by country, and a person directly hired locally by the Japanese entity joins Japan's system in principle."
+          },
+          {
+            "question": "Must the employment contract be made in English or Chinese?",
+            "answer": "Legally, giving notice in Japanese satisfies the duty, and there is no duty to prepare it in a foreign language. But showing it in a language the person understands is safer in practice, and the Ministry of Health, Labour and Welfare publishes multilingual model notices of working conditions. From April 2024, you must also show the scope of change, the renewal cap and the conversion opportunity."
+          },
+          {
+            "question": "Does setting pay lower than a Japanese national's affect the residence status?",
+            "answer": "It can. Under the Engineer/Specialist in Humanities/International Services and the Highly Skilled Professional statuses, remuneration equal to or above a Japanese national's for the same work is required. But whether the criteria are met and whether it is granted is judged by the Immigration Services Agency, and the application is the work of a Gyoseishoshi. A Shakai Hoken Roumushi handles the wage design as a working condition and the social-insurance procedures."
+          }
+        ]
+      },
+      "zh-tw": {
+        "title": "僱用高度專業外國人才（IT工程師）時的勞務與社會保險",
+        "excerpt": "即使以高度專門職或技術・人文知識・國際業務的在留資格僱用IT工程師，勞動與社會保險的處理與日本人相同。只要在適用事業所被常時使用，不論國籍或在留資格，都會成為健康保險與厚生年金的被保險人（勞災全員適用，就業保險符合要件即加入），並自薪資扣除保險費。與母國制度的雙重加入，只能與已締結社會保障協定的相對國之間，透過適用證明書調整。勞動條件明示以日文即可滿足法律義務，但以本人能理解的語言表示在實務上較安全。",
+        "content": "**結論（先講重點）：** 即使以高度專門職或技術・人文知識・國際業務的在留資格僱用IT工程師，勞動與社會保險的處理與日本人相同。只要在適用事業所被常時使用，不論國籍或在留資格，都會成為健康保險與厚生年金的被保險人（勞災全員適用，就業保險符合要件即加入），並自薪資扣除保險費。與母國制度的雙重加入，只能與已與日本締結社會保障協定的相對國之間，透過適用證明書調整。勞動條件明示以日文即可滿足法律義務，但以本人能理解的語言表示在實務上較安全。本文站在社會保險勞務士的角度，為僱用高度外國人才、IT工程師的企業人資與本人，整理勞務與社會保險的要點。\n\n「既然是高度人才，社會保險就不用加入吧」「母國的年金和這裡會不會雙重繳」「僱傭契約書一定要用英文或中文做嗎」——這是我們常從僱用外國工程師的企業聽到的問題。本頁聚焦的不是在留資格申請本身，而是僱用之後的勞動條件、社會保險與薪資設計。是否符合在留資格、能否獲准的判斷不在本文範圍內。\n\n## 高度專門職、工程師也一定要加入社會保險嗎？\n\n原則上會加入。健康保險與厚生年金，只要是在適用事業所被常時使用的人，不論國籍或在留資格種類，都會成為被保險人。不能因為是高度專門職、或預定短期在留而不加入。\n\n| 保險 | 高度人才／IT工程師的處理 |\n|---|---|\n| 勞災保險 | 勞工全員適用（不論國籍、在留資格） |\n| 就業保險 | 每週約定工時20小時以上且預計僱用31日以上即加入 |\n| 健康保險・厚生年金 | 在適用事業所被常時使用的正職原則加入；短工時者依四分之三基準與特定適用事業所要件判定 |\n\n僱用外國人時，還須向Hello Work辦理外國人僱用狀況的申報。表格與期限依在留資格與是否加入就業保險而異。窗口如何依資格分擔的全貌，請見[僱用一位外國人需要幾個窗口](/zh-tw/labor/column/gaikokujin-koyo-madoguchi-wakekata)。\n\n## 如何防止與母國社會保障的雙重加入？\n\n能調整雙重加入的，只有與日本締結社會保障協定的相對國之間。自有協定的國家暫時派遣而來的人，可能繼續加入派遣來源國的制度，而在部分情形免除加入日本制度。其證明即為來源國發行的適用證明書。\n\n- **暫時派遣（原則5年以內）**：自協定相對國暫時派至日本事業所者，若有適用證明書，可能免除加入日本制度\n- **當地僱用（日本法人直接僱用）**：因非派遣，原則加入日本制度\n- **期間通算**：依協定，可通算兩國的年金加入期間以判斷受給資格\n\n協定涵蓋的制度（僅年金，或含醫療）、能否通算期間，均因相對國而異。例如與中國的協定僅限年金，且無通算加入期間的規定。機制的詳細整理請見[中國駐在與社會保障協定的雙重加入調整](/zh-tw/labor/column/chugoku-chuzai-shakaihosho-kyotei-nijukanyu)；離職返國員工的年金請見[返國員工的年金會如何](/zh-tw/labor/column/gaikokujin-shain-kikoku-nenkin-seisan)。協定相對國與涵蓋制度的最新清單，請以日本年金機構的公開資料確認。\n\n## 勞動條件明示須以外語做到什麼程度？\n\n勞動條件明示（勞動基準法第15條、同法施行規則第5條）以日文進行即滿足法律義務，並無以外語製作的義務。但本人若在不理解內容下開始工作，日後認知落差會成為糾紛的火種。厚生勞動省建議以本人能理解的語言明示，並公開多語言的勞動條件通知書範本。\n\n自2024年4月起，須明示的事項增加。所有勞動契約須明示工作地點與業務的變更範圍；有期契約須明示更新上限與轉為無期的機會。對外國勞工的母語明示與改正詳情，請見[對外國勞工的勞動條件明示與母語對應](/zh-tw/labor/column/gaikokujin-roudou-joken-meiji-bogoko-2024)。以企業內調動或出向接收時的社會保險處理，請見[以企業內調動、出向接收之外國人的社會保險](/zh-tw/labor/column/kigyonai-tenkin-shukko-gaikokujin-shakaihoken-nyu)。\n\n## 薪資與津貼設計中，有會影響在留資格的點嗎？\n\n有。在技術・人文知識・國際業務與高度專門職的在留資格下，報酬須「與日本人從事相同工作時所受報酬同等以上」。將薪資設得比日本人低，可能影響是否符合在留資格或能否更新。\n\n| 論點 | 勞務／社會保險面向所看的點 |\n|---|---|\n| 報酬水準 | 是否與同類日本人同等以上？基本薪與津貼的構成是否明確 |\n| 津貼性質 | 通勤、住宅、實物給付等是否算入標準報酬 |\n| 獎金・變動薪 | 是否算入社會保險費與加成工資的基礎 |\n\n不過，該報酬水準是否符合在留資格基準、能否獲准，由出入國在留管理廳判斷，申請是行政書士的業務。社會保險勞務士處理的是作為勞動條件的薪資設計、標準月報酬的計算，以及社會與就業保險手續。角色的切分整理於下一節。\n\n## 在留資格與勞務、社會保險各自該找誰？\n\n僱用高度人才時，在留資格、勞務、稅務的分擔依資格而分。\n\n| 要做的事 | 屬誰的領域 |\n|---|---|\n| 勞動條件明示、工作規則、社會與就業保險的加入與申報、薪資計算、標準報酬計算 | **社會保險勞務士**（本事務所） |\n| 在留資格的認定、變更、更新申請；確認點數計算 | **行政書士**（申請取次） |\n| 所得稅、租稅協定的適用、年終調整 | **稅理士** |\n| 個別勞資糾紛、解僱可否的判斷 | **律師** |\n\n勞動條件與社會保險手續是社會保險勞務士的業務。在留資格申請屬行政書士、所得稅與租稅協定屬稅理士的領域，各為獨立事業體，須各自獨立、分別承接、另行簽約。本事務所若介紹其他事業體，也不會有介紹費往來。是否符合在留資格、能否獲准等具體法律判斷，本文不予進行。\n\n## 四葉社会保険労務士事務所能做什麼？\n\n位於文京區小日向的四葉社会保険労務士事務所，承接**高度人才、IT工程師的勞動條件設計與明示、工作規則、社會與就業保險的加入與申報、標準月報酬計算、薪資計算，以及社會保障協定適用證明書的申請實務**。也可用中文（繁體、簡體）諮詢。**諮詢免費。** 費用請見[報酬額表](/zh-tw/labor/ryokin)，常見問題請見[常見問答](/zh-tw/labor/faq)。\n\n## 常見問題\n\n**Q. 高度專門職的外國人也需要加入社會保險嗎？**\nA. 原則上需要。健康保險與厚生年金，只要是在適用事業所被常時使用的人，不論國籍或在留資格種類都會成為被保險人。勞災保險全員適用，就業保險以週20小時以上、預計僱用31日以上加入。不能以高度人才或短期在留為由排除。\n\n**Q. 母國與日本的年金雙重加入該如何防止？**\nA. 僅能與有社會保障協定的相對國之間調整。自協定相對國暫時派遣者，若有來源國發行的適用證明書，可能免除加入日本制度。涵蓋制度與能否通算期間因國而異，由日本法人在當地直接僱用者原則加入日本制度。\n\n**Q. 僱傭契約書一定要用英文或中文做嗎？**\nA. 法律上以日文明示即滿足義務，並無以外語製作的義務。但以本人能理解的語言表示在實務上較安全，厚生勞動省也公開多語言的勞動條件通知書範本。自2024年4月起，還須明示變更範圍、更新上限與轉為無期的機會。\n\n**Q. 把薪資設得比日本人低，會影響在留資格嗎？**\nA. 可能會。在技術・人文知識・國際業務與高度專門職下，須有與日本人從事相同工作同等以上的報酬。但是否符合基準、能否獲准由出入國在留管理廳判斷，申請是行政書士的業務。社會保險勞務士承擔作為勞動條件的薪資設計與社會保險手續。\n\n## 出處\n\n- 出入國管理及難民認定法（1951年政令第319號）別表第一之二表（高度專門職）、別表第一之五表等（技術・人文知識・國際業務）。高度專門職採點數制，報酬與日本人同等以上納入在留資格基準（是否符合、能否獲准由出入國在留管理廳判斷）\n- 健康保險法、厚生年金保險法＝在適用事業所被常時使用者，不論國籍、在留資格皆為被保險人；短工時者依四分之三基準與特定適用事業所要件判定\n- 勞動者災害補償保險法＝勞工不論國籍、在留資格全員適用／就業保險法＝每週約定工時20小時以上且預計僱用31日以上為被保險人\n- 社會保障協定＝雙重加入防止（適用證明書）與加入期間通算。涵蓋制度與能否通算因相對國而異（與中國的協定僅限年金、無通算規定）。已生效的相對國與涵蓋制度依日本年金機構公開資料確認（2026年9月參照）\n- 勞動基準法第15條與同法施行規則第5條（勞動條件明示）。自2024年4月起新增工作地點與業務的變更範圍、有期契約更新上限、轉為無期的機會之明示。以外語明示非義務，但厚生勞動省公開多語言勞動條件通知書範本（2026年9月參照）\n\n本文並未替您決定該找誰諮詢。勞動條件與社會、就業保險手續是社會保險勞務士的業務，在留資格申請是行政書士的業務，所得稅與租稅協定是稅理士的領域，個別勞資糾紛是律師的業務，各為獨立事業體，須各自獨立、分別承接、另行簽約。委託四葉社会保険労務士事務所時的費用整理於[報酬額表](/zh-tw/labor/ryokin)，常見問題整理於[常見問答](/zh-tw/labor/faq)。\n\n本文為一般資訊提供。依個別情形所作的判斷，由具備資格者於面談後進行。撰稿為[浦松丈二](/zh-tw/about/uramatsu)（社會保險勞務士・行政書士・宅地建物取引士）。",
+        "category": "社會保險",
+        "keywords": [
+          "高度專門職 社會保險",
+          "外國IT工程師 勞務",
+          "社會保障協定 雙重加入",
+          "勞動條件明示 外語",
+          "在留資格 報酬",
+          "2024 勞動條件明示改正"
+        ],
+        "tags": [
+          "外國人僱用",
+          "高度專門職",
+          "社會保障協定",
+          "社會保險",
+          "勞動條件明示",
+          "社會保險勞務士"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "高度專門職的外國人也需要加入社會保險嗎？",
+            "answer": "原則上需要。健康保險與厚生年金，只要是在適用事業所被常時使用的人，不論國籍或在留資格種類都會成為被保險人。勞災保險全員適用，就業保險以週20小時以上、預計僱用31日以上加入。不能以高度人才或短期在留為由排除。"
+          },
+          {
+            "question": "母國與日本的年金雙重加入該如何防止？",
+            "answer": "僅能與有社會保障協定的相對國之間調整。自協定相對國暫時派遣者，若有來源國發行的適用證明書，可能免除加入日本制度。涵蓋制度與能否通算期間因國而異，由日本法人在當地直接僱用者原則加入日本制度。"
+          },
+          {
+            "question": "僱傭契約書一定要用英文或中文做嗎？",
+            "answer": "法律上以日文明示即滿足義務，並無以外語製作的義務。但以本人能理解的語言表示在實務上較安全，厚生勞動省也公開多語言的勞動條件通知書範本。自2024年4月起，還須明示變更範圍、更新上限與轉為無期的機會。"
+          },
+          {
+            "question": "把薪資設得比日本人低，會影響在留資格嗎？",
+            "answer": "可能會。在技術・人文知識・國際業務與高度專門職下，須有與日本人從事相同工作同等以上的報酬。但是否符合基準、能否獲准由出入國在留管理廳判斷，申請是行政書士的業務。社會保險勞務士承擔作為勞動條件的薪資設計與社會保險手續。"
+          }
+        ]
+      },
+      "zh": {
+        "title": "雇用高度专业外国人才（IT工程师）时的劳务与社会保险",
+        "excerpt": "即使以高度专门职或技术・人文知识・国际业务的在留资格雇用IT工程师，劳动与社会保险的处理与日本人相同。只要在适用事业所被常时使用，不论国籍或在留资格，都会成为健康保险与厚生年金的被保险人（劳灾全员适用，就业保险符合要件即加入），并自薪资扣除保险费。与母国制度的双重加入，只能与已缔结社会保障协定的相对国之间，透过适用证明书调整。劳动条件明示以日文即可满足法律义务，但以本人能理解的语言表示在实务上较安全。",
+        "content": "**结论（先讲重点）：** 即使以高度专门职或技术・人文知识・国际业务的在留资格雇用IT工程师，劳动与社会保险的处理与日本人相同。只要在适用事业所被常时使用，不论国籍或在留资格，都会成为健康保险与厚生年金的被保险人（劳灾全员适用，就业保险符合要件即加入），并自薪资扣除保险费。与母国制度的双重加入，只能与已与日本缔结社会保障协定的相对国之间，透过适用证明书调整。劳动条件明示以日文即可满足法律义务，但以本人能理解的语言表示在实务上较安全。本文站在社会保险劳务士的角度，为雇用高度外国人才、IT工程师的企业人资与本人，整理劳务与社会保险的要点。\n\n「既然是高度人才，社会保险就不用加入吧」「母国的年金和这里会不会双重缴」「雇佣契约书一定要用英文或中文做吗」——这是我们常从雇用外国工程师的企业听到的问题。本页聚焦的不是在留资格申请本身，而是雇用之后的劳动条件、社会保险与薪资设计。是否符合在留资格、能否获准的判断不在本文范围内。\n\n## 高度专门职、工程师也一定要加入社会保险吗？\n\n原则上会加入。健康保险与厚生年金，只要是在适用事业所被常时使用的人，不论国籍或在留资格种类，都会成为被保险人。不能因为是高度专门职、或预定短期在留而不加入。\n\n| 保险 | 高度人才／IT工程师的处理 |\n|---|---|\n| 劳灾保险 | 劳工全员适用（不论国籍、在留资格） |\n| 就业保险 | 每周约定工时20小时以上且预计雇用31日以上即加入 |\n| 健康保险・厚生年金 | 在适用事业所被常时使用的正职原则加入；短工时者依四分之三基准与特定适用事业所要件判定 |\n\n雇用外国人时，还须向Hello Work办理外国人雇用状况的申报。表格与期限依在留资格与是否加入就业保险而异。窗口如何依资格分担的全貌，请见[雇用一位外国人需要几个窗口](/zh/labor/column/gaikokujin-koyo-madoguchi-wakekata)。\n\n## 如何防止与母国社会保障的双重加入？\n\n能调整双重加入的，只有与日本缔结社会保障协定的相对国之间。自有协定的国家暂时派遣而来的人，可能继续加入派遣来源国的制度，而在部分情形免除加入日本制度。其证明即为来源国发行的适用证明书。\n\n- **暂时派遣（原则5年以内）**：自协定相对国暂时派至日本事业所者，若有适用证明书，可能免除加入日本制度\n- **当地雇用（日本法人直接雇用）**：因非派遣，原则加入日本制度\n- **期间通算**：依协定，可通算两国的年金加入期间以判断受给资格\n\n协定涵盖的制度（仅年金，或含医疗）、能否通算期间，均因相对国而异。例如与中国的协定仅限年金，且无通算加入期间的规定。机制的详细整理请见[中国驻在与社会保障协定的双重加入调整](/zh/labor/column/chugoku-chuzai-shakaihosho-kyotei-nijukanyu)；离职返国员工的年金请见[返国员工的年金会如何](/zh/labor/column/gaikokujin-shain-kikoku-nenkin-seisan)。协定相对国与涵盖制度的最新清单，请以日本年金机构的公开资料确认。\n\n## 劳动条件明示须以外语做到什么程度？\n\n劳动条件明示（劳动基准法第15条、同法施行规则第5条）以日文进行即满足法律义务，并无以外语制作的义务。但本人若在不理解内容下开始工作，日后认知落差会成为纠纷的火种。厚生劳动省建议以本人能理解的语言明示，并公开多语言的劳动条件通知书范本。\n\n自2024年4月起，须明示的事项增加。所有劳动契约须明示工作地点与业务的变更范围；有期契约须明示更新上限与转为无期的机会。对外国劳工的母语明示与改正详情，请见[对外国劳工的劳动条件明示与母语对应](/zh/labor/column/gaikokujin-roudou-joken-meiji-bogoko-2024)。以企业内调动或出向接收时的社会保险处理，请见[以企业内调动、出向接收之外国人的社会保险](/zh/labor/column/kigyonai-tenkin-shukko-gaikokujin-shakaihoken-nyu)。\n\n## 薪资与津贴设计中，有会影响在留资格的点吗？\n\n有。在技术・人文知识・国际业务与高度专门职的在留资格下，报酬须「与日本人从事相同工作时所受报酬同等以上」。将薪资设得比日本人低，可能影响是否符合在留资格或能否更新。\n\n| 论点 | 劳务／社会保险面向所看的点 |\n|---|---|\n| 报酬水准 | 是否与同类日本人同等以上？基本薪与津贴的构成是否明确 |\n| 津贴性质 | 通勤、住宅、实物给付等是否算入标准报酬 |\n| 奖金・变动薪 | 是否算入社会保险费与加成工资的基础 |\n\n不过，该报酬水准是否符合在留资格基准、能否获准，由出入国在留管理厅判断，申请是行政书士的业务。社会保险劳务士处理的是作为劳动条件的薪资设计、标准月报酬的计算，以及社会与就业保险手续。角色的切分整理于下一节。\n\n## 在留资格与劳务、社会保险各自该找谁？\n\n雇用高度人才时，在留资格、劳务、税务的分担依资格而分。\n\n| 要做的事 | 属谁的领域 |\n|---|---|\n| 劳动条件明示、工作规则、社会与就业保险的加入与申报、薪资计算、标准报酬计算 | **社会保险劳务士**（本事务所） |\n| 在留资格的认定、变更、更新申请；确认点数计算 | **行政书士**（申请取次） |\n| 所得税、租税协定的适用、年终调整 | **税理士** |\n| 个别劳资纠纷、解雇可否的判断 | **律师** |\n\n劳动条件与社会保险手续是社会保险劳务士的业务。在留资格申请属行政书士、所得税与租税协定属税理士的领域，各为独立事业体，须各自独立、分别承接、另行签约。本事务所若介绍其他事业体，也不会有介绍费往来。是否符合在留资格、能否获准等具体法律判断，本文不予进行。\n\n## 四葉社会保険労務士事務所能做什么？\n\n位于文京区小日向的四葉社会保険労務士事務所，承接**高度人才、IT工程师的劳动条件设计与明示、工作规则、社会与就业保险的加入与申报、标准月报酬计算、薪资计算，以及社会保障协定适用证明书的申请实务**。也可用中文（繁体、简体）咨询。**咨询免费。** 费用请见[报酬额表](/zh/labor/ryokin)，常见问题请见[常见问答](/zh/labor/faq)。\n\n## 常见问题\n\n**Q. 高度专门职的外国人也需要加入社会保险吗？**\nA. 原则上需要。健康保险与厚生年金，只要是在适用事业所被常时使用的人，不论国籍或在留资格种类都会成为被保险人。劳灾保险全员适用，就业保险以周20小时以上、预计雇用31日以上加入。不能以高度人才或短期在留为由排除。\n\n**Q. 母国与日本的年金双重加入该如何防止？**\nA. 仅能与有社会保障协定的相对国之间调整。自协定相对国暂时派遣者，若有来源国发行的适用证明书，可能免除加入日本制度。涵盖制度与能否通算期间因国而异，由日本法人在当地直接雇用者原则加入日本制度。\n\n**Q. 雇佣契约书一定要用英文或中文做吗？**\nA. 法律上以日文明示即满足义务，并无以外语制作的义务。但以本人能理解的语言表示在实务上较安全，厚生劳动省也公开多语言的劳动条件通知书范本。自2024年4月起，还须明示变更范围、更新上限与转为无期的机会。\n\n**Q. 把薪资设得比日本人低，会影响在留资格吗？**\nA. 可能会。在技术・人文知识・国际业务与高度专门职下，须有与日本人从事相同工作同等以上的报酬。但是否符合基准、能否获准由出入国在留管理厅判断，申请是行政书士的业务。社会保险劳务士承担作为劳动条件的薪资设计与社会保险手续。\n\n## 出处\n\n- 出入国管理及难民认定法（1951年政令第319号）别表第一之二表（高度专门职）、别表第一之五表等（技术・人文知识・国际业务）。高度专门职采点数制，报酬与日本人同等以上纳入在留资格基准（是否符合、能否获准由出入国在留管理厅判断）\n- 健康保险法、厚生年金保险法＝在适用事业所被常时使用者，不论国籍、在留资格皆为被保险人；短工时者依四分之三基准与特定适用事业所要件判定\n- 劳动者灾害补偿保险法＝劳工不论国籍、在留资格全员适用／就业保险法＝每周约定工时20小时以上且预计雇用31日以上为被保险人\n- 社会保障协定＝双重加入防止（适用证明书）与加入期间通算。涵盖制度与能否通算因相对国而异（与中国的协定仅限年金、无通算规定）。已生效的相对国与涵盖制度依日本年金机构公开资料确认（2026年9月参照）\n- 劳动基准法第15条与同法施行规则第5条（劳动条件明示）。自2024年4月起新增工作地点与业务的变更范围、有期契约更新上限、转为无期的机会之明示。以外语明示非义务，但厚生劳动省公开多语言劳动条件通知书范本（2026年9月参照）\n\n本文并未替您决定该找谁咨询。劳动条件与社会、就业保险手续是社会保险劳务士的业务，在留资格申请是行政书士的业务，所得税与租税协定是税理士的领域，个别劳资纠纷是律师的业务，各为独立事业体，须各自独立、分别承接、另行签约。委托四葉社会保険労務士事務所时的费用整理于[报酬额表](/zh/labor/ryokin)，常见问题整理于[常见问答](/zh/labor/faq)。\n\n本文为一般资讯提供。依个别情形所作的判断，由具备资格者于面谈后进行。撰稿为[浦松丈二](/zh/about/uramatsu)（社会保险劳务士・行政书士・宅地建物取引士）。",
+        "category": "社会保险",
+        "keywords": [
+          "高度专门职 社会保险",
+          "外国IT工程师 劳务",
+          "社会保障协定 双重加入",
+          "劳动条件明示 外语",
+          "在留资格 报酬",
+          "2024 劳动条件明示改正"
+        ],
+        "tags": [
+          "外国人雇用",
+          "高度专门职",
+          "社会保障协定",
+          "社会保险",
+          "劳动条件明示",
+          "社会保险劳务士"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "高度专门职的外国人也需要加入社会保险吗？",
+            "answer": "原则上需要。健康保险与厚生年金，只要是在适用事业所被常时使用的人，不论国籍或在留资格种类都会成为被保险人。劳灾保险全员适用，就业保险以周20小时以上、预计雇用31日以上加入。不能以高度人才或短期在留为由排除。"
+          },
+          {
+            "question": "母国与日本的年金双重加入该如何防止？",
+            "answer": "仅能与有社会保障协定的相对国之间调整。自协定相对国暂时派遣者，若有来源国发行的适用证明书，可能免除加入日本制度。涵盖制度与能否通算期间因国而异，由日本法人在当地直接雇用者原则加入日本制度。"
+          },
+          {
+            "question": "雇佣契约书一定要用英文或中文做吗？",
+            "answer": "法律上以日文明示即满足义务，并无以外语制作的义务。但以本人能理解的语言表示在实务上较安全，厚生劳动省也公开多语言的劳动条件通知书范本。自2024年4月起，还须明示变更范围、更新上限与转为无期的机会。"
+          },
+          {
+            "question": "把薪资设得比日本人低，会影响在留资格吗？",
+            "answer": "可能会。在技术・人文知识・国际业务与高度专门职下，须有与日本人从事相同工作同等以上的报酬。但是否符合基准、能否获准由出入国在留管理厅判断，申请是行政书士的业务。社会保险劳务士承担作为劳动条件的薪资设计与社会保险手续。"
+          }
+        ]
+      }
+    }
   }
 ];
