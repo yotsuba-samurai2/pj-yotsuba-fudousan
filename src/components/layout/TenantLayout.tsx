@@ -37,6 +37,9 @@ type FooterSection = { title: string; links: NavItem[] };
 const NAV_HREFS: Record<string, { href: string; key: string; labels?: Record<string, string> }[]> = {
   realestate: [
     { href: "/services", key: "services" },
+    // 2026-09-16浦松指示：物件1件目の公開に伴い「取扱物件」をヘッダー最上段へ（それまで /toushi 本文からの1本のみで到達不能に近かった）。
+    // コード内4ロケールラベル（B1の教訓＝Firestoreに新キーを増やさない）。/bukken は同日に4ロケール公開＝locales制限なし。
+    { href: "/bukken", key: "bukken", labels: { ja: "取扱物件", en: "Properties", "zh-tw": "銷售物件", zh: "在售房源" } },
     { href: "/about", key: "about" },
     { href: "/column", key: "column" },
     // 2026-07-10浦松指示：コラムの後にアクセス（/access・コード内4ロケールラベル）
@@ -130,6 +133,8 @@ const FOOTER_NAV_HREFS: Record<
         },
         // 2026-07-11修正の踏襲：基本業務（賃貸・売買・管理）は/servicesへ集約（表現規程＝コンサル型方針）
         { href: "/services", key: "management", labels: { ja: "賃貸・売買・管理", en: "Rental, Sale & Management", "zh-tw": "租賃・買賣・管理", zh: "租赁・买卖・管理" } },
+        // 2026-09-16浦松指示：取扱物件（/bukken・4ロケール）を基本業務の隣へ。ヘッダー NAV_HREFS と表記統一
+        { href: "/bukken", key: "bukken", labels: { ja: "取扱物件", en: "Properties", "zh-tw": "銷售物件", zh: "在售房源" } },
       ],
     },
     {

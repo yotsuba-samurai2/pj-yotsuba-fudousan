@@ -105,8 +105,8 @@ function expandProperty(p: PublicProperty): MetadataRoute.Sitemap {
 
 const STATIC_REALESTATE: StaticPage[] = [
   { path: "", changeFrequency: "weekly", priority: 1.0 },
-  // 2026-09-01：物件紹介（/bukken）。ja先行公開＝ページ側 PAGE_LOCALES と一致させる
-  { path: "/bukken", changeFrequency: "weekly", priority: 0.8, locales: ["ja"] },
+  // 2026-09-01：物件紹介（/bukken）。2026-09-16に ja先行→4ロケール（ページ側 PAGE_LOCALES と一致・locales未指定＝全4）
+  { path: "/bukken", changeFrequency: "weekly", priority: 0.8 },
   { path: "/souzoku", changeFrequency: "monthly", priority: 0.9 },
   { path: "/souzoku/nagare", changeFrequency: "monthly", priority: 0.7 },
   // タスクC-4（2026-07-19）：相続空き家。C-6-2で zh-tw・zh を公開。

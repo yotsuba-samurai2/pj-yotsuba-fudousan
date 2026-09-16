@@ -114,6 +114,9 @@ export const SERVICE_NAV_CATEGORIES: ServiceNavCategory[] = [
 
 /** カテゴリ外の補助導線（メガメニュー下部・フッター会社情報列で使用） */
 export const SERVICE_NAV_UTILITY_LINKS: ServiceNavLink[] = [
+  // 2026-09-16浦松指示：取扱物件（/bukken）。1件目の公開まで /toushi 本文からの1本しか導線がなく「サービスにもヘッダーにもない」状態だった。
+  // ヘッダー最上段（TenantLayout NAV_HREFS）にも同日追加。/bukken は同日に4ロケール公開＝locales制限なし（sitemap.ts と一致）。
+  { href: "/bukken", label: { ja: "取扱物件", en: "Properties for sale", "zh-tw": "銷售物件", zh: "在售房源" } },
   { href: "/faq", label: { ja: "よくある質問", en: "FAQ", "zh-tw": "常見問題", zh: "常见问题" } },
   { href: "/jirei", label: { ja: "相談事例" }, locales: ["ja"] },
   { href: "/ryokin", label: { ja: "料金", en: "Fees", "zh-tw": "費用", zh: "费用" } },

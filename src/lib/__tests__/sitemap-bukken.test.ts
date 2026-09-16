@@ -22,14 +22,26 @@ const DETAIL_PAGE = io.readFileSync(
 );
 
 describe("sitemap に /bukken の経路がある", () => {
-  it("STATIC_REALESTATE に /bukken の静的エントリがある（ja先行）", () => {
+  it("STATIC_REALESTATE に /bukken の静的エントリがある（2026-09-16から4ロケール＝locales未指定）", () => {
     const block = SITEMAP.slice(
       SITEMAP.indexOf("const STATIC_REALESTATE"),
       SITEMAP.indexOf("const STATIC_LEGAL"),
     );
     expect(block).toContain('path: "/bukken"');
     const entry = block.slice(block.indexOf('path: "/bukken"'));
-    expect(entry.slice(0, entry.indexOf("}"))).toContain('locales: ["ja"]');
+    // locales を絞っていない＝ja/en/zh-tw/zh 全4ロケールを収載（ページ側 PAGE_LOCALES と一致）
+    expect(entry.slice(0, entry.indexOf("}"))).not.toContain("locales:");
+  });
+
+  it("一覧ページの PAGE_LOCALES も4ロケール（sitemap と一致）", () => {
+    const LIST_PAGE = io.readFileSync(
+      path.join(process.cwd(), "src/app/[locale]/(realestate)/bukken/page.tsx"),
+      "utf-8",
+    );
+    const m = LIST_PAGE.match(/const PAGE_LOCALES: LangCode\[\] = \[([^\]]*)\]/);
+    expect(m).not.toBeNull();
+    const locales = m![1].split(",").map((s) => s.trim().replace(/"/g, ""));
+    expect(locales.sort()).toEqual(["en", "ja", "zh", "zh-tw"]);
   });
 
   it("物件詳細の展開関数（expandProperty）が realestate sitemap に合流している", () => {
