@@ -627,6 +627,19 @@ const REQUIRED_HUB_LINKS: Record<string, string[]> = {
     "/legal/column/souzoku-tokubetsu-jueki-kiyobun",
     "/legal/column/isan-bunkatsu-kyougisho",
   ],
+  "biyoushojo-kaisetsu-todokede-kozo-setsubi-kijun": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/inshokuten-eigyo-kyoka-hokenjo-setsubi-kijun-shokuhin-eisei",
+  ],
+  "taiwan-kigyo-nihon-shiten-gaikoku-kaisha-touki": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/keieikanri-zairyu-chuka-kigyousha-kaisha-setsuritsu",
+    "/legal/column/group-home-gaikokujin-keieikanri-zairyushikaku",
+  ],
 };
 
 /** 表示コンプライアンス上の禁止語 */
@@ -2029,6 +2042,49 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "独立した事業体",
     "紹介料を受け取りません",
   ],
+  "biyoushojo-kaisetsu-todokede-kozo-setsubi-kijun": [
+    "美容師法",
+    "昭和32年6月3日法律第163号",
+    "美容師法第11条",
+    "美容師法第12条",
+    "美容師法第12条の3",
+    "美容師法第13条",
+    "都道府県知事",
+    "管理美容師",
+    "施行規則第25条",
+    "施行規則第26条",
+    "施行規則第27条",
+    "平成28年4月1日",
+    "生食発1209002号",
+    "別事業体",
+    "独立した事業体",
+    "紹介料を受け取りません",
+  ],
+  "taiwan-kigyo-nihon-shiten-gaikoku-kaisha-touki": [
+    "会社法第817条",
+    "会社法第818条",
+    "会社法第821条",
+    "会社法第822条",
+    "会社法第933条",
+    "会社法第30条",
+    "会社法第49条",
+    "会社法第579条",
+    "3週間以内",
+    "経営・管理",
+    "令和7年10月16日",
+    "3,000万円",
+    "常勤職員",
+    "B2相当",
+    "JLPT",
+    "令和10年10月16日",
+    "商業登記",
+    "申請取次",
+    "司法書士",
+    "社会保険労務士",
+    "別事業体",
+    "独立した事業体",
+    "紹介料を受け取りません",
+  ],
 };
 
 /** 記事ごとに含めてはならない表現 */
@@ -2137,6 +2193,8 @@ const FORBIDDEN_PHRASES: Record<string, string[]> = {
   "keieikanri-zairyu-chuka-kigyousha-kaisha-setsuritsu": [],
   "koshu-yokujo-sauna-eigyo-kyoka-shinsei": [],
   "tokubetsu-kiyoryo-souzokunin-igai-shinzoku": [],
+  "biyoushojo-kaisetsu-todokede-kozo-setsubi-kijun": [],
+  "taiwan-kigyo-nihon-shiten-gaikoku-kaisha-touki": [],
 };
 
 /** 本セット外へ張る既存legalコラムslug（リポジトリの他シードで実在確認済み） */
@@ -3735,6 +3793,58 @@ const ARTICLES: Array<{
       "寄与分",
       "民法1050条",
       "相続税",
+      "行政書士",
+    ],
+  },
+  {
+    file: "68-biyoushojo-kaisetsu-todokede-kozo-setsubi-kijun.md",
+    slug: "biyoushojo-kaisetsu-todokede-kozo-setsubi-kijun",
+    date: "2026-09-17",
+    title:
+      "美容所の開設届はいつ・どこに出す？──構造設備基準と保健所検査の流れ",
+    category: "許認可の手続き（行政書士の実務から）",
+    excerpt:
+      "美容室を新しく開くときは、営業を始める前に美容所の開設届を保健所（都道府県知事。保健所設置市・特別区は市長・区長）へ出し、保健所の検査で構造設備の確認を受けます。開設届は美容師法第11条に基づき、位置・構造設備・管理美容師その他の従業者の氏名などをあらかじめ届け出るもので、届け出た構造設備の検査・確認を受けた後でなければ美容所を使用できません（美容師法第12条）。消毒設備・清潔保持・採光照明換気（施行規則第25〜27条）、理容所との重複開設（平成28年4月1日〜）、必要書類と検査の流れ、やり直しを避ける順番を整理し、物件は不動産、労務・社会保険は社労士へ分離受任で振る分担を示しました。",
+    keywords: [
+      "美容所 開設届 保健所",
+      "美容師法 第11条 第12条 開設届",
+      "美容所 構造設備基準 消毒設備",
+      "理容所 美容所 重複開設 平成28年",
+      "管理美容師 要件 講習会",
+      "美容室 開業 行政書士",
+    ],
+    tags: [
+      "美容所",
+      "開設届",
+      "美容師法",
+      "構造設備基準",
+      "許認可",
+      "行政書士",
+    ],
+  },
+  {
+    file: "69-taiwan-kigyo-nihon-shiten-gaikoku-kaisha-touki.md",
+    slug: "taiwan-kigyo-nihon-shiten-gaikoku-kaisha-touki",
+    date: "2026-09-17",
+    title:
+      "台湾・中国企業が日本に拠点を作る：支店と子会社どちらを選ぶ？──外国会社の登記と在留資格『経営・管理』",
+    category: "許認可の手続き（行政書士の実務から）",
+    excerpt:
+      "台湾・中国の企業が日本で事業を続けるには、「日本支店（外国会社）」と「現地子会社（株式会社・合同会社）」の二択があります。支店は外国会社の登記が必要で、日本における代表者の1人以上は日本に住所を有する者でなければなりません（会社法第817条）。子会社は日本法人を新設します。代表者が住んで経営するなら在留資格『経営・管理』が要りますが、令和7年10月16日施行の基準改正で資本金3,000万円以上・常勤職員1人以上・日本語能力・経歴・事業計画書の専門家確認が求められるようになりました。擬似外国会社（会社法第821条）や撤退・清算の違いも整理し、登記＝司法書士、税務＝税理士、労務＝社労士、在留申請の取次＝行政書士へ分離受任で振る分担を示しました。",
+    keywords: [
+      "日本 支店 子会社 違い 外国会社",
+      "外国会社 登記 会社法 第817条 第933条",
+      "経営・管理 資本金 3000万円 改正 2025",
+      "台湾 中国 企業 日本進出 拠点",
+      "擬似外国会社 会社法 第821条",
+      "在留申請 取次 行政書士",
+    ],
+    tags: [
+      "外国会社",
+      "日本支店",
+      "子会社",
+      "会社設立",
+      "経営・管理",
       "行政書士",
     ],
   },
