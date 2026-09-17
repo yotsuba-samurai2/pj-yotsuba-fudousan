@@ -676,7 +676,11 @@ export function buildPageMetadata({
     title,
     description,
     url,
-    siteName: biz?.name ?? "四葉グループ",
+    // 2026-09-17 浦松決定：ドメインのホームページ（path "/"）だけ og:site_name を「四葉グループ」にする。
+    // Googleのサイト名はホームページの WebSite 構造化データ・og:site_name・title の一貫性で決まる
+    // （公式：ホームページ全体で一貫したサイト名を使う）。WebSiteJsonLd の name と一致させる。
+    // 下層ページ（不動産・行政書士・社労士）の og:site_name は従来どおり事業体名（SNS共有の見え方を維持）。
+    siteName: path === "/" ? SHARED_ORG_INFO.name : (biz?.name ?? SHARED_ORG_INFO.name),
     locale: OG_LOCALES[locale] ?? "ja_JP",
     type,
     ...(hasImage
