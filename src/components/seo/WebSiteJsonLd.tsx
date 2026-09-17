@@ -23,7 +23,14 @@ export function WebSiteJsonLd() {
         "@type": "WebSite",
         "@id": WEBSITE_ID,
         name: "四葉グループ",
-        alternateName: ["luck428.com", "四葉不動産", "四葉行政書士事務所"],
+        // 2026-09-17 浦松決定：サイト名は「四葉グループ」に一本化。
+        // 旧 alternateName に「四葉不動産」「四葉行政書士事務所」を並べていたところ、Googleは第1希望
+        // （四葉グループ）の根拠不足と判断して代替名の「四葉行政書士事務所」を採用し、不動産トップや
+        // 社労士ページまで行政書士名で表示されていた（2026-09-16 実測）。公式仕様＝第1希望が選ばれない
+        // ときは alternateName を優先検討するため、事業体名を別名から外し、英語表記とドメインのみ残す
+        // （ドメインは最後の保険・全小文字）。あわせてトップの og:site_name と title も「四葉グループ」で揃える。
+        // https://developers.google.com/search/docs/appearance/site-names
+        alternateName: ["Yotsuba Group", "luck428.com"],
         url: SITE_URL,
         publisher: { "@id": `${SITE_URL}/#organization` },
         inLanguage: "ja",

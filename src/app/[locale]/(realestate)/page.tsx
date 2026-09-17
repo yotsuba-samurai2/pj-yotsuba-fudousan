@@ -15,11 +15,15 @@ import HomePageContent from "./HomePageContent";
 // ここで title/description を locale 別にするだけで全メタが連動する。
 // 【社名保護】title は全ロケール先頭に「四葉不動産」（HomePageContent の H1 と同一表記）。
 //   en/zh-tw/zh の title は HomePageContent COPY の H1 を再利用（＝既存の監修対象コピー・新規ハードコードを増やさない）、
-//   ja は既存の本番 title を維持（変更しない）。description は本文 intro 準拠＝en/zh-tw/zh は監修前ドラフト（フェーズI監修対象）。
+//   ja は 2026-09-17 に末尾へ「｜四葉グループ」を付与（Googleサイト名の一本化・下記コメント参照）。description は本文 intro 準拠＝en/zh-tw/zh は監修前ドラフト（フェーズI監修対象）。
 // absoluteTitle=true 維持：title に社名を含むためレイアウトの「%s | 四葉不動産」テンプレートは付与しない（社名重複防止）。
 const META: Record<LangCode, { title: string; description: string }> = {
   ja: {
-    title: "四葉不動産｜文京区の相続不動産と投資・事業用不動産",
+    // 2026-09-17 浦松決定：Googleのサイト名を「四葉グループ」に一本化するため、ドメインのホームページである
+    // ja トップの title 末尾に「｜四葉グループ」を付ける（WebSiteJsonLd の name・og:site_name と一貫させる＝公式仕様）。
+    // 先頭の「四葉不動産」は社名保護ルール（2026-07-10）どおり維持。en/zh-tw/zh のルートはサブディレクトリで
+    // サイト名判定の対象外のため変更しない。
+    title: "四葉不動産｜文京区の相続不動産と投資・事業用不動産｜四葉グループ",
     description:
       "東京都文京区小日向・茗荷谷駅徒歩5分の四葉不動産株式会社。相続した不動産の管理・活用・売却と、投資用・事業用（グループホーム・社宅）の不動産を扱います。元新聞記者で宅建士・行政書士の代表が、多言語で最初の一歩からお手伝いします。",
   },
