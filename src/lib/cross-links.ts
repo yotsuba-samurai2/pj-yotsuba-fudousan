@@ -72,6 +72,11 @@ const A_SHOGAI_SHITEI: Partial<Record<LangCode, string>> = {
   "zh-tw": "障礙福祉服務的指定申請（四葉行政書士事務所）",
   zh: "残障福祉服务的指定申请（四葉行政書士事務所）",
 };
+const A_SHOKUHIN_SEIZO: Partial<Record<LangCode, string>> = {
+  en: "Manufacturing permits for confectionery and prepared foods, and premises facility standards (四葉行政書士事務所 / Yotsuba Gyoseishoshi Office)",
+  "zh-tw": "菓子・熟食製造業的營業許可與物件設備基準（四葉行政書士事務所）",
+  zh: "菓子・熟食制造业的营业许可与物件设备基准（四葉行政書士事務所）",
+};
 const A_SHATAKU_SUPPORT: Partial<Record<LangCode, string>> = {
   en: "Support for company housing and corporate leases (四葉不動産 / Yotsuba Real Estate)",
   "zh-tw": "員工宿舍・法人租賃的支援（四葉不動産）",
@@ -180,6 +185,9 @@ export const CROSS_LINKS: CrossLink[] = [
       { href: "/labor/services/kaigo-roumu", anchor: `介護・障害福祉の労務管理（${SR_OFFICE_NAME}）`, anchorI18n: A_SR_KAIGO, business: "labor" },
       { href: "/labor/services/joseikin", anchor: `雇用関係助成金の申請（${SR_OFFICE_NAME}）`, anchorI18n: A_SR_JOSEIKIN, business: "labor" },
     ] },
+  // 2026-09-18：GSC実測（直近28日）でクリック上位の「業種別の物件要件」記事のうち、行政書士側コラムで唯一 /toushi から
+  // 未リンクだった1本。業際リンクは本レジストリ経由・事業体名付きアンカー（分離受任の注記が自動で付く）。
+  { id: "C17", from: ["/toushi"], targets: [{ href: "/legal/column/shokuhin-seizogyo-kyoka-bukken-setsubi-kijun", anchor: "菓子・惣菜製造業の営業許可と物件の設備基準（四葉行政書士事務所）", anchorI18n: A_SHOKUHIN_SEIZO, business: "legal" }] },
 ];
 
 // normalizePathは分離モジュールから再エクスポート（client側はlib/normalize-pathを直接使う）
