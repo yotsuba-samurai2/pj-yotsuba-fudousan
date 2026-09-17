@@ -135,8 +135,16 @@ const COPY: Record<LangCode, ToushiCopy> = {
               <Link href={addLocalePrefix("/toushi/group-home", locale)} className="text-primary underline">くわしく</Link>
             </li>
             <li>
+              <strong>戸建て・空き家をグループホームに貸す（大家さん向け）</strong>——貸す側が最初に知っておきたいこと →{" "}
+              <Link href={addLocalePrefix("/column/kodate-akiya-group-home-ni-kasu", locale)} className="text-primary underline">くわしく</Link>
+            </li>
+            <li>
               <strong>放課後等デイサービス</strong>——用途地域・1階・面積・採光 →{" "}
               <Link href={addLocalePrefix("/column/houkago-day-bukken-youto-chiiki-1kai", locale)} className="text-primary underline">くわしく</Link>
+            </li>
+            <li>
+              <strong>学童保育（放課後児童クラブ）</strong>——用途地域・面積・避難経路の目安 →{" "}
+              <Link href={addLocalePrefix("/column/gakudou-houkago-jido-club-bukken-youken", locale)} className="text-primary underline">くわしく</Link>
             </li>
             <li>
               <strong>小規模保育事業</strong>——用途地域と面積 →{" "}
@@ -293,6 +301,10 @@ const COPY: Record<LangCode, ToushiCopy> = {
               <Link href={addLocalePrefix("/column/houkago-day-bukken-youto-chiiki-1kai", locale)} className="text-primary underline">Read more</Link>
             </li>
             <li>
+              <strong>After-school children’s clubs (gakudo)</strong>—use district, floor area and evacuation routes →{" "}
+              <Link href={addLocalePrefix("/column/gakudou-houkago-jido-club-bukken-youken", locale)} className="text-primary underline">Read more</Link>
+            </li>
+            <li>
               <strong>Small-scale childcare</strong>—use district and floor area →{" "}
               <Link href={addLocalePrefix("/column/hoiku-shoukibo-bukken-youto-chiiki", locale)} className="text-primary underline">Read more</Link>
             </li>
@@ -443,6 +455,10 @@ const COPY: Record<LangCode, ToushiCopy> = {
               <Link href={addLocalePrefix("/column/houkago-day-bukken-youto-chiiki-1kai", locale)} className="text-primary underline">詳細</Link>
             </li>
             <li>
+              <strong>學童保育（放課後兒童俱樂部）</strong>——用途地域・面積・避難動線 →{" "}
+              <Link href={addLocalePrefix("/column/gakudou-houkago-jido-club-bukken-youken", locale)} className="text-primary underline">詳細</Link>
+            </li>
+            <li>
               <strong>小規模保育事業</strong>——用途地域與面積 →{" "}
               <Link href={addLocalePrefix("/column/hoiku-shoukibo-bukken-youto-chiiki", locale)} className="text-primary underline">詳細</Link>
             </li>
@@ -591,6 +607,10 @@ const COPY: Record<LangCode, ToushiCopy> = {
             <li>
               <strong>放学后儿童日间服务</strong>——用途地域・1层・面积・采光 →{" "}
               <Link href={addLocalePrefix("/column/houkago-day-bukken-youto-chiiki-1kai", locale)} className="text-primary underline">详情</Link>
+            </li>
+            <li>
+              <strong>学童保育（放学后儿童俱乐部）</strong>——用途地域・面积・避难动线 →{" "}
+              <Link href={addLocalePrefix("/column/gakudou-houkago-jido-club-bukken-youken", locale)} className="text-primary underline">详情</Link>
             </li>
             <li>
               <strong>小规模保育事业</strong>——用途地域与面积 →{" "}
