@@ -229,6 +229,25 @@ export const SR_LAUNCH_TRANSLATION_PATCHES: Record<
       to: "四葉社会保険労務士事務所のコラム。社会保険、助成金、労務管理など、人事・労務にまつわるお役立ち情報をお届けします。",
       note: "法人→事務所",
     },
+    // 2026-09-18 本番実測：共通紹介・概要表にも社労士を追加する。
+    {
+      path: "brand.groupDescription",
+      from: "不動産・行政書士の専門家グループ。",
+      to: "不動産・行政書士・社会保険労務士の専門家グループ。",
+      note: "3事業のグループ構成に統一（2026-09-18 本番実測）",
+    },
+    {
+      path: "legal.aboutPage.officeInfo.9.value",
+      from: "四葉不動産株式会社（免許番号：東京都知事（1）第113304号）",
+      to: `四葉不動産株式会社（免許番号：東京都知事（1）第113304号）\n四葉社会保険労務士事務所（代表社会保険労務士 浦松丈二　登録番号：第${REGISTRATION_NUMBER}号）`,
+      note: "3事業のグループ構成に統一（2026-09-18 本番実測）",
+    },
+    {
+      path: "realestate.aboutPage.companyInfo.10.value",
+      from: "四葉行政書士事務所（代表行政書士 浦松丈二　登録番号：第25087022号）",
+      to: `四葉行政書士事務所（代表行政書士 浦松丈二　登録番号：第25087022号）\n四葉社会保険労務士事務所（代表社会保険労務士 浦松丈二　登録番号：第${REGISTRATION_NUMBER}号）`,
+      note: "3事業のグループ構成に統一（2026-09-18 本番実測）",
+    },
     // ── 第3陣（開業後残存・2026-09-05 本番実測）。ja ──
     // 2026-09-05 月次点検（INIT-03/NEW-ABOUT-3）。
     // 7/8 の開業前非表示（32a5d94）で「3つ→2つ」に落とした /about のグループ説明と、
@@ -366,6 +385,25 @@ export const SR_LAUNCH_TRANSLATION_PATCHES: Record<
       to: "Columns from 四葉社会保険労務士事務所. Useful information on social insurance, subsidies, labor management, and other HR & labor topics.",
       note: "法人→事務所",
     },
+    // 2026-09-18 本番実測：共通紹介・概要表にも社労士を追加する。
+    {
+      path: "brand.groupDescription",
+      from: "A professional group of real estate and administrative-scrivener practices.",
+      to: "A professional group of real estate, administrative-scrivener, and social insurance and labor consultant practices.",
+      note: "3事業のグループ構成に統一（2026-09-18 本番実測）",
+    },
+    {
+      path: "legal.aboutPage.officeInfo.9.value",
+      from: "四葉不動産株式会社 (License No.: 東京都知事（1）第113304号)",
+      to: `四葉不動産株式会社 (License No.: 東京都知事（1）第113304号)\n四葉社会保険労務士事務所 (Representative Social Insurance and Labor Consultant 浦松丈二, Registration No. ${REGISTRATION_NUMBER})`,
+      note: "3事業のグループ構成に統一（2026-09-18 本番実測）",
+    },
+    {
+      path: "realestate.aboutPage.companyInfo.10.value",
+      from: "四葉行政書士事務所 (Chief Administrative Scrivener 浦松丈二　Registration No.: 第25087022号)",
+      to: `四葉行政書士事務所 (Chief Administrative Scrivener 浦松丈二　Registration No.: 第25087022号)\n四葉社会保険労務士事務所 (Representative Social Insurance and Labor Consultant 浦松丈二, Registration No. ${REGISTRATION_NUMBER})`,
+      note: "3事業のグループ構成に統一（2026-09-18 本番実測）",
+    },
     // ── 第3陣（開業後残存・2026-09-05 本番実測）。en ── 2026-09-05 月次点検（INIT-03/NEW-ABOUT-3）。to は監修前ドラフト
     {
       path: "realestate.aboutPage.partnersDescription1",
@@ -497,6 +535,25 @@ export const SR_LAUNCH_TRANSLATION_PATCHES: Record<
       to: "四葉社會保險勞務士事務所的專欄。社會保險、助成金、勞務管理等，為您提供人事・勞務相關的實用資訊。",
       note: "法人→事務所",
     },
+    // 2026-09-18 本番実測：共通紹介・概要表にも社労士を追加する。
+    {
+      path: "brand.groupDescription",
+      from: "不動產・行政書士的專家集團。",
+      to: "不動產・行政書士・社會保險勞務士的專家集團。",
+      note: "3事業のグループ構成に統一（2026-09-18 本番実測）",
+    },
+    {
+      path: "legal.aboutPage.officeInfo.9.value",
+      from: "四葉不動産株式會社（許可證號：東京都知事（1）第113304號）",
+      to: `四葉不動産株式會社（許可證號：東京都知事（1）第113304號）\n四葉社会保険労務士事務所（代表社會保險勞務士 浦松丈二　登記號：第${REGISTRATION_NUMBER}號）`,
+      note: "3事業のグループ構成に統一（2026-09-18 本番実測）",
+    },
+    {
+      path: "realestate.aboutPage.companyInfo.10.value",
+      from: "四葉行政書士事務所（代表行政書士 浦松丈二　登記號：第25087022號）",
+      to: `四葉行政書士事務所（代表行政書士 浦松丈二　登記號：第25087022號）\n四葉社会保険労務士事務所（代表社會保險勞務士 浦松丈二　登記號：第${REGISTRATION_NUMBER}號）`,
+      note: "3事業のグループ構成に統一（2026-09-18 本番実測）",
+    },
     // ── 第3陣（開業後残存・2026-09-05 本番実測）。zh-tw ── 2026-09-05 月次点検（INIT-03/NEW-ABOUT-3）。to は監修前ドラフト
     {
       path: "realestate.aboutPage.partnersDescription1",
@@ -627,6 +684,25 @@ export const SR_LAUNCH_TRANSLATION_PATCHES: Record<
       from: "四葉社会保険労務士法人的专栏。社会保险、助成金、劳务管理等，为您提供人事・劳务相关的实用资讯。",
       to: "四葉社会保険労務士事務所的专栏。社会保险、助成金、劳务管理等，为您提供人事・劳务相关的实用资讯。",
       note: "法人→事務所",
+    },
+    // 2026-09-18 本番実測：共通紹介・概要表にも社労士を追加する。
+    {
+      path: "brand.groupDescription",
+      from: "不动产・行政书士的专家集团。",
+      to: "不动产・行政书士・社会保险劳务士的专家集团。",
+      note: "3事業のグループ構成に統一（2026-09-18 本番実測）",
+    },
+    {
+      path: "legal.aboutPage.officeInfo.9.value",
+      from: "四葉不動産株式会社（许可证号：东京都知事（1）第113304号）",
+      to: `四葉不動産株式会社（许可证号：东京都知事（1）第113304号）\n四葉社会保険労務士事務所（代表社会保险劳务士 浦松丈二　登记号：第${REGISTRATION_NUMBER}号）`,
+      note: "3事業のグループ構成に統一（2026-09-18 本番実測）",
+    },
+    {
+      path: "realestate.aboutPage.companyInfo.10.value",
+      from: "四葉行政书士事务所（代表行政书士 浦松丈二　登记号：第25087022号）",
+      to: `四葉行政书士事务所（代表行政书士 浦松丈二　登记号：第25087022号）\n四葉社会保険労務士事務所（代表社会保险劳务士 浦松丈二　登记号：第${REGISTRATION_NUMBER}号）`,
+      note: "3事業のグループ構成に統一（2026-09-18 本番実測）",
     },
     // ── 第3陣（開業後残存・2026-09-05 本番実測）。zh ── 2026-09-05 月次点検（INIT-03/NEW-ABOUT-3）。to は監修前ドラフト
     {
