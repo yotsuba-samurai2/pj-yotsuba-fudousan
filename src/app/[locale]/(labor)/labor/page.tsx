@@ -1,3 +1,4 @@
+import { CustomerVoicesPreview } from "@/components/shared/CustomerVoices";
 import Image from "next/image";
 // /labor（型F・社労士トップ・開業版）＝原稿_社労士 #1
 // JSON-LD＝layoutの OrganizationJsonLd（ProfessionalService）＋WebSiteJsonLd が出力済み＝重複出力しない。
@@ -653,6 +654,8 @@ export default async function LaborTopPage() {
             ))}
           </ul>
         </section>
+
+        <CustomerVoicesPreview businessKey="labor" locale={locale} />
 
         <div className="mt-10"><Faq bare items={[...e.faqs, getLaborPlanFaqs(locale)[7]]} heading={v.faq} ariaLabel={v.faq} /></div>
 

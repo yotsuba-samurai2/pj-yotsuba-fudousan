@@ -224,6 +224,9 @@ A. 文京区小日向の宅地建物取引業者で、相続不動産と投資�
 - [多言語のお部屋探し](https://luck428.com/global)
 - [四葉行政書士事務所](https://luck428.com/legal)
 - [コラム](https://luck428.com/column)
+- [四葉不動産のお客様の声](https://luck428.com/voices) — LINEで寄せられた個人の感想7件。契約成立・審査通過の保証ではない
+- [四葉行政書士事務所のお客様の声](https://luck428.com/legal/voices) — 個人の感想7件。許認可・在留資格等の結果保証ではない
+${sr("", "- [四葉社会保険労務士事務所のお客様の声](https://luck428.com/labor/voices) — 個人の感想7件。障害年金の受給・等級・支給額や加算・審査結果を保証しない")}
 - [よくある質問](https://luck428.com/faq)
 - [会社概要](https://luck428.com/about)
 
@@ -259,6 +262,7 @@ function legalLlmsTxt(): string {
 
 - [トップページ](${base}/)
 - [会社概要](${base}/about)
+- [お客様の声](${base}/voices) — LINEで寄せられた個人の感想。許認可・在留資格等の結果を保証するものではない。各言語は参考訳であり日本語原文を併記
 - [コラム](${base}/column)
 - [お問い合わせ](${base}/contact)
 

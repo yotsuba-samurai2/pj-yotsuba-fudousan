@@ -1,0 +1,428 @@
+{
+  "realestate": [
+    {
+      "id": "realestate-1",
+      "name": "Kさん（60代・文京区）",
+      "service": "相続した実家の売却",
+      "body": "母が亡くなって空き家になった実家をどうするか、なんとなく手がつけられず1年たっていました。相談したら、まず「売るか貸すか残すか」を決める前に、いまの状態でいくらくらいなのか、固定資産税と管理でいくら出ていくのかをメモにしてくれました。数字が見えたら兄弟も納得して話がまとまりました。売却の途中経過も、聞かなくても連絡が来るので安心でした。",
+      "translations": {
+        "en": {
+          "service": "Selling an inherited family home",
+          "body": "A year had passed since my mother died and the family home became vacant, and somehow I had not been able to bring myself to do anything about it. When I asked for advice, before deciding whether to sell, rent out, or keep it, they first wrote down roughly what it was worth in its current condition and how much we were spending on property tax and upkeep. Once we could see the numbers, my siblings were satisfied too, and we reached an agreement. They also kept me updated throughout the sale without my having to ask, which was reassuring."
+        },
+        "zh-tw": {
+          "service": "出售繼承的老家",
+          "body": "母親過世後，老家成了空屋，該怎麼處理，我一直不知該如何著手，就這樣過了一年。諮詢時，他們沒有先要我決定「賣掉、出租還是留下」，而是先幫我寫下房屋以目前的狀況大約值多少，以及固定資產稅和管理費用要支出多少。數字清楚之後，兄弟姊妹也能接受，事情就談妥了。出售過程中的進度，他們也會主動聯絡，不用我開口問，讓人很安心。"
+        },
+        "zh": {
+          "service": "出售继承的老家",
+          "body": "母亲去世后，老家成了空房，该怎么处理，我一直不知该如何着手，就这样过了一年。咨询时，他们没有先要我决定“卖掉、出租还是留下”，而是先帮我写下房屋以目前的状况大约值多少，以及固定资产税和管理费用要支出多少。数字清楚之后，兄弟姐妹也能接受，事情就谈妥了。出售过程中的进度，他们也会主动联系，不用我开口问，让人很安心。"
+        }
+      }
+    },
+    {
+      "id": "realestate-2",
+      "name": "S社（障害福祉サービス事業者・法人代表・40代）",
+      "service": "グループホーム用の物件探し",
+      "body": "以前、別の不動産会社で紹介された物件を内装まで進めてから、消防と用途地域で使えないと分かって大変な目にあったことがあります。今回は最初に「この物件はここが引っかかる可能性がある」「ここは確認が先」と、契約の前に一つずつ潰してくれたのが決定的でした。候補は多くありませんでしたが、出てきたものは全部「使える」物件でした。オーナーさんへの説明にも同席してもらえて、スムーズでした。",
+      "translations": {
+        "en": {
+          "service": "Finding a property for a group home",
+          "body": "Previously, we had a very difficult experience: another real estate agency introduced a property, and we had already started fitting out the interior when we learned that fire safety and zoning restrictions meant we could not use it. What made the difference this time was that, from the start, they pointed out where a property might run into problems and what needed to be checked first, and worked through those issues one by one before we signed a contract. There were not many candidates, but every property they brought to us was one we could use. They also joined us to explain things to the owner, and that went smoothly."
+        },
+        "zh-tw": {
+          "service": "尋找團體家屋用物件",
+          "body": "以前，另一家不動產公司介紹了一個物件，我們都已經進行到室內裝修，才發現因為消防和土地使用分區的問題而不能使用，那次真的吃了很多苦頭。這次從一開始，他們就說明「這個物件可能在哪裡遇到問題」「這部分要先確認」，在簽約前逐項排除問題，這是最關鍵的。候選物件不多，但提出的都是「能用」的物件。向屋主說明時，他們也陪同出席，過程很順利。"
+        },
+        "zh": {
+          "service": "寻找团体居住家园用房",
+          "body": "以前，另一家房地产公司介绍了一处房产，我们都已经进行到室内装修，才发现因为消防和土地用途分区的问题而不能使用，那次真的吃了很多苦头。这次从一开始，他们就说明“这处房产可能在哪里遇到问题”“这部分要先确认”，在签约前逐项排除问题，这是最关键的。候选房源不多，但提供的都是“能用”的房产。向房东说明时，他们也陪同出席，过程很顺利。"
+        }
+      }
+    },
+    {
+      "id": "realestate-3",
+      "name": "Mさん（30代・起業直後）",
+      "service": "事務所の賃貸契約",
+      "body": "設立してひと月の会社なので、どこに行っても保証会社の審査で止まりました。ここでは、個人事業のころの実績を事業計画に足して法人成りに見せる形を一緒に作ってくれて、通りました。",
+      "translations": {
+        "en": {
+          "service": "Leasing an office",
+          "body": "The company had only been established for a month, so wherever I went, the application got stuck at the rent guarantor screening stage. Here, they helped me add my track record from when I was a sole proprietor to the business plan and put it together in a way that presented the company as an incorporated continuation of that business, and the application passed."
+        },
+        "zh-tw": {
+          "service": "簽訂辦公室租賃契約",
+          "body": "公司才成立一個月，不管去哪裡，都卡在保證公司的審查。這裡的人幫我把個人經營時期的實績加入事業計畫，一起整理成看起來是由個人事業轉為法人的形式，結果通過了審查。"
+        },
+        "zh": {
+          "service": "签订办公室租赁合同",
+          "body": "公司才成立一个月，不管去哪里，都卡在担保公司的审核。这里的人帮我把个人经营时期的业绩加入商业计划，一起整理成看起来是由个人经营转为法人的形式，结果通过了审核。"
+        }
+      }
+    },
+    {
+      "id": "realestate-4",
+      "name": "Lさん（50代・台湾在住）",
+      "service": "日本の不動産の相続と売却",
+      "body": "日本語が不安がある家族がいたので、繁体字で書類をつくってもらえたのが大きかったです。日本の手続きの流れと、台湾側で用意する書類を分けて整理してくれたので、家族にも説明できました。",
+      "translations": {
+        "en": {
+          "service": "Inheriting and selling real estate in Japan",
+          "body": "Some family members were not confident in Japanese, so having the documents prepared in Traditional Chinese made a big difference. They organized the steps for the procedures in Japan separately from the documents we needed to prepare in Taiwan, which allowed me to explain things to my family too."
+        },
+        "zh-tw": {
+          "service": "繼承及出售日本不動產",
+          "body": "家裡有人對日文沒有把握，所以能請他們用繁體中文製作文件，幫助很大。他們把日本的手續流程與台灣這邊要準備的文件分開整理，讓我也能向家人說明。"
+        },
+        "zh": {
+          "service": "继承及出售日本房产",
+          "body": "家里有人对日语没有把握，所以能请他们用繁体中文制作文件，帮助很大。他们把日本的手续流程与台湾这边要准备的文件分开整理，让我也能向家人说明。"
+        }
+      }
+    },
+    {
+      "id": "realestate-5",
+      "name": "T社 総務ご担当",
+      "service": "社宅の借り上げ",
+      "body": "社宅の契約を法人名義に切り替える件で相談。契約書のどこを直せばよいか具体的で、管理会社との調整もお願いできました。",
+      "translations": {
+        "en": {
+          "service": "Leasing company housing",
+          "body": "We asked for advice on changing the company housing lease to the company’s name. They were specific about which parts of the contract needed to be revised, and we were also able to ask them to coordinate with the property management company."
+        },
+        "zh-tw": {
+          "service": "承租員工宿舍",
+          "body": "我們就將員工宿舍的租約改為法人名義一事進行諮詢。他們具體說明契約哪些地方需要修改，也能請他們協調管理公司。"
+        },
+        "zh": {
+          "service": "承租员工住房",
+          "body": "我们就将员工住房的租约改为法人名义一事进行咨询。他们具体说明合同哪些地方需要修改，也能请他们协调物业管理公司。"
+        }
+      }
+    },
+    {
+      "id": "realestate-6",
+      "name": "Hさん（70代・男性）",
+      "service": "空き家を貸すか売るか",
+      "body": "売るつもりで行ったのですが、「貸す場合はこう、売る場合はこう」と両方の数字を並べてくれて、結局しばらく貸すことにしました。押しつけがなかったので、自分で決めた気がします。そこがよかった。",
+      "translations": {
+        "en": {
+          "service": "Deciding whether to rent out or sell a vacant home",
+          "body": "I went there intending to sell, but they put the figures for renting out and selling side by side, and in the end I decided to rent it out for a while. Because they did not push me, I felt that I had made the decision myself. That was what I liked."
+        },
+        "zh-tw": {
+          "service": "決定空屋要出租還是出售",
+          "body": "我本來是打算賣房子才去的，但他們把「出租的話是這樣，出售的話是這樣」兩邊的數字並列給我看，最後我決定先出租一陣子。他們沒有強加意見，讓我覺得是自己做的決定。這點很好。"
+        },
+        "zh": {
+          "service": "决定空房要出租还是出售",
+          "body": "我本来是打算卖房子才去的，但他们把“出租的话是这样，出售的话是这样”两边的数字并列给我看，最后我决定先出租一阵子。他们没有强加意见，让我觉得是自己做的决定。这点很好。"
+        }
+      }
+    },
+    {
+      "id": "realestate-7",
+      "name": "Aさん（20代後半）",
+      "service": "飲食店の居抜き物件",
+      "body": "居抜きは安いけど怖い、というのが正直なところでした。契約前に保健所に確認する段取りを教えてもらって、自分でも動けました。物件そのものより、その進め方を教わったのが収穫です。",
+      "translations": {
+        "en": {
+          "service": "A restaurant property with existing fixtures and fittings",
+          "body": "To be honest, I felt that taking over a fitted restaurant space was cheaper but also worrying. They explained how to check with the public health center before signing a contract, and I was able to take those steps myself. More than the property itself, what I gained was learning how to go about the process."
+        },
+        "zh-tw": {
+          "service": "承接保留原有裝潢設備的餐飲店面",
+          "body": "老實說，我覺得承接保留原有裝潢設備的店面雖然便宜，卻也讓人擔心。他們教我在簽約前向保健所確認的步驟，讓我也能自己去辦。比起物件本身，學會如何推進這件事才是我的收穫。"
+        },
+        "zh": {
+          "service": "承接保留原有装修设备的餐饮店面",
+          "body": "老实说，我觉得承接保留原有装修设备的店面虽然便宜，却也让人担心。他们教我在签约前向保健所确认的步骤，让我也能自己去办。比起房产本身，学会如何推进这件事才是我的收获。"
+        }
+      }
+    }
+  ],
+  "legal": [
+    {
+      "id": "legal-1",
+      "name": "Yさん（50代・女性）",
+      "service": "相続手続き（戸籍の収集・遺産分割協議書）",
+      "body": "父の相続で、きょうだい3人がそれぞれ遠方に住んでいて、何から手をつけていいか分かりませんでした。最初の面談で、財産の全体像を一枚の表にすること、手続きの順番を先に全員で共有することを勧められました。その通りにしたら、話し合いが感情的にならずに済みました。戸籍を集めるのも、私たちが役所を回らなくてよかったのが助かりました。協議書ができたときに「これで揉めなかったね」と姉と言い合えたのが、一番の成果だと思っています。",
+      "translations": {
+        "en": {
+          "service": "Inheritance procedures: collecting family register records and preparing an estate division agreement",
+          "body": "When my father passed away, my two siblings and I were all living far from one another, and we did not know where to begin with the inheritance procedures. At our first meeting, they recommended putting an overview of the assets into a single table and sharing the order of the procedures with everyone in advance. Following that advice helped us keep our discussions from becoming emotional. It also helped that we did not have to visit government offices ourselves to collect the family register records. When the agreement was ready, my older sister and I were able to say to each other, “We got through this without a dispute.” I think that was the biggest achievement."
+        },
+        "zh-tw": {
+          "service": "繼承手續（蒐集戶籍資料、製作遺產分割協議書）",
+          "body": "辦理父親的繼承時，我們三個兄弟姊妹各自住在遠方，不知道該從哪裡開始。第一次面談時，他們建議把財產的全貌整理成一張表，並事先讓所有人知道手續的先後順序。照著做之後，討論就沒有陷入情緒化。蒐集戶籍資料時，我們也不用自己跑公家機關，幫了很大的忙。協議書完成時，我和姊姊能對彼此說「這樣就沒有吵起來了呢」，我覺得這是最大的成果。"
+        },
+        "zh": {
+          "service": "继承手续（收集户籍资料、制作遗产分割协议书）",
+          "body": "办理父亲的继承时，我们三个兄弟姐妹各自住在远方，不知道该从哪里开始。第一次面谈时，他们建议把财产的全貌整理成一张表，并事先让所有人知道手续的先后顺序。照着做之后，讨论就没有陷入情绪化。收集户籍资料时，我们也不用自己跑政府部门，帮了很大的忙。协议书完成时，我和姐姐能对彼此说“这样就没有吵起来了呢”，我觉得这是最大的成果。"
+        }
+      }
+    },
+    {
+      "id": "legal-2",
+      "name": "Nさん（70代・男性）",
+      "service": "遺言書の作成支援",
+      "body": "自分で書いた下書きを見てもらいました。直すところは直し、残すところは残してくれた。公証役場との日程も取ってもらえました。",
+      "translations": {
+        "en": {
+          "service": "Support with preparing a will",
+          "body": "They reviewed a draft I had written myself. They changed what needed changing and kept what could stay. They also arranged an appointment with the notary’s office for me."
+        },
+        "zh-tw": {
+          "service": "協助製作遺囑",
+          "body": "我請他們看了自己寫的草稿。該改的地方改了，該保留的地方也保留了。他們還幫我安排了公證處的預約時間。"
+        },
+        "zh": {
+          "service": "协助制作遗嘱",
+          "body": "我请他们看了自己写的草稿。该改的地方改了，该保留的地方也保留了。他们还帮我安排了公证处的预约时间。"
+        }
+      }
+    },
+    {
+      "id": "legal-3",
+      "name": "K法人（代表・40代）",
+      "service": "障害福祉サービスの指定申請",
+      "body": "指定申請は書類の量が多く、自分たちだけでは締切に間に合わないと判断して依頼しました。人員基準と設備基準の考え方を最初に説明してもらえたので、こちらで揃える資料の見当がつきました。行政との事前相談にも同席してもらい、指摘事項をその場で整理できました。",
+      "translations": {
+        "en": {
+          "service": "Applying for designation as a disability welfare service provider",
+          "body": "The designation application involved so much paperwork that we decided we could not meet the deadline on our own and asked for help. They explained how the staffing and facility standards work at the outset, so we had an idea of the documents we needed to gather. They also attended the preliminary consultation with the authorities, allowing us to organize the points raised there and then."
+        },
+        "zh-tw": {
+          "service": "申請障礙福利服務事業者指定",
+          "body": "指定申請的文件很多，我們判斷光靠自己無法趕上期限，所以委託他們協助。一開始，他們就說明人員標準和設施標準的判斷方式，讓我們對自己需要備齊的資料有了概念。與行政機關進行事前諮詢時，他們也陪同出席，讓我們能當場整理對方指出的事項。"
+        },
+        "zh": {
+          "service": "申请残障福利服务机构指定",
+          "body": "指定申请的文件很多，我们判断光靠自己无法赶上期限，所以委托他们协助。一开始，他们就说明人员标准和设施标准的判断方式，让我们对自己需要备齐的资料有了概念。与行政机关进行事前咨询时，他们也陪同出席，让我们能当场整理对方指出的事项。"
+        }
+      }
+    },
+    {
+      "id": "legal-4",
+      "name": "Cさん（30代・台湾出身）",
+      "service": "在留資格の変更",
+      "body": "中国語で相談できたので、細かいところまで確認できました。必要書類のリストが分かりやすく、会社に頼む書類の説明文も用意してくれました。",
+      "translations": {
+        "en": {
+          "service": "Changing status of residence",
+          "body": "Being able to consult in Chinese meant I could check even the finer details. The list of required documents was easy to understand, and they also prepared an explanation of the documents I needed to request from my employer."
+        },
+        "zh-tw": {
+          "service": "變更在留資格",
+          "body": "能用中文諮詢，所以連細節都能確認清楚。所需文件的清單很容易理解，他們也準備了說明文字，讓我向公司索取需要的文件。"
+        },
+        "zh": {
+          "service": "变更在留资格",
+          "body": "能用中文咨询，所以连细节都能确认清楚。所需文件的清单很容易理解，他们也准备了说明文字，让我向公司索取需要的文件。"
+        }
+      }
+    },
+    {
+      "id": "legal-5",
+      "name": "Oさん（40代）",
+      "service": "飲食店の営業許可",
+      "body": "開業日が決まっていて余裕がなかったのですが、保健所の検査までの段取りを逆算して組んでもらえました。",
+      "translations": {
+        "en": {
+          "service": "Obtaining a restaurant operating permit",
+          "body": "The opening date was already set, and we had very little time to spare, but they planned backward to organize all the steps leading up to the public health center’s inspection."
+        },
+        "zh-tw": {
+          "service": "申請餐飲店營業許可",
+          "body": "開業日期已經確定，時間很緊，但他們幫我倒推時程，安排好直到保健所檢查為止的各項步驟。"
+        },
+        "zh": {
+          "service": "申请餐饮店营业许可",
+          "body": "开业日期已经确定，时间很紧，但他们帮我倒推时间，安排好直到保健所检查为止的各项步骤。"
+        }
+      }
+    },
+    {
+      "id": "legal-6",
+      "name": "E社（建設業・従業員8名）",
+      "service": "建設業許可の新規申請",
+      "body": "経営経験と技術者の要件を満たしているか、最初に一つずつ確認してもらいました。足りない書類の集め方まで具体的だったので、社内で分担して動けました。許可が下りるまでの間も、進み具合を都度知らせてもらえました。",
+      "translations": {
+        "en": {
+          "service": "Applying for a construction business license for the first time",
+          "body": "At the start, they checked one by one whether we met the requirements for management experience and technical personnel. They gave us specific guidance even on how to gather the missing documents, so we were able to divide up the work within the company. They also kept us informed of progress along the way until the license was granted."
+        },
+        "zh-tw": {
+          "service": "首次申請建設業許可",
+          "body": "一開始，他們就逐一確認我們是否符合經營經驗和技術人員的要求。連缺少的文件該怎麼蒐集，都說明得很具體，所以我們能在公司內部分工進行。在許可核發之前，他們也會隨時告知進度。"
+        },
+        "zh": {
+          "service": "首次申请建设业许可",
+          "body": "一开始，他们就逐一确认我们是否符合经营经验和技术人员的要求。连缺少的文件该怎么收集，都说明得很具体，所以我们能在公司内部分工进行。在许可获批之前，他们也会随时告知进度。"
+        }
+      }
+    },
+    {
+      "id": "legal-7",
+      "name": "Fさん（40代）",
+      "service": "遺産分割の書類だけ依頼",
+      "body": "戸籍集めだけお願いしました。クラウドで書類を共有してもらえて便利で安心した。それに早かった。",
+      "translations": {
+        "en": {
+          "service": "Requesting only the documents for estate division",
+          "body": "I asked them only to collect the family register records. They shared the documents through the cloud, which was convenient and reassuring. It was quick, too."
+        },
+        "zh-tw": {
+          "service": "僅委託處理遺產分割所需文件",
+          "body": "我只委託他們蒐集戶籍資料。他們透過雲端共用文件，方便又讓人安心。而且很快。"
+        },
+        "zh": {
+          "service": "仅委托处理遗产分割所需文件",
+          "body": "我只委托他们收集户籍资料。他们通过云端共享文件，方便又让人安心。而且很快。"
+        }
+      }
+    }
+  ],
+  "labor": [
+    {
+      "id": "labor-1",
+      "name": "Wさん（50代・女性）",
+      "service": "障害年金の裁定請求",
+      "body": "息子の障害年金を、自分たちで申請しようとして途中で止まっていました。初診日の証明がどうしても揃わず、あきらめかけていたところで相談しました。まず、どの資料が使えるか、どこに問い合わせれば出てくるかを一つずつ整理してくれました。医師に渡す日常生活の状況のメモも、一緒に作りました。私が言葉にできなかった息子の日々の困りごとを、書類の形にしてもらえたと感じています。結果が出るまでの間も、今どの段階かを教えてもらえて、待っている時間が不安ではありませんでした。",
+      "translations": {
+        "en": {
+          "service": "Filing a disability pension claim",
+          "body": "We had tried to apply for our son’s disability pension ourselves but had come to a standstill. We could not put together the evidence of the date of his first medical consultation, and we sought advice when we were close to giving up. First, they worked through the materials one by one, explaining which could be used and where we could ask to obtain them. We also worked together on a note about his daily life to give to his doctor. I feel they put into document form the everyday difficulties my son faces that I had not been able to put into words. While we were waiting for the decision, they told us what stage the application had reached, so the waiting was not an anxious time."
+        },
+        "zh-tw": {
+          "service": "申請障礙年金裁定",
+          "body": "我們原本想自己申請兒子的障礙年金，卻做到一半停了下來。怎麼也湊不齊初診日期的證明，幾乎要放棄時，才找他們諮詢。他們先逐項整理哪些資料可以使用、要向哪裡詢問才能取得。我們也一起製作了交給醫師的日常生活狀況筆記。我覺得，他們把我無法用言語表達的、兒子每天遇到的困難，整理成了文件。在等待結果期間，他們也會告訴我目前到了哪個階段，讓等待的時間不再令人不安。"
+        },
+        "zh": {
+          "service": "申请残障年金裁定",
+          "body": "我们原本想自己申请儿子的残障年金，却做到一半停了下来。怎么也凑不齐初诊日期的证明，几乎要放弃时，才找他们咨询。他们先逐项整理哪些资料可以使用、要向哪里询问才能取得。我们也一起制作了交给医生的日常生活状况记录。我觉得，他们把我无法用言语表达的、儿子每天遇到的困难，整理成了文件。在等待结果期间，他们也会告诉我目前到了哪个阶段，让等待的时间不再令人不安。"
+        }
+      }
+    },
+    {
+      "id": "labor-2",
+      "name": "D社（従業員10名・代表30代）",
+      "service": "就業規則の整備",
+      "body": "人が増えてきて、口約束で回していた休暇や残業のルールを文書にしたくて依頼しました。ひな形を渡されるのではなく、うちの働き方を聞いたうえで条文にしてくれたので、社員への説明も自分の言葉でできました。",
+      "translations": {
+        "en": {
+          "service": "Preparing work rules",
+          "body": "As our staff numbers grew, we wanted to put into writing the rules on leave and overtime that we had been handling through verbal agreements, so we asked for help. Instead of simply handing us a template, they listened to how we work and then drafted the provisions, which meant I could explain them to our employees in my own words."
+        },
+        "zh-tw": {
+          "service": "整備工作規則",
+          "body": "隨著人員增加，我們想把原本靠口頭約定運作的休假和加班規則寫成文件，所以委託他們協助。他們沒有只是給我們一份範本，而是先了解我們的工作方式，再寫成條文，所以我也能用自己的話向員工說明。"
+        },
+        "zh": {
+          "service": "完善就业规则",
+          "body": "随着人员增加，我们想把原本靠口头约定运作的休假和加班规则写成文件，所以委托他们协助。他们没有只是给我们一份模板，而是先了解我们的工作方式，再写成条文，所以我也能用自己的话向员工说明。"
+        }
+      }
+    },
+    {
+      "id": "labor-3",
+      "name": "G店（小売・パート中心）",
+      "service": "社会保険の適用拡大への準備",
+      "body": "2027年の適用拡大で誰が対象になるのか、シフト表を見ながら一人ずつ確認してもらいました。本人への説明の仕方まで相談できたのがよかったです。",
+      "translations": {
+        "en": {
+          "service": "Preparing for the expansion of social insurance coverage",
+          "body": "They went through the shift schedule with us and checked each person to see who would be covered by the 2027 expansion of social insurance coverage. It was helpful to be able to discuss how to explain it to the employees themselves, too."
+        },
+        "zh-tw": {
+          "service": "準備因應社會保險適用範圍擴大",
+          "body": "針對2027年社會保險適用範圍擴大後，哪些人會成為適用對象，他們一邊看著排班表，一邊幫我們逐一確認。連該如何向本人說明也能一起討論，這點很好。"
+        },
+        "zh": {
+          "service": "为社会保险适用范围扩大做准备",
+          "body": "针对2027年社会保险适用范围扩大后，哪些人会成为适用对象，他们一边看着排班表，一边帮我们逐一确认。连该如何向本人说明也能一起讨论，这点很好。"
+        }
+      }
+    },
+    {
+      "id": "labor-4",
+      "name": "P社（サービス業・従業員6名）",
+      "service": "給与計算の内製化",
+      "body": "給与計算を外に出すか自分でやるか迷っていました。freeeで自社処理する前提で設定を手伝ってもらい、いまは月末の作業が半日で終わります。",
+      "translations": {
+        "en": {
+          "service": "Bringing payroll processing in-house",
+          "body": "I was unsure whether to outsource payroll or handle it myself. They helped us set up freee on the basis that we would process payroll in-house, and now the month-end work takes half a day."
+        },
+        "zh-tw": {
+          "service": "由公司自行處理薪資計算",
+          "body": "我一直在猶豫薪資計算要外包還是自己做。他們以使用freee在公司內部處理為前提，協助完成設定，現在月底的工作半天就能做完。"
+        },
+        "zh": {
+          "service": "由公司自行处理工资核算",
+          "body": "我一直在犹豫工资核算要外包还是自己做。他们以使用freee在公司内部处理为前提，协助完成设置，现在月底的工作半天就能做完。"
+        }
+      }
+    },
+    {
+      "id": "labor-5",
+      "name": "R法人（障害福祉・グループホーム運営）",
+      "service": "処遇改善加算と人員配置",
+      "body": "加算の要件と人員基準を、うちのシフトの実態に当てはめて確認してもらいました。夜勤と宿直の扱いが曖昧だったところを整理できたのが大きいです。運営指導の前に見直せてよかったと思っています。",
+      "translations": {
+        "en": {
+          "service": "Additional remuneration for improving staff treatment and staffing arrangements",
+          "body": "They checked the requirements for the additional remuneration and the staffing standards against the way our shifts actually operate. It made a big difference to clarify the points where the treatment of night shifts and on-site overnight duty had been unclear. I am glad we were able to review this before the operational guidance inspection."
+        },
+        "zh-tw": {
+          "service": "處遇改善加算與人員配置",
+          "body": "他們依照我們實際的排班情況，確認加算的要求和人員標準。夜班與留宿值班原本有些處理方式不清楚，這次能釐清，幫助很大。我覺得能在營運指導前完成檢視很不錯。"
+        },
+        "zh": {
+          "service": "待遇改善加算与人员配置",
+          "body": "他们按照我们实际的排班情况，确认加算的要求和人员标准。夜班与留宿值班原本有些处理方式不清楚，这次能厘清，帮助很大。我觉得能在运营指导前完成检查很不错。"
+        }
+      }
+    },
+    {
+      "id": "labor-6",
+      "name": "J社（製造業）",
+      "service": "外国人従業員の労務",
+      "body": "特定技能の社員を初めて受け入れるにあたり、雇用契約と社会保険の手続きを相談しました。在留資格の期限と雇用契約の期間の関係を最初に説明してもらえたので、更新の見落としを防げました。",
+      "translations": {
+        "en": {
+          "service": "Employment matters for foreign employees",
+          "body": "When we were taking on an employee with Specified Skilled Worker status for the first time, we asked for advice on the employment contract and social insurance procedures. They explained at the outset how the period of stay relates to the employment contract term, which helped us avoid overlooking a renewal."
+        },
+        "zh-tw": {
+          "service": "外籍員工的勞務管理",
+          "body": "第一次聘用具有「特定技能」在留資格的員工時，我們就雇用契約和社會保險手續進行了諮詢。他們一開始就說明在留資格期限與雇用契約期間的關係，讓我們避免漏掉更新。"
+        },
+        "zh": {
+          "service": "外籍员工的劳动事务管理",
+          "body": "第一次聘用具有“特定技能”在留资格的员工时，我们就劳动合同和社会保险手续进行了咨询。他们一开始就说明在留资格期限与劳动合同期限的关系，让我们避免漏掉续期。"
+        }
+      }
+    },
+    {
+      "id": "labor-7",
+      "name": "Bさん（個人事業主・30代）",
+      "service": "顧問契約",
+      "body": "相談のたびに料金を気にしなくていいのが楽です。小さいことも聞けます。",
+      "translations": {
+        "en": {
+          "service": "An ongoing advisory agreement",
+          "body": "It is a relief not to have to worry about the fee every time I ask for advice. I can ask about small things too."
+        },
+        "zh-tw": {
+          "service": "顧問合約",
+          "body": "每次諮詢時不用在意費用，讓人輕鬆很多。小事情也能問。"
+        },
+        "zh": {
+          "service": "顾问合同",
+          "body": "每次咨询时不用在意费用，让人轻松很多。小事情也能问。"
+        }
+      }
+    }
+  ]
+}

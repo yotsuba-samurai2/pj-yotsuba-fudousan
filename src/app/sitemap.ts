@@ -104,6 +104,7 @@ function expandProperty(p: PublicProperty): MetadataRoute.Sitemap {
 }
 
 const STATIC_REALESTATE: StaticPage[] = [
+  { path: "/voices", changeFrequency: "monthly", priority: 0.7 },
   { path: "", changeFrequency: "weekly", priority: 1.0 },
   // 2026-09-01：物件紹介（/bukken）。2026-09-16に ja先行→4ロケール（ページ側 PAGE_LOCALES と一致・locales未指定＝全4）
   { path: "/bukken", changeFrequency: "weekly", priority: 0.8 },
@@ -186,6 +187,7 @@ const STATIC_REALESTATE: StaticPage[] = [
 ];
 
 const STATIC_LEGAL: StaticPage[] = [
+  { path: "/legal/voices", changeFrequency: "monthly", priority: 0.7 },
   { path: "", changeFrequency: "weekly", priority: 1.0 },
   { path: "/services", changeFrequency: "monthly", priority: 0.9 },
   { path: "/services/shogai-fukushi", changeFrequency: "monthly", priority: 0.9 },
@@ -224,6 +226,7 @@ const STATIC_LEGAL: StaticPage[] = [
  *   （18_言語別存在マトリクス.md の突合対象）。
  */
 const STATIC_LABOR: StaticPage[] = [
+  { path: "/labor/voices", changeFrequency: "monthly", priority: 0.7, locales: ["ja", "en", "zh-tw", "zh"] },
   // 2026-09-01 4言語公開（第1波）。4ロケールとも本番200を実測（2026-09-01）。
   // locales の明示は sitemap-labor.test.ts の規約（存在しないロケールURLを広告しない）に合わせるため。
   { path: "/labor", changeFrequency: "monthly", priority: 0.9, locales: ["ja", "en", "zh-tw", "zh"] },
