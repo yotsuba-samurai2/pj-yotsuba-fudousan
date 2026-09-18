@@ -337,3 +337,15 @@ Only a task-owned loopback database receives fixture writes. No production DB wr
 - 本番翻訳28項目を更新。対象外JSONのハッシュが4言語すべて変更前後で一致。
 - Vercelで本番の/about・/legal/about×4言語の8パスタグを再検証し、公開HTML内の24表示項目が修正値と完全一致。
 - llms.txtと共通metadataはソース修正のためPRのmerge・デプロイ待ち。
+
+
+## 2026-09-18 3サイトの健全性・パフォーマンス改善
+
+- [x] 最新mainを分離worktreeに取得し、公開Lighthouseトレースで初期処理を切り分け
+- [x] 未使用JS/CSSの内訳と既存チャット遅延読み込みを確認
+- [x] フォントの連続レイアウトを抑え、画像配信を軽量化
+- [x] 共通CSP・埋め込み制限と4言語FAQ見出しを修正
+- [x] 同条件の修正前後計測、4言語表示・操作、型・lint・テスト・ビルドを確認
+- [x] PR提出用の差分と検証記録を整理（merge・本番反映は指示後）
+
+検証記録：`docs/performance-20260918.md`。モバイルTBTは3サイトで改善。LCPは概ね横ばい、行政書士PCのTBT改善は未確認。本番ビルド・型・778テスト成功。未使用JS/CSSを字種や機能ごと削除せず、描画とフォント適用順序を変更した。

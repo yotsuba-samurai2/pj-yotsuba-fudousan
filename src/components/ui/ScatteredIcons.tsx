@@ -1,8 +1,5 @@
-"use client";
-
 import Image from "next/image";
 import type { CSSProperties } from "react";
-import { usePathname } from "next/navigation";
 
 /**
  * 背景にアイコンを散りばめる装飾コンポーネント
@@ -38,9 +35,7 @@ const placements: IconPlacement[] = [
 ];
 
 export default function ScatteredIcons() {
-  const pathname = usePathname();
-  if (pathname.startsWith("/admin")) return null;
-
+  // Only the public [locale] layout renders this decoration; no client state.
   return (
     <div
       className="pointer-events-none absolute inset-0 z-0 overflow-hidden"

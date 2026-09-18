@@ -38,6 +38,7 @@ export function buildFaqJsonLd(items: FaqItem[], inLanguage?: string) {
 type Props = {
   items: FaqItem[];
   heading?: string;
+  headingLevel?: "h1" | "h2";
   /** FAQPage JSON-LD を出力するか（専用FAQページのみ true にする） */
   withJsonLd?: boolean;
   /** 先頭を開いた状態にするか */
@@ -53,6 +54,7 @@ type Props = {
 export function Faq({
   items,
   heading,
+  headingLevel: Heading = "h2",
   withJsonLd = false,
   openFirst = true,
   bare = false,
@@ -62,7 +64,7 @@ export function Faq({
   const jsonLd = buildFaqJsonLd(items, inLanguage);
   return (
     <section aria-label={ariaLabel ?? "よくあるご質問"} className={bare ? "" : "mx-auto max-w-3xl px-4 py-6"}>
-      {heading && <h2 className="mb-4 font-serif text-2xl font-semibold text-ink">{heading}</h2>}
+      {heading && <Heading className="mb-4 font-serif text-2xl font-semibold text-ink">{heading}</Heading>}
       <div className="divide-y divide-border rounded-xl border border-border bg-surface">
         {items.map((it, i) => (
           <details key={i} open={openFirst && i === 0} className="group px-4 py-3">

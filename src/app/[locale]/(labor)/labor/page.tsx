@@ -507,7 +507,7 @@ export default async function LaborTopPage() {
     <>
       <LaborTopHero locale={locale} />
 
-      <div className={warmStyles.content}>
+      <div className={`${warmStyles.content} defer-page-sections`}>
         <LaborRequestMethods locale={locale} />
         <LaborWorkflowBanner locale={locale} />
         <div className="mt-14"><LaborEngagementComparison locale={locale} /></div>
