@@ -640,6 +640,21 @@ const REQUIRED_HUB_LINKS: Record<string, string[]> = {
     "/legal/column/keieikanri-zairyu-chuka-kigyousha-kaisha-setsuritsu",
     "/legal/column/group-home-gaikokujin-keieikanri-zairyushikaku",
   ],
+  "dai-isshu-doubutsu-toriatsukai-touroku-youken": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+  ],
+  "souzoku-seimei-hokenkin-taisho-jueki-modoshi": [
+    "/legal/services/inheritance",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/souzoku",
+    "/legal/column/isan-bunkatsu-kyougisho",
+    "/legal/column/souzoku-tokubetsu-jueki-kiyobun",
+    "/legal/column/souzoku-iryubun-kiso",
+    "/legal/column/souzoku-zei-shinkoku-hitsuyo",
+  ],
 };
 
 /** 表示コンプライアンス上の禁止語 */
@@ -2085,6 +2100,43 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "独立した事業体",
     "紹介料を受け取りません",
   ],
+  "dai-isshu-doubutsu-toriatsukai-touroku-youken": [
+    "動物の愛護及び管理に関する法律",
+    "第一種動物取扱業",
+    "第10条",
+    "第12条",
+    "第13条",
+    "第22条",
+    "動物取扱責任者",
+    "登録の有効期間は5年",
+    "令和2年（2020年）6月1日",
+    "令和3年（2021年）6月1日",
+    "令和6年（2024年）6月1日",
+    "獣医師",
+    "愛玩動物看護師",
+    "競りあっせん",
+    "譲受飼養",
+    "別事業体",
+    "独立した事業体",
+    "紹介料を受け取りません",
+  ],
+  "souzoku-seimei-hokenkin-taisho-jueki-modoshi": [
+    "民法第903条",
+    "最高裁平成16年10月29日決定",
+    "保険法第43条",
+    "保険法第44条",
+    "保険法第46条",
+    "相続税法第12条第1項第5号",
+    "みなし相続財産",
+    "500万円×法定相続人の数",
+    "特別受益",
+    "特段の事情",
+    "受取人固有の財産",
+    "No.4114",
+    "別事業体",
+    "独立した事業体",
+    "紹介料を受け取りません",
+  ],
 };
 
 /** 記事ごとに含めてはならない表現 */
@@ -2195,6 +2247,8 @@ const FORBIDDEN_PHRASES: Record<string, string[]> = {
   "tokubetsu-kiyoryo-souzokunin-igai-shinzoku": [],
   "biyoushojo-kaisetsu-todokede-kozo-setsubi-kijun": [],
   "taiwan-kigyo-nihon-shiten-gaikoku-kaisha-touki": [],
+  "dai-isshu-doubutsu-toriatsukai-touroku-youken": [],
+  "souzoku-seimei-hokenkin-taisho-jueki-modoshi": [],
 };
 
 /** 本セット外へ張る既存legalコラムslug（リポジトリの他シードで実在確認済み） */
@@ -3845,6 +3899,58 @@ const ARTICLES: Array<{
       "子会社",
       "会社設立",
       "経営・管理",
+      "行政書士",
+    ],
+  },
+  {
+    file: "70-dai-isshu-doubutsu-toriatsukai-touroku-youken.md",
+    slug: "dai-isshu-doubutsu-toriatsukai-touroku-youken",
+    date: "2026-09-18",
+    title:
+      "ペットショップやトリミングを始めるとき、第一種動物取扱業の登録はどう取るのか",
+    category: "許認可の手続き（行政書士の実務から）",
+    excerpt:
+      "ペットショップ・トリミングサロン・ペットホテル・しつけ教室などを事業として営むには、営業開始前に第一種動物取扱業の登録を都道府県知事等から受けます。根拠は動物の愛護及び管理に関する法律（昭和48年法律第105号）第10条。登録の対象となる7業種、令和2年6月1日施行の改正で厳格化された動物取扱責任者の要件、令和3年6月1日施行の飼養管理基準（数値規制）、申請から立入検査・登録・5年更新（第13条）までの流れを整理し、物件は不動産、労務は社労士へ分離受任で振る分担を示しました。",
+    keywords: [
+      "第一種動物取扱業 登録 要件",
+      "動物取扱責任者 資格 実務経験",
+      "ペットショップ 開業 登録 行政書士",
+      "トリミングサロン 動物取扱業 保管",
+      "動物愛護管理法 第10条 第22条",
+      "飼養管理基準 数値規制 令和3年",
+    ],
+    tags: [
+      "第一種動物取扱業",
+      "動物取扱責任者",
+      "動物愛護管理法",
+      "登録",
+      "許認可",
+      "行政書士",
+    ],
+  },
+  {
+    file: "71-souzoku-seimei-hokenkin-taisho-jueki-modoshi.md",
+    slug: "souzoku-seimei-hokenkin-taisho-jueki-modoshi",
+    date: "2026-09-18",
+    title:
+      "生命保険金は遺産分割の対象になるのか、特別受益として持ち戻すのか",
+    category: "相続の手続き（行政書士の実務から）",
+    excerpt:
+      "受取人が指定された生命保険金は、原則として受取人固有の財産で遺産分割の対象外です。ただし相続人間の不公平が著しい特段の事情がある場合には、民法第903条の類推適用により特別受益に準じて持ち戻される例外があります（最高裁平成16年10月29日決定）。原則と例外、相続税の非課税枠（500万円×法定相続人の数）との違いを整理し、争いのある判断は弁護士、税務は税理士、登記は司法書士へ分離受任で振る分担を示しました。",
+    keywords: [
+      "生命保険金 遺産分割 対象",
+      "死亡保険金 特別受益 持ち戻し",
+      "最高裁 平成16年10月29日 生命保険",
+      "生命保険金 受取人固有の財産",
+      "死亡保険金 相続税 非課税 500万円",
+      "民法903条 類推適用 保険金",
+    ],
+    tags: [
+      "生命保険金",
+      "特別受益",
+      "遺産分割",
+      "持ち戻し",
+      "相続税",
       "行政書士",
     ],
   },

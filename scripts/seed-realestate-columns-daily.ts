@@ -1292,6 +1292,46 @@ const ARTICLES: ArticleSpec[] = [
     localesWithTranslations: ["en", "zh-tw", "zh"],
     hubLinks: ["/souzoku"],
   },
+  {
+    file: "63-ryokangyo-hotel-eigyo-bukken-youken.md",
+    slug: "ryokangyo-hotel-eigyo-bukken-youken",
+    title: "旅館業（ホテル・旅館営業）の許可が取れる物件は、どこで見分けるのか",
+    publishedAt: "2026-09-18",
+    category: "投資・事業用不動産",
+    excerpt:
+      "民泊は年180日まで。通年で回せる旅館業（旅館・ホテル営業）の許可が取れる物件かどうかは、契約前の3点でほぼ決まります。①用途地域で「ホテル又は旅館」を建てられる区域か（建築基準法別表第二）②旅館業法施行令の構造設備基準（客室面積・玄関帳場かICT代替）を満たせるか③消防法施行令別表第一(5)項イの防火対象物として自動火災報知設備などを備えられるか。2018年の改正でホテル営業と旅館営業は「旅館・ホテル営業」に統合され、1室から許可を目指せます。東京都文京区の宅地建物取引士兼行政書士が、契約前に確認できることを条文から整理します。",
+    keywords: [
+      "旅館業 物件 要件",
+      "旅館・ホテル営業 許可 用途地域",
+      "旅館業 民泊 違い 通年営業",
+      "旅館業法施行令 客室 面積 玄関帳場 ICT",
+      "旅館 消防 (5)項イ 自動火災報知設備",
+    ],
+    tags: ["事業用不動産", "許認可", "用途地域", "旅館業法"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/toushi", "/office"],
+  },
+  {
+    file: "64-souzoku-shakuchiken-tatemono-baikyaku-shodaku.md",
+    slug: "souzoku-shakuchiken-tatemono-baikyaku-shodaku",
+    title: "相続した借地権付き建物を売るには、地主の承諾がどこまで要るのか",
+    publishedAt: "2026-09-18",
+    category: "相続",
+    excerpt:
+      "相続した借地権付き建物を第三者に売るには、原則として地主の承諾が要ります（民法第612条第1項）。承諾の見返りに支払う「譲渡承諾料」に法律上の一律基準はなく、地主が承諾しないときは裁判所に承諾に代わる許可を求める借地非訟（借地借家法第19条第1項）という道があります。旧法借地権と定期借地権で売却のしやすさがどう変わるか、売る前に建物の相続登記をどう整えるかまで、東京都文京区の宅地建物取引士兼行政書士が、借地人側の立場から条文で整理します。",
+    keywords: [
+      "借地権 相続 売却 承諾",
+      "譲渡承諾料 相場 名義書換料",
+      "借地非訟 承諾に代わる許可 借地借家法19条",
+      "定期借地権 事業用定期借地権 売却",
+      "旧借地法 借地借家法 更新 違い",
+    ],
+    tags: ["相続", "借地権", "借地非訟", "売却"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/souzoku"],
+  },
 ];
 
 function toPlainText(md: string): string {
