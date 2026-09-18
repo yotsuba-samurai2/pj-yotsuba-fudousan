@@ -298,3 +298,18 @@ Only a task-owned loopback database receives fixture writes. No production DB wr
 - [x] GitHub公式glob・式評価器で旧動作と修正後を検証
 - [x] actionlint・差分検査
 - [ ] mainへのマージと修正後workflowの実走（承認後）
+
+
+## 2026-09-18 お客様の声（依頼済み範囲）
+
+- [x] 元会話の21件と既存構成を確認、origin/mainから独立worktreeを作成
+- [x] 各事業のトップに3件の全文と全7件の専用ページへの導線を実装
+- [x] 原文・匿名表記維持、4言語、参考訳と原文の区別、成果保証を避ける注記
+- [x] フッター・sitemap・llms.txt・canonical/hreflang・CollectionPage/ItemList
+- [x] 原文一致、型、lint、775テスト、ビルド（隔離ローカルDB）、公開フラグ両状態
+- [x] 12ページ×320/768/1440pxの36ケース、12トップ×390px、84リンク、原文開閉（クリック・Enter）を確認
+- [x] 変更内容・検証結果・確認画像をレビュー用に整理
+
+レビュー：本件はコラム制作ではなく、依頼済み顧客体験談の掲載。日本語本文は編集せず、翻訳は参考訳として併記する。評価点・星・Review/AggregateRatingは生成しない。現在の実体は1リポジトリ内の3事業ルートであり、その構成を維持する。
+
+検証結果：日本語21件完全一致・3言語参考訳63件。775テスト成功。既存フッターimg警告1件のみ。初回ビルドは既存環境のDB認証で停止したため、公開UI辞書のみの隔離DBで383ページの静的生成まで通過。社労士公開オフ時は4言語404/noindex、RSC本文漏出なし、sitemap/llms.txt非掲載を実測。

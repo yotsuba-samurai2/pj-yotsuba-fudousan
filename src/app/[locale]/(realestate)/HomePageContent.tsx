@@ -1,3 +1,4 @@
+import { CustomerVoicesPreview } from "@/components/shared/CustomerVoices";
 import Image from "next/image";
 // /（型F・二本柱トップ）本文＝原稿_不動産 #1（E-1差し戻し対応・2026-07-10）
 // 【差し戻し対応の要点】
@@ -527,6 +528,8 @@ export default async function HomePageContent() {
             </div>
           ))}
         </section>
+
+        <CustomerVoicesPreview businessKey="realestate" locale={locale} />
 
         {/* 導線 */}
         <nav aria-label="site links" className="mt-10 flex flex-wrap gap-x-4 gap-y-1 text-sm text-primary-dark">

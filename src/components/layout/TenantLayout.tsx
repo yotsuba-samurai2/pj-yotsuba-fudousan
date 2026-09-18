@@ -142,6 +142,7 @@ const FOOTER_NAV_HREFS: Record<
       titleLabels: { ja: "会社情報・その他", en: "Company & More", "zh-tw": "公司資訊・其他", zh: "公司信息・其他" },
       items: [
         { href: "/about", key: "about" },
+        { href: "/voices", key: "voices", labels: { ja: "お客様の声", en: "Client testimonials", "zh-tw": "客戶心聲", zh: "客户心声" } },
         { href: "/column", key: "column" },
         // タスクC-5（2026-07-19）：相談事例（モデルケース）。ja先行公開（sitemap/availableLocalesとも["ja"]）。
         { href: "/jirei", key: "jirei", labels: { ja: "相談事例", en: "Case Studies", "zh-tw": "諮詢案例", zh: "咨询案例" }, locales: ["ja"] },
@@ -185,6 +186,7 @@ const FOOTER_NAV_HREFS: Record<
       sectionKey: "office",
       items: [
         { href: "/legal/about", key: "about" },
+        { href: "/legal/voices", key: "voices", labels: { ja: "お客様の声", en: "Client testimonials", "zh-tw": "客戶心聲", zh: "客户心声" } },
         { href: "/legal/column", key: "column" },
       ],
     },
@@ -209,6 +211,7 @@ const FOOTER_NAV_HREFS: Record<
       sectionKey: "office",
       items: [
         { href: "/labor/about", key: "about" },
+        { href: "/labor/voices", key: "voices", labels: { ja: "お客様の声", en: "Client testimonials", "zh-tw": "客戶心聲", zh: "客户心声" } },
         { href: "/labor/column", key: "column" },
       ],
     },
