@@ -31,6 +31,15 @@
 
 未使用CSS推定約64 KiBは、ほぼ2書体の日本語フォント定義だった。実際には多数のフォントファイルが使用されており、推定未使用量をそのまま削ると日本語・中国語の表示範囲を損なう。Tailwindの走査範囲をsrcに限定した比較でもCSSサイズは変わらなかった。このため文字集合・書体・React・解析機能を削らず、適用順序と画面外の処理を見直した。新しい制御処理のためJS/CSS本体には少量の増加もある。主な成果は初期処理時間と画像・初期フォント転送の削減である。詳細な転送バイト数は添付JSON/CSVに記録した。
 
+## 別途対応が必要な依存関係アラート
+
+PR提出時、GitHub DependabotのopenアラートをAPIで確認した。計29件（Critical 2・High 14・Medium 12・Low 1）。今回の差分では依存関係を変更していないため、これらは未解消。
+
+- [Next.jsのWindowsホスト条件のRCE](https://github.com/vercel/next.js/security/advisories/GHSA-p293-qw3h-jr36)：Windowsファイルシステム上での実行が影響条件。本番環境の該当性は未検証。
+- [AVIF画像最適化時のRCE](https://github.com/vercel/next.js/security/advisories/GHSA-2xp9-vwfh-vxw4)：sharp/libheifでAVIFを最適化する条件。対象画像の配信最適化だけではこの問題は解消しない。
+
+両アラートが示す16系の最初の修正版は16.3.3。現行lockfileは16.2.10。依存関係更新と互換性検証を優先して別途実施する必要があり、本PRのみでサイトの安全性を保証できない。
+
 ## 検証
 
 - 本番用ビルド成功。公開ページのSSG/ISRと既存のdynamicガードを維持。
