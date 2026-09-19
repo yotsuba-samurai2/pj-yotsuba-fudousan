@@ -655,6 +655,11 @@ const REQUIRED_HUB_LINKS: Record<string, string[]> = {
     "/legal/column/souzoku-iryubun-kiso",
     "/legal/column/souzoku-zei-shinkoku-hitsuyo",
   ],
+  "chintai-jutaku-kanrigyo-touroku-sublease-kanyu": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+  ],
 };
 
 /** 表示コンプライアンス上の禁止語 */
@@ -2137,6 +2142,29 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "独立した事業体",
     "紹介料を受け取りません",
   ],
+  "chintai-jutaku-kanrigyo-touroku-sublease-kanyu": [
+    "賃貸住宅の管理業務等の適正化に関する法律",
+    "第3条第1項",
+    "第6条",
+    "第12条",
+    "第28条",
+    "第29条",
+    "第30条",
+    "第31条",
+    "第41条",
+    "200戸",
+    "業務管理者",
+    "特定転貸事業者",
+    "特定賃貸借契約",
+    "令和3年（2021年）6月15日",
+    "令和2年（2020年）12月15日",
+    "賃貸不動産経営管理士試験",
+    "登録の有効期間は5年",
+    "登録免許税90,000円",
+    "別事業体",
+    "独立した事業体",
+    "紹介料を受け取りません",
+  ],
 };
 
 /** 記事ごとに含めてはならない表現 */
@@ -2249,6 +2277,7 @@ const FORBIDDEN_PHRASES: Record<string, string[]> = {
   "taiwan-kigyo-nihon-shiten-gaikoku-kaisha-touki": [],
   "dai-isshu-doubutsu-toriatsukai-touroku-youken": [],
   "souzoku-seimei-hokenkin-taisho-jueki-modoshi": [],
+  "chintai-jutaku-kanrigyo-touroku-sublease-kanyu": [],
 };
 
 /** 本セット外へ張る既存legalコラムslug（リポジトリの他シードで実在確認済み） */
@@ -3951,6 +3980,32 @@ const ARTICLES: Array<{
       "遺産分割",
       "持ち戻し",
       "相続税",
+      "行政書士",
+    ],
+  },
+  {
+    file: "72-chintai-jutaku-kanrigyo-touroku-sublease-kanyu.md",
+    slug: "chintai-jutaku-kanrigyo-touroku-sublease-kanyu",
+    date: "2026-09-19",
+    title:
+      "賃貸住宅管理業の登録はどの規模から？サブリース勧誘規制と業務管理者の要件",
+    category: "許認可（行政書士の実務から）",
+    excerpt:
+      "賃貸住宅の管理を受託する事業は、管理戸数が200戸以上になると国土交通大臣の登録が必要です（賃貸住宅の管理業務等の適正化に関する法律第3条・施行規則第3条）。登録の有効期間5年、営業所ごとの業務管理者の選任（第12条）、財産的基礎（第6条）を整理し、あわせて登録の有無や規模にかかわらず適用されるサブリース（特定転貸事業者）の誇大広告等の禁止・不当な勧誘等の禁止・重要事項説明・契約時書面（第28〜31条）を解説しました。宅建業免許は別制度、契約紛争は弁護士、登記は司法書士、税務は税理士へ分離受任で振る分担を示しました。",
+    keywords: [
+      "賃貸住宅管理業 登録 200戸",
+      "賃貸住宅管理業法 業務管理者 要件",
+      "サブリース 勧誘規制 誇大広告",
+      "特定転貸事業者 重要事項説明",
+      "マスターリース 登録 必要",
+      "賃貸住宅管理業 登録 行政書士",
+    ],
+    tags: [
+      "賃貸住宅管理業",
+      "サブリース",
+      "特定転貸事業者",
+      "業務管理者",
+      "宅建業免許",
       "行政書士",
     ],
   },
