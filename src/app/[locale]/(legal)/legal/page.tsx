@@ -185,7 +185,7 @@ export default async function LegalPage() {
         </div>
       </section>
 
-      <main className="mx-auto max-w-5xl px-4">
+      <main className="defer-page-sections mx-auto max-w-5xl px-4">
         <section className="mt-10 max-w-3xl">
           <h2 className="font-serif text-2xl font-semibold text-ink">{v.visaTitle}</h2>
           <p className="mt-3 leading-relaxed text-text">{v.visa}</p>

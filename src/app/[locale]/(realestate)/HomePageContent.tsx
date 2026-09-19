@@ -421,6 +421,7 @@ export default async function HomePageContent() {
         <div className="relative mx-auto max-w-6xl overflow-hidden rounded-b-3xl sm:mt-4 sm:rounded-3xl">
           <Image
             src="/hero/bunkyo-sakura-16x9.webp"
+            quality={60}
             alt={c.heroAlt}
             width={1600}
             height={900}
@@ -444,7 +445,7 @@ export default async function HomePageContent() {
         </div>
       </section>
 
-      <main className="mx-auto max-w-5xl px-4">
+      <main className="defer-page-sections mx-auto max-w-5xl px-4">
         {/* 二本柱カード（＋横断） */}
         <section aria-label="pillars" className="mt-10 grid gap-3 sm:grid-cols-3">
           {c.pillars.map((p, i) => (

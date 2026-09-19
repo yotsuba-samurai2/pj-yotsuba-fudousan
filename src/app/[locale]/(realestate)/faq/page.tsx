@@ -218,7 +218,7 @@ export default async function Page() {
         <>
           {/* ja＝6分野セクション＋アンカーナビ。JSON-LDは全40問を1本で出力（各サイト1本原則） */}
           <div className="mx-auto max-w-3xl px-4 pt-6">
-            <h2 className="font-serif text-2xl font-semibold text-ink">{c.heading}</h2>
+            <h1 className="font-serif text-2xl font-semibold text-ink">{c.heading}</h1>
             <nav aria-label="分野別もくじ" className="mt-4 flex flex-wrap gap-2">
               {JA_FAQ_SECTIONS.map((s) => (
                 <a
@@ -242,7 +242,7 @@ export default async function Page() {
           />
         </>
       ) : (
-        <Faq items={c.items} heading={c.heading} withJsonLd />
+        <Faq items={c.items} heading={c.heading} headingLevel="h1" withJsonLd />
       )}
       <div className="mx-auto max-w-3xl px-4 pb-8">
         {/* 署名（E-E-A-T・原稿_不動産サイト共通）＝/access既訳と同一文言（社労士試験合格の表記は署名のみ可の規程どおり） */}

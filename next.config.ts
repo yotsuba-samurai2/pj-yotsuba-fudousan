@@ -3,13 +3,17 @@ import type { NextConfig } from "next";
 const securityHeaders = [
   { key: "X-DNS-Prefetch-Control", value: "on" },
   { key: "X-Content-Type-Options", value: "nosniff" },
+  { key: "X-Frame-Options", value: "SAMEORIGIN" },
+  // These directives preserve static/ISR pages, inline Next.js bootstrap and
+  // JSON-LD, analytics, maps and the AI widget. This is not a script allowlist.
+  { key: "Content-Security-Policy", value: "base-uri 'self'; object-src 'none'; frame-ancestors 'self'" },
   { key: "Referrer-Policy", value: "origin-when-cross-origin" },
   { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=()" },
 ];
 
 const nextConfig: NextConfig = {
   images: {
-    // The labor hero uses a lighter quality; existing images keep the default 75.
+    // Allow opt-in lighter hero images; other images keep the default 75.
     qualities: [60, 75],
     // 小型端末のDPR 1でも640pxを取得していたため420pxを追加。
     // 高DPR端末・PC用の標準サイズは維持する。
