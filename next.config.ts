@@ -19,10 +19,11 @@ const nextConfig: NextConfig = {
     // 高DPR端末・PC用の標準サイズは維持する。
     deviceSizes: [420, 640, 750, 828, 1080, 1200, 1920, 2048, 3840],
   },
+  // app/[locale]/ の値は任意のServer Componentから next/root-params で読む
+  // （getRequestLocale.ts）。リクエストAPI（headers/cookies）と違い静的生成と両立する。
+  // ※Next 16.3 で next/root-params が既定で使えるようになり、
+  //   experimental.rootParams は不要（残すと非推奨警告＋型エラー）。
   experimental: {
-    // app/[locale]/ の値を任意のServer Componentから next/root-params で読むため
-    // （getRequestLocale.ts）。リクエストAPI（headers/cookies）と違い静的生成と両立する。
-    rootParams: true,
     // ローカルのビルド検証用ノブ：prisma dev の使い捨てDBは最大10接続のため、
     // NEXT_BUILD_WORKERS=2 等で静的生成ワーカー数を絞る（未設定＝Vercel本番はデフォルト）。
     ...(process.env.NEXT_BUILD_WORKERS
