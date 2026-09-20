@@ -23,6 +23,15 @@ describe("ITANJI募集確認とREINS広告可ゲート", () => {
     if (!result.ok) expect(result.reasons[0]).toContain("申込済み");
   });
 
+  it("申込数が表示されない物件はそのまま次のゲートへ進める", () => {
+    const value: any = fixture();
+    value.source.applicationStatus = "unknown";
+    value.source.advertising = { status: "allowed", evidence: { ...value.source.listingEvidence, quote: "広告可" } };
+    delete value.reins;
+    const result = validateRentalImport(value, NOW);
+    expect(result.ok).toBe(true);
+  });
+
   it("旧REINS賃料を採用額へ混ぜない", () => {
     const value: any = fixture();
     value.source.advertising = { status: "allowed", evidence: { ...value.source.listingEvidence, quote: "広告可" } };
