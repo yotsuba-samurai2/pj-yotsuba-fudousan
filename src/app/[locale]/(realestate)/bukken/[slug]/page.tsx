@@ -27,6 +27,7 @@ import { CtaBand } from "@/components/shared/CtaBand";
 import { RealEstateListingJsonLd } from "@/components/seo/RealEstateListingJsonLd";
 import { PropertyLegalBlock } from "@/components/bukken/PropertyLegalBlock";
 import { PropertyViewingCta } from "@/components/bukken/PropertyViewingCta";
+import { PropertyQa } from "@/components/bukken/PropertyQa";
 import ColumnBody from "@/components/column/ColumnBody";
 import type { LangCode } from "@/config/languages";
 
@@ -211,6 +212,7 @@ export default async function BukkenDetailPage({ params }: Props) {
         )}
 
         <PropertyLegalBlock property={p} locale={locale} />
+        <PropertyQa property={p} locale={locale} />
         <PropertyViewingCta propertyTitle={p.title} propertyUrl={`/bukken/${p.slug}`} />
       </article>
 
