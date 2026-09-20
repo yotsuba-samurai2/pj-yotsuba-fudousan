@@ -85,11 +85,11 @@ describe("closed 詳細ページの挙動（おとり広告の構造的回避）
     const fn = DETAIL_PAGE.slice(DETAIL_PAGE.indexOf("export async function generateMetadata"), DETAIL_PAGE.indexOf("export default async function"));
     expect(fn).toContain("if (!base) notFound();");
   });
-  it("generateStaticParams は published のみ（closedは事前生成しない）", () => {
+  it("generateStaticParams は空（物件詳細はオンデマンド生成）", () => {
     const fn = DETAIL_PAGE.slice(
-      DETAIL_PAGE.indexOf("export async function generateStaticParams"),
+      DETAIL_PAGE.indexOf("export function generateStaticParams"),
       DETAIL_PAGE.indexOf("function summarize"),
     );
-    expect(fn).toContain("getAllPublishedPropertiesAllLocales");
+    expect(fn).toContain("return []");
   });
 });
