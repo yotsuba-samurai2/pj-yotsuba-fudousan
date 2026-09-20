@@ -660,6 +660,22 @@ const REQUIRED_HUB_LINKS: Record<string, string[]> = {
     "/legal/nagare",
     "/legal/ryokin",
   ],
+  "cleaning-jo-kaisetsu-kozo-setsubi-todokede": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/biyoushojo-kaisetsu-todokede-kozo-setsubi-kijun",
+    "/legal/column/inshokuten-eigyo-kyoka-hokenjo-setsubi-kijun-shokuhin-eisei",
+  ],
+  "souzoku-kekkaku-haijo-chigai-bunkatsu": [
+    "/legal/services/inheritance",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/souzoku",
+    "/legal/column/houtei-souzoku-bun",
+    "/legal/column/isan-bunkatsu-kyougisho",
+    "/legal/column/jihitsu-kosei-yuigon",
+  ],
 };
 
 /** 表示コンプライアンス上の禁止語 */
@@ -2165,6 +2181,35 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "独立した事業体",
     "紹介料を受け取りません",
   ],
+  "cleaning-jo-kaisetsu-kozo-setsubi-todokede": [
+    "クリーニング業法",
+    "昭和25年5月27日法律第207号",
+    "クリーニング業法第5条第1項",
+    "第5条の2",
+    "クリーニング業法第4条",
+    "洗たく物の受取及び引渡しのみを行うもの",
+    "一人以上のクリーニング師",
+    "コインオペレーションクリーニング",
+    "クリーニング業法の規制を受ける施設ではありません",
+    "取次所",
+    "環指第39号",
+  ],
+  "souzoku-kekkaku-haijo-chigai-bunkatsu": [
+    "民法第891条",
+    "民法第892条",
+    "民法第893条",
+    "民法第894条",
+    "民法第895条",
+    "民法第887条第2項",
+    "民法第965条",
+    "相続欠格",
+    "廃除",
+    "代襲相続",
+    "遺留分を有する推定相続人",
+    "家庭裁判所",
+    "家事事件手続法",
+    "別表第一",
+  ],
 };
 
 /** 記事ごとに含めてはならない表現 */
@@ -2278,6 +2323,8 @@ const FORBIDDEN_PHRASES: Record<string, string[]> = {
   "dai-isshu-doubutsu-toriatsukai-touroku-youken": [],
   "souzoku-seimei-hokenkin-taisho-jueki-modoshi": [],
   "chintai-jutaku-kanrigyo-touroku-sublease-kanyu": [],
+  "cleaning-jo-kaisetsu-kozo-setsubi-todokede": [],
+  "souzoku-kekkaku-haijo-chigai-bunkatsu": [],
 };
 
 /** 本セット外へ張る既存legalコラムslug（リポジトリの他シードで実在確認済み） */
@@ -4006,6 +4053,58 @@ const ARTICLES: Array<{
       "特定転貸事業者",
       "業務管理者",
       "宅建業免許",
+      "行政書士",
+    ],
+  },
+  {
+    file: "73-cleaning-jo-kaisetsu-kozo-setsubi-todokede.md",
+    slug: "cleaning-jo-kaisetsu-kozo-setsubi-todokede",
+    date: "2026-09-20",
+    title:
+      "クリーニング所の開設に必要な届出と設備は？許可との違い・クリーニング師・取次所とコインランドリーの扱い",
+    category: "許認可（行政書士の実務から）",
+    excerpt:
+      "クリーニング店（クリーニング所）を開くときは、営業を始める前に位置・構造設備などをあらかじめ都道府県知事へ届け出ます（クリーニング業法第5条第1項）。必要なのは許可ではなく届出ですが、届け出た構造設備の確認を受けた後でなければ使用できません（第5条の2）。洗う店にはクリーニング所ごとに一人以上のクリーニング師が必要（第4条）で、受取・引渡しのみの取次所は届出は必要でもクリーニング師は不要です。利用者が自ら洗うコインランドリー（コインオペレーションクリーニング）はクリーニング業法の規制を受ける施設ではなく、自治体の衛生指導要綱による扱いになります。構造設備の考え方と、物件・労務・税務を分離受任で誰に振るかを整理しました。",
+    keywords: [
+      "クリーニング所 開設 届出",
+      "クリーニング業法 クリーニング師 設置",
+      "クリーニング 取次所 届出 クリーニング師 不要",
+      "コインランドリー クリーニング業法 届出 不要",
+      "クリーニング所 構造設備 基準",
+      "クリーニング店 開業 行政書士",
+    ],
+    tags: [
+      "クリーニング所",
+      "クリーニング業法",
+      "クリーニング師",
+      "取次所",
+      "コインランドリー",
+      "行政書士",
+    ],
+  },
+  {
+    file: "74-souzoku-kekkaku-haijo-chigai-bunkatsu.md",
+    slug: "souzoku-kekkaku-haijo-chigai-bunkatsu",
+    date: "2026-09-20",
+    title:
+      "相続欠格と廃除は何が違う？事由・手続き・代襲相続と遺産分割への影響",
+    category: "相続の手続き（行政書士の実務から）",
+    excerpt:
+      "相続欠格と廃除は、どちらも特定の人が相続権を失う制度ですが、しくみが違います。相続欠格は一定の重大な行為をした相続人が手続を経ず法律上当然に相続権を失う制度（民法第891条）、廃除は遺留分を有する推定相続人の虐待・重大な侮辱・著しい非行があったときに被相続人の請求で家庭裁判所が審判して相続権を失わせる制度（民法第892条〜第895条）です。いずれも代襲相続の原因になり（民法第887条第2項）、欠格は受遺欠格も生じます（民法第965条）。両制度の違い、廃除の手続き（生前・遺言）、法定相続分・代襲相続への影響、協議書作成・家裁申立て・登記を誰に頼むかを分離受任で整理しました。",
+    keywords: [
+      "相続欠格 廃除 違い",
+      "相続欠格 事由 民法891条",
+      "推定相続人 廃除 家庭裁判所 遺言",
+      "欠格 廃除 代襲相続",
+      "廃除 遺贈 受けられる",
+      "相続欠格 廃除 行政書士",
+    ],
+    tags: [
+      "相続欠格",
+      "廃除",
+      "代襲相続",
+      "遺産分割",
+      "遺留分",
       "行政書士",
     ],
   },
