@@ -1,0 +1,108 @@
+import { z } from "zod";
+
+/** Business rules explicitly instructed by the operator on 2026-09-20. */
+export const RENTAL_IMPORT_POLICY = {
+  id: "operator-20260920-v5",
+  advertising: "any-matched-current-allow",
+  images: "operator-blanket-allow",
+  conditions: "strictest-itandi-reins-only",
+  rent: "higher-itandi-reins",
+  pets: "largest-itandi-reins-count",
+  availability: "both-itandi-and-reins-current",
+  endedListings: "close-on-primary-source-end",
+  portalEnd: "counts-only",
+  unconfirmedFees: "explicit-operator-instruction-and-visible-disclosure",
+} as const;
+
+export const evidenceSchema = z.object({
+  checkedAt: z.iso.datetime({ offset: true }),
+  reference: z.string().trim().min(1).max(1000),
+  quote: z.string().trim().min(1).max(5000),
+});
+export function isPrimaryReference(reference: string, provider: "itandi" | "reins") {
+  try { const url = new URL(reference); return url.protocol === "https:" && url.hostname === (provider === "itandi" ? "itandibb.com" : "system.reins.jp"); }
+  catch { return false; }
+}
+const option = z.object({ provider: z.enum(["itandi", "reins"]), value: z.string().trim().min(1), evidence: evidenceSchema });
+export const rentEvidenceSchema = z.object({ yen: z.number().int().positive(), evidence: evidenceSchema });
+export function validRentEvidence(rent: z.infer<typeof rentEvidenceSchema>, provider: "itandi" | "reins", now: Date) {
+  const values = Array.from(rent.evidence.quote.normalize("NFKC").replace(/,/g, "").matchAll(/(?:^|\s)(?:月額)?(?:賃料|家賃)\s*[:：=]?\s*(\d+(?:\.\d+)?)\s*(万円|円)/g)).map((m) => Math.round(Number(m[1]) * (m[2] === "万円" ? 10000 : 1)));
+  return isCurrentEvidence(rent.evidence.checkedAt, now) && isPrimaryReference(rent.evidence.reference, provider) && values.length > 0 && values.every((value) => value === rent.yen);
+}
+const conditionObservationSchema = z.object({
+  status: z.enum(["recorded", "not-stated", "unavailable"]),
+  evidence: evidenceSchema,
+});
+const common = {
+  checkedSources: z.object({ itandi: conditionObservationSchema, reins: conditionObservationSchema }),
+  resolves: z.array(z.string()).default([]),
+  /** When changing one clause, preserve the remaining special conditions verbatim. */
+  replace: z.string().trim().min(1).optional(),
+};
+/** Quantities come from the cited terms; all options must use the same base and units. */
+const burdenSchema = z.partialRecord(z.enum([
+  "initialYen", "monthlyYen", "annualYen", "initialPercent", "monthlyPercent", "annualPercent",
+  "required", "minimumStayMonths", "noticeMonths", "penaltyRentMonths", "depositRentMonths",
+]), z.number().finite().nonnegative()).refine((v) => Object.keys(v).length > 0, "比較値が必要です");
+export const conditionChoiceSchema = z.discriminatedUnion("rule", [
+  z.object({
+    ...common, rule: z.literal("strictest"),
+    field: z.enum(["managementFee", "deposit", "keyMoney", "guaranteeDeposit", "renewalFee", "insurance", "guarantor", "otherFees", "conditions"]),
+    basis: z.string().trim().min(1),
+    options: z.array(option.extend({ burden: burdenSchema })).min(2),
+  }),
+  z.object({
+    ...common, rule: z.literal("most-pets"), field: z.literal("conditions"),
+    options: z.array(option.extend({ maxCount: z.number().int().nonnegative() })).min(2),
+  }),
+]);
+export type ConditionChoice = z.infer<typeof conditionChoiceSchema>;
+export function normalized(text: string) { return text.normalize("NFKC").replace(/\s/g, "").toLowerCase(); }
+export function isCurrentEvidence(t: string, now: Date, hours = 24) {
+  const age = now.getTime() - Date.parse(t);
+  return Number.isFinite(age) && age >= 0 && age <= hours * 3600_000;
+}
+export function hasAdvertisingAllow(quote: string) {
+  // A field caption (広告可否) is not an affirmative value. Negative wording is separate evidence.
+  const text = quote.normalize("NFKC");
+  return /広告(?:掲載|転載)?[\s:：]*可(?:$|[\s。、,;；」』）)])/m.test(text)
+    && !/広告(?:掲載|転載)?[\s:：]*(?:不可|禁止)|広告(?:掲載|転載)?可[\s]*では(?:ない|ありません)/.test(text);
+}
+
+/** Select an entire observed term; never manufacture a combination of separate fee plans. */
+export function selectCondition(choice: ConditionChoice, now: Date): { ok: true; index: number; value: string } | { ok: false; reason: string } {
+  const held = (reason: string) => ({ ok: false as const, reason: `${choice.field}: ${reason}` });
+  for (const provider of ["itandi", "reins"] as const) {
+    const check = choice.checkedSources[provider], options = choice.options.filter((o) => o.provider === provider);
+    if (!isPrimaryReference(check.evidence.reference, provider) || !isCurrentEvidence(check.evidence.checkedAt, now)) return held("ITANDI・REINS双方の当該条件の確認記録が必要です");
+    if (check.status === "unavailable") return held(`${provider}の当該条件を取得できていません`);
+    if ((check.status === "recorded") !== (options.length > 0)) return held(`${provider}の記載あり／記載なしと比較候補が一致しません`);
+    if (options.some((o) => !normalized(check.evidence.quote).includes(normalized(o.value)))) return held(`${provider}の条件確認原文に比較候補が含まれていません`);
+  }
+  if (choice.options.some((o) => !isPrimaryReference(o.evidence.reference, o.provider))) return held("条件の比較元はITANDIとREINSに限定してください");
+  if (choice.options.some((o) => !isCurrentEvidence(o.evidence.checkedAt, now) || !normalized(o.evidence.quote).includes(normalized(o.value)))) return held("最新の原文と転載内容を照合してください");
+  let indices: number[];
+  if (choice.rule === "most-pets") {
+    if (choice.options.some((o) => !Array.from(o.value.normalize("NFKC").matchAll(/(\d+)\s*匹/g)).some((m) => Number(m[1]) === o.maxCount))) return held("ペット頭数が原文と一致しません");
+    const max = Math.max(...choice.options.map((o) => o.maxCount));
+    indices = choice.options.flatMap((o, i) => o.maxCount === max ? [i] : []);
+  } else {
+    const keys = Object.keys(choice.options[0].burden).sort() as (keyof typeof choice.options[number]["burden"])[];
+    if (choice.options.some((o) => JSON.stringify(Object.keys(o.burden).sort()) !== JSON.stringify(keys))) return held("同じ項目・算定基準で条件を比較してください");
+    indices = choice.options.flatMap((o, i) => choice.options.every((other) => keys.every((key) => o.burden[key]! >= other.burden[key]!)) ? [i] : []);
+  }
+  if (!indices.length) return held("初回費用と継続費用などの大小が逆で、厳しい方を一意に選べません");
+  if (new Set(indices.map((i) => normalized(choice.options[i].value))).size > 1) return held("比較値が同じでその他の条件が異なります");
+  const index = indices[0];
+  return { ok: true, index, value: choice.options[index].value };
+}
+
+export const TITLE_HIGHLIGHT_LABELS = { foreignResidents: "外国人可", corporateLease: "法人契約可", pets: "ペット可" } as const;
+export const titleHighlightSchema = z.object({ kind: z.enum(["foreignResidents", "corporateLease", "pets"]), provider: z.enum(["itandi", "reins"]), evidence: evidenceSchema });
+export function validTitleHighlight(item: z.infer<typeof titleHighlightSchema>, now: Date) {
+  if (!isCurrentEvidence(item.evidence.checkedAt, now) || !isPrimaryReference(item.evidence.reference, item.provider)) return false;
+  const text = item.evidence.quote.normalize("NFKC");
+  if (item.kind === "foreignResidents") return !/外国(?:人|籍).*?(?:不可|禁止|未確認|要確認)/.test(text) && /外国(?:人|籍)(?:入居|契約)?[\s:：]*可(?:$|[\s。、・])/.test(text);
+  if (item.kind === "corporateLease") return !/法人(?:契約|入居)?.*?(?:不可|禁止|未確認|要確認)/.test(text) && /法人(?:契約|入居)?[\s:：]*可(?:$|[\s。、・])/.test(text);
+  return !/(?:ペット|犬|猫).{0,30}(?:不可|禁止|未確認|要確認|相談)/.test(text) && (/ペット[\s:：]*可(?:$|[\s。、・])/.test(text) || /(?:犬|猫).{0,24}(?:匹|頭)(?:まで|迄)?可(?:$|[\s。、・])/.test(text));
+}

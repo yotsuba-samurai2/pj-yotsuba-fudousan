@@ -1,9 +1,11 @@
+import { rentalPublicationError } from "@/lib/rental-import/publication";
 import { NextRequest, NextResponse } from "next/server";
 import { verifyAdminRequest, AuthError } from "@/lib/api-auth";
 import {
   getProperties,
   createProperty,
-  upsertPropertyBySlug,
+  updatePropertyIfUnchanged,
+  getPropertyBySlugAdmin,
   type PropertyStatus,
 } from "@/lib/db/properties";
 import { parsePropertyInput, bannedTermsError } from "@/lib/property-validation";
@@ -14,6 +16,7 @@ function handleError(err: unknown) {
   if (err instanceof AuthError) {
     return NextResponse.json({ error: err.message }, { status: err.status });
   }
+  if (err && typeof err === "object" && "code" in err && err.code === "P2002") return NextResponse.json({ error: "同じ物件が登録されています。再確認してください" }, { status: 409 });
   console.error("Admin bukken API error:", err);
   return NextResponse.json({ error: "サーバーエラーが発生しました" }, { status: 500 });
 }
@@ -46,13 +49,24 @@ export async function POST(req: NextRequest) {
         { status: 400 },
       );
     }
+    const existing = req.nextUrl.searchParams.get("upsert") ? await getPropertyBySlugAdmin(parsed.data.slug) : undefined;
+    const rentalError = rentalPublicationError(parsed.data, new Date(), existing ?? undefined);
+    if (rentalError) return NextResponse.json({ error: rentalError }, { status: 400 });
     const banned = bannedTermsError(parsed.data);
     if (banned) {
       return NextResponse.json({ error: banned }, { status: 400 });
     }
     if (req.nextUrl.searchParams.get("upsert")) {
-      const result = await upsertPropertyBySlug(parsed.data.slug, parsed.data);
-      return NextResponse.json(result);
+      // Never use an unguarded upsert: an import may close/create this slug
+      // between our read and write, including a competing sale/rental create.
+      if (existing) {
+        const protectedRental = existing.dealType === "rental" || !!existing.internal?.rentalImport || parsed.data.dealType === "rental";
+        if (protectedRental && body.expectedUpdatedAt !== existing.updatedAt) return NextResponse.json({ error: "物件が更新されています。最新の画面を開き直してください" }, { status: 409 });
+        if (!existing.updatedAt || !await updatePropertyIfUnchanged(existing.slug, existing.updatedAt, parsed.data)) return NextResponse.json({ error: "同時更新を検出しました。再確認してください" }, { status: 409 });
+        return NextResponse.json({ id: existing.id, created: false });
+      }
+      const id = await createProperty(parsed.data);
+      return NextResponse.json({ id, created: true });
     }
     const id = await createProperty(parsed.data);
     return NextResponse.json({ id }, { status: 201 });
