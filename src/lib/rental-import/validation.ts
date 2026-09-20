@@ -4,7 +4,7 @@ import { propertyInputSchema } from "@/lib/property-validation";
 import { scanPropertyText, type PropertyInput } from "@/lib/property-shared";
 import { extractAdEvidence, isRecentMail } from "./candidates";
 import { PORTALS, portalCheckSchema, summarizePortalChecks } from "./portal-counts";
-import { evidenceSchema, conditionChoiceSchema, rentEvidenceSchema, validRentEvidence, isPrimaryReference, RENTAL_IMPORT_POLICY, hasAdvertisingAllow, selectCondition, isCurrentEvidence } from "./policy";
+import { evidenceSchema, titleHighlightSchema, validTitleHighlight, TITLE_HIGHLIGHT_LABELS, conditionChoiceSchema, rentEvidenceSchema, validRentEvidence, isPrimaryReference, RENTAL_IMPORT_POLICY, hasAdvertisingAllow, selectCondition, isCurrentEvidence } from "./policy";
 import { contentReviewSchema, rentalContentDigest } from "./content-review";
 
 export const listingEvidenceSchema = evidenceSchema.extend({
@@ -45,7 +45,13 @@ export const rentalImportSchema = z.object({
   })).optional(),
   photoPermission: z.object({ status: z.enum(["allowed", "denied", "unknown"]), evidence: evidenceSchema }).optional(),
   conditionChoices: z.array(conditionChoiceSchema).optional(),
+  titleHighlights: z.array(titleHighlightSchema).max(3).optional(),
   contentReview: contentReviewSchema.optional(),
+  unconfirmedTerms: z.object({
+    fields: z.array(z.enum(["guaranteeDeposit", "insurance", "guarantor", "conditions"])).min(1),
+    operatorInstruction: z.literal("未確認です。未確認と書いてください。"),
+    recordedAt: z.iso.datetime({ offset: true }),
+  }).optional(),
   portalChecks: z.array(portalCheckSchema).optional(),
   /** Only unresolved conflicts block registration. Resolved comparisons retain their evidence. */
   conflicts: z.array(z.string()),
@@ -119,15 +125,22 @@ export function validateRentalImport(input: unknown, now: Date, mode: "draft" | 
   }
   if (v.property.dealType !== "rental" || v.property.spec.dealType !== "rental") reasons.push("賃貸物件のみ取込できます");
   if (!v.property.images.some((i) => i.kind === "photo") || !v.property.images.some((i) => i.kind === "floorplan")) reasons.push("写真と間取りが各1点以上必要です");
+  const disclosedUnknown = (key: string, value: string) => !!v.unconfirmedTerms
+    && (v.unconfirmedTerms.fields as string[]).includes(key) && value.includes("未確認");
+  if (v.unconfirmedTerms && Date.parse(v.unconfirmedTerms.recordedAt) > now.getTime()) reasons.push("未確認表示の指示日時が未来です");
   if (v.property.spec.dealType === "rental") {
     for (const [key, value] of Object.entries(v.property.spec)) {
-      if (typeof value === "string" && /入力なし|不明|未確認|要確認|確認中/.test(value)) reasons.push(`賃貸条件が未確認です: ${key}`);
+      if (typeof value === "string" && /入力なし|不明|未確認|要確認|確認中/.test(value) && !disclosedUnknown(key, value)) reasons.push(`賃貸条件が未確認です: ${key}`);
     }
   }
   if (!same(v.property.locationText, v.source.address)) reasons.push("公開所在地が照合元と一致しません");
-  if (!same(v.property.title.split(" ").join(""), `${v.source.building}${v.source.unit}`)) reasons.push("物件名・号室を照合元と一致させてください");
+  const highlights = v.titleHighlights ?? [];
+  if (new Set(highlights.map(h => h.kind)).size !== highlights.length || highlights.some(h => !validTitleHighlight(h, now)
+    || (h.provider === "itandi" && h.evidence.reference !== v.source.url))) reasons.push("物件名に入れる可条件をITANDI・REINSの同一物件の原文で確認してください");
+  const titlePrefix = (["foreignResidents", "corporateLease", "pets"] as const).filter(kind => highlights.some(h => h.kind === kind)).map(kind => `【${TITLE_HIGHLIGHT_LABELS[kind]}】`).join("");
+  if (!same(v.property.title.split(" ").join(""), `${titlePrefix}${v.source.building}${v.source.unit}`)) reasons.push("物件名・号室を照合元と一致させてください");
   if (v.source.provider === "itandi" && v.source.url !== `https://itandibb.com/rent_rooms/${v.source.roomId}`) reasons.push("ITANDIの部屋IDとURLが一致しません");
-  if (v.property.spec.dealType === "rental" && !/不要|利用なし/.test(v.property.spec.guarantor) && !/[0-9０-９].*(?:円|%|％|ヶ月|か月)/.test(v.property.spec.guarantor)) reasons.push("保証会社の費用を確認してください");
+  if (v.property.spec.dealType === "rental" && !disclosedUnknown("guarantor", v.property.spec.guarantor) && !/不要|利用なし/.test(v.property.spec.guarantor) && !/[0-9０-９].*(?:円|%|％|ヶ月|か月)/.test(v.property.spec.guarantor)) reasons.push("保証会社の費用を確認してください");
   if (v.property.tradeMode !== "broker") reasons.push("自社の取引態様を媒介として確認してください");
   // Scan every public field including alt, translations, fees. Internal evidence is excluded deliberately.
   const { internal: _internal, ...publicData } = v.property;
@@ -142,7 +155,7 @@ export function validateRentalImport(input: unknown, now: Date, mode: "draft" | 
     spec: { ...v.property.spec, ...(v.property.spec.dealType === "rental" ? { availabilityExpiresAt: new Date(Math.min(Date.parse(v.source.checkedAt), Date.parse(v.source.listingEvidence.checkedAt), Date.parse(v.reins.listingEvidence.checkedAt)) + 26 * 3600_000).toISOString() } : {}) },
     infoUpdatedAt: jstDate(now), nextUpdateAt: jstDate(new Date(now.getTime() + DAY)),
     publishedAt: mode === "published" ? jstDate(now) : undefined,
-    internal: { rentalImport: { version: 1, policy: RENTAL_IMPORT_POLICY, email: v.email, source: v.source, reins: v.reins, advertisingEvidence: v.advertisingEvidence, photoPermission: v.photoPermission, conditionChoices: v.conditionChoices, contentReview: v.contentReview, decisions, portalChecks: v.portalChecks, portalCounts: summarizePortalChecks(v.portalChecks ?? []) } },
+    internal: { rentalImport: { version: 1, policy: RENTAL_IMPORT_POLICY, email: v.email, source: v.source, reins: v.reins, advertisingEvidence: v.advertisingEvidence, photoPermission: v.photoPermission, conditionChoices: v.conditionChoices, titleHighlights: v.titleHighlights, unconfirmedTerms: v.unconfirmedTerms, contentReview: v.contentReview, decisions, portalChecks: v.portalChecks, portalCounts: summarizePortalChecks(v.portalChecks ?? []) } },
   };
   return { ok: true, value: v, property };
 }

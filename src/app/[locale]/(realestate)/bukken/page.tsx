@@ -38,30 +38,30 @@ const COPY: Record<LangCode, { title: string; description: string; h1: string; l
   ja: {
     title: "取扱物件のご紹介",
     description:
-      "四葉不動産株式会社（東京都文京区・宅地建物取引業 東京都知事(1)第113304号）の取扱物件一覧。障害福祉グループホーム向け・事業用店舗・相続売却・投資用の売買物件をご紹介します。",
+      "四葉不動産株式会社（東京都文京区・宅地建物取引業 東京都知事(1)第113304号）の取扱物件一覧。障害福祉グループホーム向け・事業用店舗・相続売却・投資用の売買・賃貸物件をご紹介します。",
     h1: "取扱物件のご紹介",
-    lead: "現在ご紹介できる売買物件の一覧です。掲載していない物件のご相談・物件探しのご依頼も承ります。",
+    lead: "現在ご紹介できる売買・賃貸物件の一覧です。掲載していない物件のご相談・物件探しのご依頼も承ります。",
     empty: "現在ご紹介中の物件はありません。ご希望の条件をお聞かせいただければ、お探しします。",
   },
   en: {
     title: "Property Listings",
-    description: "Properties for sale handled by Yotsuba Real Estate (Bunkyo-ku, Tokyo).",
+    description: "Properties for sale and rent handled by Yotsuba Real Estate (Bunkyo-ku, Tokyo).",
     h1: "Property Listings",
-    lead: "Properties currently available for sale.",
+    lead: "Properties currently available for sale and rent.",
     empty: "No listings are available at the moment. Tell us what you are looking for and we will search for you.",
   },
   "zh-tw": {
     title: "物件介紹",
-    description: "四葉不動產株式會社（東京都文京區）的出售物件一覽。",
+    description: "四葉不動產株式會社（東京都文京區）的出售及出租物件一覽。",
     h1: "物件介紹",
-    lead: "目前可介紹的出售物件一覽。",
+    lead: "目前可介紹的出售及出租物件一覽。",
     empty: "目前沒有刊登中的物件。歡迎告訴我們您的需求，我們將為您尋找。",
   },
   zh: {
     title: "物件介绍",
-    description: "四叶不动产株式会社（东京都文京区）的出售物件一览。",
+    description: "四叶不动产株式会社（东京都文京区）的出售及出租物件一览。",
     h1: "物件介绍",
-    lead: "目前可介绍的出售物件一览。",
+    lead: "目前可介绍的出售及出租物件一览。",
     empty: "目前没有刊登中的物件。欢迎告诉我们您的需求，我们将为您寻找。",
   },
 };
@@ -110,7 +110,7 @@ function PropertyCard({ p, locale }: { p: PublicProperty; locale: LangCode }) {
             {TRADE_MODE_LABELS[p.tradeMode]}
           </span>
         </p>
-        <h3 className="mt-1 truncate text-sm font-semibold text-ink">{p.title}</h3>
+        <h3 className="mt-1 break-words text-sm font-semibold text-ink">{p.title}</h3>
         <p className="mt-1 text-sm font-semibold text-primary">{formatPropertyPrice(p)}</p>
         <p className="mt-0.5 truncate text-xs text-text-muted">{p.locationText}</p>
         {p.access[0] && (

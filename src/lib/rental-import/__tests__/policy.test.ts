@@ -24,6 +24,29 @@ const fees = (): ConditionChoice => choiceWithChecks({ rule: "strictest", field:
   { provider: "itandi", value: "初回100%・年間1万円", burden: { initialPercent: 100, annualYen: 10000 }, evidence: proof("初回100%・年間1万円") },
 ] });
 describe("2026-09-20の採用ルール", () => {
+  it("確認した可条件を物件名へ付け、未確認・別号室・ポータルの根拠は拒否", () => {
+    const v = fixture(); v.property.title = "【外国人可】【法人契約可】【ペット可】検証用マンション 001";
+    v.titleHighlights = [
+      { kind: "foreignResidents", provider: "itandi", evidence: proof("外国人可") },
+      { kind: "corporateLease", provider: "itandi", evidence: proof("法人契約可") },
+      { kind: "pets", provider: "itandi", evidence: proof("小型犬猫1匹迄可・敷金1ヶ月積増") },
+    ];
+    review(v); expect(validateRentalImport(v, NOW, "published").ok).toBe(true);
+    v.titleHighlights[0].evidence.quote = "外国人未確認"; expect(validateRentalImport(v, NOW).ok).toBe(false);
+    v.titleHighlights[0].evidence.quote = "外国人可"; v.titleHighlights[0].evidence.reference = "https://itandibb.com/rent_rooms/other"; expect(validateRentalImport(v, NOW).ok).toBe(false);
+    v.titleHighlights[0].evidence.reference = "https://suumo.jp/"; expect(validateRentalImport(v, NOW).ok).toBe(false);
+  });
+  it("明示指示のある未確認費用は未確認表示で公開し、許可なし・隠した表示は通さない", () => {
+    const v = fixture(); if (v.property.spec.dealType !== "rental") throw new Error();
+    v.property.spec.guarantor = "日本セーフティー加入必須（初回・更新料金は未確認）";
+    expect(validateRentalImport(v, NOW).ok).toBe(false);
+    v.unconfirmedTerms = { fields: ["guarantor"], operatorInstruction: "未確認です。未確認と書いてください。", recordedAt: NOW.toISOString() };
+    review(v); const result = validateRentalImport(v, NOW, "published"); expect(result.ok).toBe(true);
+    if (result.ok) expect(result.property.internal?.rentalImport).toHaveProperty("unconfirmedTerms", v.unconfirmedTerms);
+    v.property.spec.guarantor = "日本セーフティー加入必須"; expect(validateRentalImport(v, NOW).ok).toBe(false);
+    v.property.spec.guarantor = "日本セーフティー加入必須（料金未確認）";
+    v.source.availability = "unknown"; expect(validateRentalImport(v, NOW).ok).toBe(false);
+  });
   it.each(["strictest", "most-pets"] as const)("%sの比較で片側欠落・同一サイト重複は両サイト確認にならない", (rule) => {
     const c = rule === "strictest" ? fees() : choiceWithChecks({ rule, field: "conditions", replace: "ペット不可", options: [
       { provider: "itandi", value: "犬猫1匹", maxCount: 1, evidence: proof("犬猫1匹") },

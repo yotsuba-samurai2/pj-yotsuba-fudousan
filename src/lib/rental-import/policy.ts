@@ -2,7 +2,7 @@ import { z } from "zod";
 
 /** Business rules explicitly instructed by the operator on 2026-09-20. */
 export const RENTAL_IMPORT_POLICY = {
-  id: "operator-20260920-v4",
+  id: "operator-20260920-v5",
   advertising: "any-matched-current-allow",
   images: "operator-blanket-allow",
   conditions: "strictest-itandi-reins-only",
@@ -11,6 +11,7 @@ export const RENTAL_IMPORT_POLICY = {
   availability: "both-itandi-and-reins-current",
   endedListings: "close-on-primary-source-end",
   portalEnd: "counts-only",
+  unconfirmedFees: "explicit-operator-instruction-and-visible-disclosure",
 } as const;
 
 export const evidenceSchema = z.object({
@@ -94,4 +95,14 @@ export function selectCondition(choice: ConditionChoice, now: Date): { ok: true;
   if (new Set(indices.map((i) => normalized(choice.options[i].value))).size > 1) return held("比較値が同じでその他の条件が異なります");
   const index = indices[0];
   return { ok: true, index, value: choice.options[index].value };
+}
+
+export const TITLE_HIGHLIGHT_LABELS = { foreignResidents: "外国人可", corporateLease: "法人契約可", pets: "ペット可" } as const;
+export const titleHighlightSchema = z.object({ kind: z.enum(["foreignResidents", "corporateLease", "pets"]), provider: z.enum(["itandi", "reins"]), evidence: evidenceSchema });
+export function validTitleHighlight(item: z.infer<typeof titleHighlightSchema>, now: Date) {
+  if (!isCurrentEvidence(item.evidence.checkedAt, now) || !isPrimaryReference(item.evidence.reference, item.provider)) return false;
+  const text = item.evidence.quote.normalize("NFKC");
+  if (item.kind === "foreignResidents") return !/外国(?:人|籍).*?(?:不可|禁止|未確認|要確認)/.test(text) && /外国(?:人|籍)(?:入居|契約)?[\s:：]*(?:可|相談可)(?:$|[\s。、・])/.test(text);
+  if (item.kind === "corporateLease") return !/法人(?:契約|入居)?.*?(?:不可|禁止|未確認|要確認)/.test(text) && /法人(?:契約|入居)?[\s:：]*(?:可|相談可)(?:$|[\s。、・])/.test(text);
+  return !/ペット[\s:：]*(?:不可|禁止|未確認|要確認)/.test(text) && (/ペット[\s:：]*(?:可|相談可|相談)(?:$|[\s。、・])/.test(text) || /(?:犬|猫).{0,24}(?:匹|頭).{0,6}可/.test(text));
 }
