@@ -3,8 +3,8 @@ import { z } from "zod";
 
 /** Business rules explicitly instructed by the operator on 2026-09-20. */
 export const RENTAL_IMPORT_POLICY = {
-  id: "operator-20260920-v6-itandi-only",
-  advertising: "any-matched-current-allow",
+  id: "operator-20260920-v7-itandi-reins-ad-gate",
+  advertising: "itandi-or-reins-current-allow",
   images: "operator-blanket-allow",
   conditions: "strictest-itandi-only",
   rent: "itandi-current",
