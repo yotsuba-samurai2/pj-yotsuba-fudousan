@@ -25,6 +25,8 @@ export const rentalImportSchema = z.object({
     /** Provider ID alone cannot cross-match sites: require exact building + address + unit. */
     building: z.string().trim().min(1), address: z.string().trim().min(1), unit: z.string().trim().min(1),
     availability: z.enum(["available", "closed", "removed", "unknown"]),
+    /** Early gate: an ITANJI application means the room must not be imported. */
+    applicationStatus: z.enum(["not-applied", "applied", "unknown"]).optional(),
     checkedAt: z.iso.datetime({ offset: true }),
     listingEvidence: listingEvidenceSchema,
     rent: rentEvidenceSchema,
@@ -75,14 +77,15 @@ export function validateRentalImport(input: unknown, now: Date, mode: "draft" | 
   const parsed = rentalImportSchema.safeParse(input);
   if (!parsed.success) return { ok: false, reasons: parsed.error.issues.map((i) => `${i.path.join(".")}: ${i.message}`) };
   const v = parsed.data, reasons: string[] = [];
+  // Reject applied rooms before any expensive detail, image, or condition work.
+  if ((v.source.applicationStatus ?? "unknown") === "applied") reasons.push("ITANJIで申込済みのため対象外です");
   const legacyMigration = !!v.reins && !v.source.advertising && !(v.advertisingEvidence ?? []).some((a) => a.provider === "itandi");
   if (legacyMigration) {
     // Compatibility only: old saved drafts can be rechecked while the operator
     // migrates them. New records must supply ITANJI evidence explicitly.
     if (v.reins!.availability !== "available" || !validListingEvidence(v.reins!.listingEvidence, "reins", now)) reasons.push("旧形式のREINS根拠が期限切れです");
   }
-  // v1.2 deliberately does not inspect SUUMO・アットホーム・HOME'S or REINS.
-  // Old portal evidence is retained as migration data only and cannot affect a decision.
+  // SUUMO・アットホーム・HOME'Sは判定に使わない。REINSは広告可の確認だけ許可する。
   if (!maintenance && !isRecentMail(v.email.receivedAt, now)) reasons.push("メールが直近1暦月の対象外です");
   for (const [label, quote] of [["メール", v.email.adQuote], ["取得元", v.source.adQuote]]) {
     const ads = extractAdEvidence(quote);
@@ -97,12 +100,13 @@ export function validateRentalImport(input: unknown, now: Date, mode: "draft" | 
   if (v.source.adValidUntil && Date.parse(v.source.adValidUntil) < now.getTime()) reasons.push("AD適用期限を過ぎています");
   const adEvidence = [
     ...(v.advertisingEvidence ?? []).filter((a) => a.provider === "itandi"),
+    ...(v.advertisingEvidence ?? []).filter((a) => a.provider === "reins"),
     ...(v.source.advertising ? [{ ...v.source, provider: "itandi", status: v.source.advertising.status, evidence: v.source.advertising.evidence }] : []),
-    ...(legacyMigration && v.reins ? [{ ...v.reins, provider: "itandi", status: v.reins.advertising, evidence: v.reins.evidence }] : []),
+    ...(legacyMigration && v.reins ? [{ ...v.reins, provider: "reins", status: v.reins.advertising, evidence: v.reins.evidence }] : []),
   ];
-  const adAllowed = adEvidence.some((a) => a.status === "allowed" && hasAdvertisingAllow(a.evidence.quote)
+  const adAllowed = adEvidence.some((a) => (a.provider === "itandi" || a.provider === "reins") && a.status === "allowed" && hasAdvertisingAllow(a.evidence.quote)
     && isFresh(a.evidence.checkedAt, now) && (["building", "address", "unit"] as const).every((key) => same(a[key], v.source[key])));
-  if (!adAllowed) reasons.push("同一物件の広告可をいずれか1か所で確認してください");
+  if (!adAllowed) reasons.push("同一号室の広告可をITANJIまたはREINSで確認してください");
   const resolved = new Set<string>(), fields = new Set<string>();
   const decisions: { field: string; rule: string; selectedIndex: number; value: string }[] = [];
   for (const choice of v.conditionChoices ?? []) {

@@ -4,15 +4,23 @@ import { fixture, NOW } from "./fixtures";
 import { validateRentalImport } from "../validation";
 import { canSendInquiry, classifyReply, createInquiry } from "../inquiries";
 
-describe("v1.2 ITANJI単独ゲート", () => {
-  it("REINS・3ポータルなしでもITANJI根拠だけで判定する", () => {
+describe("ITANJI募集確認とREINS広告可ゲート", () => {
+  it("REINSの広告可を使い、賃料・募集状況はITANJIだけで判定する", () => {
     const value: any = fixture();
+    value.advertisingEvidence = [{ provider: "reins", building: value.source.building, address: value.source.address, unit: value.source.unit, status: "allowed", evidence: value.reins.evidence }];
     delete value.reins;
     delete value.portalChecks;
-    value.source.advertising = { status: "allowed", evidence: { ...value.source.listingEvidence, quote: "広告可" } };
     const result = validateRentalImport(value, NOW);
     expect(result.ok).toBe(true);
     if (result.ok) expect(result.property.priceYen).toBe(value.source.rent.yen);
+  });
+
+  it("ITANJIで申込済みなら条件確認より前に除外する", () => {
+    const value: any = fixture();
+    value.source.applicationStatus = "applied";
+    const result = validateRentalImport(value, NOW);
+    expect(result.ok).toBe(false);
+    if (!result.ok) expect(result.reasons[0]).toContain("申込済み");
   });
 
   it("旧REINS賃料を採用額へ混ぜない", () => {
