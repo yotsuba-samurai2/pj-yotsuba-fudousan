@@ -10,6 +10,7 @@
 // FAQPage JSON-LD＝faqJa（kaigyo新設2問＋corporate/companyの既存2問）を参照（文字列コピー禁止）。
 // hero＝realestate-toushi-16x9.webp を暫定共用（店舗専用画像は未制作＝TODO）。
 import type { Metadata } from "next";
+import { PropertySearchSampleTeaser } from "@/components/shared/PropertySearchSample";
 import Link from "next/link";
 import { buildPageMetadata } from "@/lib/seo";
 import { RealestateServicePage, ReH2 } from "@/components/shared/RealestateServicePage";
@@ -89,6 +90,7 @@ export default async function Page() {
       ]}
       crossLinkLead="営業許可など許認可の書類は、関連事業の四葉行政書士事務所のページで詳しく解説しています。"
     >
+      <PropertySearchSampleTeaser page="/inshokuten" />
       {/* §1 居抜き/スケルトン。費用の数値断定なし */}
       <div>
         <ReH2>飲食店開業は「物件」と「営業許可」が同時に動く</ReH2>
