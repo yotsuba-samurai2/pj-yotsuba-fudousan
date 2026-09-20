@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
-import { conditionChoiceSchema, selectCondition, type ConditionChoice } from "../policy";
+import { conditionChoiceSchema, validTitleHighlight, selectCondition, type ConditionChoice } from "../policy";
 import { validateRentalImport } from "../validation";
 import { rentalPublicationError } from "../publication";
 import { rentalContentDigest } from "../content-review";
@@ -24,6 +24,12 @@ const fees = (): ConditionChoice => choiceWithChecks({ rule: "strictest", field:
   { provider: "itandi", value: "初回100%・年間1万円", burden: { initialPercent: 100, annualYen: 10000 }, evidence: proof("初回100%・年間1万円") },
 ] });
 describe("2026-09-20の採用ルール", () => {
+  it.each([
+    ["pets", "小型犬猫1匹不可"], ["pets", "犬猫1匹まで不可"], ["pets", "ペット相談"], ["pets", "ペット相談可"],
+    ["foreignResidents", "外国人相談可"], ["corporateLease", "法人契約相談可"],
+  ] as const)("%s: %sを可の強調表示に変えない", (kind, quote) => {
+    expect(validTitleHighlight({ kind, provider: "itandi", evidence: proof(quote) }, NOW)).toBe(false);
+  });
   it("確認した可条件を物件名へ付け、未確認・別号室・ポータルの根拠は拒否", () => {
     const v = fixture(); v.property.title = "【外国人可】【法人契約可】【ペット可】検証用マンション 001";
     v.titleHighlights = [

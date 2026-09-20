@@ -102,7 +102,7 @@ export const titleHighlightSchema = z.object({ kind: z.enum(["foreignResidents",
 export function validTitleHighlight(item: z.infer<typeof titleHighlightSchema>, now: Date) {
   if (!isCurrentEvidence(item.evidence.checkedAt, now) || !isPrimaryReference(item.evidence.reference, item.provider)) return false;
   const text = item.evidence.quote.normalize("NFKC");
-  if (item.kind === "foreignResidents") return !/外国(?:人|籍).*?(?:不可|禁止|未確認|要確認)/.test(text) && /外国(?:人|籍)(?:入居|契約)?[\s:：]*(?:可|相談可)(?:$|[\s。、・])/.test(text);
-  if (item.kind === "corporateLease") return !/法人(?:契約|入居)?.*?(?:不可|禁止|未確認|要確認)/.test(text) && /法人(?:契約|入居)?[\s:：]*(?:可|相談可)(?:$|[\s。、・])/.test(text);
-  return !/ペット[\s:：]*(?:不可|禁止|未確認|要確認)/.test(text) && (/ペット[\s:：]*(?:可|相談可|相談)(?:$|[\s。、・])/.test(text) || /(?:犬|猫).{0,24}(?:匹|頭).{0,6}可/.test(text));
+  if (item.kind === "foreignResidents") return !/外国(?:人|籍).*?(?:不可|禁止|未確認|要確認)/.test(text) && /外国(?:人|籍)(?:入居|契約)?[\s:：]*可(?:$|[\s。、・])/.test(text);
+  if (item.kind === "corporateLease") return !/法人(?:契約|入居)?.*?(?:不可|禁止|未確認|要確認)/.test(text) && /法人(?:契約|入居)?[\s:：]*可(?:$|[\s。、・])/.test(text);
+  return !/(?:ペット|犬|猫).{0,30}(?:不可|禁止|未確認|要確認|相談)/.test(text) && (/ペット[\s:：]*可(?:$|[\s。、・])/.test(text) || /(?:犬|猫).{0,24}(?:匹|頭)(?:まで|迄)?可(?:$|[\s。、・])/.test(text));
 }
