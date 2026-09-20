@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { revalidatePath } from "next/cache";
 import { createClient } from "@supabase/supabase-js";
 import { verifyAdminRequest, AuthError } from "@/lib/api-auth";
-import { closeRental, closureSchema, importRental } from "@/lib/rental-import/lifecycle";
+import { closeRental, closureSchema, closureFromRentalImport, importRental } from "@/lib/rental-import/lifecycle";
 import { validateRentalImport } from "@/lib/rental-import/validation";
 import { rentalStore } from "@/lib/rental-import/db-store";
 import { inspectImage, isOwnedImage } from "@/lib/rental-import/media";
@@ -44,9 +44,9 @@ export async function POST(req: NextRequest) {
     }
     if (body.action === "check") {
       const result = await importRental(body.record, { ...rentalStore, create: async () => {}, update: async () => true }, now, body.mode, body.maintenance);
-      return NextResponse.json({ ...result, action: ["created", "updated"].includes(result.action) ? "ready" : result.action });
+      return NextResponse.json({ ...result, action: result.action === "closed" ? "ready-close" : ["created", "updated"].includes(result.action) ? "ready" : result.action });
     }
-    if (body.action === "apply") {
+    if (body.action === "apply" && !closureFromRentalImport(body.record, now)) {
       const gate = validateRentalImport(body.record, now, body.mode, body.maintenance);
       if (!gate.ok) return NextResponse.json({ action: "held", reasons: gate.reasons });
       if (gate.property.images.some((i) => !isOwnedImage(i.url, process.env.NEXT_PUBLIC_SUPABASE_URL ?? ""))) return NextResponse.json({ action: "held", reasons: ["写真と間取りを自社ストレージに保存してください"] });

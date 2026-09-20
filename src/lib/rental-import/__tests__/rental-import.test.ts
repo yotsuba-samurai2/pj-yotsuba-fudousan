@@ -1,4 +1,4 @@
-import { describe, it, expect } from "vitest";
+import { afterEach, beforeEach, describe, it, expect, vi } from "vitest";
 import { extractAdEvidence, isRecentMail, monthWindowStart, selectMailCandidates } from "../candidates";
 import { rentalIdentity, validateRentalImport } from "../validation";
 import { closeRental, importRental, type RentalStore } from "../lifecycle";
@@ -6,6 +6,8 @@ import { isOwnedImage, inspectImage } from "../media";
 import { rentalPublicationError } from "../publication";
 import { formatPropertyPrice, buildRequiredDisplayRows, isRentalExpired, toPublicProperty, type AdminProperty } from "../../property-shared";
 import { fixture, NOW } from "./fixtures";
+beforeEach(() => vi.stubEnv("NEXT_PUBLIC_SUPABASE_URL", "https://demo.supabase.co"));
+afterEach(() => vi.unstubAllEnvs());
 
 function memoryStore() {
   const rows = new Map<string, AdminProperty>(); let version = 0;
@@ -28,6 +30,21 @@ describe("ADと受信期間", () => {
 });
 
 describe("公開ゲート", () => {
+  it.each(["closed", "removed", "unknown"] as const)("どちらかの元サイトが%sなら掲載しない", (status) => {
+    const v = fixture(); v.reins.availability = status; expect(validateRentalImport(v, NOW).ok).toBe(false);
+    v.reins.availability = "available"; v.source.availability = status; expect(validateRentalImport(v, NOW).ok).toBe(false);
+  });
+  it.each(["authenticated", "siteOperational", "exactRoomMatched"] as const)("両サイトの%s確認が必須", (key) => {
+    const v = fixture(); v.reins.listingEvidence[key] = false; expect(validateRentalImport(v, NOW).ok).toBe(false);
+    v.reins.listingEvidence[key] = true; v.source.listingEvidence[key] = false; expect(validateRentalImport(v, NOW).ok).toBe(false);
+  });
+  it("REINSの確認が古い場合・ポータルURLの代用を認めず、有効期限は古い側に合わせる", () => {
+    const v = fixture(); v.reins.listingEvidence.checkedAt = "2020-01-01T00:00:00Z"; expect(validateRentalImport(v, NOW).ok).toBe(false);
+    v.reins.listingEvidence.checkedAt = new Date(NOW.getTime() - 3600_000).toISOString();
+    const result = validateRentalImport(v, NOW); expect(result.ok).toBe(true);
+    if (result.ok) expect(result.property.spec).toHaveProperty("availabilityExpiresAt", new Date(NOW.getTime() + 25 * 3600_000).toISOString());
+    v.reins.listingEvidence.reference = "https://www.homes.co.jp/"; expect(validateRentalImport(v, NOW).ok).toBe(false);
+  });
   it("REINS照合済み・写真間取りありを登録可能", () => expect(validateRentalImport(fixture(), NOW).ok).toBe(true));
   it.each(["denied", "unknown"] as const)("REINS広告可以外を保留 %s", (status) => { const v = fixture(); v.reins.advertising = status; expect(validateRentalImport(v, NOW).ok).toBe(false); });
   it.each(["広告可否 未確認", "広告不可", "広告可 広告不可"])("文字列の誤認防止 %s", (quote) => { const v = fixture(); v.reins.evidence.quote = quote; expect(validateRentalImport(v, NOW).ok).toBe(false); });
@@ -46,16 +63,40 @@ describe("公開ゲート", () => {
 });
 
 describe("再実行と掲載終了", () => {
+  it("ITANDIの終了確認でも掲載を止め、認証切れでは止めない", async () => {
+    const { store, rows } = memoryStore(); const v = fixture(); const created = await importRental(v, store, NOW, "published");
+    v.source.availability = "closed"; v.source.listingEvidence.quote = "募集終了"; v.source.listingEvidence.authenticated = false;
+    expect((await importRental(v, store, NOW, "published", true)).action).toBe("held"); expect(rows.get(created.slug!)!.status).toBe("published");
+    v.source.listingEvidence.authenticated = true; expect((await importRental(v, store, NOW, "published", true)).action).toBe("closed");
+  });
+  it("ポータルだけの掲載終了では両サイト掲載中の物件を止めない", async () => {
+    const { store, rows } = memoryStore(); const v = fixture(); const created = await importRental(v, store, NOW, "published");
+    v.portalChecks![2].listings.push({ listingId: "ended", url: "https://www.homes.co.jp/chintai/b-ended/", company: "匿名", match: "confirmed", status: "ended", evidence: "同じ001号室の広告掲載終了" });
+    expect((await importRental(v, store, NOW, "published", true)).action).toBe("updated"); expect(rows.get(created.slug!)!.status).toBe("published");
+  });
+  it("別のREINS物件番号の終了は登録済み物件へ適用しない", async () => {
+    const { store, rows } = memoryStore(); const v = fixture(); const created = await importRental(v, store, NOW, "published");
+    v.reins.propertyId = "another-id"; v.reins.availability = "closed";
+    expect((await importRental(v, store, NOW, "published", true)).action).toBe("held"); expect(rows.get(created.slug!)!.status).toBe("published");
+  });
+  it("終了を含む再確認は、手動編集・無効な賃料より優先して公開を停止", async () => {
+    const { store, rows } = memoryStore(); const v = fixture(); const created = await importRental(v, store, NOW, "published");
+    rows.get(created.slug!)!.description = "管理者による編集";
+    v.property.priceYen = -1;
+    v.reins.availability = "closed"; v.reins.listingEvidence.quote = "同一物件・001号室の掲載終了を確認";
+    expect((await importRental(v, store, NOW, "published", true)).action).toBe("closed");
+    expect(rows.get(created.slug!)!.status).toBe("closed");
+  });
   it("同じ部屋は再実行しても1件", async () => { const {store,rows} = memoryStore(); expect((await importRental(fixture(), store, NOW, "published")).action).toBe("created"); expect((await importRental(fixture(), store, NOW, "published")).action).toBe("updated"); expect(rows.size).toBe(1); });
   it("同時更新時は上書きしない", async () => { const {store} = memoryStore(); await importRental(fixture(), store, NOW, "published"); store.update = async () => false; expect((await importRental(fixture(), store, NOW, "published")).action).toBe("held"); });
   it("手動編集を保護", async () => { const {store,rows} = memoryStore(); const result = await importRental(fixture(), store, NOW, "published"); rows.get(result.slug!)!.description = "管理者が修正"; expect((await importRental(fixture(), store, NOW, "published")).action).toBe("held"); });
-  it("掲載終了・削除は非公開化し再取込で復活させない", async () => { const {store,rows} = memoryStore(); await importRental(fixture(), store, NOW, "published"); const v = fixture(); const event = { source: v.source, status: "removed", checkedAt: NOW.toISOString(), reference: v.source.url, quote: "物件番号で検索結果なし", authenticated: true, siteOperational: true, exactRoomMatched: true }; const result = await closeRental(event, store, NOW); expect(result.action).toBe("closed"); expect(rows.get(result.slug!)!.status).toBe("closed"); expect((await importRental(v, store, NOW, "published")).action).toBe("held"); });
-  it("認証切れ・障害は終了としない", async () => { const {store,rows} = memoryStore(); await importRental(fixture(), store, NOW, "published"); const result = await closeRental({ source: fixture().source, status: "removed", checkedAt: NOW.toISOString(), reference: "page", quote: "ログイン画面", authenticated: false, siteOperational: true, exactRoomMatched: true }, store, NOW); expect(result.action).toBe("held"); expect([...rows.values()][0].status).toBe("published"); });
-  it("公開ポータルで同じ号室の終了を確認すれば手動編集済みでも公開停止", async () => {
+  it("掲載終了・削除は非公開化し再取込で復活させない", async () => { const {store,rows} = memoryStore(); await importRental(fixture(), store, NOW, "published"); const v = fixture(); const event = { source: v.source, status: "removed", confirmedBy: { provider: "itandi", listingId: "123" }, checkedAt: NOW.toISOString(), reference: v.source.url, quote: "物件番号で検索結果なし", authenticated: true, siteOperational: true, exactRoomMatched: true }; const result = await closeRental(event, store, NOW); expect(result.action).toBe("closed"); expect(rows.get(result.slug!)!.status).toBe("closed"); expect((await importRental(v, store, NOW, "published")).action).toBe("held"); });
+  it("認証切れ・障害は終了としない", async () => { const {store,rows} = memoryStore(); await importRental(fixture(), store, NOW, "published"); const result = await closeRental({ source: fixture().source, status: "removed", confirmedBy: { provider: "itandi", listingId: "123" }, checkedAt: NOW.toISOString(), reference: "page", quote: "ログイン画面", authenticated: false, siteOperational: true, exactRoomMatched: true }, store, NOW); expect(result.action).toBe("held"); expect([...rows.values()][0].status).toBe("published"); });
+  it("公開ポータルの終了だけでは手動編集済み物件も公開停止しない", async () => {
     const { store, rows } = memoryStore(); const created = await importRental(fixture(), store, NOW, "published");
     rows.get(created.slug!)!.description = "管理者が編集";
     const result = await closeRental({ source: fixture().source, status: "closed", portal: "homes", checkedAt: NOW.toISOString(), reference: "https://www.homes.co.jp/chintai/b-test/", quote: "現在、この物件情報は掲載終了しています", authenticated: false, siteOperational: true, exactRoomMatched: true }, store, NOW);
-    expect(result.action).toBe("closed"); expect(rows.get(created.slug!)!.status).toBe("closed");
+    expect(result.action).toBe("held"); expect(rows.get(created.slug!)!.status).toBe("published");
   });
   it.each([
     { status: "removed", reference: "https://www.homes.co.jp/search", quote: "検索結果なし" },

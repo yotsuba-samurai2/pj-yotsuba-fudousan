@@ -15,7 +15,15 @@
       "unit": "001",
       "availability": "available",
       "checkedAt": "2026-09-20T01:00:00.000Z",
-      "adQuote": "広告費200%"
+      "adQuote": "広告費200%",
+      "listingEvidence": {
+        "checkedAt": "2026-09-20T01:00:00.000Z",
+        "reference": "https://itandibb.com/rent_rooms/123",
+        "quote": "同一建物・住所・001号室の現在の在庫掲載を確認（匿名の形式例）",
+        "authenticated": true,
+        "siteOperational": true,
+        "exactRoomMatched": true
+      }
     },
     "reins": {
       "propertyId": "test-100",
@@ -27,6 +35,15 @@
         "checkedAt": "2026-09-20T01:00:00.000Z",
         "reference": "REINS詳細・物件番号test-100",
         "quote": "広告可"
+      },
+      "availability": "available",
+      "listingEvidence": {
+        "checkedAt": "2026-09-20T01:00:00.000Z",
+        "reference": "https://system.reins.jp/main/BK/GBK003200",
+        "quote": "同一建物・住所・001号室の現在の在庫掲載を確認（匿名の形式例）",
+        "authenticated": true,
+        "siteOperational": true,
+        "exactRoomMatched": true
       }
     },
     "photoPermission": {
@@ -89,6 +106,32 @@
       "locales": [
         "ja"
       ]
-    }
+    },
+    "portalChecks": [
+      {
+        "portal": "suumo",
+        "checkedAt": "2026-09-20T01:00:00.000Z",
+        "coverage": "unavailable",
+        "searchUrl": "https://suumo.jp/",
+        "note": "匿名例。実行時は検索結果と取得状況を記録する。",
+        "listings": []
+      },
+      {
+        "portal": "athome",
+        "checkedAt": "2026-09-20T01:00:00.000Z",
+        "coverage": "unavailable",
+        "searchUrl": "https://www.athome.co.jp/",
+        "note": "匿名例。実行時は検索結果と取得状況を記録する。",
+        "listings": []
+      },
+      {
+        "portal": "homes",
+        "checkedAt": "2026-09-20T01:00:00.000Z",
+        "coverage": "unavailable",
+        "searchUrl": "https://www.homes.co.jp/",
+        "note": "匿名例。実行時は検索結果と取得状況を記録する。",
+        "listings": []
+      }
+    ]
   }
 ]

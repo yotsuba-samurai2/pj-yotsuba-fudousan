@@ -50,7 +50,7 @@ export async function PATCH(req: NextRequest, ctx: Ctx) {
     }
     const merged = parsePropertyInput({ ...existing, ...parsed.data });
     if (!merged.ok) return NextResponse.json({ error: merged.errors.join(" / ") }, { status: 400 });
-    const rentalError = rentalPublicationError(merged.data);
+    const rentalError = rentalPublicationError(merged.data, new Date(), existing);
     if (rentalError) return NextResponse.json({ error: rentalError }, { status: 400 });
     // 部分更新後の姿で禁止語ゲートを通す（statusだけ・本文だけの更新でもすり抜けさせない）
     const banned = bannedTermsError({

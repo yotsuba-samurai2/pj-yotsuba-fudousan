@@ -6,7 +6,7 @@ import { getAccessToken } from "@/lib/admin-api";
 import type { RentalImport } from "@/lib/rental-import/validation";
 
 type Result = { action: string; slug?: string; reasons?: string[]; error?: string };
-const LABELS: Record<string, string> = { ready: "登録条件を確認済み", held: "確認待ち", created: "登録済み", updated: "更新済み", closed: "募集終了に変更済み", unchanged: "変更なし" };
+const LABELS: Record<string, string> = { ready: "登録条件を確認済み", "ready-close": "掲載終了を確認済み・反映すると公開停止", held: "確認待ち", created: "登録済み", updated: "更新済み", closed: "募集終了に変更済み", unchanged: "変更なし" };
 
 export default function RentalImportPage() {
   const [records, setRecords] = useState<unknown[]>([]);
@@ -36,7 +36,10 @@ export default function RentalImportPage() {
           const record = structuredClone(original);
           const options = { record, mode, maintenance: operation === "maintenance" };
           const checked: Result = await request({ ...options, action: operation === "close" ? "check-close" : "check" });
-          if (!write || checked.action !== "ready") { output.push(checked); setResults([...output]); continue; }
+          if (!write || !["ready", "ready-close"].includes(checked.action)) { output.push(checked); setResults([...output]); continue; }
+          if (checked.action === "ready-close") {
+            output.push(await request({ ...options, action: "apply" })); setResults([...output]); continue;
+          }
           if (operation === "close") {
             output.push(await request({ ...options, action: "close" })); setResults([...output]); continue;
           }
@@ -99,7 +102,7 @@ export default function RentalImportPage() {
         <p className="text-sm text-text-muted">読み込み：{records.length}件 ／ 画像：{files.length}点</p>
         <div className="flex flex-wrap gap-3">
           <button disabled={busy || !records.length} onClick={() => run(false)} className="rounded-lg border border-border px-4 py-2 text-sm disabled:opacity-40">登録前チェック</button>
-          <button disabled={busy || !results.some((r) => r.action === "ready")} onClick={() => run(true)} className="rounded-lg bg-primary px-4 py-2 text-sm text-white disabled:opacity-40">{busy ? "処理中…" : operation === "close" ? "確認済みの物件を募集終了にする" : "確認済みの物件を登録する"}</button>
+          <button disabled={busy || !results.some((r) => ["ready", "ready-close"].includes(r.action))} onClick={() => run(true)} className="rounded-lg bg-primary px-4 py-2 text-sm text-white disabled:opacity-40">{busy ? "処理中…" : operation === "close" ? "確認済みの物件を募集終了にする" : "確認結果を反映する（登録・公開停止）"}</button>
         </div>
       </div>
       {error && <p role="alert" className="mt-4 text-sm text-red-700">{error}</p>}

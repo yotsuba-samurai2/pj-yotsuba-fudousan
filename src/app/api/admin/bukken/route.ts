@@ -5,6 +5,7 @@ import {
   getProperties,
   createProperty,
   upsertPropertyBySlug,
+  getPropertyBySlugAdmin,
   type PropertyStatus,
 } from "@/lib/db/properties";
 import { parsePropertyInput, bannedTermsError } from "@/lib/property-validation";
@@ -47,7 +48,8 @@ export async function POST(req: NextRequest) {
         { status: 400 },
       );
     }
-    const rentalError = rentalPublicationError(parsed.data);
+    const existing = req.nextUrl.searchParams.get("upsert") ? await getPropertyBySlugAdmin(parsed.data.slug) : undefined;
+    const rentalError = rentalPublicationError(parsed.data, new Date(), existing ?? undefined);
     if (rentalError) return NextResponse.json({ error: rentalError }, { status: 400 });
     const banned = bannedTermsError(parsed.data);
     if (banned) {

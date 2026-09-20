@@ -3,8 +3,20 @@ import { z } from "zod";
 import { propertyInputSchema } from "@/lib/property-validation";
 import { scanPropertyText, type PropertyInput } from "@/lib/property-shared";
 import { extractAdEvidence, isRecentMail } from "./candidates";
-import { portalCheckSchema, summarizePortalChecks, endedPortalListings } from "./portal-counts";
+import { PORTALS, portalCheckSchema, summarizePortalChecks } from "./portal-counts";
 import { evidenceSchema, conditionChoiceSchema, RENTAL_IMPORT_POLICY, hasAdvertisingAllow, selectCondition, isCurrentEvidence } from "./policy";
+import { contentReviewSchema, rentalContentDigest } from "./content-review";
+
+export const listingEvidenceSchema = evidenceSchema.extend({
+  authenticated: z.boolean(), siteOperational: z.boolean(), exactRoomMatched: z.boolean(),
+});
+export function isPrimaryReference(reference: string, provider: "itandi" | "reins") {
+  try { const url = new URL(reference); return url.protocol === "https:" && url.hostname === (provider === "itandi" ? "itandibb.com" : "system.reins.jp"); }
+  catch { return false; }
+}
+export function validListingEvidence(evidence: z.infer<typeof listingEvidenceSchema>, provider: "itandi" | "reins", now: Date) {
+  return evidence.authenticated && evidence.siteOperational && evidence.exactRoomMatched && isFresh(evidence.checkedAt, now) && isPrimaryReference(evidence.reference, provider);
+}
 
 export const rentalImportSchema = z.object({
   version: z.literal(1),
@@ -15,8 +27,9 @@ export const rentalImportSchema = z.object({
     url: z.url().startsWith("https://"),
     /** Provider ID alone cannot cross-match sites: require exact building + address + unit. */
     building: z.string().trim().min(1), address: z.string().trim().min(1), unit: z.string().trim().min(1),
-    availability: z.enum(["available", "closed", "unknown"]),
+    availability: z.enum(["available", "closed", "removed", "unknown"]),
     checkedAt: z.iso.datetime({ offset: true }),
+    listingEvidence: listingEvidenceSchema,
     adQuote: z.string().min(1),
     adValidUntil: z.iso.datetime({ offset: true }).optional(),
   }),
@@ -24,13 +37,16 @@ export const rentalImportSchema = z.object({
     propertyId: z.string().min(1), building: z.string().min(1), address: z.string().min(1), unit: z.string().min(1),
     advertising: z.enum(["allowed", "denied", "unknown"]),
     evidence: evidenceSchema,
-  }).optional(),
+    availability: z.enum(["available", "closed", "removed", "unknown"]),
+    listingEvidence: listingEvidenceSchema,
+  }),
   advertisingEvidence: z.array(z.object({
     provider: z.string().min(1), building: z.string().min(1), address: z.string().min(1), unit: z.string().min(1),
     status: z.enum(["allowed", "denied", "unknown"]), evidence: evidenceSchema,
   })).optional(),
   photoPermission: z.object({ status: z.enum(["allowed", "denied", "unknown"]), evidence: evidenceSchema }).optional(),
   conditionChoices: z.array(conditionChoiceSchema).optional(),
+  contentReview: contentReviewSchema.optional(),
   portalChecks: z.array(portalCheckSchema).optional(),
   /** Only unresolved conflicts block registration. Resolved comparisons retain their evidence. */
   conflicts: z.array(z.string()),
@@ -51,14 +67,18 @@ export function validateRentalImport(input: unknown, now: Date, mode: "draft" | 
   const parsed = rentalImportSchema.safeParse(input);
   if (!parsed.success) return { ok: false, reasons: parsed.error.issues.map((i) => `${i.path.join(".")}: ${i.message}`) };
   const v = parsed.data, reasons: string[] = [];
-  for (const ended of endedPortalListings(v.portalChecks ?? [])) reasons.push(`掲載終了のため登録対象外です: ${ended.portal} / ${ended.listing.listingId}`);
+  for (const portal of PORTALS) {
+    const check = (v.portalChecks ?? []).filter((c) => c.portal === portal).sort((a, b) => Date.parse(b.checkedAt) - Date.parse(a.checkedAt))[0];
+    if (!check || !isFresh(check.checkedAt, now)) reasons.push(`${portal}: 24時間以内の掲載確認記録が必要です（取得不能も記録してください）`);
+  }
   if (!maintenance && !isRecentMail(v.email.receivedAt, now)) reasons.push("メールが直近1暦月の対象外です");
   for (const [label, quote] of [["メール", v.email.adQuote], ["取得元", v.source.adQuote]]) {
     const ads = extractAdEvidence(quote);
     const values = [...new Set(ads.map((a) => a.months))];
     if (!ads.length || ads.some((a) => a.ambiguous || a.months === null || a.months < 2) || values.length !== 1) reasons.push(`${label}のAD2か月以上を確定できません`);
   }
-  if (v.source.availability !== "available") reasons.push("募集中を確認できません");
+  if (v.source.provider !== "itandi" || v.source.availability !== "available" || !validListingEvidence(v.source.listingEvidence, "itandi", now)) reasons.push("ITANDIで同一号室の現在の掲載を確認してください");
+  if (v.reins.availability !== "available" || !validListingEvidence(v.reins.listingEvidence, "reins", now)) reasons.push("REINSで同一号室の現在の掲載を確認してください");
   if (!isFresh(v.source.checkedAt, now)) reasons.push("募集状況の確認が24時間以内ではありません");
   if (v.source.adValidUntil && Date.parse(v.source.adValidUntil) < now.getTime()) reasons.push("AD適用期限を過ぎています");
   const adEvidence = [
@@ -90,6 +110,11 @@ export function validateRentalImport(input: unknown, now: Date, mode: "draft" | 
     decisions.push({ field: choice.field, rule: choice.rule, selectedIndex: result.index, value: result.value });
   }
   if (v.conflicts.length) reasons.push(...v.conflicts.filter((c) => !resolved.has(c)).map((c) => `要確認: ${c}`));
+  if (mode === "published" && v.conditionChoices?.length) {
+    const review = v.contentReview;
+    if (!review || !isFresh(review.checkedAt, now) || review.digest !== rentalContentDigest(v.property)
+      || (v.property.locales ?? ["ja"]).some((locale) => !review.locales.includes(locale))) reasons.push("採用後の条件と日本語本文・公開する各翻訳を照合し、contentReviewに記録してください");
+  }
   if (v.property.dealType !== "rental" || v.property.spec.dealType !== "rental") reasons.push("賃貸物件のみ取込できます");
   if (!v.property.images.some((i) => i.kind === "photo") || !v.property.images.some((i) => i.kind === "floorplan")) reasons.push("写真と間取りが各1点以上必要です");
   if (v.property.spec.dealType === "rental") {
@@ -112,10 +137,10 @@ export function validateRentalImport(input: unknown, now: Date, mode: "draft" | 
   if (reasons.length) return { ok: false, reasons };
   const property: PropertyInput = {
     ...v.property, slug: `rent-${rentalIdentity(v.source)}`, status: mode,
-    spec: { ...v.property.spec, ...(v.property.spec.dealType === "rental" ? { availabilityExpiresAt: new Date(Date.parse(v.source.checkedAt) + 26 * 3600_000).toISOString() } : {}) },
+    spec: { ...v.property.spec, ...(v.property.spec.dealType === "rental" ? { availabilityExpiresAt: new Date(Math.min(Date.parse(v.source.checkedAt), Date.parse(v.source.listingEvidence.checkedAt), Date.parse(v.reins.listingEvidence.checkedAt)) + 26 * 3600_000).toISOString() } : {}) },
     infoUpdatedAt: jstDate(now), nextUpdateAt: jstDate(new Date(now.getTime() + DAY)),
     publishedAt: mode === "published" ? jstDate(now) : undefined,
-    internal: { rentalImport: { version: 1, policy: RENTAL_IMPORT_POLICY, email: v.email, source: v.source, reins: v.reins, advertisingEvidence: v.advertisingEvidence, photoPermission: v.photoPermission, conditionChoices: v.conditionChoices, decisions, portalChecks: v.portalChecks, portalCounts: summarizePortalChecks(v.portalChecks ?? []) } },
+    internal: { rentalImport: { version: 1, policy: RENTAL_IMPORT_POLICY, email: v.email, source: v.source, reins: v.reins, advertisingEvidence: v.advertisingEvidence, photoPermission: v.photoPermission, conditionChoices: v.conditionChoices, contentReview: v.contentReview, decisions, portalChecks: v.portalChecks, portalCounts: summarizePortalChecks(v.portalChecks ?? []) } },
   };
   return { ok: true, value: v, property };
 }

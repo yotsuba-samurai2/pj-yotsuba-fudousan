@@ -12,12 +12,15 @@
       "adQuote": "広告費200%"
     },
     "status": "closed",
-    "portal": "homes",
     "checkedAt": "2026-09-20T00:00:00Z",
-    "reference": "https://www.homes.co.jp/chintai/b-example/",
-    "quote": "掲載終了（匿名の形式例。実行時は実際の終了表示とURLに置換）",
-    "authenticated": false,
+    "reference": "https://system.reins.jp/main/BK/GBK003200",
+    "quote": "REINSで対象物件番号・建物・住所・号室の掲載終了を確認（匿名の形式例）",
+    "authenticated": true,
     "siteOperational": true,
-    "exactRoomMatched": true
+    "exactRoomMatched": true,
+    "confirmedBy": {
+      "provider": "reins",
+      "listingId": "test-100"
+    }
   }
 ]

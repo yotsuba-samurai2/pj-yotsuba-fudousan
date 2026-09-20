@@ -4,15 +4,27 @@ import { config } from "dotenv";
 import { portalCheckSchema, summarizePortalChecks } from "../../src/lib/rental-import/portal-counts";
 import { selectMailCandidates, type MailInput } from "../../src/lib/rental-import/candidates";
 import { validateRentalImport } from "../../src/lib/rental-import/validation";
+import { rentalContentDigest } from "../../src/lib/rental-import/content-review";
 import { inspectImage, isOwnedImage } from "../../src/lib/rental-import/media";
-import { closeRental, importRental, type ImportResult } from "../../src/lib/rental-import/lifecycle";
+import { closeRental, closureFromRentalImport, importRental, type ImportResult } from "../../src/lib/rental-import/lifecycle";
 
 async function main() {
   const args = process.argv.slice(2), command = args[0];
   const arg = (name: string) => args.find((s) => s.startsWith(`--${name}=`))?.slice(name.length + 3);
   const write = args.includes("--write"), inputPath = arg("input"), reportPath = arg("report");
-  if (!command || !["scan", "import", "close", "list", "portal-counts"].includes(command)) throw new Error("使用法: rental:run scan|import|close|list|portal-counts --input=JSON --report=JSON [--write] [--mode=draft|published] [--assets=DIR] [--maintenance]");
+  if (!command || !["scan", "import", "close", "list", "portal-counts", "content-digest"].includes(command)) throw new Error("使用法: rental:run scan|import|close|list|portal-counts|content-digest --input=JSON --report=JSON [--write] [--mode=draft|published] [--assets=DIR] [--maintenance]");
   const now = new Date();
+  if (command === "content-digest") {
+    if (!inputPath) throw new Error("--input が必要です");
+    const records = JSON.parse(await readFile(inputPath, "utf8"));
+    if (!Array.isArray(records)) throw new Error("入力は物件の配列にしてください");
+    const results = records.map((record) => {
+      const gate = validateRentalImport(record, now, "draft", args.includes("--maintenance"));
+      return gate.ok ? { slug: gate.property.slug, digest: rentalContentDigest(gate.property), property: gate.property,
+        note: "採用後の本文と各公開言語を確認してから、日時・参照先・公開言語とともにcontentReviewへ記録してください" } : { reasons: gate.reasons };
+    });
+    await output({ results }); return;
+  }
   if (command === "portal-counts") {
     if (!inputPath) throw new Error("--input が必要です");
     const checks = portalCheckSchema.array().parse(JSON.parse(await readFile(inputPath, "utf8")));
@@ -59,6 +71,7 @@ async function main() {
     for (const record of records) {
       try {
         if (command === "close") { results.push(await closeRental(record, rentalStore, now)); continue; }
+        if (closureFromRentalImport(record, now)) { results.push(await importRental(record, rentalStore, now, mode, maintenance)); continue; }
         const gate = validateRentalImport(record, now, mode, maintenance);
         if (!gate.ok) { results.push({ action: "held", reasons: gate.reasons }); continue; }
         const preflight = await importRental(gate.value, { ...rentalStore, create: async () => {}, update: async () => true }, now, mode, maintenance);

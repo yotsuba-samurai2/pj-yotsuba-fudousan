@@ -1,12 +1,22 @@
 [
   {
-    "source": { "provider": "itandi", "roomId": "123", "building": "検証用マンション", "address": "東京都文京区検証町1-2-3", "unit": "001" },
+    "source": {
+      "provider": "itandi",
+      "roomId": "123",
+      "building": "検証用マンション",
+      "address": "東京都文京区検証町1-2-3",
+      "unit": "001"
+    },
     "status": "removed",
     "checkedAt": "2026-09-20T01:00:00.000Z",
-    "reference": "取得元の物件ID検索結果（実行時に更新）",
+    "reference": "https://itandibb.com/rent_rooms/123",
     "quote": "対象物件IDで再検索し掲載なし（実行時の観測内容を記載）",
     "authenticated": true,
     "siteOperational": true,
-    "exactRoomMatched": true
+    "exactRoomMatched": true,
+    "confirmedBy": {
+      "provider": "itandi",
+      "listingId": "123"
+    }
   }
 ]

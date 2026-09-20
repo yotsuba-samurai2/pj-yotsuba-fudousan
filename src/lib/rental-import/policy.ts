@@ -2,12 +2,14 @@ import { z } from "zod";
 
 /** Business rules explicitly instructed by the operator on 2026-09-20. */
 export const RENTAL_IMPORT_POLICY = {
-  id: "operator-20260920-v2",
+  id: "operator-20260920-v3",
   advertising: "any-matched-current-allow",
   images: "operator-blanket-allow",
   conditions: "strictest-observed",
   pets: "largest-observed-count",
-  endedListings: "exclude-any-confirmed-end",
+  availability: "both-itandi-and-reins-current",
+  endedListings: "close-on-primary-source-end",
+  portalEnd: "counts-only",
 } as const;
 
 export const evidenceSchema = z.object({
