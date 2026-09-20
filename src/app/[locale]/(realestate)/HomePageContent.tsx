@@ -1,3 +1,4 @@
+import { PropertySearchSampleTeaser } from "@/components/shared/PropertySearchSample";
 import { CustomerVoicesPreview } from "@/components/shared/CustomerVoices";
 import Image from "next/image";
 // /（型F・二本柱トップ）本文＝原稿_不動産 #1（E-1差し戻し対応・2026-07-10）
@@ -463,6 +464,8 @@ export default async function HomePageContent() {
             </Link>
           ))}
         </section>
+
+        <PropertySearchSampleTeaser locale={locale} page="/" />
 
         {/* 60秒診断＝LINKAインライン本体（フェーズK接続済み・1ページ1LINKA＝右下FABはこのページ非表示のまま） */}
         <section aria-label="60-second diagnosis" className="mt-10 rounded-2xl bg-primary-tint p-4 sm:p-6">
