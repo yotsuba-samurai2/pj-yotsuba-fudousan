@@ -63,12 +63,10 @@ describe("公開ゲート", () => {
 });
 
 describe("再実行と掲載終了", () => {
-  it.each(["itandi", "reins"] as const)("%sの終了はAD・賃料・他方の証拠がなくても反映", async (provider) => {
+  it("ITANJIの終了はAD・賃料の証拠がなくても反映", async () => {
     const { store, rows } = memoryStore(); const v = fixture(); const created = await importRental(v, store, NOW, "published");
     const identity = { provider: "itandi", roomId: v.source.roomId, building: v.source.building, address: v.source.address, unit: v.source.unit };
-    const minimal = provider === "itandi"
-      ? { source: { ...identity, availability: "closed", listingEvidence: v.source.listingEvidence, adQuote: "", rent: null }, reins: { evidence: { quote: "" } } }
-      : { source: identity, reins: { building: v.reins.building, address: v.reins.address, unit: v.reins.unit, propertyId: v.reins.propertyId, availability: "removed", listingEvidence: v.reins.listingEvidence } };
+    const minimal = { source: { ...identity, availability: "closed", listingEvidence: v.source.listingEvidence, adQuote: "", rent: null } };
     expect((await importRental(minimal, store, NOW, "published", true)).action).toBe("closed");
     expect(rows.get(created.slug!)!.status).toBe("closed");
   });
@@ -92,7 +90,7 @@ describe("再実行と掲載終了", () => {
     const { store, rows } = memoryStore(); const v = fixture(); const created = await importRental(v, store, NOW, "published");
     rows.get(created.slug!)!.description = "管理者による編集";
     v.property.priceYen = -1;
-    v.reins.availability = "closed"; v.reins.listingEvidence.quote = "同一物件・001号室の掲載終了を確認";
+    v.source.availability = "closed"; v.source.listingEvidence.quote = "同一物件・001号室の掲載終了を確認";
     expect((await importRental(v, store, NOW, "published", true)).action).toBe("closed");
     expect(rows.get(created.slug!)!.status).toBe("closed");
   });

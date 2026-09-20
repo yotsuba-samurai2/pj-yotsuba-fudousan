@@ -6,7 +6,6 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
   getPublicPropertyBySlug,
-  getAllPublishedPropertiesAllLocales,
   getLocalizedProperty,
   isPropertyLocaleAllowed,
 } from "@/lib/properties";
@@ -40,9 +39,10 @@ import type { LangCode } from "@/config/languages";
 
 type Props = { params: Promise<{ slug: string }> };
 
-export async function generateStaticParams() {
-  const properties = await getAllPublishedPropertiesAllLocales();
-  return properties.map((p) => ({ slug: p.slug }));
+// Property data changes independently of code deploys. Keep detail pages on-demand so
+// Vercel does not enumerate and pre-render every published property on each deployment.
+export function generateStaticParams() {
+  return [];
 }
 
 /** meta description用の要約（markdown記号と改行を落として120字） */

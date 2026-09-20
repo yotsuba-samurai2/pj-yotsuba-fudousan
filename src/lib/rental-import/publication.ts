@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any -- legacy v1.1 evidence is read only for migration. */
 import type { PropertyInput } from "@/lib/property-shared";
 import { isRentalExpired } from "@/lib/property-shared";
 import { isOwnedImage } from "./media";
@@ -20,9 +21,10 @@ export function rentalPublicationError(p: PropertyInput, now = new Date(), exist
   if (p.status !== "published" || p.dealType !== "rental") return null;
   if (isRentalExpired(p, now)) return "賃貸物件の募集状況を再確認してください（公開期限切れ）";
   if (!proof || typeof proof !== "object") return "賃貸物件の広告可・募集状況の確認記録がありません";
-  const result = validateRentalImport({ ...proof, conflicts: [], property: p }, now, "published", !!oldProof);
+  const legacy = (proof as Record<string, any>).migration?.legacyReins ?? (proof as Record<string, any>).reins;
+  const result = validateRentalImport({ ...proof, ...(legacy ? { reins: legacy } : {}), conflicts: [], property: p }, now, "published", !!oldProof);
   if (!result.ok) return result.reasons.join(" / ");
-  if (p.priceYen !== result.property.priceYen) return "公開賃料をITANDI・REINSの高い方と一致させてください";
+  if (p.priceYen !== result.property.priceYen) return "公開賃料をITANJIの確認値と一致させてください";
   if (p.spec.dealType === "rental" && result.property.spec.dealType === "rental") {
     for (const choice of result.value.conditionChoices ?? []) if (p.spec[choice.field] !== result.property.spec[choice.field]) return "公開条件を採用ルールで選択した原文と一致させてください";
   }

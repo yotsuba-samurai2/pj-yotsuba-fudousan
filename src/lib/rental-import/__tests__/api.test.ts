@@ -20,7 +20,7 @@ describe("賃貸取込API", () => {
   it("終了を含む再確認はチェックで予告し実行時に画像なしで停止", async () => {
     const v = fixture(); const initial = validateRentalImport(v, NOW, "published"); if (!initial.ok) throw new Error();
     deps.get.mockResolvedValue({ ...initial.property, id: "existing", updatedAt: "version1" }); deps.update.mockResolvedValue(true);
-    v.reins.availability = "closed"; v.reins.listingEvidence.quote = "同一物件・001号室の掲載終了を確認";
+    v.source.availability = "closed"; v.source.listingEvidence.quote = "同一物件・001号室の掲載終了を確認";
     v.property.images = []; v.property.priceYen = -1;
     expect(await (await POST(req("check", v))).json()).toMatchObject({ action: "ready-close" }); expect(deps.update).not.toHaveBeenCalled();
     expect(await (await POST(req("apply", v))).json()).toMatchObject({ action: "closed" });

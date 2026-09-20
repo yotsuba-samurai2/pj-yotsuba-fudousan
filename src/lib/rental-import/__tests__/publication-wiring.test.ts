@@ -50,7 +50,7 @@ describe("賃貸取込APIの公開変更通知", () => {
   it("掲載終了（apply経由・importRental内部のclosure分岐）で before=既存・after.status=closed", async () => {
     const initial = validateRentalImport(fixture(), NOW, "published"); if (!initial.ok) throw new Error();
     deps.get.mockResolvedValue({ ...initial.property, id: "existing", updatedAt: "version1" }); deps.update.mockResolvedValue(true);
-    const v = fixture(); v.reins.availability = "closed"; v.reins.listingEvidence.quote = "同一物件・001号室の掲載終了を確認";
+    const v = fixture(); v.source.availability = "closed"; v.source.listingEvidence.quote = "同一物件・001号室の掲載終了を確認";
     v.property.images = []; v.property.priceYen = -1; // apply時のimages再検証（held化）を避ける＝lifecycle.tsのclosure分岐を先に通す
     const res = await POST(req("apply", v));
     expect((await res.json()).action).toBe("closed");

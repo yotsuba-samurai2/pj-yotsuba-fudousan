@@ -78,12 +78,13 @@ describe("2026-09-20の採用ルール", () => {
     review(v); v.property.description = "賃料8万円です";
     expect(validateRentalImport(v, NOW, "published").ok).toBe(false);
   });
-  it("賃料はITANDIとREINSの高い方を採用し、本文の再照合なしでは公開しない", () => {
+  it("賃料はITANJIの確認値を採用し、本文の再照合なしでは公開しない", () => {
     const v = fixture(); v.reins.rent.yen = 90000; v.reins.rent.evidence.quote = "賃料9万円";
-    const draft = validateRentalImport(v, NOW); expect(draft.ok).toBe(true); if (draft.ok) expect(draft.property.priceYen).toBe(90000);
-    expect(validateRentalImport(v, NOW, "published").ok).toBe(false);
-    v.property.priceYen = 90000; review(v); const pub = validateRentalImport(v, NOW, "published"); if (!pub.ok) throw new Error(pub.reasons.join());
-    pub.property.priceYen = 85500; expect(rentalPublicationError(pub.property, NOW)).toContain("高い方");
+    v.source.advertising = { status: "allowed", evidence: proof("広告可") }; Reflect.deleteProperty(v, "reins");
+    const draft = validateRentalImport(v, NOW); expect(draft.ok).toBe(true); if (draft.ok) expect(draft.property.priceYen).toBe(85500);
+    expect(validateRentalImport(v, NOW, "published").ok).toBe(true);
+    v.property.priceYen = 85500; review(v); const pub = validateRentalImport(v, NOW, "published"); if (!pub.ok) throw new Error(pub.reasons.join());
+    pub.property.priceYen = 90000; expect(rentalPublicationError(pub.property, NOW)).toContain("ITANJI");
   });
   it("公開ポータルの費用条件や賃料原文を採用しない", () => {
     const c = fees(); c.options[1].evidence.reference = "https://suumo.jp/chintai/bc_123/"; expect(selectCondition(c, NOW).ok).toBe(false);
@@ -96,7 +97,7 @@ describe("2026-09-20の採用ルール", () => {
     v.advertisingEvidence = [{ ...v.source, status: "allowed", evidence: proof("広告掲載可") }];
     expect(validateRentalImport(v, NOW).ok).toBe(true);
   });
-  it("広告可が別資料にあってもREINS掲載記録は必須", () => { const v = fixture(); const { reins: _reins, ...input } = v; void _reins; expect(validateRentalImport({ ...input, advertisingEvidence: [{ ...v.source, status: "allowed", evidence: proof("広告可") }] }, NOW).ok).toBe(false); });
+  it("広告可がITANJIの別資料にあれば公開できる", () => { const v = fixture(); const { reins: _reins, ...input } = v; void _reins; expect(validateRentalImport({ ...input, advertisingEvidence: [{ ...v.source, status: "allowed", evidence: proof("広告可") }] }, NOW).ok).toBe(true); });
   it.each(["広告可否", "広告可ではありません", "広告不可"])("ラベルや否定文を広告可と誤認しない: %s", (quote) => { const v = fixture(); v.reins.evidence.quote = quote; expect(validateRentalImport(v, NOW).ok).toBe(false); });
   it("他の部屋の許可を採用しない", () => { const v = fixture(); v.reins.advertising = "unknown"; v.advertisingEvidence = [{ ...v.source, unit: "002", status: "allowed", evidence: proof("広告可") }]; expect(validateRentalImport(v, NOW).ok).toBe(false); });
   it("広告可の根拠が古ければ保留", () => { const v = fixture(); v.reins.evidence.checkedAt = "2026-09-18T01:00:00Z"; expect(validateRentalImport(v, NOW).ok).toBe(false); });
