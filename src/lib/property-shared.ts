@@ -169,6 +169,10 @@ export type PropertyTranslation = {
   description: string;
   /** 所在地の訳（省略時は ja の locationText を表示） */
   locationText?: string;
+  /** 価格注記の訳（自由記述） */
+  priceNote?: string;
+  /** 概要表の自由記述の訳。キーは表示行のkey（例 conditions / insurance / legalRestrictions） */
+  spec?: Record<string, string>;
 };
 
 /** admin CRUD用の物件型（timestampはISO文字列。priceYenはJS number＝BigInt列からの変換値） */
@@ -526,7 +530,7 @@ function formatYm(ym: string): string {
 
 // ── sitemap・一覧の収載判定（closed/draft を出さない） ──
 
-/** sitemap・一覧・generateStaticParams に載せてよいのは published のみ */
+/** status だけの判定。公開面の最終判定は isPubliclyVisible（期限・ロケール込み）を使う */
 export function isListable(p: Pick<PublicProperty, "status">): boolean {
   return p.status === "published";
 }
@@ -612,4 +616,19 @@ export function isRentalExpired(p: Pick<PublicProperty, "dealType" | "spec">, no
   if (p.spec.dealType !== "rental" || !p.spec.availabilityExpiresAt) return true;
   const expiry = Date.parse(p.spec.availabilityExpiresAt);
   return !Number.isFinite(expiry) || expiry <= now.getTime();
+}
+
+/**
+ * 公開面（一覧・詳細・関連ブロック・ItemList・JSON-LD・sitemap・llms.txt）共通の公開判定。
+ * published かつ 賃貸の確認期限内 かつ（locale 指定時は）そのロケールで公開。
+ * closed（募集終了）と期限超過は別の理由だが、どちらも公開面には出さない。
+ */
+export function isPubliclyVisible(
+  p: Pick<PublicProperty, "status" | "dealType" | "spec" | "locales">,
+  locale?: LangCode,
+  now = new Date(),
+): boolean {
+  if (p.status !== "published") return false;
+  if (isRentalExpired(p, now)) return false;
+  return locale ? isPropertyLocaleAllowed(p, locale) : true;
 }

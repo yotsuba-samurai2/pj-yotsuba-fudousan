@@ -1,12 +1,10 @@
-// RealEstateListingJsonLd — 物件詳細の構造化データ。
-// @type=RealEstateListing（schema.org一次確認2026-09-01：WebPageのサブタイプ・datePosted所持。
-// Googleのリッチリザルト対応一覧に不動産リスティング用タイプは無い＝目的はエンティティ明確化）。
-// availability は出力しない（2026-09-01浦松修正指示5）。
-// closed（募集終了）では offers を出さない＝古い価格を再配布しない。
+// RealEstateListingJsonLd — 物件詳細の構造化データ（組み立ては src/lib/property-jsonld.ts の純関数）。
 // 入力は必ず PublicProperty（toPublicProperty のホワイトリスト経由）＝internal の混入経路を断つ。
+// 募集終了・期限超過の物件はページ自体が404のため、ここに到達しない。
 import { JsonLd } from "@/components/seo/JsonLd";
 import { SITE_URL, BCP47_BY_LOCALE, canonicalUrl } from "@/lib/seo";
-import { walkMinutes, type PublicProperty } from "@/lib/property-shared";
+import type { PublicProperty } from "@/lib/property-shared";
+import { buildRealEstateListingJsonLd } from "@/lib/property-jsonld";
 import type { LangCode } from "@/config/languages";
 
 /** ルート相対はSITE_URLで絶対化し、絶対URL（Supabase等）はそのまま使う（二重連結バグの回避） */
@@ -14,58 +12,12 @@ function toAbsoluteImageUrl(url: string): string {
   return url.startsWith("/") ? `${SITE_URL}${url}` : url;
 }
 
-export function RealEstateListingJsonLd({
-  property,
-  locale,
-}: {
-  property: PublicProperty;
-  locale: LangCode;
-}) {
-  const url = canonicalUrl("realestate", `/bukken/${property.slug}`, locale);
-  const images = property.images.map((img) => toAbsoluteImageUrl(img.url));
-
-  // 土地・事業用建物には schema.org に適合する Accommodation 系タイプが無いため
-  // mainEntity は住宅系のみ（未検証の型を使わない＝診断書D承認どおり）
-  const mainEntity =
-    property.dealType === "house"
-      ? { "@type": "House", name: property.title }
-      : property.dealType === "condo" || (property.spec.dealType === "rental" && /マンション|アパート/.test(property.spec.buildingType))
-        ? { "@type": "Apartment", name: property.title }
-        : undefined;
-
-  const data = {
-    "@context": "https://schema.org",
-    "@type": "RealEstateListing",
-    "@id": `${url}#listing`,
-    url,
-    name: property.title,
+export function RealEstateListingJsonLd({ property, locale }: { property: PublicProperty; locale: LangCode }) {
+  const data = buildRealEstateListingJsonLd(property, locale, {
+    url: canonicalUrl("realestate", `/bukken/${property.slug}`, locale),
+    siteUrl: SITE_URL,
     inLanguage: BCP47_BY_LOCALE[locale],
-    ...(property.publishedAt ? { datePosted: property.publishedAt } : {}),
-    dateModified: property.infoUpdatedAt,
-    ...(images.length > 0 ? { image: images } : {}),
-    ...(property.access.length > 0
-      ? {
-          description: `${property.locationText}／${property.access
-            .map((a) => `${a.line}${a.station}駅 徒歩${walkMinutes(a.distanceM)}分`)
-            .join("・")}`,
-        }
-      : { description: property.locationText }),
-    ...(mainEntity ? { mainEntity } : {}),
-    ...(property.status === "published"
-      ? {
-          offers: {
-            "@type": "Offer",
-            price: property.priceYen,
-            priceCurrency: "JPY",
-            ...(property.dealType === "rental" ? {
-              businessFunction: "http://purl.org/goodrelations/v1#LeaseOut",
-              priceSpecification: { "@type": "UnitPriceSpecification", price: property.priceYen, priceCurrency: "JPY", unitText: "月" },
-            } : {}),
-            offeredBy: { "@id": `${SITE_URL}/#organization` },
-          },
-        }
-      : {}),
-  };
-
+    images: property.images.map((img) => toAbsoluteImageUrl(img.url)),
+  });
   return <JsonLd data={data} />;
 }

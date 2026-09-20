@@ -4,16 +4,11 @@ export const dynamic = "force-dynamic";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getPublishedProperties, getLocalizedProperty } from "@/lib/properties";
-import {
-  formatPropertyPrice,
-  formatAccess,
-  CATEGORY_LABELS,
-  DEAL_TYPE_LABELS,
-  TRADE_MODE_LABELS,
-  type PropertyCategory,
-  type PublicProperty,
-} from "@/lib/property-shared";
-import { buildPageMetadata } from "@/lib/seo";
+import { type PropertyCategory, type PublicProperty } from "@/lib/property-shared";
+import { formatAccessL, formatPropertyPriceL, localizedImageAlt, propertyUi } from "@/lib/property-i18n";
+import { buildPropertyItemListJsonLd } from "@/lib/property-jsonld";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { buildPageMetadata, canonicalUrl } from "@/lib/seo";
 import { getRequestLocale } from "@/lib/getRequestLocale";
 import { addLocalePrefix } from "@/lib/locale";
 import { Breadcrumb } from "@/components/shared/Breadcrumb";
@@ -81,6 +76,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 function PropertyCard({ p, locale }: { p: PublicProperty; locale: LangCode }) {
   const hero = p.images[0];
+  const ui = propertyUi(locale);
   return (
     <Link
       href={addLocalePrefix(`/bukken/${p.slug}`, locale)}
@@ -91,7 +87,7 @@ function PropertyCard({ p, locale }: { p: PublicProperty; locale: LangCode }) {
         // eslint-disable-next-line @next/next/no-img-element
         <img
           src={hero.url}
-          alt={hero.alt}
+          alt={localizedImageAlt(hero, p.title, locale)}
           width={160}
           height={120}
           className="h-24 w-32 flex-shrink-0 rounded-lg object-cover"
@@ -104,17 +100,17 @@ function PropertyCard({ p, locale }: { p: PublicProperty; locale: LangCode }) {
       <div className="min-w-0">
         <p className="flex flex-wrap gap-1 text-[10px]">
           <span className="rounded-full bg-primary-tint px-2 py-0.5 font-medium text-primary">
-            {DEAL_TYPE_LABELS[p.dealType]}
+            {ui.dealType[p.dealType]}
           </span>
           <span className="rounded-full bg-surface-dim px-2 py-0.5 font-medium text-text-muted">
-            {TRADE_MODE_LABELS[p.tradeMode]}
+            {ui.tradeMode[p.tradeMode]}
           </span>
         </p>
         <h3 className="mt-1 break-words text-sm font-semibold text-ink">{p.title}</h3>
-        <p className="mt-1 text-sm font-semibold text-primary">{formatPropertyPrice(p)}</p>
+        <p className="mt-1 text-sm font-semibold text-primary">{formatPropertyPriceL(p, locale)}</p>
         <p className="mt-0.5 truncate text-xs text-text-muted">{p.locationText}</p>
         {p.access[0] && (
-          <p className="truncate text-xs text-text-muted">{formatAccess(p.access[0])}</p>
+          <p className="truncate text-xs text-text-muted">{formatAccessL(p.access[0], locale)}</p>
         )}
       </div>
     </Link>
@@ -124,13 +120,23 @@ function PropertyCard({ p, locale }: { p: PublicProperty; locale: LangCode }) {
 export default async function BukkenListPage() {
   const locale = await getRequestLocale();
   const c = COPY[locale] ?? COPY.ja;
-  const properties = (await getPublishedProperties(locale)).map((p) =>
-    getLocalizedProperty(p, locale),
-  );
+  const ui = propertyUi(locale);
+  const visible = (await getPublishedProperties(locale)).map((p) => getLocalizedProperty(p, locale));
+  // 画面の並び（カテゴリ順→取得順）をそのまま ItemList の position に使う＝可視リストと一致させる
+  const properties = CATEGORY_ORDER.flatMap((cat) => visible.filter((p) => p.category === cat));
 
   return (
     <>
-      <Breadcrumb items={[{ name: "ホーム", href: "/" }, { name: c.h1 }]} />
+      {properties.length > 0 && (
+        <JsonLd
+          data={buildPropertyItemListJsonLd(
+            properties.map((p) => ({ name: p.title, url: canonicalUrl("realestate", `/bukken/${p.slug}`, locale) })),
+            canonicalUrl("realestate", "/bukken", locale),
+            locale,
+          )}
+        />
+      )}
+      <Breadcrumb items={[{ name: ui.home, href: "/" }, { name: c.h1 }]} />
       <article className="mx-auto max-w-3xl px-4 pb-16">
         <header className="pt-4">
           <h1 className="font-serif text-2xl font-semibold text-ink sm:text-3xl">{c.h1}</h1>
@@ -148,7 +154,7 @@ export default async function BukkenListPage() {
             ).map((cat) => (
               <section key={cat}>
                 <h2 className="font-serif text-xl font-semibold text-ink">
-                  {CATEGORY_LABELS[cat]}
+                  {ui.category[cat]}
                 </h2>
                 <div className="mt-3 space-y-3">
                   {properties

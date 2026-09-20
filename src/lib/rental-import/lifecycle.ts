@@ -15,6 +15,13 @@ export function publicDigest(p: PropertyInput) {
   return createHash("sha256").update(JSON.stringify(canonical(toPublicProperty(p)))).digest("hex");
 }
 export type ImportResult = { action: "created" | "updated" | "held" | "closed" | "unchanged"; slug?: string; reasons?: string[] };
+/**
+ * 実際にDBへ書き込めたときだけ呼ばれる、公開変更の通知フック（省略可・既定は何もしない）。
+ * このモジュールは通知の実装（Prisma・IndexNow等）を知らない＝呼び出し元（APIルート）が注入する。
+ * "check"系の検証専用呼び出し（create/updateをスタブ化した呼び出し）には絶対に渡さないこと
+ * （実際に保存していない変更を通知してしまう）。
+ */
+export type PublicationChangeHook = (before: AdminProperty | null, after: PropertyInput, now: Date) => void | Promise<void>;
 
 /** Closure evidence remains actionable when unrelated price, text or image fields are invalid. */
 export function closureFromRentalImport(input: unknown, now: Date) {
@@ -37,10 +44,10 @@ export function closureFromRentalImport(input: unknown, now: Date) {
   return null;
 }
 
-export async function importRental(input: unknown, store: RentalStore, now: Date, mode: "draft" | "published", maintenance = false): Promise<ImportResult> {
+export async function importRental(input: unknown, store: RentalStore, now: Date, mode: "draft" | "published", maintenance = false, onChange?: PublicationChangeHook): Promise<ImportResult> {
   const closure = closureFromRentalImport(input, now);
   if (closure) {
-    const result = await closeRental(closure, store, now);
+    const result = await closeRental(closure, store, now, onChange);
     return result.action === "unchanged" ? { action: "held", slug: result.slug, reasons: ["掲載終了のため登録対象外です"] } : result;
   }
   // Existing listings continue monitoring after the original email ages out of the intake window.
@@ -61,9 +68,11 @@ export async function importRental(input: unknown, store: RentalStore, now: Date
   meta.lastPublicDigest = publicDigest(p);
   if (existing) {
     const success = await store.update(p.slug, existing.updatedAt!, p);
+    if (success) await onChange?.(existing, p, now);
     return success ? { action: "updated", slug: p.slug } : { action: "held", slug: p.slug, reasons: ["同時更新を検出しました。次回再確認します"] };
   }
   await store.create(p);
+  await onChange?.(null, p, now);
   return { action: "created", slug: p.slug };
 }
 
@@ -76,7 +85,7 @@ export const closureSchema = z.object({
   /** Removal is confirmed only in an authenticated, functioning search/detail view. */
   authenticated: z.boolean(), siteOperational: z.boolean(), exactRoomMatched: z.boolean(),
 }).strict();
-export async function closeRental(input: unknown, store: RentalStore, now: Date): Promise<ImportResult> {
+export async function closeRental(input: unknown, store: RentalStore, now: Date, onChange?: PublicationChangeHook): Promise<ImportResult> {
   const parsed = closureSchema.safeParse(input);
   if (!parsed.success) return { action: "held", reasons: ["掲載終了確認の形式が不正です"] };
   const v = parsed.data, slug = `rent-${rentalIdentity(v.source)}`;
@@ -89,5 +98,6 @@ export async function closeRental(input: unknown, store: RentalStore, now: Date)
   if (v.confirmedBy.listingId !== registeredId) return { action: "held", slug, reasons: ["終了を確認した物件番号が登録時と一致しません"] };
   // Even manually edited imports must be withdrawn once closure is verified.
   const success = await store.update(slug, existing.updatedAt!, { status: "closed", internal: { ...existing.internal, rentalClosure: v } });
+  if (success) await onChange?.(existing, { ...existing, status: "closed" }, now);
   return success ? { action: "closed", slug } : { action: "held", slug, reasons: ["同時更新を検出しました。再確認が必要です"] };
 }

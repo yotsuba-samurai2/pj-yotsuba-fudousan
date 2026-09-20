@@ -8,6 +8,10 @@ import {
   deleteProperty,
 } from "@/lib/db/properties";
 import { parsePropertyInput, parsePropertyPatch, bannedTermsError } from "@/lib/property-validation";
+import {
+  recordPropertyPublicationChange,
+  scheduleDuePropertyNotifications,
+} from "@/lib/property-publication-notify";
 
 type Ctx = { params: Promise<{ id: string }> };
 
@@ -70,6 +74,9 @@ export async function PATCH(req: NextRequest, ctx: Ctx) {
     if (protectedRental) {
       if (!await updatePropertyIfUnchanged(existing.slug, body.expectedUpdatedAt, parsed.data)) return NextResponse.json({ error: "同時更新を検出しました。最新の画面を開き直してください" }, { status: 409 });
     } else await updateProperty(id, parsed.data);
+    const now = new Date();
+    await recordPropertyPublicationChange(existing, merged.data, now);
+    scheduleDuePropertyNotifications(now);
     return NextResponse.json({ ok: true });
   } catch (err) {
     return handleError(err);
