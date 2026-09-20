@@ -83,7 +83,7 @@ export default function BukkenListPage() {
     setBusy(p.id);
     try {
       const todayStr = new Date().toISOString().slice(0, 10);
-      await updateBukken(p.id, { status: "closed", infoUpdatedAt: todayStr });
+      await updateBukken(p.id, { status: "closed", infoUpdatedAt: todayStr }, p.updatedAt);
       await revalidateBukken(p.slug);
       setProperties((prev) =>
         prev.map((x) => (x.id === p.id ? { ...x, status: "closed" } : x)),

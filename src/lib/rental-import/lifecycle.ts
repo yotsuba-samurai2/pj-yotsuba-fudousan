@@ -1,7 +1,7 @@
 import { createHash } from "node:crypto";
 import { z } from "zod";
 import { toPublicProperty, type AdminProperty, type PropertyInput } from "@/lib/property-shared";
-import { isFresh, isPrimaryReference, validListingEvidence, rentalIdentity, rentalImportSchema, validateRentalImport } from "./validation";
+import { isFresh, isPrimaryReference, validListingEvidence, rentalIdentity, listingEvidenceSchema, validateRentalImport } from "./validation";
 
 export interface RentalStore {
   get(slug: string): Promise<AdminProperty | null>;
@@ -18,17 +18,23 @@ export type ImportResult = { action: "created" | "updated" | "held" | "closed" |
 
 /** Closure evidence remains actionable when unrelated price, text or image fields are invalid. */
 export function closureFromRentalImport(input: unknown, now: Date) {
-  const parsed = rentalImportSchema.pick({ source: true }).extend({ reins: rentalImportSchema.shape.reins.optional() }).safeParse(input);
-  if (!parsed.success) return null;
-  const { source, reins } = parsed.data;
-  if (source.provider !== "itandi") return null;
-  const candidates = [
-    { provider: "itandi" as const, listingId: source.roomId, availability: source.availability, evidence: source.listingEvidence },
-    ...(reins && rentalIdentity(reins) === rentalIdentity(source) ? [{ provider: "reins" as const, listingId: reins.propertyId, availability: reins.availability, evidence: reins.listingEvidence }] : []),
-  ];
-  const ended = candidates.find((c) => (c.availability === "closed" || c.availability === "removed") && validListingEvidence(c.evidence, c.provider, now));
-  if (!ended) return null;
-  return { source, status: ended.availability as "closed" | "removed", confirmedBy: { provider: ended.provider, listingId: ended.listingId }, ...ended.evidence };
+  // Parse each provider independently: missing rent/AD/advertising on either side
+  // must not suppress a confirmed withdrawal from the other provider.
+  const identity = z.object({ building: z.string().trim().min(1), address: z.string().trim().min(1), unit: z.string().trim().min(1) });
+  const sourceSchema = identity.extend({ provider: z.literal("itandi"), roomId: z.string().min(1) });
+  const envelope = z.object({ source: sourceSchema, reins: z.unknown().optional() }).safeParse(input);
+  if (!envelope.success) return null;
+  const source = envelope.data.source;
+  const endedSchema = z.object({ availability: z.enum(["closed", "removed"]), listingEvidence: listingEvidenceSchema });
+  const itandi = z.object({ source: endedSchema }).safeParse(input);
+  if (itandi.success && validListingEvidence(itandi.data.source.listingEvidence, "itandi", now)) {
+    return { source, status: itandi.data.source.availability, confirmedBy: { provider: "itandi" as const, listingId: source.roomId }, ...itandi.data.source.listingEvidence };
+  }
+  const reins = identity.extend({ propertyId: z.string().min(1), ...endedSchema.shape }).safeParse(envelope.data.reins);
+  if (reins.success && rentalIdentity(reins.data) === rentalIdentity(source) && validListingEvidence(reins.data.listingEvidence, "reins", now)) {
+    return { source, status: reins.data.availability, confirmedBy: { provider: "reins" as const, listingId: reins.data.propertyId }, ...reins.data.listingEvidence };
+  }
+  return null;
 }
 
 export async function importRental(input: unknown, store: RentalStore, now: Date, mode: "draft" | "published", maintenance = false): Promise<ImportResult> {

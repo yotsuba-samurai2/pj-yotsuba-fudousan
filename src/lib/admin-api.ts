@@ -211,10 +211,11 @@ export async function createBukken(data: PropertyInput): Promise<string> {
 export async function updateBukken(
   id: string,
   data: Partial<PropertyInput>,
+  expectedUpdatedAt?: string,
 ): Promise<void> {
   await apiFetch(`/api/admin/bukken/${encodeURIComponent(id)}`, {
     method: "PATCH",
-    body: JSON.stringify(data),
+    body: JSON.stringify({ ...data, expectedUpdatedAt }),
   });
 }
 

@@ -23,6 +23,14 @@
         "authenticated": true,
         "siteOperational": true,
         "exactRoomMatched": true
+      },
+      "rent": {
+        "yen": 85500,
+        "evidence": {
+          "checkedAt": "2026-09-20T01:00:00.000Z",
+          "reference": "https://itandibb.com/rent_rooms/123",
+          "quote": "賃料85500円"
+        }
       }
     },
     "reins": {
@@ -44,6 +52,14 @@
         "authenticated": true,
         "siteOperational": true,
         "exactRoomMatched": true
+      },
+      "rent": {
+        "yen": 85500,
+        "evidence": {
+          "checkedAt": "2026-09-20T01:00:00.000Z",
+          "reference": "https://system.reins.jp/main/BK/GBK003200",
+          "quote": "賃料85500円"
+        }
       }
     },
     "photoPermission": {
@@ -119,18 +135,20 @@
             "maxCount": 1,
             "evidence": {
               "checkedAt": "2026-09-20T00:00:00Z",
-              "reference": "匿名資料A",
+              "reference": "https://itandibb.com/rent_rooms/123",
               "quote": "小型犬1匹まで"
-            }
+            },
+            "provider": "itandi"
           },
           {
             "value": "小型犬・猫合計2匹まで・敷金1ヶ月積増",
             "maxCount": 2,
             "evidence": {
               "checkedAt": "2026-09-20T00:00:00Z",
-              "reference": "匿名資料B",
+              "reference": "https://system.reins.jp/main/BK/GBK003200",
               "quote": "小型犬・猫合計2匹まで・敷金1ヶ月積増"
-            }
+            },
+            "provider": "reins"
           }
         ]
       }

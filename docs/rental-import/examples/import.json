@@ -23,6 +23,14 @@
         "authenticated": true,
         "siteOperational": true,
         "exactRoomMatched": true
+      },
+      "rent": {
+        "yen": 85500,
+        "evidence": {
+          "checkedAt": "2026-09-20T01:00:00.000Z",
+          "reference": "https://itandibb.com/rent_rooms/123",
+          "quote": "賃料85500円"
+        }
       }
     },
     "reins": {
@@ -44,6 +52,14 @@
         "authenticated": true,
         "siteOperational": true,
         "exactRoomMatched": true
+      },
+      "rent": {
+        "yen": 85500,
+        "evidence": {
+          "checkedAt": "2026-09-20T01:00:00.000Z",
+          "reference": "https://system.reins.jp/main/BK/GBK003200",
+          "quote": "賃料85500円"
+        }
       }
     },
     "photoPermission": {

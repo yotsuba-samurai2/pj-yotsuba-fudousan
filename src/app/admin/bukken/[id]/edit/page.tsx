@@ -75,7 +75,7 @@ export default function EditBukkenPage() {
             onSubmit={async (data) => {
               setError("");
               try {
-                await updateBukken(property.id, data);
+                await updateBukken(property.id, data, property.updatedAt);
                 await revalidateBukken(data.slug);
                 router.push("/admin/bukken");
               } catch (err) {

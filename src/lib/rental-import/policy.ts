@@ -2,11 +2,12 @@ import { z } from "zod";
 
 /** Business rules explicitly instructed by the operator on 2026-09-20. */
 export const RENTAL_IMPORT_POLICY = {
-  id: "operator-20260920-v3",
+  id: "operator-20260920-v4",
   advertising: "any-matched-current-allow",
   images: "operator-blanket-allow",
-  conditions: "strictest-observed",
-  pets: "largest-observed-count",
+  conditions: "strictest-itandi-reins-only",
+  rent: "higher-itandi-reins",
+  pets: "largest-itandi-reins-count",
   availability: "both-itandi-and-reins-current",
   endedListings: "close-on-primary-source-end",
   portalEnd: "counts-only",
@@ -17,7 +18,16 @@ export const evidenceSchema = z.object({
   reference: z.string().trim().min(1).max(1000),
   quote: z.string().trim().min(1).max(5000),
 });
-const option = z.object({ value: z.string().trim().min(1), evidence: evidenceSchema });
+export function isPrimaryReference(reference: string, provider: "itandi" | "reins") {
+  try { const url = new URL(reference); return url.protocol === "https:" && url.hostname === (provider === "itandi" ? "itandibb.com" : "system.reins.jp"); }
+  catch { return false; }
+}
+const option = z.object({ provider: z.enum(["itandi", "reins"]), value: z.string().trim().min(1), evidence: evidenceSchema });
+export const rentEvidenceSchema = z.object({ yen: z.number().int().positive(), evidence: evidenceSchema });
+export function validRentEvidence(rent: z.infer<typeof rentEvidenceSchema>, provider: "itandi" | "reins", now: Date) {
+  const values = Array.from(rent.evidence.quote.normalize("NFKC").replace(/,/g, "").matchAll(/(\d+(?:\.\d+)?)\s*(万円|円)/g)).map((m) => Math.round(Number(m[1]) * (m[2] === "万円" ? 10000 : 1)));
+  return isCurrentEvidence(rent.evidence.checkedAt, now) && isPrimaryReference(rent.evidence.reference, provider) && values.includes(rent.yen);
+}
 const common = {
   resolves: z.array(z.string()).default([]),
   /** When changing one clause, preserve the remaining special conditions verbatim. */
@@ -56,6 +66,7 @@ export function hasAdvertisingAllow(quote: string) {
 /** Select an entire observed term; never manufacture a combination of separate fee plans. */
 export function selectCondition(choice: ConditionChoice, now: Date): { ok: true; index: number; value: string } | { ok: false; reason: string } {
   const held = (reason: string) => ({ ok: false as const, reason: `${choice.field}: ${reason}` });
+  if (choice.options.some((o) => !isPrimaryReference(o.evidence.reference, o.provider))) return held("条件の比較元はITANDIとREINSに限定してください");
   if (choice.options.some((o) => !isCurrentEvidence(o.evidence.checkedAt, now) || !normalized(o.evidence.quote).includes(normalized(o.value)))) return held("最新の原文と転載内容を照合してください");
   let indices: number[];
   if (choice.rule === "most-pets") {

@@ -4,6 +4,7 @@ import { verifyAdminRequest, AuthError } from "@/lib/api-auth";
 import {
   getPropertyById,
   updateProperty,
+  updatePropertyIfUnchanged,
   deleteProperty,
 } from "@/lib/db/properties";
 import { parsePropertyInput, parsePropertyPatch, bannedTermsError } from "@/lib/property-validation";
@@ -48,6 +49,10 @@ export async function PATCH(req: NextRequest, ctx: Ctx) {
     if (!existing) {
       return NextResponse.json({ error: "物件が見つかりません" }, { status: 404 });
     }
+    const protectedRental = existing.dealType === "rental" || !!existing.internal?.rentalImport || parsed.data.dealType === "rental";
+    if (protectedRental && (typeof body.expectedUpdatedAt !== "string" || body.expectedUpdatedAt !== existing.updatedAt)) {
+      return NextResponse.json({ error: "物件が更新されています。最新の画面を開き直してください" }, { status: 409 });
+    }
     const merged = parsePropertyInput({ ...existing, ...parsed.data });
     if (!merged.ok) return NextResponse.json({ error: merged.errors.join(" / ") }, { status: 400 });
     const rentalError = rentalPublicationError(merged.data, new Date(), existing);
@@ -62,7 +67,9 @@ export async function PATCH(req: NextRequest, ctx: Ctx) {
     if (banned) {
       return NextResponse.json({ error: banned }, { status: 400 });
     }
-    await updateProperty(id, parsed.data);
+    if (protectedRental) {
+      if (!await updatePropertyIfUnchanged(existing.slug, body.expectedUpdatedAt, parsed.data)) return NextResponse.json({ error: "同時更新を検出しました。最新の画面を開き直してください" }, { status: 409 });
+    } else await updateProperty(id, parsed.data);
     return NextResponse.json({ ok: true });
   } catch (err) {
     return handleError(err);
