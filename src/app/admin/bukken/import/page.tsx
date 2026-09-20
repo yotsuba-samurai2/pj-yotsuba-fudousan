@@ -64,7 +64,7 @@ export default function RentalImportPage() {
     <div className="mx-auto max-w-3xl p-6">
       <Link href="/admin/bukken" className="text-sm text-primary underline">物件管理へ戻る</Link>
       <h1 className="mt-5 text-2xl font-semibold">賃貸物件の取込・掲載確認</h1>
-      <p className="mt-2 text-sm text-text-muted">メールのAD条件と最新の募集状況を確認して登録します。同じ物件のどこか1か所に広告可があれば掲載可、画像は包括許可、賃料・諸条件はITANDIとREINSの高い方・厳しい方、ペットはこの2サイトの多い頭数を採用します。SUUMO・アットホーム・HOME’Sは掲載件数だけを確認します。</p>
+      <p className="mt-2 text-sm text-text-muted">メールのAD条件と最新の募集状況を確認して登録します。東京建物不動産販売のメールに同一号室の広告掲載可が明示されていればREINS確認を省略し、それ以外は同じ物件のどこか1か所で広告可を確認します。画像は包括許可、賃料・諸条件はITANDIの記載、ペットは確認できた中で多い条件を採用します。既に登録済みの同一号室は重複登録を止め、更新時だけ「公開済み物件の再確認」を使います。</p>
       <section className="mt-5 rounded-lg border border-border p-4">
         <h2 className="font-semibold">公開後の監視対象</h2>
         <button disabled={busy} className="mt-2 rounded border border-border px-3 py-2 text-sm disabled:opacity-40" onClick={async () => {

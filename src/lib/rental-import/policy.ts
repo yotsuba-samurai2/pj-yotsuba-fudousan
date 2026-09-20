@@ -4,7 +4,7 @@ import { z } from "zod";
 /** Business rules explicitly instructed by the operator on 2026-09-20. */
 export const RENTAL_IMPORT_POLICY = {
   id: "operator-20260920-v7-itandi-reins-ad-gate",
-  advertising: "itandi-or-reins-current-allow",
+  advertising: "tokyo-tatemono-mail-or-itandi-or-reins-current-allow",
   images: "operator-blanket-allow",
   conditions: "strictest-itandi-only",
   rent: "itandi-current",
@@ -79,8 +79,8 @@ export function isCurrentEvidence(t: string, now: Date, hours = 24) {
 export function hasAdvertisingAllow(quote: string) {
   // A field caption (広告可否) is not an affirmative value. Negative wording is separate evidence.
   const text = quote.normalize("NFKC");
-  return /広告(?:掲載|転載)?[\s:：]*可(?:$|[\s。、,;；」』）)])/m.test(text)
-    && !/広告(?:掲載|転載)?[\s:：]*(?:不可|禁止)|広告(?:掲載|転載)?可[\s]*では(?:ない|ありません)/.test(text);
+  const allowed = /広告(?:掲載|転載)?[\s:：]*可(?:$|[\s。、,;；」』）)])|(?:エンド向け)?掲載[\s:：]*(?:可|OK)(?!では|でない|不可)/mi.test(text);
+  return allowed && !/広告(?:掲載|転載)?[\s:：]*(?:不可|禁止)|広告(?:掲載|転載)?可[\s]*では(?:ない|ありません)|掲載[\s:：]*(?:不可|禁止|ではない|ではありません)/i.test(text);
 }
 
 /** Select an entire observed term; never manufacture a combination of separate fee plans. */

@@ -17,6 +17,13 @@ afterEach(() => { vi.useRealTimers(); vi.unstubAllEnvs(); });
 describe("賃貸取込API", () => {
   it("未認証の読み書きを拒否", async () => { deps.auth.mockRejectedValue(new AuthError("認証が必要です", 401)); expect((await POST(req("apply", fixture()))).status).toBe(401); expect((await GET(new NextRequest("https://example.test/api/admin/bukken/import"))).status).toBe(401); expect(deps.create).not.toHaveBeenCalled(); expect(deps.list).not.toHaveBeenCalled(); });
   it("登録前チェックはDBに書き込まない", async () => { expect(await (await POST(req("check", fixture()))).json()).toMatchObject({ action: "ready" }); expect(deps.create).not.toHaveBeenCalled(); });
+  it("新規登録の事前チェックで既登録の同一号室を重複として止める", async () => {
+    const v = fixture(); const initial = validateRentalImport(v, NOW, "published"); if (!initial.ok) throw new Error();
+    deps.get.mockResolvedValue({ ...initial.property, id: "existing", updatedAt: "version1" });
+    const result = await POST(req("check", v));
+    expect(await result.json()).toMatchObject({ action: "held", reasons: [expect.stringContaining("同一号室が既に登録されています")] });
+    expect(deps.create).not.toHaveBeenCalled(); expect(deps.update).not.toHaveBeenCalled();
+  });
   it("終了を含む再確認はチェックで予告し実行時に画像なしで停止", async () => {
     const v = fixture(); const initial = validateRentalImport(v, NOW, "published"); if (!initial.ok) throw new Error();
     deps.get.mockResolvedValue({ ...initial.property, id: "existing", updatedAt: "version1" }); deps.update.mockResolvedValue(true);

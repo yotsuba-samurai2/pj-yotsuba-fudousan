@@ -48,6 +48,11 @@ export async function importRental(input: unknown, store: RentalStore, now: Date
   const existing = await store.get(p.slug);
   if (maintenance && !existing) return { action: "held", slug: p.slug, reasons: ["再確認の対象物件が存在しません"] };
   if (existing) {
+    // A new-candidate run must never turn an already registered room into an
+    // update. This is the final guard behind the admin preflight check: the
+    // operator must explicitly choose the maintenance/recheck operation when
+    // updating an existing listing.
+    if (!maintenance) return { action: "held", slug: p.slug, reasons: ["同一号室が既に登録されています。重複登録を防ぐため、公開済み物件の再確認を選択してください"] };
     const metadata = existing.internal?.rentalImport as { lastPublicDigest?: string; paused?: boolean } | undefined;
     if (existing.status === "closed") return { action: "held", slug: p.slug, reasons: ["募集終了済み。再公開には管理者の確認が必要です"] };
     if (!metadata || metadata.paused || metadata.lastPublicDigest !== publicDigest(existing)) return { action: "held", slug: p.slug, reasons: ["手動編集済み、または自動更新が停止されています"] };
