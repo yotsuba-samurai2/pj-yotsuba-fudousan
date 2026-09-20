@@ -17,7 +17,15 @@ export function validListingEvidence(evidence: z.infer<typeof listingEvidenceSch
 
 export const rentalImportSchema = z.object({
   version: z.union([z.literal(1), z.literal(2)]),
-  email: z.object({ messageId: z.string().min(1), receivedAt: z.iso.datetime({ offset: true }), adQuote: z.string().min(1) }),
+  email: z.object({
+    messageId: z.string().min(1), receivedAt: z.iso.datetime({ offset: true }), adQuote: z.string().min(1),
+    senderDomain: z.string().trim().toLowerCase().optional(),
+    advertising: z.object({
+      status: z.enum(["allowed", "denied", "unknown"]),
+      building: z.string().trim().min(1), address: z.string().trim().min(1), unit: z.string().trim().min(1),
+      evidence: evidenceSchema,
+    }).optional(),
+  }),
   source: z.object({
     provider: z.enum(["itandi", "reins", "other"]),
     roomId: z.string().regex(/^[a-zA-Z0-9_-]{1,100}$/),
@@ -103,10 +111,11 @@ export function validateRentalImport(input: unknown, now: Date, mode: "draft" | 
     ...(v.advertisingEvidence ?? []).filter((a) => a.provider === "reins"),
     ...(v.source.advertising ? [{ ...v.source, provider: "itandi", status: v.source.advertising.status, evidence: v.source.advertising.evidence }] : []),
     ...(legacyMigration && v.reins ? [{ ...v.reins, provider: "reins", status: v.reins.advertising, evidence: v.reins.evidence }] : []),
+    ...(v.email.senderDomain === "ttfuhan.com" && v.email.advertising ? [{ ...v.email.advertising, provider: "email" }] : []),
   ];
-  const adAllowed = adEvidence.some((a) => (a.provider === "itandi" || a.provider === "reins") && a.status === "allowed" && hasAdvertisingAllow(a.evidence.quote)
+  const adAllowed = adEvidence.some((a) => (a.provider === "itandi" || a.provider === "reins" || a.provider === "email") && a.status === "allowed" && hasAdvertisingAllow(a.evidence.quote)
     && isFresh(a.evidence.checkedAt, now) && (["building", "address", "unit"] as const).every((key) => same(a[key], v.source[key])));
-  if (!adAllowed) reasons.push("同一号室の広告可をITANJIまたはREINSで確認してください");
+  if (!adAllowed) reasons.push("同一号室の広告可を東京建物メール、ITANJIまたはREINSで確認してください");
   const resolved = new Set<string>(), fields = new Set<string>();
   const decisions: { field: string; rule: string; selectedIndex: number; value: string }[] = [];
   for (const choice of v.conditionChoices ?? []) {

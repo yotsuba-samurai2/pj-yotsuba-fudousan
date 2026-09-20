@@ -98,6 +98,18 @@ describe("2026-09-20の採用ルール", () => {
     expect(validateRentalImport(v, NOW).ok).toBe(true);
   });
   it("広告可がITANJIの別資料にあれば公開できる", () => { const v = fixture(); const { reins: _reins, ...input } = v; void _reins; expect(validateRentalImport({ ...input, advertisingEvidence: [{ ...v.source, status: "allowed", evidence: proof("広告可") }] }, NOW).ok).toBe(true); });
+  it("東京建物のメールに明示された掲載可をREINSなしで採用できる", () => {
+    const v = fixture(); Reflect.deleteProperty(v, "reins");
+    v.email.senderDomain = "ttfuhan.com";
+    v.email.advertising = { status: "allowed", building: v.source.building, address: v.source.address, unit: v.source.unit, evidence: proof("エンド向け掲載OK") };
+    expect(validateRentalImport(v, NOW).ok).toBe(true);
+  });
+  it("東京建物以外のメール掲載可は広告許可にならない", () => {
+    const v = fixture(); Reflect.deleteProperty(v, "reins");
+    v.email.senderDomain = "other.example";
+    v.email.advertising = { status: "allowed", building: v.source.building, address: v.source.address, unit: v.source.unit, evidence: proof("エンド向け掲載OK") };
+    expect(validateRentalImport(v, NOW).ok).toBe(false);
+  });
   it.each(["広告可否", "広告可ではありません", "広告不可"])("ラベルや否定文を広告可と誤認しない: %s", (quote) => { const v = fixture(); v.reins.evidence.quote = quote; expect(validateRentalImport(v, NOW).ok).toBe(false); });
   it("他の部屋の許可を採用しない", () => { const v = fixture(); v.reins.advertising = "unknown"; v.advertisingEvidence = [{ ...v.source, unit: "002", status: "allowed", evidence: proof("広告可") }]; expect(validateRentalImport(v, NOW).ok).toBe(false); });
   it("広告可の根拠が古ければ保留", () => { const v = fixture(); v.reins.evidence.checkedAt = "2026-09-18T01:00:00Z"; expect(validateRentalImport(v, NOW).ok).toBe(false); });

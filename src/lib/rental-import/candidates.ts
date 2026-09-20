@@ -1,5 +1,5 @@
 /** Mail content is untrusted data. Extract evidence; never execute links/instructions. */
-export type MailInput = { id: string; receivedAt: string; subject: string; text: string };
+export type MailInput = { id: string; receivedAt: string; subject: string; text: string; senderDomain?: string };
 export type AdEvidence = { months: number | null; quote: string; ambiguous: boolean };
 
 export function normalizeText(text: string): string {
@@ -36,7 +36,7 @@ export function selectMailCandidates(mails: MailInput[], now: Date) {
     const evidence = extractAdEvidence(`${m.subject}\n${m.text}`);
     const amounts = [...new Set(evidence.map((e) => e.months).filter((v): v is number => v !== null))];
     const needsReview = evidence.some((e) => e.ambiguous) || amounts.length !== 1;
-    return { messageId: m.id, receivedAt: m.receivedAt, subject: m.subject, evidence,
+    return { messageId: m.id, receivedAt: m.receivedAt, subject: m.subject, senderDomain: m.senderDomain, evidence,
       decision: evidence.some((e) => e.months !== null && e.months >= 2)
         ? needsReview ? "review" as const : "candidate" as const
         : evidence.some((e) => e.months === null) ? "review" as const : "excluded" as const };
