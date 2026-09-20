@@ -65,6 +65,7 @@ enum PropertyDealType {
   condo
   wholeBuilding
   businessBuilding
+  rental
 }
 
 // 掲載カテゴリ（勝ち筋対応）：gh=障害福祉GH向け／jigyo=事業用・店舗／souzoku=相続・売却／toushi=投資用

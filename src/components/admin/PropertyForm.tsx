@@ -51,6 +51,20 @@ const EMPTY_TRANS: PropertyTranslation = { title: "", description: "", locationT
 
 /** 種別ごとの数値・文字列フィールドをフラットに持ち、送信時に spec へ組み立てる */
 type SpecDraft = {
+  buildingType: string;
+  accessText: string;
+  layout: string;
+  deposit: string;
+  keyMoney: string;
+  guaranteeDeposit: string;
+  renewalFee: string;
+  insurance: string;
+  guarantor: string;
+  otherFees: string;
+  contractType: string;
+  contractPeriod: string;
+  conditions: string;
+
   landAreaSqm: string;
   privateRoadAreaSqm: string;
   buildingAreaSqm: string;
@@ -83,6 +97,19 @@ function specToDraft(spec?: PropertySpec): SpecDraft {
   };
   const str = (v: unknown) => (v === undefined || v === null ? "" : String(v));
   return {
+    buildingType: str(s.buildingType),
+    accessText: str(s.accessText),
+    layout: str(s.layout),
+    deposit: str(s.deposit),
+    keyMoney: str(s.keyMoney),
+    guaranteeDeposit: str(s.guaranteeDeposit),
+    renewalFee: str(s.renewalFee),
+    insurance: str(s.insurance),
+    guarantor: str(s.guarantor),
+    otherFees: str(s.otherFees),
+    contractType: str(s.contractType),
+    contractPeriod: str(s.contractPeriod),
+    conditions: str(s.conditions),
     landAreaSqm: str(s.landAreaSqm),
     privateRoadAreaSqm: str(s.privateRoadAreaSqm),
     buildingAreaSqm: str(s.buildingAreaSqm),
@@ -114,6 +141,30 @@ function draftToSpec(dealType: PropertyDealType, d: SpecDraft): PropertySpec {
   const num = (v: string) => Number(v || 0);
   const leasehold = d.leasehold.trim() ? { leasehold: d.leasehold.trim() } : {};
   switch (dealType) {
+    case "rental":
+      return {
+        dealType,
+        exclusiveAreaSqm: num(d.exclusiveAreaSqm),
+        buildingType: d.buildingType,
+        accessText: d.accessText,
+        layout: d.layout,
+        structure: d.structure,
+        floors: d.floors,
+        floorLocated: d.floorLocated,
+        builtYm: d.builtYm,
+        deliveryYm: d.deliveryYm,
+        managementFee: d.managementFee,
+        deposit: d.deposit,
+        keyMoney: d.keyMoney,
+        guaranteeDeposit: d.guaranteeDeposit,
+        renewalFee: d.renewalFee,
+        insurance: d.insurance,
+        guarantor: d.guarantor,
+        otherFees: d.otherFees,
+        contractType: d.contractType,
+        contractPeriod: d.contractPeriod,
+        conditions: d.conditions,
+      };
     case "land":
       return {
         dealType,
@@ -219,7 +270,7 @@ export default function PropertyForm({ initialData, onSubmit }: Props) {
   const [title, setTitle] = useState(initialData?.title ?? "");
   // 入力は万円単位（priceYen へは ×10000 して送る）
   const [priceMan, setPriceMan] = useState(
-    initialData ? String(Math.round(initialData.priceYen / 10000)) : "",
+    initialData ? String(initialData.priceYen / 10000) : "",
   );
   const [priceNote, setPriceNote] = useState(initialData?.priceNote ?? "");
   const [locationText, setLocationText] = useState(initialData?.locationText ?? "");
@@ -284,7 +335,7 @@ export default function PropertyForm({ initialData, onSubmit }: Props) {
     ...(priceNote.trim() ? { priceNote: priceNote.trim() } : {}),
     locationText: locationText.trim(),
     access,
-    spec: draftToSpec(dealType, specDraft),
+    spec: { ...draftToSpec(dealType, specDraft), ...(dealType === "rental" && initialData?.spec.dealType === "rental" ? { availabilityExpiresAt: initialData.spec.availabilityExpiresAt } : {}) },
     images,
     description,
     // 公開への遷移時に情報公開日を自動設定（既にあれば維持）
@@ -301,7 +352,7 @@ export default function PropertyForm({ initialData, onSubmit }: Props) {
       ...(zhTwTrans.title ? { "zh-tw": zhTwTrans } : {}),
       ...(zhTrans.title ? { zh: zhTrans } : {}),
     },
-    internal: { sourceType, ...(internalMemo.trim() ? { memo: internalMemo.trim() } : {}) },
+    internal: { ...initialData?.internal, sourceType, memo: internalMemo.trim() || undefined },
   });
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -441,10 +492,11 @@ export default function PropertyForm({ initialData, onSubmit }: Props) {
           </Field>
         </div>
         <div className="mt-3 grid gap-3 sm:grid-cols-3">
-          <Field label="価格（万円）">
+          <Field label={dealType === "rental" ? "月額賃料（万円・例 8.55）" : "価格（万円）"}>
             <input
               type="number"
-              min={1}
+              min={0.0001}
+              step="0.0001"
               value={priceMan}
               onChange={(e) => setPriceMan(e.target.value)}
               className={inputCls}
@@ -587,6 +639,34 @@ export default function PropertyForm({ initialData, onSubmit }: Props) {
               </label>
             </Field>
           )}
+          {dealType === "rental" && (
+            <>
+              <Field label="専有面積（㎡）"><input type="number" step="0.01" min={0.01} value={specDraft.exclusiveAreaSqm} onChange={(e) => setSpec({ exclusiveAreaSqm: e.target.value })} className={inputCls} required /></Field>
+              {([
+                ["buildingType", "建物種別"],
+                ["accessText", "交通"],
+                ["layout", "間取り"],
+                ["structure", "構造"],
+                ["floors", "建物の階数"],
+                ["floorLocated", "所在階"],
+                ["builtYm", "建築年月"],
+                ["deliveryYm", "入居可能時期"],
+                ["managementFee", "管理費・共益費"],
+                ["deposit", "敷金"],
+                ["keyMoney", "礼金"],
+                ["guaranteeDeposit", "保証金・敷引"],
+                ["renewalFee", "更新料"],
+                ["insurance", "保険"],
+                ["guarantor", "保証会社"],
+                ["otherFees", "その他の費用"],
+                ["contractType", "契約種別"],
+                ["contractPeriod", "契約期間"],
+                ["conditions", "入居条件・特約"],
+              ] as const).map(([key, label]) => (
+                <Field key={key} label={label}><input aria-label={label} value={specDraft[key]} onChange={(e) => setSpec({ [key]: e.target.value })} className={inputCls} required /></Field>
+              ))}
+            </>
+          )}
           {showCondo && (
             <>
               <Field label="建物の階数">
@@ -653,6 +733,14 @@ export default function PropertyForm({ initialData, onSubmit }: Props) {
           </Field>
         </div>
       </section>
+
+      {dealType === "rental" && initialData?.spec.dealType === "rental" && (
+        <section className="rounded-xl border border-border bg-surface p-4 text-sm">
+          <h2 className="font-semibold">公開後の確認</h2>
+          <p className="mt-2 text-text-muted">募集情報の確認期限：{initialData.spec.availabilityExpiresAt ? new Date(initialData.spec.availabilityExpiresAt).toLocaleString("ja-JP", { timeZone: "Asia/Tokyo" }) : "未確認"}</p>
+          <p className="mt-1 text-text-muted">取得元で掲載終了を確認した物件は募集終了に変更します。期限を過ぎると公開対象から外れます。内容を手動編集すると自動上書きは保留になります。</p>
+        </section>
+      )}
 
       {/* 画像 */}
       <section className="rounded-xl border border-border bg-surface p-4">

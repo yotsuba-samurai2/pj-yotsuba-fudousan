@@ -17,7 +17,8 @@
     "column:draft": "node scripts/column-draft.mjs",
     "column:publish-prep": "node scripts/column-publish-prep.mjs",
     "column:start:deprecated": "node scripts/column-start.mjs",
-    "column:continue:deprecated": "node scripts/column-continue.mjs"
+    "column:continue:deprecated": "node scripts/column-continue.mjs",
+    "rental:run": "node --import tsx scripts/rental-import/run.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.82.0",

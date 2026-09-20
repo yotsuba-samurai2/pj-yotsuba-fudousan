@@ -1,8 +1,11 @@
+// Availability expiry must be evaluated on each request, even if the worker is offline.
+export const dynamic = "force-dynamic";
+
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getPublishedProperties, getLocalizedProperty } from "@/lib/properties";
 import {
-  formatPriceYen,
+  formatPropertyPrice,
   formatAccess,
   CATEGORY_LABELS,
   DEAL_TYPE_LABELS,
@@ -108,7 +111,7 @@ function PropertyCard({ p, locale }: { p: PublicProperty; locale: LangCode }) {
           </span>
         </p>
         <h3 className="mt-1 truncate text-sm font-semibold text-ink">{p.title}</h3>
-        <p className="mt-1 text-sm font-semibold text-primary">{formatPriceYen(p.priceYen)}</p>
+        <p className="mt-1 text-sm font-semibold text-primary">{formatPropertyPrice(p)}</p>
         <p className="mt-0.5 truncate text-xs text-text-muted">{p.locationText}</p>
         {p.access[0] && (
           <p className="truncate text-xs text-text-muted">{formatAccess(p.access[0])}</p>

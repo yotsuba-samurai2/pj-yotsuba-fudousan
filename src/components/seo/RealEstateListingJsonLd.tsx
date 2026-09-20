@@ -29,7 +29,7 @@ export function RealEstateListingJsonLd({
   const mainEntity =
     property.dealType === "house"
       ? { "@type": "House", name: property.title }
-      : property.dealType === "condo"
+      : property.dealType === "condo" || (property.spec.dealType === "rental" && /マンション|アパート/.test(property.spec.buildingType))
         ? { "@type": "Apartment", name: property.title }
         : undefined;
 
@@ -57,6 +57,10 @@ export function RealEstateListingJsonLd({
             "@type": "Offer",
             price: property.priceYen,
             priceCurrency: "JPY",
+            ...(property.dealType === "rental" ? {
+              businessFunction: "http://purl.org/goodrelations/v1#LeaseOut",
+              priceSpecification: { "@type": "UnitPriceSpecification", price: property.priceYen, priceCurrency: "JPY", unitText: "月" },
+            } : {}),
             offeredBy: { "@id": `${SITE_URL}/#organization` },
           },
         }

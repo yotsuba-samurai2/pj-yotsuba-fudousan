@@ -1,0 +1,23 @@
+[
+  {
+    "source": {
+      "provider": "itandi",
+      "roomId": "123",
+      "url": "https://itandibb.com/rent_rooms/123",
+      "building": "検証用マンション",
+      "address": "東京都文京区検証町1-2-3",
+      "unit": "001",
+      "availability": "available",
+      "checkedAt": "2026-09-20T01:00:00.000Z",
+      "adQuote": "広告費200%"
+    },
+    "status": "closed",
+    "portal": "homes",
+    "checkedAt": "2026-09-20T00:00:00Z",
+    "reference": "https://www.homes.co.jp/chintai/b-example/",
+    "quote": "掲載終了（匿名の形式例。実行時は実際の終了表示とURLに置換）",
+    "authenticated": false,
+    "siteOperational": true,
+    "exactRoomMatched": true
+  }
+]

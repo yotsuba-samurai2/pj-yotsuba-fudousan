@@ -1,3 +1,6 @@
+// Availability expiry must be evaluated on each request, even if the worker is offline.
+export const dynamic = "force-dynamic";
+
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -9,7 +12,7 @@ import {
 } from "@/lib/properties";
 import {
   buildRequiredDisplayRows,
-  formatPriceYen,
+  formatPropertyPrice,
   CATEGORY_LABELS,
   DEAL_TYPE_LABELS,
   GH_USE_NOTE,
@@ -143,7 +146,7 @@ export default async function BukkenDetailPage({ params }: Props) {
           </h1>
           {!isClosed && (
             <p className="mt-2 text-2xl font-semibold text-primary">
-              {formatPriceYen(p.priceYen)}
+              {formatPropertyPrice(p)}
               {p.priceNote && (
                 <span className="ml-2 text-xs font-normal text-text-muted">（{p.priceNote}）</span>
               )}

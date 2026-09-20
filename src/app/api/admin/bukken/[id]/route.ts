@@ -1,3 +1,4 @@
+import { rentalPublicationError } from "@/lib/rental-import/publication";
 import { NextRequest, NextResponse } from "next/server";
 import { verifyAdminRequest, AuthError } from "@/lib/api-auth";
 import {
@@ -5,7 +6,7 @@ import {
   updateProperty,
   deleteProperty,
 } from "@/lib/db/properties";
-import { parsePropertyPatch, bannedTermsError } from "@/lib/property-validation";
+import { parsePropertyInput, parsePropertyPatch, bannedTermsError } from "@/lib/property-validation";
 
 type Ctx = { params: Promise<{ id: string }> };
 
@@ -47,6 +48,10 @@ export async function PATCH(req: NextRequest, ctx: Ctx) {
     if (!existing) {
       return NextResponse.json({ error: "物件が見つかりません" }, { status: 404 });
     }
+    const merged = parsePropertyInput({ ...existing, ...parsed.data });
+    if (!merged.ok) return NextResponse.json({ error: merged.errors.join(" / ") }, { status: 400 });
+    const rentalError = rentalPublicationError(merged.data);
+    if (rentalError) return NextResponse.json({ error: rentalError }, { status: 400 });
     // 部分更新後の姿で禁止語ゲートを通す（statusだけ・本文だけの更新でもすり抜けさせない）
     const banned = bannedTermsError({
       status: parsed.data.status ?? existing.status,

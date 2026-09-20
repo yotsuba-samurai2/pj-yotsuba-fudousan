@@ -1,3 +1,4 @@
+import { rentalPublicationError } from "@/lib/rental-import/publication";
 import { NextRequest, NextResponse } from "next/server";
 import { verifyAdminRequest, AuthError } from "@/lib/api-auth";
 import {
@@ -46,6 +47,8 @@ export async function POST(req: NextRequest) {
         { status: 400 },
       );
     }
+    const rentalError = rentalPublicationError(parsed.data);
+    if (rentalError) return NextResponse.json({ error: rentalError }, { status: 400 });
     const banned = bannedTermsError(parsed.data);
     if (banned) {
       return NextResponse.json({ error: banned }, { status: 400 });

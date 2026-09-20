@@ -4,6 +4,7 @@ import { Prisma, type Property as PropertyRow } from "@prisma/client";
 import type { LangCode } from "@/config/languages";
 import {
   toPublicProperty,
+  isRentalExpired,
   isPropertyLocaleAllowed,
   getLocalizedProperty,
   type AdminProperty,
@@ -67,7 +68,7 @@ export const getPublishedProperties = cache(
         where: { status: "published" },
         orderBy: { infoUpdatedAt: "desc" },
       });
-      return rows.map(rowToPublic).filter((p) => isPropertyLocaleAllowed(p, locale));
+      return rows.map(rowToPublic).filter((p) => !isRentalExpired(p) && isPropertyLocaleAllowed(p, locale));
     } catch (err) {
       if (isPropertiesTableMissing(err)) return [];
       throw err;
@@ -83,7 +84,7 @@ export const getAllPublishedPropertiesAllLocales = cache(
         where: { status: "published" },
         orderBy: { infoUpdatedAt: "desc" },
       });
-      return rows.map(rowToPublic);
+      return rows.map(rowToPublic).filter((p) => !isRentalExpired(p));
     } catch (err) {
       if (isPropertiesTableMissing(err)) return [];
       throw err;
@@ -101,7 +102,10 @@ export const getPublicPropertyBySlug = cache(
       const row = await prisma.property.findFirst({
         where: { slug, status: { in: ["published", "closed"] } },
       });
-      return row ? rowToPublic(row) : undefined;
+      if (!row) return undefined;
+      const p = rowToPublic(row);
+      // Hide stale rentals without claiming that they were contracted/closed.
+      return isRentalExpired(p) && p.status === "published" ? undefined : p;
     } catch (err) {
       if (isPropertiesTableMissing(err)) return undefined;
       throw err;
