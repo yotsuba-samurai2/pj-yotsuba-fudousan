@@ -20152,5 +20152,371 @@ export const LABOR_COLUMNS_SEED: LaborSeedColumn[] = [
         ]
       }
     }
+  },
+  {
+    "business": "labor",
+    "slug": "biyoshitsu-kaigyo-buai-kashimise-shakaihoken",
+    "title": "美容室の開業で歩合給・面貸し・社会保険はどう決めるのか",
+    "date": "2026-09-20",
+    "category": "採用と雇用",
+    "excerpt": "美容室では、歩合給でも最低賃金と保障給を満たす必要があり、面貸し（業務委託）と雇用の線引きは契約書の題名ではなく実態で決まります。社会保険（健保・厚年）の強制加入は、法人か個人か、そして人数によって分かれます。個人経営の美容業は従業員が5人以上でも健保・厚年の強制適用にならない点まで、労働基準法第27条・最低賃金法・健康保険法を根拠に整理します。",
+    "content": "**結論（先に要点）**：美容室では、歩合給でも最低賃金と保障給を満たす必要があり、面貸し（業務委託）と雇用の線引きは契約書の題名ではなく実態で決まります。社会保険（健保・厚年）の強制加入は、法人か個人か、そして人数によって分かれます。\n\n「スタイリストは歩合だから」「面貸しにしているから労働法は関係ない」というご相談を、開業前によくうかがいます。ところが、歩合給にも賃金の最低ラインがあり、面貸しでも実態が雇用なら雇用として扱われます。ここを外して設計すると、あとから未払い賃金や保険料の遡及にぶつかります。先に「どこが法律のラインか」を押さえておきましょう。\n\n## 歩合給だけでも、最低賃金は満たさなければならないのか？\n\n満たさなければなりません。歩合給（出来高払制）にも、2つの最低ラインが同時にかかります。\n\n| ライン | 根拠 | 中身 |\n|---|---|---|\n| 出来高払制の保障給 | 労働基準法第27条 | 出来高が少ない月でも、**労働時間に応じ一定額の賃金**を保障する |\n| 最低賃金 | 最低賃金法第4条第1項 | 歩合給を月の総労働時間で割った**時間額**が、地域別最低賃金以上であること |\n\n労働基準法第27条は「出来高払制その他の請負制で使用する労働者については、使用者は、労働時間に応じ一定額の賃金の保障をしなければならない」と定めています。**完全歩合給（フルコミッション）でも、出勤して働いた以上、賃金ゼロにはできない**という趣旨です。保障給の額そのものは条文に書かれていませんが、通達は「常に通常の実収賃金とあまりへだたらない程度の収入が保障されるように」定めるべきとしており、休業手当が平均賃金の6割以上（労働基準法第26条）であることから、少なくともその程度を目安とする説明が一般的です。\n\n最低賃金は別の物差しです。指名料・技術料の歩合をいくら高く設定しても、指名が入らなかった月に時間額が最低賃金を下回れば、会社が差額を支払わなければなりません。実務では、**固定給＋歩合**の形にして、固定給部分で最低賃金と保障給を確保する設計が多く使われます。契約と運用をどちらに寄せるかは、[外注と雇用の境目は、契約書では決まらない](/labor/column/gaichu-koyo-sakaime-roudoushasei)の考え方とあわせて整理します。\n\n## 面貸し・業務委託と雇用の線引きは、どこで判断されるのか？\n\n契約書の題名ではなく、働き方の実態で判断されます。労働基準法第9条は「労働者」を、事業に使用され賃金を支払われる者と定めており、契約の名称は要件に入っていません。判断の枠組みは、労働基準法研究会報告（昭和60年12月19日）が示した項目で、次のようなところを総合的に見ます。\n\n| 見られるところ | 雇用に傾く | 面貸し（事業者）に傾く |\n|---|---|---|\n| 仕事の依頼・指示への諾否の自由 | 断れない | 自分で受ける施術を選べる |\n| 指揮監督・時間や場所の拘束 | 出退勤・シフトが指定される | 営業日・時間を自分で決める |\n| 料金・顧客 | 店が決め、店の客を割り当てる | 自分の顧客・自分の料金 |\n| 報酬の性格 | 時間に対して支払われる | 売上から場所代を差し引く |\n| 設備・道具の負担 | 店が用意する | 自分で用意する部分がある |\n\n「面貸し」と呼んでいても、シフトを組み、店の顧客を割り当て、店の指示で施術しているなら、労働者性が認められる方向に傾きます。逆に、席と設備を貸し、施術者が自分の顧客に自分の料金で施術して、売上に応じた場所代を店に払う形なら、事業者性が強くなります。**どの項目か1つで決まるものではなく、事実を全部並べた総合判断**である点が要点です。なお、面貸しでも美容所として営業する以上、開設者は保健所への美容所開設届と管理美容師の設置（美容師法）が必要で、これは雇用か業務委託かとは別の話です。\n\n## 美容室で社会保険（健保・厚年）は、いつ強制加入になるのか？\n\nまず**法人か個人か**で大きく分かれます。\n\n| 事業形態 | 健康保険・厚生年金 |\n|---|---|\n| 法人（株式会社・合同会社など） | **代表者1人でも強制適用**（役員報酬を受ける代表者も被保険者） |\n| 個人経営 | **従業員が何人いても強制適用にならない**（美容業は法定の適用業種に含まれないため） |\n\n健康保険法第3条第3項・厚生年金保険法第6条は、常時5人以上を使用する個人事業所を強制適用としつつ、農林水産業や飲食店・理容美容業などのサービス業を適用業種から除いています。**理容・美容業は、個人経営なら従業員が5人以上でも健保・厚年の強制適用事業所になりません**（任意適用事業所として認可を受けて加入する道はあります）。令和4年10月から士業（弁護士・税理士・社労士など）が適用業種に追加されましたが、美容業は含まれていません。2024年に厚生労働省の有識者会議が非適用業種の撤廃を提言していますが、施行日が決まった段階ではないため、最新の状況は日本年金機構で確認してください。\n\n法人化して強制適用になった場合、従業員それぞれの加入は、1週の所定労働時間と1月の所定労働日数がいずれも通常の労働者の4分の3以上か、被保険者51人以上の特定適用事業所では週20時間以上・月額賃金8.8万円以上かで判定します。数え方は[短い時間で雇うと、社会保険はどうなるか](/labor/column/tanjikan-koyo-shakaihoken-4bunno3)にまとめています。\n\n## 美容師の労災・雇用保険は、どこまで必要か？\n\n労働保険は、社会保険とは判定のしくみが違います。\n\n- **労災保険**：労働者を1人でも使用すれば、法人・個人を問わず、業種を問わず強制適用です。国籍・在留資格・労働時間も問いません。他方、**事業主本人（個人事業主）や役員は「労働者」ではないため労災の対象外**で、施術中のけがに備えるなら中小事業主等の特別加入という別の制度を使います。加入の順序は[社長には労災が出ない。そして1人だと特別加入もできない](/labor/column/shacho-rosai-tokubetsu-kanyu-hitori)を参照してください。\n- **雇用保険**：1週の所定労働時間が20時間以上（2028年10月からは10時間以上）で、31日以上の雇用見込みがある労働者が被保険者です。**面貸しの施術者が本当の事業者であれば、労働者ではないので雇用保険・労災の対象になりません**。ここでも「雇用か事業者か」の実態判断が効いてきます。\n\nつまり、面貸し・業務委託として設計したつもりでも、実態が雇用と判断されれば、労災・雇用保険の遡及加入と保険料が問題になります。設計の入口で線を引いておくことが、あとの遡及を防ぎます。\n\n## 美容所の届出や契約書は、誰に頼めばよいのか？\n\n美容室の開業は、担当する資格が分かれ、それぞれ別の契約になります。\n\n| やること | 主な担当 |\n|---|---|\n| 就業規則・賃金（歩合・保障給）設計、労働・社会保険の適用判定と手続、給与計算 | 社会保険労務士（当事務所） |\n| 美容所開設届（保健所）の作成・提出支援 | 行政書士 |\n| 面貸し・業務委託の契約書作成、労働者性を巡る紛争 | 弁護士 |\n| 開業の税務・確定申告 | 税理士 |\n| 店舗物件の仲介・重要事項説明 | 宅地建物取引業者 |\n\n美容所開設届は四葉行政書士事務所、店舗物件は四葉不動産へおつなぎすることもできますが、四葉行政書士事務所・四葉不動産は当事務所とは**独立した事業体**で、社会保険労務士業務・行政書士業務・宅地建物取引業務は**別々にご契約**いただきます（一括受任はしません）。当事務所は紹介料を受け取りません。美容所届出の構造・設備基準は[美容所の開設届と構造・設備基準](/legal/column/biyoushojo-kaisetsu-todokede-kozo-setsubi-kijun)（行政書士サイト）に、物件側の要件は[美容室・理容所に使える物件と保健所届出](/column/biyoshitsu-riyojo-bukken-hokenjo-todokede)（不動産サイト）にまとめています。\n\n四葉社会保険労務士事務所では、歩合給と保障給・最低賃金を満たす賃金設計、面貸し・雇用の切り分けを踏まえた就業規則、社会保険・労働保険の適用と手続についてご相談いただけます。費用は[報酬額表](/labor/ryokin)にまとめています。\n\n## よくある質問\n\n**Q. 完全歩合給にすれば、暇な月は賃金を払わなくてよいですか？**\nA. いいえ。労働者である以上、労働基準法第27条の保障給がかかり、出勤して働いた時間に応じて一定額の賃金を保障しなければなりません。さらに歩合給を時間額に換算して最低賃金を下回れば、会社が差額を支払う必要があります。完全歩合給でも賃金ゼロにはできません。\n\n**Q. 面貸しにすれば、社会保険も残業代もかからないと考えてよいですか？**\nA. 面貸しが本当に事業者への場所貸しであれば、労働法・社会保険はかかりません。ただし、シフトを組み、店の顧客を割り当て、指揮監督している実態があれば、契約書の題名にかかわらず雇用と判断され、社会保険・残業代・労働保険が遡ってかかることがあります。判断は実態で行われます。\n\n**Q. 個人経営の美容室なら、従業員が5人以上でも社会保険に入らなくてよいのですか？**\nA. 健康保険・厚生年金については、美容業は法定の適用業種に含まれないため、個人経営なら従業員が5人以上でも強制適用事業所になりません。任意適用事業所として認可を受けて加入することはできます。一方、労災保険は労働者を1人でも使えば強制適用で、こちらは業種も人数も問いません。\n\n**Q. スタイリストを業務委託にしていますが、労災はどうなりますか？**\nA. 実態が事業者（本当の業務委託）であれば労働者ではないため、労災保険・雇用保険の対象になりません。逆に実態が雇用と判断されれば、労災・雇用保険の遡及加入が問題になります。事業主本人が施術中のけがに備えるには、労働者を雇っていることを前提に中小事業主等の特別加入を検討します。\n\n## この記事の根拠\n\n- 労働基準法（昭和22年法律第49号）第9条（労働者の定義）、第26条（休業手当）、第27条（出来高払制の保障給）\n- 最低賃金法（昭和34年法律第137号）第4条第1項（最低賃金の効力）\n- 労働基準法研究会報告「労働基準法の『労働者』の判断基準について」（昭和60年12月19日）。厚生労働省が判断基準の資料として公開する原文により確認\n- 出来高払制の保障給の水準：条文に定めはなく、通達が「通常の実収賃金とあまりへだたらない程度」を求める旨。休業手当（平均賃金の100分の60以上）を目安とする一般的な解説による\n- 健康保険法（大正11年法律第70号）第3条第3項・厚生年金保険法（昭和29年法律第115号）第6条：法人は代表者1人でも強制適用、個人事業所は常時5人以上で強制適用だが理容・美容業などのサービス業は適用業種から除外（日本年金機構「適用事業所と被保険者」2026年9月20日参照）\n- 適用業種への士業追加：令和4年10月1日施行（日本年金機構。2026年9月20日参照）。非適用業種の撤廃は2024年の厚生労働省有識者会議の提言段階で施行日は未定\n- 労働者災害補償保険法（昭和22年法律第50号）：労働者を使用する事業に強制適用、役員・事業主は特別加入。雇用保険法（昭和49年法律第116号）第4条・第6条：週20時間以上等の労働者が被保険者、2028年10月から10時間以上\n- 条文はいずれも2026年9月20日時点でe-Gov法令検索および各官庁の公表資料により確認しました。料率・企業規模要件・適用業種は改定されるため、最新は日本年金機構・厚生労働省で確認してください\n\nこの記事は、誰に相談するかまでは決めていません。賃金設計・就業規則・社会保険と労働保険の適用と手続は社会保険労務士の業務です。美容所開設届は行政書士、契約書作成や労働者性を巡る紛争は弁護士、開業の税務は税理士、物件の仲介は宅地建物取引業者へ、それぞれ独立した事業体として別々にご契約いただく形をご案内します。当事務所は紹介料を受け取りません。四葉社会保険労務士事務所にご相談いただく場合の費用は[報酬額表](/labor/ryokin)に、よくいただくご質問は[よくあるご質問](/labor/faq)にまとめています。\n\n本記事は一般的な情報提供です。歩合給・面貸しの適否や社会保険の加入義務など個別の判断は、面談のうえ資格者が行います。執筆は[浦松丈二](/about/uramatsu)（社会保険労務士・行政書士・宅地建物取引士）です。",
+    "status": "published",
+    "author": {
+      "name": "浦松 丈二",
+      "title": "社会保険労務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+    },
+    "keywords": [
+      "美容室 歩合給 最低賃金",
+      "面貸し 業務委託 雇用 違い",
+      "美容師 社会保険 加入",
+      "美容業 個人事業 社会保険 非適用業種",
+      "労働基準法 第27条 保障給",
+      "美容室 開業 誰に頼む"
+    ],
+    "tags": [
+      "美容室",
+      "歩合給",
+      "労働者性",
+      "社会保険",
+      "最低賃金",
+      "開業"
+    ],
+    "locales": [],
+    "faq": [
+      {
+        "question": "完全歩合給にすれば、暇な月は賃金を払わなくてよいですか？",
+        "answer": "いいえ。労働者である以上、労働基準法第27条の保障給がかかり、出勤して働いた時間に応じて一定額の賃金を保障しなければなりません。さらに歩合給を時間額に換算して最低賃金を下回れば、会社が差額を支払う必要があります。完全歩合給でも賃金ゼロにはできません。"
+      },
+      {
+        "question": "面貸しにすれば、社会保険も残業代もかからないと考えてよいですか？",
+        "answer": "面貸しが本当に事業者への場所貸しであれば、労働法・社会保険はかかりません。ただし、シフトを組み、店の顧客を割り当て、指揮監督している実態があれば、契約書の題名にかかわらず雇用と判断され、社会保険・残業代・労働保険が遡ってかかることがあります。判断は実態で行われます。"
+      },
+      {
+        "question": "個人経営の美容室なら、従業員が5人以上でも社会保険に入らなくてよいのですか？",
+        "answer": "健康保険・厚生年金については、美容業は法定の適用業種に含まれないため、個人経営なら従業員が5人以上でも強制適用事業所になりません。任意適用事業所として認可を受けて加入することはできます。一方、労災保険は労働者を1人でも使えば強制適用で、こちらは業種も人数も問いません。"
+      },
+      {
+        "question": "スタイリストを業務委託にしていますが、労災はどうなりますか？",
+        "answer": "実態が事業者（本当の業務委託）であれば労働者ではないため、労災保険・雇用保険の対象になりません。逆に実態が雇用と判断されれば、労災・雇用保険の遡及加入が問題になります。事業主本人が施術中のけがに備えるには、労働者を雇っていることを前提に中小事業主等の特別加入を検討します。"
+      }
+    ],
+    "translations": {
+      "en": {
+        "title": "Opening a hair salon — how do you set commission pay, chair rental, and social insurance?",
+        "excerpt": "At a hair salon, commission pay must still meet the minimum wage and the guaranteed wage, and the line between chair rental (subcontracting) and employment is decided by the actual working reality, not the title of the contract. Whether health and pension insurance is compulsory turns on corporation versus sole proprietor and on headcount. Work rules and social insurance are the work of a Shakai Hoken Roumushi; the beauty-salon notification of a Gyoseishoshi; contracts and disputes of an attorney; tax of a tax accountant; and property of a real estate agent — each contracted separately as separate, independent entities.",
+        "content": "**In short:** At a hair salon, commission pay must still meet the minimum wage and the guaranteed wage, and the line between chair rental (subcontracting) and employment is decided by the actual working reality, not by the title of the contract. Whether social insurance (health and pension) is compulsory turns on whether you are a corporation or a sole proprietor, and on headcount.\n\nBefore opening, we often hear, \"Stylists are on commission,\" or \"We use chair rental, so labor law doesn't apply.\" But commission pay has a floor too, and even with chair rental, if the reality is employment, it is treated as employment. Designing around this leads to later claims for unpaid wages and back premiums. First, pin down where the legal lines are.\n\n## Does commission pay alone still have to meet the minimum wage?\n\nYes. Commission pay (piecework) is subject to two floors at once.\n\n| Floor | Basis | Content |\n|---|---|---|\n| Guaranteed wage under piecework | Article 27, Labor Standards Act | Even in a low-output month, guarantee **a certain wage in proportion to hours worked** |\n| Minimum wage | Article 4(1), Minimum Wage Act | The **hourly figure**, commission divided by monthly total hours, must be at or above the regional minimum wage |\n\nArticle 27 of the Labor Standards Act provides that \"for a worker used under a piecework or other contract system, the employer must guarantee a certain wage in proportion to hours worked.\" Even on **full commission, once a worker has come in and worked, wages cannot be zero.** The amount of the guaranteed wage is not written in the article, but administrative notices require it to be set so that \"income not far from ordinary actual earnings is always guaranteed,\" and since the leave allowance is 60% of average wages or more (Article 26), that level is commonly used as a guide.\n\nThe minimum wage is a separate yardstick. However high you set the commission for nominations and technique fees, if the hourly figure falls below the minimum wage in a month with few nominations, the company must pay the shortfall. In practice, a **base salary plus commission** is often used, so the base covers the minimum wage and the guaranteed wage. Which way to lean the contract and operation is organized together with [the line between subcontracting and employment is not decided by the contract](/en/labor/column/gaichu-koyo-sakaime-roudoushasei).\n\n## Where is the line between chair rental / subcontracting and employment drawn?\n\nBy the reality of the work, not the title of the contract. Article 9 of the Labor Standards Act defines a \"worker\" as one who is used by a business and paid wages; the contract name is not part of the test. The framework is the set of factors shown in the Labor Standards Act Study Group report (19 December 1985), which are weighed as a whole.\n\n| Point examined | Leans to employment | Leans to chair rental (business operator) |\n|---|---|---|\n| Freedom to refuse requests/instructions | Cannot refuse | Chooses which services to take |\n| Command/supervision, time and place restraint | Attendance and shifts are set | Sets own business days and hours |\n| Fees and customers | Salon sets fees, assigns salon's customers | Own customers, own fees |\n| Nature of pay | Paid for time | Pays chair rent out of sales |\n| Bearing of equipment and tools | Salon provides | Provides some tools themselves |\n\nEven if you call it \"chair rental,\" if you build shifts, assign the salon's customers, and direct the work, worker status tends to be recognized. Conversely, if you lend a chair and equipment, and the stylist serves their own customers at their own prices and pays the salon rent based on sales, business-operator character grows stronger. The key is that **no single factor decides it; it is a holistic judgment of all the facts.** Note that even with chair rental, whoever operates as a beauty salon must file the beauty-salon opening notification and place a managing beautician (Beauticians Act), separate from whether it is employment or subcontracting.\n\n## When does social insurance (health and pension) become compulsory at a salon?\n\nFirst, it divides sharply by **corporation versus sole proprietor.**\n\n| Business form | Health insurance / employees' pension |\n|---|---|\n| Corporation (KK, GK, etc.) | **Compulsory even with one director** (a representative receiving remuneration is also insured) |\n| Sole proprietor | **Not compulsory no matter how many staff** (the beauty business is not among the statutory applicable industries) |\n\nArticle 3(3) of the Health Insurance Act and Article 6 of the Employees' Pension Insurance Act make individual workplaces with five or more regular staff compulsorily applicable, but exclude service businesses such as agriculture/forestry/fisheries, restaurants, and barber/beauty businesses from the applicable industries. **A barber/beauty business run as a sole proprietorship is not a compulsorily applicable workplace for health/pension even with five or more staff** (it can enroll voluntarily as a voluntarily applicable workplace with approval). From October 2022, professional practices (lawyers, tax accountants, Shakai Hoken Roumushi, etc.) were added to the applicable industries, but the beauty business is not included. In 2024, a Ministry expert panel proposed abolishing the excluded industries, but no effective date is set, so confirm the latest with the Japan Pension Service.\n\nIf you incorporate and become compulsory, each employee's enrollment is judged by whether prescribed weekly hours and monthly working days are both three-quarters or more of a regular worker's, or, at a specified applicable workplace with 51 or more insured persons, by 20 or more weekly hours and monthly wages of 88,000 yen or more. The counting is summarized in [what happens to social insurance when you hire for short hours](/en/labor/column/tanjikan-koyo-shakaihoken-4bunno3).\n\n## How far do a stylist's workers' accident and employment insurance go?\n\nLabor insurance is judged differently from social insurance.\n\n- **Workers' accident insurance:** compulsory for any business that uses even one worker, regardless of corporation/sole proprietor and industry, and regardless of nationality, residence status, or hours. On the other hand, **the business owner or an officer is not a \"worker,\" so they are outside workers' accident coverage;** to cover injury while working, they use the separate special-enrollment scheme for small-business owners. The order of enrollment is in [officers get no workers' accident cover — and a one-person company can't even take special enrollment](/en/labor/column/shacho-rosai-tokubetsu-kanyu-hitori).\n- **Employment insurance:** a worker with 20 or more prescribed weekly hours (10 or more from October 2028) and expected employment of 31 days or more is insured. **If a chair-rental stylist is truly a business operator, they are not a worker, so employment and workers' accident insurance do not apply.** Here too, the \"employment versus business operator\" reality test governs.\n\nIn other words, even if you meant to design chair rental / subcontracting, if the reality is judged to be employment, retroactive enrollment and premiums for workers' accident and employment insurance become an issue. Drawing the line at the entrance prevents later retroactivity.\n\n## Who should you ask about the salon notification and contracts?\n\nOpening a salon divides by qualification, each a separate contract.\n\n| What to do | Main person in charge |\n|---|---|\n| Work rules, wage (commission/guaranteed) design, social/labor insurance application and procedures, payroll | Shakai Hoken Roumushi (our office) |\n| Drafting and filing the beauty-salon opening notification (public health center) | Gyoseishoshi |\n| Drafting chair-rental/subcontract agreements, disputes over worker status | Attorney |\n| Tax on opening, tax return | Tax accountant |\n| Brokerage and important-matters explanation for the store property | Real estate agent |\n\nThe beauty-salon notification can be connected to 四葉行政書士事務所 and the store property to 四葉不動産, but 四葉行政書士事務所 and 四葉不動産 are **separate, independent entities** from our office, and the Shakai Hoken Roumushi work, the Gyoseishoshi work, and the real estate work are contracted **separately** (we do not take them on under one engagement). Our office does not receive referral fees. For the structure and equipment standards of the notification, see [the beauty-salon opening notification and structure/equipment standards](/en/legal/column/biyoushojo-kaisetsu-todokede-kozo-setsubi-kijun) (Gyoseishoshi site); for property-side requirements, see [properties usable for a beauty/barber salon and the health-center notification](/en/column/biyoshitsu-riyojo-bukken-hokenjo-todokede) (real estate site).\n\n四葉社会保険労務士事務所 can advise on wage design that meets the guaranteed wage and minimum wage, work rules that reflect the chair-rental/employment split, and the application and procedures of social and labor insurance. Fees are summarized in [the fee schedule](/en/labor/ryokin).\n\n## Frequently asked questions\n\n**Q. If we go full commission, can we pay nothing in slow months?**\nA. No. As long as the person is a worker, the guaranteed wage under Article 27 applies, and you must guarantee a certain wage in proportion to hours worked once they come in. Further, if the commission converted to an hourly figure falls below the minimum wage, the company must pay the shortfall. Even on full commission, wages cannot be zero.\n\n**Q. If we use chair rental, can we assume no social insurance and no overtime apply?**\nA. If the chair rental is truly a place-lease to a business operator, labor law and social insurance do not apply. But if the reality shows building shifts, assigning the salon's customers, and directing the work, it is judged as employment regardless of the contract title, and social insurance, overtime, and labor insurance can apply retroactively. The judgment is by reality.\n\n**Q. As a sole proprietor salon, do we not enroll in social insurance even with five or more staff?**\nA. For health and pension, the beauty business is not among the statutory applicable industries, so as a sole proprietorship it is not a compulsorily applicable workplace even with five or more staff. It can enroll voluntarily as a voluntarily applicable workplace with approval. Workers' accident insurance, by contrast, is compulsory once you use even one worker, regardless of industry or headcount.\n\n**Q. We put a stylist on subcontract — what about workers' accident insurance?**\nA. If the reality is a business operator (a true subcontract), they are not a worker, so workers' accident and employment insurance do not apply. Conversely, if the reality is judged to be employment, retroactive enrollment in workers' accident and employment insurance becomes an issue. To cover the owner's own injury while working, consider special enrollment for small-business owners on the premise that you employ workers.\n\n## Sources\n\n- Labor Standards Act (Act No. 49 of 1947): Article 9 (definition of worker), Article 26 (leave allowance), Article 27 (guaranteed wage under piecework)\n- Minimum Wage Act (Act No. 137 of 1959): Article 4(1) (effect of the minimum wage)\n- Labor Standards Act Study Group report \"On the criteria for judging a 'worker' under the Labor Standards Act\" (19 December 1985), confirmed against the original published by the Ministry of Health, Labour and Welfare\n- Level of the guaranteed wage under piecework: not set in the article; a notice requires \"income not far from ordinary actual earnings,\" and the leave allowance (60% or more of average wages) is used as a common guide\n- Health Insurance Act (Act No. 70 of 1922) Article 3(3) and Employees' Pension Insurance Act (Act No. 115 of 1954) Article 6: corporations are compulsory even with one director; individual workplaces are compulsory with five or more regular staff, but service businesses such as barber/beauty are excluded from the applicable industries (Japan Pension Service \"Applicable workplaces and insured persons,\" accessed 20 September 2026)\n- Addition of professional practices to the applicable industries: effective 1 October 2022 (Japan Pension Service, accessed 20 September 2026). Abolition of the excluded industries is at the proposal stage of a 2024 Ministry expert panel, with no effective date\n- Industrial Accident Compensation Insurance Act (Act No. 50 of 1947): compulsory for a business using workers; officers/owners use special enrollment. Employment Insurance Act (Act No. 116 of 1974) Articles 4 and 6: workers with 20 or more weekly hours, etc., are insured; 10 or more from October 2028\n- All provisions confirmed on 20 September 2026 via e-Gov and each agency's published materials. Rates, firm-size requirements, and applicable industries are revised, so confirm the latest with the Japan Pension Service and the Ministry of Health, Labour and Welfare\n\nThis article does not decide whom to consult. Wage design, work rules, and the application and procedures of social and labor insurance are the work of a Shakai Hoken Roumushi. The beauty-salon notification is a Gyoseishoshi's, contract drafting and worker-status disputes an attorney's, opening tax a tax accountant's, and property brokerage a real estate agent's — each contracted separately as separate, independent entities. Our office does not receive referral fees. For fees when consulting 四葉社会保険労務士事務所, see [the fee schedule](/en/labor/ryokin); for frequently asked questions, see [the FAQ](/en/labor/faq).\n\nThis article is general information. Individual judgments, such as the appropriateness of commission pay or chair rental and the obligation to enroll in social insurance, are made by a qualified professional after a consultation. Written by [Joji Uramatsu](/en/about/uramatsu) (Shakai Hoken Roumushi, Gyoseishoshi, Registered Real Estate Transaction Specialist).",
+        "category": "Social insurance",
+        "keywords": [
+          "hair salon commission pay minimum wage",
+          "chair rental subcontract employment line",
+          "salon social insurance compulsory",
+          "stylist workers accident employment insurance",
+          "beauty salon opening who to ask",
+          "guaranteed wage piecework Article 27"
+        ],
+        "tags": [
+          "Hair salon",
+          "Commission pay",
+          "Worker status",
+          "Social insurance",
+          "Minimum wage",
+          "Opening a business"
+        ],
+        "author": {
+          "name": "Joji Uramatsu",
+          "title": "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所"
+        },
+        "faq": [
+          {
+            "question": "If we go full commission, can we pay nothing in slow months?",
+            "answer": "No. As long as the person is a worker, the guaranteed wage under Article 27 applies, and you must guarantee a certain wage in proportion to hours worked once they come in. Further, if the commission converted to an hourly figure falls below the minimum wage, the company must pay the shortfall. Even on full commission, wages cannot be zero."
+          },
+          {
+            "question": "If we use chair rental, can we assume no social insurance and no overtime apply?",
+            "answer": "If the chair rental is truly a place-lease to a business operator, labor law and social insurance do not apply. But if the reality shows building shifts, assigning the salon's customers, and directing the work, it is judged as employment regardless of the contract title, and social insurance, overtime, and labor insurance can apply retroactively. The judgment is by reality."
+          },
+          {
+            "question": "As a sole proprietor salon, do we not enroll in social insurance even with five or more staff?",
+            "answer": "For health and pension, the beauty business is not among the statutory applicable industries, so as a sole proprietorship it is not a compulsorily applicable workplace even with five or more staff. It can enroll voluntarily as a voluntarily applicable workplace with approval. Workers' accident insurance, by contrast, is compulsory once you use even one worker, regardless of industry or headcount."
+          },
+          {
+            "question": "We put a stylist on subcontract — what about workers' accident insurance?",
+            "answer": "If the reality is a business operator (a true subcontract), they are not a worker, so workers' accident and employment insurance do not apply. Conversely, if the reality is judged to be employment, retroactive enrollment in workers' accident and employment insurance becomes an issue. To cover the owner's own injury while working, consider special enrollment for small-business owners on the premise that you employ workers."
+          }
+        ]
+      },
+      "zh-tw": {
+        "title": "美容院開業，抽成薪・租位・社會保險該如何決定？",
+        "excerpt": "美容院即使採抽成薪，仍須滿足最低工資與保障工資；租位（業務委託）與僱用的分界，取決於工作實態而非契約名稱。社會保險（健保・厚年）是否強制加入，視法人或個人及人數而分。就業規則與社會保險為社會保險勞務士、美容所開設届為行政書士、契約與紛爭為律師、稅務為稅理士、物件為宅地建物取引業者的領域，各自獨立的事業體分別承接、另行簽約。",
+        "content": "**先講結論**：美容院即使採抽成薪，仍須滿足最低工資與保障工資；租位（業務委託）與僱用的分界，取決於工作實態而非契約名稱。社會保險（健保・厚年）是否強制加入，視法人或個人及人數而分。\n\n開業前常聽到「造型師是抽成，所以無關勞動法」「採租位所以不用管」的諮詢。然而抽成薪也有工資下限，租位若實態為僱用，亦以僱用處理。若據此設計，日後會遇上未付工資與保險料的追溯。先掌握「哪裡是法律的界線」。\n\n## 只有抽成薪，也必須滿足最低工資嗎？\n\n必須。抽成薪（出來高払制）同時受兩條下限拘束。\n\n| 下限 | 依據 | 內容 |\n|---|---|---|\n| 出來高払制的保障工資 | 勞動基準法第27條 | 即使出來高少的月份，也須依**工作時間保障一定額工資** |\n| 最低工資 | 最低工資法第4條第1項 | 抽成除以當月總工時的**時薪額**，須達地域別最低工資以上 |\n\n勞動基準法第27條規定「對於以出來高払制或其他請負制使用的勞工，使用者須依工作時間保障一定額的工資」。**即使完全抽成（full commission），只要出勤工作，工資即不得為零**。保障工資的額度條文未定，但通達要求「須使收入始終不與通常實收工資相距過遠」，且休業手當為平均工資6成以上（第26條），故一般以此為目安。\n\n最低工資是另一把尺。無論指名料・技術料的抽成設得多高，若在指名少的月份時薪額低於最低工資，公司即須補足差額。實務上多採**固定薪＋抽成**，以固定薪部分確保最低工資與保障工資。契約與運用要偏向哪一邊，可與[外注與僱用的分界，不由契約書決定](/zh-tw/labor/column/gaichu-koyo-sakaime-roudoushasei)一併整理。\n\n## 租位・業務委託與僱用的分界，在哪裡判斷？\n\n不看契約名稱，而看工作實態。勞動基準法第9條將「勞工」定義為受事業使用並領工資者，契約名稱不在要件之列。判斷架構為勞動基準法研究會報告（昭和60年12月19日）所示項目，綜合觀察下列各點。\n\n| 觀察點 | 傾向僱用 | 傾向租位（事業者） |\n|---|---|---|\n| 對委託・指示的諾否自由 | 不能拒絕 | 自選承接的施術 |\n| 指揮監督・時間場所拘束 | 指定出退勤・班表 | 自定營業日・時間 |\n| 費用・顧客 | 店家定價並分派店客 | 自己的顧客・自己的費用 |\n| 報酬性質 | 對時間支付 | 由營收扣除場地費 |\n| 設備・工具負擔 | 店家備置 | 自備部分工具 |\n\n即使稱為「租位」，若排班、分派店家顧客、依店家指示施術，則勞動者性傾向被認定。反之，若出借座位與設備，施術者以自己的價格服務自己的顧客、依營收向店家繳場地費，則事業者性較強。要點在於**不由單一項目決定，而是就全部事實綜合判斷**。另須注意，即使租位，凡以美容所營業者，開設者仍須向保健所辦美容所開設届並設置管理美容師（美容師法），此與僱用或業務委託為兩回事。\n\n## 美容院的社會保險（健保・厚年）何時強制加入？\n\n首先依**法人或個人**大幅分野。\n\n| 事業形態 | 健康保險・厚生年金 |\n|---|---|\n| 法人（股份公司・合同公司等） | **即使社長1人亦強制適用**（領取報酬的代表者亦為被保險人） |\n| 個人經營 | **無論幾名員工均不強制適用**（美容業不在法定適用業種之列） |\n\n健康保險法第3條第3項・厚生年金保險法第6條，將常時5人以上的個人事業所定為強制適用，但將農林水產業、餐飲店、理容美容業等服務業排除於適用業種之外。**理容・美容業若為個人經營，即使員工5人以上，亦非健保・厚年的強制適用事業所**（可作為任意適用事業所經認可加入）。令和4年10月起士業（律師・稅理士・社會保險勞務士等）被追加為適用業種，但美容業未包含。2024年厚生勞動省有識者會議提議撤廢非適用業種，惟施行日尚未定，最新狀況請向日本年金機構確認。\n\n若法人化而成為強制適用，各員工的加入，以1週約定工作時間與1月約定工作日數是否皆為一般勞工的4分之3以上，或於被保險人51人以上的特定適用事業所以週20小時以上・月薪8.8萬圓以上判斷。數法整理於[以短時間僱用，社會保險會如何](/zh-tw/labor/column/tanjikan-koyo-shakaihoken-4bunno3)。\n\n## 美容師的勞災・僱用保險，需要到什麼程度？\n\n勞動保險與社會保險的判定機制不同。\n\n- **勞災保險**：只要使用1名勞工，不問法人或個人、不問業種即強制適用，亦不問國籍・在留資格・工作時間。另一方面，**事業主本人（個人事業主）或役員並非「勞工」，故不在勞災對象內**，若欲備施術中受傷，須用中小事業主等特別加入此另一制度。加入順序請參閱[社長領不到勞災，且僅1人時連特別加入也不行](/zh-tw/labor/column/shacho-rosai-tokubetsu-kanyu-hitori)。\n- **僱用保險**：1週約定工作時間20小時以上（2028年10月起10小時以上）、且預期僱用31日以上的勞工為被保險人。**租位的施術者若確為事業者，即非勞工，故不列入僱用保險・勞災對象**。此處同樣以「僱用或事業者」的實態判斷為準。\n\n也就是說，即使意在設計成租位・業務委託，若實態被判為僱用，勞災・僱用保險的追溯加入與保險料即成問題。於設計入口先劃線，可防日後追溯。\n\n## 美容所的届出與契約，該找誰？\n\n美容院開業依資格分工，各自為不同的契約。\n\n| 要做的事 | 主要負責 |\n|---|---|\n| 就業規則・工資（抽成・保障工資）設計、勞動・社會保險的適用判定與手續、薪資計算 | 社會保險勞務士（本事務所） |\n| 美容所開設届（保健所）的作成・提出支援 | 行政書士 |\n| 租位・業務委託契約書作成、勞動者性紛爭 | 律師 |\n| 開業的稅務・確定申告 | 稅理士 |\n| 店鋪物件的仲介・重要事項說明 | 宅地建物取引業者 |\n\n美容所開設届可轉介至四葉行政書士事務所，店鋪物件可轉介至四葉不動産，惟四葉行政書士事務所・四葉不動産與本事務所為**各自獨立**的事業體，社會保險勞務士業務・行政書士業務・宅地建物取引業務須**另行簽約**（不進行一括受任）。本事務所不收取介紹費。届出的構造・設備基準請參閱[美容所的開設届與構造・設備基準](/zh-tw/legal/column/biyoushojo-kaisetsu-todokede-kozo-setsubi-kijun)（行政書士網站）；物件側的要件請參閱[可用於美容院・理容所的物件與保健所届出](/zh-tw/column/biyoshitsu-riyojo-bukken-hokenjo-todokede)（不動産網站）。\n\n四葉社会保険労務士事務所可就滿足保障工資與最低工資的工資設計、反映租位／僱用區分的就業規則、社會・勞動保險的適用與手續提供諮詢。費用彙整於[報酬額表](/zh-tw/labor/ryokin)。\n\n## 常見問題\n\n**Q. 只要採完全抽成，淡月是否可不付工資？**\nA. 否。只要是勞工，即受第27條保障工資拘束，出勤後須依工作時間保障一定額工資。此外，抽成換算為時薪額若低於最低工資，公司須補足差額。即使完全抽成，工資亦不得為零。\n\n**Q. 採租位是否即可認為無社會保險亦無加班費？**\nA. 若租位確為對事業者的場地出借，則勞動法・社會保險不適用。惟若有排班、分派店家顧客、指揮監督的實態，則不論契約名稱皆判為僱用，社會保險・加班費・勞動保險可能追溯適用。判斷以實態為準。\n\n**Q. 個人經營的美容院，員工5人以上也不必加入社會保險嗎？**\nA. 健康保險・厚生年金方面，美容業不在法定適用業種之列，故個人經營即使員工5人以上亦非強制適用事業所，可作為任意適用事業所經認可加入。而勞災保險只要使用1名勞工即強制適用，不問業種與人數。\n\n**Q. 將造型師採業務委託，勞災如何處理？**\nA. 若實態為事業者（真正的業務委託），即非勞工，故不列入勞災・僱用保險對象。反之若實態被判為僱用，勞災・僱用保險的追溯加入即成問題。事業主本人若欲備施術中受傷，須以已僱用勞工為前提，檢討中小事業主等特別加入。\n\n## 本文的依據\n\n- 勞動基準法（昭和22年法律第49號）第9條（勞工定義）、第26條（休業手當）、第27條（出來高払制的保障工資）\n- 最低工資法（昭和34年法律第137號）第4條第1項（最低工資的效力）\n- 勞動基準法研究會報告「關於勞動基準法『勞工』的判斷基準」（昭和60年12月19日），依厚生勞動省公開的原文確認\n- 出來高払制保障工資的水準：條文未定，通達要求「不與通常實收工資相距過遠」，並以休業手當（平均工資100分之60以上）為一般目安\n- 健康保險法（大正11年法律第70號）第3條第3項・厚生年金保險法（昭和29年法律第115號）第6條：法人即使1人亦強制適用，個人事業所常時5人以上強制適用，但理容・美容業等服務業排除於適用業種之外（日本年金機構「適用事業所與被保險人」2026年9月20日查閱）\n- 士業追加為適用業種：令和4年10月1日施行（日本年金機構。2026年9月20日查閱）。撤廢非適用業種為2024年厚生勞動省有識者會議的提議階段，施行日未定\n- 勞動者災害補償保險法（昭和22年法律第50號）：對使用勞工的事業強制適用，役員・事業主以特別加入。僱用保險法（昭和49年法律第116號）第4條・第6條：週20小時以上等的勞工為被保險人，2028年10月起10小時以上\n- 條文均於2026年9月20日以e-Gov法令檢索及各官廳公表資料確認。料率・企業規模要件・適用業種會改定，最新請向日本年金機構・厚生勞動省確認\n\n本文並未決定該向誰諮詢。工資設計・就業規則・社會與勞動保險的適用與手續為社會保險勞務士的業務。美容所開設届為行政書士、契約書作成與勞動者性紛爭為律師、開業稅務為稅理士、物件仲介為宅地建物取引業者，各自獨立的事業體分別承接、另行簽約。本事務所不收取介紹費。向四葉社会保険労務士事務所諮詢時的費用彙整於[報酬額表](/zh-tw/labor/ryokin)，常見問題彙整於[常見問答](/zh-tw/labor/faq)。\n\n本文為一般性資訊提供。抽成薪・租位的妥適性與社會保險加入義務等個別判斷，須經面談由有資格者進行。撰寫者為[浦松丈二](/zh-tw/about/uramatsu)（社會保險勞務士・行政書士・宅地建物取引士）。",
+        "category": "社會保險",
+        "keywords": [
+          "美容院 抽成薪 最低工資",
+          "租位 業務委託 僱用 分界",
+          "美容院 社會保險 強制加入",
+          "美容師 勞災 僱用保險",
+          "美容院 開業 該找誰",
+          "出來高払 保障工資 第27條"
+        ],
+        "tags": [
+          "美容院",
+          "抽成薪",
+          "勞動者性",
+          "社會保險",
+          "最低工資",
+          "開業"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "只要採完全抽成，淡月是否可不付工資？",
+            "answer": "否。只要是勞工，即受第27條保障工資拘束，出勤後須依工作時間保障一定額工資。此外，抽成換算為時薪額若低於最低工資，公司須補足差額。即使完全抽成，工資亦不得為零。"
+          },
+          {
+            "question": "採租位是否即可認為無社會保險亦無加班費？",
+            "answer": "若租位確為對事業者的場地出借，則勞動法・社會保險不適用。惟若有排班、分派店家顧客、指揮監督的實態，則不論契約名稱皆判為僱用，社會保險・加班費・勞動保險可能追溯適用。判斷以實態為準。"
+          },
+          {
+            "question": "個人經營的美容院，員工5人以上也不必加入社會保險嗎？",
+            "answer": "健康保險・厚生年金方面，美容業不在法定適用業種之列，故個人經營即使員工5人以上亦非強制適用事業所，可作為任意適用事業所經認可加入。而勞災保險只要使用1名勞工即強制適用，不問業種與人數。"
+          },
+          {
+            "question": "將造型師採業務委託，勞災如何處理？",
+            "answer": "若實態為事業者（真正的業務委託），即非勞工，故不列入勞災・僱用保險對象。反之若實態被判為僱用，勞災・僱用保險的追溯加入即成問題。事業主本人若欲備施術中受傷，須以已僱用勞工為前提，檢討中小事業主等特別加入。"
+          }
+        ]
+      },
+      "zh": {
+        "title": "美容院开业，提成薪・租位・社会保险该如何决定？",
+        "excerpt": "美容院即使采提成薪，仍须满足最低工资与保障工资；租位（业务委托）与雇用的分界，取决于工作实态而非契约名称。社会保险（健保・厚年）是否强制加入，视法人或个人及人数而分。就业规则与社会保险为社会保险劳务士、美容所开设届为行政书士、契约与纠纷为律师、税务为税理士、物件为宅地建物取引业者的领域，各自独立的事业体分别承接、另行签约。",
+        "content": "**先讲结论**：美容院即使采提成薪，仍须满足最低工资与保障工资；租位（业务委托）与雇用的分界，取决于工作实态而非契约名称。社会保险（健保・厚年）是否强制加入，视法人或个人及人数而分。\n\n开业前常听到「造型师是提成，所以无关劳动法」「采租位所以不用管」的咨询。然而提成薪也有工资下限，租位若实态为雇用，亦以雇用处理。若据此设计，日后会遇上未付工资与保险料的追溯。先掌握「哪里是法律的界线」。\n\n## 只有提成薪，也必须满足最低工资吗？\n\n必须。提成薪（出来高払制）同时受两条下限拘束。\n\n| 下限 | 依据 | 内容 |\n|---|---|---|\n| 出来高払制的保障工资 | 劳动基准法第27条 | 即使出来高少的月份，也须依**工作时间保障一定额工资** |\n| 最低工资 | 最低工资法第4条第1项 | 提成除以当月总工时的**时薪额**，须达地域别最低工资以上 |\n\n劳动基准法第27条规定「对于以出来高払制或其他请负制使用的劳工，使用者须依工作时间保障一定额的工资」。**即使完全提成（full commission），只要出勤工作，工资即不得为零**。保障工资的额度条文未定，但通达要求「须使收入始终不与通常实收工资相距过远」，且休业手当为平均工资6成以上（第26条），故一般以此为目安。\n\n最低工资是另一把尺。无论指名料・技术料的提成设得多高，若在指名少的月份时薪额低于最低工资，公司即须补足差额。实务上多采**固定薪＋提成**，以固定薪部分确保最低工资与保障工资。契约与运用要偏向哪一边，可与[外注与雇用的分界，不由契约书决定](/zh/labor/column/gaichu-koyo-sakaime-roudoushasei)一并整理。\n\n## 租位・业务委托与雇用的分界，在哪里判断？\n\n不看契约名称，而看工作实态。劳动基准法第9条将「劳工」定义为受事业使用并领工资者，契约名称不在要件之列。判断架构为劳动基准法研究会报告（昭和60年12月19日）所示项目，综合观察下列各点。\n\n| 观察点 | 倾向雇用 | 倾向租位（事业者） |\n|---|---|---|\n| 对委托・指示的诺否自由 | 不能拒绝 | 自选承接的施术 |\n| 指挥监督・时间场所拘束 | 指定出退勤・班表 | 自定营业日・时间 |\n| 费用・顾客 | 店家定价并分派店客 | 自己的顾客・自己的费用 |\n| 报酬性质 | 对时间支付 | 由营收扣除场地费 |\n| 设备・工具负担 | 店家备置 | 自备部分工具 |\n\n即使称为「租位」，若排班、分派店家顾客、依店家指示施术，则劳动者性倾向被认定。反之，若出借座位与设备，施术者以自己的价格服务自己的顾客、依营收向店家缴场地费，则事业者性较强。要点在于**不由单一项目决定，而是就全部事实综合判断**。另须注意，即使租位，凡以美容所营业者，开设者仍须向保健所办美容所开设届并设置管理美容师（美容师法），此与雇用或业务委托为两回事。\n\n## 美容院的社会保险（健保・厚年）何时强制加入？\n\n首先依**法人或个人**大幅分野。\n\n| 事业形态 | 健康保险・厚生年金 |\n|---|---|\n| 法人（股份公司・合同公司等） | **即使社长1人亦强制适用**（领取报酬的代表者亦为被保险人） |\n| 个人经营 | **无论几名员工均不强制适用**（美容业不在法定适用业种之列） |\n\n健康保险法第3条第3项・厚生年金保险法第6条，将常时5人以上的个人事业所定为强制适用，但将农林水产业、餐饮店、理容美容业等服务业排除于适用业种之外。**理容・美容业若为个人经营，即使员工5人以上，亦非健保・厚年的强制适用事业所**（可作为任意适用事业所经认可加入）。令和4年10月起士业（律师・税理士・社会保险劳务士等）被追加为适用业种，但美容业未包含。2024年厚生劳动省有识者会议提议撤废非适用业种，惟施行日尚未定，最新状况请向日本年金机构确认。\n\n若法人化而成为强制适用，各员工的加入，以1周约定工作时间与1月约定工作日数是否皆为一般劳工的4分之3以上，或于被保险人51人以上的特定适用事业所以周20小时以上・月薪8.8万圆以上判断。数法整理于[以短时间雇用，社会保险会如何](/zh/labor/column/tanjikan-koyo-shakaihoken-4bunno3)。\n\n## 美容师的劳灾・雇用保险，需要到什么程度？\n\n劳动保险与社会保险的判定机制不同。\n\n- **劳灾保险**：只要使用1名劳工，不问法人或个人、不问业种即强制适用，亦不问国籍・在留资格・工作时间。另一方面，**事业主本人（个人事业主）或役员并非「劳工」，故不在劳灾对象内**，若欲备施术中受伤，须用中小事业主等特别加入此另一制度。加入顺序请参阅[社长领不到劳灾，且仅1人时连特别加入也不行](/zh/labor/column/shacho-rosai-tokubetsu-kanyu-hitori)。\n- **雇用保险**：1周约定工作时间20小时以上（2028年10月起10小时以上）、且预期雇用31日以上的劳工为被保险人。**租位的施术者若确为事业者，即非劳工，故不列入雇用保险・劳灾对象**。此处同样以「雇用或事业者」的实态判断为准。\n\n也就是说，即使意在设计成租位・业务委托，若实态被判为雇用，劳灾・雇用保险的追溯加入与保险料即成问题。于设计入口先划线，可防日后追溯。\n\n## 美容所的届出与契约，该找谁？\n\n美容院开业依资格分工，各自为不同的契约。\n\n| 要做的事 | 主要负责 |\n|---|---|\n| 就业规则・工资（提成・保障工资）设计、劳动・社会保险的适用判定与手续、薪资计算 | 社会保险劳务士（本事务所） |\n| 美容所开设届（保健所）的作成・提出支援 | 行政书士 |\n| 租位・业务委托契约书作成、劳动者性纠纷 | 律师 |\n| 开业的税务・确定申告 | 税理士 |\n| 店铺物件的仲介・重要事项说明 | 宅地建物取引业者 |\n\n美容所开设届可转介至四葉行政書士事務所，店铺物件可转介至四葉不動産，惟四葉行政書士事務所・四葉不動産与本事务所为**各自独立**的事业体，社会保险劳务士业务・行政书士业务・宅地建物取引业务须**另行签约**（不进行一括受任）。本事务所不收取介绍费。届出的构造・设备基准请参阅[美容所的开设届与构造・设备基准](/zh/legal/column/biyoushojo-kaisetsu-todokede-kozo-setsubi-kijun)（行政书士网站）；物件侧的要件请参阅[可用于美容院・理容所的物件与保健所届出](/zh/column/biyoshitsu-riyojo-bukken-hokenjo-todokede)（不动产网站）。\n\n四葉社会保険労務士事務所可就满足保障工资与最低工资的工资设计、反映租位／雇用区分的就业规则、社会・劳动保险的适用与手续提供咨询。费用汇整于[报酬额表](/zh/labor/ryokin)。\n\n## 常见问题\n\n**Q. 只要采完全提成，淡月是否可不付工资？**\nA. 否。只要是劳工，即受第27条保障工资拘束，出勤后须依工作时间保障一定额工资。此外，提成换算为时薪额若低于最低工资，公司须补足差额。即使完全提成，工资亦不得为零。\n\n**Q. 采租位是否即可认为无社会保险亦无加班费？**\nA. 若租位确为对事业者的场地出借，则劳动法・社会保险不适用。惟若有排班、分派店家顾客、指挥监督的实态，则不论契约名称皆判为雇用，社会保险・加班费・劳动保险可能追溯适用。判断以实态为准。\n\n**Q. 个人经营的美容院，员工5人以上也不必加入社会保险吗？**\nA. 健康保险・厚生年金方面，美容业不在法定适用业种之列，故个人经营即使员工5人以上亦非强制适用事业所，可作为任意适用事业所经认可加入。而劳灾保险只要使用1名劳工即强制适用，不问业种与人数。\n\n**Q. 将造型师采业务委托，劳灾如何处理？**\nA. 若实态为事业者（真正的业务委托），即非劳工，故不列入劳灾・雇用保险对象。反之若实态被判为雇用，劳灾・雇用保险的追溯加入即成问题。事业主本人若欲备施术中受伤，须以已雇用劳工为前提，检讨中小事业主等特别加入。\n\n## 本文的依据\n\n- 劳动基准法（昭和22年法律第49号）第9条（劳工定义）、第26条（休业手当）、第27条（出来高払制的保障工资）\n- 最低工资法（昭和34年法律第137号）第4条第1项（最低工资的效力）\n- 劳动基准法研究会报告「关于劳动基准法『劳工』的判断基准」（昭和60年12月19日），依厚生劳动省公开的原文确认\n- 出来高払制保障工资的水准：条文未定，通达要求「不与通常实收工资相距过远」，并以休业手当（平均工资100分之60以上）为一般目安\n- 健康保险法（大正11年法律第70号）第3条第3项・厚生年金保险法（昭和29年法律第115号）第6条：法人即使1人亦强制适用，个人事业所常时5人以上强制适用，但理容・美容业等服务业排除于适用业种之外（日本年金机构「适用事业所与被保险人」2026年9月20日查阅）\n- 士业追加为适用业种：令和4年10月1日施行（日本年金机构。2026年9月20日查阅）。撤废非适用业种为2024年厚生劳动省有识者会议的提议阶段，施行日未定\n- 劳动者灾害补偿保险法（昭和22年法律第50号）：对使用劳工的事业强制适用，役员・事业主以特别加入。雇用保险法（昭和49年法律第116号）第4条・第6条：周20小时以上等的劳工为被保险人，2028年10月起10小时以上\n- 条文均于2026年9月20日以e-Gov法令检索及各官厅公表资料确认。料率・企业规模要件・适用业种会改定，最新请向日本年金机构・厚生劳动省确认\n\n本文并未决定该向谁咨询。工资设计・就业规则・社会与劳动保险的适用与手续为社会保险劳务士的业务。美容所开设届为行政书士、契约书作成与劳动者性纠纷为律师、开业税务为税理士、物件仲介为宅地建物取引业者，各自独立的事业体分别承接、另行签约。本事务所不收取介绍费。向四葉社会保険労務士事務所咨询时的费用汇整于[报酬额表](/zh/labor/ryokin)，常见问题汇整于[常见问答](/zh/labor/faq)。\n\n本文为一般性资讯提供。提成薪・租位的妥适性与社会保险加入义务等个别判断，须经面谈由有资格者进行。撰写者为[浦松丈二](/zh/about/uramatsu)（社会保险劳务士・行政书士・宅地建物取引士）。",
+        "category": "社会保险",
+        "keywords": [
+          "美容院 提成薪 最低工资",
+          "租位 业务委托 雇用 分界",
+          "美容院 社会保险 强制加入",
+          "美容师 劳灾 雇用保险",
+          "美容院 开业 该找谁",
+          "出来高払 保障工资 第27条"
+        ],
+        "tags": [
+          "美容院",
+          "提成薪",
+          "劳动者性",
+          "社会保险",
+          "最低工资",
+          "开业"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "只要采完全提成，淡月是否可不付工资？",
+            "answer": "否。只要是劳工，即受第27条保障工资拘束，出勤后须依工作时间保障一定额工资。此外，提成换算为时薪额若低于最低工资，公司须补足差额。即使完全提成，工资亦不得为零。"
+          },
+          {
+            "question": "采租位是否即可认为无社会保险亦无加班费？",
+            "answer": "若租位确为对事业者的场地出借，则劳动法・社会保险不适用。惟若有排班、分派店家顾客、指挥监督的实态，则不论契约名称皆判为雇用，社会保险・加班费・劳动保险可能追溯适用。判断以实态为准。"
+          },
+          {
+            "question": "个人经营的美容院，员工5人以上也不必加入社会保险吗？",
+            "answer": "健康保险・厚生年金方面，美容业不在法定适用业种之列，故个人经营即使员工5人以上亦非强制适用事业所，可作为任意适用事业所经认可加入。而劳灾保险只要使用1名劳工即强制适用，不问业种与人数。"
+          },
+          {
+            "question": "将造型师采业务委托，劳灾如何处理？",
+            "answer": "若实态为事业者（真正的业务委托），即非劳工，故不列入劳灾・雇用保险对象。反之若实态被判为雇用，劳灾・雇用保险的追溯加入即成问题。事业主本人若欲备施术中受伤，须以已雇用劳工为前提，检讨中小事业主等特别加入。"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "business": "labor",
+    "slug": "gaikokujin-keieisha-yakuin-shakaihoken-tekiyo",
+    "title": "外国人経営者や役員は日本の社会保険にどこまで入るのか",
+    "date": "2026-09-20",
+    "category": "社会保険",
+    "excerpt": "「経営・管理」の在留資格で日本の法人を設立した経営者本人は、報酬を受ければ健康保険・厚生年金の被保険者になります。役員は原則として労災・雇用保険の対象外ですが、使用人兼務役員だと扱いが変わります。社会保険の加入・納付は在留期間の更新でも見られます。代表者本人を軸に、健康保険法・厚生年金保険法・労災保険法・雇用保険法と入管ガイドラインから整理します。",
+    "content": "**結論（先に要点）**：「経営・管理」の在留資格で日本の法人を設立した経営者本人は、報酬を受ければ健康保険・厚生年金保険の被保険者になります。役員は原則として労災・雇用保険の対象外ですが、使用人兼務役員だと扱いが変わります。社会保険の加入・納付は在留期間の更新でも見られます。\n\n中国・台湾の企業が日本に法人を設立し、代表者が「経営・管理」の在留資格で来日する——このとき見落とされやすいのが、経営者本人や役員が日本の社会保険にどこまで入るのかという点です。「役員だから労働保険は関係ない」と考えていると、あとで在留更新のときに困ります。中国・台湾の経営者と、その顧問となる現地の会計・人事の専門家に向けて、役員本人を軸に整理します。\n\n## 経営・管理の在留資格の経営者は、社会保険に入らなければならないのか？\n\n入ります。日本の**法人は、代表者1人でも健康保険・厚生年金保険の強制適用事業所**です（健康保険法第3条第3項・厚生年金保険法第6条）。日本に子会社や支店（登記した法人）を作れば、その時点で適用事業所になります。\n\n| 立場 | 健康保険・厚生年金 |\n|---|---|\n| 報酬を受ける常勤の代表取締役・役員 | 被保険者（役員報酬から標準報酬月額を決定） |\n| 無報酬の役員 | 報酬がないため被保険者にならない |\n| 非常勤役員 | 勤務実態・報酬の有無などで個別に判断 |\n\n「経営・管理」で来日した経営者本人も、法人から役員報酬を受けていれば被保険者です。**国籍や在留資格で加入の有無が変わることはありません**。日本人の役員とまったく同じ判定です。会社を設立した直後に何をいつ届け出るかは[会社をつくったら、いつまでに何を出すのか](/labor/column/kaisha-setsuritsu-shakaihoken-roudouhoken-kigen)に、雇う従業員側の保険料の全体像は[中国・台湾企業が日本で雇うと、会社にいくらかかるのか](/labor/column/chuka-kigyo-nihon-koyo-shakaihoken-cost-zentaizo)にまとめています。\n\n## 役員は労働保険（雇用・労災）の対象になるのか？\n\n原則として対象外です。労働保険は「労働者」を守る制度で、役員は労働者ではないためです。\n\n| 保険 | 役員本人の扱い |\n|---|---|\n| 労災保険 | 原則対象外。労働者を使用していれば中小事業主等の**特別加入**の道がある |\n| 雇用保険 | 原則被保険者でない（役員報酬のみの経営者は失業給付を受けられない） |\n\n労災保険は労働者を1人でも使用する事業に強制適用されますが、その給付は労働者に対するものです。**代表者や役員本人は、施術・作業中にけがをしても労災の給付を受けられません**。備えるには、労働者を雇っていることを前提に、労働保険事務組合を通じて中小事業主等の特別加入をする方法があります。加入の順序と規模要件は[社長には労災が出ない。そして1人だと特別加入もできない](/labor/column/shacho-rosai-tokubetsu-kanyu-hitori)を参照してください。雇用保険も、役員は原則として被保険者ではありません（雇用保険法第4条・第6条）。\n\n## 使用人兼務役員だと、扱いはどう変わるのか？\n\n取締役でありながら、部長・支店長など**使用人としての職務を持ち、その分の賃金を受けている人**を使用人兼務役員といいます。このとき、労働者としての性格がある部分について、扱いが変わります。\n\n- **雇用保険**：使用人としての労働者性が認められれば、その部分について被保険者になれます。手続では、ハローワークに**「兼務役員雇用実態証明書」**と、登記事項証明書・定款・取締役会議事録・賃金台帳・組織図などを提出し、職業安定所が労働者性を判断します。\n- **労災保険**：労働者としての賃金部分は労災の対象になり得ます。役員報酬部分は対象外です。\n- **健康保険・厚生年金**：役員報酬と使用人給与を合算した額から標準報酬月額を決めます。\n\nただし、**代表取締役は使用人兼務役員になれません**。会社を指揮する立場で、指揮監督を受ける使用人の性格を併せ持たないと整理されるためです。「経営・管理」の在留資格で来日する代表者本人は、雇用保険・労災の対象にはなりにくく、社会保険（健保・厚年）で加入するのが基本になります。\n\n## 社会保険への未加入は、在留資格の更新に響くのか？\n\n響き得ます。社会保険への加入・納付は事業主の法的義務であると同時に、**在留期間の更新の審査でも見られる要素**です。出入国在留管理庁の「在留資格の変更、在留期間の更新許可のガイドライン」は、届出・納税などの公的義務の履行を考慮すると示しており、「経営・管理」では事業の適正性・安定性の観点から、労働・社会保険の加入や納付の状況が確認されます。近年は申請の窓口で健康保険への加入を確認する運用も行われています。\n\n未加入や保険料の滞納があると、更新審査で消極的な要素と判断され、更新が認められなかったり在留期間が短くなったりする例があるとされます。ただし**許否は入管が個別に判断するもので、当事務所が保証・断定できるものではありません**。「経営・管理」の基準は改正が続いているため、更新の要件は申請前に必ず出入国在留管理庁の最新の公表資料と、担当する行政書士に確認してください。社会保険料の負担の全体像は[中国・台湾企業が日本で雇うと、会社にいくらかかるのか](/labor/column/chuka-kigyo-nihon-koyo-shakaihoken-cost-zentaizo)を、台湾のように社会保障協定がない国からの受け入れは[台湾から人を雇う・出向で受け入れるときの社会保険](/labor/column/taiwan-koyo-shukko-shakaihoken-kyotei-nashi)を参照してください。\n\n## 在留資格・会社設立・税務は、誰に相談すればよいのか？\n\n日本で法人を作り、経営者として在留するまでには、担当する資格が分かれ、それぞれ別の契約になります。\n\n| やること | 主な担当 |\n|---|---|\n| 労働・社会保険の適用判定、役員・使用人兼務役員の加入手続、給与計算、就業規則の整備 | 社会保険労務士（当事務所） |\n| 「経営・管理」など在留資格の申請・取次、会社設立の許認可 | 行政書士 |\n| 会社設立の登記申請 | 司法書士 |\n| 法人・個人の税務、役員報酬の税務 | 税理士 |\n| 労働紛争・株主間の紛争 | 弁護士 |\n| 事業所・社宅となる物件探し | 宅地建物取引業者 |\n\n在留資格の申請・取次は四葉行政書士事務所、事業所や社宅の物件は四葉不動産へおつなぎすることもできますが、四葉行政書士事務所・四葉不動産は当事務所とは**独立した事業体**で、社会保険労務士業務・行政書士業務・宅地建物取引業務は**別々にご契約**いただきます（一括受任はしません）。当事務所は紹介料を受け取りません。\n\n四葉社会保険労務士事務所では、役員・使用人兼務役員の社会保険と労働保険の適用判定、加入・喪失の手続、給与計算、就業規則の整備についてご相談いただけます。費用は[報酬額表](/labor/ryokin)にまとめています。\n\n## よくある質問\n\n**Q. 「経営・管理」で来日し、社長1人だけの会社です。社会保険には入りますか？**\nA. 入ります。法人は代表者1人でも健康保険・厚生年金保険の強制適用事業所になり、役員報酬を受ける代表者は被保険者です。国籍や在留資格で加入の有無は変わりません。無報酬の役員は報酬がないため被保険者になりませんが、その場合は在留の基盤となる収入や事業の実態が別途問われ得ます。\n\n**Q. 役員なので雇用保険には入れないのですか？失業したときの給付はありますか？**\nA. 役員は原則として雇用保険の被保険者ではないため、失業給付は受けられません。例外は使用人兼務役員で、使用人としての労働者性が認められた部分について被保険者になれます。代表取締役は使用人兼務役員になれないため、雇用保険には入れないのが原則です。\n\n**Q. 使用人兼務役員として雇用保険に入るには、何が必要ですか？**\nA. ハローワークに「兼務役員雇用実態証明書」を提出し、登記事項証明書・定款・取締役会議事録・賃金台帳・組織図・就業規則などの資料をもとに、職業安定所が労働者性を判断します。認められれば、使用人としての賃金部分について被保険者になります。判断は実態で行われます。\n\n**Q. 社会保険に入っていないと、在留資格の更新で不許可になりますか？**\nA. 未加入や保険料の滞納は、更新審査で消極的な要素と判断され得ます。入管は公的義務の履行や事業の適正性・安定性を見ており、加入・納付の状況は重要です。ただし許否は入管が個別に判断するもので、断定はできません。更新の要件は改正が続いているため、申請前に最新の公表資料と担当行政書士に確認してください。\n\n## この記事の根拠\n\n- 健康保険法（大正11年法律第70号）第3条第3項：法人の事業所は代表者1人でも強制適用事業所（日本年金機構「適用事業所と被保険者」2026年9月20日参照）\n- 厚生年金保険法（昭和29年法律第115号）第6条・第9条：適用事業所と被保険者の要件。報酬を受ける常勤役員は被保険者\n- 労働者災害補償保険法（昭和22年法律第50号）：労働者を使用する事業に強制適用。役員・事業主は対象外で、労働保険事務組合を通じた中小事業主等の特別加入の制度がある（厚生労働省「特別加入制度のしおり（中小事業主等用）」2026年9月20日参照）\n- 雇用保険法（昭和49年法律第116号）第4条・第6条：労働者が被保険者。役員は原則対象外。使用人兼務役員は労働者性が認められた部分について被保険者となり得る（ハローワークに「兼務役員雇用実態証明書」を提出。2026年9月20日参照）\n- 出入国在留管理庁「在留資格の変更、在留期間の更新許可のガイドライン」：公的義務（届出・納税等）の履行を考慮する旨。「経営・管理」の在留期間更新では事業の適正性・安定性の観点から労働・社会保険の加入・納付状況が確認される（出入国在留管理庁。2026年9月20日参照）。基準は改正が続くため最新は入管の公表資料で確認\n- 条文はいずれも2026年9月20日時点でe-Gov法令検索および各官庁の公表資料により確認しました。在留資格の要件・審査の運用は変わるため、最新は出入国在留管理庁で確認してください\n\nこの記事は、誰に相談するかまで決めるものではありません。四葉社会保険労務士事務所では、役員・使用人兼務役員の社会保険・労働保険の適用判定、加入・喪失の手続、給与計算、就業規則の整備についてご相談いただけます。在留資格の申請・取次と会社設立の許認可は行政書士、登記は司法書士、税務は税理士、紛争は弁護士へ、それぞれ独立した事業体として別々にご契約いただく形をご案内します。当事務所は紹介料を受け取りません。在留資格の該当性や更新の許否の最終判断は出入国在留管理庁が、保険料や加入義務の個別判断は年金事務所・日本年金機構・労働局が行います。四葉社会保険労務士事務所にご相談いただく場合の費用は[報酬額表](/labor/ryokin)に、よくいただくご質問は[よくあるご質問](/labor/faq)にまとめています。\n\n本記事は一般的な情報提供です。社会保険の加入義務や在留更新への影響など個別の判断は、最新の一次情報と個別のご事情に照らし、面談のうえ資格者が行います。執筆は[浦松丈二](/about/uramatsu)（社会保険労務士・行政書士・宅地建物取引士）です。",
+    "status": "published",
+    "author": {
+      "name": "浦松 丈二",
+      "title": "社会保険労務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+    },
+    "keywords": [
+      "経営管理 在留資格 経営者 社会保険",
+      "役員 労災 雇用保険 対象",
+      "使用人兼務役員 社会保険",
+      "社会保険 未加入 在留資格 更新",
+      "外国人 会社設立 社会保険 誰に相談",
+      "代表取締役 健康保険 厚生年金 加入"
+    ],
+    "tags": [
+      "外国人経営者",
+      "経営管理",
+      "社会保険",
+      "役員",
+      "使用人兼務役員",
+      "在留更新"
+    ],
+    "locales": [],
+    "faq": [
+      {
+        "question": "「経営・管理」で来日し、社長1人だけの会社です。社会保険には入りますか？",
+        "answer": "入ります。法人は代表者1人でも健康保険・厚生年金保険の強制適用事業所になり、役員報酬を受ける代表者は被保険者です。国籍や在留資格で加入の有無は変わりません。無報酬の役員は報酬がないため被保険者になりませんが、その場合は在留の基盤となる収入や事業の実態が別途問われ得ます。"
+      },
+      {
+        "question": "役員なので雇用保険には入れないのですか？失業したときの給付はありますか？",
+        "answer": "役員は原則として雇用保険の被保険者ではないため、失業給付は受けられません。例外は使用人兼務役員で、使用人としての労働者性が認められた部分について被保険者になれます。代表取締役は使用人兼務役員になれないため、雇用保険には入れないのが原則です。"
+      },
+      {
+        "question": "使用人兼務役員として雇用保険に入るには、何が必要ですか？",
+        "answer": "ハローワークに「兼務役員雇用実態証明書」を提出し、登記事項証明書・定款・取締役会議事録・賃金台帳・組織図・就業規則などの資料をもとに、職業安定所が労働者性を判断します。認められれば、使用人としての賃金部分について被保険者になります。判断は実態で行われます。"
+      },
+      {
+        "question": "社会保険に入っていないと、在留資格の更新で不許可になりますか？",
+        "answer": "未加入や保険料の滞納は、更新審査で消極的な要素と判断され得ます。入管は公的義務の履行や事業の適正性・安定性を見ており、加入・納付の状況は重要です。ただし許否は入管が個別に判断するもので、断定はできません。更新の要件は改正が続いているため、申請前に最新の公表資料と担当行政書士に確認してください。"
+      }
+    ],
+    "translations": {
+      "en": {
+        "title": "How far do foreign executives and officers enroll in Japan's social insurance?",
+        "excerpt": "A representative who comes to Japan on the Business Manager status and sets up a corporation is an insured person for health and pension insurance if they receive remuneration. Officers are, in principle, outside workers' accident and employment insurance, but the treatment changes for an employee-officer. Enrollment in and payment of social insurance are also examined at residence-status renewal. Residence status and company setup are the work of a Gyoseishoshi, registration of a judicial scrivener, and tax of a tax accountant — each contracted separately as separate, independent entities.",
+        "content": "**In short:** A representative who sets up a Japanese corporation and comes to Japan on the \"Business Manager\" residence status is an insured person for health insurance and employees' pension if they receive remuneration. Officers are, in principle, outside workers' accident and employment insurance, but the treatment changes for an employee-officer. Enrollment in and payment of social insurance are also examined at residence-status renewal.\n\nWhen a Chinese or Taiwanese company sets up a corporation in Japan and the representative comes on the \"Business Manager\" status, an easily overlooked point is how far the executive and officers themselves enroll in Japan's social insurance. Assuming \"as an officer, labor insurance doesn't apply\" causes trouble later at renewal. For Chinese and Taiwanese executives and the local accounting and HR professionals who advise them, this organizes the picture with the officer as the axis.\n\n## Must an executive on the Business Manager status enroll in social insurance?\n\nYes. A Japanese **corporation is a compulsorily applicable workplace for health insurance and employees' pension even with only one director** (Article 3(3) of the Health Insurance Act; Article 6 of the Employees' Pension Insurance Act). Set up a subsidiary or branch (a registered corporation) in Japan, and it is an applicable workplace from that point.\n\n| Status | Health insurance / employees' pension |\n|---|---|\n| Full-time representative director/officer receiving remuneration | Insured (standard remuneration set from officer pay) |\n| Officer with no remuneration | Not insured, as there is no remuneration |\n| Part-time officer | Judged individually by actual duties, presence of pay, etc. |\n\nAn executive who comes on \"Business Manager\" is also insured if they receive officer remuneration from the corporation. **Nationality and residence status do not change whether one enrolls** — exactly the same judgment as for a Japanese officer. For what to file right after setting up a company, see [what to file and by when after you set up a company](/en/labor/column/kaisha-setsuritsu-shakaihoken-roudouhoken-kigen); for the whole picture of premiums on the employees you hire, see [how much it costs a company when a Chinese or Taiwanese company hires in Japan](/en/labor/column/chuka-kigyo-nihon-koyo-shakaihoken-cost-zentaizo).\n\n## Are officers covered by labor insurance (employment / workers' accident)?\n\nIn principle, no. Labor insurance protects \"workers,\" and an officer is not a worker.\n\n| Insurance | Officer's treatment |\n|---|---|\n| Workers' accident | In principle outside coverage; **special enrollment** for small-business owners is possible if workers are used |\n| Employment insurance | In principle not insured (an executive on officer pay alone cannot receive unemployment benefits) |\n\nWorkers' accident insurance is compulsory for any business using even one worker, but its benefits are for workers. **A representative or officer receives no workers' accident benefit even if injured while working.** To prepare, there is a method of taking special enrollment for small-business owners through a labor insurance administration association, on the premise that you employ workers. The order and size requirements are in [officers get no workers' accident cover — and a one-person company can't even take special enrollment](/en/labor/column/shacho-rosai-tokubetsu-kanyu-hitori). Employment insurance, too, in principle does not make officers insured (Articles 4 and 6 of the Employment Insurance Act).\n\n## How does the treatment change for an employee-officer?\n\nAn **employee-officer** is a person who is a director yet holds a duty as an employee (department head, branch manager, etc.) and receives wages for that part. Here, the treatment changes for the part with worker character.\n\n- **Employment insurance:** if worker character as an employee is recognized, they can be insured for that part. The procedure submits a **\"certificate of the employment reality of a concurrent officer\"** to Hello Work, along with a certified copy of the registry, articles of incorporation, board minutes, the wage ledger, an organization chart, etc., and the employment security office judges worker character.\n- **Workers' accident:** the wage portion as a worker can be covered; the officer-remuneration portion is not.\n- **Health / pension:** standard remuneration is set from the sum of officer remuneration and employee wages.\n\nHowever, **a representative director cannot be an employee-officer.** As the person who directs the company, they are not treated as also having the character of a supervised employee. The representative who comes on \"Business Manager\" is unlikely to be covered by employment or workers' accident insurance, so enrolling in social insurance (health/pension) is the basic path.\n\n## Does non-enrollment in social insurance affect residence-status renewal?\n\nIt can. Enrolling in and paying social insurance is both a legal obligation of the employer and **a factor examined at residence-period renewal.** The Immigration Services Agency's \"Guidelines for permission to change residence status and renew the period of stay\" states that the fulfillment of public obligations such as notifications and tax payment is considered, and for \"Business Manager,\" the enrollment and payment status of labor and social insurance is checked from the viewpoint of the propriety and stability of the business. In recent years, enrollment in health insurance has also been confirmed at the application counter.\n\nNon-enrollment or unpaid premiums may be judged a negative factor in renewal review, and there are said to be cases where renewal is not granted or the period of stay is shortened. However, **the grant or denial is decided individually by immigration, and our office cannot guarantee or assert it.** Because the \"Business Manager\" criteria continue to be revised, always confirm the renewal requirements before applying with the latest published materials of the Immigration Services Agency and the Gyoseishoshi in charge. For the picture of premium burdens, see [how much it costs a company when a Chinese or Taiwanese company hires in Japan](/en/labor/column/chuka-kigyo-nihon-koyo-shakaihoken-cost-zentaizo); for receiving from a country without a social security agreement, such as Taiwan, see [social insurance when you hire or receive on secondment from Taiwan](/en/labor/column/taiwan-koyo-shukko-shakaihoken-kyotei-nashi).\n\n## Who should you consult about residence status, company setup, and tax?\n\nGetting to running a company and residing as an executive in Japan divides by qualification, each a separate contract.\n\n| What to do | Main person in charge |\n|---|---|\n| Social/labor insurance application, enrollment procedures for officers and employee-officers, payroll, work rules | Shakai Hoken Roumushi (our office) |\n| Application/agency for residence status such as \"Business Manager,\" and business permits | Gyoseishoshi |\n| Registration of company establishment | Judicial scrivener |\n| Corporate and personal tax, tax on officer remuneration | Tax accountant |\n| Labor disputes, disputes among shareholders | Attorney |\n| Finding an office or company-housing property | Real estate agent |\n\nThe application and agency for residence status can be connected to 四葉行政書士事務所, and office or company-housing property to 四葉不動産, but 四葉行政書士事務所 and 四葉不動産 are **separate, independent entities** from our office, and the Shakai Hoken Roumushi work, the Gyoseishoshi work, and the real estate work are contracted **separately** (we do not take them on under one engagement). Our office does not receive referral fees.\n\n四葉社会保険労務士事務所 can advise on the social- and labor-insurance judgment for officers and employee-officers, enrollment/loss procedures, payroll, and maintaining work rules. Fees are summarized in [the fee schedule](/en/labor/ryokin).\n\n## Frequently asked questions\n\n**Q. I came on \"Business Manager\" and the company is just me. Do I enroll in social insurance?**\nA. Yes. A corporation is a compulsorily applicable workplace for health insurance and employees' pension even with one representative, and a representative receiving officer remuneration is insured. Nationality and residence status do not change this. An officer with no remuneration is not insured, but then the income and business reality that underpin the stay may be examined separately.\n\n**Q. As an officer, can I not enroll in employment insurance? Are there benefits if I lose my position?**\nA. Officers are in principle not insured under employment insurance, so no unemployment benefits are payable. The exception is an employee-officer, insured for the part with recognized worker character as an employee. A representative director cannot be an employee-officer, so in principle cannot enroll in employment insurance.\n\n**Q. What is needed to enroll in employment insurance as an employee-officer?**\nA. Submit a \"certificate of the employment reality of a concurrent officer\" to Hello Work, and the employment security office judges worker character from documents such as the registry copy, articles of incorporation, board minutes, wage ledger, organization chart, and work rules. If recognized, you are insured for the employee-wage portion. The judgment is by reality.\n\n**Q. Will renewal be denied if we haven't enrolled in social insurance?**\nA. Non-enrollment or unpaid premiums may be judged a negative factor at renewal. Immigration looks at the fulfillment of public obligations and the propriety and stability of the business, so enrollment and payment status matter. However, the grant or denial is decided individually by immigration and cannot be asserted. As the requirements keep being revised, confirm the latest published materials and the Gyoseishoshi in charge before applying.\n\n## Sources\n\n- Health Insurance Act (Act No. 70 of 1922), Article 3(3): a corporate workplace is compulsorily applicable even with one director (Japan Pension Service, \"Applicable workplaces and insured persons,\" accessed 20 September 2026)\n- Employees' Pension Insurance Act (Act No. 115 of 1954), Articles 6 and 9: requirements for applicable workplaces and insured persons; a full-time officer receiving remuneration is insured\n- Industrial Accident Compensation Insurance Act (Act No. 50 of 1947): compulsory for a business using workers; officers/owners are outside coverage, with a special-enrollment scheme for small-business owners through a labor insurance administration association (Ministry of Health, Labour and Welfare, \"Guide to the special enrollment scheme (for small-business owners, etc.),\" accessed 20 September 2026)\n- Employment Insurance Act (Act No. 116 of 1974), Articles 4 and 6: workers are insured; officers are in principle outside; an employee-officer can be insured for the part with recognized worker character (submitting a \"certificate of the employment reality of a concurrent officer\" to Hello Work; accessed 20 September 2026)\n- Immigration Services Agency, \"Guidelines for permission to change residence status and renew the period of stay\": public obligations (notifications, tax, etc.) are considered; at \"Business Manager\" renewal, the enrollment and payment status of labor and social insurance is checked from the viewpoint of the propriety and stability of the business (Immigration Services Agency, accessed 20 September 2026). As the criteria keep being revised, confirm the latest with immigration's published materials\n- All provisions confirmed on 20 September 2026 via e-Gov and each agency's published materials. Residence-status requirements and review practice change, so confirm the latest with the Immigration Services Agency\n\nThis article does not decide whom to consult. 四葉社会保険労務士事務所 can advise on the social- and labor-insurance judgment for officers and employee-officers, enrollment/loss procedures, payroll, and maintaining work rules. Application and agency for residence status and business permits are a Gyoseishoshi's work, registration a judicial scrivener's, tax a tax accountant's, and disputes an attorney's — each contracted separately as separate, independent entities. Our office does not receive referral fees. The final decision on eligibility for residence status and the grant or denial of renewal is made by the Immigration Services Agency; individual decisions on premiums and enrollment obligations by the pension office, the Japan Pension Service, and the Labour Bureau. For fees when consulting 四葉社会保険労務士事務所, see [the fee schedule](/en/labor/ryokin); for frequently asked questions, see [the FAQ](/en/labor/faq).\n\nThis article is general information. Individual judgments, such as the obligation to enroll in social insurance or the effect on renewal, are made by a qualified professional after a consultation, in light of the latest primary sources and individual circumstances. Written by [Joji Uramatsu](/en/about/uramatsu) (Shakai Hoken Roumushi, Gyoseishoshi, Registered Real Estate Transaction Specialist).",
+        "category": "Social insurance",
+        "keywords": [
+          "Business Manager visa executive social insurance",
+          "officer workers accident employment insurance",
+          "employee-officer treatment",
+          "social insurance non-enrollment residence renewal",
+          "company setup residence status tax who",
+          "representative director health pension insured"
+        ],
+        "tags": [
+          "Foreign executive",
+          "Business Manager status",
+          "Social insurance",
+          "Officer",
+          "Employee-officer",
+          "Residence renewal"
+        ],
+        "author": {
+          "name": "Joji Uramatsu",
+          "title": "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所"
+        },
+        "faq": [
+          {
+            "question": "I came on \"Business Manager\" and the company is just me. Do I enroll in social insurance?",
+            "answer": "Yes. A corporation is a compulsorily applicable workplace for health insurance and employees' pension even with one representative, and a representative receiving officer remuneration is insured. Nationality and residence status do not change this. An officer with no remuneration is not insured, but then the income and business reality that underpin the stay may be examined separately."
+          },
+          {
+            "question": "As an officer, can I not enroll in employment insurance? Are there benefits if I lose my position?",
+            "answer": "Officers are in principle not insured under employment insurance, so no unemployment benefits are payable. The exception is an employee-officer, insured for the part with recognized worker character as an employee. A representative director cannot be an employee-officer, so in principle cannot enroll in employment insurance."
+          },
+          {
+            "question": "What is needed to enroll in employment insurance as an employee-officer?",
+            "answer": "Submit a \"certificate of the employment reality of a concurrent officer\" to Hello Work, and the employment security office judges worker character from documents such as the registry copy, articles of incorporation, board minutes, wage ledger, organization chart, and work rules. If recognized, you are insured for the employee-wage portion. The judgment is by reality."
+          },
+          {
+            "question": "Will renewal be denied if we haven't enrolled in social insurance?",
+            "answer": "Non-enrollment or unpaid premiums may be judged a negative factor at renewal. Immigration looks at the fulfillment of public obligations and the propriety and stability of the business, so enrollment and payment status matter. However, the grant or denial is decided individually by immigration and cannot be asserted. As the requirements keep being revised, confirm the latest published materials and the Gyoseishoshi in charge before applying."
+          }
+        ]
+      },
+      "zh-tw": {
+        "title": "外國經營者與役員，要加入日本社會保險到什麼程度？",
+        "excerpt": "以「經營・管理」在留資格在日本設立法人的經營者本人，只要領取報酬即為健康保險・厚生年金的被保險人。役員原則不列入勞災・僱用保險，但使用人兼務役員的處理會不同。社會保險的加入與繳納，在在留期間更新時亦會被審視。在留資格與公司設立為行政書士、登記為司法書士、稅務為稅理士的領域，各自獨立的事業體分別承接、另行簽約。",
+        "content": "**先講結論**：以「經營・管理」在留資格在日本設立法人的經營者本人，只要領取報酬即為健康保險・厚生年金的被保險人。役員原則不列入勞災・僱用保險，但使用人兼務役員的處理會不同。社會保險的加入與繳納，在在留期間更新時亦會被審視。\n\n中國・台灣企業在日本設立法人、代表者以「經營・管理」在留資格來日時，容易被忽略的是經營者本人與役員要加入日本社會保險到什麼程度。若以為「身為役員故與勞動保險無關」，日後在留更新時會遇上麻煩。本文為中國・台灣的經營者及其顧問（當地會計・人事專家），以役員本人為軸整理。\n\n## 經營・管理在留資格的經營者，必須加入社會保險嗎？\n\n必須。日本的**法人即使僅代表者1人，亦為健康保險・厚生年金保險的強制適用事業所**（健康保險法第3條第3項・厚生年金保險法第6條）。在日本設立子公司或分公司（已登記的法人），該時點即為適用事業所。\n\n| 立場 | 健康保險・厚生年金 |\n|---|---|\n| 領取報酬的常勤代表取締役・役員 | 被保險人（由役員報酬決定標準報酬月額） |\n| 無報酬的役員 | 因無報酬故非被保險人 |\n| 非常勤役員 | 依勤務實態・報酬有無等個別判斷 |\n\n以「經營・管理」來日的經營者本人，只要自法人領取役員報酬即為被保險人。**加入與否不因國籍或在留資格而變**，與日本人役員的判定完全相同。設立公司後何時該申報什麼，整理於[設立公司後，何時該申報什麼](/zh-tw/labor/column/kaisha-setsuritsu-shakaihoken-roudouhoken-kigen)；所僱員工側保險料的全貌，整理於[中國・台灣企業在日本僱用員工，公司要負擔多少](/zh-tw/labor/column/chuka-kigyo-nihon-koyo-shakaihoken-cost-zentaizo)。\n\n## 役員是否為勞動保險（僱用・勞災）的對象？\n\n原則不是。勞動保險是保護「勞工」的制度，役員並非勞工。\n\n| 保險 | 役員本人的處理 |\n|---|---|\n| 勞災保險 | 原則不列入對象。若使用勞工，有中小事業主等**特別加入**之路 |\n| 僱用保險 | 原則非被保險人（僅領役員報酬的經營者無法領失業給付） |\n\n勞災保險對使用即使1名勞工的事業強制適用，但其給付針對勞工。**代表者或役員本人，即使施術・作業中受傷亦領不到勞災給付**。若欲備此，須以已僱用勞工為前提，透過勞動保險事務組合辦理中小事業主等特別加入。加入順序與規模要件請參閱[社長領不到勞災，且僅1人時連特別加入也不行](/zh-tw/labor/column/shacho-rosai-tokubetsu-kanyu-hitori)。僱用保險方面，役員原則亦非被保險人（僱用保險法第4條・第6條）。\n\n## 若為使用人兼務役員，處理如何不同？\n\n身為取締役、同時具有部長・分店長等**使用人職務並就該部分領取工資**者，稱為使用人兼務役員。此時，就具勞工性格的部分，處理會不同。\n\n- **僱用保險**：若被認定具使用人的勞工性，則就該部分可成為被保險人。手續上向Hello Work提出**「兼務役員僱用實態證明書」**，並附登記事項證明書・章程・董事會議事錄・工資台帳・組織圖等，由職業安定所判斷勞工性。\n- **勞災保險**：作為勞工的工資部分可列入勞災對象；役員報酬部分不列入。\n- **健康保險・厚生年金**：由役員報酬與使用人工資合算之額決定標準報酬月額。\n\n惟**代表取締役不能成為使用人兼務役員**。因其為指揮公司的立場，被整理為不兼具受指揮監督的使用人性格。以「經營・管理」來日的代表者本人，難以列入僱用・勞災對象，以社會保險（健保・厚年）加入為基本。\n\n## 社會保險未加入，會影響在留資格的更新嗎？\n\n可能影響。社會保險的加入與繳納既是事業主的法定義務，也是**在留期間更新審查會被審視的要素**。出入國在留管理廳的「在留資格變更、在留期間更新許可指引」示明會考量申報・納稅等公的義務的履行，於「經營・管理」，會自事業的適正性・安定性觀點確認勞動・社會保險的加入與繳納狀況。近年於申請窗口亦有確認是否加入健康保險的運用。\n\n未加入或保險料滯納，於更新審查可能被判為消極要素，據稱有更新不獲准或在留期間縮短之例。惟**准否由入管個別判斷，本事務所無法保證或斷定**。因「經營・管理」基準持續修正，更新要件請於申請前務必向出入國在留管理廳最新公表資料及承辦行政書士確認。保險料負擔的全貌請參閱[中國・台灣企業在日本僱用員工，公司要負擔多少](/zh-tw/labor/column/chuka-kigyo-nihon-koyo-shakaihoken-cost-zentaizo)；如台灣般無社會保障協定的國家之受入，請參閱[從台灣僱用・以出向接受人員時的社會保險](/zh-tw/labor/column/taiwan-koyo-shukko-shakaihoken-kyotei-nashi)。\n\n## 在留資格・公司設立・稅務，該向誰諮詢？\n\n在日本設立法人、以經營者身分在留為止，依負責的資格分工，各自為不同的契約。\n\n| 要做的事 | 主要負責 |\n|---|---|\n| 勞動・社會保險的適用判定、役員與使用人兼務役員的加入手續、薪資計算、就業規則整備 | 社會保險勞務士（本事務所） |\n| 「經營・管理」等在留資格的申請・取次、公司設立的許認可 | 行政書士 |\n| 公司設立的登記申請 | 司法書士 |\n| 法人・個人的稅務、役員報酬的稅務 | 稅理士 |\n| 勞動紛爭・股東間紛爭 | 律師 |\n| 事業所・社宅之物件尋找 | 宅地建物取引業者 |\n\n在留資格的申請・取次可轉介至四葉行政書士事務所，事業所或社宅的物件可轉介至四葉不動産，惟四葉行政書士事務所・四葉不動産與本事務所為**各自獨立**的事業體，社會保險勞務士業務・行政書士業務・宅地建物取引業務須**另行簽約**（不進行一括受任）。本事務所不收取介紹費。\n\n四葉社会保険労務士事務所可就役員・使用人兼務役員的社會與勞動保險適用判定、加入・喪失手續、薪資計算、就業規則整備提供諮詢。費用彙整於[報酬額表](/zh-tw/labor/ryokin)。\n\n## 常見問題\n\n**Q. 以「經營・管理」來日、公司僅社長1人時，須加入社會保險嗎？**\nA. 須加入。法人即使僅代表者1人，亦為健康保險・厚生年金保險的強制適用事業所，領取役員報酬的代表者為被保險人。加入與否不因國籍或在留資格而變。無報酬的役員因無報酬而非被保險人，惟此時支撐在留的收入與事業實態可能另被審視。\n\n**Q. 因身為役員故無法加入僱用保險嗎？失去職位時有給付嗎？**\nA. 役員原則非僱用保險的被保險人，故無失業給付。例外為使用人兼務役員，就被認定具使用人勞工性的部分可為被保險人。代表取締役不能成為使用人兼務役員，故原則無法加入僱用保險。\n\n**Q. 要以使用人兼務役員加入僱用保險，需要什麼？**\nA. 向Hello Work提出「兼務役員僱用實態證明書」，由職業安定所依登記事項證明書・章程・董事會議事錄・工資台帳・組織圖・就業規則等資料判斷勞工性。獲認定則就使用人工資部分成為被保險人。判斷以實態為準。\n\n**Q. 未加入社會保險，在留資格更新會不獲准嗎？**\nA. 未加入或保險料滯納，於更新審查可能被判為消極要素。入管會審視公的義務的履行與事業的適正性・安定性，故加入與繳納狀況甚為重要。惟准否由入管個別判斷，無法斷定。因要件持續修正，請於申請前確認最新公表資料與承辦行政書士。\n\n## 本文的依據\n\n- 健康保險法（大正11年法律第70號）第3條第3項：法人事業所即使1人亦為強制適用事業所（日本年金機構「適用事業所與被保險人」2026年9月20日查閱）\n- 厚生年金保險法（昭和29年法律第115號）第6條・第9條：適用事業所與被保險人的要件。領取報酬的常勤役員為被保險人\n- 勞動者災害補償保險法（昭和22年法律第50號）：對使用勞工的事業強制適用。役員・事業主不列入對象，另有透過勞動保險事務組合辦理的中小事業主等特別加入制度（厚生勞動省「特別加入制度須知（中小事業主等用）」2026年9月20日查閱）\n- 僱用保險法（昭和49年法律第116號）第4條・第6條：勞工為被保險人。役員原則不列入對象。使用人兼務役員就被認定具勞工性的部分可為被保險人（向Hello Work提出「兼務役員僱用實態證明書」。2026年9月20日查閱）\n- 出入國在留管理廳「在留資格變更、在留期間更新許可指引」：考量公的義務（申報・納稅等）的履行；「經營・管理」在留期間更新時，自事業適正性・安定性觀點確認勞動・社會保險的加入與繳納狀況（出入國在留管理廳。2026年9月20日查閱）。基準持續修正，最新請以入管公表資料確認\n- 條文均於2026年9月20日以e-Gov法令檢索及各官廳公表資料確認。在留資格的要件・審查運用會變動，最新請向出入國在留管理廳確認\n\n本文並未決定該向誰諮詢。四葉社会保険労務士事務所可就役員・使用人兼務役員的社會與勞動保險適用判定、加入・喪失手續、薪資計算、就業規則整備提供諮詢。在留資格的申請・取次與公司設立的許認可為行政書士的業務，登記為司法書士，稅務為稅理士，紛爭為律師，各自獨立的事業體分別承接、另行簽約。本事務所不收取介紹費。在留資格的該當性與更新准否的最終判斷由出入國在留管理廳進行，保險料與加入義務的個別判斷由年金事務所・日本年金機構・勞動局進行。向四葉社会保険労務士事務所諮詢時的費用彙整於[報酬額表](/zh-tw/labor/ryokin)，常見問題彙整於[常見問答](/zh-tw/labor/faq)。\n\n本文為一般性資訊提供。社會保險的加入義務與對在留更新的影響等個別判斷，須依最新一次資訊與個別情形，經面談由有資格者進行。撰寫者為[浦松丈二](/zh-tw/about/uramatsu)（社會保險勞務士・行政書士・宅地建物取引士）。",
+        "category": "社會保險",
+        "keywords": [
+          "經營管理 在留資格 經營者 社會保險",
+          "役員 勞災 僱用保險 對象",
+          "使用人兼務役員 處理",
+          "社會保險 未加入 在留更新",
+          "公司設立 在留資格 稅務 該找誰",
+          "代表取締役 健保 厚年 被保險人"
+        ],
+        "tags": [
+          "外國經營者",
+          "經營管理在留資格",
+          "社會保險",
+          "役員",
+          "使用人兼務役員",
+          "在留更新"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "以「經營・管理」來日、公司僅社長1人時，須加入社會保險嗎？",
+            "answer": "須加入。法人即使僅代表者1人，亦為健康保險・厚生年金保險的強制適用事業所，領取役員報酬的代表者為被保險人。加入與否不因國籍或在留資格而變。無報酬的役員因無報酬而非被保險人，惟此時支撐在留的收入與事業實態可能另被審視。"
+          },
+          {
+            "question": "因身為役員故無法加入僱用保險嗎？失去職位時有給付嗎？",
+            "answer": "役員原則非僱用保險的被保險人，故無失業給付。例外為使用人兼務役員，就被認定具使用人勞工性的部分可為被保險人。代表取締役不能成為使用人兼務役員，故原則無法加入僱用保險。"
+          },
+          {
+            "question": "要以使用人兼務役員加入僱用保險，需要什麼？",
+            "answer": "向Hello Work提出「兼務役員僱用實態證明書」，由職業安定所依登記事項證明書・章程・董事會議事錄・工資台帳・組織圖・就業規則等資料判斷勞工性。獲認定則就使用人工資部分成為被保險人。判斷以實態為準。"
+          },
+          {
+            "question": "未加入社會保險，在留資格更新會不獲准嗎？",
+            "answer": "未加入或保險料滯納，於更新審查可能被判為消極要素。入管會審視公的義務的履行與事業的適正性・安定性，故加入與繳納狀況甚為重要。惟准否由入管個別判斷，無法斷定。因要件持續修正，請於申請前確認最新公表資料與承辦行政書士。"
+          }
+        ]
+      },
+      "zh": {
+        "title": "外国经营者与役员，要加入日本社会保险到什么程度？",
+        "excerpt": "以「经营・管理」在留资格在日本设立法人的经营者本人，只要领取报酬即为健康保险・厚生年金的被保险人。役员原则不列入劳灾・雇用保险，但使用人兼务役员的处理会不同。社会保险的加入与缴纳，在在留期间更新时亦会被审视。在留资格与公司设立为行政书士、登记为司法书士、税务为税理士的领域，各自独立的事业体分别承接、另行签约。",
+        "content": "**先讲结论**：以「经营・管理」在留资格在日本设立法人的经营者本人，只要领取报酬即为健康保险・厚生年金的被保险人。役员原则不列入劳灾・雇用保险，但使用人兼务役员的处理会不同。社会保险的加入与缴纳，在在留期间更新时亦会被审视。\n\n中国・台湾企业在日本设立法人、代表者以「经营・管理」在留资格来日时，容易被忽略的是经营者本人与役员要加入日本社会保险到什么程度。若以为「身为役员故与劳动保险无关」，日后在留更新时会遇上麻烦。本文为中国・台湾的经营者及其顾问（当地会计・人事专家），以役员本人为轴整理。\n\n## 经营・管理在留资格的经营者，必须加入社会保险吗？\n\n必须。日本的**法人即使仅代表者1人，亦为健康保险・厚生年金保险的强制适用事业所**（健康保险法第3条第3项・厚生年金保险法第6条）。在日本设立子公司或分公司（已登记的法人），该时点即为适用事业所。\n\n| 立场 | 健康保险・厚生年金 |\n|---|---|\n| 领取报酬的常勤代表取缔役・役员 | 被保险人（由役员报酬决定标准报酬月额） |\n| 无报酬的役员 | 因无报酬故非被保险人 |\n| 非常勤役员 | 依勤务实态・报酬有无等个别判断 |\n\n以「经营・管理」来日的经营者本人，只要自法人领取役员报酬即为被保险人。**加入与否不因国籍或在留资格而变**，与日本人役员的判定完全相同。设立公司后何时该申报什么，整理于[设立公司后，何时该申报什么](/zh/labor/column/kaisha-setsuritsu-shakaihoken-roudouhoken-kigen)；所雇员工侧保险料的全貌，整理于[中国・台湾企业在日本雇用员工，公司要负担多少](/zh/labor/column/chuka-kigyo-nihon-koyo-shakaihoken-cost-zentaizo)。\n\n## 役员是否为劳动保险（雇用・劳灾）的对象？\n\n原则不是。劳动保险是保护「劳工」的制度，役员并非劳工。\n\n| 保险 | 役员本人的处理 |\n|---|---|\n| 劳灾保险 | 原则不列入对象。若使用劳工，有中小事业主等**特别加入**之路 |\n| 雇用保险 | 原则非被保险人（仅领役员报酬的经营者无法领失业给付） |\n\n劳灾保险对使用即使1名劳工的事业强制适用，但其给付针对劳工。**代表者或役员本人，即使施术・作业中受伤亦领不到劳灾给付**。若欲备此，须以已雇用劳工为前提，透过劳动保险事务组合办理中小事业主等特别加入。加入顺序与规模要件请参阅[社长领不到劳灾，且仅1人时连特别加入也不行](/zh/labor/column/shacho-rosai-tokubetsu-kanyu-hitori)。雇用保险方面，役员原则亦非被保险人（雇用保险法第4条・第6条）。\n\n## 若为使用人兼务役员，处理如何不同？\n\n身为取缔役、同时具有部长・分店长等**使用人职务并就该部分领取工资**者，称为使用人兼务役员。此时，就具劳工性格的部分，处理会不同。\n\n- **雇用保险**：若被认定具使用人的劳工性，则就该部分可成为被保险人。手续上向Hello Work提出**「兼务役员雇用实态证明书」**，并附登记事项证明书・章程・董事会议事录・工资台帐・组织图等，由职业安定所判断劳工性。\n- **劳灾保险**：作为劳工的工资部分可列入劳灾对象；役员报酬部分不列入。\n- **健康保险・厚生年金**：由役员报酬与使用人工资合算之额决定标准报酬月额。\n\n惟**代表取缔役不能成为使用人兼务役员**。因其为指挥公司的立场，被整理为不兼具受指挥监督的使用人性格。以「经营・管理」来日的代表者本人，难以列入雇用・劳灾对象，以社会保险（健保・厚年）加入为基本。\n\n## 社会保险未加入，会影响在留资格的更新吗？\n\n可能影响。社会保险的加入与缴纳既是事业主的法定义务，也是**在留期间更新审查会被审视的要素**。出入国在留管理厅的「在留资格变更、在留期间更新许可指引」示明会考量申报・纳税等公的义务的履行，于「经营・管理」，会自事业的适正性・安定性观点确认劳动・社会保险的加入与缴纳状况。近年于申请窗口亦有确认是否加入健康保险的运用。\n\n未加入或保险料滞纳，于更新审查可能被判为消极要素，据称有更新不获准或在留期间缩短之例。惟**准否由入管个别判断，本事务所无法保证或断定**。因「经营・管理」基准持续修正，更新要件请于申请前务必向出入国在留管理厅最新公表资料及承办行政书士确认。保险料负担的全貌请参阅[中国・台湾企业在日本雇用员工，公司要负担多少](/zh/labor/column/chuka-kigyo-nihon-koyo-shakaihoken-cost-zentaizo)；如台湾般无社会保障协定的国家之受入，请参阅[从台湾雇用・以出向接受人员时的社会保险](/zh/labor/column/taiwan-koyo-shukko-shakaihoken-kyotei-nashi)。\n\n## 在留资格・公司设立・税务，该向谁咨询？\n\n在日本设立法人、以经营者身分在留为止，依负责的资格分工，各自为不同的契约。\n\n| 要做的事 | 主要负责 |\n|---|---|\n| 劳动・社会保险的适用判定、役员与使用人兼务役员的加入手续、薪资计算、就业规则整备 | 社会保险劳务士（本事务所） |\n| 「经营・管理」等在留资格的申请・取次、公司设立的许认可 | 行政书士 |\n| 公司设立的登记申请 | 司法书士 |\n| 法人・个人的税务、役员报酬的税务 | 税理士 |\n| 劳动纠纷・股东间纠纷 | 律师 |\n| 事业所・社宅之物件寻找 | 宅地建物取引业者 |\n\n在留资格的申请・取次可转介至四葉行政書士事務所，事业所或社宅的物件可转介至四葉不動産，惟四葉行政書士事務所・四葉不動産与本事务所为**各自独立**的事业体，社会保险劳务士业务・行政书士业务・宅地建物取引业务须**另行签约**（不进行一括受任）。本事务所不收取介绍费。\n\n四葉社会保険労務士事務所可就役员・使用人兼务役员的社会与劳动保险适用判定、加入・丧失手续、薪资计算、就业规则整备提供咨询。费用汇整于[报酬额表](/zh/labor/ryokin)。\n\n## 常见问题\n\n**Q. 以「经营・管理」来日、公司仅社长1人时，须加入社会保险吗？**\nA. 须加入。法人即使仅代表者1人，亦为健康保险・厚生年金保险的强制适用事业所，领取役员报酬的代表者为被保险人。加入与否不因国籍或在留资格而变。无报酬的役员因无报酬而非被保险人，惟此时支撑在留的收入与事业实态可能另被审视。\n\n**Q. 因身为役员故无法加入雇用保险吗？失去职位时有给付吗？**\nA. 役员原则非雇用保险的被保险人，故无失业给付。例外为使用人兼务役员，就被认定具使用人劳工性的部分可为被保险人。代表取缔役不能成为使用人兼务役员，故原则无法加入雇用保险。\n\n**Q. 要以使用人兼务役员加入雇用保险，需要什么？**\nA. 向Hello Work提出「兼务役员雇用实态证明书」，由职业安定所依登记事项证明书・章程・董事会议事录・工资台帐・组织图・就业规则等资料判断劳工性。获认定则就使用人工资部分成为被保险人。判断以实态为准。\n\n**Q. 未加入社会保险，在留资格更新会不获准吗？**\nA. 未加入或保险料滞纳，于更新审查可能被判为消极要素。入管会审视公的义务的履行与事业的适正性・安定性，故加入与缴纳状况甚为重要。惟准否由入管个别判断，无法断定。因要件持续修正，请于申请前确认最新公表资料与承办行政书士。\n\n## 本文的依据\n\n- 健康保险法（大正11年法律第70号）第3条第3项：法人事业所即使1人亦为强制适用事业所（日本年金机构「适用事业所与被保险人」2026年9月20日查阅）\n- 厚生年金保险法（昭和29年法律第115号）第6条・第9条：适用事业所与被保险人的要件。领取报酬的常勤役员为被保险人\n- 劳动者灾害补偿保险法（昭和22年法律第50号）：对使用劳工的事业强制适用。役员・事业主不列入对象，另有透过劳动保险事务组合办理的中小事业主等特别加入制度（厚生劳动省「特别加入制度须知（中小事业主等用）」2026年9月20日查阅）\n- 雇用保险法（昭和49年法律第116号）第4条・第6条：劳工为被保险人。役员原则不列入对象。使用人兼务役员就被认定具劳工性的部分可为被保险人（向Hello Work提出「兼务役员雇用实态证明书」。2026年9月20日查阅）\n- 出入国在留管理厅「在留资格变更、在留期间更新许可指引」：考量公的义务（申报・纳税等）的履行；「经营・管理」在留期间更新时，自事业适正性・安定性观点确认劳动・社会保险的加入与缴纳状况（出入国在留管理厅。2026年9月20日查阅）。基准持续修正，最新请以入管公表资料确认\n- 条文均于2026年9月20日以e-Gov法令检索及各官厅公表资料确认。在留资格的要件・审查运用会变动，最新请向出入国在留管理厅确认\n\n本文并未决定该向谁咨询。四葉社会保険労務士事務所可就役员・使用人兼务役员的社会与劳动保险适用判定、加入・丧失手续、薪资计算、就业规则整备提供咨询。在留资格的申请・取次与公司设立的许认可为行政书士的业务，登记为司法书士，税务为税理士，纠纷为律师，各自独立的事业体分别承接、另行签约。本事务所不收取介绍费。在留资格的该当性与更新准否的最终判断由出入国在留管理厅进行，保险料与加入义务的个别判断由年金事务所・日本年金机构・劳动局进行。向四葉社会保険労務士事務所咨询时的费用汇整于[报酬额表](/zh/labor/ryokin)，常见问题汇整于[常见问答](/zh/labor/faq)。\n\n本文为一般性资讯提供。社会保险的加入义务与对在留更新的影响等个别判断，须依最新一次资讯与个别情形，经面谈由有资格者进行。撰写者为[浦松丈二](/zh/about/uramatsu)（社会保险劳务士・行政书士・宅地建物取引士）。",
+        "category": "社会保险",
+        "keywords": [
+          "经营管理 在留资格 经营者 社会保险",
+          "役员 劳灾 雇用保险 对象",
+          "使用人兼务役员 处理",
+          "社会保险 未加入 在留更新",
+          "公司设立 在留资格 税务 该找谁",
+          "代表取缔役 健保 厚年 被保险人"
+        ],
+        "tags": [
+          "外国经营者",
+          "经营管理在留资格",
+          "社会保险",
+          "役员",
+          "使用人兼务役员",
+          "在留更新"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "以「经营・管理」来日、公司仅社长1人时，须加入社会保险吗？",
+            "answer": "须加入。法人即使仅代表者1人，亦为健康保险・厚生年金保险的强制适用事业所，领取役员报酬的代表者为被保险人。加入与否不因国籍或在留资格而变。无报酬的役员因无报酬而非被保险人，惟此时支撑在留的收入与事业实态可能另被审视。"
+          },
+          {
+            "question": "因身为役员故无法加入雇用保险吗？失去职位时有给付吗？",
+            "answer": "役员原则非雇用保险的被保险人，故无失业给付。例外为使用人兼务役员，就被认定具使用人劳工性的部分可为被保险人。代表取缔役不能成为使用人兼务役员，故原则无法加入雇用保险。"
+          },
+          {
+            "question": "要以使用人兼务役员加入雇用保险，需要什么？",
+            "answer": "向Hello Work提出「兼务役员雇用实态证明书」，由职业安定所依登记事项证明书・章程・董事会议事录・工资台帐・组织图・就业规则等资料判断劳工性。获认定则就使用人工资部分成为被保险人。判断以实态为准。"
+          },
+          {
+            "question": "未加入社会保险，在留资格更新会不获准吗？",
+            "answer": "未加入或保险料滞纳，于更新审查可能被判为消极要素。入管会审视公的义务的履行与事业的适正性・安定性，故加入与缴纳状况甚为重要。惟准否由入管个别判断，无法断定。因要件持续修正，请于申请前确认最新公表资料与承办行政书士。"
+          }
+        ]
+      }
+    }
   }
 ];
