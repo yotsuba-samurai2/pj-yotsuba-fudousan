@@ -18,6 +18,7 @@
 // FAQPage JSON-LD＝ja は faqJa（B-3既存2問＋C-3新規2問）を参照（文字列コピー禁止＝表記ゆれ防止）。
 //   zh-tw/zh の FAQ 文言は faqJa の対象外（faqJa.ts 冒頭の方針どおり）＝本ファイルの COPY 側に持つ。
 //   inLanguage は BCP47_BY_LOCALE（hreflang と同一マッピング）を渡す。
+import { CurrentPropertyListings } from "@/components/bukken/CurrentPropertyListings";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import type { LangCode } from "@/config/languages";
@@ -683,6 +684,8 @@ export default async function Page() {
         bare
         openFirst={false}
       />
+      {/* 中国語版が公開されている物件だけを表示（0件なら非表示・留保文つき）＝2026-09-20 */}
+      <CurrentPropertyListings locale={locale} requireAnyLocale={["zh-tw", "zh"]} />
     </RealestateServicePage>
   );
 }

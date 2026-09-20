@@ -7,6 +7,10 @@ import { closeRental, closureSchema, closureFromRentalImport, importRental } fro
 import { validateRentalImport } from "@/lib/rental-import/validation";
 import { rentalStore } from "@/lib/rental-import/db-store";
 import { inspectImage, isOwnedImage } from "@/lib/rental-import/media";
+import {
+  recordPropertyPublicationChange,
+  scheduleDuePropertyNotifications,
+} from "@/lib/property-publication-notify";
 
 export const runtime = "nodejs";
 export async function POST(req: NextRequest) {
@@ -51,13 +55,18 @@ export async function POST(req: NextRequest) {
       if (!gate.ok) return NextResponse.json({ action: "held", reasons: gate.reasons });
       if (gate.property.images.some((i) => !isOwnedImage(i.url, process.env.NEXT_PUBLIC_SUPABASE_URL ?? ""))) return NextResponse.json({ action: "held", reasons: ["写真と間取りを自社ストレージに保存してください"] });
     }
-    const result = body.action === "close" ? await closeRental(body.record, rentalStore, now) : await importRental(body.record, rentalStore, now, body.mode, body.maintenance);
+    // onChange は実際の保存（store.update/create が成功したとき）だけ呼ばれる＝
+    // 上の check/check-close（create/update をスタブ化した呼び出し）には絶対に渡さない。
+    const onChange = (before: Parameters<typeof recordPropertyPublicationChange>[0], after: Parameters<typeof recordPropertyPublicationChange>[1], at: Date) =>
+      recordPropertyPublicationChange(before, after, at);
+    const result = body.action === "close" ? await closeRental(body.record, rentalStore, now, onChange) : await importRental(body.record, rentalStore, now, body.mode, body.maintenance, onChange);
     if (result.slug && ["created", "updated", "closed"].includes(result.action)) {
       for (const locale of ["ja", "en", "zh-tw", "zh"]) {
         revalidatePath(`/${locale}/bukken`);
         revalidatePath(`/${locale}/bukken/${result.slug}`);
       }
       revalidatePath("/sitemap.xml");
+      scheduleDuePropertyNotifications(now);
     }
     return NextResponse.json(result);
   } catch (err) {

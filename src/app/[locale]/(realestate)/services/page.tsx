@@ -11,6 +11,7 @@ import { getRequestLocale } from "@/lib/getRequestLocale";
 import { addLocalePrefix } from "@/lib/locale";
 import { Breadcrumb } from "@/components/shared/Breadcrumb";
 import { CtaBand } from "@/components/shared/CtaBand";
+import { CurrentPropertyListings } from "@/components/bukken/CurrentPropertyListings";
 import type { LangCode } from "@/config/languages";
 import { SERVICE_NAV_CATEGORIES, resolveNavLabel, isNavLinkVisible } from "@/config/services-nav"; // 4カードの子ページチップは単一ソースを参照（メガメニュー・フッターと同じ定義）
 
@@ -680,6 +681,9 @@ export default async function ServicesPage() {
           <p className="mt-4 text-sm leading-[1.9] text-text sm:text-base">{c.group.body}</p>
           <p className="mt-3 text-xs leading-relaxed text-text-muted">{c.group.note}</p>
         </section>
+
+        {/* 現在掲載中の物件（公開判定つき・0件なら非表示・留保文つき）＝2026-09-20 */}
+        <CurrentPropertyListings locale={locale} />
 
         {/* §6 CTA＝共通CtaBand（見出し既定値が原稿§6と同文。ja固定＝フェーズI後半の翻訳キー対応まで既知の残課題） */}
         <div className="mt-10 pb-6">

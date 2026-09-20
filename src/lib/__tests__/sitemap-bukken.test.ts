@@ -65,8 +65,9 @@ describe("公開面の取得クエリが published を限定している", () =>
     expect(matches.length).toBeGreaterThanOrEqual(2);
   });
 
-  it("詳細は published と closed のみ返す（draft は404・closedは募集終了表示）", () => {
-    expect(PROPERTIES).toContain('status: { in: ["published", "closed"] }');
+  it("詳細も published のみ返す（closed・draft は取得せず notFound＝実404）", () => {
+    expect(PROPERTIES).not.toContain('"closed"');
+    expect(PROPERTIES).toContain('where: { slug, status: "published" }');
   });
 
   it("draft を返す公開クエリが存在しない", () => {
@@ -75,11 +76,14 @@ describe("公開面の取得クエリが published を限定している", () =>
 });
 
 describe("closed 詳細ページの挙動（おとり広告の構造的回避）", () => {
-  it("closed で noindex を立てる", () => {
-    expect(DETAIL_PAGE).toContain("noindex: isClosed");
+  it("募集終了の200ページを持たない（2026-09-20：200＋noindex → 実404へ変更）", () => {
+    expect(DETAIL_PAGE).not.toContain("isClosed");
+    expect(DETAIL_PAGE).not.toContain("募集を終了しました");
+    expect(DETAIL_PAGE).not.toContain("noindex");
   });
-  it("募集終了の表示がある", () => {
-    expect(DETAIL_PAGE).toContain("募集を終了しました");
+  it("取得できない物件はメタデータ生成の段階でも notFound する", () => {
+    const fn = DETAIL_PAGE.slice(DETAIL_PAGE.indexOf("export async function generateMetadata"), DETAIL_PAGE.indexOf("export default async function"));
+    expect(fn).toContain("if (!base) notFound();");
   });
   it("generateStaticParams は published のみ（closedは事前生成しない）", () => {
     const fn = DETAIL_PAGE.slice(
