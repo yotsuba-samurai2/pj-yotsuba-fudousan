@@ -1,8 +1,9 @@
+import { rentalContentDigest } from "../content-review";
 import type { RentalImport } from "../validation";
 export const NOW = new Date("2026-09-20T01:00:00.000Z");
 export function fixture(): RentalImport & { reins: NonNullable<RentalImport["reins"]>; photoPermission: NonNullable<RentalImport["photoPermission"]> } {
   const evidence = { checkedAt: NOW.toISOString(), reference: "REINS詳細・物件番号test-100", quote: "広告可" };
-  return {
+  const v: RentalImport & { reins: NonNullable<RentalImport["reins"]>; photoPermission: NonNullable<RentalImport["photoPermission"]> } = {
     version: 1,
     email: { messageId: "mail-1", receivedAt: "2026-09-19T00:00:00Z", adQuote: "AD2ヶ月" },
     source: { provider: "itandi", roomId: "123", url: "https://itandibb.com/rent_rooms/123", building: "検証用マンション", address: "東京都文京区検証町1-2-3", unit: "001", availability: "available", checkedAt: NOW.toISOString(), listingEvidence: { ...evidence, reference: "https://itandibb.com/rent_rooms/123", quote: "募集中・001号室", authenticated: true, siteOperational: true, exactRoomMatched: true }, rent: { yen: 85500, evidence: { ...evidence, quote: "賃料85,500円", reference: "https://itandibb.com/rent_rooms/123" } }, adQuote: "広告費200%" },
@@ -15,4 +16,6 @@ export function fixture(): RentalImport & { reins: NonNullable<RentalImport["rei
       images: [{ url: "https://demo.supabase.co/storage/v1/object/public/column-images/bukken/auto/photo.jpg", alt: "建物外観", kind: "photo" }, { url: "https://demo.supabase.co/storage/v1/object/public/column-images/bukken/auto/plan.jpg", alt: "001号室 間取り", kind: "floorplan" }], description: "駅から徒歩9分。バス・トイレ別。", infoUpdatedAt: "2026-09-20", nextUpdateAt: "2026-09-21", locales: ["ja"],
     },
   };
+  v.contentReview = { checkedAt: NOW.toISOString(), digest: rentalContentDigest(v.property), locales: ["ja"], reference: "テスト用・条件と本文照合" };
+  return v;
 }

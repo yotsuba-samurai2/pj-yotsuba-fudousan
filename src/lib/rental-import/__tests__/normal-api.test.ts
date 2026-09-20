@@ -15,13 +15,13 @@ afterEach(() => { vi.useRealTimers(); vi.unstubAllEnvs(); });
 describe("通常編集APIの賃貸同時更新保護", () => {
   it("古い編集画面の保存を拒否", async () => {
     const p = published(); deps.get.mockResolvedValue(p);
-    expect((await PATCH(req("PATCH", { description: "編集", expectedUpdatedAt: "2020-01-01T00:00:00Z" }), ctx)).status).toBe(409);
+    expect((await PATCH(req("PATCH", { description: p.description, expectedUpdatedAt: "2020-01-01T00:00:00Z" }), ctx)).status).toBe(409);
     expect(deps.cas).not.toHaveBeenCalled(); expect(deps.update).not.toHaveBeenCalled();
   });
   it("検証後に終了された場合にもCASで上書きしない", async () => {
     const p = published(); deps.get.mockResolvedValue(p); deps.cas.mockResolvedValue(false);
-    expect((await PATCH(req("PATCH", { description: "編集", expectedUpdatedAt: p.updatedAt }), ctx)).status).toBe(409);
-    expect(deps.cas).toHaveBeenCalledWith(p.slug, p.updatedAt, { description: "編集" }); expect(deps.update).not.toHaveBeenCalled();
+    expect((await PATCH(req("PATCH", { description: p.description, expectedUpdatedAt: p.updatedAt }), ctx)).status).toBe(409);
+    expect(deps.cas).toHaveBeenCalledWith(p.slug, p.updatedAt, { description: p.description }); expect(deps.update).not.toHaveBeenCalled();
   });
   it("終了を知っている画面でも再公開できない", async () => {
     const p = published(); deps.get.mockResolvedValue({ ...p, status: "closed" });

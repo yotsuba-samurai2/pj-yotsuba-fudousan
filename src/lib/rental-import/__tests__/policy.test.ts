@@ -5,17 +5,50 @@ import { rentalPublicationError } from "../publication";
 import { rentalContentDigest } from "../content-review";
 import { fixture, NOW } from "./fixtures";
 const proof = (quote: string) => ({ checkedAt: NOW.toISOString(), reference: "https://itandibb.com/rent_rooms/123", quote });
+function choiceWithChecks(input: Record<string, unknown>) {
+  const options = input.options as { provider: "itandi" | "reins"; value: string; evidence: { checkedAt: string; reference: string; quote: string } }[];
+  const checkedSources = Object.fromEntries((["itandi", "reins"] as const).map(provider => {
+    const rows = options.filter(o => o.provider === provider);
+    return [provider, { status: rows.length ? "recorded" : "not-stated", evidence: { checkedAt: NOW.toISOString(), reference: provider === "itandi" ? "https://itandibb.com/rent_rooms/123" : "https://system.reins.jp/", quote: rows.length ? rows.map(o => o.value).join("\n") : "当該項目の記載なし（テスト用観測）" } }];
+  }));
+  return conditionChoiceSchema.parse({ ...input, checkedSources });
+}
 beforeEach(() => vi.stubEnv("NEXT_PUBLIC_SUPABASE_URL", "https://demo.supabase.co"));
 afterEach(() => vi.unstubAllEnvs());
 function review(v: ReturnType<typeof fixture>) {
   const draft = validateRentalImport(v, NOW, "draft"); if (!draft.ok) throw new Error(draft.reasons.join());
   v.contentReview = { checkedAt: NOW.toISOString(), reference: "原文・本文・翻訳の照合済み", digest: rentalContentDigest(draft.property), locales: v.property.locales ?? ["ja"] };
 }
-const fees = (): ConditionChoice => conditionChoiceSchema.parse({ rule: "strictest", field: "guarantor", basis: "同じ保証契約・月額賃料と管理費の合計", options: [
+const fees = (): ConditionChoice => choiceWithChecks({ rule: "strictest", field: "guarantor", basis: "同じ保証契約・月額賃料と管理費の合計", options: [
   { provider: "itandi", value: "初回50%・年間1万円", burden: { initialPercent: 50, annualYen: 10000 }, evidence: proof("初回50%・年間1万円") },
   { provider: "itandi", value: "初回100%・年間1万円", burden: { initialPercent: 100, annualYen: 10000 }, evidence: proof("初回100%・年間1万円") },
 ] });
 describe("2026-09-20の採用ルール", () => {
+  it.each(["strictest", "most-pets"] as const)("%sの比較で片側欠落・同一サイト重複は両サイト確認にならない", (rule) => {
+    const c = rule === "strictest" ? fees() : choiceWithChecks({ rule, field: "conditions", replace: "ペット不可", options: [
+      { provider: "itandi", value: "犬猫1匹", maxCount: 1, evidence: proof("犬猫1匹") },
+      { provider: "itandi", value: "犬猫2匹", maxCount: 2, evidence: proof("犬猫2匹") },
+    ] });
+    const { checkedSources: _checks, ...without } = c; void _checks;
+    expect(conditionChoiceSchema.safeParse(without).success).toBe(false);
+    c.checkedSources.reins.status = "recorded";
+    expect(selectCondition(c, NOW).ok).toBe(false);
+    c.checkedSources.reins.status = "unavailable";
+    expect(selectCondition(c, NOW).ok).toBe(false);
+    c.checkedSources.reins.status = "not-stated";
+    expect(selectCondition(c, NOW).ok).toBe(true);
+  });
+  it("管理費や旧新複数金額を賃料として選ばない", () => {
+    const v = fixture(); v.source.rent.evidence.quote = "賃料85,500円 管理費5,000円"; v.source.rent.yen = 5000;
+    expect(validateRentalImport(v, NOW).ok).toBe(false);
+    v.source.rent.yen = 85500; expect(validateRentalImport(v, NOW).ok).toBe(true);
+    v.source.rent.evidence.quote = "賃料85,500円\n賃料90,000円"; expect(validateRentalImport(v, NOW).ok).toBe(false);
+  });
+  it("両サイト同額でも本文と翻訳の照合記録が必要", () => {
+    const v = fixture(); delete v.contentReview; expect(validateRentalImport(v, NOW, "published").ok).toBe(false);
+    review(v); v.property.description = "賃料8万円です";
+    expect(validateRentalImport(v, NOW, "published").ok).toBe(false);
+  });
   it("賃料はITANDIとREINSの高い方を採用し、本文の再照合なしでは公開しない", () => {
     const v = fixture(); v.reins.rent.yen = 90000; v.reins.rent.evidence.quote = "賃料9万円";
     const draft = validateRentalImport(v, NOW); expect(draft.ok).toBe(true); if (draft.ok) expect(draft.property.priceYen).toBe(90000);
@@ -44,7 +77,7 @@ describe("2026-09-20の採用ルール", () => {
   it("比較項目が欠けていればゼロとみなさない", () => { const c = fees(); if (c.rule !== "strictest") throw new Error(); delete c.options[0].burden.annualYen; expect(selectCondition(c, NOW).ok).toBe(false); });
   it("原文にない費用を転載しない", () => { const c = fees(); c.options[1].value = "初回200%"; expect(selectCondition(c, NOW).ok).toBe(false); });
   it("ペット1匹と2匹なら2匹の記載と付帯条件を採用", () => {
-    const c = conditionChoiceSchema.parse({ rule: "most-pets", field: "conditions", replace: "ペット不可", resolves: ["ペット頭数が相違"], options: [
+    const c = choiceWithChecks({ rule: "most-pets", field: "conditions", replace: "ペット不可", resolves: ["ペット頭数が相違"], options: [
       { provider: "itandi", value: "小型犬・猫合計1匹まで", maxCount: 1, evidence: proof("小型犬・猫合計1匹まで") },
       { provider: "itandi", value: "小型犬・猫計2匹迄可・敷金1ヶ月積増", maxCount: 2, evidence: proof("小型犬・猫計2匹迄可・敷金1ヶ月積増") },
     ] });

@@ -25,10 +25,15 @@ export function isPrimaryReference(reference: string, provider: "itandi" | "rein
 const option = z.object({ provider: z.enum(["itandi", "reins"]), value: z.string().trim().min(1), evidence: evidenceSchema });
 export const rentEvidenceSchema = z.object({ yen: z.number().int().positive(), evidence: evidenceSchema });
 export function validRentEvidence(rent: z.infer<typeof rentEvidenceSchema>, provider: "itandi" | "reins", now: Date) {
-  const values = Array.from(rent.evidence.quote.normalize("NFKC").replace(/,/g, "").matchAll(/(\d+(?:\.\d+)?)\s*(万円|円)/g)).map((m) => Math.round(Number(m[1]) * (m[2] === "万円" ? 10000 : 1)));
-  return isCurrentEvidence(rent.evidence.checkedAt, now) && isPrimaryReference(rent.evidence.reference, provider) && values.includes(rent.yen);
+  const values = Array.from(rent.evidence.quote.normalize("NFKC").replace(/,/g, "").matchAll(/(?:^|\s)(?:月額)?(?:賃料|家賃)\s*[:：=]?\s*(\d+(?:\.\d+)?)\s*(万円|円)/g)).map((m) => Math.round(Number(m[1]) * (m[2] === "万円" ? 10000 : 1)));
+  return isCurrentEvidence(rent.evidence.checkedAt, now) && isPrimaryReference(rent.evidence.reference, provider) && values.length > 0 && values.every((value) => value === rent.yen);
 }
+const conditionObservationSchema = z.object({
+  status: z.enum(["recorded", "not-stated", "unavailable"]),
+  evidence: evidenceSchema,
+});
 const common = {
+  checkedSources: z.object({ itandi: conditionObservationSchema, reins: conditionObservationSchema }),
   resolves: z.array(z.string()).default([]),
   /** When changing one clause, preserve the remaining special conditions verbatim. */
   replace: z.string().trim().min(1).optional(),
@@ -66,6 +71,13 @@ export function hasAdvertisingAllow(quote: string) {
 /** Select an entire observed term; never manufacture a combination of separate fee plans. */
 export function selectCondition(choice: ConditionChoice, now: Date): { ok: true; index: number; value: string } | { ok: false; reason: string } {
   const held = (reason: string) => ({ ok: false as const, reason: `${choice.field}: ${reason}` });
+  for (const provider of ["itandi", "reins"] as const) {
+    const check = choice.checkedSources[provider], options = choice.options.filter((o) => o.provider === provider);
+    if (!isPrimaryReference(check.evidence.reference, provider) || !isCurrentEvidence(check.evidence.checkedAt, now)) return held("ITANDI・REINS双方の当該条件の確認記録が必要です");
+    if (check.status === "unavailable") return held(`${provider}の当該条件を取得できていません`);
+    if ((check.status === "recorded") !== (options.length > 0)) return held(`${provider}の記載あり／記載なしと比較候補が一致しません`);
+    if (options.some((o) => !normalized(check.evidence.quote).includes(normalized(o.value)))) return held(`${provider}の条件確認原文に比較候補が含まれていません`);
+  }
   if (choice.options.some((o) => !isPrimaryReference(o.evidence.reference, o.provider))) return held("条件の比較元はITANDIとREINSに限定してください");
   if (choice.options.some((o) => !isCurrentEvidence(o.evidence.checkedAt, now) || !normalized(o.evidence.quote).includes(normalized(o.value)))) return held("最新の原文と転載内容を照合してください");
   let indices: number[];

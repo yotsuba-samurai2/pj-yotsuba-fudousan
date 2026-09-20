@@ -112,7 +112,7 @@ export function validateRentalImport(input: unknown, now: Date, mode: "draft" | 
     decisions.push({ field: choice.field, rule: choice.rule, selectedIndex: result.index, value: result.value });
   }
   if (v.conflicts.length) reasons.push(...v.conflicts.filter((c) => !resolved.has(c)).map((c) => `要確認: ${c}`));
-  if (mode === "published" && (v.conditionChoices?.length || v.source.rent.yen !== v.reins.rent.yen)) {
+  if (mode === "published") {
     const review = v.contentReview;
     if (!review || !isFresh(review.checkedAt, now) || review.digest !== rentalContentDigest(v.property)
       || (v.property.locales ?? ["ja"]).some((locale) => !review.locales.includes(locale))) reasons.push("採用後の条件と日本語本文・公開する各翻訳を照合し、contentReviewに記録してください");

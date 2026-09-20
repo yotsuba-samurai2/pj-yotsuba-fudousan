@@ -5,6 +5,14 @@ import { rentalPublicationError } from "../publication";
 import { conditionChoiceSchema } from "../policy";
 import { rentalContentDigest } from "../content-review";
 
+function choiceWithChecks(input: Record<string, unknown>) {
+  const options = input.options as { provider: "itandi" | "reins"; value: string; evidence: { checkedAt: string; reference: string; quote: string } }[];
+  const checkedSources = Object.fromEntries((["itandi", "reins"] as const).map(provider => {
+    const rows = options.filter(o => o.provider === provider);
+    return [provider, { status: rows.length ? "recorded" : "not-stated", evidence: { checkedAt: NOW.toISOString(), reference: provider === "itandi" ? "https://itandibb.com/rent_rooms/123" : "https://system.reins.jp/", quote: rows.length ? rows.map(o => o.value).join("\n") : "当該項目の記載なし（テスト用観測）" } }];
+  }));
+  return conditionChoiceSchema.parse({ ...input, checkedSources });
+}
 beforeEach(() => vi.stubEnv("NEXT_PUBLIC_SUPABASE_URL", "https://demo.supabase.co"));
 afterEach(() => vi.unstubAllEnvs());
 function published() {
@@ -29,7 +37,7 @@ describe("独立レビューの回帰検証", () => {
   it("条件を選択した後の本文・翻訳の照合を省略できず、照合後の変更も検出", () => {
     const v = fixture(); v.property.description = "保証料は初回50%"; v.property.translations = { en: { title: "Sample 001", description: "Initial guarantee fee 50%." } }; v.property.locales = ["ja", "en"];
     const evidence = (quote: string) => ({ checkedAt: NOW.toISOString(), reference: "https://itandibb.com/rent_rooms/123", quote });
-    v.conditionChoices = [conditionChoiceSchema.parse({ rule: "strictest", field: "guarantor", basis: "同じ保証会社・同じ算定基準", options: [
+    v.conditionChoices = [choiceWithChecks({ rule: "strictest", field: "guarantor", basis: "同じ保証会社・同じ算定基準", options: [
       { provider: "itandi", value: "初回50%", burden: { initialPercent: 50 }, evidence: evidence("初回50%") },
       { provider: "itandi", value: "初回100%", burden: { initialPercent: 100 }, evidence: evidence("初回100%") },
     ] })];
