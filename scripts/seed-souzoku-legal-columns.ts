@@ -676,6 +676,14 @@ const REQUIRED_HUB_LINKS: Record<string, string[]> = {
     "/legal/column/isan-bunkatsu-kyougisho",
     "/legal/column/jihitsu-kosei-yuigon",
   ],
+  "gaikoku-kankei-shomen-ninsho-apostille-koushou-tsukaiwake": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/souzoku",
+    "/legal/column/souzoku-kaigai-gaikokuseki",
+    "/legal/column/chugoku-tairiku-souzokunin-shinzoku-koshosho-ryoji-ninsho",
+  ],
 };
 
 /** 表示コンプライアンス上の禁止語 */
@@ -2210,6 +2218,21 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "家事事件手続法",
     "別表第一",
   ],
+  "gaikoku-kankei-shomen-ninsho-apostille-koushou-tsukaiwake": [
+    "公証人法第1条第2号",
+    "第58条",
+    "私署証書",
+    "公印確認",
+    "アポスティーユ",
+    "領事認証",
+    "外国公文書の認証を不要とする条約",
+    "1970年7月27日",
+    "2023年11月7日",
+    "日本台湾交流協会",
+    "紹介料を受け取りません",
+    "別事業体",
+    "独立した事業体",
+  ],
 };
 
 /** 記事ごとに含めてはならない表現 */
@@ -2325,6 +2348,7 @@ const FORBIDDEN_PHRASES: Record<string, string[]> = {
   "chintai-jutaku-kanrigyo-touroku-sublease-kanyu": [],
   "cleaning-jo-kaisetsu-kozo-setsubi-todokede": [],
   "souzoku-kekkaku-haijo-chigai-bunkatsu": [],
+  "gaikoku-kankei-shomen-ninsho-apostille-koushou-tsukaiwake": [],
 };
 
 /** 本セット外へ張る既存legalコラムslug（リポジトリの他シードで実在確認済み） */
@@ -4105,6 +4129,32 @@ const ARTICLES: Array<{
       "代襲相続",
       "遺産分割",
       "遺留分",
+      "行政書士",
+    ],
+  },
+  {
+    file: "75-gaikoku-kankei-shomen-ninsho-apostille-koushou-tsukaiwake.md",
+    slug: "gaikoku-kankei-shomen-ninsho-apostille-koushou-tsukaiwake",
+    date: "2026-09-21",
+    title:
+      "アポスティーユ・領事認証・公証はどう使い分ける？渉外の書類認証の実務",
+    category: "行政手続（行政書士の実務から）",
+    excerpt:
+      "海外の当事者が関わる契約・相続・法人手続で書類を通用させるための「認証」を、公証・私署証書認証（公証人法第1条第2号・第58条）・アポスティーユ・領事認証の4つに整理しました。提出先の国がハーグ・アポスティーユ条約（日本は1970年7月27日発効）の締約国かで手続が分かれること、中国大陸（日中間で2023年11月7日発効）・香港・マカオ・台湾（日本台湾交流協会経由の別ルート）の違い、相続・契約・法人設立で必要な認証、文書の証拠力は弁護士・登記適格性は司法書士・本国側の公証は現地公証人へ振り分ける分離受任を示しました。",
+    keywords: [
+      "アポスティーユ 領事認証 公証 違い",
+      "私署証書認証 公証人法 アポスティーユ",
+      "ハーグ条約 締約国 公印確認 領事認証",
+      "中国 香港 台湾 アポスティーユ 認証",
+      "渉外 契約 相続 法人設立 認証",
+      "書類認証 行政書士",
+    ],
+    tags: [
+      "アポスティーユ",
+      "領事認証",
+      "公証",
+      "私署証書認証",
+      "渉外手続",
       "行政書士",
     ],
   },

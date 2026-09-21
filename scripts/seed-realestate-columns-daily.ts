@@ -1434,6 +1434,66 @@ const ARTICLES: ArticleSpec[] = [
     localesWithTranslations: ["en", "zh-tw", "zh"],
     hubLinks: ["/souzoku"],
   },
+  {
+    file: "70-sanpai-tsumikae-hokan-bukken-youken.md",
+    slug: "sanpai-tsumikae-hokan-bukken-youken",
+    title: "産廃の積替え・保管ができる物件の要件は？用途地域・囲い・飛散防止の確認",
+    publishedAt: "2026-09-21",
+    category: "投資・事業用不動産",
+    excerpt:
+      "産業廃棄物の積替え・保管の拠点は、倉庫や資材置場をただ借りれば足りるものではありません。物件で効くのは、①用途地域（上屋を設けるなら建築基準法第48条・別表第二の用途制限を受け、準工業・工業・工業専用が向く）②飛散・流出・地下浸透・悪臭を防ぐ囲いと縦横おおむね60cm以上の掲示板③積替えのための保管上限量（平均搬出量の7日分）と積み上げ高さの制限、の3点です。東京都文京区の宅地建物取引士兼行政書士が、契約前に確認できることを廃棄物処理法・建築基準法の条文と自治体の手引きから整理します。",
+    keywords: [
+      "産廃 積替え 保管 物件",
+      "産業廃棄物 収集運搬 積替え保管 許可",
+      "産廃 保管基準 囲い 掲示板 60センチ",
+      "積替え保管 上限 平均搬出量 7日分",
+      "産廃 積替え保管 用途地域 準工業",
+    ],
+    tags: ["事業用不動産", "許認可", "用途地域", "廃棄物処理法"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/toushi", "/office"],
+  },
+  {
+    file: "71-souzoku-seisan-ryokuchi-baikyaku-nagare.md",
+    slug: "souzoku-seisan-ryokuchi-baikyaku-nagare",
+    title: "相続した生産緑地は売れる？特定生産緑地・買取申出と売却までの流れ",
+    publishedAt: "2026-09-21",
+    category: "相続",
+    excerpt:
+      "相続した生産緑地も売れますが、宅地とは道のりが違います。生産緑地には建築・宅地造成を制限する行為制限がかかり、そのまま宅地として自由には売れません。鍵は、特定生産緑地に移行済みか・30年経過や指定解除で制限が外れているか、市町村長への買取りの申出（生産緑地法第10条）、相続税の納税猶予（租税特別措置法第70条の6）の3点です。東京都文京区の宅地建物取引士兼行政書士が、売却までの流れを条文と国交省・国税庁の資料から整理します。",
+    keywords: [
+      "生産緑地 相続 売却",
+      "特定生産緑地 移行 買取り申出",
+      "生産緑地法 10条 30年 買取り",
+      "生産緑地 2022年問題 指定解除",
+      "農地 相続税 納税猶予 租税特別措置法70条の6",
+    ],
+    tags: ["相続", "生産緑地", "農地", "売却"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/souzoku"],
+  },
+  {
+    file: "72-chuka-souzokunin-kyoyu-mochibun-baikyaku-jitsumu.md",
+    slug: "chuka-souzokunin-kyoyu-mochibun-baikyaku-jitsumu",
+    title: "中華圏の相続人が共有する日本の不動産を売るには？持分・委任状・現地公証の実務",
+    publishedAt: "2026-09-21",
+    category: "相続",
+    excerpt:
+      "台湾・香港・中国大陸に住む複数の相続人が日本の不動産を共有で相続し売りたいとき、建物・土地をまるごと売るには共有者全員の同意が要ります（民法第251条第1項）。持分だけなら単独で売れますが価格が下がりやすい。海外在住の相続人は印鑑証明に代えて在外公館の署名証明を用い、委任状に現地公証や領事認証を重ねます。非居住者が売主だと源泉徴収10.21％も重なります。東京都文京区の宅地建物取引士兼行政書士が、委任・現地公証・決済と海外送金の段取りを条文と国税庁の資料から整理します。",
+    keywords: [
+      "海外 相続人 共有 不動産 売却",
+      "在外公館 署名証明 サイン証明 委任状",
+      "非居住者 不動産 譲渡 源泉徴収 10.21%",
+      "共有 全員同意 民法251条 持分売却",
+      "相続 準拠法 通則法36条 現地公証 領事認証",
+    ],
+    tags: ["相続", "共有", "非居住者", "中国語圏"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/souzoku"],
+  },
 ];
 
 function toPlainText(md: string): string {
