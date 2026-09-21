@@ -16,6 +16,10 @@ function yen(value: number) {
 
 /** 確認済みの公開データだけで作る、物件ページのQ&AとFAQ構造化データ。 */
 export function PropertyQa({ property, locale }: { property: PublicProperty; locale: LangCode }) {
+  // QA is designed for rental questions (rent, move-in costs, pets and viewings).
+  // Sales and other non-rental listings should keep their pages focused on the
+  // published property facts and must not emit an irrelevant FAQPage schema.
+  if (!isRentalSpec(property)) return null;
   const rental = isRentalSpec(property) ? property.spec : null;
   const managementFeeYen = rental ? Number(rental.managementFee.match(/[0-9,]+/)?.[0]?.replace(/,/g, "") ?? 0) : 0;
   const initialCost = rental
