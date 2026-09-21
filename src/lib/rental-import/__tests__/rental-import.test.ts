@@ -97,6 +97,14 @@ describe("再実行と掲載終了", () => {
   it("同じ部屋は再実行しても1件", async () => { const {store,rows} = memoryStore(); expect((await importRental(fixture(), store, NOW, "published")).action).toBe("created"); expect((await importRental(fixture(), store, NOW, "published")).action).toBe("updated"); expect(rows.size).toBe(1); });
   it("同時更新時は上書きしない", async () => { const {store} = memoryStore(); await importRental(fixture(), store, NOW, "published"); store.update = async () => false; expect((await importRental(fixture(), store, NOW, "published")).action).toBe("held"); });
   it("手動編集を保護", async () => { const {store,rows} = memoryStore(); const result = await importRental(fixture(), store, NOW, "published"); rows.get(result.slug!)!.description = "管理者が修正"; expect((await importRental(fixture(), store, NOW, "published")).action).toBe("held"); });
+  it("最新の再確認で手動編集済み下書きを公開できる", async () => {
+    const { store, rows } = memoryStore();
+    const created = await importRental(fixture(), store, NOW, "published");
+    rows.get(created.slug!)!.status = "draft";
+    const result = await importRental(fixture(), store, NOW, "published", true);
+    expect(result).toMatchObject({ action: "updated", slug: created.slug });
+    expect(rows.get(created.slug!)!.status).toBe("published");
+  });
   it("掲載終了・削除は非公開化し再取込で復活させない", async () => { const {store,rows} = memoryStore(); await importRental(fixture(), store, NOW, "published"); const v = fixture(); const event = { source: v.source, status: "removed", confirmedBy: { provider: "itandi", listingId: "123" }, checkedAt: NOW.toISOString(), reference: v.source.url, quote: "物件番号で検索結果なし", authenticated: true, siteOperational: true, exactRoomMatched: true }; const result = await closeRental(event, store, NOW); expect(result.action).toBe("closed"); expect(rows.get(result.slug!)!.status).toBe("closed"); expect((await importRental(v, store, NOW, "published")).action).toBe("held"); });
   it("認証切れ・障害は終了としない", async () => { const {store,rows} = memoryStore(); await importRental(fixture(), store, NOW, "published"); const result = await closeRental({ source: fixture().source, status: "removed", confirmedBy: { provider: "itandi", listingId: "123" }, checkedAt: NOW.toISOString(), reference: "page", quote: "ログイン画面", authenticated: false, siteOperational: true, exactRoomMatched: true }, store, NOW); expect(result.action).toBe("held"); expect([...rows.values()][0].status).toBe("published"); });
   it("公開ポータルの終了だけでは手動編集済み物件も公開停止しない", async () => {

@@ -50,7 +50,29 @@ export async function importRental(input: unknown, store: RentalStore, now: Date
   if (existing) {
     const metadata = existing.internal?.rentalImport as { lastPublicDigest?: string; paused?: boolean } | undefined;
     if (existing.status === "closed") return { action: "held", slug: p.slug, reasons: ["募集終了済み。再公開には管理者の確認が必要です"] };
-    if (!metadata || metadata.paused || metadata.lastPublicDigest !== publicDigest(existing)) return { action: "held", slug: p.slug, reasons: ["手動編集済み、または自動更新が停止されています"] };
+    const manuallyEdited = !metadata || metadata.paused || metadata.lastPublicDigest !== publicDigest(existing);
+    if (manuallyEdited) {
+      // A fresh, explicitly requested maintenance check may publish a manually
+      // edited draft without overwriting its public copy. The incoming record
+      // is still validated against the existing public fields below; only fresh
+      // source evidence and lifecycle metadata are adopted.
+      if (!(maintenance && mode === "published")) return { action: "held", slug: p.slug, reasons: ["手動編集済み、または自動更新が停止されています"] };
+      const checked = validateRentalImport({ ...(input as Record<string, unknown>), property: { ...existing, status: "published" } }, now, "published", true);
+      if (!checked.ok) return { action: "held", slug: p.slug, reasons: checked.reasons };
+      const refreshed = checked.property;
+      const next: PropertyInput = {
+        ...existing,
+        status: "published",
+        publishedAt: existing.publishedAt ?? refreshed.publishedAt,
+        infoUpdatedAt: refreshed.infoUpdatedAt,
+        nextUpdateAt: refreshed.nextUpdateAt,
+        spec: { ...existing.spec, ...(refreshed.spec.dealType === "rental" ? { availabilityExpiresAt: refreshed.spec.availabilityExpiresAt } : {}) },
+        internal: { ...existing.internal, rentalImport: { ...(refreshed.internal?.rentalImport as Record<string, unknown> | undefined), lastPublicDigest: publicDigest({ ...existing, status: "published" }) } },
+      };
+      const success = await store.update(p.slug, existing.updatedAt!, next);
+      if (success) await onChange?.(existing, next, now);
+      return success ? { action: "updated", slug: p.slug } : { action: "held", slug: p.slug, reasons: ["同時更新を検出しました。次回再確認します"] };
+    }
     // A draft run must not silently demote a listing already published by the operator.
     if (existing.status === "published" && mode === "draft") return { action: "held", slug: p.slug, reasons: ["公開済み物件の更新には公開モードが必要です"] };
     p.publishedAt = existing.publishedAt ?? p.publishedAt;
