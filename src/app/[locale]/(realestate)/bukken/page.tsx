@@ -4,7 +4,7 @@ export const dynamic = "force-dynamic";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getPublishedProperties, getLocalizedProperty } from "@/lib/properties";
-import { type PropertyCategory, type PublicProperty } from "@/lib/property-shared";
+import { type PropertyDealType, type PublicProperty } from "@/lib/property-shared";
 import { formatAccessL, formatPropertyPriceL, localizedImageAlt, propertyUi } from "@/lib/property-i18n";
 import { buildPropertyItemListJsonLd } from "@/lib/property-jsonld";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -26,14 +26,23 @@ import type { LangCode } from "@/config/languages";
 // 一覧も揃える（sitemap.ts の STATIC_REALESTATE と必ず一致させる）
 const PAGE_LOCALES: LangCode[] = ["ja", "en", "zh-tw", "zh"];
 
-// カテゴリの表示順（勝ち筋優先）
-const CATEGORY_ORDER: PropertyCategory[] = ["gh", "jigyo", "souzoku", "toushi", "other"];
+// 物件コーナーの表示区分。業者向けの内部カテゴリ（GH・投資等）は公開見出しに出さず、
+// お客様が探す4種類に統一する。一棟マンションはマンション、事業用建物は戸建て側にまとめる。
+type ListingGroup = "rental" | "land" | "condo" | "house";
+const LISTING_GROUP_ORDER: ListingGroup[] = ["rental", "land", "condo", "house"];
+
+function listingGroup(dealType: PropertyDealType): ListingGroup {
+  if (dealType === "rental") return "rental";
+  if (dealType === "land") return "land";
+  if (dealType === "condo" || dealType === "wholeBuilding") return "condo";
+  return "house";
+}
 
 const COPY: Record<LangCode, { title: string; description: string; h1: string; lead: string; empty: string }> = {
   ja: {
     title: "取扱物件のご紹介",
     description:
-      "四葉不動産株式会社（東京都文京区・宅地建物取引業 東京都知事(1)第113304号）の取扱物件一覧。障害福祉グループホーム向け・事業用店舗・相続売却・投資用の売買・賃貸物件をご紹介します。",
+      "四葉不動産株式会社（東京都文京区・宅地建物取引業 東京都知事(1)第113304号）の取扱物件一覧。賃貸・売地・マンション・戸建てをご紹介します。",
     h1: "取扱物件のご紹介",
     lead: "現在ご紹介できる売買・賃貸物件の一覧です。掲載していない物件のご相談・物件探しのご依頼も承ります。",
     empty: "現在ご紹介中の物件はありません。ご希望の条件をお聞かせいただければ、お探しします。",
@@ -123,7 +132,9 @@ export default async function BukkenListPage() {
   const ui = propertyUi(locale);
   const visible = (await getPublishedProperties(locale)).map((p) => getLocalizedProperty(p, locale));
   // 画面の並び（カテゴリ順→取得順）をそのまま ItemList の position に使う＝可視リストと一致させる
-  const properties = CATEGORY_ORDER.flatMap((cat) => visible.filter((p) => p.category === cat));
+  const properties = LISTING_GROUP_ORDER.flatMap((group) =>
+    visible.filter((p) => listingGroup(p.dealType) === group),
+  );
 
   return (
     <>
@@ -149,16 +160,16 @@ export default async function BukkenListPage() {
           </p>
         ) : (
           <div className="mt-8 space-y-10">
-            {CATEGORY_ORDER.filter((cat) =>
-              properties.some((p) => p.category === cat),
-            ).map((cat) => (
-              <section key={cat}>
+            {LISTING_GROUP_ORDER.filter((group) =>
+              properties.some((p) => listingGroup(p.dealType) === group),
+            ).map((group) => (
+              <section key={group}>
                 <h2 className="font-serif text-xl font-semibold text-ink">
-                  {ui.category[cat]}
+                  {group === "house" && locale === "ja" ? "戸建て" : ui.dealType[group]}
                 </h2>
                 <div className="mt-3 space-y-3">
                   {properties
-                    .filter((p) => p.category === cat)
+                    .filter((p) => listingGroup(p.dealType) === group)
                     .map((p) => (
                       <PropertyCard key={p.slug} p={p} locale={locale} />
                     ))}
