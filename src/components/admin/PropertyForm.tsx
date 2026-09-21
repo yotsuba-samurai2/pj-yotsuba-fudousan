@@ -194,7 +194,7 @@ function draftToSpec(dealType: PropertyDealType, d: SpecDraft): PropertySpec {
         floors: d.floors,
         floorLocated: d.floorLocated,
         exclusiveAreaSqm: num(d.exclusiveAreaSqm),
-        balconyAreaSqm: num(d.balconyAreaSqm),
+        balconyAreaSqm: d.balconyAreaSqm === "不明" ? "不明" : num(d.balconyAreaSqm),
         builtYm: d.builtYm,
         deliveryYm: d.deliveryYm,
         managementFee: d.managementFee,
@@ -679,7 +679,11 @@ export default function PropertyForm({ initialData, onSubmit }: Props) {
                 <input type="number" step="0.01" min={0} value={specDraft.exclusiveAreaSqm} onChange={(e) => setSpec({ exclusiveAreaSqm: e.target.value })} className={inputCls} required />
               </Field>
               <Field label="バルコニー面積（㎡）">
-                <input type="number" step="0.01" min={0} value={specDraft.balconyAreaSqm} onChange={(e) => setSpec({ balconyAreaSqm: e.target.value })} className={inputCls} required />
+                <input type="number" step="0.01" min={0} value={specDraft.balconyAreaSqm === "不明" ? "" : specDraft.balconyAreaSqm} onChange={(e) => setSpec({ balconyAreaSqm: e.target.value })} className={inputCls} required={specDraft.balconyAreaSqm !== "不明"} disabled={specDraft.balconyAreaSqm === "不明"} />
+                <label className="mt-2 flex items-center gap-2 text-xs text-text-muted">
+                  <input type="checkbox" checked={specDraft.balconyAreaSqm === "不明"} onChange={(e) => setSpec({ balconyAreaSqm: e.target.checked ? "不明" : "" })} />
+                  資料に「不明」と記載（0㎡とは区別）
+                </label>
               </Field>
               <Field label="管理費">
                 <input value={specDraft.managementFee} onChange={(e) => setSpec({ managementFee: e.target.value })} className={inputCls} placeholder="月額12,000円" required />

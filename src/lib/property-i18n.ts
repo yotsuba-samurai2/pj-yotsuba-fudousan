@@ -337,7 +337,9 @@ export function buildLocalizedDisplayRows(p: PublicProperty, locale: LangCode): 
       case "exclusiveArea": value = formatAreaL(num.exclusiveAreaSqm as number, locale); break;
       case "landArea": value = formatAreaL(num.landAreaSqm as number, locale); break;
       case "buildingArea": value = formatAreaL(num.buildingAreaSqm as number, locale); break;
-      case "balconyArea": value = formatAreaL(num.balconyAreaSqm as number, locale); break;
+      case "balconyArea": value = num.balconyAreaSqm === "不明"
+        ? { ja: "不明", en: "Unknown", "zh-tw": "不明", zh: "不详" }[locale]
+        : formatAreaL(num.balconyAreaSqm as number, locale); break;
       case "privateRoad": value = (num.privateRoadAreaSqm as number) > 0 ? formatAreaL(num.privateRoadAreaSqm as number, locale) : ui.none; break;
       case "unitCount": value = locale === "en" ? `${num.unitCount} units` : locale === "zh-tw" ? `${num.unitCount}戶` : `${num.unitCount}户`; break;
       case "unitArea": value = `${formatAreaL(num.unitAreaMinSqm as number, locale)} – ${formatAreaL(num.unitAreaMaxSqm as number, locale)}`; break;
