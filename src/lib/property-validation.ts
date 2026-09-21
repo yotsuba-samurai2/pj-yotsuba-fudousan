@@ -52,7 +52,7 @@ const condoSpec = z.object({
   floors: z.string().min(1),
   floorLocated: z.string().min(1),
   exclusiveAreaSqm: z.number().positive().finite(),
-  balconyAreaSqm: areaSqm,
+  balconyAreaSqm: z.union([areaSqm, z.literal("不明")]),
   builtYm: ymOrText,
   deliveryYm: ymOrText,
   managementFee: z.string().min(1),

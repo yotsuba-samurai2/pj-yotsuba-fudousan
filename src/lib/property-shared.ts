@@ -75,7 +75,7 @@ export type CondoSpec = {
   /** 当該物件が存在する階（例「5階」） */
   floorLocated: string;
   exclusiveAreaSqm: number;
-  balconyAreaSqm: number;
+  balconyAreaSqm: number | "不明";
   builtYm: string;
   deliveryYm: string;
   /** 管理費（月額・円等の表記込み文字列） */
@@ -487,7 +487,7 @@ export function buildRequiredDisplayRows(p: PublicProperty): DisplayRow[] {
         { key: "floors", label: "階数", value: s.floors },
         { key: "floorLocated", label: "所在階", value: s.floorLocated },
         { key: "exclusiveArea", label: "専有面積", value: formatArea(s.exclusiveAreaSqm) },
-        { key: "balconyArea", label: "バルコニー面積", value: formatArea(s.balconyAreaSqm) },
+        { key: "balconyArea", label: "バルコニー面積", value: s.balconyAreaSqm === "不明" ? "不明" : formatArea(s.balconyAreaSqm) },
         { key: "builtYm", label: "建築年月", value: formatYm(s.builtYm) },
         { key: "deliveryYm", label: "引渡し可能年月", value: formatYm(s.deliveryYm) },
         { key: "managementFee", label: "管理費", value: s.managementFee },

@@ -29,6 +29,9 @@ import { PropertyLegalBlock } from "@/components/bukken/PropertyLegalBlock";
 import { PropertyViewingCta } from "@/components/bukken/PropertyViewingCta";
 import { PropertyQa } from "@/components/bukken/PropertyQa";
 import ColumnBody from "@/components/column/ColumnBody";
+import { propertyPhotoNotes } from "@/lib/property-photo-notes";
+import { PropertyPhotoGallery } from "@/components/bukken/PropertyPhotoGallery";
+import { PropertyVideos } from "@/components/bukken/PropertyVideos";
 import type { LangCode } from "@/config/languages";
 
 /**
@@ -176,22 +179,19 @@ export default async function BukkenDetailPage({ params }: Props) {
           </div>
         </section>
 
-        {p.images.length > 1 && (
+        <PropertyVideos description={p.description} locale={locale} />
+
+        {p.images.length > 0 && (
           <section className="mt-8">
             <h2 className="font-serif text-xl font-semibold text-ink">{ui.photosHeading}</h2>
-            <div className="mt-3 grid grid-cols-2 gap-3">
-              {p.images.slice(1).map((img) => (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
-                  key={img.url}
-                  src={img.url}
-                  alt={localizedImageAlt(img, p.title, locale)}
-                  width={800}
-                  height={600}
-                  className="w-full rounded-xl object-cover"
-                  loading="lazy"
-                />
-              ))}
+            <div className="mt-3">
+              <PropertyPhotoGallery
+                images={p.images.map((img) => ({ url: img.url, alt: localizedImageAlt(img, p.title, locale) }))}
+                locale={locale}
+                previewLimit={6}
+                photoNotes={propertyPhotoNotes(p.description)}
+                allPhotosHref={addLocalePrefix(`/bukken/${p.slug}/photos`, locale)}
+              />
             </div>
           </section>
         )}
@@ -213,7 +213,7 @@ export default async function BukkenDetailPage({ params }: Props) {
 
         <PropertyLegalBlock property={p} locale={locale} />
         <PropertyQa property={p} locale={locale} />
-        <PropertyViewingCta propertyTitle={p.title} propertyUrl={`/bukken/${p.slug}`} />
+        <PropertyViewingCta propertyTitle={p.title} propertyUrl={addLocalePrefix(`/bukken/${p.slug}`, locale)} locale={locale} />
       </article>
 
       <div className="mx-auto max-w-3xl px-4">
