@@ -10,6 +10,7 @@ import { localizedImageAlt, propertyUi } from "@/lib/property-i18n";
 import { buildPageMetadata } from "@/lib/seo";
 import { Breadcrumb } from "@/components/shared/Breadcrumb";
 import { PropertyPhotoGallery } from "@/components/bukken/PropertyPhotoGallery";
+import { propertyPhotoNotes } from "@/lib/property-photo-notes";
 
 type Props = { params: Promise<{ slug: string }> };
 export function generateStaticParams() { return []; }
@@ -42,7 +43,7 @@ export default async function PropertyPhotosPage({ params }: Props) {
         <Link href={addLocalePrefix(detailPath, locale)} className="mb-6 inline-flex min-h-11 items-center text-sm text-primary underline underline-offset-4">{back}</Link>
         <h1 className="font-serif text-2xl font-semibold leading-relaxed text-ink">{property.title}</h1>
         <h2 className="mb-5 mt-3 text-base text-text-muted">{ui.photosHeading} ({property.images.length})</h2>
-        <PropertyPhotoGallery images={property.images.map((image) => ({ url: image.url, alt: localizedImageAlt(image, property.title, locale) }))} locale={locale} />
+        <PropertyPhotoGallery images={property.images.map((image) => ({ url: image.url, alt: localizedImageAlt(image, property.title, locale) }))} locale={locale} photoNotes={propertyPhotoNotes(property.description)} />
         <Link href={addLocalePrefix(detailPath, locale)} className="mt-10 inline-flex min-h-11 items-center text-sm text-primary underline underline-offset-4">{back}</Link>
       </main>
     </>

@@ -29,6 +29,7 @@ import { PropertyLegalBlock } from "@/components/bukken/PropertyLegalBlock";
 import { PropertyViewingCta } from "@/components/bukken/PropertyViewingCta";
 import { PropertyQa } from "@/components/bukken/PropertyQa";
 import ColumnBody from "@/components/column/ColumnBody";
+import { propertyPhotoNotes } from "@/lib/property-photo-notes";
 import { PropertyPhotoGallery } from "@/components/bukken/PropertyPhotoGallery";
 import { PropertyVideos } from "@/components/bukken/PropertyVideos";
 import type { LangCode } from "@/config/languages";
@@ -180,7 +181,7 @@ export default async function BukkenDetailPage({ params }: Props) {
 
         <PropertyVideos description={p.description} locale={locale} />
 
-        {p.images.length > 1 && (
+        {p.images.length > 0 && (
           <section className="mt-8">
             <h2 className="font-serif text-xl font-semibold text-ink">{ui.photosHeading}</h2>
             <div className="mt-3">
@@ -188,6 +189,7 @@ export default async function BukkenDetailPage({ params }: Props) {
                 images={p.images.map((img) => ({ url: img.url, alt: localizedImageAlt(img, p.title, locale) }))}
                 locale={locale}
                 previewLimit={6}
+                photoNotes={propertyPhotoNotes(p.description)}
                 allPhotosHref={addLocalePrefix(`/bukken/${p.slug}/photos`, locale)}
               />
             </div>

@@ -16,9 +16,10 @@ type Props = {
   locale: LangCode;
   previewLimit?: number;
   allPhotosHref?: string;
+  photoNotes?: string;
 };
 
-export function PropertyPhotoGallery({ images, locale, previewLimit, allPhotosHref }: Props) {
+export function PropertyPhotoGallery({ images, locale, previewLimit, allPhotosHref, photoNotes }: Props) {
   const dialog = useRef<HTMLDialogElement>(null);
   const [selected, setSelected] = useState(0);
   const text = labels[locale];
@@ -29,6 +30,7 @@ export function PropertyPhotoGallery({ images, locale, previewLimit, allPhotosHr
 
   return (
     <div>
+      {photoNotes && <p className="mb-4 whitespace-pre-line rounded-lg border border-border bg-surface p-4 text-sm leading-relaxed">{photoNotes}</p>}
       <p className="mb-3 text-sm text-text-muted">{text.hint}</p>
       <div className="grid grid-cols-2 gap-x-4 gap-y-6 sm:grid-cols-3">
         {visible.map((image, index) => (
@@ -67,6 +69,7 @@ export function PropertyPhotoGallery({ images, locale, previewLimit, allPhotosHr
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={photo.url} alt={photo.alt} width={1600} height={1200} className="max-h-[68dvh] w-full object-contain" />
         <p className="mt-3 text-center text-sm leading-relaxed" aria-live="polite">{photo.alt}</p>
+        {photoNotes && <p className="mt-3 whitespace-pre-line rounded-lg border border-border bg-surface p-3 text-sm leading-relaxed">{photoNotes}</p>}
         {images.length > 1 && (
           <div className="mt-3 flex justify-between gap-4">
             <button type="button" onClick={() => move(-1)} className="min-h-11 rounded-lg border border-border px-4 text-sm focus-visible:outline-2 focus-visible:outline-primary">{text.previous}</button>
