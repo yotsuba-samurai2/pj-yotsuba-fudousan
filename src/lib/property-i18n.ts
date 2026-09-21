@@ -215,6 +215,10 @@ export function formatAccessL(a: PropertyAccess, locale: LangCode): string {
 
 type Tri = [en: string, zhTw: string, zh: string];
 const FIXED_VALUES: Record<string, Tri> = {
+  "税込": ["Tax included", "含稅", "含税"],
+  "全部委託": ["Fully contracted management", "全部委託", "全部委托"],
+  "通勤": ["Commuting manager", "管理員通勤", "管理员通勤"],
+  "なし（清掃員のみ）": ["No manager (cleaning staff only)", "無管理員（僅有清潔人員）", "无管理员（仅有清洁人员）"],
   "なし": ["None", "無", "无"],
   "未確認": ["Unconfirmed", "未確認", "未确认"],
   "確認中": ["Being confirmed", "確認中", "确认中"],
@@ -249,6 +253,10 @@ const FIXED_VALUES: Record<string, Tri> = {
 };
 
 const FIXED_PATTERNS: Array<[RegExp, (m: RegExpExecArray, l: LangCode) => string]> = [
+  [/^月額([\d,]+)円$/, (m, l) => l === "en" ? `JPY ${m[1]}/month` : l === "zh-tw" ? `每月${m[1]}日圓` : `每月${m[1]}日元`],
+  [/^地上(\d+)階建（RC造(陸屋根)?）$/, (m, l) => l === "en" ? `${m[1]} stories above ground (reinforced concrete${m[2] ? ", flat roof" : ""})` : l === "zh-tw" ? `地上${m[1]}層（鋼筋混凝土造${m[2] ? "、平屋頂" : ""}）` : `地上${m[1]}层（钢筋混凝土${m[2] ? "、平屋顶" : ""}）`],
+  [/^(\d+)・(\d+)階$/, (m, l) => l === "en" ? `Floors ${m[1]} and ${m[2]}` : l === "zh-tw" ? `${m[1]}、${m[2]}樓` : `${m[1]}、${m[2]}楼`],
+  [/^修繕積立金 月額([\d,]+)円／ルーフバルコニー使用料 月額([\d,]+)円$/, (m, l) => l === "en" ? `Repair reserve: JPY ${m[1]}/month; roof balcony usage fee: JPY ${m[2]}/month` : l === "zh-tw" ? `修繕積立金：每月${m[1]}日圓；屋頂露台使用費：每月${m[2]}日圓` : `修缮储备金：每月${m[1]}日元；屋顶露台使用费：每月${m[2]}日元`],
   [/^地上(\d+)階建$/, (m, l) => (l === "en" ? `${m[1]} stories above ground` : l === "zh-tw" ? `地上${m[1]}層` : `地上${m[1]}层`)],
   [/^(\d+)階$/, (m, l) => (l === "en" ? `Floor ${m[1]}` : l === "zh-tw" ? `${m[1]}樓` : `${m[1]}楼`)],
   [/^(\d+)年$/, (m, l) => (l === "en" ? `${m[1]} year${m[1] === "1" ? "" : "s"}` : `${m[1]}年`)],
