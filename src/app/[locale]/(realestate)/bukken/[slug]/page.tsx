@@ -213,7 +213,7 @@ export default async function BukkenDetailPage({ params }: Props) {
 
         <PropertyLegalBlock property={p} locale={locale} />
         <PropertyQa property={p} locale={locale} />
-        <PropertyViewingCta propertyTitle={p.title} propertyUrl={`/bukken/${p.slug}`} />
+        <PropertyViewingCta propertyTitle={p.title} propertyUrl={addLocalePrefix(`/bukken/${p.slug}`, locale)} locale={locale} />
       </article>
 
       <div className="mx-auto max-w-3xl px-4">
