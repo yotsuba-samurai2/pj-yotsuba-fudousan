@@ -20884,5 +20884,371 @@ export const LABOR_COLUMNS_SEED: LaborSeedColumn[] = [
         ]
       }
     }
+  },
+  {
+    "business": "labor",
+    "slug": "kensetsugyo-shakaihoken-hitorioyakata-rosai-tokubetsu",
+    "title": "建設業の社会保険加入義務と一人親方の労災特別加入はどう整理する？",
+    "date": "2026-09-22",
+    "category": "労働保険",
+    "excerpt": "建設業許可には、健康保険・厚生年金保険・雇用保険への「適切な社会保険への加入」が要件として求められます（令和2年10月1日施行の改正建設業法）。一方、労働者を使用しないで働くことを常態とする一人親方は労災保険の労働者ではないため、一人親方等の特別加入（第2種・労働者災害補償保険法第35条）を団体を通じて行います。労働者を雇う中小事業主の特別加入（第1種・第34条）とは加入の窓口も要件も別です。加入手続は社会保険労務士、建設業許可の申請は行政書士（独立した事業体・別々にご契約）に分けて整理します。",
+    "content": "**結論（先に要点）**：建設業許可には、健康保険・厚生年金保険・雇用保険への「適切な社会保険への加入」が要件として求められます（令和2年10月1日施行の改正建設業法）。一方、労働者を使用しないで働くことを常態とする一人親方は、そもそも労災保険の労働者ではないため、労災の補償を受けるには一人親方等の特別加入（第2種特別加入・労働者災害補償保険法第35条）を、一人親方の団体を通じて行います。労働者を雇う中小事業主の特別加入（第1種・第34条）とは、加入の窓口も要件も別です。この記事では、建設業の社会保険加入義務と一人親方の労災特別加入をどう整理するかをまとめます。加入手続・就業規則・特別加入団体を通じた手続は社会保険労務士、建設業許可の申請・要件確認は行政書士（四葉行政書士事務所＝当事務所とは独立した事業体・別々にご契約）に分かれます。\n\n「建設業許可を取る（更新する）ので社会保険を整えたい」「現場に出る一人親方だが、労災はどうすればよいか」——建設業の事業者からいただく相談です。このページは、建設業許可の取得・更新を控え、社会保険加入と一人親方の労災を整えたい事業者に向けて、加入義務と特別加入の考え方を整理します。個別の加入可否や保険料額の確定判断は、面談のうえ資格者が行います。\n\n## 建設業許可に、社会保険への加入は必須ですか？\n\n必須です。令和2年10月1日に施行された改正建設業法（令和元年法律第30号による改正）で、「適切な社会保険への加入」が建設業許可の要件（許可の基準）に加わりました。新規の許可申請でも更新でも、加入すべき社会保険に加入していることが確認されます。加入義務があるのに未加入だと、許可の要件を満たしません。\n\n「適切な社会保険」は、事業所の形態と規模で決まります。\n\n| 事業所の区分 | 健康保険 | 厚生年金保険 | 雇用保険 |\n|---|---|---|---|\n| 法人（役員1人でも） | 必要 | 必要 | 労働者を雇えば必要 |\n| 個人事業・常時5人以上 | 必要 | 必要 | 労働者を雇えば必要 |\n| 個人事業・常時5人未満 | 適用除外（国民健康保険等でよい） | 適用除外（国民年金でよい） | 労働者を雇えば必要 |\n\n健康保険・厚生年金保険は、法人なら役員1人でも、個人事業なら常時5人以上で強制適用です。個人事業で常時5人未満なら、この2つは適用除外となり、国民健康保険・国民年金のままで要件を満たします。雇用保険は、労働者を1人でも雇えば加入が必要です。加入義務の判断は事業所ごとに分かれるため、許可の準備の前に、まず自社がどの区分かを確かめることが出発点です。加入すべきかどうかは労働者性の判断とも関わり、[外注と雇用の境目](/labor/column/gaichu-koyo-sakaime-roudoushasei)にまとめています。\n\n## 一人親方は、労災にどう特別加入しますか？\n\n一人親方は、労働者を使用しないで働くことを常態とする自営業者です（労働者災害補償保険法第33条第3号）。労災保険はもともと「労働者」の業務災害・通勤災害を補償する制度なので、労働者でない一人親方には、そのままでは労災の給付がありません。そこで用意されているのが、一人親方等の特別加入（第2種特別加入・同法第35条）です。\n\n- 加入は個人で直接はできず、**一人親方等の団体（特別加入団体）を通じて**申し込みます。団体が事業主に相当する立場で手続を行います\n- 補償の基礎となる**給付基礎日額**を、決められた範囲から選びます。日額が高いほど保険料も給付も高くなります\n- 建設業の一人親方は、業務の実態に応じて健康診断が求められる作業があります\n\n一人親方は、労働者を雇う場合とは労働保険の枠組みが変わります。人を雇い入れて労働者を使う状態になれば、それは一人親方ではなくなり、労働保険の適用事業として別の手続が必要になります。海外の現場に関わる場合の特別加入の考え方は、[海外出張と海外派遣は労災でまったく違う](/labor/column/kaigai-shucho-haken-rosai-chigai)も参考になります。\n\n## 中小事業主の特別加入と、一人親方の特別加入は何が違いますか？\n\nどちらも「事業主側の特別加入」ですが、根拠条文も加入の窓口も違います。取り違えると手続が進みません。\n\n| | 中小事業主等の特別加入（第1種） | 一人親方等の特別加入（第2種） |\n|---|---|---|\n| 根拠 | 労働者災害補償保険法第34条（対象者は第33条第1号・第2号） | 労働者災害補償保険法第35条（対象者は第33条第3号〜第5号） |\n| 誰が入れるか | 労働者を雇う中小事業主とその家族従事者等 | 労働者を使用しないで働くことを常態とする一人親方等 |\n| 加入の窓口 | **労働保険事務組合**に労働保険事務の処理を委託して加入 | **一人親方等の団体（特別加入団体）**を通じて加入 |\n| 前提 | 労働者について労災保険の保険関係が成立していること | 労働者を雇っていないこと |\n\n要点は、**労働者を雇っているかどうか**です。労働者を雇う社長は第1種（中小事業主等）で、労働者について労災保険の関係が成立していることが前提になり、労働保険事務組合を通じて入ります。労働者を雇わずに働く一人親方は第2種で、一人親方の団体を通じて入ります。社長1人だけの会社が中小事業主として特別加入できない理由は、[社長には労災が出ない。そして1人だと特別加入もできない](/labor/column/shacho-rosai-tokubetsu-kanyu-hitori)にまとめています。同じ「建設業の事業主」でも、雇用の実態でどちらの制度に乗るかが分かれます。\n\n## 加入手続きと建設業許可の申請は、どの専門家に分けますか？\n\n建設業の社会保険と許可は、担当する資格が分かれます。最初に切り分けておくと、手続の抜けや二度手間を防げます。\n\n| すること | 誰の領分か |\n|---|---|\n| 健康保険・厚生年金保険・雇用保険の加入手続、資格取得・喪失の届出、就業規則の整備、一人親方の特別加入団体を通じた手続の相談 | **社会保険労務士**（当事務所） |\n| 建設業許可の申請・更新、許可要件の確認、経営事項審査 | **行政書士**（四葉行政書士事務所＝当事務所とは独立した事業体。別々にご契約いただきます） |\n| 会社の設立・役員変更などの登記 | **司法書士** |\n| 労働保険料・社会保険料に関わる税務、決算 | **税理士** |\n\n社会保険の加入手続と労働保険の届出、就業規則の整備は社会保険労務士の業務です。建設業許可の申請と要件確認は行政書士が担います。四葉には社会保険労務士事務所と行政書士事務所がありますが、それぞれ独立した事業体で、ご契約・ご請求・お振込先も別々です。紹介料のやり取りはありません。就業規則の作成・届出の義務は常時10人以上から生じます（[就業規則は何人から義務か](/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo)）。\n\n## 四葉社会保険労務士事務所は、何ができますか？\n\n文京区小日向の四葉社会保険労務士事務所は、**建設業の健康保険・厚生年金保険・雇用保険の加入手続、労働保険の年度更新、資格取得・喪失の届出、就業規則の整備、一人親方の特別加入団体を通じた手続のご相談**をお受けします。建設業許可の申請そのものは行政書士（四葉行政書士事務所＝独立した事業体・別々にご契約）が担い、社会保険の側を当事務所が受け持ちます。**ご相談は無料です。** 費用は[報酬額表](/labor/ryokin)を、よくいただくご質問は[よくあるご質問](/labor/faq)をご覧ください。\n\n## よくある質問\n\n**Q. 一人親方ですが、労災に入らないまま現場に出て問題ありませんか？**\nA. 法律上、一人親方の特別加入は義務ではありません。ただし、元請の現場では特別加入の証明を求められることが多く、加入していないと入場できない場合があります。特別加入をしていないと、業務中のけがに労災保険の給付はありません。加入の要否と給付基礎日額の選び方は、実態に応じて資格者が整理します。\n\n**Q. 従業員を雇っていない一人社長の会社でも、一人親方として特別加入できますか？**\nA. できません。法人の代表者は「労働者を使用しないで働くことを常態とする一人親方」にはあたらないのが原則です。労働者を雇う中小事業主なら第1種（労働保険事務組合経由）、労働者を雇わない自営の一人親方なら第2種（一人親方団体経由）という区分で、法人の一人社長はどちらの枠にも当てはまりにくい立場です。個別の可否は状況によって判断が分かれます。\n\n**Q. 個人事業で従業員が4人なら、健康保険と厚生年金には入らなくてよいのですか？**\nA. 個人事業で常時5人未満なら、健康保険・厚生年金保険は適用除外で、国民健康保険・国民年金のままでも建設業許可の要件を満たします。ただし雇用保険は、労働者を1人でも雇えば加入が必要です。5人以上になれば健康保険・厚生年金も強制適用に変わるため、人数の変化に注意してください。\n\n**Q. 建設業許可のために社会保険に入りました。就業規則も要りますか？**\nA. 就業規則の作成・届出が義務になるのは、常時10人以上の労働者を使用する事業場です。10人未満なら作成・届出の義務はありませんが、労働条件の明示は1人目から必要です。許可の要件は社会保険への加入であって就業規則の有無ではありませんが、現場の労務管理のうえで整えておく意味はあります。\n\n## この記事の根拠\n\n- 建設業法（昭和24年法律第100号）第7条＝一般建設業の許可の基準。令和元年法律第30号による改正建設業法（令和2年10月1日施行）で、建設業法施行規則により「適切な社会保険への加入」が許可の要件に加わった\n- 労働者災害補償保険法（昭和22年法律第50号）第33条＝特別加入の対象者（第1号・第2号＝中小事業主等、第3号・第4号＝一人親方等、第5号＝特定作業従事者、第6号・第7号＝海外派遣者）／第34条＝中小事業主等の特別加入（第1種）／第35条＝一人親方等の特別加入（第2種）／第36条＝海外派遣者の特別加入（第3種）\n- 健康保険法（大正11年法律第70号）・厚生年金保険法（昭和29年法律第115号）＝適用事業所（法人は1人でも、個人事業は常時5人以上で強制適用。個人事業で常時5人未満は適用除外）\n- 「適切な社会保険への加入」の許可要件化（令和2年10月1日施行）と、法人／個人5人以上／個人5人未満の区分は、国土交通省「建設業における社会保険加入対策について」および東京都都市整備局の公表資料により確認（いずれも2026年9月22日参照）\n- 条文は e-Gov 法令検索により確認しています（2026年9月時点）\n\nこの記事は、誰に相談するかまでは決めていません。社会保険・労働保険の加入手続、就業規則の整備、一人親方の特別加入団体を通じた手続の相談は社会保険労務士の業務です。建設業許可の申請・要件確認は行政書士（四葉行政書士事務所＝独立した事業体・別々にご契約）、登記は司法書士、税務は税理士の業務です。四葉社会保険労務士事務所にご相談いただく場合の費用は[報酬額表](/labor/ryokin)に、よくいただくご質問は[よくあるご質問](/labor/faq)にまとめています。\n\n本記事は一般的な情報提供です。個別のご事情に応じた判断は、面談のうえ資格者が行います。執筆は[浦松丈二](/about/uramatsu)（社会保険労務士・行政書士・宅地建物取引士）です。",
+    "status": "published",
+    "author": {
+      "name": "浦松 丈二",
+      "title": "社会保険労務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+    },
+    "keywords": [
+      "建設業許可 社会保険 加入 要件",
+      "一人親方 労災 特別加入 第2種",
+      "中小事業主 一人親方 特別加入 違い",
+      "建設業 健康保険 厚生年金 雇用保険",
+      "労災保険法 第35条 一人親方",
+      "建設業 社会保険 誰に頼む"
+    ],
+    "tags": [
+      "建設業",
+      "労災保険",
+      "特別加入",
+      "一人親方",
+      "社会保険",
+      "建設業許可"
+    ],
+    "locales": [],
+    "faq": [
+      {
+        "question": "一人親方ですが、労災に入らないまま現場に出て問題ありませんか？",
+        "answer": "法律上、一人親方の特別加入は義務ではありません。ただし、元請の現場では特別加入の証明を求められることが多く、加入していないと入場できない場合があります。特別加入をしていないと、業務中のけがに労災保険の給付はありません。加入の要否と給付基礎日額の選び方は、実態に応じて資格者が整理します。"
+      },
+      {
+        "question": "従業員を雇っていない一人社長の会社でも、一人親方として特別加入できますか？",
+        "answer": "できません。法人の代表者は「労働者を使用しないで働くことを常態とする一人親方」にはあたらないのが原則です。労働者を雇う中小事業主なら第1種（労働保険事務組合経由）、労働者を雇わない自営の一人親方なら第2種（一人親方団体経由）という区分で、法人の一人社長はどちらの枠にも当てはまりにくい立場です。個別の可否は状況によって判断が分かれます。"
+      },
+      {
+        "question": "個人事業で従業員が4人なら、健康保険と厚生年金には入らなくてよいのですか？",
+        "answer": "個人事業で常時5人未満なら、健康保険・厚生年金保険は適用除外で、国民健康保険・国民年金のままでも建設業許可の要件を満たします。ただし雇用保険は、労働者を1人でも雇えば加入が必要です。5人以上になれば健康保険・厚生年金も強制適用に変わるため、人数の変化に注意してください。"
+      },
+      {
+        "question": "建設業許可のために社会保険に入りました。就業規則も要りますか？",
+        "answer": "就業規則の作成・届出が義務になるのは、常時10人以上の労働者を使用する事業場です。10人未満なら作成・届出の義務はありませんが、労働条件の明示は1人目から必要です。許可の要件は社会保険への加入であって就業規則の有無ではありませんが、現場の労務管理のうえで整えておく意味はあります。"
+      }
+    ],
+    "translations": {
+      "en": {
+        "title": "Social insurance for construction businesses and the special labor-insurance enrollment of a one-person master (hitori-oyakata)",
+        "excerpt": "A construction business license requires \"appropriate social insurance enrollment\" in health insurance, employees' pension and employment insurance (the amended Construction Business Act, in force from 1 October 2020). A one-person master (hitori-oyakata), who works without using workers as a rule, is not a \"worker\" under labor insurance, so to be covered they use the special enrollment for one-person masters (Type 2, Article 35 of the Industrial Accident Compensation Insurance Act) through an association. This differs, in both the enrollment channel and the requirements, from the special enrollment of a small and medium business owner who hires workers (Type 1, Article 34). Enrollment procedures are for a Shakai Hoken Roumushi; the construction license application is for a Gyoseishoshi (a separate business entity, contracted separately).",
+        "content": "**In short:** A construction business license requires \"appropriate social insurance enrollment\" in health insurance, employees' pension and employment insurance (the amended Construction Business Act, in force from 1 October 2020). Meanwhile, a one-person master (hitori-oyakata), who as a rule works without using workers, is not a \"worker\" under labor insurance, so to receive industrial-accident cover they use the special enrollment for one-person masters (Type 2, Article 35 of the Industrial Accident Compensation Insurance Act) through an association of one-person masters. The enrollment channel and the requirements differ from the special enrollment of a small and medium business owner who hires workers (Type 1, Article 34). This article sorts out the social-insurance duty of a construction business and the special labor-insurance enrollment of a one-person master. Enrollment procedures, work rules and consultation on the association-based procedure are for a Shakai Hoken Roumushi; the construction license application and requirement check are for a Gyoseishoshi (四葉行政書士事務所 — a separate business entity from this office, contracted separately).\n\n\"We are taking or renewing a construction license, so we want to put social insurance in order,\" and \"I am a one-person master who works on site — what should I do about industrial-accident cover?\" — these are consultations we receive from construction businesses. This page is for businesses that face a construction license and want to arrange social insurance and a one-person master's industrial-accident cover. Confirming an individual enrollment eligibility or a fixed premium amount is done by a qualified professional after a consultation.\n\n## Is social insurance enrollment mandatory for a construction license?\n\nYes. The amended Construction Business Act, in force from 1 October 2020 (amended by Act No. 30 of 2019), added \"appropriate social insurance enrollment\" as a requirement (a criterion) of the construction license. For both a new application and a renewal, whether you are enrolled in the social insurance you must join is checked. If you have a duty to enroll but are not enrolled, you do not meet the requirement.\n\n\"Appropriate social insurance\" is decided by the form and scale of the workplace.\n\n| Type of workplace | Health insurance | Employees' pension | Employment insurance |\n|---|---|---|---|\n| Corporation (even with one officer) | Required | Required | Required if you hire workers |\n| Sole proprietor, 5 or more regularly | Required | Required | Required if you hire workers |\n| Sole proprietor, fewer than 5 | Exempt (National Health Insurance etc. is fine) | Exempt (National Pension is fine) | Required if you hire workers |\n\nHealth insurance and employees' pension are compulsory for a corporation even with one officer, and for a sole proprietor with 5 or more workers on a regular basis. A sole proprietor with fewer than 5 is exempt from these two and meets the requirement while staying on National Health Insurance and National Pension. Employment insurance is required once you hire even one worker. Because the duty is judged per workplace, the starting point is to confirm which category your business is in before you prepare the license. Whether you must enroll also relates to the judgment of \"worker\" status — see [where the line between subcontracting and employment lies](/en/labor/column/gaichu-koyo-sakaime-roudoushasei).\n\n## How does a one-person master specially enroll in industrial-accident insurance?\n\nA one-person master is a self-employed person who works, as a rule, without using workers (Article 33, item 3 of the Industrial Accident Compensation Insurance Act). Industrial-accident insurance originally covers the work and commuting injuries of a \"worker,\" so a one-person master, who is not a worker, has no such cover as they are. This is why the special enrollment for one-person masters (Type 2, Article 35 of the same Act) exists.\n\n- You cannot enroll directly as an individual; you apply **through an association of one-person masters (a special-enrollment association)**, which carries out the procedure in a position equivalent to an employer\n- You choose the **benefit base daily amount** that is the basis of cover, from a set range; the higher the daily amount, the higher both the premium and the benefit\n- Some construction work by a one-person master requires a health check depending on the actual nature of the work\n\nA one-person master's labor-insurance framework changes if they hire workers. Once they take on workers, they are no longer a one-person master, and a separate procedure for a labor-insurance-applicable business is needed. For the idea of special enrollment when involved with overseas sites, see [overseas business trips and overseas assignment are completely different for industrial-accident insurance](/en/labor/column/kaigai-shucho-haken-rosai-chigai).\n\n## How does a small business owner's special enrollment differ from a one-person master's?\n\nBoth are \"special enrollment on the business owner's side,\" but the basis article and the enrollment channel differ. Confusing them stalls the procedure.\n\n| | Type 1: small business owner etc. | Type 2: one-person master etc. |\n|---|---|---|\n| Basis | Article 34 (targets are items 1 and 2 of Article 33) | Article 35 (targets are items 3 to 5 of Article 33) |\n| Who can enroll | A small and medium business owner who hires workers, and family workers etc. | A one-person master etc. who as a rule works without using workers |\n| Enrollment channel | Enroll by entrusting labor-insurance affairs to a **labor-insurance affairs association** | Enroll **through an association of one-person masters (special-enrollment association)** |\n| Premise | An industrial-accident insurance relationship is established for the workers | Not hiring any workers |\n\nThe key is **whether you hire workers**. An owner who hires workers is Type 1 (small business owner etc.), which premises that the industrial-accident relationship is established for the workers, and enrolls through a labor-insurance affairs association. A one-person master who works without hiring workers is Type 2 and enrolls through an association of one-person masters. Why a company with only its president cannot specially enroll as a small business owner is set out in [the president gets no industrial-accident benefit — and with one person, no special enrollment either](/en/labor/column/shacho-rosai-tokubetsu-kanyu-hitori). Even for the same \"construction business owner,\" which system you ride on depends on the reality of employment.\n\n## Who should you split the enrollment procedures and the construction license application between?\n\nThe social insurance and the license of a construction business divide by qualification. Splitting them at the outset prevents gaps and duplicated work.\n\n| What is done | Whose domain |\n|---|---|\n| Enrollment procedures for health insurance, employees' pension and employment insurance; qualification acquisition/loss filings; putting work rules in order; consultation on the one-person master's association-based procedure | **Shakai Hoken Roumushi** (this office) |\n| Application/renewal of the construction license, requirement check, business-condition review | **Gyoseishoshi** (四葉行政書士事務所 — a separate business entity from this office; contracted separately) |\n| Registration such as company incorporation or officer change | **Judicial scrivener** |\n| Tax and closing accounts relating to labor- and social-insurance premiums | **Tax accountant** |\n\nThe social-insurance enrollment procedures, the labor-insurance filings and putting work rules in order are the work of a Shakai Hoken Roumushi. The construction license application and requirement check are handled by a Gyoseishoshi. 四葉 has both a Shakai Hoken Roumushi office and a Gyoseishoshi office, but each is a separate business entity, and the contracts, invoices and payment destinations are separate. There are no referral fees exchanged. The duty to create and file work rules arises from ten or more workers on a regular basis ([from how many employees are work rules mandatory](/en/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo)).\n\n## What can 四葉社会保険労務士事務所 do?\n\n四葉社会保険労務士事務所, in Kohinata, Bunkyo City, handles **the enrollment procedures for a construction business's health insurance, employees' pension and employment insurance, the annual labor-insurance update, qualification acquisition/loss filings, putting work rules in order, and consultation on a one-person master's association-based procedure**. The construction license application itself is handled by a Gyoseishoshi (四葉行政書士事務所 — a separate business entity, contracted separately), and this office takes the social-insurance side. **Consultation is free.** For fees, see [the fee schedule](/en/labor/ryokin); for frequently asked questions, see [the FAQ](/en/labor/faq).\n\n## Frequently asked questions\n\n**Q. I am a one-person master — is it a problem to work on site without industrial-accident cover?**\nA. By law, a one-person master's special enrollment is not compulsory. However, prime contractors' sites often require proof of special enrollment, and you may be unable to enter without it. Without special enrollment, an injury during work has no industrial-accident benefit. Whether to enroll and how to choose the benefit base daily amount is arranged by a qualified professional according to the reality.\n\n**Q. Can a one-person-president company with no employees specially enroll as a one-person master?**\nA. No. As a rule, a corporation's representative is not \"a one-person master who works without using workers.\" An owner who hires workers is Type 1 (via a labor-insurance affairs association); a self-employed one-person master who hires no workers is Type 2 (via a one-person masters' association); a one-person president of a corporation fits neither frame easily. Individual eligibility is judged differently by the circumstances.\n\n**Q. If I am a sole proprietor with 4 employees, do I not need health insurance and employees' pension?**\nA. A sole proprietor with fewer than 5 on a regular basis is exempt from health insurance and employees' pension and meets the construction license requirement on National Health Insurance and National Pension. Employment insurance, however, is required once you hire even one worker. Once you reach 5 or more, health insurance and employees' pension become compulsory, so watch for changes in headcount.\n\n**Q. I enrolled in social insurance for the construction license. Do I also need work rules?**\nA. The duty to create and file work rules arises at a workplace that regularly uses ten or more workers. Under ten, there is no creation/filing duty, but clarifying working conditions is required from the first worker. The license requirement is social-insurance enrollment, not the presence of work rules, but there is meaning in preparing them for on-site labor management.\n\n## Sources\n\n- Construction Business Act (Act No. 100 of 1949), Article 7 = criteria for a general construction license. The amendment by Act No. 30 of 2019 (in force from 1 October 2020) added \"appropriate social insurance enrollment\" as a license requirement via the Construction Business Act Enforcement Regulation\n- Industrial Accident Compensation Insurance Act (Act No. 50 of 1947), Article 33 = the targets of special enrollment (items 1 and 2 = small business owners etc., items 3 and 4 = one-person masters etc., item 5 = specified-work engagers, items 6 and 7 = overseas assignees) / Article 34 = special enrollment of small business owners etc. (Type 1) / Article 35 = special enrollment of one-person masters etc. (Type 2) / Article 36 = special enrollment of overseas assignees (Type 3)\n- Health Insurance Act (Act No. 70 of 1922) and Employees' Pension Insurance Act (Act No. 115 of 1954) = applicable workplaces (compulsory for a corporation even with one person, and for a sole proprietor with 5 or more; a sole proprietor with fewer than 5 is exempt)\n- The making of \"appropriate social insurance enrollment\" a license requirement (in force from 1 October 2020) and the corporation / sole-proprietor-5-or-more / sole-proprietor-fewer-than-5 distinction are confirmed from the Ministry of Land, Infrastructure, Transport and Tourism's \"On social-insurance enrollment measures in construction\" and materials published by the Tokyo Metropolitan Bureau of Urban Development (both referenced 22 September 2026)\n- The provisions are confirmed from e-Gov Law Search (as of September 2026)\n\nThis article does not decide whom to consult. The social- and labor-insurance enrollment procedures, putting work rules in order, and consultation on a one-person master's association-based procedure are the work of a Shakai Hoken Roumushi. The construction license application and requirement check are the work of a Gyoseishoshi (四葉行政書士事務所 — a separate business entity, contracted separately); registration is a judicial scrivener's; tax is a tax accountant's. For fees when consulting 四葉社会保険労務士事務所, see [the fee schedule](/en/labor/ryokin); for frequently asked questions, see [the FAQ](/en/labor/faq).\n\nThis article is general information. A judgment on individual circumstances is made by a qualified professional after a consultation. Written by [Joji Uramatsu](/en/about/uramatsu) (Shakai Hoken Roumushi, Gyoseishoshi, Registered Real Estate Transaction Specialist).",
+        "category": "Labor insurance",
+        "keywords": [
+          "construction license social insurance requirement",
+          "hitori-oyakata special enrollment Type 2",
+          "small business owner vs one-person master enrollment",
+          "construction health pension employment insurance",
+          "Industrial Accident Insurance Act Article 35",
+          "construction social insurance who to ask"
+        ],
+        "tags": [
+          "construction",
+          "industrial accident insurance",
+          "special enrollment",
+          "one-person master",
+          "social insurance",
+          "construction license"
+        ],
+        "author": {
+          "name": "Joji Uramatsu",
+          "title": "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所"
+        },
+        "faq": [
+          {
+            "question": "I am a one-person master — is it a problem to work on site without industrial-accident cover?",
+            "answer": "By law, a one-person master's special enrollment is not compulsory. However, prime contractors' sites often require proof of special enrollment, and you may be unable to enter without it. Without special enrollment, an injury during work has no industrial-accident benefit. Whether to enroll and how to choose the benefit base daily amount is arranged by a qualified professional according to the reality."
+          },
+          {
+            "question": "Can a one-person-president company with no employees specially enroll as a one-person master?",
+            "answer": "No. As a rule, a corporation's representative is not \"a one-person master who works without using workers.\" An owner who hires workers is Type 1 (via a labor-insurance affairs association); a self-employed one-person master who hires no workers is Type 2 (via a one-person masters' association); a one-person president of a corporation fits neither frame easily. Individual eligibility is judged differently by the circumstances."
+          },
+          {
+            "question": "If I am a sole proprietor with 4 employees, do I not need health insurance and employees' pension?",
+            "answer": "A sole proprietor with fewer than 5 on a regular basis is exempt from health insurance and employees' pension and meets the construction license requirement on National Health Insurance and National Pension. Employment insurance, however, is required once you hire even one worker. Once you reach 5 or more, health insurance and employees' pension become compulsory, so watch for changes in headcount."
+          },
+          {
+            "question": "I enrolled in social insurance for the construction license. Do I also need work rules?",
+            "answer": "The duty to create and file work rules arises at a workplace that regularly uses ten or more workers. Under ten, there is no creation/filing duty, but clarifying working conditions is required from the first worker. The license requirement is social-insurance enrollment, not the presence of work rules, but there is meaning in preparing them for on-site labor management."
+          }
+        ]
+      },
+      "zh-tw": {
+        "title": "建設業的社會保險加入義務與一人親方的勞災特別加入該如何整理？",
+        "excerpt": "建設業許可要求加入健康保險、厚生年金保險、僱用保險這「適當的社會保險」（令和2年10月1日施行的修正建設業法）。另一方面，以不使用勞工工作為常態的一人親方，並非勞災保險上的「勞工」，因此要獲得補償須透過團體辦理一人親方等的特別加入（第2種、勞動者災害補償保險法第35條）。這與僱用勞工的中小事業主特別加入（第1種、第34條）在加入窗口與要件上都不同。加入手續由社會保險勞務士辦理，建設業許可的申請由行政書士（獨立的事業體、另行簽約）辦理，分開整理。",
+        "content": "**先講結論**：建設業許可要求加入健康保險、厚生年金保險、僱用保險這「適當的社會保險」（令和2年10月1日施行的修正建設業法）。另一方面，以不使用勞工工作為常態的一人親方，並非勞災保險上的「勞工」，因此要獲得勞災補償，須透過一人親方的團體辦理一人親方等的特別加入（第2種、勞動者災害補償保險法第35條）。這與僱用勞工的中小事業主特別加入（第1種、第34條）在加入窗口與要件上都不同。本文整理建設業的社會保險加入義務與一人親方的勞災特別加入。加入手續、就業規則、透過團體辦理的手續諮詢由社會保險勞務士辦理；建設業許可的申請與要件確認由行政書士（四葉行政書士事務所＝與本所各自獨立的事業體、另行簽約）辦理。\n\n「要取得（更新）建設業許可，想把社會保險整理好」「我是出現場的一人親方，勞災該怎麼辦」——這是建設業者常有的諮詢。本頁面是為了即將面對建設業許可、想整理社會保險與一人親方勞災的事業者。個別的加入可否或保險費金額的確定判斷，由具資格者於面談後進行。\n\n## 建設業許可一定要加入社會保險嗎？\n\n一定要。令和2年10月1日施行的修正建設業法（依令和元年法律第30號的修正），將「適當的社會保險加入」加入為建設業許可的要件（許可基準）。無論新申請或更新，都會確認是否已加入應加入的社會保險。有加入義務卻未加入，就不符合要件。\n\n「適當的社會保險」依事業所的形態與規模而定。\n\n| 事業所區分 | 健康保險 | 厚生年金保險 | 僱用保險 |\n|---|---|---|---|\n| 法人（即使僅1名役員） | 必要 | 必要 | 僱用勞工即必要 |\n| 個人事業・經常5人以上 | 必要 | 必要 | 僱用勞工即必要 |\n| 個人事業・未滿5人 | 適用除外（國民健康保險等即可） | 適用除外（國民年金即可） | 僱用勞工即必要 |\n\n健康保險與厚生年金保險，法人即使僅1名役員、個人事業經常5人以上即強制適用。個人事業未滿5人時，這兩項為適用除外，維持國民健康保險與國民年金即符合要件。僱用保險只要僱用1名勞工即需加入。由於義務按事業所判斷，準備許可前先確認自家屬於哪一區分是出發點。是否須加入，也與勞工性的判斷有關，整理於[外包與僱用的分界](/zh-tw/labor/column/gaichu-koyo-sakaime-roudoushasei)。\n\n## 一人親方如何辦理勞災的特別加入？\n\n一人親方是以不使用勞工工作為常態的自營業者（勞動者災害補償保險法第33條第3號）。勞災保險原本補償「勞工」的業務災害與通勤災害，非勞工的一人親方本來就沒有勞災給付。因此設有一人親方等的特別加入（第2種、同法第35條）。\n\n- 無法個人直接加入，須**透過一人親方等的團體（特別加入團體）**申請，由團體以相當於事業主的立場辦理手續\n- 從既定範圍中選擇補償基礎的**給付基礎日額**，日額越高保險費與給付也越高\n- 建設業的一人親方，依業務實態，有些作業要求健康檢查\n\n一人親方若僱用勞工，勞動保險的框架就會改變。一旦僱用勞工，就不再是一人親方，而需要作為勞動保險適用事業另行辦理手續。涉及海外現場時的特別加入思路，可參考[海外出差與海外派遣在勞災上完全不同](/zh-tw/labor/column/kaigai-shucho-haken-rosai-chigai)。\n\n## 中小事業主的特別加入與一人親方的特別加入有何不同？\n\n兩者都是「事業主一方的特別加入」，但依據條文與加入窗口不同。搞錯就無法推進手續。\n\n| | 第1種：中小事業主等 | 第2種：一人親方等 |\n|---|---|---|\n| 依據 | 勞動者災害補償保險法第34條（對象為第33條第1號・第2號） | 勞動者災害補償保險法第35條（對象為第33條第3號〜第5號） |\n| 誰能加入 | 僱用勞工的中小事業主及其家族從事者等 | 以不使用勞工工作為常態的一人親方等 |\n| 加入窗口 | 委託**勞動保險事務組合**處理勞動保險事務而加入 | 透過**一人親方等的團體（特別加入團體）**加入 |\n| 前提 | 就勞工已成立勞災保險的保險關係 | 未僱用勞工 |\n\n要點是**是否僱用勞工**。僱用勞工的社長為第1種（中小事業主等），前提是就勞工已成立勞災保險關係，透過勞動保險事務組合加入。不僱用勞工而工作的一人親方為第2種，透過一人親方的團體加入。僅有社長1人的公司無法以中小事業主特別加入的理由，整理於[社長領不到勞災，而且只有1人時也無法特別加入](/zh-tw/labor/column/shacho-rosai-tokubetsu-kanyu-hitori)。即使同為「建設業的事業主」，也依僱用實態而分屬不同制度。\n\n## 加入手續與建設業許可的申請該如何分配專家？\n\n建設業的社會保險與許可，依資格分工。一開始就分清楚，可避免遺漏與重工。\n\n| 要做的事 | 屬於誰的領域 |\n|---|---|\n| 健康保險・厚生年金保險・僱用保險的加入手續、資格取得・喪失的申報、就業規則的整備、一人親方透過團體辦理手續的諮詢 | **社會保險勞務士**（本所） |\n| 建設業許可的申請・更新、許可要件確認、經營事項審查 | **行政書士**（四葉行政書士事務所＝與本所各自獨立的事業體。另行簽約） |\n| 公司設立、役員變更等登記 | **司法書士** |\n| 與勞動保險費・社會保險費相關的稅務、決算 | **稅理士** |\n\n社會保險的加入手續、勞動保險的申報、就業規則的整備是社會保險勞務士的業務。建設業許可的申請與要件確認由行政書士辦理。四葉有社會保險勞務士事務所與行政書士事務所，但各自獨立，契約、請款、匯款帳戶也分別承接，且無介紹費往來。就業規則的製作・申報義務自經常10人以上產生（[就業規則從幾人開始有義務](/zh-tw/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo)）。\n\n## 四葉社会保険労務士事務所能做什麼？\n\n位於文京區小日向的四葉社会保険労務士事務所，承接**建設業的健康保險・厚生年金保險・僱用保險加入手續、勞動保險的年度更新、資格取得・喪失申報、就業規則整備，以及一人親方透過團體辦理手續的諮詢**。建設業許可的申請本身由行政書士（四葉行政書士事務所＝各自獨立的事業體、另行簽約）辦理，本所負責社會保險一側。**諮詢免費。** 費用請見[報酬額表](/zh-tw/labor/ryokin)，常見問題請見[常見問題](/zh-tw/labor/faq)。\n\n## 常見問題\n\n**Q. 我是一人親方，未加入勞災就出現場有問題嗎？**\nA. 法律上，一人親方的特別加入並非義務。但元請的現場常要求特別加入的證明，未加入可能無法進場。未特別加入時，作業中受傷沒有勞災保險給付。是否加入與給付基礎日額如何選擇，由具資格者依實態整理。\n\n**Q. 沒有僱用員工的一人社長公司，能以一人親方特別加入嗎？**\nA. 不能。法人的代表者原則上不屬於「以不使用勞工工作為常態的一人親方」。僱用勞工的中小事業主為第1種（經勞動保險事務組合），不僱用勞工的自營一人親方為第2種（經一人親方團體），法人的一人社長難以歸入任一框架。個別可否依情形而判斷分歧。\n\n**Q. 個人事業僱用4人的話，健康保險與厚生年金就不用加入嗎？**\nA. 個人事業經常未滿5人時，健康保險・厚生年金保險為適用除外，維持國民健康保險・國民年金也符合建設業許可要件。但僱用保險只要僱用1名勞工即需加入。一旦達5人以上，健康保險・厚生年金也轉為強制適用，請留意人數變化。\n\n**Q. 為了建設業許可加入了社會保險。也需要就業規則嗎？**\nA. 就業規則的製作・申報義務，發生於經常僱用10人以上勞工的事業場所。未滿10人雖無製作・申報義務，但勞動條件的明示自第1人起即需要。許可要件是社會保險的加入，而非就業規則的有無，但就現場的勞務管理而言，事先整備仍有意義。\n\n## 本文的依據\n\n- 建設業法（昭和24年法律第100號）第7條＝一般建設業許可的基準。依令和元年法律第30號的修正建設業法（令和2年10月1日施行），透過建設業法施行規則將「適當的社會保險加入」加入為許可要件\n- 勞動者災害補償保險法（昭和22年法律第50號）第33條＝特別加入的對象（第1號・第2號＝中小事業主等、第3號・第4號＝一人親方等、第5號＝特定作業從事者、第6號・第7號＝海外派遣者）／第34條＝中小事業主等的特別加入（第1種）／第35條＝一人親方等的特別加入（第2種）／第36條＝海外派遣者的特別加入（第3種）\n- 健康保險法（大正11年法律第70號）・厚生年金保險法（昭和29年法律第115號）＝適用事業所（法人即使1人、個人事業經常5人以上強制適用；個人事業未滿5人適用除外）\n- 「適當的社會保險加入」的許可要件化（令和2年10月1日施行）與法人／個人5人以上／個人未滿5人的區分，依國土交通省「建設業における社会保険加入対策について」及東京都都市整備局公表資料確認（皆為2026年9月22日參照）\n- 條文依 e-Gov 法令檢索確認（2026年9月時點）\n\n本文並未決定該找誰諮詢。社會・勞動保險的加入手續、就業規則的整備、一人親方透過團體辦理手續的諮詢是社會保險勞務士的業務。建設業許可的申請與要件確認是行政書士（四葉行政書士事務所＝各自獨立的事業體、另行簽約）、登記是司法書士、稅務是稅理士的業務。委託四葉社会保険労務士事務所時的費用整理於[報酬額表](/zh-tw/labor/ryokin)，常見問題整理於[常見問題](/zh-tw/labor/faq)。\n\n本文為一般性資訊提供。依個別情形的判斷，由具資格者於面談後進行。撰寫者為[浦松丈二](/zh-tw/about/uramatsu)（社會保險勞務士・行政書士・宅地建物取引士）。",
+        "category": "勞動保險",
+        "keywords": [
+          "建設業許可 社會保險 加入 要件",
+          "一人親方 勞災 特別加入 第2種",
+          "中小事業主 一人親方 特別加入 差異",
+          "建設業 健康保險 厚生年金 僱用保險",
+          "勞災保險法 第35條",
+          "建設業 社會保險 找誰"
+        ],
+        "tags": [
+          "建設業",
+          "勞災保險",
+          "特別加入",
+          "一人親方",
+          "社會保險",
+          "建設業許可"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "我是一人親方，未加入勞災就出現場有問題嗎？",
+            "answer": "法律上，一人親方的特別加入並非義務。但元請的現場常要求特別加入的證明，未加入可能無法進場。未特別加入時，作業中受傷沒有勞災保險給付。是否加入與給付基礎日額如何選擇，由具資格者依實態整理。"
+          },
+          {
+            "question": "沒有僱用員工的一人社長公司，能以一人親方特別加入嗎？",
+            "answer": "不能。法人的代表者原則上不屬於「以不使用勞工工作為常態的一人親方」。僱用勞工的中小事業主為第1種（經勞動保險事務組合），不僱用勞工的自營一人親方為第2種（經一人親方團體），法人的一人社長難以歸入任一框架。個別可否依情形而判斷分歧。"
+          },
+          {
+            "question": "個人事業僱用4人的話，健康保險與厚生年金就不用加入嗎？",
+            "answer": "個人事業經常未滿5人時，健康保險・厚生年金保險為適用除外，維持國民健康保險・國民年金也符合建設業許可要件。但僱用保險只要僱用1名勞工即需加入。一旦達5人以上，健康保險・厚生年金也轉為強制適用，請留意人數變化。"
+          },
+          {
+            "question": "為了建設業許可加入了社會保險。也需要就業規則嗎？",
+            "answer": "就業規則的製作・申報義務，發生於經常僱用10人以上勞工的事業場所。未滿10人雖無製作・申報義務，但勞動條件的明示自第1人起即需要。許可要件是社會保險的加入，而非就業規則的有無，但就現場的勞務管理而言，事先整備仍有意義。"
+          }
+        ]
+      },
+      "zh": {
+        "title": "建设业的社会保险加入义务与一人亲方的劳灾特别加入该如何整理？",
+        "excerpt": "建设业许可要求加入健康保险、厚生年金保险、雇用保险这「适当的社会保险」（令和2年10月1日施行的修正建设业法）。另一方面，以不使用劳工工作为常态的一人亲方，并非劳灾保险上的「劳工」，因此要获得补偿须透过团体办理一人亲方等的特别加入（第2种、劳动者灾害补偿保险法第35条）。这与雇用劳工的中小事业主特别加入（第1种、第34条）在加入窗口与要件上都不同。加入手续由社会保险劳务士办理，建设业许可的申请由行政书士（独立的事业体、另行签约）办理，分开整理。",
+        "content": "**先讲结论**：建设业许可要求加入健康保险、厚生年金保险、雇用保险这「适当的社会保险」（令和2年10月1日施行的修正建设业法）。另一方面，以不使用劳工工作为常态的一人亲方，并非劳灾保险上的「劳工」，因此要获得劳灾补偿，须透过一人亲方的团体办理一人亲方等的特别加入（第2种、劳动者灾害补偿保险法第35条）。这与雇用劳工的中小事业主特别加入（第1种、第34条）在加入窗口与要件上都不同。本文整理建设业的社会保险加入义务与一人亲方的劳灾特别加入。加入手续、就业规则、透过团体办理的手续咨询由社会保险劳务士办理；建设业许可的申请与要件确认由行政书士（四葉行政書士事務所＝与本所各自独立的事业体、另行签约）办理。\n\n「要取得（更新）建设业许可，想把社会保险整理好」「我是出现场的一人亲方，劳灾该怎么办」——这是建设业者常有的咨询。本页面是为了即将面对建设业许可、想整理社会保险与一人亲方劳灾的事业者。个别的加入可否或保险费金额的确定判断，由具资格者于面谈后进行。\n\n## 建设业许可一定要加入社会保险吗？\n\n一定要。令和2年10月1日施行的修正建设业法（依令和元年法律第30号的修正），将「适当的社会保险加入」加入为建设业许可的要件（许可基准）。无论新申请或更新，都会确认是否已加入应加入的社会保险。有加入义务却未加入，就不符合要件。\n\n「适当的社会保险」依事业所的形态与规模而定。\n\n| 事业所区分 | 健康保险 | 厚生年金保险 | 雇用保险 |\n|---|---|---|---|\n| 法人（即使仅1名役员） | 必要 | 必要 | 雇用劳工即必要 |\n| 个人事业・经常5人以上 | 必要 | 必要 | 雇用劳工即必要 |\n| 个人事业・未满5人 | 适用除外（国民健康保险等即可） | 适用除外（国民年金即可） | 雇用劳工即必要 |\n\n健康保险与厚生年金保险，法人即使仅1名役员、个人事业经常5人以上即强制适用。个人事业未满5人时，这两项为适用除外，维持国民健康保险与国民年金即符合要件。雇用保险只要雇用1名劳工即需加入。由于义务按事业所判断，准备许可前先确认自家属于哪一区分是出发点。是否须加入，也与劳工性的判断有关，整理于[外包与雇用的分界](/zh/labor/column/gaichu-koyo-sakaime-roudoushasei)。\n\n## 一人亲方如何办理劳灾的特别加入？\n\n一人亲方是以不使用劳工工作为常态的自营业者（劳动者灾害补偿保险法第33条第3号）。劳灾保险原本补偿「劳工」的业务灾害与通勤灾害，非劳工的一人亲方本来就没有劳灾给付。因此设有一人亲方等的特别加入（第2种、同法第35条）。\n\n- 无法个人直接加入，须**透过一人亲方等的团体（特别加入团体）**申请，由团体以相当于事业主的立场办理手续\n- 从既定范围中选择补偿基础的**给付基础日额**，日额越高保险费与给付也越高\n- 建设业的一人亲方，依业务实态，有些作业要求健康检查\n\n一人亲方若雇用劳工，劳动保险的框架就会改变。一旦雇用劳工，就不再是一人亲方，而需要作为劳动保险适用事业另行办理手续。涉及海外现场时的特别加入思路，可参考[海外出差与海外派遣在劳灾上完全不同](/zh/labor/column/kaigai-shucho-haken-rosai-chigai)。\n\n## 中小事业主的特别加入与一人亲方的特别加入有何不同？\n\n两者都是「事业主一方的特别加入」，但依据条文与加入窗口不同。搞错就无法推进手续。\n\n| | 第1种：中小事业主等 | 第2种：一人亲方等 |\n|---|---|---|\n| 依据 | 劳动者灾害补偿保险法第34条（对象为第33条第1号・第2号） | 劳动者灾害补偿保险法第35条（对象为第33条第3号〜第5号） |\n| 谁能加入 | 雇用劳工的中小事业主及其家族从事者等 | 以不使用劳工工作为常态的一人亲方等 |\n| 加入窗口 | 委托**劳动保险事务组合**处理劳动保险事务而加入 | 透过**一人亲方等的团体（特别加入团体）**加入 |\n| 前提 | 就劳工已成立劳灾保险的保险关系 | 未雇用劳工 |\n\n要点是**是否雇用劳工**。雇用劳工的社长为第1种（中小事业主等），前提是就劳工已成立劳灾保险关系，透过劳动保险事务组合加入。不雇用劳工而工作的一人亲方为第2种，透过一人亲方的团体加入。仅有社长1人的公司无法以中小事业主特别加入的理由，整理于[社长领不到劳灾，而且只有1人时也无法特别加入](/zh/labor/column/shacho-rosai-tokubetsu-kanyu-hitori)。即使同为「建设业的事业主」，也依雇用实态而分属不同制度。\n\n## 加入手续与建设业许可的申请该如何分配专家？\n\n建设业的社会保险与许可，依资格分工。一开始就分清楚，可避免遗漏与重工。\n\n| 要做的事 | 属于谁的领域 |\n|---|---|\n| 健康保险・厚生年金保险・雇用保险的加入手续、资格取得・丧失的申报、就业规则的整备、一人亲方透过团体办理手续的咨询 | **社会保险劳务士**（本所） |\n| 建设业许可的申请・更新、许可要件确认、经营事项审查 | **行政书士**（四葉行政書士事務所＝与本所各自独立的事业体。另行签约） |\n| 公司设立、役员变更等登记 | **司法书士** |\n| 与劳动保险费・社会保险费相关的税务、决算 | **税理士** |\n\n社会保险的加入手续、劳动保险的申报、就业规则的整备是社会保险劳务士的业务。建设业许可的申请与要件确认由行政书士办理。四葉有社会保险劳务士事务所与行政书士事务所，但各自独立，契约、请款、汇款账户也分别承接，且无介绍费往来。就业规则的制作・申报义务自经常10人以上产生（[就业规则从几人开始有义务](/zh/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo)）。\n\n## 四葉社会保険労務士事務所能做什么？\n\n位于文京区小日向的四葉社会保険労務士事務所，承接**建设业的健康保险・厚生年金保险・雇用保险加入手续、劳动保险的年度更新、资格取得・丧失申报、就业规则整备，以及一人亲方透过团体办理手续的咨询**。建设业许可的申请本身由行政书士（四葉行政書士事務所＝各自独立的事业体、另行签约）办理，本所负责社会保险一侧。**咨询免费。** 费用请见[报酬额表](/zh/labor/ryokin)，常见问题请见[常见问题](/zh/labor/faq)。\n\n## 常见问题\n\n**Q. 我是一人亲方，未加入劳灾就出现场有问题吗？**\nA. 法律上，一人亲方的特别加入并非义务。但元请的现场常要求特别加入的证明，未加入可能无法进场。未特别加入时，作业中受伤没有劳灾保险给付。是否加入与给付基础日额如何选择，由具资格者依实态整理。\n\n**Q. 没有雇用员工的一人社长公司，能以一人亲方特别加入吗？**\nA. 不能。法人的代表者原则上不属于「以不使用劳工工作为常态的一人亲方」。雇用劳工的中小事业主为第1种（经劳动保险事务组合），不雇用劳工的自营一人亲方为第2种（经一人亲方团体），法人的一人社长难以归入任一框架。个别可否依情形而判断分歧。\n\n**Q. 个人事业雇用4人的话，健康保险与厚生年金就不用加入吗？**\nA. 个人事业经常未满5人时，健康保险・厚生年金保险为适用除外，维持国民健康保险・国民年金也符合建设业许可要件。但雇用保险只要雇用1名劳工即需加入。一旦达5人以上，健康保险・厚生年金也转为强制适用，请留意人数变化。\n\n**Q. 为了建设业许可加入了社会保险。也需要就业规则吗？**\nA. 就业规则的制作・申报义务，发生于经常雇用10人以上劳工的事业场所。未满10人虽无制作・申报义务，但劳动条件的明示自第1人起即需要。许可要件是社会保险的加入，而非就业规则的有无，但就现场的劳务管理而言，事先整备仍有意义。\n\n## 本文的依据\n\n- 建设业法（昭和24年法律第100号）第7条＝一般建设业许可的基准。依令和元年法律第30号的修正建设业法（令和2年10月1日施行），透过建设业法施行规则将「适当的社会保险加入」加入为许可要件\n- 劳动者灾害补偿保险法（昭和22年法律第50号）第33条＝特别加入的对象（第1号・第2号＝中小事业主等、第3号・第4号＝一人亲方等、第5号＝特定作业从事者、第6号・第7号＝海外派遣者）／第34条＝中小事业主等的特别加入（第1种）／第35条＝一人亲方等的特别加入（第2种）／第36条＝海外派遣者的特别加入（第3种）\n- 健康保险法（大正11年法律第70号）・厚生年金保险法（昭和29年法律第115号）＝适用事业所（法人即使1人、个人事业经常5人以上强制适用；个人事业未满5人适用除外）\n- 「适当的社会保险加入」的许可要件化（令和2年10月1日施行）与法人／个人5人以上／个人未满5人的区分，依国土交通省「建設業における社会保険加入対策について」及东京都都市整备局公表资料确认（皆为2026年9月22日参照）\n- 条文依 e-Gov 法令检索确认（2026年9月时点）\n\n本文并未决定该找谁咨询。社会・劳动保险的加入手续、就业规则的整备、一人亲方透过团体办理手续的咨询是社会保险劳务士的业务。建设业许可的申请与要件确认是行政书士（四葉行政書士事務所＝各自独立的事业体、另行签约）、登记是司法书士、税务是税理士的业务。委托四葉社会保険労務士事務所时的费用整理于[报酬额表](/zh/labor/ryokin)，常见问题整理于[常见问题](/zh/labor/faq)。\n\n本文为一般性信息提供。依个别情形的判断，由具资格者于面谈后进行。撰写者为[浦松丈二](/zh/about/uramatsu)（社会保险劳务士・行政书士・宅地建物取引士）。",
+        "category": "劳动保险",
+        "keywords": [
+          "建设业许可 社会保险 加入 要件",
+          "一人亲方 劳灾 特别加入 第2种",
+          "中小事业主 一人亲方 特别加入 差异",
+          "建设业 健康保险 厚生年金 雇用保险",
+          "劳灾保险法 第35条",
+          "建设业 社会保险 找谁"
+        ],
+        "tags": [
+          "建设业",
+          "劳灾保险",
+          "特别加入",
+          "一人亲方",
+          "社会保险",
+          "建设业许可"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "我是一人亲方，未加入劳灾就出现场有问题吗？",
+            "answer": "法律上，一人亲方的特别加入并非义务。但元请的现场常要求特别加入的证明，未加入可能无法进场。未特别加入时，作业中受伤没有劳灾保险给付。是否加入与给付基础日额如何选择，由具资格者依实态整理。"
+          },
+          {
+            "question": "没有雇用员工的一人社长公司，能以一人亲方特别加入吗？",
+            "answer": "不能。法人的代表者原则上不属于「以不使用劳工工作为常态的一人亲方」。雇用劳工的中小事业主为第1种（经劳动保险事务组合），不雇用劳工的自营一人亲方为第2种（经一人亲方团体），法人的一人社长难以归入任一框架。个别可否依情形而判断分歧。"
+          },
+          {
+            "question": "个人事业雇用4人的话，健康保险与厚生年金就不用加入吗？",
+            "answer": "个人事业经常未满5人时，健康保险・厚生年金保险为适用除外，维持国民健康保险・国民年金也符合建设业许可要件。但雇用保险只要雇用1名劳工即需加入。一旦达5人以上，健康保险・厚生年金也转为强制适用，请留意人数变化。"
+          },
+          {
+            "question": "为了建设业许可加入了社会保险。也需要就业规则吗？",
+            "answer": "就业规则的制作・申报义务，发生于经常雇用10人以上劳工的事业场所。未满10人虽无制作・申报义务，但劳动条件的明示自第1人起即需要。许可要件是社会保险的加入，而非就业规则的有无，但就现场的劳务管理而言，事先整备仍有意义。"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "business": "labor",
+    "slug": "muki-tenkan-rule-5nen-jitsumu",
+    "title": "有期契約が通算5年を超えると無期転換はどう発生する？実務の整理",
+    "date": "2026-09-22",
+    "category": "労働法の基本",
+    "excerpt": "同一の使用者との有期労働契約が通算5年を超えると、労働者は無期労働契約への転換を申し込む権利を得ます（労働契約法第18条第1項）。労働者が申し込めば使用者は承諾したものとみなされ、次の契約から期間の定めのない契約になります。無期転換後の労働条件は別段の定めがない限り直前の有期契約と同じで、契約の間に6か月以上の空白があると通算がリセットされます。就業規則の整備・労使対応は社会保険労務士、無期転換逃れの雇止めなど個別紛争は弁護士（独立した事業体・別々にご契約）に分けて整理します。",
+    "content": "**結論（先に要点）**：同じ使用者との有期労働契約が通算5年を超えると、労働者は無期労働契約への転換を申し込む権利（無期転換申込権）を得ます（労働契約法第18条第1項）。労働者が申し込めば、使用者は承諾したものとみなされ、次の契約から期間の定めのない契約になります。無期転換後の労働条件は、別段の定めがない限り、直前の有期契約と同じ（無期になる点を除く）です。契約と契約の間に6か月以上の空白（クーリング）があると、通算がリセットされます。この記事では、通算5年・クーリング・申込権の数え方を実務で整理します。就業規則の整備・労使対応は社会保険労務士、無期転換逃れの雇止めなど個別の紛争は弁護士（当事務所とは独立した事業体・別々にご契約）に分かれます。\n\n「契約社員やパートを5年以上続けてもらっているが、何かしなければいけないのか」「無期転換とは正社員にすることなのか」——有期雇用者を抱える会社からいただく相談です。このページは、パート・契約社員・嘱託など有期雇用者を抱え、無期転換ルールへの対応を迫られる中小企業の労務担当に向けて、労働契約法第18条の仕組みを整理します。個別の雇止めの可否や紛争対応は、この記事の範囲外です。\n\n## 無期転換申込権は、いつ発生しますか？\n\n同一の使用者との間で結んだ2以上の有期労働契約の通算契約期間が5年を超えると、その労働者に無期転換申込権が発生します（労働契約法第18条第1項）。「超える」ので、ちょうど5年ではなく、5年を超える契約に入った時点が起点です。\n\n- 契約期間が1年の場合、5回目の更新後（＝6年目の契約）の期間中に申込権が生じます\n- 契約期間が3年の場合、1回目の更新後（＝通算6年目に入る2つ目の契約）の期間中に申込権が生じます\n- 権利が生じている契約期間中に労働者が申し込むと、**使用者は承諾したものとみなされ**、現在の契約が終わった翌日から無期労働契約になります\n\n無期転換ルール（第18条）は平成25年4月1日に施行されました。そのため、原則として最初の無期転換申込権が発生したのは平成30年（2018年）4月1日以降です。有期契約が更新のたびに労働条件を明示し直す点は、[在留期限と雇用契約期間](/labor/column/zairyu-kigen-koyo-keiyaku-kikan)でも触れています。\n\n## クーリング期間は、どう計算しますか？\n\n契約と契約の間に一定以上の空白期間（無契約期間）があると、その前の契約期間は通算からリセットされます。これをクーリングといいます（労働契約法第18条第2項）。\n\n| 空白直前の1つの有期契約の期間 | クーリングとなる空白期間 |\n|---|---|\n| 1年以上 | 6か月以上 |\n| 1年未満 | その契約期間の2分の1を基礎として厚生労働省令で定める期間以上（1か月未満は1か月に切り上げ） |\n\nたとえば直前の契約が1年以上なら、6か月以上の空白があれば、それより前の期間は通算に入りません。逆に、空白が6か月未満なら通算は続きます。**「更新の間を少し空ければ5年が積み上がらない」という運用は、空白が短ければ成立しません。** また、契約を切って一定期間後にまた同じ人を雇う運用が、実質的に無期転換を避けるためだと見られると、後述の雇止めの問題につながります。数え方は個別の契約の並びで変わるため、契約書の履歴で確かめる必要があります。\n\n## 無期転換後の労働条件は、変わりますか？\n\n原則として、期間の定めがなくなること以外は変わりません。労働契約法第18条第1項は、無期転換後の労働契約の内容である労働条件を、別段の定めがある部分を除き、直前の有期労働契約と同一の労働条件とすると定めています。\n\n- 「無期転換＝正社員化」ではありません。時給・仕事の内容・勤務地などは、別段の定めをしない限り、有期のときのまま引き継がれます\n- 正社員と同じ待遇にするかどうかは、会社が別段の定め（就業規則や個別合意）で設計する事柄です\n- 無期転換者向けの就業規則の区分を、あらかじめ整えておくと、転換時の労働条件が明確になります\n\n無期転換は自動では起きず、労働者の申込みで発生します。申込みに備えて、無期転換者の労働条件をどう定めるか、就業規則に区分を設けるかを、事前に決めておくのが実務の要点です。就業規則の作成・届出の義務は常時10人以上から生じます（[就業規則は何人から義務か](/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo)）。なお、正社員転換を助成金の対象にする場合の設計は、[助成金を狙うなら最初の契約形態で決まる](/labor/column/joseikin-yuki-muki-keiyaku-katachi)で扱っています。\n\n## 雇止めや無期転換逃れは、何が問題になりますか？\n\n無期転換申込権が発生する前に契約を更新しない（雇止めする）動きは、争いになりやすい部分です。有期契約が反復更新されて実質的に無期契約と変わらない状態や、更新を期待する合理的な理由がある場合には、雇止めが客観的に合理的な理由を欠き社会通念上相当と認められないとき、使用者の雇止めが認められないことがあります（労働契約法第19条＝雇止め法理）。\n\n- 申込権の発生直前に、それだけを理由に雇止めをすると、無期転換逃れとして問題視されやすくなります\n- 「更新は原則しない」といった更新上限を設ける場合も、最初の契約時からの明示や運用の一貫性が問われます\n- 個別の雇止めが有効かどうかの判断や、紛争になったときの対応は弁護士の業務です。当事務所とは独立した事業体で、別々にご契約いただきます\n\nなお、無期転換ルールには特例があります。専門的知識等を有する有期雇用労働者等に関する特別措置法（平成26年法律第137号）により、都道府県労働局長の認定を受けた事業主のもとでは、一定のプロジェクトに就く高度専門職や、定年後に引き続き雇用される高齢者について、無期転換申込権が発生しない特例期間が設けられています。特例を使うには計画の認定が必要で、社会保険労務士が整えます。解雇や雇止めをめぐって社労士と弁護士の役割がどう分かれるかは、[解雇は社労士か弁護士か](/labor/column/kaiko-sharoushi-bengoshi-dochira)にまとめています。\n\n## 四葉社会保険労務士事務所は、何ができますか？\n\n文京区小日向の四葉社会保険労務士事務所は、**有期契約の通算期間の整理、無期転換者向けの就業規則の区分づくり、労働条件の明示書面の整備、更新上限を設ける場合の設計、有期特例の計画認定のご相談**をお受けします。個別の雇止めの有効性判断や紛争対応は弁護士（当事務所とは独立した事業体・別々にご契約）の業務で、当事務所は事前の制度設計と書面整備を担います。**ご相談は無料です。** 費用は[報酬額表](/labor/ryokin)を、よくいただくご質問は[よくあるご質問](/labor/faq)をご覧ください。\n\n## よくある質問\n\n**Q. 無期転換すると、正社員にしなければいけないのですか？**\nA. いいえ。無期転換は「期間の定めがなくなる」だけで、正社員にすることではありません。別段の定めがない限り、時給や仕事の内容などの労働条件は、直前の有期契約と同じまま引き継がれます（労働契約法第18条第1項）。正社員と同じ待遇にするかどうかは、会社が就業規則などで別に定める事柄です。\n\n**Q. 通算5年に、契約の空白期間はどう影響しますか？**\nA. 契約と契約の間に一定以上の空白があると、その前の期間は通算からリセットされます（クーリング）。直前の契約が1年以上なら、6か月以上の空白でリセットされます。空白が6か月未満なら通算は続きます。1年未満の契約の場合は、その期間の2分の1を基礎とした期間が基準になります。\n\n**Q. 5年を超える直前に契約を更新しなければ、無期転換を避けられますか？**\nA. 申込権が発生する前だけを理由に雇止めをすると、無期転換逃れとして争われやすくなります。反復更新の実態や更新への合理的期待があると、雇止めが認められないことがあります（労働契約法第19条）。個別の可否は事情により判断が分かれ、紛争対応は弁護士の業務です。\n\n**Q. 定年後に再雇用した高齢者も、5年で無期転換の対象になりますか？**\nA. 原則は対象ですが、特例があります。有期雇用特別措置法により、都道府県労働局長の認定を受けた事業主のもとでは、定年後に引き続き雇用される高齢者について、無期転換申込権が発生しない特例期間が設けられます。特例を使うには計画の認定手続が必要です。\n\n## この記事の根拠\n\n- 労働契約法（平成19年法律第128号）第18条第1項＝通算契約期間が5年を超える有期契約労働者の無期転換申込みと、使用者による承諾みなし／第18条第1項後段＝無期転換後の労働条件は別段の定めのない限り直前の有期契約と同一／第18条第2項＝空白期間（クーリング）が6か月以上（直前契約が1年未満のときはその2分の1を基礎に厚生労働省令で定める期間以上）で通算に算入しない\n- 労働契約法第19条＝有期労働契約の更新等（雇止め法理。反復更新や更新の合理的期待がある場合に、客観的合理性・社会通念上の相当性を欠く雇止めを認めない）\n- 専門的知識等を有する有期雇用労働者等に関する特別措置法（平成26年法律第137号）＝有期特例。都道府県労働局長の認定により、一定の高度専門職・定年後引き続き雇用される高齢者について無期転換申込権が発生しない特例期間\n- 無期転換ルール（労働契約法第18条）の施行日＝平成25年4月1日（改正労働契約法は平成24年8月成立）。最初の無期転換申込権は原則として平成30年（2018年）4月1日以降に発生\n- 厚生労働省「無期転換ルール ハンドブック」および有期契約労働者の無期転換ポータルサイト（muki.mhlw.go.jp、2026年9月22日参照）\n- 条文は e-Gov 法令検索により確認しています（2026年9月時点）\n\nこの記事は、誰に相談するかまでは決めていません。有期契約の通算期間の整理、無期転換者向けの就業規則の整備、労働条件の明示、有期特例の計画認定は社会保険労務士の業務です。個別の雇止めの有効性判断や紛争対応は弁護士（当事務所とは独立した事業体・別々にご契約）の業務です。四葉社会保険労務士事務所にご相談いただく場合の費用は[報酬額表](/labor/ryokin)に、よくいただくご質問は[よくあるご質問](/labor/faq)にまとめています。\n\n本記事は一般的な情報提供です。個別のご事情に応じた判断は、面談のうえ資格者が行います。執筆は[浦松丈二](/about/uramatsu)（社会保険労務士・行政書士・宅地建物取引士）です。",
+    "status": "published",
+    "author": {
+      "name": "浦松 丈二",
+      "title": "社会保険労務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+    },
+    "keywords": [
+      "無期転換 申込権 いつ 発生",
+      "無期転換ルール 通算5年 労働契約法18条",
+      "クーリング期間 計算 6か月",
+      "無期転換後 労働条件 変わる",
+      "無期転換逃れ 雇止め 労働契約法19条",
+      "有期雇用特別措置法 有期特例"
+    ],
+    "tags": [
+      "無期転換",
+      "有期契約",
+      "労働契約法",
+      "雇止め",
+      "就業規則",
+      "有期特例"
+    ],
+    "locales": [],
+    "faq": [
+      {
+        "question": "無期転換すると、正社員にしなければいけないのですか？",
+        "answer": "いいえ。無期転換は「期間の定めがなくなる」だけで、正社員にすることではありません。別段の定めがない限り、時給や仕事の内容などの労働条件は、直前の有期契約と同じまま引き継がれます（労働契約法第18条第1項）。正社員と同じ待遇にするかどうかは、会社が就業規則などで別に定める事柄です。"
+      },
+      {
+        "question": "通算5年に、契約の空白期間はどう影響しますか？",
+        "answer": "契約と契約の間に一定以上の空白があると、その前の期間は通算からリセットされます（クーリング）。直前の契約が1年以上なら、6か月以上の空白でリセットされます。空白が6か月未満なら通算は続きます。1年未満の契約の場合は、その期間の2分の1を基礎とした期間が基準になります。"
+      },
+      {
+        "question": "5年を超える直前に契約を更新しなければ、無期転換を避けられますか？",
+        "answer": "申込権が発生する前だけを理由に雇止めをすると、無期転換逃れとして争われやすくなります。反復更新の実態や更新への合理的期待があると、雇止めが認められないことがあります（労働契約法第19条）。個別の可否は事情により判断が分かれ、紛争対応は弁護士の業務です。"
+      },
+      {
+        "question": "定年後に再雇用した高齢者も、5年で無期転換の対象になりますか？",
+        "answer": "原則は対象ですが、特例があります。有期雇用特別措置法により、都道府県労働局長の認定を受けた事業主のもとでは、定年後に引き続き雇用される高齢者について、無期転換申込権が発生しない特例期間が設けられます。特例を使うには計画の認定手続が必要です。"
+      }
+    ],
+    "translations": {
+      "en": {
+        "title": "When a fixed-term contract exceeds five years in total, how does the conversion to a permanent contract arise?",
+        "excerpt": "When a fixed-term labor contract with the same employer exceeds five years in total, the worker gains the right to apply for conversion to a permanent (no-fixed-term) contract (Article 18, paragraph 1 of the Labor Contract Act). If the worker applies, the employer is deemed to have accepted, and the next contract becomes one with no fixed term. Unless there is a separate provision, the working conditions after conversion are the same as the immediately preceding fixed-term contract. If there is a gap of six months or more between contracts (cooling), the total resets. Putting work rules in order and labor-management response are for a Shakai Hoken Roumushi; an individual dispute such as a non-renewal to dodge conversion is for an attorney (a separate business entity, contracted separately).",
+        "content": "**In short:** When a fixed-term labor contract with the same employer exceeds five years in total, the worker gains the right to apply for conversion to a permanent (no-fixed-term) contract (Article 18, paragraph 1 of the Labor Contract Act). If the worker applies, the employer is deemed to have accepted, and from the next contract it becomes one with no fixed term. Unless there is a separate provision, the working conditions after conversion are the same as the immediately preceding fixed-term contract (except that it becomes permanent). If there is a gap of six months or more between contracts (cooling), the total is reset. This article sorts out, in practice, how to count the five-year total, cooling, and the application right. Putting work rules in order and labor-management response are for a Shakai Hoken Roumushi; an individual dispute such as a non-renewal to dodge conversion is for an attorney (a separate business entity from this office, contracted separately).\n\n\"We have had a contract worker or part-timer for over five years — must we do something?\" and \"does conversion mean making them a regular employee?\" — these are consultations we receive from companies with fixed-term employees. This page is for HR staff at small and medium enterprises who hold part-timers, contract workers or re-employed staff and face the permanent-conversion rule. Whether an individual non-renewal is valid, and handling a dispute, are outside the scope of this article.\n\n## When does the right to apply for permanent conversion arise?\n\nWhen the total contract period of two or more fixed-term labor contracts concluded with the same employer exceeds five years, that worker gains the right to apply for permanent conversion (Article 18, paragraph 1 of the Labor Contract Act). Because it is \"exceeds,\" the trigger is not exactly five years, but entering a contract that goes beyond five years.\n\n- If the contract period is one year, the right arises during the contract after the fifth renewal (i.e. the sixth-year contract)\n- If the contract period is three years, the right arises during the contract that enters the sixth year in total (the second contract after the first renewal)\n- If the worker applies during a contract period in which the right has arisen, **the employer is deemed to have accepted**, and from the day after the current contract ends it becomes a permanent labor contract\n\nThe permanent-conversion rule (Article 18) came into force on 1 April 2013. Therefore, as a rule, the first permanent-conversion application right arose on or after 1 April 2018. The point that a fixed-term contract requires re-clarifying working conditions at each renewal is also touched on in [the residence deadline and the labor-contract period](/en/labor/column/zairyu-kigen-koyo-keiyaku-kikan).\n\n## How is the cooling period calculated?\n\nIf there is a gap (a no-contract period) of a certain length or more between contracts, the earlier contract period is reset from the total. This is called cooling (Article 18, paragraph 2 of the Labor Contract Act).\n\n| Length of the one fixed-term contract just before the gap | Gap that constitutes cooling |\n|---|---|\n| One year or more | Six months or more |\n| Less than one year | A period defined by Ministry ordinance based on half of that contract period (rounded up to one month if under one month) |\n\nFor example, if the immediately preceding contract is one year or more, a gap of six months or more means the period before it does not enter the total. Conversely, if the gap is under six months, the total continues. **The practice of \"leaving a small gap between renewals so that five years does not accumulate\" does not work if the gap is short.** Also, a practice of ending a contract and rehiring the same person after a set period, if seen as substantially aimed at avoiding conversion, leads to the non-renewal issue discussed below. Because the counting changes with the individual sequence of contracts, it must be checked against the contract history.\n\n## Do the working conditions change after permanent conversion?\n\nAs a rule, nothing changes except that there is no longer a fixed term. Article 18, paragraph 1 of the Labor Contract Act provides that the working conditions that are the content of the labor contract after conversion are the same as those of the immediately preceding fixed-term contract, except for parts where there is a separate provision.\n\n- \"Permanent conversion\" is not \"becoming a regular employee.\" The hourly wage, the content of the work, the workplace and so on are carried over as they were under the fixed term, unless a separate provision is made\n- Whether to give the same treatment as a regular employee is a matter the company designs by a separate provision (work rules or an individual agreement)\n- Preparing a work-rules category for permanently-converted workers in advance clarifies the working conditions at the time of conversion\n\nConversion does not occur automatically; it arises on the worker's application. The practical key is to decide in advance how to set the working conditions of a converted worker, and whether to create a work-rules category, in readiness for the application. The duty to create and file work rules arises from ten or more workers on a regular basis ([from how many employees are work rules mandatory](/en/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo)). For designing a regular-employee conversion as the target of a subsidy, see [if you aim at a subsidy, the first contract form decides it](/en/labor/column/joseikin-yuki-muki-keiyaku-katachi).\n\n## What is the problem with non-renewal or dodging conversion?\n\nMoving to not renew a contract (a non-renewal) before the permanent-conversion application right arises is a part prone to dispute. Where a fixed-term contract has been repeatedly renewed to a state substantially no different from a permanent contract, or where there is a reasonable ground to expect renewal, a non-renewal may not be allowed if it lacks objectively reasonable grounds and is not found appropriate by social convention (Article 19 of the Labor Contract Act, the non-renewal doctrine).\n\n- A non-renewal just before the right arises, on that ground alone, is easily viewed as dodging conversion\n- Even when setting a renewal cap such as \"renewal is not made in principle,\" clarity from the first contract and consistency of operation are questioned\n- Whether an individual non-renewal is valid, and handling a dispute, are an attorney's work. It is a separate business entity from this office, contracted separately\n\nThere is also a special measure for the permanent-conversion rule. Under the Act on Special Measures for Fixed-Term Employed Workers with Specialized Knowledge etc. (Act No. 137 of 2014), under an employer certified by the Director of the Prefectural Labor Bureau, a special period in which the permanent-conversion application right does not arise is set for a highly-specialized professional engaged in a certain project, or for an elderly person continuously employed after retirement age. Using the special measure requires certification of a plan, which a Shakai Hoken Roumushi puts in order. How the roles of a Shakai Hoken Roumushi and an attorney divide over dismissal and non-renewal is set out in [dismissal — a Shakai Hoken Roumushi or an attorney](/en/labor/column/kaiko-sharoushi-bengoshi-dochira).\n\n## What can 四葉社会保険労務士事務所 do?\n\n四葉社会保険労務士事務所, in Kohinata, Bunkyo City, handles **sorting out the total period of fixed-term contracts, creating a work-rules category for permanently-converted workers, putting the working-condition clarification documents in order, designing a renewal cap where one is set, and consulting on plan certification for the fixed-term special measure**. Judging the validity of an individual non-renewal and handling a dispute are an attorney's work (a separate business entity from this office, contracted separately); this office handles the advance system design and document preparation. **Consultation is free.** For fees, see [the fee schedule](/en/labor/ryokin); for frequently asked questions, see [the FAQ](/en/labor/faq).\n\n## Frequently asked questions\n\n**Q. Do we have to make them a regular employee upon permanent conversion?**\nA. No. Permanent conversion only removes the fixed term; it is not making them a regular employee. Unless there is a separate provision, working conditions such as the hourly wage and the content of the work are carried over as they were under the fixed-term contract (Article 18, paragraph 1 of the Labor Contract Act). Whether to give the same treatment as a regular employee is a matter the company sets separately, such as in work rules.\n\n**Q. How does a gap between contracts affect the five-year total?**\nA. If there is a gap of a certain length or more between contracts, the period before it is reset from the total (cooling). If the immediately preceding contract is one year or more, a gap of six months or more resets it. If the gap is under six months, the total continues. For a contract under one year, the standard is a period based on half of that period.\n\n**Q. If we do not renew just before exceeding five years, can we avoid permanent conversion?**\nA. A non-renewal on the sole ground that the application right is about to arise is easily contested as dodging conversion. Where there is a reality of repeated renewal or a reasonable expectation of renewal, a non-renewal may not be allowed (Article 19 of the Labor Contract Act). Individual validity is judged differently by the circumstances, and handling a dispute is an attorney's work.\n\n**Q. Is an elderly person re-employed after retirement age also subject to conversion at five years?**\nA. As a rule they are subject, but there is a special measure. Under the Act on Special Measures for Fixed-Term Employed Workers, under an employer certified by the Director of the Prefectural Labor Bureau, a special period in which the permanent-conversion application right does not arise is set for an elderly person continuously employed after retirement age. Using the special measure requires a plan-certification procedure.\n\n## Sources\n\n- Labor Contract Act (Act No. 128 of 2007), Article 18, paragraph 1 = the application for permanent conversion by a fixed-term worker whose total contract period exceeds five years, and the deemed acceptance by the employer / the latter part of paragraph 1 = working conditions after conversion are the same as the immediately preceding fixed-term contract unless there is a separate provision / paragraph 2 = a gap (cooling) of six months or more (where the immediately preceding contract is under one year, a period of at least that defined by Ministry ordinance based on half of it) is not counted in the total\n- Labor Contract Act, Article 19 = renewal etc. of a fixed-term labor contract (the non-renewal doctrine: where there is repeated renewal or a reasonable expectation of renewal, a non-renewal lacking objective reasonableness and social appropriateness is not allowed)\n- Act on Special Measures for Fixed-Term Employed Workers with Specialized Knowledge etc. (Act No. 137 of 2014) = the fixed-term special measure. By certification of the Director of the Prefectural Labor Bureau, a special period in which the permanent-conversion application right does not arise, for certain highly-specialized professionals and for the elderly continuously employed after retirement age\n- The enforcement date of the permanent-conversion rule (Labor Contract Act, Article 18) = 1 April 2013 (the amended Labor Contract Act was enacted in August 2012). As a rule, the first permanent-conversion application right arose on or after 1 April 2018\n- Ministry of Health, Labour and Welfare \"Permanent-Conversion Rule Handbook\" and the portal site for permanent conversion of fixed-term workers (muki.mhlw.go.jp, referenced 22 September 2026)\n- The provisions are confirmed from e-Gov Law Search (as of September 2026)\n\nThis article does not decide whom to consult. Sorting out the total period of fixed-term contracts, putting work rules for permanently-converted workers in order, clarifying working conditions, and plan certification for the fixed-term special measure are the work of a Shakai Hoken Roumushi. Judging the validity of an individual non-renewal and handling a dispute are the work of an attorney (a separate business entity from this office, contracted separately). For fees when consulting 四葉社会保険労務士事務所, see [the fee schedule](/en/labor/ryokin); for frequently asked questions, see [the FAQ](/en/labor/faq).\n\nThis article is general information. A judgment on individual circumstances is made by a qualified professional after a consultation. Written by [Joji Uramatsu](/en/about/uramatsu) (Shakai Hoken Roumushi, Gyoseishoshi, Registered Real Estate Transaction Specialist).",
+        "category": "Labor law basics",
+        "keywords": [
+          "permanent conversion application right when arises",
+          "permanent-conversion rule five years Labor Contract Act 18",
+          "cooling period calculation six months",
+          "working conditions after permanent conversion",
+          "conversion-dodging non-renewal Labor Contract Act 19",
+          "fixed-term special measures act"
+        ],
+        "tags": [
+          "permanent conversion",
+          "fixed-term contract",
+          "Labor Contract Act",
+          "non-renewal",
+          "work rules",
+          "fixed-term special measure"
+        ],
+        "author": {
+          "name": "Joji Uramatsu",
+          "title": "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所"
+        },
+        "faq": [
+          {
+            "question": "Do we have to make them a regular employee upon permanent conversion?",
+            "answer": "No. Permanent conversion only removes the fixed term; it is not making them a regular employee. Unless there is a separate provision, working conditions such as the hourly wage and the content of the work are carried over as they were under the fixed-term contract (Article 18, paragraph 1 of the Labor Contract Act). Whether to give the same treatment as a regular employee is a matter the company sets separately, such as in work rules."
+          },
+          {
+            "question": "How does a gap between contracts affect the five-year total?",
+            "answer": "If there is a gap of a certain length or more between contracts, the period before it is reset from the total (cooling). If the immediately preceding contract is one year or more, a gap of six months or more resets it. If the gap is under six months, the total continues. For a contract under one year, the standard is a period based on half of that period."
+          },
+          {
+            "question": "If we do not renew just before exceeding five years, can we avoid permanent conversion?",
+            "answer": "A non-renewal on the sole ground that the application right is about to arise is easily contested as dodging conversion. Where there is a reality of repeated renewal or a reasonable expectation of renewal, a non-renewal may not be allowed (Article 19 of the Labor Contract Act). Individual validity is judged differently by the circumstances, and handling a dispute is an attorney's work."
+          },
+          {
+            "question": "Is an elderly person re-employed after retirement age also subject to conversion at five years?",
+            "answer": "As a rule they are subject, but there is a special measure. Under the Act on Special Measures for Fixed-Term Employed Workers, under an employer certified by the Director of the Prefectural Labor Bureau, a special period in which the permanent-conversion application right does not arise is set for an elderly person continuously employed after retirement age. Using the special measure requires a plan-certification procedure."
+          }
+        ]
+      },
+      "zh-tw": {
+        "title": "有期契約通算超過5年後，無期轉換如何發生？實務整理",
+        "excerpt": "與同一使用者的有期勞動契約通算超過5年後，勞工即取得申請轉換為無期（無期間之定）勞動契約的權利（勞動契約法第18條第1項）。勞工提出申請，使用者即被視為承諾，下一份契約起成為無期間之定的契約。無期轉換後的勞動條件，除另有規定外，與轉換前的有期契約相同；契約之間若有6個月以上的空白（冷卻），通算即歸零。就業規則的整備與勞資對應由社會保險勞務士辦理，為逃避無期轉換的終止續約等個別糾紛由律師（獨立的事業體、另行簽約）處理。",
+        "content": "**先講結論**：與同一使用者的有期勞動契約通算超過5年後，勞工即取得申請轉換為無期（無期間之定）勞動契約的權利（勞動契約法第18條第1項）。勞工提出申請，使用者即被視為承諾，下一份契約起成為無期間之定的契約。無期轉換後的勞動條件，除另有規定外，與轉換前的有期契約相同（僅除去有期間之定這點）。契約之間若有6個月以上的空白（冷卻），通算即歸零。本文以實務整理通算5年、冷卻、申請權的計算方式。就業規則的整備與勞資對應由社會保險勞務士辦理；為逃避無期轉換的終止續約等個別糾紛，由律師（與本所各自獨立的事業體、另行簽約）處理。\n\n「契約員工或兼職已續用超過5年，是否必須做些什麼」「無期轉換是指要轉為正職嗎」——這是擁有有期僱用者的公司常有的諮詢。本頁面是為了擁有兼職、契約員工、囑託等有期僱用者、須因應無期轉換規則的中小企業勞務負責人。個別終止續約的可否或糾紛對應，不在本文範圍內。\n\n## 無期轉換申請權何時發生？\n\n與同一使用者所締結的2份以上有期勞動契約，通算契約期間超過5年時，該勞工即發生無期轉換申請權（勞動契約法第18條第1項）。因為是「超過」，並非剛好5年，而是進入超過5年的契約的時點為起點。\n\n- 契約期間為1年時，於第5次續約後（即第6年的契約）期間中發生申請權\n- 契約期間為3年時，於第1次續約後（即進入通算第6年的第2份契約）期間中發生申請權\n- 於已發生權利的契約期間中，勞工提出申請時，**使用者即被視為承諾**，自現契約結束的翌日起成為無期勞動契約\n\n無期轉換規則（第18條）於平成25年4月1日施行。因此原則上最初的無期轉換申請權發生於平成30年（2018年）4月1日以後。有期契約每次續約須重新明示勞動條件這點，於[在留期限與僱用契約期間](/zh-tw/labor/column/zairyu-kigen-koyo-keiyaku-kikan)亦有提及。\n\n## 冷卻期間如何計算？\n\n契約與契約之間若有一定以上的空白期間（無契約期間），其之前的契約期間即從通算歸零。此即冷卻（勞動契約法第18條第2項）。\n\n| 空白前一份有期契約的期間 | 構成冷卻的空白期間 |\n|---|---|\n| 1年以上 | 6個月以上 |\n| 未滿1年 | 以該契約期間的2分之1為基礎、由厚生勞動省令所定的期間以上（未滿1個月進位為1個月） |\n\n例如前一份契約為1年以上時，若有6個月以上的空白，其之前的期間即不計入通算。反之，空白未滿6個月時通算延續。**「稍微空開續約之間、使5年不累積」的做法，在空白過短時並不成立。** 此外，切斷契約後經一定期間再僱用同一人的做法，若被視為實質上為逃避無期轉換，即會連結到後述的終止續約問題。計算方式依個別契約的排列而變，須以契約書的履歷確認。\n\n## 無期轉換後的勞動條件是否改變？\n\n原則上，除了不再有期間之定外並不改變。勞動契約法第18條第1項規定，無期轉換後勞動契約內容的勞動條件，除另有規定的部分外，與轉換前的有期勞動契約相同。\n\n- 「無期轉換＝正職化」並非如此。時薪、工作內容、勤務地等，除非另有規定，均沿用有期時的內容\n- 是否給予與正職相同的待遇，是公司以另段規定（就業規則或個別合意）設計的事項\n- 事先整備無期轉換者專屬的就業規則區分，可使轉換時的勞動條件更明確\n\n無期轉換不會自動發生，而是因勞工的申請而發生。為因應申請，事先決定如何訂定無期轉換者的勞動條件、是否於就業規則設區分，是實務要點。就業規則的製作・申報義務自經常10人以上產生（[就業規則從幾人開始有義務](/zh-tw/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo)）。另外，將正職轉換作為補助對象時的設計，於[想爭取補助由最初的契約形態決定](/zh-tw/labor/column/joseikin-yuki-muki-keiyaku-katachi)中處理。\n\n## 終止續約或逃避無期轉換有何問題？\n\n在無期轉換申請權發生前不予續約（終止續約）的動作，是容易產生糾紛的部分。有期契約反覆續約、實質上與無期契約無異的狀態，或有合理期待續約的理由時，若終止續約欠缺客觀合理理由、且社會通念上難認相當，使用者的終止續約可能不被認可（勞動契約法第19條＝終止續約法理）。\n\n- 在申請權發生前僅以此為由終止續約，容易被視為逃避無期轉換\n- 設定「原則不續約」等續約上限時，自最初契約時的明示與運用的一貫性亦受檢視\n- 個別終止續約是否有效的判斷、糾紛的對應，是律師的業務。與本所各自獨立的事業體，另行簽約\n\n此外，無期轉換規則設有特例。依專門的知識等を有する有期雇用勞働者等に関する特別措置法（平成26年法律第137號），在都道府縣勞動局長認定的事業主之下，就從事一定專案的高度專門職、或定年後繼續僱用的高齡者，設有無期轉換申請權不發生的特例期間。運用特例須計畫的認定，由社會保險勞務士整備。解僱與終止續約上社勞士與律師的角色如何分工，整理於[解僱是社勞士還是律師](/zh-tw/labor/column/kaiko-sharoushi-bengoshi-dochira)。\n\n## 四葉社会保険労務士事務所能做什麼？\n\n位於文京區小日向的四葉社会保険労務士事務所，承接**有期契約通算期間的整理、無期轉換者專屬就業規則區分的建立、勞動條件明示書面的整備、設定續約上限時的設計，以及有期特例計畫認定的諮詢**。個別終止續約的有效性判斷與糾紛對應是律師（與本所各自獨立的事業體、另行簽約）的業務，本所負責事前的制度設計與書面整備。**諮詢免費。** 費用請見[報酬額表](/zh-tw/labor/ryokin)，常見問題請見[常見問題](/zh-tw/labor/faq)。\n\n## 常見問題\n\n**Q. 無期轉換後，就必須轉為正職嗎？**\nA. 不。無期轉換只是「去除期間之定」，並非轉為正職。除另有規定外，時薪或工作內容等勞動條件，沿用轉換前的有期契約（勞動契約法第18條第1項）。是否給予與正職相同的待遇，是公司於就業規則等另行訂定的事項。\n\n**Q. 契約的空白期間對通算5年有何影響？**\nA. 契約與契約之間若有一定以上的空白，其之前的期間即從通算歸零（冷卻）。前一份契約為1年以上時，6個月以上的空白即歸零。空白未滿6個月時通算延續。未滿1年的契約，則以該期間的2分之1為基礎的期間為基準。\n\n**Q. 在超過5年前不予續約，就能避免無期轉換嗎？**\nA. 僅以申請權即將發生為由終止續約，容易被視為逃避無期轉換而受爭執。有反覆續約的實態或對續約的合理期待時，終止續約可能不被認可（勞動契約法第19條）。個別可否依情形而判斷分歧，糾紛對應是律師的業務。\n\n**Q. 定年後再僱用的高齡者，也會在5年時成為無期轉換對象嗎？**\nA. 原則為對象，但有特例。依有期僱用特別措置法，在都道府縣勞動局長認定的事業主之下，就定年後繼續僱用的高齡者，設有無期轉換申請權不發生的特例期間。運用特例須計畫認定的手續。\n\n## 本文的依據\n\n- 勞動契約法（平成19年法律第128號）第18條第1項＝通算契約期間超過5年的有期契約勞工的無期轉換申請、及使用者的承諾視為／第18條第1項後段＝無期轉換後的勞動條件除另有規定外與轉換前的有期契約相同／第18條第2項＝空白期間（冷卻）6個月以上（前一份契約未滿1年時以其2分之1為基礎由厚生勞動省令所定的期間以上）不計入通算\n- 勞動契約法第19條＝有期勞動契約的更新等（終止續約法理。有反覆續約或續約合理期待時，不認可欠缺客觀合理性・社會通念上相當性的終止續約）\n- 專門的知識等を有する有期雇用勞働者等に関する特別措置法（平成26年法律第137號）＝有期特例。依都道府縣勞動局長的認定，就一定的高度專門職・定年後繼續僱用的高齡者，設無期轉換申請權不發生的特例期間\n- 無期轉換規則（勞動契約法第18條）的施行日＝平成25年4月1日（修正勞動契約法於平成24年8月成立）。最初的無期轉換申請權原則上發生於平成30年（2018年）4月1日以後\n- 厚生勞動省「無期轉換ルール ハンドブック」及有期契約勞工的無期轉換入口網站（muki.mhlw.go.jp、2026年9月22日參照）\n- 條文依 e-Gov 法令檢索確認（2026年9月時點）\n\n本文並未決定該找誰諮詢。有期契約通算期間的整理、無期轉換者就業規則的整備、勞動條件的明示、有期特例的計畫認定是社會保險勞務士的業務。個別終止續約的有效性判斷與糾紛對應是律師（與本所各自獨立的事業體、另行簽約）的業務。委託四葉社会保険労務士事務所時的費用整理於[報酬額表](/zh-tw/labor/ryokin)，常見問題整理於[常見問題](/zh-tw/labor/faq)。\n\n本文為一般性資訊提供。依個別情形的判斷，由具資格者於面談後進行。撰寫者為[浦松丈二](/zh-tw/about/uramatsu)（社會保險勞務士・行政書士・宅地建物取引士）。",
+        "category": "勞動法基礎",
+        "keywords": [
+          "無期轉換 申請權 何時 發生",
+          "無期轉換規則 通算5年 勞動契約法18條",
+          "冷卻期間 計算 6個月",
+          "無期轉換後 勞動條件 是否改變",
+          "逃避無期轉換 終止續約 勞動契約法19條",
+          "有期僱用特別措置法 有期特例"
+        ],
+        "tags": [
+          "無期轉換",
+          "有期契約",
+          "勞動契約法",
+          "終止續約",
+          "就業規則",
+          "有期特例"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "無期轉換後，就必須轉為正職嗎？",
+            "answer": "不。無期轉換只是「去除期間之定」，並非轉為正職。除另有規定外，時薪或工作內容等勞動條件，沿用轉換前的有期契約（勞動契約法第18條第1項）。是否給予與正職相同的待遇，是公司於就業規則等另行訂定的事項。"
+          },
+          {
+            "question": "契約的空白期間對通算5年有何影響？",
+            "answer": "契約與契約之間若有一定以上的空白，其之前的期間即從通算歸零（冷卻）。前一份契約為1年以上時，6個月以上的空白即歸零。空白未滿6個月時通算延續。未滿1年的契約，則以該期間的2分之1為基礎的期間為基準。"
+          },
+          {
+            "question": "在超過5年前不予續約，就能避免無期轉換嗎？",
+            "answer": "僅以申請權即將發生為由終止續約，容易被視為逃避無期轉換而受爭執。有反覆續約的實態或對續約的合理期待時，終止續約可能不被認可（勞動契約法第19條）。個別可否依情形而判斷分歧，糾紛對應是律師的業務。"
+          },
+          {
+            "question": "定年後再僱用的高齡者，也會在5年時成為無期轉換對象嗎？",
+            "answer": "原則為對象，但有特例。依有期僱用特別措置法，在都道府縣勞動局長認定的事業主之下，就定年後繼續僱用的高齡者，設有無期轉換申請權不發生的特例期間。運用特例須計畫認定的手續。"
+          }
+        ]
+      },
+      "zh": {
+        "title": "有期契约通算超过5年后，无期转换如何发生？实务整理",
+        "excerpt": "与同一使用者的有期劳动契约通算超过5年后，劳工即取得申请转换为无期（无期间之定）劳动契约的权利（劳动契约法第18条第1项）。劳工提出申请，使用者即被视为承诺，下一份契约起成为无期间之定的契约。无期转换后的劳动条件，除另有规定外，与转换前的有期契约相同；契约之间若有6个月以上的空白（冷却），通算即归零。就业规则的整备与劳资对应由社会保险劳务士办理，为逃避无期转换的终止续约等个别纠纷由律师（独立的事业体、另行签约）处理。",
+        "content": "**先讲结论**：与同一使用者的有期劳动契约通算超过5年后，劳工即取得申请转换为无期（无期间之定）劳动契约的权利（劳动契约法第18条第1项）。劳工提出申请，使用者即被视为承诺，下一份契约起成为无期间之定的契约。无期转换后的劳动条件，除另有规定外，与转换前的有期契约相同（仅除去有期间之定这点）。契约之间若有6个月以上的空白（冷却），通算即归零。本文以实务整理通算5年、冷却、申请权的计算方式。就业规则的整备与劳资对应由社会保险劳务士办理；为逃避无期转换的终止续约等个别纠纷，由律师（与本所各自独立的事业体、另行签约）处理。\n\n「契约员工或兼职已续用超过5年，是否必须做些什么」「无期转换是指要转为正职吗」——这是拥有有期雇用者的公司常有的咨询。本页面是为了拥有兼职、契约员工、嘱托等有期雇用者、须因应无期转换规则的中小企业劳务负责人。个别终止续约的可否或纠纷对应，不在本文范围内。\n\n## 无期转换申请权何时发生？\n\n与同一使用者所缔结的2份以上有期劳动契约，通算契约期间超过5年时，该劳工即发生无期转换申请权（劳动契约法第18条第1项）。因为是「超过」，并非刚好5年，而是进入超过5年的契约的时点为起点。\n\n- 契约期间为1年时，于第5次续约后（即第6年的契约）期间中发生申请权\n- 契约期间为3年时，于第1次续约后（即进入通算第6年的第2份契约）期间中发生申请权\n- 于已发生权利的契约期间中，劳工提出申请时，**使用者即被视为承诺**，自现契约结束的翌日起成为无期劳动契约\n\n无期转换规则（第18条）于平成25年4月1日施行。因此原则上最初的无期转换申请权发生于平成30年（2018年）4月1日以后。有期契约每次续约须重新明示劳动条件这点，于[在留期限与雇用契约期间](/zh/labor/column/zairyu-kigen-koyo-keiyaku-kikan)亦有提及。\n\n## 冷却期间如何计算？\n\n契约与契约之间若有一定以上的空白期间（无契约期间），其之前的契约期间即从通算归零。此即冷却（劳动契约法第18条第2项）。\n\n| 空白前一份有期契约的期间 | 构成冷却的空白期间 |\n|---|---|\n| 1年以上 | 6个月以上 |\n| 未满1年 | 以该契约期间的2分之1为基础、由厚生劳动省令所定的期间以上（未满1个月进位为1个月） |\n\n例如前一份契约为1年以上时，若有6个月以上的空白，其之前的期间即不计入通算。反之，空白未满6个月时通算延续。**「稍微空开续约之间、使5年不累积」的做法，在空白过短时并不成立。** 此外，切断契约后经一定期间再雇用同一人的做法，若被视为实质上为逃避无期转换，即会连结到后述的终止续约问题。计算方式依个别契约的排列而变，须以契约书的履历确认。\n\n## 无期转换后的劳动条件是否改变？\n\n原则上，除了不再有期间之定外并不改变。劳动契约法第18条第1项规定，无期转换后劳动契约内容的劳动条件，除另有规定的部分外，与转换前的有期劳动契约相同。\n\n- 「无期转换＝正职化」并非如此。时薪、工作内容、勤务地等，除非另有规定，均沿用有期时的内容\n- 是否给予与正职相同的待遇，是公司以另段规定（就业规则或个别合意）设计的事项\n- 事先整备无期转换者专属的就业规则区分，可使转换时的劳动条件更明确\n\n无期转换不会自动发生，而是因劳工的申请而发生。为因应申请，事先决定如何订定无期转换者的劳动条件、是否于就业规则设区分，是实务要点。就业规则的制作・申报义务自经常10人以上产生（[就业规则从几人开始有义务](/zh/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo)）。另外，将正职转换作为补助对象时的设计，于[想争取补助由最初的契约形态决定](/zh/labor/column/joseikin-yuki-muki-keiyaku-katachi)中处理。\n\n## 终止续约或逃避无期转换有何问题？\n\n在无期转换申请权发生前不予续约（终止续约）的动作，是容易产生纠纷的部分。有期契约反覆续约、实质上与无期契约无异的状态，或有合理期待续约的理由时，若终止续约欠缺客观合理理由、且社会通念上难认相当，使用者的终止续约可能不被认可（劳动契约法第19条＝终止续约法理）。\n\n- 在申请权发生前仅以此为由终止续约，容易被视为逃避无期转换\n- 设定「原则不续约」等续约上限时，自最初契约时的明示与运用的一贯性亦受检视\n- 个别终止续约是否有效的判断、纠纷的对应，是律师的业务。与本所各自独立的事业体，另行签约\n\n此外，无期转换规则设有特例。依专门知识等相关的有期雇用劳动者等特别措置法（平成26年法律第137号），在都道府县劳动局长认定的事业主之下，就从事一定专案的高度专门职、或定年后继续雇用的高龄者，设有无期转换申请权不发生的特例期间。运用特例须计画的认定，由社会保险劳务士整备。解雇与终止续约上社劳士与律师的角色如何分工，整理于[解雇是社劳士还是律师](/zh/labor/column/kaiko-sharoushi-bengoshi-dochira)。\n\n## 四葉社会保険労務士事務所能做什么？\n\n位于文京区小日向的四葉社会保険労務士事務所，承接**有期契约通算期间的整理、无期转换者专属就业规则区分的建立、劳动条件明示书面的整备、设定续约上限时的设计，以及有期特例计画认定的咨询**。个别终止续约的有效性判断与纠纷对应是律师（与本所各自独立的事业体、另行签约）的业务，本所负责事前的制度设计与书面整备。**咨询免费。** 费用请见[报酬额表](/zh/labor/ryokin)，常见问题请见[常见问题](/zh/labor/faq)。\n\n## 常见问题\n\n**Q. 无期转换后，就必须转为正职吗？**\nA. 不。无期转换只是「去除期间之定」，并非转为正职。除另有规定外，时薪或工作内容等劳动条件，沿用转换前的有期契约（劳动契约法第18条第1项）。是否给予与正职相同的待遇，是公司于就业规则等另行订定的事项。\n\n**Q. 契约的空白期间对通算5年有何影响？**\nA. 契约与契约之间若有一定以上的空白，其之前的期间即从通算归零（冷却）。前一份契约为1年以上时，6个月以上的空白即归零。空白未满6个月时通算延续。未满1年的契约，则以该期间的2分之1为基础的期间为基准。\n\n**Q. 在超过5年前不予续约，就能避免无期转换吗？**\nA. 仅以申请权即将发生为由终止续约，容易被视为逃避无期转换而受争执。有反覆续约的实态或对续约的合理期待时，终止续约可能不被认可（劳动契约法第19条）。个别可否依情形而判断分歧，纠纷对应是律师的业务。\n\n**Q. 定年后再雇用的高龄者，也会在5年时成为无期转换对象吗？**\nA. 原则为对象，但有特例。依有期雇用特别措置法，在都道府县劳动局长认定的事业主之下，就定年后继续雇用的高龄者，设有无期转换申请权不发生的特例期间。运用特例须计画认定的手续。\n\n## 本文的依据\n\n- 劳动契约法（平成19年法律第128号）第18条第1项＝通算契约期间超过5年的有期契约劳工的无期转换申请、及使用者的承诺视为／第18条第1项后段＝无期转换后的劳动条件除另有规定外与转换前的有期契约相同／第18条第2项＝空白期间（冷却）6个月以上（前一份契约未满1年时以其2分之1为基础由厚生劳动省令所定的期间以上）不计入通算\n- 劳动契约法第19条＝有期劳动契约的更新等（终止续约法理。有反覆续约或续约合理期待时，不认可欠缺客观合理性・社会通念上相当性的终止续约）\n- 专门知识等相关的有期雇用劳动者等特别措置法（平成26年法律第137号）＝有期特例。依都道府县劳动局长的认定，就一定的高度专门职・定年后继续雇用的高龄者，设无期转换申请权不发生的特例期间\n- 无期转换规则（劳动契约法第18条）的施行日＝平成25年4月1日（修正劳动契约法于平成24年8月成立）。最初的无期转换申请权原则上发生于平成30年（2018年）4月1日以后\n- 厚生劳动省「无期转换ルール ハンドブック」及有期契约劳工的无期转换入口网站（muki.mhlw.go.jp、2026年9月22日参照）\n- 条文依 e-Gov 法令检索确认（2026年9月时点）\n\n本文并未决定该找谁咨询。有期契约通算期间的整理、无期转换者就业规则的整备、劳动条件的明示、有期特例的计画认定是社会保险劳务士的业务。个别终止续约的有效性判断与纠纷对应是律师（与本所各自独立的事业体、另行签约）的业务。委托四葉社会保険労務士事務所时的费用整理于[报酬额表](/zh/labor/ryokin)，常见问题整理于[常见问题](/zh/labor/faq)。\n\n本文为一般性信息提供。依个别情形的判断，由具资格者于面谈后进行。撰写者为[浦松丈二](/zh/about/uramatsu)（社会保险劳务士・行政书士・宅地建物取引士）。",
+        "category": "劳动法基础",
+        "keywords": [
+          "无期转换 申请权 何时 发生",
+          "无期转换规则 通算5年 劳动契约法18条",
+          "冷却期间 计算 6个月",
+          "无期转换后 劳动条件 是否改变",
+          "逃避无期转换 终止续约 劳动契约法19条",
+          "有期雇用特别措置法 有期特例"
+        ],
+        "tags": [
+          "无期转换",
+          "有期契约",
+          "劳动契约法",
+          "终止续约",
+          "就业规则",
+          "有期特例"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "无期转换后，就必须转为正职吗？",
+            "answer": "不。无期转换只是「去除期间之定」，并非转为正职。除另有规定外，时薪或工作内容等劳动条件，沿用转换前的有期契约（劳动契约法第18条第1项）。是否给予与正职相同的待遇，是公司于就业规则等另行订定的事项。"
+          },
+          {
+            "question": "契约的空白期间对通算5年有何影响？",
+            "answer": "契约与契约之间若有一定以上的空白，其之前的期间即从通算归零（冷却）。前一份契约为1年以上时，6个月以上的空白即归零。空白未满6个月时通算延续。未满1年的契约，则以该期间的2分之1为基础的期间为基准。"
+          },
+          {
+            "question": "在超过5年前不予续约，就能避免无期转换吗？",
+            "answer": "仅以申请权即将发生为由终止续约，容易被视为逃避无期转换而受争执。有反覆续约的实态或对续约的合理期待时，终止续约可能不被认可（劳动契约法第19条）。个别可否依情形而判断分歧，纠纷对应是律师的业务。"
+          },
+          {
+            "question": "定年后再雇用的高龄者，也会在5年时成为无期转换对象吗？",
+            "answer": "原则为对象，但有特例。依有期雇用特别措置法，在都道府县劳动局长认定的事业主之下，就定年后继续雇用的高龄者，设有无期转换申请权不发生的特例期间。运用特例须计画认定的手续。"
+          }
+        ]
+      }
+    }
   }
 ];

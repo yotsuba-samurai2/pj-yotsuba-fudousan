@@ -1494,6 +1494,46 @@ const ARTICLES: ArticleSpec[] = [
     localesWithTranslations: ["en", "zh-tw", "zh"],
     hubLinks: ["/souzoku"],
   },
+  {
+    file: "73-kensetsugyo-shizaioki-shako-chosei-kuiki-bukken.md",
+    slug: "kensetsugyo-shizaioki-shako-chosei-kuiki-bukken",
+    title: "建設業・運送業の資材置場や車庫は、市街化調整区域や農地で確保できますか",
+    publishedAt: "2026-09-22",
+    category: "投資・事業用不動産",
+    excerpt:
+      "建設業・運送業の資材置場や車庫は、①更地に置くだけ（建築物を建てない）か上屋・プレハブ事務所を建てるか②地目が農地か宅地・雑種地か、の2点で手続がまったく変わります。市街化調整区域でも更地の資材置場自体は開発許可の対象外ですが、地目が農地なら農地転用の許可が別に要り、上屋や事務所を建てるなら建築許可が要ります。東京都文京区の宅地建物取引士兼行政書士が、契約前に確認できることを都市計画法・農地法・車庫法の条文から整理します。",
+    keywords: [
+      "資材置場 市街化調整区域 農地",
+      "車庫 農地転用 農地法 4条 5条",
+      "市街化調整区域 資材置場 開発許可 建築許可",
+      "建設業 トラック 車庫証明 保管場所",
+      "都市計画法 34条 43条 立地基準",
+    ],
+    tags: ["事業用不動産", "許認可", "市街化調整区域", "農地法"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/toushi", "/office"],
+  },
+  {
+    file: "74-souzoku-teiki-shakuchiken-tatemono-baikyaku.md",
+    slug: "souzoku-teiki-shakuchiken-tatemono-baikyaku",
+    title: "相続した一般定期借地権付きの建物やマンションは、どう売却しますか",
+    publishedAt: "2026-09-22",
+    category: "相続",
+    excerpt:
+      "相続した一般定期借地権付きの建物やマンションも売れます。ただし普通借地権（更新あり）と違い、一般定期借地権（借地借家法第22条）は更新がなく、存続期間が満了すれば原則として建物を取り壊し更地で地主へ返します。そのため残存期間が短いほど買主が付きにくく、価格に響きます。東京都文京区の宅地建物取引士兼行政書士が、普通借地権との違い・残存期間の効き方・地主の承諾・税務の振り分けを条文から整理します。",
+    keywords: [
+      "一般定期借地権 相続 売却",
+      "定期借地権 借地借家法 22条 更新なし",
+      "定期借地権 残存期間 価格 住宅ローン",
+      "定期借地 更地返還 建物取壊し",
+      "普通借地権 定期借地権 違い",
+    ],
+    tags: ["相続", "定期借地権", "借地権", "売却"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/souzoku"],
+  },
 ];
 
 function toPlainText(md: string): string {

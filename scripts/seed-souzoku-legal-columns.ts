@@ -684,6 +684,20 @@ const REQUIRED_HUB_LINKS: Record<string, string[]> = {
     "/legal/column/souzoku-kaigai-gaikokuseki",
     "/legal/column/chugoku-tairiku-souzokunin-shinzoku-koshosho-ryoji-ninsho",
   ],
+  "souko-gyo-touroku-yoken-shinsei": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+  ],
+  "jidosha-souzoku-iten-toroku-tetsuzuki": [
+    "/legal/services/inheritance",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/souzoku",
+    "/legal/column/souzoku-touki-nagare",
+    "/legal/column/isan-bunkatsu-kyougisho",
+    "/legal/column/souzoku-tejun-checklist",
+  ],
 };
 
 /** 表示コンプライアンス上の禁止語 */
@@ -2233,6 +2247,43 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "別事業体",
     "独立した事業体",
   ],
+  "souko-gyo-touroku-yoken-shinsei": [
+    "昭和31年法律第121号",
+    "倉庫業法第3条",
+    "倉庫業法第6条第1項第4号",
+    "倉庫業法施行規則第3条の4",
+    "倉庫業法第7条",
+    "倉庫業法施行規則第9条",
+    "倉庫管理主任者",
+    "施設設備基準",
+    "営業倉庫",
+    "自家用倉庫",
+    "地方運輸局",
+    "紹介料を受け取りません",
+    "別事業体",
+    "独立した事業体",
+    "一般的な情報提供",
+  ],
+  "jidosha-souzoku-iten-toroku-tetsuzuki": [
+    "道路運送車両法第13条",
+    "移転登録",
+    "15日以内",
+    "民法第896条",
+    "民法第898条",
+    "民法第907条",
+    "遺産分割協議成立申立書",
+    "100万円以下",
+    "軽自動車",
+    "軽自動車検査協会",
+    "自動車検査証記入申請",
+    "司法書士",
+    "税理士",
+    "弁護士",
+    "紹介料を受け取りません",
+    "別事業体",
+    "独立した事業体",
+    "一般的な情報提供",
+  ],
 };
 
 /** 記事ごとに含めてはならない表現 */
@@ -2349,6 +2400,8 @@ const FORBIDDEN_PHRASES: Record<string, string[]> = {
   "cleaning-jo-kaisetsu-kozo-setsubi-todokede": [],
   "souzoku-kekkaku-haijo-chigai-bunkatsu": [],
   "gaikoku-kankei-shomen-ninsho-apostille-koushou-tsukaiwake": [],
+  "souko-gyo-touroku-yoken-shinsei": [],
+  "jidosha-souzoku-iten-toroku-tetsuzuki": [],
 };
 
 /** 本セット外へ張る既存legalコラムslug（リポジトリの他シードで実在確認済み） */
@@ -4155,6 +4208,58 @@ const ARTICLES: Array<{
       "公証",
       "私署証書認証",
       "渉外手続",
+      "行政書士",
+    ],
+  },
+  {
+    file: "76-souko-gyo-touroku-yoken-shinsei.md",
+    slug: "souko-gyo-touroku-yoken-shinsei",
+    date: "2026-09-22",
+    title:
+      "倉庫業の登録は物件のどんな要件を満たせば受けられる？施設設備基準と倉庫管理主任者",
+    category: "許認可手続（行政書士の実務から）",
+    excerpt:
+      "他人の物品を有償で預かる営業倉庫を業として営むには、倉庫業法第3条の登録が必要です。登録の可否は、預かる物品に応じた倉庫の種類（一類・二類・三類・野積・貯蔵槽・危険品・冷蔵・水面・トランクルーム）ごとの施設設備基準（倉庫業法第6条第1項第4号・同施行規則第3条の4）に物件が適合するかで決まります。倉庫管理主任者の選任要件（同法第7条・施行規則第9条）、既存倉庫の転用時の確認点、登録申請は行政書士・物件選定は不動産・建築確認は建築士・消防は消防署へ振り分ける分離受任を整理しました。",
+    keywords: [
+      "倉庫業 登録 要件 物件",
+      "営業倉庫 施設設備基準 倉庫業法",
+      "倉庫管理主任者 選任 要件 施行規則第9条",
+      "倉庫業法第3条 登録 行政書士",
+      "既存倉庫 営業倉庫 転用 登録",
+      "倉庫 種類 一類 冷蔵 危険品",
+    ],
+    tags: [
+      "倉庫業",
+      "営業倉庫",
+      "施設設備基準",
+      "倉庫管理主任者",
+      "許認可",
+      "行政書士",
+    ],
+  },
+  {
+    file: "77-jidosha-souzoku-iten-toroku-tetsuzuki.md",
+    slug: "jidosha-souzoku-iten-toroku-tetsuzuki",
+    date: "2026-09-22",
+    title:
+      "亡くなった家族名義の自動車の相続と移転登録はどう進める？普通車・軽自動車の違い",
+    category: "相続の手続き（行政書士の実務から）",
+    excerpt:
+      "被相続人名義の自動車も相続財産で、遺産分割の対象です（民法第896条・第898条・第907条）。普通自動車は道路運送車両法第13条の移転登録を所有権移転から15日以内に運輸支局で、軽自動車は登録制度の対象外で軽自動車検査協会で名義変更します。査定額100万円以下の普通車は遺産分割協議成立申立書で協議書に代えられる簡易な取扱いも解説。自動車の名義変更は行政書士、不動産の相続登記は司法書士、相続税は税理士、争いは弁護士へ振り分ける分離受任を整理しました。",
+    keywords: [
+      "自動車 相続 移転登録 名義変更",
+      "普通車 軽自動車 相続 手続 違い",
+      "遺産分割協議成立申立書 100万円以下",
+      "道路運送車両法第13条 移転登録 15日",
+      "被相続人 名義 車 相続 行政書士",
+      "軽自動車 相続 名義変更 検査協会",
+    ],
+    tags: [
+      "自動車相続",
+      "移転登録",
+      "名義変更",
+      "軽自動車",
+      "遺産分割",
       "行政書士",
     ],
   },
