@@ -1,22 +1,10 @@
 import { LABOR_SETUP_COPY } from "@/lib/labor/setup-copy";
 import type { LangCode } from "@/config/languages";
-import type { EngagementItemKey } from "./engagement-pricing";
 
 export type EngagementCopy = {
   title: string; description: string; tagline: string; hero: string; lead: string;
   procedureCta: string; payrollCta: string; advisoryCta: string; consultationNote: string;
   procedureTitle: string; procedureBody: string; payrollTitle: string; payrollBody: string; quoted: string;
-  comparisonTitle: string; comparisonIntro: string; assumptions: string;
-  standard: string; item: string; standalone: string; advisory: string;
-  contract: string; noContract: string; ongoingContract: string; initialWork: string; enrollmentNote: string;
-  setup: string; notOrdered: string; initial: string; conditionalInitialNote: string; monthly: string; noMonthly: string;
-  payroll: string; payrollSeparate: string; payrollIncluded: string;
-  procedures: string; perRequest: string; consultation: string; consultationSeparate: string;
-  software: string; notIncluded: string; included: string;
-  billingNote: (amount: string) => string; setupNote: (standard: string, migration: string) => string; scopeNote: string;
-  breakdown: string; items: Record<EngagementItemKey, string>; optionalDocuments: string;
-  minimalTitle: string; minimal: (insurance: string, documents: string) => string;
-  discountTitle: string; discount: (setup: string, initial: string, monthly: string, total: string) => string; discountNote: string;
   workflowTitle: string; workflowBody: string; steps: { title: string; body: string }[]; procedureWorkflow: string;
   faqs: { q: string; a: string }[];
 };
@@ -24,7 +12,7 @@ export type EngagementCopy = {
 const JA: EngagementCopy = {
   consultationNote: "初回相談（60分）無料",
   title: "入退社の手続き・給与計算｜顧問契約なしでも対応｜文京区の四葉社会保険労務士事務所",
-  description: "文京区の四葉社会保険労務士事務所。入退社の手続きや毎月の給与計算を、顧問契約なしでもご依頼いただけます。社長1人・従業員1人のモデルで、手続きのみと顧問の費用を比較。freee人事労務と共有フォルダで資料のやり取りもスムーズに。",
+  description: "文京区の四葉社会保険労務士事務所。入退社の手続きや毎月の給与計算を、顧問契約なしでもご依頼いただけます。freee人事労務と共有フォルダで資料のやり取りもスムーズに。",
   tagline: "小さな会社にも、人事部を", hero: "入退社の手続きも、毎月の給与計算も。必要な業務から頼めます。",
   lead: "「入社1名の手続きだけ」「給与計算を毎月お願いしたい」「労務相談まで含めて任せたい」。四葉社会保険労務士事務所では、顧問契約なしのご依頼から、給与・手続き・相談を含む継続サポートまで、会社に合った頼み方を選べます。必要な業務と費用を、着手前にお見積もりします。",
   procedureCta: "入退社の手続きを相談する", payrollCta: "給与計算だけを相談する", advisoryCta: "顧問の内容・料金を見る",
@@ -33,27 +21,6 @@ const JA: EngagementCopy = {
   payrollTitle: "給与計算だけの継続依頼も承ります。",
   payrollBody: "顧問契約を結ばず、毎月の給与計算だけを任せることもできます。人数、締日・支払日、給与体系、勤怠データの受け渡し方法などを確認し、初期費用と毎月の費用をご案内します。保険の手続きや継続的な労務相談を含める場合は、依頼範囲を分けてお見積もりします。",
   quoted: "個別見積もり",
-  comparisonTitle: "社長1人・従業員1人の会社なら。手続きだけと、顧問を比較。",
-  comparisonIntro: "はじめて社員を迎える会社で、保険の新規加入、雇用書類・規程の整備まで依頼するモデルです。必要な業務は会社ごとに異なり、この人数や組み合わせ以外でもご相談いただけます。",
-  assumptions: "モデルの前提：会社の社会保険・労働保険を新規に適用し、社長と従業員の2名を社会保険、従業員1名を雇用保険の手続対象とした場合。扶養の申請は含みません。個別の保険適用・必要手続きは社会保険労務士が確認します。金額はすべて税込です。",
-  standard: "標準料金で比較", item: "比較項目", standalone: "手続き・書類整備だけ", advisory: "顧問として継続サポート",
-  contract: "顧問契約", noContract: "不要", ongoingContract: "継続契約", initialWork: "初期の保険手続き・雇用書類・規程整備", enrollmentNote: "対象者の資格取得は月額に含む",
-  setup: "freee人事労務の標準導入", notOrdered: "この例では依頼なし", initial: "初期費用合計", monthly: "毎月の費用", noMonthly: "月額顧問料なし",
-  conditionalInitialNote: "括弧内は、一定期間の顧問契約により標準導入費が無料になる場合の金額です。",
-  payroll: "毎月の給与計算・給与明細", payrollSeparate: "含まない。単独での継続依頼は別途見積もり", payrollIncluded: "給与計算対象３名まで含む（1〜3名の人数帯）",
-  procedures: "継続契約後の通常の入退社・扶養変更など", perRequest: "依頼の都度お見積もり", consultation: "日常の労務相談", consultationSeparate: "継続的な相談は別途",
-  software: "freee人事労務スタンダード・LINE打刻の利用料", notIncluded: "含まない", included: "月額に含む",
-  billingNote: amount => `顧問の初期費用には月額分を含みません。月額1か月分を合わせた費用の目安は${amount}（税込）です。日割りや請求時期は契約内容によります。公的保険料・実費は別途です。`,
-  setupNote: (standard, migration) => `顧問のfreee標準導入${standard}は、新規導入・既存データの移行なし・標準的な給与と勤怠を前提にしています。運用設計・移行を伴う初期導入は${migration}〜（税込）です。`,
-  scopeNote: "手続きのみの場合も、手続きに必要な聞き取りと確認は行います。顧問の通常業務の範囲と、例外的な大量入退社・過去給与修正などの扱いは、料金ページと契約前のお見積もりでご案内します。",
-  breakdown: "初期業務の内訳",
-  items: { socialSetup: "社会保険 新規適用", laborSetup: "労働保険 新規適用・雇用保険 適用事業所設置", premiumDeclaration: "労働保険 概算保険料申告", socialEnrollment: "社会保険 資格取得・2名", employmentEnrollment: "雇用保険 資格取得・1名", employmentTerms: "労働条件通知書兼雇用契約書・1名分", wageRules: "賃金規程 作成", harassmentRules: "ハラスメント防止規程 作成", overtimeAgreement: "36協定 新規作成・届出" },
-  optionalDocuments: "規程作成や36協定は、このモデルで依頼する業務です。すべての会社に一律に必要という意味ではありません。",
-  minimalTitle: "必要な手続きだけでも頼めます。",
-  minimal: (insurance, documents) => `このモデルのうち、会社の保険新規適用・概算保険料申告と、上記2名／1名の資格取得だけを依頼する場合は${insurance}（税込）です。雇用書類・規程整備${documents}（税込）は含みません。既に保険加入済みの会社の入退社1名の料金とは異なります。`,
-  discountTitle: "個別条件を適用したモデル見積",
-  discount: (setup, initial, monthly, total) => `上記の顧問モデルで、標準導入費${setup}に個別割引を適用した場合、初期費用は${initial}（税込）、月額は${monthly}（税込）です。月額1か月分を合わせた費用の目安は${total}（税込）です。`,
-  discountNote: "個別に合意した条件を示すモデル例です。標準導入費の一律無料化や、すべてのお客様への割引を示すものではありません。実際の業務範囲・料金・割引条件は、着手前のお見積もりでご案内します。",
   workflowTitle: "freeeと共有フォルダで、毎月のやり取りを簡単に。",
   workflowBody: "給与計算を継続してご依頼いただく場合は、freee人事労務で従業員情報・勤怠・給与を管理します。必要書類や手続きの控えは、関係者だけがアクセスできる共有フォルダで整理。何を提出したか、何が不足しているか、どこまで進んでいるかを分かりやすくし、資料の送り直しや探す手間を減らします。",
   steps: [{ title: "会社が情報をそろえる", body: "入退社情報や必要書類を共有し、勤怠を確認・確定。" }, { title: "四葉が計算・手続きを進める", body: "資料の内容を確認し、依頼範囲に応じた給与計算・書類作成・提出。" }, { title: "会社が最終承認し、控えを受け取る", body: "給与計算結果は会社が最終承認。手続きの控えや完了状況を共有。" }],
@@ -61,8 +28,7 @@ const JA: EngagementCopy = {
   faqs: [
     { q: "顧問契約なしで、入退社の手続きだけ頼めますか？", a: "はい。入社・退社1名の手続きや扶養家族の変更など、必要な業務だけご依頼いただけます。会社の新規加入からのご相談も可能です。状況と必要書類を確認してお見積もりします。" },
     { q: "給与計算だけを毎月お願いできますか？", a: "はい。顧問契約なしで給与計算のみを継続してご依頼いただけます。人数や給与体系、勤怠の受け渡し方法を確認し、初期費用と月額をご案内します。保険手続きや継続的な労務相談を追加する場合は別途お見積もりします。" },
-    { q: "社長1人・従業員1人の会社だけが対象ですか？", a: "いいえ。掲載しているのは費用と依頼範囲を比較するためのモデルです。ほかの人数・体制でもご相談いただけます。顧問の月額は給与計算対象人数などに応じてご案内します。" },
-    { q: "freeeの初期設定は無料ですか？", a: `標準導入は55,000円（税込）です。${LABOR_SETUP_COPY.ja.standardWaiverNote} 運用設計・データ移行を伴う場合は88,000円〜（税込）です。掲載した割引例は個別条件によるもので、一律無料ではありません。給与計算単独の導入条件・費用は別途お見積もりします。` },
+    { q: "freeeの初期設定は無料ですか？", a: `標準導入は55,000円（税込）です。${LABOR_SETUP_COPY.ja.standardWaiverNote} 運用設計・データ移行を伴う場合は88,000円〜（税込）です。給与計算単独の導入条件・費用は別途お見積もりします。` },
     { q: "会社側では何を行いますか？", a: "必要な従業員情報・変更情報の提供、勤怠の確認・確定、給与計算結果の最終承認をお願いします。四葉は依頼範囲に応じて計算・内容確認・手続きを担当します。" },
   ],
 };
@@ -70,7 +36,7 @@ const JA: EngagementCopy = {
 const EN: EngagementCopy = {
   consultationNote: "Free initial consultation (up to 60 minutes)",
   title: "Onboarding, offboarding & payroll without a retainer | Bunkyo, Tokyo | 四葉社会保険労務士事務所",
-  description: "Commission employee insurance filings or monthly payroll without an advisory retainer. Compare standalone work and ongoing advisory support using a company with one director and one employee. Work efficiently with freee HR and access-controlled shared folders.",
+  description: "Commission employee insurance filings or monthly payroll without an advisory retainer. Work efficiently with freee HR and access-controlled shared folders.",
   tagline: "An HR department for small businesses, too", hero: "Employee filings and monthly payroll. Start with the work you need.",
   lead: "A filing for one new employee, monthly payroll, or ongoing labor advice: 四葉社会保険労務士事務所 offers standalone engagements and ongoing support covering payroll, filings and advice. Choose the scope that suits your company. We quote the work and fees before starting.",
   procedureCta: "Discuss employee filings", payrollCta: "Discuss payroll only", advisoryCta: "Compare advisory scope & fees",
@@ -79,27 +45,6 @@ const EN: EngagementCopy = {
   payrollTitle: "Monthly payroll can be commissioned on its own.",
   payrollBody: "You can outsource monthly payroll without an advisory retainer. We confirm headcount, cutoff and payment dates, pay arrangements and attendance-data handover, then quote initial and monthly fees. Insurance filings and ongoing labor advice are quoted as a separate scope if required.",
   quoted: "Individual quotation",
-  comparisonTitle: "One director and one employee: compare standalone work with an advisory retainer.",
-  comparisonIntro: "This model assumes a company hiring its first employee and commissioning initial insurance enrollment, employment documents and workplace rules. Requirements vary by company; other headcounts and combinations of work are welcome.",
-  assumptions: "Model assumptions: initial social and labor insurance enrollment for the company; social insurance filings for the director and employee (2 people), and employment insurance for the employee (1 person). Dependent applications are excluded. A certified labor consultant confirms actual eligibility and required filings. All prices include Japanese consumption tax.",
-  standard: "Standard-fee comparison", item: "Scope / fee", standalone: "Filings & documents only", advisory: "Ongoing advisory support",
-  contract: "Advisory retainer", noContract: "Not required", ongoingContract: "Ongoing contract", initialWork: "Initial insurance filings, employment documents & rules", enrollmentNote: "Individual enrollment filings are included in the monthly fee",
-  setup: "Standard freee HR setup", notOrdered: "Not commissioned in this example", initial: "Total initial fees", monthly: "Monthly fees", noMonthly: "No monthly advisory fee",
-  conditionalInitialNote: "The amount in parentheses applies when the standard setup fee is waived under an advisory contract for a specified period.",
-  payroll: "Monthly payroll & payslips", payrollSeparate: "Not included; ongoing payroll-only work is quoted separately", payrollIncluded: "Includes up to 3 payroll recipients (the 1–3 recipient band)",
-  procedures: "Routine onboarding, offboarding & dependent changes after the ongoing contract starts", perRequest: "Quoted per engagement", consultation: "Day-to-day labor advice", consultationSeparate: "Ongoing advice is separate",
-  software: "freee HR Standard & LINE time-clock subscription fees", notIncluded: "Not included", included: "Included in the monthly fee",
-  billingNote: amount => `Initial advisory fees exclude the monthly fee. Initial fees plus one month total approximately ${amount} (tax included). Proration and billing dates depend on the contract. Statutory insurance premiums and expenses are extra.`,
-  setupNote: (standard, migration) => `Standard freee setup under the advisory plan is ${standard}, assuming a new account, no existing-data migration and standard payroll and attendance arrangements. Setup involving workflow design or migration starts at ${migration} (tax included).`,
-  scopeNote: "Standalone filings also include the interviews and checks needed for the work. The pricing page and pre-contract quotation explain routine advisory scope and exceptions such as unusually large staffing changes or corrections to past payroll.",
-  breakdown: "Initial work: fee breakdown",
-  items: { socialSetup: "Initial social insurance enrollment for the company", laborSetup: "Initial labor insurance & employment insurance establishment registration", premiumDeclaration: "Estimated labor insurance premium declaration", socialEnrollment: "Social insurance enrollment: 2 people", employmentEnrollment: "Employment insurance enrollment: 1 person", employmentTerms: "Employment terms notice / agreement: 1 employee", wageRules: "Wage rules", harassmentRules: "Harassment prevention rules", overtimeAgreement: "New Article 36 overtime agreement: preparation & filing" },
-  optionalDocuments: "The rules and Article 36 agreement are commissioned in this model. They are not described as universally required for every company.",
-  minimalTitle: "You can select just the filings you need.",
-  minimal: (insurance, documents) => `For this model, initial company insurance enrollment, the estimated-premium declaration and the individual enrollment filings for the 2 / 1 people above total ${insurance} (tax included). Employment documents and rules costing ${documents} are excluded. This is not the price for one employee joining or leaving an already-insured company.`,
-  discountTitle: "Model quotation with individually agreed conditions",
-  discount: (setup, initial, monthly, total) => `If an individual discount covers the ${setup} standard setup fee in the advisory model above, initial fees are ${initial} and monthly fees are ${monthly}. Initial fees plus one month total approximately ${total}. All amounts include tax.`,
-  discountNote: "This model illustrates individually agreed conditions. It does not mean setup is free for everyone or that every client receives a discount. We confirm actual scope, fees and any discount conditions in the quotation before starting.",
   workflowTitle: "Simpler monthly exchanges with freee and shared folders.",
   workflowBody: "For ongoing payroll engagements, freee HR manages employee, attendance and payroll data. Necessary documents and filing copies are organized in shared folders accessible only to authorized people. Clear submission, missing-document and progress information helps reduce repeated sending and searching.",
   steps: [{ title: "Your company prepares the information", body: "Share staffing changes and documents, then review and finalize attendance." }, { title: "We calculate and process", body: "We check the documents, calculate payroll and prepare and submit filings within the agreed scope." }, { title: "Your company approves and receives copies", body: "Your company gives final payroll approval. We share filing copies and completion status." }],
@@ -107,8 +52,7 @@ const EN: EngagementCopy = {
   faqs: [
     { q: "Can I commission employee filings without an advisory retainer?", a: "Yes. You can commission filings for one employee joining or leaving, dependent changes, or initial company insurance enrollment. We check the circumstances and required documents before quoting." },
     { q: "Can I commission only monthly payroll?", a: "Yes. Ongoing payroll-only work is available without an advisory retainer. We confirm headcount, pay arrangements and attendance-data handover, then quote initial and monthly fees. Insurance filings or ongoing labor advice are quoted separately if added." },
-    { q: "Is this only for a company with one director and one employee?", a: "No. This is a model for comparing scope and fees. Other headcounts and company structures are welcome. Advisory monthly fees depend on payroll recipient numbers and the agreed scope." },
-    { q: "Is freee setup free?", a: `Standard setup is ¥55,000 including tax. ${LABOR_SETUP_COPY.en.standardWaiverNote} Setup with workflow design or data migration starts at ¥88,000 including tax. The discount example reflects individual conditions, not universally free setup. Payroll-only setup conditions and fees are quoted separately.` },
+    { q: "Is freee setup free?", a: `Standard setup is ¥55,000 including tax. ${LABOR_SETUP_COPY.en.standardWaiverNote} Setup with workflow design or data migration starts at ¥88,000 including tax. Payroll-only setup conditions and fees are quoted separately.` },
     { q: "What does our company need to do?", a: "Provide employee information and changes, review and finalize attendance, and give final payroll approval. We calculate, check and handle filings within the agreed scope." },
   ],
 };
@@ -116,7 +60,7 @@ const EN: EngagementCopy = {
 const ZH_TW: EngagementCopy = {
   consultationNote: "首次諮詢（60分鐘內）免費",
   title: "入離職手續・薪資計算｜無須顧問契約｜文京區・四葉社会保険労務士事務所",
-  description: "四葉社会保険労務士事務所位於文京區，無須顧問契約即可委託入離職手續或每月薪資計算。以社長1人、員工1人的公司為例，比較單次委託與顧問費用，運用freee人事勞務及權限管理的共享資料夾簡化資料交接。",
+  description: "四葉社会保険労務士事務所位於文京區，無須顧問契約即可委託入離職手續或每月薪資計算。運用freee人事勞務及權限管理的共享資料夾簡化資料交接。",
   tagline: "讓小公司也有人事部", hero: "入離職手續、每月薪資計算，從您需要的業務開始委託。",
   lead: "「只辦1名員工的入職手續」「每月委託薪資計算」「連同勞務諮詢一起交給專家」。四葉社会保険労務士事務所提供無須顧問契約的單項委託，也提供包含薪資、手續與諮詢的持續支援。依公司需要選擇範圍，開始工作前提供報價。",
   procedureCta: "諮詢入離職手續", payrollCta: "諮詢薪資計算單項委託", advisoryCta: "查看顧問內容與費用",
@@ -125,27 +69,6 @@ const ZH_TW: EngagementCopy = {
   payrollTitle: "也接受僅委託每月薪資計算。",
   payrollBody: "無須簽訂顧問契約，即可持續委託每月薪資計算。確認人數、結算日與發薪日、薪資制度、出勤資料交接方式後，說明初期及每月費用。若需加入保險手續或持續勞務諮詢，將分別列明範圍並報價。",
   quoted: "個別報價",
-  comparisonTitle: "社長1人、員工1人的公司：比較單次委託與顧問方案。",
-  comparisonIntro: "以首次聘用員工的公司，委託保險新規適用、僱用文件與規章整備為模型。每家公司所需業務不同，其他人數與組合亦歡迎諮詢。",
-  assumptions: "模型前提：公司新辦社會保險與勞動保險適用；社長及員工共2人為社會保險手續對象，員工1人為雇用保險手續對象。不含被扶養者申請。實際適用與必要手續由社會保險勞務士確認。所有金額均含日本消費稅。",
-  standard: "以標準費用比較", item: "比較項目", standalone: "僅辦手續與文件整備", advisory: "顧問持續支援",
-  contract: "顧問契約", noContract: "無須", ongoingContract: "持續契約", initialWork: "初期保險手續・僱用文件・規章整備", enrollmentNote: "對象人員的資格取得包含於月費",
-  setup: "freee人事勞務標準導入", notOrdered: "本例未委託", initial: "初期費用合計", monthly: "每月費用", noMonthly: "無每月顧問費",
-  conditionalInitialNote: "括號內為簽訂一定期間的顧問契約、免收標準導入費時的金額。",
-  payroll: "每月薪資計算與薪資明細", payrollSeparate: "不含；薪資計算單項持續委託另行報價", payrollIncluded: "包含最多3人的薪資計算（1～3人級距）",
-  procedures: "持續簽約後的一般入離職・被扶養者變更等", perRequest: "每次委託另行報價", consultation: "日常勞務諮詢", consultationSeparate: "持續諮詢另計",
-  software: "freee人事勞務Standard・LINE打卡使用費", notIncluded: "不含", included: "包含於月費",
-  billingNote: amount => `顧問初期費用不含月費。加計1個月月費的參考合計為${amount}（含稅）。按日計費與請款時間依契約約定。法定保險費與實費另計。`,
-  setupNote: (standard, migration) => `顧問方案的freee標準導入費${standard}，以全新導入、無既有資料遷移及一般薪資與出勤制度為前提。涉及流程設計或資料遷移的初期導入為${migration}起（含稅）。`,
-  scopeNote: "單次手續委託亦會進行所需的訪談與確認。顧問的一般業務範圍，以及大量入離職、過去薪資修正等例外情況，將於費用頁及簽約前報價中說明。",
-  breakdown: "初期業務明細",
-  items: { socialSetup: "社會保險 新規適用", laborSetup: "勞動保險 新規適用・雇用保險 適用事業所設置", premiumDeclaration: "勞動保險 概算保險費申報", socialEnrollment: "社會保險 資格取得・2人", employmentEnrollment: "雇用保險 資格取得・1人", employmentTerms: "勞動條件通知書兼僱用契約書・1名員工", wageRules: "薪資規章製作", harassmentRules: "防止騷擾規章製作", overtimeAgreement: "36協定 新訂・申報" },
-  optionalDocuments: "規章與36協定為本模型委託的業務，並非表示所有公司均一律需要。",
-  minimalTitle: "也可只委託必要手續。",
-  minimal: (insurance, documents) => `本模型若僅委託公司保險新規適用、概算保險費申報及上述2人／1人的資格取得，費用為${insurance}（含稅）。不含僱用文件及規章整備${documents}（含稅）。這並非已加入保險公司的1名員工入離職費用。`,
-  discountTitle: "適用個別條件的模型報價",
-  discount: (setup, initial, monthly, total) => `上述顧問模型若對標準導入費${setup}適用個別折扣，初期費用為${initial}、月費為${monthly}。加計1個月月費的參考合計為${total}，均含稅。`,
-  discountNote: "本模型呈現個別議定條件，並非標準導入一律免費，也非所有客戶均適用折扣。實際業務範圍、費用及折扣條件，將於開始工作前的報價中說明。",
   workflowTitle: "運用freee與共享資料夾，簡化每月資料往來。",
   workflowBody: "持續委託薪資計算時，以freee人事勞務管理員工、出勤與薪資資料。必要文件與申報副本整理於僅限獲授權人員存取的共享資料夾。清楚掌握已交資料、缺件與進度，減少重複寄送與尋找資料的時間。",
   steps: [{ title: "公司備妥資料", body: "分享入離職資訊與必要文件，確認並確定出勤資料。" }, { title: "四葉計算與辦理手續", body: "確認文件內容，依委託範圍計算薪資、製作並提交文件。" }, { title: "公司最終核准並收取副本", body: "薪資結果由公司最終核准，分享手續副本與完成狀態。" }],
@@ -153,8 +76,7 @@ const ZH_TW: EngagementCopy = {
   faqs: [
     { q: "無須顧問契約，也能只委託入離職手續嗎？", a: "可以。1名員工的入離職、被扶養家屬變更等，均可依需要委託。公司首次加入保險亦可諮詢，確認情況與所需文件後報價。" },
     { q: "可以只委託每月薪資計算嗎？", a: "可以。無須顧問契約即可持續委託薪資計算。確認人數、薪資制度與出勤資料交接方式後，提供初期及月費報價。另加保險手續或持續勞務諮詢時，另行報價。" },
-    { q: "只接受社長1人、員工1人的公司嗎？", a: "不是。此為比較費用與委託範圍的模型，其他人數與組織形式亦可諮詢。顧問月費依薪資計算對象人數等條件說明。" },
-    { q: "freee初期設定免費嗎？", a: `標準導入55,000日圓（含稅）。${LABOR_SETUP_COPY["zh-tw"].standardWaiverNote} 涉及流程設計或資料遷移時為88,000日圓起（含稅）。折扣範例依個別條件適用，並非一律免費。薪資計算單項委託的導入條件與費用另行報價。` },
+    { q: "freee初期設定免費嗎？", a: `標準導入55,000日圓（含稅）。${LABOR_SETUP_COPY["zh-tw"].standardWaiverNote} 涉及流程設計或資料遷移時為88,000日圓起（含稅）。薪資計算單項委託的導入條件與費用另行報價。` },
     { q: "公司需要負責哪些工作？", a: "請提供必要的員工資訊與異動，確認並確定出勤資料，最終核准薪資計算結果。四葉依委託範圍負責計算、內容確認與手續。" },
   ],
 };
@@ -162,7 +84,7 @@ const ZH_TW: EngagementCopy = {
 const ZH: EngagementCopy = {
   consultationNote: "首次咨询（60分钟内）免费",
   title: "入离职手续・工资计算｜无需顾问合同｜文京区・四葉社会保険労務士事務所",
-  description: "四葉社会保険労務士事務所位于文京区，无需顾问合同即可委托入离职手续或每月工资计算。以社长1人、员工1人的公司为例，比较单次委托与顾问费用，运用freee人事劳务及权限管理的共享文件夹简化资料交接。",
+  description: "四葉社会保険労務士事務所位于文京区，无需顾问合同即可委托入离职手续或每月工资计算。运用freee人事劳务及权限管理的共享文件夹简化资料交接。",
   tagline: "让小公司也有人事部", hero: "入离职手续、每月工资计算，从您需要的业务开始委托。",
   lead: "“只办1名员工的入职手续”“每月委托工资计算”“连同劳务咨询一起交给专家”。四葉社会保険労務士事務所提供无需顾问合同的单项委托，也提供包含工资、手续与咨询的持续支持。依公司需要选择范围，开始工作前提供报价。",
   procedureCta: "咨询入离职手续", payrollCta: "咨询工资计算单项委托", advisoryCta: "查看顾问内容与费用",
@@ -171,27 +93,6 @@ const ZH: EngagementCopy = {
   payrollTitle: "也接受仅委托每月工资计算。",
   payrollBody: "无需签订顾问合同，即可持续委托每月工资计算。确认人数、结算日与发薪日、工资制度、出勤资料交接方式后，说明初期及每月费用。若需加入保险手续或持续劳务咨询，将分别列明范围并报价。",
   quoted: "个别报价",
-  comparisonTitle: "社长1人、员工1人的公司：比较单次委托与顾问方案。",
-  comparisonIntro: "以首次聘用员工的公司，委托保险新规适用、雇用文件与规章整备为模型。每家公司所需业务不同，其他人数与组合亦欢迎咨询。",
-  assumptions: "模型前提：公司新办社会保险与劳动保险适用；社长及员工共2人为社会保险手续对象，员工1人为雇用保险手续对象。不含被扶养者申请。实际适用与必要手续由社会保险劳务士确认。所有金额均含日本消费税。",
-  standard: "以标准费用比较", item: "比较项目", standalone: "仅办手续与文件整备", advisory: "顾问持续支持",
-  contract: "顾问合同", noContract: "无需", ongoingContract: "持续合同", initialWork: "初期保险手续・雇用文件・规章整备", enrollmentNote: "对象人员的资格取得包含于月费",
-  setup: "freee人事劳务标准导入", notOrdered: "本例未委托", initial: "初期费用合计", monthly: "每月费用", noMonthly: "无每月顾问费",
-  conditionalInitialNote: "括号内为签订一定期限的顾问合同、免收标准导入费时的金额。",
-  payroll: "每月工资计算与工资明细", payrollSeparate: "不含；工资计算单项持续委托另行报价", payrollIncluded: "包含最多3人的工资计算（1～3人区间）",
-  procedures: "持续签约后的一般入离职・被扶养者变更等", perRequest: "每次委托另行报价", consultation: "日常劳务咨询", consultationSeparate: "持续咨询另计",
-  software: "freee人事劳务Standard・LINE打卡使用费", notIncluded: "不含", included: "包含于月费",
-  billingNote: amount => `顾问初期费用不含月费。加计1个月月费的参考合计为${amount}（含税）。按日计费与请款时间依合同约定。法定保险费与实费另计。`,
-  setupNote: (standard, migration) => `顾问方案的freee标准导入费${standard}，以全新导入、无既有数据迁移及一般工资与出勤制度为前提。涉及流程设计或数据迁移的初期导入为${migration}起（含税）。`,
-  scopeNote: "单次手续委托亦会进行所需的访谈与确认。顾问的一般业务范围，以及大量入离职、过去工资修正等例外情况，将于费用页及签约前报价中说明。",
-  breakdown: "初期业务明细",
-  items: { socialSetup: "社会保险 新规适用", laborSetup: "劳动保险 新规适用・雇用保险 适用事业所设置", premiumDeclaration: "劳动保险 概算保险费申报", socialEnrollment: "社会保险 资格取得・2人", employmentEnrollment: "雇用保险 资格取得・1人", employmentTerms: "劳动条件通知书兼雇用合同书・1名员工", wageRules: "工资规章制作", harassmentRules: "防止骚扰规章制作", overtimeAgreement: "36协定 新订・申报" },
-  optionalDocuments: "规章与36协定为本模型委托的业务，并非表示所有公司均一律需要。",
-  minimalTitle: "也可只委托必要手续。",
-  minimal: (insurance, documents) => `本模型若仅委托公司保险新规适用、概算保险费申报及上述2人／1人的资格取得，费用为${insurance}（含税）。不含雇用文件及规章整备${documents}（含税）。这并非已加入保险公司的1名员工入离职费用。`,
-  discountTitle: "适用个别条件的模型报价",
-  discount: (setup, initial, monthly, total) => `上述顾问模型若对标准导入费${setup}适用个别折扣，初期费用为${initial}、月费为${monthly}。加计1个月月费的参考合计为${total}，均含税。`,
-  discountNote: "本模型呈现个别议定条件，并非标准导入一律免费，也非所有客户均适用折扣。实际业务范围、费用及折扣条件，将于开始工作前的报价中说明。",
   workflowTitle: "运用freee与共享文件夹，简化每月资料往来。",
   workflowBody: "持续委托工资计算时，以freee人事劳务管理员工、出勤与工资资料。必要文件与申报副本整理于仅限获授权人员访问的共享文件夹。清楚掌握已交资料、缺件与进度，减少重复寄送与寻找资料的时间。",
   steps: [{ title: "公司备妥资料", body: "分享入离职信息与必要文件，确认并确定出勤资料。" }, { title: "四叶计算与办理手续", body: "确认文件内容，依委托范围计算工资、制作并提交文件。" }, { title: "公司最终批准并收取副本", body: "工资结果由公司最终批准，分享手续副本与完成状态。" }],
@@ -199,8 +100,7 @@ const ZH: EngagementCopy = {
   faqs: [
     { q: "无需顾问合同，也能只委托入离职手续吗？", a: "可以。1名员工的入离职、被扶养家属变更等，均可依需要委托。公司首次加入保险亦可咨询，确认情况与所需文件后报价。" },
     { q: "可以只委托每月工资计算吗？", a: "可以。无需顾问合同即可持续委托工资计算。确认人数、工资制度与出勤资料交接方式后，提供初期及月费报价。另加保险手续或持续劳务咨询时，另行报价。" },
-    { q: "只接受社长1人、员工1人的公司吗？", a: "不是。此为比较费用与委托范围的模型，其他人数与组织形式亦可咨询。顾问月费依工资计算对象人数等条件说明。" },
-    { q: "freee初期设置免费吗？", a: `标准导入55,000日元（含税）。${LABOR_SETUP_COPY.zh.standardWaiverNote} 涉及流程设计或数据迁移时为88,000日元起（含税）。折扣范例依个别条件适用，并非一律免费。工资计算单项委托的导入条件与费用另行报价。` },
+    { q: "freee初期设置免费吗？", a: `标准导入55,000日元（含税）。${LABOR_SETUP_COPY.zh.standardWaiverNote} 涉及流程设计或数据迁移时为88,000日元起（含税）。工资计算单项委托的导入条件与费用另行报价。` },
     { q: "公司需要负责哪些工作？", a: "请提供必要的员工信息与变动，确认并确定出勤资料，最终批准工资计算结果。四叶依委托范围负责计算、内容确认与手续。" },
   ],
 };
