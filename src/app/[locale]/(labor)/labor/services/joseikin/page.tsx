@@ -8,7 +8,6 @@ import Link from "next/link";
 import { LaborServicePage, LaborH2 } from "@/components/shared/LaborServicePage";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const locale = await getRequestLocale();
   return buildPageMetadata({
     businessKey: "labor",
     title: "雇用関係助成金の申請｜四葉社会保険労務士事務所",
@@ -16,8 +15,14 @@ export async function generateMetadata(): Promise<Metadata> {
       "雇用関係の助成金（キャリアアップ助成金等）の申請を、文京区の四葉社会保険労務士事務所が支援します。要件確認から計画届、支給申請まで。事業の補助金（経済産業省系）は行政書士の領域のため、範囲の違いからご案内します。",
     path: "/labor/services/joseikin",
     keywords: ["助成金 申請 社労士", "キャリアアップ助成金 代行"],
-    locale,
+    // 【2026-09-22 宣言と実体の一致】本文が日本語のみのため hreflang を ja に限定する
+    // （sitemap.ts の locales:["ja"] と一致＝存在しないロケールURLを広告しない）。
+    // 【2026-08-10 canonical是正】ja 限定のページはロケール接頭辞つきURLでも同じ日本語本文を
+    // 返すため、canonical は常に ja を指す（手本＝/legal/services/oyanakiato・/minpaku）。
+    // リクエストロケールを渡すと /en/・/zh/・/zh-tw/ が自己canonicalの重複URLになる。
+    locale: "ja",
     absoluteTitle: true,
+    availableLocales: ["ja"],
   });
 }
 

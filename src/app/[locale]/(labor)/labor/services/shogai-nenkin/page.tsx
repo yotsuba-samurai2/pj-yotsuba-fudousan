@@ -15,7 +15,6 @@ import { LaborServicePage, LaborH2 } from "@/components/shared/LaborServicePage"
 import { Placeholder } from "@/components/shared/Placeholder";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const locale = await getRequestLocale();
   return buildPageMetadata({
     businessKey: "labor",
     title: "障害年金の裁定請求｜四葉社会保険労務士事務所",
@@ -29,7 +28,12 @@ export async function generateMetadata(): Promise<Metadata> {
       "親なき後 障害年金",
       "障害年金 中国語 相談",
     ],
-    locale,
+    // 【2026-09-22 宣言と実体の一致】本文が日本語のみのため hreflang を ja に限定する
+    // （sitemap.ts の locales:["ja"] と一致＝存在しないロケールURLを広告しない）。
+    // 【2026-08-10 canonical是正】ja 限定のページはロケール接頭辞つきURLでも同じ日本語本文を
+    // 返すため、canonical は常に ja を指す（手本＝/legal/services/oyanakiato・/minpaku）。
+    // リクエストロケールを渡すと /en/・/zh/・/zh-tw/ が自己canonicalの重複URLになる。
+    locale: "ja",
     absoluteTitle: true,
     availableLocales: ["ja"],
   });

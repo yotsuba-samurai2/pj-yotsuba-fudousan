@@ -88,3 +88,67 @@ describe("STATIC_LABOR の中身", () => {
     }
   });
 });
+
+/**
+ * 2026-09-22 追加。STATIC_LABOR の `locales` と、ページ側 `buildPageMetadata` の
+ * `availableLocales` が食い違っていないことの番人。
+ *
+ * 発見した実害：
+ *   ・/labor/services/joseikin と /labor/services/jinin-kijun-roumu は本文が日本語のみなのに
+ *     `availableLocales` 未指定＝4言語の hreflang を出し、sitemap は `["ja"]` だった。
+ *     訳の無いURLを代替ページとしてGoogleに申告していた。
+ *   ・/labor/about・/labor/contact・/labor/column は逆に、本文は4ロケールとも訳出済みで
+ *     hreflang も4言語なのに、sitemap だけ `["ja"]` に狭まっていた。
+ *
+ * STATIC_LABOR のコメントが求めている「ページ側の availableLocales と本表の両方を同時に直す」を
+ * 人間の注意力ではなくテストで担保する。
+ */
+describe("STATIC_LABOR の locales とページの availableLocales が一致する", () => {
+  const ALL = ["ja", "en", "zh-tw", "zh"] as const;
+  const block = SRC.slice(SRC.indexOf("const STATIC_LABOR"), SRC.indexOf("/** 社労士サイトマップ"));
+
+  /** そのルートの page.tsx と同階層の .tsx（metadata を切り出している実装があるため）をまとめて読む */
+  function readRouteSource(routePath: string): string {
+    const dir = path.join(process.cwd(), "src/app/[locale]/(labor)", routePath);
+    return io
+      .readdirSync(dir)
+      .filter((name) => name.endsWith(".tsx"))
+      .map((name) => io.readFileSync(path.join(dir, name), "utf-8"))
+      .join("\n");
+  }
+
+  const entries = [...block.matchAll(/\{ path: "([^"]+)".*?locales: \[([^\]]*)\]/g)].map((m) => ({
+    path: m[1],
+    locales: m[2].split(",").map((s) => s.trim().replace(/"/g, "")).filter(Boolean),
+  }));
+
+  it("STATIC_LABOR の全エントリを走査できている", () => {
+    expect(entries.length).toBeGreaterThanOrEqual(15);
+  });
+
+  for (const entry of entries) {
+    it(`${entry.path}`, () => {
+      const src = readRouteSource(entry.path);
+      const literal = /availableLocales:\s*\[([^\]]*)\]/.exec(src);
+      const isDynamic = !literal && /availableLocales[,\s]*[,}]/.test(src);
+      if (isDynamic) {
+        // 実行時にDBから決めるページ（コラム一覧＝getColumnPageLocales）。静的には突合できない。
+        expect(entry.locales.length).toBeGreaterThan(0);
+        return;
+      }
+      const advertised = literal
+        ? literal[1].split(",").map((s) => s.trim().replace(/"/g, "")).filter(Boolean)
+        : [...ALL]; // availableLocales 未指定＝全4ロケールの hreflang を出す
+      expect([...entry.locales].sort()).toEqual([...advertised].sort());
+    });
+  }
+
+  it("ja 限定のページは canonical も ja に固定している（自己canonicalの重複URLを作らない）", () => {
+    const jaOnly = entries.filter((e) => e.locales.length === 1 && e.locales[0] === "ja");
+    expect(jaOnly.length).toBeGreaterThan(0);
+    for (const entry of jaOnly) {
+      const src = readRouteSource(entry.path);
+      expect(src, `${entry.path} に locale: "ja" が無い`).toContain('locale: "ja"');
+    }
+  });
+});

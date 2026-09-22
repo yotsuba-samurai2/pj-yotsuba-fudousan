@@ -26,7 +26,6 @@ import { LaborServicePage, LaborH2 } from "@/components/shared/LaborServicePage"
 const LAST_UPDATED_JA = "2026年7月29日";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const locale = await getRequestLocale();
   return buildPageMetadata({
     businessKey: "labor",
     title: "障害福祉事業所の人員基準と労務｜四葉社会保険労務士事務所",
@@ -39,8 +38,14 @@ export async function generateMetadata(): Promise<Metadata> {
       "人員配置基準 雇用契約",
       "管理者 サービス管理責任者 兼務 労務",
     ],
-    locale,
+    // 【2026-09-22 宣言と実体の一致】本文が日本語のみのため hreflang を ja に限定する
+    // （sitemap.ts の locales:["ja"] と一致＝存在しないロケールURLを広告しない）。
+    // 【2026-08-10 canonical是正】ja 限定のページはロケール接頭辞つきURLでも同じ日本語本文を
+    // 返すため、canonical は常に ja を指す（手本＝/legal/services/oyanakiato・/minpaku）。
+    // リクエストロケールを渡すと /en/・/zh/・/zh-tw/ が自己canonicalの重複URLになる。
+    locale: "ja",
     absoluteTitle: true,
+    availableLocales: ["ja"],
   });
 }
 

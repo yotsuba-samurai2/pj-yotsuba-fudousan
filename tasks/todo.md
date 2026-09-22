@@ -423,3 +423,55 @@ Only a task-owned loopback database receives fixture writes. No production DB wr
 - CSPは `base-uri 'self'; object-src 'none'; frame-ancestors 'self'` のみ。script-src等を足していないため、同一オリジンiframe・cdnjs・国土地理院タイル・Google Fontsはいずれも許可範囲内（配信ヘッダを実測）。
 - 検証環境の制約：この作業環境の外向き通信ではcdnjsと国土地理院タイルが遮断されるため、Leafletは同一バージョン（1.9.4）をnpmから、タイルはダミー画像を差し込んで描画確認した。区域ポリゴン8件（全域4・号分かれ4）・校名ラベル4件・学校カード4件は実物で確認済み。**本番のタイル画像そのものはPreview/本番で要確認。**
 - ローカルbuildは使い捨てPostgresを立てて完走（417ページ）。本番DBは触っていない。
+
+## 2026-09-22 /labor の多言語ずれ是正（指示書の事実確認＋PR-1・PR-2）
+
+- [x] 指示書「社労士サイト（/labor）の多言語ずれの是正 2026-09-22」の事実関係をコードで突合
+- [x] 不具合A（hreflang）：joseikin・jinin-kijun-roumu に `availableLocales: ["ja"]` を付ける
+- [x] 不具合Aの取りこぼし：ja 限定3ページの canonical を `locale: "ja"` に固定
+- [x] 不具合B（sitemap）：/labor/about・/labor/contact を4ロケールに是正
+- [x] 指示書の誤り訂正：/labor/column も4ロケールに是正（記事はjaのみ、は事実に反する）
+- [x] STATIC_LABOR の locales とページの availableLocales の一致をテストで固定
+- [x] 型検査・変更ファイルlint・全テスト1050件・本番ビルドを通す
+- [x] ビルド成果物のHTMLで hreflang と canonical を4ロケール分実測
+- [ ] PR-3（3ページの4言語化）＝浦松の判断待ち
+- [ ] PRレビュー・マージ・本番反映（浦松の指示を待つ）
+
+### レビュー
+
+**指示書の事実確認（コードで突合）**
+
+| 指示書の主張 | 判定 | 根拠 |
+|---|---|---|
+| joseikin・jinin-kijun-roumu が `availableLocales` 未指定＝4言語のhreflangを広告 | 正しい | `src/lib/seo.ts` の `buildHreflang`：未指定＝`HREFLANG_ORDER` 全件 |
+| 3ページとも本文がJSX直書きの日本語 | 正しい | `COPY: Record<LangCode, …>` を持たない |
+| saiyo・kaigo-roumu が手本 | 正しい | saiyo＝同一ファイル内COPY、kaigo-roumu＝`src/lib/labor/kaigo-service-copy.ts` |
+| /labor/about・/labor/contact は訳済みなのに sitemap が ja 限定 | 正しい | contact＝`CONTACT_LABELS`/`CONTACT_INTRO` が4ロケール（ローカルビルドのHTMLで実測：H1が Contact／聯絡我們／联系我们）。about＝`scripts/backup/translations-*.json` の `labor.aboutPage` が4ロケール |
+| shogai-nenkin は「宣言は正しい」 | **誤り（半分）** | hreflangは正しいが、`locale`（リクエストロケール）を渡しており /en/・/zh/・/zh-tw/ が自己canonicalの重複URLになっていた |
+| /labor/column は「労務コラムは日本語のみ。現状で正しい」 | **誤り** | `labor-columns-seed.ts` の全114本が en / zh-tw / zh の訳を持ち、`locales: []`＝全ロケール公開。記事URLは既に4ロケールで sitemap に出ている |
+| /legal にも同じずれがあるか（未検証事項） | **ずれ無し** | ja先行の3ページとも `availableLocales: ["ja"]` ＋ `locale: "ja"` 済み |
+| hreflang は `hrefLang`（キャメルケース）で出力される | 正しい | ビルド成果物で `hrefLang="ja"` を確認（`hreflang=` は0件） |
+
+**やったこと**
+
+- ja限定3ページ（joseikin・jinin-kijun-roumu・shogai-nenkin）に `availableLocales: ["ja"]` と `locale: "ja"` を入れた。
+  指示書は `availableLocales` だけを足す指示だったが、それでは canonical の重複が残る。
+  リポジトリには2026-08-10（PR#210・#211）に確立した型があり、/legal・/toushi・/minpaku 等の ja 限定ページは
+  いずれも `locale: "ja"` を明示している。同じ型に揃えた。**本文は1字も変えていない。**
+- sitemap の /labor/about・/labor/contact・/labor/column を4ロケールに是正。
+- `sitemap-labor.test.ts` に、STATIC_LABOR の `locales` とページ側 `availableLocales` の一致を全エントリで突合する番人を追加した。
+  ja限定ページが `locale: "ja"` を持つことも同時に検査する。**人間の注意力に頼らない形にしたのが今回の本体。**
+
+**検証**
+
+- `tsc --noEmit` ＝ 0件／変更5ファイルの `eslint` ＝ 0件／`vitest run` ＝ 72ファイル1050件すべて通過
+- 追加テストが効くことを確認：/labor/about を `["ja"]` に戻すと2件が落ちる
+- 使い捨てPostgres（migrate deploy 済み・本番DBは未接触）で `NODE_ENV=production npm run build` を完走
+- ビルド成果物のHTMLで実測（ja・en・zh-tw・zh の12通り）：3ページとも `hrefLang="ja"` と `hrefLang="x-default"` の2つだけ、canonical は接頭辞なしの ja URL
+
+**未了・申し送り**
+
+- **PR-3（3ページの4言語化）は着手していない。** 指示書自身が「判断留保:有（3ページを訳すか ja 限定で確定させるかの最終判断）」としており、
+  §4が「機械翻訳をそのまま入れない」としているため、訳文の作成方針を浦松に確認してから行う。
+  本PRの `availableLocales: ["ja"]` は4言語化の前提工程でもあり、訳を入れる際は4言語に置き換える（sitemapと同時に）。
+- /labor トップの非日本語版にかなが残る件（指示書§5）は未検査。

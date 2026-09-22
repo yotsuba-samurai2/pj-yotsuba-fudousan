@@ -249,9 +249,16 @@ const STATIC_LABOR: StaticPage[] = [
   { path: "/labor/ryokin", changeFrequency: "monthly", priority: 0.7, locales: ["ja", "en", "zh-tw", "zh"] }, // 2026-09-01 4言語公開（第1波）
   { path: "/labor/nagare", changeFrequency: "yearly", priority: 0.6, locales: ["ja", "en", "zh-tw", "zh"] }, // 2026-09-01 4言語公開（第1波）
   { path: "/labor/faq", changeFrequency: "monthly", priority: 0.6, locales: ["ja", "en", "zh-tw", "zh"] },
-  { path: "/labor/about", changeFrequency: "yearly", priority: 0.6, locales: ["ja"] },
-  { path: "/labor/column", changeFrequency: "daily", priority: 0.7, locales: ["ja"] },
-  { path: "/labor/contact", changeFrequency: "yearly", priority: 0.5, locales: ["ja"] },
+  // 2026-09-22：本文は about=翻訳辞書（labor.aboutPage.*）、contact=CONTACT_LABELS／CONTACT_INTRO で
+  // 4ロケールとも訳出済み。ページ側は availableLocales 未指定＝4言語の hreflang を出しており、
+  // sitemap だけが ja に狭まっていた（存在する訳をGoogleに知らせていない）ので実体に合わせる。
+  { path: "/labor/about", changeFrequency: "yearly", priority: 0.6, locales: ["ja", "en", "zh-tw", "zh"] },
+  // 2026-09-22：労務コラムは全114本が en / zh-tw / zh の訳を持ち（labor-columns-seed.ts）、
+  // Column.locales は空＝全ロケール公開のため、個別記事URLは既に4ロケールで sitemap に出ている
+  // （expandColumn）。一覧ページ側も getColumnPageLocales が4言語を返し hreflang を出しているので、
+  // 一覧だけ ja に狭めると「記事は載るが入口が載らない」ずれになる。
+  { path: "/labor/column", changeFrequency: "daily", priority: 0.7, locales: ["ja", "en", "zh-tw", "zh"] },
+  { path: "/labor/contact", changeFrequency: "yearly", priority: 0.5, locales: ["ja", "en", "zh-tw", "zh"] },
 ];
 
 /** 社労士サイトマップ。**SR_LAUNCHED=false の間は空配列を返す**（開業前は1件も出さない） */
