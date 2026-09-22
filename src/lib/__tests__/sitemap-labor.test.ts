@@ -107,13 +107,20 @@ describe("STATIC_LABOR の locales とページの availableLocales が一致す
   const ALL = ["ja", "en", "zh-tw", "zh"] as const;
   const block = SRC.slice(SRC.indexOf("const STATIC_LABOR"), SRC.indexOf("/** 社労士サイトマップ"));
 
-  /** そのルートの page.tsx と同階層の .tsx（metadata を切り出している実装があるため）をまとめて読む */
+  /**
+   * そのルートの page.tsx と同階層の .tsx（metadata を切り出している実装があるため）をまとめて読む。
+   * **コメント行は落とす**。2026-09-22、ページ冒頭の解説コメントに書かれた
+   * `availableLocales:["ja"]` という文字列を実装値と誤認して誤検知した。
+   */
   function readRouteSource(routePath: string): string {
     const dir = path.join(process.cwd(), "src/app/[locale]/(labor)", routePath);
     return io
       .readdirSync(dir)
       .filter((name) => name.endsWith(".tsx"))
       .map((name) => io.readFileSync(path.join(dir, name), "utf-8"))
+      .join("\n")
+      .split("\n")
+      .filter((line) => !/^\s*(\/\/|\/?\*)/.test(line))
       .join("\n");
   }
 
@@ -143,9 +150,13 @@ describe("STATIC_LABOR の locales とページの availableLocales が一致す
     });
   }
 
+  /**
+   * ja 限定ページの canonical 固定（2026-08-10 PR#210・#211 で確立した型）。
+   * ja 限定のページが1つも無い状態もありうる（全ページ4言語化後）。そのときは検査対象ゼロで通す
+   * ＝「ja限定ページが存在すること」ではなく「存在するなら locale:"ja" を持つこと」を固定する。
+   */
   it("ja 限定のページは canonical も ja に固定している（自己canonicalの重複URLを作らない）", () => {
     const jaOnly = entries.filter((e) => e.locales.length === 1 && e.locales[0] === "ja");
-    expect(jaOnly.length).toBeGreaterThan(0);
     for (const entry of jaOnly) {
       const src = readRouteSource(entry.path);
       expect(src, `${entry.path} に locale: "ja" が無い`).toContain('locale: "ja"');
