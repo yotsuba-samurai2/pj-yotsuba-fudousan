@@ -380,3 +380,25 @@ Only a task-owned loopback database receives fixture writes. No production DB wr
 - 20PDF・180ページを画像化。全ファイル9ページ、テキスト抽出可能、文字欠け・重なり・表のはみ出しなし。
 - 既存の通所系資料は `/nagare`・`/kaigo`・`/toushi/shitei-shinsei` の3ページ。専用版は `/group-home`・`/office`・`/inshokuten`・`/toushi` に配置。トップページからは削除。
 - ローカルbuildはコンパイル・TypeScript成功。DATABASE_URL未設定のため、既存コラム取得でページデータ収集時に停止。Vercel Previewで全体buildと実画面を確認する。
+
+## 2026-09-22 既存挿絵によるコラム詳細の先行修正
+
+- [x] 公開ページ監査・既存20テーマ画像・3詳細テンプレートを確認
+- [x] 既存画像だけを使う選択規則とレスポンシブ配置を設計
+- [x] 画像1枚あたりの使用上限を設けない方針を確定
+- [x] 日本語正本から画像を一度決める共通resolverを実装
+- [x] 不動産・行政書士・社労士の共通コラムヒーローを実装
+- [x] visible image・OG/Twitter・BlogPosting JSON-LDの画像を統一
+- [x] resolver・使用上限なし・4言語alt・画像実在性のテストを通す
+- [x] 型検査・変更ファイルlint・全テスト・buildを通す
+- [x] 4言語・390/768/1440pxの実画面とHTMLメタデータを確認
+- [x] 差分・検証結果を整理しPRを作成
+
+### レビュー
+
+- 記事固有`ogImage`→slug指定→テーマ一致→事業別フォールバックの順で解決する。日本語正本から一度だけ決め、4言語で同じsrcを使う。
+- 画像1枚あたりの使用上限は設けない。同一テーマ25記事が同じ最適画像を選ぶ回帰テストを追加した。
+- 20テーマ画像の実在、危険な`ogImage`スキームの除外、相対・絶対URL、4言語alt、JSON-LD絶対URLの二重連結防止を含む1,031テストが成功した。
+- TypeScript、変更ファイルeslint、Next.js 16.3.5の本番ビルドが成功。使い捨てDBに3事業の代表記事を入れ、417ページを静的生成した。本番DBは変更していない。
+- 3事業×4言語の12ページで、visible image、OG、Twitter、BlogPosting JSON-LDが同じ画像を指すことを確認した。390px・768px・1440pxで画像は16:9を維持して表示された。
+- 768pxの不動産ページに既存ヘッダーナビ由来の横溢れが76pxある。挿絵は705×397pxでviewport内に収まり、今回の変更によるものではないため対象外とした。

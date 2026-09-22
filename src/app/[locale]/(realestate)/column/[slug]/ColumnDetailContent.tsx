@@ -5,6 +5,10 @@ import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { useTranslation } from "@/hooks/useTranslation";
 import ColumnBody from "@/components/column/ColumnBody";
+import {
+  ColumnArticleHero,
+  type ColumnArticleHeroIllustration,
+} from "@/components/column/ColumnArticleHero";
 import { RelatedColumnsSection } from "@/components/column/RelatedColumnsSection";
 import type { Column, ColumnSummary } from "@/lib/column-shared";
 
@@ -13,6 +17,7 @@ type Props = {
   prev: ColumnSummary | null;
   next: ColumnSummary | null;
   related: ColumnSummary[];
+  illustration: ColumnArticleHeroIllustration;
 };
 
 const RELATED_HEADING: Record<string, string> = {
@@ -22,31 +27,17 @@ const RELATED_HEADING: Record<string, string> = {
   zh: "相关文章",
 };
 
-export default function ColumnDetailContent({ col, prev, next, related }: Props) {
+export default function ColumnDetailContent({ col, prev, next, related, illustration }: Props) {
   const { t, locale } = useTranslation();
 
   return (
     <>
-      {/* ─── Hero ─── */}
-      <section className="relative grid min-h-[40vh] place-content-center overflow-hidden border-b border-border pt-24 pb-16 sm:pt-32 sm:pb-32 md:pt-40 md:pb-40">
-        <div
-          className="pointer-events-none absolute inset-0 bg-green-gradient"
-          aria-hidden="true"
-        />
-        <div className="relative mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center gap-3">
-            <span className="text-xs text-text-muted">
-              {col.date.replace(/-/g, ".")}
-            </span>
-            <span className="gradient-line rounded-full px-2.5 py-0.5 text-[10px] font-medium text-white">
-              {col.category}
-            </span>
-          </div>
-          <h1 className="article-headline mt-4 text-2xl font-bold leading-relaxed sm:text-3xl md:text-4xl">
-            {col.title}
-          </h1>
-        </div>
-      </section>
+      <ColumnArticleHero
+        date={col.date}
+        category={col.category}
+        title={col.title}
+        illustration={illustration}
+      />
 
       {/* ─── 本文 ─── */}
       <section className="py-10 sm:py-16 md:py-24">
