@@ -11,7 +11,7 @@ export const listingEvidenceSchema = evidenceSchema.extend({
   authenticated: z.boolean(), siteOperational: z.boolean(), exactRoomMatched: z.boolean(),
 });
 export { isPrimaryReference } from "./policy";
-export function validListingEvidence(evidence: z.infer<typeof listingEvidenceSchema>, provider: "itandi" | "reins", now: Date) {
+export function validListingEvidence(evidence: z.infer<typeof listingEvidenceSchema>, provider: "itandi" | "reins" | "eslife", now: Date) {
   return evidence.authenticated && evidence.siteOperational && evidence.exactRoomMatched && isFresh(evidence.checkedAt, now) && isPrimaryReference(evidence.reference, provider);
 }
 
@@ -27,7 +27,7 @@ export const rentalImportSchema = z.object({
     }).optional(),
   }),
   source: z.object({
-    provider: z.enum(["itandi", "reins", "other"]),
+    provider: z.enum(["itandi", "reins", "eslife", "other"]),
     roomId: z.string().regex(/^[a-zA-Z0-9_-]{1,100}$/),
     url: z.url().startsWith("https://"),
     /** Provider ID alone cannot cross-match sites: require exact building + address + unit. */
@@ -96,12 +96,19 @@ export function validateRentalImport(input: unknown, now: Date, mode: "draft" | 
   // SUUMO・アットホーム・HOME'Sは判定に使わない。REINSは広告可の確認だけ許可する。
   if (!maintenance && !isRecentMail(v.email.receivedAt, now)) reasons.push("メールが直近1暦月の対象外です");
   for (const [label, quote] of [["メール", v.email.adQuote], ["取得元", v.source.adQuote]]) {
+    if (v.source.provider === "eslife" && label === "メール") continue;
     const ads = extractAdEvidence(quote);
     const values = [...new Set(ads.map((a) => a.months))];
-    if (!ads.length || ads.some((a) => a.ambiguous || a.months === null || a.months < 2) || values.length !== 1) reasons.push(`${label}のAD2か月以上を確定できません`);
+    const eslifeNoAdException = v.source.provider === "eslife" && label === "取得元" && v.source.rent.yen >= 250000 && /AD\s*(?:なし|無|0)/i.test(quote);
+    const eslifeThreshold = v.source.provider === "eslife" && label === "取得元" ? 0.3 : 2;
+    if (!eslifeNoAdException && (!ads.length || ads.some((a) => a.ambiguous || a.months === null || a.months < eslifeThreshold) || values.length !== 1)) reasons.push(`${label}の掲載料条件を確定できません`);
   }
-  if (v.source.provider !== "itandi" || v.source.availability !== "available" || !validListingEvidence(v.source.listingEvidence, "itandi", now)) reasons.push("ITANDIで同一号室の現在の掲載を確認してください");
-  if (!validRentEvidence(v.source.rent, "itandi", now)) reasons.push("ITANJIの賃料の原文と金額を確認してください");
+  if (!(v.source.provider === "itandi" || v.source.provider === "eslife") || v.source.availability !== "available" || !validListingEvidence(v.source.listingEvidence, v.source.provider, now)) reasons.push("取得元で同一号室の現在の掲載を確認してください");
+  if (!validRentEvidence(v.source.rent, v.source.provider === "eslife" ? "eslife" : "itandi", now)) reasons.push("取得元の賃料の原文と金額を確認してください");
+  if (v.source.provider === "eslife") {
+    if (!/^東京都\s*文京区/.test(v.source.address.normalize("NFKC"))) reasons.push("いい生活の対象エリアを文京区に限定してください");
+    if (v.source.applicationStatus !== "not-applied") reasons.push("申込あり・申込不明のいい生活物件は掲載できません");
+  }
   v.property.priceYen = legacyMigration ? Math.max(v.source.rent.yen, v.reins!.rent.yen) : v.source.rent.yen;
   if (legacyMigration && (!validRentEvidence(v.reins!.rent, "reins", now))) reasons.push("旧形式のREINS賃料根拠が不正です");
   if (!isFresh(v.source.checkedAt, now)) reasons.push("募集状況の確認が24時間以内ではありません");
@@ -109,11 +116,11 @@ export function validateRentalImport(input: unknown, now: Date, mode: "draft" | 
   const adEvidence = [
     ...(v.advertisingEvidence ?? []).filter((a) => a.provider === "itandi"),
     ...(v.advertisingEvidence ?? []).filter((a) => a.provider === "reins"),
-    ...(v.source.advertising ? [{ ...v.source, provider: "itandi", status: v.source.advertising.status, evidence: v.source.advertising.evidence }] : []),
+    ...(v.source.advertising ? [{ ...v.source, provider: v.source.provider, status: v.source.advertising.status, evidence: v.source.advertising.evidence }] : []),
     ...(legacyMigration && v.reins ? [{ ...v.reins, provider: "reins", status: v.reins.advertising, evidence: v.reins.evidence }] : []),
     ...(v.email.senderDomain === "ttfuhan.com" && v.email.advertising ? [{ ...v.email.advertising, provider: "email" }] : []),
   ];
-  const adAllowed = adEvidence.some((a) => (a.provider === "itandi" || a.provider === "reins" || a.provider === "email") && a.status === "allowed" && hasAdvertisingAllow(a.evidence.quote)
+  const adAllowed = adEvidence.some((a) => (a.provider === "itandi" || a.provider === "reins" || a.provider === "eslife" || a.provider === "email") && a.status === "allowed" && hasAdvertisingAllow(a.evidence.quote)
     && isFresh(a.evidence.checkedAt, now) && (["building", "address", "unit"] as const).every((key) => same(a[key], v.source[key])));
   if (!adAllowed) reasons.push("同一号室の広告可を東京建物メール、ITANJIまたはREINSで確認してください");
   const resolved = new Set<string>(), fields = new Set<string>();
@@ -158,6 +165,7 @@ export function validateRentalImport(input: unknown, now: Date, mode: "draft" | 
   const titlePrefix = (["foreignResidents", "corporateLease", "pets"] as const).filter(kind => highlights.some(h => h.kind === kind)).map(kind => `【${TITLE_HIGHLIGHT_LABELS[kind]}】`).join("");
   if (!same(v.property.title.split(" ").join(""), `${titlePrefix}${v.source.building}${v.source.unit}`)) reasons.push("物件名・号室を照合元と一致させてください");
   if (v.source.provider === "itandi" && v.source.url !== `https://itandibb.com/rent_rooms/${v.source.roomId}`) reasons.push("ITANDIの部屋IDとURLが一致しません");
+  if (v.source.provider === "eslife" && !isPrimaryReference(v.source.url, "eslife")) reasons.push("いい生活の物件URLを確認してください");
   if (v.property.spec.dealType === "rental" && !disclosedUnknown("guarantor", v.property.spec.guarantor) && !/不要|利用なし/.test(v.property.spec.guarantor) && !/[0-9０-９].*(?:円|%|％|ヶ月|か月)/.test(v.property.spec.guarantor)) reasons.push("保証会社の費用を確認してください");
   if (v.property.tradeMode !== "broker") reasons.push("自社の取引態様を媒介として確認してください");
   // Scan every public field including alt, translations, fees. Internal evidence is excluded deliberately.
