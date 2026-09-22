@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import type { FormEvent } from "react";
 import { useTranslation } from "@/hooks/useTranslation";
+import { addLocalePrefix } from "@/lib/locale";
 import {
   BUKKEN_CATEGORY_LABEL,
   PROPERTY_TEMPLATE,
@@ -132,7 +133,9 @@ export function ContactForm({ thanksPath = "/thanks", business = "realestate" }:
         source: source || "unanswered",
       });
 
-      router.push(thanksPath);
+      // 2026-09-22：ロケール接頭辞を付ける。これが無いと /en/・/zh-tw/・/zh/ から送信した人も
+      // 一律で日本語版の完了画面（/labor/thanks 等）に落ち、言語が最後の1画面で切り替わっていた。
+      router.push(addLocalePrefix(thanksPath, locale));
     } catch {
       setServerError(t("contact.form.error"));
       gaEvent("contact_submit_error", { business, kind: "network" });

@@ -423,3 +423,178 @@ Only a task-owned loopback database receives fixture writes. No production DB wr
 - CSPは `base-uri 'self'; object-src 'none'; frame-ancestors 'self'` のみ。script-src等を足していないため、同一オリジンiframe・cdnjs・国土地理院タイル・Google Fontsはいずれも許可範囲内（配信ヘッダを実測）。
 - 検証環境の制約：この作業環境の外向き通信ではcdnjsと国土地理院タイルが遮断されるため、Leafletは同一バージョン（1.9.4）をnpmから、タイルはダミー画像を差し込んで描画確認した。区域ポリゴン8件（全域4・号分かれ4）・校名ラベル4件・学校カード4件は実物で確認済み。**本番のタイル画像そのものはPreview/本番で要確認。**
 - ローカルbuildは使い捨てPostgresを立てて完走（417ページ）。本番DBは触っていない。
+
+## 2026-09-22 /labor の多言語ずれ是正（指示書の事実確認＋PR-1・PR-2）
+
+- [x] 指示書「社労士サイト（/labor）の多言語ずれの是正 2026-09-22」の事実関係をコードで突合
+- [x] 不具合A（hreflang）：joseikin・jinin-kijun-roumu に `availableLocales: ["ja"]` を付ける
+- [x] 不具合Aの取りこぼし：ja 限定3ページの canonical を `locale: "ja"` に固定
+- [x] 不具合B（sitemap）：/labor/about・/labor/contact を4ロケールに是正
+- [x] 指示書の誤り訂正：/labor/column も4ロケールに是正（記事はjaのみ、は事実に反する）
+- [x] STATIC_LABOR の locales とページの availableLocales の一致をテストで固定
+- [x] 型検査・変更ファイルlint・全テスト1050件・本番ビルドを通す
+- [x] ビルド成果物のHTMLで hreflang と canonical を4ロケール分実測
+- [x] PR-3（3ページの4言語化）＝①shogai-nenkin ②joseikin ③jinin-kijun-roumu の順で実施（浦松の指示：訳案を作り浦松が校閲）
+- [ ] 訳文の校閲（浦松）
+- [ ] PRレビュー・マージ・本番反映（浦松の指示を待つ）
+
+### レビュー
+
+**指示書の事実確認（コードで突合）**
+
+| 指示書の主張 | 判定 | 根拠 |
+|---|---|---|
+| joseikin・jinin-kijun-roumu が `availableLocales` 未指定＝4言語のhreflangを広告 | 正しい | `src/lib/seo.ts` の `buildHreflang`：未指定＝`HREFLANG_ORDER` 全件 |
+| 3ページとも本文がJSX直書きの日本語 | 正しい | `COPY: Record<LangCode, …>` を持たない |
+| saiyo・kaigo-roumu が手本 | 正しい | saiyo＝同一ファイル内COPY、kaigo-roumu＝`src/lib/labor/kaigo-service-copy.ts` |
+| /labor/about・/labor/contact は訳済みなのに sitemap が ja 限定 | 正しい | contact＝`CONTACT_LABELS`/`CONTACT_INTRO` が4ロケール（ローカルビルドのHTMLで実測：H1が Contact／聯絡我們／联系我们）。about＝`scripts/backup/translations-*.json` の `labor.aboutPage` が4ロケール |
+| shogai-nenkin は「宣言は正しい」 | **誤り（半分）** | hreflangは正しいが、`locale`（リクエストロケール）を渡しており /en/・/zh/・/zh-tw/ が自己canonicalの重複URLになっていた |
+| /labor/column は「労務コラムは日本語のみ。現状で正しい」 | **誤り** | `labor-columns-seed.ts` の全114本が en / zh-tw / zh の訳を持ち、`locales: []`＝全ロケール公開。記事URLは既に4ロケールで sitemap に出ている |
+| /legal にも同じずれがあるか（未検証事項） | **ずれ無し** | ja先行の3ページとも `availableLocales: ["ja"]` ＋ `locale: "ja"` 済み |
+| hreflang は `hrefLang`（キャメルケース）で出力される | 正しい | ビルド成果物で `hrefLang="ja"` を確認（`hreflang=` は0件） |
+
+**やったこと**
+
+- ja限定3ページ（joseikin・jinin-kijun-roumu・shogai-nenkin）に `availableLocales: ["ja"]` と `locale: "ja"` を入れた。
+  指示書は `availableLocales` だけを足す指示だったが、それでは canonical の重複が残る。
+  リポジトリには2026-08-10（PR#210・#211）に確立した型があり、/legal・/toushi・/minpaku 等の ja 限定ページは
+  いずれも `locale: "ja"` を明示している。同じ型に揃えた。**本文は1字も変えていない。**
+- sitemap の /labor/about・/labor/contact・/labor/column を4ロケールに是正。
+- `sitemap-labor.test.ts` に、STATIC_LABOR の `locales` とページ側 `availableLocales` の一致を全エントリで突合する番人を追加した。
+  ja限定ページが `locale: "ja"` を持つことも同時に検査する。**人間の注意力に頼らない形にしたのが今回の本体。**
+
+**検証**
+
+- `tsc --noEmit` ＝ 0件／変更5ファイルの `eslint` ＝ 0件／`vitest run` ＝ 72ファイル1050件すべて通過
+- 追加テストが効くことを確認：/labor/about を `["ja"]` に戻すと2件が落ちる
+- 使い捨てPostgres（migrate deploy 済み・本番DBは未接触）で `NODE_ENV=production npm run build` を完走
+- ビルド成果物のHTMLで実測（ja・en・zh-tw・zh の12通り）：3ページとも `hrefLang="ja"` と `hrefLang="x-default"` の2つだけ、canonical は接頭辞なしの ja URL
+
+**未了・申し送り**
+
+- **PR-3（3ページの4言語化）は着手していない。** 指示書自身が「判断留保:有（3ページを訳すか ja 限定で確定させるかの最終判断）」としており、
+  §4が「機械翻訳をそのまま入れない」としているため、訳文の作成方針を浦松に確認してから行う。
+  本PRの `availableLocales: ["ja"]` は4言語化の前提工程でもあり、訳を入れる際は4言語に置き換える（sitemapと同時に）。
+- /labor トップの非日本語版にかなが残る件（指示書§5）は未検査。
+
+### 追記（PR-3：3ページの4言語化）
+
+**やったこと**
+
+指示書の順序どおり ①`shogai-nenkin` ②`joseikin` ③`jinin-kijun-roumu` の3ページを en / zh-tw / zh に展開した。
+方式は手本B（`src/lib/labor/*-copy.ts` に COPY を切り出す・既存＝`kaigo-service-copy.ts`）に統一し、新しい方式は発明していない。
+sitemap の `locales` もページの `availableLocales` と同時に4言語へ直した。
+
+**日本語版は1字も変えていない（実測）**
+
+3ページとも、移行前のビルド成果物と移行後のビルド成果物で可視テキストを差分比較し、**差分0**。
+移行前のJSXがソース改行で出していた半角スペース（`shogai-nenkin` 2か所・`joseikin` 5か所）も、
+テキストノードの分かれ方（`最終更新：`＋日付）も、そのまま保存した。
+かな文字数も指示書の実測値（ja＝1,271／793／820）と一致した。
+
+**翻訳の規律**
+
+- 日本語版にない事実・数値は足していない。見出し数・段落数・表の行数・箇条書きの数は日本語版と同じ
+- 制度名・法令名は日本語の原名を残し、各言語の説明を併記（障害年金／助成金・補助金／常勤換算／社会保険労務士法／障害者総合支援法 ほか）
+- 事務所名は全ロケールで日本語表記のまま。分離受任は既存表記（另行簽訂契約承辦／另行签订合同承办）
+- 禁止語（`COMPLIANCE_SCAN_TERMS` 62語）は4ロケールとも0件
+- 報酬額・年金額・等級表・時効は `shogai-nenkin` の訳でも書いていない。`joseikin` の成功報酬20%・顧問契約限定は訳でも落としていない
+
+**翻訳して初めて分かった問題（`jinin-kijun-roumu`）**
+
+このページは日本語版にしか存在しない2ページへリンクしていた。
+
+| リンク先 | 実態 | 対処 |
+|---|---|---|
+| `/legal/column/group-home-sewanin-seikatsushienin-haichi` | コラムの `locales` が `["ja"]`。`[slug]/page.tsx` が `isLocaleAllowed` で弾くため**ロケール接頭辞つきURLは404** | 訳文では接頭辞を付けず日本語版URLへ送り、ラベルに「日文」を添えた |
+| `/reasons` | `availableLocales:["ja"]`。接頭辞つきでも日本語本文を返す | 同上 |
+
+そのまま `addLocalePrefix` を通していたら、英語版・中国語版から404へのリンクを出すところだった。
+`ja` では `addLocalePrefix` が恒等なので、日本語版の出力とリンク先URLは変わっていない（実測で一致を確認）。
+
+**浦松の判断をお願いしたい点**
+
+`joseikin` の日本語リードは「社会保険労務士の**独占業務**です」と業務独占を断定している。
+一方 `shogai-nenkin` は、石井弁護士の確認前であることを理由に意図的に「社会保険労務士の**業務**です」へ弱めている
+（同ファイル冒頭コメント）。日本語を書き換えない方針（指示書§4）に従って日本語のまま忠実に訳したが、
+2ページの強さを揃えるかどうかは判断を仰ぎたい。`joseikin-copy.ts` 冒頭にも同じ申し送りを書いた。
+
+**検証**
+
+- `tsc --noEmit` 0件／変更ファイルの `eslint` 0件／`vitest run` 1050件通過／本番ビルド完走（405ページ）
+- ビルド成果物で12通り（3ページ×4ロケール）実測：hreflang は4言語＋x-default、canonical は各ロケール自身、
+  内部リンクはロケール接頭辞つきでリンク先が全てビルド済み、禁止語0件
+- 非日本語版のかな＝en 26〜43／zh-tw・zh 30〜49。基準線（26〜28）を上回る分は、
+  原名を残した日本語の制度名（障害年金・親なき後・キャリアアップ助成金・正社員化コース・
+  サービス管理責任者・世話人）によるもので、未翻訳の残留ではない（実測で内訳を確認）
+
+## 2026-09-22（続き） 送信完了ページの多言語化とフォーム遷移の是正
+
+指示書§5の申し送り「/labor トップの非日本語版にかなが残る（285前後）」を確認した結果の作業。
+
+- [x] `/labor` トップの残留を確認 → **未翻訳の残留なし**（設計どおり）
+- [x] `/labor` 配下18ページ×4ロケールを一巡し、残る実害を洗い出し
+- [x] `ContactForm` の遷移にロケール接頭辞を付ける
+- [x] `/labor/thanks`・`/legal/thanks` を4言語化（既存訳に統一）
+- [x] `/labor/thanks` の `<title>` 二重を修正
+- [x] 3つとも番人テストで固定し、戻すと落ちることを確認
+- [ ] 訳文の校閲（浦松）
+- [ ] PRレビュー・マージ・本番反映（浦松の指示を待つ）
+
+### レビュー
+
+**指示書§5の申し送りは空振り（/labor トップは設計どおり）**
+
+`/en/labor` のかな285の内訳を実測した。
+
+| 内訳 | かな |
+|---|---:|
+| `<details>` の中（開閉できる日本語原文・PR #367 の設計） | 248 |
+| 共通レイアウト（四葉グループ・士業ドットコム・浦松丈二） | — |
+| 匿名のお客さま名（Wさん（50代・女性）／P社（サービス業・従業員6名）） | — |
+| **上記以外（＝未翻訳の残留）** | **0** |
+
+`<details>` の外に残る日本語は共通レイアウトと匿名名だけで、ページ自身が
+"The Japanese originals and the anonymous names supplied by clients are retained." と明示している。
+指示書が「仕様どおり」と判断した `/labor/voices`（かな460）と同じ設計が、トップの声セクションにも適用されているだけだった。
+**別PRは不要。**
+
+**代わりに見つけた3つの実害（連鎖していた）**
+
+| # | 不具合 | 影響範囲 |
+|---|---|---|
+| 1 | `ContactForm` の `router.push(thanksPath)` がロケール接頭辞を付けていない | 3レーン全部。/en/・/zh-tw/・/zh/ から送信した人が一律で日本語版URLに落ちる |
+| 2 | `/labor/thanks`・`/legal/thanks` の本文がJSX直書きの日本語 | 4ロケールとも日本語の完了画面 |
+| 3 | `/labor/thanks` の `title` に事務所名 → layout の template と二重 | 実測「送信完了 \| 四葉社会保険労務士事務所｜四葉社会保険労務士事務所」 |
+
+**1が2を隠していた。** 誰も非日本語版の完了画面URLに到達しないので、日本語のままでも気づけなかった。
+1だけ直すと非日本語版URLに到達するようになり、そこが日本語という状態が露出する。**2つを同時に直す必要があった。**
+3は 2026-09-05 月次点検 NEW-TECH-1 が `/labor/contact`・`/labor/about` で直した型と同じで、本ページだけ漏れていた。
+
+不動産レーンの `/thanks` は翻訳辞書方式で4ロケールとも訳済みのため、1の修正は改善のみで影響なし（実測で確認）。
+
+**訳文は既存訳に統一した**
+
+不動産レーンの翻訳辞書 `thanks.*` に同じ日本語からの訳が既にあったため、title・body はそれに合わせた
+（同じ日本語の訳が3レーンで食い違うのを避ける）。1つだけ合わせていないのが戻り先のラベルで、
+辞書の `common.backToTop` は「トップに戻る」を Back to top／返回頂部／返回顶部 としているが、
+このリンクの遷移先はページ先頭へのスクロールではなく各レーンのトップページなので、
+`CONTACT_LABELS.home`（Home／首頁／首页）に合わせた。**辞書側はDBの値なので本PRでは触っていない。**
+
+**日本語を1か所だけ意図的に変えた**
+
+`/labor/thanks` の `title` から事務所名を外した（`送信完了 | 四葉社会保険労務士事務所` → `送信完了`）。
+本文の文言は変えていない。2026-09-05 に同じ判断が兄弟ページで下されている型に揃えただけだが、
+`<title>` の表示は変わる（noindexページのためSEO影響はない）。
+
+**検証**
+
+- `tsc` 0件／変更5ファイルの `eslint` 0件／`vitest run` **1099件**通過（+49件）／本番ビルド完走
+- 番人テストが3つとも効くことを確認：title に事務所名を戻すと5件、接頭辞を外すと2件、本文を日本語直書きに戻すと4件が落ちる
+- ビルド成果物で実測：`/labor/thanks`・`/legal/thanks` とも4ロケールで H1・本文・戻り先が訳され、
+  かなは 58/60/60 → **26/28/28**（共通レイアウトの基準線ちょうど）。`/labor/thanks` の title 二重も解消
+
+**申し送り**
+
+- 翻訳辞書の `common.backToTop`（Back to top／返回頂部／返回顶部）は、遷移先がトップページであることを踏まえると誤訳。DBの値のため別途の判断。
+- 翻訳辞書の `thanks.metaTitle` に旧ブランド名「四葉パートナーズ」が残っている（不動産レーン）。本PRの対象外。
