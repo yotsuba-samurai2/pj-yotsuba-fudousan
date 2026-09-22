@@ -4,15 +4,17 @@ import { LocaleLink as Link } from "@/components/ui/LocaleLink";
 import Image from "next/image";
 import { useTranslation } from "@/hooks/useTranslation";
 import ColumnBody from "@/components/column/ColumnBody";
-import { ColumnArticleHero } from "@/components/column/ColumnArticleHero";
-import type { ResolvedColumnIllustration } from "@/lib/column-illustrations";
+import {
+  ColumnArticleHero,
+  type ColumnArticleHeroIllustration,
+} from "@/components/column/ColumnArticleHero";
 import type { Column, ColumnSummary } from "@/lib/column-shared";
 
 type Props = {
   column: Column;
   prev: ColumnSummary | null;
   next: ColumnSummary | null;
-  illustration: ResolvedColumnIllustration;
+  illustration: ColumnArticleHeroIllustration;
 };
 
 export default function LegalColumnDetailContent({ column: col, prev, next, illustration }: Props) {

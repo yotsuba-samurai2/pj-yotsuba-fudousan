@@ -4,17 +4,19 @@ import { LocaleLink as Link } from "@/components/ui/LocaleLink";
 import Image from "next/image";
 import { useTranslation } from "@/hooks/useTranslation";
 import ColumnBody from "@/components/column/ColumnBody";
+import {
+  ColumnArticleHero,
+  type ColumnArticleHeroIllustration,
+} from "@/components/column/ColumnArticleHero";
 import type { Column, ColumnSummary } from "@/lib/column-shared";
 import type { ColumnLinkOverrides } from "@/lib/column-language-links";
-import { ColumnArticleHero } from "@/components/column/ColumnArticleHero";
-import type { ResolvedColumnIllustration } from "@/lib/column-illustrations";
 
 type Props = {
   col: Column;
   prev: ColumnSummary | null;
   next: ColumnSummary | null;
   linkOverrides: ColumnLinkOverrides;
-  illustration: ResolvedColumnIllustration;
+  illustration: ColumnArticleHeroIllustration;
 };
 
 export function LaborColumnDetailPageContent({ col, prev, next, linkOverrides, illustration }: Props) {

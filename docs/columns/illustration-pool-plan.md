@@ -469,51 +469,48 @@ DBスキーマ変更・migration・本番DB書込み / 固定ページへの一�
 
 ## 11. 実装記録（第3段・第1弾）
 
-新規画像を待たず、**既存20点のうち19点**でプールを構成して実装した。
-`bunkyo-sakura` は実写写真（437KB）だが、文京区タグの記事に限って使う（汎用フォールバックにはしない）。
+**この実装は本ブランチではなく、別PR #386（`0ab77c1 feat(columns): show existing themed illustrations`）として
+main にマージ済み。** 本ブランチでも並行して同等の実装を行ったが、内容が重複するため取り下げ、
+main 側を採用した（2026-09-22 のマージで `src/` は main と同一）。
 
-**追加ファイル**
-- `src/lib/column-illustrations.ts` … マニフェスト19点＋純粋な選択関数
-- `src/lib/__tests__/column-illustrations.test.ts` … 16ケース
+本ブランチに残るのは**診断書（本書）と生成プロンプト集の2ファイル**だけである。
+
+### main に入った実装（#386）
+
+- `src/lib/column-illustrations.ts` … 既存20点のマニフェスト＋選択関数
 - `src/components/column/ColumnArticleHero.tsx` … 3事業共通ヒーロー
+- `src/lib/__tests__/column-illustrations.test.ts`
+- 3事業 × `page.tsx` / Content の6本を改修
+- `src/components/seo/BlogPostingJsonLd.tsx` … JSON-LD の `image` を表示中の挿絵に揃える
+  （本書 §10 で「別途の判断事項」としていた項目。#386 が対応済み）
 
-**変更ファイル**（3事業 × page.tsx / Content の6本）
-ヒーロー部を共通部品へ差し替え、`page.tsx` で **ja 正本の `base`** から挿絵を解決して props で渡す。
-`resolveRealestateColumnCta` と同じ作法。既存の著者欄・本文・前後記事・関連記事・CTA・JSON-LD には触れていない。
+### 本ブランチの実装との差（取り下げの根拠）
 
-**プール構成（19点）**
+| 項目 | #386（採用） | 本ブランチ（取り下げ） |
+|---|---|---|
+| 対象画像 | 既存20点 | 既存19点（`labor-joseikin` を当初除外→後に復帰） |
+| `ogImage` の正規化 | `/` 始まりに加え `//`（プロトコル相対）も弾く | `/` 始まりのみ |
+| alt の取得 | `getColumnIllustrationAlt()` に分離 | 解決結果に同梱 |
+| 資産の存在確認 | `getColumnIllustrationAssetPaths()` を公開 | テスト内でマニフェストを走査 |
+| JSON-LD の `image` | 表示中の挿絵に揃える | 未対応（範囲外として保留していた） |
 
-| 事業 | 点数 | フォールバック |
-|---|---:|---|
-| realestate | 6（うち1点は `legal-inheritance` の共用、1点は実写の `bunkyo-sakura`） | `realestate-shataku` |
-| legal | 6 | `legal-top` |
-| labor | 9 | `labor-top` |
+機能面で #386 が本ブランチの実装を包含しているため、main 側を残すのが妥当と判断した。
 
-**実データ249件での実測**
+### 本ブランチでの検証結果（記録として残す）
 
-- フォールバック適用 **0件（0.0%）**＝全記事がテーマ一致した
-- 1画像あたりの最大割当 **57件**（`legal-inheritance`。realestate 21 + legal 36 の合算）
+取り下げた実装に対して行った検証。`tsc --noEmit` 通過、`eslint` 通過、
+`vitest` 71ファイル1034ケース通過、dev サーバで3事業×4言語＋フォールバックの実HTMLを確認
+（同一 slug で src 同一・alt のみ各言語）、Vercel で `next build` 完走。
+
+実データ249件での実測（既存画像のみのプール）:
+
+- フォールバック適用 **0件（0.0%）**＝全記事がテーマ一致
+- 1画像あたりの最大割当 **57件**（`legal-inheritance`）
 - 事業別の上位：realestate `toushi` 34 / legal `inheritance` 36 / labor `shogai-nenkin` 34
 
-**検証結果**
-
-| 項目 | 結果 |
-|---|---|
-| `npx tsc --noEmit` | 通過 |
-| `npx eslint`（変更ファイル） | 通過 |
-| `npx vitest run`（全体） | 71ファイル・1034ケース通過 |
-| dev サーバでの実HTML | 3事業 × 4言語 ＋ フォールバックの5パターンで挿絵の描画を確認 |
-| 4言語の一貫性 | 同一 slug で src 同一・alt のみ各言語（実HTMLで確認） |
-
-`npx next build` は `DATABASE_URL` が必要で、使い捨てDB（`prisma dev`）が
-ビルド中に繰り返し落ちたため**完走できていない＝未検証**。
-代わりに dev サーバで実HTMLを確認した。本番相当のビルドは Vercel プレビューで確認する。
-
-**この実装で満たしていない完成条件（画像が増えるまで）**
-
-- 「最低48点、各事業15点以上」… 現在19点（realestate 6 / legal 6 / labor 9）
-- 「同じ画像の過度な連続使用を避ける」… 最大57記事が同一画像
-- いずれも `column-illustrations.ts` に1行足すだけで改善する。テンプレート側の変更は不要。
+**この数値は #386 の実装にもほぼそのまま当てはまる**（同じ既存画像・同じ加点方式のため）。
+新規34点が入るまで、指示書の完成条件のうち
+「最低48点・各事業15点以上」と「同じ画像の過度な連続使用を避ける」は未達のままである。
 
 ### 未承認（納品後・実装着手前に判断が必要）
 

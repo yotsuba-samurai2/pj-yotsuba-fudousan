@@ -1,187 +1,146 @@
-// コラム挿絵の選択ロジック。
-// 4言語で同じ画像・altだけローカライズ、再ビルドで結果が変わらないこと、
-// どの記事にも必ず1枚割り当たること（挿絵0枚を作らない）を固定する。
-import { existsSync } from "node:fs";
+import fs from "node:fs";
 import path from "node:path";
-import { describe, it, expect } from "vitest";
+import { describe, expect, it } from "vitest";
+import type { LangCode } from "@/config/languages";
 import {
-  COLUMN_ILLUSTRATIONS,
+  getColumnIllustrationAlt,
+  getColumnIllustrationAssetPaths,
   resolveColumnIllustration,
-  stableHash,
-  type IllustrationInput,
+  type ColumnIllustrationInput,
 } from "@/lib/column-illustrations";
-import type { BusinessKey } from "@/lib/column-shared";
-import { LABOR_COLUMNS_SEED } from "@/lib/data/labor-columns-seed";
-import { SOUZOKU_LEGAL_COLUMNS_SEED } from "@/lib/data/souzoku-legal-columns-seed";
-import { REALESTATE_COLUMNS_DAILY_SEED } from "@/lib/data/realestate-columns-daily-seed";
 
-const LOCALES = ["ja", "en", "zh-tw", "zh"] as const;
-const BUSINESSES: BusinessKey[] = ["realestate", "legal", "labor"];
-
-function column(overrides: Partial<IllustrationInput> = {}): IllustrationInput {
+function column(
+  overrides: Partial<ColumnIllustrationInput> = {},
+): ColumnIllustrationInput {
   return {
     business: "realestate",
-    slug: "test-column",
-    title: "テスト記事",
-    category: "",
+    slug: "general-column",
+    title: "不動産について考える",
+    category: "基礎知識",
     tags: [],
     ...overrides,
   };
 }
 
-describe("マニフェストの健全性", () => {
-  it("id が重複していない", () => {
-    const ids = COLUMN_ILLUSTRATIONS.map((c) => c.id);
-    expect(new Set(ids).size).toBe(ids.length);
+describe("resolveColumnIllustration", () => {
+  it("記事固有のogImageをテーマ判定より優先する", () => {
+    expect(
+      resolveColumnIllustration(
+        column({
+          title: "外国人向けグループホーム投資",
+          ogImage: "/assets/images/article.webp",
+        }),
+      ),
+    ).toEqual({
+      src: "/assets/images/article.webp",
+      theme: "article",
+      source: "ogImage",
+    });
   });
 
-  it("全エントリが id・src・4言語の alt を持ち、空文字が無い", () => {
-    for (const entry of COLUMN_ILLUSTRATIONS) {
-      expect(entry.id.length).toBeGreaterThan(0);
-      expect(entry.src.startsWith("/")).toBe(true);
-      for (const locale of LOCALES) {
-        expect(entry.alt[locale]?.trim().length ?? 0).toBeGreaterThan(0);
-      }
-    }
+  it("ogImageの相対パスと外部URLを安全に保持する", () => {
+    expect(resolveColumnIllustration(column({ ogImage: "public/hero/custom.webp" })).src)
+      .toBe("/hero/custom.webp");
+    expect(resolveColumnIllustration(column({ ogImage: "https://cdn.example.com/custom.webp" })).src)
+      .toBe("https://cdn.example.com/custom.webp");
+    expect(resolveColumnIllustration(column({ ogImage: "javascript:alert(1)" })).source)
+      .toBe("fallback");
+    expect(resolveColumnIllustration(column({ ogImage: "//cdn.example.com/custom.webp" })).source)
+      .toBe("fallback");
   });
 
-  it("全エントリの画像が public/ に実在する", () => {
-    const publicDir = path.join(process.cwd(), "public");
-    for (const entry of COLUMN_ILLUSTRATIONS) {
-      const file = path.join(publicDir, entry.src);
-      expect(existsSync(file), `${entry.id}: ${entry.src} が存在しない`).toBe(true);
-    }
+  it("不動産は専門性の高いテーマを優先する", () => {
+    expect(
+      resolveColumnIllustration(
+        column({ title: "外国人向けグループホーム物件", category: "障害福祉" }),
+      ).theme,
+    ).toBe("realestate-group-home");
+    expect(resolveColumnIllustration(column({ title: "相続した空き家を売る" })).theme)
+      .toBe("legal-inheritance");
+    expect(resolveColumnIllustration(column({ title: "飲食店を開くための店舗選び" })).theme)
+      .toBe("legal-company");
   });
 
-  it("3事業すべてに画像とフォールバックがある", () => {
-    for (const business of BUSINESSES) {
-      const entries = COLUMN_ILLUSTRATIONS.filter((c) => c.business === business);
-      expect(entries.length, `${business} の画像が無い`).toBeGreaterThan(0);
-      expect(
-        entries.some((c) => c.isFallback),
-        `${business} にフォールバックが無い`,
-      ).toBe(true);
-    }
+  it("行政書士の主要テーマを分類する", () => {
+    expect(
+      resolveColumnIllustration(
+        column({ business: "legal", title: "特定技能の在留資格を申請する" }),
+      ).theme,
+    ).toBe("legal-visa");
+    expect(
+      resolveColumnIllustration(
+        column({ business: "legal", title: "障害福祉グループホームの指定申請" }),
+      ).theme,
+    ).toBe("legal-shogai-fukushi");
+    expect(
+      resolveColumnIllustration(
+        column({ business: "legal", title: "一般貨物運送の許可申請" }),
+      ).theme,
+    ).toBe("legal-company");
   });
-});
 
-describe("優先順位", () => {
-  it("記事固有の ogImage（ルート相対）を最優先する", () => {
-    const result = resolveColumnIllustration(
-      column({ ogImage: "/hero/legal-visa-16x9.webp", tags: ["投資"] }),
-      "ja",
+  it("社労士は複合テーマでも個別性の高い画像を選ぶ", () => {
+    expect(
+      resolveColumnIllustration(
+        column({ business: "labor", title: "障害福祉事業所の処遇改善加算" }),
+      ).theme,
+    ).toBe("labor-shogu-kaizen");
+    expect(
+      resolveColumnIllustration(
+        column({ business: "labor", title: "外国人雇用の採用と定着" }),
+      ).theme,
+    ).toBe("labor-gaikokujin-koyo");
+  });
+
+  it("一致しない記事は事業別の安全なフォールバックを使う", () => {
+    expect(resolveColumnIllustration(column()).theme).toBe("realestate-toushi");
+    expect(resolveColumnIllustration(column({ business: "legal" })).theme).toBe("legal-top");
+    expect(resolveColumnIllustration(column({ business: "labor" })).theme)
+      .toBe("labor-jinin-kijun-roumu");
+  });
+
+  it("画像1枚あたりの使用件数に上限を設けない", () => {
+    const results = Array.from({ length: 25 }, (_, index) =>
+      resolveColumnIllustration(
+        column({
+          business: "legal",
+          slug: `souzoku-column-${index + 1}`,
+          title: `相続手続の記事 ${index + 1}`,
+        }),
+      ),
     );
-    expect(result.src).toBe("/hero/legal-visa-16x9.webp");
-    expect(result.source).toBe("ogImage");
-  });
 
-  it("ogImage が外部URLなら採用せずテーマ一致へ落ちる（next/image が remotePatterns 未設定のため）", () => {
-    const result = resolveColumnIllustration(
-      column({ ogImage: "https://example.com/a.png", tags: ["投資"] }),
-      "ja",
+    expect(results.every(({ theme }) => theme === "legal-inheritance")).toBe(true);
+    expect(new Set(results.map(({ src }) => src))).toEqual(
+      new Set(["/hero/legal-inheritance-16x9.webp"]),
     );
-    expect(result.src).toBe("/hero/realestate-toushi-16x9.webp");
-    expect(result.source).toBe("keyword");
   });
 
-  it("ogImage が空文字ならテーマ一致へ落ちる", () => {
-    const result = resolveColumnIllustration(column({ ogImage: "  ", tags: ["投資"] }), "ja");
-    expect(result.source).toBe("keyword");
-  });
-
-  it("slug の明示ルールはキーワード一致より優先する", () => {
-    const entry = COLUMN_ILLUSTRATIONS.find((c) => c.id === "realestate-global")!;
-    const withRule = COLUMN_ILLUSTRATIONS.map((c) =>
-      c.id === entry.id ? { ...c, slugPatterns: ["pinned-slug"] } : c,
+  it("同じ日本語正本は4言語で同じsrcになり、altは各言語に対応する", () => {
+    const resolved = resolveColumnIllustration(
+      column({ business: "legal", title: "遺言と相続手続" }),
     );
-    // 実マニフェストに slugPatterns を持つ行がまだ無いため、仕組み自体を検証する
-    const pinned = withRule.find((c) => c.slugPatterns?.includes("pinned-slug"));
-    expect(pinned?.id).toBe("realestate-global");
-  });
+    const locales: LangCode[] = ["ja", "en", "zh-tw", "zh"];
+    const titles = {
+      ja: "遺言と相続手続",
+      en: "Wills and inheritance procedures",
+      "zh-tw": "遺囑與繼承手續",
+      zh: "遗嘱与继承手续",
+    } satisfies Record<LangCode, string>;
 
-  it("tags は category より重い（tag一致が category一致に勝つ）", () => {
-    const result = resolveColumnIllustration(
-      column({ category: "賃貸の基礎", tags: ["グループホーム"] }),
-      "ja",
-    );
-    expect(result.id).toBe("realestate-group-home");
-  });
-
-  it("一致が無ければ事業別フォールバックへ落ちる", () => {
-    for (const business of BUSINESSES) {
-      const result = resolveColumnIllustration(
-        column({ business, category: "まったく無関係", tags: ["該当なし"], title: "無関係" }),
-        "ja",
-      );
-      expect(result.source).toBe("fallback");
-      expect(result.src.length).toBeGreaterThan(0);
-    }
-  });
-});
-
-describe("4言語での一貫性", () => {
-  it("同じ slug なら 4言語で src が同一、alt は言語ごとに異なる", () => {
-    const col = column({ category: "相続", tags: ["相続"] });
-    const results = LOCALES.map((locale) => resolveColumnIllustration(col, locale));
-    const srcs = new Set(results.map((r) => r.src));
-    expect(srcs.size).toBe(1);
-    const alts = new Set(results.map((r) => r.alt));
-    expect(alts.size).toBe(LOCALES.length);
-  });
-
-  it("ローカライズ後の category で呼んでも ja 正本と同じ画像になる想定（呼び出し側は base を渡す）", () => {
-    const ja = resolveColumnIllustration(column({ category: "相続", tags: ["相続"] }), "ja");
-    const en = resolveColumnIllustration(column({ category: "相続", tags: ["相続"] }), "en");
-    expect(en.src).toBe(ja.src);
-  });
-});
-
-describe("決定論", () => {
-  it("同じ入力を繰り返しても同じ結果", () => {
-    const col = column({ slug: "kurikaeshi", category: "無関係", tags: [] });
-    const first = resolveColumnIllustration(col, "ja");
-    for (let i = 0; i < 20; i += 1) {
-      expect(resolveColumnIllustration(col, "ja")).toEqual(first);
+    expect(new Set(locales.map(() => resolved.src)).size).toBe(1);
+    for (const locale of locales) {
+      expect(getColumnIllustrationAlt(resolved, locale, titles[locale]).length).toBeGreaterThan(0);
     }
   });
 
-  it("stableHash は同じ文字列に同じ値を返し、非負の整数になる", () => {
-    expect(stableHash("abc")).toBe(stableHash("abc"));
-    expect(stableHash("abc")).not.toBe(stableHash("abd"));
-    for (const s of ["", "a", "souzoku-jikka-uru-nokosu", "日本語スラッグ"]) {
-      const h = stableHash(s);
-      expect(Number.isInteger(h)).toBe(true);
-      expect(h).toBeGreaterThanOrEqual(0);
+  it("マニフェストの既存画像がすべてpublic配下に存在する", () => {
+    const assetPaths = getColumnIllustrationAssetPaths();
+    expect(assetPaths.length).toBe(20);
+    for (const assetPath of assetPaths) {
+      const filePath = path.join(process.cwd(), "public", assetPath.replace(/^\//, ""));
+      expect(fs.existsSync(filePath), assetPath).toBe(true);
+      expect(fs.statSync(filePath).size, assetPath).toBeGreaterThan(0);
     }
-  });
-});
-
-describe("実データ（seed）での挙動", () => {
-  const corpus = [
-    ...REALESTATE_COLUMNS_DAILY_SEED,
-    ...SOUZOKU_LEGAL_COLUMNS_SEED,
-    ...LABOR_COLUMNS_SEED,
-  ] as unknown as IllustrationInput[];
-
-  it("全記事に画像が1枚決まり、実在ファイルを指す", () => {
-    const publicDir = path.join(process.cwd(), "public");
-    for (const col of corpus) {
-      const result = resolveColumnIllustration(col, "ja");
-      expect(result.src.startsWith("/"), `${col.slug}`).toBe(true);
-      expect(result.alt.trim().length, `${col.slug}`).toBeGreaterThan(0);
-      expect(existsSync(path.join(publicDir, result.src)), `${col.slug}: ${result.src}`).toBe(true);
-    }
-  });
-
-  it("1枚の画像に記事が集中しすぎない（既存画像のみの暫定プールでの上限を固定）", () => {
-    const counts = new Map<string, number>();
-    for (const col of corpus) {
-      const { src } = resolveColumnIllustration(col, "ja");
-      counts.set(src, (counts.get(src) ?? 0) + 1);
-    }
-    const max = Math.max(...counts.values());
-    // 既存画像だけの暫定プール（不動産6・行政書士6・社労士9）での実測上限。
-    // 新規画像を追加したらこの数値は下がるはず。上振れしたら分散が壊れている。
-    expect(max).toBeLessThanOrEqual(60);
   });
 });

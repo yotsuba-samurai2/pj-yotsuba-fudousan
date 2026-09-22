@@ -6,12 +6,14 @@ import type { LangCode } from "@/config/languages";
 export function BlogPostingJsonLd({
   businessKey,
   column,
+  image,
   authorName,
   authorTitle,
   locale = "ja",
 }: {
   businessKey: string;
   column: Column;
+  image?: string;
   authorName?: string;
   authorTitle?: string;
   locale?: LangCode;
@@ -23,8 +25,12 @@ export function BlogPostingJsonLd({
   // 静的アセットはルート配信のため SITE_URL に結合する（SEO監査2026-08-24 P0-3）。
   // 旧実装の biz.url 結合は legal で https://luck428.com/legal + パス という実在しないURLを生んでいた
   // （さらに legal は ogImage:"" だったため image が /legal そのものになっていた）。
-  const imagePath = column.ogImage || biz.ogImage;
-  const imageUrl = imagePath ? `${SITE_URL}${imagePath}` : undefined;
+  const imagePath = image || column.ogImage || biz.ogImage;
+  const imageUrl = imagePath
+    ? imagePath.startsWith("/")
+      ? `${SITE_URL}${imagePath}`
+      : imagePath
+    : undefined;
   // コラム一覧のURL。旧実装 `${biz.url}${biz.columnBasePath}` は legal で /legal/legal/column に二重化していた
   const blogUrl = canonicalUrl(businessKey, biz.columnBasePath);
 

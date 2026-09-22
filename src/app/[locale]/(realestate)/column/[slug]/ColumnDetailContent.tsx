@@ -5,9 +5,11 @@ import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { useTranslation } from "@/hooks/useTranslation";
 import ColumnBody from "@/components/column/ColumnBody";
+import {
+  ColumnArticleHero,
+  type ColumnArticleHeroIllustration,
+} from "@/components/column/ColumnArticleHero";
 import { RelatedColumnsSection } from "@/components/column/RelatedColumnsSection";
-import { ColumnArticleHero } from "@/components/column/ColumnArticleHero";
-import type { ResolvedColumnIllustration } from "@/lib/column-illustrations";
 import type { Column, ColumnSummary } from "@/lib/column-shared";
 
 type Props = {
@@ -15,7 +17,7 @@ type Props = {
   prev: ColumnSummary | null;
   next: ColumnSummary | null;
   related: ColumnSummary[];
-  illustration: ResolvedColumnIllustration;
+  illustration: ColumnArticleHeroIllustration;
 };
 
 const RELATED_HEADING: Record<string, string> = {
@@ -30,7 +32,6 @@ export default function ColumnDetailContent({ col, prev, next, related, illustra
 
   return (
     <>
-      {/* ─── Hero ─── */}
       <ColumnArticleHero
         date={col.date}
         category={col.category}

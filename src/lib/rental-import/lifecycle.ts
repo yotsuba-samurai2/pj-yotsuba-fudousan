@@ -23,14 +23,14 @@ export function closureFromRentalImport(input: unknown, now: Date) {
   // view. Missing legacy evidence must never trigger a fallback to REINS or a
   // portal search.
   const identity = z.object({ building: z.string().trim().min(1), address: z.string().trim().min(1), unit: z.string().trim().min(1) });
-  const sourceSchema = identity.extend({ provider: z.literal("itandi"), roomId: z.string().min(1) });
+  const sourceSchema = identity.extend({ provider: z.enum(["itandi", "eslife"]), roomId: z.string().min(1) });
   const envelope = z.object({ source: sourceSchema }).safeParse(input);
   if (!envelope.success) return null;
   const source = envelope.data.source;
   const endedSchema = z.object({ availability: z.enum(["closed", "removed"]), listingEvidence: listingEvidenceSchema });
-  const itandi = z.object({ source: endedSchema }).safeParse(input);
-  if (itandi.success && validListingEvidence(itandi.data.source.listingEvidence, "itandi", now)) {
-    return { source, status: itandi.data.source.availability, confirmedBy: { provider: "itandi" as const, listingId: source.roomId }, ...itandi.data.source.listingEvidence };
+  const current = z.object({ source: endedSchema }).safeParse(input);
+  if (current.success && validListingEvidence(current.data.source.listingEvidence, source.provider, now)) {
+    return { source, status: current.data.source.availability, confirmedBy: { provider: source.provider, listingId: source.roomId }, ...current.data.source.listingEvidence };
   }
   return null;
 }
@@ -55,7 +55,29 @@ export async function importRental(input: unknown, store: RentalStore, now: Date
     if (!maintenance) return { action: "held", slug: p.slug, reasons: ["同一号室が既に登録されています。重複登録を防ぐため、公開済み物件の再確認を選択してください"] };
     const metadata = existing.internal?.rentalImport as { lastPublicDigest?: string; paused?: boolean } | undefined;
     if (existing.status === "closed") return { action: "held", slug: p.slug, reasons: ["募集終了済み。再公開には管理者の確認が必要です"] };
-    if (!metadata || metadata.paused || metadata.lastPublicDigest !== publicDigest(existing)) return { action: "held", slug: p.slug, reasons: ["手動編集済み、または自動更新が停止されています"] };
+    const manuallyEdited = !metadata || metadata.paused || metadata.lastPublicDigest !== publicDigest(existing);
+    if (manuallyEdited) {
+      // A fresh, explicitly requested maintenance check may publish a manually
+      // edited draft without overwriting its public copy. The incoming record
+      // is still validated against the existing public fields below; only fresh
+      // source evidence and lifecycle metadata are adopted.
+      if (!(maintenance && mode === "published")) return { action: "held", slug: p.slug, reasons: ["手動編集済み、または自動更新が停止されています"] };
+      const checked = validateRentalImport({ ...(input as Record<string, unknown>), property: { ...existing, status: "published" } }, now, "published", true);
+      if (!checked.ok) return { action: "held", slug: p.slug, reasons: checked.reasons };
+      const refreshed = checked.property;
+      const next: PropertyInput = {
+        ...existing,
+        status: "published",
+        publishedAt: existing.publishedAt ?? refreshed.publishedAt,
+        infoUpdatedAt: refreshed.infoUpdatedAt,
+        nextUpdateAt: refreshed.nextUpdateAt,
+        spec: { ...existing.spec, ...(refreshed.spec.dealType === "rental" ? { availabilityExpiresAt: refreshed.spec.availabilityExpiresAt } : {}) },
+        internal: { ...existing.internal, rentalImport: { ...(refreshed.internal?.rentalImport as Record<string, unknown> | undefined), lastPublicDigest: publicDigest({ ...existing, status: "published" }) } },
+      };
+      const success = await store.update(p.slug, existing.updatedAt!, next);
+      if (success) await onChange?.(existing, next, now);
+      return success ? { action: "updated", slug: p.slug } : { action: "held", slug: p.slug, reasons: ["同時更新を検出しました。次回再確認します"] };
+    }
     // A draft run must not silently demote a listing already published by the operator.
     if (existing.status === "published" && mode === "draft") return { action: "held", slug: p.slug, reasons: ["公開済み物件の更新には公開モードが必要です"] };
     p.publishedAt = existing.publishedAt ?? p.publishedAt;
@@ -73,11 +95,11 @@ export async function importRental(input: unknown, store: RentalStore, now: Date
 }
 
 export const closureSchema = z.object({
-  source: z.object({ building: z.string().min(1), address: z.string().min(1), unit: z.string().min(1), provider: z.literal("itandi"), roomId: z.string().min(1) }),
+  source: z.object({ building: z.string().min(1), address: z.string().min(1), unit: z.string().min(1), provider: z.enum(["itandi", "eslife"]), roomId: z.string().min(1) }),
   status: z.enum(["closed", "removed", "unknown"]),
   checkedAt: z.iso.datetime({ offset: true }),
   reference: z.string().min(1), quote: z.string().min(1),
-  confirmedBy: z.object({ provider: z.literal("itandi"), listingId: z.string().min(1) }),
+  confirmedBy: z.object({ provider: z.enum(["itandi", "eslife"]), listingId: z.string().min(1) }),
   /** Removal is confirmed only in an authenticated, functioning search/detail view. */
   authenticated: z.boolean(), siteOperational: z.boolean(), exactRoomMatched: z.boolean(),
 }).strict();
@@ -85,7 +107,7 @@ export async function closeRental(input: unknown, store: RentalStore, now: Date,
   const parsed = closureSchema.safeParse(input);
   if (!parsed.success) return { action: "held", reasons: ["掲載終了確認の形式が不正です"] };
   const v = parsed.data, slug = `rent-${rentalIdentity(v.source)}`;
-  if (v.status === "unknown" || !v.authenticated || !v.siteOperational || !v.exactRoomMatched || !isFresh(v.checkedAt, now) || !isPrimaryReference(v.reference, "itandi")) return { action: "held", slug, reasons: ["ITANJIの認証済み画面で同一号室の終了を確認してください。認証切れ・障害は終了扱いしません"] };
+  if (v.status === "unknown" || !v.authenticated || !v.siteOperational || !v.exactRoomMatched || !isFresh(v.checkedAt, now) || !isPrimaryReference(v.reference, v.source.provider)) return { action: "held", slug, reasons: ["取得元の認証済み画面で同一号室の終了を確認してください。認証切れ・障害は終了扱いしません"] };
   const existing = await store.get(slug);
   if (!existing || existing.status === "closed") return { action: "unchanged", slug };
   const meta = existing.internal?.rentalImport as { source?: { provider?: string; roomId?: string }; reins?: { propertyId?: string } } | undefined;

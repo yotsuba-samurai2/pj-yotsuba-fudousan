@@ -47,6 +47,27 @@ describe("公開ゲート", () => {
   });
   it("REINS照合済み・写真間取りありを登録可能", () => expect(validateRentalImport(fixture(), NOW).ok).toBe(true));
   it.each(["denied", "unknown"] as const)("REINS広告可以外を保留 %s", (status) => { const v = fixture(); v.reins.advertising = status; expect(validateRentalImport(v, NOW).ok).toBe(false); });
+  it("いい生活は文京区・申込なし・25万円以上ならADなしでも登録できる", () => {
+    const v = fixture();
+    v.source.provider = "eslife";
+    v.source.roomId = "es-001";
+    v.source.url = "https://rent.es-square.net/bukken/chintai/es-001";
+    v.source.address = "東京都文京区小石川1-1-1";
+    v.source.building = "いい生活テストマンション";
+    v.source.unit = "101";
+    v.source.availability = "available";
+    v.source.checkedAt = NOW.toISOString();
+    v.source.listingEvidence = { ...v.source.listingEvidence, reference: v.source.url, quote: "募集中・広告可" };
+    v.source.rent = { yen: 250000, evidence: { ...v.source.rent.evidence, reference: v.source.url, quote: "賃料250,000円" } };
+    v.source.adQuote = "ADなし";
+    v.source.applicationStatus = "not-applied";
+    v.source.advertising = { status: "allowed", evidence: { ...v.source.listingEvidence, quote: "広告可" } };
+    v.property.title = "いい生活テストマンション 101";
+    v.property.locationText = v.source.address;
+    v.property.priceYen = 250000;
+    Reflect.deleteProperty(v, "reins");
+    expect(validateRentalImport(v, NOW).ok).toBe(true);
+  });
   it.each(["広告可否 未確認", "広告不可", "広告可 広告不可"])("文字列の誤認防止 %s", (quote) => { const v = fixture(); v.reins.evidence.quote = quote; expect(validateRentalImport(v, NOW).ok).toBe(false); });
   it("部屋が違えば広告許可を流用しない", () => { const v = fixture(); v.reins.unit = "002"; expect(validateRentalImport(v, NOW).ok).toBe(false); });
   it("公開タイトルと部屋を照合", () => { const v = fixture(); v.property.title = "別マンション 001"; expect(validateRentalImport(v, NOW).ok).toBe(false); });
@@ -98,6 +119,14 @@ describe("再実行と掲載終了", () => {
   it("既登録の同一号室は再確認モードだけ更新できる", async () => { const {store,rows} = memoryStore(); expect((await importRental(fixture(), store, NOW, "published")).action).toBe("created"); expect((await importRental(fixture(), store, NOW, "published", true)).action).toBe("updated"); expect(rows.size).toBe(1); });
   it("同時更新時は上書きしない", async () => { const {store} = memoryStore(); await importRental(fixture(), store, NOW, "published"); store.update = async () => false; expect((await importRental(fixture(), store, NOW, "published")).action).toBe("held"); });
   it("手動編集を保護", async () => { const {store,rows} = memoryStore(); const result = await importRental(fixture(), store, NOW, "published"); rows.get(result.slug!)!.description = "管理者が修正"; expect((await importRental(fixture(), store, NOW, "published")).action).toBe("held"); });
+  it("最新の再確認で手動編集済み下書きを公開できる", async () => {
+    const { store, rows } = memoryStore();
+    const created = await importRental(fixture(), store, NOW, "published");
+    rows.get(created.slug!)!.status = "draft";
+    const result = await importRental(fixture(), store, NOW, "published", true);
+    expect(result).toMatchObject({ action: "updated", slug: created.slug });
+    expect(rows.get(created.slug!)!.status).toBe("published");
+  });
   it("掲載終了・削除は非公開化し再取込で復活させない", async () => { const {store,rows} = memoryStore(); await importRental(fixture(), store, NOW, "published"); const v = fixture(); const event = { source: v.source, status: "removed", confirmedBy: { provider: "itandi", listingId: "123" }, checkedAt: NOW.toISOString(), reference: v.source.url, quote: "物件番号で検索結果なし", authenticated: true, siteOperational: true, exactRoomMatched: true }; const result = await closeRental(event, store, NOW); expect(result.action).toBe("closed"); expect(rows.get(result.slug!)!.status).toBe("closed"); expect((await importRental(v, store, NOW, "published")).action).toBe("held"); });
   it("認証切れ・障害は終了としない", async () => { const {store,rows} = memoryStore(); await importRental(fixture(), store, NOW, "published"); const result = await closeRental({ source: fixture().source, status: "removed", confirmedBy: { provider: "itandi", listingId: "123" }, checkedAt: NOW.toISOString(), reference: "page", quote: "ログイン画面", authenticated: false, siteOperational: true, exactRoomMatched: true }, store, NOW); expect(result.action).toBe("held"); expect([...rows.values()][0].status).toBe("published"); });
   it("公開ポータルの終了だけでは手動編集済み物件も公開停止しない", async () => {
