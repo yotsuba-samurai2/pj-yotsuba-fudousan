@@ -56,8 +56,8 @@ export function PropertySearchSampleSection() {
           <h3 className="mt-3 text-xl font-semibold text-ink">ご提案資料のサンプル</h3>
           <p className="mt-3 text-sm leading-7 text-text">物件情報をどのように整理するか、全9ページでご覧いただけます。図は説明用イラスト・配置イメージです。実際のご提案では、取得できた写真や間取りを使用します。</p>
           <p className="mt-3 rounded-lg bg-white p-3 text-sm font-semibold leading-6 text-primary-dark">物件・金額・アクセスはすべて架空です。募集中の物件や、開設可能と確認された物件の紹介ではありません。</p>
-          <a href={PDF} target="_blank" rel="noopener noreferrer" onClick={() => gaEvent("property_search_sample_pdf_open", { page: "/nagare", location: "property-search" })} className="mt-5 inline-flex min-h-12 items-center rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-white hover:bg-primary-dark focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary">サンプルPDFを見る（9ページ・日本語）<span className="ml-2" aria-hidden="true">↗</span></a>
-          <p className="mt-2 text-xs text-text-muted">別タブで開きます。ブラウザから保存・印刷できます。</p>
+          <a href={PDF} onClick={() => gaEvent("property_search_sample_pdf_open", { page: "/nagare", location: "property-search" })} className="mt-5 inline-flex min-h-12 items-center rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-white hover:bg-primary-dark focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary">サンプルPDFを見る（9ページ・日本語）<span className="ml-2" aria-hidden="true">→</span></a>
+          <p className="mt-2 text-xs text-text-muted">同じタブで開きます。ブラウザの「戻る」でこのページへ戻れます。保存・印刷もできます。</p>
         </div>
       </div>
       <ol className="space-y-4">
