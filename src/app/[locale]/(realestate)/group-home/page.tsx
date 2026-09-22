@@ -66,10 +66,11 @@ export async function generateMetadata(): Promise<Metadata> {
   });
 }
 
-export default function GroupHomePage() {
+export default async function GroupHomePage() {
+  const locale = await getRequestLocale();
   return (
     <>
-      <PropertySearchSampleTeaser page="/group-home" />
+      <PropertySearchSampleTeaser kind="group-home" locale={locale} page="/group-home" />
       <GroupHomePageContent />
       {/* ★2026-08-13 追加：CTA帯（LINE・お問い合わせ・電話）。
           不動産の主力ページなのに CtaBand が無く、PCではLINEへの導線が出ていなかった

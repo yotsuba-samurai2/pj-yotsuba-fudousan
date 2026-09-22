@@ -135,7 +135,7 @@ export default async function Page() {
       ]}
       crossLinkLead="会社設立の書類・許認可は、関連事業の四葉行政書士事務所のページで詳しく解説しています。"
     >
-      <PropertySearchSampleTeaser page="/office" />
+      <PropertySearchSampleTeaser kind="office" page="/office" />
       {/* §1 本店所在地とオフィス。数値・期間の断定なし */}
       <div>
         <ReH2>会社設立とオフィス探しは、同時に動く</ReH2>
