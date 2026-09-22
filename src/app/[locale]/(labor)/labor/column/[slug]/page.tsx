@@ -19,6 +19,7 @@ import { LaborColumnDetailPageContent } from "./PageContent";
 import type { Metadata } from "next";
 import type { LangCode } from "@/config/languages";
 import { getColumnLinkOverrides } from "@/lib/column-link-overrides";
+import { getColumnIllustrationAlt, resolveColumnIllustration } from "@/lib/column-illustrations";
 
 
 type Props = { params: Promise<{ slug: string }> };
@@ -35,6 +36,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const locale: LangCode = await getRequestLocale();
   if (!isLocaleAllowed(base, locale)) return {};
   const col = getLocalizedColumn(base, locale);
+  const illustration = resolveColumnIllustration(base);
   return buildPageMetadata({
     businessKey: "labor",
     title: col.title,
@@ -45,6 +47,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     publishedTime: col.date,
     modifiedTime: col.modifiedDate ?? col.date,
     section: col.category,
+    image: illustration.src,
     locale,
     // hreflang を公開ロケールのみに限定（未公開ロケールの404 URLをGoogleに広告しない）。
     availableLocales: base.locales,
@@ -59,6 +62,11 @@ export default async function LaborColumnDetailPage({ params }: Props) {
   const locale: LangCode = await getRequestLocale();
   if (!isLocaleAllowed(base, locale)) notFound();
   const col = getLocalizedColumn(base, locale);
+  const resolvedIllustration = resolveColumnIllustration(base);
+  const illustration = {
+    ...resolvedIllustration,
+    alt: getColumnIllustrationAlt(resolvedIllustration, locale, col.title),
+  };
 
   const [allLaborColumns, linkOverrides] = await Promise.all([
     getLaborColumns(locale),
@@ -73,7 +81,12 @@ export default async function LaborColumnDetailPage({ params }: Props) {
 
   return (
     <div>
-      <BlogPostingJsonLd businessKey="labor" column={col} locale={locale} />
+      <BlogPostingJsonLd
+        businessKey="labor"
+        column={col}
+        image={illustration.src}
+        locale={locale}
+      />
       <BreadcrumbJsonLd
         businessKey="labor"
         items={[
@@ -89,7 +102,13 @@ export default async function LaborColumnDetailPage({ params }: Props) {
         headline={col.title}
         summary={col.excerpt}
       />
-      <LaborColumnDetailPageContent col={col} prev={prev} next={next} linkOverrides={linkOverrides} />
+      <LaborColumnDetailPageContent
+        col={col}
+        prev={prev}
+        next={next}
+        linkOverrides={linkOverrides}
+        illustration={illustration}
+      />
       {/* ★2026-08-13 追加：コラム記事の末尾にCTA帯を置く。
           3レーンとも column/[slug]・column・about にだけ CtaBand が無く、
           PCではLINEへの導線が出ていなかった（SPは MobileStickyBar があるので出る）。
