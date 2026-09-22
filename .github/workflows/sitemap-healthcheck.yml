@@ -10,10 +10,22 @@ name: Sitemap Healthcheck
 #   原因は PR #304 で除去済みだが、4日間気づけなかったこと自体が穴だった。
 #
 # 設計の考え方:
-#   - 全URLは叩かない（1,200件超あり負荷が大きい）。無作為に40件を抜き取る。
+#   - 全URLは叩かない（1,400件超あり負荷が大きい）。無作為に40件を抜き取る。
 #     5%のURLが壊れている場合、1日で気づく確率は約87%、2日で98%を超える。
 #   - サイトマップ自体が取れない・URL数が急減した場合も異常として拾う。
-#   - 失敗したら Issue を立てる（token-healthcheck と同じ型）。
+#   - 失敗したら Issue を立て、実行自体も赤にする。
+#
+# 2026-09-23 の是正（本ワークフロー自身の不具合。Issue #362・#369 はこれによる誤報）:
+#   1. curl がタイムアウト（exit 28）すると、GitHub 既定シェルの errexit により
+#      40件ループの途中でステップごと中断していた。以後は `|| code=""` で受け、
+#      必ず 000 として次のURLへ進む。
+#   2. 中断すると SUMMARY が空のまま Issue が立ち、失敗URLが分からなかった。
+#      失敗経路では必ず SUMMARY を書き、空だった場合の既定文も用意する。
+#   3. continue-on-error により、異常を検出しても実行が success と表示されていた。
+#      Issue 作成後に明示的に失敗させ、Actions 上も赤にする。
+#   4. 1回のタイムアウトで騒がないよう、200 以外は3秒おいて1回だけ再試行する。
+#      ISR のコールドスタートを誤検出しないため、タイムアウトは45秒に延ばす。
+#   5. 同じ見出しのオープンIssueがあるときは新規作成せずコメントを足す（積み上がり防止）。
 
 on:
   schedule:
@@ -28,7 +40,7 @@ permissions:
 jobs:
   check:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     steps:
       - name: サイトマップを取得して無作為40件の疎通を確認する
         id: check
@@ -36,17 +48,28 @@ jobs:
         run: |
           set -uo pipefail
           SITEMAP="https://luck428.com/sitemap.xml"
+          SAMPLE_SIZE=40
+
+          # HTTPステータスを返す。失敗（タイムアウト・DNS・接続不能）でも
+          # 000 を返して呼び出し側を中断させない。errexit 対策の要。
+          http_code() {
+            local url="$1" code=""
+            code=$(curl -s -o /dev/null -w "%{http_code}" --max-time 45 \
+                     -H "Cache-Control: no-cache" "$url") || code=""
+            [ -n "$code" ] || code="000"
+            printf '%s' "$code"
+          }
 
           echo "::group::サイトマップ取得"
-          CODE=$(curl -s -o /tmp/sitemap.xml -w "%{http_code}" --max-time 60 "$SITEMAP")
+          CODE=$(curl -s -o /tmp/sitemap.xml -w "%{http_code}" --max-time 60 "$SITEMAP") || CODE="000"
           echo "sitemap HTTP=$CODE"
+          echo "::endgroup::"
           if [ "$CODE" != "200" ]; then
             echo "SUMMARY=サイトマップ自体が取得できません（HTTP $CODE）" >> "$GITHUB_OUTPUT"
             exit 1
           fi
-          echo "::endgroup::"
 
-          TOTAL=$(grep -c "<loc>" /tmp/sitemap.xml || echo 0)
+          TOTAL=$(grep -c "<loc>" /tmp/sitemap.xml) || TOTAL=0
           echo "URL総数: $TOTAL"
           echo "TOTAL=$TOTAL" >> "$GITHUB_OUTPUT"
 
@@ -60,24 +83,32 @@ jobs:
           # ローカル検証で全URLが HTTP 000 になり実際に踏んだため、2つに分けて書く（2026-09-16）。
           grep -o "<loc>[^<]*</loc>" /tmp/sitemap.xml \
             | sed -e "s|<loc>||" -e "s|</loc>||" \
-            | shuf -n 40 > /tmp/sample.txt
+            | shuf -n "$SAMPLE_SIZE" > /tmp/sample.txt
 
           # 抜き取りが空でも NG=0 になり「偽の緑」になるため、件数を必ず確かめる
           # （ローカル検証で shuf 不在により実際に踏んだ穴。2026-09-16）
           SAMPLED=$(wc -l < /tmp/sample.txt | tr -d " ")
           echo "抜き取り件数: $SAMPLED"
-          if [ "$SAMPLED" -lt 40 ]; then
-            echo "SUMMARY=URLの抜き取りに失敗しました（$SAMPLED 件。40件必要）。チェック自体が機能していません" >> "$GITHUB_OUTPUT"
+          if [ "$SAMPLED" -lt "$SAMPLE_SIZE" ]; then
+            echo "SUMMARY=URLの抜き取りに失敗しました（$SAMPLED 件。$SAMPLE_SIZE 件必要）。チェック自体が機能していません" >> "$GITHUB_OUTPUT"
             exit 1
           fi
 
-          echo "::group::40件の疎通確認"
+          echo "::group::${SAMPLE_SIZE}件の疎通確認"
           : > /tmp/ng.txt
           while read -r u; do
-            c=$(curl -s -o /dev/null -w "%{http_code}" --max-time 30 \
-                  -H "Cache-Control: no-cache" "$u")
+            [ -n "$u" ] || continue
+            c=$(http_code "$u")
+            # 200以外は一度だけ取り直す（ISRのコールドスタート・一時的なタイムアウトで騒がない）
             if [ "$c" != "200" ]; then
-              echo "$c $u" | tee -a /tmp/ng.txt
+              sleep 3
+              c2=$(http_code "$u")
+              echo "retry $c -> $c2 $u"
+              c="$c2"
+            fi
+            echo "$c $u"
+            if [ "$c" != "200" ]; then
+              echo "$c $u" >> /tmp/ng.txt
             fi
           done < /tmp/sample.txt
           echo "::endgroup::"
@@ -87,25 +118,28 @@ jobs:
           if [ "$NG" -gt 0 ]; then
             {
               echo "SUMMARY<<SUMEOF"
-              echo "サイトマップ掲載URLのうち $NG / 40 件が200を返しませんでした。"
+              echo "サイトマップ掲載URLのうち $NG / $SAMPLE_SIZE 件が200を返しませんでした（2回試行）。"
               echo ""
               cat /tmp/ng.txt
               echo "SUMEOF"
             } >> "$GITHUB_OUTPUT"
             exit 1
           fi
-          echo "全40件が200でした（総URL数 $TOTAL）"
+          echo "全 $SAMPLE_SIZE 件が200でした（総URL数 $TOTAL）"
 
       - name: 異常があれば Issue を立てる
         if: steps.check.outcome != 'success'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SUMMARY: ${{ steps.check.outputs.SUMMARY }}
+          REPO: ${{ github.repository }}
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: |
-          gh issue create --repo "${{ github.repository }}" \
-            --title "サイトマップの疎通確認が失敗（インデックス減少の前兆）" \
-            --body "${SUMMARY}
+          set -uo pipefail
+          TITLE="サイトマップの疎通確認が失敗（インデックス減少の前兆）"
+          # SUMMARY が空＝チェック処理自体が異常終了した場合。空のまま出さない
+          DETAIL="${SUMMARY:-（失敗URLの一覧を取得できませんでした。チェック処理自体が異常終了した可能性があります。実行ログの末尾を確認してください）}"
+          BODY="${DETAIL}
 
           **なぜこれが重大か**
           サイトマップに載っているURLが404等を返すと、Googleがクロールした時点で
@@ -120,3 +154,20 @@ jobs:
           4. 直したら Actions から本ワークフローを手動実行し、緑になることを確認する
 
           実行ログ: ${RUN_URL}"
+
+          # 同じ見出しのオープンIssueがあれば、新規作成せずコメントを足す
+          EXISTING=$(gh issue list --repo "$REPO" --state open --limit 20 \
+                       --search "in:title サイトマップの疎通確認が失敗" \
+                       --json number --jq '.[0].number') || EXISTING=""
+          if [ -n "$EXISTING" ] && [ "$EXISTING" != "null" ]; then
+            echo "既存Issue #$EXISTING にコメントします"
+            gh issue comment "$EXISTING" --repo "$REPO" --body "$BODY"
+          else
+            gh issue create --repo "$REPO" --title "$TITLE" --body "$BODY"
+          fi
+
+      - name: 異常なら実行自体を失敗させる
+        if: steps.check.outcome != 'success'
+        run: |
+          echo "::error::サイトマップの疎通確認に失敗しました（Issueを作成またはコメント済み）"
+          exit 1
