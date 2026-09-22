@@ -108,6 +108,13 @@ const STATIC_REALESTATE: StaticPage[] = [
   { path: "", changeFrequency: "weekly", priority: 1.0 },
   // 2026-09-01：物件紹介（/bukken）。2026-09-16に ja先行→4ロケール（ページ側 PAGE_LOCALES と一致・locales未指定＝全4）
   { path: "/bukken", changeFrequency: "weekly", priority: 0.8 },
+  // 2026-09-22：学区特集。区の通学区域（町丁目・番・号）の一次データ層。
+  // ハブ＋4校（誠之・昭和・千駄木・窪町）。いずれもページ側 PAGE_LOCALES は4ロケール。
+  { path: "/gakku", changeFrequency: "monthly", priority: 0.8 },
+  { path: "/gakku/seishi", changeFrequency: "monthly", priority: 0.7 },
+  { path: "/gakku/showa", changeFrequency: "monthly", priority: 0.7 },
+  { path: "/gakku/sendagi", changeFrequency: "monthly", priority: 0.7 },
+  { path: "/gakku/kubomachi", changeFrequency: "monthly", priority: 0.7 },
   { path: "/souzoku", changeFrequency: "monthly", priority: 0.9 },
   { path: "/souzoku/nagare", changeFrequency: "monthly", priority: 0.7 },
   // タスクC-4（2026-07-19）：相続空き家。C-6-2で zh-tw・zh を公開。
