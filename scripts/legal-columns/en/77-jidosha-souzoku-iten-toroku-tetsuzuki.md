@@ -19,11 +19,11 @@ A standard car is subject to the registration system of the Road Transport Vehic
 | --- | --- | --- |
 | Name of procedure | Transfer registration (Road Transport Vehicle Act Article 13) | Name change (application to record on the inspection certificate) |
 | Window | The District Transport Bureau with jurisdiction | The Light Motor Vehicle Inspection Organization |
-| Filing period | Within 15 days of the transfer of ownership | Handled differently from a standard car |
+| Filing period | Within 15 days of the transfer of ownership | Within 15 days of the change of owner (Article 67, paragraph 1 of the Road Transport Vehicle Act) |
 | Estate-division agreement | In principle required (except for a sole heir or the statement) | Often not required |
 | Parking (storage) space | Parking-space certificate (garage certificate) | In some areas, notification of the storage space |
 
-The main documents for a standard car's transfer registration are the application (Form No. 1), the fee-payment slip (registration stamp; 700 yen for transfer registration), the inspection certificate, a full set of family registers showing the deceased's death and the heirs or a copy of the list of legally designated heirs, the estate-division agreement (not needed for a sole heir), the new owner's seal certificate (issued within 3 months) and registered seal, and the parking-space certificate (within 40 days of the certifying date). When jurisdiction changes, replacing the number plate or bringing in the car may be required. Note that transfer registration by inheritance is outside the online, bundled vehicle-ownership procedure (OSS) and is handled over the counter at the District Transport Bureau. Within the scope of administrative-scrivener work, Yotsuba Administrative Scrivener Office supports preparing these documents and acting as agent for the transfer registration. Whether an individual document is required is a matter for the District Transport Bureau's handling.
+The main documents for a standard car's transfer registration are the application (Form No. 1), the fee-payment slip (registration stamp; 500 yen for transfer registration), the inspection certificate, a full set of family registers showing the deceased's death and the heirs or a copy of the list of legally designated heirs, the estate-division agreement (not needed for a sole heir), the new owner's seal certificate (issued within 3 months) and registered seal, and the parking-space certificate (within 40 days of the certifying date). When jurisdiction changes, replacing the number plate or bringing in the car may be required. Note that transfer registration by inheritance is outside the online, bundled vehicle-ownership procedure (OSS) and is handled over the counter at the District Transport Bureau. Within the scope of administrative-scrivener work, Yotsuba Administrative Scrivener Office supports preparing these documents and acting as agent for the transfer registration. Whether an individual document is required is a matter for the District Transport Bureau's handling.
 
 ## Are the documents simpler when the appraisal is 1 million yen or less?
 
@@ -50,7 +50,7 @@ Yotsuba Administrative Scrivener Office and [Yotsuba Real Estate's inheritance d
 ## FAQ
 
 **Q. Is there a deadline for a car's name change?**
-A. A standard car's transfer registration is to be applied for within 15 days of the transfer of ownership, under Article 13 of the Road Transport Vehicle Act. In inheritance it can take time until the estate division is settled, but leaving the name unchanged can cause obstacles in selling, scrapping, car insurance and recall notices, so we recommend acting promptly once the estate division is decided. A light vehicle is handled differently from a standard car.
+A. A standard car's transfer registration is to be applied for within 15 days of the transfer of ownership, under Article 13 of the Road Transport Vehicle Act. In inheritance it can take time until the estate division is settled, but leaving the name unchanged can cause obstacles in selling, scrapping, car insurance and recall notices, so we recommend acting promptly once the estate division is decided. A light vehicle is also to be processed at the Light Motor Vehicle Inspection Organization within 15 days of the change of owner, under Article 67, paragraph 1 of the Road Transport Vehicle Act.
 
 **Q. Is an estate-division agreement needed even with only one heir?**
 A. If there is only one heir, the estate-division agreement is unnecessary, and the transfer registration can be applied for once that person's status as heir is confirmed by family registers. If there are several heirs, an estate-division agreement (with all heirs' registered seals and seal certificates) is in principle required, but for a standard car appraised at 1 million yen or less it can be replaced by a statement of concluded estate division.
@@ -63,7 +63,7 @@ A. An administrative scrivener can handle the car's name change, but the filing 
 
 ## Sources (Primary Information)
 
-- e-Gov Law Search, "Road Transport Vehicle Act" (Act No. 185 of 1951), Article 13 (transfer registration) (accessed 2026-09-22)
+- e-Gov Law Search, "Road Transport Vehicle Act" (Act No. 185 of 1951), Article 13 (transfer registration), Article 67, paragraph 1 (changes to the matters recorded in the vehicle inspection certificate) (accessed 2026-09-22)
 - e-Gov Law Search, "Civil Code" (Act No. 89 of 1896), Article 896 (general effect of inheritance), Article 898 (effect of co-inheritance), Article 907 (agreement for division of the estate) (accessed 2026-09-22)
 - Ministry of Land, Infrastructure, Transport and Tourism and the District Transport Bureaus, "Procedure and required documents for a car's inheritance (transfer registration)" and "Statement of concluded estate division" (usable when a document confirming the inherited car's value is 1 million yen or less is attached; accessed 2026-09-22)
 - Light Motor Vehicle Inspection Organization, "Name-change procedure (including a change of owner by inheritance)" (accessed 2026-09-22)
