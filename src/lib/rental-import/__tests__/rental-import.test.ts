@@ -47,6 +47,27 @@ describe("公開ゲート", () => {
   });
   it("REINS照合済み・写真間取りありを登録可能", () => expect(validateRentalImport(fixture(), NOW).ok).toBe(true));
   it.each(["denied", "unknown"] as const)("REINS広告可以外を保留 %s", (status) => { const v = fixture(); v.reins.advertising = status; expect(validateRentalImport(v, NOW).ok).toBe(false); });
+  it("いい生活は文京区・申込なし・25万円以上ならADなしでも登録できる", () => {
+    const v = fixture();
+    v.source.provider = "eslife";
+    v.source.roomId = "es-001";
+    v.source.url = "https://rent.es-square.net/bukken/chintai/es-001";
+    v.source.address = "東京都文京区小石川1-1-1";
+    v.source.building = "いい生活テストマンション";
+    v.source.unit = "101";
+    v.source.availability = "available";
+    v.source.checkedAt = NOW.toISOString();
+    v.source.listingEvidence = { ...v.source.listingEvidence, reference: v.source.url, quote: "募集中・広告可" };
+    v.source.rent = { yen: 250000, evidence: { ...v.source.rent.evidence, reference: v.source.url, quote: "賃料250,000円" } };
+    v.source.adQuote = "ADなし";
+    v.source.applicationStatus = "not-applied";
+    v.source.advertising = { status: "allowed", evidence: { ...v.source.listingEvidence, quote: "広告可" } };
+    v.property.title = "いい生活テストマンション 101";
+    v.property.locationText = v.source.address;
+    v.property.priceYen = 250000;
+    Reflect.deleteProperty(v, "reins");
+    expect(validateRentalImport(v, NOW).ok).toBe(true);
+  });
   it.each(["広告可否 未確認", "広告不可", "広告可 広告不可"])("文字列の誤認防止 %s", (quote) => { const v = fixture(); v.reins.evidence.quote = quote; expect(validateRentalImport(v, NOW).ok).toBe(false); });
   it("部屋が違えば広告許可を流用しない", () => { const v = fixture(); v.reins.unit = "002"; expect(validateRentalImport(v, NOW).ok).toBe(false); });
   it("公開タイトルと部屋を照合", () => { const v = fixture(); v.property.title = "別マンション 001"; expect(validateRentalImport(v, NOW).ok).toBe(false); });

@@ -20,13 +20,18 @@ export const evidenceSchema = z.object({
   reference: z.string().trim().min(1).max(1000),
   quote: z.string().trim().min(1).max(5000),
 });
-export function isPrimaryReference(reference: string, provider: "itandi" | "reins" = "itandi") {
-  try { const url = new URL(reference); return url.protocol === "https:" && url.hostname === (provider === "itandi" ? "itandibb.com" : "system.reins.jp"); }
+export type RentalProvider = "itandi" | "reins" | "eslife";
+export function isPrimaryReference(reference: string, provider: RentalProvider = "itandi") {
+  try {
+    const url = new URL(reference);
+    const host = provider === "itandi" ? "itandibb.com" : provider === "reins" ? "system.reins.jp" : "rent.es-square.net";
+    return url.protocol === "https:" && url.hostname === host;
+  }
   catch { return false; }
 }
 const option = z.object({ provider: z.enum(["itandi", "reins"]), value: z.string().trim().min(1), evidence: evidenceSchema });
 export const rentEvidenceSchema = z.object({ yen: z.number().int().positive(), evidence: evidenceSchema });
-export function validRentEvidence(rent: z.infer<typeof rentEvidenceSchema>, provider: "itandi" | "reins", now: Date) {
+export function validRentEvidence(rent: z.infer<typeof rentEvidenceSchema>, provider: RentalProvider, now: Date) {
   const values = Array.from(rent.evidence.quote.normalize("NFKC").replace(/,/g, "").matchAll(/(?:^|\s)(?:月額)?(?:賃料|家賃)\s*[:：=]?\s*(\d+(?:\.\d+)?)\s*(万円|円)/g)).map((m) => Math.round(Number(m[1]) * (m[2] === "万円" ? 10000 : 1)));
   return isCurrentEvidence(rent.evidence.checkedAt, now) && isPrimaryReference(rent.evidence.reference, provider) && values.length > 0 && values.every((value) => value === rent.yen);
 }
