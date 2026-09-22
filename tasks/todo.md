@@ -402,3 +402,24 @@ Only a task-owned loopback database receives fixture writes. No production DB wr
 - TypeScript、変更ファイルeslint、Next.js 16.3.5の本番ビルドが成功。使い捨てDBに3事業の代表記事を入れ、417ページを静的生成した。本番DBは変更していない。
 - 3事業×4言語の12ページで、visible image、OG、Twitter、BlogPosting JSON-LDが同じ画像を指すことを確認した。390px・768px・1440pxで画像は16:9を維持して表示された。
 - 768pxの不動産ページに既存ヘッダーナビ由来の横溢れが76pxある。挿絵は705×397pxでviewport内に収まり、今回の変更によるものではないため対象外とした。
+
+## 2026-09-22 /gakku に 3S1K 通学区域マップを設置
+
+- [x] 同梱の地図（自己完結・noindex）と埋め込み部品をリポジトリの置き場所・エイリアスに合わせて配置
+- [x] 導入文の直後・H2「「3S1K」とは何を指しますか？」の直前に強調セクションを挿入（日本語のみ）
+- [x] 既存の強調ブロックのデザイントークンで組み、新しい色を足さない
+- [x] iframeの高さ追従を修正し、内部スクロールを出さない
+- [x] 型検査・変更ファイルlint・全テスト・本番ビルドを通す
+- [x] PC幅1280pxとスマホ幅390pxで実画面を確認し、地図内リンクの遷移先を確認
+- [ ] PRレビュー・マージ・本番反映（浦松の指示を待つ）
+
+### レビュー
+
+- 地図は `public/gakku/3s1k-map.html`（自己完結・noindex・sitemap未収載）。埋め込みは `src/components/gakku/GakkuMapEmbed.tsx`。
+- 設置は日本語の `/gakku` のみ。地図の注記・凡例・校名が日本語のため en / zh-tw / zh には出さない（実測：ja=1参照、他3ロケール=0参照）。
+- セクションは既存の強調ブロックと同じ `rounded-xl border border-border bg-surface-dim`＋`font-serif text-xl font-semibold text-ink` の見出し。色の追加なし。
+- **高さ追従のバグを修正**。地図側の `postMessage` はhydrationより前に飛ぶため初回を取りこぼし、iframeが640pxのまま内部スクロールが出ていた（実測：中身はPC 992px・スマホ 1122px）。同一オリジンなので `ResizeObserver` で中身を直接見る方式に変えた。修正後はiframe高さ＝中身の高さで一致し、学校一覧を開くと 992→1222px（PC）・1122→1352px（スマホ）と追従する。
+- 1280px・390pxとも地図内の横スクロールなし。凡例はPCのみ（スマホは右一覧が凡例を兼ねる設計どおり非表示）。地図内「番・号の表と取扱物件を見る」から `target="_top"` で `/gakku/seishi` へ親ページごと遷移することを確認。
+- CSPは `base-uri 'self'; object-src 'none'; frame-ancestors 'self'` のみ。script-src等を足していないため、同一オリジンiframe・cdnjs・国土地理院タイル・Google Fontsはいずれも許可範囲内（配信ヘッダを実測）。
+- 検証環境の制約：この作業環境の外向き通信ではcdnjsと国土地理院タイルが遮断されるため、Leafletは同一バージョン（1.9.4）をnpmから、タイルはダミー画像を差し込んで描画確認した。区域ポリゴン8件（全域4・号分かれ4）・校名ラベル4件・学校カード4件は実物で確認済み。**本番のタイル画像そのものはPreview/本番で要確認。**
+- ローカルbuildは使い捨てPostgresを立てて完走（417ページ）。本番DBは触っていない。
