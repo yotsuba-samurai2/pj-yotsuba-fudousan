@@ -366,3 +366,17 @@ Only a task-owned loopback database receives fixture writes. No production DB wr
 - [x] 9ページPDFとトップ・流れ・介護ページの導線を実装
 - [x] PDF・画面・型・lint・テストの検証（ホーム全体は公開環境で確認）
 - [ ] 公開・最終確認
+## 2026-09-22 物件比較サンプルの用途別展開
+
+- [x] 既存の通所系福祉施設サンプルを3ページに限定する
+- [x] グループホーム・オフィス・飲食店・投資物件の比較PDFを4言語で生成する
+- [x] 通所系福祉施設サンプルも4言語で揃え、ロケールごとのPDFへ接続する
+- [x] 各ページの内容・CTA・PDFを同じ用途に揃える
+- [x] 全PDFの全ページを描画し、文字欠け・重なり・内容を検査する
+- [ ] 型検査・lint・関連テスト・本番ビルドを実行する
+
+### レビュー
+
+- 20PDF・180ページを画像化。全ファイル9ページ、テキスト抽出可能、文字欠け・重なり・表のはみ出しなし。
+- 既存の通所系資料は `/nagare`・`/kaigo`・`/toushi/shitei-shinsei` の3ページ。専用版は `/group-home`・`/office`・`/inshokuten`・`/toushi` に配置。トップページからは削除。
+- ローカルbuildはコンパイル・TypeScript成功。DATABASE_URL未設定のため、既存コラム取得でページデータ収集時に停止。Vercel Previewで全体buildと実画面を確認する。

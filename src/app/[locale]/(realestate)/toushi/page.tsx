@@ -96,7 +96,7 @@ const COPY: Record<LangCode, ToushiCopy> = {
     faqAria: "よくあるご質問",
     sections: (locale) => (
       <>
-        <PropertySearchSampleTeaser page="/toushi" />
+        <PropertySearchSampleTeaser kind="investment" locale={locale} page="/toushi" />
         <div>
           <ReH2>どんな投資・事業用不動産を扱っていますか？</ReH2>
           <ul className="mt-3 space-y-2 text-sm leading-relaxed text-text">

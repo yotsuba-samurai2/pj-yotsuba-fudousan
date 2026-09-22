@@ -108,7 +108,7 @@ export default async function Page() {
       ]}
       crossLinkLead="指定申請など許認可の書類は、関連事業の四葉行政書士事務所のページで詳しく解説しています。"
     >
-      <PropertySearchSampleTeaser page="/kaigo" />
+      <PropertySearchSampleTeaser kind="welfare" page="/kaigo" />
 
       {/* §1 類型と指定権者。割り振りの断定なし＝事前確認へ誘導 */}
       <div>

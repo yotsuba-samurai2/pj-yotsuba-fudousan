@@ -90,7 +90,7 @@ export default async function Page() {
       ]}
       crossLinkLead="営業許可など許認可の書類は、関連事業の四葉行政書士事務所のページで詳しく解説しています。"
     >
-      <PropertySearchSampleTeaser page="/inshokuten" />
+      <PropertySearchSampleTeaser kind="restaurant" page="/inshokuten" />
       {/* §1 居抜き/スケルトン。費用の数値断定なし */}
       <div>
         <ReH2>飲食店開業は「物件」と「営業許可」が同時に動く</ReH2>
