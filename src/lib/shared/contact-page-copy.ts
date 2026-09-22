@@ -124,3 +124,68 @@ export const CONTACT_INTRO: Record<"legal" | "labor", Record<LangCode, [string, 
     zh: ["社会保险、劳务管理、助成金申请等各类问题，欢迎随时咨询。", "您可以通过电话、在线预约或表单联系我们。"],
   },
 };
+
+/**
+ * 送信完了ページ（/labor/thanks・/legal/thanks）の4ロケール文言。
+ *
+ * 2026-09-22 追加。それまで両ページは本文をJSXに日本語で直書きしており、
+ * **4ロケールとも日本語を返していた**（ローカルの本番ビルド成果物で実測）。
+ * お問い合わせフォーム自体は4言語で出ているのに、送信後の完了画面だけ日本語という状態だった。
+ *
+ * 気づかれなかった理由＝`ContactForm` の `router.push(thanksPath)` がロケール接頭辞を
+ * 付けておらず、/en/・/zh-tw/・/zh/ から送信した人も一律で日本語版URLへ落ちていたため。
+ * 同じコミットで `addLocalePrefix` を通すよう直した。
+ *
+ * 訳文は不動産レーンの既存訳（翻訳辞書の `thanks.*`）に合わせた。同じ日本語から起こした
+ * 文言が3レーンで食い違うのを避けるため（`luck428-column-seo` 第5条の3／既存に統一する）。
+ *
+ * 1つだけ既存訳に合わせていない：戻り先のラベル。辞書の `common.backToTop` は
+ * 「トップに戻る」を Back to top／返回頂部／返回顶部 と訳しているが、このリンクの遷移先は
+ * ページ先頭へのスクロールではなく各レーンのトップページ（/labor・/legal）なので、
+ * CONTACT_LABELS.home（Home／首頁／首页）に合わせた語にしている。
+ * 辞書側の `common.backToTop` はDBの値で本PRの範囲外。別途の申し送りとする。
+ *
+ * 両レーンで文言は同一のため1つの表を共有する（レーン差は事務所名だけで、それは layout の
+ * template `%s｜事務所名` が付ける。ここで事務所名を書かない＝2026-09-05 月次点検 NEW-TECH-1）。
+ */
+export const THANKS_COPY: Record<LangCode, {
+  metaTitle: string;
+  metaDescription: string;
+  title: string;
+  body1: string;
+  body2: string;
+  backToTop: string;
+}> = {
+  ja: {
+    metaTitle: "送信完了",
+    metaDescription: "お問い合わせを受け付けました。",
+    title: "お問い合わせを受け付けました",
+    body1: "2営業日以内にご返信いたします。",
+    body2: "しばらくお待ちください。",
+    backToTop: "トップに戻る",
+  },
+  en: {
+    metaTitle: "Submission Complete",
+    metaDescription: "Your inquiry has been received.",
+    title: "Your inquiry has been received",
+    body1: "We will reply within 2 business days.",
+    body2: "Thank you for your patience.",
+    backToTop: "Back to home",
+  },
+  "zh-tw": {
+    metaTitle: "提交成功",
+    metaDescription: "已收到您的諮詢。",
+    title: "已收到您的諮詢",
+    body1: "我們將在2個工作日內回覆。",
+    body2: "請稍候。",
+    backToTop: "返回首頁",
+  },
+  zh: {
+    metaTitle: "提交成功",
+    metaDescription: "已收到您的咨询。",
+    title: "已收到您的咨询",
+    body1: "我们将在2个工作日内回复。",
+    body2: "请稍候。",
+    backToTop: "返回首页",
+  },
+};
