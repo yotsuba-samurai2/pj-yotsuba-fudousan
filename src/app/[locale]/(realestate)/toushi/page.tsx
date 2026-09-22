@@ -96,7 +96,6 @@ const COPY: Record<LangCode, ToushiCopy> = {
     faqAria: "よくあるご質問",
     sections: (locale) => (
       <>
-        <PropertySearchSampleTeaser kind="investment" locale={locale} page="/toushi" />
         <div>
           <ReH2>どんな投資・事業用不動産を扱っていますか？</ReH2>
           <ul className="mt-3 space-y-2 text-sm leading-relaxed text-text">
@@ -723,6 +722,7 @@ export default async function Page() {
       authorBio={c.authorBio}
       ctaVariant="property"
     >
+      <PropertySearchSampleTeaser kind="investment" locale={locale} page="/toushi" />
       {c.sections(locale)}
       {/* FAQPage JSON-LD＝B-4の例外（浦松承認）。ja設問はB-3の40問を参照＝サイト内で文言一致。
           §C（2026-07-20）：en/zh-tw/zh も c.faq を渡して全ロケール表示。inLanguage は hreflang と同一。 */}
