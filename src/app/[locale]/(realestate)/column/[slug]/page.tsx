@@ -8,6 +8,7 @@ import { FAQJsonLd } from "@/components/seo/FAQJsonLd";
 import { SpeakableJsonLd } from "@/components/seo/SpeakableJsonLd";
 import { CtaBand } from "@/components/shared/CtaBand";
 import { resolveRealestateColumnCta } from "@/lib/column-shared";
+import { resolveColumnIllustration } from "@/lib/column-illustrations";
 
 import type { Metadata } from "next";
 import type { LangCode } from "@/config/languages";
@@ -78,6 +79,10 @@ export default async function ColumnDetailPage({ params }: Props) {
   // ★判定は ja 正本の base で行う（col は翻訳済み＝category が "Inheritance"／"继承" に差し替わる）。
   const cta = resolveRealestateColumnCta(base);
 
+  // 挿絵も ja 正本の base で決める。col は翻訳済みで category・tags が差し替わるため、
+  // col で判定すると 4言語で別々の画像になる（resolveRealestateColumnCta と同じ作法）。
+  const illustration = resolveColumnIllustration(base, locale, { localizedTitle: col.title });
+
   return (
     <div>
       <BlogPostingJsonLd businessKey="realestate" column={col} locale={locale} />
@@ -88,7 +93,7 @@ export default async function ColumnDetailPage({ params }: Props) {
       ]} />
       {col.faq && col.faq.length > 0 && <FAQJsonLd items={col.faq} />}
       <SpeakableJsonLd businessKey="realestate" path={`/column/${col.slug}`} headline={col.title} summary={col.excerpt} />
-      <ColumnDetailContent col={col} prev={prev} next={next} related={related} />
+      <ColumnDetailContent col={col} prev={prev} next={next} related={related} illustration={illustration} />
       {/* ★2026-08-13 追加：コラム記事の末尾にCTA帯を置く。
           3レーンとも column/[slug]・column・about にだけ CtaBand が無く、
           PCではLINEへの導線が出ていなかった（SPは MobileStickyBar があるので出る）。

@@ -7,6 +7,7 @@ import { BlogPostingJsonLd } from "@/components/seo/BlogPostingJsonLd";
 import { FAQJsonLd } from "@/components/seo/FAQJsonLd";
 import { SpeakableJsonLd } from "@/components/seo/SpeakableJsonLd";
 import { CtaBand } from "@/components/shared/CtaBand";
+import { resolveColumnIllustration } from "@/lib/column-illustrations";
 
 import LegalColumnDetailContent from "./LegalColumnDetailContent";
 import type { Metadata } from "next";
@@ -52,6 +53,10 @@ export default async function LegalColumnDetailPage({ params }: Props) {
   if (!isLocaleAllowed(base, locale)) notFound();
   const col = getLocalizedColumn(base, locale);
 
+  // 挿絵も ja 正本の base で決める。col は翻訳済みで category・tags が差し替わるため、
+  // col で判定すると 4言語で別々の画像になる（resolveRealestateColumnCta と同じ作法）。
+  const illustration = resolveColumnIllustration(base, locale, { localizedTitle: col.title });
+
   const allLegalColumns = await getLegalColumns(locale);
   const sorted = [...allLegalColumns].sort((a, b) => b.date.localeCompare(a.date));
   const idx = sorted.findIndex((c) => c.slug === slug);
@@ -68,7 +73,7 @@ export default async function LegalColumnDetailPage({ params }: Props) {
       ]} />
       {col.faq && col.faq.length > 0 && <FAQJsonLd items={col.faq} />}
       <SpeakableJsonLd businessKey="legal" path={`/legal/column/${col.slug}`} headline={col.title} summary={col.excerpt} />
-      <LegalColumnDetailContent column={col} prev={prev} next={next} />
+      <LegalColumnDetailContent column={col} prev={prev} next={next} illustration={illustration} />
       {/* ★2026-08-13 追加：コラム記事の末尾にCTA帯を置く。
           3レーンとも column/[slug]・column・about にだけ CtaBand が無く、
           PCではLINEへの導線が出ていなかった（SPは MobileStickyBar があるので出る）。
