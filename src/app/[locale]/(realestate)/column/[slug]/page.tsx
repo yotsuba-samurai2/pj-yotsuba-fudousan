@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { getColumnBySlug, getColumns, getLocalizedColumn, getAllSlugs, isLocaleAllowed, pickRelatedColumns } from "@/lib/columns";
+import { getColumnBySlug, getColumns, getLocalizedColumn, isLocaleAllowed, pickRelatedColumns } from "@/lib/columns";
 import { buildPageMetadata } from "@/lib/seo";
 import { getRequestLocale } from "@/lib/getRequestLocale";
 import { BlogPostingJsonLd } from "@/components/seo/BlogPostingJsonLd";
@@ -19,9 +19,12 @@ type Props = {
   params: Promise<{ slug: string }>;
 };
 
-export async function generateStaticParams() {
-  const slugs = await getAllSlugs();
-  return slugs.map((slug) => ({ slug }));
+// コラムはDBの記事でコードのデプロイと独立に増えるため、詳細はオンデマンド生成にする
+// （物件詳細と同じ）。全記事×4言語をビルドのたびに事前生成すると、東京のDBへの往復が
+// 約1,400ページ分かかり、Vercel のビルドが約30分になっていた（2026-09-23）。
+// 生成後は [locale]/layout.tsx の revalidate（1時間）と /api/admin/revalidate で更新される。
+export function generateStaticParams() {
+  return [];
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
