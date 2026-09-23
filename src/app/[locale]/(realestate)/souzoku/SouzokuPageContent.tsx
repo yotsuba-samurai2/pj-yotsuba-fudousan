@@ -78,10 +78,17 @@ type SouzokuCopy = {
   faqLabel: string;
   faqHeading: string;
   faqItems: FaqItem[];
+  /**
+   * 2026-09-23：FAQ の回答直下に添える1行リンク（設問文をキーにする）。表示のみ＝FAQJsonLd の answer には含めない。
+   * /wakeari（売りにくい土地・建物の出口相談・ja先行）へ送るため ja のみ定義。他ロケールは未定義＝何も出ない。
+   */
+  faqFollowUps?: Record<string, { pre: string; href: string; label: string }>;
   exitLabel: string;
   exitHeading: string;
   exitLead: string;
   exitCards: ExitCard[];
+  /** 2026-09-23：3つの出口の節末に添える1行（ja のみ・/wakeari へ）。他ロケールは未定義＝何も出ない */
+  exitFooter?: { pre: string; href: string; label: string; post: string };
   internalHeading: string;
   internalLinks: InternalLink[];
   sourcesHeading: string;
@@ -174,6 +181,19 @@ const COPY: Record<LangCode, SouzokuCopy> = {
     faqLabel: "FAQ",
     faqHeading: "文京区の相続不動産、よくある疑問",
     faqItems: JA_FAQ_ITEMS,
+    // 2026-09-23：共有名義・借地権の設問の回答直下に、売りにくい土地・建物の出口相談（/wakeari 配下）への1行を添える（指示書 v2.0 7-1）。
+    faqFollowUps: {
+      "共有名義で相続した不動産はどう扱えばいいですか？": {
+        pre: "相続以外の共有や、出口の比較は",
+        href: "/wakeari/kyoyu",
+        label: "共有の整理と持分売却はこちら",
+      },
+      "借地権付きの実家を相続したら、どうすればいいですか？": {
+        pre: "相続以外の借地・底地や、出口の比較は",
+        href: "/wakeari/shakuchi-sokochi",
+        label: "借地権・底地の売却はこちら",
+      },
+    },
     exitLabel: "3つの選択肢",
     exitHeading: "相続した不動産の3つの出口——管理・活用・売却",
     exitLead:
@@ -198,6 +218,13 @@ const COPY: Record<LangCode, SouzokuCopy> = {
           "住む予定がない、維持費や税負担が重い、相続人の間で分けたい——そんなときの現実的な出口が売却です。文京区に加えて豊島区（大塚・巣鴨・駒込・池袋など）の相場もふまえた査定から、売却に伴う手続きの段取りまでお手伝いします。登記や税務など専門家の関与が必要な場面では、行政書士・司法書士・税理士などの専門家をご紹介し、それぞれ別契約で進めます。「文京区の実家と豊島区の貸家」のように物件が区をまたぐ相続も、あわせて査定します。相続した一棟アパート・ビルなど収益不動産の売却もご相談ください。",
       },
     ],
+    // 2026-09-23：3つの出口の節末に1行（指示書 v2.0 7-1）。相続以外の所有者と、難あり土地の出口の比較は /wakeari へ。
+    exitFooter: {
+      pre: "相続以外の所有者の方や、再建築不可・共有・借地・狭小地の出口の比較は",
+      href: "/wakeari",
+      label: "売りにくい土地・建物の出口相談",
+      post: "へ。",
+    },
     internalHeading: "あわせてご覧いただきたいページ",
     internalLinks: [
       {
@@ -918,6 +945,16 @@ export default async function SouzokuPageContent() {
                 <p className="mt-3 text-sm leading-relaxed text-text-muted">
                   {item.answer}
                 </p>
+                {/* 2026-09-23：回答直下の1行リンク（表示のみ。FAQJsonLd の answer は不変） */}
+                {c.faqFollowUps?.[item.question] && (
+                  <p className="mt-2 text-sm leading-relaxed text-text-muted">
+                    {c.faqFollowUps[item.question].pre}
+                    <Link href={c.faqFollowUps[item.question].href} className="text-primary underline">
+                      {c.faqFollowUps[item.question].label}
+                    </Link>
+                    。
+                  </p>
+                )}
               </details>
             ))}
           </div>
@@ -958,6 +995,16 @@ export default async function SouzokuPageContent() {
               );
             })}
           </div>
+          {/* 2026-09-23：節末の1行（ja のみ）。売りにくい土地・建物の出口相談（/wakeari）へ送る */}
+          {c.exitFooter && (
+            <p className="mx-auto mt-8 max-w-2xl text-center text-sm leading-relaxed text-text-muted">
+              {c.exitFooter.pre}
+              <Link href={c.exitFooter.href} className="text-primary underline">
+                {c.exitFooter.label}
+              </Link>
+              {c.exitFooter.post}
+            </p>
+          )}
         </div>
       </section>
 

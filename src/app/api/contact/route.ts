@@ -27,6 +27,8 @@ const categoryLabels: Record<string, string> = {
   // 2026-07-27：相談カテゴリの拡充（表示ラベルの正本は src/lib/shared/contact-intake.ts）
   souzoku: "相続した不動産のこと（貸す・売る・活用する）",
   akiya: "空き家のこと",
+  // 2026-09-23：売りにくい土地・建物の出口相談（/wakeari）。通知メールに生の値が出ないよう表示名を持つ
+  wakeari: "売りにくい土地・建物（再建築不可・共有・借地・狭小地）",
   // 2026-09-24：大家募集ページ（/group-home/ooya）の専用フォーム（物件項目は message に整形済み）
   "gh-owner": "グループホーム向けに物件を貸したい（大家・オーナー）",
   "foreign-housing": "外国人のお部屋探し・多言語対応",

@@ -298,6 +298,20 @@
 - ビルドは米国東部、DB は東京。`generateStaticParams` でDBの記事を全件事前生成すると、1ページごとに太平洋を往復してビルドが約30分になる。DB由来の詳細ページは `return []`（オンデマンド生成＋ISR）にする（#408 で 30分→3分10秒）。
 
 
+## 2026-09-23 難あり土地（狭小地・再建築不可・共有・借地）出口相談コーナー Phase 1（/wakeari 配下5枚）
+
+- **Wikidata の検索結果の先頭を機械的に採らない**：`wbsearchentities` で「借地権」を引くと先頭の Q2630687 は ja ラベルが「動産賃借権」（jawiki「借地権」にリンク・別名に借地権）だった。`sameAs` は**ラベルが完全一致し説明が概念そのもの**のときだけ付ける（指示書 v2.0 6-2）。API は User-Agent 必須で、連続呼び出しは 429（Too many requests）になる＝20秒以上あけて `wbgetentities&sites=jawiki&titles=` で引くのが確実。
+- **e-Gov 法令API v2 `laws?law_id=` の `current_revision_info` が「最終改正」の併記に使える**：条ごとの最終改正日は取れないが、現行版の施行日と改正法令番号が返る（例：建築基準法 2026-05-27・令和8年法律第23号）。条文本体は v1 `lawdata/<id>` の XML から `Article Num=` で抜く（`262_2` のように「の2」はアンダースコア）。
+- **このコンテナには PDF の描画・抽出ツールが無い**（pdftoppm なし・pypdf は cryptography の不整合で落ちる）。国土交通省の PDF 資料は本文が取れない＝官公庁の HTML ページ（高知県・文京区・都例規集）で裏を取り、原文は「未検証」と書く。
+- **`RealestateServicePage` の既定の署名（authorBio）には禁止語（記者歴34年・駐在）が入っている**：新設ページで指示書の禁止語 grep を通すには `authorBio` を渡して差し替える。既存ページの署名は対象外（追加行だけを見る）。
+- **番人テストの前提を先に読む**：`sitemap-static-locales.test.ts` は ja 限定ページに `availableLocales: ["ja"]` と `locale: "ja"` のリテラルを要求し、`labor-contact-order.test.ts` は realestate の相談カテゴリの並びを配列で固定している。カテゴリを足すときは期待値の更新が必須。
+- **DB にしか無いコラムがある**（`jikka-kyoudai-kyouyuu-meigi`＝管理画面から作成・本番200・seed なし）。slug の実在検査は seed だけでなく本番の実測も根拠にし、テストでは DB_ONLY の許可リストを明示する。seed 生成物は `slug: "x"` と `"slug": "x"` の2書式がある。
+- **指示書どうしの衝突は、リポジトリの規約側の理由を読んでから決める**：v2.0「sitemap の lastmod＝今日」と SEO監査 P1-2「固定ページは lastmod なし（実更新日を持たないため）」は、実更新日を持つページだけ任意項目で出す形で両立できた。GeoCircle の `@id` 参照や Offer の `price: "0"` のように、指示書の例が実装と合わない箇所は既存の書き方に揃えて PR 本文に書く。
+- **中途で新しい指示書が来たら固定文言を先に差し替える**：v1.0 で書いた直答ブロック・役割表・FAQ を v2.0 の固定文（一字も変えない）に置き換えた。単一ソース（`src/lib/wakeari.ts`）に集めておくと5ページ分を1か所で差し替えられる。
+- **`next build` と描画確認は使い捨てのローカル Prisma Postgres で回せる**（本番 DB に触らない）：`npx prisma dev --name <名前>` → 表示された `DATABASE_URL`／`DIRECT_URL` で `prisma db push` → 対応表の slug を持つテスト記事を数本 upsert → `NEXT_BUILD_WORKERS=2 npx next build` → `PORT=3199 npx next start` に対して 200・canonical・JSON-LD・FAQ 一致を機械的に見る。終わったら `npx prisma dev stop <名前>`。
+- **`.env.example` を後から `source` しない**：`set -a; . ./.env.example` はローカル DB の `DATABASE_URL` をプレースホルダー（Supabase の pooler ホスト）で上書きし、`next start` が「Can't reach database server」で 500 になる（値は `<project-ref>` の雛形＝本番には接続していない）。`env -i PATH=… DATABASE_URL=<ローカル> DIRECT_URL=<ローカル> npx next start` のように要る変数だけ渡す。
+- **`pkill -f "next start"` は自分のシェルも殺す**（コマンド文字列に同じ語が含まれ、exit 144 で途中終了）。ポートで止める：`fuser -k 3199/tcp`。
+
 ## 2026-09-24 大家募集ページ（/group-home/ooya）Phase 1
 
 - 指示書の Step 5 検証は `git diff main` だが、セッションのローカル `main` は `origin/main` より古いことがある（今回 41a0d54 vs c36a605）。無関係な71ファイルが差分に混ざり「削除行あり」の誤検知になった。**基点は `origin/main` を fetch してから比較する。**

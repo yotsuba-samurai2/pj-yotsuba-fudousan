@@ -628,6 +628,30 @@ sitemap の `locales` もページの `availableLocales` と同時に4言語へ�
 - 学区賃貸一覧84URLは force-dynamic（no-store）。空室鮮度が要らなければ ISR に戻す判断は浦松
 - Vercel Skew Protection（`?dpl=`）がフォントURLを増殖させる根本原因。切るかどうかは浦松判断（現状はブロック維持を推奨）
 
+## 2026-09-23 難あり土地（狭小地・再建築不可・共有・借地）出口相談コーナー Phase 1 — claude/pensive-babbage-x4to85
+
+企画書：難あり土地出口相談_AIO-LLMO-SEO実装プラン v1.0（2026-09-24）。第12章の決定は推奨案で仮置き（/wakeari・買取は案B・文京区を中心に東京23区・ja のみ・定点#34〜#39と/jirei 2事例は Phase 3 で別途）。
+
+- [x] 着手前確認：git pull（origin/main c36a605）／本番 /wakeari 配下は404／既存コラム19本の200を実測（4本は接続断で未確認）
+- [x] 法令の一次確認：建築基準法6条・42条・43条・53条の2・88条／施行令2条・138条／民法251・252・256・258・262の2・262の3・572・612条／借地借家法3・10・13・19・22・23条／宅建業法32・34・34の2・46条／不動産登記法76条の2（e-Gov API）／東京都建築安全条例3条・3条の2・6条（都例規集）／報酬告示（令和6年告示第949号・高知県公式）
+- [x] Wikidata：借地権=Q2630687／旗竿地=Q109361716／共有=Q1939539（共有持分の完全一致なし）／再建築不可・狭小地=該当なし
+- [x] `src/lib/wakeari.ts`（5ページの単一ソース：メタ・固定文言・FAQ・役割表・コラム束ね・チェックリスト）※指示書 v2.0（2026-09-24）の固定文言・FAQ設問・役割表・チェックリスト仕様を反映
+- [x] 受け皿5枚（/wakeari・/saikenchiku-fuka・/kyoyu・/shakuchi-sokochi・/kyosho）＝RealestateServicePage 方式・ja先行
+- [x] 出口チェックリスト（静的JS・送信なし・留保文必置・指示書 5-5 の6問と分岐）
+- [x] JSON-LD：Service（shell＋ハブに種類別4件）＋FAQPage＋BreadcrumbList＋ItemList（ハブ）＋Speakable（.wakeari-answer／.wakeari-who・dateModified）
+- [x] knowsAbout 5項目（sameAs はラベル完全一致の旗竿地 Q109361716 のみ。借地権 Q2630687 は ja ラベル不一致で付けない）
+- [x] llms.txt 節追加／問い合わせ category=wakeari（通知メール表示名も）／sitemap 5件（ja・実更新日の lastmod）
+- [x] 内部リンク：/souzoku（3つの出口の節末＋FAQ 2問の回答直下）／akiya／koishikawa／toushi／ryokin／サービスメガメニュー・フッター／既存コラム19本→受け皿（コード側の対応表・DB本文は不変）
+- [x] 番人テスト（wakeari-pages.test.ts・25件）＋ labor-contact-order.test.ts の期待値更新
+- [x] tsc 0件／eslint エラー0／vitest 1,376件通過／next build 通過（使い捨てのローカル Prisma Postgres・5ルート SSG）／next start への到達性チェック 5枚 ALL OK（200・canonical・noindex なし・JSON-LD parse・FAQ 文言一致・sitemap 5URL・llms.txt・コラムの受け皿ブロック・各ページのリンク・問い合わせ category）
+- [x] PR（draft）#421 https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/pull/421 。マージ・デプロイ・GSC は浦松
+
+### レビュー記録（2026-09-23）
+- 実装方式：既存の RealestateServicePage シェル（koishikawa と同じ ja のみの作り）。新しい仕組みは作らず、SpeakableJsonLd と shell に任意 prop を足しただけ（既存出力は不変）。
+- 指示書 v2.0 を途中で受領し、固定文言（事業者主語の一文・分離受任の一文・直答ブロック・留保1行・チェックリストの留保文）と FAQ 設問・役割表・チェックリストの仕様を差し替えた。「当社が買主となる」の文言は削除。
+- 指示書と食い違った点は実査表（docs/wakeari/00_jissa.md）と PR 本文に記載：GeoCircle に @id が無い／Offer は価格なし／固定ページの lastmod は実更新日のみ／md 原稿は作らず TSX を正本に。
+- 未検証：改正法の法律番号・施行政令番号・告示原文・条ごとの最終改正日・「提携する買取業者」の書面の有無（U12 と同じ論点）・Rich Results Test。
+
 ## 2026-09-24 グループホーム向け物件・大家募集ページ（/group-home/ooya）Phase 1
 
 指示書：「グループホーム向け物件・大家募集ページ Cowork実装指示書 v1.0（2026-09-24）」。受け皿＝新ページ（募集条件・流れ・専用フォーム・誰がやるか）、深掘り＝既存コラム `/column/kodate-akiya-group-home-ni-kasu`。決定欄は全項目既定値。

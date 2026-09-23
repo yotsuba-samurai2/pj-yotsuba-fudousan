@@ -41,6 +41,18 @@ export type RealestateServicePageProps = {
   crumbs: Crumb[];
   /** JSON-LD Service name */
   serviceName: string;
+  /**
+   * JSON-LD Service description（省略時はキー自体を出さない＝既存ページの出力は不変。
+   * 2026-09-23 /wakeari 配下で追加：種類別に「何をどこまで行い、可否の判断は誰が担うか」を Service に持たせる）
+   */
+  serviceDescription?: string;
+  /** JSON-LD Service serviceType（省略時はキー自体を出さない＝既存ページの出力は不変。2026-09-23 /wakeari 配下で追加） */
+  serviceType?: string;
+  /**
+   * JSON-LD Service offers（Offer の description のみ。価格は書かない＝OrganizationJsonLd の makesOffer と同じ書き方）。
+   * 省略時はキー自体を出さない＝既存ページの出力は不変。2026-09-23 /wakeari 配下で「相談無料」を渡す
+   */
+  serviceOffer?: string;
   /** ヒーロー画像（/hero/realestate-*-16x9.webp） */
   heroSrc: string;
   heroAlt: string;
@@ -109,6 +121,9 @@ export async function RealestateServicePage(p: RealestateServicePageProps) {
         "@type": "Service",
         "@id": url + "#service",
         name: p.serviceName,
+        ...(p.serviceType ? { serviceType: p.serviceType } : {}),
+        ...(p.serviceDescription ? { description: p.serviceDescription } : {}),
+        ...(p.serviceOffer ? { offers: { "@type": "Offer", description: p.serviceOffer } } : {}),
         provider: { "@id": SITE + "/#organization" },
         author: { "@id": PERSON_ID },
         areaServed: "東京都文京区およびその周辺",
