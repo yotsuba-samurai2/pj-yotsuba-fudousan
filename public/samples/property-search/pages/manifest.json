@@ -1,0 +1,102 @@
+{
+  "group-home-sample-en": {
+    "height": 1556,
+    "pages": 9,
+    "width": 1100
+  },
+  "group-home-sample-ja": {
+    "height": 1556,
+    "pages": 9,
+    "width": 1100
+  },
+  "group-home-sample-zh": {
+    "height": 1556,
+    "pages": 9,
+    "width": 1100
+  },
+  "group-home-sample-zh-tw": {
+    "height": 1556,
+    "pages": 9,
+    "width": 1100
+  },
+  "investment-sample-en": {
+    "height": 1556,
+    "pages": 9,
+    "width": 1100
+  },
+  "investment-sample-ja": {
+    "height": 1556,
+    "pages": 9,
+    "width": 1100
+  },
+  "investment-sample-zh": {
+    "height": 1556,
+    "pages": 9,
+    "width": 1100
+  },
+  "investment-sample-zh-tw": {
+    "height": 1556,
+    "pages": 9,
+    "width": 1100
+  },
+  "office-sample-en": {
+    "height": 1556,
+    "pages": 9,
+    "width": 1100
+  },
+  "office-sample-ja": {
+    "height": 1556,
+    "pages": 9,
+    "width": 1100
+  },
+  "office-sample-zh": {
+    "height": 1556,
+    "pages": 9,
+    "width": 1100
+  },
+  "office-sample-zh-tw": {
+    "height": 1556,
+    "pages": 9,
+    "width": 1100
+  },
+  "property-search-sample": {
+    "height": 1556,
+    "pages": 9,
+    "width": 1100
+  },
+  "property-search-sample-en": {
+    "height": 1556,
+    "pages": 9,
+    "width": 1100
+  },
+  "property-search-sample-zh": {
+    "height": 1556,
+    "pages": 9,
+    "width": 1100
+  },
+  "property-search-sample-zh-tw": {
+    "height": 1556,
+    "pages": 9,
+    "width": 1100
+  },
+  "restaurant-sample-en": {
+    "height": 1556,
+    "pages": 9,
+    "width": 1100
+  },
+  "restaurant-sample-ja": {
+    "height": 1556,
+    "pages": 9,
+    "width": 1100
+  },
+  "restaurant-sample-zh": {
+    "height": 1556,
+    "pages": 9,
+    "width": 1100
+  },
+  "restaurant-sample-zh-tw": {
+    "height": 1556,
+    "pages": 9,
+    "width": 1100
+  }
+}
