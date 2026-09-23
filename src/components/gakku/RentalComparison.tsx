@@ -14,9 +14,37 @@ const copy = {
   zh: { title: "按小学学区比较租赁房源", lead: "文京区、月租17万5,000日元以上、48平方米以上。仅列出确认可刊登广告且仍在招租的房源。", unknown: "待确认", school: "学区", name: "房源名称／房号", rent: "租金／管理费／共益费", total: "月额（租金＋管理费＋共益费）", deposit: "押金／礼金", layout: "户型／面积", address: "地址", move: "可入住时间", pets: "宠物", foreign: "外籍人士", corporate: "法人承租", companyHousing: "公司宿舍", detail: "条件与费用", request: "咨询看房日期与详细信息", checked: "招租确认", until: "下次计划更新", districtUnknown: "学区待确认", terms: "交易方式：中介。中介费：1个月租金＋消费税。其他费用请参阅下方。", original: "房源名称、地址及个别条件保留日文原文。", statuses: { allowed: "可", consult: "可商议", "not-allowed": "不可", unknown: "待确认" }, fields: ["建筑类型", "交通", "建筑年月", "结构", "楼层／所在楼层", "租约类型", "租约期限", "保证金", "续约费", "保险", "保证公司", "其他费用"] },
 };
 
+const consultationCopy = {
+  ja: {
+    title: "一覧にない物件もご紹介できます",
+    selection: "この一覧は、不動産業者向けの流通サイトや住宅プラットフォームに掲載された物件のうち、管理会社（元付）が「広告可」としているファミリー向け物件に絞って掲載しています。",
+    offer: "四葉不動産へ個別にお問い合わせいただいた場合、この一覧の掲載件数の平均2倍以上の物件をご提案できます。ご希望の学区・賃料・間取り・入居時期をお知らせください。",
+    action: "一覧にない物件も含めて相談する",
+  },
+  en: {
+    title: "We can introduce properties beyond this list",
+    selection: "This list includes only family-oriented rentals from real estate agent networks and housing platforms for which the managing or listing agent has granted advertising permission.",
+    offer: "When you contact Yotsuba Real Estate directly, we can propose, on average, at least twice the number of properties shown in this list. Tell us your preferred school district, rent, layout and move-in date.",
+    action: "Ask about properties beyond this list",
+  },
+  "zh-tw": {
+    title: "我們也能介紹列表以外的物件",
+    selection: "本列表從不動產業者流通網站及住宅平台的物件中，僅刊登管理公司（原始委託業者）已允許刊登廣告的家庭型租屋物件。",
+    offer: "個別向四葉不動産諮詢時，我們平均可提供本列表刊登數量2倍以上的物件。歡迎告知您希望的學區、租金、格局及入住時間。",
+    action: "諮詢包含列表以外的物件",
+  },
+  zh: {
+    title: "我们也能介绍列表以外的房源",
+    selection: "本列表从不动产经纪流通网站及住宅平台的房源中，仅刊登管理公司（原始委托经纪方）已允许刊登广告的家庭型租赁房源。",
+    offer: "单独向四葉不動産咨询时，我们平均可提供本列表刊登数量2倍以上的房源。欢迎告知您希望的学区、租金、户型及入住时间。",
+    action: "咨询包含列表以外的房源",
+  },
+} satisfies Record<LangCode, { title: string; selection: string; offer: string; action: string }>;
+
 export function RentalComparison({ rows, locale }: { rows: PublicRentalSummary[]; locale: LangCode }) {
   if (!rows.length) return null;
   const c = copy[locale];
+  const consultation = consultationCopy[locale];
   const money = (amount: number | null) => amount === null ? c.unknown : `¥${amount.toLocaleString("ja-JP")}`;
   const date = (value: string) => new Date(value).toLocaleString(locale === "ja" ? "ja-JP" : locale === "en" ? "en-GB" : locale === "zh-tw" ? "zh-TW" : "zh-CN", { timeZone: "Asia/Tokyo", year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit" }) + " JST";
   const latest = rows.map(r => r.checkedAt).sort((a, b) => Date.parse(a) - Date.parse(b)).at(-1)!;
@@ -25,6 +53,12 @@ export function RentalComparison({ rows, locale }: { rows: PublicRentalSummary[]
   return <RentalInquiryProvider locale={locale}><section className="mt-8" aria-label={c.title}>
     <h2 className="font-serif text-2xl font-semibold">{c.title}</h2>
     <p className="mt-3 text-sm leading-relaxed">{c.lead}</p>
+    <aside className="mt-4 rounded-xl border border-primary/20 bg-primary-tint p-4 sm:p-5" aria-label={consultation.title}>
+      <h3 className="font-semibold text-ink">{consultation.title}</h3>
+      <p className="mt-2 text-sm leading-relaxed">{consultation.selection}</p>
+      <p className="mt-3 text-sm font-semibold leading-relaxed text-ink">{consultation.offer}</p>
+      <Link href={addLocalePrefix("/contact?intent=bukken", locale)} className="mt-4 inline-block rounded-lg bg-primary px-4 py-3 text-sm font-semibold text-white hover:opacity-90">{consultation.action}</Link>
+    </aside>
     {c.original && <p className="mt-2 text-xs text-text-muted">{c.original}</p>}
     <p className="mt-2 text-xs text-text-muted">{c.terms}</p>
     <div className="mt-4 space-y-4">

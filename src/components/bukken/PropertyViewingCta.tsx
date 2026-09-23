@@ -21,9 +21,12 @@ export function PropertyViewingCta({ propertyTitle, propertyUrl, locale }: Props
 
   const submit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    const inquiryProperty = String(new FormData(event.currentTarget).get("propertyName") ?? "").trim();
+    if (!inquiryProperty) return;
     setState("sending");
     const details = [
-      `物件: ${propertyTitle}`,
+      `物件: ${inquiryProperty}`,
+      inquiryProperty !== propertyTitle.trim() ? `選択元の物件: ${propertyTitle}` : "",
       `物件URL: ${propertyUrl}`,
       `契約主体: ${form.contractType}`,
       `入居予定人数: ${form.residents}名`,
@@ -56,6 +59,8 @@ export function PropertyViewingCta({ propertyTitle, propertyUrl, locale }: Props
       <p className="mt-2 text-sm leading-6 text-text-muted">{text.intro}</p>
       {state === "error" && <p className="mt-3 rounded-lg bg-red-50 p-3 text-sm text-red-700" role="alert">{text.error}</p>}
       <form className="mt-5 grid gap-4 sm:grid-cols-2" onSubmit={submit}>
+        <label className="text-sm font-medium sm:col-span-2">{text.propertyName}<span className="text-red-600"> *</span><input key={`${propertyUrl}:${propertyTitle}`} name="propertyName" required pattern={".*\\S.*"} maxLength={1600} defaultValue={propertyTitle} className={inputClass} /><span className="mt-1 block text-xs leading-5 text-text-muted">{text.propertyHint}</span></label>
+        <a href={propertyUrl} className="text-sm text-primary underline sm:col-span-2">{text.propertyLink}</a>
         <label className="text-sm font-medium">{text.name}<span className="text-red-600"> *</span><input required value={form.name} onChange={(e) => update("name", e.target.value)} className={inputClass} /></label>
         <label className="text-sm font-medium">{text.email}<span className="text-red-600"> *</span><input required type="email" value={form.email} onChange={(e) => update("email", e.target.value)} className={inputClass} /></label>
         <label className="text-sm font-medium">{text.phone}<span className="text-red-600"> *</span><input required type="tel" value={form.phone} onChange={(e) => update("phone", e.target.value)} className={inputClass} /></label>
