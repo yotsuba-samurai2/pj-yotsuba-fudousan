@@ -58,7 +58,7 @@ export default async function GakkuHubPage() {
 
         <Link href={addLocalePrefix(SCHOOL_RENTAL_INDEX_PATH, locale)} className="mt-6 block rounded-xl border border-primary/25 bg-primary-tint p-5 font-semibold text-primary">{SCHOOL_RENTAL_COPY[locale].indexTitle} →</Link>
 
-        {/* 通学区域マップ（日本語のみ）。地図の注記・凡例・学校名が日本語のため、
+        {/* 学区参考図（日本語のみ）。地図の注記・学校名が日本語のため、
             en / zh-tw / zh では出さない（区域の表・一覧は4ロケールとも下に出る）。 */}
         {locale === "ja" && (
           <section
@@ -66,10 +66,10 @@ export default async function GakkuHubPage() {
             className="mt-10 rounded-xl border border-border bg-surface-dim p-4 sm:p-6"
           >
             <h2 id="gakku-map-heading" className="font-serif text-xl font-semibold text-ink">
-              3S1K 4校の通学区域を地図で見る
+              文京区20小学校の学区を地図で見る
             </h2>
             <p className="mt-3 text-sm leading-relaxed text-text">
-              誠之・千駄木・昭和・窪町の4校の通学区域を、区の公表データ（番単位）から色分けしました。学校名を押すと、その学校の町丁目一覧が開きます。
+              誠之・千駄木・昭和・窪町の4校はカラー、その他の16校は白黒で表示しています。地図下の学校一覧や地図上の学校名を押すと、その学区が拡大します。国土交通省の2023年度データによる参考図です。
             </p>
             <div className="mt-4">
               <GakkuMapEmbed />
