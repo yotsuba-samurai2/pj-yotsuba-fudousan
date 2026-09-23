@@ -44,7 +44,7 @@
 </style>
 </head>
 <body>
-<nav class="map-navigation" aria-label="地図の操作と戻る">
+<nav class="map-navigation" id="map-nav" aria-label="地図の操作と戻る">
   <a id="back-to-page" href="/gakku" target="_top" hidden>← 学区ページへ戻る</a>
   <button type="button" id="back-to-list">学校一覧に戻る ↓</button>
   <button type="button" id="map-interaction" aria-pressed="false" aria-controls="map" hidden disabled>地図を動かす</button>
@@ -58,7 +58,7 @@
 <p id="error" role="alert" hidden>地図を読み込めませんでした。ページを再読み込みするか、<a href="/gakku/rentals" target="_top">学区別の賃貸一覧</a>をご覧ください。</p>
 <ul id="list" aria-label="地図で表示する小学校を選択"></ul>
 <noscript><p>地図にはJavaScriptが必要です。<a href="/gakku/rentals" target="_top">学区別の賃貸一覧</a>をご覧ください。</p></noscript>
-<p class="note">
+<p class="note" id="note">
   地図：<a href="https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-A27-2023.html" target="_blank" rel="noopener">国土交通省「国土数値情報 小学校区データ（2023年度）」</a>を加工（CC BY 4.0、2026年9月23日取得）。
   20校の境界を同じ資料で表示しています。誠之・千駄木・昭和・窪町の4校は色付き、その他の16校は白黒です。学校名の位置は学区の目印で、校舎の所在地ではありません。
   地図はおおよその範囲を示す参考図です。最新の指定状況や番・号、旧町名による区分とは異なる場合があります。

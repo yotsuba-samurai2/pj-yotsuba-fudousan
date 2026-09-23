@@ -1,9 +1,11 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import type { LangCode } from "@/config/languages";
 
 /**
  * 文京区20校の学区参考図（/public/gakku/3s1k-map.html）を埋め込む。
+ * 地図内の文言は ?lang= で切り替える（ja は付けない＝HTMLの原文）。
  * iframe を中身の高さに合わせて伸縮させ、内部スクロールを出さない。
  *
  * 高さは同一オリジンの中身を ResizeObserver で直接見る。
@@ -11,7 +13,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
  * 受信側が間に合わない（実測：iframeは640pxのまま・中身は992〜1122pxで内部スクロールが出た）。
  * ResizeObserver なら購読時点の高さと、以後の変化（学校一覧の開閉・画面幅の変化）を両方拾える。
  */
-export default function GakkuMapEmbed() {
+export default function GakkuMapEmbed({ locale, title }: { locale: LangCode; title: string }) {
   const ref = useRef<HTMLIFrameElement>(null);
   const disconnectRef = useRef<(() => void) | null>(null);
   const [height, setHeight] = useState(640);
@@ -58,8 +60,8 @@ export default function GakkuMapEmbed() {
   return (
     <iframe
       ref={ref}
-      src="/gakku/3s1k-map.html"
-      title="文京区20小学校の学区マップ（学校一覧から拡大）"
+      src={locale === "ja" ? "/gakku/3s1k-map.html" : `/gakku/3s1k-map.html?lang=${locale}`}
+      title={title}
       loading="eager"
       onLoad={observe}
       style={{ width: "100%", height, border: 0, display: "block", scrollMarginTop: 96 }}
