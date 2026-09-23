@@ -83,9 +83,12 @@ describe("School rental summaries", () => {
     b.advertising = "contact-required";
     expect(compileRentalSummaries([feed("reins", [a,b])], [], now).adCandidates).toHaveLength(0);
   });
-  it("does not guess districts from an ambiguous address", () => {
+  it("excludes an ambiguous district from every public list and AD candidates", () => {
     const r = row(); r.summary.address = "東京都文京区千石4丁目";
-    expect(compileRentalSummaries([feed("reins", [r])], [], now).summaries[0].schoolSlug).toBeNull();
+    const result = compileRentalSummaries([feed("reins", [r])], [], now);
+    expect(result.summaries).toHaveLength(0);
+    expect(result.adCandidates).toHaveLength(0);
+    expect(result.excluded).toContainEqual({ provider: "reins", sourceId: r.sourceId, reason: "学区未確定" });
   });
   it("rejects incomplete snapshots and duplicate source IDs", () => {
     expect(feedSchema.safeParse({ ...feed(), complete: false }).success).toBe(false);

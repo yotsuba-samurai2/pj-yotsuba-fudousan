@@ -79,6 +79,7 @@ export function rejectionReason(feed: RentalFeed, r: FeedRecord, now = new Date(
   if (feed.provider !== "reins" && r.application !== "none") return "申込状態の根拠未確認";
   if (feed.provider !== "reins" && !r.applicationQuote) return "申込状態の根拠なし";
   if (!r.summary.address.includes("文京区") || r.summary.rentYen < 175000 || r.summary.areaSqm < 48) return "地域・賃料・面積の対象外";
+  if (lookupDistrictByAddress(r.summary.address).status !== "determined") return "学区未確定";
   return null;
 }
 
