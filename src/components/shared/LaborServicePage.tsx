@@ -8,6 +8,7 @@
 //   は各部品が自前付与＝シェルでは触らない（二重適用禁止）。Service JSON-LD の url は接頭辞なし維持（診断§C-3）。
 import type { ReactNode } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { getRequestLocale } from "@/lib/getRequestLocale";
 import { addLocalePrefix } from "@/lib/locale";
 import { Breadcrumb } from "@/components/shared/Breadcrumb";
@@ -111,13 +112,18 @@ export async function LaborServicePage(p: LaborServicePageProps) {
       />
 
       <article className="mx-auto max-w-3xl px-4 pb-16">
-        <img
+        {/* 2026-09-23：素の img で1600pxを配信しLCPが最大5.6秒（モバイル）。next/image で画面幅に合わせて縮小する */}
+        <Image
           src={`/hero/labor-${p.slug}-16x9.webp`}
           alt={p.heroAlt}
           width={1600}
           height={900}
           className="mt-3 w-full rounded-2xl object-cover"
+          sizes="(min-width: 768px) 736px, calc(100vw - 32px)"
+          quality={60}
+          loading="eager"
           fetchPriority="high"
+          preload
         />
 
         <header className="pt-4">

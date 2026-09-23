@@ -3,6 +3,7 @@
 import { useRef, useState } from "react";
 import Link from "next/link";
 import type { LangCode } from "@/config/languages";
+import { PropertyImage } from "@/components/bukken/PropertyImage";
 
 const labels = {
   ja: { open: "写真を拡大", close: "閉じる", previous: "前の写真", next: "次の写真", more: "写真をもっと見る", hint: "写真をクリックすると拡大します" },
@@ -41,8 +42,7 @@ export function PropertyPhotoGallery({ images, locale, previewLimit, allPhotosHr
             onClick={() => { setSelected(index); dialog.current?.showModal(); }}
             className="group min-w-0 cursor-zoom-in text-left focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
           >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={image.url} alt={image.alt} width={640} height={480} loading="lazy" className="aspect-[4/3] w-full rounded-lg bg-surface-dim object-contain" />
+            <PropertyImage src={image.url} alt={image.alt} width={640} height={480} sizes="(min-width: 768px) 240px, (min-width: 640px) 33vw, 50vw" className="aspect-[4/3] w-full rounded-lg bg-surface-dim object-contain" />
             <span className="mt-2 block text-xs leading-relaxed text-text-muted group-hover:text-primary">{image.alt}</span>
           </button>
         ))}
@@ -66,8 +66,7 @@ export function PropertyPhotoGallery({ images, locale, previewLimit, allPhotosHr
           <span className="text-sm tabular-nums" aria-live="polite">{selected + 1} / {images.length}</span>
           <button type="button" autoFocus onClick={() => dialog.current?.close()} className="min-h-11 rounded-lg border border-border px-4 text-sm focus-visible:outline-2 focus-visible:outline-primary">{text.close}</button>
         </div>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={photo.url} alt={photo.alt} width={1600} height={1200} className="max-h-[68dvh] w-full object-contain" />
+        <PropertyImage key={photo.url} src={photo.url} alt={photo.alt} width={1600} height={1200} sizes="(min-width: 1250px) 1170px, 94vw" loading="eager" className="max-h-[68dvh] w-full object-contain" />
         <p className="mt-3 text-center text-sm leading-relaxed" aria-live="polite">{photo.alt}</p>
         {photoNotes && <p className="mt-3 whitespace-pre-line rounded-lg border border-border bg-surface p-3 text-sm leading-relaxed">{photoNotes}</p>}
         {images.length > 1 && (

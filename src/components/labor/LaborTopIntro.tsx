@@ -27,7 +27,7 @@ export function LaborTopHero({ locale }: { locale: LangCode }) {
       </div>
       <figure className={styles.portrait}>
         <Image src="/hero/labor-representative-0169.webp" alt={c.portraitAlt} width={1145} height={1374}
-          sizes="(min-width: 1024px) 48vw, (min-width: 768px) 90vw, 100vw" loading="eager" fetchPriority="high" className={styles.portraitImage} />
+          sizes="(min-width: 1024px) 48vw, (min-width: 768px) 90vw, 100vw" quality={60} loading="eager" fetchPriority="high" preload className={styles.portraitImage} />
       </figure>
     </div>
   </section>;

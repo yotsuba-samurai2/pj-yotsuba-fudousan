@@ -5,6 +5,7 @@ import { getLocalizedProperty } from "@/lib/property-shared";
 import { addLocalePrefix } from "@/lib/locale";
 import { formatAccessL, formatPropertyPriceL, localizedImageAlt, propertyUi } from "@/lib/property-i18n";
 import { SchoolDistrictTag } from "@/components/gakku/RentalSchoolDistrict";
+import { PropertyImage } from "@/components/bukken/PropertyImage";
 
 export function PropertyCard({ p, locale }: { p: PublicProperty; locale: LangCode }) {
   const original = p;
@@ -17,13 +18,13 @@ export function PropertyCard({ p, locale }: { p: PublicProperty; locale: LangCod
       className="flex gap-4 rounded-xl border border-border bg-surface p-4 transition-colors hover:border-primary/40"
     >
       {hero ? (
-        // 画像はSupabase Storageの絶対URL＝next/image未設定のため素のimg（コラムと同方式）
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
+        // 2026-09-23：128px の枠に元写真（最大3.8MB）を読み込んでいた。next/image で縮小配信する
+        <PropertyImage
           src={hero.url}
           alt={localizedImageAlt(hero, p.title, locale)}
           width={160}
           height={120}
+          sizes="128px"
           className="h-24 w-32 flex-shrink-0 rounded-lg object-cover"
         />
       ) : (
