@@ -68,6 +68,39 @@ export const COMPLIANCE_TRANSLATION_PATCHES: Record<LangCode, CompliancePatch[]>
       from: "はい、四葉不動産では、四葉行政書士事務所と連携し、事務所の賃貸契約と会社設立手続きなどをワンストップで対応できます。",
       to: "はい。オフィスの賃貸契約は四葉不動産が対応します。会社設立などの法務手続きは、併設の四葉行政書士事務所が別契約で受任します。",
     },
+    // ── 2026-09-24：labor.homePage の旧文言（「行政書士事務所・不動産と連携し…一つの窓口で支援」「行政書士事務所と連携し、補助金もカバー」「不動産・行政書士・社労士が連携」）。
+    //    画面には出ていない（LaborPageContent は未使用）が、翻訳データ全体がページに埋め込まれるため、ソースを読むAIには届く。
+    //    representativeBio2・oneStop* は en/zh-tw/zh が既に分離受任の文面になっているので、ja をそれに揃える。from＝本番の実測値
+    {
+      path: "labor.homePage.representativeBio2",
+      from: "外国人従業員の雇用に関するご相談も多くいただいています。行政書士事務所（在留資格）・不動産（社宅探し）と連携し、採用から定着までを一つの窓口で支援できるのが四葉グループの強みです。",
+      to: "社会保険労務士のほか、行政書士と宅地建物取引士の登録があります。ただし、それぞれ別の事務所・会社で、ご契約も別々です。在留資格の申請は四葉行政書士事務所が、事務所や社宅の賃貸は四葉不動産株式会社が承ります。当事務所へのご依頼が他の事務所へのご依頼の条件になることはなく、事務所間で紹介料の授受もありません。",
+    },
+    {
+      path: "labor.homePage.oneStopTitle",
+      from: "四葉グループだからできること",
+      to: "お客さまと同じ画面で仕事をします",
+    },
+    {
+      path: "labor.homePage.oneStopDescription1",
+      from: "不動産・行政書士・社労士が連携。",
+      to: "手続きも給与計算も freee人事労務で行います。当事務所は貴社の freee人事労務にアドバイザーとして参加するため、従業員情報、給与計算の結果、各届出の進み具合を、当事務所と同じデータでご覧いただけます。",
+    },
+    {
+      path: "labor.homePage.oneStopDescription2",
+      from: "お客さまのお困りごとをたらい回しにしません。",
+      to: "報酬は着手前に書面でお示しします。報酬額表の単価を積み上げるため、内訳が見えます。含まれないもの、その場合のご相談先も、同じ表に書いています。",
+    },
+    {
+      path: "labor.homePage.faq.2.answer",
+      from: "はい、キャリアアップ助成金、両立支援等助成金など、企業が活用できる各種助成金の申請をサポートしています。行政書士事務所と連携し、補助金もカバーします。",
+      to: "はい、キャリアアップ助成金、両立支援等助成金など、企業が活用できる各種助成金の申請をサポートしています。補助金の申請は、四葉行政書士事務所が別の契約で承ります。事務所間で紹介料の授受はありません。",
+    },
+    {
+      path: "labor.homePage.services.1.description",
+      from: "キャリアアップ助成金、両立支援等助成金など、企業が活用できる助成金の申請をサポート。行政書士事務所と連携し、補助金もカバーします。",
+      to: "キャリアアップ助成金、両立支援等助成金など、企業が活用できる助成金の申請をサポート。補助金の申請は、四葉行政書士事務所が別の契約で承ります。",
+    },
   ],
   en: [
     {
@@ -130,6 +163,17 @@ export const COMPLIANCE_TRANSLATION_PATCHES: Record<LangCode, CompliancePatch[]>
       path: "legal.homePage.faq.2.answer",
       from: "Yes. 四葉不動産 (Yotsuba Real Estate) works together with 四葉行政書士事務所 (our administrative scrivener office), so matters spanning real estate and legal—such as office lease contracts and company formation—can be handled in one place.",
       to: "Yes. 四葉不動産 (Yotsuba Real Estate) handles the office lease contract. Legal procedures such as company formation are handled by the adjoining 四葉行政書士事務所 (Yotsuba Gyoseishoshi Office) under a separate engagement.",
+    },
+    // ── 2026-09-24：補助金を「In coordination with」でカバーする表現→四葉行政書士事務所が別契約で受任（from＝本番の実測値）
+    {
+      path: "labor.homePage.faq.2.answer",
+      from: "Yes, we support applications for various subsidies available to businesses, including the Career Advancement Subsidy and the Work-Life Balance Support Subsidy. In coordination with our administrative scrivener office, we also cover other grants.",
+      to: "Yes, we support applications for various subsidies available to businesses, including the Career Advancement Subsidy and the Work-Life Balance Support Subsidy. Other grant applications are handled by 四葉行政書士事務所 under a separate contract, and no referral fees are paid or received between the offices.",
+    },
+    {
+      path: "labor.homePage.services.1.description",
+      from: "We support applications for subsidies available to businesses, such as the Career Advancement Subsidy and the Work-Life Balance Support Subsidy. In coordination with our administrative scrivener office, we also cover other grants.",
+      to: "We support applications for subsidies available to businesses, such as the Career Advancement Subsidy and the Work-Life Balance Support Subsidy. Other grant applications are handled by 四葉行政書士事務所 under a separate contract.",
     },
   ],
   "zh-tw": [
@@ -198,6 +242,17 @@ export const COMPLIANCE_TRANSLATION_PATCHES: Record<LangCode, CompliancePatch[]>
       from: "是的。四葉不動産與四葉行政書士事務所聯動，辦公室租賃合約與公司設立手續等不動產・法務事宜可一站式辦理。",
       to: "可以。辦公室的租賃合約由四葉不動産承辦；公司設立等法務手續，由併設的四葉行政書士事務所另行簽約受任。",
     },
+    // ── 2026-09-24：「與行政書士事務所聯動，補助金也能覆蓋」→另行簽訂契約承辦（from＝本番の實測值）
+    {
+      path: "labor.homePage.faq.2.answer",
+      from: "是的，我們支援職業提升助成金、兩立支援等助成金等企業可用的各類助成金申請。與行政書士事務所聯動，補助金也能覆蓋。",
+      to: "是的，我們支援職業提升助成金、兩立支援等助成金等企業可用的各類助成金申請。補助金的申請由四葉行政書士事務所另行簽訂契約承辦，事務所之間不收受介紹費。",
+    },
+    {
+      path: "labor.homePage.services.1.description",
+      from: "職業提升助成金、兩立支援等助成金等，支援企業可用助成金的申請。與行政書士事務所聯動，補助金也能覆蓋。",
+      to: "職業提升助成金、兩立支援等助成金等，支援企業可用助成金的申請。補助金的申請由四葉行政書士事務所另行簽訂契約承辦。",
+    },
   ],
   zh: [
     {
@@ -259,6 +314,17 @@ export const COMPLIANCE_TRANSLATION_PATCHES: Record<LangCode, CompliancePatch[]>
       path: "legal.homePage.faq.2.answer",
       from: "是的。四葉不動産与四葉行政书士事务所联动，办公室租赁合同与公司设立手续等不动产・法务事宜可一站式办理。",
       to: "可以。办公室的租赁合同由四葉不動産承办；公司设立等法务手续，由并设的四葉行政書士事務所另行签约受任。",
+    },
+    // ── 2026-09-24：「与行政书士事务所联动，补助金也能覆盖」→另行签订合同承办（from＝本番的实测值）
+    {
+      path: "labor.homePage.faq.2.answer",
+      from: "是的，我们支持职业提升助成金、两立支援等助成金等企业可用的各类助成金申请。与行政书士事务所联动，补助金也能覆盖。",
+      to: "是的，我们支持职业提升助成金、两立支援等助成金等企业可用的各类助成金申请。补助金的申请由四葉行政書士事務所另行签订合同承办，事务所之间不收受介绍费。",
+    },
+    {
+      path: "labor.homePage.services.1.description",
+      from: "职业提升助成金、两立支援等助成金等，支持企业可用助成金的申请。与行政书士事务所联动，补助金也能覆盖。",
+      to: "职业提升助成金、两立支援等助成金等，支持企业可用助成金的申请。补助金的申请由四葉行政書士事務所另行签订合同承办。",
     },
   ],
 };
@@ -514,6 +580,13 @@ export const COMPLIANCE_SCAN_TERMS: string[] = [
   "Seamless",
   "under one roof",
   "in one place",
+  // 2026-09-24 追加：他の事業体の業務を「連携して」自分の業務のようにカバーする表現（4書体）
+  "行政書士事務所と連携し",
+  "と連携し、補助金もカバー",
+  "與行政書士事務所聯動",
+  "与行政书士事务所联动",
+  "In coordination with our administrative scrivener office",
+  "社労士が連携",
   "4カ国",
   "４カ国",
   "5カ国",
