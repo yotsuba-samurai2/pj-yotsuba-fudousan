@@ -308,3 +308,6 @@
 - **DB にしか無いコラムがある**（`jikka-kyoudai-kyouyuu-meigi`＝管理画面から作成・本番200・seed なし）。slug の実在検査は seed だけでなく本番の実測も根拠にし、テストでは DB_ONLY の許可リストを明示する。seed 生成物は `slug: "x"` と `"slug": "x"` の2書式がある。
 - **指示書どうしの衝突は、リポジトリの規約側の理由を読んでから決める**：v2.0「sitemap の lastmod＝今日」と SEO監査 P1-2「固定ページは lastmod なし（実更新日を持たないため）」は、実更新日を持つページだけ任意項目で出す形で両立できた。GeoCircle の `@id` 参照や Offer の `price: "0"` のように、指示書の例が実装と合わない箇所は既存の書き方に揃えて PR 本文に書く。
 - **中途で新しい指示書が来たら固定文言を先に差し替える**：v1.0 で書いた直答ブロック・役割表・FAQ を v2.0 の固定文（一字も変えない）に置き換えた。単一ソース（`src/lib/wakeari.ts`）に集めておくと5ページ分を1か所で差し替えられる。
+- **`next build` と描画確認は使い捨てのローカル Prisma Postgres で回せる**（本番 DB に触らない）：`npx prisma dev --name <名前>` → 表示された `DATABASE_URL`／`DIRECT_URL` で `prisma db push` → 対応表の slug を持つテスト記事を数本 upsert → `NEXT_BUILD_WORKERS=2 npx next build` → `PORT=3199 npx next start` に対して 200・canonical・JSON-LD・FAQ 一致を機械的に見る。終わったら `npx prisma dev stop <名前>`。
+- **`.env.example` を後から `source` しない**：`set -a; . ./.env.example` はローカル DB の `DATABASE_URL` をプレースホルダー（Supabase の pooler ホスト）で上書きし、`next start` が「Can't reach database server」で 500 になる（値は `<project-ref>` の雛形＝本番には接続していない）。`env -i PATH=… DATABASE_URL=<ローカル> DIRECT_URL=<ローカル> npx next start` のように要る変数だけ渡す。
+- **`pkill -f "next start"` は自分のシェルも殺す**（コマンド文字列に同じ語が含まれ、exit 144 で途中終了）。ポートで止める：`fuser -k 3199/tcp`。

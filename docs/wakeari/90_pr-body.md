@@ -48,7 +48,8 @@ luck428.com に「売りにくい土地・建物の出口相談」コーナー�
 - `npx vitest run`：全 92 ファイル・1,376 件通過（新規 25 件を含む）
 - 禁止語 grep（追加行）：0件／「紹介料」は「紹介料を受け取りません」のみ／必須語（独立した事業体・別々にご契約）：共通部品 `WakeariRoleTable` 経由で5枚に有／相対パス：確認済（絶対 URL の href なし）
 - FAQ の文言一致：同一配列から描画・生成（番人テストで固定）
-- `next build`・描画確認：本セッションでは DB なしのため未実施 → Vercel プレビューで確認
+- `next build`：使い捨てのローカル Prisma Postgres（`prisma dev`・本番 DB には接続していない）で通過。`/[locale]/wakeari` 配下5ルートが SSG（●）で出力
+- `next start` への到達性チェック（2026-09-23・ローカル）：5枚すべて 200／canonical＝自URL／noindex なし／hreflang＝ja・x-default／JSON-LD 全ブロック parse 可（WebPage・Article・FAQPage・BreadcrumbList・Service・ItemList（ハブ）・SpeakableSpecification）／FAQ の Q 文言が本文と一致／`.wakeari-answer`・`.wakeari-who` あり／sitemap に5URL（lastmod 2026-09-23・ja のみ）／llms.txt の節／コラム詳細の「この記事に関係する相談窓口」ブロック（対応表の slug で描画・ja 以外では非表示）／/souzoku・akiya・koishikawa・toushi・ryokin・フッター・/services のリンク／問い合わせフォームの category 表示名
 - 法令の一次確認：e-Gov 法令API（v1 条文・v2 現行版施行日）・東京都例規集・高知県公式・文京区公式（`docs/wakeari/01_konkyo.md`・参照日 2026-09-23）
 
 ## 未検証事項
@@ -67,7 +68,7 @@ luck428.com に「売りにくい土地・建物の出口相談」コーナー�
 - `/jirei` の2事例（熊谷の代償分割は浦松の可否後）／`/wakeari/kyoyu`・`/wakeari/shakuchi-sokochi` の zh-tw 版
 
 ## 台帳に貼る1行
-`2026-09-23｜/wakeari 配下5枚 新設（型A：受け皿なし→新設。担当設問＝定点#34〜#39 提案）｜PR未マージ｜再着手可能日＝マージ日＋14日｜PR #（番号）`
+`2026-09-23｜/wakeari 配下5枚 新設（型A：受け皿なし→新設。担当設問＝定点#34〜#39 提案）｜PR未マージ｜再着手可能日＝マージ日＋14日｜PR #421`
 
 ## マージ・デプロイ・GSC は浦松が行う
 マージ後：`/wakeari` 配下5URL（ja のみ）の到達性チェック → GSC 登録は1URL1コードブロックで別途渡す。

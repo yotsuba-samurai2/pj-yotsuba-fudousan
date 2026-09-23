@@ -643,8 +643,8 @@ sitemap の `locales` もページの `availableLocales` と同時に4言語へ�
 - [x] llms.txt 節追加／問い合わせ category=wakeari（通知メール表示名も）／sitemap 5件（ja・実更新日の lastmod）
 - [x] 内部リンク：/souzoku（3つの出口の節末＋FAQ 2問の回答直下）／akiya／koishikawa／toushi／ryokin／サービスメガメニュー・フッター／既存コラム19本→受け皿（コード側の対応表・DB本文は不変）
 - [x] 番人テスト（wakeari-pages.test.ts・25件）＋ labor-contact-order.test.ts の期待値更新
-- [x] tsc 0件／eslint エラー0／vitest 1,376件通過（next build は DB なしのため未実施＝Vercel プレビューで確認）
-- [ ] PR（draft）。マージ・デプロイ・GSC は浦松
+- [x] tsc 0件／eslint エラー0／vitest 1,376件通過／next build 通過（使い捨てのローカル Prisma Postgres・5ルート SSG）／next start への到達性チェック 5枚 ALL OK（200・canonical・noindex なし・JSON-LD parse・FAQ 文言一致・sitemap 5URL・llms.txt・コラムの受け皿ブロック・各ページのリンク・問い合わせ category）
+- [x] PR（draft）#421 https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/pull/421 。マージ・デプロイ・GSC は浦松
 
 ### レビュー記録（2026-09-23）
 - 実装方式：既存の RealestateServicePage シェル（koishikawa と同じ ja のみの作り）。新しい仕組みは作らず、SpeakableJsonLd と shell に任意 prop を足しただけ（既存出力は不変）。
