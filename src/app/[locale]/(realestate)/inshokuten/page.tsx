@@ -71,7 +71,7 @@ export default async function Page() {
       answerBlock={JA_ANSWER_BLOCK}
       crumbs={[{ name: "ホーム", href: "/" }, { name: "飲食店開業" }]}
       serviceName="飲食店開業を見据えた店舗物件の紹介・仲介"
-      heroSrc="/hero/realestate-toushi-16x9.webp"
+      heroSrc="/hero/realestate-inshokuten-16x9.webp"
       heroAlt="事業用物件のイメージ"
       h1="飲食店の開業——物件探しと営業許可の完全ガイド"
       ctaVariant="property"

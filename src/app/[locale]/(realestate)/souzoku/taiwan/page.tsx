@@ -221,7 +221,7 @@ export default async function Page() {
           ? "涉及台灣的繼承不動產之管理・活用・出售"
           : "台湾がからむ相続不動産の管理・活用・売却"
       }
-      heroSrc="/hero/bunkyo-sakura-16x9.webp"
+      heroSrc="/hero/realestate-taiwan-chuuka-16x9.webp"
       heroAlt={isTw ? "文京區・播磨坂櫻花林蔭道的意象" : "文京区・播磨坂の桜並木のイメージ"}
       h1={
         isTw
