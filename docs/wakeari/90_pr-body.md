@@ -50,6 +50,7 @@ luck428.com に「売りにくい土地・建物の出口相談」コーナー�
 - FAQ の文言一致：同一配列から描画・生成（番人テストで固定）
 - `next build`：使い捨てのローカル Prisma Postgres（`prisma dev`・本番 DB には接続していない）で通過。`/[locale]/wakeari` 配下5ルートが SSG（●）で出力
 - `next start` への到達性チェック（2026-09-23・ローカル）：5枚すべて 200／canonical＝自URL／noindex なし／hreflang＝ja・x-default／JSON-LD 全ブロック parse 可（WebPage・Article・FAQPage・BreadcrumbList・Service・ItemList（ハブ）・SpeakableSpecification）／FAQ の Q 文言が本文と一致／`.wakeari-answer`・`.wakeari-who` あり／sitemap に5URL（lastmod 2026-09-23・ja のみ）／llms.txt の節／コラム詳細の「この記事に関係する相談窓口」ブロック（対応表の slug で描画・ja 以外では非表示）／/souzoku・akiya・koishikawa・toushi・ryokin・フッター・/services のリンク／問い合わせフォームの category 表示名
+- Vercel プレビュー（本番 DB・2026-09-23）への同じ到達性チェック：5枚すべて OK／sitemap に5URL／llms.txt の節／ハブの関連コラムに実記事が並ぶ／既存コラム（DB のみの `jikka-kyoudai-kyouyuu-meigi` を含む）に「この記事に関係する相談窓口」ブロックと受け皿へのリンクが出る
 - 法令の一次確認：e-Gov 法令API（v1 条文・v2 現行版施行日）・東京都例規集・高知県公式・文京区公式（`docs/wakeari/01_konkyo.md`・参照日 2026-09-23）
 
 ## 未検証事項
@@ -58,7 +59,7 @@ luck428.com に「売りにくい土地・建物の出口相談」コーナー�
 - 報酬告示（令和6年国土交通省告示第949号）の原文（PDF がテキスト抽出できず、高知県公式ページの要約で確認）
 - 各条文の条ごとの最終改正日（法令単位の現行版施行日を併記）
 - 「提携する買取業者」の表記＝指示書 v2.0 の固定文言に従った。買取業者との提携が書面で存在するかは未確認（2026-08-06 U12 で司法書士・税理士の「提携」を外した経緯と同じ論点）。書面が無い場合は「買取を行う不動産会社」等への差し替えを要検討
-- Rich Results Test（FAQPage・BreadcrumbList）・プレビューの到達性チェック（200／canonical／noindex なし／JSON-LD の parse）
+- Rich Results Test（FAQPage・BreadcrumbList）・プレビューでの目視確認（機械チェックはローカルと Vercel プレビューの両方で通過）
 
 ## 浦松未確認の工程（無人実行）
 実査表（`docs/wakeari/00_jissa.md`）／原稿（各 page.tsx・`src/lib/wakeari.ts`）＝指示書の停止点で止まらず続行した。
