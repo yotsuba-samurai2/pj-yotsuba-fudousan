@@ -96,6 +96,16 @@ export type RealestateServicePageProps = {
    * 値は contact-intake.ts の CATEGORY_ORDER_BY_BUSINESS.realestate のキー。
    */
   ctaIntent?: string;
+  /**
+   * CtaBand のお問い合わせボタンの遷移先の上書き（2026-09-24・大家募集ページ）。
+   * 同一ページ内の専用フォーム（"#form"）へ向けるとき用。省略時は従来どおり。
+   */
+  ctaContactHref?: string;
+  /**
+   * Service JSON-LD に足す項目（2026-09-24・大家募集ページ）。serviceType・audience・offers や
+   * areaServed の上書きに使う。省略時の出力は不変。
+   */
+  serviceExtra?: Record<string, unknown>;
   children: ReactNode;
 };
 
@@ -118,6 +128,7 @@ export async function RealestateServicePage(p: RealestateServicePageProps) {
         author: { "@id": PERSON_ID },
         areaServed: "東京都文京区およびその周辺",
         url,
+        ...(p.serviceExtra ?? {}),
       },
     ],
   };
@@ -216,7 +227,12 @@ export async function RealestateServicePage(p: RealestateServicePageProps) {
       </article>
 
       <div className="mx-auto max-w-3xl px-4">
-        <CtaBand businessKey="realestate" variant={p.ctaVariant} intent={p.ctaIntent} />
+        <CtaBand
+          businessKey="realestate"
+          variant={p.ctaVariant}
+          intent={p.ctaIntent}
+          contactHref={p.ctaContactHref}
+        />
       </div>
     </>
   );

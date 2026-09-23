@@ -311,3 +311,10 @@
 - **`next build` と描画確認は使い捨てのローカル Prisma Postgres で回せる**（本番 DB に触らない）：`npx prisma dev --name <名前>` → 表示された `DATABASE_URL`／`DIRECT_URL` で `prisma db push` → 対応表の slug を持つテスト記事を数本 upsert → `NEXT_BUILD_WORKERS=2 npx next build` → `PORT=3199 npx next start` に対して 200・canonical・JSON-LD・FAQ 一致を機械的に見る。終わったら `npx prisma dev stop <名前>`。
 - **`.env.example` を後から `source` しない**：`set -a; . ./.env.example` はローカル DB の `DATABASE_URL` をプレースホルダー（Supabase の pooler ホスト）で上書きし、`next start` が「Can't reach database server」で 500 になる（値は `<project-ref>` の雛形＝本番には接続していない）。`env -i PATH=… DATABASE_URL=<ローカル> DIRECT_URL=<ローカル> npx next start` のように要る変数だけ渡す。
 - **`pkill -f "next start"` は自分のシェルも殺す**（コマンド文字列に同じ語が含まれ、exit 144 で途中終了）。ポートで止める：`fuser -k 3199/tcp`。
+
+## 2026-09-24 大家募集ページ（/group-home/ooya）Phase 1
+
+- 指示書の Step 5 検証は `git diff main` だが、セッションのローカル `main` は `origin/main` より古いことがある（今回 41a0d54 vs c36a605）。無関係な71ファイルが差分に混ざり「削除行あり」の誤検知になった。**基点は `origin/main` を fetch してから比較する。**
+- 指示書に書かれた条文番号も e-Gov で裏を取る。宅建業法第34条の2（媒介契約書面）は売買・交換の媒介だけで貸借の媒介を含まず、障害者総合支援法の共同生活援助の定義は現行で第5条第18項だった（付録Bは第17項）。**指示書の条番号を写さず、取得した原文で確定する。**
+- 禁止語の grep はコメント行も拾う。禁止語の一覧をコード内コメントに書き写さない（「指示書 第8章の一覧」と参照で書く）。
+- 並行して別セッションの姉妹 PR（#421）が同じ共有ファイルを触っていた。着手時に `list_pull_requests` で open PR を見て、重なる部品・並び順・テストの期待配列を PR 本文に列挙しておく。

@@ -1534,6 +1534,46 @@ const ARTICLES: ArticleSpec[] = [
     localesWithTranslations: ["en", "zh-tw", "zh"],
     hubLinks: ["/souzoku"],
   },
+  {
+    file: "75-kikenbutsu-kyuyu-souko-bukken-shobo-youken.md",
+    slug: "kikenbutsu-kyuyu-souko-bukken-shobo-youken",
+    title: "危険物を扱う事業用物件（給油取扱所・危険物倉庫）はどんな要件で探せばいいですか？",
+    publishedAt: "2026-09-23",
+    category: "投資・事業用不動産",
+    excerpt:
+      "危険物（ガソリン・塗料・溶剤・燃料）を扱う物件は、まず「どれだけの量を扱うか」で規制の強さが変わります。分岐点は指定数量で、指定数量以上の施設は市町村長等の設置許可と完成検査（消防法第11条）、その5分の1以上〜指定数量未満は市町村の火災予防条例による少量危険物の届出で足ります。物件で効くのは用途地域（建築基準法第48条・別表第二と施行令第130条の9）・構造と保安距離・保有空地、そしてガソリンスタンド跡地なら地下タンクと土壌。東京都文京区の宅地建物取引士兼行政書士が、契約前に確認できることを条文と自治体の資料から整理します。",
+    keywords: [
+      "危険物 物件 給油取扱所",
+      "危険物倉庫 用途地域 準工業",
+      "指定数量 ガソリン 200リットル",
+      "少量危険物 届出 火災予防条例",
+      "消防法 設置許可 完成検査 第11条",
+    ],
+    tags: ["事業用不動産", "許認可", "用途地域", "消防法"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/toushi", "/office"],
+  },
+  {
+    file: "76-souzoku-fudosan-kyu-teitoken-massho-baikyaku.md",
+    slug: "souzoku-fudosan-kyu-teitoken-massho-baikyaku",
+    title: "相続した不動産に古い抵当権が残っているとき、抹消して売るにはどうしますか？",
+    publishedAt: "2026-09-23",
+    category: "相続",
+    excerpt:
+      "相続した不動産に古い抵当権が残っていても売れますが、買主・金融機関は担保のない状態での引渡しを求めるため、抹消の段取りが要ります。完済しているのに抵当権が消えないのは、抹消登記を申請しないと登記簿から消えないからです。抹消登記の申請は司法書士（登記は独占業務）で、当社は登記を代理しません。債権者だった会社が消滅・不明のときは休眠担保権の抹消（不動産登記法第70条・第70条の2、令和5年4月1日施行）を供託や30年経過で行います。東京都文京区の宅地建物取引士兼行政書士が、抹消と売却の順番を条文から整理します。",
+    keywords: [
+      "相続 不動産 抵当権 抹消 売却",
+      "抵当権抹消登記 司法書士 登録免許税 1000円",
+      "休眠担保権 抹消 不動産登記法 70条",
+      "不動産登記法 70条の2 法人 解散 30年",
+      "完済 抵当権 消えない 相続",
+    ],
+    tags: ["相続", "抵当権", "抹消登記", "売却"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/souzoku"],
+  },
 ];
 
 function toPlainText(md: string): string {

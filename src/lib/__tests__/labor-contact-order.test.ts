@@ -17,8 +17,8 @@ describe("contact category order", () => {
     expect(html).not.toMatch(/<option value="labor" selected/);
   });
   it("preserves other business and unknown-business choices", () => {
-    // 2026-09-23：wakeari（売りにくい土地・建物）を akiya の次に追加
-    expect(CATEGORY_ORDER_BY_BUSINESS.realestate).toEqual(["bukken", "rental", "sale", "management", "souzoku", "akiya", "wakeari", "foreign-housing", "subsidy", "visa", "labor", "other"]);
+    // 2026-09-23：wakeari（売りにくい土地・建物）を akiya の次に追加。2026-09-24：gh-owner（大家募集）をその次に追加
+    expect(CATEGORY_ORDER_BY_BUSINESS.realestate).toEqual(["bukken", "rental", "sale", "management", "souzoku", "akiya", "wakeari", "gh-owner", "foreign-housing", "subsidy", "visa", "labor", "other"]);
     expect(CATEGORY_ORDER_BY_BUSINESS.legal).toEqual(["souzoku-legal", "oyanakiato", "shogai-fukushi", "gaikokujin-shain", "ikuseishuro-gaibu-kansa", "kikoku-funin", "kyoninka", "subsidy", "visa", "labor", "bukken", "other"]);
     expect(CATEGORY_ORDER_DEFAULT).toEqual(["bukken", "rental", "sale", "management", "subsidy", "visa", "labor", "other"]);
   });

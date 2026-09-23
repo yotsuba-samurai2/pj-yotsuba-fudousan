@@ -153,6 +153,9 @@ const COPY: Record<LangCode, ShogaiFukushiCopy> = {
           <li>
             <strong>物件</strong>：グループホーム・事業所に使える物件は、関連事業の四葉不動産株式会社（宅地建物取引業）が扱います →{" "}
             <Link href={addLocalePrefix("/toushi/group-home", locale)} className="text-primary underline">グループホームに使える物件探し</Link>
+            {/* 2026-09-24：貸す側の受け皿（大家募集ページ・ja先行公開）。ja の COPY のみ */}
+            <br />
+            <Link href={addLocalePrefix("/group-home/ooya", locale)} className="text-primary underline">物件をお持ちの方（大家）の相談窓口はこちら</Link>
             <br />
             <span className="text-xs text-text-muted">
               ※四葉不動産株式会社・四葉行政書士事務所は、それぞれ別の事業体として独立してご依頼をお受けします（紹介料等の授受はありません）。

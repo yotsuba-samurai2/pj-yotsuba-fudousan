@@ -8,6 +8,7 @@ import {
   ColumnArticleHero,
   type ColumnArticleHeroIllustration,
 } from "@/components/column/ColumnArticleHero";
+import type { ReactNode } from "react";
 import type { Column, ColumnSummary } from "@/lib/column-shared";
 
 type Props = {
@@ -15,9 +16,11 @@ type Props = {
   prev: ColumnSummary | null;
   next: ColumnSummary | null;
   illustration: ColumnArticleHeroIllustration;
+  /** 本文直後に差す要素（2026-09-24：コラム→受け皿の「この記事に関係する相談窓口」。page.tsx が ja・対象slugのときだけ渡す） */
+  afterBody?: ReactNode;
 };
 
-export default function LegalColumnDetailContent({ column: col, prev, next, illustration }: Props) {
+export default function LegalColumnDetailContent({ column: col, prev, next, illustration, afterBody }: Props) {
   const { t, locale } = useTranslation();
 
   return (
@@ -50,6 +53,7 @@ export default function LegalColumnDetailContent({ column: col, prev, next, illu
           </div>
           <p className="article-summary sr-only">{col.excerpt}</p>
           <ColumnBody content={col.content} />
+          {afterBody}
           <div className="mt-16 grid gap-4 border-t border-border pt-8 sm:grid-cols-2">
             {prev ? (
               <Link href={`/legal/column/${prev.slug}`} className="group rounded-lg border border-border bg-surface p-4 transition-all hover:border-primary/30 hover:shadow-md">

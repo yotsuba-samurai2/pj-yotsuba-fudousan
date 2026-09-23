@@ -826,6 +826,14 @@ export default async function Page() {
             {c.s5.linkLabel}
           </Link>
         </p>
+        {/* 2026-09-24：貸す側の受け皿（大家募集ページ）。ja先行公開のため ja のときだけ */}
+        {locale === "ja" && (
+          <p className="mt-2 text-sm">
+            <Link href="/group-home/ooya" className="text-primary underline">
+              空き家をグループホーム向けに貸す（大家募集ページ）
+            </Link>
+          </p>
+        )}
       </Section>
 
       {/* §6 遠隔売却の流れ。分離受任の明示＝行政書士（別契約受任）・司法書士（提携紹介）。
