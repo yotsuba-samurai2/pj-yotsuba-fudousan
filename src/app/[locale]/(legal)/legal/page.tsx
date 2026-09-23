@@ -179,8 +179,10 @@ export default async function LegalPage() {
             height={900}
             className="h-full max-h-[420px] w-full object-cover md:max-h-none"
             sizes="(min-width: 1152px) 576px, (min-width: 768px) 50vw, 100vw"
+            quality={60}
             loading="eager"
             fetchPriority="high"
+            preload
           />
         </div>
       </section>

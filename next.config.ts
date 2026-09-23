@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { OPTIMIZABLE_REMOTE_PATTERNS } from "./src/lib/shared/image-hosts";
 
 const securityHeaders = [
   { key: "X-DNS-Prefetch-Control", value: "on" },
@@ -18,6 +19,8 @@ const nextConfig: NextConfig = {
     // 小型端末のDPR 1でも640pxを取得していたため420pxを追加。
     // 高DPR端末・PC用の標準サイズは維持する。
     deviceSizes: [420, 640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    // 物件写真（自社 Supabase Storage の公開バケットのみ）。定義は image-hosts.ts が正本
+    remotePatterns: [...OPTIMIZABLE_REMOTE_PATTERNS],
   },
   // app/[locale]/ の値は任意のServer Componentから next/root-params で読む
   // （getRequestLocale.ts）。リクエストAPI（headers/cookies）と違い静的生成と両立する。

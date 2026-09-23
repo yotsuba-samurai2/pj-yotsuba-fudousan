@@ -31,6 +31,7 @@ import { PropertyQa } from "@/components/bukken/PropertyQa";
 import ColumnBody from "@/components/column/ColumnBody";
 import { propertyPhotoNotes } from "@/lib/property-photo-notes";
 import { PropertyPhotoGallery } from "@/components/bukken/PropertyPhotoGallery";
+import { PropertyImage } from "@/components/bukken/PropertyImage";
 import { PropertyVideos } from "@/components/bukken/PropertyVideos";
 import { PropertySchoolDistrict } from "@/components/gakku/RentalSchoolDistrict";
 import type { LangCode } from "@/config/languages";
@@ -110,14 +111,15 @@ export default async function BukkenDetailPage({ params }: Props) {
 
       <article className="mx-auto max-w-3xl px-4 pb-16">
         {hero && (
-          // 画像はSupabase Storageの絶対URL＝next/image未設定のため素のimg（コラムと同方式）
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
+          // 2026-09-23：自社Storageの写真は next/image で縮小配信（PropertyImage が許可外URLを素の img に戻す）
+          <PropertyImage
             src={hero.url}
             alt={localizedImageAlt(hero, p.title, locale)}
             width={1600}
             height={900}
             className="mt-3 w-full rounded-2xl object-cover"
+            sizes="(min-width: 768px) 736px, calc(100vw - 32px)"
+            loading="eager"
             fetchPriority="high"
           />
         )}
