@@ -50,9 +50,6 @@
     font:700 15px "Noto Serif JP",serif;color:var(--c)}
   .pin .lb{margin-top:3px;background:var(--c);color:#fff;font:700 12px "Noto Sans JP",sans-serif;
     padding:1px 7px;border-radius:3px;white-space:nowrap;box-shadow:0 1px 2px rgba(0,0,0,.3)}
-  .legend{background:#fff;padding:8px 12px;border-radius:4px;box-shadow:0 1px 4px rgba(0,0,0,.2);
-    font:12px/1.7 "Noto Sans JP",sans-serif}
-  .legend i{display:inline-block;width:14px;height:10px;margin-right:6px;vertical-align:-1px;border:1px solid var(--c)}
   .leaflet-popup-content{font-family:"Noto Sans JP",sans-serif;font-size:13px;line-height:1.6;margin:10px 14px}
   .leaflet-popup-content a{color:var(--green2)}
   @media (max-width:860px){.layout{grid-template-columns:1fr}#map{height:420px}}
@@ -140,14 +137,6 @@ schools.forEach(s=>{
   list.appendChild(el);
 });
 
-const legend = L.control({position:"topright"});
-legend.onAdd = ()=>{const d=L.DomUtil.create("div","legend");
-  d.innerHTML = schools.map(s=>{const c=css.getPropertyValue("--"+s.key).trim();
-    return `<div><i style="--c:${c};background:${c}55"></i>${s.name}</div>`}).join("")
-   + `<div style="margin-top:4px;color:#5E6B63"><i style="--c:#888;border-style:dashed;background:#8881"></i>点線：号により他校区と分かれる番</div>`;
-  return d;};
-const narrow = window.matchMedia("(max-width:600px)").matches;
-if(!narrow) legend.addTo(map);   // スマホでは凡例が地図を覆うため出さない（右の一覧が色の凡例を兼ねる）
 map.fitBounds(zoneLayer.getBounds(),{padding:[16,16]});
 function postHeight(){parent.postMessage({type:"gakku-map-height",h:document.documentElement.scrollHeight},location.origin);}
 new ResizeObserver(postHeight).observe(document.body); window.addEventListener("load",postHeight);
