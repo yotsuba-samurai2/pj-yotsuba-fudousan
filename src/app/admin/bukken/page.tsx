@@ -136,6 +136,7 @@ export default function BukkenListPage() {
       )}
 
       <div className="mb-4 flex flex-wrap items-center gap-3">
+        <Link href="/admin/bukken/school-rentals" className="rounded border px-3 py-2 text-sm text-primary">学区別の募集一覧</Link>
         <div className="flex gap-1 rounded-lg bg-surface-dim p-1">
           {statuses.map((s) => (
             <button
