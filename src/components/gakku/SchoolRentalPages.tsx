@@ -8,7 +8,7 @@ import { addLocalePrefix } from "@/lib/locale";
 import { getLocalizedProperty } from "@/lib/property-shared";
 import { canonicalUrl } from "@/lib/seo";
 import { buildPropertyItemListJsonLd } from "@/lib/property-jsonld";
-import { groupSchoolRentals, SCHOOL_RENTAL_COPY, SCHOOL_RENTAL_INDEX_PATH, schoolRentalPath, schoolRentalTitle } from "@/lib/rental-school-district";
+import { groupSchoolRentals, SCHOOL_RENTAL_COPY, SCHOOL_RENTAL_INDEX_PATH, schoolRentalLead, schoolRentalPath, schoolRentalTitle } from "@/lib/rental-school-district";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { Breadcrumb } from "@/components/shared/Breadcrumb";
 import { PropertyCard } from "@/components/bukken/PropertyCard";
@@ -58,6 +58,7 @@ export function SchoolRentalListings({ school, properties, locale, summaries = [
       <header className="rounded-2xl border border-primary/20 bg-primary-tint p-5 sm:p-8">
         <p className="text-sm font-semibold text-primary">{c.label}</p>
         <h1 className="mt-2 font-serif text-2xl font-semibold text-ink sm:text-3xl">{title}</h1>
+        <p className="mt-3 leading-relaxed text-text">{schoolRentalLead(school, locale)}</p>
         <p className="mt-3 text-lg font-semibold text-primary">{c.count.replace("{count}", String(listings.length + schoolSummaries.length))}</p>
         <DistrictSourceNote locale={locale} />
       </header>
