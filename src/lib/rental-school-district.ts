@@ -79,6 +79,46 @@ export const SCHOOL_RENTAL_COPY = {
 } satisfies Record<LangCode, Record<string, string>>;
 
 /**
+ * 学区別賃貸（ハブ・学区別ページ）の FAQ（学区ページ強化 作業手順書 v1・PR-3）。
+ * 回答はページ上の記載（通学区域の単位・区の決定・掲載条件・毎週水曜の更新）の範囲にとどめる。
+ * 4校ページ（SchoolDistrictPage）の FAQ（区域の範囲・区域の変更・指定校変更）と設問を重複させない。
+ */
+export const SCHOOL_RENTAL_FAQ = {
+  ja: {
+    heading: "よくあるご質問",
+    items: [
+      { q: "文京区の学区は、町名だけで決まりますか？", a: "いいえ。文京区の区立小学校の通学区域は町丁目の単位で、区域によっては番・号まで定められており、同じ町丁目でも番地によって通う学校が分かれる区域があります。住所から学区を確かめるときは、番・号まで照合する必要があります。入学時点の指定校は文京区が決定します。" },
+      { q: "掲載されている物件に住めば、表示された学校に必ず通えますか？", a: "このページの学区表示は、文京区が公表する通学区域と物件の所在地を当社が照合した結果です。入学時点の指定校は文京区が決定するため、手続の際は文京区にご確認ください。" },
+      { q: "このページにはどのような物件を載せていますか？", a: "このページの「学区別の募集比較一覧」には、文京区内で賃料17万5,000円以上・面積48㎡以上の募集中の賃貸物件のうち、管理会社が広告を認めているものを掲載しています。掲載物件は毎週水曜日に更新します。一覧にない物件も個別にご紹介できます。" },
+    ],
+  },
+  en: {
+    heading: "FAQ",
+    items: [
+      { q: "Is a Bunkyo school district decided by the town name alone?", a: "No. Bunkyo City sets the district of each city elementary school by chōme, and in some areas down to the lot and building number, so addresses in the same chōme can belong to different schools. To check the district for an address, it must be matched down to the lot and building number. The assigned school at enrollment is decided by Bunkyo City." },
+      { q: "If I live in a listed property, is the school shown guaranteed?", a: "The school district shown on this page is the result of our matching the property address against the districts published by Bunkyo City. The assigned school at enrollment is decided by Bunkyo City, so please confirm with the city when you complete the procedures." },
+      { q: "Which properties are listed on this page?", a: "The rental comparison by school district on this page lists available rentals in Bunkyo with monthly rent from ¥175,000 and floor area from 48 m², where the managing agent has granted advertising permission. The listings are updated every Wednesday. We can also introduce properties that are not on this list." },
+    ],
+  },
+  "zh-tw": {
+    heading: "常見問題",
+    items: [
+      { q: "文京區的學區只看町名就能決定嗎？", a: "不能。文京區區立小學的通學區域以町丁目為單位劃定，部分區域更細分至番、號，因此同一町丁目內也可能分屬不同學校。要從地址確認學區，需比對至番、號。入學時的指定學校由文京區決定。" },
+      { q: "住進本頁刊登的物件，就一定能就讀所顯示的學校嗎？", a: "本頁顯示的學區，是本公司將物件地址與文京區公布的通學區域比對的結果。入學時的指定學校由文京區決定，辦理手續時請向文京區確認。" },
+      { q: "本頁刊登哪些物件？", a: "本頁的「依小學學區比較租賃物件」列表，刊登文京區內月租17萬5,000日圓以上、面積48平方公尺以上、仍在招租且管理公司允許刊登廣告的出租物件。刊登物件每週三更新。列表以外的物件也可個別介紹。" },
+    ],
+  },
+  zh: {
+    heading: "常见问题",
+    items: [
+      { q: "文京区的学区只看町名就能确定吗？", a: "不能。文京区区立小学的通学区域以町丁目为单位划定，部分区域更细分至番、号，因此同一町丁目内也可能分属不同学校。要根据地址确认学区，需匹配至番、号。入学时的指定学校由文京区决定。" },
+      { q: "入住本页刊登的房源，就一定能就读所显示的学校吗？", a: "本页显示的学区，是本公司将房源地址与文京区公布的通学区域匹配的结果。入学时的指定学校由文京区决定，办理手续时请向文京区确认。" },
+      { q: "本页刊登哪些房源？", a: "本页的「按小学学区比较租赁房源」列表，刊登文京区内月租17万5,000日元以上、面积48平方米以上、仍在招租且管理公司允许刊登广告的出租房源。刊登房源每周三更新。列表以外的房源也可单独介绍。" },
+    ],
+  },
+} satisfies Record<LangCode, { heading: string; items: { q: string; a: string }[] }>;
+
+/**
  * 学区別ページのリード（学区ページ強化 作業手順書 v1・PR-2）。
  * 設問への直答（通学区域は町丁目単位・区域により番・号まで）＋主語が事業者の一文＋指定校は区が決定する留保。
  */

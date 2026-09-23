@@ -10,6 +10,8 @@
 // buildFaqJsonLd() を直接呼ぶことで Answer text＝表示文字列の完全一致は維持している。
 // 【注記】本番実測（2026-08-11・JSON-LDをパースして確認）では /group-home 9問・/office 7問・/minpaku 4問も
 // FAQPage を出しており、上の「専用FAQページのみ」は既に実態と一致していない。方針の再定義は未着手（浦松判断待ち）。
+// 【例外】2026-09-23（浦松判断・学区ページ強化 作業手順書 v1 PR-3）：/gakku/rentals と /gakku/<校>/rentals
+// （4ロケール）でも出力する。設問は SCHOOL_RENTAL_FAQ（@/lib/rental-school-district）で、4校ページの FAQ と重複させない。
 // links＝回答末尾の内部リンク（2026-07-19 B-3）。表示のみで JSON-LD の Answer text には含めない
 // （Answer text＝回答本文 a と完全一致を維持）。多言語で使う場合は items 側でロケール済み href を渡すこと。
 import Link from "next/link";
