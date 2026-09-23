@@ -20,7 +20,7 @@ import {
   SOURCE_PLACEHOLDER,
 } from "@/lib/shared/contact-intake";
 import type { LangCode } from "@/config/languages";
-import { gaEvent } from "@/lib/gtag";
+import { contactIntentParam, gaEvent } from "@/lib/gtag";
 
 const inputClass =
   "mt-1 w-full rounded-lg bg-surface px-4 py-3 text-sm outline-none transition-all duration-300 gradient-border-input";
@@ -63,6 +63,8 @@ export function ContactForm({ thanksPath = "/thanks", business = "realestate" }:
   const [errors, setErrors] = useState<Record<string, string[]>>({});
   const [submitting, setSubmitting] = useState(false);
   const [serverError, setServerError] = useState("");
+  // 来訪元（?intent=）。送信完了イベントに付け、どのページから来た相談かを GA4 で数える（2026-09-23）
+  const [intentParam, setIntentParam] = useState("none");
 
   // 2026-07-24 CTA刷新v2：CTA帯から ?intent=bukken* で遷移した場合、カテゴリと本文テンプレを
   // 自動プリセット（空欄のときのみ＝入力途中を上書きしない）。useSearchParamsは使わない
@@ -73,6 +75,7 @@ export function ContactForm({ thanksPath = "/thanks", business = "realestate" }:
   useEffect(() => {
     const sp = new URLSearchParams(window.location.search);
     const intent = sp.get("intent") ?? "";
+    setIntentParam(contactIntentParam(intent));
     if (!intent) return;
     if (intent.startsWith("bukken")) {
       const template =
@@ -131,6 +134,7 @@ export function ContactForm({ thanksPath = "/thanks", business = "realestate" }:
         business,
         category: category || "unset",
         source: source || "unanswered",
+        intent: intentParam,
       });
 
       // 2026-09-22：ロケール接頭辞を付ける。これが無いと /en/・/zh-tw/・/zh/ から送信した人も

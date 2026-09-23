@@ -20,3 +20,14 @@ export function gaEvent(name: string, params?: GtagParams): void {
     // 計測失敗はユーザー体験に影響させない
   }
 }
+
+/**
+ * 問い合わせの来訪元（?intent=）を GA4 のパラメータ用に丸める（2026-09-23）。
+ * 例：学区別賃貸の相談ボタン → gakku-seishi-rental。URL は利用者が書き換えられるため、
+ * 英小文字・数字・ハイフンの短い値だけを通し、それ以外は "other"、無ければ "none" にする
+ * （自由入力を GA4 に送らない＝上の規約どおり）。
+ */
+export function contactIntentParam(raw: string | null | undefined): string {
+  if (!raw) return "none";
+  return /^[a-z0-9]+(?:-[a-z0-9]+){0,5}$/.test(raw) && raw.length <= 50 ? raw : "other";
+}
