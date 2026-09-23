@@ -23,6 +23,7 @@ import { SCHOOL_RENTAL_COPY, SCHOOL_RENTAL_INDEX_PATH, schoolRentalPath } from "
 import { propertyUi } from "@/lib/property-i18n";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { buildGakkuHubJsonLd } from "@/lib/gakku-jsonld";
+import { ENROLLMENT_SOURCE, enrollmentChange } from "@/lib/data/bunkyo-enrollment";
 
 /** 本ページを公開するロケール（hreflang・sitemap と一致させる） */
 const PAGE_LOCALES: LangCode[] = ["ja", "en", "zh-tw", "zh"];
@@ -80,20 +81,32 @@ export default async function GakkuHubPage() {
         <header className="pt-4">
           <h1 className="font-serif text-2xl font-semibold text-ink sm:text-4xl">{c.hub.h1}</h1>
           <p className="mt-4 text-lg font-semibold leading-relaxed text-primary sm:text-xl">{c.hub.hook}</p>
-          <dl className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
-            {[
-              { value: String(listSchools().length), label: c.hub.stats.schools },
-              { value: String(DISTRICT_SOURCE.rowCount), label: c.hub.stats.rows },
-              { value: "4", label: c.hub.stats.languages },
-              { value: c.hub.stats.weeklyValue, label: c.hub.stats.weekly },
-            ].map((stat) => (
-              <div key={stat.label} className="rounded-xl border border-primary/20 bg-primary-tint p-3 text-center">
-                <dt className="sr-only">{stat.label}</dt>
-                <dd className="font-serif text-2xl font-semibold text-primary sm:text-3xl">{stat.value}</dd>
-                <dd className="mt-1 text-xs leading-snug text-text-muted">{stat.label}</dd>
-              </div>
-            ))}
-          </dl>
+          {/* 3S1K の4校の児童数（2026年5月1日現在）と令和3年度比。値は区の公表PDFから転記（data/bunkyo-enrollment.ts） */}
+          <figure className="mt-6">
+            <figcaption className="text-sm font-semibold text-ink">{c.hub.enrollment.caption}</figcaption>
+            <dl className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-4">
+              {featured.map((school) => {
+                const e = enrollmentChange(school.slug);
+                if (!e) return null;
+                const sign = e.diff > 0 ? "+" : e.diff < 0 ? "−" : "±";
+                return (
+                  <div key={school.slug} className="rounded-xl border border-primary/20 bg-primary-tint p-3 text-center">
+                    <dt className="text-sm font-semibold text-ink">{school.formalName.replace(/^文京区立/, "")}</dt>
+                    <dd className="mt-1 font-serif text-3xl font-semibold text-primary">
+                      {e.latest.toLocaleString("en-US")}
+                      <span className="ml-0.5 text-sm">{c.hub.enrollment.unit}</span>
+                    </dd>
+                    <dd className={`mt-1 text-xs font-semibold ${e.diff < 0 ? "text-text-muted" : "text-primary"}`}>
+                      {c.hub.enrollment.change} {sign}{Math.abs(e.diff)}{c.hub.enrollment.unit}{locale === "en" ? ` (${sign}${Math.abs(e.rate).toFixed(1)}%)` : `（${sign}${Math.abs(e.rate).toFixed(1)}%）`}
+                    </dd>
+                  </div>
+                );
+              })}
+            </dl>
+            <p className="mt-2 text-xs leading-relaxed text-text-muted">
+              <a href={ENROLLMENT_SOURCE.url} className="underline" target="_blank" rel="noopener noreferrer">{c.hub.enrollment.source}</a>
+            </p>
+          </figure>
         </header>
 
         {/* 学区参考図（4ロケール）。地図内の文言は ?lang= で切り替え、校名・所在地は日本語のまま

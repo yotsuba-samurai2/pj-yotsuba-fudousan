@@ -1,11 +1,12 @@
 // /gakku（学区ハブ）の構造化データ。画面に出している事実だけで組む（2026-09-23）。
-// ページ本体（CollectionPage）・20校の一覧（ItemList）・区の通学区域表（Dataset）・学区参考図（Map）を
+// ページ本体（CollectionPage）・20校の一覧（ItemList）・区の通学区域表と4校の児童数（Dataset）・学区参考図（Map）を
 // 1つの @graph で渡し、AI・検索エンジンが「誰が・何を元に・どの範囲を」載せたページかを読めるようにする。
 // 学校の評判・人気・進学実績は入れない（表示規約。学区ハブの方針と同じ）。
 import type { LangCode } from "@/config/languages";
 import { gakkuCopy, SCHOOL_LIST_SOURCE, SCHOOL_PROFILES } from "@/lib/gakku";
 import { schoolRentalPath } from "@/lib/rental-school-district";
-import { DISTRICT_SOURCE, listSchools } from "@/lib/school-district";
+import { DISTRICT_SOURCE, findSchoolBySlug, listSchools } from "@/lib/school-district";
+import { ENROLLMENT, ENROLLMENT_SOURCE } from "@/lib/data/bunkyo-enrollment";
 import { BCP47_BY_LOCALE, canonicalUrl, SITE_URL } from "@/lib/seo";
 
 const ORGANIZATION_ID = `${SITE_URL}/#organization`;
@@ -36,7 +37,7 @@ export function buildGakkuHubJsonLd(locale: LangCode) {
         about: BUNKYO,
         publisher: { "@id": ORGANIZATION_ID },
         mainEntity: { "@id": `${pageUrl}#schools` },
-        hasPart: [{ "@id": `${pageUrl}#district-table` }, { "@id": `${pageUrl}#map` }],
+        hasPart: [{ "@id": `${pageUrl}#district-table` }, { "@id": `${pageUrl}#enrollment` }, { "@id": `${pageUrl}#map` }],
       },
       {
         "@type": "ItemList",
@@ -77,6 +78,22 @@ export function buildGakkuHubJsonLd(locale: LangCode) {
         dateModified: DISTRICT_SOURCE.updatedAt,
         isBasedOn: [DISTRICT_SOURCE.url, SCHOOL_LIST_SOURCE.url],
         creator: { "@type": "GovernmentOrganization", name: DISTRICT_SOURCE.publisher },
+        publisher: { "@id": ORGANIZATION_ID },
+      },
+      {
+        "@type": "Dataset",
+        "@id": `${pageUrl}#enrollment`,
+        name: "文京区立小学校4校（誠之・昭和・千駄木・窪町）の児童数",
+        description: Object.entries(ENROLLMENT)
+          .map(([slug, e]) => `${findSchoolBySlug(slug)?.formalName ?? slug}：${e[2021]}人（2021年5月1日）→${e[2026]}人（2026年5月1日）`)
+          .join("／"),
+        url: pageUrl,
+        inLanguage: "ja",
+        spatialCoverage: BUNKYO,
+        temporalCoverage: `${ENROLLMENT_SOURCE.baseYear}/${ENROLLMENT_SOURCE.latestYear}`,
+        variableMeasured: "児童数（各年5月1日現在）",
+        isBasedOn: ENROLLMENT_SOURCE.url,
+        creator: { "@type": "GovernmentOrganization", name: ENROLLMENT_SOURCE.publisher },
         publisher: { "@id": ORGANIZATION_ID },
       },
       {

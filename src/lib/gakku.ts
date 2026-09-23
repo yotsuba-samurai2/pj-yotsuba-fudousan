@@ -74,7 +74,8 @@ export interface GakkuCopy {
     /** H1 直下の一文（地図より前）。3S1K は通称として引用し、評価語は使わない */
     hook: string;
     /** 数字の帯のラベル（値はページ側でデータから出す） */
-    stats: { schools: string; rows: string; languages: string; weekly: string; weeklyValue: string };
+    /** 4校の児童数の帯（値は data/bunkyo-enrollment.ts から出す） */
+    enrollment: { caption: string; change: string; unit: string; source: string };
     answer: string;
     lead: string;
     nicknameH2: string;
@@ -129,7 +130,7 @@ export const GAKKU_COPY: Record<LangCode, GakkuCopy> = {
       h1: "文京区の小学校 通学区域と、住まい探し",
       hook:
         "世間で「3S1K」と呼ばれる4校を含む、文京区立小学校20校の通学区域を1枚の地図に。この4校の学区では、当社の取扱いでも募集が出てから短期間で申込みが入ることが少なくありません。",
-      stats: { schools: "区立小学校", rows: "区の通学区域表（町丁目・番・号）の行", languages: "言語（日・英・繁・簡）", weekly: "学区別の賃貸一覧を更新", weeklyValue: "毎週水曜" },
+      enrollment: { caption: "4校の児童数（2026年5月1日現在）と、2021年（令和3年度）からの増減", change: "令和3年度比", unit: "人", source: "出典：文京区「区立小・中学校 児童・生徒数」令和3年度・令和8年度（各年5月1日現在）" },
       answer:
         "文京区の小学校の通学区域は、町丁目だけでなく「番」「号」まで分かれています。同じ丁目でも番地によって学校が変わる区域があり、備考に「一部○○小」とある部分は旧町名により決まります。このページは区の公表データをそのまま掲載し、住まい探しの際に確認すべき点を整理したものです。",
       lead: "通学区域で住まいを探すとき、最初に必要なのは正確な区域です。区が公表している表を町丁目・番・号のまま掲載しました。",
@@ -189,7 +190,7 @@ export const GAKKU_COPY: Record<LangCode, GakkuCopy> = {
       h1: "Elementary school districts in Bunkyo-ku, and finding a home",
       hook:
         "All 20 public elementary school districts in Bunkyo on one map, including the four schools the public calls “3S1K”. In those four districts, rentals we handle often receive applications soon after they are listed.",
-      stats: { schools: "public elementary schools", rows: "rows in the ward’s district table (chome, ban, go)", languages: "languages (JA, EN, 繁, 简)", weekly: "rental lists by district updated", weeklyValue: "Every Wed." },
+      enrollment: { caption: "Pupils at the four schools (as of 1 May 2026) and the change since 2021", change: "vs. 2021", unit: "", source: "Source: Bunkyo City, pupils and students at city elementary and junior high schools, FY2021 and FY2026 (as of 1 May each year)" },
       answer:
         "In Bunkyo-ku, school attendance districts are defined not only by district (chome) but down to block (ban) and lot (go) numbers. Within the same chome, the assigned school can differ by address, and rows marked \"partly ○○ Elementary\" are determined by former place names. This page reproduces the ward's published table as it is.",
       lead: "When you search for a home by school district, the first thing you need is the exact boundary. We reproduce the ward's table down to block and lot numbers.",
@@ -251,7 +252,7 @@ export const GAKKU_COPY: Record<LangCode, GakkuCopy> = {
       h1: "文京區的小學通學區域與找房",
       hook:
         "把文京區20所區立小學的通學區域放進一張地圖，其中包括社會上通稱「3S1K」的4校。在這4校的學區，本公司經手的物件也常在招租後短時間內就有人申請。",
-      stats: { schools: "所區立小學", rows: "區通學區域表（町丁目・番・號）的列數", languages: "種語言（日・英・繁・簡）", weekly: "更新依學區分類的出租列表", weeklyValue: "每週三" },
+      enrollment: { caption: "4校的學童人數（2026年5月1日現在）及與2021年度（令和3年度）相比的增減", change: "較2021年度", unit: "人", source: "出處：文京區「區立小・中學校 兒童・學生數」令和3年度・令和8年度（各年5月1日現在）" },
       answer:
         "文京區的小學通學區域不只分到町丁目，而是分到「番」「號」。同一個丁目也可能因地號不同而學校不同；備註寫「一部○○小」的部分，是依舊町名決定的。本頁將區公布的表格原樣刊載。",
       lead: "以通學區域找房時，最先需要的是正確的區域範圍。我們把區公布的表格，連番・號一起原樣刊載。",
@@ -310,7 +311,7 @@ export const GAKKU_COPY: Record<LangCode, GakkuCopy> = {
       h1: "文京区的小学通学区域与找房",
       hook:
         "把文京区20所区立小学的通学区域放进一张地图，其中包括社会上通称「3S1K」的4校。在这4校的学区，本公司经手的房源也常在招租后短时间内就有人申请。",
-      stats: { schools: "所区立小学", rows: "区通学区域表（町丁目・番・号）的行数", languages: "种语言（日・英・繁・简）", weekly: "更新按学区分类的出租列表", weeklyValue: "每周三" },
+      enrollment: { caption: "4校的学生人数（2026年5月1日现在）及与2021年度（令和3年度）相比的增减", change: "较2021年度", unit: "人", source: "出处：文京区「区立小・中学校 儿童・学生数」令和3年度・令和8年度（各年5月1日现在）" },
       answer:
         "文京区的小学通学区域不仅分到町丁目，而是分到「番」「号」。同一个丁目也可能因地号不同而学校不同；备注写「一部○○小」的部分，是依旧町名决定的。本页将区公布的表格原样刊载。",
       lead: "以通学区域找房时，最先需要的是准确的区域范围。我们把区公布的表格，连番・号一起原样刊载。",
