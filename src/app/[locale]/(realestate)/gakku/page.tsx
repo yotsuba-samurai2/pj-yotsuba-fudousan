@@ -25,6 +25,30 @@ import { propertyUi } from "@/lib/property-i18n";
 /** 本ページを公開するロケール（hreflang・sitemap と一致させる） */
 const PAGE_LOCALES: LangCode[] = ["ja", "en", "zh-tw", "zh"];
 
+/** 学区参考図の見出し・説明（地図内の文言は public/gakku/school-map.js 側） */
+const MAP_COPY: Record<LangCode, { heading: string; lead: string; frameTitle: string }> = {
+  ja: {
+    heading: "文京区20小学校の学区を地図で見る",
+    lead: "誠之・千駄木・昭和・窪町の4校はカラー、その他の16校は白黒で表示しています。地図下の学校一覧や地図上の学校名を押すと、その学区が拡大します。国土交通省の2023年度データによる参考図です。",
+    frameTitle: "文京区20小学校の学区マップ（学校一覧から拡大）",
+  },
+  en: {
+    heading: "See the 20 Bunkyo elementary school districts on a map",
+    lead: "Seishi, Sendagi, Showa and Kubomachi are shown in color; the other 16 schools in black and white. Tap a school in the list below the map, or a school name on the map, to zoom in on its district. This is a reference map based on FY2023 data from the Ministry of Land, Infrastructure, Transport and Tourism. School names are shown in their official Japanese form.",
+    frameTitle: "Map of the 20 Bunkyo elementary school districts (zoom in from the school list)",
+  },
+  "zh-tw": {
+    heading: "在地圖上查看文京區20所小學的學區",
+    lead: "誠之、千駄木、昭和、窪町4校以彩色顯示，其他16校為黑白。點選地圖下方的學校列表或地圖上的校名，即可放大該學區。本圖為依國土交通省2023年度資料製作的參考圖。校名沿用官方日文名稱。",
+    frameTitle: "文京區20所小學學區地圖（可從學校列表放大）",
+  },
+  zh: {
+    heading: "在地图上查看文京区20所小学的学区",
+    lead: "誠之、千駄木、昭和、窪町4校以彩色显示，其他16校为黑白。点击地图下方的学校列表或地图上的校名，即可放大该学区。本图是依据国土交通省2023年度数据制作的参考图。校名沿用官方日文名称。",
+    frameTitle: "文京区20所小学学区地图（可从学校列表放大）",
+  },
+};
+
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getRequestLocale();
   const c = gakkuCopy(locale);
@@ -58,24 +82,20 @@ export default async function GakkuHubPage() {
 
         <Link href={addLocalePrefix(SCHOOL_RENTAL_INDEX_PATH, locale)} className="mt-6 block rounded-xl border border-primary/25 bg-primary-tint p-5 font-semibold text-primary">{SCHOOL_RENTAL_COPY[locale].indexTitle} →</Link>
 
-        {/* 学区参考図（日本語のみ）。地図の注記・学校名が日本語のため、
-            en / zh-tw / zh では出さない（区域の表・一覧は4ロケールとも下に出る）。 */}
-        {locale === "ja" && (
-          <section
-            aria-labelledby="gakku-map-heading"
-            className="mt-10 rounded-xl border border-border bg-surface-dim p-4 sm:p-6"
-          >
-            <h2 id="gakku-map-heading" className="font-serif text-xl font-semibold text-ink">
-              文京区20小学校の学区を地図で見る
-            </h2>
-            <p className="mt-3 text-sm leading-relaxed text-text">
-              誠之・千駄木・昭和・窪町の4校はカラー、その他の16校は白黒で表示しています。地図下の学校一覧や地図上の学校名を押すと、その学区が拡大します。国土交通省の2023年度データによる参考図です。
-            </p>
-            <div className="mt-4">
-              <GakkuMapEmbed />
-            </div>
-          </section>
-        )}
+        {/* 学区参考図（4ロケール）。地図内の文言は ?lang= で切り替え、校名・所在地は日本語のまま
+            （「校名沿用官方日文名稱」と同じ方針）。2026-09-23 までは ja のみだった。 */}
+        <section
+          aria-labelledby="gakku-map-heading"
+          className="mt-10 rounded-xl border border-border bg-surface-dim p-4 sm:p-6"
+        >
+          <h2 id="gakku-map-heading" className="font-serif text-xl font-semibold text-ink">
+            {MAP_COPY[locale].heading}
+          </h2>
+          <p className="mt-3 text-sm leading-relaxed text-text">{MAP_COPY[locale].lead}</p>
+          <div className="mt-4">
+            <GakkuMapEmbed locale={locale} title={MAP_COPY[locale].frameTitle} />
+          </div>
+        </section>
 
         <h2 className="mt-10 font-serif text-xl font-semibold text-ink">{c.hub.nicknameH2}</h2>
         <p className="mt-4 leading-relaxed text-text">{c.hub.nickname}</p>
