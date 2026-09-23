@@ -20,7 +20,6 @@
 // FAQPage JSON-LD＝ja は faqJa（B-3の空き家分野5問）を参照（文字列コピー禁止＝表記ゆれ防止）。
 //   zh-tw/zh の FAQ 文言は faqJa の対象外（faqJa.ts 冒頭の方針どおり）＝本ファイルの COPY 側に持つ。
 //   inLanguage は BCP47_BY_LOCALE（hreflang と同一マッピング）を渡す。
-// ヒーロー画像＝akiya専用画像が未制作のため realestate-group-home-16x9.webp（住宅街の一戸建て）を再利用。
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import type { LangCode } from "@/config/languages";
@@ -734,7 +733,7 @@ export default async function Page() {
         { name: c.crumbs.current },
       ]}
       serviceName={c.serviceName}
-      heroSrc="/hero/realestate-group-home-16x9.webp"
+      heroSrc="/hero/realestate-akiya-16x9.webp"
       heroAlt={c.heroAlt}
       h1={c.h1}
       ctaIntent="akiya"

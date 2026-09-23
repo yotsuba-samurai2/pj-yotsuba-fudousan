@@ -88,7 +88,7 @@ export default async function Page() {
         { name: "指定申請と物件" },
       ]}
       serviceName="グループホーム等の指定申請を見据えた物件の紹介・仲介"
-      heroSrc="/hero/realestate-group-home-16x9.webp"
+      heroSrc="/hero/legal-shitei-shinsei-16x9.webp"
       heroAlt="グループホームに使える物件のイメージ（住宅街の一軒家）"
       h1="障害福祉サービスの指定申請と物件の関係"
       ctaVariant="property-gh"

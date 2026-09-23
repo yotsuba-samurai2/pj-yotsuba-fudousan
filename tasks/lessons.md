@@ -296,3 +296,4 @@
 
 - 本番は Vercel（ビルドは iad1）。`apphosting.yaml` があるからといって Firebase と判断しない。配信先は Vercel の Deployments 画面で確かめる。
 - ビルドは米国東部、DB は東京。`generateStaticParams` でDBの記事を全件事前生成すると、1ページごとに太平洋を往復してビルドが約30分になる。DB由来の詳細ページは `return []`（オンデマンド生成＋ISR）にする（#408 で 30分→3分10秒）。
+
