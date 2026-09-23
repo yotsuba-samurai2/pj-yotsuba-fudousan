@@ -190,6 +190,9 @@ export default async function Page() {
           { href: "/souzoku/akiya", label: "相続した空き家｜管理・活用・売却" },
           { href: "/souzoku", label: "文京区で不動産を相続したら｜完全ガイド" },
           { href: "/souzoku/nagare", label: "売却までの流れ" },
+          // 2026-09-23：売りにくい土地・建物の出口相談（/wakeari 配下・ja先行公開）。指示書 v2.0 7-1。
+          { href: "/wakeari/saikenchiku-fuka", label: "再建築不可の空き家の出口" },
+          { href: "/wakeari/kyosho", label: "狭小地・旗竿地の出口" },
           { href: "/kaigai-owner", label: "海外に住んだまま日本の家を持つ" },
           { href: "/access", label: "アクセス・ご相談" },
           { href: "/contact", label: "お問い合わせ" },

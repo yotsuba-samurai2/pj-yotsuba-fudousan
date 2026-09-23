@@ -10,6 +10,7 @@ import {
   type ColumnArticleHeroIllustration,
 } from "@/components/column/ColumnArticleHero";
 import { RelatedColumnsSection } from "@/components/column/RelatedColumnsSection";
+import { WakeariColumnHubLink } from "@/components/wakeari/WakeariColumnHubLink";
 import type { Column, ColumnSummary } from "@/lib/column-shared";
 
 type Props = {
@@ -18,6 +19,8 @@ type Props = {
   next: ColumnSummary | null;
   related: ColumnSummary[];
   illustration: ColumnArticleHeroIllustration;
+  /** 2026-09-23：受け皿（/wakeari 配下）へ送る対象の slug。未指定・対応表に無い slug は何も出ない（ja のみ渡す） */
+  wakeariHubSlug?: string;
 };
 
 const RELATED_HEADING: Record<string, string> = {
@@ -27,7 +30,7 @@ const RELATED_HEADING: Record<string, string> = {
   zh: "相关文章",
 };
 
-export default function ColumnDetailContent({ col, prev, next, related, illustration }: Props) {
+export default function ColumnDetailContent({ col, prev, next, related, illustration, wakeariHubSlug }: Props) {
   const { t, locale } = useTranslation();
 
   return (
@@ -108,6 +111,9 @@ export default function ColumnDetailContent({ col, prev, next, related, illustra
           </div>
         </div>
       </section>
+
+      {/* ─── この記事に関係する相談窓口（2026-09-23・受け皿への1本。対応表に無い slug は何も出ない） ─── */}
+      {wakeariHubSlug && <WakeariColumnHubLink slug={wakeariHubSlug} />}
 
       {/* ─── 関連記事 ─── */}
       <RelatedColumnsSection

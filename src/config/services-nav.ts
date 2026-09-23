@@ -60,6 +60,9 @@ export const SERVICE_NAV_CATEGORIES: ServiceNavCategory[] = [
         label: { ja: "台湾の相続人向けガイド", "zh-tw": "給台灣繼承人的指南" },
         locales: ["ja", "zh-tw"],
       },
+      // 2026-09-23：売りにくい土地・建物の出口相談（/wakeari・ja先行公開）。「相続した不動産」の隣に置く（指示書 v2.0 7-1）。
+      // 主語は所有者一般（相続以外も対象）だが、入口としては相続不動産のカテゴリに同居させる。
+      { href: "/wakeari", label: { ja: "売りにくい土地・建物（再建築不可・共有・借地）" }, locales: ["ja"] },
     ],
   },
   // ② グループホーム開設（/group-home を唯一の入口にする＝設計書で固定。/toushi/group-home は含めない）

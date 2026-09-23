@@ -100,6 +100,8 @@ const FOOTER_NAV_HREFS: Record<
           labels: { ja: "空き家の売却・活用", "zh-tw": "空屋的出售・活用", zh: "空置房屋的出售・活用" },
           locales: ["ja", "zh-tw", "zh"],
         },
+        // 2026-09-23：売りにくい土地・建物の出口相談（/wakeari・ja先行公開）。「相続した不動産」の隣（指示書 v2.0 7-1）。services-nav.ts と同じ locales。
+        { href: "/wakeari", key: "wakeari", labels: { ja: "売りにくい土地・建物" }, locales: ["ja"] },
         { href: "/group-home", key: "groupHome", labels: { ja: "グループホーム開設ガイド", en: "Group home opening guide", "zh-tw": "團體家屋開設指南", zh: "团体家屋开设指南" } },
       ],
     },

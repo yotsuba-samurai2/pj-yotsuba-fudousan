@@ -122,6 +122,9 @@ const COPY: Partial<Record<LangCode, Copy>> = {
       // 2026-09-05 月次点検（NEW-SALE-1）：契約後の手続・書類・費用の時期は /nagare（ja先行・上の /souzoku/nagare とは役割が別）。
       { href: "/nagare", label: "ご依頼から引渡しまでの流れ（書類・費用の時期）" },
       { href: "/toushi/group-home", label: "グループホームに使える物件探し" },
+      // 2026-09-23：売りにくい土地・建物の出口相談（/wakeari 配下・ja先行公開）。ja本文のみ追加（指示書 v2.0 7-1）。
+      { href: "/wakeari/saikenchiku-fuka", label: "再建築不可の空き家の出口" },
+      { href: "/wakeari/kyosho", label: "狭小地・旗竿地の出口" },
       { href: "/global/chinese", label: "華人・中国語圏のお客様へ" },
       { href: "/ryokin", label: "料金のご案内" },
       { href: "/contact", label: "お問い合わせ" },

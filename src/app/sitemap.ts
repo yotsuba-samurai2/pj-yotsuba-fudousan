@@ -11,6 +11,7 @@ import { canonicalUrl } from "@/lib/seo";
 import type { ColumnIndexEntry } from "@/lib/columns";
 import { getAllPublishedPropertiesAllLocales } from "@/lib/properties";
 import { isListable, type PublicProperty } from "@/lib/property-shared";
+import { WAKEARI_LAST_UPDATED_ISO } from "@/lib/wakeari";
 
 export const revalidate = 300;
 
@@ -25,6 +26,12 @@ type StaticPage = {
   priority: number;
   /** このページが実在するロケール（未指定＝全4ロケール）。ja先行公開ページはjaのみ出す＝存在しないロケールURLを広告しない */
   locales?: readonly (typeof ALL_LOCALES)[number][];
+  /**
+   * 実更新日を持つ固定ページだけが持つ lastmod（ISO 日付）。未指定＝出力しない（下の expandStatic の注記どおり）。
+   * 2026-09-23 /wakeari 配下で追加：ページが可視の「最終更新」と ArticleJsonLd の dateModified を同じ定数で持つため、
+   * 生成時刻ではなく実更新日を出せる。
+   */
+  lastModified?: string;
 };
 
 /**
@@ -58,6 +65,7 @@ function expandStatic(
   const alternates = alternatesFor(businessKey, page.path, locales);
   return locales.map((loc) => ({
     url: canonicalUrl(businessKey, page.path, loc),
+    ...(page.lastModified ? { lastModified: page.lastModified } : {}),
     changeFrequency: page.changeFrequency,
     priority: page.priority,
     alternates,
@@ -130,6 +138,13 @@ const STATIC_REALESTATE: StaticPage[] = [
     priority: 0.7,
     locales: ["ja", "en", "zh-tw", "zh"],
   },
+  // 2026-09-23：売りにくい土地・建物の出口相談（ハブ＋種類別4枚）。ja先行公開＝ページ側 availableLocales:["ja"] と一致。
+  // lastmod＝ページの可視「最終更新」・ArticleJsonLd の dateModified と同じ定数（実更新日）。
+  { path: "/wakeari", changeFrequency: "monthly", priority: 0.8, locales: ["ja"], lastModified: WAKEARI_LAST_UPDATED_ISO },
+  { path: "/wakeari/saikenchiku-fuka", changeFrequency: "monthly", priority: 0.7, locales: ["ja"], lastModified: WAKEARI_LAST_UPDATED_ISO },
+  { path: "/wakeari/kyoyu", changeFrequency: "monthly", priority: 0.7, locales: ["ja"], lastModified: WAKEARI_LAST_UPDATED_ISO },
+  { path: "/wakeari/shakuchi-sokochi", changeFrequency: "monthly", priority: 0.7, locales: ["ja"], lastModified: WAKEARI_LAST_UPDATED_ISO },
+  { path: "/wakeari/kyosho", changeFrequency: "monthly", priority: 0.7, locales: ["ja"], lastModified: WAKEARI_LAST_UPDATED_ISO },
   // 2026-07-22：グループホーム開設ピラー（#4/#5 最優先KPI）。物件＋指定申請の分離受任ハブ。手本＝souzoku（priority 0.9）。
   { path: "/group-home", changeFrequency: "monthly", priority: 0.9 },
   // 2026-07-22：シナジー領域ピラー（#11 飲食店開業・#15 会社設立×オフィス）。ja先行公開（/toushi/shitei-shinseiと同方式）。

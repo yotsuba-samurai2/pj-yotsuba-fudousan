@@ -178,6 +178,13 @@ const JA: RyokinCopy = {
           <p className="mt-3 text-sm leading-relaxed text-text-muted">
             ※買取のご提案額は、物件の状態・立地・時期により幅があるため、査定のうえ個別にご提示します。賃貸管理の料率は、管理の範囲（集金・入居者対応・原状回復の手配など）により決まります。
           </p>
+          {/* 2026-09-23：媒介と買取の違いの1行（ja のみ）。売りにくい土地・建物の出口相談（/wakeari・ja先行公開）へ送る（指示書 v2.0 7-1） */}
+          <p className="mt-2 text-sm leading-relaxed text-text-muted">
+            <Link href="/wakeari" className="text-primary underline">
+              買取をご希望の場合の建て付け（提携する買取業者を買主とする媒介）
+            </Link>
+            は、売りにくい土地・建物の出口相談のページで媒介との違いを表にしています。
+          </p>
         </>
       ),
     },

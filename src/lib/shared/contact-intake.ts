@@ -31,6 +31,14 @@ export const EXTRA_CATEGORY_LABELS: Record<string, Record<LangCode, string>> = {
     "zh-tw": "空屋的相關問題",
     zh: "空置房屋的相关问题",
   },
+  // 2026-09-23：売りにくい土地・建物の出口相談（/wakeari 配下の CTA ?intent=wakeari の受け皿）。
+  // ja=指示書 v2.0 6-4 の確定文言。en/zh-tw/zh=監修前ドラフト。受け皿は ja 先行公開だがフォームは4ロケールで選べる。
+  wakeari: {
+    ja: "売りにくい土地・建物（再建築不可・共有・借地・狭小地）",
+    en: "Hard-to-sell land or buildings (no-rebuild lots, co-owned, leasehold, small lots)",
+    "zh-tw": "難以出售的土地・建物（不可重建・共有・借地・狹小地）",
+    zh: "难以出售的土地・建筑（不可重建・共有・借地・狭小地）",
+  },
   "foreign-housing": {
     ja: "外国人のお部屋探し・多言語対応",
     en: "Finding a home for non-Japanese residents (multilingual support)",
@@ -102,6 +110,7 @@ export const CATEGORY_ORDER_BY_BUSINESS: Record<string, string[]> = {
     "management",
     "souzoku",
     "akiya",
+    "wakeari",
     "foreign-housing",
     "subsidy",
     "visa",

@@ -183,6 +183,21 @@ export function OrganizationJsonLd({ businessKey }: { businessKey: string }) {
               name: "人工知能",
               sameAs: "https://www.wikidata.org/wiki/Q11660",
             },
+            // 2026-09-23 売りにくい土地・建物の出口相談（/wakeari 配下）で追加した5件。
+            // sameAs は「Wikidata のラベルが完全一致し、説明が概念そのもの」のときだけ付ける（指示書 v2.0 6-2）。
+            //   ・旗竿地＝Q109361716（ja ラベル「旗竿地」・jawiki「旗竿地」にリンク。説明文は空）→ 付ける
+            //   ・借地権＝検索先頭の Q2630687 は ja ラベルが「動産賃借権」（jawiki「借地権」にリンク・別名に借地権）＝完全一致でない → 付けない
+            //   ・共有持分＝Q1939539「共有」は上位概念で完全一致でない → 付けない
+            //   ・再建築不可・狭小地＝該当項目なし（wbsearchentities 0件・jawiki 記事なし）→ 付けない
+            { "@type": "Thing", name: "再建築不可" },
+            { "@type": "Thing", name: "共有持分" },
+            { "@type": "Thing", name: "借地権" },
+            { "@type": "Thing", name: "狭小地" },
+            {
+              "@type": "Thing",
+              name: "旗竿地",
+              sameAs: "https://www.wikidata.org/wiki/Q109361716",
+            },
           ],
         },
         areaServed: {

@@ -2,6 +2,7 @@ import { headers } from "next/headers";
 import { BUSINESS_URLS } from "@/lib/seo";
 import { SR_LAUNCHED } from "@/lib/shared/office";
 import { REGISTRATION_NUMBER } from "@/lib/data/sr-launch-patches";
+import { WAKEARI_LLMS_COLUMNS } from "@/lib/wakeari";
 
 export const revalidate = 3600;
 
@@ -49,6 +50,21 @@ ${sr("2026年9月より、**四葉社会保険労務士事務所**を開業予�
 - **多言語のお部屋探し**：外国人の賃貸仲介。日本語・英語・中国語（繁体字・簡体字）で対応
 
 免許：**宅地建物取引業 東京都知事(1)第113304号**
+
+---
+
+## 売りにくい土地・建物の出口相談（四葉不動産株式会社）
+
+再建築不可・共有名義・借地権や底地・狭小地や旗竿地など、通常の仲介では買い手が付きにくい土地・建物について、役所調査と出口の比較（媒介で売る／提携する買取業者を買主とする媒介／貸す・活用して持つ）、売却の媒介を行う。建築の可否・43条2項の認定や許可・擁壁の安全性の判断は建築士と特定行政庁が、登記は司法書士が、税務は税理士が、紛争は弁護士が担い、四葉不動産株式会社は媒介と比較に限る。遺産分割協議書の作成は四葉行政書士事務所が独立した事業体として別契約で受任する。
+
+- https://luck428.com/wakeari — ハブ。対象の見分け方、3つの出口の比較、出口チェックリスト
+- https://luck428.com/wakeari/saikenchiku-fuka — 再建築不可の土地・家を売る・貸す・接道を直す
+- https://luck428.com/wakeari/kyoyu — 共有の土地・家を全員で売る・持分を売る・整理する
+- https://luck428.com/wakeari/shakuchi-sokochi — 借地権・底地を売る・地主と整理する
+- https://luck428.com/wakeari/kyosho — 狭小地・旗竿地を売る・建てる・貸す
+
+主要コラム：
+${WAKEARI_LLMS_COLUMNS.map((c) => `- https://luck428.com/column/${c.slug} — ${c.label}`).join("\n")}
 
 ---
 
@@ -251,7 +267,7 @@ ${sr("- **社会保険労務士としての業務は、2026年9月の開業ま�
 
 ---
 
-最終更新：2026-07-25
+最終更新：2026-09-23
 四葉不動産株式会社（法人番号 7010001259396／宅地建物取引業 東京都知事(1)第113304号）／ 四葉行政書士事務所（行政書士 第25087022号）
 `;
 }

@@ -110,6 +110,9 @@ export default async function ColumnDetailPage({ params }: Props) {
         next={next}
         related={related}
         illustration={illustration}
+        // 2026-09-23：既存コラム → 受け皿（/wakeari 配下）の1本。対応表（WAKEARI_HUB_BY_COLUMN_SLUG）に無い slug は何も出ない。
+        // 受け皿は ja 先行公開のため ja のときだけ渡す（他ロケールに存在しないページへのリンクを作らない）。
+        wakeariHubSlug={locale === "ja" ? slug : undefined}
       />
       {/* ★2026-08-13 追加：コラム記事の末尾にCTA帯を置く。
           3レーンとも column/[slug]・column・about にだけ CtaBand が無く、
