@@ -661,10 +661,10 @@ sitemap の `locales` もページの `availableLocales` と同時に4言語へ�
 - [x] 原稿 ja 8本：scripts/realestate-columns/77〜84（各 5,600〜6,800字。結論→疑問文H2→表→誰に相談→FAQ4→出典→※3行→署名）
 - [x] ARTICLES に8エントリ（publishedAt 2026-09-24・category「売りにくい土地・建物」・hubLinks＝/wakeari 配下）
 - [x] src/lib/wakeari.ts の対応表に8 slug（投入前は DB に無いので表示されない＝404 リンクなし）
-- [ ] zh-tw 翻訳 8本（frontmatter・絶対URL・四葉不動產株式會社）
-- [ ] npx tsx scripts/seed-realestate-columns-daily.ts → OK: 全チェック通過 → --emit-ts
-- [ ] tsc／eslint／vitest（wakeari-pages.test.ts は emit 後の seed で8 slug を検査）
-- [ ] draft PR。マージ・管理画面投入（/admin/columns/seed-realestate-daily）・GSC は浦松
+- [x] zh-tw 翻訳 8本（frontmatter・絶対URL・四葉不動產株式會社。4サブエージェントで並行作成→構造一致を機械確認・調查士に統一）
+- [x] npx tsx scripts/seed-realestate-columns-daily.ts → NG 0（新規8本に注記なし。既存2記事の WARN 6件のみ）→ --emit-ts（73本）
+- [x] tsc 0／eslint 0／vitest 94ファイル・1,389件（wakeari-pages.test.ts の対応表 19→27）
+- [x] draft PR #423 https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/pull/423 。マージ・管理画面投入（/admin/columns/seed-realestate-daily）・GSC は浦松
 
 ## 2026-09-24 グループホーム向け物件・大家募集ページ（/group-home/ooya）Phase 1
 

@@ -17,9 +17,10 @@
 着手前の既存確認：本番 sitemap（449URL・ja）に上の8テーマを扱う記事なし（2026-09-24）。
 
 ## 変更ファイル
-- 新規 `scripts/realestate-columns/77〜84-*.md`（ja）／`scripts/realestate-columns/zh-tw/77〜84-*.md`
+- 新規 `scripts/realestate-columns/77〜84-*.md`（ja）／`scripts/realestate-columns/zh-tw/77〜84-*.md`（zh-tw）
 - `scripts/seed-realestate-columns-daily.ts` — ARTICLES に8エントリ追記（枝番スクリプト・管理画面は増やさない）
 - `src/lib/data/realestate-columns-daily-seed.ts` — `--emit-ts` の生成物（**忘れると管理画面に並ばない**）
+- `src/lib/__tests__/wakeari-pages.test.ts` — 対応表の期待値 19→27
 - `src/lib/wakeari.ts` — 受け皿ごとの関連コラム対応表に8 slug（投入前は DB に無いため表示されず、404 リンクは出ない）
 - `docs/wakeari/01_konkyo.md`（Phase 2 の法令一次確認表を追記）／`91_pr-body-phase2.md`（本文）／`tasks/todo.md`
 
@@ -30,7 +31,15 @@
 `docs/wakeari/01_konkyo.md` の「Phase 2 追加」参照。**Phase 1 で未検証だった 2025-04-01 施行の建築基準法改正の法律番号は、e-Gov 法令API v2 の改正履歴で「令和4年法律第69号」と確定。** 新たに確認：建築基準法2条13〜15号・6条1項2項（**改正前の条文も API v2 の `asof=2025-03-31` で取得し、木造2階建て住宅が旧第4号＝大規模修繕は確認の対象外だったことを原文で確認**）・6条の4・19条4項・44条1項、施行規則10条の3、民法25・30・209・252・262条の2・262条の3・264条の2・264条の3、不動産登記法41条、借地借家法38条、宅建業法35条1項2号、盛土規制法（令和4年法律第55号・2023-05-26 施行）、文京区の規制区域指定（2024-07-31・区全域）、東京都例規集の条例本文 URL。
 
 ## 検証
-（検証後に記入）
+- `npx tsx scripts/seed-realestate-columns-daily.ts`：73本・**NG 0**。新規8本には NG/WARN なし（WARN 6件は既存2記事のブランド表記＝本 PR の対象外）。sitemap 由来の許可リスト 115件で内部リンクの実在を確認
+- `npx tsx scripts/seed-realestate-columns-daily.ts --emit-ts`：`src/lib/data/realestate-columns-daily-seed.ts` を再生成（73本・8 slug を確認）
+- `npx tsc --noEmit`：エラー 0
+- `npx eslint`（seed 生成物・スクリプト・wakeari.ts・テスト）：エラー 0
+- `npx vitest run`：94ファイル・1,389件通過（`wakeari-pages.test.ts` の対応表の期待値を19→27に更新）
+- 禁止語 grep（ja 8本＋zh-tw 8本・企画書§8＋seed の FORBIDDEN_WORDS＋zh-tw 相当語）：0件／「当社が買主」：0件／必須語（独立した事業体・別々にご契約・紹介料・一般的な情報提供）：8本すべて有
+- zh-tw：frontmatter・絶対URL（相対 `](/` 0件）・`四葉不動產株式會社` あり・H2 数／FAQ 数／表の行数が ja と全8本で一致。表記ゆれ「土地家屋調査士／調查士」は既存コーパス（16ファイル）に合わせて「調查士」に統一
+- 本文の文字数：ja 5,600〜6,800字、zh-tw 5,100〜6,100字（各記事 FAQ 4問）
+- 描画確認：投入前は DB に無いため未実施。投入後に `/column/<slug>`（ja・zh-tw）の 200 と受け皿ブロック、受け皿5枚の関連コラム欄に並ぶことを確認する
 
 ## 未検証事項
 - 施行令第144条の4第1項各号の本文（記事では条番号の引用にとどめた）
