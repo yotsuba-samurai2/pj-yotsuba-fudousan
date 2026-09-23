@@ -3,7 +3,7 @@ title: "Warehouse-business registration: what property requirements must you mee
 excerpt: "To run a commercial warehouse that stores others' goods for a fee, you need registration under Article 3 of the Warehouse Business Act. Whether you qualify turns on whether the property meets the facility standards for the type of warehouse, and you must appoint a warehouse management supervisor. This article organises registration, the facility standards, the supervisor and the division of roles."
 category: "Permits and Licensing (From the Practice of an Administrative Scrivener)"
 ---
-**In short:** to run a "commercial warehouse" that stores another party's goods for a fee as a business, you need registration by the Minister of Land, Infrastructure, Transport and Tourism under Article 3 of the Warehouse Business Act (Act No. 121 of 1956; hereafter the "Warehouse Business Act"). Whether you can register turns on whether the target property meets the facility standards set for each type of warehouse (Class 1, 2 and 3, open-yard, storage-tank, dangerous-goods, refrigerated, water-surface and trunk-room), according to the goods you store. These standards rest on Article 6, paragraph 1, item 4 of the Warehouse Business Act, with the details placed in Article 3-4 of the Regulation for Enforcement of the Warehouse Business Act. You must also appoint a warehouse management supervisor for each warehouse (Article 7). This article is general information organising whether registration is required, the facility standards, the supervisor and the division of roles; it does not judge whether any individual property meets the registration standards.
+**In short:** to run a "commercial warehouse" that stores another party's goods for a fee as a business, you need registration by the Minister of Land, Infrastructure, Transport and Tourism under Article 3 of the Warehouse Business Act (Act No. 121 of 1956; hereafter the "Warehouse Business Act"). Whether you can register turns on whether the target property meets the facility standards set for each type of warehouse (Class 1, 2 and 3, open-yard, storage-tank, dangerous-goods, refrigerated, water-surface and trunk-room), according to the goods you store. These standards rest on Article 6, paragraph 1, item 4 of the Warehouse Business Act, with the details placed in Article 3-4 of the Regulation for Enforcement of the Warehouse Business Act. You must also appoint a warehouse management supervisor for each warehouse (Article 11). This article is general information organising whether registration is required, the facility standards, the supervisor and the division of roles; it does not judge whether any individual property meets the registration standards.
 
 ## When does storage require warehouse-business registration?
 
@@ -34,7 +34,7 @@ Thus, even in the same building, the type and standards required change with "wh
 
 ## Who can be appointed as the warehouse management supervisor?
 
-Under Article 7 of the Warehouse Business Act, a warehouse operator must appoint a warehouse management supervisor for each warehouse and have the warehouse management conducted properly. Who can be appointed is set by the requirements in Article 9 of the Regulation for Enforcement of the Warehouse Business Act.
+Under Article 11 of the Warehouse Business Act, a warehouse operator must appoint a warehouse management supervisor for each warehouse and have the warehouse management conducted properly. Who can be appointed is set by the requirements in Article 9 of the Regulation for Enforcement of the Warehouse Business Act.
 
 | Eligible person (any one) | Content |
 | --- | --- |
@@ -74,7 +74,7 @@ A. Anyone who meets the requirements of Article 9 of the Enforcement Regulation 
 
 ## Sources (Primary Information)
 
-- e-Gov Law Search, "Warehouse Business Act" (Act No. 121 of 1956), Article 3 (registration), Article 4 (application for registration), Article 6, paragraph 1, item 4 (conformity with the facility standards), Article 7 (warehouse management supervisor) (accessed 2026-09-22)
+- e-Gov Law Search, "Warehouse Business Act" (Act No. 121 of 1956), Article 3 (registration), Article 4 (application for registration), Article 6, paragraph 1, item 4 (conformity with the facility standards), Article 11 (warehouse management supervisor) (accessed 2026-09-22)
 - e-Gov Law Search, "Regulation for Enforcement of the Warehouse Business Act" (Ministry of Transport Ordinance No. 59 of 1956), Articles 3-3 to 3-11 and the appended table (types of goods and warehouses that may store them), Article 3-4 (details of the facility standards), Article 9 (requirements for the warehouse management supervisor) (accessed 2026-09-22)
 - Ministry of Land, Infrastructure, Transport and Tourism, "Warehouse Business Act" (overview of the registration system, types of warehouse and the warehouse management supervisor) (accessed 2026-09-22)
 - Ministry of Land, Infrastructure, Transport and Tourism, "Facility standards for commercial warehouses (Article 6, paragraph 1, item 4 of the Warehouse Business Act)" (list of standard items by type of warehouse) (accessed 2026-09-22)
