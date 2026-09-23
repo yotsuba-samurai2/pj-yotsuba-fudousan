@@ -20,7 +20,7 @@ export const PROPERTY_MEMBERSHIP_LINES = [
   "首都圏不動産公正取引協議会 加盟",
 ] as const;
 
-export function PropertyLegalBlock({ property, locale = "ja" }: { property: PublicProperty; locale?: LangCode }) {
+export function PropertyLegalBlock({ property, locale = "ja" }: { property: Pick<PublicProperty, "publishedAt" | "infoUpdatedAt" | "nextUpdateAt">; locale?: LangCode }) {
   const ui = propertyUi(locale);
   const L = ui.legal;
   const biz = BUSINESS_SEO.realestate;

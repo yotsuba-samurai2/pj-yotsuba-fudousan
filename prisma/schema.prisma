@@ -159,3 +159,13 @@ model AiSetting {
 
   @@map("ai_settings")
 }
+
+// 軽量な学区別募集一覧。AD・出典はサーバー内に保持し、公開時に明示的に射影する。
+model SchoolRentalFeed {
+  provider  String   @id
+  payload   Json
+  checkedAt DateTime @map("checked_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("school_rental_feeds")
+}
