@@ -6,6 +6,7 @@ import { languages, type LangCode } from "@/config/languages";
 import { GAKKU_COPY } from "@/lib/gakku";
 import { buildGakkuHubJsonLd } from "@/lib/gakku-jsonld";
 import { DISTRICT_SOURCE, listSchools } from "@/lib/school-district";
+import { ENROLLMENT, ENROLLMENT_SOURCE, enrollmentChange } from "@/lib/data/bunkyo-enrollment";
 
 const LOCALES: LangCode[] = languages.map((l) => l.code);
 const PAGE = fs.readFileSync(path.join(process.cwd(), "src/app/[locale]/(realestate)/gakku/page.tsx"), "utf8");
@@ -15,8 +16,8 @@ const graph = (locale: LangCode) => buildGakkuHubJsonLd(locale)["@graph"] as Nod
 const byType = (locale: LangCode, type: string) => graph(locale).find((n) => n["@type"] === type)!;
 
 describe("学区ハブのファーストビュー", () => {
-  it("H1 → 一文 → 数字 → 地図 の順で、説明文より前に地図を置く", () => {
-    const order = ["{c.hub.h1}", "{c.hub.hook}", "c.hub.stats.schools", "<GakkuMapEmbed", "{c.hub.answer}"].map((s) => PAGE.indexOf(s));
+  it("H1 → 一文 → 児童数 → 地図 の順で、説明文より前に地図を置く", () => {
+    const order = ["{c.hub.h1}", "{c.hub.hook}", "c.hub.enrollment.caption", "<GakkuMapEmbed", "{c.hub.answer}"].map((s) => PAGE.indexOf(s));
     for (const i of order) expect(i).toBeGreaterThan(-1);
     expect([...order].sort((a, b) => a - b)).toEqual(order);
   });
@@ -29,9 +30,9 @@ describe("学区ハブのファーストビュー", () => {
 });
 
 describe("学区ハブの構造化データ", () => {
-  it.each(LOCALES)("%s: CollectionPage・ItemList・Dataset・Map を1つの @graph で出す", (locale) => {
+  it.each(LOCALES)("%s: CollectionPage・ItemList・Dataset×2・Map を1つの @graph で出す", (locale) => {
     const types = graph(locale).map((n) => n["@type"]);
-    expect(types).toEqual(["CollectionPage", "ItemList", "Dataset", "Map"]);
+    expect(types).toEqual(["CollectionPage", "ItemList", "Dataset", "Dataset", "Map"]);
     const page = byType(locale, "CollectionPage");
     expect(page.name).toBe(GAKKU_COPY[locale].hub.h1);
     expect(page.mainEntity).toEqual({ "@id": `${page.url}#schools` });
@@ -53,6 +54,14 @@ describe("学区ハブの構造化データ", () => {
     expect(ds.dateModified).toBe(DISTRICT_SOURCE.updatedAt);
     expect(String(ds.description)).toContain(String(DISTRICT_SOURCE.rowCount));
   });
+  it("児童数の Dataset は区の公表PDFの数値（2021→2026）を出典つきで示す", () => {
+    const ds = graph("ja").find((n) => n["@id"] === "https://luck428.com/gakku#enrollment")!;
+    expect(ds.isBasedOn).toBe(ENROLLMENT_SOURCE.url);
+    expect(ds.temporalCoverage).toBe("2021/2026");
+    for (const [slug, e] of Object.entries(ENROLLMENT)) {
+      expect(String(ds.description), slug).toContain(`${e[2021]}人（2021年5月1日）→${e[2026]}人（2026年5月1日）`);
+    }
+  });
   it("Map は国土数値情報を出典に CC BY 4.0 を明示する", () => {
     const map = byType("ja", "Map");
     expect(map.license).toBe("https://creativecommons.org/licenses/by/4.0/");
@@ -65,5 +74,27 @@ describe("学区ハブの構造化データ", () => {
   });
   it("ページが構造化データを出力する", () => {
     expect(PAGE).toContain("<JsonLd data={buildGakkuHubJsonLd(locale)} />");
+  });
+});
+
+describe("4校の児童数（区の公表PDFから転記）", () => {
+  it("令和3年度・令和8年度の値（5月1日現在）", () => {
+    expect(ENROLLMENT).toEqual({
+      seishi: { 2021: 766, 2026: 941 },
+      showa: { 2021: 766, 2026: 792 },
+      sendagi: { 2021: 788, 2026: 773 },
+      kubomachi: { 2021: 886, 2026: 994 },
+    });
+  });
+  it("増減と増減率（小数1桁）を計算する。減少も減少として出す", () => {
+    expect(enrollmentChange("seishi")).toEqual({ latest: 941, base: 766, diff: 175, rate: 22.8 });
+    expect(enrollmentChange("kubomachi")).toEqual({ latest: 994, base: 886, diff: 108, rate: 12.2 });
+    expect(enrollmentChange("showa")).toEqual({ latest: 792, base: 766, diff: 26, rate: 3.4 });
+    expect(enrollmentChange("sendagi")).toEqual({ latest: 773, base: 788, diff: -15, rate: -1.9 });
+    expect(enrollmentChange("rekisen")).toBeUndefined();
+  });
+  it("ページは4校の帯と出典リンクを出す", () => {
+    expect(PAGE).toContain("enrollmentChange(school.slug)");
+    expect(PAGE).toContain("href={ENROLLMENT_SOURCE.url}");
   });
 });
