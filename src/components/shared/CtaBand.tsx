@@ -89,6 +89,11 @@ type Props = {
    * variant と併用した場合は本propが優先する（本文テンプレの挿入は variant 側のまま活かす）。
    */
   intent?: string;
+  /**
+   * お問い合わせボタンの遷移先の上書き（2026-09-24・大家募集ページ）。同一ページ内の専用フォーム（"#form"）へ
+   * 向けるために使う。そのまま渡す（接頭辞・?intent= を付与しない）。省略時は従来どおり /contact?intent=。
+   */
+  contactHref?: string;
 };
 
 export async function CtaBand({
@@ -97,6 +102,7 @@ export async function CtaBand({
   subtext,
   variant,
   intent: intentProp,
+  contactHref: contactHrefProp,
 }: Props) {
   const locale = await getRequestLocale();
   const t = TENANT[businessKey];
@@ -153,7 +159,8 @@ export async function CtaBand({
   const copyLabels = TEMPLATE_COPY_LABELS[locale] ?? TEMPLATE_COPY_LABELS.ja;
   const lead = subtext ?? vLead ?? c.ctaLead;
   // 内部リンク＝ここで1回だけ接頭辞付与（二重適用禁止）。intent時はフォームのプリセット用クエリを付与
-  const contactHref = addLocalePrefix(t.contactHref, locale) + (intent ? `?intent=${intent}` : "");
+  const contactHref =
+    contactHrefProp ?? addLocalePrefix(t.contactHref, locale) + (intent ? `?intent=${intent}` : "");
 
   return (
     <section aria-label={l.aria} className="my-6 rounded-2xl bg-primary-tint px-6 py-8 text-center">

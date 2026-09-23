@@ -37,6 +37,15 @@ export const EXTRA_CATEGORY_LABELS: Record<string, Record<LangCode, string>> = {
     "zh-tw": "外國人租屋・多語言對應",
     zh: "外国人租房・多语言对应",
   },
+  // 2026-09-24：グループホーム向け物件の大家募集ページ（/group-home/ooya）の受け皿。
+  // 貸す側（大家・空き家所有者）は bukken（探す側＝事業者）とも akiya（空き家一般）とも主語が違うため独立のキー。
+  // 専用フォーム（GhOwnerForm）は category にこのキーを固定で送り、/contact?intent=gh-owner でも選べる。
+  "gh-owner": {
+    ja: "グループホーム向けに物件を貸したい（大家・オーナー）",
+    en: "Renting out my property to a group home operator (for owners)",
+    "zh-tw": "希望將物件出租給團體家屋事業者（房東・業主）",
+    zh: "希望将房产出租给团体家屋经营者（房东・业主）",
+  },
   // ---- 四葉行政書士事務所（legal） ----
   "souzoku-legal": {
     ja: "相続・遺言・信託",
@@ -102,6 +111,7 @@ export const CATEGORY_ORDER_BY_BUSINESS: Record<string, string[]> = {
     "management",
     "souzoku",
     "akiya",
+    "gh-owner",
     "foreign-housing",
     "subsidy",
     "visa",

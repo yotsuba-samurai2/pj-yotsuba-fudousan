@@ -17,7 +17,7 @@ describe("contact category order", () => {
     expect(html).not.toMatch(/<option value="labor" selected/);
   });
   it("preserves other business and unknown-business choices", () => {
-    expect(CATEGORY_ORDER_BY_BUSINESS.realestate).toEqual(["bukken", "rental", "sale", "management", "souzoku", "akiya", "foreign-housing", "subsidy", "visa", "labor", "other"]);
+    expect(CATEGORY_ORDER_BY_BUSINESS.realestate).toEqual(["bukken", "rental", "sale", "management", "souzoku", "akiya", "gh-owner", "foreign-housing", "subsidy", "visa", "labor", "other"]);
     expect(CATEGORY_ORDER_BY_BUSINESS.legal).toEqual(["souzoku-legal", "oyanakiato", "shogai-fukushi", "gaikokujin-shain", "ikuseishuro-gaibu-kansa", "kikoku-funin", "kyoninka", "subsidy", "visa", "labor", "bukken", "other"]);
     expect(CATEGORY_ORDER_DEFAULT).toEqual(["bukken", "rental", "sale", "management", "subsidy", "visa", "labor", "other"]);
   });

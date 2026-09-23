@@ -27,6 +27,8 @@ const categoryLabels: Record<string, string> = {
   // 2026-07-27：相談カテゴリの拡充（表示ラベルの正本は src/lib/shared/contact-intake.ts）
   souzoku: "相続した不動産のこと（貸す・売る・活用する）",
   akiya: "空き家のこと",
+  // 2026-09-24：大家募集ページ（/group-home/ooya）の専用フォーム（物件項目は message に整形済み）
+  "gh-owner": "グループホーム向けに物件を貸したい（大家・オーナー）",
   "foreign-housing": "外国人のお部屋探し・多言語対応",
   "souzoku-legal": "相続・遺言・信託",
   oyanakiato: "親なき後の備え",
@@ -50,9 +52,19 @@ const sourceLabels: Record<string, string> = {
   other: "その他",
 };
 
+const EMAIL_MESSAGE = "有効なメールアドレスを入力してください";
+const emailField = z.string().email(EMAIL_MESSAGE);
+
+/**
+ * 2026-09-24：大家募集ページ（/group-home/ooya）の専用フォームは「メールまたは電話のどちらか必須」
+ * （指示書 v1.0 第6章 6-1＝入力のハードルを下げる）。この category のときだけ、電話があればメール未入力を許す。
+ * それ以外の category は従来どおりメール必須＝既存フォームの挙動は変えない。
+ */
+const EMAIL_OPTIONAL_CATEGORY = "gh-owner";
+
 const contactSchema = z.object({
   name: z.string().min(1, "お名前を入力してください"),
-  email: z.string().email("有効なメールアドレスを入力してください"),
+  email: z.string().optional().default(""),
   phone: z.string().optional().default(""),
   category: z.string().min(1, "ご相談内容を選択してください"),
   // 2026-07-27：流入元は任意（未選択でも送信できる）
@@ -60,6 +72,17 @@ const contactSchema = z.object({
   message: z.string().min(1, "お問い合わせ内容を入力してください"),
   business: z.string().optional().default("realestate"),
 }).superRefine((value, ctx) => {
+  if (value.email.trim()) {
+    if (!emailField.safeParse(value.email).success) {
+      ctx.addIssue({ code: "custom", path: ["email"], message: EMAIL_MESSAGE });
+    }
+  } else if (value.category === EMAIL_OPTIONAL_CATEGORY) {
+    if (!value.phone.trim()) {
+      ctx.addIssue({ code: "custom", path: ["email"], message: "メールアドレスまたは電話番号を入力してください" });
+    }
+  } else {
+    ctx.addIssue({ code: "custom", path: ["email"], message: EMAIL_MESSAGE });
+  }
   // 物件ページの内見CTAは、日程調整に必要な電話番号を必須にする。
   if (value.category === "rental" && !value.phone.trim()) {
     ctx.addIssue({ code: "custom", path: ["phone"], message: "電話番号を入力してください" });
@@ -116,7 +139,7 @@ function adminEmailHtml({
               </tr>
               <tr>
                 <td style="padding:10px 0;border-bottom:1px solid #e5e7eb;color:#6b7280;vertical-align:top;">メール</td>
-                <td style="padding:10px 0;border-bottom:1px solid #e5e7eb;"><a href="mailto:${escapeHtml(email)}" style="color:#16a34a;text-decoration:none;">${escapeHtml(email)}</a></td>
+                <td style="padding:10px 0;border-bottom:1px solid #e5e7eb;">${email ? `<a href="mailto:${escapeHtml(email)}" style="color:#16a34a;text-decoration:none;">${escapeHtml(email)}</a>` : '<span style="color:#9ca3af;">未入力（電話でご連絡ください）</span>'}</td>
               </tr>
               <tr>
                 <td style="padding:10px 0;border-bottom:1px solid #e5e7eb;color:#6b7280;vertical-align:top;">電話番号</td>
@@ -136,10 +159,10 @@ function adminEmailHtml({
               <p style="margin:0 0 8px;font-size:12px;color:#6b7280;font-weight:600;">メッセージ</p>
               <p style="margin:0;font-size:14px;color:#1f2937;line-height:1.7;">${escapeHtml(message)}</p>
             </div>
-            <!-- Reply button -->
-            <div style="margin-top:24px;text-align:center;">
+            <!-- Reply button（メール未入力＝電話のみの相談では出さない） -->
+            ${email ? `<div style="margin-top:24px;text-align:center;">
               <a href="mailto:${escapeHtml(email)}?subject=Re: お問い合わせありがとうございます" style="display:inline-block;background:#16a34a;color:#ffffff;padding:12px 32px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600;">返信する</a>
-            </div>
+            </div>` : ""}
           </td>
         </tr>
         <!-- Footer -->
@@ -264,12 +287,12 @@ export async function POST(req: NextRequest) {
     // 任意項目のため未選択があり得る。集計時に「未回答」を分母から外せるよう明示する。
     const sourceLabel = source ? (sourceLabels[source] ?? source) : "未回答";
 
-    // 管理者への通知メール
+    // 管理者への通知メール（メール未入力＝gh-owner の電話のみ相談では replyTo を付けない）
     await getResend().emails.send({
       from: `${businessLabel} <${FROM_EMAIL}>`,
       to: NOTIFY_TO,
       subject: `【お問い合わせ】${categoryLabel} - ${name}様`,
-      replyTo: email,
+      ...(email ? { replyTo: email } : {}),
       html: adminEmailHtml({
         name,
         email,
@@ -281,20 +304,22 @@ export async function POST(req: NextRequest) {
       }),
     });
 
-    // お客様への自動返信メール
-    await getResend().emails.send({
-      from: `${businessLabel} <${FROM_EMAIL}>`,
-      to: email,
-      subject: `【${businessLabel}】お問い合わせありがとうございます`,
-      html: autoReplyHtml({
-        name,
-        email,
-        phone,
-        categoryLabel,
-        message,
-        businessLabel,
-      }),
-    });
+    // お客様への自動返信メール（送信先が無ければ送らない）
+    if (email) {
+      await getResend().emails.send({
+        from: `${businessLabel} <${FROM_EMAIL}>`,
+        to: email,
+        subject: `【${businessLabel}】お問い合わせありがとうございます`,
+        html: autoReplyHtml({
+          name,
+          email,
+          phone,
+          categoryLabel,
+          message,
+          businessLabel,
+        }),
+      });
+    }
 
     return NextResponse.json({ ok: true });
   } catch (error) {
