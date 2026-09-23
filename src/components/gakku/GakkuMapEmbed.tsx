@@ -39,10 +39,12 @@ export default function GakkuMapEmbed() {
       if (event.data?.type !== "gakku-map-focus") return;
       const frame = ref.current;
       if (!frame) return;
-      window.scrollTo({
-        top: window.scrollY + frame.getBoundingClientRect().top - 96,
-        behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth",
-      });
+      // Wait for the opened detail/iframe height to settle before positioning.
+      // An instant parent scroll avoids racing the iframe's focus and map animation.
+      requestAnimationFrame(() => requestAnimationFrame(() => {
+        if (!frame.isConnected) return;
+        window.scrollTo({ top: window.scrollY + frame.getBoundingClientRect().top - 96, behavior: "instant" });
+      }));
     };
     window.addEventListener("message", focusMap);
     return () => window.removeEventListener("message", focusMap);
