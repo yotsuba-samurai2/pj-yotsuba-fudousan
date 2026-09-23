@@ -19,7 +19,11 @@ import type { PublicRentalSummary } from "@/lib/school-rental-feed";
 export function SchoolRentalIndex({ properties, locale, summaries = [] }: { properties: PublicProperty[]; locale: LangCode; summaries?: PublicRentalSummary[] }) {
   const c = SCHOOL_RENTAL_COPY[locale];
   const groups = groupSchoolRentals(properties, locale);
+  const indexUrl = canonicalUrl("realestate", SCHOOL_RENTAL_INDEX_PATH, locale);
+  // ハブは物件を直接並べず、20校の学区別ページを ItemList で示す（学区ページ強化 作業手順書 v1・PR-1）
+  const schoolList = { ...buildPropertyItemListJsonLd(listSchools().map(school => ({ name: school.formalName, url: canonicalUrl("realestate", schoolRentalPath(school.slug), locale) })), indexUrl, locale), "@id": `${indexUrl}#schools`, name: c.indexTitle };
   return <>
+    <JsonLd data={schoolList} />
     <Breadcrumb items={[{ name: c.guide, href: "/gakku" }, { name: c.indexTitle }]} />
     <article className="mx-auto max-w-4xl px-4 pb-16">
       <header className="rounded-2xl border border-primary/20 bg-primary-tint p-5 sm:p-8">
@@ -48,7 +52,7 @@ export function SchoolRentalListings({ school, properties, locale, summaries = [
   const schoolSummaries = summaries.filter(r => r.schoolSlug === school.slug);
   const path = schoolRentalPath(school.slug);
   return <>
-    <JsonLd data={buildPropertyItemListJsonLd(listings.map(p => ({ name: getLocalizedProperty(p, locale).title, url: canonicalUrl("realestate", `/bukken/${p.slug}`, locale) })), canonicalUrl("realestate", path, locale), locale)} />
+    <JsonLd data={buildPropertyItemListJsonLd(schoolRentalListItems(listings, schoolSummaries, canonicalUrl("realestate", path, locale), locale), canonicalUrl("realestate", path, locale), locale)} />
     <Breadcrumb items={[{ name: c.guide, href: "/gakku" }, { name: c.indexTitle, href: SCHOOL_RENTAL_INDEX_PATH }, { name: title }]} />
     <article className="mx-auto max-w-3xl px-4 pb-16">
       <header className="rounded-2xl border border-primary/20 bg-primary-tint p-5 sm:p-8">
@@ -67,4 +71,17 @@ export function SchoolRentalListings({ school, properties, locale, summaries = [
       </nav>
     </article>
   </>;
+}
+
+/**
+ * 学区別ページの ItemList の要素（学区ページ強化 作業手順書 v1・PR-1）。
+ * 画面に描画している配列（自社の公開物件＋学区別の募集比較一覧）だけから作る＝見出しの「募集中 N件」と常に一致する。
+ * フィード物件は個別ページを持たないため、一覧内のアンカー（RentalComparison の article id＝r.id）を URL にする。
+ * 価格・面積などの Offer は入れない（表示規約の確認が要る項目を構造化データで先行させない）。
+ */
+export function schoolRentalListItems(listings: PublicProperty[], summaries: PublicRentalSummary[], listUrl: string, locale: LangCode) {
+  return [
+    ...listings.map(p => ({ name: getLocalizedProperty(p, locale).title, url: canonicalUrl("realestate", `/bukken/${p.slug}`, locale) })),
+    ...summaries.map(r => ({ name: `${r.building} ${r.unit}`.trim(), url: `${listUrl}#${r.id}` })),
+  ];
 }
