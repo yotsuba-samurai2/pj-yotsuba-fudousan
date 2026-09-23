@@ -24,6 +24,7 @@ import {
 import { gakkuCopy, SCHOOL_LIST_SOURCE, SCHOOL_PROFILES } from "@/lib/gakku";
 import { DistrictBlocks, DistrictTable } from "@/components/gakku/DistrictSection";
 import { getPublishedProperties, getLocalizedProperty } from "@/lib/properties";
+import { SCHOOL_RENTAL_COPY, schoolRentalPath } from "@/lib/rental-school-district";
 import { formatPropertyPriceL, propertyUi } from "@/lib/property-i18n";
 
 function H2({ children, id }: { children: React.ReactNode; id?: string }) {
@@ -71,11 +72,10 @@ export async function SchoolDistrictPage({
   // 所在地が番地まで分かり、区の表で学校が1校に定まる物件だけを出す。
   // 番地によって学校が分かれる区域の物件は載せない（推測で学区を名乗らない）。
   const properties = (await getPublishedProperties(locale))
-    .map((p) => getLocalizedProperty(p, locale))
     .filter((p) => {
       const found = lookupDistrictByAddress(p.locationText);
       return found.status === "determined" && found.school.slug === slug;
-    });
+    }).map((p) => getLocalizedProperty(p, locale));
 
   const faqItems: FaqItem[] = [
     { q: c.school.districtH2.replace("{school}", school.formalName), a: districtSummary(locale, school.formalName, rows.length) },
@@ -102,6 +102,8 @@ export async function SchoolDistrictPage({
             {districtSummary(locale, school.formalName, rows.length)}
           </p>
         </header>
+
+        <Link href={addLocalePrefix(schoolRentalPath(slug), locale)} className="mt-6 block rounded-xl border border-primary/25 bg-primary-tint p-5 font-semibold text-primary">{SCHOOL_RENTAL_COPY[locale].view} →</Link>
 
         <H2 id="district">{c.school.districtH2.replace("{school}", school.formalName)}</H2>
         <DistrictTable rows={rows} copy={c} />

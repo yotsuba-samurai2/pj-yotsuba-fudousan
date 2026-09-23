@@ -1,3 +1,5 @@
+// Live property lists must respect closure and confirmation expiry on each request.
+export const dynamic = "force-dynamic";
 // /gakku/seishi＝学校別の通学区域ページ。本体は SchoolDistrictPage（4校で共通）。
 import type { Metadata } from "next";
 import type { LangCode } from "@/config/languages";
