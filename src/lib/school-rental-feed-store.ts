@@ -2,6 +2,7 @@ import { cache } from "react";
 import { Prisma } from "@prisma/client";
 import { prisma } from "./prisma";
 import { getProperties } from "./db/properties";
+import { registeredRentalIdentity } from "./registered-rental-identity";
 import { compileRentalSummaries, feedSchema, type RentalFeed, type RentalSummary } from "./school-rental-feed";
 
 export const readSchoolRentalFeeds = cache(async () => {
@@ -24,14 +25,7 @@ export const readSchoolRentalFeeds = cache(async () => {
 
 export const registeredRentalIdentities = cache(async () => {
   const properties = await getProperties();
-  return properties.filter(p => p.dealType === "rental").flatMap(p => {
-    const proof = p.internal?.rentalImport as { source?: { building?: string; address?: string; unit?: string } } | undefined;
-    const source = proof?.source;
-    if (source?.building && source.address && source.unit) return [{ building: source.building, address: source.address, unit: source.unit }];
-    // Manual legacy records: only match a visibly explicit room number and building name.
-    const match = p.title.normalize("NFKC").match(/^(.*?)\s+(\d+[A-Za-z]?)号室/);
-    return match ? [{ building: match[1], unit: match[2], address: p.locationText }] : [];
-  });
+  return properties.flatMap(p => { const identity = registeredRentalIdentity(p); return identity ? [identity] : []; });
 });
 
 export const getSchoolRentalSummaries = cache(async () => {

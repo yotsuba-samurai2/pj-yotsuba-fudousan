@@ -65,8 +65,7 @@ export async function POST(req: NextRequest) {
       // Never use an unguarded upsert: an import may close/create this slug
       // between our read and write, including a competing sale/rental create.
       if (existing) {
-        const protectedRental = existing.dealType === "rental" || !!existing.internal?.rentalImport || parsed.data.dealType === "rental";
-        if (protectedRental && body.expectedUpdatedAt !== existing.updatedAt) return NextResponse.json({ error: "物件が更新されています。最新の画面を開き直してください" }, { status: 409 });
+        if (!existing.updatedAt || typeof body.expectedUpdatedAt !== "string" || body.expectedUpdatedAt !== existing.updatedAt) return NextResponse.json({ error: "物件が更新されています。最新の画面を開き直してください" }, { status: 409 });
         if (!existing.updatedAt || !await updatePropertyIfUnchanged(existing.slug, existing.updatedAt, parsed.data)) return NextResponse.json({ error: "同時更新を検出しました。再確認してください" }, { status: 409 });
         await recordPropertyPublicationChange(existing, parsed.data, now);
         scheduleDuePropertyNotifications(now);

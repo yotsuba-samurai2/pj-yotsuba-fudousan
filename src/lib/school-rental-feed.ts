@@ -33,7 +33,11 @@ export const feedSchema = z.object({
   checkedAt: z.iso.datetime({ offset: true }),
   // Replacing a feed is permitted only after all pages of this scope were checked.
   complete: z.literal(true), records: z.array(feedRecordSchema).max(1000),
+  // Optional for reading legacy saved feeds; new API writes require this count.
+  expectedCount: z.number().int().nonnegative().max(1000).optional(),
 }).strip().superRefine((feed, ctx) => {
+  if (feed.expectedCount !== undefined && feed.expectedCount !== feed.records.length)
+    ctx.addIssue({ code: "custom", path: ["expectedCount"], message: "検索総登録数と取得件数が一致しません" });
   if (new Set(feed.records.map(r => r.sourceId)).size !== feed.records.length)
     ctx.addIssue({ code: "custom", message: "取得元の物件IDが重複しています" });
 });

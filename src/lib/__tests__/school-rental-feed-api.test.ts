@@ -12,7 +12,7 @@ beforeEach(() => {
   vi.mocked(registeredRentalIdentities).mockResolvedValue([]);
   vi.mocked(saveSchoolRentalFeed).mockResolvedValue(true);
 });
-function body() { return { action: "preview", feed: { version: 1, provider: "reins", scope: "bunkyo-rent-175000-area-48", checkedAt: new Date(Date.now()-60000).toISOString(), complete: true, records: [] } }; }
+function body() { return { action: "preview", feed: { version: 1, provider: "reins", scope: "bunkyo-rent-175000-area-48", checkedAt: new Date(Date.now()-60000).toISOString(), complete: true, expectedCount: 0, records: [] } }; }
 function request(value: unknown) { return new NextRequest("https://test.invalid/api/admin/bukken/school-rentals", { method: "POST", body: JSON.stringify(value) }); }
 it("authenticates before reading or writing private feeds", async () => {
   vi.mocked(verifyAdminRequest).mockRejectedValue(new AuthError("unauthorized",401));
@@ -22,6 +22,17 @@ it("authenticates before reading or writing private feeds", async () => {
 it("previews without saving", async () => {
   const result = await POST(request(body())); expect(result.status).toBe(200);
   expect(await result.json()).toMatchObject({ expectedUpdatedAt: null }); expect(saveSchoolRentalFeed).not.toHaveBeenCalled();
+});
+it("rejects truncated input even when it claims to be complete", async () => {
+  const b = body(); b.feed.expectedCount = 513;
+  expect((await POST(request({ ...b, action: "save", expectedUpdatedAt: null }))).status).toBe(400);
+  expect(saveSchoolRentalFeed).not.toHaveBeenCalled();
+  expect(readSchoolRentalFeeds).not.toHaveBeenCalled();
+});
+it("requires an independently checked source count on new writes", async () => {
+  const b = body();
+  expect((await POST(request({ ...b, feed: { ...b.feed, expectedCount: undefined } }))).status).toBe(400);
+  expect(saveSchoolRentalFeed).not.toHaveBeenCalled();
 });
 it("refuses future or incomplete snapshots while allowing weekly snapshots", async () => {
   const weekly = body(); weekly.feed.checkedAt = new Date(Date.now()-7*86400000).toISOString();

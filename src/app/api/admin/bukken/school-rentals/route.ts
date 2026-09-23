@@ -29,6 +29,7 @@ export async function POST(req: NextRequest) {
     const parsed = feedSchema.safeParse(body.feed);
     if (!parsed.success) return NextResponse.json({ error: parsed.error.issues.map(i => `${i.path.join(".")}: ${i.message}`).join(" / ") }, { status: 400 });
     const feed = parsed.data;
+    if (feed.expectedCount === undefined) return NextResponse.json({ error: "取得元で確認した検索総登録数 expectedCount を指定してください" }, { status: 400 });
     const age = Date.now() - Date.parse(feed.checkedAt);
     if (age < 0) return NextResponse.json({ error: "確認日時に未来の日時は指定できません" }, { status: 400 });
     const [feeds, existing] = await Promise.all([readSchoolRentalFeeds(), registeredRentalIdentities()]);
