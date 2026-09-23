@@ -18,7 +18,8 @@
     "column:publish-prep": "node scripts/column-publish-prep.mjs",
     "column:start:deprecated": "node scripts/column-start.mjs",
     "column:continue:deprecated": "node scripts/column-continue.mjs",
-    "rental:run": "node --import tsx scripts/rental-import/run.ts"
+    "rental:run": "node --import tsx scripts/rental-import/run.ts",
+    "rental:images": "node --import tsx scripts/rental-import/repair-images.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.82.0",
@@ -34,7 +35,8 @@
     "remark-breaks": "^4.0.0",
     "remark-gfm": "^4.0.1",
     "resend": "^6.10.0",
-    "zod": "^4.4.3"
+    "zod": "^4.4.3",
+    "sharp": "0.35.4"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

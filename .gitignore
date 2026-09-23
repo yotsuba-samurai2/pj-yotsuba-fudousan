@@ -45,3 +45,6 @@ next-env.d.ts
 .claude/
 _backup/
 .backup-*/
+
+# Private source images and image repair reports
+/.local/

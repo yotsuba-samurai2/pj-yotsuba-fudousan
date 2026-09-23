@@ -315,7 +315,7 @@ export default function PropertyForm({ initialData, onSubmit }: Props) {
     setError("");
     try {
       const url = await uploadImage(file, "bukken");
-      setImages((prev) => [...prev, { url, alt: "" }]);
+      setImages((prev) => prev.some(image => image.url === url) ? prev : [...prev, { url, alt: "" }]);
     } catch (err) {
       console.error("Upload failed:", err);
       setError(err instanceof Error ? err.message : "アップロードに失敗しました");
@@ -777,7 +777,7 @@ export default function PropertyForm({ initialData, onSubmit }: Props) {
           {uploading ? "アップロード中…" : "＋画像をアップロード"}
           <input
             type="file"
-            accept="image/jpeg,image/png,image/webp,image/gif"
+            accept="image/jpeg,image/png,image/webp"
             className="hidden"
             disabled={uploading}
             onChange={(e) => {
