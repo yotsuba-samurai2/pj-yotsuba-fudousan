@@ -1,3 +1,4 @@
+import { CustomerVoicesPreview } from "@/components/shared/CustomerVoices";
 import Image from "next/image";
 // /（型F・二本柱トップ）本文＝原稿_不動産 #1（E-1差し戻し対応・2026-07-10）
 // 【差し戻し対応の要点】
@@ -420,6 +421,7 @@ export default async function HomePageContent() {
         <div className="relative mx-auto max-w-6xl overflow-hidden rounded-b-3xl sm:mt-4 sm:rounded-3xl">
           <Image
             src="/hero/bunkyo-sakura-16x9.webp"
+            quality={60}
             alt={c.heroAlt}
             width={1600}
             height={900}
@@ -443,7 +445,7 @@ export default async function HomePageContent() {
         </div>
       </section>
 
-      <main className="mx-auto max-w-5xl px-4">
+      <main className="defer-page-sections mx-auto max-w-5xl px-4">
         {/* 二本柱カード（＋横断） */}
         <section aria-label="pillars" className="mt-10 grid gap-3 sm:grid-cols-3">
           {c.pillars.map((p, i) => (
@@ -527,6 +529,8 @@ export default async function HomePageContent() {
             </div>
           ))}
         </section>
+
+        <CustomerVoicesPreview businessKey="realestate" locale={locale} />
 
         {/* 導線 */}
         <nav aria-label="site links" className="mt-10 flex flex-wrap gap-x-4 gap-y-1 text-sm text-primary-dark">

@@ -18,7 +18,8 @@ export type PropertyDealType =
   | "house"
   | "condo"
   | "wholeBuilding"
-  | "businessBuilding";
+  | "businessBuilding"
+  | "rental";
 export type PropertyCategory = "gh" | "jigyo" | "souzoku" | "toushi" | "other";
 export type PropertyTradeMode = "seller" | "agent" | "broker";
 
@@ -74,7 +75,7 @@ export type CondoSpec = {
   /** 当該物件が存在する階（例「5階」） */
   floorLocated: string;
   exclusiveAreaSqm: number;
-  balconyAreaSqm: number;
+  balconyAreaSqm: number | "不明";
   builtYm: string;
   deliveryYm: string;
   /** 管理費（月額・円等の表記込み文字列） */
@@ -126,20 +127,52 @@ export type BusinessBuildingSpec = {
   leasehold?: LeaseholdInfo;
 };
 
+/** 賃貸1戸。賃料は共通priceYen（月額円）、不明な条件は空欄のまま保留。 */
+export type RentalSpec = {
+  dealType: "rental";
+  availabilityExpiresAt?: string;
+  buildingType: string;
+  layout: string;
+  exclusiveAreaSqm: number;
+  structure: string;
+  floors: string;
+  floorLocated: string;
+  builtYm: string;
+  deliveryYm: string;
+  /** 元資料の交通表示を保持。徒歩分から道路距離を捏造しない。 */
+  accessText: string;
+  managementFee: string;
+  deposit: string;
+  keyMoney: string;
+  guaranteeDeposit: string;
+  renewalFee: string;
+  insurance: string;
+  guarantor: string;
+  otherFees: string;
+  contractType: string;
+  contractPeriod: string;
+  conditions: string;
+};
+
 export type PropertySpec =
   | LandSpec
   | HouseSpec
   | CondoSpec
   | WholeBuildingSpec
-  | BusinessBuildingSpec;
+  | BusinessBuildingSpec
+  | RentalSpec;
 
-export type PropertyImage = { url: string; alt: string };
+export type PropertyImage = { url: string; alt: string; kind?: "photo" | "floorplan" };
 
 export type PropertyTranslation = {
   title: string;
   description: string;
   /** 所在地の訳（省略時は ja の locationText を表示） */
   locationText?: string;
+  /** 価格注記の訳（自由記述） */
+  priceNote?: string;
+  /** 概要表の自由記述の訳。キーは表示行のkey（例 conditions / insurance / legalRestrictions） */
+  spec?: Record<string, string>;
 };
 
 /** admin CRUD用の物件型（timestampはISO文字列。priceYenはJS number＝BigInt列からの変換値） */
@@ -304,6 +337,7 @@ export const DEAL_TYPE_LABELS: Record<PropertyDealType, string> = {
   condo: "マンション",
   wholeBuilding: "一棟売りマンション・アパート",
   businessBuilding: "事業用建物",
+  rental: "賃貸",
 };
 
 export const CATEGORY_LABELS: Record<PropertyCategory, string> = {
@@ -338,6 +372,12 @@ export function formatPriceYen(priceYen: number): string {
   return `${man.toLocaleString("ja-JP")}万円`;
 }
 
+export function formatPropertyPrice(p: Pick<PublicProperty, "dealType" | "priceYen">): string {
+  return p.dealType === "rental"
+    ? `${p.priceYen.toLocaleString("ja-JP")}円／月`
+    : formatPriceYen(p.priceYen);
+}
+
 function formatArea(sqm: number): string {
   return `${sqm.toLocaleString("ja-JP", { maximumFractionDigits: 2 })}㎡`;
 }
@@ -355,14 +395,14 @@ function commonHeadRows(p: PublicProperty): DisplayRow[] {
       : []),
     {
       key: "price",
-      label: "価格",
-      value: formatPriceYen(p.priceYen) + (p.priceNote ? `（${p.priceNote}）` : ""),
+      label: p.dealType === "rental" ? "賃料" : "価格",
+      value: formatPropertyPrice(p) + (p.priceNote ? `（${p.priceNote}）` : ""),
     },
   ];
 }
 
 function leaseholdRow(spec: PropertySpec): DisplayRow[] {
-  return spec.leasehold
+  return "leasehold" in spec && spec.leasehold
     ? [{ key: "leasehold", label: "借地", value: spec.leasehold }]
     : [];
 }
@@ -376,6 +416,30 @@ export function buildRequiredDisplayRows(p: PublicProperty): DisplayRow[] {
   const head = commonHeadRows(p);
   const s = p.spec;
   switch (s.dealType) {
+    case "rental":
+      return [
+        ...head,
+        { key: "exclusiveArea", label: "専有面積", value: formatArea(s.exclusiveAreaSqm) },
+        { key: "buildingType", label: "建物種別", value: s.buildingType },
+        { key: "accessText", label: "交通", value: s.accessText },
+        { key: "layout", label: "間取り", value: s.layout },
+        { key: "structure", label: "構造", value: s.structure },
+        { key: "floors", label: "建物の階数", value: s.floors },
+        { key: "floorLocated", label: "所在階", value: s.floorLocated },
+        { key: "builtYm", label: "建築年月", value: s.builtYm },
+        { key: "deliveryYm", label: "入居可能時期", value: s.deliveryYm },
+        { key: "managementFee", label: "管理費・共益費", value: s.managementFee },
+        { key: "deposit", label: "敷金", value: s.deposit },
+        { key: "keyMoney", label: "礼金", value: s.keyMoney },
+        { key: "guaranteeDeposit", label: "保証金・敷引", value: s.guaranteeDeposit },
+        { key: "renewalFee", label: "更新料", value: s.renewalFee },
+        { key: "insurance", label: "保険", value: s.insurance },
+        { key: "guarantor", label: "保証会社", value: s.guarantor },
+        { key: "otherFees", label: "その他の費用", value: s.otherFees },
+        { key: "contractType", label: "契約種別", value: s.contractType },
+        { key: "contractPeriod", label: "契約期間", value: s.contractPeriod },
+        { key: "conditions", label: "入居条件・特約", value: s.conditions },
+      ];
     case "land":
       return [
         ...head,
@@ -423,7 +487,7 @@ export function buildRequiredDisplayRows(p: PublicProperty): DisplayRow[] {
         { key: "floors", label: "階数", value: s.floors },
         { key: "floorLocated", label: "所在階", value: s.floorLocated },
         { key: "exclusiveArea", label: "専有面積", value: formatArea(s.exclusiveAreaSqm) },
-        { key: "balconyArea", label: "バルコニー面積", value: formatArea(s.balconyAreaSqm) },
+        { key: "balconyArea", label: "バルコニー面積", value: s.balconyAreaSqm === "不明" ? "不明" : formatArea(s.balconyAreaSqm) },
         { key: "builtYm", label: "建築年月", value: formatYm(s.builtYm) },
         { key: "deliveryYm", label: "引渡し可能年月", value: formatYm(s.deliveryYm) },
         { key: "managementFee", label: "管理費", value: s.managementFee },
@@ -466,7 +530,7 @@ function formatYm(ym: string): string {
 
 // ── sitemap・一覧の収載判定（closed/draft を出さない） ──
 
-/** sitemap・一覧・generateStaticParams に載せてよいのは published のみ */
+/** status だけの判定。公開面の最終判定は isPubliclyVisible（期限・ロケール込み）を使う */
 export function isListable(p: Pick<PublicProperty, "status">): boolean {
   return p.status === "published";
 }
@@ -545,3 +609,26 @@ export function scanPropertyText(text: string): BannedTermHit[] {
 /** GH向けカテゴリの断定禁止（「GH可」と書かない）に対応する定型注記 */
 export const GH_USE_NOTE =
   "障害福祉サービスでのご利用可否は、所管行政庁の指定基準等の確認が必要です。個別にご相談ください。";
+
+/** Expired or never-verified rentals cannot continue advertising when the worker stops. */
+export function isRentalExpired(p: Pick<PublicProperty, "dealType" | "spec">, now = new Date()): boolean {
+  if (p.dealType !== "rental") return false;
+  if (p.spec.dealType !== "rental" || !p.spec.availabilityExpiresAt) return true;
+  const expiry = Date.parse(p.spec.availabilityExpiresAt);
+  return !Number.isFinite(expiry) || expiry <= now.getTime();
+}
+
+/**
+ * 公開面（一覧・詳細・関連ブロック・ItemList・JSON-LD・sitemap・llms.txt）共通の公開判定。
+ * published かつ 賃貸の確認期限内 かつ（locale 指定時は）そのロケールで公開。
+ * closed（募集終了）と期限超過は別の理由だが、どちらも公開面には出さない。
+ */
+export function isPubliclyVisible(
+  p: Pick<PublicProperty, "status" | "dealType" | "spec" | "locales">,
+  locale?: LangCode,
+  now = new Date(),
+): boolean {
+  if (p.status !== "published") return false;
+  if (isRentalExpired(p, now)) return false;
+  return locale ? isPropertyLocaleAllowed(p, locale) : true;
+}

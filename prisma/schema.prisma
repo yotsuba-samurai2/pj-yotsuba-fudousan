@@ -65,6 +65,7 @@ enum PropertyDealType {
   condo
   wholeBuilding
   businessBuilding
+  rental
 }
 
 // 掲載カテゴリ（勝ち筋対応）：gh=障害福祉GH向け／jigyo=事業用・店舗／souzoku=相続・売却／toushi=投資用
@@ -119,6 +120,29 @@ model Property {
   @@map("properties")
 }
 
+/**
+ * 物件の公開内容変更イベント（IndexNow通知の永続キュー）。
+ * - 記録（insert）は保存の直後に同期で行う＝プロセス終了で失われない。
+ * - 送信（IndexNow）は別途・失敗しても保存を失敗させない（processPendingNotifications）。
+ * - urls・contentHash は公開値（toPublicProperty経由）のみ。internal・原本は入らない。
+ */
+model PropertyPublicationEvent {
+  id            String    @id @default(uuid())
+  slug          String
+  kind          String // "published" | "changed" | "unpublished" | "expired"
+  urls          String[]
+  contentHash   String?   @map("content_hash")
+  notifyStatus  String    @default("pending") @map("notify_status") // "pending" | "sent" | "skipped" | "failed"
+  attempts      Int       @default(0)
+  lastStatus    Int?      @map("last_status")
+  nextAttemptAt DateTime? @map("next_attempt_at")
+  createdAt     DateTime  @default(now()) @map("created_at")
+
+  @@index([notifyStatus, nextAttemptAt])
+  @@index([slug])
+  @@map("property_publication_events")
+}
+
 model Translation {
   locale    String   @id // "ja" | "en" | "zh-tw" | "zh"
   data      Json // ロケール全体を丸ごと（全体上書きと同義に保つ）
@@ -134,4 +158,14 @@ model AiSetting {
   updatedBy String?  @map("updated_by")
 
   @@map("ai_settings")
+}
+
+// 軽量な学区別募集一覧。AD・出典はサーバー内に保持し、公開時に明示的に射影する。
+model SchoolRentalFeed {
+  provider  String   @id
+  payload   Json
+  checkedAt DateTime @map("checked_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("school_rental_feeds")
 }

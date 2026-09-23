@@ -31,7 +31,7 @@ export const CONTACT_HREF: Record<BusinessKey, string> = {
 
 /**
  * 事業別GBP（Googleビジネスプロフィール）直リンクの正本（JSON-LD hasMap／地図リンク共用。
- * 2026-07-11 P2仕様・浦松承認済み）。laborはGBP未整備のため未設定（未検証の値を置かない）。
+ * 2026-07-11 P2仕様・浦松承認済み）。labor は 2026-09-17 に cid を設定（LABOR_GBP_CID）。
  * seo.ts（BUSINESS_SEO.gbpUrl）もここを参照する＝値の二重管理をしない。
  */
 // 形式はcid（恒久URL）に統一する。share.google の共有リンクは再発行のたびに変わり、
@@ -42,7 +42,11 @@ export const CONTACT_HREF: Record<BusinessKey, string> = {
  * 空文字のあいだは hasMap・sameAs・MAP_URL のいずれにも出力されない（下の分岐参照）。
  * ※プレースホルダー文字列を入れないこと（空文字のみ許可）。
  */
-export const LABOR_GBP_CID = "";
+// cid=8900955533418958218（=0x7b868be5fafc0d8a）。2026-09-16 オーナー確認済み（4面100%確認済みを実測）。
+// 裏取り2系統：business.google.com のプロフィールURL fid=8900955533418958218 と、検索パネルURLの
+// stick に含まれる 0x7b868be5fafc0d8a の10進変換が一致。カテゴリは「人事コンサルティング」（Googleの
+// カテゴリ一覧に「社会保険労務士」は存在せず、「弁護士（社会保険）」は非弁表示になるため不採用）。
+export const LABOR_GBP_CID = "8900955533418958218";
 
 export const GBP_URL = {
   // cid=2684416286346615973（=0x2540f663c8f69ca5・kgmid /g/11ytdshcrj）現物確認済み

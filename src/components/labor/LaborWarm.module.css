@@ -88,14 +88,8 @@
   :global(main):has(.hero, .detail) { padding-right: 280px; }
   .hero { margin-right: -280px; }
   .heroCopy { padding-left: max(36px, calc((100vw - 1200px) / 2)); }
-  :global(body):has(.hero, .detail) :global([data-yotsuba-linka-open="false"]) > button > span:last-child { width: 112px; height: 112px; }
-  :global(body):has(.hero, .detail) :global([data-yotsuba-linka-open="false"]) > button > span:first-child { font-size: 14px; padding-inline: 12px; }
 }
-/* The existing AI entry remains available in the footer on phones, without covering reading or primary actions. */
-@media (max-width: 767px) {
-  :global(body):has(.hero, .detail) :global([data-yotsuba-linka-open="false"]) { position: relative; inset: auto; z-index: 1; display: flex; justify-content: flex-end; padding: 16px 20px calc(var(--yotsuba-contact-height, 64px) + 20px); }
-  :global(body):has(.hero, .detail) :global([data-yotsuba-linka-open="false"]) > button > span:last-child { width: 48px; height: 48px; }
-}
+/* LINKA position, size and CTA clearance belong to the shared LinkaFab / ContactCta styles. */
 @media (max-width: 1023px) {
   .heroGrid { display: flex; flex-direction: column; }
   .portrait { order: -1; }

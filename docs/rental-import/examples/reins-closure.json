@@ -1,0 +1,26 @@
+[
+  {
+    "source": {
+      "provider": "itandi",
+      "roomId": "123",
+      "url": "https://itandibb.com/rent_rooms/123",
+      "building": "検証用マンション",
+      "address": "東京都文京区検証町1-2-3",
+      "unit": "001",
+      "availability": "available",
+      "checkedAt": "2026-09-20T01:00:00.000Z",
+      "adQuote": "広告費200%"
+    },
+    "status": "closed",
+    "checkedAt": "2026-09-20T00:00:00Z",
+    "reference": "https://system.reins.jp/main/BK/GBK003200",
+    "quote": "REINSで対象物件番号・建物・住所・号室の掲載終了を確認（匿名の形式例）",
+    "authenticated": true,
+    "siteOperational": true,
+    "exactRoomMatched": true,
+    "confirmedBy": {
+      "provider": "reins",
+      "listingId": "test-100"
+    }
+  }
+]

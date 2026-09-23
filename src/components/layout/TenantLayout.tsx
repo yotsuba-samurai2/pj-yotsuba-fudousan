@@ -16,6 +16,8 @@ import { gaEvent } from "@/lib/gtag";
 import { normalizePath } from "@/lib/normalize-path"; // cross-links直importはC7文言のクライアント同梱を招くため禁止
 import { MobileStickyBar } from "@/components/shared/MobileStickyBar";
 import { LinkaFab } from "@/components/shared/LinkaFab";
+import { footerSrRegistration } from "@/lib/shared/footer-sr-registration";
+import contactStyles from "@/components/shared/ContactCta.module.css";
 import { SR_LAUNCHED, type BusinessKey } from "@/lib/shared/office";
 import { SR_OFFICE_NAME, SR_OFFICE_NAME_ZH_TW, SR_OFFICE_NAME_ZH } from "@/lib/shared/sr-name"; // 事務所名は実行時結合（法27条ソース漏れ対策）
 import type { LangCode } from "@/config/languages";
@@ -35,6 +37,11 @@ type FooterSection = { title: string; links: NavItem[] };
 const NAV_HREFS: Record<string, { href: string; key: string; labels?: Record<string, string> }[]> = {
   realestate: [
     { href: "/services", key: "services" },
+    // 2026-09-16浦松指示：物件1件目の公開に伴い「取扱物件」をヘッダー最上段へ（それまで /toushi 本文からの1本のみで到達不能に近かった）。
+    // コード内4ロケールラベル（B1の教訓＝Firestoreに新キーを増やさない）。/bukken は同日に4ロケール公開＝locales制限なし。
+    { href: "/bukken", key: "bukken", labels: { ja: "取扱物件", en: "Properties", "zh-tw": "銷售物件", zh: "在售房源" } },
+    // 2026-09-22：学区特集（区の通学区域の一次データ）。取扱物件の隣に置く。
+    { href: "/gakku", key: "gakku", labels: { ja: "学区から探す", en: "School districts", "zh-tw": "依學區尋找", zh: "按学区查找" } },
     { href: "/about", key: "about" },
     { href: "/column", key: "column" },
     // 2026-07-10浦松指示：コラムの後にアクセス（/access・コード内4ロケールラベル）
@@ -128,6 +135,9 @@ const FOOTER_NAV_HREFS: Record<
         },
         // 2026-07-11修正の踏襲：基本業務（賃貸・売買・管理）は/servicesへ集約（表現規程＝コンサル型方針）
         { href: "/services", key: "management", labels: { ja: "賃貸・売買・管理", en: "Rental, Sale & Management", "zh-tw": "租賃・買賣・管理", zh: "租赁・买卖・管理" } },
+        // 2026-09-16浦松指示：取扱物件（/bukken・4ロケール）を基本業務の隣へ。ヘッダー NAV_HREFS と表記統一
+        { href: "/bukken", key: "bukken", labels: { ja: "取扱物件", en: "Properties", "zh-tw": "銷售物件", zh: "在售房源" } },
+        { href: "/gakku", key: "gakku", labels: { ja: "学区から探す", en: "School districts", "zh-tw": "依學區尋找", zh: "按学区查找" } },
       ],
     },
     {
@@ -135,6 +145,7 @@ const FOOTER_NAV_HREFS: Record<
       titleLabels: { ja: "会社情報・その他", en: "Company & More", "zh-tw": "公司資訊・其他", zh: "公司信息・其他" },
       items: [
         { href: "/about", key: "about" },
+        { href: "/voices", key: "voices", labels: { ja: "お客様の声", en: "Client testimonials", "zh-tw": "客戶心聲", zh: "客户心声" } },
         { href: "/column", key: "column" },
         // タスクC-5（2026-07-19）：相談事例（モデルケース）。ja先行公開（sitemap/availableLocalesとも["ja"]）。
         { href: "/jirei", key: "jirei", labels: { ja: "相談事例", en: "Case Studies", "zh-tw": "諮詢案例", zh: "咨询案例" }, locales: ["ja"] },
@@ -178,6 +189,7 @@ const FOOTER_NAV_HREFS: Record<
       sectionKey: "office",
       items: [
         { href: "/legal/about", key: "about" },
+        { href: "/legal/voices", key: "voices", labels: { ja: "お客様の声", en: "Client testimonials", "zh-tw": "客戶心聲", zh: "客户心声" } },
         { href: "/legal/column", key: "column" },
       ],
     },
@@ -202,6 +214,7 @@ const FOOTER_NAV_HREFS: Record<
       sectionKey: "office",
       items: [
         { href: "/labor/about", key: "about" },
+        { href: "/labor/voices", key: "voices", labels: { ja: "お客様の声", en: "Client testimonials", "zh-tw": "客戶心聲", zh: "客户心声" } },
         { href: "/labor/column", key: "column" },
       ],
     },
@@ -553,7 +566,7 @@ function TenantHeader({ businessKey, columnLocales }: { businessKey: string; col
                 alt={t(`${businessKey}.name`)}
                 width={businessKey === "labor" ? 5020 : 260}
                 height={businessKey === "labor" ? 713 : 72}
-                sizes={businessKey === "labor" ? "(min-width: 640px) 395px, (min-width: 370px) 282px, calc(100vw - 88px)" : undefined}
+                sizes={businessKey === "labor" ? "(min-width: 640px) 395px, (min-width: 370px) 282px, calc(100vw - 88px)" : businessKey === "realestate" ? "(min-width: 640px) 205px, 146px" : undefined}
                 className={businessKey === "labor" ? "h-auto w-[min(282px,calc(100vw-88px))] sm:h-14 sm:w-auto" : "h-10 w-auto sm:h-14"}
                 priority
               />
@@ -753,7 +766,7 @@ function TenantFooter({ businessKey }: { businessKey: string }) {
   }, [businessKey, t, locale]);
 
   return (
-    <footer className="text-text">
+    <footer className="defer-footer text-text">
       <div className="mx-auto max-w-7xl px-4 pt-12 pb-10 sm:px-6 sm:pt-16 sm:pb-12 lg:px-8">
         <div className="flex flex-col gap-8 sm:gap-10 lg:flex-row lg:items-start lg:justify-between">
           <div className="shrink-0">
@@ -992,11 +1005,12 @@ function TenantFooter({ businessKey }: { businessKey: string }) {
             <p>{t("common.footer.realestateRegistration")}</p>
             <p>{t("common.footer.realestateRepRegistration")}</p>
             <p>{t("common.footer.legalRepRegistration")}</p>
-            {/* 個人の"試験合格"は表示可・事務所は開業まで非表示（社労士_試験合格表記_実装指示_v1）。
-                representative.srExamNote は /admin/fix-sr-notation 適用後に値が入る（未投入時は非表示） */}
-            {t("representative.srExamNote") && (
+            {/* 公開後は3事業共通で代表個人の登録表示。DBに旧試験合格文が残っても併記しない。 */}
+            {SR_LAUNCHED ? (
+              <p className="break-words">{footerSrRegistration(locale)}</p>
+            ) : t("representative.srExamNote") ? (
               <p>{t("representative.srExamNote")}</p>
-            )}
+            ) : null}
           </div>
 
           {/* いい相続（株式会社鎌倉新書・東証プライム 6184）との相互リンク
@@ -1010,7 +1024,7 @@ function TenantFooter({ businessKey }: { businessKey: string }) {
                 legal テナント／ja／パスが /legal トップ本体、の3条件すべて。
                 フッターは共通部品のため、条件を付けないと legal 配下の全ページに出る。
                 浦松指示（2026-08-07）によりトップ1ページだけに限定している。
-              ・配置＝資格表記（社会保険労務士試験合格）の直下（浦松指示 2026-08-07）。
+              ・配置＝資格表記の直下（浦松指示 2026-08-07）。
                 相談導線より前に外部サイトへの出口を置かない。先方PPTは位置・大きさを指定していない。
               ・rel は noopener のみ。nofollow を付けない（相互リンクの趣旨を損なうため）。
                 noreferrer も付けない（先方側で当サイトからの流入を計測できるようにするため）。 */}
@@ -1039,7 +1053,7 @@ function TenantFooter({ businessKey }: { businessKey: string }) {
 
       {/* Copyright */}
       <div className="border-t border-border">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 py-6 sm:flex-row sm:px-6 lg:px-8">
+        <div className={`mx-auto flex max-w-7xl flex-col flex-wrap items-center justify-between gap-3 px-4 py-6 sm:flex-row sm:px-6 lg:px-8 ${contactStyles.footerEnd}`}>
           <p className="text-xs text-text-muted">
             &copy; {currentYear} {t("common.footer.copyright")}
           </p>

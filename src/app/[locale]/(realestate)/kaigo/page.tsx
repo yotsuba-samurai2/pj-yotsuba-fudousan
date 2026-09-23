@@ -1,3 +1,4 @@
+import { PropertySearchSampleTeaser } from "@/components/shared/PropertySearchSample";
 // /kaigo（介護事業所開設ピラー）＝シナジー領域#14（2026-07-22・日本語版のみ・監修前ドラフト実装）
 // 方式＝RealestateServicePage（手本=/toushi/shitei-shinsei C-2）。ja先行公開：
 //   availableLocales:["ja"]・sitemap側も locales:["ja"]。COPYフォールバックで他ロケールにもja本文を表示。
@@ -107,6 +108,8 @@ export default async function Page() {
       ]}
       crossLinkLead="指定申請など許認可の書類は、関連事業の四葉行政書士事務所のページで詳しく解説しています。"
     >
+      <PropertySearchSampleTeaser kind="welfare" page="/kaigo" />
+
       {/* §1 類型と指定権者。割り振りの断定なし＝事前確認へ誘導 */}
       <div>
         <ReH2>サービス類型で「必要な物件」が変わる</ReH2>

@@ -1,3 +1,5 @@
+import { listSchools } from "@/lib/school-district";
+import { schoolRentalPath, SCHOOL_RENTAL_INDEX_PATH } from "@/lib/rental-school-district";
 import type { MetadataRoute } from "next";
 import { headers } from "next/headers";
 import {
@@ -104,9 +106,19 @@ function expandProperty(p: PublicProperty): MetadataRoute.Sitemap {
 }
 
 const STATIC_REALESTATE: StaticPage[] = [
+  { path: "/voices", changeFrequency: "monthly", priority: 0.7 },
   { path: "", changeFrequency: "weekly", priority: 1.0 },
-  // 2026-09-01：物件紹介（/bukken）。ja先行公開＝ページ側 PAGE_LOCALES と一致させる
-  { path: "/bukken", changeFrequency: "weekly", priority: 0.8, locales: ["ja"] },
+  // 2026-09-01：物件紹介（/bukken）。2026-09-16に ja先行→4ロケール（ページ側 PAGE_LOCALES と一致・locales未指定＝全4）
+  { path: "/bukken", changeFrequency: "weekly", priority: 0.8 },
+  // 2026-09-22：学区特集。区の通学区域（町丁目・番・号）の一次データ層。
+  // ハブ＋4校（誠之・昭和・千駄木・窪町）。いずれもページ側 PAGE_LOCALES は4ロケール。
+  { path: "/gakku", changeFrequency: "monthly", priority: 0.8 },
+  { path: SCHOOL_RENTAL_INDEX_PATH, changeFrequency: "daily", priority: 0.8 },
+  ...listSchools().map(school => ({ path: schoolRentalPath(school.slug), changeFrequency: "daily" as const, priority: 0.7 })),
+  { path: "/gakku/seishi", changeFrequency: "monthly", priority: 0.7 },
+  { path: "/gakku/showa", changeFrequency: "monthly", priority: 0.7 },
+  { path: "/gakku/sendagi", changeFrequency: "monthly", priority: 0.7 },
+  { path: "/gakku/kubomachi", changeFrequency: "monthly", priority: 0.7 },
   { path: "/souzoku", changeFrequency: "monthly", priority: 0.9 },
   { path: "/souzoku/nagare", changeFrequency: "monthly", priority: 0.7 },
   // タスクC-4（2026-07-19）：相続空き家。C-6-2で zh-tw・zh を公開。
@@ -186,6 +198,7 @@ const STATIC_REALESTATE: StaticPage[] = [
 ];
 
 const STATIC_LEGAL: StaticPage[] = [
+  { path: "/legal/voices", changeFrequency: "monthly", priority: 0.7 },
   { path: "", changeFrequency: "weekly", priority: 1.0 },
   { path: "/services", changeFrequency: "monthly", priority: 0.9 },
   { path: "/services/shogai-fukushi", changeFrequency: "monthly", priority: 0.9 },
@@ -224,24 +237,35 @@ const STATIC_LEGAL: StaticPage[] = [
  *   （18_言語別存在マトリクス.md の突合対象）。
  */
 const STATIC_LABOR: StaticPage[] = [
+  { path: "/labor/voices", changeFrequency: "monthly", priority: 0.7, locales: ["ja", "en", "zh-tw", "zh"] },
   // 2026-09-01 4言語公開（第1波）。4ロケールとも本番200を実測（2026-09-01）。
   // locales の明示は sitemap-labor.test.ts の規約（存在しないロケールURLを広告しない）に合わせるため。
   { path: "/labor", changeFrequency: "monthly", priority: 0.9, locales: ["ja", "en", "zh-tw", "zh"] },
   { path: "/labor/services", changeFrequency: "monthly", priority: 0.8, locales: ["ja", "en", "zh-tw", "zh"] }, // 2026-09-01 4言語公開（第1波）
   { path: "/labor/services/kaigo-roumu", changeFrequency: "monthly", priority: 0.8, locales: ["ja", "en", "zh-tw", "zh"] },
-  { path: "/labor/services/jinin-kijun-roumu", changeFrequency: "monthly", priority: 0.8, locales: ["ja"] },
+  // 2026-09-22 4言語化（本文を JININ_KIJUN_ROUMU_COPY に移し en / zh-tw / zh を追加）。ページ側の availableLocales と一致。
+  { path: "/labor/services/jinin-kijun-roumu", changeFrequency: "monthly", priority: 0.8, locales: ["ja", "en", "zh-tw", "zh"] },
   { path: "/labor/services/shogu-kaizen", changeFrequency: "monthly", priority: 0.8, locales: ["ja", "en", "zh-tw", "zh"] },
-  { path: "/labor/services/joseikin", changeFrequency: "monthly", priority: 0.7, locales: ["ja"] },
+  // 2026-09-22 4言語化（本文を JOSEIKIN_COPY に移し en / zh-tw / zh を追加）。ページ側の availableLocales と一致。
+  { path: "/labor/services/joseikin", changeFrequency: "monthly", priority: 0.7, locales: ["ja", "en", "zh-tw", "zh"] },
   { path: "/labor/services/gaikokujin-koyo", changeFrequency: "monthly", priority: 0.8, locales: ["ja", "en", "zh-tw", "zh"] }, // 2026-09-01 4言語公開（第2波）
   { path: "/labor/services/gaibu-kansanin", changeFrequency: "monthly", priority: 0.8, locales: ["ja", "en", "zh-tw", "zh"] }, // 2026-09-01 4言語公開（第2波）
   { path: "/labor/services/saiyo", changeFrequency: "monthly", priority: 0.8, locales: ["ja", "en", "zh-tw", "zh"] }, // 2026-09-01 4言語公開（第2波）
-  { path: "/labor/services/shogai-nenkin", changeFrequency: "monthly", priority: 0.8, locales: ["ja"] }, // 2026-09-02 新設・ja のみ
+  // 2026-09-22 4言語化（本文を SHOGAI_NENKIN_COPY に移し en / zh-tw / zh を追加）。ページ側の availableLocales と一致。
+  { path: "/labor/services/shogai-nenkin", changeFrequency: "monthly", priority: 0.8, locales: ["ja", "en", "zh-tw", "zh"] },
   { path: "/labor/ryokin", changeFrequency: "monthly", priority: 0.7, locales: ["ja", "en", "zh-tw", "zh"] }, // 2026-09-01 4言語公開（第1波）
   { path: "/labor/nagare", changeFrequency: "yearly", priority: 0.6, locales: ["ja", "en", "zh-tw", "zh"] }, // 2026-09-01 4言語公開（第1波）
   { path: "/labor/faq", changeFrequency: "monthly", priority: 0.6, locales: ["ja", "en", "zh-tw", "zh"] },
-  { path: "/labor/about", changeFrequency: "yearly", priority: 0.6, locales: ["ja"] },
-  { path: "/labor/column", changeFrequency: "daily", priority: 0.7, locales: ["ja"] },
-  { path: "/labor/contact", changeFrequency: "yearly", priority: 0.5, locales: ["ja"] },
+  // 2026-09-22：本文は about=翻訳辞書（labor.aboutPage.*）、contact=CONTACT_LABELS／CONTACT_INTRO で
+  // 4ロケールとも訳出済み。ページ側は availableLocales 未指定＝4言語の hreflang を出しており、
+  // sitemap だけが ja に狭まっていた（存在する訳をGoogleに知らせていない）ので実体に合わせる。
+  { path: "/labor/about", changeFrequency: "yearly", priority: 0.6, locales: ["ja", "en", "zh-tw", "zh"] },
+  // 2026-09-22：労務コラムは全114本が en / zh-tw / zh の訳を持ち（labor-columns-seed.ts）、
+  // Column.locales は空＝全ロケール公開のため、個別記事URLは既に4ロケールで sitemap に出ている
+  // （expandColumn）。一覧ページ側も getColumnPageLocales が4言語を返し hreflang を出しているので、
+  // 一覧だけ ja に狭めると「記事は載るが入口が載らない」ずれになる。
+  { path: "/labor/column", changeFrequency: "daily", priority: 0.7, locales: ["ja", "en", "zh-tw", "zh"] },
+  { path: "/labor/contact", changeFrequency: "yearly", priority: 0.5, locales: ["ja", "en", "zh-tw", "zh"] },
 ];
 
 /** 社労士サイトマップ。**SR_LAUNCHED=false の間は空配列を返す**（開業前は1件も出さない） */

@@ -229,6 +229,25 @@ export const SR_LAUNCH_TRANSLATION_PATCHES: Record<
       to: "四葉社会保険労務士事務所のコラム。社会保険、助成金、労務管理など、人事・労務にまつわるお役立ち情報をお届けします。",
       note: "法人→事務所",
     },
+    // 2026-09-18 本番実測：共通紹介・概要表にも社労士を追加する。
+    {
+      path: "brand.groupDescription",
+      from: "不動産・行政書士の専門家グループ。",
+      to: "不動産・行政書士・社会保険労務士の専門家グループ。",
+      note: "3事業のグループ構成に統一（2026-09-18 本番実測）",
+    },
+    {
+      path: "legal.aboutPage.officeInfo.9.value",
+      from: "四葉不動産株式会社（免許番号：東京都知事（1）第113304号）",
+      to: `四葉不動産株式会社（免許番号：東京都知事（1）第113304号）\n四葉社会保険労務士事務所（代表社会保険労務士 浦松丈二　登録番号：第${REGISTRATION_NUMBER}号）`,
+      note: "3事業のグループ構成に統一（2026-09-18 本番実測）",
+    },
+    {
+      path: "realestate.aboutPage.companyInfo.10.value",
+      from: "四葉行政書士事務所（代表行政書士 浦松丈二　登録番号：第25087022号）",
+      to: `四葉行政書士事務所（代表行政書士 浦松丈二　登録番号：第25087022号）\n四葉社会保険労務士事務所（代表社会保険労務士 浦松丈二　登録番号：第${REGISTRATION_NUMBER}号）`,
+      note: "3事業のグループ構成に統一（2026-09-18 本番実測）",
+    },
     // ── 第3陣（開業後残存・2026-09-05 本番実測）。ja ──
     // 2026-09-05 月次点検（INIT-03/NEW-ABOUT-3）。
     // 7/8 の開業前非表示（32a5d94）で「3つ→2つ」に落とした /about のグループ説明と、
@@ -259,6 +278,19 @@ export const SR_LAUNCH_TRANSLATION_PATCHES: Record<
       from: "行政書士・宅地建物取引士",
       to: "行政書士・社会保険労務士・宅地建物取引士",
       note: "/legal/about 代表紹介の「資格」（LegalAboutPageContent）。並びは representative.qualificationsLegal の to に揃える（2026-09-05 実測）",
+    },
+    // ── 不動産サイトのフッター紹介文（2026-09-23 追加・第3波） ──
+    {
+      path: "realestate.footerDescription1",
+      from: "元新聞記者×行政書士の不動産屋。",
+      to: "元新聞記者×行政書士×社労士の不動産屋。",
+      note: "2026-09-23 浦松指示：代表の資格に社労士を足す（不動産サイトのフッター）",
+    },
+    {
+      path: "realestate.footerDescription2",
+      from: "4言語対応と専門家ネットワークで、住まい探しから法務までサポートします。",
+      to: "4言語対応と専門家ネットワークで、住まい探しから契約までサポートします。",
+      note: "2026-09-23：不動産会社が法務・労務まで担うと読めないよう、meta.description（compliance-patches）と同じ「契約まで」に揃える",
     },
   ],
   en: [
@@ -366,6 +398,25 @@ export const SR_LAUNCH_TRANSLATION_PATCHES: Record<
       to: "Columns from 四葉社会保険労務士事務所. Useful information on social insurance, subsidies, labor management, and other HR & labor topics.",
       note: "法人→事務所",
     },
+    // 2026-09-18 本番実測：共通紹介・概要表にも社労士を追加する。
+    {
+      path: "brand.groupDescription",
+      from: "A professional group of real estate and administrative-scrivener practices.",
+      to: "A professional group of real estate, administrative-scrivener, and social insurance and labor consultant practices.",
+      note: "3事業のグループ構成に統一（2026-09-18 本番実測）",
+    },
+    {
+      path: "legal.aboutPage.officeInfo.9.value",
+      from: "四葉不動産株式会社 (License No.: 東京都知事（1）第113304号)",
+      to: `四葉不動産株式会社 (License No.: 東京都知事（1）第113304号)\n四葉社会保険労務士事務所 (Representative Social Insurance and Labor Consultant 浦松丈二, Registration No. ${REGISTRATION_NUMBER})`,
+      note: "3事業のグループ構成に統一（2026-09-18 本番実測）",
+    },
+    {
+      path: "realestate.aboutPage.companyInfo.10.value",
+      from: "四葉行政書士事務所 (Chief Administrative Scrivener 浦松丈二　Registration No.: 第25087022号)",
+      to: `四葉行政書士事務所 (Chief Administrative Scrivener 浦松丈二　Registration No.: 第25087022号)\n四葉社会保険労務士事務所 (Representative Social Insurance and Labor Consultant 浦松丈二, Registration No. ${REGISTRATION_NUMBER})`,
+      note: "3事業のグループ構成に統一（2026-09-18 本番実測）",
+    },
     // ── 第3陣（開業後残存・2026-09-05 本番実測）。en ── 2026-09-05 月次点検（INIT-03/NEW-ABOUT-3）。to は監修前ドラフト
     {
       path: "realestate.aboutPage.partnersDescription1",
@@ -390,6 +441,19 @@ export const SR_LAUNCH_TRANSLATION_PATCHES: Record<
       from: "Administrative Scrivener (Gyoseishoshi), Licensed Real Estate Transaction Specialist",
       to: "Administrative Scrivener (Gyoseishoshi), Certified Social Insurance and Labor Consultant, Licensed Real Estate Transaction Specialist",
       note: "/legal/about「Qualifications」。representative.qualificationsLegal の to と同一（2026-09-05 実測）",
+    },
+    // ── 不動産サイトのフッター紹介文（2026-09-23 追加・第3波） ──
+    {
+      path: "realestate.footerDescription1",
+      from: "A real estate agency led by a former journalist and licensed scrivener.",
+      to: "A real estate agency led by a former journalist, administrative scrivener, and certified social insurance and labor consultant.",
+      note: "2026-09-23 浦松指示：代表の資格に社労士を足す（不動産サイトのフッター）",
+    },
+    {
+      path: "realestate.footerDescription2",
+      from: "4-language support and a professional network covering housing, legal, and labor services.",
+      to: "4-language support and a professional network, from housing search through contract.",
+      note: "2026-09-23：不動産会社が法務・労務まで担うと読めないよう、meta.description（compliance-patches）と同じ「契約まで」に揃える",
     },
   ],
   "zh-tw": [
@@ -497,6 +561,25 @@ export const SR_LAUNCH_TRANSLATION_PATCHES: Record<
       to: "四葉社會保險勞務士事務所的專欄。社會保險、助成金、勞務管理等，為您提供人事・勞務相關的實用資訊。",
       note: "法人→事務所",
     },
+    // 2026-09-18 本番実測：共通紹介・概要表にも社労士を追加する。
+    {
+      path: "brand.groupDescription",
+      from: "不動產・行政書士的專家集團。",
+      to: "不動產・行政書士・社會保險勞務士的專家集團。",
+      note: "3事業のグループ構成に統一（2026-09-18 本番実測）",
+    },
+    {
+      path: "legal.aboutPage.officeInfo.9.value",
+      from: "四葉不動産株式會社（許可證號：東京都知事（1）第113304號）",
+      to: `四葉不動産株式會社（許可證號：東京都知事（1）第113304號）\n四葉社会保険労務士事務所（代表社會保險勞務士 浦松丈二　登記號：第${REGISTRATION_NUMBER}號）`,
+      note: "3事業のグループ構成に統一（2026-09-18 本番実測）",
+    },
+    {
+      path: "realestate.aboutPage.companyInfo.10.value",
+      from: "四葉行政書士事務所（代表行政書士 浦松丈二　登記號：第25087022號）",
+      to: `四葉行政書士事務所（代表行政書士 浦松丈二　登記號：第25087022號）\n四葉社会保険労務士事務所（代表社會保險勞務士 浦松丈二　登記號：第${REGISTRATION_NUMBER}號）`,
+      note: "3事業のグループ構成に統一（2026-09-18 本番実測）",
+    },
     // ── 第3陣（開業後残存・2026-09-05 本番実測）。zh-tw ── 2026-09-05 月次点検（INIT-03/NEW-ABOUT-3）。to は監修前ドラフト
     {
       path: "realestate.aboutPage.partnersDescription1",
@@ -521,6 +604,19 @@ export const SR_LAUNCH_TRANSLATION_PATCHES: Record<
       from: "行政書士・不動產交易士",
       to: "行政書士・社會保險勞務士・不動產交易士",
       note: "/legal/about「資格／證照」。representative.qualificationsLegal の to と同一（2026-09-05 実測）",
+    },
+    // ── 不動産サイトのフッター紹介文（2026-09-23 追加・第3波） ──
+    {
+      path: "realestate.footerDescription1",
+      from: "前新聞記者×行政書士的不動產公司。",
+      to: "前新聞記者×行政書士×社會保險勞務士的不動產公司。",
+      note: "2026-09-23 浦松指示：代表の資格に社労士を足す（不動産サイトのフッター）",
+    },
+    {
+      path: "realestate.footerDescription2",
+      from: "透過4種語言服務和專家網路，從找房到法務提供全方位支援。",
+      to: "透過4種語言服務和專家網路，提供從找房到簽約的支援。",
+      note: "2026-09-23：不動産会社が法務・労務まで担うと読めないよう、meta.description（compliance-patches）と同じ「契約まで」に揃える",
     },
   ],
   zh: [
@@ -628,6 +724,25 @@ export const SR_LAUNCH_TRANSLATION_PATCHES: Record<
       to: "四葉社会保険労務士事務所的专栏。社会保险、助成金、劳务管理等，为您提供人事・劳务相关的实用资讯。",
       note: "法人→事務所",
     },
+    // 2026-09-18 本番実測：共通紹介・概要表にも社労士を追加する。
+    {
+      path: "brand.groupDescription",
+      from: "不动产・行政书士的专家集团。",
+      to: "不动产・行政书士・社会保险劳务士的专家集团。",
+      note: "3事業のグループ構成に統一（2026-09-18 本番実測）",
+    },
+    {
+      path: "legal.aboutPage.officeInfo.9.value",
+      from: "四葉不動産株式会社（许可证号：东京都知事（1）第113304号）",
+      to: `四葉不動産株式会社（许可证号：东京都知事（1）第113304号）\n四葉社会保険労務士事務所（代表社会保险劳务士 浦松丈二　登记号：第${REGISTRATION_NUMBER}号）`,
+      note: "3事業のグループ構成に統一（2026-09-18 本番実測）",
+    },
+    {
+      path: "realestate.aboutPage.companyInfo.10.value",
+      from: "四葉行政书士事务所（代表行政书士 浦松丈二　登记号：第25087022号）",
+      to: `四葉行政书士事务所（代表行政书士 浦松丈二　登记号：第25087022号）\n四葉社会保険労務士事務所（代表社会保险劳务士 浦松丈二　登记号：第${REGISTRATION_NUMBER}号）`,
+      note: "3事業のグループ構成に統一（2026-09-18 本番実測）",
+    },
     // ── 第3陣（開業後残存・2026-09-05 本番実測）。zh ── 2026-09-05 月次点検（INIT-03/NEW-ABOUT-3）。to は監修前ドラフト
     {
       path: "realestate.aboutPage.partnersDescription1",
@@ -652,6 +767,19 @@ export const SR_LAUNCH_TRANSLATION_PATCHES: Record<
       from: "行政书士・不动产交易士",
       to: "行政书士・社会保险劳务士・不动产交易士",
       note: "/legal/about「资格／证照」。representative.qualificationsLegal の to と同一（2026-09-05 実測）",
+    },
+    // ── 不動産サイトのフッター紹介文（2026-09-23 追加・第3波） ──
+    {
+      path: "realestate.footerDescription1",
+      from: "前新闻记者×行政书士的不动产公司。",
+      to: "前新闻记者×行政书士×社会保险劳务士的不动产公司。",
+      note: "2026-09-23 浦松指示：代表の資格に社労士を足す（不動産サイトのフッター）",
+    },
+    {
+      path: "realestate.footerDescription2",
+      from: "通过4种语言服务和专家网络，从找房到法务提供全方位支持。",
+      to: "通过4种语言服务和专家网络，提供从找房到签约的支持。",
+      note: "2026-09-23：不動産会社が法務・労務まで担うと読めないよう、meta.description（compliance-patches）と同じ「契約まで」に揃える",
     },
   ],
 };

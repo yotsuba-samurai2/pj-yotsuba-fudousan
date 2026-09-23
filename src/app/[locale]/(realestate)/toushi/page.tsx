@@ -4,6 +4,7 @@
 // en/zh-tw/zh=監修前ドラフト（2026-07-11）。繁体=台湾定訳（不動產・繼承・團體家屋・文京區）／zh=大陸表記。
 // serviceName（JSON-LD Service name）・href・画像パス・Placeholder reason＝ja固定。金額・率＝全ロケール不変。
 import type { Metadata } from "next";
+import { PropertySearchSampleTeaser } from "@/components/shared/PropertySearchSample";
 import { buildPageMetadata, BCP47_BY_LOCALE } from "@/lib/seo";
 import { getRequestLocale } from "@/lib/getRequestLocale";
 import { addLocalePrefix } from "@/lib/locale";
@@ -135,8 +136,16 @@ const COPY: Record<LangCode, ToushiCopy> = {
               <Link href={addLocalePrefix("/toushi/group-home", locale)} className="text-primary underline">くわしく</Link>
             </li>
             <li>
+              <strong>戸建て・空き家をグループホームに貸す（大家さん向け）</strong>——貸す側が最初に知っておきたいこと →{" "}
+              <Link href={addLocalePrefix("/column/kodate-akiya-group-home-ni-kasu", locale)} className="text-primary underline">くわしく</Link>
+            </li>
+            <li>
               <strong>放課後等デイサービス</strong>——用途地域・1階・面積・採光 →{" "}
               <Link href={addLocalePrefix("/column/houkago-day-bukken-youto-chiiki-1kai", locale)} className="text-primary underline">くわしく</Link>
+            </li>
+            <li>
+              <strong>学童保育（放課後児童クラブ）</strong>——用途地域・面積・避難経路の目安 →{" "}
+              <Link href={addLocalePrefix("/column/gakudou-houkago-jido-club-bukken-youken", locale)} className="text-primary underline">くわしく</Link>
             </li>
             <li>
               <strong>小規模保育事業</strong>——用途地域と面積 →{" "}
@@ -293,6 +302,10 @@ const COPY: Record<LangCode, ToushiCopy> = {
               <Link href={addLocalePrefix("/column/houkago-day-bukken-youto-chiiki-1kai", locale)} className="text-primary underline">Read more</Link>
             </li>
             <li>
+              <strong>After-school children’s clubs (gakudo)</strong>—use district, floor area and evacuation routes →{" "}
+              <Link href={addLocalePrefix("/column/gakudou-houkago-jido-club-bukken-youken", locale)} className="text-primary underline">Read more</Link>
+            </li>
+            <li>
               <strong>Small-scale childcare</strong>—use district and floor area →{" "}
               <Link href={addLocalePrefix("/column/hoiku-shoukibo-bukken-youto-chiiki", locale)} className="text-primary underline">Read more</Link>
             </li>
@@ -441,6 +454,10 @@ const COPY: Record<LangCode, ToushiCopy> = {
             <li>
               <strong>放課後兒童日間服務</strong>——用途地域・1樓・面積・採光 →{" "}
               <Link href={addLocalePrefix("/column/houkago-day-bukken-youto-chiiki-1kai", locale)} className="text-primary underline">詳細</Link>
+            </li>
+            <li>
+              <strong>學童保育（放課後兒童俱樂部）</strong>——用途地域・面積・避難動線 →{" "}
+              <Link href={addLocalePrefix("/column/gakudou-houkago-jido-club-bukken-youken", locale)} className="text-primary underline">詳細</Link>
             </li>
             <li>
               <strong>小規模保育事業</strong>——用途地域與面積 →{" "}
@@ -593,6 +610,10 @@ const COPY: Record<LangCode, ToushiCopy> = {
               <Link href={addLocalePrefix("/column/houkago-day-bukken-youto-chiiki-1kai", locale)} className="text-primary underline">详情</Link>
             </li>
             <li>
+              <strong>学童保育（放学后儿童俱乐部）</strong>——用途地域・面积・避难动线 →{" "}
+              <Link href={addLocalePrefix("/column/gakudou-houkago-jido-club-bukken-youken", locale)} className="text-primary underline">详情</Link>
+            </li>
+            <li>
               <strong>小规模保育事业</strong>——用途地域与面积 →{" "}
               <Link href={addLocalePrefix("/column/hoiku-shoukibo-bukken-youto-chiiki", locale)} className="text-primary underline">详情</Link>
             </li>
@@ -701,6 +722,7 @@ export default async function Page() {
       authorBio={c.authorBio}
       ctaVariant="property"
     >
+      <PropertySearchSampleTeaser kind="investment" locale={locale} page="/toushi" />
       {c.sections(locale)}
       {/* FAQPage JSON-LD＝B-4の例外（浦松承認）。ja設問はB-3の40問を参照＝サイト内で文言一致。
           §C（2026-07-20）：en/zh-tw/zh も c.faq を渡して全ロケール表示。inLanguage は hreflang と同一。 */}

@@ -34,6 +34,7 @@
 //   （本文強化は 2026-07-22／07-24／07-25 に3回実施済みで引用×が続いており、同じ段階を4度目に触らない）。
 //   ※この欠陥が未索引の原因であることは未検証（確定にはGSCの重複レポートが要るが、AIはGSCを操作しない）。
 import type { Metadata } from "next";
+import { PropertySearchSampleTeaser } from "@/components/shared/PropertySearchSample";
 import Link from "next/link";
 import { buildPageMetadata } from "@/lib/seo";
 import { RealestateServicePage, ReH2 } from "@/components/shared/RealestateServicePage";
@@ -134,6 +135,7 @@ export default async function Page() {
       ]}
       crossLinkLead="会社設立の書類・許認可は、関連事業の四葉行政書士事務所のページで詳しく解説しています。"
     >
+      <PropertySearchSampleTeaser kind="office" page="/office" />
       {/* §1 本店所在地とオフィス。数値・期間の断定なし */}
       <div>
         <ReH2>会社設立とオフィス探しは、同時に動く</ReH2>

@@ -355,7 +355,7 @@ export const LEGAL_MEMBER_OF = [
  *   - Wikidata Q141252134（2026-09-02 浦松アカウントで作成。ラベル4言語・P31 個人事業・
  *     P112/P127 浦松 Q139738129・P571 2026-09-01・P463 東京都社会保険労務士会／全国社会保険労務士会連合会。
  *     四葉行政書士事務所 Q139738259 と同じ型。親子・包含関係は結んでいない）
- *   - GBP は未作成＝作成後に GBP_URL.labor（office-public.ts の LABOR_GBP_CID）で自動的に入る
+ *   - GBP＝2026-09-16 オーナー確認済み。GBP_URL.labor（office-public.ts の LABOR_GBP_CID）から入る
  *   - 士業ドットコムの事務所単体ページは無い（浦松個人ページは Person.sameAs 経由で接続する）
  *
  * 【重要・2026-09-01の事故】この定数が無かったため OrganizationJsonLd の分岐が
@@ -404,7 +404,7 @@ export type BusinessSEOConfig = {
   ogImageHeight?: number;
   /** JSON-LDのlogo/image用・正方形ロゴ（ルート相対。SNS共有用ogImageとは独立＝ogImage値は変更しない） */
   squareLogo?: string;
-  /** GBP直リンク（JSON-LD hasMap・地図リンク用）。正本=office-public.tsのGBP_URL。labor＝GBP未整備のため未設定 */
+  /** GBP直リンク（JSON-LD hasMap・地図リンク用）。正本=office-public.tsのGBP_URL（3事業体とも設定済み・2026-09-17） */
   gbpUrl?: string;
   columnBasePath: string;
   /** 同名他社との識別用の別名（JSON-LD alternateName）。未設定＝name のみ */
@@ -676,7 +676,11 @@ export function buildPageMetadata({
     title,
     description,
     url,
-    siteName: biz?.name ?? "四葉グループ",
+    // 2026-09-17 浦松決定：ドメインのホームページ（path "/"）だけ og:site_name を「四葉グループ」にする。
+    // Googleのサイト名はホームページの WebSite 構造化データ・og:site_name・title の一貫性で決まる
+    // （公式：ホームページ全体で一貫したサイト名を使う）。WebSiteJsonLd の name と一致させる。
+    // 下層ページ（不動産・行政書士・社労士）の og:site_name は従来どおり事業体名（SNS共有の見え方を維持）。
+    siteName: path === "/" ? SHARED_ORG_INFO.name : (biz?.name ?? SHARED_ORG_INFO.name),
     locale: OG_LOCALES[locale] ?? "ja_JP",
     type,
     ...(hasImage

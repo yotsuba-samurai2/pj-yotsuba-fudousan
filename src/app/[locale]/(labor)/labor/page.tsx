@@ -1,3 +1,4 @@
+import { CustomerVoicesPreview } from "@/components/shared/CustomerVoices";
 import Image from "next/image";
 // /labor（型F・社労士トップ・開業版）＝原稿_社労士 #1
 // JSON-LD＝layoutの OrganizationJsonLd（ProfessionalService）＋WebSiteJsonLd が出力済み＝重複出力しない。
@@ -11,7 +12,7 @@ import { LaborPlanPricing } from "@/components/labor/LaborPlanPricing";
 import { LaborSetupComparison } from "@/components/labor/LaborSetupComparison";
 import { LABOR_SERVICE_COPY, getLaborPlanFaqs } from "@/lib/labor/service-copy";
 import { LABOR_ENGAGEMENT_COPY } from "@/lib/labor/engagement-copy";
-import { LaborEngagementCtas, LaborEngagementComparison } from "@/components/labor/LaborEngagement";
+import { LaborEngagementCtas } from "@/components/labor/LaborEngagement";
 import { LaborTopHero, LaborRequestMethods } from "@/components/labor/LaborTopIntro";
 import warmStyles from "@/components/labor/LaborWarm.module.css";
 import { LaborWorkflowBanner } from "@/components/labor/LaborWorkflow";
@@ -506,10 +507,9 @@ export default async function LaborTopPage() {
     <>
       <LaborTopHero locale={locale} />
 
-      <div className={warmStyles.content}>
+      <div className={`${warmStyles.content} defer-page-sections`}>
         <LaborRequestMethods locale={locale} />
         <LaborWorkflowBanner locale={locale} />
-        <div className="mt-14"><LaborEngagementComparison locale={locale} /></div>
         <section id="advisory-plan" className="mt-12 scroll-mt-24 space-y-6">
           <LaborPlanPricing locale={locale} />
           <LaborSetupComparison locale={locale} headingLevel="h3" />
@@ -653,6 +653,8 @@ export default async function LaborTopPage() {
             ))}
           </ul>
         </section>
+
+        <CustomerVoicesPreview businessKey="labor" locale={locale} />
 
         <div className="mt-10"><Faq bare items={[...e.faqs, getLaborPlanFaqs(locale)[7]]} heading={v.faq} ariaLabel={v.faq} /></div>
 

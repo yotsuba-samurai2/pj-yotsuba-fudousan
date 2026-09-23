@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { getColumnBySlug, getColumns, getLocalizedColumn, getAllSlugs, isLocaleAllowed, pickRelatedColumns } from "@/lib/columns";
+import { getColumnBySlug, getColumns, getLocalizedColumn, isLocaleAllowed, pickRelatedColumns } from "@/lib/columns";
 import { buildPageMetadata } from "@/lib/seo";
 import { getRequestLocale } from "@/lib/getRequestLocale";
 import { BlogPostingJsonLd } from "@/components/seo/BlogPostingJsonLd";
@@ -8,6 +8,7 @@ import { FAQJsonLd } from "@/components/seo/FAQJsonLd";
 import { SpeakableJsonLd } from "@/components/seo/SpeakableJsonLd";
 import { CtaBand } from "@/components/shared/CtaBand";
 import { resolveRealestateColumnCta } from "@/lib/column-shared";
+import { getColumnIllustrationAlt, resolveColumnIllustration } from "@/lib/column-illustrations";
 
 import type { Metadata } from "next";
 import type { LangCode } from "@/config/languages";
@@ -18,9 +19,12 @@ type Props = {
   params: Promise<{ slug: string }>;
 };
 
-export async function generateStaticParams() {
-  const slugs = await getAllSlugs();
-  return slugs.map((slug) => ({ slug }));
+// コラムはDBの記事でコードのデプロイと独立に増えるため、詳細はオンデマンド生成にする
+// （物件詳細と同じ）。全記事×4言語をビルドのたびに事前生成すると、東京のDBへの往復が
+// 約1,400ページ分かかり、Vercel のビルドが約30分になっていた（2026-09-23）。
+// 生成後は [locale]/layout.tsx の revalidate（1時間）と /api/admin/revalidate で更新される。
+export function generateStaticParams() {
+  return [];
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -30,6 +34,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const locale: LangCode = await getRequestLocale();
   if (!isLocaleAllowed(base, locale)) return {};
   const col = getLocalizedColumn(base, locale);
+  const illustration = resolveColumnIllustration(base);
   return buildPageMetadata({
     businessKey: "realestate",
     title: col.title,
@@ -40,6 +45,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     publishedTime: col.date,
     modifiedTime: col.modifiedDate ?? col.date,
     section: col.category,
+    image: illustration.src,
     locale,
     // hreflang を公開ロケールのみに限定（未公開ロケールの404 URLをGoogleに広告しない）。
     // locales 未設定＝全ロケール許可（後方互換・isLocaleAllowed と同じ判定）。
@@ -55,6 +61,11 @@ export default async function ColumnDetailPage({ params }: Props) {
   const locale: LangCode = await getRequestLocale();
   if (!isLocaleAllowed(base, locale)) notFound();
   const col = getLocalizedColumn(base, locale);
+  const resolvedIllustration = resolveColumnIllustration(base);
+  const illustration = {
+    ...resolvedIllustration,
+    alt: getColumnIllustrationAlt(resolvedIllustration, locale, col.title),
+  };
 
   // Find prev/next
   const allColumns = await getColumns(locale);
@@ -80,7 +91,12 @@ export default async function ColumnDetailPage({ params }: Props) {
 
   return (
     <div>
-      <BlogPostingJsonLd businessKey="realestate" column={col} locale={locale} />
+      <BlogPostingJsonLd
+        businessKey="realestate"
+        column={col}
+        image={illustration.src}
+        locale={locale}
+      />
       <BreadcrumbJsonLd businessKey="realestate" items={[
         { name: "ホーム", href: "/" },
         { name: "コラム", href: "/column" },
@@ -88,7 +104,13 @@ export default async function ColumnDetailPage({ params }: Props) {
       ]} />
       {col.faq && col.faq.length > 0 && <FAQJsonLd items={col.faq} />}
       <SpeakableJsonLd businessKey="realestate" path={`/column/${col.slug}`} headline={col.title} summary={col.excerpt} />
-      <ColumnDetailContent col={col} prev={prev} next={next} related={related} />
+      <ColumnDetailContent
+        col={col}
+        prev={prev}
+        next={next}
+        related={related}
+        illustration={illustration}
+      />
       {/* ★2026-08-13 追加：コラム記事の末尾にCTA帯を置く。
           3レーンとも column/[slug]・column・about にだけ CtaBand が無く、
           PCではLINEへの導線が出ていなかった（SPは MobileStickyBar があるので出る）。

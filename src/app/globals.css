@@ -244,3 +244,24 @@ html {
   line-gap-override: 0%;
   size-adjust: 104.76%;
 }
+
+/* Keep offscreen mobile content searchable without laying it all out during
+   the hero paint. Desktop decorations depend on the full document height;
+   placeholder heights there would move visible background artwork (CLS). */
+@media screen and (max-width: 767px) {
+  .defer-page-sections > section,
+  .defer-footer {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 480px;
+  }
+  .defer-footer {
+    contain-intrinsic-size: auto 1000px;
+  }
+}
+@media print {
+  .defer-page-sections > section,
+  .defer-footer {
+    content-visibility: visible;
+    contain-intrinsic-size: none;
+  }
+}

@@ -43,9 +43,9 @@ export function LinkaFab({
       className={`fixed bottom-4 right-4 z-30 md:bottom-6 md:right-6 max-md:bottom-[112px] ${contactStyles.linkaOffset}`}
     >
       {open ? (
-        <div ref={panel} role="dialog" aria-label={t.panelTitle} onKeyDown={(event) => { if (event.key === "Escape") { event.stopPropagation(); close(); } }} className="flex h-[min(600px,75dvh)] w-[min(24rem,92vw)] flex-col overflow-hidden rounded-2xl border border-border bg-surface shadow-2xl">
+        <div ref={panel} role="dialog" aria-label={t.panelTitle} onKeyDown={(event) => { if (event.key === "Escape") { event.stopPropagation(); close(); } }} className="flex h-[min(600px,75dvh)] w-[min(24rem,calc(100vw-2rem))] flex-col overflow-hidden rounded-2xl border border-border bg-surface shadow-2xl">
           {/* ヘッダー */}
-          <div className="flex items-center gap-2 bg-primary-dark px-3 py-2.5 text-white">
+          <div className="flex shrink-0 items-center gap-2 bg-primary-dark px-3 py-2.5 text-white">
             <Image
               src={linkaImg}
               alt="LINKA"
@@ -64,7 +64,9 @@ export function LinkaFab({
             </button>
           </div>
           {/* 本文＝assistant-ui Thread（AIはサーバ /api/linka） */}
-          <LazyLinkaWidget site={businessKey} mode="concierge" className="min-h-0 flex-1" />
+          <div className="min-h-0 flex-1 overflow-y-auto">
+            <LazyLinkaWidget site={businessKey} mode="concierge" className="h-full" />
+          </div>
         </div>
       ) : (
         /* 折りたたみ＝SP84px／PC168px（2026-07-10浦松指示：PCは2倍・チップ文字はPC+5pt） */

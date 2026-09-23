@@ -148,3 +148,16 @@ export async function upsertPropertyBySlug(
   const id = await createProperty({ ...data, slug });
   return { id, action: "created" };
 }
+
+/** Optimistic update used by rental automation; never overwrite a concurrent admin edit. */
+export async function updatePropertyIfUnchanged(
+  slug: string,
+  expectedUpdatedAt: string,
+  data: Partial<PropertyInput>,
+): Promise<boolean> {
+  const result = await prisma.property.updateMany({
+    where: { slug, updatedAt: new Date(expectedUpdatedAt) },
+    data: toUpdateInput(data),
+  });
+  return result.count === 1;
+}

@@ -12,7 +12,7 @@ import {
 import {
   isStaleListing,
   daysSince,
-  formatPriceYen,
+  formatPropertyPrice,
   STATUS_LABELS,
   CATEGORY_LABELS,
   DEAL_TYPE_LABELS,
@@ -83,7 +83,7 @@ export default function BukkenListPage() {
     setBusy(p.id);
     try {
       const todayStr = new Date().toISOString().slice(0, 10);
-      await updateBukken(p.id, { status: "closed", infoUpdatedAt: todayStr });
+      await updateBukken(p.id, { status: "closed", infoUpdatedAt: todayStr }, p.updatedAt);
       await revalidateBukken(p.slug);
       setProperties((prev) =>
         prev.map((x) => (x.id === p.id ? { ...x, status: "closed" } : x)),
@@ -136,6 +136,7 @@ export default function BukkenListPage() {
       )}
 
       <div className="mb-4 flex flex-wrap items-center gap-3">
+        <Link href="/admin/bukken/school-rentals" className="rounded border px-3 py-2 text-sm text-primary">学区別の募集一覧</Link>
         <div className="flex gap-1 rounded-lg bg-surface-dim p-1">
           {statuses.map((s) => (
             <button
@@ -151,9 +152,10 @@ export default function BukkenListPage() {
             </button>
           ))}
         </div>
+        <Link href="/admin/bukken/import" className="ml-auto rounded-lg border border-border px-4 py-2 text-sm text-primary">賃貸取込・掲載確認</Link>
         <Link
           href="/admin/bukken/new"
-          className="relative ml-auto overflow-hidden rounded-lg px-5 py-2 text-sm font-semibold text-text transition-all duration-200"
+          className="relative overflow-hidden rounded-lg px-5 py-2 text-sm font-semibold text-text transition-all duration-200"
         >
           <span className="pointer-events-none absolute inset-0 rounded-lg gradient-btn" aria-hidden="true" />
           <span className="relative">新規登録</span>
@@ -226,7 +228,7 @@ export default function BukkenListPage() {
                     {CATEGORY_LABELS[p.category]}
                   </td>
                   <td className="whitespace-nowrap px-4 py-3 text-xs tabular-nums text-text-muted">
-                    {formatPriceYen(p.priceYen)}
+                    {formatPropertyPrice(p)}
                   </td>
                   <td className="whitespace-nowrap px-4 py-3">
                     <div className="flex items-center gap-1">

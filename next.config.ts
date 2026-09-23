@@ -3,22 +3,27 @@ import type { NextConfig } from "next";
 const securityHeaders = [
   { key: "X-DNS-Prefetch-Control", value: "on" },
   { key: "X-Content-Type-Options", value: "nosniff" },
+  { key: "X-Frame-Options", value: "SAMEORIGIN" },
+  // These directives preserve static/ISR pages, inline Next.js bootstrap and
+  // JSON-LD, analytics, maps and the AI widget. This is not a script allowlist.
+  { key: "Content-Security-Policy", value: "base-uri 'self'; object-src 'none'; frame-ancestors 'self'" },
   { key: "Referrer-Policy", value: "origin-when-cross-origin" },
   { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=()" },
 ];
 
 const nextConfig: NextConfig = {
   images: {
-    // The labor hero uses a lighter quality; existing images keep the default 75.
+    // Allow opt-in lighter hero images; other images keep the default 75.
     qualities: [60, 75],
     // 小型端末のDPR 1でも640pxを取得していたため420pxを追加。
     // 高DPR端末・PC用の標準サイズは維持する。
     deviceSizes: [420, 640, 750, 828, 1080, 1200, 1920, 2048, 3840],
   },
+  // app/[locale]/ の値は任意のServer Componentから next/root-params で読む
+  // （getRequestLocale.ts）。リクエストAPI（headers/cookies）と違い静的生成と両立する。
+  // ※Next 16.3 で next/root-params が既定で使えるようになり、
+  //   experimental.rootParams は不要（残すと非推奨警告＋型エラー）。
   experimental: {
-    // app/[locale]/ の値を任意のServer Componentから next/root-params で読むため
-    // （getRequestLocale.ts）。リクエストAPI（headers/cookies）と違い静的生成と両立する。
-    rootParams: true,
     // ローカルのビルド検証用ノブ：prisma dev の使い捨てDBは最大10接続のため、
     // NEXT_BUILD_WORKERS=2 等で静的生成ワーカー数を絞る（未設定＝Vercel本番はデフォルト）。
     ...(process.env.NEXT_BUILD_WORKERS

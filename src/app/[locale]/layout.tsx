@@ -60,7 +60,9 @@ export const metadata: Metadata = {
     default: "四葉グループ",
     template: "%s | 四葉グループ",
   },
-  description: "四葉グループ — 不動産・行政書士の専門家グループ。",
+  description: process.env.NEXT_PUBLIC_SR_LAUNCHED === "true"
+    ? "四葉グループ — 不動産・行政書士・社会保険労務士の専門家グループ。"
+    : "四葉グループ — 不動産・行政書士の専門家グループ。",
   icons: {
     icon: [
       { url: "/icon-192.png", sizes: "192x192", type: "image/png" },

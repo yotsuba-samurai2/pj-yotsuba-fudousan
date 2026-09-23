@@ -5,6 +5,8 @@
 // 物件ごとの入力なしで自動表示する。値の正本は BUSINESS_SEO / SHARED_ORG_INFO（seo.ts）。
 import { BUSINESS_SEO, SHARED_ORG_INFO } from "@/lib/seo";
 import type { PublicProperty } from "@/lib/property-shared";
+import { propertyUi } from "@/lib/property-i18n";
+import type { LangCode } from "@/config/languages";
 
 /**
  * 所属団体名及び公正取引協議会加盟事業者である旨（別表の必須表示・項番5）。
@@ -18,31 +20,33 @@ export const PROPERTY_MEMBERSHIP_LINES = [
   "首都圏不動産公正取引協議会 加盟",
 ] as const;
 
-export function PropertyLegalBlock({ property }: { property: PublicProperty }) {
+export function PropertyLegalBlock({ property, locale = "ja" }: { property: Pick<PublicProperty, "publishedAt" | "infoUpdatedAt" | "nextUpdateAt">; locale?: LangCode }) {
+  const ui = propertyUi(locale);
+  const L = ui.legal;
   const biz = BUSINESS_SEO.realestate;
   const license = biz.identifiers?.find(
     (i) => i.propertyID === "宅地建物取引業免許番号",
   )?.value;
 
   return (
-    <section
-      aria-label="広告主に関する事項"
-      className="mt-8 rounded-xl border border-border bg-surface p-4 text-xs leading-relaxed text-text-muted"
-    >
+    <section className="mt-10">
+      <h2 className="font-serif text-xl font-semibold text-ink">{ui.companyHeading}</h2>
+      <div className="mt-3 rounded-xl border border-border bg-surface p-4 text-xs leading-relaxed text-text-muted">
       <dl className="grid gap-x-6 gap-y-1 sm:grid-cols-[auto_1fr]">
-        <dt className="font-medium">商号</dt>
+        <dt className="font-medium">{L.name}</dt>
         <dd>{biz.legalName}</dd>
-        <dt className="font-medium">事務所所在地</dt>
+        <dt className="font-medium">{L.address}</dt>
         <dd>
           〒{SHARED_ORG_INFO.postalCode} {SHARED_ORG_INFO.addressRegion}
           {SHARED_ORG_INFO.addressLocality}
           {SHARED_ORG_INFO.streetAddress}
         </dd>
-        <dt className="font-medium">電話番号</dt>
+        <dt className="font-medium">{L.tel}</dt>
         <dd>{SHARED_ORG_INFO.telephone}</dd>
-        <dt className="font-medium">免許番号</dt>
-        <dd>宅地建物取引業 {license}</dd>
-        <dt className="font-medium">所属団体</dt>
+        <dt className="font-medium">{L.license}</dt>
+        {/* 免許番号・商号・所属団体名は固有表記として日本語を維持 */}
+        <dd>{L.licensePrefix} {license}</dd>
+        <dt className="font-medium">{L.membership}</dt>
         <dd>
           {PROPERTY_MEMBERSHIP_LINES.map((line) => (
             <span key={line} className="block">
@@ -50,13 +54,14 @@ export function PropertyLegalBlock({ property }: { property: PublicProperty }) {
             </span>
           ))}
         </dd>
-        <dt className="font-medium">情報公開日</dt>
+        <dt className="font-medium">{L.published}</dt>
         <dd>{property.publishedAt ?? property.infoUpdatedAt}</dd>
-        <dt className="font-medium">情報更新日</dt>
+        <dt className="font-medium">{L.updated}</dt>
         <dd>{property.infoUpdatedAt}</dd>
-        <dt className="font-medium">次回更新予定日</dt>
+        <dt className="font-medium">{L.nextUpdate}</dt>
         <dd>{property.nextUpdateAt}</dd>
       </dl>
+      </div>
     </section>
   );
 }

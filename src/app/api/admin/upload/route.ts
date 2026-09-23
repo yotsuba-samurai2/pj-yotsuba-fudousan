@@ -1,3 +1,4 @@
+import { inspectOriginalImage, ImageQualityError } from "@/lib/rental-import/image-quality";
 import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
 import { verifyAdminRequest, AuthError } from "@/lib/api-auth";
@@ -24,6 +25,7 @@ const MAX_SIZE = 10 * 1024 * 1024; // 10MB
 const ALLOWED_FOLDERS = ["columns", "bukken"] as const;
 
 function handleError(err: unknown) {
+  if (err instanceof ImageQualityError) return NextResponse.json({ error: err.message }, { status: 422 });
   if (err instanceof AuthError) {
     return NextResponse.json({ error: err.message }, { status: err.status });
   }
@@ -76,13 +78,14 @@ export async function POST(req: NextRequest) {
         : "columns";
 
     const yyyymm = new Date().toISOString().slice(0, 7).replace("-", "");
-    const path = `${folder}/${yyyymm}/${crypto.randomUUID()}.${ext}`;
     const bytes = new Uint8Array(await file.arrayBuffer());
+    const media = folder === "bukken" ? await inspectOriginalImage(bytes) : null;
+    const path = media ? `bukken/originals/${media.pixelHash}.${media.ext}` : `${folder}/${yyyymm}/${crypto.randomUUID()}.${ext}`;
 
     const { error } = await supabase.storage.from(BUCKET).upload(path, bytes, {
-      contentType: file.type,
+      contentType: media?.contentType ?? file.type,
       cacheControl: "31536000",
-      upsert: false,
+      upsert: folder === "bukken",
     });
     if (error) {
       console.error("Supabase Storage upload error:", error);

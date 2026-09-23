@@ -6,7 +6,7 @@
 - **BaaS**: Supabase (Auth + DB)
 - **Validation**: Zod
 - **Package Manager**: npm
-- **Hosting**: Firebase App Hosting（`apphosting.yaml`）
+- **Hosting**: Vercel（本番 luck428.com・ビルドは iad1＝米国東部・2コア。DB の Supabase は東京）。`apphosting.yaml` は Firebase App Hosting 時代の残置で、本番には使っていない
 
 ---
 

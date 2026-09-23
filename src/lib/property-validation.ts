@@ -19,6 +19,7 @@ const accessSchema = z.object({
 const imageSchema = z.object({
   url: z.string().min(1),
   alt: z.string().min(1),
+  kind: z.enum(["photo", "floorplan"]).optional(),
 });
 
 const leasehold = z.string().min(1).optional();
@@ -51,7 +52,7 @@ const condoSpec = z.object({
   floors: z.string().min(1),
   floorLocated: z.string().min(1),
   exclusiveAreaSqm: z.number().positive().finite(),
-  balconyAreaSqm: areaSqm,
+  balconyAreaSqm: z.union([areaSqm, z.literal("不明")]),
   builtYm: ymOrText,
   deliveryYm: ymOrText,
   managementFee: z.string().min(1),
@@ -90,18 +91,46 @@ const businessBuildingSpec = z.object({
   leasehold,
 });
 
+export const rentalSpecSchema = z.object({
+  dealType: z.literal("rental"),
+  availabilityExpiresAt: z.iso.datetime({ offset: true }).optional(),
+  exclusiveAreaSqm: z.number().positive().finite(),
+  buildingType: z.string().trim().min(1),
+  accessText: z.string().trim().min(1),
+  layout: z.string().trim().min(1),
+  structure: z.string().trim().min(1),
+  floors: z.string().trim().min(1),
+  floorLocated: z.string().trim().min(1),
+  builtYm: z.string().trim().min(1),
+  deliveryYm: z.string().trim().min(1),
+  managementFee: z.string().trim().min(1),
+  deposit: z.string().trim().min(1),
+  keyMoney: z.string().trim().min(1),
+  guaranteeDeposit: z.string().trim().min(1),
+  renewalFee: z.string().trim().min(1),
+  insurance: z.string().trim().min(1),
+  guarantor: z.string().trim().min(1),
+  otherFees: z.string().trim().min(1),
+  contractType: z.string().trim().min(1),
+  contractPeriod: z.string().trim().min(1),
+  conditions: z.string().trim().min(1),
+});
+
 export const propertySpecSchema = z.discriminatedUnion("dealType", [
   landSpec,
   houseSpec,
   condoSpec,
   wholeBuildingSpec,
   businessBuildingSpec,
+  rentalSpecSchema,
 ]);
 
 const translationSchema = z.object({
   title: z.string(),
   description: z.string(),
   locationText: z.string().optional(),
+  priceNote: z.string().optional(),
+  spec: z.record(z.string(), z.string()).optional(),
 });
 
 const isoDate = z.string().regex(/^\d{4}-\d{2}-\d{2}$/);
@@ -109,7 +138,7 @@ const isoDate = z.string().regex(/^\d{4}-\d{2}-\d{2}$/);
 const propertyBaseSchema = z.object({
     slug: z.string().min(1).regex(/^[a-z0-9-]+$/, "slugは半角英数とハイフンのみ"),
     status: z.enum(["draft", "published", "closed"]),
-    dealType: z.enum(["land", "house", "condo", "wholeBuilding", "businessBuilding"]),
+    dealType: z.enum(["land", "house", "condo", "wholeBuilding", "businessBuilding", "rental"]),
     category: z.enum(["gh", "jigyo", "souzoku", "toushi", "other"]),
     tradeMode: z.enum(["seller", "agent", "broker"]),
     title: z.string().min(1),
@@ -118,7 +147,7 @@ const propertyBaseSchema = z.object({
     locationText: z.string().min(1),
     access: z.array(accessSchema),
     spec: propertySpecSchema,
-    images: z.array(imageSchema),
+    images: z.array(imageSchema).refine(images => new Set(images.map(i => i.url)).size === images.length, "同じ画像が重複しています"),
     description: z.string().min(1),
     publishedAt: isoDate.optional(),
     infoUpdatedAt: isoDate,

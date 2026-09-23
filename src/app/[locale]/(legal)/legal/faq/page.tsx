@@ -267,7 +267,7 @@ export default async function Page() {
     <>
       <Breadcrumb items={[{ name: c.breadcrumbHome, href: "/legal" }, { name: c.breadcrumbCurrent }]} />
       {/* FAQPage JSON-LD はこの専用ページのみ出力（委任§4-6） */}
-      <Faq items={c.items} heading={c.heading} withJsonLd />
+      <Faq items={c.items} heading={c.heading} headingLevel="h1" withJsonLd />
       <div className="mx-auto max-w-3xl px-4 pb-8">
         {/* 署名（E-E-A-T・原稿サイト共通）＝ja固定のまま残置。社労士資格の記載を含むためCOPY化（翻訳）は委任者判断待ち（CtaBand同様フェーズI残課題） */}
         <aside className="mt-2 flex items-start gap-3 rounded-xl border border-border bg-surface p-4">

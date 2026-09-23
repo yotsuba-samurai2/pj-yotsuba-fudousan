@@ -125,7 +125,7 @@ const fetchPublished = cache(async (business: BusinessKey, locale: LangCode): Pr
   }
 });
 
-/** sitemap / generateStaticParams は全公開URLを維持し、本文・翻訳は取得しない。 */
+/** sitemap は全公開URLを維持し、本文・翻訳は取得しない。 */
 const fetchAllPublished = cache(async (business: BusinessKey): Promise<ColumnIndexEntry[]> => {
   const result: ColumnIndexEntry[] = [];
   for (let skip = 0; ; skip += INDEX_BATCH_SIZE) {
@@ -170,14 +170,9 @@ export async function getColumnBySlug(slug: string): Promise<Column | undefined>
   return fetchPublishedBySlug("realestate", slug);
 }
 
-/** sitemap.ts・generateStaticParams専用（全ロケール横断） */
+/** sitemap.ts 専用（全ロケール横断） */
 export async function getAllColumnsAllLocales(): Promise<ColumnIndexEntry[]> {
   return fetchAllPublished("realestate");
-}
-
-export async function getAllSlugs(): Promise<string[]> {
-  const cols = await fetchAllPublished("realestate");
-  return cols.map((c) => c.slug);
 }
 
 // ── Legal ──
@@ -194,14 +189,9 @@ export async function getLegalColumnBySlug(slug: string): Promise<Column | undef
   return fetchPublishedBySlug("legal", slug);
 }
 
-/** sitemap.ts・generateStaticParams専用（全ロケール横断） */
+/** sitemap.ts 専用（全ロケール横断） */
 export async function getAllLegalColumnsAllLocales(): Promise<ColumnIndexEntry[]> {
   return fetchAllPublished("legal");
-}
-
-export async function getAllLegalSlugs(): Promise<string[]> {
-  const cols = await fetchAllPublished("legal");
-  return cols.map((c) => c.slug);
 }
 
 // ── Labor ──
@@ -216,11 +206,6 @@ export async function getLatestLaborColumns(n: number, locale: LangCode): Promis
 
 export async function getLaborColumnBySlug(slug: string): Promise<Column | undefined> {
   return fetchPublishedBySlug("labor", slug);
-}
-
-export async function getAllLaborSlugs(): Promise<string[]> {
-  const cols = await fetchAllPublished("labor");
-  return cols.map((c) => c.slug);
 }
 
 /** sitemap.ts 専用（全ロケール横断）。2026-08-09 追加＝labor が sitemap に載っていなかった */

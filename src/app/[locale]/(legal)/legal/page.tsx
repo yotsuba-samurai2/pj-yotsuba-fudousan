@@ -1,3 +1,4 @@
+import { CustomerVoicesPreview } from "@/components/shared/CustomerVoices";
 import Image from "next/image";
 // /legal（型F・士業トップ）＝原稿_行政書士 #10（D-4改修）＋フェーズI多言語化（2026-07-10）
 // 方式＝COPY: Record<LangCode,…>＋getRequestLocale（手本=HomePageContent b68871d）。Firestoreは書き換えない。
@@ -184,7 +185,7 @@ export default async function LegalPage() {
         </div>
       </section>
 
-      <main className="mx-auto max-w-5xl px-4">
+      <main className="defer-page-sections mx-auto max-w-5xl px-4">
         <section className="mt-10 max-w-3xl">
           <h2 className="font-serif text-2xl font-semibold text-ink">{v.visaTitle}</h2>
           <p className="mt-3 leading-relaxed text-text">{v.visa}</p>
@@ -269,6 +270,8 @@ export default async function LegalPage() {
             </Link>)}
           </div>
         </section>
+        <CustomerVoicesPreview businessKey="legal" locale={locale} />
+
         <div className="mt-10"><Faq bare items={faqs} heading={v.faqTitle} ariaLabel={v.faqTitle} withJsonLd inLanguage={BCP47_BY_LOCALE[locale]} /></div>
         <p className="mt-4 text-sm leading-relaxed text-text-muted">{v.disclaimer}</p>
 

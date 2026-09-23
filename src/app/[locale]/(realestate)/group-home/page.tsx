@@ -2,6 +2,7 @@
 // en/zh-tw/zh=監修前ドラフト（2026-07-18）。繁体=台湾定訳（障礙福祉・共同生活援助・不動產・文京區＝visa/shogai-fukushi等の既訳準拠）／zh=大陸表記（残障・无障碍系は既訳に合わせ「障礙/障碍」を統一）。
 // jaの表示文言・数値（居室7.43㎡・区分4以上8割・準備3〜6か月）は全ロケールで不変（指定基準の正確性最重要）。
 import type { Metadata } from "next";
+import { PropertySearchSampleTeaser } from "@/components/shared/PropertySearchSample";
 import { buildPageMetadata } from "@/lib/seo";
 import { getRequestLocale } from "@/lib/getRequestLocale";
 import type { LangCode } from "@/config/languages";
@@ -65,9 +66,11 @@ export async function generateMetadata(): Promise<Metadata> {
   });
 }
 
-export default function GroupHomePage() {
+export default async function GroupHomePage() {
+  const locale = await getRequestLocale();
   return (
     <>
+      <PropertySearchSampleTeaser kind="group-home" locale={locale} page="/group-home" />
       <GroupHomePageContent />
       {/* ★2026-08-13 追加：CTA帯（LINE・お問い合わせ・電話）。
           不動産の主力ページなのに CtaBand が無く、PCではLINEへの導線が出ていなかった

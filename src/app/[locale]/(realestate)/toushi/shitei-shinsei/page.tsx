@@ -9,6 +9,7 @@
 // FAQPage JSON-LD＝faqJa（B-3のQ19＋C-2新規3問）を参照（文字列コピー禁止＝表記ゆれ防止）。
 // 法人要件は「原則必要です」（2026-07-19浦松検収）。所要期間は断定せず「自治体により異なります」で統一。
 import type { Metadata } from "next";
+import { PropertySearchSampleTeaser } from "@/components/shared/PropertySearchSample";
 import Link from "next/link";
 import { buildPageMetadata } from "@/lib/seo";
 import { RealestateServicePage, ReH2 } from "@/components/shared/RealestateServicePage";
@@ -107,6 +108,7 @@ export default async function Page() {
       ]}
       crossLinkLead="指定申請の要件・流れは、関連事業の四葉行政書士事務所のページで詳しく解説しています。"
     >
+      <PropertySearchSampleTeaser kind="welfare" page="/toushi/shitei-shinsei" />
       {/* ─── C-2 本文5セクション（2026-07-19浦松検収済み草稿） ─── */}
       {/* §1 独占業務の根拠。根拠＝行政書士法1条の3第1項（官公署提出書類の作成を業とする）／19条1項（業務の制限）。
           条文全文は引用しない（タスク指定）。独占は「作成」＝「作成・提出は独占業務」と書かない（浦松検収）。

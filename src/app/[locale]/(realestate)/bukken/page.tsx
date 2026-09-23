@@ -1,20 +1,21 @@
+// Availability expiry must be evaluated on each request, even if the worker is offline.
+export const dynamic = "force-dynamic";
+
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getPublishedProperties, getLocalizedProperty } from "@/lib/properties";
-import {
-  formatPriceYen,
-  formatAccess,
-  CATEGORY_LABELS,
-  DEAL_TYPE_LABELS,
-  TRADE_MODE_LABELS,
-  type PropertyCategory,
-  type PublicProperty,
-} from "@/lib/property-shared";
-import { buildPageMetadata } from "@/lib/seo";
+import { type PropertyDealType } from "@/lib/property-shared";
+import { propertyUi } from "@/lib/property-i18n";
+import { buildPropertyItemListJsonLd } from "@/lib/property-jsonld";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { buildPageMetadata, canonicalUrl } from "@/lib/seo";
 import { getRequestLocale } from "@/lib/getRequestLocale";
 import { addLocalePrefix } from "@/lib/locale";
 import { Breadcrumb } from "@/components/shared/Breadcrumb";
 import { CtaBand } from "@/components/shared/CtaBand";
+import { PropertyCard } from "@/components/bukken/PropertyCard";
+import { SCHOOL_RENTAL_COPY, SCHOOL_RENTAL_INDEX_PATH } from "@/lib/rental-school-district";
+import { DistrictSourceNote } from "@/components/gakku/RentalSchoolDistrict";
 import type { LangCode } from "@/config/languages";
 
 /**
@@ -23,40 +24,51 @@ import type { LangCode } from "@/config/languages";
  * ページネーションなし（初期掲載3〜5件のシンプル構成＝委任プロンプト確定仕様）。
  */
 
-// ja先行公開（sitemap.ts の STATIC_REALESTATE と必ず一致させる）
-const PAGE_LOCALES: LangCode[] = ["ja"];
+// 2026-09-16：ja先行→4ロケール公開へ。UI文言（COPY）は当初から4ロケール分あり、
+// 物件詳細（/bukken/[slug]）は物件ごとの翻訳有無で4ロケール出力済み。1件目が4言語で公開されたため
+// 一覧も揃える（sitemap.ts の STATIC_REALESTATE と必ず一致させる）
+const PAGE_LOCALES: LangCode[] = ["ja", "en", "zh-tw", "zh"];
 
-// カテゴリの表示順（勝ち筋優先）
-const CATEGORY_ORDER: PropertyCategory[] = ["gh", "jigyo", "souzoku", "toushi", "other"];
+// 物件コーナーの表示区分。業者向けの内部カテゴリ（GH・投資等）は公開見出しに出さず、
+// お客様が探す4種類に統一する。一棟マンションはマンション、事業用建物は戸建て側にまとめる。
+type ListingGroup = "rental" | "land" | "condo" | "house";
+const LISTING_GROUP_ORDER: ListingGroup[] = ["rental", "land", "condo", "house"];
+
+function listingGroup(dealType: PropertyDealType): ListingGroup {
+  if (dealType === "rental") return "rental";
+  if (dealType === "land") return "land";
+  if (dealType === "condo" || dealType === "wholeBuilding") return "condo";
+  return "house";
+}
 
 const COPY: Record<LangCode, { title: string; description: string; h1: string; lead: string; empty: string }> = {
   ja: {
     title: "取扱物件のご紹介",
     description:
-      "四葉不動産株式会社（東京都文京区・宅地建物取引業 東京都知事(1)第113304号）の取扱物件一覧。障害福祉グループホーム向け・事業用店舗・相続売却・投資用の売買物件をご紹介します。",
+      "四葉不動産株式会社（東京都文京区・宅地建物取引業 東京都知事(1)第113304号）の取扱物件一覧。賃貸・売地・マンション・戸建てをご紹介します。",
     h1: "取扱物件のご紹介",
-    lead: "現在ご紹介できる売買物件の一覧です。掲載していない物件のご相談・物件探しのご依頼も承ります。",
+    lead: "現在ご紹介できる売買・賃貸物件の一覧です。掲載していない物件のご相談・物件探しのご依頼も承ります。",
     empty: "現在ご紹介中の物件はありません。ご希望の条件をお聞かせいただければ、お探しします。",
   },
   en: {
     title: "Property Listings",
-    description: "Properties for sale handled by Yotsuba Real Estate (Bunkyo-ku, Tokyo).",
+    description: "Properties for sale and rent handled by Yotsuba Real Estate (Bunkyo-ku, Tokyo).",
     h1: "Property Listings",
-    lead: "Properties currently available for sale.",
+    lead: "Properties currently available for sale and rent.",
     empty: "No listings are available at the moment. Tell us what you are looking for and we will search for you.",
   },
   "zh-tw": {
     title: "物件介紹",
-    description: "四葉不動產株式會社（東京都文京區）的出售物件一覽。",
+    description: "四葉不動產株式會社（東京都文京區）的出售及出租物件一覽。",
     h1: "物件介紹",
-    lead: "目前可介紹的出售物件一覽。",
+    lead: "目前可介紹的出售及出租物件一覽。",
     empty: "目前沒有刊登中的物件。歡迎告訴我們您的需求，我們將為您尋找。",
   },
   zh: {
     title: "物件介绍",
-    description: "四叶不动产株式会社（东京都文京区）的出售物件一览。",
+    description: "四叶不动产株式会社（东京都文京区）的出售及出租物件一览。",
     h1: "物件介绍",
-    lead: "目前可介绍的出售物件一览。",
+    lead: "目前可介绍的出售及出租物件一览。",
     empty: "目前没有刊登中的物件。欢迎告诉我们您的需求，我们将为您寻找。",
   },
 };
@@ -74,63 +86,35 @@ export async function generateMetadata(): Promise<Metadata> {
   });
 }
 
-function PropertyCard({ p, locale }: { p: PublicProperty; locale: LangCode }) {
-  const hero = p.images[0];
-  return (
-    <Link
-      href={addLocalePrefix(`/bukken/${p.slug}`, locale)}
-      className="flex gap-4 rounded-xl border border-border bg-surface p-4 transition-colors hover:border-primary/40"
-    >
-      {hero ? (
-        // 画像はSupabase Storageの絶対URL＝next/image未設定のため素のimg（コラムと同方式）
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
-          src={hero.url}
-          alt={hero.alt}
-          width={160}
-          height={120}
-          className="h-24 w-32 flex-shrink-0 rounded-lg object-cover"
-        />
-      ) : (
-        <div className="flex h-24 w-32 flex-shrink-0 items-center justify-center rounded-lg bg-surface-dim text-xs text-text-muted">
-          No Image
-        </div>
-      )}
-      <div className="min-w-0">
-        <p className="flex flex-wrap gap-1 text-[10px]">
-          <span className="rounded-full bg-primary-tint px-2 py-0.5 font-medium text-primary">
-            {DEAL_TYPE_LABELS[p.dealType]}
-          </span>
-          <span className="rounded-full bg-surface-dim px-2 py-0.5 font-medium text-text-muted">
-            {TRADE_MODE_LABELS[p.tradeMode]}
-          </span>
-        </p>
-        <h3 className="mt-1 truncate text-sm font-semibold text-ink">{p.title}</h3>
-        <p className="mt-1 text-sm font-semibold text-primary">{formatPriceYen(p.priceYen)}</p>
-        <p className="mt-0.5 truncate text-xs text-text-muted">{p.locationText}</p>
-        {p.access[0] && (
-          <p className="truncate text-xs text-text-muted">{formatAccess(p.access[0])}</p>
-        )}
-      </div>
-    </Link>
-  );
-}
-
 export default async function BukkenListPage() {
   const locale = await getRequestLocale();
   const c = COPY[locale] ?? COPY.ja;
-  const properties = (await getPublishedProperties(locale)).map((p) =>
-    getLocalizedProperty(p, locale),
+  const ui = propertyUi(locale);
+  const visible = await getPublishedProperties(locale);
+  // 画面の並び（カテゴリ順→取得順）をそのまま ItemList の position に使う＝可視リストと一致させる
+  const properties = LISTING_GROUP_ORDER.flatMap((group) =>
+    visible.filter((p) => listingGroup(p.dealType) === group),
   );
 
   return (
     <>
-      <Breadcrumb items={[{ name: "ホーム", href: "/" }, { name: c.h1 }]} />
+      {properties.length > 0 && (
+        <JsonLd
+          data={buildPropertyItemListJsonLd(
+            properties.map((p) => ({ name: getLocalizedProperty(p, locale).title, url: canonicalUrl("realestate", `/bukken/${p.slug}`, locale) })),
+            canonicalUrl("realestate", "/bukken", locale),
+            locale,
+          )}
+        />
+      )}
+      <Breadcrumb items={[{ name: ui.home, href: "/" }, { name: c.h1 }]} />
       <article className="mx-auto max-w-3xl px-4 pb-16">
         <header className="pt-4">
           <h1 className="font-serif text-2xl font-semibold text-ink sm:text-3xl">{c.h1}</h1>
           <p className="mt-4 leading-relaxed text-text">{c.lead}</p>
         </header>
+
+        <Link href={addLocalePrefix(SCHOOL_RENTAL_INDEX_PATH, locale)} className="mt-6 block rounded-xl border border-primary/25 bg-primary-tint p-4 font-semibold text-primary">{SCHOOL_RENTAL_COPY[locale].indexTitle} →</Link>
 
         {properties.length === 0 ? (
           <p className="mt-8 rounded-xl border border-border bg-surface p-6 text-sm text-text-muted">
@@ -138,20 +122,21 @@ export default async function BukkenListPage() {
           </p>
         ) : (
           <div className="mt-8 space-y-10">
-            {CATEGORY_ORDER.filter((cat) =>
-              properties.some((p) => p.category === cat),
-            ).map((cat) => (
-              <section key={cat}>
+            {LISTING_GROUP_ORDER.filter((group) =>
+              properties.some((p) => listingGroup(p.dealType) === group),
+            ).map((group) => (
+              <section key={group}>
                 <h2 className="font-serif text-xl font-semibold text-ink">
-                  {CATEGORY_LABELS[cat]}
+                  {group === "house" && locale === "ja" ? "戸建て" : ui.dealType[group]}
                 </h2>
                 <div className="mt-3 space-y-3">
                   {properties
-                    .filter((p) => p.category === cat)
+                    .filter((p) => listingGroup(p.dealType) === group)
                     .map((p) => (
                       <PropertyCard key={p.slug} p={p} locale={locale} />
                     ))}
                 </div>
+                {group === "rental" && <DistrictSourceNote locale={locale} />}
               </section>
             ))}
           </div>

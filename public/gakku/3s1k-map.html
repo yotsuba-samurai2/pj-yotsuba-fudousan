@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>文京区20小学校の学区マップ</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--green:#1B4332;--ink:#1A1A1A;--muted:#5E6B63;--line:#D9DED9}
+  *{box-sizing:border-box}
+  html,body{margin:0;background:transparent;color:var(--ink);font-family:"Noto Sans JP",sans-serif;line-height:1.7}
+  button,a{-webkit-tap-highlight-color:transparent}
+  button:focus-visible,a:focus-visible{outline:3px solid #1B4332;outline-offset:3px}
+  #map{height:560px;border:1px solid var(--line);border-radius:6px;background:#EEF0EC;scroll-margin-top:90px}
+  #map[data-page-scroll="true"],#map[data-page-scroll="true"] .leaflet-pane,#map[data-page-scroll="true"] .leaflet-interactive,#map[data-page-scroll="true"] .leaflet-marker-icon{touch-action:pan-y pinch-zoom}
+  .map-navigation{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px}
+  .map-navigation button,.map-navigation a{min-height:44px;padding:8px 12px;border:1px solid #777;border-radius:5px;background:#fff;color:#222;font:inherit;font-size:13px;cursor:pointer;text-decoration:none}
+  .map-navigation button[aria-pressed="true"]{background:#1B4332;color:#fff;border-color:#1B4332}
+  #gesture-help{margin:0 0 10px;color:#555;font-size:12px}
+  .toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:12px 0}
+  #selection{margin:0;font-weight:700;font-size:14px}
+  #reset{flex-shrink:0;padding:8px 12px;background:#fff;border:1px solid #777;border-radius:5px;color:#222;cursor:pointer}
+  #list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:0;padding:0;list-style:none}
+  .school{border:1px solid var(--line);border-left:4px solid var(--c);border-radius:5px;background:#fff;min-width:0}
+  .school.selected{outline:2px solid #111;outline-offset:-1px;background:#f3f3f3}
+  .school button{display:block;width:100%;border:0;text-align:left;background:none;color:#111;cursor:pointer;padding:11px 12px;font:inherit}
+  .school .nm{font-family:"Noto Serif JP","Hiragino Mincho ProN","Yu Mincho",serif;font-weight:700;font-size:16px}
+  .school .hint{display:block;font-size:11px;color:#555}
+  .school .detail{padding:0 12px 12px;font-size:12px}
+  .school .detail p{margin:0 0 6px}
+  .school .detail a{display:inline-block;color:var(--green);margin-right:12px}
+  .area-label{width:max-content;max-width:130px;transform:translate(-50%,-50%);padding:1px 5px;background:#fff;color:#111;border:1px solid #333;border-radius:3px;box-shadow:0 1px 3px #0003;white-space:nowrap;font:700 13px/1.65 "Noto Serif JP","Hiragino Mincho ProN","Yu Mincho",serif}
+  .area-label.featured{background:var(--c);color:#fff;border-color:var(--c)}
+  .area-label.selected{outline:1px solid #333;outline-offset:2px;font-size:15px}
+  .leaflet-tooltip{font-family:"Noto Sans JP",sans-serif}
+  .note{margin:16px 0 0;font-size:12px;color:var(--muted);border-top:1px solid var(--line);padding-top:12px}
+  .note a{color:var(--green)}
+  #error{padding:16px;border:1px solid #777;background:#fff}
+  @media(max-width:600px){#map{height:440px}.school .nm{font-size:14px}.toolbar{align-items:flex-start}.area-label{font-size:12px;padding:1px 3px}}
+</style>
+</head>
+<body>
+<nav class="map-navigation" id="map-nav" aria-label="地図の操作と戻る">
+  <a id="back-to-page" href="/gakku" target="_top" hidden>← 学区ページへ戻る</a>
+  <button type="button" id="back-to-list">学校一覧に戻る ↓</button>
+  <button type="button" id="map-interaction" aria-pressed="false" aria-controls="map" hidden disabled>地図を動かす</button>
+</nav>
+<p id="gesture-help" hidden>地図の上でも上下にスクロールできます。拡大・縮小は＋／−ボタンで操作できます。</p>
+<div id="map" role="region" aria-label="文京区20小学校の学区の概略図"></div>
+<div class="toolbar">
+  <p id="selection" role="status" aria-live="polite">学校名を選ぶと学区が拡大します</p>
+  <button type="button" id="reset" disabled>全校区を表示</button>
+</div>
+<p id="error" role="alert" hidden>地図を読み込めませんでした。ページを再読み込みするか、<a href="/gakku/rentals" target="_top">学区別の賃貸一覧</a>をご覧ください。</p>
+<ul id="list" aria-label="地図で表示する小学校を選択"></ul>
+<noscript><p>地図にはJavaScriptが必要です。<a href="/gakku/rentals" target="_top">学区別の賃貸一覧</a>をご覧ください。</p></noscript>
+<p class="note" id="note">
+  地図：<a href="https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-A27-2023.html" target="_blank" rel="noopener">国土交通省「国土数値情報 小学校区データ（2023年度）」</a>を加工（CC BY 4.0、2026年9月23日取得）。
+  20校の境界を同じ資料で表示しています。誠之・千駄木・昭和・窪町の4校は色付き、その他の16校は白黒です。学校名の位置は学区の目印で、校舎の所在地ではありません。
+  地図はおおよその範囲を示す参考図です。最新の指定状況や番・号、旧町名による区分とは異なる場合があります。
+  正確な通学区域は<a href="https://www.city.bunkyo.lg.jp/b048/p002107.html" target="_blank" rel="noopener">文京区の通学区域表（2026年1月9日更新）</a>でご確認ください。物件の学区判定には、この参考図ではなく区の通学区域表を使用します。背景地図：国土地理院。
+</p>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="/gakku/school-map.js"></script>
+</body>
+</html>

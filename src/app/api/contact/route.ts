@@ -59,6 +59,11 @@ const contactSchema = z.object({
   source: z.string().optional().default(""),
   message: z.string().min(1, "お問い合わせ内容を入力してください"),
   business: z.string().optional().default("realestate"),
+}).superRefine((value, ctx) => {
+  // 物件ページの内見CTAは、日程調整に必要な電話番号を必須にする。
+  if (value.category === "rental" && !value.phone.trim()) {
+    ctx.addIssue({ code: "custom", path: ["phone"], message: "電話番号を入力してください" });
+  }
 });
 
 function escapeHtml(str: string) {

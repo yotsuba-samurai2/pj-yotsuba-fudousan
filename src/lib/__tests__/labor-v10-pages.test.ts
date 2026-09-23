@@ -56,12 +56,9 @@ for (const locale of ["ja", "en", "zh-tw", "zh"] as const) {
       const e = LABOR_ENGAGEMENT_COPY[locale];
       const encode = (text: string) => text.replaceAll("&", "&amp;").replaceAll("'", "&#x27;");
       for (const line of LABOR_TOP_COPY[locale].headline) expect(html).toContain(encode(line));
-      expect(html.indexOf('id="standalone-services"')).toBeLessThan(html.indexOf('id="engagement-comparison"'));
-      expect(html.indexOf('id="engagement-comparison"')).toBeLessThan(html.indexOf('id="advisory-plan"'));
+      expect(html.indexOf('id="standalone-services"')).toBeLessThan(html.indexOf('id="advisory-plan"'));
       expect(html.match(/<h1\b/g)).toHaveLength(1);
-      expect(html.match(/id="engagement-comparison"/g)).toHaveLength(1);
-      expect(html.includes(encode(e.assumptions))).toBe(true);
-      expect(html.includes(encode(e.discountNote))).toBe(true);
+      expect(html).not.toContain('id="engagement-comparison"');
       expect(html).toContain('href="#advisory-plan"');
       expect(html).toContain(c.foreignHighlightBody);
       expect(html).toContain(c.visaContractNotice);

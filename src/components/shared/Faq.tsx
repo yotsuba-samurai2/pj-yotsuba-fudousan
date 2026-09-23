@@ -10,6 +10,8 @@
 // buildFaqJsonLd() を直接呼ぶことで Answer text＝表示文字列の完全一致は維持している。
 // 【注記】本番実測（2026-08-11・JSON-LDをパースして確認）では /group-home 9問・/office 7問・/minpaku 4問も
 // FAQPage を出しており、上の「専用FAQページのみ」は既に実態と一致していない。方針の再定義は未着手（浦松判断待ち）。
+// 【例外】2026-09-23（浦松判断・学区ページ強化 作業手順書 v1 PR-3）：/gakku/rentals と /gakku/<校>/rentals
+// （4ロケール）でも出力する。設問は SCHOOL_RENTAL_FAQ（@/lib/rental-school-district）で、4校ページの FAQ と重複させない。
 // links＝回答末尾の内部リンク（2026-07-19 B-3）。表示のみで JSON-LD の Answer text には含めない
 // （Answer text＝回答本文 a と完全一致を維持）。多言語で使う場合は items 側でロケール済み href を渡すこと。
 import Link from "next/link";
@@ -38,6 +40,7 @@ export function buildFaqJsonLd(items: FaqItem[], inLanguage?: string) {
 type Props = {
   items: FaqItem[];
   heading?: string;
+  headingLevel?: "h1" | "h2";
   /** FAQPage JSON-LD を出力するか（専用FAQページのみ true にする） */
   withJsonLd?: boolean;
   /** 先頭を開いた状態にするか */
@@ -53,6 +56,7 @@ type Props = {
 export function Faq({
   items,
   heading,
+  headingLevel: Heading = "h2",
   withJsonLd = false,
   openFirst = true,
   bare = false,
@@ -62,7 +66,7 @@ export function Faq({
   const jsonLd = buildFaqJsonLd(items, inLanguage);
   return (
     <section aria-label={ariaLabel ?? "よくあるご質問"} className={bare ? "" : "mx-auto max-w-3xl px-4 py-6"}>
-      {heading && <h2 className="mb-4 font-serif text-2xl font-semibold text-ink">{heading}</h2>}
+      {heading && <Heading className="mb-4 font-serif text-2xl font-semibold text-ink">{heading}</Heading>}
       <div className="divide-y divide-border rounded-xl border border-border bg-surface">
         {items.map((it, i) => (
           <details key={i} open={openFirst && i === 0} className="group px-4 py-3">

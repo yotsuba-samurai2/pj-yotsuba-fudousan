@@ -4,6 +4,7 @@ import { Prisma, type Property as PropertyRow } from "@prisma/client";
 import type { LangCode } from "@/config/languages";
 import {
   toPublicProperty,
+  isPubliclyVisible,
   isPropertyLocaleAllowed,
   getLocalizedProperty,
   type AdminProperty,
@@ -67,7 +68,7 @@ export const getPublishedProperties = cache(
         where: { status: "published" },
         orderBy: { infoUpdatedAt: "desc" },
       });
-      return rows.map(rowToPublic).filter((p) => isPropertyLocaleAllowed(p, locale));
+      return rows.map(rowToPublic).filter((p) => isPubliclyVisible(p, locale));
     } catch (err) {
       if (isPropertiesTableMissing(err)) return [];
       throw err;
@@ -83,7 +84,7 @@ export const getAllPublishedPropertiesAllLocales = cache(
         where: { status: "published" },
         orderBy: { infoUpdatedAt: "desc" },
       });
-      return rows.map(rowToPublic);
+      return rows.map(rowToPublic).filter((p) => isPubliclyVisible(p));
     } catch (err) {
       if (isPropertiesTableMissing(err)) return [];
       throw err;
@@ -92,16 +93,18 @@ export const getAllPublishedPropertiesAllLocales = cache(
 );
 
 /**
- * 詳細ページ用。published に加え closed も返す（closed は「募集終了」表示＋noindex で
- * 200を返す仕様＝おとり広告の構造的回避）。draft は返さない（404）。
+ * 詳細ページ用。公開判定（isPubliclyVisible）を満たす物件だけを返す。
+ * closed（募集終了）・draft・確認期限超過・未知のslugはすべて undefined＝ページ側 notFound() で
+ * 実HTTP 404（本番で未知slugが通常UA・bingbotとも404になることを2026-09-20に実測）。
+ * 410は proxy で毎リクエストDBを引く必要があるため採用しない。DBの closed 履歴は管理側に残る。
  */
 export const getPublicPropertyBySlug = cache(
   async (slug: string): Promise<PublicProperty | undefined> => {
     try {
-      const row = await prisma.property.findFirst({
-        where: { slug, status: { in: ["published", "closed"] } },
-      });
-      return row ? rowToPublic(row) : undefined;
+      const row = await prisma.property.findFirst({ where: { slug, status: "published" } });
+      if (!row) return undefined;
+      const p = rowToPublic(row);
+      return isPubliclyVisible(p) ? p : undefined;
     } catch (err) {
       if (isPropertiesTableMissing(err)) return undefined;
       throw err;
