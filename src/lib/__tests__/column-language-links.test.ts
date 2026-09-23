@@ -1,7 +1,7 @@
 import { Children, createElement, isValidElement, type AnchorHTMLAttributes, type MouseEvent, type ReactElement, type ReactNode } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
-import { getColumnSwitchLocales, type ColumnLocaleIndex } from "@/lib/column-language-links";
+import { buildPropertyLocaleIndex, getColumnSwitchLocales, type ColumnLocaleIndex } from "@/lib/column-language-links";
 import { SUPPORTED_LOCALES } from "@/lib/locale";
 
 const state = vi.hoisted(() => ({ pathname: "/ja/column/ja-only", locale: "ja", setLocale: vi.fn() }));
@@ -116,5 +116,44 @@ describe("published column language links", () => {
   it("keeps ordinary clicks on the existing locale navigation flow", () => {
     expect(clickEnglish()).toHaveBeenCalledOnce();
     expect(state.setLocale).toHaveBeenCalledWith("en");
+  });
+});
+
+/**
+ * 物件詳細の言語切替（2026-09-23 本番実測：日本語のみ公開の物件で EN・繁體・简体 が404へのリンクだった）。
+ * 記事と同じ表に `bukken/<slug>` で載せ、公開ロケール以外のリンクを出さない。
+ */
+describe("property language links", () => {
+  const propertyIndex: ColumnLocaleIndex = {
+    ...index,
+    ...buildPropertyLocaleIndex([
+      { slug: "ja-only-flat", locales: ["ja"] },
+      { slug: "four", locales: ["ja", "en", "zh-tw", "zh"] },
+    ]),
+  };
+  beforeEach(() => { state.pathname = "/ja/bukken/ja-only-flat"; state.locale = "ja"; });
+
+  it("keys properties under bukken/ so article slugs never collide", () => {
+    expect(buildPropertyLocaleIndex([{ slug: "ja-only", locales: ["ja"] }])).toEqual({ "bukken/ja-only": ["ja"] });
+    expect(propertyIndex["ja-only"]).toEqual(["ja"]);
+    expect(propertyIndex["bukken/ja-only-flat"]).toEqual(["ja"]);
+  });
+  it.each(["/bukken/ja-only-flat", "/ja/bukken/ja-only-flat", "/en/bukken/ja-only-flat/", "/bukken/ja-only-flat/photos"])(
+    "limits a Japanese-only property to Japanese for %s", path => {
+      expect(getColumnSwitchLocales(path, propertyIndex, "ja")).toEqual(["ja"]);
+    },
+  );
+  it("keeps all languages for a fully translated property and for the listing page", () => {
+    expect(getColumnSwitchLocales("/zh/bukken/four", propertyIndex, "zh")).toEqual(SUPPORTED_LOCALES);
+    expect(getColumnSwitchLocales("/en/bukken", propertyIndex, "en")).toEqual(SUPPORTED_LOCALES);
+  });
+  it("does not guess translation URLs for an unknown property or when the index failed to load", () => {
+    expect(getColumnSwitchLocales("/en/bukken/new-listing", propertyIndex, "en")).toEqual(["en"]);
+    expect(getColumnSwitchLocales("/bukken/ja-only-flat", index, "ja")).toEqual(["ja"]);
+  });
+  it("removes unavailable property links from the first server-rendered HTML", () => {
+    const html = renderToStaticMarkup(createElement(LanguageSwitcher, { columnLocales: propertyIndex }));
+    expect(html).toContain('href="/bukken/ja-only-flat"');
+    expect(html).not.toMatch(/href="\/(en|zh-tw|zh)\//);
   });
 });

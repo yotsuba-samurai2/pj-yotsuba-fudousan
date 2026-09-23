@@ -7,6 +7,7 @@ import { getNestedValue, BUSINESS_SEO, BUSINESS_URLS } from "@/lib/seo";
 import { getRequestLocale } from "@/lib/getRequestLocale";
 import type { LangCode } from "@/config/languages";
 import { getColumnLanguageIndex } from "@/lib/column-language-index";
+import { getPropertyLanguageIndex } from "@/lib/property-language-index";
 
 export async function generateMetadata(): Promise<Metadata> {
   // 旧実装のCookie参照はリクエストAPI＝配下全ルートを動的化するため、
@@ -58,9 +59,14 @@ export default async function RealEstateLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const columnLocales = await getColumnLanguageIndex("realestate");
+  // 言語切替の表＝記事（slug）＋物件（bukken/<slug>）。日本語のみ公開の物件で
+  // 未公開言語へのリンク（404）を出さない（2026-09-23 本番実測で16件中1件が該当）。
+  const [columnLocales, propertyLocales] = await Promise.all([
+    getColumnLanguageIndex("realestate"),
+    getPropertyLanguageIndex(),
+  ]);
   return (
-    <TenantLayoutShell businessKey="realestate" columnLocales={columnLocales}>
+    <TenantLayoutShell businessKey="realestate" columnLocales={{ ...columnLocales, ...propertyLocales }}>
       <OrganizationJsonLd businessKey="realestate" />
       {/* WebSite（サイト名）＝ホスト全体で「四葉グループ」1ノード。出力はこのlayoutだけ（P1-1） */}
       <WebSiteJsonLd />

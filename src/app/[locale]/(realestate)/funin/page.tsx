@@ -255,7 +255,10 @@ export async function generateMetadata(): Promise<Metadata> {
       "中華圏から東京へ赴任する方向けに、海外にいるまま住まいを決める方法をまとめました。オンライン内見・IT重説・電子契約、会社契約と個人契約の違い、着任日からの逆算スケジュール。台湾華語で直接対応する宅地建物取引士が解説します。文京区小日向・茗荷谷駅徒歩5分。",
     path: "/funin",
     keywords: ["東京 赴任 住まい 探し", "駐在員 東京 賃貸", "オンライン内見 海外から", "法人契約 賃貸 赴任", "台湾 東京 赴任 部屋探し"],
-    locale,
+    // 【2026-09-24 canonical是正】en/zh はこの ja 本文へフォールバックするため、canonical は常に ja を指す
+    // （手本＝/kaigo・/kikoku の locale:"ja"）。リクエストロケールを渡すと /en/funin・/zh/funin が
+    // 日本語本文のまま自己canonicalの重複URLになる（2026-09-23 本番実測・GSC「重複」の型）。
+    locale: "ja",
     absoluteTitle: true,
     availableLocales: ["ja", "zh-tw"],
   });
