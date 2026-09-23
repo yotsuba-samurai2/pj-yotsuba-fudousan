@@ -21,6 +21,8 @@ import { summarizeByChome } from "@/components/gakku/DistrictSection";
 import GakkuMapEmbed from "@/components/gakku/GakkuMapEmbed";
 import { SCHOOL_RENTAL_COPY, SCHOOL_RENTAL_INDEX_PATH, schoolRentalPath } from "@/lib/rental-school-district";
 import { propertyUi } from "@/lib/property-i18n";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { buildGakkuHubJsonLd } from "@/lib/gakku-jsonld";
 
 /** 本ページを公開するロケール（hreflang・sitemap と一致させる） */
 const PAGE_LOCALES: LangCode[] = ["ja", "en", "zh-tw", "zh"];
@@ -70,23 +72,35 @@ export default async function GakkuHubPage() {
 
   return (
     <>
+      <JsonLd data={buildGakkuHubJsonLd(locale)} />
       <Breadcrumb items={[{ name: ui.home, href: "/" }, { name: c.hub.h1 }]} />
       <article className="mx-auto max-w-3xl px-4 pb-16">
+        {/* ファーストビュー：H1 → 一文 → 数字の帯 → 地図（2026-09-23 浦松指示「文章の前に地図」）。
+            3S1K は通称として引用し、学校の評判・人気・進学実績には触れない。 */}
         <header className="pt-4">
-          <h1 className="font-serif text-2xl font-semibold text-ink sm:text-3xl">{c.hub.h1}</h1>
-          <p className="mt-4 rounded-xl border border-border bg-surface-dim p-4 text-sm leading-relaxed text-text">
-            {c.hub.answer}
-          </p>
-          <p className="mt-4 leading-relaxed text-text">{c.hub.lead}</p>
+          <h1 className="font-serif text-2xl font-semibold text-ink sm:text-4xl">{c.hub.h1}</h1>
+          <p className="mt-4 text-lg font-semibold leading-relaxed text-primary sm:text-xl">{c.hub.hook}</p>
+          <dl className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
+            {[
+              { value: String(listSchools().length), label: c.hub.stats.schools },
+              { value: String(DISTRICT_SOURCE.rowCount), label: c.hub.stats.rows },
+              { value: "4", label: c.hub.stats.languages },
+              { value: c.hub.stats.weeklyValue, label: c.hub.stats.weekly },
+            ].map((stat) => (
+              <div key={stat.label} className="rounded-xl border border-primary/20 bg-primary-tint p-3 text-center">
+                <dt className="sr-only">{stat.label}</dt>
+                <dd className="font-serif text-2xl font-semibold text-primary sm:text-3xl">{stat.value}</dd>
+                <dd className="mt-1 text-xs leading-snug text-text-muted">{stat.label}</dd>
+              </div>
+            ))}
+          </dl>
         </header>
 
-        <Link href={addLocalePrefix(SCHOOL_RENTAL_INDEX_PATH, locale)} className="mt-6 block rounded-xl border border-primary/25 bg-primary-tint p-5 font-semibold text-primary">{SCHOOL_RENTAL_COPY[locale].indexTitle} →</Link>
-
         {/* 学区参考図（4ロケール）。地図内の文言は ?lang= で切り替え、校名・所在地は日本語のまま
-            （「校名沿用官方日文名稱」と同じ方針）。2026-09-23 までは ja のみだった。 */}
+            （「校名沿用官方日文名稱」と同じ方針）。 */}
         <section
           aria-labelledby="gakku-map-heading"
-          className="mt-10 rounded-xl border border-border bg-surface-dim p-4 sm:p-6"
+          className="mt-6 rounded-xl border border-border bg-surface-dim p-4 sm:p-6"
         >
           <h2 id="gakku-map-heading" className="font-serif text-xl font-semibold text-ink">
             {MAP_COPY[locale].heading}
@@ -96,6 +110,13 @@ export default async function GakkuHubPage() {
             <GakkuMapEmbed locale={locale} title={MAP_COPY[locale].frameTitle} />
           </div>
         </section>
+
+        <Link href={addLocalePrefix(SCHOOL_RENTAL_INDEX_PATH, locale)} className="mt-6 block rounded-xl bg-primary p-5 text-center font-semibold text-white hover:opacity-90">{SCHOOL_RENTAL_COPY[locale].indexTitle} →</Link>
+
+        <p className="mt-10 rounded-xl border border-border bg-surface-dim p-4 text-sm leading-relaxed text-text">
+          {c.hub.answer}
+        </p>
+        <p className="mt-4 leading-relaxed text-text">{c.hub.lead}</p>
 
         <h2 className="mt-10 font-serif text-xl font-semibold text-ink">{c.hub.nicknameH2}</h2>
         <p className="mt-4 leading-relaxed text-text">{c.hub.nickname}</p>
