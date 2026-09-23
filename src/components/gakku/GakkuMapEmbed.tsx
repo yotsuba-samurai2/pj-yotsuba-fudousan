@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 
 /**
- * 3S1K 通学区域マップ（/public/gakku/3s1k-map.html）を埋め込む。
+ * 文京区20校の学区参考図（/public/gakku/3s1k-map.html）を埋め込む。
  * iframe を中身の高さに合わせて伸縮させ、内部スクロールを出さない。
  *
  * 高さは同一オリジンの中身を ResizeObserver で直接見る。
@@ -21,9 +21,9 @@ export default function GakkuMapEmbed() {
     if (!doc) return;
     disconnectRef.current?.();
     const observer = new ResizeObserver(() => {
-      setHeight(Math.ceil(doc.documentElement.scrollHeight));
+      setHeight(Math.ceil(doc.body.scrollHeight));
     });
-    observer.observe(doc.documentElement);
+    observer.observe(doc.body);
     disconnectRef.current = () => observer.disconnect();
   }, []);
 
@@ -33,14 +33,31 @@ export default function GakkuMapEmbed() {
     return () => disconnectRef.current?.();
   }, [observe]);
 
+  useEffect(() => {
+    const focusMap = (event: MessageEvent) => {
+      if (event.origin !== window.location.origin || event.source !== ref.current?.contentWindow) return;
+      if (event.data?.type !== "gakku-map-focus") return;
+      const frame = ref.current;
+      if (!frame) return;
+      // Wait for the opened detail/iframe height to settle before positioning.
+      // An instant parent scroll avoids racing the iframe's focus and map animation.
+      requestAnimationFrame(() => requestAnimationFrame(() => {
+        if (!frame.isConnected) return;
+        window.scrollTo({ top: window.scrollY + frame.getBoundingClientRect().top - 96, behavior: "instant" });
+      }));
+    };
+    window.addEventListener("message", focusMap);
+    return () => window.removeEventListener("message", focusMap);
+  }, []);
+
   return (
     <iframe
       ref={ref}
       src="/gakku/3s1k-map.html"
-      title="文京区 3S1K（誠之・千駄木・昭和・窪町）の通学区域マップ"
+      title="文京区20小学校の学区マップ（学校一覧から拡大）"
       loading="eager"
       onLoad={observe}
-      style={{ width: "100%", height, border: 0, display: "block" }}
+      style={{ width: "100%", height, border: 0, display: "block", scrollMarginTop: 96 }}
     />
   );
 }
