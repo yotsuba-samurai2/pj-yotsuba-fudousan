@@ -6,9 +6,10 @@ import { listSchools } from "@/lib/school-district";
 import { isFeaturedSchoolSlug } from "@/lib/gakku";
 import { addLocalePrefix } from "@/lib/locale";
 import { getLocalizedProperty } from "@/lib/property-shared";
-import { canonicalUrl } from "@/lib/seo";
+import { BCP47_BY_LOCALE, canonicalUrl } from "@/lib/seo";
+import { Faq } from "@/components/shared/Faq";
 import { buildPropertyItemListJsonLd } from "@/lib/property-jsonld";
-import { groupSchoolRentals, SCHOOL_RENTAL_COPY, SCHOOL_RENTAL_INDEX_PATH, schoolRentalLead, schoolRentalPath, schoolRentalTitle } from "@/lib/rental-school-district";
+import { groupSchoolRentals, SCHOOL_RENTAL_COPY, SCHOOL_RENTAL_FAQ, SCHOOL_RENTAL_INDEX_PATH, schoolRentalLead, schoolRentalPath, schoolRentalTitle } from "@/lib/rental-school-district";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { Breadcrumb } from "@/components/shared/Breadcrumb";
 import { PropertyCard } from "@/components/bukken/PropertyCard";
@@ -40,6 +41,7 @@ export function SchoolRentalIndex({ properties, locale, summaries = [] }: { prop
       </ul>
       <DistrictSourceNote locale={locale} />
       <RentalComparison rows={summaries} locale={locale} />
+      <SchoolRentalFaq locale={locale} />
       <Link href={addLocalePrefix("/gakku", locale)} className="mt-6 inline-block text-sm text-primary underline">{c.guide}</Link>
     </article>
   </>;
@@ -65,6 +67,7 @@ export function SchoolRentalListings({ school, properties, locale, summaries = [
       {listings.length ? <ul className="mt-6 space-y-3">{listings.map(p => <li key={p.slug}><PropertyCard p={p} locale={locale} /></li>)}</ul>
         : !schoolSummaries.length && <p className="mt-6 rounded-xl border border-border p-6 leading-relaxed text-text">{c.empty}</p>}
       <RentalComparison rows={schoolSummaries} locale={locale} />
+      <SchoolRentalFaq locale={locale} />
       <Link href={addLocalePrefix(`/contact?intent=gakku-${school.slug}-rental`, locale)} className="mt-6 inline-block rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-white hover:opacity-90">{c.request}</Link>
       <nav aria-label={c.back} className="mt-6 flex flex-wrap gap-5 text-sm text-primary underline">
         <Link href={addLocalePrefix(SCHOOL_RENTAL_INDEX_PATH, locale)}>{c.back}</Link>
@@ -85,4 +88,10 @@ export function schoolRentalListItems(listings: PublicProperty[], summaries: Pub
     ...listings.map(p => ({ name: getLocalizedProperty(p, locale).title, url: canonicalUrl("realestate", `/bukken/${p.slug}`, locale) })),
     ...summaries.map(r => ({ name: `${r.building} ${r.unit}`.trim(), url: `${listUrl}#${r.id}` })),
   ];
+}
+
+/** 学区別賃貸の FAQ（表示と FAQPage JSON-LD を同じ items から出す＝完全一致）。PR-3 */
+function SchoolRentalFaq({ locale }: { locale: LangCode }) {
+  const f = SCHOOL_RENTAL_FAQ[locale];
+  return <div className="mt-8"><Faq items={f.items} heading={f.heading} withJsonLd inLanguage={BCP47_BY_LOCALE[locale]} bare openFirst={false} ariaLabel={f.heading} /></div>;
 }
