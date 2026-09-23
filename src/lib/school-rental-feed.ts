@@ -49,18 +49,27 @@ export function normalized(value: string) {
 export function unitNumber(value: string) {
   return normalized(value).replace(/号室$/, "").replace(/^0+(?=\d)/, "");
 }
+function buildingKey(s: Pick<RentalSummary, "building" | "unit">) {
+  let name = s.building.normalize("NFKC").trim();
+  // Remove only an explicitly separated room suffix matching the separate unit field.
+  const room = name.match(/\s+(\d+)(?:号室)?$/);
+  if (room && unitNumber(room[1]) === unitNumber(s.unit)) name = name.slice(0, room.index).trim();
+  // Confirmed source spelling alias; do not strip arbitrary tower/wing parentheses.
+  if (name === "真砂マンション(マサゴマンション)") name = "真砂マンション";
+  return normalized(name);
+}
 export function addressKey(value: string) {
   return normalized(value).replace(/^東京都/, "").replace(/丁目|番地?|号/g, "-").replace(/-+$/, "");
 }
 export function unitKey(s: Pick<RentalSummary, "building" | "unit" | "address">) {
   // Missing unit is not evidence that two apartments are identical.
   if (!s.unit) return null;
-  return `${addressKey(s.address)}|${normalized(s.building)}|${unitNumber(s.unit)}`;
+  return `${addressKey(s.address)}|${buildingKey(s)}|${unitNumber(s.unit)}`;
 }
 export function sameUnit(a: Pick<RentalSummary, "building" | "unit" | "address">, b: Pick<RentalSummary, "building" | "unit" | "address">) {
   if (!a.unit || !b.unit || unitNumber(a.unit) !== unitNumber(b.unit)) return false;
   const aa = addressKey(a.address), bb = addressKey(b.address);
-  return normalized(a.building) === normalized(b.building) && (aa === bb || aa.startsWith(`${bb}-`) || bb.startsWith(`${aa}-`));
+  return buildingKey(a) === buildingKey(b) && (aa === bb || aa.startsWith(`${bb}-`) || bb.startsWith(`${aa}-`));
 }
 export function rejectionReason(feed: RentalFeed, r: FeedRecord, now = new Date()): string | null {
   const time = Date.parse(feed.checkedAt);
@@ -99,7 +108,12 @@ export function compileRentalSummaries(feeds: RentalFeed[], existing: Pick<Renta
     return { ...s, id: `rental-${stableId(`${feed.provider}:${row.sourceId}`)}`, schoolSlug: district.status === "determined" ? district.school.slug : null,
       checkedAt: feed.checkedAt, expiresAt: new Date(Date.parse(feed.checkedAt) + FEED_HOURS * 3600000).toISOString() };
   }).sort((a, b) => a.rentYen - b.rentYen || a.building.localeCompare(b.building));
-  const adCandidates = accepted.filter(({ row }) => row.adStatus === "confirmed" || row.adStatus === "consult")
+  // A duplicate source row can contain AD evidence missing from the selected public row.
+  // Preserve that private evidence without replacing the displayed contract terms.
+  const adEvidence = sorted.filter(({ feed, row }) => (row.adStatus === "confirmed" || row.adStatus === "consult")
+    && !rejectionReason(feed, row, now)
+    && accepted.some(item => item.row === row || sameUnit(item.row.summary, row.summary)));
+  const adCandidates = adEvidence.filter((item, index) => !adEvidence.slice(0, index).some(other => sameUnit(item.row.summary, other.row.summary)))
     .map(({ feed, row }) => ({ provider: feed.provider, sourceId: row.sourceId, building: row.summary.building, unit: row.summary.unit, adStatus: row.adStatus, adQuote: row.adQuote }));
   return { summaries, excluded, adCandidates };
 }

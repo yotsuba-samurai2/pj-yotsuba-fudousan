@@ -66,6 +66,23 @@ describe("School rental summaries", () => {
     b.checkedAt = "2026-09-21T04:00:00Z";
     expect(compileRentalSummaries([a,b], [], now).summaries).toHaveLength(1);
   });
+  it("matches verified spelling aliases and matching room suffixes without collapsing wings", () => {
+    const a = row().summary, b = { ...a, building: "試験マンション ２０５号室" };
+    expect(sameUnit(a, b)).toBe(true);
+    expect(sameUnit(a, { ...b, building: "試験マンション ２０６号室" })).toBe(false);
+    expect(sameUnit({ ...a, building: "真砂マンション" }, { ...b, building: "真砂マンション（マサゴマンション）" })).toBe(true);
+    expect(sameUnit({ ...a, building: "試験マンション（イースト）" }, { ...b, building: "試験マンション（ウエスト）" })).toBe(false);
+  });
+  it("preserves private AD evidence from a duplicate while keeping selected public terms", () => {
+    const a = row(), b = row(); a.sourceId = "a"; a.adStatus = "none"; a.adQuote = "";
+    b.sourceId = "b"; b.summary.rentYen = 260000;
+    const result = compileRentalSummaries([feed("reins", [a,b])], [], now);
+    expect(result.summaries).toHaveLength(1); expect(result.summaries[0].rentYen).toBe(250000);
+    expect(result.adCandidates).toHaveLength(1); expect(result.adCandidates[0].sourceId).toBe("b");
+    expect(compileRentalSummaries([feed("reins", [a,b])], [a.summary], now).adCandidates).toHaveLength(0);
+    b.advertising = "contact-required";
+    expect(compileRentalSummaries([feed("reins", [a,b])], [], now).adCandidates).toHaveLength(0);
+  });
   it("does not guess districts from an ambiguous address", () => {
     const r = row(); r.summary.address = "東京都文京区千石4丁目";
     expect(compileRentalSummaries([feed("reins", [r])], [], now).summaries[0].schoolSlug).toBeNull();
