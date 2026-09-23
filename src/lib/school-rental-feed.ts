@@ -46,7 +46,7 @@ export type PublicRentalSummary = RentalSummary & { id: string; schoolSlug: stri
 export function nextWeeklyReviewAt(checkedAt: string) {
   const checked = new Date(checkedAt);
   const next = new Date(checked);
-  next.setUTCHours(0, 0, 0, 0); // Wednesday 09:00 in Asia/Tokyo.
+  next.setUTCHours(3, 0, 0, 0); // Wednesday 12:00 in Asia/Tokyo.
   next.setUTCDate(next.getUTCDate() + (3 - next.getUTCDay() + 7) % 7);
   if (next.getTime() <= checked.getTime()) next.setUTCDate(next.getUTCDate() + 7);
   return next.toISOString();

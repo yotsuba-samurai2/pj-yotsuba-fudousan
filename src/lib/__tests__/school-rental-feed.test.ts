@@ -69,10 +69,10 @@ describe("School rental summaries", () => {
     b.records = [];
     expect(compileRentalSummaries([a,b], [], now).summaries).toHaveLength(1);
   });
-  it("shows the next Wednesday 09:00 JST without treating it as expiry", () => {
-    expect(nextWeeklyReviewAt("2026-09-23T06:23:23Z")).toBe("2026-09-30T00:00:00.000Z");
-    expect(nextWeeklyReviewAt("2026-09-22T23:00:00Z")).toBe("2026-09-23T00:00:00.000Z");
-    expect(nextWeeklyReviewAt("2026-09-23T00:00:00Z")).toBe("2026-09-30T00:00:00.000Z");
+  it("shows the next Wednesday 12:00 JST without treating it as expiry", () => {
+    expect(nextWeeklyReviewAt("2026-09-23T06:23:23Z")).toBe("2026-09-30T03:00:00.000Z");
+    expect(nextWeeklyReviewAt("2026-09-22T23:00:00Z")).toBe("2026-09-23T03:00:00.000Z");
+    expect(nextWeeklyReviewAt("2026-09-23T03:00:00Z")).toBe("2026-09-30T03:00:00.000Z");
   });
   it("matches verified spelling aliases and matching room suffixes without collapsing wings", () => {
     const a = row().summary, b = { ...a, building: "試験マンション ２０５号室" };
