@@ -4,17 +4,55 @@
   const list = document.getElementById("list");
   const selection = document.getElementById("selection");
   const reset = document.getElementById("reset");
+  const interaction = document.getElementById("map-interaction");
+  const gestureHelp = document.getElementById("gesture-help");
+  const mapElement = document.getElementById("map");
+  const touchLayout = window.matchMedia("(any-pointer: coarse), (max-width: 600px)");
+  let endMapInteraction;
+  document.getElementById("back-to-page").hidden = parent !== window;
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const notify = type => parent.postMessage({ type }, location.origin);
   const postHeight = () => parent.postMessage({ type: "gakku-map-height", h: document.documentElement.scrollHeight }, location.origin);
   new ResizeObserver(postHeight).observe(document.body);
   window.addEventListener("load", postHeight);
+  // A real return action; scrolling does not add iframe/browser history entries.
+  document.getElementById("back-to-list").addEventListener("click", () => {
+    endMapInteraction?.();
+    const target = list.querySelector(".school.selected") || list;
+    target.querySelector("button")?.focus({ preventScroll: true });
+    if (parent === window) target.scrollIntoView({ block: "start", behavior: "instant" });
+    else notify("gakku-map-list");
+  });
   try {
     const response = await fetch("/gakku/bunkyo-school-areas.json");
     if (!response.ok) throw new Error("School areas unavailable");
     const data = await response.json();
     if (data.features.length !== 20) throw new Error("Incomplete school areas");
-    const map = L.map("map", { scrollWheelZoom: false, zoomSnap: 0.25, zoomDelta: 0.5 }).setView([35.722, 139.748], 14);
+    const map = L.map("map", {
+      scrollWheelZoom: false, zoomSnap: 0.25, zoomDelta: 0.5,
+      dragging: !touchLayout.matches, touchZoom: !touchLayout.matches,
+      doubleClickZoom: !touchLayout.matches, tapHold: false,
+    }).setView([35.722, 139.748], 14);
+    function setInteraction(enabled) {
+      const pageScroll = touchLayout.matches && !enabled;
+      for (const handler of [map.dragging, map.touchZoom, map.doubleClickZoom]) {
+        if (pageScroll) handler.disable(); else handler.enable();
+      }
+      mapElement.dataset.pageScroll = String(pageScroll);
+      interaction.hidden = !touchLayout.matches;
+      gestureHelp.hidden = !touchLayout.matches;
+      interaction.setAttribute("aria-pressed", String(touchLayout.matches && enabled));
+      interaction.textContent = enabled ? "地図操作を終了" : "地図を動かす";
+      gestureHelp.textContent = pageScroll
+        ? "地図の上でも上下にスクロールできます。拡大・縮小は＋／−ボタンで操作できます。"
+        : "地図を指で動かせます。ページに戻るときは「地図操作を終了」を押してください。";
+    }
+    setInteraction(false);
+    interaction.disabled = false;
+    interaction.addEventListener("click", () => setInteraction(interaction.getAttribute("aria-pressed") !== "true"));
+    endMapInteraction = () => setInteraction(false);
+    touchLayout.addEventListener("change", () => setInteraction(false));
+    mapElement.addEventListener("keydown", event => { if (event.key === "Escape") setInteraction(false); });
     L.tileLayer("https://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png", {
       maxZoom: 18, attribution: '<a href="https://maps.gsi.go.jp/development/ichiran.html" target="_blank" rel="noopener">国土地理院</a>',
     }).addTo(map);
@@ -38,6 +76,7 @@
     function select(key, scroll) {
       const layer = layers.get(key);
       if (!layer) return;
+      setInteraction(false);
       selected = key;
       zones.setStyle(style);
       layer.bringToFront();
@@ -85,6 +124,7 @@
     }
     reset.disabled = false;
     reset.addEventListener("click", () => {
+      setInteraction(false);
       selected = null; zones.setStyle(style);
       for (const [slug, card] of cards) {
         card.classList.remove("selected"); card.querySelector("button").setAttribute("aria-expanded", "false"); card.querySelector(".detail").hidden = true;
