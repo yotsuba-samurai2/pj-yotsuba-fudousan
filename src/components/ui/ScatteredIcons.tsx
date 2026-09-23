@@ -1,5 +1,5 @@
-import Image from "next/image";
 import type { CSSProperties } from "react";
+import { CLOVER_PATH } from "./clover-path";
 
 /**
  * 背景にアイコンを散りばめる装飾コンポーネント
@@ -34,6 +34,10 @@ const placements: IconPlacement[] = [
   { top: "88%", left: "8%", size: 650, rotate: -18 },
 ];
 
+/** ロゴの黄緑（2.5%の透かしでは2色の差は判別できないため1色で塗る） */
+const ICON_GREEN = "#8CC21F";
+const SYMBOL_ID = "yotsuba-scattered-clover";
+
 export default function ScatteredIcons() {
   // Only the public [locale] layout renders this decoration; no client state.
   return (
@@ -41,17 +45,25 @@ export default function ScatteredIcons() {
       className="pointer-events-none absolute inset-0 z-0 overflow-hidden"
       aria-hidden="true"
     >
-      {/* SPは3点・幅44vw。装飾の取得で主要な内容を待たせない。 */}
+      {/* SPは3点・幅44vw。
+          2026-09-24：以前は img 要素（next/image）で描いており、透明度2.5%でも Chrome が
+          LCP（最大視覚要素）の候補に数え、/bukken 等で「表示完了」がこの装飾の描画時刻になっていた
+          （Lighthouse 3.0〜5.1秒でぶれる）。CSS の mask-image でも候補に残ることを実測で確認したため、
+          インラインSVGの図形（path）で描く。図形は LCP の候補にならず、画像の取得も発生しない。
+          形は四つ葉ロゴの輪郭をなぞったもの（clover-path.ts）。 */}
+      <svg width="0" height="0" className="absolute" focusable="false">
+        <defs>
+          <symbol id={SYMBOL_ID} viewBox="0 0 512 512">
+            <path d={CLOVER_PATH} fill={ICON_GREEN} fillRule="evenodd" />
+          </symbol>
+        </defs>
+      </svg>
       {placements.map((p, i) => (
-        <Image
+        <svg
           key={i}
-          src="/icon-512.png"
-          alt=""
-          width={512}
-          height={512}
-          sizes={`(min-width: 640px) ${p.size}px, 44vw`}
-          loading="lazy"
-          fetchPriority="low"
+          data-decoration="scattered-icon"
+          viewBox="0 0 512 512"
+          focusable="false"
           className={`absolute h-auto max-w-none w-[min(var(--decoration-size),44vw)] sm:w-[var(--decoration-size)] ${i % 3 === 0 ? "" : "hidden sm:block"}`}
           style={
             {
@@ -62,7 +74,9 @@ export default function ScatteredIcons() {
               transform: `rotate(${p.rotate}deg)`,
             } as CSSProperties
           }
-        />
+        >
+          <use href={`#${SYMBOL_ID}`} />
+        </svg>
       ))}
     </div>
   );
