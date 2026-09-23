@@ -1,0 +1,54 @@
+import Link from "next/link";
+import type { LangCode } from "@/config/languages";
+import type { PublicProperty } from "@/lib/property-shared";
+import { getLocalizedProperty } from "@/lib/property-shared";
+import { addLocalePrefix } from "@/lib/locale";
+import { formatAccessL, formatPropertyPriceL, localizedImageAlt, propertyUi } from "@/lib/property-i18n";
+import { SchoolDistrictTag } from "@/components/gakku/RentalSchoolDistrict";
+
+export function PropertyCard({ p, locale }: { p: PublicProperty; locale: LangCode }) {
+  const original = p;
+  p = getLocalizedProperty(p, locale);
+  const hero = p.images[0];
+  const ui = propertyUi(locale);
+  return (
+    <Link
+      href={addLocalePrefix(`/bukken/${p.slug}`, locale)}
+      className="flex gap-4 rounded-xl border border-border bg-surface p-4 transition-colors hover:border-primary/40"
+    >
+      {hero ? (
+        // 画像はSupabase Storageの絶対URL＝next/image未設定のため素のimg（コラムと同方式）
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          src={hero.url}
+          alt={localizedImageAlt(hero, p.title, locale)}
+          width={160}
+          height={120}
+          className="h-24 w-32 flex-shrink-0 rounded-lg object-cover"
+        />
+      ) : (
+        <div className="flex h-24 w-32 flex-shrink-0 items-center justify-center rounded-lg bg-surface-dim text-xs text-text-muted">
+          No Image
+        </div>
+      )}
+      <div className="min-w-0">
+        <p className="flex flex-wrap gap-1 text-[10px]">
+          <span className="rounded-full bg-primary-tint px-2 py-0.5 font-medium text-primary">
+            {ui.dealType[p.dealType]}
+          </span>
+          <span className="rounded-full bg-surface-dim px-2 py-0.5 font-medium text-text-muted">
+            {ui.tradeMode[p.tradeMode]}
+          </span>
+        </p>
+        <SchoolDistrictTag property={original} locale={locale} />
+        <h3 className="mt-1 break-words text-sm font-semibold text-ink">{p.title}</h3>
+        <p className="mt-1 text-sm font-semibold text-primary">{formatPropertyPriceL(p, locale)}</p>
+        <p className="mt-0.5 truncate text-xs text-text-muted">{p.locationText}</p>
+        {p.access[0] && (
+          <p className="truncate text-xs text-text-muted">{formatAccessL(p.access[0], locale)}</p>
+        )}
+      </div>
+    </Link>
+  );
+}
+

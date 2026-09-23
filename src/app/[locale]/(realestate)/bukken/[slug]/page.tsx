@@ -32,6 +32,7 @@ import ColumnBody from "@/components/column/ColumnBody";
 import { propertyPhotoNotes } from "@/lib/property-photo-notes";
 import { PropertyPhotoGallery } from "@/components/bukken/PropertyPhotoGallery";
 import { PropertyVideos } from "@/components/bukken/PropertyVideos";
+import { PropertySchoolDistrict } from "@/components/gakku/RentalSchoolDistrict";
 import type { LangCode } from "@/config/languages";
 
 /**
@@ -136,6 +137,8 @@ export default async function BukkenDetailPage({ params }: Props) {
             {priceNote && <span className="ml-2 text-xs font-normal text-text-muted">（{priceNote}）</span>}
           </p>
         </header>
+
+        <PropertySchoolDistrict property={base} locale={locale} />
 
         {/* 必要表示事項（規約別表のインターネット広告列＝原本目視2026-09-01）。行は落とさず区分だけ付ける */}
         {sectionOrder(p.dealType).map((sec) => {

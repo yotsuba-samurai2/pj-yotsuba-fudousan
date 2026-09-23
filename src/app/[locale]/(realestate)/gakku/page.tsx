@@ -19,6 +19,7 @@ import {
 import { gakkuCopy, getFeaturedSchools, SCHOOL_LIST_SOURCE, SCHOOL_PROFILES } from "@/lib/gakku";
 import { summarizeByChome } from "@/components/gakku/DistrictSection";
 import GakkuMapEmbed from "@/components/gakku/GakkuMapEmbed";
+import { SCHOOL_RENTAL_COPY, SCHOOL_RENTAL_INDEX_PATH, schoolRentalPath } from "@/lib/rental-school-district";
 import { propertyUi } from "@/lib/property-i18n";
 
 /** 本ページを公開するロケール（hreflang・sitemap と一致させる） */
@@ -54,6 +55,8 @@ export default async function GakkuHubPage() {
           </p>
           <p className="mt-4 leading-relaxed text-text">{c.hub.lead}</p>
         </header>
+
+        <Link href={addLocalePrefix(SCHOOL_RENTAL_INDEX_PATH, locale)} className="mt-6 block rounded-xl border border-primary/25 bg-primary-tint p-5 font-semibold text-primary">{SCHOOL_RENTAL_COPY[locale].indexTitle} →</Link>
 
         {/* 通学区域マップ（日本語のみ）。地図の注記・凡例・学校名が日本語のため、
             en / zh-tw / zh では出さない（区域の表・一覧は4ロケールとも下に出る）。 */}
@@ -136,6 +139,7 @@ export default async function GakkuHubPage() {
                       ) : (
                         school.formalName
                       )}
+                      <Link href={addLocalePrefix(schoolRentalPath(school.slug), locale)} className="mt-2 block text-xs font-semibold text-primary underline">{SCHOOL_RENTAL_COPY[locale].view} →</Link>
                     </td>
                     <td className="py-2 pr-3 text-text-muted">
                       {SCHOOL_PROFILES[school.slug]?.address}

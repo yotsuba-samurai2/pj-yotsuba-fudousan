@@ -1,3 +1,5 @@
+import { listSchools } from "@/lib/school-district";
+import { schoolRentalPath, SCHOOL_RENTAL_INDEX_PATH } from "@/lib/rental-school-district";
 import type { MetadataRoute } from "next";
 import { headers } from "next/headers";
 import {
@@ -111,6 +113,8 @@ const STATIC_REALESTATE: StaticPage[] = [
   // 2026-09-22：学区特集。区の通学区域（町丁目・番・号）の一次データ層。
   // ハブ＋4校（誠之・昭和・千駄木・窪町）。いずれもページ側 PAGE_LOCALES は4ロケール。
   { path: "/gakku", changeFrequency: "monthly", priority: 0.8 },
+  { path: SCHOOL_RENTAL_INDEX_PATH, changeFrequency: "daily", priority: 0.8 },
+  ...listSchools().map(school => ({ path: schoolRentalPath(school.slug), changeFrequency: "daily" as const, priority: 0.7 })),
   { path: "/gakku/seishi", changeFrequency: "monthly", priority: 0.7 },
   { path: "/gakku/showa", changeFrequency: "monthly", priority: 0.7 },
   { path: "/gakku/sendagi", changeFrequency: "monthly", priority: 0.7 },

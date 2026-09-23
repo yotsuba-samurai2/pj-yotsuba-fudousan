@@ -1,3 +1,4 @@
+import { rentalSchoolDistrict } from "@/lib/rental-school-district";
 import { createHash } from "node:crypto";
 import { z } from "zod";
 import { propertyInputSchema } from "@/lib/property-validation";
@@ -183,5 +184,8 @@ export function validateRentalImport(input: unknown, now: Date, mode: "draft" | 
     publishedAt: mode === "published" ? jstDate(now) : undefined,
     internal: { rentalImport: { version: 2, policy: RENTAL_IMPORT_POLICY, email: v.email, source: v.source, advertisingEvidence: v.advertisingEvidence, photoPermission: v.photoPermission, conditionChoices: v.conditionChoices, titleHighlights: v.titleHighlights, unconfirmedTerms: v.unconfirmedTerms, contentReview: v.contentReview, decisions, migration: v.reins ? { legacyReins: v.reins, legacyPortalChecks: summarizePortalChecks(v.portalChecks ?? []) } : undefined } },
   };
+  // Audit the original address at intake. Public tags are recomputed from that
+  // address so saved evidence or translations can never override the district.
+  property.internal!.schoolDistrict = rentalSchoolDistrict(property);
   return { ok: true, value: v, property };
 }

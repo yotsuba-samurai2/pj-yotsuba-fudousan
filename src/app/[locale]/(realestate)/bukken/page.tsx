@@ -4,8 +4,8 @@ export const dynamic = "force-dynamic";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getPublishedProperties, getLocalizedProperty } from "@/lib/properties";
-import { type PropertyDealType, type PublicProperty } from "@/lib/property-shared";
-import { formatAccessL, formatPropertyPriceL, localizedImageAlt, propertyUi } from "@/lib/property-i18n";
+import { type PropertyDealType } from "@/lib/property-shared";
+import { propertyUi } from "@/lib/property-i18n";
 import { buildPropertyItemListJsonLd } from "@/lib/property-jsonld";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { buildPageMetadata, canonicalUrl } from "@/lib/seo";
@@ -13,6 +13,9 @@ import { getRequestLocale } from "@/lib/getRequestLocale";
 import { addLocalePrefix } from "@/lib/locale";
 import { Breadcrumb } from "@/components/shared/Breadcrumb";
 import { CtaBand } from "@/components/shared/CtaBand";
+import { PropertyCard } from "@/components/bukken/PropertyCard";
+import { SCHOOL_RENTAL_COPY, SCHOOL_RENTAL_INDEX_PATH } from "@/lib/rental-school-district";
+import { DistrictSourceNote } from "@/components/gakku/RentalSchoolDistrict";
 import type { LangCode } from "@/config/languages";
 
 /**
@@ -83,54 +86,11 @@ export async function generateMetadata(): Promise<Metadata> {
   });
 }
 
-function PropertyCard({ p, locale }: { p: PublicProperty; locale: LangCode }) {
-  const hero = p.images[0];
-  const ui = propertyUi(locale);
-  return (
-    <Link
-      href={addLocalePrefix(`/bukken/${p.slug}`, locale)}
-      className="flex gap-4 rounded-xl border border-border bg-surface p-4 transition-colors hover:border-primary/40"
-    >
-      {hero ? (
-        // 画像はSupabase Storageの絶対URL＝next/image未設定のため素のimg（コラムと同方式）
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
-          src={hero.url}
-          alt={localizedImageAlt(hero, p.title, locale)}
-          width={160}
-          height={120}
-          className="h-24 w-32 flex-shrink-0 rounded-lg object-cover"
-        />
-      ) : (
-        <div className="flex h-24 w-32 flex-shrink-0 items-center justify-center rounded-lg bg-surface-dim text-xs text-text-muted">
-          No Image
-        </div>
-      )}
-      <div className="min-w-0">
-        <p className="flex flex-wrap gap-1 text-[10px]">
-          <span className="rounded-full bg-primary-tint px-2 py-0.5 font-medium text-primary">
-            {ui.dealType[p.dealType]}
-          </span>
-          <span className="rounded-full bg-surface-dim px-2 py-0.5 font-medium text-text-muted">
-            {ui.tradeMode[p.tradeMode]}
-          </span>
-        </p>
-        <h3 className="mt-1 break-words text-sm font-semibold text-ink">{p.title}</h3>
-        <p className="mt-1 text-sm font-semibold text-primary">{formatPropertyPriceL(p, locale)}</p>
-        <p className="mt-0.5 truncate text-xs text-text-muted">{p.locationText}</p>
-        {p.access[0] && (
-          <p className="truncate text-xs text-text-muted">{formatAccessL(p.access[0], locale)}</p>
-        )}
-      </div>
-    </Link>
-  );
-}
-
 export default async function BukkenListPage() {
   const locale = await getRequestLocale();
   const c = COPY[locale] ?? COPY.ja;
   const ui = propertyUi(locale);
-  const visible = (await getPublishedProperties(locale)).map((p) => getLocalizedProperty(p, locale));
+  const visible = await getPublishedProperties(locale);
   // 画面の並び（カテゴリ順→取得順）をそのまま ItemList の position に使う＝可視リストと一致させる
   const properties = LISTING_GROUP_ORDER.flatMap((group) =>
     visible.filter((p) => listingGroup(p.dealType) === group),
@@ -141,7 +101,7 @@ export default async function BukkenListPage() {
       {properties.length > 0 && (
         <JsonLd
           data={buildPropertyItemListJsonLd(
-            properties.map((p) => ({ name: p.title, url: canonicalUrl("realestate", `/bukken/${p.slug}`, locale) })),
+            properties.map((p) => ({ name: getLocalizedProperty(p, locale).title, url: canonicalUrl("realestate", `/bukken/${p.slug}`, locale) })),
             canonicalUrl("realestate", "/bukken", locale),
             locale,
           )}
@@ -153,6 +113,8 @@ export default async function BukkenListPage() {
           <h1 className="font-serif text-2xl font-semibold text-ink sm:text-3xl">{c.h1}</h1>
           <p className="mt-4 leading-relaxed text-text">{c.lead}</p>
         </header>
+
+        <Link href={addLocalePrefix(SCHOOL_RENTAL_INDEX_PATH, locale)} className="mt-6 block rounded-xl border border-primary/25 bg-primary-tint p-4 font-semibold text-primary">{SCHOOL_RENTAL_COPY[locale].indexTitle} →</Link>
 
         {properties.length === 0 ? (
           <p className="mt-8 rounded-xl border border-border bg-surface p-6 text-sm text-text-muted">
@@ -174,6 +136,7 @@ export default async function BukkenListPage() {
                       <PropertyCard key={p.slug} p={p} locale={locale} />
                     ))}
                 </div>
+                {group === "rental" && <DistrictSourceNote locale={locale} />}
               </section>
             ))}
           </div>
