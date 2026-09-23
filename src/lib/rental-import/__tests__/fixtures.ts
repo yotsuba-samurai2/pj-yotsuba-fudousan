@@ -1,9 +1,9 @@
 import { rentalContentDigest } from "../content-review";
 import type { RentalImport } from "../validation";
 export const NOW = new Date("2026-09-20T01:00:00.000Z");
-export function fixture(): RentalImport & { reins: NonNullable<RentalImport["reins"]>; photoPermission: NonNullable<RentalImport["photoPermission"]> } {
+export function fixture(): RentalImport & { email: NonNullable<RentalImport["email"]>; reins: NonNullable<RentalImport["reins"]>; photoPermission: NonNullable<RentalImport["photoPermission"]> } {
   const evidence = { checkedAt: NOW.toISOString(), reference: "REINS詳細・物件番号test-100", quote: "広告可" };
-  const v: RentalImport & { reins: NonNullable<RentalImport["reins"]>; photoPermission: NonNullable<RentalImport["photoPermission"]> } = {
+  const v: RentalImport & { email: NonNullable<RentalImport["email"]>; reins: NonNullable<RentalImport["reins"]>; photoPermission: NonNullable<RentalImport["photoPermission"]> } = {
     version: 1,
     email: { messageId: "mail-1", receivedAt: "2026-09-19T00:00:00Z", adQuote: "AD2ヶ月" },
     source: { provider: "itandi", roomId: "123", url: "https://itandibb.com/rent_rooms/123", building: "検証用マンション", address: "東京都文京区検証町1-2-3", unit: "001", availability: "available", checkedAt: NOW.toISOString(), listingEvidence: { ...evidence, reference: "https://itandibb.com/rent_rooms/123", quote: "募集中・001号室", authenticated: true, siteOperational: true, exactRoomMatched: true }, rent: { yen: 85500, evidence: { ...evidence, quote: "賃料85,500円", reference: "https://itandibb.com/rent_rooms/123" } }, adQuote: "広告費200%" },

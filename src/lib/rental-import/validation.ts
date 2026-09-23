@@ -18,6 +18,13 @@ export function validListingEvidence(evidence: z.infer<typeof listingEvidenceSch
 
 export const rentalImportSchema = z.object({
   version: z.union([z.literal(1), z.literal(2)]),
+  /** Direct portal search is a separate intake route; never invent a mail record. */
+  intake: z.object({
+    kind: z.literal("portal-search"),
+    policy: z.literal("bunkyo-rent200k-ad30-or-rent250k"),
+    updateEvidence: listingEvidenceSchema,
+  }).optional(),
+  supportingDocuments: z.array(evidenceSchema).max(10).optional(),
   email: z.object({
     messageId: z.string().min(1), receivedAt: z.iso.datetime({ offset: true }), adQuote: z.string().min(1),
     senderDomain: z.string().trim().toLowerCase().optional(),
@@ -26,7 +33,7 @@ export const rentalImportSchema = z.object({
       building: z.string().trim().min(1), address: z.string().trim().min(1), unit: z.string().trim().min(1),
       evidence: evidenceSchema,
     }).optional(),
-  }),
+  }).optional(),
   source: z.object({
     provider: z.enum(["itandi", "reins", "eslife", "other"]),
     roomId: z.string().regex(/^[a-zA-Z0-9_-]{1,100}$/),
@@ -95,13 +102,23 @@ export function validateRentalImport(input: unknown, now: Date, mode: "draft" | 
     if (v.reins!.availability !== "available" || !validListingEvidence(v.reins!.listingEvidence, "reins", now)) reasons.push("旧形式のREINS根拠が期限切れです");
   }
   // SUUMO・アットホーム・HOME'Sは判定に使わない。REINSは広告可の確認だけ許可する。
-  if (!maintenance && !isRecentMail(v.email.receivedAt, now)) reasons.push("メールが直近1暦月の対象外です");
-  for (const [label, quote] of [["メール", v.email.adQuote], ["取得元", v.source.adQuote]]) {
+  const directSearch = v.intake?.kind === "portal-search";
+  if (directSearch) {
+    const provider = v.source.provider;
+    const evidence = v.intake!.updateEvidence;
+    // Relative hours are copied from the search UI, not fabricated timestamps.
+    const hours = [...evidence.quote.normalize("NFKC").matchAll(/募集条件更新\s*(\d+)\s*時間前/g)].map(m => Number(m[1]));
+    if (!maintenance && (!(provider === "itandi" || provider === "eslife") || !validListingEvidence(evidence, provider, now)
+      || hours.length !== 1 || hours[0] >= 24 || hours[0] * 3600_000 + now.getTime() - Date.parse(evidence.checkedAt) >= 24 * 3600_000)) reasons.push("取得元で24時間以内の募集条件更新を確認してください");
+    if (!/^東京都\s*文京区/.test(v.source.address.normalize("NFKC"))) reasons.push("直接検索の対象エリアは文京区です");
+    if (v.source.rent.yen < 200000) reasons.push("直接検索の賃料は20万円以上です");
+  } else if (!v.email || (!maintenance && !isRecentMail(v.email.receivedAt, now))) reasons.push("メールが直近1暦月の対象外です");
+  for (const [label, quote] of [...(!directSearch && v.email ? [["メール", v.email.adQuote]] : []), ["取得元", v.source.adQuote]]) {
     if (v.source.provider === "eslife" && label === "メール") continue;
     const ads = extractAdEvidence(quote);
     const values = [...new Set(ads.map((a) => a.months))];
-    const eslifeNoAdException = v.source.provider === "eslife" && label === "取得元" && v.source.rent.yen >= 250000 && /AD\s*(?:なし|無|0)/i.test(quote);
-    const eslifeThreshold = v.source.provider === "eslife" && label === "取得元" ? 0.3 : 2;
+    const eslifeNoAdException = label === "取得元" && v.source.rent.yen >= 250000 && (directSearch || (v.source.provider === "eslife" && /AD\s*(?:なし|無|0)/i.test(quote)));
+    const eslifeThreshold = (directSearch || v.source.provider === "eslife") && label === "取得元" ? 0.3 : 2;
     if (!eslifeNoAdException && (!ads.length || ads.some((a) => a.ambiguous || a.months === null || a.months < eslifeThreshold) || values.length !== 1)) reasons.push(`${label}の掲載料条件を確定できません`);
   }
   if (!(v.source.provider === "itandi" || v.source.provider === "eslife") || v.source.availability !== "available" || !validListingEvidence(v.source.listingEvidence, v.source.provider, now)) reasons.push("取得元で同一号室の現在の掲載を確認してください");
@@ -119,7 +136,7 @@ export function validateRentalImport(input: unknown, now: Date, mode: "draft" | 
     ...(v.advertisingEvidence ?? []).filter((a) => a.provider === "reins"),
     ...(v.source.advertising ? [{ ...v.source, provider: v.source.provider, status: v.source.advertising.status, evidence: v.source.advertising.evidence }] : []),
     ...(legacyMigration && v.reins ? [{ ...v.reins, provider: "reins", status: v.reins.advertising, evidence: v.reins.evidence }] : []),
-    ...(v.email.senderDomain === "ttfuhan.com" && v.email.advertising ? [{ ...v.email.advertising, provider: "email" }] : []),
+    ...(v.email?.senderDomain === "ttfuhan.com" && v.email.advertising ? [{ ...v.email.advertising, provider: "email" }] : []),
   ];
   const adAllowed = adEvidence.some((a) => (a.provider === "itandi" || a.provider === "reins" || a.provider === "eslife" || a.provider === "email") && a.status === "allowed" && hasAdvertisingAllow(a.evidence.quote)
     && isFresh(a.evidence.checkedAt, now) && (["building", "address", "unit"] as const).every((key) => same(a[key], v.source[key])));
@@ -182,7 +199,7 @@ export function validateRentalImport(input: unknown, now: Date, mode: "draft" | 
     spec: { ...v.property.spec, ...(v.property.spec.dealType === "rental" ? { availabilityExpiresAt: new Date(Math.min(Date.parse(v.source.checkedAt), Date.parse(v.source.listingEvidence.checkedAt), ...(legacyMigration ? [Date.parse(v.reins!.listingEvidence.checkedAt)] : [])) + 26 * 3600_000).toISOString() } : {}) },
     infoUpdatedAt: jstDate(now), nextUpdateAt: jstDate(new Date(now.getTime() + DAY)),
     publishedAt: mode === "published" ? jstDate(now) : undefined,
-    internal: { rentalImport: { version: 2, policy: RENTAL_IMPORT_POLICY, email: v.email, source: v.source, advertisingEvidence: v.advertisingEvidence, photoPermission: v.photoPermission, conditionChoices: v.conditionChoices, titleHighlights: v.titleHighlights, unconfirmedTerms: v.unconfirmedTerms, contentReview: v.contentReview, decisions, migration: v.reins ? { legacyReins: v.reins, legacyPortalChecks: summarizePortalChecks(v.portalChecks ?? []) } : undefined } },
+    internal: { rentalImport: { version: 2, policy: RENTAL_IMPORT_POLICY, intake: v.intake, supportingDocuments: v.supportingDocuments, email: v.email, source: v.source, advertisingEvidence: v.advertisingEvidence, photoPermission: v.photoPermission, conditionChoices: v.conditionChoices, titleHighlights: v.titleHighlights, unconfirmedTerms: v.unconfirmedTerms, contentReview: v.contentReview, decisions, migration: v.reins ? { legacyReins: v.reins, legacyPortalChecks: summarizePortalChecks(v.portalChecks ?? []) } : undefined } },
   };
   // Audit the original address at intake. Public tags are recomputed from that
   // address so saved evidence or translations can never override the district.

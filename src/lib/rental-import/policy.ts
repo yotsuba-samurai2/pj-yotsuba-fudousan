@@ -84,7 +84,7 @@ export function isCurrentEvidence(t: string, now: Date, hours = 24) {
 export function hasAdvertisingAllow(quote: string) {
   // A field caption (広告可否) is not an affirmative value. Negative wording is separate evidence.
   const text = quote.normalize("NFKC");
-  const allowed = /広告(?:掲載|転載)?[\s:：]*可(?:$|[\s。、,;；」』）)])|(?:エンド向け)?掲載[\s:：]*(?:可|OK)(?!では|でない|不可)/mi.test(text);
+  const allowed = /広告(?:掲載|転載)?(?:可否)?[\s:：]*可(?:$|[\s。、,;；」』）)])|(?:エンド向け)?掲載[\s:：]*(?:可|OK)(?!では|でない|不可)/mi.test(text);
   return allowed && !/広告(?:掲載|転載)?[\s:：]*(?:不可|禁止)|広告(?:掲載|転載)?可[\s]*では(?:ない|ありません)|掲載[\s:：]*(?:不可|禁止|ではない|ではありません)/i.test(text);
 }
 
