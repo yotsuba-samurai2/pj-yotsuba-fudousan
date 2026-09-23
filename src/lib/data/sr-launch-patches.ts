@@ -279,6 +279,19 @@ export const SR_LAUNCH_TRANSLATION_PATCHES: Record<
       to: "行政書士・社会保険労務士・宅地建物取引士",
       note: "/legal/about 代表紹介の「資格」（LegalAboutPageContent）。並びは representative.qualificationsLegal の to に揃える（2026-09-05 実測）",
     },
+    // ── 不動産サイトのフッター紹介文（2026-09-23 追加・第3波） ──
+    {
+      path: "realestate.footerDescription1",
+      from: "元新聞記者×行政書士の不動産屋。",
+      to: "元新聞記者×行政書士×社労士の不動産屋。",
+      note: "2026-09-23 浦松指示：代表の資格に社労士を足す（不動産サイトのフッター）",
+    },
+    {
+      path: "realestate.footerDescription2",
+      from: "4言語対応と専門家ネットワークで、住まい探しから法務までサポートします。",
+      to: "4言語対応と専門家ネットワークで、住まい探しから契約までサポートします。",
+      note: "2026-09-23：不動産会社が法務・労務まで担うと読めないよう、meta.description（compliance-patches）と同じ「契約まで」に揃える",
+    },
   ],
   en: [
     {
@@ -428,6 +441,19 @@ export const SR_LAUNCH_TRANSLATION_PATCHES: Record<
       from: "Administrative Scrivener (Gyoseishoshi), Licensed Real Estate Transaction Specialist",
       to: "Administrative Scrivener (Gyoseishoshi), Certified Social Insurance and Labor Consultant, Licensed Real Estate Transaction Specialist",
       note: "/legal/about「Qualifications」。representative.qualificationsLegal の to と同一（2026-09-05 実測）",
+    },
+    // ── 不動産サイトのフッター紹介文（2026-09-23 追加・第3波） ──
+    {
+      path: "realestate.footerDescription1",
+      from: "A real estate agency led by a former journalist and licensed scrivener.",
+      to: "A real estate agency led by a former journalist, administrative scrivener, and certified social insurance and labor consultant.",
+      note: "2026-09-23 浦松指示：代表の資格に社労士を足す（不動産サイトのフッター）",
+    },
+    {
+      path: "realestate.footerDescription2",
+      from: "4-language support and a professional network covering housing, legal, and labor services.",
+      to: "4-language support and a professional network, from housing search through contract.",
+      note: "2026-09-23：不動産会社が法務・労務まで担うと読めないよう、meta.description（compliance-patches）と同じ「契約まで」に揃える",
     },
   ],
   "zh-tw": [
@@ -579,6 +605,19 @@ export const SR_LAUNCH_TRANSLATION_PATCHES: Record<
       to: "行政書士・社會保險勞務士・不動產交易士",
       note: "/legal/about「資格／證照」。representative.qualificationsLegal の to と同一（2026-09-05 実測）",
     },
+    // ── 不動産サイトのフッター紹介文（2026-09-23 追加・第3波） ──
+    {
+      path: "realestate.footerDescription1",
+      from: "前新聞記者×行政書士的不動產公司。",
+      to: "前新聞記者×行政書士×社會保險勞務士的不動產公司。",
+      note: "2026-09-23 浦松指示：代表の資格に社労士を足す（不動産サイトのフッター）",
+    },
+    {
+      path: "realestate.footerDescription2",
+      from: "透過4種語言服務和專家網路，從找房到法務提供全方位支援。",
+      to: "透過4種語言服務和專家網路，提供從找房到簽約的支援。",
+      note: "2026-09-23：不動産会社が法務・労務まで担うと読めないよう、meta.description（compliance-patches）と同じ「契約まで」に揃える",
+    },
   ],
   zh: [
     {
@@ -728,6 +767,19 @@ export const SR_LAUNCH_TRANSLATION_PATCHES: Record<
       from: "行政书士・不动产交易士",
       to: "行政书士・社会保险劳务士・不动产交易士",
       note: "/legal/about「资格／证照」。representative.qualificationsLegal の to と同一（2026-09-05 実測）",
+    },
+    // ── 不動産サイトのフッター紹介文（2026-09-23 追加・第3波） ──
+    {
+      path: "realestate.footerDescription1",
+      from: "前新闻记者×行政书士的不动产公司。",
+      to: "前新闻记者×行政书士×社会保险劳务士的不动产公司。",
+      note: "2026-09-23 浦松指示：代表の資格に社労士を足す（不動産サイトのフッター）",
+    },
+    {
+      path: "realestate.footerDescription2",
+      from: "通过4种语言服务和专家网络，从找房到法务提供全方位支持。",
+      to: "通过4种语言服务和专家网络，提供从找房到签约的支持。",
+      note: "2026-09-23：不動産会社が法務・労務まで担うと読めないよう、meta.description（compliance-patches）と同じ「契約まで」に揃える",
     },
   ],
 };

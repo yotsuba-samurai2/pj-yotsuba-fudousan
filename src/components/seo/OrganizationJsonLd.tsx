@@ -86,7 +86,7 @@ export function OrganizationJsonLd({ businessKey }: { businessKey: string }) {
         // 事業体ごとの開設日。未設定はグループ共通値へフォールバック（社労士＝2026-09-01）
         foundingDate: biz.foundingDate ?? SHARED_ORG_INFO.foundingDate,
         ...(isRealEstate
-          ? { slogan: "元新聞記者×行政書士がつくる、東京都文京区の不動産屋" }
+          ? { slogan: "元新聞記者×行政書士×社労士がつくる、東京都文京区の不動産屋" }
           : {}),
         // 空配列のときはキーごと出さない（空の sameAs / memberOf を出力しない）
         ...(sameAs.length > 0 ? { sameAs } : {}),
