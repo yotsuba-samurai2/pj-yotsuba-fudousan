@@ -16,6 +16,11 @@
   button,a{-webkit-tap-highlight-color:transparent}
   button:focus-visible,a:focus-visible{outline:3px solid #1B4332;outline-offset:3px}
   #map{height:560px;border:1px solid var(--line);border-radius:6px;background:#EEF0EC;scroll-margin-top:90px}
+  #map[data-page-scroll="true"],#map[data-page-scroll="true"] .leaflet-pane,#map[data-page-scroll="true"] .leaflet-interactive,#map[data-page-scroll="true"] .leaflet-marker-icon{touch-action:pan-y pinch-zoom}
+  .map-navigation{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px}
+  .map-navigation button,.map-navigation a{min-height:44px;padding:8px 12px;border:1px solid #777;border-radius:5px;background:#fff;color:#222;font:inherit;font-size:13px;cursor:pointer;text-decoration:none}
+  .map-navigation button[aria-pressed="true"]{background:#1B4332;color:#fff;border-color:#1B4332}
+  #gesture-help{margin:0 0 10px;color:#555;font-size:12px}
   .toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:12px 0}
   #selection{margin:0;font-weight:700;font-size:14px}
   #reset{flex-shrink:0;padding:8px 12px;background:#fff;border:1px solid #777;border-radius:5px;color:#222;cursor:pointer}
@@ -39,6 +44,12 @@
 </style>
 </head>
 <body>
+<nav class="map-navigation" aria-label="地図の操作と戻る">
+  <a id="back-to-page" href="/gakku" target="_top" hidden>← 学区ページへ戻る</a>
+  <button type="button" id="back-to-list">学校一覧に戻る ↓</button>
+  <button type="button" id="map-interaction" aria-pressed="false" aria-controls="map" hidden disabled>地図を動かす</button>
+</nav>
+<p id="gesture-help" hidden>地図の上でも上下にスクロールできます。拡大・縮小は＋／−ボタンで操作できます。</p>
 <div id="map" role="region" aria-label="文京区20小学校の学区の概略図"></div>
 <div class="toolbar">
   <p id="selection" role="status" aria-live="polite">学校名を選ぶと学区が拡大します</p>

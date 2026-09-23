@@ -36,14 +36,19 @@ export default function GakkuMapEmbed() {
   useEffect(() => {
     const focusMap = (event: MessageEvent) => {
       if (event.origin !== window.location.origin || event.source !== ref.current?.contentWindow) return;
-      if (event.data?.type !== "gakku-map-focus") return;
+      if (event.data?.type !== "gakku-map-focus" && event.data?.type !== "gakku-map-list") return;
       const frame = ref.current;
       if (!frame) return;
       // Wait for the opened detail/iframe height to settle before positioning.
       // An instant parent scroll avoids racing the iframe's focus and map animation.
       requestAnimationFrame(() => requestAnimationFrame(() => {
         if (!frame.isConnected) return;
-        window.scrollTo({ top: window.scrollY + frame.getBoundingClientRect().top - 96, behavior: "instant" });
+        // Prefer the selected school over the whole list when returning.
+        const target = event.data.type === "gakku-map-list"
+          ? frame.contentDocument?.querySelector("#list .school.selected") ?? frame.contentDocument?.querySelector("#list")
+          : null;
+        const offset = target ? target.getBoundingClientRect().top + (frame.contentWindow?.scrollY ?? 0) : 0;
+        window.scrollTo({ top: window.scrollY + frame.getBoundingClientRect().top + offset - 96, behavior: "instant" });
       }));
     };
     window.addEventListener("message", focusMap);
