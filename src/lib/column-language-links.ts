@@ -4,9 +4,24 @@ import { languages } from "@/config/languages";
 import type { BusinessKey } from "@/lib/column-shared";
 import { isLocaleAllowed } from "@/lib/column-shared";
 
-/** 公開済み記事のみ。空配列＝全言語という既存のColumn.locales規約を維持する。 */
+/**
+ * 公開済み記事のみ。空配列＝全言語という既存のColumn.locales規約を維持する。
+ * 物件詳細（/bukken/<slug>）も同じ表に `bukken/<slug>` をキーとして載せる
+ * （記事slugは "/" を含まないため衝突しない）。日本語のみ公開の物件で言語切替が
+ * 404へのリンクを出さないため（2026-09-23 本番実測）。
+ */
 export type ColumnLocaleIndex = Record<string, LangCode[]>;
 export const COLUMN_LOCALE_CACHE_TAG = "column-language-index";
+export const PROPERTY_INDEX_PREFIX = "bukken/";
+
+/** 物件の公開ロケールを言語切替用の表に変換する（純関数・DB非依存）。 */
+export function buildPropertyLocaleIndex(
+  properties: ReadonlyArray<{ slug: string; locales: readonly LangCode[] }>,
+): ColumnLocaleIndex {
+  return Object.fromEntries(
+    properties.map(p => [`${PROPERTY_INDEX_PREFIX}${p.slug}`, [...p.locales]]),
+  );
+}
 
 export type ColumnLinkOverride = { href: string; language: string };
 export type ColumnLinkOverrides = Record<string, ColumnLinkOverride>;
@@ -36,18 +51,27 @@ export function resolveColumnLink(href: string, index: ColumnLocaleIndex): Colum
   };
 }
 
-/** SSRの内部/jaパス、公開URL、行政書士ドメインの素パスを同じ記事に対応させる。 */
+/** 言語切替の対象となる詳細ページ（記事・物件）を表のキーに解決する。それ以外は undefined。 */
+function switchIndexKey(path: string): string | undefined {
+  const column = path.match(/^\/(?:legal\/|labor\/)?column\/([^/]+)$/);
+  if (column) return column[1];
+  // 物件詳細と写真ページ（/photos は noindex・follow のため、ここも404リンクを出さない）
+  const property = path.match(/^\/bukken\/([^/]+)(?:\/photos)?$/);
+  if (property) return `${PROPERTY_INDEX_PREFIX}${property[1]}`;
+  return undefined;
+}
+
+/** SSRの内部/jaパス、公開URL、行政書士ドメインの素パスを同じ記事・物件に対応させる。 */
 export function getColumnSwitchLocales(
   pathname: string,
   index: ColumnLocaleIndex,
   currentLocale: LangCode,
 ): readonly LangCode[] {
   const path = localeSwitchBasePath(pathname).replace(/\/$/, "");
-  const match = path.match(/^\/(?:legal\/|labor\/)?column\/([^/]+)$/);
-  if (!match) return SUPPORTED_LOCALES;
+  const key = switchIndexKey(path);
+  if (!key) return SUPPORTED_LOCALES;
 
-  // 古いブラウザ内レイアウトや取得失敗で記事を確認できない場合は、翻訳URLを推測しない。
-  const slug = match[1];
-  if (!Object.prototype.hasOwnProperty.call(index, slug)) return [currentLocale];
-  return SUPPORTED_LOCALES.filter(locale => isLocaleAllowed({ locales: index[slug] }, locale));
+  // 古いブラウザ内レイアウトや取得失敗で記事・物件を確認できない場合は、翻訳URLを推測しない。
+  if (!Object.prototype.hasOwnProperty.call(index, key)) return [currentLocale];
+  return SUPPORTED_LOCALES.filter(locale => isLocaleAllowed({ locales: index[key] }, locale));
 }

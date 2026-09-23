@@ -608,3 +608,22 @@ sitemap の `locales` もページの `availableLocales` と同時に4言語へ�
 - [x] Browser取得/アップロード関数、通常CLIと認証済みコネクター経由の代替手順
 - [x] 全1,110テスト・型検査・変更箇所lintを通過。Sharp 0.35.4でも画像回帰11件と実画像18点を確認
 - [ ] PR作成
+
+## 2026-09-24 GSC点検の是正（canonical・hreflang・言語切替）
+
+2026-09-23 に GSC のエクスポート（全既知ページ／送信済みページ）と本番 sitemap 全1,615URLの取得で確認した3件を直す。
+未登録1万件の84%はフォント（robots.txt ブロック）で、sitemap 内の実ページは「クロール済み - 未登録」28件・登録済み778件＝構造上の問題なし。
+本PRは登録率そのものではなく、canonical の矛盾と404リンクの発生源を止めるもの。
+
+- [x] `/funin`：en・zh は ja 本文のフォールバックなのに canonical がリクエストロケール（/en/funin・/zh/funin が自己canonical）→ `locale:"ja"`（/kaigo・/kikoku の型）
+- [x] `/reasons`・`/network`：sitemap は ja のみなのに hreflang が4言語 → `availableLocales:["ja"]`
+- [x] 言語切替：日本語のみ公開の物件で EN・繁體・简体 が404へのリンク → 記事と同じ表に `bukken/<slug>` で公開ロケールを載せる（`getPropertyLanguageIndex`）。写真ページ（/photos）も対象
+- [x] 番人テスト：STATIC_REALESTATE・STATIC_LEGAL の locales とページの availableLocales の突合（sitemap-labor.test.ts の型を拡張）＋ /funin・/reasons・/network の canonical/hreflang 実行検査＋物件の言語切替
+- [ ] PR作成（マージは指示を受けてから）
+
+**検証**：tsc 0件／変更9ファイルの eslint 0件／vitest 1,316件通過／番人テストは修正前の状態に戻すと3件とも落ちることを確認（/reasons 2件・/funin 1件・レイアウトの配線1件）
+
+**申し送り（本PR対象外）**
+- `/nagare` のヒーロー画像 `/hero/realestate-souzoku-16x9.webp` が404（2026-09-23 点検 #1）。既存画像への差し替えは別途
+- 学区賃貸一覧84URLは force-dynamic（no-store）。空室鮮度が要らなければ ISR に戻す判断は浦松
+- Vercel Skew Protection（`?dpl=`）がフォントURLを増殖させる根本原因。切るかどうかは浦松判断（現状はブロック維持を推奨）

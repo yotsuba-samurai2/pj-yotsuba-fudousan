@@ -70,6 +70,9 @@ export async function generateMetadata(): Promise<Metadata> {
     ],
     locale: "ja",
     absoluteTitle: true,
+    // ja先行ページ＝hreflang を ja に限定（sitemap.ts の locales:["ja"] と一致させる。
+    // 未指定だと4言語の代替ページを申告しながら canonical は ja という矛盾になる。2026-09-23 実測）
+    availableLocales: ["ja"],
   });
 }
 
