@@ -627,3 +627,15 @@ sitemap の `locales` もページの `availableLocales` と同時に4言語へ�
 - `/nagare` のヒーロー画像 `/hero/realestate-souzoku-16x9.webp` が404（2026-09-23 点検 #1）。既存画像への差し替えは別途
 - 学区賃貸一覧84URLは force-dynamic（no-store）。空室鮮度が要らなければ ISR に戻す判断は浦松
 - Vercel Skew Protection（`?dpl=`）がフォントURLを増殖させる根本原因。切るかどうかは浦松判断（現状はブロック維持を推奨）
+
+## 2026-09-24 グループホーム向け物件・大家募集ページ（/group-home/ooya）Phase 1
+
+指示書：「グループホーム向け物件・大家募集ページ Cowork実装指示書 v1.0（2026-09-24）」。受け皿＝新ページ（募集条件・流れ・専用フォーム・誰がやるか）、深掘り＝既存コラム `/column/kodate-akiya-group-home-ni-kasu`。決定欄は全項目既定値。
+
+- [ ] Step 0：作業ツリー清浄・sitemap に `/group-home/ooya` なし・7-2 のコラム10本の存在確認
+- [ ] Step 1：リポジトリ実査表 `docs/gh-owner/00_jissa.md`
+- [ ] Step 2：法令一次確認 `docs/gh-owner/01_konkyo.md`（e-Gov 法令 API・参照日付き。取得不能は「未検証」）
+- [ ] Step 3：原稿 `docs/gh-owner/10_page.md`・`20_form.md`・`21_links.md`・`22_llms.md`・`23_events.md`
+- [ ] Step 4：ルート `/group-home/ooya`（ja のみ）・専用フォーム・`category=gh-owner`・GA4 イベント・JSON-LD・llms.txt・内部リンク（既存ページはリンク追加のみ）・対応表コンポーネント・`cases` 枠・sitemap・`90_pr-body.md`
+- [ ] Step 5：`npx tsc --noEmit`／eslint／vitest／禁止語 grep 0件／分離受任の判定語／相対パス／整形本文の目視
+- [ ] Step 6-7：コミット・push・ドラフト PR（マージは指示を受けてから）
