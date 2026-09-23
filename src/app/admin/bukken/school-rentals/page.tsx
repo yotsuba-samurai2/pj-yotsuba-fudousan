@@ -43,7 +43,7 @@ export default function SchoolRentalAdmin() {
     <Link href="/admin/bukken" className="text-primary underline">物件管理へ戻る</Link>
     <h1 className="text-2xl font-bold">学区別の募集一覧</h1>
     <p>文京区・賃料17万5,000円以上・48㎡以上・広告可を一覧掲載します。要連絡、申込あり、募集終了、同じ号室、既存登録を除外。ADは一般公開しません。ITANJI・いい生活・ATBBは申込なしの確認根拠が必要です。</p>
-    <p>取得元ごとに全ページを確認したJSONを選択してください。その取得元の前回一覧を置き換え、今回含まれない物件は一覧から外します。確認から26時間で非表示になります。ログイン失敗・取得途中のデータは投入しないでください。</p>
+    <p>取得元ごとに全ページを確認したJSONを選択してください。その取得元の前回一覧を置き換え、今回含まれない物件は一覧から外します。毎週水曜日に募集情報を更新します。経過時間だけで自動非表示にはしません。ログイン失敗・取得途中のデータは投入しないでください。</p>
     <label className="block">確認データ（JSON）<input type="file" accept=".json,application/json" disabled={busy} className="mt-2 block" onChange={async e => {
       setFeed(null); setPreview(null); setError("");
       try { const file = e.target.files?.[0]; if (file) { if (file.size > 3000000) throw new Error("ファイルが大きすぎます"); setFeed(JSON.parse(await file.text())); } }

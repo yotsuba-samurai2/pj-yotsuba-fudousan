@@ -1,7 +1,6 @@
 import { z } from "zod";
 import { lookupDistrictByAddress } from "./school-district";
 
-export const FEED_HOURS = 26;
 export const providers = ["reins", "itandi", "eslife", "atbb"] as const;
 export type FeedProvider = typeof providers[number];
 const text = z.string().trim().max(1600);
@@ -41,7 +40,17 @@ export const feedSchema = z.object({
 export type RentalFeed = z.infer<typeof feedSchema>;
 export type FeedRecord = z.infer<typeof feedRecordSchema>;
 export type RentalSummary = z.infer<typeof summarySchema>;
-export type PublicRentalSummary = RentalSummary & { id: string; schoolSlug: string | null; checkedAt: string; expiresAt: string };
+export type PublicRentalSummary = RentalSummary & { id: string; schoolSlug: string | null; checkedAt: string; nextReviewAt: string };
+
+// Weekly review is a displayed schedule, never an automatic publication cutoff.
+export function nextWeeklyReviewAt(checkedAt: string) {
+  const checked = new Date(checkedAt);
+  const next = new Date(checked);
+  next.setUTCHours(3, 0, 0, 0); // Wednesday 12:00 in Asia/Tokyo.
+  next.setUTCDate(next.getUTCDate() + (3 - next.getUTCDay() + 7) % 7);
+  if (next.getTime() <= checked.getTime()) next.setUTCDate(next.getUTCDate() + 7);
+  return next.toISOString();
+}
 
 export function normalized(value: string) {
   return value.normalize("NFKC").toLowerCase().replace(/[\s　・･]/g, "").replace(/[−ー－―]/g, "-");
@@ -73,7 +82,7 @@ export function sameUnit(a: Pick<RentalSummary, "building" | "unit" | "address">
 }
 export function rejectionReason(feed: RentalFeed, r: FeedRecord, now = new Date()): string | null {
   const time = Date.parse(feed.checkedAt);
-  if (time > now.getTime() || time + FEED_HOURS * 3600000 <= now.getTime()) return "確認期限切れ・未来の確認日時";
+  if (time > now.getTime()) return "未来の確認日時";
   if (r.advertising !== "allowed") return "広告可未確認・要連絡";
   if (r.availability !== "active" || r.application === "present") return "募集終了・申込あり";
   if (feed.provider !== "reins" && r.application !== "none") return "申込状態の根拠未確認";
@@ -90,7 +99,6 @@ export function compileRentalSummaries(feeds: RentalFeed[], existing: Pick<Renta
   const sorted = feeds.flatMap(feed => feed.records.map(row => ({ feed, row })))
     .sort((a, b) => Date.parse(b.feed.checkedAt) - Date.parse(a.feed.checkedAt) || a.feed.provider.localeCompare(b.feed.provider) || a.row.sourceId.localeCompare(b.row.sourceId));
   const withdrawals = sorted.filter(({ feed, row }) => Date.parse(feed.checkedAt) <= now.getTime()
-    && Date.parse(feed.checkedAt) + FEED_HOURS * 3600000 > now.getTime()
     && (row.availability === "closed" || row.application === "present"));
   for (const item of sorted) {
     const { feed, row } = item;
@@ -107,7 +115,7 @@ export function compileRentalSummaries(feeds: RentalFeed[], existing: Pick<Renta
     const district = lookupDistrictByAddress(s.address);
     // Internal source IDs and AD never enter the public shape.
     return { ...s, id: `rental-${stableId(`${feed.provider}:${row.sourceId}`)}`, schoolSlug: district.status === "determined" ? district.school.slug : null,
-      checkedAt: feed.checkedAt, expiresAt: new Date(Date.parse(feed.checkedAt) + FEED_HOURS * 3600000).toISOString() };
+      checkedAt: feed.checkedAt, nextReviewAt: nextWeeklyReviewAt(feed.checkedAt) };
   }).sort((a, b) => a.rentYen - b.rentYen || a.building.localeCompare(b.building));
   // A duplicate source row can contain AD evidence missing from the selected public row.
   // Preserve that private evidence without replacing the displayed contract terms.
