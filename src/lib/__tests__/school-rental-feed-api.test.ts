@@ -23,8 +23,10 @@ it("previews without saving", async () => {
   const result = await POST(request(body())); expect(result.status).toBe(200);
   expect(await result.json()).toMatchObject({ expectedUpdatedAt: null }); expect(saveSchoolRentalFeed).not.toHaveBeenCalled();
 });
-it("refuses expired or incomplete snapshots", async () => {
-  const b = body(); b.feed.checkedAt = "2000-01-01T00:00:00Z";
+it("refuses future or incomplete snapshots while allowing weekly snapshots", async () => {
+  const weekly = body(); weekly.feed.checkedAt = new Date(Date.now()-7*86400000).toISOString();
+  expect((await POST(request(weekly))).status).toBe(200);
+  const b = body(); b.feed.checkedAt = new Date(Date.now()+86400000).toISOString();
   expect((await POST(request(b))).status).toBe(400);
   const c = body(); c.feed.complete = false;
   expect((await POST(request(c))).status).toBe(400); expect(saveSchoolRentalFeed).not.toHaveBeenCalled();

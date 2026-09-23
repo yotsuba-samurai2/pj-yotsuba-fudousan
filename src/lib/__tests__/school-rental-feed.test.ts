@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { compileRentalSummaries, feedSchema, monthlyTotal, sameUnit, type RentalFeed, type FeedRecord } from "../school-rental-feed";
+import { compileRentalSummaries, feedSchema, monthlyTotal, sameUnit, nextWeeklyReviewAt, type RentalFeed, type FeedRecord } from "../school-rental-feed";
 import { extractReinsRecord } from "../../../scripts/rental-import/reins-school-feed";
 const now = new Date("2026-09-23T05:00:00Z");
 function row(): FeedRecord {
@@ -41,9 +41,10 @@ describe("School rental summaries", () => {
     const r = row(); r.application = "unknown";
     expect(compileRentalSummaries([feed("reins", [r])], [], now).summaries).toHaveLength(1);
   });
-  it("excludes stale/future evidence, out of area, low rent and small area", () => {
+  it("keeps listings after 26 hours and still rejects future evidence and outside criteria", () => {
     const f = feed(); f.checkedAt = "2026-09-22T03:00:00Z";
-    expect(compileRentalSummaries([f], [], now).summaries).toHaveLength(0);
+    expect(compileRentalSummaries([f], [], now).summaries).toHaveLength(1);
+    expect(compileRentalSummaries([f], [], new Date("2026-10-01T05:00:00Z")).summaries).toHaveLength(1);
     f.checkedAt = "2026-09-23T06:00:00Z";
     expect(compileRentalSummaries([f], [], now).summaries).toHaveLength(0);
     for (const patch of [{ rentYen: 174999 }, { areaSqm: 47.99 }, { address: "東京都港区芝1丁目" }]) {
@@ -64,7 +65,14 @@ describe("School rental summaries", () => {
     const a = feed(), b = feed("eslife"); b.records[0].availability = "closed"; b.records[0].advertising = "not-allowed";
     expect(compileRentalSummaries([a,b], [], now).summaries).toHaveLength(0);
     b.checkedAt = "2026-09-21T04:00:00Z";
+    expect(compileRentalSummaries([a,b], [], now).summaries).toHaveLength(0);
+    b.records = [];
     expect(compileRentalSummaries([a,b], [], now).summaries).toHaveLength(1);
+  });
+  it("shows the next Wednesday 09:00 JST without treating it as expiry", () => {
+    expect(nextWeeklyReviewAt("2026-09-23T06:23:23Z")).toBe("2026-09-30T00:00:00.000Z");
+    expect(nextWeeklyReviewAt("2026-09-22T23:00:00Z")).toBe("2026-09-23T00:00:00.000Z");
+    expect(nextWeeklyReviewAt("2026-09-23T00:00:00Z")).toBe("2026-09-30T00:00:00.000Z");
   });
   it("matches verified spelling aliases and matching room suffixes without collapsing wings", () => {
     const a = row().summary, b = { ...a, building: "試験マンション ２０５号室" };
