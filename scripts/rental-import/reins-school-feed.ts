@@ -71,7 +71,7 @@ if (process.argv[1]?.endsWith("reins-school-feed.ts")) {
   if (new Set(all.map(r => r.sourceId)).size !== all.length) throw new Error("取得した登録IDが重複しています");
   // Keep negative evidence privately so it can suppress another source's stale active row.
   const records = all;
-  const feed = feedSchema.parse({ version: 1, provider: "reins", scope: "bunkyo-rent-175000-area-48", checkedAt, complete: true, records });
+  const feed = feedSchema.parse({ version: 1, provider: "reins", scope: "bunkyo-rent-175000-area-48", checkedAt, complete: true, expectedCount: capture.expectedCount, records });
   writeFileSync(output, JSON.stringify(feed, null, 2) + "\n");
   console.log(JSON.stringify({ records: records.length, unconditionallyAllowed: records.filter(r => r.advertising === "allowed").length, adCandidates: records.filter(r => r.advertising === "allowed" && ["confirmed", "consult"].includes(r.adStatus)).length }));
 }

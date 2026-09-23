@@ -12,6 +12,18 @@ function feed(provider: RentalFeed["provider"] = "reins", records = [row()]): Re
   return { version: 1, provider, scope: "bunkyo-rent-175000-area-48", complete: true, checkedAt: "2026-09-23T04:00:00Z", records };
 }
 describe("School rental summaries", () => {
+  it("accounts for every source registration exactly once, without adding AD candidates", () => {
+    const a = row(), duplicate = row(), denied = row();
+    duplicate.sourceId = "duplicate"; denied.sourceId = "denied"; denied.advertising = "not-allowed";
+    const f = feed("reins", [a, duplicate, denied]);
+    const result = compileRentalSummaries([f], [], now);
+    expect(result.summaries.length + result.excluded.length).toBe(3);
+    expect(result.summaries).toHaveLength(1);
+    expect(result.adCandidates).toHaveLength(1);
+    expect(feedSchema.safeParse({ ...f, expectedCount: 3 }).success).toBe(true);
+    expect(feedSchema.safeParse({ ...f, expectedCount: 4 }).success).toBe(false);
+    expect(feedSchema.safeParse(f).success).toBe(true); // Legacy saved data remains readable.
+  });
   it("includes the final 175,000 yen / 48 m² boundary without requiring AD", () => {
     const r = row(); r.summary.rentYen = 175000; r.summary.areaSqm = 48; r.adQuote = ""; r.adStatus = "none";
     const result = compileRentalSummaries([feed("itandi", [r])], [], now);

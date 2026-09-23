@@ -56,13 +56,16 @@ export default function SchoolRentalAdmin() {
     </div>
     {error && <p role="alert" className="text-red-700">{error}</p>}
     {preview && <>
-      <p role="status">{preview.saved ? "保存済みデータ：" : "確認結果："}一覧 {preview.summaries.length}件／除外 {preview.excluded.length}件／学区要確認 {preview.summaries.filter(r => !r.schoolSlug).length}件</p>
+      <p role="status">{preview.saved ? "保存結果（比較一覧）：" : "反映後の比較一覧（予定）："}全取得元の登録 {preview.summaries.length + preview.excluded.length}件 ＝ 比較一覧 {preview.summaries.length}件 ＋ 除外 {preview.excluded.length}件</p>
+      {feed && <p>今回の入力：{feed.provider}／検索総登録数 {feed.expectedCount}件／取得 {feed.records.length}件</p>}
+      <p className="text-sm text-text-muted">比較一覧は全取得元をまとめ、条件外・同一号室・既存登録を除いた件数です。今回の新規追加数ではありません。学校ページの「募集中」は、比較一覧とその言語で表示できる写真付き公開物件の合計です。写真の枚数、他言語ページ、AD候補を物件件数に加算しません。</p>
       <Link href="/gakku/rentals" target="_blank" rel="noopener" className="text-primary underline">公開一覧を確認 ↗</Link>
       <h2 className="text-xl font-bold">AD付きの個別掲載候補（社内専用）</h2>
+      <p>比較一覧の内数：{preview.adCandidates.length}件</p>
       <p>「相談」は確約されたADではありません。個別登録前に条件と募集を再確認し、通常の物件取込で写真・必須情報を揃えます。</p>
       <ul className="space-y-2">{preview.adCandidates.map(r => <li key={`${r.provider}:${r.sourceId}`} className="rounded border p-3">{r.building} {r.unit}／{r.provider}／{r.adQuote}（{r.adStatus === "consult" ? "要相談" : "確認済み"}）</li>)}</ul>
       <details><summary>除外理由</summary><ul>{preview.excluded.map(r => <li key={`${r.provider}:${r.sourceId}`}>{r.provider} {r.sourceId}：{r.reason}</li>)}</ul></details>
-      <details><summary>掲載予定物件</summary><ul>{preview.summaries.map(r => <li key={r.id}>{r.building} {r.unit}：{r.schoolSlug ?? "学区要確認"}</li>)}</ul></details>
+      <details><summary>{preview.saved ? "比較一覧の物件" : "掲載予定物件"}</summary><ul>{preview.summaries.map(r => <li key={r.id}>{r.building} {r.unit}：{r.schoolSlug ?? "学区要確認"}</li>)}</ul></details>
     </>}
   </div>;
 }
