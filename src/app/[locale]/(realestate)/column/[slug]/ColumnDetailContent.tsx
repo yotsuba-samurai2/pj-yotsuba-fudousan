@@ -10,6 +10,7 @@ import {
   type ColumnArticleHeroIllustration,
 } from "@/components/column/ColumnArticleHero";
 import { RelatedColumnsSection } from "@/components/column/RelatedColumnsSection";
+import type { ReactNode } from "react";
 import type { Column, ColumnSummary } from "@/lib/column-shared";
 
 type Props = {
@@ -18,6 +19,8 @@ type Props = {
   next: ColumnSummary | null;
   related: ColumnSummary[];
   illustration: ColumnArticleHeroIllustration;
+  /** 本文直後に差す要素（2026-09-24：コラム→受け皿の「この記事に関係する相談窓口」。page.tsx が ja・対象slugのときだけ渡す） */
+  afterBody?: ReactNode;
 };
 
 const RELATED_HEADING: Record<string, string> = {
@@ -27,7 +30,7 @@ const RELATED_HEADING: Record<string, string> = {
   zh: "相关文章",
 };
 
-export default function ColumnDetailContent({ col, prev, next, related, illustration }: Props) {
+export default function ColumnDetailContent({ col, prev, next, related, illustration, afterBody }: Props) {
   const { t, locale } = useTranslation();
 
   return (
@@ -76,6 +79,8 @@ export default function ColumnDetailContent({ col, prev, next, related, illustra
 
           {/* Content */}
           <ColumnBody content={col.content} />
+
+          {afterBody}
 
           {/* Prev / Next */}
           <div className="mt-16 grid gap-4 border-t border-border pt-8 sm:grid-cols-2">

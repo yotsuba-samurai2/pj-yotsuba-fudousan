@@ -8,6 +8,8 @@ import { FAQJsonLd } from "@/components/seo/FAQJsonLd";
 import { SpeakableJsonLd } from "@/components/seo/SpeakableJsonLd";
 import { CtaBand } from "@/components/shared/CtaBand";
 import { getColumnIllustrationAlt, resolveColumnIllustration } from "@/lib/column-illustrations";
+import { getColumnConsultWindows } from "@/lib/column-consult-windows";
+import { RelatedConsultWindows } from "@/components/column/RelatedConsultWindows";
 
 import LegalColumnDetailContent from "./LegalColumnDetailContent";
 import type { Metadata } from "next";
@@ -69,6 +71,9 @@ export default async function LegalColumnDetailPage({ params }: Props) {
   const prev = idx < sorted.length - 1 ? sorted[idx + 1] : null;
   const next = idx > 0 ? sorted[idx - 1] : null;
 
+  // 2026-09-24：コラム→受け皿ページの「この記事に関係する相談窓口」（対応表＝column-consult-windows.ts・ja のみ）
+  const consultWindows = locale === "ja" ? getColumnConsultWindows("legal", slug) : null;
+
   return (
     <div>
       <BlogPostingJsonLd
@@ -89,6 +94,7 @@ export default async function LegalColumnDetailPage({ params }: Props) {
         prev={prev}
         next={next}
         illustration={illustration}
+        afterBody={consultWindows ? <RelatedConsultWindows windows={consultWindows} /> : undefined}
       />
       {/* ★2026-08-13 追加：コラム記事の末尾にCTA帯を置く。
           3レーンとも column/[slug]・column・about にだけ CtaBand が無く、

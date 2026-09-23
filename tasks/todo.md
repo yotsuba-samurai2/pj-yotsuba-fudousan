@@ -632,10 +632,21 @@ sitemap の `locales` もページの `availableLocales` と同時に4言語へ�
 
 指示書：「グループホーム向け物件・大家募集ページ Cowork実装指示書 v1.0（2026-09-24）」。受け皿＝新ページ（募集条件・流れ・専用フォーム・誰がやるか）、深掘り＝既存コラム `/column/kodate-akiya-group-home-ni-kasu`。決定欄は全項目既定値。
 
-- [ ] Step 0：作業ツリー清浄・sitemap に `/group-home/ooya` なし・7-2 のコラム10本の存在確認
-- [ ] Step 1：リポジトリ実査表 `docs/gh-owner/00_jissa.md`
-- [ ] Step 2：法令一次確認 `docs/gh-owner/01_konkyo.md`（e-Gov 法令 API・参照日付き。取得不能は「未検証」）
-- [ ] Step 3：原稿 `docs/gh-owner/10_page.md`・`20_form.md`・`21_links.md`・`22_llms.md`・`23_events.md`
-- [ ] Step 4：ルート `/group-home/ooya`（ja のみ）・専用フォーム・`category=gh-owner`・GA4 イベント・JSON-LD・llms.txt・内部リンク（既存ページはリンク追加のみ）・対応表コンポーネント・`cases` 枠・sitemap・`90_pr-body.md`
-- [ ] Step 5：`npx tsc --noEmit`／eslint／vitest／禁止語 grep 0件／分離受任の判定語／相対パス／整形本文の目視
-- [ ] Step 6-7：コミット・push・ドラフト PR（マージは指示を受けてから）
+- [x] Step 0：作業ツリー清浄・sitemap に `/group-home/ooya` なし・7-2 のコラム10本の存在確認
+- [x] Step 1：リポジトリ実査表 `docs/gh-owner/00_jissa.md`
+- [x] Step 2：法令一次確認 `docs/gh-owner/01_konkyo.md`（e-Gov 法令 API・参照日付き。取得不能は「未検証」）
+- [x] Step 3：原稿 `docs/gh-owner/10_page.md`・`20_form.md`・`21_links.md`・`22_llms.md`・`23_events.md`
+- [x] Step 4：ルート `/group-home/ooya`（ja のみ）・専用フォーム・`category=gh-owner`・GA4 イベント・JSON-LD・llms.txt・内部リンク（既存ページはリンク追加のみ）・対応表コンポーネント・`cases` 枠・sitemap・`90_pr-body.md`
+- [x] Step 5：`npx tsc --noEmit`／eslint／vitest／禁止語 grep 0件／分離受任の判定語／相対パス／整形本文の目視
+- [x] Step 6-7：コミット・push・ドラフト PR #420（マージは指示を受けてから）
+
+**検証（2026-09-24）**：`npx tsc --noEmit` 0件／変更・新規ファイルの eslint error 0（警告は既存の `<img>` 4件のみ）／vitest 93ファイル・1,359件通過（新規：`gh-owner-intake.test.ts`・`gh-owner-page.test.ts`、追記：`contact-api-routing.test.ts`・`labor-contact-order.test.ts`）／禁止語 grep 0件（origin/main 基準）／分離受任の判定語あり／内部リンクは相対パス／既存ページの差分はリンク行の追加のみ（削除行なし）／整形本文はテストで期待出力と照合
+
+**レビュー記録**
+- 法令一次確認で指示書の2点を訂正：共同生活援助の定義は障害者総合支援法第5条**第18項**（付録Bの第17項は自立生活援助）／宅建業法第34条の2は売買・交換の媒介契約書面の規定で貸借の媒介を含まないため引用せず、第34条（取引態様の明示）・第46条（報酬）に置き換え
+- 既存 API `/api/contact` は `category=gh-owner` のときだけ「電話があればメール任意」（他カテゴリは不変）。メール無しは自動返信を送らず replyTo も付けない
+- GA4 は既存のイベント名（`contact_submit`・`contact_submit_error`・`cta_contact_click`・`cta_line_click`・`cta_tel_click`）に `page`/`location`/`form_id`/`property_type` を足す方式。`form_start` は GA4 自動収集と名前が重なるため `contact_form_start`
+- sitemap の lastmod は固定ページで出さない既存設計（SEO監査 P1-2）に従い出さない（指示書 Step 4-10 からの意図的な逸脱。dateModified は WebPage JSON-LD と可視表示で持つ）
+- 姉妹企画 `/wakeari`（PR #421・未マージ）とは対応表コンポーネント（`column-consult-windows.ts`・`RelatedConsultWindows.tsx`）を共用する設計。後にマージする側で競合解消
+- 未検証：文京区の近隣説明の運用（区ページに記載なし）／消防法施行令(6)項ロの入居者区分の数値（総務省令未取得）／既存送信経路のスパム対策は無し（本 PR で新設せず）／Wikidata「共同生活援助」の照合（API が 429）／描画確認は Vercel プレビュー
+

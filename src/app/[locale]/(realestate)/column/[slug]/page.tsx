@@ -9,6 +9,8 @@ import { SpeakableJsonLd } from "@/components/seo/SpeakableJsonLd";
 import { CtaBand } from "@/components/shared/CtaBand";
 import { resolveRealestateColumnCta } from "@/lib/column-shared";
 import { getColumnIllustrationAlt, resolveColumnIllustration } from "@/lib/column-illustrations";
+import { getColumnConsultWindows } from "@/lib/column-consult-windows";
+import { RelatedConsultWindows } from "@/components/column/RelatedConsultWindows";
 
 import type { Metadata } from "next";
 import type { LangCode } from "@/config/languages";
@@ -89,6 +91,10 @@ export default async function ColumnDetailPage({ params }: Props) {
   // ★判定は ja 正本の base で行う（col は翻訳済み＝category が "Inheritance"／"继承" に差し替わる）。
   const cta = resolveRealestateColumnCta(base);
 
+  // 2026-09-24：コラム→受け皿ページ（/group-home/ooya 等）の「この記事に関係する相談窓口」。
+  // DB の本文は触らず、コードの対応表（column-consult-windows.ts）に slug があるときだけ ja で本文直後に差す。
+  const consultWindows = locale === "ja" ? getColumnConsultWindows("realestate", slug) : null;
+
   return (
     <div>
       <BlogPostingJsonLd
@@ -110,6 +116,7 @@ export default async function ColumnDetailPage({ params }: Props) {
         next={next}
         related={related}
         illustration={illustration}
+        afterBody={consultWindows ? <RelatedConsultWindows windows={consultWindows} /> : undefined}
       />
       {/* ★2026-08-13 追加：コラム記事の末尾にCTA帯を置く。
           3レーンとも column/[slug]・column・about にだけ CtaBand が無く、

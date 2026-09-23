@@ -101,6 +101,8 @@ const FOOTER_NAV_HREFS: Record<
           locales: ["ja", "zh-tw", "zh"],
         },
         { href: "/group-home", key: "groupHome", labels: { ja: "グループホーム開設ガイド", en: "Group home opening guide", "zh-tw": "團體家屋開設指南", zh: "团体家屋开设指南" } },
+        // 2026-09-24：大家募集ページ（貸す側の受け皿）。ja先行公開＝sitemap.ts の locales:["ja"] と一致
+        { href: "/group-home/ooya", key: "groupHomeOoya", labels: { ja: "グループホーム向け物件を貸したい方へ" }, locales: ["ja"] },
       ],
     },
     {

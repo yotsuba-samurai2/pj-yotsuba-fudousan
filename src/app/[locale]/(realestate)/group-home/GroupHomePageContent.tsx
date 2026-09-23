@@ -480,6 +480,13 @@ const COPY: Record<LangCode, GroupHomeCopy> = {
         description:
           "相続した不動産の管理・活用・売却の完全ガイド。空き家のグループホーム活用の入口にもなります。",
       },
+      // 2026-09-24：貸す側の受け皿（大家募集ページ・ja先行公開＝jaのCOPYのみに追加）
+      {
+        href: "/group-home/ooya",
+        label: "グループホーム向けに物件を貸したい大家さんへ（募集条件と相談の流れ）",
+        description:
+          "戸建て・空き家・アパートを共同生活援助の事業者に貸したい所有者向け。募集条件・契約前の論点・相談の流れと専用フォーム。",
+      },
       // ── 開設コラム（GHクラスタP1・2026-07-23公開・ja限定＝jaのCOPYのみに追加） ──
       // ハブ→スポーク導線。設計＝samurai-app/tasks/gh-column-cluster-placement-plan.md §3
       {

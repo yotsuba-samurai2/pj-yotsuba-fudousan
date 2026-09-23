@@ -324,6 +324,10 @@ export default async function Page() {
                 <strong>原状回復の取り決め</strong>：消防設備の設置や間仕切りの変更など、開設にあたって改修を行う場合は、退去時にどこまで元に戻すのかを契約時に取り決めておくことが重要です。取り決めがないまま改修を進めると、退去時の負担が想定を超えることがあります。
               </li>
             </ul>
+            {/* 2026-09-24：貸す側の受け皿（大家募集ページ）へ。ja分岐内＝jaのみ */}
+            <p className="mt-2 text-sm">
+              <Link href="/group-home/ooya" className="text-primary underline">物件をお持ちの方（貸したい大家さん）はこちら</Link>
+            </p>
           </div>
 
           {/* §4 役割分担（表）。分離受任・紹介料なし＝CannotHandleの浦松確定文言と同一趣旨。社労士の未開業注記は必須。表スタイル＝access/page.tsxに準拠 */}
