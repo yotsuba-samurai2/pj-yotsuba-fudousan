@@ -60,7 +60,7 @@ for (const locale of ["ja", "en", "zh-tw", "zh"] as const) describe(`inquiry wor
     const html = renderToStaticMarkup(await Top());
     const requestIndex = html.indexOf('id="standalone-services"');
     const bannerIndex = html.indexOf('id="workflow-banner-title"');
-    const pricesIndex = html.indexOf('id="engagement-comparison"');
+    const pricesIndex = html.indexOf('id="advisory-plan"');
     expect(requestIndex).toBeGreaterThan(-1);
     expect(bannerIndex).toBeGreaterThan(requestIndex);
     expect(pricesIndex).toBeGreaterThan(bannerIndex);

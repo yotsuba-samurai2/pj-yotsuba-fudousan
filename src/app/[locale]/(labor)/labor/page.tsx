@@ -12,7 +12,7 @@ import { LaborPlanPricing } from "@/components/labor/LaborPlanPricing";
 import { LaborSetupComparison } from "@/components/labor/LaborSetupComparison";
 import { LABOR_SERVICE_COPY, getLaborPlanFaqs } from "@/lib/labor/service-copy";
 import { LABOR_ENGAGEMENT_COPY } from "@/lib/labor/engagement-copy";
-import { LaborEngagementCtas, LaborEngagementComparison } from "@/components/labor/LaborEngagement";
+import { LaborEngagementCtas } from "@/components/labor/LaborEngagement";
 import { LaborTopHero, LaborRequestMethods } from "@/components/labor/LaborTopIntro";
 import warmStyles from "@/components/labor/LaborWarm.module.css";
 import { LaborWorkflowBanner } from "@/components/labor/LaborWorkflow";
@@ -510,7 +510,6 @@ export default async function LaborTopPage() {
       <div className={`${warmStyles.content} defer-page-sections`}>
         <LaborRequestMethods locale={locale} />
         <LaborWorkflowBanner locale={locale} />
-        <div className="mt-14"><LaborEngagementComparison locale={locale} /></div>
         <section id="advisory-plan" className="mt-12 scroll-mt-24 space-y-6">
           <LaborPlanPricing locale={locale} />
           <LaborSetupComparison locale={locale} headingLevel="h3" />

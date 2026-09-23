@@ -1,5 +1,5 @@
 import { LABOR_ENGAGEMENT_COPY } from "@/lib/labor/engagement-copy";
-import { LaborStandaloneServices, LaborEngagementComparison } from "@/components/labor/LaborEngagement";
+import { LaborStandaloneServices } from "@/components/labor/LaborEngagement";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { buildPageMetadata, BCP47_BY_LOCALE } from "@/lib/seo";
@@ -39,7 +39,6 @@ export default async function Page() {
     <div className="mx-auto max-w-6xl px-4 pb-16 lg:pr-72">
       <h1 className="font-serif text-3xl font-semibold text-ink">{c.pricingHeading}</h1>
       <div className="mt-8"><LaborStandaloneServices locale={locale} /></div>
-      <div className="mt-12"><LaborEngagementComparison locale={locale} /></div>
       <p className="mt-12 leading-relaxed text-text">{c.intro}</p>
       <div className="mt-6"><LaborPlanPricing locale={locale} /></div>
       <p className="mt-3 text-sm leading-relaxed text-text">{c.units}</p>
