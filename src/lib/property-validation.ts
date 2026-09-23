@@ -147,7 +147,7 @@ const propertyBaseSchema = z.object({
     locationText: z.string().min(1),
     access: z.array(accessSchema),
     spec: propertySpecSchema,
-    images: z.array(imageSchema),
+    images: z.array(imageSchema).refine(images => new Set(images.map(i => i.url)).size === images.length, "同じ画像が重複しています"),
     description: z.string().min(1),
     publishedAt: isoDate.optional(),
     infoUpdatedAt: isoDate,

@@ -6,7 +6,8 @@ import { verifyAdminRequest, AuthError } from "@/lib/api-auth";
 import { closeRental, closureSchema, closureFromRentalImport, importRental } from "@/lib/rental-import/lifecycle";
 import { validateRentalImport } from "@/lib/rental-import/validation";
 import { rentalStore } from "@/lib/rental-import/db-store";
-import { inspectImage, isOwnedImage } from "@/lib/rental-import/media";
+import { isOwnedImage } from "@/lib/rental-import/media";
+import { inspectOriginalImage, ImageQualityError } from "@/lib/rental-import/image-quality";
 import {
   recordPropertyPublicationChange,
   scheduleDuePropertyNotifications,
@@ -27,11 +28,11 @@ export async function POST(req: NextRequest) {
       if (!gate.ok) return NextResponse.json({ error: gate.reasons.join(" / ") }, { status: 422 });
       const allowed = await importRental(record, { ...rentalStore, create: async () => {}, update: async () => true }, now, mode, maintenance);
       if (allowed.action === "held") return NextResponse.json({ error: allowed.reasons?.join(" / ") }, { status: 409 });
-      const bytes = new Uint8Array(await file.arrayBuffer()), media = inspectImage(bytes);
+      const bytes = new Uint8Array(await file.arrayBuffer()), media = await inspectOriginalImage(bytes);
       const url = process.env.NEXT_PUBLIC_SUPABASE_URL, key = process.env.SUPABASE_SERVICE_ROLE_KEY;
       if (!url || !key) return NextResponse.json({ error: "ストレージの設定が不足しています" }, { status: 503 });
       const storage = createClient(url, key, { auth: { persistSession: false, autoRefreshToken: false } }).storage.from("column-images");
-      const path = `bukken/auto/${gate.property.slug}/${media.hash}.${media.ext}`;
+      const path = `bukken/auto/${gate.property.slug}/${media.pixelHash}.${media.ext}`;
       const { error } = await storage.upload(path, bytes, { contentType: media.contentType, cacheControl: "31536000", upsert: true });
       if (error) return NextResponse.json({ error: "画像保存に失敗しました" }, { status: 502 });
       return NextResponse.json({ url: storage.getPublicUrl(path).data.publicUrl });
@@ -70,6 +71,7 @@ export async function POST(req: NextRequest) {
     }
     return NextResponse.json(result);
   } catch (err) {
+    if (err instanceof ImageQualityError) return NextResponse.json({ error: err.message }, { status: 422 });
     if (err instanceof AuthError) return NextResponse.json({ error: err.message }, { status: err.status });
     if (err instanceof SyntaxError) return NextResponse.json({ error: "JSONの形式が不正です" }, { status: 400 });
     // Do not leak source documents, credentials or database internals in errors.
