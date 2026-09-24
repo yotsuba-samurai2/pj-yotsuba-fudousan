@@ -53,6 +53,10 @@ describe("報酬額表（/legal/ryokin）の4言語化：2026-09-24 全ページ
     }
   });
 
+  it("内部呼称（松・竹・梅）を公開面に出さない（2026-09-24 浦松指示）", () => {
+    for (const r of rows) expect(r.name, r.name).not.toMatch(/[（(][松竹梅][：:]/);
+  });
+
   it("ja は原文のまま", () => {
     for (const r of rows) expect(localizeFeeName(r.name, "ja")).toBe(r.name);
     for (const ja of texts) expect(localizeFeeText(ja, "ja")).toBe(ja);
