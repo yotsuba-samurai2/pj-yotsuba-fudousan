@@ -28,10 +28,15 @@ export const registeredRentalIdentities = cache(async () => {
   return properties.flatMap(p => { const identity = registeredRentalIdentity(p); return identity ? [identity] : []; });
 });
 
-export const getSchoolRentalSummaries = cache(async () => {
+const compiledSchoolRentals = cache(async () => {
   const [feeds, existing] = await Promise.all([readSchoolRentalFeeds(), registeredRentalIdentities()]);
-  return compileRentalSummaries(feeds.map(f => f.feed), existing).summaries;
+  return compileRentalSummaries(feeds.map(f => f.feed), existing);
 });
+
+export const getSchoolRentalSummaries = cache(async () => (await compiledSchoolRentals()).summaries);
+
+/** 業者間データベース上の募集規模（広告可否を問わない分母）。 */
+export const getSchoolRentalMarket = cache(async () => (await compiledSchoolRentals()).market);
 
 export async function saveSchoolRentalFeed(feed: RentalFeed, expectedUpdatedAt: string | null) {
   const payload = feed as unknown as Prisma.InputJsonValue;

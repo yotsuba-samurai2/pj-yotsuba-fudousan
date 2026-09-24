@@ -17,7 +17,7 @@ const publicScopes = new Set([PET_SCOPE_KEY]);
 const snapshot = compileSurveySnapshot([
   observation("reins", { sourceId: "a" }),
   observation("reins", { sourceId: "b", unit: "301" }),
-  observation("atbb", { sourceId: "c", unit: "402", building: "別の建物", address: "東京都文京区本駒込２丁目３－４" }),
+  observation("itandi", { sourceId: "c", unit: "402", building: "別の建物", address: "東京都文京区本駒込２丁目３－４" }),
 ], scope);
 const listed205 = { building: "試験マンション", unit: "205", address: "東京都文京区千石１丁目２０－２０" };
 const build = (over: Partial<Parameters<typeof buildPublicSurveySummary>[0]> = {}) =>
@@ -63,9 +63,9 @@ describe("状態の区別（T11）", () => {
 
   it.each([
     ["公開フラグなし", { publicScopes: new Set<string>() }],
-    ["別の版だけ公開", { publicScopes: new Set(["bunkyo-rent-pet:2"]) }],
+    ["別の版だけ公開", { publicScopes: new Set(["bunkyo-rent-pet:1"]) }],
     ["同一性判定の版が古い", { finalization: finalization({ snapshot, dedupVersion: 0 }) }],
-    ["別の版の確定", { finalization: finalization({ snapshot, scopeVersion: 2 }) }],
+    ["別の版の確定", { finalization: finalization({ snapshot, scopeVersion: 1 }) }],
     ["snapshot が壊れている", { finalization: finalization({ snapshot: { units: "broken" } }) }],
   ])("%s なら hidden", (_, over) => {
     expect(build(over)).toEqual({ state: "hidden" });

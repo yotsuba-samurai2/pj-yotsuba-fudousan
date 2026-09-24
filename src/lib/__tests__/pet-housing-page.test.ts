@@ -188,7 +188,7 @@ describe("/pet-housing（公開フラグ on・日本語）", () => {
 
   it("調査の件数枠：公開用の集計が shown のときだけ、条件と注記つきで出す（配線の確認）", async () => {
     state.summary = {
-      state: "shown", conditionsKey: "bunkyo-rent-pet-v1",
+      state: "shown", conditionsKey: "bunkyo-rent-pet-v2",
       observedFrom: "2026-09-01T00:00:00+09:00", observedTo: "2026-09-07T00:00:00+09:00", finalizedAt: "2026-09-08T09:00:00+09:00",
       sourceKind: "multiple", attribution: null, x: 12, breakdown: null,
     };

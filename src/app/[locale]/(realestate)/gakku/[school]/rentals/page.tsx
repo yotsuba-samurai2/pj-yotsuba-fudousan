@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getRequestLocale } from "@/lib/getRequestLocale";
 import { getPublishedProperties } from "@/lib/properties";
-import { getSchoolRentalSummaries } from "@/lib/school-rental-feed-store";
+import { getSchoolRentalMarket, getSchoolRentalSummaries } from "@/lib/school-rental-feed-store";
 import { findSchoolBySlug } from "@/lib/school-district";
 import { schoolRentalLead, schoolRentalPath, schoolRentalTitle } from "@/lib/rental-school-district";
 import { buildPageMetadata } from "@/lib/seo";
@@ -23,6 +23,6 @@ export default async function Page({ params }: Props) {
   const school = findSchoolBySlug((await params).school);
   if (!school) notFound();
   const locale = await getRequestLocale();
-  const [properties, summaries] = await Promise.all([getPublishedProperties(locale), getSchoolRentalSummaries()]);
-  return <SchoolRentalListings school={school} properties={properties} summaries={summaries} locale={locale} />;
+  const [properties, summaries, market] = await Promise.all([getPublishedProperties(locale), getSchoolRentalSummaries(), getSchoolRentalMarket()]);
+  return <SchoolRentalListings school={school} properties={properties} summaries={summaries} market={market} locale={locale} />;
 }

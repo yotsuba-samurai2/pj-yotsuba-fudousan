@@ -16,9 +16,9 @@ import { Breadcrumb } from "@/components/shared/Breadcrumb";
 import { PropertyCard } from "@/components/bukken/PropertyCard";
 import { DistrictSourceNote } from "./RentalSchoolDistrict";
 import { RentalComparison } from "./RentalComparison";
-import type { PublicRentalSummary } from "@/lib/school-rental-feed";
+import type { PublicRentalSummary, RentalMarket } from "@/lib/school-rental-feed";
 
-export function SchoolRentalIndex({ properties, locale, summaries = [] }: { properties: PublicProperty[]; locale: LangCode; summaries?: PublicRentalSummary[] }) {
+export function SchoolRentalIndex({ properties, locale, summaries = [], market = null }: { properties: PublicProperty[]; locale: LangCode; summaries?: PublicRentalSummary[]; market?: RentalMarket | null }) {
   const c = SCHOOL_RENTAL_COPY[locale];
   const groups = groupSchoolRentals(properties, locale);
   const indexUrl = canonicalUrl("realestate", SCHOOL_RENTAL_INDEX_PATH, locale);
@@ -42,16 +42,17 @@ export function SchoolRentalIndex({ properties, locale, summaries = [] }: { prop
       </ul>
       <Link href={addLocalePrefix(SCHOOL_SALE_INDEX_PATH, locale)} className="mt-4 inline-block text-primary underline">{SCHOOL_SALE_COPY[locale].indexTitle}</Link>
       <DistrictSourceNote locale={locale} />
-      <RentalComparison rows={summaries} locale={locale} />
+      <RentalComparison rows={summaries} locale={locale} market={market} listedTotal={listedRentalTotal(groups, summaries)} />
       <SchoolRentalFaq locale={locale} />
       <Link href={addLocalePrefix("/gakku", locale)} className="mt-6 inline-block text-sm text-primary underline">{c.guide}</Link>
     </article>
   </>;
 }
 
-export function SchoolRentalListings({ school, properties, locale, summaries = [] }: { school: SchoolInfo; properties: PublicProperty[]; locale: LangCode; summaries?: PublicRentalSummary[] }) {
+export function SchoolRentalListings({ school, properties, locale, summaries = [], market = null }: { school: SchoolInfo; properties: PublicProperty[]; locale: LangCode; summaries?: PublicRentalSummary[]; market?: RentalMarket | null }) {
   const c = SCHOOL_RENTAL_COPY[locale];
-  const listings = groupSchoolRentals(properties, locale).get(school.slug) ?? [];
+  const allGroups = groupSchoolRentals(properties, locale);
+  const listings = allGroups.get(school.slug) ?? [];
   const title = schoolRentalTitle(school, locale);
   const schoolSummaries = summaries.filter(r => r.schoolSlug === school.slug);
   const path = schoolRentalPath(school.slug);
@@ -68,7 +69,7 @@ export function SchoolRentalListings({ school, properties, locale, summaries = [
       </header>
       {listings.length ? <ul className="mt-6 space-y-3">{listings.map(p => <li key={p.slug}><PropertyCard p={p} locale={locale} /></li>)}</ul>
         : !schoolSummaries.length && <p className="mt-6 rounded-xl border border-border p-6 leading-relaxed text-text">{c.empty}</p>}
-      <RentalComparison rows={schoolSummaries} locale={locale} />
+      <RentalComparison rows={schoolSummaries} locale={locale} market={market} listedTotal={listedRentalTotal(allGroups, summaries)} />
       <SchoolRentalFaq locale={locale} />
       <Link href={addLocalePrefix(`/contact?intent=gakku-${school.slug}-rental`, locale)} className="mt-6 inline-block rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-white hover:opacity-90">{c.request}</Link>
       <Link href={addLocalePrefix(schoolSalePath(school.slug), locale)} className="mt-4 block text-primary underline">{SCHOOL_SALE_COPY[locale].view}</Link>
@@ -78,6 +79,11 @@ export function SchoolRentalListings({ school, properties, locale, summaries = [
       </nav>
     </article>
   </>;
+}
+
+/** 区全体で公開している学区別賃貸の件数（写真付き個別物件＋募集比較一覧）。ハブの20校の件数の合計と一致する。 */
+function listedRentalTotal(groups: Map<string, unknown[]>, summaries: PublicRentalSummary[]) {
+  return listSchools().reduce((sum, school) => sum + (groups.get(school.slug)?.length ?? 0) + summaries.filter(r => r.schoolSlug === school.slug).length, 0);
 }
 
 /**

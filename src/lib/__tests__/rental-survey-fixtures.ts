@@ -8,8 +8,8 @@ import type { PetTerms } from "@/lib/rental-survey/pet-terms";
 import type { Observation } from "@/lib/rental-survey/units";
 
 export const NOW = new Date("2026-09-24T03:00:00Z");
-export const ALL_PROVIDERS: FeedProvider[] = ["reins", "atbb", "itandi", "eslife"];
-export const PET_SCOPE_KEY = "bunkyo-rent-pet:1";
+export const ALL_PROVIDERS: FeedProvider[] = ["reins", "itandi", "eslife"];
+export const PET_SCOPE_KEY = "bunkyo-rent-pet:2";
 
 export function pet(over: Partial<PetTerms> = {}): PetTerms {
   return { multi: "allowed", species: "cat", limits: { cats: 2, dogs: null, total: 2 }, largeDog: "not-allowed", conditions: "", petQuote: "猫2匹まで可（試験用の記載）", ...over };
@@ -28,7 +28,7 @@ export function observation(provider: FeedProvider = "reins", over: Partial<Surv
 
 export function batch(provider: FeedProvider, records: SurveyRecord[] = [record()], over: Partial<SurveyBatch> = {}): SurveyBatch {
   return {
-    version: 1, scopeId: "bunkyo-rent-pet", scopeVersion: 1, provider, status: "verified",
+    version: 1, scopeId: "bunkyo-rent-pet", scopeVersion: 2, provider, status: "verified",
     observedFrom: "2026-09-22T00:00:00Z", observedTo: "2026-09-23T00:00:00Z", allPagesChecked: true,
     expectedCount: records.length, records, ...over,
   };
@@ -59,7 +59,7 @@ export function confirmedLedger(uses: PermissionUse[] = ["store", "aggregate"], 
 
 export function finalization(over: Partial<StoredFinalization> = {}): StoredFinalization {
   return {
-    id: "fin-1", scopeId: "bunkyo-rent-pet", scopeVersion: 1, sequence: 1, batchIds: ALL_PROVIDERS.map(p => `batch-${p}`).sort(),
+    id: "fin-1", scopeId: "bunkyo-rent-pet", scopeVersion: 2, sequence: 1, batchIds: ALL_PROVIDERS.map(p => `batch-${p}`).sort(),
     providers: [...ALL_PROVIDERS].sort(), dedupVersion: 1,
     observedFrom: new Date("2026-09-22T00:00:00Z"), observedTo: new Date("2026-09-23T00:00:00Z"),
     snapshot: {

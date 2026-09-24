@@ -13,11 +13,14 @@ vi.mock("@/lib/prisma", () => ({ prisma: new Proxy({}, { get: () => { throw new 
 vi.mock("@/lib/db/properties", () => ({ getProperties: () => { throw new Error("DB must not be read"); } }));
 
 const scope = currentSurveyScope("bunkyo-rent-pet")!;
+// 台帳（2026-09-24 浦松判断）は4媒体に記載したまま。版2で ATBB を対象媒体から外したが、ATBB の記載は残る（使われないだけ）。
+const LEDGER_PROVIDERS = [...ALL_PROVIDERS, "atbb"] as const;
 
 describe("許諾台帳の記載（T12・2026-09-24 浦松判断）", () => {
   it("内部保存・加工と集計公表だけを4媒体に記載し、個別広告・画像転載・SNS は拒否のまま", () => {
-    expect(DATA_USE_LEDGER).toHaveLength(ALL_PROVIDERS.length * 2);
-    for (const provider of ALL_PROVIDERS) for (const use of permissionUses)
+    expect(DATA_USE_LEDGER).toHaveLength(LEDGER_PROVIDERS.length * 2);
+    expect(new Set(DATA_USE_LEDGER.map(e => e.provider))).toEqual(new Set(LEDGER_PROVIDERS));
+    for (const provider of LEDGER_PROVIDERS) for (const use of permissionUses)
       expect(isPermitted(DATA_USE_LEDGER, provider, use, NOW), `${provider}/${use}`).toBe(use === "store" || use === "aggregate");
   });
 
@@ -26,12 +29,12 @@ describe("許諾台帳の記載（T12・2026-09-24 浦松判断）", () => {
       expect(entry.evidenceRef).toMatch(/^2026-09-24 浦松判断：.*書面回答なし$/);
       expect(entry.attribution).toBeNull();
     }
-    for (const provider of ALL_PROVIDERS) expect(aggregateAttribution(DATA_USE_LEDGER, provider, NOW)).toBeNull();
+    for (const provider of LEDGER_PROVIDERS) expect(aggregateAttribution(DATA_USE_LEDGER, provider, NOW)).toBeNull();
   });
 
   it("記載の効力は 2026-09-24（日本時間）から。それより前の時点では拒否する", () => {
     const before = new Date("2026-09-23T14:59:59Z");
-    for (const provider of ALL_PROVIDERS) for (const use of permissionUses)
+    for (const provider of LEDGER_PROVIDERS) for (const use of permissionUses)
       expect(isPermitted(DATA_USE_LEDGER, provider, use, before)).toBe(false);
   });
 
@@ -78,7 +81,7 @@ describe("許諾台帳の記載（T12・2026-09-24 浦松判断）", () => {
   });
 
   it("別媒体の許諾で代用しない", () => {
-    expect(isPermitted([ledgerEntry("reins", "aggregate")], "atbb", "aggregate", NOW)).toBe(false);
+    expect(isPermitted([ledgerEntry("reins", "aggregate")], "itandi", "aggregate", NOW)).toBe(false);
   });
 });
 
@@ -103,7 +106,7 @@ describe("許諾の範囲が混在しても推測させない（T13）", () => {
   });
 
   it("許諾の無い媒体のデータは確定の計算に入らない（確定そのものを拒否する）", () => {
-    const ledger = confirmedLedger(["store"], ["reins", "atbb", "itandi"]);
+    const ledger = confirmedLedger(["store"], ["reins", "itandi"]);
     const plan = planFinalization({ scope, batches: storedBatches(), latest: null, ledger, now: NOW });
     expect(plan).toMatchObject({ ok: false, status: 403 });
     expect(JSON.stringify(plan)).not.toMatch(/units/);
@@ -111,7 +114,7 @@ describe("許諾の範囲が混在しても推測させない（T13）", () => {
 
   it("出典表記は全媒体に表記の許可がある場合だけ", () => {
     const named = ALL_PROVIDERS.flatMap(p => [ledgerEntry(p, "store"), ledgerEntry(p, "aggregate", { attribution: `${p}（試験）` })]);
-    expect(build(named)).toMatchObject({ attribution: "atbb（試験）・eslife（試験）・itandi（試験）・reins（試験）", sourceKind: "multiple" });
+    expect(build(named)).toMatchObject({ attribution: "eslife（試験）・itandi（試験）・reins（試験）", sourceKind: "multiple" });
     const partlyNamed = named.map(e => e.provider === "reins" && e.use === "aggregate" ? { ...e, attribution: null } : e);
     expect(build(partlyNamed)).toMatchObject({ attribution: null });
     expect(aggregateAttribution([], "reins", NOW)).toBeNull();

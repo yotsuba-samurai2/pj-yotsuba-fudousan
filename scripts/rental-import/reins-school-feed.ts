@@ -43,14 +43,20 @@ export function extractReinsRecord(raw: string): FeedRecord {
   const insurance = [get("保険加入義務") ? `加入義務：${get("保険加入義務")}` : "", get("保険名称"), get("保険料"), get("保険期間")].filter(Boolean).join(" / ");
   const fees = [1,2].map(n => [get(`その他一時金名称${n === 1 ? "１" : "２"}`), get(`金額${n === 1 ? "１" : "２"}`)].filter(Boolean).join("：")).filter(Boolean);
   if (get("その他月額費名称") || get("その他月額費金額")) fees.push(`月額：${get("その他月額費名称")} ${get("その他月額費金額")}`);
+  // 2026-09-25：建物名欄に間取り（例「4Ｋ」）だけが入り、間取欄が空の登録があった（貸家）。
+  // 物件名として公開しないよう、所在地＋物件種目の名前に戻し、間取りへ移す。
+  const rawBuilding = get("建物名"), rawLayout = (get("間取部屋数").replace(/室$/, "") + get("間取タイプ")).normalize("NFKC");
+  const buildingIsLayout = /^\d+S?(?:LDK|DK|LK|K|R)$/i.test(rawBuilding.normalize("NFKC").trim()) && !rawLayout;
+  const building = rawBuilding && !buildingIsLayout ? rawBuilding : `${get("所在地名２")} ${get("物件種目")}`;
+  const layout = buildingIsLayout ? rawBuilding.normalize("NFKC").trim().toUpperCase() : rawLayout;
   return {
     sourceId: get("物件番号"), advertising: advertisement === "広告可" ? "allowed" : /要連絡/.test(advertisement) ? "contact-required" : "not-allowed", advertisingQuote: advertisement,
     availability: /募集終了|成約済/.test(notes) ? "closed" : "active", application: /申込(?:み)?(?:あり|有|済)|申込受付済/.test(notes) ? "present" : "unknown", applicationQuote: "",
     adQuote, adStatus: positiveAd ? /相談|迄|まで|最大|条件/.test(adQuote) ? "consult" : "confirmed" : adQuote ? "unknown" : "none",
     summary: {
-      building: get("建物名") || `${get("所在地名２")} ${get("物件種目")}`, unit: get("部屋番号"), address: [get("都道府県名"), get("所在地名１"), get("所在地名２"), get("所在地名３")].join(""),
+      building, unit: get("部屋番号"), address: [get("都道府県名"), get("所在地名１"), get("所在地名２"), get("所在地名３")].join(""),
       rentYen: rent, managementYen: money(get("管理費")), commonYen: money(get("共益費")), deposit: get("敷金"), keyMoney: get("礼金"),
-      layout: (get("間取部屋数").replace(/室$/, "") + get("間取タイプ")).normalize("NFKC"), areaSqm: area,
+      layout, areaSqm: area,
       availabilityText: [get("入居時期"), get("入居年月")].filter(Boolean).join(" / "),
       pets: classify(petTerms, "ペット|小型犬|猫"), foreignNationals: classify(foreignTerms, "外国籍|外国人"), corporate: classify(terms(/法人/), "法人契約|法人"), petTerms, foreignTerms, corporateTerms,
       companyHousing: classify(terms(/社宅/), "社宅"), companyHousingTerms: terms(/社宅/),

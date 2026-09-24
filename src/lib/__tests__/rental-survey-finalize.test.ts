@@ -13,7 +13,7 @@ describe("確定の条件（T11）", () => {
     expect(plan.ok).toBe(true);
     if (!plan.ok) return;
     expect(plan.data.snapshot.units).toHaveLength(1);
-    expect(plan.data.providers).toEqual(["atbb", "eslife", "itandi", "reins"]);
+    expect(plan.data.providers).toEqual(["eslife", "itandi", "reins"]);
     expect(plan.data.rolledBackFrom).toBeNull();
   });
 
@@ -30,7 +30,7 @@ describe("確定の条件（T11）", () => {
 
   it("別の scope・版のバッチは使えない", () => {
     const batches = storedBatches();
-    batches[0] = { ...batches[0], scopeVersion: 2 };
+    batches[0] = { ...batches[0], scopeVersion: 1 };
     expect(planFinalization({ scope, batches, latest: null, ledger, now: NOW })).toMatchObject({ ok: false, status: 400 });
   });
 
@@ -53,7 +53,7 @@ describe("確定の条件（T11）", () => {
 
   it("内部保存・加工の許諾が無い媒体を含むと確定しない（既定の台帳では常に拒否）", () => {
     expect(planFinalization({ scope, batches: storedBatches(), latest: null, ledger: [], now: NOW })).toMatchObject({ ok: false, status: 403 });
-    const partial = confirmedLedger(["store"], ["reins", "atbb", "itandi"]);
+    const partial = confirmedLedger(["store"], ["reins", "itandi"]);
     expect(planFinalization({ scope, batches: storedBatches(), latest: null, ledger: partial, now: NOW })).toMatchObject({ ok: false, status: 403 });
   });
 });
@@ -69,13 +69,13 @@ describe("巻き戻し（T03）", () => {
 
   it("別の scope・版の確定には戻さない", () => {
     expect(planRollback({ scope, target: { ...target, scopeId: "other" }, latest, ledger, now: NOW })).toMatchObject({ ok: false, status: 400 });
-    expect(planRollback({ scope, target: { ...target, scopeVersion: 2 }, latest, ledger, now: NOW })).toMatchObject({ ok: false, status: 400 });
+    expect(planRollback({ scope, target: { ...target, scopeVersion: 1 }, latest, ledger, now: NOW })).toMatchObject({ ok: false, status: 400 });
     expect(planRollback({ scope, target: null, latest, ledger, now: NOW })).toMatchObject({ ok: false, status: 400 });
   });
 
   it("同一性判定の版が古い確定・許諾を失った媒体を含む確定には戻さない", () => {
     expect(planRollback({ scope, target: { ...target, dedupVersion: 0 }, latest, ledger, now: NOW })).toMatchObject({ ok: false, status: 400 });
-    const revoked = [...ledger, ledgerEntry("atbb", "store", { status: "revoked", validFrom: "2026-09-20T00:00:00Z" })];
+    const revoked = [...ledger, ledgerEntry("itandi", "store", { status: "revoked", validFrom: "2026-09-20T00:00:00Z" })];
     expect(planRollback({ scope, target, latest, ledger: revoked, now: NOW })).toMatchObject({ ok: false, status: 403 });
   });
 

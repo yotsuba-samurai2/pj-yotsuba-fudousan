@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { AuthError, verifyAdminRequest } from "@/lib/api-auth";
-import { feedSchema, compileRentalSummaries } from "@/lib/school-rental-feed";
+import { feedSchema, compileRentalSummaries, normalizeFeedUnits } from "@/lib/school-rental-feed";
 import { readSchoolRentalFeeds, registeredRentalIdentities, saveSchoolRentalFeed, previewFeedReplacement } from "@/lib/school-rental-feed-store";
 
 function errorResponse(error: unknown) {
@@ -28,7 +28,9 @@ export async function POST(req: NextRequest) {
     if (!body || typeof body !== "object") return NextResponse.json({ error: "JSONを確認してください" }, { status: 400 });
     const parsed = feedSchema.safeParse(body.feed);
     if (!parsed.success) return NextResponse.json({ error: parsed.error.issues.map(i => `${i.path.join(".")}: ${i.message}`).join(" / ") }, { status: 400 });
-    const feed = parsed.data;
+    // 号室を建物名に含めた取得元（いい生活等）でも、保存前に建物名と号室を分ける（2026-09-25 二重掲載13件の再発防止）。
+    const normalizedUnits = normalizeFeedUnits(parsed.data);
+    const feed = normalizedUnits.feed;
     if (feed.expectedCount === undefined) return NextResponse.json({ error: "取得元で確認した検索総登録数 expectedCount を指定してください" }, { status: 400 });
     const age = Date.now() - Date.parse(feed.checkedAt);
     if (age < 0) return NextResponse.json({ error: "確認日時に未来の日時は指定できません" }, { status: 400 });
@@ -36,9 +38,11 @@ export async function POST(req: NextRequest) {
     const preview = previewFeedReplacement(feeds.map(f => f.feed), feed, existing);
     const current = feeds.find(f => f.provider === feed.provider);
     if (current && Date.parse(feed.checkedAt) < current.checkedAt.getTime()) return NextResponse.json({ error: "保存済みデータより古い確認結果です" }, { status: 409 });
-    if (body.action === "preview") return NextResponse.json({ ...preview, expectedUpdatedAt: current?.updatedAt.toISOString() ?? null });
+    const unitCheck = { splitFromBuilding: normalizedUnits.splitCount, unitMissing: normalizedUnits.unitMissing,
+      duplicates: preview.excluded.filter(e => e.reason === "同一号室の重複" || e.reason === "既存物件に登録済み").length };
+    if (body.action === "preview") return NextResponse.json({ ...preview, unitCheck, expectedUpdatedAt: current?.updatedAt.toISOString() ?? null });
     if (body.action !== "save" || !(body.expectedUpdatedAt === null || typeof body.expectedUpdatedAt === "string" && Number.isFinite(Date.parse(body.expectedUpdatedAt)))) return NextResponse.json({ error: "先に登録前チェックを実行してください" }, { status: 400 });
     if (!await saveSchoolRentalFeed(feed, body.expectedUpdatedAt)) return NextResponse.json({ error: "同時更新を検出しました。再チェックしてください" }, { status: 409 });
-    return NextResponse.json({ ...preview, saved: true });
+    return NextResponse.json({ ...preview, unitCheck, saved: true });
   } catch (error) { return errorResponse(error); }
 }
