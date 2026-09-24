@@ -5,6 +5,7 @@ import type { LangCode } from "@/config/languages";
 import {
   getColumnIllustrationAlt,
   getColumnIllustrationAssetPaths,
+  getUnreachableIllustrationThemes,
   resolveColumnIllustration,
   type ColumnIllustrationInput,
 } from "@/lib/column-illustrations";
@@ -55,10 +56,15 @@ describe("resolveColumnIllustration", () => {
         column({ title: "外国人向けグループホーム物件", category: "障害福祉" }),
       ).theme,
     ).toBe("realestate-group-home");
+    // 空き家・飲食店は専用画像を持つ（2026-09-24 の34点追加以降）。
+    // 相続の総論より空き家、事業用の総論より飲食店が先に一致する。
     expect(resolveColumnIllustration(column({ title: "相続した空き家を売る" })).theme)
-      .toBe("legal-inheritance");
+      .toBe("realestate-akiya");
     expect(resolveColumnIllustration(column({ title: "飲食店を開くための店舗選び" })).theme)
-      .toBe("legal-company");
+      .toBe("realestate-inshokuten");
+    // 空き家を含まない相続記事は相続の画像に落ちる
+    expect(resolveColumnIllustration(column({ title: "相続した土地を売る" })).theme)
+      .toBe("realestate-souzoku");
   });
 
   it("行政書士の主要テーマを分類する", () => {
@@ -67,16 +73,22 @@ describe("resolveColumnIllustration", () => {
         column({ business: "legal", title: "特定技能の在留資格を申請する" }),
       ).theme,
     ).toBe("legal-visa");
+    // 指定申請・運送は専用画像を持つ。グループホームの総論は引き続き障害福祉の画像。
     expect(
       resolveColumnIllustration(
         column({ business: "legal", title: "障害福祉グループホームの指定申請" }),
+      ).theme,
+    ).toBe("legal-shitei-shinsei");
+    expect(
+      resolveColumnIllustration(
+        column({ business: "legal", title: "グループホームの開設にかかる費用" }),
       ).theme,
     ).toBe("legal-shogai-fukushi");
     expect(
       resolveColumnIllustration(
         column({ business: "legal", title: "一般貨物運送の許可申請" }),
       ).theme,
-    ).toBe("legal-company");
+    ).toBe("legal-kensetsu-unsou");
   });
 
   it("社労士は複合テーマでも個別性の高い画像を選ぶ", () => {
@@ -96,7 +108,7 @@ describe("resolveColumnIllustration", () => {
     expect(resolveColumnIllustration(column()).theme).toBe("realestate-toushi");
     expect(resolveColumnIllustration(column({ business: "legal" })).theme).toBe("legal-top");
     expect(resolveColumnIllustration(column({ business: "labor" })).theme)
-      .toBe("labor-jinin-kijun-roumu");
+      .toBe("labor-top");
   });
 
   it("画像1枚あたりの使用件数に上限を設けない", () => {
@@ -134,9 +146,14 @@ describe("resolveColumnIllustration", () => {
     }
   });
 
+  it("マニフェストの全テーマがルールから到達できる", () => {
+    // 画像とaltを足しただけでルールを足し忘れると、表示されない画像が積み上がる。
+    expect(getUnreachableIllustrationThemes()).toEqual([]);
+  });
+
   it("マニフェストの既存画像がすべてpublic配下に存在する", () => {
     const assetPaths = getColumnIllustrationAssetPaths();
-    expect(assetPaths.length).toBe(20);
+    expect(assetPaths.length).toBe(54);
     for (const assetPath of assetPaths) {
       const filePath = path.join(process.cwd(), "public", assetPath.replace(/^\//, ""));
       expect(fs.existsSync(filePath), assetPath).toBe(true);
