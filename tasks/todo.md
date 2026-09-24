@@ -697,9 +697,9 @@ sitemap の `locales` もページの `availableLocales` と同時に4言語へ�
 - [x] 4領域を並行調査：学区フィード／フォーム・GA4・GH大家LP／ルート・多言語・SEO・JSON-LD／ペット関連の既存記事
 - [x] 報告書 `docs/pet-project/00_phase1-report.md`、別セッション検証用 `docs/pet-project/01_handoff-for-verification.md`
 - [x] draft PR #425 https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/pull/425
-- [ ] 浦松の判断 D-1〜D-5（受付テーブル新設／scope 分離案A／トップへの追加位置／学区「平均2倍以上」／Phase 2 の範囲）
+- [x] 浦松の判断 D-1〜D-5（受付テーブル新設／scope 分離案A／トップへの追加位置／学区「平均2倍以上」／Phase 2 の範囲）＝2026-09-24 決定
 - [ ] 別セッションで一次検証（F1〜F14・S1〜S6）
-- [ ] Phase 2 の実施指示（それまで着手しない）
+- [x] Phase 2 の実施指示（それまで着手しない）＝2026-09-24 指示
 
 **レビュー記録**
 - 監査の「同一アプリ内のルートグループ」は現物と一致（不動産・行政書士・社労士が1アプリ）。統合・移転は不要
@@ -722,7 +722,7 @@ sitemap の `locales` もページの `availableLocales` と同時に4言語へ�
 - [x] ローカル実DB（prisma dev）で migration・T01・T03・down.sql・当て直しを確認（学区の行は全工程で完全一致）
 - [x] 検証：vitest 104ファイル・1,532件／tsc 0／eslint error 0
 - [x] `docs/pet-project/20_phase2.md`、Phase 1 報告書の訂正、検証依頼書に Phase 2 項目
-- [ ] PR #425 の更新（マージ・本番DB適用・許諾台帳・公開フラグは別承認）
+- [x] PR #425 の更新 → マージ（02affa8）・本番DBに rental_survey を作成（2026-09-24・浦松承認）。許諾台帳・公開フラグは未（別承認）
 
 **レビュー記録**
 - `prisma migrate diff` の出力に既存のずれ `DROP INDEX "columns_locales_gin"` が入る。生成SQLをそのまま使わず、2テーブル作成だけに絞った
@@ -730,3 +730,26 @@ sitemap の `locales` もページの `availableLocales` と同時に4言語へ�
 - 読み返しで2点を修正：管理APIのログに Error オブジェクトを渡さない（Prisma のエラー文はデータを含み得る）／許諾台帳の同時刻の確認済み・撤回は拒否側を採る。どちらも修正前のコードで新テストが失敗することを確認
 - 指示書どおりにしない点（少数抑制・広告不可件数・前週比）は `20_phase2.md` 第3章に理由を記載
 - 未実施：ローカルの `next build`（Vercel プレビューで確認）／表示部品を組み込んだページの描画（Phase 3・5）
+
+## 2026-09-24 四葉ペット横断プロジェクト Phase 3（住宅LP /pet-housing と借り手・大家の受付）— claude/zealous-fermat-t7x0f2
+
+浦松判断：受付テーブル新設（D-1）／保存期間1年／閲覧は uramatsujoji@luck428.com の所有者だけ／`/services`＋メニュー（D-3）。計画はプランモードで承認済み。
+
+- [x] 基準線：main `2b80c41`（#426 まで）
+- [x] 受付テーブル `inquiries`（migration＋down.sql。RLS・権限剥奪）と保存層・受付番号・通知（Resend の `error` を確認）
+- [x] 受付API `POST /api/inquiries`（保存成功＝受付成功・同じキーの再送は同じ受付番号・通知失敗は記録のみ・ログはコードだけ）
+- [x] 閲覧者の限定 `verifyInquiryOwner`、管理API・管理画面「受付」（一覧・詳細・通知の再送・1年超の削除）
+- [x] 借り手・大家フォーム、入口の CTA、完了はその場で受付番号（URL に載せない）
+- [x] LP `/pet-housing`（ja のみ・公開フラグ `NEXT_PUBLIC_PET_HOUSING_PUBLISHED` 既定 off）と掲載先（メニュー・/services・sitemap・llms.txt・言語切替）
+- [x] テスト：pet-intake・inquiries-mail・inquiries-store・inquiries-api・inquiries-admin・pet-forms・pet-housing-page（フラグ on／off）
+- [x] ローカル実DB（prisma dev）で保存・二重送信・1年超の削除・down.sql・当て直し（他テーブルは不変）
+- [x] ローカルの `next build`＋`next start` をフラグ on／off の両方で実測
+- [x] 検証：vitest 112ファイル・1,628件／tsc 0／eslint error 0
+- [x] `docs/pet-project/30_phase3.md`
+- [ ] draft PR（マージ・本番DBへの inquiries 作成・公開フラグ・GSC は別承認）
+
+**レビュー記録**
+- 隠し欄に値がある送信は、計画の「成功と同じ応答」をやめ 400 にした。偽の受付番号を返すとクライアントが完了の計測を送るため（T19）
+- Phase 2 の番人テスト「件数枠をどのページにも組み込まない」を、「組み込むのは /pet-housing だけ」に更新（段階の境界を表すテスト）
+- 型付き配列の中の条件付きスプレッドには文脈の型が付かない（`locales: string[]` の型エラー）。型を付けた定数に切り出した
+- 範囲外の発見（別途判断）：`/api/contact` が Resend の `error` を見ていない／管理APIはログインできる人なら誰でも通す／本番に `property_publication_events` が無い／本番の `_prisma_migrations` にリポジトリに無い行／既存の ja 先行ページの `/en/...` が 200

@@ -13,6 +13,7 @@ import {
   Building2,
   Languages,
   Sparkles,
+  Inbox,
   LogOut,
   Menu,
   ExternalLink,
@@ -31,6 +32,8 @@ const navItems = [
   { href: "/admin/bukken", label: "物件管理", icon: Building2 },
   { href: "/admin/translations", label: "翻訳管理", icon: Languages },
   { href: "/admin/ai-settings", label: "AIモデル管理", icon: Sparkles },
+  // 受付（個人情報）。閲覧できるのは受付先メールの所有者だけ（権限の判定は /api/admin/inquiries）。
+  { href: "/admin/inquiries", label: "受付", icon: Inbox },
 ];
 
 export default function AdminLayout({

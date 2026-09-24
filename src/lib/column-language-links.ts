@@ -3,6 +3,7 @@ import { addLocalePrefix, detectLocaleFromPath, localeSwitchBasePath, SUPPORTED_
 import { languages } from "@/config/languages";
 import type { BusinessKey } from "@/lib/column-shared";
 import { isLocaleAllowed } from "@/lib/column-shared";
+import { PET_HOUSING_PATH } from "@/lib/pet-housing";
 
 /**
  * 公開済み記事のみ。空配列＝全言語という既存のColumn.locales規約を維持する。
@@ -51,6 +52,15 @@ export function resolveColumnLink(href: string, index: ColumnLocaleIndex): Colum
   };
 }
 
+/**
+ * 日本語以外のURLが404になる固定ページ（翻訳が無く、ページ側で notFound() を返す）。
+ * 言語切替に404への切替先を出さない（ペット横断 指示書 版2.0 第16章・T18）。
+ * 他言語のURLが日本語本文で200を返す既存の ja 先行ページ（/group-home/ooya 等）は、切替先が404ではないためここに入れない。
+ */
+const FIXED_PAGE_LOCALES: Record<string, readonly LangCode[]> = {
+  [PET_HOUSING_PATH]: ["ja"],
+};
+
 /** 言語切替の対象となる詳細ページ（記事・物件）を表のキーに解決する。それ以外は undefined。 */
 function switchIndexKey(path: string): string | undefined {
   const column = path.match(/^\/(?:legal\/|labor\/)?column\/([^/]+)$/);
@@ -68,6 +78,7 @@ export function getColumnSwitchLocales(
   currentLocale: LangCode,
 ): readonly LangCode[] {
   const path = localeSwitchBasePath(pathname).replace(/\/$/, "");
+  if (Object.prototype.hasOwnProperty.call(FIXED_PAGE_LOCALES, path)) return FIXED_PAGE_LOCALES[path];
   const key = switchIndexKey(path);
   if (!key) return SUPPORTED_LOCALES;
 

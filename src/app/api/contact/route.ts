@@ -1,13 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 import { z } from "zod";
+import { escapeHtml, FROM_EMAIL, NOTIFY_TO } from "@/lib/contact-mail";
 
 function getResend() {
   return new Resend(process.env.RESEND_API_KEY);
 }
-
-const NOTIFY_TO = "uramatsujoji@luck428.com";
-const FROM_EMAIL = "noreply@samurai.co.jp";
 
 const businessLabels: Record<string, string> = {
   realestate: "四葉不動産",
@@ -90,15 +88,6 @@ const contactSchema = z.object({
     ctx.addIssue({ code: "custom", path: ["phone"], message: "電話番号を入力してください" });
   }
 });
-
-function escapeHtml(str: string) {
-  return str
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/\n/g, "<br />");
-}
 
 function adminEmailHtml({
   name,

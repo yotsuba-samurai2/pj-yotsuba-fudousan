@@ -1,7 +1,7 @@
 // ペット横断 指示書 版2.0 第8.2・16・17章・受入テスト T15・T16（共通表示部品）
 import { describe, expect, it } from "vitest";
 import { readdirSync, readFileSync, statSync } from "node:fs";
-import { join, resolve } from "node:path";
+import { join, relative, resolve } from "node:path";
 import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import type { LangCode } from "@/config/languages";
@@ -55,12 +55,14 @@ describe("表示部品（T15）", () => {
 });
 
 describe("段階公開（T16）", () => {
-  it("この Phase ではどのページにも組み込まない（ItemList・公開一覧は変わらない）", () => {
+  // Phase 2 ではどのページにも組み込まなかった。Phase 3 で /pet-housing（第10章 4）にだけ組み込む。
+  // 学区の公開一覧・ItemList には組み込まない。表示の可否は getPublicSurveySummary（公開フラグ＋許諾台帳）が決める。
+  it("組み込むのは /pet-housing だけ（学区の一覧・ItemList は変わらない）", () => {
     const root = resolve(__dirname, "../../app");
     const files: string[] = [];
     const walk = (dir: string) => { for (const name of readdirSync(dir)) { const p = join(dir, name); if (statSync(p).isDirectory()) walk(p); else if (/\.tsx?$/.test(name)) files.push(p); } };
     walk(root);
-    const users = files.filter(f => /SurveyCountsPanel|getPublicSurveySummary/.test(readFileSync(f, "utf8")));
-    expect(users).toEqual([]);
+    const users = files.filter(f => /SurveyCountsPanel|getPublicSurveySummary/.test(readFileSync(f, "utf8"))).map(f => relative(root, f));
+    expect(users).toEqual([join("[locale]", "(realestate)", "pet-housing", "page.tsx")]);
   });
 });
