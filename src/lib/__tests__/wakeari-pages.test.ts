@@ -26,6 +26,7 @@ import { SERVICE_NAV_CATEGORIES } from "@/config/services-nav";
 const ROOT = process.cwd();
 const read = (p: string) => fs.readFileSync(path.join(ROOT, p), "utf8");
 const KEYS = Object.keys(WAKEARI_PAGES) as WakeariPageKey[];
+const TW_KEYS: WakeariPageKey[] = ["kyoyu", "shakuchi-sokochi"];
 const PAGE_DIRS: Record<WakeariPageKey, string> = {
   hub: "src/app/[locale]/(realestate)/wakeari",
   "saikenchiku-fuka": "src/app/[locale]/(realestate)/wakeari/saikenchiku-fuka",
@@ -213,11 +214,14 @@ describe("JSON-LD（指示書 6-1）", () => {
 });
 
 describe("収載・導線（指示書 6-3〜6-5・第7章）", () => {
-  it("sitemap は5ルートを ja のみ・lastmod つきで収載する", () => {
+  it("sitemap は5ルートを lastmod つきで収載する（共有名義・借地権は ja＋zh-tw、他は ja のみ）", () => {
     const sitemap = read("src/app/sitemap.ts");
     for (const key of KEYS) {
       const p = WAKEARI_PAGES[key].path;
-      expect(sitemap, p).toMatch(new RegExp(`\\{ path: "${p.replace(/\//g, "\\/")}",[^}]*locales: \\["ja"\\][^}]*lastModified: WAKEARI_LAST_UPDATED_ISO`));
+      const locales = TW_KEYS.includes(key) ? '"ja", "zh-tw"' : '"ja"';
+      expect(sitemap, p).toMatch(
+        new RegExp(`\\{ path: "${p.replace(/\//g, "\\/")}",[^}]*locales: \\[${locales}\\][^}]*lastModified: WAKEARI_LAST_UPDATED_ISO`),
+      );
     }
   });
 
@@ -312,7 +316,7 @@ vi.mock("@/components/shared/CtaBand", () => ({ CtaBand: () => null }));
 vi.mock("@/lib/columns", () => ({ getColumns: async () => [], getLocalizedColumn: (c: unknown) => c }));
 
 describe("メタデータ（ja 先行公開）", () => {
-  it.each(KEYS)("%s：canonical は ja、hreflang は ja と x-default", async (key) => {
+  it.each(KEYS.filter((k) => !TW_KEYS.includes(k)))("%s：canonical は ja、hreflang は ja と x-default", async (key) => {
     for (const locale of ["ja", "en", "zh-tw", "zh"] as const) {
       state.locale = locale;
       vi.resetModules();
@@ -322,5 +326,48 @@ describe("メタデータ（ja 先行公開）", () => {
       expect(Object.keys(md.alternates?.languages ?? {}).sort()).toEqual(["ja", "x-default"]);
       expect(md.title).toEqual({ absolute: WAKEARI_PAGES[key].title });
     }
+  });
+});
+
+/** 2026-09-24 Phase 3：共有名義・借地権の2枚は ja＋zh-tw。en・zh は ja 本文のフォールバック＝canonical は ja（/funin・/souzoku/taiwan と同じ型） */
+describe("メタデータ（ja＋zh-tw の2枚）", () => {
+  it.each(TW_KEYS)("%s：zh-tw は自己canonical、en・zh は ja を canonical、hreflang は ja・zh-Hant・x-default", async (key) => {
+    const p = WAKEARI_PAGES[key].path;
+    for (const locale of ["ja", "en", "zh"] as const) {
+      state.locale = locale;
+      vi.resetModules();
+      const mod = await import(/* @vite-ignore */ `@/app/[locale]/(realestate)${p}/page`);
+      const md = await mod.generateMetadata();
+      expect(md.alternates?.canonical, `${key}/${locale}`).toBe(`https://luck428.com${p}`);
+      expect(Object.keys(md.alternates?.languages ?? {}).sort()).toEqual(["ja", "x-default", "zh-Hant"]);
+      expect(md.title).toEqual({ absolute: WAKEARI_PAGES[key].title });
+    }
+    state.locale = "zh-tw";
+    vi.resetModules();
+    const mod = await import(/* @vite-ignore */ `@/app/[locale]/(realestate)${p}/page`);
+    const tw = await mod.generateMetadata();
+    expect(tw.alternates?.canonical).toBe(`https://luck428.com/zh-tw${p}`);
+    expect(Object.keys(tw.alternates?.languages ?? {}).sort()).toEqual(["ja", "x-default", "zh-Hant"]);
+    expect(JSON.stringify(tw.title)).toMatch(/四葉不動産/);
+  });
+
+  it.each(TW_KEYS)("%s の繁体字版：固定文言は共通部品から・禁止語なし・日本語のみのページには（日文）を付ける", (key) => {
+    const src = read(`src/app/[locale]/(realestate)${WAKEARI_PAGES[key].path}/ZhTwPage.tsx`);
+    expect(src).toContain('<WakeariRoleTable locale="zh-tw" />');
+    expect(src).toContain('locale="zh-tw"');
+    expect(src).toContain('inLanguage="zh-Hant"');
+    expect(src).toContain('<CannotHandle bare locale="zh-tw" />');
+    expect(src).not.toMatch(/availableLocales|buildPageMetadata|generateMetadata/);
+    expect(src).not.toMatch(/一站式|單一窗口|高價收購|最高價|提携|合作的收購/);
+    expect(src).toMatch(/（日文）/);
+  });
+
+  it("共通の繁体字文言：分離受任・介紹費・（提携を付けない）買取業者", () => {
+    const tw = read("src/lib/wakeari-zh-tw.ts");
+    expect(tw).toContain("獨立的事業體");
+    expect(tw).toContain("分別簽約");
+    expect(tw).toContain("不收取介紹費");
+    expect(tw).toContain("以收購業者為買方的仲介");
+    expect(tw.split("\n").filter((l) => !/^\s*\/\//.test(l)).join("\n")).not.toMatch(/合作|提携|一站式|單一窗口/);
   });
 });
