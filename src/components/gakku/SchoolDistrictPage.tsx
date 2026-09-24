@@ -1,3 +1,4 @@
+import { SCHOOL_SALE_COPY, schoolSalePath } from "@/lib/sale-school-district";
 /**
  * 学校別の通学区域ページ本体（/gakku/[school] の共通実装）。
  *
@@ -104,6 +105,7 @@ export async function SchoolDistrictPage({
         </header>
 
         <Link href={addLocalePrefix(schoolRentalPath(slug), locale)} className="mt-6 block rounded-xl border border-primary/25 bg-primary-tint p-5 font-semibold text-primary">{SCHOOL_RENTAL_COPY[locale].view} →</Link>
+        <Link href={addLocalePrefix(schoolSalePath(slug), locale)} className="mt-3 block rounded-xl border border-primary/25 p-5 font-semibold text-primary">{SCHOOL_SALE_COPY[locale].view} →</Link>
 
         <H2 id="district">{c.school.districtH2.replace("{school}", school.formalName)}</H2>
         <DistrictTable rows={rows} copy={c} />

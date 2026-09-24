@@ -1,3 +1,4 @@
+import { SCHOOL_SALE_COPY, SCHOOL_SALE_INDEX_PATH, schoolSalePath, groupSchoolSales } from "@/lib/sale-school-district";
 import Link from "next/link";
 import type { LangCode } from "@/config/languages";
 import type { PublicProperty } from "@/lib/property-shared";
@@ -20,6 +21,7 @@ import type { PublicRentalSummary } from "@/lib/school-rental-feed";
 export function SchoolRentalIndex({ properties, locale, summaries = [] }: { properties: PublicProperty[]; locale: LangCode; summaries?: PublicRentalSummary[] }) {
   const c = SCHOOL_RENTAL_COPY[locale];
   const groups = groupSchoolRentals(properties, locale);
+  const sales = groupSchoolSales(properties, locale);
   const indexUrl = canonicalUrl("realestate", SCHOOL_RENTAL_INDEX_PATH, locale);
   // ハブは物件を直接並べず、20校の学区別ページを ItemList で示す（学区ページ強化 作業手順書 v1・PR-1）
   const schoolList = { ...buildPropertyItemListJsonLd(listSchools().map(school => ({ name: school.formalName, url: canonicalUrl("realestate", schoolRentalPath(school.slug), locale) })), indexUrl, locale), "@id": `${indexUrl}#schools`, name: c.indexTitle };
@@ -37,8 +39,10 @@ export function SchoolRentalIndex({ properties, locale, summaries = [] }: { prop
             <span className="font-semibold text-ink">{school.formalName}</span>
             <span className="shrink-0 rounded-full bg-primary-tint px-3 py-1 text-sm font-semibold text-primary">{c.count.replace("{count}", String((groups.get(school.slug)?.length ?? 0) + summaries.filter(r => r.schoolSlug === school.slug).length))} →</span>
           </Link>
+          <Link href={addLocalePrefix(schoolSalePath(school.slug), locale)} className="mt-2 inline-block text-sm font-semibold text-primary underline">{SCHOOL_SALE_COPY[locale].sale.replace("{count}", String(sales.get(school.slug)?.length ?? 0))} →</Link>
         </li>)}
       </ul>
+      <Link href={addLocalePrefix(SCHOOL_SALE_INDEX_PATH, locale)} className="mt-4 inline-block text-primary underline">{SCHOOL_SALE_COPY[locale].indexTitle}</Link>
       <DistrictSourceNote locale={locale} />
       <RentalComparison rows={summaries} locale={locale} />
       <SchoolRentalFaq locale={locale} />
@@ -69,6 +73,7 @@ export function SchoolRentalListings({ school, properties, locale, summaries = [
       <RentalComparison rows={schoolSummaries} locale={locale} />
       <SchoolRentalFaq locale={locale} />
       <Link href={addLocalePrefix(`/contact?intent=gakku-${school.slug}-rental`, locale)} className="mt-6 inline-block rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-white hover:opacity-90">{c.request}</Link>
+      <Link href={addLocalePrefix(schoolSalePath(school.slug), locale)} className="mt-4 block text-primary underline">{SCHOOL_SALE_COPY[locale].view}</Link>
       <nav aria-label={c.back} className="mt-6 flex flex-wrap gap-5 text-sm text-primary underline">
         <Link href={addLocalePrefix(SCHOOL_RENTAL_INDEX_PATH, locale)}>{c.back}</Link>
         <Link href={addLocalePrefix(isFeaturedSchoolSlug(school.slug) ? `/gakku/${school.slug}` : "/gakku", locale)}>{c.guide}</Link>
