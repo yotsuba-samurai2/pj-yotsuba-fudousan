@@ -18,7 +18,8 @@
 //   ItemList（種類別4枚）／Article（ArticleJsonLd・dateModified）。
 //   GeoCircle には既存 @id が無いため、areaServed は shell と同じ文字列で揃える（PR 本文に記載）。
 //
-// 【コンプライアンス】shigyo-compliance-gate 準拠。可否・価格の断定なし。買取は「提携する買取業者を買主とする媒介」に固定。
+// 【コンプライアンス】shigyo-compliance-gate 準拠。可否・価格の断定なし。買取は「買取業者を買主とする媒介」に固定
+//   （2026-09-24 浦松決定：買取業者との提携は無いため「提携する」を外した）。
 //   一つの窓口＝可。同ページに分離受任（独立した事業体・別々にご契約）を併記（WakeariRoleTable）。法令の一次確認は src/lib/wakeari.ts 冒頭。
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -140,9 +141,9 @@ const JA_NAGARE: { step: string; body: string }[] = [
     body: "登記事項証明書・公図・契約書を確認したうえで、道路の種別と幅員、用途地域と建蔽率・容積率、建築の制限、東京都建築安全条例の該当、区の制度を役所で確認し、現地を見ます。",
   },
   { step: "2. 調査報告書", body: "確認した事実と、判断を要する専門家（建築士・特定行政庁・税理士・司法書士・弁護士）の一覧を書面にしてお渡しします。" },
-  { step: "3. 出口の比較表", body: "媒介で売る・提携する買取業者を買主とする媒介・貸して持つを、同じ物差し（価格の考え方・期間の考え方・責任・報酬の根拠）で並べます。売らない選択肢も含めます。" },
+  { step: "3. 出口の比較表", body: "媒介で売る・買取業者を買主とする媒介・貸して持つを、同じ物差し（価格の考え方・期間の考え方・責任・報酬の根拠）で並べます。売らない選択肢も含めます。" },
   { step: "4. 媒介契約", body: "書面で、価額の根拠と報酬（宅地建物取引業法第46条の上限の範囲内）を明示します（同法第34条の2）。" },
-  { step: "5. 買い手探し・提携する買取業者への打診", body: "買い手の候補ごとに条件を並べ、買取をご希望なら複数の買取業者に打診して提示を並べます。買主が誰かは書面で明示します。" },
+  { step: "5. 買い手探し・買取業者への打診", body: "買い手の候補ごとに条件を並べ、買取をご希望なら複数の買取業者に打診して提示を並べます。買主が誰かは書面で明示します。" },
   { step: "6. 契約・決済", body: "重要事項説明、契約不適合責任の取り決め、引渡しまでを進めます。登記の申請は司法書士におつなぎします。" },
 ];
 
@@ -340,7 +341,7 @@ export default async function Page() {
                 <tr className="bg-primary-tint text-left">
                   <th className="border border-border px-3 py-2"> </th>
                   <th className="border border-border px-3 py-2">媒介で売る</th>
-                  <th className="border border-border px-3 py-2">提携する買取業者を買主とする媒介</th>
+                  <th className="border border-border px-3 py-2">買取業者を買主とする媒介</th>
                   <th className="border border-border px-3 py-2">貸す・活用して持つ</th>
                 </tr>
               </thead>
@@ -357,7 +358,7 @@ export default async function Page() {
             </table>
           </div>
           <p className="mt-3 leading-relaxed text-text">
-            <strong className="text-ink">買取の建て付けについて。</strong>買取をご希望の場合、買主は提携する買取業者です。当社は売主様との媒介契約に基づいて複数の買取業者に打診し、提示を並べてお示しします。報酬は、宅地建物取引業法第46条に基づく告示の上限の範囲内の媒介報酬で、買主が誰かは媒介契約と重要事項説明の書面で明示します（同法第34条の取引態様の明示）。日数や金額を競う買取はしません。当社が出す差は、<strong className="text-ink">調べた結果を報告書にして、選択肢を並べること</strong>です。
+            <strong className="text-ink">買取の建て付けについて。</strong>買取をご希望の場合、買主は買取業者です。当社は売主様との媒介契約に基づいて複数の買取業者に打診し、提示を並べてお示しします。報酬は、宅地建物取引業法第46条に基づく告示の上限の範囲内の媒介報酬で、買主が誰かは媒介契約と重要事項説明の書面で明示します（同法第34条の取引態様の明示）。日数や金額を競う買取はしません。当社が出す差は、<strong className="text-ink">調べた結果を報告書にして、選択肢を並べること</strong>です。
           </p>
           <p className="mt-3 leading-relaxed text-text">
             売却した場合の税金（譲渡所得）や、相続がからむ場合の相続税・特例の適用可否は<strong className="text-ink">税理士の業務</strong>です。当社は、税理士が判断に使う不動産側の数字（売却見込み・賃料見込み・維持費）を揃えてお渡しします。
