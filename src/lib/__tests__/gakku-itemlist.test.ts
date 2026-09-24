@@ -14,8 +14,8 @@ vi.mock("@/components/shared/Breadcrumb", () => ({ Breadcrumb: () => null }));
 
 function rental(address = "東京都文京区春日２丁目12-12"): PublicProperty {
   const p = fixture().property;
-  p.locationText = address; p.status = "published"; p.locales = ["ja", "en", "zh-tw", "zh"];
-  if (p.spec.dealType === "rental") p.spec.availabilityExpiresAt = "2999-01-01T00:00:00Z";
+  p.locationText = address; p.status = "published"; p.locales = ["ja", "en", "zh-tw", "zh"]; p.priceYen = 250000;
+  if (p.spec.dealType === "rental") { p.spec.availabilityExpiresAt = "2999-01-01T00:00:00Z"; p.spec.exclusiveAreaSqm = 60; }
   p.translations = { en: { title: "Kasuga Apartment", description: "Apartment", locationText: "2-12-12 Kasuga, Bunkyo-ku, Tokyo" } };
   return toPublicProperty(p);
 }

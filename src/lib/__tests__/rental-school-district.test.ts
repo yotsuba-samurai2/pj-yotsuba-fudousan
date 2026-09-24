@@ -16,8 +16,8 @@ vi.mock("@/components/shared/Breadcrumb", () => ({ Breadcrumb: () => null }));
 
 function rental(address = "東京都文京区春日２丁目12-12"): PublicProperty {
   const p=fixture().property;
-  p.locationText=address; p.status="published"; p.locales=["ja","en","zh-tw","zh"];
-  if(p.spec.dealType==='rental')p.spec.availabilityExpiresAt="2999-01-01T00:00:00Z";
+  p.locationText=address; p.status="published"; p.locales=["ja","en","zh-tw","zh"]; p.priceYen=250000;
+  if(p.spec.dealType==='rental'){p.spec.availabilityExpiresAt="2999-01-01T00:00:00Z";p.spec.exclusiveAreaSqm=60;}
   p.translations={en:{title:"Kasuga Apartment",description:"Apartment",locationText:"2-12-12 Kasuga, Bunkyo-ku, Tokyo"}};
   return toPublicProperty(p);
 }
@@ -51,6 +51,15 @@ describe("住所を正本とする賃貸の学区",()=>{
     if(expired.spec.dealType==='rental')expired.spec.availabilityExpiresAt="2020-01-01T00:00:00Z";
     const list=[live,{...rental(),status:"closed" as const},{...rental(),status:"draft" as const},expired,{...rental(),locales:["ja" as const]},{...rental(),dealType:"land" as const}];
     expect(groupSchoolRentals(list,"en",NOW).get("kanatomi")).toEqual([live, expired]);
+  });
+  it("賃料17万5,000円・48㎡の基準未満を登録済み物件からも除外する",()=>{
+    const boundary=rental(); boundary.priceYen=175000;
+    if(boundary.spec.dealType==="rental") boundary.spec.exclusiveAreaSqm=48;
+    const underArea=rental();
+    if(underArea.spec.dealType==="rental") underArea.spec.exclusiveAreaSqm=47.99;
+    const underRent=rental(); underRent.priceYen=174999;
+    const grouped=groupSchoolRentals([boundary,underArea,underRent],"ja",NOW).get("kanatomi");
+    expect(grouped).toEqual([boundary]);
   });
   it.each(["itandi","eslife"] as const)("%s の取込時に非公開の判定記録を残す",provider=>{
     const v=fixture();const address="東京都文京区根津2丁目13-4";

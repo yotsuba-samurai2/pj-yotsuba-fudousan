@@ -48,7 +48,7 @@ describe("売買学区の面積・公開集合", () => {
   it("言語と賃貸・売買を別集計、原住所で判定", () => {
     const p=sale("house"); expect(grouped([p],"en")).toHaveLength(1);
     expect(grouped([{...p,locales:["ja"]}],"en")).toHaveLength(0);
-    const r=toPublicProperty(fixture().property);r.status="published";r.locationText=p.locationText;r.locales=["ja"];if(r.spec.dealType==="rental")r.spec.availabilityExpiresAt="2999-01-01T00:00:00Z";
+    const r=toPublicProperty(fixture().property);r.status="published";r.locationText=p.locationText;r.locales=["ja"];r.priceYen=250000;if(r.spec.dealType==="rental"){r.spec.availabilityExpiresAt="2999-01-01T00:00:00Z";r.spec.exclusiveAreaSqm=60;}
     expect(grouped([p,r])).toHaveLength(1);expect(groupSchoolRentals([p,r],"ja").get("kanatomi")).toHaveLength(1);
   });
 });
