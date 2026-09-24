@@ -24,6 +24,7 @@ import type { LangCode } from "@/config/languages";
 import type { ColumnLocaleIndex } from "@/lib/column-language-links";
 import {
   SERVICE_NAV_CATEGORIES,
+  SERVICE_NAV_FEATURES,
   SERVICE_NAV_UTILITY_LINKS,
   resolveNavLabel,
   isNavLinkVisible,
@@ -384,6 +385,18 @@ function ServicesMegaMenu({
                   </div>
                 ))}
               </div>
+              {/* 4カテゴリの外のサービス（/pet-housing など）。補助リンクの列より目立つ1段で出す */}
+              {SERVICE_NAV_FEATURES.filter((feature) => isNavLinkVisible(feature, locale)).map((feature) => (
+                <Link
+                  key={feature.href}
+                  href={feature.href}
+                  onClick={() => setOpen(false)}
+                  className="mt-6 flex flex-wrap items-baseline gap-x-3 gap-y-1 rounded-xl border border-primary/30 bg-primary-tint px-4 py-3 transition-colors hover:border-primary/60"
+                >
+                  <span className="text-sm font-bold text-ink">{resolveNavLabel(feature.label, locale)}</span>
+                  <span className="text-xs text-text-muted">{resolveNavLabel(feature.description, locale)}</span>
+                </Link>
+              ))}
               <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 border-t border-border pt-4">
                 {SERVICE_NAV_UTILITY_LINKS.filter((link) => isNavLinkVisible(link, locale)).map((link) => (
                   <Link
@@ -472,6 +485,17 @@ function ServicesMobileAccordion({
                   ))}
               </ul>
             </div>
+          ))}
+          {SERVICE_NAV_FEATURES.filter((feature) => isNavLinkVisible(feature, locale)).map((feature) => (
+            <Link
+              key={feature.href}
+              href={feature.href}
+              onClick={onNavigate}
+              className="block rounded-lg border border-primary/30 bg-primary-tint px-3 py-2"
+            >
+              <span className="block text-sm font-bold text-ink">{resolveNavLabel(feature.label, locale)}</span>
+              <span className="block text-xs text-text-muted">{resolveNavLabel(feature.description, locale)}</span>
+            </Link>
           ))}
           <div className="flex flex-wrap gap-x-4 gap-y-2 border-t border-border pt-3">
             {SERVICE_NAV_UTILITY_LINKS.filter((link) => isNavLinkVisible(link, locale)).map((link) => (
