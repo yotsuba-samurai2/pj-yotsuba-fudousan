@@ -169,3 +169,45 @@ model SchoolRentalFeed {
 
   @@map("school_rental_feeds")
 }
+
+// 学区以外の調査 scope（ペット等）の取得バッチ。追記のみ。学区は school_rental_feeds のまま触らない。
+// 観測行（payload）は status=verified のときだけ持つ。公開面には確定ログの集計だけを出す。
+model RentalSurveyBatch {
+  id              String   @id @default(cuid())
+  scopeId         String   @map("scope_id")
+  scopeVersion    Int      @map("scope_version")
+  provider        String
+  status          String // verified | incomplete | failed
+  failureReason   String?  @map("failure_reason")
+  observedFrom    DateTime @map("observed_from")
+  observedTo      DateTime @map("observed_to")
+  expectedCount   Int?     @map("expected_count")
+  recordCount     Int      @map("record_count")
+  allPagesChecked Boolean  @map("all_pages_checked")
+  payload         Json?
+  createdAt       DateTime @default(now()) @map("created_at")
+
+  @@index([scopeId, scopeVersion, provider, createdAt])
+  @@map("rental_survey_batches")
+}
+
+// 調査 scope ごとの確定ログ。追記のみで、sequence 最大の行が現在の確定。
+// (scopeId, scopeVersion, sequence) の一意制約で同時確定を検出する（楽観ロック）。
+// 巻き戻しは過去の確定を写した行を足す。snapshot は確定時に計算した対象住戸の照合用最小項目と除外理由別の件数。
+model RentalSurveyFinalization {
+  id             String   @id @default(cuid())
+  scopeId        String   @map("scope_id")
+  scopeVersion   Int      @map("scope_version")
+  sequence       Int
+  batchIds       String[] @map("batch_ids")
+  providers      String[]
+  dedupVersion   Int      @map("dedup_version")
+  observedFrom   DateTime @map("observed_from")
+  observedTo     DateTime @map("observed_to")
+  snapshot       Json
+  rolledBackFrom String?  @map("rolled_back_from")
+  createdAt      DateTime @default(now()) @map("created_at")
+
+  @@unique([scopeId, scopeVersion, sequence])
+  @@map("rental_survey_finalizations")
+}

@@ -48,6 +48,12 @@ it("requires the preview revision and reports CAS conflicts", async () => {
   vi.mocked(saveSchoolRentalFeed).mockResolvedValue(false);
   expect((await POST(request({ ...b, expectedUpdatedAt: "2026-09-23T00:00:00Z" }))).status).toBe(409);
 });
+it("rejects a pet-survey scope on the school route before reading or writing (pet project T02)", async () => {
+  const b = body();
+  expect((await POST(request({ ...b, action: "save", expectedUpdatedAt: null, feed: { ...b.feed, scope: "bunkyo-rent-pet" } }))).status).toBe(400);
+  expect(readSchoolRentalFeeds).not.toHaveBeenCalled();
+  expect(saveSchoolRentalFeed).not.toHaveBeenCalled();
+});
 it("stores a checked feed only on explicit save", async () => {
   expect((await POST(request({ ...body(), action: "save", expectedUpdatedAt: null }))).status).toBe(200);
   expect(saveSchoolRentalFeed).toHaveBeenCalledTimes(1);
