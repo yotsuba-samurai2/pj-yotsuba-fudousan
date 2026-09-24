@@ -290,7 +290,7 @@ export function GhOwnerForm() {
               type="text"
               value={rent}
               onChange={(e) => setRent(e.target.value)}
-              placeholder="未定で構いません"
+              placeholder="例：月額21万円（未定で構いません）"
               className={inputClass}
             />
           </div>
