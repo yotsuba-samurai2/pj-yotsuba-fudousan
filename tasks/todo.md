@@ -684,6 +684,7 @@ sitemap の `locales` もページの `availableLocales` と同時に4言語へ�
 - [x] tsc 0／eslint 0／vitest 115ファイル・1,663件（contact-prefill.test.ts を追加）
 - [x] Vercel プレビューの配信 JS に、書く側（/wakeari）と読む側（/contact）の両方が入っていることを確認
 - [x] draft PR #431 https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/pull/431 。本番ドメインでの操作確認（このコンテナの Chromium は証明書を検証できない）・マージは浦松
+- [x] 浦松の指示でマージ（squash 0034806）。本番の配信 JS に書く側・読む側の両方、/wakeari に新しい説明文を確認。**浦松の端末で本番の操作確認 OK（2026-09-24）**
 - 残るもの：フォームから「戻る」でチェックリストに戻ると回答は空（画面の状態は保存しない設計のまま）
   → **浦松判断 2026-09-24：残さなくていい（対応しない）**
 
@@ -698,7 +699,8 @@ sitemap の `locales` もページの `availableLocales` と同時に4言語へ�
 - [x] リンク先5本は本番で 200 を確認（/wakeari/kyoyu・共有コラム・換価分割コラム・/legal/services/inheritance・/wakeari）
 - [x] 番人テスト src/lib/__tests__/jirei-page.test.ts（件数の一致・見出しの連番・注記の確定文言・想定形と紹介料の明示・一体提供の語）。件数と完了形を壊すと落ちることを確認
 - [x] tsc 0／eslint 0／vitest 116ファイル・1,668件
-- 浦松の再検収待ち（⑤⑥とも）。マージは浦松
+- [x] 本番反映（#431・0034806）を確認：/jirei は6事例・ItemList 6件・canonical は自URL・sitemap 収載。GSC は https://luck428.com/jirei を更新として浦松へ
+- [x] **⑥の本文は浦松検収 OK（2026-09-24・修正なし）**。⑤は再検収待ちのまま
 
 ## 2026-09-24 グループホーム向け物件・大家募集ページ（/group-home/ooya）Phase 1
 
