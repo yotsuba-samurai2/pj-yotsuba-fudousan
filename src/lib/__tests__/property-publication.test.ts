@@ -3,9 +3,7 @@ import type { AdminProperty } from "@/lib/property-shared";
 import {
   detectPublicationChange,
   recordPublicationChange,
-  recordExpiredPublications,
   processPendingNotifications,
-  publicationPaths,
   MAX_NOTIFY_ATTEMPTS,
   type PublicationEvent,
   type PublicationEventStore,
@@ -77,25 +75,6 @@ describe("detectPublicationChange（T09・T10）", () => {
     const change = detectPublicationChange(null, property(), NOW)!;
     expect(JSON.stringify(change)).not.toContain("元付");
     expect(JSON.stringify(change)).not.toContain("AD100");
-  });
-});
-
-describe("recordExpiredPublications（T05・T14：書込みなしの期限超過を一度だけ記録）", () => {
-  it("期限超過を一度だけ記録し、真のclosedへは使わない", async () => {
-    const store = fakeStore();
-    const expired = property();
-    (expired.spec as { availabilityExpiresAt?: string }).availabilityExpiresAt = "2026-09-19T00:00:00Z";
-    const first = await recordExpiredPublications(store, [expired], NOW);
-    const second = await recordExpiredPublications(store, [expired], NOW);
-    expect(first).toEqual(["rent-test"]);
-    expect(second).toEqual([]); // 直近が expired のままなら再記録しない
-    expect(store.rows.filter((r) => r.kind === "expired")).toHaveLength(1);
-    expect(store.rows[0].urls).toEqual(publicationPaths("rent-test", ["ja"]));
-  });
-  it("公開中・期限内の物件は対象外", async () => {
-    const store = fakeStore();
-    await recordExpiredPublications(store, [property()], NOW);
-    expect(store.rows).toHaveLength(0);
   });
 });
 

@@ -741,8 +741,8 @@ export default function PropertyForm({ initialData, onSubmit }: Props) {
       {dealType === "rental" && initialData?.spec.dealType === "rental" && (
         <section className="rounded-xl border border-border bg-surface p-4 text-sm">
           <h2 className="font-semibold">公開後の確認</h2>
-          <p className="mt-2 text-text-muted">募集情報の確認期限：{initialData.spec.availabilityExpiresAt ? new Date(initialData.spec.availabilityExpiresAt).toLocaleString("ja-JP", { timeZone: "Asia/Tokyo" }) : "未確認"}</p>
-          <p className="mt-1 text-text-muted">取得元で掲載終了を確認した物件は募集終了に変更します。期限を過ぎると公開対象から外れます。内容を手動編集すると自動上書きは保留になります。</p>
+          <p className="mt-2 text-text-muted">募集状況の再確認目安：{initialData.spec.availabilityExpiresAt ? new Date(initialData.spec.availabilityExpiresAt).toLocaleString("ja-JP", { timeZone: "Asia/Tokyo" }) : "未確認"}（この時刻だけでは自動非表示になりません）</p>
+          <p className="mt-1 text-text-muted">取得元で掲載終了を確認した物件は募集終了に変更します。再確認目安を過ぎただけでは公開対象から外れません。内容を手動編集すると自動上書きは保留になります。</p>
         </section>
       )}
 

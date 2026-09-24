@@ -610,25 +610,18 @@ export function scanPropertyText(text: string): BannedTermHit[] {
 export const GH_USE_NOTE =
   "障害福祉サービスでのご利用可否は、所管行政庁の指定基準等の確認が必要です。個別にご相談ください。";
 
-/** Expired or never-verified rentals cannot continue advertising when the worker stops. */
-export function isRentalExpired(p: Pick<PublicProperty, "dealType" | "spec">, now = new Date()): boolean {
-  if (p.dealType !== "rental") return false;
-  if (p.spec.dealType !== "rental" || !p.spec.availabilityExpiresAt) return true;
-  const expiry = Date.parse(p.spec.availabilityExpiresAt);
-  return !Number.isFinite(expiry) || expiry <= now.getTime();
-}
-
 /**
  * 公開面（一覧・詳細・関連ブロック・ItemList・JSON-LD・sitemap・llms.txt）共通の公開判定。
- * published かつ 賃貸の確認期限内 かつ（locale 指定時は）そのロケールで公開。
- * closed（募集終了）と期限超過は別の理由だが、どちらも公開面には出さない。
+ * published かつ（locale 指定時は）そのロケールで公開。
+ * 賃貸の availabilityExpiresAt は再確認の目安であり、自動非表示には使わない。
+ * 募集終了を確認した物件は status=closed に更新して公開を止める。
  */
 export function isPubliclyVisible(
   p: Pick<PublicProperty, "status" | "dealType" | "spec" | "locales">,
   locale?: LangCode,
-  now = new Date(),
+  _now = new Date(),
 ): boolean {
+  void _now;
   if (p.status !== "published") return false;
-  if (isRentalExpired(p, now)) return false;
   return locale ? isPropertyLocaleAllowed(p, locale) : true;
 }

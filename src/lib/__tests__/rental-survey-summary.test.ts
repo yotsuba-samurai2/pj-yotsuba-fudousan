@@ -80,7 +80,7 @@ describe("状態の区別（T11）", () => {
 describe("当サイトの掲載物件 V_l（T10・T14）", () => {
   beforeEach(() => vi.mocked(getProperties).mockReset());
 
-  it("公開面と同じ判定：公開中・確認期限内・その言語で公開している賃貸だけ", async () => {
+  it("公開面と同じ判定：公開中・その言語で公開している賃貸だけ（確認目安超過も含む）", async () => {
     vi.mocked(getProperties).mockResolvedValue([
       ownRental({ id: "ja", title: "試験マンション 205" }),
       ownRental({ id: "en-only", title: "試験マンション 301", locales: ["en"] }),
@@ -92,7 +92,7 @@ describe("当サイトの掲載物件 V_l（T10・T14）", () => {
     ]);
     const ja = (await readVisibleRentalIdentities("ja")).map(i => i.unit).sort();
     const en = (await readVisibleRentalIdentities("en")).map(i => i.unit).sort();
-    expect(ja).toEqual(["205", "501"]); // locales が空＝日本語のみ（toPublicProperty と同じ）
+    expect(ja).toEqual(["205", "501", "801"]); // locales が空＝日本語のみ（toPublicProperty と同じ）
     expect(en).toEqual(["301"]);
   });
 

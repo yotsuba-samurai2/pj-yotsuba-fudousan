@@ -38,16 +38,16 @@ const land = (over: Partial<AdminProperty> = {}): AdminProperty => rental({
 const urls = { url: "https://luck428.com/en/bukken/rent-test", siteUrl: "https://luck428.com", inLanguage: "en", images: [] };
 
 describe("共通公開判定 isPubliclyVisible（T05・T12）", () => {
-  it("published かつ期限内かつロケール公開のときだけ true", () => {
+  it("published かつロケール公開のときだけ true", () => {
     const p = toPublicProperty(rental());
     expect(isPubliclyVisible(p, "en", NOW)).toBe(true);
     expect(isPubliclyVisible(toPublicProperty(rental({ status: "closed" })), "ja", NOW)).toBe(false);
     expect(isPubliclyVisible(toPublicProperty(rental({ status: "draft" })), "ja", NOW)).toBe(false);
     expect(isPubliclyVisible(toPublicProperty(rental({ locales: ["ja"] })), "zh", NOW)).toBe(false);
   });
-  it("書込みが無くても確認期限を過ぎれば公開対象外（closed とは別理由）", () => {
+  it("確認目安を過ぎても published の賃貸は公開を継続する", () => {
     const p = toPublicProperty(rental());
-    expect(isPubliclyVisible(p, "ja", new Date("2026-09-21T03:00:01Z"))).toBe(false);
+    expect(isPubliclyVisible(p, "ja", new Date("2026-09-21T03:00:01Z"))).toBe(true);
     expect(p.status).toBe("published");
   });
 });
