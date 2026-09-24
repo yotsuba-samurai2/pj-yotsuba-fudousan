@@ -31,8 +31,17 @@ describe("表示部品（T15）", () => {
 
   it.each(LOCALES)("%s：誤認させる表現・内部情報・JSON-LD を出さない", locale => {
     const html = render(shown, locale);
-    expect(html).not.toMatch(/市場全体|全件|必ず|ご紹介できる物件はありません|未公開物件|水面下|ld\+json|sourceId|bunkyo-rent-pet|reins|atbb|itandi|eslife/i);
+    expect(html).not.toMatch(/市場全体|全件|必ず|ご紹介できる物件はありません|未公開物件|水面下|ld\+json|sourceId|bunkyo-rent-pet|reins|atbb|itandi|eslife|レインズ|アットホーム|イタンジ|いい生活/i);
     expect(html).toMatch(/12/);
+  });
+
+  it.each([
+    ["ja", "当社が独自に集計したものです"],
+    ["en", "This is our own tally"],
+    ["zh-tw", "本公司"],
+    ["zh", "本公司"],
+  ] as const)("%s：媒体名を出さない当社の独自集計であることを示す（2026-09-24 浦松指示）", (locale, text) => {
+    expect(render({ ...shown, sourceKind: "multiple" }, locale)).toContain(text);
   });
 
   it("複数媒体は「複数の」、1媒体なら付けない", () => {

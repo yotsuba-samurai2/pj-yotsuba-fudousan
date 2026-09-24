@@ -6,6 +6,7 @@ import type { PublicSurveySummary } from "@/lib/rental-survey/summary";
  * 「今回の調査で確認した対象物件」の共通表示部品（ペット横断 指示書 版2.0 第8.2章のひな型）。
  * - 集計済みの公開用データだけを受け取る。hidden・条件文の無い scope では何も出さない（数値枠を出さず、相談導線はページ側で維持）。
  * - 「市場全体」「全件」「必ず紹介できる」とは書かない。0件は調査範囲での確認結果であることを添える。
+ * - 媒体名は書かない（2026-09-24 浦松指示：当社の独自集計として公表）。出典表記は許諾台帳の attribution がある場合だけ。
  * - JSON-LD は出さない（ItemList は当該言語で実際に見える一覧だけから作るため、調査総数を入れない）。
  * - CTA は呼び出し側から渡す（計測は既存の CTA 部品に任せる）。
  */
@@ -26,7 +27,7 @@ const COPY: Record<LangCode, Copy> = {
     listed: n => `うち当サイトで詳細掲載中：${n}件`,
     notListed: n => `うち当サイトでは詳細非掲載：${n}件`,
     source: (kind, attribution) => `当社が利用する${kind === "multiple" ? "複数の" : ""}業者向け物件情報${attribution ? `（${attribution}）` : ""}`,
-    coverage: source => `${source}のうち、上記の条件と集計公表の利用条件を満たす情報を確認した集計です。地域内の全募集物件を網羅するものではありません。`,
+    coverage: source => `${source}のうち、上記の条件と集計公表の利用条件を満たす情報を、当社が独自に集計したものです。地域内の全募集物件を網羅するものではありません。`,
     zero: "0件は今回の調査範囲での確認結果であり、地域に該当する物件が存在しないことを示すものではありません。",
     notListedMeaning: "詳細非掲載には、広告ができない物件、掲載の許可を確認中の物件、掲載準備中の物件などが含まれます。ご紹介の可否は物件ごとに確認します。",
     petNote: "「可」「相談可」は無条件の入居を保証するものではありません。動物の種類・頭数・大きさ、管理規約、貸主の承諾、個別の審査などによります。",
@@ -39,7 +40,7 @@ const COPY: Record<LangCode, Copy> = {
     listed: n => `Of these, listed in detail on this site: ${n}`,
     notListed: n => `Of these, not listed in detail on this site: ${n}`,
     source: (kind, attribution) => `${kind === "multiple" ? "several sources of " : ""}the real estate agents' listing information we use${attribution ? ` (${attribution})` : ""}`,
-    coverage: source => `This total covers information from ${source} that meets the conditions above and the terms for publishing totals. It does not cover every rental available in the area.`,
+    coverage: source => `This is our own tally of information from ${source} that meets the conditions above and the terms for publishing totals. It does not cover every rental available in the area.`,
     zero: "A count of zero reflects the results within this survey's scope; it does not mean that no such properties exist in the area.",
     notListedMeaning: "Properties not listed in detail include those that may not be advertised, those for which advertising permission is still being confirmed, and those being prepared for listing. Whether we can introduce a property is confirmed case by case.",
     petNote: "“Allowed” or “negotiable” does not guarantee that you can move in. It depends on the type, number and size of the animals, the building rules, the landlord's consent and individual screening.",
@@ -52,7 +53,7 @@ const COPY: Record<LangCode, Copy> = {
     listed: n => `其中在本網站刊登詳細資訊：${n}件`,
     notListed: n => `其中未在本網站刊登詳細資訊：${n}件`,
     source: (kind, attribution) => `本公司使用的${kind === "multiple" ? "多個" : ""}不動產業者用物件資訊${attribution ? `（${attribution}）` : ""}`,
-    coverage: source => `本統計僅涵蓋${source}中符合上述條件及統計公開使用條件的資訊，並未涵蓋該地區所有招租物件。`,
+    coverage: source => `本統計為本公司就${source}中符合上述條件及統計公開使用條件的資訊所自行彙整，並未涵蓋該地區所有招租物件。`,
     zero: "0件為本次調查範圍內的確認結果，並不表示該地區不存在相關物件。",
     notListedMeaning: "未刊登詳細資訊的物件，包含不可刊登廣告、刊登許可確認中、刊登準備中等情形。可否介紹需逐一確認。",
     petNote: "「可」或「可商議」並不保證一定能入住，仍取決於動物的種類、數量與體型、管理規約、房東同意及個別審查等。",
@@ -65,7 +66,7 @@ const COPY: Record<LangCode, Copy> = {
     listed: n => `其中在本网站刊登详细信息：${n}套`,
     notListed: n => `其中未在本网站刊登详细信息：${n}套`,
     source: (kind, attribution) => `本公司使用的${kind === "multiple" ? "多个" : ""}不动产经纪业者用房源信息${attribution ? `（${attribution}）` : ""}`,
-    coverage: source => `本统计仅涵盖${source}中符合上述条件及统计公开使用条件的信息，并未涵盖该地区所有招租房源。`,
+    coverage: source => `本统计为本公司就${source}中符合上述条件及统计公开使用条件的信息所自行汇总，并未涵盖该地区所有招租房源。`,
     zero: "0套为本次调查范围内的确认结果，并不表示该地区不存在相关房源。",
     notListedMeaning: "未刊登详细信息的房源，包括不可刊登广告、刊登许可确认中、刊登准备中等情况。能否介绍需逐一确认。",
     petNote: "「可」或「可商议」并不保证一定能入住，仍取决于动物的种类、数量与体型、管理规约、房东同意及个别审查等。",
