@@ -292,7 +292,7 @@ model Inquiry {
 | `/legal/services/pet-travel` | `src/app/[locale]/(legal)/legal/services/pet-travel/page.tsx` | `LegalServicePage` | ja 先行 | Service（provider＝`https://luck428.com/legal/#organization`）＋BreadcrumbList |
 
 - **指示書との差分**：第17章は行政書士の事業者型を「ProfessionalService」としているが、現物は `LegalService`（`seo.ts:460`）。`ProfessionalService` は社労士（`/labor/#organization`）。**既存IDに接続し、型は変えない**。
-- **ja 先行ページの非日本語URL**：現行の ja 専用ページ（`/group-home/ooya` 等）は `/en/...` でも 200 を返し、日本語本文を `<html lang="en">` で出している（canonical は ja）。これは第16章「未公開言語へ日本語本文を流し込まない」に反する。**新LP2本は非 ja で `notFound()` を返す**（列・物件詳細と同じ扱い）。既存の ja 専用ページの扱いは本件の範囲外として別タスクに切り出す。
+- **ja 先行ページの非日本語URL**：コード上、現行の ja 専用ページ（`/group-home/ooya` 等）は `/en/...` でも 200 を返し、日本語本文を `<html lang="en">` で出す（`[locale]/layout.tsx` は `generateStaticParams` で4言語を生成し、`notFound()` は不正なロケールにだけ返す。ページ側は `params` を見ない。canonical は ja）。**実測（`curl`）は未実施**で、検証項目 F12 とする。これは第16章「未公開言語へ日本語本文を流し込まない」に反する。**新LP2本は非 ja で `notFound()` を返す**（列・物件詳細と同じ扱い）。既存の ja 専用ページの扱いは本件の範囲外として別タスクに切り出す。
 - 言語切替（`getColumnSwitchLocales`）は固定ページでは4言語すべてを出すため、新LPでも切替先が 404 にならないよう、固定ページ用の許可言語の指定を足す（T18）。
 
 ### 8.2 既存記事の棚卸し（カニバリ判定）
