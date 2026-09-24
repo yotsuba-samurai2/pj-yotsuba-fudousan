@@ -565,8 +565,8 @@ const THEME_RULES: Record<BusinessKey, readonly ThemeRule[]> = {
     {
       theme: "realestate-inshokuten",
       keywords: [
-        "飲食店", "店舗", "厨房", "消防法", "カフェ", "美容室", "理容所",
-        "inshokuten", "restaurant", "shop",
+        "飲食店", "店舗", "厨房", "カフェ", "居酒屋",
+        "inshokuten", "restaurant",
       ],
     },
     {
@@ -665,7 +665,10 @@ const THEME_RULES: Record<BusinessKey, readonly ThemeRule[]> = {
     },
     {
       theme: "legal-kousho-ninshou",
-      keywords: ["公証", "認証", "アポスティーユ", "翻訳", "領事", "kousho", "ninshou", "apostille"],
+      keywords: [
+        "公証", "アポスティーユ", "領事認証", "私文書認証", "宣誓供述",
+        "kousho", "apostille",
+      ],
     },
     {
       theme: "legal-visa",
@@ -813,7 +816,15 @@ const DEFAULT_THEME: Record<BusinessKey, IllustrationTheme> = {
   labor: "labor-top",
 };
 
-const SLUG_OVERRIDES: Partial<Record<BusinessKey, Record<string, IllustrationTheme>>> = {};
+// 複数の小テーマをタイトルに列挙するハブ記事は、キーワード一致では必ず先頭の語に
+// 引っ張られる。そういう記事だけここで明示する（キーワードルールより優先される）。
+const SLUG_OVERRIDES: Partial<Record<BusinessKey, Record<string, IllustrationTheme>>> = {
+  legal: {
+    // タイトルが「相続放棄・準確定申告・相続税・相続登記・遺留分」と列挙しているため
+    // 「遺留分」に一致してしまう。期限の総まとめなので相続の総論の絵が正しい。
+    "souzoku-kigen-matome": "legal-inheritance",
+  },
+};
 
 function normalizeOgImage(value: string | undefined): string | undefined {
   const trimmed = value?.trim();
@@ -825,11 +836,21 @@ function normalizeOgImage(value: string | undefined): string | undefined {
   return `/${trimmed.replace(/^public\//, "")}`;
 }
 
-function searchableText(column: ColumnIllustrationInput): string {
-  return [column.slug, column.title, column.category, ...(column.tags ?? [])]
-    .join(" ")
-    .normalize("NFKC")
-    .toLowerCase();
+/** slug・タイトル・カテゴリ＝その記事が何の記事かを決める文字列 */
+function primaryText(column: ColumnIllustrationInput): string {
+  return [column.slug, column.title, column.category].join(" ").normalize("NFKC").toLowerCase();
+}
+
+/** タグ＝補助的な手がかり。主題を表さない語も混ざる */
+function tagText(column: ColumnIllustrationInput): string {
+  return (column.tags ?? []).join(" ").normalize("NFKC").toLowerCase();
+}
+
+function matchRule(rules: readonly ThemeRule[], haystack: string): ThemeRule | undefined {
+  if (!haystack) return undefined;
+  return rules.find(({ keywords }) =>
+    keywords.some((keyword) => haystack.includes(keyword.toLowerCase())),
+  );
 }
 
 function resolvedTheme(
@@ -848,11 +869,15 @@ export function resolveColumnIllustration(
   const override = SLUG_OVERRIDES[column.business]?.[column.slug];
   if (override) return resolvedTheme(override, "slug");
 
-  const haystack = searchableText(column);
-  const rule = THEME_RULES[column.business].find(({ keywords }) =>
-    keywords.some((keyword) => haystack.includes(keyword.toLowerCase())),
-  );
-  if (rule) return resolvedTheme(rule.theme, "theme");
+  // タイトル・カテゴリ・slug を先に見て、そこで決まらないときだけタグを見る。
+  // 2026-09-24：全文を一度に見ていたため、タグに偶然入っていた語が主題を上書きしていた
+  // （「相続手続きの期限まとめ」がタグの「遺留分」で遺留分の画像に、
+  //   「就業規則10人の義務」がタグの「ハラスメント」で相談窓口の画像になっていた）。
+  const rules = THEME_RULES[column.business];
+  const byPrimary = matchRule(rules, primaryText(column));
+  if (byPrimary) return resolvedTheme(byPrimary.theme, "theme");
+  const byTag = matchRule(rules, tagText(column));
+  if (byTag) return resolvedTheme(byTag.theme, "theme");
 
   return resolvedTheme(DEFAULT_THEME[column.business], "fallback");
 }
