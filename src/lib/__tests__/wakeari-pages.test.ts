@@ -51,7 +51,7 @@ const WAKEARI_FILES = [
 describe("固定文言（指示書 v2.0 5-2・5-5）", () => {
   it("事業者主語の一文・分離受任の一文・留保文が一字も変わっていない", () => {
     expect(WAKEARI_PROVIDER_SENTENCE).toBe(
-      "四葉不動産株式会社（宅地建物取引業 東京都知事(1)第113304号）は、文京区小日向を拠点に、再建築不可・共有・借地・狭小地の土地・建物について、役所調査と出口の比較、売却の媒介を行っています。買取をご希望の場合は、提携する買取業者を買主とする媒介の形で、複数の提示を並べてお示しします。",
+      "四葉不動産株式会社（宅地建物取引業 東京都知事(1)第113304号）は、文京区小日向を拠点に、再建築不可・共有・借地・狭小地の土地・建物について、役所調査と出口の比較、売却の媒介を行っています。買取をご希望の場合は、買取業者を買主とする媒介の形で、複数の提示を並べてお示しします。",
     );
     expect(WAKEARI_SEPARATION_NOTE).toBe(
       "四葉不動産株式会社と四葉行政書士事務所は、それぞれ独立した事業体として業務を受任し、別々にご契約いただきます。登記は司法書士、税務は税理士、紛争は弁護士へ、それぞれ直接ご依頼いただく形をご案内します。当社は紹介料を受け取りません。",
@@ -74,20 +74,35 @@ describe("固定文言（指示書 v2.0 5-2・5-5）", () => {
     for (const key of KEYS) expect(pageSource(key), key).toContain("<WakeariRoleTable />");
   });
 
-  it("直答ブロックは5枚とも固定文言で、買取は「提携する買取業者を買主とする媒介」に統一。「当社が買主となる」は書かない", () => {
+  it("直答ブロックは5枚とも固定文言で、買取は「買取業者を買主とする媒介」に統一。「当社が買主となる」は書かない", () => {
     for (const key of KEYS) {
       const a = WAKEARI_ANSWER[key];
       expect(a.length, key).toBeGreaterThanOrEqual(80);
       expect(a.length, key).toBeLessThanOrEqual(160);
       expect(pageSource(key), key).toContain(`WAKEARI_ANSWER${key === "hub" ? ".hub" : key === "kyoyu" || key === "kyosho" ? `.${key}` : `["${key}"]`}`);
     }
-    expect(WAKEARI_ANSWER.hub).toContain("提携する買取業者を買主とする媒介");
+    expect(WAKEARI_ANSWER.hub).toContain("買取業者を買主とする媒介");
     for (const f of WAKEARI_FILES) {
       expect(read(f), f).not.toMatch(/当社(自身)?が買主/);
     }
   });
 
-  it("役割表は指示書 5-4 の7行で、買取は「提携する買取業者（当社は媒介）」", () => {
+  it("「提携」と書かない（2026-09-24 浦松決定：買取業者との提携は無い。U12 の司法書士・税理士と同じ扱い）", () => {
+    for (const f of [...WAKEARI_FILES, "src/app/[locale]/(realestate)/ryokin/page.tsx"]) {
+      // 「提携」を外した経緯を書くコメント行は除いて本文・文言だけを見る
+      const body = read(f)
+        .split("\n")
+        .filter((line) => !/^\s*(\/\/|\/?\*|\{\/\*)/.test(line))
+        .join("\n");
+      expect(body, f).not.toContain("提携");
+    }
+    const llms = read("src/app/llms.txt/route.ts");
+    const section = llms.slice(llms.indexOf("## 売りにくい土地・建物の出口相談"), llms.indexOf("## 四葉行政書士事務所が扱うこと"));
+    expect(section).not.toContain("提携");
+    expect(section).toContain("買取業者を買主とする媒介");
+  });
+
+  it("役割表は指示書 5-4 の7行で、買取は「買取業者（当社は媒介）」", () => {
     expect(WAKEARI_ROLE_ROWS).toHaveLength(7);
     expect(WAKEARI_ROLE_ROWS.map((r) => r.what)).toEqual([
       "売却の媒介、買い手探し、価格の根拠の説明",
@@ -98,7 +113,7 @@ describe("固定文言（指示書 v2.0 5-2・5-5）", () => {
       "共有物分割請求、借地非訟、地主・共有者との紛争",
       "43条2項の認定・許可、建築の可否、擁壁の安全性",
     ]);
-    expect(WAKEARI_ROLE_ROWS[1].who).toBe("提携する買取業者（当社は媒介）");
+    expect(WAKEARI_ROLE_ROWS[1].who).toBe("買取業者（当社は媒介）");
   });
 });
 
@@ -212,7 +227,7 @@ describe("収載・導線（指示書 6-3〜6-5・第7章）", () => {
     for (const key of KEYS) expect(llms, key).toContain(`https://luck428.com${WAKEARI_PAGES[key].path} — `);
     expect(llms).toContain("WAKEARI_LLMS_COLUMNS");
     expect(WAKEARI_LLMS_COLUMNS).toHaveLength(6);
-    expect(llms).toContain("提携する買取業者を買主とする媒介");
+    expect(llms).toContain("買取業者を買主とする媒介");
   });
 
   it("問い合わせフォームに wakeari（akiya の次）と、通知メールの表示名がある", () => {
