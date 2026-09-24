@@ -285,12 +285,19 @@ export const WAKEARI_LAW_REVISIONS: { law: string; lawNum: string; currentRevisi
 // ─────────────────────────────────────────────────────────────
 
 /**
- * 受け皿ごとの関連コラム slug。本番で 200 を実測したもの（2026-09-23）のみ。
- * jikka-kyoudai-kyouyuu-meigi だけは管理画面から作られた DB のみの記事で、リポジトリに seed が無い（wakeari-pages.test.ts の DB_ONLY）。
- * 表示は DB から取得した公開中のコラムに絞る（未公開・削除済みに 404 リンクを張らない）。
+ * 受け皿ごとの関連コラム slug。
+ * - 既存19本＝本番で 200 を実測したもの（2026-09-23）。jikka-kyoudai-kyouyuu-meigi だけは管理画面から作られた
+ *   DB のみの記事で、リポジトリに seed が無い（wakeari-pages.test.ts の DB_ONLY）。
+ * - Phase 2 の8本（2026-09-24・scripts/seed-realestate-columns-daily.ts の 77〜84）は管理画面から投入されるまで DB に無い。
+ *   表示は DB から取得した公開中のコラムに絞るため、投入前に 404 リンクが出ることはない。
  */
 export const WAKEARI_COLUMN_SLUGS: Record<WakeariPageKey, string[]> = {
-  hub: ["kaitori-chukai-tedori-hikaku", "satei-gaku-to-fuda-chigai"],
+  hub: [
+    "kaitori-chukai-tedori-hikaku",
+    "satei-gaku-to-fuda-chigai",
+    "rinchi-baikyaku-kaimashi-nanari-tochi-deguchi",
+    "gake-yoheki-tochi-baikyaku-bunkyo",
+  ],
   "saikenchiku-fuka": [
     "souzoku-saikenchiku-fuka-baikyaku",
     "souzoku-hatazao-mudouro-tochi-baikyaku-nagare",
@@ -298,23 +305,29 @@ export const WAKEARI_COLUMN_SLUGS: Record<WakeariPageKey, string[]> = {
     "souzoku-mitouki-tatemono-hyodai-touki-baikyaku",
     "souzoku-nagaya-renmune-kiribanashi-baikyaku",
     "souzoku-fudosan-kyoukai-kakutei-sokuryo-baikyaku",
+    "saikenchiku-fuka-43jo-2ko-nintei-kyoka-dare-ga",
+    "setback-42jo-2ko-doro-tochi-baikyaku-menseki",
+    "saikenchiku-fuka-kashite-mochitsuzukeru-reform-hani",
   ],
   kyoyu: [
     "souzoku-kyoyu-fudosan-uru-doui",
     "jikka-kyoudai-kyouyuu-meigi",
     "chuka-souzokunin-kyoyu-mochibun-baikyaku-jitsumu",
     "kanka-bunkatsu-fudosan-baikyaku-nagare",
+    "shozai-fumei-kyoyusha-mochibun-shutoku-joto",
   ],
   "shakuchi-sokochi": [
     "souzoku-shakuchi-jinushi-shodaku-baikyaku",
     "souzoku-shakuchiken-tatemono-baikyaku-shodaku",
     "souzoku-teiki-shakuchiken-tatemono-baikyaku",
     "souzoku-sokochi-jinushi-baikyaku",
+    "shakuchiken-sokochi-douji-baikyaku-touka-koukan",
   ],
   kyosho: [
     "yosekiritsu-hosei-tochine",
     "souzoku-tsukigime-coin-parking-tochi-baikyaku",
     "souzoku-chintai-heiyou-jutaku-uru-kasu",
+    "kyosho-tochi-15tsubo-uru-ikasu-bunkyo",
   ],
 };
 

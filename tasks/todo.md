@@ -644,13 +644,27 @@ sitemap の `locales` もページの `availableLocales` と同時に4言語へ�
 - [x] 内部リンク：/souzoku（3つの出口の節末＋FAQ 2問の回答直下）／akiya／koishikawa／toushi／ryokin／サービスメガメニュー・フッター／既存コラム19本→受け皿（コード側の対応表・DB本文は不変）
 - [x] 番人テスト（wakeari-pages.test.ts・25件）＋ labor-contact-order.test.ts の期待値更新
 - [x] tsc 0件／eslint エラー0／vitest 1,376件通過／next build 通過（使い捨てのローカル Prisma Postgres・5ルート SSG）／next start への到達性チェック 5枚 ALL OK（200・canonical・noindex なし・JSON-LD parse・FAQ 文言一致・sitemap 5URL・llms.txt・コラムの受け皿ブロック・各ページのリンク・問い合わせ category）
-- [x] PR（draft）#421 https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/pull/421 。マージ・デプロイ・GSC は浦松
+- [x] PR（draft）#421 https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/pull/421 。マージ・デプロイ・GSC は浦松 → **2026-09-24 07:40 JST 浦松がマージ**（squash d2d2f7b。直前に別セッションが main（#420）を取り込み、共有ファイルの競合を解消）。台帳＝効果待ち・再着手可能日 2026-10-08。本番の到達性チェックと GSC 登録は浦松（デプロイ後）
 
 ### レビュー記録（2026-09-23）
 - 実装方式：既存の RealestateServicePage シェル（koishikawa と同じ ja のみの作り）。新しい仕組みは作らず、SpeakableJsonLd と shell に任意 prop を足しただけ（既存出力は不変）。
 - 指示書 v2.0 を途中で受領し、固定文言（事業者主語の一文・分離受任の一文・直答ブロック・留保1行・チェックリストの留保文）と FAQ 設問・役割表・チェックリストの仕様を差し替えた。「当社が買主となる」の文言は削除。
 - 指示書と食い違った点は実査表（docs/wakeari/00_jissa.md）と PR 本文に記載：GeoCircle に @id が無い／Offer は価格なし／固定ページの lastmod は実更新日のみ／md 原稿は作らず TSX を正本に。
 - 未検証：改正法の法律番号・施行政令番号・告示原文・条ごとの最終改正日・「提携する買取業者」の書面の有無（U12 と同じ論点）・Rich Results Test。
+
+## 2026-09-24 難あり土地 出口相談コーナー Phase 2 — 新規コラム8本（ja・zh-tw）— claude/pensive-babbage-x4to85（#421 マージ後に main から作り直し）
+
+企画書 v1.0 §3-3 の8本。指示書 v2.0 §11（Phase 2＝sitemap 再取得→第7条の型で md→seed dry-run→--emit-ts→PR。投入・GSC は浦松）。
+
+- [x] 着手前確認：本番 sitemap（449URL）に 狭小地・隣地売却・43条2項の申請主体・セットバック・がけ擁壁・所在不明共有者・同時売却等価交換・再建築不可のリフォーム範囲 の記事なし
+- [x] 法令の一次確認（e-Gov XML／API v2）：建築基準法2条13〜15号・6条1項2項・6条の4・19条4項・44条1項／施行令2条・138条／施行規則10条の3（現行版 2026-04-01・令和7年国交省令80号）／民法25・30・209・251・252・262条の2・262条の3・264条の2・264条の3・572・612条／不動産登記法41条・76条の2／借地借家法3・10・13・19・38条／宅建業法32・34・34条の2・35条1項2号・46・47条の2／盛土規制法（昭和36年法律191号・令和4年法律55号 2023-05-26施行）／2025-04-01 施行の建築基準法改正＝**令和4年法律第69号（API v2 で確定＝Phase 1 の未検証事項を解消）**／東京都建築安全条例3・3条の2・6条（例規集 g101RG00001306）／文京区：建築審査会・許可認定申請書・盛土規制法（区全域 2024-07-31 指定）
+- [x] 原稿 ja 8本：scripts/realestate-columns/77〜84（各 5,600〜6,800字。結論→疑問文H2→表→誰に相談→FAQ4→出典→※3行→署名）
+- [x] ARTICLES に8エントリ（publishedAt 2026-09-24・category「売りにくい土地・建物」・hubLinks＝/wakeari 配下）
+- [x] src/lib/wakeari.ts の対応表に8 slug（投入前は DB に無いので表示されない＝404 リンクなし）
+- [x] zh-tw 翻訳 8本（frontmatter・絶対URL・四葉不動產株式會社。4サブエージェントで並行作成→構造一致を機械確認・調查士に統一）
+- [x] npx tsx scripts/seed-realestate-columns-daily.ts → NG 0（新規8本に注記なし。既存2記事の WARN 6件のみ）→ --emit-ts（73本）
+- [x] tsc 0／eslint 0／vitest 94ファイル・1,389件（wakeari-pages.test.ts の対応表 19→27）
+- [x] draft PR #423 https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/pull/423 。マージ・管理画面投入（/admin/columns/seed-realestate-daily）・GSC は浦松
 
 ## 2026-09-24 グループホーム向け物件・大家募集ページ（/group-home/ooya）Phase 1
 

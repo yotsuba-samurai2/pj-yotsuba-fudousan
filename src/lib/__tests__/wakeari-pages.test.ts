@@ -244,10 +244,11 @@ describe("収載・導線（指示書 6-3〜6-5・第7章）", () => {
     for (const f of WAKEARI_FILES) expect(read(f), f).not.toMatch(/href="https:\/\/luck428\.com/);
   });
 
-  it("既存コラム → 受け皿の対応表は19本で、slug はリポジトリの seed 生成物に実在する", () => {
+  it("コラム → 受け皿の対応表は27本（既存19＋Phase 2 の8）で、slug はリポジトリの seed 生成物に実在する", () => {
     const slugs = Object.values(WAKEARI_COLUMN_SLUGS).flat();
-    expect(slugs).toHaveLength(19);
-    expect(new Set(slugs).size).toBe(19);
+    // 2026-09-23：既存19本。2026-09-24：Phase 2 の8本（seed-realestate-columns-daily.ts の 77〜84）を追加。
+    expect(slugs).toHaveLength(27);
+    expect(new Set(slugs).size).toBe(27);
     const dataDir = path.join(ROOT, "src/lib/data");
     const seeds = fs
       .readdirSync(dataDir)
@@ -263,6 +264,8 @@ describe("収載・導線（指示書 6-3〜6-5・第7章）", () => {
     }
     expect(WAKEARI_HUB_BY_COLUMN_SLUG["souzoku-kyoyu-fudosan-uru-doui"].path).toBe("/wakeari/kyoyu");
     expect(WAKEARI_HUB_BY_COLUMN_SLUG["kaitori-chukai-tedori-hikaku"].path).toBe("/wakeari");
+    expect(WAKEARI_HUB_BY_COLUMN_SLUG["saikenchiku-fuka-43jo-2ko-nintei-kyoka-dare-ga"].path).toBe("/wakeari/saikenchiku-fuka");
+    expect(WAKEARI_HUB_BY_COLUMN_SLUG["kyosho-tochi-15tsubo-uru-ikasu-bunkyo"].path).toBe("/wakeari/kyosho");
     const detail = read("src/app/[locale]/(realestate)/column/[slug]/ColumnDetailContent.tsx");
     expect(detail).toContain("<WakeariColumnHubLink slug={wakeariHubSlug} />");
     expect(read("src/app/[locale]/(realestate)/column/[slug]/page.tsx")).toContain('wakeariHubSlug={locale === "ja" ? slug : undefined}');
