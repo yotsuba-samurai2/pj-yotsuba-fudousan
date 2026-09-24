@@ -10,7 +10,7 @@ import { publicSurveySummarySchema, type PublicSurveySummary } from "@/lib/renta
 
 const LOCALES: LangCode[] = ["ja", "en", "zh-tw", "zh"];
 const shown: PublicSurveySummary = {
-  state: "shown", conditionsKey: "bunkyo-rent-pet-v1", observedFrom: "2026-09-22T00:00:00.000Z", observedTo: "2026-09-23T00:00:00.000Z",
+  state: "shown", conditionsKey: "bunkyo-rent-pet-v2", observedFrom: "2026-09-22T00:00:00.000Z", observedTo: "2026-09-23T00:00:00.000Z",
   finalizedAt: "2026-09-23T06:00:00.000Z", sourceKind: "single", attribution: null, x: 12, breakdown: { y: 2, z: 10 },
 };
 const render = (summary: PublicSurveySummary, locale: LangCode = "ja", cta?: string) =>

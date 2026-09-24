@@ -27,11 +27,13 @@ const SCOPES: Record<string, { current: SurveyScope }> = {
   "bunkyo-rent-pet": {
     current: {
       scopeId: "bunkyo-rent-pet",
-      version: 1,
+      // 版2（2026-09-25）：浦松の2026-09-24指示でATBBを週次検索から除外。REINS・ITANJI・いい生活の3媒体。
+      // 版1（ATBBを含む4媒体）の確定とは比較しない。
+      version: 2,
       region: "文京区",
-      providers: ["reins", "atbb", "itandi", "eslife"],
+      providers: ["reins", "itandi", "eslife"],
       maxWindowDays: 7,
-      conditionsKey: "bunkyo-rent-pet-v1",
+      conditionsKey: "bunkyo-rent-pet-v2",
     },
   },
 };

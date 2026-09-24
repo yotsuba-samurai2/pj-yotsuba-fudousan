@@ -45,9 +45,9 @@ describe("学区データを変えない（T01）", () => {
     if (!plan.ok) throw new Error(plan.error);
     await insertFinalization(scope, plan.data, 0);
     for (const fn of [batches.findMany, finals.findFirst, finals.findMany]) for (const [args] of fn.mock.calls)
-      expect((args as { where: Record<string, unknown> }).where).toMatchObject({ scopeId: "bunkyo-rent-pet", scopeVersion: 1 });
-    expect(whereOf(batches.create).data).toMatchObject({ scopeId: "bunkyo-rent-pet", scopeVersion: 1, provider: "reins" });
-    expect(whereOf(finals.create).data).toMatchObject({ scopeId: "bunkyo-rent-pet", scopeVersion: 1, sequence: 1 });
+      expect((args as { where: Record<string, unknown> }).where).toMatchObject({ scopeId: "bunkyo-rent-pet", scopeVersion: 2 });
+    expect(whereOf(batches.create).data).toMatchObject({ scopeId: "bunkyo-rent-pet", scopeVersion: 2, provider: "reins" });
+    expect(whereOf(finals.create).data).toMatchObject({ scopeId: "bunkyo-rent-pet", scopeVersion: 2, sequence: 1 });
   });
 
   it("バッチ一覧は観測行（payload）を返さない", async () => {
@@ -56,7 +56,7 @@ describe("学区データを変えない（T01）", () => {
   });
 
   it("scope が一致しないバッチは保存しない", async () => {
-    await expect(insertBatch(scope, batch("reins", undefined, { scopeVersion: 2 }))).rejects.toThrow();
+    await expect(insertBatch(scope, batch("reins", undefined, { scopeVersion: 1 }))).rejects.toThrow();
     expect(batches.create).not.toHaveBeenCalled();
   });
 
@@ -86,7 +86,7 @@ describe("同時更新の検出（T03）", () => {
 describe("テーブル未作成（本番はコード先行・マイグレーションは承認後）", () => {
   it("公開面の読取は未確定として扱う", async () => {
     finals.findFirst.mockRejectedValueOnce(known("P2021"));
-    await expect(readLatestFinalization("bunkyo-rent-pet", 1)).resolves.toBeNull();
+    await expect(readLatestFinalization("bunkyo-rent-pet", 2)).resolves.toBeNull();
   });
 
   it("管理APIの読取・書込は例外にする（黙って成功させない）", async () => {
@@ -98,7 +98,7 @@ describe("テーブル未作成（本番はコード先行・マイグレーシ�
 
   it("公開面の読取は未知の scope・現行でない版では DB を読まない", async () => {
     await expect(readLatestFinalization("bunkyo-rent-175000-area-48", 1)).resolves.toBeNull();
-    await expect(readLatestFinalization("bunkyo-rent-pet", 2)).resolves.toBeNull();
+    await expect(readLatestFinalization("bunkyo-rent-pet", 1)).resolves.toBeNull();
     expect(finals.findFirst).not.toHaveBeenCalled();
   });
 });

@@ -10,13 +10,13 @@ const r = (sourceId: string, petOver: Parameters<typeof pet>[0], over: Parameter
 
 describe("summarizeBatch（対象の数え方・第6章）", () => {
   it("「ペット相談」だけの記載（頭数未確認）は対象にせず、対象外として数える", () => {
-    const s = summarizeBatch(batch("atbb", [r("a", { multi: "unconfirmed-count", largeDog: "unconfirmed", limits: { cats: null, dogs: null, total: null }, petQuote: "ペット相談" })]));
+    const s = summarizeBatch(batch("eslife", [r("a", { multi: "unconfirmed-count", largeDog: "unconfirmed", limits: { cats: null, dogs: null, total: null }, petQuote: "ペット相談" })]));
     expect(s.counts).toMatchObject({ target: 0, unconfirmedCount: 1 });
     expect(s.targets).toEqual([]);
   });
 
   it("猫2頭可を猫3頭以上に含めない。頭数の書かれていない多頭可も含めない", () => {
-    const s = summarizeBatch(batch("atbb", [
+    const s = summarizeBatch(batch("eslife", [
       r("two", { multi: "allowed", species: "cat", limits: { cats: 2, dogs: null, total: 2 } }),
       r("three", { multi: "allowed", species: "cat", limits: { cats: 3, dogs: null, total: 3 } }),
       r("unknown", { multi: "allowed", species: "cat", limits: { cats: null, dogs: null, total: null }, petQuote: "多頭飼育可" }),
@@ -60,24 +60,23 @@ describe("pickFinalizationBatches（確定に使うバッチ）", () => {
     const p = pickFinalizationBatches([
       meta("reins-old", "reins", { createdAt: "2026-09-23T07:00:00Z" }),
       meta("reins-new", "reins"),
-      meta("atbb-failed", "atbb", { status: "failed", createdAt: "2026-09-30T08:00:00Z" }),
-      meta("atbb-ok", "atbb"),
-      meta("itandi", "itandi"),
+      meta("itandi-failed", "itandi", { status: "failed", createdAt: "2026-09-30T08:00:00Z" }),
+      meta("itandi-ok", "itandi"),
       meta("eslife", "eslife"),
     ], scope);
-    expect(p.batchIds.sort()).toEqual(["atbb-ok", "eslife", "itandi", "reins-new"]);
+    expect(p.batchIds.sort()).toEqual(["eslife", "itandi-ok", "reins-new"]);
     expect(p).toMatchObject({ missing: [], withinWindow: true });
   });
 
   it("足りない媒体を示す（REINS を行えなかった週は確定できない）", () => {
-    const p = pickFinalizationBatches([meta("atbb", "atbb"), meta("itandi", "itandi"), meta("eslife", "eslife"), meta("reins-inc", "reins", { status: "incomplete" })], scope);
+    const p = pickFinalizationBatches([meta("itandi", "itandi"), meta("eslife", "eslife"), meta("reins-inc", "reins", { status: "incomplete" })], scope);
     expect(p.missing).toEqual(["reins"]);
   });
 
   it("観測期間の幅が7日を超えたら、確定できない組み合わせとして示す", () => {
     const p = pickFinalizationBatches([
       meta("reins", "reins", { observedFrom: "2026-09-21T00:00:00Z", observedTo: "2026-09-21T06:00:00Z" }),
-      meta("atbb", "atbb"), meta("itandi", "itandi"), meta("eslife", "eslife"),
+      meta("itandi", "itandi"), meta("eslife", "eslife"),
     ], scope);
     expect(p.withinWindow).toBe(false);
     expect(p.windowDays).toBeGreaterThan(7);

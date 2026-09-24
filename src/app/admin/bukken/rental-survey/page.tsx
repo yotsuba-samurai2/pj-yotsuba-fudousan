@@ -1,7 +1,7 @@
 "use client";
 // ペット調査の取込画面（ペット横断 指示書 版2.0 第4〜9章・2026-09-24 浦松指示「ペット調査はやってください」）。
 // 学区の募集一覧（/admin/bukken/school-rentals）とは別の保存先・API で、学区のデータには触れない。
-// 流れ：現状の表示 → バッチ（1媒体・1回の取得）の投入（登録前チェック→保存）→ 4媒体そろったら確定（確定前チェック→確認→確定）。
+// 流れ：現状の表示 → バッチ（1媒体・1回の取得）の投入（登録前チェック→保存）→ 3媒体そろったら確定（確定前チェック→確認→確定）。
 // ペット条件は媒体の原文どおりに分類されたものを、浦松が根拠の原文で確認してから確定する（AI の判定だけで「可」を確定しない）。
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useState } from "react";
@@ -108,7 +108,7 @@ export default function RentalSurveyAdmin() {
         <p>対象は、媒体の原文で「2頭以上の飼育 可・相談可」または「大型犬 可・相談可」を確認できた住戸です（和集合・1住戸1件）。「ペット相談」だけの記載は対象にしません。学区の募集一覧とは別の保存先で、学区のデータには触れません。</p>
         <p>ペット条件は原文どおりに分類し、確定の前に根拠の原文を確認してください。AI の判定だけで「可」を確定しません。</p>
         <p>確定した件数は、媒体名を出さない当社の独自集計として /pet-housing に表示されます（公開フラグが有効な場合）。この画面から個別物件を自動公開しません。住戸ごとに広告可・募集状況・学区・ファミリー向け適合を確認できた物件だけを、別の確認済み一覧から掲載します。</p>
-        <p>確定には、4媒体（REINS・ATBB・ITANJI・いい生活）の完全な取得（verified）が観測期間7日以内にそろう必要があります。REINS は浦松が同席したときだけ操作します。</p>
+        <p>確定には、3媒体（REINS・ITANJI・いい生活）の完全な取得（verified）が観測期間7日以内にそろう必要があります（版2・2026-09-25。ATBBは週次検索から除外）。REINS は浦松が同席したときだけ操作します。</p>
       </div>
 
       {error && <p role="alert" className="text-red-700">{error}</p>}
@@ -173,7 +173,7 @@ export default function RentalSurveyAdmin() {
       </section>
 
       <section className="space-y-3">
-        <h2 className="text-xl font-bold">確定（4媒体がそろった週）</h2>
+        <h2 className="text-xl font-bold">確定（3媒体がそろった週）</h2>
         {status && pick && <>
           <ul className="space-y-1 text-sm">{SCOPE.providers.map(p => {
             const options = verifiedByProvider(p);

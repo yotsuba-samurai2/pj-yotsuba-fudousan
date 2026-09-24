@@ -52,7 +52,7 @@ export type PublicRentalSummary = RentalSummary & { id: string; schoolSlug: stri
 export function nextWeeklyReviewAt(checkedAt: string) {
   const checked = new Date(checkedAt);
   const next = new Date(checked);
-  next.setUTCHours(3, 0, 0, 0); // Wednesday 12:00 in Asia/Tokyo.
+  next.setUTCHours(4, 0, 0, 0); // Wednesday 13:00 in Asia/Tokyo（2026-09-25 浦松指示で12時→13時）.
   next.setUTCDate(next.getUTCDate() + (3 - next.getUTCDay() + 7) % 7);
   if (next.getTime() <= checked.getTime()) next.setUTCDate(next.getUTCDate() + 7);
   return next.toISOString();
@@ -64,7 +64,20 @@ export function normalized(value: string) {
 export function unitNumber(value: string) {
   return normalized(value).replace(/号室$/, "").replace(/^0+(?=\d)/, "");
 }
-function buildingKey(s: Pick<RentalSummary, "building" | "unit">) {
+/**
+ * 号室欄が空で、建物名の末尾に空白区切りで部屋番号が付いている取得元（いい生活等）がある。
+ * 2026-09-25：この形の行が号室欄ありのREINS行と別物件扱いになり、同一住戸が二重掲載された（13件）。
+ * 号室欄が空のときだけ、建物名末尾の部屋番号を号室として扱う。
+ */
+export function splitUnit(s: Pick<RentalSummary, "building" | "unit">): { building: string; unit: string; derived: boolean } {
+  if (s.unit.trim()) return { building: s.building, unit: s.unit, derived: false };
+  const name = s.building.normalize("NFKC").trim();
+  const room = name.match(/\s+(\d{2,5})(?:号室)?$/);
+  if (!room) return { building: s.building, unit: s.unit, derived: false };
+  return { building: name.slice(0, room.index).trim(), unit: room[1], derived: true };
+}
+function buildingKey(input: Pick<RentalSummary, "building" | "unit">) {
+  const s = splitUnit(input);
   let name = s.building.normalize("NFKC").trim();
   // Remove only an explicitly separated room suffix matching the separate unit field.
   const room = name.match(/\s+(\d+)(?:号室)?$/);
@@ -78,11 +91,13 @@ export function addressKey(value: string) {
 }
 export function unitKey(s: Pick<RentalSummary, "building" | "unit" | "address">) {
   // Missing unit is not evidence that two apartments are identical.
-  if (!s.unit) return null;
-  return `${addressKey(s.address)}|${buildingKey(s)}|${unitNumber(s.unit)}`;
+  const unit = splitUnit(s).unit;
+  if (!unit) return null;
+  return `${addressKey(s.address)}|${buildingKey(s)}|${unitNumber(unit)}`;
 }
 export function sameUnit(a: Pick<RentalSummary, "building" | "unit" | "address">, b: Pick<RentalSummary, "building" | "unit" | "address">) {
-  if (!a.unit || !b.unit || unitNumber(a.unit) !== unitNumber(b.unit)) return false;
+  const au = splitUnit(a).unit, bu = splitUnit(b).unit;
+  if (!au || !bu || unitNumber(au) !== unitNumber(bu)) return false;
   const aa = addressKey(a.address), bb = addressKey(b.address);
   return buildingKey(a) === buildingKey(b) && (aa === bb || aa.startsWith(`${bb}-`) || bb.startsWith(`${aa}-`));
 }
@@ -112,12 +127,14 @@ export function compileRentalSummaries(feeds: RentalFeed[], existing: Pick<Renta
     // A recent explicit withdrawal/application on any source overrides another source's active row.
     if (!reason && withdrawals.some(other => sameUnit(row.summary, other.row.summary))) reason = "別サイトで募集終了・申込あり";
     if (!reason && existing.some(p => sameUnit(row.summary, p))) reason = "既存物件に登録済み";
-    if (!reason && accepted.some(p => sameUnit(row.summary, p.row.summary))) reason = "同一号室の重複";
+    if (!reason && accepted.some(p => sameUnit(row.summary, p.row.summary) && !bothDerivedSameProvider(item, p))) reason = "同一号室の重複";
     if (reason) excluded.push({ provider: feed.provider, sourceId: row.sourceId, reason });
     else accepted.push(item);
   }
   const summaries: PublicRentalSummary[] = accepted.map(({ feed, row }) => {
-    const s = summarySchema.parse(row.summary);
+    const parsed = summarySchema.parse(row.summary);
+    const split = splitUnit(parsed);
+    const s = fixLayoutAsBuilding({ ...parsed, building: split.derived ? split.building : parsed.building, unit: split.unit });
     const district = lookupDistrictByAddress(s.address);
     // Internal source IDs and AD never enter the public shape.
     return { ...s, id: `rental-${stableId(`${feed.provider}:${row.sourceId}`)}`, schoolSlug: district.status === "determined" ? district.school.slug : null,
@@ -130,8 +147,62 @@ export function compileRentalSummaries(feeds: RentalFeed[], existing: Pick<Renta
     && accepted.some(item => item.row === row || sameUnit(item.row.summary, row.summary)));
   const adCandidates = adEvidence.filter((item, index) => !adEvidence.slice(0, index).some(other => sameUnit(item.row.summary, other.row.summary)))
     .map(({ feed, row }) => ({ provider: feed.provider, sourceId: row.sourceId, building: row.summary.building, unit: row.summary.unit, adStatus: row.adStatus, adQuote: row.adQuote }));
-  return { summaries, excluded, adCandidates };
+  return { summaries, excluded, adCandidates, market: compileRentalMarket(feeds, now) };
 }
+
+/** 建物名欄に間取りだけ（例「4Ｋ」）が入り、間取りが空の保存済み行を公開前に直す（2026-09-25・貸家1件）。 */
+export function fixLayoutAsBuilding<T extends Pick<RentalSummary, "building" | "layout" | "address" | "buildingType">>(s: T): T {
+  const name = s.building.normalize("NFKC").trim();
+  if (!/^\d+S?(?:LDK|DK|LK|K|R)$/i.test(name) || (s.layout && s.layout !== "なし")) return s;
+  const town = s.address.normalize("NFKC").replace(/^東京都文京区/, "").match(/^\D+\d+丁目/)?.[0] ?? "";
+  const townJa = town.replace(/\d/g, d => String.fromCharCode(d.charCodeAt(0) + 0xFEE0));
+  return { ...s, building: `${townJa} ${s.buildingType || "貸家"}`.trim(), layout: name.toUpperCase() };
+}
+
+/**
+ * 保存前の正規化（再発防止・2026-09-25）。号室欄が空で建物名末尾に部屋番号がある行は、建物名と号室に分けて保存する。
+ * 取得元ごとの書き方の違いで同一住戸を別物件と数えないため。分けられない号室なしの行は件数を返し、登録前チェックで示す。
+ */
+export function normalizeFeedUnits(feed: RentalFeed): { feed: RentalFeed; splitCount: number; unitMissing: number } {
+  let splitCount = 0, unitMissing = 0;
+  const records = feed.records.map(r => {
+    const split = splitUnit(r.summary);
+    if (split.derived) { splitCount++; return { ...r, summary: { ...r.summary, building: split.building, unit: split.unit } }; }
+    if (!r.summary.unit.trim() && !/貸家|戸建|一戸建/.test(r.summary.building + r.summary.buildingType)) unitMissing++;
+    return r;
+  });
+  return { feed: { ...feed, records }, splitCount, unitMissing };
+}
+
+/** 同じ取得元の別登録で、どちらも号室が建物名からの推定なら、同一住戸と断定しない（号室不明を同一の証拠にしない）。 */
+function bothDerivedSameProvider(a: { feed: RentalFeed; row: FeedRecord }, b: { feed: RentalFeed; row: FeedRecord }) {
+  return a.feed.provider === b.feed.provider && a.row.sourceId !== b.row.sourceId
+    && splitUnit(a.row.summary).derived && splitUnit(b.row.summary).derived;
+}
+
+/**
+ * 業者間データベース上の募集規模（広告可否・学区を問わない）。2026-09-25 浦松指示。
+ * 文京区・賃料17万5,000円以上・48㎡以上・募集中・申込なしの住戸を、取得元をまたいで同一住戸を1件として数える。
+ * 公開一覧に出すのは広告可の一部だけであることを利用者に示すための分母。個々の物件情報は出さない。
+ */
+export function compileRentalMarket(feeds: RentalFeed[], now = new Date()) {
+  const rows = feeds.filter(f => Date.parse(f.checkedAt) <= now.getTime())
+    .flatMap(feed => feed.records.map(row => ({ feed, row })));
+  const withdrawn = rows.filter(({ row }) => row.availability === "closed" || row.application === "present");
+  const counted: { feed: RentalFeed; row: FeedRecord }[] = [];
+  for (const item of rows) {
+    const { feed, row } = item, s = row.summary;
+    if (row.availability !== "active" || row.application === "present") continue;
+    if (feed.provider !== "reins" && row.application !== "none") continue;
+    if (!s.address.includes("文京区") || s.rentYen < SCHOOL_RENTAL_MIN_RENT_YEN || s.areaSqm < SCHOOL_RENTAL_MIN_AREA_SQM) continue;
+    if (withdrawn.some(w => sameUnit(s, w.row.summary))) continue;
+    if (counted.some(p => sameUnit(s, p.row.summary) && !bothDerivedSameProvider(item, p))) continue;
+    counted.push(item);
+  }
+  const checked = feeds.map(f => f.checkedAt).sort((a, b) => Date.parse(a) - Date.parse(b));
+  return { total: counted.length, providers: [...new Set(feeds.map(f => f.provider))], checkedAt: checked.at(-1) ?? null };
+}
+export type RentalMarket = ReturnType<typeof compileRentalMarket>;
 function stableId(value: string) {
   let hash = 2166136261;
   for (const char of value) hash = Math.imul(hash ^ char.charCodeAt(0), 16777619);
