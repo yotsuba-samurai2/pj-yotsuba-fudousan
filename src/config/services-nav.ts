@@ -10,7 +10,7 @@
 // と同じ考え方（`locales` 未指定＝ja/en/zh-tw/zh 全4ロケール実在）。新設ピラーの多くは ja 先行公開
 // （availableLocales:["ja"]）のため、他ロケールでは locales で絞ってリンクを出さない。
 import type { LangCode } from "@/config/languages";
-import { PET_HOUSING_NAV_LABEL, PET_HOUSING_PATH, PET_HOUSING_PUBLISHED } from "@/lib/pet-housing";
+import { PET_HOUSING_NAV_DESCRIPTION, PET_HOUSING_NAV_LABEL, PET_HOUSING_PATH, PET_HOUSING_PUBLISHED } from "@/lib/pet-housing";
 
 /** ja は必須（フォールバック先）・他ロケールは実在する言語版のみ埋める */
 export type NavLabel = Partial<Record<LangCode, string>> & { ja: string };
@@ -116,7 +116,23 @@ export const SERVICE_NAV_CATEGORIES: ServiceNavCategory[] = [
   },
 ];
 
-const PET_HOUSING_NAV_LINK: ServiceNavLink = { href: PET_HOUSING_PATH, label: { ja: PET_HOUSING_NAV_LABEL }, locales: ["ja"] };
+/** 4カテゴリの外に置くサービスの入口（見出し＋説明の1段）。 */
+export type ServiceNavFeature = ServiceNavLink & { description: NavLabel };
+
+const PET_HOUSING_NAV_FEATURE: ServiceNavFeature = {
+  href: PET_HOUSING_PATH,
+  label: { ja: PET_HOUSING_NAV_LABEL },
+  description: { ja: PET_HOUSING_NAV_DESCRIPTION },
+  locales: ["ja"],
+};
+
+/**
+ * メガメニュー・スマホのアコーディオンで、4カテゴリの直下に1段で出すサービス（補助リンクの列より目立つ位置）。
+ * 2026-09-24：多頭飼い・大型犬の住まい探し（/pet-housing・ja のみ）。4カテゴリ（設計書で固定）とトップの3本柱
+ * （ペット横断 D-3）には入れない。補助リンクの列に置いていたが「ペットと暮らすがサービスにでてきません」（浦松指摘）
+ * のため、ここへ移した。公開フラグ off の間はページが404のため出さない。
+ */
+export const SERVICE_NAV_FEATURES: ServiceNavFeature[] = [...(PET_HOUSING_PUBLISHED ? [PET_HOUSING_NAV_FEATURE] : [])];
 
 /** カテゴリ外の補助導線（メガメニュー下部・フッター会社情報列で使用） */
 export const SERVICE_NAV_UTILITY_LINKS: ServiceNavLink[] = [
@@ -130,7 +146,5 @@ export const SERVICE_NAV_UTILITY_LINKS: ServiceNavLink[] = [
   // 2026-09-05 月次点検（INIT-06/NEW-SALE-1）：孤立していた /nagare（売却・賃貸の実務の流れ・ja先行）を転換側リンク群へ。
   // locales は sitemap.ts の /nagare（["ja"]）と一致。souzoku カテゴリには入れない（/souzoku/nagare と「流れ」が二重になる）。
   { href: "/nagare", label: { ja: "ご依頼から引渡しまでの流れ" }, locales: ["ja"] },
-  // 2026-09-24：多頭飼い・大型犬の住まい探し（ペット横断 指示書 版2.0 Phase 3・D-3＝メニューと /services に置き、4カテゴリには入れない）。
-  // ja のみ（sitemap.ts と一致）。公開フラグ off の間はページが404のため出さない。
-  ...(PET_HOUSING_PUBLISHED ? [PET_HOUSING_NAV_LINK] : []),
+  // /pet-housing はここではなく SERVICE_NAV_FEATURES（4カテゴリの直下の1段）に置く（2026-09-24 移設）。
 ];

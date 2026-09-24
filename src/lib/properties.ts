@@ -94,7 +94,7 @@ export const getAllPublishedPropertiesAllLocales = cache(
 
 /**
  * 詳細ページ用。公開判定（isPubliclyVisible）を満たす物件だけを返す。
- * closed（募集終了）・draft・確認期限超過・未知のslugはすべて undefined＝ページ側 notFound() で
+ * closed（募集終了）・draft・未知のslugはすべて undefined＝ページ側 notFound() で
  * 実HTTP 404（本番で未知slugが通常UA・bingbotとも404になることを2026-09-20に実測）。
  * 410は proxy で毎リクエストDBを引く必要があるため採用しない。DBの closed 履歴は管理側に残る。
  */

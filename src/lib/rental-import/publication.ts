@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any -- legacy v1.1 evidence is read only for migration. */
 import type { PropertyInput } from "@/lib/property-shared";
-import { isRentalExpired } from "@/lib/property-shared";
 import { isOwnedImage } from "./media";
 import { rentalIdentity, rentalImportSchema, validateRentalImport } from "./validation";
 /** Also enforce the import checks when the normal admin screen publishes a saved draft. */
@@ -19,7 +18,6 @@ export function rentalPublicationError(p: PropertyInput, now = new Date(), exist
     if (!source.success || p.dealType !== "rental" || p.slug !== `rent-${rentalIdentity(source.data)}`) return "自動取込物件のslugを確認記録の識別キーと一致させてください";
   }
   if (p.status !== "published" || p.dealType !== "rental") return null;
-  if (isRentalExpired(p, now)) return "賃貸物件の募集状況を再確認してください（公開期限切れ）";
   if (!proof || typeof proof !== "object") return "賃貸物件の広告可・募集状況の確認記録がありません";
   const legacy = (proof as Record<string, any>).migration?.legacyReins ?? (proof as Record<string, any>).reins;
   const result = validateRentalImport({ ...proof, ...(legacy ? { reins: legacy } : {}), conflicts: [], property: p }, now, "published", !!oldProof);

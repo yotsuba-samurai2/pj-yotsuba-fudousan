@@ -22,9 +22,16 @@ export const PET_HOUSING_LAST_UPDATED_JA = "2026年9月24日";
 /** 法令・公的資料の参照日（e-Gov 法令API と国土交通省のガイドラインを取得した日） */
 export const PET_HOUSING_REFERENCE_DATE_JA = "2026年9月24日";
 
-/** メニュー（SERVICE_NAV_UTILITY_LINKS）の表示名。日本語のみ */
-export const PET_HOUSING_NAV_LABEL = "多頭飼い・大型犬の住まい探し";
+/**
+ * 「サービス」メニューと /services の案内カードの見出し。日本語のみ。
+ * 2026-09-24 浦松指摘「ペットと暮らすがサービスにでてきません」：旧名「多頭飼い・大型犬の住まい探し」は
+ * 「ペット」の語が無く、補助リンクの小さな列にあったため見つからなかった。見出しに「ペット」を入れ、対象は説明文で示す。
+ */
+export const PET_HOUSING_NAV_LABEL = "ペットと暮らす住まい探し";
 
-/** /services の4領域カードの下に置く1行（指示書 第15章の短文を基本に、実対応に合わせた） */
+/** メニューで見出しの横に添える説明（対象を多頭飼い・大型犬に限ることを示す）。日本語のみ */
+export const PET_HOUSING_NAV_DESCRIPTION = "多頭飼い・大型犬の賃貸・購入と、大家さんの受入れ相談";
+
+/** /services の4領域カードの下の案内カードの説明文（指示書 第15章の短文を基本に、実対応に合わせた） */
 export const PET_HOUSING_SERVICES_LINE =
   "猫3匹以上の多頭飼育や大型犬と暮らせる住まい探しをサポートします。大家さんへの受入れのご相談も行います。";

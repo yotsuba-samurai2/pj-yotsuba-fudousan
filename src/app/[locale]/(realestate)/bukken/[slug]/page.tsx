@@ -1,4 +1,4 @@
-// Availability expiry must be evaluated on each request, even if the worker is offline.
+// Property data changes independently of deploys, so resolve it on each request.
 export const dynamic = "force-dynamic";
 
 import type { Metadata } from "next";
@@ -40,7 +40,7 @@ import type { LangCode } from "@/config/languages";
  * 物件詳細（/bukken/[slug]）。
  * - 公開判定（isPubliclyVisible）を満たす物件：必要表示事項（規約別表のインターネット広告列）を
  *   H2区分つきの概要表で表示し、広告主ブロックを自動表示する。
- * - closed（募集終了）・draft・確認期限超過・未知のslug・非公開ロケール：notFound()＝実HTTP 404。
+ * - closed（募集終了）・draft・未知のslug・非公開ロケール：notFound()＝実HTTP 404。
  *   「募集終了」の200ページは返さない（価格・Offer・画像を公開面に残さない）。
  */
 

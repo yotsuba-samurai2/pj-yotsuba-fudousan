@@ -4,7 +4,6 @@ import { publicationEventStore } from "@/lib/db/publication-events";
 import { submitToIndexNow } from "@/lib/indexnow";
 import {
   recordPublicationChange,
-  recordExpiredPublications,
   processPendingNotifications,
 } from "@/lib/property-publication";
 
@@ -26,15 +25,6 @@ export async function recordPropertyPublicationChange(
     await recordPublicationChange(publicationEventStore, before, after, now);
   } catch (error) {
     console.error("Property publication change could not be recorded:", error);
-  }
-}
-
-/** 期限超過（書込みなし）の記録。日次の定期実行から呼ぶ想定 */
-export async function recordExpiredPropertyPublications(published: readonly AdminProperty[], now: Date): Promise<void> {
-  try {
-    await recordExpiredPublications(publicationEventStore, published, now);
-  } catch (error) {
-    console.error("Expired property publications could not be recorded:", error);
   }
 }
 
