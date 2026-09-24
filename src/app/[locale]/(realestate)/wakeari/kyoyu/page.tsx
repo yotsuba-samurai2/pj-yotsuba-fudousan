@@ -1,4 +1,4 @@
-// /wakeari/kyoyu（共有名義の受け皿）＝2026-09-23 新設・日本語版のみ・監修前ドラフト
+// /wakeari/kyoyu（共有名義の受け皿）＝2026-09-23 新設・監修前ドラフト。2026-09-24 繁体字版を追加（ZhTwPage.tsx・本文は日本語版の逐語訳）
 // 方式・型・JSON-LD・コンプライアンスの決まりは /wakeari/page.tsx 冒頭と src/lib/wakeari.ts 冒頭を参照。
 // 役割＝「誰に頼めるか・四葉は何をするか・費用・流れ」。同意・兄弟共有・中華圏相続人・換価分割の深掘りはコラムへ送る。
 // 遺産分割協議書＝四葉行政書士事務所（独立した事業体・別々にご契約）。登記＝司法書士。共有物分割請求・所在等不明共有者の裁判＝弁護士。税＝税理士。
@@ -6,6 +6,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { buildPageMetadata } from "@/lib/seo";
+import { getRequestLocale } from "@/lib/getRequestLocale";
 import { RealestateServicePage, ReH2 } from "@/components/shared/RealestateServicePage";
 import { CannotHandle } from "@/components/shared/CannotHandle";
 import { Faq } from "@/components/shared/Faq";
@@ -27,6 +28,7 @@ import {
   WAKEARI_PAGES,
   WAKEARI_SERVICE_OFFER,
 } from "@/lib/wakeari";
+import { KyoyuPageZhTw, TW_META } from "./ZhTwPage";
 
 const PAGE = WAKEARI_PAGES.kyoyu;
 const ANSWER = WAKEARI_ANSWER.kyoyu;
@@ -124,6 +126,20 @@ const JA_KONKYO: WakeariSource[] = [
 ];
 
 export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getRequestLocale();
+  // 2026-09-24 Phase 3：繁体字版あり（ZhTwPage.tsx）。en・zh は日本語本文のフォールバック＝canonical は ja（/souzoku/taiwan と同じ型）
+  if (locale === "zh-tw") {
+    return buildPageMetadata({
+      businessKey: "realestate",
+      title: TW_META.title,
+      description: TW_META.description,
+      path: PAGE.path,
+      keywords: TW_META.keywords,
+      locale,
+      absoluteTitle: true,
+      availableLocales: ["ja", "zh-tw"],
+    });
+  }
   return buildPageMetadata({
     businessKey: "realestate",
     title: PAGE.title,
@@ -132,11 +148,12 @@ export async function generateMetadata(): Promise<Metadata> {
     keywords: PAGE.keywords,
     locale: "ja",
     absoluteTitle: true,
-    availableLocales: ["ja"],
+    availableLocales: ["ja", "zh-tw"],
   });
 }
 
 export default async function Page() {
+  if ((await getRequestLocale()) === "zh-tw") return <KyoyuPageZhTw />;
   const all = (await getColumns("ja")).map((c) => getLocalizedColumn(c, "ja"));
   const relatedColumns = WAKEARI_COLUMN_SLUGS.kyoyu.flatMap((slug) => all.filter((c) => c.slug === slug));
 

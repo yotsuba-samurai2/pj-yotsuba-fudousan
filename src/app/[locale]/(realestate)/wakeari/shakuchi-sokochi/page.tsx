@@ -1,10 +1,11 @@
-// /wakeari/shakuchi-sokochi（借地権・底地の受け皿）＝2026-09-23 新設・日本語版のみ・監修前ドラフト
+// /wakeari/shakuchi-sokochi（借地権・底地の受け皿）＝2026-09-23 新設・監修前ドラフト。2026-09-24 繁体字版を追加（ZhTwPage.tsx・本文は日本語版の逐語訳）
 // 方式・型・JSON-LD・コンプライアンスの決まりは /wakeari/page.tsx 冒頭と src/lib/wakeari.ts 冒頭を参照。
 // 役割＝「誰に頼めるか・四葉は何をするか・費用・流れ」。地主承諾・借地権付建物・定期借地・底地の深掘りはコラムへ送る。
 // 承諾料の相場・水準は書かない（案件で異なる）。当社は承諾料の交渉・代理を行わない。承諾に代わる許可の申立て（借地非訟）＝弁護士。税務上の効果＝税理士。
 import type { Metadata } from "next";
 import Link from "next/link";
 import { buildPageMetadata } from "@/lib/seo";
+import { getRequestLocale } from "@/lib/getRequestLocale";
 import { RealestateServicePage, ReH2 } from "@/components/shared/RealestateServicePage";
 import { CannotHandle } from "@/components/shared/CannotHandle";
 import { Faq } from "@/components/shared/Faq";
@@ -26,6 +27,7 @@ import {
   WAKEARI_PAGES,
   WAKEARI_SERVICE_OFFER,
 } from "@/lib/wakeari";
+import { ShakuchiSokochiPageZhTw, TW_META } from "./ZhTwPage";
 
 const PAGE = WAKEARI_PAGES["shakuchi-sokochi"];
 const ANSWER = WAKEARI_ANSWER["shakuchi-sokochi"];
@@ -112,6 +114,20 @@ const JA_KONKYO: WakeariSource[] = [
 ];
 
 export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getRequestLocale();
+  // 2026-09-24 Phase 3：繁体字版あり（ZhTwPage.tsx）。en・zh は日本語本文のフォールバック＝canonical は ja（/souzoku/taiwan と同じ型）
+  if (locale === "zh-tw") {
+    return buildPageMetadata({
+      businessKey: "realestate",
+      title: TW_META.title,
+      description: TW_META.description,
+      path: PAGE.path,
+      keywords: TW_META.keywords,
+      locale,
+      absoluteTitle: true,
+      availableLocales: ["ja", "zh-tw"],
+    });
+  }
   return buildPageMetadata({
     businessKey: "realestate",
     title: PAGE.title,
@@ -120,11 +136,12 @@ export async function generateMetadata(): Promise<Metadata> {
     keywords: PAGE.keywords,
     locale: "ja",
     absoluteTitle: true,
-    availableLocales: ["ja"],
+    availableLocales: ["ja", "zh-tw"],
   });
 }
 
 export default async function Page() {
+  if ((await getRequestLocale()) === "zh-tw") return <ShakuchiSokochiPageZhTw />;
   const all = (await getColumns("ja")).map((c) => getLocalizedColumn(c, "ja"));
   const relatedColumns = WAKEARI_COLUMN_SLUGS["shakuchi-sokochi"].flatMap((slug) => all.filter((c) => c.slug === slug));
 

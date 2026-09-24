@@ -10,10 +10,68 @@ import {
   WAKEARI_LAW_REFERENCE_DATE_JA,
   WAKEARI_LAW_REVISIONS,
 } from "@/lib/wakeari";
+import { addLocalePrefix } from "@/lib/locale";
+import {
+  WAKEARI_TW_ANSWER_RESERVATION,
+  WAKEARI_TW_LAST_UPDATED,
+  WAKEARI_TW_LAW_REVISIONS,
+  WAKEARI_TW_SOURCES,
+} from "@/lib/wakeari-zh-tw";
 
 export type WakeariSource = { what: string; source: string };
 
-export function WakeariSources({ rows }: { rows: WakeariSource[] }) {
+/** locale 未指定＝ja（既存5ページの出力は不変） */
+export function WakeariSources({ rows, locale = "ja" }: { rows: WakeariSource[]; locale?: "ja" | "zh-tw" }) {
+  if (locale === "zh-tw") {
+    const t = WAKEARI_TW_SOURCES;
+    return (
+      <div>
+        <ReH2>{t.heading}</ReH2>
+        <div className="mt-4 overflow-x-auto">
+          <table className="w-full border-collapse text-sm">
+            <thead>
+              <tr className="bg-primary-tint text-left">
+                {t.cols.map((c) => (
+                  <th key={c} className="border border-border px-3 py-2">
+                    {c}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody className="text-text">
+              {rows.map((r) => (
+                <tr key={r.what}>
+                  <td className="border border-border px-3 py-2">{r.what}</td>
+                  <td className="border border-border px-3 py-2">{r.source}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p className="mt-3 text-sm leading-relaxed text-text-muted">
+          {t.lawNoteBefore}
+          {WAKEARI_TW_LAW_REVISIONS.map((l, i) => (
+            <span key={l.law}>
+              {i > 0 && "／"}
+              {l.law}（{l.lawNum}）＝{l.currentRevisionDate}（{l.amendedBy}修正）
+            </span>
+          ))}
+          {t.lawNoteAfter}
+        </p>
+        <p className="mt-3 text-sm leading-relaxed text-text-muted">
+          {t.generalInfo}
+          {WAKEARI_TW_ANSWER_RESERVATION}
+        </p>
+        <p className="mt-3 text-sm leading-relaxed text-text-muted">
+          {t.lastUpdatedLabel}
+          {WAKEARI_TW_LAST_UPDATED}｜{t.authorLabel}
+          <Link href={addLocalePrefix("/about/uramatsu", "zh-tw")} className="text-primary underline">
+            {t.authorLink}
+          </Link>
+        </p>
+      </div>
+    );
+  }
   return (
     <div>
       <ReH2>この記事の根拠</ReH2>

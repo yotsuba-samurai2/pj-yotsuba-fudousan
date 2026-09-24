@@ -146,8 +146,9 @@ const STATIC_REALESTATE: StaticPage[] = [
   // lastmod＝ページの可視「最終更新」・ArticleJsonLd の dateModified と同じ定数（実更新日）。
   { path: "/wakeari", changeFrequency: "monthly", priority: 0.8, locales: ["ja"], lastModified: WAKEARI_LAST_UPDATED_ISO },
   { path: "/wakeari/saikenchiku-fuka", changeFrequency: "monthly", priority: 0.7, locales: ["ja"], lastModified: WAKEARI_LAST_UPDATED_ISO },
-  { path: "/wakeari/kyoyu", changeFrequency: "monthly", priority: 0.7, locales: ["ja"], lastModified: WAKEARI_LAST_UPDATED_ISO },
-  { path: "/wakeari/shakuchi-sokochi", changeFrequency: "monthly", priority: 0.7, locales: ["ja"], lastModified: WAKEARI_LAST_UPDATED_ISO },
+  // 2026-09-24 Phase 3：共有名義・借地権の2枚は繁体字版あり（台湾の相続人の需要。企画書 v1.0 §3-3）
+  { path: "/wakeari/kyoyu", changeFrequency: "monthly", priority: 0.7, locales: ["ja", "zh-tw"], lastModified: WAKEARI_LAST_UPDATED_ISO },
+  { path: "/wakeari/shakuchi-sokochi", changeFrequency: "monthly", priority: 0.7, locales: ["ja", "zh-tw"], lastModified: WAKEARI_LAST_UPDATED_ISO },
   { path: "/wakeari/kyosho", changeFrequency: "monthly", priority: 0.7, locales: ["ja"], lastModified: WAKEARI_LAST_UPDATED_ISO },
   // 2026-07-22：グループホーム開設ピラー（#4/#5 最優先KPI）。物件＋指定申請の分離受任ハブ。手本＝souzoku（priority 0.9）。
   { path: "/group-home", changeFrequency: "monthly", priority: 0.9 },
