@@ -666,6 +666,26 @@ sitemap の `locales` もページの `availableLocales` と同時に4言語へ�
 - [x] tsc 0／eslint 0／vitest 94ファイル・1,389件（wakeari-pages.test.ts の対応表 19→27）
 - [x] draft PR #423 https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/pull/423 。マージ・管理画面投入（/admin/columns/seed-realestate-daily）・GSC は浦松
 
+## 2026-09-24 難あり土地 出口相談コーナー Phase 3 — 繁体字版2枚・/jirei モデルケース⑤・定点 #34〜#39 — claude/pensive-babbage-x4to85（#429 マージ済み）
+
+- [x] /zh-tw/wakeari/kyoyu・/zh-tw/wakeari/shakuchi-sokochi（日本語版の逐語訳・ja の出力は不変）。/souzoku/taiwan と同じ ja＋zh-tw の型＝en・zh は日本語へフォールバック、sitemap は2枚だけ ["ja","zh-tw"]
+- [x] 共通の繁体字文言 src/lib/wakeari-zh-tw.ts、WakeariRoleTable・WakeariSources に locale
+- [x] /jirei にモデルケース⑤（再建築不可の旗竿地を貸して持ち続ける）
+- [x] docs/wakeari/92_teiten-34-39.md（企画書 §9 の定点6行）
+- [x] PR #429 → 浦松がマージ（squash d1180e7）
+- 保留（浦松の判断待ち）：/jirei の「共有×相続」モデルケース、/jirei ケース②の「提携する司法書士」の文言（#424 の判断と食い違う）
+
+## 2026-09-24 不具合：出口チェックリストの「この内容で相談する」で回答が消えていた — claude/pensive-babbage-x4to85（浦松報告）
+
+- [x] 再現（ローカル next dev＋Chromium）：6問回答 → CTA → /contact?intent=wakeari。カテゴリは入るが「ご相談内容」は0文字
+- [x] 原因：チェックリストは /contact?intent=wakeari へ遷移するだけで、回答を渡す仕組みが無かった（ボタンの文言と実装の食い違い）
+- [x] 修正：src/lib/shared/contact-prefill.ts（sessionStorage・intent 一致で1回読んだら消す・30分で失効・URL に載せない）、wakeari.ts に結果の計算と本文の生成、チェックリストの CTA で書き、ContactForm で読む（入力途中の本文は上書きしない）
+- [x] ローカルで4通り確認（6問回答／再読み込みで二重に入らない／0問ならカテゴリだけ／通常の /contact は空）
+- [x] tsc 0／eslint 0／vitest 115ファイル・1,663件（contact-prefill.test.ts を追加）
+- [x] Vercel プレビューの配信 JS に、書く側（/wakeari）と読む側（/contact）の両方が入っていることを確認
+- [x] draft PR #431 https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/pull/431 。本番ドメインでの操作確認（このコンテナの Chromium は証明書を検証できない）・マージは浦松
+- 残るもの：フォームから「戻る」でチェックリストに戻ると回答は空（画面の状態は保存しない設計のまま）
+
 ## 2026-09-24 グループホーム向け物件・大家募集ページ（/group-home/ooya）Phase 1
 
 指示書：「グループホーム向け物件・大家募集ページ Cowork実装指示書 v1.0（2026-09-24）」。受け皿＝新ページ（募集条件・流れ・専用フォーム・誰がやるか）、深掘り＝既存コラム `/column/kodate-akiya-group-home-ni-kasu`。決定欄は全項目既定値。
