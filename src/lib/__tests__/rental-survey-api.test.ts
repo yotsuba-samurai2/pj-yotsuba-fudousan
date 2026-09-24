@@ -1,6 +1,7 @@
 // ペット横断 指示書 版2.0 第4・7章：調査 scope の管理API（認証・scope・許諾・楽観ロック・dryRun）
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import { NextRequest } from "next/server";
+import { revalidatePath } from "next/cache";
 import { Prisma } from "@prisma/client";
 import { AuthError, verifyAdminRequest } from "../api-auth";
 import { GET, POST } from "@/app/api/admin/rental-survey/route";
@@ -12,6 +13,7 @@ import {
 import { batch, confirmedLedger, finalization, record, storedBatches } from "./rental-survey-fixtures";
 
 const h = vi.hoisted(() => ({ ledger: [] as LedgerEntry[] }));
+vi.mock("next/cache", () => ({ revalidatePath: vi.fn() }));
 vi.mock("../api-auth", async importOriginal => ({ ...await importOriginal<typeof import("../api-auth")>(), verifyAdminRequest: vi.fn() }));
 vi.mock("@/lib/rental-survey/permissions", async importOriginal => ({ ...await importOriginal<typeof import("@/lib/rental-survey/permissions")>(), DATA_USE_LEDGER: h.ledger }));
 vi.mock("@/lib/rental-survey/store", () => ({
@@ -76,7 +78,7 @@ describe("入口の順序", () => {
 });
 
 describe("バッチの保存", () => {
-  it("既定の台帳（許諾なし）では 403 で保存しない", async () => {
+  it("許諾の無い台帳では 403 で保存しない", async () => {
     expect((await post({ ...base, action: "save-batch", dryRun: false, batch: batch("reins") })).status).toBe(403);
     expect(insertBatch).not.toHaveBeenCalled();
   });
@@ -131,6 +133,7 @@ describe("確定・巻き戻し", () => {
     const res = await post({ ...base, action: "finalize", dryRun: true, batchIds: ids, expectedSequence: 0 });
     expect(await res.json()).toMatchObject({ dryRun: true, x: 1 });
     expect(insertFinalization).not.toHaveBeenCalled();
+    expect(revalidatePath).not.toHaveBeenCalled();
   });
 
   it("別の確定が先に入っていれば 409（古い番号で上書きしない）", async () => {
@@ -140,6 +143,7 @@ describe("確定・巻き戻し", () => {
     vi.mocked(findLatestFinalization).mockResolvedValue(null);
     vi.mocked(insertFinalization).mockResolvedValue(false);
     expect((await post({ ...base, action: "finalize", dryRun: false, batchIds: ids, expectedSequence: 0 })).status).toBe(409);
+    expect(revalidatePath).not.toHaveBeenCalled();
   });
 
   it("この scope・版に属さないバッチIDが混ざれば 400", async () => {
@@ -154,6 +158,18 @@ describe("確定・巻き戻し", () => {
     const res = await post({ ...base, action: "finalize", dryRun: false, batchIds: ids, expectedSequence: 0 });
     expect(await res.json()).toMatchObject({ saved: true, sequence: 1, x: 1 });
     expect(vi.mocked(insertFinalization).mock.calls[0][2]).toBe(0);
+    // 件数枠を出す LP をすぐ再生成する（ふだんは1時間ごと）
+    expect(revalidatePath).toHaveBeenCalledWith("/ja/pet-housing");
+  });
+
+  it("LP の再生成に失敗しても、保存済みの確定は成功として返す", async () => {
+    permit();
+    vi.mocked(revalidatePath).mockImplementationOnce(() => { throw new Error("no store"); });
+    const error = vi.spyOn(console, "error").mockImplementation(() => {});
+    const res = await post({ ...base, action: "finalize", dryRun: false, batchIds: ids, expectedSequence: 0 });
+    expect(res.status).toBe(200);
+    expect(error.mock.calls.flat().every(a => typeof a === "string")).toBe(true);
+    error.mockRestore();
   });
 
   it("巻き戻し先が見つからなければ 400", async () => {
@@ -170,6 +186,7 @@ describe("確定・巻き戻し", () => {
     vi.mocked(findLatestFinalization).mockResolvedValue(finalization({ id: "fin-2", sequence: 2 }));
     expect((await post({ ...base, action: "rollback", dryRun: false, targetId: "fin-1", expectedSequence: 2 })).status).toBe(200);
     expect(vi.mocked(insertFinalization).mock.calls[0][1]).toMatchObject({ rolledBackFrom: "fin-1" });
+    expect(revalidatePath).toHaveBeenCalledWith("/ja/pet-housing");
   });
 
   it("保存先が未作成なら 503（黙って成功させない）", async () => {

@@ -753,3 +753,26 @@ sitemap の `locales` もページの `availableLocales` と同時に4言語へ�
 - Phase 2 の番人テスト「件数枠をどのページにも組み込まない」を、「組み込むのは /pet-housing だけ」に更新（段階の境界を表すテスト）
 - 型付き配列の中の条件付きスプレッドには文脈の型が付かない（`locales: string[]` の型エラー）。型を付けた定数に切り出した
 - 範囲外の発見（別途判断）：`/api/contact` が Resend の `error` を見ていない／管理APIはログインできる人なら誰でも通す／本番に `property_publication_events` が無い／本番の `_prisma_migrations` にリポジトリに無い行／既存の ja 先行ページの `/en/...` が 200
+
+## 2026-09-24 ペット調査の開始（台帳の記載・取込画面・独自集計の公表）
+
+浦松指示：「ペット調査はやってください」／台帳は「浦松判断として記載」／REINS も入れる（同席時のみ）／「LPへの件数表示＝集計公表はおこなってください。REINSなどとはかかず、独自集計」
+
+- [x] 許諾台帳：4媒体 × store・aggregate の8行（浦松判断・書面回答なし・2026-09-24 日本時間0時から）。ad・image・sns は記載なし
+- [x] 件数枠の注記を「当社が独自に集計したもの」に（4言語・媒体名なし）
+- [x] 確定・巻き戻しの成功時に `/ja/pet-housing` を再生成（失敗は記録のみで確定は成功）
+- [x] 確認用の純関数 `review.ts`（`summarizeBatch`・`pickFinalizationBatches`）
+- [x] 取込画面 `/admin/bukken/rental-survey` と、`/admin/bukken` の「学区別の募集一覧」の隣のリンク
+- [x] テスト：permissions・panel・api・review（新規）・admin-page（新規）
+- [x] ローカル実DB（prisma dev）で、実際の管理API・実際の台帳を通す（`verify-local.ts exercise-api`・偽の認証サーバー）
+- [x] `next build`（公開フラグと `RENTAL_SURVEY_PUBLIC_SCOPES` を有効化）＋ `next start`：件数枠 2件・「当社が独自に集計したものです」・媒体名なし／取込画面 200
+- [x] 検証：vitest 114ファイル・1,650件／tsc 0（検証スクリプトも個別に 0）／eslint error 0
+- [x] `docs/pet-project/32_pet-survey-start.md`
+- [ ] draft PR（マージは浦松の指示後）
+- [ ] Vercel の Production に `RENTAL_SURVEY_PUBLIC_SCOPES=bunkyo-rent-pet:1`（浦松。マージ前に設定すれば、マージ時の自動デプロイで反映）
+- [ ] 週次スケジュール（リポジトリ外の運用文書）のペット調査を「実施」に
+
+**レビュー記録**
+- 計画では集計公表を未確認のまま（LP に出さない）としていたが、計画承認後の浦松指示で aggregate も記載し、独自集計として公表することにした。指示書 第7章の「媒体名の省略・独自集計の表記は許諾確認の代わりにならない」は、台帳のコメントと文書 32 に判断の根拠と並べて残した。
+- 取込画面は管理APIの入出力を変えずに作った（dryRun → 本実行の2段階・`expectedSequence`）。許諾・確定の判定はブラウザでは行わず管理APIだけが行う（番人テストで固定）。
+- 本番の公開フラグ：本番はまだ #419（07:04Z マージ）のデプロイで、`/pet-housing` は生成時の 404 がキャッシュされている（`x-nextjs-prerender: 1`・`x-vercel-cache: HIT`）。再デプロイ分は本番に出ていない。Vercel コネクタは team が見えず（`list_teams` が空）、状態は浦松の画面で確認してもらう。

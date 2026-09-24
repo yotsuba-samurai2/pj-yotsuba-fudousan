@@ -1,9 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
+import { revalidatePath } from "next/cache";
 import { Prisma } from "@prisma/client";
 import { AuthError, verifyAdminRequest } from "@/lib/api-auth";
 import { MAX_SURVEY_BODY_BYTES, surveyBatchSchema } from "@/lib/rental-survey/batch";
 import { planFinalization, planRollback, type FinalizationPlan, type StoredFinalization } from "@/lib/rental-survey/finalize";
 import { DATA_USE_LEDGER, isPermitted } from "@/lib/rental-survey/permissions";
+import { PET_HOUSING_PATH } from "@/lib/pet-housing";
 import { resolveSurveyScope } from "@/lib/rental-survey/scope";
 import { surveySnapshotSchema } from "@/lib/rental-survey/units";
 import {
@@ -24,6 +26,18 @@ function errorResponse(e: unknown) {
   // Prisma のエラー文には呼び出し時のデータが含まれ得るため、ログにはコードと種類だけを残す（指示書 第11章）
   console.error("Rental survey admin failed", e instanceof Prisma.PrismaClientKnownRequestError ? e.code : e instanceof Error ? e.name : "unknown");
   return error(500, "調査データの処理に失敗しました");
+}
+
+/**
+ * 件数枠を出す公開ページ（日本語のみ）。確定・巻き戻しの直後に再生成する。
+ * 公開ページはふだん1時間ごとに再生成されるが、撤回・訂正（巻き戻し）はすぐに反映させる（指示書 第9章）。
+ * 再生成に失敗しても確定は保存済みなので、失敗は記録だけにする（1時間以内に自然に反映される）。
+ */
+const PUBLIC_SURVEY_PAGES = [`/ja${PET_HOUSING_PATH}`];
+function refreshPublicSurveyPages() {
+  for (const path of PUBLIC_SURVEY_PAGES) {
+    try { revalidatePath(path); } catch { console.error("Rental survey revalidate failed", path); }
+  }
 }
 
 const isSequence = (v: unknown): v is number => typeof v === "number" && Number.isInteger(v) && v >= 0;
@@ -108,6 +122,7 @@ export async function POST(req: NextRequest) {
       const summary = { x: plan.data.snapshot.units.length, excludedObservations: plan.data.snapshot.excludedObservations, excludedUnits: plan.data.snapshot.excludedUnits, targetBreakdown: plan.data.snapshot.targetBreakdown };
       if (body.dryRun) return NextResponse.json({ dryRun: true, ...summary }, { headers: NO_STORE });
       if (!await insertFinalization(scope, plan.data, body.expectedSequence)) return error(409, "別の確定が先に保存されました。再確認してください");
+      refreshPublicSurveyPages();
       return NextResponse.json({ saved: true, sequence: body.expectedSequence + 1, ...summary }, { headers: NO_STORE });
     }
 

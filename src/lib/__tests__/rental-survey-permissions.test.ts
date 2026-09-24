@@ -14,16 +14,34 @@ vi.mock("@/lib/db/properties", () => ({ getProperties: () => { throw new Error("
 
 const scope = currentSurveyScope("bunkyo-rent-pet")!;
 
-describe("許諾台帳の既定（T12）", () => {
-  it("既定の台帳は空＝すべての媒体・用途を拒否する", () => {
-    expect(DATA_USE_LEDGER).toHaveLength(0);
+describe("許諾台帳の記載（T12・2026-09-24 浦松判断）", () => {
+  it("内部保存・加工と集計公表だけを4媒体に記載し、個別広告・画像転載・SNS は拒否のまま", () => {
+    expect(DATA_USE_LEDGER).toHaveLength(ALL_PROVIDERS.length * 2);
     for (const provider of ALL_PROVIDERS) for (const use of permissionUses)
-      expect(isPermitted(DATA_USE_LEDGER, provider, use, NOW)).toBe(false);
+      expect(isPermitted(DATA_USE_LEDGER, provider, use, NOW), `${provider}/${use}`).toBe(use === "store" || use === "aggregate");
   });
 
-  it("公開フラグを立てても、既定の台帳なら hidden で DB も読まない", async () => {
+  it("判断の根拠（浦松判断・書面回答なし）を残し、公表では媒体名を出さない", () => {
+    for (const entry of DATA_USE_LEDGER) {
+      expect(entry.evidenceRef).toMatch(/^2026-09-24 浦松判断：.*書面回答なし$/);
+      expect(entry.attribution).toBeNull();
+    }
+    for (const provider of ALL_PROVIDERS) expect(aggregateAttribution(DATA_USE_LEDGER, provider, NOW)).toBeNull();
+  });
+
+  it("記載の効力は 2026-09-24（日本時間）から。それより前の時点では拒否する", () => {
+    const before = new Date("2026-09-23T14:59:59Z");
+    for (const provider of ALL_PROVIDERS) for (const use of permissionUses)
+      expect(isPermitted(DATA_USE_LEDGER, provider, use, before)).toBe(false);
+  });
+
+  it("効力の前なら、公開フラグを立てても hidden で DB も読まない", async () => {
     const env = { RENTAL_SURVEY_PUBLIC_SCOPES: PET_SCOPE_KEY };
-    await expect(getPublicSurveySummary("bunkyo-rent-pet", "ja", { env, now: NOW })).resolves.toEqual({ state: "hidden" });
+    await expect(getPublicSurveySummary("bunkyo-rent-pet", "ja", { env, now: new Date("2026-09-23T12:00:00Z") })).resolves.toEqual({ state: "hidden" });
+  });
+
+  it("記載後も、公開フラグが無ければ hidden で DB も読まない", async () => {
+    await expect(getPublicSurveySummary("bunkyo-rent-pet", "ja", { env: {}, now: NOW })).resolves.toEqual({ state: "hidden" });
   });
 
   it("許諾があってもフラグが無ければ hidden で DB も読まない", async () => {
