@@ -202,6 +202,313 @@ const ILLUSTRATIONS = {
       zh: "支持福利服务现场与工作人员的示意图",
     },
   },
+  // ── 2026-09-23 納品の新規34点（GPT Image 2.5 生成・sharp で 1600x900 WebP 化） ──
+  "realestate-souzoku": {
+    src: "/hero/realestate-souzoku-16x9.webp",
+    alt: {
+      ja: "相続した実家を前に立つ二人の後ろ姿を描いた水彩イラスト",
+      en: "Watercolor illustration of two people standing before an inherited family home",
+      "zh-tw": "兩人站在繼承的老家前背影的水彩插畫",
+      zh: "两人站在继承的老家前背影的水彩插画",
+    },
+  },
+  "realestate-akiya": {
+    src: "/hero/realestate-akiya-16x9.webp",
+    alt: {
+      ja: "雨戸を閉めたまま草の伸びた空き家を描いた水彩イラスト",
+      en: "Watercolor illustration of a vacant house with closed shutters and overgrown grass",
+      "zh-tw": "門窗緊閉、雜草叢生的空屋水彩插畫",
+      zh: "门窗紧闭、杂草丛生的空屋水彩插画",
+    },
+  },
+  "realestate-isan-bunkatsu": {
+    src: "/hero/realestate-isan-bunkatsu-16x9.webp",
+    alt: {
+      ja: "一軒の家が三つに分かれる様子と三人の後ろ姿を描いた水彩イラスト",
+      en: "Watercolor illustration of one house divided into three shares with three people",
+      "zh-tw": "一棟房屋分為三份與三人背影的水彩插畫",
+      zh: "一栋房屋分为三份与三人背影的水彩插画",
+    },
+  },
+  "realestate-baikyaku-satei": {
+    src: "/hero/realestate-baikyaku-satei-16x9.webp",
+    alt: {
+      ja: "机に広げた間取り図と巻尺で不動産の査定をする場面の水彩イラスト",
+      en: "Watercolor illustration of a floor plan and tape measure for a property appraisal",
+      "zh-tw": "攤開的格局圖與捲尺進行不動產估價的水彩插畫",
+      zh: "摊开的户型图与卷尺进行不动产估价的水彩插画",
+    },
+  },
+  "realestate-keiyaku-kessai": {
+    src: "/hero/realestate-keiyaku-kessai-16x9.webp",
+    alt: {
+      ja: "決済の場で鍵が手渡される瞬間を描いた水彩イラスト",
+      en: "Watercolor illustration of keys handed over at a property settlement",
+      "zh-tw": "交屋結算時遞出鑰匙瞬間的水彩插畫",
+      zh: "交房结算时递出钥匙瞬间的水彩插画",
+    },
+  },
+  "realestate-jouto-shotoku": {
+    src: "/hero/realestate-jouto-shotoku-16x9.webp",
+    alt: {
+      ja: "申告書と電卓を並べた確定申告の準備を描いた水彩イラスト",
+      en: "Watercolor illustration of a tax return form and calculator on a desk",
+      "zh-tw": "申報書與計算機並排、準備報稅的水彩插畫",
+      zh: "申报表与计算器并排、准备报税的水彩插画",
+    },
+  },
+  "realestate-youto-chiiki": {
+    src: "/hero/realestate-youto-chiiki-16x9.webp",
+    alt: {
+      ja: "用途地域ごとに色分けされた街区を上空から見た水彩イラスト",
+      en: "Watercolor illustration of city blocks colour-coded by zoning, seen from above",
+      "zh-tw": "依使用分區著色的街區俯瞰水彩插畫",
+      zh: "按用途分区着色的街区俯瞰水彩插画",
+    },
+  },
+  "realestate-jigyou-fudosan": {
+    src: "/hero/realestate-jigyou-fudosan-16x9.webp",
+    alt: {
+      ja: "ガラス面に空が映る低層オフィスビルを描いた水彩イラスト",
+      en: "Watercolor illustration of a low-rise office building reflecting the sky",
+      "zh-tw": "玻璃帷幕映照天空的低層辦公大樓水彩插畫",
+      zh: "玻璃幕墙映照天空的低层办公楼水彩插画",
+    },
+  },
+  "realestate-inshokuten": {
+    src: "/hero/realestate-inshokuten-16x9.webp",
+    alt: {
+      ja: "無地の暖簾をかけた小さな飲食店の店先を描いた水彩イラスト",
+      en: "Watercolor illustration of a small restaurant front with a plain noren curtain",
+      "zh-tw": "掛著素色門簾的小餐館店面水彩插畫",
+      zh: "挂着素色门帘的小餐馆店面水彩插画",
+    },
+  },
+  "realestate-owner-change": {
+    src: "/hero/realestate-owner-change-16x9.webp",
+    alt: {
+      ja: "灯りのともる集合住宅と並べて置かれた二本の鍵を描いた水彩イラスト",
+      en: "Watercolor illustration of a lit apartment building and two keys side by side",
+      "zh-tw": "燈火通明的集合住宅與並排兩把鑰匙的水彩插畫",
+      zh: "灯火通明的集合住宅与并排两把钥匙的水彩插画",
+    },
+  },
+  "realestate-yuushi-deguchi": {
+    src: "/hero/realestate-yuushi-deguchi-16x9.webp",
+    alt: {
+      ja: "育つ若木と高さの異なる矩形で収支の推移を表した水彩イラスト",
+      en: "Watercolor illustration of a growing sapling beside bars of varying height",
+      "zh-tw": "成長的樹苗與高低不一的方塊表現收支變化的水彩插畫",
+      zh: "成长的树苗与高低不一的方块表现收支变化的水彩插画",
+    },
+  },
+  "realestate-taiwan-chuuka": {
+    src: "/hero/realestate-taiwan-chuuka-16x9.webp",
+    alt: {
+      ja: "海を挟んで向かい合う二つの街並みを描いた水彩イラスト",
+      en: "Watercolor illustration of two townscapes facing each other across the sea",
+      "zh-tw": "隔海相望的兩座城鎮水彩插畫",
+      zh: "隔海相望的两座城镇水彩插画",
+    },
+  },
+  "realestate-rinichi": {
+    src: "/hero/realestate-rinichi-16x9.webp",
+    alt: {
+      ja: "片付いた玄関に置かれた旅行鞄と戸口に立つ後ろ姿の水彩イラスト",
+      en: "Watercolor illustration of a suitcase in a tidied entryway and a figure at the door",
+      "zh-tw": "整理過的玄關放著旅行箱、門口站著背影的水彩插畫",
+      zh: "整理过的玄关放着旅行箱、门口站着背影的水彩插画",
+    },
+  },
+  "legal-koseki-ichiranzu": {
+    src: "/hero/legal-koseki-ichiranzu-16x9.webp",
+    alt: {
+      ja: "重ねた戸籍の帳面から人の関係が枝分かれする様子の水彩イラスト",
+      en: "Watercolor illustration of stacked family registers branching into relationships",
+      "zh-tw": "疊放的戶籍簿冊延伸出親屬關係分支的水彩插畫",
+      zh: "叠放的户籍簿册延伸出亲属关系分支的水彩插画",
+    },
+  },
+  "legal-isan-bunkatsu-kyougi": {
+    src: "/hero/legal-isan-bunkatsu-kyougi-16x9.webp",
+    alt: {
+      ja: "座卓を囲んで一枚の書面に向かう三人の後ろ姿を描いた水彩イラスト",
+      en: "Watercolor illustration of three people around a low table facing a single document",
+      "zh-tw": "三人圍坐矮桌面對一份文件的背影水彩插畫",
+      zh: "三人围坐矮桌面对一份文件的背影水彩插画",
+    },
+  },
+  "legal-iryuubun": {
+    src: "/hero/legal-iryuubun-16x9.webp",
+    alt: {
+      ja: "不均等に分かれた円の中で小さな一片が示される水彩イラスト",
+      en: "Watercolor illustration of an unevenly divided circle with one small share highlighted",
+      "zh-tw": "不均等分割的圓中標示出一小片的水彩插畫",
+      zh: "不均等分割的圆中标示出一小片的水彩插画",
+    },
+  },
+  "legal-yuigon": {
+    src: "/hero/legal-yuigon-16x9.webp",
+    alt: {
+      ja: "文机に置かれた封をした和封筒と硯を描いた水彩イラスト",
+      en: "Watercolor illustration of a sealed Japanese envelope and inkstone on a writing desk",
+      "zh-tw": "書案上封緘的和式信封與硯台水彩插畫",
+      zh: "书案上封缄的和式信封与砚台水彩插画",
+    },
+  },
+  "legal-ninni-kouken": {
+    src: "/hero/legal-ninni-kouken-16x9.webp",
+    alt: {
+      ja: "年長者に寄り添う人の後ろ姿と小卓の帳面を描いた水彩イラスト",
+      en: "Watercolor illustration of someone beside an older person, with a notebook on a side table",
+      "zh-tw": "陪伴長者的背影與小几上帳冊的水彩插畫",
+      zh: "陪伴长者的背影与小几上账册的水彩插画",
+    },
+  },
+  "legal-souzoku-zei": {
+    src: "/hero/legal-souzoku-zei-16x9.webp",
+    alt: {
+      ja: "三冊の帳面から伸びる線が一点に集まる専門家連携の水彩イラスト",
+      en: "Watercolor illustration of lines from three ledgers converging on one point",
+      "zh-tw": "三本帳冊延伸的線條匯聚於一點的水彩插畫",
+      zh: "三本账册延伸的线条汇聚于一点的水彩插画",
+    },
+  },
+  "legal-kyoninka": {
+    src: "/hero/legal-kyoninka-16x9.webp",
+    alt: {
+      ja: "窓口カウンターに置かれた申請書の束を描いた水彩イラスト",
+      en: "Watercolor illustration of a stack of application forms on a service counter",
+      "zh-tw": "櫃檯上成疊申請書的水彩插畫",
+      zh: "柜台上成叠申请书的水彩插画",
+    },
+  },
+  "legal-shitei-shinsei": {
+    src: "/hero/legal-shitei-shinsei-16x9.webp",
+    alt: {
+      ja: "平面図の上に置かれた小さな建物模型を描いた水彩イラスト",
+      en: "Watercolor illustration of a small building model set on a floor plan",
+      "zh-tw": "平面圖上放著小型建築模型的水彩插畫",
+      zh: "平面图上放着小型建筑模型的水彩插画",
+    },
+  },
+  "legal-jinin-setsubi-kijun": {
+    src: "/hero/legal-jinin-setsubi-kijun-16x9.webp",
+    alt: {
+      ja: "間取り図の各部屋に人型が配置された人員基準の水彩イラスト",
+      en: "Watercolor illustration of figures placed room by room on a floor plan",
+      "zh-tw": "格局圖各房間配置人形的水彩插畫",
+      zh: "户型图各房间配置人形的水彩插画",
+    },
+  },
+  "legal-inshoku-ryokan": {
+    src: "/hero/legal-inshoku-ryokan-16x9.webp",
+    alt: {
+      ja: "行灯のともる和風旅館の玄関と徳利を描いた水彩イラスト",
+      en: "Watercolor illustration of a Japanese inn entrance with a lit lantern and sake flask",
+      "zh-tw": "點著行燈的日式旅館玄關與酒瓶水彩插畫",
+      zh: "点着行灯的日式旅馆玄关与酒瓶水彩插画",
+    },
+  },
+  "legal-kensetsu-unsou": {
+    src: "/hero/legal-kensetsu-unsou-16x9.webp",
+    alt: {
+      ja: "足場のある建設現場と小型トラック、ヘルメットの水彩イラスト",
+      en: "Watercolor illustration of a scaffolded construction site, a small truck and a helmet",
+      "zh-tw": "有鷹架的工地、小貨車與安全帽的水彩插畫",
+      zh: "有脚手架的工地、小货车与安全帽的水彩插画",
+    },
+  },
+  "legal-kousho-ninshou": {
+    src: "/hero/legal-kousho-ninshou-16x9.webp",
+    alt: {
+      ja: "リボンと封蝋で結ばれた二通の書類を描いた水彩イラスト",
+      en: "Watercolor illustration of two documents bound with a ribbon and wax seal",
+      "zh-tw": "以緞帶與封蠟繫結的兩份文件水彩插畫",
+      zh: "以缎带与封蜡系结的两份文件水彩插画",
+    },
+  },
+  "labor-shugyo-kisoku": {
+    src: "/hero/labor-shugyo-kisoku-16x9.webp",
+    alt: {
+      ja: "付箋のはさまった就業規則の冊子を開いた机上の水彩イラスト",
+      en: "Watercolor illustration of an open work-rules booklet with sticky notes",
+      "zh-tw": "夾著便利貼、攤開的工作規則手冊水彩插畫",
+      zh: "夹着便利贴、摊开的工作规则手册水彩插画",
+    },
+  },
+  "labor-roudou-jikan": {
+    src: "/hero/labor-roudou-jikan-16x9.webp",
+    alt: {
+      ja: "壁の掛け時計と升目だけのシフト表を描いた水彩イラスト",
+      en: "Watercolor illustration of a wall clock and a blank shift grid",
+      "zh-tw": "牆上掛鐘與空白排班表的水彩插畫",
+      zh: "墙上挂钟与空白排班表的水彩插画",
+    },
+  },
+  "labor-roudou-jouken": {
+    src: "/hero/labor-roudou-jouken-16x9.webp",
+    alt: {
+      ja: "労働条件を記した書面が手渡される場面の水彩イラスト",
+      en: "Watercolor illustration of a statement of working conditions being handed over",
+      "zh-tw": "遞交載明勞動條件書面的水彩插畫",
+      zh: "递交载明劳动条件书面的水彩插画",
+    },
+  },
+  "labor-kyuyo-keisan": {
+    src: "/hero/labor-kyuyo-keisan-16x9.webp",
+    alt: {
+      ja: "電卓と升目の一覧表、給与封筒を並べた机上の水彩イラスト",
+      en: "Watercolor illustration of a calculator, a ruled table and pay envelopes on a desk",
+      "zh-tw": "計算機、格線表格與薪資袋並排桌上的水彩插畫",
+      zh: "计算器、格线表格与工资袋并排桌上的水彩插画",
+    },
+  },
+  "labor-shakai-hoken": {
+    src: "/hero/labor-shakai-hoken-16x9.webp",
+    alt: {
+      ja: "淡い半円が人々を覆う社会保険の仕組みを表した水彩イラスト",
+      en: "Watercolor illustration of a soft arc sheltering people, representing social insurance",
+      "zh-tw": "淡色半圓覆蓋人們、象徵社會保險的水彩插畫",
+      zh: "淡色半圆覆盖人们、象征社会保险的水彩插画",
+    },
+  },
+  "labor-koyou-hoken": {
+    src: "/hero/labor-koyou-hoken-16x9.webp",
+    alt: {
+      ja: "ヘルメットと救急箱、支える曲線を描いた労働保険の水彩イラスト",
+      en: "Watercolor illustration of a helmet, a first-aid box and a supporting curve",
+      "zh-tw": "安全帽、急救箱與支撐曲線的水彩插畫",
+      zh: "安全帽、急救箱与支撑曲线的水彩插画",
+    },
+  },
+  "labor-taishoku-kaiko": {
+    src: "/hero/labor-taishoku-kaiko-16x9.webp",
+    alt: {
+      ja: "片付いた机と空の椅子、私物の入った段ボール箱の水彩イラスト",
+      en: "Watercolor illustration of a cleared desk, an empty chair and a box of belongings",
+      "zh-tw": "清空的辦公桌、空椅子與裝著私人物品紙箱的水彩插畫",
+      zh: "清空的办公桌、空椅子与装着私人物品纸箱的水彩插画",
+    },
+  },
+  "labor-harassment": {
+    src: "/hero/labor-harassment-16x9.webp",
+    alt: {
+      ja: "向かい合う椅子と空白の吹き出しを描いた相談窓口の水彩イラスト",
+      en: "Watercolor illustration of two facing chairs and empty speech bubbles",
+      "zh-tw": "相對的兩張椅子與空白對話框的水彩插畫",
+      zh: "相对的两张椅子与空白对话框的水彩插画",
+    },
+  },
+  "labor-mental-health": {
+    src: "/hero/labor-mental-health-16x9.webp",
+    alt: {
+      ja: "窓辺の椅子と曇りから晴れへ移る空、新しい芽を描いた水彩イラスト",
+      en: "Watercolor illustration of a chair by a window, a sky clearing, and a new shoot",
+      "zh-tw": "窗邊椅子、由陰轉晴的天空與新芽的水彩插畫",
+      zh: "窗边椅子、由阴转晴的天空与新芽的水彩插画",
+    },
+  },
 } as const satisfies Record<string, IllustrationDefinition>;
 
 type IllustrationTheme = keyof typeof ILLUSTRATIONS;
@@ -211,6 +518,13 @@ type ThemeRule = {
   keywords: readonly string[];
 };
 
+// 並び順に意味がある：**先頭から順に見て、最初に一致したルールが勝つ**（resolveColumnIllustration）。
+// 狭いテーマを広いテーマより前に置くこと。例えば「空き家」は「相続」より前に無いと、
+// 相続ルールに吸われて空き家の画像に到達できない。
+//
+// 2026-09-24: 新規34点を追加したがルールが未整備で、54点中15点しか使われず
+// 1画像あたり最大67記事に集中していた（新規34点は1点も選ばれていなかった）。
+// 全テーマに経路を与え、狭い順に並べ直した。テーマの到達可能性はテストで担保する。
 const THEME_RULES: Record<BusinessKey, readonly ThemeRule[]> = {
   realestate: [
     {
@@ -218,37 +532,84 @@ const THEME_RULES: Record<BusinessKey, readonly ThemeRule[]> = {
       keywords: ["グループホーム", "共同生活援助", "障害福祉", "福祉施設", "group-home"],
     },
     {
+      theme: "realestate-akiya",
+      keywords: ["空き家", "空家", "実家", "akiya", "3000万円控除", "被相続人居住用"],
+    },
+    {
+      theme: "realestate-isan-bunkatsu",
+      keywords: ["遺産分割", "分割協議", "共有", "持分", "kyoyu", "mochibun"],
+    },
+    {
+      theme: "realestate-jouto-shotoku",
+      keywords: ["譲渡所得", "確定申告", "納税管理人", "取得費", "源泉", "jouto", "nozei"],
+    },
+    {
+      theme: "realestate-souzoku",
+      keywords: ["相続", "遺産", "相続登記", "souzoku", "inherit"],
+    },
+    {
+      theme: "realestate-rinichi",
+      keywords: ["離日", "帰国", "出国", "海外赴任", "転勤", "rinichi", "kikoku", "leaving-japan"],
+    },
+    {
+      theme: "realestate-taiwan-chuuka",
+      keywords: ["台湾", "台灣", "中国語圏", "華僑", "taiwan", "chuka"],
+    },
+    {
       theme: "realestate-global",
       keywords: [
-        "外国人", "海外", "非居住者", "台湾", "台灣", "中国", "中国語圏",
-        "在留", "cross-border", "taiwan", "foreign", "global",
+        "外国人", "海外", "非居住者", "中国", "在留",
+        "cross-border", "foreign", "global", "hikyojusha",
       ],
     },
     {
-      theme: "legal-inheritance",
-      keywords: ["相続", "遺産", "空き家", "実家", "souzoku", "akiya", "inherit"],
+      theme: "realestate-inshokuten",
+      keywords: [
+        "飲食店", "店舗", "厨房", "カフェ", "居酒屋",
+        "inshokuten", "restaurant",
+      ],
+    },
+    {
+      theme: "realestate-jigyou-fudosan",
+      keywords: [
+        "事業用", "オフィス", "事務所", "倉庫", "工場", "営業所", "診療所", "物販",
+        "office", "jigyou",
+      ],
+    },
+    {
+      theme: "realestate-youto-chiiki",
+      keywords: [
+        "用途地域", "接道", "再建築", "建ぺい率", "容積率", "市街化", "調整区域",
+        "youto", "saikenchiku",
+      ],
+    },
+    {
+      theme: "realestate-owner-change",
+      keywords: ["オーナーチェンジ", "賃貸経営", "入居者", "サブリース", "一棟", "owner-change"],
+    },
+    {
+      theme: "realestate-keiyaku-kessai",
+      keywords: ["決済", "引渡", "重要事項説明", "手付", "契約書", "keiyaku", "kessai"],
+    },
+    {
+      theme: "realestate-baikyaku-satei",
+      keywords: ["査定", "売却", "媒介", "買取", "baikyaku", "satei"],
+    },
+    {
+      theme: "realestate-yuushi-deguchi",
+      keywords: ["融資", "利回り", "収支", "出口", "ローン", "yushi", "loan"],
     },
     {
       theme: "realestate-shataku",
       keywords: ["社宅", "社員寮", "法人契約", "corporate-housing", "shataku"],
     },
     {
-      theme: "legal-company",
-      keywords: [
-        "事業用", "店舗", "事務所", "オフィス", "美容室", "理容所", "飲食店",
-        "診療所", "物販", "倉庫", "工場", "営業所", "office", "shop", "restaurant",
-      ],
-    },
-    {
       theme: "legal-subsidy",
-      keywords: ["補助金", "助成金", "事業計画", "融資", "subsidy"],
+      keywords: ["補助金", "助成金", "事業計画", "subsidy"],
     },
     {
       theme: "realestate-toushi",
-      keywords: [
-        "投資", "収益", "利回り", "一棟", "オーナーチェンジ", "賃貸経営",
-        "土地活用", "不動産活用", "investment", "yield",
-      ],
+      keywords: ["投資", "収益", "土地活用", "不動産活用", "investment", "yield"],
     },
     {
       theme: "bunkyo-sakura",
@@ -257,6 +618,17 @@ const THEME_RULES: Record<BusinessKey, readonly ThemeRule[]> = {
   ],
   legal: [
     {
+      theme: "legal-jinin-setsubi-kijun",
+      keywords: [
+        "人員基準", "設備基準", "常勤換算", "サービス管理責任者", "サビ管",
+        "世話人", "生活支援員", "jinin", "setsubi",
+      ],
+    },
+    {
+      theme: "legal-shitei-shinsei",
+      keywords: ["指定申請", "指定基準", "事前協議", "指定権者", "shitei-shinsei"],
+    },
+    {
       theme: "legal-shogai-fukushi",
       keywords: [
         "障害福祉", "グループホーム", "共同生活援助", "放課後等デイ", "就労支援",
@@ -264,8 +636,39 @@ const THEME_RULES: Record<BusinessKey, readonly ThemeRule[]> = {
       ],
     },
     {
+      theme: "legal-koseki-ichiranzu",
+      keywords: ["戸籍", "法定相続情報", "除籍", "改製原", "広域交付", "koseki", "ichiranzu"],
+    },
+    {
+      theme: "legal-isan-bunkatsu-kyougi",
+      keywords: ["遺産分割", "分割協議", "協議書", "isanbunkatsu", "kyogisho"],
+    },
+    {
+      theme: "legal-iryuubun",
+      keywords: ["遺留分", "侵害額", "iryubun"],
+    },
+    {
+      theme: "legal-yuigon",
+      keywords: ["遺言", "自筆証書", "公正証書", "遺言執行", "yuigon"],
+    },
+    {
+      theme: "legal-ninni-kouken",
+      keywords: ["任意後見", "成年後見", "死後事務", "家族信託", "見守り", "kouken", "shintaku"],
+    },
+    {
+      theme: "legal-souzoku-zei",
+      keywords: ["相続税", "基礎控除", "小規模宅地", "souzoku-zei"],
+    },
+    {
       theme: "legal-inheritance",
-      keywords: ["相続", "遺言", "戸籍", "遺産", "家族信託", "成年後見", "souzoku", "inherit"],
+      keywords: ["相続", "遺産", "相続登記", "souzoku", "inherit"],
+    },
+    {
+      theme: "legal-kousho-ninshou",
+      keywords: [
+        "公証", "アポスティーユ", "領事認証", "私文書認証", "宣誓供述",
+        "kousho", "apostille",
+      ],
     },
     {
       theme: "legal-visa",
@@ -275,15 +678,32 @@ const THEME_RULES: Record<BusinessKey, readonly ThemeRule[]> = {
       ],
     },
     {
+      theme: "legal-inshoku-ryokan",
+      keywords: [
+        "飲食店", "旅館", "民泊", "酒類", "風俗営業", "公衆浴場", "食品衛生",
+        "ryokan", "minpaku", "shurui",
+      ],
+    },
+    {
+      theme: "legal-kensetsu-unsou",
+      keywords: [
+        "建設業", "産廃", "産業廃棄物", "運送", "貨物", "自動車", "解体",
+        "倉庫業", "介護タクシー", "kensetsu", "unso", "sanpai",
+      ],
+    },
+    {
+      theme: "legal-company",
+      keywords: ["会社", "法人", "設立", "定款", "事業承継", "オフィス", "company", "corporation"],
+    },
+    {
       theme: "legal-subsidy",
       keywords: ["補助金", "助成金", "事業計画", "資金計画", "subsidy"],
     },
     {
-      theme: "legal-company",
+      theme: "legal-kyoninka",
       keywords: [
-        "会社", "法人", "設立", "定款", "事業承継", "許認可", "営業許可",
-        "建設業", "運送", "貨物", "旅館業", "民泊", "飲食店", "古物商",
-        "company", "corporation", "permit", "license",
+        "許認可", "営業許可", "申請", "届出", "登録", "古物商",
+        "permit", "license", "kyoka",
       ],
     },
   ],
@@ -293,52 +713,118 @@ const THEME_RULES: Record<BusinessKey, readonly ThemeRule[]> = {
       keywords: ["処遇改善", "処遇改善加算", "ベースアップ等支援", "shogu-kaizen"],
     },
     {
-      theme: "labor-shogai-nenkin",
-      keywords: ["障害年金", "shogai-nenkin", "disability-pension"],
+      theme: "labor-mental-health",
+      keywords: ["メンタル", "休職", "復職", "ストレスチェック", "不調", "mental"],
+    },
+    {
+      theme: "labor-harassment",
+      keywords: [
+        "ハラスメント", "パワハラ", "セクハラ", "カスハラ", "カスタマーハラスメント",
+        "相談窓口", "harassment", "pawahara", "kasuhara",
+      ],
+    },
+    {
+      theme: "labor-taishoku-kaiko",
+      keywords: ["退職", "解雇", "雇止め", "内定取消", "退職代行", "懲戒", "taishoku", "kaiko"],
     },
     {
       theme: "labor-gaikokujin-koyo",
       keywords: [
-        "外国人雇用", "特定技能", "技能実習", "育成就労", "在留資格",
-        "gaikokujin", "foreign-worker", "foreign-employment",
+        "外国人", "特定技能", "技能実習", "育成就労", "在留資格", "留学生",
+        "社会保障協定", "gaikokujin", "foreign-worker", "ryugakusei",
       ],
     },
     {
-      theme: "labor-gaibu-kansanin",
-      keywords: ["外部監査", "監査人", "外部監査人", "gaibu-kansa", "external-audit"],
+      theme: "labor-shogai-nenkin",
+      keywords: ["障害年金", "老齢", "年金", "nenkin", "disability-pension"],
     },
     {
-      theme: "labor-joseikin",
-      keywords: ["助成金", "雇用関係助成金", "キャリアアップ助成金", "joseikin", "subsidy"],
+      theme: "labor-shugyo-kisoku",
+      keywords: ["就業規則", "労使協定", "服務", "規程", "shugyokisoku"],
+    },
+    {
+      theme: "labor-roudou-jikan",
+      keywords: [
+        "労働時間", "36協定", "残業", "割増", "変形労働", "フレックス",
+        "有給", "裁量労働", "勤務間インターバル", "roudou-jikan", "zangyo",
+      ],
+    },
+    {
+      theme: "labor-roudou-jouken",
+      keywords: ["労働条件", "雇用契約", "求人", "明示", "roudou-joken", "kyujin"],
+    },
+    {
+      theme: "labor-kyuyo-keisan",
+      keywords: [
+        "給与計算", "標準報酬", "年末調整", "賃金台帳", "賃金", "給与",
+        "最低賃金", "freee", "kyuyo", "payroll", "chingin",
+      ],
+    },
+    {
+      theme: "labor-koyou-hoken",
+      keywords: [
+        "雇用保険", "労働保険", "労災", "傷病手当", "年度更新",
+        "koyohoken", "rousai", "roudouhoken",
+      ],
+    },
+    {
+      theme: "labor-shakai-hoken",
+      keywords: [
+        "社会保険", "適用拡大", "106万", "130万", "扶養", "健康保険",
+        "shakaihoken", "tekiyo",
+      ],
+    },
+    {
+      theme: "labor-saiyo",
+      keywords: ["採用", "面接", "定着", "内定", "saiyo", "recruit"],
     },
     {
       theme: "labor-kaigo-roumu",
       keywords: [
         "介護", "障害福祉", "福祉", "訪問看護", "放課後等デイ", "就労支援",
-        "kaigo", "welfare", "care-worker",
+        "保育", "kaigo", "welfare", "care-worker",
       ],
     },
     {
-      theme: "labor-saiyo",
-      keywords: ["採用", "求人", "面接", "定着", "内定", "saiyo", "recruit"],
+      theme: "labor-joseikin",
+      keywords: [
+        "助成金", "業際", "顧問", "誰に頼む", "料金",
+        "joseikin", "subsidy", "gyosai",
+      ],
+    },
+    {
+      theme: "labor-gaibu-kansanin",
+      keywords: [
+        "外部監査", "監査人", "帳簿", "勤怠", "労務監査",
+        "gaibu-kansa", "external-audit", "choubo",
+      ],
     },
     {
       theme: "labor-jinin-kijun-roumu",
-      keywords: [
-        "人事", "賃金", "給与", "評価", "就業規則", "労働時間", "社会保険",
-        "雇用契約", "解雇", "ハラスメント", "安全衛生", "jinin", "payroll", "labor",
-      ],
+      keywords: ["人員基準", "常勤換算", "シフト", "配置", "jinin", "kijun"],
     },
   ],
 };
 
+// フォールバックは「その事業のどの記事に付いても不自然でない汎用の絵」を選ぶ。
+// 2026-09-24：社労士は labor-jinin-kijun-roumu（シフト表＝人員基準の専用画像）が
+// 既定だったため、一致しなかった記事にシフト表が付いていた。
+// 汎用の labor-top（事務所と書類）へ変更し、シフト表は人員基準のルール専用に戻した。
 const DEFAULT_THEME: Record<BusinessKey, IllustrationTheme> = {
   realestate: "realestate-toushi",
   legal: "legal-top",
-  labor: "labor-jinin-kijun-roumu",
+  labor: "labor-top",
 };
 
-const SLUG_OVERRIDES: Partial<Record<BusinessKey, Record<string, IllustrationTheme>>> = {};
+// 複数の小テーマをタイトルに列挙するハブ記事は、キーワード一致では必ず先頭の語に
+// 引っ張られる。そういう記事だけここで明示する（キーワードルールより優先される）。
+const SLUG_OVERRIDES: Partial<Record<BusinessKey, Record<string, IllustrationTheme>>> = {
+  legal: {
+    // タイトルが「相続放棄・準確定申告・相続税・相続登記・遺留分」と列挙しているため
+    // 「遺留分」に一致してしまう。期限の総まとめなので相続の総論の絵が正しい。
+    "souzoku-kigen-matome": "legal-inheritance",
+  },
+};
 
 function normalizeOgImage(value: string | undefined): string | undefined {
   const trimmed = value?.trim();
@@ -350,11 +836,21 @@ function normalizeOgImage(value: string | undefined): string | undefined {
   return `/${trimmed.replace(/^public\//, "")}`;
 }
 
-function searchableText(column: ColumnIllustrationInput): string {
-  return [column.slug, column.title, column.category, ...(column.tags ?? [])]
-    .join(" ")
-    .normalize("NFKC")
-    .toLowerCase();
+/** slug・タイトル・カテゴリ＝その記事が何の記事かを決める文字列 */
+function primaryText(column: ColumnIllustrationInput): string {
+  return [column.slug, column.title, column.category].join(" ").normalize("NFKC").toLowerCase();
+}
+
+/** タグ＝補助的な手がかり。主題を表さない語も混ざる */
+function tagText(column: ColumnIllustrationInput): string {
+  return (column.tags ?? []).join(" ").normalize("NFKC").toLowerCase();
+}
+
+function matchRule(rules: readonly ThemeRule[], haystack: string): ThemeRule | undefined {
+  if (!haystack) return undefined;
+  return rules.find(({ keywords }) =>
+    keywords.some((keyword) => haystack.includes(keyword.toLowerCase())),
+  );
 }
 
 function resolvedTheme(
@@ -373,11 +869,15 @@ export function resolveColumnIllustration(
   const override = SLUG_OVERRIDES[column.business]?.[column.slug];
   if (override) return resolvedTheme(override, "slug");
 
-  const haystack = searchableText(column);
-  const rule = THEME_RULES[column.business].find(({ keywords }) =>
-    keywords.some((keyword) => haystack.includes(keyword.toLowerCase())),
-  );
-  if (rule) return resolvedTheme(rule.theme, "theme");
+  // タイトル・カテゴリ・slug を先に見て、そこで決まらないときだけタグを見る。
+  // 2026-09-24：全文を一度に見ていたため、タグに偶然入っていた語が主題を上書きしていた
+  // （「相続手続きの期限まとめ」がタグの「遺留分」で遺留分の画像に、
+  //   「就業規則10人の義務」がタグの「ハラスメント」で相談窓口の画像になっていた）。
+  const rules = THEME_RULES[column.business];
+  const byPrimary = matchRule(rules, primaryText(column));
+  if (byPrimary) return resolvedTheme(byPrimary.theme, "theme");
+  const byTag = matchRule(rules, tagText(column));
+  if (byTag) return resolvedTheme(byTag.theme, "theme");
 
   return resolvedTheme(DEFAULT_THEME[column.business], "fallback");
 }
@@ -402,146 +902,21 @@ export function getColumnIllustrationAssetPaths(): string[] {
   return [...new Set(Object.values(ILLUSTRATIONS).map(({ src }) => src))];
 }
 
-export type ColumnIllustration = {
-  src: `/hero/${string}`;
-  alt: string;
-};
-
-export const COLUMN_ILLUSTRATIONS = {
-  "realestate-souzoku": {
-    src: "/hero/realestate-souzoku-16x9.webp",
-    alt: "相続した実家を前に立つ二人の後ろ姿を描いた水彩イラスト",
-  },
-  "realestate-akiya": {
-    src: "/hero/realestate-akiya-16x9.webp",
-    alt: "雨戸を閉めたまま草の伸びた空き家を描いた水彩イラスト",
-  },
-  "realestate-isan-bunkatsu": {
-    src: "/hero/realestate-isan-bunkatsu-16x9.webp",
-    alt: "一軒の家が三つに分かれる様子と三人の後ろ姿を描いた水彩イラスト",
-  },
-  "realestate-baikyaku-satei": {
-    src: "/hero/realestate-baikyaku-satei-16x9.webp",
-    alt: "机に広げた間取り図と巻尺で不動産の査定をする場面の水彩イラスト",
-  },
-  "realestate-keiyaku-kessai": {
-    src: "/hero/realestate-keiyaku-kessai-16x9.webp",
-    alt: "決済の場で鍵が手渡される瞬間を描いた水彩イラスト",
-  },
-  "realestate-jouto-shotoku": {
-    src: "/hero/realestate-jouto-shotoku-16x9.webp",
-    alt: "申告書と電卓を並べた確定申告の準備を描いた水彩イラスト",
-  },
-  "realestate-youto-chiiki": {
-    src: "/hero/realestate-youto-chiiki-16x9.webp",
-    alt: "用途地域ごとに色分けされた街区を上空から見た水彩イラスト",
-  },
-  "realestate-jigyou-fudosan": {
-    src: "/hero/realestate-jigyou-fudosan-16x9.webp",
-    alt: "ガラス面に空が映る低層オフィスビルを描いた水彩イラスト",
-  },
-  "realestate-inshokuten": {
-    src: "/hero/realestate-inshokuten-16x9.webp",
-    alt: "無地の暖簾をかけた小さな飲食店の店先を描いた水彩イラスト",
-  },
-  "realestate-owner-change": {
-    src: "/hero/realestate-owner-change-16x9.webp",
-    alt: "灯りのともる集合住宅と並べて置かれた二本の鍵を描いた水彩イラスト",
-  },
-  "realestate-yuushi-deguchi": {
-    src: "/hero/realestate-yuushi-deguchi-16x9.webp",
-    alt: "育つ若木と高さの異なる矩形で収支の推移を表した水彩イラスト",
-  },
-  "realestate-taiwan-chuuka": {
-    src: "/hero/realestate-taiwan-chuuka-16x9.webp",
-    alt: "海を挟んで向かい合う二つの街並みを描いた水彩イラスト",
-  },
-  "realestate-rinichi": {
-    src: "/hero/realestate-rinichi-16x9.webp",
-    alt: "片付いた玄関に置かれた旅行鞄と戸口に立つ後ろ姿の水彩イラスト",
-  },
-  "legal-koseki-ichiranzu": {
-    src: "/hero/legal-koseki-ichiranzu-16x9.webp",
-    alt: "重ねた戸籍の帳面から人の関係が枝分かれする様子の水彩イラスト",
-  },
-  "legal-isan-bunkatsu-kyougi": {
-    src: "/hero/legal-isan-bunkatsu-kyougi-16x9.webp",
-    alt: "座卓を囲んで一枚の書面に向かう三人の後ろ姿を描いた水彩イラスト",
-  },
-  "legal-iryuubun": {
-    src: "/hero/legal-iryuubun-16x9.webp",
-    alt: "不均等に分かれた円の中で小さな一片が示される水彩イラスト",
-  },
-  "legal-yuigon": {
-    src: "/hero/legal-yuigon-16x9.webp",
-    alt: "文机に置かれた封をした和封筒と硯を描いた水彩イラスト",
-  },
-  "legal-ninni-kouken": {
-    src: "/hero/legal-ninni-kouken-16x9.webp",
-    alt: "年長者に寄り添う人の後ろ姿と小卓の帳面を描いた水彩イラスト",
-  },
-  "legal-souzoku-zei": {
-    src: "/hero/legal-souzoku-zei-16x9.webp",
-    alt: "三冊の帳面から伸びる線が一点に集まる専門家連携の水彩イラスト",
-  },
-  "legal-kyoninka": {
-    src: "/hero/legal-kyoninka-16x9.webp",
-    alt: "窓口カウンターに置かれた申請書の束を描いた水彩イラスト",
-  },
-  "legal-shitei-shinsei": {
-    src: "/hero/legal-shitei-shinsei-16x9.webp",
-    alt: "平面図の上に置かれた小さな建物模型を描いた水彩イラスト",
-  },
-  "legal-jinin-setsubi-kijun": {
-    src: "/hero/legal-jinin-setsubi-kijun-16x9.webp",
-    alt: "間取り図の各部屋に人型が配置された人員基準の水彩イラスト",
-  },
-  "legal-inshoku-ryokan": {
-    src: "/hero/legal-inshoku-ryokan-16x9.webp",
-    alt: "行灯のともる和風旅館の玄関と徳利を描いた水彩イラスト",
-  },
-  "legal-kensetsu-unsou": {
-    src: "/hero/legal-kensetsu-unsou-16x9.webp",
-    alt: "足場のある建設現場と小型トラック、ヘルメットの水彩イラスト",
-  },
-  "legal-kousho-ninshou": {
-    src: "/hero/legal-kousho-ninshou-16x9.webp",
-    alt: "リボンと封蝋で結ばれた二通の書類を描いた水彩イラスト",
-  },
-  "labor-shugyo-kisoku": {
-    src: "/hero/labor-shugyo-kisoku-16x9.webp",
-    alt: "付箋のはさまった就業規則の冊子を開いた机上の水彩イラスト",
-  },
-  "labor-roudou-jikan": {
-    src: "/hero/labor-roudou-jikan-16x9.webp",
-    alt: "壁の掛け時計と升目だけのシフト表を描いた水彩イラスト",
-  },
-  "labor-roudou-jouken": {
-    src: "/hero/labor-roudou-jouken-16x9.webp",
-    alt: "労働条件を記した書面が手渡される場面の水彩イラスト",
-  },
-  "labor-kyuyo-keisan": {
-    src: "/hero/labor-kyuyo-keisan-16x9.webp",
-    alt: "電卓と升目の一覧表、給与封筒を並べた机上の水彩イラスト",
-  },
-  "labor-shakai-hoken": {
-    src: "/hero/labor-shakai-hoken-16x9.webp",
-    alt: "淡い半円が人々を覆う社会保険の仕組みを表した水彩イラスト",
-  },
-  "labor-koyou-hoken": {
-    src: "/hero/labor-koyou-hoken-16x9.webp",
-    alt: "ヘルメットと救急箱、支える曲線を描いた労働保険の水彩イラスト",
-  },
-  "labor-taishoku-kaiko": {
-    src: "/hero/labor-taishoku-kaiko-16x9.webp",
-    alt: "片付いた机と空の椅子、私物の入った段ボール箱の水彩イラスト",
-  },
-  "labor-harassment": {
-    src: "/hero/labor-harassment-16x9.webp",
-    alt: "向かい合う椅子と空白の吹き出しを描いた相談窓口の水彩イラスト",
-  },
-  "labor-mental-health": {
-    src: "/hero/labor-mental-health-16x9.webp",
-    alt: "窓辺の椅子と曇りから晴れへ移る空、新しい芽を描いた水彩イラスト",
-  },
-} satisfies Record<string, ColumnIllustration>;
+/**
+ * どのルールからも到達できないテーマを返す。正常時は空配列。
+ *
+ * 2026-09-24：新規34点を ILLUSTRATIONS とは別の配列に登録したまま THEME_RULES を
+ * 更新しなかったため、画像もaltも揃っているのに1点も表示されない状態になっていた
+ * （54点中15点しか使われず、1画像あたり最大67記事に集中）。
+ * ファイルの存在確認だけでは検出できないので、経路の有無をテストで担保する。
+ */
+export function getUnreachableIllustrationThemes(): string[] {
+  const routed = new Set<string>(Object.values(DEFAULT_THEME));
+  for (const rules of Object.values(THEME_RULES)) {
+    for (const { theme } of rules) routed.add(theme);
+  }
+  for (const overrides of Object.values(SLUG_OVERRIDES)) {
+    for (const theme of Object.values(overrides ?? {})) routed.add(theme);
+  }
+  return Object.keys(ILLUSTRATIONS).filter((theme) => !routed.has(theme));
+}
