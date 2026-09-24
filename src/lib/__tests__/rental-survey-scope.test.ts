@@ -8,12 +8,12 @@ import { observation, record } from "./rental-survey-fixtures";
 
 describe("調査 scope の検証（T02）", () => {
   it("現行の scope・版だけを受け付ける", () => {
-    expect(resolveSurveyScope("bunkyo-rent-pet", 1)).toMatchObject({ scopeId: "bunkyo-rent-pet", version: 1, region: "文京区" });
+    expect(resolveSurveyScope("bunkyo-rent-pet", 2)).toMatchObject({ scopeId: "bunkyo-rent-pet", version: 2, region: "文京区", providers: ["reins", "itandi", "eslife"] });
   });
 
   it.each([
     ["scope 欠落", undefined, 1], ["版の欠落", "bunkyo-rent-pet", undefined], ["null", null, null],
-    ["未知の scope", "unknown-scope", 1], ["現行でない版", "bunkyo-rent-pet", 2], ["文字列の版", "bunkyo-rent-pet", "1"],
+    ["未知の scope", "unknown-scope", 1], ["現行でない版", "bunkyo-rent-pet", 1], ["現行でない版", "bunkyo-rent-pet", 3], ["文字列の版", "bunkyo-rent-pet", "2"],
     ["学区の scope", SCHOOL_SCOPE_ID, 1], ["プロトタイプ名", "__proto__", 1], ["プロトタイプ名", "constructor", 1],
   ])("%s は拒否する（全 scope・別 scope と解釈しない）", (_, id, version) => {
     expect(resolveSurveyScope(id, version)).toBeNull();
@@ -24,7 +24,7 @@ describe("調査 scope の検証（T02）", () => {
   });
 
   it("公開フラグの識別子は版を含む（新しい版が自動で公開されない）", () => {
-    expect(scopeKey(currentSurveyScope("bunkyo-rent-pet")!)).toBe("bunkyo-rent-pet:1");
+    expect(scopeKey(currentSurveyScope("bunkyo-rent-pet")!)).toBe("bunkyo-rent-pet:2");
   });
 });
 

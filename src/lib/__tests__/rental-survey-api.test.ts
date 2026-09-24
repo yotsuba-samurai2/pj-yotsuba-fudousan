@@ -24,7 +24,7 @@ vi.mock("@/lib/rental-survey/store", () => ({
 const store = [findFinalization, findLatestFinalization, insertBatch, insertFinalization, listBatchMetadata, listFinalizations, readBatches];
 const url = "https://test.invalid/api/admin/rental-survey";
 const post = (body: unknown, headers: Record<string, string> = {}) => POST(new NextRequest(url, { method: "POST", body: JSON.stringify(body), headers }));
-const base = { scopeId: "bunkyo-rent-pet", scopeVersion: 1 };
+const base = { scopeId: "bunkyo-rent-pet", scopeVersion: 2 };
 const permit = (uses: ("store" | "aggregate")[] = ["store"]) => h.ledger.push(...confirmedLedger(uses));
 
 beforeEach(() => {
@@ -43,7 +43,7 @@ describe("入口の順序", () => {
   it("認証が最初：未認証なら何も読まず書かない", async () => {
     vi.mocked(verifyAdminRequest).mockRejectedValue(new AuthError("unauthorized", 401));
     expect((await post({ ...base, action: "save-batch", dryRun: false, batch: batch("reins") })).status).toBe(401);
-    expect((await GET(new NextRequest(`${url}?scopeId=bunkyo-rent-pet&scopeVersion=1`))).status).toBe(401);
+    expect((await GET(new NextRequest(`${url}?scopeId=bunkyo-rent-pet&scopeVersion=2`))).status).toBe(401);
     for (const fn of store) expect(fn).not.toHaveBeenCalled();
   });
 
@@ -53,7 +53,7 @@ describe("入口の順序", () => {
 
   it.each([
     ["scope 欠落", { scopeVersion: 1 }], ["未知の scope", { scopeId: "x", scopeVersion: 1 }],
-    ["学区の scope", { scopeId: "bunkyo-rent-175000-area-48", scopeVersion: 1 }], ["現行でない版", { scopeId: "bunkyo-rent-pet", scopeVersion: 2 }],
+    ["学区の scope", { scopeId: "bunkyo-rent-175000-area-48", scopeVersion: 1 }], ["現行でない版", { scopeId: "bunkyo-rent-pet", scopeVersion: 1 }],
   ])("%s は 400（全 scope と解釈しない）", async (_, scope) => {
     permit();
     expect((await post({ ...scope, action: "save-batch", dryRun: false, batch: batch("reins") })).status).toBe(400);
@@ -68,10 +68,10 @@ describe("入口の順序", () => {
 
   it("GET も scope 必須で、観測行ではなくメタ情報と許諾の有無だけを返す", async () => {
     expect((await GET(new NextRequest(url))).status).toBe(400);
-    const res = await GET(new NextRequest(`${url}?scopeId=bunkyo-rent-pet&scopeVersion=1`));
+    const res = await GET(new NextRequest(`${url}?scopeId=bunkyo-rent-pet&scopeVersion=2`));
     expect(res.status).toBe(200);
     const json = await res.json();
-    expect(json.permissions).toHaveLength(4);
+    expect(json.permissions).toHaveLength(3);
     expect(json.permissions.every((p: { store: boolean; aggregate: boolean }) => !p.store && !p.aggregate)).toBe(true);
     expect(res.headers.get("cache-control")).toContain("no-store");
   });
@@ -111,7 +111,7 @@ describe("バッチの保存", () => {
   it.each([
     ["件数の不一致", batch("reins", [record()], { expectedCount: 2 })],
     ["未知の項目（賃料）", batch("reins", [{ ...record(), rentYen: 1 } as never])],
-    ["別の版", batch("reins", undefined, { scopeVersion: 2 })],
+    ["別の版", batch("reins", undefined, { scopeVersion: 1 })],
     ["未来の観測", batch("reins", undefined, { observedTo: "2099-01-01T00:00:00Z" })],
   ])("%s は保存しない", async (_, b) => {
     permit();

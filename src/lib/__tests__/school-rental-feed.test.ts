@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { compileRentalSummaries, feedSchema, monthlyTotal, sameUnit, nextWeeklyReviewAt, type RentalFeed, type FeedRecord } from "../school-rental-feed";
+import { compileRentalSummaries, compileRentalMarket, splitUnit, fixLayoutAsBuilding, normalizeFeedUnits, feedSchema, monthlyTotal, sameUnit, nextWeeklyReviewAt, type RentalFeed, type FeedRecord } from "../school-rental-feed";
 import { extractReinsRecord } from "../../../scripts/rental-import/reins-school-feed";
 const now = new Date("2026-09-23T05:00:00Z");
 function row(): FeedRecord {
@@ -81,10 +81,10 @@ describe("School rental summaries", () => {
     b.records = [];
     expect(compileRentalSummaries([a,b], [], now).summaries).toHaveLength(1);
   });
-  it("shows the next Wednesday 12:00 JST without treating it as expiry", () => {
-    expect(nextWeeklyReviewAt("2026-09-23T06:23:23Z")).toBe("2026-09-30T03:00:00.000Z");
-    expect(nextWeeklyReviewAt("2026-09-22T23:00:00Z")).toBe("2026-09-23T03:00:00.000Z");
-    expect(nextWeeklyReviewAt("2026-09-23T03:00:00Z")).toBe("2026-09-30T03:00:00.000Z");
+  it("shows the next Wednesday 13:00 JST without treating it as expiry", () => {
+    expect(nextWeeklyReviewAt("2026-09-23T06:23:23Z")).toBe("2026-09-30T04:00:00.000Z");
+    expect(nextWeeklyReviewAt("2026-09-22T23:00:00Z")).toBe("2026-09-23T04:00:00.000Z");
+    expect(nextWeeklyReviewAt("2026-09-23T04:00:00Z")).toBe("2026-09-30T04:00:00.000Z");
   });
   it("matches verified spelling aliases and matching room suffixes without collapsing wings", () => {
     const a = row().summary, b = { ...a, building: "試験マンション ２０５号室" };
@@ -125,5 +125,52 @@ describe("REINS snapshot extraction", () => {
   });
   it("gives explicit pet refusal precedence", () => {
     expect(extractReinsRecord(raw.replace("ペット相談", "ペット不可")).summary.pets).toBe("not-allowed");
+  });
+  it("2026-09-25: dedups a room number carried only in the building name against a row with a unit field", () => {
+    const a = feed("reins"), b = feed("eslife");
+    a.records[0].summary.building = "ビューテラス茗荷谷"; a.records[0].summary.unit = "503";
+    a.records[0].summary.address = "東京都文京区大塚４丁目１１－５";
+    b.records[0].sourceId = "eslife-1"; b.records[0].summary.building = "ビューテラス茗荷谷 503"; b.records[0].summary.unit = "";
+    b.records[0].summary.address = "東京都文京区大塚４丁目11-5";
+    const result = compileRentalSummaries([a, b], [], now);
+    expect(result.summaries).toHaveLength(1);
+    expect(result.excluded.map(e => e.reason)).toContain("同一号室の重複");
+    // 写真付き個別物件（号室欄あり）とも同一住戸として除外する
+    expect(compileRentalSummaries([b], [a.records[0].summary], now).summaries).toHaveLength(0);
+    // 公開表示では建物名と号室を分ける
+    const only = compileRentalSummaries([b], [], now).summaries[0];
+    expect(only.building).toBe("ビューテラス茗荷谷"); expect(only.unit).toBe("503");
+    expect(splitUnit({ building: "試験マンション", unit: "" }).derived).toBe(false);
+  });
+  it("does not merge separate registrations of one source when both room numbers are only inferred", () => {
+    const x = row(), y = row();
+    x.sourceId = "x"; y.sourceId = "y";
+    for (const r of [x, y]) { r.summary.building = "ルミークアン本郷 １００"; r.summary.unit = ""; r.summary.address = "東京都文京区本郷１丁目８－１４"; }
+    y.summary.rentYen = 339000;
+    expect(compileRentalSummaries([feed("reins", [x, y])], [], now).summaries).toHaveLength(2);
+  });
+  it("counts the market regardless of advertising permission, one unit once across sources", () => {
+    const a = feed("reins"), b = feed("eslife");
+    const denied = row(); denied.sourceId = "denied"; denied.advertising = "not-allowed"; denied.summary.unit = "0301";
+    const small = row(); small.sourceId = "small"; small.summary.unit = "0401"; small.summary.areaSqm = 40;
+    const applied = row(); applied.sourceId = "applied"; applied.summary.unit = "0501"; applied.application = "present";
+    a.records.push(denied, small, applied);
+    b.records[0].sourceId = "e1"; b.records[0].summary.unit = ""; b.records[0].summary.building = "試験マンション 205";
+    b.records[0].summary.address = "東京都文京区千石１丁目20-20";
+    const market = compileRentalMarket([a, b], now);
+    expect(market.total).toBe(2); // 0205（2取得元で1件）＋広告不可の0301
+    expect(market.checkedAt).toBe("2026-09-23T04:00:00Z");
+  });
+  it("does not publish a layout as a building name", () => {
+    const fixed = fixLayoutAsBuilding({ building: "4Ｋ", layout: "", address: "東京都文京区千石４丁目３－２", buildingType: "貸家" });
+    expect(fixed.building).toBe("千石４丁目 貸家"); expect(fixed.layout).toBe("4K");
+    expect(fixLayoutAsBuilding({ building: "試験マンション", layout: "2LDK", address: "東京都文京区千石１丁目", buildingType: "" }).building).toBe("試験マンション");
+  });
+  it("normalizes a room number carried in the building name before saving", () => {
+    const f = feed("eslife"); f.records[0].summary.building = "試験マンション 0205"; f.records[0].summary.unit = "";
+    const out = normalizeFeedUnits(f);
+    expect(out.splitCount).toBe(1); expect(out.feed.records[0].summary.building).toBe("試験マンション"); expect(out.feed.records[0].summary.unit).toBe("0205");
+    const g = feed("eslife"); g.records[0].summary.unit = "";
+    expect(normalizeFeedUnits(g).unitMissing).toBe(1);
   });
 });

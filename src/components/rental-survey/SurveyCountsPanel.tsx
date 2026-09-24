@@ -82,6 +82,12 @@ const CONDITIONS: Record<string, Record<LangCode, string>> = {
     "zh-tw": "文京區・住宅用租賃（不限租金與面積）。刊登資訊載明可飼養2隻以上寵物或可商議，或可飼養大型犬或可商議的住戶。每戶以1件計算。",
     zh: "文京区・住宅用租赁（不限租金与面积）。房源信息载明可饲养2只以上宠物或可商议，或可饲养大型犬或可商议的住户。每户按1套计算。",
   },
+  "bunkyo-rent-pet-v2": {
+    ja: "文京区・居住用賃貸（賃料・面積の条件なし）。媒体の記載で、2頭以上の飼育が可・相談可、または大型犬が可・相談可と確認できた住戸。1住戸を1件として集計。",
+    en: "Residential rentals in Bunkyo City (no rent or floor-area limits). Units whose listing states that keeping two or more pets, or a large dog, is allowed or negotiable. Each unit is counted once.",
+    "zh-tw": "文京區・住宅用租賃（不限租金與面積）。刊登資訊載明可飼養2隻以上寵物或可商議，或可飼養大型犬或可商議的住戶。每戶以1件計算。",
+    zh: "文京区・住宅用租赁（不限租金与面积）。房源信息载明可饲养2只以上宠物或可商议，或可饲养大型犬或可商议的住户。每户按1套计算。",
+  },
 };
 
 const DATE_LOCALE: Record<LangCode, string> = { ja: "ja-JP", en: "en-GB", "zh-tw": "zh-TW", zh: "zh-CN" };

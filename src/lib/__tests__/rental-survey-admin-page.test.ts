@@ -17,7 +17,7 @@ describe("ペット調査の取込画面", () => {
   const html = renderToStaticMarkup(createElement(RentalSurveyAdmin));
 
   it("見出しと4つの操作（現状・投入・確定・巻き戻し）を出す", () => {
-    for (const text of ["ペット調査（文京区・居住用賃貸・多頭飼育／大型犬）", "現在の状態", "バッチの投入（1媒体・1回の取得）", "確定（4媒体がそろった週）", "確定の履歴・巻き戻し"])
+    for (const text of ["ペット調査（文京区・居住用賃貸・多頭飼育／大型犬）", "現在の状態", "バッチの投入（1媒体・1回の取得）", "確定（3媒体がそろった週）", "確定の履歴・巻き戻し"])
       expect(html).toContain(text);
     expect(html).toMatch(/<input[^>]*type="file"[^>]*accept="\.json,application\/json"/);
   });
