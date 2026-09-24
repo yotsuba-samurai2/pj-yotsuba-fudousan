@@ -197,6 +197,16 @@ describe("/pet-housing（公開フラグ on・日本語）", () => {
     expect(text).toContain("2頭以上の飼育が可・相談可");
     expect(text).toContain("無条件の入居を保証するものではありません");
   });
+
+  it("個別に広告可を確認した物件は学区と物件名だけを表示する", async () => {
+    const html = await renderPage();
+    const text = visibleText(html);
+    expect(text).toContain("学区と物件");
+    expect(text).toContain("文京区立関口台町小学校");
+    expect(text).toContain("フレンシア文京関口 1105号室");
+    expect(html).toContain('href="/gakku/sekiguchidaimachi/rentals"');
+    expect(text).not.toMatch(/100139619172|東京都文京区関口1丁目28-6|19\.1万円|40\.02|REINS|広告可/);
+  });
 });
 
 describe("公開前・翻訳の無い言語は 404（T18）", () => {

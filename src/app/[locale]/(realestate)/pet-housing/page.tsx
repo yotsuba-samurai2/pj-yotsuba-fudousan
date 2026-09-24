@@ -42,6 +42,7 @@ import { PetRenterForm } from "@/components/pet/PetRenterForm";
 import { PetOwnerForm } from "@/components/pet/PetOwnerForm";
 import { SurveyCountsPanel } from "@/components/rental-survey/SurveyCountsPanel";
 import { getPublicSurveySummary } from "@/lib/rental-survey/store";
+import { compilePublicPetSchoolListings } from "@/lib/pet-school-listings";
 import { OFFICE } from "@/lib/shared/office";
 import { SR_BIO } from "@/lib/shared/sr-label";
 import {
@@ -354,6 +355,7 @@ const card = "rounded-xl border border-border bg-surface p-4";
 export default async function Page() {
   await notFoundUnlessPublishedJa();
   const summary = await getPublicSurveySummary(SURVEY_SCOPE_ID, "ja");
+  const publicListings = compilePublicPetSchoolListings();
 
   return (
     <>
@@ -477,6 +479,32 @@ export default async function Page() {
             </a>
           }
         />
+
+        {publicListings.length > 0 && (
+          <section aria-label="学区と物件">
+            <ReH2>学区と物件</ReH2>
+            <div className="mt-4 overflow-x-auto">
+              <table className="w-full border-collapse text-sm">
+                <thead>
+                  <tr className="bg-primary-tint text-left">
+                    <th className={th}>学区</th>
+                    <th className={th}>物件</th>
+                  </tr>
+                </thead>
+                <tbody className="text-text">
+                  {publicListings.map((listing) => (
+                    <tr key={`${listing.school}:${listing.property}`}>
+                      <td className={td}>
+                        <Link className="font-semibold text-primary underline" href={listing.href}>{listing.school}</Link>
+                      </td>
+                      <td className={td}>{listing.property}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </section>
+        )}
 
         {/* 7. 需要の把握から所有者への相談、受入れ条件の整理、マッチングまで */}
         <div>
