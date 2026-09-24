@@ -102,29 +102,6 @@ export async function recordPublicationChange(
   return change;
 }
 
-/**
- * 書込みを伴わない確認期限超過を「一度だけ」記録する。
- * 直近イベントが expired / unpublished の物件は再記録しない。
- * 実確認を経て再び公開状態に戻れば、保存時に published イベントが積まれる（真の closed は自動復活しない）。
- */
-export async function recordExpiredPublications(
-  store: PublicationEventStore,
-  published: readonly AdminProperty[],
-  now: Date,
-): Promise<string[]> {
-  const recorded: string[] = [];
-  for (const p of published) {
-    if (p.status !== "published" || p.dealType !== "rental") continue;
-    if (publicationSnapshot(p, now).locales.length > 0) continue;
-    const last = await store.latestKind(p.slug);
-    if (last === "expired" || last === "unpublished") continue;
-    const locales = (p.locales && p.locales.length > 0 ? p.locales : ["ja"]) as LangCode[];
-    await store.insert({ slug: p.slug, kind: "expired", contentHash: null, urls: publicationPaths(p.slug, locales), nextAttemptAt: now });
-    recorded.push(p.slug);
-  }
-  return recorded;
-}
-
 export const MAX_NOTIFY_ATTEMPTS = 6;
 const BACKOFF_BASE_MS = 5 * 60 * 1000;
 /** 設定不備（キー不一致・ホスト不一致・不正なURL）。再試行しても直らない */

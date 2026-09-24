@@ -46,11 +46,11 @@ describe("住所を正本とする賃貸の学区",()=>{
     expect(groups.get("kanatomi")).toEqual([p]);
     expect(groups.size).toBe(20);
   });
-  it("終了・下書き・期限切れ・非公開言語・売買を件数にも混ぜない",()=>{
+  it("終了・下書き・非公開言語・売買を件数に混ぜず、確認目安超過は表示する",()=>{
     const live=rental(); const expired=rental();
     if(expired.spec.dealType==='rental')expired.spec.availabilityExpiresAt="2020-01-01T00:00:00Z";
     const list=[live,{...rental(),status:"closed" as const},{...rental(),status:"draft" as const},expired,{...rental(),locales:["ja" as const]},{...rental(),dealType:"land" as const}];
-    expect(groupSchoolRentals(list,"en",NOW).get("kanatomi")).toEqual([live]);
+    expect(groupSchoolRentals(list,"en",NOW).get("kanatomi")).toEqual([live, expired]);
   });
   it.each(["itandi","eslife"] as const)("%s の取込時に非公開の判定記録を残す",provider=>{
     const v=fixture();const address="東京都文京区根津2丁目13-4";

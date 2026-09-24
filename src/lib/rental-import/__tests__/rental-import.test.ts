@@ -4,7 +4,7 @@ import { rentalIdentity, validateRentalImport } from "../validation";
 import { closeRental, importRental, type RentalStore } from "../lifecycle";
 import { isOwnedImage, inspectImage } from "../media";
 import { rentalPublicationError } from "../publication";
-import { formatPropertyPrice, buildRequiredDisplayRows, isRentalExpired, toPublicProperty, type AdminProperty } from "../../property-shared";
+import { formatPropertyPrice, buildRequiredDisplayRows, toPublicProperty, type AdminProperty } from "../../property-shared";
 import { fixture, NOW } from "./fixtures";
 beforeEach(() => vi.stubEnv("NEXT_PUBLIC_SUPABASE_URL", "https://demo.supabase.co"));
 afterEach(() => vi.unstubAllEnvs());
@@ -80,7 +80,6 @@ describe("公開ゲート", () => {
   it("公開ビューにはメール・REINS・AD根拠が出ない", () => { const result = validateRentalImport(fixture(), NOW, "published"); expect(result.ok).toBe(true); if (!result.ok) return; const pub = JSON.stringify(toPublicProperty(result.property)); expect(pub).not.toMatch(/mail-1|REINS|200%|test-100|rentalImport/); expect(rentalPublicationError(result.property, NOW)).toBeNull(); });
   it("手動APIから証拠なしの賃貸公開を拒否", () => { const v = fixture().property; v.status = "published"; expect(rentalPublicationError(v, NOW)).not.toBeNull(); });
   it("月額の端数を落とさない", () => { const p = fixture().property; expect(formatPropertyPrice(p)).toBe("85,500円／月"); expect(buildRequiredDisplayRows(toPublicProperty(p)).find(r => r.key === "price")?.label).toBe("賃料"); });
-  it("確認期限を過ぎたら公開対象外", () => { const result = validateRentalImport(fixture(), NOW, "published"); if (!result.ok) throw new Error(result.reasons.join()); expect(isRentalExpired(result.property, NOW)).toBe(false); expect(isRentalExpired(result.property, new Date(NOW.getTime() + 26 * 3600_000))).toBe(true); expect(isRentalExpired(fixture().property, NOW)).toBe(true); });
 });
 
 describe("再実行と掲載終了", () => {
