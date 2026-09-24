@@ -110,7 +110,8 @@
 | ローカル実DB（`npx prisma dev`・合成データのみ・`verify-local.ts`） | 既存6件＋新 migration の適用、RLS 有効、失敗バッチは観測行なし、同時確定は1件だけ成功、古い番号の再確定は拒否、巻き戻しは追記、**学区の行は全工程で完全一致** |
 | migration の取り消しと当て直し | `down.sql` → 2テーブルと適用記録が消え学区は不変 → `migrate deploy` で再適用 → 再検証も全項目 OK → もう一度 `down.sql` でも学区は不変 |
 | スキーマと migration の差 | 残る差分は既存の `columns_locales_gin`（上記）だけ |
-| 未実施 | ローカルの `next build`（Vercel のプレビュービルドで確認する）、実DB・会員画面・媒体への接続（範囲外）、表示部品を組み込んだページの描画（組み込みは Phase 3・5） |
+| ビルド | Vercel のプレビュービルド（`prisma generate && next build`）が 35dc7db で成功 |
+| 未実施 | ローカルの `next build`（Vercel のビルドで代替）、実DB・会員画面・媒体への接続（範囲外）、表示部品を組み込んだページの描画（組み込みは Phase 3・5） |
 
 受入テストとの対応：
 

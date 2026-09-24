@@ -34,6 +34,8 @@
 
 ## 検証項目（設計）
 
+※ S1〜S3 は Phase 1 時点の設計案に対する論点。実装では「確定ログ（`rental_survey_finalizations`）と sequence の一意制約」「バッチの状態は verified／incomplete／failed」になった（`20_phase2.md` 第2章）。Phase 2 の現物は下の P1〜P8 で確認してください。
+
 | # | 論点 |
 |---|---|
 | S1 | 案A（新テーブル・学区据え置き）で T01〜T03 を構造的に満たせるか。`RentalSurveyCurrent` の楽観ロックで、同じ scope の同時確定を検知できるか |
