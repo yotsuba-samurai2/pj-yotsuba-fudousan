@@ -3,6 +3,8 @@ import { lookupDistrictByAddress } from "./school-district";
 
 export const providers = ["reins", "itandi", "eslife", "atbb"] as const;
 export type FeedProvider = typeof providers[number];
+export const SCHOOL_RENTAL_MIN_RENT_YEN = 175000;
+export const SCHOOL_RENTAL_MIN_AREA_SQM = 48;
 const text = z.string().trim().max(1600);
 const condition = z.enum(["allowed", "consult", "not-allowed", "unknown"]);
 // Unknown costs remain null: an empty source field must never become ¥0.
@@ -91,7 +93,7 @@ export function rejectionReason(feed: RentalFeed, r: FeedRecord, now = new Date(
   if (r.availability !== "active" || r.application === "present") return "募集終了・申込あり";
   if (feed.provider !== "reins" && r.application !== "none") return "申込状態の根拠未確認";
   if (feed.provider !== "reins" && !r.applicationQuote) return "申込状態の根拠なし";
-  if (!r.summary.address.includes("文京区") || r.summary.rentYen < 175000 || r.summary.areaSqm < 48) return "地域・賃料・面積の対象外";
+  if (!r.summary.address.includes("文京区") || r.summary.rentYen < SCHOOL_RENTAL_MIN_RENT_YEN || r.summary.areaSqm < SCHOOL_RENTAL_MIN_AREA_SQM) return "地域・賃料・面積の対象外";
   if (lookupDistrictByAddress(r.summary.address).status !== "determined") return "学区未確定";
   return null;
 }

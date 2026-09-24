@@ -2,6 +2,7 @@ import type { LangCode } from "@/config/languages";
 import type { PublicProperty } from "./property-shared";
 import { isPubliclyVisible } from "./property-shared";
 import { DISTRICT_SOURCE, listSchools, lookupDistrictByAddress, type SchoolInfo } from "./school-district";
+import { SCHOOL_RENTAL_MIN_AREA_SQM, SCHOOL_RENTAL_MIN_RENT_YEN } from "./school-rental-feed";
 
 export type RentalSchoolDistrict =
   | { status: "determined"; school: SchoolInfo; source: typeof DISTRICT_SOURCE }
@@ -25,6 +26,9 @@ export function groupSchoolRentals(properties: readonly PublicProperty[], locale
   const groups = new Map(listSchools().map(s => [s.slug, [] as PublicProperty[]]));
   for (const p of properties) {
     if (!isPubliclyVisible(p, locale, now)) continue;
+    if (p.spec.dealType !== "rental"
+      || p.priceYen < SCHOOL_RENTAL_MIN_RENT_YEN
+      || p.spec.exclusiveAreaSqm < SCHOOL_RENTAL_MIN_AREA_SQM) continue;
     const district = rentalSchoolDistrict(p);
     if (district?.status === "determined") groups.get(district.school.slug)?.push(p);
   }
