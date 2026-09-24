@@ -639,15 +639,21 @@ export default async function ServicesPage() {
               );
             })}
           </div>
-          {/* 2026-09-24：多頭飼い・大型犬の住まい探し（/pet-housing・ja のみ）。4領域には入れず、カードの下に1行で案内する（ペット横断 D-3）。
+          {/* 2026-09-24：ペットと暮らす住まい探し（/pet-housing・ja のみ）。4領域には入れず（ペット横断 D-3）、カードの下に案内のカードを置く。
+              1行の文章では見つからなかったため（浦松指摘「ペットと暮らすがサービスにでてきません」）、4領域のカードと同じ体裁にした。
               公開フラグ off の間はページが404のため出さない。 */}
           {PET_HOUSING_PUBLISHED && locale === "ja" && (
-            <p className="mt-4 text-sm leading-relaxed text-text">
-              {PET_HOUSING_SERVICES_LINE}
-              <Link href={PET_HOUSING_PATH} className="ml-1 font-medium text-primary underline">
-                {PET_HOUSING_NAV_LABEL}
-              </Link>
-            </p>
+            <Link
+              href={PET_HOUSING_PATH}
+              className="mt-3 flex flex-col gap-3 rounded-3xl border border-border bg-surface p-6 transition-shadow hover:shadow-md sm:flex-row sm:items-center sm:justify-between"
+            >
+              <div>
+                <span className="inline-block rounded-full bg-primary-tint px-3 py-1 text-xs font-bold text-primary-dark">多頭飼い・大型犬</span>
+                <h3 className="mt-3 font-serif text-lg font-bold leading-snug text-ink">{PET_HOUSING_NAV_LABEL}</h3>
+                <p className="mt-2 text-sm leading-[1.9] text-text-muted">{PET_HOUSING_SERVICES_LINE}</p>
+              </div>
+              <span className="shrink-0 text-sm font-medium text-primary">→ ペットと暮らす住まい探しへ</span>
+            </Link>
           )}
         </section>
 

@@ -216,13 +216,18 @@ describe("公開前・翻訳の無い言語は 404（T18）", () => {
 });
 
 describe.each([true, false])("掲載先（公開フラグ %s）", (published) => {
-  it("メニュー：on のときだけ /pet-housing を出し、ja 以外では出さない", async () => {
-    const { SERVICE_NAV_UTILITY_LINKS, isNavLinkVisible } = await withFlag(published, () => import("@/config/services-nav"));
-    const link = SERVICE_NAV_UTILITY_LINKS.find((l) => l.href === "/pet-housing");
-    if (!published) return expect(link).toBeUndefined();
-    expect(link?.locales).toEqual(["ja"]);
-    expect(link?.label.ja).toBe("多頭飼い・大型犬の住まい探し");
-    for (const locale of ["en", "zh-tw", "zh"] as const) expect(isNavLinkVisible(link!, locale)).toBe(false);
+  it("メニュー：on のときだけ、4カテゴリの直下の1段に「ペットと暮らす住まい探し」を出し、ja 以外では出さない", async () => {
+    const nav = await withFlag(published, () => import("@/config/services-nav"));
+    const feature = nav.SERVICE_NAV_FEATURES.find((l) => l.href === "/pet-housing");
+    // 補助リンクの小さな列には置かない（2026-09-24 浦松指摘「ペットと暮らすがサービスにでてきません」で移設）
+    expect(nav.SERVICE_NAV_UTILITY_LINKS.some((l) => l.href === "/pet-housing")).toBe(false);
+    expect(nav.SERVICE_NAV_CATEGORIES.flatMap((c) => [c.hubHref, ...c.children.map((l) => l.href)])).not.toContain("/pet-housing");
+    if (!published) return expect(feature).toBeUndefined();
+    expect(feature?.locales).toEqual(["ja"]);
+    expect(feature?.label.ja).toBe("ペットと暮らす住まい探し");
+    expect(feature?.description.ja).toBe("多頭飼い・大型犬の賃貸・購入と、大家さんの受入れ相談");
+    expect(nav.isNavLinkVisible(feature!, "ja")).toBe(true);
+    for (const locale of ["en", "zh-tw", "zh"] as const) expect(nav.isNavLinkVisible(feature!, locale)).toBe(false);
   });
 
   it("sitemap：on のときだけ日本語URLを1件（lastmod＝最終更新）。他言語URL・他言語の hreflang は出さない", async () => {
@@ -235,7 +240,7 @@ describe.each([true, false])("掲載先（公開フラグ %s）", (published) =>
     expect(entries[0].alternates?.languages).toEqual({ ja: URL_JA });
   });
 
-  it("/services：on かつ日本語のときだけ、4領域の下に1行の案内を出す", async () => {
+  it("/services：on かつ日本語のときだけ、4領域の下に案内のカードを出す", async () => {
     const render = async (locale: LangCode) => {
       state.locale = locale;
       const { default: Services } = await withFlag(published, () => import("@/app/[locale]/(realestate)/services/page"));
@@ -243,7 +248,8 @@ describe.each([true, false])("掲載先（公開フラグ %s）", (published) =>
     };
     const ja = await render("ja");
     expect(ja.includes('href="/pet-housing"')).toBe(published);
-    expect(ja.includes("猫3匹以上の多頭飼育や大型犬と暮らせる住まい探しをサポートします。")).toBe(published);
+    for (const text of ["ペットと暮らす住まい探し</h3>", "猫3匹以上の多頭飼育や大型犬と暮らせる住まい探しをサポートします。", "→ ペットと暮らす住まい探しへ"])
+      expect(ja.includes(text), text).toBe(published);
     expect(await render("en")).not.toContain("pet-housing");
   });
 
@@ -254,6 +260,24 @@ describe.each([true, false])("掲載先（公開フラグ %s）", (published) =>
     if (published) expect(body).toMatch(/入居・飼育は約束しない。犬・猫の日本入国の手続の相談は四葉行政書士事務所が独立した事業体として別契約で受ける/);
     // 前後の空行を崩さない（off のときは変更前と同じ本文）
     expect(body).toMatch(published ? /group-home\/ooya\n- \*\*多頭飼い[^\n]*\/pet-housing\n\n免許：/ : /group-home\/ooya\n\n免許：/);
+  });
+});
+
+describe("ヘッダーの「サービス」メニュー", () => {
+  it("4カテゴリの直下の1段（SERVICE_NAV_FEATURES）を、デスクトップのメガメニューとスマホのアコーディオンの両方で出す", async () => {
+    const { readFileSync } = await import("node:fs");
+    const { resolve } = await import("node:path");
+    const source = readFileSync(resolve(__dirname, "../../components/layout/TenantLayout.tsx"), "utf8");
+    expect(source.match(/SERVICE_NAV_FEATURES\.filter\(\(feature\) => isNavLinkVisible\(feature, locale\)\)/g)).toHaveLength(2);
+    // どちらも4カテゴリの後・補助リンクの列の前に置く
+    for (const menu of [source.slice(source.indexOf('id="services-mega-menu"'), source.indexOf("function ServicesMobileAccordion")), source.slice(source.indexOf('id="services-mobile-accordion"'))]) {
+      const categories = menu.indexOf("SERVICE_NAV_CATEGORIES.map");
+      const features = menu.indexOf("SERVICE_NAV_FEATURES.filter");
+      const utility = menu.indexOf("SERVICE_NAV_UTILITY_LINKS.filter");
+      expect(categories).toBeGreaterThan(-1);
+      expect(features).toBeGreaterThan(categories);
+      expect(utility).toBeGreaterThan(features);
+    }
   });
 });
 
