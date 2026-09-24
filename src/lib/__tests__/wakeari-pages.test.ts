@@ -174,7 +174,9 @@ describe("出口チェックリスト（指示書 5-5）", () => {
     expect(links).toEqual(["/column/souzoku-mitouki-tatemono-hyodai-touki-baikyaku"]);
   });
 
-  it("client component は送信・保存・外部通信を持たず、留保文と /contact?intent=wakeari を常時出す", () => {
+  // 2026-09-24：「この内容で相談する」で回答の要約をフォームへ渡す（contact-prefill・同じタブの中で1回だけ・読んだら消える）。
+  // 部品そのものは今も送信・外部通信・ストレージの直接操作を持たない（受け渡しは contact-prefill.ts に閉じる）。
+  it("client component は送信・外部通信・ストレージの直接操作を持たず、留保文と /contact?intent=wakeari を常時出す", () => {
     const src = read("src/components/wakeari/WakeariExitChecklist.tsx");
     expect(src.startsWith('"use client"')).toBe(true);
     expect(src).not.toMatch(/fetch\(|localStorage|sessionStorage|<form/);

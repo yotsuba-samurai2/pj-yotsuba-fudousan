@@ -683,3 +683,80 @@ export const WAKEARI_CHECKLIST_NONE = {
   exits: ["通常の媒介で進められる可能性。まず役所調査から"],
   docs: ["登記事項証明書", "公図"],
 };
+
+// ─────────────────────────────────────────────────────────────
+// 出口チェックリストの結果と、問い合わせフォームへ渡す本文（2026-09-24）
+// ─────────────────────────────────────────────────────────────
+
+export type WakeariChecklistAnswers = Record<string, string>;
+
+export type WakeariChecklistResult = {
+  answeredCount: number;
+  complete: boolean;
+  /** 全問に答えて、どの条件にも当たらなかった（WAKEARI_CHECKLIST_NONE を出す） */
+  none: boolean;
+  /** 考えられる出口（一般論）。none のときは WAKEARI_CHECKLIST_NONE.exits */
+  exits: string[];
+  /** 先に確認する書類。none のときは WAKEARI_CHECKLIST_NONE.docs */
+  docs: string[];
+  /** 詳しい説明の送り先（種類別ページの固定順＝回答順に左右されない） */
+  pages: WakeariPage[];
+  /** 詳しい説明の送り先（ページ以外） */
+  links: { href: string; label: string }[];
+};
+
+/** 画面の結果表示とフォームへ渡す本文の両方がこれを使う（表示と本文を食い違わせない） */
+export function computeWakeariChecklistResult(answers: WakeariChecklistAnswers): WakeariChecklistResult {
+  const exits: string[] = [];
+  const docs: string[] = [];
+  const pageKeys = new Set<WakeariPageKey>();
+  const links: { href: string; label: string }[] = [];
+  let answeredCount = 0;
+  for (const q of WAKEARI_CHECKLIST) {
+    const opt = q.options.find((o) => o.value === answers[q.id]);
+    if (!opt) continue;
+    answeredCount += 1;
+    exits.push(...(opt.exits ?? []));
+    docs.push(...(opt.docs ?? []));
+    if (opt.page) pageKeys.add(opt.page);
+    if (opt.link && !links.some((l) => l.href === opt.link!.href)) links.push(opt.link);
+  }
+  const complete = answeredCount === WAKEARI_CHECKLIST.length;
+  const uniqExits = [...new Set(exits)];
+  const none = complete && uniqExits.length === 0;
+  return {
+    answeredCount,
+    complete,
+    none,
+    exits: none ? [...WAKEARI_CHECKLIST_NONE.exits] : uniqExits,
+    docs: none ? [...WAKEARI_CHECKLIST_NONE.docs] : [...new Set(docs)],
+    pages: WAKEARI_TYPE_KEYS.filter((k) => pageKeys.has(k)).map((k) => WAKEARI_PAGES[k]),
+    links,
+  };
+}
+
+/** フォームの「ご相談内容」に入る本文の末尾（ここから下を利用者が書き足す） */
+export const WAKEARI_CHECKLIST_MESSAGE_FOOTER = "（物件の所在地や、ご相談したいことをここにご記入ください）";
+
+/**
+ * 「この内容で相談する」を押したときに、問い合わせフォームの「ご相談内容」欄へ入れる本文。
+ * 回答（未回答は「未回答」）・画面に出た出口と書類・留保文（固定）をそのまま並べる。判断は足さない。
+ * 1問も答えていないときは空文字（フォームにはカテゴリだけを渡す）。
+ */
+export function buildWakeariChecklistMessage(answers: WakeariChecklistAnswers): string {
+  const r = computeWakeariChecklistResult(answers);
+  if (r.answeredCount === 0) return "";
+  const lines: string[] = [`【出口チェックリストの回答（${r.answeredCount}／${WAKEARI_CHECKLIST.length}問）】`];
+  WAKEARI_CHECKLIST.forEach((q, i) => {
+    const opt = q.options.find((o) => o.value === answers[q.id]);
+    lines.push(`Q${i + 1}. ${q.question}：${opt ? opt.label : "未回答"}`);
+  });
+  if (r.exits.length > 0) {
+    lines.push("", "【画面に表示された、考えられる出口（一般論）】", ...r.exits.map((e) => `・${e}`));
+  }
+  if (r.docs.length > 0) {
+    lines.push("", "【先に確認する書類】", ...r.docs.map((d) => `・${d}`));
+  }
+  lines.push("", `※${WAKEARI_CHECKLIST_RESERVATION}`, "", WAKEARI_CHECKLIST_MESSAGE_FOOTER);
+  return lines.join("\n");
+}

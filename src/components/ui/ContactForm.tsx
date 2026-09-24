@@ -21,6 +21,7 @@ import {
 } from "@/lib/shared/contact-intake";
 import type { LangCode } from "@/config/languages";
 import { contactIntentParam, gaEvent } from "@/lib/gtag";
+import { takeContactPrefill } from "@/lib/shared/contact-prefill";
 
 const inputClass =
   "mt-1 w-full rounded-lg bg-surface px-4 py-3 text-sm outline-none transition-all duration-300 gradient-border-input";
@@ -93,6 +94,10 @@ export function ContactForm({ thanksPath = "/thanks", business = "realestate" }:
     const keys = CATEGORY_ORDER_BY_BUSINESS[business] ?? CATEGORY_ORDER_DEFAULT;
     if (keys.includes(intent)) {
       setCategory((c) => c || intent);
+      // 2026-09-24：送り元ページが遷移の直前に用意した「ご相談内容」を受け取る（例：/wakeari の出口チェックリストの
+      // 回答の要約）。intent が一致するときだけ1回読んで消す。入力途中の本文は上書きしない。
+      const prefill = takeContactPrefill(intent);
+      if (prefill) setMessage((m) => m || prefill);
     }
   }, [locale, business]);
 
