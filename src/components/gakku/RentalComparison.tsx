@@ -5,6 +5,7 @@ import { findSchoolBySlug } from "@/lib/school-district";
 import { monthlyTotal, type PublicRentalSummary } from "@/lib/school-rental-feed";
 import { PropertyLegalBlock } from "@/components/bukken/PropertyLegalBlock";
 import { RentalInquiryProvider, RentalInquiryButton } from "./RentalInquiry";
+import { LazyDetails } from "./LazyDetails";
 import { canonicalUrl } from "@/lib/seo";
 import { localizeRentalValue } from "@/lib/rental-feed-i18n";
 
@@ -68,7 +69,7 @@ export function RentalComparison({ rows, locale }: { rows: PublicRentalSummary[]
         // 2026-09-24：型の決まった値だけ訳す（保証会社欄＝r.guarantor は条件文のため原文）。全ページ点検 #3
         const t = (v: string) => localizeRentalValue(v, locale);
         const values = [t(r.buildingType), t(r.access), t(r.built), t(r.structure), t(r.floors), t(r.contractType), t(r.contractPeriod), t(r.guaranteeDeposit), t(r.renewalFee), t(r.insurance), r.guarantor, t(r.otherFees)];
-        return <article id={r.id} key={r.id} className="rounded-xl border border-border bg-surface p-4 sm:p-5">
+        return <article id={r.id} key={r.id} className="rounded-xl border border-border bg-surface p-4 sm:p-5 [content-visibility:auto] [contain-intrinsic-size:auto_420px]">
           <div className="flex flex-wrap items-center justify-between gap-2">
             <h3 className="font-semibold text-ink">{r.building} {r.unit}</h3>
             {school ? <Link className="rounded-full bg-primary-tint px-3 py-1 text-sm font-semibold text-primary" href={addLocalePrefix(`/gakku/${school.slug}/rentals`, locale)}>{school.formalName}</Link> : <span className="rounded-full bg-surface-dim px-3 py-1 text-sm">{c.districtUnknown}</span>}
@@ -77,13 +78,13 @@ export function RentalComparison({ rows, locale }: { rows: PublicRentalSummary[]
           <dl className="mt-3 grid gap-x-5 gap-y-3 text-sm sm:grid-cols-2 lg:grid-cols-3">
             {[[c.rent, `${money(r.rentYen)} / ${money(r.managementYen)} / ${money(r.commonYen)}`], [c.deposit, `${t(r.deposit) || c.unknown} / ${t(r.keyMoney) || c.unknown}`], [c.layout, `${r.layout || c.unknown} / ${r.areaSqm} m²`], [c.address, r.address], [c.move, t(r.availabilityText) || c.unknown], [c.pets, c.statuses[r.pets]], [c.foreign, c.statuses[r.foreignNationals]], [c.corporate, c.statuses[r.corporate]], [c.companyHousing, c.statuses[r.companyHousing]]].map(([label, value]) => <div key={label}><dt className="text-xs text-text-muted">{label}</dt><dd className="mt-1 break-words">{value}</dd></div>)}
           </dl>
-          <details className="mt-4 border-t border-border pt-3">
-            <summary className="cursor-pointer text-sm font-semibold text-primary">{c.detail}</summary>
+          {/* 2026-09-24：中身は開いたときに初めて描く（161件×条件欄で DOM 1.6万個・TBT 402ms だった） */}
+          <LazyDetails className="mt-4 border-t border-border pt-3" summaryClassName="cursor-pointer text-sm font-semibold text-primary" summary={c.detail}>
             <dl className="mt-3 grid gap-3 text-sm sm:grid-cols-2">
               {values.map((v, i) => <div key={c.fields[i]}><dt className="text-text-muted">{c.fields[i]}</dt><dd>{v || c.unknown}</dd></div>)}
               {[[c.pets, r.petTerms], [c.foreign, r.foreignTerms], [c.corporate, r.corporateTerms], [c.companyHousing, r.companyHousingTerms]].map(([label, value]) => <div key={label}><dt className="text-text-muted">{label}</dt><dd>{value || c.unknown}</dd></div>)}
             </dl>
-          </details>
+          </LazyDetails>
           <p className="mt-3 text-xs text-text-muted">{c.checked}：{date(r.checkedAt)} / {c.until}：{date(r.nextReviewAt)}</p>
           <RentalInquiryButton target={{ title: `${r.building} ${r.unit}`, url: `${canonicalUrl("realestate", listingPath(r), locale)}#${r.id}` }}>{c.request}</RentalInquiryButton>
         </article>;
