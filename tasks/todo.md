@@ -688,3 +688,45 @@ sitemap の `locales` もページの `availableLocales` と同時に4言語へ�
 - 姉妹企画 `/wakeari`（PR #421・未マージ）とは対応表コンポーネント（`column-consult-windows.ts`・`RelatedConsultWindows.tsx`）を共用する設計。後にマージする側で競合解消
 - 未検証：文京区の近隣説明の運用（区ページに記載なし）／消防法施行令(6)項ロの入居者区分の数値（総務省令未取得）／既存送信経路のスパム対策は無し（本 PR で新設せず）／Wikidata「共同生活援助」の照合（API が 429）／描画確認は Vercel プレビュー
 
+
+## 2026-09-24 四葉ペット横断プロジェクト Phase 1（調査・設計のみ）— claude/zealous-fermat-t7x0f2
+
+指示書：「四葉ペット横断プロジェクト 改訂版マスター実装指示書」版2.0（2026-09-24）。**Phase 1 はアプリコード・DB・ジョブ・公開サイトを変更せず、報告書を提出して停止する**（第0・20章）。
+
+- [x] 作業場所・Git（clean・origin/main と差分0）・オープンPR（#424・#419 は対象外）を確認
+- [x] 4領域を並行調査：学区フィード／フォーム・GA4・GH大家LP／ルート・多言語・SEO・JSON-LD／ペット関連の既存記事
+- [x] 報告書 `docs/pet-project/00_phase1-report.md`、別セッション検証用 `docs/pet-project/01_handoff-for-verification.md`
+- [x] draft PR #425 https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/pull/425
+- [ ] 浦松の判断 D-1〜D-5（受付テーブル新設／scope 分離案A／トップへの追加位置／学区「平均2倍以上」／Phase 2 の範囲）
+- [ ] 別セッションで一次検証（F1〜F14・S1〜S6）
+- [ ] Phase 2 の実施指示（それまで着手しない）
+
+**レビュー記録**
+- 監査の「同一アプリ内のルートグループ」は現物と一致（不動産・行政書士・社労士が1アプリ）。統合・移転は不要
+- 学区フィードの保存キーは `provider` 単独（scope はスキーマ検査のリテラルのみ）。ペット scope を同テーブルに入れると学区を上書きする
+- `/api/contact` は受付を保存しない（メールだけが記録・事務所宛メール失敗で消失・自動返信失敗で重複）。迷惑投稿対策なし。第12章を満たすには受付テーブルが要る
+- 既存学区ページの空表示「ご紹介できる物件はありません」（4言語）と「平均2倍以上」（ja・zh-tw・zh）は指示書と不整合。Phase 5 候補
+- 未実測：ja 専用ページの `/en/...` が 200 で日本語本文を返す点（コード上の推定。検証項目 F12）
+
+## 2026-09-24 四葉ペット横断プロジェクト Phase 2（保存分離・許諾ゲート・公開集計・表示部品）— claude/zealous-fermat-t7x0f2
+
+浦松判断：D-1 受付テーブル新設（Phase 3）／D-2 学区と別の保存先／D-3 推奨どおり／D-4 「平均2倍以上」削除／D-5 指示書どおり Phase 2 から。計画はプランモードで承認済み。
+
+- [x] 基準線：main `e1d692c` で vitest 94ファイル・1,389件、tsc 0
+- [x] D-4：`RentalComparison.tsx` の相談枠から「平均2倍以上」を4言語とも削除（英語版にもあった）＋再発防止テスト（7e5fb21）
+- [x] 新テーブル `rental_survey_batches`・`rental_survey_finalizations`（migration＋down.sql。RLS・権限剥奪）
+- [x] `src/lib/rental-survey/`（scope・pet-terms・batch・permissions・units・finalize・summary・store）
+- [x] 管理API `/api/admin/rental-survey`（save-batch／finalize／rollback・dryRun・GET はメタ情報のみ）
+- [x] 表示部品 `SurveyCountsPanel`（4言語・未組込み）
+- [x] テスト 10ファイル（T01〜T16 対応）＋学区APIに1件
+- [x] ローカル実DB（prisma dev）で migration・T01・T03・down.sql・当て直しを確認（学区の行は全工程で完全一致）
+- [x] 検証：vitest 104ファイル・1,532件／tsc 0／eslint error 0
+- [x] `docs/pet-project/20_phase2.md`、Phase 1 報告書の訂正、検証依頼書に Phase 2 項目
+- [ ] PR #425 の更新（マージ・本番DB適用・許諾台帳・公開フラグは別承認）
+
+**レビュー記録**
+- `prisma migrate diff` の出力に既存のずれ `DROP INDEX "columns_locales_gin"` が入る。生成SQLをそのまま使わず、2テーブル作成だけに絞った
+- `down.sql` は当初「`migrate resolve --rolled-back`」を案内していたが、適用済みの migration には使えなかった（P3012）。適用記録の削除を down.sql に含め、戻す→当て直す→再検証で確認
+- 読み返しで2点を修正：管理APIのログに Error オブジェクトを渡さない（Prisma のエラー文はデータを含み得る）／許諾台帳の同時刻の確認済み・撤回は拒否側を採る。どちらも修正前のコードで新テストが失敗することを確認
+- 指示書どおりにしない点（少数抑制・広告不可件数・前週比）は `20_phase2.md` 第3章に理由を記載
+- 未実施：ローカルの `next build`（Vercel プレビューで確認）／表示部品を組み込んだページの描画（Phase 3・5）

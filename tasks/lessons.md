@@ -326,3 +326,11 @@
 - **対応表の件数を固定した番人テストは、表を増やすと必ず落ちる**（`wakeari-pages.test.ts` の 19→27）。件数の更新と、新しい slug の代表2件の対応先アサーションを同じコミットで入れる。
 - **e-Gov 法令API v2 は過去時点の条文も取れる**（`law_data/<law_id>?asof=YYYY-MM-DD`）。改正前後の比較（旧6条1項4号）を原文で確認でき、「一般的理解にもとづく」という留保を外せる。改正法の法律番号は `law_revisions/<law_id>` の `amendment_law_num` で確定する。
 - **PR がマージされた作業ブランチは main から作り直す**（`git checkout -B <branch> origin/main` → 最初の push だけ `--force-with-lease`）。マージ済みの履歴に新コミットを積まない。
+
+## 2026-09-24 ペット横断 Phase 2（調査データの保存分離・許諾ゲート）
+
+- **サブエージェントの「◯言語にある／無い」は grep で全ロケールを確かめてから書く**。Phase 1 報告書で「平均2倍以上」を「ja・zh-tw・zh」と書いたが、英語版にも “at least twice” があった（`RentalComparison.tsx:27`）。訳語が違うので日本語の grep では拾えない。4言語の該当キーを直接読む。
+- **`prisma migrate diff` の生成SQLをそのまま migration にしない**。このリポジトリでは既存のずれ（`columns_locales_gin` が schema.prisma に未宣言）のため、毎回 `DROP INDEX "columns_locales_gin"` が混ざる。本番の検索用インデックスを消すことになるので、自分の変更分だけに絞る。
+- **適用に成功した migration には `prisma migrate resolve --rolled-back` が使えない（P3012：失敗状態の migration 専用）**。手動で戻す down.sql は、テーブル削除と `_prisma_migrations` の該当行削除を1トランザクションで行い、「戻す→`migrate deploy` で当て直す」まで実DBで確かめる。
+- **ログ漏えいのテストで `JSON.stringify(spy.mock.calls)` を使うと空振りする**（Error のプロパティは列挙されず `{}` になる）。「引数がすべて文字列であること」を確かめ、修正前のコードで失敗することを実際に見る。
+- **未追跡の新規ファイルは `git stash` で退避できない**（pathspec エラー）。「修正前なら失敗するか」を見るときは、ファイルをスクラッチに複製→該当行だけ戻す→テスト→復元、の順で行う。
