@@ -34,6 +34,16 @@ describe("売買学区の面積・公開集合", () => {
     const p=sale("house");
     expect(grouped([{...p,status:"closed"},{...p,status:"draft"},{...p,locationText:"東京都豊島区目白１丁目1"},{...p,locationText:"文京区小石川3丁目"},{...p,dealType:"condo"},{...p,spec:{...specs.house,buildingAreaSqm:NaN} as PropertySpec}])).toHaveLength(0);
   });
+  it("小石川3丁目売地は一次資料で確認した柳町小学校区へ掲載する", () => {
+    const p = sale("land", "koishikawa-3-land");
+    p.locationText = "東京都文京区小石川三丁目";
+    const groups = groupSchoolSales([p], "ja");
+    expect(groups.get("yanagicho")).toEqual([p]);
+    expect(groups.get("rekisen")).toEqual([]);
+    const detail = renderToStaticMarkup(createElement(PropertySchoolDistrict, { property: p, locale: "ja" }));
+    expect(detail).toContain("文京区立柳町小学校");
+    expect(detail).toContain("/gakku/yanagicho/sales");
+  });
   it("言語と賃貸・売買を別集計、原住所で判定", () => {
     const p=sale("house"); expect(grouped([p],"en")).toHaveLength(1);
     expect(grouped([{...p,locales:["ja"]}],"en")).toHaveLength(0);

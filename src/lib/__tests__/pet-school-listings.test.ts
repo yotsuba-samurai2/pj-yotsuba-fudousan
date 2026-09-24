@@ -10,6 +10,8 @@ const base = {
   availability: "active" as const,
   application: "unknown" as const,
   exactRoomMatched: true,
+  familySuitable: true,
+  familyEvidence: "2LDK・ファミリー入居可を確認",
   checkedAt: "2026-09-24T20:30:00+09:00",
 };
 
@@ -18,7 +20,7 @@ describe("広告可を個別確認したペット物件の最小公開一覧", (
     expect(compilePublicPetSchoolListings([base])).toEqual([{
       school: "文京区立関口台町小学校",
       property: "確認済みマンション 101号室",
-      href: "/gakku/sekiguchidaimachi/rentals",
+      href: "/gakku/sekiguchidaimachi",
     }]);
     expect(JSON.stringify(compilePublicPetSchoolListings([base]))).not.toMatch(/private-source-id|東京都文京区|2026-09-24|allowed/);
   });
@@ -31,8 +33,14 @@ describe("広告可を個別確認したペット物件の最小公開一覧", (
     { availability: "unknown" as const },
     { application: "present" as const },
     { exactRoomMatched: false },
+    { familySuitable: false },
+    { familyEvidence: "" },
     { address: "東京都文京区関口1丁目" },
-  ])("未確認・要連絡・広告不可・募集終了・申込あり・学区未確定を除外する %#", (override) => {
+  ])("未確認・要連絡・広告不可・募集終了・申込あり・非ファミリー・学区未確定を除外する %#", (override) => {
     expect(compilePublicPetSchoolListings([{ ...base, ...override }])).toEqual([]);
+  });
+
+  it("フレンシア文京関口1105号室はファミリー向けでないため公開しない", () => {
+    expect(compilePublicPetSchoolListings()).toEqual([]);
   });
 });
