@@ -14,6 +14,7 @@ import { CtaBand } from "@/components/shared/CtaBand";
 import { CurrentPropertyListings } from "@/components/bukken/CurrentPropertyListings";
 import type { LangCode } from "@/config/languages";
 import { SERVICE_NAV_CATEGORIES, resolveNavLabel, isNavLinkVisible } from "@/config/services-nav"; // 4カードの子ページチップは単一ソースを参照（メガメニュー・フッターと同じ定義）
+import { PET_HOUSING_NAV_LABEL, PET_HOUSING_PATH, PET_HOUSING_PUBLISHED, PET_HOUSING_SERVICES_LINE } from "@/lib/pet-housing";
 
 type DiffRow = { label: string; value: string };
 type FieldCard = { tag: string; title: string; body: string; linkLabel: string };
@@ -638,6 +639,16 @@ export default async function ServicesPage() {
               );
             })}
           </div>
+          {/* 2026-09-24：多頭飼い・大型犬の住まい探し（/pet-housing・ja のみ）。4領域には入れず、カードの下に1行で案内する（ペット横断 D-3）。
+              公開フラグ off の間はページが404のため出さない。 */}
+          {PET_HOUSING_PUBLISHED && locale === "ja" && (
+            <p className="mt-4 text-sm leading-relaxed text-text">
+              {PET_HOUSING_SERVICES_LINE}
+              <Link href={PET_HOUSING_PATH} className="ml-1 font-medium text-primary underline">
+                {PET_HOUSING_NAV_LABEL}
+              </Link>
+            </p>
+          )}
         </section>
 
         {/* §3 進め方（図解03再現：番号円＋矢印SVG・md未満は縦積み） */}

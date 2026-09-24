@@ -1,3 +1,4 @@
+import { SCHOOL_SALE_COPY, SCHOOL_SALE_INDEX_PATH, schoolSalePath } from "@/lib/sale-school-district";
 // /gakku＝文京区の小学校 通学区域のハブ。
 // 区の公表データ（町丁目・番・号）をそのまま持つ一次データ層の入口で、
 // 誠之・昭和・千駄木・窪町の4校は個別ページへ送る（2026-09-22 浦松決定）。
@@ -125,6 +126,7 @@ export default async function GakkuHubPage() {
         </section>
 
         <Link href={addLocalePrefix(SCHOOL_RENTAL_INDEX_PATH, locale)} className="mt-6 block rounded-xl bg-primary p-5 text-center font-semibold text-white hover:opacity-90">{SCHOOL_RENTAL_COPY[locale].indexTitle} →</Link>
+        <Link href={addLocalePrefix(SCHOOL_SALE_INDEX_PATH, locale)} className="mt-3 block rounded-xl border border-primary p-5 text-center font-semibold text-primary">{SCHOOL_SALE_COPY[locale].indexTitle} →</Link>
 
         <p className="mt-10 rounded-xl border border-border bg-surface-dim p-4 text-sm leading-relaxed text-text">
           {c.hub.answer}
@@ -194,6 +196,7 @@ export default async function GakkuHubPage() {
                         school.formalName
                       )}
                       <Link href={addLocalePrefix(schoolRentalPath(school.slug), locale)} className="mt-2 block text-xs font-semibold text-primary underline">{SCHOOL_RENTAL_COPY[locale].view} →</Link>
+                      <Link href={addLocalePrefix(schoolSalePath(school.slug), locale)} className="mt-2 block text-xs font-semibold text-primary underline">{SCHOOL_SALE_COPY[locale].view} →</Link>
                     </td>
                     <td className="py-2 pr-3 text-text-muted">
                       {SCHOOL_PROFILES[school.slug]?.address}

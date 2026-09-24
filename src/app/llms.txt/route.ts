@@ -3,6 +3,7 @@ import { BUSINESS_URLS } from "@/lib/seo";
 import { SR_LAUNCHED } from "@/lib/shared/office";
 import { REGISTRATION_NUMBER } from "@/lib/data/sr-launch-patches";
 import { WAKEARI_LLMS_COLUMNS } from "@/lib/wakeari";
+import { PET_HOUSING_PUBLISHED } from "@/lib/pet-housing";
 
 export const revalidate = 3600;
 
@@ -18,6 +19,13 @@ export const revalidate = 3600;
  *   （2026-08-10 に本番の全チャンクを走査して漏れ0件を実測済み）。
  */
 const sr = <T,>(before: T, after: T): T => (SR_LAUNCHED ? after : before);
+
+/**
+ * 多頭飼い・大型犬の住まい探し（/pet-housing・2026-09-24 新設）。公開フラグ off の間はページが404のため載せない。
+ * 飼育の可否を約束しないこと・渡航手続は別事業体・別契約であることを、引用されても落ちない1行に収める。
+ */
+const PET_HOUSING_LLMS_LINE =
+  "- **多頭飼い・大型犬と暮らせる住まい探しと、大家の受入れ相談**：猫3匹以上の多頭飼育や大型犬と暮らせる賃貸・購入物件の探索と貸主側への受入れの確認（借主側・買主側の媒介）、空室をペット飼育者に貸したい大家からの相談（受入れ条件・敷金・原状回復など契約前の論点整理、貸主側の媒介）。飼育の可否は貸主・管理組合が決めるもので、入居・飼育は約束しない。犬・猫の日本入国の手続の相談は四葉行政書士事務所が独立した事業体として別契約で受ける（本人が同意した場合のみ相談内容を伝える）。https://luck428.com/pet-housing\n";
 
 function realestateLlmsTxt(): string {
   return `# 四葉グループ（四葉不動産株式会社 / 四葉行政書士事務所${sr("", " / 四葉社会保険労務士事務所")}）
@@ -49,7 +57,7 @@ ${sr("2026年9月より、**四葉社会保険労務士事務所**を開業予�
 - **投資用・事業用不動産**：障害福祉グループホーム向け物件、社宅、収益物件。事業目的から逆算して提案
 - **多言語のお部屋探し**：外国人の賃貸仲介。日本語・英語・中国語（繁体字・簡体字）で対応
 - **グループホーム向け物件の募集（貸したい大家・空き家所有者向け）**：戸建て・空き家・アパートを共同生活援助の事業者に貸したい所有者からの相談。用途・消防・貸主承諾など契約前の論点整理、事業者とのマッチング、貸主側の媒介。消防・建築の可否判断は消防署・特定行政庁、指定申請の書類は四葉行政書士事務所（別事業体・別契約）。https://luck428.com/group-home/ooya
-
+${PET_HOUSING_PUBLISHED ? PET_HOUSING_LLMS_LINE : ""}
 免許：**宅地建物取引業 東京都知事(1)第113304号**
 
 ---

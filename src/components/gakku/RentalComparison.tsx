@@ -18,25 +18,25 @@ const consultationCopy = {
   ja: {
     title: "一覧にない物件もご紹介できます",
     selection: "この一覧は、不動産業者向けの流通サイトや住宅プラットフォームに掲載された物件のうち、管理会社（元付）が「広告可」としているファミリー向け物件に絞って掲載しています。",
-    offer: "四葉不動産へ個別にお問い合わせいただいた場合、この一覧の掲載件数の平均2倍以上の物件をご提案できます。ご希望の学区・賃料・間取り・入居時期をお知らせください。",
+    offer: "ご希望の学区・賃料・間取り・入居時期をお知らせいただければ、この一覧にない物件も含めて現在の募集状況と紹介の可否を確認し、ご案内します。",
     action: "一覧にない物件も含めて相談する",
   },
   en: {
     title: "We can introduce properties beyond this list",
     selection: "This list includes only family-oriented rentals from real estate agent networks and housing platforms for which the managing or listing agent has granted advertising permission.",
-    offer: "When you contact Yotsuba Real Estate directly, we can propose, on average, at least twice the number of properties shown in this list. Tell us your preferred school district, rent, layout and move-in date.",
+    offer: "Tell us your preferred school district, rent, layout and move-in date, and we will check current availability and whether we can introduce each property, including properties not on this list, before getting back to you.",
     action: "Ask about properties beyond this list",
   },
   "zh-tw": {
     title: "我們也能介紹列表以外的物件",
     selection: "本列表從不動產業者流通網站及住宅平台的物件中，僅刊登管理公司（原始委託業者）已允許刊登廣告的家庭型租屋物件。",
-    offer: "個別向四葉不動産諮詢時，我們平均可提供本列表刊登數量2倍以上的物件。歡迎告知您希望的學區、租金、格局及入住時間。",
+    offer: "歡迎告知您希望的學區、租金、格局及入住時間。我們將確認包含本列表以外物件在內的最新招租狀況與可否介紹後，再為您說明。",
     action: "諮詢包含列表以外的物件",
   },
   zh: {
     title: "我们也能介绍列表以外的房源",
     selection: "本列表从不动产经纪流通网站及住宅平台的房源中，仅刊登管理公司（原始委托经纪方）已允许刊登广告的家庭型租赁房源。",
-    offer: "单独向四葉不動産咨询时，我们平均可提供本列表刊登数量2倍以上的房源。欢迎告知您希望的学区、租金、户型及入住时间。",
+    offer: "欢迎告知您希望的学区、租金、户型及入住时间。我们将确认包括本列表以外房源在内的最新招租情况与可否介绍后，再为您说明。",
     action: "咨询包含列表以外的房源",
   },
 } satisfies Record<LangCode, { title: string; selection: string; offer: string; action: string }>;
