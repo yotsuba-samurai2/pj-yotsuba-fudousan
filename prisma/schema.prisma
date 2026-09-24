@@ -211,3 +211,24 @@ model RentalSurveyFinalization {
   @@unique([scopeId, scopeVersion, sequence])
   @@map("rental_survey_finalizations")
 }
+
+// 問い合わせの受付（まずペット住宅の借り手・大家フォームから。既存の /api/contact は保存しないまま）。
+// 個人情報を含む。閲覧は受付の所有者（uramatsujoji@luck428.com）だけ。受付から1年で削除する。
+// 保存に成功した時点で受付成功とし、通知・自動返信の結果は後から記録する。
+model Inquiry {
+  id              String   @id @default(cuid())
+  receiptNo       String   @unique @map("receipt_no")
+  idempotencyKey  String   @unique @map("idempotency_key")
+  business        String
+  category        String
+  locale          String
+  sourcePath      String   @map("source_path")
+  payload         Json
+  consentShare    String   @map("consent_share") // none | granted
+  notifyStatus    String   @map("notify_status") // pending | sent | failed
+  autoReplyStatus String   @map("auto_reply_status") // pending | sent | failed | skipped
+  createdAt       DateTime @default(now()) @map("created_at")
+
+  @@index([createdAt])
+  @@map("inquiries")
+}
