@@ -3,12 +3,18 @@ import { isPubliclyVisible, type PublicProperty } from "./property-shared";
 import { listSchools, type SchoolInfo } from "./school-district";
 import { rentalSchoolDistrict } from "./rental-school-district";
 
+/** 番地を非公開にしている自社物件のうち、一次資料で学区まで確認できたもの。 */
+const VERIFIED_SALE_SCHOOL_ADDRESSES: Readonly<Record<string, string>> = {
+  // 販売図面「Koishikawa 331 Project」および文京区の通学区域表（小石川3丁目27〜31番＝柳町小）で確認。
+  "koishikawa-3-land": "東京都文京区小石川3丁目31番",
+};
+
 export const SCHOOL_SALE_INDEX_PATH = "/gakku/sales";
 export const SALE_TYPES = ["condo", "house", "land"] as const;
 export function schoolSalePath(slug: string) { return `/gakku/${slug}/sales`; }
-export function saleSchoolDistrict(p: Pick<PublicProperty, "dealType" | "locationText">) {
+export function saleSchoolDistrict(p: Pick<PublicProperty, "slug" | "dealType" | "locationText">) {
   if (p.dealType !== "condo" && p.dealType !== "house" && p.dealType !== "land") return null;
-  return rentalSchoolDistrict({ ...p, dealType: "rental" });
+  return rentalSchoolDistrict({ ...p, locationText: VERIFIED_SALE_SCHOOL_ADDRESSES[p.slug] ?? p.locationText, dealType: "rental" });
 }
 export function schoolSaleArea(p: PublicProperty) {
   if (p.dealType !== p.spec.dealType) return null;

@@ -16,7 +16,7 @@ export function DistrictSourceNote({ locale }: { locale: LangCode }) {
 }
 
 /** A span, not a nested link, so cards can keep one accessible click target. */
-export function SchoolDistrictTag({ property, locale }: { property: Pick<PublicProperty, "dealType" | "locationText">; locale: LangCode }) {
+export function SchoolDistrictTag({ property, locale }: { property: Pick<PublicProperty, "slug" | "dealType" | "locationText">; locale: LangCode }) {
   const district = rentalSchoolDistrict(property) ?? saleSchoolDistrict(property);
   if (!district) return null;
   const c = SCHOOL_RENTAL_COPY[locale];

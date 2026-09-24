@@ -7,6 +7,7 @@ import { groupSchoolSales, schoolSaleArea, SCHOOL_SALE_COPY, schoolSalePath } fr
 import { groupSchoolRentals } from "@/lib/rental-school-district";
 import { listSchools, findSchoolBySlug } from "@/lib/school-district";
 import { SchoolSaleIndex, SchoolSaleListings } from "@/components/gakku/SchoolSalePages";
+import { SchoolRentalIndex } from "@/components/gakku/SchoolRentalPages";
 import { PropertySchoolDistrict } from "@/components/gakku/RentalSchoolDistrict";
 import type { LangCode } from "@/config/languages";
 vi.mock("@/components/shared/Breadcrumb", () => ({ Breadcrumb: () => null }));
@@ -34,6 +35,16 @@ describe("売買学区の面積・公開集合", () => {
     const p=sale("house");
     expect(grouped([{...p,status:"closed"},{...p,status:"draft"},{...p,locationText:"東京都豊島区目白１丁目1"},{...p,locationText:"文京区小石川3丁目"},{...p,dealType:"condo"},{...p,spec:{...specs.house,buildingAreaSqm:NaN} as PropertySpec}])).toHaveLength(0);
   });
+  it("小石川3丁目売地は一次資料で確認した柳町小学校区へ掲載する", () => {
+    const p = sale("land", "koishikawa-3-land");
+    p.locationText = "東京都文京区小石川三丁目";
+    const groups = groupSchoolSales([p], "ja");
+    expect(groups.get("yanagicho")).toEqual([p]);
+    expect(groups.get("rekisen")).toEqual([]);
+    const detail = renderToStaticMarkup(createElement(PropertySchoolDistrict, { property: p, locale: "ja" }));
+    expect(detail).toContain("文京区立柳町小学校");
+    expect(detail).toContain("/gakku/yanagicho/sales");
+  });
   it("言語と賃貸・売買を別集計、原住所で判定", () => {
     const p=sale("house"); expect(grouped([p],"en")).toHaveLength(1);
     expect(grouped([{...p,locales:["ja"]}],"en")).toHaveLength(0);
@@ -42,6 +53,13 @@ describe("売買学区の面積・公開集合", () => {
   });
 });
 describe("売買学区の画面・集計・動線", () => {
+  it.each(["ja","en","zh-tw","zh"] as LangCode[])("%s: 賃貸ハブの20校タイル下に学校別の売買件数を出さない", locale => {
+    const properties=[sale("house"),sale("land"),sale("condo")]; const prefix=locale==="ja"?"":"/"+locale;
+    const hub=renderToStaticMarkup(createElement(SchoolRentalIndex,{properties,locale}));
+    for(const s of listSchools())expect(hub).not.toContain(prefix+schoolSalePath(s.slug));
+    expect(hub).not.toMatch(/売買\s*0件|For sale:\s*0|出售中\s*0件|出售中\s*0套/);
+    expect(hub).toContain(prefix+"/gakku/sales");
+  });
   it.each(["ja","en","zh-tw","zh"] as LangCode[])("%s: 20校と売買導線、QA非表示", locale => {
     const properties=[sale("house"),sale("land"),sale("condo")]; const prefix=locale==="ja"?"":"/"+locale;
     const hub=renderToStaticMarkup(createElement(SchoolSaleIndex,{properties,locale}));
