@@ -1736,6 +1736,46 @@ const ARTICLES: ArticleSpec[] = [
     localesWithTranslations: ["zh-tw"],
     hubLinks: ["/wakeari/saikenchiku-fuka"],
   },
+  {
+    file: "85-cleaning-jo-bukken-youken-kyusuisui-shori.md",
+    slug: "cleaning-jo-bukken-youken-kyusuisui-shori",
+    title: "クリーニング所を開くとき、物件の用途地域と構造設備はどこを確認する？",
+    publishedAt: "2026-09-24",
+    category: "投資・事業用不動産",
+    excerpt:
+      "洗濯物を受け取って自分の店で洗う「クリーニング所」に使える物件は、用途地域と構造設備基準で絞られます。業務用の洗たく機を置いて洗う一般のクリーニング所は建築基準法上「原動機を使用する工場」として扱われるのが一般的で、無人コインランドリーや取次所とは用途地域の扱いが違います。開設はクリーニング業法第5条第1項の届出をあらかじめ都道府県知事へ出し、第5条の2の検査・確認を受けてから使えます。東京都文京区の宅地建物取引士兼行政書士が、契約前に確認できることを条文と厚生労働省・東京都の資料から整理します。",
+    keywords: [
+      "クリーニング所 物件",
+      "クリーニング所 用途地域 工場",
+      "クリーニング業法 開設届 5条",
+      "クリーニング所 構造設備基準 洗場",
+      "コインランドリー クリーニング所 違い",
+    ],
+    tags: ["事業用不動産", "許認可", "用途地域", "クリーニング業法"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/toushi", "/office"],
+  },
+  {
+    file: "86-souzoku-fudosan-daisho-bunkatsu-hyoka-baikyaku.md",
+    slug: "souzoku-fudosan-daisho-bunkatsu-hyoka-baikyaku",
+    title: "相続不動産を売らずに分ける「代償分割」——評価はどう決め、売却は要る？",
+    publishedAt: "2026-09-24",
+    category: "相続",
+    excerpt:
+      "一人が相続不動産を引き継ぎ、他の相続人へ代償金を払って分けるのが代償分割です。取得者が代償金を用意できれば売らずに残せ、金額は相続人の合意で決めますが、相続税の課税価格の計算では相続税評価額との調整が要る場面があります（国税庁タックスアンサーNo.4173）。代償金を現金でなく別の不動産で払うと譲渡所得が課税され得る点まで、東京都文京区の宅地建物取引士兼行政書士が、評価の決め方と売却の要否を条文と国税庁の資料から整理します。",
+    keywords: [
+      "代償分割 不動産 評価",
+      "代償分割 換価分割 違い",
+      "代償金 相続税 課税価格 調整",
+      "代償分割 代償財産 現物 譲渡所得",
+      "相続不動産 売らずに 分ける",
+    ],
+    tags: ["相続", "代償分割", "不動産評価", "譲渡所得"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/souzoku"],
+  },
 ];
 
 function toPlainText(md: string): string {

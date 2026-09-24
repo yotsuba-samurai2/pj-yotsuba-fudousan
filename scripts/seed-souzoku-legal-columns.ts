@@ -713,6 +713,22 @@ const REQUIRED_HUB_LINKS: Record<string, string[]> = {
     "/legal/column/isan-bunkatsu-kyougisho",
     "/legal/column/souzoku-touki-nagare",
   ],
+  "yakkyoku-kaisetsu-kyoka-kozo-setsubi-kanri-yakuzaishi": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/shinryojo-kaisetsu-todokede-iryoho-8jo",
+    "/legal/column/iryohojin-setsuritsu-ninka-nagare-shorui",
+  ],
+  "yuigon-tekkai-teishoku-fukusu-yuigon-yuretsu": [
+    "/legal/services/inheritance",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/souzoku",
+    "/legal/column/jihitsu-kosei-yuigon",
+    "/legal/column/souzoku-yuigon-hakken-tetsuzuki",
+    "/legal/column/tokutei-zaisan-shokei-yuigon-izo-chigai",
+  ],
 };
 
 /** 表示コンプライアンス上の禁止語 */
@@ -2350,6 +2366,33 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "別事業体",
     "独立した事業体",
   ],
+  "yakkyoku-kaisetsu-kyoka-kozo-setsubi-kanri-yakuzaishi": [
+    "医薬品医療機器等法第4条第1項",
+    "第5条",
+    "第7条第3項",
+    "薬局等構造設備規則",
+    "6年ごと",
+    "管理薬剤師",
+    "店舗販売業",
+    "登録販売者",
+    "平成31年3月20日薬生総発第320003号",
+    "別事業体",
+    "独立した事業体",
+  ],
+  "yuigon-tekkai-teishoku-fukusu-yuigon-yuretsu": [
+    "民法第1022条",
+    "民法第1023条",
+    "民法第1024条",
+    "民法第1025条",
+    "民法第1026条",
+    "民法第968条第1項",
+    "民法第1004条",
+    "抵触",
+    "撤回",
+    "非復活主義",
+    "別事業体",
+    "独立した事業体",
+  ],
 };
 
 /** 記事ごとに含めてはならない表現 */
@@ -2470,6 +2513,8 @@ const FORBIDDEN_PHRASES: Record<string, string[]> = {
   "jidosha-souzoku-iten-toroku-tetsuzuki": [],
   "shuro-keizoku-shien-ab-shitei-shinsei-youken": [],
   "souzoku-hijojo-kabushiki-isanbunkatsu-kyogi": [],
+  "yakkyoku-kaisetsu-kyoka-kozo-setsubi-kanri-yakuzaishi": [],
+  "yuigon-tekkai-teishoku-fukusu-yuigon-yuretsu": [],
 };
 
 /** 本セット外へ張る既存legalコラムslug（リポジトリの他シードで実在確認済み） */
@@ -4380,6 +4425,58 @@ const ARTICLES: Array<{
       "事業承継",
       "準共有",
       "株主名簿",
+      "行政書士",
+    ],
+  },
+  {
+    file: "80-yakkyoku-kaisetsu-kyoka-kozo-setsubi-kanri-yakuzaishi.md",
+    slug: "yakkyoku-kaisetsu-kyoka-kozo-setsubi-kanri-yakuzaishi",
+    date: "2026-09-24",
+    title:
+      "薬局を開設する許可は、構造設備と管理薬剤師のどこが要件になる？",
+    category: "許認可（行政書士の実務から）",
+    excerpt:
+      "調剤を行う薬局を開くには、店舗ごとに所在地の都道府県知事（保健所設置市・特別区は市長・区長）の薬局開設許可が必要です（医薬品医療機器等法第4条第1項）。許可の3つの基準（①構造設備が薬局等構造設備規則に適合、②業務体制が基準に適合、③欠格事由に当たらない。同法第5条）、面積おおむね19.8平方メートル以上・調剤室6.6平方メートル以上などの構造設備、管理薬剤師の実地管理と原則専任・兼務許可（第7条）、申請の流れと必要書類、店舗販売業（ドラッグストア等）との許可の違い、保険薬局指定が別手続であることを整理し、物件・労務・税務を分離受任で誰に振るかを示しました。",
+    keywords: [
+      "薬局開設許可 構造設備基準",
+      "薬局 管理薬剤師 専任 兼務",
+      "薬局開設許可 申請 流れ 必要書類",
+      "薬局 店舗販売業 違い 許可",
+      "薬局等構造設備規則 面積 調剤室",
+      "薬局 開設 行政書士",
+    ],
+    tags: [
+      "薬局開設許可",
+      "構造設備基準",
+      "管理薬剤師",
+      "店舗販売業",
+      "許認可",
+      "行政書士",
+    ],
+  },
+  {
+    file: "81-yuigon-tekkai-teishoku-fukusu-yuigon-yuretsu.md",
+    slug: "yuigon-tekkai-teishoku-fukusu-yuigon-yuretsu",
+    date: "2026-09-24",
+    title:
+      "遺言を書き直したい・複数見つかった——撤回と抵触の優劣はどう決まる？",
+    category: "相続の手続き（行政書士の実務から）",
+    excerpt:
+      "遺言はいつでも遺言の方式に従って撤回できます（民法第1022条）。後の遺言が前の遺言と抵触する部分は後の遺言で撤回したものとみなされ、抵触しない部分は前の遺言のまま有効です（第1023条第1項）。遺言後の生前贈与・売却など抵触する処分もその部分の撤回とみなされます（第1023条第2項）。遺言書の破棄（第1024条）、撤回された遺言の非復活（第1025条）、撤回権放棄の禁止（第1026条）、複数遺言の優劣と日付を欠く自筆証書遺言の効力までを整理し、有効性を争う場面は弁護士・名義変更は司法書士・相続税は税理士へ分離受任で振る分担を示しました。",
+    keywords: [
+      "遺言 撤回 方法 書き直し",
+      "前の遺言 後の遺言 抵触 優劣",
+      "遺言後 生前贈与 売却 撤回",
+      "複数 遺言 見つかった どれが有効",
+      "自筆証書遺言 日付 吉日 無効",
+      "遺言 撤回 行政書士",
+    ],
+    tags: [
+      "遺言",
+      "撤回",
+      "抵触",
+      "自筆証書遺言",
+      "遺言執行",
       "行政書士",
     ],
   },
