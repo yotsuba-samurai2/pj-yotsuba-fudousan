@@ -7,6 +7,7 @@ import { GAKKU_COPY } from "@/lib/gakku";
 import { buildGakkuHubJsonLd } from "@/lib/gakku-jsonld";
 import { DISTRICT_SOURCE, listSchools } from "@/lib/school-district";
 import { ENROLLMENT, ENROLLMENT_SOURCE, enrollmentChange } from "@/lib/data/bunkyo-enrollment";
+import { SCHOOL_SALE_COPY } from "@/lib/sale-school-district";
 
 const LOCALES: LangCode[] = languages.map((l) => l.code);
 const PAGE = fs.readFileSync(path.join(process.cwd(), "src/app/[locale]/(realestate)/gakku/page.tsx"), "utf8");
@@ -26,6 +27,11 @@ describe("学区ハブのファーストビュー", () => {
     expect(hook).toContain("3S1K");
     expect(hook).toMatch(/当社の取扱い|rentals we handle|本公司經手|本公司经手/);
     expect(hook).not.toMatch(/名門|瞬間蒸発|人気|prestigious|名校/);
+  });
+  it.each(LOCALES)("%s: 物件検索バナーは賃貸・売買共通の1本だけ表示する", (locale) => {
+    expect(SCHOOL_SALE_COPY[locale].indexTitle).not.toMatch(/売買物件を探す|for sale by school|出售物件|出售房源/);
+    expect(PAGE).not.toContain("SCHOOL_RENTAL_INDEX_PATH");
+    expect(PAGE.match(/SCHOOL_SALE_INDEX_PATH/g)).toHaveLength(2);
   });
 });
 

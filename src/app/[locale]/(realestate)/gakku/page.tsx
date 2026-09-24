@@ -20,7 +20,7 @@ import {
 import { gakkuCopy, getFeaturedSchools, SCHOOL_LIST_SOURCE, SCHOOL_PROFILES } from "@/lib/gakku";
 import { summarizeByChome } from "@/components/gakku/DistrictSection";
 import GakkuMapEmbed from "@/components/gakku/GakkuMapEmbed";
-import { SCHOOL_RENTAL_COPY, SCHOOL_RENTAL_INDEX_PATH, schoolRentalPath } from "@/lib/rental-school-district";
+import { SCHOOL_RENTAL_COPY, schoolRentalPath } from "@/lib/rental-school-district";
 import { propertyUi } from "@/lib/property-i18n";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { buildGakkuHubJsonLd } from "@/lib/gakku-jsonld";
@@ -125,8 +125,7 @@ export default async function GakkuHubPage() {
           </div>
         </section>
 
-        <Link href={addLocalePrefix(SCHOOL_RENTAL_INDEX_PATH, locale)} className="mt-6 block rounded-xl bg-primary p-5 text-center font-semibold text-white hover:opacity-90">{SCHOOL_RENTAL_COPY[locale].indexTitle} →</Link>
-        <Link href={addLocalePrefix(SCHOOL_SALE_INDEX_PATH, locale)} className="mt-3 block rounded-xl border border-primary p-5 text-center font-semibold text-primary">{SCHOOL_SALE_COPY[locale].indexTitle} →</Link>
+        <Link href={addLocalePrefix(SCHOOL_SALE_INDEX_PATH, locale)} className="mt-6 block rounded-xl bg-primary p-5 text-center font-semibold text-white hover:opacity-90">{SCHOOL_SALE_COPY[locale].indexTitle} →</Link>
 
         <p className="mt-10 rounded-xl border border-border bg-surface-dim p-4 text-sm leading-relaxed text-text">
           {c.hub.answer}
