@@ -70,7 +70,8 @@ export const rentalImportSchema = z.object({
   titleHighlights: z.array(titleHighlightSchema).max(3).optional(),
   contentReview: contentReviewSchema.optional(),
   unconfirmedTerms: z.object({
-    fields: z.array(z.enum(["guaranteeDeposit", "insurance", "guarantor", "conditions"])).min(1),
+    /** 2026-09-25: 更新料・契約期間・入居時期も社長指示で「未確認」表示を許可。 */
+    fields: z.array(z.enum(["guaranteeDeposit", "insurance", "guarantor", "conditions", "renewalFee", "contractPeriod", "deliveryYm"])).min(1),
     operatorInstruction: z.literal("未確認です。未確認と書いてください。"),
     recordedAt: z.iso.datetime({ offset: true }),
   }).optional(),
