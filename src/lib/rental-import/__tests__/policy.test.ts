@@ -53,6 +53,12 @@ describe("2026-09-20の採用ルール", () => {
     v.property.spec.guarantor = "日本セーフティー加入必須（料金未確認）";
     v.source.availability = "unknown"; expect(validateRentalImport(v, NOW).ok).toBe(false);
   });
+  it.each(["renewalFee", "contractPeriod", "deliveryYm"] as const)("%sも指示があれば未確認と表示して登録できる", (field) => {
+    const v = fixture(); if (v.property.spec.dealType === "rental") v.property.spec[field] = "未確認";
+    expect(validateRentalImport(v, NOW).ok).toBe(false);
+    v.unconfirmedTerms = { fields: [field], operatorInstruction: "未確認です。未確認と書いてください。", recordedAt: NOW.toISOString() };
+    review(v); expect(validateRentalImport(v, NOW, "published").ok).toBe(true);
+  });
   it.each(["strictest", "most-pets"] as const)("%sの比較で片側欠落・同一サイト重複は両サイト確認にならない", (rule) => {
     const c = rule === "strictest" ? fees() : choiceWithChecks({ rule, field: "conditions", replace: "ペット不可", options: [
       { provider: "itandi", value: "犬猫1匹", maxCount: 1, evidence: proof("犬猫1匹") },
