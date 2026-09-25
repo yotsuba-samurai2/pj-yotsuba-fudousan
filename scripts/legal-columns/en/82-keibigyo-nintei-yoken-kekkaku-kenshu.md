@@ -1,0 +1,81 @@
+---
+title: "Starting a security-guard company: the certification requirements, disqualifications, and training in full"
+excerpt: "A security business is started not by a licence but by the certification of the prefectural public safety commission (Security Services Act, Article 4). It requires that none of the disqualifications in Article 3 apply, and that a security-guard instruction and education supervisor can be appointed per office and per business category (Article 22). Guards must receive new-recruit training (in principle 20 hours or more) and in-service training (10 hours or more per year); operating without certification is punishable by a fine of up to 1 million yen (Article 57). This article organises the framework and who to hand each part to."
+category: "Permits and Licensing (From the Practice of an Administrative Scrivener)"
+---
+**In short:** a security business is started by receiving the certification of the prefectural public safety commission, not a licence (Security Services Act, Article 4). The premises are that none of the disqualifications in Article 3 (bankruptcy, imprisonment, ties to organised crime, etc.) apply, and that a security-guard instruction and education supervisor can be appointed for each office and each category of security work (Article 22). Guards must receive new-recruit training (in principle 20 hours or more) and in-service training (10 hours or more per business year) (Article 21 and Article 38 of the Enforcement Regulations); operating without certification is punishable by a fine of up to 1 million yen (Article 57). The certification is valid for five years and must be renewed. This article is general information; individual eligibility, documents and review times rest with the competent police (public safety commission) and a qualified professional. Preparing the certification documents is handled by Yotsuba Administrative Scrivener Office, labour matters by a certified social insurance labour consultant, and the office property by Yotsuba Real Estate Co., Ltd., each as an independent business under a separate contract.
+
+## A security business is by "certification," not a "licence"—what must you satisfy before starting?
+
+A person who intends to run a security business must receive the certification of the prefectural public safety commission, confirming that none of the items of Article 3 apply (Security Services Act, Article 4). Unlike a restaurant's business licence or an industrial-waste collection licence, the security business uses the word "certification," but it is the same in that you cannot start without it. The application is filed with the prefectural public safety commission having jurisdiction over the location of the principal office (the counter is the competent police station), by submitting an application form and attachments (Article 5).
+
+Security work is divided into four categories in Article 2. Category 1 is facility security guarding against theft and similar incidents at offices, homes, entertainment venues, car parks and amusement parks; category 2 is crowd and traffic-guidance security guarding against injury and similar incidents where people and vehicles crowd; category 3 is transport security guarding against theft of cash, precious metals, works of art and the like in transit; and category 4 is close protection guarding against harm to a person's body in their vicinity (a so-called bodyguard). You state which category of work you will do on the application form and build the training and supervisor structure per category.
+
+The certification is valid for five years from the day of certification. To continue the security business after the term expires, you must receive a renewal, applying at least 30 days before the expiry date. If you carelessly forget to renew and the term lapses, you may fall into operating without certification, so managing the deadline is a practical linchpin.
+
+## How far are the disqualifications (bankruptcy, criminal record, organised-crime ties, etc.) checked?
+
+The disqualifications that are the premise of certification are listed in Article 3 of the Security Services Act. Representative ones include: a person who has received a decision to commence bankruptcy proceedings and has not been rehabilitated; a person sentenced to imprisonment or more, or fined for violating the Security Services Act, and for whom five years have not passed since completion of the sentence; a person who has violated the Act or a disposition under it within the last five years; a person likely to commit violent unlawful acts collectively or habitually; an organised-crime member, or a person for whom five years have not passed since ceasing to be one; a person addicted to alcohol, narcotics, cannabis, opium or stimulants; a person unable to properly perform security work due to a mental or physical disorder; and a person under 18.
+
+For a company, if any of its officers falls under the above disqualifications, it cannot be certified either. In other words, when applying as a company, the presence of disqualifications is checked not only for the representative but for all officers such as directors. Whether a disqualification applies is examined through attachments such as a certificate of registered matters, a certificate of no criminal record, a copy of the resident record and a written pledge, together with the public safety commission's investigation.
+
+Which prior conviction or disposition falls under which item, and whether past circumstances amount to a disqualification, is an individual judgement in light of the facts. An administrative scrivener supports preparing and submitting documents on rights, duties and factual certification, but avoids asserting eligibility itself; that rests with the competent police (public safety commission). Evaluation touching on the fate of a criminal case (such as when a conviction lapses) is an attorney's domain.
+
+## Who serves as the security-guard instruction and education supervisor, and how is the qualification obtained?
+
+A security business operator must appoint a security-guard instruction and education supervisor for each office and each category of security work handled at that office, from among those holding a supervisor qualification certificate (Security Services Act, Article 22(1)). This supervisor is central to preparing and carrying out the guards' training plan and to instruction and supervision, and their name and address are stated even at the time of the certification application. If there is a reasonable ground to conclude that a supervisor cannot be appointed, the operator cannot be certified in the first place (one of the disqualifications).
+
+The qualification certificate is issued to those who have completed the security-guard instruction and education supervisor course conducted by the prefectural public safety commission, and others. Because the course and certificate are divided by category (1 through 4), an office that does both facility security and traffic guidance needs a supervisor structure holding the certificate for each category. Whether concurrent service is allowed and the details of placement when one office handles several categories are confirmed according to the competent authority's practice.
+
+## What are the hours and record obligations for new-recruit and in-service training?
+
+Security operators and guards have a duty to strive to improve their knowledge and ability regarding security work in order to perform it properly, and the operator must provide training to its guards together with necessary instruction and supervision (Security Services Act, Article 21). The training hours are set in Article 38 of the Security Services Act Enforcement Regulations and elsewhere.
+
+| Training category | Hours (in principle) | Notes |
+|---|---|---|
+| New-recruit training (inexperienced guard) | 20 hours or more in total for basic plus category-specific training | Shortened from the former 30-hours-or-more by the 2019 amendment |
+| New-recruit training (experienced, e.g. 3+ years in that work) | 7 hours or more in total | Shortened or exempted by experience or qualification |
+| In-service training | 10 hours or more per business year | May be shortened to 6 hours or more for certain qualification holders |
+
+When training is given, there is a duty to prepare, keep and retain records such as a training log. Hours and categories can change by amendment—there was also a review in 2024 recently—so confirm with the latest guidance of the competent police or public safety commission before conducting training. If training records are not in order, you may become subject to an on-site inspection or an order.
+
+## What happens if you take on security work without certification?
+
+A person who runs a security business without applying for certification, or before receiving the notice regarding certification, is punishable by a fine of up to 1 million yen (Security Services Act, Article 57, item 1). Likewise, a person who continues the security business after the certificate's term expires without applying for renewal, and a person who fails to appoint a security-guard instruction and education supervisor, are subject to a fine of up to 1 million yen (same Article, various items).
+
+If you are fined for violating the Security Services Act, until five years pass from completion of the sentence you fall under a disqualification and cannot apply for certification. Starting without certification means that, for the sake of an immediate order, you may be unable to operate lawfully for the next five years. "Do not start work before receiving the notice of certification" is, in practice, the first fork in the road.
+
+## How should you split certification, labour and office property among whom?
+
+Launching a security company divides by stage.
+
+- Preparing the certification application and attachments, applying to the public safety commission (competent police station), organising documents on the instruction and education supervisor, and various notifications such as the start-of-mechanical-security notification → Yotsuba Administrative Scrivener Office (administrative scrivener)
+- Handling of working hours and nap time after hiring, night-work premium wages, work rules and social-insurance procedures, and other labour management → a certified social insurance labour consultant
+- Finding the office, standby room or nap room, confirming the right to use, and the lease → Yotsuba Real Estate Co., Ltd. (a real estate broker)
+- Incorporation registration and officer-change registration → a judicial scrivener
+- Corporate tax, consumption tax and other tax matters → a tax accountant
+- Disputes with employees, and evaluation of criminal cases relating to disqualifications and other individual legal judgement on rights and obligations → an attorney
+
+Yotsuba Administrative Scrivener Office handles preparing and acting for the security-business certification application and various notifications, as an independent business. Labour matters after hiring are by a certified social insurance labour consultant, and the office and standby room property by Yotsuba Real Estate Co., Ltd. (a real estate broker). Yotsuba Administrative Scrivener Office and Yotsuba Real Estate Co., Ltd. are separate businesses. Each field is on the premise that you contract separately with each qualified professional or operator as an independent business, and our office receives no referral fee. For the flow of engagement, see [Engagement Flow](https://luck428.com/legal/nagare); for fees, see [Fee Schedule](https://luck428.com/legal/ryokin); and for the whole picture of our services, see [Permits and Applications Services](https://luck428.com/legal/services). The final judgement on individual eligibility and required documents is made by a qualified professional and the competent police (public safety commission) in light of the circumstances.
+
+## FAQ
+
+**Q. Is a security business a "licence" or a "certification"?**
+A. A "certification." A person who intends to run a security business must receive the certification of the prefectural public safety commission, confirming they do not fall under a disqualification (Security Services Act, Article 4). The application is made to the public safety commission having jurisdiction over the principal office (the counter is the competent police station) (Article 5). The certification is valid for five years, and renewal is needed to continue after expiry.
+
+**Q. I was fined before. Can I not be certified?**
+A. A person sentenced to imprisonment or more, or fined for violating the Security Services Act and the like, and for whom five years have not passed since completion of the sentence, falls under a disqualification (Article 3). Which sentence or disposition falls under which item, and when the five years pass, differ by the facts and cannot be asserted flatly. An administrative scrivener supports document preparation, but eligibility is confirmed by the competent police (public safety commission) and a criminal case is evaluated by an attorney.
+
+**Q. May the president also serve as the instruction and education supervisor?**
+A. If they hold a qualification certificate, an officer serving is conceivable. The supervisor must be appointed per office and per category of security work (Article 22(1)), and the certificate is issued to those who complete the public safety commission's course and others. Whether concurrent service across several offices or categories is allowed depends on the competent authority's practice, so confirm before applying.
+
+**Q. Must I not enter the site before the certification notice?**
+A. Running a security business without applying for certification, or before receiving the notice regarding certification, is punishable by a fine of up to 1 million yen (Article 57, item 1). Because a fine makes you fall under a disqualification for five years and unable to apply, it is safer to start work after receiving the notice.
+
+## Sources (Primary Information)
+
+- e-Gov Law Search, "Security Services Act" (Act No. 117 of 1972), Article 2 (categories of security work), Article 3 (disqualifications for certification), Article 4 (certification), Article 5 (procedure and place of application), Article 7 (five-year validity and renewal), Article 21 (training), Article 22 (instruction and education supervisor), Article 57 (penalties) (accessed 2026-09-25)
+- e-Gov Law Search, "Security Services Act Enforcement Regulations" (National Public Safety Commission Regulation No. 1 of 1983), Article 38 and others (categories and hours of training) (accessed 2026-09-25)
+- Metropolitan Police Department, "Security-business certification application" and "Training hours for security guards" (keishicho.metro.tokyo.lg.jp; hours of new-recruit and in-service training) (accessed 2026-09-25)
+
+This article is general information and does not guarantee the certification eligibility, required documents or review time of a particular application. Whether a disqualification applies, the details of training hours and categories, and the placement of the supervisor may differ by the competent police's (public safety commission's) practice and by legal amendment, so confirm with the latest guidance before applying. Preparing and acting for the certification application and notifications is by Yotsuba Administrative Scrivener Office (administrative scrivener); labour management after hiring by a certified social insurance labour consultant; finding and leasing the office and standby room by Yotsuba Real Estate Co., Ltd. (a real estate broker); incorporation and officer-change registration by a judicial scrivener; tax matters by a tax accountant; and individual legal judgement touching on employee disputes and criminal cases by an attorney, each as an independent business under a separate contract. Yotsuba Administrative Scrivener Office and Yotsuba Real Estate Co., Ltd. are separate businesses. Our office receives no referral fee. Individual judgements are made by a qualified professional after a meeting. Written by [Joji Uramatsu](https://luck428.com/about/uramatsu), administrative scrivener and licensed real estate broker.

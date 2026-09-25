@@ -1776,6 +1776,46 @@ const ARTICLES: ArticleSpec[] = [
     localesWithTranslations: ["en", "zh-tw", "zh"],
     hubLinks: ["/souzoku"],
   },
+  {
+    file: "87-game-center-fuei-5go-bukken-youto-menseki.md",
+    slug: "game-center-fuei-5go-bukken-youto-menseki",
+    title: "ゲームセンター・アミューズメント施設の物件はどこまで選べる？（風営法5号）",
+    publishedAt: "2026-09-25",
+    category: "投資・事業用不動産",
+    excerpt:
+      "ゲームセンター・アミューズメント施設は風営法第2条第1項第5号の遊技場（5号営業）で、物件を置ける場所は二重に絞られます。①建築基準法の用途地域で遊技場を建てられるか、②風営法第4条第2項にもとづく都道府県条例が定める営業制限地域（保全対象施設からの距離・住居系地域の除外）に触れないか。営業時間の原則深夜0時までの制限や、許可前に賃貸借契約を結ぶリスクの避け方まで、東京都文京区の宅地建物取引士兼行政書士が、契約前に確認できることを条文と条例から整理します。",
+    keywords: [
+      "ゲームセンター 物件 風営法",
+      "風営法 5号営業 遊技場 用途地域",
+      "ゲームセンター 保全対象施設 距離",
+      "風営法 営業時間 午前0時 条例",
+      "アミューズメント施設 許可 停止条件 特約",
+    ],
+    tags: ["事業用不動産", "許認可", "風営法", "用途地域"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/toushi", "/office"],
+  },
+  {
+    file: "88-souzoku-shiyo-taishaku-tochi-baikyaku-nagare.md",
+    slug: "souzoku-shiyo-taishaku-tochi-baikyaku-nagare",
+    title: "親族にタダで貸していた「使用貸借」の土地を相続した——売るには何から？",
+    publishedAt: "2026-09-25",
+    category: "相続",
+    excerpt:
+      "親が親族・知人にタダで貸していた土地を相続したら、まず「使用貸借（無償）」と「賃貸借（有償）」の違いを押さえます。使用貸借には借地借家法の保護が及ばず、借主の死亡で原則終了します（民法第597条第3項）が、貸主（親）が亡くなっても終了せず相続人が貸主の地位を承継します（第896条）。借主が使い続けたまま売る場合の説明・価格、明け渡しは弁護士の領域であること、相続登記を先に済ませる理由まで、東京都文京区の宅地建物取引士兼行政書士が民法の条文から整理します。",
+    keywords: [
+      "使用貸借 土地 相続 売却",
+      "使用貸借 賃貸借 違い 借地借家法",
+      "使用貸借 借主の死亡 民法597条3項",
+      "使用貸借 貸主 死亡 相続 896条",
+      "使用貸借 土地 明け渡し 弁護士",
+    ],
+    tags: ["相続", "使用貸借", "借地借家法", "売却"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/souzoku"],
+  },
 ];
 
 function toPlainText(md: string): string {

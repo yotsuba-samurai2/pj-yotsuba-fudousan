@@ -729,6 +729,22 @@ const REQUIRED_HUB_LINKS: Record<string, string[]> = {
     "/legal/column/souzoku-yuigon-hakken-tetsuzuki",
     "/legal/column/tokutei-zaisan-shokei-yuigon-izo-chigai",
   ],
+  "keibigyo-nintei-yoken-kekkaku-kenshu": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+  ],
+  "souzoku-ichibu-bunkatsu-kyogisho-nokori": [
+    "/legal/services/inheritance",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/souzoku",
+    "/legal/column/isan-bunkatsu-kyougisho",
+    "/legal/column/souzoku-zei-shinkoku-hitsuyo",
+    "/legal/column/souzoku-isanbunkatsu-chotei-shinpan",
+    "/legal/column/souzoku-touki-nagare",
+    "/legal/column/souzoku-yochokin-karibarai",
+  ],
 };
 
 /** 表示コンプライアンス上の禁止語 */
@@ -2393,6 +2409,46 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "別事業体",
     "独立した事業体",
   ],
+  "keibigyo-nintei-yoken-kekkaku-kenshu": [
+    "都道府県公安委員会",
+    "警備業法第4条",
+    "警備業法第3条",
+    "警備員指導教育責任者",
+    "警備業法第22条",
+    "警備業法施行規則第38条",
+    "新任教育",
+    "現任教育",
+    "20時間以上",
+    "10時間以上",
+    "警備業法第57条",
+    "100万円以下の罰金",
+    "18歳未満",
+    "拘禁刑",
+    "別事業体",
+    "独立した事業体",
+  ],
+  "souzoku-ichibu-bunkatsu-kyogisho-nokori": [
+    "民法第907条",
+    "遺産の全部又は一部の分割",
+    "一部分割",
+    "平成30年法律第72号",
+    "令和元年7月1日",
+    "民法第908条",
+    "民法第909条",
+    "相続開始の時にさかのぼって",
+    "第三者の権利を害することはできません",
+    "民法第906条の2",
+    "民法第909条の2",
+    "相続税法第55条",
+    "申告期限後3年以内の分割見込書",
+    "小規模宅地等の特例",
+    "配偶者の税額軽減",
+    "10か月",
+    "2024年4月1日",
+    "税務相談を行いません",
+    "別事業体",
+    "独立した事業体",
+  ],
 };
 
 /** 記事ごとに含めてはならない表現 */
@@ -2515,6 +2571,8 @@ const FORBIDDEN_PHRASES: Record<string, string[]> = {
   "souzoku-hijojo-kabushiki-isanbunkatsu-kyogi": [],
   "yakkyoku-kaisetsu-kyoka-kozo-setsubi-kanri-yakuzaishi": [],
   "yuigon-tekkai-teishoku-fukusu-yuigon-yuretsu": [],
+  "keibigyo-nintei-yoken-kekkaku-kenshu": [],
+  "souzoku-ichibu-bunkatsu-kyogisho-nokori": [],
 };
 
 /** 本セット外へ張る既存legalコラムslug（リポジトリの他シードで実在確認済み） */
@@ -4477,6 +4535,58 @@ const ARTICLES: Array<{
       "抵触",
       "自筆証書遺言",
       "遺言執行",
+      "行政書士",
+    ],
+  },
+  {
+    file: "82-keibigyo-nintei-yoken-kekkaku-kenshu.md",
+    slug: "keibigyo-nintei-yoken-kekkaku-kenshu",
+    date: "2026-09-25",
+    title:
+      "警備会社を始めるには？認定の要件・欠格事由・教育の全体像",
+    category: "許認可の手続き（行政書士の実務から）",
+    excerpt:
+      "警備業は「許可」ではなく都道府県公安委員会の「認定」で始めます（警備業法第4条）。破産・拘禁刑・暴力団関係などの欠格事由（同第3条）に該当しないこと、営業所ごと・警備業務の区分ごとに警備員指導教育責任者を選任できること（同第22条）が前提です。警備員には新任教育（原則20時間以上）・現任教育（年度ごと10時間以上）が義務づけられ（同第21条・施行規則第38条）、無認定営業は100万円以下の罰金の対象（同第57条）。認定の有効期間は5年。認定申請の書類作成は行政書士、採用後の労務は社会保険労務士、営業所物件は不動産へ分離受任で振る分担を、一次資料で整理しました。",
+    keywords: [
+      "警備業 認定 要件 始め方",
+      "警備業法 欠格事由 拘禁刑 暴力団",
+      "警備員指導教育責任者 資格 選任",
+      "警備員 新任教育 現任教育 時間",
+      "警備業 無認定 罰金 100万円",
+      "警備会社 設立 行政書士",
+    ],
+    tags: [
+      "警備業",
+      "認定",
+      "欠格事由",
+      "警備員指導教育責任者",
+      "許認可",
+      "行政書士",
+    ],
+  },
+  {
+    file: "83-souzoku-ichibu-bunkatsu-kyogisho-nokori.md",
+    slug: "souzoku-ichibu-bunkatsu-kyogisho-nokori",
+    date: "2026-09-25",
+    title:
+      "遺産の一部だけ先に分けられる？「一部分割協議書」の考え方",
+    category: "相続の手続き（行政書士の実務から）",
+    excerpt:
+      "遺産は一部だけを先に分けられます。共同相続人は、遺言による禁止などを除き、いつでも協議で遺産の全部又は一部の分割ができます（民法第907条第1項。平成30年改正・令和元年7月1日施行で「一部」を明文化）。一部分割協議書には対象財産を特定し、残りは別途協議する旨（留保）を書きます。申告期限（10か月）は動かず、未分割部分は法定相続分で申告し、申告期限後3年以内の分割見込書で配偶者の税額軽減・小規模宅地等の特例の適用余地を残します。分割前に処分された財産（民法第906条の2）や遡及効と第三者保護（同第909条）まで整理し、協議書作成は行政書士・登記は司法書士・相続税は税理士・争いは弁護士へ分離受任で振る分担を示しました。",
+    keywords: [
+      "一部分割 遺産分割協議書 書き方",
+      "民法907条 一部分割 できる",
+      "一部分割 相続税 申告期限 未分割",
+      "一部分割 小規模宅地 特例 分割見込書",
+      "遺産分割協議書 残りの財産 留保 条項",
+      "一部分割 行政書士",
+    ],
+    tags: [
+      "相続",
+      "遺産分割協議書",
+      "一部分割",
+      "民法907条",
+      "相続税",
       "行政書士",
     ],
   },
