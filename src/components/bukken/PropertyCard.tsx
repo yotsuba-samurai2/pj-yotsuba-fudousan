@@ -6,6 +6,7 @@ import { addLocalePrefix } from "@/lib/locale";
 import { formatAccessL, formatPropertyPriceL, localizedImageAlt, propertyUi } from "@/lib/property-i18n";
 import { SchoolDistrictTag } from "@/components/gakku/RentalSchoolDistrict";
 import { PropertyImage } from "@/components/bukken/PropertyImage";
+import { brokerFeeBadge } from "@/lib/broker-fee";
 
 export function PropertyCard({ p, locale }: { p: PublicProperty; locale: LangCode }) {
   const original = p;
@@ -43,7 +44,12 @@ export function PropertyCard({ p, locale }: { p: PublicProperty; locale: LangCod
         </p>
         <SchoolDistrictTag property={original} locale={locale} />
         <h3 className="mt-1 break-words text-sm font-semibold text-ink">{p.title}</h3>
-        <p className="mt-1 text-sm font-semibold text-primary">{formatPropertyPriceL(p, locale)}</p>
+        <p className="mt-1 text-sm font-semibold text-primary">
+          {formatPropertyPriceL(p, locale)}
+          {brokerFeeBadge(p, locale) && (
+            <span className="ml-2 rounded-full bg-primary px-2 py-0.5 align-middle text-[10px] font-semibold text-white">{brokerFeeBadge(p, locale)}</span>
+          )}
+        </p>
         <p className="mt-0.5 truncate text-xs text-text-muted">{p.locationText}</p>
         {p.access[0] && (
           <p className="truncate text-xs text-text-muted">{formatAccessL(p.access[0], locale)}</p>

@@ -93,6 +93,7 @@ const businessBuildingSpec = z.object({
 
 export const rentalSpecSchema = z.object({
   dealType: z.literal("rental"),
+  brokerFee: z.enum(["full", "half", "free"]).optional(),
   availabilityExpiresAt: z.iso.datetime({ offset: true }).optional(),
   exclusiveAreaSqm: z.number().positive().finite(),
   buildingType: z.string().trim().min(1),
