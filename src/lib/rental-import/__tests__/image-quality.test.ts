@@ -17,6 +17,11 @@ describe("画像取込の再発防止", () => {
     await expect(inspectOriginalImage(await picture("red", 72, 96))).rejects.toThrow("小さすぎ");
     expect(await inspectOriginalImage(await picture("red"))).toMatchObject({ width: 570, height: 760 });
   });
+  it("間取り図は318×422の原画像を受け入れ、サムネイルは拒否する", async () => {
+    expect(await inspectOriginalImage(await picture("blue", 318, 422), "floorplan")).toMatchObject({ width: 318, height: 422 });
+    await expect(inspectOriginalImage(await picture("blue", 318, 422))).rejects.toThrow("小さすぎ");
+    await expect(inspectOriginalImage(await picture("blue", 150, 200), "floorplan")).rejects.toThrow("小さすぎ");
+  });
   it("ヘッダが正常でも途中で切れたJPEGを拒否", async () => {
     const jpg = await sharp(await picture("red")).jpeg().toBuffer();
     await expect(inspectOriginalImage(jpg.subarray(0, Math.floor(jpg.length / 2)))).rejects.toThrow();
