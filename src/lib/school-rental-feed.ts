@@ -52,9 +52,12 @@ export type PublicRentalSummary = RentalSummary & { id: string; schoolSlug: stri
 export function nextWeeklyReviewAt(checkedAt: string) {
   const checked = new Date(checkedAt);
   const next = new Date(checked);
-  next.setUTCHours(4, 0, 0, 0); // Wednesday 13:00 in Asia/Tokyo（2026-09-25 浦松指示で12時→13時）.
-  next.setUTCDate(next.getUTCDate() + (3 - next.getUTCDay() + 7) % 7);
-  if (next.getTime() <= checked.getTime()) next.setUTCDate(next.getUTCDate() + 7);
+  // 日曜・水曜 13:00 Asia/Tokyo（2026-09-26 浦松指示で水曜のみ→日曜・水曜）。13:00 JST = 04:00 UTC で曜日は同じ。
+  next.setUTCHours(4, 0, 0, 0);
+  for (let i = 0; i < 8; i++) {
+    if ((next.getUTCDay() === 0 || next.getUTCDay() === 3) && next.getTime() > checked.getTime()) return next.toISOString();
+    next.setUTCDate(next.getUTCDate() + 1);
+  }
   return next.toISOString();
 }
 
