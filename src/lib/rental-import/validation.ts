@@ -3,7 +3,7 @@ import { createHash } from "node:crypto";
 import { z } from "zod";
 import { propertyInputSchema } from "@/lib/property-validation";
 import { scanPropertyText, type PropertyInput } from "@/lib/property-shared";
-import { extractAdEvidence, isRecentMail } from "./candidates";
+import { brokerIncomeYen, extractAdEvidence, INCOME_THRESHOLD_YEN, isRecentMail } from "./candidates";
 import { portalCheckSchema, summarizePortalChecks } from "./portal-counts";
 import { evidenceSchema, titleHighlightSchema, validTitleHighlight, TITLE_HIGHLIGHT_LABELS, conditionChoiceSchema, rentEvidenceSchema, validRentEvidence, isPrimaryReference, RENTAL_IMPORT_POLICY, hasAdvertisingAllow, selectCondition, isCurrentEvidence } from "./policy";
 import { contentReviewSchema, rentalContentDigest } from "./content-review";
@@ -21,7 +21,8 @@ export const rentalImportSchema = z.object({
   /** Direct portal search is a separate intake route; never invent a mail record. */
   intake: z.object({
     kind: z.literal("portal-search"),
-    policy: z.literal("bunkyo-rent200k-ad30-or-rent250k"),
+    /** 新規登録は bunkyo-income800k。旧方針は登録済み物件の再確認だけに使う。 */
+    policy: z.enum(["bunkyo-income800k", "bunkyo-rent200k-ad30-or-rent250k"]),
     updateEvidence: listingEvidenceSchema,
   }).optional(),
   supportingDocuments: z.array(evidenceSchema).max(10).optional(),
@@ -103,18 +104,26 @@ export function validateRentalImport(input: unknown, now: Date, mode: "draft" | 
   }
   // SUUMO・アットホーム・HOME'Sは判定に使わない。REINSは広告可の確認だけ許可する。
   const directSearch = v.intake?.kind === "portal-search";
+  const incomePolicy = directSearch && v.intake!.policy === "bunkyo-income800k";
   if (directSearch) {
     const provider = v.source.provider;
     const evidence = v.intake!.updateEvidence;
+    if (!maintenance && !incomePolicy) reasons.push("新規の直接検索は「仲介手数料＋AD 80万円以上」の方針で登録してください");
     // Relative hours are copied from the search UI, not fabricated timestamps.
     const hours = [...evidence.quote.normalize("NFKC").matchAll(/募集条件更新\s*(\d+)\s*時間前/g)].map(m => Number(m[1]));
-    if (!maintenance && (!(provider === "itandi" || provider === "eslife") || !validListingEvidence(evidence, provider, now)
+    if (!maintenance && !incomePolicy && (!(provider === "itandi" || provider === "eslife") || !validListingEvidence(evidence, provider, now)
       || hours.length !== 1 || hours[0] >= 24 || hours[0] * 3600_000 + now.getTime() - Date.parse(evidence.checkedAt) >= 24 * 3600_000)) reasons.push("取得元で24時間以内の募集条件更新を確認してください");
     if (!/^東京都\s*文京区/.test(v.source.address.normalize("NFKC"))) reasons.push("直接検索の対象エリアは文京区です");
-    if (v.source.rent.yen < 200000) reasons.push("直接検索の賃料は20万円以上です");
+    if (!incomePolicy && v.source.rent.yen < 200000) reasons.push("直接検索の賃料は20万円以上です");
   } else if (!v.email || (!maintenance && !isRecentMail(v.email.receivedAt, now))) reasons.push("メールが直近1暦月の対象外です");
   for (const [label, quote] of [...(!directSearch && v.email ? [["メール", v.email.adQuote]] : []), ["取得元", v.source.adQuote]]) {
     if (v.source.provider === "eslife" && label === "メール") continue;
+    if (incomePolicy && label === "取得元") {
+      const income = brokerIncomeYen(quote, v.source.rent.yen);
+      if (income === null) reasons.push("取得元の掲載料条件を確定できません");
+      else if (income < INCOME_THRESHOLD_YEN) reasons.push(`仲介手数料（賃料×1.1）と掲載料の合計が80万円未満です（${income}円）`);
+      continue;
+    }
     const ads = extractAdEvidence(quote);
     const values = [...new Set(ads.map((a) => a.months))];
     const eslifeNoAdException = label === "取得元" && v.source.rent.yen >= 250000 && (directSearch || (v.source.provider === "eslife" && /AD\s*(?:なし|無|0)/i.test(quote)));
