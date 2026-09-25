@@ -28,7 +28,8 @@ export async function POST(req: NextRequest) {
       if (!gate.ok) return NextResponse.json({ error: gate.reasons.join(" / ") }, { status: 422 });
       const allowed = await importRental(record, { ...rentalStore, create: async () => {}, update: async () => true }, now, mode, maintenance);
       if (allowed.action === "held") return NextResponse.json({ error: allowed.reasons?.join(" / ") }, { status: 409 });
-      const bytes = new Uint8Array(await file.arrayBuffer()), media = await inspectOriginalImage(bytes);
+      const kind = (record?.property?.images as { url?: string; kind?: string }[] | undefined)?.find((i) => i.url === `asset:${file.name}`)?.kind === "floorplan" ? "floorplan" : "photo";
+      const bytes = new Uint8Array(await file.arrayBuffer()), media = await inspectOriginalImage(bytes, kind);
       const url = process.env.NEXT_PUBLIC_SUPABASE_URL, key = process.env.SUPABASE_SERVICE_ROLE_KEY;
       if (!url || !key) return NextResponse.json({ error: "ストレージの設定が不足しています" }, { status: 503 });
       const storage = createClient(url, key, { auth: { persistSession: false, autoRefreshToken: false } }).storage.from("column-images");

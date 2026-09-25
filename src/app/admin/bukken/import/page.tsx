@@ -109,7 +109,7 @@ export default function RentalImportPage() {
       <div aria-live="polite" className="mt-5 space-y-3">
         {results.map((r, i) => <div key={i} className="rounded-lg border border-border p-4 text-sm"><p className="font-semibold">{i + 1}. {LABELS[r.action] ?? r.action}</p>{r.slug && <p className="mt-1 text-text-muted">{r.slug}</p>}{r.reasons?.map((reason, j) => <p key={j} className="mt-1">{reason}</p>)}</div>)}
       </div>
-      <p className="mt-5 text-xs text-text-muted">募集情報は毎回再確認します。掲載終了は履歴を残して公開を停止し、確認から26時間を過ぎた物件も公開対象から外れます。</p>
+      <p className="mt-5 text-xs text-text-muted">募集情報は毎回再確認します。掲載終了は履歴を残して公開を停止します。確認日時は再確認の目安で、時間の経過だけでは非公開になりません。</p>
     </div>
   );
 }

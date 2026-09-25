@@ -36,7 +36,7 @@ export async function prepareImages(input: unknown, read: (path: string) => Prom
       omitted.push({ index: item.index, reason: item.reason });
       continue;
     }
-    const bytes = await read(item.file), media = await inspectOriginalImage(bytes);
+    const bytes = await read(item.file), media = await inspectOriginalImage(bytes, item.kind);
     const duplicate = seen.get(media.pixelHash);
     if (duplicate) {
       if (duplicate.kind !== item.kind) throw new Error("同一画像が写真と間取りに分類されています。目視で再確認してください");
