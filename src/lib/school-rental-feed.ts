@@ -119,11 +119,29 @@ export function compileRentalSummaries(feeds: RentalFeed[], existing: Pick<Renta
   // Prefer the latest checked feed, with a deterministic tie break. Do not merge conflicting terms.
   const sorted = feeds.flatMap(feed => feed.records.map(row => ({ feed, row })))
     .sort((a, b) => Date.parse(b.feed.checkedAt) - Date.parse(a.feed.checkedAt) || a.feed.provider.localeCompare(b.feed.provider) || a.row.sourceId.localeCompare(b.row.sourceId));
+  // A trailing number in a building name is only a room-number hint. When one
+  // source has multiple registrations with the same inferred number, the
+  // source has not identified their actual units (for example, three REINS
+  // registrations named "ルミークアン本郷 １００"). Keep them in the market
+  // count, but do not publish any as room 100 until the unit is confirmed.
+  const derivedGroups = new Map<string, number>();
+  for (const { feed, row } of sorted) {
+    const split = splitUnit(row.summary);
+    if (!split.derived) continue;
+    const key = `${feed.provider}|${addressKey(row.summary.address)}|${normalized(split.building)}|${unitNumber(split.unit)}`;
+    derivedGroups.set(key, (derivedGroups.get(key) ?? 0) + 1);
+  }
+  const ambiguousDerivedUnit = (feed: RentalFeed, row: FeedRecord) => {
+    const split = splitUnit(row.summary);
+    if (!split.derived) return false;
+    const key = `${feed.provider}|${addressKey(row.summary.address)}|${normalized(split.building)}|${unitNumber(split.unit)}`;
+    return (derivedGroups.get(key) ?? 0) > 1;
+  };
   const withdrawals = sorted.filter(({ feed, row }) => Date.parse(feed.checkedAt) <= now.getTime()
     && (row.availability === "closed" || row.application === "present"));
   for (const item of sorted) {
     const { feed, row } = item;
-    let reason = rejectionReason(feed, row, now);
+    let reason = ambiguousDerivedUnit(feed, row) ? "号室未確定" : rejectionReason(feed, row, now);
     // A recent explicit withdrawal/application on any source overrides another source's active row.
     if (!reason && withdrawals.some(other => sameUnit(row.summary, other.row.summary))) reason = "別サイトで募集終了・申込あり";
     if (!reason && existing.some(p => sameUnit(row.summary, p))) reason = "既存物件に登録済み";

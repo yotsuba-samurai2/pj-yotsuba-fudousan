@@ -142,12 +142,18 @@ describe("REINS snapshot extraction", () => {
     expect(only.building).toBe("ビューテラス茗荷谷"); expect(only.unit).toBe("503");
     expect(splitUnit({ building: "試験マンション", unit: "" }).derived).toBe(false);
   });
-  it("does not merge separate registrations of one source when both room numbers are only inferred", () => {
-    const x = row(), y = row();
-    x.sourceId = "x"; y.sourceId = "y";
-    for (const r of [x, y]) { r.summary.building = "ルミークアン本郷 １００"; r.summary.unit = ""; r.summary.address = "東京都文京区本郷１丁目８－１４"; }
-    y.summary.rentYen = 339000;
-    expect(compileRentalSummaries([feed("reins", [x, y])], [], now).summaries).toHaveLength(2);
+  it("holds same-source registrations whose shared trailing number cannot identify a room", () => {
+    const x = row(), y = row(), z = row();
+    x.sourceId = "100140850574"; y.sourceId = "100140850521"; z.sourceId = "100140850531";
+    for (const r of [x, y, z]) { r.summary.building = "ルミークアン本郷 １００"; r.summary.unit = ""; r.summary.address = "東京都文京区本郷１丁目８－１４"; }
+    y.summary.rentYen = 339000; z.summary.rentYen = 339000;
+    const result = compileRentalSummaries([feed("reins", [x, y, z])], [], now);
+    expect(result.summaries).toHaveLength(0);
+    expect(result.excluded).toEqual([
+      expect.objectContaining({ sourceId: "100140850521", reason: "号室未確定" }),
+      expect.objectContaining({ sourceId: "100140850531", reason: "号室未確定" }),
+      expect.objectContaining({ sourceId: "100140850574", reason: "号室未確定" }),
+    ]);
   });
   it("counts the market regardless of advertising permission, one unit once across sources", () => {
     const a = feed("reins"), b = feed("eslife");
