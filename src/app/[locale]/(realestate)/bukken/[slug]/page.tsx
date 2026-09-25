@@ -1,6 +1,7 @@
 // Property data changes independently of deploys, so resolve it on each request.
 export const dynamic = "force-dynamic";
 
+import { brokerFeeBadge, brokerFeeLine } from "@/lib/broker-fee";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -138,6 +139,14 @@ export default async function BukkenDetailPage({ params }: Props) {
             {formatPropertyPriceL(p, locale)}
             {priceNote && <span className="ml-2 text-xs font-normal text-text-muted">（{priceNote}）</span>}
           </p>
+          {brokerFeeLine(p, locale) && (
+            <p className="mt-1 flex flex-wrap items-center gap-2 text-sm text-text">
+              {brokerFeeBadge(p, locale) && (
+                <span className="rounded-full bg-primary px-2.5 py-0.5 text-xs font-semibold text-white">{brokerFeeBadge(p, locale)}</span>
+              )}
+              <span>{brokerFeeLine(p, locale)}</span>
+            </p>
+          )}
         </header>
 
         <PropertySchoolDistrict property={base} locale={locale} />

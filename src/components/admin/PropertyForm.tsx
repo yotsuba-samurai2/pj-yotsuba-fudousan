@@ -64,6 +64,7 @@ type SpecDraft = {
   contractType: string;
   contractPeriod: string;
   conditions: string;
+  brokerFee: string;
 
   landAreaSqm: string;
   privateRoadAreaSqm: string;
@@ -110,6 +111,7 @@ function specToDraft(spec?: PropertySpec): SpecDraft {
     contractType: str(s.contractType),
     contractPeriod: str(s.contractPeriod),
     conditions: str(s.conditions),
+    brokerFee: str(s.brokerFee),
     landAreaSqm: str(s.landAreaSqm),
     privateRoadAreaSqm: str(s.privateRoadAreaSqm),
     buildingAreaSqm: str(s.buildingAreaSqm),
@@ -164,6 +166,7 @@ function draftToSpec(dealType: PropertyDealType, d: SpecDraft): PropertySpec {
         contractType: d.contractType,
         contractPeriod: d.contractPeriod,
         conditions: d.conditions,
+        ...(d.brokerFee === "full" || d.brokerFee === "half" || d.brokerFee === "free" ? { brokerFee: d.brokerFee } : {}),
       };
     case "land":
       return {
@@ -665,6 +668,14 @@ export default function PropertyForm({ initialData, onSubmit }: Props) {
               ] as const).map(([key, label]) => (
                 <Field key={key} label={label}><input aria-label={label} value={specDraft[key]} onChange={(e) => setSpec({ [key]: e.target.value })} className={inputCls} required /></Field>
               ))}
+              <Field label="借主の仲介手数料（athomeと必ず同じにする）">
+                <select aria-label="借主の仲介手数料" value={specDraft.brokerFee} onChange={(e) => setSpec({ brokerFee: e.target.value })} className={inputCls}>
+                  <option value="">表示しない</option>
+                  <option value="full">満額（賃料1か月分＋税）</option>
+                  <option value="half">半額（賃料0.5か月分＋税）</option>
+                  <option value="free">無料</option>
+                </select>
+              </Field>
             </>
           )}
           {showCondo && (

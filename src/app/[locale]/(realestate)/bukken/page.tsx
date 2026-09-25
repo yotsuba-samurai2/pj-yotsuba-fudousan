@@ -17,6 +17,7 @@ import { PropertyCard } from "@/components/bukken/PropertyCard";
 import { SCHOOL_RENTAL_COPY, SCHOOL_RENTAL_INDEX_PATH } from "@/lib/rental-school-district";
 import { DistrictSourceNote } from "@/components/gakku/RentalSchoolDistrict";
 import type { LangCode } from "@/config/languages";
+import { brokerFeeCopy, isDiscountedBrokerFee } from "@/lib/broker-fee";
 
 /**
  * 物件紹介の一覧（/bukken）。公開（published）物件のみを表示し、
@@ -86,11 +87,16 @@ export async function generateMetadata(): Promise<Metadata> {
   });
 }
 
-export default async function BukkenListPage() {
+/** ?fee=discount で「仲介手数料 無料・半額」の賃貸だけに絞る（ATBB→athome 手数料判定ルール v1.1 第5節） */
+export default async function BukkenListPage({ searchParams }: { searchParams?: Promise<Record<string, string | string[] | undefined>> }) {
   const locale = await getRequestLocale();
   const c = COPY[locale] ?? COPY.ja;
   const ui = propertyUi(locale);
-  const visible = await getPublishedProperties(locale);
+  const fee = brokerFeeCopy(locale);
+  const feeFilter = (await searchParams)?.fee === "discount";
+  const published = await getPublishedProperties(locale);
+  const discountCount = published.filter(isDiscountedBrokerFee).length;
+  const visible = feeFilter ? published.filter(isDiscountedBrokerFee) : published;
   // 画面の並び（カテゴリ順→取得順）をそのまま ItemList の position に使う＝可視リストと一致させる
   const properties = LISTING_GROUP_ORDER.flatMap((group) =>
     visible.filter((p) => listingGroup(p.dealType) === group),
@@ -115,6 +121,14 @@ export default async function BukkenListPage() {
         </header>
 
         <Link href={addLocalePrefix(SCHOOL_RENTAL_INDEX_PATH, locale)} className="mt-6 block rounded-xl border border-primary/25 bg-primary-tint p-4 font-semibold text-primary">{SCHOOL_RENTAL_COPY[locale].indexTitle} →</Link>
+
+        {(discountCount > 0 || feeFilter) && (
+          <nav aria-label={fee.filter} className="mt-4 flex flex-wrap gap-2 text-sm">
+            <Link href={addLocalePrefix("/bukken", locale)} aria-current={!feeFilter ? "page" : undefined} className={`rounded-full border px-3 py-1 ${!feeFilter ? "border-primary bg-primary text-white" : "border-border bg-surface text-text"}`}>{fee.all}</Link>
+            <Link href={`${addLocalePrefix("/bukken", locale)}?fee=discount`} aria-current={feeFilter ? "page" : undefined} className={`rounded-full border px-3 py-1 ${feeFilter ? "border-primary bg-primary text-white" : "border-border bg-surface text-text"}`}>{fee.filter}（{discountCount}）</Link>
+          </nav>
+        )}
+        {feeFilter && <p className="mt-3 text-sm text-text-muted">{fee.filterLead}</p>}
 
         {properties.length === 0 ? (
           <p className="mt-8 rounded-xl border border-border bg-surface p-6 text-sm text-text-muted">
