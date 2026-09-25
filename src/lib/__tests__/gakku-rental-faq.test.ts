@@ -38,9 +38,9 @@ describe("学区別賃貸の FAQ（PR-3）", () => {
     const reservation = { ja: "文京区が決定", en: "decided by Bunkyo City", "zh-tw": "由文京區決定", zh: "由文京区决定" }[locale];
     expect(items.filter(i => i.a.includes(reservation)).length).toBeGreaterThanOrEqual(2);
   });
-  it("日本語の掲載条件はページ上の記載（17万5,000円以上・48㎡以上・広告可・毎週水曜更新）と一致", () => {
+  it("日本語の掲載条件はページ上の記載（17万5,000円以上・48㎡以上・広告可・毎週日曜・水曜更新）と一致", () => {
     const a = SCHOOL_RENTAL_FAQ.ja.items[2].a;
-    for (const w of ["17万5,000円以上", "48㎡以上", "広告", "毎週水曜日"]) expect(a).toContain(w);
+    for (const w of ["17万5,000円以上", "48㎡以上", "広告", "毎週日曜日と水曜日"]) expect(a).toContain(w);
   });
   it("4校ページの FAQ と設問が重複しない", () => {
     for (const locale of LOCALES) {
