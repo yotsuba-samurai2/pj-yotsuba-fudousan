@@ -4,7 +4,7 @@ import { rentalContentDigest } from "../content-review";
 import { adYenUpperLimit, subtrackIncomeYen, tenantFeeYen } from "../candidates";
 import { validateRentalImport, type RentalImport } from "../validation";
 
-type Fee = "full" | "half" | "free";
+type Fee = "full" | "half" | "p033" | "free";
 function candidate(rent = 250000, ad = "AD 100%", fee: Fee | null = "full", provider: "eslife" | "itandi" = "eslife"): RentalImport {
   const v: RentalImport = fixture();
   delete v.email; delete v.reins;
@@ -36,7 +36,7 @@ function candidate(rent = 250000, ad = "AD 100%", fee: Fee | null = "full", prov
 
 describe("サブトラック：いい生活の新着（AD＋借主手数料 40万円超）", () => {
   it.each([
-    [200000, "full", 220000], [200000, "half", 110000], [200000, "free", 0],
+    [200000, "full", 220000], [200000, "half", 110000], [200000, "p033", 66000], [200000, "free", 0],
   ] as const)("借主手数料 賃料%i円 %s → %i円", (rent, fee, yen) => expect(tenantFeeYen(rent, fee)).toBe(yen));
 
   it.each([

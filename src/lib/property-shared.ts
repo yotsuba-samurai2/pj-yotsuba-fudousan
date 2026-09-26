@@ -152,8 +152,8 @@ export type RentalSpec = {
   contractType: string;
   contractPeriod: string;
   conditions: string;
-  /** 借主の仲介手数料（満額・半額・無料）。半額・無料は一覧と物件ページに表示（src/lib/broker-fee.ts）。 */
-  brokerFee?: "full" | "half" | "free";
+  /** 借主の仲介手数料（満額・0.33ヶ月・無料。半額は旧データのみ）。満額以外は一覧と物件ページに表示（src/lib/broker-fee.ts）。 */
+  brokerFee?: "full" | "half" | "p033" | "free";
 };
 
 export type PropertySpec =

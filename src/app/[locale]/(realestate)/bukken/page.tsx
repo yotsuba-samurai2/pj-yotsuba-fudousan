@@ -87,7 +87,7 @@ export async function generateMetadata(): Promise<Metadata> {
   });
 }
 
-/** ?fee=discount で「仲介手数料 無料・半額」の賃貸だけに絞る（ATBB→athome 手数料判定ルール v1.1 第5節） */
+/** ?fee=discount で「仲介手数料 0.33ヶ月・無料」（旧データの半額を含む）の賃貸だけに絞る（ATBB→athome 手数料判定ルール v1.6） */
 export default async function BukkenListPage({ searchParams }: { searchParams?: Promise<Record<string, string | string[] | undefined>> }) {
   const locale = await getRequestLocale();
   const c = COPY[locale] ?? COPY.ja;

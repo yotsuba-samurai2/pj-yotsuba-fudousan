@@ -166,7 +166,7 @@ function draftToSpec(dealType: PropertyDealType, d: SpecDraft): PropertySpec {
         contractType: d.contractType,
         contractPeriod: d.contractPeriod,
         conditions: d.conditions,
-        ...(d.brokerFee === "full" || d.brokerFee === "half" || d.brokerFee === "free" ? { brokerFee: d.brokerFee } : {}),
+        ...(d.brokerFee === "full" || d.brokerFee === "half" || d.brokerFee === "p033" || d.brokerFee === "free" ? { brokerFee: d.brokerFee } : {}),
       };
     case "land":
       return {
@@ -672,8 +672,9 @@ export default function PropertyForm({ initialData, onSubmit }: Props) {
                 <select aria-label="借主の仲介手数料" value={specDraft.brokerFee} onChange={(e) => setSpec({ brokerFee: e.target.value })} className={inputCls}>
                   <option value="">表示しない</option>
                   <option value="full">満額（賃料1か月分＋税）</option>
-                  <option value="half">半額（賃料0.5か月分＋税）</option>
-                  <option value="free">無料</option>
+                  <option value="p033">0.33ヶ月（賃料0.3か月分＋税）※原則</option>
+                  <option value="free">無料（同じ部屋にゼロの競合がいるときだけ）</option>
+                  {specDraft.brokerFee === "half" && <option value="half">半額（旧設定・選び直してください）</option>}
                 </select>
               </Field>
             </>
