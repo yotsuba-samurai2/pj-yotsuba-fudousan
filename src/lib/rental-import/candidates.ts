@@ -46,6 +46,36 @@ export function brokerIncomeYen(quote: string, rentYen: number): number | null {
   return fee + values[0]!;
 }
 
+/** サブトラック（いい生活の新着）の掲載条件：AD＋借主手数料（税込）がこの額を超える。 */
+export const SUBTRACK_INCOME_THRESHOLD_YEN = 400_000;
+export type TenantBrokerFee = "full" | "half" | "free";
+
+/** 借主の仲介手数料（税込）。満額＝賃料1か月＋税、半額＝0.5か月＋税、無料＝0。 */
+export function tenantFeeYen(rentYen: number, fee: TenantBrokerFee): number {
+  return fee === "full" ? Math.round(rentYen * 1.1) : fee === "half" ? Math.round(rentYen * 0.55) : 0;
+}
+
+/**
+ * ATBB掲載ルール（v1.3）のAD判定：「相談」「〜まで」「迄」「上限」「最大」は表示の上限を確定額として扱う。
+ * 減額・終了・条件付きなど、額そのものが変わりうる表記は確定できない（null）。
+ */
+export function adYenUpperLimit(quote: string, rentYen: number): number | null {
+  const s = normalizeText(quote);
+  const ads = extractAdYen(s, rentYen);
+  if (!ads.length) return /(?:\bAD|広告(?:料|費))\s*[:：]?\s*(?:なし|無し?|[-－ー]\s*$)/i.test(s) ? 0 : null;
+  const values = [...new Set(ads.map((a) => a.yen))];
+  if (ads.some((a) => a.yen === null) || values.length !== 1) return null;
+  const blocking = /以上|以下|条件|限定|場合|増額|追加|プラス|アップ|\+|終了|変更|撤回|減額/;
+  if (ads.some((a) => a.ambiguous && blocking.test(s))) return null;
+  return values[0]!;
+}
+
+/** 報酬＝AD（上限を確定額として扱う）＋借主手数料（税込）。ADが確定できなければ null。 */
+export function subtrackIncomeYen(quote: string, rentYen: number, fee: TenantBrokerFee): number | null {
+  const ad = adYenUpperLimit(quote, rentYen);
+  return ad === null ? null : ad + tenantFeeYen(rentYen, fee);
+}
+
 /** One calendar month, same JST time; clamp end-of-month (March 31 -> February 28). */
 export function monthWindowStart(now: Date): Date {
   const jst = new Date(now.getTime() + 9 * 3600_000);
