@@ -745,6 +745,20 @@ const REQUIRED_HUB_LINKS: Record<string, string[]> = {
     "/legal/column/souzoku-touki-nagare",
     "/legal/column/souzoku-yochokin-karibarai",
   ],
+  "yuryo-roujin-home-setchi-todoke-tokutei-shisetsu-shitei": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/seikatsu-kaigo-shitei-bukken-yoken",
+    "/legal/column/homon-kango-station-shitei-shinsei-jinin",
+  ],
+  "kaisou-kyoka-hakajimai-tetsuzuki": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/souzoku",
+    "/legal/column/saishi-shokei-haka-butsudan-isanbunkatsu",
+  ],
 };
 
 /** 表示コンプライアンス上の禁止語 */
@@ -2449,6 +2463,32 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "別事業体",
     "独立した事業体",
   ],
+  "yuryo-roujin-home-setchi-todoke-tokutei-shisetsu-shitei": [
+    "老人福祉法第29条第1項",
+    "介護保険法第8条第11項",
+    "第70条第1項",
+    "平成11年厚生省令第37号",
+    "特定施設入居者生活介護",
+    "3対1",
+    "13平方メートル以上",
+    "別事業体",
+    "独立した事業体",
+    "紹介料を受け取りません",
+  ],
+  "kaisou-kyoka-hakajimai-tetsuzuki": [
+    "墓地、埋葬等に関する法律第5条第2項",
+    "第5条第1項",
+    "第2条第3項",
+    "施行規則第2条第1項",
+    "施行規則第2条第2項",
+    "昭和23年厚生省令第24号",
+    "改葬許可証",
+    "民法第897条",
+    "相続税法第12条第1項第2号",
+    "別事業体",
+    "独立した事業体",
+    "紹介料を受け取りません",
+  ],
 };
 
 /** 記事ごとに含めてはならない表現 */
@@ -2573,6 +2613,8 @@ const FORBIDDEN_PHRASES: Record<string, string[]> = {
   "yuigon-tekkai-teishoku-fukusu-yuigon-yuretsu": [],
   "keibigyo-nintei-yoken-kekkaku-kenshu": [],
   "souzoku-ichibu-bunkatsu-kyogisho-nokori": [],
+  "yuryo-roujin-home-setchi-todoke-tokutei-shisetsu-shitei": [],
+  "kaisou-kyoka-hakajimai-tetsuzuki": [],
 };
 
 /** 本セット外へ張る既存legalコラムslug（リポジトリの他シードで実在確認済み） */
@@ -4587,6 +4629,58 @@ const ARTICLES: Array<{
       "一部分割",
       "民法907条",
       "相続税",
+      "行政書士",
+    ],
+  },
+  {
+    file: "84-yuryo-roujin-home-setchi-todoke-tokutei-shisetsu-shitei.md",
+    slug: "yuryo-roujin-home-setchi-todoke-tokutei-shisetsu-shitei",
+    date: "2026-09-26",
+    title:
+      "介護付き有料老人ホームの設置届と特定施設の指定はどう進めますか？",
+    category: "許認可・開業の手続き（行政書士の実務から）",
+    excerpt:
+      "介護付き有料老人ホームの開設は、老人福祉法第29条第1項の設置届（都道府県知事への事前届出）と、介護保険法第8条第11項の特定施設入居者生活介護の指定（同法第70条第1項）を重ねて進めます。人員基準（平成11年厚生省令第37号）の看護・介護職員3対1、居室の床面積は原則13平方メートル以上といった要件と、設置届から指定・開設までのスケジュール、物件・建築・消防・労務・登記・税務を誰に分けて頼むか（分離受任）を、行政書士の実務から整理しました。",
+    keywords: [
+      "介護付き有料老人ホーム 設置届 特定施設 指定",
+      "老人福祉法 29条 設置届 都道府県知事",
+      "特定施設入居者生活介護 指定 人員基準 3対1",
+      "有料老人ホーム 居室 面積 13平方メートル",
+      "特定施設 指定申請 行政書士",
+      "有料老人ホーム 開設 スケジュール 分離受任",
+    ],
+    tags: [
+      "有料老人ホーム",
+      "特定施設入居者生活介護",
+      "設置届",
+      "指定申請",
+      "老人福祉法",
+      "介護保険法",
+      "行政書士",
+    ],
+  },
+  {
+    file: "85-kaisou-kyoka-hakajimai-tetsuzuki.md",
+    slug: "kaisou-kyoka-hakajimai-tetsuzuki",
+    date: "2026-09-26",
+    title: "墓じまい（改葬許可）の手続きはどう進めればいいですか？",
+    category: "相続の手続き（行政書士の実務から）",
+    excerpt:
+      "墓じまい（改葬）は、焼骨等が現に存する地の市町村長の許可を受けてから行います（墓地、埋葬等に関する法律第5条第1項・第2項）。改葬許可申請書の記載事項（施行規則第2条第1項）、埋蔵・収蔵の事実を証する書面や受入証明のそろえ方、祭祀承継者と民法第897条の関係、離檀料・撤去費用の話し合い、そして書類作成は行政書士・紛争は弁護士・登記は司法書士・税務は税理士へ分ける分離受任を、行政書士の実務から整理しました。",
+    keywords: [
+      "墓じまい 改葬許可 手続き",
+      "改葬許可申請書 記載事項 必要書類",
+      "改葬 埋葬証明 受入証明 どこで",
+      "改葬許可 市町村長 墓地埋葬法 5条",
+      "祭祀承継者 墓じまい 民法897条",
+      "離檀料 墓じまい 行政書士",
+    ],
+    tags: [
+      "墓じまい",
+      "改葬許可",
+      "墓地埋葬法",
+      "祭祀承継",
+      "相続",
       "行政書士",
     ],
   },

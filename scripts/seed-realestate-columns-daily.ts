@@ -1816,6 +1816,46 @@ const ARTICLES: ArticleSpec[] = [
     localesWithTranslations: ["en", "zh-tw", "zh"],
     hubLinks: ["/souzoku"],
   },
+  {
+    file: "89-shuzo-craft-beer-jozosho-bukken-youken.md",
+    slug: "shuzo-craft-beer-jozosho-bukken-youken",
+    title: "クラフトビール醸造所（酒類製造）を開く物件は何を確認すればいいですか？",
+    publishedAt: "2026-09-26",
+    category: "投資・事業用不動産",
+    excerpt:
+      "クラフトビール醸造所（酒類製造）の物件で先に効くのは、①用途地域（醸造所は建築基準法別表第二の「工場」で、作業場の床面積と危険性・環境影響で置ける区域が絞られる）②建物側の要件（タンクを載せる床荷重・天井高・電気容量・冷蔵/貯蔵区画）③醸造排水（BODが高く水質汚濁防止法の特定施設＋下水道の規制がかかる）④酒類製造免許の最低製造数量（ビールは年60キロリットル、発泡酒は年6キロリットル）の4点です。免許は所轄税務署（国税庁）の所管で宅建業者・行政書士の業務範囲外。東京都文京区の宅地建物取引士兼行政書士が、契約前に確認できることを条文から整理します。",
+    keywords: [
+      "クラフトビール 醸造所 物件",
+      "酒類製造免許 最低製造数量 ビール 発泡酒",
+      "醸造所 用途地域 工場 建築基準法",
+      "醸造排水 BOD 水質汚濁防止法 特定施設",
+      "ブルーパブ タップルーム 飲食店営業許可",
+    ],
+    tags: ["事業用不動産", "許認可", "用途地域", "酒税法"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/toushi", "/office"],
+  },
+  {
+    file: "90-souzoku-tochi-tehanasu-kokko-kizoku-baikyaku-hikaku.md",
+    slug: "souzoku-tochi-tehanasu-kokko-kizoku-baikyaku-hikaku",
+    title: "相続した土地は国庫帰属で手放すのと売るのとどちらが得ですか？",
+    publishedAt: "2026-09-26",
+    category: "相続",
+    excerpt:
+      "使い道のない相続した土地を手放すには、国に引き取ってもらう相続土地国庫帰属制度と、市場で売る2つの道があります。国庫帰属は審査手数料が土地一筆あたり1万4000円、承認されると負担金が原則20万円かかる「払って手放す」制度で、市場で売れる土地なら手取りが残ります。まず市場で売れるかを査定で見極め、売れないなら国庫帰属や引き取りを検討する順番が現実的です。東京都文京区の宅地建物取引士兼行政書士が、手放す費用と売る手取りを並べて判断材料を整理します。",
+    keywords: [
+      "相続 土地 手放す 国庫帰属 売却 比較",
+      "相続土地国庫帰属 負担金 20万円 審査手数料",
+      "国庫帰属 却下事由 不承認事由 使えない土地",
+      "低未利用土地 100万円控除 措置法35条の3",
+      "売れない土地 寄付 引き取りサービス",
+    ],
+    tags: ["相続", "国庫帰属", "売却", "税制特例"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/souzoku"],
+  },
 ];
 
 function toPlainText(md: string): string {
