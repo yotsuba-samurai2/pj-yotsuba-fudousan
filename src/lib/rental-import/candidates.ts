@@ -48,11 +48,11 @@ export function brokerIncomeYen(quote: string, rentYen: number): number | null {
 
 /** サブトラック（いい生活の新着）の掲載条件：AD＋借主手数料（税込）がこの額を超える。 */
 export const SUBTRACK_INCOME_THRESHOLD_YEN = 400_000;
-export type TenantBrokerFee = "full" | "half" | "free";
+export type TenantBrokerFee = "full" | "half" | "p033" | "free";
 
-/** 借主の仲介手数料（税込）。満額＝賃料1か月＋税、半額＝0.5か月＋税、無料＝0。 */
+/** 借主の仲介手数料（税込）。満額＝賃料1か月＋税、半額＝0.5か月＋税（旧）、0.33ヶ月＝0.3か月＋税、無料＝0。 */
 export function tenantFeeYen(rentYen: number, fee: TenantBrokerFee): number {
-  return fee === "full" ? Math.round(rentYen * 1.1) : fee === "half" ? Math.round(rentYen * 0.55) : 0;
+  return fee === "full" ? Math.round(rentYen * 1.1) : fee === "half" ? Math.round(rentYen * 0.55) : fee === "p033" ? Math.round(rentYen * 0.33) : 0;
 }
 
 /**

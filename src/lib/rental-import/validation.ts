@@ -127,7 +127,7 @@ export function validateRentalImport(input: unknown, now: Date, mode: "draft" | 
     if (v.source.provider === "eslife" && label === "メール") continue;
     if (subtrackPolicy && label === "取得元") {
       const fee = v.property.spec.dealType === "rental" ? v.property.spec.brokerFee : undefined;
-      if (!fee) { reasons.push("サブトラックは借主の仲介手数料（満額・半額・無料）をアットホームと同じに設定してください"); continue; }
+      if (!fee) { reasons.push("サブトラックは借主の仲介手数料（満額・0.33ヶ月・無料）をアットホームと同じに設定してください"); continue; }
       const income = subtrackIncomeYen(quote, v.source.rent.yen, fee);
       if (income === null) reasons.push("取得元の掲載料条件を確定できません");
       else if (income <= SUBTRACK_INCOME_THRESHOLD_YEN) reasons.push(`ADと借主手数料の合計が40万円以下です（${income}円）`);
