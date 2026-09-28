@@ -45,7 +45,7 @@ tasks/ai-visibility-v2/   ← 結果（Actions が追記）
    - キーは 1 個だけ発行し、用途を「AI可視性計測」と分かる名前にする。**チャットや文書にキーの値を貼らない。**
 2. **GitHub に登録** — リポジトリ `yotsuba-samurai2/pj-yotsuba-fudousan` → Settings → Secrets and variables → Actions
    - Secrets：`GEMINI_API_KEY` ＝ 上のキー
-   - Variables（任意）：`GEMINI_MODEL` ＝ 使うモデル名。未設定なら `gemini-3.5-flash`。もっと安くしたいときは `gemini-3.5-flash-lite`
+   - Variables（任意）：`GEMINI_MODEL` ＝ 使うモデル名。未設定なら `gemini-3.8-flash`（2026-09 時点で最新の Flash。3.5 Flash より安い）。もっと安くしたいときは `gemini-3.5-flash-lite`（品質は落ちる）。そのほか `GEMINI_MAX_TOKENS`（既定 3072）・`GEMINI_THINKING_LEVEL`（既定 low）もワークフローの env に足せば上書きできる
 3. **試運転** — Actions → 「AI Visibility v2」→ Run workflow → `limit` に `3` を入れて実行。
    - `limit` を入れた実行は **何も書き込まない**（dry-run）。ログ（Actions の「計測」ステップ）に `q01 cite=… named=… 出典N` が3行出れば鍵と課金の設定は正しい。
    - `GEMINI_API_KEY がありません` → Secret 名の綴りを確認。`HTTP 402 前払い残高が0` → 2026年3月以降の新規プロジェクトは前払い（Prepay）方式が既定。https://aistudio.google.com/billing の **Buy credits** で購入（最低 $5・12か月で失効）。残高 $0 だと全リクエストが止まる（初回試運転 2026-09-28 で実際に発生）。`401`/`403` → キーの値・API 制限を確認。`429` が続く → 上限到達、時間をおいて再実行。
@@ -97,9 +97,12 @@ GEMINI_API_KEY=… node scripts/ai-visibility/measure.mjs
 
 ## 費用と上限
 
-- Gemini 3.5 Flash の本文トークン：30問×約1,500トークン／日 ＝ 月に数十円〜百円台の見込み（未検証・初月の請求で確認）
-- グラウンディング：月930件 ＜ 無料5,000件。`--limit` の試運転もこの件数に入る。
-- 万一 Google が無料枠を廃止・変更した場合は Actions のログと Google Cloud の請求で気づく。月次で請求を一度見る。
+- **実測（2026-09-28・初回30問・gemini-3.5-flash・思考 medium・上限2048）**：入力 約2.1万トークン・出力 約5.1万トークン（思考を含む）／日。3.5 Flash の料金（入力 $1.50・出力 $9.00 per 1M）だと **約 $0.49／日 ≒ 月 $15（約2,200円）**。当初の見込み「月に数十円〜百円台」は誤りだった。
+- そのため既定を **gemini-3.8-flash（入力 $0.75・出力 $3.75 per 1M・2026年12月まで。2027年から $1.50／$7.50）＋思考 low** に変更。見込みは **月 $6〜8（約900〜1,200円）**。`summary.csv` の `tokens_in`／`tokens_out` と `latest.md` の「トークン」行で毎日確認できる。
+- さらに下げる選択肢：頻度を週3回にする（cron を `30 13 * * 1,3,5` に）→ 月 $3 前後／`gemini-3.5-flash-lite`（出力 $2.50）→ 月 $2 前後だが答えの質が変わる。
+- グラウンディング：月930件 ＜ 無料5,000件（Gemini 3.x 共通）。`--limit` の試運転もこの件数に入る。
+- 前払い（Prepay）方式のため、残高が $0 になると 402 で全欠測 → 異常 Issue が立つ。**AI Studio の「利用額」で月額の費用上限（例 $10）を設定**し、残高は月1回見る。クレジットは12か月で失効。
+- 料金表 https://ai.google.dev/gemini-api/docs/pricing は変わる。半年に一度は見直す。
 
 ## 判定の限界（読み方の注意）
 

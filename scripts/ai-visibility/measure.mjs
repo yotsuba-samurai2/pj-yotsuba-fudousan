@@ -6,7 +6,8 @@
 // 使い方：
 //   GEMINI_API_KEY=... node scripts/ai-visibility/measure.mjs [--out tasks/ai-visibility-v2] [--limit 5] [--dry-run] [--write] [--weekly]
 //   node scripts/ai-visibility/measure.mjs --mock --out /tmp/aiv   # 鍵なしで通し実行（fixtures の応答を使う）
-// 環境変数：GEMINI_API_KEY（必須・--mock 以外）、GEMINI_MODEL（既定 gemini-3.5-flash）
+// 環境変数：GEMINI_API_KEY（必須・--mock 以外）、GEMINI_MODEL（既定 gemini-3.8-flash）、
+//           GEMINI_MAX_TOKENS（既定 3072）、GEMINI_THINKING_LEVEL（既定 low。none で思考設定を付けない）
 // 終了コード：0 正常／2 全問欠測／3 鍵なし
 import { readFileSync, writeFileSync, appendFileSync, existsSync, mkdirSync, readdirSync, unlinkSync } from "node:fs";
 import { dirname, join } from "node:path";
@@ -14,7 +15,7 @@ import { fileURLToPath } from "node:url";
 import {
   buildRequest, parseResponse, judge, normalizeHost, jstDate, jstWeekday, csvLine, parseCsv,
   RESULTS_HEADER, SUMMARY_HEADER, summarize, detectAnomaly, renderLatestMd, renderWeeklyMd,
-  retryableStatus, describeHttpError,
+  retryableStatus, describeHttpError, DEFAULT_MODEL, DEFAULT_MAX_TOKENS, DEFAULT_THINKING_LEVEL,
 } from "./lib.mjs";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
@@ -25,7 +26,9 @@ const has = (name) => args.includes(name);
 const OUT = flag("--out", "tasks/ai-visibility-v2");
 const LIMIT = Number(flag("--limit", 0)) || 0;
 const CONCURRENCY = Number(flag("--concurrency", 4)) || 4;
-const MODEL = flag("--model", process.env.GEMINI_MODEL || "gemini-3.5-flash");
+const MODEL = flag("--model", process.env.GEMINI_MODEL || DEFAULT_MODEL);
+const MAX_TOKENS = Number(process.env.GEMINI_MAX_TOKENS) || DEFAULT_MAX_TOKENS;
+const THINKING_LEVEL = process.env.GEMINI_THINKING_LEVEL || DEFAULT_THINKING_LEVEL;
 const MOCK = has("--mock");
 // --limit の試運転は既定で書き込まない（夜間の本計測の行を5問で上書きしないため）。書く場合は --write を足す
 const DRY = has("--dry-run") || (LIMIT > 0 && !has("--write"));
@@ -46,7 +49,7 @@ const qset = JSON.parse(readFileSync(join(HERE, "questions.json"), "utf8"));
 const questions = LIMIT ? qset.questions.slice(0, LIMIT) : qset.questions;
 const date = jstDate();
 const t0 = Date.now();
-log(`AI可視性v2 開始 date=${date} engine=${ENGINE} model=${MODEL} 問数=${questions.length} 並列=${CONCURRENCY}`);
+log(`AI可視性v2 開始 date=${date} engine=${ENGINE} model=${MODEL} maxTokens=${MAX_TOKENS} thinking=${THINKING_LEVEL} 問数=${questions.length} 並列=${CONCURRENCY}`);
 
 // ── Gemini 呼び出し（再試行つき） ─────────────────────────────
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -57,7 +60,7 @@ async function callGemini(questionText, qid) {
     return fx[qid] ?? fx.default;
   }
   const url = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent`;
-  const body = JSON.stringify(buildRequest(questionText));
+  const body = JSON.stringify(buildRequest(questionText, { maxOutputTokens: MAX_TOKENS, thinkingLevel: THINKING_LEVEL }));
   const waits = [2000, 8000, 20000];
   let lastErr = "";
   for (let attempt = 0; attempt <= waits.length; attempt++) {
@@ -110,10 +113,11 @@ async function measureOne(q) {
       qid: q.id, cat: q.cat, lang: q.lang, type: q.type, measured: 1, ...j,
       text: parsed.text, searchQueries: parsed.searchQueries, finish: parsed.finishReason,
       chunks: parsed.chunks.map((c) => ({ host: c.host, title: c.title, url: c.resolvedUrl || c.uri, supported: c.supported })),
+      tokensIn: parsed.usage.tokensIn, tokensOut: parsed.usage.tokensOut, tokensThought: parsed.usage.tokensThought,
       ms: Date.now() - started, error: "",
     };
   } catch (e) {
-    return { qid: q.id, cat: q.cat, lang: q.lang, type: q.type, measured: 0, cite: 0, citeRank: "", citeSupported: 0, named: 0, namedHits: [], ownUrls: [], domains: [], competitorDomains: [], text: "", searchQueries: [], finish: "error", chunks: [], ms: Date.now() - started, error: String(e?.message || e).slice(0, 300) };
+    return { qid: q.id, cat: q.cat, lang: q.lang, type: q.type, measured: 0, cite: 0, citeRank: "", citeSupported: 0, named: 0, namedHits: [], ownUrls: [], domains: [], competitorDomains: [], text: "", searchQueries: [], finish: "error", chunks: [], tokensIn: 0, tokensOut: 0, tokensThought: 0, ms: Date.now() - started, error: String(e?.message || e).slice(0, 300) };
   }
 }
 
@@ -134,7 +138,7 @@ const records = await pool(questions, CONCURRENCY, async (q) => {
 });
 const durationS = Math.round((Date.now() - t0) / 1000);
 const summary = summarize(records, questions, { date, engine: ENGINE, model: MODEL, durationS });
-log(`完了 ${durationS}s 測定=${summary.measured}/${summary.n} 引用=${summary.cite_total} 名指し=${summary.named_total}`);
+log(`完了 ${durationS}s 測定=${summary.measured}/${summary.n} 引用=${summary.cite_total} 名指し=${summary.named_total} トークン入力=${summary.tokens_in} 出力=${summary.tokens_out} 途中切れ=${summary.truncated}`);
 log(`引用〇: ${summary.cite_qids || "なし"} ／ 名指し〇: ${summary.named_qids || "なし"} ／ 欠測: ${summary.missing_qids || "なし"}`);
 
 // ── 保存 ─────────────────────────────────────────────────────
@@ -156,7 +160,7 @@ if (!DRY) {
   dropToday(resultsPath, RESULTS_HEADER);
   dropToday(summaryPath, SUMMARY_HEADER);
   for (const r of records) {
-    appendFileSync(resultsPath, csvLine([date, ENGINE, MODEL, r.qid, r.cat, r.lang, r.type, r.measured, r.cite, r.citeRank, r.citeSupported, r.named, r.namedHits.join(" "), r.ownUrls.join(" "), r.domains.join(" "), (r.searchQueries || []).join(" | "), r.finish || r.error, r.ms]));
+    appendFileSync(resultsPath, csvLine([date, ENGINE, MODEL, r.qid, r.cat, r.lang, r.type, r.measured, r.cite, r.citeRank, r.citeSupported, r.named, r.namedHits.join(" "), r.ownUrls.join(" "), r.domains.join(" "), (r.searchQueries || []).join(" | "), r.finish || r.error, r.ms, r.tokensIn, r.tokensOut]));
   }
   appendFileSync(summaryPath, csvLine(SUMMARY_HEADER.map((h) => summary[h])));
   const detailPath = join(OUT, "detail", `${date}.jsonl`);
