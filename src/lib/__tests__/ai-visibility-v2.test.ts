@@ -11,6 +11,7 @@ import {
   SUMMARY_HEADER,
   buildRequest,
   csvLine,
+  describeHttpError,
   detectAnomaly,
   isOwnHost,
   isOwnUrl,
@@ -19,6 +20,7 @@ import {
   parseCsv,
   parseResponse,
   renderWeeklyMd,
+  retryableStatus,
   stripEcho,
   summarize,
 } from "../../../scripts/ai-visibility/lib.mjs";
@@ -182,6 +184,19 @@ describe("リクエスト・CSV・集計・異常検知", () => {
     expect(r.tools).toEqual([{ google_search: {} }]);
     expect(r.contents[0].parts[0].text).toBe("誠之小学校の学区で賃貸マンションを探しています。");
     expect(r.generationConfig.temperature).toBeLessThanOrEqual(0.3);
+  });
+  it("再試行は混雑・一時障害だけ。課金切れ(402)・鍵の誤り(401/403)・入力の誤り(400/404)は即時に諦め、原因を一文で示す", () => {
+    for (const s of [429, 500, 502, 503, 504]) expect(retryableStatus(s)).toBe(true);
+    for (const s of [400, 401, 402, 403, 404]) expect(retryableStatus(s)).toBe(false);
+    const body402 = JSON.stringify({ error: { code: 402, message: "Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing.", status: "RESOURCE_EXHAUSTED" } });
+    const d = describeHttpError(402, body402);
+    expect(d).toContain("HTTP 402");
+    expect(d).toContain("前払い残高が0");
+    expect(d).toContain("aistudio.google.com/billing");
+    expect(d).toContain("prepayment credits are depleted");
+    expect(describeHttpError(401, "not json")).toContain("鍵が無効");
+    expect(describeHttpError(418, "")).toBe("HTTP 418");
+    expect(describeHttpError(429, "{}").length).toBeLessThan(200);
   });
   it("CSV はカンマ・引用符・改行を往復できる", () => {
     const header = ["a", "b", "c"];

@@ -14,6 +14,7 @@ import { fileURLToPath } from "node:url";
 import {
   buildRequest, parseResponse, judge, normalizeHost, jstDate, jstWeekday, csvLine, parseCsv,
   RESULTS_HEADER, SUMMARY_HEADER, summarize, detectAnomaly, renderLatestMd, renderWeeklyMd,
+  retryableStatus, describeHttpError,
 } from "./lib.mjs";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
@@ -62,16 +63,17 @@ async function callGemini(questionText, qid) {
   for (let attempt = 0; attempt <= waits.length; attempt++) {
     const ctl = new AbortController();
     const timer = setTimeout(() => ctl.abort(), 90_000);
+    let retry = true; // 通信断・タイムアウト・混雑(429)・5xx だけ再試行。課金(402)・認証(401/403)・入力(400/404)は即時に諦める
     try {
       const res = await fetch(url, { method: "POST", headers: { "content-type": "application/json", "x-goog-api-key": API_KEY }, body, signal: ctl.signal });
       const text = await res.text();
       if (res.ok) return JSON.parse(text);
-      lastErr = `HTTP ${res.status} ${text.slice(0, 300)}`;
-      if (![429, 500, 502, 503, 504].includes(res.status)) throw new Error(lastErr);
+      lastErr = describeHttpError(res.status, text);
+      retry = retryableStatus(res.status);
     } catch (e) {
       lastErr = e?.name === "AbortError" ? "timeout 90s" : String(e?.message || e);
-      if (/HTTP 4(0[013]|04)/.test(lastErr)) throw new Error(lastErr);
     } finally { clearTimeout(timer); }
+    if (!retry) break;
     if (attempt < waits.length) { log(`  ${qid} 再試行 ${attempt + 1}/${waits.length}: ${lastErr.slice(0, 120)}`); await sleep(waits[attempt]); }
   }
   throw new Error(lastErr);
@@ -167,8 +169,13 @@ if (!DRY) {
     const all = parseCsv(readFileSync(resultsPath, "utf8")).filter((r) => r.engine === ENGINE);
     writeFileSync(join(OUT, "weekly.md"), renderWeeklyMd(all, questions, qset.categories, date));
   }
-  if (anomaly) writeFileSync(join(OUT, "anomaly.md"), `# 異常検知 ${date}\n\n${reasons.map((r) => `- ${r}`).join("\n")}\n\n欠測：${summary.missing_qids || "なし"}\n\n実行ログを確認してください。\n`);
-  else if (existsSync(join(OUT, "anomaly.md"))) unlinkSync(join(OUT, "anomaly.md"));
+  if (anomaly) {
+    // 欠測の原因を種類ごとに数えて Issue 本文に載せる（402 課金切れ・401 鍵失効などを一目で分かるように）
+    const tally = {};
+    for (const r of records) if (!r.measured) { const k = (r.error || "不明").slice(0, 140); tally[k] = (tally[k] || 0) + 1; }
+    const causes = Object.entries(tally).sort((a, b) => b[1] - a[1]).slice(0, 3).map(([k, n]) => `- ${n}問：${k}`);
+    writeFileSync(join(OUT, "anomaly.md"), `# 異常検知 ${date}\n\n${reasons.map((r) => `- ${r}`).join("\n")}\n\n欠測：${summary.missing_qids || "なし"}\n${causes.length ? `\n欠測の原因（多い順）：\n${causes.join("\n")}\n` : ""}\n実行ログを確認してください。\n`);
+  } else if (existsSync(join(OUT, "anomaly.md"))) unlinkSync(join(OUT, "anomaly.md"));
   log(`保存 ${resultsPath} / ${summaryPath} / ${detailPath}`);
 }
 

@@ -99,6 +99,28 @@ export function judge(question, text, chunks) {
   };
 }
 
+/** 再試行してよい HTTP ステータスか（混雑・一時障害のみ。課金・認証・入力の誤りは即時に諦める） */
+export function retryableStatus(status) {
+  return [429, 500, 502, 503, 504].includes(Number(status));
+}
+
+/** HTTP エラーを人が読める短い一文にする（ログ・CSV の finish 列用） */
+export function describeHttpError(status, bodyText) {
+  const s = Number(status);
+  let msg = "";
+  try { msg = JSON.parse(bodyText)?.error?.message ?? ""; } catch { msg = ""; }
+  msg = String(msg || bodyText || "").replace(/\s+/g, " ").trim().slice(0, 160);
+  const hint = {
+    400: "リクエスト不正（モデル名 GEMINI_MODEL を確認）",
+    401: "鍵が無効（Secret GEMINI_API_KEY を確認）",
+    402: "前払い残高が0。AI Studio の Billing（https://aistudio.google.com/billing）でクレジットを購入",
+    403: "鍵に権限がない／APIが無効（AI Studio でキーの制限と課金を確認）",
+    404: "モデルが見つからない（GEMINI_MODEL を確認）",
+    429: "レート制限・上限到達（時間をおいて再実行）",
+  }[s];
+  return `HTTP ${s}${hint ? ` ${hint}` : ""}${msg ? ` ｜ ${msg}` : ""}`;
+}
+
 /** Gemini generateContent のリクエスト本体（Google検索グラウンディング） */
 export function buildRequest(questionText) {
   return {

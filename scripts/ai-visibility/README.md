@@ -48,14 +48,14 @@ tasks/ai-visibility-v2/   ← 結果（Actions が追記）
    - Variables（任意）：`GEMINI_MODEL` ＝ 使うモデル名。未設定なら `gemini-3.5-flash`。もっと安くしたいときは `gemini-3.5-flash-lite`
 3. **試運転** — Actions → 「AI Visibility v2」→ Run workflow → `limit` に `3` を入れて実行。
    - `limit` を入れた実行は **何も書き込まない**（dry-run）。ログ（Actions の「計測」ステップ）に `q01 cite=… named=… 出典N` が3行出れば鍵と課金の設定は正しい。
-   - `GEMINI_API_KEY がありません` → Secret 名の綴りを確認。`429`/`403` が続く → 課金が有効か、キーの制限（API 制限）を確認。
+   - `GEMINI_API_KEY がありません` → Secret 名の綴りを確認。`HTTP 402 前払い残高が0` → 2026年3月以降の新規プロジェクトは前払い（Prepay）方式が既定。https://aistudio.google.com/billing の **Buy credits** で購入（最低 $5・12か月で失効）。残高 $0 だと全リクエストが止まる（初回試運転 2026-09-28 で実際に発生）。`401`/`403` → キーの値・API 制限を確認。`429` が続く → 上限到達、時間をおいて再実行。
 4. **本計測を1回手動で** — `limit` を空のまま Run workflow。`tasks/ai-visibility-v2/latest.md` が main にコミットされる。30問の判定を目視で確認し、設問や判定語のずれを直す（下記「設問を直す」）。
-5. **旧方式を止める（2週間並走後）** — Mac で
+5. **旧方式を止める** — 浦松判断（2026-09-28）で並走せず即停止。Mac で
    ```
    launchctl bootout gui/$(id -u)/com.yotsuba.ai-visibility
    mv ~/Library/LaunchAgents/com.yotsuba.ai-visibility.plist ~/Library/LaunchAgents/_disabled.com.yotsuba.ai-visibility.plist
    ```
-   旧CSV（`tasks/ai-visibility/…`）はそのまま残す。継続8問（legacy 番号つき）は旧CSVの同番号と比べられる。
+   旧CSV（`~/samurai-app/tasks/ai-visibility-daily.csv`）はそのまま残す。継続8問（legacy 番号つき）は旧CSVの同番号と比べられる。
 
 ## 日々の運用
 
