@@ -13,7 +13,7 @@ import { readFileSync, writeFileSync, appendFileSync, existsSync, mkdirSync, rea
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import {
-  buildRequest, parseResponse, judge, normalizeHost, jstDate, jstWeekday, csvLine, parseCsv,
+  buildRequest, parseResponse, judge, normalizeHost, jstDate, csvLine, parseCsv,
   RESULTS_HEADER, SUMMARY_HEADER, summarize, detectAnomaly, renderLatestMd, renderWeeklyMd,
   retryableStatus, describeHttpError, DEFAULT_MODEL, DEFAULT_MAX_TOKENS, DEFAULT_THINKING_LEVEL,
 } from "./lib.mjs";
@@ -146,7 +146,7 @@ const resultsPath = join(OUT, "results.csv");
 const summaryPath = join(OUT, "summary.csv");
 const history = existsSync(summaryPath) ? parseCsv(readFileSync(summaryPath, "utf8")) : [];
 const { anomaly, reasons } = detectAnomaly(summary, history.filter((h) => h.date !== date));
-const weekly = WEEKLY || jstWeekday() === 1;
+const weekly = WEEKLY; // 月1回運用なので自動の週次はしない。--weekly（Actions の weekly 入力）を付けたときだけ要約を作る
 
 if (DRY) log("dry-run：ファイルには書きません（--limit の試運転。書くには --write）");
 if (!DRY) {

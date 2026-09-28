@@ -305,8 +305,9 @@ describe("measure.mjs（モック通し実行）", () => {
 
 describe("ワークフローと配線", () => {
   const wf = readFileSync(join(ROOT, ".github", "workflows", "ai-visibility.yml"), "utf8");
-  it("毎日 22:30 JST に動き、鍵は Secrets から渡し、結果を tasks/ai-visibility-v2 にコミットする", () => {
-    expect(wf).toContain('cron: "30 13 * * *"');
+  it("手動実行のみ（自動スケジュールなし＝費用を前払い残高の範囲に抑える）。鍵は Secrets から渡し、結果を tasks/ai-visibility-v2 にコミットする", () => {
+    expect(wf).not.toMatch(/^\s*schedule:/m);
+    expect(wf).not.toContain("cron:");
     expect(wf).toContain("secrets.GEMINI_API_KEY");
     expect(wf).toContain("tasks/ai-visibility-v2");
     expect(wf).toContain("workflow_dispatch");
