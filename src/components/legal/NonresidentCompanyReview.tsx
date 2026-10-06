@@ -4,7 +4,7 @@ import type { LangCode } from "@/config/languages";
 import { addLocalePrefix } from "@/lib/locale";
 import { FAQJsonLd } from "@/components/seo/FAQJsonLd";
 import { getNonresidentReview, NONRESIDENT_ARTICLE_PATH } from "@/lib/legal/nonresident-review";
-import { NONRESIDENT_FEES, type NonresidentCopy } from "@/lib/legal/nonresident-review-copy";
+import { NONRESIDENT_FEES, NONRESIDENT_BANK_TERMS, type NonresidentCopy } from "@/lib/legal/nonresident-review-copy";
 
 export function NonresidentReviewNotice({ copy }: { copy: NonresidentCopy }) {
   return <aside className="my-4 rounded-lg border border-amber-400 bg-amber-50 p-3 text-sm text-amber-950">{copy.review}</aside>;
@@ -25,7 +25,7 @@ export function NonresidentFeeTable({ copy: c }: { copy: NonresidentCopy }) {
             <tr key={f.basis + i}>
               <th scope="row" className="min-w-36 border border-border p-3 font-medium">{["①", "②", "③", "④"][i]} {c.names[i]}</th>
               <td className="border border-border p-3">{c.units[i]}</td>
-              <td className="whitespace-nowrap border border-border p-3">{f.minimum ? c.minimumPrefix : ""}{f.amount.toLocaleString("en-US")}{f.minimum ? c.minimumSuffix : ""} {c.tax}</td>
+              <td className="whitespace-nowrap border border-border p-3">{f.minimum ? c.minimumPrefix : ""}{f.amount.toLocaleString("en-US")}{f.minimum ? c.minimumSuffix : ""}{i === 3 ? ` / ${NONRESIDENT_BANK_TERMS.monthlyFeeAboveThreshold.toLocaleString("en-US")}` : ""} {c.tax}</td>
               <td className="min-w-48 border border-border p-3 leading-relaxed">{c.services[i]}</td>
               <td className="min-w-48 border border-border p-3 leading-relaxed">{c.exclusions[i]}</td>
             </tr>
