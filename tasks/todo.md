@@ -886,6 +886,6 @@ sitemap の `locales` もページの `availableLocales` と同時に4言語へ�
 - [x] e-Gov現行版・金融庁No.112と原稿の条文・改正日を照合
 - [x] lockfile通りの依存環境：型検査、lint error 0・既存warning 23、133ファイル／1,866テスト（maxWorkers=2）
 - [x] 本番build、55 HTML/RSC等・232 client JS・422 prerender HTMLの漏出なし、4言語32 PC/SP画面とofficeフォールバック
-- [ ] コミット・Draft PR・検証報告
+- [x] 実装commit 8f80d0f、Draft PR #469、4言語原稿・34画面・検証JSONと報告を提出（CIチェック未登録）
 
 レビュー記録：本番DBの読み取り認証が失敗したため、未公開CMS記事の重複確認は未検証。新記事は本番404とし、公開前に再確認する。本番DB更新・マージ・公開・送金・外部連絡は行わない。
