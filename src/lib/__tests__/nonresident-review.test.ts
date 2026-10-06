@@ -19,11 +19,15 @@ describe("nonresident local review boundary", () => {
       expect(isNonresidentReviewEnabled({ ...reviewEnv, [key]: "true" })).toBe(false);
     }
   });
-  it("returns no draft data for production even with opt-in", async () => {
+  it("keeps property drafts private while approved services are public in production", async () => {
     vi.stubEnv("NODE_ENV", "production");
     vi.stubEnv("NONRESIDENT_COMPANY_LOCAL_REVIEW", "true");
     const { getNonresidentReview } = await import("@/lib/legal/nonresident-review");
     expect(await getNonresidentReview("ja")).toBeNull();
+    const { getNonresidentServices } = await import("@/lib/legal/nonresident-review");
+    for (const locale of ["ja", "en", "zh-tw", "zh"] as const) {
+      expect(await getNonresidentServices(locale)).toEqual(NONRESIDENT_COPY[locale]);
+    }
     vi.unstubAllEnvs();
   });
 });
