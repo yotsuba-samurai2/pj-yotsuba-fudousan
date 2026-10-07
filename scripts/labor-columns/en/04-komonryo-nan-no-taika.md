@@ -1,13 +1,13 @@
 ---
 title: What does a Shakai Hoken Roumushi retainer fee actually pay for?
-excerpt: Compare a retainer by its scope, including payroll, routine filings, advice and software fees. 四葉社会保険労務士事務所 offers the HR Outsourcing Plan from 33,000 yen per month, plus initial setup and workflow design from 88,000 yen, both including tax. This article explains the included work, company responsibilities and separately priced services.
+excerpt: Compare a retainer by its scope, including payroll, routine filings, advice and software fees. 四葉社会保険労務士事務所 offers the HR Outsourcing Plan at 16,500 yen per month for 1 payroll recipient, plus standard initial setup at 55,000 yen / workflow design and migration from 88,000 yen, both including tax. This article explains the included work, company responsibilities and separately priced services.
 category: How fees work
 faqHeading: Frequently asked questions
 keywords: Shakai Hoken Roumushi retainer fee | what a retainer fee includes | HR outsourcing plan | payroll and routine filings | freee HR LINE time clock | initial setup fee
 tags: retainer fee | fees | HR outsourcing | payroll | Shakai Hoken Roumushi
 ---
 
-**Key points:** Compare the retainer fee of a Shakai Hoken Roumushi, a Japanese Certified Social Insurance and Labor Consultant, by how much payroll processing, routine filing, advice and software use it covers, as well as by price. The main service of 四葉社会保険労務士事務所 is the **HR Outsourcing Plan**, which brings these services together. For 1–3 people on the payroll, fees are **from 33,000 yen per month, including tax / initial setup and workflow design from 88,000 yen, including tax**. The company is responsible for checking and finalizing attendance and giving final approval of the payroll results.
+**Key points:** Compare the retainer fee of a Shakai Hoken Roumushi, a Japanese Certified Social Insurance and Labor Consultant, by how much payroll processing, routine filing, advice and software use it covers, as well as by price. The main service of 四葉社会保険労務士事務所 is the **HR Outsourcing Plan**, which brings these services together. For 1 person on the payroll, fees are **16,500 yen per month, including tax / standard initial setup at 55,000 yen / workflow design and migration from 88,000 yen, including tax**. The company is responsible for checking and finalizing attendance and giving final approval of the payroll results.
 
 Two retainers with the same monthly fee can produce different annual totals and leave different amounts of work with your company. Before comparing them, use your existing contracts and invoices to separate monthly charges, initial charges and charges that arise when specific work is requested.
 
@@ -38,14 +38,21 @@ The monthly recruitment-related scope consists of advice on job postings, hiring
 
 ## How much are the monthly and initial fees?
 
-Fees are **from 33,000 yen per month for 1–3 people on the payroll, including tax / initial setup and workflow design from 88,000 yen, including tax**. The initial fee includes freee configuration, LINE time clock setup, pay structure and allowance/deduction settings, employee registration, social insurance information, the first payroll test and workflow design.
+Fees are **16,500 yen per month for 1 person on the payroll, including tax / standard initial setup at 55,000 yen / workflow design and migration from 88,000 yen, including tax**. Standard setup applies to a new implementation with no existing data migration and standard payroll and attendance, and covers freee, employees, usual allowances and commuting expenses, LINE time clock, the first payroll calculation and basic guidance. Workflow design and migration covers existing data migration and complex configuration within the scope agreed in writing before work begins.
 
 | Number of people on the payroll | Monthly fee, including tax |
 |---|---:|
-| 1–3 | 33,000 yen |
-| 4–5 | 44,000 yen |
-| 6–10 | 55,000 yen |
-| 11 or more | 55,000 yen + 3,300 yen for each person above 10 |
+| 1 | 16,500 yen |
+| 2 | 22,000 yen |
+| 3 | 33,000 yen |
+| 4 | 44,000 yen |
+| 5 | 44,000 yen |
+| 6 | 55,000 yen |
+| 7 | 55,000 yen |
+| 8 | 55,000 yen |
+| 9 | 55,000 yen |
+| 10 | 55,000 yen |
+| 11 or more | 55,000 yen + (payroll recipients − 10) × 3,300 yen |
 
 The fixed fee varies by headcount band because payroll, filings, freee usage capacity and inquiry handling increase with the number of people. For example, the monthly fee is 71,500 yen for 15 people, 88,000 yen for 20 and 121,000 yen for 30. All figures include tax; the initial fee is additional.
 
@@ -78,14 +85,14 @@ A. The HR Outsourcing Plan includes routine enrollment and withdrawal filings in
 A. The plan includes freee人事労務 Standard and LINE time clock. freee会計 is excluded. Matters such as the software contracting party and data transfer when the contract ends are confirmed individually before signing.
 
 **Q. Does the initial fee only cover configuration?**
-A. It covers employee and social insurance information preparation, the first payroll test, and design of the monthly closing and approval workflow, as well as configuration. It starts at 88,000 yen, including tax, and is presented together with the monthly fee.
+A. Initial setup is 55,000 yen for standard setup, or from 88,000 yen for workflow design and migration (tax included). Standard setup applies to a new implementation with no existing data migration and standard payroll and attendance, and covers freee, employees, usual allowances and commuting expenses, LINE time clock, the first payroll calculation and basic guidance. Workflow design and migration covers existing data migration and complex configuration within the scope agreed in writing before work begins.
 
 **Q. Is it the same contract if we want to bring payroll back in-house?**
 A. In-house processing and outsourcing leave different work with the company and change the scope entrusted to us. We individually confirm the transition date, settings and data transfer, support scope and fees. [This article](/en/labor/column/kyuyo-keisan-freee-naisei) summarizes the points to compare when processing payroll in-house.
 
 ## Sources for this article
 
-- 四葉's services and prices are based on the V10 specification dated September 9, 2026. See the [fee schedule](/en/labor/ryokin) for current information and the [consultation-to-contract process](/en/labor/nagare) for the steps involved.
+- 四葉's services and prices are based on the V10 specification dated September 9, 2026. See the [fee schedule](/en/labor/ryokin) for current information and the [consultation-to-contract process](/en/labor/nagare) for the steps involved. Monthly fee descriptions were updated in the October 7, 2026 revision. Confirm separately when changes apply to an existing contract.
 - The comparison items organize what to check in a contract. They do not describe other offices' market prices or the prevalence of particular contract types.
 - [The roles of freee HR and a Shakai Hoken Roumushi](/en/labor/column/freee-jinji-roumu-sharoushi-doko-made) explains the distinction between software and professional qualifications.
 

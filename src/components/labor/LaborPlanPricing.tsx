@@ -1,5 +1,5 @@
 import type { LangCode } from "@/config/languages";
-import { LABOR_PRICING, formatLaborYen } from "@/lib/labor/pricing";
+import { LABOR_PRICING, formatLaborYen, getLaborMonthlyQuotes } from "@/lib/labor/pricing";
 export { formatLaborYen } from "@/lib/labor/pricing";
 import { LABOR_PLAN_COPY } from "@/lib/labor/plan-copy";
 import { LABOR_SETUP_COPY } from "@/lib/labor/setup-copy";
@@ -28,8 +28,8 @@ export function LaborPlanPriceSummary({ locale, emphasizePayroll = false }: { lo
       </div>}
       <dl className="grid gap-4 rounded-xl border border-border bg-surface p-4 md:grid-cols-3">
         <div>
-          <dt className="text-sm text-text">{c.monthly} · {c.people} 1–3</dt>
-          <dd className="mt-1 text-lg font-semibold text-ink">{from(LABOR_PRICING.bands[0].monthly)} <span className="text-sm font-normal">({c.tax})</span></dd>
+          <dt className="text-sm text-text">{c.monthly} · {c.people} {LABOR_PRICING.bands[0].min}</dt>
+          <dd className="mt-1 text-lg font-semibold text-ink">{formatLaborYen(LABOR_PRICING.bands[0].monthly, locale)} <span className="text-sm font-normal">({c.tax})</span></dd>
         </div>
         <div>
           <dt className="text-sm text-text">{c.setup} · {setup.standardTitle}</dt>
@@ -88,16 +88,17 @@ export function LaborPlanPricing({ locale }: { locale: LangCode }) {
           <th scope="col" className="border border-border p-3">{c.monthly}</th>
         </tr></thead>
         <tbody>
-          {LABOR_PRICING.bands.map((band) => <tr key={band.min}>
-            <th scope="row" className="border border-border p-3 font-normal">{band.min}–{band.max}</th>
-            <td className="border border-border p-3">{formatLaborYen(band.monthly, locale)}</td>
+          {getLaborMonthlyQuotes().map(({ people, monthly }) => <tr key={people}>
+            <th scope="row" className="border border-border p-3 font-normal">{people}</th>
+            <td className="border border-border p-3">{formatLaborYen(monthly, locale)}</td>
           </tr>)}
           <tr>
             <th scope="row" className="border border-border p-3 font-normal">{lastBand.max + 1}+</th>
-            <td className="border border-border p-3">{formatLaborYen(lastBand.monthly, locale)} + {c.additional(lastBand.max, formatLaborYen(LABOR_PRICING.additionalRecipientFee, locale))}</td>
+            <td className="border border-border p-3">{formatLaborYen(lastBand.monthly, locale)} + ({c.people} − {lastBand.max}) × {formatLaborYen(LABOR_PRICING.additionalRecipientFee, locale)}</td>
           </tr>
         </tbody>
       </table>
+      <p className="text-sm leading-relaxed text-text">{c.additional(lastBand.max, formatLaborYen(LABOR_PRICING.additionalRecipientFee, locale))} ({c.tax})</p>
       <LaborPlanResponsibilities locale={locale} />
       <LaborPlanResponsibility locale={locale} />
       <p className="text-sm leading-relaxed text-text">{c.separate}</p>

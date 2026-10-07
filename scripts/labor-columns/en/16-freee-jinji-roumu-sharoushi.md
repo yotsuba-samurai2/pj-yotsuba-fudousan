@@ -1,13 +1,13 @@
 ---
 title: We've brought in freee HR. So what does a retained shakai hoken roumushi actually do?
-excerpt: Using freee HR for your own company's payroll and filings is different from engaging a qualified professional to handle the work. We explain electronic filing, professional scope and company approval responsibilities, alongside the HR Outsourcing Plan from 33,000 yen per month and initial setup from 88,000 yen, both including tax.
+excerpt: Using freee HR for your own company's payroll and filings is different from engaging a qualified professional to handle the work. We explain electronic filing, professional scope and company approval responsibilities, alongside the HR Outsourcing Plan at 16,500 yen per month for 1 payroll recipient and standard initial setup at 55,000 yen / workflow design and migration from 88,000 yen, both including tax.
 category: Who to ask
 faqHeading: Frequently asked questions
 keywords: freee HR shakai hoken roumushi what to ask | freee electronic filing gBizID | HR outsourcing plan | social insurance labor consultant scope of practice | freee year-end adjustment who to ask | payroll company approval
 tags: freee | electronic filing | shakai hoken roumushi | scope of practice | HR outsourcing | gBizID
 ---
 
-**Key points:** A company can use freee人事労務 to process its own payroll and filings, or engage a Shakai Hoken Roumushi, a Japanese Certified Social Insurance and Labor Consultant, to perform the work. Software functions and the professional qualifications to accept another company's filing work are different matters. 四葉社会保険労務士事務所 offers the **HR Outsourcing Plan, covering freee人事労務, LINE time clock, payroll, routine filings and labor advice**. For 1–3 people on the payroll, fees are **from 33,000 yen per month, including tax / initial setup and workflow design from 88,000 yen, including tax**.
+**Key points:** A company can use freee人事労務 to process its own payroll and filings, or engage a Shakai Hoken Roumushi, a Japanese Certified Social Insurance and Labor Consultant, to perform the work. Software functions and the professional qualifications to accept another company's filing work are different matters. 四葉社会保険労務士事務所 offers the **HR Outsourcing Plan, covering freee人事労務, LINE time clock, payroll, routine filings and labor advice**. For 1 person on the payroll, fees are **16,500 yen per month, including tax / standard initial setup at 55,000 yen / workflow design and migration from 88,000 yen, including tax**.
 
 After adopting freee, the difficult question is often who checks the facts and how much work to entrust to someone else, rather than which button to press. Distinguishing software use, the consultant's scope and company approval makes monthly work easier to organize.
 
@@ -41,7 +41,7 @@ The HR Outsourcing Plan includes freee人事労務 Standard, LINE time clock, on
 
 ## What does the initial fee cover?
 
-Fees are **from 33,000 yen per month for 1–3 people on the payroll, including tax / initial setup and workflow design from 88,000 yen, including tax**. The initial fee includes freee configuration, LINE time clock setup, pay structure and allowance/deduction settings, employee registration, social insurance information, the first payroll test and workflow design.
+Fees are **16,500 yen per month for 1 person on the payroll, including tax / standard initial setup at 55,000 yen / workflow design and migration from 88,000 yen, including tax**. The monthly total is 22,000 yen for 2 payroll recipients and 33,000 yen for 3 (tax included). Standard setup applies to a new implementation with no existing data migration and standard payroll and attendance, and covers freee, employees, usual allowances and commuting expenses, LINE time clock, the first payroll calculation and basic guidance. Workflow design and migration covers existing data migration and complex configuration within the scope agreed in writing before work begins.
 
 The first run establishes the cutoff date, the deadline for reporting changes, the person responsible for checking and the final approval process, as well as the calculation results. Initial implementation is not offered as a free configuration service included in the monthly fee.
 
@@ -73,13 +73,13 @@ A. The official help checked on September 9, 2026 states that representative fil
 A. The HR Outsourcing Plan includes both. Initial insurance registration, residence status applications and similar work are charged separately. The company finalizes attendance and gives final approval of payroll results.
 
 **Q. Is the initial fee included in the monthly fee?**
-A. A separate initial setup and workflow design fee starts at 88,000 yen, including tax. It covers freee configuration through the first payroll test and workflow design, and is presented at the same time as the monthly fee.
+A. Separate from the monthly fee, initial setup is 55,000 yen for standard setup, or from 88,000 yen for workflow design and migration (tax included). Standard setup applies to a new implementation with no existing data migration and standard payroll and attendance, and covers freee, employees, usual allowances and commuting expenses, LINE time clock, the first payroll calculation and basic guidance. Workflow design and migration covers existing data migration and complex configuration within the scope agreed in writing before work begins.
 
 ## Sources for this article
 
 - [Certified Social Insurance and Labor Consultant Act](https://laws.e-gov.go.jp/law/343AC1000000089), Article 2, paragraph 1, items 1, 1-2, 1-3, 2 and 3, and Article 27. Checked using the e-Gov legislation API on September 9, 2026. The latest promulgated amendment is Act No. 77 of 2025, effective June 25, 2025, with some provisions effective July 5 and October 1, 2025. See also the [Ministry of Health, Labour and Welfare amendment overview](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/roumushi/shahoroumu01/01.html).
 - [freee official help: Electronic filing of various documents](https://support.freee.co.jp/hc/ja/articles/7277508582297). Updated April 10, 2026; checked September 9, 2026. Functions and eligible plans change; check the latest information when using them.
 - [National Tax Agency: What work do tax accountants perform?](https://www.nta.go.jp/taxes/zeirishi/zeirishiseido/qa/02.htm). Checked September 9, 2026.
-- 四葉's services and prices follow the V10 specification dated September 9, 2026. See also the [fee schedule](/en/labor/ryokin) and the [consultation-to-contract process](/en/labor/nagare).
+- 四葉's services and prices follow the V10 specification dated September 9, 2026. See also the [fee schedule](/en/labor/ryokin) and the [consultation-to-contract process](/en/labor/nagare). Monthly fee descriptions were updated in the October 7, 2026 revision. Confirm separately when changes apply to an existing contract.
 
 This article provides general information. A qualified professional makes judgments about individual circumstances after a consultation. Written by [浦松丈二](/en/about/uramatsu), a Japanese Certified Social Insurance and Labor Consultant, Administrative Scrivener and Real Estate Transaction Specialist.

@@ -98,7 +98,7 @@ We use AI for organising materials, surfacing the issues, checking wording again
 
 What 畠山 did was **reduce the work inside his own office**. What this office focuses on is **supporting the practical work of the client's company**. Our main service is the HR Outsourcing Plan, which includes payroll, routine filings and labor advice, together with freee人事労務 Standard and LINE time clock. It excludes freee会計.
 
-For 1–3 people on the payroll, fees are **from 33,000 yen per month, including tax / initial setup and workflow design from 88,000 yen, including tax**. The initial fee includes freee configuration, LINE time clock setup, pay structure and allowance/deduction settings, employee registration, social insurance information, the first payroll test and workflow design.
+For 1 person on the payroll, fees are **16,500 yen per month, including tax / standard initial setup at 55,000 yen / workflow design and migration from 88,000 yen, including tax**. The monthly total is 22,000 yen for 2 payroll recipients and 33,000 yen for 3 (tax included). Standard setup applies to a new implementation with no existing data migration and standard payroll and attendance, and covers freee, employees, usual allowances and commuting expenses, LINE time clock, the first payroll calculation and basic guidance. Workflow design and migration covers existing data migration and complex configuration within the scope agreed in writing before work begins.
 
 **The company is responsible for checking and finalizing attendance and giving final approval of payroll results.** Adopting AI or software does not remove the need to establish facts and give approval. Support scope, fees and data transfer when switching to in-house processing are confirmed individually. We do not promise universally free support or an automatic fee reduction. See also the [comparison with in-house processing](/en/labor/column/kyuyo-keisan-freee-naisei) and [how to assess retainer fees](/en/labor/column/sharoushi-komonryo-nan-no-taika).
 
@@ -120,7 +120,7 @@ A. The fewer employees you have, the more easily the benefit of going in-house s
 
 ## Sources for this article
 
-- The description of 四葉's services and fees has been updated to the V10 specification dated September 9, 2026. The discussion of the third-party published case study remains based on the original reference date.
+- The description of 四葉's services and fees has been updated to the V10 specification dated September 9, 2026. The discussion of the third-party published case study remains based on the original reference date. Monthly fee descriptions were updated in the October 7, 2026 revision. Confirm separately when changes apply to an existing contract.
 
 - freee, 「スタッフ0人、顧問先60社、17時退勤。一人税理士が実践する『責任あるAI』」 (customer case study, 畠山謙人税理士事務所). **Viewed 14 August 2026.** The size of the office, the number of client companies, the methods and the remarks quoted all come from this published case study
 - The quoted remarks are in Japanese in the original; the English here is our translation, with nothing added and nothing removed. We have written no speculation about his intentions beyond what is published

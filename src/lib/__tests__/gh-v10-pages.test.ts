@@ -60,6 +60,9 @@ for (const locale of ["ja", "en", "zh-tw", "zh"] as const) {
       expect(html.indexOf(p.responsibility)).toBeGreaterThan(html.indexOf("<h1"));
       expect(html.indexOf(p.responsibility)).toBeLessThan(html.indexOf(g.sector));
       expect(html).toContain("33,000");
+      expect(html).toContain("16,500");
+      expect(html).toContain("22,000");
+      expect(html).not.toMatch(/(?<!\d)(?:1–1|2–2|3–3)(?!\d)|(?<![\d,])7,700(?!\d)|"price":7700[,}]/);
       expect(html).toContain("88,000");
       expect(html).toContain("11+");
       expect(html).toContain("3,300");
@@ -81,8 +84,8 @@ for (const locale of ["ja", "en", "zh-tw", "zh"] as const) {
       expect(html).toContain(c.lead);
       for (const text of [c.boundaryIntro, c.contracts, c.fees, c.ongoing, p.responsibility, p.system]) expect(html).toContain(text);
       for (const row of c.rows) for (const text of row) expect(html).toContain(text);
-      expect(html.indexOf(c.fees)).toBeLessThan(html.indexOf("33,000"));
-      expect(html.indexOf(c.ongoing)).toBeLessThan(html.indexOf("33,000"));
+      expect(html.indexOf(c.fees)).toBeLessThan(html.indexOf("16,500"));
+      expect(html.indexOf(c.ongoing)).toBeLessThan(html.indexOf("16,500"));
       expect(html).toContain("88,000");
       expect(html).not.toContain("ひとつの事務所が両方を名乗ることはできません");
     });
