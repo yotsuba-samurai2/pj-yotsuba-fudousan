@@ -140,8 +140,14 @@ export default function ColumnsListPage() {
           ))}
         </div>
         <Link
+          href="/admin/columns/autopublish"
+          className="ml-auto rounded-lg border border-border px-4 py-2 text-sm text-text"
+        >
+          自動公開・保留
+        </Link>
+        <Link
           href="/admin/columns/new"
-          className="relative ml-auto overflow-hidden rounded-lg px-5 py-2 text-sm font-semibold text-text transition-all duration-200"
+          className="relative overflow-hidden rounded-lg px-5 py-2 text-sm font-semibold text-text transition-all duration-200"
         >
           <span
             className="pointer-events-none absolute inset-0 rounded-lg gradient-btn"

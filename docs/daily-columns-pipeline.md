@@ -1,7 +1,8 @@
 # Daily Columns パイプライン
 
 3士業のコラムを **1日6本（不動産2・行政書士2・社労士2）× 4言語（ja / en / zh-tw / zh）** 追加し、
-検証を通して draft PR まで出す仕組み。**マージと本番DB投入は人間が行う。**
+検証を通して main へ入れる仕組み。**本番DBへの投入（公開）は、毎日正午の自動公開が行う（2026-10-08〜）。**
+止めたい記事は、正午までに管理画面で保留する（`docs/columns-autopublish.md`）。
 
 - ワークフロー：`.github/workflows/daily-columns.yml`（毎日 21:00 JST ＝ `0 12 * * *` UTC）
 - 見張り：`.github/workflows/token-healthcheck.yml`（週1回・トークン失効の検知）
@@ -26,7 +27,7 @@ plan ──→ plan-check ──→ write(×3) ──→ validate ──→ revi
  企画      企画チェック    執筆・翻訳     機械検証     レビュー   修正      draft PR
  LLM       LLM(ゲート)     LLM          非LLM(ゲート) LLM       LLM       非LLM
                                             │                             ↓
-                                        NG  │               浦松がマージ → 投入
+                                        NG  │            main へ → 正午に自動公開（保留できる）
                                             ↓
                                     validate-repair*
                                      修復・1回だけ
