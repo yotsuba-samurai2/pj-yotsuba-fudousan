@@ -896,6 +896,21 @@ const REQUIRED_HUB_LINKS: Record<string, string[]> = {
     "/legal/column/souzoku-zaisan-mokuroku",
     "/legal/column/souzoku-touki-nagare",
   ],
+  "denki-koji-gyo-touroku-eigyosho-shunin": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/kensetsugyo-kyoka-yoken-keikan-sengi-zaisan",
+    "/legal/column/kaitai-koji-gyo-touroku-kensetsu-kyoka-chigai",
+  ],
+  "kosei-shosho-yuigon-koshonin-shonin-hiyo": [
+    "/legal/services/inheritance",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/souzoku",
+    "/legal/column/jihitsu-kosei-yuigon",
+    "/legal/column/yuigon-tekkai-teishoku-fukusu-yuigon-yuretsu",
+  ],
 };
 
 /** 表示コンプライアンス上の禁止語 */
@@ -2883,6 +2898,30 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "独立した事業体",
     "紹介料を受け取りません",
   ],
+  "denki-koji-gyo-touroku-eigyosho-shunin": [
+    "電気工事業の業務の適正化に関する法律",
+    "登録電気工事業者",
+    "通知電気工事業者",
+    "みなし登録電気工事業者",
+    "主任電気工事士",
+    "第一種電気工事士",
+    "第二種電気工事士",
+    "電気工事士法",
+    "建設業法",
+    "別事業体",
+    "独立した事業体",
+    "紹介料を受け取りません",
+  ],
+  "kosei-shosho-yuigon-koshonin-shonin-hiyo": [
+    "民法第969条",
+    "民法第974条",
+    "公証人手数料令",
+    "遺言加算",
+    "公正証書遺言",
+    "別事業体",
+    "独立した事業体",
+    "紹介料を受け取りません",
+  ],
 };
 
 /** 記事ごとに含めてはならない表現 */
@@ -3026,6 +3065,8 @@ const FORBIDDEN_PHRASES: Record<string, string[]> = {
   "bochi-noukotsudo-keiei-kyoka-youken-nagare": [],
   "kougyoujou-live-house-kozo-setsubi-kyoka": [],
   "souzoku-jigyo-shokei-kyoninka-shoukei-saishutoku": [],
+  "denki-koji-gyo-touroku-eigyosho-shunin": [],
+  "kosei-shosho-yuigon-koshonin-shonin-hiyo": [],
 };
 
 /** 本セット外へ張る既存legalコラムslug（リポジトリの他シードで実在確認済み） */
@@ -5532,6 +5573,56 @@ const ARTICLES: Array<{
       "入管法",
       "中国",
       "台湾",
+      "行政書士",
+    ],
+  },
+  {
+    file: "103-denki-koji-gyo-touroku-eigyosho-shunin.md",
+    slug: "denki-koji-gyo-touroku-eigyosho-shunin",
+    date: "2026-10-07",
+    title: "電気工事業の登録・みなし登録・通知と主任電気工事士──開業の進め方",
+    category: "許認可・開業の手続き（行政書士の実務から）",
+    excerpt:
+      "電気工事を業として営むには、原則として電気工事業の業務の適正化に関する法律（昭和45年法律第96号）の登録が必要です。一般用電気工事を行う登録電気工事業者（第3条）と自家用のみの通知電気工事業者（第17条の2）の違い、建設業許可を受けた建設業者のみなし登録・みなし通知（第34条）、一般用工事を行う営業所ごとに置く主任電気工事士（第19条・第一種電気工事士／第二種は3年実務）、営業所の器具（第24条）、有効期間5年と更新・30日以内の変更届（第3条・第10条）、許可申請・商業登記・物件・税務を誰に分けて頼むか（分離受任）を、行政書士の実務から整理しました。",
+    keywords: [
+      "電気工事業 登録 行政書士",
+      "電気工事業 みなし登録 建設業許可",
+      "通知電気工事業者 自家用 電気工事",
+      "主任電気工事士 第一種 第二種 3年実務",
+      "電気工事業 登録 有効期間 更新 変更届",
+      "電気工事業 登録 営業所 器具",
+    ],
+    tags: [
+      "電気工事業",
+      "登録",
+      "みなし登録",
+      "主任電気工事士",
+      "許認可",
+      "行政書士",
+    ],
+  },
+  {
+    file: "104-kosei-shosho-yuigon-koshonin-shonin-hiyo.md",
+    slug: "kosei-shosho-yuigon-koshonin-shonin-hiyo",
+    date: "2026-10-07",
+    title: "公正証書遺言の作り方──証人・公証人手数料・当日までの流れと行政書士に頼めること",
+    category: "相続の手続き（行政書士の実務から）",
+    excerpt:
+      "公正証書遺言は、証人2人以上の立会いのもとで遺言者が公証人に口授し、公証人が筆記して作成する遺言です（民法第969条）。原本を公証役場が保管し検認が不要な点、公証人手数料令による手数料（2025年10月1日改定後の金額）と目的の価額ごとの計算・遺言加算、民法第974条の証人の欠格事由、当日までの必要書類と流れ、2025年のデジタル化（ウェブ会議・電子データ）、民法第1022条の撤回、原案・登記・税務・紛争を誰に分けて頼むか（分離受任）を、行政書士の実務から整理しました。",
+    keywords: [
+      "公正証書遺言 作り方",
+      "公正証書遺言 公証人手数料 遺言加算",
+      "公正証書遺言 証人 なれない 民法974条",
+      "公正証書遺言 必要書類 流れ",
+      "公正証書遺言 検認 不要",
+      "公正証書遺言 行政書士",
+    ],
+    tags: [
+      "公正証書遺言",
+      "遺言",
+      "公証人手数料",
+      "証人",
+      "相続",
       "行政書士",
     ],
   },
