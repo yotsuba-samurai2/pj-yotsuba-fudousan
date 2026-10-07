@@ -47,7 +47,7 @@ for (const slug of slugs) {
         }
         const lead = article.content.trim().split("\n\n")[0];
         for (const amount of ["22,000", "33,000"]) expect(article.content).toContain(amount);
-        for (const amount of ["16,500", "88,000"]) {
+        for (const amount of ["16,500", "55,000", "88,000"]) {
           expect(article.content).toContain(amount);
           if (slug !== "hitori-de-60sha-roumu-de-nariatsu-ka") {
             expect(lead).toContain(amount);
@@ -64,6 +64,10 @@ for (const slug of slugs) {
         }
         // Metadata/schema FAQ must be the four questions and answers actually visible in this locale.
         expect(article.faq).toHaveLength(4);
+        if (slug === "sharoushi-komonryo-nan-no-taika" || slug === "freee-jinji-roumu-sharoushi-doko-made") {
+          const setupFaq = article.faq?.find(item => item.answer.includes("88,000"));
+          expect(setupFaq?.answer).toContain("55,000");
+        }
         const visibleText = renderToStaticMarkup(createElement(ReactMarkdown, {
           remarkPlugins: [remarkGfm],
         }, article.content)).replace(/<[^>]+>/g, "");
