@@ -28,7 +28,7 @@ export const LABOR_PLAN_COPY: Record<LangCode, LaborPlanCopy> = {
     people: "給与計算対象人数",
     additional: (people, fee) => `${people}名を超える1名につき月額${fee}を加算`,
     payrollHeadline: (fee) => [`月額${fee}から、`, "給与計算込み"],
-    payrollEligibility: "給与計算対象1〜3人・税込",
+    payrollEligibility: "給与計算対象1人・税込",
     payrollIncluded: "通常手続・労務相談・freee人事労務スタンダード・LINE打刻も込み",
     scopeHeadings: ["お任せできる", "会社側で行う", "別料金"],
     scopeRows: [
@@ -51,7 +51,7 @@ export const LABOR_PLAN_COPY: Record<LangCode, LaborPlanCopy> = {
     people: "Payroll recipients",
     additional: (people, fee) => `Add ${fee} per month for each recipient above ${people}`,
     payrollHeadline: (fee) => [`From ${fee} per month, `, "including payroll"],
-    payrollEligibility: "For 1–3 payroll recipients · tax included",
+    payrollEligibility: "For 1 payroll recipient · tax included",
     payrollIncluded: "Routine procedures, labor advice, freee HR Standard and LINE clock-in are also included.",
     scopeHeadings: ["We handle", "Your company handles", "Separate fees"],
     scopeRows: [
@@ -74,7 +74,7 @@ export const LABOR_PLAN_COPY: Record<LangCode, LaborPlanCopy> = {
     people: "薪資計算對象人數",
     additional: (people, fee) => `超過${people}人後，每增加1人，月費加收${fee}`,
     payrollHeadline: (fee) => [`每月${fee}起，`, "包含薪資計算"],
-    payrollEligibility: "薪資計算對象1至3人・含稅",
+    payrollEligibility: "薪資計算對象1人・含稅",
     payrollIncluded: "亦包含一般手續、勞務諮詢、freee人事勞務Standard與LINE打卡",
     scopeHeadings: ["可委託的工作", "由公司負責", "另行收費"],
     scopeRows: [
@@ -97,7 +97,7 @@ export const LABOR_PLAN_COPY: Record<LangCode, LaborPlanCopy> = {
     people: "工资计算对象人数",
     additional: (people, fee) => `超过${people}人后，每增加1人，月费加收${fee}`,
     payrollHeadline: (fee) => [`每月${fee}起，`, "包含工资计算"],
-    payrollEligibility: "工资计算对象1至3人・含税",
+    payrollEligibility: "工资计算对象1人・含税",
     payrollIncluded: "也包含一般手续、劳务咨询、freee人事劳务Standard与LINE打卡",
     scopeHeadings: ["可委托的工作", "由公司负责", "另行收费"],
     scopeRows: [

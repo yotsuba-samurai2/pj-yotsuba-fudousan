@@ -1,13 +1,13 @@
 ---
 title: What does a Shakai Hoken Roumushi retainer fee actually pay for?
-excerpt: Compare a retainer by its scope, including payroll, routine filings, advice and software fees. 四葉社会保険労務士事務所 offers the HR Outsourcing Plan from 33,000 yen per month, plus initial setup and workflow design from 88,000 yen, both including tax. This article explains the included work, company responsibilities and separately priced services.
+excerpt: Compare a retainer by its scope, including payroll, routine filings, advice and software fees. 四葉社会保険労務士事務所 offers the HR Outsourcing Plan 16,500 yen per month for 1 payroll recipient, plus initial setup and workflow design from 88,000 yen, both including tax. This article explains the included work, company responsibilities and separately priced services.
 category: How fees work
 faqHeading: Frequently asked questions
 keywords: Shakai Hoken Roumushi retainer fee | what a retainer fee includes | HR outsourcing plan | payroll and routine filings | freee HR LINE time clock | initial setup fee
 tags: retainer fee | fees | HR outsourcing | payroll | Shakai Hoken Roumushi
 ---
 
-**Key points:** Compare the retainer fee of a Shakai Hoken Roumushi, a Japanese Certified Social Insurance and Labor Consultant, by how much payroll processing, routine filing, advice and software use it covers, as well as by price. The main service of 四葉社会保険労務士事務所 is the **HR Outsourcing Plan**, which brings these services together. For 1–3 people on the payroll, fees are **from 33,000 yen per month, including tax / initial setup and workflow design from 88,000 yen, including tax**. The company is responsible for checking and finalizing attendance and giving final approval of the payroll results.
+**Key points:** Compare the retainer fee of a Shakai Hoken Roumushi, a Japanese Certified Social Insurance and Labor Consultant, by how much payroll processing, routine filing, advice and software use it covers, as well as by price. The main service of 四葉社会保険労務士事務所 is the **HR Outsourcing Plan**, which brings these services together. For 1 person on the payroll, fees are **16,500 yen per month, including tax / initial setup and workflow design from 88,000 yen, including tax**. The company is responsible for checking and finalizing attendance and giving final approval of the payroll results.
 
 Two retainers with the same monthly fee can produce different annual totals and leave different amounts of work with your company. Before comparing them, use your existing contracts and invoices to separate monthly charges, initial charges and charges that arise when specific work is requested.
 
@@ -38,14 +38,21 @@ The monthly recruitment-related scope consists of advice on job postings, hiring
 
 ## How much are the monthly and initial fees?
 
-Fees are **from 33,000 yen per month for 1–3 people on the payroll, including tax / initial setup and workflow design from 88,000 yen, including tax**. The initial fee includes freee configuration, LINE time clock setup, pay structure and allowance/deduction settings, employee registration, social insurance information, the first payroll test and workflow design.
+Fees are **16,500 yen per month for 1 person on the payroll, including tax / initial setup and workflow design from 88,000 yen, including tax**. The initial fee includes freee configuration, LINE time clock setup, pay structure and allowance/deduction settings, employee registration, social insurance information, the first payroll test and workflow design.
 
 | Number of people on the payroll | Monthly fee, including tax |
 |---|---:|
-| 1–3 | 33,000 yen |
-| 4–5 | 44,000 yen |
-| 6–10 | 55,000 yen |
-| 11 or more | 55,000 yen + 3,300 yen for each person above 10 |
+| 1 | 16,500 yen |
+| 2 | 22,000 yen |
+| 3 | 33,000 yen |
+| 4 | 44,000 yen |
+| 5 | 44,000 yen |
+| 6 | 55,000 yen |
+| 7 | 55,000 yen |
+| 8 | 55,000 yen |
+| 9 | 55,000 yen |
+| 10 | 55,000 yen |
+| 11 or more | 55,000 yen + (payroll recipients − 10) × 3,300 yen |
 
 The fixed fee varies by headcount band because payroll, filings, freee usage capacity and inquiry handling increase with the number of people. For example, the monthly fee is 71,500 yen for 15 people, 88,000 yen for 20 and 121,000 yen for 30. All figures include tax; the initial fee is additional.
 

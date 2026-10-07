@@ -3,7 +3,7 @@ import { getLaborMonthlyFee, LABOR_PRICING } from "@/lib/labor/pricing";
 
 describe("Small-company HR pricing (JPY, tax included)", () => {
   it.each([
-    [1, 33000], [2, 33000], [3, 33000], [4, 44000], [5, 44000],
+    [1, 16500], [2, 22000], [3, 33000], [4, 44000], [5, 44000],
     [6, 55000], [7, 55000], [8, 55000], [9, 55000], [10, 55000],
     [11, 58300], [12, 61600], [13, 64900], [14, 68200], [15, 71500],
     [16, 74800], [17, 78100], [18, 81400], [19, 84700], [20, 88000],
@@ -34,6 +34,6 @@ describe("Small-company HR pricing (JPY, tax included)", () => {
     expect(LABOR_PRICING.recruitmentSupportFrom).toBe(22000);
     expect(LABOR_PRICING.currency).toBe("JPY");
     expect(LABOR_PRICING.taxIncluded).toBe(true);
-    expect(getLaborMonthlyFee(1)).toBe(33000);
+    expect(getLaborMonthlyFee(1)).toBe(16500);
   });
 });

@@ -46,12 +46,21 @@ for (const slug of slugs) {
           for (const amount of ["71,500", "88,000", "121,000", "22,000"]) expect(article.content).toContain(amount);
         }
         const lead = article.content.trim().split("\n\n")[0];
-        for (const amount of ["33,000", "88,000"]) {
+        for (const amount of ["22,000", "33,000"]) expect(article.content).toContain(amount);
+        for (const amount of ["16,500", "88,000"]) {
           expect(article.content).toContain(amount);
           if (slug !== "hitori-de-60sha-roumu-de-nariatsu-ka") {
             expect(lead).toContain(amount);
             expect(article.excerpt).toContain(amount);
           }
+        }
+        expect(article.content).not.toMatch(/1[〜～–]3(?:名|人| people)|7,700/);
+        if (slug === "kyuyo-keisan-soba-sharoushi" || slug === "sharoushi-komonryo-nan-no-taika") {
+          const expected = [16500, 22000, 33000, 44000, 44000, 55000, 55000, 55000, 55000, 55000];
+          expected.forEach((fee, i) => {
+            expect(article.content).toMatch(new RegExp(`\\| ${i + 1}(?:名|人)? \\| ${fee.toLocaleString("en-US")}(?:円|日圓|日元| yen) \\|`));
+          });
+          expect(article.content).toContain("×");
         }
         // Metadata/schema FAQ must be the four questions and answers actually visible in this locale.
         expect(article.faq).toHaveLength(4);

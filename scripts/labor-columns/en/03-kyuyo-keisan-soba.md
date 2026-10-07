@@ -1,13 +1,13 @@
 ---
 title: What does it cost to have a shakai hoken roumushi run your payroll?
-excerpt: Outsourced payroll is usually priced as a base fee plus an amount per employee. This article explains how to compare outsourcing and in-house support. 四葉's HR Outsourcing Plan starts at 33,000 yen per month for 1–3 people, plus initial setup and workflow design from 88,000 yen, both including tax.
+excerpt: Outsourced payroll is usually priced as a base fee plus an amount per employee. This article explains how to compare outsourcing and in-house support. 四葉's HR Outsourcing Plan costs 16,500 yen per month for 1 payroll recipient, plus initial setup and workflow design from 88,000 yen, both including tax.
 category: How fees work
 faqHeading: Frequently asked questions
 keywords: payroll shakai hoken roumushi market rate | payroll outsourcing cost japan | payroll service fee per employee | payroll base fee headcount | is payroll exclusive to social insurance labor consultant | year-end tax adjustment tax accountant payroll
 tags: Payroll | Fees | Market rates | Outsourcing | Shakai Hoken Roumushi
 ---
 
-**In short:** Outsourced payroll is generally priced as **"a base fee plus so much per employee."** The per-employee figure is most often described as 200-500 yen a month (before tax), which comes to roughly 220-550 yen including tax. The base fee sits on top of that. It is a structure in which **the fewer people you have, the heavier the cost per person becomes**. 四葉's HR Outsourcing Plan is **from 33,000 yen per month for 1–3 people on the payroll, including tax / initial setup and workflow design from 88,000 yen, including tax**.
+**In short:** Outsourced payroll is generally priced as **"a base fee plus so much per employee."** The per-employee figure is most often described as 200-500 yen a month (before tax), which comes to roughly 220-550 yen including tax. The base fee sits on top of that. It is a structure in which **the fewer people you have, the heavier the cost per person becomes**. 四葉's HR Outsourcing Plan is **16,500 yen per month for 1 person on the payroll, including tax / initial setup and workflow design from 88,000 yen, including tax**.
 
 When people set out to have payroll handled elsewhere and start reading fee schedules, we often hear that the amounts are put together so differently from office to office that they cannot be compared. Look into it and you find that the differences lie less in the prices themselves than in **how the fee is assembled**.
 
@@ -46,14 +46,21 @@ Because of the latter, most offices set a base fee. Even at a company with one e
 
 ## What does Yotsuba do?
 
-The main service is the **HR Outsourcing Plan, covering payroll, routine filings and labor advice**. We present **from 33,000 yen per month for 1–3 people on the payroll, including tax / initial setup and workflow design from 88,000 yen, including tax** together.
+The main service is the **HR Outsourcing Plan, covering payroll, routine filings and labor advice**. We present **16,500 yen per month for 1 person on the payroll, including tax / initial setup and workflow design from 88,000 yen, including tax** together.
 
 | Number of people on the payroll | Monthly fee, including tax |
 |---|---:|
-| 1–3 | 33,000 yen |
-| 4–5 | 44,000 yen |
-| 6–10 | 55,000 yen |
-| 11 or more | 55,000 yen + 3,300 yen for each person above 10 |
+| 1 | 16,500 yen |
+| 2 | 22,000 yen |
+| 3 | 33,000 yen |
+| 4 | 44,000 yen |
+| 5 | 44,000 yen |
+| 6 | 55,000 yen |
+| 7 | 55,000 yen |
+| 8 | 55,000 yen |
+| 9 | 55,000 yen |
+| 10 | 55,000 yen |
+| 11 or more | 55,000 yen + (payroll recipients − 10) × 3,300 yen |
 
 The monthly fee includes freee人事労務 Standard, LINE time clock, online payslips, payroll, routine labor advice and routine social insurance and employment insurance filings. It excludes freee会計. The initial fee includes freee configuration, LINE time clock setup, pay structure and allowance/deduction settings, employee registration, social insurance information, the first payroll test and workflow design.
 

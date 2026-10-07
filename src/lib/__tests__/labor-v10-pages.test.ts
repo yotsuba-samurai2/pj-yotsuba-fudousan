@@ -71,6 +71,9 @@ for (const locale of ["ja", "en", "zh-tw", "zh"] as const) {
       expect(html.indexOf(p.name)).toBeLessThan(html.indexOf(c.foreignHighlightTitle));
       expect(html.indexOf(c.foreignHighlightTitle)).toBeLessThan(html.indexOf(c.ghTitle));
       expect(html).toContain("33,000");
+      expect(html).toContain("16,500");
+      expect(html).toContain("22,000");
+      expect(html.match(/(?<!\d)(?:1–1|2–2|3–3)(?!\d)|(?<![\d,])7,700(?!\d)|"price":7700[,}]|スタートアップ割引/)?.[0]).toBeUndefined();
       expect(html).toContain("55,000");
       expect(html).toContain("3,300");
       expect(html).not.toContain("2,200");
@@ -94,6 +97,9 @@ for (const locale of ["ja", "en", "zh-tw", "zh"] as const) {
     it.each([["prices", Prices], ["faq", Faq]] as const)("keeps %s consistent with the new fee and scope", async (_name, Page) => {
       state.locale = locale;
       const html = renderToStaticMarkup(await Page());
+      expect(html).toContain("16,500");
+      expect(html).toContain("22,000");
+      expect(html.match(/(?<!\d)(?:1–1|2–2|3–3)(?!\d)|(?<![\d,])7,700(?!\d)|"price":7700[,}]|スタートアップ割引/)?.[0]).toBeUndefined();
       expect(html).toContain("33,000");
       expect(html).toContain("55,000");
       expect(html).toContain("3,300");
@@ -123,6 +129,14 @@ for (const locale of ["ja", "en", "zh-tw", "zh"] as const) {
 
     it("has fixed offers from the canonical calculation and no invented setup price", () => {
       const offers = getLaborPriceStructuredData(locale).offers;
+      const expected = [16500, 22000, 33000, 44000, 44000, 55000, 55000, 55000, 55000, 55000,
+        58300, 61600, 64900, 68200, 71500, 74800, 78100, 81400, 84700, 88000,
+        91300, 94600, 97900, 101200, 104500, 107800, 111100, 114400, 117700, 121000];
+      expected.forEach((price, i) => {
+        expect(offers[i].name).toContain(`${LABOR_PLAN_COPY[locale].people}: ${i + 1} /`);
+        expect(offers[i].priceSpecification).toMatchObject({ price, priceCurrency: "JPY", valueAddedTaxIncluded: true });
+      });
+      expect(offers.some(x => x.priceSpecification.price === 7700)).toBe(false);
       expect(offers[10].priceSpecification.price).toBe(58300);
       expect(offers[29].priceSpecification.price).toBe(121000);
       expect(offers.filter(x => x.name.startsWith(LABOR_PLAN_COPY[locale].name))).toHaveLength(30);

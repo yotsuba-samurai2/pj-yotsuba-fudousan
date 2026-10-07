@@ -5,7 +5,9 @@ export const LABOR_PRICING = {
   currency: "JPY",
   taxIncluded: true,
   bands: [
-    { min: 1, max: 3, monthly: 33000 },
+    { min: 1, max: 1, monthly: 16500 },
+    { min: 2, max: 2, monthly: 22000 },
+    { min: 3, max: 3, monthly: 33000 },
     { min: 4, max: 5, monthly: 44000 },
     { min: 6, max: 10, monthly: 55000 },
   ],
@@ -26,6 +28,15 @@ export function getLaborMonthlyFee(payrollRecipients: number): number {
   const fee = lastBand.monthly + (payrollRecipients - lastBand.max) * LABOR_PRICING.additionalRecipientFee;
   if (!Number.isSafeInteger(fee)) throw new RangeError("Calculated fee exceeds the safe integer range.");
   return fee;
+}
+
+/** Exact monthly totals for the visible 1–10 recipient table and FAQ. */
+export function getLaborMonthlyQuotes() {
+  const lastBand = LABOR_PRICING.bands[LABOR_PRICING.bands.length - 1];
+  return Array.from({ length: lastBand.max }, (_, i) => ({
+    people: i + 1,
+    monthly: getLaborMonthlyFee(i + 1),
+  }));
 }
 
 export function formatLaborYen(amount: number, locale: LangCode): string {

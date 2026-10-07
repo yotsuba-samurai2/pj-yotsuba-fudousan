@@ -1,13 +1,13 @@
 ---
 title: We want to run payroll in-house on freee — what do we ask a shakai hoken roumushi for?
-excerpt: Compare in-house payroll with outsourcing by the work that remains with the company, software costs and support scope. 四葉's HR Outsourcing Plan starts at 33,000 yen per month plus initial setup from 88,000 yen, both including tax. In-house support and transition fees require individual confirmation; there is no automatic fixed discount.
+excerpt: Compare in-house payroll with outsourcing by the work that remains with the company, software costs and support scope. 四葉's HR Outsourcing Plan costs 16,500 yen per month for 1 payroll recipient plus initial setup from 88,000 yen, both including tax. In-house support and transition fees require individual confirmation; there is no automatic fixed discount.
 category: Who to ask
 faqHeading: Frequently asked questions
 keywords: payroll in-house freee shakai hoken roumushi | bring payroll in-house support | freee payroll setup | HR outsourcing plan | wage deduction labor-management agreement | payroll outsourcing vs in-house
 tags: freee | payroll | in-house processing | HR outsourcing | wage-deduction agreement | fees
 ---
 
-**Key points:** When deciding whether to process payroll in-house with freee or outsource it, compare who will check attendance, manage changes and approve the results, as well as who runs the calculation. The main service of 四葉社会保険労務士事務所 is the **HR Outsourcing Plan, which includes payroll processing**. For 1–3 people on the payroll, fees are **from 33,000 yen per month, including tax / initial setup and workflow design from 88,000 yen, including tax**. We do not describe all in-house support as free or promise an automatic fixed reduction when payroll moves in-house.
+**Key points:** When deciding whether to process payroll in-house with freee or outsource it, compare who will check attendance, manage changes and approve the results, as well as who runs the calculation. The main service of 四葉社会保険労務士事務所 is the **HR Outsourcing Plan, which includes payroll processing**. For 1 person on the payroll, fees are **16,500 yen per month, including tax / initial setup and workflow design from 88,000 yen, including tax**. We do not describe all in-house support as free or promise an automatic fixed reduction when payroll moves in-house.
 
 This article sets out comparison points for business owners and back-office staff who want to continue processing payroll internally or bring it back from an external provider. Processing your own company's payroll does not itself require qualification as a Japanese Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant). Checking employment terms, insurance information and the basis for settings remains necessary.
 
@@ -50,7 +50,7 @@ When comparing the cost of in-house processing, include the operator's time, the
 
 ## How much is needed at the start if you outsource to 四葉?
 
-Fees are **from 33,000 yen per month for 1–3 people on the payroll, including tax / initial setup and workflow design from 88,000 yen, including tax**. The initial fee includes freee configuration, LINE time clock setup, pay structure and allowance/deduction settings, employee registration, social insurance information, the first payroll test and workflow design.
+Fees are **16,500 yen per month for 1 person on the payroll, including tax / initial setup and workflow design from 88,000 yen, including tax**. The monthly total is 22,000 yen for 2 payroll recipients and 33,000 yen for 3 (tax included). The initial fee includes freee configuration, LINE time clock setup, pay structure and allowance/deduction settings, employee registration, social insurance information, the first payroll test and workflow design.
 
 Monthly fees are 44,000 yen for 4–5 people and 55,000 yen for 6–10. For 11 or more people, the fee is 55,000 yen plus 3,300 yen for each person above 10. All figures include tax, with headcount bands reflecting payroll, filings, usage capacity and inquiries.
 
