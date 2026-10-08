@@ -743,7 +743,7 @@ jobs:
             echo "レビュー判定: ${REVIEW_PASS:-unknown} ／ 修正ジョブ: ${FIX_RESULT}"
             echo "実行ログ: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
             echo
-            echo "投入は浦松が管理画面から行う（このコミットでは本番DBは変わらない）"
+            echo "公開は正午の自動公開が行う（このコミットでは本番DBは変わらない。止めるときは /admin/columns/autopublish で保留）"
           } > /tmp/commitmsg.txt
           git commit -F /tmp/commitmsg.txt
 
@@ -765,15 +765,13 @@ jobs:
             echo "### 浦松さんへ"
             if [ "$MERGE" = "yes" ]; then
               echo "このPRは自動マージされます。**朝7:00に6本を読めるGoogleドキュメントが届きます。**"
-              echo "読んだうえで、管理画面から投入してください（投入は浦松さんの作業）。"
+              echo "正午（12時台）に自動で公開されます。止めたい記事があれば、正午までに保留の画面で「保留」を押してください。"
             else
               echo "**レビュー・修正ゲートを通過していないため、マージしていません。** 上のレビュー判定と修正ジョブの結果を確認してください。"
             fi
             echo
-            echo "投入先（デプロイ後）："
-            echo "- https://luck428.com/admin/columns/seed-realestate-daily"
-            echo "- https://luck428.com/admin/columns/seed-souzoku-legal"
-            echo "- https://luck428.com/admin/columns/seed-labor"
+            echo "保留・今すぐ公開（デプロイ後）："
+            echo "- https://luck428.com/admin/columns/autopublish"
           } > /tmp/body.md
 
           # ★PRを作らない理由（2026-08-23実測）

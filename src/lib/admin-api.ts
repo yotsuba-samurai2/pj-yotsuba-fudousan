@@ -16,6 +16,12 @@ import type {
   FirestoreColumn,
 } from "@/lib/column-shared";
 
+import type {
+  AutopublishItem,
+  AutopublishOverview,
+  AutopublishRunResult,
+} from "@/lib/columns-autopublish-shared";
+
 import { DEFAULT_AI_MODEL } from "@/lib/shared/ai";
 
 export { DEFAULT_AI_MODEL };
@@ -119,6 +125,43 @@ export async function upsertColumnBySlug(
       body: JSON.stringify({ ...data, business, slug }),
     },
   );
+}
+
+// ── Columns autopublish（正午の自動公開・保留） ──
+
+/** 公開待ち・保留中・日付待ちの一覧 */
+export async function getAutopublishOverview(): Promise<AutopublishOverview> {
+  return apiFetch<AutopublishOverview>("/api/admin/columns/autopublish");
+}
+
+export type AutopublishHoldResult = {
+  ok: boolean;
+  held: AutopublishItem[];
+  errors: { key: string; message: string }[];
+};
+
+/** 保留にする（下書きとしてDBに入れる。正午に公開されなくなる） */
+export async function holdAutopublishColumns(keys: string[]): Promise<AutopublishHoldResult> {
+  return apiFetch<AutopublishHoldResult>("/api/admin/columns/autopublish", {
+    method: "POST",
+    body: JSON.stringify({ action: "hold", keys }),
+  });
+}
+
+/** 今すぐ公開する（公開待ち・保留中のどちらでも） */
+export async function publishAutopublishColumns(keys: string[]): Promise<AutopublishRunResult> {
+  return apiFetch<AutopublishRunResult>("/api/admin/columns/autopublish", {
+    method: "POST",
+    body: JSON.stringify({ action: "publish", keys }),
+  });
+}
+
+/** 公開待ちを今すぐ全部公開する（保留中は除く） */
+export async function publishAllPendingColumns(): Promise<AutopublishRunResult> {
+  return apiFetch<AutopublishRunResult>("/api/admin/columns/autopublish", {
+    method: "POST",
+    body: JSON.stringify({ action: "publishAllPending" }),
+  });
 }
 
 // ── Translations ──

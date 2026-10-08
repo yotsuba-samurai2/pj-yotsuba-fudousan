@@ -1,0 +1,228 @@
+name: Columns Autopublish
+
+# 正午（JST）に、まだ公開していないコラムを自動で公開し、Search Console の確認を行う（2026-10-08〜）。
+#
+#   1. POST /api/cron/columns-autopublish（合言葉 COLUMNS_AUTOPUBLISH_SECRET）
+#      DBに無い記事＝公開待ちだけを公開する。保留（下書き）・公開済み・削除済みには触れない
+#   2. 公開した記事が200を返すかを確かめる
+#   3. scripts/gsc-autopilot.ts：サイトマップを Search Console に送り直し、直近のコラムの登録状況を確かめる
+#   4. 結果を automation/columns-status ブランチに保存する（朝7時の納品タスクが読む）
+#   5. どこかで失敗したら Issue を立て、実行も赤にする
+#
+# 止めたい記事は、正午までに https://luck428.com/admin/columns/autopublish で「保留」を押す。
+# 設計と初期設定の手順：docs/columns-autopublish.md
+#
+# 合言葉・鍵が未設定のあいだは、その工程を飛ばして警告だけを出す（赤にはしない）。
+
+on:
+  schedule:
+    # 03:00 UTC = 12:00 JST。cron は UTC 固定
+    - cron: "0 3 * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "true にすると公開せず、対象の一覧だけを出す（Search Console の確認は行う）"
+        type: boolean
+        default: false
+      force:
+        description: "true にすると、1回の上限（24本）を超えても公開する"
+        type: boolean
+        default: false
+
+concurrency:
+  group: columns-autopublish
+  cancel-in-progress: false
+
+permissions:
+  contents: write # automation/columns-status ブランチへの保存
+  issues: write
+
+jobs:
+  run:
+    if: github.repository == 'yotsuba-samurai2/pj-yotsuba-fudousan'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      SITE: https://luck428.com
+      STATUS_BRANCH: automation/columns-status
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: 1. 正午の自動公開
+        id: publish
+        continue-on-error: true
+        env:
+          SECRET: ${{ secrets.COLUMNS_AUTOPUBLISH_SECRET }}
+          DRY_RUN: ${{ inputs.dry_run }}
+          FORCE: ${{ inputs.force }}
+        run: |
+          set -uo pipefail
+          mkdir -p .tmp
+          if [ -z "${SECRET:-}" ]; then
+            echo '{"skipped":"COLUMNS_AUTOPUBLISH_SECRET が未設定"}' > .tmp/publish.json
+            echo "::warning::COLUMNS_AUTOPUBLISH_SECRET が未設定のため、自動公開を飛ばしました（docs/columns-autopublish.md の初期設定）"
+            exit 0
+          fi
+          Q=""
+          [ "${DRY_RUN:-false}" = "true" ] && Q="dryRun=1"
+          [ "${FORCE:-false}" = "true" ] && Q="${Q:+$Q&}force=1"
+          URL="${SITE}/api/cron/columns-autopublish${Q:+?$Q}"
+          CODE=000
+          for i in 1 2 3; do
+            CODE=$(curl -sS -o .tmp/publish.json -w '%{http_code}' --max-time 120 -X POST \
+                     -H "Authorization: Bearer ${SECRET}" "$URL") || CODE=000
+            echo "attempt $i: HTTP $CODE"
+            # 200＝成功・401＝合言葉の不一致・409＝上限で停止 は、やり直しても変わらない。
+            # 500 など（一部失敗・タイムアウト）はやり直す。公開済みの記事は対象から外れるので二重公開はない
+            case "$CODE" in 200|401|409) break ;; esac
+            sleep 30
+          done
+          cat .tmp/publish.json; echo
+          # 応答がJSONでない（落ちている等）ときは、後段が読める形に置き換える
+          jq -e . .tmp/publish.json > /dev/null 2>&1 || echo "{\"error\":\"HTTP ${CODE}\"}" > .tmp/publish.json
+          case "$CODE" in
+            200) exit 0 ;;
+            401) MSG="自動公開APIが 401 を返しました。GitHub の COLUMNS_AUTOPUBLISH_SECRET と Vercel の環境変数が一致しているか確認してください" ;;
+            409) MSG="公開待ちが上限を超えたため、自動公開を止めました。管理画面で対象を確かめてから「今すぐ公開」してください" ;;
+            *)   MSG="自動公開APIが HTTP ${CODE} を返しました（一部または全部が未公開の可能性）" ;;
+          esac
+          echo "SUMMARY=${MSG}" >> "$GITHUB_OUTPUT"
+          exit 1
+
+      - name: 2. 公開した記事が200を返すか確かめる
+        id: verify
+        continue-on-error: true
+        run: |
+          set -uo pipefail
+          PATHS=$(jq -r '.published[]?.path' .tmp/publish.json 2>/dev/null) || PATHS=""
+          if [ -z "$PATHS" ]; then echo "確かめる記事はありません"; exit 0; fi
+          : > .tmp/ng.txt
+          for p in $PATHS; do
+            u="${SITE}${p}"
+            c=000
+            # 公開直後は再生成が追いつかないことがあるので、少し待って数回取り直す
+            for _ in 1 2 3 4; do
+              c=$(curl -s -o /dev/null -w '%{http_code}' --max-time 45 "${u}?r=$(date +%s)") || c=000
+              [ "$c" = "200" ] && break
+              sleep 15
+            done
+            echo "$c $u"
+            [ "$c" = "200" ] || echo "$c $u" >> .tmp/ng.txt
+          done
+          if [ -s .tmp/ng.txt ]; then
+            {
+              echo "SUMMARY<<SUMEOF"
+              echo "公開したのに200を返さない記事があります（4回試行）："
+              cat .tmp/ng.txt
+              echo "SUMEOF"
+            } >> "$GITHUB_OUTPUT"
+            exit 1
+          fi
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+
+      - name: 3. 前回の確認結果を読む
+        run: |
+          set -uo pipefail
+          if git fetch --depth 1 origin "$STATUS_BRANCH" 2> /dev/null; then
+            git show FETCH_HEAD:status.json > .tmp/prev-status.json 2> /dev/null || echo '{}' > .tmp/prev-status.json
+          else
+            echo '{}' > .tmp/prev-status.json
+          fi
+
+      - name: 4. Search Console（サイトマップの送り直しと登録状況の確認）
+        id: gsc
+        continue-on-error: true
+        env:
+          GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+          GSC_SITE_URL: ${{ vars.GSC_SITE_URL }}
+        run: |
+          npx tsx scripts/gsc-autopilot.ts \
+            --prev .tmp/prev-status.json --out .tmp/status.json \
+            --summary .tmp/summary.md --publish .tmp/publish.json
+
+      - name: 5. 結果を automation/columns-status ブランチに保存
+        id: save
+        continue-on-error: true
+        run: |
+          set -euo pipefail
+          if [ ! -f .tmp/status.json ]; then echo "status.json がありません"; exit 1; fi
+          cat .tmp/summary.md >> "$GITHUB_STEP_SUMMARY"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          WT="$RUNNER_TEMP/status-wt"
+          if git fetch --depth 1 origin "$STATUS_BRANCH" 2> /dev/null; then
+            git worktree add -B "$STATUS_BRANCH" "$WT" FETCH_HEAD
+          else
+            git worktree add --detach "$WT"
+            git -C "$WT" checkout --orphan "$STATUS_BRANCH"
+            git -C "$WT" rm -rf --quiet .
+          fi
+          cp .tmp/status.json .tmp/summary.md "$WT/"
+          cp .tmp/publish.json "$WT/last-publish.json"
+          # このブランチは結果の置き場で、サイトではない。Vercel にデプロイさせない
+          printf '%s\n' '{ "git": { "deploymentEnabled": false } }' > "$WT/vercel.json"
+          printf '%s\n' \
+            "# automation/columns-status" \
+            "" \
+            "Columns Autopublish（.github/workflows/columns-autopublish.yml）が毎日正午に書き換える結果の置き場。手で編集しない。" \
+            "" \
+            "- summary.md：人が読む要約（公開した記事・保留中・Search Console の状況・手でリクエストする候補）" \
+            "- status.json：直近のコラムの登録状況（次回の確認と、朝7時の納品タスクが読む）" \
+            "- last-publish.json：正午の自動公開APIの応答" \
+            > "$WT/README.md"
+          git -C "$WT" add -A
+          if git -C "$WT" diff --cached --quiet; then echo "変更なし"; exit 0; fi
+          git -C "$WT" commit -q -m "chore(status): コラムの自動公開とSearch Consoleの確認 $(TZ=Asia/Tokyo date +%F)"
+          git -C "$WT" push origin "$STATUS_BRANCH"
+
+      - name: 失敗したら Issue を立てる
+        # failure() を入れておくと、npm ci など continue-on-error の無い工程が落ちたときも拾える
+        if: failure() || steps.publish.outcome != 'success' || steps.verify.outcome != 'success' || steps.gsc.outcome != 'success' || steps.save.outcome != 'success'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          PUBLISH_OUTCOME: ${{ steps.publish.outcome }}
+          PUBLISH_SUMMARY: ${{ steps.publish.outputs.SUMMARY }}
+          VERIFY_OUTCOME: ${{ steps.verify.outcome }}
+          VERIFY_SUMMARY: ${{ steps.verify.outputs.SUMMARY }}
+          GSC_OUTCOME: ${{ steps.gsc.outcome }}
+          SAVE_OUTCOME: ${{ steps.save.outcome }}
+        run: |
+          set -uo pipefail
+          TITLE="コラムの自動公開・Search Consoleの確認が失敗"
+          BODY="$(TZ=Asia/Tokyo date '+%F %H:%M') JST の実行で失敗した工程があります。
+
+          - 1. 自動公開：${PUBLISH_OUTCOME} ${PUBLISH_SUMMARY:-}
+          - 2. 公開した記事の200確認：${VERIFY_OUTCOME} ${VERIFY_SUMMARY:-}
+          - 4. Search Console：${GSC_OUTCOME}（詳細は実行ログの summary）
+          - 5. 結果の保存：${SAVE_OUTCOME}
+
+          **確認の順序**
+          1. 自動公開が失敗：https://luck428.com/admin/columns/autopublish で公開待ちが残っていないかを見る。残っていれば「今すぐ公開」
+          2. 200確認が失敗：上のURLをブラウザで開く。404なら、公開ページの再生成が失敗している（記事一覧から再保存）
+          3. Search Console が失敗：鍵（GSC_SERVICE_ACCOUNT_JSON）・プロパティ名（GSC_SITE_URL）・Search Console 側の権限（フル）を確かめる
+          4. 直したら Actions から本ワークフローを手動実行し、緑になることを確認する（公開済みの記事は二重に公開されない）
+
+          手順の詳細：docs/columns-autopublish.md
+          実行ログ: ${RUN_URL}"
+          EXISTING=$(gh issue list --repo "$REPO" --state open --limit 20 \
+                       --search "in:title コラムの自動公開・Search Consoleの確認が失敗" \
+                       --json number --jq '.[0].number') || EXISTING=""
+          if [ -n "$EXISTING" ] && [ "$EXISTING" != "null" ]; then
+            gh issue comment "$EXISTING" --repo "$REPO" --body "$BODY"
+          else
+            gh issue create --repo "$REPO" --title "$TITLE" --body "$BODY"
+          fi
+
+      - name: 失敗なら実行自体を失敗させる
+        # failure() を入れておくと、npm ci など continue-on-error の無い工程が落ちたときも拾える
+        if: failure() || steps.publish.outcome != 'success' || steps.verify.outcome != 'success' || steps.gsc.outcome != 'success' || steps.save.outcome != 'success'
+        run: |
+          echo "::error::コラムの自動公開・Search Consoleの確認で失敗した工程があります（Issueを作成またはコメント済み）"
+          exit 1
