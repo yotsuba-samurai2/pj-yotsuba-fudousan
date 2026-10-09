@@ -82,6 +82,21 @@ const AUTHOR = {
 
 /** 各記事が評価を集約すべきハブ（本文に必須の内部リンク）。verify() で機械検査する */
 const REQUIRED_HUB_LINKS: Record<string, string[]> = {
+  "tokutei-yukyo-inshokuten-eigyo-kyoka-youken": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/fuzoku-eigyo-1go-settai-inshoku-kyoka-bukken-kyori",
+    "/legal/column/shinya-shurui-teikyo-todokede-yoken",
+  ],
+  "jihitsu-yuigon-hokan-seido-souzoku-tetsuzuki": [
+    "/legal/services/inheritance",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/souzoku",
+    "/legal/column/jihitsu-kosei-yuigon",
+    "/legal/column/souzoku-touki-nagare",
+  ],
   "sougi-go-tetsuzuki-dare-ni-soudan": [
     "/legal/services/inheritance",
     "/legal/nagare",
@@ -978,6 +993,39 @@ function matchesRequiredPhrase(content: string, phrase: string): boolean {
 
 /** 記事ごとに必ず含めるべき表現（機械ゲート。最低限の合否判定） */
 const REQUIRED_PHRASES: Record<string, string[]> = {
+  "tokutei-yukyo-inshokuten-eigyo-kyoka-youken": [
+    "風俗営業等の規制及び業務の適正化等に関する法律",
+    "特定遊興飲食店営業",
+    "第2条第11項",
+    "第31条の22",
+    "遊興",
+    "公安委員会",
+    "接待飲食等営業",
+    "深夜における酒類提供飲食店営業",
+    "営業所設置許容地域",
+    "保全対象施設",
+    "おおむね100メートル",
+    "紹介料を受け取りません",
+    "別事業体",
+    "独立した事業体",
+  ],
+  "jihitsu-yuigon-hokan-seido-souzoku-tetsuzuki": [
+    "法務局における遺言書の保管等に関する法律",
+    "自筆証書遺言書保管制度",
+    "遺言書保管官",
+    "遺言書情報証明書",
+    "遺言書保管事実証明書",
+    "関係遺言書保管通知",
+    "民法第1004条",
+    "検認",
+    "第11条第1項",
+    "3,900円",
+    "1,400円",
+    "800円",
+    "紹介料を受け取りません",
+    "別事業体",
+    "独立した事業体",
+  ],
   "sougi-go-tetsuzuki-dare-ni-soudan": [
     "戸籍法第86条第1項",
     "戸籍法第87条第1項",
@@ -2971,6 +3019,8 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
 
 /** 記事ごとに含めてはならない表現 */
 const FORBIDDEN_PHRASES: Record<string, string[]> = {
+  "tokutei-yukyo-inshokuten-eigyo-kyoka-youken": [],
+  "jihitsu-yuigon-hokan-seido-souzoku-tetsuzuki": [],
   "sougi-go-tetsuzuki-dare-ni-soudan": [
     "期限の定められた手続き",
     "提携",
@@ -5722,6 +5772,58 @@ const ARTICLES: Array<{
       "営業許可",
       "HACCP",
       "許認可",
+      "行政書士",
+    ],
+  },
+  {
+    file: "107-tokutei-yukyo-inshokuten-eigyo-kyoka-youken.md",
+    slug: "tokutei-yukyo-inshokuten-eigyo-kyoka-youken",
+    date: "2026-10-09",
+    title:
+      "特定遊興飲食店営業許可とは？深夜酒類提供との違いと申請の要件",
+    category: "許認可の手続き（行政書士の実務から）",
+    excerpt:
+      "深夜に客を踊らせたりショーを見せたりしながら酒と食事を出すクラブ・ラウンジは、風営法第2条第11項の「特定遊興飲食店営業」にあたり、第31条の22にもとづく都道府県公安委員会の許可が必要です。2015年改正で新設され2016年6月23日に施行された制度で、深夜酒類提供（届出）や接待飲食（風俗営業の許可）との違い、条例が定める営業所設置許容地域・保全対象施設からの距離（おおむね100メートル限度）・営業時間の制限、申請書類と構造設備の要件を整理し、物件は不動産、平面図・求積図は建築士、労務は社労士、飲食店営業許可は保健所へ分離受任で振る分担をまとめました。",
+    keywords: [
+      "特定遊興飲食店営業 許可 要件",
+      "特定遊興 深夜酒類提供 違い",
+      "特定遊興飲食店 営業所設置許容地域",
+      "特定遊興 遊興 とは 風営法",
+      "特定遊興飲食店営業 申請 書類",
+      "特定遊興飲食店営業 行政書士",
+    ],
+    tags: [
+      "特定遊興飲食店営業",
+      "風営法",
+      "許認可",
+      "深夜営業",
+      "営業所設置許容地域",
+      "行政書士",
+    ],
+  },
+  {
+    file: "108-jihitsu-yuigon-hokan-seido-souzoku-tetsuzuki.md",
+    slug: "jihitsu-yuigon-hokan-seido-souzoku-tetsuzuki",
+    date: "2026-10-09",
+    title:
+      "自筆証書遺言書保管制度を使うと、相続開始後の手続きはどう変わる？",
+    category: "相続の手続き（行政書士の実務から）",
+    excerpt:
+      "法務局の自筆証書遺言書保管制度（平成30年法律第73号）を使うと、相続開始後の手続きが大きく変わります。保管された遺言書は民法第1004条第1項の検認が不要になり（法第11条第1項）、相続人の1人が内容を確認すると他の相続人全員に関係遺言書保管通知が届きます。遺言書保管事実証明書（1通800円）と遺言書情報証明書（1通1,400円）の使い分け、死亡時の通知（指定者通知）、検認不要の根拠を整理し、相続登記は司法書士、相続税は税理士、争いは弁護士、相続不動産の売却は別事業体の不動産会社へ分離受任で振る分担を、行政書士の実務からまとめました。",
+    keywords: [
+      "自筆証書遺言書保管制度 相続開始後 手続き",
+      "遺言書保管制度 検認 不要",
+      "遺言書情報証明書 遺言書保管事実証明書 違い",
+      "関係遺言書保管通知 指定者通知",
+      "遺言書保管 手数料 1400円 800円",
+      "自筆証書遺言 保管 行政書士",
+    ],
+    tags: [
+      "自筆証書遺言書保管制度",
+      "遺言書保管",
+      "遺言",
+      "検認",
+      "相続手続",
       "行政書士",
     ],
   },
