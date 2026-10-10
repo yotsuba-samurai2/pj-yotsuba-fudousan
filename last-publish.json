@@ -1,1 +1,11 @@
-{"skipped":"COLUMNS_AUTOPUBLISH_SECRET が未設定"}
+{
+  "dryRun": true,
+  "runAt": "2026-10-10T05:51:26.399Z",
+  "todayJst": "2026-10-10",
+  "targets": [],
+  "held": [],
+  "scheduled": [],
+  "ok": true,
+  "published": [],
+  "errors": []
+}
