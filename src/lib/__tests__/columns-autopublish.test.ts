@@ -179,6 +179,26 @@ describe("publishPendingColumns", () => {
     expect(r.published.map((x) => x.key)).toEqual(["realestate:r-new"]);
   });
 
+  it("部分失敗を再実行すると成功済みを重複公開せず、未完了だけを処理する", async () => {
+    const rows = await mocks.findMany();
+    mocks.findMany.mockImplementation(async () => [...rows]);
+    let failOnce = true;
+    mocks.upsert.mockImplementation(async (business: string, slug: string) => {
+      if (slug === "l-old" && failOnce) {
+        failOnce = false;
+        throw new Error("temporary failure");
+      }
+      rows.push({ id: `id-${slug}`, business, slug, status: "published" });
+      return { id: `id-${slug}`, action: "created" };
+    });
+    expect((await publishPendingColumns({ now: NOW })).ok).toBe(false);
+    const retry = await publishPendingColumns({ now: NOW });
+    expect(retry.ok).toBe(true);
+    expect(retry.published.map((x) => x.key)).toEqual(["legal:l-old"]);
+    expect(mocks.upsert.mock.calls.filter((call) => call[1] === "r-new")).toHaveLength(1);
+    expect(mocks.update).not.toHaveBeenCalled();
+  });
+
   it("公開ページの更新に失敗したら refreshError を返す（DBの更新は済んでいる）", async () => {
     mocks.refresh.mockRejectedValue(new Error("revalidate failed"));
     const r = await publishPendingColumns({ now: NOW });
