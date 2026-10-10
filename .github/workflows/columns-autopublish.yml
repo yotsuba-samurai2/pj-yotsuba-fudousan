@@ -12,7 +12,9 @@ name: Columns Autopublish
 # 止めたい記事は、正午までに https://luck428.com/admin/columns/autopublish で「保留」を押す。
 # 設計と初期設定の手順：docs/columns-autopublish.md
 #
-# 合言葉・鍵が未設定のあいだは、その工程を飛ばして警告だけを出す（赤にはしない）。
+# 合言葉（COLUMNS_AUTOPUBLISH_SECRET）が未設定なら、公開できないので赤にして Issue を立てる。
+#   2026-10-09 は未設定のまま「飛ばして警告」で終わり、実行は緑・Issue も無く、公開されないことに気づけなかった。
+# Search Console の鍵（GSC_SERVICE_ACCOUNT_JSON）が未設定のあいだは、その工程を飛ばして警告だけを出す（赤にはしない）。
 
 on:
   schedule:
@@ -21,7 +23,7 @@ on:
   workflow_dispatch:
     inputs:
       dry_run:
-        description: "true にすると公開せず、対象の一覧だけを出す（Search Console の確認は行う）"
+        description: "true にすると公開・Search Console送信をせず、対象の一覧だけを出す"
         type: boolean
         default: false
       force:
@@ -59,19 +61,27 @@ jobs:
           set -uo pipefail
           mkdir -p .tmp
           if [ -z "${SECRET:-}" ]; then
-            echo '{"skipped":"COLUMNS_AUTOPUBLISH_SECRET が未設定"}' > .tmp/publish.json
-            echo "::warning::COLUMNS_AUTOPUBLISH_SECRET が未設定のため、自動公開を飛ばしました（docs/columns-autopublish.md の初期設定）"
-            exit 0
+            # 未設定は「公開されないまま緑」になるので、警告ではなく失敗にする（Issue も立つ）
+            MSG="GitHub の Actions シークレット COLUMNS_AUTOPUBLISH_SECRET が未設定のため、公開できませんでした（記事は公開されていません）。docs/columns-autopublish.md の「4-1」の手順で、Vercel と GitHub に同じ値を入れてください（GitHub は Secrets タブの Repository secrets）"
+            echo '{"error":"COLUMNS_AUTOPUBLISH_SECRET が未設定（GitHub の Actions シークレット）。記事は公開されていません"}' > .tmp/publish.json
+            echo "::error::${MSG}"
+            echo "SUMMARY=${MSG}" >> "$GITHUB_OUTPUT"
+            exit 1
           fi
           Q=""
           [ "${DRY_RUN:-false}" = "true" ] && Q="dryRun=1"
           [ "${FORCE:-false}" = "true" ] && Q="${Q:+$Q&}force=1"
           URL="${SITE}/api/cron/columns-autopublish${Q:+?$Q}"
           CODE=000
+          : > .tmp/published.jsonl
           for i in 1 2 3; do
             CODE=$(curl -sS -o .tmp/publish.json -w '%{http_code}' --max-time 120 -X POST \
                      -H "Authorization: Bearer ${SECRET}" "$URL") || CODE=000
             echo "attempt $i: HTTP $CODE"
+            # 再試行で後続の記事だけが返っても、先に公開した記事の200確認を落とさない
+            jq -c '.published[]?' .tmp/publish.json >> .tmp/published.jsonl 2>/dev/null || true
+            # DB更新後の再生成失敗は、再試行しても公開済みが対象から外れるだけで直らない
+            if jq -e '.refreshError' .tmp/publish.json > /dev/null 2>&1; then break; fi
             # 200＝成功・401＝合言葉の不一致・409＝上限で停止 は、やり直しても変わらない。
             # 500 など（一部失敗・タイムアウト）はやり直す。公開済みの記事は対象から外れるので二重公開はない
             case "$CODE" in 200|401|409) break ;; esac
@@ -80,6 +90,9 @@ jobs:
           cat .tmp/publish.json; echo
           # 応答がJSONでない（落ちている等）ときは、後段が読める形に置き換える
           jq -e . .tmp/publish.json > /dev/null 2>&1 || echo "{\"error\":\"HTTP ${CODE}\"}" > .tmp/publish.json
+          jq --slurpfile published .tmp/published.jsonl \
+            '.published = ($published | unique_by(.key // .path))' \
+            .tmp/publish.json > .tmp/merged-publish.json && mv .tmp/merged-publish.json .tmp/publish.json
           case "$CODE" in
             200) exit 0 ;;
             401) MSG="自動公開APIが 401 を返しました。GitHub の COLUMNS_AUTOPUBLISH_SECRET と Vercel の環境変数が一致しているか確認してください" ;;
@@ -140,10 +153,13 @@ jobs:
         env:
           GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
           GSC_SITE_URL: ${{ vars.GSC_SITE_URL }}
+          DRY_RUN: ${{ inputs.dry_run }}
         run: |
+          ARGS=()
+          [ "${DRY_RUN:-false}" = "true" ] && ARGS+=(--dry-run)
           npx tsx scripts/gsc-autopilot.ts \
             --prev .tmp/prev-status.json --out .tmp/status.json \
-            --summary .tmp/summary.md --publish .tmp/publish.json
+            --summary .tmp/summary.md --publish .tmp/publish.json "${ARGS[@]}"
 
       - name: 5. 結果を automation/columns-status ブランチに保存
         id: save
@@ -204,7 +220,7 @@ jobs:
           - 5. 結果の保存：${SAVE_OUTCOME}
 
           **確認の順序**
-          1. 自動公開が失敗：https://luck428.com/admin/columns/autopublish で公開待ちが残っていないかを見る。残っていれば「今すぐ公開」
+          1. 自動公開が失敗：上の失敗理由を確認し、https://luck428.com/admin/columns/autopublish で公開待ちを見る。設定不足は先に直す。記事を公開する前に、未確認の記事と対象範囲を確かめる
           2. 200確認が失敗：上のURLをブラウザで開く。404なら、公開ページの再生成が失敗している（記事一覧から再保存）
           3. Search Console が失敗：鍵（GSC_SERVICE_ACCOUNT_JSON）・プロパティ名（GSC_SITE_URL）・Search Console 側の権限（フル）を確かめる
           4. 直したら Actions から本ワークフローを手動実行し、緑になることを確認する（公開済みの記事は二重に公開されない）

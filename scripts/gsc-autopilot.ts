@@ -1,7 +1,7 @@
 /**
  * Search Console の自動処理（.github/workflows/columns-autopublish.yml が正午の自動公開のあとに呼ぶ）。
  *
- *   npx tsx scripts/gsc-autopilot.ts --prev prev.json --out status.json --summary summary.md [--publish publish.json]
+ *   npx tsx scripts/gsc-autopilot.ts --prev prev.json --out status.json --summary summary.md [--publish publish.json] [--dry-run]
  *
  * 1. サイトマップを Search Console に送り直す（sitemaps.submit）
  * 2. 直近 GSC_WINDOW_DAYS 日の日本語コラムの登録状況を URL検査API で確かめる
@@ -37,6 +37,8 @@ const SCOPE = "https://www.googleapis.com/auth/webmasters";
 type ServiceAccount = { client_email: string; private_key: string; token_uri?: string };
 
 type PublishResult = {
+  dryRun?: boolean;
+  targets?: { title: string; path: string }[];
   published?: { title: string; path: string; business: string }[];
   held?: { title: string; path: string }[];
   errors?: { key: string; message: string }[];
@@ -133,6 +135,11 @@ function renderSummary(args: {
   if (publish.skipped) lines.push(`- 実行していません（${publish.skipped}）`);
   else if (publish.error) lines.push(`- 失敗：${publish.error}`);
   else {
+    if (publish.dryRun) {
+      const targets = publish.targets ?? [];
+      lines.push(`- dry-run（公開していません）：公開予定 ${targets.length}本`);
+      for (const p of targets) lines.push(`  - ${SITE}${p.path}　${p.title}`);
+    }
     if (publish.blocked) lines.push(`- **止めました**：${publish.blocked}`);
     const published = publish.published ?? [];
     lines.push(`- 公開した記事：${published.length}本`);
@@ -195,7 +202,9 @@ async function main() {
 
   const rawKey = process.env.GSC_SERVICE_ACCOUNT_JSON;
   let token: string | undefined;
-  if (!rawKey) {
+  if (process.argv.includes("--dry-run")) {
+    gscNote.push("dry-run のため、Search Console への接続・サイトマップ送信・URL検査を行っていません");
+  } else if (!rawKey) {
     gscNote.push("GSC_SERVICE_ACCOUNT_JSON が未設定のため、サイトマップの送信と登録状況の確認を飛ばしました");
   } else if (candidates) {
     try {
