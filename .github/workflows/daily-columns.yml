@@ -241,6 +241,8 @@ jobs:
             やること：
             1. 日本語原稿を書く
             2. en / zh-tw / zh の3言語に訳す
+               不動産翻訳のfrontmatterには faqHeading を、本文のFAQ H2見出しと完全一致で記す。
+               3翻訳それぞれFAQ4問を本文とJSON-LDに含める。承認証跡ファイルは編集しない。
             3. 該当するseedスクリプトの ARTICLES（行政書士は4箇所）に登録する
 
             **git 操作はしない。--emit-ts も実行しない**（後段のジョブがやる）。
@@ -256,6 +258,26 @@ jobs:
             --max-turns 120
             --allowedTools "Read,Write,Edit,Glob,Grep,WebSearch,WebFetch"
             --disallowedTools "Task"
+
+
+      - name: 原稿artifactの制御コード改変を拒否（凍結checkout比較）
+        run: |
+          set -euo pipefail
+          APPROVED_REF="${{ github.sha }}"
+          git diff --exit-code "$APPROVED_REF" --             .github/workflows scripts/columns-review-proof.ts             'src/lib/columns-autopublish*.ts' src/lib/data/columns-autopublish-reviews.ts             src/lib/api-auth.ts src/lib/cron-auth.ts src/lib/prisma.ts             src/lib/db src/lib/column-shared.ts src/lib/column-publication-cache.ts             src/app/api prisma package.json package-lock.json
+          {
+            git diff --name-only "$APPROVED_REF" -- .github scripts src prisma package.json package-lock.json
+            git ls-files --others --exclude-standard -- .github scripts src prisma package.json package-lock.json
+          } > .tmp-column-artifact-paths.txt
+          while IFS= read -r file; do
+            case "$file" in
+              scripts/realestate-columns/[0-9]*-*.md|scripts/realestate-columns/en/[0-9]*-*.md|scripts/realestate-columns/zh-tw/[0-9]*-*.md|scripts/realestate-columns/zh/[0-9]*-*.md|scripts/legal-columns/[0-9]*-*.md|scripts/legal-columns/en/[0-9]*-*.md|scripts/legal-columns/zh-tw/[0-9]*-*.md|scripts/legal-columns/zh/[0-9]*-*.md|scripts/labor-columns/[0-9]*-*.md|scripts/labor-columns/en/[0-9]*-*.md|scripts/labor-columns/zh-tw/[0-9]*-*.md|scripts/labor-columns/zh/[0-9]*-*.md|scripts/*.preview.json) ;;
+              scripts/seed-realestate-columns-daily.ts|scripts/seed-souzoku-legal-columns.ts|scripts/seed-labor-columns.ts) ;;
+              src/lib/data/realestate-columns-daily-seed.ts|src/lib/data/souzoku-legal-columns-seed.ts|src/lib/data/labor-columns-seed.ts) ;;
+              *) echo "::error::原稿artifactに制御コードの改変があります: $file"; exit 1 ;;
+            esac
+          done < .tmp-column-artifact-paths.txt
+          rm .tmp-column-artifact-paths.txt
 
       - name: 変更ファイルだけを集める
         run: |
@@ -297,6 +319,26 @@ jobs:
           path: .out
       - name: 原稿を展開
         run: for f in .out/*.tar.gz; do tar -xzf "$f"; done && git status --porcelain | head -40
+
+      - name: 原稿artifactの制御コード改変を拒否（凍結checkout比較）
+        run: |
+          set -euo pipefail
+          APPROVED_REF="${{ github.sha }}"
+          git diff --exit-code "$APPROVED_REF" --             .github/workflows scripts/columns-review-proof.ts             'src/lib/columns-autopublish*.ts' src/lib/data/columns-autopublish-reviews.ts             src/lib/api-auth.ts src/lib/cron-auth.ts src/lib/prisma.ts             src/lib/db src/lib/column-shared.ts src/lib/column-publication-cache.ts             src/app/api prisma package.json package-lock.json
+          {
+            git diff --name-only "$APPROVED_REF" -- .github scripts src prisma package.json package-lock.json
+            git ls-files --others --exclude-standard -- .github scripts src prisma package.json package-lock.json
+          } > .tmp-column-artifact-paths.txt
+          while IFS= read -r file; do
+            case "$file" in
+              scripts/realestate-columns/[0-9]*-*.md|scripts/realestate-columns/en/[0-9]*-*.md|scripts/realestate-columns/zh-tw/[0-9]*-*.md|scripts/realestate-columns/zh/[0-9]*-*.md|scripts/legal-columns/[0-9]*-*.md|scripts/legal-columns/en/[0-9]*-*.md|scripts/legal-columns/zh-tw/[0-9]*-*.md|scripts/legal-columns/zh/[0-9]*-*.md|scripts/labor-columns/[0-9]*-*.md|scripts/labor-columns/en/[0-9]*-*.md|scripts/labor-columns/zh-tw/[0-9]*-*.md|scripts/labor-columns/zh/[0-9]*-*.md|scripts/*.preview.json) ;;
+              scripts/seed-realestate-columns-daily.ts|scripts/seed-souzoku-legal-columns.ts|scripts/seed-labor-columns.ts) ;;
+              src/lib/data/realestate-columns-daily-seed.ts|src/lib/data/souzoku-legal-columns-seed.ts|src/lib/data/labor-columns-seed.ts) ;;
+              *) echo "::error::原稿artifactに制御コードの改変があります: $file"; exit 1 ;;
+            esac
+          done < .tmp-column-artifact-paths.txt
+          rm .tmp-column-artifact-paths.txt
+
 
       - uses: actions/setup-node@v4
         with:
@@ -417,6 +459,26 @@ jobs:
           path: .out
       - name: 原稿を展開
         run: for f in .out/*.tar.gz; do tar -xzf "$f"; done && git status --porcelain | head -40
+
+      - name: 原稿artifactの制御コード改変を拒否（凍結checkout比較）
+        run: |
+          set -euo pipefail
+          APPROVED_REF="${{ github.sha }}"
+          git diff --exit-code "$APPROVED_REF" --             .github/workflows scripts/columns-review-proof.ts             'src/lib/columns-autopublish*.ts' src/lib/data/columns-autopublish-reviews.ts             src/lib/api-auth.ts src/lib/cron-auth.ts src/lib/prisma.ts             src/lib/db src/lib/column-shared.ts src/lib/column-publication-cache.ts             src/app/api prisma package.json package-lock.json
+          {
+            git diff --name-only "$APPROVED_REF" -- .github scripts src prisma package.json package-lock.json
+            git ls-files --others --exclude-standard -- .github scripts src prisma package.json package-lock.json
+          } > .tmp-column-artifact-paths.txt
+          while IFS= read -r file; do
+            case "$file" in
+              scripts/realestate-columns/[0-9]*-*.md|scripts/realestate-columns/en/[0-9]*-*.md|scripts/realestate-columns/zh-tw/[0-9]*-*.md|scripts/realestate-columns/zh/[0-9]*-*.md|scripts/legal-columns/[0-9]*-*.md|scripts/legal-columns/en/[0-9]*-*.md|scripts/legal-columns/zh-tw/[0-9]*-*.md|scripts/legal-columns/zh/[0-9]*-*.md|scripts/labor-columns/[0-9]*-*.md|scripts/labor-columns/en/[0-9]*-*.md|scripts/labor-columns/zh-tw/[0-9]*-*.md|scripts/labor-columns/zh/[0-9]*-*.md|scripts/*.preview.json) ;;
+              scripts/seed-realestate-columns-daily.ts|scripts/seed-souzoku-legal-columns.ts|scripts/seed-labor-columns.ts) ;;
+              src/lib/data/realestate-columns-daily-seed.ts|src/lib/data/souzoku-legal-columns-seed.ts|src/lib/data/labor-columns-seed.ts) ;;
+              *) echo "::error::原稿artifactに制御コードの改変があります: $file"; exit 1 ;;
+            esac
+          done < .tmp-column-artifact-paths.txt
+          rm .tmp-column-artifact-paths.txt
+
       - uses: actions/download-artifact@v5
         with:
           name: validate-ng
@@ -464,6 +526,26 @@ jobs:
             --max-turns 60
             --allowedTools "Read,Write,Edit,Glob,Grep,WebSearch,WebFetch,Bash(npx tsx *)"
             --disallowedTools "Task"
+
+
+      - name: 原稿artifactの制御コード改変を拒否（凍結checkout比較）
+        run: |
+          set -euo pipefail
+          APPROVED_REF="${{ github.sha }}"
+          git diff --exit-code "$APPROVED_REF" --             .github/workflows scripts/columns-review-proof.ts             'src/lib/columns-autopublish*.ts' src/lib/data/columns-autopublish-reviews.ts             src/lib/api-auth.ts src/lib/cron-auth.ts src/lib/prisma.ts             src/lib/db src/lib/column-shared.ts src/lib/column-publication-cache.ts             src/app/api prisma package.json package-lock.json
+          {
+            git diff --name-only "$APPROVED_REF" -- .github scripts src prisma package.json package-lock.json
+            git ls-files --others --exclude-standard -- .github scripts src prisma package.json package-lock.json
+          } > .tmp-column-artifact-paths.txt
+          while IFS= read -r file; do
+            case "$file" in
+              scripts/realestate-columns/[0-9]*-*.md|scripts/realestate-columns/en/[0-9]*-*.md|scripts/realestate-columns/zh-tw/[0-9]*-*.md|scripts/realestate-columns/zh/[0-9]*-*.md|scripts/legal-columns/[0-9]*-*.md|scripts/legal-columns/en/[0-9]*-*.md|scripts/legal-columns/zh-tw/[0-9]*-*.md|scripts/legal-columns/zh/[0-9]*-*.md|scripts/labor-columns/[0-9]*-*.md|scripts/labor-columns/en/[0-9]*-*.md|scripts/labor-columns/zh-tw/[0-9]*-*.md|scripts/labor-columns/zh/[0-9]*-*.md|scripts/*.preview.json) ;;
+              scripts/seed-realestate-columns-daily.ts|scripts/seed-souzoku-legal-columns.ts|scripts/seed-labor-columns.ts) ;;
+              src/lib/data/realestate-columns-daily-seed.ts|src/lib/data/souzoku-legal-columns-seed.ts|src/lib/data/labor-columns-seed.ts) ;;
+              *) echo "::error::原稿artifactに制御コードの改変があります: $file"; exit 1 ;;
+            esac
+          done < .tmp-column-artifact-paths.txt
+          rm .tmp-column-artifact-paths.txt
 
       - uses: actions/setup-node@v4
         with:
@@ -544,10 +626,48 @@ jobs:
           name: validated
           path: .out
       - run: tar -xzf .out/validated.tar.gz
+
+      - name: 原稿artifactの制御コード改変を拒否（凍結checkout比較）
+        run: |
+          set -euo pipefail
+          APPROVED_REF="${{ github.sha }}"
+          git diff --exit-code "$APPROVED_REF" --             .github/workflows scripts/columns-review-proof.ts             'src/lib/columns-autopublish*.ts' src/lib/data/columns-autopublish-reviews.ts             src/lib/api-auth.ts src/lib/cron-auth.ts src/lib/prisma.ts             src/lib/db src/lib/column-shared.ts src/lib/column-publication-cache.ts             src/app/api prisma package.json package-lock.json
+          {
+            git diff --name-only "$APPROVED_REF" -- .github scripts src prisma package.json package-lock.json
+            git ls-files --others --exclude-standard -- .github scripts src prisma package.json package-lock.json
+          } > .tmp-column-artifact-paths.txt
+          while IFS= read -r file; do
+            case "$file" in
+              scripts/realestate-columns/[0-9]*-*.md|scripts/realestate-columns/en/[0-9]*-*.md|scripts/realestate-columns/zh-tw/[0-9]*-*.md|scripts/realestate-columns/zh/[0-9]*-*.md|scripts/legal-columns/[0-9]*-*.md|scripts/legal-columns/en/[0-9]*-*.md|scripts/legal-columns/zh-tw/[0-9]*-*.md|scripts/legal-columns/zh/[0-9]*-*.md|scripts/labor-columns/[0-9]*-*.md|scripts/labor-columns/en/[0-9]*-*.md|scripts/labor-columns/zh-tw/[0-9]*-*.md|scripts/labor-columns/zh/[0-9]*-*.md|scripts/*.preview.json) ;;
+              scripts/seed-realestate-columns-daily.ts|scripts/seed-souzoku-legal-columns.ts|scripts/seed-labor-columns.ts) ;;
+              src/lib/data/realestate-columns-daily-seed.ts|src/lib/data/souzoku-legal-columns-seed.ts|src/lib/data/labor-columns-seed.ts) ;;
+              *) echo "::error::原稿artifactに制御コードの改変があります: $file"; exit 1 ;;
+            esac
+          done < .tmp-column-artifact-paths.txt
+          rm .tmp-column-artifact-paths.txt
+
       - uses: actions/download-artifact@v5
         with:
           name: plan-approved
           path: .tmp
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: 独立レビュー対象の本文指紋を固定（追加API呼出しなし）
+        env:
+          COLUMNS_REVIEW_BASE_REF: ${{ github.sha }}
+        run: npx tsx scripts/columns-review-proof.ts prepare
+      - uses: actions/upload-artifact@v4
+        with:
+          name: quality-candidates
+          path: |
+            .tmp/quality-candidates.json
+            .tmp/quality-baseline-reviews.json
+          include-hidden-files: true
+          if-no-files-found: error
 
       - id: review
         uses: anthropics/claude-code-action@v1
@@ -568,16 +688,29 @@ jobs:
             6. 禁止表現（「街の不動産屋」／実績数字／ワンストップの一括受任的用法）
 
             severity は blocker / major / minor の3段階。
-            blocker が1件でもあれば pass は false。
+            blocker または major が1件でもあれば pass は false。
+
+            .tmp/quality-candidates.json の全記事について articles に1件ずつ証跡を返す。
+            key/fingerprint は同ファイルから正確にコピーする。生成・修正担当の自己承認は不可。
+            checks は primarySources / duplicateIntent / legalClaims / translationAlignment の4項目。
+            いずれか未確認なら hold。タイトル・本文・FAQを含む4言語を全文照合する。
+            一次根拠は https の官公庁 go.jp / lg.jp を WebFetch で直接読む（検索断片のみは不可）。
+            主要な数値・施行日・適用条件ごとに sources の relevantClaim と取得日 checkedAt を記す。
+            取得不能・本文不一致は verified=false とし、重要事項は blockingFindings に残す。
+            WebSearch/WebFetch は公的一次資料の読取りに限定。認証、非公的資料、API実行は不可。
+            個別事案の具体的な法的判断や資格者確認必須の内容は requiresQualifiedReview=true。
+            一般情報の論点整理だけで、重大な法的断定・根拠不足・重複意図・翻訳不一致がない場合のみ
+            requiresQualifiedReview=false とできる。自動公開の一般承認で個別の判断を代替しない。
+            本文・指紋・承認記録は変更しない。sources を取得したふりで pass にしない。
 
             **これは無人の1回きりの実行です。次のターンはありません。**
             審査を終えてから終了すること。途中経過の報告でターンを終えない。
           claude_args: |
             --model claude-opus-4-8
             --max-turns 50
-            --allowedTools "Read,Glob,Grep,Bash(git diff *),Bash(git log *),Bash(git status *)"
+            --allowedTools "Read,Glob,Grep,WebSearch,WebFetch,Bash(git diff *),Bash(git log *),Bash(git status *)"
             --disallowedTools "Task"
-            --json-schema '{"type":"object","properties":{"pass":{"type":"boolean"},"findings":{"type":"array","items":{"type":"object","properties":{"file":{"type":"string"},"severity":{"type":"string"},"issue":{"type":"string"},"fix":{"type":"string"}},"required":["file","severity","issue","fix"]}}},"required":["pass","findings"]}'
+            --json-schema '{"type":"object","properties":{"pass":{"type":"boolean"},"findings":{"type":"array","items":{"type":"object","properties":{"file":{"type":"string"},"severity":{"type":"string"},"issue":{"type":"string"},"fix":{"type":"string"}},"required":["file","severity","issue","fix"]}},"articles":{"type":"array","items":{"type":"object","properties":{"key":{"type":"string"},"fingerprint":{"type":"string"},"requiresQualifiedReview":{"type":"boolean"},"checks":{"type":"object","properties":{"primarySources":{"type":"string","enum":["pass","hold"]},"duplicateIntent":{"type":"string","enum":["pass","hold"]},"legalClaims":{"type":"string","enum":["pass","hold"]},"translationAlignment":{"type":"string","enum":["pass","hold"]}},"required":["primarySources","duplicateIntent","legalClaims","translationAlignment"]},"sources":{"type":"array","items":{"type":"object","properties":{"url":{"type":"string"},"checkedAt":{"type":"string"},"relevantClaim":{"type":"string"},"verified":{"type":"boolean"}},"required":["url","checkedAt","relevantClaim","verified"]}},"blockingFindings":{"type":"array","items":{"type":"string"}}},"required":["key","fingerprint","requiresQualifiedReview","checks","sources","blockingFindings"]}}},"required":["pass","findings","articles"]}'
 
       # 判定を平易な文字列にしてから後段へ渡す。式の中で fromJSON を使わない
       - id: gate
@@ -592,7 +725,7 @@ jobs:
           printf '%s' "$OUT" > /tmp/review.json
           node -e '
             const o = JSON.parse(require("fs").readFileSync("/tmp/review.json","utf8"));
-            const blockers = (o.findings || []).filter(f => f.severity === "blocker");
+            const blockers = (o.findings || []).filter(f => f.severity === "blocker" || f.severity === "major");
             const pass = o.pass === true && blockers.length === 0;
             console.log("pass=" + pass);
             for (const f of (o.findings || [])) {
@@ -619,6 +752,26 @@ jobs:
           name: validated
           path: .out
       - run: tar -xzf .out/validated.tar.gz
+
+      - name: 原稿artifactの制御コード改変を拒否（凍結checkout比較）
+        run: |
+          set -euo pipefail
+          APPROVED_REF="${{ github.sha }}"
+          git diff --exit-code "$APPROVED_REF" --             .github/workflows scripts/columns-review-proof.ts             'src/lib/columns-autopublish*.ts' src/lib/data/columns-autopublish-reviews.ts             src/lib/api-auth.ts src/lib/cron-auth.ts src/lib/prisma.ts             src/lib/db src/lib/column-shared.ts src/lib/column-publication-cache.ts             src/app/api prisma package.json package-lock.json
+          {
+            git diff --name-only "$APPROVED_REF" -- .github scripts src prisma package.json package-lock.json
+            git ls-files --others --exclude-standard -- .github scripts src prisma package.json package-lock.json
+          } > .tmp-column-artifact-paths.txt
+          while IFS= read -r file; do
+            case "$file" in
+              scripts/realestate-columns/[0-9]*-*.md|scripts/realestate-columns/en/[0-9]*-*.md|scripts/realestate-columns/zh-tw/[0-9]*-*.md|scripts/realestate-columns/zh/[0-9]*-*.md|scripts/legal-columns/[0-9]*-*.md|scripts/legal-columns/en/[0-9]*-*.md|scripts/legal-columns/zh-tw/[0-9]*-*.md|scripts/legal-columns/zh/[0-9]*-*.md|scripts/labor-columns/[0-9]*-*.md|scripts/labor-columns/en/[0-9]*-*.md|scripts/labor-columns/zh-tw/[0-9]*-*.md|scripts/labor-columns/zh/[0-9]*-*.md|scripts/*.preview.json) ;;
+              scripts/seed-realestate-columns-daily.ts|scripts/seed-souzoku-legal-columns.ts|scripts/seed-labor-columns.ts) ;;
+              src/lib/data/realestate-columns-daily-seed.ts|src/lib/data/souzoku-legal-columns-seed.ts|src/lib/data/labor-columns-seed.ts) ;;
+              *) echo "::error::原稿artifactに制御コードの改変があります: $file"; exit 1 ;;
+            esac
+          done < .tmp-column-artifact-paths.txt
+          rm .tmp-column-artifact-paths.txt
+
 
       - name: 指摘をファイルに落とす
         run: |
@@ -656,6 +809,26 @@ jobs:
             --max-turns 120
             --allowedTools "Read,Write,Edit,Glob,Grep,WebSearch,WebFetch"
             --disallowedTools "Task"
+
+
+      - name: 原稿artifactの制御コード改変を拒否（凍結checkout比較）
+        run: |
+          set -euo pipefail
+          APPROVED_REF="${{ github.sha }}"
+          git diff --exit-code "$APPROVED_REF" --             .github/workflows scripts/columns-review-proof.ts             'src/lib/columns-autopublish*.ts' src/lib/data/columns-autopublish-reviews.ts             src/lib/api-auth.ts src/lib/cron-auth.ts src/lib/prisma.ts             src/lib/db src/lib/column-shared.ts src/lib/column-publication-cache.ts             src/app/api prisma package.json package-lock.json
+          {
+            git diff --name-only "$APPROVED_REF" -- .github scripts src prisma package.json package-lock.json
+            git ls-files --others --exclude-standard -- .github scripts src prisma package.json package-lock.json
+          } > .tmp-column-artifact-paths.txt
+          while IFS= read -r file; do
+            case "$file" in
+              scripts/realestate-columns/[0-9]*-*.md|scripts/realestate-columns/en/[0-9]*-*.md|scripts/realestate-columns/zh-tw/[0-9]*-*.md|scripts/realestate-columns/zh/[0-9]*-*.md|scripts/legal-columns/[0-9]*-*.md|scripts/legal-columns/en/[0-9]*-*.md|scripts/legal-columns/zh-tw/[0-9]*-*.md|scripts/legal-columns/zh/[0-9]*-*.md|scripts/labor-columns/[0-9]*-*.md|scripts/labor-columns/en/[0-9]*-*.md|scripts/labor-columns/zh-tw/[0-9]*-*.md|scripts/labor-columns/zh/[0-9]*-*.md|scripts/*.preview.json) ;;
+              scripts/seed-realestate-columns-daily.ts|scripts/seed-souzoku-legal-columns.ts|scripts/seed-labor-columns.ts) ;;
+              src/lib/data/realestate-columns-daily-seed.ts|src/lib/data/souzoku-legal-columns-seed.ts|src/lib/data/labor-columns-seed.ts) ;;
+              *) echo "::error::原稿artifactに制御コードの改変があります: $file"; exit 1 ;;
+            esac
+          done < .tmp-column-artifact-paths.txt
+          rm .tmp-column-artifact-paths.txt
 
       - uses: actions/setup-node@v4
         with:
@@ -714,6 +887,42 @@ jobs:
           name: ${{ needs.fix.result == 'success' && 'fixed' || 'validated' }}
           path: .out
       - run: tar -xzf .out/*.tar.gz
+
+      - name: 原稿artifactの制御コード改変を拒否（凍結checkout比較）
+        run: |
+          set -euo pipefail
+          APPROVED_REF="${{ github.sha }}"
+          git diff --exit-code "$APPROVED_REF" --             .github/workflows scripts/columns-review-proof.ts             'src/lib/columns-autopublish*.ts' src/lib/data/columns-autopublish-reviews.ts             src/lib/api-auth.ts src/lib/cron-auth.ts src/lib/prisma.ts             src/lib/db src/lib/column-shared.ts src/lib/column-publication-cache.ts             src/app/api prisma package.json package-lock.json
+          {
+            git diff --name-only "$APPROVED_REF" -- .github scripts src prisma package.json package-lock.json
+            git ls-files --others --exclude-standard -- .github scripts src prisma package.json package-lock.json
+          } > .tmp-column-artifact-paths.txt
+          while IFS= read -r file; do
+            case "$file" in
+              scripts/realestate-columns/[0-9]*-*.md|scripts/realestate-columns/en/[0-9]*-*.md|scripts/realestate-columns/zh-tw/[0-9]*-*.md|scripts/realestate-columns/zh/[0-9]*-*.md|scripts/legal-columns/[0-9]*-*.md|scripts/legal-columns/en/[0-9]*-*.md|scripts/legal-columns/zh-tw/[0-9]*-*.md|scripts/legal-columns/zh/[0-9]*-*.md|scripts/labor-columns/[0-9]*-*.md|scripts/labor-columns/en/[0-9]*-*.md|scripts/labor-columns/zh-tw/[0-9]*-*.md|scripts/labor-columns/zh/[0-9]*-*.md|scripts/*.preview.json) ;;
+              scripts/seed-realestate-columns-daily.ts|scripts/seed-souzoku-legal-columns.ts|scripts/seed-labor-columns.ts) ;;
+              src/lib/data/realestate-columns-daily-seed.ts|src/lib/data/souzoku-legal-columns-seed.ts|src/lib/data/labor-columns-seed.ts) ;;
+              *) echo "::error::原稿artifactに制御コードの改変があります: $file"; exit 1 ;;
+            esac
+          done < .tmp-column-artifact-paths.txt
+          rm .tmp-column-artifact-paths.txt
+
+      - uses: actions/download-artifact@v5
+        with:
+          name: quality-candidates
+          path: .tmp
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: 既存の独立レビュー証跡を記録（修正後の古い指紋は承認しない）
+        env:
+          REVIEW: ${{ needs.review.outputs.result }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          npx tsx scripts/columns-review-proof.ts record
+          cat .tmp/quality-holds.json >> "$GITHUB_STEP_SUMMARY"
 
       - name: コミットしてPRを出し、ゲートが全部通っていればマージする
         env:

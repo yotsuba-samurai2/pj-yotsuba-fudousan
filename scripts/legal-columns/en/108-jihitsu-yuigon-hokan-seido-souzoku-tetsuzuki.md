@@ -1,90 +1,87 @@
 ---
-title: "How does the self-written will deposit system change the procedures after inheritance begins?"
-excerpt: "When you use the system for depositing self-written wills at the Legal Affairs Bureau, the procedures after inheritance begins change significantly. The biggest differences are that probate becomes unnecessary and that when one heir confirms the will, all other heirs are notified. This article organises the flow after inheritance begins when the deposit system is used."
+title: "A deposited handwritten will after death: certificates and notices at the Legal Affairs Bureau"
+excerpt: "After the testator dies, use a deposit-fact certificate to check whether a will is held, or an information certificate to obtain its contents if eligible. Understand notice triggers, the exemption from family-court examination, and the separate documents needed for inheritance procedures."
 category: "Inheritance Procedures (From the Practice of an Administrative Scrivener)"
 ---
-**In short:** when you use the system for depositing self-written wills based on the Act on Deposit, etc. of Wills at Legal Affairs Bureaus (Act No. 73 of 2018), the procedures after inheritance begins change greatly. The biggest difference is that, for a deposited will, the probate under Article 1004, paragraph 1 of the Civil Code becomes unnecessary (Article 11, paragraph 1 of the Act), and that when one heir confirms the content, the Legal Affairs Bureau sends all other heirs a "notice of deposit of a related will." An heir first checks whether a will is deposited by a "will-deposit-fact certificate," then confirms the content by requesting a "will-information certificate." The information certificate can be used directly for procedures such as inheritance registration, without probate. This article is general information organising the flow after inheritance begins when the deposit system is used; it does not judge individual legal matters such as the validity of a will.
+**In short:** a handwritten will deposited at the Legal Affairs Bureau does not require family-court examination (ken'in). After death, use the certificate suited to checking its existence or obtaining its contents. Notices have triggers and conditions; delivery to every heir is not guaranteed.
 
-## What is the self-written will deposit system?
+**Information checked: 10 October 2026.** This article focuses on certificate requests and notices after the death of a testator who used the handwritten-will deposit system. For drafting, deposit applications and the 3,900-yen deposit fee, see the [existing deposit guide](/en/legal/column/jihitsu-yuigon-homukyoku-hokan). For choosing a form of will, see the [handwritten and notarised will comparison](/en/legal/column/jihitsu-kosei-yuigon).
 
-The self-written will deposit system lets you deposit a will you wrote yourself (a self-written will) at a Legal Affairs Bureau (will deposit office) anywhere in the country. It began on 10 July 2020. A self-written will kept at home risks loss, alteration or concealment, or not being found after death; depositing it at a Legal Affairs Bureau avoids these.
+## Which certificate checks existence, and which shows the contents?
 
-Article 4, paragraph 1 of the Act provides that "the testator may apply to the will deposit officer for the deposit of a will." The main features of the application are as follows.
+The governing statute is the Act on Deposit, etc. of Wills at Legal Affairs Bureaus (Act No. 73 of 2018). After the testator's death, choose the certificate for the information you need.
 
-| Item | Content |
-| --- | --- |
-| Who can apply | The testator in person only (an application by an agent is not allowed) |
-| Place of procedure | The will deposit office with jurisdiction over the testator's address, domicile of origin, or location of owned real estate |
-| Fee | 3,900 yen per application for the deposit (paid by revenue stamp) |
-| Reservation | A reservation is required for all procedures at the will deposit office |
-
-A formal check is available, but the Legal Affairs Bureau does not guarantee that the content of the will is valid. How to choose the method of drafting itself (the difference between a self-written will and a notarised will) is organised in [Self-written will or notarised will: which to choose?](https://luck428.com/legal/column/jihitsu-kosei-yuigon).
-
-## How do you confirm a deposited will after inheritance begins?
-
-After the testator dies, heirs, devisees and others use two certificates to confirm whether a will exists and its content.
-
-| Certificate | What it shows | Fee | Basis |
+| Certificate | What it shows | Listed fee | Basis |
 | --- | --- | --- | --- |
-| Will-deposit-fact certificate | Whether a will relating to you is deposited (existence) | 800 yen per copy | Act Art. 10 |
-| Will-information certificate | The content of the deposited will (including images) | 1,400 yen per copy | Act Art. 9 |
+| Deposit-fact certificate (遺言書保管事実証明書) | Whether a will is deposited; not a copy of its contents | 800 yen per copy | Article 10 |
+| Will-information certificate (遺言書情報証明書) | Contents, images and other recorded information | 1,400 yen per copy | Article 9 |
 
-Article 10, paragraph 1 of the Act provides that "any person" may request from the will deposit office a will-deposit-fact certificate. It is used when you first want to confirm only existence. When you also want to know the content, under Article 9, paragraph 1, a related heir (an heir, devisee, will executor, etc.) requests a will-information certificate. There is also a way to request inspection of the original or by monitor (inspection is 1,400 yen per time by monitor, 1,700 yen per time for the original). The will-information certificate can be used directly for procedures such as inheritance registration without going through family-court probate, which is its practical advantage (for the flow of inheritance registration, see [How do you proceed with inheritance registration?](https://luck428.com/legal/column/souzoku-touki-nagare)).
+If you do not know whether a will is deposited, use the fact certificate to check. If a deposit receipt or notice already establishes that it is held, an eligible person can request the information certificate to see the contents. Obtaining both certificates in that order is not mandatory.
 
-## Why is probate unnecessary, and how are heirs notified?
+## Who may request them, and what should be prepared?
 
-Normally, a self-written will kept at home must, under Article 1004, paragraph 1 of the Civil Code, be submitted to the family court for probate without delay after the keeper or the heir who finds it learns that inheritance has begun (a notarised will needs no probate, under paragraph 2 of the same article). Probate is a procedure by which the family court checks and preserves the shape and content of the will; it takes time from filing to the hearing.
+Article 10(1) permits “any person” to request the fact certificate, so applicants need not be heirs. Prescribed conditions and supporting records still apply, including information identifying the testator and evidence of death. This does not make the will's contents available to everyone.
 
-By contrast, for a will using the deposit system, Article 11, paragraph 1 of the Act provides that "the provision of Article 1004, paragraph 1 of the Civil Code does not apply to a will deposited at a will deposit office," so probate becomes unnecessary. The reasoning is that, because it is deposited at the Legal Affairs Bureau and its content is managed as image data, there is no need for the family court to check it again.
+The information certificate is available to related heirs and other persons specified in Article 9(1), including heirs, beneficiaries under the will and executors. The actual entitlement must be checked against the statute and the relevant records.
 
-Furthermore, the deposit system has two notices that inform other heirs.
-
-- Notice of deposit of a related will (Article 9, paragraph 5 of the Act): when one of the heirs, etc. receives a will-information certificate or inspects the will, the will deposit officer promptly notifies the other heirs, devisees, will executor and so on that the will is deposited. This prevents only some heirs from learning of the will and proceeding.
-- Death notification (designated-person notification): a person the testator has designated in advance by preference is notified when the Legal Affairs Bureau confirms the testator's death. From 2 October 2023, the number of people who can be designated was expanded to up to three.
-
-## What do you divide to which professionals when using the deposit system?
-
-The deposit system is only the entry point of the procedure; inheritance as a whole spans several specialist fields. The roles are as follows.
-
-- Guiding the will-deposit application and the request for certificates after inheritance begins, and preparing documents showing inheritance relationships → Yotsuba Administrative Scrivener Office (administrative scrivener)
-- Changing the ownership of real estate under the will (inheritance registration) → a judicial scrivener
-- Filing and paying inheritance tax → a tax accountant
-- Contested matters such as the validity of the will or legally reserved portions → a lawyer
-- Selling or using inherited real estate → Yotsuba Real Estate Co., Ltd. (licensed real estate broker), a separate business
-
-Yotsuba Administrative Scrivener Office handles document preparation and procedural guidance, and leaves concrete legal judgements, such as whether a will is valid, to the person and a lawyer. Inheritance registration is for a judicial scrivener, inheritance tax filing for a tax accountant, and contested matters for a lawyer, each contracted separately as an independent business. When selling inherited real estate, Yotsuba Real Estate Co., Ltd., a separate business, handles it under a separate contract as an independent business (see [Inheritance consultation](https://luck428.com/souzoku)). Each field is on the premise that you contract separately with each counter or qualified professional, and our office receives no referral fee. For the flow of engagement, see [Engagement Flow](https://luck428.com/legal/nagare); for fees, see [Fee Schedule](https://luck428.com/legal/ryokin); and for our inheritance services, see [Inheritance Procedure Support](https://luck428.com/legal/services/inheritance).
-
-## How do you decide which cases suit the deposit system?
-
-The deposit system suits cases where you want to prevent loss and alteration at a low cost and also save the trouble of probate. On the other hand, whether the formal requirements are met is the testator's own responsibility, and the deposit system does not guarantee that the content is legally valid. If you want a professional involved in the content and the execution of the will, a notarised will involving a notary is also an option (see [Drafting a notarised will: notary, witnesses and fees](https://luck428.com/legal/column/kosei-shosho-yuigon-koshonin-shonin-hiyo)).
-
-| Suitable cases | Cases needing consideration |
+| Information or records to prepare | Purpose |
 | --- | --- |
-| Want to prevent loss and alteration at a low cost | Unsure if the content is valid and want a professional to check the content too |
-| Want to save the trouble of probate | Hard to appear and reserve in person (application is by the testator only; no agent) |
-| Want to make sure heirs learn the will exists | Legally reserved portions or disputes among heirs are expected |
+| Testator's name, date of birth and, if known, deposit number | Identify the relevant will |
+| Family registers or certificates showing death and the relevant relationship | Establish death and entitlement to request information |
+| Applicant's identity and address records | Match the current official form and attachment list |
 
-Which is appropriate changes with the nature of the assets and the situation of the heirs. Judgements involving the validity of a will or legally reserved portions are the field of a lawyer, ownership changes of a judicial scrivener, and the tax amount of a tax accountant; they are not matters for our office to judge. For the overall approach to inheritance, see also [The whole picture of inheritance procedures and a checklist](https://luck428.com/legal/column/souzoku-tejun-checklist).
+Inspection of the original or an image on a monitor is another option. Listed fees are 1,400 yen per monitor inspection and 1,700 yen per original inspection. Check which procedure you need, the receiving office, postal options, reservations and attachments in the current official guidance. The table is not a complete attachment list applicable to every applicant.
+
+## Does exemption from examination mean the information certificate completes all procedures?
+
+Article 11(1) disapplies the family-court examination requirement in Civil Code Article 1004(1) to a deposited will. The information certificate serves in place of the original will for procedures such as inheritance registration. Family registers, registration documents and other attachments may still be needed; also check the requirements of the recipient, including banks.
+
+The exemption does not guarantee the will's validity, its effect on reserved shares, correct identification of assets or the intended transfer. Consult a lawyer if a dispute exists. See the [inheritance registration guide](/en/legal/column/souzoku-touki-nagare) and the [overall procedure after finding a will](/en/legal/column/souzoku-yuigon-hakken-tetsuzuki).
+
+## When are the two types of notice sent, and to whom?
+
+| Notice | Main trigger and recipients |
+| --- | --- |
+| Notice of deposit of a related will (関係遺言書保管通知) | When a related heir or other eligible person receives an information certificate or inspects the will, the deposit officer notifies other relevant persons of the deposit under Article 9(5) and related provisions |
+| Designated-person notice | If requested in advance by the testator, sent to designated persons when the Bureau confirms the death; up to three persons may be designated from 2 October 2023 |
+
+Checking existence with the fact certificate is different from receiving the information certificate or inspecting the will for notice-trigger purposes. There are qualifications, including the treatment of persons who already know of the deposit. Ask the Bureau which notices and recipients apply. Unknown whereabouts and other circumstances mean delivery to everyone cannot be promised.
+
+## How are documents, registration, tax and disputes handled separately?
+
+| Professional or business | Role |
+| --- | --- |
+| 四葉行政書士事務所 | Investigating and preparing inheritance-relationship documents; guidance on certificate requests |
+| Judicial scrivener | Inheritance registration |
+| Tax accountant | Inheritance-tax filing |
+| Lawyer | Disputes over validity or reserved shares and individual legal assessments |
+| 四葉不動産株式会社 | Sale or use of inherited real estate |
+
+四葉行政書士事務所, 四葉社会保険労務士事務所 and 四葉不動産株式会社 are separate, independent businesses. Each field is engaged under a separate contract with its responsible provider. Each provider bills and receives payment directly. Our office receives no referral fees. The Legal Affairs Bureau is the administrative office for certificates and related procedures, not a provider engaged under a professional-services contract.
+
+See [inheritance support](/en/legal/services/inheritance), the [engagement process](/en/legal/nagare) and [fees](/en/legal/ryokin). Property sales are handled separately through the [inherited-property consultation service](/en/souzoku).
 
 ## FAQ
 
-**Q. If I use the deposit system, is family-court probate really unnecessary after inheritance begins?**
-A. Yes. Article 11, paragraph 1 of the Act provides that the probate provision of Article 1004, paragraph 1 of the Civil Code does not apply to a will deposited at a will deposit office. Heirs can proceed to procedures such as inheritance registration by receiving a will-information certificate, without family-court probate. However, a self-written will kept at home that is not deposited still needs probate as before.
+**Q. Must I get a fact certificate before an information certificate?**
+A. No. Use the fact certificate if you do not know whether the will is deposited. If the deposit is already known and you need its contents, check your entitlement and request the information certificate.
 
-**Q. If one heir confirms the will, do the other heirs find out too?**
-A. Yes. Under Article 9, paragraph 5 of the Act, when one of the heirs, etc. receives a will-information certificate or inspects the will, the will deposit officer promptly notifies the other heirs, devisees, will executor and so on that the will is deposited (notice of deposit of a related will). Separately, there is also a mechanism (designated-person notification) that notifies a person designated by the testator in life at the time of death.
+**Q. Can anyone obtain the information certificate?**
+A. No. After death, it is requested by the related heirs and other persons specified in Article 9. Non-heirs may request the fact certificate, but it is not a copy of the contents and prescribed supporting records are still required.
 
-**Q. How much does it cost to confirm the content of a deposited will?**
-A. The will-deposit-fact certificate, which confirms only existence, is 800 yen per copy, and the will-information certificate, which certifies the content, is 1,400 yen per copy (inspection is 1,400 yen per time by monitor, 1,700 yen for the original). The deposit fee the testator pays in life is 3,900 yen per application. Because amounts can change, confirm the latest figures with your nearest will deposit office (Legal Affairs Bureau) or the official guidance of the Ministry of Justice before requesting.
+**Q. Will every heir definitely receive notice when one person checks the contents?**
+A. There is a related-will deposit notice triggered by issue of the information certificate or inspection. Recipient conditions and circumstances such as whereabouts apply, so delivery to everyone is not guaranteed. The designated-person notice is a separate mechanism.
 
-**Q. I cannot decide between a self-written will and a notarised will.**
-A. The deposit system prevents loss and alteration at a low cost and saves probate, but whether the content is valid is the testator's responsibility. If you want a professional to check the content too, a notarised will is also an option. Which is appropriate changes with the assets and the situation of the heirs, and judgements on validity are the field of a lawyer. Our office helps you organise this at a meeting, within the scope of document preparation and procedural guidance.
+**Q. Does the information certificate remove both examination and other-document requirements?**
+A. A deposited will is exempt from family-court examination. Family registers and other attachments for registration or other procedures may still be necessary. The certificate replaces the original will; it does not guarantee validity.
 
 ## Sources (Primary Information)
 
-- e-Gov Law Search, "Act on Deposit, etc. of Wills at Legal Affairs Bureaus" (Act No. 73 of 2018), Article 4, paragraph 1; Article 9, paragraphs 1 and 5; Article 10, paragraph 1; Article 11, paragraph 1 (accessed 2026-10-09)
-- e-Gov Law Search, "Civil Code" (Act No. 89 of 1896), Article 1004, paragraphs 1, 2 and 3 (probate of a will) (accessed 2026-10-09)
-- Ministry of Justice, "The self-written will deposit system" (overview, fees, notices, procedures after inheritance begins) (accessed 2026-10-09)
-- Ministry of Justice, "On notices concerning the will deposit system" (notice of deposit of a related will; death notification (designated-person notification); expansion of designees from 2 October 2023) (accessed 2026-10-09)
+- [e-Gov: will deposit statute](https://laws.e-gov.go.jp/law/430AC0000000073): Articles 9, 10 and 11(1).
+- [e-Gov: implementing ministerial ordinance](https://laws.e-gov.go.jp/law/502M60000010033): related-will deposit notices and other rules. [Civil Code](https://laws.e-gov.go.jp/law/129AC0000000089): Article 1004.
+- Ministry of Justice: [fees](https://www.moj.go.jp/MINJI/09.html), [notices](https://www.moj.go.jp/MINJI/10.html) and [system guidance](https://www.moj.go.jp/MINJI/minji03_00051.html).
+- [Ministry of Justice: 2026 Civil Code reforms](https://www.moj.go.jp/MINJI/minji07_00410.html): a reference for distinguishing the reforms from the current deposit system.
 
-This article is general information and does not guarantee the validity of any individual will, the appropriateness of its content, the outcome of the procedure, the required documents, or whether each certificate will be issued. Because fees and forms may be revised, always confirm the latest information with your nearest will deposit office (Legal Affairs Bureau) and the official guidance of the Ministry of Justice. Legal judgements involving the validity of a will or legally reserved portions are handled by a lawyer, the ownership change of real estate under a will (inheritance registration) by a judicial scrivener, and inheritance tax filing by a tax accountant, each contracted separately as an independent business. The sale or use of inherited real estate is handled by Yotsuba Real Estate Co., Ltd. (licensed real estate broker), a separate business, under a separate contract as an independent business. Our office receives no referral fee. Individual judgements are made by a qualified professional after a meeting. Written by [Joji Uramatsu](https://luck428.com/about/uramatsu), administrative scrivener and licensed real estate broker.
+Checked on 2026-10-10. The system, fees and notices were checked against official search-index text, but the full Ministry pages could not be retrieved. Verification of the full current e-Gov provisions and the latest amendment date remains incomplete. Confirm fees, forms and notice conditions with the Bureau before applying. The specific commencement dates of the will-related provisions of Act No. 45 of 2026 have also not been verified here; this article does not say a new form of will is already available.
+
+This is general information and does not guarantee entitlement, required attachments, delivery of notices, validity or procedural outcomes. Human qualified professionals and the responsible authority assess individual matters after checking the records. Written by [浦松 丈二](/en/about/uramatsu), administrative scrivener and licensed real-estate transaction specialist.

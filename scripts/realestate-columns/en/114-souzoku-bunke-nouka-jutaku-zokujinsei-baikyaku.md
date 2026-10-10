@@ -1,101 +1,81 @@
 ---
-title: "Can you sell an inherited branch-family house or farmhouse? Where person-specific buildings get stuck"
-excerpt: "In an urbanization-control area, a branch-family house or farmhouse is not a building 'anyone may live in.' Selling to a third party who does not meet the person-specific requirement amounts to a change of use and needs permission under Article 42 or 43 of the City Planning Act. A licensed real estate agent and administrative scrivener in Bunkyo, Tokyo sets out the wall this puts in front of selling."
+title: "Can inherited branch-family or farm housing be sold? Restrictions on who may use it"
+excerpt: "Inheriting ownership of a branch-family or farming household home differs from a third party being allowed to live there. Check original permissions, local criteria and actual farmland status. Compare sale, rental and demolition only after checking their regulatory implications."
 category: "Inheritance"
+faqHeading: Frequently asked questions
 ---
-**In short:** you can sell the ownership of an inherited branch-family house or farmhouse itself, but in an urbanization-control area it is not a building "anyone may live in." Selling to a third party who does not meet the person-specific requirement amounts to a change of use, and permission under Article 42 or 43 of the City Planning Act (release of the user restriction) is required. Whether permission is granted turns on the municipal development-review-board standards, so the practical wall is that buyers are limited and the price tends to fall. The preliminary sorting of whether a person-specific restriction exists and the prospect of selling is handled by our company (Yotsuba Real Estate Co., Ltd.) as information; the development permission and change-of-use permission application by Yotsuba Administrative Scrivener Office, the inheritance registration by a judicial scrivener, the capital-gains tax by a tax accountant, and disputes among co-owners by a lawyer. These are independent business entities, and you engage each directly.
+**Key points:** Inheriting ownership of a branch-family or farming household home differs from a third party being allowed to live there. Check original permissions, local criteria and actual farmland status. Compare sale, rental and demolition only after checking their regulatory implications.
 
-Inherit a house in an urbanization-control area and you wrestle with "can it be sold, or do I just have to keep it?" Branch-family houses and farmhouses in particular are built under a development or building permission tied to a condition about "the person," so that condition becomes the wall when you sell to a third party. This article, for heirs weighing sale against use of an inherited branch-family house or farmhouse, sets out the real estate points — releasing the person-specific restriction, whether a change-of-use permission is needed, the narrowing of buyers — from the law and public materials. The final legal judgment on whether a sale is possible rests with the authority and qualified professionals; we handle the arrangement of materials and information.
+This article concerns user restrictions on existing inherited homes. See [inherited land in an urbanisation control area](/en/column/chousei-kuiki-souzoku-tochi-baikyaku) for general land and development-permission issues.
 
-## What are branch-family houses and farmhouses, and why can't they be sold to just anyone?
+## Which records reveal person-specific restrictions?
 
-A branch-family house is a house permitted in an urbanization-control area for a member of a main-family household (such as a farming family) to build when they set up independently. A farmhouse is a house for someone engaged in farming to live in. Both were exceptionally permitted to be built in an urbanization-control area, which otherwise curbs urbanization, and "who may build" is the condition.
+Farm housing built without a development permission under an exemption and permitted branch-family housing can involve conditions tied to farmers, applicants or users. The registered owner's name alone does not establish third-party use.
 
-| Type | Basis of building (representative) | Condition (person-specific) |
-|---|---|---|
-| Farmhouse | City Planning Act Art. 29(1)(ii) (no development permission for agriculture/forestry/fishery buildings and the houses of those engaged in them) | Being someone engaged in farming, etc. |
-| Branch-family house | City Planning Act Art. 34 (siting standards in an urbanization-control area; often the ordinance areas of items (xi)/(xii) or the development-review-board standard of item (xiv)) | Being someone who meets requirements such as the relationship to the main family and household separation |
-
-**You can sell the ownership of the building, but a branch-family house or farmhouse is a building where "who may live there" is a condition.** If a third party who does not meet it lives there, the way the building is used departs from the premise of the original permission — a change of use. This "condition tied to the person" is called a person-specific restriction, and it is the first thing a sale catches on. For the overall picture of inheritance and sale, see [inheritance](https://luck428.com/souzoku).
-
-## What permission is needed to release the person-specific restriction and sell to a third party?
-
-To sell to a third party who does not meet the person-specific requirement and have them live there, a change-of-use permission is required. The basis differs depending on whether the land is inside or outside an area that received a development permission.
-
-| Situation | Basis | Content |
-|---|---|---|
-| Inside the development area that received a development permission | City Planning Act Art. 42 | After the completion notice, change to a use other than the planned building is, as a rule, prohibited; it can be done with the governor's permission |
-| Outside an area that received a development permission (within the control area) | City Planning Act Art. 43 | New construction, rebuilding or change of use of a building needs the governor's permission |
-
-Many municipalities call this "release of the user restriction" and judge whether it fits the development-review-board standards. The standards differ by municipality — some, for example, set requirements such as "used lawfully as a branch-family house for a certain number of years (20, etc.)" or "there is an unavoidable reason such as business failure, bankruptcy or auction." **Which article (42 or 43), and which standard to apply, are determined by the content of the permission at the time of building and the municipal standards.** As a basic division, acquisition by inheritance and the continuation of residence are often treated as not needing permission, while releasing the person-specific restriction to resell to a third party does need a change-of-use permission. Investigating the feasibility of permission and applying for it are the domain of an administrative scrivener; we handle the preliminary confirmation of the property's possible suitability.
-
-## How far do the range of buyers and the financing plan narrow?
-
-If there is no prospect of obtaining a change-of-use permission, buyers are limited to "someone who can also meet the person-specific requirement." For a branch-family house, for example, this is effectively narrowed to relatives in the same settlement or people who fit the municipal standards.
-
-- Because buyers are limited, it tends to take longer to sell
-- Because rebuilding and extension also need permission, buyers tend to lower the price looking at future freedom
-- If the change-of-use permission remains unobtained, buyers may have the collateral value seen as low in a mortgage review
-- If farmland remains on the site, Agricultural Land Act procedures overlap separately on that part
-
-**"The building stands, but few can buy it" — this bears on the price of a branch-family house or farmhouse.** Of the site, the part registered as residential land generally needs no Agricultural Land Act permission, but if a part registered as farmland remains (such as a garden plot), selling it after conversion needs permission under Article 5 of the Agricultural Land Act (a notification within an urbanization-promotion area). The financing plan and whether a mortgage is possible change with the buyer's attributes and the prospect of permission, so tax and loans are the domain of a tax accountant and the financial institution, and registration that of a judicial scrivener.
-
-## How should you sort out the procedures and referrals from inheritance to sale?
-
-Selling a branch-family house or farmhouse overlaps real estate, permission, registration, tax and (if it turns to conflict) dispute. Dividing the roles:
-
-| What to do | Who |
+| Record | What to establish |
 |---|---|
-| Preliminary check of person-specific status, zoning and the content of the building-time permission; valuation, brokerage and checking the sale contract | Licensed real estate agent (Yotsuba Real Estate Co., Ltd.) |
-| Release of the development permission's person-specific restriction, change-of-use permission application, dealings with the authority | Administrative scrivener (Yotsuba Administrative Scrivener Office) / the authority |
-| Inheritance registration and ownership-transfer registration | Judicial scrivener |
-| Capital-gains tax, the special provision adding acquisition cost, and other tax matters | Tax accountant |
-| Disputes among co-owners that cannot be agreed | Lawyer |
+| Original permission, conditions and plans | Intended use, applicant, restrictions and legal basis |
+| Exemption basis and existing-building records | Reasons for exempt farm housing and lawful building/use history |
+| Registration, maps, site condition and farmland ledger | Property extent, actual condition and conversion history |
+| Local development-review criteria | Changes of user/use, inheritance, rental and rebuilding |
 
-**These are independent business entities. You engage each directly.** We neither pay nor accept referral fees or introduction commissions. The property goes to a licensed real estate agent, the change-of-use permission application to an administrative scrivener and the authority, registration to a judicial scrivener, tax to a tax accountant, and disputes to a lawyer — each engaged by you directly. Inheritance registration as a premise of sale has been mandatory since April 2024; see also [how inheritance registration became mandatory and how to proceed with a sale](https://luck428.com/column/souzoku-toki-gimuka-baikyaku).
+We collect and organise property information and compare sale conditions. Administrative scriveners support permission-document analysis and applications; the competent authority confirms whether permission is required and possible. Lawyers handle rights disputes.
 
-## What options remain if it can't be sold?
+## Are inheritance, sale and residence treated identically?
 
-Even when a change-of-use permission is not in prospect and it is hard to sell to a third party, options remain.
+Ownership transfers and the acquirer's use or change of use are separate. Inheritance does not establish that anybody can reside there; a sale does not invariably require the same permission. Application of the City Planning Act (都市計画法), Articles 42 and 43 and related provisions, depends on original permission, exemption basis and local rules. The authority is not always the prefectural governor.
 
-- Look for a buyer who meets the person-specific requirement (relatives in the same settlement, etc.)
-- Demolish the building and sell the bare land to a buyer whose use fits what can be built in the control area
-- Lease it, within the range of the user-restriction release (confirming the municipal standards first)
-- Keep it maintained for now and wait for a revision of the municipal standards or a designation of surrounding ordinance areas
+Kinship or residence in the same settlement does not necessarily satisfy the relevant conditions. Check the buyer's or tenant's eligibility. Renting is not a way around use restrictions; confirm third-party use before contracting.
 
-**Even if "sell high to a third party right now" is hard, there are several exits: find a buyer by the person-specific requirement, sell as bare land, lease, or wait.** Which exit is realistic changes with the content of the building-time permission, the municipal development-review-board standards, and the land category of the site. The final judgment on feasibility is made by the authority; we help with comparing the exits and arranging the property information.
+## Does 20 years automatically remove restrictions?
 
-## Who should you consult?
+There is no nationwide 20-year release rule. Local criteria may involve the applicant's own occupation or use, the reason and timing of ownership changes, and other conditions, not just a building's age.
 
-The preliminary check of person-specific status, the content of the building-time permission and zoning, valuation and brokerage of the property, and checking the sale contract are handled by Yotsuba Real Estate Co., Ltd. (licensed real estate agent, Tokyo Governor (1) No. 113304). Release of the development permission's person-specific restriction, the change-of-use permission application and dealings with the authority are handled by Yotsuba Administrative Scrivener Office; inheritance and ownership-transfer registration by a judicial scrivener; capital-gains tax and the acquisition-cost add-on by a tax accountant; disputes among co-owners by a lawyer.
+For example, Mie Prefecture's published Proposal Criterion 28 links 20-year use or residence to the applicant, discusses constraints on resale purposes, and its supplementary provisions limit application to Kuwana City. Do not use this figure to establish sellability elsewhere or in general. Check the current criteria for the location and the original permission.
 
-**These are independent business entities. You engage each directly.** We neither pay nor accept referral fees or introduction commissions. Registration goes to a judicial scrivener, tax to a tax accountant, and disputes to a lawyer — each engaged by you directly. Consultation is free of charge.
+## Does a registered residential land category remove farmland checks?
+
+The registration category alone does not decide. Ask the agricultural committee about actual condition, the farmland ledger, past conversion permissions/notifications and completion. Check each parcel and intended act, including garden areas.
+
+| Proposed act | Agricultural Land Act (農地法) provisions to check |
+|---|---|
+| Rights transfer while remaining farmland | Article 3 and related provisions |
+| Conversion by the owner | Article 4 and related provisions |
+| Rights transfer involving conversion | Article 5 and related provisions |
+
+Separately check urbanisation-area notifications, agricultural-promotion-area controls and exceptions. Inheriting farmland and later selling or converting it are not the same procedure. Land and house investigators handle land-category and other descriptive registration; judicial scriveners handle ownership and other rights registration.
+
+## How should sale, rental and demolition options be compared?
+
+Compare a qualified buyer, a permitted change of use, rental with confirmed conditions, or retention. Value depends on eligibility, permission and works costs, and finance. An appraisal should not promise a future permission.
+
+Do not demolish first to investigate sale prospects later. Before considering a cleared-site sale, ask the authority about local treatment based on the existing building, permitted construction or rebuilding after demolition, and evidence needed. Clearing the site does not necessarily remove restrictions. Consult tax accountants on tax, banks on finance and architects on construction.
 
 ## Frequently asked questions
 
-**Q. Does merely inheriting it require any permission?**
-A. Acquisition by inheritance, and the heir continuing to live there, are treated in many municipalities as not needing a change-of-use permission. Permission becomes an issue when you sell to a third party who does not meet the person-specific requirement and they live there. Because the handling differs by municipality, confirm with the city-planning division of the municipality with jurisdiction over the land how inheritance and continued residence are treated and what documents are needed. Inheritance registration has been mandatory since April 2024.
+**Q. Can any third party buy and live in an inherited home?**
+A. Ownership transfer and use eligibility differ. Check the original conditions and local criteria for third-party residence.
 
-**Q. If I transfer the name of the building to the buyer, is that "sold"?**
-A. The ownership-transfer registration itself can be done, but that does not make it a building "anyone may live in." For a buyer who does not meet the person-specific requirement to live there, a separate change-of-use permission (release of the user restriction) under Article 42 or 43 of the City Planning Act is required. Handing it over with permission unobtained leaves the problem that the buyer cannot live there or rebuild. It is safer to confirm the prospect of permission first.
+**Q. Do person-specific restrictions disappear after 20 years?**
+A. Not nationwide. Do not apply examples involving location, applicant and occupation history on building age alone.
 
-**Q. Where do you apply for the change-of-use permission?**
-A. You apply to the prefectural governor (or the mayor, etc., delegated the work). The basis is Article 42 inside an area that received a development permission, and Article 43 outside it (within the control area). Feasibility is decided by applying the municipal development-review-board standards, which differ by municipality. Investigating the standards and preparing the application are undertaken by an administrative scrivener, and the final judgment on feasibility is made by the authority.
+**Q. Is a residential registration category enough to avoid farmland procedures?**
+A. No. Check actual condition, ledger and lawful conversion history, and consult the agricultural committee for the proposed sale or conversion.
 
-**Q. There is a field in the garden. Do I also need an Agricultural Land Act procedure when selling?**
-A. The part of the site registered as residential land generally needs no Agricultural Land Act permission, but if a part registered as farmland remains (such as a garden plot), selling it after conversion needs permission under Article 5 of the Agricultural Land Act (a notification to the agricultural committee within an urbanization-promotion area). Confirm the registered land category and the current state, and build in the conversion procedure if a farmland part exists. Confirm the detail with the agricultural committee.
+**Q. Can the building be demolished before checking permissions for sale?**
+A. Check existing-building treatment and post-demolition construction/use conditions first. Removal can change options and available evidence.
 
-## Sources (primary)
+## Primary sources
 
-- [e-Gov "City Planning Act"](https://laws.e-gov.go.jp/law/343AC0000000100) — Act No. 100 of 1968. Art. 29(1)(ii) (no development permission for agriculture/forestry/fishery buildings and the houses of those engaged in them), Art. 34 (siting standards for development permission in an urbanization-control area — the ordinance areas of items (xi)/(xii), the development-review-board standard of item (xiv)), Art. 42 (restriction on building/change of use other than the planned building on land that received a development permission), Art. 43 (restriction on building etc. within an area other than one that received a development permission). **Accessed 9 October 2026.**
-- [e-Gov "Agricultural Land Act"](https://laws.e-gov.go.jp/law/327AC0000000229) — Act No. 229 of 1952. Art. 3 (permission for transfer of rights over farmland etc.), Art. 4 (permission for conversion of farmland), Art. 5 (permission for transfer of rights for conversion purposes; a notification to the agricultural committee within an urbanization-promotion area). **Accessed 9 October 2026.**
-- Ministry of Land, Infrastructure, Transport and Tourism, "Guidelines for operating the development permission system" (the thinking on siting standards, person-specific status and the handling of change of use in an urbanization-control area). **Accessed 9 October 2026.**
-- Each prefecture's/city's development-review-board standards and proposal standards (the person-specific status of branch-family houses and farmhouses, release of the user restriction, requirements such as a certain number of years of lawful use and unavoidable reasons; confirm the standards of the municipality with jurisdiction over the land, noting the date of reference; public examples in Yokohama, Kawasaki, Miyagi, Kobe, Fukuoka, etc.). **Accessed 9 October 2026.**
+- [City Planning Act, Articles 29, 34, 42 and 43 / 都市計画法 第29条・第34条・第42条・第43条](https://laws.e-gov.go.jp/law/343AC0000000100)
+- [Mie Prefecture: Proposal Criterion 28 (published supplementary provisions limited to Kuwana) / 三重県 提案基準28（掲載附則は桑名市限定）](https://www.pref.mie.lg.jp/JUTAKU/HP/51103031240.htm)
+- [Agricultural Land Act, Articles 2–5 / 農地法 第2条・第3条・第4条・第5条](https://laws.e-gov.go.jp/law/327AC0000000229)
+- [Fukagawa City: Agricultural Land Act Article 5 procedures / 深川市 農地法第5条の手続](https://www.city.fukagawa.lg.jp/cms/section/nougyo/dbj8cg0000000bit.html)
 
-Whether a person-specific restriction exists, whether and when a change-of-use permission is needed and feasible, the required documents, and whether an Agricultural Land Act procedure is needed vary with the content of the building-time permission, the municipal development-review-board standards and the land category of the site. This article does not judge, for any particular property, the feasibility of a sale or of permission. The final judgment on feasibility is made by the authority and qualified professionals. Release of the development permission's person-specific restriction and the change-of-use permission application go to an administrative scrivener (Yotsuba Administrative Scrivener Office), inheritance registration to a judicial scrivener, capital-gains tax to a tax accountant, and disputes among co-owners to a lawyer — consult each directly.
+Legal/source review reference date and content update: October 10, 2026. Matters checked in retrieved official materials are distinguished from inaccessible sources and property-specific assessments. The latest amendment numbers, complete commencement history and all current local rules and practices have not been verified. Unconfirmed amendment numbers are omitted; a qualified human professional must check the original materials before an application or contract.
 
-This article is general information. It does not judge or guarantee the feasibility of a sale or the legality of any particular property. Investigation and brokerage of the property, and the sale contract, are undertaken by Yotsuba Real Estate Co., Ltd. (licensed real estate agent); preparation of the change-of-use permission application and other documents, by Yotsuba Administrative Scrivener Office — independent business entities, engaged separately and directly. We neither pay nor accept referral fees.
+This article provides general information. Individual legal, permission and tax conclusions require the competent authorities and qualified professionals. 四葉不動産株式会社 (Yotsuba Real Estate Co., Ltd.), 四葉行政書士事務所 and 四葉社会保険労務士事務所, and other specialists are independent entities, engaged separately for their respective services. Each uses a direct contract, direct invoice and direct payment; no referral or lead-transfer fees are exchanged. Consulting an authority is separate from engaging a private professional. The initial property consultation is free; confirm each professional service's scope and fees with that provider. See [inheritance property enquiries](/en/souzoku).
 
-## About the author
+## Author
 
-Joji Uramatsu — licensed real estate transaction specialist (Tokyo Governor registration No. 293544) and administrative scrivener (registration No. 25087022). Representative Director, Yotsuba Real Estate Co., Ltd. (licensed real estate agent, Tokyo Governor (1) No. 113304); principal, Yotsuba Administrative Scrivener Office. Kohinata, Bunkyo, Tokyo, about five minutes' walk from Myogadani station. Property and licensing (sorting development permission, change of use and the Agricultural Land Act) are put on the same table. Full profile: [author page](https://luck428.com/about/uramatsu).
+Joji Uramatsu (浦松丈二), real estate transaction specialist and administrative scrivener; representative director of 四葉不動産株式会社 and representative of 四葉行政書士事務所. Property investigation and brokerage are distinguished from design, registration, tax and employment services. [Author profile](/en/about/uramatsu).

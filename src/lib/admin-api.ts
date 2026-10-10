@@ -98,9 +98,11 @@ export async function createColumn(data: ColumnInput): Promise<string> {
 export async function updateColumn(
   id: string,
   data: Partial<FirestoreColumn>,
+  expectedUpdatedAt?: string,
 ): Promise<void> {
   await apiFetch(`/api/admin/columns/${encodeURIComponent(id)}`, {
     method: "PATCH",
+    ...(expectedUpdatedAt ? { headers: { "X-Column-Updated-At": expectedUpdatedAt } } : {}),
     body: JSON.stringify(data),
   });
 }

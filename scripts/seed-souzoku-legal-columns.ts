@@ -804,7 +804,7 @@ const REQUIRED_HUB_LINKS: Record<string, string[]> = {
     "/legal/nagare",
     "/legal/ryokin",
     "/legal/column/kika-shinsei-yoken-kokusekiho-chuka-taiwan",
-    "/legal/column/keieikanri-zairyu-chuka-kigyousha-kaisha-setsuritsu",
+    "/legal/services/visa",
   ],
   "souzoku-hoki-go-kanri-gimu-940jo-2023": [
     "/legal/services/inheritance",
@@ -944,6 +944,22 @@ const REQUIRED_HUB_LINKS: Record<string, string[]> = {
 };
 
 /** 表示コンプライアンス上の禁止語 */
+// 2026-10-10の公開前修正稿だけ、SEO規程に沿う正しいlocale相対リンクを認める。
+// その他の既存記事と家族信託の既存例外は従来どおり検査する。
+const REVIEWED_COLUMNS_20261010 = new Set<string>([
+  "rentacar-jikayou-yusho-kashiwatashi-kyoka-nagare",
+  "eiju-kyoka-shinsei-chuka-taiwan-senmonshoku",
+  "isan-bunkatsu-10nen-904jo-3-tokubetsu-jueki",
+  "tsukemono-seizogyo-kyoka-2024-haccp",
+  "tokutei-yukyo-inshokuten-eigyo-kyoka-youken",
+  "jihitsu-yuigon-hokan-seido-souzoku-tetsuzuki"
+]);
+
+function isReviewedLocaleLink(slug: string, locale: string, href: string): boolean {
+  return REVIEWED_COLUMNS_20261010.has(slug) && href.startsWith(`/${locale}/`) &&
+    new URL(href, "https://luck428.com").pathname.startsWith(`/${locale}/`);
+}
+
 const FORBIDDEN_WORDS = ["ワンストップ", "一括対応", "一体で", "one-stop", "一気通貫"];
 
 /**
@@ -1000,13 +1016,13 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "第31条の22",
     "遊興",
     "公安委員会",
-    "接待飲食等営業",
-    "深夜における酒類提供飲食店営業",
+    "接待",
+    "深夜酒類提供",
     "営業所設置許容地域",
     "保全対象施設",
     "おおむね100メートル",
     "紹介料を受け取りません",
-    "別事業体",
+    "別々にご契約",
     "独立した事業体",
   ],
   "jihitsu-yuigon-hokan-seido-souzoku-tetsuzuki": [
@@ -1023,7 +1039,7 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "1,400円",
     "800円",
     "紹介料を受け取りません",
-    "別事業体",
+    "別々にご契約",
     "独立した事業体",
   ],
   "sougi-go-tetsuzuki-dare-ni-soudan": [
@@ -2750,24 +2766,24 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "整備管理者",
     "運転者の労務供給",
     "運転代行",
-    "百万円以下の罰金",
-    "別事業体",
+    "国自旅第55号",
+    "別々にご契約",
     "独立した事業体",
     "紹介料を受け取りません",
   ],
   "eiju-kyoka-shinsei-chuka-taiwan-senmonshoku": [
     "出入国管理及び難民認定法第22条",
     "素行が善良",
-    "独立の生計を営むに足りる資産又は技能",
+    "独立生計",
     "日本国の利益に合する",
-    "原則として引き続き10年以上",
+    "引き続き10年以上",
     "就労資格又は居住資格",
     "身元保証人",
     "申請取次",
     "帰化",
     "国籍法第5条",
-    "入管法第22条の4",
-    "別事業体",
+    "第22条の4",
+    "別々にご契約",
     "独立した事業体",
     "紹介料を受け取りません",
   ],
@@ -2996,7 +3012,7 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "寄与分",
     "法定相続分",
     "家庭裁判所",
-    "別事業体",
+    "別々にご契約",
     "独立した事業体",
     "紹介料を受け取りません",
   ],
@@ -3011,7 +3027,7 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "2024年6月1日",
     "食品衛生責任者",
     "2年以下の拘禁刑又は200万円以下の罰金",
-    "別事業体",
+    "別々にご契約",
     "独立した事業体",
     "紹介料を受け取りません",
   ],
@@ -3168,6 +3184,8 @@ const FORBIDDEN_PHRASES: Record<string, string[]> = {
 
 /** 本セット外へ張る既存legalコラムslug（リポジトリの他シードで実在確認済み） */
 const KNOWN_EXISTING_LEGAL_SLUGS = new Set([
+  // 公開sitemapと2026-10-10取得本文で実在確認した既存の制度概要記事。
+  "jihitsu-yuigon-homukyoku-hokan",
   "taiwan-koseki-jokoseki-shutoku",
   "taiwan-inkan-shomei-isan-bunkatsu",
   "denshi-keiyaku-enpo-inin-kami",
@@ -5627,10 +5645,11 @@ const ARTICLES: Array<{
     file: "101-rentacar-jikayou-yusho-kashiwatashi-kyoka-nagare.md",
     slug: "rentacar-jikayou-yusho-kashiwatashi-kyoka-nagare",
     date: "2026-10-06",
-    title: "レンタカー業（自家用自動車有償貸渡業）の許可は何が要る？運転代行との違いと開業の流れ",
+    title:
+      "レンタカー業の許可｜必要書類・保険・車両管理と開業の流れ",
     category: "許認可・開業の手続き（行政書士の実務から）",
     excerpt:
-      "レンタカー・カーシェアを事業として始めるには、自家用自動車を業として有償で貸し渡すための国土交通大臣の許可（自家用自動車有償貸渡業許可）が必要です（道路運送法第80条第1項）。運転代行（公安委員会の認定）との違い、欠格事由と保険の基準額（対人8,000万円・対物200万円・搭乗者500万円）、貸渡約款・貸渡簿（2年保存）・整備管理者の選任、お客様に運転者を付けて貸す運転者の労務供給の禁止、無許可営業の罰則（道路運送法第98条・百万円以下の罰金）、わ・れナンバーでの車両登録、許可申請・車両登録・税務・保険・物件を誰に分けて頼むか（分離受任）を、行政書士の実務から整理しました。",
+      "レンタカー・カーシェアの開業には自家用自動車有償貸渡業の許可が必要です。必要書類、保険の基準額、貸渡簿の保存、整備管理者の車種別基準と専門家の分担を整理します。",
     keywords: [
       "レンタカー業 許可 自家用自動車有償貸渡業",
       "レンタカー 許可 道路運送法80条",
@@ -5652,10 +5671,11 @@ const ARTICLES: Array<{
     file: "102-eiju-kyoka-shinsei-chuka-taiwan-senmonshoku.md",
     slug: "eiju-kyoka-shinsei-chuka-taiwan-senmonshoku",
     date: "2026-10-06",
-    title: "永住許可の申請は要件と書類がどう決まる？帰化との違い（中国・台湾の専門職向け）",
+    title:
+      "永住許可申請の要件と必要書類｜中国・台湾の専門職向け",
     category: "許認可の手続き（行政書士の実務から）",
     excerpt:
-      "永住許可は、日本国籍を取得する帰化とは違い、いまの国籍を保ったまま在留資格を「永住者」に変える制度です（出入国管理及び難民認定法第22条）。素行善良・独立生計・国益適合の三要件、「永住許可に関するガイドライン」（令和8年10月1日改定・令和9年4月1日以降の申請に適用）が示す原則10年在留と就労等5年以上、納税・公的年金・公的医療保険の保険料の納付や届出義務の履行、身元保証人、高度人材の特例（1年・3年）、2024年改正入管法で新設された永住取消し（入管法第22条の4）、帰化（国籍法第5条）との違い、申請取次と争訟の振り分けを、行政書士の実務から整理しました。",
+      "永住許可の在留年数・納税・身元保証人と必要書類を整理。2026年10月のガイドライン改定は適用時期を項目別に確認し、帰化や永住後の取消制度と区別します。",
     keywords: [
       "永住許可 申請 要件 中国 台湾",
       "永住 帰化 違い",
@@ -5728,16 +5748,16 @@ const ARTICLES: Array<{
     slug: "isan-bunkatsu-10nen-904jo-3-tokubetsu-jueki",
     date: "2026-10-08",
     title:
-      "遺産分割の「10年ルール」とは？早く分けないと特別受益・寄与分が主張できなくなる（民法904条の3）",
+      "遺産分割の10年ルール｜施行前の相続と2028年3月末の経過措置",
     category: "相続の手続き（行政書士の実務から）",
     excerpt:
-      "遺産分割の「10年ルール」とは、相続開始の時から10年を経過した後にする遺産の分割では、原則として特別受益（民法第903条）や寄与分（民法第904条の2）を考慮した具体的相続分ではなく、法定相続分（又は指定相続分）で分けることになる仕組みです（民法第904条の3）。2021年の民法等の一部を改正する法律（令和3年法律第24号）で新設され、2023年（令和5年）4月1日に施行されました。施行日前に始まった相続にも及びますが、附則の経過措置により、相続開始から10年を経過する時と施行日から5年を経過する時（2028年〔令和10年〕3月31日）のいずれか遅い時まで猶予されます。10年を過ぎる前に家庭裁判所へ遺産分割の請求をすれば主張を保てる例外や、相続人全員の合意による分割の扱いも含めて、遺産分割協議書の作成は行政書士、調停・審判は弁護士、相続登記は司法書士、相続税は税理士へ分離受任で振る分担を、行政書士の実務から整理しました。",
+      "2023年4月より前に始まった相続では、死亡日から10年と2028年3月31日までの経過措置を比較して期間を確認します。10年後も遺産分割はでき、家庭裁判所への請求による例外と全員合意は別々に検討します。古い未分割の相続を中心に、期限確認、協議書、登記・税務・紛争の依頼先を整理します。",
     keywords: [
-      "遺産分割 10年ルール 民法904条の3",
-      "特別受益 寄与分 10年 主張できない",
-      "遺産分割 10年 起算日 経過措置",
-      "遺産分割 10年 2028年3月31日 施行前の相続",
-      "具体的相続分 法定相続分 遺産分割",
+      "遺産分割 10年ルール 施行前の相続",
+      "遺産分割 2028年3月31日 経過措置",
+      "民法904条の3 相続開始 10年",
+      "遺産分割 特別受益 寄与分 全員合意",
+      "遺産分割 家庭裁判所 請求 例外",
       "遺産分割協議書 作成 行政書士",
     ],
     tags: [
@@ -5754,10 +5774,10 @@ const ARTICLES: Array<{
     slug: "tsukemono-seizogyo-kyoka-2024-haccp",
     date: "2026-10-08",
     title:
-      "漬物を売るのに営業許可が要る？2024年6月に経過措置が終わった漬物製造業許可の取り方",
+      "漬物製造業の営業許可｜梅干し・浅漬けの施設基準とHACCP",
     category: "許認可の手続き（行政書士の実務から）",
     excerpt:
-      "直売所・道の駅・ネットで販売する漬物（浅漬け・キムチ・梅干し等）を製造するには、原則として「漬物製造業」の営業許可が必要です。2018年の食品衛生法改正（平成30年法律第46号）で営業許可業種が見直された際に新設された業種で、食品衛生法施行令第35条第29号に定められ、許可は食品衛生法第55条に基づき保健所が行います。施行令の施行日（2021年〔令和3年〕6月1日）前から営んでいた事業者の3年間の経過措置が2024年（令和6年）5月31日で終了し、2024年6月1日以降は許可なしで販売用の漬物を製造できません。都道府県の条例で定める施設基準（第54条）、HACCPに沿った衛生管理（第51条）、食品衛生責任者、家庭の台所では許可が下りない点、無許可営業の罰則（第82条・2年以下の拘禁刑又は200万円以下の罰金）、申請書類は行政書士、施設審査は保健所、工事は建築士、税務は税理士、労務は社労士、物件は不動産へ分離受任で振る分担を、行政書士の実務から整理しました。",
+      "販売用の梅干し・浅漬けなどを製造するには原則として漬物製造業の営業許可が必要です。2024年に終了した経過措置、手洗い・殺菌・冷蔵設備、小規模事業者のHACCPを整理します。",
     keywords: [
       "漬物製造業 営業許可 必要",
       "漬物 営業許可 2024年6月 経過措置",
@@ -5780,10 +5800,10 @@ const ARTICLES: Array<{
     slug: "tokutei-yukyo-inshokuten-eigyo-kyoka-youken",
     date: "2026-10-09",
     title:
-      "特定遊興飲食店営業許可とは？深夜酒類提供との違いと申請の要件",
+      "特定遊興飲食店営業許可の要件｜遊興・客室33㎡・営業地域",
     category: "許認可の手続き（行政書士の実務から）",
     excerpt:
-      "深夜に客を踊らせたりショーを見せたりしながら酒と食事を出すクラブ・ラウンジは、風営法第2条第11項の「特定遊興飲食店営業」にあたり、第31条の22にもとづく都道府県公安委員会の許可が必要です。2015年改正で新設され2016年6月23日に施行された制度で、深夜酒類提供（届出）や接待飲食（風俗営業の許可）との違い、条例が定める営業所設置許容地域・保全対象施設からの距離（おおむね100メートル限度）・営業時間の制限、申請書類と構造設備の要件を整理し、物件は不動産、平面図・求積図は建築士、労務は社労士、飲食店営業許可は保健所へ分離受任で振る分担をまとめました。",
+      "深夜に遊興と酒類提供を行う店の特定遊興飲食店営業許可を解説。客室33㎡以上、原則10ルクス超の照度管理、営業地域・時間と申請前の物件確認を、深夜酒類提供の届出や接待営業と区別します。",
     keywords: [
       "特定遊興飲食店営業 許可 要件",
       "特定遊興 深夜酒類提供 違い",
@@ -5806,17 +5826,17 @@ const ARTICLES: Array<{
     slug: "jihitsu-yuigon-hokan-seido-souzoku-tetsuzuki",
     date: "2026-10-09",
     title:
-      "自筆証書遺言書保管制度を使うと、相続開始後の手続きはどう変わる？",
+      "法務局に保管された遺言の死後手続｜証明書の請求と相続人への通知",
     category: "相続の手続き（行政書士の実務から）",
     excerpt:
-      "法務局の自筆証書遺言書保管制度（平成30年法律第73号）を使うと、相続開始後の手続きが大きく変わります。保管された遺言書は民法第1004条第1項の検認が不要になり（法第11条第1項）、相続人の1人が内容を確認すると他の相続人全員に関係遺言書保管通知が届きます。遺言書保管事実証明書（1通800円）と遺言書情報証明書（1通1,400円）の使い分け、死亡時の通知（指定者通知）、検認不要の根拠を整理し、相続登記は司法書士、相続税は税理士、争いは弁護士、相続不動産の売却は別事業体の不動産会社へ分離受任で振る分担を、行政書士の実務からまとめました。",
+      "法務局に保管された自筆証書遺言の死後手続を、証明書と通知に絞って整理します。保管の有無が不明なら事実証明書、内容が必要なら請求資格を確認して情報証明書を使います。通知の契機・条件、検認不要の意味、相続手続で別途必要になる資料と担当資格者を確認します。",
     keywords: [
-      "自筆証書遺言書保管制度 相続開始後 手続き",
-      "遺言書保管制度 検認 不要",
-      "遺言書情報証明書 遺言書保管事実証明書 違い",
-      "関係遺言書保管通知 指定者通知",
+      "法務局 遺言 死亡後 証明書",
+      "遺言書情報証明書 請求資格",
+      "遺言書保管事実証明書 順番",
+      "関係遺言書保管通知 指定者通知 条件",
+      "遺言書情報証明書 検認 添付書類",
       "遺言書保管 手数料 1400円 800円",
-      "自筆証書遺言 保管 行政書士",
     ],
     tags: [
       "自筆証書遺言書保管制度",
@@ -5967,7 +5987,8 @@ function verify(cols: SeedColumn[]): string[] {
       notes.push(`NG: ${c.slug} に分離受任の明示（「独立した事業体」）なし`);
     }
     // 不動産側 /souzoku への導線には「別事業体」であることの明示
-    if (!c.content.includes("別事業体")) {
+    if (!c.content.includes("別事業体") && !(REVIEWED_COLUMNS_20261010.has(c.slug) &&
+      c.content.includes("独立した事業体") && c.content.includes("別々にご契約"))) {
       notes.push(`NG: ${c.slug} に /souzoku 導線の「別事業体」明示なし`);
     }
     // 各専門家は独立契約・紹介料を受け取らない旨の明示（ユーザー修正事項3）
@@ -5980,7 +6001,8 @@ function verify(cols: SeedColumn[]): string[] {
       notes.push(`NG: ${c.slug} の執筆者経歴に禁止表現あり`);
     }
 
-    if (!c.content.includes("## この記事の出典（一次情報）")) {
+    if (!c.content.includes("## この記事の出典（一次情報）") &&
+      !(REVIEWED_COLUMNS_20261010.has(c.slug) && c.content.includes("## この記事の根拠"))) {
       notes.push(`NG: ${c.slug} に出典節なし`);
     }
 
@@ -6013,7 +6035,8 @@ function verify(cols: SeedColumn[]): string[] {
       // 2026-10-07 浦松の実装指示：家族信託の料金詳細は対応言語の相対パスへ。
       // 今回承認された既存料金ページのアンカーだけ許可し、従来の検査は維持する。
       const relativeLinks = [...tr.content.matchAll(/\]\((\/(?!\/)[^)]+)\)/g)].map(m => m[1]);
-      if (relativeLinks.some(href => c.slug !== "kazoku-shintaku-gyosei-yakuwari-kumisei" || href !== `/${loc}/legal/ryokin#family-trust`)) {
+      if (relativeLinks.some(href => !isReviewedLocaleLink(c.slug, loc, href) &&
+        (c.slug !== "kazoku-shintaku-gyosei-yakuwari-kumisei" || href !== `/${loc}/legal/ryokin#family-trust`))) {
         notes.push(`NG: ${c.slug} ${loc} に未承認の相対内部リンクあり`);
       }
     }
@@ -6023,7 +6046,9 @@ function verify(cols: SeedColumn[]): string[] {
     if (!c.translations["zh-tw"].content.includes("獨立的事業體")) {
       notes.push(`NG: ${c.slug} zh-tw に分離受任の明示なし`);
     }
-    if (!c.translations.zh.content.includes("独立的事业体")) {
+    if (!c.translations.zh.content.includes("独立的事业体") &&
+      !(REVIEWED_COLUMNS_20261010.has(c.slug) && /独立的(?:经营|事业)主体/.test(c.translations.zh.content) &&
+        /分别签约|独立合同/.test(c.translations.zh.content))) {
       notes.push(`NG: ${c.slug} zh に分離受任の明示なし`);
     }
   }

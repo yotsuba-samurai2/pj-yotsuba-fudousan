@@ -37,6 +37,9 @@ export type AutopublishItem = {
   path: string;
   /** DBにある場合の id（保留中＝下書きの記事だけが持つ） */
   id?: string;
+  /** Quality hold without writing a draft to DB. Explicit per-article publishing is separate. */
+  qualityHoldReasons?: string[];
+  skipReason?: string;
 };
 
 /** 管理画面の一覧 */
@@ -63,6 +66,8 @@ export type AutopublishRunResult = {
   targets: AutopublishItem[];
   /** 実際に公開した記事（dryRun では空） */
   published: AutopublishItem[];
+  /** Registered by a concurrent operation; never republished or notified again. */
+  skipped?: AutopublishItem[];
   /** 保留中のため公開しなかった記事 */
   held: AutopublishItem[];
   scheduled: AutopublishItem[];

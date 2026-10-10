@@ -125,6 +125,11 @@ export default function ColumnsAutopublishPage() {
           {businessLabels[item.business]}・{item.date}
         </span>
         <span className="break-words">{item.title}</span>
+        {item.qualityHoldReasons?.length ? (
+          <span className="mt-1 block text-xs text-amber-700">
+            自動公開は確認待ち：{item.qualityHoldReasons.join("／")}
+          </span>
+        ) : null}
       </span>
       <span className="flex shrink-0 gap-2">{actions}</span>
     </li>
@@ -136,7 +141,7 @@ export default function ColumnsAutopublishPage() {
     <div className="p-6">
       <h1 className="mb-1 text-lg font-bold">コラムの自動公開（毎日{AUTOPUBLISH_HOUR_JST}時台）</h1>
       <p className="mb-4 max-w-3xl text-sm text-text-muted">
-        まだ公開していない記事は、毎日{AUTOPUBLISH_HOUR_JST}時台に自動で公開されます。
+        レビューと4言語の確認が通った記事は、毎日{AUTOPUBLISH_HOUR_JST}時台に自動で公開されます。
         朝7時のドキュメントを読んで、止めたい記事があれば「保留」を押してください。
         保留した記事は下書きとして保存され、自動では公開されません。
       </p>
@@ -172,8 +177,8 @@ export default function ColumnsAutopublishPage() {
             </button>
           </div>
           <p className="mb-3 text-xs text-text-muted">
-            何もしなければ、今日の{AUTOPUBLISH_HOUR_JST}時台に公開されます（{AUTOPUBLISH_HOUR_JST}
-            時を過ぎていれば、翌日の{AUTOPUBLISH_HOUR_JST}時台）。
+            確認済みの記事を今日の{AUTOPUBLISH_HOUR_JST}時台に公開します（{AUTOPUBLISH_HOUR_JST}
+            時を過ぎていれば、翌日の{AUTOPUBLISH_HOUR_JST}時台）。確認待ちの理由がある記事は自動公開しません。
           </p>
           {pending.length === 0 ? (
             <p className="text-sm text-text-muted">{loading ? "読み込み中…" : "公開待ちの記事はありません。"}</p>

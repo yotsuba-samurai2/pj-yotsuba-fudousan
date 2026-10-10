@@ -62,6 +62,7 @@ type Translation = {
   excerpt: string;
   content: string;
   category?: string;
+  faq?: Faq[];
 };
 
 type SeedColumn = {
@@ -85,6 +86,23 @@ const AUTHOR = {
   name: "浦松 丈二",
   title: "代表取締役・宅地建物取引士（四葉不動産株式会社）",
 } as const;
+
+// 2026-10-10公開前修正稿。対象外記事の従来検査・生成内容は維持する。
+// SEO規程のlocale相対リンクと、翻訳本文に対応するFAQ JSON-LDを同期する。
+const REVIEWED_COLUMNS_20261010 = new Set<string>([
+  "jinko-toseki-clinic-bukken-youken-kyusuihaisui",
+  "chugokugo-buyer-kanri-kiyaku-shuzen-keikaku-check",
+  "ninka-hoikusho-20nin-bukken-youto-engei",
+  "keieikanri-zairyu-jimusho-bukken-youken-chugokugo",
+  "ginou-tokutei-ginou-ryo-shukusha-bukken-menseki-shobo",
+  "karaoke-box-tenpo-bukken-youto-shoubou-soon",
+  "souzoku-bunke-nouka-jutaku-zokujinsei-baikyaku"
+]);
+
+function isReviewedLocaleLink(slug: string, locale: string, href: string): boolean {
+  return REVIEWED_COLUMNS_20261010.has(slug) && href.startsWith(`/${locale}/`) &&
+    new URL(href, "https://luck428.com").pathname.startsWith(`/${locale}/`);
+}
 
 const FORBIDDEN_WORDS = ["ワンストップ", "一括対応", "一体で", "一気通貫", "one-stop", "一站式"];
 
@@ -2163,7 +2181,7 @@ const ARTICLES: ArticleSpec[] = [
     publishedAt: "2026-10-06",
     category: "投資・事業用不動産",
     excerpt:
-      "人工透析クリニックの物件は、内科クリニックと同じ感覚では決められません。用途地域の扱いは同じ『診療所』で変わりませんが、物件で効くのは医療法ではなく建物のインフラ――大量の給排水とRO（逆浸透）水処理装置、透析装置とRO装置を同時に動かす電源容量と非常電源、装置・タンク・ベッドを並べる床荷重です。具体の数値は機器構成と建物で変わるため【未検証】とし、建築士・設備設計者の試算を前提にします。東京都文京区の宅地建物取引士兼行政書士が、医療法・建築基準法・下水道法の条文から契約前の確認手順を整理します。",
+      "透析クリニックでは、医療法上の施設基準に加え、給排水・RO装置・電源・床荷重を契約前に確認します。入院病床の有無と地域規制も分けて調べ、必要容量は機器仕様と建物に基づき設計者が算定します。",
     keywords: [
       "人工透析 クリニック 物件",
       "透析クリニック RO水処理装置 給排水",
@@ -2183,7 +2201,7 @@ const ARTICLES: ArticleSpec[] = [
     publishedAt: "2026-10-06",
     category: "投資・事業用不動産",
     excerpt:
-      "中古区分マンションでは、重要事項説明の一般チェックの前に管理組合の運営リスクを読みます。長期修繕計画と修繕積立金の値上げ・一時金、管理規約の民泊禁止・ペット・用途制限、滞納（区分所有法第8条で買主＝特定承継人に承継）、管理会社変更・大規模修繕の履歴の4点です。これらは重要事項説明でも説明事項（宅建業法第35条第1項第6号・施行規則第16条の2）ですが、プロの買主は先に資料で読むのが安全。東京都文京区の宅地建物取引士兼行政書士が、区分所有法・宅建業法と国交省の資料から整理します。",
+      "中古マンションは、管理規約・修繕計画・会計と滞納を契約前に読みます。規約変更は2026年4月施行の改正後の決議要件も確認し、海外居住者は国内管理人と税の納税管理人を分けて検討します。",
     keywords: [
       "中古マンション 管理規約 修繕計画 確認",
       "長期修繕計画 修繕積立金 値上げ 一時金",
@@ -2243,7 +2261,7 @@ const ARTICLES: ArticleSpec[] = [
     publishedAt: "2026-10-08",
     category: "投資・事業用不動産",
     excerpt:
-      "定員20名以上の認可保育所の物件で小規模保育と決定的に変わるのは、屋外遊戯場（園庭。付近の公園等で代替可）、乳児室・ほふく室を含む居室面積、2階以上に保育室を置くときの2方向避難と耐火の3点です。保育所は用途地域では詰まりません（建築基準法別表第二で第一種低層住居専用地域でも建てられ、工業専用地域でも制限対象外）。東京都文京区の宅地建物取引士兼行政書士が、児童福祉施設設備運営基準第32条・建築基準法・消防法施行令から契約前に確認できることを整理します。認可申請は行政書士と市区町村、採光避難の計算は建築士、人員・労務は社会保険労務士へ分離受任でご案内します。",
+      "定員20名以上の認可保育所は、受入年齢別の面積、園庭等、階数別の避難・防火を確認します。2階と3階以上の国基準は異なり、東京では都の現行基準と区の事前協議条件も契約前に確認します。",
     keywords: [
       "認可保育所 物件 定員20名",
       "保育所 設備基準 第32条 面積",
@@ -2263,7 +2281,7 @@ const ARTICLES: ArticleSpec[] = [
     publishedAt: "2026-10-08",
     category: "投資・事業用不動産",
     excerpt:
-      "「経営・管理」の在留資格で事業所として認められる物件は、住居と明確に区分された独立区画で、法人名義・事業用の使用目的で借りられ、外見上も事業所と確認できる状態にあることが骨格です。令和7年（2025年）10月16日施行の改正で資本金・出資の総額は3,000万円以上、常勤職員1人以上などに引き上げられ、自宅兼事業所は原則認められなくなりました。東京都文京区の宅地建物取引士兼行政書士が、入管法・上陸許可基準省令・出入国在留管理庁の案内から物件側の条件を整理します。在留資格の申請は行政書士、設立登記は司法書士、資本金・税務は税理士へ分離受任でご案内します。",
+      "法人を設立して「経営・管理」の事務所を借りる場合は、独立した事業実体、事業用の使用権限、継続利用を契約前に確認します。物件確保と在留許可は別で、事業計画の作成支援と専門家確認も分けます。",
     keywords: [
       "経営管理ビザ 事務所 物件 要件",
       "経営・管理 在留資格 2025年改正 資本金3000万円",
@@ -2283,7 +2301,7 @@ const ARTICLES: ArticleSpec[] = [
     publishedAt: "2026-10-08",
     category: "投資・事業用不動産",
     excerpt:
-      "技能実習・特定技能の外国人寮に賃貸物件を使うとき、物件側で効くのは居室面積・消防・用途地域の3点です。居室面積は在留制度側の基準で、技能実習は寝室1人4.5㎡以上（床の間・押入を除く）、特定技能1号は居室1人7.5㎡以上が原則。寄宿舎・共同住宅は消防法施行令別表第一(5)項ロに区分され、建築基準法別表第二では工業専用地域で建てられません。東京都文京区の宅地建物取引士兼行政書士が、労働基準法・事業附属寄宿舎規程・消防法施行令・建築基準法から契約前に確認できることを整理します。寄宿舎規則の届出・労務は社会保険労務士、在留資格は行政書士へ分離受任でご案内します。",
+      "外国人寮は、在留制度の面積条件、労働法上の寄宿舎基準、建築・消防、貸主承諾を別に確認します。寝室と居室の計算対象は同じとは限らず、7.5㎡を満たすだけで両制度に使えるとはいえません。",
     keywords: [
       "外国人 寮 賃貸物件 要件",
       "技能実習 寝室 4.5平方メートル 宿泊施設",
@@ -2303,7 +2321,7 @@ const ARTICLES: ArticleSpec[] = [
     publishedAt: "2026-10-09",
     category: "投資・事業用不動産",
     excerpt:
-      "カラオケボックス店の物件は、建築基準法の用途地域では第二種住居地域より緩い地域（準住居・近隣商業・商業・準工業など）でないと建てられず、第一種住居地域以下では原則建てられません。消防では消防法施行令別表第一(2)項ニ（カラオケボックス等）に当たり、延べ面積にかかわらず自動火災報知設備が要ります。深夜の酒類提供は届出、遊興は特定遊興飲食店営業の許可と、酒と遊興の有無で手続きが分かれます。東京都文京区の宅地建物取引士兼行政書士が、契約前に確認できることを建築基準法・消防法施行令・風営法の条文から整理します。風営法の届出・許可申請は行政書士、消防は所轄消防署・消防設備士、労務は社会保険労務士へ分離受任でご案内します。",
+      "カラオケ物件は、用途地域・床面積、個室の図面と営業方法、消防・騒音を契約前に確認します。第二種住居地域も条件付きの候補です。深夜の酒類・遊興がないことだけで風営法の許可不要とは判断できません。",
     keywords: [
       "カラオケボックス 物件 用途地域",
       "カラオケボックス 消防法施行令 別表第一 2項ニ 自動火災報知設備",
@@ -2323,7 +2341,7 @@ const ARTICLES: ArticleSpec[] = [
     publishedAt: "2026-10-09",
     category: "相続",
     excerpt:
-      "相続した分家住宅・農家住宅は、建物の所有権を売ること自体はできますが、市街化調整区域では「誰でも住める建物」ではありません。属人的な要件を満たさない第三者へ売ると用途変更に当たり、都市計画法第42条または第43条の許可（使用者制限の解除）が要ります。許可の可否は自治体の開発審査会基準で分かれ、買主が限られ価格が下がりやすいのが実務の壁です。東京都文京区の宅地建物取引士兼行政書士が、都市計画法・農地法の条文から売却で詰まる点を整理します。用途変更の許可申請は行政書士、相続登記は司法書士、譲渡所得の税務は税理士、共有者間の紛争は弁護士へ分離受任でご案内します。",
+      "分家住宅・農家住宅は、所有権を相続できることと第三者が住めることを分けて確認します。建築時の許可条件・所在地の基準・農地の現況を調べ、解体や賃貸も許可の見通しを確認してから選択肢を比較します。",
     keywords: [
       "分家住宅 売却 属人性",
       "農家住宅 第三者 売れない",
@@ -2345,9 +2363,10 @@ function toPlainText(md: string): string {
     .trim();
 }
 
-function parseFaq(content: string, label: string): Faq[] {
-  const m = content.match(/## よくある質問\n([\s\S]*?)(?=\n## |$)/);
-  if (!m) throw new Error(`${label}: 「## よくある質問」節が見つかりません`);
+function parseFaq(content: string, label: string, heading = "よくある質問"): Faq[] {
+  const escapedHeading = heading.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const m = content.match(new RegExp(`(?:^|\\n)## ${escapedHeading}\\n([\\s\\S]*?)(?=\\n## |$)`));
+  if (!m) throw new Error(`${label}: 「## ${heading}」節が見つかりません`);
   const faqs: Faq[] = [];
   const re = /\*\*Q\.\s*([\s\S]*?)\*\*\n(A\.\s*[\s\S]*?)(?=\n\*\*Q\.|\s*$)/g;
   let q: RegExpExecArray | null;
@@ -2378,6 +2397,14 @@ function parseFrontmatter(raw: string, label: string): { meta: Record<string, st
 function readTranslation(spec: ArticleSpec, locale: "zh" | "zh-tw" | "en"): Translation {
   const p = resolve(process.cwd(), "scripts", "realestate-columns", locale, spec.file);
   const { meta, body } = parseFrontmatter(readFileSync(p, "utf-8"), `${locale}/${spec.file}`);
+  // Legacy articles retain their original data. Reviewed drafts and future Daily
+  // articles carry the exact translated FAQ heading so JSON-LD stays in that language.
+  if (meta.faqHeading || REVIEWED_COLUMNS_20261010.has(spec.slug) || spec.publishedAt >= "2026-10-10") {
+    if (!meta.faqHeading) throw new Error(`${locale}/${spec.file}: faqHeadingがありません`);
+    const faq = parseFaq(body, `${locale}/${spec.file}`, meta.faqHeading);
+    if (faq.length !== 4) throw new Error(`${locale}/${spec.file}: 公開前修正稿のFAQは4問必要です`);
+    return { title: meta.title, excerpt: meta.excerpt, category: meta.category, content: body, faq };
+  }
   return { title: meta.title, excerpt: meta.excerpt, category: meta.category, content: body };
 }
 
@@ -2467,7 +2494,10 @@ function verify(cols: SeedColumn[], specs: ArticleSpec[]): string[] {
       for (const loc of ["en", "zh", "zh-tw"] as const) {
         const t = c.translations[loc];
         if (!t) continue;
-        if (/\]\(\/(?!\/)/.test(t.content)) notes.push(`NG: ${spec.slug}/${loc} に相対パスの内部リンクあり`);
+        const relativeLinks = [...t.content.matchAll(/\]\((\/(?!\/)[^)]+)\)/g)].map(m => m[1]);
+        if (relativeLinks.some(href => !isReviewedLocaleLink(spec.slug, loc, href))) {
+          notes.push(`NG: ${spec.slug}/${loc} に未承認またはlocale不一致の相対内部リンクあり`);
+        }
         if (!t.content.startsWith("**")) notes.push(`WARN: ${spec.slug}/${loc} が直答ブロックで始まっていない`);
       }
       if (c.translations.zh && !c.translations.zh.content.includes("四叶不动产株式会社")) {
@@ -2528,9 +2558,9 @@ export type RealestateSeedColumnDaily = {
   locales: ("ja" | "en" | "zh-tw" | "zh")[];
   faq: { question: string; answer: string }[];
   translations?: {
-    en?: { title: string; excerpt: string; content: string; category?: string };
-    "zh-tw"?: { title: string; excerpt: string; content: string; category?: string };
-    zh?: { title: string; excerpt: string; content: string; category?: string };
+    en?: { title: string; excerpt: string; content: string; category?: string; faq?: { question: string; answer: string }[] };
+    "zh-tw"?: { title: string; excerpt: string; content: string; category?: string; faq?: { question: string; answer: string }[] };
+    zh?: { title: string; excerpt: string; content: string; category?: string; faq?: { question: string; answer: string }[] };
   };
 };
 

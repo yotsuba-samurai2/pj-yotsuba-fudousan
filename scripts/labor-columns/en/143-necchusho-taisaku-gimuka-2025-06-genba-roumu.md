@@ -1,98 +1,94 @@
 ---
 title: What the worksite must do under the mandatory workplace heatstroke measures (effective June 2025)
-excerpt: The amended Industrial Safety and Health Regulations (Article 612-2), effective June 1, 2025, require employers, for work expected to continue for one hour or more or exceed four hours a day in a hot place at WBGT 28 or above or air temperature 31 or above, to (1) set up and communicate a system for reporting heatstroke symptoms or suspicion, and (2) create and communicate the content and procedures of measures to prevent worsening. A violation can be subject to penalties.
+excerpt: Since June 1, 2025, specified work in hot conditions requires a communicated heatstroke reporting system and response procedures. This article explains WBGT checks, duties at sites with several businesses, work rules, and the roles of medical and other specialists.
 category: Occupational safety and health
 faqHeading: Frequently asked questions
 keywords: workplace heatstroke measures mandatory 2025 | Industrial Safety and Health Regulations Article 612-2 | WBGT 28 air temperature 31 target work | heatstroke reporting system procedure | employer heatstroke obligation penalty | work rules heatstroke safety health
 tags: Heatstroke | Occupational safety and health | Work rules | Industrial Safety and Health Act | On-site labor
 ---
 
-**In short:** The amended Industrial Safety and Health Regulations (Article 612-2), effective June 1, 2025, require employers — for work expected to continue for one hour or more, or exceed four hours a day, in a hot place at WBGT 28 or above or air temperature 31 or above — to (1) **set up and communicate a system for reporting heatstroke symptoms or suspicion**, and (2) **create and communicate the content and procedures of measures to prevent worsening**. A violation can be subject to penalties.
+**In short:** Since June 1, 2025, specified work in hot conditions requires an employer to establish and communicate a heatstroke reporting system and procedures to prevent symptoms from worsening. The arrangements must work on site, from checking WBGT and emergency contacts to arranging medical transport.
 
-For labor staff at employers with high-temperature work — construction, manufacturing, transport, cleaning, security, agriculture, and the like — this article organizes, from a Shakai Hoken Roumushi's viewpoint, how to arrange the worksite, work rules, and work procedures under the 2025 mandatory heatstroke measures. For points outside a Shakai Hoken Roumushi's work — equipment design and measurement, or compensation after a serious incident — we make clear whom to assign them to.
+Rules and primary sources checked: October 10, 2026.
 
-## What do the mandatory heatstroke measures effective June 2025 require of employers?
+This article is for labor and HR staff at businesses with work in high temperatures, including construction, manufacturing, transport, cleaning, security, and agriculture. It covers reporting systems, work procedures, and work rules, alongside the roles of site staff, medical professionals, equipment contractors, and lawyers.
 
-The ordinance amending the Industrial Safety and Health Regulations (Ordinance of the Ministry of Health, Labour and Welfare No. 57 of 2025) was promulgated on April 15, 2025, and took effect on June 1, 2025. The basis is Article 22 of the Industrial Safety and Health Act (measures an employer must take to prevent health impairment), and a new Article 612-2 was added to the Regulations. What is required is, broadly, the following two.
+## What do the heatstroke requirements effective June 2025 require?
 
-| Category | What is required of the employer (Article 612-2) |
+The ordinance amending Japan's Industrial Safety and Health Regulations (労働安全衛生規則), MHLW Ordinance No. 57 of 2025, was promulgated on April 15, 2025, and took effect on June 1, 2025. It added Article 612-2 under Article 22 of the Industrial Safety and Health Act (労働安全衛生法).
+
+| Provision | What to arrange |
 |---|---|
-| Set up a reporting system (paragraph 1) | Set up in advance a system (contact point, person in charge, etc.) for a worker who has heatstroke symptoms, or who notices another worker suspected of heatstroke, to report it, and communicate it to the relevant workers |
-| Create response procedures (paragraph 2) | Decide and communicate to the relevant workers the content and procedures of measures necessary to prevent worsening — such as removing the worker from the work, cooling the body, and having a doctor examine or treat them as needed |
+| Article 612-2, paragraph 1 | Establish in advance a system for workers with symptoms, or people who suspect heatstroke in another worker, to report the concern; communicate it to the relevant workers |
+| Paragraph 2 | For each worksite, define and communicate the measures and procedures to prevent worsening, including leaving the work, cooling the body, and medical examination or treatment as necessary |
 
-The key point: it does not uniformly require installing special equipment, but makes it an obligation to decide in advance, per workplace, a "mechanism for whoever notices to report immediately" and "an action procedure for when heatstroke is suspected," and to inform everyone. The details of the system and procedures are set out in a notice from the Director-General of the Labour Standards Bureau of the MHLW (Kihatsu 0520 No. 6, May 20, 2025).
+A form alone is insufficient: workers must be able to reach someone during the work, and the arrangements must be usable on site. These new duties do not remove existing safety and health measures concerning equipment, rest facilities, or other matters.
 
-## How do you judge which work and workplaces are covered?
+## How do you check covered work and WBGT?
 
-Coverage is not decided uniformly by industry but by the work's heat environment and time. The notice describes a "hot place" as follows.
+Coverage depends on heat and working time rather than the industry label. Check indoor and outdoor work, irregular or temporary work, and movement between work locations.
 
-| Judgment factor | Benchmark for coverage |
+| Factor | Benchmark in the implementing notice |
 |---|---|
-| Degree of heat | A place at WBGT (wet-bulb globe temperature) 28 or above, or air temperature 31 or above (indoors or outdoors) |
-| Continuity / accumulation of work | Work expected to continue for one hour or more, or to exceed four hours a day |
+| Heat | WBGT (wet-bulb globe temperature, or heat index) at least 28°C, or air temperature at least 31°C |
+| Time | Work expected to continue for at least one hour, or exceed four hours in a day |
 
-Thus, not only construction sites and outdoor work but also indoor work without effective air conditioning (manufacturing, logistics warehouses, kitchens, etc.) is covered if the WBGT or temperature reaches the benchmark and the time requirement is met. Even non-routine work is covered if it is expected to meet these requirements. Which of your own operations are covered is judged by actually checking the WBGT/temperature and work time of the work location. The measurement itself is the domain of a working-environment measurement expert and specialist contractors; a Shakai Hoken Roumushi arranges the system and procedures based on the results.
+The general rule is measurement at the work location. Site staff can check WBGT or air temperature with suitable instruments. Ordinary WBGT checks must be distinguished from statutory working-environment measurement in designated workplaces, for which qualified personnel are required. Seek specialist advice if the measurement location or method is unclear.
 
-In a workplace with hot-environment work, implementing periodic health checkups is also important as a basis of health management. The duty to implement them and the treatment of cost and time are summarized in [how far are periodic health checkups the company's obligation](/en/labor/column/teiki-kenko-shindan-jisshi-gimu-hiyo-jikan).
+For well-ventilated outdoor work and similar situations where site conditions can be assessed appropriately, forecasts or WBGT values published by Japan's Ministry of the Environment may be used. A reading from a distant observation point cannot automatically substitute for conditions in a kitchen or warehouse.
 
-## What should the worksite prepare as system set-up, procedure creation, and communication?
+**If heatstroke is suspected, respond by stopping the affected work, cooling the person, and contacting medical or other emergency services regardless of WBGT or working time.** Work intensity and clothing can warrant prevention and response even below these benchmarks. Medical judgments belong to doctors; uncertainty should not delay a response. See also [how far the company's periodic medical examination duties extend](/en/labor/column/teiki-kenko-shindan-jisshi-gimu-hiyo-jikan).
 
-The substance of the obligation is three points — "system," "procedure," and "communication." Concretely, what the worksite should prepare is as follows.
+## How should the site arrange reporting, response, and communication?
 
-- **Decide the reporting system in writing:** decide to whom and to which contact (site supervisor, workplace person in charge, emergency contact) a report goes, and post/share it so all workers understand. Clarify a route by which not only the affected person but also those around them can report when they notice something wrong.
-- **Decide the response procedure to prevent worsening:** put into a procedure the flow of removing the worker from the work → cooling the body in a cool place → having a doctor examine them or emergency transport as needed, together with who is in charge and the benchmark for judgment at each stage.
-- **Keep a record of the communication:** communicate the procedure at morning meetings, safety and health education, and postings, and record the fact of communication (date, those covered). Because the obligation includes "deciding and communicating," the communication record is evidence of implementation.
-- **Confirm the contact network and the division of equipment roles:** preparing water and salt, rest areas, and cooling items is part of the company's duty of care. Assign equipment responses such as air conditioning and ventilation to specialist contractors, and measurement to a working-environment measurement expert.
+- **Define reporting contacts:** State the responsible person, phone number, contact method, and backup contact during absences. Both the affected worker and people nearby should be able to report.
+- **Define response procedures:** Check who handles removal from work, cooling, medical contact, and transport; include the receiving facility's location and contact details and the transport route. Arrange emergency services according to the person's condition and avoid leaving someone with suspected heatstroke alone. Follow medical and emergency professionals' instructions.
+- **Tell the workers:** Combine notices, briefings, email, and documents so that people absent from morning briefings also receive the information. This provision does not itself require retention of communication records, but recording dates, recipients, and content helps check implementation.
+- **Check prevention and equipment:** Arrange rest areas, cooling supplies, and water and salt replenishment suited to the work. Consult equipment contractors as needed about ventilation or air-conditioning design and installation.
 
-## Where should you revise the work rules and work procedures?
+Relevant workers include employees of other businesses and self-employed contractors doing the relevant work in the same place, as well as the employer's own staff. A shared emergency contact is one option at sites with several businesses. However, the principal contractor and each relevant subcontractor have their own duties; a shared contact does not remove each business's responsibility to act.
 
-The obligation mainly concerns work procedures and the safety and health system, but keeping the work rules and internal regulations consistent stabilizes operation.
+## What should change in work rules and working-time arrangements?
 
-- **Review the safety and health provisions:** position the basis for the heatstroke reporting system and response procedures in the safety and health chapter of the work rules or in the safety and health management regulations.
-- **Set the treatment of stopping work and rest in hot conditions:** if you make a rule to stop work or grant rest in high heat, also organize the treatment of working hours and wages (how stopped time is handled).
-- **Build education and training into the procedure:** cover prevention of and response to heatstroke as part of safety and health education, and set the timing of implementation.
+Put reporting and response arrangements into safety and health policies and work procedures, and check consistency with work rules. When introducing heat-related stoppages or breaks, also clarify treatment of working time and pay. Schedule training and drills, and review the arrangements when personnel or site conditions change. A Shakai Hoken Roumushi (社会保険労務士) can advise on hearing employee opinions, filing amended rules, and related procedures.
 
-These are not made once and done; they are revised in line with actual WBGT/temperature measurements and on-site operation. A Shakai Hoken Roumushi can help maintain the work rules and safety and health management regulations and with the procedures on revision (hearing opinions, notification). For sorting out workers' accident insurance and social insurance on sites where sole proprietors ("one-person masters") and multiple employers are mixed in construction, see [the obligation to enroll in social insurance in construction and special enrollment in workers' accident insurance for sole proprietors](/en/labor/column/kensetsugyo-shakaihoken-hitorioyakata-rosai-tokubetsu); for working-hour management on sites with long on-duty hours such as security, see also [napping and intermittent work in the security industry and working hours](/en/labor/column/keibigyo-kamin-dansoku-roudoujikan-roumu).
+For insurance at mixed sites, see [construction-sector social insurance and special workers' compensation enrollment for self-employed contractors](/en/labor/column/kensetsugyo-shakaihoken-hitorioyakata-rosai-tokubetsu). For long periods on site, see [security work, naps, intermittent work, and working time](/en/labor/column/keibigyo-kamin-dansoku-roudoujikan-roumu).
 
-## Who should handle equipment responses and the response after an incident?
+## What can 四葉社会保険労務士事務所 help with?
 
-Heatstroke measures are not completed by a Shakai Hoken Roumushi alone. We separate the responsible parties and organize them on the premise that each is a separate, independent entity contracted separately.
+We offer consultations about reporting and response arrangements, work rules, safety and health policies, and working time and breaks in hot conditions. Consultations are free. See the [fee schedule](/en/labor/ryokin) and [general FAQs](/en/labor/faq).
 
-| What to do | Main person in charge |
+| Matter | Main person or organization responsible |
 |---|---|
-| Maintaining the reporting system and response procedures, maintaining work rules and safety and health management regulations, designing working hours and rest | Shakai Hoken Roumushi (our office) |
-| Working-environment measurement (WBGT / heat-index measurement), design and construction of equipment such as air conditioning and ventilation | Working-environment measurement expert / specialist contractors |
-| Claiming workers' accident insurance and the worker casualty report if a heatstroke incident occurs | Company (supported by a Shakai Hoken Roumushi) / Labour Standards Inspection Office |
-| Compensation and disputes over the duty of care after a serious incident | Attorney |
+| Checking the heat environment | Employer and site staff; specialists as needed |
+| Arrangements, rules, working time, and support with compensation procedures | Shakai Hoken Roumushi |
+| Equipment design and installation | Specialist equipment contractor |
+| Examination, treatment, and medical judgment | Doctor or medical facility |
+| Compensation disputes, duty-of-care disputes, and criminal matters | Lawyer |
 
-If a heatstroke injury or illness arises during work, a workers' accident insurance claim and a worker casualty report according to the number of days of absence become necessary. The flow of the procedure is summarized in [when an employee is injured at work, what does the company do? Claiming workers' accident insurance and the worker casualty report](/en/labor/column/rousai-tetsuzuki-shishobyo-houkoku). A compensation phase where a breach of the duty of care may be alleged is the domain of an attorney.
-
-四葉社会保険労務士事務所 can advise on maintaining the reporting system and response procedures, reviewing the work rules and safety and health management regulations, and designing working hours and rest in hot conditions. Consultation is free; fees are summarized in [the fee schedule](/en/labor/ryokin), and frequently asked questions in [the FAQ](/en/labor/faq).
+For work-related illness or injury, check workers' compensation claims and reporting of worker casualties or illness according to absence and other conditions. See [workers' compensation claims and casualty/illness reports](/en/labor/column/rousai-tetsuzuki-shishobyo-houkoku). External specialists are independent businesses engaged under separate direct contracts. Each invoices the client directly and receives payment directly. Our office does not handle referral fees or kickbacks.
 
 ## Frequently asked questions
 
-**Q. When did the mandatory heatstroke measures start, and on what basis?**
-A. The ordinance amending the Industrial Safety and Health Regulations (Ordinance of the MHLW No. 57 of 2025) was promulgated on April 15, 2025, and took effect on June 1, 2025. The basis is Article 22 of the Industrial Safety and Health Act, and a new Article 612-2 was added to the Regulations. The details of the system and procedures are set out in an MHLW notice (Kihatsu 0520 No. 6, May 20, 2025).
+**Q. When did the mandatory heatstroke measures begin?**
+A. They began on June 1, 2025, under MHLW Ordinance No. 57 of 2025, promulgated on April 15, 2025. Article 612-2, paragraphs 1 and 2, of 労働安全衛生規則, based on Article 22 of 労働安全衛生法, requires arrangements and procedures to be established and communicated.
 
-**Q. What work is covered? Is indoor work covered too?**
-A. Work expected to continue for one hour or more, or to exceed four hours a day, in a hot place at WBGT 28 or above or air temperature 31 or above is covered. Because it does not matter whether indoors or outdoors, indoor work without effective air conditioning — manufacturing, logistics, kitchens, etc. — is covered if it reaches the benchmark. Whether it applies is judged by actually checking the WBGT/temperature and work time of the location.
+**Q. Is indoor work covered, and must a qualified specialist measure WBGT?**
+A. Indoor work is also covered. Check work expected to continue for at least one hour or exceed four hours a day at WBGT of at least 28°C or air temperature of at least 31°C. Site staff can make ordinary WBGT and temperature checks with suitable instruments; published values may be used for suitable outdoor conditions. This differs from statutory measurement in designated workplaces. Respond to suspected symptoms regardless of the benchmarks.
 
-**Q. Concretely, what must we prepare to have fulfilled the obligation?**
-A. Two things: (1) decide a system (contact, person in charge) for reporting symptoms or suspicion and communicate it to the relevant workers; and (2) decide and communicate the content and procedures of measures to prevent worsening — removing the worker from the work, cooling the body, and a doctor's examination as needed. Because the obligation extends to "deciding and communicating," it is advisable to keep a record of the communication.
+**Q. What should be prepared, and who must be informed?**
+A. Define reporting contacts and methods, plus procedures for leaving work, cooling, medical examination, and transport suited to the work. Inform other businesses' workers and self-employed contractors working in the same place too. Even with a shared contact, check each business's duties. Do not treat documents alone as proof of sufficiency: check whether people can actually contact someone and respond.
 
-**Q. Are there penalties for neglecting the measures?**
-A. Article 612-2 is a measure based on Article 22 of the Industrial Safety and Health Act, and a violation of Article 22 can be subject, under Article 119, item 1, to imprisonment of up to six months or a fine of up to 500,000 yen. Whether a penalty applies in an individual case is a matter for the supervising authority. The basics are to first arrange the system and procedures and to carry out communication and record-keeping.
+**Q. Can failing to take these measures lead to penalties?**
+A. A violation of Article 22 of 労働安全衛生法 may attract penalties under Article 119, item 1. Violations and criminal responsibility depend on the facts and law; administrative investigation and judicial decisions are distinct. Consult a lawyer about disputes or criminal matters. The current consolidated statutory wording of the type and maximum penalty has not been verified in this revision, so no definitive amount or term is stated here.
 
-## Sources
+## Sources for this article
 
-- Ordinance amending the Industrial Safety and Health Regulations (Ordinance of the Ministry of Health, Labour and Welfare No. 57 of 2025): promulgated April 15, 2025; effective June 1, 2025. Added Article 612-2 to the Regulations.
-- Article 22 of the Industrial Safety and Health Act: the basis for measures an employer must take to prevent health impairment.
-- Article 612-2 of the Regulations: paragraph 1 = setting up a system for a person with heatstroke symptoms or who discovers a suspicion to report, and communicating it to the relevant workers; paragraph 2 = creating the content and procedures of measures to prevent worsening — removal from work, cooling the body, a doctor's examination, etc. — and communicating them.
-- Covered work ("hot place"): work expected to continue for one hour or more, or to exceed four hours a day, in a place at WBGT 28 or above or air temperature 31 or above (indoors or outdoors).
-- [MHLW: strengthening workplace heatstroke measures (effective June 1, 2025)](https://jsite.mhlw.go.jp/toyama-roudoukyoku/news_topics/oshirase/0706nechushokyoka.html) and the Director-General of the Labour Standards Bureau notice (Kihatsu 0520 No. 6, May 20, 2025). Accessed October 6, 2026.
-- Penalties: Article 612-2 is a measure based on Article 22 of the Industrial Safety and Health Act; a violation of that article can be subject, under Article 119, item 1, to imprisonment of up to six months or a fine of up to 500,000 yen (Industrial Safety and Health Act).
-- Business of a Shakai Hoken Roumushi: Article 2 of the Certified Social Insurance and Labor Consultant Act.
+The following primary sources were consulted on October 10, 2026. Effective and amendment dates refer to the relevant changes; they do not indicate verification of every law's latest amendment date.
 
-This article does not decide whom to consult. 四葉社会保険労務士事務所 can advise on maintaining the reporting system and response procedures, reviewing the work rules and safety and health management regulations, and designing working hours and rest in hot conditions. Working-environment measurement (WBGT, etc.) is the business of a working-environment measurement expert, the design and construction of equipment such as air conditioning and ventilation is for specialist contractors, and compensation and disputes over the duty of care after a serious incident are the business of an attorney. These are contracted separately as separate, independent entities. Our office does not receive referral fees. The final decision on which of your operations are covered, or whether an individual workplace meets the obligation, is made by the competent Labour Standards Inspection Office and Prefectural Labour Bureau. Fees are summarized in [the fee schedule](/en/labor/ryokin) and frequently asked questions in [the FAQ](/en/labor/faq).
+- 労働安全衛生規則 Article 612-2, paragraphs 1 and 2: establishing and communicating arrangements and procedures. MHLW Ordinance No. 57 of 2025, promulgated April 15, effective June 1, 2025. [Toyama Labour Bureau's official notice](https://jsite.mhlw.go.jp/toyama-roudoukyoku/news_topics/oshirase/0706nechushokyoka.html).
+- [MHLW notice 基発0520第6号, May 20, 2025](https://jsite.mhlw.go.jp/toyama-roudoukyoku/content/contents/002247729.pdf): covered work, WBGT checks, relevant workers, duties at mixed sites, and responses to symptoms; interpretation and operation of the June 1, 2025 provisions.
+- 労働安全衛生法 Article 22 and Article 119, item 1: [e-Gov legislation](https://laws.e-gov.go.jp/law/347AC0000000057). The type and maximum penalty in the consolidated current text remain unverified and are not stated definitively in this article. Any assessment of a specific violation or criminal responsibility requires the current statutory text and the facts of the case.
+- 社会保険労務士法 Article 2: basis for consultation and guidance. Professional registration and each law's latest amendment date were not externally cross-checked in this revision.
 
-This article is general information. Individual judgments — such as whether your work is covered and how far measures are needed — are made by a qualified professional after a consultation, in light of the latest primary sources (the Ministry of Health, Labour and Welfare, etc.) and individual circumstances. Written by [Joji Uramatsu](/en/about/uramatsu) (Shakai Hoken Roumushi, Gyoseishoshi, Registered Real Estate Transaction Specialist).
+This article provides general information. A qualified professional will assess specific coverage, adequacy of measures, pay, and responsibility after discussing the circumstances and current primary sources. Enquiries may be made to the competent Labour Standards Inspection Office or Labour Bureau as needed. Written by [浦松丈二](/en/about/uramatsu), Shakai Hoken Roumushi, Gyoseishoshi, and licensed real estate transaction specialist.

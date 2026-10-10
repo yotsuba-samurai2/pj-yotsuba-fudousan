@@ -12,9 +12,11 @@ import { NextRequest } from "next/server";
 const mocks = vi.hoisted(() => ({
   findMany: vi.fn(),
   upsert: vi.fn(),
+  create: vi.fn(),
   update: vi.fn(),
   refresh: vi.fn(),
   auth: vi.fn(),
+  reviews: undefined as unknown[] | undefined,
   seeds: {
     realestate: [] as unknown[],
     legal: [] as unknown[],
@@ -23,7 +25,7 @@ const mocks = vi.hoisted(() => ({
 }));
 
 vi.mock("@/lib/prisma", () => ({ prisma: { column: { findMany: mocks.findMany } } }));
-vi.mock("@/lib/db/columns", () => ({ upsertColumnBySlug: mocks.upsert, updateColumn: mocks.update }));
+vi.mock("@/lib/db/columns", () => ({ createColumn: mocks.create, upsertColumnBySlug: mocks.upsert, updateColumn: mocks.update }));
 vi.mock("@/lib/column-publication-cache", () => ({ refreshColumnPublication: mocks.refresh }));
 vi.mock("@/lib/api-auth", () => ({
   verifyAdminRequest: mocks.auth,
@@ -48,6 +50,14 @@ vi.mock("@/lib/data/labor-columns-seed", () => ({
     return mocks.seeds.labor;
   },
 }));
+vi.mock("@/lib/data/columns-autopublish-reviews", () => ({
+  get COLUMNS_AUTOPUBLISH_REVIEWS() {
+    return mocks.reviews ?? Object.values(mocks.seeds).flat().map((article) => qualityReview(article as ColumnInput));
+  },
+}));
+import type { ColumnInput } from "@/lib/column-shared";
+import { columnQualityFingerprint } from "@/lib/columns-autopublish-quality";
+import { qualityReview } from "./fixtures/column-quality";
 
 import {
   AUTOPUBLISH_MAX_PER_RUN,
@@ -75,13 +85,19 @@ function article(business: string, slug: string, date: string) {
     date,
     category: "cat",
     excerpt: "ex",
-    content: "body",
+    content: `body-${slug}`,
     status: "published",
+    faq: Array.from({ length: 4 }, (_, i) => ({ question: `Q${i}`, answer: `A${i}` })),
+    translations: Object.fromEntries(["en", "zh-tw", "zh"].map((locale) => [locale, {
+      title: `title-${locale}-${slug}`, excerpt: "ex", content: `body-${locale}-${slug}`,
+      faq: Array.from({ length: 4 }, (_, i) => ({ question: `${locale}-Q${i}`, answer: `${locale}-A${i}` })),
+    }])),
   };
 }
 
 beforeEach(() => {
   vi.resetAllMocks();
+  mocks.reviews = undefined;
   vi.spyOn(console, "error").mockImplementation(() => {});
   mocks.seeds.realestate = [article("realestate", "r-new", "2026-10-07")];
   mocks.seeds.legal = [article("legal", "l-old", "2026-10-06"), article("legal", "l-held", "2026-10-07")];
@@ -91,10 +107,11 @@ beforeEach(() => {
     { id: "id-pub", business: "labor", slug: "b-pub", status: "published" },
   ]);
   mocks.upsert.mockImplementation(async (_b: string, slug: string) => ({ id: `id-${slug}`, action: "created" }));
+  mocks.create.mockImplementation(async (data: ColumnInput) => `id-${data.slug}`);
   mocks.update.mockResolvedValue(undefined);
   mocks.refresh.mockResolvedValue(undefined);
 });
-afterEach(() => vi.restoreAllMocks());
+afterEach(() => { vi.restoreAllMocks(); vi.useRealTimers(); });
 
 describe("classifyAutopublish", () => {
   it("DBの状態で振り分け、日付の古い順に並べ、重複は最初の1件だけを使う", () => {
@@ -133,10 +150,41 @@ describe("isAuthorizedBearer", () => {
 });
 
 describe("publishPendingColumns", () => {
+  it("レビューが無い記事は force でも保留し、DBを書かない", async () => {
+    mocks.reviews = [];
+    const r = await publishPendingColumns({ now: NOW, force: true });
+    expect(r.ok).toBe(false);
+    expect(r.blocked).toContain("品質確認待ち");
+    expect(r.held.filter((item) => item.qualityHoldReasons)).toHaveLength(2);
+    expect(mocks.create).not.toHaveBeenCalled();
+    expect(mocks.update).not.toHaveBeenCalled();
+  });
+
+  it("不一致の記事だけ保留し、確認済みの記事を公開する", async () => {
+    const articles = Object.values(mocks.seeds).flat() as ColumnInput[];
+    mocks.reviews = articles.map((article) => qualityReview(article));
+    const unreviewed = mocks.seeds.realestate[0] as ColumnInput;
+    unreviewed.translations!.en!.title = "changed-after-review";
+    expect(columnQualityFingerprint(unreviewed)).not.toBe((mocks.reviews[0] as { fingerprint: string }).fingerprint);
+    const r = await publishPendingColumns({ now: NOW });
+    expect(r.ok).toBe(false);
+    expect(r.published.map((item) => item.key)).toEqual(["legal:l-old"]);
+    expect(r.errors[0].message).toContain("レビュー時から変更");
+  });
+
+  it("品質保留があるdry-runも未完了を明示し、副作用を起こさない", async () => {
+    mocks.reviews = [];
+    const r = await publishPendingColumns({ now: NOW, dryRun: true });
+    expect(r.ok).toBe(false);
+    expect(r.targets).toEqual([]);
+    expect(r.errors).toHaveLength(2);
+    expect(mocks.create).not.toHaveBeenCalled();
+    expect(mocks.refresh).not.toHaveBeenCalled();
+  });
   it("DBに無い記事だけを古い順に公開し、保留中・公開済み・日付待ちには触れない", async () => {
     const r = await publishPendingColumns({ now: NOW });
     expect(r.ok).toBe(true);
-    expect(mocks.upsert.mock.calls.map((c) => [c[0], c[1], c[2].status])).toEqual([
+    expect(mocks.create.mock.calls.map((c) => [c[0].business, c[0].slug, c[0].status])).toEqual([
       ["legal", "l-old", "published"],
       ["realestate", "r-new", "published"],
     ]);
@@ -152,7 +200,7 @@ describe("publishPendingColumns", () => {
     const r = await publishPendingColumns({ now: NOW, dryRun: true });
     expect(r.targets.map((x) => x.key)).toEqual(["legal:l-old", "realestate:r-new"]);
     expect(r.published).toEqual([]);
-    expect(mocks.upsert).not.toHaveBeenCalled();
+    expect(mocks.create).not.toHaveBeenCalled();
     expect(mocks.refresh).not.toHaveBeenCalled();
   });
 
@@ -163,15 +211,15 @@ describe("publishPendingColumns", () => {
     const blocked = await publishPendingColumns({ now: NOW });
     expect(blocked.ok).toBe(false);
     expect(blocked.blocked).toContain("上限");
-    expect(mocks.upsert).not.toHaveBeenCalled();
+    expect(mocks.create).not.toHaveBeenCalled();
     const forced = await publishPendingColumns({ now: NOW, force: true });
     expect(forced.published).toHaveLength(AUTOPUBLISH_MAX_PER_RUN + 2);
   });
 
   it("1本の失敗で残りを止めず、失敗は errors に出す", async () => {
-    mocks.upsert.mockImplementation(async (_b: string, slug: string) => {
+    mocks.create.mockImplementation(async ({ slug }: ColumnInput) => {
       if (slug === "l-old") throw new Error("db down");
-      return { id: `id-${slug}`, action: "created" };
+      return `id-${slug}`;
     });
     const r = await publishPendingColumns({ now: NOW });
     expect(r.ok).toBe(false);
@@ -183,19 +231,19 @@ describe("publishPendingColumns", () => {
     const rows = await mocks.findMany();
     mocks.findMany.mockImplementation(async () => [...rows]);
     let failOnce = true;
-    mocks.upsert.mockImplementation(async (business: string, slug: string) => {
+    mocks.create.mockImplementation(async ({ business, slug }: ColumnInput) => {
       if (slug === "l-old" && failOnce) {
         failOnce = false;
         throw new Error("temporary failure");
       }
       rows.push({ id: `id-${slug}`, business, slug, status: "published" });
-      return { id: `id-${slug}`, action: "created" };
+      return `id-${slug}`;
     });
     expect((await publishPendingColumns({ now: NOW })).ok).toBe(false);
     const retry = await publishPendingColumns({ now: NOW });
     expect(retry.ok).toBe(true);
     expect(retry.published.map((x) => x.key)).toEqual(["legal:l-old"]);
-    expect(mocks.upsert.mock.calls.filter((call) => call[1] === "r-new")).toHaveLength(1);
+    expect(mocks.create.mock.calls.filter((call) => call[0].slug === "r-new")).toHaveLength(1);
     expect(mocks.update).not.toHaveBeenCalled();
   });
 
@@ -205,6 +253,53 @@ describe("publishPendingColumns", () => {
     expect(r.ok).toBe(false);
     expect(r.refreshError).toBe("revalidate failed");
     expect(r.published).toHaveLength(2);
+  });
+  it("対象読取り後に本人が保留して手編集した記事を上書きしない", async () => {
+    const rows = await mocks.findMany();
+    mocks.findMany.mockImplementation(async () => [...rows]);
+    const heldBody = "person-edited content";
+    const records = new Map<string, { status: string; content: string }>();
+    mocks.create.mockImplementation(async (data: ColumnInput) => {
+      if (data.slug === "l-old") {
+        records.set("legal:l-old", { status: "draft", content: heldBody });
+        rows.push({ id: "raced-hold", business: "legal", slug: "l-old", status: "draft" });
+        throw Object.assign(new Error("unique conflict"), { code: "P2002" });
+      }
+      records.set(`${data.business}:${data.slug}`, { status: data.status, content: data.content });
+      rows.push({ id: "created", business: data.business, slug: data.slug, status: data.status });
+      return "created";
+    });
+    const result = await publishPendingColumns({ now: NOW });
+    expect(records.get("legal:l-old")).toEqual({ status: "draft", content: heldBody });
+    expect(result.held.some((item) => item.key === "legal:l-old")).toBe(true);
+    expect(result.published.map((item) => item.key)).toEqual(["realestate:r-new"]);
+    expect(mocks.refresh.mock.calls[0][0].map((item: { key: string }) => item.key)).toEqual(["realestate:r-new"]);
+    expect(mocks.upsert).not.toHaveBeenCalled();
+    expect(mocks.update).not.toHaveBeenCalled();
+    const retry = await publishPendingColumns({ now: NOW });
+    expect(retry.published).toEqual([]);
+    expect(records.get("legal:l-old")?.content).toBe(heldBody);
+  });
+  it("同時cronの一意競合を再公開や二重通知として集計しない", async () => {
+    const rows = await mocks.findMany();
+    mocks.findMany.mockImplementation(async () => [...rows]);
+    const records = new Set<string>();
+    mocks.create.mockImplementation(async (data: ColumnInput) => {
+      const key = `${data.business}:${data.slug}`;
+      if (records.has(key)) throw Object.assign(new Error("unique conflict"), { code: "P2002" });
+      records.add(key);
+      rows.push({ id: `created-${key}`, business: data.business, slug: data.slug, status: "published" });
+      return `created-${key}`;
+    });
+    const results = await Promise.all([publishPendingColumns({ now: NOW }), publishPendingColumns({ now: NOW })]);
+    const published = results.flatMap((result) => result.published.map((item) => item.key));
+    expect(published.sort()).toEqual(["legal:l-old", "realestate:r-new"]);
+    expect(results.flatMap((result) => result.skipped ?? []).length).toBeGreaterThan(0);
+    const refreshed = mocks.refresh.mock.calls.flatMap((call) => call[0].map((item: { key: string }) => item.key));
+    expect(refreshed.sort()).toEqual(published.sort());
+    expect(mocks.upsert).not.toHaveBeenCalled();
+    expect(mocks.update).not.toHaveBeenCalled();
+    expect((await publishPendingColumns({ now: NOW })).published).toEqual([]);
   });
 });
 
@@ -256,6 +351,8 @@ describe("API", () => {
   });
 
   it("cron：dryRun を渡し、上限超えは 409 を返す", async () => {
+    vi.useFakeTimers();
+    vi.setSystemTime(NOW);
     vi.stubEnv("COLUMNS_AUTOPUBLISH_SECRET", SECRET);
     const dry = await cronPost(cronRequest(`Bearer ${SECRET}`, "?dryRun=1"));
     expect(dry.status).toBe(200);
@@ -292,5 +389,20 @@ describe("API", () => {
     const res = await adminPost(adminRequest({ action: "hold", keys: ["realestate:r-new"] }));
     expect(res.status).toBe(200);
     expect((await res.json()).held[0].key).toBe("realestate:r-new");
+  });
+  it("認証済みの手動全件公開は確認済みの操作として維持し、DB保留を公開しない", async () => {
+    vi.useFakeTimers();
+    vi.setSystemTime(NOW);
+    mocks.auth.mockResolvedValue({ uid: "u" });
+    mocks.reviews = [];
+    const res = await adminPost(adminRequest({ action: "publishAllPending" }));
+    expect(res.status).toBe(200);
+    expect((await res.json()).published.map((item: { key: string }) => item.key)).toEqual(["legal:l-old", "realestate:r-new"]);
+    expect(mocks.update).not.toHaveBeenCalled();
+  });
+  it("未認証の手動全件公開を拒否する", async () => {
+    mocks.auth.mockRejectedValue(new AuthError("認証トークンがありません", 401));
+    expect((await adminPost(adminRequest({ action: "publishAllPending" }))).status).toBe(401);
+    expect(mocks.upsert).not.toHaveBeenCalled();
   });
 });

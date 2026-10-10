@@ -2,12 +2,14 @@ import "server-only";
 
 import type { Business } from "@prisma/client";
 import { prisma } from "@/lib/prisma";
-import { updateColumn, upsertColumnBySlug } from "@/lib/db/columns";
+import { createColumn, updateColumn, upsertColumnBySlug } from "@/lib/db/columns";
 import { refreshColumnPublication } from "@/lib/column-publication-cache";
 import type { ColumnInput } from "@/lib/column-shared";
 import { REALESTATE_COLUMNS_DAILY_SEED } from "@/lib/data/realestate-columns-daily-seed";
 import { SOUZOKU_LEGAL_COLUMNS_SEED } from "@/lib/data/souzoku-legal-columns-seed";
 import { LABOR_COLUMNS_SEED } from "@/lib/data/labor-columns-seed";
+import { COLUMNS_AUTOPUBLISH_REVIEWS } from "@/lib/data/columns-autopublish-reviews";
+import { columnQualityReasons } from "@/lib/columns-autopublish-quality";
 import {
   AUTOPUBLISH_MAX_PER_RUN,
   articleKey,
@@ -77,7 +79,7 @@ async function classifyNow(now: Date) {
   const articles = dailySeedArticles();
   const todayJst = todayInJst(now);
   const rows = await loadDbStates(articles);
-  return { todayJst, ...classifyAutopublish(articles, rows, todayJst) };
+  return { articles, todayJst, ...classifyAutopublish(articles, rows, todayJst) };
 }
 
 /** 管理画面の一覧（公開待ち・保留中・日付待ち） */
@@ -86,7 +88,10 @@ export async function getAutopublishOverview(now = new Date()): Promise<Autopubl
   return {
     generatedAt: now.toISOString(),
     todayJst: c.todayJst,
-    pending: c.pending.map((article) => toItem(article)),
+    pending: c.pending.map((article) => {
+      const reasons = columnQualityReasons(article, c.articles, COLUMNS_AUTOPUBLISH_REVIEWS, c.todayJst);
+      return { ...toItem(article), ...(reasons.length ? { qualityHoldReasons: reasons } : {}) };
+    }),
     held: c.held.map(({ article, id }) => toItem(article, id)),
     scheduled: c.scheduled.map((article) => toItem(article)),
     publishedCount: c.published.length,
@@ -96,16 +101,24 @@ export async function getAutopublishOverview(now = new Date()): Promise<Autopubl
 /** id がある＝保留中（下書き）の記事。無い＝DB未登録の記事 */
 type PublishTarget = { article: ColumnInput; id?: string };
 
-async function publishTargets(targets: readonly PublishTarget[]): Promise<{
+async function publishTargets(targets: readonly PublishTarget[], createOnly = false): Promise<{
   published: AutopublishItem[];
+  racedHeld: AutopublishItem[];
+  skipped: AutopublishItem[];
   errors: ErrorEntry[];
   refreshError?: string;
 }> {
   const published: AutopublishItem[] = [];
+  const racedHeld: AutopublishItem[] = [];
+  const skipped: AutopublishItem[] = [];
   const errors: ErrorEntry[] = [];
   for (const { article, id } of targets) {
     try {
-      if (id) {
+      if (createOnly) {
+        // DB uniqueness is the atomic gate: a concurrent hold/edit/publish must
+        // never be overwritten by automatic publication after the initial read.
+        await createColumn({ ...article, status: "published" });
+      } else if (id) {
         // 保留中の記事は、本文を seed で上書きしない。管理画面で手直ししていても、その内容のまま公開する
         await updateColumn(id, { status: "published" });
       } else {
@@ -113,35 +126,57 @@ async function publishTargets(targets: readonly PublishTarget[]): Promise<{
       }
       published.push(toItem(article, id));
     } catch (err) {
+      if (createOnly && typeof err === "object" && err !== null && "code" in err && err.code === "P2002") {
+        try {
+          const row = (await loadDbStates([article])).find((state) =>
+            state.business === article.business && state.slug === article.slug);
+          if (row?.status === "draft") racedHeld.push(toItem(article, row.id));
+          else if (row) skipped.push({ ...toItem(article),
+            skipReason: row.status === "published" ? "別の操作で公開済みのため再公開・再通知しません" : "別の操作で削除済みのため公開しません" });
+          else errors.push({ key: articleKey(article.business, article.slug), message: "登録競合後の状態を確認できません。上書きせず停止しました" });
+        } catch (readError) {
+          errors.push({ key: articleKey(article.business, article.slug), message: `登録競合後の確認失敗（上書きしません）：${messageOf(readError)}` });
+        }
+        continue;
+      }
       errors.push({ key: articleKey(article.business, article.slug), message: messageOf(err) });
     }
   }
-  if (published.length === 0) return { published, errors };
+  if (published.length === 0) return { published, racedHeld, skipped, errors };
   try {
     // 詳細ページ（全言語）・一覧・サイトマップの再生成と、IndexNow への通知
     await refreshColumnPublication(published);
-    return { published, errors };
+    return { published, racedHeld, skipped, errors };
   } catch (err) {
-    return { published, errors, refreshError: messageOf(err) };
+    return { published, racedHeld, skipped, errors, refreshError: messageOf(err) };
   }
 }
 
 /**
- * 正午の自動公開。DBに無い記事（公開待ち）をすべて公開する。保留中（下書き）には触れない。
+ * 正午の自動公開。DB未登録かつ内容指紋に一致する公開レビューがある記事を公開する。
+ * 品質確認待ちはDBを書かず保留理由を返す。DB下書き・公開済み記事には触れない。
  * - dryRun：対象を返すだけでDBは変えない
- * - force：上限（AUTOPUBLISH_MAX_PER_RUN）を超えても公開する（管理画面の「今すぐ公開」と、手動実行の force）
+ * - force：件数上限だけを解除する。品質確認は解除しない。
  */
 export async function publishPendingColumns(
   opts: { dryRun?: boolean; force?: boolean; now?: Date } = {},
 ): Promise<AutopublishRunResult> {
   const now = opts.now ?? new Date();
   const c = await classifyNow(now);
+  const assessed = c.pending.map((article) => ({ article,
+    reasons: columnQualityReasons(article, c.articles, COLUMNS_AUTOPUBLISH_REVIEWS, c.todayJst) }));
+  const eligible = assessed.filter(({ reasons }) => reasons.length === 0).map(({ article }) => article);
+  const qualityHeld = assessed.filter(({ reasons }) => reasons.length > 0);
+  const qualityErrors = qualityHeld.map(({ article, reasons }) => ({
+    key: articleKey(article.business, article.slug), message: `品質確認待ち：${reasons.join("／")}`,
+  }));
   const base = {
     dryRun: Boolean(opts.dryRun),
     runAt: now.toISOString(),
     todayJst: c.todayJst,
-    targets: c.pending.map((article) => toItem(article)),
-    held: c.held.map(({ article, id }) => toItem(article, id)),
+    targets: eligible.map((article) => toItem(article)),
+    held: [...c.held.map(({ article, id }) => toItem(article, id)),
+      ...qualityHeld.map(({ article, reasons }) => ({ ...toItem(article), qualityHoldReasons: reasons }))],
     scheduled: c.scheduled.map((article) => toItem(article)),
   };
   if (c.pending.length > AUTOPUBLISH_MAX_PER_RUN && !opts.force) {
@@ -149,21 +184,26 @@ export async function publishPendingColumns(
       ...base,
       ok: false,
       published: [],
-      errors: [],
+      errors: qualityErrors,
       blocked:
         `公開待ちが${c.pending.length}本あり、1回の上限（${AUTOPUBLISH_MAX_PER_RUN}本）を超えたため止めました。` +
         "対象を確かめてから、管理画面の「今すぐ公開」か、手動実行（force）で公開してください。",
     };
   }
-  if (base.dryRun || c.pending.length === 0) {
-    return { ...base, ok: true, published: [], errors: [] };
+  const qualityBlocked = qualityHeld.length ? `${qualityHeld.length}本は品質確認待ちのため自動公開しません。記事別の理由を確認してください。forceでも解除しません。` : undefined;
+  if (base.dryRun || eligible.length === 0) {
+    return { ...base, ok: !qualityHeld.length, published: [], errors: qualityErrors,
+      ...(qualityBlocked ? { blocked: qualityBlocked } : {}) };
   }
-  const result = await publishTargets(c.pending.map((article) => ({ article })));
+  const result = await publishTargets(eligible.map((article) => ({ article })), true);
   return {
     ...base,
-    ok: result.errors.length === 0 && !result.refreshError,
+    ok: qualityHeld.length === 0 && result.errors.length === 0 && !result.refreshError,
     published: result.published,
-    errors: result.errors,
+    held: [...base.held, ...result.racedHeld],
+    skipped: result.skipped,
+    errors: [...qualityErrors, ...result.errors],
+    ...(qualityBlocked ? { blocked: qualityBlocked } : {}),
     ...(result.refreshError ? { refreshError: result.refreshError } : {}),
   };
 }

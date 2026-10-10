@@ -1,91 +1,107 @@
 ---
-title: "Starting a car-rental (rent-a-car) business: the permit and the flow for hiring out private vehicles"
-excerpt: "To run a car-rental or car-sharing business you need the permit of the Minister of Land, Infrastructure, Transport and Tourism to hire out a private vehicle for consideration as a business (Road Transportation Act, Article 80(1)). You register the cars under the private 'wa'/'re' plates, keep a rental ledger for at least two years, appoint a vehicle maintenance manager above a set fleet size, and must not supply a driver with the car (which is the line against driving-agency and 'white-taxi' work). Operating without a permit is punishable by a fine of up to one million yen (Article 98). This article organises the requirements and who to hand each part to."
+title: "Car-rental permits in Japan: documents, insurance and vehicle management"
+excerpt: "Starting a car-rental or car-sharing business in Japan requires a permit. This guide covers application documents, insurance thresholds, rental records, vehicle maintenance and the roles of different professionals."
 category: "Permits and Licensing (From the Practice of an Administrative Scrivener)"
 ---
-**In short:** to run a car-rental or car-sharing business you need the permit of the Minister of Land, Infrastructure, Transport and Tourism to hire out a private vehicle for consideration as a business (self-use vehicle hire-out business permit) (Road Transportation Act, Article 80(1)). The application is made to the Transport Branch Office (regional transport bureau) having jurisdiction over the location of the principal office, with a document stating the rental fares and rental terms, a confirmation that no disqualification applies, a list of the number of vehicles by office and type, and an implementation plan for the hiring-out. After the permit you register the cars under the private "wa"/"re" plates, keep a rental ledger for at least two years, and appoint a vehicle maintenance manager at an office above a set fleet size. Hiring out a car with a driver attached ("supply of a driver's labour") is prohibited, and this is the dividing line against driving-agency and "white-taxi" work. Operating without a permit is punishable by a fine of up to one million yen (Article 98). This article is general information; individual eligibility, documents and review times rest with the competent Transport Branch Office and a qualified professional. Preparing and acting for the permit application is handled by Yotsuba Administrative Scrivener Office (administrative scrivener); the new registration of the vehicle (obtaining the "wa" plate) by the applicant in person or the car dealer; incorporation and tax by a tax accountant; the content of voluntary insurance by an insurance company; labour after hiring by a certified social insurance labour consultant; and finding and leasing the office by Yotsuba Real Estate Co., Ltd., each as an independent business under a separate contract. Yotsuba Administrative Scrivener Office and Yotsuba Real Estate Co., Ltd. are separate businesses, and our office receives no referral fee.
+**In short:** starting a car-rental or car-sharing business in Japan requires a private-vehicle rental permit. Prepare the documents and insurance, plan vehicle registration, rental records and maintenance, and apply to the transport branch office responsible for your principal office.
 
-## Is a car-rental business a "permit" or a "notification," and how does it differ from driving agency?
+Updated: 2026-10-10
 
-A car-rental business is a "permit," not a "notification." Article 80(1) of the Road Transportation Act provides that "a private vehicle must not be hired out for consideration as a business without the permit of the Minister of Land, Infrastructure, Transport and Tourism." Lending cars as a side business of a used-car dealer or of lodging/tourism, and running hourly car-sharing, all amount to "hiring out for consideration as a business" and require this permit. The permit authority is delegated from the Minister to the regional transport bureau, and the actual counter is the Transport Branch Office having jurisdiction over the principal office.
+## Where do you apply for a car-rental permit?
 
-A point often confused here is the automobile driving-agency business. Driving agency is the service of driving the **customer's own car** home on their behalf when they cannot drive due to drinking and the like, and is started by receiving the certification of the prefectural public safety commission. By contrast, a car-rental business hires out the **operator's car** to the customer, who drives it themselves. The governing law, the authority, and "who drives" all differ—they are separate systems. The certification requirements for driving agency are organised in [Driving-Agency Certification and the Requirements for Offices and Accompanying Vehicles](https://luck428.com/legal/column/unten-daiko-nintei-eigyosho-zuihan-jidosha-yoken).
+The local transport branch office handles applications under Article 80(1) of the Road Transportation Act (道路運送法). Hourly car-sharing is included. Where the lessor is the registered user of the vehicles, the Ministry of Land, Infrastructure, Transport and Tourism (MLIT) notice governs the permit review.
 
-Furthermore, hiring out a car with a driver attached (hiring-out accompanied by the supply of a driver's labour) is prohibited, as described below. Arranging a driver together with the car for a fee is the domain of passenger transport (a so-called "white taxi") or bus business and raises a separate licensing problem. A car rental is premised on "only the car is lent" and "the person who borrows it drives."
+Car rental is the business of renting vehicles. Supplying a driver in connection with the rental is prohibited. Driving a customer's own car as a driving agent, or transporting passengers as an operator, involves different systems. See [driving-agency certification](/en/legal/column/unten-daiko-nintei-eigyosho-zuihan-jidosha-yoken) and [welfare-taxi permits](/en/legal/column/kaigo-taxi-fukushi-yuso-kyoka-shako-yoken).
 
-| Business | Who drives | Whose vehicle | Procedure | Authority |
-|---|---|---|---|---|
-| Car-rental (self-use vehicle hire-out) | The borrowing customer | The operator's car (wa/re plate) | Permit | Minister (Transport Branch Office) |
-| Driving-agency business | The driving agent | The customer's car | Certification | Prefectural public safety commission |
-| General trucking / passenger transport (truck, taxi, etc.) | The operator | The operator's car | Permit | Minister (transport bureau) |
+For operating a goods transport business, see [general trucking permits and office/depot requirements](/en/legal/column/ippan-kamotsu-unso-kyoka-eigyosho-shako-yoken).
 
-For the requirements of a transport licence, see [General Trucking Licence and Office / Depot Requirements](https://luck428.com/legal/column/ippan-kamotsu-unso-kyoka-eigyosho-shako-yoken); for welfare transport, [Welfare Taxi Licence and Depot Requirements](https://luck428.com/legal/column/kaigo-taxi-fukushi-yuso-kyoka-shako-yoken).
+## What application documents and insurance do you need?
 
-## What are the requirements and documents for a self-use vehicle hire-out business permit?
+The last amendment recorded in the MLIT notice reviewed here is 国自旅第55号, dated 31 May 2022. Its supplementary provision applies the amendment to permits from 1 June 2022. Use the application office's current forms.
 
-The permit is reviewed under the standards set in the Ministry notice "On the handling of hiring-out of private vehicles (rent-a-car) conducted with the lessor as the user of the vehicle" (Notice Ji-Ryo No. 138, 13 June 1995; last amended by Koku-Ji-Ryo No. 286, 30 March 2006). The core is that the applicant and its officers do not fall under a disqualification, and that they carry insurance against accidents.
-
-Representative disqualifications include:
-
-- a person sentenced to imprisonment or imprisonment-without-work of one year or more, for whom two years have not passed since completion or extinguishment of the sentence
-- a person whose licence for a general passenger/cargo transport business or for self-use vehicle hire-out has been revoked, and for whom two years have not passed since the revocation
-- where the applicant is a minor or an adult ward without the same capacity as an adult, and whose statutory agent falls under the above
-- where, for a company, any of its officers falls under the above
-
-When applying as a company, the presence of disqualifications is checked not only for the representative but for all officers. Note that, following the Penal Code amendment, from 1 June 2025 "imprisonment without work" has been reorganised into "imprisonment." Which prior conviction or disposition applies, and when the two years pass, is an individual judgement on the facts; an administrative scrivener supports preparing documents on rights, duties and factual certification, but avoids asserting eligibility itself—that rests with the competent Transport Branch Office. Evaluation touching on the fate of a criminal case is an attorney's domain.
-
-For insurance, the cover set in the notice for the hired-out vehicle is a guide:
-
-| Cover | Standard amount (guide) |
+| Document | Main content |
 |---|---|
-| Bodily-injury insurance | at least 80 million yen per person |
-| Property insurance | at least 2 million yen per case |
-| Passenger insurance | at least 5 million yen per person |
+| Application and applicant records | Company register certificate, or residence record for an individual, etc. |
+| Rental prices and terms | Prices and conditions of use |
+| Confirmation of non-disqualification | Applicant, company officers and other relevant persons |
+| Vehicle list by office and type | Vehicle types and numbers at each office |
+| Operating plan | Responsible person, staff training, maintenance and insurance |
 
-Which insurance product meets this standard and how much the premium is are the insurer's domain. Our office supports assembling documents evidencing enrolment, but does not step into product selection or eligibility. The application is made to the Transport Branch Office having jurisdiction over the principal office, attaching to the self-use vehicle hire-out permit application a document stating the rental fares and terms, a company register extract (a resident record for an individual), a confirmation of non-disqualification, a list of vehicles by office and type, and an implementation plan (placement of a responsible person, staff guidance and training, the maintenance-manager placement plan, insurance enrolment, and so on).
+The 2022 notice lists disqualifications involving criminal sentences and revoked permits, but it should not be treated as identical to a current 2026 form. Both 懲役 and 禁錮 were replaced by 拘禁刑 from 1 June 2025. The transitional application to this permit's disqualification criteria is **unverified**. The transport office and a qualified professional must check the current form and the applicant's or officers' circumstances.
 
-## What do you prepare for the rental terms, the rental ledger and vehicle maintenance?
-
-There are continuing rules even after the permit. You must not supply a driver's labour accompanying the hiring-out (including introducing or brokering a driver), and you must post a notice of this at the office. The rental fares and terms must also be posted where the public can readily see them. Name-lending (letting another use your name) is prohibited.
-
-On records, you must keep a rental ledger recording the borrower's name and address, the driver's name and the type and number of their driving licence, the vehicle's registration number, the date and time of the hiring-out, the distance driven, the rental fare, matters concerning accidents, and the like, and retain it for at least two years. You deliver to the borrower a rental certificate stating the observance items (carrying it during operation, that no supply of a driver's labour may be received, etc.) and have the driver carry it. The previous year's hiring-out performance report and the list of vehicles by office and type are submitted to the Transport Branch Office by 31 May each year.
-
-The vehicle is registered not under a commercial (green) plate but as a private vehicle, under the rent-a-car classification number "wa" (or "re" in some regions). If you use at an office one or more vehicles with a capacity of 11 or more, or ten or more ordinary passenger cars and the like, you must appoint a vehicle maintenance manager (Road Transport Vehicle Act, Article 50; Ordinance for Enforcement, Article 31-3). Hiring out a private bus with a capacity of 30 or more or a length over 7 m, or a hearse, is not permitted. Private microbuses carry a separate special rule (prior notification, business track record, etc.).
-
-| Item | Content |
+| Insurance category in the notice | Minimum coverage |
 |---|---|
-| Vehicle registration | Private "wa"/"re" plate (not a green plate) |
-| Rental ledger | Record the statutory items and retain for at least two years |
-| Posting duty | Rental fares, terms, and that no supply of a driver's labour is made |
-| Maintenance manager | One or more vehicles of capacity 11+, or ten or more passenger cars |
-| Periodic report | Submit the performance report, etc. by 31 May each year |
+| Bodily injury | ¥80 million per person |
+| Property damage | ¥2 million per incident |
+| Passenger injury | ¥5 million per person |
 
-The new registration of the vehicle (obtaining the "wa" plate) is a procedure that the applicant in person or the dealer performs at the Transport Branch Office, separate from the business permit. The practice of a maintenance manager touching on equipment and safety is handled by a qualified maintenance manager or vehicle-maintenance operator.
+Personal-injury coverage can be included under the passenger-injury category. Confirm the product's coverage and eligibility with the insurer and assemble evidence that it meets the criteria.
 
-## After the permit, who takes on vehicle registration and tax?
+## How do you disclose terms and keep rental records?
 
-When starting a car-rental business as a company, the roles divide as follows. Preparing and acting for the permit application and various notifications is handled by Yotsuba Administrative Scrivener Office (administrative scrivener) as an independent business. Incorporation and officer-change registration is by a judicial scrivener; corporate and consumption tax and vehicle-related taxes (registration-and-licence tax, automobile tax, etc.) by a tax accountant; the new registration of the vehicle (obtaining the "wa" plate) by the applicant in person or the dealer at the Transport Branch Office; the content of voluntary insurance by an insurance company; the working hours and social-insurance procedures of hired staff by a certified social insurance labour consultant; finding and leasing the office by Yotsuba Real Estate Co., Ltd. (a real estate broker); and disputes over accident compensation and individual legal judgement touching on criminal cases by an attorney. Yotsuba Administrative Scrivener Office and Yotsuba Real Estate Co., Ltd. are separate businesses.
+The permit conditions in the notice prohibit lending your business name and supplying, introducing or arranging a driver in connection with a rental. Providing driver information also has prohibitions and exceptions. Simply giving out contact details is not automatically permitted: confirm the scope of the referenced notice with the transport office.
 
-Each field is on the premise that you contract separately with each qualified professional or operator as an independent business, and our office receives no referral fee. For the flow of engagement, see [Engagement Flow](https://luck428.com/legal/nagare); for fees, [Fee Schedule](https://luck428.com/legal/ryokin); and for the whole picture of our services, [Permits and Applications Services](https://luck428.com/legal/services). The final judgement on individual eligibility and required documents is made by a qualified professional and the competent Transport Branch Office in light of the circumstances.
+| Item | Permit condition |
+|---|---|
+| Disclosure that drivers are not supplied | Use a method allowed by the notice: office display, website publication, or written/electronic presentation, etc. |
+| Prices and rental terms | Display visibly at the office or publish on a website |
+| Rental ledger | Record borrower, driver, licence, vehicle, rental dates, charges, accidents, etc.; retain for two years **from the end of the rental** |
+| Rental certificate | Issue in writing or electronically and have the driver carry it; rental-type car-sharing has an exception |
+| Annual report | Submit the previous year's rental performance report and related documents by 31 May each year |
+
+These are permit conditions under the notice. Confirm whether your car-sharing model qualifies for the exception to issuing and carrying a rental certificate.
+
+## How do vehicle registration and maintenance-manager thresholds work?
+
+Rental vehicles remain privately registered and use the rental hiragana marking 「わ」 (in some cases 「れ」). This marking is separate from the numerical classification number. The business permit and vehicle registration are separate procedures.
+
+The Chubu transport bureau's June 2022 guide gives these thresholds for privately used vehicles at one office:
+
+| Vehicle category | Number requiring a maintenance manager |
+|---|---|
+| Seating capacity of 11 or more | One or more |
+| Goods vehicles with gross vehicle weight of 8t or more | Five or more |
+| Passenger vehicles seating up to 10; goods vehicles below 8t gross weight | Ten or more |
+
+Confirm the current treatment, including vehicle type, registered user and ownership/use category, with the transport office under Article 50 of the Road Transport Vehicle Act (道路運送車両法) and Article 31-3 of its enforcement ordinance.
+
+The notice excludes rental of private buses seating 30 or more or longer than 7m, and hearses. Private microbuses have conditions including an operating track record, so a new operator may not start on the same terms as ordinary passenger cars. Application-office conditions for particular vehicle types remain unverified.
+
+## Who handles each part of opening the business?
+
+| Professional or business | Role |
+|---|---|
+| 四葉行政書士事務所 | Permit/notification documents and representation; articles of incorporation and related documents within its professional remit |
+| Judicial scrivener or other authorised professional | Incorporation and officer-change registration |
+| Tax accountant | Tax advice and returns |
+| Applicant, vehicle dealer, etc. | Vehicle registration |
+| Insurer / maintenance operator | Insurance products / vehicle maintenance |
+| 四葉社会保険労務士事務所 | Employment matters, labour and social insurance |
+| 四葉不動産株式会社 | Finding premises and brokerage of the lease |
+| Attorney | Compensation disputes and criminal matters |
+
+四葉行政書士事務所, 四葉社会保険労務士事務所 and 四葉不動産株式会社 are independent businesses. You enter a separate contract with each professional or business; each bills and receives payment directly. Our office receives no referral fee. Administrative authorities review and decide permits. See [engagement flow](/en/legal/nagare), [fees](/en/legal/ryokin) and [permit services](/en/legal/services).
 
 ## FAQ
 
 **Q. Does a car-rental business need a permit or a notification?**
-A. A permit. To hire out a private vehicle for consideration as a business, you must receive the permit of the Minister of Land, Infrastructure, Transport and Tourism (a self-use vehicle hire-out business permit) (Road Transportation Act, Article 80(1)). The application is made to the Transport Branch Office having jurisdiction over the principal office. Operating without a permit is punishable by a fine of up to one million yen (Article 98).
+A. Renting private vehicles for consideration as a business requires a permit under Article 80(1) of 道路運送法. Car-sharing is included. Apply to the transport branch office responsible for the principal office's location.
 
-**Q. Will the plate be a commercial (green) plate?**
-A. No. A rent-a-car is registered as a private vehicle under the rent-a-car classification number "wa" (or "re" in some regions). It differs from the green (commercial) plate of a transport business. The new registration of the vehicle itself is a separate procedure performed by the applicant in person or the dealer at the Transport Branch Office.
+**Q. Do rental vehicles use commercial green plates?**
+A. They remain privately registered and use the rental hiragana marking 「わ」 (sometimes 「れ」). The marking is separate from the classification number, and vehicle registration is separate from the business permit.
 
-**Q. Can I hire out a car to a customer with a driver attached?**
-A. No. Supplying a driver's labour accompanying the hiring-out (including introducing or brokering a driver) is prohibited, and there is a duty to post this at the office. Arranging a driver together with the car for a fee raises the problem of a separate licence such as passenger transport (a "white taxi"). A rent-a-car is a system for "lending only the car."
+**Q. Can I rent a vehicle with a driver?**
+A. Supplying, introducing or arranging a driver in connection with the rental is prohibited. Disclose this by an office display, website or another method allowed by the notice. Check any exception for providing driver information with the transport office before using it.
 
-**Q. Must I always appoint a maintenance manager?**
-A. It depends on the type and number of vehicles. You must appoint a maintenance manager where you use at one office one or more vehicles of capacity 11 or more, or ten or more ordinary passenger cars and the like (Road Transport Vehicle Act, Article 50; Ordinance for Enforcement, Article 31-3). If you use only passenger cars below the threshold, there is no duty to appoint one. Confirm the latest standard with the Transport Branch Office before applying.
+**Q. Is a maintenance manager always required?**
+A. It depends on vehicle type and numbers. The reviewed guide gives thresholds at one office of one vehicle seating 11+, five goods vehicles of 8t+ gross weight, or ten passenger vehicles seating up to 10/goods vehicles below 8t. Confirm the current criteria, registered user and use category with the transport office.
 
-## Sources (Primary Information)
+## Sources
 
-- e-Gov Law Search, "Road Transportation Act" (Act No. 183 of 1951), Article 80 (hiring out; paragraphs 1 and 2), Article 81 (restriction and prohibition of use), Article 98 (penalties; a fine of up to one million yen) (accessed 2026-10-06)
-- Ministry of Land, Infrastructure, Transport and Tourism, "On the handling of hiring-out of private vehicles (rent-a-car) conducted with the lessor as the user of the vehicle" (Notice Ji-Ryo No. 138, 13 June 1995; last amended Koku-Ji-Ryo No. 286, 30 March 2006; permit standards, disqualifications, standard insurance amounts, rental terms, rental ledger, prohibition of supplying a driver's labour, application documents) (mlit.go.jp; accessed 2026-10-06)
-- e-Gov Law Search, "Road Transport Vehicle Act," Article 50 (maintenance manager), Ordinance for Enforcement Article 31-3 (types and numbers of vehicles requiring appointment) (accessed 2026-10-06)
+- [MLIT rental-vehicle notice](https://www.mlit.go.jp/jidosha/content/001485360.pdf): 自旅第138号, 13 June 1995; last recorded amendment 国自旅第55号, 31 May 2022, applicable to permits from 1 June 2022. Permit conditions 2(6), 2(8), etc. reviewed on 2026-10-10.
+- [Chubu transport bureau procedure guide](https://wwwtb.mlit.go.jp/chubu/jikou/rentacar/renta-tetsuduki.pdf): June 2022 edition. Ledgers, certificates, reports and vehicle-category thresholds checked on 2026-10-10.
+- [道路運送法](https://laws.e-gov.go.jp/law/326AC0000000183): Article 80(1). The current complete amendment/effective-date history and Article 98 text remain unverified; no penalty amount is stated here.
+- [道路運送車両法施行規則](https://laws.e-gov.go.jp/law/326M50000800074): Article 31-3. A complete recheck of the current 2026 text remains unverified.
+- [Ministry of Justice: introduction of 拘禁刑](https://www.moj.go.jp/kyousei1/kyousei05_00165.html): the change from 懲役/禁錮 took effect on 1 June 2025. Its application and transitional treatment for this permit's disqualifications remain unverified.
 
-This article is general information and does not guarantee the permit eligibility, required documents or review time of a particular application. Whether a disqualification applies, the standard insurance amounts, the maintenance-manager threshold, the eligibility to hire out by vehicle type, and the special rule for private microbuses may differ by the competent Transport Branch Office's or the Ministry's practice and by legal amendment, so confirm with the latest guidance before applying. Preparing and acting for the permit application and notifications is by Yotsuba Administrative Scrivener Office (administrative scrivener); the new registration of the vehicle (obtaining the "wa" plate) by the applicant in person or the dealer; incorporation and officer-change registration by a judicial scrivener; tax by a tax accountant; the content of voluntary insurance by an insurance company; labour management after hiring by a certified social insurance labour consultant; finding and leasing the office by Yotsuba Real Estate Co., Ltd. (a real estate broker); and disputes over accident compensation and individual legal judgement touching on criminal cases by an attorney, each as an independent business under a separate contract. Yotsuba Administrative Scrivener Office and Yotsuba Real Estate Co., Ltd. are separate businesses. Our office receives no referral fee. Individual judgements are made by a qualified professional after a meeting. Written by [Joji Uramatsu](https://luck428.com/about/uramatsu), administrative scrivener and licensed real estate broker.
+This is general information. A qualified professional must check individual eligibility, disqualifications, documents and vehicle-specific conditions against current materials and consult the transport office. A permit or review time is not guaranteed. Written by [Joji Uramatsu](/en/about/uramatsu), administrative scrivener and licensed real estate transaction specialist.
