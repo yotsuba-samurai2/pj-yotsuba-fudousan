@@ -38,4 +38,4 @@ max-turnsは50から80へ変更した。モデル呼出し数は増やさず、r
 
 旧レビューを修正後の候補に渡した結果は[承認0・保留6](original-proof-rejection.json)。新しい独立証跡も実装のrecorderで[承認0・保留6](independent-proof-holds.json)。公開承認seedには承認を追加していない。レビュー失敗時の後続停止を緩めていない。
 
-今回の成果物は修正と内容をまとめたDraft PR。マージ・公開・秘密設定変更・有料追加は実施しない。head CIの実際の状態はPRチェックと委任元への完了報告に記録する。
+今回の成果物は修正と内容をまとめた[Draft PR #480](https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/pull/480)。マージ・公開・秘密設定変更・有料追加は実施しない。head CIの実際の状態はPRチェックと委任元への完了報告に記録する。
