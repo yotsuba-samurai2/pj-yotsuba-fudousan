@@ -35,8 +35,10 @@
     },
     {
       "log": "regression.log",
-      "sha256": "27e1c1fbcdc22baa6b2b9cc9f3ad6368f580f70dedf2f447ea1f8c6b58004f50",
-      "exitCode": 0
+      "sha256": "3c99b6c5d1262fdaae3f31f7b2ed3821d9473a9818ce80cda50e3982e54953e9",
+      "exitCode": 0,
+      "originalLogSha256": "27e1c1fbcdc22baa6b2b9cc9f3ad6368f580f70dedf2f447ea1f8c6b58004f50",
+      "normalization": "trailing empty lines removed in committed copy"
     },
     {
       "log": "final-workflow-regression.log",
@@ -45,8 +47,10 @@
     },
     {
       "log": "vitest-final.log",
-      "sha256": "3a678e19d836e2d9e8b4ac905e3d6a306f46de4e826f1d91eaee353413f4d4a7",
-      "exitCode": 0
+      "sha256": "6ba586d4b75af28971a547165415e28276f475513abd1b8f8b5524ded90b4cf2",
+      "exitCode": 0,
+      "originalLogSha256": "3a678e19d836e2d9e8b4ac905e3d6a306f46de4e826f1d91eaee353413f4d4a7",
+      "normalization": "trailing empty lines removed in committed copy"
     },
     {
       "log": "lint-changed.log",
