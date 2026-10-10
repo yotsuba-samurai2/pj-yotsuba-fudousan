@@ -1,3 +1,4 @@
+import { ColumnUpdateConflictError } from "@/lib/column-update-conflict";
 import { prisma } from "@/lib/prisma";
 import { Prisma, type Business, type Column as ColumnRow } from "@prisma/client";
 import type { LangCode } from "@/config/languages";
@@ -174,10 +175,20 @@ async function decideModifiedDate(
   return resolveModifiedDate({ existing, incoming: data });
 }
 
-export async function updateColumn(id: string, data: Partial<Column>): Promise<void> {
+export async function updateColumn(id: string, data: Partial<Column>, expectedUpdatedAt?: string): Promise<void> {
   const modifiedDate = await decideModifiedDate(id, data);
   const payload = modifiedDate === undefined ? data : { ...data, modifiedDate };
-  await prisma.column.update({ where: { id }, data: toUpdateInput(payload) });
+  try {
+    await prisma.column.update({
+      where: { id, ...(expectedUpdatedAt ? { updatedAt: new Date(expectedUpdatedAt) } : {}) },
+      data: toUpdateInput(payload),
+    });
+  } catch (error) {
+    if (expectedUpdatedAt && error instanceof Prisma.PrismaClientKnownRequestError && error.code === "P2025") {
+      throw new ColumnUpdateConflictError();
+    }
+    throw error;
+  }
 }
 
 /** コラム削除 */

@@ -1,98 +1,112 @@
 ---
 title: What is the self-directed management of chemical substances — SDS, risk assessment, and appointing a manager
-excerpt: The self-directed management of chemical substances shifts the emphasis from "individual regulation," where the state sets concrete methods per substance, to "self-directed management," where the employer chooses exposure-prevention measures based on its own risk assessment. From April 1, 2024, establishments that manufacture, handle, or supply risk-assessment target substances must appoint a chemical substances manager (Article 12-5 of the Industrial Safety and Health Regulations) and, as needed, a protective-equipment use manager (Article 12-6). There is no exclusion by industry or size.
+excerpt: Self-directed chemical management combines SDSs, risk assessment, manager appointments, and exposure prevention. It explains mandatory SDS updates, the continuing role of specific regulations, and the April and October 2026 amendments, including exceptions and matters requiring professional confirmation.
 category: Occupational safety and health
 faqHeading: Frequently asked questions
 keywords: self-directed management chemical substances | chemical substances manager Article 12-5 appointment | protective equipment use manager Article 12-6 | SDS safety data sheet notification | risk assessment target substances | Industrial Safety and Health Act Article 57 label
 tags: Chemical substances | Occupational safety and health | Risk assessment | SDS | Industrial Safety and Health Act
 ---
 
-**In short:** The self-directed management of chemical substances shifts the emphasis from "individual regulation," where the state sets concrete methods per substance, to "self-directed management," where the employer chooses exposure-prevention measures based on its own risk assessment. From April 1, 2024, establishments that manufacture, handle, or supply risk-assessment target substances must appoint a **chemical substances manager** (Article 12-5 of the Industrial Safety and Health Regulations) and, as needed, a **protective-equipment use manager** (Article 12-6). There is no exclusion by industry or size.
+**In short:** Self-directed chemical management requires employers to implement exposure-prevention measures based on SDSs and risk assessment. Establishments handling covered substances appoint managers, subject to exclusions such as products mainly for general consumers. Existing substance-specific regulations generally continue to apply.
 
-For staff who handle hygiene management and labor matters at establishments dealing with chemicals — manufacturing, dry cleaning, food service, cleaning, and the like — this article organizes, from a Shakai Hoken Roumushi's viewpoint, the idea of self-directed management of chemicals and the duties to appoint a chemical substances manager and a protective-equipment use manager, to use SDSs and labels, and to carry out risk assessment (RA). For points outside a Shakai Hoken Roumushi's work — such as creating SDSs or specialist measurement — we make clear whom to assign them to.
+Rules and primary sources checked: October 10, 2026.
 
-## What is the idea of the self-directed management of chemicals?
+This article is for labor and hygiene staff at establishments handling chemicals, including manufacturing, dry cleaning, food service, and cleaning. It covers safety data sheets (SDSs), risk assessment (RA), and manager appointments, plus the April 2026 alternative chemical-name notification system and October 2026 measurement amendments.
 
-Traditionally, chemical-substance measures centered on "individual regulation," where the state set concrete methods for specific substances in ordinances — "handle this substance this way." But only a small part of the chemicals used in Japan was covered by individual regulation, and many occupational accidents arose from unregulated substances.
+## How does self-directed management relate to substance-specific regulations?
 
-So the 2022 amendment of the Industrial Safety and Health laws and regulations broadened coverage to substances whose hazards are confirmed, and moved the center of gravity toward "self-directed management," where the employer performs risk assessment (investigation of danger or harmfulness) and, based on the result, itself chooses and carries out measures to prevent exposure. The relevant amending ordinance was promulgated on May 31, 2022, with part effective April 1, 2023 and part effective April 1, 2024.
+Japan's 2022 amendments to occupational safety and health legislation strengthened arrangements for employers to assess substances with known hazards and select and implement exposure-prevention measures. The relevant amending ordinance was promulgated on May 31, 2022, with major provisions taking effect in stages on April 1, 2023, and April 1, 2024.
 
-The pillars of this shift are broadly three.
+**The Ordinance on Prevention of Hazards Due to Specified Chemical Substances (特定化学物質障害予防規則) and Ordinance on Prevention of Organic Solvent Poisoning (有機溶剤中毒予防規則), among other specific regulations, generally remain applicable.** Self-directed management does not remove those duties. Any special exception requires separate checks of certification and conditions.
 
-| Pillar | Basis | Content |
+| Pillar | Main basis | Content |
 |---|---|---|
-| Conveying information | Industrial Safety and Health Act Article 57 (labeling), Article 57-2 (document delivery) | Labeling on containers/packaging, and notification via an SDS (safety data sheet) of components, hazards, handling precautions, etc. |
-| Assessing risk | Industrial Safety and Health Act Article 57-3, paragraph 1 | Investigate the danger or harmfulness of substances specified by Cabinet Order and notification-target substances (risk assessment) |
-| Structure and measures | Industrial Safety and Health Regulations Articles 12-5 and 12-6, etc. | Appoint a chemical substances manager and a protective-equipment use manager; keep exposure to a minimum |
+| Information | Industrial Safety and Health Act (労働安全衛生法), Articles 57 and 57-2 | Labels and SDS or other notifications for covered substances |
+| Risk evaluation | Article 57-3, paragraph 1 | RA of the hazards and harmfulness of covered substances |
+| Arrangements and exposure prevention | Industrial Safety and Health Regulations (労働安全衛生規則), Articles 12-5, 12-6, and 577-2 | Appointing managers; minimizing exposure and keeping it within concentration limits |
 
-## How far have the risk-assessment target substances expanded?
+The general duty to endeavor to take measures under Article 57-3, paragraph 2, is distinct from specific mandatory duties under Article 577-2, paragraphs 1 and 2, and related provisions of the Regulations. Employers manufacturing or handling covered substances must take measures to minimize exposure. For substances with concentration limits, exposure in indoor workplaces must also be kept at or below those limits.
 
-The duty to perform risk assessment, under Article 57-3, paragraph 1, covers "the substances specified by Cabinet Order under Article 57, paragraph 1" and "notification-target substances" (together, risk-assessment target substances). With the shift to self-directed management, these target substances have been expanded in stages, adding in turn substances whose hazards are confirmed under the international GHS classification.
+## How do you check covered substances and consumer products?
 
-The target substances have been added year by year, with further additions in April 2026. For added substances, a transitional measure that defers the application of labeling and the like for a set period may be provided. What became covered and when, and the current target list, change with each revision, so check the exact substance names and counts against the MHLW's latest target-substance list (e.g., the Workplace Safety and Health site). This article does not present any specific substance count as confirmed information.
+RA target substances are those specified by Cabinet Order under Article 57, paragraph 1, and substances subject to notification under Article 57-2, paragraph 1. Substances with hazards identified through GHS classification are added in stages, including additions in April 2026. Check SDSs, labels, and MHLW's latest lists for substance names, content thresholds, applicable dates, and transitional arrangements. This article does not state a definitive substance count.
 
-Whether a substance you handle is a risk-assessment target substance is first checked against the SDS and label of the product you purchased. If it is a target substance, risk assessment and, based on the result, measures to keep exposure to a minimum are in principle required. For substances with a concentration reference value, exposure at indoor workplaces must be kept at or below that value.
+Products mainly intended for general consumers' daily use may be excluded. There is no exclusion solely because the business is small or operates in food service or cleaning. Check product uses and handling circumstances; the product name alone cannot establish coverage.
 
-## Who appoints the chemical substances manager and the protective-equipment use manager?
+## When and whom must you appoint as managers?
 
-From April 1, 2024, establishments that manufacture, handle, or supply risk-assessment target substances must appoint a chemical substances manager. There is no exclusion by industry or by establishment size, so small establishments are also covered (establishments handling only consumer products, and the like, are outside the scope).
+Since April 1, 2024, each establishment manufacturing, handling, transferring, or supplying RA target substances must appoint a chemical substances manager. There is no industry or size requirement, but exclusions for general consumer products and similar cases must be checked.
 
-| Role | Basis | Who/when appoints | Main duties |
-|---|---|---|---|
-| Chemical substances manager | Industrial Safety and Health Regulations Article 12-5 | The employer, per establishment, within 14 days of the appointment trigger arising (not per task) | Checking labels/SDSs; managing the conduct of risk assessment and the recording/retention of results; managing exposure-prevention measures; managing communication/education to relevant workers |
-| Protective-equipment use manager | Industrial Safety and Health Regulations Article 12-6 | The employer, when having workers use protective equipment based on the risk-assessment result | Selecting effective protective equipment, managing its use, and maintaining it |
+| Role and provision | Deadline and requirements | Main duties |
+|---|---|---|
+| Chemical substances manager (化学物質管理者), Article 12-5 | Within 14 days after the reason for appointment arises; generally chosen from workers within the establishment. Establishments manufacturing RA target substances must check qualification requirements such as completion of specialist training | Managing SDSs and labels, RA and records, exposure prevention, communication, and education |
+| Protective-equipment use manager (保護具着用管理責任者), Article 12-6 | When workers are required to use protective equipment based on RA results, appoint within 14 days after the reason arises; choose a person with relevant knowledge and experience | Effective equipment selection, monitoring use, and maintenance |
 
-The chemical substances manager is in principle appointed from among the workers at the establishment. At establishments that manufacture chemicals, there is a qualification requirement — such as having completed a specialist course set by the Minister of Health, Labour and Welfare. At non-manufacturing establishments there is no statutory qualification requirement, but attending a course to carry out the duties is recommended. Who may be appointed, and which course is needed, should be checked according to the establishment's category.
+Give both managers the authority needed for their duties and communicate their names to the relevant workers. The specialist-training requirement for the chemical substances manager concerns establishments manufacturing **RA target substances**. At other establishments, confirm the person's ability to perform the role; training for those duties is recommended.
 
-## What should an establishment do with SDS checks and labeling?
+## How should SDS updates and decanted containers be handled?
 
-Conveying information is the starting point of self-directed management. What an establishment does differs by its position.
+Businesses purchasing chemicals for use should collect SDSs and labels, check hazards, handling precautions, and first aid, and make the information available to users. When a target substance is **stored** in another container without a label, inform handlers of its name and effects on the human body through a label, document, or other permitted means (Article 33-2 of the Regulations). A label is not the only method, and temporary decanting for work must be distinguished from storage.
 
-- **An establishment that buys and uses chemicals:** check the SDS and label of the product you purchased, and grasp the substances, hazards, handling precautions, and first-aid measures it contains. Because an SDS is a basic document for risk assessment, organize and store it and make it available at any time to the workers who handle the substance. When decanting into another container, apply the necessary indication to that container too.
-- **An establishment that supplies chemicals to others (manufacturers, sellers, etc.):** apply labeling on containers/packaging (Article 57) and give notification via an SDS (Article 57-2). When the SDS content changes, make an effort to notify promptly. Creating and providing the SDS itself is the work of the manufacturer/supplier, not of a Shakai Hoken Roumushi.
+Businesses transferring or supplying substances must provide the required labels and SDS or other notifications. The SDS information on effects on the human body is subject to the following mandatory requirements (Article 34-2-5, paragraphs 2 and 3, effective April 1, 2023).
 
-The information grasped from labels and SDSs feeds into risk assessment, the design of work procedures and the choice of protective equipment, and worker education. At workplaces handling chemicals, the safety and health structure is often reviewed together with hot-environment work and health management; see also [what the worksite must do under the mandatory workplace heatstroke measures (effective June 2025)](/en/labor/column/necchusho-taisaku-gimuka-2025-06-genba-roumu) and [how far are periodic health checkups the company's obligation](/en/labor/column/teiki-kenko-shindan-jisshi-gimu-hiyo-jikan).
+| Stage | Duty and deadline |
+|---|---|
+| Review | Check at intervals of no more than five years whether changes are needed |
+| Update | Make necessary changes within one year after the review |
+| Notify | Notify the recipient of the changes at an appropriate time |
 
-## What are the steps to build a self-directed management structure?
+These obligations differ from duties to endeavor to notify changes in other information. Neither all SDS updates being optional endeavors nor every field having the same deadline is an accurate explanation.
 
-Building the structure is easier to organize in the following order.
+Since April 1, 2026, an alternative chemical-name notification system has applied to trade secrets. It has limited conditions concerning covered substances, hazards, concentrations, and other matters; it does not permit necessary safety information to be omitted. Record retention and disclosure to doctors are also required. Manufacturers and suppliers must check current notices before using the system.
 
-1. **Inventory the chemicals you handle:** take stock of the products you purchase, use, or manufacture at the establishment, and gather each one's SDS and label.
-2. **Check whether they are risk-assessment target substances:** based on the SDSs, confirm whether they are target substances. If there is a target substance, the duty to appoint a chemical substances manager arises.
-3. **Appoint a chemical substances manager:** per establishment, within 14 days of the trigger. A manufacturing establishment confirms the qualification requirement.
-4. **Perform risk assessment:** investigate the danger/harmfulness of the target substances, and record and retain the result. Based on the result, consider measures to keep exposure to a minimum (changing work methods, local exhaust, use of protective equipment, etc.).
-5. **Arrange protective equipment and education:** if you have workers use protective equipment, appoint a protective-equipment use manager, and arrange work procedures and worker education. Reviewing internal safety and health rules together with [from how many employees are work rules mandatory, and what is not](/en/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo) stabilizes operation.
+Manufacturers and suppliers prepare and provide SDSs. Our office does not offer SDS preparation as its service. For health management, see [the company's periodic medical examination duties](/en/labor/column/teiki-kenko-shindan-jisshi-gimu-hiyo-jikan).
 
-Working-environment measurement and specialist measurement of individual workers' exposure concentrations are the domain of a working-environment measurement expert and specialist bodies. For evaluating health effects or whether checkups are needed, consult an occupational physician or specialist body. If a health impairment from chemicals arises in the course of work, the flow of the workers' accident insurance claim and the worker casualty report is summarized in [when an employee is injured at work, what does the company do?](/en/labor/column/rousai-tetsuzuki-shishobyo-houkoku).
+## What should be done following the October 2026 measurement amendments?
 
-四葉社会保険労務士事務所 can advise on maintaining the safety and health structure including appointing a chemical substances manager and a protective-equipment use manager, reviewing the work rules and safety and health management regulations, and how to carry out worker education. Consultation is free; fees are in [the fee schedule](/en/labor/ryokin), and frequently asked questions in [the FAQ](/en/labor/faq).
+Amendments effective October 1, 2026, placed personal exposure measurement within working-environment measurement and added Article 65-3 of 労働安全衛生法. Paragraphs 1 and 2 concern measurement in health-hazard prevention and improvement situations specified by ministerial ordinance; paragraph 3 concerns measurement as needed during RA; paragraph 4 concerns measurement standards.
+
+Statutory qualifications and other requirements apply in designated workplaces. Do not describe every voluntary measurement as an activity reserved uniformly for working-environment measurement experts (作業環境測定士). Check personnel requirements against the work, purpose, designated-workplace category, and method. This article has not verified every combination of qualifications and transitional provisions; a qualified professional and specialist organization must check the applicable notices and ordinances.
+
+Organize confirmation that exposure is within concentration limits using the technical guidance revised on October 1, 2026. If a method other than confirmation measurement is used, the basis for concluding that the limit is met must still be explainable. Parts of this guidance apply from October 1, 2027; do not treat every provision as already applicable.
+
+1. Inventory products, collect SDSs and labels, and check coverage, dates, and transitional provisions.
+2. Appoint a chemical substances manager within 14 days at each establishment; check qualifications, authority, and communication of the name.
+3. Carry out RA and retain its results. **Implement** necessary measures concerning work methods, ventilation, and protective equipment, then communicate and review them.
+4. If workers use protective equipment based on RA results, appoint a knowledgeable and experienced protective-equipment use manager within 14 days.
+5. Check necessary measurement and personnel requirements, education, and health management. Consult a doctor for medical evaluation.
+
+See also [when work rules are mandatory](/en/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo) and [workers' compensation claims and casualty/illness reporting](/en/labor/column/rousai-tetsuzuki-shishobyo-houkoku) for work-related health impairment.
+
+## What can 四葉社会保険労務士事務所 help with?
+
+We offer consultations about safety and health arrangements, including manager appointments, work rules and safety policies, and approaches to education. Consultations are free. See our [fee schedule](/en/labor/ryokin) and [general FAQs](/en/labor/faq).
+
+Consult manufacturers and suppliers for SDS preparation and provision; measurement organizations meeting statutory requirements for measurement methods and implementation; doctors for health-impact evaluation and examination; and lawyers for disputes. External specialists are independent businesses engaged under separate direct contracts. Each invoices the client directly and receives payment directly. Our office does not handle referral fees or kickbacks.
 
 ## Frequently asked questions
 
-**Q. What is the self-directed management of chemicals?**
-A. It is the idea of moving the center of gravity from individual regulation, where the state sets concrete methods per substance, to self-directed management, where the employer chooses exposure-prevention measures based on its own risk assessment. It stems from the 2022 amendment of the Industrial Safety and Health laws and regulations; the relevant amending ordinance was promulgated on May 31, 2022, with part effective April 1, 2023 and part effective April 1, 2024.
+**Q. Does self-directed management remove substance-specific regulations?**
+A. Regulations such as 特定化学物質障害予防規則 and 有機溶剤中毒予防規則 generally continue to apply. Self-directed management strengthens arrangements for employers to select and implement exposure-prevention measures based on RA and SDS information. Distinguish general duties to endeavor from specific mandatory duties under Article 577-2 and other provisions of 労働安全衛生規則.
 
 **Q. Which establishments must appoint a chemical substances manager?**
-A. From April 1, 2024, establishments that manufacture, handle, or supply risk-assessment target substances appoint one per establishment (Article 12-5 of the Regulations). There is no exclusion by industry or size. Appoint within 14 days of the trigger; at establishments that manufacture chemicals, there is a qualification requirement such as completing a specialist course.
+A. Each establishment manufacturing, handling, transferring, or supplying RA target substances appoints a manager within 14 days after the reason arises. Industry or size alone provides no exclusion, but exclusions include products mainly intended for general consumers. The manager is generally chosen from workers within the establishment. Establishments manufacturing RA target substances must check specialist-training or other qualification requirements. Provide authority and communicate the name.
 
-**Q. When do you appoint a protective-equipment use manager?**
-A. When having workers use protective equipment based on the risk-assessment result, the employer appoints one (Article 12-6 of the Regulations). They select effective protective equipment, manage its use, and maintain it.
+**Q. When and whom do you appoint as protective-equipment use manager?**
+A. When workers use protective equipment based on RA results, appoint a person with knowledge and experience of that equipment within 14 days after the reason arises. Check authority and communication of the name, and assign equipment selection, monitoring of use, and maintenance.
 
-**Q. Who creates the SDS? Does the Shakai Hoken Roumushi?**
-A. Creating and providing an SDS (safety data sheet) is done by the employer that manufactures, transfers, or supplies the chemical (the manufacturer/seller) (Article 57-2). It is not a Shakai Hoken Roumushi's work. An establishment that buys and uses chemicals checks the SDS and label it receives and uses them for risk assessment and education. Specialist measurement of the working environment is the work of a working-environment measurement expert.
+**Q. Are SDS update notifications only duties to endeavor, and does a Shakai Hoken Roumushi prepare SDSs?**
+A. They are not all duties to endeavor. Effects on the human body for substances subject to notification must be reviewed at least every five years; necessary changes must be made within one year after review and notified to the recipient at an appropriate time. Distinguish these duties from other change notifications. Manufacturers and suppliers prepare and provide SDSs; our office does not offer that service.
 
-## Sources
+## Sources for this article
 
-- Industrial Safety and Health Act Article 57 (labeling etc.): a person who transfers/supplies, in a container or packaging, dangerous substances or certain health-impairment substances must indicate the name, effects on the body, handling precautions, etc.
-- Industrial Safety and Health Act Article 57-2 (document delivery etc.): a person who transfers/supplies a notification-target substance must notify the counterparty, by document delivery or other method, of the name, components and their content, hazards, handling precautions, first-aid measures, etc. (SDS).
-- Industrial Safety and Health Act Article 57-3, paragraph 1: the employer must investigate the danger or harmfulness of the substances specified by Cabinet Order under Article 57, paragraph 1 and of notification-target substances (risk-assessment target substances) — risk assessment. Paragraph 2 = measures based on the result (duty of effort).
-- Industrial Safety and Health Regulations Article 12-5: appointment of a chemical substances manager. Establishments that manufacture/handle/supply risk-assessment target substances (no industry/size requirement) appoint one per establishment. Effective April 1, 2024.
-- Industrial Safety and Health Regulations Article 12-6: appointment of a protective-equipment use manager, when having workers use protective equipment based on the risk-assessment result. Effective April 1, 2024.
-- Relevant amending ordinance: the Ordinance Partially Amending the Industrial Safety and Health Regulations etc. (promulgated May 31, 2022); part effective April 1, 2023, part effective April 1, 2024.
-- Risk-assessment target substances: expanded in stages by adding, in turn, substances whose hazards are confirmed under the GHS classification; further additions in April 2026. The exact substance names, counts, and application timing follow the MHLW published list (this article does not present any specific substance count as confirmed).
-- [MHLW: new regulation to prevent occupational accidents caused by chemical substances](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000099121_00005.html) and the [Workplace Safety and Health site](https://anzeninfo.mhlw.go.jp/). Accessed October 9, 2026.
-- Business of a Shakai Hoken Roumushi: Article 2 of the Certified Social Insurance and Labor Consultant Act.
+These primary sources were consulted on October 10, 2026. Effective and amendment dates refer to relevant changes; they do not indicate verification of every law's latest amendment date.
 
-This article does not decide whom to consult. Maintaining the safety and health structure including appointing a chemical substances manager and a protective-equipment use manager, reviewing the work rules and safety and health management regulations, and how to carry out worker education are matters a Shakai Hoken Roumushi can help with. Creating and providing an SDS is the work of the chemical's manufacturer/supplier; working-environment measurement and specialist measurement of individual exposure are the work of a working-environment measurement expert; evaluating health effects is the work of an occupational physician or specialist body. The final judgment of whether a substance you handle is a risk-assessment target substance and how far measures are needed rests on the latest primary sources and confirmation with the competent Labour Standards Inspection Office and Prefectural Labour Bureau. If you consult 四葉社会保険労務士事務所, fees are in [the fee schedule](/en/labor/ryokin) and frequently asked questions in [the FAQ](/en/labor/faq).
+- [MHLW overview of new chemical regulations](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000099121_00005.html) and [Workplace Safety website](https://anzeninfo.mhlw.go.jp/): covered substances and transitional provisions.
+- [Notice 基発0531第9号, May 31, 2022, showing amendments through May 8, 2024](https://www.mhlw.go.jp/content/11300000/000987120.pdf): appointments under 労働安全衛生規則 Articles 12-5 and 12-6 (effective April 1, 2024); storage information under Article 33-2 and effects-on-the-body review, updates, and notification under Article 34-2-5, paragraphs 2 and 3 (effective April 1, 2023); exposure minimization under Article 577-2, paragraph 1 (effective April 1, 2023), and compliance with concentration limits under paragraph 2 (effective April 1, 2024), among other provisions.
+- 労働安全衛生法 Articles 57, 57-2, and 57-3, paragraphs 1 and 2: labeling, notification, and RA. [Notice 基発0220第5号, February 20, 2026](https://www.mhlw.go.jp/content/11300000/001660369.pdf): alternative chemical names under Article 57-2, paragraph 3 onward, records, and information disclosure to doctors; relevant provisions effective April 1, 2026.
+- [Notice 基発0730第2号, July 30, 2026](https://www.mhlw.go.jp/content/11300000/001732756.pdf): measurement-related provisions of Act No. 33 of 2025 (promulgated May 14, 2025), Article 65-3, paragraphs 1–4, and personnel requirements; measurement amendments effective October 1, 2026.
+- [Notice 基発1001第16号 and revised technical guidance, October 1, 2026](https://www.mhlw.go.jp/content/11300000/001755272.pdf): confirmation of compliance with concentration limits; applies from that date, with some parts applying October 1, 2027.
+- 社会保険労務士法 Article 2: consultation and guidance. This article does not provide an exhaustive check of consolidated legislation and amendment dates, conditions for individual added substances, or all combinations of measurement qualifications and transitional rules. For a specific application, qualified professionals and specialist organizations must check current primary sources and the product and work conditions.
 
-This article is general information. Individual judgments — such as whether a substance you handle is covered and how far measures are needed — are made by a qualified professional after a consultation, in light of the latest primary sources (the Ministry of Health, Labour and Welfare, etc.) and individual circumstances. Written by [Joji Uramatsu](/en/about/uramatsu) (Shakai Hoken Roumushi, Gyoseishoshi, Registered Real Estate Transaction Specialist).
+This article provides general information. A qualified professional will assess specific products, measures, and measurement methods after discussing current primary sources and establishment circumstances. Enquiries may be made to the competent Labour Standards Inspection Office or Labour Bureau as needed. Written by [浦松丈二](/en/about/uramatsu), Shakai Hoken Roumushi, Gyoseishoshi, and licensed real estate transaction specialist.

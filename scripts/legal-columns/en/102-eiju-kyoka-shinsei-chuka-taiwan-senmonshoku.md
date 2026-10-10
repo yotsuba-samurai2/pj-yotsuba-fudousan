@@ -1,97 +1,123 @@
 ---
-title: "How are the requirements and documents for permanent residence decided? (for professionals from China and Taiwan)"
-excerpt: "Unlike naturalisation, which acquires Japanese nationality, permanent residence keeps your current nationality and changes your status of residence to 'Permanent Resident.' The basis is Article 22 of the Immigration Control and Refugee Recognition Act, and you must meet its three requirements—good conduct, sufficient assets or skills for an independent livelihood, and that your permanent residence is in Japan's interest. The 'Guidelines on Permanent Residence Permission' in principle require 10 or more years of continuous residence (5 or more of them under a work or residential status), plus payment of taxes and public pension and health-insurance premiums, fulfilment of notification duties, and a guarantor. Highly-skilled professionals have a special rule shortening the 10 years to one or three. This article organises the framework and who to hand each part to."
+title: "Permanent residence in Japan: requirements and documents for professionals from China and Taiwan"
+excerpt: "Check residence history, timely tax and insurance payments, guarantor documents and the different implementation dates discussed for the October 2026 guideline revision. Permanent residence, naturalisation and future revocation rules are separate procedures."
 category: "Immigration and Status of Residence (From the Practice of an Administrative Scrivener)"
 ---
-**In short:** unlike naturalisation, which acquires Japanese nationality, permanent residence keeps your current nationality and changes your status of residence to "Permanent Resident." The basis is Article 22 of the Immigration Control and Refugee Recognition Act, which requires meeting three requirements—that conduct is good, that the person has assets or skills sufficient for an independent livelihood, and that the person's permanent residence is found to be in the interest of Japan. The "Guidelines on Permanent Residence Permission" require, in principle, 10 or more years of continuous residence in Japan, with 5 or more of them under a work or residential status, and further review payment of taxes and public pension and public health-insurance premiums, fulfilment of notification duties under the Immigration Act, and securing a guarantor. Highly-skilled professionals have a special rule shortening these 10 years to one or three. This article is general information; the final judgement on individual eligibility and documents is made by a qualified professional and the Immigration Services Agency in light of the circumstances. Preparing the permanent-residence application and acting as filing agent is handled by Yotsuba Administrative Scrivener Office (administrative scrivener); the arranging of tax certificates, income and social-insurance premiums by a tax accountant, the tax office, the pension office, or the insurer; and an action to revoke a refusal by an attorney, each as an independent business under a separate contract. Yotsuba Administrative Scrivener Office and Yotsuba Real Estate Co., Ltd. are separate businesses, and our office receives no referral fee.
+**Key point:** permanent residence changes your status of residence to “Permanent Resident” while retaining your nationality. Professionals should check their residence history, income and timely tax payments, and confirm the applicable date of each part of the October 2026 guideline revision.
 
-## How does permanent residence differ from naturalisation, and which should you choose?
+**Last updated: 2026-10-10**
 
-Permanent residence and naturalisation are both ways to keep living in Japan for a long time, but their legal nature differs entirely. Permanent residence is a change to "Permanent Resident," one of the statuses of residence, and your nationality remains that of your home country (China, Taiwan, etc.) (Immigration Control and Refugee Recognition Act, Article 22). By contrast, naturalisation acquires Japanese nationality itself; its basis is Article 5 of the Nationality Act, and the counter is the Legal Affairs Bureau (the authority is the Minister of Justice).
+This article helps professionals from China and Taiwan organise requirements and evidence before applying. The Immigration Services Agency decides applications; a qualified professional considers the individual application strategy.
 
-For professionals from mainland China and Taiwan, the treatment of nationality is especially large in practice. If you naturalise and acquire Japanese nationality, you will in principle leave or lose your former nationality. China does not recognise dual nationality, and Taiwan too, in principle, has you lose (or go through a procedure to renounce) nationality on naturalising in Japan. If you want to keep your home-country nationality and family register, permanent residence; if you want participation rights and the like as a Japanese national, naturalisation—this is the major fork.
+## How does permanent residence differ from naturalisation?
+
+Permanent residence is a change of status under Article 22 of the Immigration Control and Refugee Recognition Act (出入国管理及び難民認定法). Naturalisation acquires Japanese nationality under Articles 4 and 5 of the Nationality Act (国籍法). Permanent residence does not confer Japanese nationality.
 
 | Item | Permanent residence | Naturalisation |
 |---|---|---|
-| Nature | Change status to "Permanent Resident" | Acquire Japanese nationality |
-| Home-country nationality | Can be kept | Lost in principle |
-| Basis | Immigration Act, Article 22 | Nationality Act, Article 5 |
-| Counter | Immigration Services Agency (regional) | Legal Affairs Bureau |
-| Period / renewal | No renewal of period of stay needed | Not subject to residence management (a national) |
+| Nationality | Retain current nationality | Acquire Japanese nationality; check the law and procedures governing the previous nationality separately |
+| Filing office | Regional immigration office for your address | Legal Affairs Bureau or District Legal Affairs Bureau |
+| Filing method | A duly notified administrative scrivener may handle application submission | Applicants aged 15 or older apply in person; a legal representative attends for those under 15 |
+| Period of stay | No renewal of the period of stay; re-entry and residence-card procedures remain separate | Japanese nationals are outside the foreign-resident management system |
 
-Which to choose is an individual judgement that varies by travel to and from the home country, assets and family. The requirements for naturalisation are organised in [Requirements for Naturalisation and the Nationality Act (for those from China and Taiwan)](https://luck428.com/legal/column/kika-shinsei-yoken-kokusekiho-chuka-taiwan). For running a company while residing in Japan under the "Permanent Resident" status, [The Business Manager Status and Company Formation (for Chinese entrepreneurs)](https://luck428.com/legal/column/keieikanri-zairyu-chuka-kigyousha-kaisha-setsuritsu) is also a useful reference.
+Article 5(1)(v) of Japan’s Nationality Act sets a nationality condition for naturalisation. Mainland China and Taiwan have different rules and procedures for loss of nationality. Article 11 of Taiwan’s Nationality Act (國籍法) provides for loss with Ministry of the Interior permission in specified circumstances. It does not support a statement that Taiwan universally prohibits dual nationality or that Japanese naturalisation automatically removes Taiwanese nationality. Check Japan’s condition and the law governing your current nationality separately. See [Naturalisation requirements and the Nationality Act](/en/legal/column/kika-shinsei-yoken-kokusekiho-chuka-taiwan) for the related procedure.
 
-## How do you count the years of residence, years of work and independent livelihood?
+For residence based on running a business, also check the separate requirements for [Business Manager status](/en/legal/column/keieikanri-zairyu-chuka-kigyousha-kaisha-setsuritsu).
 
-The statutory requirements for permanent residence are the following three in Article 22(2) of the Immigration Act. For some statuses such as spouses and children, requirements (1) and (2) may be exempted.
+## How should residence history and highly skilled exceptions be checked?
 
-1. Conduct is good
-2. The person has assets or skills sufficient for an independent livelihood
-3. The person's permanent residence is found to be in the interest of Japan
+Article 22(2) sets the basic requirements of good conduct, an independent livelihood and consistency with Japan’s interests. Some spouses and children of Japanese nationals or permanent residents have statutory exceptions to certain requirements.
 
-Of these, the "Guidelines on Permanent Residence Permission" concretise (3), "in the interest of Japan (national interest)," and show a guide for years of residence. The basis is, in principle, 10 or more years of continuous residence in Japan, and 5 or more of them under a work or residential status. Because it is "continuous," a long absence from Japan and the like can reset the count.
+The table summarises the previous guideline framework. The complete conditions and transitional provisions of the 1 October 2026 revision remain **unverified** here, so compare the framework with the version applicable to your application.
 
-| Category | Guide for years of residence |
+| Route | Matters to establish |
 |---|---|
-| Principle | 10+ years of continuous residence (5+ under a work/residential status) |
-| Highly-skilled professional (70+ points) | 3+ years of continuous residence |
-| Highly-skilled professional (80+ points) | 1+ year of continuous residence |
-| Spouse of a Japanese national / permanent resident, etc. | A set number of years married / resident (by individual standard) |
+| General route | 10 years of continuous residence, including 5 years with a qualifying work or residential status; Technical Intern Training and Specified Skilled Worker (i) are excluded from the 5-year work count |
+| Highly skilled, 70-point route | Whether the 3-year exception applies; evidence of points at the required past reference date as well as at application, and continuous residence |
+| Highly skilled, 80-point route | Whether the 1-year exception applies; the required historical points and continuous residence must also be checked |
+| Spouse and other exceptions | The relevant relationship, marriage duration and continuous residence requirements |
+| Checks across routes | Current status and period of stay, absences and public obligations; confirm the treatment of the maximum period of stay under the applicable version |
 
-Requirement (2), independent livelihood, is viewed on a household basis, by whether the person will not become a public burden and can be expected to maintain a stable livelihood into the future. Income and the stability of the occupation are asked, but the specific amounts and the evaluation are reviewed year by year. The "Guidelines on Permanent Residence Permission" were revised on 1 October 2026 and apply to applications on or after 1 April 2027. Because the review is moving toward adding factors such as Japanese-language ability (around B1 level or above) and household income and pension prospects, be sure to confirm the latest official guidelines, including which version applies at the time of your application.
+Current points alone do not establish eligibility for an exception. Organise departure and return dates as well as residence statuses; continuity depends on the circumstances. Income stability and the household’s living circumstances also matter when assessing an independent livelihood.
 
-## How far are tax, pension and health-insurance payments examined in the permanent-residence review?
+## When does the October 2026 revision apply?
 
-In (3), national interest, whether you have properly fulfilled public duties is weighed heavily. Specifically, it is confirmed whether you have paid, by the due dates, income and resident taxes, public pension (employees' or national pension) premiums, and public health-insurance (health insurance or national health insurance) premiums. In addition, that you have not been sentenced to imprisonment or a fine, and that you fulfil the various notification duties under the Immigration Act (notifications of place of residence, affiliated organisation, etc.), are examined.
+A publication date and an implementation date are different. At the Minister of Justice’s **4 August 2026 press conference, describing the draft**, different dates were explained for the income component and the guidelines as a whole.
 
-In particular, "late payment" of premiums and taxes has recently been viewed strictly. A record of paying in a hurry after the deadline can affect the evaluation. Furthermore, the 2024 (Reiwa 6) amended Immigration Act (Act No. 60 of 2024) newly established grounds for revocation allowing the status of "Permanent Resident" to be revoked even after permission, where the person wilfully fails to pay public dues or is sentenced to a certain punishment (Immigration Act, Article 22-4). Both obtaining the permission and continuing to fulfil public duties afterward are now required.
-
-Note here that "arranging" income and tax itself is the domain of a tax accountant and the tax office. Our office supports assembling the taxation and tax-payment certificates and documents evidencing the payment status of social-insurance premiums into the application, but does not step into tax-saving or the content of a return. Confirming the enrolment record of pension and health insurance is handled by the pension office and the insurer.
-
-## What do you prepare for a guarantor and submitted documents?
-
-A guarantor is required for a permanent-residence application. The guarantor is generally a Japanese national or a permanent resident, expected to guide and support the applicant in complying with laws and fulfilling public duties (a moral guarantee, different from a joint-and-several debt in law). Who to ask must be settled before applying.
-
-Examples of the main submitted documents are as follows. Because they differ by status of residence and family composition, confirm the latest content in the list of required documents.
-
-| Category | Examples of documents |
+| Component | Draft-stage explanation and what to confirm |
 |---|---|
-| Identity / residence | Application form, photo, residence card and passport, resident record |
-| Occupation / income | Certificate of employment, resident-tax taxation and payment certificates (recent years) |
-| Public duties | Documents evidencing the payment status of public pension and health-insurance premiums |
-| Guarantee | Letter of guarantee, documents on the guarantor's occupation and income |
-| Other | A statement of reasons; for highly-skilled, the calculation-result notice or points sheet |
+| Income component | Implementation from 2026-10-01 was explained; confirm which applications and pending cases the final version covers |
+| Guidelines as a whole | Implementation from 2027-04-01 was explained; check each component and transitional provisions in the final version |
+| Revision dated 1 October | Official publication information was located; comparison of every provision in the final text is incomplete |
 
-The application is made to the regional immigration office (branch) of the Immigration Services Agency having jurisdiction over your place of residence. The standard processing period is said to be about four months, though in practice it can take longer. A fee is payable when permission is granted (confirm the latest amount with the official guidance).
+Accordingly, this article does not state additional language, income or pension-prospect requirements, or their application to new and pending cases, as settled conditions. Consult the [official revised-guideline notice](https://www.moj.go.jp/isa/10_00279.html) and confirm the version applicable to your filing date and status with a qualified professional and immigration authorities.
 
-## If refused, who handles the filing agency and the litigation?
+## How do payment checks differ from revocation after permission?
 
-Preparing the permanent-residence application and acting as filing agent at the counter is handled, as an independent business, by an administrative scrivener who has filed to act as a filing agent (Yotsuba Administrative Scrivener Office). Through filing agency, you can in principle advance the procedure without the applicant going to the counter many times. If you choose naturalisation, an administrative scrivener can support preparing the naturalisation application under Article 5 of the Nationality Act, but this is a separate procedure before the Legal Affairs Bureau, with a different place of filing and requirements from permanent residence.
+The application review checks tax, public pension and public health-insurance payments, immigration notifications and other obligations. Payment deadlines matter as well as outstanding balances; paying later does not necessarily remove the effect of a missed deadline. Gather taxation and payment certificates, receipts and enrolment/payment records, including periods of job or insurance changes.
 
-The division of roles is as follows. Preparing the application documents and acting as filing agent for permanent-residence and naturalisation applications is by Yotsuba Administrative Scrivener Office (administrative scrivener); arranging income and tax and obtaining taxation/payment certificates by a tax accountant or the tax office; confirming the enrolment record of pension and health insurance by the pension office or the insurer; and, should it be refused, an administrative appeal or action to revoke the disposition by an attorney. If you also consider buying a home in Japan, the sale/brokerage of the real estate is handled by Yotsuba Real Estate Co., Ltd. (a real estate broker), but Yotsuba Administrative Scrivener Office and Yotsuba Real Estate Co., Ltd. are separate businesses.
+Revocation after permission is a separate procedure. The new grounds concerning intentional non-payment of public dues by permanent residents, introduced by Act No. 60 of 2024, take effect on **2027-04-01** and are **not yet in force as of 2026-10-10**. Intentional non-payment, ordinary late payment and financial hardship cannot be treated as the same circumstance. Individual decisions after commencement depend on the official procedure and the person’s circumstances.
 
-Each field is on the premise that you contract separately with each qualified professional or operator as an independent business, and our office receives no referral fee. For the flow of engagement, see [Engagement Flow](https://luck428.com/legal/nagare); for fees, [Fee Schedule](https://luck428.com/legal/ryokin); and for the whole picture of our services, [Permits and Applications Services](https://luck428.com/legal/services). The final judgement on individual eligibility and required documents is made by a qualified professional and the Immigration Services Agency in light of the circumstances.
+## What guarantor evidence and application documents are needed?
+
+A guarantor is normally a Japanese national or permanent resident. This is a moral undertaking, distinct from a legal guarantee of joint and several debt. The basic evidence is the letter of guarantee and a document identifying the guarantor. Do not treat occupation and income evidence as universally required; respond separately if additional evidence is requested.
+
+| Category | Examples |
+|---|---|
+| Identity and residence | Form, photograph, residence card, passport and resident record |
+| Employment and income | Employment certificate and resident-tax assessment/payment certificates |
+| Public obligations | National-tax payment certificates and evidence of public pension/health-insurance payments |
+| Guarantor | Letter of guarantee and identifying document |
+| Highly skilled routes | Points calculation and evidence supporting points at the relevant dates |
+
+These are examples. The years covered and additional evidence depend on status and family circumstances. Use the official [work-status list](https://www.moj.go.jp/isa/applications/procedures/zairyu_eijyu03.html) or [highly skilled list](https://www.moj.go.jp/isa/applications/procedures/nyuukokukanri07_00130.html) for your route. The complete lists and latest individual additional requests remain unverified here.
+
+| Procedure | Published guidance or check |
+|---|---|
+| Filing office | Regional immigration office with jurisdiction over your address |
+| Standard processing period | 4–6 months; this does not guarantee the actual waiting time |
+| Fee upon permission | Check the official amount applicable when payment is due |
+
+## Who can assist, including after a refusal?
+
+Immigration application submission and naturalisation in person are distinct. A duly notified administrative scrivener may submit a permanent-residence application, although personal attendance may still be requested. An administrative scrivener can prepare naturalisation documents; the applicant or legal representative must still attend to apply.
+
+After refusal, options include confirming the reasons and considering a new application supported by revised evidence, or consulting an attorney about litigation. The ordinary administrative-review appeal is not an available procedure here: Article 7(1)(x) of the Administrative Complaint Review Act (行政不服審査法) excludes the relevant matters, and the Agency’s procedure page states there is no administrative appeal method. An attorney assesses whether an action for revocation or other litigation is available and its deadline.
+
+| Matter | Professional or public counter |
+|---|---|
+| Permanent-residence documents and submission by a duly notified scrivener; naturalisation document support | 四葉行政書士事務所 |
+| Tax advice and returns | Tax accountant; tax certificates are issued by tax authorities |
+| Pension and health-insurance records | Pension office or insurer |
+| Litigation challenging refusal | Attorney |
+| Home purchase and real-estate brokerage | 四葉不動産株式会社 |
+
+四葉行政書士事務所, 四葉社会保険労務士事務所 and 四葉不動産株式会社 are independent businesses. Engage private professionals through separate contracts; each bills and receives payment directly. Our office receives no referral fees. Applications and certificate requests at public offices are separate administrative procedures. For personal immigration assistance, see [Status of Residence Services](/en/legal/services/visa), [Engagement Flow](/en/legal/nagare) and [Fee Schedule](/en/legal/ryokin) and the broader [Licensing and Application Services](/en/legal/services).
 
 ## FAQ
 
-**Q. Which should I choose, permanent residence or naturalisation?**
-A. The major fork is whether you want to keep your home-country nationality or acquire Japanese nationality. Permanent residence changes your status of residence to "Permanent Resident" while keeping your nationality (Immigration Act, Article 22); naturalisation acquires Japanese nationality (Nationality Act, Article 5). Because mainland China and Taiwan do not in principle recognise dual nationality, naturalising means losing your former nationality. It is an individual judgement in light of travel, assets and family.
+**Q. How is nationality treated differently under permanent residence and naturalisation?**
+A. Permanent residence retains your nationality; naturalisation acquires Japanese nationality. Loss of previous nationality follows different rules in mainland China and Taiwan. Japanese naturalisation does not justify assuming automatic loss of Taiwanese nationality; check Japan’s conditions and Taiwan’s permission and procedures separately.
 
-**Q. How are the 10 principle years of residence counted?**
-A. The guide is, in principle, 10 or more years of continuous residence in Japan, with 5 or more of them under a work or residential status (Guidelines on Permanent Residence Permission). Because it is "continuous," a long absence from Japan can reset the count. Highly-skilled professionals have a special rule shortening it to three years or one year, depending on points.
+**Q. If I currently have 80 points, can I use the one-year route?**
+A. Current points alone do not establish that. Check points at the required past reference date, continuous residence and supporting evidence. The complete October 2026 conditions and transitional provisions remain unverified here; compare against the official version applicable when you apply.
 
-**Q. Is it a disadvantage if I have paid taxes or pension late?**
-A. It can affect the outcome. In the national-interest review, whether you paid taxes and public pension and health-insurance premiums by the due dates is confirmed, and late payment tends to be viewed strictly. Further, the 2024 amended Immigration Act newly established grounds for revoking permanent residence where, even after permission, the person wilfully fails to pay public dues (Immigration Act, Article 22-4). Arranging income and tax itself is the domain of a tax accountant and the tax office.
+**Q. Does late payment of tax or pension mean permanent residence will be revoked?**
+A. Timely-payment checks during application and revocation after permission are separate. New grounds concerning intentional non-payment take effect on 2027-04-01 and are not yet in force on 2026-10-10. Do not equate ordinary late payment or financial hardship with intentional non-payment; assess the circumstances and official rules.
 
-**Q. Is a guarantor always required?**
-A. Yes, a guarantor is required for a permanent-residence application. It is generally a Japanese national or a permanent resident; it is a moral guarantee that the applicant will comply with laws and fulfil public duties. It differs from a joint-and-several debt in law, but who to ask must be settled before applying.
+**Q. Is the guarantor’s income evidence mandatory?**
+A. The normal basic evidence is the guarantee letter and a document identifying the guarantor. Do not assume income and occupation evidence are always mandatory; check the current list for your route and any individual additional request.
 
-## Sources (Primary Information)
+## Sources and verification scope
 
-- e-Gov Law Search, "Immigration Control and Refugee Recognition Act," Article 22 (permanent residence; good conduct, independent livelihood, national interest), Article 22-4 (revocation of status of residence; amended by Act No. 60 of 2024) (accessed 2026-10-06)
-- Immigration Services Agency, "Guidelines on Permanent Residence Permission" (revised 1 October 2026; applies to applications on or after 1 April 2027; 10 principle years of residence with 5+ under work, etc., fulfilment of public duties, guarantor, special rule for highly-skilled) (moj.go.jp/isa; accessed 2026-10-06)
-- Immigration Services Agency, "Permanent Residence Application"—submitted documents, standard processing period, place of filing (the regional immigration office having jurisdiction over the place of residence) (moj.go.jp/isa; accessed 2026-10-06)
-- Immigration Services Agency, "Q&A on the proper operation of the permanent-residence system" (grounds for revocation based on non-payment of public dues, etc.; Immigration Act, Article 22-4) (moj.go.jp/isa; accessed 2026-10-06)
-- e-Gov Law Search, "Nationality Act," Article 5 (conditions for naturalisation) (accessed 2026-10-06)
+Verification date: 2026-10-10. Consult official current texts for amendment histories; the amendment and commencement dates below are distinct from a complete review of every amendment.
 
-This article is general information and does not guarantee the permission eligibility, required documents or review time of a particular application. How the years of residence are counted, the specific evaluation of independent livelihood and national interest, factors such as Japanese-language ability and household income, and the details of submitted documents may change by the Immigration Services Agency's practice and by revision of the guidelines, so be sure to confirm the latest official guidelines, including which version applies at the time of your application. Preparing the application documents and acting as filing agent for permanent-residence and naturalisation applications is by Yotsuba Administrative Scrivener Office (administrative scrivener); arranging income and tax and obtaining taxation/payment certificates by a tax accountant or the tax office; confirming the enrolment record of pension and health insurance by the pension office or the insurer; an administrative appeal or action to revoke a refusal by an attorney; and the sale/brokerage of real estate for a home purchase by Yotsuba Real Estate Co., Ltd. (a real estate broker), each as an independent business under a separate contract. Yotsuba Administrative Scrivener Office and Yotsuba Real Estate Co., Ltd. are separate businesses. Our office receives no referral fee. Individual judgements are made by a qualified professional after a meeting. Written by [Joji Uramatsu](https://luck428.com/about/uramatsu), administrative scrivener and licensed real estate broker.
+- [Immigration Control and Refugee Recognition Act](https://laws.e-gov.go.jp/law/326CO0000000319), Articles 22 and 22-4. New permanent-resident revocation grounds under Act No. 60 of 2024 commence on 2027-04-01.
+- [Previous guideline notice](https://www.moj.go.jp/isa/applications/resources/nyukan_nyukan50.html), [revision dated 2026-10-01](https://www.moj.go.jp/isa/10_00279.html) and [Minister’s press conference, 2026-08-04](https://www.moj.go.jp/hisho/kouhou/hisho08_00905.html). The conference supports the draft-stage dates; the complete final conditions and transitional rules remain unverified.
+- [Permanent-residence procedure](https://www.moj.go.jp/isa/applications/procedures/16-4.html), [work-status documents](https://www.moj.go.jp/isa/applications/procedures/zairyu_eijyu03.html) and [highly skilled documents](https://www.moj.go.jp/isa/applications/procedures/nyuukokukanri07_00130.html). Published basic evidence and standard processing time were checked; the entire status-specific lists remain unverified.
+- [Revocation Q&A](https://www.moj.go.jp/isa/applications/procedures/torikeshi_00002.html) and [revocation guidelines](https://www.moj.go.jp/isa/deportation/resources/nyukan_nyukan85_00002.html). Commencement: 2027-04-01; complete operational text has not been compared.
+- [Nationality Act](https://laws.e-gov.go.jp/law/325AC0000000147), Articles 4 and 5(1)(v), and [naturalisation application procedure](https://www.moj.go.jp/ONLINE/NATIONALITY/6-2.html).
+- [Taiwan Ministry of the Interior: Nationality Act, 2024 text](https://www.ris.gov.tw/documents/data/2/1/4ddf1179-c418-4fa7-a319-07e43f961b89.pdf), Articles 11 and 12, and [current Taiwan Nationality Act](https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=D0030001). Confirm individual military-service conditions and later amendments separately.
+- [Administrative Complaint Review Act, official Japanese text](https://www.japaneselawtranslation.go.jp/ja/laws/view/4560), Article 7(1)(x).
+
+This article provides general information. A qualified professional makes individual legal assessments after consultation; permission, documents and processing time are not guaranteed. Reconfirm the unverified final conditions and transitions, revocation operations, complete document lists and full amendment histories before applying. Written by [Joji Uramatsu](/en/about/uramatsu), administrative scrivener and licensed real-estate transaction specialist.

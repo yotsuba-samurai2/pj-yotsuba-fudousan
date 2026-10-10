@@ -4,7 +4,6 @@ import {
   getAutopublishOverview,
   holdColumnsByKey,
   publishColumnsByKey,
-  publishPendingColumns,
 } from "@/lib/columns-autopublish";
 
 /**
@@ -58,9 +57,12 @@ export async function POST(req: NextRequest) {
         return NextResponse.json(
           body.action === "hold" ? await holdColumnsByKey(keys) : await publishColumnsByKey(keys),
         );
-      case "publishAllPending":
-        // 画面で本数を見たうえで押す操作なので、上限で止めない
-        return NextResponse.json(await publishPendingColumns({ force: true }));
+      case "publishAllPending": {
+        // Authenticated explicit publication is separate from cron/force's quality gate.
+        // Drafts, already-published articles and scheduled articles are excluded.
+        const overview = await getAutopublishOverview();
+        return NextResponse.json(await publishColumnsByKey(overview.pending.map((item) => item.key)));
+      }
       default:
         return NextResponse.json(
           { error: "action は hold / publish / publishAllPending のいずれかです" },

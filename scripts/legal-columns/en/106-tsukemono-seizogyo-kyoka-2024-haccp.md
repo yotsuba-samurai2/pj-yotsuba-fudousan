@@ -1,93 +1,99 @@
 ---
-title: "Do You Need a License to Sell Pickles? How to Get the Pickle-Manufacturing License, Whose Grace Period Ended in June 2024"
-excerpt: "To make pickles (asazuke, kimchi, umeboshi, takuan, etc.) for sale at a farm stand, roadside station or online, you in principle need a 'pickle-manufacturing business' license. This business was newly added when licensed categories were revised by the 2018 reform of the Food Sanitation Act (Act No. 46 of 2018); it is set in Article 35, Item 29 of the Enforcement Order, and the license is granted by the public health center under Article 55. A three-year transitional measure ended on 31 May 2024, so from 1 June 2024 you cannot make pickles for sale without a license. This article is general information and does not make the final judgment on whether a given facility meets the standards."
+title: "Pickle-manufacturing permits in Japan: facilities and HACCP"
+excerpt: "Making umeboshi, lightly pickled vegetables and other pickles for sale generally requires a manufacturing permit. This guide explains the transition that ended in 2024, facility requirements and ongoing HACCP-based hygiene management."
 category: "Permit and License Procedures (From the Practice of an Administrative Scrivener)"
 ---
-**In short:** to make pickles (asazuke, kimchi, umeboshi, takuan, etc.) sold at a farm stand, roadside station or online, you in principle need a "pickle-manufacturing business" license. This is a category newly added when licensed business categories were revised by the Act partially amending the Food Sanitation Act and other laws (Act No. 46 of 2018); it is set in Article 35, Item 29 of the Enforcement Order of the Food Sanitation Act, and the license is granted by the public health center (the prefectural governor, etc.) under Article 55 of the Act. Operators who were already in business before the Enforcement Order took effect (1 June 2021, Reiwa 3) had a three-year transitional measure, but it ended on 31 May 2024 (Reiwa 6), so from 1 June 2024 you can no longer make pickles for sale without a license. The license requires conformity to the facility standards set by prefectural ordinance (Article 54), sanitation control along HACCP (Article 51) and the placement of a food-sanitation supervisor, and a home kitchen as-is will not get a license. This article is general information and does not make the final judgment on whether a given facility meets the standards. The administrative scrivener of the Yotsuba group handles, as an independent business, support for the license-application documents and for putting a sanitation-control plan in order. The conformity review and license are for the public health center; the construction of the production room is for an architect and equipment contractor; sales tax is for a tax accountant; employees' labor matters are for a labor and social-security attorney; and finding premises is for a real-estate agent, a separate business, each contracted separately.
+**In short:** manufacturing umeboshi, lightly pickled vegetables or other pickles for sale generally requires a pickle-manufacturing permit. The transition for existing operators ended in May 2024. Confirm facility requirements and HACCP-based hygiene management with the public health center responsible for the facility.
 
-## Why did selling pickles come to need a business license in the first place?
+Updated: 2026-10-10
 
-For a long time pickles remained subject only to a "notification" under prefectural ordinance, and in many areas no license under the Food Sanitation Act was needed. However, against the background of food poisoning caused by asazuke and the like, the 2018 reform of the Food Sanitation Act (Act No. 46 of 2018) revised licensed categories across the board, and pickle manufacturing was newly positioned as a licensed category. The basis is Article 35, Item 29 of the Enforcement Order of the Food Sanitation Act, which lists it as a category requiring a license.
+## When did pickle manufacturing become subject to a permit?
 
-| Item | Content (basis) |
-| --- | --- |
-| Addition of the category | Revision of licensed categories by the Act partially amending the Food Sanitation Act and other laws (Act No. 46 of 2018) |
-| Position | "Pickle-manufacturing business," Article 35, Item 29 of the Enforcement Order |
-| Basis of the license | Article 55 of the Food Sanitation Act (license by the prefectural governor, etc.) |
-| Effective date of the Enforcement Order | 1 June 2021 (Reiwa 3) |
+The licensing reform following the 2018 amendment to the Food Sanitation Act (食品衛生法) added pickle manufacturing as a licensed category. It appears in Article 35, Item 29 of the enforcement order, and the prefectural governor or other competent authority grants the permit under Article 55 of the Act. The local public health center handles applications and consultations.
 
-Many local governments explain that pickle manufacturing includes making umeboshi, takuan, asazuke, kimchi and pickles, as well as making foods whose main ingredient is pickles; the exact scope differs by public health center. The relationship with other food-related licenses is organised in [Food-manufacturing licenses and the standards for premises and equipment](https://luck428.com/legal/column/shokuhin-seizogyo-kyoka-bukken-setsubi-kijun). Please also see our [Permit and license services](https://luck428.com/legal/services).
+Also arrange a food sanitation responsible person (食品衛生責任者). Confirm qualification and training requirements with the application office.
 
-## From June 2024, what happens if you sell pickles without a license?
+| Date | Position |
+|---|---|
+| 1 June 2021 | New licensing system took effect |
+| 31 May 2024 | Three-year transition for operators already in business ended |
+| From 1 June 2024 | A permit is required to manufacture pickles for sale; new operators obtain it before opening |
 
-Operators who had been making pickles before the Enforcement Order took effect (1 June 2021, Reiwa 3) were given a three-year transitional measure. That period ended on 31 May 2024 (Reiwa 6), so from 1 June 2024 you cannot make pickles for sale without a license.
+This describes a transition that ended in 2024, not a new 2026 system. Explain ingredients and processes for umeboshi, takuan, lightly pickled vegetables, kimchi, pickles, etc. to the health center to confirm the application category. For other products, see [food-manufacturing permits and facility standards](/en/legal/column/shokuhin-seizogyo-kyoka-bukken-setsubi-kijun).
 
-| Time | Treatment |
-| --- | --- |
-| In business before 1 June 2021 | Needed to obtain a license by 31 May 2024 (transitional measure) |
-| From 1 June 2024 | Cannot make pickles for sale without a license; new entrants need a license before starting |
+## Does personal consumption or free distribution require a permit?
 
-Operating without a license (a violation of Article 55, paragraph 1 of the Food Sanitation Act) is subject, under Article 82 of the same Act, to imprisonment for up to two years or a fine of up to 2 million yen, and under the dual-liability provision of Article 88 a corporation may also face a fine of the same amount. Making pickles for your own consumption, or giving them away for free, usually does not amount to manufacturing or selling "as a business," but once you sell repeatedly and continuously a license is required. If you are unsure whether you fall under this, rather than assuming, confirm directly with the public health center.
+Distinguish personal consumption and private exchanges with family or acquaintances from repeated sales or distribution to an unspecified public. The Act includes provisions covering free supply to unspecified persons or many people: being free does not automatically exclude an activity. Tell the health center the frequency, recipients and manufacturing method. Equally, not every free distribution necessarily requires a pickle-manufacturing permit.
 
-## How far do the facility standards for a production room (handwashing, partitioning, water supply and drainage) go?
+| Operating without a required permit | Provision of 食品衛生法 |
+|---|---|
+| Violation of Article 55(1) | Article 82: imprisonment (拘禁刑) up to two years or a fine up to ¥2 million |
+| Corporate responsibility | Article 88: a corporation may also be fined under the dual-liability provision |
 
-A license is granted only once the facility conforms to the facility standards set by prefectural ordinance (Article 54 of the Food Sanitation Act; set with reference to the Ministry's standards). A home kitchen that is one space with the living quarters will, as a rule, not get a license. Typical points of confirmation are as follows, but the specific figures and specifications must always be confirmed in the ordinance and guidelines of the competent public health center.
+Application to a specific activity requires confirmation by a qualified professional and the competent authority.
 
-| Category | Main points of confirmation (differs by ordinance) |
-| --- | --- |
-| Partitioning | Partition the production room from living and other rooms with walls, and separate work zones |
-| Handwashing | Provide handwashing facilities that can wash and disinfect in the production room and toilet |
-| Water supply and drainage | Secure water (fit for drinking), appropriate drainage, and washing facilities |
-| Structure and materials | Floors, walls and ceilings easy to clean; utensils of impermeable, easy-to-clean materials |
-| Zones and ventilation | Changing area, storage, ventilation, lighting, and pest-control measures |
+## What washing, disinfection and refrigeration equipment is needed?
 
-Construction and interior work of the production room is a field for an architect and equipment contractor, and whether the use and equipment are possible at the stage of renting premises is a matter for real-estate confirmation. Because fixing the layout and plumbing afterwards runs up costs, it is practice to have the public health center review the drawings in a prior consultation before you secure the premises. The way of thinking about equipment for food premises is also touched on in [Food-manufacturing licenses and the standards for premises and equipment](https://luck428.com/legal/column/shokuhin-seizogyo-kyoka-bukken-setsubi-kijun).
+Local ordinances set facility standards under Article 54 of the Act. A home kitchen cannot necessarily be used unchanged for commercial manufacturing. Consult the health center on separation from living areas, contamination prevention and process-appropriate equipment before construction or signing a lease.
 
-## As sanitation control along HACCP, what should a small operator record?
+| Point to check | Examples, subject to the product and local standards |
+|---|---|
+| Separation and workflow | Separate living areas; prevent contamination of working areas, ingredients and products |
+| Handwashing | Washing/disinfection facilities and taps preventing recontamination of clean hands |
+| Water and drainage | Drinking-quality water, suitable drainage and process-appropriate washing equipment |
+| Washing and disinfection | Equipment needed to wash and disinfect ingredients for the products manufactured |
+| Lightly pickled vegetables | Refrigeration equipment when manufacturing these products |
+| Storage and structure | Ingredient/product storage, cleanable structure, ventilation, lighting and pest control |
 
-From 1 June 2020 (Reiwa 2), and fully in force from 1 June 2021 after the transitional period, "sanitation control along HACCP" is in principle required of all food business operators (Article 51 of the Food Sanitation Act). Pickle manufacturing is no exception. That said, small operators and the like are allowed "sanitation control incorporating the idea of HACCP" according to the characteristics of the food handled, proceeding along the sector-specific guidelines published by the Ministry of Health, Labour and Welfare.
+The ministry's pickle-manufacturing material also gives examples of flexible treatment for existing facilities: earthen walls in an area used only to store ingredients, or an outdoor ingredient-washing area separated from the manufacturing room. These are not blanket exemptions for every facility. Show products and processes on a plan and confirm the local ordinance and health center's treatment first.
 
-| Category | Required efforts (Article 51 of the Food Sanitation Act) |
-| --- | --- |
-| General sanitation control | Keeping the inside and outside clean, pest control, management of water and utensils, etc. |
-| Control of important processes | Efforts to control processes especially important to prevent hazards (washing, salt and temperature control, etc.) |
-| Small operators and the like | Efforts according to the characteristics of the food (make a plan along the guidelines and keep records) |
+## What must a small operator record and review under HACCP?
 
-For a small operator, the core of "what to write" is to make a sanitation-control plan along the model in the guidelines, and to check and record daily the receipt of ingredients, the water used, handwashing, temperature control and so on. Keep the records in a form that can later explain your sanitation control. An administrative scrivener can support putting the plan and forms in order, but the final review of whether the plan conforms to the standards is done by the public health center. Confirm the latest guidelines on the Ministry's official page rather than assuming.
+HACCP-based hygiene management became fully effective on 1 June 2021 after the transition (Article 51). Small operators and similar businesses can use applicable ministry-published industry guides for hygiene management incorporating HACCP principles.
 
-## Where and to whom is it sure to entrust the application?
+| Stage | Operator's task |
+|---|---|
+| Plan | Prepare a hygiene plan and necessary procedures suited to the products and processes |
+| Implement | Follow the plan for receiving ingredients, water, handwashing, washing/disinfection, temperature control, etc. |
+| Record and retain | Record implementation and responses to abnormalities; retain records that explain management |
+| Review and revise | Periodically verify effectiveness and revise plans/procedures when processes or circumstances change |
 
-The place of application is the public health center with jurisdiction over the location of the production facility (the license of the prefectural governor, the mayor of a city with a public health center, etc.). Because the professionals involved differ, the basis is that you contract with each as an independent business, separately. The administrative scrivener of the Yotsuba group handles, as an independent business, preparing and submitting the license-application documents, support for putting a sanitation-control plan in order, and confirmation of the food-sanitation supervisor.
+Recording alone is insufficient. The operator remains responsible for implementing and verifying hygiene management. An administrative scrivener can help prepare plans and forms; the health center handles permit applications, advance consultation and hygiene advice. Approval of a plan does not remove the need for ongoing management. The full latest pickle-specific guide and its scope remain unverified in this review: confirm the official edition and applicable products before using it.
 
-| Who to ask | Main role |
-| --- | --- |
-| Administrative scrivener (our office) | Preparing and submitting the license-application documents; support for the sanitation-control plan |
-| Public health center | Review of conformity to facility standards, on-site check, and the decision to license |
-| Architect and equipment contractor | Construction of the production room, plumbing and interior work |
-| Tax accountant | Bookkeeping of sales and purchases, and tax filing |
-| Labor and social-security attorney | Labor and social insurance and work rules when hiring employees |
-| Real-estate agent (our company, a separate business) | Introduction to, and contract for, premises usable for manufacturing |
+## Who handles the application and opening preparations?
 
-Whether a given facility meets the standards, and under which category to apply, is in the end the review field of the public health center; an administrative scrivener does not guarantee the license on your behalf. At the stage of finding premises usable for manufacturing, a separate-business real-estate agent can help. Please also see our [Engagement Flow](https://luck428.com/legal/nagare) and [Fee Schedule](https://luck428.com/legal/ryokin). You contract with each professional as an independent business, and we receive no referral fee from one another.
+The public health center is the administrative office for facility review, site inspection and permit procedures. This is separate from engaging private professionals.
+
+| Professional or business | Role |
+|---|---|
+| 四葉行政書士事務所 | Permit documents and submission; support for hygiene plans and forms |
+| Architect / equipment contractor | Design, construction, plumbing and interiors within the relevant professional remit |
+| Tax accountant | Tax advice and returns |
+| 四葉社会保険労務士事務所 | Employee labour/social insurance and work rules |
+| 四葉不動産株式会社 | Finding manufacturing premises and lease brokerage |
+
+四葉行政書士事務所, 四葉社会保険労務士事務所 and 四葉不動産株式会社 are independent businesses. You contract separately with each professional or business; each bills and receives payment directly. Our office receives no referral fee. See [engagement flow](/en/legal/nagare), [fees](/en/legal/ryokin) and [permit services](/en/legal/services).
 
 ## FAQ
 
-**Q. Can I sell umeboshi I made in my home kitchen at a roadside station?**
-A. If you make them for sale repeatedly and continuously, you in principle need a pickle-manufacturing license. A home kitchen that is one space with the living quarters usually does not meet the facility standards and will not get a license; you need equipment such as a production room partitioned from the living quarters. Whether you fall under this should be confirmed with the competent public health center.
+**Q. Can I sell umeboshi made in my home kitchen at a roadside station?**
+A. Repeated manufacturing for sale generally requires a pickle-manufacturing permit. A home kitchen cannot necessarily be used unchanged. Confirm separation from living areas, handwashing, washing/disinfection and storage with the health center, explaining your products and processes.
 
-**Q. I have sold pickles for years. Do I still need a license now?**
-A. Yes. The three-year transitional measure for operators in business before the Enforcement Order took effect ended on 31 May 2024 (Reiwa 6). From 1 June 2024 you cannot make pickles for sale without a license. If you have continued without one, consult the public health center promptly.
+**Q. I was already selling pickles. Do I still need a permit?**
+A. The transition for existing operators ended on 31 May 2024. A permit is required from 1 June 2024. Consult the health center if you have not obtained one.
 
-**Q. Even for a small operation, is HACCP compliance necessary?**
-A. Yes. However, small operators and the like are allowed "sanitation control incorporating the idea of HACCP" according to the characteristics of the food, and it suffices to make a sanitation-control plan along the Ministry's sector-specific guidelines and record daily practice (Article 51 of the Food Sanitation Act).
+**Q. Does a small operation need HACCP-based management?**
+A. Yes. Use an applicable guide to plan, implement, record and retain records, and periodically review and revise as needed. The operator remains responsible for continuing management.
 
-**Q. What happens if I sell without getting a license?**
-A. Operating without a license violates Article 55, paragraph 1 of the Food Sanitation Act and is subject, under Article 82, to imprisonment for up to two years or a fine of up to 2 million yen. Under the dual-liability provision (Article 88), a corporation may also face a fine. The individual judgment on applicability is a field for the public health center and investigative authorities.
+**Q. What happens if I manufacture and sell without a permit?**
+A. Operating in violation of Article 55(1) of 食品衛生法 is subject under Article 82 to imprisonment (拘禁刑) up to two years or a fine up to ¥2 million. Article 88 includes corporate dual liability. Ask a qualified professional and the competent authority about individual applicability.
 
-## Sources (Primary Information)
+## Sources
 
-- e-Gov Law Search / Ministry of Health, Labour and Welfare, "Food Sanitation Act", Article 51 (standard of measures operators must take: general sanitation control, and efforts to control processes especially important to prevent hazards; small operators and the like use efforts according to the characteristics of the food), Article 54 (facility standards set by prefectural ordinance), Article 55 (license by the prefectural governor, etc.), Article 82 (a violation of Article 55, paragraph 1 is imprisonment for up to two years or a fine of up to 2 million yen) and Article 88 (dual-liability provision) (accessed 2026-10-08)
-- e-Gov Law Search, "Enforcement Order of the Food Sanitation Act", Article 35, Item 29 ("pickle-manufacturing business" as a category requiring a license) (accessed 2026-10-08)
-- Ministry of Health, Labour and Welfare, "On the amendment of the Food Sanitation Act (review of the license system and institutionalisation of sanitation control along HACCP)" (the Act partially amending the Food Sanitation Act and other laws, Act No. 46 of 2018; newly licensed categories such as pickle manufacturing, the Enforcement Order's effective date of 1 June 2021 (Reiwa 3), the three-year transitional measure for existing operators ending on 31 May 2024 (Reiwa 6), and sanitation control along HACCP and the guidelines for small operators) (accessed 2026-10-08)
+- [Ministry of Health, Labour and Welfare: 食品衛生法](https://www.mhlw.go.jp/web/t_doc?dataId=78330000&dataType=0&pageNo=1): relevant provisions in Articles 4–6, 51, 54, 55, 82 and 88 checked on 2026-10-10. This article explains the system revised by Act No. 46 of 2018. The change to 拘禁刑 took effect on 1 June 2025.
+- [食品衛生法施行令](https://www.mhlw.go.jp/web/t_doc?dataId=78331000&dataType=0&pageNo=1): Article 35, Item 29. The new licensing system including pickle manufacturing took effect on 1 June 2021; checked on 2026-10-10.
+- [Okayama prefecture's permit guidance](https://www.pref.okayama.jp/page/922247.html): updated 1 June 2024; end of transition checked on 2026-10-10. Regional guidance does not establish nationwide facility practices.
+- [Ministry facility standards and flexible-treatment examples](https://www.mhlw.go.jp/content/001284671.pdf): common standards in Appendix 19 and pickle manufacturing in Appendix 20, category 27; refrigeration, washing/disinfection and examples checked on 2026-10-10.
+- [Ministry HACCP guidance](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/shokuhin/haccp/index.html): planning, implementation/records, periodic verification and revision; checked on 2026-10-10.
 
-This article is general information and does not make the final judgment on whether a given facility meets the ordinance's facility standards or under which category to apply, nor does it guarantee that a license will be granted. The facility standards are set by the prefectural ordinance based on Article 54 of the Food Sanitation Act, and sanitation control along HACCP is set by Article 51. Preparing and submitting the license-application documents and support for the sanitation-control plan are handled by the administrative scrivener of the Yotsuba group as an independent business; the conformity review and license are by the public health center; construction of the production room is by an architect and equipment contractor; tax is by a tax accountant; employees' labor matters are by a labor and social-security attorney; and introduction to and contract for premises usable for manufacturing is by Yotsuba Real Estate Co., Ltd., a separate business, each contracted separately. Our office receives no referral fee. Individual judgements are made by a qualified professional and the public health center after a meeting. Written by [Joji Uramatsu](https://luck428.com/about/uramatsu), administrative scrivener and licensed real estate broker.
+The laws' complete latest amendment history, local ordinances/practices and the full latest pickle-specific guide remain unverified. This is general information and does not guarantee facility conformity or a permit. A qualified professional checks individual matters against current materials and consults the health center. Written by [Joji Uramatsu](/en/about/uramatsu), administrative scrivener and licensed real estate transaction specialist.

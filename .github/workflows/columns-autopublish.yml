@@ -96,7 +96,7 @@ jobs:
           case "$CODE" in
             200) exit 0 ;;
             401) MSG="自動公開APIが 401 を返しました。GitHub の COLUMNS_AUTOPUBLISH_SECRET と Vercel の環境変数が一致しているか確認してください" ;;
-            409) MSG="公開待ちが上限を超えたため、自動公開を止めました。管理画面で対象を確かめてから「今すぐ公開」してください" ;;
+            409) MSG="上限超過または品質確認待ちの記事があります。last-publish.json の blocked・errors・held を確認してください。force は品質確認を解除しません" ;;
             *)   MSG="自動公開APIが HTTP ${CODE} を返しました（一部または全部が未公開の可能性）" ;;
           esac
           echo "SUMMARY=${MSG}" >> "$GITHUB_OUTPUT"

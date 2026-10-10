@@ -1,104 +1,73 @@
 ---
-title: "Opening a karaoke box: how far should you check zoning, fire service and noise on the property?"
-excerpt: "A karaoke box can only be built in Category-2 residential zones or looser (quasi-residential, neighbourhood commercial, commercial, quasi-industrial, etc.) under the Building Standards Act; it falls under item (2)-ni of Appended Table 1 of the Fire Service Act Enforcement Order, so an automatic fire-alarm system is required regardless of floor area; and serving alcohol late at night adds a notification or a licence. A licensed real estate agent and administrative scrivener in Bunkyo, Tokyo sets out what can be checked before you sign."
+title: "Opening karaoke premises: zoning, fire protection and noise checks"
+excerpt: "Check zoning and floor area, room plans and operations, fire protection and noise before signing for karaoke premises. Category II residential zones can be candidates subject to conditions. No late-night alcohol or entertainment does not by itself establish that no public-morals business permission is needed."
 category: "Investment / commercial real estate"
+faqHeading: Frequently asked questions
 ---
-**In short:** for a karaoke box property, first check whether the building-standard zoning allows it. A karaoke box cannot be built in zones more residential than Category-2 residential (it needs quasi-residential, neighbourhood commercial, commercial, quasi-industrial, etc.), and as a rule cannot be built in Category-1 residential or below. Next comes fire service: the property falls under item (2)-ni of Appended Table 1 of the Fire Service Act Enforcement Order (karaoke boxes, etc.), which requires an automatic fire-alarm system and more regardless of floor area. If you serve alcohol late at night, a separate notification or licence overlaps. The preliminary check of the property (zoning, soundproofing, partitioning) is handled by our company (Yotsuba Real Estate Co., Ltd.) as information; the notification of a late-night liquor-serving restaurant business and the licence application for a specified entertainment restaurant business are handled by Yotsuba Administrative Scrivener Office, and the judgment on fire-service equipment by the fire station with jurisdiction and a fire-equipment engineer. These are independent business entities, and you engage each directly.
+**Key points:** Check zoning and floor area, room plans and operations, fire protection and noise before signing for karaoke premises. Category II residential zones can be candidates subject to conditions. No late-night alcohol or entertainment does not by itself establish that no public-morals business permission is needed.
 
-When you set out to open a karaoke box on a roadside or in a station-front tenancy, "can it go here" bites before the interior or the machines do. Renting first and only then learning the zoning does not allow it, finding the soundproofing is inadequate and clashing with neighbours, or incurring unexpected cost retrofitting fire equipment — these are points you can check from the property side before signing. This article, for operators looking for a karaoke box property and the agents who introduce them, sets out the points on zoning, Entertainment Business Act applicability, fire service and noise from the law and public materials. The final judgment on the feasibility of a licence rests with the police station and fire station with jurisdiction and with qualified professionals; we handle the arrangement of materials and information.
+This article concentrates on karaoke rooms, business classification and alarm communication. General food-service issues are covered in [fitted premises and public health requirements](/en/column/inuki-bukken-keiyakumae-hokenjo); see [late-night entertainment permission](/en/legal/column/tokutei-yukyo-inshokuten-eigyo-kyoka-youken) for the procedure.
 
-## Is there a zoning restriction on opening a karaoke box?
+## Which zones can accommodate karaoke premises?
 
-Yes. A karaoke box is a building whose use is restricted under Article 48 and Appended Table 2 of the Building Standards Act, so the zones where you can place a property are limited.
-
-| Use zone | Karaoke box |
+| Zone | Checks under use restrictions |
 |---|---|
-| Cat.-1 / Cat.-2 low-rise residential, Cat.-1 / Cat.-2 mid/high-rise residential, agricultural-residential | Cannot be built |
-| Category-1 residential | As a rule cannot be built |
-| Category-2 residential / quasi-residential | Can be built, subject to conditions such as a floor-area cap |
-| Neighbourhood commercial / commercial / quasi-industrial / industrial / exclusive industrial | Can be built (conditions vary by zone) |
+| Category I residential and related restricted zones | Confirm classifications generally excluding karaoke boxes |
+| Category II residential and quasi-residential | Check conditions including no more than 10,000 m² of relevant-use floor area |
+| Neighbourhood commercial, commercial, quasi-industrial | Check district plans, local rules and building conditions alongside the national use table |
+| Industrial and exclusively industrial | Check relevant-use floor-area conditions including the 10,000 m² limit |
 
-**Note the line between Category-1 and Category-2 residential.** In a Category-2 residential zone a karaoke box can be built subject to conditions (a floor-area cap, etc.), but in a Category-1 residential zone a karaoke box is not among the permitted uses and as a rule cannot be built. Do not lump everything as "residential"; confirm whether it is Category-1 or Category-2 — that is the entrance to choosing a property. Because Appended Table 2 also has per-zone area conditions and exceptions by permission of the specified administrative agency (Article 48 proviso), the individual feasibility — including the exclusive industrial zone — is confirmed against the current text of Appended Table 2 on e-Gov and with the building guidance division of the municipality where the property is located. For how to find commercial properties see [investment / commercial real estate](https://luck428.com/toushi); for reading zoning see [care-business properties and zoning](https://luck428.com/column/kaigo-jigyousho-bukken-youto-chiiki). For property enquiries see [office / shop properties](https://luck428.com/office).
+This summarises general Building Standards Act (建築基準法) restrictions, not individual compliance or exceptional permission. An architect and building authority check Tokyo's current table, area calculations, district plans and special-use districts. Zones are not simply a scale from stricter to looser.
 
-## Is that karaoke shop an entertainment business, and how do licences change with alcohol?
+## Does no alcohol mean no permission is needed?
 
-An ordinary karaoke box where customers sing by themselves is, as a rule, not an entertainment business (a licensed business under the Entertainment Business Act) in itself. Two things come into play: whether you serve alcohol late at night (midnight to 6 a.m.), and whether the shop lets customers "engage in amusement."
+Show room plans and proposed operations to the police and check separately:
 
-| Type | Framework | Procedure |
-|---|---|---|
-| Serving mainly alcohol late at night (0–6) | Late-night liquor-serving restaurant business (Entertainment Business Act Art. 33) | Notification to the public safety commission |
-| Letting customers engage in amusement late at night and serving food/alcohol | Specified entertainment restaurant business (Art. 2(11), Art. 31-22) | Licence from the public safety commission |
-| Customers only sing themselves / no alcohol late at night | As a rule, no licence or notification | — |
-
-"Letting customers engage in amusement" means the shop actively entertaining customers — a singer or DJ performing on a stage, or letting customers dance with staging. An operation where customers only sing themselves is generally not amusement, but the judgment can differ with how it is run. **Even the same "karaoke shop" splits between a notification and a licence depending on whether you serve alcohol late at night or let customers engage in amusement.** Judging which framework applies, and making the notification or licence application, are the domain of an administrative scrivener and the police station (community safety division) with jurisdiction; we handle the preliminary confirmation of the property's possible suitability.
-
-## What equipment and notifications does the Fire Service Act require of the property?
-
-A karaoke box, as a shop that provides a service of singing and the like to customers in private rooms, falls under item (2)-ni of Appended Table 1 of the Fire Service Act Enforcement Order (karaoke boxes, etc.). After the 2007 karaoke-box fire in Takarazuka, Hyogo, which caused deaths, the 2008 amendment of the Enforcement Order made an automatic fire-alarm system mandatory regardless of floor area.
-
-- The automatic fire-alarm system is required regardless of floor area (Enforcement Order Art. 21)
-- Because the rooms are divided by sound, measures are required so the alarm can be heard in each room (rules)
-- Guide lights, extinguishers, escape routes, etc. vary by floor area, number of floors and windowless-floor status
-- In a mixed-use building, the judgment changes with the whole-building classification (item (16)-i, etc.)
-
-**The fact that "rooms are closed off by sound" makes the equipment heavier, on the ground that fire is hard to notice.** As long as the property has partitioned rooms, an automatic fire-alarm system is a given regardless of area. Whether the existing interior has the equipment, or whether it can be retrofitted, bears directly on cost. The specific need for fire-service equipment and the fire-object notification are the domain of the Fire Service Act, handled by the fire station with jurisdiction and a fire-equipment engineer. At the property-selection stage, confirm the current equipment and the room for retrofitting during the viewing.
-
-## How do noise/vibration regulations and soundproof partitioning change property selection?
-
-The biggest factor in clashes with neighbours at a karaoke shop is sound. The Noise Regulation Act itself mainly targets factories/workplaces (specified facilities) and construction work; the sound of karaoke operation is in most cases directly regulated by the prefectural/municipal environmental-conservation ordinance (for example, Tokyo's Environmental Security Ordinance regulates late-night business noise and the use of sound equipment).
-
-- The regulated values vary with the area classification (residential or commercial) and the time band (especially late night)
-- Whether the neighbour is a dwelling, and whether there are other tenants above/below, change the degree of soundproofing required
-- Structure (reinforced concrete or light steel), and the sound insulation of party walls/floor/ceiling and vibration isolation, are the dividing line in property selection
-
-**Because soundproofing is costly to "add later," look at the property's structure and adjacency before signing.** Low frequencies (heavy bass) carry particularly well, and complaints are likely if the floors above/below or the adjacent unit are dwellings, so a commercial or quasi-industrial location with few dwellings nearby is safer. Because the regulated values differ by ordinance and over time, confirm the values for your operating hours with the municipality's environment division, noting the date of reference. Design and construction of soundproofing are the domain of a design office and interior contractors.
-
-## What should you confirm with the real estate agent before signing?
-
-A karaoke box property overlaps four things: zoning, Entertainment Business Act applicability, fire service and noise. Dividing the roles:
-
-| What to do | Who |
+| Issue | What to examine |
 |---|---|
-| Preliminary check of zoning, floor area, partitioning, soundproofing; introducing the property and checking the lease | Licensed real estate agent (Yotsuba Real Estate Co., Ltd.) |
-| Late-night liquor-serving notification, specified-entertainment-restaurant licence application, dealings with the authority | Administrative scrivener (Yotsuba Administrative Scrivener Office) / police station with jurisdiction |
-| Judgment and installation of fire-service equipment, fire-object notification | Fire station with jurisdiction / fire-equipment engineer |
-| Interior design and construction for partitioning, windowless rooms, soundproofing | Architect / design office / interior contractors |
-| Staff shifts, late-night premiums and other labour matters | Certified social insurance labour consultant (Yotsuba Certified Social Insurance Labour Consultant Office) |
+| Customer attendance/entertainment | Whether staff acts constitute regulated customer entertainment |
+| Low-lit food/drink premises | Classifications including seats at 10 lux or less |
+| Partitioned food/drink seats | Seats difficult to see from elsewhere and no more than 5 m² |
+| Late-night alcohol | Alcohol between midnight and 6 a.m.; exclusions concerning regular staple meals |
+| Specified late-night entertainment | Operator-provided entertainment and food/drink involving alcohol at night |
 
-**These are independent business entities. You engage each directly.** We neither pay nor accept referral fees or introduction commissions. The property goes to a licensed real estate agent, the notification/licence to an administrative scrivener and the police station, the fire service to the fire station and a fire-equipment engineer, and labour to a certified social insurance labour consultant — each engaged by you directly. On the risk of signing a lease before you know whether a licence will be granted, the condition-precedent / special-clause thinking in [what to read in a lease contract](https://luck428.com/column/chintaishaku-keiyakusho-doko-wo-yomu) helps.
+Even self-service karaoke must be checked for rooms, lighting, food/drink and staff conduct. Late-night alcohol business is not defined simply by alcohol being the main revenue. Check the exclusion for establishments normally providing recognised staple meals. Specified late-night entertainment requires alcohol; food service alone is insufficient. Distinguish businesses falling within other regulated categories under the public-morals legislation (風俗営業等の規制及び業務の適正化等に関する法律).
 
-## Who should you consult?
+## Are fire, noise and business-location rules separate?
 
-The preliminary check of the property's zoning, floor area, partitioning and soundproofing, the introduction of the property, and checking the lease terms are handled by Yotsuba Real Estate Co., Ltd. (licensed real estate agent, Tokyo Governor (1) No. 113304). The late-night liquor-serving notification, the specified-entertainment-restaurant licence application and dealings with the authority are handled by Yotsuba Administrative Scrivener Office; fire-service equipment and the fire-object notification by the fire station with jurisdiction and a fire-equipment engineer; interior design and construction for partitioning and soundproofing by an architect, design office and interior contractors.
+Karaoke boxes classified under the Fire Service Act Enforcement Order (消防法施行令), Appended Table 1, category (2)ニ, have automatic fire-alarm requirements regardless of area. Classification, windowless floors, mixed uses, existing equipment, extinguishing and guidance systems and escape routes still require building-specific checks. Discuss music cut-off or another suitable way to communicate alarms with the fire authority and designer.
 
-**These are independent business entities. You engage each directly.** We neither pay nor accept referral fees or introduction commissions. Staff late-night premiums, shifts and other labour matters go to a certified social insurance labour consultant (Yotsuba Certified Social Insurance Labour Consultant Office) — each engaged by you directly. Consultation is free of charge.
+Buildability does not establish compliance with the permitted locations or nearby-facility conditions for late-night alcohol or entertainment operations. Police assess the address and operations. Local environmental ordinances separately govern noise and audio-equipment hours; do not apply the midnight–6 a.m. definition to all noise rules. Consider ventilation, sound insulation, nearby homes, landlord consent and works costs using plans.
+
+## Who is engaged, and which authorities are consulted?
+
+We investigate, give statutory explanations and broker property. Administrative scriveners support police permit/notification documents, architects handle design and confirmation applications, and qualified contractors handle sound insulation and fire installations. Check public-health food-service permissions for the planned operation. Police, fire and public-health offices are authorities for consultation, examination and inspection, not private contracting professionals. Use-start notifications are not described as a procedure reserved solely to fire-equipment technicians.
 
 ## Frequently asked questions
 
-**Q. Can I turn a vacant tenancy in a residential area into a karaoke box?**
-A. It depends on the use zone. In a Category-2 residential or quasi-residential zone it can be built subject to conditions such as a floor-area cap, but in a Category-1 residential zone or more residential zones (low-rise/mid-high-rise residential, etc.) it cannot, as a rule. "Residential area" cannot be lumped together, so before signing confirm with the municipality's building guidance division whether the property's zone is Category-1 or Category-2.
+**Q. Are Category II residential zones excluded?**
+A. Not universally. Check floor-area conditions, local rules and the existing building.
 
-**Q. If I do not serve alcohol, do I need an Entertainment Business Act notification or licence?**
-A. A karaoke box where customers only sing themselves, serves no alcohol late at night (after midnight) and does not let customers engage in amusement needs, as a rule, no licence or notification. If you serve mainly alcohol late at night, a late-night liquor-serving notification (Art. 33) is required; if you provide amusement and food late at night, a specified entertainment restaurant licence is required. Because the judgment can differ with how you operate, confirm through prior consultation with the police station with jurisdiction; the notification/licence application is undertaken by an administrative scrivener.
+**Q. Is no late-night alcohol enough to avoid public-morals permissions?**
+A. No. Check staff conduct, food/drink, illumination and the visibility and size of seats or rooms too.
 
-**Q. Is an automatic fire-alarm system required even for a small shop?**
-A. A karaoke box falls under item (2)-ni of Appended Table 1 of the Fire Service Act Enforcement Order, and an automatic fire-alarm system is mandatory regardless of floor area (the 2008 amendment of the Enforcement Order), on the ground that fire is hard to notice when rooms are divided by sound. Because cost varies with whether existing equipment is present and whether it can be retrofitted, confirm the current state during the viewing and the specific need with the fire station with jurisdiction and a fire-equipment engineer.
+**Q. Does late-night alcohol business mean alcohol is the main revenue?**
+A. That is not the definition. Check late-night alcohol service and treatment of establishments regularly providing staple meals.
 
-**Q. I worry about noise complaints from neighbours. What should I look at in the property?**
-A. The structure (a frame strong in sound insulation, such as reinforced concrete), the sound insulation of party walls/floor/ceiling, whether the floors above/below or the adjacent unit are dwellings or other tenants, and the late-night regulated values of the environmental-conservation ordinance where the property is located. Heavy bass carries particularly well, so a commercial or quasi-industrial location with few dwellings nearby is safer. Because the regulated values differ by ordinance and over time, confirm them with the municipality's environment division, noting the date of reference.
+**Q. Does buildability settle late-night operations and fire protection?**
+A. No. Separately check police location rules, local noise/audio restrictions, fire classification, equipment and alarm communication before contracting.
 
-## Sources (primary)
+## Primary sources
 
-- [e-Gov "Building Standards Act"](https://laws.e-gov.go.jp/law/325AC0000000201) — Act No. 201 of 1950. Art. 48 and Appended Table 2 (restriction on building uses by use zone; feasibility of building a karaoke box and the per-zone floor-area conditions). **Accessed 9 October 2026.**
-- [e-Gov "Fire Service Act Enforcement Order"](https://laws.e-gov.go.jp/law/336CO0000000037) — Cabinet Order No. 37 of 1961. Appended Table 1 item (2)-ni (classification of karaoke boxes, etc.), Art. 21 (standards for installing an automatic fire-alarm system; required regardless of floor area). **Accessed 9 October 2026.**
-- [e-Gov "Act on Control and Improvement of Amusement Business, etc."](https://laws.e-gov.go.jp/law/323AC0000000122) — Act No. 122 of 1948. Art. 2(11) (definition of a specified entertainment restaurant business), Art. 31-22 (licence for a specified entertainment restaurant business), Art. 33 (notification of a late-night liquor-serving restaurant business), Art. 13 (business-hours restriction). **Accessed 9 October 2026.**
-- Fire and Disaster Management Agency, "Amendment of the Fire Service Act Enforcement Order in light of the Takarazuka karaoke-box fire (2008)" (the background to classifying karaoke boxes, etc. under Appended Table 1 item (2)-ni and mandating an automatic fire-alarm system regardless of area). **Accessed 9 October 2026.**
-- Noise Regulation Act (Act No. 98 of 1968; mainly targeting specified factories and specified construction work), and each prefecture's/municipality's environmental-conservation ordinance (late-night noise of karaoke operation, restrictions on using sound equipment; confirm the ordinance where the premises are located, noting the date of reference; Tokyo example: the Ordinance on Environment to Secure the Health and Safety of the People of Tokyo).
+- [Tokyo Metropolitan Police: public-morals business classifications, updated August 7, 2025 / 警視庁 風俗営業等業種一覧（2025年8月7日更新）](https://www.keishicho.metro.tokyo.lg.jp/tetsuzuki/fuzoku/gyoshu_ichiran.html)
+- [Tokyo: zoning use restrictions / 東京都 用途地域の制限表](https://www.toshiseibi.metro.tokyo.lg.jp/documents/d/toshiseibi/pdf_kanko_area_ree_youto_seigen)
+- [FDMA: fire protection for karaoke boxes / 消防庁 カラオケボックス等の防火対策資料](https://www.fdma.go.jp/singi_kento/singi/items/211202_pdf/05_shiryou04.pdf)
+- [Fukuoka City Fire Department: karaoke fire protection / 福岡市消防局 カラオケボックスの消防資料](https://www.city.fukuoka.lg.jp/syobo/sasatsu/anzen-anshin/documents/4karaoke.pdf)
 
-Whether the zoning fits, Entertainment Business Act applicability, the need for fire-service equipment, and the specific application of the regulated noise values vary with the property location, use zone, municipal ordinance and how the business is run. This article does not judge the feasibility of a licence or legality for any particular property. The final judgment on feasibility is made by the police station and fire station with jurisdiction and by qualified professionals. The specified-entertainment-restaurant licence and the late-night liquor-serving notification go to an administrative scrivener (Yotsuba Administrative Scrivener Office); fire-service equipment to the fire station with jurisdiction and a fire-equipment engineer — consult each directly.
+Legal/source review reference date and content update: October 10, 2026. Matters checked in retrieved official materials are distinguished from inaccessible sources and property-specific assessments. The latest amendment numbers, complete commencement history and all current local rules and practices have not been verified. Unconfirmed amendment numbers are omitted; a qualified human professional must check the original materials before an application or contract.
 
-This article is general information. It does not judge or guarantee the feasibility of a licence or the legality of any particular property. Investigation and brokerage of the property, and the lease, are undertaken by Yotsuba Real Estate Co., Ltd. (licensed real estate agent); preparation of the Entertainment Business Act notification/licence application and other documents, by Yotsuba Administrative Scrivener Office — independent business entities, engaged separately and directly. We neither pay nor accept referral fees.
+This article provides general information. Individual legal, permission and tax conclusions require the competent authorities and qualified professionals. 四葉不動産株式会社 (Yotsuba Real Estate Co., Ltd.), 四葉行政書士事務所 and 四葉社会保険労務士事務所, and other specialists are independent entities, engaged separately for their respective services. Each uses a direct contract, direct invoice and direct payment; no referral or lead-transfer fees are exchanged. Consulting an authority is separate from engaging a private professional. The initial property consultation is free; confirm each professional service's scope and fees with that provider. See [investment and commercial property](/en/toushi) and [commercial premises enquiries](/en/office).
 
-## About the author
+## Author
 
-Joji Uramatsu — licensed real estate transaction specialist (Tokyo Governor registration No. 293544) and administrative scrivener (registration No. 25087022). Representative Director, Yotsuba Real Estate Co., Ltd. (licensed real estate agent, Tokyo Governor (1) No. 113304); principal, Yotsuba Administrative Scrivener Office. Kohinata, Bunkyo, Tokyo, about five minutes' walk from Myogadani station. Property and licensing (sorting zoning, the Entertainment Business Act and the fire service) are put on the same table. Full profile: [author page](https://luck428.com/about/uramatsu).
+Joji Uramatsu (浦松丈二), real estate transaction specialist and administrative scrivener; representative director of 四葉不動産株式会社 and representative of 四葉行政書士事務所. Property investigation and brokerage are distinguished from design, registration, tax and employment services. [Author profile](/en/about/uramatsu).
