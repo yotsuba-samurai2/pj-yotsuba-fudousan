@@ -24,8 +24,16 @@ if (process.argv[2] === "prepare") {
       { encoding: "utf8", stdio: ["ignore", "pipe", "ignore"] }));
   } catch { console.warn("No usable baseline reviews; unverified approvals will not be carried forward"); }
   const previous = new Map(baseline.map((article) => [`${article.business}:${article.slug}`, columnQualityFingerprint(article)]));
-  const candidates = inventory.filter((article) => previous.get(`${article.business}:${article.slug}`) !== columnQualityFingerprint(article))
-    .map((article) => ({ key: `${article.business}:${article.slug}`, fingerprint: columnQualityFingerprint(article) }));
+  const changed = inventory.filter((article) => previous.get(`${article.business}:${article.slug}`) !== columnQualityFingerprint(article));
+  mkdirSync(".tmp/quality-review-input", { recursive: true });
+  const candidates = changed.map((article) => {
+    const candidate = { key: `${article.business}:${article.slug}`, fingerprint: columnQualityFingerprint(article) };
+    // Includes new untracked drafts through their generated seed, all four bodies,
+    // translated titles/excerpts and FAQ. The reviewer need not rediscover files.
+    writeFileSync(`.tmp/quality-review-input/${article.business}-${article.slug}.json`,
+      JSON.stringify({ ...candidate, article }, null, 2) + "\n");
+    return candidate;
+  });
   writeFileSync(".tmp/quality-candidates.json", JSON.stringify(candidates, null, 2) + "\n");
   // A separate non-model artifact prevents draft/fix edits from manufacturing approval.
   writeFileSync(".tmp/quality-baseline-reviews.json", JSON.stringify(baselineReviews, null, 2) + "\n");

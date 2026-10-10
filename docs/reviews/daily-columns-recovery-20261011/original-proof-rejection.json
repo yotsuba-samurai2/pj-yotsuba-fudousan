@@ -1,0 +1,41 @@
+{
+  "reviews": [],
+  "held": [
+    {
+      "key": "realestate:net-cafe-manga-kissa-koshitsu-bukken-fuei-shinya",
+      "reasons": [
+        "独立レビューに未解決の重大な指摘があります"
+      ]
+    },
+    {
+      "key": "realestate:souzoku-akiya-bank-touroku-baikyaku-nochi-mitouki",
+      "reasons": [
+        "独立レビューに未解決の重大な指摘があります"
+      ]
+    },
+    {
+      "key": "legal:shurui-seizo-menkyo-craft-beer-doburoku-shinsei",
+      "reasons": [
+        "独立レビューの証跡不足、重複、またはレビュー後の原稿変更"
+      ]
+    },
+    {
+      "key": "legal:seisangata-izo-yuigon-kanka-baikyaku-shikkosha",
+      "reasons": [
+        "独立レビューの証跡不足、重複、またはレビュー後の原稿変更"
+      ]
+    },
+    {
+      "key": "labor:shurui-jozosho-kaigyo-roumu-henkei-anzeneisei",
+      "reasons": [
+        "独立レビューに未解決の重大な指摘があります"
+      ]
+    },
+    {
+      "key": "labor:tokutei-ginou-jidosha-unso-driver-ukeire-kaizenkijun-roumu",
+      "reasons": [
+        "独立レビューに未解決の重大な指摘があります"
+      ]
+    }
+  ]
+}

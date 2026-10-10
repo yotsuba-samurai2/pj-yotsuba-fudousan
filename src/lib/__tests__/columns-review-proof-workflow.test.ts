@@ -80,6 +80,7 @@ describe("existing Daily independent review connection", () => {
     expect(artifact).toContain("if-no-files-found: error");
     expect(artifact).toContain(".tmp/quality-candidates.json");
     expect(artifact).toContain(".tmp/quality-baseline-reviews.json");
+    expect(artifact).toContain(".tmp/quality-review-input/");
   });
   it("requires per-article evidence in the existing review output schema", () => {
     const schema = JSON.parse(independent.match(/--json-schema '([^']+)'/)![1]);
@@ -87,6 +88,42 @@ describe("existing Daily independent review connection", () => {
     expect(schema.properties.articles.items.required).toEqual(expect.arrayContaining([
       "key", "fingerprint", "checks", "sources", "requiresQualifiedReview", "blockingFindings",
     ]));
+  });
+  it("prepares complete changed-article inputs without depending on tracked Markdown diffs", () => {
+    const dir = mkdtempSync(path.join(tmpdir(), "review-input-cli-"));
+    const env: NodeJS.ProcessEnv = { PATH: process.env.PATH, NODE_ENV: "test", GIT_CONFIG_NOSYSTEM: "1", GIT_CONFIG_GLOBAL: "/dev/null" };
+    try {
+      mkdirSync(path.join(dir, "src/lib/data"), { recursive: true });
+      const names = ["realestate-columns-daily", "souzoku-legal-columns", "labor-columns"];
+      for (const name of names) writeFileSync(path.join(dir, `src/lib/data/${name}-seed.ts`), "export const FIXTURE = [];\n");
+      execFileSync("git", ["init", "--quiet"], { cwd: dir, env });
+      execFileSync("git", ["add", "."], { cwd: dir, env });
+      execFileSync("git", ["-c", "user.name=Fixture", "-c", "user.email=fixture@example.invalid", "commit", "--quiet", "-m", "baseline"], { cwd: dir, env });
+      const article = qualityArticle();
+      writeFileSync(path.join(dir, "src/lib/data/souzoku-legal-columns-seed.ts"), `export const FIXTURE = ${JSON.stringify([article])};\n`);
+      const result = spawnSync(process.execPath, ["--import", path.resolve("node_modules/tsx/dist/loader.mjs"),
+        path.resolve("scripts/columns-review-proof.ts"), "prepare"], {
+        cwd: dir, env: { ...env, TSX_TSCONFIG_PATH: path.resolve("tsconfig.json"), COLUMNS_REVIEW_BASE_REF: "HEAD" }, encoding: "utf8",
+      });
+      expect(result.status, result.stderr).toBe(0);
+      const candidates = JSON.parse(readFileSync(path.join(dir, ".tmp/quality-candidates.json"), "utf8"));
+      expect(candidates).toHaveLength(1);
+      const packet = JSON.parse(readFileSync(path.join(dir, `.tmp/quality-review-input/legal-${article.slug}.json`), "utf8"));
+      expect(packet).toEqual({ ...candidates[0], article });
+      expect(independent).toContain(".tmp/quality-review-input/<business>-<slug>.json");
+      expect(independent).toContain("--max-turns 80");
+    } finally { rmSync(dir, { recursive: true, force: true }); }
+  });
+  it("keeps failed, unknown or cancelled reviews from entering fix", () => {
+    const condition = daily.split("\n  fix:\n")[1].match(/    if: \$\{\{ (.*) \}\}/)![1]
+      .replaceAll("cancelled()", "cancelled");
+    for (const [result, pass, cancelled, expected] of [
+      ["success", "false", false, true], ["failure", "false", false, false],
+      ["success", "unknown", false, false], ["success", "true", false, false],
+      ["success", "false", true, false],
+    ]) {
+      expect(runInNewContext(condition, { cancelled, needs: { review: { result, outputs: { pass } } } })).toBe(expected);
+    }
   });
   it("records the proof through the actual offline CLI into an isolated fixture directory", () => {
     const dir = mkdtempSync(path.join(tmpdir(), "review-proof-cli-"));

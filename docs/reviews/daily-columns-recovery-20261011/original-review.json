@@ -1,0 +1,215 @@
+{
+  "pass": false,
+  "findings": [
+    {
+      "file": "scripts/legal-columns/en/109-shurui-seizo-menkyo-craft-beer-doburoku-shinsei.md, scripts/legal-columns/zh-tw/109-..., scripts/legal-columns/zh/109-..., scripts/legal-columns/{en,zh-tw,zh}/110-seisangata-izo-yuigon-kanka-baikyaku-shikkosha.md",
+      "severity": "major",
+      "issue": "legal 109・110 の全翻訳（en/zh-tw/zh 計6ファイル）で内部リンクがロケール前置を欠く。`https://luck428.com/legal/column/...`・`/legal/nagare`・`/legal/ryokin`・`/legal/services`・`/souzoku`・`/about/uramatsu` となっており、英語・中国語の読者が日本語ページへ遷移する。既存の legal EN 記事（108 は /en/legal/column/... の相対パス）および本日追加の realestate 115/116（https://luck428.com/en/column/...）・labor 149/150（/en/labor/...）はいずれもロケールを正しく前置しており、本2記事のみ逸脱。日本語原稿の相対リンク（/legal/column/...＝日本語ロケール）に対応する各言語ロケールへの対応が崩れている。",
+      "fix": "各翻訳のロケールに合わせて /en/legal/... ・ /zh-tw/legal/... ・ /zh/legal/...（および /en/about/uramatsu 等）へ前置を付与する。realestate 方式（絶対URL + ロケール）か labor/既存legal方式（相対 + ロケール）のいずれかに統一。生成物の再emit前に修正が必要。※本審査ではファイル未変更。"
+    }
+  ],
+  "articles": [
+    {
+      "key": "realestate:net-cafe-manga-kissa-koshitsu-bukken-fuei-shinya",
+      "fingerprint": "7cfcb4c2d014e2d883b6792315f7e1089af912514c1fe086ad9f4be6cafb9256",
+      "requiresQualifiedReview": false,
+      "checks": {
+        "primarySources": "pass",
+        "duplicateIntent": "pass",
+        "legalClaims": "pass",
+        "translationAlignment": "pass"
+      },
+      "sources": [
+        {
+          "url": "https://www.keishicho.metro.tokyo.lg.jp/tetsuzuki/fuzoku/gyoshu_ichiran.files/huzoku_modify.pdf",
+          "checkedAt": "2026-10-10",
+          "relevantClaim": "風営法2条1項2号 低照度飲食店=客席照度10ルクス以下、3号 区画席飲食店=他から見通すことが困難かつ5平方メートル以下。本文の表と一致。",
+          "verified": true
+        },
+        {
+          "url": "https://www.keishicho.metro.tokyo.lg.jp/tetsuzuki/other/internetcafe/internetcafe_kaishi.html",
+          "checkedAt": "2026-10-10",
+          "relevantClaim": "インターネット端末利用営業は店舗ごとに東京都公安委員会へ届出（警察署に正本提出＝経由）。本文の届出フローと整合。条例番号『平成22年東京都条例第64号』・施行日『平成22年7月1日』自体はこのページには明記なし（公知事実として本文は正確）。",
+          "verified": true
+        },
+        {
+          "url": "https://laws.e-gov.go.jp/law/323AC0000000138",
+          "checkedAt": "2026-10-10",
+          "relevantClaim": "旅館業法第2条の簡易宿所営業の定義。本セッションでは本文直接取得せず（確立した公知事実・本文の記載は正確）。",
+          "verified": false
+        },
+        {
+          "url": "https://es.city.yokohama.lg.jp/business/bunyabetsu/shobo-kyukyu/kanri/shobo-setsubi.files/0013_20190227.pdf",
+          "checkedAt": "2026-10-10",
+          "relevantClaim": "消防法施行令別表第一(2)項ニ 個室型店舗は床面積にかかわらず自動火災報知設備が必要。PDF本文は本セッション未取得（公知事実として本文は正確）。",
+          "verified": false
+        }
+      ],
+      "blockingFindings": []
+    },
+    {
+      "key": "realestate:souzoku-akiya-bank-touroku-baikyaku-nochi-mitouki",
+      "fingerprint": "f3ea7db94ab2c9d3dcc9bdbfc6b3d241d961a627f9103c74d30f3fd4505907f0",
+      "requiresQualifiedReview": false,
+      "checks": {
+        "primarySources": "pass",
+        "duplicateIntent": "pass",
+        "legalClaims": "pass",
+        "translationAlignment": "pass"
+      },
+      "sources": [
+        {
+          "url": "https://www.mlit.go.jp/jutakukentiku/house/jutakukentiku_house_tk3_000035.html",
+          "checkedAt": "2026-10-10",
+          "relevantClaim": "空家等対策特別措置法の令和5年改正で『管理不全空家』を新設、令和5年12月13日施行、勧告を受けると固定資産税の住宅用地特例が外れる。本文と一致。",
+          "verified": true
+        },
+        {
+          "url": "https://www.moj.go.jp/MINJI/souzokutouki-gimuka/index.html",
+          "checkedAt": "2026-10-10",
+          "relevantClaim": "相続登記義務化は令和6年4月1日施行、取得を知った日から3年以内、施行前の相続は令和9年3月31日まで、正当な理由なく怠ると過料（10万円以下）。本文と一致。",
+          "verified": true
+        },
+        {
+          "url": "https://laws.e-gov.go.jp/law/327AC0000000229",
+          "checkedAt": "2026-10-10",
+          "relevantClaim": "農地法3条=権利移動、4条=自己転用、5条=転用目的の権利移動、市街化区域内は届出で足りる場合。本セッション本文直接取得せず（公知事実として本文は正確）。",
+          "verified": false
+        }
+      ],
+      "blockingFindings": []
+    },
+    {
+      "key": "legal:shurui-seizo-menkyo-craft-beer-doburoku-shinsei",
+      "fingerprint": "fbddebc23bfef6126793d91c662a9d6a5cb99e644f22df216299a82a7c4572e6",
+      "requiresQualifiedReview": true,
+      "checks": {
+        "primarySources": "pass",
+        "duplicateIntent": "pass",
+        "legalClaims": "pass",
+        "translationAlignment": "hold"
+      },
+      "sources": [
+        {
+          "url": "https://www.nta.go.jp/taxes/sake/qa/03a/05.htm",
+          "checkedAt": "2026-10-10",
+          "relevantClaim": "酒類製造免許の最低製造数量基準はビール60キロリットル。本文の『ビール=60kL』と一致（本文の単式蒸留焼酎/みりん10kL・果実酒等6kLは酒税法7条2項の確立した品目別基準で整合）。",
+          "verified": true
+        },
+        {
+          "url": "https://www.nta.go.jp/taxes/sake/menkyo/tebiki/menkyo2.pdf",
+          "checkedAt": "2026-10-10",
+          "relevantClaim": "構造改革特区における濁酒（どぶろく）製造は特定農業者が対象で、最低製造数量基準（その他の醸造酒6kL）を適用しない。製造免許自体は必要・記帳/酒税は免除されない。本文の構造改革特区法25条の記載と一致。",
+          "verified": true
+        },
+        {
+          "url": "https://www.nta.go.jp/taxes/sake/menkyo/index.htm",
+          "checkedAt": "2026-10-10",
+          "relevantClaim": "本文が引用する国税庁『酒類の免許』索引URL。WebFetchでは404応答（bot遮断の可能性あり・同配下のtebiki/menkyo2.pdf等は実在確認）。要件・拒否事由（酒税法10条）自体は他NTA資料で裏取り済み。",
+          "verified": false
+        }
+      ],
+      "blockingFindings": [
+        "翻訳不一致：en/zh-tw/zh 版の内部リンクがロケール前置を欠き（https://luck428.com/legal/column/... 等）、外国語読者を日本語ページへ誘導する。本文の法的記載・一次資料は確認済みだが、リンクのロケール整合を是正するまで保留。"
+      ]
+    },
+    {
+      "key": "legal:seisangata-izo-yuigon-kanka-baikyaku-shikkosha",
+      "fingerprint": "d5ab613d14fe20faaaf28bd5a6394c2473069a7ca1dfbfb33f0bafb3b98ac83a",
+      "requiresQualifiedReview": true,
+      "checks": {
+        "primarySources": "pass",
+        "duplicateIntent": "pass",
+        "legalClaims": "pass",
+        "translationAlignment": "hold"
+      },
+      "sources": [
+        {
+          "url": "https://www.moj.go.jp/MINJI/souzokutouki-gimuka/index.html",
+          "checkedAt": "2026-10-10",
+          "relevantClaim": "相続登記義務化は令和6年4月1日施行・原則3年以内。清算型遺贈の『相続登記→買主への移転登記』の前提として整合。",
+          "verified": true
+        },
+        {
+          "url": "https://laws.e-gov.go.jp/law/129AC0000000089",
+          "checkedAt": "2026-10-10",
+          "relevantClaim": "民法1012条（遺言執行者の権限）・1013条（相続人の処分制限）・1014条（特定財産に関する遺言の執行）・1046条（遺留分侵害額請求）、執行者関係の改正は2019年7月1日施行。本セッション本文直接取得せず（確立した改正事実として本文は正確）。",
+          "verified": false
+        },
+        {
+          "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/2022.htm",
+          "checkedAt": "2026-10-10",
+          "relevantClaim": "準確定申告の対象所得（1月1日〜死亡日）と相続開始を知った日の翌日から4か月以内の期限（所得税法124・125条）。本セッション本文直接取得せず（公知事実として本文は正確）。",
+          "verified": false
+        }
+      ],
+      "blockingFindings": [
+        "翻訳不一致：en/zh-tw/zh 版の内部リンクがロケール前置を欠き（https://luck428.com/legal/column/... ・/souzoku ・/about/uramatsu）、外国語読者を日本語ページへ誘導する。本文の法的記載は適切に留保され一次資料とも整合するが、リンクのロケール整合を是正するまで保留。"
+      ]
+    },
+    {
+      "key": "labor:shurui-jozosho-kaigyo-roumu-henkei-anzeneisei",
+      "fingerprint": "7778b25db90bef0dbc06c684beed1a96afdfb1e5287cf16c5a52334a98cd409c",
+      "requiresQualifiedReview": false,
+      "checks": {
+        "primarySources": "pass",
+        "duplicateIntent": "pass",
+        "legalClaims": "pass",
+        "translationAlignment": "pass"
+      },
+      "sources": [
+        {
+          "url": "https://jsite.mhlw.go.jp/shizuoka-roudoukyoku/content/contents/001511647.pdf",
+          "checkedAt": "2026-10-10",
+          "relevantClaim": "対象期間が3か月を超える1年単位の変形労働時間制の対象者の時間外労働限度時間は月42時間・年320時間（通常は月45時間・年360時間）。本文と一致。",
+          "verified": true
+        },
+        {
+          "url": "https://laws.e-gov.go.jp/law/322AC0000000049",
+          "checkedAt": "2026-10-10",
+          "relevantClaim": "労基法32条の4・労基則12条の4=1年単位変形の労使協定事項、原則1日10時間・1週52時間、対象期間3か月超は年間労働日数280日等。本セッションでe-Gov本文は直接取得せず（確立した基準で本文は正確）。",
+          "verified": false
+        },
+        {
+          "url": "https://laws.e-gov.go.jp/law/347AC0000000057",
+          "checkedAt": "2026-10-10",
+          "relevantClaim": "労働安全衛生法12条 衛生管理者=常時50人以上、11条 安全管理者=製造業等50人以上、12条の2 安全衛生推進者=10人以上50人未満。本セッションでe-Gov本文は直接取得せず（確立した基準で本文は正確）。",
+          "verified": false
+        }
+      ],
+      "blockingFindings": []
+    },
+    {
+      "key": "labor:tokutei-ginou-jidosha-unso-driver-ukeire-kaizenkijun-roumu",
+      "fingerprint": "dcb1da6029235b1b17e33a4e076e199e09f4d1bb7822a99be85d757237e05268",
+      "requiresQualifiedReview": false,
+      "checks": {
+        "primarySources": "pass",
+        "duplicateIntent": "pass",
+        "legalClaims": "pass",
+        "translationAlignment": "pass"
+      },
+      "sources": [
+        {
+          "url": "https://driver-roudou-jikan.mhlw.go.jp/truck/notice",
+          "checkedAt": "2026-10-10",
+          "relevantClaim": "改善基準告示（2024年4月1日適用・トラック）：1年の拘束3,300時間（労使協定で3,400時間）、1か月284時間（延長310時間・年6か月まで）、1日13時間（上限15時間）、休息継続11時間を基本に9時間下限。本文の表・FAQと一致。",
+          "verified": true
+        },
+        {
+          "url": "https://www.moj.go.jp/isa/policies/ssw/index.html",
+          "checkedAt": "2026-10-10",
+          "relevantClaim": "自動車運送業分野の特定技能追加（2024年3月29日閣議決定）、トラック=第一種・バス/タクシー=第二種免許。本セッションで当該ページ本文は直接取得せず（広く公表された事実として本文は正確）。",
+          "verified": false
+        },
+        {
+          "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/koyou/gaikokujin/",
+          "checkedAt": "2026-10-10",
+          "relevantClaim": "労働施策総合推進法第28条 外国人雇用状況の届出義務。本セッションで当該ページ本文は直接取得せず（確立した制度で本文は正確）。",
+          "verified": false
+        }
+      ],
+      "blockingFindings": []
+    }
+  ]
+}

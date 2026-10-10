@@ -40,6 +40,7 @@
 
 import { readFileSync, writeFileSync } from "fs";
 import { resolve, join } from "path";
+import { mismatchedTranslationLinks } from "../src/lib/columns-autopublish-quality";
 
 type Faq = { question: string; answer: string };
 
@@ -940,6 +941,21 @@ const REQUIRED_HUB_LINKS: Record<string, string[]> = {
     "/legal/nagare",
     "/legal/ryokin",
     "/legal/column/shokuhin-seizogyo-kyoka-bukken-setsubi-kijun",
+  ],
+  "shurui-seizo-menkyo-craft-beer-doburoku-shinsei": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/shurui-kouri-menkyo-tenpo-bukken-yoken",
+    "/legal/column/shinya-shurui-teikyo-todokede-yoken",
+  ],
+  "seisangata-izo-yuigon-kanka-baikyaku-shikkosha": [
+    "/legal/services/inheritance",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/souzoku",
+    "/legal/column/yuigon-shikkosha-shokumu-sennin-dare",
+    "/legal/column/jihitsu-kosei-yuigon",
   ],
 };
 
@@ -3031,6 +3047,33 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "独立した事業体",
     "紹介料を受け取りません",
   ],
+  "shurui-seizo-menkyo-craft-beer-doburoku-shinsei": [
+    "酒税法第7条",
+    "最低製造数量基準",
+    "60キロリットル",
+    "6キロリットル",
+    "酒税法第10条",
+    "構造改革特別区域法第25条",
+    "どぶろく特区",
+    "濁酒",
+    "別々にご契約",
+    "独立した事業体",
+    "紹介料を受け取りません",
+  ],
+  "seisangata-izo-yuigon-kanka-baikyaku-shikkosha": [
+    "清算型遺贈",
+    "民法第1012条",
+    "民法第1013条",
+    "民法第1014条",
+    "民法第1046条",
+    "特定財産承継遺言",
+    "遺言執行者",
+    "準確定申告",
+    "相続登記",
+    "別々にご契約",
+    "独立した事業体",
+    "紹介料を受け取りません",
+  ],
 };
 
 /** 記事ごとに含めてはならない表現 */
@@ -3180,6 +3223,8 @@ const FORBIDDEN_PHRASES: Record<string, string[]> = {
   "kosei-shosho-yuigon-koshonin-shonin-hiyo": [],
   "isan-bunkatsu-10nen-904jo-3-tokubetsu-jueki": [],
   "tsukemono-seizogyo-kyoka-2024-haccp": [],
+  "shurui-seizo-menkyo-craft-beer-doburoku-shinsei": [],
+  "seisangata-izo-yuigon-kanka-baikyaku-shikkosha": [],
 };
 
 /** 本セット外へ張る既存legalコラムslug（リポジトリの他シードで実在確認済み） */
@@ -5847,6 +5892,58 @@ const ARTICLES: Array<{
       "行政書士",
     ],
   },
+  {
+    file: "109-shurui-seizo-menkyo-craft-beer-doburoku-shinsei.md",
+    slug: "shurui-seizo-menkyo-craft-beer-doburoku-shinsei",
+    date: "2026-10-10",
+    title:
+      "酒類製造免許の申請｜クラフトビール・どぶろく特区の要件と最低製造数量",
+    category: "許認可の手続き（行政書士の実務から）",
+    excerpt:
+      "酒類製造免許は品目ごとの免許で、最低製造数量基準（ビール・清酒60kl、発泡酒・その他の醸造酒6kl）を満たす見込みが要ります。製造場の設備要件と、どぶろく特区（構造改革特別区域法第25条）で基準を外す特例を整理します。",
+    keywords: [
+      "酒類製造免許 申請 要件",
+      "クラフトビール 製造免許 最低製造数量 60kl",
+      "どぶろく特区 構造改革特別区域法 最低製造数量",
+      "酒税法 第7条 第2項 最低製造数量基準",
+      "酒類製造免許 製造場 設備要件 第10条",
+      "酒類製造免許 行政書士",
+    ],
+    tags: [
+      "酒類製造免許",
+      "酒税法",
+      "クラフトビール",
+      "どぶろく特区",
+      "許認可",
+      "行政書士",
+    ],
+  },
+  {
+    file: "110-seisangata-izo-yuigon-kanka-baikyaku-shikkosha.md",
+    slug: "seisangata-izo-yuigon-kanka-baikyaku-shikkosha",
+    date: "2026-10-10",
+    title:
+      "清算型遺贈とは｜不動産を売って金銭で遺す遺言の設計と執行",
+    category: "相続の手続き（行政書士の実務から）",
+    excerpt:
+      "清算型遺贈は不動産を換価して金銭で遺す遺言です。遺言執行者の売却、相続登記を経る二段階の登記、譲渡所得の帰属（準確定申告との違い）、遺留分や売れ残りへの備えを、業際を分けて整理します。",
+    keywords: [
+      "清算型遺贈 とは",
+      "清算型遺贈 不動産 売却 遺言執行者",
+      "清算型遺贈 相続登記 所有権移転登記 順番",
+      "清算型遺贈 譲渡所得 誰の申告 準確定申告",
+      "清算型遺贈 遺留分 売れ残り 条項",
+      "清算型遺贈 遺言 行政書士",
+    ],
+    tags: [
+      "清算型遺贈",
+      "遺言",
+      "遺言執行者",
+      "換価分配",
+      "相続",
+      "行政書士",
+    ],
+  },
 ];
 
 /** Markdownリンク・強調を平文化（FAQ JSON-LD用。本文には適用しない） */
@@ -6024,6 +6121,11 @@ function verify(cols: SeedColumn[]): string[] {
     const jaH2 = (c.content.match(/^## /gm) || []).length;
     for (const loc of ["en", "zh-tw", "zh"] as const) {
       const tr = c.translations[loc];
+      // Existing legacy links are a separate migration. New Daily drafts must
+      // pass the same language check as the publication gate before LLM review.
+      if (c.date >= "2026-10-10" && mismatchedTranslationLinks(tr.content, loc).length) {
+        notes.push(`NG: ${c.slug} ${loc} の内部リンクに言語不一致あり`);
+      }
       if (!tr.title.trim() || !tr.excerpt.trim() || !tr.content.trim()) {
         notes.push(`NG: ${c.slug} ${loc} にtitle/excerpt/content欠落`);
       }

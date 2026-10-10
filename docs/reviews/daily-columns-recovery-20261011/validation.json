@@ -1,0 +1,104 @@
+{
+  "base": "8571b0eeab9b501f35b090b5805a1e8b5a8e50c9",
+  "validatedArtifactId": 11677654259,
+  "validatedZipSha256": "f433eed89e18ad66404f670c4b8dce748702339a2a7e1e1f6cb6fd33ecb62d4c",
+  "checks": [
+    {
+      "log": "realestate-columns-daily-dry-run.log",
+      "sha256": "f87b6ab5064cf15abf4abdd09262edae3fc5c1ec89d59583a08555eda7b6858d",
+      "exitCode": 0
+    },
+    {
+      "log": "souzoku-legal-columns-dry-run.log",
+      "sha256": "a3bd35bc401aa4ed440e753933293c6906265f8a0ecd57b02cbb6f616c9b8d70",
+      "exitCode": 0
+    },
+    {
+      "log": "labor-columns-dry-run.log",
+      "sha256": "6b7e8441583a7cf65f34ee13356f097a47a66f4e1246ef4004412518350fed73",
+      "exitCode": 0
+    },
+    {
+      "log": "realestate-columns-daily-emit.log",
+      "sha256": "5164842fc47e75339b7a6b632522b0fcd8e1e92329c3b6b7e8a5f6a3f7482b99",
+      "exitCode": 0
+    },
+    {
+      "log": "souzoku-legal-columns-emit.log",
+      "sha256": "68c62268b608b0e100eab082652157fdf1aa88655c9c371eed09a86e6fea6d2d",
+      "exitCode": 0
+    },
+    {
+      "log": "labor-columns-emit.log",
+      "sha256": "6d77f7d4a4e70dbceae856b6b1bec83834933ab9961a38d0883ae0c8d97abfe2",
+      "exitCode": 0
+    },
+    {
+      "log": "regression.log",
+      "sha256": "3c99b6c5d1262fdaae3f31f7b2ed3821d9473a9818ce80cda50e3982e54953e9",
+      "exitCode": 0,
+      "originalLogSha256": "27e1c1fbcdc22baa6b2b9cc9f3ad6368f580f70dedf2f447ea1f8c6b58004f50",
+      "normalization": "trailing empty lines removed in committed copy"
+    },
+    {
+      "log": "final-workflow-regression.log",
+      "sha256": "a4106ce69f5042e6e7f4021097952d566644bd745f5496725a6c411e3cdf5d19",
+      "exitCode": 0
+    },
+    {
+      "log": "vitest-final.log",
+      "sha256": "6ba586d4b75af28971a547165415e28276f475513abd1b8f8b5524ded90b4cf2",
+      "exitCode": 0,
+      "originalLogSha256": "3a678e19d836e2d9e8b4ac905e3d6a306f46de4e826f1d91eaee353413f4d4a7",
+      "normalization": "trailing empty lines removed in committed copy"
+    },
+    {
+      "log": "lint-changed.log",
+      "sha256": "c06c256ca45e65772049971f2ad5de51564cb0e94f0497c528e89d884d9d8fa3",
+      "exitCode": 0
+    },
+    {
+      "log": "lint-full.log",
+      "sha256": "dc39b69e0439064b50d7af3f1d886207349e8190bbcb54cff3b6f88f33ab094d",
+      "exitCode": 0
+    },
+    {
+      "log": "typecheck.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exitCode": 0
+    },
+    {
+      "log": "build.log",
+      "sha256": "17404bb864684e4bdffa4cb046bfecee5febc5d9dbd783e9c3ed1322ea747881",
+      "exitCode": 0
+    }
+  ],
+  "fullTests": {
+    "files": 147,
+    "passed": 1990
+  },
+  "lint": {
+    "errors": 0,
+    "preExistingWarnings": 23
+  },
+  "seedValidation": {
+    "scripts": 3,
+    "ng": 0
+  },
+  "actionlint": {
+    "workflowSyntax": "pass",
+    "shellcheckMessages": "identical to base"
+  },
+  "localBuild": {
+    "result": "pass",
+    "database": "dedicated localhost fixture only",
+    "staticPages": 475
+  },
+  "localHttp": {
+    "result": "not verified",
+    "observed": "Japanese article request returned 301 to the same public path after /ja rewrite; translated request did not complete before cancellation",
+    "proxyAndNextConfig": "unchanged from base"
+  },
+  "approvalsAdded": 0,
+  "publication": "not executed"
+}

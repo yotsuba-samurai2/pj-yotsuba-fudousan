@@ -1,0 +1,34 @@
+[
+  {
+    "path": ".github/workflows/daily-columns.yml",
+    "sha256": "8ace317a6dc2383d98787e011bb7e7907a997322b1632a8669a551839d6e0719"
+  },
+  {
+    "path": "scripts/columns-review-proof.ts",
+    "sha256": "b0fb8f26ec6ee53119b779f2924fd9679e9dba158cf57ed20c55888b7b2a6a25"
+  },
+  {
+    "path": "scripts/seed-labor-columns.ts",
+    "sha256": "768a79c46a1a9fab2a091be480df0dcd76e9180634448018df19fba2b32f9e32"
+  },
+  {
+    "path": "scripts/seed-realestate-columns-daily.ts",
+    "sha256": "9a082519ac34420bb96019017435e394cd407b2f4ebe6cc5ed143aad9ecd73fe"
+  },
+  {
+    "path": "scripts/seed-souzoku-legal-columns.ts",
+    "sha256": "dc841057069c2ac61da6691356bc5e751e6ddc78c83c760f8aac4312798f9801"
+  },
+  {
+    "path": "src/lib/columns-autopublish-quality.ts",
+    "sha256": "79b3f4666ce3e8f70093fd8e3a4964f38599c8e73396c4de522eff05003de6b6"
+  },
+  {
+    "path": "src/lib/__tests__/columns-review-proof-workflow.test.ts",
+    "sha256": "df8aa04acfa17ce1a96668d713de86537ee16f62a4b653d68cdb8b9b3d5a852b"
+  },
+  {
+    "path": "src/lib/__tests__/columns-daily-locale-links.test.ts",
+    "sha256": "176549567ec5529b4fb5e8a01952a8195add910158e268b682f536827ffff438"
+  }
+]
