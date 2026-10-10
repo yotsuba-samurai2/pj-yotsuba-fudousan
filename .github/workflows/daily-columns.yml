@@ -666,6 +666,7 @@ jobs:
           path: |
             .tmp/quality-candidates.json
             .tmp/quality-baseline-reviews.json
+            .tmp/quality-review-input/
           include-hidden-files: true
           if-no-files-found: error
 
@@ -676,7 +677,12 @@ jobs:
           show_full_output: true
           prompt: |
             今日追加された原稿を審査する。**ファイルは絶対に変更しない。**
-            `git diff --name-only origin/main` で対象を特定する。
+            対象は .tmp/quality-candidates.json に固定済み。新規原稿は未追跡のため
+            git diff だけでは列挙できない。各 key の「:」を「-」に置き換えた
+            .tmp/quality-review-input/<business>-<slug>.json を Read で読む。
+            ここに日本語・3翻訳のタイトル、導入、本文、FAQとseedメタデータが揃っている。
+            巨大な全記事seedを読まず、対象記事の入力を審査する。
+            既存記事との意図比較に必要なときだけ、既存原稿を Read/Grep で参照する。
 
             観点：
             1. 一次資料の裏取り（条項号・施行日・参照日が書かれているか。
@@ -702,12 +708,16 @@ jobs:
             一般情報の論点整理だけで、重大な法的断定・根拠不足・重複意図・翻訳不一致がない場合のみ
             requiresQualifiedReview=false とできる。自動公開の一般承認で個別の判断を代替しない。
             本文・指紋・承認記録は変更しない。sources を取得したふりで pass にしない。
+            同じ一次資料はまとめて確認する。取得不能なら繰り返し試さず hold にする。
+            翻訳の内部リンクは絶対URLでも対応する /en/・/zh-tw/・/zh/ を確認する。
+            Bash は許可された git diff/log/status だけ。ls・grep・複合コマンドは使わず、
+            入力の発見や機械検証にターンを消費しない。
 
             **これは無人の1回きりの実行です。次のターンはありません。**
             審査を終えてから終了すること。途中経過の報告でターンを終えない。
           claude_args: |
             --model claude-opus-4-8
-            --max-turns 50
+            --max-turns 80
             --allowedTools "Read,Glob,Grep,WebSearch,WebFetch,Bash(git diff *),Bash(git log *),Bash(git status *)"
             --disallowedTools "Task"
             --json-schema '{"type":"object","properties":{"pass":{"type":"boolean"},"findings":{"type":"array","items":{"type":"object","properties":{"file":{"type":"string"},"severity":{"type":"string"},"issue":{"type":"string"},"fix":{"type":"string"}},"required":["file","severity","issue","fix"]}},"articles":{"type":"array","items":{"type":"object","properties":{"key":{"type":"string"},"fingerprint":{"type":"string"},"requiresQualifiedReview":{"type":"boolean"},"checks":{"type":"object","properties":{"primarySources":{"type":"string","enum":["pass","hold"]},"duplicateIntent":{"type":"string","enum":["pass","hold"]},"legalClaims":{"type":"string","enum":["pass","hold"]},"translationAlignment":{"type":"string","enum":["pass","hold"]}},"required":["primarySources","duplicateIntent","legalClaims","translationAlignment"]},"sources":{"type":"array","items":{"type":"object","properties":{"url":{"type":"string"},"checkedAt":{"type":"string"},"relevantClaim":{"type":"string"},"verified":{"type":"boolean"}},"required":["url","checkedAt","relevantClaim","verified"]}},"blockingFindings":{"type":"array","items":{"type":"string"}}},"required":["key","fingerprint","requiresQualifiedReview","checks","sources","blockingFindings"]}}},"required":["pass","findings","articles"]}'

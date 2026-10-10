@@ -1,0 +1,218 @@
+[
+  {
+    "path": "scripts/labor-columns/149-shurui-jozosho-kaigyo-roumu-henkei-anzeneisei.md",
+    "sha256": "2dd80d9a19120bdae8be728973ba116505445efc0e43d2e644fa6b8c9520e570",
+    "vsMain": "new",
+    "finalSha256": "2dd80d9a19120bdae8be728973ba116505445efc0e43d2e644fa6b8c9520e570",
+    "change": "preserved-byte-for-byte"
+  },
+  {
+    "path": "scripts/labor-columns/150-tokutei-ginou-jidosha-unso-driver-ukeire-kaizenkijun-roumu.md",
+    "sha256": "67f4f5c2ba765b4d9d4abf1d45e0df2ec6fa57aa7dc984418e9a36f1d883a09a",
+    "vsMain": "new",
+    "finalSha256": "67f4f5c2ba765b4d9d4abf1d45e0df2ec6fa57aa7dc984418e9a36f1d883a09a",
+    "change": "preserved-byte-for-byte"
+  },
+  {
+    "path": "scripts/labor-columns/en/149-shurui-jozosho-kaigyo-roumu-henkei-anzeneisei.md",
+    "sha256": "543dedab882e7a657ddf99434696936af0c1e31e11ed19a880c7225a89771182",
+    "vsMain": "new",
+    "finalSha256": "543dedab882e7a657ddf99434696936af0c1e31e11ed19a880c7225a89771182",
+    "change": "preserved-byte-for-byte"
+  },
+  {
+    "path": "scripts/labor-columns/en/150-tokutei-ginou-jidosha-unso-driver-ukeire-kaizenkijun-roumu.md",
+    "sha256": "8ea277d90c2b8013375a40a3ecf65ebfb3f335b4175fba29c619b28bbd4db416",
+    "vsMain": "new",
+    "finalSha256": "8ea277d90c2b8013375a40a3ecf65ebfb3f335b4175fba29c619b28bbd4db416",
+    "change": "preserved-byte-for-byte"
+  },
+  {
+    "path": "scripts/labor-columns/zh/149-shurui-jozosho-kaigyo-roumu-henkei-anzeneisei.md",
+    "sha256": "39f2eb83f3b9934d6b4bdf329b7febc33a8a42fd96c6fe01b06a4adb6397bf46",
+    "vsMain": "new",
+    "finalSha256": "39f2eb83f3b9934d6b4bdf329b7febc33a8a42fd96c6fe01b06a4adb6397bf46",
+    "change": "preserved-byte-for-byte"
+  },
+  {
+    "path": "scripts/labor-columns/zh/150-tokutei-ginou-jidosha-unso-driver-ukeire-kaizenkijun-roumu.md",
+    "sha256": "3ea9cd68c261ce87fbeec5dfd669fc184e928bcdcd9096b777fe50c05e48ab37",
+    "vsMain": "new",
+    "finalSha256": "3ea9cd68c261ce87fbeec5dfd669fc184e928bcdcd9096b777fe50c05e48ab37",
+    "change": "preserved-byte-for-byte"
+  },
+  {
+    "path": "scripts/labor-columns/zh-tw/149-shurui-jozosho-kaigyo-roumu-henkei-anzeneisei.md",
+    "sha256": "dfe5364d0adcbfe42fbef698b9cc8a36ffc45be502fd8c101cd4463535ade00e",
+    "vsMain": "new",
+    "finalSha256": "dfe5364d0adcbfe42fbef698b9cc8a36ffc45be502fd8c101cd4463535ade00e",
+    "change": "preserved-byte-for-byte"
+  },
+  {
+    "path": "scripts/labor-columns/zh-tw/150-tokutei-ginou-jidosha-unso-driver-ukeire-kaizenkijun-roumu.md",
+    "sha256": "4395c78bb8d38c40d077b483ff3808757590168fbf6f3e44b787c08001d69c2a",
+    "vsMain": "new",
+    "finalSha256": "4395c78bb8d38c40d077b483ff3808757590168fbf6f3e44b787c08001d69c2a",
+    "change": "preserved-byte-for-byte"
+  },
+  {
+    "path": "scripts/legal-columns/109-shurui-seizo-menkyo-craft-beer-doburoku-shinsei.md",
+    "sha256": "9bb4437f58367d8224b479a54bd64c3c8da065cfa49aa214ae12c148d8999c4b",
+    "vsMain": "new",
+    "finalSha256": "9bb4437f58367d8224b479a54bd64c3c8da065cfa49aa214ae12c148d8999c4b",
+    "change": "preserved-byte-for-byte"
+  },
+  {
+    "path": "scripts/legal-columns/110-seisangata-izo-yuigon-kanka-baikyaku-shikkosha.md",
+    "sha256": "251ef9ae1e8ed53b05bec936ffd992a303b67b071aa0134b8e2d76846bd43924",
+    "vsMain": "new",
+    "finalSha256": "251ef9ae1e8ed53b05bec936ffd992a303b67b071aa0134b8e2d76846bd43924",
+    "change": "preserved-byte-for-byte"
+  },
+  {
+    "path": "scripts/legal-columns/en/109-shurui-seizo-menkyo-craft-beer-doburoku-shinsei.md",
+    "sha256": "77efeb33614b5c92868eb411cdf7aeb34fdd7af583d3782577db9825e547e0c7",
+    "vsMain": "new",
+    "finalSha256": "2a68f66394651a1c5702fd634697eaaf20812bd5b595f270bcfb999c96222f1a",
+    "change": "locale-prefix-only",
+    "fixedLinks": 7
+  },
+  {
+    "path": "scripts/legal-columns/en/110-seisangata-izo-yuigon-kanka-baikyaku-shikkosha.md",
+    "sha256": "439e0a2d2ad1b0735617913bf048e93f60aa87635b339d71a6f4138c4cc5beb8",
+    "vsMain": "new",
+    "finalSha256": "2d5432369eca2d4dd432cc4f51b0cc94844c4ee3ac70ca1fae4adee7aa1d2380",
+    "change": "locale-prefix-only",
+    "fixedLinks": 7
+  },
+  {
+    "path": "scripts/legal-columns/zh/109-shurui-seizo-menkyo-craft-beer-doburoku-shinsei.md",
+    "sha256": "dd58f1559cf7430142862146d67a4d990badfa3d30059ba3ae467f6660373bd2",
+    "vsMain": "new",
+    "finalSha256": "bc36c680b35a1d24969246dde6dab1bdb1befb0347419e80cd484d36ad804bcf",
+    "change": "locale-prefix-only",
+    "fixedLinks": 7
+  },
+  {
+    "path": "scripts/legal-columns/zh/110-seisangata-izo-yuigon-kanka-baikyaku-shikkosha.md",
+    "sha256": "470529332fa90f45d596d657022d5d32daae858f48798afdb71aa1bdbdd1b86d",
+    "vsMain": "new",
+    "finalSha256": "80b96307cf8517e48451877909ffbb8dbb1e23d062f45379cf35204bfb44a696",
+    "change": "locale-prefix-only",
+    "fixedLinks": 7
+  },
+  {
+    "path": "scripts/legal-columns/zh-tw/109-shurui-seizo-menkyo-craft-beer-doburoku-shinsei.md",
+    "sha256": "83b94f51707b6188532da9b01e831f51c3c7ae930eddd861e428ac410f34ef4c",
+    "vsMain": "new",
+    "finalSha256": "54938867b4fb99685d0ed09735f246f3da90754057fabe0b7b898a59de8a146b",
+    "change": "locale-prefix-only",
+    "fixedLinks": 7
+  },
+  {
+    "path": "scripts/legal-columns/zh-tw/110-seisangata-izo-yuigon-kanka-baikyaku-shikkosha.md",
+    "sha256": "b97a70ff349ef30f6ae66c95545fc6f686a900690433bc5fc53f6b5e22dbe03d",
+    "vsMain": "new",
+    "finalSha256": "083d60d2630dd2fa56c9c978feb47a19ec6a30b511a6303bf3ac818248366020",
+    "change": "locale-prefix-only",
+    "fixedLinks": 7
+  },
+  {
+    "path": "scripts/realestate-columns/115-net-cafe-manga-kissa-koshitsu-bukken-fuei-shinya.md",
+    "sha256": "bf51062d539ef61413609493df3a8815e66bdc55f8f4c7a27d7a4dfe6664fa81",
+    "vsMain": "new",
+    "finalSha256": "bf51062d539ef61413609493df3a8815e66bdc55f8f4c7a27d7a4dfe6664fa81",
+    "change": "preserved-byte-for-byte"
+  },
+  {
+    "path": "scripts/realestate-columns/116-souzoku-akiya-bank-touroku-baikyaku-nochi-mitouki.md",
+    "sha256": "db9a9b62fedda0c9f0584711e1b3f74c2175e87d8e6d3e69fc0c3f6d25123616",
+    "vsMain": "new",
+    "finalSha256": "db9a9b62fedda0c9f0584711e1b3f74c2175e87d8e6d3e69fc0c3f6d25123616",
+    "change": "preserved-byte-for-byte"
+  },
+  {
+    "path": "scripts/realestate-columns/en/115-net-cafe-manga-kissa-koshitsu-bukken-fuei-shinya.md",
+    "sha256": "f3069f258b9684c2581162049f57e388b07e4c6ec6c758e646a1937d6aa0932f",
+    "vsMain": "new",
+    "finalSha256": "f3069f258b9684c2581162049f57e388b07e4c6ec6c758e646a1937d6aa0932f",
+    "change": "preserved-byte-for-byte"
+  },
+  {
+    "path": "scripts/realestate-columns/en/116-souzoku-akiya-bank-touroku-baikyaku-nochi-mitouki.md",
+    "sha256": "16c1e2cc9dacf783a37089756b3dcef071b69b96f30a846af86a1b40a6dd1323",
+    "vsMain": "new",
+    "finalSha256": "16c1e2cc9dacf783a37089756b3dcef071b69b96f30a846af86a1b40a6dd1323",
+    "change": "preserved-byte-for-byte"
+  },
+  {
+    "path": "scripts/realestate-columns/zh/115-net-cafe-manga-kissa-koshitsu-bukken-fuei-shinya.md",
+    "sha256": "d0d2dacd8154a02da78d7fc3280941fc5267a3518a5104172238de882570547b",
+    "vsMain": "new",
+    "finalSha256": "d0d2dacd8154a02da78d7fc3280941fc5267a3518a5104172238de882570547b",
+    "change": "preserved-byte-for-byte"
+  },
+  {
+    "path": "scripts/realestate-columns/zh/116-souzoku-akiya-bank-touroku-baikyaku-nochi-mitouki.md",
+    "sha256": "ae6ac35fd88791252c1bf3152bcbdf70404dddd5846a58bc4d0119ee6018de9c",
+    "vsMain": "new",
+    "finalSha256": "ae6ac35fd88791252c1bf3152bcbdf70404dddd5846a58bc4d0119ee6018de9c",
+    "change": "preserved-byte-for-byte"
+  },
+  {
+    "path": "scripts/realestate-columns/zh-tw/115-net-cafe-manga-kissa-koshitsu-bukken-fuei-shinya.md",
+    "sha256": "13a7aa273ebd64c8126a4d11ffcf3abd9df74ca115a55456bb43aaabf036683b",
+    "vsMain": "new",
+    "finalSha256": "13a7aa273ebd64c8126a4d11ffcf3abd9df74ca115a55456bb43aaabf036683b",
+    "change": "preserved-byte-for-byte"
+  },
+  {
+    "path": "scripts/realestate-columns/zh-tw/116-souzoku-akiya-bank-touroku-baikyaku-nochi-mitouki.md",
+    "sha256": "bb2757b99099ff7976da69d0b9e914e963d46673c968a362cdfb1ea7acf6b72b",
+    "vsMain": "new",
+    "finalSha256": "bb2757b99099ff7976da69d0b9e914e963d46673c968a362cdfb1ea7acf6b72b",
+    "change": "preserved-byte-for-byte"
+  },
+  {
+    "path": "scripts/seed-labor-columns.ts",
+    "sha256": "768a79c46a1a9fab2a091be480df0dcd76e9180634448018df19fba2b32f9e32",
+    "vsMain": "modified",
+    "finalSha256": "768a79c46a1a9fab2a091be480df0dcd76e9180634448018df19fba2b32f9e32",
+    "change": "preserved-byte-for-byte"
+  },
+  {
+    "path": "scripts/seed-realestate-columns-daily.ts",
+    "sha256": "9a082519ac34420bb96019017435e394cd407b2f4ebe6cc5ed143aad9ecd73fe",
+    "vsMain": "modified",
+    "finalSha256": "9a082519ac34420bb96019017435e394cd407b2f4ebe6cc5ed143aad9ecd73fe",
+    "change": "preserved-byte-for-byte"
+  },
+  {
+    "path": "scripts/seed-souzoku-legal-columns.ts",
+    "sha256": "5fcfe98bbd893f4097f8e00822c913a35a5b8f6d8ce49c84a7160e12b5f54a6c",
+    "vsMain": "modified",
+    "finalSha256": "dc841057069c2ac61da6691356bc5e751e6ddc78c83c760f8aac4312798f9801",
+    "change": "seed-validation-or-regenerated-output"
+  },
+  {
+    "path": "src/lib/data/labor-columns-seed.ts",
+    "sha256": "1cff6f9d0bb5f29342c4848153700e62dc25288c6defd3a722266ebf4a6c8e22",
+    "vsMain": "modified",
+    "finalSha256": "1cff6f9d0bb5f29342c4848153700e62dc25288c6defd3a722266ebf4a6c8e22",
+    "change": "preserved-byte-for-byte"
+  },
+  {
+    "path": "src/lib/data/realestate-columns-daily-seed.ts",
+    "sha256": "0d2a95e20db9f96ac97a223710c635997844daaea85b48d75634f933d294ab35",
+    "vsMain": "modified",
+    "finalSha256": "0d2a95e20db9f96ac97a223710c635997844daaea85b48d75634f933d294ab35",
+    "change": "preserved-byte-for-byte"
+  },
+  {
+    "path": "src/lib/data/souzoku-legal-columns-seed.ts",
+    "sha256": "3c89e922bd23478166de84cd1df50017a9654838b823c0edc0f3e510e819679b",
+    "vsMain": "modified",
+    "finalSha256": "1ac0012a490f0d0fc55da424c365223d3928226abd2160262e51eeeb47c54767",
+    "change": "seed-validation-or-regenerated-output"
+  }
+]

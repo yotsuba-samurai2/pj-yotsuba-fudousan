@@ -1,0 +1,26 @@
+[
+  {
+    "path": "scripts/legal-columns/en/109-shurui-seizo-menkyo-craft-beer-doburoku-shinsei.md",
+    "fixedLinks": 7
+  },
+  {
+    "path": "scripts/legal-columns/en/110-seisangata-izo-yuigon-kanka-baikyaku-shikkosha.md",
+    "fixedLinks": 7
+  },
+  {
+    "path": "scripts/legal-columns/zh-tw/109-shurui-seizo-menkyo-craft-beer-doburoku-shinsei.md",
+    "fixedLinks": 7
+  },
+  {
+    "path": "scripts/legal-columns/zh-tw/110-seisangata-izo-yuigon-kanka-baikyaku-shikkosha.md",
+    "fixedLinks": 7
+  },
+  {
+    "path": "scripts/legal-columns/zh/109-shurui-seizo-menkyo-craft-beer-doburoku-shinsei.md",
+    "fixedLinks": 7
+  },
+  {
+    "path": "scripts/legal-columns/zh/110-seisangata-izo-yuigon-kanka-baikyaku-shikkosha.md",
+    "fixedLinks": 7
+  }
+]

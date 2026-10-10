@@ -23,6 +23,18 @@ export type ColumnQualityReview = {
 const LOCALES = ["ja", "en", "zh-tw", "zh"] as const;
 const CHECKS = ["primarySources", "duplicateIntent", "legalClaims", "translationAlignment"] as const;
 
+/** Absolute and relative site links must stay in the translation's language. */
+export function mismatchedTranslationLinks(content: string, locale: "en" | "zh-tw" | "zh"): string[] {
+  return [...content.matchAll(/(?<!!)\[[^\]]*\]\(([^\s)]*)\)/g)].map(([, href]) => href).filter((href) => {
+    try {
+      if (href.startsWith("#")) return false;
+      const url = new URL(href, "https://luck428.com");
+      if (url.hostname !== "luck428.com") return false;
+      return url.pathname !== `/${locale}` && !url.pathname.startsWith(`/${locale}/`);
+    } catch { return true; }
+  });
+}
+
 function canonical(value: unknown): unknown {
   if (Array.isArray(value)) return value.map(canonical);
   if (value && typeof value === "object") {
@@ -88,17 +100,7 @@ export function columnQualityReasons(
     if (normalized(translation.content) === normalized(article.content)) {
       reasons.push(`${locale}の本文が日本語原稿と同一です`);
     }
-    const internalLinks = [...translation.content.matchAll(/(?<!!)\[[^\]]*\]\(([^\s)]*)\)/g)];
-    if (internalLinks.some(([, href]) => {
-      try {
-        if (href.startsWith("#")) return false;
-        const url = new URL(href, "https://luck428.com");
-        if (url.hostname !== "luck428.com") return false;
-        const pathname = url.pathname;
-        return pathname !== `/${locale}` && !pathname.startsWith(`/${locale}/`);
-      }
-      catch { return true; }
-    })) reasons.push(`${locale}の内部リンクに言語不一致があります`);
+    if (mismatchedTranslationLinks(translation.content, locale).length) reasons.push(`${locale}の内部リンクに言語不一致があります`);
   }
   const approvals = reviews.filter((review) => review.key === key);
   const review = approvals[0];

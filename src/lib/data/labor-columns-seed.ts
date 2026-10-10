@@ -27077,5 +27077,365 @@ export const LABOR_COLUMNS_SEED: LaborSeedColumn[] = [
         ]
       }
     }
+  },
+  {
+    "business": "labor",
+    "slug": "shurui-jozosho-kaigyo-roumu-henkei-anzeneisei",
+    "title": "醸造所・酒蔵を開業するときの労務は？変形労働・繁忙期・安全衛生",
+    "date": "2026-10-10",
+    "category": "労働時間",
+    "excerpt": "醸造所・酒蔵の労務は、仕込みの繁忙期を1年単位の変形労働時間制（労働基準法第32条の4）で平準化し、超える分を36協定で管理し、常時50人から衛生管理者を選任するのが軸です。社会保険・労働保険の加入時期と、危険物・建築・消防を担う各有資格者との分担も整理します。",
+    "content": "**結論（先に要点）**：醸造所・酒蔵の労務は、仕込みの繁忙期を1年単位の変形労働時間制（労働基準法第32条の4）で平準化し、超える分を36協定で管理し、常時50人から衛生管理者を選任するのが軸です。危険物・高圧ガスの取扱者選任や建築・消防は各有資格者の領域です。\n\n制度・一次資料の確認日：2026年10月10日。\n\nクラフトビール醸造所・酒蔵を立ち上げる事業者と現場責任者向けに、仕込みの繁忙期を前提にした労働時間制度、1年単位の変形労働時間制の手続、安全衛生体制が義務になる人数、社会保険・労働保険の加入時期、36協定の守備範囲を整理します。酒類製造免許の申請や製造場の物件・建築・消防は、それぞれ別の専門家が担う領域です。\n\n## 仕込みの繁忙期がある醸造所に向く労働時間制度はどれか？\n\n酒蔵の寒造りやビール工場の新規仕込み立ち上げのように、特定の時期へ作業が集中する職場では、年間を通じた繁閑を平準化できる労働時間制度が向きます。1日8時間・1週40時間（労働基準法第32条）を固定で当てると、繁忙期の時間外労働が増え、閑散期は所定労働時間を持て余しやすいためです。\n\n| 制度 | 根拠 | 向く場面 |\n|---|---|---|\n| 1か月単位の変形労働時間制 | 労働基準法第32条の2 | 月内で繁閑が偏る職場 |\n| 1年単位の変形労働時間制 | 同法第32条の4 | 季節で仕込みが集中する醸造所・酒蔵 |\n| フレックスタイム制 | 同法第32条の3 | 始業・終業を労働者の裁量に委ねる働き方 |\n\n季節要因で繁忙期が決まる醸造所では、1年単位の変形労働時間制が検討の中心になります。どの制度が適するかは、仕込みの時期、受注の波、現場の人数で変わります。選び方は[変形労働時間制とフレックスタイム制の選び方](/labor/column/henkei-roudoujikan-flextime-erabikata)もご覧ください。\n\n## 1年単位の変形労働時間制を入れるには何を労使で決めるのか？\n\n1年単位の変形労働時間制（労働基準法第32条の4、労働基準法施行規則第12条の4）は、対象期間を平均して1週40時間以内に収める前提で、繁忙期に1日8時間・1週40時間を超える所定労働時間を設定できる制度です。導入には労使協定の締結と、所轄労働基準監督署長への届出が必要です（就業規則の変更も要します）。\n\n| 労使協定で定める事項 | 内容 |\n|---|---|\n| 対象労働者の範囲 | 制度を適用する労働者 |\n| 対象期間 | 1か月を超え1年以内の期間 |\n| 特定期間 | 対象期間中の特に業務が繁忙な期間 |\n| 労働日・労働日ごとの労働時間 | 対象期間の各日の所定労働時間 |\n| 有効期間 | 労使協定そのものの有効期間 |\n\n労働時間の限度は原則1日10時間・1週52時間です。対象期間が3か月を超える場合は、年間の労働日数を280日以内に収める、週48時間を超える所定労働時間の設定に連続・回数の制限がかかる、といった追加の要件があります。連続して労働させる日数は原則6日が限度で、特定期間では1週間に1日の休日を確保できる範囲（最大で連続12日）まで認められます。制度の設計と労使協定の整備は[就業規則は何人から義務か](/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo)もあわせて確認します。\n\n## 製造現場の安全衛生体制（衛生管理者・危険物）はどこから義務になるのか？\n\n安全衛生管理体制は、事業場の常時使用労働者数で義務が段階的に生じます。選任は選任事由が発生した日から14日以内に行い、所轄労働基準監督署長へ報告します。製造業は安全管理者の選任義務がある業種です。\n\n| 役割・根拠 | 義務が生じる規模 |\n|---|---|\n| 衛生管理者（労働安全衛生法第12条） | 業種を問わず常時50人以上 |\n| 安全管理者（同法第11条） | 製造業等の対象業種で常時50人以上 |\n| 安全衛生推進者（同法第12条の2） | 対象業種で常時10人以上50人未満 |\n\n醸造の現場では、発酵で発生する二酸化炭素、蒸煮・加温のボイラー、冷却設備の冷媒、アルコールなどの取扱いが伴います。これらの危険物取扱者・高圧ガスやボイラーの取扱者・作業主任者等の選任、内装制限や消防用設備は、消防法・高圧ガス保安法・労働安全衛生法令に基づく各有資格者と所轄消防署・労働基準監督署が確認する領域です。化学物質の管理は[化学物質の自律的管理とは何か](/labor/column/kagaku-busshitsu-jiritsuteki-kanri-sdsra)、危険物を扱う現場の配置例は[ガソリンスタンドの危険物と労務](/labor/column/gasoline-stand-ss-kikenbutsu-haichi-roumu-shinya)も参考になります。当事務所が担うのは、選任を含む安全衛生体制の整備・就業規則・安全衛生管理規程・教育の進め方の部分です。\n\n## 醸造所の小規模開業で社会保険・労働保険はいつ加入するのか？\n\n社会保険（健康保険・厚生年金保険）は、法人の事業所であれば労働者の人数にかかわらず強制適用です（健康保険法第3条第3項、厚生年金保険法第6条第1項）。個人経営の事業所では、製造業は適用業種にあたるため、常時5人以上を使用すると強制適用になります。5人未満の個人経営は任意適用です。被保険者となる要件（労働時間・日数等）は別に確認します。\n\n労働保険のうち労災保険は、労働者を1人でも使用すれば原則として保険関係が成立します。雇用保険は、雇用する労働者が被保険者の要件を満たせば加入手続が必要です。開業時は、法人設立・雇入れの事実が生じた時点で、適用関係と期限を確認します。詳しい取扱いは面談のうえ資格者が行います。\n\n## 繁忙期の残業・休日労働で36協定はどこまでカバーするのか？\n\n1年単位の変形労働時間制を入れても、設定した所定労働時間を超える時間外労働や休日労働をさせるには、別に36協定（労働基準法第36条）の締結・届出が必要です。時間外労働の上限規制では、原則は月45時間・年360時間、特別条項を設けても年720時間以内、休日労働を含む単月100時間未満・複数月平均80時間以内などの枠があります。\n\nただし、対象期間が3か月を超える1年単位の変形労働時間制の対象者については、時間外労働の限度時間が月42時間・年320時間と、通常（月45時間・年360時間）より短く定められています。繁忙期の残業を変形労働時間制の設定だけで吸収できると考えず、36協定の枠と両立させる設計が必要です。36協定の具体的な範囲は[36協定で残業はどこまで認められるか](/labor/column/36-kyotei-zangyo-sharoushi-doko-made)をご覧ください。\n\n## 四葉社会保険労務士事務所は、何ができますか？\n\n当事務所では、1年単位の変形労働時間制を含む労働時間制度の設計、就業規則・労使協定・安全衛生管理規程の整備、社会保険・労働保険の加入と36協定の届出についてご相談いただけます。ご相談は無料です。費用は[報酬額表](/labor/ryokin)、一般的なご質問は[よくあるご質問](/labor/faq)に掲載しています。\n\n酒類製造免許の申請は行政書士、製造場の物件は不動産、建築確認・用途変更は建築士、酒税の申告は税理士、危険物・高圧ガス等の取扱者選任や設備は各有資格者と所轄消防署・労働基準監督署が確認する事項です。これらの外部専門家とは、それぞれ独立した事業体として別々にご契約いただき、直接請求・直接お支払いいただきます。当事務所は紹介料・キックバックを扱いません。\n\n## よくある質問\n\n**Q. 1年単位の変形労働時間制は就業規則だけで始められますか？**\nA. 就業規則の変更だけでは足りません。労使協定で対象労働者・対象期間・特定期間・労働日と労働日ごとの労働時間・有効期間を定め、所轄労働基準監督署長へ届け出る必要があります。労働時間は原則1日10時間・1週52時間の限度があり、対象期間が3か月を超える場合は年間労働日数280日などの追加要件もあります。\n\n**Q. 変形労働時間制を入れれば繁忙期の残業に36協定は要りませんか？**\nA. 必要です。変形労働時間制で設定した所定労働時間を超える時間外労働や休日労働には、36協定（労働基準法第36条）の締結・届出が別に要ります。対象期間が3か月を超える1年単位の変形労働時間制の対象者は、時間外労働の限度時間が月42時間・年320時間と通常より短い点にも注意します。\n\n**Q. 醸造所の安全衛生の管理者は何人から選びますか？**\nA. 業種を問わず常時50人以上で衛生管理者、製造業など対象業種では常時50人以上で安全管理者を選任します。常時10人以上50人未満の対象業種では安全衛生推進者を選任します。いずれも選任事由の発生から14日以内に行い、所轄労働基準監督署長へ報告します。危険物・高圧ガス・ボイラー等の取扱者選任は、別の法令に基づき各有資格者が確認します。\n\n**Q. 社長1人と少人数で始める醸造所でも社会保険は要りますか？**\nA. 法人の事業所であれば人数にかかわらず健康保険・厚生年金保険の強制適用です。個人経営の場合、製造業は適用業種にあたるため常時5人以上で強制適用、5人未満は任意適用です。労災保険は労働者を1人でも使用すれば原則成立し、雇用保険は被保険者の要件を満たす労働者について手続が必要です。\n\n## この記事の根拠\n\n以下は2026年10月10日参照の一次資料です。施行・改正日は関連する変更の記載で、全法令の最終改正日を照合済みという意味ではありません。\n\n- 労働基準法第32条、第32条の2、第32条の3、第32条の4：労働時間の原則と各変形労働時間制。労働基準法施行規則第12条の4：1年単位の変形労働時間制の労使協定事項・限度（1日10時間・1週52時間、対象期間3か月超の年間労働日数280日等）。[e-Gov法令検索・労働基準法](https://laws.e-gov.go.jp/law/322AC0000000049)。\n- 労働基準法第36条：時間外・休日労働の協定と上限規制（月45時間・年360時間、特別条項でも年720時間以内等）。対象期間3か月超の1年単位の変形労働時間制対象者は限度時間が月42時間・年320時間。[厚生労働省・時間外労働の上限規制](https://www.mhlw.go.jp/content/001309313.pdf)。\n- 労働安全衛生法第11条（安全管理者）・第12条（衛生管理者）・第12条の2（安全衛生推進者等）、労働安全衛生法施行令第3条・第4条：選任義務の業種・規模。[e-Gov法令検索・労働安全衛生法](https://laws.e-gov.go.jp/law/347AC0000000057)。\n- 健康保険法第3条第3項、厚生年金保険法第6条第1項：適用事業所の範囲（法人は強制適用、個人は適用業種で常時5人以上）。労働者災害補償保険法・雇用保険法：労働保険の適用。\n- 危険物・高圧ガス・ボイラー等の取扱者選任、内装制限、消防用設備は消防法・高圧ガス保安法・労働安全衛生法令に基づき各有資格者と所轄消防署・労働基準監督署が確認します。本記事では現行統合条文の最終改正日の全件照合、業種ごとの選任資格・経過措置の全組合せは確認範囲に含みません。個別の適用時は最新の一次資料を資格者・専門機関が確認します。社会保険労務士法第2条：相談・指導等の業務の根拠。\n\n本記事は一般的な情報提供です。個別の判断は面談のうえ資格者が行います。必要に応じ所轄労働基準監督署・年金事務所等へ照会します。執筆：[浦松丈二](/about/uramatsu)（社会保険労務士・行政書士・宅地建物取引士）。",
+    "status": "published",
+    "author": {
+      "name": "浦松 丈二",
+      "title": "社会保険労務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+    },
+    "keywords": [
+      "醸造所 開業 労務",
+      "酒蔵 1年単位 変形労働時間制",
+      "醸造所 36協定 上限",
+      "製造業 衛生管理者 安全管理者 選任",
+      "醸造所 社会保険 加入",
+      "酒造 危険物 安全衛生"
+    ],
+    "tags": [
+      "労働時間",
+      "変形労働時間制",
+      "労働安全衛生",
+      "社会保険",
+      "労働基準法",
+      "醸造業"
+    ],
+    "locales": [],
+    "faq": [
+      {
+        "question": "1年単位の変形労働時間制は就業規則だけで始められますか？",
+        "answer": "就業規則の変更だけでは足りません。労使協定で対象労働者・対象期間・特定期間・労働日と労働日ごとの労働時間・有効期間を定め、所轄労働基準監督署長へ届け出る必要があります。労働時間は原則1日10時間・1週52時間の限度があり、対象期間が3か月を超える場合は年間労働日数280日などの追加要件もあります。"
+      },
+      {
+        "question": "変形労働時間制を入れれば繁忙期の残業に36協定は要りませんか？",
+        "answer": "必要です。変形労働時間制で設定した所定労働時間を超える時間外労働や休日労働には、36協定（労働基準法第36条）の締結・届出が別に要ります。対象期間が3か月を超える1年単位の変形労働時間制の対象者は、時間外労働の限度時間が月42時間・年320時間と通常より短い点にも注意します。"
+      },
+      {
+        "question": "醸造所の安全衛生の管理者は何人から選びますか？",
+        "answer": "業種を問わず常時50人以上で衛生管理者、製造業など対象業種では常時50人以上で安全管理者を選任します。常時10人以上50人未満の対象業種では安全衛生推進者を選任します。いずれも選任事由の発生から14日以内に行い、所轄労働基準監督署長へ報告します。危険物・高圧ガス・ボイラー等の取扱者選任は、別の法令に基づき各有資格者が確認します。"
+      },
+      {
+        "question": "社長1人と少人数で始める醸造所でも社会保険は要りますか？",
+        "answer": "法人の事業所であれば人数にかかわらず健康保険・厚生年金保険の強制適用です。個人経営の場合、製造業は適用業種にあたるため常時5人以上で強制適用、5人未満は任意適用です。労災保険は労働者を1人でも使用すれば原則成立し、雇用保険は被保険者の要件を満たす労働者について手続が必要です。"
+      }
+    ],
+    "translations": {
+      "en": {
+        "title": "Labor management when opening a brewery or sake brewery — variable working hours, peak seasons, and safety",
+        "excerpt": "For breweries and sake breweries, level out peak brewing seasons with the one-year variable working hours system (Labour Standards Act Article 32-4), manage overtime through a 36 Agreement, and appoint a health officer from 50 workers. It covers when social and labor insurance applies, plus the division of roles with specialists for liquor licensing, buildings, and fire safety.",
+        "content": "**In short:** For breweries and sake breweries, labor management centers on leveling out the peak brewing season with the one-year variable working hours system (Labour Standards Act Article 32-4), managing hours beyond that through a 36 Agreement, and appointing a health officer from 50 workers. Appointing handlers of hazardous materials and high-pressure gas, and building and fire-safety matters, belong to the respective qualified specialists.\n\nRules and primary sources checked: October 10, 2026.\n\nThis article is for operators and site managers starting a craft brewery or sake brewery. It covers working-hour systems designed around the peak brewing season, the procedure for the one-year variable working hours system, the headcounts at which safety and health arrangements become mandatory, when social and labor insurance applies, and the scope of the 36 Agreement. Applying for a liquor manufacturing license and matters of premises, building, and fire safety belong to separate specialists.\n\n## Which working-hour system suits a brewery with a peak brewing season?\n\nIn workplaces where work concentrates in a particular period — a sake brewery's cold-season brewing, or a brewery launching new production — a system that levels out busy and slack periods over the year fits well. Applying a fixed 8 hours a day and 40 hours a week (Labour Standards Act Article 32) tends to increase overtime in the peak season while leaving slack-season hours underused.\n\n| System | Basis | Fits |\n|---|---|---|\n| One-month variable working hours | Labour Standards Act Article 32-2 | Workplaces with within-month swings |\n| One-year variable working hours | Article 32-4 | Breweries and sake breweries with seasonal brewing |\n| Flextime | Article 32-3 | Leaving start and finish times to workers |\n\nFor breweries whose peak season is set by the season, the one-year variable working hours system is the main candidate. Which system suits depends on the brewing period, order swings, and site headcount. See also [how to choose between variable working hours and flextime](/en/labor/column/henkei-roudoujikan-flextime-erabikata).\n\n## What must labor and management decide to adopt the one-year variable working hours system?\n\nThe one-year variable working hours system (Labour Standards Act Article 32-4; Enforcement Regulations Article 12-4) lets you set scheduled hours above 8 a day and 40 a week in the peak season, provided the average over the target period stays within 40 hours a week. Adoption requires a labor-management agreement and filing with the head of the competent Labour Standards Inspection Office (work rules must also be amended).\n\n| Item in the agreement | Content |\n|---|---|\n| Scope of covered workers | Workers to whom the system applies |\n| Target period | A period of more than one month up to one year |\n| Specific period | A particularly busy period within the target period |\n| Working days and daily hours | Scheduled hours for each day of the target period |\n| Term | The term of the agreement itself |\n\nWorking-hour limits are, in principle, 10 hours a day and 52 hours a week. When the target period exceeds three months, there are added requirements, such as keeping annual working days within 280 and limits on consecutive and repeated weeks with scheduled hours over 48. Consecutive working days are limited to six in principle; during the specific period, up to a stretch that keeps one day of rest a week (a maximum of 12 consecutive days) is allowed. Design and the agreement should be checked alongside [when work rules are mandatory](/en/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo).\n\n## From what point are safety and health arrangements such as a health officer and hazardous materials mandatory?\n\nSafety and health arrangements become mandatory in stages based on the number of workers regularly employed at the establishment. Appointment must be made within 14 days of the reason arising, with a report to the competent Labour Standards Inspection Office. Manufacturing is an industry required to appoint a safety officer.\n\n| Role and basis | Threshold |\n|---|---|\n| Health officer (Industrial Safety and Health Act Article 12) | 50 or more workers regularly, any industry |\n| Safety officer (Article 11) | 50 or more workers regularly in covered industries such as manufacturing |\n| Safety and health promoter (Article 12-2) | 10 to under 50 workers regularly in covered industries |\n\nBrewing sites involve carbon dioxide from fermentation, boilers for steaming and heating, refrigerants in cooling equipment, and alcohol. Appointing handlers of hazardous materials, high-pressure gas, and boilers and operations chiefs, interior-finish restrictions, and fire-fighting equipment are matters that the respective qualified specialists and the competent fire station and Labour Standards Inspection Office confirm under the Fire Service Act, High Pressure Gas Safety Act, and occupational safety and health legislation. For chemical management, see [what is self-directed management of chemical substances](/en/labor/column/kagaku-busshitsu-jiritsuteki-kanri-sdsra), and for staffing a hazardous-materials site, [hazardous materials and labor at a gas station](/en/labor/column/gasoline-stand-ss-kikenbutsu-haichi-roumu-shinya). Our office handles the part concerning safety and health arrangements including appointments, work rules, safety and health policies, and approaches to education.\n\n## When does a small brewery opening enroll in social and labor insurance?\n\nHealth insurance and employees' pension insurance apply compulsorily at an incorporated establishment regardless of the number of workers (Health Insurance Act Article 3, paragraph 3; Employees' Pension Insurance Act Article 6, paragraph 1). At an individually owned establishment, manufacturing is a covered industry, so employing five or more workers regularly makes coverage compulsory. An individual business with fewer than five is subject to voluntary coverage. Requirements for being an insured person (hours, days, etc.) are checked separately.\n\nFor labor insurance, workers' compensation insurance generally takes effect once even one worker is employed. Employment insurance requires enrollment for workers who meet the insured-person requirements. At opening, confirm the applicable relationships and deadlines at the point incorporation or hiring occurs. A qualified professional handles the specific treatment after discussion.\n\n## How far does a 36 Agreement cover overtime and holiday work in the peak season?\n\nEven with the one-year variable working hours system, a separate 36 Agreement (Labour Standards Act Article 36) is required to have workers perform overtime beyond the set scheduled hours or holiday work. Under the overtime caps, the principle is 45 hours a month and 360 hours a year; even with a special clause, there are limits such as 720 hours a year, under 100 hours in a single month including holiday work, and an average of 80 hours over multiple months.\n\nHowever, for workers under a one-year variable working hours system whose target period exceeds three months, the overtime limit is set shorter — 42 hours a month and 320 hours a year — than the usual 45 hours a month and 360 hours a year. Do not assume peak-season overtime can be absorbed by the variable-hours settings alone; it must be designed to coexist with the 36 Agreement limits. See [how far overtime is allowed under a 36 Agreement](/en/labor/column/36-kyotei-zangyo-sharoushi-doko-made).\n\n## What can 四葉社会保険労務士事務所 help with?\n\nWe offer consultations on working-hour design including the one-year variable working hours system, work rules, labor-management agreements, and safety and health policies, and on enrollment in social and labor insurance and filing the 36 Agreement. Consultations are free. See our [fee schedule](/en/labor/ryokin) and [general FAQs](/en/labor/faq).\n\nApplying for a liquor manufacturing license is a matter for a Gyoseishoshi; premises for a Realtor; building confirmation and change of use for an architect; liquor tax filing for a tax accountant; and appointing handlers and equipment for hazardous materials and high-pressure gas for the respective qualified specialists and the competent fire station and Labour Standards Inspection Office. These external specialists are independent businesses engaged under separate direct contracts; each invoices the client directly and receives payment directly. Our office does not handle referral fees or kickbacks.\n\n## Frequently asked questions\n\n**Q. Can the one-year variable working hours system start with work rules alone?**\nA. Work-rule amendment alone is not enough. You must set the covered workers, target period, specific period, working days and daily hours, and term in a labor-management agreement, and file it with the head of the competent Labour Standards Inspection Office. Hours are limited in principle to 10 a day and 52 a week, with added requirements such as 280 annual working days when the target period exceeds three months.\n\n**Q. With a variable working hours system, is a 36 Agreement unnecessary for peak-season overtime?**\nA. It is necessary. Overtime beyond the scheduled hours set under the variable system, and holiday work, require a separate 36 Agreement (Labour Standards Act Article 36). Note that for workers under a one-year variable working hours system whose target period exceeds three months, the overtime limit is shorter than usual at 42 hours a month and 320 hours a year.\n\n**Q. From how many workers does a brewery appoint safety and health managers?**\nA. Any industry appoints a health officer from 50 workers regularly; covered industries such as manufacturing appoint a safety officer from 50. Covered industries with 10 to under 50 appoint a safety and health promoter. Each appointment is made within 14 days of the reason arising, with a report to the competent Labour Standards Inspection Office. Appointing handlers of hazardous materials, high-pressure gas, and boilers is confirmed by the respective qualified specialists under separate laws.\n\n**Q. Is social insurance required for a brewery starting with the owner and a few people?**\nA. At an incorporated establishment, health insurance and employees' pension insurance apply compulsorily regardless of headcount. For an individually owned business, manufacturing is a covered industry, so five or more workers makes coverage compulsory, while fewer than five is voluntary. Workers' compensation insurance generally takes effect once even one worker is employed, and employment insurance requires procedures for workers meeting the insured-person requirements.\n\n## Sources for this article\n\nThese primary sources were consulted on October 10, 2026. Effective and amendment dates refer to relevant changes; they do not indicate verification of every law's latest amendment date.\n\n- Labour Standards Act Articles 32, 32-2, 32-3, and 32-4: the principle of working hours and each variable system. Enforcement Regulations Article 12-4: agreement items and limits for the one-year variable system (10 hours a day and 52 a week; 280 annual working days when the target period exceeds three months). [e-Gov, Labour Standards Act](https://laws.e-gov.go.jp/law/322AC0000000049).\n- Labour Standards Act Article 36: overtime and holiday-work agreements and caps (45 hours a month and 360 a year; 720 a year even with a special clause). For workers under a one-year variable system with a target period over three months, the limit is 42 hours a month and 320 a year. [MHLW, overtime caps](https://www.mhlw.go.jp/content/001309313.pdf).\n- Industrial Safety and Health Act Articles 11 (safety officer), 12 (health officer), and 12-2 (safety and health promoter); Enforcement Order Articles 3 and 4: industries and thresholds. [e-Gov, Industrial Safety and Health Act](https://laws.e-gov.go.jp/law/347AC0000000057).\n- Health Insurance Act Article 3, paragraph 3; Employees' Pension Insurance Act Article 6, paragraph 1: scope of covered establishments. Workers' Accident Compensation Insurance Act and Employment Insurance Act: labor insurance.\n- Appointing handlers of hazardous materials, high-pressure gas, and boilers, interior-finish restrictions, and fire-fighting equipment are confirmed by the respective qualified specialists and the competent fire station and Labour Standards Inspection Office under the Fire Service Act, High Pressure Gas Safety Act, and occupational safety and health legislation. This article does not exhaustively verify consolidated provisions' latest amendment dates or every combination of appointment qualifications and transitional rules. 社会保険労務士法 Article 2: basis for consultation and guidance.\n\nThis article provides general information. Specific judgments are made by a qualified professional after discussion. Enquiries may be made to the competent Labour Standards Inspection Office, Japan Pension Service, and others as needed. Written by [浦松丈二](/en/about/uramatsu), Shakai Hoken Roumushi, Gyoseishoshi, and licensed real estate transaction specialist.",
+        "category": "Working hours",
+        "keywords": [
+          "brewery labor management",
+          "one-year variable working hours Article 32-4",
+          "36 Agreement overtime limit",
+          "health officer safety officer appointment",
+          "brewery social insurance",
+          "hazardous materials safety and health"
+        ],
+        "tags": [
+          "Working hours",
+          "Variable working hours",
+          "Occupational safety and health",
+          "Social insurance",
+          "Labour Standards Act"
+        ],
+        "author": {
+          "name": "Joji Uramatsu",
+          "title": "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所"
+        },
+        "faq": [
+          {
+            "question": "Can the one-year variable working hours system start with work rules alone?",
+            "answer": "Work-rule amendment alone is not enough. You must set the covered workers, target period, specific period, working days and daily hours, and term in a labor-management agreement, and file it with the head of the competent Labour Standards Inspection Office. Hours are limited in principle to 10 a day and 52 a week, with added requirements such as 280 annual working days when the target period exceeds three months."
+          },
+          {
+            "question": "With a variable working hours system, is a 36 Agreement unnecessary for peak-season overtime?",
+            "answer": "It is necessary. Overtime beyond the scheduled hours set under the variable system, and holiday work, require a separate 36 Agreement (Labour Standards Act Article 36). Note that for workers under a one-year variable working hours system whose target period exceeds three months, the overtime limit is shorter than usual at 42 hours a month and 320 hours a year."
+          },
+          {
+            "question": "From how many workers does a brewery appoint safety and health managers?",
+            "answer": "Any industry appoints a health officer from 50 workers regularly; covered industries such as manufacturing appoint a safety officer from 50. Covered industries with 10 to under 50 appoint a safety and health promoter. Each appointment is made within 14 days of the reason arising, with a report to the competent Labour Standards Inspection Office. Appointing handlers of hazardous materials, high-pressure gas, and boilers is confirmed by the respective qualified specialists under separate laws."
+          },
+          {
+            "question": "Is social insurance required for a brewery starting with the owner and a few people?",
+            "answer": "At an incorporated establishment, health insurance and employees' pension insurance apply compulsorily regardless of headcount. For an individually owned business, manufacturing is a covered industry, so five or more workers makes coverage compulsory, while fewer than five is voluntary. Workers' compensation insurance generally takes effect once even one worker is employed, and employment insurance requires procedures for workers meeting the insured-person requirements."
+          }
+        ]
+      },
+      "zh-tw": {
+        "title": "開設釀造廠・酒藏時的勞務，變形工時・旺季・安全衛生",
+        "excerpt": "釀造廠・酒藏的勞務，以1年單位變形工時制（勞動基準法第32條之4）平準化釀造旺季，超出部分以36協定管理，常時50人起選任衛生管理者。並整理社會保險・勞動保險的加入時點，以及酒類製造免許、建築、消防由各資格者分別承接的分工。",
+        "content": "**先講結論**：釀造廠・酒藏的勞務，核心是以1年單位變形工時制（勞動基準法第32條之4）平準化釀造旺季，超出部分以36協定管理，常時50人起選任衛生管理者。危險物・高壓氣體的作業者選任，以及建築、消防，屬於各資格者的領域。\n\n制度與一次資料確認日：2026年10月10日。\n\n本文面向創立精釀啤酒廠・酒藏的事業者與現場負責人，整理以釀造旺季為前提的工時制度、1年單位變形工時制的手續、安全衛生體制義務的人數門檻、社會保險・勞動保險的加入時點，以及36協定的守備範圍。酒類製造免許的申請與製造場的物件、建築、消防，是各由別的專業負責的領域。\n\n## 有釀造旺季的釀造廠適合哪種工時制度？\n\n像酒藏的寒造、啤酒廠的新批次投料一樣，作業集中於特定時期的職場，適合能把全年忙閒平準化的工時制度。若固定套用1日8小時・1週40小時（勞動基準法第32條），旺季的加班會增加，淡季的所定工時則難以用盡。\n\n| 制度 | 依據 | 適合場面 |\n|---|---|---|\n| 1個月單位變形工時制 | 勞動基準法第32條之2 | 月內忙閒偏差的職場 |\n| 1年單位變形工時制 | 同法第32條之4 | 依季節集中釀造的釀造廠・酒藏 |\n| 彈性工時制 | 同法第32條之3 | 將上下班時間交由勞工裁量 |\n\n對旺季由季節決定的釀造廠，1年單位變形工時制是檢討的中心。適合哪種制度，取決於釀造時期、接單起伏與現場人數。選法另見[變形工時制與彈性工時制的選法](/zh-tw/labor/column/henkei-roudoujikan-flextime-erabikata)。\n\n## 導入1年單位變形工時制，勞資要約定什麼？\n\n1年單位變形工時制（勞動基準法第32條之4、施行規則第12條之4），是在對象期間平均不超過1週40小時的前提下，旺季可設定超過1日8小時・1週40小時的所定工時。導入須締結勞資協定，並向所轄勞動基準監督署長提出申報（也須變更工作規則）。\n\n| 勞資協定約定事項 | 內容 |\n|---|---|\n| 對象勞工範圍 | 適用制度的勞工 |\n| 對象期間 | 逾1個月至1年以內的期間 |\n| 特定期間 | 對象期間中特別繁忙的期間 |\n| 工作日・各工作日工時 | 對象期間各日的所定工時 |\n| 有效期間 | 勞資協定本身的有效期間 |\n\n工時上限原則為1日10小時・1週52小時。對象期間逾3個月時，另有年工作日數280日以內、對所定工時逾48小時的週設有連續與次數限制等追加要件。連續工作日數原則以6日為限，特定期間則可至能確保1週1日休日的範圍（最多連續12日）。制度設計與協定整備，另見[工作規則何時有義務訂定](/zh-tw/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo)。\n\n## 安全衛生體制（衛生管理者・危險物）從多少人開始有義務？\n\n安全衛生管理體制依事業場常時使用的勞工人數，分階段產生義務。選任須於選任事由發生日起14日內進行，並向所轄勞動基準監督署長報告。製造業是有安全管理者選任義務的業種。\n\n| 職責・依據 | 產生義務的規模 |\n|---|---|\n| 衛生管理者（勞動安全衛生法第12條） | 不分業種，常時50人以上 |\n| 安全管理者（同法第11條） | 製造業等對象業種，常時50人以上 |\n| 安全衛生推進者（同法第12條之2） | 對象業種，常時10人以上未滿50人 |\n\n釀造現場會伴隨發酵產生的二氧化碳、蒸煮加溫的鍋爐、冷卻設備的冷媒與酒精等的處理。這些危險物作業者、高壓氣體與鍋爐的作業者・作業主任者等的選任、內裝限制與消防設備，屬於依消防法、高壓氣體保安法與勞動安全衛生法令，由各資格者與所轄消防署、勞動基準監督署確認的領域。化學物質管理另見[化學物質的自律管理是什麼](/zh-tw/labor/column/kagaku-busshitsu-jiritsuteki-kanri-sdsra)，處理危險物的現場配置例另見[加油站的危險物與勞務](/zh-tw/labor/column/gasoline-stand-ss-kikenbutsu-haichi-roumu-shinya)。本所負責的，是含選任在內的安全衛生體制整備、工作規則、安全衛生管理規程與教育安排的部分。\n\n## 小規模開設的釀造廠，社會保險・勞動保險何時加入？\n\n社會保險（健康保險・厚生年金保險），只要是法人事業所，不論勞工人數都是強制適用（健康保險法第3條第3項、厚生年金保險法第6條第1項）。個人經營的事業所，製造業屬於適用業種，故常時使用5人以上即強制適用，未滿5人為任意適用。成為被保險者的要件（工時、日數等）另行確認。\n\n勞動保險中的勞災保險，只要使用1名勞工原則即成立保險關係。雇用保險則對符合被保險者要件的勞工須辦理加入手續。開業時，於法人設立、雇用事實發生的時點確認適用關係與期限。具體處理由資格者面談後進行。\n\n## 旺季的加班・假日工作，36協定可涵蓋到哪裡？\n\n即使導入1年單位變形工時制，要讓勞工進行超過所設所定工時的加班或假日工作，仍須另締結36協定（勞動基準法第36條）並申報。加班上限規制原則為每月45小時・每年360小時，即使設特別條款，也有每年720小時以內、含假日工作的單月未滿100小時、多月平均80小時以內等框架。\n\n但對象期間逾3個月的1年單位變形工時制對象者，加班的上限時間被定為每月42小時・每年320小時，比通常（每月45小時・每年360小時）短。不要以為旺季加班僅靠變形工時的設定就能吸收，仍須與36協定的框架並存設計。36協定的具體範圍另見[36協定的加班可到哪裡](/zh-tw/labor/column/36-kyotei-zangyo-sharoushi-doko-made)。\n\n## 四葉社会保険労務士事務所能做什麼？\n\n本所接受含1年單位變形工時制在內的工時制度設計、工作規則・勞資協定・安全衛生管理規程的整備，以及社會保險・勞動保險加入與36協定申報的諮詢。諮詢免費。費用請見[報酬額表](/zh-tw/labor/ryokin)，一般問題請見[常見問題](/zh-tw/labor/faq)。\n\n酒類製造免許的申請由行政書士、製造場物件由不動產、建築確認・用途變更由建築士、酒稅申報由稅理士、危險物・高壓氣體等的作業者選任與設備由各資格者與所轄消防署、勞動基準監督署確認。與這些外部專業，請各自獨立、另行簽約，直接請款・直接付款。本所不經手介紹費・回扣。\n\n## 常見問題\n\n**Q. 1年單位變形工時制只靠工作規則就能開始嗎？**\nA. 只變更工作規則並不足夠。須以勞資協定約定對象勞工、對象期間、特定期間、工作日與各工作日工時、有效期間，並向所轄勞動基準監督署長申報。工時原則以1日10小時・1週52小時為限，對象期間逾3個月時另有年工作日數280日等追加要件。\n\n**Q. 導入變形工時制後，旺季加班就不需要36協定了嗎？**\nA. 仍需要。對超過變形制所設所定工時的加班與假日工作，須另締結36協定（勞動基準法第36條）並申報。另須注意，對象期間逾3個月的1年單位變形工時制對象者，加班上限時間為每月42小時・每年320小時，比通常短。\n\n**Q. 釀造廠的安全衛生管理者從幾人開始選任？**\nA. 不分業種，常時50人以上選任衛生管理者；製造業等對象業種常時50人以上選任安全管理者。對象業種常時10人以上未滿50人則選任安全衛生推進者。皆於選任事由發生起14日內進行，並向所轄勞動基準監督署長報告。危險物・高壓氣體・鍋爐等的作業者選任，依其他法令由各資格者確認。\n\n**Q. 社長1人加少數人開始的釀造廠也需要社會保險嗎？**\nA. 只要是法人事業所，不論人數都強制適用健康保險・厚生年金保險。個人經營時，製造業屬適用業種，故常時5人以上強制適用，未滿5人為任意適用。勞災保險只要使用1名勞工原則即成立，雇用保險對符合被保險者要件的勞工須辦手續。\n\n## 這篇文章的根據\n\n以下是2026年10月10日參照的一次資料。施行・修正日為相關變更的記載，不表示已逐一核對全部法令的最終修正日。\n\n- 勞動基準法第32條、第32條之2、第32條之3、第32條之4：工時原則與各變形工時制。施行規則第12條之4：1年單位變形工時制的協定事項與上限（1日10小時・1週52小時、對象期間逾3個月的年工作日數280日等）。[e-Gov法令檢索・勞動基準法](https://laws.e-gov.go.jp/law/322AC0000000049)。\n- 勞動基準法第36條：加班・假日工作的協定與上限規制（每月45小時・每年360小時，設特別條款也以每年720小時以內等）。對象期間逾3個月的1年單位變形工時制對象者，上限時間為每月42小時・每年320小時。[厚生勞動省・加班上限規制](https://www.mhlw.go.jp/content/001309313.pdf)。\n- 勞動安全衛生法第11條（安全管理者）・第12條（衛生管理者）・第12條之2（安全衛生推進者等）、施行令第3條・第4條：選任義務的業種與規模。[e-Gov法令檢索・勞動安全衛生法](https://laws.e-gov.go.jp/law/347AC0000000057)。\n- 健康保險法第3條第3項、厚生年金保險法第6條第1項：適用事業所範圍。勞動者災害補償保險法・雇用保險法：勞動保險的適用。\n- 危險物・高壓氣體・鍋爐等的作業者選任、內裝限制、消防設備，依消防法・高壓氣體保安法・勞動安全衛生法令，由各資格者與所轄消防署、勞動基準監督署確認。本篇不含現行整合法條最終修正日的逐一核對，以及各業種選任資格・過渡措施的全部組合。個案適用時由資格者・專業機構確認最新一次資料。社会保険労務士法第2條：諮詢、指導等業務的依據。\n\n本文僅提供一般資訊。個別判斷由資格者面談後進行；必要時向所轄勞動基準監督署、年金事務所等查詢。執筆：[浦松丈二](/zh-tw/about/uramatsu)（社会保険労務士・行政書士・宅地建物取引士）。",
+        "category": "勞動時間",
+        "keywords": [
+          "釀造廠 勞務",
+          "1年單位變形工時 第32條之4",
+          "36協定 加班上限",
+          "衛生管理者 安全管理者 選任",
+          "釀造廠 社會保險",
+          "危險物 安全衛生"
+        ],
+        "tags": [
+          "勞動時間",
+          "變形工時",
+          "勞動安全衛生",
+          "社會保險",
+          "勞動基準法"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "1年單位變形工時制只靠工作規則就能開始嗎？",
+            "answer": "只變更工作規則並不足夠。須以勞資協定約定對象勞工、對象期間、特定期間、工作日與各工作日工時、有效期間，並向所轄勞動基準監督署長申報。工時原則以1日10小時・1週52小時為限，對象期間逾3個月時另有年工作日數280日等追加要件。"
+          },
+          {
+            "question": "導入變形工時制後，旺季加班就不需要36協定了嗎？",
+            "answer": "仍需要。對超過變形制所設所定工時的加班與假日工作，須另締結36協定（勞動基準法第36條）並申報。另須注意，對象期間逾3個月的1年單位變形工時制對象者，加班上限時間為每月42小時・每年320小時，比通常短。"
+          },
+          {
+            "question": "釀造廠的安全衛生管理者從幾人開始選任？",
+            "answer": "不分業種，常時50人以上選任衛生管理者；製造業等對象業種常時50人以上選任安全管理者。對象業種常時10人以上未滿50人則選任安全衛生推進者。皆於選任事由發生起14日內進行，並向所轄勞動基準監督署長報告。危險物・高壓氣體・鍋爐等的作業者選任，依其他法令由各資格者確認。"
+          },
+          {
+            "question": "社長1人加少數人開始的釀造廠也需要社會保險嗎？",
+            "answer": "只要是法人事業所，不論人數都強制適用健康保險・厚生年金保險。個人經營時，製造業屬適用業種，故常時5人以上強制適用，未滿5人為任意適用。勞災保險只要使用1名勞工原則即成立，雇用保險對符合被保險者要件的勞工須辦手續。"
+          }
+        ]
+      },
+      "zh": {
+        "title": "开设酿造厂・酒藏时的劳务，变形工时・旺季・安全卫生",
+        "excerpt": "酿造厂・酒藏的劳务，以1年单位变形工时制（劳动基准法第32条之4）平准化酿造旺季，超出部分以36协定管理，常时50人起选任卫生管理者。并整理社会保险・劳动保险的加入时点，以及酒类制造免许、建筑、消防由各资格者分别承接的分工。",
+        "content": "**先讲结论**：酿造厂・酒藏的劳务，核心是以1年单位变形工时制（劳动基准法第32条之4）平准化酿造旺季，超出部分以36协定管理，常时50人起选任卫生管理者。危险物・高压气体的作业者选任，以及建筑、消防，属于各资格者的领域。\n\n制度与一次资料确认日：2026年10月10日。\n\n本文面向创立精酿啤酒厂・酒藏的事业者与现场负责人，整理以酿造旺季为前提的工时制度、1年单位变形工时制的手续、安全卫生体制义务的人数门槛、社会保险・劳动保险的加入时点，以及36协定的守备范围。酒类制造免许的申请与制造场的物件、建筑、消防，是各由别的专业负责的领域。\n\n## 有酿造旺季的酿造厂适合哪种工时制度？\n\n像酒藏的寒造、啤酒厂的新批次投料一样，作业集中于特定时期的职场，适合能把全年忙闲平准化的工时制度。若固定套用1日8小时・1周40小时（劳动基准法第32条），旺季的加班会增加，淡季的所定工时则难以用尽。\n\n| 制度 | 依据 | 适合场面 |\n|---|---|---|\n| 1个月单位变形工时制 | 劳动基准法第32条之2 | 月内忙闲偏差的职场 |\n| 1年单位变形工时制 | 同法第32条之4 | 依季节集中酿造的酿造厂・酒藏 |\n| 弹性工时制 | 同法第32条之3 | 将上下班时间交由劳工裁量 |\n\n对旺季由季节决定的酿造厂，1年单位变形工时制是检讨的中心。适合哪种制度，取决于酿造时期、接单起伏与现场人数。选法另见[变形工时制与弹性工时制的选法](/zh/labor/column/henkei-roudoujikan-flextime-erabikata)。\n\n## 导入1年单位变形工时制，劳资要约定什么？\n\n1年单位变形工时制（劳动基准法第32条之4、施行规则第12条之4），是在对象期间平均不超过1周40小时的前提下，旺季可设定超过1日8小时・1周40小时的所定工时。导入须缔结劳资协定，并向所辖劳动基准监督署长提出申报（也须变更工作规则）。\n\n| 劳资协定约定事项 | 内容 |\n|---|---|\n| 对象劳工范围 | 适用制度的劳工 |\n| 对象期间 | 逾1个月至1年以内的期间 |\n| 特定期间 | 对象期间中特别繁忙的期间 |\n| 工作日・各工作日工时 | 对象期间各日的所定工时 |\n| 有效期间 | 劳资协定本身的有效期间 |\n\n工时上限原则为1日10小时・1周52小时。对象期间逾3个月时，另有年工作日数280日以内、对所定工时逾48小时的周设有连续与次数限制等追加要件。连续工作日数原则以6日为限，特定期间则可至能确保1周1日休日的范围（最多连续12日）。制度设计与协定整备，另见[工作规则何时有义务制定](/zh/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo)。\n\n## 安全卫生体制（卫生管理者・危险物）从多少人开始有义务？\n\n安全卫生管理体制依事业场常时使用的劳工人数，分阶段产生义务。选任须于选任事由发生日起14日内进行，并向所辖劳动基准监督署长报告。制造业是有安全管理者选任义务的业种。\n\n| 职责・依据 | 产生义务的规模 |\n|---|---|\n| 卫生管理者（劳动安全卫生法第12条） | 不分业种，常时50人以上 |\n| 安全管理者（同法第11条） | 制造业等对象业种，常时50人以上 |\n| 安全卫生推进者（同法第12条之2） | 对象业种，常时10人以上未满50人 |\n\n酿造现场会伴随发酵产生的二氧化碳、蒸煮加温的锅炉、冷却设备的冷媒与酒精等的处理。这些危险物作业者、高压气体与锅炉的作业者・作业主任者等的选任、内装限制与消防设备，属于依消防法、高压气体保安法与劳动安全卫生法令，由各资格者与所辖消防署、劳动基准监督署确认的领域。化学物质管理另见[化学物质的自律管理是什么](/zh/labor/column/kagaku-busshitsu-jiritsuteki-kanri-sdsra)，处理危险物的现场配置例另见[加油站的危险物与劳务](/zh/labor/column/gasoline-stand-ss-kikenbutsu-haichi-roumu-shinya)。本所负责的，是含选任在内的安全卫生体制整备、工作规则、安全卫生管理规程与教育安排的部分。\n\n## 小规模开设的酿造厂，社会保险・劳动保险何时加入？\n\n社会保险（健康保险・厚生年金保险），只要是法人事业所，不论劳工人数都是强制适用（健康保险法第3条第3项、厚生年金保险法第6条第1项）。个人经营的事业所，制造业属于适用业种，故常时使用5人以上即强制适用，未满5人为任意适用。成为被保险者的要件（工时、日数等）另行确认。\n\n劳动保险中的劳灾保险，只要使用1名劳工原则即成立保险关系。雇用保险则对符合被保险者要件的劳工须办理加入手续。开业时，于法人设立、雇用事实发生的时点确认适用关系与期限。具体处理由资格者面谈后进行。\n\n## 旺季的加班・假日工作，36协定可涵盖到哪里？\n\n即使导入1年单位变形工时制，要让劳工进行超过所设所定工时的加班或假日工作，仍须另缔结36协定（劳动基准法第36条）并申报。加班上限规制原则为每月45小时・每年360小时，即使设特别条款，也有每年720小时以内、含假日工作的单月未满100小时、多月平均80小时以内等框架。\n\n但对象期间逾3个月的1年单位变形工时制对象者，加班的上限时间被定为每月42小时・每年320小时，比通常（每月45小时・每年360小时）短。不要以为旺季加班仅靠变形工时的设定就能吸收，仍须与36协定的框架并存设计。36协定的具体范围另见[36协定的加班可到哪里](/zh/labor/column/36-kyotei-zangyo-sharoushi-doko-made)。\n\n## 四葉社会保険労務士事務所能做什么？\n\n本所接受含1年单位变形工时制在内的工时制度设计、工作规则・劳资协定・安全卫生管理规程的整备，以及社会保险・劳动保险加入与36协定申报的咨询。咨询免费。费用请见[报酬额表](/zh/labor/ryokin)，一般问题请见[常见问题](/zh/labor/faq)。\n\n酒类制造免许的申请由行政书士、制造场物件由不动产、建筑确认・用途变更由建筑士、酒税申报由税理士、危险物・高压气体等的作业者选任与设备由各资格者与所辖消防署、劳动基准监督署确认。与这些外部专业，请各自独立、另行签约，直接请款・直接付款。本所不经手介绍费・回扣。\n\n## 常见问题\n\n**Q. 1年单位变形工时制只靠工作规则就能开始吗？**\nA. 只变更工作规则并不足够。须以劳资协定约定对象劳工、对象期间、特定期间、工作日与各工作日工时、有效期间，并向所辖劳动基准监督署长申报。工时原则以1日10小时・1周52小时为限，对象期间逾3个月时另有年工作日数280日等追加要件。\n\n**Q. 导入变形工时制后，旺季加班就不需要36协定了吗？**\nA. 仍需要。对超过变形制所设所定工时的加班与假日工作，须另缔结36协定（劳动基准法第36条）并申报。另须注意，对象期间逾3个月的1年单位变形工时制对象者，加班上限时间为每月42小时・每年320小时，比通常短。\n\n**Q. 酿造厂的安全卫生管理者从几人开始选任？**\nA. 不分业种，常时50人以上选任卫生管理者；制造业等对象业种常时50人以上选任安全管理者。对象业种常时10人以上未满50人则选任安全卫生推进者。皆于选任事由发生起14日内进行，并向所辖劳动基准监督署长报告。危险物・高压气体・锅炉等的作业者选任，依其他法令由各资格者确认。\n\n**Q. 社长1人加少数人开始的酿造厂也需要社会保险吗？**\nA. 只要是法人事业所，不论人数都强制适用健康保险・厚生年金保险。个人经营时，制造业属适用业种，故常时5人以上强制适用，未满5人为任意适用。劳灾保险只要使用1名劳工原则即成立，雇用保险对符合被保险者要件的劳工须办手续。\n\n## 这篇文章的根据\n\n以下是2026年10月10日参照的一次资料。施行・修正日为相关变更的记载，不表示已逐一核对全部法令的最终修正日。\n\n- 劳动基准法第32条、第32条之2、第32条之3、第32条之4：工时原则与各变形工时制。施行规则第12条之4：1年单位变形工时制的协定事项与上限（1日10小时・1周52小时、对象期间逾3个月的年工作日数280日等）。[e-Gov法令检索・劳动基准法](https://laws.e-gov.go.jp/law/322AC0000000049)。\n- 劳动基准法第36条：加班・假日工作的协定与上限规制（每月45小时・每年360小时，设特别条款也以每年720小时以内等）。对象期间逾3个月的1年单位变形工时制对象者，上限时间为每月42小时・每年320小时。[厚生劳动省・加班上限规制](https://www.mhlw.go.jp/content/001309313.pdf)。\n- 劳动安全卫生法第11条（安全管理者）・第12条（卫生管理者）・第12条之2（安全卫生推进者等）、施行令第3条・第4条：选任义务的业种与规模。[e-Gov法令检索・劳动安全卫生法](https://laws.e-gov.go.jp/law/347AC0000000057)。\n- 健康保险法第3条第3项、厚生年金保险法第6条第1项：适用事业所范围。劳动者灾害补偿保险法・雇用保险法：劳动保险的适用。\n- 危险物・高压气体・锅炉等的作业者选任、内装限制、消防设备，依消防法・高压气体保安法・劳动安全卫生法令，由各资格者与所辖消防署、劳动基准监督署确认。本篇不含现行整合法条最终修正日的逐一核对，以及各业种选任资格・过渡措施的全部组合。个案适用时由资格者・专业机构确认最新一次资料。社会保険労務士法第2条：咨询、指导等业务的依据。\n\n本文仅提供一般信息。个别判断由资格者面谈后进行；必要时向所辖劳动基准监督署、年金事务所等查询。执笔：[浦松丈二](/zh/about/uramatsu)（社会保険労務士・行政書士・宅地建物取引士）。",
+        "category": "劳动时间",
+        "keywords": [
+          "酿造厂 劳务",
+          "1年单位变形工时 第32条之4",
+          "36协定 加班上限",
+          "卫生管理者 安全管理者 选任",
+          "酿造厂 社会保险",
+          "危险物 安全卫生"
+        ],
+        "tags": [
+          "劳动时间",
+          "变形工时",
+          "劳动安全卫生",
+          "社会保险",
+          "劳动基准法"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "1年单位变形工时制只靠工作规则就能开始吗？",
+            "answer": "只变更工作规则并不足够。须以劳资协定约定对象劳工、对象期间、特定期间、工作日与各工作日工时、有效期间，并向所辖劳动基准监督署长申报。工时原则以1日10小时・1周52小时为限，对象期间逾3个月时另有年工作日数280日等追加要件。"
+          },
+          {
+            "question": "导入变形工时制后，旺季加班就不需要36协定了吗？",
+            "answer": "仍需要。对超过变形制所设所定工时的加班与假日工作，须另缔结36协定（劳动基准法第36条）并申报。另须注意，对象期间逾3个月的1年单位变形工时制对象者，加班上限时间为每月42小时・每年320小时，比通常短。"
+          },
+          {
+            "question": "酿造厂的安全卫生管理者从几人开始选任？",
+            "answer": "不分业种，常时50人以上选任卫生管理者；制造业等对象业种常时50人以上选任安全管理者。对象业种常时10人以上未满50人则选任安全卫生推进者。皆于选任事由发生起14日内进行，并向所辖劳动基准监督署长报告。危险物・高压气体・锅炉等的作业者选任，依其他法令由各资格者确认。"
+          },
+          {
+            "question": "社长1人加少数人开始的酿造厂也需要社会保险吗？",
+            "answer": "只要是法人事业所，不论人数都强制适用健康保险・厚生年金保险。个人经营时，制造业属适用业种，故常时5人以上强制适用，未满5人为任意适用。劳灾保险只要使用1名劳工原则即成立，雇用保险对符合被保险者要件的劳工须办手续。"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "business": "labor",
+    "slug": "tokutei-ginou-jidosha-unso-driver-ukeire-kaizenkijun-roumu",
+    "title": "特定技能に加わった自動車運送業でドライバーを受け入れる労務は？改善基準と社保",
+    "date": "2026-10-10",
+    "category": "外国人雇用",
+    "excerpt": "2024年に特定技能へ追加された自動車運送業で外国人ドライバーを雇うと、在留資格の要件（試験・運転免許・日本語）に加え、改善基準告示の拘束・休息と、国籍を問わない社会保険・労働保険の適用を同時に設計します。登録支援機関の支援と社労士の労務管理の線引きも整理します。",
+    "content": "**結論（先に要点）**：2024年に特定技能へ加わった自動車運送業で外国人ドライバーを雇うと、在留資格の要件（試験・運転免許・日本語）に加えて、改善基準告示の拘束・休息と、国籍を問わない社会保険・労働保険の適用を同時に設計します。在留資格の申請と支援計画は行政書士・登録支援機関の領域です。\n\n制度・一次資料の確認日：2026年10月10日。\n\nトラック運送会社の人事・労務担当と、受け入れを支援する専門家向けに、2024年に特定技能へ追加された自動車運送業分野でドライバーを雇う際の労務を整理します。改善基準告示（自動車運転者の労働時間等）と、健康保険・厚生年金保険・労働保険の適用、登録支援機関の支援と社会保険労務士の労務管理の線引きを扱います。\n\n## 自動車運送業の特定技能は従来の分野と受入要件が何が違うのか？\n\n自動車運送業分野は、2024年3月29日の閣議決定で特定技能の対象分野に追加されました。業務区分はトラック（貨物）・バス・タクシーの運転に分かれ、運転そのものを担うため、他分野にない固有の要件が重なります。\n\n| 項目 | 内容 |\n|---|---|\n| 追加の時期 | 2024年3月29日 閣議決定 |\n| 業務区分 | トラック（貨物）・バス・タクシー |\n| 運転免許 | トラックは第一種、バス・タクシーは第二種の日本の運転免許 |\n| 技能試験 | 自動車運送業分野特定技能1号評価試験 |\n| 日本語 | 日本語能力試験等の基準（バス・タクシーは上位の水準が示されている） |\n\n従来の介護・外食等の分野では、おおむね技能試験と日本語試験で足りました。自動車運送業では、これに加えて日本の運転免許の取得が前提になる点が最大の違いです。免許取得までの期間は在留資格の取扱いが別に定められています。分野ごとの支援体制の違いは[特定技能の自社支援と支援体制の労務](/labor/column/tokutei-ginou-jisha-shien-taisei-roumu)、他分野の例は[介護分野の特定技能と労務・社会保険](/labor/column/kaigo-tokutei-ginou-gaikokujin-roumu-shakaihoken)も参照してください。\n\n## 外国人ドライバーの労働時間は改善基準告示でどこまで認められるのか？\n\n自動車運転者には、一般の労働時間規制に加えて、改善基準告示（自動車運転者の労働時間等の改善のための基準）が適用されます。2024年4月1日適用の改正で、トラック運転者の拘束時間・休息期間が見直されました。外国人であっても日本人と同じ基準が適用されます。\n\n| 項目（トラック） | 原則 |\n|---|---|\n| 1年の拘束時間 | 3,300時間（労使協定で年3,400時間・月310時間を年6か月まで） |\n| 1か月の拘束時間 | 284時間 |\n| 1日の拘束時間 | 13時間（上限15時間。14時間超は週2回までが目安） |\n| 1日の休息期間 | 継続11時間を基本とし、9時間を下回らない |\n\n拘束時間は始業から終業までの時間（労働時間と休憩の合計）で、残業代の計算の基礎になる労働時間とは概念が異なります。改善基準告示の数値と、労働基準法の時間外労働の上限規制・36協定は別々に満たす必要があります。告示の詳しい読み方は[2024年の運送業の改善基準告示](/labor/column/unso-2024-mondai-kaizen-kijun-kokuji)で整理しています。長距離・宿泊を伴う場合の例外や、バス・タクシーの基準は区分ごとに異なるため、個別の判断は面談のうえ資格者が行います。\n\n## 試験・日本の運転免許・日本語要件は誰が確認・支援するのか？\n\n技能試験の合否、日本の運転免許の取得状況、日本語の水準は、在留資格「特定技能」の該当性に関わる事項です。これらの確認と、支援計画の作成・実施は、在留資格を扱う行政書士と登録支援機関の領域で、社会保険労務士の業務ではありません。\n\n免許取得までの期間の在留の取扱いや、必要な試験・日本語の基準は、出入国在留管理庁と国土交通省の最新の運用要領で確認します。本記事では試験区分・免許・日本語の基準の細部や経過措置の全組合せを断定していません。採用の前提として、在留資格の要件が整っているかを、申請を担う専門家に確認したうえで、労働条件を設計します。\n\n## 社会保険・労働保険は入社時にどう適用するのか？\n\n健康保険・厚生年金保険は、適用事業所に使用され被保険者の要件を満たす労働者について、国籍を問わず適用されます。外国人ドライバーも同じです。労災保険は労働者を1人でも使用すれば原則として保険関係が成立し、雇用保険は被保険者の要件を満たせば加入手続が必要です。\n\nあわせて、外国人を雇い入れたとき・離職したときは、氏名や在留資格等を確認して外国人雇用状況の届出をハローワークへ行う義務があります（労働施策総合推進法第28条）。雇入れ時の届出は、雇用保険の被保険者資格取得届と同時に行える場合があります。手続の流れは[外国人雇用状況の届出](/labor/column/gaikokujin-koyo-jokyo-todokede)、賃金・労働条件の明示は[外国人への同等賃金と労働条件明示](/labor/column/gaikokujin-doto-chingin-rissho-roudou-joken-tsuchi)をご覧ください。\n\n## 登録支援機関の支援と社労士の労務管理はどこで線を引くのか？\n\n特定技能1号の受入れでは、所属機関（受入企業）に支援計画の作成・実施が義務づけられ、その全部または一部を登録支援機関に委託できます。支援は、入国前の情報提供、生活オリエンテーション、日本語学習の機会の提供、相談・苦情対応など、在留と生活に関する支援です。\n\nこれに対し、社会保険労務士が担うのは、就業規則・雇用契約、改善基準告示を踏まえた労働時間・割増賃金の設計、社会保険・労働保険の手続、労務相談です。支援計画の作成・在留資格の申請は行政書士・登録支援機関、労務管理は社会保険労務士、と役割が分かれます。重なって見える「相談対応」も、在留・生活の支援か、労働関係の相談かで担い手が違います。\n\n## 四葉社会保険労務士事務所は、何ができますか？\n\n当事務所では、改善基準告示を踏まえた労働時間制度の設計、就業規則・雇用契約、割増賃金、社会保険・労働保険の加入と外国人雇用状況の届出についてご相談いただけます。ご相談は無料です。費用は[報酬額表](/labor/ryokin)、一般的なご質問は[よくあるご質問](/labor/faq)に掲載しています。\n\n在留資格「特定技能」の申請と登録支援機関の支援計画、一般貨物自動車運送事業の許可は行政書士・登録支援機関、税務は税理士が担う事項です。これらの外部専門家とは、それぞれ独立した事業体として別々にご契約いただき、直接請求・直接お支払いいただきます。当事務所は紹介料・キックバックを扱いません。\n\n## よくある質問\n\n**Q. 外国人ドライバーにも改善基準告示は適用されますか？**\nA. 適用されます。改善基準告示（自動車運転者の労働時間等の改善のための基準）は自動車運転者に国籍を問わず適用され、2024年4月1日適用の改正でトラック運転者の拘束時間・休息期間が見直されました。原則で1年の拘束時間3,300時間、1か月284時間、1日13時間（上限15時間）、休息期間は継続11時間を基本とし9時間を下回らない、などの基準があります。\n\n**Q. 自動車運送業の特定技能は従来の分野と何が違いますか？**\nA. 2024年3月29日に特定技能へ追加された分野で、業務区分はトラック・バス・タクシーに分かれます。技能試験と日本語に加え、日本の運転免許（トラックは第一種、バス・タクシーは第二種）の取得が前提になる点が、従来の分野と最も違います。免許取得までの在留の取扱いは、最新の運用要領で確認します。\n\n**Q. 外国人ドライバーの社会保険や届出で日本人と違う点はありますか？**\nA. 健康保険・厚生年金保険・労働保険の適用は国籍を問わず同じです。異なるのは、雇入れ・離職のときに外国人雇用状況の届出をハローワークへ行う義務がある点です（労働施策総合推進法第28条）。雇入れ時の届出は、雇用保険の被保険者資格取得届と同時に行える場合があります。\n\n**Q. 登録支援機関と社会保険労務士はどう役割が分かれますか？**\nA. 支援計画の作成・実施（入国前の情報提供、生活オリエンテーション、相談・苦情対応など在留と生活の支援）は所属機関・登録支援機関と行政書士の領域です。就業規則・労働時間・割増賃金・社会保険の手続といった労務管理は社会保険労務士が担います。在留資格の申請は行政書士が担当します。\n\n## この記事の根拠\n\n以下は2026年10月10日参照の一次資料です。施行・改正日は関連する変更の記載で、全法令の最終改正日を照合済みという意味ではありません。\n\n- 特定技能の在留資格に係る制度の運用に関する方針・自動車運送業分野（2024年3月29日閣議決定）：業務区分（トラック・バス・タクシー）、試験・運転免許・日本語の要件。[出入国在留管理庁・特定技能](https://www.moj.go.jp/isa/policies/ssw/index.html)、[国土交通省・自動車運送業分野](https://www.mlit.go.jp/jidosha/jidosha_tk3_000001_00006.html)。試験・免許・日本語の基準の細部と経過措置は最新の運用要領で確認します。\n- 自動車運転者の労働時間等の改善のための基準（改善基準告示、2024年4月1日適用）：トラック運転者の拘束時間（1年3,300時間・1か月284時間・1日原則13時間）と休息期間（継続11時間を基本に9時間下限）。[厚生労働省・改善基準告示](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/kaizen/index.html)。長距離・宿泊や労使協定による例外、バス・タクシーの基準は区分ごとに確認します。\n- 労働施策の総合的な推進並びに労働者の雇用の安定及び職業生活の充実等に関する法律第28条：外国人雇用状況の届出。[厚生労働省・外国人雇用状況の届出](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/koyou/gaikokujin/)。\n- 健康保険法・厚生年金保険法・労働者災害補償保険法・雇用保険法：適用事業所・被保険者（国籍を問わない適用）。社会保険労務士法第2条：相談・指導等の業務の根拠。本記事では現行統合条文の最終改正日の全件照合、免許・試験・在留の全要件の個別確認は範囲に含みません。個別の適用時は最新の一次資料を資格者が確認します。\n\n本記事は一般的な情報提供です。個別の判断は面談のうえ資格者が行います。必要に応じ所轄労働基準監督署・ハローワーク等へ照会します。執筆：[浦松丈二](/about/uramatsu)（社会保険労務士・行政書士・宅地建物取引士）。",
+    "status": "published",
+    "author": {
+      "name": "浦松 丈二",
+      "title": "社会保険労務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+    },
+    "keywords": [
+      "特定技能 自動車運送業 労務",
+      "外国人 ドライバー 受け入れ 社会保険",
+      "改善基準告示 2024 トラック 拘束時間",
+      "外国人雇用状況の届出 労働施策総合推進法 第28条",
+      "登録支援機関 社労士 線引き",
+      "特定技能 運転免許 第一種 第二種"
+    ],
+    "tags": [
+      "外国人雇用",
+      "特定技能",
+      "自動車運送業",
+      "改善基準告示",
+      "社会保険",
+      "労働時間"
+    ],
+    "locales": [],
+    "faq": [
+      {
+        "question": "外国人ドライバーにも改善基準告示は適用されますか？",
+        "answer": "適用されます。改善基準告示（自動車運転者の労働時間等の改善のための基準）は自動車運転者に国籍を問わず適用され、2024年4月1日適用の改正でトラック運転者の拘束時間・休息期間が見直されました。原則で1年の拘束時間3,300時間、1か月284時間、1日13時間（上限15時間）、休息期間は継続11時間を基本とし9時間を下回らない、などの基準があります。"
+      },
+      {
+        "question": "自動車運送業の特定技能は従来の分野と何が違いますか？",
+        "answer": "2024年3月29日に特定技能へ追加された分野で、業務区分はトラック・バス・タクシーに分かれます。技能試験と日本語に加え、日本の運転免許（トラックは第一種、バス・タクシーは第二種）の取得が前提になる点が、従来の分野と最も違います。免許取得までの在留の取扱いは、最新の運用要領で確認します。"
+      },
+      {
+        "question": "外国人ドライバーの社会保険や届出で日本人と違う点はありますか？",
+        "answer": "健康保険・厚生年金保険・労働保険の適用は国籍を問わず同じです。異なるのは、雇入れ・離職のときに外国人雇用状況の届出をハローワークへ行う義務がある点です（労働施策総合推進法第28条）。雇入れ時の届出は、雇用保険の被保険者資格取得届と同時に行える場合があります。"
+      },
+      {
+        "question": "登録支援機関と社会保険労務士はどう役割が分かれますか？",
+        "answer": "支援計画の作成・実施（入国前の情報提供、生活オリエンテーション、相談・苦情対応など在留と生活の支援）は所属機関・登録支援機関と行政書士の領域です。就業規則・労働時間・割増賃金・社会保険の手続といった労務管理は社会保険労務士が担います。在留資格の申請は行政書士が担当します。"
+      }
+    ],
+    "translations": {
+      "en": {
+        "title": "Labor management for hiring drivers under the Specified Skilled Worker road transport field — improvement standards and social insurance",
+        "excerpt": "When hiring foreign drivers under the road transport field added to Specified Skilled Worker in 2024, you design the residency requirements (exam, driving licence, Japanese) together with the improvement-standards notification on working and on-duty hours and the nationality-blind application of social and labor insurance. Applying for the status of residence and the support plan belong to the Gyoseishoshi and the registered support organization.",
+        "content": "**In short:** When you hire a foreign driver under the road transport field added to Specified Skilled Worker in 2024, you design, together, the residency requirements (exam, driving licence, Japanese), the improvement-standards limits on on-duty and rest hours, and the nationality-blind application of social and labor insurance. Applying for the status of residence and the support plan belong to the Gyoseishoshi and the registered support organization.\n\nRules and primary sources checked: October 10, 2026.\n\nThis article is for HR and labor staff at trucking companies and the specialists who support hiring. It organizes the labor management of hiring drivers under the road transport field added to Specified Skilled Worker in 2024. It covers the improvement-standards notification on drivers' working and on-duty hours, the application of health insurance, employees' pension, and labor insurance, and the line between a registered support organization's support and a Shakai Hoken Roumushi's labor management.\n\n## How do the road transport field's requirements differ from earlier fields?\n\nThe road transport field was added to Specified Skilled Worker by Cabinet decision on March 29, 2024. The work categories split into driving trucks (freight), buses, and taxis, and because they involve driving itself, requirements not found in other fields overlap.\n\n| Item | Content |\n|---|---|\n| Time of addition | Cabinet decision, March 29, 2024 |\n| Work categories | Truck (freight), bus, taxi |\n| Driving licence | A Japanese Class 1 licence for trucks; a Class 2 licence for buses and taxis |\n| Skills exam | The Specified Skilled Worker (i) evaluation test for the road transport field |\n| Japanese | Standards such as the Japanese-Language Proficiency Test (a higher level is indicated for buses and taxis) |\n\nEarlier fields such as care and food service were generally satisfied by a skills exam and a Japanese test. In road transport, the biggest difference is that obtaining a Japanese driving licence is a precondition on top of those. The treatment of residence during the period until the licence is obtained is set separately. For differences in support arrangements by field, see [in-house support and support arrangements for Specified Skilled Worker](/en/labor/column/tokutei-ginou-jisha-shien-taisei-roumu), and for an example in another field, [Specified Skilled Worker and labor and social insurance in the care field](/en/labor/column/kaigo-tokutei-ginou-gaikokujin-roumu-shakaihoken).\n\n## How far are foreign drivers' hours allowed under the improvement standards?\n\nIn addition to general working-hour rules, vehicle drivers are subject to the improvement standards (the standards for improving the working hours and other conditions of vehicle drivers). The amendment effective April 1, 2024, revised truck drivers' on-duty hours and rest periods. The same standards apply to foreign drivers as to Japanese drivers.\n\n| Item (trucks) | Principle |\n|---|---|\n| Annual on-duty hours | 3,300 hours (by labor-management agreement, 3,400 a year and 310 a month for up to 6 months) |\n| Monthly on-duty hours | 284 hours |\n| Daily on-duty hours | 13 hours (up to 15; over 14 hours is a guide of up to twice a week) |\n| Daily rest period | A continuous 11 hours as the baseline, not falling below 9 |\n\nOn-duty hours are the time from start to finish of work (working time plus breaks), a concept distinct from the working time that is the basis for overtime pay. The improvement-standards figures and the Labour Standards Act overtime caps and 36 Agreement must each be satisfied separately. For how to read the standards, see [the 2024 improvement standards for the transport industry](/en/labor/column/unso-2024-mondai-kaizen-kijun-kokuji). Because exceptions for long-distance and overnight work, and the standards for buses and taxis, differ by category, specific judgments are made by a qualified professional after discussion.\n\n## Who confirms and supports the exam, Japanese driving licence, and Japanese requirements?\n\nPassing the skills exam, the status of a Japanese driving licence, and the Japanese level relate to eligibility for the Specified Skilled Worker status of residence. Confirming these and preparing and carrying out the support plan belong to the Gyoseishoshi who handle the status of residence and the registered support organization; they are not the work of a Shakai Hoken Roumushi.\n\nThe treatment of residence during the period until the licence is obtained and the required exam and Japanese standards should be checked against the latest operational guidelines of the Immigration Services Agency and the Ministry of Land, Infrastructure, Transport and Tourism. This article does not state definitively the details of exam categories, licences, and Japanese standards or every combination of transitional rules. As a precondition for hiring, confirm with the specialist handling the application that the residency requirements are in place, then design the working conditions.\n\n## How does social and labor insurance apply at the time of hiring?\n\nHealth insurance and employees' pension insurance apply, regardless of nationality, to workers used by a covered establishment who meet the insured-person requirements. The same applies to foreign drivers. Workers' compensation insurance generally takes effect once even one worker is employed, and employment insurance requires procedures for those meeting the insured-person requirements.\n\nIn addition, when a foreign national is hired or leaves, there is a duty to confirm the name, status of residence, and other matters and file a foreign employment status notification with Hello Work (Act on Comprehensively Advancing Labour Measures, Article 28). The notification at hiring can in some cases be made together with the employment-insurance insured-status acquisition notification. For the procedure, see [the foreign employment status notification](/en/labor/column/gaikokujin-koyo-jokyo-todokede), and for wages and working-condition disclosure, [equal wages and working-condition disclosure for foreign workers](/en/labor/column/gaikokujin-doto-chingin-rissho-roudou-joken-tsuchi).\n\n## Where is the line between a registered support organization's support and a Shakai Hoken Roumushi's labor management?\n\nIn accepting a Specified Skilled Worker (i), the affiliated organization (the receiving company) must prepare and carry out a support plan and may entrust all or part of it to a registered support organization. Support means support for residence and daily life, such as pre-entry information provision, life orientation, opportunities to learn Japanese, and handling consultations and complaints.\n\nIn contrast, a Shakai Hoken Roumushi handles work rules and employment contracts, the design of working hours and premium wages reflecting the improvement standards, social and labor insurance procedures, and labor consultations. Preparing the support plan and applying for the status of residence belong to the Gyoseishoshi and the registered support organization; labor management belongs to the Shakai Hoken Roumushi. Even \"handling consultations,\" which can look overlapping, has a different provider depending on whether it is residence- and life-related support or a labor-relations consultation.\n\n## What can 四葉社会保険労務士事務所 help with?\n\nWe offer consultations on working-hour design reflecting the improvement standards, work rules and employment contracts, premium wages, enrollment in social and labor insurance, and filing the foreign employment status notification. Consultations are free. See our [fee schedule](/en/labor/ryokin) and [general FAQs](/en/labor/faq).\n\nApplying for the Specified Skilled Worker status of residence and the registered support organization's support plan, and the licence for general cargo vehicle transport business, are matters for a Gyoseishoshi and the registered support organization; tax is for a tax accountant. These external specialists are independent businesses engaged under separate direct contracts; each invoices the client directly and receives payment directly. Our office does not handle referral fees or kickbacks.\n\n## Frequently asked questions\n\n**Q. Do the improvement standards apply to foreign drivers too?**\nA. Yes. The improvement standards (the standards for improving the working hours and other conditions of vehicle drivers) apply to vehicle drivers regardless of nationality, and the amendment effective April 1, 2024, revised truck drivers' on-duty hours and rest periods. In principle, annual on-duty hours are 3,300, monthly 284, daily 13 (up to 15), and the rest period is a continuous 11 hours as the baseline, not falling below 9.\n\n**Q. How does the road transport field differ from earlier fields?**\nA. It is a field added to Specified Skilled Worker on March 29, 2024, with work categories split into trucks, buses, and taxis. The biggest difference from earlier fields is that, on top of a skills exam and Japanese, obtaining a Japanese driving licence (Class 1 for trucks; Class 2 for buses and taxis) is a precondition. The treatment of residence until the licence is obtained is checked against the latest operational guidelines.\n\n**Q. Is there anything different from Japanese workers for foreign drivers' social insurance or notifications?**\nA. The application of health insurance, employees' pension, and labor insurance is the same regardless of nationality. What differs is the duty, when hiring or on departure, to file a foreign employment status notification with Hello Work (Act on Comprehensively Advancing Labour Measures, Article 28). The notification at hiring can in some cases be made together with the employment-insurance insured-status acquisition notification.\n\n**Q. How are the roles of a registered support organization and a Shakai Hoken Roumushi divided?**\nA. Preparing and carrying out the support plan — pre-entry information, life orientation, consultation and complaint handling, and other residence- and life-related support — belongs to the affiliated organization, the registered support organization, and the Gyoseishoshi. Labor management such as work rules, working hours, premium wages, and social insurance procedures belongs to the Shakai Hoken Roumushi. Applying for the status of residence is handled by the Gyoseishoshi.\n\n## Sources for this article\n\nThese primary sources were consulted on October 10, 2026. Effective and amendment dates refer to relevant changes; they do not indicate verification of every law's latest amendment date.\n\n- The policy on the operation of the Specified Skilled Worker status system, road transport field (Cabinet decision, March 29, 2024): work categories (truck, bus, taxi) and requirements for the exam, driving licence, and Japanese. [Immigration Services Agency, Specified Skilled Worker](https://www.moj.go.jp/isa/policies/ssw/index.html) and [MLIT, road transport field](https://www.mlit.go.jp/jidosha/jidosha_tk3_000001_00006.html). Details of the exam, licence, and Japanese standards and transitional rules are checked against the latest operational guidelines.\n- The standards for improving the working hours and other conditions of vehicle drivers (improvement standards, effective April 1, 2024): truck drivers' on-duty hours (3,300 a year, 284 a month, 13 a day in principle) and rest period (a continuous 11 hours as the baseline, with a lower bound of 9). [MHLW, improvement standards](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/kaizen/index.html). Exceptions for long-distance and overnight work or labor-management agreements, and the standards for buses and taxis, are checked by category.\n- Act on Comprehensively Advancing Labour Measures and Stabilizing the Employment of Workers and Enriching Their Working Lives, Article 28: the foreign employment status notification. [MHLW, foreign employment status notification](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/koyou/gaikokujin/).\n- Health Insurance Act, Employees' Pension Insurance Act, Workers' Accident Compensation Insurance Act, and Employment Insurance Act: covered establishments and insured persons (application regardless of nationality). 社会保険労務士法 Article 2: basis for consultation and guidance. This article does not exhaustively verify consolidated provisions' latest amendment dates or confirm every licence, exam, and residence requirement individually. For a specific application, a qualified professional checks the current primary sources.\n\nThis article provides general information. Specific judgments are made by a qualified professional after discussion. Enquiries may be made to the competent Labour Standards Inspection Office, Hello Work, and others as needed. Written by [浦松丈二](/en/about/uramatsu), Shakai Hoken Roumushi, Gyoseishoshi, and licensed real estate transaction specialist.",
+        "category": "Foreign employment",
+        "keywords": [
+          "Specified Skilled Worker road transport",
+          "foreign driver labor management",
+          "improvement standards 2024 on-duty hours",
+          "foreign employment status notification Article 28",
+          "registered support organization",
+          "social insurance nationality"
+        ],
+        "tags": [
+          "Foreign employment",
+          "Specified Skilled Worker",
+          "Working hours",
+          "Social insurance",
+          "Road transport"
+        ],
+        "author": {
+          "name": "Joji Uramatsu",
+          "title": "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所"
+        },
+        "faq": [
+          {
+            "question": "Do the improvement standards apply to foreign drivers too?",
+            "answer": "Yes. The improvement standards (the standards for improving the working hours and other conditions of vehicle drivers) apply to vehicle drivers regardless of nationality, and the amendment effective April 1, 2024, revised truck drivers' on-duty hours and rest periods. In principle, annual on-duty hours are 3,300, monthly 284, daily 13 (up to 15), and the rest period is a continuous 11 hours as the baseline, not falling below 9."
+          },
+          {
+            "question": "How does the road transport field differ from earlier fields?",
+            "answer": "It is a field added to Specified Skilled Worker on March 29, 2024, with work categories split into trucks, buses, and taxis. The biggest difference from earlier fields is that, on top of a skills exam and Japanese, obtaining a Japanese driving licence (Class 1 for trucks; Class 2 for buses and taxis) is a precondition. The treatment of residence until the licence is obtained is checked against the latest operational guidelines."
+          },
+          {
+            "question": "Is there anything different from Japanese workers for foreign drivers' social insurance or notifications?",
+            "answer": "The application of health insurance, employees' pension, and labor insurance is the same regardless of nationality. What differs is the duty, when hiring or on departure, to file a foreign employment status notification with Hello Work (Act on Comprehensively Advancing Labour Measures, Article 28). The notification at hiring can in some cases be made together with the employment-insurance insured-status acquisition notification."
+          },
+          {
+            "question": "How are the roles of a registered support organization and a Shakai Hoken Roumushi divided?",
+            "answer": "Preparing and carrying out the support plan — pre-entry information, life orientation, consultation and complaint handling, and other residence- and life-related support — belongs to the affiliated organization, the registered support organization, and the Gyoseishoshi. Labor management such as work rules, working hours, premium wages, and social insurance procedures belongs to the Shakai Hoken Roumushi. Applying for the status of residence is handled by the Gyoseishoshi."
+          }
+        ]
+      },
+      "zh-tw": {
+        "title": "特定技能新增的汽車運送業，接收駕駛員的勞務，改善基準與社保",
+        "excerpt": "在2024年納入特定技能的汽車運送業接收外國駕駛員時，除在留資格要件（考試・駕照・日語）外，還要同時設計改善基準告示的拘束・休息，以及不分國籍的社會保險・勞動保險適用。在留資格的申請與支援計畫屬行政書士・登錄支援機關的領域。",
+        "content": "**先講結論**：在2024年納入特定技能的汽車運送業雇用外國駕駛員時，除在留資格要件（考試・駕照・日語）外，還要同時設計改善基準告示的拘束・休息，以及不分國籍的社會保險・勞動保險適用。在留資格的申請與支援計畫，屬行政書士・登錄支援機關的領域。\n\n制度與一次資料確認日：2026年10月10日。\n\n本文面向卡車運送公司的人事・勞務負責人與協助接收的專業，整理2024年納入特定技能的汽車運送業領域雇用駕駛員時的勞務。涵蓋改善基準告示（汽車駕駛員的勞動時間等）、健康保險・厚生年金保險・勞動保險的適用，以及登錄支援機關的支援與社會保險勞務士的勞務管理的分界。\n\n## 汽車運送業的特定技能，與原有領域的接收要件有何不同？\n\n汽車運送業領域，於2024年3月29日的閣議決定納入特定技能對象領域。業務區分分為卡車（貨物）・巴士・計程車的駕駛，因其直接擔任駕駛，故與其他領域不同的要件相互疊加。\n\n| 項目 | 內容 |\n|---|---|\n| 新增時期 | 2024年3月29日 閣議決定 |\n| 業務區分 | 卡車（貨物）・巴士・計程車 |\n| 駕照 | 卡車為第一種、巴士・計程車為第二種的日本駕照 |\n| 技能考試 | 汽車運送業領域特定技能1號評價試驗 |\n| 日語 | 日語能力試驗等的基準（巴士・計程車另示較高水準） |\n\n原有的照護・餐飲等領域，大致以技能考試與日語考試即可。汽車運送業則在此之上，以取得日本駕照為前提，是最大的不同。取得駕照前的期間，在留資格另有規定。各領域支援體制的差異另見[特定技能的自社支援與支援體制的勞務](/zh-tw/labor/column/tokutei-ginou-jisha-shien-taisei-roumu)，其他領域之例另見[照護領域的特定技能與勞務・社會保險](/zh-tw/labor/column/kaigo-tokutei-ginou-gaikokujin-roumu-shakaihoken)。\n\n## 外國駕駛員的勞動時間，改善基準告示可到哪裡？\n\n汽車駕駛員除一般勞動時間規制外，另適用改善基準告示（汽車駕駛員的勞動時間等的改善基準）。2024年4月1日適用的修正，重新檢討卡車駕駛員的拘束時間・休息期間。外國人亦適用與日本人相同的基準。\n\n| 項目（卡車） | 原則 |\n|---|---|\n| 1年拘束時間 | 3,300小時（經勞資協定為年3,400小時・月310小時，每年至多6個月） |\n| 1個月拘束時間 | 284小時 |\n| 1日拘束時間 | 13小時（上限15小時。逾14小時以每週2次為目安） |\n| 1日休息期間 | 以連續11小時為基本，不低於9小時 |\n\n拘束時間是自始業至終業的時間（勞動時間與休息的合計），與作為加班費計算基礎的勞動時間概念不同。改善基準告示的數值，與勞動基準法的加班上限規制・36協定，須分別滿足。告示的詳細讀法另見[2024年運送業的改善基準告示](/zh-tw/labor/column/unso-2024-mondai-kaizen-kijun-kokuji)。長距離・住宿的例外，以及巴士・計程車的基準因區分而異，個別判斷由資格者面談後進行。\n\n## 考試・日本駕照・日語要件由誰確認・支援？\n\n技能考試的合格與否、日本駕照的取得狀況、日語的水準，均關乎在留資格「特定技能」的該當性。這些的確認與支援計畫的作成・實施，屬處理在留資格的行政書士與登錄支援機關的領域，並非社會保險勞務士的業務。\n\n取得駕照前期間的在留處理，以及所需考試・日語的基準，請依出入國在留管理廳與國土交通省的最新運用要領確認。本篇不斷定考試區分・駕照・日語基準的細節，以及過渡措施的全部組合。作為雇用的前提，請先向負責申請的專業確認在留資格要件是否齊備，再設計勞動條件。\n\n## 社會保險・勞動保險在入職時如何適用？\n\n健康保險・厚生年金保險，對受適用事業所使用且符合被保險者要件的勞工，不分國籍皆適用。外國駕駛員亦同。勞災保險只要使用1名勞工原則即成立保險關係，雇用保險對符合被保險者要件者須辦理加入手續。\n\n此外，雇入外國人・其離職時，須確認姓名與在留資格等，向公共職業安定所（Hello Work）辦理外國人雇用狀況申報的義務（勞動施策綜合推進法第28條）。雇入時的申報，有時可與雇用保險被保險者資格取得申報同時辦理。手續流程另見[外國人雇用狀況申報](/zh-tw/labor/column/gaikokujin-koyo-jokyo-todokede)，工資・勞動條件的明示另見[對外國人的同等工資與勞動條件明示](/zh-tw/labor/column/gaikokujin-doto-chingin-rissho-roudou-joken-tsuchi)。\n\n## 登錄支援機關的支援與社勞士的勞務管理，界線在哪裡？\n\n接收特定技能1號時，所屬機關（接收企業）有作成・實施支援計畫的義務，並可將其全部或一部委託登錄支援機關。支援是指入國前資訊提供、生活說明、提供學習日語的機會、諮詢與申訴對應等，關於在留與生活的支援。\n\n相對地，社會保險勞務士負責工作規則・雇用契約、依改善基準告示設計勞動時間・加班費、社會保險・勞動保險手續與勞務諮詢。支援計畫的作成・在留資格的申請屬行政書士・登錄支援機關，勞務管理屬社會保險勞務士，角色各自分開。看似重疊的「諮詢對應」，也依其為在留・生活的支援或勞動關係的諮詢，而由不同者擔任。\n\n## 四葉社会保険労務士事務所能做什麼？\n\n本所接受依改善基準告示設計勞動時間制度、工作規則・雇用契約、加班費，以及社會保險・勞動保險加入與外國人雇用狀況申報的諮詢。諮詢免費。費用請見[報酬額表](/zh-tw/labor/ryokin)，一般問題請見[常見問題](/zh-tw/labor/faq)。\n\n在留資格「特定技能」的申請與登錄支援機關的支援計畫、一般貨物汽車運送事業的許可，屬行政書士・登錄支援機關；稅務屬稅理士。與這些外部專業，請各自獨立、另行簽約，直接請款・直接付款。本所不經手介紹費・回扣。\n\n## 常見問題\n\n**Q. 外國駕駛員也適用改善基準告示嗎？**\nA. 適用。改善基準告示（汽車駕駛員的勞動時間等的改善基準）對汽車駕駛員不分國籍皆適用，2024年4月1日適用的修正重新檢討卡車駕駛員的拘束時間・休息期間。原則上1年拘束時間3,300小時、1個月284小時、1日13小時（上限15小時），休息期間以連續11小時為基本、不低於9小時。\n\n**Q. 汽車運送業的特定技能與原有領域有何不同？**\nA. 是2024年3月29日納入特定技能的領域，業務區分分為卡車・巴士・計程車。與原有領域最大的不同，是在技能考試與日語之上，以取得日本駕照（卡車為第一種、巴士・計程車為第二種）為前提。取得駕照前的在留處理，依最新運用要領確認。\n\n**Q. 外國駕駛員的社會保險或申報，與日本人有不同嗎？**\nA. 健康保險・厚生年金保險・勞動保險的適用不分國籍相同。不同處在於，雇入・離職時須向公共職業安定所辦理外國人雇用狀況申報的義務（勞動施策綜合推進法第28條）。雇入時的申報，有時可與雇用保險被保險者資格取得申報同時辦理。\n\n**Q. 登錄支援機關與社會保險勞務士如何分工？**\nA. 支援計畫的作成・實施（入國前資訊、生活說明、諮詢與申訴對應等在留與生活的支援）屬所屬機關・登錄支援機關與行政書士的領域。工作規則・勞動時間・加班費・社會保險手續等勞務管理由社會保險勞務士負責。在留資格的申請由行政書士擔任。\n\n## 這篇文章的根據\n\n以下是2026年10月10日參照的一次資料。施行・修正日為相關變更的記載，不表示已逐一核對全部法令的最終修正日。\n\n- 特定技能在留資格相關制度運用方針・汽車運送業領域（2024年3月29日閣議決定）：業務區分（卡車・巴士・計程車）與考試・駕照・日語的要件。[出入國在留管理廳・特定技能](https://www.moj.go.jp/isa/policies/ssw/index.html)、[國土交通省・汽車運送業領域](https://www.mlit.go.jp/jidosha/jidosha_tk3_000001_00006.html)。考試・駕照・日語基準的細節與過渡措施，依最新運用要領確認。\n- 汽車駕駛員的勞動時間等的改善基準（改善基準告示，2024年4月1日適用）：卡車駕駛員的拘束時間（1年3,300小時・1個月284小時・1日原則13小時）與休息期間（以連續11小時為基本、下限9小時）。[厚生勞動省・改善基準告示](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/kaizen/index.html)。長距離・住宿或勞資協定的例外、巴士・計程車的基準，依區分確認。\n- 勞動施策綜合推進法第28條：外國人雇用狀況申報。[厚生勞動省・外國人雇用狀況申報](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/koyou/gaikokujin/)。\n- 健康保險法・厚生年金保險法・勞動者災害補償保險法・雇用保險法：適用事業所・被保險者（不分國籍適用）。社会保険労務士法第2條：諮詢、指導等業務的依據。本篇不含現行整合法條最終修正日的逐一核對，以及駕照・考試・在留全部要件的個別確認。個案適用時由資格者確認最新一次資料。\n\n本文僅提供一般資訊。個別判斷由資格者面談後進行；必要時向所轄勞動基準監督署、公共職業安定所等查詢。執筆：[浦松丈二](/zh-tw/about/uramatsu)（社会保険労務士・行政書士・宅地建物取引士）。",
+        "category": "外國人雇用",
+        "keywords": [
+          "特定技能 汽車運送業",
+          "外國人駕駛員 勞務",
+          "改善基準告示 2024 拘束時間",
+          "外國人雇用狀況申報 第28條",
+          "登錄支援機關",
+          "社會保險 國籍"
+        ],
+        "tags": [
+          "外國人雇用",
+          "特定技能",
+          "勞動時間",
+          "社會保險",
+          "汽車運送業"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "外國駕駛員也適用改善基準告示嗎？",
+            "answer": "適用。改善基準告示（汽車駕駛員的勞動時間等的改善基準）對汽車駕駛員不分國籍皆適用，2024年4月1日適用的修正重新檢討卡車駕駛員的拘束時間・休息期間。原則上1年拘束時間3,300小時、1個月284小時、1日13小時（上限15小時），休息期間以連續11小時為基本、不低於9小時。"
+          },
+          {
+            "question": "汽車運送業的特定技能與原有領域有何不同？",
+            "answer": "是2024年3月29日納入特定技能的領域，業務區分分為卡車・巴士・計程車。與原有領域最大的不同，是在技能考試與日語之上，以取得日本駕照（卡車為第一種、巴士・計程車為第二種）為前提。取得駕照前的在留處理，依最新運用要領確認。"
+          },
+          {
+            "question": "外國駕駛員的社會保險或申報，與日本人有不同嗎？",
+            "answer": "健康保險・厚生年金保險・勞動保險的適用不分國籍相同。不同處在於，雇入・離職時須向公共職業安定所辦理外國人雇用狀況申報的義務（勞動施策綜合推進法第28條）。雇入時的申報，有時可與雇用保險被保險者資格取得申報同時辦理。"
+          },
+          {
+            "question": "登錄支援機關與社會保險勞務士如何分工？",
+            "answer": "支援計畫的作成・實施（入國前資訊、生活說明、諮詢與申訴對應等在留與生活的支援）屬所屬機關・登錄支援機關與行政書士的領域。工作規則・勞動時間・加班費・社會保險手續等勞務管理由社會保險勞務士負責。在留資格的申請由行政書士擔任。"
+          }
+        ]
+      },
+      "zh": {
+        "title": "特定技能新增的汽车运送业，接收驾驶员的劳务，改善基准与社保",
+        "excerpt": "在2024年纳入特定技能的汽车运送业接收外国驾驶员时，除在留资格要件（考试・驾照・日语）外，还要同时设计改善基准告示的拘束・休息，以及不分国籍的社会保险・劳动保险适用。在留资格的申请与支援计划属行政书士・登录支援机关的领域。",
+        "content": "**先讲结论**：在2024年纳入特定技能的汽车运送业雇用外国驾驶员时，除在留资格要件（考试・驾照・日语）外，还要同时设计改善基准告示的拘束・休息，以及不分国籍的社会保险・劳动保险适用。在留资格的申请与支援计划，属行政书士・登录支援机关的领域。\n\n制度与一次资料确认日：2026年10月10日。\n\n本文面向卡车运送公司的人事・劳务负责人与协助接收的专业，整理2024年纳入特定技能的汽车运送业领域雇用驾驶员时的劳务。涵盖改善基准告示（汽车驾驶员的劳动时间等）、健康保险・厚生年金保险・劳动保险的适用，以及登录支援机关的支援与社会保险劳务士的劳务管理的分界。\n\n## 汽车运送业的特定技能，与原有领域的接收要件有何不同？\n\n汽车运送业领域，于2024年3月29日的阁议决定纳入特定技能对象领域。业务区分分为卡车（货物）・巴士・出租车的驾驶，因其直接担任驾驶，故与其他领域不同的要件相互叠加。\n\n| 项目 | 内容 |\n|---|---|\n| 新增时期 | 2024年3月29日 阁议决定 |\n| 业务区分 | 卡车（货物）・巴士・出租车 |\n| 驾照 | 卡车为第一种、巴士・出租车为第二种的日本驾照 |\n| 技能考试 | 汽车运送业领域特定技能1号评价试验 |\n| 日语 | 日语能力试验等的基准（巴士・出租车另示较高水准） |\n\n原有的护理・餐饮等领域，大致以技能考试与日语考试即可。汽车运送业则在此之上，以取得日本驾照为前提，是最大的不同。取得驾照前的期间，在留资格另有规定。各领域支援体制的差异另见[特定技能的自社支援与支援体制的劳务](/zh/labor/column/tokutei-ginou-jisha-shien-taisei-roumu)，其他领域之例另见[护理领域的特定技能与劳务・社会保险](/zh/labor/column/kaigo-tokutei-ginou-gaikokujin-roumu-shakaihoken)。\n\n## 外国驾驶员的劳动时间，改善基准告示可到哪里？\n\n汽车驾驶员除一般劳动时间规制外，另适用改善基准告示（汽车驾驶员的劳动时间等的改善基准）。2024年4月1日适用的修正，重新检讨卡车驾驶员的拘束时间・休息期间。外国人亦适用与日本人相同的基准。\n\n| 项目（卡车） | 原则 |\n|---|---|\n| 1年拘束时间 | 3,300小时（经劳资协定为年3,400小时・月310小时，每年至多6个月） |\n| 1个月拘束时间 | 284小时 |\n| 1日拘束时间 | 13小时（上限15小时。逾14小时以每周2次为目安） |\n| 1日休息期间 | 以连续11小时为基本，不低于9小时 |\n\n拘束时间是自始业至终业的时间（劳动时间与休息的合计），与作为加班费计算基础的劳动时间概念不同。改善基准告示的数值，与劳动基准法的加班上限规制・36协定，须分别满足。告示的详细读法另见[2024年运送业的改善基准告示](/zh/labor/column/unso-2024-mondai-kaizen-kijun-kokuji)。长距离・住宿的例外，以及巴士・出租车的基准因区分而异，个别判断由资格者面谈后进行。\n\n## 考试・日本驾照・日语要件由谁确认・支援？\n\n技能考试的合格与否、日本驾照的取得状况、日语的水准，均关乎在留资格「特定技能」的该当性。这些的确认与支援计划的作成・实施，属处理在留资格的行政书士与登录支援机关的领域，并非社会保险劳务士的业务。\n\n取得驾照前期间的在留处理，以及所需考试・日语的基准，请依出入国在留管理厅与国土交通省的最新运用要领确认。本篇不断定考试区分・驾照・日语基准的细节，以及过渡措施的全部组合。作为雇用的前提，请先向负责申请的专业确认在留资格要件是否齐备，再设计劳动条件。\n\n## 社会保险・劳动保险在入职时如何适用？\n\n健康保险・厚生年金保险，对受适用事业所使用且符合被保险者要件的劳工，不分国籍皆适用。外国驾驶员亦同。劳灾保险只要使用1名劳工原则即成立保险关系，雇用保险对符合被保险者要件者须办理加入手续。\n\n此外，雇入外国人・其离职时，须确认姓名与在留资格等，向公共职业安定所（Hello Work）办理外国人雇用状况申报的义务（劳动施策综合推进法第28条）。雇入时的申报，有时可与雇用保险被保险者资格取得申报同时办理。手续流程另见[外国人雇用状况申报](/zh/labor/column/gaikokujin-koyo-jokyo-todokede)，工资・劳动条件的明示另见[对外国人的同等工资与劳动条件明示](/zh/labor/column/gaikokujin-doto-chingin-rissho-roudou-joken-tsuchi)。\n\n## 登录支援机关的支援与社劳士的劳务管理，界线在哪里？\n\n接收特定技能1号时，所属机关（接收企业）有作成・实施支援计划的义务，并可将其全部或一部委托登录支援机关。支援是指入国前信息提供、生活说明、提供学习日语的机会、咨询与申诉对应等，关于在留与生活的支援。\n\n相对地，社会保险劳务士负责工作规则・雇用契约、依改善基准告示设计劳动时间・加班费、社会保险・劳动保险手续与劳务咨询。支援计划的作成・在留资格的申请属行政书士・登录支援机关，劳务管理属社会保险劳务士，角色各自分开。看似重叠的「咨询对应」，也依其为在留・生活的支援或劳动关系的咨询，而由不同者担任。\n\n## 四葉社会保険労務士事務所能做什么？\n\n本所接受依改善基准告示设计劳动时间制度、工作规则・雇用契约、加班费，以及社会保险・劳动保险加入与外国人雇用状况申报的咨询。咨询免费。费用请见[报酬额表](/zh/labor/ryokin)，一般问题请见[常见问题](/zh/labor/faq)。\n\n在留资格「特定技能」的申请与登录支援机关的支援计划、一般货物汽车运送事业的许可，属行政书士・登录支援机关；税务属税理士。与这些外部专业，请各自独立、另行签约，直接请款・直接付款。本所不经手介绍费・回扣。\n\n## 常见问题\n\n**Q. 外国驾驶员也适用改善基准告示吗？**\nA. 适用。改善基准告示（汽车驾驶员的劳动时间等的改善基准）对汽车驾驶员不分国籍皆适用，2024年4月1日适用的修正重新检讨卡车驾驶员的拘束时间・休息期间。原则上1年拘束时间3,300小时、1个月284小时、1日13小时（上限15小时），休息期间以连续11小时为基本、不低于9小时。\n\n**Q. 汽车运送业的特定技能与原有领域有何不同？**\nA. 是2024年3月29日纳入特定技能的领域，业务区分分为卡车・巴士・出租车。与原有领域最大的不同，是在技能考试与日语之上，以取得日本驾照（卡车为第一种、巴士・出租车为第二种）为前提。取得驾照前的在留处理，依最新运用要领确认。\n\n**Q. 外国驾驶员的社会保险或申报，与日本人有不同吗？**\nA. 健康保险・厚生年金保险・劳动保险的适用不分国籍相同。不同处在于，雇入・离职时须向公共职业安定所办理外国人雇用状况申报的义务（劳动施策综合推进法第28条）。雇入时的申报，有时可与雇用保险被保险者资格取得申报同时办理。\n\n**Q. 登录支援机关与社会保险劳务士如何分工？**\nA. 支援计划的作成・实施（入国前信息、生活说明、咨询与申诉对应等在留与生活的支援）属所属机关・登录支援机关与行政书士的领域。工作规则・劳动时间・加班费・社会保险手续等劳务管理由社会保险劳务士负责。在留资格的申请由行政书士担任。\n\n## 这篇文章的根据\n\n以下是2026年10月10日参照的一次资料。施行・修正日为相关变更的记载，不表示已逐一核对全部法令的最终修正日。\n\n- 特定技能在留资格相关制度运用方针・汽车运送业领域（2024年3月29日阁议决定）：业务区分（卡车・巴士・出租车）与考试・驾照・日语的要件。[出入国在留管理厅・特定技能](https://www.moj.go.jp/isa/policies/ssw/index.html)、[国土交通省・汽车运送业领域](https://www.mlit.go.jp/jidosha/jidosha_tk3_000001_00006.html)。考试・驾照・日语基准的细节与过渡措施，依最新运用要领确认。\n- 汽车驾驶员的劳动时间等的改善基准（改善基准告示，2024年4月1日适用）：卡车驾驶员的拘束时间（1年3,300小时・1个月284小时・1日原则13小时）与休息期间（以连续11小时为基本、下限9小时）。[厚生劳动省・改善基准告示](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/kaizen/index.html)。长距离・住宿或劳资协定的例外、巴士・出租车的基准，依区分确认。\n- 劳动施策综合推进法第28条：外国人雇用状况申报。[厚生劳动省・外国人雇用状况申报](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/koyou/gaikokujin/)。\n- 健康保险法・厚生年金保险法・劳动者灾害补偿保险法・雇用保险法：适用事业所・被保险者（不分国籍适用）。社会保険労務士法第2条：咨询、指导等业务的依据。本篇不含现行整合法条最终修正日的逐一核对，以及驾照・考试・在留全部要件的个别确认。个案适用时由资格者确认最新一次资料。\n\n本文仅提供一般信息。个别判断由资格者面谈后进行；必要时向所辖劳动基准监督署、公共职业安定所等查询。执笔：[浦松丈二](/zh/about/uramatsu)（社会保険労務士・行政書士・宅地建物取引士）。",
+        "category": "外国人雇用",
+        "keywords": [
+          "特定技能 汽车运送业",
+          "外国人驾驶员 劳务",
+          "改善基准告示 2024 拘束时间",
+          "外国人雇用状况申报 第28条",
+          "登录支援机关",
+          "社会保险 国籍"
+        ],
+        "tags": [
+          "外国人雇用",
+          "特定技能",
+          "劳动时间",
+          "社会保险",
+          "汽车运送业"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "外国驾驶员也适用改善基准告示吗？",
+            "answer": "适用。改善基准告示（汽车驾驶员的劳动时间等的改善基准）对汽车驾驶员不分国籍皆适用，2024年4月1日适用的修正重新检讨卡车驾驶员的拘束时间・休息期间。原则上1年拘束时间3,300小时、1个月284小时、1日13小时（上限15小时），休息期间以连续11小时为基本、不低于9小时。"
+          },
+          {
+            "question": "汽车运送业的特定技能与原有领域有何不同？",
+            "answer": "是2024年3月29日纳入特定技能的领域，业务区分分为卡车・巴士・出租车。与原有领域最大的不同，是在技能考试与日语之上，以取得日本驾照（卡车为第一种、巴士・出租车为第二种）为前提。取得驾照前的在留处理，依最新运用要领确认。"
+          },
+          {
+            "question": "外国驾驶员的社会保险或申报，与日本人有不同吗？",
+            "answer": "健康保险・厚生年金保险・劳动保险的适用不分国籍相同。不同处在于，雇入・离职时须向公共职业安定所办理外国人雇用状况申报的义务（劳动施策综合推进法第28条）。雇入时的申报，有时可与雇用保险被保险者资格取得申报同时办理。"
+          },
+          {
+            "question": "登录支援机关与社会保险劳务士如何分工？",
+            "answer": "支援计划的作成・实施（入国前信息、生活说明、咨询与申诉对应等在留与生活的支援）属所属机关・登录支援机关与行政书士的领域。工作规则・劳动时间・加班费・社会保险手续等劳务管理由社会保险劳务士负责。在留资格的申请由行政书士担任。"
+          }
+        ]
+      }
+    }
   }
 ];

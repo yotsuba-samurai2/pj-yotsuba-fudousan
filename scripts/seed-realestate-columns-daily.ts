@@ -2354,6 +2354,46 @@ const ARTICLES: ArticleSpec[] = [
     localesWithTranslations: ["en", "zh-tw", "zh"],
     hubLinks: ["/souzoku"],
   },
+  {
+    file: "115-net-cafe-manga-kissa-koshitsu-bukken-fuei-shinya.md",
+    slug: "net-cafe-manga-kissa-koshitsu-bukken-fuei-shinya",
+    title: "個室型ネットカフェ・漫画喫茶の物件はどこまでOK？風営法と旅館業の線引き",
+    publishedAt: "2026-10-10",
+    category: "投資・事業用不動産",
+    excerpt:
+      "個室型ネットカフェ・漫画喫茶の物件は、用途地域と床面積、個室の図面と営業方法、消防（自動火災報知設備）、本人確認の設備を契約前に確認します。寝具を備えず宿泊させない運用でも旅館業に当たらないと図面だけで断定はできず、飲食と個室の照度・見通しで風営法に触れる余地も別に確認します。",
+    keywords: [
+      "ネットカフェ 物件 風営法",
+      "漫画喫茶 個室 旅館業 簡易宿所",
+      "インターネット端末利用営業 条例 届出",
+      "複合カフェ 消防法施行令 自動火災報知設備",
+      "個室 低照度飲食店 区画席飲食店",
+    ],
+    tags: ["事業用不動産", "許認可", "用途地域", "風営法"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/toushi", "/office"],
+  },
+  {
+    file: "116-souzoku-akiya-bank-touroku-baikyaku-nochi-mitouki.md",
+    slug: "souzoku-akiya-bank-touroku-baikyaku-nochi-mitouki",
+    title: "相続した空き家を『空き家バンク』に登録して売るときの実務（農地・未登記の扱い）",
+    publishedAt: "2026-10-10",
+    category: "相続",
+    excerpt:
+      "相続した空き家を空き家バンクに載せて売るときは、バンク登録と不動産会社の媒介の役割分担、相続登記の有無、農地や未登記の付属建物の有無を先に確認します。管理不全空家に指定される前に動くほど選択肢が広く、税金は譲渡所得の特例の可否で変わるため早めに整理します。",
+    keywords: [
+      "空き家バンク 相続 売却",
+      "空き家 相続登記 義務化 登録",
+      "空き家 農地付き 売却 農地法",
+      "未登記建物 表題登記 空き家",
+      "管理不全空家 勧告 固定資産税",
+    ],
+    tags: ["相続", "空き家", "空き家バンク", "売却"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/souzoku"],
+  },
 ];
 
 function toPlainText(md: string): string {

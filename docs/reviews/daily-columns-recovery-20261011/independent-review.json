@@ -1,0 +1,356 @@
+{
+  "pass": false,
+  "findings": [
+    {
+      "file": "scripts/realestate-columns/115-net-cafe-manga-kissa-koshitsu-bukken-fuei-shinya.md",
+      "severity": "major",
+      "issue": "一次根拠不足：旅館業法・風営法は取得本文0行、消防PDFは取得不能。宿泊該当性、10ルクス／5平方メートル、本人確認・保存等の現在の要件を確認できない。取得できた警視庁手続案内と2021年厚労省調査の限定事項だけではlegalClaimsをpassにできない。",
+      "fix": "記事は公開保留を維持し、当該go.jp／lg.jpの現行本文を担当資格者が取得・条項号と施行履歴を照合する。根拠を取得できなければsources.verified=falseとchecks=holdを維持し、取得済み扱いをしない。今回の原稿維持範囲では本文を書き換えずDraft PRの保留事項とする。"
+    },
+    {
+      "file": "scripts/realestate-columns/116-souzoku-akiya-bank-touroku-baikyaku-nochi-mitouki.md",
+      "severity": "major",
+      "issue": "一次根拠不足：空家法・農地法・不動産登記法の本文は0行、大阪法務局は取得不能。全国版バンクの国の概説は取得できるが、勧告と課税、3年期限、未登記建物の順序、農地の権利移動を検証できない。",
+      "fix": "記事は公開保留を維持し、当該go.jp／lg.jpの現行本文を担当資格者が取得・条項号と施行履歴を照合する。根拠を取得できなければsources.verified=falseとchecks=holdを維持し、取得済み扱いをしない。今回の原稿維持範囲では本文を書き換えずDraft PRの保留事項とする。"
+    },
+    {
+      "file": "scripts/legal-columns/109-shurui-seizo-menkyo-craft-beer-doburoku-shinsei.md",
+      "severity": "major",
+      "issue": "一次根拠不足：酒税法・構造改革特区法の本文は0行、免許手引の入口は404。取得した濁酒手引は2016年4月版で旧条番号・旧刑名を含むため、2026年現行の数量基準・第25条・拒否要件を確認したものとして承認できない。",
+      "fix": "記事は公開保留を維持し、当該go.jp／lg.jpの現行本文を担当資格者が取得・条項号と施行履歴を照合する。根拠を取得できなければsources.verified=falseとchecks=holdを維持し、取得済み扱いをしない。今回の原稿維持範囲では本文を書き換えずDraft PRの保留事項とする。"
+    },
+    {
+      "file": "scripts/legal-columns/110-seisangata-izo-yuigon-kanka-baikyaku-shikkosha.md",
+      "severity": "major",
+      "issue": "一次根拠不足：民法・所得税法・不動産登記法は本文0行。準確定申告の一般期限は国税庁本文で確認できるが、執行権限、相続人全員を経る登記、死亡後換価の所得帰属までは同資料が支えていない。",
+      "fix": "記事は公開保留を維持し、当該go.jp／lg.jpの現行本文を担当資格者が取得・条項号と施行履歴を照合する。根拠を取得できなければsources.verified=falseとchecks=holdを維持し、取得済み扱いをしない。今回の原稿維持範囲では本文を書き換えずDraft PRの保留事項とする。"
+    },
+    {
+      "file": "scripts/labor-columns/149-shurui-jozosho-kaigyo-roumu-henkei-anzeneisei.md",
+      "severity": "major",
+      "issue": "一次根拠不足：労基法・安衛法は本文0行、時間外規制PDFは取得不能。年間変形10／52／280・42／320、社会保険要件、安全衛生推進者を含む「いずれも14日以内選任・監督署報告」の職種別適用が未検証。",
+      "fix": "記事は公開保留を維持し、当該go.jp／lg.jpの現行本文を担当資格者が取得・条項号と施行履歴を照合する。根拠を取得できなければsources.verified=falseとchecks=holdを維持し、取得済み扱いをしない。今回の原稿維持範囲では本文を書き換えずDraft PRの保留事項とする。"
+    },
+    {
+      "file": "scripts/labor-columns/150-tokutei-ginou-jidosha-unso-driver-ukeire-kaizenkijun-roumu.md",
+      "severity": "major",
+      "issue": "一次根拠不足：入管庁・国交省の分野別要件と厚労省改善基準告示の本文を取得できない。外国人雇用施策の総合案内を読めても、運転免許／試験／日本語要件、3300／284／13時間、11／9時間を確認した証跡にはならない。",
+      "fix": "記事は公開保留を維持し、当該go.jp／lg.jpの現行本文を担当資格者が取得・条項号と施行履歴を照合する。根拠を取得できなければsources.verified=falseとchecks=holdを維持し、取得済み扱いをしない。今回の原稿維持範囲では本文を書き換えずDraft PRの保留事項とする。"
+    },
+    {
+      "file": "scripts/legal-columns/110-seisangata-izo-yuigon-kanka-baikyaku-shikkosha.md",
+      "severity": "major",
+      "issue": "契約成立と登記の混同（4言語本文＋FAQ2）：ja 本文「死者名義のままでは第三者へ売ることはできません。」と次節「売買契約自体は、相続登記の完了を待たずに遺言執行者と買主の間で結べるのが通常」、FAQ2「死者名義のままでは第三者へ売れないため」が併存する。 ／ en 本文「property cannot be sold to a third party while registered in the deceased's name.」と次節「The sale contract itself can usually be concluded between the executor and buyer without waiting for the inheritance registration to complete」、FAQ2「Property cannot be sold to a third party while in the deceased's name」が併存する。 ／ zh-tw 本文「惟以死者名義不得向第三人出售。」と次節「買賣契約本身通常不待繼承登記完成即可於執行者與買方間締結」、FAQ2「以死者名義不得向第三人出售」が併存する。 ／ zh 本文「惟以死者名义不得向第三人出售。」と次節「买卖契约本身通常不待继承登记完成即可于执行者与买方间缔结」、FAQ2「以死者名义不得向第三人出售」が併存する。売買そのものが不可能なのか移転登記の順序の話なのかが一致せず、取引の前提を誤解させる。指摘は原稿内部の対比によるもので、現行法の当てはめをAIが確定するものではない。",
+      "fix": "売買契約締結と買主への所有権移転登記を区別した文案を司法書士／弁護士へ確認し、本文・FAQ・4言語を同時に整合させる。本復旧の原稿維持承認範囲では変更せず、公開前に別途解消すべきDraft PR保留事項として残す。"
+    },
+    {
+      "file": "scripts/realestate-columns/zh-tw/115-net-cafe-manga-kissa-koshitsu-bukken-fuei-shinya.md ; scripts/realestate-columns/zh/115-net-cafe-manga-kissa-koshitsu-bukken-fuei-shinya.md",
+      "severity": "minor",
+      "issue": "繁体では「四葉不動產株式會社」「四葉社會保險勞務士事務所」、簡体では「四叶不动产株式会社」「四叶行政书士事务所」「四叶社会保险劳务士事务所」へ置換される。AGENTS.md 188行とSEO skillの各言語でも組織名を日本語表記とする要件に一致しない。",
+      "fix": "別途編集承認の範囲で固有名を四葉不動産株式会社・四葉行政書士事務所・四葉社会保険労務士事務所に統一し、4言語と新指紋を再確認する。今回の復旧では原稿を維持して保留する。"
+    },
+    {
+      "file": "scripts/realestate-columns/zh-tw/116-souzoku-akiya-bank-touroku-baikyaku-nochi-mitouki.md ; scripts/realestate-columns/zh/116-souzoku-akiya-bank-touroku-baikyaku-nochi-mitouki.md",
+      "severity": "minor",
+      "issue": "繁体では「四葉不動產株式會社」「四葉社會保險勞務士事務所」、簡体では「四叶不动产株式会社」「四叶行政书士事务所」「四叶社会保险劳务士事务所」へ置換される。AGENTS.md 188行とSEO skillの各言語でも組織名を日本語表記とする要件に一致しない。",
+      "fix": "別途編集承認の範囲で固有名を四葉不動産株式会社・四葉行政書士事務所・四葉社会保険労務士事務所に統一し、4言語と新指紋を再確認する。今回の復旧では原稿を維持して保留する。"
+    },
+    {
+      "file": "scripts/legal-columns/zh-tw/109-shurui-seizo-menkyo-craft-beer-doburoku-shinsei.md ; scripts/legal-columns/zh/109-shurui-seizo-menkyo-craft-beer-doburoku-shinsei.md",
+      "severity": "minor",
+      "issue": "繁体では「四葉不動產株式會社」「四葉社會保險勞務士事務所」、簡体では「四叶不动产株式会社」「四叶行政书士事务所」「四叶社会保险劳务士事务所」へ置換される。AGENTS.md 188行とSEO skillの各言語でも組織名を日本語表記とする要件に一致しない。",
+      "fix": "別途編集承認の範囲で固有名を四葉不動産株式会社・四葉行政書士事務所・四葉社会保険労務士事務所に統一し、4言語と新指紋を再確認する。今回の復旧では原稿を維持して保留する。"
+    },
+    {
+      "file": "scripts/legal-columns/zh-tw/110-seisangata-izo-yuigon-kanka-baikyaku-shikkosha.md ; scripts/legal-columns/zh/110-seisangata-izo-yuigon-kanka-baikyaku-shikkosha.md",
+      "severity": "minor",
+      "issue": "繁体では「四葉不動產株式會社」「四葉社會保險勞務士事務所」、簡体では「四叶不动产株式会社」「四叶行政书士事务所」「四叶社会保险劳务士事务所」へ置換される。AGENTS.md 188行とSEO skillの各言語でも組織名を日本語表記とする要件に一致しない。",
+      "fix": "別途編集承認の範囲で固有名を四葉不動産株式会社・四葉行政書士事務所・四葉社会保険労務士事務所に統一し、4言語と新指紋を再確認する。今回の復旧では原稿を維持して保留する。"
+    },
+    {
+      "file": "scripts/legal-columns/en/110-seisangata-izo-yuigon-kanka-baikyaku-shikkosha.md",
+      "severity": "minor",
+      "issue": "準確定申告期限の本文英訳は「within four months of the day the heir learns of the start of inheritance」で、他3言語にある「知った日の翌日」の翌日がない。国税庁No.2022（令和8年4月1日現在）14・38行は翌日起算を明示する。",
+      "fix": "英訳も翌日から4か月と明示し税務資格者が起算を確認する。今回の承認範囲では原稿を維持し公開前の翻訳保留事項とする。"
+    },
+    {
+      "file": "scripts/realestate-columns/116-souzoku-akiya-bank-touroku-baikyaku-nochi-mitouki.md",
+      "severity": "minor",
+      "issue": "FAQ3「敷地に小さな畑が付いています。そのまま売れますか？」の回答は「市街化区域内は届出で足りる場合」が転用についての例外であることを明示していない。取得した農水省概要PDF58–59行は「届出で転用可能」とする資料で、農地のままの権利移動を免除する根拠ではない。断定的な法令誤りとは認定せず、区別不足を保留する。",
+      "fix": "担当資格者が第3条の権利移動と第4／5条の転用を区別してFAQを確認する。今回の承認範囲では本文を変更せず保留事項として残す。"
+    }
+  ],
+  "articles": [
+    {
+      "key": "realestate:net-cafe-manga-kissa-koshitsu-bukken-fuei-shinya",
+      "fingerprint": "7cfcb4c2d014e2d883b6792315f7e1089af912514c1fe086ad9f4be6cafb9256",
+      "requiresQualifiedReview": true,
+      "checks": {
+        "primarySources": "hold",
+        "duplicateIntent": "pass",
+        "legalClaims": "hold",
+        "translationAlignment": "hold"
+      },
+      "sources": [
+        {
+          "url": "https://laws.e-gov.go.jp/law/323AC0000000138",
+          "checkedAt": "2026-10-11",
+          "relevantClaim": "旅館業法第2条による寝具・宿泊の定義とネットカフェへの適用。取得応答は本文0行で条文・現行施行履歴を確認できなかった。",
+          "verified": false
+        },
+        {
+          "url": "https://laws.e-gov.go.jp/law/323AC0000000122",
+          "checkedAt": "2026-10-11",
+          "relevantClaim": "風営法第2条の低照度10ルクス以下・区画席5平方メートル以下等の要件。本文0行で現行条文を確認できなかった。",
+          "verified": false
+        },
+        {
+          "url": "https://www.keishicho.metro.tokyo.lg.jp/tetsuzuki/other/internetcafe/internetcafe_kaishi.html",
+          "checkedAt": "2026-10-11",
+          "relevantClaim": "営業開始10日前・店舗ごとの届出と、個室・端末位置等を記載する平面図。更新2022-06-23の本文を取得して確認。本人確認・記録保存の全要件や現行条例の全施行履歴までを承認するものではない。",
+          "verified": true
+        },
+        {
+          "url": "https://es.city.yokohama.lg.jp/business/bunyabetsu/shobo-kyukyu/kanri/shobo-setsubi.files/0013_20190227.pdf",
+          "checkedAt": "2026-10-11",
+          "relevantClaim": "個室型店舗等の防火対象物区分・消防設備基準。資料本文を取得できなかった。",
+          "verified": false
+        },
+        {
+          "url": "https://www.mhlw.go.jp/content/11130500/000824221.pdf",
+          "checkedAt": "2026-10-11",
+          "relevantClaim": "2021年3月の自治体調査資料では、ソファ・寝具、料金、営業実態等を踏まえ宿泊該当性を総合判断する例が示される。3ページの本文を取得した。現行法令の網羅検証とは区別する。",
+          "verified": true
+        }
+      ],
+      "blockingFindings": [
+        "旅館業法・風営法の現行条文／施行履歴、10ルクス・5平方メートルの条件を取得できていない。",
+        "東京都条例の本人確認・保存要件と横浜市消防基準が未検証。",
+        "繁体・簡体の組織名が日本語固有名表記に一致しない（minor）。"
+      ]
+    },
+    {
+      "key": "realestate:souzoku-akiya-bank-touroku-baikyaku-nochi-mitouki",
+      "fingerprint": "f3ea7db94ab2c9d3dcc9bdbfc6b3d241d961a627f9103c74d30f3fd4505907f0",
+      "requiresQualifiedReview": true,
+      "checks": {
+        "primarySources": "hold",
+        "duplicateIntent": "pass",
+        "legalClaims": "hold",
+        "translationAlignment": "hold"
+      },
+      "sources": [
+        {
+          "url": "https://laws.e-gov.go.jp/law/426AC1000000127",
+          "checkedAt": "2026-10-11",
+          "relevantClaim": "管理不全空家等への勧告と住宅用地特例の関係、令和5年改正。本文0行で現行条文を確認できなかった。",
+          "verified": false
+        },
+        {
+          "url": "https://www.mlit.go.jp/totikensangyo/const/sosei_const_tk3_000131.html",
+          "checkedAt": "2026-10-11",
+          "relevantClaim": "全国版バンクは自治体が公開する情報を横断検索し、参加・登録の扱いは自治体運用による。国の説明本文を取得した。各自治体の登録要件や媒介契約要件までは検証していない。",
+          "verified": true
+        },
+        {
+          "url": "https://houmukyoku.moj.go.jp/osaka/souzokutoukigimuka.html",
+          "checkedAt": "2026-10-11",
+          "relevantClaim": "相続登記義務化・2024年4月1日施行・3年期限。資料本文を取得できなかった。",
+          "verified": false
+        },
+        {
+          "url": "https://laws.e-gov.go.jp/law/327AC0000000229",
+          "checkedAt": "2026-10-11",
+          "relevantClaim": "農地法第3条・第4条・第5条の権利移動と転用の許可／届出の区別。本文0行で現行条文を確認できなかった。",
+          "verified": false
+        },
+        {
+          "url": "https://laws.e-gov.go.jp/law/416AC0000000123",
+          "checkedAt": "2026-10-11",
+          "relevantClaim": "相続登記第76条の2・未登記建物の登記順序。本文0行で現行条文を確認できなかった。",
+          "verified": false
+        },
+        {
+          "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/joto/3306.htm",
+          "checkedAt": "2026-10-11",
+          "relevantClaim": "令和8年4月1日現在の国税庁説明：一定要件で最大3000万円、相続人3人以上は2000万円、売却期限等の条件。本文を取得した。銀行登録のみで適用される制度ではない。",
+          "verified": true
+        },
+        {
+          "url": "https://www.maff.go.jp/j/nousin/noukei/totiriyo/attach/pdf/nouchi_tenyo-29.pdf",
+          "checkedAt": "2026-10-11",
+          "relevantClaim": "農水省現掲載の転用制度概要1ページ：市街化区域では農業委員会への届出で転用可能（58–59行）。農地のままの権利移動の許可を免除する根拠ではない。",
+          "verified": true
+        }
+      ],
+      "blockingFindings": [
+        "空家法の勧告と課税特例、登記期限・未登記建物の順序、農地法の現行条文を取得できていない。",
+        "自治体を特定しない登録・媒介の一般説明には、各自治体の公式要領による確認が必要。",
+        "農地を「そのまま」売るFAQで市街化区域の届出例外が転用に限ることを明示していない（minor、農水省転用資料は取得済み）。",
+        "繁体・簡体の組織名が日本語固有名表記に一致しない（minor）。"
+      ]
+    },
+    {
+      "key": "legal:shurui-seizo-menkyo-craft-beer-doburoku-shinsei",
+      "fingerprint": "7ae7c5b39fbea99e9fa34003bf5098959bf66cf9195401d39472352afbfda1c0",
+      "requiresQualifiedReview": true,
+      "checks": {
+        "primarySources": "hold",
+        "duplicateIntent": "pass",
+        "legalClaims": "hold",
+        "translationAlignment": "hold"
+      },
+      "sources": [
+        {
+          "url": "https://laws.e-gov.go.jp/law/328AC0000000006",
+          "checkedAt": "2026-10-11",
+          "relevantClaim": "酒税法第7条・第10条の製造場／品目別免許、ビール60kL・その他醸造酒6kL、拒否要件。本文0行で現行条文を確認できなかった。",
+          "verified": false
+        },
+        {
+          "url": "https://www.nta.go.jp/taxes/sake/menkyo/index.htm",
+          "checkedAt": "2026-10-11",
+          "relevantClaim": "製造免許の要件・審査・手引／様式。国税庁404ページへ転送され、本文記載の「確認」を追認できない。",
+          "verified": false
+        },
+        {
+          "url": "https://laws.e-gov.go.jp/law/414AC0000000189",
+          "checkedAt": "2026-10-11",
+          "relevantClaim": "構造改革特別区域法第25条、特定農業者の濁酒製造と数量基準特例。本文0行で現行条文を確認できなかった。",
+          "verified": false
+        },
+        {
+          "url": "https://www.nta.go.jp/taxes/sake/menkyo/tebiki/menkyo2.pdf",
+          "checkedAt": "2026-10-11",
+          "relevantClaim": "39ページの手引は取得できたが2016年4月版で、旧条番号第28条・旧刑名を含む。特区の対象者・自己の営業場の一般説明は一致するものの、2026年現行の第25条・拘禁刑の拒否要件を検証できないためverified=false。",
+          "verified": false
+        }
+      ],
+      "blockingFindings": [
+        "酒税法・特区法の現行条文、最低数量基準と拒否事由を取得できていない。",
+        "免許手引の本文リンクは404。取得できた特区PDFは2016年版で、現行条番号・2025年拘禁刑移行後の要件の確認には不足。",
+        "繁体・簡体の組織名が日本語固有名表記に一致しない（minor）。"
+      ]
+    },
+    {
+      "key": "legal:seisangata-izo-yuigon-kanka-baikyaku-shikkosha",
+      "fingerprint": "3e9d6652c42e940e8537a29bf29a5f9c2bc5fd73bc52e1622ce7d306a9f94b78",
+      "requiresQualifiedReview": true,
+      "checks": {
+        "primarySources": "hold",
+        "duplicateIntent": "pass",
+        "legalClaims": "hold",
+        "translationAlignment": "hold"
+      },
+      "sources": [
+        {
+          "url": "https://laws.e-gov.go.jp/law/129AC0000000089",
+          "checkedAt": "2026-10-11",
+          "relevantClaim": "民法第1012条・第1013条・第1014条・第1046条の執行権限／遺留分と2019年施行改正。本文0行で現行条文を確認できなかった。",
+          "verified": false
+        },
+        {
+          "url": "https://laws.e-gov.go.jp/law/340AC0000000033",
+          "checkedAt": "2026-10-11",
+          "relevantClaim": "所得税法第124条・第125条、死亡後換価による譲渡所得の帰属を含む当てはめ。本文0行で現行条文を確認できなかった。",
+          "verified": false
+        },
+        {
+          "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/2022.htm",
+          "checkedAt": "2026-10-11",
+          "relevantClaim": "令和8年4月1日現在の国税庁説明：死亡日までに確定した所得を相続人等が準確定申告し、相続開始を知った日の翌日から4か月以内に申告・納税。本文14・38行で確認。死亡後換価の所得帰属や登記順序はこのページの確認範囲外。",
+          "verified": true
+        },
+        {
+          "url": "https://laws.e-gov.go.jp/law/416AC0000000123",
+          "checkedAt": "2026-10-11",
+          "relevantClaim": "不動産登記法第76条の2と売却前の登記順序／相続人全員を経る説明。本文0行で現行条文を確認できなかった。",
+          "verified": false
+        }
+      ],
+      "blockingFindings": [
+        "4言語の本文とFAQ2は「死者名義のまま売れない」と言い切る一方、次節では相続登記前でも売買契約できると述べる。契約成立と所有権移転登記の混同を解消する必要がある（major）。",
+        "執行権限・全相続人経由の登記と死亡後換価の所得帰属を支える現行条文／実務一次資料を取得できていない。",
+        "英語の準確定申告期限に日本語／繁体／簡体にある「知った日の翌日」の翌日がない（minor、国税庁本文と照合済み）。",
+        "繁体・簡体の組織名が日本語固有名表記に一致しない（minor）。"
+      ]
+    },
+    {
+      "key": "labor:shurui-jozosho-kaigyo-roumu-henkei-anzeneisei",
+      "fingerprint": "7778b25db90bef0dbc06c684beed1a96afdfb1e5287cf16c5a52334a98cd409c",
+      "requiresQualifiedReview": true,
+      "checks": {
+        "primarySources": "hold",
+        "duplicateIntent": "pass",
+        "legalClaims": "hold",
+        "translationAlignment": "pass"
+      },
+      "sources": [
+        {
+          "url": "https://laws.e-gov.go.jp/law/322AC0000000049",
+          "checkedAt": "2026-10-11",
+          "relevantClaim": "労基法第32条・第32条の4と施行規則第12条の4の1日10時間・1週52時間・年280日・連続労働日数、年間変形の月42／年320時間限度。本文0行で条文・規則の現行要件を確認できなかった。",
+          "verified": false
+        },
+        {
+          "url": "https://www.mhlw.go.jp/content/001309313.pdf",
+          "checkedAt": "2026-10-11",
+          "relevantClaim": "時間外労働の45／360時間・特別条項720時間と年間変形42／320時間。PDF本文を取得できなかった。",
+          "verified": false
+        },
+        {
+          "url": "https://laws.e-gov.go.jp/law/347AC0000000057",
+          "checkedAt": "2026-10-11",
+          "relevantClaim": "安全管理者・衛生管理者・安全衛生推進者の規模、14日選任と各職種の監督署報告義務。本文0行で現行条文／施行規則を確認できなかった。",
+          "verified": false
+        }
+      ],
+      "blockingFindings": [
+        "年間変形の限度・例外と42／320時間、36協定、社会保険の人数要件を支える現行一次資料が不足。",
+        "安全衛生推進者を含め「いずれも14日以内に選任・監督署報告」とする本文／FAQ3の職種別要件が未検証。報告の一律適用を資格者が確認するまで保留。"
+      ]
+    },
+    {
+      "key": "labor:tokutei-ginou-jidosha-unso-driver-ukeire-kaizenkijun-roumu",
+      "fingerprint": "dcb1da6029235b1b17e33a4e076e199e09f4d1bb7822a99be85d757237e05268",
+      "requiresQualifiedReview": true,
+      "checks": {
+        "primarySources": "hold",
+        "duplicateIntent": "pass",
+        "legalClaims": "hold",
+        "translationAlignment": "pass"
+      },
+      "sources": [
+        {
+          "url": "https://www.moj.go.jp/isa/policies/ssw/index.html",
+          "checkedAt": "2026-10-11",
+          "relevantClaim": "特定技能自動車運送業の試験・運転免許・日本語・支援計画の現行要件。制度本文を取得できなかった。",
+          "verified": false
+        },
+        {
+          "url": "https://www.mlit.go.jp/jidosha/jidosha_tk3_000001_00006.html",
+          "checkedAt": "2026-10-11",
+          "relevantClaim": "トラック／バス／タクシーごとの受入要件・安全教育。分野の本文を取得できなかった。",
+          "verified": false
+        },
+        {
+          "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/kaizen/index.html",
+          "checkedAt": "2026-10-11",
+          "relevantClaim": "2024年4月1日適用の年3300・月284・日13時間、休息11時間基本／9時間下限と例外。本文を取得できなかった。",
+          "verified": false
+        },
+        {
+          "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/koyou/gaikokujin/",
+          "checkedAt": "2026-10-11",
+          "relevantClaim": "外国人雇用施策総合ページの「外国人雇用状況の届出はすべての事業主の義務です」という案内と届出詳細へのリンクを本文で確認（288行）。労働施策総合推進法第28条の全文・適用除外・届出期限等まで確認したものではない。",
+          "verified": true
+        }
+      ],
+      "blockingFindings": [
+        "自動車運送業の特定技能に係る分野別最新運用要領を取得できていない。",
+        "改善基準告示の数値と区分別例外を支える現行一次資料を取得できていない。",
+        "一般案内の取得だけでは外国人雇用届出の法律第28条・適用除外・期限等は確認完了にならない。"
+      ]
+    }
+  ]
+}
