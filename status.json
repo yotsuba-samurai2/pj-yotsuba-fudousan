@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-10T09:18:42.904Z",
+  "generatedAt": "2026-10-11T09:35:37.867Z",
   "siteUrl": "sc-domain:luck428.com",
   "windowDays": 45,
   "urls": {
@@ -1618,16 +1618,6 @@
       "verdict": "UNCHECKED",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
       "lastmod": "2026-08-27"
-    },
-    "https://luck428.com/legal/column/kobutsusho-kyoka-eigyosho-yoken": {
-      "verdict": "UNCHECKED",
-      "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-08-26"
-    },
-    "https://luck428.com/legal/column/shinya-shurui-teikyo-todokede-yoken": {
-      "verdict": "UNCHECKED",
-      "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-08-26"
     }
   }
 }
