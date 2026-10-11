@@ -2354,6 +2354,46 @@ const ARTICLES: ArticleSpec[] = [
     localesWithTranslations: ["en", "zh-tw", "zh"],
     hubLinks: ["/souzoku"],
   },
+  {
+    file: "115-sango-care-shukuhakugata-bukken-shisetsu-kijun-boshihokenho.md",
+    slug: "sango-care-shukuhakugata-bukken-shisetsu-kijun-boshihokenho",
+    title: "産後ケア（宿泊型）を始めるときの物件・施設基準は？母子保健法の実施基準と内見のチェックポイント",
+    publishedAt: "2026-10-11",
+    category: "投資・事業用不動産",
+    excerpt:
+      "宿泊型の産後ケアは、母子保健法第17条の2の短期入所型として、居室・沐浴・調理・相談のスペースと助産師等の配置を満たせる物件が要ります。面積など具体の基準は市区町村の実施要綱で決まるため、物件を押さえる前に窓口へ確認します。旧診療所・元旅館・戸建ての転用を、用途地域・用途変更・消防の下調べと内見目線で、東京都文京区の宅地建物取引士兼行政書士が条文と公的資料から整理します。",
+    keywords: [
+      "産後ケア 宿泊型 物件",
+      "母子保健法 17条の2 産後ケア事業",
+      "産後ケア 施設基準 居室 沐浴",
+      "産後ケア 用途変更 確認申請 建築基準法87条",
+      "産後ケア 消防 旅館業 助産所 違い",
+    ],
+    tags: ["事業用不動産", "許認可", "用途地域", "母子保健法"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/toushi", "/office"],
+  },
+  {
+    file: "116-souzoku-jikka-juutaku-loan-zansai-teitouken-massho-baikyaku.md",
+    slug: "souzoku-jikka-juutaku-loan-zansai-teitouken-massho-baikyaku",
+    title: "相続した実家に住宅ローンが残っていたら？抵当権の抹消と残債・団信・売却の進め方",
+    publishedAt: "2026-10-11",
+    category: "相続",
+    excerpt:
+      "団体信用生命保険が付いたローンは、債務者の死亡で保険金により完済されることが多く、その場合は抵当権を抹消して売れます。団信がない・残債が残るときは、金融機関と返済・任意売却を相談し、相続放棄の可能性があるなら売る前に弁護士へ確認します。東京都文京区の宅地建物取引士兼行政書士が、民法・不動産登記法・国税庁の資料から売るまでの順番を整理します。",
+    keywords: [
+      "相続 実家 住宅ローン 残債",
+      "抵当権 抹消 相続 売却",
+      "団体信用生命保険 団信 完済",
+      "オーバーローン 任意売却 残債",
+      "相続放棄 熟慮期間 民法915条 921条",
+    ],
+    tags: ["相続", "住宅ローン", "抵当権", "売却"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/souzoku"],
+  },
 ];
 
 function toPlainText(md: string): string {

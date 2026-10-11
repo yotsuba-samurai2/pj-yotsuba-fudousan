@@ -27077,5 +27077,357 @@ export const LABOR_COLUMNS_SEED: LaborSeedColumn[] = [
         ]
       }
     }
+  },
+  {
+    "business": "labor",
+    "slug": "jidosha-kyoshujo-shidouin-kenteiin-roudoujikan-hanbokibi-36kyotei-henkei",
+    "title": "自動車教習所の指導員・検定員の労働時間は。繁忙期の36協定と変形労働時間制",
+    "date": "2026-10-11",
+    "category": "労働時間",
+    "excerpt": "指定自動車教習所の指導員・検定員の繁忙期の労働時間を、36協定の上限と1年単位・1か月単位の変形労働時間制で設計します。休日振替と代休の違い、合宿の拘束時間と休憩の扱いも整理します。",
+    "content": "**結論（先に要点）**：自動車教習所の指導員・検定員の繁忙期は、36協定の上限（原則月45時間・年360時間、特別条項でも年720時間など）を守りつつ、1年単位の変形労働時間制で繁閑に合わせて所定労働時間を配分するのが基本です。休日振替と代休の違いや休憩の付与も合わせて設計します。\n\n制度・一次資料の確認日：2026年10月11日。\n\n2〜3月の卒業・進学シーズンや夏の合宿で技能・学科指導と検定が集中する指定自動車教習所の事業者・管理者向けに、指導員・検定員の労働時間をどう設計するかを、労働基準法の条文に沿って整理します。指定や資格の公的手続（公安委員会）には立ち入らず、労働時間管理に絞ります。\n\n## 教習所の繁忙期の残業はどこまで認められますか？\n\n時間外労働には、36協定（労働基準法第36条）で定めた枠と、法律上の絶対的な上限という二重の制約があります。繁忙期だからといって無制限に延ばせるわけではありません。\n\n| 区分 | 根拠 | 上限 |\n|---|---|---|\n| 原則の限度時間 | 第36条第4項 | 月45時間・年360時間（1年単位の変形労働時間制で対象期間が3か月超のときは月42時間・年320時間） |\n| 特別条項の上限 | 第36条第5項 | 年720時間以内。月45時間（1年単位変形は42時間）を超えられるのは年6回まで |\n| 実労働の絶対的上限 | 第36条第6項 | 休日労働を含め単月100時間未満、かつ2〜6か月平均80時間以内 |\n\nこれらは2019年4月1日施行（中小企業は2020年4月1日）で、違反には罰則（6か月以下の懲役または30万円以下の罰金）があります。特別条項を使うには「臨時的な特別の事情」が必要で、繁忙期の見込みを協定に具体的に書きます。なお、自動車の運転そのものを主たる業務とする人には別枠の扱いがありますが、教習指導員・検定員がこれに当たるかは業務実態で個別に確認します。本記事は一般の上限規制を前提に整理しています。\n\n36協定の締結・届出の基本は[36協定で残業はどこまでさせられるか](/labor/column/36-kyotei-zangyo-sharoushi-doko-made)も参照してください。\n\n## 1年単位・1か月単位の変形労働時間制はどう使い分けますか？\n\n変形労働時間制は、一定期間を平均して週40時間以内に収める前提で、繁忙日に所定労働時間を多く、閑散日に少なく配分する仕組みです。所定を増やした日の分は（枠内なら）時間外になりません。\n\n| 制度 | 根拠 | 向く場面と要点 |\n|---|---|---|\n| 1か月単位 | 第32条の2 | 月内で繁閑が読める場合。就業規則または労使協定で定め、1か月以内の期間を平均して週40時間以内 |\n| 1年単位 | 第32条の4・施行規則第12条の4 | 年間で2〜3月や夏に偏る教習所向き。労使協定と就業規則を所轄労働基準監督署へ届出 |\n\n1年単位は限度が細かく定められています。1日10時間・1週52時間を超えられず、対象期間が3か月を超えるときは労働日数が年280日まで、週48時間を超える週は連続3週以下かつ3か月ごとに3回以下です。連続して働かせる日数は原則6日まで、特に忙しい「特定期間」は労使協定があれば1週に1日の休日を確保できる範囲まで延ばせます。繁忙月の所定を増やす設計は[変形労働時間制とフレックスの選び方](/labor/column/henkei-roudoujikan-flextime-erabikata)も確認してください。\n\n## 合宿免許の指導員の拘束時間と休憩はどう管理しますか？\n\n合宿では、技能教習・学科・検定の合間に待機や移動が入り、拘束時間が長くなりがちです。労働時間は使用者の指揮命令下にある時間で、手待ち時間も含みます。実際に自由に過ごせない待機は休憩ではありません。\n\n休憩は、労働時間が6時間を超えるとき少なくとも45分、8時間を超えるとき少なくとも1時間を、労働時間の途中に与えます（労働基準法第34条）。原則として一斉付与と自由利用が必要で、コマの合間に細切れで与える場合も合計がこの基準を満たすか確認します。宿舎での待機や呼び出し対応を休憩扱いにしていないか、記録で見直します。\n\n役職名だけで残業代が不要になるわけではありません。管理監督者に当たるかの実態判断は[管理監督者は残業代が要らないのか](/labor/column/kanri-kantokusha-nabakari-warimashi-shinya)を参照してください。\n\n## 検定員の休日出勤と代休・振替休日の扱いは？\n\n休日は週1日または4週4日が原則です（労働基準法第35条）。検定が土日に集中して法定休日に働かせるときは36協定の休日労働の定めが必要で、割増賃金（休日は3割5分以上）がかかります。\n\n| | 振替休日 | 代休 |\n|---|---|---|\n| 手順 | あらかじめ休日と労働日を入れ替える | 休日に働かせた後で別の日を休ませる |\n| 休日労働の割増 | 不要（同一週内で振り替え、週40時間を超えない範囲） | 必要（休日労働が先に発生している） |\n| 注意 | 就業規則の根拠と事前の特定が要る | 付与しても割増の支払義務は消えない |\n\n振替でも、週をまたいで割り振ると結果的に週40時間を超え、時間外割増が出ることがあります。年次有給休暇の年5日の確実な取得も繁忙期に崩れやすいので、[年5日の年次有給休暇](/labor/column/nenji-yukyu-5nichi-torikirenai)で計画的付与を確認します。\n\n## 繁忙期に向けて就業規則と協定を何から整えますか？\n\n順序を誤ると、制度を導入したつもりで要件を欠き、割増が発生します。次の順で整えます。\n\n1. 繁閑の実績を月別・コマ別に把握し、どの制度が合うかを決める。\n2. 1年単位の変形労働時間制なら労使協定を結び、対象期間・特定期間・労働日と所定労働時間を定めて就業規則とともに所轄労働基準監督署へ届け出る。\n3. 36協定（特別条項の要否を含む）を結び、繁忙期の時間外・休日労働の見込みと上限を書いて届け出る。\n4. 休憩・休日・振替のルールを就業規則に明記し、勤怠の記録方法を整える。\n5. 実際の労働時間が第36条第6項の絶対的上限（単月100時間未満・複数月平均80時間以内）に触れないか、毎月モニタリングする。\n\n就業規則の整備の基本は[就業規則は何人から義務か](/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo)も参照してください。\n\n## 四葉社会保険労務士事務所は、何ができますか？\n\n当事務所では、1年単位・1か月単位の変形労働時間制の設計、36協定（特別条項を含む）の作成と届出、就業規則の整備、勤怠の記録方法のご相談を承ります。ご相談は無料です。費用は[報酬額表](/labor/ryokin)、一般的なご質問は[よくあるご質問](/labor/faq)に掲載しています。\n\n指定自動車教習所の指定や、技能検定員・教習指導員の資格に関する公安委員会への手続は事業者本人または行政書士が、残業代の未払いなど個別の紛争は弁護士が扱う事項です。外部の専門家とはそれぞれ独立した事業体として別々にご契約いただき、直接請求・直接お支払いいただきます。当事務所は紹介料・キックバックを扱いません。具体的な設計や届出は、面談のうえ資格者が行います。\n\n## よくある質問\n\n**Q. 繁忙期なら36協定の特別条項で残業は無制限にできますか？**\nA. できません。特別条項でも年720時間以内で、月45時間（1年単位変形は42時間）を超えられるのは年6回までです。さらに休日労働を含めて単月100時間未満、2〜6か月平均80時間以内という絶対的上限（第36条第6項）があり、違反には罰則があります。\n\n**Q. 1年単位の変形労働時間制にすれば残業代は出ませんか？**\nA. 対象期間を平均して週40時間以内に収まる所定の範囲では時間外になりませんが、1日10時間・1週52時間の限度や、対象期間3か月超で年280日などの枠を超えた分、また協定で定めた所定を超えた分は時間外労働になり割増が必要です。協定と就業規則の届出も要件です。\n\n**Q. 検定が休日に入るとき、代休を与えれば割増はいりませんか？**\nA. 代休は休日労働が発生した後に別の日を休ませるもので、休日労働の割増賃金（3割5分以上）の支払義務は消えません。割増を避けたい場合は、あらかじめ休日と労働日を入れ替える振替休日を就業規則の根拠に基づいて行い、週40時間を超えないよう割り振ります。\n\n**Q. 合宿の待機時間は労働時間ですか？**\nA. 使用者の指揮命令下にあって自由に過ごせない手待ち時間は労働時間です。宿舎での呼び出し対応や、次のコマまでの拘束された待機を休憩として扱うことはできません。休憩は6時間超で45分、8時間超で1時間を途中に与え、自由に利用できる状態にします。\n\n## この記事の根拠\n\n以下は2026年10月11日参照の一次資料です。施行日は関連する改正の記載で、全法令の最終改正日を照合済みという意味ではありません。\n\n- 労働基準法第36条（[e-Gov法令検索](https://laws.e-gov.go.jp/law/322AC0000000049)）：第4項の限度時間（月45時間・年360時間、1年単位変形は月42時間・年320時間）、第5項の特別条項（年720時間以内・月45時間超は年6回まで）、第6項の絶対的上限（休日労働を含め単月100時間未満・複数月平均80時間以内）。上限規制は2019年4月1日施行（中小企業は2020年4月1日）。\n- 労働基準法第32条の2（1か月単位の変形労働時間制）、第32条の4（1年単位の変形労働時間制）、同法施行規則第12条の4：1日10時間・1週52時間の限度、対象期間3か月超の労働日数の限度（年280日）、週48時間超の週の制限、連続労働日数（原則6日）。[栃木労働局の解説](https://jsite.mhlw.go.jp/tochigi-roudoukyoku/hourei_seido_tetsuzuki/roudoukijun_keiyaku/roukijou/roukihou_point/_79129/transformation32-4-2.html)（2026年10月11日参照）で要件を確認。\n- 労働基準法第34条（休憩＝6時間超で45分・8時間超で1時間）・第35条（休日＝週1日または4週4日）・第37条（割増賃金）。\n- 道路交通法第99条第1項（指定自動車教習所の指定）・第99条の2（技能検定員）・第99条の3（教習指導員）：指定・資格は公安委員会の所管で、本記事の労働時間管理とは別の手続です。条文の現行統合規定・最終改正日の全件照合、自動車運転の業務の特例に該当するかの判断は本記事の確認範囲に含みません。\n- 社会保険労務士法第2条：相談・指導等の業務の根拠。\n\n本記事は一般的な情報提供です。個々の制度選択や協定・就業規則の内容は、最新の一次資料と事業場の実情に照らし、面談のうえ資格者が判断します。必要に応じ所轄労働基準監督署・労働局へ照会します。執筆は[浦松丈二](/about/uramatsu)（社会保険労務士・行政書士・宅地建物取引士）です。",
+    "status": "published",
+    "author": {
+      "name": "浦松 丈二",
+      "title": "社会保険労務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+    },
+    "keywords": [
+      "自動車教習所 指導員 労働時間",
+      "教習所 36協定 残業 上限 繁忙期",
+      "1年単位 変形労働時間制 教習所",
+      "検定員 休日出勤 振替休日 代休",
+      "合宿免許 指導員 拘束時間 休憩",
+      "教習所 就業規則 36協定"
+    ],
+    "tags": [
+      "労働時間",
+      "36協定",
+      "変形労働時間制",
+      "自動車教習所",
+      "労務管理"
+    ],
+    "locales": [],
+    "faq": [
+      {
+        "question": "繁忙期なら36協定の特別条項で残業は無制限にできますか？",
+        "answer": "できません。特別条項でも年720時間以内で、月45時間（1年単位変形は42時間）を超えられるのは年6回までです。さらに休日労働を含めて単月100時間未満、2〜6か月平均80時間以内という絶対的上限（第36条第6項）があり、違反には罰則があります。"
+      },
+      {
+        "question": "1年単位の変形労働時間制にすれば残業代は出ませんか？",
+        "answer": "対象期間を平均して週40時間以内に収まる所定の範囲では時間外になりませんが、1日10時間・1週52時間の限度や、対象期間3か月超で年280日などの枠を超えた分、また協定で定めた所定を超えた分は時間外労働になり割増が必要です。協定と就業規則の届出も要件です。"
+      },
+      {
+        "question": "検定が休日に入るとき、代休を与えれば割増はいりませんか？",
+        "answer": "代休は休日労働が発生した後に別の日を休ませるもので、休日労働の割増賃金（3割5分以上）の支払義務は消えません。割増を避けたい場合は、あらかじめ休日と労働日を入れ替える振替休日を就業規則の根拠に基づいて行い、週40時間を超えないよう割り振ります。"
+      },
+      {
+        "question": "合宿の待機時間は労働時間ですか？",
+        "answer": "使用者の指揮命令下にあって自由に過ごせない手待ち時間は労働時間です。宿舎での呼び出し対応や、次のコマまでの拘束された待機を休憩として扱うことはできません。休憩は6時間超で45分、8時間超で1時間を途中に与え、自由に利用できる状態にします。"
+      }
+    ],
+    "translations": {
+      "en": {
+        "title": "Working hours for driving-school instructors and examiners during the busy season — the 36 Agreement and variable working-hours system",
+        "excerpt": "Instructors and examiners face concentrated work in the graduation season and summer camps. Stay within the 36 Agreement limits while a one-year variable working-hours system distributes scheduled hours across peaks and troughs. Check holiday swaps, substitute days off and breaks too.",
+        "content": "**In short:** For driving-school instructors and examiners, stay within the 36 Agreement limits (in principle 45 hours a month and 360 a year; even with a special clause, 720 a year) while using a one-year variable working-hours system to assign more scheduled hours to peaks and fewer to quiet periods. Design holiday swaps, substitute days off and breaks together.\n\n**System and primary-source check: October 11, 2026.** This guide is for operators and managers of designated driving schools where skills instruction, classroom lessons and skill tests concentrate in the February–March graduation season and summer camps. It focuses on working-hour design under the Labor Standards Act and does not cover the public licensing of schools or instructor/examiner qualifications.\n\n## How much overtime is allowed in a driving school's busy season?\n\nOvertime faces two constraints: the ceiling set in the 36 Agreement (Labor Standards Act, Article 36) and the absolute statutory upper limits. A busy season does not allow unlimited extension.\n\n| Category | Basis | Limit |\n|---|---|---|\n| Principal limit | Article 36(4) | 45 hours/month, 360 hours/year (42/month, 320/year where a one-year variable system has a target period over three months) |\n| Special-clause limit | Article 36(5) | Up to 720 hours/year; the 45-hour month (42 under a one-year system) may be exceeded only six months a year |\n| Absolute limit on actual hours | Article 36(6) | Under 100 hours in any single month and an average of 80 hours or less over 2–6 months, holiday work included |\n\nThese rules took effect on April 1, 2019 (April 1, 2020 for small and medium-sized enterprises), and breaches carry penalties (up to six months' imprisonment or a fine of up to 300,000 yen). Using a special clause requires a \"temporary, special circumstance,\" so write the busy-season forecast concretely into the agreement. Separate rules apply to people whose main work is driving a vehicle, but whether instructors and examiners fall into that category depends on their actual duties and must be checked case by case; this guide assumes the general limits. For the basics of concluding and filing a 36 Agreement, see [how far overtime can go under a 36 Agreement](/en/labor/column/36-kyotei-zangyo-sharoushi-doko-made).\n\n## How do you choose between the one-year and one-month variable working-hours systems?\n\nA variable working-hours system lets you assign more scheduled hours on busy days and fewer on slow days, provided the average stays within 40 hours a week over a set period. Hours added to a busy day do not count as overtime, as long as they stay within the system's limits.\n\n| System | Basis | When it fits, and key points |\n|---|---|---|\n| One-month | Article 32-2 | When peaks and troughs are predictable within a month. Set by work rules or a labor-management agreement; average 40 hours a week over a period of up to one month |\n| One-year | Article 32-4; Enforcement Regulations Article 12-4 | Suited to schools skewed toward February–March or summer. File the labor-management agreement and work rules with the competent Labor Standards Inspection Office |\n\nThe one-year system has detailed limits. A day may not exceed 10 hours or a week 52 hours; where the target period runs over three months, working days are capped at 280 a year, and weeks over 48 hours must be no more than three consecutive weeks and no more than three per three-month block. Consecutive working days are capped at six in principle, though a designated \"especially busy period\" may extend this — if a labor-management agreement so provides — up to the point that still secures one day off per week. For designing higher scheduled hours in peak months, also see [choosing between the variable working-hours system and flextime](/en/labor/column/henkei-roudoujikan-flextime-erabikata).\n\n## How do you manage camp instructors' on-duty time and breaks?\n\nAt camps, standby and travel fall between skills lessons, classroom work and tests, so on-duty time tends to grow long. Working time is time under the employer's direction and control, and includes \"waiting time on standby.\" Standby during which a worker cannot actually spend the time freely is not a break.\n\nA break of at least 45 minutes must be given when working time exceeds six hours, and at least one hour when it exceeds eight hours, within the working time (Labor Standards Act, Article 34). It must in principle be given all at once and used freely; if split between lessons, check that the total meets this standard. Review the records to confirm that standby or on-call duty at the lodging is not being treated as a break.\n\nA job title alone does not remove overtime pay. For judging whether someone is a \"manager or supervisor\" by actual conditions, see [do managers and supervisors really get no overtime pay](/en/labor/column/kanri-kantokusha-nabakari-warimashi-shinya).\n\n## How are examiners' holiday work, substitute days off and holiday swaps handled?\n\nA day off is, in principle, one day a week or four days in four weeks (Labor Standards Act, Article 35). When tests concentrate on weekends and work falls on a statutory day off, the 36 Agreement must cover holiday work, and a premium applies (at least 35% for a statutory day off).\n\n| | Holiday swap (furikae) | Substitute day off (daikyu) |\n|---|---|---|\n| Procedure | Swap the day off and a working day in advance | Give a different day off after working on the day off |\n| Holiday-work premium | Not required (swapped within the same week, staying within 40 hours a week) | Required (holiday work has already occurred) |\n| Caution | Needs a basis in work rules and advance designation | Granting it does not cancel the duty to pay the premium |\n\nEven with a swap, assigning across weeks can push weekly hours past 40 and trigger overtime premiums. The reliable taking of five days of annual paid leave also tends to slip in the busy season, so confirm planned grants in [five days of annual paid leave](/en/labor/column/nenji-yukyu-5nichi-torikirenai).\n\n## Where do you start with work rules and agreements for the busy season?\n\nGet the order wrong and you think you have adopted a system but miss a requirement, so premiums arise. Prepare in this order.\n\n1. Grasp the actual peaks and troughs by month and by lesson slot, and decide which system fits.\n2. For a one-year variable system, conclude a labor-management agreement, set the target period, any especially busy period, working days and scheduled hours, and file it with the work rules at the competent Labor Standards Inspection Office.\n3. Conclude a 36 Agreement (including whether a special clause is needed), writing in the busy-season forecast and limits for overtime and holiday work, and file it.\n4. State break, day-off and swap rules in the work rules, and set up the method for recording attendance.\n5. Monitor each month so that actual hours do not touch the absolute limits in Article 36(6) (under 100 hours a single month; 80-hour average over several months).\n\nFor the basics of preparing work rules, also see [from how many employees are work rules mandatory](/en/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo).\n\n## What can 四葉社会保険労務士事務所 help with?\n\nOur office supports designing one-year and one-month variable working-hours systems, drafting and filing 36 Agreements (including special clauses), preparing work rules, and methods for recording attendance. **Consultations are free.** See our [fee schedule](/en/labor/ryokin) and [FAQ](/en/labor/faq).\n\nThe licensing of a designated driving school and procedures before the Public Safety Commission for examiner and instructor qualifications are handled by the operator or a gyoseishoshi; individual disputes such as unpaid overtime are handled by an attorney. Each external professional is an independent business that you contract with separately, and you are invoiced by and pay each one directly. We do not handle referral fees or kickbacks. Specific design and filing are carried out by a qualified professional after an interview.\n\n## Frequently asked questions\n\n**Q. In the busy season, can a special clause in the 36 Agreement make overtime unlimited?**\nA. No. Even with a special clause the ceiling is 720 hours a year, and the 45-hour month (42 under a one-year system) may be exceeded only six months a year. There is also an absolute limit (Article 36(6)) of under 100 hours in a single month and an 80-hour average over 2–6 months, holiday work included, and breaches carry penalties.\n\n**Q. Does a one-year variable working-hours system mean no overtime pay?**\nA. Within scheduled hours that average 40 a week over the target period there is no overtime, but hours beyond the 10-hour day, 52-hour week, the 280-day annual cap for a target period over three months, or the scheduled hours set in the agreement are overtime and require a premium. Filing the agreement and work rules is also a requirement.\n\n**Q. If a test falls on a day off, does giving a substitute day off avoid the premium?**\nA. No. A substitute day off is given after holiday work has occurred, so it does not cancel the duty to pay the holiday-work premium (at least 35%). To avoid the premium, swap the day off and a working day in advance based on the work rules and assign them so the week does not exceed 40 hours.\n\n**Q. Is standby time at a camp working time?**\nA. Waiting time under the employer's direction and control, during which the worker cannot spend the time freely, is working time. On-call response at the lodging or constrained standby until the next lesson cannot be treated as a break. A break of 45 minutes (over six hours) or one hour (over eight hours) must be given during the working time and be freely usable.\n\n## Sources for this article\n\nThese are primary sources consulted on October 11, 2026. Effective dates relate to the relevant amendments and do not mean every statute's final amendment date has been reconciled.\n\n- Labor Standards Act, Article 36 ([e-Gov law search](https://laws.e-gov.go.jp/law/322AC0000000049)): the Article 36(4) limit (45 hours/month, 360/year; 42/month, 320/year under a one-year system), the Article 36(5) special clause (up to 720 hours/year; the 45-hour month exceeded only six times a year), and the Article 36(6) absolute limit (under 100 hours a single month; 80-hour average over several months, holiday work included). The limits took effect April 1, 2019 (April 1, 2020 for SMEs).\n- Labor Standards Act, Article 32-2 (one-month variable system), Article 32-4 (one-year variable system) and Enforcement Regulations Article 12-4: the 10-hour day and 52-hour week limits, the 280-day annual cap where the target period exceeds three months, the limit on weeks over 48 hours, and consecutive working days (six in principle). Requirements confirmed via the [Tochigi Labour Bureau explanation](https://jsite.mhlw.go.jp/tochigi-roudoukyoku/hourei_seido_tetsuzuki/roudoukijun_keiyaku/roukijou/roukihou_point/_79129/transformation32-4-2.html) (accessed October 11, 2026).\n- Labor Standards Act, Article 34 (breaks: 45 minutes over six hours, one hour over eight), Article 35 (days off: one a week or four in four weeks) and Article 37 (premium wages).\n- Road Traffic Act, Article 99(1) (designation of driving schools), Article 99-2 (skill examiners) and Article 99-3 (driving instructors): designation and qualifications fall under the Public Safety Commission and are procedures separate from the working-hour management in this article. Reconciling all current consolidated provisions and final amendment dates, and judging whether the \"vehicle-driving work\" exception applies, are outside this article's scope.\n- Shakai Hoken Roumushi Act, Article 2: basis for consultation and guidance services.\n\nThis article provides general information. Specific choices of system and the content of agreements and work rules are judged by a qualified professional after an interview, using current primary sources and the actual circumstances of the workplace. Where needed, we inquire with the competent Labor Standards Inspection Office or Labour Bureau. Author: [浦松丈二](/en/about/uramatsu) (Shakai Hoken Roumushi, Gyoseishoshi and licensed real estate transaction specialist).",
+        "category": "Working hours",
+        "keywords": [
+          "driving school instructor working hours",
+          "36 Agreement overtime limit busy season",
+          "one-year variable working hours",
+          "examiner holiday work substitute day",
+          "Labor Standards Act Article 36"
+        ],
+        "tags": [
+          "Working hours",
+          "36 Agreement",
+          "Variable working hours",
+          "Driving school",
+          "Labor management"
+        ],
+        "author": {
+          "name": "Joji Uramatsu",
+          "title": "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所"
+        },
+        "faq": [
+          {
+            "question": "In the busy season, can a special clause in the 36 Agreement make overtime unlimited?",
+            "answer": "No. Even with a special clause the ceiling is 720 hours a year, and the 45-hour month (42 under a one-year system) may be exceeded only six months a year. There is also an absolute limit (Article 36(6)) of under 100 hours in a single month and an 80-hour average over 2–6 months, holiday work included, and breaches carry penalties."
+          },
+          {
+            "question": "Does a one-year variable working-hours system mean no overtime pay?",
+            "answer": "Within scheduled hours that average 40 a week over the target period there is no overtime, but hours beyond the 10-hour day, 52-hour week, the 280-day annual cap for a target period over three months, or the scheduled hours set in the agreement are overtime and require a premium. Filing the agreement and work rules is also a requirement."
+          },
+          {
+            "question": "If a test falls on a day off, does giving a substitute day off avoid the premium?",
+            "answer": "No. A substitute day off is given after holiday work has occurred, so it does not cancel the duty to pay the holiday-work premium (at least 35%). To avoid the premium, swap the day off and a working day in advance based on the work rules and assign them so the week does not exceed 40 hours."
+          },
+          {
+            "question": "Is standby time at a camp working time?",
+            "answer": "Waiting time under the employer's direction and control, during which the worker cannot spend the time freely, is working time. On-call response at the lodging or constrained standby until the next lesson cannot be treated as a break. A break of 45 minutes (over six hours) or one hour (over eight hours) must be given during the working time and be freely usable."
+          }
+        ]
+      },
+      "zh-tw": {
+        "title": "汽車駕訓班教練與檢定員的工時怎麼算？旺季（畢業季）的36協定與變形工時制",
+        "excerpt": "畢業季與暑期合宿時，技能與學科教學及檢定集中。在遵守36協定上限的前提下，用一年單位變形工時制依繁閒分配約定工時，並一併設計休假調移、補休與休息。",
+        "content": "**結論（先講重點）**：汽車駕訓班教練與檢定員的旺季，基本做法是在遵守36協定上限（原則每月45小時、每年360小時，即使有特別條款也是每年720小時等）的前提下，用一年單位變形工時制依繁閒分配約定工時，並一併設計休假調移與補休的差別、以及休息的給與。\n\n**制度與一次資料確認日：2026年10月11日。** 本文面向2〜3月畢業季、升學季與暑期合宿時技能與學科教學及檢定集中的指定汽車駕訓班業者與管理者，依日本勞動基準法條文整理教練與檢定員的工時設計。不涉及駕訓班指定或資格的公權力手續（公安委員會），只聚焦工時管理。\n\n## 駕訓班旺季的加班可以到什麼程度？\n\n加班受兩重限制：36協定（勞動基準法第36條）所定的框架，以及法律上的絕對上限。不是因為旺季就能無限延長。\n\n| 區分 | 依據 | 上限 |\n|---|---|---|\n| 原則的限度時間 | 第36條第4項 | 每月45小時、每年360小時（一年單位變形工時制的對象期間超過3個月時，為每月42小時、每年320小時） |\n| 特別條款的上限 | 第36條第5項 | 每年720小時以內。可超過每月45小時（一年單位變形為42小時）者，一年最多6次 |\n| 實際工時的絕對上限 | 第36條第6項 | 含假日勞動，單月未滿100小時，且2〜6個月平均80小時以內 |\n\n上述規定自2019年4月1日施行（中小企業為2020年4月1日），違反有罰則（6個月以下有期徒刑或30萬日圓以下罰金）。使用特別條款須有「臨時的特別情事」，應將旺季的預估具體寫入協定。對以駕駛本身為主要業務者另有別的框架，但教練與檢定員是否屬之，須依業務實態個別確認；本文以一般上限規制為前提整理。36協定的締結與申報基本，另請參閱[36協定下加班能到什麼程度](/zh-tw/labor/column/36-kyotei-zangyo-sharoushi-doko-made)。\n\n## 一年單位與一個月單位的變形工時制如何區分使用？\n\n變形工時制是在「一定期間平均後每週不超過40小時」的前提下，於繁忙日多排約定工時、於清閒日少排的機制。多排之日在框架內者不計為加班。\n\n| 制度 | 依據 | 適用情形與要點 |\n|---|---|---|\n| 一個月單位 | 第32條之2 | 月內繁閒可預測時。以工作規則或勞資協定訂定，1個月以內期間平均每週40小時以內 |\n| 一年單位 | 第32條之4・施行規則第12條之4 | 一年中偏重2〜3月或暑期的駕訓班適用。勞資協定與工作規則須向轄區勞動基準監督署申報 |\n\n一年單位的限度訂得較細。每日不得超過10小時、每週不得超過52小時；對象期間超過3個月時，勞動日數上限為每年280日，超過每週48小時之週須在連續3週以下且每3個月內3次以下。連續勞動日數原則為6日，特別繁忙的「特定期間」若有勞資協定，可延長至仍能確保每週1日休假的範圍。旺季加排約定工時的設計，另請參閱[變形工時制與彈性工時如何選擇](/zh-tw/labor/column/henkei-roudoujikan-flextime-erabikata)。\n\n## 合宿免許教練的拘束時間與休息如何管理？\n\n合宿時，技能教學、學科與檢定之間夾雜待命與移動，拘束時間容易拉長。工時是處於雇主指揮命令下的時間，包含「待機時間」。實際上無法自由運用的待命並非休息。\n\n當工時超過6小時須於工時中給與至少45分鐘休息，超過8小時須給與至少1小時（勞動基準法第34條）。原則上須一齊給與且可自由利用；若在各堂課之間分段給與，也要確認合計是否達到此標準。請以紀錄檢視，是否把宿舍的待命或呼叫對應當成了休息。\n\n僅憑職稱並不會免除加班費。是否屬於管理監督者，須依實態判斷，請參閱[管理監督者真的不用付加班費嗎](/zh-tw/labor/column/kanri-kantokusha-nabakari-warimashi-shinya)。\n\n## 檢定員的假日出勤與補休、休假調移如何處理？\n\n休假原則為每週1日或每4週4日（勞動基準法第35條）。檢定集中於週末而於法定休假日工作時，須有36協定的假日勞動條款，並產生加給（法定休假日為3成5以上）。\n\n| | 休假調移（事前調換） | 補休（事後補給） |\n|---|---|---|\n| 程序 | 事前將休假日與工作日調換 | 於假日工作後，另給他日休假 |\n| 假日勞動加給 | 不需要（同一週內調換、不超過每週40小時） | 需要（假日勞動已先發生） |\n| 注意 | 須有工作規則依據與事前特定 | 即使給與補休，給付加給的義務也不消滅 |\n\n即使調移，若跨週分配，結果上可能超過每週40小時而產生加班加給。年次有給休假每年5日的確實取得，於旺季也容易崩解，請用[每年5日的年次有給休假](/zh-tw/labor/column/nenji-yukyu-5nichi-torikirenai)確認計畫性給與。\n\n## 為旺季整備工作規則與協定，該從何著手？\n\n若順序錯誤，會誤以為已導入制度卻欠缺要件，而產生加給。請依下列順序整備。\n\n1. 以月別、各堂課別掌握繁閒實績，決定何種制度適合。\n2. 採一年單位變形工時制者，締結勞資協定，訂定對象期間、特定期間、勞動日與約定工時，連同工作規則向轄區勞動基準監督署申報。\n3. 締結36協定（含是否需要特別條款），寫入旺季的加班與假日勞動預估及上限並申報。\n4. 將休息、休假、調移規則明訂於工作規則，整備出勤紀錄方法。\n5. 每月監測實際工時是否觸及第36條第6項的絕對上限（單月未滿100小時、數月平均80小時以內）。\n\n工作規則整備的基本，另請參閱[工作規則從幾人開始有義務](/zh-tw/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo)。\n\n## 四葉社会保険労務士事務所能協助什麼？\n\n本所可就一年單位、一個月單位變形工時制的設計、36協定（含特別條款）的製作與申報、工作規則整備、出勤紀錄方法提供諮詢。**諮詢免費。** 費用請見[報酬額表](/zh-tw/labor/ryokin)，一般問題請見[常見問答](/zh-tw/labor/faq)。\n\n指定汽車駕訓班的指定，以及技能檢定員、教習指導員資格就公安委員會的手續，由業者本人或行政書士處理；加班費未付等個別紛爭由律師處理。與外部專家分別為各自獨立的事業體、另行簽約，並由您直接請款、直接支付。本所不收取介紹費或回扣。具體的設計與申報，由具資格者於面談後進行。\n\n## 常見問題\n\n**Q. 旺季是否可用36協定的特別條款讓加班無上限？**\nA. 不行。即使有特別條款也是每年720小時以內，可超過每月45小時（一年單位變形為42小時）者一年最多6次。另有絕對上限（第36條第6項）：含假日勞動單月未滿100小時、2〜6個月平均80小時以內，違反有罰則。\n\n**Q. 採一年單位變形工時制就不會有加班費嗎？**\nA. 在對象期間平均每週40小時以內的約定範圍內不計加班，但超過每日10小時、每週52小時的限度，或對象期間超過3個月時每年280日等框架之部分，以及超過協定所定約定工時之部分，均為加班而需加給。協定與工作規則的申報也是要件。\n\n**Q. 檢定落在假日時，給補休就不必加給嗎？**\nA. 補休是在假日勞動已發生後另給他日休假，給付假日勞動加給（3成5以上）的義務並不消滅。若要避免加給，應依工作規則事前將休假日與工作日調換（休假調移），並以不超過每週40小時的方式分配。\n\n**Q. 合宿的待命時間算工時嗎？**\nA. 處於雇主指揮命令下、無法自由運用的待機時間屬於工時。宿舍的呼叫對應或至下一堂課為止受拘束的待命，不能當成休息。休息須於工時中給與（超過6小時45分鐘、超過8小時1小時）並可自由利用。\n\n## 本文依據\n\n以下為2026年10月11日參照的一次資料。施行日係相關修正的記載，不代表已核對所有法令的最終修正日。\n\n- 勞動基準法第36條（[e-Gov法令檢索](https://laws.e-gov.go.jp/law/322AC0000000049)）：第4項限度時間（每月45小時、每年360小時，一年單位變形為每月42小時、每年320小時）、第5項特別條款（每年720小時以內、超過每月45小時者一年最多6次）、第6項絕對上限（含假日勞動單月未滿100小時、數月平均80小時以內）。上限規制自2019年4月1日施行（中小企業為2020年4月1日）。\n- 勞動基準法第32條之2（一個月單位變形工時制）、第32條之4（一年單位變形工時制）、同法施行規則第12條之4：每日10小時、每週52小時限度，對象期間超過3個月的勞動日數上限（每年280日），超過每週48小時之週的限制，連續勞動日數（原則6日）。要件以[栃木勞動局的說明](https://jsite.mhlw.go.jp/tochigi-roudoukyoku/hourei_seido_tetsuzuki/roudoukijun_keiyaku/roukijou/roukihou_point/_79129/transformation32-4-2.html)（2026年10月11日參照）確認。\n- 勞動基準法第34條（休息＝超過6小時45分鐘、超過8小時1小時）、第35條（休假＝每週1日或每4週4日）、第37條（加給工資）。\n- 道路交通法第99條第1項（指定汽車駕訓班的指定）、第99條之2（技能檢定員）、第99條之3（教習指導員）：指定與資格屬公安委員會主管，與本文的工時管理為不同手續。條文現行整合規定與最終修正日的全件核對，以及是否該當「汽車駕駛業務」特例的判斷，不在本文確認範圍內。\n- 社会保険労務士法第2條：諮詢、指導等業務的依據。\n\n本文為一般性資訊提供。個別的制度選擇與協定、工作規則內容，須依最新一次資料與事業場實情，由具資格者於面談後判斷。必要時向轄區勞動基準監督署、勞動局洽詢。撰文：[浦松丈二](/zh-tw/about/uramatsu)（社會保險勞務士・行政書士・宅地建物取引士）。",
+        "category": "工時",
+        "keywords": [
+          "駕訓班 教練 工時",
+          "36協定 加班上限 旺季",
+          "一年單位 變形工時",
+          "檢定員 假日出勤 補休",
+          "勞動基準法 第36條"
+        ],
+        "tags": [
+          "工時",
+          "36協定",
+          "變形工時制",
+          "汽車駕訓班",
+          "勞務管理"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "旺季是否可用36協定的特別條款讓加班無上限？",
+            "answer": "不行。即使有特別條款也是每年720小時以內，可超過每月45小時（一年單位變形為42小時）者一年最多6次。另有絕對上限（第36條第6項）：含假日勞動單月未滿100小時、2〜6個月平均80小時以內，違反有罰則。"
+          },
+          {
+            "question": "採一年單位變形工時制就不會有加班費嗎？",
+            "answer": "在對象期間平均每週40小時以內的約定範圍內不計加班，但超過每日10小時、每週52小時的限度，或對象期間超過3個月時每年280日等框架之部分，以及超過協定所定約定工時之部分，均為加班而需加給。協定與工作規則的申報也是要件。"
+          },
+          {
+            "question": "檢定落在假日時，給補休就不必加給嗎？",
+            "answer": "補休是在假日勞動已發生後另給他日休假，給付假日勞動加給（3成5以上）的義務並不消滅。若要避免加給，應依工作規則事前將休假日與工作日調換（休假調移），並以不超過每週40小時的方式分配。"
+          },
+          {
+            "question": "合宿的待命時間算工時嗎？",
+            "answer": "處於雇主指揮命令下、無法自由運用的待機時間屬於工時。宿舍的呼叫對應或至下一堂課為止受拘束的待命，不能當成休息。休息須於工時中給與（超過6小時45分鐘、超過8小時1小時）並可自由利用。"
+          }
+        ]
+      },
+      "zh": {
+        "title": "汽车驾校教练与检定员的工时怎么算？旺季（毕业季）的36协定与变形工时制",
+        "excerpt": "毕业季与暑期合宿时，技能与学科教学及检定集中。在遵守36协定上限的前提下，用一年单位变形工时制按繁闲分配约定工时，并一并设计休假调移、补休与休息。",
+        "content": "**结论（先讲要点）**：汽车驾校教练与检定员的旺季，基本做法是在遵守36协定上限（原则每月45小时、每年360小时，即使有特别条款也是每年720小时等）的前提下，用一年单位变形工时制按繁闲分配约定工时，并一并设计休假调移与补休的区别、以及休息的给予。\n\n**制度与一次资料确认日：2026年10月11日。** 本文面向2〜3月毕业季、升学季与暑期合宿时技能与学科教学及检定集中的指定汽车驾校业者与管理者，依日本劳动基准法条文整理教练与检定员的工时设计。不涉及驾校指定或资格的公权力手续（公安委员会），只聚焦工时管理。\n\n## 驾校旺季的加班可以到什么程度？\n\n加班受两重限制：36协定（劳动基准法第36条）所定的框架，以及法律上的绝对上限。并非因为旺季就能无限延长。\n\n| 区分 | 依据 | 上限 |\n|---|---|---|\n| 原则的限度时间 | 第36条第4项 | 每月45小时、每年360小时（一年单位变形工时制的对象期间超过3个月时，为每月42小时、每年320小时） |\n| 特别条款的上限 | 第36条第5项 | 每年720小时以内。可超过每月45小时（一年单位变形为42小时）者，一年最多6次 |\n| 实际工时的绝对上限 | 第36条第6项 | 含假日劳动，单月未满100小时，且2〜6个月平均80小时以内 |\n\n上述规定自2019年4月1日施行（中小企业为2020年4月1日），违反有罚则（6个月以下有期徒刑或30万日元以下罚金）。使用特别条款须有「临时的特别情事」，应将旺季的预估具体写入协定。对以驾驶本身为主要业务者另有别的框架，但教练与检定员是否属之，须按业务实态个别确认；本文以一般上限规制为前提整理。36协定的缔结与申报基本，另请参阅[36协定下加班能到什么程度](/zh/labor/column/36-kyotei-zangyo-sharoushi-doko-made)。\n\n## 一年单位与一个月单位的变形工时制如何区分使用？\n\n变形工时制是在「一定期间平均后每周不超过40小时」的前提下，于繁忙日多排约定工时、于清闲日少排的机制。多排之日在框架内者不计为加班。\n\n| 制度 | 依据 | 适用情形与要点 |\n|---|---|---|\n| 一个月单位 | 第32条之2 | 月内繁闲可预测时。以工作规则或劳资协定订定，1个月以内期间平均每周40小时以内 |\n| 一年单位 | 第32条之4・施行规则第12条之4 | 一年中偏重2〜3月或暑期的驾校适用。劳资协定与工作规则须向辖区劳动基准监督署申报 |\n\n一年单位的限度订得较细。每日不得超过10小时、每周不得超过52小时；对象期间超过3个月时，劳动日数上限为每年280日，超过每周48小时之周须在连续3周以下且每3个月内3次以下。连续劳动日数原则为6日，特别繁忙的「特定期间」若有劳资协定，可延长至仍能确保每周1日休假的范围。旺季加排约定工时的设计，另请参阅[变形工时制与弹性工时如何选择](/zh/labor/column/henkei-roudoujikan-flextime-erabikata)。\n\n## 合宿免许教练的拘束时间与休息如何管理？\n\n合宿时，技能教学、学科与检定之间夹杂待命与移动，拘束时间容易拉长。工时是处于雇主指挥命令下的时间，包含「待机时间」。实际上无法自由运用的待命并非休息。\n\n当工时超过6小时须于工时中给予至少45分钟休息，超过8小时须给予至少1小时（劳动基准法第34条）。原则上须一齐给予且可自由利用；若在各堂课之间分段给予，也要确认合计是否达到此标准。请以记录检视，是否把宿舍的待命或呼叫对应当成了休息。\n\n仅凭职称并不会免除加班费。是否属于管理监督者，须按实态判断，请参阅[管理监督者真的不用付加班费吗](/zh/labor/column/kanri-kantokusha-nabakari-warimashi-shinya)。\n\n## 检定员的假日出勤与补休、休假调移如何处理？\n\n休假原则为每周1日或每4周4日（劳动基准法第35条）。检定集中于周末而于法定休假日工作时，须有36协定的假日劳动条款，并产生加给（法定休假日为3成5以上）。\n\n| | 休假调移（事前调换） | 补休（事后补给） |\n|---|---|---|\n| 程序 | 事前将休假日与工作日调换 | 于假日工作后，另给他日休假 |\n| 假日劳动加给 | 不需要（同一周内调换、不超过每周40小时） | 需要（假日劳动已先发生） |\n| 注意 | 须有工作规则依据与事前特定 | 即使给予补休，给付加给的义务也不消灭 |\n\n即使调移，若跨周分配，结果上可能超过每周40小时而产生加班加给。年次有给休假每年5日的确实取得，于旺季也容易崩解，请用[每年5日的年次有给休假](/zh/labor/column/nenji-yukyu-5nichi-torikirenai)确认计划性给予。\n\n## 为旺季整备工作规则与协定，该从何着手？\n\n若顺序错误，会误以为已导入制度却欠缺要件，而产生加给。请按下列顺序整备。\n\n1. 以月别、各堂课别掌握繁闲实绩，决定何种制度适合。\n2. 采一年单位变形工时制者，缔结劳资协定，订定对象期间、特定期间、劳动日与约定工时，连同工作规则向辖区劳动基准监督署申报。\n3. 缔结36协定（含是否需要特别条款），写入旺季的加班与假日劳动预估及上限并申报。\n4. 将休息、休假、调移规则明订于工作规则，整备出勤记录方法。\n5. 每月监测实际工时是否触及第36条第6项的绝对上限（单月未满100小时、数月平均80小时以内）。\n\n工作规则整备的基本，另请参阅[工作规则从几人开始有义务](/zh/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo)。\n\n## 四葉社会保険労務士事務所能协助什么？\n\n本所可就一年单位、一个月单位变形工时制的设计、36协定（含特别条款）的制作与申报、工作规则整备、出勤记录方法提供咨询。**咨询免费。** 费用请见[报酬额表](/zh/labor/ryokin)，一般问题请见[常见问答](/zh/labor/faq)。\n\n指定汽车驾校的指定，以及技能检定员、教习指导员资格就公安委员会的手续，由业者本人或行政书士处理；加班费未付等个别纠纷由律师处理。与外部专家分别为各自独立的事业体、另行签约，并由您直接请款、直接支付。本所不收取介绍费或回扣。具体的设计与申报，由具资格者于面谈后进行。\n\n## 常见问题\n\n**Q. 旺季是否可用36协定的特别条款让加班无上限？**\nA. 不行。即使有特别条款也是每年720小时以内，可超过每月45小时（一年单位变形为42小时）者一年最多6次。另有绝对上限（第36条第6项）：含假日劳动单月未满100小时、2〜6个月平均80小时以内，违反有罚则。\n\n**Q. 采一年单位变形工时制就不会有加班费吗？**\nA. 在对象期间平均每周40小时以内的约定范围内不计加班，但超过每日10小时、每周52小时的限度，或对象期间超过3个月时每年280日等框架之部分，以及超过协定所定约定工时之部分，均为加班而需加给。协定与工作规则的申报也是要件。\n\n**Q. 检定落在假日时，给补休就不必加给吗？**\nA. 补休是在假日劳动已发生后另给他日休假，给付假日劳动加给（3成5以上）的义务并不消灭。若要避免加给，应依工作规则事前将休假日与工作日调换（休假调移），并以不超过每周40小时的方式分配。\n\n**Q. 合宿的待命时间算工时吗？**\nA. 处于雇主指挥命令下、无法自由运用的待机时间属于工时。宿舍的呼叫对应或至下一堂课为止受拘束的待命，不能当成休息。休息须于工时中给予（超过6小时45分钟、超过8小时1小时）并可自由利用。\n\n## 本文依据\n\n以下为2026年10月11日参照的一次资料。施行日系相关修正的记载，不代表已核对所有法令的最终修正日。\n\n- 劳动基准法第36条（[e-Gov法令检索](https://laws.e-gov.go.jp/law/322AC0000000049)）：第4项限度时间（每月45小时、每年360小时，一年单位变形为每月42小时、每年320小时）、第5项特别条款（每年720小时以内、超过每月45小时者一年最多6次）、第6项绝对上限（含假日劳动单月未满100小时、数月平均80小时以内）。上限规制自2019年4月1日施行（中小企业为2020年4月1日）。\n- 劳动基准法第32条之2（一个月单位变形工时制）、第32条之4（一年单位变形工时制）、同法施行规则第12条之4：每日10小时、每周52小时限度，对象期间超过3个月的劳动日数上限（每年280日），超过每周48小时之周的限制，连续劳动日数（原则6日）。要件以[栃木劳动局的说明](https://jsite.mhlw.go.jp/tochigi-roudoukyoku/hourei_seido_tetsuzuki/roudoukijun_keiyaku/roukijou/roukihou_point/_79129/transformation32-4-2.html)（2026年10月11日参照）确认。\n- 劳动基准法第34条（休息＝超过6小时45分钟、超过8小时1小时）、第35条（休假＝每周1日或每4周4日）、第37条（加给工资）。\n- 道路交通法第99条第1项（指定汽车驾校的指定）、第99条之2（技能检定员）、第99条之3（教习指导员）：指定与资格属公安委员会主管，与本文的工时管理为不同手续。条文现行整合规定与最终修正日的全件核对，以及是否该当「汽车驾驶业务」特例的判断，不在本文确认范围内。\n- 社会保険労務士法第2条：咨询、指导等业务的依据。\n\n本文为一般性资讯提供。个别的制度选择与协定、工作规则内容，须依最新一次资料与事业场实情，由具资格者于面谈后判断。必要时向辖区劳动基准监督署、劳动局洽询。撰文：[浦松丈二](/zh/about/uramatsu)（社会保险劳务士・行政书士・宅地建物取引士）。",
+        "category": "工时",
+        "keywords": [
+          "驾校 教练 工时",
+          "36协定 加班上限 旺季",
+          "一年单位 变形工时",
+          "检定员 假日出勤 补休",
+          "劳动基准法 第36条"
+        ],
+        "tags": [
+          "工时",
+          "36协定",
+          "变形工时制",
+          "汽车驾校",
+          "劳务管理"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "旺季是否可用36协定的特别条款让加班无上限？",
+            "answer": "不行。即使有特别条款也是每年720小时以内，可超过每月45小时（一年单位变形为42小时）者一年最多6次。另有绝对上限（第36条第6项）：含假日劳动单月未满100小时、2〜6个月平均80小时以内，违反有罚则。"
+          },
+          {
+            "question": "采一年单位变形工时制就不会有加班费吗？",
+            "answer": "在对象期间平均每周40小时以内的约定范围内不计加班，但超过每日10小时、每周52小时的限度，或对象期间超过3个月时每年280日等框架之部分，以及超过协定所定约定工时之部分，均为加班而需加给。协定与工作规则的申报也是要件。"
+          },
+          {
+            "question": "检定落在假日时，给补休就不必加给吗？",
+            "answer": "补休是在假日劳动已发生后另给他日休假，给付假日劳动加给（3成5以上）的义务并不消灭。若要避免加给，应依工作规则事前将休假日与工作日调换（休假调移），并以不超过每周40小时的方式分配。"
+          },
+          {
+            "question": "合宿的待命时间算工时吗？",
+            "answer": "处于雇主指挥命令下、无法自由运用的待机时间属于工时。宿舍的呼叫对应或至下一堂课为止受拘束的待命，不能当成休息。休息须于工时中给予（超过6小时45分钟、超过8小时1小时）并可自由利用。"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "business": "labor",
+    "slug": "gakushujuku-yobiko-koshi-koma-kyu-jugyogai-roudoujikan-kanri",
+    "title": "学習塾・予備校講師のコマ給は要注意。授業外労働の労働時間管理",
+    "date": "2026-10-11",
+    "category": "労働時間",
+    "excerpt": "学習塾・予備校のコマ給では、授業準備・採点・保護者対応・研修などの授業外労働が賃金・残業から漏れやすい点を、労働時間性の考え方で整理します。固定残業代の要件と労働者性の判断も説明します。",
+    "content": "**結論（先に要点）**：学習塾・予備校のコマ給は授業時間にだけ賃金を払う設計になりがちで、授業準備・採点・保護者対応・研修などが使用者の指揮命令下にあれば、それも労働時間として賃金・割増の対象です。コマ給に残業代を含めるには判別と差額清算が要り、業務委託でも実態で労働者と判断されることがあります。\n\n制度・一次資料の確認日：2026年10月11日。\n\n講師にコマ単位で給与を払っている学習塾・予備校の事業者・教室長向けに、授業外労働の労働時間性を、労働基準法と裁判例・行政の基準で整理します。個別の未払い請求や労働者性の最終的な事実認定には立ち入らず、考え方と設計を示します。\n\n## コマ給だけだと何が未払いになりやすいですか？\n\nコマ給は、1コマ（授業）あたりの単価で支払う方式です。授業そのものには報いますが、授業の前後や授業日以外に発生する労働が賃金計算から漏れやすい弱点があります。\n\n| 業務 | コマ給だけだと | 典型的な問題 |\n|---|---|---|\n| 授業準備・教材作成 | 対象外になりがち | 最低賃金割れ・未払い |\n| テストの採点・添削 | 対象外になりがち | 同上 |\n| 保護者面談・電話対応 | 対象外になりがち | 時間外割増の未払い |\n| 研修・会議・引継ぎ | 対象外になりがち | 同上 |\n\n賃金は全額を支払う義務があり（労働基準法第24条）、法定労働時間を超えれば割増賃金が必要です（同法第37条）。これらの労働を無給の前提にしていると、1か月の総労働時間で割ると最低賃金を下回る、あるいは時間外割増が未払いになる、という形で表面化します。\n\n## 授業準備・採点・保護者対応は労働時間に入りますか？\n\n労働時間とは、労働者が使用者の指揮命令下に置かれている時間をいいます。これは最高裁が示した考え方で、契約や就業規則の定め方だけで決まるものではありません（三菱重工業長崎造船所事件・最判平成12年3月9日）。\n\nしたがって、塾が指示・義務づけた準備や採点、所定の様式での報告、参加必須の研修・会議は、場所が自宅でも労働時間になり得ます。逆に、本人が任意に行う自己研鑽で義務づけがないものは直ちには労働時間になりません。線引きは、指示の有無・成果物の義務づけ・時間や場所の拘束で判断します。厚生労働省の[労働時間の適正な把握のために使用者が講ずべき措置に関するガイドライン](https://jsite.mhlw.go.jp/tottori-roudoukyoku/news_topics/topics/_120669/_121005.html)（2017年1月20日策定・2026年10月11日参照）は、使用者が始業・終業時刻を確認し記録する責務を示しています。\n\n## 固定残業代（コマ給に含める）で足りない場合はどうなりますか？\n\nコマ給に一定の残業代を含める設計（固定残業代）は可能ですが、有効と認められるには条件があります。通常の労働時間の賃金に当たる部分と、割増賃金に当たる部分が判別できること、そして固定分を超えた時間外労働には差額を清算することが必要です。\n\n「コマ給に残業代込み」とだけ定め、何時間分の時間外に当たるかが分からない、超過しても精算しない、という運用は、固定残業代として認められず、別途割増賃金の支払いを求められることがあります。固定残業代の要件と差額清算は[固定残業代が適法になる要件](/labor/column/kotei-zangyodai-tekiho-youken-sagaku-seisan)で確認してください。\n\n## 講師は「業務委託」にできますか？\n\n契約書を「業務委託」としても、働き方の実態が労働者であれば、労働基準法・最低賃金法が適用されます。労働者かどうかは、昭和60年の労働基準法研究会報告が示す「使用従属性」を中心に、仕事の依頼を断る自由があるか、時間・場所が拘束されるか、指揮監督を受けるか、報酬が労務の対償か、代わりの人を立てられるか、などの実態で総合判断します。\n\n| 着眼点 | 労働者と評価されやすい |\n|---|---|\n| 依頼の諾否 | コマの割り当てを断りにくい |\n| 指揮監督 | 指導方法・時間割・報告が指定される |\n| 時間的・場所的拘束 | 校舎で決まった時間に勤務 |\n| 代替性 | 本人以外が代講できない |\n| 報酬の性質 | 時間や成果でなく労務の提供に対応 |\n\n名称が業務委託でも、これらから労働者と判断されれば、最低賃金・割増賃金・労働保険の問題が生じます。業務委託として適正に発注する場合でも、取引条件の明示などのルールがあります（[フリーランス法で発注側が確認すること](/labor/column/freelancelaw-hatchu-kigyo-kakunin)）。労働者か否かの最終的な事実認定は、労働基準監督署や裁判所が行います。\n\n## トラブルを防ぐため賃金規程と記録をどう整えますか？\n\n次の順で整えると、未払いのリスクを下げられます。\n\n1. 講師の業務を棚卸しし、授業・準備・採点・面談・研修・会議のどれが指揮命令下の労働かを仕分ける。\n2. コマ給の単価が、授業外労働を含めた総労働時間で最低賃金を下回らないか試算する。\n3. 固定残業代を使うなら、通常賃金と割増部分を判別できるよう賃金規程に明記し、超過分の差額清算を定める。\n4. 始業・終業時刻や授業外労働の時間を記録する方法を決め、ガイドラインに沿って把握する。\n5. 業務委託とする講師は、働き方の実態が労働者に当たらないかを確認し、該当するなら労働契約へ切り替える。\n\n賃金規程や就業規則の整備は[就業規則は何人から義務か](/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo)も参照してください。\n\n## 四葉社会保険労務士事務所は、何ができますか？\n\n当事務所では、コマ給と授業外労働を踏まえた賃金規程・固定残業代の設計、労働時間の記録方法、就業規則の整備についてご相談を承ります。ご相談は無料です。費用は[報酬額表](/labor/ryokin)、一般的なご質問は[よくあるご質問](/labor/faq)に掲載しています。\n\n未払い賃金の請求など個別の紛争は弁護士が、講師が業務委託か労働者かの最終的な事実認定は労働基準監督署が扱う事項です。外部の専門家とはそれぞれ独立した事業体として別々にご契約いただき、直接請求・直接お支払いいただきます。当事務所は紹介料・キックバックを扱いません。具体的な設計や判断は、面談のうえ資格者が行います。\n\n## よくある質問\n\n**Q. コマ給に「残業代込み」と書けば割増は払わなくてよいですか？**\nA. 不十分です。固定残業代が有効とされるには、通常の労働時間の賃金と割増部分が判別でき、固定分を超えた時間外には差額を清算することが必要です。何時間分かが不明で超過も精算しない運用は認められず、別途割増を求められることがあります。\n\n**Q. 自宅での授業準備や採点も労働時間ですか？**\nA. 塾が指示・義務づけた準備や採点で、使用者の指揮命令下にあるといえるものは、場所が自宅でも労働時間になり得ます。任意の自己研鑽で義務づけがないものは直ちには労働時間になりません。指示や成果物の義務づけ、時間・場所の拘束で判断します。\n\n**Q. 講師を業務委託にすれば労働法は関係ありませんか？**\nA. 契約名称ではなく働き方の実態で判断されます。依頼を断りにくい、時間・場所が拘束される、指揮監督を受ける、代講を立てられない、などから労働者と評価されれば、最低賃金・割増賃金・労働保険が適用されます。最終的な事実認定は労働基準監督署や裁判所が行います。\n\n**Q. コマ給でも最低賃金は問題になりますか？**\nA. なります。授業外労働を含めた総労働時間でコマ給を割った時間額が、地域別最低賃金を下回ってはいけません。準備や採点が多い講師ほど下回りやすいため、総労働時間での試算が必要です。\n\n## この記事の根拠\n\n以下は2026年10月11日参照の一次資料です。\n\n- 労働基準法第32条（労働時間）・第34条（休憩）・第37条（割増賃金）・第24条（賃金の全額払い）（[e-Gov法令検索](https://laws.e-gov.go.jp/law/322AC0000000049)）。\n- 労働時間の該当性：三菱重工業長崎造船所事件・最高裁第一小法廷平成12年3月9日判決。労働時間は使用者の指揮命令下に置かれている時間をいうとした。\n- 労働者性の判断：労働基準法研究会報告（昭和60年12月19日）。使用従属性を中心に、諾否の自由・指揮監督・拘束性・報酬の労務対償性・代替性などで総合判断する枠組み。\n- 厚生労働省[労働時間の適正な把握のために使用者が講ずべき措置に関するガイドライン](https://jsite.mhlw.go.jp/tottori-roudoukyoku/news_topics/topics/_120669/_121005.html)（2017年1月20日策定・2026年10月11日参照）：始業・終業時刻の確認と記録の責務。\n- 社会保険労務士法第2条：相談・指導等の業務の根拠。各法令の現行統合条文・最終改正日の全件照合、個別の労働者性の結論は本記事の確認範囲に含みません。\n\n本記事は一般的な情報提供です。個々の契約や賃金の設計は、最新の一次資料と事業場の実情に照らし、面談のうえ資格者が判断します。必要に応じ所轄労働基準監督署・労働局へ照会します。執筆は[浦松丈二](/about/uramatsu)（社会保険労務士・行政書士・宅地建物取引士）です。",
+    "status": "published",
+    "author": {
+      "name": "浦松 丈二",
+      "title": "社会保険労務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+    },
+    "keywords": [
+      "学習塾 コマ給 労働時間",
+      "予備校 講師 授業準備 採点 労働時間",
+      "コマ給 固定残業代 不足",
+      "塾講師 業務委託 労働者性",
+      "コマ給 最低賃金 授業外",
+      "塾 賃金規程 労働時間 記録"
+    ],
+    "tags": [
+      "労働時間",
+      "コマ給",
+      "固定残業代",
+      "学習塾",
+      "労働者性"
+    ],
+    "locales": [],
+    "faq": [
+      {
+        "question": "コマ給に「残業代込み」と書けば割増は払わなくてよいですか？",
+        "answer": "不十分です。固定残業代が有効とされるには、通常の労働時間の賃金と割増部分が判別でき、固定分を超えた時間外には差額を清算することが必要です。何時間分かが不明で超過も精算しない運用は認められず、別途割増を求められることがあります。"
+      },
+      {
+        "question": "自宅での授業準備や採点も労働時間ですか？",
+        "answer": "塾が指示・義務づけた準備や採点で、使用者の指揮命令下にあるといえるものは、場所が自宅でも労働時間になり得ます。任意の自己研鑽で義務づけがないものは直ちには労働時間になりません。指示や成果物の義務づけ、時間・場所の拘束で判断します。"
+      },
+      {
+        "question": "講師を業務委託にすれば労働法は関係ありませんか？",
+        "answer": "契約名称ではなく働き方の実態で判断されます。依頼を断りにくい、時間・場所が拘束される、指揮監督を受ける、代講を立てられない、などから労働者と評価されれば、最低賃金・割増賃金・労働保険が適用されます。最終的な事実認定は労働基準監督署や裁判所が行います。"
+      },
+      {
+        "question": "コマ給でも最低賃金は問題になりますか？",
+        "answer": "なります。授業外労働を含めた総労働時間でコマ給を割った時間額が、地域別最低賃金を下回ってはいけません。準備や採点が多い講師ほど下回りやすいため、総労働時間での試算が必要です。"
+      }
+    ],
+    "translations": {
+      "en": {
+        "title": "Is per-lesson pay for cram-school and prep-school teachers a risk? Managing working time for out-of-class work (prep, grading, parent calls)",
+        "excerpt": "Per-lesson pay tends to leave out-of-class work — preparation, grading, parent meetings, training — out of wages and overtime. Approach it through the concept of what counts as working time.",
+        "content": "**In short:** Per-lesson pay for cram schools and prep schools tends to pay only for class time, yet preparation, grading, parent response and training, if under the employer's direction and control, are also working time subject to wages and premiums. Folding overtime into per-lesson pay requires a clear split and settlement of the difference, and even \"independent contractors\" can be judged workers by actual conditions.\n\n**System and primary-source check: October 11, 2026.** This guide is for operators and head teachers at cram schools and prep schools that pay teachers by the lesson. It organizes the working-time character of out-of-class work through the Labor Standards Act, case law and administrative standards. It does not deal with individual unpaid-wage claims or the final finding of worker status; it sets out the framework and the design.\n\n## What tends to go unpaid when pay is only per lesson?\n\nPer-lesson pay is a unit price per lesson. It rewards the class itself but has a weak spot: work that arises before and after the class, or on non-teaching days, easily falls out of the wage calculation.\n\n| Work | Under per-lesson pay only | Typical problem |\n|---|---|---|\n| Lesson prep and materials | Tends to be excluded | Below minimum wage / unpaid |\n| Grading and marking tests | Tends to be excluded | Same |\n| Parent meetings and phone calls | Tends to be excluded | Unpaid overtime premium |\n| Training, meetings, handovers | Tends to be excluded | Same |\n\nWages must be paid in full (Labor Standards Act, Article 24), and work beyond statutory hours requires a premium (Article 37). If this work is treated as unpaid, it surfaces as pay falling below the minimum wage when divided across the month's total hours, or as an unpaid overtime premium.\n\n## Do lesson prep, grading and parent response count as working time?\n\nWorking time is time during which a worker is under the employer's direction and control. This is the approach set by the Supreme Court, and it is not decided by how the contract or work rules are worded alone (Mitsubishi Heavy Industries Nagasaki Shipyard case, Supreme Court judgment of March 9, 2000).\n\nSo preparation and grading that the school directs or requires, reporting in a set format, and mandatory training and meetings can be working time even at home. Conversely, voluntary self-study that is not required is not immediately working time. The line is drawn by whether there is an instruction, whether a deliverable is required, and the constraint on time and place. The Ministry of Health, Labour and Welfare's [Guidelines on measures employers should take to appropriately grasp working hours](https://jsite.mhlw.go.jp/tottori-roudoukyoku/news_topics/topics/_120669/_121005.html) (established January 20, 2017; accessed October 11, 2026) set out the employer's duty to confirm and record start and end times.\n\n## What happens if a fixed overtime allowance folded into per-lesson pay is not enough?\n\nFolding a set amount of overtime pay into per-lesson pay (a fixed overtime allowance) is possible, but to be valid it must meet conditions: the part that is ordinary working-time wages and the part that is the premium must be distinguishable, and any overtime beyond the fixed amount must be settled by paying the difference.\n\nA scheme that merely states \"per-lesson pay includes overtime,\" without showing how many overtime hours it covers and without settling excess hours, may not be recognized as a fixed overtime allowance, and a separate premium may be demanded. For the requirements and difference settlement, see [the conditions for a lawful fixed overtime allowance](/en/labor/column/kotei-zangyodai-tekiho-youken-sagaku-seisan).\n\n## Can teachers be made \"independent contractors\"?\n\nEven if a contract is labeled \"independent contractor,\" if the actual way of working is that of a worker, the Labor Standards Act and Minimum Wage Act apply. Whether someone is a worker is judged overall around the \"subordination\" the 1985 Labor Standards Act Study Group report describes: freedom to decline requests, constraint on time and place, being subject to direction and supervision, whether pay corresponds to the provision of labor, and whether a substitute can be sent.\n\n| Focus | More likely judged a worker |\n|---|---|\n| Accepting or declining work | Hard to decline lesson assignments |\n| Direction and supervision | Teaching method, timetable and reporting are specified |\n| Time and place constraint | Working at the school at set times |\n| Substitutability | No one else can cover the lesson |\n| Nature of pay | Corresponds to providing labor, not time or output |\n\nEven if labeled an independent contractor, if these point to a worker, issues of minimum wage, premium wages and labor insurance arise. Even when outsourcing properly as a contract, there are rules such as disclosing transaction terms (see [what the ordering side should check under the Freelance Act](/en/labor/column/freelancelaw-hatchu-kigyo-kakunin)). The final finding of whether someone is a worker is made by the Labor Standards Inspection Office or the courts.\n\n## How do you set up pay rules and records to prevent trouble?\n\nPreparing in this order lowers the risk of unpaid wages.\n\n1. Inventory teachers' work and sort which of class, prep, grading, meetings, training and conferences is labor under direction and control.\n2. Calculate whether the per-lesson unit price falls below the minimum wage once out-of-class work is included in total hours.\n3. If using a fixed overtime allowance, state it in the pay rules so the ordinary wage and the premium part are distinguishable, and provide for settling the difference on excess hours.\n4. Decide a method for recording start and end times and out-of-class hours, and grasp them in line with the Guidelines.\n5. For teachers treated as independent contractors, check that the actual way of working is not that of a worker, and switch to a labor contract if it is.\n\nFor preparing pay rules and work rules, also see [from how many employees are work rules mandatory](/en/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo).\n\n## What can 四葉社会保険労務士事務所 help with?\n\nOur office provides consultation on pay rules and fixed overtime allowances that account for per-lesson pay and out-of-class work, methods for recording working time, and preparing work rules. **Consultations are free.** See our [fee schedule](/en/labor/ryokin) and [FAQ](/en/labor/faq).\n\nIndividual disputes such as unpaid-wage claims are handled by an attorney, and the final finding of whether a teacher is an independent contractor or a worker is made by the Labor Standards Inspection Office. Each external professional is an independent business that you contract with separately, and you are invoiced by and pay each one directly. We do not handle referral fees or kickbacks. Specific design and judgment are carried out by a qualified professional after an interview.\n\n## Frequently asked questions\n\n**Q. If I write \"overtime included\" into per-lesson pay, do I not have to pay a premium?**\nA. That is not enough. For a fixed overtime allowance to be valid, the ordinary working-time wage and the premium part must be distinguishable, and overtime beyond the fixed amount must be settled by paying the difference. A scheme where the hours covered are unclear and excess is not settled is not recognized, and a separate premium may be demanded.\n\n**Q. Is lesson prep or grading at home working time?**\nA. Preparation and grading that the school directs or requires, so that it is under the employer's direction and control, can be working time even at home. Voluntary self-study that is not required is not immediately working time. It is judged by instruction, whether a deliverable is required, and the constraint on time and place.\n\n**Q. If I make teachers independent contractors, is labor law irrelevant?**\nA. It is judged by the actual way of working, not the contract label. If it is hard to decline requests, time and place are constrained, direction and supervision apply, and no substitute can be sent, the person may be judged a worker, and minimum wage, premium wages and labor insurance apply. The final finding is made by the Labor Standards Inspection Office or the courts.\n\n**Q. Can the minimum wage still be an issue with per-lesson pay?**\nA. Yes. The hourly figure obtained by dividing per-lesson pay across total hours, including out-of-class work, must not fall below the regional minimum wage. Teachers with more prep and grading are more likely to fall below it, so calculate using total hours.\n\n## Sources for this article\n\nThese are primary sources consulted on October 11, 2026.\n\n- Labor Standards Act, Article 32 (working hours), Article 34 (breaks), Article 37 (premium wages) and Article 24 (full payment of wages) ([e-Gov law search](https://laws.e-gov.go.jp/law/322AC0000000049)).\n- What counts as working time: Mitsubishi Heavy Industries Nagasaki Shipyard case, Supreme Court First Petty Bench judgment of March 9, 2000, holding that working time is time during which the worker is under the employer's direction and control.\n- Judging worker status: Labor Standards Act Study Group report (December 19, 1985). An overall judgment centered on subordination — freedom to decline, direction and supervision, constraint, pay corresponding to labor, and substitutability.\n- MHLW [Guidelines on measures employers should take to appropriately grasp working hours](https://jsite.mhlw.go.jp/tottori-roudoukyoku/news_topics/topics/_120669/_121005.html) (established January 20, 2017; accessed October 11, 2026): the duty to confirm and record start and end times.\n- Shakai Hoken Roumushi Act, Article 2: basis for consultation and guidance services. Reconciling every current consolidated provision and final amendment date, and the conclusion on worker status in an individual case, are outside this article's scope.\n\nThis article provides general information. The design of individual contracts and wages is judged by a qualified professional after an interview, using current primary sources and the actual circumstances of the workplace. Where needed, we inquire with the competent Labor Standards Inspection Office or Labour Bureau. Author: [浦松丈二](/en/about/uramatsu) (Shakai Hoken Roumushi, Gyoseishoshi and licensed real estate transaction specialist).",
+        "category": "Working hours",
+        "keywords": [
+          "cram school per-lesson pay",
+          "out-of-class work working time",
+          "fixed overtime allowance insufficient",
+          "instructor independent contractor worker status",
+          "Labor Standards Act Article 32 37"
+        ],
+        "tags": [
+          "Working hours",
+          "Per-lesson pay",
+          "Fixed overtime allowance",
+          "Cram school",
+          "Worker status"
+        ],
+        "author": {
+          "name": "Joji Uramatsu",
+          "title": "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所"
+        },
+        "faq": [
+          {
+            "question": "If I write \"overtime included\" into per-lesson pay, do I not have to pay a premium?",
+            "answer": "That is not enough. For a fixed overtime allowance to be valid, the ordinary working-time wage and the premium part must be distinguishable, and overtime beyond the fixed amount must be settled by paying the difference. A scheme where the hours covered are unclear and excess is not settled is not recognized, and a separate premium may be demanded."
+          },
+          {
+            "question": "Is lesson prep or grading at home working time?",
+            "answer": "Preparation and grading that the school directs or requires, so that it is under the employer's direction and control, can be working time even at home. Voluntary self-study that is not required is not immediately working time. It is judged by instruction, whether a deliverable is required, and the constraint on time and place."
+          },
+          {
+            "question": "If I make teachers independent contractors, is labor law irrelevant?",
+            "answer": "It is judged by the actual way of working, not the contract label. If it is hard to decline requests, time and place are constrained, direction and supervision apply, and no substitute can be sent, the person may be judged a worker, and minimum wage, premium wages and labor insurance apply. The final finding is made by the Labor Standards Inspection Office or the courts."
+          },
+          {
+            "question": "Can the minimum wage still be an issue with per-lesson pay?",
+            "answer": "Yes. The hourly figure obtained by dividing per-lesson pay across total hours, including out-of-class work, must not fall below the regional minimum wage. Teachers with more prep and grading are more likely to fall below it, so calculate using total hours."
+          }
+        ]
+      },
+      "zh-tw": {
+        "title": "補習班、預備校講師的「按堂計酬」要注意？課外勞動（備課、批改、家長對應）的工時管理",
+        "excerpt": "按堂計酬容易把課外勞動（備課、批改、家長面談、研修）排除在工資與加班之外。請用「何謂工時」的判斷思路來整理。",
+        "content": "**結論（先講重點）**：補習班、預備校的按堂計酬容易只就上課時間付薪，但備課、批改、家長對應、研修若處於雇主指揮命令下，也是工時，屬工資與加給的對象。要把加班費含進按堂計酬，須能區分並清算差額；即使名為業務委託，也可能依實態被認定為勞工。\n\n**制度與一次資料確認日：2026年10月11日。** 本文面向以按堂方式支薪的補習班、預備校業者與教室長，依日本勞動基準法、判例與行政基準，整理課外勞動的工時性。不涉及個別的未付工資請求或勞工性的最終事實認定，只呈現判斷思路與設計。\n\n## 只按堂計酬，什麼最容易變成未付？\n\n按堂計酬是以每一堂課的單價支薪。它對上課本身給付，但有一個弱點：上課前後或非授課日所發生的勞動，容易在工資計算中被遺漏。\n\n| 業務 | 只按堂計酬時 | 典型問題 |\n|---|---|---|\n| 備課、教材製作 | 容易被排除 | 低於最低工資・未付 |\n| 測驗的批改、添削 | 容易被排除 | 同上 |\n| 家長面談、電話對應 | 容易被排除 | 加班加給未付 |\n| 研修、會議、交接 | 容易被排除 | 同上 |\n\n工資須全額給付（勞動基準法第24條），超過法定工時即須加給（同法第37條）。若把這些勞動當成無給前提，就會以「以1個月總工時相除後低於最低工資」，或「加班加給未付」的形式浮現。\n\n## 備課、批改、家長對應算工時嗎？\n\n工時是指勞工處於雇主指揮命令下的時間。這是最高法院所示的思路，並非僅憑契約或工作規則的訂定方式決定（三菱重工業長崎造船所事件・最高法院2000年3月9日判決）。\n\n因此，補習班指示或課予義務的備課與批改、以指定格式的報告、必須參加的研修與會議，即使地點在自家也可能是工時。反之，本人任意進行、無義務課予的自我進修，並不當然成為工時。界線以有無指示、有無課予成果物、以及時間與場所的拘束來判斷。厚生勞動省的[為適正掌握工時雇主應採措施之指針](https://jsite.mhlw.go.jp/tottori-roudoukyoku/news_topics/topics/_120669/_121005.html)（2017年1月20日制定・2026年10月11日參照）揭示雇主有確認並記錄上、下班時刻的責務。\n\n## 把固定加班費含進按堂計酬，若不足怎麼辦？\n\n把一定的加班費含進按堂計酬（固定加班費）是可行的，但要被認定有效須具備條件：相當於通常工時工資的部分，與相當於加給的部分能夠區分；且超過固定部分的加班須清算差額。\n\n僅訂「按堂計酬含加班費」，卻不知相當於幾小時加班、超過也不精算的做法，可能不被認定為固定加班費，而被要求另付加給。固定加班費的要件與差額清算，請見[固定加班費合法的要件](/zh-tw/labor/column/kotei-zangyodai-tekiho-youken-sagaku-seisan)。\n\n## 講師可以採「業務委託」嗎？\n\n即使契約寫「業務委託」，若工作實態為勞工，仍適用勞動基準法與最低工資法。是否為勞工，以昭和60年（1985年）勞動基準法研究會報告所示的「使用從屬性」為中心，依是否有拒絕委託的自由、時間與場所是否受拘束、是否受指揮監督、報酬是否為勞務對價、能否另派他人代替等實態綜合判斷。\n\n| 著眼點 | 較易被評價為勞工 |\n|---|---|\n| 委託的諾否 | 難以拒絕課堂的分配 |\n| 指揮監督 | 指導方法、課表、報告被指定 |\n| 時間、場所的拘束 | 於校舍在固定時間勤務 |\n| 代替性 | 本人以外無法代課 |\n| 報酬的性質 | 對應勞務提供而非時間或成果 |\n\n即使名為業務委託，若由上述被判斷為勞工，便會產生最低工資、加給、勞動保險的問題。即使作為業務委託適正發包，也有明示交易條件等規則（[自由工作者法下發包方應確認事項](/zh-tw/labor/column/freelancelaw-hatchu-kigyo-kakunin)）。是否為勞工的最終事實認定，由勞動基準監督署或法院進行。\n\n## 為防止糾紛，工資規程與紀錄該如何整備？\n\n依下列順序整備，可降低未付的風險。\n\n1. 盤點講師的業務，將上課、備課、批改、面談、研修、會議中哪些屬於指揮命令下的勞動加以區分。\n2. 試算按堂單價在含課外勞動的總工時下，是否低於最低工資。\n3. 若使用固定加班費，於工資規程明訂可區分通常工資與加給部分，並定明超過部分的差額清算。\n4. 決定記錄上、下班時刻與課外勞動時間的方法，依指針掌握。\n5. 採業務委託的講師，確認工作實態是否該當勞工；該當者改為勞動契約。\n\n工資規程與工作規則的整備，另請參閱[工作規則從幾人開始有義務](/zh-tw/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo)。\n\n## 四葉社会保険労務士事務所能協助什麼？\n\n本所可就兼顧按堂計酬與課外勞動的工資規程、固定加班費設計、工時紀錄方法、工作規則整備提供諮詢。**諮詢免費。** 費用請見[報酬額表](/zh-tw/labor/ryokin)，一般問題請見[常見問答](/zh-tw/labor/faq)。\n\n未付工資的請求等個別紛爭由律師處理；講師是業務委託或勞工的最終事實認定，由勞動基準監督署進行。與外部專家分別為各自獨立的事業體、另行簽約，並由您直接請款、直接支付。本所不收取介紹費或回扣。具體的設計與判斷，由具資格者於面談後進行。\n\n## 常見問題\n\n**Q. 在按堂計酬寫「含加班費」就不必付加給嗎？**\nA. 不夠。固定加班費要有效，須能區分通常工時工資與加給部分，且超過固定部分的加班須清算差額。相當幾小時不明、超過也不精算的做法不被認定，可能被要求另付加給。\n\n**Q. 在自家備課或批改也算工時嗎？**\nA. 補習班指示或課予義務的備課與批改，能說處於雇主指揮命令下者，即使在自家也可能是工時。無義務課予的任意自我進修並不當然是工時。以有無指示、有無課予成果物、時間與場所的拘束來判斷。\n\n**Q. 把講師改成業務委託，就與勞動法無關了嗎？**\nA. 以工作實態而非契約名稱判斷。若難以拒絕委託、時間與場所受拘束、受指揮監督、無法另派代課等被評價為勞工，便適用最低工資、加給、勞動保險。最終事實認定由勞動基準監督署或法院進行。\n\n**Q. 按堂計酬也會有最低工資的問題嗎？**\nA. 會。以含課外勞動的總工時相除按堂計酬所得的時薪，不得低於地區別最低工資。備課與批改較多的講師更易低於，故須以總工時試算。\n\n## 本文依據\n\n以下為2026年10月11日參照的一次資料。\n\n- 勞動基準法第32條（工時）、第34條（休息）、第37條（加給工資）、第24條（工資全額給付）（[e-Gov法令檢索](https://laws.e-gov.go.jp/law/322AC0000000049)）。\n- 工時的該當性：三菱重工業長崎造船所事件・最高法院第一小法庭2000年3月9日判決。認定工時是指勞工處於雇主指揮命令下的時間。\n- 勞工性的判斷：勞動基準法研究會報告（1985年12月19日）。以使用從屬性為中心，就諾否自由、指揮監督、拘束性、報酬的勞務對價性、代替性等綜合判斷的框架。\n- 厚生勞動省[為適正掌握工時雇主應採措施之指針](https://jsite.mhlw.go.jp/tottori-roudoukyoku/news_topics/topics/_120669/_121005.html)（2017年1月20日制定・2026年10月11日參照）：確認並記錄上、下班時刻的責務。\n- 社会保険労務士法第2條：諮詢、指導等業務的依據。各法令的現行整合條文與最終修正日的全件核對，以及個別勞工性的結論，不在本文確認範圍內。\n\n本文為一般性資訊提供。個別的契約與工資設計，須依最新一次資料與事業場實情，由具資格者於面談後判斷。必要時向轄區勞動基準監督署、勞動局洽詢。撰文：[浦松丈二](/zh-tw/about/uramatsu)（社會保險勞務士・行政書士・宅地建物取引士）。",
+        "category": "工時",
+        "keywords": [
+          "補習班 按堂計酬",
+          "課外勞動 工時性",
+          "固定加班費 不足",
+          "講師 業務委託 勞工性",
+          "勞動基準法 第32條 第37條"
+        ],
+        "tags": [
+          "工時",
+          "按堂計酬",
+          "固定加班費",
+          "補習班",
+          "勞工性"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "在按堂計酬寫「含加班費」就不必付加給嗎？",
+            "answer": "不夠。固定加班費要有效，須能區分通常工時工資與加給部分，且超過固定部分的加班須清算差額。相當幾小時不明、超過也不精算的做法不被認定，可能被要求另付加給。"
+          },
+          {
+            "question": "在自家備課或批改也算工時嗎？",
+            "answer": "補習班指示或課予義務的備課與批改，能說處於雇主指揮命令下者，即使在自家也可能是工時。無義務課予的任意自我進修並不當然是工時。以有無指示、有無課予成果物、時間與場所的拘束來判斷。"
+          },
+          {
+            "question": "把講師改成業務委託，就與勞動法無關了嗎？",
+            "answer": "以工作實態而非契約名稱判斷。若難以拒絕委託、時間與場所受拘束、受指揮監督、無法另派代課等被評價為勞工，便適用最低工資、加給、勞動保險。最終事實認定由勞動基準監督署或法院進行。"
+          },
+          {
+            "question": "按堂計酬也會有最低工資的問題嗎？",
+            "answer": "會。以含課外勞動的總工時相除按堂計酬所得的時薪，不得低於地區別最低工資。備課與批改較多的講師更易低於，故須以總工時試算。"
+          }
+        ]
+      },
+      "zh": {
+        "title": "补习班、预备校讲师的「按堂计酬」要注意？课外劳动（备课、批改、家长对应）的工时管理",
+        "excerpt": "按堂计酬容易把课外劳动（备课、批改、家长面谈、研修）排除在工资与加班之外。请用「何谓工时」的判断思路来整理。",
+        "content": "**结论（先讲要点）**：补习班、预备校的按堂计酬容易只就上课时间付薪，但备课、批改、家长对应、研修若处于雇主指挥命令下，也是工时，属工资与加给的对象。要把加班费含进按堂计酬，须能区分并清算差额；即使名为业务委托，也可能依实态被认定为劳工。\n\n**制度与一次资料确认日：2026年10月11日。** 本文面向以按堂方式支薪的补习班、预备校业者与教室长，依日本劳动基准法、判例与行政基准，整理课外劳动的工时性。不涉及个别的未付工资请求或劳工性的最终事实认定，只呈现判断思路与设计。\n\n## 只按堂计酬，什么最容易变成未付？\n\n按堂计酬是以每一堂课的单价支薪。它对上课本身给付，但有一个弱点：上课前后或非授课日所发生的劳动，容易在工资计算中被遗漏。\n\n| 业务 | 只按堂计酬时 | 典型问题 |\n|---|---|---|\n| 备课、教材制作 | 容易被排除 | 低于最低工资・未付 |\n| 测验的批改、添削 | 容易被排除 | 同上 |\n| 家长面谈、电话对应 | 容易被排除 | 加班加给未付 |\n| 研修、会议、交接 | 容易被排除 | 同上 |\n\n工资须全额给付（劳动基准法第24条），超过法定工时即须加给（同法第37条）。若把这些劳动当成无给前提，就会以「以1个月总工时相除后低于最低工资」，或「加班加给未付」的形式浮现。\n\n## 备课、批改、家长对应算工时吗？\n\n工时是指劳工处于雇主指挥命令下的时间。这是最高法院所示的思路，并非仅凭契约或工作规则的订定方式决定（三菱重工业长崎造船所事件・最高法院2000年3月9日判决）。\n\n因此，补习班指示或课予义务的备课与批改、以指定格式的报告、必须参加的研修与会议，即使地点在自家也可能是工时。反之，本人任意进行、无义务课予的自我进修，并不当然成为工时。界线以有无指示、有无课予成果物、以及时间与场所的拘束来判断。厚生劳动省的[为适正掌握工时雇主应采措施之指针](https://jsite.mhlw.go.jp/tottori-roudoukyoku/news_topics/topics/_120669/_121005.html)（2017年1月20日制定・2026年10月11日参照）揭示雇主有确认并记录上、下班时刻的责务。\n\n## 把固定加班费含进按堂计酬，若不足怎么办？\n\n把一定的加班费含进按堂计酬（固定加班费）是可行的，但要被认定有效须具备条件：相当于通常工时工资的部分，与相当于加给的部分能够区分；且超过固定部分的加班须清算差额。\n\n仅订「按堂计酬含加班费」，却不知相当于几小时加班、超过也不精算的做法，可能不被认定为固定加班费，而被要求另付加给。固定加班费的要件与差额清算，请见[固定加班费合法的要件](/zh/labor/column/kotei-zangyodai-tekiho-youken-sagaku-seisan)。\n\n## 讲师可以采「业务委托」吗？\n\n即使契约写「业务委托」，若工作实态为劳工，仍适用劳动基准法与最低工资法。是否为劳工，以昭和60年（1985年）劳动基准法研究会报告所示的「使用从属性」为中心，依是否有拒绝委托的自由、时间与场所是否受拘束、是否受指挥监督、报酬是否为劳务对价、能否另派他人代替等实态综合判断。\n\n| 着眼点 | 较易被评价为劳工 |\n|---|---|\n| 委托的诺否 | 难以拒绝课堂的分配 |\n| 指挥监督 | 指导方法、课表、报告被指定 |\n| 时间、场所的拘束 | 于校舍在固定时间勤务 |\n| 代替性 | 本人以外无法代课 |\n| 报酬的性质 | 对应劳务提供而非时间或成果 |\n\n即使名为业务委托，若由上述被判断为劳工，便会产生最低工资、加给、劳动保险的问题。即使作为业务委托适正发包，也有明示交易条件等规则（[自由职业者法下发包方应确认事项](/zh/labor/column/freelancelaw-hatchu-kigyo-kakunin)）。是否为劳工的最终事实认定，由劳动基准监督署或法院进行。\n\n## 为防止纠纷，工资规程与记录该如何整备？\n\n按下列顺序整备，可降低未付的风险。\n\n1. 盘点讲师的业务，将上课、备课、批改、面谈、研修、会议中哪些属于指挥命令下的劳动加以区分。\n2. 试算按堂单价在含课外劳动的总工时下，是否低于最低工资。\n3. 若使用固定加班费，于工资规程明订可区分通常工资与加给部分，并定明超过部分的差额清算。\n4. 决定记录上、下班时刻与课外劳动时间的方法，依指针掌握。\n5. 采业务委托的讲师，确认工作实态是否该当劳工；该当者改为劳动契约。\n\n工资规程与工作规则的整备，另请参阅[工作规则从几人开始有义务](/zh/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo)。\n\n## 四葉社会保険労務士事務所能协助什么？\n\n本所可就兼顾按堂计酬与课外劳动的工资规程、固定加班费设计、工时记录方法、工作规则整备提供咨询。**咨询免费。** 费用请见[报酬额表](/zh/labor/ryokin)，一般问题请见[常见问答](/zh/labor/faq)。\n\n未付工资的请求等个别纠纷由律师处理；讲师是业务委托或劳工的最终事实认定，由劳动基准监督署进行。与外部专家分别为各自独立的事业体、另行签约，并由您直接请款、直接支付。本所不收取介绍费或回扣。具体的设计与判断，由具资格者于面谈后进行。\n\n## 常见问题\n\n**Q. 在按堂计酬写「含加班费」就不必付加给吗？**\nA. 不够。固定加班费要有效，须能区分通常工时工资与加给部分，且超过固定部分的加班须清算差额。相当几小时不明、超过也不精算的做法不被认定，可能被要求另付加给。\n\n**Q. 在自家备课或批改也算工时吗？**\nA. 补习班指示或课予义务的备课与批改，能说处于雇主指挥命令下者，即使在自家也可能是工时。无义务课予的任意自我进修并不当然是工时。以有无指示、有无课予成果物、时间与场所的拘束来判断。\n\n**Q. 把讲师改成业务委托，就与劳动法无关了吗？**\nA. 以工作实态而非契约名称判断。若难以拒绝委托、时间与场所受拘束、受指挥监督、无法另派代课等被评价为劳工，便适用最低工资、加给、劳动保险。最终事实认定由劳动基准监督署或法院进行。\n\n**Q. 按堂计酬也会有最低工资的问题吗？**\nA. 会。以含课外劳动的总工时相除按堂计酬所得的时薪，不得低于地区别最低工资。备课与批改较多的讲师更易低于，故须以总工时试算。\n\n## 本文依据\n\n以下为2026年10月11日参照的一次资料。\n\n- 劳动基准法第32条（工时）、第34条（休息）、第37条（加给工资）、第24条（工资全额给付）（[e-Gov法令检索](https://laws.e-gov.go.jp/law/322AC0000000049)）。\n- 工时的该当性：三菱重工业长崎造船所事件・最高法院第一小法庭2000年3月9日判决。认定工时是指劳工处于雇主指挥命令下的时间。\n- 劳工性的判断：劳动基准法研究会报告（1985年12月19日）。以使用从属性为中心，就诺否自由、指挥监督、拘束性、报酬的劳务对价性、代替性等综合判断的框架。\n- 厚生劳动省[为适正掌握工时雇主应采措施之指针](https://jsite.mhlw.go.jp/tottori-roudoukyoku/news_topics/topics/_120669/_121005.html)（2017年1月20日制定・2026年10月11日参照）：确认并记录上、下班时刻的责务。\n- 社会保険労務士法第2条：咨询、指导等业务的依据。各法令的现行整合条文与最终修正日的全件核对，以及个别劳工性的结论，不在本文确认范围内。\n\n本文为一般性资讯提供。个别的契约与工资设计，须依最新一次资料与事业场实情，由具资格者于面谈后判断。必要时向辖区劳动基准监督署、劳动局洽询。撰文：[浦松丈二](/zh/about/uramatsu)（社会保险劳务士・行政书士・宅地建物取引士）。",
+        "category": "工时",
+        "keywords": [
+          "补习班 按堂计酬",
+          "课外劳动 工时性",
+          "固定加班费 不足",
+          "讲师 业务委托 劳工性",
+          "劳动基准法 第32条 第37条"
+        ],
+        "tags": [
+          "工时",
+          "按堂计酬",
+          "固定加班费",
+          "补习班",
+          "劳工性"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "在按堂计酬写「含加班费」就不必付加给吗？",
+            "answer": "不够。固定加班费要有效，须能区分通常工时工资与加给部分，且超过固定部分的加班须清算差额。相当几小时不明、超过也不精算的做法不被认定，可能被要求另付加给。"
+          },
+          {
+            "question": "在自家备课或批改也算工时吗？",
+            "answer": "补习班指示或课予义务的备课与批改，能说处于雇主指挥命令下者，即使在自家也可能是工时。无义务课予的任意自我进修并不当然是工时。以有无指示、有无课予成果物、时间与场所的拘束来判断。"
+          },
+          {
+            "question": "把讲师改成业务委托，就与劳动法无关了吗？",
+            "answer": "以工作实态而非契约名称判断。若难以拒绝委托、时间与场所受拘束、受指挥监督、无法另派代课等被评价为劳工，便适用最低工资、加给、劳动保险。最终事实认定由劳动基准监督署或法院进行。"
+          },
+          {
+            "question": "按堂计酬也会有最低工资的问题吗？",
+            "answer": "会。以含课外劳动的总工时相除按堂计酬所得的时薪，不得低于地区别最低工资。备课与批改较多的讲师更易低于，故须以总工时试算。"
+          }
+        ]
+      }
+    }
   }
 ];
