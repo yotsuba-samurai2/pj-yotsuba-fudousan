@@ -52,5 +52,25 @@
   },
   "localFullBuild": "not retried: existing DB authentication previously rejected; no credentials changed",
   "productionApprovedHead": "Vercel SUCCESS, confirmed public deployment ID",
-  "qualityApprovalsGranted": 0
+  "qualityApprovalsGranted": 0,
+  "independentReview": {
+    "pass": false,
+    "major": 6,
+    "minor": 0,
+    "newFindingsCorrected": 4,
+    "articles": 6,
+    "manuscripts": 24,
+    "faq": 96,
+    "internalLinksChecked": 144,
+    "sourcesVerifiedReferences": 32,
+    "unverifiedReferences": 17,
+    "reportOriginalSha256": "bad59a8c59819fa89855bcfdd6c5e6ef276d9f679020005049bcc438082acf2d",
+    "committedReportSha256": "bad59a8c59819fa89855bcfdd6c5e6ef276d9f679020005049bcc438082acf2d",
+    "fingerprintsMatch": true,
+    "schemaValid": true,
+    "mockRecorder": {
+      "registered": 0,
+      "held": 6
+    }
+  }
 }

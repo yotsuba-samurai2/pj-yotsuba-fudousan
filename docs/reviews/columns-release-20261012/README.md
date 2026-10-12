@@ -10,6 +10,8 @@ PR [#481](https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/pull/481) は�
 
 記事のDB公開とGSC送信は実行していない。6記事×4言語の予定URLをGETして全24件404を確認した。実際に公開したURLは0件。実応答・照合根拠・時刻・原本ハッシュは `production-verification.json` を参照。
 
+追加修正Draft PR：[#483](https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/pull/483)。このDraftは未マージ。
+
 ## 追加修正
 
 元原稿の再生成はしていない。労務149/150の日本語・英語・繁体字・簡体字、計8MDとlabor seedを変更した。
@@ -33,7 +35,7 @@ PR [#481](https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/pull/481) は�
 | 労務149・教習所 | 改正/施行履歴、運転業務特例、協定・制度導入/届出、休憩/振替・割増算定への適用 |
 | 労務150・塾講師 | 改正/施行履歴、労働者性・授業外労働、固定残業代の有効性、コマ給分類と最低賃金算定への適用 |
 
-資料が取得できたことを資格者による最終確認に置き換えない。全6記事の `requiresQualifiedReview=true` を維持し、公開承認は0本。最終6指紋は `final-candidates.json`、編集ファイル指紋は `final-edit-manifest.json`、最終独立レビューは別ファイルへ保存する。旧レビューを新日時や新原稿へ流用しない。
+資料が取得できたことを資格者による最終確認に置き換えない。全6記事の `requiresQualifiedReview=true` を維持し、公開承認は0本。最終6指紋は `final-candidates.json`、編集ファイル指紋は `final-edit-manifest.json`、最終独立レビューは `independent-review.md/json` に保存した（pass=false / major6、一般主張32件確認・17件未確認）。正規recordの結果も登録0本・保留6本。旧レビューを新日時や新原稿へ流用しない。
 
 ## 検証と運用上の残件
 
