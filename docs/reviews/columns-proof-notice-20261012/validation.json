@@ -1,0 +1,121 @@
+{
+  "base": "d0dce295189e9458f5de08ceaddf24e5d44bc875",
+  "sourceRun": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/38160195514",
+  "checks": [
+    {
+      "log": "tests-final.log",
+      "sha256": "fecbc42a75118eca5ea438d0aa1a5ac28a5da7c39d2950b2b706070030e967ce",
+      "exitCode": 0
+    },
+    {
+      "log": "lint-final.log",
+      "sha256": "fed6cd45e5bdc29ebf48b47f8c6a13cc5c82eab3cb1e28ce32dd144dee570cde",
+      "exitCode": 0
+    },
+    {
+      "log": "typecheck-final.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exitCode": 0
+    },
+    {
+      "log": "delivery-workflow-regression.log",
+      "sha256": "77713e45f5cfe89e99fcdc14131ad88a006b371505abd9b6dac02daa2d80fd1f",
+      "exitCode": 0
+    },
+    {
+      "log": "seed-realestate-final-dry.log",
+      "sha256": "bc75855c95c658270055dc6394c248df2e72ad278ccf343b23fca7da736d480e",
+      "exitCode": 0
+    },
+    {
+      "log": "seed-legal-final-dry.log",
+      "sha256": "e3ea5ef722942b82ea5e7e60ffa6dcab909ce37f4c9f0ecf2c63f4ff3ccfec8a",
+      "exitCode": 0
+    },
+    {
+      "log": "seed-labor-final-dry.log",
+      "sha256": "6b7e8441583a7cf65f34ee13356f097a47a66f4e1246ef4004412518350fed73",
+      "exitCode": 0
+    },
+    {
+      "log": "seed-realestate-emit.log",
+      "sha256": "5889c2293c1f8fdd86743f75c8fc3852d2b6e8b37be9736234a8c9d84ffcc750",
+      "exitCode": 0
+    },
+    {
+      "log": "seed-legal-emit.log",
+      "sha256": "37407764192493c533a77fa6888e0332d9be90dce193b2963d721b395e26296a",
+      "exitCode": 0
+    },
+    {
+      "log": "seed-labor-emit.log",
+      "sha256": "6d25d7bc4734f9bf342df96be6b01598e6061da02887c281f41a09a14dd6a7fe",
+      "exitCode": 0
+    },
+    {
+      "log": "actionlint-structure.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exitCode": 0
+    },
+    {
+      "log": "actionlint-comparison.txt",
+      "sha256": "db2864dd6f7edc9c2c04c7ab0288bcbf9806708f065483aedac35eb43f111134",
+      "exitCode": 0
+    },
+    {
+      "log": "build-off-compile.log",
+      "sha256": "e519c737e34777c924e413a487b59758e3a980492b7519b906a67a5cbfa43576",
+      "exitCode": 0
+    }
+  ],
+  "fullTests": {
+    "files": 147,
+    "passed": 1996
+  },
+  "lint": {
+    "errors": 0,
+    "preExistingWarnings": 23
+  },
+  "typecheck": "pass",
+  "seedValidation": {
+    "scripts": 3,
+    "ng": 0
+  },
+  "actionlint": {
+    "workflowStructure": "pass",
+    "newShellcheckDiagnostics": 0,
+    "preExistingShellcheckDiagnostics": 4
+  },
+  "independentReview": {
+    "originalFindings": 23,
+    "corrected": 17,
+    "majorUnverifiedHolds": 6,
+    "independentTestsPassed": 52,
+    "articles": 6,
+    "manuscripts": 24,
+    "faq": 96,
+    "localeLinksFixed": 39,
+    "internalLinksChecked": 144,
+    "sourcesVerifiedReferences": 23,
+    "unverifiedReferences": 12,
+    "reportSha256": "a1f79a1adbce15de931b6e8621e993d1a2b80181db844955f5334b7e4183fb77"
+  },
+  "delivery": {
+    "generated": 6,
+    "registered": 0,
+    "qualityEligible": 0,
+    "held": 6,
+    "publishedCount": null
+  },
+  "localBuild": {
+    "fullPageBuild": "not completed",
+    "turbopack": "CSS process port binding denied (EPERM), operation not retried",
+    "webpackOn": "compiled and type-checked; page generation stopped on missing DB configuration, then existing credentials authentication rejection",
+    "webpackOffCompileMode": "pass, database not accessed",
+    "databaseAuthentication": "existing canonical .env.local necessary keys used transiently; rejected; no setting changes or retry after rejection",
+    "failureLogSha256": "010e2521e32b509e64b9e633886e5494a268ad94185331f8b4ae9d47a92bbc24"
+  },
+  "claudeMorningTaskLiveUpdated": false,
+  "productionPublication": "not executed",
+  "headCI": "pending Draft PR creation"
+}

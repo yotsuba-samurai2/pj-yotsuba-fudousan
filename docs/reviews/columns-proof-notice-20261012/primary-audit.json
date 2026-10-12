@@ -1,0 +1,1196 @@
+{
+  "stage": "primary_audit_before_editor_fix",
+  "checkedAt": "2026-10-12",
+  "inputRevision": "d0dce295189e9458f5de08ceaddf24e5d44bc875",
+  "pass": false,
+  "finalFingerprintReviewCompleted": false,
+  "finalApprovalGranted": false,
+  "scope": "10月12日復旧タスクの別6記事。前日PR480の記事の承認・修正は行わない。",
+  "findings": [
+    {
+      "id": "PA-01",
+      "key": "realestate:sango-care-shukuhakugata-bukken-shisetsu-kijun-boshihokenho",
+      "file": "scripts/realestate-columns/115-sango-care-shukuhakugata-bukken-shisetsu-kijun-boshihokenho.md",
+      "severity": "major",
+      "kind": "confirmed_mismatch",
+      "issue": "4言語の「面積・人員の具体数値は全国一律でない」「宿泊24時間は前提になりやすい」は国の人員基準を弱める。国のガイドラインは常に看護職1名以上、短期入所は1名以上を24時間体制で配置と明示。",
+      "fix": "人員の国基準と自治体の追加条件、未確認の居室面積を分ける。個別適合は所管・資格者へ留保。",
+      "evidenceUrls": [
+        "https://www.cfa.go.jp/assets/contents/node/basic_page/field_ref_resources/ff38becb-bbd1-41f3-a95e-3a22ddac09d8/317bd576/20260331_policies_boshihoken_173.pdf",
+        "https://www.cfa.go.jp/assets/contents/node/basic_page/field_ref_resources/ff38becb-bbd1-41f3-a95e-3a22ddac09d8/dae0454e/20230401_policies_boshihoken_73.pdf"
+      ],
+      "appliesToInitialInput": true
+    },
+    {
+      "id": "PA-02",
+      "key": "realestate:sango-care-shukuhakugata-bukken-shisetsu-kijun-boshihokenho",
+      "file": "scripts/realestate-columns/115-sango-care-shukuhakugata-bukken-shisetsu-kijun-boshihokenho.md",
+      "severity": "major",
+      "kind": "scope_mismatch",
+      "issue": "母子保健法17条の2対象施設と旅館業の関係を一般的な形態差の未確認としている。国交省通知は対象短期入所施設（病院・診療所・助産所除く）を旅館業適用外・ホテル又は旅館に非該当と明示。",
+      "fix": "対象を明記して国通知の扱いを示し、自治体事業外の私的サービス・医療法施設は同一扱いしない。",
+      "evidenceUrls": [
+        "https://www.cfa.go.jp/assets/contents/node/basic_page/field_ref_resources/ff38becb-bbd1-41f3-a95e-3a22ddac09d8/cba5e460/20230401_policies_boshihoken_76.pdf"
+      ],
+      "appliesToInitialInput": true
+    },
+    {
+      "id": "PA-03",
+      "key": "realestate:souzoku-jikka-juutaku-loan-zansai-teitouken-massho-baikyaku",
+      "file": "scripts/realestate-columns/116-souzoku-jikka-juutaku-loan-zansai-teitouken-massho-baikyaku.md",
+      "severity": "major",
+      "kind": "incomplete_material_condition",
+      "issue": "精算表の4言語は空き家3000万円控除を記載するが、2024年以後譲渡で対象財産を取得した相続人3人以上の2000万円上限を示していない。",
+      "fix": "最高額と3人以上の上限注記、個別適用は税理士という留保を4言語で揃える。",
+      "evidenceUrls": [
+        "https://www.nta.go.jp/taxes/shiraberu/taxanswer/joto/3306.htm"
+      ],
+      "appliesToInitialInput": true
+    },
+    {
+      "id": "PA-04",
+      "key": "realestate:souzoku-jikka-juutaku-loan-zansai-teitouken-massho-baikyaku",
+      "file": "scripts/realestate-columns/116-souzoku-jikka-juutaku-loan-zansai-teitouken-massho-baikyaku.md",
+      "severity": "major",
+      "kind": "incorrect_source_identifier",
+      "issue": "4言語の不動産登記法URLが116AC0000000123。平成16年法律123号の法令ID416AC0000000123と一致しない。取得不能だけでなくURL自体の誤記。",
+      "fix": "4言語とも正しい法令IDへ修正し、現在の本文を確認できなければverified=falseを維持。",
+      "evidenceUrls": [],
+      "appliesToInitialInput": true
+    },
+    {
+      "id": "PA-05",
+      "key": "legal:kodo-kanri-iryokiki-hanbai-kashidashi-kyoka-tenpo-kanrisha",
+      "file": "scripts/legal-columns/109-kodo-kanri-iryokiki-hanbai-kashidashi-kyoka-tenpo-kanrisha.md",
+      "severity": "major",
+      "kind": "scope_mismatch",
+      "issue": "主な読者にコンタクト店を含み、本文・導入・FAQ2は3年以上＋基礎講習の一般則を強く出すが、指定視力補正用レンズ等のみの1年以上＋対応講習、プログラムのみの別枠を具体化しない。",
+      "fix": "3年一般則の対象範囲とレンズ等・プログラムの例外を分けて4言語・FAQ・導入を整合。管理者個人の適格判断は所管へ。",
+      "evidenceUrls": [
+        "https://www.hokeniryo.metro.tokyo.lg.jp/anzen/iyaku/sonota/sale_leas/kyoka",
+        "https://www.city.chuo.lg.jp/documents/3219/kanrishyashikaku080629.pdf"
+      ],
+      "appliesToInitialInput": true
+    },
+    {
+      "id": "PA-06",
+      "key": "legal:seisan-gata-yuigon-fudosan-kanka-bunpai-yuigon-shikkou",
+      "file": "scripts/legal-columns/110-seisan-gata-yuigon-fudosan-kanka-bunpai-yuigon-shikkou.md",
+      "severity": "major",
+      "kind": "internal_sequence",
+      "issue": "4言語の一般的流れは順序2に買主への移転登記を含め、順序3を買主探し・契約・引渡しとするため時系列が逆。前日PR480の本文／FAQ矛盾とは別の今回固有の指摘。",
+      "fix": "相続登記の検討／契約／決済時の買主移転を分け、事案の順序は司法書士確認とする。",
+      "evidenceUrls": [],
+      "appliesToInitialInput": true
+    },
+    {
+      "id": "PA-07",
+      "key": "labor:jidosha-kyoshujo-shidouin-kenteiin-roudoujikan-hanbokibi-36kyotei-henkei",
+      "file": "scripts/labor-columns/149-jidosha-kyoshujo-shidouin-kenteiin-roudoujikan-hanbokibi-36kyotei-henkei.md",
+      "severity": "major",
+      "kind": "outdated_penalty_name",
+      "issue": "日本語本文の現在の罰則説明が6か月以下の懲役のまま。厚労省現掲載の119条は拘禁刑、36条6項違反を列挙。",
+      "fix": "現在の刑名へ更新し、旧行為の経過扱いと混同しない。4言語の日本法刑名も確認。",
+      "evidenceUrls": [
+        "https://www.mhlw.go.jp/web/t_doc?dataId=73022000&dataType=0&pageNo=1",
+        "https://houseikyoku.sangiin.go.jp/column/column119.htm"
+      ],
+      "appliesToInitialInput": true
+    },
+    {
+      "id": "PA-08",
+      "key": "labor:jidosha-kyoshujo-shidouin-kenteiin-roudoujikan-hanbokibi-36kyotei-henkei",
+      "file": "scripts/labor-columns/149-jidosha-kyoshujo-shidouin-kenteiin-roudoujikan-hanbokibi-36kyotei-henkei.md",
+      "severity": "major",
+      "kind": "translation_mismatch",
+      "issue": "英訳は休憩の一斉付与を「given all at once」としている。労基法34条2項の一斉（労働者への同時）と、一人の休憩を分割しないことは異なる。直後のsplit記述とも噛み合わない。",
+      "fix": "同時付与の意味に翻訳し、分割の可否や協定例外の法的判断と分ける。",
+      "evidenceUrls": [
+        "https://www.mhlw.go.jp/web/t_doc?dataId=73022000&dataType=0&pageNo=1"
+      ],
+      "appliesToInitialInput": true
+    },
+    {
+      "id": "PA-09",
+      "key": "labor:gakushujuku-yobiko-koshi-koma-kyu-jugyogai-roudoujikan-kanri",
+      "file": "scripts/labor-columns/150-gakushujuku-yobiko-koshi-koma-kyu-jugyogai-roudoujikan-kanri.md",
+      "severity": "major",
+      "kind": "broken_primary_link",
+      "issue": "原稿4言語の本文・出典にあるガイドラインURLは追跡の取得応答で404。キャッシュに旧タイトルが表示されたことは本文の取得に当たらない。",
+      "fix": "取得可能な官公庁のガイドライン本文リンクへ交換し、取得できるまではverified=false／primarySources=hold。",
+      "evidenceUrls": [
+        "https://jsite.mhlw.go.jp/tottori-roudoukyoku/news_topics/topics/_120669/_121005.html"
+      ],
+      "appliesToInitialInput": true
+    },
+    {
+      "id": "PA-10",
+      "key": "realestate:sango-care-shukuhakugata-bukken-shisetsu-kijun-boshihokenho",
+      "file": "scripts/realestate-columns/115-sango-care-shukuhakugata-bukken-shisetsu-kijun-boshihokenho.md",
+      "severity": "major",
+      "kind": "unverified_claims",
+      "issue": "claimsのunverifiedに列挙した現行法令・判例・実務判断は取得済み一次資料だけでは裏付けを完了できない。取得失敗を法的誤りと断定せず、原稿の「取得した」「確認した」を追認しない。",
+      "fix": "現行の代替一次本文を資格者と照合し、確認できた主張だけを残す。重要な未確認が残る限りhold。",
+      "evidenceUrls": [],
+      "appliesToInitialInput": true
+    },
+    {
+      "id": "PA-11",
+      "key": "realestate:souzoku-jikka-juutaku-loan-zansai-teitouken-massho-baikyaku",
+      "file": "scripts/realestate-columns/116-souzoku-jikka-juutaku-loan-zansai-teitouken-massho-baikyaku.md",
+      "severity": "major",
+      "kind": "unverified_claims",
+      "issue": "claimsのunverifiedに列挙した現行法令・判例・実務判断は取得済み一次資料だけでは裏付けを完了できない。取得失敗を法的誤りと断定せず、原稿の「取得した」「確認した」を追認しない。",
+      "fix": "現行の代替一次本文を資格者と照合し、確認できた主張だけを残す。重要な未確認が残る限りhold。",
+      "evidenceUrls": [],
+      "appliesToInitialInput": true
+    },
+    {
+      "id": "PA-12",
+      "key": "legal:kodo-kanri-iryokiki-hanbai-kashidashi-kyoka-tenpo-kanrisha",
+      "file": "scripts/legal-columns/109-kodo-kanri-iryokiki-hanbai-kashidashi-kyoka-tenpo-kanrisha.md",
+      "severity": "major",
+      "kind": "unverified_claims",
+      "issue": "claimsのunverifiedに列挙した現行法令・判例・実務判断は取得済み一次資料だけでは裏付けを完了できない。取得失敗を法的誤りと断定せず、原稿の「取得した」「確認した」を追認しない。",
+      "fix": "現行の代替一次本文を資格者と照合し、確認できた主張だけを残す。重要な未確認が残る限りhold。",
+      "evidenceUrls": [],
+      "appliesToInitialInput": true
+    },
+    {
+      "id": "PA-13",
+      "key": "legal:seisan-gata-yuigon-fudosan-kanka-bunpai-yuigon-shikkou",
+      "file": "scripts/legal-columns/110-seisan-gata-yuigon-fudosan-kanka-bunpai-yuigon-shikkou.md",
+      "severity": "major",
+      "kind": "unverified_claims",
+      "issue": "claimsのunverifiedに列挙した現行法令・判例・実務判断は取得済み一次資料だけでは裏付けを完了できない。取得失敗を法的誤りと断定せず、原稿の「取得した」「確認した」を追認しない。",
+      "fix": "現行の代替一次本文を資格者と照合し、確認できた主張だけを残す。重要な未確認が残る限りhold。",
+      "evidenceUrls": [],
+      "appliesToInitialInput": true
+    },
+    {
+      "id": "PA-14",
+      "key": "labor:jidosha-kyoshujo-shidouin-kenteiin-roudoujikan-hanbokibi-36kyotei-henkei",
+      "file": "scripts/labor-columns/149-jidosha-kyoshujo-shidouin-kenteiin-roudoujikan-hanbokibi-36kyotei-henkei.md",
+      "severity": "major",
+      "kind": "unverified_claims",
+      "issue": "claimsのunverifiedに列挙した現行法令・判例・実務判断は取得済み一次資料だけでは裏付けを完了できない。取得失敗を法的誤りと断定せず、原稿の「取得した」「確認した」を追認しない。",
+      "fix": "現行の代替一次本文を資格者と照合し、確認できた主張だけを残す。重要な未確認が残る限りhold。",
+      "evidenceUrls": [],
+      "appliesToInitialInput": true
+    },
+    {
+      "id": "PA-15",
+      "key": "labor:gakushujuku-yobiko-koshi-koma-kyu-jugyogai-roudoujikan-kanri",
+      "file": "scripts/labor-columns/150-gakushujuku-yobiko-koshi-koma-kyu-jugyogai-roudoujikan-kanri.md",
+      "severity": "major",
+      "kind": "unverified_claims",
+      "issue": "claimsのunverifiedに列挙した現行法令・判例・実務判断は取得済み一次資料だけでは裏付けを完了できない。取得失敗を法的誤りと断定せず、原稿の「取得した」「確認した」を追認しない。",
+      "fix": "現行の代替一次本文を資格者と照合し、確認できた主張だけを残す。重要な未確認が残る限りhold。",
+      "evidenceUrls": [],
+      "appliesToInitialInput": true
+    },
+    {
+      "id": "PA-16",
+      "key": "legal:kodo-kanri-iryokiki-hanbai-kashidashi-kyoka-tenpo-kanrisha",
+      "file": "scripts/legal-columns/109-kodo-kanri-iryokiki-hanbai-kashidashi-kyoka-tenpo-kanrisha.md",
+      "severity": "minor",
+      "kind": "translation_locale",
+      "issue": "法務2本の全3翻訳が日本語への内部リンクを持つ。109は各6本、110は各7本、合計39本。",
+      "fix": "各/en/・/zh-tw/・/zh/へprefixを合わせ、本文・FAQや指紋を再確認。",
+      "evidenceUrls": [],
+      "appliesToInitialInput": true
+    },
+    {
+      "id": "PA-17",
+      "key": "legal:seisan-gata-yuigon-fudosan-kanka-bunpai-yuigon-shikkou",
+      "file": "scripts/legal-columns/110-seisan-gata-yuigon-fudosan-kanka-bunpai-yuigon-shikkou.md",
+      "severity": "minor",
+      "kind": "translation_locale",
+      "issue": "法務2本の全3翻訳が日本語への内部リンクを持つ。109は各6本、110は各7本、合計39本。",
+      "fix": "各/en/・/zh-tw/・/zh/へprefixを合わせ、本文・FAQや指紋を再確認。",
+      "evidenceUrls": [],
+      "appliesToInitialInput": true
+    },
+    {
+      "id": "PA-18",
+      "key": "realestate:sango-care-shukuhakugata-bukken-shisetsu-kijun-boshihokenho",
+      "file": "scripts/realestate-columns/115-sango-care-shukuhakugata-bukken-shisetsu-kijun-boshihokenho.md",
+      "severity": "minor",
+      "kind": "proper_names",
+      "issue": "繁体／簡体の組織名が四葉不動產株式會社・四叶行政书士事务所等へ翻訳。法務英語も日本語固有名なしの箇所がある。",
+      "fix": "SEO skill・AGENTSに従い、日本語の正式固有名を各言語で保持。",
+      "evidenceUrls": [],
+      "appliesToInitialInput": true
+    },
+    {
+      "id": "PA-19",
+      "key": "realestate:souzoku-jikka-juutaku-loan-zansai-teitouken-massho-baikyaku",
+      "file": "scripts/realestate-columns/116-souzoku-jikka-juutaku-loan-zansai-teitouken-massho-baikyaku.md",
+      "severity": "minor",
+      "kind": "proper_names",
+      "issue": "繁体／簡体の組織名が四葉不動產株式會社・四叶行政书士事务所等へ翻訳。法務英語も日本語固有名なしの箇所がある。",
+      "fix": "SEO skill・AGENTSに従い、日本語の正式固有名を各言語で保持。",
+      "evidenceUrls": [],
+      "appliesToInitialInput": true
+    },
+    {
+      "id": "PA-20",
+      "key": "legal:kodo-kanri-iryokiki-hanbai-kashidashi-kyoka-tenpo-kanrisha",
+      "file": "scripts/legal-columns/109-kodo-kanri-iryokiki-hanbai-kashidashi-kyoka-tenpo-kanrisha.md",
+      "severity": "minor",
+      "kind": "proper_names",
+      "issue": "繁体／簡体の組織名が四葉不動產株式會社・四叶行政书士事务所等へ翻訳。法務英語も日本語固有名なしの箇所がある。",
+      "fix": "SEO skill・AGENTSに従い、日本語の正式固有名を各言語で保持。",
+      "evidenceUrls": [],
+      "appliesToInitialInput": true
+    },
+    {
+      "id": "PA-21",
+      "key": "legal:seisan-gata-yuigon-fudosan-kanka-bunpai-yuigon-shikkou",
+      "file": "scripts/legal-columns/110-seisan-gata-yuigon-fudosan-kanka-bunpai-yuigon-shikkou.md",
+      "severity": "minor",
+      "kind": "proper_names",
+      "issue": "繁体／簡体の組織名が四葉不動產株式會社・四叶行政书士事务所等へ翻訳。法務英語も日本語固有名なしの箇所がある。",
+      "fix": "SEO skill・AGENTSに従い、日本語の正式固有名を各言語で保持。",
+      "evidenceUrls": [],
+      "appliesToInitialInput": true
+    },
+    {
+      "id": "PA-22",
+      "key": "labor:jidosha-kyoshujo-shidouin-kenteiin-roudoujikan-hanbokibi-36kyotei-henkei",
+      "file": "scripts/labor-columns/149-jidosha-kyoshujo-shidouin-kenteiin-roudoujikan-hanbokibi-36kyotei-henkei.md",
+      "severity": "minor",
+      "kind": "separate_billing_translation",
+      "issue": "繁体・簡体は分離受任の請求を「由您直接請款／由您直接请款」とし、顧客が請求者であるように読める。日本語・英語は専門家から直接請求して顧客が払う意味。",
+      "fix": "各受任者から顧客への直接請求、顧客から各受任者への直接支払と主語を整合。",
+      "evidenceUrls": [],
+      "appliesToInitialInput": true
+    },
+    {
+      "id": "PA-23",
+      "key": "labor:gakushujuku-yobiko-koshi-koma-kyu-jugyogai-roudoujikan-kanri",
+      "file": "scripts/labor-columns/150-gakushujuku-yobiko-koshi-koma-kyu-jugyogai-roudoujikan-kanri.md",
+      "severity": "minor",
+      "kind": "separate_billing_translation",
+      "issue": "繁体・簡体は分離受任の請求を「由您直接請款／由您直接请款」とし、顧客が請求者であるように読める。日本語・英語は専門家から直接請求して顧客が払う意味。",
+      "fix": "各受任者から顧客への直接請求、顧客から各受任者への直接支払と主語を整合。",
+      "evidenceUrls": [],
+      "appliesToInitialInput": true
+    }
+  ],
+  "articles": [
+    {
+      "key": "realestate:sango-care-shukuhakugata-bukken-shisetsu-kijun-boshihokenho",
+      "initialFile": "scripts/realestate-columns/115-sango-care-shukuhakugata-bukken-shisetsu-kijun-boshihokenho.md",
+      "inputRevision": "d0dce295189e9458f5de08ceaddf24e5d44bc875",
+      "snapshotFileSha256": {
+        "ja": "cd2d179e073319b49485d0eac8eced980f68c18da203f1efb63b65c541186295",
+        "en": "0836bd9173b04c3f4c2178aa85dd7e67d75ebc2f1aef44d6720576a34a8a16de",
+        "zh-tw": "332e98977b52b9227ae7026cac16349b97e0f06f81a02884e396f4d422bfef4b",
+        "zh": "35b535df030fcb63d9a736951a7c9081d42de1e568c7c34026d6818746f85a51"
+      },
+      "readPaths": [
+        "scripts/realestate-columns/115-sango-care-shukuhakugata-bukken-shisetsu-kijun-boshihokenho.md",
+        "scripts/realestate-columns/en/115-sango-care-shukuhakugata-bukken-shisetsu-kijun-boshihokenho.md",
+        "scripts/realestate-columns/zh-tw/115-sango-care-shukuhakugata-bukken-shisetsu-kijun-boshihokenho.md",
+        "scripts/realestate-columns/zh/115-sango-care-shukuhakugata-bukken-shisetsu-kijun-boshihokenho.md"
+      ],
+      "fullTextRead": true,
+      "requiresQualifiedReview": true,
+      "preliminaryChecks": {
+        "primarySources": "hold",
+        "duplicateIntent": "pass",
+        "legalClaims": "hold",
+        "translationAlignment": "hold"
+      },
+      "sources": [
+        {
+          "url": "https://laws.e-gov.go.jp/law/340AC0000000141",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "母子保健法17条の2の統合条文・最終改正／施行履歴",
+          "verified": false,
+          "location": "",
+          "retrievalResult": "取得応答の本文0行"
+        },
+        {
+          "url": "https://www.cfa.go.jp/policies/boshihoken",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "現掲載の令和8年3月ガイドラインと令和元年改正関係公式資料への導線",
+          "verified": true,
+          "location": "143–158行",
+          "retrievalResult": "本文取得・記載範囲のみ確認"
+        },
+        {
+          "url": "https://www.cfa.go.jp/assets/contents/node/basic_page/field_ref_resources/ff38becb-bbd1-41f3-a95e-3a22ddac09d8/317bd576/20260331_policies_boshihoken_173.pdf",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "出産後1年対象、3類型、常に看護職1名以上、短期入所は1名以上の看護職を24時間配置、居室・相談・乳児保育等の設備",
+          "verified": true,
+          "location": "本文11–13頁（PDF14–16頁／ゼロ起算P13–P15）、423–484行",
+          "retrievalResult": "本文取得・記載範囲のみ確認"
+        },
+        {
+          "url": "https://www.cfa.go.jp/assets/contents/node/basic_page/field_ref_resources/ff38becb-bbd1-41f3-a95e-3a22ddac09d8/dae0454e/20230401_policies_boshihoken_73.pdf",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "母子保健法施行規則7条の4の実施基準：常時1名以上、施設設備。令和2年省令149号の改正公布資料であり、その後の全改正履歴を確認したものではない",
+          "verified": true,
+          "location": "PDF1–2頁",
+          "retrievalResult": "本文取得・記載範囲のみ確認"
+        },
+        {
+          "url": "https://www.cfa.go.jp/assets/contents/node/basic_page/field_ref_resources/ff38becb-bbd1-41f3-a95e-3a22ddac09d8/cba5e460/20230401_policies_boshihoken_76.pdf",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "17条の2対象の短期入所施設（病院・診療所・助産所を除く）は旅館業法適用外、ホテル又は旅館に該当しないという国交省通知、施行日2021-04-01",
+          "verified": true,
+          "location": "PDF1–2頁、13–19・34–39行",
+          "retrievalResult": "本文取得・記載範囲のみ確認"
+        },
+        {
+          "url": "https://laws.e-gov.go.jp/law/325AC0000000201",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "用途変更の200平方メートル基準・2019-06-25施行と現在の用途規制",
+          "verified": false,
+          "location": "",
+          "retrievalResult": "取得応答の本文0行"
+        },
+        {
+          "url": "https://laws.e-gov.go.jp/law/323AC0000000205",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "医療法2条の助産所の定義・9人以下",
+          "verified": false,
+          "location": "",
+          "retrievalResult": "取得応答の本文0行"
+        },
+        {
+          "url": "https://laws.e-gov.go.jp/law/336CO0000000037",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "消防法施行令の現在の区分・設備条件",
+          "verified": false,
+          "location": "",
+          "retrievalResult": "取得応答の本文0行"
+        }
+      ],
+      "claims": [
+        {
+          "claim": "短期入所の職員配置が全国一律ではない・24時間は前提になりやすい",
+          "assessment": "contradicted",
+          "evidenceUrls": [
+            "https://www.cfa.go.jp/assets/contents/node/basic_page/field_ref_resources/ff38becb-bbd1-41f3-a95e-3a22ddac09d8/317bd576/20260331_policies_boshihoken_173.pdf",
+            "https://www.cfa.go.jp/assets/contents/node/basic_page/field_ref_resources/ff38becb-bbd1-41f3-a95e-3a22ddac09d8/dae0454e/20230401_policies_boshihoken_73.pdf"
+          ],
+          "verified": false
+        },
+        {
+          "claim": "母子保健法対象短期入所施設の旅館業扱いが形態で不明",
+          "assessment": "scope_mismatch",
+          "evidenceUrls": [
+            "https://www.cfa.go.jp/assets/contents/node/basic_page/field_ref_resources/ff38becb-bbd1-41f3-a95e-3a22ddac09d8/cba5e460/20230401_policies_boshihoken_76.pdf"
+          ],
+          "verified": false
+        },
+        {
+          "claim": "1年対象・3類型・2021-04-01施行",
+          "assessment": "supported",
+          "evidenceUrls": [
+            "https://www.cfa.go.jp/assets/contents/node/basic_page/field_ref_resources/ff38becb-bbd1-41f3-a95e-3a22ddac09d8/317bd576/20260331_policies_boshihoken_173.pdf",
+            "https://www.cfa.go.jp/assets/contents/node/basic_page/field_ref_resources/ff38becb-bbd1-41f3-a95e-3a22ddac09d8/cba5e460/20230401_policies_boshihoken_76.pdf"
+          ],
+          "verified": true
+        },
+        {
+          "claim": "200平方メートル・医療法9人・消防区分",
+          "assessment": "unverified",
+          "evidenceUrls": [],
+          "verified": false
+        }
+      ],
+      "findingIds": [
+        "PA-01",
+        "PA-02",
+        "PA-10",
+        "PA-18"
+      ],
+      "existingIntentComparison": {
+        "filesRead": [
+          "scripts/realestate-columns/12-clinic-bukken-youto-chiiki-kaisetsu-todokede.md",
+          "scripts/realestate-columns/110-ninka-hoikusho-20nin-bukken-youto-engei.md"
+        ],
+        "conclusion": "母子が宿泊する産後ケアの物件選定・国基準と委託先確認。診療所開設や保育所の児童施設基準とは制度と利用者が異なる。",
+        "result": "pass"
+      },
+      "initialWrongLocaleLinks": {
+        "ja": [],
+        "en": [],
+        "zh-tw": [],
+        "zh": []
+      },
+      "remainingHoldReasons": [
+        "短期入所の職員配置が全国一律ではない・24時間は前提になりやすい",
+        "母子保健法対象短期入所施設の旅館業扱いが形態で不明",
+        "200平方メートル・医療法9人・消防区分"
+      ]
+    },
+    {
+      "key": "realestate:souzoku-jikka-juutaku-loan-zansai-teitouken-massho-baikyaku",
+      "initialFile": "scripts/realestate-columns/116-souzoku-jikka-juutaku-loan-zansai-teitouken-massho-baikyaku.md",
+      "inputRevision": "d0dce295189e9458f5de08ceaddf24e5d44bc875",
+      "snapshotFileSha256": {
+        "ja": "fff67051d2f694933aa554d862785752bc593c09c8ca9ce982b7a11422c76a42",
+        "en": "51d67a9013cb1e99d3a465f2dfcbe3875f87c68a2665d82334c30cb5a3c22f1d",
+        "zh-tw": "3389d20fbe9d7c2b4a187df9a119c3ac7b105545a183ccfaea89ae4c11d32852",
+        "zh": "92cb21f6e80d73c3c6b5e0907faad5bcb50406c419b6e899b40f7149a13379ce"
+      },
+      "readPaths": [
+        "scripts/realestate-columns/116-souzoku-jikka-juutaku-loan-zansai-teitouken-massho-baikyaku.md",
+        "scripts/realestate-columns/en/116-souzoku-jikka-juutaku-loan-zansai-teitouken-massho-baikyaku.md",
+        "scripts/realestate-columns/zh-tw/116-souzoku-jikka-juutaku-loan-zansai-teitouken-massho-baikyaku.md",
+        "scripts/realestate-columns/zh/116-souzoku-jikka-juutaku-loan-zansai-teitouken-massho-baikyaku.md"
+      ],
+      "fullTextRead": true,
+      "requiresQualifiedReview": true,
+      "preliminaryChecks": {
+        "primarySources": "hold",
+        "duplicateIntent": "pass",
+        "legalClaims": "hold",
+        "translationAlignment": "hold"
+      },
+      "sources": [
+        {
+          "url": "https://laws.e-gov.go.jp/law/129AC0000000089",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "896条・915条・921条・939条の権利義務承継・熟慮期間・単純承認・放棄",
+          "verified": false,
+          "location": "",
+          "retrievalResult": "取得応答の本文0行"
+        },
+        {
+          "url": "https://laws.e-gov.go.jp/law/116AC0000000123",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "原稿4言語の不動産登記法出典。平成16年法律123号のIDは416AC0000000123であり、116ACは誤記",
+          "verified": false,
+          "location": "",
+          "retrievalResult": "取得本文0行。法令ID誤記を原稿・既存正しい法令IDと照合"
+        },
+        {
+          "url": "https://www.moj.go.jp/MINJI/minji05_00565.html",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "相続登記の施行日・3年期限・過料の代替一次資料",
+          "verified": false,
+          "location": "",
+          "retrievalResult": "代替の法務省Q&A本文を取得できなかった"
+        },
+        {
+          "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/joto/3267.htm",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "相続税課税と一定期間内譲渡等の取得費加算の要件",
+          "verified": true,
+          "location": "令和8年4月1日現在、12・20–29行",
+          "retrievalResult": "本文取得・記載範囲のみ確認"
+        },
+        {
+          "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/joto/3306.htm",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "一定要件で最高3000万円、2024年以後の譲渡で対象財産取得相続人3人以上は2000万円、取得費加算と併用不可",
+          "verified": true,
+          "location": "令和8年4月1日現在、12–16・78行",
+          "retrievalResult": "本文取得・記載範囲のみ確認"
+        }
+      ],
+      "claims": [
+        {
+          "claim": "空き家控除3000万円の上限注記",
+          "assessment": "incomplete",
+          "evidenceUrls": [
+            "https://www.nta.go.jp/taxes/shiraberu/taxanswer/joto/3306.htm"
+          ],
+          "verified": false
+        },
+        {
+          "claim": "取得費加算と空き家特例の併用不可",
+          "assessment": "supported",
+          "evidenceUrls": [
+            "https://www.nta.go.jp/taxes/shiraberu/taxanswer/joto/3306.htm"
+          ],
+          "verified": true
+        },
+        {
+          "claim": "団信の一般機構・フラット35任意加入・商品別不払",
+          "assessment": "unverified",
+          "evidenceUrls": [],
+          "verified": false
+        },
+        {
+          "claim": "民法熟慮3か月・単純承認・登記3年／10万円",
+          "assessment": "unverified",
+          "evidenceUrls": [],
+          "verified": false
+        }
+      ],
+      "findingIds": [
+        "PA-03",
+        "PA-04",
+        "PA-11",
+        "PA-19"
+      ],
+      "existingIntentComparison": {
+        "filesRead": [
+          "scripts/realestate-columns/27-kanka-bunkatsu-fudosan-baikyaku-nagare.md",
+          "scripts/realestate-columns/06-souzoku-toki-gimuka-baikyaku.md"
+        ],
+        "conclusion": "住宅ローン残債・団信・抵当権・任意売却が中心。換価分割の分配／譲渡税と相続登記期限一般とは異なる。",
+        "result": "pass"
+      },
+      "initialWrongLocaleLinks": {
+        "ja": [],
+        "en": [],
+        "zh-tw": [],
+        "zh": []
+      },
+      "remainingHoldReasons": [
+        "空き家控除3000万円の上限注記",
+        "団信の一般機構・フラット35任意加入・商品別不払",
+        "民法熟慮3か月・単純承認・登記3年／10万円"
+      ]
+    },
+    {
+      "key": "legal:kodo-kanri-iryokiki-hanbai-kashidashi-kyoka-tenpo-kanrisha",
+      "initialFile": "scripts/legal-columns/109-kodo-kanri-iryokiki-hanbai-kashidashi-kyoka-tenpo-kanrisha.md",
+      "inputRevision": "d0dce295189e9458f5de08ceaddf24e5d44bc875",
+      "snapshotFileSha256": {
+        "ja": "e7407876c3c0344c5718398f78f32c0d8fe4632a8b2bd47c40a5aa5347be0af8",
+        "en": "e779a620ebd20e8127015dd60cdee499e7528ce224a2577ff83e8a9f76deda8c",
+        "zh-tw": "cef5b0b386129eef1a683cf225a1304fb1f62e842967a03603db7261221fd70d",
+        "zh": "4629051f53f3ae503c3b41f06d1889c5672cbc80b887409e084f9482e8fdb011"
+      },
+      "readPaths": [
+        "scripts/legal-columns/109-kodo-kanri-iryokiki-hanbai-kashidashi-kyoka-tenpo-kanrisha.md",
+        "scripts/legal-columns/en/109-kodo-kanri-iryokiki-hanbai-kashidashi-kyoka-tenpo-kanrisha.md",
+        "scripts/legal-columns/zh-tw/109-kodo-kanri-iryokiki-hanbai-kashidashi-kyoka-tenpo-kanrisha.md",
+        "scripts/legal-columns/zh/109-kodo-kanri-iryokiki-hanbai-kashidashi-kyoka-tenpo-kanrisha.md"
+      ],
+      "fullTextRead": true,
+      "requiresQualifiedReview": true,
+      "preliminaryChecks": {
+        "primarySources": "hold",
+        "duplicateIntent": "pass",
+        "legalClaims": "hold",
+        "translationAlignment": "hold"
+      },
+      "sources": [
+        {
+          "url": "https://laws.e-gov.go.jp/law/335AC0000000145",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "薬機法39条・39条の2・39条の3と6年更新の現行条文",
+          "verified": false,
+          "location": "",
+          "retrievalResult": "取得応答の本文0行"
+        },
+        {
+          "url": "https://laws.e-gov.go.jp/law/336M50000100001",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "施行規則162条・168条の現在の条文",
+          "verified": false,
+          "location": "",
+          "retrievalResult": "取得応答の本文0行"
+        },
+        {
+          "url": "https://www.hokeniryo.metro.tokyo.lg.jp/anzen/iyaku/sonota/sale_leas/risk",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "高度管理・特定保守管理は許可、特定保守管理を除く管理は届出、一般は原則不要、具体品目と申請窓口",
+          "verified": true,
+          "location": "476–517行、現掲載の本文",
+          "retrievalResult": "本文取得・記載範囲のみ確認"
+        },
+        {
+          "url": "https://www.hokeniryo.metro.tokyo.lg.jp/anzen/iyaku/sonota/sale_leas/kyoka",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "構造設備と管理者の区分。一般の3年＋基礎講習に対し、指定視力補正用レンズ等のみは1年＋講習、プログラムのみは別枠",
+          "verified": true,
+          "location": "479–503行、現掲載の本文",
+          "retrievalResult": "本文取得・記載範囲のみ確認"
+        },
+        {
+          "url": "https://www.hokeniryo.metro.tokyo.lg.jp/anzen/iyaku/sonota/sale_leas/sonsyujikou",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "管理者設置、継続研修の義務と特定管理の努力義務の違い",
+          "verified": true,
+          "location": "486–508行、現掲載の本文",
+          "retrievalResult": "本文取得・記載範囲のみ確認"
+        },
+        {
+          "url": "https://www.city.chuo.lg.jp/a0030/kenkouiryou/iryou/iji/hanbai/koudokanriiryoukiki.html",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "2026年7月6日掲載の許可・分類説明と管理者早見表の導線",
+          "verified": true,
+          "location": "50・57・127–141行",
+          "retrievalResult": "本文取得・記載範囲のみ確認"
+        },
+        {
+          "url": "https://www.city.chuo.lg.jp/documents/3219/kanrishyashikaku080629.pdf",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "一般・コンタクト・プログラムの基礎講習区分、実務経験1～3年の違い。個人の適格判定は行わない",
+          "verified": true,
+          "location": "PDF1～4頁",
+          "retrievalResult": "本文取得・記載範囲のみ確認"
+        },
+        {
+          "url": "https://www.city.chuo.lg.jp/documents/3219/kodosinkisetumei.pdf",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "採光・照明・換気・清潔、居住／不潔場所との区別と衛生安全な貯蔵設備等の申請説明",
+          "verified": true,
+          "location": "PDF1頁、74–79行",
+          "retrievalResult": "本文取得・記載範囲のみ確認"
+        }
+      ],
+      "claims": [
+        {
+          "claim": "コンタクト等にも管理者3年を一律の目安・FAQとして示す",
+          "assessment": "scope_mismatch",
+          "evidenceUrls": [
+            "https://www.hokeniryo.metro.tokyo.lg.jp/anzen/iyaku/sonota/sale_leas/kyoka"
+          ],
+          "verified": false
+        },
+        {
+          "claim": "品目ごとに許可／届出・毎年研修義務等",
+          "assessment": "supported",
+          "evidenceUrls": [
+            "https://www.hokeniryo.metro.tokyo.lg.jp/anzen/iyaku/sonota/sale_leas/risk",
+            "https://www.hokeniryo.metro.tokyo.lg.jp/anzen/iyaku/sonota/sale_leas/sonsyujikou"
+          ],
+          "verified": true
+        },
+        {
+          "claim": "構造設備の一般3条件",
+          "assessment": "supported",
+          "evidenceUrls": [
+            "https://www.hokeniryo.metro.tokyo.lg.jp/anzen/iyaku/sonota/sale_leas/kyoka"
+          ],
+          "verified": true
+        },
+        {
+          "claim": "6年更新・薬機法現行の正確な条項号と最終改正",
+          "assessment": "unverified",
+          "evidenceUrls": [],
+          "verified": false
+        }
+      ],
+      "findingIds": [
+        "PA-05",
+        "PA-12",
+        "PA-16",
+        "PA-20"
+      ],
+      "existingIntentComparison": {
+        "filesRead": [
+          "scripts/legal-columns/80-yakkyoku-kaisetsu-kyoka-kozo-setsubi-kanri-yakuzaishi.md"
+        ],
+        "conclusion": "医療機器販売貸与と管理者・保管。調剤薬局の開設と管理薬剤師とは許可・資格が異なる。",
+        "result": "pass"
+      },
+      "initialWrongLocaleLinks": {
+        "ja": [],
+        "en": [
+          "https://luck428.com/legal/services",
+          "https://luck428.com/legal/nagare",
+          "https://luck428.com/legal/ryokin",
+          "https://luck428.com/legal/column/yakkyoku-kaisetsu-kyoka-kozo-setsubi-kanri-yakuzaishi",
+          "https://luck428.com/legal/column/shinryojo-kaisetsu-todokede-iryoho-8jo",
+          "https://luck428.com/about/uramatsu"
+        ],
+        "zh-tw": [
+          "https://luck428.com/legal/services",
+          "https://luck428.com/legal/nagare",
+          "https://luck428.com/legal/ryokin",
+          "https://luck428.com/legal/column/yakkyoku-kaisetsu-kyoka-kozo-setsubi-kanri-yakuzaishi",
+          "https://luck428.com/legal/column/shinryojo-kaisetsu-todokede-iryoho-8jo",
+          "https://luck428.com/about/uramatsu"
+        ],
+        "zh": [
+          "https://luck428.com/legal/services",
+          "https://luck428.com/legal/nagare",
+          "https://luck428.com/legal/ryokin",
+          "https://luck428.com/legal/column/yakkyoku-kaisetsu-kyoka-kozo-setsubi-kanri-yakuzaishi",
+          "https://luck428.com/legal/column/shinryojo-kaisetsu-todokede-iryoho-8jo",
+          "https://luck428.com/about/uramatsu"
+        ]
+      },
+      "remainingHoldReasons": [
+        "コンタクト等にも管理者3年を一律の目安・FAQとして示す",
+        "6年更新・薬機法現行の正確な条項号と最終改正"
+      ]
+    },
+    {
+      "key": "legal:seisan-gata-yuigon-fudosan-kanka-bunpai-yuigon-shikkou",
+      "initialFile": "scripts/legal-columns/110-seisan-gata-yuigon-fudosan-kanka-bunpai-yuigon-shikkou.md",
+      "inputRevision": "d0dce295189e9458f5de08ceaddf24e5d44bc875",
+      "snapshotFileSha256": {
+        "ja": "4331783ed1c56b02f871f259095d34c2d35c184e0bf881fecd604c5817499c92",
+        "en": "7e19d1ae0b410b6cd1776efa902dd7df23fa2d6bd5b799ff30b475a732586dbf",
+        "zh-tw": "82b69e2c6e0bb1f494c8643208ca1276e3cb3a34765ebf216c3bd407d87554e9",
+        "zh": "c96100e0e769e7ea4b8040c960f722b7ca98ee96a4d614da41b2093db1e9cac1"
+      },
+      "readPaths": [
+        "scripts/legal-columns/110-seisan-gata-yuigon-fudosan-kanka-bunpai-yuigon-shikkou.md",
+        "scripts/legal-columns/en/110-seisan-gata-yuigon-fudosan-kanka-bunpai-yuigon-shikkou.md",
+        "scripts/legal-columns/zh-tw/110-seisan-gata-yuigon-fudosan-kanka-bunpai-yuigon-shikkou.md",
+        "scripts/legal-columns/zh/110-seisan-gata-yuigon-fudosan-kanka-bunpai-yuigon-shikkou.md"
+      ],
+      "fullTextRead": true,
+      "requiresQualifiedReview": true,
+      "preliminaryChecks": {
+        "primarySources": "hold",
+        "duplicateIntent": "pass",
+        "legalClaims": "hold",
+        "translationAlignment": "hold"
+      },
+      "sources": [
+        {
+          "url": "https://laws.e-gov.go.jp/law/129AC0000000089",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "1012・1013・1014・1015条、共有物管理と2019年施行改正の現在の規定",
+          "verified": false,
+          "location": "",
+          "retrievalResult": "取得応答の本文0行"
+        },
+        {
+          "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/2022.htm",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "死亡日までに確定した所得の準確定申告と知った日の翌日から4か月以内の期限",
+          "verified": true,
+          "location": "令和8年4月1日現在、14・38行",
+          "retrievalResult": "本文取得・記載範囲のみ確認"
+        },
+        {
+          "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/joto/3267.htm",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "相続税額を取得費加算できる一般要件と一定期間内譲渡",
+          "verified": true,
+          "location": "令和8年4月1日現在、12・20–29行",
+          "retrievalResult": "本文取得・記載範囲のみ確認"
+        }
+      ],
+      "claims": [
+        {
+          "claim": "順序2に買主移転登記、順序3に買主探し／契約",
+          "assessment": "internally_inconsistent",
+          "evidenceUrls": [],
+          "verified": false
+        },
+        {
+          "claim": "準確定申告の対象と翌日から4か月",
+          "assessment": "supported",
+          "evidenceUrls": [
+            "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/2022.htm"
+          ],
+          "verified": true
+        },
+        {
+          "claim": "死亡後換価の譲渡所得が誰に帰属するか・FAQ3いいえ",
+          "assessment": "unverified",
+          "evidenceUrls": [],
+          "verified": false
+        },
+        {
+          "claim": "執行権限・共有の管理に全員同意・登記の具体運用",
+          "assessment": "unverified",
+          "evidenceUrls": [],
+          "verified": false
+        }
+      ],
+      "findingIds": [
+        "PA-06",
+        "PA-13",
+        "PA-17",
+        "PA-21"
+      ],
+      "existingIntentComparison": {
+        "filesRead": [
+          "scripts/legal-columns/34-yuigon-shikkosha-shokumu-sennin-dare.md",
+          "scripts/realestate-columns/27-kanka-bunkatsu-fudosan-baikyaku-nagare.md"
+        ],
+        "conclusion": "遺言者による換価／分配設計と執行。執行者一般や相続人の協議による換価分割と主語・実行根拠が異なる。",
+        "result": "pass"
+      },
+      "initialWrongLocaleLinks": {
+        "ja": [],
+        "en": [
+          "https://luck428.com/legal/services/inheritance",
+          "https://luck428.com/legal/nagare",
+          "https://luck428.com/legal/ryokin",
+          "https://luck428.com/souzoku",
+          "https://luck428.com/legal/column/jihitsu-kosei-yuigon",
+          "https://luck428.com/legal/column/yuigon-shikkosha-shokumu-sennin-dare",
+          "https://luck428.com/about/uramatsu"
+        ],
+        "zh-tw": [
+          "https://luck428.com/legal/services/inheritance",
+          "https://luck428.com/legal/nagare",
+          "https://luck428.com/legal/ryokin",
+          "https://luck428.com/souzoku",
+          "https://luck428.com/legal/column/jihitsu-kosei-yuigon",
+          "https://luck428.com/legal/column/yuigon-shikkosha-shokumu-sennin-dare",
+          "https://luck428.com/about/uramatsu"
+        ],
+        "zh": [
+          "https://luck428.com/legal/services/inheritance",
+          "https://luck428.com/legal/nagare",
+          "https://luck428.com/legal/ryokin",
+          "https://luck428.com/souzoku",
+          "https://luck428.com/legal/column/jihitsu-kosei-yuigon",
+          "https://luck428.com/legal/column/yuigon-shikkosha-shokumu-sennin-dare",
+          "https://luck428.com/about/uramatsu"
+        ]
+      },
+      "remainingHoldReasons": [
+        "順序2に買主移転登記、順序3に買主探し／契約",
+        "死亡後換価の譲渡所得が誰に帰属するか・FAQ3いいえ",
+        "執行権限・共有の管理に全員同意・登記の具体運用"
+      ]
+    },
+    {
+      "key": "labor:jidosha-kyoshujo-shidouin-kenteiin-roudoujikan-hanbokibi-36kyotei-henkei",
+      "initialFile": "scripts/labor-columns/149-jidosha-kyoshujo-shidouin-kenteiin-roudoujikan-hanbokibi-36kyotei-henkei.md",
+      "inputRevision": "d0dce295189e9458f5de08ceaddf24e5d44bc875",
+      "snapshotFileSha256": {
+        "ja": "676f3ea2810bc757fcda27c03f8a24d96ccb641c6ebc63cecc29014066141f03",
+        "en": "cf8f8be2d7c0a3407a52c7eca10faf0bf2afe2728b06b5da8eb70d532fc59f73",
+        "zh-tw": "bab5a949f28c8f52e18bdbf2df520485832d9f6008f097e35ca907b837c20d49",
+        "zh": "b66ff7a588c518c65af5ee198d305cf783204a3294c04f95f19fa7c7461bcee4"
+      },
+      "readPaths": [
+        "scripts/labor-columns/149-jidosha-kyoshujo-shidouin-kenteiin-roudoujikan-hanbokibi-36kyotei-henkei.md",
+        "scripts/labor-columns/en/149-jidosha-kyoshujo-shidouin-kenteiin-roudoujikan-hanbokibi-36kyotei-henkei.md",
+        "scripts/labor-columns/zh-tw/149-jidosha-kyoshujo-shidouin-kenteiin-roudoujikan-hanbokibi-36kyotei-henkei.md",
+        "scripts/labor-columns/zh/149-jidosha-kyoshujo-shidouin-kenteiin-roudoujikan-hanbokibi-36kyotei-henkei.md"
+      ],
+      "fullTextRead": true,
+      "requiresQualifiedReview": true,
+      "preliminaryChecks": {
+        "primarySources": "hold",
+        "duplicateIntent": "pass",
+        "legalClaims": "hold",
+        "translationAlignment": "hold"
+      },
+      "sources": [
+        {
+          "url": "https://laws.e-gov.go.jp/law/322AC0000000049",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "労基法の現在の統合条文",
+          "verified": false,
+          "location": "",
+          "retrievalResult": "取得応答の本文0行"
+        },
+        {
+          "url": "https://www.mhlw.go.jp/web/t_doc?dataId=73022000&dataType=0&pageNo=1",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "厚労省掲載の労基法32・32の2・32の4・34・35・36・37・119条。45／360、42／320、720／6か月、100未満／80平均、休憩6超45分・8超1時間、119条刑名は拘禁刑",
+          "verified": true,
+          "location": "245–407・1075–1077行",
+          "retrievalResult": "本文取得・記載範囲のみ確認"
+        },
+        {
+          "url": "https://jsite.mhlw.go.jp/tochigi-roudoukyoku/hourei_seido_tetsuzuki/roudoukijun_keiyaku/roukijou/roukihou_point/_79129/transformation32-4-2.html",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "年間変形10時間・52時間・280日、48時間超の週数・連続労働日数と協定／規則の届出。現掲載ページは2002年例を含み、その後の最終改正履歴の確認とは区別",
+          "verified": true,
+          "location": "109–126行",
+          "retrievalResult": "本文取得・記載範囲のみ確認"
+        },
+        {
+          "url": "https://houseikyoku.sangiin.go.jp/column/column119.htm",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "2025年6月1日拘禁刑施行と施行前行為の経過扱い",
+          "verified": true,
+          "location": "96–103行",
+          "retrievalResult": "本文取得・記載範囲のみ確認"
+        }
+      ],
+      "claims": [
+        {
+          "claim": "刑名を懲役として現行説明",
+          "assessment": "contradicted",
+          "evidenceUrls": [
+            "https://www.mhlw.go.jp/web/t_doc?dataId=73022000&dataType=0&pageNo=1"
+          ],
+          "verified": false
+        },
+        {
+          "claim": "英訳一斉付与＝given all at once",
+          "assessment": "translation_mismatch",
+          "evidenceUrls": [
+            "https://www.mhlw.go.jp/web/t_doc?dataId=73022000&dataType=0&pageNo=1"
+          ],
+          "verified": false
+        },
+        {
+          "claim": "36協定45／360・42／320・720・100未満・80平均",
+          "assessment": "supported",
+          "evidenceUrls": [
+            "https://www.mhlw.go.jp/web/t_doc?dataId=73022000&dataType=0&pageNo=1"
+          ],
+          "verified": true
+        },
+        {
+          "claim": "年間変形10／52／280と連続週等",
+          "assessment": "supported",
+          "evidenceUrls": [
+            "https://jsite.mhlw.go.jp/tochigi-roudoukyoku/hourei_seido_tetsuzuki/roudoukijun_keiyaku/roukijou/roukihou_point/_79129/transformation32-4-2.html"
+          ],
+          "verified": true
+        },
+        {
+          "claim": "年変形なら所定を超えた分はすべて時間外・FAQ2",
+          "assessment": "unverified",
+          "evidenceUrls": [],
+          "verified": false
+        },
+        {
+          "claim": "繁忙見込みを特別条項理由へ一律に使えるか",
+          "assessment": "unverified",
+          "evidenceUrls": [],
+          "verified": false
+        }
+      ],
+      "findingIds": [
+        "PA-07",
+        "PA-08",
+        "PA-14",
+        "PA-22"
+      ],
+      "existingIntentComparison": {
+        "filesRead": [
+          "scripts/labor-columns/58-henkei-roudoujikan-flextime.md"
+        ],
+        "conclusion": "教習・検定・合宿の業務集中と待機・休日。既存58の制度比較一般を再説明する部分はあるが、業種の予定・待機の管理が固有意図。",
+        "result": "pass"
+      },
+      "initialWrongLocaleLinks": {
+        "ja": [],
+        "en": [],
+        "zh-tw": [],
+        "zh": []
+      },
+      "remainingHoldReasons": [
+        "刑名を懲役として現行説明",
+        "英訳一斉付与＝given all at once",
+        "年変形なら所定を超えた分はすべて時間外・FAQ2",
+        "繁忙見込みを特別条項理由へ一律に使えるか"
+      ]
+    },
+    {
+      "key": "labor:gakushujuku-yobiko-koshi-koma-kyu-jugyogai-roudoujikan-kanri",
+      "initialFile": "scripts/labor-columns/150-gakushujuku-yobiko-koshi-koma-kyu-jugyogai-roudoujikan-kanri.md",
+      "inputRevision": "d0dce295189e9458f5de08ceaddf24e5d44bc875",
+      "snapshotFileSha256": {
+        "ja": "116cda93fa76df8c39debf170fa3d870f55491601df43c1e85cd0a6c108e3c7f",
+        "en": "4eb545b590455ae6bb0a3fc121c527b49882810605745a7944a429d2003c6643",
+        "zh-tw": "b6ff89899b19a52261a203fbcef3de51653f3b04c885667847619bd3dd25e8f5",
+        "zh": "72fb119f77aa3588656af421caad1310e0fccf44576769941e77e4642be6c22b"
+      },
+      "readPaths": [
+        "scripts/labor-columns/150-gakushujuku-yobiko-koshi-koma-kyu-jugyogai-roudoujikan-kanri.md",
+        "scripts/labor-columns/en/150-gakushujuku-yobiko-koshi-koma-kyu-jugyogai-roudoujikan-kanri.md",
+        "scripts/labor-columns/zh-tw/150-gakushujuku-yobiko-koshi-koma-kyu-jugyogai-roudoujikan-kanri.md",
+        "scripts/labor-columns/zh/150-gakushujuku-yobiko-koshi-koma-kyu-jugyogai-roudoujikan-kanri.md"
+      ],
+      "fullTextRead": true,
+      "requiresQualifiedReview": true,
+      "preliminaryChecks": {
+        "primarySources": "hold",
+        "duplicateIntent": "pass",
+        "legalClaims": "hold",
+        "translationAlignment": "hold"
+      },
+      "sources": [
+        {
+          "url": "https://laws.e-gov.go.jp/law/322AC0000000049",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "労基法32・34・37・24条の現在の統合条文",
+          "verified": false,
+          "location": "",
+          "retrievalResult": "取得応答の本文0行"
+        },
+        {
+          "url": "https://jsite.mhlw.go.jp/tottori-roudoukyoku/news_topics/topics/_120669/_121005.html",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "原稿4言語に本文・出典各1回ある2017年ガイドラインリンク",
+          "verified": false,
+          "location": "",
+          "retrievalResult": "初回はキャッシュのタイトル／321行表示、本文確認の追跡取得は404 Not Found。verifiedをtrueにしない"
+        },
+        {
+          "url": "https://www.mhlw.go.jp/content/000282266.pdf",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "同ガイドラインの本省PDF候補",
+          "verified": false,
+          "location": "",
+          "retrievalResult": "代替取得を試したが本文取得不能"
+        },
+        {
+          "url": "https://www.mhlw.go.jp/file/06-Seisakujouhou-11200000-Roudoukijunkyoku/0000148322.pdf",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "同ガイドラインの本省別掲載候補",
+          "verified": false,
+          "location": "",
+          "retrievalResult": "代替取得を試したが本文取得不能"
+        },
+        {
+          "url": "https://www.mhlw.go.jp/web/t_doc?dataId=73022000&dataType=0&pageNo=1",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "厚労省掲載の労基法9条労働者定義・24条全額払い・32条8／40・37条割増の規定のみ。授業準備等の労働時間性や固定残業代の具体的有効要件の判例に代用しない",
+          "verified": true,
+          "location": "115・245–251・282–284・401–408行",
+          "retrievalResult": "本文取得・記載範囲のみ確認"
+        },
+        {
+          "url": "https://www.check-roudou.mhlw.go.jp/parttime/",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "アルバイトにも労基法適用、全額払い・最低賃金・割増の一般説明のみ。1985年報告／最高裁判例／労働時間把握指針の確認には代用しない",
+          "verified": true,
+          "location": "20–40・45–52行",
+          "retrievalResult": "本文取得・記載範囲のみ確認"
+        },
+        {
+          "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/roudouzikan/070614-2.html",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "正式名称と平成29年1月20日策定日、本文PDFとリーフレットの公式掲載導線",
+          "verified": true,
+          "location": "258–263行",
+          "retrievalResult": "公式HTML本文を取得。リンク136が本文PDF、137がリーフレットであることを確認"
+        },
+        {
+          "url": "https://www.mhlw.go.jp/file/06-Seisakujouhou-11200000-Roudoukijunkyoku/0000149439.pdf",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "ガイドライン第2適用範囲、第3労働時間の考え方、第4(1)(2)(3)記録・原則的方法・自己申告運用",
+          "verified": true,
+          "location": "PDF1–4頁全文。第3は1–2頁、第4(1)(2)は2頁、第4(3)は3頁",
+          "retrievalResult": "公式掲載ページのリンクから4頁・108行の本文を実取得し全文を読了。個別講師の労働者性、最高裁判決全文、固定残業代要件、現行保存年限はこの資料確認から除外"
+        },
+        {
+          "url": "https://www.mhlw.go.jp/file/06-Seisakujouhou-11200000-Roudoukijunkyoku/0000187488.pdf",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "策定日2017-01-20を明記する厚労省リーフレットと末尾のガイドライン本文掲載",
+          "verified": true,
+          "location": "PDF1頁の策定日、PDF11–12頁のガイドライン本文",
+          "retrievalResult": "公式掲載ページのリンクから12頁・330行の本文を取得し該当記載を読了。2017年7月表示の資料であり、後年の改正法令の証明には使わない"
+        },
+        {
+          "url": "https://www.mhlw.go.jp/content/12602000/000336509.pdf",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "同ガイドライン第3・第4(1)(2)(3)の本省別掲載本文",
+          "verified": true,
+          "location": "PDF1–4頁全文",
+          "retrievalResult": "4頁・108行の本文を実取得・読了。差替えには公式掲載ページから直接案内される0000149439.pdfを優先"
+        }
+      ],
+      "claims": [
+        {
+          "claim": "塾講師ガイドライン4言語リンク",
+          "assessment": "broken_link",
+          "evidenceUrls": [
+            "https://jsite.mhlw.go.jp/tottori-roudoukyoku/news_topics/topics/_120669/_121005.html"
+          ],
+          "verified": false
+        },
+        {
+          "claim": "労基法全額払い・8／40・割増の一般規定",
+          "assessment": "supported",
+          "evidenceUrls": [
+            "https://www.mhlw.go.jp/web/t_doc?dataId=73022000&dataType=0&pageNo=1"
+          ],
+          "verified": true
+        },
+        {
+          "claim": "三菱重工2000-03-09判例の判決本文、1985-12-19報告の実本文",
+          "assessment": "unverified",
+          "evidenceUrls": [],
+          "verified": false
+        },
+        {
+          "claim": "コマ給固定残業代の個別要件・最低賃金換算方法",
+          "assessment": "unverified",
+          "evidenceUrls": [],
+          "verified": false
+        },
+        {
+          "claim": "使用者の指揮命令下の時間、指示による準備・後始末、即応義務があり離れられない手待時間、義務研修・指示学習の労働時間性。日ごとの始業終業記録と現認・客観記録、自己申告乖離の調査補正の一般基準",
+          "assessment": "supported",
+          "evidenceUrls": [
+            "https://www.mhlw.go.jp/file/06-Seisakujouhou-11200000-Roudoukijunkyoku/0000149439.pdf",
+            "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/roudouzikan/070614-2.html"
+          ],
+          "verified": true,
+          "additionalAuditOnly": true
+        }
+      ],
+      "findingIds": [
+        "PA-09",
+        "PA-15",
+        "PA-23"
+      ],
+      "existingIntentComparison": {
+        "filesRead": [
+          "scripts/labor-columns/82-kotei-zangyodai-tekiho-youken-sagaku-seisan.md"
+        ],
+        "conclusion": "コマ給に漏れる準備・採点等の時間把握と労働者性。既存82の固定残業代有効要件一般とは主要な入口が異なる。",
+        "result": "pass"
+      },
+      "initialWrongLocaleLinks": {
+        "ja": [],
+        "en": [],
+        "zh-tw": [],
+        "zh": []
+      },
+      "remainingHoldReasons": [
+        "塾講師ガイドライン4言語リンク",
+        "三菱重工2000-03-09判例の判決本文、1985-12-19報告の実本文",
+        "コマ給固定残業代の個別要件・最低賃金換算方法"
+      ]
+    }
+  ],
+  "limitations": [
+    "e-Gov本文0行・404・取得不能は未検証として保存し、法的誤りと区別した。",
+    "局所的に取得できた資料はrelevantClaimの範囲だけを検証済みとする。",
+    "記事修正後の最終指紋はまだレビューしていない。本監査は自動公開承認へ使えない。",
+    "ブラウザー、メール、本番DB、設定、課金、マージは扱っていない。原稿／コードは編集していない。"
+  ],
+  "additionalGuideLookup": {
+    "checkedAt": "2026-10-12",
+    "scope": "塾150の一次リンク代替取得のみ。編集後の最終指紋レビューは未開始。",
+    "result": "official_body_retrieved",
+    "verified": true,
+    "formulatedAt": "2017-01-20",
+    "recommendedLandingUrl": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/roudouzikan/070614-2.html",
+    "recommendedBodyUrl": "https://www.mhlw.go.jp/file/06-Seisakujouhou-11200000-Roudoukijunkyoku/0000149439.pdf",
+    "bodyRead": {
+      "pages": 4,
+      "textLines": 108,
+      "fullTextRead": true
+    },
+    "supportedTopics": [
+      "指揮命令下という一般基準",
+      "指示による準備と後始末",
+      "即応義務のある手待時間",
+      "義務研修・指示学習",
+      "始業終業記録",
+      "現認・客観記録",
+      "自己申告の調査・補正"
+    ],
+    "notVerifiedByThisLookup": [
+      "個別講師の労働者性・業務委託該当性",
+      "判決全文の確認",
+      "1985年労働者性報告の全文",
+      "固定残業代の個別有効要件",
+      "現行の労働時間記録保存年限・全改正履歴"
+    ],
+    "retainedFailedUrls": [
+      "https://jsite.mhlw.go.jp/tottori-roudoukyoku/news_topics/topics/_120669/_121005.html",
+      "https://www.mhlw.go.jp/content/000282266.pdf",
+      "https://www.mhlw.go.jp/file/06-Seisakujouhou-11200000-Roudoukijunkyoku/0000148322.pdf"
+    ],
+    "parentReportedFailedUrl": "https://www.mhlw.go.jp/content/000280237.pdf",
+    "navigationPageNotGuide": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000148322.html",
+    "finalFingerprintReviewCompleted": false,
+    "finalApprovalGranted": false
+  }
+}

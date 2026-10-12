@@ -1,0 +1,125 @@
+{
+  "localeLinksFixed": 39,
+  "articles": [
+    {
+      "file": "scripts/realestate-columns/115-sango-care-shukuhakugata-bukken-shisetsu-kijun-boshihokenho.md",
+      "originalSha256": "cd2d179e073319b49485d0eac8eced980f68c18da203f1efb63b65c541186295",
+      "revisedSha256": "de373ba3171ba65256485e75c9050f130579b19ba88093aba73d1b3928bb37c1"
+    },
+    {
+      "file": "scripts/realestate-columns/en/115-sango-care-shukuhakugata-bukken-shisetsu-kijun-boshihokenho.md",
+      "originalSha256": "0836bd9173b04c3f4c2178aa85dd7e67d75ebc2f1aef44d6720576a34a8a16de",
+      "revisedSha256": "2bd5249e9d45216520cb53acad6cd7383a4b22b9defabe9ce3c6d28dc5f595c2"
+    },
+    {
+      "file": "scripts/realestate-columns/zh-tw/115-sango-care-shukuhakugata-bukken-shisetsu-kijun-boshihokenho.md",
+      "originalSha256": "332e98977b52b9227ae7026cac16349b97e0f06f81a02884e396f4d422bfef4b",
+      "revisedSha256": "c593f0da14780246d0901fc0f934f4f53069c6504c1039b90e31af0fef7244cf"
+    },
+    {
+      "file": "scripts/realestate-columns/zh/115-sango-care-shukuhakugata-bukken-shisetsu-kijun-boshihokenho.md",
+      "originalSha256": "35b535df030fcb63d9a736951a7c9081d42de1e568c7c34026d6818746f85a51",
+      "revisedSha256": "bc9576ddd6221dfa5f1b5f4297db33da25b6696fd941beabc2812fae1875d3cc"
+    },
+    {
+      "file": "scripts/realestate-columns/116-souzoku-jikka-juutaku-loan-zansai-teitouken-massho-baikyaku.md",
+      "originalSha256": "fff67051d2f694933aa554d862785752bc593c09c8ca9ce982b7a11422c76a42",
+      "revisedSha256": "48ef9d63897618b6e33d9e6ad41e27bae7fd0d091e05a161681982cd7245b259"
+    },
+    {
+      "file": "scripts/realestate-columns/en/116-souzoku-jikka-juutaku-loan-zansai-teitouken-massho-baikyaku.md",
+      "originalSha256": "51d67a9013cb1e99d3a465f2dfcbe3875f87c68a2665d82334c30cb5a3c22f1d",
+      "revisedSha256": "a037e5af73aa6981afcc93572da927c840c865451960d2e528b79d20ba279ad9"
+    },
+    {
+      "file": "scripts/realestate-columns/zh-tw/116-souzoku-jikka-juutaku-loan-zansai-teitouken-massho-baikyaku.md",
+      "originalSha256": "3389d20fbe9d7c2b4a187df9a119c3ac7b105545a183ccfaea89ae4c11d32852",
+      "revisedSha256": "c53b94810c011d296ceb842107cee1c43d96451639df230a6df65d45655887ad"
+    },
+    {
+      "file": "scripts/realestate-columns/zh/116-souzoku-jikka-juutaku-loan-zansai-teitouken-massho-baikyaku.md",
+      "originalSha256": "92cb21f6e80d73c3c6b5e0907faad5bcb50406c419b6e899b40f7149a13379ce",
+      "revisedSha256": "2d4945aeb82c589283805287c1f3d3bbfddc8515de222e399d3263d1e1eab55e"
+    },
+    {
+      "file": "scripts/legal-columns/109-kodo-kanri-iryokiki-hanbai-kashidashi-kyoka-tenpo-kanrisha.md",
+      "originalSha256": "e7407876c3c0344c5718398f78f32c0d8fe4632a8b2bd47c40a5aa5347be0af8",
+      "revisedSha256": "a43cf814dd171f5894aaa8d96f51699eaa836a6bcd4331b40cd639c4bf7039ca"
+    },
+    {
+      "file": "scripts/legal-columns/en/109-kodo-kanri-iryokiki-hanbai-kashidashi-kyoka-tenpo-kanrisha.md",
+      "originalSha256": "e779a620ebd20e8127015dd60cdee499e7528ce224a2577ff83e8a9f76deda8c",
+      "revisedSha256": "ef7f704b2ba092795b1e41bb56726a88e0adce7b5128cfd74cde5519e345b178"
+    },
+    {
+      "file": "scripts/legal-columns/zh-tw/109-kodo-kanri-iryokiki-hanbai-kashidashi-kyoka-tenpo-kanrisha.md",
+      "originalSha256": "cef5b0b386129eef1a683cf225a1304fb1f62e842967a03603db7261221fd70d",
+      "revisedSha256": "5ae9b79eed29f8bea0bbd88cae33239bc0f47fc7c3e57113c9683156ffd18e45"
+    },
+    {
+      "file": "scripts/legal-columns/zh/109-kodo-kanri-iryokiki-hanbai-kashidashi-kyoka-tenpo-kanrisha.md",
+      "originalSha256": "4629051f53f3ae503c3b41f06d1889c5672cbc80b887409e084f9482e8fdb011",
+      "revisedSha256": "4483646ef021b0ac7da146cc2829f444244946a409aee2f69ab6affd904f703a"
+    },
+    {
+      "file": "scripts/legal-columns/110-seisan-gata-yuigon-fudosan-kanka-bunpai-yuigon-shikkou.md",
+      "originalSha256": "4331783ed1c56b02f871f259095d34c2d35c184e0bf881fecd604c5817499c92",
+      "revisedSha256": "115a5da4e3543af5d1f352ca83f427e8fc99931aab3ad398219f703e5da5c422"
+    },
+    {
+      "file": "scripts/legal-columns/en/110-seisan-gata-yuigon-fudosan-kanka-bunpai-yuigon-shikkou.md",
+      "originalSha256": "7e19d1ae0b410b6cd1776efa902dd7df23fa2d6bd5b799ff30b475a732586dbf",
+      "revisedSha256": "d59f7bacebd0197f39a933107bfe820b467565d480fd048f39a0a7ead8728b0e"
+    },
+    {
+      "file": "scripts/legal-columns/zh-tw/110-seisan-gata-yuigon-fudosan-kanka-bunpai-yuigon-shikkou.md",
+      "originalSha256": "82b69e2c6e0bb1f494c8643208ca1276e3cb3a34765ebf216c3bd407d87554e9",
+      "revisedSha256": "3569f2f3b9bf67ec31b94668f8796b6e2a2eb53214f570c8c2ab4ccb6fbe0bab"
+    },
+    {
+      "file": "scripts/legal-columns/zh/110-seisan-gata-yuigon-fudosan-kanka-bunpai-yuigon-shikkou.md",
+      "originalSha256": "c96100e0e769e7ea4b8040c960f722b7ca98ee96a4d614da41b2093db1e9cac1",
+      "revisedSha256": "e6896510b92332dcddde0ebc91549e5b0b178365fc83673a7e4b97c6c6c0526a"
+    },
+    {
+      "file": "scripts/labor-columns/149-jidosha-kyoshujo-shidouin-kenteiin-roudoujikan-hanbokibi-36kyotei-henkei.md",
+      "originalSha256": "676f3ea2810bc757fcda27c03f8a24d96ccb641c6ebc63cecc29014066141f03",
+      "revisedSha256": "0b7136063b58dd26221c6548a6b1fcb88e5dad9c23ad5e364e205dd533f7c0e3"
+    },
+    {
+      "file": "scripts/labor-columns/en/149-jidosha-kyoshujo-shidouin-kenteiin-roudoujikan-hanbokibi-36kyotei-henkei.md",
+      "originalSha256": "cf8f8be2d7c0a3407a52c7eca10faf0bf2afe2728b06b5da8eb70d532fc59f73",
+      "revisedSha256": "611f21b53143af50ad80fbd437eb42481c5021a298ea99c32a1c9e41560adc0b"
+    },
+    {
+      "file": "scripts/labor-columns/zh-tw/149-jidosha-kyoshujo-shidouin-kenteiin-roudoujikan-hanbokibi-36kyotei-henkei.md",
+      "originalSha256": "bab5a949f28c8f52e18bdbf2df520485832d9f6008f097e35ca907b837c20d49",
+      "revisedSha256": "5e92e7d1e3cb38e566cf759e04a5923da008920c00679633e7b6e9fe49cf902b"
+    },
+    {
+      "file": "scripts/labor-columns/zh/149-jidosha-kyoshujo-shidouin-kenteiin-roudoujikan-hanbokibi-36kyotei-henkei.md",
+      "originalSha256": "b66ff7a588c518c65af5ee198d305cf783204a3294c04f95f19fa7c7461bcee4",
+      "revisedSha256": "d1aa5a98c7ece79649099dffeab86a14ba24db1f3bdac686f9e476140fb21daf"
+    },
+    {
+      "file": "scripts/labor-columns/150-gakushujuku-yobiko-koshi-koma-kyu-jugyogai-roudoujikan-kanri.md",
+      "originalSha256": "116cda93fa76df8c39debf170fa3d870f55491601df43c1e85cd0a6c108e3c7f",
+      "revisedSha256": "abf397012f7c6df396d1c719449989e714ce84ab9733613d50d6c3418ea91397"
+    },
+    {
+      "file": "scripts/labor-columns/en/150-gakushujuku-yobiko-koshi-koma-kyu-jugyogai-roudoujikan-kanri.md",
+      "originalSha256": "4eb545b590455ae6bb0a3fc121c527b49882810605745a7944a429d2003c6643",
+      "revisedSha256": "9034f21cff12220c3e02ff7adafc2e55d9a40f3b9b114ec021580530d3d96a0b"
+    },
+    {
+      "file": "scripts/labor-columns/zh-tw/150-gakushujuku-yobiko-koshi-koma-kyu-jugyogai-roudoujikan-kanri.md",
+      "originalSha256": "b6ff89899b19a52261a203fbcef3de51653f3b04c885667847619bd3dd25e8f5",
+      "revisedSha256": "07a73fbae8604be99fe22a33c6f8d95bd87de790ef289010d9635e003c688c9a"
+    },
+    {
+      "file": "scripts/labor-columns/zh/150-gakushujuku-yobiko-koshi-koma-kyu-jugyogai-roudoujikan-kanri.md",
+      "originalSha256": "72fb119f77aa3588656af421caad1310e0fccf44576769941e77e4642be6c22b",
+      "revisedSha256": "9fe0181b9b69091d7b6d6215d4cf944608a126f743cdd903d228560bebbbd468"
+    }
+  ]
+}

@@ -1,0 +1,217 @@
+{
+  "pass": true,
+  "findings": [
+    {
+      "file": "scripts/labor-columns/150-gakushujuku-yobiko-koshi-koma-kyu-jugyogai-roudoujikan-kanri.md",
+      "severity": "minor",
+      "issue": "引用している一次資料URL（鳥取労働局 jsite.mhlw.go.jp/.../_121005.html 労働時間適正把握ガイドライン）が404（2回確認）。ja/en/zh-tw/zh の4言語すべてで同じ死にリンク。ガイドラインの内容（平成29年1月20日策定・始終業時刻の確認記録責務）自体は厚労省正規ページで確認でき正しい。",
+      "fix": "厚生労働省の現行の正規URLへ差し替える。事実関係の修正は不要。"
+    },
+    {
+      "file": "scripts/realestate-columns/116-souzoku-jikka-juutaku-loan-zansai-teitouken-massho-baikyaku.md",
+      "severity": "minor",
+      "issue": "「空き家3000万円特別控除（同法第35条第3項）」と記すが、令和6年1月1日以後の譲渡で相続人が3人以上の場合は控除上限が2000万円に縮小される点の注記がない（ja＋en/zh-tw/zhの4言語）。",
+      "fix": "必要なら上限縮小の注記を追加。ただし有利不利の判断を税理士に委ねる旨があり、現状でも誤りではないため許容範囲。"
+    }
+  ],
+  "articles": [
+    {
+      "key": "realestate:sango-care-shukuhakugata-bukken-shisetsu-kijun-boshihokenho",
+      "fingerprint": "6d5c985be0f4f480a8c4e3dcc6e2608dfc5e3fefe01d87e19f23493dce2bf8d8",
+      "requiresQualifiedReview": false,
+      "checks": {
+        "primarySources": "pass",
+        "duplicateIntent": "pass",
+        "legalClaims": "pass",
+        "translationAlignment": "pass"
+      },
+      "sources": [
+        {
+          "url": "https://www.cfa.go.jp/policies/boshihoken",
+          "checkedAt": "2026-10-11",
+          "relevantClaim": "こども家庭庁の産前・産後サポート事業及び産後ケア事業ガイドライン（令和8年3月）の存在と、令和元年母子保健法改正（産後ケア事業の法定化）を確認。3類型・対象者はガイドライン/法本文側。",
+          "verified": true
+        },
+        {
+          "url": "https://www.mlit.go.jp/common/001294996.pdf",
+          "checkedAt": "2026-10-11",
+          "relevantClaim": "建築基準法の用途変更に伴う確認申請の面積基準が100㎡超から200㎡超へ引上げ、改正は令和元年6月25日全面施行（国交省資料・検索で裏付け）。",
+          "verified": true
+        },
+        {
+          "url": "https://laws.e-gov.go.jp/law/340AC0000000141",
+          "checkedAt": "2026-10-11",
+          "relevantClaim": "母子保健法第17条の2（産後ケア事業・令和3年4月1日施行）。e-GovはJS描画で条文本文を直接取得不可。施行日はcfa.go.jp側で裏付け。",
+          "verified": false
+        }
+      ],
+      "blockingFindings": []
+    },
+    {
+      "key": "realestate:souzoku-jikka-juutaku-loan-zansai-teitouken-massho-baikyaku",
+      "fingerprint": "fc452f551843f9c7d7133b7e4a1b9185c73fbf37ffaa84960dee13ffb5afca69",
+      "requiresQualifiedReview": false,
+      "checks": {
+        "primarySources": "pass",
+        "duplicateIntent": "pass",
+        "legalClaims": "pass",
+        "translationAlignment": "pass"
+      },
+      "sources": [
+        {
+          "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/joto/3267.htm",
+          "checkedAt": "2026-10-11",
+          "relevantClaim": "相続財産を譲渡した場合の取得費加算の特例（措法39）。相続開始の翌日から相続税申告期限の翌日以後3年を経過する日までの譲渡が要件。",
+          "verified": true
+        },
+        {
+          "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/joto/3306.htm",
+          "checkedAt": "2026-10-11",
+          "relevantClaim": "被相続人居住用財産（空き家）特例は最高3000万円・措法35。令和6年1月以降は相続人3人以上で2000万円（本文は3000万円のみ記載）。他特例との重複適用不可。",
+          "verified": true
+        },
+        {
+          "url": "https://www.moj.go.jp/MINJI/minji05_00343.html",
+          "checkedAt": "2026-10-11",
+          "relevantClaim": "相続登記の申請義務化は令和6年4月1日施行（法務省ページで確認）。3年以内申請・10万円以下の過料・不登法76条の2は確立した規定。",
+          "verified": true
+        },
+        {
+          "url": "https://laws.e-gov.go.jp/law/129AC0000000089",
+          "checkedAt": "2026-10-11",
+          "relevantClaim": "民法896条・915条・921条・939条（承継・熟慮期間3か月・法定単純承認・放棄の効力）。e-GovはJS描画で条文本文を直接取得不可だが確立した条文。",
+          "verified": false
+        }
+      ],
+      "blockingFindings": []
+    },
+    {
+      "key": "legal:kodo-kanri-iryokiki-hanbai-kashidashi-kyoka-tenpo-kanrisha",
+      "fingerprint": "9d09559d8269c076236e996a3cbdb5ad311c6cecc88f10879b888b5c5842ca3a",
+      "requiresQualifiedReview": false,
+      "checks": {
+        "primarySources": "pass",
+        "duplicateIntent": "pass",
+        "legalClaims": "pass",
+        "translationAlignment": "pass"
+      },
+      "sources": [
+        {
+          "url": "https://www.hokeniryo.metro.tokyo.lg.jp/anzen/iyaku/sonota/sale_leas/risk.html",
+          "checkedAt": "2026-10-11",
+          "relevantClaim": "高度管理医療機器等は許可・管理医療機器は届出・一般医療機器は原則不要。コンタクトレンズ＝高度管理、補聴器＝管理の例を確認。",
+          "verified": true
+        },
+        {
+          "url": "https://www.city.nagoya.jp/jigyou/eisei/1034658/1011569/1011570/1011573.html",
+          "checkedAt": "2026-10-11",
+          "relevantClaim": "施行規則162条＝販売等業務に3年以上従事後の基礎講習修了（医師・薬剤師等は同等）、168条＝毎年度の継続的研修受講義務を確認。",
+          "verified": true
+        },
+        {
+          "url": "https://laws.e-gov.go.jp/law/335AC0000000145",
+          "checkedAt": "2026-10-11",
+          "relevantClaim": "薬機法39条（許可・都道府県知事・6年更新）・39条の2（営業所管理者）・39条の3（管理医療機器の届出）。e-GovはJS描画で条文本文を直接取得不可。",
+          "verified": false
+        }
+      ],
+      "blockingFindings": []
+    },
+    {
+      "key": "legal:seisan-gata-yuigon-fudosan-kanka-bunpai-yuigon-shikkou",
+      "fingerprint": "fb95fc2b3352fabc760221009cdcb66d2bce7a381c0561448f299098df5c8527",
+      "requiresQualifiedReview": false,
+      "checks": {
+        "primarySources": "pass",
+        "duplicateIntent": "pass",
+        "legalClaims": "pass",
+        "translationAlignment": "pass"
+      },
+      "sources": [
+        {
+          "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/2022.htm",
+          "checkedAt": "2026-10-11",
+          "relevantClaim": "準確定申告は相続の開始があったことを知った日の翌日から4か月以内に申告・納税（本文の記載と一致）。",
+          "verified": true
+        },
+        {
+          "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/joto/3267.htm",
+          "checkedAt": "2026-10-11",
+          "relevantClaim": "相続財産譲渡時の取得費加算の特例（措法39）を確認。",
+          "verified": true
+        },
+        {
+          "url": "https://laws.e-gov.go.jp/law/129AC0000000089",
+          "checkedAt": "2026-10-11",
+          "relevantClaim": "民法1012・1013・1014・1015・907条、相続法改正（平成30年法律72号）による1012等の施行日2019年7月1日。e-Gov本文・附則はJS描画で直接取得不可だが確立。",
+          "verified": false
+        }
+      ],
+      "blockingFindings": []
+    },
+    {
+      "key": "labor:jidosha-kyoshujo-shidouin-kenteiin-roudoujikan-hanbokibi-36kyotei-henkei",
+      "fingerprint": "161f97c55633da72995c1f7a7f3c1ae3dde1342aa4bcd2aeab71e2d178ad619c",
+      "requiresQualifiedReview": false,
+      "checks": {
+        "primarySources": "pass",
+        "duplicateIntent": "pass",
+        "legalClaims": "pass",
+        "translationAlignment": "pass"
+      },
+      "sources": [
+        {
+          "url": "https://jsite.mhlw.go.jp/tochigi-roudoukyoku/hourei_seido_tetsuzuki/roudoukijun_keiyaku/roukijou/roukihou_point/_79129/transformation32-4-2.html",
+          "checkedAt": "2026-10-11",
+          "relevantClaim": "1年単位変形労働時間制：1日10時間・1週52時間の限度、対象期間3か月超で年280日、連続労働6日原則、48時間超の週は連続3週以下かつ3か月ごと3回以下を確認。",
+          "verified": true
+        },
+        {
+          "url": "https://jsite.mhlw.go.jp/nagasaki-roudoukyoku/content/contents/no17-25050701.pdf",
+          "checkedAt": "2026-10-11",
+          "relevantClaim": "36協定上限：月45/年360（1年単位42/320）、特別条項年720・月45超は年6回、休日含め単月100時間未満・2〜6か月平均80時間以内（労働局資料・検索で裏付け）。",
+          "verified": true
+        },
+        {
+          "url": "https://laws.e-gov.go.jp/law/322AC0000000049",
+          "checkedAt": "2026-10-11",
+          "relevantClaim": "労基法36条4〜6項・32条の2・32条の4・34条・35条・37条、上限規制2019年4月1日（中小2020年4月1日）施行。e-GovはJS描画で条文本文を直接取得不可。",
+          "verified": false
+        }
+      ],
+      "blockingFindings": []
+    },
+    {
+      "key": "labor:gakushujuku-yobiko-koshi-koma-kyu-jugyogai-roudoujikan-kanri",
+      "fingerprint": "ee40348cc0eeb8eb8b8f4f3397fe4f8bbd2122ea49826c7e095e266e9f40b39d",
+      "requiresQualifiedReview": false,
+      "checks": {
+        "primarySources": "pass",
+        "duplicateIntent": "pass",
+        "legalClaims": "pass",
+        "translationAlignment": "pass"
+      },
+      "sources": [
+        {
+          "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000108366_00002.html",
+          "checkedAt": "2026-10-11",
+          "relevantClaim": "労働時間の適正な把握のために使用者が講ずべき措置に関するガイドラインは平成29年（2017年）1月20日策定、使用者の始終業時刻の確認・記録責務、指揮命令下の時間＝労働時間（厚労省で確認）。三菱重工長崎造船所事件 最判平成12年3月9日・昭和60年労働基準法研究会報告も確立。",
+          "verified": true
+        },
+        {
+          "url": "https://jsite.mhlw.go.jp/tottori-roudoukyoku/news_topics/topics/_120669/_121005.html",
+          "checkedAt": "2026-10-11",
+          "relevantClaim": "本文（4言語）が引用するガイドラインURLが404で取得不能（2回確認）。内容自体は厚労省正規ページで確認済み。",
+          "verified": false
+        },
+        {
+          "url": "https://laws.e-gov.go.jp/law/322AC0000000049",
+          "checkedAt": "2026-10-11",
+          "relevantClaim": "労基法32条・34条・37条・24条。e-GovはJS描画で条文本文を直接取得不可だが確立した条文。",
+          "verified": false
+        }
+      ],
+      "blockingFindings": []
+    }
+  ]
+}

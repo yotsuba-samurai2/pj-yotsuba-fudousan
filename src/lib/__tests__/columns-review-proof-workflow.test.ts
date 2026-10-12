@@ -88,6 +88,25 @@ describe("existing Daily independent review connection", () => {
       "key", "fingerprint", "checks", "sources", "requiresQualifiedReview", "blockingFindings",
     ]));
   });
+  it.each(["failure", "cancelled"])("the failure notification reports unknown counts on review %s", (reviewResult) => {
+    const section = daily.split("\n  notify-failure:\n")[1].split("\n  close-failure-issues:\n")[0];
+    const script = section.split("        run: |\n")[1].split("\n").map(line => line.replace(/^          /, "")).join("\n");
+    const dir = mkdtempSync(path.join(tmpdir(), "delivery-failure-notice-"));
+    try {
+      const message = path.join(dir, "notice.md");
+      // Execute the actual shell step, stubbing only the remote gh boundary.
+      const stub = 'gh() { case "$1 $2" in "label create"|"issue list") return 0;; "issue create") while [ "$#" -gt 0 ]; do if [ "$1" = "--body-file" ]; then cat "$2"; return 0; fi; shift; done;; esac; }\n';
+      const result = spawnSync("bash", ["-c", stub + script.replaceAll("/tmp/daily-failure.md", message)], {
+        env: { NODE_ENV: "test", PATH: process.env.PATH, REPO: "anonymous/fixture", LOG: "https://github.com/anonymous/fixture/actions/runs/123",
+          VALIDATE_RESULT: "success", REPAIR_RESULT: "skipped", REVIEW_RESULT: reviewResult, FIX_RESULT: "skipped", STORAGE_RESULT: "skipped" }, encoding: "utf8",
+      });
+      expect(result.status, result.stderr).toBe(0);
+      expect(result.stdout).toContain(`レビュー処理: ${reviewResult}`);
+      expect(result.stdout).toContain("保留数はこの通知では取得できていません（未確認）");
+      expect(result.stdout).toContain("本番公開はこのワークフローでは実行していません");
+      expect(result.stdout).not.toContain("指摘なし・公開予定ありとは案内します");
+    } finally { rmSync(dir, { recursive: true, force: true }); }
+  });
   it("records the proof through the actual offline CLI into an isolated fixture directory", () => {
     const dir = mkdtempSync(path.join(tmpdir(), "review-proof-cli-"));
     try {
@@ -104,11 +123,41 @@ describe("existing Daily independent review connection", () => {
       const result = spawnSync(process.execPath, ["--import", path.resolve("node_modules/tsx/dist/loader.mjs"),
         path.resolve("scripts/columns-review-proof.ts"), "record"], {
         cwd: dir, env: { PATH: process.env.PATH, NODE_ENV: "test", TSX_TSCONFIG_PATH: path.resolve("tsconfig.json"), REVIEW: JSON.stringify({ pass: true, findings: [], articles: [review] }),
-          RUN_URL: review.reviewer.evidenceUrl }, encoding: "utf8",
+          REVIEW_RESULT: "success", RUN_URL: review.reviewer.evidenceUrl }, encoding: "utf8",
       });
       expect(result.status, result.stderr).toBe(0);
       expect(JSON.parse(readFileSync(path.join(dir, ".tmp/quality-holds.json"), "utf8"))).toEqual([]);
       expect(readFileSync(path.join(dir, "src/lib/data/columns-autopublish-reviews.ts"), "utf8")).toContain(review.fingerprint);
+      const delivery = JSON.parse(readFileSync(path.join(dir, ".tmp/quality-delivery.json"), "utf8"));
+      expect(delivery).toMatchObject({ generatedCount: 1, registeredCount: 1, qualityEligibleCount: 1, heldCount: 0, publishedCount: null });
+      expect(readFileSync(path.join(dir, "docs/columns-delivery/latest.md"), "utf8")).toContain("公開完了は実行結果で確認");
+    } finally { rmSync(dir, { recursive: true, force: true }); }
+  });
+  it.each(["failure", "cancelled", "unknown"])("the offline CLI ignores cached passing JSON when the review process is %s", (reviewResult) => {
+    const dir = mkdtempSync(path.join(tmpdir(), "review-failed-cli-"));
+    try {
+      const article = qualityArticle();
+      const review = qualityReview(article);
+      mkdirSync(path.join(dir, ".tmp"));
+      mkdirSync(path.join(dir, "src/lib/data"), { recursive: true });
+      for (const seed of ["realestate-columns-daily", "souzoku-legal-columns", "labor-columns"]) {
+        writeFileSync(path.join(dir, `src/lib/data/${seed}-seed.ts`), `export const FIXTURE = ${JSON.stringify(seed === "souzoku-legal-columns" ? [article] : [])};\n`);
+      }
+      writeFileSync(path.join(dir, ".tmp/quality-candidates.json"), JSON.stringify([{ key: review.key, fingerprint: review.fingerprint }]));
+      writeFileSync(path.join(dir, ".tmp/quality-baseline-reviews.json"), "[]");
+      const result = spawnSync(process.execPath, ["--import", path.resolve("node_modules/tsx/dist/loader.mjs"), path.resolve("scripts/columns-review-proof.ts"), "record"], {
+        cwd: dir, env: { PATH: process.env.PATH, NODE_ENV: "test", TSX_TSCONFIG_PATH: path.resolve("tsconfig.json"), REVIEW_RESULT: reviewResult,
+          REVIEW: JSON.stringify({ pass: true, findings: [], articles: [review] }), RUN_URL: review.reviewer.evidenceUrl }, encoding: "utf8",
+      });
+      expect(result.status, result.stderr).toBe(0);
+      expect(JSON.parse(readFileSync(path.join(dir, ".tmp/quality-delivery.json"), "utf8"))).toMatchObject({
+        reviewResult, reviewPass: null, findings: null, registeredCount: 0, qualityEligibleCount: 0, heldCount: 1, unverifiedSourceCount: null,
+      });
+      const notice = readFileSync(path.join(dir, "docs/columns-delivery/latest.md"), "utf8");
+      expect(notice).toContain("レビュー結果は未確認");
+      expect(notice).toContain("1本は保留");
+      expect(notice).not.toContain("指摘なし");
+      expect(readFileSync(path.join(dir, "src/lib/data/columns-autopublish-reviews.ts"), "utf8")).not.toContain(review.fingerprint);
     } finally { rmSync(dir, { recursive: true, force: true }); }
   });
 });

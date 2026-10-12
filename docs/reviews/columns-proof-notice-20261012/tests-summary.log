@@ -1,0 +1,6 @@
+git: warning: confstr() failed with code 5: couldn't get path of DARWIN_USER_TEMP_DIR; using /tmp instead
+
+ Test Files  147 passed (147)
+      Tests  1996 passed (1996)
+   Start at  12:44:13
+   Duration  11.01s (transform 14.50s, setup 0ms, import 30.86s, tests 29.22s, environment 17ms)
