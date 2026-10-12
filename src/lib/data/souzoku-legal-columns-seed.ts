@@ -14471,5 +14471,261 @@ export const SOUZOKU_LEGAL_COLUMNS_SEED: SouzokuLegalSeedColumn[] = [
         ]
       }
     }
+  },
+  {
+    "business": "legal",
+    "slug": "shitei-jidosha-seibi-jigyo-minkan-shaken-shitei-shinsei-youken",
+    "title": "指定自動車整備事業（民間車検場）の指定申請｜認証との違いと設備・人員要件",
+    "date": "2026-10-12",
+    "category": "許認可の手続き（行政書士の実務から）",
+    "excerpt": "認証工場から指定自動車整備事業（民間車検場）へ格上げするための要件を整理します。認証（第78条・特定整備）と指定（第94条の2・自社で検査し保安基準適合証を交付）の違い、完成検査場などの設備、工員と自動車検査員の人員、申請先と約45日の審査、指定後の義務を解説します。",
+    "content": "**結論（先に要点）**：認証は「特定整備ができる」資格、指定（民間車検場）は「自社の自動車検査員が検査して保安基準適合証を交付できる」資格です。指定には認証の取得を前提に、完成検査場などの設備と自動車検査員の選任が加わります。\n\n**情報確認日：2026年10月12日**。本記事は、自動車特定整備の認証工場を運営し、指定自動車整備事業（民間車検場）へ格上げして自社で検査まで行いたい事業者に向けて、認証との違いと設備・人員の要件を整理します。認証そのものの流れは[自動車特定整備の認証申請](/legal/column/jidosha-tokutei-seibi-ninsho-shinsei-nagare-youken)をご覧ください。\n\n## 認証工場と指定工場（民間車検場）は何が違うのか？\n\n根拠は道路運送車両法（昭和26年法律第185号）です。認証と指定は別の処分で、受ける順序も役割も違います。\n\n| | 認証（認証工場） | 指定（指定工場・民間車検場） |\n| --- | --- | --- |\n| 根拠 | 第78条第1項 | 第94条の2第1項 |\n| 受けるもの | 地方運輸局長の認証 | 地方運輸局長の指定（認証が前提） |\n| できること | 特定整備（点検・整備） | 点検・整備に加え、自社で検査し保安基準適合証を交付 |\n| 車検時の現車 | 運輸支局等の検査場へ車両を持ち込む | 保安基準適合証の提出で現車提示を省略できる |\n\n特定整備は、2020年（令和2年）4月1日に従来の分解整備から範囲が広がり、自動運転等に関わる電子制御装置整備が加わった区分です。認証はこの特定整備を行うための資格で、指定は認証工場のうち一定の基準を満たすものが申請により受けます。\n\n## 指定を受けると、どこまで自社でできるのか？\n\n指定工場は、自動車検査員が検査して保安基準への適合を確認した自動車について、保安基準適合証と保安基準適合標章を交付できます（第94条の5）。この証明書を運輸支局・自動車検査登録事務所等に提出すると、継続検査等で国の検査場への現車提示を省略できます。\n\nただし「検査の権限を国から移された」わけではありません。指定は民間に検査の一部を委ねる制度で、国による監査や、臨時検査を受けるべき車両への交付制限などの枠内で運用します。保安基準適合証・保安基準適合標章には有効期間が付されます（第94条の5第6項）。有効期間の日数は最新の運輸局案内で確認してください。\n\n## 設備・工員・自動車検査員の要件は？\n\n国土交通省の案内によると、指定には認証の取得に加えて次が求められます。具体的な寸法・機器一覧は告示・規則と管轄運輸局の最新案内で確認してください。\n\n| 区分 | 主な内容 |\n| --- | --- |\n| 設備・技術・管理組織 | 優良自動車整備事業者認定規則で定める水準を満たすこと |\n| 検査の設備 | 指定自動車整備事業規則で定める検査設備を有すること |\n| 施設 | 屋内作業場のほか、車両置場と完成検査場 |\n| 工員 | 4人以上（大型車を扱う場合は条件により5人以上）。うち3分の1以上が自動車整備士の資格を持つこと |\n| 自動車検査員 | 第94条の4により事業場ごとに選任。整備主任者として1年以上の実務経験と教習修了（1級自動車整備士は6か月以上） |\n\n大型車は、車両総重量8トン以上・最大積載量5トン以上・乗車定員30人以上の自動車を指します。自動車検査員の選任・変更は15日以内に地方運輸局長へ届け出ます（第94条の4第3項）。資格要件の細目は国家試験・教習の最新案内で確認してください。\n\n## 指定申請はどこに、どんな書類で出すのか？\n\n| 項目 | 内容 |\n| --- | --- |\n| 申請先 | 事業場を管轄する都道府県の運輸支局 |\n| 審査の流れ | 運輸支局で形式審査 → 地方運輸局で内容審査 → 地方運輸局長が指定を決定 |\n| 標準処理期間 | 国土交通省の案内では指定の決定まで申請後おおむね45日 |\n\n申請書には、設備の明細、検査機器、自動車検査員の選任、管理組織などを示す書類を添えます。様式・添付書類・手数料は管轄運輸局の最新案内が正本です。上の表は全事業場共通の確定した書類一覧ではありません。\n\n## 指定後に守る義務は？（適正化・帳簿・保安基準適合証）\n\n指定後は、検査の適正な実施、記録・帳簿の整備、保安基準適合証の適正な交付が継続して求められます。自動車検査員が不正をした場合、地方運輸局長は解任を命じることができ（第94条の4第4項）、解任から2年は検査員になれません（同第5項）。指定自体も、基準を満たさなくなれば取消し等の対象となります。\n\n| 依頼先 | 担当する範囲 |\n| --- | --- |\n| 四葉行政書士事務所 | 指定申請の書類作成・手続案内 |\n| 地方運輸局・運輸支局 | 自動車検査員の選任要件の確認、指定審査 |\n| 設備業者 | 検査用機械・完成検査場・建屋の設置 |\n| 司法書士 | 法人の設立・変更の登記 |\n| 四葉社会保険労務士事務所 | 検査員の時間外・シフト等の労務 |\n\n四葉行政書士事務所、四葉社会保険労務士事務所、四葉不動産株式会社はそれぞれ別事業体で、独立した事業体として受任します。各分野の担当者と別々にご契約いただき、各受任者が直接請求・入金を受けます。当事務所は紹介料を受け取りません。運輸局・運輸支局は行政手続の窓口で、受任契約の相手ではありません。\n\n[許認可サポート](/legal/services)、[受任の流れ](/legal/nagare)、[報酬額表](/legal/ryokin)をご確認ください。\n\n## よくある質問\n\n**Q. 認証を受けていれば指定は不要ですか？**\nA. 認証は特定整備を行うための資格、指定は自社で検査して保安基準適合証を交付するための資格です。自社で検査まで行い現車提示を省略したい場合に指定が必要で、認証はその前提になります。\n\n**Q. 指定を受けると国の車検場へ行かなくてよくなりますか？**\nA. 保安基準適合証を提出すれば継続検査等で現車提示を省略できます。ただし国の監査や臨時検査の対象、交付制限などの枠内での運用で、検査の権限がすべて移るわけではありません。\n\n**Q. 自動車検査員は誰でもなれますか？**\nA. 整備主任者として1年以上の実務経験と教習修了（1級自動車整備士は6か月以上）などの要件があり、事業場ごとに選任して地方運輸局長へ届け出ます。細目は最新の国家試験・教習案内で確認してください。\n\n**Q. 指定申請はどこに出し、どのくらいかかりますか？**\nA. 事業場を管轄する運輸支局へ提出し、運輸支局の形式審査と地方運輸局の内容審査を経て地方運輸局長が決定します。国土交通省の案内では決定まで申請後おおむね45日です。\n\n## この記事の出典（一次情報）\n\n- [e-Gov・道路運送車両法](https://laws.e-gov.go.jp/law/326AC0000000185)：第78条（認証）、第94条の2（指定）、第94条の4（自動車検査員）、第94条の5（保安基準適合証）。\n- [国土交通省・認証と指定の違い](https://www.mlit.go.jp/jidosha/ninshoutoshiteinochigai.html)、[指定自動車整備事業](https://www.mlit.go.jp/jidosha/shiteiseibi.html)：要件・現車提示省略・審査期間。確認日2026-10-12。\n- 指定自動車整備事業規則・優良自動車整備事業者認定規則（検査設備・設備技術管理組織の基準）。\n\n確認日2026-10-12。条文はe-Gov法令検索のXMLで、要件は国土交通省ページで照合しましたが、各ページの全文は取得しきれていません。保安基準適合証の有効期間の日数、設備の具体的寸法・機器一覧、自動車検査員の資格要件の細目、手数料・様式は未検証です。申請前に管轄運輸局の最新案内で再確認してください。\n\n本記事は一般的な情報提供であり、指定の可否、必要書類、審査期間、検査員の資格を保証しません。個別の判断は人間の資格者と所管機関が資料を確認して行います。執筆は[浦松 丈二](/about/uramatsu)（行政書士・宅地建物取引士）です。",
+    "status": "published",
+    "author": {
+      "name": "浦松 丈二",
+      "title": "行政書士・宅地建物取引士（四葉行政書士事務所／四葉不動産株式会社）"
+    },
+    "keywords": [
+      "指定自動車整備事業 指定申請 要件",
+      "民間車検場 認証 指定 違い",
+      "指定工場 自動車検査員 要件",
+      "保安基準適合証 現車提示 省略",
+      "指定自動車整備事業 設備 完成検査場",
+      "指定自動車整備事業 申請 行政書士"
+    ],
+    "tags": [
+      "指定自動車整備事業",
+      "道路運送車両法",
+      "民間車検場",
+      "自動車検査員",
+      "許認可",
+      "行政書士"
+    ],
+    "locales": [
+      "ja",
+      "en",
+      "zh-tw",
+      "zh"
+    ],
+    "faq": [
+      {
+        "question": "認証を受けていれば指定は不要ですか？",
+        "answer": "認証は特定整備を行うための資格、指定は自社で検査して保安基準適合証を交付するための資格です。自社で検査まで行い現車提示を省略したい場合に指定が必要で、認証はその前提になります。"
+      },
+      {
+        "question": "指定を受けると国の車検場へ行かなくてよくなりますか？",
+        "answer": "保安基準適合証を提出すれば継続検査等で現車提示を省略できます。ただし国の監査や臨時検査の対象、交付制限などの枠内での運用で、検査の権限がすべて移るわけではありません。"
+      },
+      {
+        "question": "自動車検査員は誰でもなれますか？",
+        "answer": "整備主任者として1年以上の実務経験と教習修了（1級自動車整備士は6か月以上）などの要件があり、事業場ごとに選任して地方運輸局長へ届け出ます。細目は最新の国家試験・教習案内で確認してください。"
+      },
+      {
+        "question": "指定申請はどこに出し、どのくらいかかりますか？",
+        "answer": "事業場を管轄する運輸支局へ提出し、運輸支局の形式審査と地方運輸局の内容審査を経て地方運輸局長が決定します。国土交通省の案内では決定まで申請後おおむね45日です。"
+      }
+    ],
+    "translations": {
+      "en": {
+        "title": "Becoming a designated vehicle-inspection garage: how it differs from certification, and the equipment and staffing requirements",
+        "excerpt": "Certification allows specified maintenance; designation (a private inspection garage) lets your own vehicle inspector issue a safety-standard conformity certificate. Designation adds a completion inspection site and a vehicle inspector on top of certification.",
+        "category": "Licensing Procedures (From the Practice of an Administrative Scrivener)",
+        "content": "**In short:** certification is the qualification to perform specified maintenance; designation (a private inspection garage) is the qualification for your own vehicle inspector to inspect a vehicle and issue a safety-standard conformity certificate. Designation presupposes certification and adds equipment such as a completion inspection site and the appointment of a vehicle inspector.\n\n**Information checked: 12 October 2026.** This article is for operators running a certified specified-maintenance garage who want to upgrade to a designated vehicle-maintenance business (a private inspection garage) and inspect vehicles in-house. For certification itself, see the [specified-maintenance certification guide](https://luck428.com/legal/column/jidosha-tokutei-seibi-ninsho-shinsei-nagare-youken).\n\n## How do a certified garage and a designated garage (private inspection site) differ?\n\nThe basis is the Road Transport Vehicle Act (Act No. 185 of 1951). Certification and designation are separate dispositions with different roles and a set order.\n\n| | Certification (certified garage) | Designation (designated / private inspection garage) |\n| --- | --- | --- |\n| Basis | Article 78(1) | Article 94-2(1) |\n| What is granted | Certification by the District Transport Bureau Director-General | Designation by the Director-General (certification required first) |\n| What you may do | Specified maintenance (inspection and repair) | Also inspect in-house and issue a safety-standard conformity certificate |\n| Vehicle at inspection | Bring the vehicle to a Transport Branch Office inspection site | Submitting the conformity certificate can waive presenting the vehicle |\n\nSpecified maintenance was broadened from the former \"disassembly maintenance\" on 1 April 2020 to add electronic-control-device maintenance relating to automated driving. Certification is the qualification to perform this specified maintenance; designation is granted on application to certified garages that meet certain standards.\n\n## With designation, how much can you do in-house?\n\nA designated garage may issue a safety-standard conformity certificate and conformity sticker for vehicles that a vehicle inspector has inspected and confirmed as conforming to the safety standards (Article 94-5). Submitting the certificate to a Transport Branch Office or Vehicle Inspection and Registration Office waives presenting the actual vehicle for continuing inspection and the like.\n\nThis does not mean inspection authority has been transferred from the State. Designation entrusts part of the inspection to the private sector, operated within the framework of State audits and restrictions on issuance for vehicles subject to extraordinary inspection. The conformity certificate and sticker carry a validity period (Article 94-5(6)); confirm the number of days in the current Transport Bureau guidance.\n\n## What are the equipment, worker and vehicle-inspector requirements?\n\nAccording to the Ministry of Land, Infrastructure, Transport and Tourism, designation requires the following in addition to certification. Confirm exact dimensions and equipment lists against the notifications, ordinances and the latest guidance of the competent Transport Bureau.\n\n| Item | Main content |\n| --- | --- |\n| Equipment, technology, management organisation | Meet the levels set by the Superior Vehicle-Maintenance Operator Certification Rules |\n| Inspection equipment | Hold the inspection equipment set by the Designated Vehicle-Maintenance Business Rules |\n| Facilities | An indoor work area plus a vehicle storage area and a completion inspection site |\n| Workers | At least four (five or more for large vehicles under certain conditions); at least one third must hold a vehicle mechanic qualification |\n| Vehicle inspector | Appointed per workshop under Article 94-4: at least one year of experience as a maintenance supervisor and completed training (six months for a first-class vehicle mechanic) |\n\nLarge vehicles mean those with a gross weight of 8 tonnes or more, a maximum load of 5 tonnes or more, or a capacity of 30 or more passengers. Appointment or change of a vehicle inspector must be notified to the Director-General within 15 days (Article 94-4(3)). Confirm the detailed qualification requirements in the latest examination and training guidance.\n\n## Where and with what documents is the designation application filed?\n\n| Item | Content |\n| --- | --- |\n| Filed with | The Transport Branch Office of the prefecture with jurisdiction over the workshop |\n| Review flow | Formal review at the Branch Office → substantive review at the District Transport Bureau → the Director-General decides |\n| Standard period | Per MLIT guidance, roughly 45 days from filing to the designation decision |\n\nThe application is accompanied by documents showing the equipment details, inspection machinery, appointment of the vehicle inspector and management organisation. The forms, attachments and fees in the competent Transport Bureau's current guidance govern. The table is not a complete, fixed document list applicable to every workshop.\n\n## What duties apply after designation? (proper operation, records, conformity certificates)\n\nAfter designation you must continue to perform inspections properly, keep records and ledgers, and issue conformity certificates appropriately. If a vehicle inspector commits misconduct, the Director-General may order dismissal (Article 94-4(4)), and the person cannot be a vehicle inspector for two years from dismissal (paragraph 5). The designation itself may be revoked if the standards are no longer met.\n\n| Professional or business | Role |\n| --- | --- |\n| 四葉行政書士事務所 | Preparing designation-application documents and procedural guidance |\n| District Transport Bureau / Branch Office | Checking vehicle-inspector appointment requirements; the designation review |\n| Equipment supplier | Installing inspection machinery, the completion inspection site and buildings |\n| Judicial scrivener | Incorporation and change registrations |\n| 四葉社会保険労務士事務所 | Labour matters such as inspectors' overtime and shifts |\n\n四葉行政書士事務所, 四葉社会保険労務士事務所 and 四葉不動産株式会社 are separate, independent businesses (独立した事業体). Each field is engaged under a separate contract with its responsible provider, who bills and receives payment directly. Our office receives no referral fees. The Transport Bureau and Branch Office are administrative windows, not providers engaged under a professional-services contract.\n\nSee [licensing support](https://luck428.com/legal/services), the [engagement process](https://luck428.com/legal/nagare) and [fees](https://luck428.com/legal/ryokin).\n\n## FAQ\n\n**Q. If I hold certification, is designation unnecessary?**\nA. Certification is the qualification to perform specified maintenance; designation is the qualification to inspect in-house and issue a conformity certificate. You need designation to inspect in-house and waive presenting the vehicle, and certification is its prerequisite.\n\n**Q. Does designation mean I no longer go to the State inspection site?**\nA. Submitting the conformity certificate waives presenting the vehicle for continuing inspection and the like. It is operated within State audits, extraordinary-inspection cases and issuance restrictions, so not all inspection authority transfers.\n\n**Q. Can anyone become a vehicle inspector?**\nA. Requirements include at least one year of experience as a maintenance supervisor and completed training (six months for a first-class vehicle mechanic). The inspector is appointed per workshop and notified to the Director-General. Confirm the details in the latest examination and training guidance.\n\n**Q. Where is the designation application filed and how long does it take?**\nA. File it with the Transport Branch Office that has jurisdiction over the workshop; after the Branch Office's formal review and the District Transport Bureau's substantive review, the Director-General decides. Per MLIT guidance, roughly 45 days from filing.\n\n## Sources (Primary Information)\n\n- [e-Gov: Road Transport Vehicle Act](https://laws.e-gov.go.jp/law/326AC0000000185): Article 78 (certification), 94-2 (designation), 94-4 (vehicle inspector), 94-5 (conformity certificate).\n- MLIT: [difference between certification and designation](https://www.mlit.go.jp/jidosha/ninshoutoshiteinochigai.html), [designated vehicle-maintenance business](https://www.mlit.go.jp/jidosha/shiteiseibi.html): requirements, waiver of vehicle presentation, review period. Checked 2026-10-12.\n- Designated Vehicle-Maintenance Business Rules; Superior Vehicle-Maintenance Operator Certification Rules (inspection-equipment and management-organisation standards).\n\nChecked on 2026-10-12. The provisions were checked against the e-Gov XML and the requirements against MLIT pages, but the full text of each page could not be fully retrieved. The number of validity days for the conformity certificate, exact equipment dimensions and lists, the detailed vehicle-inspector qualification requirements, and the fees and forms are unverified. Reconfirm with the competent Transport Bureau's latest guidance before applying.\n\nThis is general information and does not guarantee the grant of designation, required documents, the review period or inspector qualifications. Human qualified professionals and the responsible authority assess individual matters after checking the records. Written by [浦松 丈二](https://luck428.com/about/uramatsu), administrative scrivener and licensed real-estate transaction specialist.",
+        "faq": [
+          {
+            "question": "If I hold certification, is designation unnecessary?",
+            "answer": "Certification is the qualification to perform specified maintenance; designation is the qualification to inspect in-house and issue a conformity certificate. You need designation to inspect in-house and waive presenting the vehicle, and certification is its prerequisite."
+          },
+          {
+            "question": "Does designation mean I no longer go to the State inspection site?",
+            "answer": "Submitting the conformity certificate waives presenting the vehicle for continuing inspection and the like. It is operated within State audits, extraordinary-inspection cases and issuance restrictions, so not all inspection authority transfers."
+          },
+          {
+            "question": "Can anyone become a vehicle inspector?",
+            "answer": "Requirements include at least one year of experience as a maintenance supervisor and completed training (six months for a first-class vehicle mechanic). The inspector is appointed per workshop and notified to the Director-General. Confirm the details in the latest examination and training guidance."
+          },
+          {
+            "question": "Where is the designation application filed and how long does it take?",
+            "answer": "File it with the Transport Branch Office that has jurisdiction over the workshop; after the Branch Office's formal review and the District Transport Bureau's substantive review, the Director-General decides. Per MLIT guidance, roughly 45 days from filing."
+          }
+        ]
+      },
+      "zh-tw": {
+        "title": "成為指定汽車整備事業（民間車檢場）：與認證的差異及設備、人員要件",
+        "excerpt": "認證是「可進行特定整備」的資格，指定（民間車檢場）則是由自家汽車檢查員檢查並核發保安基準適合證的資格。指定以取得認證為前提，另加完成檢查場等設備與汽車檢查員的選任。",
+        "category": "許可證照手續（行政書士實務）",
+        "content": "**結論（先講重點）**：認證是「可進行特定整備」的資格，指定（民間車檢場）是由自家汽車檢查員檢查並核發保安基準適合證的資格。指定以取得認證為前提，另外加上完成檢查場等設備與汽車檢查員的選任。\n\n**資訊確認日：2026年10月12日**。本文寫給營運特定整備認證工廠、想升級為指定汽車整備事業（民間車檢場）並自行檢查的業者，整理與認證的差異及設備、人員要件。認證本身的流程請見[汽車特定整備的認證申請](https://luck428.com/legal/column/jidosha-tokutei-seibi-ninsho-shinsei-nagare-youken)。\n\n## 認證工廠與指定工廠（民間車檢場）有何不同？\n\n依據為道路運送車輛法（昭和26年法律第185號）。認證與指定是不同處分，取得順序與角色皆不同。\n\n| | 認證（認證工廠） | 指定（指定工廠・民間車檢場） |\n| --- | --- | --- |\n| 依據 | 第78條第1項 | 第94條之2第1項 |\n| 取得內容 | 地方運輸局長的認證 | 地方運輸局長的指定（須先有認證） |\n| 可做事項 | 特定整備（點檢・整備） | 另可自行檢查並核發保安基準適合證 |\n| 車檢時的現車 | 須將車輛送至運輸支局等檢查場 | 提交保安基準適合證可省略現車提示 |\n\n特定整備在2020年（令和2年）4月1日由原本的分解整備擴大範圍，加入與自動駕駛相關的電子控制裝置整備。認證是進行此特定整備的資格，指定則由認證工廠中符合一定基準者申請取得。\n\n## 取得指定後，自家可做到什麼程度？\n\n指定工廠對於由汽車檢查員檢查、確認符合保安基準的車輛，可核發保安基準適合證與保安基準適合標章（第94條之5）。將該證提交運輸支局・汽車檢查登錄事務所等，即可在續檢等時省略向國家檢查場提示現車。\n\n但這並非「國家把檢查權限移轉給民間」。指定是將部分檢查委由民間辦理的制度，須在國家稽核、對應受臨時檢查車輛的核發限制等框架內運作。保安基準適合證與標章附有有效期間（第94條之5第6項），天數請以最新的運輸局說明確認。\n\n## 設備、工員、汽車檢查員的要件為何？\n\n依國土交通省說明，指定除取得認證外，另需下列事項。具體尺寸與機器清單請以告示、規則及主管運輸局最新說明確認。\n\n| 區分 | 主要內容 |\n| --- | --- |\n| 設備・技術・管理組織 | 符合優良汽車整備事業者認定規則所定水準 |\n| 檢查設備 | 具備指定汽車整備事業規則所定檢查設備 |\n| 設施 | 室內作業場外，另需車輛置場與完成檢查場 |\n| 工員 | 4人以上（處理大型車時依條件需5人以上）；其中3分之1以上須持汽車整備士資格 |\n| 汽車檢查員 | 依第94條之4於各事業場選任；須有整備主任者1年以上實務經驗並修畢教習（1級汽車整備士為6個月以上） |\n\n大型車指車輛總重量8公噸以上、最大載重量5公噸以上，或乘車定員30人以上的車輛。汽車檢查員的選任・變更須於15日內向地方運輸局長申報（第94條之4第3項）。資格要件細節請以最新的國家考試與教習說明確認。\n\n## 指定申請向誰提出、需要哪些文件？\n\n| 項目 | 內容 |\n| --- | --- |\n| 提出對象 | 事業場所在都道府縣的運輸支局 |\n| 審查流程 | 運輸支局形式審查 → 地方運輸局內容審查 → 地方運輸局長決定指定 |\n| 標準處理期間 | 依國土交通省說明，自申請至決定約45日 |\n\n申請書須附設備明細、檢查機器、汽車檢查員選任、管理組織等文件。表格、附件與規費以主管運輸局最新說明為準。上表並非適用於所有事業場的固定文件清單。\n\n## 取得指定後須遵守哪些義務？（適正化・帳簿・保安基準適合證）\n\n取得指定後，須持續適正地執行檢查、整備記錄與帳簿、適正核發保安基準適合證。汽車檢查員若有不正行為，地方運輸局長可命令解任（第94條之4第4項），自解任起2年內不得擔任檢查員（同條第5項）。指定本身在不再符合基準時亦可能被撤銷等。\n\n| 委任對象 | 負責範圍 |\n| --- | --- |\n| 四葉行政書士事務所 | 指定申請文件製作與手續說明 |\n| 地方運輸局・運輸支局 | 汽車檢查員選任要件之確認、指定審查 |\n| 設備業者 | 檢查用機器・完成檢查場・建物之設置 |\n| 司法書士 | 法人之設立・變更登記 |\n| 四葉社會保險勞務士事務所 | 檢查員之加班・班表等勞務 |\n\n四葉行政書士事務所、四葉社會保險勞務士事務所、四葉不動産株式会社各為不同事業體，皆以獨立的事業體受任。請與各領域負責人分別簽約，由各受任者直接請款與收款。本事務所不收取介紹費。運輸局・運輸支局為行政手續窗口，並非受任契約的對象。\n\n請參閱[許可證照支援](https://luck428.com/legal/services)、[受任流程](https://luck428.com/legal/nagare)與[報酬金額表](https://luck428.com/legal/ryokin)。\n\n## 常見問題\n\n**Q. 已有認證，是否就不需要指定？**\nA. 認證是進行特定整備的資格，指定是自行檢查並核發適合證的資格。若要自行檢查並省略現車提示即需指定，認證則為其前提。\n\n**Q. 取得指定後是否就不必前往國家檢查場？**\nA. 提交保安基準適合證即可在續檢等時省略現車提示。但須在國家稽核、臨時檢查及核發限制等框架內運作，並非所有檢查權限皆移轉。\n\n**Q. 任何人都能擔任汽車檢查員嗎？**\nA. 須有整備主任者1年以上實務經驗並修畢教習（1級汽車整備士為6個月以上）等要件，於各事業場選任並向地方運輸局長申報。細節請以最新國家考試與教習說明確認。\n\n**Q. 指定申請向哪裡提出、需時多久？**\nA. 向事業場所在的運輸支局提出，經運輸支局形式審查與地方運輸局內容審查後，由地方運輸局長決定。依國土交通省說明，自申請至決定約45日。\n\n## 本文出處（第一手資訊）\n\n- [e-Gov・道路運送車輛法](https://laws.e-gov.go.jp/law/326AC0000000185)：第78條（認證）、第94條之2（指定）、第94條之4（汽車檢查員）、第94條之5（保安基準適合證）。\n- 國土交通省：[認證與指定的差異](https://www.mlit.go.jp/jidosha/ninshoutoshiteinochigai.html)、[指定汽車整備事業](https://www.mlit.go.jp/jidosha/shiteiseibi.html)：要件、現車提示省略、審查期間。確認日2026-10-12。\n- 指定汽車整備事業規則・優良汽車整備事業者認定規則（檢查設備與設備技術管理組織之基準）。\n\n確認日2026-10-12。條文以e-Gov法令檢索XML、要件以國土交通省頁面核對，惟各頁面全文未能完整取得。保安基準適合證有效期間的天數、設備具體尺寸與機器清單、汽車檢查員資格要件細節、規費與表格均未經查證。申請前請以主管運輸局最新說明再次確認。\n\n本文為一般資訊提供，不保證指定之准否、必要文件、審查期間或檢查員資格。個別判斷由具資格的專業人員與主管機關查閱資料後進行。撰文：[浦松 丈二](https://luck428.com/about/uramatsu)（行政書士・宅地建物取引士）。",
+        "faq": [
+          {
+            "question": "已有認證，是否就不需要指定？",
+            "answer": "認證是進行特定整備的資格，指定是自行檢查並核發適合證的資格。若要自行檢查並省略現車提示即需指定，認證則為其前提。"
+          },
+          {
+            "question": "取得指定後是否就不必前往國家檢查場？",
+            "answer": "提交保安基準適合證即可在續檢等時省略現車提示。但須在國家稽核、臨時檢查及核發限制等框架內運作，並非所有檢查權限皆移轉。"
+          },
+          {
+            "question": "任何人都能擔任汽車檢查員嗎？",
+            "answer": "須有整備主任者1年以上實務經驗並修畢教習（1級汽車整備士為6個月以上）等要件，於各事業場選任並向地方運輸局長申報。細節請以最新國家考試與教習說明確認。"
+          },
+          {
+            "question": "指定申請向哪裡提出、需時多久？",
+            "answer": "向事業場所在的運輸支局提出，經運輸支局形式審查與地方運輸局內容審查後，由地方運輸局長決定。依國土交通省說明，自申請至決定約45日。"
+          }
+        ]
+      },
+      "zh": {
+        "title": "成为指定汽车整备事业（民间车检场）：与认证的差异及设备、人员要件",
+        "excerpt": "认证是“可进行特定整备”的资格，指定（民间车检场）则是由自家汽车检查员检查并核发保安基准适合证的资格。指定以取得认证为前提，另加完成检查场等设备与汽车检查员的选任。",
+        "category": "许可证照手续（行政书士实务）",
+        "content": "**结论（先讲重点）**：认证是“可进行特定整备”的资格，指定（民间车检场）是由自家汽车检查员检查并核发保安基准适合证的资格。指定以取得认证为前提，另外加上完成检查场等设备与汽车检查员的选任。\n\n**信息确认日：2026年10月12日**。本文写给运营特定整备认证工厂、想升级为指定汽车整备事业（民间车检场）并自行检查的业者，整理与认证的差异及设备、人员要件。认证本身的流程请见[汽车特定整备的认证申请](https://luck428.com/legal/column/jidosha-tokutei-seibi-ninsho-shinsei-nagare-youken)。\n\n## 认证工厂与指定工厂（民间车检场）有何不同？\n\n依据为道路运送车辆法（昭和26年法律第185号）。认证与指定是不同处分，取得顺序与角色皆不同。\n\n| | 认证（认证工厂） | 指定（指定工厂・民间车检场） |\n| --- | --- | --- |\n| 依据 | 第78条第1项 | 第94条之2第1项 |\n| 取得内容 | 地方运输局长的认证 | 地方运输局长的指定（须先有认证） |\n| 可做事项 | 特定整备（点检・整备） | 另可自行检查并核发保安基准适合证 |\n| 车检时的现车 | 须将车辆送至运输支局等检查场 | 提交保安基准适合证可省略现车提示 |\n\n特定整备在2020年（令和2年）4月1日由原本的分解整备扩大范围，加入与自动驾驶相关的电子控制装置整备。认证是进行此特定整备的资格，指定则由认证工厂中符合一定基准者申请取得。\n\n## 取得指定后，自家可做到什么程度？\n\n指定工厂对于由汽车检查员检查、确认符合保安基准的车辆，可核发保安基准适合证与保安基准适合标章（第94条之5）。将该证提交运输支局・汽车检查登录事务所等，即可在续检等时省略向国家检查场提示现车。\n\n但这并非“国家把检查权限移转给民间”。指定是将部分检查委由民间办理的制度，须在国家稽核、对应受临时检查车辆的核发限制等框架内运作。保安基准适合证与标章附有有效期间（第94条之5第6项），天数请以最新的运输局说明确认。\n\n## 设备、工员、汽车检查员的要件为何？\n\n依国土交通省说明，指定除取得认证外，另需下列事项。具体尺寸与机器清单请以告示、规则及主管运输局最新说明确认。\n\n| 区分 | 主要内容 |\n| --- | --- |\n| 设备・技术・管理组织 | 符合优良汽车整备事业者认定规则所定水准 |\n| 检查设备 | 具备指定汽车整备事业规则所定检查设备 |\n| 设施 | 室内作业场外，另需车辆置场与完成检查场 |\n| 工员 | 4人以上（处理大型车时依条件需5人以上）；其中3分之1以上须持汽车整备士资格 |\n| 汽车检查员 | 依第94条之4于各事业场选任；须有整备主任者1年以上实务经验并修毕教习（1级汽车整备士为6个月以上） |\n\n大型车指车辆总重量8公吨以上、最大载重量5公吨以上，或乘车定员30人以上的车辆。汽车检查员的选任・变更须于15日内向地方运输局长申报（第94条之4第3项）。资格要件细节请以最新的国家考试与教习说明确认。\n\n## 指定申请向谁提出、需要哪些文件？\n\n| 项目 | 内容 |\n| --- | --- |\n| 提出对象 | 事业场所在都道府县的运输支局 |\n| 审查流程 | 运输支局形式审查 → 地方运输局内容审查 → 地方运输局长决定指定 |\n| 标准处理期间 | 依国土交通省说明，自申请至决定约45日 |\n\n申请书须附设备明细、检查机器、汽车检查员选任、管理组织等文件。表格、附件与规费以主管运输局最新说明为准。上表并非适用于所有事业场的固定文件清单。\n\n## 取得指定后须遵守哪些义务？（适正化・账簿・保安基准适合证）\n\n取得指定后，须持续适正地执行检查、整备记录与账簿、适正核发保安基准适合证。汽车检查员若有不正行为，地方运输局长可命令解任（第94条之4第4项），自解任起2年内不得担任检查员（同条第5项）。指定本身在不再符合基准时亦可能被撤销等。\n\n| 委任对象 | 负责范围 |\n| --- | --- |\n| 四叶行政书士事务所 | 指定申请文件制作与手续说明 |\n| 地方运输局・运输支局 | 汽车检查员选任要件之确认、指定审查 |\n| 设备业者 | 检查用机器・完成检查场・建物之设置 |\n| 司法书士 | 法人之设立・变更登记 |\n| 四叶社会保险劳务士事务所 | 检查员之加班・排班等劳务 |\n\n四叶行政书士事务所、四叶社会保险劳务士事务所、四叶不动产株式会社各为不同事业体，皆以独立的事业体受任。请与各领域负责人分别签约，由各受任者直接请款与收款。本事务所不收取介绍费。运输局・运输支局为行政手续窗口，并非受任契约的对象。\n\n请参阅[许可证照支援](https://luck428.com/legal/services)、[受任流程](https://luck428.com/legal/nagare)与[报酬金额表](https://luck428.com/legal/ryokin)。\n\n## 常见问题\n\n**Q. 已有认证，是否就不需要指定？**\nA. 认证是进行特定整备的资格，指定是自行检查并核发适合证的资格。若要自行检查并省略现车提示即需指定，认证则为其前提。\n\n**Q. 取得指定后是否就不必前往国家检查场？**\nA. 提交保安基准适合证即可在续检等时省略现车提示。但须在国家稽核、临时检查及核发限制等框架内运作，并非所有检查权限皆移转。\n\n**Q. 任何人都能担任汽车检查员吗？**\nA. 须有整备主任者1年以上实务经验并修毕教习（1级汽车整备士为6个月以上）等要件，于各事业场选任并向地方运输局长申报。细节请以最新国家考试与教习说明确认。\n\n**Q. 指定申请向哪里提出、需时多久？**\nA. 向事业场所在的运输支局提出，经运输支局形式审查与地方运输局内容审查后，由地方运输局长决定。依国土交通省说明，自申请至决定约45日。\n\n## 本文出处（第一手信息）\n\n- [e-Gov・道路运送车辆法](https://laws.e-gov.go.jp/law/326AC0000000185)：第78条（认证）、第94条之2（指定）、第94条之4（汽车检查员）、第94条之5（保安基准适合证）。\n- 国土交通省：[认证与指定的差异](https://www.mlit.go.jp/jidosha/ninshoutoshiteinochigai.html)、[指定汽车整备事业](https://www.mlit.go.jp/jidosha/shiteiseibi.html)：要件、现车提示省略、审查期间。确认日2026-10-12。\n- 指定汽车整备事业规则・优良汽车整备事业者认定规则（检查设备与设备技术管理组织之基准）。\n\n确认日2026-10-12。条文以e-Gov法令检索XML、要件以国土交通省页面核对，惟各页面全文未能完整取得。保安基准适合证有效期间的天数、设备具体尺寸与机器清单、汽车检查员资格要件细节、规费与表格均未经查证。申请前请以主管运输局最新说明再次确认。\n\n本文为一般信息提供，不保证指定之准否、必要文件、审查期间或检查员资格。个别判断由具资格的专业人员与主管机关查阅资料后进行。撰文：[浦松 丈二](https://luck428.com/about/uramatsu)（行政书士・宅地建物取引士）。",
+        "faq": [
+          {
+            "question": "已有认证，是否就不需要指定？",
+            "answer": "认证是进行特定整备的资格，指定是自行检查并核发适合证的资格。若要自行检查并省略现车提示即需指定，认证则为其前提。"
+          },
+          {
+            "question": "取得指定后是否就不必前往国家检查场？",
+            "answer": "提交保安基准适合证即可在续检等时省略现车提示。但须在国家稽核、临时检查及核发限制等框架内运作，并非所有检查权限皆移转。"
+          },
+          {
+            "question": "任何人都能担任汽车检查员吗？",
+            "answer": "须有整备主任者1年以上实务经验并修毕教习（1级汽车整备士为6个月以上）等要件，于各事业场选任并向地方运输局长申报。细节请以最新国家考试与教习说明确认。"
+          },
+          {
+            "question": "指定申请向哪里提出、需时多久？",
+            "answer": "向事业场所在的运输支局提出，经运输支局形式审查与地方运输局内容审查后，由地方运输局长决定。依国土交通省说明，自申请至决定约45日。"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "business": "legal",
+    "slug": "souzoku-saimu-hoshou-saimu-chosa-junpro-kikan",
+    "title": "相続する借金・保証債務の調べ方｜単純承認・限定承認・放棄と熟慮期間",
+    "date": "2026-10-12",
+    "category": "相続の手続き（行政書士の実務から）",
+    "excerpt": "相続する借金・連帯保証の調べ方を、契約書・督促状・通帳・信用情報から整理します。単純承認・限定承認・相続放棄の選び方、民法第915条の3か月の熟慮期間と伸長、最高裁昭和59年判決の起算点、家裁申述は行政書士の業務範囲外である点と依頼先の分け方を解説します。",
+    "content": "**結論（先に要点）**：相続する借金・保証債務は、契約書・督促状・通帳・信用情報で調べます。単純承認・限定承認・相続放棄の選択には民法第915条の3か月の熟慮期間があり、間に合わなければ家庭裁判所に伸長を申し立てます。家裁への申述・申立書類の作成は行政書士の業務範囲外です。\n\n**情報確認日：2026年10月12日**。本記事は、プラス財産よりマイナス（借金・連帯保証）が多いかもしれない相続で、何をどう調べ、どの手続を誰に頼むかを整理します。制度の全体像は[相続放棄・限定承認の基本](/legal/column/souzoku-hoki-gentei-shonin)、財産の棚卸しは[相続財産目録の作り方](/legal/column/souzoku-zaisan-mokuroku)をご覧ください。\n\n## 相続する借金や保証債務は、どうやって調べるのか？\n\n被相続人の債務は一か所にまとまっていません。次の資料を突き合わせて洗い出します。\n\n| 調べる先 | 分かること |\n| --- | --- |\n| 契約書・金銭消費貸借証書・保証契約書 | 借入・保証の相手と金額 |\n| 郵便物（請求書・督促状・催告書） | 継続中の債務や滞納 |\n| 預貯金通帳・口座の引落し履歴 | 返済・リース・保証料の支払 |\n| 信用情報機関への開示請求 | 貸金・クレジット・銀行取引の登録情報 |\n\n信用情報は、CIC・JICC・全国銀行個人信用情報センターに登録されています。法定相続人が亡くなった方の情報の開示を請求できる場合がありますが、必要書類（戸籍など）や可否・方法は各機関で異なります。請求前に各機関の最新案内で確認してください。民法第915条第2項により、相続人は承認・放棄の前に相続財産を調査できます。\n\n## 連帯保証人の地位は相続されるのか？\n\n通常の保証債務・連帯保証債務は金銭債務として相続人に承継され、法定相続分に応じて分かれるのが原則です。一方、限度額や期間を定めない継続的な保証には別の扱いがあります。\n\n| 保証の種類 | 相続の扱い（原則） |\n| --- | --- |\n| 特定の債務の保証・連帯保証 | 承継される |\n| 個人根保証契約 | 主たる債務者または保証人の死亡で元本が確定（民法第465条の4第1項第3号）。死亡時までの確定分を承継 |\n| 身元保証 | 一身専属とされ、原則として承継されない（確定済みの具体的賠償は別） |\n\n主たる債務者の委託を受けた保証人は、債権者に残額等の情報提供を請求できます（民法第458条の2。2020年〔令和2年〕4月1日施行）。被相続人が生前に保証していた債務の残高確認の手がかりになります。保証の具体的な効力や範囲の判断は弁護士に相談してください。\n\n## 単純承認・限定承認・相続放棄はどう選ぶのか？\n\n| 選択 | 内容 | 根拠 |\n| --- | --- | --- |\n| 単純承認 | 権利義務を無限に承継。法定単純承認となる場合がある | 民法第920条・第921条 |\n| 限定承認 | 得た財産の限度でのみ債務・遺贈を弁済 | 民法第922条〜第924条 |\n| 相続放棄 | 初めから相続人でなかったものとみなす | 民法第938条・第939条 |\n\n限定承認は、共同相続人の全員が共同してのみできます（第923条）。第915条第1項の期間内に相続財産の目録を作成して家庭裁判所に提出し、限定承認する旨を申述します（第924条）。相続放棄は家庭裁判所に申述します（第938条）。財産を処分したり、期間内に手続をしなかったりすると、法定単純承認になることがあります（第921条）。相続放棄をした人が放棄時に財産を現に占有していれば、引渡しまで保存義務を負います（第940条。令和3年改正・2023年〔令和5年〕4月1日施行）。\n\n## 3か月の熟慮期間はいつから数えるのか？間に合わないときは？\n\n熟慮期間は、自己のために相続の開始があったことを知った時から3か月です（第915条第1項）。期間内に判断できないときは、家庭裁判所に期間の伸長を申し立てられます。\n\n起算点には例外があります。最高裁昭和59年4月27日判決は、相続財産が全く存在しないと信じ、そう信じたことに相当な理由がある場合には、相続財産の全部または一部の存在を認識した時または通常認識しうべき時から起算するとしました。ただし適用の可否は事案ごとの評価であり、断定はできません。後から多額の借金が判明したケースの扱いは、司法書士・弁護士に相談してください。\n\n## 誰に何を頼むのか？（家裁への申述・債務整理の振り先）\n\n| 依頼先 | 担当する範囲 |\n| --- | --- |\n| 四葉行政書士事務所 | 相続財産・債務の調査、相続財産目録の作成支援 |\n| 司法書士・弁護士 | 相続放棄・限定承認・熟慮期間伸長の家裁への申述・申立書類の作成 |\n| 弁護士 | 債務整理・訴訟、保証債務の効力や範囲の判断 |\n| 税理士 | 相続税・みなし譲渡所得の試算 |\n| 司法書士 | 相続登記 |\n\n**家庭裁判所に提出する申述書・申立書の作成は、行政書士の業務範囲外です。** 四葉行政書士事務所、四葉社会保険労務士事務所、四葉不動産株式会社はそれぞれ別事業体で、独立した事業体として受任します。各分野の担当者と別々にご契約いただき、各受任者が直接請求・入金を受けます。当事務所は紹介料を受け取りません。\n\n[相続手続サポート](/legal/services/inheritance)、[受任の流れ](/legal/nagare)、[報酬額表](/legal/ryokin)をご確認ください。相続不動産の売却は別契約の[相続不動産相談](/souzoku)で扱います。\n\n## よくある質問\n\n**Q. 借金の有無はどう調べればよいですか？**\nA. 契約書・督促状・通帳の引落しを確認し、信用情報機関（CIC・JICC・全国銀行個人信用情報センター）への開示も検討します。法定相続人が亡くなった方の情報を請求できる場合がありますが、必要書類や方法は各機関の最新案内で確認してください。\n\n**Q. 連帯保証も相続されますか？**\nA. 通常の保証・連帯保証は原則として承継されます。個人根保証契約は保証人等の死亡で元本が確定し、身元保証は原則承継されません。具体的な効力・範囲は弁護士に相談してください。\n\n**Q. 3か月を過ぎたら必ず単純承認ですか？**\nA. 期間徒過は法定単純承認の一事由ですが、起算点には最高裁昭和59年4月27日判決の例外があり、間に合わないときは家庭裁判所への期間伸長の申立てもあります。適用の可否は事案ごとです。\n\n**Q. 相続放棄の書類は行政書士に頼めますか？**\nA. 家庭裁判所に提出する申述書・申立書の作成は行政書士の業務範囲外で、司法書士・弁護士が担います。行政書士は相続財産・債務の調査と財産目録の作成支援を行います。\n\n## この記事の出典（一次情報）\n\n- [e-Gov・民法](https://laws.e-gov.go.jp/law/129AC0000000089)：第915条、第920条、第921条、第922条、第923条、第924条、第938条、第939条、第940条、第458条の2、第465条の4。\n- [裁判所・相続の放棄の申述](https://www.courts.go.jp/saiban/syurui/syurui_kazi/kazi_06_13/index.html)、[相続の承認又は放棄の期間の伸長](https://www.courts.go.jp/saiban/syurui/syurui_kazi/kazi_06_25/index.html)：手続案内。確認日2026-10-12。\n- 最高裁判所昭和59年4月27日判決（熟慮期間の起算点）。\n- 信用情報機関（CIC・JICC・全国銀行個人信用情報センター）の開示請求案内：確認日2026-10-12。\n\n確認日2026-10-12。条文はe-Gov法令検索で照合しましたが、裁判所・信用情報機関の各ページは全文を取得しきれていません。法定相続人による信用情報の開示の可否・必要書類、最高裁昭和59年判決の射程、各法令の最終改正日は未検証です。手続前に各機関・家庭裁判所の最新案内で再確認してください。\n\n本記事は一般的な情報提供であり、債務の有無、承認・放棄の選択、熟慮期間の起算、手続結果を保証しません。個別の判断は人間の資格者が資料を確認して行います。執筆は[浦松 丈二](/about/uramatsu)（行政書士・宅地建物取引士）です。",
+    "status": "published",
+    "author": {
+      "name": "浦松 丈二",
+      "title": "行政書士・宅地建物取引士（四葉行政書士事務所／四葉不動産株式会社）"
+    },
+    "keywords": [
+      "相続 借金 保証債務 調べ方",
+      "相続放棄 熟慮期間 3か月 起算点",
+      "限定承認 民法922条 924条 方式",
+      "連帯保証 相続 根保証 465条の4",
+      "信用情報 開示 法定相続人 CIC JICC",
+      "相続財産 債務調査 行政書士"
+    ],
+    "tags": [
+      "相続放棄",
+      "限定承認",
+      "熟慮期間",
+      "保証債務",
+      "相続財産調査",
+      "行政書士"
+    ],
+    "locales": [
+      "ja",
+      "en",
+      "zh-tw",
+      "zh"
+    ],
+    "faq": [
+      {
+        "question": "借金の有無はどう調べればよいですか？",
+        "answer": "契約書・督促状・通帳の引落しを確認し、信用情報機関（CIC・JICC・全国銀行個人信用情報センター）への開示も検討します。法定相続人が亡くなった方の情報を請求できる場合がありますが、必要書類や方法は各機関の最新案内で確認してください。"
+      },
+      {
+        "question": "連帯保証も相続されますか？",
+        "answer": "通常の保証・連帯保証は原則として承継されます。個人根保証契約は保証人等の死亡で元本が確定し、身元保証は原則承継されません。具体的な効力・範囲は弁護士に相談してください。"
+      },
+      {
+        "question": "3か月を過ぎたら必ず単純承認ですか？",
+        "answer": "期間徒過は法定単純承認の一事由ですが、起算点には最高裁昭和59年4月27日判決の例外があり、間に合わないときは家庭裁判所への期間伸長の申立てもあります。適用の可否は事案ごとです。"
+      },
+      {
+        "question": "相続放棄の書類は行政書士に頼めますか？",
+        "answer": "家庭裁判所に提出する申述書・申立書の作成は行政書士の業務範囲外で、司法書士・弁護士が担います。行政書士は相続財産・債務の調査と財産目録の作成支援を行います。"
+      }
+    ],
+    "translations": {
+      "en": {
+        "title": "How to investigate inherited debts and guarantee obligations: simple and qualified acceptance, renunciation, and the deliberation period",
+        "excerpt": "Investigate inherited debts and guarantees through contracts, demand letters, bankbooks and credit information. The choice among simple acceptance, qualified acceptance and renunciation has a three-month deliberation period under Civil Code Article 915; preparing family-court filings is outside an administrative scrivener's scope.",
+        "category": "Inheritance Procedures (From the Practice of an Administrative Scrivener)",
+        "content": "**In short:** investigate inherited debts and guarantee obligations through contracts, demand letters, bankbooks and credit information. The choice among simple acceptance, qualified acceptance and renunciation has a three-month deliberation period under Civil Code Article 915; if time runs short, apply to the family court for an extension. Preparing the family-court declaration and petition documents is outside an administrative scrivener's scope.\n\n**Information checked: 12 October 2026.** This article covers what to investigate, and who to engage for which procedure, in an inheritance where the minus side (debts, guarantees) may exceed the plus side. For the overall framework, see the [basics of renunciation and qualified acceptance](https://luck428.com/legal/column/souzoku-hoki-gentei-shonin); for taking stock of assets, see [how to make an estate inventory](https://luck428.com/legal/column/souzoku-zaisan-mokuroku).\n\n## How do you investigate inherited debts and guarantee obligations?\n\nThe deceased's debts are not gathered in one place. Cross-check the following records.\n\n| Where to check | What it reveals |\n| --- | --- |\n| Contracts, loan deeds, guarantee agreements | The counterparties and amounts of loans and guarantees |\n| Mail (invoices, demand and dunning letters) | Ongoing debts or arrears |\n| Bankbooks and direct-debit history | Repayments, lease and guarantee-fee payments |\n| Disclosure requests to credit agencies | Registered loan, credit and bank-transaction information |\n\nCredit information is registered with CIC, JICC and the Japanese Bankers Association Personal Credit Information Center. Legal heirs may be able to request disclosure of a deceased person's information, but the required documents (such as family registers) and whether and how it can be done differ by agency; confirm with each agency's latest guidance before applying. Under Civil Code Article 915(2), an heir may investigate the estate before accepting or renouncing.\n\n## Is a joint and several guarantor's position inherited?\n\nOrdinary guarantee and joint-and-several guarantee obligations are monetary debts, in principle succeeded to by heirs and divided by statutory shares. Continuing guarantees without a cap or term are treated differently.\n\n| Type of guarantee | Treatment on inheritance (in principle) |\n| --- | --- |\n| Guarantee / joint guarantee of a specific debt | Succeeded to |\n| Individual revolving guarantee (kojin ne-hosho) | The principal is fixed on the death of the principal debtor or guarantor (Article 465-4(1)(iii)); the amount fixed up to death is succeeded to |\n| Personal reference guarantee (mimoto hosho) | Treated as personal and, in principle, not succeeded to (fixed, specific damages are separate) |\n\nA guarantor who gave the guarantee at the principal debtor's request may ask the creditor for information such as the outstanding balance (Article 458-2; in force 1 April 2020). This helps confirm the balance of debts the deceased guaranteed in life. Consult a lawyer on the specific effect and scope of a guarantee.\n\n## How do you choose among simple acceptance, qualified acceptance and renunciation?\n\n| Choice | Content | Basis |\n| --- | --- | --- |\n| Simple acceptance | Unlimited succession to rights and duties; statutory simple acceptance may arise | Articles 920, 921 |\n| Qualified acceptance | Pay debts and bequests only up to the assets received | Articles 922–924 |\n| Renunciation | Deemed never to have been an heir | Articles 938, 939 |\n\nQualified acceptance can be made only jointly by all co-heirs (Article 923). Within the Article 915(1) period, prepare an estate inventory, submit it to the family court, and declare qualified acceptance (Article 924). Renunciation is declared to the family court (Article 938). Disposing of assets, or failing to act within the period, may result in statutory simple acceptance (Article 921). A person who renounces and actually possesses estate property at the time of renunciation bears a duty to preserve it until delivery (Article 940; amended in 2021, in force 1 April 2023).\n\n## When does the three-month deliberation period start, and what if you cannot meet it?\n\nThe deliberation period is three months from when you learn that the inheritance has begun for you (Article 915(1)). If you cannot decide within it, you can apply to the family court to extend the period.\n\nThere is an exception to the start point. The Supreme Court judgment of 27 April 1984 held that, where an heir believed no estate existed and had reasonable grounds for that belief, the period runs from when the heir recognised, or could ordinarily have recognised, the existence of all or part of the estate. Whether it applies is assessed case by case and cannot be asserted categorically. On cases where large debts come to light later, consult a judicial scrivener or lawyer.\n\n## Who do you ask for what? (family-court declarations; where to refer debt restructuring)\n\n| Who to engage | Role |\n| --- | --- |\n| 四葉行政書士事務所 | Investigating the estate and debts; supporting preparation of the estate inventory |\n| Judicial scrivener / lawyer | Preparing family-court declarations and petitions for renunciation, qualified acceptance and period extension |\n| Lawyer | Debt restructuring and litigation; assessing the effect and scope of guarantees |\n| Tax accountant | Estimating inheritance tax and deemed transfer income |\n| Judicial scrivener | Inheritance registration |\n\n**Preparing declaration and petition documents submitted to the family court is outside an administrative scrivener's scope.** 四葉行政書士事務所, 四葉社会保険労務士事務所 and 四葉不動産株式会社 are separate, independent businesses (独立した事業体). Each field is engaged under a separate contract with its responsible provider, who bills and receives payment directly. Our office receives no referral fees.\n\nSee [inheritance support](https://luck428.com/legal/services/inheritance), the [engagement process](https://luck428.com/legal/nagare) and [fees](https://luck428.com/legal/ryokin). Sale of inherited real estate is handled separately through the [inherited-property consultation service](https://luck428.com/souzoku).\n\n## FAQ\n\n**Q. How do I check whether there are debts?**\nA. Check contracts, demand letters and direct debits in bankbooks, and consider disclosure from the credit agencies (CIC, JICC and the Japanese Bankers Association center). Legal heirs may be able to request a deceased person's information, but confirm the required documents and method with each agency's latest guidance.\n\n**Q. Are joint guarantees also inherited?**\nA. Ordinary guarantees and joint guarantees are in principle succeeded to. An individual revolving guarantee has its principal fixed on the guarantor's (or debtor's) death, and a personal reference guarantee is in principle not succeeded to. Consult a lawyer on the specific effect and scope.\n\n**Q. Is it always simple acceptance once three months pass?**\nA. Lapse of the period is one ground for statutory simple acceptance, but there is the exception in the Supreme Court judgment of 27 April 1984 on the start point, and an application to the family court to extend the period if you cannot meet it. Whether it applies is case by case.\n\n**Q. Can I ask an administrative scrivener for the renunciation documents?**\nA. Preparing the declaration and petition documents submitted to the family court is outside an administrative scrivener's scope; a judicial scrivener or lawyer handles them. An administrative scrivener investigates the estate and debts and supports preparation of the estate inventory.\n\n## Sources (Primary Information)\n\n- [e-Gov: Civil Code](https://laws.e-gov.go.jp/law/129AC0000000089): Articles 915, 920, 921, 922, 923, 924, 938, 939, 940, 458-2 and 465-4.\n- Courts in Japan: [declaration of renunciation of inheritance](https://www.courts.go.jp/saiban/syurui/syurui_kazi/kazi_06_13/index.html) and [extension of the period for acceptance or renunciation](https://www.courts.go.jp/saiban/syurui/syurui_kazi/kazi_06_25/index.html): procedural guidance. Checked 2026-10-12.\n- Supreme Court judgment of 27 April 1984 (start point of the deliberation period).\n- Disclosure-request guidance of the credit agencies (CIC, JICC and the Japanese Bankers Association Personal Credit Information Center): checked 2026-10-12.\n\nChecked on 2026-10-12. The provisions were checked against e-Gov, but the full text of the court and credit-agency pages could not be fully retrieved. Whether legal heirs can obtain credit information and the required documents, the reach of the 1984 Supreme Court judgment, and the latest amendment dates of each statute are unverified. Reconfirm with each agency and the family court before proceeding.\n\nThis is general information and does not guarantee the existence of debts, the choice of acceptance or renunciation, the start of the deliberation period, or procedural outcomes. Human qualified professionals assess individual matters after checking the records. Written by [浦松 丈二](https://luck428.com/about/uramatsu), administrative scrivener and licensed real-estate transaction specialist.",
+        "faq": [
+          {
+            "question": "How do I check whether there are debts?",
+            "answer": "Check contracts, demand letters and direct debits in bankbooks, and consider disclosure from the credit agencies (CIC, JICC and the Japanese Bankers Association center). Legal heirs may be able to request a deceased person's information, but confirm the required documents and method with each agency's latest guidance."
+          },
+          {
+            "question": "Are joint guarantees also inherited?",
+            "answer": "Ordinary guarantees and joint guarantees are in principle succeeded to. An individual revolving guarantee has its principal fixed on the guarantor's (or debtor's) death, and a personal reference guarantee is in principle not succeeded to. Consult a lawyer on the specific effect and scope."
+          },
+          {
+            "question": "Is it always simple acceptance once three months pass?",
+            "answer": "Lapse of the period is one ground for statutory simple acceptance, but there is the exception in the Supreme Court judgment of 27 April 1984 on the start point, and an application to the family court to extend the period if you cannot meet it. Whether it applies is case by case."
+          },
+          {
+            "question": "Can I ask an administrative scrivener for the renunciation documents?",
+            "answer": "Preparing the declaration and petition documents submitted to the family court is outside an administrative scrivener's scope; a judicial scrivener or lawyer handles them. An administrative scrivener investigates the estate and debts and supports preparation of the estate inventory."
+          }
+        ]
+      },
+      "zh-tw": {
+        "title": "如何調查繼承的借款與保證債務：單純承認、限定承認、拋棄與熟慮期間",
+        "excerpt": "繼承的借款與保證債務，可透過契約、催繳通知、存摺與信用資訊調查。單純承認、限定承認、拋棄繼承的選擇有民法第915條的3個月熟慮期間；向家事法院提出的申述・聲請書製作屬行政書士業務範圍外。",
+        "category": "繼承手續（行政書士實務）",
+        "content": "**結論（先講重點）**：繼承的借款與保證債務，可透過契約、催繳通知、存摺與信用資訊調查。單純承認、限定承認、拋棄繼承的選擇有民法第915條的3個月熟慮期間；若來不及，可向家事法院聲請延長。向家事法院提出的申述・聲請書製作，屬行政書士的業務範圍外。\n\n**資訊確認日：2026年10月12日**。本文整理在正資產可能少於負資產（借款・連帶保證）的繼承中，要調查什麼、哪項手續委託給誰。制度全貌請見[拋棄繼承・限定承認的基礎](https://luck428.com/legal/column/souzoku-hoki-gentei-shonin)，財產盤點請見[繼承財產目錄的製作](https://luck428.com/legal/column/souzoku-zaisan-mokuroku)。\n\n## 繼承的借款或保證債務，要如何調查？\n\n被繼承人的債務並非集中於一處。請比對下列資料加以查明。\n\n| 調查對象 | 可得知的事項 |\n| --- | --- |\n| 契約書・金錢消費借貸證書・保證契約書 | 借款・保證的對象與金額 |\n| 郵件（請款單・催繳通知・催告書） | 持續中的債務或欠繳 |\n| 存摺・帳戶扣款紀錄 | 還款・租賃・保證費的支付 |\n| 向信用資訊機構的開示請求 | 貸金・信用卡・銀行交易的登錄資訊 |\n\n信用資訊登錄於CIC・JICC・全國銀行個人信用資訊中心。法定繼承人在部分情形可請求開示已故者的資訊，惟所需文件（如戶籍）與可否、方式因機構而異。請求前請以各機構最新說明確認。依民法第915條第2項，繼承人於承認・拋棄前可調查繼承財產。\n\n## 連帶保證人的地位會被繼承嗎？\n\n一般保證債務・連帶保證債務為金錢債務，原則上由繼承人承繼並依法定應繼分分擔。至於未定上限或期間的持續性保證，另有不同處理。\n\n| 保證種類 | 繼承的處理（原則） |\n| --- | --- |\n| 特定債務的保證・連帶保證 | 會被承繼 |\n| 個人根保證契約 | 因主債務人或保證人死亡而本金確定（民法第465條之4第1項第3款）；承繼至死亡時確定的部分 |\n| 身元保證 | 視為一身專屬，原則上不被承繼（已確定的具體賠償另計） |\n\n受主債務人委託而為保證的保證人，可向債權人請求餘額等資訊提供（民法第458條之2，2020年〔令和2年〕4月1日施行）。這可作為確認被繼承人生前所保證債務餘額的線索。保證的具體效力與範圍之判斷請諮詢律師。\n\n## 單純承認、限定承認、拋棄繼承該如何選擇？\n\n| 選擇 | 內容 | 依據 |\n| --- | --- | --- |\n| 單純承認 | 無限承繼權利義務；在一定情形構成法定單純承認 | 民法第920條・第921條 |\n| 限定承認 | 僅於所得財產限度內清償債務與遺贈 | 民法第922條〜第924條 |\n| 拋棄繼承 | 視為自始即非繼承人 | 民法第938條・第939條 |\n\n限定承認須由共同繼承人全體共同為之（第923條）。須於第915條第1項的期間內製作繼承財產目錄並提交家事法院，申述限定承認之意旨（第924條）。拋棄繼承須向家事法院申述（第938條）。若處分財產，或未於期間內辦理，可能構成法定單純承認（第921條）。拋棄繼承者於拋棄時現實占有財產的，負有於交付前的保存義務（第940條，令和3年修正・2023年〔令和5年〕4月1日施行）。\n\n## 3個月的熟慮期間自何時起算？來不及時怎麼辦？\n\n熟慮期間自知悉繼承對自己開始之時起算3個月（第915條第1項）。若期間內無法判斷，可向家事法院聲請延長期間。\n\n起算點有例外。最高法院昭和59年4月27日判決認為，繼承人相信完全無繼承財產、且此一相信有相當理由時，期間自繼承人認知、或通常可認知繼承財產全部或一部存在之時起算。惟是否適用須就個案評價，無法一概斷定。日後才發現高額借款的情形，請諮詢司法書士・律師。\n\n## 要向誰委託什麼？（家事法院的申述・債務整理的轉介）\n\n| 委任對象 | 負責範圍 |\n| --- | --- |\n| 四葉行政書士事務所 | 繼承財產・債務的調查、繼承財產目錄製作支援 |\n| 司法書士・律師 | 拋棄繼承・限定承認・熟慮期間延長之家事法院申述・聲請書製作 |\n| 律師 | 債務整理・訴訟、保證債務效力與範圍之判斷 |\n| 稅理士 | 繼承稅・視同轉讓所得之試算 |\n| 司法書士 | 繼承登記 |\n\n**向家事法院提交的申述書・聲請書製作，屬行政書士的業務範圍外。** 四葉行政書士事務所、四葉社會保險勞務士事務所、四葉不動産株式会社各為不同事業體，皆以獨立的事業體受任。請與各領域負責人分別簽約，由各受任者直接請款與收款。本事務所不收取介紹費。\n\n請參閱[繼承手續支援](https://luck428.com/legal/services/inheritance)、[受任流程](https://luck428.com/legal/nagare)與[報酬金額表](https://luck428.com/legal/ryokin)。繼承不動產的出售由另簽契約的[繼承不動產諮詢](https://luck428.com/souzoku)處理。\n\n## 常見問題\n\n**Q. 借款的有無要如何調查？**\nA. 確認契約、催繳通知與存摺扣款，並可考慮向信用資訊機構（CIC・JICC・全國銀行個人信用資訊中心）開示。法定繼承人在部分情形可請求已故者資訊，惟所需文件與方式請以各機構最新說明確認。\n\n**Q. 連帶保證也會被繼承嗎？**\nA. 一般保證・連帶保證原則上會被承繼。個人根保證契約因保證人等死亡而本金確定，身元保證原則上不被承繼。具體效力與範圍請諮詢律師。\n\n**Q. 超過3個月就必定是單純承認嗎？**\nA. 逾期為法定單純承認的一項事由，但起算點有最高法院昭和59年4月27日判決的例外，來不及時亦可向家事法院聲請延長期間。是否適用須就個案判斷。\n\n**Q. 拋棄繼承的文件可以委託行政書士嗎？**\nA. 向家事法院提交的申述書・聲請書製作屬行政書士業務範圍外，由司法書士・律師負責。行政書士進行繼承財產・債務的調查與財產目錄製作支援。\n\n## 本文出處（第一手資訊）\n\n- [e-Gov・民法](https://laws.e-gov.go.jp/law/129AC0000000089)：第915條、第920條、第921條、第922條、第923條、第924條、第938條、第939條、第940條、第458條之2、第465條之4。\n- 日本法院：[拋棄繼承的申述](https://www.courts.go.jp/saiban/syurui/syurui_kazi/kazi_06_13/index.html)、[承認或拋棄期間的延長](https://www.courts.go.jp/saiban/syurui/syurui_kazi/kazi_06_25/index.html)：手續說明。確認日2026-10-12。\n- 最高法院昭和59年4月27日判決（熟慮期間的起算點）。\n- 信用資訊機構（CIC・JICC・全國銀行個人信用資訊中心）的開示請求說明：確認日2026-10-12。\n\n確認日2026-10-12。條文以e-Gov核對，惟法院與信用資訊機構各頁面全文未能完整取得。法定繼承人可否開示信用資訊及所需文件、最高法院昭和59年判決的射程、各法令最終修正日均未經查證。辦理前請以各機構與家事法院最新說明再次確認。\n\n本文為一般資訊提供，不保證債務之有無、承認・拋棄之選擇、熟慮期間之起算或手續結果。個別判斷由具資格的專業人員查閱資料後進行。撰文：[浦松 丈二](https://luck428.com/about/uramatsu)（行政書士・宅地建物取引士）。",
+        "faq": [
+          {
+            "question": "借款的有無要如何調查？",
+            "answer": "確認契約、催繳通知與存摺扣款，並可考慮向信用資訊機構（CIC・JICC・全國銀行個人信用資訊中心）開示。法定繼承人在部分情形可請求已故者資訊，惟所需文件與方式請以各機構最新說明確認。"
+          },
+          {
+            "question": "連帶保證也會被繼承嗎？",
+            "answer": "一般保證・連帶保證原則上會被承繼。個人根保證契約因保證人等死亡而本金確定，身元保證原則上不被承繼。具體效力與範圍請諮詢律師。"
+          },
+          {
+            "question": "超過3個月就必定是單純承認嗎？",
+            "answer": "逾期為法定單純承認的一項事由，但起算點有最高法院昭和59年4月27日判決的例外，來不及時亦可向家事法院聲請延長期間。是否適用須就個案判斷。"
+          },
+          {
+            "question": "拋棄繼承的文件可以委託行政書士嗎？",
+            "answer": "向家事法院提交的申述書・聲請書製作屬行政書士業務範圍外，由司法書士・律師負責。行政書士進行繼承財產・債務的調查與財產目錄製作支援。"
+          }
+        ]
+      },
+      "zh": {
+        "title": "如何调查继承的借款与保证债务：单纯承认、限定承认、放弃与熟虑期间",
+        "excerpt": "继承的借款与保证债务，可通过合同、催缴通知、存折与信用信息调查。单纯承认、限定承认、放弃继承的选择有民法第915条的3个月熟虑期间；向家事法院提出的申述・申请书制作属行政书士业务范围外。",
+        "category": "继承手续（行政书士实务）",
+        "content": "**结论（先讲重点）**：继承的借款与保证债务，可通过合同、催缴通知、存折与信用信息调查。单纯承认、限定承认、放弃继承的选择有民法第915条的3个月熟虑期间；若来不及，可向家事法院申请延长。向家事法院提出的申述・申请书制作，属行政书士的业务范围外。\n\n**信息确认日：2026年10月12日**。本文整理在正资产可能少于负资产（借款・连带保证）的继承中，要调查什么、哪项手续委托给谁。制度全貌请见[放弃继承・限定承认的基础](https://luck428.com/legal/column/souzoku-hoki-gentei-shonin)，财产盘点请见[继承财产目录的制作](https://luck428.com/legal/column/souzoku-zaisan-mokuroku)。\n\n## 继承的借款或保证债务，要如何调查？\n\n被继承人的债务并非集中于一处。请比对下列资料加以查明。\n\n| 调查对象 | 可得知的事项 |\n| --- | --- |\n| 合同・金钱消费借贷证书・保证合同书 | 借款・保证的对象与金额 |\n| 邮件（请款单・催缴通知・催告书） | 持续中的债务或欠缴 |\n| 存折・账户扣款记录 | 还款・租赁・保证费的支付 |\n| 向信用信息机构的开示请求 | 贷金・信用卡・银行交易的登录信息 |\n\n信用信息登录于CIC・JICC・全国银行个人信用信息中心。法定继承人在部分情形可请求开示已故者的信息，惟所需文件（如户籍）与可否、方式因机构而异。请求前请以各机构最新说明确认。依民法第915条第2项，继承人于承认・放弃前可调查继承财产。\n\n## 连带保证人的地位会被继承吗？\n\n一般保证债务・连带保证债务为金钱债务，原则上由继承人承继并依法定应继分分担。至于未定上限或期间的持续性保证，另有不同处理。\n\n| 保证种类 | 继承的处理（原则） |\n| --- | --- |\n| 特定债务的保证・连带保证 | 会被承继 |\n| 个人根保证合同 | 因主债务人或保证人死亡而本金确定（民法第465条之4第1项第3款）；承继至死亡时确定的部分 |\n| 身元保证 | 视为一身专属，原则上不被承继（已确定的具体赔偿另计） |\n\n受主债务人委托而为保证的保证人，可向债权人请求余额等信息提供（民法第458条之2，2020年〔令和2年〕4月1日施行）。这可作为确认被继承人生前所保证债务余额的线索。保证的具体效力与范围之判断请咨询律师。\n\n## 单纯承认、限定承认、放弃继承该如何选择？\n\n| 选择 | 内容 | 依据 |\n| --- | --- | --- |\n| 单纯承认 | 无限承继权利义务；在一定情形构成法定单纯承认 | 民法第920条・第921条 |\n| 限定承认 | 仅于所得财产限度内清偿债务与遗赠 | 民法第922条〜第924条 |\n| 放弃继承 | 视为自始即非继承人 | 民法第938条・第939条 |\n\n限定承认须由共同继承人全体共同为之（第923条）。须于第915条第1项的期间内制作继承财产目录并提交家事法院，申述限定承认之意旨（第924条）。放弃继承须向家事法院申述（第938条）。若处分财产，或未于期间内办理，可能构成法定单纯承认（第921条）。放弃继承者于放弃时现实占有财产的，负有于交付前的保存义务（第940条，令和3年修正・2023年〔令和5年〕4月1日施行）。\n\n## 3个月的熟虑期间自何时起算？来不及时怎么办？\n\n熟虑期间自知悉继承对自己开始之时起算3个月（第915条第1项）。若期间内无法判断，可向家事法院申请延长期间。\n\n起算点有例外。最高法院昭和59年4月27日判决认为，继承人相信完全无继承财产、且此一相信有相当理由时，期间自继承人认知、或通常可认知继承财产全部或一部存在之时起算。惟是否适用须就个案评价，无法一概断定。日后才发现高额借款的情形，请咨询司法书士・律师。\n\n## 要向谁委托什么？（家事法院的申述・债务整理的转介）\n\n| 委任对象 | 负责范围 |\n| --- | --- |\n| 四叶行政书士事务所 | 继承财产・债务的调查、继承财产目录制作支援 |\n| 司法书士・律师 | 放弃继承・限定承认・熟虑期间延长之家事法院申述・申请书制作 |\n| 律师 | 债务整理・诉讼、保证债务效力与范围之判断 |\n| 税理士 | 继承税・视同转让所得之试算 |\n| 司法书士 | 继承登记 |\n\n**向家事法院提交的申述书・申请书制作，属行政书士的业务范围外。** 四叶行政书士事务所、四叶社会保险劳务士事务所、四叶不动产株式会社各为不同事业体，皆以独立的事业体受任。请与各领域负责人分别签约，由各受任者直接请款与收款。本事务所不收取介绍费。\n\n请参阅[继承手续支援](https://luck428.com/legal/services/inheritance)、[受任流程](https://luck428.com/legal/nagare)与[报酬金额表](https://luck428.com/legal/ryokin)。继承不动产的出售由另签合同的[继承不动产咨询](https://luck428.com/souzoku)处理。\n\n## 常见问题\n\n**Q. 借款的有无要如何调查？**\nA. 确认合同、催缴通知与存折扣款，并可考虑向信用信息机构（CIC・JICC・全国银行个人信用信息中心）开示。法定继承人在部分情形可请求已故者信息，惟所需文件与方式请以各机构最新说明确认。\n\n**Q. 连带保证也会被继承吗？**\nA. 一般保证・连带保证原则上会被承继。个人根保证合同因保证人等死亡而本金确定，身元保证原则上不被承继。具体效力与范围请咨询律师。\n\n**Q. 超过3个月就必定是单纯承认吗？**\nA. 逾期为法定单纯承认的一项事由，但起算点有最高法院昭和59年4月27日判决的例外，来不及时亦可向家事法院申请延长期间。是否适用须就个案判断。\n\n**Q. 放弃继承的文件可以委托行政书士吗？**\nA. 向家事法院提交的申述书・申请书制作属行政书士业务范围外，由司法书士・律师负责。行政书士进行继承财产・债务的调查与财产目录制作支援。\n\n## 本文出处（第一手信息）\n\n- [e-Gov・民法](https://laws.e-gov.go.jp/law/129AC0000000089)：第915条、第920条、第921条、第922条、第923条、第924条、第938条、第939条、第940条、第458条之2、第465条之4。\n- 日本法院：[放弃继承的申述](https://www.courts.go.jp/saiban/syurui/syurui_kazi/kazi_06_13/index.html)、[承认或放弃期间的延长](https://www.courts.go.jp/saiban/syurui/syurui_kazi/kazi_06_25/index.html)：手续说明。确认日2026-10-12。\n- 最高法院昭和59年4月27日判决（熟虑期间的起算点）。\n- 信用信息机构（CIC・JICC・全国银行个人信用信息中心）的开示请求说明：确认日2026-10-12。\n\n确认日2026-10-12。条文以e-Gov核对，惟法院与信用信息机构各页面全文未能完整取得。法定继承人可否开示信用信息及所需文件、最高法院昭和59年判决的射程、各法令最终修正日均未经查证。办理前请以各机构与家事法院最新说明再次确认。\n\n本文为一般信息提供，不保证债务之有无、承认・放弃之选择、熟虑期间之起算或手续结果。个别判断由具资格的专业人员查阅资料后进行。撰文：[浦松 丈二](https://luck428.com/about/uramatsu)（行政书士・宅地建物取引士）。",
+        "faq": [
+          {
+            "question": "借款的有无要如何调查？",
+            "answer": "确认合同、催缴通知与存折扣款，并可考虑向信用信息机构（CIC・JICC・全国银行个人信用信息中心）开示。法定继承人在部分情形可请求已故者信息，惟所需文件与方式请以各机构最新说明确认。"
+          },
+          {
+            "question": "连带保证也会被继承吗？",
+            "answer": "一般保证・连带保证原则上会被承继。个人根保证合同因保证人等死亡而本金确定，身元保证原则上不被承继。具体效力与范围请咨询律师。"
+          },
+          {
+            "question": "超过3个月就必定是单纯承认吗？",
+            "answer": "逾期为法定单纯承认的一项事由，但起算点有最高法院昭和59年4月27日判决的例外，来不及时亦可向家事法院申请延长期间。是否适用须就个案判断。"
+          },
+          {
+            "question": "放弃继承的文件可以委托行政书士吗？",
+            "answer": "向家事法院提交的申述书・申请书制作属行政书士业务范围外，由司法书士・律师负责。行政书士进行继承财产・债务的调查与财产目录制作支援。"
+          }
+        ]
+      }
+    }
   }
 ];

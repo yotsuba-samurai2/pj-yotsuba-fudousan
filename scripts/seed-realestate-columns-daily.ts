@@ -2394,6 +2394,46 @@ const ARTICLES: ArticleSpec[] = [
     localesWithTranslations: ["en", "zh-tw", "zh"],
     hubLinks: ["/souzoku"],
   },
+  {
+    file: "117-chugokugo-buyer-shakuchiken-gainen-shutoku-dd.md",
+    slug: "chugokugo-buyer-shakuchiken-gainen-shutoku-dd",
+    title: "「借地権付き物件」を中国・台湾の顧客に説明する——普通借地と定期借地、取得時の確認事項",
+    publishedAt: "2026-10-12",
+    category: "投資・事業用不動産",
+    excerpt:
+      "借地権は他人の土地を借りて建物を所有する権利で、所有権と違い地代・契約期間・地主の承諾がついて回ります。普通借地権は更新で長く使え、定期借地権は期間満了で土地を返します。東京都文京区の宅地建物取引士兼行政書士が、残存期間・地代・承諾料・ローンの付きにくさという取得時の確認事項を、借地借家法と国税庁の資料から母国語で説明する材料として整理します。承諾料の慣行や旧法の適用関係など未確認事項は資格者確認待ちです。",
+    keywords: [
+      "借地権 中国語 説明",
+      "普通借地権 定期借地権 違い",
+      "借地借家法 存続期間 更新",
+      "借地権 承諾料 譲渡承諾料",
+      "借地権 住宅ローン 地主 承諾",
+    ],
+    tags: ["投資・事業用不動産", "借地権", "中国語圏", "非居住者"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/toushi"],
+  },
+  {
+    file: "118-souzoku-suuji-souzoku-jikka-baikyaku-nagare.md",
+    slug: "souzoku-suuji-souzoku-jikka-baikyaku-nagare",
+    title: "数次相続で相続人が増えた実家を売る——相続登記が未了のままどう進めるか",
+    publishedAt: "2026-10-12",
+    category: "相続",
+    excerpt:
+      "数次相続は、相続登記をしないうちに別の相続人も亡くなり、関与する相続人が増えた状態です。売るには相続登記が前提ですが、売買の準備は登記と並行できます。東京都文京区の宅地建物取引士兼行政書士が、相続人全員の意思確認・代表者への委任・費用と期間を民法・不動産登記法の条文から整理します。登録免許税率や中間省略登記の可否など未確認事項は資格者確認待ちです。",
+    keywords: [
+      "数次相続 不動産 売却",
+      "相続登記 未了 売る",
+      "相続登記 義務化 3年 不動産登記法76条の2",
+      "相続人 多数 代表者 委任",
+      "数次相続 中間省略登記 登録免許税",
+    ],
+    tags: ["相続", "数次相続", "相続登記", "売却"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/souzoku"],
+  },
 ];
 
 function toPlainText(md: string): string {

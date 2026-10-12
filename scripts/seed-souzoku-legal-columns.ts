@@ -82,6 +82,20 @@ const AUTHOR = {
 
 /** 各記事が評価を集約すべきハブ（本文に必須の内部リンク）。verify() で機械検査する */
 const REQUIRED_HUB_LINKS: Record<string, string[]> = {
+  "shitei-jidosha-seibi-jigyo-minkan-shaken-shitei-shinsei-youken": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/jidosha-tokutei-seibi-ninsho-shinsei-nagare-youken",
+  ],
+  "souzoku-saimu-hoshou-saimu-chosa-junpro-kikan": [
+    "/legal/services/inheritance",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/souzoku",
+    "/legal/column/souzoku-hoki-gentei-shonin",
+    "/legal/column/souzoku-zaisan-mokuroku",
+  ],
   "tokutei-yukyo-inshokuten-eigyo-kyoka-youken": [
     "/legal/services",
     "/legal/nagare",
@@ -1024,6 +1038,42 @@ function matchesRequiredPhrase(content: string, phrase: string): boolean {
 
 /** 記事ごとに必ず含めるべき表現（機械ゲート。最低限の合否判定） */
 const REQUIRED_PHRASES: Record<string, string[]> = {
+  "shitei-jidosha-seibi-jigyo-minkan-shaken-shitei-shinsei-youken": [
+    "道路運送車両法",
+    "第78条",
+    "第94条の2",
+    "第94条の4",
+    "第94条の5",
+    "自動車検査員",
+    "保安基準適合証",
+    "完成検査場",
+    "指定自動車整備事業規則",
+    "優良自動車整備事業者認定規則",
+    "地方運輸局長",
+    "紹介料を受け取りません",
+    "別々にご契約",
+    "独立した事業体",
+  ],
+  "souzoku-saimu-hoshou-saimu-chosa-junpro-kikan": [
+    "民法第915条",
+    "第920条",
+    "第921条",
+    "第922条",
+    "第923条",
+    "第924条",
+    "第938条",
+    "第939条",
+    "第940条",
+    "第458条の2",
+    "第465条の4",
+    "熟慮期間",
+    "限定承認",
+    "相続放棄",
+    "昭和59年4月27日",
+    "紹介料を受け取りません",
+    "別々にご契約",
+    "独立した事業体",
+  ],
   "tokutei-yukyo-inshokuten-eigyo-kyoka-youken": [
     "風俗営業等の規制及び業務の適正化等に関する法律",
     "特定遊興飲食店営業",
@@ -3082,6 +3132,8 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
 
 /** 記事ごとに含めてはならない表現 */
 const FORBIDDEN_PHRASES: Record<string, string[]> = {
+  "shitei-jidosha-seibi-jigyo-minkan-shaken-shitei-shinsei-youken": [],
+  "souzoku-saimu-hoshou-saimu-chosa-junpro-kikan": [],
   "tokutei-yukyo-inshokuten-eigyo-kyoka-youken": [],
   "jihitsu-yuigon-hokan-seido-souzoku-tetsuzuki": [],
   "kodo-kanri-iryokiki-hanbai-kashidashi-kyoka-tenpo-kanrisha": [],
@@ -5945,6 +5997,58 @@ const ARTICLES: Array<{
       "換価分割",
       "遺言",
       "相続不動産",
+      "行政書士",
+    ],
+  },
+  {
+    file: "111-shitei-jidosha-seibi-jigyo-minkan-shaken-shitei-shinsei-youken.md",
+    slug: "shitei-jidosha-seibi-jigyo-minkan-shaken-shitei-shinsei-youken",
+    date: "2026-10-12",
+    title:
+      "指定自動車整備事業（民間車検場）の指定申請｜認証との違いと設備・人員要件",
+    category: "許認可の手続き（行政書士の実務から）",
+    excerpt:
+      "認証工場から指定自動車整備事業（民間車検場）へ格上げするための要件を整理します。認証（第78条・特定整備）と指定（第94条の2・自社で検査し保安基準適合証を交付）の違い、完成検査場などの設備、工員と自動車検査員の人員、申請先と約45日の審査、指定後の義務を解説します。",
+    keywords: [
+      "指定自動車整備事業 指定申請 要件",
+      "民間車検場 認証 指定 違い",
+      "指定工場 自動車検査員 要件",
+      "保安基準適合証 現車提示 省略",
+      "指定自動車整備事業 設備 完成検査場",
+      "指定自動車整備事業 申請 行政書士",
+    ],
+    tags: [
+      "指定自動車整備事業",
+      "道路運送車両法",
+      "民間車検場",
+      "自動車検査員",
+      "許認可",
+      "行政書士",
+    ],
+  },
+  {
+    file: "112-souzoku-saimu-hoshou-saimu-chosa-junpro-kikan.md",
+    slug: "souzoku-saimu-hoshou-saimu-chosa-junpro-kikan",
+    date: "2026-10-12",
+    title:
+      "相続する借金・保証債務の調べ方｜単純承認・限定承認・放棄と熟慮期間",
+    category: "相続の手続き（行政書士の実務から）",
+    excerpt:
+      "相続する借金・連帯保証の調べ方を、契約書・督促状・通帳・信用情報から整理します。単純承認・限定承認・相続放棄の選び方、民法第915条の3か月の熟慮期間と伸長、最高裁昭和59年判決の起算点、家裁申述は行政書士の業務範囲外である点と依頼先の分け方を解説します。",
+    keywords: [
+      "相続 借金 保証債務 調べ方",
+      "相続放棄 熟慮期間 3か月 起算点",
+      "限定承認 民法922条 924条 方式",
+      "連帯保証 相続 根保証 465条の4",
+      "信用情報 開示 法定相続人 CIC JICC",
+      "相続財産 債務調査 行政書士",
+    ],
+    tags: [
+      "相続放棄",
+      "限定承認",
+      "熟慮期間",
+      "保証債務",
+      "相続財産調査",
       "行政書士",
     ],
   },

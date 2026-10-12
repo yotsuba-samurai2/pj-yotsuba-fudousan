@@ -1,0 +1,107 @@
+{
+  "todayJst": "2026-10-13",
+  "runUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/38308664133",
+  "generationStatus": "validated",
+  "generatedCount": 6,
+  "reviewResult": "success",
+  "reviewReportAvailable": true,
+  "reviewPass": true,
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "minor": 0
+  },
+  "reviewFindings": [],
+  "registeredCount": 0,
+  "qualityEligibleCount": 0,
+  "heldCount": 6,
+  "scheduledCount": 0,
+  "unverifiedSourceCount": 0,
+  "publishedCount": null,
+  "articles": [
+    {
+      "key": "realestate:chugokugo-buyer-shakuchiken-gainen-shutoku-dd",
+      "fingerprint": "6d5f1afe5366fd0501d7144ffaf3215c829d5c4cf62a2cb16e50e8fc7743129f",
+      "title": "「借地権付き物件」を中国・台湾の顧客に説明する——普通借地と定期借地、取得時の確認事項",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録または重複しています",
+        "担当分野の資格者確認が不足しています"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "realestate:souzoku-suuji-souzoku-jikka-baikyaku-nagare",
+      "fingerprint": "dcd3ba6812e237affb6dcb3e09461fd126660cf7e82cc4d70b5c15f9a5a7441f",
+      "title": "数次相続で相続人が増えた実家を売る——相続登記が未了のままどう進めるか",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録または重複しています",
+        "担当分野の資格者確認が不足しています"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:shitei-jidosha-seibi-jigyo-minkan-shaken-shitei-shinsei-youken",
+      "fingerprint": "08d39df20e0992f47cdd38911325e325377ad1ce0e65f4b84d1706e382ede728",
+      "title": "指定自動車整備事業（民間車検場）の指定申請｜認証との違いと設備・人員要件",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録または重複しています",
+        "担当分野の資格者確認が不足しています"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:souzoku-saimu-hoshou-saimu-chosa-junpro-kikan",
+      "fingerprint": "32c3a28ec8d94f48ba17cadf4ae9033a11a7bffaddeb76a96607a14be4e25aeb",
+      "title": "相続する借金・保証債務の調べ方｜単純承認・限定承認・放棄と熟慮期間",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録または重複しています",
+        "担当分野の資格者確認が不足しています"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:sakoju-anpi-kakunin-seikatsu-soudan-yakan-taisei-roumu",
+      "fingerprint": "384b1e8cde69a97cd9d35c91fd49ea27d9c7960bc1ca4afcd92074deafff53b6",
+      "title": "サービス付き高齢者向け住宅の労務｜安否確認・生活相談員の配置と夜間体制",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録または重複しています",
+        "担当分野の資格者確認が不足しています"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:haigyo-kaisan-jugyoin-kaiko-yokoku-tatekae-barai-roumu",
+      "fingerprint": "25e1f573bbf2b7e0f3447643e8258683bc829b72ebb40f9f87772eee979cbf1c",
+      "title": "廃業するとき従業員にどう対応するか｜解雇予告・会社都合離職・未払賃金立替払",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録または重複しています",
+        "担当分野の資格者確認が不足しています"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    }
+  ]
+}
