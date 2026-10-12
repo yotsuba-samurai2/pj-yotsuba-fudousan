@@ -1,11 +1,110 @@
 {
-  "dryRun": false,
-  "runAt": "2026-10-11T09:35:07.108Z",
-  "todayJst": "2026-10-11",
+  "dryRun": true,
+  "runAt": "2026-10-12T06:26:38.752Z",
+  "todayJst": "2026-10-12",
   "targets": [],
-  "held": [],
+  "held": [
+    {
+      "key": "labor:gakushujuku-yobiko-koshi-koma-kyu-jugyogai-roudoujikan-kanri",
+      "business": "labor",
+      "slug": "gakushujuku-yobiko-koshi-koma-kyu-jugyogai-roudoujikan-kanri",
+      "title": "学習塾・予備校講師のコマ給は要注意。授業外労働の労働時間管理",
+      "date": "2026-10-11",
+      "category": "労働時間",
+      "path": "/labor/column/gakushujuku-yobiko-koshi-koma-kyu-jugyogai-roudoujikan-kanri",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録または重複しています"
+      ]
+    },
+    {
+      "key": "labor:jidosha-kyoshujo-shidouin-kenteiin-roudoujikan-hanbokibi-36kyotei-henkei",
+      "business": "labor",
+      "slug": "jidosha-kyoshujo-shidouin-kenteiin-roudoujikan-hanbokibi-36kyotei-henkei",
+      "title": "自動車教習所の指導員・検定員の労働時間は。繁忙期の36協定と変形労働時間制",
+      "date": "2026-10-11",
+      "category": "労働時間",
+      "path": "/labor/column/jidosha-kyoshujo-shidouin-kenteiin-roudoujikan-hanbokibi-36kyotei-henkei",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録または重複しています"
+      ]
+    },
+    {
+      "key": "legal:kodo-kanri-iryokiki-hanbai-kashidashi-kyoka-tenpo-kanrisha",
+      "business": "legal",
+      "slug": "kodo-kanri-iryokiki-hanbai-kashidashi-kyoka-tenpo-kanrisha",
+      "title": "高度管理医療機器の販売・貸与許可｜店舗要件と営業所管理者",
+      "date": "2026-10-11",
+      "category": "許認可の手続き（行政書士の実務から）",
+      "path": "/legal/column/kodo-kanri-iryokiki-hanbai-kashidashi-kyoka-tenpo-kanrisha",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録または重複しています"
+      ]
+    },
+    {
+      "key": "legal:seisan-gata-yuigon-fudosan-kanka-bunpai-yuigon-shikkou",
+      "business": "legal",
+      "slug": "seisan-gata-yuigon-fudosan-kanka-bunpai-yuigon-shikkou",
+      "title": "清算型遺言で不動産を売って分ける｜書き方と遺言執行の流れ",
+      "date": "2026-10-11",
+      "category": "相続の手続き（行政書士の実務から）",
+      "path": "/legal/column/seisan-gata-yuigon-fudosan-kanka-bunpai-yuigon-shikkou",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録または重複しています"
+      ]
+    },
+    {
+      "key": "realestate:sango-care-shukuhakugata-bukken-shisetsu-kijun-boshihokenho",
+      "business": "realestate",
+      "slug": "sango-care-shukuhakugata-bukken-shisetsu-kijun-boshihokenho",
+      "title": "産後ケア（宿泊型）を始めるときの物件・施設基準は？母子保健法の実施基準と内見のチェックポイント",
+      "date": "2026-10-11",
+      "category": "投資・事業用不動産",
+      "path": "/column/sango-care-shukuhakugata-bukken-shisetsu-kijun-boshihokenho",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録または重複しています"
+      ]
+    },
+    {
+      "key": "realestate:souzoku-jikka-juutaku-loan-zansai-teitouken-massho-baikyaku",
+      "business": "realestate",
+      "slug": "souzoku-jikka-juutaku-loan-zansai-teitouken-massho-baikyaku",
+      "title": "相続した実家に住宅ローンが残っていたら？抵当権の抹消と残債・団信・売却の進め方",
+      "date": "2026-10-11",
+      "category": "相続",
+      "path": "/column/souzoku-jikka-juutaku-loan-zansai-teitouken-massho-baikyaku",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録または重複しています"
+      ]
+    }
+  ],
   "scheduled": [],
-  "ok": true,
+  "ok": false,
   "published": [],
-  "errors": []
+  "errors": [
+    {
+      "key": "labor:gakushujuku-yobiko-koshi-koma-kyu-jugyogai-roudoujikan-kanri",
+      "message": "品質確認待ち：公開レビュー記録が未登録または重複しています"
+    },
+    {
+      "key": "labor:jidosha-kyoshujo-shidouin-kenteiin-roudoujikan-hanbokibi-36kyotei-henkei",
+      "message": "品質確認待ち：公開レビュー記録が未登録または重複しています"
+    },
+    {
+      "key": "legal:kodo-kanri-iryokiki-hanbai-kashidashi-kyoka-tenpo-kanrisha",
+      "message": "品質確認待ち：公開レビュー記録が未登録または重複しています"
+    },
+    {
+      "key": "legal:seisan-gata-yuigon-fudosan-kanka-bunpai-yuigon-shikkou",
+      "message": "品質確認待ち：公開レビュー記録が未登録または重複しています"
+    },
+    {
+      "key": "realestate:sango-care-shukuhakugata-bukken-shisetsu-kijun-boshihokenho",
+      "message": "品質確認待ち：公開レビュー記録が未登録または重複しています"
+    },
+    {
+      "key": "realestate:souzoku-jikka-juutaku-loan-zansai-teitouken-massho-baikyaku",
+      "message": "品質確認待ち：公開レビュー記録が未登録または重複しています"
+    }
+  ],
+  "blocked": "6本は品質確認待ちのため自動公開しません。記事別の理由を確認してください。forceでも解除しません。"
 }

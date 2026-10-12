@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-11T09:35:37.867Z",
+  "generatedAt": "2026-10-12T06:27:08.564Z",
   "siteUrl": "sc-domain:luck428.com",
   "windowDays": 45,
   "urls": {
@@ -1598,26 +1598,6 @@
       "verdict": "UNCHECKED",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
       "lastmod": "2026-08-28"
-    },
-    "https://luck428.com/column/houkago-day-bukken-youto-chiiki-1kai": {
-      "verdict": "UNCHECKED",
-      "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-08-27"
-    },
-    "https://luck428.com/column/souzoku-akiya-kaitai-koyatsuki-dochira": {
-      "verdict": "UNCHECKED",
-      "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-08-27"
-    },
-    "https://luck428.com/legal/column/minpaku-jutaku-shukuhaku-todokede-yoken": {
-      "verdict": "UNCHECKED",
-      "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-08-27"
-    },
-    "https://luck428.com/legal/column/shigojimu-inin-keiyaku-ohitorisama": {
-      "verdict": "UNCHECKED",
-      "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-08-27"
     }
   }
 }
