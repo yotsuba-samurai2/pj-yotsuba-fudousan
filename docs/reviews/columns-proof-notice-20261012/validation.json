@@ -117,5 +117,11 @@
   },
   "claudeMorningTaskLiveUpdated": false,
   "productionPublication": "not executed",
-  "headCI": "pending Draft PR creation"
+  "headCI": "awaiting final documentation commit",
+  "draftPR": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/pull/481",
+  "headRegression": {
+    "tests": 48,
+    "result": "pass",
+    "logSha256": "8c6d4968492680e6b70d0e11cdf6368e564834fb4e2698bb6152d35c33fd8907"
+  }
 }

@@ -2,6 +2,8 @@
 
 朝の納品通知は「レビュー指摘なし・未検証なし・正午に自動公開」と案内したが、対象runはminor2件があり、公開証跡の登録結果は0本・6本保留だった。原稿保存の成功、レビュー指摘、指紋に対応する証跡、自動公開の品質候補、本番公開の実績を分ける。
 
+本日分Draft PR：[#481](https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/pull/481)。
+
 対象run：<https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/38160195514>。base main：`d0dce295189e9458f5de08ceaddf24e5d44bc875`。元のrunのsource headは`8571b0eeab9b501f35b090b5805a1e8b5a8e50c9`。同runの生成物24原稿は既にmainに保存されていたため、再生成せず既存原稿を訂正した。`article-edit-manifest.json`のoriginalSha256はbase mainと一致を確認してから編集した値。原稿の公開日`2026-10-11`は元データどおり維持し、本文の追加確認日は`2026-10-12`と明示した。
 
 ## 対象と修正
@@ -33,7 +35,7 @@
 
 `columns-review-proof.ts record`がレビュー処理のsuccessを必須とし、処理失敗・未取得・形式不正のJSONを公開証跡に変換しない。候補のkey・fingerprintと現在の原稿を照合し、`docs/columns-delivery/YYYY-MM-DD.{json,md}`とlatestへ生成・指摘・証跡・品質候補・保留を別の数として保存する。workflow summary・コミット文・原稿保存通知・失敗Issueの本文に同じ区分を使う。元の品質ゲート、モデル呼び出し数、定期実行時刻を変更していない。
 
-朝メールの実際の生成元は既存Claudeタスク「コラム6本をGoogleドキュメントで届ける（朝7:00）」。ライブ設定は未更新。署名付き追跡管理リンクを開く操作は自動承認審査に拒否されたため、再試行・別経路実行はしていない。通常のタスク編集機能が現在の実行環境で提供されていない。適用する具体文面は`docs/columns-delivery/claude-morning-task-patch.md`に保存した。修正案の作成をライブ反映とみなさない。メール再送は行わない。既存Google Docsには元minor2件・公開証跡0本・6本保留・正午公開予定なしを追記して確認済み。
+朝メールの実際の生成元は既存Claudeタスク「コラム6本をGoogleドキュメントで届ける（朝7:00）」。ライブ設定は未更新。署名付き追跡管理リンクを開く操作は自動承認審査に拒否されたため、再試行・別経路実行はしていない。通常のタスク編集機能が現在の実行環境で提供されていない。適用する具体文面は`docs/columns-delivery/claude-morning-task-patch.md`に保存した。修正案の作成をライブ反映とみなさない。メール再送は行わない。既存Google Docsには最終独立レビューの重要未確認6件・公開証跡0本・6本保留・正午公開予定なしを追記して確認済み。
 
 ## 検証
 
