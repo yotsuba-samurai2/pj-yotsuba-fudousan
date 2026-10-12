@@ -933,3 +933,6 @@ sitemap の `locales` もページの `availableLocales` と同時に4言語へ�
 - [x] 金融庁No.112と法務省公式案内を再確認し、規制と払込証明の確認内容を説明
 - [ ] 個別の資金の流れへの規制適用・登記資料、契約の具体的権限／集計範囲／解約等を確認
 - 本番CMS・公開コラムseed・merge・deploy・GSCの追加操作は実施しない。
+# 2026-10-12 Daily Columns 証跡・通知訂正
+
+承認範囲・実装・検証・残る運用制約は [columns-proof-notice-20261012.md](columns-proof-notice-20261012.md) と `docs/reviews/columns-proof-notice-20261012/README.md` で管理する。前日Draft PR480と対象を分け、マージ・本番反映は行わない。

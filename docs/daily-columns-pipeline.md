@@ -1,8 +1,9 @@
 # Daily Columns パイプライン
 
 3士業のコラムを **1日6本（不動産2・行政書士2・社労士2）× 4言語（ja / en / zh-tw / zh）** 追加し、
-検証を通して main へ入れる仕組み。**本番DBへの投入（公開）は、毎日正午の自動公開が行う（2026-10-08〜）。**
-止めたい記事は、正午までに管理画面で保留する（`docs/columns-autopublish.md`）。
+検証を通して main へ原稿を保存する仕組み。**生成成功・レビュー判定・公開証跡・本番公開は別の状態。**
+本番公開は、指紋に対応する有効な独立証跡と品質検査を通した候補だけを、正午の実行時に再判定する。
+証跡0件や取得不能を「正午公開」と案内せず、未確認記事は保留する（`docs/columns-autopublish.md`）。
 
 - ワークフロー：`.github/workflows/daily-columns.yml`（毎日 21:00 JST ＝ `0 12 * * *` UTC）
 - 見張り：`.github/workflows/token-healthcheck.yml`（週1回・トークン失効の検知）
@@ -27,7 +28,7 @@ plan ──→ plan-check ──→ write(×3) ──→ validate ──→ revi
  企画      企画チェック    執筆・翻訳     機械検証     レビュー   修正      draft PR
  LLM       LLM(ゲート)     LLM          非LLM(ゲート) LLM       LLM       非LLM
                                             │                             ↓
-                                        NG  │            main へ → 正午に自動公開（保留できる）
+                                        NG  │            main へ → 品質候補だけ正午に再判定（未確認は保留）
                                             ↓
                                     validate-repair*
                                      修復・1回だけ
@@ -36,6 +37,11 @@ plan ──→ plan-check ──→ write(×3) ──→ validate ──→ revi
 
 `fix` は review が pass しなかったときだけ走る。
 `validate-repair` は **validate が落ちたときだけ**走る（2026-09-01 追加）。
+
+朝の納品・メールは `docs/columns-delivery/latest.json` と同日の `.md` を読む。
+生成数、レビュー処理結果とblocker/major/minor件数、今回の指紋の証跡登録数、品質候補・保留・公開日待ちをそのまま伝える。
+`pass=true`でもminorがあれば「指摘なし」と書かない。レビュー処理失敗・結果未取得・形式不正は「未確認・件数不明」とする。
+原稿のmain保存を公開承認と混同せず、承認0件を正午公開と案内しない。公開完了は `automation/columns-status` の実行結果で別に照合する。
 
 **ゲートは2種類ある。**
 

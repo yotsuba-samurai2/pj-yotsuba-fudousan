@@ -3,7 +3,7 @@ import type { ColumnInput } from "@/lib/column-shared";
 import { columnQualityFingerprint, columnQualityReasons, type ColumnQualityReview } from "@/lib/columns-autopublish-quality";
 
 export type QualityCandidate = { key: string; fingerprint: string };
-const reportSchema = z.object({
+export const independentColumnReportSchema = z.object({
   pass: z.boolean(),
   findings: z.array(z.object({ file: z.string(), severity: z.enum(["blocker", "major", "minor"]), issue: z.string(), fix: z.string() })),
   articles: z.array(z.object({
@@ -25,7 +25,7 @@ export function recordIndependentColumnReviews(
   todayJst: string,
   evidenceUrl: string,
 ): { reviews: ColumnQualityReview[]; held: { key: string; reasons: string[] }[] } {
-  const result = reportSchema.safeParse(output);
+  const result = independentColumnReportSchema.safeParse(output);
   const changed = new Set(candidates.map((candidate) => candidate.key));
   const reviews = existing.filter((review) => !changed.has(review.key));
   const held: { key: string; reasons: string[] }[] = [];

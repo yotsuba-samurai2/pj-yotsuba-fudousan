@@ -5,6 +5,7 @@ import type { ColumnInput } from "../src/lib/column-shared";
 import { columnQualityFingerprint, type ColumnQualityReview } from "../src/lib/columns-autopublish-quality";
 import { todayInJst } from "../src/lib/columns-autopublish-shared";
 import { recordIndependentColumnReviews, type QualityCandidate } from "../src/lib/columns-autopublish-review-record";
+import { buildColumnDeliveryReport, renderColumnDeliveryReport } from "../src/lib/columns-autopublish-delivery";
 
 const paths = ["realestate-columns-daily", "souzoku-legal-columns", "labor-columns"]
   .map((name) => `src/lib/data/${name}-seed.ts`);
@@ -33,8 +34,9 @@ if (process.argv[2] === "prepare") {
 } else if (process.argv[2] === "record") {
   const candidates: QualityCandidate[] = JSON.parse(readFileSync(".tmp/quality-candidates.json", "utf8"));
   const baselineReviews: ColumnQualityReview[] = JSON.parse(readFileSync(".tmp/quality-baseline-reviews.json", "utf8"));
+  const reviewResult = process.env.REVIEW_RESULT ?? "unknown";
   let output: unknown;
-  try { output = JSON.parse(process.env.REVIEW ?? ""); } catch { output = undefined; }
+  try { output = reviewResult === "success" ? JSON.parse(process.env.REVIEW ?? "") : undefined; } catch { output = undefined; }
   const result = recordIndependentColumnReviews(candidates, output, inventory, baselineReviews,
     todayInJst(new Date()), process.env.RUN_URL ?? "");
   writeFileSync("src/lib/data/columns-autopublish-reviews.ts",
@@ -42,6 +44,16 @@ if (process.argv[2] === "prepare") {
     '// Recorded from independent review; changed or incomplete articles remain held.\n' +
     'export const COLUMNS_AUTOPUBLISH_REVIEWS: readonly ColumnQualityReview[] = ' + JSON.stringify(result.reviews, null, 2) + ';\n');
   writeFileSync(".tmp/quality-holds.json", JSON.stringify(result.held, null, 2) + "\n");
+  const report = buildColumnDeliveryReport({ candidates, inventory, recordedReviews: result.reviews,
+    recordedHolds: result.held, reviewOutput: output, reviewResult, todayJst: todayInJst(new Date()),
+    runUrl: process.env.RUN_URL ?? "" });
+  writeFileSync(".tmp/quality-delivery.json", JSON.stringify(report, null, 2) + "\n");
+  const deliveryDir = "docs/columns-delivery";
+  mkdirSync(deliveryDir, { recursive: true });
+  for (const name of [report.todayJst, "latest"]) {
+    writeFileSync(`${deliveryDir}/${name}.json`, JSON.stringify(report, null, 2) + "\n");
+    writeFileSync(`${deliveryDir}/${name}.md`, renderColumnDeliveryReport(report));
+  }
   console.log(`Review proof: ${result.reviews.length} recorded, ${result.held.length} awaiting confirmation`);
   // Hold is a valid safe outcome, not permission to approve missing evidence.
 } else throw new Error("Expected prepare or record");

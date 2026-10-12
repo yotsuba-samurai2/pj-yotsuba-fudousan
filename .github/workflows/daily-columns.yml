@@ -919,10 +919,20 @@ jobs:
       - name: 既存の独立レビュー証跡を記録（修正後の古い指紋は承認しない）
         env:
           REVIEW: ${{ needs.review.outputs.result }}
+          REVIEW_RESULT: ${{ needs.review.result }}
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: |
           npx tsx scripts/columns-review-proof.ts record
-          cat .tmp/quality-holds.json >> "$GITHUB_STEP_SUMMARY"
+          cat docs/columns-delivery/latest.md >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: quality-delivery
+          path: |
+            .tmp/quality-delivery.json
+            .tmp/quality-holds.json
+            docs/columns-delivery/
+          include-hidden-files: true
+          if-no-files-found: error
 
       - name: コミットしてPRを出し、ゲートが全部通っていればマージする
         env:
@@ -937,7 +947,7 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout -b "$BR"
-          git add -A scripts/ src/
+          git add -A scripts/ src/ docs/columns-delivery/
 
           # マージしてよいのは、レビューが通ったか、修正ジョブが通り直したときだけ。
           # 判定が取れなかった（unknown）ときは人間に回す
@@ -952,7 +962,7 @@ jobs:
             echo "レビュー判定: ${REVIEW_PASS:-unknown} ／ 修正ジョブ: ${FIX_RESULT}"
             echo "実行ログ: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
             echo
-            echo "公開は正午の自動公開が行う（このコミットでは本番DBは変わらない。止めるときは /admin/columns/autopublish で保留）"
+            cat docs/columns-delivery/latest.md
           } > /tmp/commitmsg.txt
           git commit -F /tmp/commitmsg.txt
 
@@ -961,7 +971,9 @@ jobs:
             echo
             echo "- 検証：seed dry-run（NG行0）／--emit-ts／tsc／eslint／vitest すべて通過"
             echo "- レビュー判定：\`${REVIEW_PASS:-unknown}\` ／ 修正ジョブ：\`${FIX_RESULT}\`"
-            echo "- 自動マージ：$MERGE"
+            echo "- 自動マージ：$MERGE（原稿保存の判定。公開承認とは別）"
+            echo
+            cat docs/columns-delivery/latest.md
             echo
             echo '<details><summary>レビュー結果</summary>'
             echo
@@ -973,13 +985,13 @@ jobs:
             echo
             echo "### 浦松さんへ"
             if [ "$MERGE" = "yes" ]; then
-              echo "このPRは自動マージされます。**朝7:00に6本を読めるGoogleドキュメントが届きます。**"
-              echo "正午（12時台）に自動で公開されます。止めたい記事があれば、正午までに保留の画面で「保留」を押してください。"
+              echo "原稿はmainに保存されます。朝の納品は docs/columns-delivery/latest.json の生成・指摘・証跡・品質保留を確認します。"
+              echo "公開は品質候補のみを実行時に再判定します。承認0本を正午公開と案内せず、本番公開の完了は公開ジョブの結果で確認してください。"
             else
               echo "**レビュー・修正ゲートを通過していないため、マージしていません。** 上のレビュー判定と修正ジョブの結果を確認してください。"
             fi
             echo
-            echo "保留・今すぐ公開（デプロイ後）："
+            echo "記事ごとの品質確認・保留管理（デプロイ後）："
             echo "- https://luck428.com/admin/columns/autopublish"
           } > /tmp/body.md
 
@@ -1019,6 +1031,7 @@ jobs:
         || needs.write.result == 'failure'
         || needs['validate-repair'].result == 'failure'
         || needs.review.result == 'failure'
+        || needs.review.result == 'cancelled'
         || needs.fix.result == 'failure'
         || needs['open-pr'].result == 'failure'
         || (needs.validate.result == 'failure' && needs['validate-repair'].result != 'success'))
@@ -1030,9 +1043,23 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPO: ${{ github.repository }}
           LOG: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          VALIDATE_RESULT: ${{ needs.validate.result }}
+          REPAIR_RESULT: ${{ needs['validate-repair'].result }}
+          REVIEW_RESULT: ${{ needs.review.result }}
+          FIX_RESULT: ${{ needs.fix.result }}
+          STORAGE_RESULT: ${{ needs['open-pr'].result }}
         run: |
           set -euo pipefail
           DATE="$(TZ=Asia/Tokyo date +%Y-%m-%d)"
+
+          {
+            echo "${DATE} のDaily Columnsで処理が停止しました。"
+            echo "機械検証: ${VALIDATE_RESULT} ／ 修復検証: ${REPAIR_RESULT}"
+            echo "レビュー処理: ${REVIEW_RESULT} ／ 修正処理: ${FIX_RESULT} ／ 原稿保存: ${STORAGE_RESULT}"
+            echo "レビュー指摘数・指紋に対応する証跡登録数・公開可能数・保留数はこの通知では取得できていません（未確認）。"
+            echo "処理停止を指摘なし・公開予定ありとは案内しません。本番公開はこのワークフローでは実行していません。"
+            echo "実行ログ: ${LOG}"
+          } > /tmp/daily-failure.md
 
           gh label create daily-columns-failure --repo "$REPO" \
             --color B60205 --description "Daily Columns の失敗（成功実行で自動クローズ）" 2>/dev/null || true
@@ -1042,12 +1069,12 @@ jobs:
 
           if [ -n "$EXISTING" ]; then
             gh issue comment "$EXISTING" --repo "$REPO" \
-              --body "${DATE} も失敗しました。実行ログ: ${LOG}"
+              --body-file /tmp/daily-failure.md
           else
             gh issue create --repo "$REPO" \
               --title "Daily Columns が失敗（${DATE}）" \
               --label daily-columns-failure \
-              --body "実行ログ: ${LOG}"
+              --body-file /tmp/daily-failure.md
           fi
 
   # 成功したら、開いたままの失敗Issueを閉じる（2026-08-28 追加）
@@ -1072,5 +1099,5 @@ jobs:
           if [ -z "$NUMS" ]; then echo "開いている失敗Issueはありません。"; exit 0; fi
           for n in $NUMS; do
             gh issue close "$n" --repo "$REPO" \
-              --comment "${DATE} の実行が成功したため自動クローズします。実行ログ: ${LOG}"
+              --comment "${DATE} の原稿保存処理が完了したため自動クローズします。公開承認・品質保留は docs/columns-delivery/latest.json を確認してください。本番公開の完了を示すものではありません。実行ログ: ${LOG}"
           done

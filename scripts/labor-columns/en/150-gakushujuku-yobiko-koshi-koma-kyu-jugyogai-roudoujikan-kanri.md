@@ -3,13 +3,13 @@ title: Is per-lesson pay for cram-school and prep-school teachers a risk? Managi
 excerpt: Per-lesson pay tends to leave out-of-class work — preparation, grading, parent meetings, training — out of wages and overtime. Approach it through the concept of what counts as working time.
 category: Working hours
 faqHeading: Frequently asked questions
-keywords: cram school per-lesson pay | out-of-class work working time | fixed overtime allowance insufficient | instructor independent contractor worker status | Labor Standards Act Article 32 37
+keywords: cram school per-lesson pay | out-of-class work working time | fixed overtime allowance insufficient | instructor independent contractor worker status | Labor Standards Act (労働基準法) Article 32 37
 tags: Working hours | Per-lesson pay | Fixed overtime allowance | Cram school | Worker status
 ---
 
 **In short:** Per-lesson pay for cram schools and prep schools tends to pay only for class time, yet preparation, grading, parent response and training, if under the employer's direction and control, are also working time subject to wages and premiums. Folding overtime into per-lesson pay requires a clear split and settlement of the difference, and even "independent contractors" can be judged workers by actual conditions.
 
-**System and primary-source check: October 11, 2026.** This guide is for operators and head teachers at cram schools and prep schools that pay teachers by the lesson. It organizes the working-time character of out-of-class work through the Labor Standards Act, case law and administrative standards. It does not deal with individual unpaid-wage claims or the final finding of worker status; it sets out the framework and the design.
+**System and primary-source check: October 12, 2026.** This guide is for operators and head teachers at cram schools and prep schools that pay teachers by the lesson. It organizes the working-time character of out-of-class work through the Labor Standards Act, case law and administrative standards. It does not deal with individual unpaid-wage claims or the final finding of worker status; it sets out the framework and the design.
 
 ## What tends to go unpaid when pay is only per lesson?
 
@@ -26,9 +26,9 @@ Wages must be paid in full (Labor Standards Act, Article 24), and work beyond st
 
 ## Do lesson prep, grading and parent response count as working time?
 
-Working time is time during which a worker is under the employer's direction and control. This is the approach set by the Supreme Court, and it is not decided by how the contract or work rules are worded alone (Mitsubishi Heavy Industries Nagasaki Shipyard case, Supreme Court judgment of March 9, 2000).
+The MHLW guideline established on 20 January 2017 describes working time as time under the employer’s direction and control, determined objectively from actual circumstances rather than contract or work-rule wording alone (retrieved pages 1–2; accessed 12 October 2026). It includes instructed preparation and clearing-up, standby without guaranteed freedom to leave the work, and mandatory training or instructed learning. The Supreme Court judgment cited in the original draft was not obtained and is not treated as verified case-law evidence.
 
-So preparation and grading that the school directs or requires, reporting in a set format, and mandatory training and meetings can be working time even at home. Conversely, voluntary self-study that is not required is not immediately working time. The line is drawn by whether there is an instruction, whether a deliverable is required, and the constraint on time and place. The Ministry of Health, Labour and Welfare's [Guidelines on measures employers should take to appropriately grasp working hours](https://jsite.mhlw.go.jp/tottori-roudoukyoku/news_topics/topics/_120669/_121005.html) (established January 20, 2017; accessed October 11, 2026) set out the employer's duty to confirm and record start and end times.
+So preparation and grading that the school directs or requires, reporting in a set format, and mandatory training and meetings can be working time even at home. Conversely, voluntary self-study that is not required is not immediately working time. The line is drawn by whether there is an instruction, whether a deliverable is required, and the constraint on time and place. The Ministry of Health, Labour and Welfare's [Guidelines on measures employers should take to appropriately grasp working hours](https://www.mhlw.go.jp/file/06-Seisakujouhou-11200000-Roudoukijunkyoku/0000149439.pdf) (established January 20, 2017; accessed October 12, 2026) set out the employer's duty to confirm and record start and end times.
 
 ## What happens if a fixed overtime allowance folded into per-lesson pay is not enough?
 
@@ -38,7 +38,7 @@ A scheme that merely states "per-lesson pay includes overtime," without showing 
 
 ## Can teachers be made "independent contractors"?
 
-Even if a contract is labeled "independent contractor," if the actual way of working is that of a worker, the Labor Standards Act and Minimum Wage Act apply. Whether someone is a worker is judged overall around the "subordination" the 1985 Labor Standards Act Study Group report describes: freedom to decline requests, constraint on time and place, being subject to direction and supervision, whether pay corresponds to the provision of labor, and whether a substitute can be sent.
+Even if a contract is labeled "independent contractor," if the actual way of working is that of a worker, the Labor Standards Act and Minimum Wage Act (最低賃金法) apply. Whether someone is a worker is judged overall around the "subordination" the 1985 Labor Standards Act Study Group report describes: freedom to decline requests, constraint on time and place, being subject to direction and supervision, whether pay corresponds to the provision of labor, and whether a substitute can be sent.
 
 | Focus | More likely judged a worker |
 |---|---|
@@ -84,12 +84,13 @@ A. Yes. The hourly figure obtained by dividing per-lesson pay across total hours
 
 ## Sources for this article
 
-These are primary sources consulted on October 11, 2026.
+Updated and additional materials retrieved: 12 October 2026. Checks are limited to the MHLW statute text and working-time guideline actually obtained. Complete reconciliation with e-Gov consolidated statutes, final amendment numbers and commencement histories, related judgment and Labor Standards Act Study Group report texts, and individual system, worker-status and fixed-overtime validity assessments remain unverified. Retrieval failure does not prove an error; publication is held pending qualified review.
 
 - Labor Standards Act, Article 32 (working hours), Article 34 (breaks), Article 37 (premium wages) and Article 24 (full payment of wages) ([e-Gov law search](https://laws.e-gov.go.jp/law/322AC0000000049)).
-- What counts as working time: Mitsubishi Heavy Industries Nagasaki Shipyard case, Supreme Court First Petty Bench judgment of March 9, 2000, holding that working time is time during which the worker is under the employer's direction and control.
-- Judging worker status: Labor Standards Act Study Group report (December 19, 1985). An overall judgment centered on subordination — freedom to decline, direction and supervision, constraint, pay corresponding to labor, and substitutability.
-- MHLW [Guidelines on measures employers should take to appropriately grasp working hours](https://jsite.mhlw.go.jp/tottori-roudoukyoku/news_topics/topics/_120669/_121005.html) (established January 20, 2017; accessed October 11, 2026): the duty to confirm and record start and end times.
+- Mitsubishi Heavy Industries Nagasaki Shipyard judgment cited in the original draft (9 March 2000): judgment text not obtained; holding not reconciled (unverified). The working-time explanation is limited to the retrieved MHLW guideline.
+- Judging worker status: Labor Standards Act Study Group report (December 19, 1985). An overall judgment centered on subordination — freedom to decline, direction and supervision, constraint, pay corresponding to labor, and substitutability. Report text not obtained or reconciled (unverified).
+- MHLW [Guidelines on measures employers should take to appropriately grasp working hours](https://www.mhlw.go.jp/file/06-Seisakujouhou-11200000-Roudoukijunkyoku/0000149439.pdf) (established January 20, 2017; accessed October 12, 2026): the duty to confirm and record start and end times.
 - Shakai Hoken Roumushi Act, Article 2: basis for consultation and guidance services. Reconciling every current consolidated provision and final amendment date, and the conclusion on worker status in an individual case, are outside this article's scope.
+- [厚生労働省・労働基準法の法令本文（2026-10-12取得、第119条の拘禁刑等を確認）](https://www.mhlw.go.jp/web/t_doc?dataId=73022000&dataType=0&pageNo=1)
 
 This article provides general information. The design of individual contracts and wages is judged by a qualified professional after an interview, using current primary sources and the actual circumstances of the workplace. Where needed, we inquire with the competent Labor Standards Inspection Office or Labour Bureau. Author: [浦松丈二](/en/about/uramatsu) (Shakai Hoken Roumushi, Gyoseishoshi and licensed real estate transaction specialist).

@@ -1,14 +1,14 @@
 ---
-title: "Premises standards for residential (short-stay) postpartum care under the Maternal and Child Health Act"
-excerpt: "A residential postpartum-care service runs as the short-stay type under Article 17-2 of the Maternal and Child Health Act, so the premises need rooms, bathing, cooking and consultation space plus staff such as midwives. Specific standards are set by each municipality's implementation rules, so confirm with the authority before committing to a property."
+title: "Premises standards for residential (short-stay) postpartum care under the Maternal and Child Health Act (母子保健法)"
+excerpt: "The March 2026 national guideline for short-stay postpartum care under the Maternal and Child Health Act (母子保健法) specifies at least one nursing professional on duty around the clock. This guide separates the treatment of the specified facilities under hotel and building law from premises and municipal checks before contracting. Bedroom area, fire classification and consolidated statutes and amendment histories remain pending qualified review."
 category: Investment & Commercial Real Estate
 faqHeading: Frequently asked questions
 ---
-**Key points:** A residential postpartum-care service runs as the short-stay type under Article 17-2 of the Maternal and Child Health Act, so you need premises that can provide rooms, bathing, cooking and consultation space together with staff such as midwives. Because the detailed standards (floor area and so on) are set by each municipality, confirm with the window before committing to a property.
+**Key points:** For short-stay postpartum care under the Maternal and Child Health Act (母子保健法), the March 2026 national guideline specifies at least one nursing professional on duty around the clock. Check rooms, counselling and infant-care facilities, and municipal additional conditions before contracting for a property.
 
 This article is for people who want to open residential postpartum care in a former clinic, old inn or detached house, written from a viewing perspective. It does not repeat [clinic premises](https://luck428.com/en/column/clinic-bukken-youto-chiiki-kaisetsu-todokede) or [authorised nursery premises](https://luck428.com/en/column/ninka-hoikusho-20nin-bukken-youto-engei); here we address the conditions that arise because mothers and infants stay overnight.
 
-We handle property selection, preliminary checks on zoning and fire safety, and brokerage of viewings. The commissioning contract and final confirmation of the implementation standards lie with the municipality, staffing of midwives and nurses and wage and social-insurance design with a social insurance and labour consultant, medical judgments about the infant's health with a doctor or midwife, and the change-of-use confirmation application, where required, with an architect. These are independent entities from Yotsuba Real Estate Co., Ltd., engaged separately for each service.
+We handle property selection, preliminary checks on zoning and fire safety, and brokerage of viewings. The commissioning contract and final confirmation of the implementation standards lie with the municipality, staffing of midwives and nurses and wage and social-insurance design with a social insurance and labour consultant, medical judgments about the infant's health with a doctor or midwife, and the change-of-use confirmation application, where required, with an architect. These are independent entities from 四葉不動産株式会社, engaged separately for each service.
 
 ## What premises standards does residential postpartum care require?
 
@@ -18,17 +18,17 @@ The standards are set by municipalities in their implementation rules, informed 
 
 | What to check on a viewing | Perspective |
 |---|---|
-| Room where mother and infant stay | Space and privacy for one mother-and-infant pair to rest; the minimum area is set by the municipality's rules |
+| Room where mother and infant stay | Space and privacy for one mother-and-infant pair to rest; confirm minimum-area and municipal requirements with the authority |
 | Bathing and nursing area | Hot water and drainage for bathing guidance, and a hygienic zone |
 | Cooking and serving | Facilities matching how meals are provided (in-house cooking or external delivery) |
 | Consultation / care room | A place where a midwife can give individual consultation and health guidance |
-| Staff flow | Workspace for deploying midwives, public-health nurses and nurses; a 24-hour arrangement is often assumed for overnight stays |
+| Staff flow | Work and rest space supporting at least one nursing professional on duty around the clock |
 
-The specific figures for area and staffing are not uniform nationwide and differ by municipality. This article has not fully verified the current rules of any particular municipality, so it does not state "X m² is enough." Bring the ages, capacity and a floor plan and consult the window in advance.
+Distinguish staffing from floor area. The March 2026 guideline specifies at least one nursing professional, such as a midwife, public-health nurse or nurse, at all times; for short stays, at least one must be on duty around the clock regardless of the setting (printed pages 11–12; accessed 12 October 2026). A nationwide minimum bedroom area and each municipality’s additional requirements have not been fully verified here. Confirm capacity, plans and staffing with the local authority.
 
 ## How should zoning and building use be confirmed?
 
-First confirm the building's registered use (residence, inn, clinic, etc.) and the zoning of the location. Even in a residential zone, which building uses are allowed is governed by the restrictions in Appended Table 2 of the Building Standards Act. When converting a former clinic or old inn to residential postpartum care, the use of the building may change, so check early whether a change-of-use confirmation application is required.
+First confirm the building's registered use (residence, inn, clinic, etc.) and the zoning of the location. Even in a residential zone, which building uses are allowed is governed by the restrictions in Appended Table 2 of the Building Standards Act (建築基準法). When converting a former clinic or old inn to residential postpartum care, the use of the building may change, so check early whether a change-of-use confirmation application is required.
 
 Article 87 of the Building Standards Act provides that, when converting use to a special building listed in column (i) of Appended Table 1 (excluding conversions between similar uses), a confirmation application is required if the combined floor area of that part exceeds 200 m². A 2019 amendment effective 25 June 2019 raised the threshold from over 100 m² to over 200 m². Even where a confirmation application is unnecessary at 200 m² or less, compliance with the Building Standards Act provisions is still required. Which use category applies and whether a confirmation application is needed should be confirmed with an architect and the competent building official.
 
@@ -46,9 +46,9 @@ Residential postpartum care is a different regime from a midwifery centre or a l
 |---|---|---|
 | Residential postpartum care | Maternal and Child Health Act Art. 17-2 | Municipal service (provided under commission) |
 | Midwifery centre | Medical Care Act Art. 2 | Place where a midwife works; may not have facilities to admit 10 or more pregnant/parturient/postpartum women (i.e. 9 or fewer) |
-| Lodging business | Hotel Business Act | Business of lodging people for a fee |
+| Lodging business | Hotel Business Act (旅館業法) | Business of lodging people for a fee |
 
-Opening a midwifery centre and running postpartum care differ in required staff, equipment and where notifications go. Whether a municipal postpartum-care service is treated the same as a lodging business depends on the format, so confirm with the public health centre and municipality. Which regime to start under changes with the placement of medical staff and whether there is a commission, so obtain the judgments of a doctor/midwife and the municipal window first.
+The Ministry of Land, Infrastructure, Transport and Tourism notice of 5 August 2020 states that short-stay facilities under Article 17-2 of the Maternal and Child Health Act, excluding hospitals, clinics and midwifery centres, are outside the Hotel Business Act and are not “hotels or inns” under the Building Standards Act (accessed 12 October 2026). Do not extend this treatment to services outside the municipal programme or Medical Care Act facilities. Confirm the programme scope and actual facility with the authorities; individual building, fire and medical-law compliance is for the relevant authorities and professionals.
 
 ## What should be confirmed with the municipality before securing a property?
 
@@ -65,7 +65,7 @@ A. Not universally impossible. Confirm with the municipal window, an architect a
 A. Even with lodging facilities, a change of building use may require a change-of-use confirmation application, and the fire classification is reviewed on the actual nature. Confirm the registered use and zoning first.
 
 **Q. Is there a nationwide figure for the facility's floor area?**
-A. This article could not confirm a uniform national figure (unverified). Area and staffing details are set by each municipality's implementation rules, so confirm at the window for the location.
+A. A nationwide minimum bedroom area has not been verified here. This is separate from staffing: the March 2026 national guideline specifies at least one nursing professional on duty around the clock for short stays. Confirm individual area requirements and additional staffing conditions with the local authority.
 
 **Q. Will the real estate company judge compliance with the implementation standards?**
 A. No. We go as far as preliminary checks and brokerage. Compliance and the final commissioning judgment lie with the municipality, medical judgment with a doctor/midwife and labour matters with a social insurance and labour consultant, each engaged separately.
@@ -73,14 +73,15 @@ A. No. We go as far as preliminary checks and brokerage. Compliance and the fina
 ## Primary sources
 
 - [Maternal and Child Health Act, Article 17-2 (postpartum-care service) / 母子保健法 第17条の2](https://laws.e-gov.go.jp/law/340AC0000000141)
-- [Children and Families Agency, Prenatal/Postnatal Support and Postpartum Care Service Guideline (March 2026 ed.; reviewed 11 Oct 2026) / こども家庭庁 産前・産後サポート事業ガイドライン及び産後ケア事業ガイドライン](https://www.cfa.go.jp/policies/boshihoken)
+- [Children and Families Agency, Prenatal/Postnatal Support and Postpartum Care Service Guideline (March 2026 ed.; reviewed 11 Oct 2026) / こども家庭庁 産前・産後サポート事業ガイドライン及び産後ケア事業ガイドライン](https://www.cfa.go.jp/assets/contents/node/basic_page/field_ref_resources/ff38becb-bbd1-41f3-a95e-3a22ddac09d8/317bd576/20260331_policies_boshihoken_173.pdf)
 - [Building Standards Act, Article 87 (change of use) / 建築基準法 第87条](https://laws.e-gov.go.jp/law/325AC0000000201)
 - [Medical Care Act, Article 2 (midwifery centre) / 医療法 第2条](https://laws.e-gov.go.jp/law/323AC0000000205)
 - [Fire Service Act Enforcement Order, Appended Table 1 / 消防法施行令 別表第一](https://laws.e-gov.go.jp/law/336CO0000000037)
+- [国土交通省・母子保健法に基づく産後ケア事業を行う施設の取扱い（2020-08-05、2026-10-12参照）](https://www.cfa.go.jp/assets/contents/node/basic_page/field_ref_resources/ff38becb-bbd1-41f3-a95e-3a22ddac09d8/cba5e460/20230401_policies_boshihoken_76.pdf)
 
-Legal/source review reference date and content update: 11 October 2026. Matters checked in retrieved official materials are distinguished from inaccessible sources and property-specific assessments. The latest amendment number and full commencement history of the Maternal and Child Health Act, the applicable item of Appended Table 1 of the Fire Service Act Enforcement Order for residential postpartum care, and the current floor-area and staffing figures of each municipality's implementation rules are unverified. Unconfirmed figures are omitted; a qualified professional and the competent authority must check the original materials before an application or contract.
+Updated and sources retrieved on 12 October 2026. Staffing and the treatment of the specified facilities are limited to the national guideline and notice actually obtained. Consolidated statutes, final amendment numbers, complete commencement histories, individual fire classification and municipal additional conditions such as area remain unverified. Retrieval failure does not establish a legal error; publication remains held pending qualified review.
 
-This article provides general information. Individual legal, permission and tax conclusions require the competent authorities and qualified professionals. 四葉不動産株式会社 (Yotsuba Real Estate Co., Ltd.), 四葉行政書士事務所 and 四葉社会保険労務士事務所, and other specialists are independent entities, engaged separately for their respective services. Each uses a direct contract, direct invoice and direct payment; no referral or lead-transfer fees are exchanged. Consulting an authority is separate from engaging a private professional. The initial property consultation is free; confirm each professional service's scope and fees with that provider.
+This article provides general information. Individual legal, permission and tax conclusions require the competent authorities and qualified professionals. 四葉不動産株式会社, 四葉行政書士事務所 and 四葉社会保険労務士事務所, and other specialists are independent entities, engaged separately for their respective services. Each uses a direct contract, direct invoice and direct payment; no referral or lead-transfer fees are exchanged. Consulting an authority is separate from engaging a private professional. The initial property consultation is free; confirm each professional service's scope and fees with that provider.
 
 ## Author
 
