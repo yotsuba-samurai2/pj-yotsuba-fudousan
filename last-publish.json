@@ -1,6 +1,6 @@
 {
-  "dryRun": true,
-  "runAt": "2026-10-12T06:26:38.752Z",
+  "dryRun": false,
+  "runAt": "2026-10-12T10:06:03.008Z",
   "todayJst": "2026-10-12",
   "targets": [],
   "held": [
