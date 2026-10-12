@@ -1,0 +1,246 @@
+{
+  "todayJst": "2026-10-12",
+  "runUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/pull/483",
+  "generationStatus": "validated",
+  "generatedCount": 6,
+  "reviewResult": "success",
+  "reviewReportAvailable": true,
+  "reviewPass": false,
+  "findings": {
+    "blocker": 0,
+    "major": 6,
+    "minor": 0
+  },
+  "reviewFindings": [
+    {
+      "file": "scripts/realestate-columns/115-sango-care-shukuhakugata-bukken-shisetsu-kijun-boshihokenho.md",
+      "severity": "major",
+      "issue": "公開保留：産後ケアの現行国ガイドライン・国通知で確認できた一般範囲を維持する。追加API原本は親の補助証跡で選択条文が確認されたが、root4原稿は未改稿で、本独立再レビューでは全法令・全改正施行履歴・用途/医療/消防/自治体条件の網羅照合を完了扱いにしない。 用途変更の200㎡・施行日、助産所の定義と9人以下、個別消防区分・居室面積・自治体追加基準と具体施設適合は所管・建築士・医療職等の資格者確認を要する。",
+      "fix": "重要未確認事項を所管と適切な資格者が原資料・個別事案で確認するまで primarySources/legalClaims=hold、requiresQualifiedReview=true を維持する。追加一次本文の一般論の確認を公開承認へ変換しない。"
+    },
+    {
+      "file": "scripts/realestate-columns/116-souzoku-jikka-juutaku-loan-zansai-teitouken-massho-baikyaku.md",
+      "severity": "major",
+      "issue": "公開保留：民法と登記法の選択条文原本は親の追加資料で取得されたが、root4原稿は未改稿。本独立再レビューは全改正・施行履歴や登記/放棄/承認の個別適用を確認完了としない。法務省の相続登記案内は正規公開URLでHTTP403、本文未取得。拒否の再試行・迂回を行わずholdを維持。 相続登記の期限・申請人・登記順序、相続放棄と単純承認、団信の保険金支払・残債・任意売却条件、空き家特例/取得費加算等の個別控除適用は司法書士・弁護士・金融機関・税理士による原資料/約款/事案確認待ち。",
+      "fix": "重要未確認事項を所管と適切な資格者が原資料・個別事案で確認するまで primarySources/legalClaims=hold、requiresQualifiedReview=true を維持する。追加一次本文の一般論の確認を公開承認へ変換しない。"
+    },
+    {
+      "file": "scripts/legal-columns/109-kodo-kanri-iryokiki-hanbai-kashidashi-kyoka-tenpo-kanrisha.md",
+      "severity": "major",
+      "issue": "公開保留：薬機法39/39の2/39の3と施行規則162/168の選択条文原本は親の補助証跡で取得されたが、root4原稿は未改稿。本独立再レビューは全改正・施行履歴、薬局等構造設備規則4条、許可更新・設備・品目別資格の現在の個別適用を確認完了としない。 取得済み東京都・中央区の品目別管理者条件の一般説明と、具体品目/個人の資格適格・施設設備適合・許可更新/費用/期間を分け、所管行政庁・行政書士等の資格者確認を要する。",
+      "fix": "重要未確認事項を所管と適切な資格者が原資料・個別事案で確認するまで primarySources/legalClaims=hold、requiresQualifiedReview=true を維持する。追加一次本文の一般論の確認を公開承認へ変換しない。"
+    },
+    {
+      "file": "scripts/legal-columns/110-seisan-gata-yuigon-fudosan-kanka-bunpai-yuigon-shikkou.md",
+      "severity": "major",
+      "issue": "公開保留：民法1012〜1015/251/252等の選択条文原本は親の補助証跡で取得されたが、root4原稿は未改稿。本独立再レビューは共有/遺留分の全関連規定と改正施行履歴、権限・遺言の効力・行為別同意要件を確認完了としない。 清算型遺贈固有の登記名義・申請人・登記順序と、相続開始後の譲渡所得の帰属/申告主体は未検証。取得済み国税庁No.2022/3267の一般説明をこれらの証明へ拡張しない。司法書士・税理士・弁護士確認待ち。",
+      "fix": "重要未確認事項を所管と適切な資格者が原資料・個別事案で確認するまで primarySources/legalClaims=hold、requiresQualifiedReview=true を維持する。追加一次本文の一般論の確認を公開承認へ変換しない。"
+    },
+    {
+      "file": "scripts/labor-columns/149-jidosha-kyoshujo-shidouin-kenteiin-roudoujikan-hanbokibi-36kyotei-henkei.md",
+      "severity": "major",
+      "issue": "公開保留：公開APIの労基法32/32の2/32の4/34/35/36/37/119条と規則12条の4全6項は実本文を照合済み。旧協定比較と3か月超の42時間条件は4言語/FAQに限定された。ただし全改正・施行履歴、道路交通法/社会保険労務士法等の全関連規定と運転業務特例の適用は未検証。 1年単位変形の導入・新旧協定・届出・日/週/期間総枠の割増算定、36特別条項の臨時事情、休憩/宿泊待機・休日振替の実態と個別事業場適用は社会保険労務士・所管の確認待ち。資料取得だけでrequiresQualifiedReview=trueを解除しない。",
+      "fix": "重要未確認事項を所管と適切な資格者が原資料・個別事案で確認するまで primarySources/legalClaims=hold、requiresQualifiedReview=true を維持する。追加一次本文の一般論の確認を公開承認へ変換しない。"
+    },
+    {
+      "file": "scripts/labor-columns/150-gakushujuku-yobiko-koshi-koma-kyu-jugyogai-roudoujikan-kanri.md",
+      "severity": "major",
+      "issue": "公開保留：労基法の選択条文、1985報告の総合判断、最高裁平成7(オ)2029の公式同一性/3頁全文、固定残業代の表示資料、最低賃金除外/賃金形態別換算を実本文照合済み。報酬指標と一律計算の2重大不整合は4言語/本文/手順/FAQで訂正を確認。ただし全改正・施行履歴、社会保険労務士法、固定残業代の現在の判例/関連法令の網羅照合は未了。 コマ給・手当の賃金形態/対象/除外/分母、授業外労働・在宅業務の労働時間性、固定残業代契約の具体的有効性、講師の労働者性と契約切替などは実契約・賃金規程・事実に基づく資格者と所管/裁判所の確認待ち。一般資料の取得で個別結論を出さない。",
+      "fix": "重要未確認事項を所管と適切な資格者が原資料・個別事案で確認するまで primarySources/legalClaims=hold、requiresQualifiedReview=true を維持する。追加一次本文の一般論の確認を公開承認へ変換しない。"
+    }
+  ],
+  "registeredCount": 0,
+  "qualityEligibleCount": 0,
+  "heldCount": 6,
+  "scheduledCount": 0,
+  "unverifiedSourceCount": 17,
+  "publishedCount": null,
+  "articles": [
+    {
+      "key": "realestate:sango-care-shukuhakugata-bukken-shisetsu-kijun-boshihokenho",
+      "fingerprint": "b43408b40dec90a6267111c0fe28f836c9edbeafa1b38e3e4faea17ffbef81af",
+      "title": "産後ケア（宿泊型）を始めるときの物件・施設基準は？母子保健法の実施基準と内見のチェックポイント",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録または重複しています",
+        "独立レビューに未解決の重大な指摘があります"
+      ],
+      "sourceFailures": [
+        {
+          "url": "https://laws.e-gov.go.jp/law/340AC0000000141",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "未検証：全関連条文の網羅照合・全改正/施行履歴・個別適用。旧報告時の本文未取得とは分け、追加の選択条文原本取得だけでこの確認を完了扱いにしない。対象：母子保健法17条の2の統合条文・最終改正／施行履歴",
+          "verified": false
+        },
+        {
+          "url": "https://laws.e-gov.go.jp/law/325AC0000000201",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "未検証：全関連条文の網羅照合・全改正/施行履歴・個別適用。旧報告時の本文未取得とは分け、追加の選択条文原本取得だけでこの確認を完了扱いにしない。対象：用途変更の200平方メートル基準・2019-06-25施行と現在の用途規制",
+          "verified": false
+        },
+        {
+          "url": "https://laws.e-gov.go.jp/law/323AC0000000205",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "未検証：全関連条文の網羅照合・全改正/施行履歴・個別適用。旧報告時の本文未取得とは分け、追加の選択条文原本取得だけでこの確認を完了扱いにしない。対象：医療法2条の助産所の定義・9人以下",
+          "verified": false
+        },
+        {
+          "url": "https://laws.e-gov.go.jp/law/336CO0000000037",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "未検証：全関連条文の網羅照合・全改正/施行履歴・個別適用。旧報告時の本文未取得とは分け、追加の選択条文原本取得だけでこの確認を完了扱いにしない。対象：消防法施行令の現在の区分・設備条件",
+          "verified": false
+        }
+      ],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "realestate:souzoku-jikka-juutaku-loan-zansai-teitouken-massho-baikyaku",
+      "fingerprint": "e17b0a54bea93c3a22867719aa1e29839f33769c45d45c0f55ff2181a73a4d3f",
+      "title": "相続した実家に住宅ローンが残っていたら？抵当権の抹消と残債・団信・売却の進め方",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録または重複しています",
+        "独立レビューに未解決の重大な指摘があります"
+      ],
+      "sourceFailures": [
+        {
+          "url": "https://laws.e-gov.go.jp/law/129AC0000000089",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "未検証：全関連条文の網羅照合・全改正/施行履歴・個別適用。旧報告時の本文未取得とは分け、追加の選択条文原本取得だけでこの確認を完了扱いにしない。対象：896条・915条・921条・939条の権利義務承継・熟慮期間・単純承認・放棄",
+          "verified": false
+        },
+        {
+          "url": "https://www.moj.go.jp/MINJI/minji05_00565.html",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "法務省の相続登記案内は正規公開URL取得の保存済みHTTP403を確認。本文は未取得、施行日・期限・過料の本文確認には使わない。再試行/迂回なし。",
+          "verified": false
+        },
+        {
+          "url": "https://laws.e-gov.go.jp/law/416AC0000000123",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "未検証：全関連条文の網羅照合・全改正/施行履歴・個別適用。旧報告時の本文未取得とは分け、追加の選択条文原本取得だけでこの確認を完了扱いにしない。対象：修正済み不動産登記法60条・76条の2の現行統合条文・施行履歴",
+          "verified": false
+        }
+      ],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:kodo-kanri-iryokiki-hanbai-kashidashi-kyoka-tenpo-kanrisha",
+      "fingerprint": "a1db6602085126e71d64b9b9b88367da892ec2176921cd4ac8ea9a389f4077c0",
+      "title": "高度管理医療機器の販売・貸与許可｜店舗要件と営業所管理者",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録または重複しています",
+        "独立レビューに未解決の重大な指摘があります"
+      ],
+      "sourceFailures": [
+        {
+          "url": "https://laws.e-gov.go.jp/law/335AC0000000145",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "未検証：全関連条文の網羅照合・全改正/施行履歴・個別適用。旧報告時の本文未取得とは分け、追加の選択条文原本取得だけでこの確認を完了扱いにしない。対象：薬機法39条・39条の2・39条の3と6年更新の現行条文",
+          "verified": false
+        },
+        {
+          "url": "https://laws.e-gov.go.jp/law/336M50000100001",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "未検証：全関連条文の網羅照合・全改正/施行履歴・個別適用。旧報告時の本文未取得とは分け、追加の選択条文原本取得だけでこの確認を完了扱いにしない。対象：施行規則162条・168条の現在の条文",
+          "verified": false
+        }
+      ],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:seisan-gata-yuigon-fudosan-kanka-bunpai-yuigon-shikkou",
+      "fingerprint": "a649c3c75371c3ebec93f96453b7a3d85306c031201845c1e9d9424168c7de6e",
+      "title": "清算型遺言で不動産を売って分ける｜書き方と遺言執行の流れ",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録または重複しています",
+        "独立レビューに未解決の重大な指摘があります"
+      ],
+      "sourceFailures": [
+        {
+          "url": "https://laws.e-gov.go.jp/law/129AC0000000089",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "未検証：全関連条文の網羅照合・全改正/施行履歴・個別適用。旧報告時の本文未取得とは分け、追加の選択条文原本取得だけでこの確認を完了扱いにしない。対象：民法1012～1015条、共有251／252条、遺留分等の現在の統合条文と2019年改正施行履歴",
+          "verified": false
+        }
+      ],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:jidosha-kyoshujo-shidouin-kenteiin-roudoujikan-hanbokibi-36kyotei-henkei",
+      "fingerprint": "feb228edd13095b5d779a0c242d0d22254c7f73c74df21814fd747126e972a2a",
+      "title": "自動車教習所の指導員・検定員の労働時間は。繁忙期の36協定と変形労働時間制",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録または重複しています",
+        "独立レビューに未解決の重大な指摘があります"
+      ],
+      "sourceFailures": [
+        {
+          "url": "https://laws.e-gov.go.jp/law/322AC0000000049",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "未検証：全関連条文の網羅照合・全改正/施行履歴・個別適用。旧報告時の本文未取得とは分け、追加の選択条文原本取得だけでこの確認を完了扱いにしない。対象：労基法の現在の統合条文",
+          "verified": false
+        },
+        {
+          "url": "https://laws.e-gov.go.jp/law/335AC0000000105",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "道路交通法99/99の2/99の3の全現行関連規定・改正履歴と教習所/指導員/検定員資格の個別適用は本レビューでは未照合。",
+          "verified": false
+        },
+        {
+          "url": "https://laws.e-gov.go.jp/law/343AC1000000089",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "社会保険労務士法第2条の現在の全文・全改正施行履歴と個別業務への適用は本レビューでは未照合。",
+          "verified": false
+        }
+      ],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:gakushujuku-yobiko-koshi-koma-kyu-jugyogai-roudoujikan-kanri",
+      "fingerprint": "3bc85aa4b66ec2dbc6222ee187719a003ec2b39b8083bdebed316c3d419b29fe",
+      "title": "学習塾・予備校講師のコマ給は要注意。授業外労働の労働時間管理",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録または重複しています",
+        "独立レビューに未解決の重大な指摘があります"
+      ],
+      "sourceFailures": [
+        {
+          "url": "https://laws.e-gov.go.jp/law/322AC0000000049",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "未検証：全関連条文の網羅照合・全改正/施行履歴・個別適用。旧報告時の本文未取得とは分け、追加の選択条文原本取得だけでこの確認を完了扱いにしない。対象：労基法32・34・37・24条の現在の統合条文",
+          "verified": false
+        },
+        {
+          "url": "https://www.mhlw.go.jp/file/06-Seisakujouhou-11600000-Shokugyouanteikyoku/0000184068.pdf",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "未検証：実際のコマ給/固定残業代契約の具体的有効性と全関連判例履歴。取得済みの求人表示指針・判例抜粋の一般説明から個別結論へ拡張しない。",
+          "verified": false
+        },
+        {
+          "url": "https://saiteichingin.mhlw.go.jp/point/page_point_check.html",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "未検証：個別のコマ給/手当の分類、最低賃金対象/除外と分母、実働記録、適用地域/職種/時点の最低賃金額と具体適合。一般式の取得で判定しない。",
+          "verified": false
+        },
+        {
+          "url": "https://www.mhlw.go.jp/content/001477330.pdf",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "未検証：個別講師の指揮監督・拘束・代替・報酬・事業者性等の事実から労働者性を認定する判断。報告の一般指標を取得したこととは分ける。",
+          "verified": false
+        }
+      ],
+      "sourceEvidenceAvailable": true
+    }
+  ]
+}

@@ -22,11 +22,11 @@ Per-lesson pay is a unit price per lesson. It rewards the class itself but has a
 | Parent meetings and phone calls | Tends to be excluded | Unpaid overtime premium |
 | Training, meetings, handovers | Tends to be excluded | Same |
 
-Wages must be paid in full (Labor Standards Act, Article 24), and work beyond statutory hours requires a premium (Article 37). If this work is treated as unpaid, it surfaces as pay falling below the minimum wage when divided across the month's total hours, or as an unpaid overtime premium.
+Wages must be paid in full (Labor Standards Act, Article 24), and work beyond statutory hours requires a premium (Article 37). Treating out-of-class work under the employer’s direction and control as unpaid can create minimum-wage and premium-pay problems. To compare pay with the minimum wage, exclude payments outside its scope, such as overtime premiums, and convert covered pay to an hourly amount according to whether it is hourly, daily, monthly, piece-rate or a combination. A qualified professional should check how per-lesson pay is classified, covered and excluded pay, records of out-of-class work and the appropriate divisor against the actual contract and pay rules. Do not apply total pay divided by total working hours as a universal method.
 
 ## Do lesson prep, grading and parent response count as working time?
 
-The MHLW guideline established on 20 January 2017 describes working time as time under the employer’s direction and control, determined objectively from actual circumstances rather than contract or work-rule wording alone (retrieved pages 1–2; accessed 12 October 2026). It includes instructed preparation and clearing-up, standby without guaranteed freedom to leave the work, and mandatory training or instructed learning. The Supreme Court judgment cited in the original draft was not obtained and is not treated as verified case-law evidence.
+The MHLW guideline established on 20 January 2017 describes working time as time under the employer’s direction and control, determined objectively from actual circumstances rather than contract or work-rule wording alone (retrieved pages 1–2; accessed 12 October 2026). It includes instructed preparation and clearing-up, standby without guaranteed freedom to leave the work, and mandatory training or instructed learning. The court’s 9 March 2000 judgment (case 1995 (O) No. 2029, PDF page 1) also explains the general framework of time under direction and control and required preparation at the workplace. Application to a cram-school teacher’s work at home requires qualified review.
 
 So preparation and grading that the school directs or requires, reporting in a set format, and mandatory training and meetings can be working time even at home. Conversely, voluntary self-study that is not required is not immediately working time. The line is drawn by whether there is an instruction, whether a deliverable is required, and the constraint on time and place. The Ministry of Health, Labour and Welfare's [Guidelines on measures employers should take to appropriately grasp working hours](https://www.mhlw.go.jp/file/06-Seisakujouhou-11200000-Roudoukijunkyoku/0000149439.pdf) (established January 20, 2017; accessed October 12, 2026) set out the employer's duty to confirm and record start and end times.
 
@@ -46,7 +46,7 @@ Even if a contract is labeled "independent contractor," if the actual way of wor
 | Direction and supervision | Teaching method, timetable and reporting are specified |
 | Time and place constraint | Working at the school at set times |
 | Substitutability | No one else can cover the lesson |
-| Nature of pay | Corresponds to providing labor, not time or output |
+| Nature of pay | Payment calculated on an hourly basis, for example, suggesting compensation for providing labour for a period of time; assessed together with other factors |
 
 Even if labeled an independent contractor, if these point to a worker, issues of minimum wage, premium wages and labor insurance arise. Even when outsourcing properly as a contract, there are rules such as disclosing transaction terms (see [what the ordering side should check under the Freelance Act](/en/labor/column/freelancelaw-hatchu-kigyo-kakunin)). The final finding of whether someone is a worker is made by the Labor Standards Inspection Office or the courts.
 
@@ -55,7 +55,7 @@ Even if labeled an independent contractor, if these point to a worker, issues of
 Preparing in this order lowers the risk of unpaid wages.
 
 1. Inventory teachers' work and sort which of class, prep, grading, meetings, training and conferences is labor under direction and control.
-2. Calculate whether the per-lesson unit price falls below the minimum wage once out-of-class work is included in total hours.
+2. Check the wage category of per-lesson pay and the covered and excluded payments; ask a qualified professional to confirm the appropriate conversion and comparison using records that include out-of-class work.
 3. If using a fixed overtime allowance, state it in the pay rules so the ordinary wage and the premium part are distinguishable, and provide for settling the difference on excess hours.
 4. Decide a method for recording start and end times and out-of-class hours, and grasp them in line with the Guidelines.
 5. For teachers treated as independent contractors, check that the actual way of working is not that of a worker, and switch to a labor contract if it is.
@@ -80,17 +80,19 @@ A. Preparation and grading that the school directs or requires, so that it is un
 A. It is judged by the actual way of working, not the contract label. If it is hard to decline requests, time and place are constrained, direction and supervision apply, and no substitute can be sent, the person may be judged a worker, and minimum wage, premium wages and labor insurance apply. The final finding is made by the Labor Standards Inspection Office or the courts.
 
 **Q. Can the minimum wage still be an issue with per-lesson pay?**
-A. Yes. The hourly figure obtained by dividing per-lesson pay across total hours, including out-of-class work, must not fall below the regional minimum wage. Teachers with more prep and grading are more likely to fall below it, so calculate using total hours.
+A. To compare pay with the minimum wage, exclude payments outside its scope, such as overtime premiums, and convert covered pay to an hourly amount according to whether it is hourly, daily, monthly, piece-rate or a combination. A qualified professional should check how per-lesson pay is classified, covered and excluded pay, records of out-of-class work and the appropriate divisor against the actual contract and pay rules. Do not apply total pay divided by total working hours as a universal method.
 
 ## Sources for this article
 
-Updated and additional materials retrieved: 12 October 2026. Checks are limited to the MHLW statute text and working-time guideline actually obtained. Complete reconciliation with e-Gov consolidated statutes, final amendment numbers and commencement histories, related judgment and Labor Standards Act Study Group report texts, and individual system, worker-status and fixed-overtime validity assessments remain unverified. Retrieval failure does not prove an error; publication is held pending qualified review.
+Updated and additional materials retrieved: 12 October 2026. Checks cover the cited scope of Labor Standards Act (労働基準法) Articles 24, 32, 34 and 37 retrieved through the public e-Gov API, MHLW’s 2017 guideline, 1985 Study Group report and minimum-wage materials, and the court’s 9 March 2000 judgment. Complete amendment and commencement histories, Shakai Hoken Roumushi Act (社会保険労務士法) Article 2, and application to individual worker status, fixed overtime and pay calculations remain unverified. Publication is held pending qualified review.
 
 - Labor Standards Act, Article 32 (working hours), Article 34 (breaks), Article 37 (premium wages) and Article 24 (full payment of wages) ([e-Gov law search](https://laws.e-gov.go.jp/law/322AC0000000049)).
-- Mitsubishi Heavy Industries Nagasaki Shipyard judgment cited in the original draft (9 March 2000): judgment text not obtained; holding not reconciled (unverified). The working-time explanation is limited to the retrieved MHLW guideline.
-- Judging worker status: Labor Standards Act Study Group report (December 19, 1985). An overall judgment centered on subordination — freedom to decline, direction and supervision, constraint, pay corresponding to labor, and substitutability. Report text not obtained or reconciled (unverified).
+- [Supreme Court First Petty Bench, 9 March 2000 (1995 (O) No. 2029)](https://www.courts.go.jp/hanrei/52572/detail2/index.html): the general framework on page 1 of the [full judgment](https://www.courts.go.jp/assets/hanrei/hanrei-pdf-52572.pdf) was checked on 12 October 2026. Application to teachers’ work at home remains unverified.
+- [MHLW Labor Standards Act Study Group report (労働基準法研究会報告), 19 December 1985](https://www.mhlw.go.jp/content/001477330.pdf): pay as compensation for labour was checked on PDF page 4 (printed page 3), 12 October 2026. Hourly-based calculation is one factor assessed with the others; individual worker status remains unverified.
 - MHLW [Guidelines on measures employers should take to appropriately grasp working hours](https://www.mhlw.go.jp/file/06-Seisakujouhou-11200000-Roudoukijunkyoku/0000149439.pdf) (established January 20, 2017; accessed October 12, 2026): the duty to confirm and record start and end times.
 - Shakai Hoken Roumushi Act, Article 2: basis for consultation and guidance services. Reconciling every current consolidated provision and final amendment date, and the conclusion on worker status in an individual case, are outside this article's scope.
 - [厚生労働省・労働基準法の法令本文（2026-10-12取得、第119条の拘禁刑等を確認）](https://www.mhlw.go.jp/web/t_doc?dataId=73022000&dataType=0&pageNo=1)
+- [Public e-Gov API, Labor Standards Act (労働基準法)](https://laws.e-gov.go.jp/api/1/lawdata/322AC0000000049): retrieved Articles 24, 32, 34 and 37 checked on 12 October 2026, separately from complete amendment and commencement histories.
+- MHLW’s [payments covered by the minimum wage](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/chingin/newpage_43898.html) and [minimum-wage comparison methods](https://saiteichingin.mhlw.go.jp/point/page_point_check.html): exclusions and conversion by wage category checked on 12 October 2026. Individual per-lesson pay classification and calculation await qualified review.
 
 This article provides general information. The design of individual contracts and wages is judged by a qualified professional after an interview, using current primary sources and the actual circumstances of the workplace. Where needed, we inquire with the competent Labor Standards Inspection Office or Labour Bureau. Author: [浦松丈二](/en/about/uramatsu) (Shakai Hoken Roumushi, Gyoseishoshi and licensed real estate transaction specialist).

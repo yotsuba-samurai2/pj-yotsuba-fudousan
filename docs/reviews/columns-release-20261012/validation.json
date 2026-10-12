@@ -1,0 +1,76 @@
+{
+  "base": "1e389cf27b38a9b9369b746ab2427ee78950fa21",
+  "checks": [
+    {
+      "log": "tests-final.log",
+      "sha256": "3d2ed8be47cbf02016c26d3b19401282062fa11dc4c3af937c014931fc144d7f",
+      "exitCode": 0
+    },
+    {
+      "log": "lint-final.log",
+      "sha256": "fed6cd45e5bdc29ebf48b47f8c6a13cc5c82eab3cb1e28ce32dd144dee570cde",
+      "exitCode": 0
+    },
+    {
+      "log": "typecheck-final.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exitCode": 0
+    },
+    {
+      "log": "labor-seed-emit.log",
+      "sha256": "6d25d7bc4734f9bf342df96be6b01598e6061da02887c281f41a09a14dd6a7fe",
+      "exitCode": 0
+    },
+    {
+      "log": "labor-seed-dry-run.log",
+      "sha256": "6b7e8441583a7cf65f34ee13356f097a47a66f4e1246ef4004412518350fed73",
+      "exitCode": 0
+    },
+    {
+      "log": "realestate-seed-dry-run.log",
+      "sha256": "aeb1dd21ff63feab2c190db25210ebbbc7def244d0acdc0b91186c140b665e78",
+      "exitCode": 0
+    },
+    {
+      "log": "legal-seed-dry-run.log",
+      "sha256": "e3ea5ef722942b82ea5e7e60ffa6dcab909ce37f4c9f0ecf2c63f4ff3ccfec8a",
+      "exitCode": 0
+    }
+  ],
+  "fullTests": {
+    "files": 147,
+    "passed": 1996
+  },
+  "lint": {
+    "errors": 0,
+    "preExistingWarnings": 23
+  },
+  "typecheck": "pass",
+  "seedValidation": {
+    "scripts": 3,
+    "ng": 0
+  },
+  "localFullBuild": "not retried: existing DB authentication previously rejected; no credentials changed",
+  "productionApprovedHead": "Vercel SUCCESS, confirmed public deployment ID",
+  "qualityApprovalsGranted": 0,
+  "independentReview": {
+    "pass": false,
+    "major": 6,
+    "minor": 0,
+    "newFindingsCorrected": 4,
+    "articles": 6,
+    "manuscripts": 24,
+    "faq": 96,
+    "internalLinksChecked": 144,
+    "sourcesVerifiedReferences": 32,
+    "unverifiedReferences": 17,
+    "reportOriginalSha256": "bad59a8c59819fa89855bcfdd6c5e6ef276d9f679020005049bcc438082acf2d",
+    "committedReportSha256": "bad59a8c59819fa89855bcfdd6c5e6ef276d9f679020005049bcc438082acf2d",
+    "fingerprintsMatch": true,
+    "schemaValid": true,
+    "mockRecorder": {
+      "registered": 0,
+      "held": 6
+    }
+  }
+}

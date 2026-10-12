@@ -1,0 +1,391 @@
+{
+  "stage": "completed",
+  "assessmentOnly": true,
+  "scope": "labor149/150の公的一次資料による未確認解消可能性の調査。記事/コード編集、承認登録、公開操作は実施していない。",
+  "checkedAt": "2026-10-12T06:36:49.084749+00:00",
+  "baselineReview": {
+    "file": "/Users/uramatsujouji/Documents/Codex/2026-10-11/task/evidence-20261012/independent-review.json",
+    "sha256": "a1f79a1adbce15de931b6e8621e993d1a2b80181db844955f5334b7e4183fb77"
+  },
+  "baselineCandidates": {
+    "file": "/Users/uramatsujouji/Documents/Codex/2026-10-11/task/evidence-20261012/final-candidates.json",
+    "sha256": "1d45debda9163e5857340ca6af8cf0a1fa7dc7a2dda7776fce6dd9f2449be808"
+  },
+  "approvalRecorded": false,
+  "publicationPerformed": false,
+  "finalFingerprintReviewStarted": false,
+  "sources": [
+    {
+      "id": "lsa-current",
+      "url": "https://laws.e-gov.go.jp/api/1/lawdata/322AC0000000049",
+      "originalFile": "local-evidence/labor.xml",
+      "httpStatus": "200",
+      "retrievedAt": "2026-10-12T06:26:37.159422+00:00",
+      "savedFileModifiedAt": "2026-10-12T06:26:37.157563+00:00",
+      "checkedAt": "2026-10-12T06:36:49.084749+00:00",
+      "bytes": 431309,
+      "sha256": "7ff8d8701deac403bccf47636e6f220d226d69568e0c6ba458dd46efd6e197d0",
+      "hashMatchesFetchManifest": true,
+      "verified": true,
+      "relevantClaim": "API Code=0、LawId=322AC0000000049、労働基準法の LawBody/MainProvision 9・24・32・32の2・32の4・34・35・36・37・119条本文を独立に読取。8/40、45/360、対象期間3か月超の42/320、臨時的事情、720・年6月・単月100未満・2〜6月平均80、休憩、休日、割増、拘禁刑の記載範囲。",
+      "verificationLimits": "公式API仕様書は施行中の現行法令全文を返すと説明。取得対象の条文本文の確認であり、全改正・施行履歴、全関連法令、教習所や講師の個別適用を完了した意味ではない。",
+      "documentIdentity": {
+        "lawId": "322AC0000000049",
+        "title": "労働基準法",
+        "apiResultCode": "0",
+        "lawAttributes": {
+          "Era": "Showa",
+          "Year": "22",
+          "Num": "049",
+          "PromulgateMonth": "04",
+          "PromulgateDay": "07"
+        }
+      },
+      "httpDate": null,
+      "requestTimeRecorded": true
+    },
+    {
+      "id": "lsa-regulations",
+      "url": "https://laws.e-gov.go.jp/api/1/lawdata/322M40000100023",
+      "originalFile": "local-evidence/labor-rule.xml",
+      "httpStatus": "200",
+      "retrievedAt": "2026-10-12T06:26:41.203074+00:00",
+      "savedFileModifiedAt": "2026-10-12T06:26:41.200343+00:00",
+      "checkedAt": "2026-10-12T06:36:49.084749+00:00",
+      "bytes": 8470211,
+      "sha256": "37e32783b6b1edb41a1ea9687e7f47e316026bc23a637eba017b1fa18d4b7f78",
+      "hashMatchesFetchManifest": true,
+      "verified": true,
+      "relevantClaim": "API Code=0、LawId=322M40000100023、労働基準法施行規則の LawBody/MainProvision 12条の4全6項と19条全文。280日と旧協定比較のただし書、日10/週52、48時間超の週数制限、連続6日・特定期間、届出様式4、通常賃金の賃金形態別計算を確認。",
+      "verificationLimits": "19条は労基法37条の通常賃金の換算であり最低賃金計算を同条だけで代用しない。全改正履歴、届出・契約の個別妥当性は未判定。",
+      "documentIdentity": {
+        "lawId": "322M40000100023",
+        "title": "労働基準法施行規則",
+        "apiResultCode": "0",
+        "lawAttributes": {
+          "Era": "Showa",
+          "Year": "22",
+          "Num": "023",
+          "PromulgateMonth": "08",
+          "PromulgateDay": "30"
+        }
+      },
+      "httpDate": null,
+      "requestTimeRecorded": true
+    },
+    {
+      "id": "worker-report-1985",
+      "url": "https://www.mhlw.go.jp/content/001477330.pdf",
+      "originalFile": "local-evidence/labor-1985.pdf",
+      "httpStatus": "200",
+      "retrievedAt": "2026-10-12T06:26:37.338227+00:00",
+      "savedFileModifiedAt": "2026-10-12T06:26:37.337059+00:00",
+      "checkedAt": "2026-10-12T06:36:49.084749+00:00",
+      "bytes": 149743,
+      "sha256": "5c996350f7a8490a78778442db4252927441324b67b18c09bdac2bd3514ea8b2",
+      "hashMatchesFetchManifest": true,
+      "verified": true,
+      "relevantClaim": "12頁原本、表紙の昭和60年12月19日を確認。第1・第2（PDF2〜5頁/印字1〜4頁）の使用従属性・諾否の自由・指揮監督・拘束・代替・報酬・事業者性・専属性・総合判断。PDF4頁/印字3頁の報酬段落は時間給による計算等が使用従属性を補強すると説明する。",
+      "verificationLimits": "1985年の報告本文を確認した範囲。表の各指標から特定講師の労働者性を自動判定しない。個別事実・現在の行政/裁判判断を置き換えない。",
+      "documentIdentity": {
+        "title": "労働基準法研究会報告（労働基準法の「労働者」の判断基準について）",
+        "documentDate": "1985-12-19",
+        "pdfPages": 12
+      },
+      "httpDate": null,
+      "requestTimeRecorded": true
+    },
+    {
+      "id": "court-official-metadata",
+      "url": "https://www.courts.go.jp/hanrei/52572/detail2/index.html",
+      "originalFile": "local-evidence/labor-court-detail.html",
+      "httpStatus": "HTTP/2 200 ",
+      "retrievedAt": null,
+      "savedFileModifiedAt": "2026-10-12T06:31:51.204837+00:00",
+      "checkedAt": "2026-10-12T06:36:49.084749+00:00",
+      "bytes": 59717,
+      "sha256": "c68a4c0ed3e48cb2ae140da76432b2c1abb1a2373c59e32a120668194e96ac85",
+      "hashMatchesFetchManifest": true,
+      "verified": true,
+      "relevantClaim": "公式詳細ページの事件番号平成7(オ)2029、賃金請求事件、平成12年3月9日、最高裁第一小法廷、民集54巻3号801頁、全文リンク52572.pdfを確認。",
+      "verificationLimits": "詳細ページの要旨だけを判決全文の確認と扱わず、全文PDFを別途照合。",
+      "documentIdentity": null,
+      "httpDate": "Mon, 12 Oct 2026 06:31:55 GMT",
+      "requestTimeRecorded": false
+    },
+    {
+      "id": "court-20000309-full",
+      "url": "https://www.courts.go.jp/assets/hanrei/hanrei-pdf-52572.pdf",
+      "originalFile": "local-evidence/labor-court-52572.pdf",
+      "httpStatus": "HTTP/2 200 ",
+      "retrievedAt": null,
+      "savedFileModifiedAt": "2026-10-12T06:31:51.014614+00:00",
+      "checkedAt": "2026-10-12T06:36:49.084749+00:00",
+      "bytes": 8263,
+      "sha256": "6c8c5419d0c4d7fc69ca5cc4603ba95b7efd58453bd3bb78d7d44adefa392525",
+      "hashMatchesFetchManifest": true,
+      "verified": true,
+      "relevantClaim": "公式詳細ページから全文リンクで取得した3頁全文。理由一の指揮命令下と客観的判断、義務づけられ又は余儀なくされた事業所内準備・社会通念上必要な時間、理由二・三の造船所の具体的事実と判断を確認。原本はCP932系文字を抽出補正し、公的Web全文と照合。",
+      "verificationLimits": "参照条文は昭和62年改正前の労基法32条。原判決の事実は造船所の事業所内行為であり、塾の在宅準備・採点・自由な自己学習の全件を本判決だけで一律認定しない。",
+      "documentIdentity": {
+        "caseNumber": "平成7(オ)2029",
+        "decisionDate": "2000-03-09",
+        "court": "最高裁判所第一小法廷",
+        "reporter": "民集54巻3号801頁",
+        "pdfPages": 3
+      },
+      "httpDate": "Mon, 12 Oct 2026 06:31:55 GMT",
+      "requestTimeRecorded": false
+    },
+    {
+      "id": "fixed-overtime-guidance",
+      "url": "https://www.mhlw.go.jp/file/06-Seisakujouhou-11600000-Shokugyouanteikyoku/0000184068.pdf",
+      "originalFile": "local-evidence/labor-fixed-overtime.pdf",
+      "httpStatus": "200",
+      "retrievedAt": "2026-10-12T06:26:37.534404+00:00",
+      "savedFileModifiedAt": "2026-10-12T06:26:37.532208+00:00",
+      "checkedAt": "2026-10-12T06:36:49.084749+00:00",
+      "bytes": 859848,
+      "sha256": "3326f92e10729f5b48c1aece45b900badd0c90da644027736cd991c12e4aecd0",
+      "hashMatchesFetchManifest": true,
+      "verified": true,
+      "relevantClaim": "2頁全文。募集・求人で固定残業代を除いた基本給、時間数/金額等の計算方法、超過の時間外・休日・深夜割増の追加支払を明示する指針抜粋と、2頁の判別不能等の裁判例抜粋を確認。",
+      "verificationLimits": "募集・求人表示の公式資料。個別固定残業代契約の有効性の全要件や最新判例の全履歴を確認した意味ではない。裁判例の引用は本PDFの抜粋確認であり各裁判全文の実取得ではない。",
+      "documentIdentity": {
+        "leafletCode": "LL281209派若01",
+        "pdfPages": 2,
+        "printedDate": null
+      },
+      "httpDate": null,
+      "requestTimeRecorded": true
+    },
+    {
+      "id": "minimum-wage-scope",
+      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/chingin/newpage_43898.html",
+      "originalFile": "local-evidence/labor-minwage-scope.html",
+      "httpStatus": "HTTP/1.1 200 OK",
+      "retrievedAt": null,
+      "savedFileModifiedAt": "2026-10-12T06:29:45.400017+00:00",
+      "checkedAt": "2026-10-12T06:36:49.084749+00:00",
+      "bytes": 50157,
+      "sha256": "89805ff932f0a9b9f01687435b920a89af47915b63832419a1d514991ef60628",
+      "hashMatchesFetchManifest": true,
+      "verified": true,
+      "relevantClaim": "公式本文の最低賃金比較対象の除外6分類：臨時、1か月超周期、所定時間超、所定日外、深夜の通常賃金を超える部分、精皆勤・通勤・家族手当。HTML原本とWeb本文を確認。",
+      "verificationLimits": "対象地域・職種の実際の最低賃金額は今回照合していない。コマ給や手当の個別分類・割増計算の判断は資格者と所管確認。",
+      "documentIdentity": null,
+      "httpDate": "Mon, 12 Oct 2026 06:29:49 GMT",
+      "requestTimeRecorded": false
+    },
+    {
+      "id": "minimum-wage-conversion",
+      "url": "https://saiteichingin.mhlw.go.jp/point/page_point_check.html",
+      "originalFile": "local-evidence/labor-minwage-conversion.html",
+      "httpStatus": "HTTP/1.1 200 OK",
+      "retrievedAt": null,
+      "savedFileModifiedAt": "2026-10-12T06:29:42.918760+00:00",
+      "checkedAt": "2026-10-12T06:36:49.084749+00:00",
+      "bytes": 32959,
+      "sha256": "14059eadbb5febd11ed9c1786b5dc89779931cbef6a3efeb10c7a7e579fdcbfb",
+      "hashMatchesFetchManifest": true,
+      "verified": true,
+      "relevantClaim": "公式本文の時間給/日給/平均月所定時間による月給/出来高等の総労働時間/併給の各式。ケースCの歩合給と割増分の区分、ケースDの固定部分と歩合部分の別々の換算・合算を確認。HTML原本とWeb本文を確認。",
+      "verificationLimits": "説明中の金額はケース例で現在の地域別最低賃金額の証明ではない。コマ給がどの賃金形態か、対象/除外、分母と実際の時間記録は契約・賃金規程・事実に基づく資格者確認。",
+      "documentIdentity": null,
+      "httpDate": "Mon, 12 Oct 2026 06:29:46 GMT",
+      "requestTimeRecorded": false
+    }
+  ],
+  "articles": [
+    {
+      "key": "labor:jidosha-kyoshujo-shidouin-kenteiin-roudoujikan-hanbokibi-36kyotei-henkei",
+      "baselineFingerprint": "ecc16cf25a71c44e1112e55225d835bde2e33960cf6f238430a0a967051f5d17",
+      "requiresQualifiedReview": true,
+      "priorChecksPreserved": {
+        "primarySources": "hold",
+        "duplicateIntent": "pass",
+        "legalClaims": "hold",
+        "translationAlignment": "pass"
+      },
+      "publicationDecision": "hold",
+      "finalFingerprintReviewStarted": false,
+      "retrievalHoldsNowResolvable": [
+        "e-Gov施行中の現行法令の対象条文本文",
+        "施行規則12条の4全文"
+      ],
+      "remainingHolds": [
+        "全改正・施行履歴および今回対象外の道路交通法/社労士法・運転業務特例との網羅照合",
+        "1年変形の導入、旧協定比較、日/週/総枠の割増計算、36特別条項臨時事情、届出・休憩/休日・宿泊待機の個別適用",
+        "本文・表・FAQ・4言語を最終編集後の新指紋で独立再レビューすること"
+      ]
+    },
+    {
+      "key": "labor:gakushujuku-yobiko-koshi-koma-kyu-jugyogai-roudoujikan-kanri",
+      "baselineFingerprint": "fba40c8464ce37dac8a0d0338e429976bcca7a5effd248e592420b506af37c4c",
+      "requiresQualifiedReview": true,
+      "priorChecksPreserved": {
+        "primarySources": "hold",
+        "duplicateIntent": "pass",
+        "legalClaims": "hold",
+        "translationAlignment": "pass"
+      },
+      "publicationDecision": "hold",
+      "finalFingerprintReviewStarted": false,
+      "retrievalHoldsNowResolvable": [
+        "e-Gov施行中の現行法令の対象条文本文",
+        "1985年報告の一般判断枠組み",
+        "最高裁2000-03-09の判決同一性と全文",
+        "固定残業代の求人表示/超過支払の一般資料",
+        "最低賃金対象/除外と賃金形態別換算の一般資料"
+      ],
+      "remainingHolds": [
+        "全改正・施行履歴および現在の固定残業代判例/関連法令の網羅照合",
+        "コマ給/手当の賃金形態と最低賃金算入/除外、分母、労働時間の個別認定",
+        "固定残業代契約の具体的有効性、講師の労働者性、契約切替などの個別法的判断",
+        "確認できた2重大不整合の4言語本文/FAQ/seed metadata修正と新指紋の独立再レビュー"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "article": "labor:gakushujuku-yobiko-koshi-koma-kyu-jugyogai-roudoujikan-kanri",
+      "severity": "major",
+      "status": "correction_required_on_baseline_fingerprint",
+      "issue": "4言語の労働者性表の報酬指標が時間を除外する。日本語「時間や成果でなく労務の提供に対応」、英語「not time or output」、繁簡の「而非時間/时间或成果」は、報告が時間給を使用従属性の補強例とする本文と整合しない。",
+      "evidence": [
+        "worker-report-1985: PDF4頁/印字3頁 第2の1(2)"
+      ],
+      "suggestedFix": "時間給を基礎とする計算等、一定時間の労務提供への対価という性格を他の要素と総合判断する旨へ4言語を限定する。単一指標で結論を出さない。"
+    },
+    {
+      "article": "labor:gakushujuku-yobiko-koshi-koma-kyu-jugyogai-roudoujikan-kanri",
+      "severity": "major",
+      "status": "correction_required_on_baseline_fingerprint",
+      "issue": "本文・手順2・FAQ4のコマ給を総労働時間で割る一律の説明は、賃金形態別の分母と対象/除外項目を省き、固定残業代を含む支給額を算入する誤読を生む。",
+      "evidence": [
+        "minimum-wage-scope: 除外6項目",
+        "minimum-wage-conversion: 計算方法1〜5・ケースC/D"
+      ],
+      "suggestedFix": "対象賃金から除外対象を除き、賃金形態別に時間額へ換算する。コマ給の形態・対象/除外・授業外労働を含む記録・分母を契約/賃金規程に基づき資格者へ確認すると4言語本文・手順・FAQを統一する。"
+    },
+    {
+      "article": "labor:jidosha-kyoshujo-shidouin-kenteiin-roudoujikan-hanbokibi-36kyotei-henkei",
+      "severity": "minor",
+      "status": "qualification_or_clarification_pending",
+      "issue": "年280日の要約には規則12条の4第3項ただし書の旧協定比較でさらに低い日数となる場合の説明がない。280日なら常に可と読ませない限定が必要。",
+      "evidence": [
+        "lsa-regulations: MainProvision Article Num=12_4 Paragraph Num=3"
+      ],
+      "suggestedFix": "旧協定との比較による追加制限を含め資格者と所管へ確認する注記を置く。"
+    },
+    {
+      "article": "labor:jidosha-kyoshujo-shidouin-kenteiin-roudoujikan-hanbokibi-36kyotei-henkei",
+      "severity": "minor",
+      "status": "qualification_or_clarification_pending",
+      "issue": "一部の表/FAQは1年単位変形なら一律42時間と短く記載するが、36条4・5項は対象期間が3か月を超える場合が条件。最初の表の条件を他の短縮箇所にも維持すると明確。",
+      "evidence": [
+        "lsa-current: MainProvision Article Num=36 Paragraph Num=4/5"
+      ],
+      "suggestedFix": "42/320および42時間超の年6月の記述に対象期間3か月超という条件を維持する。"
+    }
+  ],
+  "unverifiedClaims": [
+    {
+      "claim": "全改正・施行履歴およびすべての関連法令/判例を網羅確認した",
+      "verified": false,
+      "reason": "現行API対象本文と実取得した公的資料の該当範囲のみ照合した。"
+    },
+    {
+      "claim": "一般資料取得により個別契約の有効性、最低賃金適合、労働者性、36協定適法性が確定した",
+      "verified": false,
+      "reason": "契約・賃金規程・事業場の実態・個別事案の資格者判断は未確認。"
+    },
+    {
+      "claim": "資料取得だけで既存requiresQualifiedReview=trueをfalseへ変更できる",
+      "verified": false,
+      "reason": "資格者判断フラグを推測で解除しない指示。"
+    }
+  ],
+  "originalDownloadAttempts": [
+    {
+      "url": "https://www.mhlw.go.jp/content/11201250/001483481.pdf",
+      "retrievedAt": "2026-10-12T06:17:27.778808+00:00",
+      "requestedFile": "worker-report-1985.pdf",
+      "downloaded": false,
+      "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+      "retryAttempted": false
+    },
+    {
+      "url": "https://www.mhlw.go.jp/file/06-Seisakujouhou-11600000-Shokugyouanteikyoku/0000184068.pdf",
+      "retrievedAt": "2026-10-12T06:17:27.779064+00:00",
+      "requestedFile": "fixed-overtime-guidance.pdf",
+      "downloaded": false,
+      "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+      "retryAttempted": false
+    },
+    {
+      "url": "https://laws.e-gov.go.jp/api/1/lawdata/322AC0000000049",
+      "retrievedAt": "2026-10-12T06:17:27.779129+00:00",
+      "requestedFile": "labor-standards-act.xml",
+      "downloaded": false,
+      "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+      "retryAttempted": false
+    },
+    {
+      "url": "https://laws.e-gov.go.jp/api/1/lawdata/322M40000100023",
+      "retrievedAt": "2026-10-12T06:17:27.779172+00:00",
+      "requestedFile": "labor-standards-regulations.xml",
+      "downloaded": false,
+      "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+      "retryAttempted": false
+    }
+  ],
+  "retrievalLimitations": [
+    "独立担当の最初のurllib取得4件はDNS解決失敗で原本未保存。権限拡大・認証変更・同一コマンド再試行なし。公的Web本文と親が正規公開API/URLからHTTP200で保存した原本を照合した。",
+    "独立WebのAPI1/一部API2と旧判例詳細URLはInternal Error、API2労基法はbodyを表示せず。その応答だけではverified=trueにしていない。",
+    "canonical 52572 判決は公式詳細ページから全文リンクを確認。先に取得した18843版は匿名化/改頁が異なる補助資料であり、canonical版の事件同一性確認の代わりにはしない。",
+    "新4資料には取得リクエストの正確な時刻が未記録。HTTP200、HTTP Date、mtime、本文確認日時を別字段に保存し、HTTP Dateやmtimeをリクエスト時刻に置換しない。"
+  ],
+  "supportingDerivatives": [
+    {
+      "file": "local-evidence/labor-sources/court-metadata-web-response.json",
+      "kind": "derived_extraction_or_web_tool_response_not_original_binary",
+      "sha256": "f202095a40aeac4ef96dd99c9823e11674bd00c6f2575b5132dbc5edd208879a"
+    },
+    {
+      "file": "local-evidence/labor-sources/court-official-linked-pdf-web-response.json",
+      "kind": "derived_extraction_or_web_tool_response_not_original_binary",
+      "sha256": "a5283421c34c67fe827d14158f2b0f42f8b32c0629774a053685623d8df8589f"
+    },
+    {
+      "file": "local-evidence/labor-sources/labor-1985.pdf.extracted.txt",
+      "kind": "derived_extraction_or_web_tool_response_not_original_binary",
+      "sha256": "9241ac787284c9cf33cb160441440d4ddce905e174d3d504f1ad105bdca067ce"
+    },
+    {
+      "file": "local-evidence/labor-sources/labor-court-52572.pdf.extracted.txt",
+      "kind": "derived_extraction_or_web_tool_response_not_original_binary",
+      "sha256": "0b0ceefaab7f1904efc2fe3bcb90552876d3aacb00665e0192e15b3facc15f00"
+    },
+    {
+      "file": "local-evidence/labor-sources/labor-fixed-overtime.pdf.extracted.txt",
+      "kind": "derived_extraction_or_web_tool_response_not_original_binary",
+      "sha256": "b4be5cba5d486d899cc624fa34232c6d7472936e34995cc54d28a11a217f58a2"
+    },
+    {
+      "file": "local-evidence/labor-sources/labor-rule.xml.checked-articles.txt",
+      "kind": "derived_extraction_or_web_tool_response_not_original_binary",
+      "sha256": "2d126e88cc965c9cd21ffdf4df597a5f5ebcc0fe6c20d13af31354f2a9979758"
+    },
+    {
+      "file": "local-evidence/labor-sources/labor.xml.checked-articles.txt",
+      "kind": "derived_extraction_or_web_tool_response_not_original_binary",
+      "sha256": "925e3157df9ab0b8bc42f255e09de042e0bf6f116d4826718239da20102f58da"
+    },
+    {
+      "file": "local-evidence/labor-sources/minimum-wage-web-response.json",
+      "kind": "derived_extraction_or_web_tool_response_not_original_binary",
+      "sha256": "7cdf1f5d6bf35e765d0de4375958f7cb4696dfdeb369b843722bc48b0dfb3ba1"
+    }
+  ]
+}

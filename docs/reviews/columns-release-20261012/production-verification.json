@@ -1,0 +1,426 @@
+{
+  "merge": {
+    "pr": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/pull/481",
+    "approvedHead": "429c157427943a29022d5a25457469a2f036c394",
+    "sha": "1e389cf27b38a9b9369b746ab2427ee78950fa21",
+    "mergedAt": "2026-10-12T06:13:14Z"
+  },
+  "production": {
+    "url": "https://luck428.com",
+    "httpStatus": 200,
+    "deploymentId": "dpl_9NnQpghMS5dzygavFquzS2KJ9dC6",
+    "githubStatus": "success",
+    "vercel": [
+      {
+        "context": "Vercel",
+        "state": "success",
+        "description": "Deployment has completed",
+        "target_url": "https://vercel.com/yotsuba-samurai2/pj-yotsuba-fudousan/9NnQpghMS5dzygavFquzS2KJ9dC6"
+      }
+    ],
+    "publicHtmlDeploymentIdMatchesGithubStatus": true,
+    "cliInspection": "existing logged-in CLI could not resolve deployment in current context; teams list failed with CLI TypeError; no settings or permission changes",
+    "homeHtmlSha256": "7ce1ceaa081cd36f6807d7f1ef9f9cc3d207e51396b3a8e4f94705105378e756"
+  },
+  "normalWorkflow": {
+    "conclusion": "failure",
+    "headSha": "1e389cf27b38a9b9369b746ab2427ee78950fa21",
+    "status": "completed",
+    "updatedAt": "2026-10-12T06:27:17Z",
+    "url": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/38212525701"
+  },
+  "api": {
+    "httpStatus": 409,
+    "dryRun": true,
+    "force": false,
+    "runAt": "2026-10-12T06:26:38.752Z",
+    "qualityEligible": 0,
+    "held": 6,
+    "published": 0,
+    "blocked": "6本は品質確認待ちのため自動公開しません。記事別の理由を確認してください。forceでも解除しません。",
+    "authenticationAccepted": true,
+    "dbPublicationExecuted": false,
+    "gscSubmissionExecuted": false,
+    "issue": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/issues/482"
+  },
+  "publishedUrls": [],
+  "heldArticles": [
+    {
+      "key": "labor:gakushujuku-yobiko-koshi-koma-kyu-jugyogai-roudoujikan-kanri",
+      "business": "labor",
+      "slug": "gakushujuku-yobiko-koshi-koma-kyu-jugyogai-roudoujikan-kanri",
+      "title": "学習塾・予備校講師のコマ給は要注意。授業外労働の労働時間管理",
+      "date": "2026-10-11",
+      "category": "労働時間",
+      "path": "/labor/column/gakushujuku-yobiko-koshi-koma-kyu-jugyogai-roudoujikan-kanri",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録または重複しています"
+      ]
+    },
+    {
+      "key": "labor:jidosha-kyoshujo-shidouin-kenteiin-roudoujikan-hanbokibi-36kyotei-henkei",
+      "business": "labor",
+      "slug": "jidosha-kyoshujo-shidouin-kenteiin-roudoujikan-hanbokibi-36kyotei-henkei",
+      "title": "自動車教習所の指導員・検定員の労働時間は。繁忙期の36協定と変形労働時間制",
+      "date": "2026-10-11",
+      "category": "労働時間",
+      "path": "/labor/column/jidosha-kyoshujo-shidouin-kenteiin-roudoujikan-hanbokibi-36kyotei-henkei",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録または重複しています"
+      ]
+    },
+    {
+      "key": "legal:kodo-kanri-iryokiki-hanbai-kashidashi-kyoka-tenpo-kanrisha",
+      "business": "legal",
+      "slug": "kodo-kanri-iryokiki-hanbai-kashidashi-kyoka-tenpo-kanrisha",
+      "title": "高度管理医療機器の販売・貸与許可｜店舗要件と営業所管理者",
+      "date": "2026-10-11",
+      "category": "許認可の手続き（行政書士の実務から）",
+      "path": "/legal/column/kodo-kanri-iryokiki-hanbai-kashidashi-kyoka-tenpo-kanrisha",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録または重複しています"
+      ]
+    },
+    {
+      "key": "legal:seisan-gata-yuigon-fudosan-kanka-bunpai-yuigon-shikkou",
+      "business": "legal",
+      "slug": "seisan-gata-yuigon-fudosan-kanka-bunpai-yuigon-shikkou",
+      "title": "清算型遺言で不動産を売って分ける｜書き方と遺言執行の流れ",
+      "date": "2026-10-11",
+      "category": "相続の手続き（行政書士の実務から）",
+      "path": "/legal/column/seisan-gata-yuigon-fudosan-kanka-bunpai-yuigon-shikkou",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録または重複しています"
+      ]
+    },
+    {
+      "key": "realestate:sango-care-shukuhakugata-bukken-shisetsu-kijun-boshihokenho",
+      "business": "realestate",
+      "slug": "sango-care-shukuhakugata-bukken-shisetsu-kijun-boshihokenho",
+      "title": "産後ケア（宿泊型）を始めるときの物件・施設基準は？母子保健法の実施基準と内見のチェックポイント",
+      "date": "2026-10-11",
+      "category": "投資・事業用不動産",
+      "path": "/column/sango-care-shukuhakugata-bukken-shisetsu-kijun-boshihokenho",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録または重複しています"
+      ]
+    },
+    {
+      "key": "realestate:souzoku-jikka-juutaku-loan-zansai-teitouken-massho-baikyaku",
+      "business": "realestate",
+      "slug": "souzoku-jikka-juutaku-loan-zansai-teitouken-massho-baikyaku",
+      "title": "相続した実家に住宅ローンが残っていたら？抵当権の抹消と残債・団信・売却の進め方",
+      "date": "2026-10-11",
+      "category": "相続",
+      "path": "/column/souzoku-jikka-juutaku-loan-zansai-teitouken-massho-baikyaku",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録または重複しています"
+      ]
+    }
+  ],
+  "livePages": [
+    {
+      "key": "labor:gakushujuku-yobiko-koshi-koma-kyu-jugyogai-roudoujikan-kanri",
+      "language": "ja",
+      "url": "https://luck428.com/labor/column/gakushujuku-yobiko-koshi-koma-kyu-jugyogai-roudoujikan-kanri",
+      "checkedAt": "2026-10-12T06:31:02.573910+00:00",
+      "httpStatus": "404",
+      "finalUrl": "https://luck428.com/labor/column/gakushujuku-yobiko-koshi-koma-kyu-jugyogai-roudoujikan-kanri",
+      "exitCode": 0,
+      "bytes": 75869,
+      "sha256": "9ae1e03262090a33531774b01dd4444241cded63c2f53d998a7a5429dcd1e2a5",
+      "file": "pages/labor-gakushujuku-yobiko-koshi-koma-kyu-jugyogai-roudoujikan-kanri-ja.html"
+    },
+    {
+      "key": "labor:gakushujuku-yobiko-koshi-koma-kyu-jugyogai-roudoujikan-kanri",
+      "language": "en",
+      "url": "https://luck428.com/en/labor/column/gakushujuku-yobiko-koshi-koma-kyu-jugyogai-roudoujikan-kanri",
+      "checkedAt": "2026-10-12T06:31:03.728283+00:00",
+      "httpStatus": "404",
+      "finalUrl": "https://luck428.com/en/labor/column/gakushujuku-yobiko-koshi-koma-kyu-jugyogai-roudoujikan-kanri",
+      "exitCode": 0,
+      "bytes": 119153,
+      "sha256": "6b137668fc1d5cfb96018cf67a81a08300a81fed6e65e150e30e4b973941f011",
+      "file": "pages/labor-gakushujuku-yobiko-koshi-koma-kyu-jugyogai-roudoujikan-kanri-en.html"
+    },
+    {
+      "key": "labor:gakushujuku-yobiko-koshi-koma-kyu-jugyogai-roudoujikan-kanri",
+      "language": "zh-tw",
+      "url": "https://luck428.com/zh-tw/labor/column/gakushujuku-yobiko-koshi-koma-kyu-jugyogai-roudoujikan-kanri",
+      "checkedAt": "2026-10-12T06:31:03.696100+00:00",
+      "httpStatus": "404",
+      "finalUrl": "https://luck428.com/zh-tw/labor/column/gakushujuku-yobiko-koshi-koma-kyu-jugyogai-roudoujikan-kanri",
+      "exitCode": 0,
+      "bytes": 113334,
+      "sha256": "c7a639b4d855d2dca9538ecfb017d05e38ecfab421f274e23a29072d371c736a",
+      "file": "pages/labor-gakushujuku-yobiko-koshi-koma-kyu-jugyogai-roudoujikan-kanri-zh-tw.html"
+    },
+    {
+      "key": "labor:gakushujuku-yobiko-koshi-koma-kyu-jugyogai-roudoujikan-kanri",
+      "language": "zh",
+      "url": "https://luck428.com/zh/labor/column/gakushujuku-yobiko-koshi-koma-kyu-jugyogai-roudoujikan-kanri",
+      "checkedAt": "2026-10-12T06:31:02.508620+00:00",
+      "httpStatus": "404",
+      "finalUrl": "https://luck428.com/zh/labor/column/gakushujuku-yobiko-koshi-koma-kyu-jugyogai-roudoujikan-kanri",
+      "exitCode": 0,
+      "bytes": 113297,
+      "sha256": "24920ee60ca61eae26abb94d4cace3a15ea2ebf4cdff9aecfc1487b7222763c3",
+      "file": "pages/labor-gakushujuku-yobiko-koshi-koma-kyu-jugyogai-roudoujikan-kanri-zh.html"
+    },
+    {
+      "key": "labor:jidosha-kyoshujo-shidouin-kenteiin-roudoujikan-hanbokibi-36kyotei-henkei",
+      "language": "ja",
+      "url": "https://luck428.com/labor/column/jidosha-kyoshujo-shidouin-kenteiin-roudoujikan-hanbokibi-36kyotei-henkei",
+      "checkedAt": "2026-10-12T06:31:02.721127+00:00",
+      "httpStatus": "404",
+      "finalUrl": "https://luck428.com/labor/column/jidosha-kyoshujo-shidouin-kenteiin-roudoujikan-hanbokibi-36kyotei-henkei",
+      "exitCode": 0,
+      "bytes": 75893,
+      "sha256": "cf48354b524cbc47a3eb9e8cb8f0bdaf8348610fa1e18d0d8bdf0ca494a9d838",
+      "file": "pages/labor-jidosha-kyoshujo-shidouin-kenteiin-roudoujikan-hanbokibi-36kyotei-henkei-ja.html"
+    },
+    {
+      "key": "labor:jidosha-kyoshujo-shidouin-kenteiin-roudoujikan-hanbokibi-36kyotei-henkei",
+      "language": "en",
+      "url": "https://luck428.com/en/labor/column/jidosha-kyoshujo-shidouin-kenteiin-roudoujikan-hanbokibi-36kyotei-henkei",
+      "checkedAt": "2026-10-12T06:31:02.784204+00:00",
+      "httpStatus": "404",
+      "finalUrl": "https://luck428.com/en/labor/column/jidosha-kyoshujo-shidouin-kenteiin-roudoujikan-hanbokibi-36kyotei-henkei",
+      "exitCode": 0,
+      "bytes": 119134,
+      "sha256": "a797dd42844808f8ca169ce247355f2f38079188f92aa0e8192b80144475b2cb",
+      "file": "pages/labor-jidosha-kyoshujo-shidouin-kenteiin-roudoujikan-hanbokibi-36kyotei-henkei-en.html"
+    },
+    {
+      "key": "labor:jidosha-kyoshujo-shidouin-kenteiin-roudoujikan-hanbokibi-36kyotei-henkei",
+      "language": "zh-tw",
+      "url": "https://luck428.com/zh-tw/labor/column/jidosha-kyoshujo-shidouin-kenteiin-roudoujikan-hanbokibi-36kyotei-henkei",
+      "checkedAt": "2026-10-12T06:31:03.129136+00:00",
+      "httpStatus": "404",
+      "finalUrl": "https://luck428.com/zh-tw/labor/column/jidosha-kyoshujo-shidouin-kenteiin-roudoujikan-hanbokibi-36kyotei-henkei",
+      "exitCode": 0,
+      "bytes": 113358,
+      "sha256": "9e859b931ec9c3cac36d2d50be1187192b0b67206cfda01ffd93868580d348a6",
+      "file": "pages/labor-jidosha-kyoshujo-shidouin-kenteiin-roudoujikan-hanbokibi-36kyotei-henkei-zh-tw.html"
+    },
+    {
+      "key": "labor:jidosha-kyoshujo-shidouin-kenteiin-roudoujikan-hanbokibi-36kyotei-henkei",
+      "language": "zh",
+      "url": "https://luck428.com/zh/labor/column/jidosha-kyoshujo-shidouin-kenteiin-roudoujikan-hanbokibi-36kyotei-henkei",
+      "checkedAt": "2026-10-12T06:31:02.988882+00:00",
+      "httpStatus": "404",
+      "finalUrl": "https://luck428.com/zh/labor/column/jidosha-kyoshujo-shidouin-kenteiin-roudoujikan-hanbokibi-36kyotei-henkei",
+      "exitCode": 0,
+      "bytes": 113321,
+      "sha256": "8b7863a56b10ec1c897b7360830c3c210b6ba059e59eaf596e848c5a1fe05560",
+      "file": "pages/labor-jidosha-kyoshujo-shidouin-kenteiin-roudoujikan-hanbokibi-36kyotei-henkei-zh.html"
+    },
+    {
+      "key": "legal:kodo-kanri-iryokiki-hanbai-kashidashi-kyoka-tenpo-kanrisha",
+      "language": "ja",
+      "url": "https://luck428.com/legal/column/kodo-kanri-iryokiki-hanbai-kashidashi-kyoka-tenpo-kanrisha",
+      "checkedAt": "2026-10-12T06:31:03.169801+00:00",
+      "httpStatus": "404",
+      "finalUrl": "https://luck428.com/legal/column/kodo-kanri-iryokiki-hanbai-kashidashi-kyoka-tenpo-kanrisha",
+      "exitCode": 0,
+      "bytes": 78938,
+      "sha256": "21f9689ceb1d295c0219d1547ae5f8e8196b547cdca0b625d0158cd0f7a9db1c",
+      "file": "pages/legal-kodo-kanri-iryokiki-hanbai-kashidashi-kyoka-tenpo-kanrisha-ja.html"
+    },
+    {
+      "key": "legal:kodo-kanri-iryokiki-hanbai-kashidashi-kyoka-tenpo-kanrisha",
+      "language": "en",
+      "url": "https://luck428.com/en/legal/column/kodo-kanri-iryokiki-hanbai-kashidashi-kyoka-tenpo-kanrisha",
+      "checkedAt": "2026-10-12T06:31:03.374727+00:00",
+      "httpStatus": "404",
+      "finalUrl": "https://luck428.com/en/legal/column/kodo-kanri-iryokiki-hanbai-kashidashi-kyoka-tenpo-kanrisha",
+      "exitCode": 0,
+      "bytes": 122413,
+      "sha256": "4e2038d979d2ef6ab54dc0e994a64025b6f8f1d34a5fa88f4ed2b22b8e174698",
+      "file": "pages/legal-kodo-kanri-iryokiki-hanbai-kashidashi-kyoka-tenpo-kanrisha-en.html"
+    },
+    {
+      "key": "legal:kodo-kanri-iryokiki-hanbai-kashidashi-kyoka-tenpo-kanrisha",
+      "language": "zh-tw",
+      "url": "https://luck428.com/zh-tw/legal/column/kodo-kanri-iryokiki-hanbai-kashidashi-kyoka-tenpo-kanrisha",
+      "checkedAt": "2026-10-12T06:31:03.390242+00:00",
+      "httpStatus": "404",
+      "finalUrl": "https://luck428.com/zh-tw/legal/column/kodo-kanri-iryokiki-hanbai-kashidashi-kyoka-tenpo-kanrisha",
+      "exitCode": 0,
+      "bytes": 116229,
+      "sha256": "77a6ff7b876759ee6a3c13e4dc881215e561e29f48170ff44d236c32929f2560",
+      "file": "pages/legal-kodo-kanri-iryokiki-hanbai-kashidashi-kyoka-tenpo-kanrisha-zh-tw.html"
+    },
+    {
+      "key": "legal:kodo-kanri-iryokiki-hanbai-kashidashi-kyoka-tenpo-kanrisha",
+      "language": "zh",
+      "url": "https://luck428.com/zh/legal/column/kodo-kanri-iryokiki-hanbai-kashidashi-kyoka-tenpo-kanrisha",
+      "checkedAt": "2026-10-12T06:31:03.609513+00:00",
+      "httpStatus": "404",
+      "finalUrl": "https://luck428.com/zh/legal/column/kodo-kanri-iryokiki-hanbai-kashidashi-kyoka-tenpo-kanrisha",
+      "exitCode": 0,
+      "bytes": 116321,
+      "sha256": "a05230e34799c0bf32f75702ab3c1142f48d821336efc5a6c217999c58367d31",
+      "file": "pages/legal-kodo-kanri-iryokiki-hanbai-kashidashi-kyoka-tenpo-kanrisha-zh.html"
+    },
+    {
+      "key": "legal:seisan-gata-yuigon-fudosan-kanka-bunpai-yuigon-shikkou",
+      "language": "ja",
+      "url": "https://luck428.com/legal/column/seisan-gata-yuigon-fudosan-kanka-bunpai-yuigon-shikkou",
+      "checkedAt": "2026-10-12T06:31:03.666281+00:00",
+      "httpStatus": "404",
+      "finalUrl": "https://luck428.com/legal/column/seisan-gata-yuigon-fudosan-kanka-bunpai-yuigon-shikkou",
+      "exitCode": 0,
+      "bytes": 78887,
+      "sha256": "afd354aa7dbf52ea27d36481fa33c8e901820438c44f71908b4b199c432b5720",
+      "file": "pages/legal-seisan-gata-yuigon-fudosan-kanka-bunpai-yuigon-shikkou-ja.html"
+    },
+    {
+      "key": "legal:seisan-gata-yuigon-fudosan-kanka-bunpai-yuigon-shikkou",
+      "language": "en",
+      "url": "https://luck428.com/en/legal/column/seisan-gata-yuigon-fudosan-kanka-bunpai-yuigon-shikkou",
+      "checkedAt": "2026-10-12T06:31:04.030169+00:00",
+      "httpStatus": "404",
+      "finalUrl": "https://luck428.com/en/legal/column/seisan-gata-yuigon-fudosan-kanka-bunpai-yuigon-shikkou",
+      "exitCode": 0,
+      "bytes": 122405,
+      "sha256": "aa0c5a105810f50bde9800d633cc1e014e8c5879a26681c8084f0581affbba31",
+      "file": "pages/legal-seisan-gata-yuigon-fudosan-kanka-bunpai-yuigon-shikkou-en.html"
+    },
+    {
+      "key": "legal:seisan-gata-yuigon-fudosan-kanka-bunpai-yuigon-shikkou",
+      "language": "zh-tw",
+      "url": "https://luck428.com/zh-tw/legal/column/seisan-gata-yuigon-fudosan-kanka-bunpai-yuigon-shikkou",
+      "checkedAt": "2026-10-12T06:31:04.059666+00:00",
+      "httpStatus": "404",
+      "finalUrl": "https://luck428.com/zh-tw/legal/column/seisan-gata-yuigon-fudosan-kanka-bunpai-yuigon-shikkou",
+      "exitCode": 0,
+      "bytes": 116307,
+      "sha256": "b1fedf56e6d59e1984bfe0b142150c44c21d15bee72e11c9f03c7e333d4eca19",
+      "file": "pages/legal-seisan-gata-yuigon-fudosan-kanka-bunpai-yuigon-shikkou-zh-tw.html"
+    },
+    {
+      "key": "legal:seisan-gata-yuigon-fudosan-kanka-bunpai-yuigon-shikkou",
+      "language": "zh",
+      "url": "https://luck428.com/zh/legal/column/seisan-gata-yuigon-fudosan-kanka-bunpai-yuigon-shikkou",
+      "checkedAt": "2026-10-12T06:31:04.072173+00:00",
+      "httpStatus": "404",
+      "finalUrl": "https://luck428.com/zh/legal/column/seisan-gata-yuigon-fudosan-kanka-bunpai-yuigon-shikkou",
+      "exitCode": 0,
+      "bytes": 116184,
+      "sha256": "28f6f667bd0ad016088fc3752b74deb025227edd2fe8d5805e95f6815b3a14fd",
+      "file": "pages/legal-seisan-gata-yuigon-fudosan-kanka-bunpai-yuigon-shikkou-zh.html"
+    },
+    {
+      "key": "realestate:sango-care-shukuhakugata-bukken-shisetsu-kijun-boshihokenho",
+      "language": "ja",
+      "url": "https://luck428.com/column/sango-care-shukuhakugata-bukken-shisetsu-kijun-boshihokenho",
+      "checkedAt": "2026-10-12T06:31:04.615418+00:00",
+      "httpStatus": "404",
+      "finalUrl": "https://luck428.com/column/sango-care-shukuhakugata-bukken-shisetsu-kijun-boshihokenho",
+      "exitCode": 0,
+      "bytes": 88850,
+      "sha256": "2f0efe4d5e0b0ff0b78c3ec9dd54671ada675c732482360ed0caaa65527014a9",
+      "file": "pages/realestate-sango-care-shukuhakugata-bukken-shisetsu-kijun-boshihokenho-ja.html"
+    },
+    {
+      "key": "realestate:sango-care-shukuhakugata-bukken-shisetsu-kijun-boshihokenho",
+      "language": "en",
+      "url": "https://luck428.com/en/column/sango-care-shukuhakugata-bukken-shisetsu-kijun-boshihokenho",
+      "checkedAt": "2026-10-12T06:31:04.598976+00:00",
+      "httpStatus": "404",
+      "finalUrl": "https://luck428.com/en/column/sango-care-shukuhakugata-bukken-shisetsu-kijun-boshihokenho",
+      "exitCode": 0,
+      "bytes": 132134,
+      "sha256": "cc7102c4cccdd0680a7a3d3818d6ec8074230ee12b95d560cec50455d672acda",
+      "file": "pages/realestate-sango-care-shukuhakugata-bukken-shisetsu-kijun-boshihokenho-en.html"
+    },
+    {
+      "key": "realestate:sango-care-shukuhakugata-bukken-shisetsu-kijun-boshihokenho",
+      "language": "zh-tw",
+      "url": "https://luck428.com/zh-tw/column/sango-care-shukuhakugata-bukken-shisetsu-kijun-boshihokenho",
+      "checkedAt": "2026-10-12T06:31:04.623558+00:00",
+      "httpStatus": "404",
+      "finalUrl": "https://luck428.com/zh-tw/column/sango-care-shukuhakugata-bukken-shisetsu-kijun-boshihokenho",
+      "exitCode": 0,
+      "bytes": 126028,
+      "sha256": "22e3b875d726b6e2a6aa633da8b71a6cc214650d4d592ac417826c47922e663e",
+      "file": "pages/realestate-sango-care-shukuhakugata-bukken-shisetsu-kijun-boshihokenho-zh-tw.html"
+    },
+    {
+      "key": "realestate:sango-care-shukuhakugata-bukken-shisetsu-kijun-boshihokenho",
+      "language": "zh",
+      "url": "https://luck428.com/zh/column/sango-care-shukuhakugata-bukken-shisetsu-kijun-boshihokenho",
+      "checkedAt": "2026-10-12T06:31:04.355683+00:00",
+      "httpStatus": "404",
+      "finalUrl": "https://luck428.com/zh/column/sango-care-shukuhakugata-bukken-shisetsu-kijun-boshihokenho",
+      "exitCode": 0,
+      "bytes": 126034,
+      "sha256": "fd72893e6f4a772e862e8e50f4fca3062db495d5698d6441137366f88a41b203",
+      "file": "pages/realestate-sango-care-shukuhakugata-bukken-shisetsu-kijun-boshihokenho-zh.html"
+    },
+    {
+      "key": "realestate:souzoku-jikka-juutaku-loan-zansai-teitouken-massho-baikyaku",
+      "language": "ja",
+      "url": "https://luck428.com/column/souzoku-jikka-juutaku-loan-zansai-teitouken-massho-baikyaku",
+      "checkedAt": "2026-10-12T06:31:05.048666+00:00",
+      "httpStatus": "404",
+      "finalUrl": "https://luck428.com/column/souzoku-jikka-juutaku-loan-zansai-teitouken-massho-baikyaku",
+      "exitCode": 0,
+      "bytes": 88893,
+      "sha256": "86073c359a49a90628a07e0f4550c26b6db34acdf730f78bab630b4a4fc84545",
+      "file": "pages/realestate-souzoku-jikka-juutaku-loan-zansai-teitouken-massho-baikyaku-ja.html"
+    },
+    {
+      "key": "realestate:souzoku-jikka-juutaku-loan-zansai-teitouken-massho-baikyaku",
+      "language": "en",
+      "url": "https://luck428.com/en/column/souzoku-jikka-juutaku-loan-zansai-teitouken-massho-baikyaku",
+      "checkedAt": "2026-10-12T06:31:04.923810+00:00",
+      "httpStatus": "404",
+      "finalUrl": "https://luck428.com/en/column/souzoku-jikka-juutaku-loan-zansai-teitouken-massho-baikyaku",
+      "exitCode": 0,
+      "bytes": 132220,
+      "sha256": "6c55ebcec525bc2d60a5d41fb1726c6a7f6ee098c883ec1c82c4e4954a62542e",
+      "file": "pages/realestate-souzoku-jikka-juutaku-loan-zansai-teitouken-massho-baikyaku-en.html"
+    },
+    {
+      "key": "realestate:souzoku-jikka-juutaku-loan-zansai-teitouken-massho-baikyaku",
+      "language": "zh-tw",
+      "url": "https://luck428.com/zh-tw/column/souzoku-jikka-juutaku-loan-zansai-teitouken-massho-baikyaku",
+      "checkedAt": "2026-10-12T06:31:05.078311+00:00",
+      "httpStatus": "404",
+      "finalUrl": "https://luck428.com/zh-tw/column/souzoku-jikka-juutaku-loan-zansai-teitouken-massho-baikyaku",
+      "exitCode": 0,
+      "bytes": 125942,
+      "sha256": "746c8251515c7da8132625fea2fc86b07fe0955c940ed9d0f6b2371043a13026",
+      "file": "pages/realestate-souzoku-jikka-juutaku-loan-zansai-teitouken-massho-baikyaku-zh-tw.html"
+    },
+    {
+      "key": "realestate:souzoku-jikka-juutaku-loan-zansai-teitouken-massho-baikyaku",
+      "language": "zh",
+      "url": "https://luck428.com/zh/column/souzoku-jikka-juutaku-loan-zansai-teitouken-massho-baikyaku",
+      "checkedAt": "2026-10-12T06:31:05.078274+00:00",
+      "httpStatus": "404",
+      "finalUrl": "https://luck428.com/zh/column/souzoku-jikka-juutaku-loan-zansai-teitouken-massho-baikyaku",
+      "exitCode": 0,
+      "bytes": 125905,
+      "sha256": "f1c08a171a737ca4056278f293af848e8cd2b2a50706846011cea7a24bb001f3",
+      "file": "pages/realestate-souzoku-jikka-juutaku-loan-zansai-teitouken-massho-baikyaku-zh.html"
+    }
+  ],
+  "pr480Unchanged": {
+    "headRefOid": "ae08f4f04869a21b5319680b5e24efbf574c724e",
+    "isDraft": true,
+    "mergeable": "CONFLICTING",
+    "state": "OPEN",
+    "url": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/pull/480"
+  },
+  "sourceRetrievalBlocker": {
+    "url": "https://www.moj.go.jp/MINJI/minji05_00565.html",
+    "httpStatus": 403,
+    "attempts": 1,
+    "retry": false
+  },
+  "claudeMorningLiveTaskUpdated": false,
+  "signedManagementLinkRetried": false
+}

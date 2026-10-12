@@ -1,0 +1,439 @@
+{
+  "pass": false,
+  "findings": [
+    {
+      "file": "scripts/realestate-columns/115-sango-care-shukuhakugata-bukken-shisetsu-kijun-boshihokenho.md",
+      "severity": "major",
+      "issue": "公開保留：産後ケアの現行国ガイドライン・国通知で確認できた一般範囲を維持する。追加API原本は親の補助証跡で選択条文が確認されたが、root4原稿は未改稿で、本独立再レビューでは全法令・全改正施行履歴・用途/医療/消防/自治体条件の網羅照合を完了扱いにしない。 用途変更の200㎡・施行日、助産所の定義と9人以下、個別消防区分・居室面積・自治体追加基準と具体施設適合は所管・建築士・医療職等の資格者確認を要する。",
+      "fix": "重要未確認事項を所管と適切な資格者が原資料・個別事案で確認するまで primarySources/legalClaims=hold、requiresQualifiedReview=true を維持する。追加一次本文の一般論の確認を公開承認へ変換しない。"
+    },
+    {
+      "file": "scripts/realestate-columns/116-souzoku-jikka-juutaku-loan-zansai-teitouken-massho-baikyaku.md",
+      "severity": "major",
+      "issue": "公開保留：民法と登記法の選択条文原本は親の追加資料で取得されたが、root4原稿は未改稿。本独立再レビューは全改正・施行履歴や登記/放棄/承認の個別適用を確認完了としない。法務省の相続登記案内は正規公開URLでHTTP403、本文未取得。拒否の再試行・迂回を行わずholdを維持。 相続登記の期限・申請人・登記順序、相続放棄と単純承認、団信の保険金支払・残債・任意売却条件、空き家特例/取得費加算等の個別控除適用は司法書士・弁護士・金融機関・税理士による原資料/約款/事案確認待ち。",
+      "fix": "重要未確認事項を所管と適切な資格者が原資料・個別事案で確認するまで primarySources/legalClaims=hold、requiresQualifiedReview=true を維持する。追加一次本文の一般論の確認を公開承認へ変換しない。"
+    },
+    {
+      "file": "scripts/legal-columns/109-kodo-kanri-iryokiki-hanbai-kashidashi-kyoka-tenpo-kanrisha.md",
+      "severity": "major",
+      "issue": "公開保留：薬機法39/39の2/39の3と施行規則162/168の選択条文原本は親の補助証跡で取得されたが、root4原稿は未改稿。本独立再レビューは全改正・施行履歴、薬局等構造設備規則4条、許可更新・設備・品目別資格の現在の個別適用を確認完了としない。 取得済み東京都・中央区の品目別管理者条件の一般説明と、具体品目/個人の資格適格・施設設備適合・許可更新/費用/期間を分け、所管行政庁・行政書士等の資格者確認を要する。",
+      "fix": "重要未確認事項を所管と適切な資格者が原資料・個別事案で確認するまで primarySources/legalClaims=hold、requiresQualifiedReview=true を維持する。追加一次本文の一般論の確認を公開承認へ変換しない。"
+    },
+    {
+      "file": "scripts/legal-columns/110-seisan-gata-yuigon-fudosan-kanka-bunpai-yuigon-shikkou.md",
+      "severity": "major",
+      "issue": "公開保留：民法1012〜1015/251/252等の選択条文原本は親の補助証跡で取得されたが、root4原稿は未改稿。本独立再レビューは共有/遺留分の全関連規定と改正施行履歴、権限・遺言の効力・行為別同意要件を確認完了としない。 清算型遺贈固有の登記名義・申請人・登記順序と、相続開始後の譲渡所得の帰属/申告主体は未検証。取得済み国税庁No.2022/3267の一般説明をこれらの証明へ拡張しない。司法書士・税理士・弁護士確認待ち。",
+      "fix": "重要未確認事項を所管と適切な資格者が原資料・個別事案で確認するまで primarySources/legalClaims=hold、requiresQualifiedReview=true を維持する。追加一次本文の一般論の確認を公開承認へ変換しない。"
+    },
+    {
+      "file": "scripts/labor-columns/149-jidosha-kyoshujo-shidouin-kenteiin-roudoujikan-hanbokibi-36kyotei-henkei.md",
+      "severity": "major",
+      "issue": "公開保留：公開APIの労基法32/32の2/32の4/34/35/36/37/119条と規則12条の4全6項は実本文を照合済み。旧協定比較と3か月超の42時間条件は4言語/FAQに限定された。ただし全改正・施行履歴、道路交通法/社会保険労務士法等の全関連規定と運転業務特例の適用は未検証。 1年単位変形の導入・新旧協定・届出・日/週/期間総枠の割増算定、36特別条項の臨時事情、休憩/宿泊待機・休日振替の実態と個別事業場適用は社会保険労務士・所管の確認待ち。資料取得だけでrequiresQualifiedReview=trueを解除しない。",
+      "fix": "重要未確認事項を所管と適切な資格者が原資料・個別事案で確認するまで primarySources/legalClaims=hold、requiresQualifiedReview=true を維持する。追加一次本文の一般論の確認を公開承認へ変換しない。"
+    },
+    {
+      "file": "scripts/labor-columns/150-gakushujuku-yobiko-koshi-koma-kyu-jugyogai-roudoujikan-kanri.md",
+      "severity": "major",
+      "issue": "公開保留：労基法の選択条文、1985報告の総合判断、最高裁平成7(オ)2029の公式同一性/3頁全文、固定残業代の表示資料、最低賃金除外/賃金形態別換算を実本文照合済み。報酬指標と一律計算の2重大不整合は4言語/本文/手順/FAQで訂正を確認。ただし全改正・施行履歴、社会保険労務士法、固定残業代の現在の判例/関連法令の網羅照合は未了。 コマ給・手当の賃金形態/対象/除外/分母、授業外労働・在宅業務の労働時間性、固定残業代契約の具体的有効性、講師の労働者性と契約切替などは実契約・賃金規程・事実に基づく資格者と所管/裁判所の確認待ち。一般資料の取得で個別結論を出さない。",
+      "fix": "重要未確認事項を所管と適切な資格者が原資料・個別事案で確認するまで primarySources/legalClaims=hold、requiresQualifiedReview=true を維持する。追加一次本文の一般論の確認を公開承認へ変換しない。"
+    }
+  ],
+  "articles": [
+    {
+      "key": "realestate:sango-care-shukuhakugata-bukken-shisetsu-kijun-boshihokenho",
+      "fingerprint": "b43408b40dec90a6267111c0fe28f836c9edbeafa1b38e3e4faea17ffbef81af",
+      "requiresQualifiedReview": true,
+      "checks": {
+        "primarySources": "hold",
+        "duplicateIntent": "pass",
+        "legalClaims": "hold",
+        "translationAlignment": "pass"
+      },
+      "sources": [
+        {
+          "url": "https://laws.e-gov.go.jp/law/340AC0000000141",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "未検証：全関連条文の網羅照合・全改正/施行履歴・個別適用。旧報告時の本文未取得とは分け、追加の選択条文原本取得だけでこの確認を完了扱いにしない。対象：母子保健法17条の2の統合条文・最終改正／施行履歴",
+          "verified": false
+        },
+        {
+          "url": "https://www.cfa.go.jp/policies/boshihoken",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "現掲載の令和8年3月ガイドラインと令和元年改正関係公式資料への導線",
+          "verified": true
+        },
+        {
+          "url": "https://www.cfa.go.jp/assets/contents/node/basic_page/field_ref_resources/ff38becb-bbd1-41f3-a95e-3a22ddac09d8/317bd576/20260331_policies_boshihoken_173.pdf",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "出産後1年対象、3類型、常に看護職1名以上、短期入所は1名以上の看護職を24時間配置、居室・相談・乳児保育等の設備",
+          "verified": true
+        },
+        {
+          "url": "https://www.cfa.go.jp/assets/contents/node/basic_page/field_ref_resources/ff38becb-bbd1-41f3-a95e-3a22ddac09d8/dae0454e/20230401_policies_boshihoken_73.pdf",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "母子保健法施行規則7条の4の実施基準：常時1名以上、施設設備。令和2年省令149号の改正公布資料であり、その後の全改正履歴を確認したものではない",
+          "verified": true
+        },
+        {
+          "url": "https://www.cfa.go.jp/assets/contents/node/basic_page/field_ref_resources/ff38becb-bbd1-41f3-a95e-3a22ddac09d8/cba5e460/20230401_policies_boshihoken_76.pdf",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "17条の2対象の短期入所施設（病院・診療所・助産所を除く）は旅館業法適用外、ホテル又は旅館に該当しないという国交省通知、施行日2021-04-01",
+          "verified": true
+        },
+        {
+          "url": "https://laws.e-gov.go.jp/law/325AC0000000201",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "未検証：全関連条文の網羅照合・全改正/施行履歴・個別適用。旧報告時の本文未取得とは分け、追加の選択条文原本取得だけでこの確認を完了扱いにしない。対象：用途変更の200平方メートル基準・2019-06-25施行と現在の用途規制",
+          "verified": false
+        },
+        {
+          "url": "https://laws.e-gov.go.jp/law/323AC0000000205",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "未検証：全関連条文の網羅照合・全改正/施行履歴・個別適用。旧報告時の本文未取得とは分け、追加の選択条文原本取得だけでこの確認を完了扱いにしない。対象：医療法2条の助産所の定義・9人以下",
+          "verified": false
+        },
+        {
+          "url": "https://laws.e-gov.go.jp/law/336CO0000000037",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "未検証：全関連条文の網羅照合・全改正/施行履歴・個別適用。旧報告時の本文未取得とは分け、追加の選択条文原本取得だけでこの確認を完了扱いにしない。対象：消防法施行令の現在の区分・設備条件",
+          "verified": false
+        }
+      ],
+      "blockingFindings": [
+        "産後ケアの現行国ガイドライン・国通知で確認できた一般範囲を維持する。追加API原本は親の補助証跡で選択条文が確認されたが、root4原稿は未改稿で、本独立再レビューでは全法令・全改正施行履歴・用途/医療/消防/自治体条件の網羅照合を完了扱いにしない。",
+        "用途変更の200㎡・施行日、助産所の定義と9人以下、個別消防区分・居室面積・自治体追加基準と具体施設適合は所管・建築士・医療職等の資格者確認を要する。"
+      ]
+    },
+    {
+      "key": "realestate:souzoku-jikka-juutaku-loan-zansai-teitouken-massho-baikyaku",
+      "fingerprint": "e17b0a54bea93c3a22867719aa1e29839f33769c45d45c0f55ff2181a73a4d3f",
+      "requiresQualifiedReview": true,
+      "checks": {
+        "primarySources": "hold",
+        "duplicateIntent": "pass",
+        "legalClaims": "hold",
+        "translationAlignment": "pass"
+      },
+      "sources": [
+        {
+          "url": "https://laws.e-gov.go.jp/law/129AC0000000089",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "未検証：全関連条文の網羅照合・全改正/施行履歴・個別適用。旧報告時の本文未取得とは分け、追加の選択条文原本取得だけでこの確認を完了扱いにしない。対象：896条・915条・921条・939条の権利義務承継・熟慮期間・単純承認・放棄",
+          "verified": false
+        },
+        {
+          "url": "https://www.moj.go.jp/MINJI/minji05_00565.html",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "法務省の相続登記案内は正規公開URL取得の保存済みHTTP403を確認。本文は未取得、施行日・期限・過料の本文確認には使わない。再試行/迂回なし。",
+          "verified": false
+        },
+        {
+          "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/joto/3267.htm",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "相続税課税と一定期間内譲渡等の取得費加算の要件",
+          "verified": true
+        },
+        {
+          "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/joto/3306.htm",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "一定要件で最高3000万円、2024年以後の譲渡で対象財産取得相続人3人以上は2000万円、取得費加算と併用不可",
+          "verified": true
+        },
+        {
+          "url": "https://laws.e-gov.go.jp/law/416AC0000000123",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "未検証：全関連条文の網羅照合・全改正/施行履歴・個別適用。旧報告時の本文未取得とは分け、追加の選択条文原本取得だけでこの確認を完了扱いにしない。対象：修正済み不動産登記法60条・76条の2の現行統合条文・施行履歴",
+          "verified": false
+        }
+      ],
+      "blockingFindings": [
+        "民法と登記法の選択条文原本は親の追加資料で取得されたが、root4原稿は未改稿。本独立再レビューは全改正・施行履歴や登記/放棄/承認の個別適用を確認完了としない。法務省の相続登記案内は正規公開URLでHTTP403、本文未取得。拒否の再試行・迂回を行わずholdを維持。",
+        "相続登記の期限・申請人・登記順序、相続放棄と単純承認、団信の保険金支払・残債・任意売却条件、空き家特例/取得費加算等の個別控除適用は司法書士・弁護士・金融機関・税理士による原資料/約款/事案確認待ち。"
+      ]
+    },
+    {
+      "key": "legal:kodo-kanri-iryokiki-hanbai-kashidashi-kyoka-tenpo-kanrisha",
+      "fingerprint": "a1db6602085126e71d64b9b9b88367da892ec2176921cd4ac8ea9a389f4077c0",
+      "requiresQualifiedReview": true,
+      "checks": {
+        "primarySources": "hold",
+        "duplicateIntent": "pass",
+        "legalClaims": "hold",
+        "translationAlignment": "pass"
+      },
+      "sources": [
+        {
+          "url": "https://laws.e-gov.go.jp/law/335AC0000000145",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "未検証：全関連条文の網羅照合・全改正/施行履歴・個別適用。旧報告時の本文未取得とは分け、追加の選択条文原本取得だけでこの確認を完了扱いにしない。対象：薬機法39条・39条の2・39条の3と6年更新の現行条文",
+          "verified": false
+        },
+        {
+          "url": "https://laws.e-gov.go.jp/law/336M50000100001",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "未検証：全関連条文の網羅照合・全改正/施行履歴・個別適用。旧報告時の本文未取得とは分け、追加の選択条文原本取得だけでこの確認を完了扱いにしない。対象：施行規則162条・168条の現在の条文",
+          "verified": false
+        },
+        {
+          "url": "https://www.hokeniryo.metro.tokyo.lg.jp/anzen/iyaku/sonota/sale_leas/risk",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "高度管理・特定保守管理は許可、特定保守管理を除く管理は届出、一般は原則不要、具体品目と申請窓口",
+          "verified": true
+        },
+        {
+          "url": "https://www.hokeniryo.metro.tokyo.lg.jp/anzen/iyaku/sonota/sale_leas/kyoka",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "構造設備と管理者の区分。一般の3年＋基礎講習に対し、指定視力補正用レンズ等のみは1年＋講習、プログラムのみは別枠",
+          "verified": true
+        },
+        {
+          "url": "https://www.hokeniryo.metro.tokyo.lg.jp/anzen/iyaku/sonota/sale_leas/sonsyujikou",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "管理者設置、継続研修の義務と特定管理の努力義務の違い",
+          "verified": true
+        },
+        {
+          "url": "https://www.city.chuo.lg.jp/a0030/kenkouiryou/iryou/iji/hanbai/koudokanriiryoukiki.html",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "2026年7月6日掲載の許可・分類説明と管理者早見表の導線",
+          "verified": true
+        },
+        {
+          "url": "https://www.city.chuo.lg.jp/documents/3219/kanrishyashikaku080629.pdf",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "一般・コンタクト・プログラムの基礎講習区分、実務経験1～3年の違い。個人の適格判定は行わない",
+          "verified": true
+        },
+        {
+          "url": "https://www.city.chuo.lg.jp/documents/3219/kodosinkisetumei.pdf",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "採光・照明・換気・清潔、居住／不潔場所との区別と衛生安全な貯蔵設備等の申請説明",
+          "verified": true
+        }
+      ],
+      "blockingFindings": [
+        "薬機法39/39の2/39の3と施行規則162/168の選択条文原本は親の補助証跡で取得されたが、root4原稿は未改稿。本独立再レビューは全改正・施行履歴、薬局等構造設備規則4条、許可更新・設備・品目別資格の現在の個別適用を確認完了としない。",
+        "取得済み東京都・中央区の品目別管理者条件の一般説明と、具体品目/個人の資格適格・施設設備適合・許可更新/費用/期間を分け、所管行政庁・行政書士等の資格者確認を要する。"
+      ]
+    },
+    {
+      "key": "legal:seisan-gata-yuigon-fudosan-kanka-bunpai-yuigon-shikkou",
+      "fingerprint": "a649c3c75371c3ebec93f96453b7a3d85306c031201845c1e9d9424168c7de6e",
+      "requiresQualifiedReview": true,
+      "checks": {
+        "primarySources": "hold",
+        "duplicateIntent": "pass",
+        "legalClaims": "hold",
+        "translationAlignment": "pass"
+      },
+      "sources": [
+        {
+          "url": "https://laws.e-gov.go.jp/law/129AC0000000089",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "未検証：全関連条文の網羅照合・全改正/施行履歴・個別適用。旧報告時の本文未取得とは分け、追加の選択条文原本取得だけでこの確認を完了扱いにしない。対象：民法1012～1015条、共有251／252条、遺留分等の現在の統合条文と2019年改正施行履歴",
+          "verified": false
+        },
+        {
+          "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/2022.htm",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "死亡日までに確定した所得の準確定申告と知った日の翌日から4か月以内の期限",
+          "verified": true
+        },
+        {
+          "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/joto/3267.htm",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "相続税額を取得費加算できる一般要件と一定期間内譲渡",
+          "verified": true
+        }
+      ],
+      "blockingFindings": [
+        "民法1012〜1015/251/252等の選択条文原本は親の補助証跡で取得されたが、root4原稿は未改稿。本独立再レビューは共有/遺留分の全関連規定と改正施行履歴、権限・遺言の効力・行為別同意要件を確認完了としない。",
+        "清算型遺贈固有の登記名義・申請人・登記順序と、相続開始後の譲渡所得の帰属/申告主体は未検証。取得済み国税庁No.2022/3267の一般説明をこれらの証明へ拡張しない。司法書士・税理士・弁護士確認待ち。"
+      ]
+    },
+    {
+      "key": "labor:jidosha-kyoshujo-shidouin-kenteiin-roudoujikan-hanbokibi-36kyotei-henkei",
+      "fingerprint": "feb228edd13095b5d779a0c242d0d22254c7f73c74df21814fd747126e972a2a",
+      "requiresQualifiedReview": true,
+      "checks": {
+        "primarySources": "hold",
+        "duplicateIntent": "pass",
+        "legalClaims": "hold",
+        "translationAlignment": "pass"
+      },
+      "sources": [
+        {
+          "url": "https://laws.e-gov.go.jp/law/322AC0000000049",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "未検証：全関連条文の網羅照合・全改正/施行履歴・個別適用。旧報告時の本文未取得とは分け、追加の選択条文原本取得だけでこの確認を完了扱いにしない。対象：労基法の現在の統合条文",
+          "verified": false
+        },
+        {
+          "url": "https://www.mhlw.go.jp/web/t_doc?dataId=73022000&dataType=0&pageNo=1",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "厚労省の労基法本文を実取得。32／32の2／32の4／34／35／36／37／119条の記載と、36条5項の通常予見不能な業務量増加等、各上限・休憩・拘禁刑を確認。全改正施行履歴、個別事業場の適用、届出内容を確認した意味ではない。",
+          "verified": true
+        },
+        {
+          "url": "https://jsite.mhlw.go.jp/tochigi-roudoukyoku/hourei_seido_tetsuzuki/roudoukijun_keiyaku/roukijou/roukihou_point/_79129/transformation32-4-2.html",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "年間変形10時間・52時間・280日、48時間超の週数・連続労働日数と協定／規則の届出。現掲載ページは2002年例を含み、その後の最終改正履歴の確認とは区別",
+          "verified": true
+        },
+        {
+          "url": "https://houseikyoku.sangiin.go.jp/column/column119.htm",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "2025年6月1日拘禁刑施行と施行前行為の経過扱い",
+          "verified": true
+        },
+        {
+          "url": "https://www.mhlw.go.jp/file/06-Seisakujouhou-11200000-Roudoukijunkyoku/0000149439.pdf",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "4頁全文実取得。第3（1–2頁）の指揮命令下、指示準備・後始末、即応義務の手待時間、義務研修・指示学習のみを確認。個別の休憩・待機認定を代替しない。",
+          "verified": true
+        },
+        {
+          "url": "https://www.mhlw.go.jp/content/11200000/tp1216-1l-02.pdf",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "PDF5頁（印字11頁）Q&A1の変形労働時間制における日8時間／所定時間・週40時間／所定時間・期間総枠の時間外算定説明を実取得。2010年改正説明であり、2026年の全改正履歴や最新個別適用の確認には代用しない。",
+          "verified": true
+        },
+        {
+          "url": "https://laws.e-gov.go.jp/api/1/lawdata/322AC0000000049",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "API Code=0、LawId=322AC0000000049、労働基準法の LawBody/MainProvision 9・24・32・32の2・32の4・34・35・36・37・119条本文を独立に読取。8/40、45/360、対象期間3か月超の42/320、臨時的事情、720・年6月・単月100未満・2〜6月平均80、休憩、休日、割増、拘禁刑の記載範囲。 公式API仕様書は施行中の現行法令全文を返すと説明。取得対象の条文本文の確認であり、全改正・施行履歴、全関連法令、教習所や講師の個別適用を完了した意味ではない。",
+          "verified": true
+        },
+        {
+          "url": "https://laws.e-gov.go.jp/api/1/lawdata/322M40000100023",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "API Code=0、LawId=322M40000100023、労働基準法施行規則の LawBody/MainProvision 12条の4全6項と19条全文。280日と旧協定比較のただし書、日10/週52、48時間超の週数制限、連続6日・特定期間、届出様式4、通常賃金の賃金形態別計算を確認。 19条は労基法37条の通常賃金の換算であり最低賃金計算を同条だけで代用しない。全改正履歴、届出・契約の個別妥当性は未判定。",
+          "verified": true
+        },
+        {
+          "url": "https://laws.e-gov.go.jp/law/335AC0000000105",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "道路交通法99/99の2/99の3の全現行関連規定・改正履歴と教習所/指導員/検定員資格の個別適用は本レビューでは未照合。",
+          "verified": false
+        },
+        {
+          "url": "https://laws.e-gov.go.jp/law/343AC1000000089",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "社会保険労務士法第2条の現在の全文・全改正施行履歴と個別業務への適用は本レビューでは未照合。",
+          "verified": false
+        }
+      ],
+      "blockingFindings": [
+        "公開APIの労基法32/32の2/32の4/34/35/36/37/119条と規則12条の4全6項は実本文を照合済み。旧協定比較と3か月超の42時間条件は4言語/FAQに限定された。ただし全改正・施行履歴、道路交通法/社会保険労務士法等の全関連規定と運転業務特例の適用は未検証。",
+        "1年単位変形の導入・新旧協定・届出・日/週/期間総枠の割増算定、36特別条項の臨時事情、休憩/宿泊待機・休日振替の実態と個別事業場適用は社会保険労務士・所管の確認待ち。資料取得だけでrequiresQualifiedReview=trueを解除しない。"
+      ]
+    },
+    {
+      "key": "labor:gakushujuku-yobiko-koshi-koma-kyu-jugyogai-roudoujikan-kanri",
+      "fingerprint": "3bc85aa4b66ec2dbc6222ee187719a003ec2b39b8083bdebed316c3d419b29fe",
+      "requiresQualifiedReview": true,
+      "checks": {
+        "primarySources": "hold",
+        "duplicateIntent": "pass",
+        "legalClaims": "hold",
+        "translationAlignment": "pass"
+      },
+      "sources": [
+        {
+          "url": "https://laws.e-gov.go.jp/law/322AC0000000049",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "未検証：全関連条文の網羅照合・全改正/施行履歴・個別適用。旧報告時の本文未取得とは分け、追加の選択条文原本取得だけでこの確認を完了扱いにしない。対象：労基法32・34・37・24条の現在の統合条文",
+          "verified": false
+        },
+        {
+          "url": "https://www.mhlw.go.jp/web/t_doc?dataId=73022000&dataType=0&pageNo=1",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "厚労省掲載の労基法9条労働者定義・24条全額払い・32条8／40・37条割増の規定のみ。授業準備等の労働時間性や固定残業代の具体的有効要件の判例に代用しない",
+          "verified": true
+        },
+        {
+          "url": "https://www.check-roudou.mhlw.go.jp/parttime/",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "アルバイトにも労基法適用、全額払い・最低賃金・割増の一般説明のみ。1985年報告／最高裁判例／労働時間把握指針の確認には代用しない",
+          "verified": true
+        },
+        {
+          "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/roudouzikan/070614-2.html",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "正式名称と平成29年1月20日策定日、本文PDFとリーフレットの公式掲載導線",
+          "verified": true
+        },
+        {
+          "url": "https://www.mhlw.go.jp/file/06-Seisakujouhou-11200000-Roudoukijunkyoku/0000149439.pdf",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "ガイドライン第2適用範囲、第3労働時間の考え方、第4(1)(2)(3)記録・原則的方法・自己申告運用",
+          "verified": true
+        },
+        {
+          "url": "https://laws.e-gov.go.jp/api/1/lawdata/322AC0000000049",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "API Code=0、LawId=322AC0000000049、労働基準法の LawBody/MainProvision 9・24・32・32の2・32の4・34・35・36・37・119条本文を独立に読取。8/40、45/360、対象期間3か月超の42/320、臨時的事情、720・年6月・単月100未満・2〜6月平均80、休憩、休日、割増、拘禁刑の記載範囲。 公式API仕様書は施行中の現行法令全文を返すと説明。取得対象の条文本文の確認であり、全改正・施行履歴、全関連法令、教習所や講師の個別適用を完了した意味ではない。",
+          "verified": true
+        },
+        {
+          "url": "https://www.mhlw.go.jp/content/001477330.pdf",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "12頁原本、表紙の昭和60年12月19日を確認。第1・第2（PDF2〜5頁/印字1〜4頁）の使用従属性・諾否の自由・指揮監督・拘束・代替・報酬・事業者性・専属性・総合判断。PDF4頁/印字3頁の報酬段落は時間給による計算等が使用従属性を補強すると説明する。 1985年の報告本文を確認した範囲。表の各指標から特定講師の労働者性を自動判定しない。個別事実・現在の行政/裁判判断を置き換えない。",
+          "verified": true
+        },
+        {
+          "url": "https://www.courts.go.jp/hanrei/52572/detail2/index.html",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "公式詳細ページの事件番号平成7(オ)2029、賃金請求事件、平成12年3月9日、最高裁第一小法廷、民集54巻3号801頁、全文リンク52572.pdfを確認。 詳細ページの要旨だけを判決全文の確認と扱わず、全文PDFを別途照合。",
+          "verified": true
+        },
+        {
+          "url": "https://www.courts.go.jp/assets/hanrei/hanrei-pdf-52572.pdf",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "公式詳細ページから全文リンクで取得した3頁全文。理由一の指揮命令下と客観的判断、義務づけられ又は余儀なくされた事業所内準備・社会通念上必要な時間、理由二・三の造船所の具体的事実と判断を確認。原本はCP932系文字を抽出補正し、公的Web全文と照合。 参照条文は昭和62年改正前の労基法32条。原判決の事実は造船所の事業所内行為であり、塾の在宅準備・採点・自由な自己学習の全件を本判決だけで一律認定しない。",
+          "verified": true
+        },
+        {
+          "url": "https://www.mhlw.go.jp/file/06-Seisakujouhou-11600000-Shokugyouanteikyoku/0000184068.pdf",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "2頁全文。募集・求人で固定残業代を除いた基本給、時間数/金額等の計算方法、超過の時間外・休日・深夜割増の追加支払を明示する指針抜粋と、2頁の判別不能等の裁判例抜粋を確認。 募集・求人表示の公式資料。個別固定残業代契約の有効性の全要件や最新判例の全履歴を確認した意味ではない。裁判例の引用は本PDFの抜粋確認であり各裁判全文の実取得ではない。",
+          "verified": true
+        },
+        {
+          "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/chingin/newpage_43898.html",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "公式本文の最低賃金比較対象の除外6分類：臨時、1か月超周期、所定時間超、所定日外、深夜の通常賃金を超える部分、精皆勤・通勤・家族手当。HTML原本とWeb本文を確認。 対象地域・職種の実際の最低賃金額は今回照合していない。コマ給や手当の個別分類・割増計算の判断は資格者と所管確認。",
+          "verified": true
+        },
+        {
+          "url": "https://saiteichingin.mhlw.go.jp/point/page_point_check.html",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "公式本文の時間給/日給/平均月所定時間による月給/出来高等の総労働時間/併給の各式。ケースCの歩合給と割増分の区分、ケースDの固定部分と歩合部分の別々の換算・合算を確認。HTML原本とWeb本文を確認。 説明中の金額はケース例で現在の地域別最低賃金額の証明ではない。コマ給がどの賃金形態か、対象/除外、分母と実際の時間記録は契約・賃金規程・事実に基づく資格者確認。",
+          "verified": true
+        },
+        {
+          "url": "https://www.mhlw.go.jp/file/06-Seisakujouhou-11600000-Shokugyouanteikyoku/0000184068.pdf",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "未検証：実際のコマ給/固定残業代契約の具体的有効性と全関連判例履歴。取得済みの求人表示指針・判例抜粋の一般説明から個別結論へ拡張しない。",
+          "verified": false
+        },
+        {
+          "url": "https://saiteichingin.mhlw.go.jp/point/page_point_check.html",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "未検証：個別のコマ給/手当の分類、最低賃金対象/除外と分母、実働記録、適用地域/職種/時点の最低賃金額と具体適合。一般式の取得で判定しない。",
+          "verified": false
+        },
+        {
+          "url": "https://www.mhlw.go.jp/content/001477330.pdf",
+          "checkedAt": "2026-10-12",
+          "relevantClaim": "未検証：個別講師の指揮監督・拘束・代替・報酬・事業者性等の事実から労働者性を認定する判断。報告の一般指標を取得したこととは分ける。",
+          "verified": false
+        }
+      ],
+      "blockingFindings": [
+        "労基法の選択条文、1985報告の総合判断、最高裁平成7(オ)2029の公式同一性/3頁全文、固定残業代の表示資料、最低賃金除外/賃金形態別換算を実本文照合済み。報酬指標と一律計算の2重大不整合は4言語/本文/手順/FAQで訂正を確認。ただし全改正・施行履歴、社会保険労務士法、固定残業代の現在の判例/関連法令の網羅照合は未了。",
+        "コマ給・手当の賃金形態/対象/除外/分母、授業外労働・在宅業務の労働時間性、固定残業代契約の具体的有効性、講師の労働者性と契約切替などは実契約・賃金規程・事実に基づく資格者と所管/裁判所の確認待ち。一般資料の取得で個別結論を出さない。"
+      ]
+    }
+  ]
+}
