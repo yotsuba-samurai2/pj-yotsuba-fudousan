@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-12T10:06:29.138Z",
+  "generatedAt": "2026-10-13T09:59:27.384Z",
   "siteUrl": "sc-domain:luck428.com",
   "windowDays": 45,
   "urls": {
@@ -1588,16 +1588,6 @@
       "verdict": "UNCHECKED",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
       "lastmod": "2026-08-29"
-    },
-    "https://luck428.com/legal/column/kazoku-shintaku-gyosei-yakuwari-kumisei": {
-      "verdict": "UNCHECKED",
-      "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-08-28"
-    },
-    "https://luck428.com/legal/column/nochi-tenyo-4jo-5jo-kyoka-nagare": {
-      "verdict": "UNCHECKED",
-      "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-08-28"
     }
   }
 }

@@ -1,7 +1,7 @@
 {
   "dryRun": false,
-  "runAt": "2026-10-12T10:06:03.008Z",
-  "todayJst": "2026-10-12",
+  "runAt": "2026-10-13T09:59:02.956Z",
+  "todayJst": "2026-10-13",
   "targets": [],
   "held": [
     {
@@ -75,6 +75,84 @@
       "qualityHoldReasons": [
         "公開レビュー記録が未登録または重複しています"
       ]
+    },
+    {
+      "key": "labor:haigyo-kaisan-jugyoin-kaiko-yokoku-tatekae-barai-roumu",
+      "business": "labor",
+      "slug": "haigyo-kaisan-jugyoin-kaiko-yokoku-tatekae-barai-roumu",
+      "title": "廃業するとき従業員にどう対応するか｜解雇予告・会社都合離職・未払賃金立替払",
+      "date": "2026-10-12",
+      "category": "会社をたたむ",
+      "path": "/labor/column/haigyo-kaisan-jugyoin-kaiko-yokoku-tatekae-barai-roumu",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録または重複しています"
+      ]
+    },
+    {
+      "key": "labor:sakoju-anpi-kakunin-seikatsu-soudan-yakan-taisei-roumu",
+      "business": "labor",
+      "slug": "sakoju-anpi-kakunin-seikatsu-soudan-yakan-taisei-roumu",
+      "title": "サービス付き高齢者向け住宅の労務｜安否確認・生活相談員の配置と夜間体制",
+      "date": "2026-10-12",
+      "category": "介護の労務",
+      "path": "/labor/column/sakoju-anpi-kakunin-seikatsu-soudan-yakan-taisei-roumu",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録または重複しています"
+      ]
+    },
+    {
+      "key": "legal:shitei-jidosha-seibi-jigyo-minkan-shaken-shitei-shinsei-youken",
+      "business": "legal",
+      "slug": "shitei-jidosha-seibi-jigyo-minkan-shaken-shitei-shinsei-youken",
+      "title": "指定自動車整備事業（民間車検場）の指定申請｜認証との違いと設備・人員要件",
+      "date": "2026-10-12",
+      "category": "許認可の手続き（行政書士の実務から）",
+      "path": "/legal/column/shitei-jidosha-seibi-jigyo-minkan-shaken-shitei-shinsei-youken",
+      "qualityHoldReasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録または重複しています"
+      ]
+    },
+    {
+      "key": "legal:souzoku-saimu-hoshou-saimu-chosa-junpro-kikan",
+      "business": "legal",
+      "slug": "souzoku-saimu-hoshou-saimu-chosa-junpro-kikan",
+      "title": "相続する借金・保証債務の調べ方｜単純承認・限定承認・放棄と熟慮期間",
+      "date": "2026-10-12",
+      "category": "相続の手続き（行政書士の実務から）",
+      "path": "/legal/column/souzoku-saimu-hoshou-saimu-chosa-junpro-kikan",
+      "qualityHoldReasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録または重複しています"
+      ]
+    },
+    {
+      "key": "realestate:chugokugo-buyer-shakuchiken-gainen-shutoku-dd",
+      "business": "realestate",
+      "slug": "chugokugo-buyer-shakuchiken-gainen-shutoku-dd",
+      "title": "「借地権付き物件」を中国・台湾の顧客に説明する——普通借地と定期借地、取得時の確認事項",
+      "date": "2026-10-12",
+      "category": "投資・事業用不動産",
+      "path": "/column/chugokugo-buyer-shakuchiken-gainen-shutoku-dd",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録または重複しています"
+      ]
+    },
+    {
+      "key": "realestate:souzoku-suuji-souzoku-jikka-baikyaku-nagare",
+      "business": "realestate",
+      "slug": "souzoku-suuji-souzoku-jikka-baikyaku-nagare",
+      "title": "数次相続で相続人が増えた実家を売る——相続登記が未了のままどう進めるか",
+      "date": "2026-10-12",
+      "category": "相続",
+      "path": "/column/souzoku-suuji-souzoku-jikka-baikyaku-nagare",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録または重複しています"
+      ]
     }
   ],
   "scheduled": [],
@@ -104,7 +182,31 @@
     {
       "key": "realestate:souzoku-jikka-juutaku-loan-zansai-teitouken-massho-baikyaku",
       "message": "品質確認待ち：公開レビュー記録が未登録または重複しています"
+    },
+    {
+      "key": "labor:haigyo-kaisan-jugyoin-kaiko-yokoku-tatekae-barai-roumu",
+      "message": "品質確認待ち：公開レビュー記録が未登録または重複しています"
+    },
+    {
+      "key": "labor:sakoju-anpi-kakunin-seikatsu-soudan-yakan-taisei-roumu",
+      "message": "品質確認待ち：公開レビュー記録が未登録または重複しています"
+    },
+    {
+      "key": "legal:shitei-jidosha-seibi-jigyo-minkan-shaken-shitei-shinsei-youken",
+      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録または重複しています"
+    },
+    {
+      "key": "legal:souzoku-saimu-hoshou-saimu-chosa-junpro-kikan",
+      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録または重複しています"
+    },
+    {
+      "key": "realestate:chugokugo-buyer-shakuchiken-gainen-shutoku-dd",
+      "message": "品質確認待ち：公開レビュー記録が未登録または重複しています"
+    },
+    {
+      "key": "realestate:souzoku-suuji-souzoku-jikka-baikyaku-nagare",
+      "message": "品質確認待ち：公開レビュー記録が未登録または重複しています"
     }
   ],
-  "blocked": "6本は品質確認待ちのため自動公開しません。記事別の理由を確認してください。forceでも解除しません。"
+  "blocked": "12本は品質確認待ちのため自動公開しません。記事別の理由を確認してください。forceでも解除しません。"
 }
