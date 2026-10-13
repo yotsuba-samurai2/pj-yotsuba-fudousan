@@ -2434,6 +2434,46 @@ const ARTICLES: ArticleSpec[] = [
     localesWithTranslations: ["en", "zh-tw", "zh"],
     hubLinks: ["/souzoku"],
   },
+  {
+    file: "119-souzoku-noyadate-taiyoko-fit-setsubi-tochi-baikyaku.md",
+    slug: "souzoku-noyadate-taiyoko-fit-setsubi-tochi-baikyaku",
+    title: "相続した野立て太陽光発電の土地と設備、売るときは何から手をつける？",
+    publishedAt: "2026-10-13",
+    category: "相続",
+    excerpt:
+      "相続した野立て太陽光は「土地」「設備」「FIT（事業計画）認定」の3つが別々に動きます。土地の売買仲介は当社、相続登記は司法書士、FIT認定の事業者変更は行政書士が書類作成で関与、設備の償却資産税や税の試算は税理士、境界確定は土地家屋調査士へ分けます。東京都文京区の宅地建物取引士兼行政書士が、再エネ特措法・不動産登記法・地方税法の条文から整理します。事業者変更の手続区分や撤去費用など未確認事項は資格者確認待ちです。",
+    keywords: [
+      "相続 野立て 太陽光 売却",
+      "FIT 事業計画認定 事業者変更 相続",
+      "太陽光 発電設備 償却資産税",
+      "再エネ特措法 第9条 第10条 変更認定",
+      "太陽光 土地 設備 相続登記",
+    ],
+    tags: ["相続", "太陽光発電", "FIT認定", "償却資産税", "売却"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/souzoku"],
+  },
+  {
+    file: "120-chugokugo-oya-kodomo-ryugaku-sumai-shutoku-meigi.md",
+    slug: "chugokugo-oya-kodomo-ryugaku-sumai-shutoku-meigi",
+    title: "子の留学・就労のために日本の住まいを買う：親名義か子名義か、中国・台湾の親が最初に確かめること",
+    publishedAt: "2026-10-13",
+    category: "外国人の住まい",
+    excerpt:
+      "子の住まいを親名義で買うか子名義で買うかは、外為法の報告・贈与税・在留資格・将来の処分で効き方が変わります。物件探しと売買仲介は当社、贈与税や非居住者課税は税理士、子の在留資格との整合は行政書士、登記は司法書士へ分けます。東京都文京区の宅地建物取引士兼行政書士が、外為法・相続税法・入管法の枠組みから中国本土・台湾の親の確認事項を整理します。贈与税の課税区分や在留資格の個別該当性など未確認事項は資格者確認待ちです。",
+    keywords: [
+      "子 留学 住まい 購入 親名義 子名義",
+      "非居住者 不動産取得 外為法 報告",
+      "中国 台湾 親 日本 不動産 購入",
+      "みなし贈与 親 代金 子名義",
+      "在留資格 留学 技人国 不動産 所有",
+    ],
+    tags: ["外国人の住まい", "中国語圏", "非居住者", "外為法", "在留資格"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/global"],
+  },
 ];
 
 function toPlainText(md: string): string {

@@ -1,0 +1,92 @@
+---
+title: "You inherited ground-mounted solar — the land and the equipment: where do you start when you sell?"
+excerpt: "Inherited ground-mounted solar moves as three separate things: the land, the equipment and the FIT (business-plan) accreditation. We handle the land's sale brokerage; inheritance registration lies with a judicial scrivener; the change of FIT operator with an administrative scrivener preparing the documents; depreciable-asset tax and tax estimates with a tax accountant; and boundary confirmation with a land and house surveyor — each engaged separately."
+category: Inheritance
+faqHeading: Frequently asked questions
+---
+**In short:** Inherited ground-mounted solar moves as three separate things — the land, the equipment and the FIT (business-plan) accreditation. The land's sale brokerage is ours; inheritance registration lies with a judicial scrivener; the change of FIT operator is handled with an administrative scrivener preparing the documents; the equipment's depreciable-asset tax and tax estimates with a tax accountant; and boundary confirmation with a land and house surveyor — each an independent entity, engaged separately.
+
+This article is for an heir who wants to sell or reorganise ground-mounted (ground-installed) solar left by a parent, together with its land, equipment, FIT accreditation and lease; it organises where to start from the Renewable Energy Special Measures Act, the Real Property Registration Act and the Local Tax Act. We (Yotsuba Real Estate Co., Ltd.) handle valuation, the arrangement of the sale and the brokerage of the land (and the business of which the equipment forms part). Inheritance registration lies with a judicial scrivener; preparing the documents for the change of FIT business-plan operator with an administrative scrivener; estimates of the equipment's depreciable-asset tax, capital-gains tax and inheritance-tax valuation with a tax accountant; and boundary confirmation accompanying a sale with a land and house surveyor. These are independent entities from Yotsuba Real Estate Co., Ltd. (四葉不動産株式会社), engaged separately for each service under a separation-of-engagement arrangement. For the order of mandatory inheritance registration and selling, see [inheritance registration becoming mandatory and selling](https://luck428.com/en/column/souzoku-toki-gimuka-baikyaku); for the decision to sell or keep, see [should you sell or keep an inherited family home](https://luck428.com/en/column/souzoku-jikka-uru-nokosu).
+
+## Inherited ground-mounted solar: which of the land, the equipment and the FIT accreditation goes to whom?
+
+Although it looks like a single thing, ground-mounted solar is, as a matter of rights, three: the land, the generating equipment (panels, mounts, power conditioners, etc.) and the FIT (business-plan) accreditation. In inheritance each of the three is succeeded and transferred through a different procedure. Separating out which is in whose name and which procedure it runs on is the starting point.
+
+An heir succeeds, from the time inheritance begins, to all rights and obligations belonging to the decedent's property (Civil Code Art. 896). Ownership of the land and the equipment passes to the heirs as a matter of course, but showing it to the outside world requires procedures: the land through inheritance registration, the equipment through the owner's name at the depreciable-asset filing office (the municipality), and the FIT accreditation through the operator's name on the accreditation. These do not move in lockstep and must be dealt with separately.
+
+| Object | Procedure for succession/transfer | Who |
+|---|---|---|
+| Land (miscellaneous land, etc.) | Inheritance registration (name change) | Judicial scrivener |
+| Generating equipment | Change of the depreciable-asset filing name | Heirs / tax accountant confirms |
+| FIT (business-plan) accreditation | Procedure to change the operator on the accreditation | Administrative scrivener prepares documents |
+| Power-sale contract and grid connection | Change of party to the purchase and connection contracts | Heirs / each contracting party confirms |
+
+Which assets can be sold together with the land, and whether the equipment is left or removed, changes the sequence. The design of the sale is ours; confirmation of the succession of rights is each professional's.
+
+## How does the FIT business-plan accreditation (change of operator) relate to the sale?
+
+The FIT accreditation is neither "the land" nor "the equipment": it is a status tied to the accredited operator. If the operator changes through inheritance, a procedure to change the operator on the accreditation is required, and when selling to a third party together with the business, the change of operator on the accreditation is also involved. The rule is not to leave the accreditation and the reality (who the generating operator is) out of step.
+
+Accreditation of a renewable energy generation business plan is set out in Art. 9 of the Renewable Energy Special Measures Act (Act on Special Measures Concerning Procurement of Electricity from Renewable Energy Sources by Electricity Utilities; Act No. 108 of 2011), and changes to an accredited plan (change accreditation / change notification) in Art. 10. Whether a change of operator through inheritance or a business transfer amounts to a change-accreditation application or suffices as an after-the-fact change notification, and which attachments are required, is set per the item changed on the Agency for Natural Resources and Energy's "Nattoku! Renewable Energy" pages and the FIT/FIP portal. Confirming this classification and preparing the documents for the accreditation procedure is where the administrative scrivener is involved. Neglecting the change of operator leaves the accreditation and the reality out of step and may impede purchase at the FIT price, so confirm it early, in parallel with the sale schedule.
+
+| Situation | What moves on the accreditation | Who |
+|---|---|---|
+| Operator changes through inheritance | Change the operator (name) on the accreditation to the heir | Administrative scrivener prepares documents |
+| Sell to a third party with the business | Change the accreditation operator to the buyer | Administrative scrivener / each party |
+| Remove the equipment and sell the land alone | Confirm business discontinuation and the treatment of the accreditation | Administrative scrivener / each contracting party confirms |
+
+The latest classification, forms and attachments for the change procedure are checked on the Agency for Natural Resources and Energy portal immediately before writing (**accessed 13 October 2026**). Because the purchase price and connection conditions bear directly on the sale price, share the FIT accreditation's remaining status with us at valuation.
+
+## Who confirms the equipment's depreciable-asset tax and removal costs (buried foundations, leftovers)?
+
+Business-use ground-mounted solar generating equipment is, in principle, subject to fixed-asset tax as a "depreciable asset," separately from the land and the building. The owner as of 1 January each year files with the municipality. If you remove it, the cost of processing buried foundations and leftovers affects the net proceeds of the sale, so estimate it early together with the condition of the equipment.
+
+A depreciable asset is a business-use asset other than land and buildings, positioned in Art. 341 of the Local Tax Act (the definition of fixed and depreciable assets); the owner files the assets held as of 1 January each year with the municipality by 31 January (Art. 383 of the same Act). Business-use solar generating equipment is treated as taxable, and because the taxable classification changes with the form of power sale (full-volume, surplus or self-consumption) and the generating scale, whether tax actually applies, the assessed value and the depreciation calculation are confirmed with the municipality's guidance and a tax accountant. The cost of burying/removing foundations and processing panels and power conditioners varies greatly by case, so this article does not assert figures and leaves them as unverified, deferring to the equipment contractor's estimate and the tax accountant's arrangement.
+
+| Cost item | Content | Who |
+|---|---|---|
+| Depreciable-asset (fixed-asset) tax | Business-use equipment is in principle taxable; the owner as of 1 January files by 31 January | Heirs / municipality / tax accountant confirms |
+| Removal/disposal cost | Burying of foundations; processing of panels, mounts, power conditioners (amount depends on the case = unverified) | Equipment contractor / heirs |
+| Capital-gains tax / inheritance-tax valuation | Valuation of the equipment and land, and taxation of the sale gain | Tax accountant estimates |
+| Brokerage fee | Brokerage commission to the real estate company | Us |
+
+## If only the land was leased (superficies / leasehold), how is the position succeeded?
+
+If the parent was not generating themselves but had leased only the land to a generating operator, the position of the lessor (the landowner) passes to the heirs. The equipment and FIT accreditation are on the operator's side; what the heirs take over is the land and the "lessor" standing under the superficies or leasehold set on that land.
+
+Because an heir succeeds to all of the decedent's rights and obligations (Civil Code Art. 896), the lessor's position under the land lease or superficies agreement is also inherited. The contract term, the rent and the restoration (removal) provisions remain in effect in principle. The heirs first check, in the contract, the remaining term, the rent and who bears the removal of the equipment at the end of the term. If selling the land alone, the buyer buys "land with a leasehold (superficies/leasehold)," which affects valuation and saleability. Because unconfirmed boundaries impede a sale, boundary-confirmation surveying is handled by a land and house surveyor. For how to think about selling when rights are special, see also [should you sell or keep an inherited family home](https://luck428.com/en/column/souzoku-jikka-uru-nokosu).
+
+## Who do you assign valuation, tax, registration and procedures to, and who handles the sale itself?
+
+Because many professionals are involved, dividing the roles up front avoids confusion. Valuation, the arrangement of the sale and brokerage of the land are ours; inheritance registration goes to a judicial scrivener; the FIT change of operator to an administrative scrivener; tax to a tax accountant; and boundaries to a land and house surveyor. If the heirs cannot agree on how to divide, it is referred to a lawyer.
+
+Inheritance registration became mandatory on 1 April 2024, requiring an application within three years of learning of the acquisition (Real Property Registration Act Art. 76-2), with a civil fine of up to ¥100,000 for failure without justifiable grounds (Art. 164(1)). This registration moving the land into the heirs' names is the judicial scrivener's area. We arrange the valuation and sale schedule while watching the heirs' alignment and the FIT accreditation's remaining status, and handle the sale contract, settlement and brokerage. For inherited-property consultations, see [inheritance consultations](https://luck428.com/en/souzoku). Each professional is an independent entity from Yotsuba Real Estate Co., Ltd., engaged separately for each service. We proceed by direct contract, direct invoice and direct payment; no referral or lead-transfer fees are exchanged. The FIT change of operator goes to an administrative scrivener, inheritance registration to a judicial scrivener, depreciable-asset tax / capital-gains tax / inheritance-tax valuation to a tax accountant, boundary confirmation to a land and house surveyor, and disputes among heirs to a lawyer.
+
+## Frequently asked questions
+
+**Q. Can I change the names of the land, the equipment and the FIT accreditation of inherited ground-mounted solar all at once?**
+A. The three are separate procedures. The land is inheritance registration (judicial scrivener), the equipment is the depreciable-asset filing name (municipality / tax accountant confirms), and the FIT accreditation is a change of the accredited operator (administrative scrivener prepares the documents); they do not all change at one window at once. Each is an independent entity engaged separately, and we handle the arrangement of the sale.
+
+**Q. What happens if I sell without changing the FIT operator?**
+A. The accredited operator and the actual generating operator stay out of step, which may impede purchase at the FIT price or grid connection. Whether a change of operator through inheritance amounts to a change-accreditation application or a change notification is set per the item changed on the Agency for Natural Resources and Energy portal. Preparing the documents for the procedure is where an administrative scrivener is involved.
+
+**Q. Is fixed-asset tax charged on solar generating equipment too?**
+A. Business-use generating equipment is, in principle, subject to fixed-asset tax as a "depreciable asset," separately from the land and building, with the owner as of 1 January filing with the municipality by 31 January (Local Tax Act Art. 383). Because the taxable classification changes with the form and scale of power sale, confirm whether tax actually applies and the valuation with the municipality's guidance and a tax accountant.
+
+**Q. Can I remove the equipment and sell the land alone? How much does it cost?**
+A. Removing it and selling as vacant (or miscellaneous) land is an option. The cost of burying foundations and processing panels and power conditioners varies greatly with the equipment's scale and condition, so this article does not assert a figure (unverified). Taking into account the equipment contractor's estimate and the treatment of the FIT accreditation / business discontinuation (an administrative scrivener confirms), we organise the net proceeds of the sale.
+
+## Primary sources
+
+- [Act on Special Measures Concerning Procurement of Electricity from Renewable Energy Sources by Electricity Utilities (Renewable Energy Special Measures Act; Act No. 108 of 2011) / 再エネ特措法](https://laws.e-gov.go.jp/law/423AC0000000108) (Art. 9 = accreditation of a renewable energy generation business plan; Art. 10 = changes to an accredited plan (change accreditation / change notification). Checked in the statute text on e-Gov. **Accessed 13 October 2026**)
+- [Agency for Natural Resources and Energy, "Nattoku! Renewable Energy" (guidance on FIT/FIP change accreditation and change notification) / 資源エネルギー庁](https://www.enecho.meti.go.jp/category/saving_and_new/saiene/kaitori/announce_henkoutodokede_2510.html) (the classification of procedures for changes of operator/accreditation content and their attachments; the classification for a change of operator through inheritance or business transfer is organised per item changed. **Accessed 13 October 2026**)
+- [Real Property Registration Act, Art. 76-2 (duty to apply for inheritance registration), Art. 164(1) (civil fine) / 不動産登記法](https://laws.e-gov.go.jp/law/416AC0000000123) (apply within three years of learning of acquisition; a civil fine of up to ¥100,000 for failure without justifiable grounds. The application duty came into force on 1 April 2024. **Accessed 13 October 2026**)
+- [Local Tax Act, Art. 341 (definition of fixed and depreciable assets), Art. 383 (filing of depreciable assets) / 地方税法](https://laws.e-gov.go.jp/law/325AC0000000226) (the owner of business-use depreciable assets as of 1 January each year files with the municipality by 31 January. **Accessed 13 October 2026**)
+
+Updated and additional sources checked on 13 October 2026. The provisions of the Renewable Energy Special Measures Act, the Real Property Registration Act and the Local Tax Act were checked on e-Gov. Whether a change of operator through inheritance or business transfer amounts to a change-accreditation application or a change notification, the taxable classification/assessed value/exemptions of depreciable-asset tax on solar generating equipment, the equipment's removal cost, and the FIT purchase price/connection conditions vary by case and are not asserted here but left as unverified; FIT procedures are confirmed by an administrative scrivener, tax by a tax accountant, registration by a judicial scrivener, and boundaries by a land and house surveyor against original materials. The Agency for Natural Resources and Energy portal's URL and content are as of the access date and may change in structure. Publication remains held pending qualified review.
+
+This article provides general information and does not present individual legal conclusions, tax conclusions, or the outcome of the FIT accreditation. Confirmation by the competent authorities and qualified professionals is required. Yotsuba Real Estate Co., Ltd. (四葉不動産株式会社), 四葉行政書士事務所, 四葉社会保険労務士事務所 and other specialists (judicial scrivener, tax accountant, lawyer, land and house surveyor) are independent entities, engaged separately for each service. We proceed by direct contract, direct invoice and direct payment; no referral or lead-transfer fees are exchanged. The change of FIT business-plan operator lies with an administrative scrivener, inheritance registration with a judicial scrivener, depreciable-asset tax / capital-gains tax / inheritance-tax valuation with a tax accountant, boundary confirmation with a land and house surveyor, and disputes among heirs with a lawyer. The initial property consultation is free; confirm each professional's scope and fees with that provider.
+
+## Author
+
+Joji Uramatsu (浦松 丈二), real estate transaction specialist (Tokyo Governor registration No. 293544) and administrative scrivener (registration No. 25087022); representative director of Yotsuba Real Estate Co., Ltd. (四葉不動産株式会社; Real Estate Brokerage, Tokyo Governor (1) No. 113304) and representative of 四葉行政書士事務所. In Kohinata, Bunkyo-ku, Tokyo, about five minutes' walk from Myogadani Station. For the sale of inherited ground-mounted solar land and equipment, he handles valuation, brokerage and the building of the sale schedule; the FIT change of operator is assigned to an administrative scrivener, registration to a judicial scrivener, tax to a tax accountant, and boundaries to a land and house surveyor. [Author profile](https://luck428.com/en/about/uramatsu).
