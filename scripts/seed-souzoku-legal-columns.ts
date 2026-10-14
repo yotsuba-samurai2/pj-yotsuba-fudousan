@@ -984,6 +984,23 @@ const REQUIRED_HUB_LINKS: Record<string, string[]> = {
     "/legal/ryokin",
     "/legal/column/shokuhin-seizogyo-kyoka-bukken-setsubi-kijun",
   ],
+  "tokutei-zaisan-shokei-yuigon-jueki-sakibashi-daishu-fuka": [
+    "/legal/services/inheritance",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/souzoku",
+    "/legal/column/tokutei-zaisan-shokei-yuigon-izo-chigai",
+    "/legal/column/daishu-saidaishu-souzokunin-hani-koseki-kakutei",
+    "/legal/column/jihitsu-kosei-yuigon",
+    "/legal/column/kosei-shosho-yuigon-koshonin-shonin-hiyo",
+  ],
+  "ginou-jisshu-ikusei-shuro-ikou-kanri-shien-kikan-kyoka": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/toroku-shien-kikan-touroku-shien-keikaku",
+    "/legal/column/keieikanri-zairyu-chuka-kigyousha-kaisha-setsuritsu",
+  ],
 };
 
 /** 表示コンプライアンス上の禁止語 */
@@ -3177,6 +3194,34 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "独立した事業体",
     "紹介料を受け取りません",
   ],
+  "tokutei-zaisan-shokei-yuigon-jueki-sakibashi-daishu-fuka": [
+    "特定財産承継遺言",
+    "民法第1014条第2項",
+    "民法第887条第2項",
+    "民法第994条",
+    "民法第995条",
+    "最高裁判所第三小法廷",
+    "平成23年2月22日",
+    "民集65巻2号699頁",
+    "特段の事情",
+    "予備的遺言",
+    "別々にご契約",
+    "独立した事業体",
+    "紹介料を受け取りません",
+  ],
+  "ginou-jisshu-ikusei-shuro-ikou-kanri-shien-kikan-kyoka": [
+    "令和6年法律第60号",
+    "2027年（令和9年）4月1日",
+    "監理支援機関",
+    "育成就労計画",
+    "令和8年4月15日",
+    "令和8年9月1日",
+    "外国人技能実習機構",
+    "出入国管理及び難民認定法",
+    "別々にご契約",
+    "独立した事業体",
+    "紹介料を受け取りません",
+  ],
 };
 
 /** 記事ごとに含めてはならない表現 */
@@ -3332,6 +3377,8 @@ const FORBIDDEN_PHRASES: Record<string, string[]> = {
   "kosei-shosho-yuigon-koshonin-shonin-hiyo": [],
   "isan-bunkatsu-10nen-904jo-3-tokubetsu-jueki": [],
   "tsukemono-seizogyo-kyoka-2024-haccp": [],
+  "tokutei-zaisan-shokei-yuigon-jueki-sakibashi-daishu-fuka": [],
+  "ginou-jisshu-ikusei-shuro-ikou-kanri-shien-kikan-kyoka": [],
 };
 
 /** 本セット外へ張る既存legalコラムslug（リポジトリの他シードで実在確認済み） */
@@ -6152,6 +6199,60 @@ const ARTICLES: Array<{
       "相続",
       "山林",
       "過料",
+      "行政書士",
+    ],
+  },
+  {
+    file: "115-tokutei-zaisan-shokei-yuigon-jueki-sakibashi-daishu-fuka.md",
+    slug: "tokutei-zaisan-shokei-yuigon-jueki-sakibashi-daishu-fuka",
+    date: "2026-10-14",
+    title:
+      "「相続させる」遺言で受益相続人が先に死亡｜代襲は原則なし・予備的遺言で備える",
+    category: "相続の手続き（行政書士の実務から）",
+    excerpt:
+      "「特定の財産を特定の相続人に相続させる」遺言（特定財産承継遺言・民法第1014条第2項）で、受益相続人が遺言者より先に死亡した場合、その子（孫）は原則として代襲相続しません。最高裁平成23年2月22日判決（民集65巻2号699頁）の考え方、遺贈の明文（民法第994条・第995条）との比較、条項失効後の遺産分割、予備的遺言での備え方と、作成・公正証書化・登記の分離受任を行政書士の実務から整理します。",
+    keywords: [
+      "相続させる 遺言 受益相続人 先に死亡 代襲",
+      "特定財産承継遺言 代襲相続 しない",
+      "最高裁 平成23年2月22日 相続させる 遺言",
+      "予備的遺言 補充遺言 次順位",
+      "民法994条 995条 遺贈 受遺者 先死亡",
+      "相続させる 遺言 行政書士",
+    ],
+    tags: [
+      "特定財産承継遺言",
+      "相続させる遺言",
+      "代襲相続",
+      "予備的遺言",
+      "遺言",
+      "相続",
+      "行政書士",
+    ],
+  },
+  {
+    file: "116-ginou-jisshu-ikusei-shuro-ikou-kanri-shien-kikan-kyoka.md",
+    slug: "ginou-jisshu-ikusei-shuro-ikou-kanri-shien-kikan-kyoka",
+    date: "2026-10-14",
+    title:
+      "技能実習から育成就労へ｜監理支援機関の許可の取り直しと受入れ計画の認定",
+    category: "許認可の手続き（行政書士の実務から）",
+    excerpt:
+      "技能実習から育成就労への移行で、現在の監理団体は自動的に監理支援機関にはならず、新たに許可が必要です（出入国在留管理庁Q&A Q33）。施行日は2027年（令和9年）4月1日、根拠は令和6年法律第60号。監理支援機関の許可の施行日前申請（令和8年4月15日〜）、育成就労計画の認定（令和8年9月1日〜）、許可を受けると一般監理事業の許可とみなされる扱い（Q39）、許認可（行政書士）と労務（社労士）の分離受任、未確定部分の確認先を整理します。",
+    keywords: [
+      "技能実習 育成就労 移行 監理団体 許可",
+      "監理支援機関 許可 施行日前申請 2026年4月15日",
+      "育成就労 施行日 2027年4月1日 令和6年法律第60号",
+      "育成就労計画 認定 施行日前申請 外国人技能実習機構",
+      "監理団体 監理支援機関 みなし 一般監理事業",
+      "育成就労 監理支援機関 許可 行政書士",
+    ],
+    tags: [
+      "育成就労",
+      "技能実習",
+      "監理支援機関",
+      "在留資格",
+      "申請取次",
+      "許認可",
       "行政書士",
     ],
   },

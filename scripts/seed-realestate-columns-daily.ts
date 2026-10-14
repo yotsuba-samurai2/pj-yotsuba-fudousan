@@ -2474,6 +2474,46 @@ const ARTICLES: ArticleSpec[] = [
     localesWithTranslations: ["en", "zh-tw", "zh"],
     hubLinks: ["/global"],
   },
+  {
+    file: "121-container-trailer-house-tenpo-bukken-kenchiku-kakunin-youto.md",
+    slug: "container-trailer-house-tenpo-bukken-kenchiku-kakunin-youto",
+    title: "コンテナ・トレーラーハウスで店舗や事務所を開くとき、物件・土地選びで何を確認すればよいですか",
+    publishedAt: "2026-10-14",
+    category: "投資・事業用不動産",
+    excerpt:
+      "コンテナやトレーラーハウスは、随時かつ任意に移動できる状態なら建築物に当たらず、土地に定着して継続使用すれば建築基準法の建築物として建築確認や用途地域の制限がかかります。物件・土地選びはこの線引きが起点です。東京都文京区の宅地建物取引士兼行政書士が、建築基準法・都市計画法・地方税法の条文と国の技術的助言から契約前に確認できることを整理します。建築物該当性と用途地域の最終判断は建築士・特定行政庁、営業許可は行政書士、固定資産税の課税区分は税理士・市区町村、定着物の登記は司法書士へ分離受任でご案内します。",
+    keywords: [
+      "コンテナ 店舗 建築確認",
+      "トレーラーハウス 建築物 該当性",
+      "トレーラーハウス 市街化調整区域 建築許可",
+      "コンテナ 固定資産税 家屋 車両",
+      "随時かつ任意に移動できる 建築基準法2条1号",
+    ],
+    tags: ["事業用不動産", "許認可", "建築基準法", "市街化調整区域"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/toushi", "/office"],
+  },
+  {
+    file: "122-souzoku-akiya-3000man-roujin-home-nyusho-kyojuyoken.md",
+    slug: "souzoku-akiya-3000man-roujin-home-nyusho-kyojuyoken",
+    title: "被相続人が老人ホームに入所していた実家でも、相続空き家の3000万円特別控除は使えますか",
+    publishedAt: "2026-10-14",
+    category: "相続",
+    excerpt:
+      "親が老人ホーム等に入所してから空き家になった実家でも、相続空き家の3000万円特別控除は使える余地があります。鍵は、入所の直前に要介護認定等を受けていたこと、入所から相続開始まで空き家が貸付け等に使われず維持されていたこと、一人暮らしだったことの証明です。東京都文京区の宅地建物取引士兼行政書士が、租税特別措置法35条・施行令23条（令和元年度改正）と国税庁タックスアンサーNo.3306・No.3307から適用の要点を整理します。適用の最終判定と確定申告は税理士、相続登記は司法書士へ分離受任でご案内します。",
+    keywords: [
+      "空き家 3000万円 特別控除 老人ホーム",
+      "被相続人 居住要件 老人ホーム 入所",
+      "租税特別措置法35条 施行令23条",
+      "空き家特例 要介護認定 被相続人居住用家屋等確認書",
+      "空き家 3000万円 令和6年 2000万円 売却期限",
+    ],
+    tags: ["相続", "空き家", "税制特例", "売却"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/souzoku"],
+  },
 ];
 
 function toPlainText(md: string): string {

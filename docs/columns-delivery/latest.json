@@ -1,154 +1,128 @@
 {
-  "todayJst": "2026-10-14",
-  "runUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/38452186493",
+  "todayJst": "2026-10-15",
+  "runUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/38602086814",
   "generationStatus": "validated",
   "generatedCount": 6,
   "reviewResult": "success",
   "reviewReportAvailable": true,
-  "reviewPass": false,
+  "reviewPass": true,
   "findings": {
     "blocker": 0,
-    "major": 1,
-    "minor": 1
+    "major": 0,
+    "minor": 2
   },
   "reviewFindings": [
     {
-      "file": "scripts/realestate-columns/120-chugokugo-oya-kodomo-ryugaku-sumai-shutoku-meigi.md (および en/zh-tw/zh)",
-      "severity": "major",
-      "issue": "出典4「国税庁 タックスアンサー No.1932『海外勤務中に不動産を売却したとき（非居住者からの購入と源泉徴収）』」のURL https://www.nta.go.jp/taxes/shiraberu/taxanswer/joto/1932.htm が実在せずエラーページを返す（死リンク）。さらにNo.1932は『海外勤務中に不動産を売却した場合』＝売主（譲渡）側の所得税解説（カテゴリは joto ではなく shotoku）であり、本文が根拠とする『買主が非居住者からの購入時に10.21％を源泉徴収／個人・自己または親族の居住用・対価1億円以下は不要』の正典ではない。買主側源泉徴収の一次情報は No.2879『非居住者等から土地等を購入したとき』。数値自体（10.21％・1億円以下例外）はNo.2879で裏取り済みで正しいが、主要な数値を支える出典が取得不能かつ誤引用のまま。4言語すべて同一の誤URL。",
-      "fix": "出典をNo.2879（https://www.nta.go.jp/taxes/shiraberu/taxanswer/gensen/2879.htm 『非居住者等から土地等を購入したとき』）に差し替え、4言語とも参照日を再記録する。源泉徴収税率・1億円以下の個人居住用例外・法人は例外対象外の別をNo.2879の記載に合わせて確認。資格者（税理士）確認後に公開。"
+      "file": "scripts/legal-columns/116-ginou-jisshu-ikusei-shuro-ikou-kanri-shien-kikan-kyoka.md",
+      "severity": "minor",
+      "issue": "申請先を「外国人技能実習機構 本部審査課分室」と具体名で断定しているが、出入国在留管理庁の公式Q&A（moj.go.jp）には受付機関が外国人技能実習機構である旨までしか記載がなく、『本部審査課分室』という部署名は公的一次資料で確認できなかった。施行日・施行日前申請開始日（令和8年4月15日／9月1日）・Q33/Q39の核心事実は確認済みで、本件は行政上の受付窓口名という軽微な細部。",
+      "fix": "外国人技能実習機構（OTIT）の施行日前申請案内ページで部署名を直接確認するか、確認できない場合は『外国人技能実習機構が受け付ける（詳細は機構HPで確認）』に留める。"
     },
     {
-      "file": "scripts/realestate-columns/120-chugokugo-oya-kodomo-ryugaku-sumai-shutoku-meigi.md (および en/zh-tw/zh)",
+      "file": "scripts/legal-columns/en/115-tokutei-zaisan-shokei-yuigon-jueki-sakibashi-daishu-fuka.md",
       "severity": "minor",
-      "issue": "本文が外為法2026年改正を『居住用目的の取得も含め「目的を問わず」不動産そのものの取得が報告の対象に加わりました』と表現。財務省の省令改正告知には『目的を問わず』の文言はなく、追加対象は『居住用・非営利目的の業務の遂行用・事務所用』の不動産取得に限定列挙されている（既に営利業務用等は従前から対象）。純効果としては広く対象化されるが、改正文言の正確な引用とはずれる。出典行自体は追加用途を正確に記載しているため実害は小さい。",
-      "fix": "本文の『目的を問わず』を改正省令の限定列挙（居住用・非営利業務用・事務所用の追加）に合わせた表現に調整する。"
+      "issue": "英訳・繁体字・簡体字の法務サイト内部リンクがロケール区切り（/en 等）を含まず https://luck428.com/legal/column/… の形になっている（不動産コラムの英訳が /en/column/… を用いるのと非対称）。法務サイト既存の導線規約に沿った意図的構成の可能性が高く断定できないが、訳文読者が日本語ページへ着地しうる点は人手確認が望ましい。116も同様。",
+      "fix": "法務サイトの多言語ルーティング規約を確認し、ロケール前置が必要なら /en/legal/column/… 等へ統一。既存規約どおりなら対応不要。"
     }
   ],
   "registeredCount": 0,
   "qualityEligibleCount": 0,
   "heldCount": 6,
   "scheduledCount": 0,
-  "unverifiedSourceCount": 6,
+  "unverifiedSourceCount": 1,
   "publishedCount": null,
   "articles": [
     {
-      "key": "realestate:souzoku-noyadate-taiyoko-fit-setsubi-tochi-baikyaku",
-      "fingerprint": "37bd8aebe2e1df2f19ec909f43d06b4b983bd6083468b72e91ff9b25a8918b2c",
-      "title": "相続した野立て太陽光発電の土地と設備、売るときは何から手をつける？",
+      "key": "realestate:container-trailer-house-tenpo-bukken-kenchiku-kakunin-youto",
+      "fingerprint": "5e35be76b29101b5563391d590ae61f4c1fdc11992257e0a59488b1eede75dad",
+      "title": "コンテナ・トレーラーハウスで店舗や事務所を開くとき、物件・土地選びで何を確認すればよいですか",
       "registered": false,
       "state": "held",
       "reasons": [
         "公開レビュー記録が未登録または重複しています",
-        "独立レビューに未解決の重大な指摘があります"
-      ],
-      "sourceFailures": [
-        {
-          "url": "https://laws.e-gov.go.jp/law/325AC0000000226",
-          "checkedAt": "2026-10-13",
-          "relevantClaim": "地方税法 第341条（償却資産の定義）・第383条（毎年1月1日現在の所有者が1月31日までに市町村へ申告）。賦課期日1月1日は総務省資料で確認、第383条・1月31日の条文本文は官公庁検索では直接取得できず（実務上確立・記事も税理士に委ねる）。",
-          "verified": false
-        }
-      ],
-      "sourceEvidenceAvailable": true
-    },
-    {
-      "key": "realestate:chugokugo-oya-kodomo-ryugaku-sumai-shutoku-meigi",
-      "fingerprint": "e8c0761e8ba14c8d1d1d3aaab799a2a6f8552ed86b1142ed29fb8bafa38b2dc1",
-      "title": "子の留学・就労のために日本の住まいを買う：親名義か子名義か、中国・台湾の親が最初に確かめること",
-      "registered": false,
-      "state": "held",
-      "reasons": [
-        "公開レビュー記録が未登録または重複しています",
-        "候補指紋と修正後原稿が一致しません",
-        "独立レビューの証跡不足、重複、またはレビュー後の原稿変更"
-      ],
-      "sourceFailures": [
-        {
-          "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/joto/1932.htm",
-          "checkedAt": "2026-10-13",
-          "relevantClaim": "買主が非居住者から購入時に10.21％を源泉徴収・個人の自己/親族居住用かつ対価1億円以下は不要という本文の根拠に引用。しかし当該URLは死リンクでエラーページを返し、No.1932は売主側（譲渡所得）の別論点。買主源泉徴収の正典はNo.2879（内容自体はNo.2879で正しいと確認）。",
-          "verified": false
-        },
-        {
-          "url": "https://laws.e-gov.go.jp/law/326CO0000000319",
-          "checkedAt": "2026-10-13",
-          "relevantClaim": "入管法別表第一の在留資格『留学』『技術・人文知識・国際業務』（本邦の公私の機関との契約を前提）。該当性は出入国在留管理庁が判断。確立した分類だが本審査では条文を直接取得せず。",
-          "verified": false
-        }
-      ],
-      "sourceEvidenceAvailable": true
-    },
-    {
-      "key": "legal:iyakuhin-tenpo-hanbaigyo-drugstore-kozo-setsubi-touroku-hanbaisha",
-      "fingerprint": "5d8e2619060506ea74ec7f6c3d5ed86805be04d6fec9ec2cc90fa0f08e328846",
-      "title": "ドラッグストアの店舗販売業許可｜構造設備基準と登録販売者の配置",
-      "registered": false,
-      "state": "held",
-      "reasons": [
-        "公開レビュー記録が未登録または重複しています",
-        "独立レビューに未解決の重大な指摘があります"
-      ],
-      "sourceFailures": [
-        {
-          "url": "https://laws.e-gov.go.jp/law/335AC0000000145",
-          "checkedAt": "2026-10-13",
-          "relevantClaim": "薬機法24条1項・25条・26条・28条・36条の8・36条の9の条番号。記事は現行統合本文・施行履歴を未取得として自ら【未検証】と明記しており、本審査でもe-Gov本文は直接取得していない。",
-          "verified": false
-        },
-        {
-          "url": "https://www.mhlw.go.jp/web/t_doc?dataId=00tc7567&dataType=1&pageNo=1",
-          "checkedAt": "2026-10-13",
-          "relevantClaim": "登録販売者制度（28条3項・36条の8第1項・販売従事登録）の取扱い通知。許可有効期間6年・掲示事項条番号・手数料は記事が自ら未検証と明記。",
-          "verified": false
-        }
-      ],
-      "sourceEvidenceAvailable": true
-    },
-    {
-      "key": "legal:souzoku-shinrin-tochi-shoyusha-todokede-90nichi-shinrinho",
-      "fingerprint": "7ec2115af81d8f8d17bf75335f8459fa9badea646a719747f94302cfdb4e780a",
-      "title": "相続した山林は90日以内に届出｜森林法の所有者届出の手順",
-      "registered": false,
-      "state": "held",
-      "reasons": [
-        "公開レビュー記録が未登録または重複しています",
-        "独立レビューに未解決の重大な指摘があります"
+        "担当分野の資格者確認が不足しています",
+        "確認済みの公的な一次根拠が不足しています"
       ],
       "sourceFailures": [],
       "sourceEvidenceAvailable": true
     },
     {
-      "key": "labor:unten-daiko-kaigyo-roumu-zuihan-untensha-shinya-2nin",
-      "fingerprint": "817df70a8924e26013533e820d1b28f44e6a8fd52912d4e146c9100d9e55e319",
-      "title": "運転代行を始めるときの労務｜随伴運転者の免許・深夜割増・2人1組",
+      "key": "realestate:souzoku-akiya-3000man-roujin-home-nyusho-kyojuyoken",
+      "fingerprint": "a89c9607d794262de2433e0547bd72519e82bdc50bd7e2f2eb20d5ab20eb2971",
+      "title": "被相続人が老人ホームに入所していた実家でも、相続空き家の3000万円特別控除は使えますか",
       "registered": false,
       "state": "held",
       "reasons": [
         "公開レビュー記録が未登録または重複しています",
-        "独立レビューに未解決の重大な指摘があります"
+        "担当分野の資格者確認が不足しています"
       ],
       "sourceFailures": [],
       "sourceEvidenceAvailable": true
     },
     {
-      "key": "labor:gaikokujin-gyomuitaku-roudoushasei-zairyu-shikaku-seigo",
-      "fingerprint": "0b19f82181dc43a42c68b825ac43e63ac3ee3c899235afb7cda300a4fe8367ca",
-      "title": "外国人を業務委託で使えるか｜労働者性の判断と在留資格の整合",
+      "key": "legal:tokutei-zaisan-shokei-yuigon-jueki-sakibashi-daishu-fuka",
+      "fingerprint": "c49c0e13bcae4f45fc23bf6a1284f9e702ee88f6a7f45ac200d210d70533e85e",
+      "title": "「相続させる」遺言で受益相続人が先に死亡｜代襲は原則なし・予備的遺言で備える",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録または重複しています",
+        "担当分野の資格者確認が不足しています"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:ginou-jisshu-ikusei-shuro-ikou-kanri-shien-kikan-kyoka",
+      "fingerprint": "28d8765a642be7880fa52c62700d1f33ca60809ba116adf005f2932c71726cd6",
+      "title": "技能実習から育成就労へ｜監理支援機関の許可の取り直しと受入れ計画の認定",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録または重複しています",
+        "担当分野の資格者確認が不足しています",
+        "確認済みの公的な一次根拠が不足しています"
+      ],
+      "sourceFailures": [
+        {
+          "url": "https://www.moj.go.jp/isa/applications/faq/ikusei_qa_00002.html",
+          "checkedAt": "2026-10-14",
+          "relevantClaim": "申請先『外国人技能実習機構 本部審査課分室』という部署名は公的一次資料で確認できず。根拠法＝令和6年法律第60号（令和6年6月21日公布）は改正法として正しいが、部署名の細部のみ未確認。",
+          "verified": false
+        }
+      ],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:sougisha-sousaigyo-kaigyo-roumu-shukuchoku-yobidashi-henkei",
+      "fingerprint": "5851e0a2f9d71cda63cc8473abd00eca8307d1a4cf404fcaf3fc3d4269f7e7b1",
+      "title": "葬儀社の開業と労務｜宿直・呼出待機・繁閑の労働時間と賃金設計",
       "registered": false,
       "state": "held",
       "reasons": [
         "公開レビュー記録が未登録または重複しています",
-        "独立レビューに未解決の重大な指摘があります"
+        "担当分野の資格者確認が不足しています"
       ],
-      "sourceFailures": [
-        {
-          "url": "https://laws.e-gov.go.jp/law/326CO0000000319",
-          "checkedAt": "2026-10-13",
-          "relevantClaim": "入管法別表第一の二『技術・人文知識・国際業務』は本邦の公私の機関との契約に基づく活動が前提。該当性判断は出入国在留管理庁。確立した分類だが本審査では条文を直接取得せず。",
-          "verified": false
-        }
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:seishin-shougai-rosai-nintei-kijun-2023-yobo-zesei",
+      "fingerprint": "81b69b55cfd091f9b235a714345b770f91d7a127da234702201743aa3e5450d5",
+      "title": "精神障害の労災認定基準（令和5年改正）｜企業の予防と是正",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録または重複しています",
+        "担当分野の資格者確認が不足しています"
       ],
+      "sourceFailures": [],
       "sourceEvidenceAvailable": true
     }
   ]
