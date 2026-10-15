@@ -1,0 +1,109 @@
+{
+  "todayJst": "2026-10-16",
+  "runUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/38771120116",
+  "generationStatus": "validated",
+  "generatedCount": 5,
+  "reviewResult": "success",
+  "reviewReportAvailable": true,
+  "reviewPass": true,
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "minor": 1
+  },
+  "reviewFindings": [
+    {
+      "file": "scripts/legal-columns/en/117-keiei-jiko-shinsa-keishin-nyusatsu-sankaku-shikaku.md",
+      "severity": "minor",
+      "issue": "法務系（legal）記事の各言語訳の内部リンクがロケール接頭辞なし（例: https://luck428.com/legal/column/... , /about/uramatsu）。同日追加の不動産123/124はロケール付き絶対URL、社労士157は /en/ 付きで、法務のみ不統一。英語読者がクリックすると日本語ページに遷移する。ただし既存の法務コラム翻訳も 111/112/115 は接頭辞なし・113/114 は付きで既に混在しており、本ドラフト固有の逸脱ではない。",
+      "fix": "法務コラムのロケール接頭辞ポリシーを統一（realestate の運用ルール5-2に倣い /en/・/zh-tw/・/zh/ を付す）。本記事単体の訂正ではなく legal シード全体の方針として整理するのが望ましい。内容・主張の一致には影響しないため公開可否はブロックしない。"
+    }
+  ],
+  "registeredCount": 0,
+  "qualityEligibleCount": 0,
+  "heldCount": 5,
+  "scheduledCount": 0,
+  "unverifiedSourceCount": 1,
+  "publishedCount": null,
+  "articles": [
+    {
+      "key": "realestate:shichiya-eigyo-bukken-youken-koan-iinkai-kyoka",
+      "fingerprint": "50034f80857d86502c6a015917facf164aac28f5a5d8db84e52ee24ee1fd37c9",
+      "title": "質屋を開くときの物件要件と許可（質屋営業法・公安委員会）",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録または重複しています",
+        "担当分野の資格者確認が不足しています",
+        "確認済みの公的な一次根拠が不足しています"
+      ],
+      "sourceFailures": [
+        {
+          "url": "https://www.police.pref.nara.jp/cmsfiles/contents/0000005/5387/5shichiyaeigyouhou.pdf",
+          "checkedAt": "2026-10-15",
+          "relevantClaim": "質物保管設備の具体的基準（主要構造部の耐火構造・土蔵造、開口部の特定防火設備、堅ろうな施錠・盗難防止）は各都道府県公安委員会規則にあり地域差がある、という本文の論旨。栃木県・沖縄県規則の原文自体は直接取得できず（PDFバイナリ）、本文も【未検証】として所在地規則で確認と明記。地域差の存在は確認。",
+          "verified": false
+        }
+      ],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "realestate:souzoku-chintai-bunkatsu-mae-yachin-kizoku",
+      "fingerprint": "ed2c2a144097ca4faf3f93ac417e3649008debcd437b9799ee8185549000004a",
+      "title": "相続した賃貸不動産の『遺産分割前の家賃』は誰のもの？帰属と清算",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録または重複しています",
+        "担当分野の資格者確認が不足しています"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:keiei-jiko-shinsa-keishin-nyusatsu-sankaku-shikaku",
+      "fingerprint": "75b8a50530db77c6569951e0aff354b74a57da8ccfff9cf904c12150533d939c",
+      "title": "公共工事の入札に参加するための経営事項審査（経審）と入札参加資格",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録または重複しています",
+        "担当分野の資格者確認が不足しています"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:souzoku-jojo-kabushiki-toshin-shoken-koza-meigi-henko",
+      "fingerprint": "f45da7319e84549f197eb06b852f4f8f964b0c82201ac9440055c917e31d021a",
+      "title": "上場株式・投資信託を相続したときの証券口座の名義変更・移管",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録または重複しています",
+        "担当分野の資格者確認が不足しています"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:taxi-kakujitsu-kinmu-2024-kaizen-kijun-roumu",
+      "fingerprint": "03f31ffe1b8d88e33ed1cf81ed5cd259a0b962fe4d8af6d7b1d4f43e883f1a52",
+      "title": "タクシー運転者の2024年改善基準告示と隔日勤務の労務｜拘束時間と割増",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録または重複しています",
+        "担当分野の資格者確認が不足しています"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    }
+  ]
+}

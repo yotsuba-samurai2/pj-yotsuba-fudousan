@@ -1,108 +1,56 @@
 {
-  "todayJst": "2026-10-15",
-  "runUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/38602086814",
+  "todayJst": "2026-10-16",
+  "runUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/38771120116",
   "generationStatus": "validated",
-  "generatedCount": 6,
+  "generatedCount": 5,
   "reviewResult": "success",
   "reviewReportAvailable": true,
   "reviewPass": true,
   "findings": {
     "blocker": 0,
     "major": 0,
-    "minor": 2
+    "minor": 1
   },
   "reviewFindings": [
     {
-      "file": "scripts/legal-columns/116-ginou-jisshu-ikusei-shuro-ikou-kanri-shien-kikan-kyoka.md",
+      "file": "scripts/legal-columns/en/117-keiei-jiko-shinsa-keishin-nyusatsu-sankaku-shikaku.md",
       "severity": "minor",
-      "issue": "申請先を「外国人技能実習機構 本部審査課分室」と具体名で断定しているが、出入国在留管理庁の公式Q&A（moj.go.jp）には受付機関が外国人技能実習機構である旨までしか記載がなく、『本部審査課分室』という部署名は公的一次資料で確認できなかった。施行日・施行日前申請開始日（令和8年4月15日／9月1日）・Q33/Q39の核心事実は確認済みで、本件は行政上の受付窓口名という軽微な細部。",
-      "fix": "外国人技能実習機構（OTIT）の施行日前申請案内ページで部署名を直接確認するか、確認できない場合は『外国人技能実習機構が受け付ける（詳細は機構HPで確認）』に留める。"
-    },
-    {
-      "file": "scripts/legal-columns/en/115-tokutei-zaisan-shokei-yuigon-jueki-sakibashi-daishu-fuka.md",
-      "severity": "minor",
-      "issue": "英訳・繁体字・簡体字の法務サイト内部リンクがロケール区切り（/en 等）を含まず https://luck428.com/legal/column/… の形になっている（不動産コラムの英訳が /en/column/… を用いるのと非対称）。法務サイト既存の導線規約に沿った意図的構成の可能性が高く断定できないが、訳文読者が日本語ページへ着地しうる点は人手確認が望ましい。116も同様。",
-      "fix": "法務サイトの多言語ルーティング規約を確認し、ロケール前置が必要なら /en/legal/column/… 等へ統一。既存規約どおりなら対応不要。"
+      "issue": "法務系（legal）記事の各言語訳の内部リンクがロケール接頭辞なし（例: https://luck428.com/legal/column/... , /about/uramatsu）。同日追加の不動産123/124はロケール付き絶対URL、社労士157は /en/ 付きで、法務のみ不統一。英語読者がクリックすると日本語ページに遷移する。ただし既存の法務コラム翻訳も 111/112/115 は接頭辞なし・113/114 は付きで既に混在しており、本ドラフト固有の逸脱ではない。",
+      "fix": "法務コラムのロケール接頭辞ポリシーを統一（realestate の運用ルール5-2に倣い /en/・/zh-tw/・/zh/ を付す）。本記事単体の訂正ではなく legal シード全体の方針として整理するのが望ましい。内容・主張の一致には影響しないため公開可否はブロックしない。"
     }
   ],
   "registeredCount": 0,
   "qualityEligibleCount": 0,
-  "heldCount": 6,
+  "heldCount": 5,
   "scheduledCount": 0,
   "unverifiedSourceCount": 1,
   "publishedCount": null,
   "articles": [
     {
-      "key": "realestate:container-trailer-house-tenpo-bukken-kenchiku-kakunin-youto",
-      "fingerprint": "5e35be76b29101b5563391d590ae61f4c1fdc11992257e0a59488b1eede75dad",
-      "title": "コンテナ・トレーラーハウスで店舗や事務所を開くとき、物件・土地選びで何を確認すればよいですか",
+      "key": "realestate:shichiya-eigyo-bukken-youken-koan-iinkai-kyoka",
+      "fingerprint": "50034f80857d86502c6a015917facf164aac28f5a5d8db84e52ee24ee1fd37c9",
+      "title": "質屋を開くときの物件要件と許可（質屋営業法・公安委員会）",
       "registered": false,
       "state": "held",
       "reasons": [
-        "公開レビュー記録が未登録または重複しています",
-        "担当分野の資格者確認が不足しています",
-        "確認済みの公的な一次根拠が不足しています"
-      ],
-      "sourceFailures": [],
-      "sourceEvidenceAvailable": true
-    },
-    {
-      "key": "realestate:souzoku-akiya-3000man-roujin-home-nyusho-kyojuyoken",
-      "fingerprint": "a89c9607d794262de2433e0547bd72519e82bdc50bd7e2f2eb20d5ab20eb2971",
-      "title": "被相続人が老人ホームに入所していた実家でも、相続空き家の3000万円特別控除は使えますか",
-      "registered": false,
-      "state": "held",
-      "reasons": [
-        "公開レビュー記録が未登録または重複しています",
-        "担当分野の資格者確認が不足しています"
-      ],
-      "sourceFailures": [],
-      "sourceEvidenceAvailable": true
-    },
-    {
-      "key": "legal:tokutei-zaisan-shokei-yuigon-jueki-sakibashi-daishu-fuka",
-      "fingerprint": "c49c0e13bcae4f45fc23bf6a1284f9e702ee88f6a7f45ac200d210d70533e85e",
-      "title": "「相続させる」遺言で受益相続人が先に死亡｜代襲は原則なし・予備的遺言で備える",
-      "registered": false,
-      "state": "held",
-      "reasons": [
-        "enの内部リンクに言語不一致があります",
-        "zh-twの内部リンクに言語不一致があります",
-        "zhの内部リンクに言語不一致があります",
-        "公開レビュー記録が未登録または重複しています",
-        "担当分野の資格者確認が不足しています"
-      ],
-      "sourceFailures": [],
-      "sourceEvidenceAvailable": true
-    },
-    {
-      "key": "legal:ginou-jisshu-ikusei-shuro-ikou-kanri-shien-kikan-kyoka",
-      "fingerprint": "28d8765a642be7880fa52c62700d1f33ca60809ba116adf005f2932c71726cd6",
-      "title": "技能実習から育成就労へ｜監理支援機関の許可の取り直しと受入れ計画の認定",
-      "registered": false,
-      "state": "held",
-      "reasons": [
-        "enの内部リンクに言語不一致があります",
-        "zh-twの内部リンクに言語不一致があります",
-        "zhの内部リンクに言語不一致があります",
         "公開レビュー記録が未登録または重複しています",
         "担当分野の資格者確認が不足しています",
         "確認済みの公的な一次根拠が不足しています"
       ],
       "sourceFailures": [
         {
-          "url": "https://www.moj.go.jp/isa/applications/faq/ikusei_qa_00002.html",
-          "checkedAt": "2026-10-14",
-          "relevantClaim": "申請先『外国人技能実習機構 本部審査課分室』という部署名は公的一次資料で確認できず。根拠法＝令和6年法律第60号（令和6年6月21日公布）は改正法として正しいが、部署名の細部のみ未確認。",
+          "url": "https://www.police.pref.nara.jp/cmsfiles/contents/0000005/5387/5shichiyaeigyouhou.pdf",
+          "checkedAt": "2026-10-15",
+          "relevantClaim": "質物保管設備の具体的基準（主要構造部の耐火構造・土蔵造、開口部の特定防火設備、堅ろうな施錠・盗難防止）は各都道府県公安委員会規則にあり地域差がある、という本文の論旨。栃木県・沖縄県規則の原文自体は直接取得できず（PDFバイナリ）、本文も【未検証】として所在地規則で確認と明記。地域差の存在は確認。",
           "verified": false
         }
       ],
       "sourceEvidenceAvailable": true
     },
     {
-      "key": "labor:sougisha-sousaigyo-kaigyo-roumu-shukuchoku-yobidashi-henkei",
-      "fingerprint": "5851e0a2f9d71cda63cc8473abd00eca8307d1a4cf404fcaf3fc3d4269f7e7b1",
-      "title": "葬儀社の開業と労務｜宿直・呼出待機・繁閑の労働時間と賃金設計",
+      "key": "realestate:souzoku-chintai-bunkatsu-mae-yachin-kizoku",
+      "fingerprint": "ed2c2a144097ca4faf3f93ac417e3649008debcd437b9799ee8185549000004a",
+      "title": "相続した賃貸不動産の『遺産分割前の家賃』は誰のもの？帰属と清算",
       "registered": false,
       "state": "held",
       "reasons": [
@@ -113,9 +61,41 @@
       "sourceEvidenceAvailable": true
     },
     {
-      "key": "labor:seishin-shougai-rosai-nintei-kijun-2023-yobo-zesei",
-      "fingerprint": "81b69b55cfd091f9b235a714345b770f91d7a127da234702201743aa3e5450d5",
-      "title": "精神障害の労災認定基準（令和5年改正）｜企業の予防と是正",
+      "key": "legal:keiei-jiko-shinsa-keishin-nyusatsu-sankaku-shikaku",
+      "fingerprint": "75b8a50530db77c6569951e0aff354b74a57da8ccfff9cf904c12150533d939c",
+      "title": "公共工事の入札に参加するための経営事項審査（経審）と入札参加資格",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録または重複しています",
+        "担当分野の資格者確認が不足しています"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:souzoku-jojo-kabushiki-toshin-shoken-koza-meigi-henko",
+      "fingerprint": "f45da7319e84549f197eb06b852f4f8f964b0c82201ac9440055c917e31d021a",
+      "title": "上場株式・投資信託を相続したときの証券口座の名義変更・移管",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録または重複しています",
+        "担当分野の資格者確認が不足しています"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:taxi-kakujitsu-kinmu-2024-kaizen-kijun-roumu",
+      "fingerprint": "03f31ffe1b8d88e33ed1cf81ed5cd259a0b962fe4d8af6d7b1d4f43e883f1a52",
+      "title": "タクシー運転者の2024年改善基準告示と隔日勤務の労務｜拘束時間と割増",
       "registered": false,
       "state": "held",
       "reasons": [

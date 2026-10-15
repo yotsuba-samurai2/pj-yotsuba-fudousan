@@ -1,0 +1,75 @@
+---
+title: "Changing the name on and transferring a securities account when you inherit listed shares or investment trusts"
+excerpt: "Listed shares and investment trusts cannot simply be withdrawn and split like cash. In inheritance you first grasp the holdings, decide the division, then transfer them into an heir's securities account. Before division the shares are a quasi-co-ownership and voting needs a designated holder (Civil Code Articles 896, 898, 899, 264; Companies Act Article 106). This article organises, from an administrative scrivener's practice, the procedure, the quasi-final tax return, and the inheritance-tax valuation."
+category: "Inheritance Procedures (From the Practice of an Administrative Scrivener)"
+---
+**In short:** listed shares and investment trusts cannot be withdrawn from an account and split like cash. In inheritance you first grasp which securities company held which issues and how many units, then, once the division is decided, "transfer" them into an heir's securities account through each securities company's inheritance procedure (the book-entry mechanism via the Japan Securities Depository Center, "Hofuri"). If the heir who is to receive the shares has no account at that securities company, in principle a new account is opened first and the shares are then transferred. Until division is settled the shares are a quasi-co-ownership of the co-heirs, and exercising rights such as voting requires designating one rights-exercising person and notifying the company (Civil Code Articles 896, 898 and 899; Civil Code Article 264; Companies Act Article 106). For inheritance tax, the valuation follows Property Valuation Basic Circular 169 — the lowest of the closing price on the valuation date and the monthly averages for the preceding three months. Drafting the estate-division agreement and supporting document collection is for an administrative scrivener; the account transfer is handled by each securities company; the quasi-final tax return, dividend/transfer taxes and inheritance-tax filing are for a tax accountant; disputes among heirs are for a lawyer; if there is real estate, inheritance registration is for a judicial scrivener and the sale brokerage is for a licensed real estate broker (Yotsuba Real Estate Co., Ltd. is a separate business from our office) — each as an independent business under a separate contract. This article is general information and does not determine or guarantee an individual valuation or the feasibility of a procedure. Our office receives no referral fee.
+
+## If you inherit listed shares or investment trusts, what do you do first?
+
+The first thing is to grasp the whole picture of the shares and investment trusts the deceased held. Trade balance reports from securities companies, dividend notices and the annual transaction report for a specified account are clues. If you do not know which securities company held an account, there is a mechanism — a request to the Japan Securities Depository Center (Hofuri) for disclosure of registered participant information — by which you can confirm the securities companies and the like where accounts are held.
+
+Once the picture is clear, you decide in the estate division who acquires the shares and how. Because shares and investment trusts come in units of one share or one unit and cannot be freely split down to a remainder like cash, you need to set a policy in advance: a specific heir acquires them, they are split by statutory share, or a representative receives them once and sells them to split the proceeds. Drafting the estate-division agreement and supporting the collection of necessary documents such as family registers and balance certificates is within an administrative scrivener's scope. How to draft the agreement itself is organised in [How to draft an estate-division agreement](https://luck428.com/legal/column/isan-bunkatsu-kyougisho). For how inheritance proceeds overall, see [Inheritance services](https://luck428.com/legal/services/inheritance) and [Engagement Flow](https://luck428.com/legal/nagare).
+
+## How do you change the name on and transfer the securities account (and if an heir has no account)?
+
+Listed shares and investment trusts are not "cancelled and refunded" like deposits; the basic approach is to transfer them into an heir's securities account. The procedure is carried out at each securities company where an account is held, and generally the following are required (details differ by securities company).
+
+| Situation | Generally required (confirm with each securities company) |
+| --- | --- |
+| Notifying the inheritance | The securities company's prescribed inheritance request form |
+| Confirming the deceased and the heirs | Family registers (from birth to death), the heirs' family registers, a statutory-heir information list, etc. |
+| Confirming the division | The estate-division agreement (registered seals and seal certificates of all heirs) or the will |
+| The receiving account | A securities account of the acquiring heir at that securities company |
+
+The practical point here is where the heir who is to acquire the shares has no securities account at that company. Listed shares are, in principle, first transferred into an heir's account, and any sale is done afterwards, so if there is no account a new one must in principle be opened. Follow each securities company's guidance for the transfer procedure and the timing of any sale; use [Fee Schedule](https://luck428.com/legal/ryokin) as a guide for fees, and consult us on the scope of support for drafting and collecting documents.
+
+## Who owns the shares before the estate is divided (quasi-co-ownership and voting rights)?
+
+An heir succeeds, from the time inheritance opens, to all rights and duties belonging to the deceased's property (Civil Code Article 896), and where there are several heirs the inherited property belongs to them in co-ownership (Civil Code Article 898). Each co-heir succeeds to the rights and duties in proportion to the statutory share (Civil Code Article 899). Where a property right other than ownership, such as a share, belongs to several persons in common, this is called "quasi-co-ownership," and the co-ownership provisions apply mutatis mutandis (Civil Code Article 264).
+
+For shares in quasi-co-ownership, exercising rights such as voting requires the co-owners to designate one rights-exercising person and notify the company (Companies Act Article 106). The Supreme Court has held that, in designating the rights-exercising person among co-heirs, this may be decided by a majority of the value of their shares (Supreme Court judgment of 28 January 1997). In other words, until the division is complete the heirs cannot each exercise voting rights separately on their own. Once the division is settled, each heir acquires according to its content. For unlisted shares the difficulty of valuation and division is greater, which is organised separately in [Valuation of unlisted shares and the estate-division agreement](https://luck428.com/legal/column/souzoku-hijojo-kabushiki-isanbunkatsu-kyogi).
+
+## Who do you ask for the quasi-final tax return and dividend/transfer taxes?
+
+Where the deceased had a certain level of income, the heirs must file the deceased's quasi-final tax return. In principle the quasi-final tax return is submitted, by the day before the day on which four months have passed from the day after the heir knew of the commencement of inheritance, to the district director for the place of tax payment at the time of the deceased's death (Income Tax Act Articles 124 and 125). Where there are two or more heirs, in principle each heir files jointly by co-signing (they may also file separately).
+
+Taxation on dividends received or shares sold after the inheritance (such as separate self-assessment taxation on dividends and transfers of listed shares; the Act on Special Measures Concerning Taxation) and the inheritance-tax filing are both the work of a tax accountant. Calculating the tax and preparing the returns cannot be done by an administrative scrivener. At Yotsuba we refer tax to a tax accountant, disputes among heirs (where there is a conflict) to a lawyer, and, where there is real estate, inheritance registration to a judicial scrivener — each on the premise that you contract separately as an independent business.
+
+## How is the inheritance-tax valuation (the four prices of a listed share) decided?
+
+The inheritance-tax valuation of a listed share follows Property Valuation Basic Circular 169 (Valuation of Listed Shares). In principle it is valued at the closing price on the valuation date (the date inheritance opens), but if that exceeds the lowest of the following three monthly averages, it is valued at that lowest monthly average. As a result, the valuation is at the lowest of the following four prices.
+
+| No. | Price |
+| --- | --- |
+| (1) | The closing price on the valuation date (the date inheritance opens) |
+| (2) | The monthly average of the daily closing prices for the month containing the valuation date |
+| (3) | The monthly average of the daily closing prices for the month before the month containing the valuation date |
+| (4) | The monthly average of the daily closing prices for the month two months before the month containing the valuation date |
+
+Investment trusts have valuation rules different from listed shares, with treatment that depends on the type (a listed beneficial interest, a daily-settlement type, etc.). In every case, settling the final valuation and the inheritance-tax filing are the work of a tax accountant. Because whether valuation or filing is needed depends on the composition of the whole estate, prioritise grasping the inherited property; for a comprehensive arrangement where real estate is included, the real-estate inheritance hub [Sale and use of inherited real estate](https://luck428.com/souzoku) (Yotsuba Real Estate Co., Ltd., which operates it, is a separate business from our office) is also a useful reference. This article shows the valuation framework within what could be verified from primary information; please base any individual valuation on confirmation by a tax accountant.
+
+## FAQ
+
+**Q. How do you change the name on a securities account?**
+A. Listed shares and investment trusts are not cancelled and refunded but transferred into an heir's securities account. The procedure is done at each securities company where an account is held, and you are asked for the inheritance request form, a set of family registers, and the estate-division agreement or the will. If you do not know which securities company holds an account, you can confirm this with a disclosure request to the Japan Securities Depository Center (Hofuri).
+
+**Q. What if the heir who receives the shares has no securities account?**
+A. Listed shares are, in principle, first transferred into an heir's securities account and any sale is done afterwards. So if the acquiring heir has no account at that securities company, in principle a new securities account is opened before the transfer. Follow each securities company's guidance for the details.
+
+**Q. Before the estate is divided, can an heir freely use the voting rights?**
+A. No. Before division the shares are a quasi-co-ownership of the co-heirs (Civil Code Articles 264 and 898), and exercising rights such as voting requires designating one rights-exercising person and notifying the company (Companies Act Article 106). The rights-exercising person may be decided by a majority of the value of the shares (Supreme Court judgment of 28 January 1997).
+
+**Q. Can an administrative scrivener handle the tax procedures?**
+A. The quasi-final tax return (Income Tax Act Articles 124 and 125), the inheritance-tax filing, and calculating dividend/transfer tax are the work of a tax accountant and are not done by an administrative scrivener. What an administrative scrivener can handle is drafting the estate-division agreement and supporting the collection of necessary documents such as family registers and balance certificates. Tax, registration and disputes are each contracted separately as an independent business.
+
+## Sources (Primary Information)
+
+- e-Gov Law Search, "Civil Code" (Act No. 89 of 1896), Article 896 (general effect of inheritance), Article 898 (effect of co-inheritance = co-ownership of the inherited property), Article 899 (succession in proportion to the statutory share), Article 264 (quasi-co-ownership) (accessed 2026-10-15)
+- e-Gov Law Search, "Companies Act" (Act No. 86 of 2005), Article 106 (exercise of rights by co-owners = designate one rights-exercising person and notify the company) (accessed 2026-10-15)
+- Supreme Court judgment of 28 January 1997 (the rights-exercising person for co-owned shares may be decided by a majority of the value of the co-owners' shares) (accessed 2026-10-15)
+- e-Gov Law Search, "Income Tax Act" (Act No. 33 of 1965), Articles 124 and 125 (final return where a person dies mid-year, etc. = the quasi-final tax return; within four months from the day after knowing of the commencement of inheritance), and the taxation on dividends and transfers of listed shares under the Act on Special Measures Concerning Taxation (accessed 2026-10-15)
+- National Tax Agency, "Property Valuation Basic Circular" 169 (Valuation of Listed Shares = the lowest of the closing price on the valuation date and the monthly averages of daily closing prices for the month containing the valuation date and the preceding two months), and National Tax Agency Tax Answer (valuation of listed shares; quasi-final tax return) (accessed 2026-10-15)
+- Japan Securities Depository Center (Hofuri), "Request for disclosure of registered participant information," and each securities company's inheritance-procedure guidance (transfer into an heir's account) (accessed 2026-10-15)
+
+This article is general information and does not determine or guarantee an individual inheritance-tax valuation, the feasibility of each securities company's procedure, or a tax judgment. Drafting the estate-division agreement and supporting document collection is for an administrative scrivener; the account transfer is handled by each securities company; the quasi-final tax return, dividend/transfer taxes and inheritance-tax filing are for a tax accountant; disputes among heirs are for a lawyer; inheritance registration of real estate is for a judicial scrivener; and the sale brokerage of real estate is for a licensed real estate broker (Yotsuba Real Estate Co., Ltd. is a separate business) — each as an independent business under a separate contract. Each professional is contracted independently, and our office receives no referral fee. For the latest treatment of valuation and procedures, confirm the official materials of the National Tax Agency, each securities company and the Japan Securities Depository Center. Written by [Joji Uramatsu](https://luck428.com/about/uramatsu), administrative scrivener and licensed real estate broker.

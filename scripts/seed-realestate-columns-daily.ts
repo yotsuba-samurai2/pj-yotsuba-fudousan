@@ -2514,6 +2514,46 @@ const ARTICLES: ArticleSpec[] = [
     localesWithTranslations: ["en", "zh-tw", "zh"],
     hubLinks: ["/souzoku"],
   },
+  {
+    file: "123-shichiya-eigyo-bukken-youken-koan-iinkai-kyoka.md",
+    slug: "shichiya-eigyo-bukken-youken-koan-iinkai-kyoka",
+    title: "質屋を開くときの物件要件と許可（質屋営業法・公安委員会）",
+    publishedAt: "2026-10-15",
+    category: "投資・事業用不動産",
+    excerpt:
+      "質屋を開く物件で先に効くのは、店舗として用途地域の制限を受けるかと、質物を守る保管設備（耐火・施錠・盗難防止）を各都道府県公安委員会規則の基準に合わせて設けられるかの2点です。許可は営業所ごとに所在地の都道府県公安委員会へ申請します（質屋営業法第2条第1項）。東京都文京区の宅地建物取引士兼行政書士が、契約前に確認できることを質屋営業法・貸金業法・建築基準法の条文から整理します。許可申請書類の作成は行政書士、保管設備の耐火改修は建築士・施工業者、法人設立や開業後の登記は司法書士へ分離受任でご案内します。",
+    keywords: [
+      "質屋 開業 物件",
+      "質屋営業法 公安委員会 許可",
+      "質物 保管設備 耐火 施錠",
+      "質屋 貸金業 登録 不要",
+      "質屋 古物商許可 違い 流質物",
+    ],
+    tags: ["事業用不動産", "許認可", "質屋営業法", "用途地域"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/toushi", "/office"],
+  },
+  {
+    file: "124-souzoku-chintai-bunkatsu-mae-yachin-kizoku.md",
+    slug: "souzoku-chintai-bunkatsu-mae-yachin-kizoku",
+    title: "相続した賃貸不動産の『遺産分割前の家賃』は誰のもの？帰属と清算",
+    publishedAt: "2026-10-15",
+    category: "相続",
+    excerpt:
+      "相続した賃貸不動産の『遺産分割が確定する前に生じた家賃』は、各共同相続人が法定相続分に応じて分割単独債権として確定的に取得し、後の遺産分割の影響を受けません（最高裁平成17年9月8日判決）。分割前の家賃は相続分どおりに各人のもので、後からさかのぼって清算されないのが原則です。東京都文京区の宅地建物取引士兼行政書士が、民法・最高裁判例・国税庁の資料から帰属と清算を整理します。遺産分割協議書の作成は行政書士、相続登記は司法書士、不動産所得の申告は税理士、賃料配分や分割の紛争は弁護士へ分離受任でご案内します。",
+    keywords: [
+      "相続 賃貸不動産 分割前 家賃",
+      "最高裁 平成17年9月8日 賃料債権 相続分",
+      "未分割 不動産所得 準確定申告 相続分",
+      "遺産分割 遡及効 民法909条 賃料",
+      "オーナーチェンジ 賃料 敷金 引渡日 清算",
+    ],
+    tags: ["相続", "賃貸不動産", "賃料", "売却"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/souzoku"],
+  },
 ];
 
 function toPlainText(md: string): string {

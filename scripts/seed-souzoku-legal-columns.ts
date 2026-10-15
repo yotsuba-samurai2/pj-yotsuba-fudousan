@@ -1001,6 +1001,21 @@ const REQUIRED_HUB_LINKS: Record<string, string[]> = {
     "/legal/column/toroku-shien-kikan-touroku-shien-keikaku",
     "/legal/column/keieikanri-zairyu-chuka-kigyousha-kaisha-setsuritsu",
   ],
+  "keiei-jiko-shinsa-keishin-nyusatsu-sankaku-shikaku": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/kensetsugyo-kyoka-yoken-keikan-sengi-zaisan",
+    "/legal/column/kaitai-koji-gyo-touroku-kensetsu-kyoka-chigai",
+  ],
+  "souzoku-jojo-kabushiki-toshin-shoken-koza-meigi-henko": [
+    "/legal/services/inheritance",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/souzoku",
+    "/legal/column/isan-bunkatsu-kyougisho",
+    "/legal/column/souzoku-hijojo-kabushiki-isanbunkatsu-kyogi",
+  ],
 };
 
 /** 表示コンプライアンス上の禁止語 */
@@ -3222,6 +3237,37 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "独立した事業体",
     "紹介料を受け取りません",
   ],
+  "keiei-jiko-shinsa-keishin-nyusatsu-sankaku-shikaku": [
+    "建設業法",
+    "第27条の23",
+    "第27条の29",
+    "建設業法施行令第45条",
+    "経営事項審査",
+    "経営状況分析",
+    "経営規模等評価",
+    "総合評定値",
+    "入札参加資格",
+    "公共工事の入札及び契約の適正化の促進に関する法律",
+    "1年7か月",
+    "別々にご契約",
+    "独立した事業体",
+    "紹介料を受け取りません",
+  ],
+  "souzoku-jojo-kabushiki-toshin-shoken-koza-meigi-henko": [
+    "民法第896条",
+    "民法第898条",
+    "民法第899条",
+    "民法第264条",
+    "会社法第106条",
+    "準確定申告",
+    "所得税法第124条",
+    "財産評価基本通達169",
+    "証券保管振替機構",
+    "平成9年1月28日判決",
+    "別々にご契約",
+    "独立した事業体",
+    "紹介料を受け取りません",
+  ],
 };
 
 /** 記事ごとに含めてはならない表現 */
@@ -3379,6 +3425,8 @@ const FORBIDDEN_PHRASES: Record<string, string[]> = {
   "tsukemono-seizogyo-kyoka-2024-haccp": [],
   "tokutei-zaisan-shokei-yuigon-jueki-sakibashi-daishu-fuka": [],
   "ginou-jisshu-ikusei-shuro-ikou-kanri-shien-kikan-kyoka": [],
+  "keiei-jiko-shinsa-keishin-nyusatsu-sankaku-shikaku": [],
+  "souzoku-jojo-kabushiki-toshin-shoken-koza-meigi-henko": [],
 };
 
 /** 本セット外へ張る既存legalコラムslug（リポジトリの他シードで実在確認済み） */
@@ -6253,6 +6301,60 @@ const ARTICLES: Array<{
       "在留資格",
       "申請取次",
       "許認可",
+      "行政書士",
+    ],
+  },
+  {
+    file: "117-keiei-jiko-shinsa-keishin-nyusatsu-sankaku-shikaku.md",
+    slug: "keiei-jiko-shinsa-keishin-nyusatsu-sankaku-shikaku",
+    date: "2026-10-15",
+    title:
+      "公共工事の入札に参加するための経営事項審査（経審）と入札参加資格",
+    category: "許認可の手続き（行政書士の実務から）",
+    excerpt:
+      "建設業許可を取得していても、それだけで公共工事の入札には参加できません。国・地方公共団体などが発注する一定の公共工事を直接請け負うには、経営に関する客観的事項の審査＝経営事項審査（経審）を受ける必要があります（建設業法第27条の23第1項）。経審は経営状況分析と経営規模等評価に分かれ、総合評定値（P＝0.25X1＋0.15X2＋0.20Y＋0.25Z＋0.15W）が算出されます（第27条の29）。経審から入札参加資格審査（名簿登載）までの流れ、審査基準日から原則1年7か月の有効期間、決算変更届との関係、申請＝行政書士／財務諸表・税務＝税理士／登記＝司法書士／社会保険の整備＝社会保険労務士（別事業体）の分離受任を整理します。",
+    keywords: [
+      "経営事項審査 経審 入札参加資格",
+      "経審 総合評定値 P 算出式",
+      "建設業法 第27条の23 経営事項審査",
+      "経審 有効期間 1年7か月 審査基準日",
+      "決算変更届 経営状況分析 入札参加資格審査",
+      "公共工事 入札 行政書士 経審",
+    ],
+    tags: [
+      "経営事項審査",
+      "経審",
+      "入札参加資格",
+      "建設業",
+      "公共工事",
+      "許認可",
+      "行政書士",
+    ],
+  },
+  {
+    file: "118-souzoku-jojo-kabushiki-toshin-shoken-koza-meigi-henko.md",
+    slug: "souzoku-jojo-kabushiki-toshin-shoken-koza-meigi-henko",
+    date: "2026-10-15",
+    title:
+      "上場株式・投資信託を相続したときの証券口座の名義変更・移管",
+    category: "相続の手続き（行政書士の実務から）",
+    excerpt:
+      "上場株式や投資信託は、現金のように分けられません。相続では保有銘柄を把握し、遺産分割の内容を決めたうえで、各証券会社の相続手続を通じて相続人名義の証券口座へ移管するのが基本です（証券保管振替機構）。口座がない相続人は原則として新規開設が必要です。分割前の株式は準共有となり、議決権行使には権利行使者の指定が要ります（民法第896条・第898条・第899条・第264条、会社法第106条、最高裁平成9年1月28日判決）。相続税評価は財産評価基本通達169の4つの価額のうち最も低い額。準確定申告（所得税法第124条・第125条）は税理士、分割協議書は行政書士、登記は司法書士という分離受任を整理します。",
+    keywords: [
+      "上場株式 投資信託 相続 証券口座 名義変更",
+      "証券口座 相続 移管 ほふり 証券保管振替機構",
+      "遺産分割前 株式 準共有 権利行使者 会社法106条",
+      "上場株式 相続税評価 財産評価基本通達169 4つの価額",
+      "準確定申告 4か月 所得税法124条 125条",
+      "株式 相続 行政書士 遺産分割協議書",
+    ],
+    tags: [
+      "上場株式",
+      "投資信託",
+      "証券口座",
+      "相続",
+      "準共有",
+      "準確定申告",
       "行政書士",
     ],
   },
