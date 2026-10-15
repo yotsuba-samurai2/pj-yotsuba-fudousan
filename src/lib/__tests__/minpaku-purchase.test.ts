@@ -1,4 +1,9 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
+import { NextRequest } from "next/server";
+
+const { send } = vi.hoisted(() => ({ send: vi.fn() }));
+vi.mock("resend", () => ({ Resend: class { emails = { send }; } }));
+import { POST } from "@/app/api/contact/route";
 import { MINPAKU_LISTINGS, hasCurrentListingPrice } from "../shared/minpaku-listings";
 import { minpakuPurchaseMessage } from "../shared/minpaku-purchase";
 
@@ -22,5 +27,27 @@ describe("source price validity", () => {
     const sapporo = MINPAKU_LISTINGS.find((entry) => entry.id === "sapporo")!;
     expect(sapporo.price).toBeNull();
     expect(hasCurrentListingPrice(sapporo, new Date("2026-10-16T00:00:00+09:00"))).toBe(false);
+  });
+});
+
+
+describe("purchase inquiry API contract (all email delivery mocked)", () => {
+  it("accepts the existing sale category and retains purchase preferences in the notification", async () => {
+    send.mockResolvedValue({ data: { id: "test-only" }, error: null });
+    const message = minpakuPurchaseMessage({ regions: ["北海道", "沖縄"], budget: "未定", purpose: "自己利用との併用" }, "利用できる期間を知りたい");
+    const request = new NextRequest("http://localhost/api/contact", {
+      method: "POST",
+      body: JSON.stringify({ name: "Local Test", email: "local-test@example.invalid", phone: "", category: "sale", source: "", message, business: "realestate" }),
+    });
+    const response = await POST(request);
+    expect(response.status).toBe(200);
+    expect(await response.json()).toEqual({ ok: true });
+    expect(send).toHaveBeenCalledTimes(2);
+    const notification = send.mock.calls[0][0];
+    expect(notification.from).toContain("四葉不動産");
+    expect(notification.html).toContain("希望地域：北海道・沖縄");
+    expect(notification.html).toContain("予算：未定");
+    expect(notification.html).toContain("自己利用との併用");
+    expect(notification.html).toContain("利用できる期間を知りたい");
   });
 });
