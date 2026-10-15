@@ -4,6 +4,7 @@
 // en/zh-tw/zh=監修前ドラフト（2026-07-11）。繁体=台湾定訳（不動產・繼承・團體家屋・文京區）／zh=大陸表記。
 // serviceName（JSON-LD Service name）・href・画像パス・Placeholder reason＝ja固定。金額・率＝全ロケール不変。
 import type { Metadata } from "next";
+import { MinpakuInvestmentCard } from "@/components/minpaku/PurchaseSection";
 import { PropertySearchSampleTeaser } from "@/components/shared/PropertySearchSample";
 import { buildPageMetadata, BCP47_BY_LOCALE } from "@/lib/seo";
 import { getRequestLocale } from "@/lib/getRequestLocale";
@@ -98,6 +99,7 @@ const COPY: Record<LangCode, ToushiCopy> = {
     faqAria: "よくあるご質問",
     sections: (locale) => (
       <>
+        <MinpakuInvestmentCard />
         <div>
           <ReH2>どんな投資・事業用不動産を扱っていますか？</ReH2>
           <ul className="mt-3 space-y-2 text-sm leading-relaxed text-text">

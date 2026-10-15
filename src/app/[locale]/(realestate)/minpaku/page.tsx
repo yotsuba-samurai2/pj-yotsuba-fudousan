@@ -11,6 +11,7 @@
 // FAQPage JSON-LD＝faqJa（kaigyo新設2問＋corporate/companyの既存2問）を参照（文字列コピー禁止）。
 // hero＝realestate-toushi-16x9.webp を暫定共用（専用画像は未制作＝TODO）。
 import type { Metadata } from "next";
+import { PurchaseHero, PurchaseSection } from "@/components/minpaku/PurchaseSection";
 import Link from "next/link";
 import { buildPageMetadata } from "@/lib/seo";
 import { RealestateServicePage, ReH2 } from "@/components/shared/RealestateServicePage";
@@ -41,14 +42,19 @@ const JA_CHECKS: { title: string; body: string }[] = [
   { title: "家主不在型の管理委託", body: "家主が住んでいない物件で営む場合、住宅宿泊管理業者への管理委託が必要です。委託費用を収支に織り込みます。" },
 ];
 
+// Refresh dated price summaries promptly through the existing ISR mechanism.
+export const revalidate = 60;
+
 export async function generateMetadata(): Promise<Metadata> {
-  return buildPageMetadata({
+  const metadata = buildPageMetadata({
     businessKey: "realestate",
-    title: "東京で民泊を始めるなら｜物件探しと住宅宿泊事業の届出の完全ガイド | 四葉不動産",
+    title: "民泊対応マンションの購入・投資相談と開業ガイド | 四葉不動産",
     description:
-      "民泊は「物件」と「届出（住宅宿泊事業）」が同時に動きます。管理規約・転貸承諾・条例・消防を見据えた物件の紹介・仲介は四葉不動産株式会社が担当し、住宅宿泊事業の届出など官公署に提出する書類の作成は行政書士の独占業務のため併設の四葉行政書士事務所が別契約で受任します。文京区小日向・茗荷谷駅徒歩5分。",
+      "北海道・福岡・沖縄の民泊対応予定マンションの購入・投資相談。対象住戸の価格・広さの目安、自己利用や宿泊運用の条件を確認し、四葉不動産株式会社が売買仲介を承ります。賃貸・開業の相談や、四葉行政書士事務所への許可申請・届出の個別依頼もご案内します。",
     path: "/minpaku",
     keywords: [
+      "民泊対応マンション 購入",
+      "民泊 投資 相談",
       "民泊 開業 物件",
       "住宅宿泊事業 届出 行政書士",
       "民泊 物件 東京",
@@ -62,15 +68,19 @@ export async function generateMetadata(): Promise<Metadata> {
     absoluteTitle: true,
     availableLocales: ["ja"],
   });
+  return metadata;
 }
 
 export default async function Page() {
   return (
     <RealestateServicePage
       path="/minpaku"
+      wide
+      heroContent={<PurchaseHero />}
       answerBlock={JA_ANSWER_BLOCK}
-      crumbs={[{ name: "ホーム", href: "/" }, { name: "民泊開業" }]}
-      serviceName="民泊（住宅宿泊事業）開業を見据えた物件の紹介・仲介"
+      crumbs={[{ name: "ホーム", href: "/" }, { name: "民泊の購入・開業相談" }]}
+      serviceName="民泊対応マンションの購入相談・売買仲介と民泊開業の物件探し"
+      serviceExtra={{ areaServed: ["北海道", "福岡県", "沖縄県", "東京都"] }}
       heroSrc="/hero/realestate-toushi-16x9.webp"
       heroAlt="事業用物件のイメージ"
       h1="民泊の開業——物件探しと住宅宿泊事業の届出の完全ガイド"
@@ -89,6 +99,15 @@ export default async function Page() {
       ]}
       crossLinkLead="届出など許認可の書類は、関連事業の四葉行政書士事務所のページで詳しく解説しています。"
     >
+      <>
+        <PurchaseSection />
+        <header id="opening" className="scroll-mt-28 border-t border-border pt-8">
+          <p className="text-sm font-semibold text-primary-dark">賃貸・開業を検討する方へ</p>
+          <h2 className="mt-3 font-serif text-2xl font-semibold">民泊の開業——物件探しと住宅宿泊事業の届出の完全ガイド</h2>
+          <p className="mt-4 leading-relaxed">{JA_ANSWER_BLOCK}</p>
+          <p className="mt-4 leading-relaxed">「借りてから、この区では平日できないと知った」——民泊では、物件と届出が同時に動きます。制度の選択・管理規約・条例・消防で「使える物件」の条件が変わるからこそ、契約前の確認が決定的です。このページでは、制度の入口の整理と物件選びの確認ポイント、担当・契約の分担を解説します。</p>
+        </header>
+      </>
       {/* §1 3制度の入口整理。適否の断定なし＝自治体確認へ誘導。特区民泊は区名を書かない（未検証） */}
       <div>
         <ReH2>民泊の3つの制度——どれを選ぶかで物件の条件が変わる</ReH2>

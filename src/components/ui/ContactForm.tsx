@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import type { FormEvent } from "react";
 import { useTranslation } from "@/hooks/useTranslation";
@@ -18,6 +18,7 @@ import {
 import type { LangCode } from "@/config/languages";
 import { contactIntentParam, gaEvent } from "@/lib/gtag";
 import { takeContactPrefill } from "@/lib/shared/contact-prefill";
+import { MINPAKU_PURCHASE_INTENT, MINPAKU_REGIONS, MINPAKU_BUDGETS, MINPAKU_PURPOSES, minpakuPurchaseMessage } from "@/lib/shared/minpaku-purchase";
 
 const inputClass =
   "mt-1 w-full rounded-lg bg-surface px-4 py-3 text-sm outline-none transition-all duration-300 gradient-border-input";
@@ -41,6 +42,11 @@ export function ContactForm({ thanksPath = "/thanks", business = "realestate" }:
   const [message, setMessage] = useState("");
 
   const lang = locale as LangCode;
+  const [minpakuActive, setMinpakuActive] = useState(false);
+  const [regions, setRegions] = useState<string[]>(["未定"]);
+  const [budget, setBudget] = useState<string>("未定");
+  const [purpose, setPurpose] = useState<string>("まだ検討中");
+  const formStarted = useRef(false);
 
   // 2026-07-27：相談カテゴリを事業別に出し分ける。
   // 定義が無い事業は CATEGORY_ORDER_DEFAULT ＝従来の並びで挙動を変えない。
@@ -69,6 +75,13 @@ export function ContactForm({ thanksPath = "/thanks", business = "realestate" }:
     const sp = new URLSearchParams(window.location.search);
     const intent = sp.get("intent") ?? "";
     setIntentParam(contactIntentParam(intent));
+    const purchase = business === "realestate" && lang === "ja" && intent === MINPAKU_PURCHASE_INTENT;
+    setMinpakuActive(purchase);
+    if (purchase) {
+      setCategory((c) => c || "sale");
+      setMessage((m) => m || "民泊対応マンションの購入について相談したいです。");
+      return;
+    }
     if (!intent) return;
     const preset = contactIntentPreset(intent, business, lang);
     if (!preset) return;
@@ -89,7 +102,7 @@ export function ContactForm({ thanksPath = "/thanks", business = "realestate" }:
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, phone, category, source, message, business }),
+        body: JSON.stringify({ name, email, phone, category, source, message: minpakuActive && message.trim() ? minpakuPurchaseMessage({ regions, budget, purpose }, message) : message, business }),
       });
 
       const data = await res.json();
@@ -139,12 +152,33 @@ export function ContactForm({ thanksPath = "/thanks", business = "realestate" }:
       </p>
 
       {serverError && (
-        <div className="mt-4 rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-700">
+        <div role="status" className="mt-4 rounded-lg border border-border bg-bg p-3 text-sm text-ink">
           {serverError}
         </div>
       )}
 
-      <form onSubmit={handleSubmit} noValidate className="mt-6 space-y-5">
+      {minpakuActive && <p className="mt-4 rounded-lg bg-primary-tint p-4 text-sm leading-relaxed">民泊対応マンションの購入相談です。売買仲介の相談は行政書士業務の委任ではありません。お問い合わせ内容には、ご質問やご希望を追記いただけます。</p>}
+      <form onSubmit={handleSubmit} noValidate className="mt-6 space-y-5" onFocusCapture={() => {
+        if (minpakuActive && !formStarted.current) {
+          formStarted.current = true;
+          gaEvent("contact_form_start", { business, intent: MINPAKU_PURCHASE_INTENT });
+        }
+      }}>
+        {minpakuActive && <>
+          <fieldset className="space-y-3"><legend className="text-sm font-medium">希望地域（複数可）</legend>
+            <div className="flex flex-wrap gap-3">{MINPAKU_REGIONS.map((region) => <label key={region} className="flex min-h-11 items-center gap-2 rounded-md border border-border px-3 text-sm">
+              <input type="checkbox" value={region} checked={regions.includes(region)} onChange={(e) => setRegions((current) => {
+                if (region === "未定") return e.target.checked ? ["未定"] : [];
+                return e.target.checked ? [...current.filter((v) => v !== "未定"), region] : current.filter((v) => v !== region);
+              })} />{region}</label>)}</div>
+          </fieldset>
+          <div><label htmlFor="minpaku-budget" className="block text-sm font-medium">予算</label>
+            <select id="minpaku-budget" value={budget} onChange={(e) => setBudget(e.target.value)} className={inputClass}>{MINPAKU_BUDGETS.map((v) => <option key={v}>{v}</option>)}</select>
+          </div>
+          <div><label htmlFor="minpaku-purpose" className="block text-sm font-medium">利用目的</label>
+            <select id="minpaku-purpose" value={purpose} onChange={(e) => setPurpose(e.target.value)} className={inputClass}>{MINPAKU_PURPOSES.map((v) => <option key={v}>{v}</option>)}</select>
+          </div>
+        </>}
         <div>
           <label htmlFor="name" className="block text-sm font-medium">
             {t("contact.form.fields.name")} <span className="text-red-500">*</span>
