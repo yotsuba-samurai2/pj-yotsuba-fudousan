@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-14T08:18:53.455Z",
+  "generatedAt": "2026-10-15T07:55:48.583Z",
   "siteUrl": "sc-domain:luck428.com",
   "windowDays": 45,
   "urls": {
@@ -1553,26 +1553,6 @@
       "verdict": "UNCHECKED",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
       "lastmod": "2026-08-31"
-    },
-    "https://luck428.com/column/chousei-kuiki-souzoku-tochi-baikyaku": {
-      "verdict": "UNCHECKED",
-      "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-08-30"
-    },
-    "https://luck428.com/column/gakudou-houkago-jido-club-bukken-youken": {
-      "verdict": "UNCHECKED",
-      "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-08-30"
-    },
-    "https://luck428.com/legal/column/keikamotsu-kei-jidosha-unso-todokede": {
-      "verdict": "UNCHECKED",
-      "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-08-30"
-    },
-    "https://luck428.com/legal/column/souzoku-tokubetsu-jueki-kiyobun": {
-      "verdict": "UNCHECKED",
-      "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-08-30"
     }
   }
 }

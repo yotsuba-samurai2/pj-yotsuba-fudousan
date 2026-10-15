@@ -1,10 +1,10 @@
-# コラムの自動公開とSearch Consoleの確認（2026/10/14 17:18:53）
+# コラムの自動公開とSearch Consoleの確認（2026/10/15 16:55:48）
 
 ## 正午の自動公開
 
-- **止めました**：18本は品質確認待ちのため自動公開しません。記事別の理由を確認してください。forceでも解除しません。
+- **止めました**：24本は品質確認待ちのため自動公開しません。記事別の理由を確認してください。forceでも解除しません。
 - 公開した記事：0本
-- 保留中（自動公開していない）：18本
+- 保留中（自動公開していない）：24本
   - 学習塾・予備校講師のコマ給は要注意。授業外労働の労働時間管理
   - 自動車教習所の指導員・検定員の労働時間は。繁忙期の36協定と変形労働時間制
   - 高度管理医療機器の販売・貸与許可｜店舗要件と営業所管理者
@@ -23,6 +23,12 @@
   - 相続した山林は90日以内に届出｜森林法の所有者届出の手順
   - 子の留学・就労のために日本の住まいを買う：親名義か子名義か、中国・台湾の親が最初に確かめること
   - 相続した野立て太陽光発電の土地と設備、売るときは何から手をつける？
+  - 精神障害の労災認定基準（令和5年改正）｜企業の予防と是正
+  - 葬儀社の開業と労務｜宿直・呼出待機・繁閑の労働時間と賃金設計
+  - 技能実習から育成就労へ｜監理支援機関の許可の取り直しと受入れ計画の認定
+  - 「相続させる」遺言で受益相続人が先に死亡｜代襲は原則なし・予備的遺言で備える
+  - コンテナ・トレーラーハウスで店舗や事務所を開くとき、物件・土地選びで何を確認すればよいですか
+  - 被相続人が老人ホームに入所していた実家でも、相続空き家の3000万円特別控除は使えますか
 - 失敗：labor:gakushujuku-yobiko-koshi-koma-kyu-jugyogai-roudoujikan-kanri：品質確認待ち：公開レビュー記録が未登録または重複しています
 - 失敗：labor:jidosha-kyoshujo-shidouin-kenteiin-roudoujikan-hanbokibi-36kyotei-henkei：品質確認待ち：公開レビュー記録が未登録または重複しています
 - 失敗：legal:kodo-kanri-iryokiki-hanbai-kashidashi-kyoka-tenpo-kanrisha：品質確認待ち：公開レビュー記録が未登録または重複しています
@@ -41,12 +47,18 @@
 - 失敗：legal:souzoku-shinrin-tochi-shoyusha-todokede-90nichi-shinrinho：品質確認待ち：公開レビュー記録が未登録または重複しています
 - 失敗：realestate:chugokugo-oya-kodomo-ryugaku-sumai-shutoku-meigi：品質確認待ち：公開レビュー記録が未登録または重複しています
 - 失敗：realestate:souzoku-noyadate-taiyoko-fit-setsubi-tochi-baikyaku：品質確認待ち：公開レビュー記録が未登録または重複しています
+- 失敗：labor:seishin-shougai-rosai-nintei-kijun-2023-yobo-zesei：品質確認待ち：公開レビュー記録が未登録または重複しています
+- 失敗：labor:sougisha-sousaigyo-kaigyo-roumu-shukuchoku-yobidashi-henkei：品質確認待ち：公開レビュー記録が未登録または重複しています
+- 失敗：legal:ginou-jisshu-ikusei-shuro-ikou-kanri-shien-kikan-kyoka：品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録または重複しています
+- 失敗：legal:tokutei-zaisan-shokei-yuigon-jueki-sakibashi-daishu-fuka：品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録または重複しています
+- 失敗：realestate:container-trailer-house-tenpo-bukken-kenchiku-kakunin-youto：品質確認待ち：公開レビュー記録が未登録または重複しています
+- 失敗：realestate:souzoku-akiya-3000man-roujin-home-nyusho-kyojuyoken：品質確認待ち：公開レビュー記録が未登録または重複しています
 
 ## Search Console
 
 - GSC_SERVICE_ACCOUNT_JSON が未設定のため、サイトマップの送信と登録状況の確認を飛ばしました
-- 確認の対象：直近45日の日本語コラム 314本（今回確かめたのは0本）
-- 登録済み（PASS）0本・除外（NEUTRAL）0本・エラー（FAIL）0本・未確認 314本
+- 確認の対象：直近45日の日本語コラム 310本（今回確かめたのは0本）
+- 登録済み（PASS）0本・除外（NEUTRAL）0本・エラー（FAIL）0本・未確認 310本
 
 ## 手でリクエストする候補（公開から3日以上たって未登録）
 
