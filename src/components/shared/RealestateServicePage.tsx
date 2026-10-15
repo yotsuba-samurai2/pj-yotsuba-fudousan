@@ -106,6 +106,9 @@ export type RealestateServicePageProps = {
    * areaServed の上書きに使う。省略時の出力は不変。
    */
   serviceExtra?: Record<string, unknown>;
+  /** Page-specific introduction; defaults to the existing hero/header. */
+  heroContent?: ReactNode;
+  wide?: boolean;
   children: ReactNode;
 };
 
@@ -139,7 +142,8 @@ export async function RealestateServicePage(p: RealestateServicePageProps) {
 
       <Breadcrumb items={p.crumbs} />
 
-      <article className="mx-auto max-w-3xl px-4 pb-16">
+      <article className={`mx-auto ${p.wide ? "max-w-5xl" : "max-w-3xl"} px-4 pb-16`}>
+        {p.heroContent ?? <>
         {/* 2026-09-23：素の img で1600pxを配信しLCPが最大5.6秒（モバイル）。next/image で画面幅に合わせて縮小する */}
         <Image
           src={p.heroSrc}
@@ -161,6 +165,7 @@ export async function RealestateServicePage(p: RealestateServicePageProps) {
           )}
           <div className="mt-4 leading-relaxed text-text">{p.lead}</div>
         </header>
+        </>}
 
         <section className="mt-8 space-y-8">{p.children}</section>
 

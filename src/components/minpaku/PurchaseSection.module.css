@@ -1,0 +1,17 @@
+.hero { scroll-margin-top: 7rem; margin-top: 1rem; }
+.heroText { position: relative; z-index: 1; padding: 3rem 1rem 0; text-align: center; }
+.headline { margin-top: 1rem; font-family: var(--font-serif); font-weight: 600; font-size: clamp(1.7rem, 3.7vw, 2.7rem); line-height: 1.65; color: var(--color-ink); }
+.figure { margin-top: -5.5rem; }
+.purchase { padding-top: 2.5rem; }
+.heading { font-family: var(--font-serif); font-size: clamp(1.3rem, 2.8vw, 1.7rem); font-weight: 600; line-height: 1.7; color: var(--color-ink); }
+.block { margin-top: 3.5rem; scroll-margin-top: 7rem; }
+.regions { margin-top: 1.5rem; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.region { border: 1px solid var(--color-border); border-top: 3px solid var(--color-primary); border-radius: .5rem; padding: 1.5rem; background: var(--color-surface); }
+.checks { margin-top: 1.5rem; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 2rem; }
+@media (max-width: 639px) {
+  .heroText { padding: 2rem 0 0; }
+  .figure { margin-top: -3rem; }
+  .regions, .checks { grid-template-columns: minmax(0, 1fr); }
+  .region { padding: 1.5rem; }
+  .block { margin-top: 2.5rem; }
+}
