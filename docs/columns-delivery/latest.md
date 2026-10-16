@@ -1,45 +1,43 @@
-# コラム生成・レビュー・公開判定（2026-10-16）
+# コラム生成・レビュー・公開判定（2026-10-17）
 
-- 生成・機械検証：成功 5本
+- 生成・機械検証：成功 6本
 - レビュー処理：success ／ 判定：true
-- レビュー指摘：blocker 0／major 0／minor 1
+- レビュー指摘：blocker 0／major 0／minor 0
 - 今回の候補指紋に対応する公開証跡登録：0本
 - 自動公開の品質候補：0本
-- 品質保留：5本 ／ 公開日待ち：0本
-- 未確認の一次資料：1件
+- 品質保留：6本 ／ 公開日待ち：0本
+- 未確認の一次資料：0件
 - 本番公開：この処理では実行していません。公開済み件数は未照会です。
 
-正午の自動公開に渡せる品質候補は0本です。5本は保留、0本は公開日待ちです。
+正午の自動公開に渡せる品質候補は0本です。6本は保留、0本は公開日待ちです。
 未確認記事の品質保留はforceでも解除しません。
 
 ## 記事別の判定
 
-- 質屋を開くときの物件要件と許可（質屋営業法・公安委員会）：held（realestate:shichiya-eigyo-bukken-youken-koan-iinkai-kyoka）
+- 福祉用具貸与・販売の事業所にできる物件は？消毒室・保管・展示スペースの見方：held（realestate:fukushi-yogu-kashiyo-hanbai-bukken-shoudokushitsu-hokan-youken）
+  - 公開レビュー記録が未登録または重複しています
+  - 担当分野の資格者確認が不足しています
+- 相続した不動産に差押えの登記がある。売れるのか、どう外すのか：held（realestate:souzoku-sashiosae-toki-ari-fudosan-baikyaku）
+  - 公開レビュー記録が未登録または重複しています
+  - 担当分野の資格者確認が不足しています
+- 建築士事務所の登録とは？管理建築士の専任・定期講習・更新の要件：held（legal:kenchikushi-jimusho-touroku-kanri-kenchikushi-youken）
+  - enの内部リンクに言語不一致があります
+  - zh-twの内部リンクに言語不一致があります
+  - zhの内部リンクに言語不一致があります
   - 公開レビュー記録が未登録または重複しています
   - 担当分野の資格者確認が不足しています
   - 確認済みの公的な一次根拠が不足しています
-  - 未確認一次資料：https://www.police.pref.nara.jp/cmsfiles/contents/0000005/5387/5shichiyaeigyouhou.pdf — 質物保管設備の具体的基準（主要構造部の耐火構造・土蔵造、開口部の特定防火設備、堅ろうな施錠・盗難防止）は各都道府県公安委員会規則にあり地域差がある、という本文の論旨。栃木県・沖縄県規則の原文自体は直接取得できず（PDFバイナリ）、本文も【未検証】として所在地規則で確認と明記。地域差の存在は確認。
-- 相続した賃貸不動産の『遺産分割前の家賃』は誰のもの？帰属と清算：held（realestate:souzoku-chintai-bunkatsu-mae-yachin-kizoku）
-  - 公開レビュー記録が未登録または重複しています
-  - 担当分野の資格者確認が不足しています
-- 公共工事の入札に参加するための経営事項審査（経審）と入札参加資格：held（legal:keiei-jiko-shinsa-keishin-nyusatsu-sankaku-shikaku）
+- 経営・管理ビザの更新で問われる「事業の継続性・実体」の立証（中国・台湾の経営者向け）：held（legal:keieikanri-koshin-jigyo-keizokusei-rissho-chuka-taiwan）
   - enの内部リンクに言語不一致があります
   - zh-twの内部リンクに言語不一致があります
   - zhの内部リンクに言語不一致があります
   - 公開レビュー記録が未登録または重複しています
   - 担当分野の資格者確認が不足しています
-- 上場株式・投資信託を相続したときの証券口座の名義変更・移管：held（legal:souzoku-jojo-kabushiki-toshin-shoken-koza-meigi-henko）
-  - enの内部リンクに言語不一致があります
-  - zh-twの内部リンクに言語不一致があります
-  - zhの内部リンクに言語不一致があります
+- バス運転者の2024年改善基準告示と拘束時間・休息・連続運転の労務｜36協定との整合：held（labor:bus-untensha-kaizen-kijun-2024-kousoku-kyusoku-roumu）
   - 公開レビュー記録が未登録または重複しています
   - 担当分野の資格者確認が不足しています
-- タクシー運転者の2024年改善基準告示と隔日勤務の労務｜拘束時間と割増：held（labor:taxi-kakujitsu-kinmu-2024-kaizen-kijun-roumu）
+- ビルメンテナンス・清掃業の労務｜複数現場の労働時間通算と社会保険の適用拡大：held（labor:biru-maintenance-seisou-tsusan-roudoujikan-tekiyo-kakudai-roumu）
   - 公開レビュー記録が未登録または重複しています
   - 担当分野の資格者確認が不足しています
 
-## レビューの指摘
-
-- [minor] scripts/legal-columns/en/117-keiei-jiko-shinsa-keishin-nyusatsu-sankaku-shikaku.md：法務系（legal）記事の各言語訳の内部リンクがロケール接頭辞なし（例: https://luck428.com/legal/column/... , /about/uramatsu）。同日追加の不動産123/124はロケール付き絶対URL、社労士157は /en/ 付きで、法務のみ不統一。英語読者がクリックすると日本語ページに遷移する。ただし既存の法務コラム翻訳も 111/112/115 は接頭辞なし・113/114 は付きで既に混在しており、本ドラフト固有の逸脱ではない。 ／ 修正案：法務コラムのロケール接頭辞ポリシーを統一（realestate の運用ルール5-2に倣い /en/・/zh-tw/・/zh/ を付す）。本記事単体の訂正ではなく legal シード全体の方針として整理するのが望ましい。内容・主張の一致には影響しないため公開可否はブロックしない。
-
-実行証跡：https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/38771120116
+実行証跡：https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/38931635263

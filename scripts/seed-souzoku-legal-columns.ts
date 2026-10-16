@@ -1016,6 +1016,20 @@ const REQUIRED_HUB_LINKS: Record<string, string[]> = {
     "/legal/column/isan-bunkatsu-kyougisho",
     "/legal/column/souzoku-hijojo-kabushiki-isanbunkatsu-kyogi",
   ],
+  "kenchikushi-jimusho-touroku-kanri-kenchikushi-youken": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/kensetsugyo-kyoka-yoken-keikan-sengi-zaisan",
+    "/legal/column/denki-koji-gyo-touroku-eigyosho-shunin",
+  ],
+  "keieikanri-koshin-jigyo-keizokusei-rissho-chuka-taiwan": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/keieikanri-zairyu-chuka-kigyousha-kaisha-setsuritsu",
+    "/legal/column/eiju-kyoka-shinsei-chuka-taiwan-senmonshoku",
+  ],
 };
 
 /** 表示コンプライアンス上の禁止語 */
@@ -3268,6 +3282,34 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "独立した事業体",
     "紹介料を受け取りません",
   ],
+  "kenchikushi-jimusho-touroku-kanri-kenchikushi-youken": [
+    "建築士法",
+    "第23条",
+    "第24条",
+    "第22条の2",
+    "管理建築士",
+    "定期講習",
+    "管理建築士講習",
+    "別々にご契約",
+    "独立した事業体",
+    "紹介料を受け取りません",
+  ],
+  "keieikanri-koshin-jigyo-keizokusei-rissho-chuka-taiwan": [
+    "出入国管理及び難民認定法",
+    "別表第一の二",
+    "出入国管理及び難民認定法第七条第一項第二号の基準を定める省令",
+    "令和7年10月16日",
+    "3,000万円",
+    "経過措置",
+    "令和10年10月16日",
+    "事業の継続性",
+    "債務超過",
+    "申請取次",
+    "行政書士法第1条の3",
+    "別々にご契約",
+    "独立した事業体",
+    "紹介料を受け取りません",
+  ],
 };
 
 /** 記事ごとに含めてはならない表現 */
@@ -3427,6 +3469,8 @@ const FORBIDDEN_PHRASES: Record<string, string[]> = {
   "ginou-jisshu-ikusei-shuro-ikou-kanri-shien-kikan-kyoka": [],
   "keiei-jiko-shinsa-keishin-nyusatsu-sankaku-shikaku": [],
   "souzoku-jojo-kabushiki-toshin-shoken-koza-meigi-henko": [],
+  "kenchikushi-jimusho-touroku-kanri-kenchikushi-youken": [],
+  "keieikanri-koshin-jigyo-keizokusei-rissho-chuka-taiwan": [],
 };
 
 /** 本セット外へ張る既存legalコラムslug（リポジトリの他シードで実在確認済み） */
@@ -6355,6 +6399,60 @@ const ARTICLES: Array<{
       "相続",
       "準共有",
       "準確定申告",
+      "行政書士",
+    ],
+  },
+  {
+    file: "119-kenchikushi-jimusho-touroku-kanri-kenchikushi-youken.md",
+    slug: "kenchikushi-jimusho-touroku-kanri-kenchikushi-youken",
+    date: "2026-10-16",
+    title:
+      "建築士事務所の登録とは？管理建築士の専任・定期講習・更新の要件",
+    category: "許認可の手続き（行政書士の実務から）",
+    excerpt:
+      "他人の求めに応じ報酬を得て設計・工事監理を業として行うには、建築士法第23条に基づき建築士事務所として都道府県知事の登録が必要です。これは建設業許可（建設業法）とは別制度で、登録の有効期間は5年、更新の登録が要ります（第23条第2項・第3項）。事務所ごとに専任の管理建築士を置く義務があり（第24条第1項）、管理建築士は建築士として3年以上の実務の後に管理建築士講習を修了した者です（同条第2項）。事務所に属する建築士には定期講習（第22条の2）の受講義務もあります。登録申請＝行政書士／設計・監理＝建築士／物件＝宅建士／登記＝司法書士の分離受任を、別々にご契約いただく前提で整理します。",
+    keywords: [
+      "建築士事務所 登録 建築士法 第23条",
+      "管理建築士 専任 要件 第24条",
+      "建築士 定期講習 第22条の2 3年",
+      "建築士事務所 登録 建設業許可 違い",
+      "建築士事務所 登録 更新 有効期間 5年",
+      "建築士事務所 登録 行政書士",
+    ],
+    tags: [
+      "建築士事務所",
+      "管理建築士",
+      "定期講習",
+      "登録",
+      "許認可",
+      "建築士",
+      "行政書士",
+    ],
+  },
+  {
+    file: "120-keieikanri-koshin-jigyo-keizokusei-rissho-chuka-taiwan.md",
+    slug: "keieikanri-koshin-jigyo-keizokusei-rissho-chuka-taiwan",
+    date: "2026-10-16",
+    title:
+      "経営・管理ビザの更新で問われる「事業の継続性・実体」の立証（中国・台湾の経営者向け）",
+    category: "許認可の手続き（行政書士の実務から）",
+    excerpt:
+      "在留資格「経営・管理」の更新では、新規のときと異なり、事業が実際に継続し経営の実体があるかが中心に問われます。根拠は出入国管理及び難民認定法の別表第一の二と同法第七条第一項第二号の基準を定める省令。出入国在留管理庁は直近2期の決算・債務超過の有無で事業の継続性を見ます。令和7年10月16日施行の改正で資本金・出資総額3,000万円以上などの新基準が加わりましたが、在留中の方の更新には令和10年10月16日までの経過措置があります。申請取次＝行政書士（行政書士法第1条の3）／税務＝税理士／登記＝司法書士／労務＝社労士／物件＝不動産の分離受任を、別々にご契約いただく前提で整理します。",
+    keywords: [
+      "経営・管理 更新 事業の継続性 立証",
+      "経営管理ビザ 更新 赤字 債務超過",
+      "経営・管理 更新 必要書類 決算 納税証明",
+      "経営・管理 2025 改正 経過措置 令和10年10月16日",
+      "経営管理ビザ 事務所 自宅兼用 不可",
+      "経営・管理 更新 申請取次 行政書士",
+    ],
+    tags: [
+      "経営・管理",
+      "在留資格",
+      "更新",
+      "事業の継続性",
+      "申請取次",
+      "外国人",
       "行政書士",
     ],
   },

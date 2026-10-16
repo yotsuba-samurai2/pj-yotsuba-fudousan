@@ -2554,6 +2554,46 @@ const ARTICLES: ArticleSpec[] = [
     localesWithTranslations: ["en", "zh-tw", "zh"],
     hubLinks: ["/souzoku"],
   },
+  {
+    file: "125-fukushi-yogu-kashiyo-hanbai-bukken-shoudokushitsu-hokan-youken.md",
+    slug: "fukushi-yogu-kashiyo-hanbai-bukken-shoudokushitsu-hokan-youken",
+    title: "福祉用具貸与・販売の事業所にできる物件は？消毒室・保管・展示スペースの見方",
+    publishedAt: "2026-10-16",
+    category: "投資・事業用不動産",
+    excerpt:
+      "福祉用具貸与・特定福祉用具販売の事業所で物件側が問われるのは、指定基準が求める『福祉用具の保管・消毒に必要な設備及び器材』を置ける専用区域を確保できるか、事務所・倉庫として用途地域や賃貸借契約に適合するかの2点です。消毒設備は再使用する貸与で特に効き、保管・消毒を他の事業者へ委託する場合は事業所に当該設備を持たなくてよい余地があります（指定居宅サービス基準第196条）。東京都文京区の宅地建物取引士兼行政書士が、介護保険法・指定居宅サービス基準・建築基準法の条文から物件要件を整理します。指定基準への適合判断と指定申請は行政書士、賃貸借契約・重要事項説明は当社、消毒・衛生基準の判断は所管の指定権者へ分離受任でご案内します。",
+    keywords: [
+      "福祉用具貸与 事業所 物件",
+      "特定福祉用具販売 設備基準",
+      "福祉用具 消毒 保管 設備",
+      "指定居宅サービス基準 第196条 福祉用具",
+      "福祉用具 事業所 用途地域 倉庫",
+    ],
+    tags: ["事業用不動産", "許認可", "福祉用具", "用途地域"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/toushi", "/office"],
+  },
+  {
+    file: "126-souzoku-sashiosae-toki-ari-fudosan-baikyaku.md",
+    slug: "souzoku-sashiosae-toki-ari-fudosan-baikyaku",
+    title: "相続した不動産に差押えの登記がある。売れるのか、どう外すのか",
+    publishedAt: "2026-10-16",
+    category: "相続",
+    excerpt:
+      "差押えの登記が付いた相続不動産でも、売買契約を結び所有権移転登記をすること自体はできます。ただし差押えには処分を制限する効力があり、買主は差押手続に対抗できず競売で所有権を失う恐れがあるため、実務では決済で売買代金から滞納税や債務を弁済し、差押えを解除・取下げしてもらって抹消するのが基本です。東京都文京区の宅地建物取引士兼行政書士が、民法・国税徴収法・民事執行法・民事保全法の条文から抹消の順序と決済の組み方を整理します。弁済交渉・仮差押えの争いは弁護士、相続登記や差押抹消の登記は司法書士、相続税・譲渡所得は税理士へ分離受任でご案内します。",
+    keywords: [
+      "相続 不動産 差押え 登記 売却",
+      "滞納処分 差押え 解除 国税徴収法",
+      "仮差押え 民事保全法 不動産 抹消",
+      "強制競売 民事執行法 差押え 取下げ",
+      "相続登記 義務化 差押え 抹消 決済",
+    ],
+    tags: ["相続", "差押え", "抹消", "売却"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/souzoku"],
+  },
 ];
 
 function toPlainText(md: string): string {
