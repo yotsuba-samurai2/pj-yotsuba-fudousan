@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-15T07:55:48.583Z",
+  "generatedAt": "2026-10-16T07:48:49.482Z",
   "siteUrl": "sc-domain:luck428.com",
   "windowDays": 45,
   "urls": {
@@ -1533,26 +1533,6 @@
       "verdict": "UNCHECKED",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
       "lastmod": "2026-09-01"
-    },
-    "https://luck428.com/column/baibai-keiyaku-teppukin-loan-tokuyaku-chugokugo-buyer": {
-      "verdict": "UNCHECKED",
-      "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-08-31"
-    },
-    "https://luck428.com/column/jidosha-tokutei-seibi-ninsho-koujou-bukken-youken": {
-      "verdict": "UNCHECKED",
-      "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-08-31"
-    },
-    "https://luck428.com/legal/column/haiguusha-kyojuuken-settei-isanbunkatsu-touki": {
-      "verdict": "UNCHECKED",
-      "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-08-31"
-    },
-    "https://luck428.com/legal/column/jidosha-tokutei-seibi-ninsho-shinsei-nagare-youken": {
-      "verdict": "UNCHECKED",
-      "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-08-31"
     }
   }
 }

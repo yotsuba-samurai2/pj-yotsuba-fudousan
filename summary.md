@@ -1,10 +1,10 @@
-# コラムの自動公開とSearch Consoleの確認（2026/10/15 16:55:48）
+# コラムの自動公開とSearch Consoleの確認（2026/10/16 16:48:49）
 
 ## 正午の自動公開
 
-- **止めました**：24本は品質確認待ちのため自動公開しません。記事別の理由を確認してください。forceでも解除しません。
+- **止めました**：公開待ちが29本あり、1回の上限（24本）を超えたため止めました。対象を確かめてから、管理画面の「今すぐ公開」か、手動実行（force）で公開してください。
 - 公開した記事：0本
-- 保留中（自動公開していない）：24本
+- 保留中（自動公開していない）：29本
   - 学習塾・予備校講師のコマ給は要注意。授業外労働の労働時間管理
   - 自動車教習所の指導員・検定員の労働時間は。繁忙期の36協定と変形労働時間制
   - 高度管理医療機器の販売・貸与許可｜店舗要件と営業所管理者
@@ -29,6 +29,11 @@
   - 「相続させる」遺言で受益相続人が先に死亡｜代襲は原則なし・予備的遺言で備える
   - コンテナ・トレーラーハウスで店舗や事務所を開くとき、物件・土地選びで何を確認すればよいですか
   - 被相続人が老人ホームに入所していた実家でも、相続空き家の3000万円特別控除は使えますか
+  - タクシー運転者の2024年改善基準告示と隔日勤務の労務｜拘束時間と割増
+  - 公共工事の入札に参加するための経営事項審査（経審）と入札参加資格
+  - 上場株式・投資信託を相続したときの証券口座の名義変更・移管
+  - 質屋を開くときの物件要件と許可（質屋営業法・公安委員会）
+  - 相続した賃貸不動産の『遺産分割前の家賃』は誰のもの？帰属と清算
 - 失敗：labor:gakushujuku-yobiko-koshi-koma-kyu-jugyogai-roudoujikan-kanri：品質確認待ち：公開レビュー記録が未登録または重複しています
 - 失敗：labor:jidosha-kyoshujo-shidouin-kenteiin-roudoujikan-hanbokibi-36kyotei-henkei：品質確認待ち：公開レビュー記録が未登録または重複しています
 - 失敗：legal:kodo-kanri-iryokiki-hanbai-kashidashi-kyoka-tenpo-kanrisha：品質確認待ち：公開レビュー記録が未登録または重複しています
@@ -53,12 +58,17 @@
 - 失敗：legal:tokutei-zaisan-shokei-yuigon-jueki-sakibashi-daishu-fuka：品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録または重複しています
 - 失敗：realestate:container-trailer-house-tenpo-bukken-kenchiku-kakunin-youto：品質確認待ち：公開レビュー記録が未登録または重複しています
 - 失敗：realestate:souzoku-akiya-3000man-roujin-home-nyusho-kyojuyoken：品質確認待ち：公開レビュー記録が未登録または重複しています
+- 失敗：labor:taxi-kakujitsu-kinmu-2024-kaizen-kijun-roumu：品質確認待ち：公開レビュー記録が未登録または重複しています
+- 失敗：legal:keiei-jiko-shinsa-keishin-nyusatsu-sankaku-shikaku：品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録または重複しています
+- 失敗：legal:souzoku-jojo-kabushiki-toshin-shoken-koza-meigi-henko：品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録または重複しています
+- 失敗：realestate:shichiya-eigyo-bukken-youken-koan-iinkai-kyoka：品質確認待ち：公開レビュー記録が未登録または重複しています
+- 失敗：realestate:souzoku-chintai-bunkatsu-mae-yachin-kizoku：品質確認待ち：公開レビュー記録が未登録または重複しています
 
 ## Search Console
 
 - GSC_SERVICE_ACCOUNT_JSON が未設定のため、サイトマップの送信と登録状況の確認を飛ばしました
-- 確認の対象：直近45日の日本語コラム 310本（今回確かめたのは0本）
-- 登録済み（PASS）0本・除外（NEUTRAL）0本・エラー（FAIL）0本・未確認 310本
+- 確認の対象：直近45日の日本語コラム 306本（今回確かめたのは0本）
+- 登録済み（PASS）0本・除外（NEUTRAL）0本・エラー（FAIL）0本・未確認 306本
 
 ## 手でリクエストする候補（公開から3日以上たって未登録）
 
