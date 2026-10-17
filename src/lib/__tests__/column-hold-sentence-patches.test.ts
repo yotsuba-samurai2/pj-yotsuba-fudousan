@@ -38,7 +38,18 @@ describe("removeHoldSentences", () => {
     const text = "改正があり得ます。公開は資格者確認待ちとして保留します。";
     const once = removeHoldSentences(text).text;
     expect(removeHoldSentences(once)).toEqual({ text: once, hits: [] });
-    expect(removeHoldSentences("未確認事項は資格者確認待ちです。")).toEqual({ text: "未確認事項は資格者確認待ちです。", hits: [] });
+    expect(removeHoldSentences("詳しくは所管の窓口に確認してください。")).toEqual({ text: "詳しくは所管の窓口に確認してください。", hits: [] });
+  });
+
+  it("removes the pending-review sentence from the summaries (excerpt)", () => {
+    expect(removeHoldSentences("確認事項を整理します。居室面積、消防区分、現行統合条文と改正履歴の未確認事項は資格者確認待ちです。").text)
+      .toBe("確認事項を整理します。");
+    expect(removeHoldSentences("プログラムのみは別区分です。現行統合条文・設備適合・費用等の未確認事項は所管と資格者の確認待ちです。").text)
+      .toBe("プログラムのみは別区分です。");
+    expect(removeHoldSentences("checks before contracting. Bedroom area, fire classification and consolidated statutes and amendment histories remain pending qualified review.").text)
+      .toBe("checks before contracting.");
+    expect(removeHoldSentences("條文整理。事業者變更的手續區分與拆除費用等未確認事項，待資格者確認。").text).toBe("條文整理。");
+    expect(removeHoldSentences("条文整理。赠与税的课税区分与在留资格的个别该当性等未确认事项，待资格者确认。").text).toBe("条文整理。");
   });
 
   it("never leaves a replacement that matches another rule", () => {

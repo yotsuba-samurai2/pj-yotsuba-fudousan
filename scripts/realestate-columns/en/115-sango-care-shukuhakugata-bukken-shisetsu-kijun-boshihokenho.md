@@ -1,6 +1,6 @@
 ---
 title: "Premises standards for residential (short-stay) postpartum care under the Maternal and Child Health Act (母子保健法)"
-excerpt: "The March 2026 national guideline for short-stay postpartum care under the Maternal and Child Health Act (母子保健法) specifies at least one nursing professional on duty around the clock. This guide separates the treatment of the specified facilities under hotel and building law from premises and municipal checks before contracting. Bedroom area, fire classification and consolidated statutes and amendment histories remain pending qualified review."
+excerpt: "The March 2026 national guideline for short-stay postpartum care under the Maternal and Child Health Act (母子保健法) specifies at least one nursing professional on duty around the clock. This guide separates the treatment of the specified facilities under hotel and building law from premises and municipal checks before contracting."
 category: Investment & Commercial Real Estate
 faqHeading: Frequently asked questions
 ---
