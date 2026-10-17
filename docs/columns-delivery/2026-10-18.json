@@ -1,0 +1,125 @@
+{
+  "todayJst": "2026-10-18",
+  "runUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/39044455640",
+  "generationStatus": "validated",
+  "generatedCount": 6,
+  "reviewResult": "success",
+  "reviewReportAvailable": true,
+  "reviewPass": true,
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "minor": 2
+  },
+  "reviewFindings": [
+    {
+      "file": "scripts/legal-columns/en/121-tantei-gyo-todokede-eigyosho-youken-koan.md",
+      "severity": "minor",
+      "issue": "拘禁刑のローマ字表記が「kinkinkei」となっているが、正しくは「kōkinkei（koukinkei）」。法的内容・条項の誤りではなく表記上の軽微な誤り。",
+      "fix": "参考のため指摘（本レビューではファイルを変更しない）。将来の修正時に「koukinkei」等へ。pass判定に影響なし。"
+    },
+    {
+      "file": "scripts/realestate-columns/en/129-souzoku-kyoyu-mochibun-dai3sha-baikyaku-bunkatsu.md",
+      "severity": "minor",
+      "issue": "相続不動産相談窓口へのリンクが「(Japanese)／（日文）」と注記されつつ、URLはロケール前置の /en/souzoku・/zh-tw/souzoku・/zh/souzoku を指す。注記とURLの整合が取れていない。legal系EN記事では /souzoku（注記なし）と扱いが異なり、記事セット間で不統一。",
+      "fix": "参考のため指摘（本レビューではファイルを変更しない）。注記とリンク先ロケールを一致させると丁寧。法的内容・翻訳一致には影響せずpass判定に影響なし。"
+    }
+  ],
+  "registeredCount": 2,
+  "qualityEligibleCount": 2,
+  "heldCount": 4,
+  "scheduledCount": 0,
+  "unverifiedSourceCount": 1,
+  "publishedCount": null,
+  "articles": [
+    {
+      "key": "realestate:sogi-ceremony-hall-bukken-youto-chusha-kinrin",
+      "fingerprint": "e5a1759587cd6879269f8efa5a4f3fad17b637521a298fb1309df2a452794e53",
+      "title": "葬儀式場（セレモニーホール）はどんな物件なら開ける？用途地域・駐車場・近隣対応",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録または重複しています",
+        "確認済みの公的な一次根拠が不足しています"
+      ],
+      "sourceFailures": [
+        {
+          "url": "https://www.mlit.go.jp/toshi/city_plan/toshi_city_plan_tk_000043.html",
+          "checkedAt": "2026-10-17",
+          "relevantClaim": "用途地域と建築制限（建基法第48条・別表第二）の枠組み。都計法第8/9条（用途地域）・第29/34/43条（開発許可・市街化調整区域の建築等）、建基法第87条（用途変更）、消防法施行令別表第一の各引用は標準的条文で記事内および4言語間で整合。第48/87条・都計法・消防令は本セッションでは直接全文取得していないため、国交省の用途地域概要ページを一次確認の出発点として併記。",
+          "verified": false
+        }
+      ],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "realestate:souzoku-kyoyu-mochibun-dai3sha-baikyaku-bunkatsu",
+      "fingerprint": "a5c09cb2336569e9c3f6cf5490c40630d45a6d240c157ea6beda9f99cf61d2cc",
+      "title": "相続した共有不動産の持分を他の相続人が買取業者へ売ったら？見知らぬ共有者への対応と出口",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録または重複しています"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:tantei-gyo-todokede-eigyosho-youken-koan",
+      "fingerprint": "4f7f274c87569ae42a0bad6136f2fb34c68b2c46d9c7bbe54ae2d22b6e95320b",
+      "title": "探偵業を始めるには？探偵業法の届出・営業所の要件・欠格事由を行政書士が解説",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録または重複しています",
+        "確認済みの公的な一次根拠が不足しています"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:petto-shintaku-futankitsuki-izo-yuigon",
+      "fingerprint": "238557fdf54c85e41f73b63fce0be27939ecc2c6bcc85cca28eee70af8935f2d",
+      "title": "残されるペットのために遺せる？負担付遺贈・ペット信託の遺言文案を行政書士が整理",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録または重複しています"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:kinmukan-interval-doryoku-gimu-shugyokisoku-roumu",
+      "fingerprint": "0c1817625369b95e351c64ba2d3b0d86e79eadfd5b0db2bed3aa9e0c1202540f",
+      "title": "勤務間インターバル制度は義務？努力義務の中身と就業規則への入れ方",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:ikusei-shuro-ryohi-shokuhi-koujo-chingin-zengaku-barai",
+      "fingerprint": "580f0c16f27f0bc244f16522767991d92f547261f74f73dd847aa8158c189757",
+      "title": "外国人材の寮費・食費は給料から引ける？賃金全額払いの原則と控除の実務",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    }
+  ]
+}

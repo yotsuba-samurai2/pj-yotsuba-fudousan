@@ -82,6 +82,23 @@ const AUTHOR = {
 
 /** 各記事が評価を集約すべきハブ（本文に必須の内部リンク）。verify() で機械検査する */
 const REQUIRED_HUB_LINKS: Record<string, string[]> = {
+  "tantei-gyo-todokede-eigyosho-youken-koan": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/souzoku",
+    "/legal/column/kobutsusho-kyoka-eigyosho-yoken",
+    "/legal/column/keibigyo-nintei-yoken-kekkaku-kenshu",
+  ],
+  "petto-shintaku-futankitsuki-izo-yuigon": [
+    "/legal/services/inheritance",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/souzoku",
+    "/legal/column/kosei-shosho-yuigon-koshonin-shonin-hiyo",
+    "/legal/column/shigojimu-inin-keiyaku-ohitorisama",
+    "/legal/column/kazoku-shintaku-gyosei-yakuwari-kumisei",
+  ],
   "shitei-jidosha-seibi-jigyo-minkan-shaken-shitei-shinsei-youken": [
     "/legal/services",
     "/legal/nagare",
@@ -1098,6 +1115,32 @@ function matchesRequiredPhrase(content: string, phrase: string): boolean {
 
 /** 記事ごとに必ず含めるべき表現（機械ゲート。最低限の合否判定） */
 const REQUIRED_PHRASES: Record<string, string[]> = {
+  "tantei-gyo-todokede-eigyosho-youken-koan": [
+    "探偵業の業務の適正化に関する法律",
+    "第3条",
+    "第4条",
+    "第5条",
+    "第8条",
+    "第12条",
+    "欠格事由",
+    "名義貸し",
+    "標識",
+    "拘禁刑",
+    "紹介料を受け取りません",
+    "別々にご契約",
+    "独立した事業体",
+  ],
+  "petto-shintaku-futankitsuki-izo-yuigon": [
+    "負担付遺贈",
+    "民法第1002条",
+    "第1027条",
+    "第1046条",
+    "信託法",
+    "目的信託",
+    "紹介料を受け取りません",
+    "別々にご契約",
+    "独立した事業体",
+  ],
   "shitei-jidosha-seibi-jigyo-minkan-shaken-shitei-shinsei-youken": [
     "道路運送車両法",
     "第78条",
@@ -3314,6 +3357,8 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
 
 /** 記事ごとに含めてはならない表現 */
 const FORBIDDEN_PHRASES: Record<string, string[]> = {
+  "tantei-gyo-todokede-eigyosho-youken-koan": [],
+  "petto-shintaku-futankitsuki-izo-yuigon": [],
   "shitei-jidosha-seibi-jigyo-minkan-shaken-shitei-shinsei-youken": [],
   "souzoku-saimu-hoshou-saimu-chosa-junpro-kikan": [],
   "tokutei-yukyo-inshokuten-eigyo-kyoka-youken": [],
@@ -6453,6 +6498,60 @@ const ARTICLES: Array<{
       "事業の継続性",
       "申請取次",
       "外国人",
+      "行政書士",
+    ],
+  },
+  {
+    file: "121-tantei-gyo-todokede-eigyosho-youken-koan.md",
+    slug: "tantei-gyo-todokede-eigyosho-youken-koan",
+    date: "2026-10-17",
+    title:
+      "探偵業を始めるには？探偵業法の届出・営業所の要件・欠格事由を行政書士が解説",
+    category: "許認可の手続き（行政書士の実務から）",
+    excerpt:
+      "探偵業は許可制ではなく届出制です。探偵業の業務の適正化に関する法律（探偵業法）第4条により、営業開始の前日までに営業所ごとに公安委員会へ（管轄警察署の防犯係を経由して）届出書を提出し、手数料はかかりません。かつての探偵業届出証明書は2024年（令和6年）4月1日施行の改正で廃止され、標識の掲示に変わりました（第12条）。第3条の欠格事由、第5条の名義貸しの禁止、第8条の重要事項の説明・書面交付、無届営業・名義貸しの罰則（6月以下の拘禁刑又は30万円以下の罰金）、届出＝行政書士／違法・紛争＝弁護士／営業所の物件＝別事業体の不動産という分離受任を、行政書士の実務から整理しました。",
+    keywords: [
+      "探偵業 始める 届出 許可",
+      "探偵業法 第4条 届出 公安委員会",
+      "探偵業 欠格事由 第3条",
+      "探偵業 営業所 標識 届出証明書 廃止",
+      "探偵業 名義貸し 罰則 拘禁刑",
+      "探偵業 届出 行政書士",
+    ],
+    tags: [
+      "探偵業",
+      "探偵業法",
+      "届出",
+      "公安委員会",
+      "欠格事由",
+      "許認可",
+      "行政書士",
+    ],
+  },
+  {
+    file: "122-petto-shintaku-futankitsuki-izo-yuigon.md",
+    slug: "petto-shintaku-futankitsuki-izo-yuigon",
+    date: "2026-10-17",
+    title:
+      "残されるペットのために遺せる？負担付遺贈・ペット信託の遺言文案を行政書士が整理",
+    category: "相続の手続き（行政書士の実務から）",
+    excerpt:
+      "ペットは法律上「物」で権利能力がないため、ペット自身に財産を遺したり受遺者・受益者にしたりはできません。世話を託す仕組みは、世話をする人に財産を遺贈し飼育を負担とする負担付遺贈（民法第1002条、不履行時は民法第1027条で遺言の取消し請求）と、受託者に財産を託すペットのための信託（信託法第2条・第3条、受益者の定めのない目的信託は第258条・存続期間20年は第259条）です。公正証書化は公証人、遺留分侵害（民法第1046条）や紛争は弁護士、不動産を入れる信託の登記は司法書士、相続税・受贈益は税理士という分離受任を、行政書士の実務から整理しました。",
+    keywords: [
+      "ペット 遺言 負担付遺贈",
+      "ペット信託 仕組み 信託法",
+      "負担付遺贈 民法1002条 1027条",
+      "ペット 世話 遺言 文案 行政書士",
+      "目的信託 受益者の定めのない信託 20年",
+      "ペット 相続 遺留分 1046条",
+    ],
+    tags: [
+      "ペット信託",
+      "負担付遺贈",
+      "遺言",
+      "信託",
+      "おひとりさま",
+      "相続",
       "行政書士",
     ],
   },
