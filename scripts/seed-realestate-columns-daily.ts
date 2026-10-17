@@ -2604,8 +2604,8 @@ const ARTICLES: ArticleSpec[] = [
       "文京区で土地を高く売りたい所有者の方へ。建築条件・境界・接道・高低差の調査、買主に合わせた資料、解体前の比較を整理。売却価格だけでなく手取り・期間・条件で考え、四葉不動産への売却相談につなげます。",
     keywords: ["文京区 土地 高く売る", "文京区 土地売却", "土地 売却 準備", "古家付き土地 売却", "土地 手取り", "土地 買主"],
     tags: ["土地", "売却", "文京区", "査定"],
-    locales: ["ja"],
-    localesWithTranslations: [],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
     hubLinks: ["/contact"],
   },
 ];
