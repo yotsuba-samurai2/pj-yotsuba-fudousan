@@ -239,7 +239,7 @@ export type RealestateColumnCta = {
  * ★呼び出し側は getLocalizedColumn 前の base（ja）を渡すこと。en/zh の category は
  *   "Inheritance"／"继承" 等に差し替わるため一致しない＝既定CTAに落ちる。
  * - 「相続」で始まる（相続／相続不動産ガイド 等）→ intent "souzoku"
- * - 「離日・売却」→ intent "sale"
+ * - 「離日・売却」「土地・売却」→ intent "sale"
  * - 「海外オーナー向け」→ intent "management"
  * - それ以外（投資・事業用不動産／グループホーム／賃貸の基礎 等）→ undefined＝現行既定のCTAのまま
  */
@@ -248,7 +248,7 @@ export function resolveRealestateColumnCta(
 ): RealestateColumnCta | undefined {
   const category = (col.category ?? "").trim();
   if (category.startsWith("相続")) return { variant: "sale", intent: "souzoku" };
-  if (category === "離日・売却") return { variant: "sale", intent: "sale" };
+  if (category === "離日・売却" || category === "土地・売却") return { variant: "sale", intent: "sale" };
   if (category === "海外オーナー向け") return { variant: "sale", intent: "management" };
   return undefined;
 }
