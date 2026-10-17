@@ -38,6 +38,13 @@ describe("resolveRealestateColumnCta", () => {
     });
   });
 
+  it("category「土地・売却」は一般の土地所有者向けの売却相談へつながる", () => {
+    expect(resolveRealestateColumnCta(column("土地・売却", ["土地", "文京区"]))).toEqual({
+      variant: "sale",
+      intent: "sale",
+    });
+  });
+
   it("category「海外オーナー向け」→ management", () => {
     expect(resolveRealestateColumnCta(column("海外オーナー向け"))).toEqual({
       variant: "sale",
@@ -66,7 +73,7 @@ describe("resolveRealestateColumnCta", () => {
 
   it("返す intent は contact フォームの realestate カテゴリ（CATEGORY_ORDER_BY_BUSINESS.realestate）に存在する", () => {
     const keys = CATEGORY_ORDER_BY_BUSINESS.realestate;
-    for (const c of ["相続", "離日・売却", "海外オーナー向け"]) {
+    for (const c of ["相続", "離日・売却", "土地・売却", "海外オーナー向け"]) {
       const cta = resolveRealestateColumnCta(column(c));
       expect(cta?.intent).toBeDefined();
       expect(keys).toContain(cta?.intent);
