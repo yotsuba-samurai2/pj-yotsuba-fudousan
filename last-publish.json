@@ -1,7 +1,7 @@
 {
   "dryRun": false,
-  "runAt": "2026-10-16T07:48:22.837Z",
-  "todayJst": "2026-10-16",
+  "runAt": "2026-10-17T07:25:36.130Z",
+  "todayJst": "2026-10-17",
   "targets": [],
   "held": [
     {
@@ -369,6 +369,84 @@
       "qualityHoldReasons": [
         "公開レビュー記録が未登録または重複しています"
       ]
+    },
+    {
+      "key": "labor:biru-maintenance-seisou-tsusan-roudoujikan-tekiyo-kakudai-roumu",
+      "business": "labor",
+      "slug": "biru-maintenance-seisou-tsusan-roudoujikan-tekiyo-kakudai-roumu",
+      "title": "ビルメンテナンス・清掃業の労務｜複数現場の労働時間通算と社会保険の適用拡大",
+      "date": "2026-10-16",
+      "category": "業種別の労務管理",
+      "path": "/labor/column/biru-maintenance-seisou-tsusan-roudoujikan-tekiyo-kakudai-roumu",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録または重複しています"
+      ]
+    },
+    {
+      "key": "labor:bus-untensha-kaizen-kijun-2024-kousoku-kyusoku-roumu",
+      "business": "labor",
+      "slug": "bus-untensha-kaizen-kijun-2024-kousoku-kyusoku-roumu",
+      "title": "バス運転者の2024年改善基準告示と拘束時間・休息・連続運転の労務｜36協定との整合",
+      "date": "2026-10-16",
+      "category": "業種別の労務管理",
+      "path": "/labor/column/bus-untensha-kaizen-kijun-2024-kousoku-kyusoku-roumu",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録または重複しています"
+      ]
+    },
+    {
+      "key": "legal:keieikanri-koshin-jigyo-keizokusei-rissho-chuka-taiwan",
+      "business": "legal",
+      "slug": "keieikanri-koshin-jigyo-keizokusei-rissho-chuka-taiwan",
+      "title": "経営・管理ビザの更新で問われる「事業の継続性・実体」の立証（中国・台湾の経営者向け）",
+      "date": "2026-10-16",
+      "category": "許認可の手続き（行政書士の実務から）",
+      "path": "/legal/column/keieikanri-koshin-jigyo-keizokusei-rissho-chuka-taiwan",
+      "qualityHoldReasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録または重複しています"
+      ]
+    },
+    {
+      "key": "legal:kenchikushi-jimusho-touroku-kanri-kenchikushi-youken",
+      "business": "legal",
+      "slug": "kenchikushi-jimusho-touroku-kanri-kenchikushi-youken",
+      "title": "建築士事務所の登録とは？管理建築士の専任・定期講習・更新の要件",
+      "date": "2026-10-16",
+      "category": "許認可の手続き（行政書士の実務から）",
+      "path": "/legal/column/kenchikushi-jimusho-touroku-kanri-kenchikushi-youken",
+      "qualityHoldReasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録または重複しています"
+      ]
+    },
+    {
+      "key": "realestate:fukushi-yogu-kashiyo-hanbai-bukken-shoudokushitsu-hokan-youken",
+      "business": "realestate",
+      "slug": "fukushi-yogu-kashiyo-hanbai-bukken-shoudokushitsu-hokan-youken",
+      "title": "福祉用具貸与・販売の事業所にできる物件は？消毒室・保管・展示スペースの見方",
+      "date": "2026-10-16",
+      "category": "投資・事業用不動産",
+      "path": "/column/fukushi-yogu-kashiyo-hanbai-bukken-shoudokushitsu-hokan-youken",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録または重複しています"
+      ]
+    },
+    {
+      "key": "realestate:souzoku-sashiosae-toki-ari-fudosan-baikyaku",
+      "business": "realestate",
+      "slug": "souzoku-sashiosae-toki-ari-fudosan-baikyaku",
+      "title": "相続した不動産に差押えの登記がある。売れるのか、どう外すのか",
+      "date": "2026-10-16",
+      "category": "相続",
+      "path": "/column/souzoku-sashiosae-toki-ari-fudosan-baikyaku",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録または重複しています"
+      ]
     }
   ],
   "scheduled": [],
@@ -490,7 +568,31 @@
     {
       "key": "realestate:souzoku-chintai-bunkatsu-mae-yachin-kizoku",
       "message": "品質確認待ち：公開レビュー記録が未登録または重複しています"
+    },
+    {
+      "key": "labor:biru-maintenance-seisou-tsusan-roudoujikan-tekiyo-kakudai-roumu",
+      "message": "品質確認待ち：公開レビュー記録が未登録または重複しています"
+    },
+    {
+      "key": "labor:bus-untensha-kaizen-kijun-2024-kousoku-kyusoku-roumu",
+      "message": "品質確認待ち：公開レビュー記録が未登録または重複しています"
+    },
+    {
+      "key": "legal:keieikanri-koshin-jigyo-keizokusei-rissho-chuka-taiwan",
+      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録または重複しています"
+    },
+    {
+      "key": "legal:kenchikushi-jimusho-touroku-kanri-kenchikushi-youken",
+      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録または重複しています"
+    },
+    {
+      "key": "realestate:fukushi-yogu-kashiyo-hanbai-bukken-shoudokushitsu-hokan-youken",
+      "message": "品質確認待ち：公開レビュー記録が未登録または重複しています"
+    },
+    {
+      "key": "realestate:souzoku-sashiosae-toki-ari-fudosan-baikyaku",
+      "message": "品質確認待ち：公開レビュー記録が未登録または重複しています"
     }
   ],
-  "blocked": "公開待ちが29本あり、1回の上限（24本）を超えたため止めました。対象を確かめてから、管理画面の「今すぐ公開」か、手動実行（force）で公開してください。"
+  "blocked": "公開待ちが35本あり、1回の上限（24本）を超えたため止めました。対象を確かめてから、管理画面の「今すぐ公開」か、手動実行（force）で公開してください。"
 }

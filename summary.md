@@ -1,10 +1,10 @@
-# コラムの自動公開とSearch Consoleの確認（2026/10/16 16:48:49）
+# コラムの自動公開とSearch Consoleの確認（2026/10/17 16:26:08）
 
 ## 正午の自動公開
 
-- **止めました**：公開待ちが29本あり、1回の上限（24本）を超えたため止めました。対象を確かめてから、管理画面の「今すぐ公開」か、手動実行（force）で公開してください。
+- **止めました**：公開待ちが35本あり、1回の上限（24本）を超えたため止めました。対象を確かめてから、管理画面の「今すぐ公開」か、手動実行（force）で公開してください。
 - 公開した記事：0本
-- 保留中（自動公開していない）：29本
+- 保留中（自動公開していない）：35本
   - 学習塾・予備校講師のコマ給は要注意。授業外労働の労働時間管理
   - 自動車教習所の指導員・検定員の労働時間は。繁忙期の36協定と変形労働時間制
   - 高度管理医療機器の販売・貸与許可｜店舗要件と営業所管理者
@@ -34,6 +34,12 @@
   - 上場株式・投資信託を相続したときの証券口座の名義変更・移管
   - 質屋を開くときの物件要件と許可（質屋営業法・公安委員会）
   - 相続した賃貸不動産の『遺産分割前の家賃』は誰のもの？帰属と清算
+  - ビルメンテナンス・清掃業の労務｜複数現場の労働時間通算と社会保険の適用拡大
+  - バス運転者の2024年改善基準告示と拘束時間・休息・連続運転の労務｜36協定との整合
+  - 経営・管理ビザの更新で問われる「事業の継続性・実体」の立証（中国・台湾の経営者向け）
+  - 建築士事務所の登録とは？管理建築士の専任・定期講習・更新の要件
+  - 福祉用具貸与・販売の事業所にできる物件は？消毒室・保管・展示スペースの見方
+  - 相続した不動産に差押えの登記がある。売れるのか、どう外すのか
 - 失敗：labor:gakushujuku-yobiko-koshi-koma-kyu-jugyogai-roudoujikan-kanri：品質確認待ち：公開レビュー記録が未登録または重複しています
 - 失敗：labor:jidosha-kyoshujo-shidouin-kenteiin-roudoujikan-hanbokibi-36kyotei-henkei：品質確認待ち：公開レビュー記録が未登録または重複しています
 - 失敗：legal:kodo-kanri-iryokiki-hanbai-kashidashi-kyoka-tenpo-kanrisha：品質確認待ち：公開レビュー記録が未登録または重複しています
@@ -63,12 +69,18 @@
 - 失敗：legal:souzoku-jojo-kabushiki-toshin-shoken-koza-meigi-henko：品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録または重複しています
 - 失敗：realestate:shichiya-eigyo-bukken-youken-koan-iinkai-kyoka：品質確認待ち：公開レビュー記録が未登録または重複しています
 - 失敗：realestate:souzoku-chintai-bunkatsu-mae-yachin-kizoku：品質確認待ち：公開レビュー記録が未登録または重複しています
+- 失敗：labor:biru-maintenance-seisou-tsusan-roudoujikan-tekiyo-kakudai-roumu：品質確認待ち：公開レビュー記録が未登録または重複しています
+- 失敗：labor:bus-untensha-kaizen-kijun-2024-kousoku-kyusoku-roumu：品質確認待ち：公開レビュー記録が未登録または重複しています
+- 失敗：legal:keieikanri-koshin-jigyo-keizokusei-rissho-chuka-taiwan：品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録または重複しています
+- 失敗：legal:kenchikushi-jimusho-touroku-kanri-kenchikushi-youken：品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録または重複しています
+- 失敗：realestate:fukushi-yogu-kashiyo-hanbai-bukken-shoudokushitsu-hokan-youken：品質確認待ち：公開レビュー記録が未登録または重複しています
+- 失敗：realestate:souzoku-sashiosae-toki-ari-fudosan-baikyaku：品質確認待ち：公開レビュー記録が未登録または重複しています
 
 ## Search Console
 
 - GSC_SERVICE_ACCOUNT_JSON が未設定のため、サイトマップの送信と登録状況の確認を飛ばしました
-- 確認の対象：直近45日の日本語コラム 306本（今回確かめたのは0本）
-- 登録済み（PASS）0本・除外（NEUTRAL）0本・エラー（FAIL）0本・未確認 306本
+- 確認の対象：直近45日の日本語コラム 234本（今回確かめたのは0本）
+- 登録済み（PASS）0本・除外（NEUTRAL）0本・エラー（FAIL）0本・未確認 234本
 
 ## 手でリクエストする候補（公開から3日以上たって未登録）
 
