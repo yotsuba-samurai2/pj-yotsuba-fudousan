@@ -84,7 +84,7 @@ A. Yes. The hourly figure obtained by dividing per-lesson pay across total hours
 
 ## Sources for this article
 
-Updated and additional materials retrieved: 12 October 2026. Checks are limited to the MHLW statute text and working-time guideline actually obtained. Complete reconciliation with e-Gov consolidated statutes, final amendment numbers and commencement histories, related judgment and Labor Standards Act Study Group report texts, and individual system, worker-status and fixed-overtime validity assessments remain unverified. Retrieval failure does not prove an error; publication is held pending qualified review.
+Updated and additional materials retrieved: 12 October 2026. Checks are limited to the MHLW statute text and working-time guideline actually obtained. Complete reconciliation with e-Gov consolidated statutes, final amendment numbers and commencement histories, related judgment and Labor Standards Act Study Group report texts, and individual system, worker-status and fixed-overtime validity assessments remain unverified.
 
 - Labor Standards Act, Article 32 (working hours), Article 34 (breaks), Article 37 (premium wages) and Article 24 (full payment of wages) ([e-Gov law search](https://laws.e-gov.go.jp/law/322AC0000000049)).
 - Mitsubishi Heavy Industries Nagasaki Shipyard judgment cited in the original draft (9 March 2000): judgment text not obtained; holding not reconciled (unverified). The working-time explanation is limited to the retrieved MHLW guideline.
