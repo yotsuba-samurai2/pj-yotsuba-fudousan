@@ -1,9 +1,199 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-17T07:26:08.419Z",
+  "generatedAt": "2026-10-18T07:41:54.146Z",
   "siteUrl": "sc-domain:luck428.com",
   "windowDays": 45,
   "urls": {
+    "https://luck428.com/column/bunkyo-tochi-takaku-uru-houhou": {
+      "verdict": "UNCHECKED",
+      "firstSeenAt": "2026-10-18T07:41:54.146Z",
+      "lastmod": "2026-10-17"
+    },
+    "https://luck428.com/column/chugokugo-buyer-shakuchiken-gainen-shutoku-dd": {
+      "verdict": "UNCHECKED",
+      "firstSeenAt": "2026-10-18T07:41:54.146Z",
+      "lastmod": "2026-10-17"
+    },
+    "https://luck428.com/column/chugokugo-oya-kodomo-ryugaku-sumai-shutoku-meigi": {
+      "verdict": "UNCHECKED",
+      "firstSeenAt": "2026-10-18T07:41:54.146Z",
+      "lastmod": "2026-10-17"
+    },
+    "https://luck428.com/column/container-trailer-house-tenpo-bukken-kenchiku-kakunin-youto": {
+      "verdict": "UNCHECKED",
+      "firstSeenAt": "2026-10-18T07:41:54.146Z",
+      "lastmod": "2026-10-17"
+    },
+    "https://luck428.com/column/fukushi-yogu-kashiyo-hanbai-bukken-shoudokushitsu-hokan-youken": {
+      "verdict": "UNCHECKED",
+      "firstSeenAt": "2026-10-18T07:41:54.146Z",
+      "lastmod": "2026-10-17"
+    },
+    "https://luck428.com/column/sango-care-shukuhakugata-bukken-shisetsu-kijun-boshihokenho": {
+      "verdict": "UNCHECKED",
+      "firstSeenAt": "2026-10-18T07:41:54.146Z",
+      "lastmod": "2026-10-17"
+    },
+    "https://luck428.com/column/shichiya-eigyo-bukken-youken-koan-iinkai-kyoka": {
+      "verdict": "UNCHECKED",
+      "firstSeenAt": "2026-10-18T07:41:54.146Z",
+      "lastmod": "2026-10-17"
+    },
+    "https://luck428.com/column/souzoku-akiya-3000man-roujin-home-nyusho-kyojuyoken": {
+      "verdict": "UNCHECKED",
+      "firstSeenAt": "2026-10-18T07:41:54.146Z",
+      "lastmod": "2026-10-17"
+    },
+    "https://luck428.com/column/souzoku-chintai-bunkatsu-mae-yachin-kizoku": {
+      "verdict": "UNCHECKED",
+      "firstSeenAt": "2026-10-18T07:41:54.146Z",
+      "lastmod": "2026-10-17"
+    },
+    "https://luck428.com/column/souzoku-jikka-juutaku-loan-zansai-teitouken-massho-baikyaku": {
+      "verdict": "UNCHECKED",
+      "firstSeenAt": "2026-10-18T07:41:54.146Z",
+      "lastmod": "2026-10-17"
+    },
+    "https://luck428.com/column/souzoku-noyadate-taiyoko-fit-setsubi-tochi-baikyaku": {
+      "verdict": "UNCHECKED",
+      "firstSeenAt": "2026-10-18T07:41:54.146Z",
+      "lastmod": "2026-10-17"
+    },
+    "https://luck428.com/column/souzoku-sashiosae-toki-ari-fudosan-baikyaku": {
+      "verdict": "UNCHECKED",
+      "firstSeenAt": "2026-10-18T07:41:54.146Z",
+      "lastmod": "2026-10-17"
+    },
+    "https://luck428.com/column/souzoku-suuji-souzoku-jikka-baikyaku-nagare": {
+      "verdict": "UNCHECKED",
+      "firstSeenAt": "2026-10-18T07:41:54.146Z",
+      "lastmod": "2026-10-17"
+    },
+    "https://luck428.com/labor/column/gakushujuku-yobiko-koshi-koma-kyu-jugyogai-roudoujikan-kanri": {
+      "verdict": "UNCHECKED",
+      "firstSeenAt": "2026-10-18T07:41:54.146Z",
+      "lastmod": "2026-10-17"
+    },
+    "https://luck428.com/labor/column/ikusei-shuro-ryohi-shokuhi-koujo-chingin-zengaku-barai": {
+      "verdict": "UNCHECKED",
+      "firstSeenAt": "2026-10-18T07:41:54.146Z",
+      "lastmod": "2026-10-17"
+    },
+    "https://luck428.com/labor/column/jidosha-kyoshujo-shidouin-kenteiin-roudoujikan-hanbokibi-36kyotei-henkei": {
+      "verdict": "UNCHECKED",
+      "firstSeenAt": "2026-10-18T07:41:54.146Z",
+      "lastmod": "2026-10-17"
+    },
+    "https://luck428.com/labor/column/kinmukan-interval-doryoku-gimu-shugyokisoku-roumu": {
+      "verdict": "UNCHECKED",
+      "firstSeenAt": "2026-10-18T07:41:54.146Z",
+      "lastmod": "2026-10-17"
+    },
+    "https://luck428.com/legal/column/iyakuhin-tenpo-hanbaigyo-drugstore-kozo-setsubi-touroku-hanbaisha": {
+      "verdict": "UNCHECKED",
+      "firstSeenAt": "2026-10-18T07:41:54.146Z",
+      "lastmod": "2026-10-17"
+    },
+    "https://luck428.com/legal/column/kodo-kanri-iryokiki-hanbai-kashidashi-kyoka-tenpo-kanrisha": {
+      "verdict": "UNCHECKED",
+      "firstSeenAt": "2026-10-18T07:41:54.146Z",
+      "lastmod": "2026-10-17"
+    },
+    "https://luck428.com/legal/column/seisan-gata-yuigon-fudosan-kanka-bunpai-yuigon-shikkou": {
+      "verdict": "UNCHECKED",
+      "firstSeenAt": "2026-10-18T07:41:54.146Z",
+      "lastmod": "2026-10-17"
+    },
+    "https://luck428.com/legal/column/souzoku-shinrin-tochi-shoyusha-todokede-90nichi-shinrinho": {
+      "verdict": "UNCHECKED",
+      "firstSeenAt": "2026-10-18T07:41:54.146Z",
+      "lastmod": "2026-10-17"
+    },
+    "https://luck428.com/labor/column/biru-maintenance-seisou-tsusan-roudoujikan-tekiyo-kakudai-roumu": {
+      "verdict": "UNCHECKED",
+      "firstSeenAt": "2026-10-18T07:41:54.146Z",
+      "lastmod": "2026-10-16"
+    },
+    "https://luck428.com/labor/column/bus-untensha-kaizen-kijun-2024-kousoku-kyusoku-roumu": {
+      "verdict": "UNCHECKED",
+      "firstSeenAt": "2026-10-18T07:41:54.146Z",
+      "lastmod": "2026-10-16"
+    },
+    "https://luck428.com/legal/column/keieikanri-koshin-jigyo-keizokusei-rissho-chuka-taiwan": {
+      "verdict": "UNCHECKED",
+      "firstSeenAt": "2026-10-18T07:41:54.146Z",
+      "lastmod": "2026-10-16"
+    },
+    "https://luck428.com/legal/column/kenchikushi-jimusho-touroku-kanri-kenchikushi-youken": {
+      "verdict": "UNCHECKED",
+      "firstSeenAt": "2026-10-18T07:41:54.146Z",
+      "lastmod": "2026-10-16"
+    },
+    "https://luck428.com/labor/column/taxi-kakujitsu-kinmu-2024-kaizen-kijun-roumu": {
+      "verdict": "UNCHECKED",
+      "firstSeenAt": "2026-10-18T07:41:54.146Z",
+      "lastmod": "2026-10-15"
+    },
+    "https://luck428.com/legal/column/keiei-jiko-shinsa-keishin-nyusatsu-sankaku-shikaku": {
+      "verdict": "UNCHECKED",
+      "firstSeenAt": "2026-10-18T07:41:54.146Z",
+      "lastmod": "2026-10-15"
+    },
+    "https://luck428.com/legal/column/souzoku-jojo-kabushiki-toshin-shoken-koza-meigi-henko": {
+      "verdict": "UNCHECKED",
+      "firstSeenAt": "2026-10-18T07:41:54.146Z",
+      "lastmod": "2026-10-15"
+    },
+    "https://luck428.com/labor/column/seishin-shougai-rosai-nintei-kijun-2023-yobo-zesei": {
+      "verdict": "UNCHECKED",
+      "firstSeenAt": "2026-10-18T07:41:54.146Z",
+      "lastmod": "2026-10-14"
+    },
+    "https://luck428.com/labor/column/sougisha-sousaigyo-kaigyo-roumu-shukuchoku-yobidashi-henkei": {
+      "verdict": "UNCHECKED",
+      "firstSeenAt": "2026-10-18T07:41:54.146Z",
+      "lastmod": "2026-10-14"
+    },
+    "https://luck428.com/legal/column/ginou-jisshu-ikusei-shuro-ikou-kanri-shien-kikan-kyoka": {
+      "verdict": "UNCHECKED",
+      "firstSeenAt": "2026-10-18T07:41:54.146Z",
+      "lastmod": "2026-10-14"
+    },
+    "https://luck428.com/legal/column/tokutei-zaisan-shokei-yuigon-jueki-sakibashi-daishu-fuka": {
+      "verdict": "UNCHECKED",
+      "firstSeenAt": "2026-10-18T07:41:54.146Z",
+      "lastmod": "2026-10-14"
+    },
+    "https://luck428.com/labor/column/gaikokujin-gyomuitaku-roudoushasei-zairyu-shikaku-seigo": {
+      "verdict": "UNCHECKED",
+      "firstSeenAt": "2026-10-18T07:41:54.146Z",
+      "lastmod": "2026-10-13"
+    },
+    "https://luck428.com/labor/column/unten-daiko-kaigyo-roumu-zuihan-untensha-shinya-2nin": {
+      "verdict": "UNCHECKED",
+      "firstSeenAt": "2026-10-18T07:41:54.146Z",
+      "lastmod": "2026-10-13"
+    },
+    "https://luck428.com/labor/column/haigyo-kaisan-jugyoin-kaiko-yokoku-tatekae-barai-roumu": {
+      "verdict": "UNCHECKED",
+      "firstSeenAt": "2026-10-18T07:41:54.146Z",
+      "lastmod": "2026-10-12"
+    },
+    "https://luck428.com/labor/column/sakoju-anpi-kakunin-seikatsu-soudan-yakan-taisei-roumu": {
+      "verdict": "UNCHECKED",
+      "firstSeenAt": "2026-10-18T07:41:54.146Z",
+      "lastmod": "2026-10-12"
+    },
+    "https://luck428.com/legal/column/shitei-jidosha-seibi-jigyo-minkan-shaken-shitei-shinsei-youken": {
+      "verdict": "UNCHECKED",
+      "firstSeenAt": "2026-10-18T07:41:54.146Z",
+      "lastmod": "2026-10-12"
+    },
+    "https://luck428.com/legal/column/souzoku-saimu-hoshou-saimu-chosa-junpro-kikan": {
+      "verdict": "UNCHECKED",
+      "firstSeenAt": "2026-10-18T07:41:54.146Z",
+      "lastmod": "2026-10-12"
+    },
     "https://luck428.com/column/chugokugo-buyer-kanri-kiyaku-shuzen-keikaku-check": {
       "verdict": "UNCHECKED",
       "firstSeenAt": "2026-10-10T05:51:55.205Z",
@@ -1143,36 +1333,6 @@
       "verdict": "UNCHECKED",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
       "lastmod": "2026-09-03"
-    },
-    "https://luck428.com/column/inshokuten-skeleton-bukken-haiki-grease": {
-      "verdict": "UNCHECKED",
-      "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-02"
-    },
-    "https://luck428.com/column/souzoku-kyoyu-fudosan-uru-doui": {
-      "verdict": "UNCHECKED",
-      "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-02"
-    },
-    "https://luck428.com/labor/column/sairyo-roudo-honnin-doui-2024": {
-      "verdict": "UNCHECKED",
-      "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-02"
-    },
-    "https://luck428.com/labor/column/tokutei-ginou-2go-kazoku-taido-roumu": {
-      "verdict": "UNCHECKED",
-      "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-02"
-    },
-    "https://luck428.com/legal/column/nini-koken-keiyaku-ikogata": {
-      "verdict": "UNCHECKED",
-      "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-02"
-    },
-    "https://luck428.com/legal/column/shinryojo-kaisetsu-todokede-iryoho-8jo": {
-      "verdict": "UNCHECKED",
-      "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-02"
     }
   }
 }

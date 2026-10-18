@@ -1,113 +1,51 @@
 {
   "dryRun": false,
-  "runAt": "2026-10-17T07:25:36.130Z",
-  "todayJst": "2026-10-17",
-  "targets": [],
+  "runAt": "2026-10-18T07:41:21.267Z",
+  "todayJst": "2026-10-18",
+  "targets": [
+    {
+      "key": "labor:ikusei-shuro-ryohi-shokuhi-koujo-chingin-zengaku-barai",
+      "business": "labor",
+      "slug": "ikusei-shuro-ryohi-shokuhi-koujo-chingin-zengaku-barai",
+      "title": "外国人材の寮費・食費は給料から引ける？賃金全額払いの原則と控除の実務",
+      "date": "2026-10-17",
+      "category": "テーマ別の労務管理",
+      "path": "/labor/column/ikusei-shuro-ryohi-shokuhi-koujo-chingin-zengaku-barai"
+    },
+    {
+      "key": "labor:kinmukan-interval-doryoku-gimu-shugyokisoku-roumu",
+      "business": "labor",
+      "slug": "kinmukan-interval-doryoku-gimu-shugyokisoku-roumu",
+      "title": "勤務間インターバル制度は義務？努力義務の中身と就業規則への入れ方",
+      "date": "2026-10-17",
+      "category": "テーマ別の労務管理",
+      "path": "/labor/column/kinmukan-interval-doryoku-gimu-shugyokisoku-roumu"
+    }
+  ],
   "held": [
     {
-      "key": "labor:gakushujuku-yobiko-koshi-koma-kyu-jugyogai-roudoujikan-kanri",
-      "business": "labor",
-      "slug": "gakushujuku-yobiko-koshi-koma-kyu-jugyogai-roudoujikan-kanri",
-      "title": "学習塾・予備校講師のコマ給は要注意。授業外労働の労働時間管理",
-      "date": "2026-10-11",
-      "category": "労働時間",
-      "path": "/labor/column/gakushujuku-yobiko-koshi-koma-kyu-jugyogai-roudoujikan-kanri",
-      "qualityHoldReasons": [
-        "公開レビュー記録が未登録または重複しています"
-      ]
-    },
-    {
-      "key": "labor:jidosha-kyoshujo-shidouin-kenteiin-roudoujikan-hanbokibi-36kyotei-henkei",
-      "business": "labor",
-      "slug": "jidosha-kyoshujo-shidouin-kenteiin-roudoujikan-hanbokibi-36kyotei-henkei",
-      "title": "自動車教習所の指導員・検定員の労働時間は。繁忙期の36協定と変形労働時間制",
-      "date": "2026-10-11",
-      "category": "労働時間",
-      "path": "/labor/column/jidosha-kyoshujo-shidouin-kenteiin-roudoujikan-hanbokibi-36kyotei-henkei",
-      "qualityHoldReasons": [
-        "公開レビュー記録が未登録または重複しています"
-      ]
-    },
-    {
-      "key": "legal:kodo-kanri-iryokiki-hanbai-kashidashi-kyoka-tenpo-kanrisha",
+      "key": "legal:petto-shintaku-futankitsuki-izo-yuigon",
       "business": "legal",
-      "slug": "kodo-kanri-iryokiki-hanbai-kashidashi-kyoka-tenpo-kanrisha",
-      "title": "高度管理医療機器の販売・貸与許可｜店舗要件と営業所管理者",
-      "date": "2026-10-11",
-      "category": "許認可の手続き（行政書士の実務から）",
-      "path": "/legal/column/kodo-kanri-iryokiki-hanbai-kashidashi-kyoka-tenpo-kanrisha",
-      "qualityHoldReasons": [
-        "公開レビュー記録が未登録または重複しています"
-      ]
-    },
-    {
-      "key": "legal:seisan-gata-yuigon-fudosan-kanka-bunpai-yuigon-shikkou",
-      "business": "legal",
-      "slug": "seisan-gata-yuigon-fudosan-kanka-bunpai-yuigon-shikkou",
-      "title": "清算型遺言で不動産を売って分ける｜書き方と遺言執行の流れ",
-      "date": "2026-10-11",
+      "slug": "petto-shintaku-futankitsuki-izo-yuigon",
+      "title": "残されるペットのために遺せる？負担付遺贈・ペット信託の遺言文案を行政書士が整理",
+      "date": "2026-10-17",
       "category": "相続の手続き（行政書士の実務から）",
-      "path": "/legal/column/seisan-gata-yuigon-fudosan-kanka-bunpai-yuigon-shikkou",
+      "path": "/legal/column/petto-shintaku-futankitsuki-izo-yuigon",
       "qualityHoldReasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
         "公開レビュー記録が未登録または重複しています"
       ]
     },
     {
-      "key": "realestate:sango-care-shukuhakugata-bukken-shisetsu-kijun-boshihokenho",
-      "business": "realestate",
-      "slug": "sango-care-shukuhakugata-bukken-shisetsu-kijun-boshihokenho",
-      "title": "産後ケア（宿泊型）を始めるときの物件・施設基準は？母子保健法の実施基準と内見のチェックポイント",
-      "date": "2026-10-11",
-      "category": "投資・事業用不動産",
-      "path": "/column/sango-care-shukuhakugata-bukken-shisetsu-kijun-boshihokenho",
-      "qualityHoldReasons": [
-        "公開レビュー記録が未登録または重複しています"
-      ]
-    },
-    {
-      "key": "realestate:souzoku-jikka-juutaku-loan-zansai-teitouken-massho-baikyaku",
-      "business": "realestate",
-      "slug": "souzoku-jikka-juutaku-loan-zansai-teitouken-massho-baikyaku",
-      "title": "相続した実家に住宅ローンが残っていたら？抵当権の抹消と残債・団信・売却の進め方",
-      "date": "2026-10-11",
-      "category": "相続",
-      "path": "/column/souzoku-jikka-juutaku-loan-zansai-teitouken-massho-baikyaku",
-      "qualityHoldReasons": [
-        "公開レビュー記録が未登録または重複しています"
-      ]
-    },
-    {
-      "key": "labor:haigyo-kaisan-jugyoin-kaiko-yokoku-tatekae-barai-roumu",
-      "business": "labor",
-      "slug": "haigyo-kaisan-jugyoin-kaiko-yokoku-tatekae-barai-roumu",
-      "title": "廃業するとき従業員にどう対応するか｜解雇予告・会社都合離職・未払賃金立替払",
-      "date": "2026-10-12",
-      "category": "会社をたたむ",
-      "path": "/labor/column/haigyo-kaisan-jugyoin-kaiko-yokoku-tatekae-barai-roumu",
-      "qualityHoldReasons": [
-        "公開レビュー記録が未登録または重複しています"
-      ]
-    },
-    {
-      "key": "labor:sakoju-anpi-kakunin-seikatsu-soudan-yakan-taisei-roumu",
-      "business": "labor",
-      "slug": "sakoju-anpi-kakunin-seikatsu-soudan-yakan-taisei-roumu",
-      "title": "サービス付き高齢者向け住宅の労務｜安否確認・生活相談員の配置と夜間体制",
-      "date": "2026-10-12",
-      "category": "介護の労務",
-      "path": "/labor/column/sakoju-anpi-kakunin-seikatsu-soudan-yakan-taisei-roumu",
-      "qualityHoldReasons": [
-        "公開レビュー記録が未登録または重複しています"
-      ]
-    },
-    {
-      "key": "legal:shitei-jidosha-seibi-jigyo-minkan-shaken-shitei-shinsei-youken",
+      "key": "legal:tantei-gyo-todokede-eigyosho-youken-koan",
       "business": "legal",
-      "slug": "shitei-jidosha-seibi-jigyo-minkan-shaken-shitei-shinsei-youken",
-      "title": "指定自動車整備事業（民間車検場）の指定申請｜認証との違いと設備・人員要件",
-      "date": "2026-10-12",
+      "slug": "tantei-gyo-todokede-eigyosho-youken-koan",
+      "title": "探偵業を始めるには？探偵業法の届出・営業所の要件・欠格事由を行政書士が解説",
+      "date": "2026-10-17",
       "category": "許認可の手続き（行政書士の実務から）",
-      "path": "/legal/column/shitei-jidosha-seibi-jigyo-minkan-shaken-shitei-shinsei-youken",
+      "path": "/legal/column/tantei-gyo-todokede-eigyosho-youken-koan",
       "qualityHoldReasons": [
         "enの内部リンクに言語不一致があります",
         "zh-twの内部リンクに言語不一致があります",
@@ -116,13 +54,13 @@
       ]
     },
     {
-      "key": "legal:souzoku-saimu-hoshou-saimu-chosa-junpro-kikan",
-      "business": "legal",
-      "slug": "souzoku-saimu-hoshou-saimu-chosa-junpro-kikan",
-      "title": "相続する借金・保証債務の調べ方｜単純承認・限定承認・放棄と熟慮期間",
-      "date": "2026-10-12",
-      "category": "相続の手続き（行政書士の実務から）",
-      "path": "/legal/column/souzoku-saimu-hoshou-saimu-chosa-junpro-kikan",
+      "key": "realestate:sogi-ceremony-hall-bukken-youto-chusha-kinrin",
+      "business": "realestate",
+      "slug": "sogi-ceremony-hall-bukken-youto-chusha-kinrin",
+      "title": "葬儀式場（セレモニーホール）はどんな物件なら開ける？用途地域・駐車場・近隣対応",
+      "date": "2026-10-17",
+      "category": "物件・許認可",
+      "path": "/column/sogi-ceremony-hall-bukken-youto-chusha-kinrin",
       "qualityHoldReasons": [
         "enの内部リンクに言語不一致があります",
         "zh-twの内部リンクに言語不一致があります",
@@ -131,468 +69,61 @@
       ]
     },
     {
-      "key": "realestate:chugokugo-buyer-shakuchiken-gainen-shutoku-dd",
+      "key": "realestate:souzoku-kyoyu-mochibun-dai3sha-baikyaku-bunkatsu",
       "business": "realestate",
-      "slug": "chugokugo-buyer-shakuchiken-gainen-shutoku-dd",
-      "title": "「借地権付き物件」を中国・台湾の顧客に説明する——普通借地と定期借地、取得時の確認事項",
-      "date": "2026-10-12",
-      "category": "投資・事業用不動産",
-      "path": "/column/chugokugo-buyer-shakuchiken-gainen-shutoku-dd",
-      "qualityHoldReasons": [
-        "公開レビュー記録が未登録または重複しています"
-      ]
-    },
-    {
-      "key": "realestate:souzoku-suuji-souzoku-jikka-baikyaku-nagare",
-      "business": "realestate",
-      "slug": "souzoku-suuji-souzoku-jikka-baikyaku-nagare",
-      "title": "数次相続で相続人が増えた実家を売る——相続登記が未了のままどう進めるか",
-      "date": "2026-10-12",
+      "slug": "souzoku-kyoyu-mochibun-dai3sha-baikyaku-bunkatsu",
+      "title": "相続した共有不動産の持分を他の相続人が買取業者へ売ったら？見知らぬ共有者への対応と出口",
+      "date": "2026-10-17",
       "category": "相続",
-      "path": "/column/souzoku-suuji-souzoku-jikka-baikyaku-nagare",
-      "qualityHoldReasons": [
-        "公開レビュー記録が未登録または重複しています"
-      ]
-    },
-    {
-      "key": "labor:gaikokujin-gyomuitaku-roudoushasei-zairyu-shikaku-seigo",
-      "business": "labor",
-      "slug": "gaikokujin-gyomuitaku-roudoushasei-zairyu-shikaku-seigo",
-      "title": "外国人を業務委託で使えるか｜労働者性の判断と在留資格の整合",
-      "date": "2026-10-13",
-      "category": "外国人雇用",
-      "path": "/labor/column/gaikokujin-gyomuitaku-roudoushasei-zairyu-shikaku-seigo",
-      "qualityHoldReasons": [
-        "公開レビュー記録が未登録または重複しています"
-      ]
-    },
-    {
-      "key": "labor:unten-daiko-kaigyo-roumu-zuihan-untensha-shinya-2nin",
-      "business": "labor",
-      "slug": "unten-daiko-kaigyo-roumu-zuihan-untensha-shinya-2nin",
-      "title": "運転代行を始めるときの労務｜随伴運転者の免許・深夜割増・2人1組",
-      "date": "2026-10-13",
-      "category": "業種別の労務管理",
-      "path": "/labor/column/unten-daiko-kaigyo-roumu-zuihan-untensha-shinya-2nin",
-      "qualityHoldReasons": [
-        "公開レビュー記録が未登録または重複しています"
-      ]
-    },
-    {
-      "key": "legal:iyakuhin-tenpo-hanbaigyo-drugstore-kozo-setsubi-touroku-hanbaisha",
-      "business": "legal",
-      "slug": "iyakuhin-tenpo-hanbaigyo-drugstore-kozo-setsubi-touroku-hanbaisha",
-      "title": "ドラッグストアの店舗販売業許可｜構造設備基準と登録販売者の配置",
-      "date": "2026-10-13",
-      "category": "許認可の手続き（行政書士の実務から）",
-      "path": "/legal/column/iyakuhin-tenpo-hanbaigyo-drugstore-kozo-setsubi-touroku-hanbaisha",
-      "qualityHoldReasons": [
-        "公開レビュー記録が未登録または重複しています"
-      ]
-    },
-    {
-      "key": "legal:souzoku-shinrin-tochi-shoyusha-todokede-90nichi-shinrinho",
-      "business": "legal",
-      "slug": "souzoku-shinrin-tochi-shoyusha-todokede-90nichi-shinrinho",
-      "title": "相続した山林は90日以内に届出｜森林法の所有者届出の手順",
-      "date": "2026-10-13",
-      "category": "相続の手続き（行政書士の実務から）",
-      "path": "/legal/column/souzoku-shinrin-tochi-shoyusha-todokede-90nichi-shinrinho",
-      "qualityHoldReasons": [
-        "公開レビュー記録が未登録または重複しています"
-      ]
-    },
-    {
-      "key": "realestate:chugokugo-oya-kodomo-ryugaku-sumai-shutoku-meigi",
-      "business": "realestate",
-      "slug": "chugokugo-oya-kodomo-ryugaku-sumai-shutoku-meigi",
-      "title": "子の留学・就労のために日本の住まいを買う：親名義か子名義か、中国・台湾の親が最初に確かめること",
-      "date": "2026-10-13",
-      "category": "外国人の住まい",
-      "path": "/column/chugokugo-oya-kodomo-ryugaku-sumai-shutoku-meigi",
-      "qualityHoldReasons": [
-        "公開レビュー記録が未登録または重複しています"
-      ]
-    },
-    {
-      "key": "realestate:souzoku-noyadate-taiyoko-fit-setsubi-tochi-baikyaku",
-      "business": "realestate",
-      "slug": "souzoku-noyadate-taiyoko-fit-setsubi-tochi-baikyaku",
-      "title": "相続した野立て太陽光発電の土地と設備、売るときは何から手をつける？",
-      "date": "2026-10-13",
-      "category": "相続",
-      "path": "/column/souzoku-noyadate-taiyoko-fit-setsubi-tochi-baikyaku",
-      "qualityHoldReasons": [
-        "公開レビュー記録が未登録または重複しています"
-      ]
-    },
-    {
-      "key": "labor:seishin-shougai-rosai-nintei-kijun-2023-yobo-zesei",
-      "business": "labor",
-      "slug": "seishin-shougai-rosai-nintei-kijun-2023-yobo-zesei",
-      "title": "精神障害の労災認定基準（令和5年改正）｜企業の予防と是正",
-      "date": "2026-10-14",
-      "category": "労災・安全衛生",
-      "path": "/labor/column/seishin-shougai-rosai-nintei-kijun-2023-yobo-zesei",
-      "qualityHoldReasons": [
-        "公開レビュー記録が未登録または重複しています"
-      ]
-    },
-    {
-      "key": "labor:sougisha-sousaigyo-kaigyo-roumu-shukuchoku-yobidashi-henkei",
-      "business": "labor",
-      "slug": "sougisha-sousaigyo-kaigyo-roumu-shukuchoku-yobidashi-henkei",
-      "title": "葬儀社の開業と労務｜宿直・呼出待機・繁閑の労働時間と賃金設計",
-      "date": "2026-10-14",
-      "category": "物件×許認可の労務",
-      "path": "/labor/column/sougisha-sousaigyo-kaigyo-roumu-shukuchoku-yobidashi-henkei",
-      "qualityHoldReasons": [
-        "公開レビュー記録が未登録または重複しています"
-      ]
-    },
-    {
-      "key": "legal:ginou-jisshu-ikusei-shuro-ikou-kanri-shien-kikan-kyoka",
-      "business": "legal",
-      "slug": "ginou-jisshu-ikusei-shuro-ikou-kanri-shien-kikan-kyoka",
-      "title": "技能実習から育成就労へ｜監理支援機関の許可の取り直しと受入れ計画の認定",
-      "date": "2026-10-14",
-      "category": "許認可の手続き（行政書士の実務から）",
-      "path": "/legal/column/ginou-jisshu-ikusei-shuro-ikou-kanri-shien-kikan-kyoka",
+      "path": "/column/souzoku-kyoyu-mochibun-dai3sha-baikyaku-bunkatsu",
       "qualityHoldReasons": [
         "enの内部リンクに言語不一致があります",
         "zh-twの内部リンクに言語不一致があります",
         "zhの内部リンクに言語不一致があります",
-        "公開レビュー記録が未登録または重複しています"
-      ]
-    },
-    {
-      "key": "legal:tokutei-zaisan-shokei-yuigon-jueki-sakibashi-daishu-fuka",
-      "business": "legal",
-      "slug": "tokutei-zaisan-shokei-yuigon-jueki-sakibashi-daishu-fuka",
-      "title": "「相続させる」遺言で受益相続人が先に死亡｜代襲は原則なし・予備的遺言で備える",
-      "date": "2026-10-14",
-      "category": "相続の手続き（行政書士の実務から）",
-      "path": "/legal/column/tokutei-zaisan-shokei-yuigon-jueki-sakibashi-daishu-fuka",
-      "qualityHoldReasons": [
-        "enの内部リンクに言語不一致があります",
-        "zh-twの内部リンクに言語不一致があります",
-        "zhの内部リンクに言語不一致があります",
-        "公開レビュー記録が未登録または重複しています"
-      ]
-    },
-    {
-      "key": "realestate:container-trailer-house-tenpo-bukken-kenchiku-kakunin-youto",
-      "business": "realestate",
-      "slug": "container-trailer-house-tenpo-bukken-kenchiku-kakunin-youto",
-      "title": "コンテナ・トレーラーハウスで店舗や事務所を開くとき、物件・土地選びで何を確認すればよいですか",
-      "date": "2026-10-14",
-      "category": "投資・事業用不動産",
-      "path": "/column/container-trailer-house-tenpo-bukken-kenchiku-kakunin-youto",
-      "qualityHoldReasons": [
-        "公開レビュー記録が未登録または重複しています"
-      ]
-    },
-    {
-      "key": "realestate:souzoku-akiya-3000man-roujin-home-nyusho-kyojuyoken",
-      "business": "realestate",
-      "slug": "souzoku-akiya-3000man-roujin-home-nyusho-kyojuyoken",
-      "title": "被相続人が老人ホームに入所していた実家でも、相続空き家の3000万円特別控除は使えますか",
-      "date": "2026-10-14",
-      "category": "相続",
-      "path": "/column/souzoku-akiya-3000man-roujin-home-nyusho-kyojuyoken",
-      "qualityHoldReasons": [
-        "公開レビュー記録が未登録または重複しています"
-      ]
-    },
-    {
-      "key": "labor:taxi-kakujitsu-kinmu-2024-kaizen-kijun-roumu",
-      "business": "labor",
-      "slug": "taxi-kakujitsu-kinmu-2024-kaizen-kijun-roumu",
-      "title": "タクシー運転者の2024年改善基準告示と隔日勤務の労務｜拘束時間と割増",
-      "date": "2026-10-15",
-      "category": "業種別の労務管理",
-      "path": "/labor/column/taxi-kakujitsu-kinmu-2024-kaizen-kijun-roumu",
-      "qualityHoldReasons": [
-        "公開レビュー記録が未登録または重複しています"
-      ]
-    },
-    {
-      "key": "legal:keiei-jiko-shinsa-keishin-nyusatsu-sankaku-shikaku",
-      "business": "legal",
-      "slug": "keiei-jiko-shinsa-keishin-nyusatsu-sankaku-shikaku",
-      "title": "公共工事の入札に参加するための経営事項審査（経審）と入札参加資格",
-      "date": "2026-10-15",
-      "category": "許認可の手続き（行政書士の実務から）",
-      "path": "/legal/column/keiei-jiko-shinsa-keishin-nyusatsu-sankaku-shikaku",
-      "qualityHoldReasons": [
-        "enの内部リンクに言語不一致があります",
-        "zh-twの内部リンクに言語不一致があります",
-        "zhの内部リンクに言語不一致があります",
-        "公開レビュー記録が未登録または重複しています"
-      ]
-    },
-    {
-      "key": "legal:souzoku-jojo-kabushiki-toshin-shoken-koza-meigi-henko",
-      "business": "legal",
-      "slug": "souzoku-jojo-kabushiki-toshin-shoken-koza-meigi-henko",
-      "title": "上場株式・投資信託を相続したときの証券口座の名義変更・移管",
-      "date": "2026-10-15",
-      "category": "相続の手続き（行政書士の実務から）",
-      "path": "/legal/column/souzoku-jojo-kabushiki-toshin-shoken-koza-meigi-henko",
-      "qualityHoldReasons": [
-        "enの内部リンクに言語不一致があります",
-        "zh-twの内部リンクに言語不一致があります",
-        "zhの内部リンクに言語不一致があります",
-        "公開レビュー記録が未登録または重複しています"
-      ]
-    },
-    {
-      "key": "realestate:shichiya-eigyo-bukken-youken-koan-iinkai-kyoka",
-      "business": "realestate",
-      "slug": "shichiya-eigyo-bukken-youken-koan-iinkai-kyoka",
-      "title": "質屋を開くときの物件要件と許可（質屋営業法・公安委員会）",
-      "date": "2026-10-15",
-      "category": "投資・事業用不動産",
-      "path": "/column/shichiya-eigyo-bukken-youken-koan-iinkai-kyoka",
-      "qualityHoldReasons": [
-        "公開レビュー記録が未登録または重複しています"
-      ]
-    },
-    {
-      "key": "realestate:souzoku-chintai-bunkatsu-mae-yachin-kizoku",
-      "business": "realestate",
-      "slug": "souzoku-chintai-bunkatsu-mae-yachin-kizoku",
-      "title": "相続した賃貸不動産の『遺産分割前の家賃』は誰のもの？帰属と清算",
-      "date": "2026-10-15",
-      "category": "相続",
-      "path": "/column/souzoku-chintai-bunkatsu-mae-yachin-kizoku",
-      "qualityHoldReasons": [
-        "公開レビュー記録が未登録または重複しています"
-      ]
-    },
-    {
-      "key": "labor:biru-maintenance-seisou-tsusan-roudoujikan-tekiyo-kakudai-roumu",
-      "business": "labor",
-      "slug": "biru-maintenance-seisou-tsusan-roudoujikan-tekiyo-kakudai-roumu",
-      "title": "ビルメンテナンス・清掃業の労務｜複数現場の労働時間通算と社会保険の適用拡大",
-      "date": "2026-10-16",
-      "category": "業種別の労務管理",
-      "path": "/labor/column/biru-maintenance-seisou-tsusan-roudoujikan-tekiyo-kakudai-roumu",
-      "qualityHoldReasons": [
-        "公開レビュー記録が未登録または重複しています"
-      ]
-    },
-    {
-      "key": "labor:bus-untensha-kaizen-kijun-2024-kousoku-kyusoku-roumu",
-      "business": "labor",
-      "slug": "bus-untensha-kaizen-kijun-2024-kousoku-kyusoku-roumu",
-      "title": "バス運転者の2024年改善基準告示と拘束時間・休息・連続運転の労務｜36協定との整合",
-      "date": "2026-10-16",
-      "category": "業種別の労務管理",
-      "path": "/labor/column/bus-untensha-kaizen-kijun-2024-kousoku-kyusoku-roumu",
-      "qualityHoldReasons": [
-        "公開レビュー記録が未登録または重複しています"
-      ]
-    },
-    {
-      "key": "legal:keieikanri-koshin-jigyo-keizokusei-rissho-chuka-taiwan",
-      "business": "legal",
-      "slug": "keieikanri-koshin-jigyo-keizokusei-rissho-chuka-taiwan",
-      "title": "経営・管理ビザの更新で問われる「事業の継続性・実体」の立証（中国・台湾の経営者向け）",
-      "date": "2026-10-16",
-      "category": "許認可の手続き（行政書士の実務から）",
-      "path": "/legal/column/keieikanri-koshin-jigyo-keizokusei-rissho-chuka-taiwan",
-      "qualityHoldReasons": [
-        "enの内部リンクに言語不一致があります",
-        "zh-twの内部リンクに言語不一致があります",
-        "zhの内部リンクに言語不一致があります",
-        "公開レビュー記録が未登録または重複しています"
-      ]
-    },
-    {
-      "key": "legal:kenchikushi-jimusho-touroku-kanri-kenchikushi-youken",
-      "business": "legal",
-      "slug": "kenchikushi-jimusho-touroku-kanri-kenchikushi-youken",
-      "title": "建築士事務所の登録とは？管理建築士の専任・定期講習・更新の要件",
-      "date": "2026-10-16",
-      "category": "許認可の手続き（行政書士の実務から）",
-      "path": "/legal/column/kenchikushi-jimusho-touroku-kanri-kenchikushi-youken",
-      "qualityHoldReasons": [
-        "enの内部リンクに言語不一致があります",
-        "zh-twの内部リンクに言語不一致があります",
-        "zhの内部リンクに言語不一致があります",
-        "公開レビュー記録が未登録または重複しています"
-      ]
-    },
-    {
-      "key": "realestate:fukushi-yogu-kashiyo-hanbai-bukken-shoudokushitsu-hokan-youken",
-      "business": "realestate",
-      "slug": "fukushi-yogu-kashiyo-hanbai-bukken-shoudokushitsu-hokan-youken",
-      "title": "福祉用具貸与・販売の事業所にできる物件は？消毒室・保管・展示スペースの見方",
-      "date": "2026-10-16",
-      "category": "投資・事業用不動産",
-      "path": "/column/fukushi-yogu-kashiyo-hanbai-bukken-shoudokushitsu-hokan-youken",
-      "qualityHoldReasons": [
-        "公開レビュー記録が未登録または重複しています"
-      ]
-    },
-    {
-      "key": "realestate:souzoku-sashiosae-toki-ari-fudosan-baikyaku",
-      "business": "realestate",
-      "slug": "souzoku-sashiosae-toki-ari-fudosan-baikyaku",
-      "title": "相続した不動産に差押えの登記がある。売れるのか、どう外すのか",
-      "date": "2026-10-16",
-      "category": "相続",
-      "path": "/column/souzoku-sashiosae-toki-ari-fudosan-baikyaku",
-      "qualityHoldReasons": [
         "公開レビュー記録が未登録または重複しています"
       ]
     }
   ],
   "scheduled": [],
   "ok": false,
-  "published": [],
-  "errors": [
+  "published": [
     {
-      "key": "labor:gakushujuku-yobiko-koshi-koma-kyu-jugyogai-roudoujikan-kanri",
-      "message": "品質確認待ち：公開レビュー記録が未登録または重複しています"
+      "key": "labor:ikusei-shuro-ryohi-shokuhi-koujo-chingin-zengaku-barai",
+      "business": "labor",
+      "slug": "ikusei-shuro-ryohi-shokuhi-koujo-chingin-zengaku-barai",
+      "title": "外国人材の寮費・食費は給料から引ける？賃金全額払いの原則と控除の実務",
+      "date": "2026-10-17",
+      "category": "テーマ別の労務管理",
+      "path": "/labor/column/ikusei-shuro-ryohi-shokuhi-koujo-chingin-zengaku-barai"
     },
     {
-      "key": "labor:jidosha-kyoshujo-shidouin-kenteiin-roudoujikan-hanbokibi-36kyotei-henkei",
-      "message": "品質確認待ち：公開レビュー記録が未登録または重複しています"
-    },
-    {
-      "key": "legal:kodo-kanri-iryokiki-hanbai-kashidashi-kyoka-tenpo-kanrisha",
-      "message": "品質確認待ち：公開レビュー記録が未登録または重複しています"
-    },
-    {
-      "key": "legal:seisan-gata-yuigon-fudosan-kanka-bunpai-yuigon-shikkou",
-      "message": "品質確認待ち：公開レビュー記録が未登録または重複しています"
-    },
-    {
-      "key": "realestate:sango-care-shukuhakugata-bukken-shisetsu-kijun-boshihokenho",
-      "message": "品質確認待ち：公開レビュー記録が未登録または重複しています"
-    },
-    {
-      "key": "realestate:souzoku-jikka-juutaku-loan-zansai-teitouken-massho-baikyaku",
-      "message": "品質確認待ち：公開レビュー記録が未登録または重複しています"
-    },
-    {
-      "key": "labor:haigyo-kaisan-jugyoin-kaiko-yokoku-tatekae-barai-roumu",
-      "message": "品質確認待ち：公開レビュー記録が未登録または重複しています"
-    },
-    {
-      "key": "labor:sakoju-anpi-kakunin-seikatsu-soudan-yakan-taisei-roumu",
-      "message": "品質確認待ち：公開レビュー記録が未登録または重複しています"
-    },
-    {
-      "key": "legal:shitei-jidosha-seibi-jigyo-minkan-shaken-shitei-shinsei-youken",
-      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録または重複しています"
-    },
-    {
-      "key": "legal:souzoku-saimu-hoshou-saimu-chosa-junpro-kikan",
-      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録または重複しています"
-    },
-    {
-      "key": "realestate:chugokugo-buyer-shakuchiken-gainen-shutoku-dd",
-      "message": "品質確認待ち：公開レビュー記録が未登録または重複しています"
-    },
-    {
-      "key": "realestate:souzoku-suuji-souzoku-jikka-baikyaku-nagare",
-      "message": "品質確認待ち：公開レビュー記録が未登録または重複しています"
-    },
-    {
-      "key": "labor:gaikokujin-gyomuitaku-roudoushasei-zairyu-shikaku-seigo",
-      "message": "品質確認待ち：公開レビュー記録が未登録または重複しています"
-    },
-    {
-      "key": "labor:unten-daiko-kaigyo-roumu-zuihan-untensha-shinya-2nin",
-      "message": "品質確認待ち：公開レビュー記録が未登録または重複しています"
-    },
-    {
-      "key": "legal:iyakuhin-tenpo-hanbaigyo-drugstore-kozo-setsubi-touroku-hanbaisha",
-      "message": "品質確認待ち：公開レビュー記録が未登録または重複しています"
-    },
-    {
-      "key": "legal:souzoku-shinrin-tochi-shoyusha-todokede-90nichi-shinrinho",
-      "message": "品質確認待ち：公開レビュー記録が未登録または重複しています"
-    },
-    {
-      "key": "realestate:chugokugo-oya-kodomo-ryugaku-sumai-shutoku-meigi",
-      "message": "品質確認待ち：公開レビュー記録が未登録または重複しています"
-    },
-    {
-      "key": "realestate:souzoku-noyadate-taiyoko-fit-setsubi-tochi-baikyaku",
-      "message": "品質確認待ち：公開レビュー記録が未登録または重複しています"
-    },
-    {
-      "key": "labor:seishin-shougai-rosai-nintei-kijun-2023-yobo-zesei",
-      "message": "品質確認待ち：公開レビュー記録が未登録または重複しています"
-    },
-    {
-      "key": "labor:sougisha-sousaigyo-kaigyo-roumu-shukuchoku-yobidashi-henkei",
-      "message": "品質確認待ち：公開レビュー記録が未登録または重複しています"
-    },
-    {
-      "key": "legal:ginou-jisshu-ikusei-shuro-ikou-kanri-shien-kikan-kyoka",
-      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録または重複しています"
-    },
-    {
-      "key": "legal:tokutei-zaisan-shokei-yuigon-jueki-sakibashi-daishu-fuka",
-      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録または重複しています"
-    },
-    {
-      "key": "realestate:container-trailer-house-tenpo-bukken-kenchiku-kakunin-youto",
-      "message": "品質確認待ち：公開レビュー記録が未登録または重複しています"
-    },
-    {
-      "key": "realestate:souzoku-akiya-3000man-roujin-home-nyusho-kyojuyoken",
-      "message": "品質確認待ち：公開レビュー記録が未登録または重複しています"
-    },
-    {
-      "key": "labor:taxi-kakujitsu-kinmu-2024-kaizen-kijun-roumu",
-      "message": "品質確認待ち：公開レビュー記録が未登録または重複しています"
-    },
-    {
-      "key": "legal:keiei-jiko-shinsa-keishin-nyusatsu-sankaku-shikaku",
-      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録または重複しています"
-    },
-    {
-      "key": "legal:souzoku-jojo-kabushiki-toshin-shoken-koza-meigi-henko",
-      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録または重複しています"
-    },
-    {
-      "key": "realestate:shichiya-eigyo-bukken-youken-koan-iinkai-kyoka",
-      "message": "品質確認待ち：公開レビュー記録が未登録または重複しています"
-    },
-    {
-      "key": "realestate:souzoku-chintai-bunkatsu-mae-yachin-kizoku",
-      "message": "品質確認待ち：公開レビュー記録が未登録または重複しています"
-    },
-    {
-      "key": "labor:biru-maintenance-seisou-tsusan-roudoujikan-tekiyo-kakudai-roumu",
-      "message": "品質確認待ち：公開レビュー記録が未登録または重複しています"
-    },
-    {
-      "key": "labor:bus-untensha-kaizen-kijun-2024-kousoku-kyusoku-roumu",
-      "message": "品質確認待ち：公開レビュー記録が未登録または重複しています"
-    },
-    {
-      "key": "legal:keieikanri-koshin-jigyo-keizokusei-rissho-chuka-taiwan",
-      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録または重複しています"
-    },
-    {
-      "key": "legal:kenchikushi-jimusho-touroku-kanri-kenchikushi-youken",
-      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録または重複しています"
-    },
-    {
-      "key": "realestate:fukushi-yogu-kashiyo-hanbai-bukken-shoudokushitsu-hokan-youken",
-      "message": "品質確認待ち：公開レビュー記録が未登録または重複しています"
-    },
-    {
-      "key": "realestate:souzoku-sashiosae-toki-ari-fudosan-baikyaku",
-      "message": "品質確認待ち：公開レビュー記録が未登録または重複しています"
+      "key": "labor:kinmukan-interval-doryoku-gimu-shugyokisoku-roumu",
+      "business": "labor",
+      "slug": "kinmukan-interval-doryoku-gimu-shugyokisoku-roumu",
+      "title": "勤務間インターバル制度は義務？努力義務の中身と就業規則への入れ方",
+      "date": "2026-10-17",
+      "category": "テーマ別の労務管理",
+      "path": "/labor/column/kinmukan-interval-doryoku-gimu-shugyokisoku-roumu"
     }
   ],
-  "blocked": "公開待ちが35本あり、1回の上限（24本）を超えたため止めました。対象を確かめてから、管理画面の「今すぐ公開」か、手動実行（force）で公開してください。"
+  "skipped": [],
+  "errors": [
+    {
+      "key": "legal:petto-shintaku-futankitsuki-izo-yuigon",
+      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録または重複しています"
+    },
+    {
+      "key": "legal:tantei-gyo-todokede-eigyosho-youken-koan",
+      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録または重複しています"
+    },
+    {
+      "key": "realestate:sogi-ceremony-hall-bukken-youto-chusha-kinrin",
+      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録または重複しています"
+    },
+    {
+      "key": "realestate:souzoku-kyoyu-mochibun-dai3sha-baikyaku-bunkatsu",
+      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録または重複しています"
+    }
+  ],
+  "blocked": "4本は品質確認待ちのため自動公開しません。記事別の理由を確認してください。forceでも解除しません。"
 }
