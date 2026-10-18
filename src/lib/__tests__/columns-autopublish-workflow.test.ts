@@ -85,6 +85,31 @@ describe("Columns Autopublish workflow", () => {
     expect(result.publish.published).toEqual([b, a].sort((x, y) => x.key.localeCompare(y.key)));
   });
 
+  it.each([false, true])("records quality holds separately from failure (published=%s)", hasPublished => {
+    const held = [{ key: "legal:b", title: "Held", path: "/legal/column/b", qualityHoldReasons: ["review missing"] }];
+    const published = hasPublished ? [{ key: "labor:a", title: "Published", path: "/labor/column/a" }] : [];
+    const result = runPublish([{ code: 409, body: { ok: false, published, held, skipped: [],
+      blocked: "1本は品質確認待ちのため自動公開しません。", errors: [{ key: "legal:b", message: "品質確認待ち：review missing" }] } }]);
+    expect(result.code).toBe(0);
+    expect(result.attempts).toBe(1);
+    expect(result.publish.outcome).toBe(hasPublished ? "partial" : "held");
+    expect(result.publish.httpStatus).toBe("409");
+    expect(result.publish.published).toEqual(published);
+    expect(result.publish.held).toEqual(held);
+    expect(result.output).toContain(`STATE=${hasPublished ? "partial" : "held"}`);
+  });
+
+  it("does not turn a quality hold with a runtime error or count limit into success", () => {
+    for (const failure of [{ errors: [{ key: "labor:c", message: "DB failure" }] },
+      { refreshError: "cache failure" }, { blocked: "公開待ちが25本あり、1回の上限を超えました" }]) {
+      const result = runPublish([{ code: 409, body: { ok: false, published: [],
+        held: [{ key: "legal:b", qualityHoldReasons: ["review missing"] }],
+        blocked: "1本は品質確認待ちのため自動公開しません。", errors: [], ...failure } }]);
+      expect(result.code).toBe(1);
+      expect(result.publish.outcome).toBe("failure");
+    }
+  });
+
   it("does not hide a refresh failure by retrying already-published articles", () => {
     const result = runPublish([
       { code: 500, body: { ok: false, published: [{ key: "legal:a", path: "/legal/column/a" }], refreshError: "refresh failed" } },

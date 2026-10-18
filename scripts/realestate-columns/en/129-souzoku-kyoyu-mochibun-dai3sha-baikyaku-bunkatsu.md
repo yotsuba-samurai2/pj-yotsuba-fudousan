@@ -25,7 +25,7 @@ On the other hand, selling or substantially altering the "co-owned thing" itself
 | Sell the whole property (the co-owned thing) | Consent of all co-owners in principle |
 | Manage the co-owned thing (short-term lease, etc.) | Majority by share value |
 
-In other words, the fact that another heir sold their share usually cannot be prevented in law. For selling the whole co-owned property with everyone's consent, see [Selling inherited co-owned property with everyone's consent (Japanese)](https://luck428.com/column/souzoku-kyoyu-fudosan-uru-doui). This article focuses on the response "after" a third party has acquired a share and become a co-owner.
+In other words, the fact that another heir sold their share usually cannot be prevented in law. For selling the whole co-owned property with everyone's consent, see [Selling inherited co-owned property with everyone's consent](https://luck428.com/en/column/souzoku-kyoyu-fudosan-uru-doui). This article focuses on the response "after" a third party has acquired a share and become a co-owner.
 
 ## When an unknown co-owner (a buyer) contacts you, what should you confirm first?
 
@@ -66,7 +66,7 @@ There are broadly three exits. Each differs in the amount you receive, the burde
 
 Selling only a share tends to fetch less than the share fraction of the whole, because buyers are limited. Conversely, if you can buy the other party's share and become sole owner, your freedom to sell or use it in future increases. Which is more favourable depends on the amount, your funding capacity, the other co-owners' intentions, and whether it is urgent.
 
-Estimating the market value of shares and property, and brokerage of sales and purchases, are handled by the real-estate business (our company). For the valuation of shares and the reasoning of compensation division, see [Compensation division, valuation and sale of inherited property (Japanese)](https://luck428.com/column/souzoku-fudosan-daisho-bunkatsu-hyoka-baikyaku); for the practice of selling shares where heirs living overseas, including in China, are involved, see [Selling co-ownership shares where there are heirs living overseas (Japanese)](https://luck428.com/column/chuka-souzokunin-kyoyu-mochibun-baikyaku-jitsumu). A valuation does not guarantee the sale price or net proceeds.
+Estimating the market value of shares and property, and brokerage of sales and purchases, are handled by the real-estate business (our company). For the valuation of shares and the reasoning of compensation division, see [Compensation division, valuation and sale of inherited property](https://luck428.com/en/column/souzoku-fudosan-daisho-bunkatsu-hyoka-baikyaku); for the practice of selling shares where heirs living overseas, including in China, are involved, see [Selling co-ownership shares where there are heirs living overseas](https://luck428.com/en/column/chuka-souzokunin-kyoyu-mochibun-baikyaku-jitsumu). A valuation does not guarantee the sale price or net proceeds.
 
 ## If you leave the co-ownership as it is, what disadvantages arise in fixed asset tax and management?
 
@@ -88,7 +88,7 @@ Inheritance registration has been mandatory since 1 April 2024, and failing to a
 - The co-owners and shares confirmed in the certificate of registered matters
 - Your preferred exit (sell, buy, or sell the whole) and whether it is urgent
 
-Yotsuba Real Estate organises the estimated market value of the share and property, a comparison of net proceeds by exit, and how to proceed with a sale or purchase. You can also reach us from the [consultation desk for selling inherited property (Japanese)](https://luck428.com/en/souzoku).
+Yotsuba Real Estate organises the estimated market value of the share and property, a comparison of net proceeds by exit, and how to proceed with a sale or purchase. You can also reach us from the [consultation desk for selling inherited property](https://luck428.com/en/souzoku).
 
 The roles are divided as follows. Where discussions on partition fail and develop into a partition-claim lawsuit or mediation, and the negotiation with and judgment of legal resistance to the other party, are handled by a lawyer; market valuation and brokerage of the sale or purchase of shares and property by the real-estate business (our company); registration of share transfers and partition by a judicial scrivener; and tax matters such as calculating capital gains and acquisition cost by a tax accountant. These are **each independent businesses**, and you contract with them **separately**. We do not receive referral fees.
 
