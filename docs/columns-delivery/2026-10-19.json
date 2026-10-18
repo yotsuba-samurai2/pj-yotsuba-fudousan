@@ -1,0 +1,103 @@
+{
+  "todayJst": "2026-10-19",
+  "runUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/39141479219",
+  "generationStatus": "validated",
+  "generatedCount": 6,
+  "reviewResult": "success",
+  "reviewReportAvailable": true,
+  "reviewPass": true,
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "minor": 0
+  },
+  "reviewFindings": [],
+  "registeredCount": 2,
+  "qualityEligibleCount": 2,
+  "heldCount": 4,
+  "scheduledCount": 0,
+  "unverifiedSourceCount": 0,
+  "publishedCount": null,
+  "articles": [
+    {
+      "key": "realestate:unten-daiko-eigyosho-zuihan-chushajo-bukken-youken",
+      "fingerprint": "ad18e366ded5bd680dc291c7403b402ccf79c1fd8933edb9b962e14675fef9f3",
+      "title": "運転代行業を始める営業所と随伴車の駐車場は、どんな物件なら使えますか？",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録または重複しています"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "realestate:souzoku-reverse-mortgage-zansai-seisan-baikyaku",
+      "fingerprint": "7cb9753971e531105e12fc5245bd22764bcf9d55c7078f0e6d3b50b9a9b52d4b",
+      "title": "リバースモーゲージ（リ・バース60）の残債がある実家を相続したら、売却と精算はどう進みますか？",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録または重複しています"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:okugai-koukokubutsu-hyoji-kyoka-jorei",
+      "fingerprint": "3fc4473665d5dbcd289ab8233cf990e82b26b109683de7671018d940044780f3",
+      "title": "店舗の看板を出すには屋外広告物の許可が必要？表示許可と屋外広告業の登録を行政書士が整理",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録または重複しています"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:haiguusha-tanki-kyojuken-1037jo-isanbunkatsu",
+      "fingerprint": "27f052fe32df80be24cf7041fc269c78a4cdb69a158bd4402b452c996dd037a5",
+      "title": "配偶者短期居住権とは？遺産分割が終わるまで家に住み続けられるかを行政書士が整理",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録または重複しています"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:fudosan-chukai-eigyo-buai-hoshokyu-jigyojogai-minashi-roumu",
+      "fingerprint": "50deb8ea3727d32c4a46248fa4a61669d6430b255f29f980ff0c860e3a977949",
+      "title": "不動産仲介の営業社員に、歩合給と事業場外みなし労働時間は使えますか？",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:gaikokujin-anzeneisei-kyoiku-bogoku-roudo-saigai-boshi",
+      "fingerprint": "95579fe21e64ce625fb05f5878f22a98910f95c6a354e2b2ca309d2bab04255e",
+      "title": "中国・台湾の外国人を雇うとき、安全衛生教育は母国語で行う義務がありますか？",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    }
+  ]
+}
