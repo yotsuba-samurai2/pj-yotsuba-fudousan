@@ -103,7 +103,7 @@ export function columnQualityReasons(
   const approvals = reviews.filter((review) => review.key === key);
   const review = approvals[0];
   if (approvals.length !== 1) {
-    reasons.push("公開レビュー記録が未登録または重複しています");
+    reasons.push(approvals.length === 0 ? "公開レビュー記録が未登録です" : "公開レビュー記録が重複しています");
     return reasons;
   }
   if (review.fingerprint !== columnQualityFingerprint(article)) reasons.push("原稿がレビュー時から変更されています");

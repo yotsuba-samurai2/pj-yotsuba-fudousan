@@ -1,0 +1,41 @@
+{
+  "dependencySetup": "npm ci --ignore-scripts; prisma generate",
+  "nextVersion": "16.3.5",
+  "tests": {
+    "files": 150,
+    "passed": 2022,
+    "failed": 0,
+    "command": "npm test"
+  },
+  "typecheck": {
+    "command": "npx tsc --noEmit",
+    "exitCode": 0
+  },
+  "lint": {
+    "command": "npm run lint",
+    "errors": 0,
+    "existingWarnings": 23
+  },
+  "actionlint": {
+    "command": "actionlint .github/workflows/columns-autopublish.yml",
+    "exitCode": 0
+  },
+  "seeds": {
+    "realestate": 118,
+    "legal": 121,
+    "labor": 161,
+    "NG": 0,
+    "existingWarnings": "preserved"
+  },
+  "links": {
+    "checked": 66,
+    "http200AndMatchingCanonical": 66
+  },
+  "build": {
+    "command": "npm run build -- --webpack",
+    "compile": "passed",
+    "typecheck": "passed",
+    "staticGeneration": "failed: DB unavailable at deliberately invalid localhost:1; production credentials not used"
+  },
+  "uncompleted": "4 final fingerprints require independent review and verified primary-source proof; no publication approval fabricated"
+}

@@ -1,0 +1,36 @@
+[
+  {
+    "key": "realestate:sogi-ceremony-hall-bukken-youto-chusha-kinrin",
+    "reasons": [
+      "enの内部リンクに言語不一致があります",
+      "zh-twの内部リンクに言語不一致があります",
+      "zhの内部リンクに言語不一致があります",
+      "確認済みの公的な一次根拠が不足しています"
+    ]
+  },
+  {
+    "key": "realestate:souzoku-kyoyu-mochibun-dai3sha-baikyaku-bunkatsu",
+    "reasons": [
+      "enの内部リンクに言語不一致があります",
+      "zh-twの内部リンクに言語不一致があります",
+      "zhの内部リンクに言語不一致があります"
+    ]
+  },
+  {
+    "key": "legal:tantei-gyo-todokede-eigyosho-youken-koan",
+    "reasons": [
+      "enの内部リンクに言語不一致があります",
+      "zh-twの内部リンクに言語不一致があります",
+      "zhの内部リンクに言語不一致があります",
+      "確認済みの公的な一次根拠が不足しています"
+    ]
+  },
+  {
+    "key": "legal:petto-shintaku-futankitsuki-izo-yuigon",
+    "reasons": [
+      "enの内部リンクに言語不一致があります",
+      "zh-twの内部リンクに言語不一致があります",
+      "zhの内部リンクに言語不一致があります"
+    ]
+  }
+]

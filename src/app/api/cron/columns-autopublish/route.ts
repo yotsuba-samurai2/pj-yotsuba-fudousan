@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { isAuthorizedBearer } from "@/lib/cron-auth";
+import { publicationErrors } from "@/lib/columns-autopublish-report";
 import { publishPendingColumns } from "@/lib/columns-autopublish";
 
 /**
@@ -26,7 +27,8 @@ export async function POST(req: NextRequest) {
       dryRun: params.get("dryRun") === "1",
       force: params.get("force") === "1",
     });
-    const status = result.blocked ? 409 : result.ok ? 200 : 500;
+    // A quality hold must not mask DB/cache failures in the same run.
+    const status = result.refreshError || publicationErrors(result).length ? 500 : result.blocked ? 409 : result.ok ? 200 : 500;
     return NextResponse.json(result, { status });
   } catch (err) {
     console.error("Columns autopublish failed:", err);

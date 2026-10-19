@@ -1,0 +1,42 @@
+{
+  "checkedAt": "2026-10-18T08:44:41.276803+00:00",
+  "method": "GET only; no publication request",
+  "articles": [
+    {
+      "previousState": "published",
+      "key": "labor:ikusei-shuro-ryohi-shokuhi-koujo-chingin-zengaku-barai",
+      "url": "https://luck428.com/labor/column/ikusei-shuro-ryohi-shokuhi-koujo-chingin-zengaku-barai",
+      "httpStatus": 200
+    },
+    {
+      "previousState": "published",
+      "key": "labor:kinmukan-interval-doryoku-gimu-shugyokisoku-roumu",
+      "url": "https://luck428.com/labor/column/kinmukan-interval-doryoku-gimu-shugyokisoku-roumu",
+      "httpStatus": 200
+    },
+    {
+      "previousState": "held",
+      "key": "legal:petto-shintaku-futankitsuki-izo-yuigon",
+      "url": "https://luck428.com/legal/column/petto-shintaku-futankitsuki-izo-yuigon",
+      "httpStatus": 404
+    },
+    {
+      "previousState": "held",
+      "key": "legal:tantei-gyo-todokede-eigyosho-youken-koan",
+      "url": "https://luck428.com/legal/column/tantei-gyo-todokede-eigyosho-youken-koan",
+      "httpStatus": 404
+    },
+    {
+      "previousState": "held",
+      "key": "realestate:sogi-ceremony-hall-bukken-youto-chusha-kinrin",
+      "url": "https://luck428.com/column/sogi-ceremony-hall-bukken-youto-chusha-kinrin",
+      "httpStatus": 404
+    },
+    {
+      "previousState": "held",
+      "key": "realestate:souzoku-kyoyu-mochibun-dai3sha-baikyaku-bunkatsu",
+      "url": "https://luck428.com/column/souzoku-kyoyu-mochibun-dai3sha-baikyaku-bunkatsu",
+      "httpStatus": 404
+    }
+  ]
+}

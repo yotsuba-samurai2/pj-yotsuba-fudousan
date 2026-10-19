@@ -365,6 +365,22 @@ describe("API", () => {
     vi.unstubAllEnvs();
   });
 
+  it.each(["DB", "cache"])("cron：品質保留と%s障害が併存しても409に隠さず500を返す", async kind => {
+    vi.useFakeTimers();
+    vi.setSystemTime(NOW);
+    vi.stubEnv("COLUMNS_AUTOPUBLISH_SECRET", SECRET);
+    const articles = Object.values(mocks.seeds).flat() as ColumnInput[];
+    mocks.reviews = articles.map(article => qualityReview(article));
+    (mocks.seeds.realestate[0] as ColumnInput).translations!.en!.title = "changed after review";
+    if (kind === "DB") mocks.create.mockRejectedValueOnce(new Error("DB failed"));
+    else mocks.refresh.mockRejectedValueOnce(new Error("cache failed"));
+    const response = await cronPost(cronRequest(`Bearer ${SECRET}`));
+    expect(response.status).toBe(500);
+    const result = await response.json();
+    expect(result.blocked).toContain("品質確認待ち");
+    expect(kind === "DB" ? result.errors.some((error: { message: string }) => error.message === "DB failed") : result.refreshError === "cache failed").toBe(true);
+  });
+
   const adminRequest = (body: unknown) =>
     new NextRequest("https://luck428.com/api/admin/columns/autopublish", {
       method: "POST",

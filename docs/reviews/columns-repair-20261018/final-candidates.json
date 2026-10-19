@@ -1,0 +1,59 @@
+[
+  {
+    "key": "realestate:sogi-ceremony-hall-bukken-youto-chusha-kinrin",
+    "fingerprint": "c8e1c62f0e084a3823ea3469b9147772a0629a47277c5e0057ef4818919a0cae",
+    "title": "葬儀式場（セレモニーホール）はどんな物件なら開ける？用途地域・駐車場・近隣対応",
+    "reviewCount": 0,
+    "reasons": [
+      "公開レビュー記録が未登録です"
+    ],
+    "files": [
+      "scripts/realestate-columns/128-sogi-ceremony-hall-bukken-youto-chusha-kinrin.md",
+      "scripts/realestate-columns/en/128-sogi-ceremony-hall-bukken-youto-chusha-kinrin.md",
+      "scripts/realestate-columns/zh-tw/128-sogi-ceremony-hall-bukken-youto-chusha-kinrin.md",
+      "scripts/realestate-columns/zh/128-sogi-ceremony-hall-bukken-youto-chusha-kinrin.md"
+    ]
+  },
+  {
+    "key": "realestate:souzoku-kyoyu-mochibun-dai3sha-baikyaku-bunkatsu",
+    "fingerprint": "bcaff392dda2fc83157e66a30ce6db46cd09ed3ca1f02406f27c4c2465cc86a7",
+    "title": "相続した共有不動産の持分を他の相続人が買取業者へ売ったら？見知らぬ共有者への対応と出口",
+    "reviewCount": 0,
+    "reasons": [
+      "公開レビュー記録が未登録です"
+    ],
+    "files": [
+      "scripts/realestate-columns/en/129-souzoku-kyoyu-mochibun-dai3sha-baikyaku-bunkatsu.md",
+      "scripts/realestate-columns/zh-tw/129-souzoku-kyoyu-mochibun-dai3sha-baikyaku-bunkatsu.md",
+      "scripts/realestate-columns/zh/129-souzoku-kyoyu-mochibun-dai3sha-baikyaku-bunkatsu.md"
+    ]
+  },
+  {
+    "key": "legal:tantei-gyo-todokede-eigyosho-youken-koan",
+    "fingerprint": "ff032bd291f536607aaac44d478765ce459c0ef282b1ee49f22f5d89741989d3",
+    "title": "探偵業を始めるには？探偵業法の届出・営業所の要件・欠格事由を行政書士が解説",
+    "reviewCount": 0,
+    "reasons": [
+      "公開レビュー記録が未登録です"
+    ],
+    "files": [
+      "scripts/legal-columns/en/121-tantei-gyo-todokede-eigyosho-youken-koan.md",
+      "scripts/legal-columns/zh-tw/121-tantei-gyo-todokede-eigyosho-youken-koan.md",
+      "scripts/legal-columns/zh/121-tantei-gyo-todokede-eigyosho-youken-koan.md"
+    ]
+  },
+  {
+    "key": "legal:petto-shintaku-futankitsuki-izo-yuigon",
+    "fingerprint": "9ba8e16314576de61502869e4c831bb1eb5689f0335821e1e8948e210e168bc2",
+    "title": "残されるペットのために遺せる？負担付遺贈・ペット信託の遺言文案を行政書士が整理",
+    "reviewCount": 0,
+    "reasons": [
+      "公開レビュー記録が未登録です"
+    ],
+    "files": [
+      "scripts/legal-columns/en/122-petto-shintaku-futankitsuki-izo-yuigon.md",
+      "scripts/legal-columns/zh-tw/122-petto-shintaku-futankitsuki-izo-yuigon.md",
+      "scripts/legal-columns/zh/122-petto-shintaku-futankitsuki-izo-yuigon.md"
+    ]
+  }
+]

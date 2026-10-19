@@ -16,6 +16,7 @@
  * （Indexing API は求人とライブ配信のページ専用。記事に使うとアクセスを取り消されることがある）。
  * 判定の中身は src/lib/gsc/autopilot-core.ts。
  */
+import { renderPublicationSummary, type PublishReportResult } from "../src/lib/columns-autopublish-report";
 import { createSign } from "node:crypto";
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import {
@@ -36,17 +37,7 @@ const SCOPE = "https://www.googleapis.com/auth/webmasters";
 
 type ServiceAccount = { client_email: string; private_key: string; token_uri?: string };
 
-type PublishResult = {
-  dryRun?: boolean;
-  targets?: { title: string; path: string }[];
-  published?: { title: string; path: string; business: string }[];
-  held?: { title: string; path: string }[];
-  errors?: { key: string; message: string }[];
-  blocked?: string;
-  refreshError?: string;
-  skipped?: string;
-  error?: string;
-};
+type PublishResult = PublishReportResult;
 
 function arg(name: string): string | undefined {
   const i = process.argv.indexOf(`--${name}`);
@@ -132,26 +123,7 @@ function renderSummary(args: {
   const lines: string[] = [`# コラムの自動公開とSearch Consoleの確認（${jst}）`, ""];
 
   lines.push("## 正午の自動公開", "");
-  if (publish.skipped) lines.push(`- 実行していません（${publish.skipped}）`);
-  else if (publish.error) lines.push(`- 失敗：${publish.error}`);
-  else {
-    if (publish.dryRun) {
-      const targets = publish.targets ?? [];
-      lines.push(`- dry-run（公開していません）：公開予定 ${targets.length}本`);
-      for (const p of targets) lines.push(`  - ${SITE}${p.path}　${p.title}`);
-    }
-    if (publish.blocked) lines.push(`- **止めました**：${publish.blocked}`);
-    const published = publish.published ?? [];
-    lines.push(`- 公開した記事：${published.length}本`);
-    for (const p of published) lines.push(`  - ${SITE}${p.path}　${p.title}`);
-    const held = publish.held ?? [];
-    if (held.length > 0) {
-      lines.push(`- 保留中（自動公開していない）：${held.length}本`);
-      for (const h of held) lines.push(`  - ${h.title}`);
-    }
-    for (const e of publish.errors ?? []) lines.push(`- 失敗：${e.key}：${e.message}`);
-    if (publish.refreshError) lines.push(`- 公開ページの更新に失敗：${publish.refreshError}`);
-  }
+  lines.push(...renderPublicationSummary(publish));
 
   lines.push("", "## Search Console", "");
   for (const note of gscNote) lines.push(`- ${note}`);

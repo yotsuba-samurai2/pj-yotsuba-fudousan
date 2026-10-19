@@ -1,0 +1,689 @@
+{
+  "checkedAt": "2026-10-18T08:40:20.215205+00:00",
+  "links": [
+    {
+      "url": "https://luck428.com/en/about/uramatsu",
+      "status": 200,
+      "finalUrl": "https://luck428.com/en/about/uramatsu",
+      "canonical": "https://luck428.com/en/about/uramatsu",
+      "htmlLang": "en",
+      "files": [
+        "scripts/legal-columns/en/121-tantei-gyo-todokede-eigyosho-youken-koan.md",
+        "scripts/legal-columns/en/122-petto-shintaku-futankitsuki-izo-yuigon.md",
+        "scripts/realestate-columns/en/128-sogi-ceremony-hall-bukken-youto-chusha-kinrin.md",
+        "scripts/realestate-columns/en/129-souzoku-kyoyu-mochibun-dai3sha-baikyaku-bunkatsu.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/en/column/chuka-souzokunin-kyoyu-mochibun-baikyaku-jitsumu",
+      "status": 200,
+      "finalUrl": "https://luck428.com/en/column/chuka-souzokunin-kyoyu-mochibun-baikyaku-jitsumu",
+      "canonical": "https://luck428.com/en/column/chuka-souzokunin-kyoyu-mochibun-baikyaku-jitsumu",
+      "htmlLang": "en",
+      "files": [
+        "scripts/realestate-columns/en/129-souzoku-kyoyu-mochibun-dai3sha-baikyaku-bunkatsu.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/en/column/karaoke-box-tenpo-bukken-youto-shoubou-soon",
+      "status": 200,
+      "finalUrl": "https://luck428.com/en/column/karaoke-box-tenpo-bukken-youto-shoubou-soon",
+      "canonical": "https://luck428.com/en/column/karaoke-box-tenpo-bukken-youto-shoubou-soon",
+      "htmlLang": "en",
+      "files": [
+        "scripts/realestate-columns/en/128-sogi-ceremony-hall-bukken-youto-chusha-kinrin.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/en/column/kensazumisho-nashi-bukken-fukushi-youto-henko",
+      "status": 200,
+      "finalUrl": "https://luck428.com/en/column/kensazumisho-nashi-bukken-fukushi-youto-henko",
+      "canonical": "https://luck428.com/en/column/kensazumisho-nashi-bukken-fukushi-youto-henko",
+      "htmlLang": "en",
+      "files": [
+        "scripts/realestate-columns/en/128-sogi-ceremony-hall-bukken-youto-chusha-kinrin.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/en/column/kensetsugyo-shizaioki-shako-chosei-kuiki-bukken",
+      "status": 200,
+      "finalUrl": "https://luck428.com/en/column/kensetsugyo-shizaioki-shako-chosei-kuiki-bukken",
+      "canonical": "https://luck428.com/en/column/kensetsugyo-shizaioki-shako-chosei-kuiki-bukken",
+      "htmlLang": "en",
+      "files": [
+        "scripts/realestate-columns/en/128-sogi-ceremony-hall-bukken-youto-chusha-kinrin.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/en/column/ryokangyo-hotel-eigyo-bukken-youken",
+      "status": 200,
+      "finalUrl": "https://luck428.com/en/column/ryokangyo-hotel-eigyo-bukken-youken",
+      "canonical": "https://luck428.com/en/column/ryokangyo-hotel-eigyo-bukken-youken",
+      "htmlLang": "en",
+      "files": [
+        "scripts/realestate-columns/en/128-sogi-ceremony-hall-bukken-youto-chusha-kinrin.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/en/column/shoukibo-takino-kaigo-bukken-youken",
+      "status": 200,
+      "finalUrl": "https://luck428.com/en/column/shoukibo-takino-kaigo-bukken-youken",
+      "canonical": "https://luck428.com/en/column/shoukibo-takino-kaigo-bukken-youken",
+      "htmlLang": "en",
+      "files": [
+        "scripts/realestate-columns/en/128-sogi-ceremony-hall-bukken-youto-chusha-kinrin.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/en/column/souzoku-fudosan-daisho-bunkatsu-hyoka-baikyaku",
+      "status": 200,
+      "finalUrl": "https://luck428.com/en/column/souzoku-fudosan-daisho-bunkatsu-hyoka-baikyaku",
+      "canonical": "https://luck428.com/en/column/souzoku-fudosan-daisho-bunkatsu-hyoka-baikyaku",
+      "htmlLang": "en",
+      "files": [
+        "scripts/realestate-columns/en/129-souzoku-kyoyu-mochibun-dai3sha-baikyaku-bunkatsu.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/en/column/souzoku-kyoyu-fudosan-uru-doui",
+      "status": 200,
+      "finalUrl": "https://luck428.com/en/column/souzoku-kyoyu-fudosan-uru-doui",
+      "canonical": "https://luck428.com/en/column/souzoku-kyoyu-fudosan-uru-doui",
+      "htmlLang": "en",
+      "files": [
+        "scripts/realestate-columns/en/129-souzoku-kyoyu-mochibun-dai3sha-baikyaku-bunkatsu.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/en/contact",
+      "status": 200,
+      "finalUrl": "https://luck428.com/en/contact",
+      "canonical": "https://luck428.com/en/contact",
+      "htmlLang": "en",
+      "files": [
+        "scripts/realestate-columns/en/128-sogi-ceremony-hall-bukken-youto-chusha-kinrin.md",
+        "scripts/realestate-columns/en/129-souzoku-kyoyu-mochibun-dai3sha-baikyaku-bunkatsu.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/en/legal/column/bochi-noukotsudo-keiei-kyoka-youken-nagare",
+      "status": 200,
+      "finalUrl": "https://luck428.com/en/legal/column/bochi-noukotsudo-keiei-kyoka-youken-nagare",
+      "canonical": "https://luck428.com/en/legal/column/bochi-noukotsudo-keiei-kyoka-youken-nagare",
+      "htmlLang": "en",
+      "files": [
+        "scripts/realestate-columns/en/128-sogi-ceremony-hall-bukken-youto-chusha-kinrin.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/en/legal/column/kazoku-shintaku-gyosei-yakuwari-kumisei",
+      "status": 200,
+      "finalUrl": "https://luck428.com/en/legal/column/kazoku-shintaku-gyosei-yakuwari-kumisei",
+      "canonical": "https://luck428.com/en/legal/column/kazoku-shintaku-gyosei-yakuwari-kumisei",
+      "htmlLang": "en",
+      "files": [
+        "scripts/legal-columns/en/122-petto-shintaku-futankitsuki-izo-yuigon.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/en/legal/column/keibigyo-nintei-yoken-kekkaku-kenshu",
+      "status": 200,
+      "finalUrl": "https://luck428.com/en/legal/column/keibigyo-nintei-yoken-kekkaku-kenshu",
+      "canonical": "https://luck428.com/en/legal/column/keibigyo-nintei-yoken-kekkaku-kenshu",
+      "htmlLang": "en",
+      "files": [
+        "scripts/legal-columns/en/121-tantei-gyo-todokede-eigyosho-youken-koan.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/en/legal/column/kobutsusho-kyoka-eigyosho-yoken",
+      "status": 200,
+      "finalUrl": "https://luck428.com/en/legal/column/kobutsusho-kyoka-eigyosho-yoken",
+      "canonical": "https://luck428.com/en/legal/column/kobutsusho-kyoka-eigyosho-yoken",
+      "htmlLang": "en",
+      "files": [
+        "scripts/legal-columns/en/121-tantei-gyo-todokede-eigyosho-youken-koan.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/en/legal/column/kosei-shosho-yuigon-koshonin-shonin-hiyo",
+      "status": 200,
+      "finalUrl": "https://luck428.com/en/legal/column/kosei-shosho-yuigon-koshonin-shonin-hiyo",
+      "canonical": "https://luck428.com/en/legal/column/kosei-shosho-yuigon-koshonin-shonin-hiyo",
+      "htmlLang": "en",
+      "files": [
+        "scripts/legal-columns/en/122-petto-shintaku-futankitsuki-izo-yuigon.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/en/legal/column/shigojimu-inin-keiyaku-ohitorisama",
+      "status": 200,
+      "finalUrl": "https://luck428.com/en/legal/column/shigojimu-inin-keiyaku-ohitorisama",
+      "canonical": "https://luck428.com/en/legal/column/shigojimu-inin-keiyaku-ohitorisama",
+      "htmlLang": "en",
+      "files": [
+        "scripts/legal-columns/en/122-petto-shintaku-futankitsuki-izo-yuigon.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/en/legal/nagare",
+      "status": 200,
+      "finalUrl": "https://luck428.com/en/legal/nagare",
+      "canonical": "https://luck428.com/en/legal/nagare",
+      "htmlLang": "en",
+      "files": [
+        "scripts/legal-columns/en/121-tantei-gyo-todokede-eigyosho-youken-koan.md",
+        "scripts/legal-columns/en/122-petto-shintaku-futankitsuki-izo-yuigon.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/en/legal/ryokin",
+      "status": 200,
+      "finalUrl": "https://luck428.com/en/legal/ryokin",
+      "canonical": "https://luck428.com/en/legal/ryokin",
+      "htmlLang": "en",
+      "files": [
+        "scripts/legal-columns/en/121-tantei-gyo-todokede-eigyosho-youken-koan.md",
+        "scripts/legal-columns/en/122-petto-shintaku-futankitsuki-izo-yuigon.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/en/legal/services",
+      "status": 200,
+      "finalUrl": "https://luck428.com/en/legal/services",
+      "canonical": "https://luck428.com/en/legal/services",
+      "htmlLang": "en",
+      "files": [
+        "scripts/legal-columns/en/121-tantei-gyo-todokede-eigyosho-youken-koan.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/en/legal/services/inheritance",
+      "status": 200,
+      "finalUrl": "https://luck428.com/en/legal/services/inheritance",
+      "canonical": "https://luck428.com/en/legal/services/inheritance",
+      "htmlLang": "en",
+      "files": [
+        "scripts/legal-columns/en/122-petto-shintaku-futankitsuki-izo-yuigon.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/en/services",
+      "status": 200,
+      "finalUrl": "https://luck428.com/en/services",
+      "canonical": "https://luck428.com/en/services",
+      "htmlLang": "en",
+      "files": [
+        "scripts/realestate-columns/en/128-sogi-ceremony-hall-bukken-youto-chusha-kinrin.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/en/souzoku",
+      "status": 200,
+      "finalUrl": "https://luck428.com/en/souzoku",
+      "canonical": "https://luck428.com/en/souzoku",
+      "htmlLang": "en",
+      "files": [
+        "scripts/legal-columns/en/121-tantei-gyo-todokede-eigyosho-youken-koan.md",
+        "scripts/legal-columns/en/122-petto-shintaku-futankitsuki-izo-yuigon.md",
+        "scripts/realestate-columns/en/129-souzoku-kyoyu-mochibun-dai3sha-baikyaku-bunkatsu.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/zh-tw/about/uramatsu",
+      "status": 200,
+      "finalUrl": "https://luck428.com/zh-tw/about/uramatsu",
+      "canonical": "https://luck428.com/zh-tw/about/uramatsu",
+      "htmlLang": "zh-tw",
+      "files": [
+        "scripts/legal-columns/zh-tw/121-tantei-gyo-todokede-eigyosho-youken-koan.md",
+        "scripts/legal-columns/zh-tw/122-petto-shintaku-futankitsuki-izo-yuigon.md",
+        "scripts/realestate-columns/zh-tw/128-sogi-ceremony-hall-bukken-youto-chusha-kinrin.md",
+        "scripts/realestate-columns/zh-tw/129-souzoku-kyoyu-mochibun-dai3sha-baikyaku-bunkatsu.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/zh-tw/column/chuka-souzokunin-kyoyu-mochibun-baikyaku-jitsumu",
+      "status": 200,
+      "finalUrl": "https://luck428.com/zh-tw/column/chuka-souzokunin-kyoyu-mochibun-baikyaku-jitsumu",
+      "canonical": "https://luck428.com/zh-tw/column/chuka-souzokunin-kyoyu-mochibun-baikyaku-jitsumu",
+      "htmlLang": "zh-tw",
+      "files": [
+        "scripts/realestate-columns/zh-tw/129-souzoku-kyoyu-mochibun-dai3sha-baikyaku-bunkatsu.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/zh-tw/column/karaoke-box-tenpo-bukken-youto-shoubou-soon",
+      "status": 200,
+      "finalUrl": "https://luck428.com/zh-tw/column/karaoke-box-tenpo-bukken-youto-shoubou-soon",
+      "canonical": "https://luck428.com/zh-tw/column/karaoke-box-tenpo-bukken-youto-shoubou-soon",
+      "htmlLang": "zh-tw",
+      "files": [
+        "scripts/realestate-columns/zh-tw/128-sogi-ceremony-hall-bukken-youto-chusha-kinrin.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/zh-tw/column/kensazumisho-nashi-bukken-fukushi-youto-henko",
+      "status": 200,
+      "finalUrl": "https://luck428.com/zh-tw/column/kensazumisho-nashi-bukken-fukushi-youto-henko",
+      "canonical": "https://luck428.com/zh-tw/column/kensazumisho-nashi-bukken-fukushi-youto-henko",
+      "htmlLang": "zh-tw",
+      "files": [
+        "scripts/realestate-columns/zh-tw/128-sogi-ceremony-hall-bukken-youto-chusha-kinrin.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/zh-tw/column/kensetsugyo-shizaioki-shako-chosei-kuiki-bukken",
+      "status": 200,
+      "finalUrl": "https://luck428.com/zh-tw/column/kensetsugyo-shizaioki-shako-chosei-kuiki-bukken",
+      "canonical": "https://luck428.com/zh-tw/column/kensetsugyo-shizaioki-shako-chosei-kuiki-bukken",
+      "htmlLang": "zh-tw",
+      "files": [
+        "scripts/realestate-columns/zh-tw/128-sogi-ceremony-hall-bukken-youto-chusha-kinrin.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/zh-tw/column/ryokangyo-hotel-eigyo-bukken-youken",
+      "status": 200,
+      "finalUrl": "https://luck428.com/zh-tw/column/ryokangyo-hotel-eigyo-bukken-youken",
+      "canonical": "https://luck428.com/zh-tw/column/ryokangyo-hotel-eigyo-bukken-youken",
+      "htmlLang": "zh-tw",
+      "files": [
+        "scripts/realestate-columns/zh-tw/128-sogi-ceremony-hall-bukken-youto-chusha-kinrin.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/zh-tw/column/shoukibo-takino-kaigo-bukken-youken",
+      "status": 200,
+      "finalUrl": "https://luck428.com/zh-tw/column/shoukibo-takino-kaigo-bukken-youken",
+      "canonical": "https://luck428.com/zh-tw/column/shoukibo-takino-kaigo-bukken-youken",
+      "htmlLang": "zh-tw",
+      "files": [
+        "scripts/realestate-columns/zh-tw/128-sogi-ceremony-hall-bukken-youto-chusha-kinrin.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/zh-tw/column/souzoku-fudosan-daisho-bunkatsu-hyoka-baikyaku",
+      "status": 200,
+      "finalUrl": "https://luck428.com/zh-tw/column/souzoku-fudosan-daisho-bunkatsu-hyoka-baikyaku",
+      "canonical": "https://luck428.com/zh-tw/column/souzoku-fudosan-daisho-bunkatsu-hyoka-baikyaku",
+      "htmlLang": "zh-tw",
+      "files": [
+        "scripts/realestate-columns/zh-tw/129-souzoku-kyoyu-mochibun-dai3sha-baikyaku-bunkatsu.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/zh-tw/column/souzoku-kyoyu-fudosan-uru-doui",
+      "status": 200,
+      "finalUrl": "https://luck428.com/zh-tw/column/souzoku-kyoyu-fudosan-uru-doui",
+      "canonical": "https://luck428.com/zh-tw/column/souzoku-kyoyu-fudosan-uru-doui",
+      "htmlLang": "zh-tw",
+      "files": [
+        "scripts/realestate-columns/zh-tw/129-souzoku-kyoyu-mochibun-dai3sha-baikyaku-bunkatsu.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/zh-tw/contact",
+      "status": 200,
+      "finalUrl": "https://luck428.com/zh-tw/contact",
+      "canonical": "https://luck428.com/zh-tw/contact",
+      "htmlLang": "zh-tw",
+      "files": [
+        "scripts/realestate-columns/zh-tw/128-sogi-ceremony-hall-bukken-youto-chusha-kinrin.md",
+        "scripts/realestate-columns/zh-tw/129-souzoku-kyoyu-mochibun-dai3sha-baikyaku-bunkatsu.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/zh-tw/legal/column/bochi-noukotsudo-keiei-kyoka-youken-nagare",
+      "status": 200,
+      "finalUrl": "https://luck428.com/zh-tw/legal/column/bochi-noukotsudo-keiei-kyoka-youken-nagare",
+      "canonical": "https://luck428.com/zh-tw/legal/column/bochi-noukotsudo-keiei-kyoka-youken-nagare",
+      "htmlLang": "zh-tw",
+      "files": [
+        "scripts/realestate-columns/zh-tw/128-sogi-ceremony-hall-bukken-youto-chusha-kinrin.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/zh-tw/legal/column/kazoku-shintaku-gyosei-yakuwari-kumisei",
+      "status": 200,
+      "finalUrl": "https://luck428.com/zh-tw/legal/column/kazoku-shintaku-gyosei-yakuwari-kumisei",
+      "canonical": "https://luck428.com/zh-tw/legal/column/kazoku-shintaku-gyosei-yakuwari-kumisei",
+      "htmlLang": "zh-tw",
+      "files": [
+        "scripts/legal-columns/zh-tw/122-petto-shintaku-futankitsuki-izo-yuigon.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/zh-tw/legal/column/keibigyo-nintei-yoken-kekkaku-kenshu",
+      "status": 200,
+      "finalUrl": "https://luck428.com/zh-tw/legal/column/keibigyo-nintei-yoken-kekkaku-kenshu",
+      "canonical": "https://luck428.com/zh-tw/legal/column/keibigyo-nintei-yoken-kekkaku-kenshu",
+      "htmlLang": "zh-tw",
+      "files": [
+        "scripts/legal-columns/zh-tw/121-tantei-gyo-todokede-eigyosho-youken-koan.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/zh-tw/legal/column/kobutsusho-kyoka-eigyosho-yoken",
+      "status": 200,
+      "finalUrl": "https://luck428.com/zh-tw/legal/column/kobutsusho-kyoka-eigyosho-yoken",
+      "canonical": "https://luck428.com/zh-tw/legal/column/kobutsusho-kyoka-eigyosho-yoken",
+      "htmlLang": "zh-tw",
+      "files": [
+        "scripts/legal-columns/zh-tw/121-tantei-gyo-todokede-eigyosho-youken-koan.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/zh-tw/legal/column/kosei-shosho-yuigon-koshonin-shonin-hiyo",
+      "status": 200,
+      "finalUrl": "https://luck428.com/zh-tw/legal/column/kosei-shosho-yuigon-koshonin-shonin-hiyo",
+      "canonical": "https://luck428.com/zh-tw/legal/column/kosei-shosho-yuigon-koshonin-shonin-hiyo",
+      "htmlLang": "zh-tw",
+      "files": [
+        "scripts/legal-columns/zh-tw/122-petto-shintaku-futankitsuki-izo-yuigon.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/zh-tw/legal/column/shigojimu-inin-keiyaku-ohitorisama",
+      "status": 200,
+      "finalUrl": "https://luck428.com/zh-tw/legal/column/shigojimu-inin-keiyaku-ohitorisama",
+      "canonical": "https://luck428.com/zh-tw/legal/column/shigojimu-inin-keiyaku-ohitorisama",
+      "htmlLang": "zh-tw",
+      "files": [
+        "scripts/legal-columns/zh-tw/122-petto-shintaku-futankitsuki-izo-yuigon.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/zh-tw/legal/nagare",
+      "status": 200,
+      "finalUrl": "https://luck428.com/zh-tw/legal/nagare",
+      "canonical": "https://luck428.com/zh-tw/legal/nagare",
+      "htmlLang": "zh-tw",
+      "files": [
+        "scripts/legal-columns/zh-tw/121-tantei-gyo-todokede-eigyosho-youken-koan.md",
+        "scripts/legal-columns/zh-tw/122-petto-shintaku-futankitsuki-izo-yuigon.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/zh-tw/legal/ryokin",
+      "status": 200,
+      "finalUrl": "https://luck428.com/zh-tw/legal/ryokin",
+      "canonical": "https://luck428.com/zh-tw/legal/ryokin",
+      "htmlLang": "zh-tw",
+      "files": [
+        "scripts/legal-columns/zh-tw/121-tantei-gyo-todokede-eigyosho-youken-koan.md",
+        "scripts/legal-columns/zh-tw/122-petto-shintaku-futankitsuki-izo-yuigon.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/zh-tw/legal/services",
+      "status": 200,
+      "finalUrl": "https://luck428.com/zh-tw/legal/services",
+      "canonical": "https://luck428.com/zh-tw/legal/services",
+      "htmlLang": "zh-tw",
+      "files": [
+        "scripts/legal-columns/zh-tw/121-tantei-gyo-todokede-eigyosho-youken-koan.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/zh-tw/legal/services/inheritance",
+      "status": 200,
+      "finalUrl": "https://luck428.com/zh-tw/legal/services/inheritance",
+      "canonical": "https://luck428.com/zh-tw/legal/services/inheritance",
+      "htmlLang": "zh-tw",
+      "files": [
+        "scripts/legal-columns/zh-tw/122-petto-shintaku-futankitsuki-izo-yuigon.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/zh-tw/services",
+      "status": 200,
+      "finalUrl": "https://luck428.com/zh-tw/services",
+      "canonical": "https://luck428.com/zh-tw/services",
+      "htmlLang": "zh-tw",
+      "files": [
+        "scripts/realestate-columns/zh-tw/128-sogi-ceremony-hall-bukken-youto-chusha-kinrin.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/zh-tw/souzoku",
+      "status": 200,
+      "finalUrl": "https://luck428.com/zh-tw/souzoku",
+      "canonical": "https://luck428.com/zh-tw/souzoku",
+      "htmlLang": "zh-tw",
+      "files": [
+        "scripts/legal-columns/zh-tw/121-tantei-gyo-todokede-eigyosho-youken-koan.md",
+        "scripts/legal-columns/zh-tw/122-petto-shintaku-futankitsuki-izo-yuigon.md",
+        "scripts/realestate-columns/zh-tw/129-souzoku-kyoyu-mochibun-dai3sha-baikyaku-bunkatsu.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/zh/about/uramatsu",
+      "status": 200,
+      "finalUrl": "https://luck428.com/zh/about/uramatsu",
+      "canonical": "https://luck428.com/zh/about/uramatsu",
+      "htmlLang": "zh",
+      "files": [
+        "scripts/legal-columns/zh/121-tantei-gyo-todokede-eigyosho-youken-koan.md",
+        "scripts/legal-columns/zh/122-petto-shintaku-futankitsuki-izo-yuigon.md",
+        "scripts/realestate-columns/zh/128-sogi-ceremony-hall-bukken-youto-chusha-kinrin.md",
+        "scripts/realestate-columns/zh/129-souzoku-kyoyu-mochibun-dai3sha-baikyaku-bunkatsu.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/zh/column/chuka-souzokunin-kyoyu-mochibun-baikyaku-jitsumu",
+      "status": 200,
+      "finalUrl": "https://luck428.com/zh/column/chuka-souzokunin-kyoyu-mochibun-baikyaku-jitsumu",
+      "canonical": "https://luck428.com/zh/column/chuka-souzokunin-kyoyu-mochibun-baikyaku-jitsumu",
+      "htmlLang": "zh",
+      "files": [
+        "scripts/realestate-columns/zh/129-souzoku-kyoyu-mochibun-dai3sha-baikyaku-bunkatsu.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/zh/column/karaoke-box-tenpo-bukken-youto-shoubou-soon",
+      "status": 200,
+      "finalUrl": "https://luck428.com/zh/column/karaoke-box-tenpo-bukken-youto-shoubou-soon",
+      "canonical": "https://luck428.com/zh/column/karaoke-box-tenpo-bukken-youto-shoubou-soon",
+      "htmlLang": "zh",
+      "files": [
+        "scripts/realestate-columns/zh/128-sogi-ceremony-hall-bukken-youto-chusha-kinrin.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/zh/column/kensazumisho-nashi-bukken-fukushi-youto-henko",
+      "status": 200,
+      "finalUrl": "https://luck428.com/zh/column/kensazumisho-nashi-bukken-fukushi-youto-henko",
+      "canonical": "https://luck428.com/zh/column/kensazumisho-nashi-bukken-fukushi-youto-henko",
+      "htmlLang": "zh",
+      "files": [
+        "scripts/realestate-columns/zh/128-sogi-ceremony-hall-bukken-youto-chusha-kinrin.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/zh/column/kensetsugyo-shizaioki-shako-chosei-kuiki-bukken",
+      "status": 200,
+      "finalUrl": "https://luck428.com/zh/column/kensetsugyo-shizaioki-shako-chosei-kuiki-bukken",
+      "canonical": "https://luck428.com/zh/column/kensetsugyo-shizaioki-shako-chosei-kuiki-bukken",
+      "htmlLang": "zh",
+      "files": [
+        "scripts/realestate-columns/zh/128-sogi-ceremony-hall-bukken-youto-chusha-kinrin.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/zh/column/ryokangyo-hotel-eigyo-bukken-youken",
+      "status": 200,
+      "finalUrl": "https://luck428.com/zh/column/ryokangyo-hotel-eigyo-bukken-youken",
+      "canonical": "https://luck428.com/zh/column/ryokangyo-hotel-eigyo-bukken-youken",
+      "htmlLang": "zh",
+      "files": [
+        "scripts/realestate-columns/zh/128-sogi-ceremony-hall-bukken-youto-chusha-kinrin.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/zh/column/shoukibo-takino-kaigo-bukken-youken",
+      "status": 200,
+      "finalUrl": "https://luck428.com/zh/column/shoukibo-takino-kaigo-bukken-youken",
+      "canonical": "https://luck428.com/zh/column/shoukibo-takino-kaigo-bukken-youken",
+      "htmlLang": "zh",
+      "files": [
+        "scripts/realestate-columns/zh/128-sogi-ceremony-hall-bukken-youto-chusha-kinrin.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/zh/column/souzoku-fudosan-daisho-bunkatsu-hyoka-baikyaku",
+      "status": 200,
+      "finalUrl": "https://luck428.com/zh/column/souzoku-fudosan-daisho-bunkatsu-hyoka-baikyaku",
+      "canonical": "https://luck428.com/zh/column/souzoku-fudosan-daisho-bunkatsu-hyoka-baikyaku",
+      "htmlLang": "zh",
+      "files": [
+        "scripts/realestate-columns/zh/129-souzoku-kyoyu-mochibun-dai3sha-baikyaku-bunkatsu.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/zh/column/souzoku-kyoyu-fudosan-uru-doui",
+      "status": 200,
+      "finalUrl": "https://luck428.com/zh/column/souzoku-kyoyu-fudosan-uru-doui",
+      "canonical": "https://luck428.com/zh/column/souzoku-kyoyu-fudosan-uru-doui",
+      "htmlLang": "zh",
+      "files": [
+        "scripts/realestate-columns/zh/129-souzoku-kyoyu-mochibun-dai3sha-baikyaku-bunkatsu.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/zh/contact",
+      "status": 200,
+      "finalUrl": "https://luck428.com/zh/contact",
+      "canonical": "https://luck428.com/zh/contact",
+      "htmlLang": "zh",
+      "files": [
+        "scripts/realestate-columns/zh/128-sogi-ceremony-hall-bukken-youto-chusha-kinrin.md",
+        "scripts/realestate-columns/zh/129-souzoku-kyoyu-mochibun-dai3sha-baikyaku-bunkatsu.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/zh/legal/column/bochi-noukotsudo-keiei-kyoka-youken-nagare",
+      "status": 200,
+      "finalUrl": "https://luck428.com/zh/legal/column/bochi-noukotsudo-keiei-kyoka-youken-nagare",
+      "canonical": "https://luck428.com/zh/legal/column/bochi-noukotsudo-keiei-kyoka-youken-nagare",
+      "htmlLang": "zh",
+      "files": [
+        "scripts/realestate-columns/zh/128-sogi-ceremony-hall-bukken-youto-chusha-kinrin.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/zh/legal/column/kazoku-shintaku-gyosei-yakuwari-kumisei",
+      "status": 200,
+      "finalUrl": "https://luck428.com/zh/legal/column/kazoku-shintaku-gyosei-yakuwari-kumisei",
+      "canonical": "https://luck428.com/zh/legal/column/kazoku-shintaku-gyosei-yakuwari-kumisei",
+      "htmlLang": "zh",
+      "files": [
+        "scripts/legal-columns/zh/122-petto-shintaku-futankitsuki-izo-yuigon.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/zh/legal/column/keibigyo-nintei-yoken-kekkaku-kenshu",
+      "status": 200,
+      "finalUrl": "https://luck428.com/zh/legal/column/keibigyo-nintei-yoken-kekkaku-kenshu",
+      "canonical": "https://luck428.com/zh/legal/column/keibigyo-nintei-yoken-kekkaku-kenshu",
+      "htmlLang": "zh",
+      "files": [
+        "scripts/legal-columns/zh/121-tantei-gyo-todokede-eigyosho-youken-koan.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/zh/legal/column/kobutsusho-kyoka-eigyosho-yoken",
+      "status": 200,
+      "finalUrl": "https://luck428.com/zh/legal/column/kobutsusho-kyoka-eigyosho-yoken",
+      "canonical": "https://luck428.com/zh/legal/column/kobutsusho-kyoka-eigyosho-yoken",
+      "htmlLang": "zh",
+      "files": [
+        "scripts/legal-columns/zh/121-tantei-gyo-todokede-eigyosho-youken-koan.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/zh/legal/column/kosei-shosho-yuigon-koshonin-shonin-hiyo",
+      "status": 200,
+      "finalUrl": "https://luck428.com/zh/legal/column/kosei-shosho-yuigon-koshonin-shonin-hiyo",
+      "canonical": "https://luck428.com/zh/legal/column/kosei-shosho-yuigon-koshonin-shonin-hiyo",
+      "htmlLang": "zh",
+      "files": [
+        "scripts/legal-columns/zh/122-petto-shintaku-futankitsuki-izo-yuigon.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/zh/legal/column/shigojimu-inin-keiyaku-ohitorisama",
+      "status": 200,
+      "finalUrl": "https://luck428.com/zh/legal/column/shigojimu-inin-keiyaku-ohitorisama",
+      "canonical": "https://luck428.com/zh/legal/column/shigojimu-inin-keiyaku-ohitorisama",
+      "htmlLang": "zh",
+      "files": [
+        "scripts/legal-columns/zh/122-petto-shintaku-futankitsuki-izo-yuigon.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/zh/legal/nagare",
+      "status": 200,
+      "finalUrl": "https://luck428.com/zh/legal/nagare",
+      "canonical": "https://luck428.com/zh/legal/nagare",
+      "htmlLang": "zh",
+      "files": [
+        "scripts/legal-columns/zh/121-tantei-gyo-todokede-eigyosho-youken-koan.md",
+        "scripts/legal-columns/zh/122-petto-shintaku-futankitsuki-izo-yuigon.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/zh/legal/ryokin",
+      "status": 200,
+      "finalUrl": "https://luck428.com/zh/legal/ryokin",
+      "canonical": "https://luck428.com/zh/legal/ryokin",
+      "htmlLang": "zh",
+      "files": [
+        "scripts/legal-columns/zh/121-tantei-gyo-todokede-eigyosho-youken-koan.md",
+        "scripts/legal-columns/zh/122-petto-shintaku-futankitsuki-izo-yuigon.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/zh/legal/services",
+      "status": 200,
+      "finalUrl": "https://luck428.com/zh/legal/services",
+      "canonical": "https://luck428.com/zh/legal/services",
+      "htmlLang": "zh",
+      "files": [
+        "scripts/legal-columns/zh/121-tantei-gyo-todokede-eigyosho-youken-koan.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/zh/legal/services/inheritance",
+      "status": 200,
+      "finalUrl": "https://luck428.com/zh/legal/services/inheritance",
+      "canonical": "https://luck428.com/zh/legal/services/inheritance",
+      "htmlLang": "zh",
+      "files": [
+        "scripts/legal-columns/zh/122-petto-shintaku-futankitsuki-izo-yuigon.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/zh/services",
+      "status": 200,
+      "finalUrl": "https://luck428.com/zh/services",
+      "canonical": "https://luck428.com/zh/services",
+      "htmlLang": "zh",
+      "files": [
+        "scripts/realestate-columns/zh/128-sogi-ceremony-hall-bukken-youto-chusha-kinrin.md"
+      ]
+    },
+    {
+      "url": "https://luck428.com/zh/souzoku",
+      "status": 200,
+      "finalUrl": "https://luck428.com/zh/souzoku",
+      "canonical": "https://luck428.com/zh/souzoku",
+      "htmlLang": "zh",
+      "files": [
+        "scripts/legal-columns/zh/121-tantei-gyo-todokede-eigyosho-youken-koan.md",
+        "scripts/legal-columns/zh/122-petto-shintaku-futankitsuki-izo-yuigon.md",
+        "scripts/realestate-columns/zh/129-souzoku-kyoyu-mochibun-dai3sha-baikyaku-bunkatsu.md"
+      ]
+    }
+  ]
+}

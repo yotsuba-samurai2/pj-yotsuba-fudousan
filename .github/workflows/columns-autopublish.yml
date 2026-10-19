@@ -63,8 +63,9 @@ jobs:
           if [ -z "${SECRET:-}" ]; then
             # 未設定は「公開されないまま緑」になるので、警告ではなく失敗にする（Issue も立つ）
             MSG="GitHub の Actions シークレット COLUMNS_AUTOPUBLISH_SECRET が未設定のため、公開できませんでした（記事は公開されていません）。docs/columns-autopublish.md の「4-1」の手順で、Vercel と GitHub に同じ値を入れてください（GitHub は Secrets タブの Repository secrets）"
-            echo '{"error":"COLUMNS_AUTOPUBLISH_SECRET が未設定（GitHub の Actions シークレット）。記事は公開されていません"}' > .tmp/publish.json
+            echo '{"outcome":"failure","httpStatus":null,"error":"COLUMNS_AUTOPUBLISH_SECRET が未設定（GitHub の Actions シークレット）。記事は公開されていません"}' > .tmp/publish.json
             echo "::error::${MSG}"
+            echo "STATE=failure" >> "$GITHUB_OUTPUT"
             echo "SUMMARY=${MSG}" >> "$GITHUB_OUTPUT"
             exit 1
           fi
@@ -93,8 +94,33 @@ jobs:
           jq --slurpfile published .tmp/published.jsonl \
             '.published = ($published | unique_by(.key // .path))' \
             .tmp/publish.json > .tmp/merged-publish.json && mv .tmp/merged-publish.json .tmp/publish.json
+          # Persist execution facts alongside the response, including all retry publications.
+          OUTCOME=failure
+          if [ "$CODE" = "200" ] && jq -e '.ok == true and .refreshError == null and .error == null and ((.errors // []) | length == 0)' .tmp/publish.json > /dev/null; then
+            OUTCOME=success
+          elif [ "$CODE" = "409" ] && jq -e '
+            (.refreshError == null) and (.error == null) and
+            ([.held[]? | select((.qualityHoldReasons // [] | length) > 0)] | length > 0) and
+            ((.blocked // "") | test("^[0-9]+本は品質確認待ちのため自動公開しません。")) and
+            ([.errors[]? as $error | select(any(.held[]?;
+              .key == $error.key and (.qualityHoldReasons // [] | length > 0) and
+              $error.message == ("品質確認待ち：" + (.qualityHoldReasons | join("／")))) | not)] | length == 0)
+          ' .tmp/publish.json > /dev/null; then
+            OUTCOME=held
+            [ "$(jq '.published | length' .tmp/publish.json)" -gt 0 ] && OUTCOME=partial
+          fi
+          [ "$OUTCOME" != "failure" ] && [ "${DRY_RUN:-false}" = "true" ] && OUTCOME=dry-run
+          jq --arg outcome "$OUTCOME" --arg httpStatus "$CODE" \
+            '. + {outcome: $outcome, httpStatus: $httpStatus}' \
+            .tmp/publish.json > .tmp/final-publish.json && mv .tmp/final-publish.json .tmp/publish.json
+          MSG="公開結果=${OUTCOME}：公開 $(jq '.published | length' .tmp/publish.json)本／保留 $(jq '(.held // []) | length' .tmp/publish.json)本（HTTP ${CODE}）"
+          echo "STATE=${OUTCOME}" >> "$GITHUB_OUTPUT"
+          echo "SUMMARY=${MSG}" >> "$GITHUB_OUTPUT"
+          case "$OUTCOME" in
+            success|dry-run) exit 0 ;;
+            partial|held) echo "::warning::${MSG}。保留理由は last-publish.json を確認してください"; exit 0 ;;
+          esac
           case "$CODE" in
-            200) exit 0 ;;
             401) MSG="自動公開APIが 401 を返しました。GitHub の COLUMNS_AUTOPUBLISH_SECRET と Vercel の環境変数が一致しているか確認してください" ;;
             409) MSG="上限超過または品質確認待ちの記事があります。last-publish.json の blocked・errors・held を確認してください。force は品質確認を解除しません" ;;
             *)   MSG="自動公開APIが HTTP ${CODE} を返しました（一部または全部が未公開の可能性）" ;;
@@ -196,14 +222,14 @@ jobs:
           git -C "$WT" commit -q -m "chore(status): コラムの自動公開とSearch Consoleの確認 $(TZ=Asia/Tokyo date +%F)"
           git -C "$WT" push origin "$STATUS_BRANCH"
 
-      - name: 失敗したら Issue を立てる
+      - name: 失敗・公開保留があれば Issue を立てる
         # failure() を入れておくと、npm ci など continue-on-error の無い工程が落ちたときも拾える
-        if: failure() || steps.publish.outcome != 'success' || steps.verify.outcome != 'success' || steps.gsc.outcome != 'success' || steps.save.outcome != 'success'
+        if: failure() || steps.publish.outcome != 'success' || steps.verify.outcome != 'success' || steps.gsc.outcome != 'success' || steps.save.outcome != 'success' || steps.publish.outputs.STATE == 'partial' || steps.publish.outputs.STATE == 'held'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPO: ${{ github.repository }}
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
-          PUBLISH_OUTCOME: ${{ steps.publish.outcome }}
+          PUBLISH_OUTCOME: ${{ steps.publish.outputs.STATE || steps.publish.outcome }}
           PUBLISH_SUMMARY: ${{ steps.publish.outputs.SUMMARY }}
           VERIFY_OUTCOME: ${{ steps.verify.outcome }}
           VERIFY_SUMMARY: ${{ steps.verify.outputs.SUMMARY }}
@@ -212,7 +238,11 @@ jobs:
         run: |
           set -uo pipefail
           TITLE="コラムの自動公開・Search Consoleの確認が失敗"
-          BODY="$(TZ=Asia/Tokyo date '+%F %H:%M') JST の実行で失敗した工程があります。
+          if { [ "$PUBLISH_OUTCOME" = "partial" ] || [ "$PUBLISH_OUTCOME" = "held" ]; } &&
+             [ "$VERIFY_OUTCOME" = "success" ] && [ "$GSC_OUTCOME" = "success" ] && [ "$SAVE_OUTCOME" = "success" ]; then
+            TITLE="コラムの自動公開：部分成功・品質保留の確認待ち"
+          fi
+          BODY="$(TZ=Asia/Tokyo date '+%F %H:%M') JST の実行結果です。部分成功・保留は公開未完了であり、処理失敗とは区別します。
 
           - 1. 自動公開：${PUBLISH_OUTCOME} ${PUBLISH_SUMMARY:-}
           - 2. 公開した記事の200確認：${VERIFY_OUTCOME} ${VERIFY_SUMMARY:-}
@@ -220,15 +250,15 @@ jobs:
           - 5. 結果の保存：${SAVE_OUTCOME}
 
           **確認の順序**
-          1. 自動公開が失敗：上の失敗理由を確認し、https://luck428.com/admin/columns/autopublish で公開待ちを見る。設定不足は先に直す。記事を公開する前に、未確認の記事と対象範囲を確かめる
+          1. 自動公開が部分成功・保留・失敗：上の失敗理由を確認し、https://luck428.com/admin/columns/autopublish で公開待ちを見る。設定不足は先に直す。記事を公開する前に、未確認の記事と対象範囲を確かめる
           2. 200確認が失敗：上のURLをブラウザで開く。404なら、公開ページの再生成が失敗している（記事一覧から再保存）
           3. Search Console が失敗：鍵（GSC_SERVICE_ACCOUNT_JSON）・プロパティ名（GSC_SITE_URL）・Search Console 側の権限（フル）を確かめる
-          4. 直したら Actions から本ワークフローを手動実行し、緑になることを確認する（公開済みの記事は二重に公開されない）
+          4. 修正・レビュー・本番反映後に手動実行し、last-publish.json の outcome・published・held・errors を確認する（緑だけでは全件公開を意味しない。公開済みの記事は二重に公開されない）
 
           手順の詳細：docs/columns-autopublish.md
           実行ログ: ${RUN_URL}"
           EXISTING=$(gh issue list --repo "$REPO" --state open --limit 20 \
-                       --search "in:title コラムの自動公開・Search Consoleの確認が失敗" \
+                       --search "in:title コラムの自動公開" \
                        --json number --jq '.[0].number') || EXISTING=""
           if [ -n "$EXISTING" ] && [ "$EXISTING" != "null" ]; then
             gh issue comment "$EXISTING" --repo "$REPO" --body "$BODY"

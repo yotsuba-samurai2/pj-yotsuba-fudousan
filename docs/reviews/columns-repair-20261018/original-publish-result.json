@@ -1,0 +1,129 @@
+{
+  "dryRun": false,
+  "runAt": "2026-10-18T07:41:21.267Z",
+  "todayJst": "2026-10-18",
+  "targets": [
+    {
+      "key": "labor:ikusei-shuro-ryohi-shokuhi-koujo-chingin-zengaku-barai",
+      "business": "labor",
+      "slug": "ikusei-shuro-ryohi-shokuhi-koujo-chingin-zengaku-barai",
+      "title": "外国人材の寮費・食費は給料から引ける？賃金全額払いの原則と控除の実務",
+      "date": "2026-10-17",
+      "category": "テーマ別の労務管理",
+      "path": "/labor/column/ikusei-shuro-ryohi-shokuhi-koujo-chingin-zengaku-barai"
+    },
+    {
+      "key": "labor:kinmukan-interval-doryoku-gimu-shugyokisoku-roumu",
+      "business": "labor",
+      "slug": "kinmukan-interval-doryoku-gimu-shugyokisoku-roumu",
+      "title": "勤務間インターバル制度は義務？努力義務の中身と就業規則への入れ方",
+      "date": "2026-10-17",
+      "category": "テーマ別の労務管理",
+      "path": "/labor/column/kinmukan-interval-doryoku-gimu-shugyokisoku-roumu"
+    }
+  ],
+  "held": [
+    {
+      "key": "legal:petto-shintaku-futankitsuki-izo-yuigon",
+      "business": "legal",
+      "slug": "petto-shintaku-futankitsuki-izo-yuigon",
+      "title": "残されるペットのために遺せる？負担付遺贈・ペット信託の遺言文案を行政書士が整理",
+      "date": "2026-10-17",
+      "category": "相続の手続き（行政書士の実務から）",
+      "path": "/legal/column/petto-shintaku-futankitsuki-izo-yuigon",
+      "qualityHoldReasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録または重複しています"
+      ]
+    },
+    {
+      "key": "legal:tantei-gyo-todokede-eigyosho-youken-koan",
+      "business": "legal",
+      "slug": "tantei-gyo-todokede-eigyosho-youken-koan",
+      "title": "探偵業を始めるには？探偵業法の届出・営業所の要件・欠格事由を行政書士が解説",
+      "date": "2026-10-17",
+      "category": "許認可の手続き（行政書士の実務から）",
+      "path": "/legal/column/tantei-gyo-todokede-eigyosho-youken-koan",
+      "qualityHoldReasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録または重複しています"
+      ]
+    },
+    {
+      "key": "realestate:sogi-ceremony-hall-bukken-youto-chusha-kinrin",
+      "business": "realestate",
+      "slug": "sogi-ceremony-hall-bukken-youto-chusha-kinrin",
+      "title": "葬儀式場（セレモニーホール）はどんな物件なら開ける？用途地域・駐車場・近隣対応",
+      "date": "2026-10-17",
+      "category": "物件・許認可",
+      "path": "/column/sogi-ceremony-hall-bukken-youto-chusha-kinrin",
+      "qualityHoldReasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録または重複しています"
+      ]
+    },
+    {
+      "key": "realestate:souzoku-kyoyu-mochibun-dai3sha-baikyaku-bunkatsu",
+      "business": "realestate",
+      "slug": "souzoku-kyoyu-mochibun-dai3sha-baikyaku-bunkatsu",
+      "title": "相続した共有不動産の持分を他の相続人が買取業者へ売ったら？見知らぬ共有者への対応と出口",
+      "date": "2026-10-17",
+      "category": "相続",
+      "path": "/column/souzoku-kyoyu-mochibun-dai3sha-baikyaku-bunkatsu",
+      "qualityHoldReasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録または重複しています"
+      ]
+    }
+  ],
+  "scheduled": [],
+  "ok": false,
+  "published": [
+    {
+      "key": "labor:ikusei-shuro-ryohi-shokuhi-koujo-chingin-zengaku-barai",
+      "business": "labor",
+      "slug": "ikusei-shuro-ryohi-shokuhi-koujo-chingin-zengaku-barai",
+      "title": "外国人材の寮費・食費は給料から引ける？賃金全額払いの原則と控除の実務",
+      "date": "2026-10-17",
+      "category": "テーマ別の労務管理",
+      "path": "/labor/column/ikusei-shuro-ryohi-shokuhi-koujo-chingin-zengaku-barai"
+    },
+    {
+      "key": "labor:kinmukan-interval-doryoku-gimu-shugyokisoku-roumu",
+      "business": "labor",
+      "slug": "kinmukan-interval-doryoku-gimu-shugyokisoku-roumu",
+      "title": "勤務間インターバル制度は義務？努力義務の中身と就業規則への入れ方",
+      "date": "2026-10-17",
+      "category": "テーマ別の労務管理",
+      "path": "/labor/column/kinmukan-interval-doryoku-gimu-shugyokisoku-roumu"
+    }
+  ],
+  "skipped": [],
+  "errors": [
+    {
+      "key": "legal:petto-shintaku-futankitsuki-izo-yuigon",
+      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録または重複しています"
+    },
+    {
+      "key": "legal:tantei-gyo-todokede-eigyosho-youken-koan",
+      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録または重複しています"
+    },
+    {
+      "key": "realestate:sogi-ceremony-hall-bukken-youto-chusha-kinrin",
+      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録または重複しています"
+    },
+    {
+      "key": "realestate:souzoku-kyoyu-mochibun-dai3sha-baikyaku-bunkatsu",
+      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録または重複しています"
+    }
+  ],
+  "blocked": "4本は品質確認待ちのため自動公開しません。記事別の理由を確認してください。forceでも解除しません。"
+}

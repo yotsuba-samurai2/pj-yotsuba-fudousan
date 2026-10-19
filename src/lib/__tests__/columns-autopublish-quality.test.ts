@@ -36,8 +36,8 @@ describe("content-bound autopublish quality", () => {
   it("blocks missing, duplicate and expired reviews", () => {
     const article = qualityArticle();
     const review = qualityReview(article);
-    expect(columnQualityReasons(article, [article], [], "2026-10-08")).not.toEqual([]);
-    expect(columnQualityReasons(article, [article], [review, review], "2026-10-08")).not.toEqual([]);
+    expect(columnQualityReasons(article, [article], [], "2026-10-08")).toContain("公開レビュー記録が未登録です");
+    expect(columnQualityReasons(article, [article], [review, review], "2026-10-08")).toContain("公開レビュー記録が重複しています");
     expect(columnQualityReasons(article, [article], [review], "2026-10-09").join()).toContain("期限切れ");
   });
   it("blocks duplicates, untranslated content, missing languages and unsafe internal links", () => {
