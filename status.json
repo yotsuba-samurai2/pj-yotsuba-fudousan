@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-18T07:41:54.146Z",
+  "generatedAt": "2026-10-19T08:23:39.934Z",
   "siteUrl": "sc-domain:luck428.com",
   "windowDays": 45,
   "urls": {
@@ -1303,36 +1303,6 @@
       "verdict": "UNCHECKED",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
       "lastmod": "2026-09-04"
-    },
-    "https://luck428.com/column/homon-kango-station-bukken-youken": {
-      "verdict": "UNCHECKED",
-      "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-03"
-    },
-    "https://luck428.com/column/kaigai-souzokunin-owner-change-baikyaku-gensen": {
-      "verdict": "UNCHECKED",
-      "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-03"
-    },
-    "https://luck428.com/labor/column/gaikokujin-rosai-kikoku-go-hosho": {
-      "verdict": "UNCHECKED",
-      "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-03"
-    },
-    "https://luck428.com/labor/column/homon-kango-oncall-teate-jokin-kansan": {
-      "verdict": "UNCHECKED",
-      "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-03"
-    },
-    "https://luck428.com/legal/column/homon-kango-station-shitei-shinsei-jinin": {
-      "verdict": "UNCHECKED",
-      "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-03"
-    },
-    "https://luck428.com/legal/column/ryokangyo-kani-shukujo-kyoka-shinsei": {
-      "verdict": "UNCHECKED",
-      "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-03"
     }
   }
 }

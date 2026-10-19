@@ -1,27 +1,8 @@
 {
   "dryRun": false,
-  "runAt": "2026-10-18T07:41:21.267Z",
-  "todayJst": "2026-10-18",
-  "targets": [
-    {
-      "key": "labor:ikusei-shuro-ryohi-shokuhi-koujo-chingin-zengaku-barai",
-      "business": "labor",
-      "slug": "ikusei-shuro-ryohi-shokuhi-koujo-chingin-zengaku-barai",
-      "title": "外国人材の寮費・食費は給料から引ける？賃金全額払いの原則と控除の実務",
-      "date": "2026-10-17",
-      "category": "テーマ別の労務管理",
-      "path": "/labor/column/ikusei-shuro-ryohi-shokuhi-koujo-chingin-zengaku-barai"
-    },
-    {
-      "key": "labor:kinmukan-interval-doryoku-gimu-shugyokisoku-roumu",
-      "business": "labor",
-      "slug": "kinmukan-interval-doryoku-gimu-shugyokisoku-roumu",
-      "title": "勤務間インターバル制度は義務？努力義務の中身と就業規則への入れ方",
-      "date": "2026-10-17",
-      "category": "テーマ別の労務管理",
-      "path": "/labor/column/kinmukan-interval-doryoku-gimu-shugyokisoku-roumu"
-    }
-  ],
+  "runAt": "2026-10-19T08:23:11.519Z",
+  "todayJst": "2026-10-19",
+  "targets": [],
   "held": [
     {
       "key": "legal:petto-shintaku-futankitsuki-izo-yuigon",
@@ -86,27 +67,7 @@
   ],
   "scheduled": [],
   "ok": false,
-  "published": [
-    {
-      "key": "labor:ikusei-shuro-ryohi-shokuhi-koujo-chingin-zengaku-barai",
-      "business": "labor",
-      "slug": "ikusei-shuro-ryohi-shokuhi-koujo-chingin-zengaku-barai",
-      "title": "外国人材の寮費・食費は給料から引ける？賃金全額払いの原則と控除の実務",
-      "date": "2026-10-17",
-      "category": "テーマ別の労務管理",
-      "path": "/labor/column/ikusei-shuro-ryohi-shokuhi-koujo-chingin-zengaku-barai"
-    },
-    {
-      "key": "labor:kinmukan-interval-doryoku-gimu-shugyokisoku-roumu",
-      "business": "labor",
-      "slug": "kinmukan-interval-doryoku-gimu-shugyokisoku-roumu",
-      "title": "勤務間インターバル制度は義務？努力義務の中身と就業規則への入れ方",
-      "date": "2026-10-17",
-      "category": "テーマ別の労務管理",
-      "path": "/labor/column/kinmukan-interval-doryoku-gimu-shugyokisoku-roumu"
-    }
-  ],
-  "skipped": [],
+  "published": [],
   "errors": [
     {
       "key": "legal:petto-shintaku-futankitsuki-izo-yuigon",
