@@ -707,7 +707,7 @@ jobs:
             審査を終えてから終了すること。途中経過の報告でターンを終えない。
           claude_args: |
             --model claude-opus-4-8
-            --max-turns 50
+            --max-turns 80
             --allowedTools "Read,Glob,Grep,WebSearch,WebFetch,Bash(git diff *),Bash(git log *),Bash(git status *)"
             --disallowedTools "Task"
             --json-schema '{"type":"object","properties":{"pass":{"type":"boolean"},"findings":{"type":"array","items":{"type":"object","properties":{"file":{"type":"string"},"severity":{"type":"string"},"issue":{"type":"string"},"fix":{"type":"string"}},"required":["file","severity","issue","fix"]}},"articles":{"type":"array","items":{"type":"object","properties":{"key":{"type":"string"},"fingerprint":{"type":"string"},"requiresQualifiedReview":{"type":"boolean"},"checks":{"type":"object","properties":{"primarySources":{"type":"string","enum":["pass","hold"]},"duplicateIntent":{"type":"string","enum":["pass","hold"]},"legalClaims":{"type":"string","enum":["pass","hold"]},"translationAlignment":{"type":"string","enum":["pass","hold"]}},"required":["primarySources","duplicateIntent","legalClaims","translationAlignment"]},"sources":{"type":"array","items":{"type":"object","properties":{"url":{"type":"string"},"checkedAt":{"type":"string"},"relevantClaim":{"type":"string"},"verified":{"type":"boolean"}},"required":["url","checkedAt","relevantClaim","verified"]}},"blockingFindings":{"type":"array","items":{"type":"string"}}},"required":["key","fingerprint","requiresQualifiedReview","checks","sources","blockingFindings"]}}},"required":["pass","findings","articles"]}'
