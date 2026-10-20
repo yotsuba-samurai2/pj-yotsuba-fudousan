@@ -1,9 +1,19 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-19T08:23:39.934Z",
+  "generatedAt": "2026-10-20T08:07:06.717Z",
   "siteUrl": "sc-domain:luck428.com",
   "windowDays": 45,
   "urls": {
+    "https://luck428.com/labor/column/fudosan-chukai-eigyo-buai-hoshokyu-jigyojogai-minashi-roumu": {
+      "verdict": "UNCHECKED",
+      "firstSeenAt": "2026-10-20T08:07:06.717Z",
+      "lastmod": "2026-10-18"
+    },
+    "https://luck428.com/labor/column/gaikokujin-anzeneisei-kyoiku-bogoku-roudo-saigai-boshi": {
+      "verdict": "UNCHECKED",
+      "firstSeenAt": "2026-10-20T08:07:06.717Z",
+      "lastmod": "2026-10-18"
+    },
     "https://luck428.com/column/bunkyo-tochi-takaku-uru-houhou": {
       "verdict": "UNCHECKED",
       "firstSeenAt": "2026-10-18T07:41:54.146Z",
@@ -1273,36 +1283,6 @@
       "verdict": "UNCHECKED",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
       "lastmod": "2026-09-05"
-    },
-    "https://luck428.com/column/jutakugata-yuryo-roujin-home-bukken-youken": {
-      "verdict": "UNCHECKED",
-      "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-04"
-    },
-    "https://luck428.com/column/souzoku-fudosan-kyoukai-kakutei-sokuryo-baikyaku": {
-      "verdict": "UNCHECKED",
-      "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-04"
-    },
-    "https://luck428.com/labor/column/kotei-zangyodai-tekiho-youken-sagaku-seisan": {
-      "verdict": "UNCHECKED",
-      "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-04"
-    },
-    "https://luck428.com/labor/column/taishoku-daiko-kaisha-taio-nenkyu-kashiyohin": {
-      "verdict": "UNCHECKED",
-      "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-04"
-    },
-    "https://luck428.com/legal/column/chugoku-tairiku-souzokunin-shinzoku-koshosho-ryoji-ninsho": {
-      "verdict": "UNCHECKED",
-      "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-04"
-    },
-    "https://luck428.com/legal/column/inshokuten-eigyo-kyoka-hokenjo-setsubi-kijun-shokuhin-eisei": {
-      "verdict": "UNCHECKED",
-      "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-04"
     }
   }
 }

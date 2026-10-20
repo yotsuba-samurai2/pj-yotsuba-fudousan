@@ -1,8 +1,27 @@
 {
   "dryRun": false,
-  "runAt": "2026-10-19T08:23:11.519Z",
-  "todayJst": "2026-10-19",
-  "targets": [],
+  "runAt": "2026-10-20T08:06:31.983Z",
+  "todayJst": "2026-10-20",
+  "targets": [
+    {
+      "key": "labor:fudosan-chukai-eigyo-buai-hoshokyu-jigyojogai-minashi-roumu",
+      "business": "labor",
+      "slug": "fudosan-chukai-eigyo-buai-hoshokyu-jigyojogai-minashi-roumu",
+      "title": "不動産仲介の営業社員に、歩合給と事業場外みなし労働時間は使えますか？",
+      "date": "2026-10-18",
+      "category": "テーマ別の労務管理",
+      "path": "/labor/column/fudosan-chukai-eigyo-buai-hoshokyu-jigyojogai-minashi-roumu"
+    },
+    {
+      "key": "labor:gaikokujin-anzeneisei-kyoiku-bogoku-roudo-saigai-boshi",
+      "business": "labor",
+      "slug": "gaikokujin-anzeneisei-kyoiku-bogoku-roudo-saigai-boshi",
+      "title": "中国・台湾の外国人を雇うとき、安全衛生教育は母国語で行う義務がありますか？",
+      "date": "2026-10-18",
+      "category": "テーマ別の労務管理",
+      "path": "/labor/column/gaikokujin-anzeneisei-kyoiku-bogoku-roudo-saigai-boshi"
+    }
+  ],
   "held": [
     {
       "key": "legal:petto-shintaku-futankitsuki-izo-yuigon",
@@ -13,10 +32,7 @@
       "category": "相続の手続き（行政書士の実務から）",
       "path": "/legal/column/petto-shintaku-futankitsuki-izo-yuigon",
       "qualityHoldReasons": [
-        "enの内部リンクに言語不一致があります",
-        "zh-twの内部リンクに言語不一致があります",
-        "zhの内部リンクに言語不一致があります",
-        "公開レビュー記録が未登録または重複しています"
+        "公開レビュー記録が未登録です"
       ]
     },
     {
@@ -28,10 +44,7 @@
       "category": "許認可の手続き（行政書士の実務から）",
       "path": "/legal/column/tantei-gyo-todokede-eigyosho-youken-koan",
       "qualityHoldReasons": [
-        "enの内部リンクに言語不一致があります",
-        "zh-twの内部リンクに言語不一致があります",
-        "zhの内部リンクに言語不一致があります",
-        "公開レビュー記録が未登録または重複しています"
+        "公開レビュー記録が未登録です"
       ]
     },
     {
@@ -43,10 +56,7 @@
       "category": "物件・許認可",
       "path": "/column/sogi-ceremony-hall-bukken-youto-chusha-kinrin",
       "qualityHoldReasons": [
-        "enの内部リンクに言語不一致があります",
-        "zh-twの内部リンクに言語不一致があります",
-        "zhの内部リンクに言語不一致があります",
-        "公開レビュー記録が未登録または重複しています"
+        "公開レビュー記録が未登録です"
       ]
     },
     {
@@ -58,33 +68,128 @@
       "category": "相続",
       "path": "/column/souzoku-kyoyu-mochibun-dai3sha-baikyaku-bunkatsu",
       "qualityHoldReasons": [
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "legal:haiguusha-tanki-kyojuken-1037jo-isanbunkatsu",
+      "business": "legal",
+      "slug": "haiguusha-tanki-kyojuken-1037jo-isanbunkatsu",
+      "title": "配偶者短期居住権とは？遺産分割が終わるまで家に住み続けられるかを行政書士が整理",
+      "date": "2026-10-18",
+      "category": "相続の手続き（行政書士の実務から）",
+      "path": "/legal/column/haiguusha-tanki-kyojuken-1037jo-isanbunkatsu",
+      "qualityHoldReasons": [
         "enの内部リンクに言語不一致があります",
         "zh-twの内部リンクに言語不一致があります",
         "zhの内部リンクに言語不一致があります",
-        "公開レビュー記録が未登録または重複しています"
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "legal:okugai-koukokubutsu-hyoji-kyoka-jorei",
+      "business": "legal",
+      "slug": "okugai-koukokubutsu-hyoji-kyoka-jorei",
+      "title": "店舗の看板を出すには屋外広告物の許可が必要？表示許可と屋外広告業の登録を行政書士が整理",
+      "date": "2026-10-18",
+      "category": "許認可（行政書士の実務から）",
+      "path": "/legal/column/okugai-koukokubutsu-hyoji-kyoka-jorei",
+      "qualityHoldReasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "realestate:souzoku-reverse-mortgage-zansai-seisan-baikyaku",
+      "business": "realestate",
+      "slug": "souzoku-reverse-mortgage-zansai-seisan-baikyaku",
+      "title": "リバースモーゲージ（リ・バース60）の残債がある実家を相続したら、売却と精算はどう進みますか？",
+      "date": "2026-10-18",
+      "category": "相続",
+      "path": "/column/souzoku-reverse-mortgage-zansai-seisan-baikyaku",
+      "qualityHoldReasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "realestate:unten-daiko-eigyosho-zuihan-chushajo-bukken-youken",
+      "business": "realestate",
+      "slug": "unten-daiko-eigyosho-zuihan-chushajo-bukken-youken",
+      "title": "運転代行業を始める営業所と随伴車の駐車場は、どんな物件なら使えますか？",
+      "date": "2026-10-18",
+      "category": "物件・許認可",
+      "path": "/column/unten-daiko-eigyosho-zuihan-chushajo-bukken-youken",
+      "qualityHoldReasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です"
       ]
     }
   ],
   "scheduled": [],
   "ok": false,
-  "published": [],
+  "published": [
+    {
+      "key": "labor:fudosan-chukai-eigyo-buai-hoshokyu-jigyojogai-minashi-roumu",
+      "business": "labor",
+      "slug": "fudosan-chukai-eigyo-buai-hoshokyu-jigyojogai-minashi-roumu",
+      "title": "不動産仲介の営業社員に、歩合給と事業場外みなし労働時間は使えますか？",
+      "date": "2026-10-18",
+      "category": "テーマ別の労務管理",
+      "path": "/labor/column/fudosan-chukai-eigyo-buai-hoshokyu-jigyojogai-minashi-roumu"
+    },
+    {
+      "key": "labor:gaikokujin-anzeneisei-kyoiku-bogoku-roudo-saigai-boshi",
+      "business": "labor",
+      "slug": "gaikokujin-anzeneisei-kyoiku-bogoku-roudo-saigai-boshi",
+      "title": "中国・台湾の外国人を雇うとき、安全衛生教育は母国語で行う義務がありますか？",
+      "date": "2026-10-18",
+      "category": "テーマ別の労務管理",
+      "path": "/labor/column/gaikokujin-anzeneisei-kyoiku-bogoku-roudo-saigai-boshi"
+    }
+  ],
+  "skipped": [],
   "errors": [
     {
       "key": "legal:petto-shintaku-futankitsuki-izo-yuigon",
-      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録または重複しています"
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
     },
     {
       "key": "legal:tantei-gyo-todokede-eigyosho-youken-koan",
-      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録または重複しています"
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
     },
     {
       "key": "realestate:sogi-ceremony-hall-bukken-youto-chusha-kinrin",
-      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録または重複しています"
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
     },
     {
       "key": "realestate:souzoku-kyoyu-mochibun-dai3sha-baikyaku-bunkatsu",
-      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録または重複しています"
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
+    },
+    {
+      "key": "legal:haiguusha-tanki-kyojuken-1037jo-isanbunkatsu",
+      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録です"
+    },
+    {
+      "key": "legal:okugai-koukokubutsu-hyoji-kyoka-jorei",
+      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録です"
+    },
+    {
+      "key": "realestate:souzoku-reverse-mortgage-zansai-seisan-baikyaku",
+      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録です"
+    },
+    {
+      "key": "realestate:unten-daiko-eigyosho-zuihan-chushajo-bukken-youken",
+      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録です"
     }
   ],
-  "blocked": "4本は品質確認待ちのため自動公開しません。記事別の理由を確認してください。forceでも解除しません。"
+  "blocked": "8本は品質確認待ちのため自動公開しません。記事別の理由を確認してください。forceでも解除しません。",
+  "outcome": "partial",
+  "httpStatus": "409"
 }
