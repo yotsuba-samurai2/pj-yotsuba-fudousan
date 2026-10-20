@@ -1,0 +1,111 @@
+{
+  "todayJst": "2026-10-21",
+  "runUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/39459209613",
+  "generationStatus": "validated",
+  "generatedCount": 6,
+  "reviewResult": "success",
+  "reviewReportAvailable": true,
+  "reviewPass": true,
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "minor": 1
+  },
+  "reviewFindings": [
+    {
+      "file": "scripts/labor-columns/165-mujin-24ji-tenpo-coin-laundry-junkai-machijikan-roumu.md",
+      "severity": "minor",
+      "issue": "本文中の内部リンク（fitness-gym 記事へのリンク）のラベルが『無人・24時間セルフ店舗の労務』となっており、リンク先であるフィットネス・ジム開業労務記事の内容と一致しない。日本語・英語・中国語すべてで同じラベル付けのため翻訳不一致ではなく、原稿段階のラベル誤り。逆向き（164→165）のラベルは正しい。",
+      "fix": "165→164 のリンクラベルを『フィットネス・パーソナルジム開業の労務』等、リンク先の内容に合わせて修正する（4言語とも）。内容・法的正確性には影響しないため公開を妨げるものではない。"
+    }
+  ],
+  "registeredCount": 2,
+  "qualityEligibleCount": 2,
+  "heldCount": 4,
+  "scheduledCount": 0,
+  "unverifiedSourceCount": 0,
+  "publishedCount": null,
+  "articles": [
+    {
+      "key": "realestate:net-cafe-kobetsu-shitsu-bukken-shobo-honnin-kakunin",
+      "fingerprint": "db9d6fca6e0eb564597dc47141d6cb80b2b6a829fb4569fe3b22c0548ad15d0e",
+      "title": "ネットカフェ・個室型インターネットカフェの物件はどう選ぶ？消防区画と本人確認条例の壁",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "realestate:yuigon-shikkosha-sentei-fudosan-baikyaku-toujisha",
+      "fingerprint": "fe5410b5d3d78d8eab9ad5bcd8ea35effca8e407577d8edd34ae37d1066139ef",
+      "title": "遺言執行者が選任された相続不動産を売る：売主は誰で、媒介・決済の当事者はどうなる？",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:ippan-shadan-houjin-setsuritsu-hieiri-teikan",
+      "fingerprint": "977b8d22d9aa601b5bdbd653800720596d151b903947d864c65fbf84affb2a03",
+      "title": "一般社団法人の設立｜非営利型と普通型の違い・定款認証から登記まで",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です",
+        "確認済みの公的な一次根拠が不足しています"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:kodo-senmonshoku-1go-point-keisan-chuka-taiwan",
+      "fingerprint": "f6d78abfa9989dd742d54408c750a3a5188383b04a78fe8bc3de8a412af30a33",
+      "title": "高度専門職1号ビザのポイント計算｜中国・台湾の高度人材が70点を積む",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:fitness-gym-kaigyo-trainer-gyomuitaku-roumu",
+      "fingerprint": "bf5a1a4cab53fb776f28c7a097154dd39de964e46d4811346fc6d760fa5d5b49",
+      "title": "ジムのトレーナーは雇用か業務委託か、深夜・変形労働時間はどう組みますか？",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:mujin-24ji-tenpo-coin-laundry-junkai-machijikan-roumu",
+      "fingerprint": "ebb946385a25a15f162301f6826d0f88896ad4d263daad7f2a9e1ac1f669b190",
+      "title": "無人・24時間セルフ店舗の巡回スタッフの「待機・手待ち時間」は労働時間になりますか？",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    }
+  ]
+}

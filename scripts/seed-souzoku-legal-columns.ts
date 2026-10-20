@@ -82,6 +82,22 @@ const AUTHOR = {
 
 /** 各記事が評価を集約すべきハブ（本文に必須の内部リンク）。verify() で機械検査する */
 const REQUIRED_HUB_LINKS: Record<string, string[]> = {
+  "ippan-shadan-houjin-setsuritsu-hieiri-teikan": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/npo-hojin-setsuritsu-ninsho-nagare-shokatsucho",
+    "/legal/column/seikatsu-kaigo-shitei-bukken-yoken",
+    "/legal/column/iryohojin-setsuritsu-ninka-nagare-shorui",
+  ],
+  "kodo-senmonshoku-1go-point-keisan-chuka-taiwan": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/eiju-kyoka-shinsei-chuka-taiwan-senmonshoku",
+    "/legal/column/kika-shinsei-yoken-kokusekiho-chuka-taiwan",
+    "/legal/column/keieikanri-zairyu-chuka-kigyousha-kaisha-setsuritsu",
+  ],
   "tantei-gyo-todokede-eigyosho-youken-koan": [
     "/legal/services",
     "/legal/nagare",
@@ -1130,6 +1146,29 @@ function matchesRequiredPhrase(content: string, phrase: string): boolean {
 
 /** 記事ごとに必ず含めるべき表現（機械ゲート。最低限の合否判定） */
 const REQUIRED_PHRASES: Record<string, string[]> = {
+  "ippan-shadan-houjin-setsuritsu-hieiri-teikan": [
+    "一般社団法人及び一般財団法人に関する法律",
+    "第10条",
+    "第11条",
+    "第13条",
+    "第22条",
+    "法人税法施行令第3条",
+    "準則主義",
+    "非営利型",
+    "紹介料を受け取りません",
+    "別々にご契約",
+    "独立した事業体",
+  ],
+  "kodo-senmonshoku-1go-point-keisan-chuka-taiwan": [
+    "高度専門職",
+    "別表第一の二",
+    "70点",
+    "在留資格認定証明書交付申請",
+    "在留資格変更許可申請",
+    "紹介料を受け取りません",
+    "別々にご契約",
+    "独立した事業体",
+  ],
   "tantei-gyo-todokede-eigyosho-youken-koan": [
     "探偵業の業務の適正化に関する法律",
     "第3条",
@@ -3396,6 +3435,8 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
 
 /** 記事ごとに含めてはならない表現 */
 const FORBIDDEN_PHRASES: Record<string, string[]> = {
+  "ippan-shadan-houjin-setsuritsu-hieiri-teikan": [],
+  "kodo-senmonshoku-1go-point-keisan-chuka-taiwan": [],
   "tantei-gyo-todokede-eigyosho-youken-koan": [],
   "petto-shintaku-futankitsuki-izo-yuigon": [],
   "okugai-koukokubutsu-hyoji-kyoka-jorei": [],
@@ -6647,6 +6688,58 @@ const ARTICLES: Array<{
       "遺産分割",
       "居住権",
       "民法",
+      "行政書士",
+    ],
+  },
+  {
+    file: "125-ippan-shadan-houjin-setsuritsu-hieiri-teikan.md",
+    slug: "ippan-shadan-houjin-setsuritsu-hieiri-teikan",
+    date: "2026-10-20",
+    title:
+      "一般社団法人の設立｜非営利型と普通型の違い・定款認証から登記まで",
+    category: "許認可の手続き（行政書士の実務から）",
+    excerpt:
+      "障害福祉・介護・地域事業の受け皿として検討される一般社団法人の設立を整理します。設立時社員は共同して定款を作成し（一般社団法人及び一般財団法人に関する法律第10条）、公証人の認証（第13条）と設立登記（第22条）で成立する準則主義で、NPO法人の認証主義と異なります。定款の記載事項（第11条）、非営利型（法人税法施行令第3条）と普通型の課税の違い、認証手数料・登録免許税、設立後の指定申請と業際の分け方を解説します。",
+    keywords: [
+      "一般社団法人 設立 流れ 定款",
+      "一般社団法人 非営利型 普通型 違い",
+      "一般社団法人 定款 認証 公証人 第13条",
+      "一般社団法人 設立時社員 2名 第10条",
+      "法人税法施行令第3条 非営利型法人 要件",
+      "一般社団法人 設立 行政書士",
+    ],
+    tags: [
+      "一般社団法人",
+      "法人設立",
+      "定款",
+      "非営利型法人",
+      "許認可",
+      "行政書士",
+    ],
+  },
+  {
+    file: "126-kodo-senmonshoku-1go-point-keisan-chuka-taiwan.md",
+    slug: "kodo-senmonshoku-1go-point-keisan-chuka-taiwan",
+    date: "2026-10-20",
+    title:
+      "高度専門職1号ビザのポイント計算｜中国・台湾の高度人材が70点を積む",
+    category: "許認可の手続き（行政書士の実務から）",
+    excerpt:
+      "在留資格「高度専門職1号」は、学歴・職歴・年収などを点数化し合計70点以上で認められます（出入国管理及び難民認定法の別表第一の二）。イ・ロ・ハの3類型、ポイントの数え方、中国・台湾の人材が積み増しやすい特別加算（日本語能力・本邦の大学卒業・対象大学）、在留資格認定証明書交付申請と在留資格変更許可申請の違い、優遇措置、申請取次（行政書士）と社労士・税理士・弁護士の分離受任を整理します。配点は公式の計算表が正本です。",
+    keywords: [
+      "高度専門職 1号 ポイント 計算 70点",
+      "高度人材ポイント制 中国 台湾",
+      "高度専門職 在留資格認定証明書 変更 違い",
+      "高度専門職 日本語能力 対象大学 加点",
+      "高度専門職 優遇措置 永住 3年 1年",
+      "高度専門職 申請取次 行政書士",
+    ],
+    tags: [
+      "高度専門職",
+      "高度人材ポイント制",
+      "在留資格",
+      "申請取次",
+      "外国人",
       "行政書士",
     ],
   },

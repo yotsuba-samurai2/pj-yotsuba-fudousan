@@ -133,5 +133,71 @@ export const COLUMNS_AUTOPUBLISH_REVIEWS: readonly ColumnQualityReview[] = [
     },
     "reviewedAt": "2026-10-19",
     "validThrough": "2026-10-21"
+  },
+  {
+    "key": "labor:fitness-gym-kaigyo-trainer-gyomuitaku-roumu",
+    "fingerprint": "bf5a1a4cab53fb776f28c7a097154dd39de964e46d4811346fc6d760fa5d5b49",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://laws.e-gov.go.jp/law/322AC0000000049",
+        "checkedAt": "2026-10-20",
+        "relevantClaim": "労働基準法第9条（労働者の定義）、第32条の2（1か月単位変形）、第32条の4（1年単位変形・労使協定必須）、第36条（36協定）、第37条第1項・第4項（時間外・深夜割増、月60時間超5割）、第89条（就業規則作成・届出）は確立した条文で記事の割増率（深夜2割5分・法定休日3割5分・月60時間超5割）・1年単位の上限（1日10時間・1週52時間）と整合。昭和60年12月19日労働基準法研究会報告の労働者性判断基準（使用従属性・事業者性・専属性）も確立した行政基準で記事と一致。",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/law/505AC0000000025",
+        "checkedAt": "2026-10-20",
+        "relevantClaim": "特定受託事業者に係る取引の適正化等に関する法律（フリーランス新法）は令和5年法律第25号・令和5年5月12日公布・令和6年（2024年）11月1日施行で、発注事業者に取引条件明示等の義務を課す確立した制度。記事の法令番号・施行日・義務の記載と一致。月60時間超割増5割の中小企業適用は令和5年（2023年）4月1日（猶予廃止）で確立した事実。三菱重工業長崎造船所事件（最判平成12年3月9日）は労働時間＝指揮命令下の時間との定義を示した代表的最高裁判例で記事と整合。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/39459209613"
+    },
+    "reviewedAt": "2026-10-21",
+    "validThrough": "2026-10-23"
+  },
+  {
+    "key": "labor:mujin-24ji-tenpo-coin-laundry-junkai-machijikan-roumu",
+    "fingerprint": "ebb946385a25a15f162301f6826d0f88896ad4d263daad7f2a9e1ac1f669b190",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://laws.e-gov.go.jp/law/322AC0000000049",
+        "checkedAt": "2026-10-20",
+        "relevantClaim": "労働基準法第32条（1日8時間・1週40時間）、第34条（6時間超45分・8時間超1時間、原則自由利用）、第37条第1項・第4項（時間外・深夜割増、月60時間超5割）、第38条第1項（事業場を異にする場合の労働時間の通算）は確立した条文で記事の手待ち時間・休憩の区別・深夜割増・複数店舗通算の整理と一致。三菱重工業長崎造船所事件（最判平成12年3月9日）の労働時間の定義とも整合。",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/law/334AC0000000137",
+        "checkedAt": "2026-10-20",
+        "relevantClaim": "最低賃金法（昭和34年法律第137号）の地域別最低賃金は当該地域で働くすべての労働者に適用され、額は毎年改定される確立した制度。記事は具体額を断定せず『当該年度の公表値を確認』とし、手待ち・移動を労働時間に含めて最低賃金を下回らないか確認する論点整理に留めており適切。月60時間超割増5割の中小企業適用（2023年4月1日）も確立した事実で記事と一致。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/39459209613"
+    },
+    "reviewedAt": "2026-10-21",
+    "validThrough": "2026-10-23"
   }
 ];
