@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-20T08:07:06.717Z",
+  "generatedAt": "2026-10-21T03:22:08.767Z",
   "siteUrl": "sc-domain:luck428.com",
   "windowDays": 45,
   "urls": {
@@ -1258,31 +1258,6 @@
       "verdict": "UNCHECKED",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
       "lastmod": "2026-09-06"
-    },
-    "https://luck428.com/column/hikyojusha-shisan-kanri-hojin-shuueki-bukken": {
-      "verdict": "UNCHECKED",
-      "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-05"
-    },
-    "https://luck428.com/column/kensazumisho-nashi-bukken-fukushi-youto-henko": {
-      "verdict": "UNCHECKED",
-      "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-05"
-    },
-    "https://luck428.com/labor/column/unso-2024-mondai-kaizen-kijun-kokuji": {
-      "verdict": "UNCHECKED",
-      "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-05"
-    },
-    "https://luck428.com/legal/column/iryohojin-setsuritsu-ninka-nagare-shorui": {
-      "verdict": "UNCHECKED",
-      "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-05"
-    },
-    "https://luck428.com/legal/column/shokuhin-seizogyo-kyoka-bukken-setsubi-kijun": {
-      "verdict": "UNCHECKED",
-      "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-05"
     }
   }
 }

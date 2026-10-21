@@ -1,25 +1,25 @@
 {
-  "dryRun": false,
-  "runAt": "2026-10-20T08:06:31.983Z",
-  "todayJst": "2026-10-20",
+  "dryRun": true,
+  "runAt": "2026-10-21T03:21:47.707Z",
+  "todayJst": "2026-10-21",
   "targets": [
     {
-      "key": "labor:fudosan-chukai-eigyo-buai-hoshokyu-jigyojogai-minashi-roumu",
+      "key": "labor:fitness-gym-kaigyo-trainer-gyomuitaku-roumu",
       "business": "labor",
-      "slug": "fudosan-chukai-eigyo-buai-hoshokyu-jigyojogai-minashi-roumu",
-      "title": "不動産仲介の営業社員に、歩合給と事業場外みなし労働時間は使えますか？",
-      "date": "2026-10-18",
+      "slug": "fitness-gym-kaigyo-trainer-gyomuitaku-roumu",
+      "title": "ジムのトレーナーは雇用か業務委託か、深夜・変形労働時間はどう組みますか？",
+      "date": "2026-10-20",
       "category": "テーマ別の労務管理",
-      "path": "/labor/column/fudosan-chukai-eigyo-buai-hoshokyu-jigyojogai-minashi-roumu"
+      "path": "/labor/column/fitness-gym-kaigyo-trainer-gyomuitaku-roumu"
     },
     {
-      "key": "labor:gaikokujin-anzeneisei-kyoiku-bogoku-roudo-saigai-boshi",
+      "key": "labor:mujin-24ji-tenpo-coin-laundry-junkai-machijikan-roumu",
       "business": "labor",
-      "slug": "gaikokujin-anzeneisei-kyoiku-bogoku-roudo-saigai-boshi",
-      "title": "中国・台湾の外国人を雇うとき、安全衛生教育は母国語で行う義務がありますか？",
-      "date": "2026-10-18",
+      "slug": "mujin-24ji-tenpo-coin-laundry-junkai-machijikan-roumu",
+      "title": "無人・24時間セルフ店舗の巡回スタッフの「待機・手待ち時間」は労働時間になりますか？",
+      "date": "2026-10-20",
       "category": "テーマ別の労務管理",
-      "path": "/labor/column/gaikokujin-anzeneisei-kyoiku-bogoku-roudo-saigai-boshi"
+      "path": "/labor/column/mujin-24ji-tenpo-coin-laundry-junkai-machijikan-roumu"
     }
   ],
   "held": [
@@ -130,31 +130,71 @@
         "zhの内部リンクに言語不一致があります",
         "公開レビュー記録が未登録です"
       ]
+    },
+    {
+      "key": "legal:ippan-shadan-houjin-setsuritsu-hieiri-teikan",
+      "business": "legal",
+      "slug": "ippan-shadan-houjin-setsuritsu-hieiri-teikan",
+      "title": "一般社団法人の設立｜非営利型と普通型の違い・定款認証から登記まで",
+      "date": "2026-10-20",
+      "category": "許認可の手続き（行政書士の実務から）",
+      "path": "/legal/column/ippan-shadan-houjin-setsuritsu-hieiri-teikan",
+      "qualityHoldReasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "legal:kodo-senmonshoku-1go-point-keisan-chuka-taiwan",
+      "business": "legal",
+      "slug": "kodo-senmonshoku-1go-point-keisan-chuka-taiwan",
+      "title": "高度専門職1号ビザのポイント計算｜中国・台湾の高度人材が70点を積む",
+      "date": "2026-10-20",
+      "category": "許認可の手続き（行政書士の実務から）",
+      "path": "/legal/column/kodo-senmonshoku-1go-point-keisan-chuka-taiwan",
+      "qualityHoldReasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "realestate:net-cafe-kobetsu-shitsu-bukken-shobo-honnin-kakunin",
+      "business": "realestate",
+      "slug": "net-cafe-kobetsu-shitsu-bukken-shobo-honnin-kakunin",
+      "title": "ネットカフェ・個室型インターネットカフェの物件はどう選ぶ？消防区画と本人確認条例の壁",
+      "date": "2026-10-20",
+      "category": "物件・許認可",
+      "path": "/column/net-cafe-kobetsu-shitsu-bukken-shobo-honnin-kakunin",
+      "qualityHoldReasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "realestate:yuigon-shikkosha-sentei-fudosan-baikyaku-toujisha",
+      "business": "realestate",
+      "slug": "yuigon-shikkosha-sentei-fudosan-baikyaku-toujisha",
+      "title": "遺言執行者が選任された相続不動産を売る：売主は誰で、媒介・決済の当事者はどうなる？",
+      "date": "2026-10-20",
+      "category": "相続",
+      "path": "/column/yuigon-shikkosha-sentei-fudosan-baikyaku-toujisha",
+      "qualityHoldReasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です"
+      ]
     }
   ],
   "scheduled": [],
   "ok": false,
-  "published": [
-    {
-      "key": "labor:fudosan-chukai-eigyo-buai-hoshokyu-jigyojogai-minashi-roumu",
-      "business": "labor",
-      "slug": "fudosan-chukai-eigyo-buai-hoshokyu-jigyojogai-minashi-roumu",
-      "title": "不動産仲介の営業社員に、歩合給と事業場外みなし労働時間は使えますか？",
-      "date": "2026-10-18",
-      "category": "テーマ別の労務管理",
-      "path": "/labor/column/fudosan-chukai-eigyo-buai-hoshokyu-jigyojogai-minashi-roumu"
-    },
-    {
-      "key": "labor:gaikokujin-anzeneisei-kyoiku-bogoku-roudo-saigai-boshi",
-      "business": "labor",
-      "slug": "gaikokujin-anzeneisei-kyoiku-bogoku-roudo-saigai-boshi",
-      "title": "中国・台湾の外国人を雇うとき、安全衛生教育は母国語で行う義務がありますか？",
-      "date": "2026-10-18",
-      "category": "テーマ別の労務管理",
-      "path": "/labor/column/gaikokujin-anzeneisei-kyoiku-bogoku-roudo-saigai-boshi"
-    }
-  ],
-  "skipped": [],
+  "published": [],
   "errors": [
     {
       "key": "legal:petto-shintaku-futankitsuki-izo-yuigon",
@@ -187,9 +227,25 @@
     {
       "key": "realestate:unten-daiko-eigyosho-zuihan-chushajo-bukken-youken",
       "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録です"
+    },
+    {
+      "key": "legal:ippan-shadan-houjin-setsuritsu-hieiri-teikan",
+      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録です"
+    },
+    {
+      "key": "legal:kodo-senmonshoku-1go-point-keisan-chuka-taiwan",
+      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録です"
+    },
+    {
+      "key": "realestate:net-cafe-kobetsu-shitsu-bukken-shobo-honnin-kakunin",
+      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録です"
+    },
+    {
+      "key": "realestate:yuigon-shikkosha-sentei-fudosan-baikyaku-toujisha",
+      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録です"
     }
   ],
-  "blocked": "8本は品質確認待ちのため自動公開しません。記事別の理由を確認してください。forceでも解除しません。",
-  "outcome": "partial",
+  "blocked": "12本は品質確認待ちのため自動公開しません。記事別の理由を確認してください。forceでも解除しません。",
+  "outcome": "dry-run",
   "httpStatus": "409"
 }
