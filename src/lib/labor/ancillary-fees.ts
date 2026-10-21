@@ -239,6 +239,25 @@ export const LABOR_ANCILLARY_FEES = {
             "price": "郵送・診断書料・書類取得等の実費は別途"
           }
         ]
+      },
+      {
+        "id": "dattai-ichijikin",
+        "title": "脱退一時金（帰国する外国人のお客さま）",
+        "lead": "顧問契約は不要です。ご本人から直接お受けします。帰国後のご依頼もお受けします。",
+        "note": "金額は税込です。ご夫婦など2人分のご依頼は、1人ごとに申し受けます。郵送・書類取得等の実費は別途申し受けます。脱退一時金の請求書の作成・提出代行は社会保険労務士の業務です。源泉徴収された所得税の還付申告は税理士の業務です。",
+        "rows": [
+          {
+            "name": "脱退一時金の請求（年金記録の確認・請求書の作成・提出代行・支給までの連絡）",
+            "unit": "1人",
+            "price": "44,000円",
+            "value": 44000
+          },
+          {
+            "name": "事務手数料・実費",
+            "unit": "—",
+            "price": "郵送・書類取得等の実費は別途"
+          }
+        ]
       }
     ],
     "notTitle": "当事務所では取り扱わない業務",
@@ -516,6 +535,25 @@ export const LABOR_ANCILLARY_FEES = {
             "name": "Administrative costs",
             "unit": "—",
             "price": "postage, medical certificates, and document fees are charged at cost"
+          }
+        ]
+      },
+      {
+        "id": "dattai-ichijikin",
+        "title": "Lump-sum withdrawal payment (foreign clients leaving Japan)",
+        "lead": "No advisory contract required; engaged directly by the person, including after they have left Japan.",
+        "note": "The fee is tax-inclusive. For a couple or other requests covering two people, the fee is charged per person. Out-of-pocket costs such as postage and document fees are charged separately. Preparing and submitting the lump-sum withdrawal payment claim on the person's behalf is the work of Certified Social Insurance and Labor Consultants. The tax return to recover the withheld income tax is the work of a tax accountant (税理士).",
+        "rows": [
+          {
+            "name": "Lump-sum withdrawal payment claim (checking pension records, preparing and submitting the claim, liaison until payment)",
+            "unit": "per person",
+            "price": "¥44,000",
+            "value": 44000
+          },
+          {
+            "name": "Administrative costs",
+            "unit": "—",
+            "price": "postage and document fees are charged at cost"
           }
         ]
       }
@@ -797,6 +835,25 @@ export const LABOR_ANCILLARY_FEES = {
             "price": "郵寄・診斷書費・文件取得等實費另計"
           }
         ]
+      },
+      {
+        "id": "dattai-ichijikin",
+        "title": "脫退一時金（回國的外國客戶）",
+        "lead": "不需顧問契約。由本人直接委託。回國後也可委託。",
+        "note": "金額為含稅。夫妻等2人份的委託，按每1人計費。郵寄・文件取得等實費另計。脫退一時金請求書的製作・代為提出為社會保險勞務士的業務。被扣繳所得稅的退稅申報為稅理士的業務。",
+        "rows": [
+          {
+            "name": "脫退一時金的請求（確認年金記錄・製作請求書・代為提出・至支付為止的聯繫）",
+            "unit": "1人",
+            "price": "44,000日圓",
+            "value": 44000
+          },
+          {
+            "name": "事務手續費・實費",
+            "unit": "—",
+            "price": "郵寄・文件取得等實費另計"
+          }
+        ]
       }
     ],
     "notTitle": "本事務所不承辦的業務",
@@ -1074,6 +1131,25 @@ export const LABOR_ANCILLARY_FEES = {
             "name": "事务手续费・实费",
             "unit": "—",
             "price": "邮寄・诊断书费・文件取得等实费另计"
+          }
+        ]
+      },
+      {
+        "id": "dattai-ichijikin",
+        "title": "脱退一时金（回国的外国客户）",
+        "lead": "不需顾问合同。由本人直接委托。回国后也可委托。",
+        "note": "金额为含税。夫妻等2人份的委托，按每1人计费。邮寄・文件取得等实费另计。脱退一时金请求书的制作・代为提交为社会保险劳务士的业务。被扣缴所得税的退税申报为税理士的业务。",
+        "rows": [
+          {
+            "name": "脱退一时金的请求（确认年金记录・制作请求书・代为提交・至支付为止的联系）",
+            "unit": "1人",
+            "price": "44,000日元",
+            "value": 44000
+          },
+          {
+            "name": "事务手续费・实费",
+            "unit": "—",
+            "price": "邮寄・文件取得等实费另计"
           }
         ]
       }

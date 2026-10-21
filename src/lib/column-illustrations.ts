@@ -175,6 +175,15 @@ const ILLUSTRATIONS = {
       zh: "招聘面谈与雇用文件的示意图",
     },
   },
+  "labor-dattai-ichijikin": {
+    src: "/hero/labor-dattai-ichijikin-16x9.webp",
+    alt: {
+      ja: "空港の窓辺で年金の請求書類を確かめる夫婦のイメージ",
+      en: "Illustration of a couple checking pension claim documents by an airport window",
+      "zh-tw": "在機場窗邊確認年金請求文件的夫妻示意圖",
+      zh: "在机场窗边确认年金请求文件的夫妻示意图",
+    },
+  },
   "labor-shogai-nenkin": {
     src: "/hero/labor-shogai-nenkin-16x9.webp",
     alt: {
@@ -726,6 +735,11 @@ const THEME_RULES: Record<BusinessKey, readonly ThemeRule[]> = {
     {
       theme: "labor-taishoku-kaiko",
       keywords: ["退職", "解雇", "雇止め", "内定取消", "退職代行", "懲戒", "taishoku", "kaiko"],
+    },
+    {
+      // 2026-10-21 追加：脱退一時金のコラム（166〜168）を外国人雇用・障害年金の絵より先に拾う。
+      theme: "labor-dattai-ichijikin",
+      keywords: ["脱退一時金", "dattai-ichijikin"],
     },
     {
       theme: "labor-gaikokujin-koyo",
