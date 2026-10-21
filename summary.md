@@ -1,11 +1,9 @@
-# コラムの自動公開とSearch Consoleの確認（2026/10/21 12:31:49）
+# コラムの自動公開とSearch Consoleの確認（2026/10/21 17:12:32）
 
 ## 正午の自動公開
 
-- 公開結果：部分成功
-- 公開した記事：2本
-  - https://luck428.com/labor/column/fitness-gym-kaigyo-trainer-gyomuitaku-roumu　ジムのトレーナーは雇用か業務委託か、深夜・変形労働時間はどう組みますか？
-  - https://luck428.com/labor/column/mujin-24ji-tenpo-coin-laundry-junkai-machijikan-roumu　無人・24時間セルフ店舗の巡回スタッフの「待機・手待ち時間」は労働時間になりますか？
+- 公開結果：保留
+- 公開した記事：0本
 - 公開保留：12本は品質確認待ちのため自動公開しません。記事別の理由を確認してください。forceでも解除しません。
 - 保留中（自動公開していない）：12本
   - 残されるペットのために遺せる？負担付遺贈・ペット信託の遺言文案を行政書士が整理
@@ -61,10 +59,23 @@
 
 - サイトマップを送り直しました（https://luck428.com/sitemap.xml）
 - 確認の対象：直近45日の日本語コラム 253本（今回確かめたのは150本）
-- 登録済み（PASS）43本・除外（NEUTRAL）107本・エラー（FAIL）0本・未確認 103本
+- 登録済み（PASS）133本・除外（NEUTRAL）120本・エラー（FAIL）0本・未確認 0本
 
 ## 手でリクエストする候補（公開から3日以上たって未登録）
 
+- https://luck428.com/column/biyoshitsu-riyojo-bukken-hokenjo-todokede（2026-09-06・45日・見つかりませんでした（404））
+- https://luck428.com/legal/column/shurui-kouri-menkyo-tenpo-bukken-yoken（2026-09-06・45日・クロール済み - インデックス未登録）
+- https://luck428.com/labor/column/shobyo-teate-kin-shikyu-yoken-tsusan（2026-09-07・44日・検出 - インデックス未登録）
+- https://luck428.com/legal/column/kaigai-honkon-singapore-souzokunin-isanbunkatsu-shomei（2026-09-07・44日・検出 - インデックス未登録）
+- https://luck428.com/legal/column/kaitai-koji-gyo-touroku-kensetsu-kyoka-chigai（2026-09-07・44日・検出 - インデックス未登録）
+- https://luck428.com/labor/column/hoikuen-kaisetsu-roumu-haichi-kijun-shogu（2026-09-08・43日・検出 - インデックス未登録）
+- https://luck428.com/labor/column/kigyonai-tenkin-shukko-gaikokujin-shakaihoken-nyu（2026-09-08・43日・クロール済み - インデックス未登録）
+- https://luck428.com/labor/column/ikuji-kyugyo-kyufu-encho-2025-genkakuka（2026-09-09・42日・URL が Google に認識されていません）
+- https://luck428.com/labor/column/jigyo-shokei-daihyo-kotai-yakuin-shakaihoken-tetsuzuki（2026-09-15・36日・クロール済み - インデックス未登録）
+- https://luck428.com/labor/column/gijinkoku-chuka-taiwan-jinzai-saiyo-roumu-zairyu（2026-09-17・34日・URL が Google に認識されていません）
+- https://luck428.com/labor/column/shuro-sentaku-shien-jinin-haichi-roumu（2026-09-17・34日・検出 - インデックス未登録）
+- https://luck428.com/labor/column/biyoshitsu-kaigyo-buai-kashimise-shakaihoken（2026-09-20・31日・検出 - インデックス未登録）
+- https://luck428.com/labor/column/shika-iin-gikoushi-roumu-part-shakaihoken（2026-09-21・30日・検出 - インデックス未登録）
 - https://luck428.com/column/souzoku-fudosan-kyu-teitoken-massho-baikyaku（2026-09-23・28日・検出 - インデックス未登録）
 - https://luck428.com/labor/column/gaikokujin-kishukusha-kisoku-todokede-roumu（2026-09-23・28日・検出 - インデックス未登録）
 - https://luck428.com/labor/column/telework-zaitaku-roudou-jikan-hiyou-shugyokisoku（2026-09-23・28日・検出 - インデックス未登録）
@@ -123,11 +134,11 @@
 - https://luck428.com/labor/column/kensetsugyo-2024-jikangai-jougen-kyujitsu-roumu（2026-10-07・14日・検出 - インデックス未登録）
 - https://luck428.com/legal/column/denki-koji-gyo-touroku-eigyosho-shunin（2026-10-07・14日・検出 - インデックス未登録）
 - https://luck428.com/legal/column/kosei-shosho-yuigon-koshonin-shonin-hiyo（2026-10-07・14日・検出 - インデックス未登録）
-- https://luck428.com/column/chugokugo-buyer-kanri-kiyaku-shuzen-keikaku-check（2026-10-10・11日・URL が Google に認識されていません）
+- https://luck428.com/column/chugokugo-buyer-kanri-kiyaku-shuzen-keikaku-check（2026-10-10・11日・検出 - インデックス未登録）
 - https://luck428.com/column/jinko-toseki-clinic-bukken-youken-kyusuihaisui（2026-10-10・11日・検出 - インデックス未登録）
 - https://luck428.com/column/ninka-hoikusho-20nin-bukken-youto-engei（2026-10-10・11日・検出 - インデックス未登録）
 - https://luck428.com/labor/column/kagaku-busshitsu-jiritsuteki-kanri-sdsra（2026-10-10・11日・検出 - インデックス未登録）
-- https://luck428.com/labor/column/kaigai-kyoju-remote-koyo-chuka-taiwan-shaho-roumu（2026-10-10・11日・検出 - インデックス未登録）
+- https://luck428.com/labor/column/kaigai-kyoju-remote-koyo-chuka-taiwan-shaho-roumu（2026-10-10・11日・URL が Google に認識されていません）
 - https://luck428.com/labor/column/necchusho-taisaku-gimuka-2025-06-genba-roumu（2026-10-10・11日・検出 - インデックス未登録）
 - https://luck428.com/labor/column/shogaisha-koyo-jogairitsu-2025-hikisage（2026-10-10・11日・URL が Google に認識されていません）
 - https://luck428.com/labor/column/taishokukin-chutaikyo-ideco-plus-chusho-sentaku（2026-10-10・11日・検出 - インデックス未登録）
@@ -137,28 +148,28 @@
 - https://luck428.com/legal/column/tsukemono-seizogyo-kyoka-2024-haccp（2026-10-10・11日・検出 - インデックス未登録）
 - https://luck428.com/labor/column/haigyo-kaisan-jugyoin-kaiko-yokoku-tatekae-barai-roumu（2026-10-12・9日・検出 - インデックス未登録）
 - https://luck428.com/labor/column/sakoju-anpi-kakunin-seikatsu-soudan-yakan-taisei-roumu（2026-10-12・9日・検出 - インデックス未登録）
-- https://luck428.com/legal/column/shitei-jidosha-seibi-jigyo-minkan-shaken-shitei-shinsei-youken（2026-10-12・9日・URL が Google に認識されていません）
+- https://luck428.com/legal/column/shitei-jidosha-seibi-jigyo-minkan-shaken-shitei-shinsei-youken（2026-10-12・9日・検出 - インデックス未登録）
 - https://luck428.com/legal/column/souzoku-saimu-hoshou-saimu-chosa-junpro-kikan（2026-10-12・9日・検出 - インデックス未登録）
 - https://luck428.com/labor/column/gaikokujin-gyomuitaku-roudoushasei-zairyu-shikaku-seigo（2026-10-13・8日・検出 - インデックス未登録）
 - https://luck428.com/labor/column/unten-daiko-kaigyo-roumu-zuihan-untensha-shinya-2nin（2026-10-13・8日・検出 - インデックス未登録）
-- https://luck428.com/labor/column/seishin-shougai-rosai-nintei-kijun-2023-yobo-zesei（2026-10-14・7日・URL が Google に認識されていません）
+- https://luck428.com/labor/column/seishin-shougai-rosai-nintei-kijun-2023-yobo-zesei（2026-10-14・7日・検出 - インデックス未登録）
 - https://luck428.com/labor/column/sougisha-sousaigyo-kaigyo-roumu-shukuchoku-yobidashi-henkei（2026-10-14・7日・検出 - インデックス未登録）
-- https://luck428.com/legal/column/ginou-jisshu-ikusei-shuro-ikou-kanri-shien-kikan-kyoka（2026-10-14・7日・検出 - インデックス未登録）
+- https://luck428.com/legal/column/ginou-jisshu-ikusei-shuro-ikou-kanri-shien-kikan-kyoka（2026-10-14・7日・URL が Google に認識されていません）
 - https://luck428.com/legal/column/tokutei-zaisan-shokei-yuigon-jueki-sakibashi-daishu-fuka（2026-10-14・7日・検出 - インデックス未登録）
 - https://luck428.com/labor/column/taxi-kakujitsu-kinmu-2024-kaizen-kijun-roumu（2026-10-15・6日・検出 - インデックス未登録）
 - https://luck428.com/legal/column/keiei-jiko-shinsa-keishin-nyusatsu-sankaku-shikaku（2026-10-15・6日・URL が Google に認識されていません）
-- https://luck428.com/legal/column/souzoku-jojo-kabushiki-toshin-shoken-koza-meigi-henko（2026-10-15・6日・URL が Google に認識されていません）
+- https://luck428.com/legal/column/souzoku-jojo-kabushiki-toshin-shoken-koza-meigi-henko（2026-10-15・6日・検出 - インデックス未登録）
 - https://luck428.com/labor/column/biru-maintenance-seisou-tsusan-roudoujikan-tekiyo-kakudai-roumu（2026-10-16・5日・検出 - インデックス未登録）
-- https://luck428.com/labor/column/bus-untensha-kaizen-kijun-2024-kousoku-kyusoku-roumu（2026-10-16・5日・URL が Google に認識されていません）
+- https://luck428.com/labor/column/bus-untensha-kaizen-kijun-2024-kousoku-kyusoku-roumu（2026-10-16・5日・検出 - インデックス未登録）
 - https://luck428.com/legal/column/keieikanri-koshin-jigyo-keizokusei-rissho-chuka-taiwan（2026-10-16・5日・検出 - インデックス未登録）
 - https://luck428.com/legal/column/kenchikushi-jimusho-touroku-kanri-kenchikushi-youken（2026-10-16・5日・URL が Google に認識されていません）
 - https://luck428.com/column/chugokugo-buyer-shakuchiken-gainen-shutoku-dd（2026-10-17・4日・検出 - インデックス未登録）
 - https://luck428.com/column/chugokugo-oya-kodomo-ryugaku-sumai-shutoku-meigi（2026-10-17・4日・検出 - インデックス未登録）
-- https://luck428.com/column/container-trailer-house-tenpo-bukken-kenchiku-kakunin-youto（2026-10-17・4日・検出 - インデックス未登録）
-- https://luck428.com/column/sango-care-shukuhakugata-bukken-shisetsu-kijun-boshihokenho（2026-10-17・4日・検出 - インデックス未登録）
+- https://luck428.com/column/container-trailer-house-tenpo-bukken-kenchiku-kakunin-youto（2026-10-17・4日・URL が Google に認識されていません）
+- https://luck428.com/column/sango-care-shukuhakugata-bukken-shisetsu-kijun-boshihokenho（2026-10-17・4日・URL が Google に認識されていません）
 - https://luck428.com/column/souzoku-akiya-3000man-roujin-home-nyusho-kyojuyoken（2026-10-17・4日・検出 - インデックス未登録）
-- https://luck428.com/column/souzoku-chintai-bunkatsu-mae-yachin-kizoku（2026-10-17・4日・検出 - インデックス未登録）
-- https://luck428.com/column/souzoku-jikka-juutaku-loan-zansai-teitouken-massho-baikyaku（2026-10-17・4日・URL が Google に認識されていません）
+- https://luck428.com/column/souzoku-chintai-bunkatsu-mae-yachin-kizoku（2026-10-17・4日・URL が Google に認識されていません）
+- https://luck428.com/column/souzoku-jikka-juutaku-loan-zansai-teitouken-massho-baikyaku（2026-10-17・4日・検出 - インデックス未登録）
 - https://luck428.com/column/souzoku-noyadate-taiyoko-fit-setsubi-tochi-baikyaku（2026-10-17・4日・検出 - インデックス未登録）
 - https://luck428.com/column/souzoku-suuji-souzoku-jikka-baikyaku-nagare（2026-10-17・4日・検出 - インデックス未登録）
 - https://luck428.com/labor/column/gakushujuku-yobiko-koshi-koma-kyu-jugyogai-roudoujikan-kanri（2026-10-17・4日・検出 - インデックス未登録）

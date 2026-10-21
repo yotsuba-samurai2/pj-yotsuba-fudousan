@@ -1,27 +1,8 @@
 {
   "dryRun": false,
-  "runAt": "2026-10-21T03:31:23.530Z",
+  "runAt": "2026-10-21T08:12:07.100Z",
   "todayJst": "2026-10-21",
-  "targets": [
-    {
-      "key": "labor:fitness-gym-kaigyo-trainer-gyomuitaku-roumu",
-      "business": "labor",
-      "slug": "fitness-gym-kaigyo-trainer-gyomuitaku-roumu",
-      "title": "ジムのトレーナーは雇用か業務委託か、深夜・変形労働時間はどう組みますか？",
-      "date": "2026-10-20",
-      "category": "テーマ別の労務管理",
-      "path": "/labor/column/fitness-gym-kaigyo-trainer-gyomuitaku-roumu"
-    },
-    {
-      "key": "labor:mujin-24ji-tenpo-coin-laundry-junkai-machijikan-roumu",
-      "business": "labor",
-      "slug": "mujin-24ji-tenpo-coin-laundry-junkai-machijikan-roumu",
-      "title": "無人・24時間セルフ店舗の巡回スタッフの「待機・手待ち時間」は労働時間になりますか？",
-      "date": "2026-10-20",
-      "category": "テーマ別の労務管理",
-      "path": "/labor/column/mujin-24ji-tenpo-coin-laundry-junkai-machijikan-roumu"
-    }
-  ],
+  "targets": [],
   "held": [
     {
       "key": "legal:petto-shintaku-futankitsuki-izo-yuigon",
@@ -194,27 +175,7 @@
   ],
   "scheduled": [],
   "ok": false,
-  "published": [
-    {
-      "key": "labor:fitness-gym-kaigyo-trainer-gyomuitaku-roumu",
-      "business": "labor",
-      "slug": "fitness-gym-kaigyo-trainer-gyomuitaku-roumu",
-      "title": "ジムのトレーナーは雇用か業務委託か、深夜・変形労働時間はどう組みますか？",
-      "date": "2026-10-20",
-      "category": "テーマ別の労務管理",
-      "path": "/labor/column/fitness-gym-kaigyo-trainer-gyomuitaku-roumu"
-    },
-    {
-      "key": "labor:mujin-24ji-tenpo-coin-laundry-junkai-machijikan-roumu",
-      "business": "labor",
-      "slug": "mujin-24ji-tenpo-coin-laundry-junkai-machijikan-roumu",
-      "title": "無人・24時間セルフ店舗の巡回スタッフの「待機・手待ち時間」は労働時間になりますか？",
-      "date": "2026-10-20",
-      "category": "テーマ別の労務管理",
-      "path": "/labor/column/mujin-24ji-tenpo-coin-laundry-junkai-machijikan-roumu"
-    }
-  ],
-  "skipped": [],
+  "published": [],
   "errors": [
     {
       "key": "legal:petto-shintaku-futankitsuki-izo-yuigon",
@@ -266,6 +227,6 @@
     }
   ],
   "blocked": "12本は品質確認待ちのため自動公開しません。記事別の理由を確認してください。forceでも解除しません。",
-  "outcome": "partial",
+  "outcome": "held",
   "httpStatus": "409"
 }

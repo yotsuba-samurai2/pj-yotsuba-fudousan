@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-21T03:31:49.353Z",
+  "generatedAt": "2026-10-21T08:12:32.171Z",
   "siteUrl": "sc-domain:luck428.com",
   "windowDays": 45,
   "urls": {
@@ -8,8 +8,8 @@
       "verdict": "NEUTRAL",
       "lastmod": "2026-10-20",
       "firstSeenAt": "2026-10-21T03:31:49.353Z",
-      "checkedAt": "2026-10-21T03:31:51.038Z",
-      "coverageState": "URL が Google に認識されていません",
+      "checkedAt": "2026-10-21T08:23:45.609Z",
+      "coverageState": "検出 - インデックス未登録",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
@@ -18,8 +18,8 @@
       "verdict": "NEUTRAL",
       "lastmod": "2026-10-20",
       "firstSeenAt": "2026-10-21T03:31:49.353Z",
-      "checkedAt": "2026-10-21T03:31:57.470Z",
-      "coverageState": "URL が Google に認識されていません",
+      "checkedAt": "2026-10-21T08:23:51.956Z",
+      "coverageState": "検出 - インデックス未登録",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
@@ -28,7 +28,7 @@
       "verdict": "NEUTRAL",
       "lastmod": "2026-10-18",
       "firstSeenAt": "2026-10-20T08:07:06.717Z",
-      "checkedAt": "2026-10-21T03:32:03.857Z",
+      "checkedAt": "2026-10-21T08:23:58.327Z",
       "coverageState": "検出 - インデックス未登録",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -38,7 +38,7 @@
       "verdict": "NEUTRAL",
       "lastmod": "2026-10-18",
       "firstSeenAt": "2026-10-20T08:07:06.717Z",
-      "checkedAt": "2026-10-21T03:32:10.214Z",
+      "checkedAt": "2026-10-21T08:24:04.656Z",
       "coverageState": "検出 - インデックス未登録",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -60,7 +60,7 @@
       "verdict": "NEUTRAL",
       "lastmod": "2026-10-17",
       "firstSeenAt": "2026-10-18T07:41:54.146Z",
-      "checkedAt": "2026-10-21T03:32:23.070Z",
+      "checkedAt": "2026-10-21T08:24:11.266Z",
       "coverageState": "検出 - インデックス未登録",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -70,7 +70,7 @@
       "verdict": "NEUTRAL",
       "lastmod": "2026-10-17",
       "firstSeenAt": "2026-10-18T07:41:54.146Z",
-      "checkedAt": "2026-10-21T03:32:29.474Z",
+      "checkedAt": "2026-10-21T08:24:17.886Z",
       "coverageState": "検出 - インデックス未登録",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -80,8 +80,8 @@
       "verdict": "NEUTRAL",
       "lastmod": "2026-10-17",
       "firstSeenAt": "2026-10-18T07:41:54.146Z",
-      "checkedAt": "2026-10-21T03:32:36.004Z",
-      "coverageState": "検出 - インデックス未登録",
+      "checkedAt": "2026-10-21T08:24:24.234Z",
+      "coverageState": "URL が Google に認識されていません",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
@@ -102,8 +102,8 @@
       "verdict": "NEUTRAL",
       "lastmod": "2026-10-17",
       "firstSeenAt": "2026-10-18T07:41:54.146Z",
-      "checkedAt": "2026-10-21T03:32:48.837Z",
-      "coverageState": "検出 - インデックス未登録",
+      "checkedAt": "2026-10-21T08:24:30.587Z",
+      "coverageState": "URL が Google に認識されていません",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
@@ -124,7 +124,7 @@
       "verdict": "NEUTRAL",
       "lastmod": "2026-10-17",
       "firstSeenAt": "2026-10-18T07:41:54.146Z",
-      "checkedAt": "2026-10-21T03:33:01.761Z",
+      "checkedAt": "2026-10-21T08:24:36.947Z",
       "coverageState": "検出 - インデックス未登録",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -134,8 +134,8 @@
       "verdict": "NEUTRAL",
       "lastmod": "2026-10-17",
       "firstSeenAt": "2026-10-18T07:41:54.146Z",
-      "checkedAt": "2026-10-21T03:33:08.125Z",
-      "coverageState": "検出 - インデックス未登録",
+      "checkedAt": "2026-10-21T08:24:43.331Z",
+      "coverageState": "URL が Google に認識されていません",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
@@ -144,8 +144,8 @@
       "verdict": "NEUTRAL",
       "lastmod": "2026-10-17",
       "firstSeenAt": "2026-10-18T07:41:54.146Z",
-      "checkedAt": "2026-10-21T03:33:14.554Z",
-      "coverageState": "URL が Google に認識されていません",
+      "checkedAt": "2026-10-21T08:24:49.778Z",
+      "coverageState": "検出 - インデックス未登録",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
@@ -154,7 +154,7 @@
       "verdict": "NEUTRAL",
       "lastmod": "2026-10-17",
       "firstSeenAt": "2026-10-18T07:41:54.146Z",
-      "checkedAt": "2026-10-21T03:33:21.159Z",
+      "checkedAt": "2026-10-21T08:24:56.117Z",
       "coverageState": "検出 - インデックス未登録",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -176,7 +176,7 @@
       "verdict": "NEUTRAL",
       "lastmod": "2026-10-17",
       "firstSeenAt": "2026-10-18T07:41:54.146Z",
-      "checkedAt": "2026-10-21T03:33:34.085Z",
+      "checkedAt": "2026-10-21T08:25:02.509Z",
       "coverageState": "検出 - インデックス未登録",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -186,7 +186,7 @@
       "verdict": "NEUTRAL",
       "lastmod": "2026-10-17",
       "firstSeenAt": "2026-10-18T07:41:54.146Z",
-      "checkedAt": "2026-10-21T03:33:40.448Z",
+      "checkedAt": "2026-10-21T08:25:08.869Z",
       "coverageState": "検出 - インデックス未登録",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -196,7 +196,7 @@
       "verdict": "NEUTRAL",
       "lastmod": "2026-10-17",
       "firstSeenAt": "2026-10-18T07:41:54.146Z",
-      "checkedAt": "2026-10-21T03:33:46.902Z",
+      "checkedAt": "2026-10-21T08:25:15.352Z",
       "coverageState": "検出 - インデックス未登録",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -206,7 +206,7 @@
       "verdict": "NEUTRAL",
       "lastmod": "2026-10-17",
       "firstSeenAt": "2026-10-18T07:41:54.146Z",
-      "checkedAt": "2026-10-21T03:33:53.537Z",
+      "checkedAt": "2026-10-21T08:25:21.692Z",
       "coverageState": "検出 - インデックス未登録",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -228,7 +228,7 @@
       "verdict": "NEUTRAL",
       "lastmod": "2026-10-17",
       "firstSeenAt": "2026-10-18T07:41:54.146Z",
-      "checkedAt": "2026-10-21T03:34:06.329Z",
+      "checkedAt": "2026-10-21T08:25:28.087Z",
       "coverageState": "検出 - インデックス未登録",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -238,7 +238,7 @@
       "verdict": "NEUTRAL",
       "lastmod": "2026-10-17",
       "firstSeenAt": "2026-10-18T07:41:54.146Z",
-      "checkedAt": "2026-10-21T03:34:12.763Z",
+      "checkedAt": "2026-10-21T08:25:34.435Z",
       "coverageState": "検出 - インデックス未登録",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -248,7 +248,7 @@
       "verdict": "NEUTRAL",
       "lastmod": "2026-10-17",
       "firstSeenAt": "2026-10-18T07:41:54.146Z",
-      "checkedAt": "2026-10-21T03:34:19.219Z",
+      "checkedAt": "2026-10-21T08:25:40.784Z",
       "coverageState": "検出 - インデックス未登録",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -258,7 +258,7 @@
       "verdict": "NEUTRAL",
       "lastmod": "2026-10-17",
       "firstSeenAt": "2026-10-18T07:41:54.146Z",
-      "checkedAt": "2026-10-21T03:34:25.668Z",
+      "checkedAt": "2026-10-21T08:25:47.109Z",
       "coverageState": "検出 - インデックス未登録",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -268,7 +268,7 @@
       "verdict": "NEUTRAL",
       "lastmod": "2026-10-16",
       "firstSeenAt": "2026-10-18T07:41:54.146Z",
-      "checkedAt": "2026-10-21T03:34:32.010Z",
+      "checkedAt": "2026-10-21T08:25:53.508Z",
       "coverageState": "検出 - インデックス未登録",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -278,8 +278,8 @@
       "verdict": "NEUTRAL",
       "lastmod": "2026-10-16",
       "firstSeenAt": "2026-10-18T07:41:54.146Z",
-      "checkedAt": "2026-10-21T03:34:38.742Z",
-      "coverageState": "URL が Google に認識されていません",
+      "checkedAt": "2026-10-21T08:25:59.886Z",
+      "coverageState": "検出 - インデックス未登録",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
@@ -288,7 +288,7 @@
       "verdict": "NEUTRAL",
       "lastmod": "2026-10-16",
       "firstSeenAt": "2026-10-18T07:41:54.146Z",
-      "checkedAt": "2026-10-21T03:34:45.148Z",
+      "checkedAt": "2026-10-21T08:26:06.431Z",
       "coverageState": "検出 - インデックス未登録",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -298,7 +298,7 @@
       "verdict": "NEUTRAL",
       "lastmod": "2026-10-16",
       "firstSeenAt": "2026-10-18T07:41:54.146Z",
-      "checkedAt": "2026-10-21T03:34:51.679Z",
+      "checkedAt": "2026-10-21T08:26:13.009Z",
       "coverageState": "URL が Google に認識されていません",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -308,7 +308,7 @@
       "verdict": "NEUTRAL",
       "lastmod": "2026-10-15",
       "firstSeenAt": "2026-10-18T07:41:54.146Z",
-      "checkedAt": "2026-10-21T03:34:58.270Z",
+      "checkedAt": "2026-10-21T08:26:19.403Z",
       "coverageState": "検出 - インデックス未登録",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -318,7 +318,7 @@
       "verdict": "NEUTRAL",
       "lastmod": "2026-10-15",
       "firstSeenAt": "2026-10-18T07:41:54.146Z",
-      "checkedAt": "2026-10-21T03:35:04.664Z",
+      "checkedAt": "2026-10-21T08:26:25.809Z",
       "coverageState": "URL が Google に認識されていません",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -328,8 +328,8 @@
       "verdict": "NEUTRAL",
       "lastmod": "2026-10-15",
       "firstSeenAt": "2026-10-18T07:41:54.146Z",
-      "checkedAt": "2026-10-21T03:35:11.077Z",
-      "coverageState": "URL が Google に認識されていません",
+      "checkedAt": "2026-10-21T08:26:32.389Z",
+      "coverageState": "検出 - インデックス未登録",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
@@ -338,8 +338,8 @@
       "verdict": "NEUTRAL",
       "lastmod": "2026-10-14",
       "firstSeenAt": "2026-10-18T07:41:54.146Z",
-      "checkedAt": "2026-10-21T03:35:17.429Z",
-      "coverageState": "URL が Google に認識されていません",
+      "checkedAt": "2026-10-21T08:26:38.804Z",
+      "coverageState": "検出 - インデックス未登録",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
@@ -348,7 +348,7 @@
       "verdict": "NEUTRAL",
       "lastmod": "2026-10-14",
       "firstSeenAt": "2026-10-18T07:41:54.146Z",
-      "checkedAt": "2026-10-21T03:35:23.825Z",
+      "checkedAt": "2026-10-21T08:26:48.174Z",
       "coverageState": "検出 - インデックス未登録",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -358,8 +358,8 @@
       "verdict": "NEUTRAL",
       "lastmod": "2026-10-14",
       "firstSeenAt": "2026-10-18T07:41:54.146Z",
-      "checkedAt": "2026-10-21T03:35:30.235Z",
-      "coverageState": "検出 - インデックス未登録",
+      "checkedAt": "2026-10-21T08:26:54.760Z",
+      "coverageState": "URL が Google に認識されていません",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
@@ -368,7 +368,7 @@
       "verdict": "NEUTRAL",
       "lastmod": "2026-10-14",
       "firstSeenAt": "2026-10-18T07:41:54.146Z",
-      "checkedAt": "2026-10-21T03:35:36.822Z",
+      "checkedAt": "2026-10-21T08:27:01.337Z",
       "coverageState": "検出 - インデックス未登録",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -378,7 +378,7 @@
       "verdict": "NEUTRAL",
       "lastmod": "2026-10-13",
       "firstSeenAt": "2026-10-18T07:41:54.146Z",
-      "checkedAt": "2026-10-21T03:35:43.294Z",
+      "checkedAt": "2026-10-21T08:27:07.991Z",
       "coverageState": "検出 - インデックス未登録",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -388,7 +388,7 @@
       "verdict": "NEUTRAL",
       "lastmod": "2026-10-13",
       "firstSeenAt": "2026-10-18T07:41:54.146Z",
-      "checkedAt": "2026-10-21T03:35:49.741Z",
+      "checkedAt": "2026-10-21T08:27:14.417Z",
       "coverageState": "検出 - インデックス未登録",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -398,7 +398,7 @@
       "verdict": "NEUTRAL",
       "lastmod": "2026-10-12",
       "firstSeenAt": "2026-10-18T07:41:54.146Z",
-      "checkedAt": "2026-10-21T03:35:56.100Z",
+      "checkedAt": "2026-10-21T08:27:20.818Z",
       "coverageState": "検出 - インデックス未登録",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -408,7 +408,7 @@
       "verdict": "NEUTRAL",
       "lastmod": "2026-10-12",
       "firstSeenAt": "2026-10-18T07:41:54.146Z",
-      "checkedAt": "2026-10-21T03:36:02.499Z",
+      "checkedAt": "2026-10-21T08:27:27.224Z",
       "coverageState": "検出 - インデックス未登録",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -418,8 +418,8 @@
       "verdict": "NEUTRAL",
       "lastmod": "2026-10-12",
       "firstSeenAt": "2026-10-18T07:41:54.146Z",
-      "checkedAt": "2026-10-21T03:36:08.866Z",
-      "coverageState": "URL が Google に認識されていません",
+      "checkedAt": "2026-10-21T08:27:33.643Z",
+      "coverageState": "検出 - インデックス未登録",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
@@ -428,7 +428,7 @@
       "verdict": "NEUTRAL",
       "lastmod": "2026-10-12",
       "firstSeenAt": "2026-10-18T07:41:54.146Z",
-      "checkedAt": "2026-10-21T03:36:15.509Z",
+      "checkedAt": "2026-10-21T08:27:40.156Z",
       "coverageState": "検出 - インデックス未登録",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -438,8 +438,8 @@
       "verdict": "NEUTRAL",
       "lastmod": "2026-10-10",
       "firstSeenAt": "2026-10-10T05:51:55.205Z",
-      "checkedAt": "2026-10-21T03:36:21.866Z",
-      "coverageState": "URL が Google に認識されていません",
+      "checkedAt": "2026-10-21T08:27:46.494Z",
+      "coverageState": "検出 - インデックス未登録",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
@@ -460,7 +460,7 @@
       "verdict": "NEUTRAL",
       "lastmod": "2026-10-10",
       "firstSeenAt": "2026-10-10T05:51:55.205Z",
-      "checkedAt": "2026-10-21T03:36:34.759Z",
+      "checkedAt": "2026-10-21T08:27:52.930Z",
       "coverageState": "検出 - インデックス未登録",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -494,7 +494,7 @@
       "verdict": "NEUTRAL",
       "lastmod": "2026-10-10",
       "firstSeenAt": "2026-10-10T05:51:55.205Z",
-      "checkedAt": "2026-10-21T03:36:53.900Z",
+      "checkedAt": "2026-10-21T08:28:01.260Z",
       "coverageState": "検出 - インデックス未登録",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -516,7 +516,7 @@
       "verdict": "NEUTRAL",
       "lastmod": "2026-10-10",
       "firstSeenAt": "2026-10-10T05:51:55.205Z",
-      "checkedAt": "2026-10-21T03:37:06.735Z",
+      "checkedAt": "2026-10-21T08:28:07.593Z",
       "coverageState": "検出 - インデックス未登録",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -526,8 +526,8 @@
       "verdict": "NEUTRAL",
       "lastmod": "2026-10-10",
       "firstSeenAt": "2026-10-10T05:51:55.205Z",
-      "checkedAt": "2026-10-21T03:37:13.129Z",
-      "coverageState": "検出 - インデックス未登録",
+      "checkedAt": "2026-10-21T08:28:14.153Z",
+      "coverageState": "URL が Google に認識されていません",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
       "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
@@ -536,7 +536,7 @@
       "verdict": "NEUTRAL",
       "lastmod": "2026-10-10",
       "firstSeenAt": "2026-10-10T05:51:55.205Z",
-      "checkedAt": "2026-10-21T03:37:19.675Z",
+      "checkedAt": "2026-10-21T08:28:20.704Z",
       "coverageState": "検出 - インデックス未登録",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -546,7 +546,7 @@
       "verdict": "NEUTRAL",
       "lastmod": "2026-10-10",
       "firstSeenAt": "2026-10-10T05:51:55.205Z",
-      "checkedAt": "2026-10-21T03:37:26.065Z",
+      "checkedAt": "2026-10-21T08:28:27.053Z",
       "coverageState": "URL が Google に認識されていません",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -556,7 +556,7 @@
       "verdict": "NEUTRAL",
       "lastmod": "2026-10-10",
       "firstSeenAt": "2026-10-10T05:51:55.205Z",
-      "checkedAt": "2026-10-21T03:37:32.430Z",
+      "checkedAt": "2026-10-21T08:28:33.414Z",
       "coverageState": "検出 - インデックス未登録",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -578,7 +578,7 @@
       "verdict": "NEUTRAL",
       "lastmod": "2026-10-10",
       "firstSeenAt": "2026-10-10T05:51:55.205Z",
-      "checkedAt": "2026-10-21T03:37:45.258Z",
+      "checkedAt": "2026-10-21T08:28:39.754Z",
       "coverageState": "検出 - インデックス未登録",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -588,7 +588,7 @@
       "verdict": "NEUTRAL",
       "lastmod": "2026-10-10",
       "firstSeenAt": "2026-10-10T05:51:55.205Z",
-      "checkedAt": "2026-10-21T03:37:51.838Z",
+      "checkedAt": "2026-10-21T08:28:46.240Z",
       "coverageState": "検出 - インデックス未登録",
       "indexingState": "INDEXING_STATE_UNSPECIFIED",
       "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -1591,519 +1591,1219 @@
       "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
     },
     "https://luck428.com/column/kensetsugyo-shizaioki-shako-chosei-kuiki-bukken": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-22",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-22"
+      "checkedAt": "2026-10-21T08:12:33.524Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-10-17T07:28:26Z",
+      "googleCanonical": "https://luck428.com/column/kensetsugyo-shizaioki-shako-chosei-kuiki-bukken"
     },
     "https://luck428.com/column/souzoku-teiki-shakuchiken-tatemono-baikyaku": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-22",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-22"
+      "checkedAt": "2026-10-21T08:12:40.029Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-10-17T09:42:49Z",
+      "googleCanonical": "https://luck428.com/column/souzoku-teiki-shakuchiken-tatemono-baikyaku"
     },
     "https://luck428.com/labor/column/kensetsugyo-shakaihoken-hitorioyakata-rosai-tokubetsu": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-22",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-22"
+      "checkedAt": "2026-10-21T08:12:46.499Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-23T08:40:18Z",
+      "googleCanonical": "https://luck428.com/labor/column/kensetsugyo-shakaihoken-hitorioyakata-rosai-tokubetsu"
     },
     "https://luck428.com/labor/column/muki-tenkan-rule-5nen-jitsumu": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-22",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-22"
+      "checkedAt": "2026-10-21T08:12:52.909Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-10-20T19:52:53Z",
+      "googleCanonical": "https://luck428.com/labor/column/muki-tenkan-rule-5nen-jitsumu"
     },
     "https://luck428.com/legal/column/jidosha-souzoku-iten-toroku-tetsuzuki": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-22",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-22"
+      "checkedAt": "2026-10-21T08:12:59.471Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-23T08:39:02Z",
+      "googleCanonical": "https://luck428.com/legal/column/jidosha-souzoku-iten-toroku-tetsuzuki"
     },
     "https://luck428.com/legal/column/souko-gyo-touroku-yoken-shinsei": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-22",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-22"
+      "checkedAt": "2026-10-21T08:13:06.040Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-23T08:39:02Z",
+      "googleCanonical": "https://luck428.com/legal/column/souko-gyo-touroku-yoken-shinsei"
     },
     "https://luck428.com/column/chuka-souzokunin-kyoyu-mochibun-baikyaku-jitsumu": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-21",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-21"
+      "checkedAt": "2026-10-21T08:13:12.621Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-22T04:39:13Z",
+      "googleCanonical": "https://luck428.com/column/chuka-souzokunin-kyoyu-mochibun-baikyaku-jitsumu"
     },
     "https://luck428.com/column/sanpai-tsumikae-hokan-bukken-youken": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-21",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-21"
+      "checkedAt": "2026-10-21T08:13:19.018Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-22T04:39:13Z",
+      "googleCanonical": "https://luck428.com/column/sanpai-tsumikae-hokan-bukken-youken"
     },
     "https://luck428.com/column/souzoku-seisan-ryokuchi-baikyaku-nagare": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-21",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-21"
+      "checkedAt": "2026-10-21T08:13:25.452Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-22T04:39:13Z",
+      "googleCanonical": "https://luck428.com/column/souzoku-seisan-ryokuchi-baikyaku-nagare"
     },
     "https://luck428.com/labor/column/kodomo-kosodate-shienkin-2026-kyuyo-keisan": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-21",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-21"
+      "checkedAt": "2026-10-21T08:13:31.801Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-21T22:35:38Z",
+      "googleCanonical": "https://luck428.com/labor/column/kodomo-kosodate-shienkin-2026-kyuyo-keisan"
     },
     "https://luck428.com/labor/column/shika-iin-gikoushi-roumu-part-shakaihoken": {
-      "verdict": "UNCHECKED",
+      "verdict": "NEUTRAL",
+      "lastmod": "2026-09-21",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-21"
+      "checkedAt": "2026-10-21T08:13:38.201Z",
+      "coverageState": "検出 - インデックス未登録",
+      "indexingState": "INDEXING_STATE_UNSPECIFIED",
+      "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
     },
     "https://luck428.com/legal/column/gaikoku-kankei-shomen-ninsho-apostille-koushou-tsukaiwake": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-21",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-21"
+      "checkedAt": "2026-10-21T08:13:44.540Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-21T22:35:39Z",
+      "googleCanonical": "https://luck428.com/legal/column/gaikoku-kankei-shomen-ninsho-apostille-koushou-tsukaiwake"
     },
     "https://luck428.com/column/coin-laundry-bukken-youto-haisui-youken": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-20",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-20"
+      "checkedAt": "2026-10-21T08:13:50.941Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-21T09:30:43Z",
+      "googleCanonical": "https://luck428.com/column/coin-laundry-bukken-youto-haisui-youken"
     },
     "https://luck428.com/column/souzoku-hatazao-mudouro-tochi-baikyaku-nagare": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-20",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-20"
+      "checkedAt": "2026-10-21T08:13:57.362Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-21T09:30:43Z",
+      "googleCanonical": "https://luck428.com/column/souzoku-hatazao-mudouro-tochi-baikyaku-nagare"
     },
     "https://luck428.com/labor/column/biyoshitsu-kaigyo-buai-kashimise-shakaihoken": {
-      "verdict": "UNCHECKED",
+      "verdict": "NEUTRAL",
+      "lastmod": "2026-09-20",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-20"
+      "checkedAt": "2026-10-21T08:14:03.922Z",
+      "coverageState": "検出 - インデックス未登録",
+      "indexingState": "INDEXING_STATE_UNSPECIFIED",
+      "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
     },
     "https://luck428.com/labor/column/gaikokujin-keieisha-yakuin-shakaihoken-tekiyo": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-20",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-20"
+      "checkedAt": "2026-10-21T08:14:10.744Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-25T14:15:00Z",
+      "googleCanonical": "https://luck428.com/labor/column/gaikokujin-keieisha-yakuin-shakaihoken-tekiyo"
     },
     "https://luck428.com/legal/column/cleaning-jo-kaisetsu-kozo-setsubi-todokede": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-20",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-20"
+      "checkedAt": "2026-10-21T08:14:17.390Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-21T03:23:07Z",
+      "googleCanonical": "https://luck428.com/legal/column/cleaning-jo-kaisetsu-kozo-setsubi-todokede"
     },
     "https://luck428.com/legal/column/souzoku-kekkaku-haijo-chigai-bunkatsu": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-20",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-20"
+      "checkedAt": "2026-10-21T08:14:24.105Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-10-16T00:20:40Z",
+      "googleCanonical": "https://luck428.com/legal/column/souzoku-kekkaku-haijo-chigai-bunkatsu"
     },
     "https://luck428.com/column/chuka-pro-shuueki-biru-kensazumisho-dd": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-19",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-19"
+      "checkedAt": "2026-10-21T08:14:30.495Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-20T17:11:34Z",
+      "googleCanonical": "https://luck428.com/column/chuka-pro-shuueki-biru-kensazumisho-dd"
     },
     "https://luck428.com/column/chuko-jidosha-kaitai-hasai-bukken-youken": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-19",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-19"
+      "checkedAt": "2026-10-21T08:14:37.033Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-20T17:11:34Z",
+      "googleCanonical": "https://luck428.com/column/chuko-jidosha-kaitai-hasai-bukken-youken"
     },
     "https://luck428.com/column/souzoku-nagaya-renmune-kiribanashi-baikyaku": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-19",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-19"
+      "checkedAt": "2026-10-21T08:14:43.439Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-20T17:11:34Z",
+      "googleCanonical": "https://luck428.com/column/souzoku-nagaya-renmune-kiribanashi-baikyaku"
     },
     "https://luck428.com/labor/column/ginou-jisshu-tokutei-ginou-ikou-gaishoku-shakaihoken": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-19",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-19"
+      "checkedAt": "2026-10-21T08:14:49.835Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-20T11:57:43Z",
+      "googleCanonical": "https://luck428.com/labor/column/ginou-jisshu-tokutei-ginou-ikou-gaishoku-shakaihoken"
     },
     "https://luck428.com/labor/column/houkago-day-jihatsu-sougou-shien-jido-shidouin-haichi": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-19",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-19"
+      "checkedAt": "2026-10-21T08:14:56.197Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-20T12:07:45Z",
+      "googleCanonical": "https://luck428.com/labor/column/houkago-day-jihatsu-sougou-shien-jido-shidouin-haichi"
     },
     "https://luck428.com/legal/column/chintai-jutaku-kanrigyo-touroku-sublease-kanyu": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-19",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-19"
+      "checkedAt": "2026-10-21T08:15:02.621Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-20T11:57:43Z",
+      "googleCanonical": "https://luck428.com/legal/column/chintai-jutaku-kanrigyo-touroku-sublease-kanyu"
     },
     "https://luck428.com/column/ryokangyo-hotel-eigyo-bukken-youken": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-18",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-18"
+      "checkedAt": "2026-10-21T08:15:09.183Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-10-20T14:59:42Z",
+      "googleCanonical": "https://luck428.com/column/ryokangyo-hotel-eigyo-bukken-youken"
     },
     "https://luck428.com/column/souzoku-shakuchiken-tatemono-baikyaku-shodaku": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-18",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-18"
+      "checkedAt": "2026-10-21T08:15:16.185Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-19T01:11:16Z",
+      "googleCanonical": "https://luck428.com/column/souzoku-shakuchiken-tatemono-baikyaku-shodaku"
     },
     "https://luck428.com/labor/column/ikukyu-shutoku-koumu-2025-300nin-kakudai": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-18",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-18"
+      "checkedAt": "2026-10-21T08:15:22.805Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-19T01:38:17Z",
+      "googleCanonical": "https://luck428.com/labor/column/ikukyu-shutoku-koumu-2025-300nin-kakudai"
     },
     "https://luck428.com/labor/column/isha-jikangai-jougen-2024-suijun-kenko-kakuho": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-18",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-18"
+      "checkedAt": "2026-10-21T08:15:29.263Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-21T22:35:39Z",
+      "googleCanonical": "https://luck428.com/labor/column/isha-jikangai-jougen-2024-suijun-kenko-kakuho"
     },
     "https://luck428.com/legal/column/dai-isshu-doubutsu-toriatsukai-touroku-youken": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-18",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-18"
+      "checkedAt": "2026-10-21T08:15:35.774Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-19T01:40:17Z",
+      "googleCanonical": "https://luck428.com/legal/column/dai-isshu-doubutsu-toriatsukai-touroku-youken"
     },
     "https://luck428.com/legal/column/souzoku-seimei-hokenkin-taisho-jueki-modoshi": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-18",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-18"
+      "checkedAt": "2026-10-21T08:15:42.106Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-19T01:38:17Z",
+      "googleCanonical": "https://luck428.com/legal/column/souzoku-seimei-hokenkin-taisho-jueki-modoshi"
     },
     "https://luck428.com/column/souzoku-chintai-heiyou-jutaku-uru-kasu": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-17",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-17"
+      "checkedAt": "2026-10-21T08:15:48.448Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-17T22:39:40Z",
+      "googleCanonical": "https://luck428.com/column/souzoku-chintai-heiyou-jutaku-uru-kasu"
     },
     "https://luck428.com/column/trunk-room-bukken-youto-chiiki-youken": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-17",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-17"
+      "checkedAt": "2026-10-21T08:15:55.078Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-17T22:39:40Z",
+      "googleCanonical": "https://luck428.com/column/trunk-room-bukken-youto-chiiki-youken"
     },
     "https://luck428.com/labor/column/gijinkoku-chuka-taiwan-jinzai-saiyo-roumu-zairyu": {
-      "verdict": "UNCHECKED",
+      "verdict": "NEUTRAL",
+      "lastmod": "2026-09-17",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-17"
+      "checkedAt": "2026-10-21T08:16:01.530Z",
+      "coverageState": "URL が Google に認識されていません",
+      "indexingState": "INDEXING_STATE_UNSPECIFIED",
+      "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
     },
     "https://luck428.com/labor/column/shuro-sentaku-shien-jinin-haichi-roumu": {
-      "verdict": "UNCHECKED",
+      "verdict": "NEUTRAL",
+      "lastmod": "2026-09-17",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-17"
+      "checkedAt": "2026-10-21T08:16:07.994Z",
+      "coverageState": "検出 - インデックス未登録",
+      "indexingState": "INDEXING_STATE_UNSPECIFIED",
+      "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
     },
     "https://luck428.com/legal/column/biyoushojo-kaisetsu-todokede-kozo-setsubi-kijun": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-17",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-17"
+      "checkedAt": "2026-10-21T08:16:14.507Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-17T22:39:40Z",
+      "googleCanonical": "https://luck428.com/legal/column/biyoushojo-kaisetsu-todokede-kozo-setsubi-kijun"
     },
     "https://luck428.com/legal/column/taiwan-kigyo-nihon-shiten-gaikoku-kaisha-touki": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-17",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-17"
+      "checkedAt": "2026-10-21T08:16:21.153Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-17T22:39:41Z",
+      "googleCanonical": "https://luck428.com/legal/column/taiwan-kigyo-nihon-shiten-gaikoku-kaisha-touki"
     },
     "https://luck428.com/column/koshu-yokujo-sauna-bukken-youken": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-16",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-16"
+      "checkedAt": "2026-10-21T08:16:27.764Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-16T23:12:45Z",
+      "googleCanonical": "https://luck428.com/column/koshu-yokujo-sauna-bukken-youken"
     },
     "https://luck428.com/column/souzoku-tsukigime-coin-parking-tochi-baikyaku": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-16",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-16"
+      "checkedAt": "2026-10-21T08:16:34.165Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-17T00:50:12Z",
+      "googleCanonical": "https://luck428.com/column/souzoku-tsukigime-coin-parking-tochi-baikyaku"
     },
     "https://luck428.com/labor/column/inshokuten-kaigyo-roumu-shinya-shift-minashi": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-16",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-16"
+      "checkedAt": "2026-10-21T08:16:40.536Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-16T23:12:45Z",
+      "googleCanonical": "https://luck428.com/labor/column/inshokuten-kaigyo-roumu-shinya-shift-minashi"
     },
     "https://luck428.com/labor/column/koudo-senmonshoku-gaikokujin-it-koyo-roumu": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-16",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-16"
+      "checkedAt": "2026-10-21T08:16:47.227Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-16T23:10:43Z",
+      "googleCanonical": "https://luck428.com/labor/column/koudo-senmonshoku-gaikokujin-it-koyo-roumu"
     },
     "https://luck428.com/legal/column/koshu-yokujo-sauna-eigyo-kyoka-shinsei": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-16",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-16"
+      "checkedAt": "2026-10-21T08:16:53.875Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-30T00:14:35Z",
+      "googleCanonical": "https://luck428.com/legal/column/koshu-yokujo-sauna-eigyo-kyoka-shinsei"
     },
     "https://luck428.com/legal/column/tokubetsu-kiyoryo-souzokunin-igai-shinzoku": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-16",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-16"
+      "checkedAt": "2026-10-21T08:17:00.673Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-16T23:10:43Z",
+      "googleCanonical": "https://luck428.com/legal/column/tokubetsu-kiyoryo-souzokunin-igai-shinzoku"
     },
     "https://luck428.com/column/shuro-keizoku-shien-b-bukken-youto-chiiki-shobo": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-15",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-15"
+      "checkedAt": "2026-10-21T08:17:07.429Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-10-17T14:03:47Z",
+      "googleCanonical": "https://luck428.com/column/shuro-keizoku-shien-b-bukken-youto-chiiki-shobo"
     },
     "https://luck428.com/column/souzoku-koujou-souko-dojou-osen-baikyaku": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-15",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-15"
+      "checkedAt": "2026-10-21T08:17:14.123Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-16T00:38:01Z",
+      "googleCanonical": "https://luck428.com/column/souzoku-koujou-souko-dojou-osen-baikyaku"
     },
     "https://luck428.com/labor/column/chuka-kigyo-nihon-koyo-shakaihoken-cost-zentaizo": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-15",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-15"
+      "checkedAt": "2026-10-21T08:17:20.513Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-16T23:21:32Z",
+      "googleCanonical": "https://luck428.com/labor/column/chuka-kigyo-nihon-koyo-shakaihoken-cost-zentaizo"
     },
     "https://luck428.com/labor/column/jigyo-shokei-daihyo-kotai-yakuin-shakaihoken-tetsuzuki": {
-      "verdict": "UNCHECKED",
+      "verdict": "NEUTRAL",
+      "lastmod": "2026-09-15",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-15"
+      "checkedAt": "2026-10-21T08:17:27.299Z",
+      "coverageState": "クロール済み - インデックス未登録",
+      "indexingState": "INDEXING_STATE_UNSPECIFIED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-16T23:19:58Z"
     },
     "https://luck428.com/legal/column/kamotsu-riyo-unso-1shu-2shu-touroku-kyoka": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-15",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-15"
+      "checkedAt": "2026-10-21T08:17:36.853Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-10-16T16:44:06Z",
+      "googleCanonical": "https://luck428.com/legal/column/kamotsu-riyo-unso-1shu-2shu-touroku-kyoka"
     },
     "https://luck428.com/legal/column/keieikanri-zairyu-chuka-kigyousha-kaisha-setsuritsu": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-15",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-15"
+      "checkedAt": "2026-10-21T08:17:43.416Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-16T23:16:39Z",
+      "googleCanonical": "https://luck428.com/legal/column/keieikanri-zairyu-chuka-kigyousha-kaisha-setsuritsu"
     },
     "https://luck428.com/column/chuko-sha-kobutsusho-tenjijo-hokan-bukken": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-13",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-13"
+      "checkedAt": "2026-10-21T08:17:50.008Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-16T00:38:02Z",
+      "googleCanonical": "https://luck428.com/column/chuko-sha-kobutsusho-tenjijo-hokan-bukken"
     },
     "https://luck428.com/column/souzoku-sokochi-jinushi-baikyaku": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-13",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-13"
+      "checkedAt": "2026-10-21T08:17:56.650Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-15T14:39:27Z",
+      "googleCanonical": "https://luck428.com/column/souzoku-sokochi-jinushi-baikyaku"
     },
     "https://luck428.com/labor/column/shuro-a-riyosha-roudoushasei-saitei-chingin": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-13",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-13"
+      "checkedAt": "2026-10-21T08:18:02.994Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-15T14:41:30Z",
+      "googleCanonical": "https://luck428.com/labor/column/shuro-a-riyosha-roudoushasei-saitei-chingin"
     },
     "https://luck428.com/labor/column/taiwan-koyo-shukko-shakaihoken-kyotei-nashi": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-13",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-13"
+      "checkedAt": "2026-10-21T08:18:09.575Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-15T14:43:33Z",
+      "googleCanonical": "https://luck428.com/labor/column/taiwan-koyo-shukko-shakaihoken-kyotei-nashi"
     },
     "https://luck428.com/legal/column/kaihatsu-kyoka-toshikeikakuho-29jo-nagare": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-13",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-13"
+      "checkedAt": "2026-10-21T08:18:16.354Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-15T14:39:27Z",
+      "googleCanonical": "https://luck428.com/legal/column/kaihatsu-kyoka-toshikeikakuho-29jo-nagare"
     },
     "https://luck428.com/legal/column/tokutei-zaisan-shokei-yuigon-izo-chigai": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-13",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-13"
+      "checkedAt": "2026-10-21T08:18:22.919Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-15T14:41:30Z",
+      "googleCanonical": "https://luck428.com/legal/column/tokutei-zaisan-shokei-yuigon-izo-chigai"
     },
     "https://luck428.com/column/hikyojusha-buyer-torihiki-kakunin-hanshuho": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-12",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-12"
+      "checkedAt": "2026-10-21T08:18:29.288Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-13T03:44:19Z",
+      "googleCanonical": "https://luck428.com/column/hikyojusha-buyer-torihiki-kakunin-hanshuho"
     },
     "https://luck428.com/column/tokku-minpaku-bukken-youken-nintei": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-12",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-12"
+      "checkedAt": "2026-10-21T08:18:35.872Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-12T23:50:03Z",
+      "googleCanonical": "https://luck428.com/column/tokku-minpaku-bukken-youken-nintei"
     },
     "https://luck428.com/labor/column/koyohoken-tekiyo-kakudai-shukan10jikan-2028": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-12",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-12"
+      "checkedAt": "2026-10-21T08:18:42.248Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-15T20:03:13Z",
+      "googleCanonical": "https://luck428.com/labor/column/koyohoken-tekiyo-kakudai-shukan10jikan-2028"
     },
     "https://luck428.com/labor/column/tokutei-katsudo-working-holiday-roumu-shaho": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-12",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-12"
+      "checkedAt": "2026-10-21T08:18:48.645Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-10-16T03:12:53Z",
+      "googleCanonical": "https://luck428.com/labor/column/tokutei-katsudo-working-holiday-roumu-shaho"
     },
     "https://luck428.com/legal/column/saishi-shokei-haka-butsudan-isanbunkatsu": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-12",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-12"
+      "checkedAt": "2026-10-21T08:18:55.109Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-12T23:50:03Z",
+      "googleCanonical": "https://luck428.com/legal/column/saishi-shokei-haka-butsudan-isanbunkatsu"
     },
     "https://luck428.com/legal/column/toroku-shien-kikan-touroku-shien-keikaku": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-12",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-12"
+      "checkedAt": "2026-10-21T08:19:01.683Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-12T23:50:03Z",
+      "googleCanonical": "https://luck428.com/legal/column/toroku-shien-kikan-touroku-shien-keikaku"
     },
     "https://luck428.com/column/shoukibo-takino-kaigo-bukken-youken": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-11",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-11"
+      "checkedAt": "2026-10-21T08:19:08.096Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-12T00:56:35Z",
+      "googleCanonical": "https://luck428.com/column/shoukibo-takino-kaigo-bukken-youken"
     },
     "https://luck428.com/column/souzoku-bessou-resort-mansion-shobun": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-11",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-11"
+      "checkedAt": "2026-10-21T08:19:14.523Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-12T00:56:35Z",
+      "googleCanonical": "https://luck428.com/column/souzoku-bessou-resort-mansion-shobun"
     },
     "https://luck428.com/labor/column/homon-kaigo-tokutei-jigyosho-kasan-roumu": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-11",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-11"
+      "checkedAt": "2026-10-21T08:19:21.285Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-12T01:58:34Z",
+      "googleCanonical": "https://luck428.com/labor/column/homon-kaigo-tokutei-jigyosho-kasan-roumu"
     },
     "https://luck428.com/labor/column/kaisha-bunkatsu-jigyo-joto-roudou-keiyaku-shokei": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-11",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-11"
+      "checkedAt": "2026-10-21T08:19:27.681Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-12T02:22:05Z",
+      "googleCanonical": "https://luck428.com/labor/column/kaisha-bunkatsu-jigyo-joto-roudou-keiyaku-shokei"
     },
     "https://luck428.com/legal/column/digital-isan-netbank-ango-shisan-souzoku": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-11",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-11"
+      "checkedAt": "2026-10-21T08:19:34.086Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-10-12T00:34:06Z",
+      "googleCanonical": "https://luck428.com/legal/column/digital-isan-netbank-ango-shisan-souzoku"
     },
     "https://luck428.com/legal/column/sanpai-shobun-gyo-chukan-shori-kyoka-shisetsu": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-11",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-11"
+      "checkedAt": "2026-10-21T08:19:40.651Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-10-16T19:56:50Z",
+      "googleCanonical": "https://luck428.com/legal/column/sanpai-shobun-gyo-chukan-shori-kyoka-shisetsu"
     },
     "https://luck428.com/column/shika-gikoujo-kaisetsu-bukken-youken": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-10",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-10"
+      "checkedAt": "2026-10-21T08:19:47.022Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-10-05T16:07:37Z",
+      "googleCanonical": "https://luck428.com/column/shika-gikoujo-kaisetsu-bukken-youken"
     },
     "https://luck428.com/column/souzoku-shido-mochibun-ichitei-doro-baikyaku": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-10",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-10"
+      "checkedAt": "2026-10-21T08:19:53.421Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-11T16:57:26Z",
+      "googleCanonical": "https://luck428.com/column/souzoku-shido-mochibun-ichitei-doro-baikyaku"
     },
     "https://luck428.com/labor/column/iryo-kaigo-shukujitchoku-kyoka-kijun": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-10",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-10"
+      "checkedAt": "2026-10-21T08:19:59.875Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-11T15:00:47Z",
+      "googleCanonical": "https://luck428.com/labor/column/iryo-kaigo-shukujitchoku-kyoka-kijun"
     },
     "https://luck428.com/labor/column/kanri-kantokusha-nabakari-warimashi-shinya": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-10",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-10"
+      "checkedAt": "2026-10-21T08:20:06.463Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-11T15:00:46Z",
+      "googleCanonical": "https://luck428.com/labor/column/kanri-kantokusha-nabakari-warimashi-shinya"
     },
     "https://luck428.com/legal/column/fuzoku-eigyo-1go-settai-inshoku-kyoka-bukken-kyori": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-10",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-10"
+      "checkedAt": "2026-10-21T08:20:12.821Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-10-11T01:12:14Z",
+      "googleCanonical": "https://luck428.com/legal/column/fuzoku-eigyo-1go-settai-inshoku-kyoka-bukken-kyori"
     },
     "https://luck428.com/legal/column/souzokubun-joto-tokubetsu-jueki-shomei": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-10",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-10"
+      "checkedAt": "2026-10-21T08:20:19.206Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-10-13T16:30:41Z",
+      "googleCanonical": "https://luck428.com/legal/column/souzokubun-joto-tokubetsu-jueki-shomei"
     },
     "https://luck428.com/column/eigyo-souko-touroku-bukken-youken": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-09",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-09"
+      "checkedAt": "2026-10-21T08:20:25.619Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-10-15T11:31:05Z",
+      "googleCanonical": "https://luck428.com/column/eigyo-souko-touroku-bukken-youken"
     },
     "https://luck428.com/column/souzoku-sanrin-genya-baikyaku-nagare": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-09",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-09"
+      "checkedAt": "2026-10-21T08:20:31.983Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-10-13T12:22:51Z",
+      "googleCanonical": "https://luck428.com/column/souzoku-sanrin-genya-baikyaku-nagare"
     },
     "https://luck428.com/labor/column/hitori-de-60sha-roumu-de-nariatsu-ka": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-09",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-09"
+      "checkedAt": "2026-10-21T08:20:38.328Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-07T08:01:36Z",
+      "googleCanonical": "https://luck428.com/labor/column/hitori-de-60sha-roumu-de-nariatsu-ka"
     },
     "https://luck428.com/labor/column/hotei-san-choubo-seibi-hozon": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-09",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-09"
+      "checkedAt": "2026-10-21T08:20:44.682Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-15T17:43:25Z",
+      "googleCanonical": "https://luck428.com/labor/column/hotei-san-choubo-seibi-hozon"
     },
     "https://luck428.com/labor/column/ikuji-kyugyo-kyufu-encho-2025-genkakuka": {
-      "verdict": "UNCHECKED",
+      "verdict": "NEUTRAL",
+      "lastmod": "2026-09-09",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-09"
+      "checkedAt": "2026-10-21T08:20:51.386Z",
+      "coverageState": "URL が Google に認識されていません",
+      "indexingState": "INDEXING_STATE_UNSPECIFIED",
+      "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
     },
     "https://luck428.com/legal/column/koseki-koiki-kofu-2024-souzoku-tetsuzuki": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-09",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-09"
+      "checkedAt": "2026-10-21T08:20:57.796Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-10-15T15:57:56Z",
+      "googleCanonical": "https://luck428.com/legal/column/koseki-koiki-kofu-2024-souzoku-tetsuzuki"
     },
     "https://luck428.com/legal/column/ryokogyo-touroku-shubetsu-yoken-nagare": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-09",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-09"
+      "checkedAt": "2026-10-21T08:21:04.382Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-15T17:40:30Z",
+      "googleCanonical": "https://luck428.com/legal/column/ryokogyo-touroku-shubetsu-yoken-nagare"
     },
     "https://luck428.com/column/hikyojusha-buyer-apart-loan-yushi-kanou": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-08",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-08"
+      "checkedAt": "2026-10-21T08:21:10.739Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-09T15:13:57Z",
+      "googleCanonical": "https://luck428.com/column/hikyojusha-buyer-apart-loan-yushi-kanou"
     },
     "https://luck428.com/column/souzoku-haiguusha-kyojuuken-tatemono-baikyaku": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-08",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-08"
+      "checkedAt": "2026-10-21T08:21:17.103Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-09T15:13:58Z",
+      "googleCanonical": "https://luck428.com/column/souzoku-haiguusha-kyojuuken-tatemono-baikyaku"
     },
     "https://luck428.com/labor/column/hoikuen-kaisetsu-roumu-haichi-kijun-shogu": {
-      "verdict": "UNCHECKED",
+      "verdict": "NEUTRAL",
+      "lastmod": "2026-09-08",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-08"
+      "checkedAt": "2026-10-21T08:21:23.502Z",
+      "coverageState": "検出 - インデックス未登録",
+      "indexingState": "INDEXING_STATE_UNSPECIFIED",
+      "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
     },
     "https://luck428.com/labor/column/kigyonai-tenkin-shukko-gaikokujin-shakaihoken-nyu": {
-      "verdict": "UNCHECKED",
+      "verdict": "NEUTRAL",
+      "lastmod": "2026-09-08",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-08"
+      "checkedAt": "2026-10-21T08:21:29.866Z",
+      "coverageState": "クロール済み - インデックス未登録",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-10-16T15:19:33Z",
+      "googleCanonical": "https://luck428.com/labor/column/kigyonai-tenkin-shukko-gaikokujin-shakaihoken-nyu"
     },
     "https://luck428.com/legal/column/ninka-gai-hoiku-shisetsu-secchi-todokede-kijun": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-08",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-08"
+      "checkedAt": "2026-10-21T08:21:36.205Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-10-16T05:20:30Z",
+      "googleCanonical": "https://luck428.com/legal/column/ninka-gai-hoiku-shisetsu-secchi-todokede-kijun"
     },
     "https://luck428.com/legal/column/souzoku-nin-fuzai-seisannin-tokubetsu-enko": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-08",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-08"
+      "checkedAt": "2026-10-21T08:21:42.566Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-10-12T22:01:58Z",
+      "googleCanonical": "https://luck428.com/legal/column/souzoku-nin-fuzai-seisannin-tokubetsu-enko"
     },
     "https://luck428.com/column/souzoku-sublease-master-lease-chii-shokei": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-07",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-07"
+      "checkedAt": "2026-10-21T08:21:48.935Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-08T06:59:07Z",
+      "googleCanonical": "https://luck428.com/column/souzoku-sublease-master-lease-chii-shokei"
     },
     "https://luck428.com/labor/column/shobyo-teate-kin-shikyu-yoken-tsusan": {
-      "verdict": "UNCHECKED",
+      "verdict": "NEUTRAL",
+      "lastmod": "2026-09-07",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-07"
+      "checkedAt": "2026-10-21T08:21:55.352Z",
+      "coverageState": "検出 - インデックス未登録",
+      "indexingState": "INDEXING_STATE_UNSPECIFIED",
+      "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
     },
     "https://luck428.com/labor/column/shogai-fukushi-kaigo-jokin-kansan-keisan-jinin": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-07",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-07"
+      "checkedAt": "2026-10-21T08:22:01.997Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-10-11T01:11:27Z",
+      "googleCanonical": "https://luck428.com/labor/column/shogai-fukushi-kaigo-jokin-kansan-keisan-jinin"
     },
     "https://luck428.com/legal/column/kaigai-honkon-singapore-souzokunin-isanbunkatsu-shomei": {
-      "verdict": "UNCHECKED",
+      "verdict": "NEUTRAL",
+      "lastmod": "2026-09-07",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-07"
+      "checkedAt": "2026-10-21T08:22:08.696Z",
+      "coverageState": "検出 - インデックス未登録",
+      "indexingState": "INDEXING_STATE_UNSPECIFIED",
+      "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
     },
     "https://luck428.com/legal/column/kaitai-koji-gyo-touroku-kensetsu-kyoka-chigai": {
-      "verdict": "UNCHECKED",
+      "verdict": "NEUTRAL",
+      "lastmod": "2026-09-07",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-07"
+      "checkedAt": "2026-10-21T08:22:15.101Z",
+      "coverageState": "検出 - インデックス未登録",
+      "indexingState": "INDEXING_STATE_UNSPECIFIED",
+      "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
     },
     "https://luck428.com/legal/column/kensetsugyo-kyoka-yoken-keikan-sengi-zaisan": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-07",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-07"
+      "checkedAt": "2026-10-21T08:22:21.700Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-08T01:28:25Z",
+      "googleCanonical": "https://luck428.com/legal/column/kensetsugyo-kyoka-yoken-keikan-sengi-zaisan"
     },
     "https://luck428.com/column/biyoshitsu-riyojo-bukken-hokenjo-todokede": {
-      "verdict": "UNCHECKED",
+      "verdict": "NEUTRAL",
+      "lastmod": "2026-09-06",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-06"
+      "checkedAt": "2026-10-21T08:22:28.085Z",
+      "coverageState": "見つかりませんでした（404）",
+      "indexingState": "INDEXING_STATE_UNSPECIFIED",
+      "pageFetchState": "NOT_FOUND",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-08-26T06:41:00Z"
     },
     "https://luck428.com/column/doubutsu-toriatsukai-bukken-youken": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-06",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-06"
+      "checkedAt": "2026-10-21T08:22:34.467Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-08-27T06:40:49Z",
+      "googleCanonical": "https://luck428.com/column/doubutsu-toriatsukai-bukken-youken"
     },
     "https://luck428.com/column/kanka-bunkatsu-fudosan-baikyaku-nagare": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-06",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-06"
+      "checkedAt": "2026-10-21T08:22:40.881Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-10T02:50:48Z",
+      "googleCanonical": "https://luck428.com/column/kanka-bunkatsu-fudosan-baikyaku-nagare"
     },
     "https://luck428.com/column/ninchisho-taiogata-grouphome-bukken-youken": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-06",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-06"
+      "checkedAt": "2026-10-21T08:22:47.224Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-07T14:59:10Z",
+      "googleCanonical": "https://luck428.com/column/ninchisho-taiogata-grouphome-bukken-youken"
     },
     "https://luck428.com/column/sakoju-bukken-youken-toroku": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-06",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-06"
+      "checkedAt": "2026-10-21T08:22:53.794Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-08-27T06:40:51Z",
+      "googleCanonical": "https://luck428.com/column/sakoju-bukken-youken-toroku"
     },
     "https://luck428.com/column/shinkyu-seikotsuin-bukken-youto-hokenjo-todokede": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-06",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-06"
+      "checkedAt": "2026-10-21T08:23:00.140Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-10-18T11:21:21Z",
+      "googleCanonical": "https://luck428.com/column/shinkyu-seikotsuin-bukken-youto-hokenjo-todokede"
     },
     "https://luck428.com/column/souzoku-mitouki-tatemono-hyodai-touki-baikyaku": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-06",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-06"
+      "checkedAt": "2026-10-21T08:23:06.854Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-07T14:59:09Z",
+      "googleCanonical": "https://luck428.com/column/souzoku-mitouki-tatemono-hyodai-touki-baikyaku"
     },
     "https://luck428.com/column/yakkyoku-bukken-youken-kozo-setsubi": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-06",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-06"
+      "checkedAt": "2026-10-21T08:23:13.260Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-08-29T06:37:55Z",
+      "googleCanonical": "https://luck428.com/column/yakkyoku-bukken-youken-kozo-setsubi"
     },
     "https://luck428.com/labor/column/clinic-kaigyo-roumu-shukunikkin-kangoshi-shakaihoken": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-06",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-06"
+      "checkedAt": "2026-10-21T08:23:19.828Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-07T07:57:31Z",
+      "googleCanonical": "https://luck428.com/labor/column/clinic-kaigyo-roumu-shukunikkin-kangoshi-shakaihoken"
     },
     "https://luck428.com/labor/column/jugyoin-shibo-tetsuzuki-mibarai-chingin-izoku-kyufu": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-06",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-06"
+      "checkedAt": "2026-10-21T08:23:26.386Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-07T07:57:31Z",
+      "googleCanonical": "https://luck428.com/labor/column/jugyoin-shibo-tetsuzuki-mibarai-chingin-izoku-kyufu"
     },
     "https://luck428.com/legal/column/kaigo-taxi-fukushi-yuso-kyoka-shako-yoken": {
-      "verdict": "UNCHECKED",
+      "verdict": "PASS",
+      "lastmod": "2026-09-06",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-06"
+      "checkedAt": "2026-10-21T08:23:32.773Z",
+      "coverageState": "送信して登録されました",
+      "indexingState": "INDEXING_ALLOWED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-07T07:57:31Z",
+      "googleCanonical": "https://luck428.com/legal/column/kaigo-taxi-fukushi-yuso-kyoka-shako-yoken"
     },
     "https://luck428.com/legal/column/shurui-kouri-menkyo-tenpo-bukken-yoken": {
-      "verdict": "UNCHECKED",
+      "verdict": "NEUTRAL",
+      "lastmod": "2026-09-06",
       "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "lastmod": "2026-09-06"
+      "checkedAt": "2026-10-21T08:23:39.191Z",
+      "coverageState": "クロール済み - インデックス未登録",
+      "indexingState": "INDEXING_STATE_UNSPECIFIED",
+      "pageFetchState": "SUCCESSFUL",
+      "robotsTxtState": "ALLOWED",
+      "lastCrawlTime": "2026-09-07T07:57:31Z"
     }
   }
 }
