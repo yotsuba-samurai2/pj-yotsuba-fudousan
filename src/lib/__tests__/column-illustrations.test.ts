@@ -153,7 +153,7 @@ describe("resolveColumnIllustration", () => {
 
   it("マニフェストの既存画像がすべてpublic配下に存在する", () => {
     const assetPaths = getColumnIllustrationAssetPaths();
-    expect(assetPaths.length).toBe(54);
+    expect(assetPaths.length).toBe(55); // 2026-10-21 labor-dattai-ichijikin を追加
     for (const assetPath of assetPaths) {
       const filePath = path.join(process.cwd(), "public", assetPath.replace(/^\//, ""));
       expect(fs.existsSync(filePath), assetPath).toBe(true);
