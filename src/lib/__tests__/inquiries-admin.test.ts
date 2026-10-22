@@ -1,5 +1,5 @@
 // ペット横断 指示書 版2.0 第11章：受付（個人情報）の閲覧は受付先メールの所有者だけ・保存期間1年
-import { beforeEach, describe, expect, it, vi } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { NextRequest } from "next/server";
 import { AuthError, verifyAdminRequest, verifyInquiryOwner } from "@/lib/api-auth";
 import { GET, POST } from "@/app/api/admin/inquiries/route";
@@ -15,6 +15,7 @@ vi.mock("@/lib/inquiries/store", () => ({ getInquiry: vi.fn(), listInquiries: vi
 vi.mock("@/lib/inquiries/mail", () => ({ sendOfficeNotification: vi.fn() }));
 
 const OWNER = { id: "u-owner", email: "uramatsujoji@luck428.com", email_confirmed_at: "2026-01-01T00:00:00Z" };
+afterEach(() => vi.unstubAllEnvs());
 const req = (url = "https://test.invalid/api/admin/inquiries", init: { method?: string; body?: string } = {}) =>
   new NextRequest(url, { ...init, headers: { Authorization: "Bearer token" } });
 const row = {
@@ -59,9 +60,11 @@ describe("閲覧者の限定", () => {
     expect((await GET(new NextRequest("https://test.invalid/api/admin/inquiries"))).status).toBe(401);
   });
 
-  it("既存の管理API用の認証（verifyAdminRequest）の挙動は変えない", async () => {
+  it("明示許可された管理者でも受付の所有者権限は得ない", async () => {
+    vi.stubEnv("ADMIN_OPERATOR_EMAILS", "staff@luck428.com");
     h.user = { ...OWNER, email: "staff@luck428.com" };
     await expect(verifyAdminRequest(req())).resolves.toEqual({ uid: "u-owner", email: "staff@luck428.com" });
+    await expect(verifyInquiryOwner(req())).rejects.toMatchObject({ status: 403 });
   });
 });
 

@@ -1,12 +1,21 @@
 import { NextRequest } from "next/server";
 import { createClient } from "@supabase/supabase-js";
+import { z } from "zod";
 
 /**
  * Supabase Auth のアクセストークンを service role クライアントで検証する。
- * シグネチャは移行前の実装から不変（既存APIルートは無改修で動く）。
+ * 確認済みメールがサーバー設定の許可リストにある利用者だけを通す。
+ * ADMIN_OPERATOR_EMAILS未設定・不正は閉じる。公開前に承認済み管理者を設定すること。
  */
-export async function verifyAdminRequest(req: NextRequest) {
+export async function verifyAdminRequest(req: NextRequest): Promise<{ uid: string; email: string | undefined }> {
   const user = await verifiedUser(req);
+  const operators = (process.env.ADMIN_OPERATOR_EMAILS ?? "").split(",").map(v => v.trim().toLowerCase());
+  if (operators.some(v => !z.string().email().safeParse(v).success)) {
+    throw new AuthError("管理者の許可設定が不足しています", 503);
+  }
+  if (!user.email || !user.email_confirmed_at || !operators.includes(user.email.toLowerCase())) {
+    throw new AuthError("管理操作を行う権限がありません", 403);
+  }
   return {
     uid: user.id,
     email: user.email ?? undefined,
@@ -23,7 +32,7 @@ export const INQUIRY_OWNER_EMAIL = "uramatsujoji@luck428.com";
  * 受付の閲覧・再送用の認証。ログインしていることに加えて、次の2つを満たす場合だけ通す。
  * - Supabase の利用者情報のメールが INQUIRY_OWNER_EMAIL と一致する
  * - そのメールアドレスの確認が済んでいる（email_confirmed_at がある）＝アドレスの所有を確認済み
- * 既存の管理APIが使う verifyAdminRequest の挙動は変えない。
+ * 一般管理者の許可リストとは独立し、受付の閲覧権限を広げない。
  */
 export async function verifyInquiryOwner(req: NextRequest) {
   const user = await verifiedUser(req);
