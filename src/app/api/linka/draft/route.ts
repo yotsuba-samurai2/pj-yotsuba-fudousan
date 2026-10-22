@@ -2,6 +2,7 @@
 // ルール（指示書§4）：敬体200字以内・固有名詞を入れない・「ご返答は任意で、お断りいただいても差し支えありません」を必ず含む・受任/報酬に触れない。
 // 失敗・検証NGは localDraft（デモ）へフォールバック。相談本文は扱わない（summaryの分野/地域/時期のみ）。
 import { NextResponse } from "next/server";
+import { rateLimit } from "@/lib/rate-limit";
 import Anthropic from "@anthropic-ai/sdk";
 import { getMember } from "@/lib/linka/directory";
 import { localDraft, NAMEISH } from "@/lib/linka/demo";
@@ -22,6 +23,10 @@ const clean = (v: unknown): string => {
 };
 
 export async function POST(req: Request) {
+  // 安全性調査 2026-10-22：認証なしで Anthropic API を呼ぶため、IPごとに回数を抑える（課金の悪用対策）
+  if (!rateLimit(req, 10, 60_000).success) {
+    return NextResponse.json({ error: "too-many-requests" }, { status: 429 });
+  }
   let body: { memberId?: string; inqType?: string; summary?: Summary };
   try {
     body = await req.json();

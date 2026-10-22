@@ -1,5 +1,5 @@
 // ペット横断 指示書 版2.0 第11章：受付（個人情報）の閲覧は受付先メールの所有者だけ・保存期間1年
-import { beforeEach, describe, expect, it, vi } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { NextRequest } from "next/server";
 import { AuthError, verifyAdminRequest, verifyInquiryOwner } from "@/lib/api-auth";
 import { GET, POST } from "@/app/api/admin/inquiries/route";
@@ -59,9 +59,43 @@ describe("閲覧者の限定", () => {
     expect((await GET(new NextRequest("https://test.invalid/api/admin/inquiries"))).status).toBe(401);
   });
 
-  it("既存の管理API用の認証（verifyAdminRequest）の挙動は変えない", async () => {
-    h.user = { ...OWNER, email: "staff@luck428.com" };
-    await expect(verifyAdminRequest(req())).resolves.toEqual({ uid: "u-owner", email: "staff@luck428.com" });
+});
+
+// 安全性調査 2026-10-22：管理APIも利用者を限定する（Supabase は新規登録を受け付けるため）
+describe("管理APIの利用者の限定（verifyAdminRequest）", () => {
+  afterEach(() => {
+    delete process.env.ADMIN_EMAILS;
+  });
+
+  it("受付先メールの所有者（確認済み）は通る", async () => {
+    await expect(verifyAdminRequest(req())).resolves.toEqual({ uid: "u-owner", email: OWNER.email });
+  });
+
+  it("大文字小文字の違いは同じアドレスとして扱う", async () => {
+    h.user = { ...OWNER, email: "UramatsuJoji@Luck428.com" };
+    await expect(verifyAdminRequest(req())).resolves.toMatchObject({ uid: "u-owner" });
+  });
+
+  it.each([
+    ["登録しただけの別のメールアドレス", { ...OWNER, email: "someone@example.com" }],
+    ["メールアドレスの確認が済んでいない", { ...OWNER, email_confirmed_at: null }],
+    ["メールアドレスが無い", { ...OWNER, email: undefined }],
+  ])("%s は 403", async (_, user) => {
+    h.user = user;
+    await expect(verifyAdminRequest(req())).rejects.toMatchObject({ status: 403 });
+  });
+
+  it("ADMIN_EMAILS（カンマ区切り）で追加した確認済みアドレスは通る", async () => {
+    process.env.ADMIN_EMAILS = " Staff@luck428.com , other@luck428.com";
+    h.user = { ...OWNER, id: "u-staff", email: "staff@luck428.com" };
+    await expect(verifyAdminRequest(req())).resolves.toEqual({ uid: "u-staff", email: "staff@luck428.com" });
+    h.user = { ...OWNER, id: "u-x", email: "intruder@example.com" };
+    await expect(verifyAdminRequest(req())).rejects.toMatchObject({ status: 403 });
+  });
+
+  it("未ログイン・無効なトークンは 401", async () => {
+    h.user = null;
+    await expect(verifyAdminRequest(req())).rejects.toMatchObject({ status: 401 });
   });
 });
 

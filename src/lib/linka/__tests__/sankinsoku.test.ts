@@ -1,11 +1,14 @@
 // フェーズK｜三禁則・業際・ガードの受け入れテスト（ClaudeCode実装指示書§9の6点を固定）
 // AI経路はモック不要＝ANTHROPIC_API_KEY未設定でデモ経路（＝フォールバックの最後の砦）を検証する。
 // 前段ガード（URGENT/NAMEISH）はAPIルート直呼びで検証（AIの手前で決定論的に落ちること）。
-import { beforeEach, describe, expect, it } from "vitest";
+import { beforeEach, describe, expect, it, vi } from "vitest";
 import { localConcierge, localSearch, localTriage } from "@/lib/linka/demo";
 import { BANNED_RECO_WORDS, resolveResult, validateLegalConciergeOutput, validateResolved } from "@/lib/linka/resolve";
 import { POST as linkaPost } from "@/app/api/linka/route";
 import { POST as draftPost } from "@/app/api/linka/draft/route";
+
+// レート制限（IPごとの回数）はこのテストの対象外＝同一IPから多数呼ぶため常に通す（挙動は linka-rate-limit.test.ts）
+vi.mock("@/lib/rate-limit", () => ({ rateLimit: () => ({ success: true, remaining: 1 }) }));
 
 const post = (body: unknown) =>
   linkaPost(

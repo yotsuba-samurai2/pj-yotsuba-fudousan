@@ -1,3 +1,14 @@
+## 2026-10-22 サイト安全性調査（PHP脆弱性 php2shell を契機に）と対処
+
+- [x] 4サイト（luck428.com・/legal・/labor・www.samurai.co.jp）の配信元を実測。すべて Vercel＋Next.js で PHP 不使用＝php2shell の直接の対象外。PHP に触れるのは Xserver（3ドメインの DNS・luck428gyosei.com の空の docroot）だけ
+- [x] 管理APIの認証に穴：Supabase Auth が新規登録を受け付け、verifyAdminRequest がログイン済みしか見ていなかった → 受付先メール＋ADMIN_EMAILS の許可リストと確認済みメール必須に変更（src/lib/api-auth.ts・テスト追加）
+- [x] Next.js 16.3.5 → 16.3.8（next/og ImageResponse の RCE 修正を含む。本リポジトリは next/og 未使用）・sharp 0.35.4 → 0.35.5（librsvg）
+- [x] /api/linka・/api/linka/draft に IP ごとのレート制限（認証なしで Anthropic API を呼ぶため）
+- [ ] 浦松操作：Supabase「Allow new users to sign up」をオフ・Users に見知らぬアカウントがないか確認
+- [ ] 浦松操作：Xserver のパスワード変更・2段階認証・旧PHP/WordPress ファイルの有無確認・PHP 8.3.36 以上
+- [ ] 浦松操作：3ドメインに DMARC（p=quarantine）・Google Workspace の DKIM。luck428gyosei.com を Vercel に接続するか Xserver 側で止めるか決める
+- [ ] PR のマージ・本番反映（指示後）。マージ前に Vercel の環境変数 ADMIN_EMAILS が必要か確認（管理者が浦松のメール1件だけなら不要）
+
 ## 2026-10-07 社労士の小規模人数料金改定（Draft PRまで）
 
 - [x] 最新main・指示書・適用規程と既存変更を確認し、checkoutを分離

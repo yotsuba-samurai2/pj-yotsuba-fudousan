@@ -1,5 +1,3 @@
-import { NextRequest } from "next/server";
-
 type RateLimitEntry = {
   count: number;
   resetAt: number;
@@ -22,12 +20,12 @@ function cleanup() {
 
 /**
  * Simple in-memory rate limiter (per IP).
- * @param req - The incoming request
+ * @param req - The incoming request（NextRequest でも素の Request でも可。テストは素の Request で呼ぶ）
  * @param limit - Max requests per window (default: 10)
  * @param windowMs - Window duration in ms (default: 60000 = 1 minute)
  */
 export function rateLimit(
-  req: NextRequest,
+  req: Request,
   limit = 10,
   windowMs = 60_000,
 ): { success: boolean; remaining: number } {
@@ -38,7 +36,7 @@ export function rateLimit(
     req.headers.get("x-real-ip") ??
     "unknown";
 
-  const key = `${ip}:${req.nextUrl.pathname}`;
+  const key = `${ip}:${new URL(req.url).pathname}`;
   const now = Date.now();
   const entry = store.get(key);
 
