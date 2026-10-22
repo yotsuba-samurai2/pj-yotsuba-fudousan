@@ -1,11 +1,12 @@
 "use client";
 
 import { LocaleLink as Link } from "@/components/ui/LocaleLink";
+import { ContactReceipt } from "@/components/shared/ContactReceipt";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import { useTranslation } from "@/hooks/useTranslation";
 
 export function ThanksPageClient() {
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
 
   return (
     <section className="flex min-h-[70vh] items-center justify-center px-4 pt-20">
@@ -21,6 +22,7 @@ export function ThanksPageClient() {
           <br />
           {t("thanks.description2")}
         </p>
+        <ContactReceipt business="realestate" locale={locale} />
         <div className="mt-10">
           <Link
             href="/"

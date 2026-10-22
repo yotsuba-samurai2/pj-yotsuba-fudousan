@@ -1,4 +1,5 @@
 import type { z } from "zod";
+import { contactCategory } from "./contact";
 import {
   PET_CATEGORY_LABELS, PET_OWNER_CATEGORY, PET_RENTER_CATEGORY,
   petOwnerRows, petOwnerSchema, petRenterRows, petRenterSchema,
@@ -10,7 +11,7 @@ import {
  * 指示書 版2.0 第12章「画面の任意値だけで送信先・権限を決定しない」。
  */
 export type InquiryCategoryDef = {
-  business: "realestate" | "legal";
+  business: "realestate" | "legal" | "labor";
   businessLabel: string;
   label: string;
   schema: z.ZodType<Record<string, unknown>>;
@@ -19,6 +20,9 @@ export type InquiryCategoryDef = {
 };
 
 export const INQUIRY_CATEGORIES: Record<string, InquiryCategoryDef> = {
+  "contact-realestate": contactCategory("realestate"),
+  "contact-legal": contactCategory("legal"),
+  "contact-labor": contactCategory("labor"),
   [PET_RENTER_CATEGORY]: {
     business: "realestate",
     businessLabel: "四葉不動産株式会社",

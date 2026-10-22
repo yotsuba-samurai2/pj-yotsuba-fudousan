@@ -58,7 +58,8 @@ export async function POST(req: NextRequest) {
   if (!envelope.success) return fail(400, GENERIC_ERROR);
   const def = inquiryCategory(envelope.data.category);
   // 隠し欄に値がある送信は受け付けない（人には見えない欄。理由は返さない）。
-  if (!def || envelope.data[HONEYPOT_FIELD]) return fail(400, GENERIC_ERROR);
+  // General contacts use /api/contact's namespaced key and payload-conflict check.
+  if (!def || envelope.data.category.startsWith("contact-") || envelope.data[HONEYPOT_FIELD]) return fail(400, GENERIC_ERROR);
   const parsed = def.schema.safeParse(envelope.data.fields);
   if (!parsed.success) return NextResponse.json({ errors: z.flattenError(parsed.error).fieldErrors }, { status: 400, headers: NO_STORE });
   const fields = parsed.data as Record<string, unknown> & { name: string; email: string; phone: string };

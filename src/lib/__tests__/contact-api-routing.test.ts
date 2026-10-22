@@ -3,6 +3,13 @@ import { NextRequest } from "next/server";
 
 const { send } = vi.hoisted(() => ({ send: vi.fn() }));
 vi.mock("resend", () => ({ Resend: class { emails = { send }; } }));
+vi.mock("@/lib/prisma", () => ({ prisma: { inquiry: {
+  findUnique: vi.fn().mockResolvedValue(null),
+  create: vi.fn().mockResolvedValue({ id: "test-only", receiptNo: "Y261023-7K3F" }),
+  update: vi.fn().mockResolvedValue({}),
+  deleteMany: vi.fn().mockResolvedValue({ count: 0 }),
+} } }));
+vi.mock("@/lib/rate-limit", () => ({ rateLimit: () => ({ success: true }) }));
 import { POST } from "@/app/api/contact/route";
 
 const sample = { name: "Local Test", email: "local-test@example.invalid", phone: "", category: "labor", source: "ai", message: "Local regression test" };
@@ -18,7 +25,7 @@ describe("contact routing (all email delivery mocked)", () => {
   ])("preserves recipients and data for %s", async (business, category, label, categoryLabel) => {
     const response = await POST(request({ ...sample, business, category }));
     expect(response.status).toBe(200);
-    expect(await response.json()).toEqual({ ok: true });
+    expect(await response.json()).toEqual({ ok: true, receiptNo: "Y261023-7K3F" });
     expect(send).toHaveBeenCalledTimes(2);
     const [notification] = send.mock.calls[0];
     const [reply] = send.mock.calls[1];
@@ -66,14 +73,14 @@ describe("contact routing (all email delivery mocked)", () => {
     expect((await response.json()).errors.category).toBeTruthy();
     expect(send).not.toHaveBeenCalled();
   });
-  it("returns a failure when the provider throws", async () => {
+  it("keeps the saved receipt when the provider throws", async () => {
     send.mockRejectedValueOnce(new Error("mock unavailable"));
     const log = vi.spyOn(console, "error").mockImplementation(() => {});
     try {
       const response = await POST(request({ ...sample, business: "labor" }));
-      expect(response.status).toBe(500);
-      expect(await response.json()).toHaveProperty("error");
-      expect(send).toHaveBeenCalledTimes(1);
+      expect(response.status).toBe(200);
+      expect(await response.json()).toHaveProperty("receiptNo");
+      expect(send).toHaveBeenCalledTimes(2);
     } finally { log.mockRestore(); }
   });
 });

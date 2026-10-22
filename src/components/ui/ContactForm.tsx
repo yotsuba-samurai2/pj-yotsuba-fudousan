@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { createContactSubmission, isContactReceipt, rememberContactReceipt, CONTACT_RECEIPT_COPY } from "@/lib/shared/contact-submission";
 import { useRouter } from "next/navigation";
 import type { FormEvent } from "react";
 import { useTranslation } from "@/hooks/useTranslation";
@@ -31,6 +32,7 @@ type Props = {
 
 export function ContactForm({ thanksPath = "/thanks", business = "realestate" }: Props) {
   const router = useRouter();
+  const [submitContact] = useState(createContactSubmission);
   const { t, locale } = useTranslation();
 
   const [name, setName] = useState("");
@@ -99,11 +101,7 @@ export function ContactForm({ thanksPath = "/thanks", business = "realestate" }:
     setSubmitting(true);
 
     try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, phone, category, source, message: minpakuActive && message.trim() ? minpakuPurchaseMessage({ regions, budget, purpose }, message) : message, business }),
-      });
+      const res = await submitContact({ name, email, phone, category, source, message: minpakuActive && message.trim() ? minpakuPurchaseMessage({ regions, budget, purpose }, message) : message, business, locale, sourcePath: window.location.pathname });
 
       const data = await res.json();
 
@@ -121,7 +119,10 @@ export function ContactForm({ thanksPath = "/thanks", business = "realestate" }:
         return;
       }
 
-      // 送信完了（2026-08-14 新設）。
+      if (!isContactReceipt(data)) throw new Error("receipt unconfirmed");
+      rememberContactReceipt(data.receiptNo, business);
+
+      // 保存した受付番号を確認してから成功を計測する。
       // 本フォームは React の状態から fetch で送るため、GA4 の自動計測（form_submit）が
       // 発火せず、成果が1件も記録されていなかった。ここが唯一の成功地点なので必ず通す。
       // パラメータは閉じた選択肢のみ。氏名・メール・電話・本文は送らない（gtag.ts の規約）。
@@ -299,6 +300,7 @@ export function ContactForm({ thanksPath = "/thanks", business = "realestate" }:
         >
           {submitting ? t("contact.form.submitting") : t("common.submit")}
         </button>
+        <p className="text-xs text-text-muted">{CONTACT_RECEIPT_COPY[lang].notice}</p>
       </form>
     </div>
   );

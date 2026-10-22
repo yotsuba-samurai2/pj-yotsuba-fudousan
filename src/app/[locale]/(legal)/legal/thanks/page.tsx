@@ -4,6 +4,7 @@
 //   ContactForm の遷移にロケール接頭辞を付けたことで、非日本語版URLに実際に到達するようになるため
 //   本ページも同時に直す（到達可能にした先が日本語のまま、という状態を作らない）。
 import Link from "next/link";
+import { ContactReceipt } from "@/components/shared/ContactReceipt";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import type { Metadata } from "next";
 
@@ -41,6 +42,7 @@ export default async function LegalThanksPage() {
             <br />
             {c.body2}
           </p>
+          <ContactReceipt business="legal" locale={locale} />
           <div className="mt-10">
             <Link
               href={addLocalePrefix("/legal", locale)}
