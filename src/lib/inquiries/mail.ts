@@ -26,8 +26,8 @@ function getResend() {
 
 async function send(payload: Parameters<Resend["emails"]["send"]>[0], idempotencyKey: string): Promise<SendResult> {
   try {
-    const { error } = await getResend().emails.send(payload, { idempotencyKey });
-    return error ? "failed" : "sent";
+    const { data, error } = await getResend().emails.send(payload, { idempotencyKey });
+    return !error && typeof data?.id === "string" && data.id.length > 0 ? "sent" : "failed";
   } catch {
     return "failed";
   }

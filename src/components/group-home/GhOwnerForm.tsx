@@ -9,6 +9,7 @@
 // クライアント安全：office-public / contact-intake / gh-owner-intake のみ参照（SR名なし）。
 import { useRef, useState } from "react";
 import type { FormEvent } from "react";
+import { createContactSubmission, isContactReceipt, rememberContactReceipt, CONTACT_RECEIPT_COPY } from "@/lib/shared/contact-submission";
 import { useRouter } from "next/navigation";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { LineLink } from "@/components/shared/LineLink";
@@ -35,6 +36,7 @@ type Errors = Partial<Record<"name" | "email" | "phone" | "address" | "propertyT
 
 export function GhOwnerForm() {
   const router = useRouter();
+  const [submitContact] = useState(createContactSubmission);
   const { locale } = useLanguage();
 
   const [name, setName] = useState("");
@@ -95,18 +97,9 @@ export function GhOwnerForm() {
         hasDrawings,
         note,
       });
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: name.trim(),
-          email: email.trim(),
-          phone: phone.trim(),
-          category: GH_OWNER_CATEGORY,
-          source,
-          message,
-          business: "realestate",
-        }),
+      const res = await submitContact({
+        name: name.trim(), email: email.trim(), phone: phone.trim(), category: GH_OWNER_CATEGORY,
+        source, message, business: "realestate", locale, sourcePath: window.location.pathname,
       });
       const data = await res.json();
       if (!res.ok) {
@@ -120,7 +113,9 @@ export function GhOwnerForm() {
         }
         return;
       }
-      // 送信成功＝唯一の成果地点。パラメータは閉じた選択肢のみ。
+      if (!isContactReceipt(data)) throw new Error("receipt unconfirmed");
+      rememberContactReceipt(data.receiptNo, "realestate");
+      // 保存確認後の成功＝唯一の成果地点。パラメータは閉じた選択肢のみ。
       gaEvent("contact_submit", {
         ...GA_BASE,
         category: GH_OWNER_CATEGORY,
@@ -360,6 +355,7 @@ export function GhOwnerForm() {
           </LocaleLink>
           ）。相談・物件の登録は無料で、報酬は賃貸借契約が成立したときのみ発生します。
         </p>
+        <p className="text-xs text-text-muted">{CONTACT_RECEIPT_COPY[locale].notice}</p>
       </form>
     </section>
   );

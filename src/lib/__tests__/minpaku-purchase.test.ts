@@ -3,6 +3,13 @@ import { NextRequest } from "next/server";
 
 const { send } = vi.hoisted(() => ({ send: vi.fn() }));
 vi.mock("resend", () => ({ Resend: class { emails = { send }; } }));
+vi.mock("@/lib/prisma", () => ({ prisma: { inquiry: {
+  findUnique: vi.fn().mockResolvedValue(null),
+  create: vi.fn().mockResolvedValue({ id: "test-only", receiptNo: "Y261023-7K3F" }),
+  update: vi.fn().mockResolvedValue({}),
+  deleteMany: vi.fn().mockResolvedValue({ count: 0 }),
+} } }));
+vi.mock("@/lib/rate-limit", () => ({ rateLimit: () => ({ success: true }) }));
 import { POST } from "@/app/api/contact/route";
 import { MINPAKU_LISTINGS, hasCurrentListingPrice } from "../shared/minpaku-listings";
 import { minpakuPurchaseMessage } from "../shared/minpaku-purchase";
@@ -41,7 +48,7 @@ describe("purchase inquiry API contract (all email delivery mocked)", () => {
     });
     const response = await POST(request);
     expect(response.status).toBe(200);
-    expect(await response.json()).toEqual({ ok: true });
+    expect(await response.json()).toEqual({ ok: true, receiptNo: "Y261023-7K3F" });
     expect(send).toHaveBeenCalledTimes(2);
     const notification = send.mock.calls[0][0];
     expect(notification.from).toContain("四葉不動産");

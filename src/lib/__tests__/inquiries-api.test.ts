@@ -51,6 +51,7 @@ describe("入口", () => {
 
   it.each([
     ["未知の受付の種類", body({ category: "pet-travel" })],
+    ["一般問い合わせは専用の保存・重複確認経路を使う", body({ category: "contact-realestate", fields: { name: "Test", email: "test@example.invalid", phone: "", category: "other", source: "", message: "Test", business: "realestate" } })],
     ["idempotencyKey の形式違い", body({ idempotencyKey: "abc" })],
     ["隠し欄に値がある（迷惑投稿）", body({ hp_field: "http://spam.example" })],
   ])("%s は保存しない（400）", async (_, value) => {
