@@ -73,7 +73,7 @@ const COPY: Record<LangCode, RyokinCopy> = {
     colJitsuhi: "実費",
     toService: "→ 業務内容",
     sectionTitles: [
-      "障害福祉サービス",
+      "障害福祉・介護保険サービス",
       "国際業務（在留資格・帰化・認証／中国語対応）",
       "会社設立・法人",
       "建設業・宅建業",
@@ -129,7 +129,7 @@ const COPY: Record<LangCode, RyokinCopy> = {
     colJitsuhi: "Disbursements",
     toService: "→ Service details",
     sectionTitles: [
-      "Disability-Welfare Services",
+      "Disability-Welfare and Long-Term Care Insurance Services",
       "International Services (Residence Status, Naturalization, Authentication / Chinese Support)",
       "Company & Corporation Formation",
       "Construction & Real-Estate Business Licensing",
@@ -189,7 +189,7 @@ const COPY: Record<LangCode, RyokinCopy> = {
     colJitsuhi: "實費",
     toService: "→ 業務內容",
     sectionTitles: [
-      "障礙福祉服務",
+      "障礙福祉・介護保險服務",
       "國際業務（在留資格・歸化・認證／中文對應）",
       "公司設立・法人",
       "建設業・宅建業（不動產業）",
@@ -245,7 +245,7 @@ const COPY: Record<LangCode, RyokinCopy> = {
     colJitsuhi: "实费",
     toService: "→ 业务内容",
     sectionTitles: [
-      "残障福祉服务",
+      "残障福祉・介护保险服务",
       "国际业务（在留资格・归化・认证／中文对应）",
       "公司设立・法人",
       "建设业・宅建业（不动产业）",

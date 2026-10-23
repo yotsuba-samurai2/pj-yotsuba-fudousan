@@ -23,6 +23,7 @@ const NAMES: Record<string, Tr> = {
   "指定申請（通所系）スタンダード〔単独・顧問不要〕": { en: "Designation application (day-service type), standard [stand-alone, no retainer required]", "zh-tw": "指定申請（日間通所類）標準〔單次委託・無須顧問契約〕", zh: "指定申请（日间通所类）标准〔单次委托・无需顾问合同〕" },
   "指定申請（通所系）ライト〔書類作成中心〕": { en: "Designation application (day-service type), light [mainly document preparation]", "zh-tw": "指定申請（日間通所類）簡易〔以文件製作為主〕", zh: "指定申请（日间通所类）简易〔以文件制作为主〕" },
   "指定申請（訪問系：居宅介護・重度訪問介護）": { en: "Designation application (home-visit type: home care / visiting care for persons with severe disabilities)", "zh-tw": "指定申請（到府類：居家照護・重度到府照護）", zh: "指定申请（上门类：居家照护・重度上门照护）" },
+  "指定申請（介護保険・訪問介護）スタンダード〔単独・顧問不要〕": { en: "Designation application (long-term care insurance: home-visit care), standard [stand-alone, no retainer required]", "zh-tw": "指定申請（介護保險・到府介護）標準〔單次委託・無須顧問契約〕", zh: "指定申请（介护保险・上门介护）标准〔单次委托・无需顾问合同〕" },
   "運営指導（実地指導）フルサポート": { en: "Administrative guidance (on-site inspection), full support", "zh-tw": "營運指導（實地指導）全程支援", zh: "运营指导（实地指导）全程支援" },
   "事業計画書（融資用）": { en: "Business plan (for loan applications)", "zh-tw": "事業計畫書（融資用）", zh: "事业计划书（融资用）" },
   "処遇改善加算 計画書（届出）": { en: "Treatment-improvement add-on: plan (notification)", "zh-tw": "待遇改善加算　計畫書（申報）", zh: "待遇改善加算　计划书（申报）" },
