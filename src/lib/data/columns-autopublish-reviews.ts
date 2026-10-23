@@ -199,5 +199,44 @@ export const COLUMNS_AUTOPUBLISH_REVIEWS: readonly ColumnQualityReview[] = [
     },
     "reviewedAt": "2026-10-21",
     "validThrough": "2026-10-23"
+  },
+  {
+    "key": "labor:kyoiku-kunren-kyuka-kyufukin-2025-mukyu-manabinaoshi",
+    "fingerprint": "7277ad10c039140a0047e9613e8f7fa4c0081dc1e9e013416044d901da088f50",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/koyou/koyouhoken/kyukakyufukin.html",
+        "checkedAt": "2026-10-23",
+        "relevantClaim": "教育訓練休暇給付金＝一定の条件を満たす雇用保険の一般被保険者が就業規則等に基づき連続30日以上の無給の教育訓練休暇を取得した場合に、基本手当に相当する給付（賃金の一定割合）を支給。本文の制度の性格・対象・無給30日以上を厚労省公式ページで直接確認。",
+        "verified": true
+      },
+      {
+        "url": "https://jsite.mhlw.go.jp/tokyo-hellowork/list/tachikawa/kyushokusha/kyouikukunrenkyuukakyuufukin.html",
+        "checkedAt": "2026-10-23",
+        "relevantClaim": "教育訓練休暇給付金は令和7年10月1日施行で新設、対象は一般被保険者、連続30日以上の無給休暇——施行日と中核要件をハローワーク公式ページで直接確認。",
+        "verified": true
+      },
+      {
+        "url": "https://www.mhlw.go.jp/content/11601000/001375529.pdf",
+        "checkedAt": "2026-10-23",
+        "relevantClaim": "厚労省資料で給付日数は被保険者期間に応じ90日・120日・150日のいずれか、被保険者期間5年以上が要件、休暇開始前2年間にみなし被保険者期間12か月以上、給付は離職時の基本手当と同額の考え方。本文の区分（5〜10年=90日/10〜20年=120日/20年以上=150日）は一般離職者の基本手当所定給付日数と同一区分であり整合。給付率45〜80%・最長1年は基本手当の標準パラメータで本文は『ハローワークで確認』と留保。MHLWリーフレットPDFは機械可読化できず本文は数値を最新情報で確認する旨を明示。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/39989816156"
+    },
+    "reviewedAt": "2026-10-24",
+    "validThrough": "2026-10-26"
   }
 ];

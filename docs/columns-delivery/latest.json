@@ -1,123 +1,111 @@
 {
-  "todayJst": "2026-10-23",
-  "runUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/39818265066",
+  "todayJst": "2026-10-24",
+  "runUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/39989816156",
   "generationStatus": "validated",
-  "generatedCount": 5,
+  "generatedCount": 6,
   "reviewResult": "success",
   "reviewReportAvailable": true,
-  "reviewPass": false,
+  "reviewPass": true,
   "findings": {
     "blocker": 0,
-    "major": 1,
-    "minor": 0
+    "major": 0,
+    "minor": 1
   },
   "reviewFindings": [
     {
-      "file": "scripts/labor-columns/169-tokutei-ginou-jidosha-unsogyo-ukeire-roumu-menkyo.md",
-      "severity": "major",
-      "issue": "受入れ見込数「分野全体で最大2万4,500人」が、本文自身が『現行』と認める令和8年1月23日閣議決定の分野別運用方針改定で約2万2,100人へ再設定された可能性が高い（官公庁由来情報）。本文は結論・本節・『この記事の根拠』で2万4,500人を『国土交通省ページにより確認（2026年10月参照）』と明記しており、改定後の現行一次資料と不一致のおそれ。4言語（日・英・繁・簡）すべてに同記載。一次PDFがバイナリのため直接確認できず未検証。",
-      "fix": "改定後の分野別運用方針（令和8年1月23日閣議決定）の一次資料で受入れ見込数を再確認し、現行値へ更新する。2万4,500人を残す場合は『令和6年当初の見込数で、令和8年改定後は別数値』である旨を明示して現行値を併記する。英・繁・簡の訳文も同時に修正する。"
+      "file": "scripts/realestate-columns/137-souzoku-morido-kisei-kuiki-takuchi-baikyaku.md (および en/zh-tw/zh の各翻訳)",
+      "severity": "minor",
+      "issue": "出典として挙げる国土交通省『盛土規制法』解説ページのURL https://www.mlit.go.jp/toshi/web/toshi_tobou_tk_000064.html が現在404（WebFetchで2回とも Not Found）。国交省のページ再編で退避済みと見られる。参照日2026-10-23に閲覧した旨の記載と実際の到達性が食い違う。ただし当該URLが支える事実（令和5年5月26日施行・2規制区域・工事規制）は現行の国交省ページ https://www.mlit.go.jp/toshi/web/morido.html およびe-Gov法令で独立に裏取り済みで、法的主張の誤りはない。",
+      "fix": "リンク先を現行の https://www.mlit.go.jp/toshi/web/morido.html に差し替える（本審査ではファイルは変更しない）。"
     }
   ],
-  "registeredCount": 0,
-  "qualityEligibleCount": 0,
+  "registeredCount": 1,
+  "qualityEligibleCount": 1,
   "heldCount": 5,
   "scheduledCount": 0,
-  "unverifiedSourceCount": 3,
+  "unverifiedSourceCount": 1,
   "publishedCount": null,
   "articles": [
     {
-      "key": "realestate:kitchen-car-shikomi-basho-bukken-eigyo-kyoka-youken",
-      "fingerprint": "5b5569bb83fe7bf9db3e3690b2ed6903e23861f54c6068f251922ae427650b0d",
-      "title": "キッチンカーの「仕込み場所」はどんな物件が必要か——食品衛生法の営業許可・給排水・用途地域",
+      "key": "realestate:shuro-ikou-shien-bukken-youto-chiiki-youken",
+      "fingerprint": "6a00079ca8ef5a3c95df347987405dea9cd5e6cbcb426200642b49f56bc2cef8",
+      "title": "就労移行支援の事業所にできる物件は——用途地域・バリアフリー・消防の確認点",
       "registered": false,
       "state": "held",
       "reasons": [
-        "enの内部リンクに言語不一致があります",
         "公開レビュー記録が未登録です",
-        "独立レビューに未解決の重大な指摘があります"
+        "確認済みの公的な一次根拠が不足しています"
       ],
       "sourceFailures": [],
       "sourceEvidenceAvailable": true
     },
     {
-      "key": "realestate:souzoku-ninchisho-sozokunin-fudosan-baikyaku-koken-shobun-kyoka",
-      "fingerprint": "eabd746c8ebf4847f615b41d58218ce4627bb7441134aa0ff962ff9b4c247dae",
-      "title": "相続人に認知症の方がいると不動産は売れないのか——成年後見と居住用不動産の処分許可",
+      "key": "realestate:souzoku-morido-kisei-kuiki-takuchi-baikyaku",
+      "fingerprint": "ea00525c64752865ee43cfd6613f5a604c5e162abff61fef9a112d2843942722",
+      "title": "相続した土地が『盛土規制区域』に入っていたら売れるのか——2023年施行の規制と売却の段取り",
       "registered": false,
       "state": "held",
       "reasons": [
         "公開レビュー記録が未登録です",
-        "独立レビューに未解決の重大な指摘があります"
+        "確認済みの公的な一次根拠が不足しています"
       ],
       "sourceFailures": [
         {
-          "url": "https://laws.e-gov.go.jp/law/129AC0000000089",
-          "checkedAt": "2026-10-22",
-          "relevantClaim": "民法第3条の2（意思能力・平成29年法律第44号・2020年4月1日施行）、第7条・第8条・第826条・第860条。後見の枠組みはcourts.go.jpで確認、第3条の2の施行日は確立事実と整合（e-Gov本体はJS描画のため条文本文は直接読取不可）。",
+          "url": "https://www.mlit.go.jp/toshi/web/toshi_tobou_tk_000064.html",
+          "checkedAt": "2026-10-23",
+          "relevantClaim": "本文が出典に掲げる国交省解説ページURL。現在HTTP 404で到達不能（minor指摘）。支える事実は morido.html とe-Govで裏取り済み。",
           "verified": false
         }
       ],
       "sourceEvidenceAvailable": true
     },
     {
-      "key": "legal:kamotsu-kei-jidosha-anzen-kanrisha-2025-sennin-gimu-todokede",
-      "fingerprint": "b3f3d65c8b37172b46e35c4ba0c1eeed771a3b022a565becfc39285d52af5561",
-      "title": "軽貨物の2025年安全規制強化｜貨物軽自動車安全管理者の選任義務と業務記録",
+      "key": "legal:dokugekibutsu-hanbaigyo-touroku-kozo-setsubi-kijun",
+      "fingerprint": "218d7a500ec12a6a71b0cf481b369cf80f37cf3ae9f00fc1efb1fff9f5a3a5bf",
+      "title": "毒物劇物販売業の登録｜店舗の設備基準・登録区分と毒物劇物取扱責任者",
       "registered": false,
       "state": "held",
       "reasons": [
-        "enの内部リンクに言語不一致があります",
-        "zh-twの内部リンクに言語不一致があります",
-        "zhの内部リンクに言語不一致があります",
         "公開レビュー記録が未登録です",
-        "独立レビューに未解決の重大な指摘があります"
-      ],
-      "sourceFailures": [
-        {
-          "url": "https://laws.e-gov.go.jp/law/360AC0000000083",
-          "checkedAt": "2026-10-22",
-          "relevantClaim": "貨物自動車運送事業法第36条の2（貨物軽自動車安全管理者の選任等）。四輪以上の軽自動車の運送事業者が対象・二輪（バイク便）は対象外という実体はMLIT官公庁案内で確認（e-Gov本体はJS描画のため条文番号本体は直接読取不可・条数は未独自確認）。",
-          "verified": false
-        }
-      ],
-      "sourceEvidenceAvailable": true
-    },
-    {
-      "key": "legal:sozokunin-shinkoku-toki-2024-gimuka-koseki-chosa",
-      "fingerprint": "742310202a0d2976b88324288beb315b8ca5588be1a9bf6651abab7da69a0e93",
-      "title": "相続人申告登記（2024年）｜相続登記義務化に間に合わないときの戸籍調査",
-      "registered": false,
-      "state": "held",
-      "reasons": [
-        "enの内部リンクに言語不一致があります",
-        "zh-twの内部リンクに言語不一致があります",
-        "zhの内部リンクに言語不一致があります",
-        "公開レビュー記録が未登録です",
-        "独立レビューに未解決の重大な指摘があります"
+        "確認済みの公的な一次根拠が不足しています"
       ],
       "sourceFailures": [],
       "sourceEvidenceAvailable": true
     },
     {
-      "key": "labor:tokutei-ginou-jidosha-unsogyo-ukeire-roumu-menkyo",
-      "fingerprint": "56b6f402cc31c56afb391a00be86708314e2236a756a3af6fef4834af561cecf",
-      "title": "特定技能「自動車運送業」分野の外国人を受け入れる——運転免許要件と労務・社会保険",
+      "key": "legal:souzoku-hoki-jukuryo-kikan-shincho-kisanten",
+      "fingerprint": "6cd00a4b25f9fc6bbdaba462f8e2d4af317ebceb0e819e2f9107ebdfa8c2baa8",
+      "title": "相続放棄の熟慮期間3か月｜起算点と伸長申立て、過ぎた後に借金が判明したとき",
       "registered": false,
       "state": "held",
       "reasons": [
         "公開レビュー記録が未登録です",
-        "候補指紋と修正後原稿が一致しません",
-        "独立レビューの証跡不足、重複、またはレビュー後の原稿変更"
+        "担当分野の資格者確認が不足しています"
       ],
-      "sourceFailures": [
-        {
-          "url": "https://www.mlit.go.jp/jidosha/content/001970438.pdf",
-          "checkedAt": "2026-10-22",
-          "relevantClaim": "受入れ見込数『分野全体で最大2万4,500人』。令和8年1月23日の運用方針改定で令和6年4月からの見込数が再設定（約2万2,100人へとの官公庁由来情報）されており、本文の2万4,500人は現行方針と不一致の可能性が高い。一次PDFがバイナリで直接読取不可のため未検証。",
-          "verified": false
-        }
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:kojin-jigyosha-anzen-eisei-2026-sochi-gimu",
+      "fingerprint": "95de314b1de996f694de7127dcd70be097d89a4acf4143003cb1738999db9ec1",
+      "title": "一人親方や業務委託を使う事業者の新しい安全衛生義務とは——個人事業者等の保護（2025〜2027年施行）",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録です",
+        "確認済みの公的な一次根拠が不足しています"
       ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:kyoiku-kunren-kyuka-kyufukin-2025-mukyu-manabinaoshi",
+      "fingerprint": "7277ad10c039140a0047e9613e8f7fa4c0081dc1e9e013416044d901da088f50",
+      "title": "2025年10月新設『教育訓練休暇給付金』とは——無給で学び直す従業員への給付と事業主の手続",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
       "sourceEvidenceAvailable": true
     }
   ]

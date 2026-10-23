@@ -1098,6 +1098,21 @@ const REQUIRED_HUB_LINKS: Record<string, string[]> = {
     "/legal/column/daishu-saidaishu-souzokunin-hani-koseki-kakutei",
     "/legal/column/souzoku-kigen-matome",
   ],
+  "dokugekibutsu-hanbaigyo-touroku-kozo-setsubi-kijun": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/iyakuhin-tenpo-hanbaigyo-drugstore-kozo-setsubi-touroku-hanbaisha",
+    "/legal/column/yakkyoku-kaisetsu-kyoka-kozo-setsubi-kanri-yakuzaishi",
+  ],
+  "souzoku-hoki-jukuryo-kikan-shincho-kisanten": [
+    "/legal/services/inheritance",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/souzoku",
+    "/legal/column/souzoku-hoki-gentei-shonin",
+    "/legal/column/souzoku-saimu-hoshou-saimu-chosa-junpro-kikan",
+  ],
 };
 
 /** 表示コンプライアンス上の禁止語 */
@@ -3477,6 +3492,47 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "別事業体",
     "紹介料を受け取りません",
   ],
+  "dokugekibutsu-hanbaigyo-touroku-kozo-setsubi-kijun": [
+    "毒物及び劇物取締法",
+    "第3条第3項",
+    "第4条の2",
+    "第4条の3",
+    "第5条",
+    "第7条",
+    "第8条",
+    "毒物劇物取扱責任者",
+    "一般販売業",
+    "農業用品目販売業",
+    "特定品目販売業",
+    "毒物及び劇物取締法施行規則",
+    "第4条の4",
+    "都道府県知事",
+    "別々にご契約",
+    "独立した事業体",
+    "別事業体",
+    "紹介料を受け取りません",
+  ],
+  "souzoku-hoki-jukuryo-kikan-shincho-kisanten": [
+    "民法第915条",
+    "第915条第1項",
+    "第916条",
+    "第917条",
+    "第919条",
+    "第920条",
+    "第921条",
+    "第938条",
+    "第939条",
+    "熟慮期間",
+    "相続放棄",
+    "伸長",
+    "昭和59年4月27日",
+    "家事事件手続法",
+    "第201条",
+    "別々にご契約",
+    "独立した事業体",
+    "別事業体",
+    "紹介料を受け取りません",
+  ],
 };
 
 /** 記事ごとに含めてはならない表現 */
@@ -3646,6 +3702,8 @@ const FORBIDDEN_PHRASES: Record<string, string[]> = {
   "keieikanri-koshin-jigyo-keizokusei-rissho-chuka-taiwan": [],
   "kamotsu-kei-jidosha-anzen-kanrisha-2025-sennin-gimu-todokede": [],
   "sozokunin-shinkoku-toki-2024-gimuka-koseki-chosa": [],
+  "dokugekibutsu-hanbaigyo-touroku-kozo-setsubi-kijun": [],
+  "souzoku-hoki-jukuryo-kikan-shincho-kisanten": [],
 };
 
 /** 本セット外へ張る既存legalコラムslug（リポジトリの他シードで実在確認済み） */
@@ -6839,6 +6897,58 @@ const ARTICLES: Array<{
       "相続登記義務化",
       "戸籍調査",
       "相続関係説明図",
+      "相続",
+      "行政書士",
+    ],
+  },
+  {
+    file: "129-dokugekibutsu-hanbaigyo-touroku-kozo-setsubi-kijun.md",
+    slug: "dokugekibutsu-hanbaigyo-touroku-kozo-setsubi-kijun",
+    date: "2026-10-23",
+    title:
+      "毒物劇物販売業の登録｜店舗の設備基準・登録区分と毒物劇物取扱責任者",
+    category: "許認可の手続き（行政書士の実務から）",
+    excerpt:
+      "試薬・農薬などの毒物劇物を売るには、店舗ごとに都道府県知事の販売業の登録が必要です（毒物及び劇物取締法第3条第3項・第4条）。一般・農業用品目・特定品目の3区分、施行規則第4条の4の設備基準（販売業は貯蔵・陳列・運搬を準用）、毒物劇物取扱責任者の資格（薬剤師・応用化学修了・取扱者試験合格）と30日以内の届出、6年更新、物件・設備・労務の分離受任を整理します。",
+    keywords: [
+      "毒物劇物 販売業 登録 要件",
+      "毒物劇物 販売業 設備基準 施行規則第4条の4",
+      "毒物劇物取扱責任者 資格 薬剤師 試験",
+      "毒物劇物 販売業 登録 区分 一般 農業用品目 特定品目",
+      "毒物劇物 販売業 都道府県知事 6年更新",
+      "毒物劇物 販売業 登録 行政書士",
+    ],
+    tags: [
+      "毒物劇物販売業",
+      "毒物及び劇物取締法",
+      "毒物劇物取扱責任者",
+      "設備基準",
+      "許認可",
+      "行政書士",
+    ],
+  },
+  {
+    file: "130-souzoku-hoki-jukuryo-kikan-shincho-kisanten.md",
+    slug: "souzoku-hoki-jukuryo-kikan-shincho-kisanten",
+    date: "2026-10-23",
+    title:
+      "相続放棄の熟慮期間3か月｜起算点と伸長申立て、過ぎた後に借金が判明したとき",
+    category: "相続の手続き（行政書士の実務から）",
+    excerpt:
+      "相続放棄の熟慮期間3か月は、自己のために相続の開始があったことを知った時から起算します（民法第915条第1項）。再転相続・未成年者の起算、家庭裁判所への期間伸長の申立て、3か月を過ぎた後に借金が判明した場合の最高裁昭和59年4月27日判決の起算点の例外、家裁への申述・申立書類の作成が行政書士の業務範囲外である点と分離受任を整理します。",
+    keywords: [
+      "相続放棄 熟慮期間 3か月 起算点",
+      "熟慮期間 伸長 申立て 家庭裁判所",
+      "相続放棄 3か月 過ぎた 借金 判明",
+      "最高裁 昭和59年4月27日 熟慮期間 起算点",
+      "民法第915条 第916条 第917条 再転相続",
+      "相続放棄 申述書 行政書士 業務範囲外",
+    ],
+    tags: [
+      "相続放棄",
+      "熟慮期間",
+      "期間伸長",
+      "起算点",
       "相続",
       "行政書士",
     ],

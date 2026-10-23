@@ -1,48 +1,39 @@
-# コラム生成・レビュー・公開判定（2026-10-23）
+# コラム生成・レビュー・公開判定（2026-10-24）
 
-- 生成・機械検証：成功 5本
-- レビュー処理：success ／ 判定：false
-- レビュー指摘：blocker 0／major 1／minor 0
-- 今回の候補指紋に対応する公開証跡登録：0本
-- 自動公開の品質候補：0本
+- 生成・機械検証：成功 6本
+- レビュー処理：success ／ 判定：true
+- レビュー指摘：blocker 0／major 0／minor 1
+- 今回の候補指紋に対応する公開証跡登録：1本
+- 自動公開の品質候補：1本
 - 品質保留：5本 ／ 公開日待ち：0本
-- 未確認の一次資料：3件
+- 未確認の一次資料：1件
 - 本番公開：この処理では実行していません。公開済み件数は未照会です。
 
-正午の自動公開に渡せる品質候補は0本です。5本は保留、0本は公開日待ちです。
+1本は品質確認済み候補です。手動保留・既存DB・公開日・有効期限を公開実行時に再判定します。公開完了は実行結果で確認してください。
 未確認記事の品質保留はforceでも解除しません。
 
 ## 記事別の判定
 
-- キッチンカーの「仕込み場所」はどんな物件が必要か——食品衛生法の営業許可・給排水・用途地域：held（realestate:kitchen-car-shikomi-basho-bukken-eigyo-kyoka-youken）
-  - enの内部リンクに言語不一致があります
+- 就労移行支援の事業所にできる物件は——用途地域・バリアフリー・消防の確認点：held（realestate:shuro-ikou-shien-bukken-youto-chiiki-youken）
   - 公開レビュー記録が未登録です
-  - 独立レビューに未解決の重大な指摘があります
-- 相続人に認知症の方がいると不動産は売れないのか——成年後見と居住用不動産の処分許可：held（realestate:souzoku-ninchisho-sozokunin-fudosan-baikyaku-koken-shobun-kyoka）
+  - 確認済みの公的な一次根拠が不足しています
+- 相続した土地が『盛土規制区域』に入っていたら売れるのか——2023年施行の規制と売却の段取り：held（realestate:souzoku-morido-kisei-kuiki-takuchi-baikyaku）
   - 公開レビュー記録が未登録です
-  - 独立レビューに未解決の重大な指摘があります
-  - 未確認一次資料：https://laws.e-gov.go.jp/law/129AC0000000089 — 民法第3条の2（意思能力・平成29年法律第44号・2020年4月1日施行）、第7条・第8条・第826条・第860条。後見の枠組みはcourts.go.jpで確認、第3条の2の施行日は確立事実と整合（e-Gov本体はJS描画のため条文本文は直接読取不可）。
-- 軽貨物の2025年安全規制強化｜貨物軽自動車安全管理者の選任義務と業務記録：held（legal:kamotsu-kei-jidosha-anzen-kanrisha-2025-sennin-gimu-todokede）
-  - enの内部リンクに言語不一致があります
-  - zh-twの内部リンクに言語不一致があります
-  - zhの内部リンクに言語不一致があります
+  - 確認済みの公的な一次根拠が不足しています
+  - 未確認一次資料：https://www.mlit.go.jp/toshi/web/toshi_tobou_tk_000064.html — 本文が出典に掲げる国交省解説ページURL。現在HTTP 404で到達不能（minor指摘）。支える事実は morido.html とe-Govで裏取り済み。
+- 毒物劇物販売業の登録｜店舗の設備基準・登録区分と毒物劇物取扱責任者：held（legal:dokugekibutsu-hanbaigyo-touroku-kozo-setsubi-kijun）
   - 公開レビュー記録が未登録です
-  - 独立レビューに未解決の重大な指摘があります
-  - 未確認一次資料：https://laws.e-gov.go.jp/law/360AC0000000083 — 貨物自動車運送事業法第36条の2（貨物軽自動車安全管理者の選任等）。四輪以上の軽自動車の運送事業者が対象・二輪（バイク便）は対象外という実体はMLIT官公庁案内で確認（e-Gov本体はJS描画のため条文番号本体は直接読取不可・条数は未独自確認）。
-- 相続人申告登記（2024年）｜相続登記義務化に間に合わないときの戸籍調査：held（legal:sozokunin-shinkoku-toki-2024-gimuka-koseki-chosa）
-  - enの内部リンクに言語不一致があります
-  - zh-twの内部リンクに言語不一致があります
-  - zhの内部リンクに言語不一致があります
+  - 確認済みの公的な一次根拠が不足しています
+- 相続放棄の熟慮期間3か月｜起算点と伸長申立て、過ぎた後に借金が判明したとき：held（legal:souzoku-hoki-jukuryo-kikan-shincho-kisanten）
   - 公開レビュー記録が未登録です
-  - 独立レビューに未解決の重大な指摘があります
-- 特定技能「自動車運送業」分野の外国人を受け入れる——運転免許要件と労務・社会保険：held（labor:tokutei-ginou-jidosha-unsogyo-ukeire-roumu-menkyo）
+  - 担当分野の資格者確認が不足しています
+- 一人親方や業務委託を使う事業者の新しい安全衛生義務とは——個人事業者等の保護（2025〜2027年施行）：held（labor:kojin-jigyosha-anzen-eisei-2026-sochi-gimu）
   - 公開レビュー記録が未登録です
-  - 候補指紋と修正後原稿が一致しません
-  - 独立レビューの証跡不足、重複、またはレビュー後の原稿変更
-  - 未確認一次資料：https://www.mlit.go.jp/jidosha/content/001970438.pdf — 受入れ見込数『分野全体で最大2万4,500人』。令和8年1月23日の運用方針改定で令和6年4月からの見込数が再設定（約2万2,100人へとの官公庁由来情報）されており、本文の2万4,500人は現行方針と不一致の可能性が高い。一次PDFがバイナリで直接読取不可のため未検証。
+  - 確認済みの公的な一次根拠が不足しています
+- 2025年10月新設『教育訓練休暇給付金』とは——無給で学び直す従業員への給付と事業主の手続：quality-eligible（labor:kyoiku-kunren-kyuka-kyufukin-2025-mukyu-manabinaoshi）
 
 ## レビューの指摘
 
-- [major] scripts/labor-columns/169-tokutei-ginou-jidosha-unsogyo-ukeire-roumu-menkyo.md：受入れ見込数「分野全体で最大2万4,500人」が、本文自身が『現行』と認める令和8年1月23日閣議決定の分野別運用方針改定で約2万2,100人へ再設定された可能性が高い（官公庁由来情報）。本文は結論・本節・『この記事の根拠』で2万4,500人を『国土交通省ページにより確認（2026年10月参照）』と明記しており、改定後の現行一次資料と不一致のおそれ。4言語（日・英・繁・簡）すべてに同記載。一次PDFがバイナリのため直接確認できず未検証。 ／ 修正案：改定後の分野別運用方針（令和8年1月23日閣議決定）の一次資料で受入れ見込数を再確認し、現行値へ更新する。2万4,500人を残す場合は『令和6年当初の見込数で、令和8年改定後は別数値』である旨を明示して現行値を併記する。英・繁・簡の訳文も同時に修正する。
+- [minor] scripts/realestate-columns/137-souzoku-morido-kisei-kuiki-takuchi-baikyaku.md (および en/zh-tw/zh の各翻訳)：出典として挙げる国土交通省『盛土規制法』解説ページのURL https://www.mlit.go.jp/toshi/web/toshi_tobou_tk_000064.html が現在404（WebFetchで2回とも Not Found）。国交省のページ再編で退避済みと見られる。参照日2026-10-23に閲覧した旨の記載と実際の到達性が食い違う。ただし当該URLが支える事実（令和5年5月26日施行・2規制区域・工事規制）は現行の国交省ページ https://www.mlit.go.jp/toshi/web/morido.html およびe-Gov法令で独立に裏取り済みで、法的主張の誤りはない。 ／ 修正案：リンク先を現行の https://www.mlit.go.jp/toshi/web/morido.html に差し替える（本審査ではファイルは変更しない）。
 
-実行証跡：https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/39818265066
+実行証跡：https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/39989816156
