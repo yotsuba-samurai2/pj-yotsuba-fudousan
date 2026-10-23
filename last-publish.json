@@ -1,7 +1,7 @@
 {
   "dryRun": false,
-  "runAt": "2026-10-22T08:13:25.079Z",
-  "todayJst": "2026-10-22",
+  "runAt": "2026-10-23T08:10:51.534Z",
+  "todayJst": "2026-10-23",
   "targets": [],
   "held": [
     {
@@ -171,6 +171,73 @@
         "zhの内部リンクに言語不一致があります",
         "公開レビュー記録が未登録です"
       ]
+    },
+    {
+      "key": "labor:tokutei-ginou-jidosha-unsogyo-ukeire-roumu-menkyo",
+      "business": "labor",
+      "slug": "tokutei-ginou-jidosha-unsogyo-ukeire-roumu-menkyo",
+      "title": "特定技能「自動車運送業」分野の外国人を受け入れる——運転免許要件と労務・社会保険",
+      "date": "2026-10-22",
+      "category": "採用と雇用",
+      "path": "/labor/column/tokutei-ginou-jidosha-unsogyo-ukeire-roumu-menkyo",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "legal:kamotsu-kei-jidosha-anzen-kanrisha-2025-sennin-gimu-todokede",
+      "business": "legal",
+      "slug": "kamotsu-kei-jidosha-anzen-kanrisha-2025-sennin-gimu-todokede",
+      "title": "軽貨物の2025年安全規制強化｜貨物軽自動車安全管理者の選任義務と業務記録",
+      "date": "2026-10-22",
+      "category": "許認可の手続き（行政書士の実務から）",
+      "path": "/legal/column/kamotsu-kei-jidosha-anzen-kanrisha-2025-sennin-gimu-todokede",
+      "qualityHoldReasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "legal:sozokunin-shinkoku-toki-2024-gimuka-koseki-chosa",
+      "business": "legal",
+      "slug": "sozokunin-shinkoku-toki-2024-gimuka-koseki-chosa",
+      "title": "相続人申告登記（2024年）｜相続登記義務化に間に合わないときの戸籍調査",
+      "date": "2026-10-22",
+      "category": "相続の手続き（行政書士の実務から）",
+      "path": "/legal/column/sozokunin-shinkoku-toki-2024-gimuka-koseki-chosa",
+      "qualityHoldReasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "realestate:kitchen-car-shikomi-basho-bukken-eigyo-kyoka-youken",
+      "business": "realestate",
+      "slug": "kitchen-car-shikomi-basho-bukken-eigyo-kyoka-youken",
+      "title": "キッチンカーの「仕込み場所」はどんな物件が必要か——食品衛生法の営業許可・給排水・用途地域",
+      "date": "2026-10-22",
+      "category": "投資・事業用不動産",
+      "path": "/column/kitchen-car-shikomi-basho-bukken-eigyo-kyoka-youken",
+      "qualityHoldReasons": [
+        "enの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "realestate:souzoku-ninchisho-sozokunin-fudosan-baikyaku-koken-shobun-kyoka",
+      "business": "realestate",
+      "slug": "souzoku-ninchisho-sozokunin-fudosan-baikyaku-koken-shobun-kyoka",
+      "title": "相続人に認知症の方がいると不動産は売れないのか——成年後見と居住用不動産の処分許可",
+      "date": "2026-10-22",
+      "category": "相続",
+      "path": "/column/souzoku-ninchisho-sozokunin-fudosan-baikyaku-koken-shobun-kyoka",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録です"
+      ]
     }
   ],
   "scheduled": [],
@@ -224,9 +291,29 @@
     {
       "key": "realestate:yuigon-shikkosha-sentei-fudosan-baikyaku-toujisha",
       "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録です"
+    },
+    {
+      "key": "labor:tokutei-ginou-jidosha-unsogyo-ukeire-roumu-menkyo",
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
+    },
+    {
+      "key": "legal:kamotsu-kei-jidosha-anzen-kanrisha-2025-sennin-gimu-todokede",
+      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録です"
+    },
+    {
+      "key": "legal:sozokunin-shinkoku-toki-2024-gimuka-koseki-chosa",
+      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録です"
+    },
+    {
+      "key": "realestate:kitchen-car-shikomi-basho-bukken-eigyo-kyoka-youken",
+      "message": "品質確認待ち：enの内部リンクに言語不一致があります／公開レビュー記録が未登録です"
+    },
+    {
+      "key": "realestate:souzoku-ninchisho-sozokunin-fudosan-baikyaku-koken-shobun-kyoka",
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
     }
   ],
-  "blocked": "12本は品質確認待ちのため自動公開しません。記事別の理由を確認してください。forceでも解除しません。",
+  "blocked": "17本は品質確認待ちのため自動公開しません。記事別の理由を確認してください。forceでも解除しません。",
   "outcome": "held",
   "httpStatus": "409"
 }
