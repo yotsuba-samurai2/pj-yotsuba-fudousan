@@ -24,14 +24,13 @@ export const LABOR_ANCILLARY_FEES = {
       {
         "id": "advisory-only",
         "title": "顧問契約（相談中心）",
-        "lead": "給与計算と保険料の手続を自社で行う事業所向けの定額の顧問契約です。労務相談、採用条件・労働条件通知書のレビュー、指定後の人員基準の相談、法改正のご案内を含みます。助成金の申請代行（成功報酬）の対象になります。",
+        "lead": "給与計算と保険料の手続を自社で行う事業所向けの顧問契約です。労務相談、採用条件・労働条件通知書のレビュー、指定後の人員基準の相談、法改正のご案内を含みます。助成金の申請代行（成功報酬）の対象になります。",
         "note": "初期導入費はありません。給与計算や手続が必要になった場合は、人事部丸投げプランか各手続の料金に切り替えます。",
         "rows": [
           {
             "name": "相談中心の顧問契約（給与計算・手続なし）",
             "unit": "月額",
-            "price": "33,000円",
-            "value": 33000
+            "price": "33,000円（人数に応じて加減あり）"
           }
         ]
       },
@@ -336,14 +335,13 @@ export const LABOR_ANCILLARY_FEES = {
       {
         "id": "advisory-only",
         "title": "Advisory retainer (consultation-focused)",
-        "lead": "A flat-rate advisory retainer for employers that handle payroll and insurance premium filings themselves. Includes labor consultations, review of hiring terms and employment condition notices, advice on staffing standards after designation, and updates on legal changes. Eligible for subsidy application support (success fee).",
+        "lead": "An advisory retainer for employers that handle payroll and insurance premium filings themselves. Includes labor consultations, review of hiring terms and employment condition notices, advice on staffing standards after designation, and updates on legal changes. Eligible for subsidy application support (success fee).",
         "note": "No initial setup fee. If payroll or filings become necessary, we switch to the Outsourced HR Department plan or the individual procedure fees.",
         "rows": [
           {
             "name": "Consultation-focused advisory retainer (no payroll or filings)",
             "unit": "per month",
-            "price": "¥33,000",
-            "value": 33000
+            "price": "¥33,000 (adjusted by headcount)"
           }
         ]
       },
@@ -648,14 +646,13 @@ export const LABOR_ANCILLARY_FEES = {
       {
         "id": "advisory-only",
         "title": "顧問契約（以諮詢為主）",
-        "lead": "適合自行處理薪資計算與保險費手續之事業所的定額顧問契約。包含勞務諮詢、招聘條件與勞動條件通知書的審閱、指定後人員基準的諮詢，以及法令修訂的通知。可適用助成金申請代辦（成功報酬）。",
+        "lead": "適合自行處理薪資計算與保險費手續之事業所的顧問契約。包含勞務諮詢、招聘條件與勞動條件通知書的審閱、指定後人員基準的諮詢，以及法令修訂的通知。可適用助成金申請代辦（成功報酬）。",
         "note": "無初期導入費。若需薪資計算或手續，將改為人事部全包方案或各項手續費用。",
         "rows": [
           {
             "name": "以諮詢為主的顧問契約（不含薪資計算與手續）",
             "unit": "每月",
-            "price": "33,000日圓",
-            "value": 33000
+            "price": "33,000日圓（依人數增減）"
           }
         ]
       },
@@ -960,14 +957,13 @@ export const LABOR_ANCILLARY_FEES = {
       {
         "id": "advisory-only",
         "title": "顾问合同（以咨询为主）",
-        "lead": "适合自行处理工资计算与保险费手续之事业所的定额顾问合同。包含劳务咨询、招聘条件与劳动条件通知书的审阅、指定后人员基准的咨询，以及法令修订的通知。可适用助成金申请代办（成功报酬）。",
+        "lead": "适合自行处理工资计算与保险费手续之事业所的顾问合同。包含劳务咨询、招聘条件与劳动条件通知书的审阅、指定后人员基准的咨询，以及法令修订的通知。可适用助成金申请代办（成功报酬）。",
         "note": "无初期导入费。若需工资计算或手续，将改为人事部全包方案或各项手续费用。",
         "rows": [
           {
             "name": "以咨询为主的顾问合同（不含工资计算与手续）",
             "unit": "每月",
-            "price": "33,000日元",
-            "value": 33000
+            "price": "33,000日元（依人数增减）"
           }
         ]
       },
