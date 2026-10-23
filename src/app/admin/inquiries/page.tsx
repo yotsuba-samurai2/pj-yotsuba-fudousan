@@ -15,7 +15,7 @@ type Detail = Item & {
   locale: string; sourcePath: string; email: string; phone: string; rows: { label: string; value: string }[];
 };
 
-const STATUS: Record<string, string> = { sent: "送信済み", failed: "失敗", pending: "未送信", skipped: "送信なし（メール未入力）" };
+const STATUS: Record<string, string> = { sent: "送信済み", failed: "送信確認できず", pending: "結果未確認", skipped: "送信なし（メール未入力）" };
 const jst = (iso: string) => new Date(iso).toLocaleString("ja-JP", { timeZone: "Asia/Tokyo" });
 
 async function call<T>(path: string, init: RequestInit = {}): Promise<T> {

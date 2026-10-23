@@ -1,65 +1,69 @@
 {
-  "todayJst": "2026-10-21",
-  "runUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/39459209613",
+  "todayJst": "2026-10-23",
+  "runUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/39818265066",
   "generationStatus": "validated",
-  "generatedCount": 6,
+  "generatedCount": 5,
   "reviewResult": "success",
   "reviewReportAvailable": true,
-  "reviewPass": true,
+  "reviewPass": false,
   "findings": {
     "blocker": 0,
-    "major": 0,
-    "minor": 1
+    "major": 1,
+    "minor": 0
   },
   "reviewFindings": [
     {
-      "file": "scripts/labor-columns/165-mujin-24ji-tenpo-coin-laundry-junkai-machijikan-roumu.md",
-      "severity": "minor",
-      "issue": "本文中の内部リンク（fitness-gym 記事へのリンク）のラベルが『無人・24時間セルフ店舗の労務』となっており、リンク先であるフィットネス・ジム開業労務記事の内容と一致しない。日本語・英語・中国語すべてで同じラベル付けのため翻訳不一致ではなく、原稿段階のラベル誤り。逆向き（164→165）のラベルは正しい。",
-      "fix": "165→164 のリンクラベルを『フィットネス・パーソナルジム開業の労務』等、リンク先の内容に合わせて修正する（4言語とも）。内容・法的正確性には影響しないため公開を妨げるものではない。"
+      "file": "scripts/labor-columns/169-tokutei-ginou-jidosha-unsogyo-ukeire-roumu-menkyo.md",
+      "severity": "major",
+      "issue": "受入れ見込数「分野全体で最大2万4,500人」が、本文自身が『現行』と認める令和8年1月23日閣議決定の分野別運用方針改定で約2万2,100人へ再設定された可能性が高い（官公庁由来情報）。本文は結論・本節・『この記事の根拠』で2万4,500人を『国土交通省ページにより確認（2026年10月参照）』と明記しており、改定後の現行一次資料と不一致のおそれ。4言語（日・英・繁・簡）すべてに同記載。一次PDFがバイナリのため直接確認できず未検証。",
+      "fix": "改定後の分野別運用方針（令和8年1月23日閣議決定）の一次資料で受入れ見込数を再確認し、現行値へ更新する。2万4,500人を残す場合は『令和6年当初の見込数で、令和8年改定後は別数値』である旨を明示して現行値を併記する。英・繁・簡の訳文も同時に修正する。"
     }
   ],
-  "registeredCount": 2,
-  "qualityEligibleCount": 2,
-  "heldCount": 4,
+  "registeredCount": 0,
+  "qualityEligibleCount": 0,
+  "heldCount": 5,
   "scheduledCount": 0,
-  "unverifiedSourceCount": 0,
+  "unverifiedSourceCount": 3,
   "publishedCount": null,
   "articles": [
     {
-      "key": "realestate:net-cafe-kobetsu-shitsu-bukken-shobo-honnin-kakunin",
-      "fingerprint": "db9d6fca6e0eb564597dc47141d6cb80b2b6a829fb4569fe3b22c0548ad15d0e",
-      "title": "ネットカフェ・個室型インターネットカフェの物件はどう選ぶ？消防区画と本人確認条例の壁",
+      "key": "realestate:kitchen-car-shikomi-basho-bukken-eigyo-kyoka-youken",
+      "fingerprint": "5b5569bb83fe7bf9db3e3690b2ed6903e23861f54c6068f251922ae427650b0d",
+      "title": "キッチンカーの「仕込み場所」はどんな物件が必要か——食品衛生法の営業許可・給排水・用途地域",
       "registered": false,
       "state": "held",
       "reasons": [
         "enの内部リンクに言語不一致があります",
-        "zh-twの内部リンクに言語不一致があります",
-        "zhの内部リンクに言語不一致があります",
-        "公開レビュー記録が未登録です"
+        "公開レビュー記録が未登録です",
+        "独立レビューに未解決の重大な指摘があります"
       ],
       "sourceFailures": [],
       "sourceEvidenceAvailable": true
     },
     {
-      "key": "realestate:yuigon-shikkosha-sentei-fudosan-baikyaku-toujisha",
-      "fingerprint": "fe5410b5d3d78d8eab9ad5bcd8ea35effca8e407577d8edd34ae37d1066139ef",
-      "title": "遺言執行者が選任された相続不動産を売る：売主は誰で、媒介・決済の当事者はどうなる？",
+      "key": "realestate:souzoku-ninchisho-sozokunin-fudosan-baikyaku-koken-shobun-kyoka",
+      "fingerprint": "eabd746c8ebf4847f615b41d58218ce4627bb7441134aa0ff962ff9b4c247dae",
+      "title": "相続人に認知症の方がいると不動産は売れないのか——成年後見と居住用不動産の処分許可",
       "registered": false,
       "state": "held",
       "reasons": [
-        "enの内部リンクに言語不一致があります",
-        "zh-twの内部リンクに言語不一致があります",
-        "zhの内部リンクに言語不一致があります",
-        "公開レビュー記録が未登録です"
+        "公開レビュー記録が未登録です",
+        "独立レビューに未解決の重大な指摘があります"
       ],
-      "sourceFailures": [],
+      "sourceFailures": [
+        {
+          "url": "https://laws.e-gov.go.jp/law/129AC0000000089",
+          "checkedAt": "2026-10-22",
+          "relevantClaim": "民法第3条の2（意思能力・平成29年法律第44号・2020年4月1日施行）、第7条・第8条・第826条・第860条。後見の枠組みはcourts.go.jpで確認、第3条の2の施行日は確立事実と整合（e-Gov本体はJS描画のため条文本文は直接読取不可）。",
+          "verified": false
+        }
+      ],
       "sourceEvidenceAvailable": true
     },
     {
-      "key": "legal:ippan-shadan-houjin-setsuritsu-hieiri-teikan",
-      "fingerprint": "977b8d22d9aa601b5bdbd653800720596d151b903947d864c65fbf84affb2a03",
-      "title": "一般社団法人の設立｜非営利型と普通型の違い・定款認証から登記まで",
+      "key": "legal:kamotsu-kei-jidosha-anzen-kanrisha-2025-sennin-gimu-todokede",
+      "fingerprint": "b3f3d65c8b37172b46e35c4ba0c1eeed771a3b022a565becfc39285d52af5561",
+      "title": "軽貨物の2025年安全規制強化｜貨物軽自動車安全管理者の選任義務と業務記録",
       "registered": false,
       "state": "held",
       "reasons": [
@@ -67,44 +71,53 @@
         "zh-twの内部リンクに言語不一致があります",
         "zhの内部リンクに言語不一致があります",
         "公開レビュー記録が未登録です",
-        "確認済みの公的な一次根拠が不足しています"
+        "独立レビューに未解決の重大な指摘があります"
       ],
-      "sourceFailures": [],
+      "sourceFailures": [
+        {
+          "url": "https://laws.e-gov.go.jp/law/360AC0000000083",
+          "checkedAt": "2026-10-22",
+          "relevantClaim": "貨物自動車運送事業法第36条の2（貨物軽自動車安全管理者の選任等）。四輪以上の軽自動車の運送事業者が対象・二輪（バイク便）は対象外という実体はMLIT官公庁案内で確認（e-Gov本体はJS描画のため条文番号本体は直接読取不可・条数は未独自確認）。",
+          "verified": false
+        }
+      ],
       "sourceEvidenceAvailable": true
     },
     {
-      "key": "legal:kodo-senmonshoku-1go-point-keisan-chuka-taiwan",
-      "fingerprint": "f6d78abfa9989dd742d54408c750a3a5188383b04a78fe8bc3de8a412af30a33",
-      "title": "高度専門職1号ビザのポイント計算｜中国・台湾の高度人材が70点を積む",
+      "key": "legal:sozokunin-shinkoku-toki-2024-gimuka-koseki-chosa",
+      "fingerprint": "742310202a0d2976b88324288beb315b8ca5588be1a9bf6651abab7da69a0e93",
+      "title": "相続人申告登記（2024年）｜相続登記義務化に間に合わないときの戸籍調査",
       "registered": false,
       "state": "held",
       "reasons": [
         "enの内部リンクに言語不一致があります",
         "zh-twの内部リンクに言語不一致があります",
         "zhの内部リンクに言語不一致があります",
-        "公開レビュー記録が未登録です"
+        "公開レビュー記録が未登録です",
+        "独立レビューに未解決の重大な指摘があります"
       ],
       "sourceFailures": [],
       "sourceEvidenceAvailable": true
     },
     {
-      "key": "labor:fitness-gym-kaigyo-trainer-gyomuitaku-roumu",
-      "fingerprint": "bf5a1a4cab53fb776f28c7a097154dd39de964e46d4811346fc6d760fa5d5b49",
-      "title": "ジムのトレーナーは雇用か業務委託か、深夜・変形労働時間はどう組みますか？",
-      "registered": true,
-      "state": "quality-eligible",
-      "reasons": [],
-      "sourceFailures": [],
-      "sourceEvidenceAvailable": true
-    },
-    {
-      "key": "labor:mujin-24ji-tenpo-coin-laundry-junkai-machijikan-roumu",
-      "fingerprint": "ebb946385a25a15f162301f6826d0f88896ad4d263daad7f2a9e1ac1f669b190",
-      "title": "無人・24時間セルフ店舗の巡回スタッフの「待機・手待ち時間」は労働時間になりますか？",
-      "registered": true,
-      "state": "quality-eligible",
-      "reasons": [],
-      "sourceFailures": [],
+      "key": "labor:tokutei-ginou-jidosha-unsogyo-ukeire-roumu-menkyo",
+      "fingerprint": "56b6f402cc31c56afb391a00be86708314e2236a756a3af6fef4834af561cecf",
+      "title": "特定技能「自動車運送業」分野の外国人を受け入れる——運転免許要件と労務・社会保険",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録です",
+        "候補指紋と修正後原稿が一致しません",
+        "独立レビューの証跡不足、重複、またはレビュー後の原稿変更"
+      ],
+      "sourceFailures": [
+        {
+          "url": "https://www.mlit.go.jp/jidosha/content/001970438.pdf",
+          "checkedAt": "2026-10-22",
+          "relevantClaim": "受入れ見込数『分野全体で最大2万4,500人』。令和8年1月23日の運用方針改定で令和6年4月からの見込数が再設定（約2万2,100人へとの官公庁由来情報）されており、本文の2万4,500人は現行方針と不一致の可能性が高い。一次PDFがバイナリで直接読取不可のため未検証。",
+          "verified": false
+        }
+      ],
       "sourceEvidenceAvailable": true
     }
   ]

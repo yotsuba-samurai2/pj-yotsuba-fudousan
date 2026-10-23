@@ -1,19 +1,19 @@
 # サイト安全性調査（2026-10-22）— 浦松が行う設定作業の手順
 
-PHP の重大脆弱性（php2shell / CVE-2026-109618・109619）を契機に、四葉不動産・行政書士・社労士（luck428.com）と士業ドットコム（www.samurai.co.jp）を調べた結果の、**コード以外**の対処手順。コード側（管理APIの許可リスト・Next.js 更新・AI相談APIのレート制限）は同日の PR で対応済み。
+PHP の重大脆弱性（php2shell / CVE-2026-109618・109619）を契機に、四葉不動産・行政書士・社労士（luck428.com）と士業ドットコム（www.samurai.co.jp）を調べた結果の、**コード以外**の対処手順。コード側は、管理APIの許可リストが #492（環境変数 `ADMIN_OPERATOR_EMAILS`・未設定なら 503 で閉じる）、Next.js 更新・AI相談APIのレート制限が #491 で対応済み。
 
 結論：4サイトとも Vercel＋Next.js で PHP を使っておらず、php2shell の直接の対象ではない。PHP に触れるのは **Xserver の契約**（3ドメインの DNS と luck428gyosei.com）だけ。一方で、PHP と無関係に**管理画面を第三者が使える設定**（下記1）があり、これを最初に塞ぐ。
 
 ## 1. 【今日】Supabase：新規登録を止める
 
-状況：Supabase Auth が「メールで誰でも登録できる」設定（`disable_signup: false`）。管理API側の修正（PR）が入るまでは、登録した第三者がコラム・物件・AI設定・画像の管理APIを呼べる。
+状況：Supabase Auth が「メールで誰でも登録できる」設定（`disable_signup: false`）。管理API側は #492 で許可リスト化済みだが、Supabase 側でも入口を閉じる（多層防御）。
 
 1. https://supabase.com/dashboard → プロジェクト `lxsnklqwysakhnmvdivh` → **Authentication** → **Sign In / Providers**
 2. **「Allow new users to sign up」をオフ**にして Save
 3. **Authentication → Users** を開き、浦松のメール以外のアカウントが無いか確認。見知らぬものがあれば **Delete user**（削除前にメールと作成日時をメモ）
 4. 念のため **Project Settings → API** で `service_role` キーの漏えいが疑われる状況なら Rotate（通常は不要）
 
-管理者を増やすときは Vercel の環境変数 `ADMIN_EMAILS`（カンマ区切り）に追加し、Supabase の Users で手動招待（Invite user）する。
+**Vercel の環境変数 `ADMIN_OPERATOR_EMAILS` に浦松のメールを設定する（#492 以降は未設定だと管理APIが全部 503 になり、浦松自身も使えない）。** 管理者を増やすときはここにカンマ区切りで追加し、Supabase の Users で手動招待（Invite user）する。
 
 ## 2. 【今日〜明日】Xserver：アカウント防御と PHP の確認
 

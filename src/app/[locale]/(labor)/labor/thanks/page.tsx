@@ -6,6 +6,7 @@
 //   `%s｜事務所名` と二重になっていた（本番実測で「送信完了 | 四葉社会保険労務士事務所｜四葉社会保険労務士事務所」）。
 //   2026-09-05 月次点検 NEW-TECH-1 が labor/contact・labor/about で直した型と同じ。本ページが漏れていた。
 import Link from "next/link";
+import { ContactReceipt } from "@/components/shared/ContactReceipt";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import type { Metadata } from "next";
 
@@ -44,6 +45,7 @@ export default async function LaborThanksPage() {
             <br />
             {c.body2}
           </p>
+          <ContactReceipt business="labor" locale={locale} />
           <div className="mt-10">
             <Link
               href={addLocalePrefix("/labor", locale)}

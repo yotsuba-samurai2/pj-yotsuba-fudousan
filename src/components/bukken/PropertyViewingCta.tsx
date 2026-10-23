@@ -1,5 +1,6 @@
 "use client";
 
+import { createContactSubmission, isContactReceipt, CONTACT_RECEIPT_COPY } from "@/lib/shared/contact-submission";
 import { useState } from "react";
 import type { FormEvent } from "react";
 import type { LangCode } from "@/config/languages";
@@ -12,6 +13,8 @@ const inputClass =
 
 export function PropertyViewingCta({ propertyTitle, propertyUrl, locale }: Props) {
   const text = propertyViewingLabels[locale];
+  const [submitContact] = useState(createContactSubmission);
+  const [receiptNo, setReceiptNo] = useState("");
   const [foreign, setForeign] = useState("");
   const [pet, setPet] = useState("");
   const [form, setForm] = useState({ name: "", email: "", phone: "", contractType: "", residents: "", residenceStatus: "", petDetails: "", date1: "", date2: "", date3: "", message: "" });
@@ -36,12 +39,10 @@ export function PropertyViewingCta({ propertyTitle, propertyUrl, locale }: Props
       form.message ? `質問・連絡事項: ${form.message}` : "",
     ].filter(Boolean).join("\n");
     try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name: form.name, email: form.email, phone: form.phone, category: "rental", source: "", message: details, business: "realestate" }),
-      });
-      if (!response.ok) throw new Error("send failed");
+      const response = await submitContact({ name: form.name, email: form.email, phone: form.phone, category: "rental", source: "", message: details, business: "realestate", locale, sourcePath: window.location.pathname });
+      const data = await response.json();
+      if (!response.ok || !isContactReceipt(data)) throw new Error("receipt unconfirmed");
+      setReceiptNo(data.receiptNo);
       setState("sent");
     } catch {
       setState("error");
@@ -49,7 +50,7 @@ export function PropertyViewingCta({ propertyTitle, propertyUrl, locale }: Props
   };
 
   if (state === "sent") {
-    return <section className="mt-10 rounded-2xl border border-primary/30 bg-primary-tint p-6" aria-live="polite"><h2 className="font-serif text-xl font-semibold text-ink">{text.successHeading}</h2><p className="mt-2 text-sm leading-6 text-text">{text.success}</p></section>;
+    return <section className="mt-10 rounded-2xl border border-primary/30 bg-primary-tint p-6" aria-live="polite"><h2 className="font-serif text-xl font-semibold text-ink">{text.successHeading}</h2><p className="mt-2 text-sm leading-6 text-text">{text.success}</p><p className="mt-3 text-sm">{CONTACT_RECEIPT_COPY[locale].label}: <span className="font-mono">{receiptNo}</span></p></section>;
   }
 
   return (
@@ -73,6 +74,7 @@ export function PropertyViewingCta({ propertyTitle, propertyUrl, locale }: Props
         <fieldset className="sm:col-span-2"><legend className="text-sm font-medium">{text.dates}</legend><div className="mt-1 grid gap-2 sm:grid-cols-3"><input required type="datetime-local" value={form.date1} onChange={(e) => update("date1", e.target.value)} className={inputClass} aria-label={text.date1} /><input type="datetime-local" value={form.date2} onChange={(e) => update("date2", e.target.value)} className={inputClass} aria-label={text.date2} /><input type="datetime-local" value={form.date3} onChange={(e) => update("date3", e.target.value)} className={inputClass} aria-label={text.date3} /></div></fieldset>
         <label className="text-sm font-medium sm:col-span-2">{text.message}<textarea rows={3} value={form.message} onChange={(e) => update("message", e.target.value)} className={inputClass} /></label>
         <button type="submit" disabled={state === "sending"} className="sm:col-span-2 rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-white transition hover:bg-primary-dark disabled:opacity-50">{state === "sending" ? text.sending : text.send}</button>
+        <p className="text-xs text-text-muted sm:col-span-2">{CONTACT_RECEIPT_COPY[locale].notice}</p>
       </form>
     </section>
   );

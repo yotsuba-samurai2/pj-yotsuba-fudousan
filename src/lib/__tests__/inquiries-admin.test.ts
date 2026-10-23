@@ -15,6 +15,7 @@ vi.mock("@/lib/inquiries/store", () => ({ getInquiry: vi.fn(), listInquiries: vi
 vi.mock("@/lib/inquiries/mail", () => ({ sendOfficeNotification: vi.fn() }));
 
 const OWNER = { id: "u-owner", email: "uramatsujoji@luck428.com", email_confirmed_at: "2026-01-01T00:00:00Z" };
+afterEach(() => vi.unstubAllEnvs());
 const req = (url = "https://test.invalid/api/admin/inquiries", init: { method?: string; body?: string } = {}) =>
   new NextRequest(url, { ...init, headers: { Authorization: "Bearer token" } });
 const row = {
@@ -59,43 +60,11 @@ describe("閲覧者の限定", () => {
     expect((await GET(new NextRequest("https://test.invalid/api/admin/inquiries"))).status).toBe(401);
   });
 
-});
-
-// 安全性調査 2026-10-22：管理APIも利用者を限定する（Supabase は新規登録を受け付けるため）
-describe("管理APIの利用者の限定（verifyAdminRequest）", () => {
-  afterEach(() => {
-    delete process.env.ADMIN_EMAILS;
-  });
-
-  it("受付先メールの所有者（確認済み）は通る", async () => {
-    await expect(verifyAdminRequest(req())).resolves.toEqual({ uid: "u-owner", email: OWNER.email });
-  });
-
-  it("大文字小文字の違いは同じアドレスとして扱う", async () => {
-    h.user = { ...OWNER, email: "UramatsuJoji@Luck428.com" };
-    await expect(verifyAdminRequest(req())).resolves.toMatchObject({ uid: "u-owner" });
-  });
-
-  it.each([
-    ["登録しただけの別のメールアドレス", { ...OWNER, email: "someone@example.com" }],
-    ["メールアドレスの確認が済んでいない", { ...OWNER, email_confirmed_at: null }],
-    ["メールアドレスが無い", { ...OWNER, email: undefined }],
-  ])("%s は 403", async (_, user) => {
-    h.user = user;
-    await expect(verifyAdminRequest(req())).rejects.toMatchObject({ status: 403 });
-  });
-
-  it("ADMIN_EMAILS（カンマ区切り）で追加した確認済みアドレスは通る", async () => {
-    process.env.ADMIN_EMAILS = " Staff@luck428.com , other@luck428.com";
-    h.user = { ...OWNER, id: "u-staff", email: "staff@luck428.com" };
-    await expect(verifyAdminRequest(req())).resolves.toEqual({ uid: "u-staff", email: "staff@luck428.com" });
-    h.user = { ...OWNER, id: "u-x", email: "intruder@example.com" };
-    await expect(verifyAdminRequest(req())).rejects.toMatchObject({ status: 403 });
-  });
-
-  it("未ログイン・無効なトークンは 401", async () => {
-    h.user = null;
-    await expect(verifyAdminRequest(req())).rejects.toMatchObject({ status: 401 });
+  it("明示許可された管理者でも受付の所有者権限は得ない", async () => {
+    vi.stubEnv("ADMIN_OPERATOR_EMAILS", "staff@luck428.com");
+    h.user = { ...OWNER, email: "staff@luck428.com" };
+    await expect(verifyAdminRequest(req())).resolves.toEqual({ uid: "u-owner", email: "staff@luck428.com" });
+    await expect(verifyInquiryOwner(req())).rejects.toMatchObject({ status: 403 });
   });
 });
 

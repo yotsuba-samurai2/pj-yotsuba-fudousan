@@ -1078,6 +1078,26 @@ const REQUIRED_HUB_LINKS: Record<string, string[]> = {
     "/legal/column/keieikanri-zairyu-chuka-kigyousha-kaisha-setsuritsu",
     "/legal/column/eiju-kyoka-shinsei-chuka-taiwan-senmonshoku",
   ],
+  "kamotsu-kei-jidosha-anzen-kanrisha-2025-sennin-gimu-todokede": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/keikamotsu-kei-jidosha-unso-todokede",
+    "/legal/column/ippan-kamotsu-unso-kyoka-eigyosho-shako-yoken",
+    "/legal/column/kamotsu-riyo-unso-1shu-2shu-touroku-kyoka",
+  ],
+  "sozokunin-shinkoku-toki-2024-gimuka-koseki-chosa": [
+    "/legal/services/inheritance",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/souzoku",
+    "/legal/column/souzoku-touki-nagare",
+    "/legal/column/houtei-souzoku-jouhou-ichiran-zu",
+    "/legal/column/souzoku-hajime-koseki-chosa-bunkyo",
+    "/legal/column/isan-bunkatsu-kyougisho",
+    "/legal/column/daishu-saidaishu-souzokunin-hani-koseki-kakutei",
+    "/legal/column/souzoku-kigen-matome",
+  ],
 };
 
 /** 表示コンプライアンス上の禁止語 */
@@ -3431,6 +3451,32 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "独立した事業体",
     "紹介料を受け取りません",
   ],
+  "kamotsu-kei-jidosha-anzen-kanrisha-2025-sennin-gimu-todokede": [
+    "貨物自動車運送事業法第36条の2",
+    "貨物軽自動車安全管理者",
+    "貨物軽自動車安全管理者講習",
+    "定期講習",
+    "業務記録",
+    "令和6年法律第23号",
+    "令和7年4月1日",
+    "改善基準告示",
+    "別々にご契約",
+    "独立した事業体",
+    "紹介料を受け取りません",
+  ],
+  "sozokunin-shinkoku-toki-2024-gimuka-koseki-chosa": [
+    "不動産登記法第76条の2",
+    "不動産登記法第76条の3",
+    "第164条",
+    "相続人申告登記",
+    "10万円以下の過料",
+    "3年以内",
+    "相続関係説明図",
+    "別々にご契約",
+    "独立した事業体",
+    "別事業体",
+    "紹介料を受け取りません",
+  ],
 };
 
 /** 記事ごとに含めてはならない表現 */
@@ -3598,6 +3644,8 @@ const FORBIDDEN_PHRASES: Record<string, string[]> = {
   "souzoku-jojo-kabushiki-toshin-shoken-koza-meigi-henko": [],
   "kenchikushi-jimusho-touroku-kanri-kenchikushi-youken": [],
   "keieikanri-koshin-jigyo-keizokusei-rissho-chuka-taiwan": [],
+  "kamotsu-kei-jidosha-anzen-kanrisha-2025-sennin-gimu-todokede": [],
+  "sozokunin-shinkoku-toki-2024-gimuka-koseki-chosa": [],
 };
 
 /** 本セット外へ張る既存legalコラムslug（リポジトリの他シードで実在確認済み） */
@@ -6740,6 +6788,58 @@ const ARTICLES: Array<{
       "在留資格",
       "申請取次",
       "外国人",
+      "行政書士",
+    ],
+  },
+  {
+    file: "127-kamotsu-kei-jidosha-anzen-kanrisha-2025-sennin-gimu-todokede.md",
+    slug: "kamotsu-kei-jidosha-anzen-kanrisha-2025-sennin-gimu-todokede",
+    date: "2026-10-22",
+    title:
+      "軽貨物の2025年安全規制強化｜貨物軽自動車安全管理者の選任義務と業務記録",
+    category: "許認可の手続き（行政書士の実務から）",
+    excerpt:
+      "軽貨物（貨物軽自動車運送事業）は2024年改正（令和6年法律第23号）で安全規制が強化され、貨物軽自動車安全管理者の選任が義務化されました（貨物自動車運送事業法第36条の2）。事業者規制は令和7年4月1日施行で、四輪以上の軽自動車で運送する事業者は営業所ごとに1人を選任・講習修了・国土交通大臣へ届出し、業務記録（1年保存）・事故記録・事故報告も義務に。既存事業者は令和9年3月までの猶予、選任できる者、労働時間・改善基準告示（社労士）との分離受任を整理します。",
+    keywords: [
+      "貨物軽自動車安全管理者 選任 届出",
+      "軽貨物 安全規制 2025年4月 施行",
+      "貨物自動車運送事業法 第36条の2",
+      "貨物軽自動車安全管理者 講習 定期講習",
+      "軽貨物 業務記録 事故記録 保存",
+      "貨物軽自動車安全管理者 経過措置 令和9年3月",
+    ],
+    tags: [
+      "軽貨物",
+      "貨物軽自動車運送事業",
+      "貨物軽自動車安全管理者",
+      "運送業",
+      "許認可",
+      "行政書士",
+    ],
+  },
+  {
+    file: "128-sozokunin-shinkoku-toki-2024-gimuka-koseki-chosa.md",
+    slug: "sozokunin-shinkoku-toki-2024-gimuka-koseki-chosa",
+    date: "2026-10-22",
+    title:
+      "相続人申告登記（2024年）｜相続登記義務化に間に合わないときの戸籍調査",
+    category: "相続の手続き（行政書士の実務から）",
+    excerpt:
+      "相続登記は2024年4月1日に義務化され、取得を知った日から3年以内の申請が必要です（不動産登記法第76条の2）。正当な理由なく怠ると10万円以下の過料（第164条）。遺産分割がまとまらず期限に間に合わないときの簡易な履行手段が相続人申告登記（第76条の3）で、申し出れば申請義務を履行したものとみなされます。申告登記に集める戸籍の範囲、分割成立後の通常の相続登記、戸籍調査（行政書士）と登記（司法書士）の分離受任を整理します。",
+    keywords: [
+      "相続人申告登記 とは 必要書類",
+      "相続登記 義務化 2024年4月 3年以内",
+      "不動産登記法 第76条の3 みなし履行",
+      "相続登記 過料 10万円 第164条",
+      "相続人申告登記 戸籍 どこまで",
+      "相続登記 間に合わない 遺産分割 未了",
+    ],
+    tags: [
+      "相続人申告登記",
+      "相続登記義務化",
+      "戸籍調査",
+      "相続関係説明図",
+      "相続",
       "行政書士",
     ],
   },

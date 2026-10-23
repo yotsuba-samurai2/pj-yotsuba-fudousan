@@ -240,7 +240,7 @@ describe("収載・導線（指示書 6-3〜6-5・第7章）", () => {
     expect(EXTRA_CATEGORY_LABELS.wakeari.ja).toBe("売りにくい土地・建物（再建築不可・共有・借地・狭小地）");
     const order = CATEGORY_ORDER_BY_BUSINESS.realestate;
     expect(order[order.indexOf("akiya") + 1]).toBe("wakeari");
-    expect(read("src/app/api/contact/route.ts")).toContain('wakeari: "売りにくい土地・建物（再建築不可・共有・借地・狭小地）"');
+    expect(read("src/lib/inquiries/contact-schema.ts")).toContain('wakeari: "売りにくい土地・建物（再建築不可・共有・借地・狭小地）"');
     for (const key of KEYS) expect(pageSource(key), key).toContain("ctaIntent={WAKEARI_CONTACT_INTENT}");
   });
 
