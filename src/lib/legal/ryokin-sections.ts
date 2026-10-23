@@ -9,7 +9,8 @@ export type Section = { title: string; href?: string; rows: Row[]; hasJitsuhi?: 
 export const SECTIONS: Section[] = [
   {
     // 2026-07-29 浦松指示：内部呼称の「（主力）」を削除（4言語とも）
-    title: "障害福祉サービス",
+    // 2026-10-23 浦松指示：介護保険の訪問介護（スタンダード385,000円）を追加し、節名を「障害福祉・介護保険サービス」に
+    title: "障害福祉・介護保険サービス",
     href: "/legal/services/shogai-fukushi",
     noteKey: "shogaiNote",
     rows: [
@@ -21,6 +22,8 @@ export const SECTIONS: Section[] = [
       { name: "指定申請（通所系）スタンダード〔単独・顧問不要〕", unit: "1件", price: "385,000円", value: 385000 },
       { name: "指定申請（通所系）ライト〔書類作成中心〕", unit: "1件", price: "220,000円", value: 220000 },
       { name: "指定申請（訪問系：居宅介護・重度訪問介護）", unit: "1件", price: "198,000円", value: 198000 },
+      // 2026-10-23：介護保険法の訪問介護（東京都指定）。人員・設備の事前診断、事前相談同行、申請書一式、運営規程・重説・契約書、加算届、老人福祉法・業務管理体制の届出、補正対応まで
+      { name: "指定申請（介護保険・訪問介護）スタンダード〔単独・顧問不要〕", unit: "1件", price: "385,000円", value: 385000 },
       { name: "運営指導（実地指導）フルサポート", unit: "一式", price: "275,000円", value: 275000 },
       { name: "事業計画書（融資用）", unit: "1件", price: "110,000円", value: 110000 },
       { name: "処遇改善加算 計画書（届出）", unit: "1件", price: "66,000円", value: 66000 },
