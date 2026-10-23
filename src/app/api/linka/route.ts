@@ -4,6 +4,7 @@
 //   2) AI出力はサーバで検証（type・候補≥2・推薦語ゼロ・カタログ外サービス排除）→違反はデモへフォールバック
 //   3) 相談本文はログに残さない（console出力・保存をしない）
 import { NextResponse } from "next/server";
+import { rateLimit } from "@/lib/rate-limit";
 import Anthropic from "@anthropic-ai/sdk";
 import {
   getColumns,
@@ -31,6 +32,10 @@ import {
 import { isValidLocale } from "@/lib/locale";
 import { SKILL_CUSTOMER, SKILL_MEMBER, skillConcierge } from "@/lib/linka/skills";
 import type { LinkaResult, LinkaSite } from "@/lib/linka/types";
+
+// 認証なしの AI 相談：同一IPから1分あたりの回数（画面操作では十分・自動連打だけを止める）
+const LINKA_RATE_LIMIT = 10;
+const LINKA_RATE_WINDOW_MS = 60_000;
 
 export const runtime = "nodejs";
 // AI応答が6〜8秒かかるためVercel既定(10s)では混雑時にタイムアウト→デモ退避してしまう（2026-07-10実測6.7s）
@@ -278,6 +283,10 @@ async function translateResolved(
 }
 
 export async function POST(req: Request) {
+  // 安全性調査 2026-10-22：認証なしで Anthropic API を呼ぶため、IPごとに回数を抑える（課金の悪用対策）
+  if (!rateLimit(req, LINKA_RATE_LIMIT, LINKA_RATE_WINDOW_MS).success) {
+    return NextResponse.json({ error: "too-many-requests" }, { status: 429 });
+  }
   let body: { site?: string; mode?: string; message?: string; locale?: string };
   try {
     body = await req.json();
