@@ -1113,6 +1113,21 @@ const REQUIRED_HUB_LINKS: Record<string, string[]> = {
     "/legal/column/souzoku-hoki-gentei-shonin",
     "/legal/column/souzoku-saimu-hoshou-saimu-chosa-junpro-kikan",
   ],
+  "keshohin-seizo-hanbaigyo-seizogyo-kyoka-yakkiho": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/kodo-kanri-iryokiki-hanbai-kashidashi-kyoka-tenpo-kanrisha",
+    "/legal/column/iyakuhin-tenpo-hanbaigyo-drugstore-kozo-setsubi-touroku-hanbaisha",
+  ],
+  "nihonjin-haiguusha-biza-zairyu-koshin-henko-chuka-taiwan": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/eiju-kyoka-shinsei-chuka-taiwan-senmonshoku",
+    "/legal/column/kika-shinsei-yoken-kokusekiho-chuka-taiwan",
+    "/legal/column/chugoku-tairiku-souzokunin-shinzoku-koshosho-ryoji-ninsho",
+  ],
 };
 
 /** 表示コンプライアンス上の禁止語 */
@@ -3533,6 +3548,43 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "別事業体",
     "紹介料を受け取りません",
   ],
+  "keshohin-seizo-hanbaigyo-seizogyo-kyoka-yakkiho": [
+    "医薬品、医療機器等の品質、有効性及び安全性の確保等に関する法律",
+    "薬機法",
+    "製造販売業許可",
+    "製造業許可",
+    "薬機法第12条",
+    "薬機法第13条",
+    "薬機法第17条",
+    "施行規則第85条",
+    "総括製造販売責任者",
+    "品質保証責任者",
+    "安全管理責任者",
+    "責任技術者",
+    "包装・表示・保管",
+    "GQP",
+    "GVP",
+    "都道府県知事",
+    "別々にご契約",
+    "独立した事業体",
+    "別事業体",
+    "紹介料を受け取りません",
+  ],
+  "nihonjin-haiguusha-biza-zairyu-koshin-henko-chuka-taiwan": [
+    "出入国管理及び難民認定法",
+    "別表第二",
+    "日本人の配偶者等",
+    "入管法第22条の4",
+    "在留資格認定証明書",
+    "在留期間更新許可申請",
+    "在留資格変更許可申請",
+    "意見聴取",
+    "正当な理由",
+    "別々にご契約",
+    "独立した事業体",
+    "別事業体",
+    "紹介料を受け取りません",
+  ],
 };
 
 /** 記事ごとに含めてはならない表現 */
@@ -3704,6 +3756,8 @@ const FORBIDDEN_PHRASES: Record<string, string[]> = {
   "sozokunin-shinkoku-toki-2024-gimuka-koseki-chosa": [],
   "dokugekibutsu-hanbaigyo-touroku-kozo-setsubi-kijun": [],
   "souzoku-hoki-jukuryo-kikan-shincho-kisanten": [],
+  "keshohin-seizo-hanbaigyo-seizogyo-kyoka-yakkiho": [],
+  "nihonjin-haiguusha-biza-zairyu-koshin-henko-chuka-taiwan": [],
 };
 
 /** 本セット外へ張る既存legalコラムslug（リポジトリの他シードで実在確認済み） */
@@ -6950,6 +7004,60 @@ const ARTICLES: Array<{
       "期間伸長",
       "起算点",
       "相続",
+      "行政書士",
+    ],
+  },
+  {
+    file: "131-keshohin-seizo-hanbaigyo-seizogyo-kyoka-yakkiho.md",
+    slug: "keshohin-seizo-hanbaigyo-seizogyo-kyoka-yakkiho",
+    date: "2026-10-24",
+    title:
+      "化粧品製造販売業・製造業許可｜薬機法第12条・第13条の違いと三役・GQP/GVP",
+    category: "許認可の手続き（行政書士の実務から）",
+    excerpt:
+      "化粧品を自社ブランドで売るには、市場への出荷と最終責任を負う「化粧品製造販売業許可」（薬機法第12条）と、製造・包装・表示・保管を行う「化粧品製造業許可」（薬機法第13条）の違いを押さえる必要があります。輸入販売でも原則両方が必要な点、製造業許可の区分（一般／包装・表示・保管）、総括製造販売責任者ほか三役の資格（薬機法第17条・施行規則第85条）とGQP/GVP、許可申請・輸入通関・税務の分離受任を整理します。",
+    keywords: [
+      "化粧品 製造販売業許可 製造業許可 違い",
+      "化粧品 輸入 製造販売業許可 製造業許可 包装・表示・保管",
+      "総括製造販売責任者 資格 化粧品 施行規則第85条",
+      "化粧品 GQP GVP 品質保証責任者 安全管理責任者",
+      "薬機法第12条 第13条 化粧品 許可 都道府県知事",
+      "化粧品 製造販売業 許可 行政書士",
+    ],
+    tags: [
+      "化粧品製造販売業",
+      "化粧品製造業許可",
+      "薬機法",
+      "総括製造販売責任者",
+      "GQP",
+      "許認可",
+      "行政書士",
+    ],
+  },
+  {
+    file: "132-nihonjin-haiguusha-biza-zairyu-koshin-henko-chuka-taiwan.md",
+    slug: "nihonjin-haiguusha-biza-zairyu-koshin-henko-chuka-taiwan",
+    date: "2026-10-24",
+    title:
+      "日本人の配偶者等ビザ｜在留・更新で見られる婚姻の実体と22条の4の取消し（中国・台湾）",
+    category: "許認可の手続き（行政書士の実務から）",
+    excerpt:
+      "「日本人の配偶者等」は、日本人の配偶者・特別養子・日本人の子として出生した者が対象の在留資格です（出入国管理及び難民認定法 別表第二）。認定・変更・更新で見られる婚姻の実体と継続性、提出資料（質問書・住民票ほか）、配偶者としての活動を継続して6か月以上行わない場合の在留取消し（入管法第22条の4）、離婚・DV・戸籍・紛争の分離受任を、中国・台湾の配偶者を持つ家族向けに整理します。",
+    keywords: [
+      "日本人の配偶者等 在留資格 更新 婚姻の実体",
+      "日本人の配偶者等 別表第二 対象",
+      "入管法第22条の4 在留資格取消し 6か月 配偶者",
+      "日本人の配偶者 離婚 死別 在留資格 変更",
+      "日本人の配偶者等 DV 別居 正当な理由",
+      "日本人の配偶者等 中国 台湾 行政書士",
+    ],
+    tags: [
+      "日本人の配偶者等",
+      "在留資格",
+      "在留資格の取消し",
+      "入管法",
+      "中国",
+      "台湾",
       "行政書士",
     ],
   },
