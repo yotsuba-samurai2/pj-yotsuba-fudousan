@@ -8,6 +8,8 @@ vi.mock("@/lib/api-auth", () => ({ verifyAdminRequest: deps.auth, AuthError: cla
 vi.mock("@/lib/rental-import/db-store", () => ({ rentalStore: { get: deps.get, create: deps.create, update: deps.update } }));
 vi.mock("@/lib/db/properties", () => ({ getProperties: deps.list }));
 vi.mock("next/cache", () => ({ revalidatePath: deps.revalidate }));
+vi.mock("@/lib/flush-revalidation", () => ({ flushRevalidation: vi.fn() }));
+vi.mock("@/lib/property-publication-notify", () => ({ recordPropertyPublicationChange: vi.fn(), scheduleDuePropertyNotifications: vi.fn() }));
 import { GET, POST } from "@/app/api/admin/bukken/import/route";
 import { AuthError } from "@/lib/api-auth";
 function req(action: string, record: unknown) { return new NextRequest("https://example.test/api/admin/bukken/import", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ action, mode: "published", maintenance: false, record }) }); }
@@ -35,7 +37,13 @@ describe("賃貸取込API", () => {
   });
   it("広告許可が不明なら保留", async () => { const v = fixture(); v.reins.advertising = "unknown"; expect(await (await POST(req("apply", v))).json()).toMatchObject({ action: "held" }); expect(deps.create).not.toHaveBeenCalled(); });
   it("画像の外部直リンクを拒否", async () => { const v = fixture(); v.property.images[0].url = "https://evil.example/image.jpg"; expect(await (await POST(req("apply", v))).json()).toMatchObject({ action: "held" }); expect(deps.create).not.toHaveBeenCalled(); });
-  it("自社画像を使う登録は保存・全言語キャッシュ更新", async () => { const v = fixture(); v.property.images.forEach((i, n) => { i.url = `https://demo.supabase.co/storage/v1/object/public/column-images/bukken/auto/${n}.jpg`; }); expect(await (await POST(req("apply", v))).json()).toMatchObject({ action: "created" }); expect(deps.create).toHaveBeenCalledTimes(1); expect(deps.revalidate).toHaveBeenCalledWith("/sitemap.xml"); expect(deps.revalidate).toHaveBeenCalledTimes(9); });
+  it("自社画像を使う登録は保存・全言語キャッシュ更新", async () => {
+    const v = fixture(); v.property.images.forEach((i, n) => { i.url = `https://demo.supabase.co/storage/v1/object/public/column-images/bukken/auto/${n}.jpg`; });
+    expect(await (await POST(req("apply", v))).json()).toMatchObject({ action: "created" }); expect(deps.create).toHaveBeenCalledTimes(1);
+    expect(deps.revalidate).toHaveBeenCalledWith("/sitemap.xml");
+    for (const locale of ["ja", "en", "zh-tw", "zh"]) expect(deps.revalidate).toHaveBeenCalledWith(`/${locale}/bukken`);
+    expect(deps.revalidate).toHaveBeenCalledWith("/[locale]/(realestate)/gakku/[school]/rentals", "page");
+  });
   it("監視対象は自動取込した賃貸に限定", async () => { deps.list.mockResolvedValue([{ ...fixture().property, internal: { rentalImport: { source: "proof" } } }, { dealType: "land" }, { dealType: "rental" }]); const response = await GET(new NextRequest("https://example.test/api/admin/bukken/import")); expect((await response.json()).listings).toHaveLength(1); expect(response.headers.get("cache-control")).toBe("no-store"); });
   it("不正JSONを拒否", async () => { const response = await POST(new NextRequest("https://example.test/api/admin/bukken/import", { method: "POST", body: "{" })); expect(response.status).toBe(400); });
 });

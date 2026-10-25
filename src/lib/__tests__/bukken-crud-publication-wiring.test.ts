@@ -25,7 +25,7 @@ function land(over: Record<string, unknown> = {}) {
 /** 管理画面（通常編集）APIが保存成功時だけ公開変更通知を呼ぶことの検証。 */
 const deps = vi.hoisted(() => ({
   auth: vi.fn(), getById: vi.fn(), getBySlug: vi.fn(), create: vi.fn(), update: vi.fn(), cas: vi.fn(), del: vi.fn(),
-  record: vi.fn(), schedule: vi.fn(),
+  record: vi.fn(), schedule: vi.fn(), revalidate: vi.fn(), flush: vi.fn(),
 }));
 vi.mock("@/lib/api-auth", () => ({ verifyAdminRequest: deps.auth, AuthError: class extends Error {} }));
 vi.mock("@/lib/db/properties", () => ({
@@ -33,13 +33,15 @@ vi.mock("@/lib/db/properties", () => ({
   createProperty: deps.create, updateProperty: deps.update, updatePropertyIfUnchanged: deps.cas, deleteProperty: deps.del,
 }));
 vi.mock("@/lib/property-publication-notify", () => ({ recordPropertyPublicationChange: deps.record, scheduleDuePropertyNotifications: deps.schedule }));
+vi.mock("next/cache", () => ({ revalidatePath: deps.revalidate }));
+vi.mock("@/lib/flush-revalidation", () => ({ flushRevalidation: deps.flush }));
 import { PATCH } from "@/app/api/admin/bukken/[id]/route";
 import { POST } from "@/app/api/admin/bukken/route";
 
 const ctx = { params: Promise.resolve({ id: "id" }) };
 function req(method: string, body: unknown, query = "") { return new NextRequest(`https://example.test/api/admin/bukken${query}`, { method, body: JSON.stringify(body) }); }
 
-beforeEach(() => { vi.useFakeTimers(); vi.setSystemTime(NOW); vi.clearAllMocks(); vi.stubEnv("NEXT_PUBLIC_SUPABASE_URL", "https://demo.supabase.co"); deps.auth.mockResolvedValue({ uid: "admin" }); deps.cas.mockResolvedValue(true); deps.create.mockResolvedValue("new-id"); });
+beforeEach(() => { vi.useFakeTimers(); vi.setSystemTime(NOW); vi.clearAllMocks(); deps.flush.mockReset().mockResolvedValue(undefined); vi.stubEnv("NEXT_PUBLIC_SUPABASE_URL", "https://demo.supabase.co"); deps.auth.mockResolvedValue({ uid: "admin" }); deps.cas.mockResolvedValue(true); deps.create.mockResolvedValue("new-id"); });
 afterEach(() => { vi.useRealTimers(); vi.unstubAllEnvs(); });
 
 describe("管理画面APIの公開変更通知（新規作成・PATCH）", () => {
@@ -110,4 +112,33 @@ describe("管理画面APIの公開変更通知（新規作成・PATCH）", () =>
     expect(res.status).toBe(400); // spec.dealTypeとの不一致で拒否される
     expect(deps.record).not.toHaveBeenCalled();
   });
+});
+
+it("募集終了のCAS保存成功後にサイトマップ/記事/学区を失効しflushを待つ", async () => {
+  deps.getById.mockResolvedValue(land());
+  const res = await PATCH(req("PATCH", { status: "closed", expectedUpdatedAt: "v1" }), ctx);
+  expect(res.status).toBe(200);
+  expect(deps.revalidate).toHaveBeenCalledWith("/sitemap.xml");
+  expect(deps.revalidate).toHaveBeenCalledWith("/[locale]/(realestate)/column/[slug]", "page");
+  expect(deps.revalidate).toHaveBeenCalledWith("/[locale]/(realestate)/gakku/[school]/rentals", "page");
+  expect(deps.cas.mock.invocationCallOrder[0]).toBeLessThan(deps.revalidate.mock.invocationCallOrder[0]);
+  expect(deps.revalidate.mock.invocationCallOrder.at(-1)).toBeLessThan(deps.flush.mock.invocationCallOrder[0]);
+});
+it.each(["create", "upsert", "patch"])("%s保存後のcache障害は保存済みを明示し書込みを再実行しない", async method => {
+  deps.flush.mockRejectedValueOnce(new Error("PRIVATE_CACHE_SECRET"));
+  deps.getById.mockResolvedValue(land()); deps.getBySlug.mockResolvedValue(land());
+  const res = method === "patch"
+    ? await PATCH(req("PATCH", { status: "closed", expectedUpdatedAt: "v1" }), ctx)
+    : await POST(req("POST", { ...land(), expectedUpdatedAt: "v1" }, method === "upsert" ? "?upsert=1" : ""));
+  expect(res.status).toBe(503);
+  const body = await res.json(); expect(body).toMatchObject({ mutationSucceeded: true, publicationRefresh: "failed" });
+  expect(body.error).toContain("保存は完了"); expect(body.error).toContain("再保存せず"); expect(JSON.stringify(body)).not.toContain("PRIVATE_");
+  expect(deps.create.mock.calls.length + deps.cas.mock.calls.length).toBe(1);
+  expect(deps.record).toHaveBeenCalledOnce();
+});
+it("CAS競合・入力拒否ではcacheを失効しない", async () => {
+  deps.getById.mockResolvedValue(land()); deps.cas.mockResolvedValue(false);
+  expect((await PATCH(req("PATCH", { title: "改題", expectedUpdatedAt: "v1" }), ctx)).status).toBe(409);
+  expect((await PATCH(req("PATCH", { dealType: "house", expectedUpdatedAt: "v1" }), ctx)).status).toBe(400);
+  expect(deps.revalidate).not.toHaveBeenCalled(); expect(deps.flush).not.toHaveBeenCalled();
 });

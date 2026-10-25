@@ -26,6 +26,7 @@ import {
 type Props = {
   initialData?: AdminProperty;
   onSubmit: (data: PropertyInput) => Promise<void>;
+  imageNetworkEnabled?: boolean;
 };
 
 const translationTabs = [
@@ -258,7 +259,7 @@ function Field({
   );
 }
 
-export default function PropertyForm({ initialData, onSubmit }: Props) {
+export default function PropertyForm({ initialData, onSubmit, imageNetworkEnabled = true }: Props) {
   const [status, setStatus] = useState<PropertyStatus>(initialData?.status ?? "draft");
   const [slug, setSlug] = useState(initialData?.slug ?? "");
   const [dealType, setDealType] = useState<PropertyDealType>(
@@ -314,6 +315,7 @@ export default function PropertyForm({ initialData, onSubmit }: Props) {
     setSpecDraft((prev) => ({ ...prev, ...patch }));
 
   const handleUpload = async (file: File) => {
+    if (!imageNetworkEnabled) return;
     setUploading(true);
     setError("");
     try {
@@ -764,8 +766,10 @@ export default function PropertyForm({ initialData, onSubmit }: Props) {
         <div className="space-y-2">
           {images.map((img, i) => (
             <div key={img.url} className="flex items-center gap-3">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={img.url} alt={img.alt} className="h-16 w-24 rounded-lg object-cover" />
+              {imageNetworkEnabled ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img src={img.url} alt={img.alt} className="h-16 w-24 rounded-lg object-cover" />
+              ) : <span className="text-xs text-text-muted">画像の通信は無効</span>}
               <input
                 value={img.alt}
                 onChange={(e) =>
@@ -786,12 +790,12 @@ export default function PropertyForm({ initialData, onSubmit }: Props) {
           ))}
         </div>
         <label className="mt-3 inline-block cursor-pointer rounded-lg border border-border px-3 py-1.5 text-xs text-text-muted hover:bg-surface-dim">
-          {uploading ? "アップロード中…" : "＋画像をアップロード"}
+          {!imageNetworkEnabled ? "この検証では画像をアップロードしません" : uploading ? "アップロード中…" : "＋画像をアップロード"}
           <input
             type="file"
             accept="image/jpeg,image/png,image/webp"
             className="hidden"
-            disabled={uploading}
+            disabled={uploading || !imageNetworkEnabled}
             onChange={(e) => {
               const file = e.target.files?.[0];
               if (file) void handleUpload(file);

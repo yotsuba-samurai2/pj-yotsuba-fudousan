@@ -100,7 +100,8 @@ function expandColumn(
 /**
  * 物件詳細を、その物件が公開されているロケール（p.locales・既定 ja）のみ展開する。
  * published のみ収載（取得関数が status:"published" 限定＋isListable の二重ガード）。
- * closed は成約時の revalidate で即時に外れる（おとり広告の構造的回避）。
+ * 管理CRUD/取込API保存後は言語prefixなしの/sitemap.xmlを失効要求する。
+ * 次回再生成でclosedを除外。要求成功と公開画面への伝播完了は別に確認する。
  */
 function expandProperty(p: PublicProperty): MetadataRoute.Sitemap {
   const active = p.locales && p.locales.length > 0 ? p.locales : (["ja"] as const);

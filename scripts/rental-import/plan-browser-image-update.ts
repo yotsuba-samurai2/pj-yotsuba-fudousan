@@ -1,5 +1,5 @@
 import { readFile, writeFile } from "node:fs/promises";
-import { prepareImages, assertImageTarget } from "../../src/lib/rental-import/image-repair";
+import { prepareImages, assertImageTarget, buildBrowserImageUpdateSql } from "../../src/lib/rental-import/image-repair";
 import { isOwnedImage } from "../../src/lib/rental-import/media";
 
 // Connector fallback: a full row snapshot is the backup; never copy browser credentials.
@@ -18,12 +18,7 @@ async function main() {
     if (!saved || saved.file !== source.file || !isOwnedImage(saved.url, supabaseUrl)) throw new Error("アップロード画像の対応が一致しません");
     return { url: saved.url, alt: i.alt, kind: i.kind };
   });
-  const literal = (s: string) => `'${s.replaceAll("'", "''")}'`;
-  const sql = `UPDATE public.properties SET images=${literal(JSON.stringify(images))}::jsonb, updated_at=clock_timestamp()
-WHERE id=${literal(target.id)} AND slug=${literal(target.slug)} AND updated_at=${literal(target.updatedAt)}::timestamp
-AND internal->'rentalImport'->'source'->>'provider'=${literal(prepared.manifest.provider)}
-AND internal->'rentalImport'->'source'->>'roomId'=${literal(prepared.manifest.roomId)}
-RETURNING id, slug, status, images, updated_at;\n`;
+  const sql = buildBrowserImageUpdateSql(target, prepared.manifest, images);
   await writeFile(output, sql, { mode: 0o600 });
   console.log(JSON.stringify({ action: "planned", count: images.length, output, note: "Execute with the project-bound Supabase connector; require exactly one returned row, then verify public images and unchanged non-image fields." }));
 }

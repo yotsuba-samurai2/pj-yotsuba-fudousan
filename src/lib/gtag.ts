@@ -21,13 +21,24 @@ export function gaEvent(name: string, params?: GtagParams): void {
   }
 }
 
-/**
- * 問い合わせの来訪元（?intent=）を GA4 のパラメータ用に丸める（2026-09-23）。
- * 例：学区別賃貸の相談ボタン → gakku-seishi-rental。URL は利用者が書き換えられるため、
- * 英小文字・数字・ハイフンの短い値だけを通し、それ以外は "other"、無ければ "none" にする
- * （自由入力を GA4 に送らない＝上の規約どおり）。
- */
+// Explicit analytics vocabulary. New CTA identifiers require review here; unknown input never
+// becomes a new event dimension. Keep the school list small instead of bundling address data.
+const CONTACT_INTENTS = [
+  "bukken", "bukken-general", "bukken-gh", "rental", "sale", "management", "souzoku", "akiya", "wakeari",
+  "gh-owner", "gh-owner-page", "foreign-housing", "souzoku-legal", "oyanakiato", "shogai-fukushi", "gaikokujin-shain",
+  "ikuseishuro-gaibu-kansa", "kikoku-funin", "kyoninka", "subsidy", "visa", "labor", "other", "gakku", "minpaku-purchase",
+] as const;
+const ANALYTICS_SCHOOL_SLUGS = [
+  "rekisen", "yanagicho", "sasugaya", "hayashicho", "meika", "aoyagi", "sekiguchidaimachi", "kohinatadaimachi",
+  "kanatomi", "kubomachi", "otsuka", "yushima", "seishi", "nezu", "sendagi", "shiomi", "showa", "komamoto", "kagomachi", "hongo",
+] as const;
+const CONTACT_INTENT_ALLOWLIST: ReadonlySet<string> = new Set([
+  ...CONTACT_INTENTS,
+  ...ANALYTICS_SCHOOL_SLUGS.flatMap(slug => [`gakku-${slug}`, `gakku-${slug}-rental`, `gakku-${slug}-sale`]),
+]);
+
+/** Only known site CTA values enter the custom GA4 intent parameter. Does not sanitize page URLs. */
 export function contactIntentParam(raw: string | null | undefined): string {
   if (!raw) return "none";
-  return /^[a-z0-9]+(?:-[a-z0-9]+){0,5}$/.test(raw) && raw.length <= 50 ? raw : "other";
+  return CONTACT_INTENT_ALLOWLIST.has(raw) ? raw : "other";
 }

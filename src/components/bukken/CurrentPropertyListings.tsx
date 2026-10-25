@@ -4,9 +4,9 @@
 // 特定の事業用途や入居資格への適合を示す文言は置かず、留保文を同じブロック内に必ず出す。
 //
 // 設置先（/services・/global/chinese）は revalidate=3600 のISR配下＝物件の公開・非公開の切替が
-// 最大1時間このブロックに反映されないことがある（物件詳細ページ自体は成約・掲載終了時に
-// revalidatePathで即時反映される。ここは「解説ページからの一覧リンク」という位置づけのため、
-// 数十分の遅延は許容範囲とした＝仕様上の意図的な選択であり不具合ではない）。
+// 管理CRUD/取込API保存後はproperty-publication-cacheで依存ページの失効を要求する。
+// 失効は次回アクセス時の再生成を要求するもので、画面照合の完了や即時伝播の保証ではない。
+// CLIなどrequest scope外の保存経路では別途失効処理が必要。
 import Link from "next/link";
 import { getPublishedProperties, getLocalizedProperty } from "@/lib/properties";
 import { formatPropertyPriceL, propertyUi } from "@/lib/property-i18n";

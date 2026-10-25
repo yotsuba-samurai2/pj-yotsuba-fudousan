@@ -7,6 +7,7 @@ import {
   deleteProperty,
 } from "@/lib/db/properties";
 import { parsePropertyInput, parsePropertyPatch, bannedTermsError } from "@/lib/property-validation";
+import { refreshPropertyPublication, PropertyPublicationRefreshError } from "@/lib/property-publication-cache";
 import {
   recordPropertyPublicationChange,
   scheduleDuePropertyNotifications,
@@ -15,6 +16,9 @@ import {
 type Ctx = { params: Promise<{ id: string }> };
 
 function handleError(err: unknown) {
+  if (err instanceof PropertyPublicationRefreshError) {
+    return NextResponse.json({ error: err.message, mutationSucceeded: true, publicationRefresh: "failed" }, { status: 503 });
+  }
   if (err instanceof AuthError) {
     return NextResponse.json({ error: err.message }, { status: err.status });
   }
@@ -61,12 +65,7 @@ export async function PATCH(req: NextRequest, ctx: Ctx) {
     const rentalError = rentalPublicationError(merged.data, new Date(), existing);
     if (rentalError) return NextResponse.json({ error: rentalError }, { status: 400 });
     // 部分更新後の姿で禁止語ゲートを通す（statusだけ・本文だけの更新でもすり抜けさせない）
-    const banned = bannedTermsError({
-      status: parsed.data.status ?? existing.status,
-      title: parsed.data.title ?? existing.title,
-      description: parsed.data.description ?? existing.description,
-      priceNote: parsed.data.priceNote ?? existing.priceNote,
-    });
+    const banned = bannedTermsError(merged.data);
     if (banned) {
       return NextResponse.json({ error: banned }, { status: 400 });
     }
@@ -74,6 +73,7 @@ export async function PATCH(req: NextRequest, ctx: Ctx) {
     const now = new Date();
     await recordPropertyPublicationChange(existing, merged.data, now);
     scheduleDuePropertyNotifications(now);
+    await refreshPropertyPublication([existing.slug, merged.data.slug]);
     return NextResponse.json({ ok: true });
   } catch (err) {
     return handleError(err);
@@ -98,7 +98,9 @@ export async function DELETE(req: NextRequest, ctx: Ctx) {
         { status: 400 },
       );
     }
-    await deleteProperty(id);
+    if (!existing.updatedAt || !await deleteProperty(id, existing.updatedAt)) {
+      return NextResponse.json({ error: "同時更新を検出しました。最新の画面を開き直してください" }, { status: 409 });
+    }
     return NextResponse.json({ ok: true });
   } catch (err) {
     return handleError(err);

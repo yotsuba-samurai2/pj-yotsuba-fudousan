@@ -1,0 +1,6 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": { "noEmit": true, "incremental": false, "types": ["node"] },
+  "include": ["run.ts", "repair-images.ts"],
+  "exclude": []
+}
