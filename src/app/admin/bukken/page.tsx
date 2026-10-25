@@ -75,9 +75,9 @@ export default function BukkenListPage() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [statusFilter]);
 
-  /** 成約処理（ワンクリック）：closed へ更新→即時 revalidate で一覧・sitemapから消す */
+  /** closedへ保存し依存ページの再生成を要求。公開反映は別途確認する。 */
   const handleClose = async (p: AdminProperty) => {
-    if (!window.confirm(`「${p.title}」を成約（募集終了）にしますか？\n一覧・サイトマップから即時に外れ、詳細は「募集終了」表示になります。`)) {
+    if (!window.confirm(`「${p.title}」を成約（募集終了）にしますか？\n保存後、一覧・関連ページ・サイトマップの更新を要求します。公開画面への反映は別途ご確認ください。`)) {
       return;
     }
     setBusy(p.id);
@@ -90,7 +90,10 @@ export default function BukkenListPage() {
       );
     } catch (err) {
       console.error("Failed to close:", err);
-      alert("成約処理に失敗しました");
+      // A failed cache refresh can follow a successful save. Keep that message and reread
+      // the saved state on failures (including CAS/network uncertainty), never resend here.
+      alert(err instanceof Error ? err.message : "成約処理に失敗しました");
+      await fetchProperties();
     } finally {
       setBusy(null);
     }

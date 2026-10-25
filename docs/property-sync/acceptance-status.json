@@ -1,0 +1,660 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-10-26",
+  "sourceDocument": "yotsuba-design-review-pack-2026-10-22.md",
+  "sourceSha256": "74d691a6991a5564420f6850822a266f2c32821f27b08a0d389b758929806764",
+  "specCount": 71,
+  "historicalRulesNotAdopted": true,
+  "fullAcceptancePassed": false,
+  "note": "仕様の追跡表であり71件の実行結果ではない。partialは関連するローカル試験があるだけで受入合格を意味しない。",
+  "cases": [
+    {
+      "id": "T01",
+      "historical_spec": "賃料169,999／170,000／270,000／270,001、管理費別",
+      "status": "partial_local_evidence",
+      "local_test_files": [
+        "src/lib/property-sync/__tests__/rental-field-evaluation.test.ts"
+      ],
+      "remaining": "unit46: 最新回答の管理費別・総額基準・間取り集合/最低面積をローカル検証。業務値は私有候補入力に保存。実証拠の正規化/真正性、本番ルール有効化、B01/公開gate統合は未検証。歴史的賃料帯は採用しない。"
+    },
+    {
+      "id": "T02",
+      "historical_spec": "1LDK、2DK、2LDK、49㎡、50㎡、普通借家不明",
+      "status": "partial_local_evidence",
+      "local_test_files": [
+        "src/lib/property-sync/__tests__/rental-field-evaluation.test.ts"
+      ],
+      "remaining": "unit46: 最新回答の管理費別・総額基準・間取り集合/最低面積をローカル検証。業務値は私有候補入力に保存。実証拠の正規化/真正性、本番ルール有効化、B01/公開gate統合は未検証。歴史的賃料帯は採用しない。"
+    },
+    {
+      "id": "T03",
+      "historical_spec": "想定249,999／250,000、税区分不明、AD成立条件不明",
+      "status": "partial_local_evidence",
+      "local_test_files": [
+        "src/lib/property-sync/__tests__/rental-field-evaluation.test.ts"
+      ],
+      "remaining": "unit45: 設定閾値/税/AD込み当社総額のローカル判定と欠測・条件付き・二重計上防止を検証。実報酬証拠の真正性・現行ルール有効化・募集/許諾/公開との結合は未検証。歴史的固定額は採用しない。"
+    },
+    {
+      "id": "T04",
+      "historical_spec": "旧40万／80万／17.5万48㎡scope、新条件版欠落",
+      "status": "partial_local_evidence",
+      "local_test_files": [
+        "src/lib/property-sync/__tests__/rules.test.ts",
+        "src/lib/property-sync/__tests__/change-plan.test.ts"
+      ],
+      "remaining": "unit46: 最新の業務条件は私有入力v2に保存し、明示総額モードと旧範囲の混在を拒否。業務ルールの有効版指定、B01旧固定条件からの移行、本番接続は未実施。"
+    },
+    {
+      "id": "T05",
+      "historical_spec": "同一建物別号室、同号室再募集、管理IDと公開IDが別",
+      "status": "partial_local_evidence",
+      "local_test_files": [
+        "src/lib/property-sync/__tests__/media-state.test.ts",
+        "src/lib/property-sync/__tests__/plan-registry.test.ts"
+      ],
+      "remaining": "実物の同一部屋/再募集・媒体ID照合は未実施"
+    },
+    {
+      "id": "T06",
+      "historical_spec": "site許可のみ、写真未許可、許諾失効",
+      "status": "partial_local_evidence",
+      "local_test_files": [
+        "src/lib/property-sync/__tests__/permission-evidence.test.ts",
+        "src/lib/property-sync/__tests__/plan-diagnostics.test.ts"
+      ],
+      "remaining": "媒体/素材ごとの根拠版・scope・期間の照合契約のみ。真正性、最終payloadの素材集合、画像画素、実writer接続は未検証/未実装"
+    },
+    {
+      "id": "T07",
+      "historical_spec": "保存直後通信断、同一job再開",
+      "status": "partial_local_evidence",
+      "local_test_files": [
+        "src/lib/property-sync/__tests__/local-plan-store.test.ts",
+        "src/lib/property-sync/__tests__/local-media-failure.test.ts"
+      ],
+      "remaining": "外部媒体保存と再読取りの障害試験は未実施"
+    },
+    {
+      "id": "T08",
+      "historical_spec": "ジョブ作成後に価格変更／募集停止、他作業者編集",
+      "status": "partial_local_evidence",
+      "local_test_files": [
+        "src/lib/property-sync/__tests__/change-plan.test.ts",
+        "src/lib/property-sync/__tests__/stored-plan-preflight.test.ts",
+        "src/lib/__tests__/property-delete-cas.test.ts",
+        "src/lib/property-sync/__tests__/plan-diagnostics.test.ts"
+      ],
+      "remaining": "unit32〜35の隔離Postgres/Prismaで並列接続・古い版・応答喪失後の照合を検証済み。本番/実媒体writerのfence契約と競合検証は未実施。"
+    },
+    {
+      "id": "T09",
+      "historical_spec": "site成功／ATBB失敗、rollback時に許諾失効",
+      "status": "not_verified",
+      "local_test_files": [],
+      "remaining": "この仕様全体の実行証跡なし。未確認/未実装を合格扱いしない"
+    },
+    {
+      "id": "T10",
+      "historical_spec": "DB変更中断、outbox欠落、通知tableなし",
+      "status": "partial_local_evidence",
+      "local_test_files": [
+        "src/lib/property-sync/__tests__/db-media-store.test.ts",
+        "src/lib/__tests__/property-publication-effects.test.ts"
+      ],
+      "remaining": "unit36の隔離Postgresで物件/要求記録/公開処理予定の同一transactionと途中失敗rollbackを検証済み。本番queue移行・schema/role・実通知adapter接続は未実施。"
+    },
+    {
+      "id": "T11",
+      "historical_spec": "物件募集終了、article関連枠、学区、sitemap",
+      "status": "partial_local_evidence",
+      "local_test_files": [
+        "src/lib/__tests__/property-publication-cache.test.ts",
+        "src/lib/__tests__/bukken-crud-publication-wiring.test.ts",
+        "src/lib/rental-import/__tests__/publication-wiring.test.ts"
+      ],
+      "remaining": "管理CRUD/取込保存後の依存page失効要求・保存後障害の識別まで。記事関係台帳、他writer/CLI、実cache/公開画面、伝播時間計測は未実装/未検証"
+    },
+    {
+      "id": "T12",
+      "historical_spec": "Resendが返却error、通信断、同じ受付再送",
+      "status": "partial_local_evidence",
+      "local_test_files": [
+        "src/lib/__tests__/contact-receipt.test.ts",
+        "src/lib/__tests__/contact-delivery.test.ts"
+      ],
+      "remaining": "既存受付実装の回帰。実送信/CRM照合は今回未実施"
+    },
+    {
+      "id": "T13",
+      "historical_spec": "GA4欠測、LINEのみ、未決案件、別物件成約",
+      "status": "not_verified",
+      "local_test_files": [],
+      "remaining": "この仕様全体の実行証跡なし。未確認/未実装を合格扱いしない"
+    },
+    {
+      "id": "T14",
+      "historical_spec": "居住用110・売買1・事業用1、区分ごと異なる空枠",
+      "status": "partial_local_evidence",
+      "local_test_files": [
+        "src/lib/property-sync/__tests__/capacity-reservations.test.ts",
+        "src/lib/property-sync/__tests__/local-capacity-store.test.ts",
+        "src/lib/property-sync/__tests__/plan-diagnostics.test.ts"
+      ],
+      "remaining": "独立poolの設定/予約/照合とローカル排他保存を合成検証。実契約/枠数/媒体証跡、共有pool、DB永続化と実writerは未確認/未接続"
+    },
+    {
+      "id": "T15",
+      "historical_spec": "未ログイン、一般ログイン、許可operator、失効token",
+      "status": "partial_local_evidence",
+      "local_test_files": [
+        "src/lib/__tests__/admin-operator-guard.test.ts"
+      ],
+      "remaining": "既存管理APIのmock試験。production設定や全経路到達性の証明ではない"
+    },
+    {
+      "id": "T16",
+      "historical_spec": "住所の号不明、公式表の「一部」境界、年度不明",
+      "status": "partial_local_evidence",
+      "local_test_files": [
+        "src/lib/property-sync/__tests__/school-evidence.test.ts",
+        "src/lib/property-sync/__tests__/rental-field-evaluation.test.ts"
+      ],
+      "remaining": "unit46: 指定4学区集合と既存学区matcherを接続し、別物件/source/年度/日・範囲外・曖昧根拠を合成検証。unit44公式表326行の照合済み範囲を保持。個別住所正規化・適用年度/日・周辺自治体と公開判断への結合は未確認。"
+    },
+    {
+      "id": "T17",
+      "historical_spec": "AD・内部報酬・元付・原図の業者帯入り入力",
+      "status": "partial_local_evidence",
+      "local_test_files": [
+        "src/lib/__tests__/property-public-isolation.test.ts",
+        "src/lib/__tests__/property-public-gate-api.test.ts"
+      ],
+      "remaining": "画像画素・未知機密文字列・実公開画面は未検証"
+    },
+    {
+      "id": "T18",
+      "historical_spec": "無変更100件、変更1件、原本hash同一",
+      "status": "partial_local_evidence",
+      "local_test_files": [
+        "src/lib/property-sync/__tests__/source-fingerprint.test.ts"
+      ],
+      "remaining": "差分hashのみ。100件cache/費用計測/依存先再処理は未実装"
+    },
+    {
+      "id": "T19",
+      "historical_spec": "外部資料内に「条件を緩めよ」「tokenを送れ」",
+      "status": "partial_local_evidence",
+      "local_test_files": [
+        "src/lib/property-sync/__tests__/plan-registry.test.ts",
+        "src/lib/property-sync/__tests__/source-fingerprint.test.ts"
+      ],
+      "remaining": "固定schema/生値非流出のみ。モデルへの外部資料注入試験は未実装"
+    },
+    {
+      "id": "T20",
+      "historical_spec": "改善AIが評価基準を書換え、holdoutを参照",
+      "status": "partial_local_evidence",
+      "local_test_files": [
+        "src/lib/property-sync/__tests__/evaluation-integrity.test.ts"
+      ],
+      "remaining": "独立pinと期待値/policy/harnessのローカルbyte照合のみ。holdout隔離/アクセス監査、現行baseline anchor、harness網羅性、immutable runner/実行/採用/rollbackは未実装"
+    },
+    {
+      "id": "T21",
+      "historical_spec": "ブラウザ占有、認証切れ、営業時間外、Mac不在",
+      "status": "not_verified",
+      "local_test_files": [],
+      "remaining": "この仕様全体の実行証跡なし。未確認/未実装を合格扱いしない"
+    },
+    {
+      "id": "T22",
+      "historical_spec": "lease期限切れ後に旧worker復帰、旧routine同時起動",
+      "status": "not_verified",
+      "local_test_files": [],
+      "remaining": "この仕様全体の実行証跡なし。未確認/未実装を合格扱いしない"
+    },
+    {
+      "id": "T23",
+      "historical_spec": "時計ずれ、checkedAtとupdatedAt相違、古いfeed",
+      "status": "partial_local_evidence",
+      "local_test_files": [
+        "src/lib/property-sync/__tests__/plan-registry.test.ts",
+        "src/lib/property-sync/__tests__/stored-plan-preflight.test.ts",
+        "src/lib/property-sync/__tests__/media-state.test.ts"
+      ],
+      "remaining": "取得元の時計と読取り真正性は未検証"
+    },
+    {
+      "id": "T24",
+      "historical_spec": "DB grant／RLS、一般公開API、顧客payload",
+      "status": "partial_local_evidence",
+      "local_test_files": [
+        "src/lib/__tests__/property-public-isolation.test.ts",
+        "src/lib/__tests__/admin-operator-guard.test.ts"
+      ],
+      "remaining": "権限SQLは別のローカル証跡。Data API実公開設定と本番変更は未実施"
+    },
+    {
+      "id": "T25",
+      "historical_spec": "ATBB指標が画像のみ／取得不可／定義変更",
+      "status": "not_verified",
+      "local_test_files": [],
+      "remaining": "この仕様全体の実行証跡なし。未確認/未実装を合格扱いしない"
+    },
+    {
+      "id": "T26",
+      "historical_spec": "小標本、停止日、季節差、受任遅れ",
+      "status": "not_verified",
+      "local_test_files": [],
+      "remaining": "この仕様全体の実行証跡なし。未確認/未実装を合格扱いしない"
+    },
+    {
+      "id": "T27",
+      "historical_spec": "コード変更後に既存機能回帰、canary異常",
+      "status": "partial_local_evidence",
+      "local_test_files": [
+        "src/lib/property-sync/__tests__/change-plan.test.ts",
+        "src/lib/property-sync/__tests__/local-plan-store.test.ts"
+      ],
+      "remaining": "固定回帰と段階patchのみ。production canary/復旧試験は未実施"
+    },
+    {
+      "id": "M01",
+      "historical_spec": "同一物件のスマホ・PC・tablet・unknownを分け、端末内訳欠測を0にしない",
+      "status": "partial_local_evidence",
+      "local_test_files": [
+        "src/lib/property-sync/__tests__/measurement-summary.test.ts"
+      ],
+      "remaining": "scope/定義版/確定値/欠測/区間のローカル集計契約のみ。実媒体の取得許可・指標定義・真正性・GA4等のadapter・運用受入は未検証"
+    },
+    {
+      "id": "M02",
+      "historical_spec": "延べ閲覧・訪問・利用者・一覧表示・詳細閲覧を区別し、定義版を保存する",
+      "status": "partial_local_evidence",
+      "local_test_files": [
+        "src/lib/property-sync/__tests__/measurement-summary.test.ts"
+      ],
+      "remaining": "scope/定義版/確定値/欠測/区間のローカル集計契約のみ。実媒体の取得許可・指標定義・真正性・GA4等のadapter・運用受入は未検証"
+    },
+    {
+      "id": "M03",
+      "historical_spec": "LINE／電話クリック、フォーム試行、受付保存、CRM受信を別イベントとする",
+      "status": "not_verified",
+      "local_test_files": [],
+      "remaining": "この仕様全体の実行証跡なし。未確認/未実装を合格扱いしない"
+    },
+    {
+      "id": "M04",
+      "historical_spec": "受付の再送や計測の重複送信で有効相談・受付を二重計上しない",
+      "status": "partial_local_evidence",
+      "local_test_files": [
+        "src/lib/__tests__/contact-receipt.test.ts"
+      ],
+      "remaining": "受付の重複防止のみ。計測/CRMの重複照合は未実装"
+    },
+    {
+      "id": "M05",
+      "historical_spec": "端末別の分母と分子をそろえ、対応不明の問い合わせを推測配賦しない",
+      "status": "partial_local_evidence",
+      "local_test_files": [
+        "src/lib/property-sync/__tests__/measurement-ratio.test.ts"
+      ],
+      "remaining": "明示pair/閾値の版・scope・意味参照と両summary再計算を合成検証。実媒体の母集団/イベント対応/attribution、最新承認版選択、実業務閾値は未確認"
+    },
+    {
+      "id": "M06",
+      "historical_spec": "氏名連絡先・自由入力・CRM本文がGA4や公開出力へ流れない",
+      "status": "partial_local_evidence",
+      "local_test_files": [
+        "src/lib/__tests__/property-public-isolation.test.ts"
+      ],
+      "remaining": "公開物件境界のみ。全GA4/CRM payload監査は未実施"
+    },
+    {
+      "id": "M07",
+      "historical_spec": "媒体の一般向け／業者間／提携公開先を識別し、同じ定義でない数値を合算比較しない",
+      "status": "partial_local_evidence",
+      "local_test_files": [
+        "src/lib/property-sync/__tests__/measurement-summary.test.ts"
+      ],
+      "remaining": "scope/定義版/確定値/欠測/区間のローカル集計契約のみ。実媒体の取得許可・指標定義・真正性・GA4等のadapter・運用受入は未検証"
+    },
+    {
+      "id": "M08",
+      "historical_spec": "公開日数・欠測・変更版・観察期間を付け、少数結果だけで自動入替えしない",
+      "status": "not_verified",
+      "local_test_files": [],
+      "remaining": "この仕様全体の実行証跡なし。未確認/未実装を合格扱いしない"
+    },
+    {
+      "id": "R01",
+      "historical_spec": "同一物件の掲載会社の中で四葉が先頭ならトップ確認とする。検索結果の物件順位では代用しない",
+      "status": "partial_local_evidence",
+      "local_test_files": [
+        "src/lib/property-sync/__tests__/media-state.test.ts"
+      ],
+      "remaining": "定義と入力契約のみ。実ATBB上の先頭観測は未実施"
+    },
+    {
+      "id": "R02",
+      "historical_spec": "スマホ／PC、Web／アプリ、並び順・検索条件の違いを分離する",
+      "status": "partial_local_evidence",
+      "local_test_files": [
+        "src/lib/property-sync/__tests__/media-state.test.ts"
+      ],
+      "remaining": "PC/mobileWeb/mobileApp/unknownの分離のみ。媒体の並び順条件は未確認"
+    },
+    {
+      "id": "R03",
+      "historical_spec": "同じ建物の別号室や別募集を同一対象として順位判定しない",
+      "status": "partial_local_evidence",
+      "local_test_files": [
+        "src/lib/property-sync/__tests__/media-state.test.ts",
+        "src/lib/property-sync/__tests__/change-plan.test.ts"
+      ],
+      "remaining": "binding検査のみ。実物の部屋名寄せは未実施"
+    },
+    {
+      "id": "R04",
+      "historical_spec": "2番手、観測範囲内未発見、読取失敗を分ける",
+      "status": "partial_local_evidence",
+      "local_test_files": [
+        "src/lib/property-sync/__tests__/media-state.test.ts"
+      ],
+      "remaining": "公開/不明/会社先頭yes-no-unknownの区別。観測失敗分類の実媒体検証なし"
+    },
+    {
+      "id": "R05",
+      "historical_spec": "有効観測の分母と観測充足率を残し、欠測をトップでも非トップでも埋めない",
+      "status": "partial_local_evidence",
+      "local_test_files": [
+        "src/lib/property-sync/__tests__/placement-coverage.test.ts"
+      ],
+      "remaining": "事前計画/固定slot/対象会社店舗/端末contextと有効分母・欠測理由の合成検証。実媒体観測・真正性・計画独立保管・業務閾値は未確認"
+    },
+    {
+      "id": "R06",
+      "historical_spec": "公開成功・トップ未達を別結果として残し、再登録を重複実行しない",
+      "status": "partial_local_evidence",
+      "local_test_files": [
+        "src/lib/property-sync/__tests__/media-state.test.ts",
+        "src/lib/property-sync/__tests__/audit.test.ts"
+      ],
+      "remaining": "公開と先頭の状態分離のみ。媒体への再登録は未実装"
+    },
+    {
+      "id": "R07",
+      "historical_spec": "一時的な順位変化だけで大量停止せず、承認した継続判定と交換scopeに従う",
+      "status": "not_verified",
+      "local_test_files": [],
+      "remaining": "この仕様全体の実行証跡なし。未確認/未実装を合格扱いしない"
+    },
+    {
+      "id": "R08",
+      "historical_spec": "ATBB側の順位悪化だけで自社サイトを停止しない。自分の観測による閲覧影響も記録する",
+      "status": "not_verified",
+      "local_test_files": [],
+      "remaining": "この仕様全体の実行証跡なし。未確認/未実装を合格扱いしない"
+    },
+    {
+      "id": "RF01",
+      "historical_spec": "期限切れと再同意待ちを区別",
+      "status": "partial_local_evidence",
+      "local_test_files": [
+        "src/lib/property-sync/__tests__/read-retry.test.ts",
+        "src/lib/property-sync/__tests__/read-attempt-registry.test.ts",
+        "src/lib/property-sync/__tests__/local-read-attempt-store.test.ts"
+      ],
+      "remaining": "読取り提案と単一共有privatefileのCAS開始予約/完了/監査を合成検証。実通信・SDK内部設定・複数host排他・最新許可/根拠真正性・TLS実到達は未接続/未実施"
+    },
+    {
+      "id": "RF02",
+      "historical_spec": "主体確認成功でも対象権限なし",
+      "status": "partial_local_evidence",
+      "local_test_files": [
+        "src/lib/property-sync/__tests__/read-retry.test.ts",
+        "src/lib/property-sync/__tests__/read-attempt-registry.test.ts",
+        "src/lib/property-sync/__tests__/local-read-attempt-store.test.ts"
+      ],
+      "remaining": "読取り提案と単一共有privatefileのCAS開始予約/完了/監査を合成検証。実通信・SDK内部設定・複数host排他・最新許可/根拠真正性・TLS実到達は未接続/未実施"
+    },
+    {
+      "id": "RF03",
+      "historical_spec": "一時的読取り障害だけ有限回で回復",
+      "status": "partial_local_evidence",
+      "local_test_files": [
+        "src/lib/property-sync/__tests__/read-retry.test.ts",
+        "src/lib/property-sync/__tests__/read-attempt-registry.test.ts",
+        "src/lib/property-sync/__tests__/local-read-attempt-store.test.ts"
+      ],
+      "remaining": "読取り提案と単一共有privatefileのCAS開始予約/完了/監査を合成検証。実通信・SDK内部設定・複数host排他・最新許可/根拠真正性・TLS実到達は未接続/未実施"
+    },
+    {
+      "id": "RF04",
+      "historical_spec": "SDKと外側の再試行の掛け算を防止",
+      "status": "partial_local_evidence",
+      "local_test_files": [
+        "src/lib/property-sync/__tests__/read-retry.test.ts",
+        "src/lib/property-sync/__tests__/read-attempt-registry.test.ts",
+        "src/lib/property-sync/__tests__/local-read-attempt-store.test.ts"
+      ],
+      "remaining": "読取り提案と単一共有privatefileのCAS開始予約/完了/監査を合成検証。実通信・SDK内部設定・複数host排他・最新許可/根拠真正性・TLS実到達は未接続/未実施"
+    },
+    {
+      "id": "RF05",
+      "historical_spec": "保存済みで応答だけ消失",
+      "status": "partial_local_evidence",
+      "local_test_files": [
+        "src/lib/property-sync/__tests__/local-plan-store.test.ts"
+      ],
+      "remaining": "ローカル保存結果不明のモデルのみ。媒体保存では未検証"
+    },
+    {
+      "id": "RF06",
+      "historical_spec": "保存結果が読めないまま再登録しない",
+      "status": "not_verified",
+      "local_test_files": [],
+      "remaining": "この仕様全体の実行証跡なし。未確認/未実装を合格扱いしない"
+    },
+    {
+      "id": "RF07",
+      "historical_spec": "遅れた掲載ジョブより募集停止を優先",
+      "status": "partial_local_evidence",
+      "local_test_files": [
+        "src/lib/property-sync/__tests__/stored-plan-preflight.test.ts"
+      ],
+      "remaining": "独立snapshotと版照合のみ。実readerの真正性は未検証"
+    },
+    {
+      "id": "RF08",
+      "historical_spec": "同じ建物の別号室を取り違えない",
+      "status": "partial_local_evidence",
+      "local_test_files": [
+        "src/lib/property-sync/__tests__/media-state.test.ts"
+      ],
+      "remaining": "明示bindingを検査。曖昧な実物名寄せは未実施"
+    },
+    {
+      "id": "RF09",
+      "historical_spec": "片媒体成功を保持する",
+      "status": "not_verified",
+      "local_test_files": [],
+      "remaining": "この仕様全体の実行証跡なし。未確認/未実装を合格扱いしない"
+    },
+    {
+      "id": "RF10",
+      "historical_spec": "クラウドパスをMacの実在と誤認しない",
+      "status": "partial_local_evidence",
+      "local_test_files": [
+        "src/lib/property-sync/__tests__/local-artifact-check.test.ts"
+      ],
+      "remaining": "許可/完成manifestと実在regular fileの長さ/hash・形式入口のみ。実export/Library取得の真正性、完全な形式解析、親directoryの信頼、公開内容検査は未検証"
+    },
+    {
+      "id": "RF11",
+      "historical_spec": "PDFの代わりにログインHTML",
+      "status": "partial_local_evidence",
+      "local_test_files": [
+        "src/lib/property-sync/__tests__/local-artifact-check.test.ts"
+      ],
+      "remaining": "許可/完成manifestと実在regular fileの長さ/hash・形式入口のみ。実export/Library取得の真正性、完全な形式解析、親directoryの信頼、公開内容検査は未検証"
+    },
+    {
+      "id": "RF12",
+      "historical_spec": "途中ファイルを完成扱いしない",
+      "status": "partial_local_evidence",
+      "local_test_files": [
+        "src/lib/property-sync/__tests__/local-artifact-check.test.ts"
+      ],
+      "remaining": "許可/完成manifestと実在regular fileの長さ/hash・形式入口のみ。実export/Library取得の真正性、完全な形式解析、親directoryの信頼、公開内容検査は未検証"
+    },
+    {
+      "id": "RF13",
+      "historical_spec": "コードが要求するtableがない",
+      "status": "partial_local_evidence",
+      "local_test_files": [
+        "src/lib/property-sync/__tests__/db-media-store.test.ts"
+      ],
+      "remaining": "local SQLとschema案のみ。本番migration/接続なし"
+    },
+    {
+      "id": "RF14",
+      "historical_spec": "通知予定が保存できなければ同一transactionの物件変更も戻す",
+      "status": "partial_local_evidence",
+      "local_test_files": [
+        "src/lib/property-sync/__tests__/db-media-store.test.ts",
+        "src/lib/property-sync/__tests__/local-plan-store.test.ts",
+        "src/lib/__tests__/property-publication-effects.test.ts"
+      ],
+      "remaining": "unit36の隔離Postgres/Prismaで公開処理予定の保存失敗時に物件/要求記録もrollbackすることを検証済み。本番schema/権限・実通知サービスとの結合は未実施。"
+    },
+    {
+      "id": "RF15",
+      "historical_spec": "他担当の画面を奪わない",
+      "status": "not_verified",
+      "local_test_files": [],
+      "remaining": "この仕様全体の実行証跡なし。未確認/未実装を合格扱いしない"
+    },
+    {
+      "id": "RF16",
+      "historical_spec": "ロック期限切れでも外部UIの旧担当停止を確認",
+      "status": "not_verified",
+      "local_test_files": [],
+      "remaining": "この仕様全体の実行証跡なし。未確認/未実装を合格扱いしない"
+    },
+    {
+      "id": "RF17",
+      "historical_spec": "人の価格修正を上書きしない",
+      "status": "partial_local_evidence",
+      "local_test_files": [
+        "src/lib/property-sync/__tests__/plan-registry.test.ts",
+        "src/lib/__tests__/property-delete-cas.test.ts"
+      ],
+      "remaining": "CASのmock/ローカル検証。実DB競合は未実施"
+    },
+    {
+      "id": "RF18",
+      "historical_spec": "旧バックアップで停止物件を再公開しない",
+      "status": "not_verified",
+      "local_test_files": [],
+      "remaining": "この仕様全体の実行証跡なし。未確認/未実装を合格扱いしない"
+    },
+    {
+      "id": "RF19",
+      "historical_spec": "HTTP成功でも受付・配信失敗なら問い合わせ成功ではない",
+      "status": "partial_local_evidence",
+      "local_test_files": [
+        "src/lib/__tests__/contact-receipt.test.ts"
+      ],
+      "remaining": "既存受付実装の回帰のみ。実送信は未実施"
+    },
+    {
+      "id": "RF20",
+      "historical_spec": "受付保存とメール通知を別判定",
+      "status": "partial_local_evidence",
+      "local_test_files": [
+        "src/lib/__tests__/contact-delivery.test.ts"
+      ],
+      "remaining": "既存配信実装の回帰のみ。実メール/CRMの障害注入なし"
+    },
+    {
+      "id": "RF21",
+      "historical_spec": "スマホ先頭とPC2番手を混ぜない",
+      "status": "partial_local_evidence",
+      "local_test_files": [
+        "src/lib/property-sync/__tests__/media-state.test.ts"
+      ],
+      "remaining": "端末別公開/会社先頭入力モデルのみ。実媒体観測は未実施"
+    },
+    {
+      "id": "RF22",
+      "historical_spec": "別号室の先頭を当該物件の成果にしない",
+      "status": "partial_local_evidence",
+      "local_test_files": [
+        "src/lib/property-sync/__tests__/media-state.test.ts"
+      ],
+      "remaining": "unknownを成功へ変換しないローカル境界のみ"
+    },
+    {
+      "id": "RF23",
+      "historical_spec": "取得不能の閲覧数は0ではない",
+      "status": "partial_local_evidence",
+      "local_test_files": [
+        "src/lib/property-sync/__tests__/measurement-summary.test.ts"
+      ],
+      "remaining": "scope/定義版/確定値/欠測/区間のローカル集計契約のみ。実媒体の取得許可・指標定義・真正性・GA4等のadapter・運用受入は未検証"
+    },
+    {
+      "id": "RF24",
+      "historical_spec": "資料に含まれる命令で条件や権限を変えない",
+      "status": "partial_local_evidence",
+      "local_test_files": [
+        "src/lib/__tests__/property-public-isolation.test.ts",
+        "src/lib/property-sync/__tests__/source-fingerprint.test.ts"
+      ],
+      "remaining": "公開allowlistとJSON境界のみ。全外部資料の攻撃検証ではない"
+    },
+    {
+      "id": "RF25",
+      "historical_spec": "改善AIが期待値を書き換えたら比較を無効化",
+      "status": "partial_local_evidence",
+      "local_test_files": [
+        "src/lib/property-sync/__tests__/evaluation-integrity.test.ts"
+      ],
+      "remaining": "独立pinと期待値/policy/harnessのローカルbyte照合のみ。holdout隔離/アクセス監査、現行baseline anchor、harness網羅性、immutable runner/実行/採用/rollbackは未実装"
+    },
+    {
+      "id": "RF26",
+      "historical_spec": "途中終了後は確認済み地点から再開",
+      "status": "partial_local_evidence",
+      "local_test_files": [
+        "src/lib/property-sync/__tests__/plan-local-failure.test.ts",
+        "src/lib/property-sync/__tests__/local-plan-store.test.ts"
+      ],
+      "remaining": "ローカルcheckpoint保持のみ。外部job再開の実証なし"
+    },
+    {
+      "id": "RF27",
+      "historical_spec": "同じ403でもレート制限なら限定再試行",
+      "status": "partial_local_evidence",
+      "local_test_files": [
+        "src/lib/property-sync/__tests__/read-retry.test.ts",
+        "src/lib/property-sync/__tests__/read-attempt-registry.test.ts",
+        "src/lib/property-sync/__tests__/local-read-attempt-store.test.ts"
+      ],
+      "remaining": "読取り提案と単一共有privatefileのCAS開始予約/完了/監査を合成検証。実通信・SDK内部設定・複数host排他・最新許可/根拠真正性・TLS実到達は未接続/未実施"
+    },
+    {
+      "id": "RF28",
+      "historical_spec": "TLS問題で証明書検証を無効化しない",
+      "status": "partial_local_evidence",
+      "local_test_files": [
+        "src/lib/property-sync/__tests__/read-retry.test.ts",
+        "src/lib/property-sync/__tests__/read-attempt-registry.test.ts",
+        "src/lib/property-sync/__tests__/local-read-attempt-store.test.ts"
+      ],
+      "remaining": "読取り提案と単一共有privatefileのCAS開始予約/完了/監査を合成検証。実通信・SDK内部設定・複数host排他・最新許可/根拠真正性・TLS実到達は未接続/未実施"
+    }
+  ]
+}

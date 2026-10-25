@@ -1,4 +1,5 @@
 import type { LangCode } from "@/config/languages";
+import { publicScalars, publicSpec, publicTranslation } from "@/lib/property-public-projection";
 
 /**
  * 物件紹介（/bukken）の型定義と純関数（クライアント/サーバー共用）。
@@ -245,26 +246,28 @@ export type PublicProperty = {
  * property-shared.test.ts の非流出テストも必ず見直す）。
  */
 export function toPublicProperty(p: AdminProperty | PropertyInput): PublicProperty {
-  return {
-    slug: p.slug,
-    status: p.status,
-    dealType: p.dealType,
-    category: p.category,
-    tradeMode: p.tradeMode,
-    title: p.title,
-    priceYen: p.priceYen,
-    ...(p.priceNote ? { priceNote: p.priceNote } : {}),
-    locationText: p.locationText,
-    access: p.access,
-    spec: p.spec,
-    images: p.images,
-    description: p.description,
-    ...(p.publishedAt ? { publishedAt: p.publishedAt } : {}),
-    infoUpdatedAt: p.infoUpdatedAt,
-    nextUpdateAt: p.nextUpdateAt,
-    locales: p.locales && p.locales.length > 0 ? p.locales : (["ja"] as LangCode[]),
-    ...(p.translations ? { translations: p.translations } : {}),
+  const pub: PublicProperty = {
+    ...publicScalars(p, ["slug", "status", "dealType", "category", "tradeMode", "title", "priceYen", "priceNote", "locationText", "description", "publishedAt", "infoUpdatedAt", "nextUpdateAt"]),
+    access: p.access.map((a) => publicScalars(a, ["line", "station", "distanceM"])),
+    spec: publicSpec(p.spec),
+    images: p.images.map((i) => publicScalars(i, ["url", "alt", "kind"])),
+    locales: p.locales && p.locales.length > 0
+      ? p.locales.filter((l) => l === "ja" || l === "en" || l === "zh-tw" || l === "zh")
+      : ["ja"],
   };
+  // Preserve the existing wire shape for empty optional root values.
+  if (!pub.priceNote) delete pub.priceNote;
+  if (!pub.publishedAt) delete pub.publishedAt;
+  if (p.translations) {
+    // Translated spec keys are display-row keys (e.g. landArea), not DB spec keys.
+    const displayKeys = buildRequiredDisplayRows(pub).map((r) => r.key);
+    pub.translations = {};
+    for (const locale of ["en", "zh-tw", "zh"] as const) {
+      const translation = p.translations[locale];
+      if (translation) pub.translations[locale] = publicTranslation(translation, displayKeys);
+    }
+  }
+  return pub;
 }
 
 // ── 徒歩分数（規約施行規則第9条(9)・2022-09-01施行） ──

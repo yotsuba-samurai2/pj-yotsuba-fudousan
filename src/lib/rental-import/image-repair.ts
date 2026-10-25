@@ -59,6 +59,25 @@ export function assertImageTarget(target: ImageTarget, manifest: ImageManifest) 
   if (target.status === "closed") throw new Error("募集終了の物件は更新できません");
 }
 
+/** Offline SQL proposal only. Keep the same CAS predicate and advance the millisecond version. */
+export function buildBrowserImageUpdateSql(target: ImageTarget, manifest: ImageManifest, images: PropertyImage[]): string {
+  assertImageTarget(target, manifest);
+  // Property.updated_at is timestamp(3) without time zone, stored as UTC by Prisma.
+  // Connector snapshots may use a space or T and omit the zone; never use the host's local zone.
+  const text = target.updatedAt.replace(/^(\d{4}-\d{2}-\d{2}) /, "$1T");
+  const instant = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{1,3})?$/.test(text) ? text + "Z" : text;
+  if (!z.iso.datetime({ offset: true }).safeParse(instant).success) throw new Error("INVALID_EXPECTED_VERSION");
+  const expected = new Date(instant).toISOString();
+  const literal = (value: string) => `'${value.replaceAll("'", "''")}'`;
+  return `UPDATE public.properties SET images=${literal(JSON.stringify(images))}::jsonb,
+updated_at=GREATEST(date_trunc('milliseconds', clock_timestamp() AT TIME ZONE 'UTC'), updated_at + interval '1 millisecond')
+WHERE id=${literal(target.id)} AND slug=${literal(target.slug)} AND updated_at=${literal(expected)}::timestamp
+AND status<>'closed'
+AND internal->'rentalImport'->'source'->>'provider'=${literal(manifest.provider)}
+AND internal->'rentalImport'->'source'->>'roomId'=${literal(manifest.roomId)}
+RETURNING id, slug, status, images, updated_at;\n`;
+}
+
 export function sameImages(a: PropertyImage[], b: PropertyImage[]) {
   return a.length === b.length && a.every((image, n) => image.url === b[n].url && image.alt === b[n].alt && image.kind === b[n].kind);
 }

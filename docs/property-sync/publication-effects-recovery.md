@@ -1,0 +1,42 @@
+# 保存後の公開処理を再開するローカル基盤（unit36）
+
+対象は既存の隔離Postgresと合成1物件。既存API/page、通知queue、IndexNow、メール、顧客通知、クラウドDBには接続/適用しない。新しい本番migrationや永続認証情報は作成していない。
+
+## 物件保存と処理予定
+
+`createPropertyWriteRequests(prisma, {localPublicationEffects:true})`を明示したローカル構成だけ、物件CAS・immutable receipt・公開処理予定の1行を同じPrisma transactionで保存する。予定INSERT後に失敗した場合も全てrollbackする。default/既存呼出しは変更せず、同要求IDの再送では予定も追加しない。旧receiptへ予定を後付けするbackfillは実装していない。
+
+予定の正本は公開処理用のproposal `publication-effects.sql`。requestIdごと1行、元receiptへFK RESTRICT、RLS/REVOKE付き。公開用の旧新slug・通知path・物件ID/版・plan hash・処理状態だけを保持し、物件本文・画像・翻訳・AD・報酬・宛先・actorは保存しない。
+
+cacheは保存成功の旧新slugを常に対象にする。既存の`refreshPropertyPublication`へ将来注入するためのslugであり、全locale/一覧/学区/記事/sitemapの既存更新契約を代替しない。通知は既存`detectPublicationChange`を使うため、内部情報や情報更新日だけの変更では不要になる。cacheまで省略しない。通知pathは自社の物件/一覧相対pathだけで、取得元/管理画面/任意hostを許さない。
+
+## 再開と結果不明
+
+workerは明示された要求ID・物件ID・cache/notificationの1種類だけを処理する。polling/timer/自動巡回はない。storeがrow lock下で未実行→実行中をcommitした後に、注入された模擬portを呼ぶ。外部処理の間にDB transactionは保持しない。workerのSQLは処理state/revisionだけを更新し、物件やreceiptを再保存しない。
+
+成功記録・再開にはoperationId、attemptId、対象hashを照合。hashは種別も含む。完了済みは再送せず、古いattemptの遅延応答も新しい結果を上書きしない。通知はcacheの要求受領確認後に進むが、どちらの成功も公開画面へ反映された証明ではない。全結果はpublication:not_checked。
+
+実行/commitの応答喪失は実行中のまま保持し、次の呼出しでは照合だけを行う。単なるnot foundや時間切れから再送しない。再試行可能な`not_applied_final`は、そのattemptが今後も実行されないようproviderが原子的に確定・拒否できる状態を意味する。模擬providerでは遅延した旧呼出しも拒否する。実媒体やIndexNowにその機能があるとは確認していないため、対応不能な場合はunknownを維持し別判断を待つ。確認済み未実行は最大6回まで、再開呼出しごとに1回だけ。成功記録のDB返答が失われても再保存/再送せずstateを再取得する。
+
+認証/実行権限の検査は、このサーバー内部runnerを将来呼び出す管理APIに必要。現時点ではunit35のHTTP/editorにも公開routeにも再開操作を追加していない。port未注入はEFFECT_DISABLED。今回実装をそのまま既存のタイムアウト再送通知workerへ差し替えることはしない。
+
+## SQLとbuildの検証
+
+新モード`--publication-effects`を専用unit36 pathで実行。合成1物件/2媒体、媒体監査3・物件receipt2・処理予定2＝監査/制御記録7行。effect workerは既存の限定roleを使い、物件UPDATE・receipt INSERT・plan UPDATE・effect DELETE/TRUNCATEがないことを確認する。
+
+原子的rollback、同要求ID再送、確認済み失敗からのcache再試行、通知受領後の返答喪失、新接続照合、slug変更、並行worker、未解決claimのDB再起動、確定取消までの再送禁止、完了状態の再起動保持、媒体状態不変を検証。SQL報告の7項目はworkflowとbuildの環境検査も含む。旧unit35モードは別に12項目を回帰確認する。
+
+build用に現行schemaから残り8テーブルを同じ隔離DBへ作成し、全て空のまま保持。テスト用の既存一時passwordだけを使う専用読取りroleを作成。原DB資格情報や実データを使わず、root/prismaの.env系が存在すれば拒否する。migrate diffとnpm buildの子プロセスをOS sandboxへ入れ、固定Postgres Unix socketだけを許可。nativeのloopback接続が権限で拒否されることを先に検査する。JSのnet/tls/dns/fetchも遮断し、既存NEXT_BUILD_WORKERS=2を使用。
+
+初回buildは成功したがnative通信隔離の保証が不足していたため最終結果とは分離。OS版初回はncが拒否理由を表示しないことでassert停止し、DBを全清掃。-vによる診断でOperation not permittedを確認し、制限は緩めず検査だけ修正。最終版のbuildはexit0で成功し、公開生成物3375ファイルにASCII機密canaryが含まれないことを検査した。DB設定不足による従来のbuildブロッカーは、この隔離schemaの条件では解消した。本番設定/本番データでの成功を意味しない。
+
+## 限界・適用前の条件
+
+本番API/page配線、予定tableの本番DDL/権限、既存通知queueとの二重実行防止、実cache adapter/公開画面照合、実通知providerの受領/取消能力、運用中の再試行間隔/保留解除と責任者、保持・物理削除方針は未確定。画像画素/未知の自由文まで全て検査したものではない。新規作成/削除のreceipt復旧やブラウザ再読込後の復旧も別工程。事業ルール・契約枠等の既存未確認16仕様は推測で埋めない。
+
+全体2,934試験199file、追加10/関連27成功。独立レビューでcache/通知の区別、terminal cancellation条件、native通信隔離、canary表記を確認・修正。実行結果はtask rootのREPORT-unit36.md、unit36-validation.json、evidence/unit36-postgresに保存する。
+
+
+## unit37で進んだ範囲
+
+上記はunit36時点の記録。unit37では注入HTTP/Editorに再開パネルと操作者hash検査を追加した。実SQLとReact静的表示/部品callbackは検証済み、実DOM操作は環境で起動できず未検証。本番route/page/実cache/通知は未配線のまま。新規planにはactorそのものを保存せずpurpose付きhashを保存する。詳細と適用前条件は[管理画面の復旧](admin-publication-recovery.md)。

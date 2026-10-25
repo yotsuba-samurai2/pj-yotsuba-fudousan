@@ -7,7 +7,7 @@
  *
  * 使い方:
  *   npx tsx scripts/seed-bukken-sample.ts          # dry-run（verify＋preview表示・DB接続なし）
- *   npx tsx scripts/seed-bukken-sample.ts --write  # DATABASE_URL/DIRECT_URL を設定して upsert（冪等・slugキー）
+ *   npx tsx scripts/seed-bukken-sample.ts --write  # 新規作成のみ。既存更新には --expected-updated-at=<確認済みISO日時> も必要
  *
  * verify() は seed-labor-columns.ts と同型の内蔵方式：
  *   - status が draft であること（published のサンプルを作らせない）
@@ -16,6 +16,7 @@
  *   - 種別（dealType）と spec.dealType の一致・必須項目の存在
  */
 
+import type { HouseSpec } from "../src/lib/property-shared";
 import { scanPropertyText } from "../src/lib/property-shared";
 
 type SeedProperty = {
@@ -29,12 +30,12 @@ type SeedProperty = {
   priceNote?: string;
   locationText: string;
   access: { line: string; station: string; distanceM: number }[];
-  spec: Record<string, unknown> & { dealType: string };
+  spec: HouseSpec;
   images: { url: string; alt: string }[];
   description: string;
   infoUpdatedAt: string;
   nextUpdateAt: string;
-  locales: string[];
+  locales: ("ja" | "en" | "zh-tw" | "zh")[];
   internal: Record<string, unknown>;
 };
 
@@ -100,7 +101,7 @@ function verify(p: SeedProperty): string[] {
   for (const h of hits) {
     errors.push(`禁止語（規約特定用語・業者間用語）: ${h.term}`);
   }
-  const required = ["landAreaSqm", "privateRoadAreaSqm", "buildingAreaSqm", "builtYm", "deliveryYm"];
+  const required = ["landAreaSqm", "privateRoadAreaSqm", "buildingAreaSqm", "builtYm", "deliveryYm"] as const;
   for (const key of required) {
     if (p.spec[key] === undefined || p.spec[key] === "") {
       errors.push(`spec.${key} が未入力（別表5のインターネット広告必須項目）`);
@@ -120,7 +121,7 @@ async function main() {
   console.log("verify OK");
 
   if (!write) {
-    console.log("[dry-run] 投入内容のプレビュー（--write で upsert）:");
+    console.log("[dry-run] 投入内容のプレビュー（--write は新規のみ、既存更新は確認済み版も必要）:");
     console.log(JSON.stringify(SAMPLE, null, 2));
     return;
   }
@@ -128,22 +129,12 @@ async function main() {
   const { PrismaClient } = await import("@prisma/client");
   const prisma = new PrismaClient();
   try {
-    const { priceYen, ...rest } = SAMPLE;
-    const data = {
-      ...rest,
-      priceYen: BigInt(priceYen),
-      // Prisma Json 列へそのまま渡す
-      access: SAMPLE.access,
-      spec: SAMPLE.spec,
-      images: SAMPLE.images,
-      internal: SAMPLE.internal,
-    };
-    const r = await prisma.property.upsert({
-      where: { slug: SAMPLE.slug },
-      create: data,
-      update: data,
-    });
-    console.log(`upsert done: ${r.id} (${r.slug}) status=${r.status}`);
+    const { createPropertyRepository } = await import("../src/lib/db/property-repository");
+    const expectedFlags = process.argv.filter(arg => arg.startsWith("--expected-updated-at="));
+    if (expectedFlags.length > 1) throw new Error("EXPECTED_VERSION_ARGUMENT_INVALID");
+    const expected = expectedFlags.length ? expectedFlags[0].slice("--expected-updated-at=".length) : null;
+    const r = await createPropertyRepository(prisma).upsertPropertyBySlug(SAMPLE.slug, SAMPLE, expected);
+    console.log(`seed ${r.action}: ${r.id}`);
   } finally {
     await prisma.$disconnect();
   }

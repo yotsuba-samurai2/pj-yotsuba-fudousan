@@ -201,17 +201,20 @@ export function parsePropertyInput(
  * 公開状態（published）の物件に規約の特定用語・業者間用語が含まれていたら
  * 保存を拒否するためのエラーメッセージを返す（下書きは保存可＝公開時ゲート）。
  */
-export function bannedTermsError(input: {
-  status?: string;
-  title?: string;
-  description?: string;
-  priceNote?: string;
-}): string | null {
+export function bannedTermsError(input: Partial<PropertyInput>): string | null {
   if (input.status !== "published") return null;
-  const text = [input.title, input.description, input.priceNote]
-    .filter(Boolean)
-    .join("\n");
+  const strings: string[] = [];
+  const collect = (value: unknown): void => {
+    if (typeof value === "string") strings.push(value);
+    else if (value && typeof value === "object") Object.values(value).forEach(collect);
+  };
+  // Inspect every customer-facing text field, including image captions and all translations.
+  // URLs and internal evidence are not advertising copy; image pixels require separate review.
+  collect([input.title, input.description, input.priceNote, input.locationText, input.access, input.spec,
+    input.images?.map((image) => image.alt), input.translations]);
+  const text = strings.join("\n").normalize("NFKC");
   const hits = scanPropertyText(text);
+  for (const match of text.matchAll(/\bAD(?=[\s:：=0-9]|$)|広告費|広告宣伝費|業務委託料/gi)) hits.push({ term: match[0], index: match.index });
   if (hits.length === 0) return null;
   const terms = [...new Set(hits.map((h) => h.term))].join("・");
   return `公開できません：表示規約の特定用語または業者間用語が含まれています（${terms}）`;

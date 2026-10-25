@@ -1,4 +1,5 @@
 import { rentalPublicationError } from "@/lib/rental-import/publication";
+import { refreshPropertyPublication, PropertyPublicationRefreshError } from "@/lib/property-publication-cache";
 import { NextRequest, NextResponse } from "next/server";
 import { verifyAdminRequest, AuthError } from "@/lib/api-auth";
 import {
@@ -17,6 +18,9 @@ import {
 const STATUSES: PropertyStatus[] = ["draft", "published", "closed"];
 
 function handleError(err: unknown) {
+  if (err instanceof PropertyPublicationRefreshError) {
+    return NextResponse.json({ error: err.message, mutationSucceeded: true, publicationRefresh: "failed" }, { status: 503 });
+  }
   if (err instanceof AuthError) {
     return NextResponse.json({ error: err.message }, { status: err.status });
   }
@@ -69,16 +73,19 @@ export async function POST(req: NextRequest) {
         if (!existing.updatedAt || !await updatePropertyIfUnchanged(existing.slug, existing.updatedAt, parsed.data)) return NextResponse.json({ error: "同時更新を検出しました。再確認してください" }, { status: 409 });
         await recordPropertyPublicationChange(existing, parsed.data, now);
         scheduleDuePropertyNotifications(now);
+        await refreshPropertyPublication([existing.slug, parsed.data.slug]);
         return NextResponse.json({ id: existing.id, created: false });
       }
       const id = await createProperty(parsed.data);
       await recordPropertyPublicationChange(null, parsed.data, now);
       scheduleDuePropertyNotifications(now);
+      await refreshPropertyPublication([parsed.data.slug]);
       return NextResponse.json({ id, created: true });
     }
     const id = await createProperty(parsed.data);
     await recordPropertyPublicationChange(null, parsed.data, now);
     scheduleDuePropertyNotifications(now);
+    await refreshPropertyPublication([parsed.data.slug]);
     return NextResponse.json({ id }, { status: 201 });
   } catch (err) {
     return handleError(err);

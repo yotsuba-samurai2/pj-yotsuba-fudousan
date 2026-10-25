@@ -1,0 +1,11 @@
+# 評価の期待値・方針・harnessの固定照合（unit25）
+
+`checkEvaluationIntegrity`は明示された候補rootと独立して固定されたlock hashを受け、期待値・評価方針・test harnessの3種別のローカルfileを、byte長とSHA-256で照合する。候補code・test・媒体adapter・モデルは実行しない。各fileは200件まで、全体8MBまで。scope外path、相対root、cloud参照、path重複（大文字小文字差を含む）、symlinkを拒否する。内容やroot/path/承認参照は出力に含めない。
+
+期待値、評価policy、実行harnessが変更・削除・途中書込みならevaluation_invalid。候補がlockも同時に変えても、独立したexpectedLockHashと異なればfile読取前に無効。承認/有効期間の自己補完や古いlockへのfallbackは行わない。期限や版の比較だけでlockが現行正本だとは証明できない。
+
+一致はlocked_files_matchedのみ。比較全体の有効性は未確定、comparisonValid:false/executable:falseを維持する。人間が別に承認した期待値の改訂まで永久禁止する機能ではなく、その場合は独立側で新baselineの採用手順が必要。候補側で自らexpected hashを再計算して渡してはならない。
+
+実holdoutはこのリポジトリへ追加しない。改善担当から読めない別保管・実行主体、アクセス監査、harness依存の全範囲・除外設定・環境の保護、現在baselineの外部anchor、実行結果署名、採用/rollback承認は未実装。新規の未登録テストや別ファイルへの迂回まで単体で検出できないため、manifestの網羅性を別gateに残す。
+
+rootの親directoryの信頼と同時filesystem改変は未証明。symlink検査後のpath差替えを完全に防ぐopenatのsandboxではない。一致した時点から実行開始までの不変性も保証しない。実際の評価runnerに接続するときは隔離環境とimmutable checkoutを別に用意する。今回の試験は開発用合成データでありholdoutではない。

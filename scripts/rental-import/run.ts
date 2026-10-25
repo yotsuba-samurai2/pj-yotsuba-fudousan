@@ -67,10 +67,8 @@ async function main() {
   }
   const { rentalStore } = await import("../../src/lib/rental-import/db-store");
   const { prisma } = await import("../../src/lib/prisma");
-  const { getProperties } = await import("../../src/lib/db/properties");
   const {
     recordPropertyPublicationChange,
-    recordExpiredPropertyPublications,
     flushDuePropertyNotificationsNow,
   } = await import("../../src/lib/property-publication-notify");
   // 実際に保存できたときだけ呼ばれる。preflight（下のstore差し替え・held判定用）には渡さない
@@ -110,10 +108,8 @@ async function main() {
         results.push({ action: "held", reasons: [duplicate ? "同時登録を検出しました。次回再確認します" : "処理エラー。設定・画像・DB接続を確認してください（認証情報はログに出力しません）"] });
       }
     }
-    // 書込みなし（メール等が届かない）まま期限超過した募集の記録＋保留中のIndexNow通知の送信。
+    // 期限だけでは公開状態を変更しない（#432）。保存済み変更の通知だけを処理する。
     // ここは req/after() のないCLIプロセスなので、切断前に必ずその場で待つ
-    const published = await getProperties("published");
-    await recordExpiredPropertyPublications(published, now);
     await flushDuePropertyNotificationsNow(now);
   } finally { await prisma.$disconnect(); }
   await output({ checkedAt: now.toISOString(), dryRun: false, results });

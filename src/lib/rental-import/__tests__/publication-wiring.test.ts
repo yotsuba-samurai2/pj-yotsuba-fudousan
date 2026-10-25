@@ -8,16 +8,17 @@ import { validateRentalImport } from "../validation";
  * check/check-close（create/updateをスタブ化した検証専用呼び出し）では絶対に呼ばれない
  * こと（実際に保存していない変更を通知してしまわないこと）を確認する。
  */
-const deps = vi.hoisted(() => ({ auth: vi.fn(), get: vi.fn(), create: vi.fn(), update: vi.fn(), revalidate: vi.fn(), list: vi.fn(), record: vi.fn(), schedule: vi.fn() }));
+const deps = vi.hoisted(() => ({ auth: vi.fn(), get: vi.fn(), create: vi.fn(), update: vi.fn(), revalidate: vi.fn(), flush: vi.fn(), list: vi.fn(), record: vi.fn(), schedule: vi.fn() }));
 vi.mock("@/lib/api-auth", () => ({ verifyAdminRequest: deps.auth, AuthError: class AuthError extends Error { constructor(message: string, public status: number) { super(message); } } }));
 vi.mock("@/lib/rental-import/db-store", () => ({ rentalStore: { get: deps.get, create: deps.create, update: deps.update } }));
 vi.mock("@/lib/db/properties", () => ({ getProperties: deps.list }));
 vi.mock("next/cache", () => ({ revalidatePath: deps.revalidate }));
+vi.mock("@/lib/flush-revalidation", () => ({ flushRevalidation: deps.flush }));
 vi.mock("@/lib/property-publication-notify", () => ({ recordPropertyPublicationChange: deps.record, scheduleDuePropertyNotifications: deps.schedule }));
 import { POST } from "@/app/api/admin/bukken/import/route";
 function req(action: string, record: unknown) { return new NextRequest("https://example.test/api/admin/bukken/import", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ action, mode: "published", maintenance: false, record }) }); }
 
-beforeEach(() => { vi.clearAllMocks(); vi.useFakeTimers(); vi.setSystemTime(NOW); deps.auth.mockResolvedValue({ uid: "admin" }); deps.get.mockResolvedValue(null); deps.create.mockResolvedValue(undefined); deps.list.mockResolvedValue([]); vi.stubEnv("NEXT_PUBLIC_SUPABASE_URL", "https://demo.supabase.co"); });
+beforeEach(() => { vi.clearAllMocks(); deps.flush.mockReset().mockResolvedValue(undefined); vi.useFakeTimers(); vi.setSystemTime(NOW); deps.auth.mockResolvedValue({ uid: "admin" }); deps.get.mockResolvedValue(null); deps.create.mockResolvedValue(undefined); deps.list.mockResolvedValue([]); vi.stubEnv("NEXT_PUBLIC_SUPABASE_URL", "https://demo.supabase.co"); });
 afterEach(() => { vi.useRealTimers(); vi.unstubAllEnvs(); });
 
 describe("賃貸取込APIの公開変更通知", () => {
@@ -59,4 +60,17 @@ describe("賃貸取込APIの公開変更通知", () => {
     expect(deps.record.mock.calls[0][1]).toMatchObject({ status: "closed" });
     expect(deps.schedule).toHaveBeenCalledTimes(1);
   });
+});
+
+it("check/check-closeには失効やflushがない", async () => {
+  await POST(req("check", fixture())); await POST(req("check-close", { invalid: true }));
+  expect(deps.revalidate).not.toHaveBeenCalled(); expect(deps.flush).not.toHaveBeenCalled();
+});
+it("取込保存成功後のflush障害も保存済みを明示する", async () => {
+  const value = fixture(); value.property.images.forEach((image: { url: string }, n: number) => { image.url = `https://demo.supabase.co/storage/v1/object/public/column-images/bukken/auto/${n}.jpg`; });
+  deps.flush.mockRejectedValueOnce(new Error("PRIVATE_CACHE_SECRET"));
+  const response = await POST(req("apply", value));
+  expect(response.status).toBe(503); expect(await response.json()).toMatchObject({ mutationSucceeded: true, publicationRefresh: "failed" });
+  expect(deps.create).toHaveBeenCalledOnce(); expect(deps.record).toHaveBeenCalledOnce();
+  expect(deps.create.mock.invocationCallOrder[0]).toBeLessThan(deps.revalidate.mock.invocationCallOrder[0]);
 });

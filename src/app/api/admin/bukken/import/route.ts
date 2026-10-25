@@ -1,6 +1,6 @@
 import { getProperties } from "@/lib/db/properties";
 import { NextRequest, NextResponse } from "next/server";
-import { revalidatePath } from "next/cache";
+import { refreshPropertyPublication, PropertyPublicationRefreshError } from "@/lib/property-publication-cache";
 import { createClient } from "@supabase/supabase-js";
 import { verifyAdminRequest, AuthError } from "@/lib/api-auth";
 import { closeRental, closureSchema, closureFromRentalImport, importRental } from "@/lib/rental-import/lifecycle";
@@ -63,15 +63,12 @@ export async function POST(req: NextRequest) {
       recordPropertyPublicationChange(before, after, at);
     const result = body.action === "close" ? await closeRental(body.record, rentalStore, now, onChange) : await importRental(body.record, rentalStore, now, body.mode, body.maintenance, onChange);
     if (result.slug && ["created", "updated", "closed"].includes(result.action)) {
-      for (const locale of ["ja", "en", "zh-tw", "zh"]) {
-        revalidatePath(`/${locale}/bukken`);
-        revalidatePath(`/${locale}/bukken/${result.slug}`);
-      }
-      revalidatePath("/sitemap.xml");
       scheduleDuePropertyNotifications(now);
+      await refreshPropertyPublication([result.slug]);
     }
     return NextResponse.json(result);
   } catch (err) {
+    if (err instanceof PropertyPublicationRefreshError) return NextResponse.json({ error: err.message, mutationSucceeded: true, publicationRefresh: "failed" }, { status: 503 });
     if (err instanceof ImageQualityError) return NextResponse.json({ error: err.message }, { status: 422 });
     if (err instanceof AuthError) return NextResponse.json({ error: err.message }, { status: err.status });
     if (err instanceof SyntaxError) return NextResponse.json({ error: "JSONの形式が不正です" }, { status: 400 });
