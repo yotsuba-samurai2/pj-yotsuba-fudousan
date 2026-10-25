@@ -238,5 +238,65 @@ export const COLUMNS_AUTOPUBLISH_REVIEWS: readonly ColumnQualityReview[] = [
     },
     "reviewedAt": "2026-10-24",
     "validThrough": "2026-10-26"
+  },
+  {
+    "key": "legal:ninteikodomoen-ninka-nintei-shinsei-nagare-youken",
+    "fingerprint": "6134a398b59d7cd3b066f921e4ba04e71849374e1a45d8bce34499c8bedd76f5",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://laws.e-gov.go.jp/api/1/lawdata/418AC0000000077",
+        "checkedAt": "2026-10-25",
+        "relevantClaim": "認定こども園法第3条第1項＝幼稚園型・保育所型・地方裁量型の認定、第17条第1項＝幼保連携型の認可(国・地方公共団体以外は知事認可)、第12条＝幼保連携型の設置者は国・地方公共団体・学校法人・社会福祉法人のみ(株式会社不可)、第13条＝設備運営基準を都道府県条例で定め主務省令に従う/参酌。本文・表・FAQの窓口区分と一致。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/40208963917"
+    },
+    "reviewedAt": "2026-10-26",
+    "validThrough": "2026-10-28"
+  },
+  {
+    "key": "labor:ryokogyo-tenjoin-jigyojogai-minashi-roudoujikan-roumu",
+    "fingerprint": "362175b1a890e4654aa13094ffce180f3bf21d93138a7977733f91c6078c79a3",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://laws.e-gov.go.jp/law/322AC0000000049",
+        "checkedAt": "2026-10-25",
+        "relevantClaim": "労基法第38条の2(事業場外で労働時間を算定し難いときのみなし/第2項労使協定/第3項届出)、第34条(休憩)・第35条(休日)・第37条第1項第4項(時間外・休日・深夜割増)・第36条(36協定)は確立した条文で本文と整合。阪急トラベルサポート最判H26.1.24・三菱重工業長崎造船所最判H12.3.9の判旨も確立判例として本文引用と一致。",
+        "verified": true
+      },
+      {
+        "url": "https://www.mlit.go.jp/kankocho/seisaku_seido/ryokogyoho/ryokogyohogaiyo.html",
+        "checkedAt": "2026-10-25",
+        "relevantClaim": "観光庁の旅行業法概要で、旅行業法第11条の2により営業所ごとに1人以上の旅行業務取扱管理者を選任、試験区分(総合/国内/地域限定)、選任後は5年ごとに定期研修(第11条の2第7項)を受講させる義務を確認。本文・FAQの選任義務と研修の記載と一致。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/40208963917"
+    },
+    "reviewedAt": "2026-10-26",
+    "validThrough": "2026-10-28"
   }
 ];

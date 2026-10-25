@@ -1128,6 +1128,21 @@ const REQUIRED_HUB_LINKS: Record<string, string[]> = {
     "/legal/column/kika-shinsei-yoken-kokusekiho-chuka-taiwan",
     "/legal/column/chugoku-tairiku-souzokunin-shinzoku-koshosho-ryoji-ninsho",
   ],
+  "ninteikodomoen-ninka-nintei-shinsei-nagare-youken": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/ninka-gai-hoiku-shisetsu-secchi-todokede-kijun",
+    "/legal/column/houkago-jido-club-kaisetsu-todokede-setsubi-kijun",
+  ],
+  "saiten-souzoku-916jo-jukuryo-kikan-houki": [
+    "/legal/services/inheritance",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/souzoku",
+    "/legal/column/souzoku-hoki-jukuryo-kikan-shincho-kisanten",
+    "/legal/column/suuji-souzoku-isanbunkatsu-kyogisho",
+  ],
 };
 
 /** 表示コンプライアンス上の禁止語 */
@@ -3585,6 +3600,44 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "別事業体",
     "紹介料を受け取りません",
   ],
+  "ninteikodomoen-ninka-nintei-shinsei-nagare-youken": [
+    "就学前の子どもに関する教育、保育等の総合的な提供の推進に関する法律",
+    "幼保連携型認定こども園",
+    "幼稚園型",
+    "保育所型",
+    "地方裁量型",
+    "第3条",
+    "第12条",
+    "第13条",
+    "第17条",
+    "子ども・子育て支援法",
+    "施設型給付",
+    "都道府県知事",
+    "学校法人",
+    "社会福祉法人",
+    "幼保連携型認定こども園の学級の編制、職員、設備及び運営に関する基準",
+    "別々にご契約",
+    "独立した事業体",
+    "別事業体",
+    "紹介料を受け取りません",
+  ],
+  "saiten-souzoku-916jo-jukuryo-kikan-houki": [
+    "民法第916条",
+    "第915条第1項",
+    "第917条",
+    "第921条",
+    "第938条",
+    "第939条",
+    "再転相続",
+    "熟慮期間",
+    "相続放棄",
+    "令和元年8月9日",
+    "昭和63年6月21日",
+    "別々にご契約",
+    "独立した事業体",
+    "別事業体",
+    "紹介料を受け取りません",
+  ],
 };
 
 /** 記事ごとに含めてはならない表現 */
@@ -3758,6 +3811,8 @@ const FORBIDDEN_PHRASES: Record<string, string[]> = {
   "souzoku-hoki-jukuryo-kikan-shincho-kisanten": [],
   "keshohin-seizo-hanbaigyo-seizogyo-kyoka-yakkiho": [],
   "nihonjin-haiguusha-biza-zairyu-koshin-henko-chuka-taiwan": [],
+  "ninteikodomoen-ninka-nintei-shinsei-nagare-youken": [],
+  "saiten-souzoku-916jo-jukuryo-kikan-houki": [],
 };
 
 /** 本セット外へ張る既存legalコラムslug（リポジトリの他シードで実在確認済み） */
@@ -7058,6 +7113,58 @@ const ARTICLES: Array<{
       "入管法",
       "中国",
       "台湾",
+      "行政書士",
+    ],
+  },
+  {
+    file: "133-ninteikodomoen-ninka-nintei-shinsei-nagare-youken.md",
+    slug: "ninteikodomoen-ninka-nintei-shinsei-nagare-youken",
+    date: "2026-10-25",
+    title:
+      "認定こども園の認定・認可申請の流れと必要書類｜幼保連携型の基準",
+    category: "許認可の手続き（行政書士の実務から）",
+    excerpt:
+      "認定こども園には4類型があり、幼稚園型・保育所型・地方裁量型は都道府県の「認定」（認定こども園法第3条）、幼保連携型は「認可」（第17条）で窓口が分かれます。幼保連携型を設置できるのは国・地方公共団体・学校法人・社会福祉法人に限られ（第12条）、設備・運営基準は都道府県条例と主務省令「幼保連携型認定こども園の学級の編制、職員、設備及び運営に関する基準」の二層で定まります。認定・認可申請の書類作成と行政対応（行政書士）、建築確認（建築士）、職員の労務（社労士）、開設物件（不動産）の分離受任を整理します。",
+    keywords: [
+      "認定こども園 認定 認可 違い 申請",
+      "幼保連携型認定こども園 設置 認可 第17条",
+      "認定こども園 4類型 幼稚園型 保育所型 地方裁量型",
+      "認定こども園 設置者 学校法人 社会福祉法人 第12条",
+      "認定こども園 必要書類 都道府県 条例 基準 第13条",
+      "認定こども園 認可申請 行政書士",
+    ],
+    tags: [
+      "認定こども園",
+      "幼保連携型認定こども園",
+      "認定こども園法",
+      "子ども・子育て支援法",
+      "許認可",
+      "行政書士",
+    ],
+  },
+  {
+    file: "134-saiten-souzoku-916jo-jukuryo-kikan-houki.md",
+    slug: "saiten-souzoku-916jo-jukuryo-kikan-houki",
+    date: "2026-10-25",
+    title:
+      "再転相続（民法916条）の熟慮期間｜相続人が承認・放棄前に亡くなったとき",
+    category: "相続の手続き（行政書士の実務から）",
+    excerpt:
+      "再転相続は、相続人が承認も放棄もしないうちに亡くなり、その相続人が二つの相続を引き継ぐ場面です。一次相続の熟慮期間は、再転相続人が自分に相続人の地位が移ったことを知った時から起算します（民法第916条・最高裁令和元年8月9日判決）。二次相続を放棄すると一次相続の承認・放棄の地位も承継しないこと、一次を放棄した後に二次を放棄しても一次の放棄の効力は失われないこと（最高裁昭和63年6月21日判決）、家裁への申述書類の作成が行政書士の業務範囲外である点と分離受任を整理します。",
+    keywords: [
+      "再転相続 熟慮期間 起算点 民法916条",
+      "再転相続 最高裁 令和元年8月9日 相続人の地位",
+      "再転相続 相続放棄 組み合わせ 一次 二次",
+      "相続人 承認 放棄 前 死亡 熟慮期間",
+      "最高裁 昭和63年6月21日 再転相続 放棄 効力",
+      "再転相続 相続放棄 申述書 行政書士 業務範囲外",
+    ],
+    tags: [
+      "再転相続",
+      "熟慮期間",
+      "相続放棄",
+      "起算点",
+      "相続",
       "行政書士",
     ],
   },

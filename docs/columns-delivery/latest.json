@@ -1,114 +1,94 @@
 {
-  "todayJst": "2026-10-25",
-  "runUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/40108111953",
+  "todayJst": "2026-10-26",
+  "runUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/40208963917",
   "generationStatus": "validated",
-  "generatedCount": 6,
+  "generatedCount": 5,
   "reviewResult": "success",
   "reviewReportAvailable": true,
-  "reviewPass": false,
+  "reviewPass": true,
   "findings": {
     "blocker": 0,
-    "major": 1,
-    "minor": 0
+    "major": 0,
+    "minor": 1
   },
   "reviewFindings": [
     {
-      "file": "scripts/labor-columns/173-gaikokujin-koyo-kanri-shishin-jigyonushi-doryoku-gimu.md",
-      "severity": "major",
-      "issue": "外国人雇用状況の届出（労働施策総合推進法第28条）違反の罰則を「過料」と記載しているが、厚生労働省の一次情報では『30万円以下の罰金』（刑事罰）。過料（行政罰）と罰金（刑事罰）は法的性質が異なり、誤り。本文（離職・解雇の節）とFAQ Q1の2か所、および英語（civil fine）・繁体（過料）・簡体（过料）の全訳文に同じ誤りが波及している。",
-      "fix": "『過料』を『30万円以下の罰金』に修正（例：『怠ると30万円以下の罰金の対象になり得ます』）。英語は civil fine → a fine of up to 300,000 yen、中国語は『30萬日圓以下的罰金 / 30万日元以下的罚金』に統一。4言語すべてで同時に修正する。出典：厚労省『外国人雇用状況の届出』。"
+      "file": "scripts/realestate-columns/141-souzoku-fudosan-ekkyo-oboegaki-233jo-baikyaku.md",
+      "severity": "minor",
+      "issue": "出典に挙げた法務省ページ https://www.moj.go.jp/MINJI/minji07_00343.html が HTTP 404（4回確認・site:moj.go.jp 検索でも当該パスは出ず）。4言語すべてに同一の死リンクが含まれる。民法233条改正の実体はe-Gov民法で裏取り済みのため法的正確性には影響しないが、一次根拠として掲げたリンクが辿れない。",
+      "fix": "法務省の相隣関係改正（令和3年法律第24号）の現行公表URLに差し替えるか、当該リンクを削除してe-Gov民法233条の引用に一本化する。参照日の明示は維持。"
     }
   ],
-  "registeredCount": 0,
-  "qualityEligibleCount": 0,
-  "heldCount": 6,
+  "registeredCount": 2,
+  "qualityEligibleCount": 2,
+  "heldCount": 3,
   "scheduledCount": 0,
   "unverifiedSourceCount": 1,
   "publishedCount": null,
   "articles": [
     {
-      "key": "realestate:kango-shoukibo-takino-bukken-youto-shobo-homon-kango",
-      "fingerprint": "e3d63419e22f3e52bca4166a74e8686e730e9a38ad9439ad87e28167a1a9bfda",
-      "title": "看護小規模多機能型居宅介護（看多機）の事業所にできる物件とは——通い・泊まり・訪問看護を1棟でまかなう用途地域・消防・面積の確認点",
+      "key": "realestate:ninteikodomoen-bukken-youto-engei-jien-chori",
+      "fingerprint": "c59df9b98627086572a79862b39d7d3e94af506b6a1b1ae900058a4a6329ab3f",
+      "title": "認定こども園（幼保連携型）の物件要件｜用途地域・園舎園庭の面積・自園調理の設備",
       "registered": false,
       "state": "held",
       "reasons": [
         "公開レビュー記録が未登録です",
-        "独立レビューに未解決の重大な指摘があります"
+        "確認済みの公的な一次根拠が不足しています"
       ],
       "sourceFailures": [],
       "sourceEvidenceAvailable": true
     },
     {
-      "key": "realestate:souzoku-jikka-maizo-bunkazai-hozochi-baikyaku",
-      "fingerprint": "181da19b5f3e774f98278b471ba86937bbec01176f18e7eb6a6fa42aa3a70d04",
-      "title": "相続した実家が『周知の埋蔵文化財包蔵地』だったら売れるのか——文化財保護法93条の届出と発掘調査、売買での説明",
+      "key": "realestate:souzoku-fudosan-ekkyo-oboegaki-233jo-baikyaku",
+      "fingerprint": "b4f369ac2c92fee8b477702c59039fb758404119249ee9af9ac3afedf5d4a3ac",
+      "title": "相続した不動産の越境（塀・樹木・庇）｜改正民法233条の覚書と売却の進め方",
       "registered": false,
       "state": "held",
       "reasons": [
         "公開レビュー記録が未登録です",
-        "独立レビューに未解決の重大な指摘があります"
-      ],
-      "sourceFailures": [],
-      "sourceEvidenceAvailable": true
-    },
-    {
-      "key": "legal:keshohin-seizo-hanbaigyo-seizogyo-kyoka-yakkiho",
-      "fingerprint": "64f6d3088f8296736ce6c9ee68e3266901a3651263caa54f750ead71db718c20",
-      "title": "化粧品製造販売業・製造業許可｜薬機法第12条・第13条の違いと三役・GQP/GVP",
-      "registered": false,
-      "state": "held",
-      "reasons": [
-        "公開レビュー記録が未登録です",
-        "独立レビューに未解決の重大な指摘があります"
-      ],
-      "sourceFailures": [],
-      "sourceEvidenceAvailable": true
-    },
-    {
-      "key": "legal:nihonjin-haiguusha-biza-zairyu-koshin-henko-chuka-taiwan",
-      "fingerprint": "60cf454a1c917155731b12943dec1d9a370236417eadcb290e26e8d434db7807",
-      "title": "日本人の配偶者等ビザ｜在留・更新で見られる婚姻の実体と22条の4の取消し（中国・台湾）",
-      "registered": false,
-      "state": "held",
-      "reasons": [
-        "公開レビュー記録が未登録です",
-        "独立レビューに未解決の重大な指摘があります"
+        "確認済みの公的な一次根拠が不足しています"
       ],
       "sourceFailures": [
         {
-          "url": "https://www.moj.go.jp/isa/index.html",
-          "checkedAt": "2026-10-24",
-          "relevantClaim": "法務省が2012年7月にDV避難等で取消しを行わない具体例を公表（記事は一般例示として引用し個別判断は官署・弁護士に留保）",
+          "url": "https://www.moj.go.jp/MINJI/minji07_00343.html",
+          "checkedAt": "2026-10-25",
+          "relevantClaim": "本文が『法務省・民法等の一部を改正する法律(令和3年)の解説』として掲げる一次根拠。URLはHTTP 404で取得不能。相隣関係改正の実体は上記e-Gov民法233条で裏取り済みのため重要事項の根拠欠落には当たらないが、当該リンクは辿れない(全4言語に同一の死リンク)。",
           "verified": false
         }
       ],
       "sourceEvidenceAvailable": true
     },
     {
-      "key": "labor:shoyo-shakaihokenryo-hyojun-shoyogaku-jogen-shiharaitodoke",
-      "fingerprint": "762d537fa680a62c3b47a1bbd3d633c77b6d502fa2a34b9da2e4229472ec802a",
-      "title": "賞与（ボーナス）の社会保険料はどう決まるか——標準賞与額の上限と賞与支払届・不支給報告書",
+      "key": "legal:ninteikodomoen-ninka-nintei-shinsei-nagare-youken",
+      "fingerprint": "6134a398b59d7cd3b066f921e4ba04e71849374e1a45d8bce34499c8bedd76f5",
+      "title": "認定こども園の認定・認可申請の流れと必要書類｜幼保連携型の基準",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:saiten-souzoku-916jo-jukuryo-kikan-houki",
+      "fingerprint": "804b9f826ef48b1de87a62dc17036f16e07ea4a1594d50e37572fd1741aa3c3b",
+      "title": "再転相続（民法916条）の熟慮期間｜相続人が承認・放棄前に亡くなったとき",
       "registered": false,
       "state": "held",
       "reasons": [
         "公開レビュー記録が未登録です",
-        "独立レビューに未解決の重大な指摘があります"
+        "確認済みの公的な一次根拠が不足しています"
       ],
       "sourceFailures": [],
       "sourceEvidenceAvailable": true
     },
     {
-      "key": "labor:gaikokujin-koyo-kanri-shishin-jigyonushi-doryoku-gimu",
-      "fingerprint": "534139b487359ff3f05031771da83662ca1367208ec2217fd4d28cdc98f1b6d4",
-      "title": "外国人を雇う事業主の『雇用管理指針』の努力義務とは——募集から雇用管理・離職まで確認する点",
-      "registered": false,
-      "state": "held",
-      "reasons": [
-        "公開レビュー記録が未登録です",
-        "候補指紋と修正後原稿が一致しません",
-        "独立レビューの証跡不足、重複、またはレビュー後の原稿変更"
-      ],
+      "key": "labor:ryokogyo-tenjoin-jigyojogai-minashi-roudoujikan-roumu",
+      "fingerprint": "362175b1a890e4654aa13094ffce180f3bf21d93138a7977733f91c6078c79a3",
+      "title": "旅行会社の添乗員に、事業場外みなし労働時間は使えますか？（阪急トラベル最高裁後の実務）",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
       "sourceFailures": [],
       "sourceEvidenceAvailable": true
     }

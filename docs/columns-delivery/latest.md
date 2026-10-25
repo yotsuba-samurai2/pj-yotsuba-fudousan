@@ -1,42 +1,34 @@
-# コラム生成・レビュー・公開判定（2026-10-25）
+# コラム生成・レビュー・公開判定（2026-10-26）
 
-- 生成・機械検証：成功 6本
-- レビュー処理：success ／ 判定：false
-- レビュー指摘：blocker 0／major 1／minor 0
-- 今回の候補指紋に対応する公開証跡登録：0本
-- 自動公開の品質候補：0本
-- 品質保留：6本 ／ 公開日待ち：0本
+- 生成・機械検証：成功 5本
+- レビュー処理：success ／ 判定：true
+- レビュー指摘：blocker 0／major 0／minor 1
+- 今回の候補指紋に対応する公開証跡登録：2本
+- 自動公開の品質候補：2本
+- 品質保留：3本 ／ 公開日待ち：0本
 - 未確認の一次資料：1件
 - 本番公開：この処理では実行していません。公開済み件数は未照会です。
 
-正午の自動公開に渡せる品質候補は0本です。6本は保留、0本は公開日待ちです。
+2本は品質確認済み候補です。手動保留・既存DB・公開日・有効期限を公開実行時に再判定します。公開完了は実行結果で確認してください。
 未確認記事の品質保留はforceでも解除しません。
 
 ## 記事別の判定
 
-- 看護小規模多機能型居宅介護（看多機）の事業所にできる物件とは——通い・泊まり・訪問看護を1棟でまかなう用途地域・消防・面積の確認点：held（realestate:kango-shoukibo-takino-bukken-youto-shobo-homon-kango）
+- 認定こども園（幼保連携型）の物件要件｜用途地域・園舎園庭の面積・自園調理の設備：held（realestate:ninteikodomoen-bukken-youto-engei-jien-chori）
   - 公開レビュー記録が未登録です
-  - 独立レビューに未解決の重大な指摘があります
-- 相続した実家が『周知の埋蔵文化財包蔵地』だったら売れるのか——文化財保護法93条の届出と発掘調査、売買での説明：held（realestate:souzoku-jikka-maizo-bunkazai-hozochi-baikyaku）
+  - 確認済みの公的な一次根拠が不足しています
+- 相続した不動産の越境（塀・樹木・庇）｜改正民法233条の覚書と売却の進め方：held（realestate:souzoku-fudosan-ekkyo-oboegaki-233jo-baikyaku）
   - 公開レビュー記録が未登録です
-  - 独立レビューに未解決の重大な指摘があります
-- 化粧品製造販売業・製造業許可｜薬機法第12条・第13条の違いと三役・GQP/GVP：held（legal:keshohin-seizo-hanbaigyo-seizogyo-kyoka-yakkiho）
+  - 確認済みの公的な一次根拠が不足しています
+  - 未確認一次資料：https://www.moj.go.jp/MINJI/minji07_00343.html — 本文が『法務省・民法等の一部を改正する法律(令和3年)の解説』として掲げる一次根拠。URLはHTTP 404で取得不能。相隣関係改正の実体は上記e-Gov民法233条で裏取り済みのため重要事項の根拠欠落には当たらないが、当該リンクは辿れない(全4言語に同一の死リンク)。
+- 認定こども園の認定・認可申請の流れと必要書類｜幼保連携型の基準：quality-eligible（legal:ninteikodomoen-ninka-nintei-shinsei-nagare-youken）
+- 再転相続（民法916条）の熟慮期間｜相続人が承認・放棄前に亡くなったとき：held（legal:saiten-souzoku-916jo-jukuryo-kikan-houki）
   - 公開レビュー記録が未登録です
-  - 独立レビューに未解決の重大な指摘があります
-- 日本人の配偶者等ビザ｜在留・更新で見られる婚姻の実体と22条の4の取消し（中国・台湾）：held（legal:nihonjin-haiguusha-biza-zairyu-koshin-henko-chuka-taiwan）
-  - 公開レビュー記録が未登録です
-  - 独立レビューに未解決の重大な指摘があります
-  - 未確認一次資料：https://www.moj.go.jp/isa/index.html — 法務省が2012年7月にDV避難等で取消しを行わない具体例を公表（記事は一般例示として引用し個別判断は官署・弁護士に留保）
-- 賞与（ボーナス）の社会保険料はどう決まるか——標準賞与額の上限と賞与支払届・不支給報告書：held（labor:shoyo-shakaihokenryo-hyojun-shoyogaku-jogen-shiharaitodoke）
-  - 公開レビュー記録が未登録です
-  - 独立レビューに未解決の重大な指摘があります
-- 外国人を雇う事業主の『雇用管理指針』の努力義務とは——募集から雇用管理・離職まで確認する点：held（labor:gaikokujin-koyo-kanri-shishin-jigyonushi-doryoku-gimu）
-  - 公開レビュー記録が未登録です
-  - 候補指紋と修正後原稿が一致しません
-  - 独立レビューの証跡不足、重複、またはレビュー後の原稿変更
+  - 確認済みの公的な一次根拠が不足しています
+- 旅行会社の添乗員に、事業場外みなし労働時間は使えますか？（阪急トラベル最高裁後の実務）：quality-eligible（labor:ryokogyo-tenjoin-jigyojogai-minashi-roudoujikan-roumu）
 
 ## レビューの指摘
 
-- [major] scripts/labor-columns/173-gaikokujin-koyo-kanri-shishin-jigyonushi-doryoku-gimu.md：外国人雇用状況の届出（労働施策総合推進法第28条）違反の罰則を「過料」と記載しているが、厚生労働省の一次情報では『30万円以下の罰金』（刑事罰）。過料（行政罰）と罰金（刑事罰）は法的性質が異なり、誤り。本文（離職・解雇の節）とFAQ Q1の2か所、および英語（civil fine）・繁体（過料）・簡体（过料）の全訳文に同じ誤りが波及している。 ／ 修正案：『過料』を『30万円以下の罰金』に修正（例：『怠ると30万円以下の罰金の対象になり得ます』）。英語は civil fine → a fine of up to 300,000 yen、中国語は『30萬日圓以下的罰金 / 30万日元以下的罚金』に統一。4言語すべてで同時に修正する。出典：厚労省『外国人雇用状況の届出』。
+- [minor] scripts/realestate-columns/141-souzoku-fudosan-ekkyo-oboegaki-233jo-baikyaku.md：出典に挙げた法務省ページ https://www.moj.go.jp/MINJI/minji07_00343.html が HTTP 404（4回確認・site:moj.go.jp 検索でも当該パスは出ず）。4言語すべてに同一の死リンクが含まれる。民法233条改正の実体はe-Gov民法で裏取り済みのため法的正確性には影響しないが、一次根拠として掲げたリンクが辿れない。 ／ 修正案：法務省の相隣関係改正（令和3年法律第24号）の現行公表URLに差し替えるか、当該リンクを削除してe-Gov民法233条の引用に一本化する。参照日の明示は維持。
 
-実行証跡：https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/40108111953
+実行証跡：https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/40208963917

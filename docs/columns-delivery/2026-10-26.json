@@ -1,0 +1,96 @@
+{
+  "todayJst": "2026-10-26",
+  "runUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/40208963917",
+  "generationStatus": "validated",
+  "generatedCount": 5,
+  "reviewResult": "success",
+  "reviewReportAvailable": true,
+  "reviewPass": true,
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "minor": 1
+  },
+  "reviewFindings": [
+    {
+      "file": "scripts/realestate-columns/141-souzoku-fudosan-ekkyo-oboegaki-233jo-baikyaku.md",
+      "severity": "minor",
+      "issue": "出典に挙げた法務省ページ https://www.moj.go.jp/MINJI/minji07_00343.html が HTTP 404（4回確認・site:moj.go.jp 検索でも当該パスは出ず）。4言語すべてに同一の死リンクが含まれる。民法233条改正の実体はe-Gov民法で裏取り済みのため法的正確性には影響しないが、一次根拠として掲げたリンクが辿れない。",
+      "fix": "法務省の相隣関係改正（令和3年法律第24号）の現行公表URLに差し替えるか、当該リンクを削除してe-Gov民法233条の引用に一本化する。参照日の明示は維持。"
+    }
+  ],
+  "registeredCount": 2,
+  "qualityEligibleCount": 2,
+  "heldCount": 3,
+  "scheduledCount": 0,
+  "unverifiedSourceCount": 1,
+  "publishedCount": null,
+  "articles": [
+    {
+      "key": "realestate:ninteikodomoen-bukken-youto-engei-jien-chori",
+      "fingerprint": "c59df9b98627086572a79862b39d7d3e94af506b6a1b1ae900058a4a6329ab3f",
+      "title": "認定こども園（幼保連携型）の物件要件｜用途地域・園舎園庭の面積・自園調理の設備",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録です",
+        "確認済みの公的な一次根拠が不足しています"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "realestate:souzoku-fudosan-ekkyo-oboegaki-233jo-baikyaku",
+      "fingerprint": "b4f369ac2c92fee8b477702c59039fb758404119249ee9af9ac3afedf5d4a3ac",
+      "title": "相続した不動産の越境（塀・樹木・庇）｜改正民法233条の覚書と売却の進め方",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録です",
+        "確認済みの公的な一次根拠が不足しています"
+      ],
+      "sourceFailures": [
+        {
+          "url": "https://www.moj.go.jp/MINJI/minji07_00343.html",
+          "checkedAt": "2026-10-25",
+          "relevantClaim": "本文が『法務省・民法等の一部を改正する法律(令和3年)の解説』として掲げる一次根拠。URLはHTTP 404で取得不能。相隣関係改正の実体は上記e-Gov民法233条で裏取り済みのため重要事項の根拠欠落には当たらないが、当該リンクは辿れない(全4言語に同一の死リンク)。",
+          "verified": false
+        }
+      ],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:ninteikodomoen-ninka-nintei-shinsei-nagare-youken",
+      "fingerprint": "6134a398b59d7cd3b066f921e4ba04e71849374e1a45d8bce34499c8bedd76f5",
+      "title": "認定こども園の認定・認可申請の流れと必要書類｜幼保連携型の基準",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:saiten-souzoku-916jo-jukuryo-kikan-houki",
+      "fingerprint": "804b9f826ef48b1de87a62dc17036f16e07ea4a1594d50e37572fd1741aa3c3b",
+      "title": "再転相続（民法916条）の熟慮期間｜相続人が承認・放棄前に亡くなったとき",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録です",
+        "確認済みの公的な一次根拠が不足しています"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:ryokogyo-tenjoin-jigyojogai-minashi-roudoujikan-roumu",
+      "fingerprint": "362175b1a890e4654aa13094ffce180f3bf21d93138a7977733f91c6078c79a3",
+      "title": "旅行会社の添乗員に、事業場外みなし労働時間は使えますか？（阪急トラベル最高裁後の実務）",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    }
+  ]
+}
