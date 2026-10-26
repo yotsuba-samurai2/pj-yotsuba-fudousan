@@ -1,13 +1,199 @@
 {
   "dryRun": false,
-  "runAt": "2026-10-25T08:01:33.736Z",
-  "todayJst": "2026-10-25",
-  "targets": [],
-  "held": [],
+  "runAt": "2026-10-26T08:23:08.747Z",
+  "todayJst": "2026-10-26",
+  "targets": [
+    {
+      "key": "labor:ryokogyo-tenjoin-jigyojogai-minashi-roudoujikan-roumu",
+      "business": "labor",
+      "slug": "ryokogyo-tenjoin-jigyojogai-minashi-roudoujikan-roumu",
+      "title": "旅行会社の添乗員に、事業場外みなし労働時間は使えますか？（阪急トラベル最高裁後の実務）",
+      "date": "2026-10-25",
+      "category": "テーマ別の労務管理",
+      "path": "/labor/column/ryokogyo-tenjoin-jigyojogai-minashi-roudoujikan-roumu"
+    },
+    {
+      "key": "legal:ninteikodomoen-ninka-nintei-shinsei-nagare-youken",
+      "business": "legal",
+      "slug": "ninteikodomoen-ninka-nintei-shinsei-nagare-youken",
+      "title": "認定こども園の認定・認可申請の流れと必要書類｜幼保連携型の基準",
+      "date": "2026-10-25",
+      "category": "許認可の手続き（行政書士の実務から）",
+      "path": "/legal/column/ninteikodomoen-ninka-nintei-shinsei-nagare-youken"
+    }
+  ],
+  "held": [
+    {
+      "key": "labor:gaikokujin-koyo-kanri-shishin-jigyonushi-doryoku-gimu",
+      "business": "labor",
+      "slug": "gaikokujin-koyo-kanri-shishin-jigyonushi-doryoku-gimu",
+      "title": "外国人を雇う事業主の『雇用管理指針』の努力義務とは——募集から雇用管理・離職まで確認する点",
+      "date": "2026-10-24",
+      "category": "外国人雇用",
+      "path": "/labor/column/gaikokujin-koyo-kanri-shishin-jigyonushi-doryoku-gimu",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "labor:shoyo-shakaihokenryo-hyojun-shoyogaku-jogen-shiharaitodoke",
+      "business": "labor",
+      "slug": "shoyo-shakaihokenryo-hyojun-shoyogaku-jogen-shiharaitodoke",
+      "title": "賞与（ボーナス）の社会保険料はどう決まるか——標準賞与額の上限と賞与支払届・不支給報告書",
+      "date": "2026-10-24",
+      "category": "社会保険",
+      "path": "/labor/column/shoyo-shakaihokenryo-hyojun-shoyogaku-jogen-shiharaitodoke",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "legal:keshohin-seizo-hanbaigyo-seizogyo-kyoka-yakkiho",
+      "business": "legal",
+      "slug": "keshohin-seizo-hanbaigyo-seizogyo-kyoka-yakkiho",
+      "title": "化粧品製造販売業・製造業許可｜薬機法第12条・第13条の違いと三役・GQP/GVP",
+      "date": "2026-10-24",
+      "category": "許認可の手続き（行政書士の実務から）",
+      "path": "/legal/column/keshohin-seizo-hanbaigyo-seizogyo-kyoka-yakkiho",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "legal:nihonjin-haiguusha-biza-zairyu-koshin-henko-chuka-taiwan",
+      "business": "legal",
+      "slug": "nihonjin-haiguusha-biza-zairyu-koshin-henko-chuka-taiwan",
+      "title": "日本人の配偶者等ビザ｜在留・更新で見られる婚姻の実体と22条の4の取消し（中国・台湾）",
+      "date": "2026-10-24",
+      "category": "許認可の手続き（行政書士の実務から）",
+      "path": "/legal/column/nihonjin-haiguusha-biza-zairyu-koshin-henko-chuka-taiwan",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "realestate:kango-shoukibo-takino-bukken-youto-shobo-homon-kango",
+      "business": "realestate",
+      "slug": "kango-shoukibo-takino-bukken-youto-shobo-homon-kango",
+      "title": "看護小規模多機能型居宅介護（看多機）の事業所にできる物件とは——通い・泊まり・訪問看護を1棟でまかなう用途地域・消防・面積の確認点",
+      "date": "2026-10-24",
+      "category": "投資・事業用不動産",
+      "path": "/column/kango-shoukibo-takino-bukken-youto-shobo-homon-kango",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "realestate:souzoku-jikka-maizo-bunkazai-hozochi-baikyaku",
+      "business": "realestate",
+      "slug": "souzoku-jikka-maizo-bunkazai-hozochi-baikyaku",
+      "title": "相続した実家が『周知の埋蔵文化財包蔵地』だったら売れるのか——文化財保護法93条の届出と発掘調査、売買での説明",
+      "date": "2026-10-24",
+      "category": "相続",
+      "path": "/column/souzoku-jikka-maizo-bunkazai-hozochi-baikyaku",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "legal:saiten-souzoku-916jo-jukuryo-kikan-houki",
+      "business": "legal",
+      "slug": "saiten-souzoku-916jo-jukuryo-kikan-houki",
+      "title": "再転相続（民法916条）の熟慮期間｜相続人が承認・放棄前に亡くなったとき",
+      "date": "2026-10-25",
+      "category": "相続の手続き（行政書士の実務から）",
+      "path": "/legal/column/saiten-souzoku-916jo-jukuryo-kikan-houki",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "realestate:ninteikodomoen-bukken-youto-engei-jien-chori",
+      "business": "realestate",
+      "slug": "ninteikodomoen-bukken-youto-engei-jien-chori",
+      "title": "認定こども園（幼保連携型）の物件要件｜用途地域・園舎園庭の面積・自園調理の設備",
+      "date": "2026-10-25",
+      "category": "投資・事業用不動産",
+      "path": "/column/ninteikodomoen-bukken-youto-engei-jien-chori",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "realestate:souzoku-fudosan-ekkyo-oboegaki-233jo-baikyaku",
+      "business": "realestate",
+      "slug": "souzoku-fudosan-ekkyo-oboegaki-233jo-baikyaku",
+      "title": "相続した不動産の越境（塀・樹木・庇）｜改正民法233条の覚書と売却の進め方",
+      "date": "2026-10-25",
+      "category": "相続",
+      "path": "/column/souzoku-fudosan-ekkyo-oboegaki-233jo-baikyaku",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録です"
+      ]
+    }
+  ],
   "scheduled": [],
-  "ok": true,
-  "published": [],
-  "errors": [],
-  "outcome": "success",
-  "httpStatus": "200"
+  "ok": false,
+  "published": [
+    {
+      "key": "labor:ryokogyo-tenjoin-jigyojogai-minashi-roudoujikan-roumu",
+      "business": "labor",
+      "slug": "ryokogyo-tenjoin-jigyojogai-minashi-roudoujikan-roumu",
+      "title": "旅行会社の添乗員に、事業場外みなし労働時間は使えますか？（阪急トラベル最高裁後の実務）",
+      "date": "2026-10-25",
+      "category": "テーマ別の労務管理",
+      "path": "/labor/column/ryokogyo-tenjoin-jigyojogai-minashi-roudoujikan-roumu"
+    },
+    {
+      "key": "legal:ninteikodomoen-ninka-nintei-shinsei-nagare-youken",
+      "business": "legal",
+      "slug": "ninteikodomoen-ninka-nintei-shinsei-nagare-youken",
+      "title": "認定こども園の認定・認可申請の流れと必要書類｜幼保連携型の基準",
+      "date": "2026-10-25",
+      "category": "許認可の手続き（行政書士の実務から）",
+      "path": "/legal/column/ninteikodomoen-ninka-nintei-shinsei-nagare-youken"
+    }
+  ],
+  "skipped": [],
+  "errors": [
+    {
+      "key": "labor:gaikokujin-koyo-kanri-shishin-jigyonushi-doryoku-gimu",
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
+    },
+    {
+      "key": "labor:shoyo-shakaihokenryo-hyojun-shoyogaku-jogen-shiharaitodoke",
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
+    },
+    {
+      "key": "legal:keshohin-seizo-hanbaigyo-seizogyo-kyoka-yakkiho",
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
+    },
+    {
+      "key": "legal:nihonjin-haiguusha-biza-zairyu-koshin-henko-chuka-taiwan",
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
+    },
+    {
+      "key": "realestate:kango-shoukibo-takino-bukken-youto-shobo-homon-kango",
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
+    },
+    {
+      "key": "realestate:souzoku-jikka-maizo-bunkazai-hozochi-baikyaku",
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
+    },
+    {
+      "key": "legal:saiten-souzoku-916jo-jukuryo-kikan-houki",
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
+    },
+    {
+      "key": "realestate:ninteikodomoen-bukken-youto-engei-jien-chori",
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
+    },
+    {
+      "key": "realestate:souzoku-fudosan-ekkyo-oboegaki-233jo-baikyaku",
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
+    }
+  ],
+  "blocked": "9本は品質確認待ちのため自動公開しません。記事別の理由を確認してください。forceでも解除しません。",
+  "outcome": "partial",
+  "httpStatus": "409"
 }
