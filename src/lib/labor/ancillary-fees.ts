@@ -1,6 +1,7 @@
 import type { LangCode } from "@/config/languages";
-export type AncillaryRow = { name: string; unit: string; price: string; value?: number };
-export type AncillarySection = { id?: string; title: string; lead?: string; note?: string; rows: AncillaryRow[] };
+import { SR_OFFICE_NAME } from "@/lib/shared/sr-name";
+export type AncillaryRow = { name: string; unit: string; price: string; value?: number; priceUnit?: string };
+export type AncillarySection = { id?: string; title: string; lead?: string; note?: string; details?: string[]; rows: AncillaryRow[] };
 export const LABOR_ANCILLARY_FEES = {
   "ja": {
     "sections": [
@@ -252,6 +253,21 @@ export const LABOR_ANCILLARY_FEES = {
             "price": "郵送・診断書料・書類取得等の実費は別途"
           }
         ]
+      },
+      {
+        "id": "post-death-pension",
+        "title": "死亡後の年金手続（海外居住遺族対応）",
+        "lead": "一式料金は1事案（亡くなった方1名・代表請求者1名）についての報酬です。遺族・相続人の人数を乗じません。対象機関と具体的な作業範囲は事前のお見積りで明確にします。",
+        "rows": [
+          { "name": "死亡後の年金手続支援（海外居住遺族対応）", "unit": "一式（1事案）", "price": "55,000円", "value": 55000, "priceUnit": "事案" },
+          { "name": "年金の過払返納事務支援のみ", "unit": "1件", "price": "16,500円〜（内容によりお見積り）" }
+        ],
+        "details": [
+          "一式に含むもの：受給内容・未支給と過払いの確認、請求者と生計同一関係の資料確認、未支給年金請求・必要な死亡届、通常の補正対応と返納に関する連絡・案内。",
+          "別途となるもの：翻訳・証明書取得・認証・国際郵送等の費用、特別調査、複数基金・共済の追加対応、遺族年金の新規請求、脱退一時金、不服申立て。返納金そのものや立替送金は含みません。",
+          "請求対象がなく返納事務だけの場合は、内容により個別にお見積りします。一式料金と返納事務のみの料金を重複加算しません。未支給年金の支給を保証せず、請求の可否は資料をもとに資格者が個別に確認します。"
+        ],
+        "note": `${SR_OFFICE_NAME}が受任します。行政書士業務とは別受任・別契約・別請求です。共通資料の収集・翻訳など同一業務を二重請求しません。紹介料の授受もありません。`,
       },
       {
         "id": "dattai-ichijikin",
@@ -565,6 +581,21 @@ export const LABOR_ANCILLARY_FEES = {
         ]
       },
       {
+        "id": "post-death-pension",
+        "title": "Pension procedures after death (bereaved family residing overseas)",
+        "lead": "The package fee covers one case: one deceased pension recipient and one representative claimant. It is not multiplied by the number of bereaved family members or heirs. The institutions covered and specific scope are set out in the advance estimate.",
+        "rows": [
+          { "name": "Pension procedure support after death (bereaved family residing overseas)", "unit": "Package (one case)", "price": "¥55,000", "value": 55000, "priceUnit": "case" },
+          { "name": "Administrative support for repayment of pension overpayments only", "unit": "Per case", "price": "From ¥16,500 (individually quoted according to scope)" }
+        ],
+        "details": [
+          "The package includes reviewing pension payments, unpaid benefits and overpayments; checking documents concerning the claimant and shared livelihood; claiming unpaid pension and filing any required death notification; routine corrections; and communication and guidance on repayment.",
+          "Extra fees or costs apply to translation, certificate retrieval, authentication, international postage, special investigations, additional handling of multiple pension funds or mutual-aid associations, new survivors’ pension claims, lump-sum withdrawal payments and appeals. The repayment amount itself and making repayments with funds advanced by this office are excluded.",
+          "If there is no benefit to claim and only repayment administration is needed, we provide an individual estimate according to scope. The package fee and repayment-only fee are not added together. Payment of unpaid pension is not guaranteed; a qualified professional checks whether a claim can be made based on the documents."
+        ],
+        "note": `${SR_OFFICE_NAME} accepts this work separately from gyoseishoshi work, under a separate contract and invoice. The same work, such as collecting or translating shared documents, is not charged twice. No referral fees are received or paid.`,
+      },
+      {
         "id": "dattai-ichijikin",
         "title": "Lump-sum withdrawal payment (foreign clients leaving Japan)",
         "lead": "No advisory contract required; engaged directly by the person, including after they have left Japan.",
@@ -876,6 +907,21 @@ export const LABOR_ANCILLARY_FEES = {
         ]
       },
       {
+        "id": "post-death-pension",
+        "title": "死亡後的年金手續（海外居住遺屬對應）",
+        "lead": "全套報酬以1宗案件（亡者1名、代表請求人1名）計算，不乘以遺屬或繼承人的人數。涵蓋的機構與具體作業範圍將於事前報價中明確列出。",
+        "rows": [
+          { "name": "死亡後的年金手續支援（海外居住遺屬對應）", "unit": "全套（1宗案件）", "price": "55,000日圓", "value": 55000, "priceUnit": "宗案件" },
+          { "name": "僅年金溢領款返還事務支援", "unit": "每件", "price": "16,500日圓起（依內容個別報價）" }
+        ],
+        "details": [
+          "全套包含：確認領取內容、未支付年金及溢領情況，確認請求人與生計同一關係的資料，請求未支付年金及辦理必要的死亡申報、通常的補正，以及返還款項相關的聯絡與說明。",
+          "另計項目：翻譯、證明書取得、認證、國際郵寄等費用，特別調查，多個年金基金或共濟的追加處理，新申請遺屬年金、脫退一時金及不服申訴。不包含返還款項本身或代墊匯付。",
+          "若無可請求的給付、僅需返還事務，依內容個別報價。全套報酬與僅返還事務的報酬不重複加收。不保證未支付年金的給付；能否請求由資格者依資料個別確認。"
+        ],
+        "note": `由${SR_OFFICE_NAME}受任，與行政書士業務分別受任、分別簽約及請款。共用資料的收集、翻譯等同一業務不重複收費，不收取或支付介紹費。`,
+      },
+      {
         "id": "dattai-ichijikin",
         "title": "脫退一時金（回國的外國客戶）",
         "lead": "不需顧問契約。由本人直接委託。回國後也可委託。",
@@ -1185,6 +1231,21 @@ export const LABOR_ANCILLARY_FEES = {
             "price": "邮寄・诊断书费・文件取得等实费另计"
           }
         ]
+      },
+      {
+        "id": "post-death-pension",
+        "title": "死亡后的养老金手续（海外居住遗属对应）",
+        "lead": "全套报酬按1宗案件（逝者1名、代表请求人1名）计算，不乘以遗属或继承人的人数。涵盖的机构与具体工作范围将在事前报价中明确列出。",
+        "rows": [
+          { "name": "死亡后的养老金手续支援（海外居住遗属对应）", "unit": "全套（1宗案件）", "price": "55,000日元", "value": 55000, "priceUnit": "宗案件" },
+          { "name": "仅养老金超额领取款返还事务支援", "unit": "每件", "price": "16,500日元起（依内容个别报价）" }
+        ],
+        "details": [
+          "全套包含：确认领取内容、未支付养老金及超额领取情况，确认请求人与生计同一关系的资料，请求未支付养老金及办理必要的死亡申报、通常的补正，以及返还款项相关的联络与说明。",
+          "另计项目：翻译、证明书取得、认证、国际邮寄等费用，特别调查，多个养老金基金或共济的追加处理，新申请遗属养老金、脱退一时金及不服申诉。不包含返还款项本身或垫付汇款。",
+          "若无可请求的给付、仅需返还事务，依内容个别报价。全套报酬与仅返还事务的报酬不重复加收。不保证未支付养老金的给付；能否请求由资格者依资料个别确认。"
+        ],
+        "note": `由${SR_OFFICE_NAME}受任，与行政书士业务分别受任、分别签约及请款。共用资料的收集、翻译等同一业务不重复收费，不收取或支付介绍费。`,
       },
       {
         "id": "dattai-ichijikin",

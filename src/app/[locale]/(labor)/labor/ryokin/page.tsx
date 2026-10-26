@@ -67,6 +67,7 @@ export default async function Page() {
               <dd className="font-medium text-ink">{row.price} ({p.tax})</dd>
             </div>)}
           </dl>
+          {section.details?.map(detail => <p key={detail} className="mt-2 text-sm leading-relaxed text-text">{detail}</p>)}
           {section.note && <p className="mt-2 text-sm leading-relaxed text-text-muted">{section.note}</p>}
         </section>)}
       </div>

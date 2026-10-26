@@ -2,13 +2,17 @@ import type { LangCode } from "@/config/languages";
 import { addLocalePrefix } from "@/lib/locale";
 import { LABOR_PRICING, getLaborMonthlyFee } from "./pricing";
 import { LABOR_PLAN_COPY } from "./plan-copy";
-import { LABOR_ANCILLARY_FEES } from "./ancillary-fees";
+import { LABOR_ANCILLARY_FEES, type AncillaryRow } from "./ancillary-fees";
 
 export function getLaborPriceStructuredData(locale: LangCode) {
   const c = LABOR_PLAN_COPY[locale];
-  const fixedOffer = (name: string, price: number) => ({
+  const fixedOffer = (name: string, price: number, priceUnit?: string) => ({
     "@type": "Offer", name,
-    priceSpecification: { "@type": "PriceSpecification", price, priceCurrency: LABOR_PRICING.currency, valueAddedTaxIncluded: LABOR_PRICING.taxIncluded },
+    priceSpecification: {
+      "@type": priceUnit ? "UnitPriceSpecification" : "PriceSpecification",
+      price, priceCurrency: LABOR_PRICING.currency, valueAddedTaxIncluded: LABOR_PRICING.taxIncluded,
+      ...(priceUnit ? { referenceQuantity: { "@type": "QuantitativeValue", value: 1, unitText: priceUnit } } : {}),
+    },
   });
   const recurring = Array.from({ length: 30 }, (_, i) => {
     const people = i + 1;
@@ -16,8 +20,8 @@ export function getLaborPriceStructuredData(locale: LangCode) {
   });
   // Representative exact monthly fees, not a headcount limit.
   // Conditional setup tiers and optional services are described on-page, not as unconditional fixed offers.
-  const ancillary = LABOR_ANCILLARY_FEES[locale].sections.flatMap(section => section.rows.flatMap(row =>
-    "value" in row && typeof row.value === "number" ? [fixedOffer(`${section.title} / ${row.name}`, row.value)] : [],
+  const ancillary = LABOR_ANCILLARY_FEES[locale].sections.flatMap(section => section.rows.flatMap((row: AncillaryRow) =>
+    typeof row.value === "number" ? [fixedOffer(`${section.title} / ${row.name}`, row.value, row.priceUnit)] : [],
   ));
   return {
     "@context": "https://schema.org", "@type": "Service",
