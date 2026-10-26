@@ -7,9 +7,12 @@ import { contentHash } from "../property-sync/rules";
 import type { AdminProperty, PropertyInput } from "../property-shared";
 import { enqueuePublicationEffects } from "./publication-effects";
 import { propertyHeldReceiptSchema, type PropertyHeldReceipt } from "../property-write-contract";
+import { fingerprintPropertySource } from "../property-sync/source-fingerprint";
+import { readPropertySourceRecord } from "./property-source-record";
 
 const envelope = z.object({ requestId: z.uuid(), propertyId: z.uuid(), actorRef: z.string().regex(/^[A-Za-z0-9][A-Za-z0-9:_-]{0,99}$/),
-  expectedUpdatedAt: z.iso.datetime({ precision: 3 }), patchJson: z.string().min(2).max(1_000_000) }).strict();
+  expectedUpdatedAt: z.iso.datetime({ precision: 3 }), expectedSourceHash: z.string().regex(/^[a-f0-9]{64}$/).optional(),
+  patchJson: z.string().min(2).max(1_000_000) }).strict();
 const clearable = new Set(["priceNote", "publishedAt", "translations", "internal"]);
 const fields = new Set(Object.keys(propertyInputSchema.shape));
 const iso = (v: unknown): v is string => typeof v === "string" && Number.isFinite(Date.parse(v)) && new Date(v).toISOString() === v;
@@ -36,7 +39,8 @@ function normalize(raw: unknown): Request | null {
     const checked = parsePropertyPatch(patch); if (!checked.ok || !Object.keys(checked.data).length) return null;
     const normalized = Object.fromEntries(Object.entries(checked.data).map(([k, v]) => [k, v === undefined ? null : v]));
     return { ...input, patch: checked.data, requestHash: contentHash({ schemaVersion: 1, operation: "property_update", propertyId: input.propertyId,
-      actorRef: input.actorRef, expectedUpdatedAt: input.expectedUpdatedAt, patch: normalized }) };
+      actorRef: input.actorRef, expectedUpdatedAt: input.expectedUpdatedAt, patch: normalized,
+      ...(input.expectedSourceHash === undefined ? {} : { expectedSourceHash: input.expectedSourceHash }) }) };
   } catch { return null; }
 }
 const receiptSchema = z.object({ request_id: z.uuid(), property_id: z.uuid(), request_hash: z.string().regex(/^[a-f0-9]{64}$/),
@@ -60,6 +64,8 @@ function result(receipt: Receipt, current: AdminProperty | null, replayed: boole
  * Explicitly injected local adapter; no production singleton, credentials or automatic fallback.
  * actorRef must come from the authenticated caller when a future route is wired.
  * Receipt + property CAS commit together. Receipts describe past outcomes, never replace current rows.
+ * expectedSourceHash is an additive server-side guard; omitted legacy requests retain their exact hash.
+ * This guard is not an episode, identity, eligibility or advertising authorization check.
  */
 export function createPropertyWriteRequests(prisma: Pick<PrismaClient, "$transaction">, options?: { localPublicationEffects: true }) {
   async function run(raw: unknown, write: boolean): Promise<PropertyWriteResult> {
@@ -83,8 +89,14 @@ export function createPropertyWriteRequests(prisma: Pick<PrismaClient, "$transac
         }
         if (!write) return { status: "unknown", reason: "REQUEST_NOT_OBSERVED" };
         if (!current) return { status: "held", reason: "PROPERTY_NOT_FOUND" };
+        let sourceMatches = true;
+        if (request.expectedSourceHash !== undefined) {
+          const source = fingerprintPropertySource(await readPropertySourceRecord(tx, request.propertyId));
+          sourceMatches = source.status === "fingerprinted" && source.propertyId === request.propertyId
+            && source.version.updatedAt === request.expectedUpdatedAt && source.version.fullHash === request.expectedSourceHash;
+        }
         let outcome: Receipt["outcome"] = "held", reason: Receipt["reason"] = "VERSION_CONFLICT";
-        if (current.updatedAt === request.expectedUpdatedAt) {
+        if (current.updatedAt === request.expectedUpdatedAt && sourceMatches) {
           const merged = parsePropertyInput({ ...current, ...request.patch });
           if (!merged.ok) reason = "INVALID_PROPERTY";
           else if (bannedTermsError(merged.data) || rentalPublicationError(merged.data, new Date(), current)) reason = "PUBLICATION_GATE_REJECTED";

@@ -12,6 +12,7 @@ const require = createRequire(import.meta.url), root = resolve(dirname(fileURLTo
 import { runPropertyRequestChecks } from "./property-request-postgres.mjs";
 import { runPublicationEffectChecks } from "./publication-effects-postgres.mjs";
 import { runPublicationUiChecks } from "./publication-ui-postgres.mjs";
+import { runSourceGuardChecks } from "./source-guard-postgres.mjs";
 import { runIsolatedBuild } from "./isolated-build.mjs";
 const { PrismaClient, Prisma } = require("@prisma/client");
 const { createPropertyRepository } = require("../../src/lib/db/property-repository.ts");
@@ -26,7 +27,7 @@ const bounded = promise => Promise.race([promise, sleep(2000).then(() => { throw
 const digest = value => createHash("sha256").update(value).digest("hex");
 const canary = "PRIVATE_CANARY_AD100_当社報酬_元付";
 
-export async function createFullPropertyCheck({ db, socket, port, database, owner, runner, runnerPassword, secrets, ownFile, childEnv, propertyRequests = false, publicationEffects = false, publicationUi = false }) {
+export async function createFullPropertyCheck({ db, socket, port, database, owner, runner, runnerPassword, secrets, ownFile, childEnv, propertyRequests = false, publicationEffects = false, publicationUi = false, sourceGuards = false }) {
   assert.equal(Prisma.prismaVersion.client, "6.19.3");
   // The installed generated client has no .env paths. Refuse if regenerated otherwise.
   const generated = await readFile(resolve(root, "node_modules/.prisma/client/index.js"), "utf8");
@@ -98,6 +99,9 @@ export async function createFullPropertyCheck({ db, socket, port, database, owne
       assert.equal((await ownerDb.query("SELECT count(*)::int AS count FROM public.property_write_receipts")).rows[0].count, 0);
     },
     async runRequests(context) {
+      if (sourceGuards) return runSourceGuardChecks({ ...context, current, connect, disconnect, schemaColumns: columns.length, schemaHash: digest(schema),
+        build: ownerDb => runIsolatedBuild({ db: ownerDb, root, secrets, ownFile, childEnv, socket, port, database, password: runnerPassword, propertyId, unit: 51,
+          privateCanaries: ["PRIVATE_EFFECT_AD100", "PRIVATE_SOURCE_GUARD_CANARY", "PRIVATE_SOURCE_LATER_EDIT"] }) });
       if (publicationEffects) return (publicationUi ? runPublicationUiChecks : runPublicationEffectChecks)({ ...context, current, connect, connectWorker: () => connect(true), disconnect,
         schemaColumns: columns.length, schemaHash: digest(schema), build: ownerDb => runIsolatedBuild({ db: ownerDb, root, secrets, ownFile, childEnv, socket, port, database, password: runnerPassword, propertyId, unit: publicationUi ? 41 : 36 }) });
       return runPropertyRequestChecks({ ...context, current, connect, disconnect, schemaColumns: columns.length, schemaHash: digest(schema) });

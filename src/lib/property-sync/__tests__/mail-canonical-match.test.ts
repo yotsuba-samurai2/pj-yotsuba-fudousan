@@ -143,3 +143,13 @@ it("以前採取したsnapshotを現在のDB再読取りとして扱わない", 
   const f = fixture(); f.metadata.capturedAt = "2026-10-25T00:00:00.000Z";
   expect(await matchMailToCanonicalProperty(f.request, f.readers)).toMatchObject({ reason: "CANONICAL_SNAPSHOT_PREDATES_CHECK" });
 });
+
+it("既存取込sourceのネストした確認記録は住所/建物/号室の文字列検査へ渡さない", async () => {
+  const f = fixture();
+  Object.assign(f.record.internal.rentalImport.source, { rent: { yen: 130000, evidence: { reference: "PRIVATE_RENT_EVIDENCE" } },
+    listingEvidence: { exactRoomMatched: true }, extra: null });
+  f.repin();
+  const result = await matchMailToCanonicalProperty(f.request, f.readers);
+  expect(result).toMatchObject({ status: "matched_proposal" });
+  expect(JSON.stringify(result)).not.toContain("PRIVATE_RENT_EVIDENCE");
+});

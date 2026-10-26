@@ -4,13 +4,18 @@ import { randomUUID } from "node:crypto";
 import { createPropertyWriteRequests } from "../db/property-write-requests";
 import { createPropertyRepository, PropertyWriteConflictError } from "../db/property-repository";
 import { fixture as rentalFixture } from "../rental-import/__tests__/fixtures";
+import { fingerprintPropertySource, fingerprintPropertySnapshot } from "../property-sync/source-fingerprint";
+import { contentHash } from "../property-sync/rules";
+import { readPropertySourceRecord } from "../db/property-source-record";
 
 const id = "00000000-0000-4000-8000-000000000001", at = "2026-10-25T12:00:00.000Z";
 function fixture() {
   const input = { ...rentalFixture().property, status: "draft" as const };
   let row = { ...input, id, priceYen: BigInt(input.priceYen), createdAt: new Date(at), updatedAt: new Date(at) };
   let receipt: Record<string, unknown> | undefined;
-  const fault = { afterInsert: false, lostReply: false, missing: false, hiddenReceiptId: false };
+  const fault = { afterInsert: false, lostReply: false, missing: false, hiddenReceiptId: false, sourceJson: undefined as string | null | undefined };
+  const sourceRecord = () => JSON.stringify({ ...row, priceYen: Number(row.priceYen), priceNote: row.priceNote ?? null,
+    publishedAt: row.publishedAt ?? null, translations: row.translations ?? null, internal: row.internal ?? null });
   const updateMany = vi.fn(async ({ where, data }) => {
     if (where.updatedAt.getTime() !== row.updatedAt.getTime() || (where.id && where.id !== id) || (where.slug && where.slug !== row.slug)) return { count: 0 };
     const converted = { ...data }; for (const key of ["internal", "translations"]) if (converted[key] === Prisma.JsonNull) converted[key] = null;
@@ -19,6 +24,7 @@ function fixture() {
   const property = { findUnique: vi.fn(async () => fault.missing ? null : structuredClone(row)), updateMany, create: vi.fn(), update: vi.fn(), upsert: vi.fn() };
   const tx = { property, $queryRaw: vi.fn(async (query: Prisma.Sql) => {
     if (query.sql.includes("pg_advisory")) return [{ locked: true }];
+    if (query.sql.includes("AS record_json")) return [{ record_json: fault.sourceJson === undefined ? sourceRecord() : fault.sourceJson }];
     if (query.sql.includes("FROM public.properties")) return fault.missing ? [] : [{ id }];
     return receipt ? [structuredClone(receipt)] : [];
   }), $executeRaw: vi.fn(async (query: Prisma.Sql) => {
@@ -37,10 +43,12 @@ function fixture() {
   });
   const store = createPropertyWriteRequests({ $transaction: transaction } as unknown as Pick<PrismaClient, "$transaction">);
   const repo = createPropertyRepository({ property } as unknown as Pick<PrismaClient, "property">);
-  return { store, repo, fault, property, tx, transaction, input, snapshot: () => structuredClone({ row, receipt }), receipt: () => receipt! };
+  return { store, repo, fault, property, tx, transaction, input, sourceRecord, editWithoutVersion: (patch: Record<string, unknown>) => { Object.assign(row, patch); },
+    snapshot: () => structuredClone({ row, receipt }), receipt: () => receipt! };
 }
 const request = (patch = { title: "Synthetic changed" } as Record<string, unknown>) => ({ requestId: randomUUID(), propertyId: id, actorRef: "synthetic-operator", expectedUpdatedAt: at, patchJson: JSON.stringify(patch) });
 beforeEach(() => vi.restoreAllMocks());
+const sourceHash = (text: string) => { const s = fingerprintPropertySource(text); if (s.status !== "fingerprinted") throw new Error(s.reason); return s.version.fullHash; };
 
 it.each([{ expectedUpdatedAt: "invalid" }, { actorRef: "" }, { patchJson: '{"updatedAt":"2027-01-01"}' }, { patchJson: "{}" }, { patchJson: '{"priceYen":9007199254740992}' }, { patchJson: '{"images":[{"url":"x","alt":{"internal":"private"}}]}' }])("invalid envelope/patch never opens SQL: %j", async patch => {
   const f = fixture(); expect(await f.store.apply({ ...request(), ...patch })).toEqual({ status: "held", reason: "INVALID_REQUEST" }); expect(f.transaction).not.toHaveBeenCalled();
@@ -142,4 +150,71 @@ it("image SQL accepts timestamp(3) snapshots as UTC and rejects ambiguous/invali
   const sql = buildBrowserImageUpdateSql(target, manifest, []);
   for (const updatedAt of [at.slice(0, -1), at.slice(0, -1).replace("T", " "), "2026-10-25T21:00:00.000+09:00"]) expect(buildBrowserImageUpdateSql({ ...target, updatedAt }, manifest, [])).toBe(sql);
   for (const updatedAt of ["2026-10-25", "2026-02-30T12:00:00.000", "tomorrow"]) expect(() => buildBrowserImageUpdateSql({ ...target, updatedAt }, manifest, [])).toThrow("INVALID_EXPECTED_VERSION");
+});
+
+it("legacy requests retain their exact hash and do not read the new source adapter", async () => {
+  const f = fixture(), r = request({ title: "Legacy" });
+  await f.store.apply(r);
+  expect(f.receipt().request_hash).toBe(contentHash({ schemaVersion: 1, operation: "property_update", propertyId: id,
+    actorRef: r.actorRef, expectedUpdatedAt: at, patch: { title: "Legacy" } }));
+  expect(f.tx.$queryRaw.mock.calls.some(([q]) => q.sql.includes("AS record_json"))).toBe(false);
+});
+
+it("source guard uses the identical snapshot hash and applies only after the row lock", async () => {
+  const f = fixture(), source = f.sourceRecord(), expectedSourceHash = sourceHash(source);
+  const snapshot = fingerprintPropertySnapshot(source, JSON.stringify({ propertyId: id, episodeId: "synthetic-episode", market: "residential_rental", snapshotRef: "synthetic-read", capturedAt: at }), at);
+  expect(snapshot).toMatchObject({ snapshot: { version: { fullHash: expectedSourceHash } } });
+  expect(await f.store.apply({ ...request(), expectedSourceHash })).toMatchObject({ status: "applied", current: "matches" });
+  const queries = f.tx.$queryRaw.mock.calls.map(([q]) => q.sql);
+  expect(queries.findIndex(q => q.includes("AS record_json"))).toBeGreaterThan(queries.findIndex(q => q.includes("FOR UPDATE")));
+  expect(JSON.stringify(f.receipt())).not.toMatch(/title|spec|patchJson/);
+});
+
+it.each([
+  { internal: { adNote: "PRIVATE_SOURCE_CANARY" } }, { priceYen: BigInt(123456) }, { priceNote: "" },
+  { translations: {} }, { images: [] }, { description: "Same timestamp manual edit" },
+])("same-timestamp source change is held and the manual value survives: %#", async change => {
+  const f = fixture(), r = { ...request(), expectedSourceHash: sourceHash(f.sourceRecord()) };
+  f.editWithoutVersion(change); const before = structuredClone(f.snapshot().row);
+  expect(await f.store.apply(r)).toMatchObject({ status: "held", reason: "VERSION_CONFLICT", replayed: false });
+  expect(f.snapshot().row).toEqual(before); expect(f.property.updateMany).not.toHaveBeenCalled();
+  expect(await f.store.apply(r)).toMatchObject({ status: "held", reason: "VERSION_CONFLICT", replayed: true });
+  expect(JSON.stringify(f.receipt())).not.toContain("PRIVATE_SOURCE_CANARY");
+});
+
+it.each([null, "", "f".repeat(63), "G".repeat(64)])("malformed source hash %s is not treated as omission", async expectedSourceHash => {
+  const f = fixture(); expect(await f.store.apply({ ...request(), expectedSourceHash })).toMatchObject({ reason: "INVALID_REQUEST" });
+  expect(f.transaction).not.toHaveBeenCalled();
+});
+
+it("changing or omitting the source guard cannot reuse an existing request ID", async () => {
+  const f = fixture(), r = { ...request(), expectedSourceHash: sourceHash(f.sourceRecord()) };
+  await f.store.apply(r);
+  for (const expectedSourceHash of [undefined, "f".repeat(64)]) expect(await f.store.apply({ ...r, expectedSourceHash })).toMatchObject({ reason: "REQUEST_ID_CONFLICT" });
+  expect(f.property.updateMany).toHaveBeenCalledTimes(1);
+});
+
+it("lost commit reply and later source change reconcile from the receipt without another source check", async () => {
+  const f = fixture(), r = { ...request(), expectedSourceHash: sourceHash(f.sourceRecord()) }; f.fault.lostReply = true;
+  expect(await f.store.apply(r)).toMatchObject({ status: "unknown" });
+  f.editWithoutVersion({ internal: { adNote: "PRIVATE_LATER_EDIT" } }); f.fault.sourceJson = null;
+  expect(await f.store.reconcile(r)).toMatchObject({ status: "applied", replayed: true, current: "changed" });
+  expect(await f.store.apply(r)).toMatchObject({ status: "applied", replayed: true, current: "changed" });
+  expect(f.tx.$queryRaw.mock.calls.filter(([q]) => q.sql.includes("AS record_json"))).toHaveLength(1);
+  expect(f.property.updateMany).toHaveBeenCalledTimes(1);
+});
+
+it.each(["missing", "fraction", "large-integer", "wrong-id"])("unusable SQL source %s fails closed", async kind => {
+  const f = fixture(), r = { ...request(), expectedSourceHash: sourceHash(f.sourceRecord()) };
+  f.fault.sourceJson = kind === "missing" ? null : kind === "fraction" ? f.sourceRecord().replace('"exclusiveAreaSqm":35.5', '"exclusiveAreaSqm":0.100000000000000000001')
+    : kind === "large-integer" ? f.sourceRecord().replace('"priceYen":85500', '"priceYen":9007199254740993') : f.sourceRecord().replace(id, randomUUID());
+  expect(await f.store.apply(r)).toMatchObject({ status: "held", reason: "VERSION_CONFLICT" });
+  expect(f.property.updateMany).not.toHaveBeenCalled();
+});
+
+it("one-ID source reader rejects invalid IDs before SQL, with no broad fetch fallback", async () => {
+  const f = fixture(); expect(await readPropertySourceRecord(f.tx as unknown as Prisma.TransactionClient, "bad")).toBeNull();
+  expect(f.tx.$queryRaw).not.toHaveBeenCalled();
+  expect(await readPropertySourceRecord(f.tx as unknown as Prisma.TransactionClient, id)).toBe(f.sourceRecord());
+  expect(f.tx.$queryRaw.mock.lastCall![0].values).toEqual([id]);
 });

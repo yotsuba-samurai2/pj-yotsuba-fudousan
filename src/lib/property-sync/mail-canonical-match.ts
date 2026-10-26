@@ -14,7 +14,7 @@ const targetSchema = planContextSchema.shape.snapshot.pick({ propertyId: true, e
 const roomIdentitySchema = z.object({ building: z.string().trim().min(1).max(300),
   address: z.string().trim().min(1).max(300), unit: z.string().trim().min(1).max(30) }).strict().refine(v =>
   !!normalized(v.building) && !!addressKey(v.address) && /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(unitNumber(v.unit))
-  && !Object.values(v).some(value => value.normalize("NFKC").includes("|") || /^(?:unknown|不明|未定|未確認|n\/a|-+)$/i.test(value)));
+  && ![v.building, v.address, v.unit].some(value => value.normalize("NFKC").includes("|") || /^(?:unknown|不明|未定|未確認|n\/a|-+)$/i.test(value)));
 export const mailIdentityEvidenceSchema = z.object({
   evidenceRef: ref, messageKey: hash, candidateHash: hash, target: targetSchema,
   status: z.enum(["confirmed", "pending", "revoked"]), method: z.enum(["manual_exact_room", "unconfirmed"]),

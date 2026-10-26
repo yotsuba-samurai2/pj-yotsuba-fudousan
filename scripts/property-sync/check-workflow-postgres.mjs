@@ -28,12 +28,13 @@ async function main() {
   // pg has implicit PGOPTIONS/PG* fallbacks; reject them before creating files or secrets.
   assert.equal(Object.keys(process.env).some(name => /^PG/i.test(name)), false);
   const publicationUi = process.argv[3] === "--publication-ui";
-  const publicationEffects = publicationUi || process.argv[3] === "--publication-effects";
-  const propertyRequests = publicationEffects || process.argv[3] === "--property-requests";
+  const sourceGuards = process.argv[3] === "--source-guards";
+  const publicationEffects = sourceGuards || publicationUi || process.argv[3] === "--publication-effects";
+  const propertyRequests = sourceGuards || publicationEffects || process.argv[3] === "--property-requests";
   const fullProperty = propertyRequests || process.argv[3] === "--full-property";
   assert.equal(process.argv.length, fullProperty ? 4 : 3);
   assert.equal(Object.keys(process.env).some(name => /^(DATABASE_URL|DIRECT_URL|PRISMA_)/i.test(name)), false);
-  const unit = publicationUi ? 41 : publicationEffects ? 36 : propertyRequests ? 35 : fullProperty ? 33 : 32;
+  const unit = sourceGuards ? 51 : publicationUi ? 41 : publicationEffects ? 36 : propertyRequests ? 35 : fullProperty ? 33 : 32;
   assert.equal(process.argv[2], expectedRuntime);
   assert.equal(await realpath(expectedRuntime), expectedRuntime);
   const runtimeStat = await lstat(expectedRuntime);
@@ -170,7 +171,7 @@ async function main() {
     assert.match(serverVersion, /^17\.11(?:\D|$)/);
     phase = "schema_setup"; await db.query("REVOKE CREATE ON SCHEMA public FROM PUBLIC");
     if (fullProperty) {
-      propertyCheck = await createFullPropertyCheck({ db, socket, port, database, owner, runner, runnerPassword, secrets, ownFile, childEnv, propertyRequests, publicationEffects, publicationUi });
+      propertyCheck = await createFullPropertyCheck({ db, socket, port, database, owner, runner, runnerPassword, secrets, ownFile, childEnv, propertyRequests, publicationEffects, publicationUi, sourceGuards });
     } else await db.query("CREATE TABLE public.properties (id TEXT PRIMARY KEY, status TEXT NOT NULL, updated_at TIMESTAMPTZ NOT NULL)");
     await db.query(await readFile(resolve(scriptRoot, "../../docs/property-sync/proposals/media-audit-schema.sql"), "utf8")); schemaCreated = true;
     let lastRequest, originalProperties, originalAthome, workflow, concurrency;

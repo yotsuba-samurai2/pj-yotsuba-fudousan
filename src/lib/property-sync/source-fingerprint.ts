@@ -89,26 +89,35 @@ function parseBoundedJson(input: unknown): unknown {
  * Date/BigInt/undefined must be explicitly normalized by a separately reviewed source adapter.
  * No source payload or source validation detail is returned.
  */
-export function fingerprintPropertySnapshot(recordJson: unknown, metadataJson: unknown, now: string): Held | {
-  status: "fingerprinted"; executable: false; normalizationVersion: 1; snapshot: PlanContext["snapshot"];
+export function fingerprintPropertySource(recordJson: unknown): Held | {
+  status: "fingerprinted"; executable: false; normalizationVersion: 1; propertyId: string; version: PlanContext["snapshot"]["version"];
 } {
   try {
-    let metadata: unknown;
-    try { metadata = parseBoundedJson(metadataJson); } catch { return held("INVALID_SNAPSHOT_METADATA"); }
-    const meta = metadataSchema.safeParse(metadata);
-    if (!meta.success || !instant.safeParse(now).success) return held("INVALID_SNAPSHOT_METADATA");
     const record = parseBoundedJson(recordJson);
     if (!record || typeof record !== "object" || Array.isArray(record)) return held("INVALID_PROPERTY_SOURCE");
     const source = record as Record<string, unknown>;
     if (requiredSourceFields.some(key => !Object.hasOwn(source, key))) return held("SOURCE_FIELDS_MISSING");
     const identity = sourceIdentity.safeParse({ id: source.id, updatedAt: source.updatedAt });
     if (!identity.success) return held("INVALID_PROPERTY_SOURCE");
-    if (identity.data.id !== meta.data.propertyId) return held("SOURCE_BINDING_MISMATCH");
-    if (identity.data.updatedAt > meta.data.capturedAt || meta.data.capturedAt > now) return held("INVALID_SNAPSHOT_TIME");
     const canonical = canonicalJson(record);
     if (Buffer.byteLength(canonical, "utf8") > MAX_BYTES) return held("SOURCE_SIZE_LIMIT");
     const fullHash = createHash("sha256").update("yotsuba-property-source:v1\n").update(canonical).digest("hex");
     return { status: "fingerprinted", executable: false, normalizationVersion: 1,
-      snapshot: { ...meta.data, version: { updatedAt: identity.data.updatedAt, fullHash } } };
+      propertyId: identity.data.id, version: { updatedAt: identity.data.updatedAt, fullHash } };
   } catch { return held("INVALID_PROPERTY_SOURCE"); }
+}
+
+/** Add a separately authenticated episode/market binding; a source hash alone grants neither. */
+export function fingerprintPropertySnapshot(recordJson: unknown, metadataJson: unknown, now: string): Held | {
+  status: "fingerprinted"; executable: false; normalizationVersion: 1; snapshot: PlanContext["snapshot"];
+} {
+  let metadata: unknown;
+  try { metadata = parseBoundedJson(metadataJson); } catch { return held("INVALID_SNAPSHOT_METADATA"); }
+  const meta = metadataSchema.safeParse(metadata);
+  if (!meta.success || !instant.safeParse(now).success) return held("INVALID_SNAPSHOT_METADATA");
+  const source = fingerprintPropertySource(recordJson);
+  if (source.status !== "fingerprinted") return source;
+  if (source.propertyId !== meta.data.propertyId) return held("SOURCE_BINDING_MISMATCH");
+  if (source.version.updatedAt > meta.data.capturedAt || meta.data.capturedAt > now) return held("INVALID_SNAPSHOT_TIME");
+  return { status: "fingerprinted", executable: false, normalizationVersion: 1, snapshot: { ...meta.data, version: source.version } };
 }
