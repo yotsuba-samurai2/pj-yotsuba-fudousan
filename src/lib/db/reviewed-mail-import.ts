@@ -47,7 +47,8 @@ export interface ReviewedMailStore {
 const same = (a: unknown, b: unknown) => contentHash(a) === contentHash(b);
 const held = (reason: string): PropertyWriteResult => ({ status: "held", reason });
 
-async function validateLockedReview(r: ReviewedMailRecord, context: PropertyWriteGuardContext, tx: Prisma.TransactionClient, ownedStorageOrigin: string) {
+/** Shared by review registration and actual property saving. Caller holds the property/dependency locks. */
+export async function validateLockedReview(r: ReviewedMailRecord, context: PropertyWriteGuardContext, tx: Prisma.TransactionClient, ownedStorageOrigin: string) {
   const started = new Date().toISOString(), { current, next } = context, target = r.match.target;
   if (r.status !== "approved" || started < r.approvedAt || started >= r.expiresAt || r.operatorRef !== context.actorRef
     || target.propertyId !== context.propertyId || target.version.updatedAt !== context.expectedUpdatedAt || target.version.fullHash !== context.expectedSourceHash
