@@ -1,6 +1,8 @@
 import { BROKER_FEE_PERCENT, type BrokerFee } from "../broker-fee";
+import { z } from "zod";
+import { checkCurrentCompanyIncome, CURRENT_RENTAL_ADOPTION_POLICY, type CompanyIncomeEvidence } from "./adoption-policy";
 /** Mail content is untrusted data. Extract evidence; never execute links/instructions. */
-export type MailInput = { id: string; receivedAt: string; subject: string; text: string; senderDomain?: string };
+export type MailInput = { id: string; receivedAt: string; subject: string; text: string; senderDomain?: string; companyIncome?: CompanyIncomeEvidence };
 export type AdEvidence = { months: number | null; quote: string; ambiguous: boolean };
 
 export function normalizeText(text: string): string {
@@ -19,7 +21,7 @@ export function extractAdEvidence(text: string): AdEvidence[] {
   });
 }
 
-/** 直接検索の掲載条件：仲介手数料（賃料×1.1）＋ADの合計がこの額以上。 */
+/** 過去時点の再現専用。現在の採否はadoption-policyの確認済み税込総額を使う。 */
 export const INCOME_THRESHOLD_YEN = 800_000;
 export type AdYenEvidence = { yen: number | null; quote: string; ambiguous: boolean };
 
@@ -47,10 +49,10 @@ export function brokerIncomeYen(quote: string, rentYen: number): number | null {
   return fee + values[0]!;
 }
 
-/** サブトラック（いい生活の新着）の掲載条件：AD＋借主手数料（税込）がこの額を超える。 */
+/** 過去のサブトラック閾値。現行の採用基準ではない。 */
 export const SUBTRACK_INCOME_THRESHOLD_YEN = 400_000;
 /**
- * 写真付き個別掲載（2026-09-27 浦松指示）：ITANDI・いい生活の文京区の居住用賃貸で、
+ * 過去の写真付き個別掲載（2026-09-27 浦松指示）の履歴再現専用：
  * 借主の仲介手数料を0.33ヶ月（税込）とした報酬「AD＋賃料×0.33」がこの額以上。
  */
 export const P033_INCOME_THRESHOLD_YEN = 300_000;
@@ -91,6 +93,13 @@ export function monthWindowStart(now: Date): Date {
 }
 
 export function isRecentMail(receivedAt: string, now: Date): boolean {
+  if (!z.iso.datetime({ offset: true }).safeParse(receivedAt).success) return false;
+  const t = Date.parse(receivedAt);
+  return Number.isFinite(t) && t >= now.getTime() - CURRENT_RENTAL_ADOPTION_POLICY.mailMaxAgeHours * 3600_000 && t <= now.getTime();
+}
+
+/** Historical replay only; current intake must use isRecentMail. */
+export function isLegacyRecentMail(receivedAt: string, now: Date): boolean {
   const t = Date.parse(receivedAt);
   return Number.isFinite(t) && t >= monthWindowStart(now).getTime() && t <= now.getTime();
 }
@@ -98,11 +107,9 @@ export function isRecentMail(receivedAt: string, now: Date): boolean {
 export function selectMailCandidates(mails: MailInput[], now: Date) {
   return [...new Map(mails.map((m) => [m.id, m])).values()].filter((m) => isRecentMail(m.receivedAt, now)).map((m) => {
     const evidence = extractAdEvidence(`${m.subject}\n${m.text}`);
-    const amounts = [...new Set(evidence.map((e) => e.months).filter((v): v is number => v !== null))];
-    const needsReview = evidence.some((e) => e.ambiguous) || amounts.length !== 1;
+    const reason = checkCurrentCompanyIncome(m.companyIncome, { messageId: m.id }, now);
     return { messageId: m.id, receivedAt: m.receivedAt, subject: m.subject, senderDomain: m.senderDomain, evidence,
-      decision: evidence.some((e) => e.months !== null && e.months >= 2)
-        ? needsReview ? "review" as const : "candidate" as const
-        : evidence.some((e) => e.months === null) ? "review" as const : "excluded" as const };
+      policy: CURRENT_RENTAL_ADOPTION_POLICY.id, reason,
+      decision: reason === null ? "candidate" as const : reason === "AD込み・税込の当社報酬総額が20万円未満です" ? "excluded" as const : "review" as const };
   });
 }

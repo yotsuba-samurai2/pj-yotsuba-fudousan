@@ -2,12 +2,13 @@ import "server-only";
 import { z } from "zod";
 import { contentHash } from "./rules";
 import { rentalFieldEvidenceSchema } from "./rental-field-evaluation";
+import { CURRENT_RENTAL_ADOPTION_POLICY } from "../rental-import/adoption-policy";
 
 const ref = z.string().regex(/^[A-Za-z0-9][A-Za-z0-9_-]{0,99}$/);
 const hash = z.string().regex(/^[a-f0-9]{64}$/);
 const instant = z.iso.datetime({ precision: 3 });
 const integer = z.number().int().nonnegative().max(Number.MAX_SAFE_INTEGER);
-export const MAIL_WINDOW_MS = 7 * 24 * 60 * 60 * 1000;
+export const MAIL_WINDOW_MS = CURRENT_RENTAL_ADOPTION_POLICY.mailMaxAgeHours * 60 * 60 * 1000;
 export const mailEnvelopeSchema = z.object({
   schemaVersion: z.literal(1), mailboxRef: ref, messageId: ref,
   // Set by the connector/export adapter, never by parsing the message's Date header.
