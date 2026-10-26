@@ -49,6 +49,8 @@ type RyokinCopy = {
   shogaiNote: React.ReactNode;
   /** 国際業務セクションの直下に出す注記（育成就労＝どちらの事務所で受けるか・独立性） */
   ikuseishuroNote: React.ReactNode;
+  /** 海外在住相続人対応・海外送金の算定単位と受任範囲 */
+  inheritanceNote: React.ReactNode;
   footnote: string;
   procedureLead: string;
   procedureLink: string;
@@ -105,6 +107,13 @@ const COPY: Record<LangCode, RyokinCopy> = {
         この扱いは、どちらの事務所で受けた場合にも同じです。
         なお<strong>許可申請の受付開始時期は公表されていません</strong>。制度が始まる前の段階から、事前のご相談を承ります。
       </>
+    ),
+    inheritanceNote: (
+      <div className="space-y-2">
+        <p><strong>海外在住相続人対応加算</strong>は、通常業務に追加される連絡調整、必要書類・署名方法の案内、書類回収・不備確認等の対価です。国籍だけを理由に加算せず、同一案件・同一人につき1回です。</p>
+        <p><strong>海外送金事務代行報酬</strong>は解約元口座ごとに算定し、受取口座ごとではありません。銀行等が徴収する送金・為替関連費用は別途必要です。</p>
+        <p>金融機関所定の委任・本人確認・受理条件に従います。株式換価・長期の預り金管理は含みません。同一作業の重複請求はせず、個別の受任範囲は資格者が確認し、ご契約前に費用とともに書面で明示します。税務は税理士、登記は司法書士へ別途直接ご依頼いただきます。</p>
+      </div>
     ),
     footnote:
       "※金額はすべて税込の目安です。事案により変動する場合は、ご契約前に書面でお見積りを明示します。確定値のみ構造化データ（PriceSpecification）として出力しています。",
@@ -166,6 +175,13 @@ const COPY: Record<LangCode, RyokinCopy> = {
         We accept inquiries in advance, before the system starts.
       </>
     ),
+    inheritanceNote: (
+      <div className="space-y-2">
+        <p><strong>Additional support for heirs residing overseas</strong> covers communication and coordination, guidance on required documents and signing methods, and document collection and completeness checks in addition to ordinary work. Nationality alone does not trigger the surcharge; it applies once per person in the same case.</p>
+        <p>The <strong>overseas remittance administrative service fee</strong> is calculated per source account being closed, rather than per receiving account. Remittance and foreign-exchange costs charged by banks and other providers are extra.</p>
+        <p>Handling is subject to the financial institution’s authorization, identity-verification and acceptance requirements. Share liquidation and long-term custody of funds are excluded. The same work is not charged twice. A qualified professional confirms the individual scope, which is provided in writing with the fees before engagement. Tax work and registration work require separate direct engagements with a tax accountant and a judicial scrivener, respectively.</p>
+      </div>
+    ),
     footnote:
       "* All amounts are indicative and include consumption tax. Where fees vary by case, a written estimate is provided before engagement. Only fixed amounts are output as structured data (PriceSpecification).",
     procedureLead: "How to engage us → ",
@@ -222,6 +238,13 @@ const COPY: Record<LangCode, RyokinCopy> = {
         另<strong>許可申請的受理開始時期尚未公布</strong>。制度施行前的階段，即可受理事前諮詢。
       </>
     ),
+    inheritanceNote: (
+      <div className="space-y-2">
+        <p><strong>海外居住繼承人應對加收報酬</strong>為一般業務以外的聯絡協調、所需文件與簽署方式說明、文件回收及缺漏確認等的報酬。不因國籍本身加收，同一案件的同一人僅收取1次。</p>
+        <p><strong>海外匯款事務代辦報酬</strong>按每個辦理解約的來源帳戶計算，並非按收款帳戶計算。銀行等收取的匯款及外匯相關費用另計。</p>
+        <p>依金融機構規定的委任、身分確認及受理條件辦理。不包含股票變現或長期保管款項。同一作業不重複收費；個別受任範圍由資格者確認，於簽約前連同費用以書面明示。稅務及登記須分別另行直接委託稅理士及司法書士。</p>
+      </div>
+    ),
     footnote:
       "※金額皆為含稅參考值。若因案件而變動，將於簽約前以書面明示估價。僅確定金額輸出為結構化資料（PriceSpecification）。",
     procedureLead: "委託流程 → ",
@@ -277,6 +300,13 @@ const COPY: Record<LangCode, RyokinCopy> = {
         此一处理方式，不论由哪一个事务所承办皆相同。
         另<strong>许可申请的受理开始时期尚未公布</strong>。制度施行前的阶段，即可受理事前咨询。
       </>
+    ),
+    inheritanceNote: (
+      <div className="space-y-2">
+        <p><strong>海外居住继承人应对加收报酬</strong>为一般业务以外的联络协调、所需文件与签署方式说明、文件回收及缺漏确认等的报酬。不因国籍本身加收，同一案件的同一人仅收取1次。</p>
+        <p><strong>海外汇款事务代办报酬</strong>按每个办理销户的来源账户计算，并非按收款账户计算。银行等收取的汇款及外汇相关费用另计。</p>
+        <p>依金融机构规定的委任、身份确认及受理条件办理。不包含股票变现或长期保管款项。同一作业不重复收费；个别受任范围由资格者确认，于签约前连同费用以书面明示。税务及登记须分别另行直接委托税理士及司法书士。</p>
+      </div>
     ),
     footnote:
       "※金额均为含税参考值。若因案件而变动，将于签约前以书面明示估价。仅确定金额输出为结构化数据（PriceSpecification）。",
@@ -391,7 +421,13 @@ function jsonLd() {
       .map((r) => ({
         "@type": "Offer",
         name: r.name,
-        priceSpecification: { "@type": "PriceSpecification", price: r.value, priceCurrency: "JPY", valueAddedTaxIncluded: true },
+        priceSpecification: {
+          "@type": r.priceUnit ? "UnitPriceSpecification" : "PriceSpecification",
+          price: r.value,
+          priceCurrency: "JPY",
+          valueAddedTaxIncluded: true,
+          ...(r.priceUnit ? { referenceQuantity: { "@type": "QuantitativeValue", value: 1, unitText: r.priceUnit } } : {}),
+        },
       })),
   );
   return {

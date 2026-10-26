@@ -3,8 +3,8 @@ import { FAMILY_TRUST_COPY, FAMILY_TRUST_PATH } from "./family-trust-copy";
 // /legal/ryokin の報酬額データ（2026-09-24 に page.tsx から移設＝テストで全行の訳の網羅と数値の一致を検査するため）。
 // 中身・コメントは移設前と同一。金額を変えるときはこのファイルを直す。
 // 2026-08-11：行単位の遷移先。設定した行は名称がリンクになる（定点#26・#27）
-export type Row = { name: string; unit: string; price: string; jitsuhi?: string; value?: number; href?: string };
-export type Section = { title: string; href?: string; rows: Row[]; hasJitsuhi?: boolean; noteKey?: "shogaiNote" | "ikuseishuroNote" };
+export type Row = { name: string; unit: string; price: string; jitsuhi?: string; value?: number; href?: string; priceUnit?: string };
+export type Section = { title: string; href?: string; rows: Row[]; hasJitsuhi?: boolean; noteKey?: "shogaiNote" | "ikuseishuroNote" | "inheritanceNote" };
 
 export const SECTIONS: Section[] = [
   {
@@ -118,6 +118,7 @@ export const SECTIONS: Section[] = [
   {
     title: "相続・遺言・信託",
     href: "/legal/services/inheritance",
+    noteKey: "inheritanceNote",
     rows: [
       { name: "遺言執行手続", unit: "一式", price: "330,000円〜（遺産額により変動する場合あり）" },
       { name: "遺言書案作成", unit: "1件", price: "165,000円（証人費用・公証人手数料別途）", value: 165000 },
@@ -125,6 +126,8 @@ export const SECTIONS: Section[] = [
       { name: "遺産分割協議書の作成", unit: "一式", price: "99,000円〜（遺産総額連動）" },
       { name: "改葬許可申請（墓じまい）", unit: "1件", price: "88,000円〜" },
       { name: "金融機関 解約・名義変更", unit: "1件", price: "55,000円/1行", value: 55000 },
+      { name: "海外在住相続人対応加算", unit: "1人", price: "88,000円", value: 88000, priceUnit: "人" },
+      { name: "海外送金事務代行報酬", unit: "解約元口座1口座", price: "38,500円", value: 38500, priceUnit: "解約元口座" },
       { name: "戸籍収集（代行）", unit: "1件", price: "33,000円（3名まで／追加1名11,000円）", value: 33000 },
       { name: "相続関係説明図／財産目録", unit: "1件", price: "各33,000円", value: 33000 },
       { name: "法定相続情報一覧図", unit: "1件", price: "22,000円", value: 22000 },
