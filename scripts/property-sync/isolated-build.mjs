@@ -1,13 +1,14 @@
 // Used only by the owned, synthetic, Unix-socket Postgres lifecycle. No URL argument or .env loading.
 import assert from "node:assert/strict";
-import { readFile, lstat, writeFile, realpath, readdir } from "node:fs/promises";
+import { readFile, lstat, writeFile, realpath, readdir, mkdir } from "node:fs/promises";
 import { resolve } from "node:path";
 import { execFile } from "node:child_process";
 import { promisify } from "node:util";
 const exec = promisify(execFile);
 
-export async function runIsolatedBuild({ db, root, secrets, ownFile, childEnv, socket, port, database, password, propertyId, unit = 36 }) {
-  assert.ok([36, 37, 41].includes(unit));
+export async function runIsolatedBuild({ db, root, secrets, ownFile, childEnv, socket, port, database, password, propertyId, unit = 36, privateCanaries = ["PRIVATE_EFFECT_AD100"] }) {
+  assert.ok([36, 37, 41, 51, 52, 53].includes(unit));
+  assert.ok(privateCanaries.length > 0 && privateCanaries.length <= 20 && privateCanaries.every(v => /^PRIVATE_[A-Z0-9_]{1,100}$/.test(v)));
   for (const dir of [root, resolve(root, "prisma")]) for (const name of [".env", ".env.local", ".env.production", ".env.production.local", ".env.development", ".env.development.local", ".env.test", ".env.test.local"]) {
     await assert.rejects(lstat(resolve(dir, name)), e => e.code === "ENOENT");
   }
@@ -60,6 +61,7 @@ export async function runIsolatedBuild({ db, root, secrets, ownFile, childEnv, s
   } catch (error) { exitCode = typeof error.code === "number" ? error.code : 1; stdout = error.stdout ?? ""; stderr = error.stderr ?? ""; }
   const log = (stdout + "\n" + stderr).replaceAll(url.href, "[LOCAL_DATABASE_URL]").replaceAll(password, "[REDACTED]");
   const logName = `evidence/unit${unit}-postgres/isolated-build-${Date.now()}.log`;
+  await mkdir(resolve(root, "..", `evidence/unit${unit}-postgres`), { recursive: true, mode: 0o700 });
   await writeFile(resolve(root, "..", logName), log, { flag: "wx", mode: 0o600 });
   assert.ok(Object.values(await counts()).every(n => n === 0));
   let checkedPublicFiles = 0;
@@ -68,7 +70,8 @@ export async function runIsolatedBuild({ db, root, secrets, ownFile, childEnv, s
       const file = resolve(dir, entry.name);
       if (entry.isDirectory()) await checkPublicArtifacts(file);
       else if (/\.(html|rsc|body|meta|json)$/.test(entry.name)) {
-        assert.equal((await readFile(file, "utf8")).includes("PRIVATE_EFFECT_AD100"), false); checkedPublicFiles++;
+        const text = await readFile(file, "utf8");
+        assert.equal(privateCanaries.some(canary => text.includes(canary)), false); checkedPublicFiles++;
       }
     }
   }
@@ -76,5 +79,5 @@ export async function runIsolatedBuild({ db, root, secrets, ownFile, childEnv, s
   return { exitCode, compiled: log.includes("Compiled successfully"), typescript: log.includes("Finished TypeScript"),
     extraSchemaTables: tables.length, emptyExtraTablesUnchanged: true, readOnlyRole: true, applicationCredentialsPassed: false, tcpListener: false,
     jsNetworkBlocked: true, osNetworkDeniedExceptExactUnixSocket: true, nativeLoopbackDenied: nativeDenied, checkedPublicFiles, googleFontsMocked: true, productionFontRenderingVerified: false,
-    privateCanaryAbsentFromPublicBuildArtifacts: true, log: logName, fullBuildPassed: exitCode === 0 };
+    privateCanaryAbsentFromPublicBuildArtifacts: true, checkedPrivateCanaries: privateCanaries.length, log: logName, fullBuildPassed: exitCode === 0 };
 }

@@ -48,6 +48,8 @@ export async function importRental(input: unknown, store: RentalStore, now: Date
   const existing = await store.get(p.slug);
   if (maintenance && !existing) return { action: "held", slug: p.slug, reasons: ["再確認の対象物件が存在しません"] };
   if (existing) {
+    if (Object.hasOwn(existing.internal ?? {}, "reviewedMailImport")) return { action: "held", slug: existing.slug,
+      reasons: ["確認済みメール取込の更新は専用の再確認経路から実行してください"] };
     // A new-candidate run must never turn an already registered room into an
     // update. This is the final guard behind the admin preflight check: the
     // operator must explicitly choose the maintenance/recheck operation when

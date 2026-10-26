@@ -2,8 +2,18 @@
 import type { PropertyInput } from "@/lib/property-shared";
 import { isOwnedImage } from "./media";
 import { rentalIdentity, rentalImportSchema, validateRentalImport } from "./validation";
+import { propertyInputSchema } from "../property-validation";
+import { contentHash } from "../property-sync/rules";
+/** Safe operator stop only: preserve every editable field and private review marker exactly. */
+export function isReviewedMailClosure(p: PropertyInput, existing?: PropertyInput): boolean {
+  if (!existing || existing.status !== "published" || p.status !== "closed" || !Object.hasOwn(existing.internal ?? {}, "reviewedMailImport")) return false;
+  const prior = Object.fromEntries(Object.keys(propertyInputSchema.shape).map(k => [k, existing[k as keyof PropertyInput]]));
+  return contentHash({ ...prior, status: "closed" }) === contentHash(p);
+}
 /** Also enforce the import checks when the normal admin screen publishes a saved draft. */
-export function rentalPublicationError(p: PropertyInput, now = new Date(), existing?: PropertyInput): string | null {
+export function rentalPublicationError(p: PropertyInput, now = new Date(), existing?: PropertyInput, authorization?: { reviewedMailImport: boolean }): string | null {
+  if ((Object.hasOwn(p.internal ?? {}, "reviewedMailImport") || Object.hasOwn(existing?.internal ?? {}, "reviewedMailImport"))
+    && authorization?.reviewedMailImport !== true && !isReviewedMailClosure(p, existing)) return "確認済みメール取込の更新は専用の再確認経路から実行してください";
   const proof = p.internal?.rentalImport, oldProof = existing?.internal?.rentalImport;
   if (oldProof) {
     if (existing?.status === "closed" && p.status !== "closed") return "募集終了済み物件は通常の編集画面から再公開できません";

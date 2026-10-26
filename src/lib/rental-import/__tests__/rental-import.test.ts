@@ -25,7 +25,7 @@ describe("ADと受信期間", () => {
   it("敷金やフリーレントをADと誤認しない", () => expect(extractAdEvidence("敷金2ヶ月 フリーレント3ヶ月 ADSL無料")).toEqual([]));
   it("月末を丸めて1暦月前にする", () => expect(monthWindowStart(new Date("2026-03-31T01:00:00Z")).toISOString()).toBe("2026-02-28T01:00:00.000Z"));
   it("日本時間の月跨ぎ", () => expect(monthWindowStart(new Date("2026-02-28T23:00:00Z")).toISOString()).toBe("2026-01-31T23:00:00.000Z"));
-  it("境界・未来・不正日付", () => { expect(isRecentMail("2026-08-20T01:00:00Z", NOW)).toBe(true); expect(isRecentMail("2026-08-20T00:59:59Z", NOW)).toBe(false); expect(isRecentMail("2026-09-21T01:00:00Z", NOW)).toBe(false); expect(isRecentMail("bad", NOW)).toBe(false); });
+  it("受信7日の境界・未来・不正日付", () => { expect(isRecentMail("2026-09-13T01:00:00Z", NOW)).toBe(true); expect(isRecentMail("2026-09-13T00:59:59Z", NOW)).toBe(false); expect(isRecentMail("2026-09-21T01:00:00Z", NOW)).toBe(false); expect(isRecentMail("bad", NOW)).toBe(false); });
   it("メールを重複除去し、複数AD額を保留", () => { const m = { id: "a", receivedAt: NOW.toISOString(), subject: "A物件AD2ヶ月 B物件AD1ヶ月", text: "" }; expect(selectMailCandidates([m, m], NOW)).toMatchObject([{ decision: "review" }]); });
 });
 

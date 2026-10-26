@@ -3,7 +3,8 @@ import { createHash } from "node:crypto";
 import { z } from "zod";
 import { propertyInputSchema } from "@/lib/property-validation";
 import { scanPropertyText, type PropertyInput } from "@/lib/property-shared";
-import { brokerIncomeYen, extractAdEvidence, INCOME_THRESHOLD_YEN, isRecentMail, P033_INCOME_THRESHOLD_YEN, subtrackIncomeYen, SUBTRACK_INCOME_THRESHOLD_YEN } from "./candidates";
+import { brokerIncomeYen, extractAdEvidence, INCOME_THRESHOLD_YEN, isLegacyRecentMail, isRecentMail, P033_INCOME_THRESHOLD_YEN, subtrackIncomeYen, SUBTRACK_INCOME_THRESHOLD_YEN } from "./candidates";
+import { checkCurrentCompanyIncome, companyIncomeEvidenceSchema, CURRENT_RENTAL_ADOPTION_POLICY, usesCurrentAdoptionPolicy } from "./adoption-policy";
 import { portalCheckSchema, summarizePortalChecks } from "./portal-counts";
 import { evidenceSchema, titleHighlightSchema, validTitleHighlight, TITLE_HIGHLIGHT_LABELS, conditionChoiceSchema, rentEvidenceSchema, validRentEvidence, isPrimaryReference, RENTAL_IMPORT_POLICY, hasAdvertisingAllow, selectCondition, isCurrentEvidence } from "./policy";
 import { contentReviewSchema, rentalContentDigest } from "./content-review";
@@ -22,15 +23,14 @@ export const rentalImportSchema = z.object({
   intake: z.object({
     kind: z.literal("portal-search"),
     /**
-     * 新規登録は bunkyo-income800k（ITANDI・いい生活、手数料満額＋AD 80万円以上）、
-     * または eslife-new-income400k（サブトラック：いい生活のみ、AD＋借主手数料 40万円超、手数料はアットホームと同じ）、
-     * または bunkyo-p033-income300k（2026-09-27〜：ITANDI・いい生活、借主手数料0.33ヶ月で AD＋賃料×0.33 ≥ 30万円、写真付き）。
-     * 旧方針は登録済み物件の再確認だけに使う。
+     * 現行は当社報酬のAD込み総額・税込20万円以上。旧IDは履歴互換のため受理するが、
+     * 現在の判定で旧閾値・賃料×手数料の推計を選ぶことはできない。
      */
-    policy: z.enum(["bunkyo-income800k", "eslife-new-income400k", "bunkyo-p033-income300k", "bunkyo-rent200k-ad30-or-rent250k"]),
+    policy: z.enum(["company-total-tax-included-200k-v1", "bunkyo-income800k", "eslife-new-income400k", "bunkyo-p033-income300k", "bunkyo-rent200k-ad30-or-rent250k"]),
     updateEvidence: listingEvidenceSchema,
   }).optional(),
   supportingDocuments: z.array(evidenceSchema).max(10).optional(),
+  companyIncome: companyIncomeEvidenceSchema.optional(),
   email: z.object({
     messageId: z.string().min(1), receivedAt: z.iso.datetime({ offset: true }), adQuote: z.string().min(1),
     senderDomain: z.string().trim().toLowerCase().optional(),
@@ -110,10 +110,17 @@ export function validateRentalImport(input: unknown, now: Date, mode: "draft" | 
   }
   // SUUMO・アットホーム・HOME'Sは判定に使わない。REINSは広告可の確認だけ許可する。
   const directSearch = v.intake?.kind === "portal-search";
+  const currentAdoption = usesCurrentAdoptionPolicy(now);
   const subtrackPolicy = directSearch && v.intake!.policy === "eslife-new-income400k";
   const p033Policy = directSearch && v.intake!.policy === "bunkyo-p033-income300k";
   const incomePolicy = directSearch && (v.intake!.policy === "bunkyo-income800k" || subtrackPolicy || p033Policy);
-  if (directSearch) {
+  if (currentAdoption) {
+    if (!directSearch && (!v.email || (!maintenance && !isRecentMail(v.email.receivedAt, now)))) reasons.push("メールが受信7日以内の対象外です");
+    if (directSearch && !/^東京都\s*文京区/.test(v.source.address.normalize("NFKC"))) reasons.push("直接検索の対象エリアは文京区です");
+    const { provider, roomId, building, address, unit } = v.source;
+    const incomeError = checkCurrentCompanyIncome(v.companyIncome, { source: { provider, roomId, building, address, unit }, messageId: directSearch ? null : v.email?.messageId ?? null }, now);
+    if (incomeError) reasons.push(incomeError);
+  } else if (directSearch) {
     const provider = v.source.provider;
     const evidence = v.intake!.updateEvidence;
     if (!maintenance && !incomePolicy) reasons.push("新規の直接検索は「仲介手数料＋AD 80万円以上」の方針で登録してください");
@@ -124,8 +131,9 @@ export function validateRentalImport(input: unknown, now: Date, mode: "draft" | 
       || hours.length !== 1 || hours[0] >= 24 || hours[0] * 3600_000 + now.getTime() - Date.parse(evidence.checkedAt) >= 24 * 3600_000)) reasons.push("取得元で24時間以内の募集条件更新を確認してください");
     if (!/^東京都\s*文京区/.test(v.source.address.normalize("NFKC"))) reasons.push("直接検索の対象エリアは文京区です");
     if (!incomePolicy && v.source.rent.yen < 200000) reasons.push("直接検索の賃料は20万円以上です");
-  } else if (!v.email || (!maintenance && !isRecentMail(v.email.receivedAt, now))) reasons.push("メールが直近1暦月の対象外です");
-  for (const [label, quote] of [...(!directSearch && v.email ? [["メール", v.email.adQuote]] : []), ["取得元", v.source.adQuote]]) {
+  } else if (!v.email || (!maintenance && !isLegacyRecentMail(v.email.receivedAt, now))) reasons.push("メールが直近1暦月の対象外です");
+  // Pre-replacement historical replay only. Never add AD or a presumed tenant fee to the confirmed total.
+  for (const [label, quote] of currentAdoption ? [] : [...(!directSearch && v.email ? [["メール", v.email.adQuote]] : []), ["取得元", v.source.adQuote]]) {
     if (v.source.provider === "eslife" && label === "メール") continue;
     if (p033Policy && label === "取得元") {
       const fee = v.property.spec.dealType === "rental" ? v.property.spec.brokerFee : undefined;
@@ -233,7 +241,9 @@ export function validateRentalImport(input: unknown, now: Date, mode: "draft" | 
     spec: { ...v.property.spec, ...(v.property.spec.dealType === "rental" ? { availabilityExpiresAt: new Date(Math.min(Date.parse(v.source.checkedAt), Date.parse(v.source.listingEvidence.checkedAt), ...(legacyMigration ? [Date.parse(v.reins!.listingEvidence.checkedAt)] : [])) + 26 * 3600_000).toISOString() } : {}) },
     infoUpdatedAt: jstDate(now), nextUpdateAt: jstDate(new Date(now.getTime() + DAY)),
     publishedAt: mode === "published" ? jstDate(now) : undefined,
-    internal: { rentalImport: { version: 2, policy: RENTAL_IMPORT_POLICY, intake: v.intake, supportingDocuments: v.supportingDocuments, email: v.email, source: v.source, advertisingEvidence: v.advertisingEvidence, photoPermission: v.photoPermission, conditionChoices: v.conditionChoices, titleHighlights: v.titleHighlights, unconfirmedTerms: v.unconfirmedTerms, contentReview: v.contentReview, decisions, migration: v.reins ? { legacyReins: v.reins, legacyPortalChecks: summarizePortalChecks(v.portalChecks ?? []) } : undefined } },
+    internal: { rentalImport: { version: 2, policy: RENTAL_IMPORT_POLICY,
+      ...(currentAdoption ? { adoptionPolicy: CURRENT_RENTAL_ADOPTION_POLICY, companyIncome: v.companyIncome } : {}),
+      intake: v.intake, supportingDocuments: v.supportingDocuments, email: v.email, source: v.source, advertisingEvidence: v.advertisingEvidence, photoPermission: v.photoPermission, conditionChoices: v.conditionChoices, titleHighlights: v.titleHighlights, unconfirmedTerms: v.unconfirmedTerms, contentReview: v.contentReview, decisions, migration: v.reins ? { legacyReins: v.reins, legacyPortalChecks: summarizePortalChecks(v.portalChecks ?? []) } : undefined } },
   };
   // Audit the original address at intake. Public tags are recomputed from that
   // address so saved evidence or translations can never override the district.

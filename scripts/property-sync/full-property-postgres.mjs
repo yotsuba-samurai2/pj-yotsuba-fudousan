@@ -12,6 +12,9 @@ const require = createRequire(import.meta.url), root = resolve(dirname(fileURLTo
 import { runPropertyRequestChecks } from "./property-request-postgres.mjs";
 import { runPublicationEffectChecks } from "./publication-effects-postgres.mjs";
 import { runPublicationUiChecks } from "./publication-ui-postgres.mjs";
+import { runSourceGuardChecks } from "./source-guard-postgres.mjs";
+import { runReviewedMailChecks } from "./reviewed-mail-postgres.mjs";
+import { runReviewAuthorityChecks } from "./review-authority-postgres.mjs";
 import { runIsolatedBuild } from "./isolated-build.mjs";
 const { PrismaClient, Prisma } = require("@prisma/client");
 const { createPropertyRepository } = require("../../src/lib/db/property-repository.ts");
@@ -26,7 +29,7 @@ const bounded = promise => Promise.race([promise, sleep(2000).then(() => { throw
 const digest = value => createHash("sha256").update(value).digest("hex");
 const canary = "PRIVATE_CANARY_AD100_当社報酬_元付";
 
-export async function createFullPropertyCheck({ db, socket, port, database, owner, runner, runnerPassword, secrets, ownFile, childEnv, propertyRequests = false, publicationEffects = false, publicationUi = false }) {
+export async function createFullPropertyCheck({ db, socket, port, database, owner, runner, runnerPassword, secrets, ownFile, childEnv, propertyRequests = false, publicationEffects = false, publicationUi = false, sourceGuards = false, reviewedMail = false, reviewAuthority = false }) {
   assert.equal(Prisma.prismaVersion.client, "6.19.3");
   // The installed generated client has no .env paths. Refuse if regenerated otherwise.
   const generated = await readFile(resolve(root, "node_modules/.prisma/client/index.js"), "utf8");
@@ -49,6 +52,11 @@ export async function createFullPropertyCheck({ db, socket, port, database, owne
   assert.equal(columns.length, 22); assert.deepEqual(columns, fields);
   if (propertyRequests) await db.query(await readFile(resolve(root, "docs/property-sync/proposals/property-write-receipts.sql"), "utf8"));
   if (publicationEffects) await db.query(await readFile(resolve(root, "docs/property-sync/proposals/publication-effects.sql"), "utf8"));
+  if (reviewAuthority) {
+    // Synthetic NOLOGIN roles exercise inherited default grants, including the previously observed TRUNCATE risk.
+    await db.query("CREATE ROLE anon NOLOGIN; CREATE ROLE authenticated NOLOGIN; ALTER DEFAULT PRIVILEGES GRANT ALL ON TABLES TO anon,authenticated");
+    await db.query(await readFile(resolve(root, "docs/property-sync/proposals/mail-review-store.sql"), "utf8"));
+  }
   const writer = "sync_property_writer", password = randomBytes(32).toString("hex"), clients = new Set();
   // Hex-only password never appears in arguments, environment, reports or persisted evidence.
   await ownFile(resolve(secrets, "property-writer"), password + "\n");
@@ -88,6 +96,13 @@ export async function createFullPropertyCheck({ db, socket, port, database, owne
       assert.deepEqual({ ...raw, priceYen: Number(raw.priceYen), createdAt: raw.createdAt.toISOString(), updatedAt: raw.updatedAt.toISOString() }, record);
     },
     async clearReceipts(ownerDb, id) {
+      if (reviewAuthority) {
+        assert.equal((await ownerDb.query("SELECT count(*)::int AS count FROM property_sync_private.mail_review_records WHERE property_id<>$1", [id])).rows[0].count, 0);
+        assert.ok((await ownerDb.query("SELECT count(*)::int AS count FROM property_sync_private.mail_authority_heads")).rows[0].count <= 8);
+        await ownerDb.query("DELETE FROM property_sync_private.mail_review_records WHERE property_id=$1", [id]);
+        await ownerDb.query("DELETE FROM property_sync_private.mail_authority_heads");
+        assert.equal((await ownerDb.query("SELECT (SELECT count(*) FROM property_sync_private.mail_review_records)+(SELECT count(*) FROM property_sync_private.mail_authority_heads) AS count")).rows[0].count, '0');
+      }
       if (publicationEffects) {
         assert.equal((await ownerDb.query("SELECT count(*)::int AS count FROM public.property_publication_effects WHERE plan->>'propertyId'<>$1", [id])).rows[0].count, 0);
         await ownerDb.query("DELETE FROM public.property_publication_effects WHERE plan->>'propertyId'=$1", [id]);
@@ -98,6 +113,15 @@ export async function createFullPropertyCheck({ db, socket, port, database, owne
       assert.equal((await ownerDb.query("SELECT count(*)::int AS count FROM public.property_write_receipts")).rows[0].count, 0);
     },
     async runRequests(context) {
+      if (reviewAuthority) return runReviewAuthorityChecks({ ...context, current, connect, disconnect, schemaColumns: columns.length, schemaHash: digest(schema),
+        build: ownerDb => runIsolatedBuild({ db: ownerDb, root, secrets, ownFile, childEnv, socket, port, database, password: runnerPassword, propertyId, unit: 53,
+          privateCanaries: ["PRIVATE_ORIGINAL_MEMO", "PRIVATE_AD_EVIDENCE", "PRIVATE_REVIEWED_MAIL_INCOME"] }) });
+      if (reviewedMail) return runReviewedMailChecks({ ...context, current, connect, disconnect, schemaColumns: columns.length, schemaHash: digest(schema),
+        build: ownerDb => runIsolatedBuild({ db: ownerDb, root, secrets, ownFile, childEnv, socket, port, database, password: runnerPassword, propertyId, unit: 52,
+          privateCanaries: ["PRIVATE_ORIGINAL_MEMO", "PRIVATE_AD_EVIDENCE", "PRIVATE_REVIEWED_MAIL_INCOME"] }) });
+      if (sourceGuards) return runSourceGuardChecks({ ...context, current, connect, disconnect, schemaColumns: columns.length, schemaHash: digest(schema),
+        build: ownerDb => runIsolatedBuild({ db: ownerDb, root, secrets, ownFile, childEnv, socket, port, database, password: runnerPassword, propertyId, unit: 51,
+          privateCanaries: ["PRIVATE_EFFECT_AD100", "PRIVATE_SOURCE_GUARD_CANARY", "PRIVATE_SOURCE_LATER_EDIT"] }) });
       if (publicationEffects) return (publicationUi ? runPublicationUiChecks : runPublicationEffectChecks)({ ...context, current, connect, connectWorker: () => connect(true), disconnect,
         schemaColumns: columns.length, schemaHash: digest(schema), build: ownerDb => runIsolatedBuild({ db: ownerDb, root, secrets, ownFile, childEnv, socket, port, database, password: runnerPassword, propertyId, unit: publicationUi ? 41 : 36 }) });
       return runPropertyRequestChecks({ ...context, current, connect, disconnect, schemaColumns: columns.length, schemaHash: digest(schema) });
