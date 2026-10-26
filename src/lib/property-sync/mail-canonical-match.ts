@@ -78,7 +78,8 @@ async function readMatch(request: MailCanonicalMatchRequest, readers: MailCanoni
   if (!incomingKey || !canonicalKey || incomingKey !== canonicalKey) return held("MAIL_ROOM_IDENTITY_MISMATCH");
   const proposal = proposeRentalEvidenceFromMail(candidate, { propertyId: snapshot.propertyId, episodeId: snapshot.episodeId });
   if (proposal.status !== "proposed") return held(proposal.reason);
-  return { status: "checked" as const, now, proposal, advertising: candidate.advertising };
+  return { status: "checked" as const, now, proposal, advertising: candidate.advertising,
+    sourceRestrictions: candidate.sourceRestrictions ?? null };
 }
 
 /**
@@ -99,7 +100,7 @@ export async function matchMailToCanonicalProperty(raw: unknown, readers: MailCa
       visibility: "internal_only" as const, destination: "existing_properties" as const,
       canonicalTarget: request.data.target, candidateReference: { mailboxRef: request.data.mailboxRef, messageKey: request.data.messageKey, hash: request.data.candidateHash },
       identityEvidenceReference: { ref: request.data.identityEvidenceRef, hash: request.data.identityEvidenceHash },
-      checkedAt: final.now, advertising: final.advertising, fieldProposal: final.proposal,
+      checkedAt: final.now, advertising: final.advertising, sourceRestrictions: final.sourceRestrictions, fieldProposal: final.proposal,
       pendingGates: ["CANONICAL_WRITE_REVIEW_AND_CAS", "CURRENT_EPISODE_AUTHENTICITY", "FIELD_NORMALIZATION_AND_RULES",
         "SOURCE_AUTHORIZATION", "ADVERTISING_AND_MATERIAL_PERMISSION", "MEDIA_EXECUTION_APPROVAL"] as const };
   } catch { return held("CANONICAL_MATCH_READ_FAILED"); }

@@ -59,7 +59,11 @@ async function validateLockedReview(r: ReviewedMailRecord, context: PropertyWrit
     readTarget: async binding => ({ recordJson: await readPropertySourceRecord(tx, binding.propertyId) ?? "",
       metadataJson: JSON.stringify({ ...binding, market: "residential_rental", snapshotRef: r.reviewRef, capturedAt: new Date().toISOString() }) }),
   });
-  if (match.status !== "matched_proposal" || match.advertising === "prohibited") return false;
+  // Ordinary adoption/advertising/material grants cannot erase the source's explicit redistribution denial.
+  // Legacy unassessed candidates need a new source assessment; already-committed receipt recovery runs earlier.
+  if (match.status !== "matched_proposal" || match.advertising === "prohibited" || !match.sourceRestrictions
+    || match.sourceRestrictions.webRedistribution === "prohibited") return false;
+  // This service has no customer-forwarding capability. A site grant never grants forwarding.
   // Read-time checks use the clock AFTER all awaited I/O; a slow read cannot preserve an expired grant.
   const now = new Date().toISOString(); if (now < started || now >= r.expiresAt) return false;
   const inbox = verifyMailInbox(r.inbox), candidate = inbox?.entries.find(e => e.candidate.messageKey === r.match.messageKey)?.candidate;

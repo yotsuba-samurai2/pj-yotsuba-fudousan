@@ -10,7 +10,7 @@ import { contentHash, type SyncRule } from "../rules";
 import type { RentalEvaluationPolicy } from "../rental-field-evaluation";
 
 export const syntheticMailId = "00000000-0000-4000-8000-000000000052";
-export function reviewedMailFixture(at: string, baseJson?: string) {
+export function reviewedMailFixture(at: string, baseJson?: string, sourceNotice = "") {
   const v: RentalImport = rentalFixture(), before = new Date(Date.parse(at) - 10_000).toISOString(), expiresAt = new Date(Date.parse(at) + 3600_000).toISOString();
   v.version = 2; delete v.reins;
   v.email = { messageId: "synthetic-reviewed-mail", receivedAt: at, adQuote: "PRIVATE_AD_EVIDENCE" };
@@ -39,7 +39,7 @@ export function reviewedMailFixture(at: string, baseJson?: string) {
   const inbox = createMailInbox({ mailboxRef: "synthetic-mailbox" }, at);
   const recorded = appendMailInbox(inbox, { expectedHeadHash: inbox.headHash, mail: { schemaVersion: 1, mailboxRef: "synthetic-mailbox", messageId: v.email.messageId,
     receivedAt: at, receivedAtBasis: "provider_internal_date", folder: "incoming", subject: "合成確認用", attachmentsPresent: false,
-    parts: [{ mimeType: "text/plain", decoding: "confirmed", decodedText: "物件名: 合成確認用\n取引種別: 賃貸\n用途: 居住用\n賃料: 120000円\n間取り: 2DK\n専有面積: 47㎡" }] } }, at);
+    parts: [{ mimeType: "text/plain", decoding: "confirmed", decodedText: "物件名: 合成確認用\n取引種別: 賃貸\n用途: 居住用\n賃料: 120000円\n間取り: 2DK\n専有面積: 47㎡" + (sourceNotice ? `\n${sourceNotice}` : "") }] } }, at);
   if (recorded.status !== "recorded") throw new Error(recorded.reason);
   const candidate = recorded.journal.entries[0].candidate, target = { propertyId: base.id, episodeId: "synthetic-episode", version: fp.version };
   const identityEvidence = { evidenceRef: "synthetic-identity", messageKey: candidate.messageKey, candidateHash: contentHash(candidate), target,

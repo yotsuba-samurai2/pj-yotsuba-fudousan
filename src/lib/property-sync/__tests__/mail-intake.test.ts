@@ -2,6 +2,7 @@ import { expect, it } from "vitest";
 import { assessIncomingPropertyMail, MAIL_WINDOW_MS, proposeRentalEvidenceFromMail, type MailEnvelope } from "../mail-intake";
 import { appendMailInbox, createMailInbox, verifyMailInbox } from "../local-mail-inbox";
 import { parsePropertyInput } from "../../property-validation";
+import { contentHash } from "../rules";
 
 const now = "2026-10-26T00:00:00.000Z";
 const binding = { propertyId: "00000000-0000-4000-8000-000000000001", episodeId: "synthetic-episode" };
@@ -15,6 +16,55 @@ function assess(m = mail(), at = now) {
   if (r.status !== "candidate") throw new Error(r.reason);
   return r.candidate;
 }
+
+it.each([
+  ["物件情報・関連情報の第三者への転送およびサイト・ブログへの再配信を禁止します。", "prohibited", "prohibited"],
+  ["第三者への転送は固くお断りします。サイトやブログへの再配信をご遠慮ください。", "prohibited", "prohibited"],
+  ["第三者への転送を\n一切禁止します。サイトへの再配信を\n禁じます。", "prohibited", "prohibited"],
+  ["第三者への転送は禁止。広告掲載可。", "prohibited", "unconfirmed"],
+  ["個別提案可。サイトへの再配信は禁止します。", "unconfirmed", "prohibited"],
+  ["広告不可。個別紹介のみ可。", "unconfirmed", "unconfirmed"],
+  ["広告掲載可。個別紹介可。", "unconfirmed", "unconfirmed"],
+  ["禁止事項：サイトやブログへの再配信。", "unconfirmed", "prohibited"],
+  ["禁止事項：第三者への転送およびサイトへの再配信。", "prohibited", "prohibited"],
+  ["サイトへの再配信は可能ですが、第三者への転送は禁止します。", "prohibited", "unconfirmed"],
+  ["第三者への転送は禁止しますが、サイトへの再配信は可能です。", "prohibited", "unconfirmed"],
+  ["サイトへの再配信は可能、第三者への転送は禁止します。", "prohibited", "unconfirmed"],
+  ["サイトへの再配信、第三者への転送は禁止します。", "prohibited", "prohibited"],
+  ["サイトへの再配信は不可、第三者への転送も不可です。", "prohibited", "prohibited"],
+])("用途別の禁止を分離し、文言から転送許可を作らない: %s", (notice, customerForwarding, webRedistribution) => {
+  const m = mail(); m.parts[0].decodedText += `\n${notice}`;
+  const c = assess(m);
+  expect(c.sourceRestrictions).toEqual({ schemaVersion: 1, customerForwarding, webRedistribution });
+  expect(c.pending.includes("CUSTOMER_FORWARDING_PROHIBITED")).toBe(customerForwarding === "prohibited");
+  expect(c.pending.includes("WEB_REDISTRIBUTION_PROHIBITED")).toBe(webRedistribution === "prohibited");
+  expect(c.publicationEligible).toBe(false);
+  expect(JSON.stringify(c)).not.toContain(notice); expect(JSON.stringify(c)).not.toContain("PRIVATE_");
+});
+
+it("HTMLの禁止は実行・取得せず保持し、復号失敗でも検出済みの禁止を消さない", () => {
+  const m = mail();
+  m.parts = [{ mimeType: "text/html", decoding: "failed", decodedText: "第三者への転送を<strong>禁止</strong>。サイトへの再配信を<b>禁止</b>。" }];
+  expect(assess(m)).toMatchObject({ sourceRestrictions: { customerForwarding: "prohibited", webRedistribution: "prohibited" },
+    pending: expect.arrayContaining(["HTML_REVIEW_REQUIRED", "DECODE_REVIEW_REQUIRED"]) });
+});
+
+it("旧候補のhashを変更せず保存済みメールを再照合し、未知の許可フラグは受け付けない", () => {
+  const box = createMailInbox({ mailboxRef: "synthetic-work" }, now), m = mail();
+  const first = appendMailInbox(box, { expectedHeadHash: box.headHash, mail: m }, now);
+  if (first.status !== "recorded") throw new Error(first.reason);
+  const legacy = first.journal, entry = legacy.entries[0]; delete entry.candidate.sourceRestrictions;
+  entry.entryHash = contentHash({ candidate: entry.candidate, possibleDuplicateOf: entry.possibleDuplicateOf, previousHash: entry.previousHash });
+  legacy.headHash = entry.entryHash;
+  const saved = JSON.stringify(legacy);
+  expect(verifyMailInbox(legacy)).toEqual(legacy);
+  const replay = appendMailInbox(legacy, { expectedHeadHash: box.headHash, mail: m }, new Date(Date.parse(now) + MAIL_WINDOW_MS + 1).toISOString());
+  expect(replay).toMatchObject({ status: "recorded", replayed: true });
+  if (replay.status !== "recorded") throw new Error(replay.reason);
+  expect(JSON.stringify(replay.journal)).toBe(saved);
+  const forged = { ...assess(), sourceRestrictions: { schemaVersion: 1, customerForwarding: "allowed", webRedistribution: "unconfirmed" } };
+  expect(proposeRentalEvidenceFromMail(forged, binding)).toMatchObject({ reason: "INVALID_MAIL_CANDIDATE" });
+});
 
 it("直近7日の受信を提案に留め、原文・住所・ADを出力せず既存evidenceへ接続する", () => {
   const c = assess();

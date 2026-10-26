@@ -7,11 +7,11 @@ import { parsePropertyInput } from "../../property-validation";
 
 const at = "2026-10-26T00:00:00.000Z";
 const id = "00000000-0000-4000-8000-000000000001", otherId = "00000000-0000-4000-8000-000000000002";
-function fixture() {
+function fixture(sourceNotice = "") {
   const genesis = createMailInbox({ mailboxRef: "synthetic-work" }, at);
   const m = { schemaVersion: 1, mailboxRef: "synthetic-work", messageId: "synthetic-mail", receivedAt: at,
     receivedAtBasis: "provider_internal_date", folder: "incoming", subject: "新着合成物件", attachmentsPresent: false,
-    parts: [{ mimeType: "text/plain", decoding: "confirmed", decodedText: "物件名: 合成A\n取引種別: 賃貸\n用途: 居住用\n賃料: 120000円\n間取り: 2DK\n専有面積: 47㎡\nAD: PRIVATE_MAIL_CANARY" }] };
+    parts: [{ mimeType: "text/plain", decoding: "confirmed", decodedText: "物件名: 合成A\n取引種別: 賃貸\n用途: 居住用\n賃料: 120000円\n間取り: 2DK\n専有面積: 47㎡\nAD: PRIVATE_MAIL_CANARY" + (sourceNotice ? `\n${sourceNotice}` : "") }] };
   const added = appendMailInbox(genesis, { expectedHeadHash: genesis.headHash, mail: m }, at);
   if (added.status !== "recorded") throw new Error(added.reason);
   const inbox = added.journal, c = inbox.entries[0].candidate;
@@ -41,6 +41,14 @@ function fixture() {
   };
   return { inbox, record, metadata, evidence, request, readers, repin };
 }
+
+it("名寄せは元メールの用途別禁止を保持し、再配信禁止を広告未確認で消さない", async () => {
+  const f = fixture("物件情報・関連情報の第三者への転送およびサイト・ブログへの再配信を禁止します。");
+  const before = structuredClone(f.inbox), result = await matchMailToCanonicalProperty(f.request, f.readers);
+  expect(result).toMatchObject({ status: "matched_proposal", advertising: "unconfirmed", publicationEligible: false,
+    sourceRestrictions: { schemaVersion: 1, customerForwarding: "prohibited", webRedistribution: "prohibited" } });
+  expect(f.inbox).toEqual(before); expect(JSON.stringify(result)).not.toMatch(/PRIVATE_|物件情報・関連情報/);
+});
 
 it("既存ID/募集回/完全hashへ候補を紐付け、同じ正本からの掲載境界を保つ", async () => {
   const f = fixture(), before = structuredClone({ record: f.record, inbox: f.inbox });

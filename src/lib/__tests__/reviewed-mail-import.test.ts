@@ -9,12 +9,13 @@ import { rentalPublicationError } from "../rental-import/publication";
 import { importRental, type RentalStore } from "../rental-import/lifecycle";
 import type { RentalImport } from "../rental-import/validation";
 import { toPublicProperty } from "../property-shared";
+import { verifyMailInbox } from "../property-sync/local-mail-inbox";
 
 const at = "2026-10-26T02:00:00.000Z", actor = "synthetic-operator", origin = "https://demo.supabase.co";
 beforeEach(() => { vi.useFakeTimers(); vi.setSystemTime(new Date(at)); vi.stubEnv("NEXT_PUBLIC_SUPABASE_URL", origin); });
 afterEach(() => { vi.useRealTimers(); vi.unstubAllEnvs(); });
-function setup(edit?: (r: ReviewedMailRecord) => void) {
-  const f = reviewedMailFixture(at); if (edit) edit(f.review);
+function setup(edit?: (r: ReviewedMailRecord) => void, sourceNotice = "") {
+  const f = reviewedMailFixture(at, undefined, sourceNotice); if (edit) edit(f.review);
   const active = structuredClone(f.review);
   let row = { ...f.base, priceYen: BigInt(f.base.priceYen), createdAt: new Date(f.base.createdAt), updatedAt: new Date(f.base.updatedAt) };
   let receipts = new Map<string, Record<string, unknown>>(), effects = new Map<string, unknown>();
@@ -62,6 +63,60 @@ it("approved synthetic input passes all gates, keeps the existing ID/slug/status
   expect(JSON.stringify([result, [...saved.receipts.values()], [...saved.effects.values()], toPublicProperty(f.f.next)])).not.toMatch(/PRIVATE_|companyIncome|reviewerRef/);
   expect(await f.service.apply(f.request, id, actor)).toMatchObject({ replayed: true });
   expect(f.store.lockCurrent).toHaveBeenCalledTimes(1); expect(f.property.updateMany).toHaveBeenCalledTimes(1);
+});
+
+it.each([
+  "物件情報・関連情報の第三者への転送およびサイト・ブログへの再配信を禁止します。",
+  "第三者への転送は禁止です。ウェブサイトやブログへの再配信は固くお断りします。",
+  "広告掲載可。個別提案可。サイトへの再配信を禁止します。",
+  "禁止事項：サイトやブログへの再配信。",
+  "サイトへの再配信、第三者への転送は禁止します。",
+])("ordinary adoption and material grants cannot override source notice: %s", async notice => {
+  const f = setup(undefined, notice), before = f.snapshot();
+  expect((f.f.review.rental as RentalImport).source.advertising?.status).toBe("allowed");
+  expect(await f.service.apply(f.request, id, actor)).toMatchObject({ status: "held", reason: "PUBLICATION_GATE_REJECTED" });
+  expect(f.property.updateMany).not.toHaveBeenCalled();
+  expect(f.snapshot().row).toEqual(before.row); expect(f.snapshot().effects.size).toBe(0);
+});
+
+it("forwarding prohibition does not erase a separately verified site grant or grant forwarding", async () => {
+  const f = setup(undefined, "サイトへの再配信は可能ですが、第三者への転送は禁止します。");
+  const inbox = verifyMailInbox(f.f.review.inbox)!;
+  expect(inbox.entries[0].candidate.sourceRestrictions).toMatchObject({ customerForwarding: "prohibited", webRedistribution: "unconfirmed" });
+  expect(await f.service.apply(f.request, id, actor)).toMatchObject({ status: "applied" });
+  expect(JSON.stringify(toPublicProperty(f.f.next))).not.toMatch(/sourceRestrictions|customerForwarding|PRIVATE_/);
+});
+
+function legacyReview(r: ReviewedMailRecord) {
+  const inbox = verifyMailInbox(r.inbox)!;
+  const entry = inbox.entries[0]; delete entry.candidate.sourceRestrictions;
+  entry.entryHash = contentHash({ candidate: entry.candidate, possibleDuplicateOf: entry.possibleDuplicateOf, previousHash: entry.previousHash });
+  inbox.headHash = entry.entryHash; r.inbox = inbox;
+  const evidence = r.identityEvidence as { candidateHash: string };
+  evidence.candidateHash = contentHash(entry.candidate);
+  r.match.candidateHash = evidence.candidateHash; r.match.identityEvidenceHash = contentHash(evidence);
+  expect(verifyMailInbox(inbox)).toEqual(inbox);
+}
+
+it("legacy candidate remains readable but cannot start a new reviewed write without source restriction assessment", async () => {
+  const f = setup(legacyReview);
+  expect(await f.service.apply(f.request, id, actor)).toMatchObject({ status: "held", reason: "PUBLICATION_GATE_REJECTED" });
+  expect(f.property.updateMany).not.toHaveBeenCalled(); expect(f.snapshot().effects.size).toBe(0);
+});
+
+it("a previously committed legacy command can still recover its receipt without a new grant or write", async () => {
+  const f = setup(legacyReview), r = f.f.review;
+  // Simulate the old version's already-committed command, not a production authorization adapter.
+  const oldWriter = createPropertyWriteRequests(f.prisma, { localPublicationEffects: true, reviewedMailGuard: async () => true });
+  expect(await oldWriter.apply({ requestId: f.request.requestId, propertyId: id, actorRef: actor,
+    expectedUpdatedAt: r.match.target.version.updatedAt, expectedSourceHash: r.match.target.version.fullHash,
+    intakeReviewHash: f.request.reviewHash, patchJson: r.patchJson })).toMatchObject({ status: "applied" });
+  vi.setSystemTime(new Date(Date.parse(at) + 8 * 86400_000));
+  const before = f.snapshot();
+  expect(await f.service.reconcile(f.request, id, actor)).toMatchObject({ status: "applied", replayed: true });
+  expect(await f.service.apply(f.request, id, actor)).toMatchObject({ status: "applied", replayed: true });
+  expect(f.snapshot()).toEqual(before); expect(f.store.lockCurrent).not.toHaveBeenCalled();
+  expect(f.property.updateMany).toHaveBeenCalledTimes(1);
 });
 
 it("unconfigured adapter, wrong owner/property or client-provided facts cannot reach a writer", async () => {

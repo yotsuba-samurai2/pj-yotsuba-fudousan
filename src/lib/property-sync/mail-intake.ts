@@ -30,13 +30,22 @@ const proposedFieldsSchema = z.object({
 const reasonSchema = z.enum(["ADVERTISING_PROHIBITED", "PREPUBLICATION_NOTICE", "DECODE_REVIEW_REQUIRED",
   "HTML_REVIEW_REQUIRED", "ATTACHMENT_REVIEW_REQUIRED", "MULTIPLE_OR_CONFLICTING_FIELDS", "DIGEST_REQUIRES_ITEM_REVIEW",
   "AD_CHANGE_IS_NOT_NEW_LISTING", "MARKET_UNCONFIRMED", "SOURCE_UPDATE_UNCONFIRMED", "NORMALIZATION_UNCONFIRMED",
-  "INCOME_UNCONFIRMED", "ADVERTISING_AND_MATERIAL_PERMISSION_UNCONFIRMED", "SINGLE_PROPERTY_BLOCK_UNCONFIRMED"]);
+  "INCOME_UNCONFIRMED", "ADVERTISING_AND_MATERIAL_PERMISSION_UNCONFIRMED", "SINGLE_PROPERTY_BLOCK_UNCONFIRMED",
+  "CUSTOMER_FORWARDING_PROHIBITED", "WEB_REDISTRIBUTION_PROHIBITED"]);
+const sourceRestrictionsSchema = z.object({
+  schemaVersion: z.literal(1),
+  // These independent negative constraints never grant either use, even when advertising is allowed elsewhere.
+  customerForwarding: z.enum(["prohibited", "unconfirmed"]),
+  webRedistribution: z.enum(["prohibited", "unconfirmed"]),
+}).strict();
 export const mailCandidateSchema = z.object({
   schemaVersion: z.literal(1), visibility: z.literal("internal_only"), executable: z.literal(false), publicationEligible: z.literal(false),
   mailboxRef: ref, messageId: ref, messageKey: hash, envelopeHash: hash, contentHash: hash,
   receivedAt: instant, assessedAt: instant,
   marketProposal: z.enum(["residential_rental", "sale", "business", "unknown"]),
   advertising: z.enum(["prohibited", "unconfirmed"]),
+  // No default: old journals/receipts must retain their original hashes. Missing means unassessed, not permission.
+  sourceRestrictions: sourceRestrictionsSchema.optional(),
   noticeKind: z.enum(["digest", "ad_change", "property_or_unknown"]),
   fields: proposedFieldsSchema, pending: z.array(reasonSchema).min(1).max(20),
 }).strict();
@@ -45,6 +54,24 @@ const emptyFields = (): MailCandidate["fields"] => ({ rentYen: null, managementY
   kitchen: null, areaSqm: null, leaseType: null, sourceUpdatedAt: null });
 const held = (reason: string) => ({ status: "held" as const, executable: false as const, reason });
 const excluded = (reason: string) => ({ status: "excluded" as const, executable: false as const, reason });
+
+/** Denial hints only. Bounded clauses, no remote content, HTML execution or grant inference. */
+function sourceRestrictions(text: string): z.infer<typeof sourceRestrictionsSchema> {
+  const plain = text.replace(/<[^>]{0,1000}>/g, "").replace(/\s+/gu, "");
+  // A shared list predicate applies to both uses (転送および再配信を禁止), but a new topic's
+  // predicate must not apply backwards (再配信は可能ですが、転送は禁止).
+  // A bare comma can be a list with one shared prohibition. Split only after an independent predicate,
+  // retaining the predicate itself so 不可 is still a denial in its own clause.
+  const clauses = plain.replace(/((?:可能|許可|可)(?:です)?|できます)[、,]/g, "$1。").split(/[。！？;；]|ですが|だが|ただし|一方/u);
+  const prohibited = (actions: RegExp) => clauses.some(clause => [...clause.matchAll(actions)].some(m => {
+    const before = clause.slice(Math.max(0, m.index - 256), m.index);
+    const tail = clause.slice(m.index + m[0].length, m.index + m[0].length + 256);
+    return /(?:禁止|厳禁)(?:事項|行為)?[:：]/.test(before) || /厳禁|禁止|不可|お断り|ご遠慮|禁じ/.test(tail);
+  }));
+  return { schemaVersion: 1,
+    customerForwarding: prohibited(/転送/g) ? "prohibited" : "unconfirmed",
+    webRedistribution: prohibited(/再配信|転載|再掲載/g) ? "prohibited" : "unconfirmed" };
+}
 
 /** Small labelled-text contract only. No HTML rendering, URL fetches, MIME guessing or model calls. */
 export function assessIncomingPropertyMail(raw: unknown, mailboxRef: string, now: string) {
@@ -65,6 +92,9 @@ export function assessIncomingPropertyMail(raw: unknown, mailboxRef: string, now
   const text = [e.subject, ...e.parts.map(p => p.decodedText)].join("\n").normalize("NFKC");
   const advertising = /広告\s*(?:一切\s*)?(?:厳禁|禁止|不可)|転載\s*(?:厳禁|禁止|不可)|掲載\s*(?:禁止|不可)/.test(text) ? "prohibited" : "unconfirmed";
   if (advertising === "prohibited") pending.push("ADVERTISING_PROHIBITED");
+  const restrictions = sourceRestrictions(text);
+  if (restrictions.customerForwarding === "prohibited") pending.push("CUSTOMER_FORWARDING_PROHIBITED");
+  if (restrictions.webRedistribution === "prohibited") pending.push("WEB_REDISTRIBUTION_PROHIBITED");
   if (/未公開|非公開|掲載前/.test(text)) pending.push("PREPUBLICATION_NOTICE");
   const decodeFailed = !e.parts.length || /\uFFFD|\x1b/.test(text) || e.parts.some(p => p.decoding !== "confirmed");
   const hasHtml = e.parts.some(p => p.mimeType === "text/html");
@@ -118,7 +148,7 @@ export function assessIncomingPropertyMail(raw: unknown, mailboxRef: string, now
   const candidate: MailCandidate = { schemaVersion: 1, visibility: "internal_only", executable: false, publicationEligible: false,
     mailboxRef: e.mailboxRef, messageId: e.messageId, messageKey: contentHash({ mailboxRef: e.mailboxRef, messageId: e.messageId }),
     envelopeHash: contentHash(e), contentHash: contentHash({ subject: e.subject, parts: e.parts, attachmentsPresent: e.attachmentsPresent }),
-    receivedAt: e.receivedAt, assessedAt: now, marketProposal, advertising, noticeKind, fields, pending };
+    receivedAt: e.receivedAt, assessedAt: now, marketProposal, advertising, sourceRestrictions: restrictions, noticeKind, fields, pending };
   return { status: "candidate" as const, executable: false as const, candidate };
 }
 
