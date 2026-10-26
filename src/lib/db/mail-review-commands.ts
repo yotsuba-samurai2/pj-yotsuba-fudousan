@@ -1,7 +1,7 @@
 import "server-only";
 import { Prisma, type PrismaClient } from "@prisma/client";
 import { z } from "zod";
-import { mailReviewCommandSchema, mailReviewResultSchema, type MailReviewCommand, type MailReviewResult } from "../mail-review-contract";
+import { mailReviewCommandSchema, mailReviewResultSchema, mailReviewReferenceSchema, type MailReviewCommand, type MailReviewResult, type MailReviewInspection } from "../mail-review-contract";
 import { reviewedMailRecordSchema, validateLockedReview, type ReviewedMailRecord } from "./reviewed-mail-import";
 import { lockMailReviewControl, lockMailReviewDependencies, readMailReviewHead, readMailReviewUnderReadLock } from "./reviewed-mail-store";
 import { createPropertyRepository } from "./property-repository";
@@ -123,7 +123,24 @@ export function createMailReviewCommands(prisma: Pick<PrismaClient, "$transactio
       return e instanceof ExpiredAuthority ? held("AUTHORITY_EXPIRED") : unknown;
     }
   }
-  return { apply: (r: unknown, uid: string) => run(r, uid, true), reconcile: (r: unknown, uid: string) => run(r, uid, false) };
+  async function inspect(raw: unknown, authenticatedUid: string): Promise<MailReviewInspection> {
+    const parsed = mailReviewReferenceSchema.safeParse(raw), uid = z.uuid().safeParse(authenticatedUid);
+    const unavailable = { status: "unavailable" } as const;
+    if (!parsed.success || !uid.success) return unavailable;
+    const reviewerRef = uid.data.toLowerCase(), reference = { ...parsed.data, operatorRef: `admin:${reviewerRef}` };
+    try {
+      return await prisma.$transaction(async tx => {
+        const rows = await tx.$queryRaw<Array<{ id: string }>>(Prisma.sql`SELECT id FROM public.properties WHERE id=${reference.propertyId} FOR UPDATE`);
+        if (rows.length !== 1 || rows[0].id !== reference.propertyId) return unavailable;
+        const record = await readMailReviewUnderReadLock(tx, reference);
+        if (!record || record.reviewerRef !== reviewerRef) return unavailable;
+        const head = await readMailReviewHead(tx, record);
+        if (!head || !await readMailReviewUnderReadLock(tx, reference)) return unavailable;
+        return { status: "present", revision: head.revision, headHash: head.hash, reviewStatus: head.payload.status, expiresAt: head.payload.validUntil };
+      }, { maxWait: 3000, timeout: 8000 });
+    } catch { return unavailable; }
+  }
+  return { apply: (r: unknown, uid: string) => run(r, uid, true), reconcile: (r: unknown, uid: string) => run(r, uid, false), inspect };
 }
 
 async function append(tx: Prisma.TransactionClient, c: MailReviewCommand, actor: string, requestHash: string,

@@ -164,3 +164,14 @@ it("HTTP response allowlist rejects nested private data and mismatched request r
     expect(response.status).toBe(503); expect(JSON.stringify(await response.json())).not.toMatch(/PRIVATE_AD|internal/);
   }
 });
+it("inspection returns only current head metadata, preserves expired/revoked state, and requires current owner read authority", async () => {
+  const s = setup(), ref = { propertyId: s.command.propertyId, reviewRef: s.command.reviewRef, reviewHash: s.command.reviewHash };
+  expect(await s.service.inspect(ref, uid)).toEqual({ status: "unavailable" });
+  const saved = await s.service.apply(s.command, uid), before = s.snapshot();
+  expect(await s.service.inspect(ref, uid)).toMatchObject({ status: "present", revision: 1, reviewStatus: "active" });
+  expect(s.snapshot()).toEqual(before); expect(await s.service.inspect(ref, randomUUID())).toEqual({ status: "unavailable" });
+  await s.service.apply(revoke(s.command, saved), uid);
+  expect(await s.service.inspect(ref, uid)).toMatchObject({ status: "present", revision: 2, reviewStatus: "revoked" });
+  s.editHead("operator", p => { p.data.canRead = false; });
+  expect(await s.service.inspect(ref, uid)).toEqual({ status: "unavailable" });
+});

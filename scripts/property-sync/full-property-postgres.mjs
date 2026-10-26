@@ -30,7 +30,7 @@ const bounded = promise => Promise.race([promise, sleep(2000).then(() => { throw
 const digest = value => createHash("sha256").update(value).digest("hex");
 const canary = "PRIVATE_CANARY_AD100_当社報酬_元付";
 
-export async function createFullPropertyCheck({ db, socket, port, database, owner, runner, runnerPassword, secrets, ownFile, childEnv, propertyRequests = false, publicationEffects = false, publicationUi = false, sourceGuards = false, reviewedMail = false, reviewAuthority = false, reviewCommands = false }) {
+export async function createFullPropertyCheck({ db, socket, port, database, owner, runner, runnerPassword, secrets, ownFile, childEnv, propertyRequests = false, publicationEffects = false, publicationUi = false, sourceGuards = false, reviewedMail = false, reviewAuthority = false, reviewCommands = false, reviewUi = false }) {
   assert.equal(Prisma.prismaVersion.client, "6.19.3");
   // The installed generated client has no .env paths. Refuse if regenerated otherwise.
   const generated = await readFile(resolve(root, "node_modules/.prisma/client/index.js"), "utf8");
@@ -120,8 +120,8 @@ export async function createFullPropertyCheck({ db, socket, port, database, owne
       assert.equal((await ownerDb.query("SELECT count(*)::int AS count FROM public.property_write_receipts")).rows[0].count, 0);
     },
     async runRequests(context) {
-      if (reviewCommands) return runReviewCommandChecks({ ...context, current, connect, disconnect, schemaColumns: columns.length, schemaHash: digest(schema),
-        build: ownerDb => runIsolatedBuild({ db: ownerDb, root, secrets, ownFile, childEnv, socket, port, database, password: runnerPassword, propertyId, unit: 56,
+      if (reviewCommands) return runReviewCommandChecks({ ...context, reviewUi, current, connect, disconnect, schemaColumns: columns.length, schemaHash: digest(schema),
+        build: ownerDb => runIsolatedBuild({ db: ownerDb, root, secrets, ownFile, childEnv, socket, port, database, password: runnerPassword, propertyId, unit: reviewUi ? 57 : 56,
           privateCanaries: ["PRIVATE_ORIGINAL_MEMO", "PRIVATE_AD_EVIDENCE", "PRIVATE_REVIEWED_MAIL_INCOME"] }) });
       if (reviewAuthority) return runReviewAuthorityChecks({ ...context, current, connect, disconnect, schemaColumns: columns.length, schemaHash: digest(schema),
         build: ownerDb => runIsolatedBuild({ db: ownerDb, root, secrets, ownFile, childEnv, socket, port, database, password: runnerPassword, propertyId, unit: 53,
