@@ -6,13 +6,15 @@ import { createPropertyEditSession, type PropertyWriteTransport } from "@/lib/pr
 import type { AdminProperty } from "@/lib/property-shared";
 import { createPropertyRecoverySession, type RecoveryStorage, type RecoveryTransport } from "@/lib/property-recovery-session";
 import PropertyPublicationRecovery from "./PropertyPublicationRecovery";
+import PropertyMailReview, { type PropertyMailReviewOptions } from "./PropertyMailReview";
 
 /** Local composition only. No route/default transport; production editor remains unchanged. */
-export default function PropertyRequestEditor({ initialData, send, onReload, recovery }: {
+export default function PropertyRequestEditor({ initialData, send, onReload, recovery, mailReview }: {
   initialData: AdminProperty;
   send: PropertyWriteTransport;
   onReload: () => void;
   recovery?: { operatorId: string; storage?: RecoveryStorage; send: RecoveryTransport };
+  mailReview?: PropertyMailReviewOptions;
 }) {
   // Keep the reviewed property + transport together throughout an uncertain save.
   // onReload must mount a fresh editor after fetching the current property.
@@ -30,6 +32,7 @@ export default function PropertyRequestEditor({ initialData, send, onReload, rec
     {state.message && <p role="status" aria-live="polite">{state.message}</p>}
     {state.requestId && <p className="text-xs text-text-muted">要求ID: {state.requestId}</p>}
     {binding.publication && <PropertyPublicationRecovery session={binding.publication} />}
+    {mailReview && <PropertyMailReview propertyId={binding.property.id} options={mailReview} onReload={onReload} />}
     <fieldset disabled={state.phase !== "editing" || !!recoveryState && (!recoveryState.storageReady || recoveryState.capacityReached)}>
       <PropertyForm imageNetworkEnabled={false} initialData={binding.property} onSubmit={async input => { await binding.session.submit(input); }} />
     </fieldset>

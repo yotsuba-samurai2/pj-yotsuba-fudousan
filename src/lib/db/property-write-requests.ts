@@ -20,7 +20,7 @@ const iso = (v: unknown): v is string => typeof v === "string" && Number.isFinit
 
 type Request = z.infer<typeof envelope> & { patch: Partial<PropertyInput>; requestHash: string };
 /** JSON input owns its snapshot. Unknown root keys and unsafe numbers are rejected, null explicitly clears optional fields. */
-function normalize(raw: unknown): Request | null {
+export function normalizePropertyWriteRequest(raw: unknown): Request | null {
   try {
     const parsed = envelope.safeParse(raw); if (!parsed.success) return null;
     // PostgreSQL UUID equality is case-insensitive; locks, hashes and returned IDs must agree.
@@ -76,7 +76,7 @@ function result(receipt: Receipt, current: AdminProperty | null, replayed: boole
  */
 export function createPropertyWriteRequests(prisma: Pick<PrismaClient, "$transaction">, options?: WriteOptions) {
   async function run(raw: unknown, write: boolean): Promise<PropertyWriteResult> {
-    const request = normalize(raw); if (!request) return { status: "held", reason: "INVALID_REQUEST" };
+    const request = normalizePropertyWriteRequest(raw); if (!request) return { status: "held", reason: "INVALID_REQUEST" };
     try {
       return await prisma.$transaction(async tx => {
         // Always request lock then property lock. A reused ID across properties cannot race insertion.

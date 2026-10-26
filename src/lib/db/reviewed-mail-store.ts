@@ -14,6 +14,7 @@ const keySchema = z.object({ kind, scope_key: ref }).strict();
 export type MailAuthorityKey = z.infer<typeof keySchema>;
 const envelopeSchema = z.object({ schemaVersion: z.literal(1), status: z.enum(["active", "revoked"]),
   validFrom: instant, validUntil: instant, data: z.unknown() }).strict().refine(h => h.validFrom < h.validUntil);
+type AuthorityHead = { payload: z.infer<typeof envelopeSchema>; revision: number; hash: string };
 const headSchema = keySchema.extend({ revision: z.number().int().positive().max(2147483647), payload_hash: hash,
   payload_json: z.string().max(8_000_000) }).strict();
 const recordSchema = z.object({ review_ref: ref, property_id: z.uuid(), operator_ref: actor, review_hash: hash,
@@ -58,17 +59,17 @@ async function lockHeads(tx: Pick<Prisma.TransactionClient, "$queryRaw">, keys: 
     FROM property_sync_private.mail_authority_heads WHERE ${Prisma.join(conditions, " OR ")}
     ORDER BY kind COLLATE "C",scope_key COLLATE "C" FOR SHARE`);
   if (rows.length !== keys.length) return null;
-  const heads = new Map<string, z.infer<typeof envelopeSchema>>();
+  const heads = new Map<string, AuthorityHead>();
   for (const rawRow of rows) {
     const row = headSchema.safeParse(rawRow); if (!row.success || !keys.some(k => keyId(k) === keyId(row.data)) || heads.has(row.data.kind)) return null;
     const raw = parseBoundedJson(row.data.payload_json), value = envelopeSchema.safeParse(raw);
     if (!value.success || !same(raw, value.data) || contentHash(value.data) !== row.data.payload_hash) return null;
-    heads.set(row.data.kind, value.data);
+    heads.set(row.data.kind, { payload: value.data, revision: row.data.revision, hash: row.data.payload_hash });
   }
   return heads;
 }
-function active(head: z.infer<typeof envelopeSchema> | undefined, now: string) {
-  return !!head && head.status === "active" && head.validFrom <= now && now < head.validUntil;
+function active(head: AuthorityHead | undefined, now: string) {
+  return !!head && head.payload.status === "active" && head.payload.validFrom <= now && now < head.payload.validUntil;
 }
 function canRead(data: unknown, r: Reference) {
   const grant = operatorSchema.safeParse(data);
@@ -84,6 +85,55 @@ function approvedMaterials(raw: unknown, r: ReviewedMailRecord, now: string) {
   return same(inventory, [...r.assets].sort((a, b) => a.assetId.localeCompare(b.assetId)));
 }
 
+function dependenciesMatch(heads: Map<string, AuthorityHead>, record: ReviewedMailRecord, now: string) {
+  if ([...heads.values()].some(h => !active(h, now) || h.payload.validFrom > record.approvedAt || h.payload.validUntil < record.expiresAt)) return false;
+  const propertyId = record.match.target.propertyId, r = { propertyId, operatorRef: record.operatorRef, reviewRef: record.reviewRef, reviewHash: contentHash(record) };
+  const data = (kind: string) => heads.get(kind)?.payload.data, operator = operatorSchema.safeParse(data("operator"));
+  return operator.success && operator.data.canApply && canRead(operator.data, r)
+    && same(data("reviewer"), { propertyId, reviewerRef: record.reviewerRef, canApprove: true })
+    && same(data("episode"), { propertyId, episodeId: record.match.target.episodeId })
+    && same(data("rules"), { scope: record.plan.scope, history: record.ruleHistory })
+    && same(data("policies"), { scope: record.plan.scope, history: record.policyHistory })
+    && same(data("permissions"), { binding: record.plan.binding, scope: record.plan.scope, history: record.permissions })
+    && approvedMaterials(data("materials"), record, now);
+}
+
+/** Same seven dependency heads for a new review, before an immutable record/review head exists. Caller holds property lock. */
+export async function lockMailReviewDependencies(tx: Prisma.TransactionClient, record: ReviewedMailRecord) {
+  const heads = await lockHeads(tx, mailAuthorityKeys(record).filter(k => k.kind !== "review")), now = new Date().toISOString();
+  return !!heads && now >= record.approvedAt && now < record.expiresAt && dependenciesMatch(heads, record, now);
+}
+
+/** Owner-scoped historical read; canApply/review expiry do not prevent receipt recovery. */
+export async function readMailReviewUnderReadLock(tx: Prisma.TransactionClient, raw: unknown) {
+  const parsed = referenceSchema.safeParse(raw); if (!parsed.success) return null;
+  const r = parsed.data, heads = await lockHeads(tx, [operatorKey(r)]), now = new Date().toISOString();
+  if (!heads || !active(heads.get("operator"), now) || !canRead(heads.get("operator")!.payload.data, r)) return null;
+  const record = await readRecord(tx, r), finalAt = new Date().toISOString();
+  return finalAt >= now && active(heads.get("operator"), finalAt) ? record : null;
+}
+
+/** Current state only; caller has already authorized the private record and holds the property lock. */
+export async function readMailReviewHead(tx: Prisma.TransactionClient, record: ReviewedMailRecord) {
+  const heads = await lockHeads(tx, [{ kind: "review", scope_key: record.reviewRef }]);
+  const head = heads?.get("review");
+  return head && same(head.payload.data, { propertyId: record.match.target.propertyId, operatorRef: record.operatorRef,
+    reviewRef: record.reviewRef, reviewHash: contentHash(record) }) ? head : null;
+}
+
+/** Revocation checks only current read/reviewer authority, never eligibility, source freshness or expired permission. */
+export async function lockMailReviewControl(tx: Prisma.TransactionClient, raw: unknown) {
+  const parsed = referenceSchema.safeParse(raw); if (!parsed.success) return null;
+  const r = parsed.data, record = await readRecord(tx, r); if (!record) return null;
+  const heads = await lockHeads(tx, mailAuthorityKeys(record).filter(k => ["operator", "review", "reviewer"].includes(k.kind)));
+  const now = new Date().toISOString(), head = heads?.get("review");
+  if (!heads || !head || !active(heads.get("operator"), now) || !active(heads.get("reviewer"), now)
+    || !canRead(heads.get("operator")!.payload.data, r)
+    || !same(heads.get("reviewer")!.payload.data, { propertyId: r.propertyId, reviewerRef: record.reviewerRef, canApprove: true })
+    || !same(head.payload.data, { propertyId: r.propertyId, operatorRef: r.operatorRef, reviewRef: r.reviewRef, reviewHash: r.reviewHash })) return null;
+  return { record, head, checkedAt: now, authorityExpiresAt: [heads.get("operator")!.payload.validUntil, heads.get("reviewer")!.payload.validUntil].sort()[0] };
+}
+
 /**
  * Read-only DB adapter; no singleton, approval producer, DDL, grants or external asset fetch.
  * Heads are authoritative only when populated/revoked by a separately secured, audited review process.
@@ -92,29 +142,14 @@ function approvedMaterials(raw: unknown, r: ReviewedMailRecord, now: string) {
 export function createDbReviewedMailStore(prisma: Pick<PrismaClient, "$transaction">): ReviewedMailStore {
   return {
     async readImmutable(raw) {
-      const parsed = referenceSchema.safeParse(raw); if (!parsed.success) return null;
-      return prisma.$transaction(async tx => {
-        const r = parsed.data, heads = await lockHeads(tx, [operatorKey(r)]), now = new Date().toISOString();
-        // A withdrawn write grant still permits receipt recovery only while this owner's read grant remains active.
-        if (!heads || !active(heads.get("operator"), now) || !canRead(heads.get("operator")!.data, r)) return null;
-        const record = await readRecord(tx, r), finalAt = new Date().toISOString();
-        return finalAt >= now && active(heads.get("operator"), finalAt) ? record : null;
-      }, { maxWait: 3000, timeout: 8000 });
+      return prisma.$transaction(tx => readMailReviewUnderReadLock(tx, raw), { maxWait: 3000, timeout: 8000 });
     },
     async lockCurrent(tx, raw) {
       const parsed = referenceSchema.safeParse(raw); if (!parsed.success) return null;
       const r = parsed.data, record = await readRecord(tx, r); if (!record) return null;
       const heads = await lockHeads(tx, mailAuthorityKeys(record)), now = new Date().toISOString();
-      if (!heads || [...heads.values()].some(h => !active(h, now) || h.validFrom > record.approvedAt || h.validUntil < record.expiresAt)) return null;
-      const data = (kind: string) => heads.get(kind)!.data, operator = operatorSchema.safeParse(data("operator"));
-      if (!operator.success || !operator.data.canApply || !canRead(operator.data, r)
-        || !same(data("reviewer"), { propertyId: r.propertyId, reviewerRef: record.reviewerRef, canApprove: true })
-        || !same(data("review"), { propertyId: r.propertyId, operatorRef: r.operatorRef, reviewRef: r.reviewRef, reviewHash: r.reviewHash })
-        || !same(data("episode"), { propertyId: r.propertyId, episodeId: record.match.target.episodeId })
-        || !same(data("rules"), { scope: record.plan.scope, history: record.ruleHistory })
-        || !same(data("policies"), { scope: record.plan.scope, history: record.policyHistory })
-        || !same(data("permissions"), { binding: record.plan.binding, scope: record.plan.scope, history: record.permissions })
-        || !approvedMaterials(data("materials"), record, now)) return null;
+      if (!heads || !dependenciesMatch(heads, record, now)
+        || !same(heads.get("review")!.payload.data, { propertyId: r.propertyId, operatorRef: r.operatorRef, reviewRef: r.reviewRef, reviewHash: r.reviewHash })) return null;
       const finalAt = new Date().toISOString();
       // Every head covers the review deadline; the service checks that deadline again immediately before saving.
       return finalAt >= now && finalAt < record.expiresAt ? record : null;

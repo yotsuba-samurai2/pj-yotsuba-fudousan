@@ -11,6 +11,7 @@ vi.mock("react", async original => ({ ...await original<typeof import("react")>(
 vi.mock("@/components/admin/PropertyForm", () => ({ default: () => null }));
 import PropertyForm from "@/components/admin/PropertyForm";
 import PropertyRequestEditor from "@/components/admin/PropertyRequestEditor";
+import PropertyMailReview from "@/components/admin/PropertyMailReview";
 const property = { ...fixture().property, id: "00000000-0000-4000-8000-000000000001", updatedAt: "2026-10-25T00:00:00.000Z" } as AdminProperty;
 function nodes(node: ReactNode): Array<{ type: unknown; props: Record<string, unknown> }> {
   if (Array.isArray(node)) return node.flatMap(nodes);
@@ -54,4 +55,12 @@ it("a held save keeps its reference but does not permanently disable a fresh edi
   await (render().find(n => n.type === PropertyForm)!.props.onSubmit as (data: PropertyInput) => Promise<void>)(fixture().property);
   const after = JSON.parse([...data.values()][0]); expect(after).toHaveLength(2); expect(after[0]).toEqual(JSON.parse(before)[0]);
   expect(send.mock.calls[0][0].requestId).not.toBe(send.mock.calls[1][0].requestId);
+});
+it("the local editor mounts review controls only with explicit configuration and hides them after property switch", () => {
+  const options = { initialData: property, send: vi.fn(), onReload: vi.fn() };
+  expect(nodes(PropertyRequestEditor(options)).some(n => n.type === PropertyMailReview)).toBe(false);
+  hooks.value = undefined;
+  const mailReview = { operatorId: "00000000-0000-4000-8000-000000000058", reference: { propertyId: property.id, reviewRef: "synthetic-ui", reviewHash: "a".repeat(64) }, send: vi.fn() };
+  expect(nodes(PropertyRequestEditor({ ...options, mailReview })).find(n => n.type === PropertyMailReview)?.props.propertyId).toBe(property.id);
+  expect(nodes(PropertyRequestEditor({ ...options, mailReview, initialData: { ...property, id: "other" } })).some(n => n.type === PropertyMailReview)).toBe(false);
 });

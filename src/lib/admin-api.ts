@@ -7,6 +7,7 @@
  */
 
 import { getSupabaseClient } from "@/lib/supabase/client";
+import { createMailReviewTransport } from "@/lib/mail-review-transport";
 import type { LangCode } from "@/config/languages";
 import type {
   AdminColumn,
@@ -31,6 +32,14 @@ export type { AdminColumn, ColumnInput, ColumnStatus, ColumnTranslation, Firesto
 export async function getAccessToken(): Promise<string | null> {
   const { data } = await getSupabaseClient().auth.getSession();
   return data.session?.access_token ?? null;
+}
+
+/** Explicit composition for the review panel; no request is sent until an operator action/read occurs. */
+export function createBukkenMailReviewTransport(propertyId: string, operatorId: string) {
+  return createMailReviewTransport({ propertyId, operatorId, fetch: (...args) => fetch(...args), readSession: async () => {
+    const { data, error } = await getSupabaseClient().auth.getSession();
+    return !error && data.session ? { uid: data.session.user.id, accessToken: data.session.access_token } : null;
+  } });
 }
 
 async function authHeaders(): Promise<Record<string, string>> {
