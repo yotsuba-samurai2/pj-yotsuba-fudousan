@@ -69,10 +69,26 @@ Gmail本番取得、実メール書式ごとの正規化確認、本番用の確
 
 現段階の対象は確認済み文京区物件で、既存importの正規slugを持つ賃貸行のみ。既存ID・slug・掲載statusを維持する。別slug、対象地域不明、新規登録、掲載status変更はこのserviceでは保留。周辺地域の実ルールや新規登録を推定で補わない。`internal.reviewedMailImport` を持つ行の更新・再公開は再確認が必要で、通常編集/旧importからmarkerを除去できない。内容と確認記録を維持した掲載終了だけは通常のCAS経路から可能。
 
-`ReviewedMailStore.readImmutable` は当初のpatchを変更せず、確認が失効した後も権限のある本人の受付結果照合に使える必要がある。`lockCurrent` はサーバー側の実装責任で、確認者の権限・最新募集回・rule/permission履歴の完全性・実素材hashと内容審査を検証し、根拠行をtransaction終了までlockする。hash一致や `approved` 表示だけでは真正性を証明しない。外部API呼出しをDB lock内に入れない。現時点ではこの本番authority readerを供給していない。
+`ReviewedMailStore.readImmutable` は当初のpatchを変更せず、確認が失効した後も権限のある本人の受付結果照合に使える必要がある。`lockCurrent` はサーバー側の実装責任で、確認者の権限・最新募集回・rule/permission履歴の完全性・実素材hashと内容審査を検証し、根拠行をtransaction終了までlockする。hash一致や `approved` 表示だけでは真正性を証明しない。外部API呼出しをDB lock内に入れない。DB readerはunit53で実装したが、本番接続と信頼された根拠の投入経路は未構成。
 
 既存writerのreceiptを先に確認するため、保存後の応答喪失は失効後も同じ要求から復旧できる。新規保存時は物件・receipt・公開更新の再開計画を同じtransactionへ保存する。計画保存と実際の通知/公開画面更新の実行は別である。receiptと再開計画には生メール、AD、当社報酬、確認者や素材許諾の原文を入れない。旧要求は追加hashを省略した従来のhash契約を維持する。
 
 隔離Postgres検証は合成1物件・媒体2行・媒体監査3行・receipt5行・未実行の再開計画2行。実Prisma/SQLで重複要求のlock待機、古い版・同一日時の手動変更の拒否、途中失敗の一括rollback、保存応答喪失後の新接続での結果照合を確認する。review authorityと画像審査は明示した合成storeであり、本番の権利や実画像を検証済みとはしない。
 
 本番接続前に、(1)確認記録の保管先・失効更新と権限のあるreader、(2)既存DBのreceipt/effects table・RLS・最小権限と適用計画、(3)認証済み取込route、(4)対象1件の限定試験と停止/復旧手順を確定する。今回、本番schema・権限・通知サービスは変更していない。
+
+## 私有確認記録のDB reader（unit53）
+
+`createDbReviewedMailStore` は注入されたPrisma client/transactionだけを使う。正本 `properties` は増やさず、SQL案 `proposals/mail-review-store.sql` の非公開schemaへ、確認時の不変recordと現在のauthority headを分けて置く。本番へ適用しない。原文や根拠を公開API/レスポンス/receiptに返さない。
+
+headは、operator権限・reviewer権限・募集回・個別review有効性・全体rule履歴・policy履歴・媒体別許諾履歴・本文/画像確認の8種類。参照keyは物件/操作者/確認者/媒体/全体scopeから決定し、要求が任意の過去headや少ない依存数を指定できない。全headの内容を確認recordと照合する。新しいpending/revokedを除いた履歴は一致しない。素材はURL・ID・種別・hash・保存version参照・確認者・確認時刻・審査記録を必須とし、漏れ/重複を保留する。
+
+元recordはUPDATE禁止。headは同じkeyでrevisionを1つ進める。個別reviewの撤回は不可逆で、再承認には新しいreviewRefを必要とする。SQLのNULL比較による `revoked → status欠落/null → active` の迂回を実SQLで再現し、`IS DISTINCT FROM` と回帰試験で閉じた。runtimeへDELETE/TRUNCATEを付与せず、headの削除・再作成でrevisionを戻さない。
+
+readerは最新headを固定順で `FOR SHARE` し、同じtransactionでの保存が終わるまで保持する。更新側も request→property→authority(kind/scope順) のlock順を守る。必要な全headの有効期間がreviewの期限まで続くことを要求し、unit52の最終時刻確認に結びつける。read権限だけを残したwrite撤回では元commandとreceiptの照合が可能。read権限も失効/撤回された場合は読めない。
+
+SQL案はPUBLIC/anon/authenticatedにschema・table・functionを公開せず、RLSは既定拒否。隔離試験では `SELECT` だけでは `FOR SHARE` が失敗することを実測したため、意味を持たない固定falseの `lock_token` 列だけにUPDATE権限を付け、業務columnのUPDATEを与えない。試験用RLSはUPDATEのWITH CHECKをfalseとし、実更新も禁止した。本番role/ポリシー/認証のclaimは別途設計・照合する。DB ownerの権限はこのreaderで制限できない。
+
+隔離試験には確認record1行とhead8行を追加した。実SQLで、継承された既定権限のREVOKE（TRUNCATEを含む）、readerの更新禁止、head欠落/差替え、write撤回、保存中の撤回待機、rollback、撤回後のreceipt復旧を検証した。合成1物件・媒体2行、媒体監査3＋receipt2＋未実行再開計画1＝6行。全体buildと清掃も確認した。
+
+これは「DBにある信頼された根拠を正しく照合するreader」の検証であり、許諾の法的真正性・実画像の画素・保存versionの不変性を外部確認した証明ではない。信頼された投入/撤回の操作者認証・監査履歴・完全履歴の取得・実素材hashと審査結果を登録する経路は未接続。これらを自己申告の承認フラグで代用して本番取込を有効にしない。

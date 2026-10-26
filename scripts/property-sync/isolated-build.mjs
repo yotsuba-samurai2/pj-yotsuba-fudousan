@@ -7,7 +7,7 @@ import { promisify } from "node:util";
 const exec = promisify(execFile);
 
 export async function runIsolatedBuild({ db, root, secrets, ownFile, childEnv, socket, port, database, password, propertyId, unit = 36, privateCanaries = ["PRIVATE_EFFECT_AD100"] }) {
-  assert.ok([36, 37, 41, 51, 52].includes(unit));
+  assert.ok([36, 37, 41, 51, 52, 53].includes(unit));
   assert.ok(privateCanaries.length > 0 && privateCanaries.length <= 20 && privateCanaries.every(v => /^PRIVATE_[A-Z0-9_]{1,100}$/.test(v)));
   for (const dir of [root, resolve(root, "prisma")]) for (const name of [".env", ".env.local", ".env.production", ".env.production.local", ".env.development", ".env.development.local", ".env.test", ".env.test.local"]) {
     await assert.rejects(lstat(resolve(dir, name)), e => e.code === "ENOENT");

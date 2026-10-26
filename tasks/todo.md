@@ -1344,3 +1344,11 @@ sitemap の `locales` もページの `availableLocales` と同時に4言語へ�
 - [x] source hashとreview hashを要求へ固定し、過去receipt復旧を優先。通常編集/旧importから保護された取込を迂回できないようにする。安全な掲載終了は保持
 - [x] 全3128試験/206files・型/CLI型/lint、隔離SQL7工程/build成功。独立レビューの期限と閉鎖P2をRED→GREENで修正、DB清掃
 - [x] 本番readerとschema前提の未確認を明記し、元13変更・差分・証跡を保存
+
+## 2026-10-26 物件同期 unit53（確認記録のDB readerと撤回競合）
+
+- [x] 正本を増やさず私有review recordとauthority headの2table案を追加。公開roleは既定拒否、本番適用なし
+- [x] 既存serviceへ渡せるDB readerを実装。元command復旧と現行write権限/個別review撤回を分離、根拠headを固定順でlock
+- [x] 権限・募集回・rule/policy履歴・許諾・素材のscope/内容/期限を照合。外部画像の取得/実権利判定や信頼された投入経路は未実装として保留
+- [x] 合成unit/実SQLで権限撤回、履歴差替え、row lock競合、読取りroleの更新禁止、応答喪失復旧を検証
+- [x] 独立レビューのNULL経由撤回復活P2をRED→GREENで修正。全3165/207files、型/CLI型/lint、隔離SQL9工程/build/清掃、元13保持・段階保存

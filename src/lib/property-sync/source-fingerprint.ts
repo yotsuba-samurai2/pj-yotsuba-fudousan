@@ -27,7 +27,7 @@ function decimalIdentity(text: string): string | undefined {
 }
 
 /** Scan before JSON.parse can discard duplicate keys or allocate a deep/large object tree. */
-function parseBoundedJson(input: unknown): unknown {
+export function parseBoundedJson(input: unknown): unknown {
   if (typeof input !== "string" || Buffer.byteLength(input, "utf8") > MAX_BYTES) throw new Error("INVALID_JSON_SOURCE");
   const stack: { object: boolean; expectingKey: boolean; keys: Set<string> }[] = [];
   const numberToken = /-?(?:0|[1-9]\d*)(?:\.\d+)?(?:[eE][+-]?\d+)?/y;
