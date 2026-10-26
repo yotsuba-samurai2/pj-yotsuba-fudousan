@@ -1336,3 +1336,11 @@ sitemap の `locales` もページの `availableLocales` と同時に4言語へ�
 - [x] 独立レビューで日時範囲を修正。結合試験で既存sourceのネスト確認記録を誤って文字列処理する不具合をRED→GREENで解消
 - [x] 全3096試験/205files、型/CLI型/lint、隔離SQL7工程/build成功。清掃・元13保持・差分と残件を保存
 - [ ] 本番の名寄せ→実保存ルートは未接続。episode・採用・広告許諾をhashだけで承認しない
+
+## 2026-10-26 物件同期 unit52（採用・許諾確認から更新writerへ接続）
+
+- [x] 確認済みの参照だけを受け取る更新専用serviceを接続。物件ID/slug/statusを維持、旧storeへのfallbackなし
+- [x] writerの行lock内で最新reviewを再読取りし既存検査を統合。authority/募集回/実素材の真正性は本番store実装待ちを維持
+- [x] source hashとreview hashを要求へ固定し、過去receipt復旧を優先。通常編集/旧importから保護された取込を迂回できないようにする。安全な掲載終了は保持
+- [x] 全3128試験/206files・型/CLI型/lint、隔離SQL7工程/build成功。独立レビューの期限と閉鎖P2をRED→GREENで修正、DB清掃
+- [x] 本番readerとschema前提の未確認を明記し、元13変更・差分・証跡を保存

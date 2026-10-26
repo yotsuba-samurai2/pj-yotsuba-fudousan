@@ -12,6 +12,7 @@ import { readPropertySourceRecord } from "./property-source-record";
 
 const envelope = z.object({ requestId: z.uuid(), propertyId: z.uuid(), actorRef: z.string().regex(/^[A-Za-z0-9][A-Za-z0-9:_-]{0,99}$/),
   expectedUpdatedAt: z.iso.datetime({ precision: 3 }), expectedSourceHash: z.string().regex(/^[a-f0-9]{64}$/).optional(),
+  intakeReviewHash: z.string().regex(/^[a-f0-9]{64}$/).optional(),
   patchJson: z.string().min(2).max(1_000_000) }).strict();
 const clearable = new Set(["priceNote", "publishedAt", "translations", "internal"]);
 const fields = new Set(Object.keys(propertyInputSchema.shape));
@@ -40,7 +41,8 @@ function normalize(raw: unknown): Request | null {
     const normalized = Object.fromEntries(Object.entries(checked.data).map(([k, v]) => [k, v === undefined ? null : v]));
     return { ...input, patch: checked.data, requestHash: contentHash({ schemaVersion: 1, operation: "property_update", propertyId: input.propertyId,
       actorRef: input.actorRef, expectedUpdatedAt: input.expectedUpdatedAt, patch: normalized,
-      ...(input.expectedSourceHash === undefined ? {} : { expectedSourceHash: input.expectedSourceHash }) }) };
+      ...(input.expectedSourceHash === undefined ? {} : { expectedSourceHash: input.expectedSourceHash }),
+      ...(input.intakeReviewHash === undefined ? {} : { intakeReviewHash: input.intakeReviewHash }) }) };
   } catch { return null; }
 }
 const receiptSchema = z.object({ request_id: z.uuid(), property_id: z.uuid(), request_hash: z.string().regex(/^[a-f0-9]{64}$/),
@@ -55,6 +57,11 @@ export type PropertyWriteResult = { status: "held" | "unknown"; reason: string }
   resultVersion: string; resultHash: string; current: "matches" | "changed" | "missing";
 };
 class ReceiptConflict extends Error {}
+export type PropertyWriteGuardContext = { requestId: string; actorRef: string; propertyId: string;
+  expectedUpdatedAt: string; expectedSourceHash?: string; intakeReviewHash?: string; current: AdminProperty; next: PropertyInput };
+type WriteOptions = { localPublicationEffects?: true;
+  /** Trusted transaction-local authority reader only; never caller-supplied flags or external network calls. */
+  reviewedMailGuard?: (context: PropertyWriteGuardContext, tx: Prisma.TransactionClient) => Promise<boolean> };
 function result(receipt: Receipt, current: AdminProperty | null, replayed: boolean): PropertyWriteResult {
   return { status: receipt.outcome, reason: receipt.reason, requestId: receipt.request_id, replayed, resultVersion: receipt.result_version.toISOString(), resultHash: receipt.result_hash,
     current: !current ? "missing" : current.updatedAt === receipt.result_version.toISOString() && contentHash(current) === receipt.result_hash ? "matches" : "changed" };
@@ -67,7 +74,7 @@ function result(receipt: Receipt, current: AdminProperty | null, replayed: boole
  * expectedSourceHash is an additive server-side guard; omitted legacy requests retain their exact hash.
  * This guard is not an episode, identity, eligibility or advertising authorization check.
  */
-export function createPropertyWriteRequests(prisma: Pick<PrismaClient, "$transaction">, options?: { localPublicationEffects: true }) {
+export function createPropertyWriteRequests(prisma: Pick<PrismaClient, "$transaction">, options?: WriteOptions) {
   async function run(raw: unknown, write: boolean): Promise<PropertyWriteResult> {
     const request = normalize(raw); if (!request) return { status: "held", reason: "INVALID_REQUEST" };
     try {
@@ -99,10 +106,21 @@ export function createPropertyWriteRequests(prisma: Pick<PrismaClient, "$transac
         if (current.updatedAt === request.expectedUpdatedAt && sourceMatches) {
           const merged = parsePropertyInput({ ...current, ...request.patch });
           if (!merged.ok) reason = "INVALID_PROPERTY";
-          else if (bannedTermsError(merged.data) || rentalPublicationError(merged.data, new Date(), current)) reason = "PUBLICATION_GATE_REJECTED";
           else {
-            await repo.updateProperty(request.propertyId, request.patch, request.expectedUpdatedAt);
-            outcome = "applied"; reason = "SAVED";
+            const needsReview = request.intakeReviewHash !== undefined || Object.hasOwn(current.internal ?? {}, "reviewedMailImport")
+              || Object.hasOwn(merged.data.internal ?? {}, "reviewedMailImport");
+            // A status-only withdrawal cannot publish or alter any content/evidence. Retain the ordinary CAS stop path.
+            const closing = current.status === "published" && request.patch.status === "closed" && Object.keys(request.patch).length === 1;
+            const reviewed = needsReview && !!request.expectedSourceHash && !!request.intakeReviewHash && !!options?.reviewedMailGuard
+              && await options.reviewedMailGuard(structuredClone({ requestId: request.requestId, actorRef: request.actorRef, propertyId: request.propertyId,
+                expectedUpdatedAt: request.expectedUpdatedAt, expectedSourceHash: request.expectedSourceHash, intakeReviewHash: request.intakeReviewHash,
+                current, next: merged.data }), tx);
+            if (needsReview && !reviewed && !closing || bannedTermsError(merged.data)
+              || rentalPublicationError(merged.data, new Date(), current, { reviewedMailImport: reviewed || closing })) reason = "PUBLICATION_GATE_REJECTED";
+            else {
+              await repo.updateProperty(request.propertyId, request.patch, request.expectedUpdatedAt);
+              outcome = "applied"; reason = "SAVED";
+            }
           }
         }
         const after = await repo.getPropertyById(request.propertyId); if (!after || !iso(after.updatedAt)) throw new Error("PROPERTY_READBACK_MISSING");

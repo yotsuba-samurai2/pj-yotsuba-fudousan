@@ -59,4 +59,20 @@ CLI専用tsconfigで `server-only` マーカーをNext同梱のサーバー用em
 
 ## 未接続
 
-Gmail本番取得、実メール書式ごとの正規化確認、既存DBへの名寄せ/保存、ATBB writer、実権利確認、自動スケジュールは未接続。ATBBの契約上認められた連携方式と版・結果照合契約は別途確定する。現在の候補ファイルを本番掲載の根拠として使わない。
+Gmail本番取得、実メール書式ごとの正規化確認、本番用の確認記録readerと取込route、ATBB writer、実権利確認、自動スケジュールは未接続。名寄せと既存DB writerへの合成接続はunit49〜52で実装・検証したが、本番の取込成功を示すものではない。ATBBの契約上認められた連携方式と版・結果照合契約は別途確定する。現在の候補ファイルを本番掲載の根拠として使わない。
+
+## 確認済み取込と既存保存処理の接続（unit52）
+
+`createReviewedMailImport` は認証済みoperator/propertyと確認記録の参照・hash・要求IDだけを受け取る更新専用service。クライアントの承認フラグや自由なpatchを承認済みとして受け取らない。未設定のstoreは `REVIEWED_MAIL_STORE_UNCONFIGURED` で保留し、旧importへのfallbackを持たない。
+
+既存 `properties` の全22列source hashと更新日時を行lock内で照合し、同じtransactionで最新review・募集回・全体rule/policy・広告/本文/全画像の許諾を再確認する。受信168時間、AD込み当社税込総額20万円、元掲載更新14日、間取り/面積/借家、募集状態、公開内容と画像一覧の一致は既存の検証器を組み合わせて判定する。時刻はI/O後にも読み、期限切れを通さない。個別顧客ruleを全体ruleに使わない。
+
+現段階の対象は確認済み文京区物件で、既存importの正規slugを持つ賃貸行のみ。既存ID・slug・掲載statusを維持する。別slug、対象地域不明、新規登録、掲載status変更はこのserviceでは保留。周辺地域の実ルールや新規登録を推定で補わない。`internal.reviewedMailImport` を持つ行の更新・再公開は再確認が必要で、通常編集/旧importからmarkerを除去できない。内容と確認記録を維持した掲載終了だけは通常のCAS経路から可能。
+
+`ReviewedMailStore.readImmutable` は当初のpatchを変更せず、確認が失効した後も権限のある本人の受付結果照合に使える必要がある。`lockCurrent` はサーバー側の実装責任で、確認者の権限・最新募集回・rule/permission履歴の完全性・実素材hashと内容審査を検証し、根拠行をtransaction終了までlockする。hash一致や `approved` 表示だけでは真正性を証明しない。外部API呼出しをDB lock内に入れない。現時点ではこの本番authority readerを供給していない。
+
+既存writerのreceiptを先に確認するため、保存後の応答喪失は失効後も同じ要求から復旧できる。新規保存時は物件・receipt・公開更新の再開計画を同じtransactionへ保存する。計画保存と実際の通知/公開画面更新の実行は別である。receiptと再開計画には生メール、AD、当社報酬、確認者や素材許諾の原文を入れない。旧要求は追加hashを省略した従来のhash契約を維持する。
+
+隔離Postgres検証は合成1物件・媒体2行・媒体監査3行・receipt5行・未実行の再開計画2行。実Prisma/SQLで重複要求のlock待機、古い版・同一日時の手動変更の拒否、途中失敗の一括rollback、保存応答喪失後の新接続での結果照合を確認する。review authorityと画像審査は明示した合成storeであり、本番の権利や実画像を検証済みとはしない。
+
+本番接続前に、(1)確認記録の保管先・失効更新と権限のあるreader、(2)既存DBのreceipt/effects table・RLS・最小権限と適用計画、(3)認証済み取込route、(4)対象1件の限定試験と停止/復旧手順を確定する。今回、本番schema・権限・通知サービスは変更していない。

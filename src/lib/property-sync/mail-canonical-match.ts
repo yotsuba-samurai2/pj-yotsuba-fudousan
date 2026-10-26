@@ -23,6 +23,7 @@ export const mailIdentityEvidenceSchema = z.object({
 }).strict();
 const requestSchema = z.object({ mailboxRef: ref, messageKey: hash, candidateHash: hash,
   target: targetSchema, identityEvidenceRef: ref, identityEvidenceHash: hash }).strict();
+export { requestSchema as mailCanonicalMatchRequestSchema };
 export type MailCanonicalMatchRequest = z.infer<typeof requestSchema>;
 
 /** Trusted read adapters only. No create/update/delete port and no list-all or source search. */
