@@ -298,5 +298,215 @@ export const COLUMNS_AUTOPUBLISH_REVIEWS: readonly ColumnQualityReview[] = [
     },
     "reviewedAt": "2026-10-26",
     "validThrough": "2026-10-28"
+  },
+  {
+    "key": "realestate:mujin-reito-jihanki-shokuhin-bukken-youken",
+    "fingerprint": "aa968ed066061fed23001996c1466a47f362cd0ad7308fd2b7b33e25878ac569",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.city.koto.lg.jp/260404/fukushi/ese/shokuhin/7000.html",
+        "checkedAt": "2026-10-26",
+        "relevantClaim": "食品衛生法改正で令和3年6月1日から営業許可（32業種）と営業届出制度が開始。届出不要業種に『常温で長期間保存可能な包装された食品・添加物の販売業』が含まれ、冷凍・冷蔵を要する食品はこの例外に当たらない。",
+        "verified": true
+      },
+      {
+        "url": "https://www.mhlw.go.jp/content/000772318.pdf",
+        "checkedAt": "2026-10-26",
+        "relevantClaim": "食品衛生法第54条＝都道府県が公衆衛生に与える影響が著しい営業（政令で定めるもの）につき施設基準を条例で定める、第55条＝前条に規定する営業を営む者は都道府県知事の許可を受ける、第57条＝その他の営業は届出。本文の条番号整理と整合。",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/law/325AC0000000201",
+        "checkedAt": "2026-10-26",
+        "relevantClaim": "建築基準法第2条第1号（建築物＝土地に定着する工作物のうち屋根及び柱若しくは壁を有するもの）、第48条・別表第2（用途地域の用途制限）、第87条（用途変更で床面積200㎡超の特殊建築物となる場合の確認準用）。確立した標準規定で本文と整合（e-Gov本体はJS描画のため官公庁解説で裏取り）。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/40378564071"
+    },
+    "reviewedAt": "2026-10-27",
+    "validThrough": "2026-10-29"
+  },
+  {
+    "key": "realestate:souzoku-jikka-zanchibutsu-ihin-genkyo-uri",
+    "fingerprint": "2cdc421782d3403f69ada963e4a14a5bfce3ed94add58f28d60ac3c167d05c17",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.moj.go.jp/content/001255639.pdf",
+        "checkedAt": "2026-10-26",
+        "relevantClaim": "民法の契約不適合責任（第562条追完請求・第563条代金減額・第564条損害賠償/解除・第566条は種類品質の不適合を知った時から1年以内の通知で足りる）。本文の整理と整合。",
+        "verified": true
+      },
+      {
+        "url": "https://www.mlit.go.jp/jutakukentiku/house/content/001712338.pdf",
+        "checkedAt": "2026-10-26",
+        "relevantClaim": "空家特措法の管理不全空家等制度は2023年12月13日施行の改正で新設され、勧告を受けると住宅用地に係る固定資産税の特例が解除される。第2条第2項が特定空家等を定義。本文と整合。",
+        "verified": true
+      },
+      {
+        "url": "https://www.moj.go.jp/MINJI/minji07_00262.html",
+        "checkedAt": "2026-10-26",
+        "relevantClaim": "『残置物の処理等に関するモデル契約条項』は法務省・国土交通省が令和3年（2021年）に公表、単身高齢者等の賃貸借で賃借人死亡後の残置物処理を想定したもの。本文の『賃貸向けだが考え方の参考』という位置づけと整合。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/40378564071"
+    },
+    "reviewedAt": "2026-10-27",
+    "validThrough": "2026-10-29"
+  },
+  {
+    "key": "legal:douro-shiyo-kyoka-douro-senyo-kyoka-chigai",
+    "fingerprint": "63fd0bf9e5f968fbc6d795270b6fe2b44e5b9cf844ef9c63abceaa4bc8adbcce",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.mlit.go.jp/road/senyo/01.html",
+        "checkedAt": "2026-10-26",
+        "relevantClaim": "道路占用許可は道路管理者が許可。許可基準に『道路の敷地外に余地がないためにやむを得ない』こと（道路法第33条）。第32条第1項第1号物件に電柱・電線・変圧塔・郵便差出箱・公衆電話所・広告塔等。本文と整合。",
+        "verified": true
+      },
+      {
+        "url": "https://www.ktr.mlit.go.jp/road/sinsei/road_sinsei00000068.html",
+        "checkedAt": "2026-10-26",
+        "relevantClaim": "道路使用許可は道路交通法第77条で所轄警察署長、道路占用許可は道路法第32条で道路管理者。両方必要な場合は一方の窓口に提出可（道路法第32条第4項・道路交通法第78条第2項）。本文の申請先・経由・協議の整理と整合。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/40378564071"
+    },
+    "reviewedAt": "2026-10-27",
+    "validThrough": "2026-10-29"
+  },
+  {
+    "key": "legal:souzoku-juho-token-shoji-kyoka-touroku-tetsuzuki",
+    "fingerprint": "57b4b9bea10ecdb47dd537d67dc022ca581db81bf7b630b6077bfd409b05ce3f",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.kyoiku.metro.tokyo.lg.jp/lifelong/cultural_property/registration/registration_01",
+        "checkedAt": "2026-10-26",
+        "relevantClaim": "登録済みの銃砲刀剣類を相続等で取得した者は銃刀法第17条第1項により20日以内に、登録証を交付した都道府県の教育委員会へ所有者変更届を提出する。美術刀剣の登録は都道府県教育委員会（第14条）。本文と整合。",
+        "verified": true
+      },
+      {
+        "url": "https://www.npa.go.jp/bureau/safetylife/hoan/r6jutohokaisei/kohosiryo_ryojushoji.pdf",
+        "checkedAt": "2026-10-26",
+        "relevantClaim": "猟銃等の所持許可を受けた者が死亡すると許可は失効し、親族等が許可証を返納。失効後は50日以内に新規許可取得または譲渡・廃棄等の措置が必要（銃刀法第8条）。本文の10日返納・50日措置と整合。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/40378564071"
+    },
+    "reviewedAt": "2026-10-27",
+    "validThrough": "2026-10-29"
+  },
+  {
+    "key": "labor:spot-work-sukima-baito-roumu-kanri",
+    "fingerprint": "18ee3c7188141a3ba30cb836b789b1a2045c1e452d38a52f2a410a4ef751e079",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.mhlw.go.jp/stf/newpage_32105.html",
+        "checkedAt": "2026-10-26",
+        "relevantClaim": "2024年4月1日施行の労働基準法施行規則第5条改正で、全労働者に『就業場所・従事すべき業務の変更の範囲』の明示が追加（令和5年厚生労働省令第39号）。本文・結論と整合。",
+        "verified": true
+      },
+      {
+        "url": "https://www.mhlw.go.jp/stf/newpage_59321.html",
+        "checkedAt": "2026-10-26",
+        "relevantClaim": "令和7年7月4日・基発0704第3号等でスポットワークの労働条件確保を整理。面接等を経ず応募時点で労働契約が成立する場合があること、労基法等の義務は雇用主である事業主が負うこと（中労委資料・関係団体宛通達で裏取り）。本文と整合。ただし本文の鉤括弧件名は正式件名と不一致の可能性（別途minor指摘）。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/40378564071"
+    },
+    "reviewedAt": "2026-10-27",
+    "validThrough": "2026-10-29"
+  },
+  {
+    "key": "labor:freelance-tokutei-jutaku-rosai-tokubetsu-kanyu",
+    "fingerprint": "faf9c29dba61da2b8e75f9d6a4e2035e061a26e6544e9ac8064dbdd68e1975ff",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/rousai/kanyu.html",
+        "checkedAt": "2026-10-26",
+        "relevantClaim": "令和6年（2024年）11月1日から特定受託事業に従事するフリーランスが労災保険に特別加入可能。第2種特別加入（労災法第35条）の特定フリーランス事業として新設、業種を問わない。申込みは特別加入団体を通じて本人が行い、給付基礎日額は3,500円〜25,000円の範囲から選択し都道府県労働局長が決定。BtoCも対象。本文と整合。",
+        "verified": true
+      },
+      {
+        "url": "https://www.jftc.go.jp/freelancelaw_2024/",
+        "checkedAt": "2026-10-26",
+        "relevantClaim": "フリーランス新法（特定受託事業者に係る取引の適正化等に関する法律・令和5年法律第25号）は2024年11月1日施行。第3条取引条件明示、第4条報酬支払期日（受領日から60日以内）、第5条禁止行為（1か月以上）、第12条募集情報の的確表示、第13条配慮・第14条ハラスメント対策、第16条中途解除30日前予告（6か月以上）。本文の条番号・対象と整合。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/40378564071"
+    },
+    "reviewedAt": "2026-10-27",
+    "validThrough": "2026-10-29"
   }
 ];

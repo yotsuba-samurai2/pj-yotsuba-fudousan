@@ -1,8 +1,8 @@
 {
-  "todayJst": "2026-10-26",
-  "runUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/40208963917",
+  "todayJst": "2026-10-27",
+  "runUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/40378564071",
   "generationStatus": "validated",
-  "generatedCount": 5,
+  "generatedCount": 6,
   "reviewResult": "success",
   "reviewReportAvailable": true,
   "reviewPass": true,
@@ -13,56 +13,23 @@
   },
   "reviewFindings": [
     {
-      "file": "scripts/realestate-columns/141-souzoku-fudosan-ekkyo-oboegaki-233jo-baikyaku.md",
+      "file": "scripts/labor-columns/175-spot-work-sukima-baito-roumu-kanri.md",
       "severity": "minor",
-      "issue": "出典に挙げた法務省ページ https://www.moj.go.jp/MINJI/minji07_00343.html が HTTP 404（4回確認・site:moj.go.jp 検索でも当該パスは出ず）。4言語すべてに同一の死リンクが含まれる。民法233条改正の実体はe-Gov民法で裏取り済みのため法的正確性には影響しないが、一次根拠として掲げたリンクが辿れない。",
-      "fix": "法務省の相隣関係改正（令和3年法律第24号）の現行公表URLに差し替えるか、当該リンクを削除してe-Gov民法233条の引用に一本化する。参照日の明示は維持。"
+      "issue": "「この記事の根拠」で通達を『雇用仲介事業者を利用したスポットワークにおける労働条件の確保について』という件名で鉤括弧付き引用しているが、令和7年7月4日・基発0704第3号の正式件名は『いわゆる「スポットワーク」を利用する労働者の労働条件の確保について』とされ、件名表記が一致しない可能性がある。通達番号・日付・内容（応募時点での労働契約成立、労基法義務は雇用主が負う）は厚労省資料で確認済みで正確。日英中繁中簡の4言語とも同じ表記。",
+      "fix": "厚労省の原通達で正式件名を確認して合わせるか、件名を鉤括弧で断定せず内容説明にとどめる（4言語同時に修正）。本文の法的主張には影響しないため公開可否には関わらない。"
     }
   ],
-  "registeredCount": 2,
-  "qualityEligibleCount": 2,
-  "heldCount": 3,
+  "registeredCount": 6,
+  "qualityEligibleCount": 6,
+  "heldCount": 0,
   "scheduledCount": 0,
-  "unverifiedSourceCount": 1,
+  "unverifiedSourceCount": 0,
   "publishedCount": null,
   "articles": [
     {
-      "key": "realestate:ninteikodomoen-bukken-youto-engei-jien-chori",
-      "fingerprint": "c59df9b98627086572a79862b39d7d3e94af506b6a1b1ae900058a4a6329ab3f",
-      "title": "認定こども園（幼保連携型）の物件要件｜用途地域・園舎園庭の面積・自園調理の設備",
-      "registered": false,
-      "state": "held",
-      "reasons": [
-        "公開レビュー記録が未登録です",
-        "確認済みの公的な一次根拠が不足しています"
-      ],
-      "sourceFailures": [],
-      "sourceEvidenceAvailable": true
-    },
-    {
-      "key": "realestate:souzoku-fudosan-ekkyo-oboegaki-233jo-baikyaku",
-      "fingerprint": "b4f369ac2c92fee8b477702c59039fb758404119249ee9af9ac3afedf5d4a3ac",
-      "title": "相続した不動産の越境（塀・樹木・庇）｜改正民法233条の覚書と売却の進め方",
-      "registered": false,
-      "state": "held",
-      "reasons": [
-        "公開レビュー記録が未登録です",
-        "確認済みの公的な一次根拠が不足しています"
-      ],
-      "sourceFailures": [
-        {
-          "url": "https://www.moj.go.jp/MINJI/minji07_00343.html",
-          "checkedAt": "2026-10-25",
-          "relevantClaim": "本文が『法務省・民法等の一部を改正する法律(令和3年)の解説』として掲げる一次根拠。URLはHTTP 404で取得不能。相隣関係改正の実体は上記e-Gov民法233条で裏取り済みのため重要事項の根拠欠落には当たらないが、当該リンクは辿れない(全4言語に同一の死リンク)。",
-          "verified": false
-        }
-      ],
-      "sourceEvidenceAvailable": true
-    },
-    {
-      "key": "legal:ninteikodomoen-ninka-nintei-shinsei-nagare-youken",
-      "fingerprint": "6134a398b59d7cd3b066f921e4ba04e71849374e1a45d8bce34499c8bedd76f5",
-      "title": "認定こども園の認定・認可申請の流れと必要書類｜幼保連携型の基準",
+      "key": "realestate:mujin-reito-jihanki-shokuhin-bukken-youken",
+      "fingerprint": "aa968ed066061fed23001996c1466a47f362cd0ad7308fd2b7b33e25878ac569",
+      "title": "無人の冷凍自販機（冷凍食品）の店舗にできる物件｜用途地域・食品衛生法の許可と届出・電源と防犯",
       "registered": true,
       "state": "quality-eligible",
       "reasons": [],
@@ -70,22 +37,49 @@
       "sourceEvidenceAvailable": true
     },
     {
-      "key": "legal:saiten-souzoku-916jo-jukuryo-kikan-houki",
-      "fingerprint": "804b9f826ef48b1de87a62dc17036f16e07ea4a1594d50e37572fd1741aa3c3b",
-      "title": "再転相続（民法916条）の熟慮期間｜相続人が承認・放棄前に亡くなったとき",
-      "registered": false,
-      "state": "held",
-      "reasons": [
-        "公開レビュー記録が未登録です",
-        "確認済みの公的な一次根拠が不足しています"
-      ],
+      "key": "realestate:souzoku-jikka-zanchibutsu-ihin-genkyo-uri",
+      "fingerprint": "2cdc421782d3403f69ada963e4a14a5bfce3ed94add58f28d60ac3c167d05c17",
+      "title": "相続した実家の残置物・遺品を片付けずに現況有姿で売れるか｜所有権・費用・契約不適合の整理",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
       "sourceFailures": [],
       "sourceEvidenceAvailable": true
     },
     {
-      "key": "labor:ryokogyo-tenjoin-jigyojogai-minashi-roudoujikan-roumu",
-      "fingerprint": "362175b1a890e4654aa13094ffce180f3bf21d93138a7977733f91c6078c79a3",
-      "title": "旅行会社の添乗員に、事業場外みなし労働時間は使えますか？（阪急トラベル最高裁後の実務）",
+      "key": "legal:douro-shiyo-kyoka-douro-senyo-kyoka-chigai",
+      "fingerprint": "63fd0bf9e5f968fbc6d795270b6fe2b44e5b9cf844ef9c63abceaa4bc8adbcce",
+      "title": "道路使用許可と道路占用許可の違い｜申請先・根拠法・手続",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:souzoku-juho-token-shoji-kyoka-touroku-tetsuzuki",
+      "fingerprint": "57b4b9bea10ecdb47dd537d67dc022ca581db81bf7b630b6077bfd409b05ce3f",
+      "title": "猟銃・刀剣を相続したら｜所持許可（公安委員会）と登録証（教育委員会）",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:spot-work-sukima-baito-roumu-kanri",
+      "fingerprint": "18ee3c7188141a3ba30cb836b789b1a2045c1e452d38a52f2a410a4ef751e079",
+      "title": "スポットワーク（スキマバイト）で人を雇うときの労務とは——労働条件明示・労災・雇用保険・36協定",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:freelance-tokutei-jutaku-rosai-tokubetsu-kanyu",
+      "fingerprint": "faf9c29dba61da2b8e75f9d6a4e2035e061a26e6544e9ac8064dbdd68e1975ff",
+      "title": "フリーランス（特定受託事業者）も労災に入れるか——2024年11月拡大後の特別加入の要件と手続",
       "registered": true,
       "state": "quality-eligible",
       "reasons": [],

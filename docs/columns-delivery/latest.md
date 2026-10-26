@@ -1,34 +1,28 @@
-# コラム生成・レビュー・公開判定（2026-10-26）
+# コラム生成・レビュー・公開判定（2026-10-27）
 
-- 生成・機械検証：成功 5本
+- 生成・機械検証：成功 6本
 - レビュー処理：success ／ 判定：true
 - レビュー指摘：blocker 0／major 0／minor 1
-- 今回の候補指紋に対応する公開証跡登録：2本
-- 自動公開の品質候補：2本
-- 品質保留：3本 ／ 公開日待ち：0本
-- 未確認の一次資料：1件
+- 今回の候補指紋に対応する公開証跡登録：6本
+- 自動公開の品質候補：6本
+- 品質保留：0本 ／ 公開日待ち：0本
+- 未確認の一次資料：0件
 - 本番公開：この処理では実行していません。公開済み件数は未照会です。
 
-2本は品質確認済み候補です。手動保留・既存DB・公開日・有効期限を公開実行時に再判定します。公開完了は実行結果で確認してください。
+6本は品質確認済み候補です。手動保留・既存DB・公開日・有効期限を公開実行時に再判定します。公開完了は実行結果で確認してください。
 未確認記事の品質保留はforceでも解除しません。
 
 ## 記事別の判定
 
-- 認定こども園（幼保連携型）の物件要件｜用途地域・園舎園庭の面積・自園調理の設備：held（realestate:ninteikodomoen-bukken-youto-engei-jien-chori）
-  - 公開レビュー記録が未登録です
-  - 確認済みの公的な一次根拠が不足しています
-- 相続した不動産の越境（塀・樹木・庇）｜改正民法233条の覚書と売却の進め方：held（realestate:souzoku-fudosan-ekkyo-oboegaki-233jo-baikyaku）
-  - 公開レビュー記録が未登録です
-  - 確認済みの公的な一次根拠が不足しています
-  - 未確認一次資料：https://www.moj.go.jp/MINJI/minji07_00343.html — 本文が『法務省・民法等の一部を改正する法律(令和3年)の解説』として掲げる一次根拠。URLはHTTP 404で取得不能。相隣関係改正の実体は上記e-Gov民法233条で裏取り済みのため重要事項の根拠欠落には当たらないが、当該リンクは辿れない(全4言語に同一の死リンク)。
-- 認定こども園の認定・認可申請の流れと必要書類｜幼保連携型の基準：quality-eligible（legal:ninteikodomoen-ninka-nintei-shinsei-nagare-youken）
-- 再転相続（民法916条）の熟慮期間｜相続人が承認・放棄前に亡くなったとき：held（legal:saiten-souzoku-916jo-jukuryo-kikan-houki）
-  - 公開レビュー記録が未登録です
-  - 確認済みの公的な一次根拠が不足しています
-- 旅行会社の添乗員に、事業場外みなし労働時間は使えますか？（阪急トラベル最高裁後の実務）：quality-eligible（labor:ryokogyo-tenjoin-jigyojogai-minashi-roudoujikan-roumu）
+- 無人の冷凍自販機（冷凍食品）の店舗にできる物件｜用途地域・食品衛生法の許可と届出・電源と防犯：quality-eligible（realestate:mujin-reito-jihanki-shokuhin-bukken-youken）
+- 相続した実家の残置物・遺品を片付けずに現況有姿で売れるか｜所有権・費用・契約不適合の整理：quality-eligible（realestate:souzoku-jikka-zanchibutsu-ihin-genkyo-uri）
+- 道路使用許可と道路占用許可の違い｜申請先・根拠法・手続：quality-eligible（legal:douro-shiyo-kyoka-douro-senyo-kyoka-chigai）
+- 猟銃・刀剣を相続したら｜所持許可（公安委員会）と登録証（教育委員会）：quality-eligible（legal:souzoku-juho-token-shoji-kyoka-touroku-tetsuzuki）
+- スポットワーク（スキマバイト）で人を雇うときの労務とは——労働条件明示・労災・雇用保険・36協定：quality-eligible（labor:spot-work-sukima-baito-roumu-kanri）
+- フリーランス（特定受託事業者）も労災に入れるか——2024年11月拡大後の特別加入の要件と手続：quality-eligible（labor:freelance-tokutei-jutaku-rosai-tokubetsu-kanyu）
 
 ## レビューの指摘
 
-- [minor] scripts/realestate-columns/141-souzoku-fudosan-ekkyo-oboegaki-233jo-baikyaku.md：出典に挙げた法務省ページ https://www.moj.go.jp/MINJI/minji07_00343.html が HTTP 404（4回確認・site:moj.go.jp 検索でも当該パスは出ず）。4言語すべてに同一の死リンクが含まれる。民法233条改正の実体はe-Gov民法で裏取り済みのため法的正確性には影響しないが、一次根拠として掲げたリンクが辿れない。 ／ 修正案：法務省の相隣関係改正（令和3年法律第24号）の現行公表URLに差し替えるか、当該リンクを削除してe-Gov民法233条の引用に一本化する。参照日の明示は維持。
+- [minor] scripts/labor-columns/175-spot-work-sukima-baito-roumu-kanri.md：「この記事の根拠」で通達を『雇用仲介事業者を利用したスポットワークにおける労働条件の確保について』という件名で鉤括弧付き引用しているが、令和7年7月4日・基発0704第3号の正式件名は『いわゆる「スポットワーク」を利用する労働者の労働条件の確保について』とされ、件名表記が一致しない可能性がある。通達番号・日付・内容（応募時点での労働契約成立、労基法義務は雇用主が負う）は厚労省資料で確認済みで正確。日英中繁中簡の4言語とも同じ表記。 ／ 修正案：厚労省の原通達で正式件名を確認して合わせるか、件名を鉤括弧で断定せず内容説明にとどめる（4言語同時に修正）。本文の法的主張には影響しないため公開可否には関わらない。
 
-実行証跡：https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/40208963917
+実行証跡：https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/40378564071

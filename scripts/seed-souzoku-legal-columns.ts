@@ -1143,6 +1143,21 @@ const REQUIRED_HUB_LINKS: Record<string, string[]> = {
     "/legal/column/souzoku-hoki-jukuryo-kikan-shincho-kisanten",
     "/legal/column/suuji-souzoku-isanbunkatsu-kyogisho",
   ],
+  "douro-shiyo-kyoka-douro-senyo-kyoka-chigai": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/okugai-koukokubutsu-hyoji-kyoka-jorei",
+    "/legal/column/kensetsugyo-kyoka-yoken-keikan-sengi-zaisan",
+  ],
+  "souzoku-juho-token-shoji-kyoka-touroku-tetsuzuki": [
+    "/legal/services/inheritance",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/souzoku",
+    "/legal/column/souzoku-tejun-checklist",
+    "/legal/column/jidosha-souzoku-iten-toroku-tetsuzuki",
+  ],
 };
 
 /** 表示コンプライアンス上の禁止語 */
@@ -3638,6 +3653,32 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "別事業体",
     "紹介料を受け取りません",
   ],
+  "douro-shiyo-kyoka-douro-senyo-kyoka-chigai": [
+    "道路交通法第77条",
+    "道路交通法第78条",
+    "道路法第32条",
+    "道路管理者",
+    "警察署長",
+    "別々にご契約",
+    "独立した事業体",
+    "別事業体",
+    "紹介料を受け取りません",
+  ],
+  "souzoku-juho-token-shoji-kyoka-touroku-tetsuzuki": [
+    "銃刀法第4条",
+    "銃刀法第8条",
+    "銃刀法第14条",
+    "銃刀法第17条",
+    "火薬類取締法第17条",
+    "火薬類取締法第27条",
+    "都道府県公安委員会",
+    "教育委員会",
+    "一身専属",
+    "別々にご契約",
+    "独立した事業体",
+    "別事業体",
+    "紹介料を受け取りません",
+  ],
 };
 
 /** 記事ごとに含めてはならない表現 */
@@ -3813,6 +3854,8 @@ const FORBIDDEN_PHRASES: Record<string, string[]> = {
   "nihonjin-haiguusha-biza-zairyu-koshin-henko-chuka-taiwan": [],
   "ninteikodomoen-ninka-nintei-shinsei-nagare-youken": [],
   "saiten-souzoku-916jo-jukuryo-kikan-houki": [],
+  "douro-shiyo-kyoka-douro-senyo-kyoka-chigai": [],
+  "souzoku-juho-token-shoji-kyoka-touroku-tetsuzuki": [],
 };
 
 /** 本セット外へ張る既存legalコラムslug（リポジトリの他シードで実在確認済み） */
@@ -7164,6 +7207,58 @@ const ARTICLES: Array<{
       "熟慮期間",
       "相続放棄",
       "起算点",
+      "相続",
+      "行政書士",
+    ],
+  },
+  {
+    file: "135-douro-shiyo-kyoka-douro-senyo-kyoka-chigai.md",
+    slug: "douro-shiyo-kyoka-douro-senyo-kyoka-chigai",
+    date: "2026-10-26",
+    title:
+      "道路使用許可と道路占用許可の違い｜申請先・根拠法・手続",
+    category: "許認可の手続き（行政書士の実務から）",
+    excerpt:
+      "道路使用許可は道路交通法第77条にもとづき所轄警察署長が、道路占用許可は道路法第32条にもとづき道路管理者が出す許可で、根拠法も申請先も別です。工事・イベント・仮設物では一方だけで足りる場合も両方が必要な場合もあり、両方必要なときは道路管理者を経由して申請できる取扱い（道路交通法第78条第2項）があります。申請書類の作成・申請支援（行政書士）、許可（警察・道路管理者）、施工（建設業者）の分離受任を整理します。",
+    keywords: [
+      "道路使用許可 道路占用許可 違い",
+      "道路使用許可 道路交通法第77条 警察署長",
+      "道路占用許可 道路法第32条 道路管理者",
+      "道路使用許可 道路占用許可 両方 必要",
+      "道路占用料 道路法第39条 条例",
+      "道路使用許可 申請 行政書士",
+    ],
+    tags: [
+      "道路使用許可",
+      "道路占用許可",
+      "道路交通法",
+      "道路法",
+      "許認可",
+      "行政書士",
+    ],
+  },
+  {
+    file: "136-souzoku-juho-token-shoji-kyoka-touroku-tetsuzuki.md",
+    slug: "souzoku-juho-token-shoji-kyoka-touroku-tetsuzuki",
+    date: "2026-10-26",
+    title:
+      "猟銃・刀剣を相続したら｜所持許可（公安委員会）と登録証（教育委員会）",
+    category: "相続の手続き（行政書士の実務から）",
+    excerpt:
+      "猟銃・空気銃の所持許可は本人だけのもの（一身専属）で相続では引き継げず、死亡で失効します（銃刀法第8条）。所持を続けるには相続人が住所地の都道府県公安委員会に新たな所持許可を申請します（第4条第1項）。美術品として価値のある刀剣は教育委員会の登録証で持つ物で、相続取得は20日以内に届出が必要です（第14条・第17条）。実包等の火薬類の扱い、失効後50日以内の措置（第8条第6項）、公安委員会・教育委員会・弁護士・税理士の分離受任を整理します。",
+    keywords: [
+      "猟銃 相続 所持許可 引き継げない 公安委員会",
+      "刀剣 相続 登録証 教育委員会 届出 20日",
+      "銃刀法 第4条 第14条 第17条 相続",
+      "猟銃 所持許可 失効 返納 10日 銃刀法第8条",
+      "実包 火薬類取締法 譲渡 廃棄 許可",
+      "猟銃 刀剣 相続 行政書士",
+    ],
+    tags: [
+      "銃刀法",
+      "猟銃",
+      "刀剣",
+      "所持許可",
       "相続",
       "行政書士",
     ],
