@@ -1158,6 +1158,21 @@ const REQUIRED_HUB_LINKS: Record<string, string[]> = {
     "/legal/column/souzoku-tejun-checklist",
     "/legal/column/jidosha-souzoku-iten-toroku-tetsuzuki",
   ],
+  "zaigai-souzokunin-souzoku-houki-gentei-shonin-tetsuzuki": [
+    "/legal/services/inheritance",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/souzoku",
+    "/legal/column/souzoku-hoki-gentei-shonin",
+    "/legal/column/souzoku-kaigai-gaikokuseki",
+    "/legal/column/souzoku-hoki-jukuryo-kikan-shincho-kisanten",
+  ],
+  "jidosha-recycle-hikitori-furon-kaishu-gyo-touroku": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/jidosha-tokutei-seibi-ninsho-shinsei-nagare-youken",
+  ],
 };
 
 /** 表示コンプライアンス上の禁止語 */
@@ -3679,6 +3694,31 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "別事業体",
     "紹介料を受け取りません",
   ],
+  "zaigai-souzokunin-souzoku-houki-gentei-shonin-tetsuzuki": [
+    "民法第915条",
+    "民法第922条",
+    "民法第923条",
+    "民法第924条",
+    "民法第938条",
+    "家事事件手続法第201条",
+    "被相続人の最後の住所地",
+    "別々にご契約",
+    "独立した事業体",
+    "別事業体",
+    "紹介料を受け取りません",
+  ],
+  "jidosha-recycle-hikitori-furon-kaishu-gyo-touroku": [
+    "自動車リサイクル法第42条",
+    "自動車リサイクル法第53条",
+    "自動車リサイクル法第60条",
+    "自動車リサイクル法第67条",
+    "道路運送車両法第78条",
+    "都道府県知事",
+    "別々にご契約",
+    "独立した事業体",
+    "別事業体",
+    "紹介料を受け取りません",
+  ],
 };
 
 /** 記事ごとに含めてはならない表現 */
@@ -3856,6 +3896,8 @@ const FORBIDDEN_PHRASES: Record<string, string[]> = {
   "saiten-souzoku-916jo-jukuryo-kikan-houki": [],
   "douro-shiyo-kyoka-douro-senyo-kyoka-chigai": [],
   "souzoku-juho-token-shoji-kyoka-touroku-tetsuzuki": [],
+  "zaigai-souzokunin-souzoku-houki-gentei-shonin-tetsuzuki": [],
+  "jidosha-recycle-hikitori-furon-kaishu-gyo-touroku": [],
 };
 
 /** 本セット外へ張る既存legalコラムslug（リポジトリの他シードで実在確認済み） */
@@ -7260,6 +7302,58 @@ const ARTICLES: Array<{
       "刀剣",
       "所持許可",
       "相続",
+      "行政書士",
+    ],
+  },
+  {
+    file: "137-zaigai-souzokunin-souzoku-houki-gentei-shonin-tetsuzuki.md",
+    slug: "zaigai-souzokunin-souzoku-houki-gentei-shonin-tetsuzuki",
+    date: "2026-10-27",
+    title:
+      "海外に住む相続人が日本の相続を放棄するには｜在外からの申述と3か月の起算",
+    category: "相続の手続き（行政書士の実務から）",
+    excerpt:
+      "海外に住む相続人も、日本の家庭裁判所に相続放棄・限定承認を申述できます（郵送可）。熟慮期間は自己のために相続の開始があったことを知った時から3か月で（民法第915条第1項）、申述先は被相続人の最後の住所地を管轄する家庭裁判所です（家事事件手続法第201条第1項）。限定承認は相続人全員の共同申述・財産目録が必要（民法第922条〜第924条）。台湾戸籍・中国公証書の収集や財産目録の作成は行政書士、申述書類は本人・司法書士、争いは弁護士、相続税は税理士、相続登記は司法書士に分けて整理します。",
+    keywords: [
+      "相続放棄 海外 在外 相続人 家庭裁判所",
+      "熟慮期間 3か月 起算 民法第915条 伸長",
+      "限定承認 共同申述 財産目録 民法第924条",
+      "相続放棄 申述先 被相続人 最後の住所地",
+      "台湾 中国 相続放棄 戸籍 公証書 行政書士",
+      "家事事件手続法第201条 相続放棄 管轄",
+    ],
+    tags: [
+      "相続放棄",
+      "限定承認",
+      "熟慮期間",
+      "在外相続人",
+      "相続",
+      "行政書士",
+    ],
+  },
+  {
+    file: "138-jidosha-recycle-hikitori-furon-kaishu-gyo-touroku.md",
+    slug: "jidosha-recycle-hikitori-furon-kaishu-gyo-touroku",
+    date: "2026-10-27",
+    title:
+      "引取業・フロン類回収業の登録とは｜自動車リサイクル法の要件と流れ",
+    category: "許認可の手続き（行政書士の実務から）",
+    excerpt:
+      "使用済自動車を引き取る引取業と、カーエアコンのフロン類を回収するフロン類回収業は、いずれも事業所の所在地を管轄する都道府県知事の登録が必要です（自動車リサイクル法第42条・第53条）。登録は5年ごとの更新制で、解体業・破砕業は登録ではなく許可（第60条・第67条）です。分解整備（特定整備）の認証は道路運送車両法第78条の地方運輸局長の認証（別手続）。登録・許可申請の書類作成は行政書士、作業場の物件は不動産、税務は税理士に分けて整理します。",
+    keywords: [
+      "引取業 登録 自動車リサイクル法 第42条 都道府県知事",
+      "フロン類回収業 登録 第53条 5年 更新",
+      "解体業 破砕業 許可 第60条 第67条 違い",
+      "自動車リサイクル 登録 申請 行政書士",
+      "特定整備 認証 道路運送車両法第78条 地方運輸局長",
+      "使用済自動車 引取業 中古車 整備 開業",
+    ],
+    tags: [
+      "自動車リサイクル法",
+      "引取業",
+      "フロン類回収業",
+      "登録",
+      "許認可",
       "行政書士",
     ],
   },

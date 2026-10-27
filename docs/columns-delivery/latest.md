@@ -1,28 +1,41 @@
-# コラム生成・レビュー・公開判定（2026-10-27）
+# コラム生成・レビュー・公開判定（2026-10-28）
 
 - 生成・機械検証：成功 6本
-- レビュー処理：success ／ 判定：true
-- レビュー指摘：blocker 0／major 0／minor 1
-- 今回の候補指紋に対応する公開証跡登録：6本
-- 自動公開の品質候補：6本
-- 品質保留：0本 ／ 公開日待ち：0本
+- レビュー処理：success ／ 判定：false
+- レビュー指摘：blocker 1／major 0／minor 0
+- 今回の候補指紋に対応する公開証跡登録：0本
+- 自動公開の品質候補：0本
+- 品質保留：6本 ／ 公開日待ち：0本
 - 未確認の一次資料：0件
 - 本番公開：この処理では実行していません。公開済み件数は未照会です。
 
-6本は品質確認済み候補です。手動保留・既存DB・公開日・有効期限を公開実行時に再判定します。公開完了は実行結果で確認してください。
+正午の自動公開に渡せる品質候補は0本です。6本は保留、0本は公開日待ちです。
 未確認記事の品質保留はforceでも解除しません。
 
 ## 記事別の判定
 
-- 無人の冷凍自販機（冷凍食品）の店舗にできる物件｜用途地域・食品衛生法の許可と届出・電源と防犯：quality-eligible（realestate:mujin-reito-jihanki-shokuhin-bukken-youken）
-- 相続した実家の残置物・遺品を片付けずに現況有姿で売れるか｜所有権・費用・契約不適合の整理：quality-eligible（realestate:souzoku-jikka-zanchibutsu-ihin-genkyo-uri）
-- 道路使用許可と道路占用許可の違い｜申請先・根拠法・手続：quality-eligible（legal:douro-shiyo-kyoka-douro-senyo-kyoka-chigai）
-- 猟銃・刀剣を相続したら｜所持許可（公安委員会）と登録証（教育委員会）：quality-eligible（legal:souzoku-juho-token-shoji-kyoka-touroku-tetsuzuki）
-- スポットワーク（スキマバイト）で人を雇うときの労務とは——労働条件明示・労災・雇用保険・36協定：quality-eligible（labor:spot-work-sukima-baito-roumu-kanri）
-- フリーランス（特定受託事業者）も労災に入れるか——2024年11月拡大後の特別加入の要件と手続：quality-eligible（labor:freelance-tokutei-jutaku-rosai-tokubetsu-kanyu）
+- 非居住の中国語オーナーが保有物件を民泊にするとき、不在のまま届出と管理はどうしますか？：held（realestate:hikyojusha-chuka-owner-minpaku-jutaku-shukuhaku-kanri-itaku）
+  - 公開レビュー記録が未登録です
+  - 候補指紋と修正後原稿が一致しません
+  - 独立レビューの証跡不足、重複、またはレビュー後の原稿変更
+- 輸入した貨物を関税前に置く「保税蔵置場」にできる倉庫物件の条件は？：held（realestate:hozei-zochijo-souko-bukken-youken-yunyu）
+  - 公開レビュー記録が未登録です
+  - 独立レビューに未解決の重大な指摘があります
+- 海外に住む相続人が日本の相続を放棄するには｜在外からの申述と3か月の起算：held（legal:zaigai-souzokunin-souzoku-houki-gentei-shonin-tetsuzuki）
+  - 公開レビュー記録が未登録です
+  - 独立レビューに未解決の重大な指摘があります
+- 引取業・フロン類回収業の登録とは｜自動車リサイクル法の要件と流れ：held（legal:jidosha-recycle-hikitori-furon-kaishu-gyo-touroku）
+  - 公開レビュー記録が未登録です
+  - 独立レビューに未解決の重大な指摘があります
+- 特定技能の外国人が転職するとき、社会保険と雇用保険の手続はどう引き継ぎますか？：held（labor:tokutei-ginou-tenshoku-tenseki-shakaihoken-koyohoken-hikitsugi）
+  - 公開レビュー記録が未登録です
+  - 独立レビューに未解決の重大な指摘があります
+- ゴルフ場のキャディを業務委託にできますか？手待ち時間や季節変動はどう扱いますか？：held（labor:golf-jo-caddy-gyomuitaku-roudoushasei-henkei-roudoujikan）
+  - 公開レビュー記録が未登録です
+  - 独立レビューに未解決の重大な指摘があります
 
 ## レビューの指摘
 
-- [minor] scripts/labor-columns/175-spot-work-sukima-baito-roumu-kanri.md：「この記事の根拠」で通達を『雇用仲介事業者を利用したスポットワークにおける労働条件の確保について』という件名で鉤括弧付き引用しているが、令和7年7月4日・基発0704第3号の正式件名は『いわゆる「スポットワーク」を利用する労働者の労働条件の確保について』とされ、件名表記が一致しない可能性がある。通達番号・日付・内容（応募時点での労働契約成立、労基法義務は雇用主が負う）は厚労省資料で確認済みで正確。日英中繁中簡の4言語とも同じ表記。 ／ 修正案：厚労省の原通達で正式件名を確認して合わせるか、件名を鉤括弧で断定せず内容説明にとどめる（4言語同時に修正）。本文の法的主張には影響しないため公開可否には関わらない。
+- [blocker] scripts/realestate-columns/144-hikyojusha-chuka-owner-minpaku-jutaku-shukuhaku-kanri-itaku.md：住宅宿泊事業法第11条第1項第1号の委託義務の閾値を誤記。本文は『国土交通省令・厚生労働省令で定める居室数（住宅宿泊事業法施行規則で6室）を超えるとき』とするが、観光庁の公式ページ（host/entrust.html）および施行規則第9条では、省令で定める居室の数は『5』であり、委託義務は居室数が5を超える場合（＝6室以上）に生じる。本文の数字は省令値・閾値とも誤り（6室の家主居住型物件を委託不要と誤認させる）。en（『six rooms under the enforcement regulation』）・zh-tw・zh（『施行規則定為6室』）も同一の誤りを転写している。 ／ 修正案：省令の居室数は『5』、委託義務は居室数が5を超える（6室以上）ときと訂正し、4言語すべてを同期。出典としても観光庁の該当ページで数値を確認する。（審査者はファイルを変更しないため、生成担当が修正すること）
 
-実行証跡：https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/40378564071
+実行証跡：https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/40553875873

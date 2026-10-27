@@ -1,0 +1,109 @@
+{
+  "todayJst": "2026-10-28",
+  "runUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/40553875873",
+  "generationStatus": "validated",
+  "generatedCount": 6,
+  "reviewResult": "success",
+  "reviewReportAvailable": true,
+  "reviewPass": false,
+  "findings": {
+    "blocker": 1,
+    "major": 0,
+    "minor": 0
+  },
+  "reviewFindings": [
+    {
+      "file": "scripts/realestate-columns/144-hikyojusha-chuka-owner-minpaku-jutaku-shukuhaku-kanri-itaku.md",
+      "severity": "blocker",
+      "issue": "住宅宿泊事業法第11条第1項第1号の委託義務の閾値を誤記。本文は『国土交通省令・厚生労働省令で定める居室数（住宅宿泊事業法施行規則で6室）を超えるとき』とするが、観光庁の公式ページ（host/entrust.html）および施行規則第9条では、省令で定める居室の数は『5』であり、委託義務は居室数が5を超える場合（＝6室以上）に生じる。本文の数字は省令値・閾値とも誤り（6室の家主居住型物件を委託不要と誤認させる）。en（『six rooms under the enforcement regulation』）・zh-tw・zh（『施行規則定為6室』）も同一の誤りを転写している。",
+      "fix": "省令の居室数は『5』、委託義務は居室数が5を超える（6室以上）ときと訂正し、4言語すべてを同期。出典としても観光庁の該当ページで数値を確認する。（審査者はファイルを変更しないため、生成担当が修正すること）"
+    }
+  ],
+  "registeredCount": 0,
+  "qualityEligibleCount": 0,
+  "heldCount": 6,
+  "scheduledCount": 0,
+  "unverifiedSourceCount": 0,
+  "publishedCount": null,
+  "articles": [
+    {
+      "key": "realestate:hikyojusha-chuka-owner-minpaku-jutaku-shukuhaku-kanri-itaku",
+      "fingerprint": "993ed4edfb49181b2e19958982a343add45e2a8342996e0bc4407f8f5b39e402",
+      "title": "非居住の中国語オーナーが保有物件を民泊にするとき、不在のまま届出と管理はどうしますか？",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録です",
+        "候補指紋と修正後原稿が一致しません",
+        "独立レビューの証跡不足、重複、またはレビュー後の原稿変更"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "realestate:hozei-zochijo-souko-bukken-youken-yunyu",
+      "fingerprint": "a152dfe0d06b19c332d39225dedeb6f817889de006993c61800cddede96093e5",
+      "title": "輸入した貨物を関税前に置く「保税蔵置場」にできる倉庫物件の条件は？",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録です",
+        "独立レビューに未解決の重大な指摘があります"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:zaigai-souzokunin-souzoku-houki-gentei-shonin-tetsuzuki",
+      "fingerprint": "055d6ca71aacd23fcac62ec3b5fc397b87cbde1d287c68931f0abf13bde9f013",
+      "title": "海外に住む相続人が日本の相続を放棄するには｜在外からの申述と3か月の起算",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録です",
+        "独立レビューに未解決の重大な指摘があります"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:jidosha-recycle-hikitori-furon-kaishu-gyo-touroku",
+      "fingerprint": "dcca071a9ed6db41b35af7228315b9d2d50eb25f1282b1995bb89d8a30bcd768",
+      "title": "引取業・フロン類回収業の登録とは｜自動車リサイクル法の要件と流れ",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録です",
+        "独立レビューに未解決の重大な指摘があります"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:tokutei-ginou-tenshoku-tenseki-shakaihoken-koyohoken-hikitsugi",
+      "fingerprint": "caa21c3e6e4cf1b101ffed44b8c4dc1351d9ad4581539fa0060ed742cac702c1",
+      "title": "特定技能の外国人が転職するとき、社会保険と雇用保険の手続はどう引き継ぎますか？",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録です",
+        "独立レビューに未解決の重大な指摘があります"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:golf-jo-caddy-gyomuitaku-roudoushasei-henkei-roudoujikan",
+      "fingerprint": "1764f04d6cc4487c37c4bb975580591622b004f422b0aee27b06ac3b8ee7c87b",
+      "title": "ゴルフ場のキャディを業務委託にできますか？手待ち時間や季節変動はどう扱いますか？",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録です",
+        "独立レビューに未解決の重大な指摘があります"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    }
+  ]
+}
