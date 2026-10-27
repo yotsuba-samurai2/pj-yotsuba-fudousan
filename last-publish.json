@@ -1,25 +1,61 @@
 {
   "dryRun": false,
-  "runAt": "2026-10-26T08:23:08.747Z",
-  "todayJst": "2026-10-26",
+  "runAt": "2026-10-27T08:34:01.294Z",
+  "todayJst": "2026-10-27",
   "targets": [
     {
-      "key": "labor:ryokogyo-tenjoin-jigyojogai-minashi-roudoujikan-roumu",
+      "key": "labor:freelance-tokutei-jutaku-rosai-tokubetsu-kanyu",
       "business": "labor",
-      "slug": "ryokogyo-tenjoin-jigyojogai-minashi-roudoujikan-roumu",
-      "title": "旅行会社の添乗員に、事業場外みなし労働時間は使えますか？（阪急トラベル最高裁後の実務）",
-      "date": "2026-10-25",
-      "category": "テーマ別の労務管理",
-      "path": "/labor/column/ryokogyo-tenjoin-jigyojogai-minashi-roudoujikan-roumu"
+      "slug": "freelance-tokutei-jutaku-rosai-tokubetsu-kanyu",
+      "title": "フリーランス（特定受託事業者）も労災に入れるか——2024年11月拡大後の特別加入の要件と手続",
+      "date": "2026-10-26",
+      "category": "労働保険",
+      "path": "/labor/column/freelance-tokutei-jutaku-rosai-tokubetsu-kanyu"
     },
     {
-      "key": "legal:ninteikodomoen-ninka-nintei-shinsei-nagare-youken",
+      "key": "labor:spot-work-sukima-baito-roumu-kanri",
+      "business": "labor",
+      "slug": "spot-work-sukima-baito-roumu-kanri",
+      "title": "スポットワーク（スキマバイト）で人を雇うときの労務とは——労働条件明示・労災・雇用保険・36協定",
+      "date": "2026-10-26",
+      "category": "テーマ別の労務管理",
+      "path": "/labor/column/spot-work-sukima-baito-roumu-kanri"
+    },
+    {
+      "key": "legal:douro-shiyo-kyoka-douro-senyo-kyoka-chigai",
       "business": "legal",
-      "slug": "ninteikodomoen-ninka-nintei-shinsei-nagare-youken",
-      "title": "認定こども園の認定・認可申請の流れと必要書類｜幼保連携型の基準",
-      "date": "2026-10-25",
+      "slug": "douro-shiyo-kyoka-douro-senyo-kyoka-chigai",
+      "title": "道路使用許可と道路占用許可の違い｜申請先・根拠法・手続",
+      "date": "2026-10-26",
       "category": "許認可の手続き（行政書士の実務から）",
-      "path": "/legal/column/ninteikodomoen-ninka-nintei-shinsei-nagare-youken"
+      "path": "/legal/column/douro-shiyo-kyoka-douro-senyo-kyoka-chigai"
+    },
+    {
+      "key": "legal:souzoku-juho-token-shoji-kyoka-touroku-tetsuzuki",
+      "business": "legal",
+      "slug": "souzoku-juho-token-shoji-kyoka-touroku-tetsuzuki",
+      "title": "猟銃・刀剣を相続したら｜所持許可（公安委員会）と登録証（教育委員会）",
+      "date": "2026-10-26",
+      "category": "相続の手続き（行政書士の実務から）",
+      "path": "/legal/column/souzoku-juho-token-shoji-kyoka-touroku-tetsuzuki"
+    },
+    {
+      "key": "realestate:mujin-reito-jihanki-shokuhin-bukken-youken",
+      "business": "realestate",
+      "slug": "mujin-reito-jihanki-shokuhin-bukken-youken",
+      "title": "無人の冷凍自販機（冷凍食品）の店舗にできる物件｜用途地域・食品衛生法の許可と届出・電源と防犯",
+      "date": "2026-10-26",
+      "category": "投資・事業用不動産",
+      "path": "/column/mujin-reito-jihanki-shokuhin-bukken-youken"
+    },
+    {
+      "key": "realestate:souzoku-jikka-zanchibutsu-ihin-genkyo-uri",
+      "business": "realestate",
+      "slug": "souzoku-jikka-zanchibutsu-ihin-genkyo-uri",
+      "title": "相続した実家の残置物・遺品を片付けずに現況有姿で売れるか｜所有権・費用・契約不適合の整理",
+      "date": "2026-10-26",
+      "category": "相続",
+      "path": "/column/souzoku-jikka-zanchibutsu-ihin-genkyo-uri"
     }
   ],
   "held": [
@@ -136,22 +172,58 @@
   "ok": false,
   "published": [
     {
-      "key": "labor:ryokogyo-tenjoin-jigyojogai-minashi-roudoujikan-roumu",
+      "key": "labor:freelance-tokutei-jutaku-rosai-tokubetsu-kanyu",
       "business": "labor",
-      "slug": "ryokogyo-tenjoin-jigyojogai-minashi-roudoujikan-roumu",
-      "title": "旅行会社の添乗員に、事業場外みなし労働時間は使えますか？（阪急トラベル最高裁後の実務）",
-      "date": "2026-10-25",
-      "category": "テーマ別の労務管理",
-      "path": "/labor/column/ryokogyo-tenjoin-jigyojogai-minashi-roudoujikan-roumu"
+      "slug": "freelance-tokutei-jutaku-rosai-tokubetsu-kanyu",
+      "title": "フリーランス（特定受託事業者）も労災に入れるか——2024年11月拡大後の特別加入の要件と手続",
+      "date": "2026-10-26",
+      "category": "労働保険",
+      "path": "/labor/column/freelance-tokutei-jutaku-rosai-tokubetsu-kanyu"
     },
     {
-      "key": "legal:ninteikodomoen-ninka-nintei-shinsei-nagare-youken",
+      "key": "labor:spot-work-sukima-baito-roumu-kanri",
+      "business": "labor",
+      "slug": "spot-work-sukima-baito-roumu-kanri",
+      "title": "スポットワーク（スキマバイト）で人を雇うときの労務とは——労働条件明示・労災・雇用保険・36協定",
+      "date": "2026-10-26",
+      "category": "テーマ別の労務管理",
+      "path": "/labor/column/spot-work-sukima-baito-roumu-kanri"
+    },
+    {
+      "key": "legal:douro-shiyo-kyoka-douro-senyo-kyoka-chigai",
       "business": "legal",
-      "slug": "ninteikodomoen-ninka-nintei-shinsei-nagare-youken",
-      "title": "認定こども園の認定・認可申請の流れと必要書類｜幼保連携型の基準",
-      "date": "2026-10-25",
+      "slug": "douro-shiyo-kyoka-douro-senyo-kyoka-chigai",
+      "title": "道路使用許可と道路占用許可の違い｜申請先・根拠法・手続",
+      "date": "2026-10-26",
       "category": "許認可の手続き（行政書士の実務から）",
-      "path": "/legal/column/ninteikodomoen-ninka-nintei-shinsei-nagare-youken"
+      "path": "/legal/column/douro-shiyo-kyoka-douro-senyo-kyoka-chigai"
+    },
+    {
+      "key": "legal:souzoku-juho-token-shoji-kyoka-touroku-tetsuzuki",
+      "business": "legal",
+      "slug": "souzoku-juho-token-shoji-kyoka-touroku-tetsuzuki",
+      "title": "猟銃・刀剣を相続したら｜所持許可（公安委員会）と登録証（教育委員会）",
+      "date": "2026-10-26",
+      "category": "相続の手続き（行政書士の実務から）",
+      "path": "/legal/column/souzoku-juho-token-shoji-kyoka-touroku-tetsuzuki"
+    },
+    {
+      "key": "realestate:mujin-reito-jihanki-shokuhin-bukken-youken",
+      "business": "realestate",
+      "slug": "mujin-reito-jihanki-shokuhin-bukken-youken",
+      "title": "無人の冷凍自販機（冷凍食品）の店舗にできる物件｜用途地域・食品衛生法の許可と届出・電源と防犯",
+      "date": "2026-10-26",
+      "category": "投資・事業用不動産",
+      "path": "/column/mujin-reito-jihanki-shokuhin-bukken-youken"
+    },
+    {
+      "key": "realestate:souzoku-jikka-zanchibutsu-ihin-genkyo-uri",
+      "business": "realestate",
+      "slug": "souzoku-jikka-zanchibutsu-ihin-genkyo-uri",
+      "title": "相続した実家の残置物・遺品を片付けずに現況有姿で売れるか｜所有権・費用・契約不適合の整理",
+      "date": "2026-10-26",
+      "category": "相続",
+      "path": "/column/souzoku-jikka-zanchibutsu-ihin-genkyo-uri"
     }
   ],
   "skipped": [],
