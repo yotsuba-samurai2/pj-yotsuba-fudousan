@@ -1,63 +1,8 @@
 {
   "dryRun": false,
-  "runAt": "2026-10-27T08:34:01.294Z",
-  "todayJst": "2026-10-27",
-  "targets": [
-    {
-      "key": "labor:freelance-tokutei-jutaku-rosai-tokubetsu-kanyu",
-      "business": "labor",
-      "slug": "freelance-tokutei-jutaku-rosai-tokubetsu-kanyu",
-      "title": "フリーランス（特定受託事業者）も労災に入れるか——2024年11月拡大後の特別加入の要件と手続",
-      "date": "2026-10-26",
-      "category": "労働保険",
-      "path": "/labor/column/freelance-tokutei-jutaku-rosai-tokubetsu-kanyu"
-    },
-    {
-      "key": "labor:spot-work-sukima-baito-roumu-kanri",
-      "business": "labor",
-      "slug": "spot-work-sukima-baito-roumu-kanri",
-      "title": "スポットワーク（スキマバイト）で人を雇うときの労務とは——労働条件明示・労災・雇用保険・36協定",
-      "date": "2026-10-26",
-      "category": "テーマ別の労務管理",
-      "path": "/labor/column/spot-work-sukima-baito-roumu-kanri"
-    },
-    {
-      "key": "legal:douro-shiyo-kyoka-douro-senyo-kyoka-chigai",
-      "business": "legal",
-      "slug": "douro-shiyo-kyoka-douro-senyo-kyoka-chigai",
-      "title": "道路使用許可と道路占用許可の違い｜申請先・根拠法・手続",
-      "date": "2026-10-26",
-      "category": "許認可の手続き（行政書士の実務から）",
-      "path": "/legal/column/douro-shiyo-kyoka-douro-senyo-kyoka-chigai"
-    },
-    {
-      "key": "legal:souzoku-juho-token-shoji-kyoka-touroku-tetsuzuki",
-      "business": "legal",
-      "slug": "souzoku-juho-token-shoji-kyoka-touroku-tetsuzuki",
-      "title": "猟銃・刀剣を相続したら｜所持許可（公安委員会）と登録証（教育委員会）",
-      "date": "2026-10-26",
-      "category": "相続の手続き（行政書士の実務から）",
-      "path": "/legal/column/souzoku-juho-token-shoji-kyoka-touroku-tetsuzuki"
-    },
-    {
-      "key": "realestate:mujin-reito-jihanki-shokuhin-bukken-youken",
-      "business": "realestate",
-      "slug": "mujin-reito-jihanki-shokuhin-bukken-youken",
-      "title": "無人の冷凍自販機（冷凍食品）の店舗にできる物件｜用途地域・食品衛生法の許可と届出・電源と防犯",
-      "date": "2026-10-26",
-      "category": "投資・事業用不動産",
-      "path": "/column/mujin-reito-jihanki-shokuhin-bukken-youken"
-    },
-    {
-      "key": "realestate:souzoku-jikka-zanchibutsu-ihin-genkyo-uri",
-      "business": "realestate",
-      "slug": "souzoku-jikka-zanchibutsu-ihin-genkyo-uri",
-      "title": "相続した実家の残置物・遺品を片付けずに現況有姿で売れるか｜所有権・費用・契約不適合の整理",
-      "date": "2026-10-26",
-      "category": "相続",
-      "path": "/column/souzoku-jikka-zanchibutsu-ihin-genkyo-uri"
-    }
-  ],
+  "runAt": "2026-10-28T09:13:11.495Z",
+  "todayJst": "2026-10-28",
+  "targets": [],
   "held": [
     {
       "key": "labor:gaikokujin-koyo-kanri-shishin-jigyonushi-doryoku-gimu",
@@ -166,67 +111,83 @@
       "qualityHoldReasons": [
         "公開レビュー記録が未登録です"
       ]
+    },
+    {
+      "key": "labor:golf-jo-caddy-gyomuitaku-roudoushasei-henkei-roudoujikan",
+      "business": "labor",
+      "slug": "golf-jo-caddy-gyomuitaku-roudoushasei-henkei-roudoujikan",
+      "title": "ゴルフ場のキャディを業務委託にできますか？手待ち時間や季節変動はどう扱いますか？",
+      "date": "2026-10-27",
+      "category": "業種別の労務管理",
+      "path": "/labor/column/golf-jo-caddy-gyomuitaku-roudoushasei-henkei-roudoujikan",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "labor:tokutei-ginou-tenshoku-tenseki-shakaihoken-koyohoken-hikitsugi",
+      "business": "labor",
+      "slug": "tokutei-ginou-tenshoku-tenseki-shakaihoken-koyohoken-hikitsugi",
+      "title": "特定技能の外国人が転職するとき、社会保険と雇用保険の手続はどう引き継ぎますか？",
+      "date": "2026-10-27",
+      "category": "外国人雇用",
+      "path": "/labor/column/tokutei-ginou-tenshoku-tenseki-shakaihoken-koyohoken-hikitsugi",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "legal:jidosha-recycle-hikitori-furon-kaishu-gyo-touroku",
+      "business": "legal",
+      "slug": "jidosha-recycle-hikitori-furon-kaishu-gyo-touroku",
+      "title": "引取業・フロン類回収業の登録とは｜自動車リサイクル法の要件と流れ",
+      "date": "2026-10-27",
+      "category": "許認可の手続き（行政書士の実務から）",
+      "path": "/legal/column/jidosha-recycle-hikitori-furon-kaishu-gyo-touroku",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "legal:zaigai-souzokunin-souzoku-houki-gentei-shonin-tetsuzuki",
+      "business": "legal",
+      "slug": "zaigai-souzokunin-souzoku-houki-gentei-shonin-tetsuzuki",
+      "title": "海外に住む相続人が日本の相続を放棄するには｜在外からの申述と3か月の起算",
+      "date": "2026-10-27",
+      "category": "相続の手続き（行政書士の実務から）",
+      "path": "/legal/column/zaigai-souzokunin-souzoku-houki-gentei-shonin-tetsuzuki",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "realestate:hikyojusha-chuka-owner-minpaku-jutaku-shukuhaku-kanri-itaku",
+      "business": "realestate",
+      "slug": "hikyojusha-chuka-owner-minpaku-jutaku-shukuhaku-kanri-itaku",
+      "title": "非居住の中国語オーナーが保有物件を民泊にするとき、不在のまま届出と管理はどうしますか？",
+      "date": "2026-10-27",
+      "category": "投資・事業用不動産",
+      "path": "/column/hikyojusha-chuka-owner-minpaku-jutaku-shukuhaku-kanri-itaku",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "realestate:hozei-zochijo-souko-bukken-youken-yunyu",
+      "business": "realestate",
+      "slug": "hozei-zochijo-souko-bukken-youken-yunyu",
+      "title": "輸入した貨物を関税前に置く「保税蔵置場」にできる倉庫物件の条件は？",
+      "date": "2026-10-27",
+      "category": "投資・事業用不動産",
+      "path": "/column/hozei-zochijo-souko-bukken-youken-yunyu",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録です"
+      ]
     }
   ],
   "scheduled": [],
   "ok": false,
-  "published": [
-    {
-      "key": "labor:freelance-tokutei-jutaku-rosai-tokubetsu-kanyu",
-      "business": "labor",
-      "slug": "freelance-tokutei-jutaku-rosai-tokubetsu-kanyu",
-      "title": "フリーランス（特定受託事業者）も労災に入れるか——2024年11月拡大後の特別加入の要件と手続",
-      "date": "2026-10-26",
-      "category": "労働保険",
-      "path": "/labor/column/freelance-tokutei-jutaku-rosai-tokubetsu-kanyu"
-    },
-    {
-      "key": "labor:spot-work-sukima-baito-roumu-kanri",
-      "business": "labor",
-      "slug": "spot-work-sukima-baito-roumu-kanri",
-      "title": "スポットワーク（スキマバイト）で人を雇うときの労務とは——労働条件明示・労災・雇用保険・36協定",
-      "date": "2026-10-26",
-      "category": "テーマ別の労務管理",
-      "path": "/labor/column/spot-work-sukima-baito-roumu-kanri"
-    },
-    {
-      "key": "legal:douro-shiyo-kyoka-douro-senyo-kyoka-chigai",
-      "business": "legal",
-      "slug": "douro-shiyo-kyoka-douro-senyo-kyoka-chigai",
-      "title": "道路使用許可と道路占用許可の違い｜申請先・根拠法・手続",
-      "date": "2026-10-26",
-      "category": "許認可の手続き（行政書士の実務から）",
-      "path": "/legal/column/douro-shiyo-kyoka-douro-senyo-kyoka-chigai"
-    },
-    {
-      "key": "legal:souzoku-juho-token-shoji-kyoka-touroku-tetsuzuki",
-      "business": "legal",
-      "slug": "souzoku-juho-token-shoji-kyoka-touroku-tetsuzuki",
-      "title": "猟銃・刀剣を相続したら｜所持許可（公安委員会）と登録証（教育委員会）",
-      "date": "2026-10-26",
-      "category": "相続の手続き（行政書士の実務から）",
-      "path": "/legal/column/souzoku-juho-token-shoji-kyoka-touroku-tetsuzuki"
-    },
-    {
-      "key": "realestate:mujin-reito-jihanki-shokuhin-bukken-youken",
-      "business": "realestate",
-      "slug": "mujin-reito-jihanki-shokuhin-bukken-youken",
-      "title": "無人の冷凍自販機（冷凍食品）の店舗にできる物件｜用途地域・食品衛生法の許可と届出・電源と防犯",
-      "date": "2026-10-26",
-      "category": "投資・事業用不動産",
-      "path": "/column/mujin-reito-jihanki-shokuhin-bukken-youken"
-    },
-    {
-      "key": "realestate:souzoku-jikka-zanchibutsu-ihin-genkyo-uri",
-      "business": "realestate",
-      "slug": "souzoku-jikka-zanchibutsu-ihin-genkyo-uri",
-      "title": "相続した実家の残置物・遺品を片付けずに現況有姿で売れるか｜所有権・費用・契約不適合の整理",
-      "date": "2026-10-26",
-      "category": "相続",
-      "path": "/column/souzoku-jikka-zanchibutsu-ihin-genkyo-uri"
-    }
-  ],
-  "skipped": [],
+  "published": [],
   "errors": [
     {
       "key": "labor:gaikokujin-koyo-kanri-shishin-jigyonushi-doryoku-gimu",
@@ -263,9 +224,33 @@
     {
       "key": "realestate:souzoku-fudosan-ekkyo-oboegaki-233jo-baikyaku",
       "message": "品質確認待ち：公開レビュー記録が未登録です"
+    },
+    {
+      "key": "labor:golf-jo-caddy-gyomuitaku-roudoushasei-henkei-roudoujikan",
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
+    },
+    {
+      "key": "labor:tokutei-ginou-tenshoku-tenseki-shakaihoken-koyohoken-hikitsugi",
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
+    },
+    {
+      "key": "legal:jidosha-recycle-hikitori-furon-kaishu-gyo-touroku",
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
+    },
+    {
+      "key": "legal:zaigai-souzokunin-souzoku-houki-gentei-shonin-tetsuzuki",
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
+    },
+    {
+      "key": "realestate:hikyojusha-chuka-owner-minpaku-jutaku-shukuhaku-kanri-itaku",
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
+    },
+    {
+      "key": "realestate:hozei-zochijo-souko-bukken-youken-yunyu",
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
     }
   ],
-  "blocked": "9本は品質確認待ちのため自動公開しません。記事別の理由を確認してください。forceでも解除しません。",
-  "outcome": "partial",
+  "blocked": "15本は品質確認待ちのため自動公開しません。記事別の理由を確認してください。forceでも解除しません。",
+  "outcome": "held",
   "httpStatus": "409"
 }
