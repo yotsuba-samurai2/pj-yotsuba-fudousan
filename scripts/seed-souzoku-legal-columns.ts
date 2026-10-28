@@ -1173,6 +1173,22 @@ const REQUIRED_HUB_LINKS: Record<string, string[]> = {
     "/legal/ryokin",
     "/legal/column/jidosha-tokutei-seibi-ninsho-shinsei-nagare-youken",
   ],
+  "fuzoku-eigyo-4go-5go-game-center-mahjong-kyoka-youken": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/fuzoku-eigyo-1go-settai-inshoku-kyoka-bukken-kyori",
+    "/legal/column/shinya-shurui-teikyo-todokede-yoken",
+  ],
+  "taiji-souzoku-886jo-isanbunkatsu-shussei-mae-torikai": [
+    "/legal/services/inheritance",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/souzoku",
+    "/legal/column/souzoku-ninchisho-yukuefumei-miseinen",
+    "/legal/column/houtei-souzoku-bun",
+    "/legal/column/souzoku-hajime-koseki-chosa-bunkyo",
+  ],
 };
 
 /** 表示コンプライアンス上の禁止語 */
@@ -3719,6 +3735,34 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "別事業体",
     "紹介料を受け取りません",
   ],
+  "fuzoku-eigyo-4go-5go-game-center-mahjong-kyoka-youken": [
+    "風俗営業等の規制及び業務の適正化等に関する法律",
+    "第2条第1項第4号",
+    "第2条第1項第5号",
+    "第3条第1項",
+    "第4条第1項",
+    "第4条第2項",
+    "欠格事由",
+    "拘禁刑",
+    "別々にご契約",
+    "独立した事業体",
+    "別事業体",
+    "紹介料を受け取りません",
+  ],
+  "taiji-souzoku-886jo-isanbunkatsu-shussei-mae-torikai": [
+    "民法第886条",
+    "民法第3条",
+    "民法第721条",
+    "民法第900条",
+    "民法第965条",
+    "既に生まれたものとみなす",
+    "死体で生まれたとき",
+    "相続税法第15条",
+    "別々にご契約",
+    "独立した事業体",
+    "別事業体",
+    "紹介料を受け取りません",
+  ],
 };
 
 /** 記事ごとに含めてはならない表現 */
@@ -3898,6 +3942,8 @@ const FORBIDDEN_PHRASES: Record<string, string[]> = {
   "souzoku-juho-token-shoji-kyoka-touroku-tetsuzuki": [],
   "zaigai-souzokunin-souzoku-houki-gentei-shonin-tetsuzuki": [],
   "jidosha-recycle-hikitori-furon-kaishu-gyo-touroku": [],
+  "fuzoku-eigyo-4go-5go-game-center-mahjong-kyoka-youken": [],
+  "taiji-souzoku-886jo-isanbunkatsu-shussei-mae-torikai": [],
 };
 
 /** 本セット外へ張る既存legalコラムslug（リポジトリの他シードで実在確認済み） */
@@ -7354,6 +7400,58 @@ const ARTICLES: Array<{
       "フロン類回収業",
       "登録",
       "許認可",
+      "行政書士",
+    ],
+  },
+  {
+    file: "139-fuzoku-eigyo-4go-5go-game-center-mahjong-kyoka-youken.md",
+    slug: "fuzoku-eigyo-4go-5go-game-center-mahjong-kyoka-youken",
+    date: "2026-10-28",
+    title:
+      "ゲームセンターやまあじゃん店の営業許可（風適法4号・5号）は何が要件？",
+    category: "許認可の手続き（行政書士の実務から）",
+    excerpt:
+      "ぱちんこ屋・まあじゃん屋（風営法第2条第1項第4号）やゲームセンター・アミューズメント施設（同項第5号）を営むには、営業の種別に応じて営業所ごとに都道府県公安委員会の許可が必要です（第3条第1項）。接待飲食の1号とは別の許可で、人的要件（第4条第1項の欠格事由）、場所的要件（第4条第2項第2号・保全対象施設からの距離）、構造設備の技術上の基準（第4条第2項第1号・施行規則第7条の照度10ルクス等）をすべて満たす必要があります。許可申請は行政書士、物件は不動産、図面は建築士、労務は社労士、処分への不服申立ては弁護士に分けて整理します。",
+    keywords: [
+      "風営法 4号 5号 許可 要件",
+      "ゲームセンター 営業許可 風営法第2条第1項第5号",
+      "ぱちんこ まあじゃん 許可 第4号 公安委員会",
+      "風俗営業 欠格事由 第4条第1項",
+      "保全対象施設 距離 施行令第6条 営業制限地域",
+      "遊技場 構造設備 照度 10ルクス 施行規則",
+    ],
+    tags: [
+      "風営法",
+      "風俗営業許可",
+      "ゲームセンター",
+      "ぱちんこ",
+      "許認可",
+      "行政書士",
+    ],
+  },
+  {
+    file: "140-taiji-souzoku-886jo-isanbunkatsu-shussei-mae-torikai.md",
+    slug: "taiji-souzoku-886jo-isanbunkatsu-shussei-mae-torikai",
+    date: "2026-10-28",
+    title:
+      "胎児に相続権はある？出生前の遺産分割はどう扱われるのか",
+    category: "相続の手続き（行政書士の実務から）",
+    excerpt:
+      "被相続人の死亡時に配偶者が妊娠していた場合、その胎児にも相続権があります（民法第886条第1項「胎児は、相続については、既に生まれたものとみなす。」）。ただし死体で生まれたとき（死産）は適用されません（同条第2項）。私権の享有は出生に始まる（民法第3条第1項）のが原則で、胎児は相続・遺贈（第965条）・損害賠償請求権（第721条）の例外です。実務では出生前は相続人の範囲が確定せず、遺産分割は出生後に行うのが一般的と整理されます。利害対立の遺産分割は弁護士、登記は司法書士、相続税の人数は税理士に分けて整理します。",
+    keywords: [
+      "胎児 相続権 民法第886条 既に生まれたものとみなす",
+      "胎児 遺産分割 出生前 停止条件説",
+      "死産 相続分 民法第886条第2項",
+      "胎児 法定相続分 民法第900条",
+      "胎児 相続税 基礎控除 法定相続人の数 相続税法第15条",
+      "胎児 特別代理人 民法第826条 家庭裁判所",
+    ],
+    tags: [
+      "相続",
+      "胎児",
+      "遺産分割",
+      "法定相続分",
+      "相続人の範囲",
       "行政書士",
     ],
   },

@@ -508,5 +508,98 @@ export const COLUMNS_AUTOPUBLISH_REVIEWS: readonly ColumnQualityReview[] = [
     },
     "reviewedAt": "2026-10-27",
     "validThrough": "2026-10-29"
+  },
+  {
+    "key": "realestate:souzoku-kyoyu-shidou-kussaku-shodaku-infra-hikikomi-baikyaku",
+    "fingerprint": "3f42e113294c178101bd8832e03b63d3b529a13809d5f4e8e9970537023d1470",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.moj.go.jp/content/001374239.pdf",
+        "checkedAt": "2026-10-28",
+        "relevantClaim": "法務省『複数の者が所有する私道の工事において必要な所有者の同意に関する研究報告書～所有者不明私道への対応ガイドライン～』第2版（令和4年6月、初版平成30年1月）。舗装補修＝保存行為、ライフライン引込等の多くは管理行為（過半数）、特別の影響は個別判断。版・発行月・区分整理を確認（PDFはバイナリのため機械抽出不可、法務省掲載情報と検索で内容裏取り）。",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/law/129AC0000000089",
+        "checkedAt": "2026-10-28",
+        "relevantClaim": "民法第251条（変更＝全員同意、2項＝所在等不明共有者除外の裁判）・第252条（1項過半数、2項、3項特別の影響、5項保存行為単独）・第262条の2/262条の3は令和3年法律第24号で新設、令和5年4月1日施行。e-GovはSPAで直接本文抽出不可だが、改正・施行日は複数資料で裏取り済みで本文表と一致。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/40742794028"
+    },
+    "reviewedAt": "2026-10-29",
+    "validThrough": "2026-10-31"
+  },
+  {
+    "key": "labor:ninteikodomoen-hoiku-kyoyu-shift-shakaihoken-roumu",
+    "fingerprint": "152cd664aafa868b6fd51ea1c82108e4f8f89265786674896dfc8b39c149ef46",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.cfa.go.jp/policies/hoiku/hoikushi-shikaku-tokurei",
+        "checkedAt": "2026-10-28",
+        "relevantClaim": "幼稚園教諭免許状・保育士資格の特例は令和6年改正で令和11年度末（≒2030年3月）まで延長。本文の保育教諭等特例の期限と一致（こども家庭庁go.jpを直接読取り）。主幹・指導保育教諭の令和8年度末はhoyokyo（こども家庭庁資料）・文科省資料で裏取り。",
+        "verified": true
+      },
+      {
+        "url": "https://www.nenkin.go.jp/oshirase/taisetu/jigyosho/2026/202610/100104.html",
+        "checkedAt": "2026-10-28",
+        "relevantClaim": "短時間労働者の賃金要件（月8.8万円）は令和7年年金制度改正法（令和7年法律第74号）により2026年10月1日撤廃。残る要件は週20時間以上・学生でない・企業規模51人以上。本文と一致（日本年金機構go.jpを直接読取り）。企業規模51→36人（2027年10月）は検索で裏取り。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/40742794028"
+    },
+    "reviewedAt": "2026-10-29",
+    "validThrough": "2026-10-31"
+  },
+  {
+    "key": "labor:nii-ijo-jigyosho-kinmu-todoke-yakuin-tanjikan-shaho",
+    "fingerprint": "007e059af6fff1615e3c406a7007d88d2a049077bbb327c40b57fe09324fb033",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.nenkin.go.jp/oshirase/taisetu/jigyosho/2026/202610/100104.html",
+        "checkedAt": "2026-10-28",
+        "relevantClaim": "二以上事業所勤務の前提となる短時間労働者要件・賃金要件（8.8万円）2026年10月1日撤廃・企業規模51人以上を確認（go.jp直接読取り）。届出10日以内・本人提出・標準報酬合算・保険料按分は日本年金機構の手続案内で裏取り。健保法施行規則第1条の3・第2条の条番号はe-Gov(SPA)で直接確定不可だが標準的手続と整合。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/40742794028"
+    },
+    "reviewedAt": "2026-10-29",
+    "validThrough": "2026-10-31"
   }
 ];

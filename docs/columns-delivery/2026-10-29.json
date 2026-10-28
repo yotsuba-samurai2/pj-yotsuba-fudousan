@@ -1,0 +1,110 @@
+{
+  "todayJst": "2026-10-29",
+  "runUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/40742794028",
+  "generationStatus": "validated",
+  "generatedCount": 6,
+  "reviewResult": "success",
+  "reviewReportAvailable": true,
+  "reviewPass": true,
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "minor": 2
+  },
+  "reviewFindings": [
+    {
+      "file": "scripts/legal-columns/139-fuzoku-eigyo-4go-5go-game-center-mahjong-kyoka-youken.md",
+      "severity": "minor",
+      "issue": "照度基準の根拠を「施行規則第7条」としているが、直接の一次読取り（e-GovはSPAで本文抽出不可）で条番号を確定できず、資料により第6条とするものもある。照度『10ルクス以下とならないための構造・設備』という実質基準自体は神奈川県警（lg.jp）および規則文言で確認済みで正しい。",
+      "fix": "公開前に現行の風営法施行規則をe-Govで直接参照し、4号・5号の構造設備技術基準（照度）の条番号が第7条で正しいか最終確認する。実質内容は正確なため本文修正は不要の可能性が高い。"
+    },
+    {
+      "file": "scripts/legal-columns/en/139-fuzoku-eigyo-4go-5go-game-center-mahjong-kyoka-youken.md",
+      "severity": "minor",
+      "issue": "souzoku/legal系の翻訳（139・140の en/zh-tw/zh）は内部リンクをロケール前置なしの絶対URL（例 https://luck428.com/legal/nagare）で出力している。realestate翻訳（/en/・/zh-tw/・/zh/前置）および labor翻訳（/en/labor/…）とは規約が異なる。翻訳本文の主張一致には影響しないが、英語・中国語読者のリンク先が日本語ページ階層へ解決する懸念がある。",
+      "fix": "legalサイトのURL規約（ロケール前置の要否）を確認し、翻訳の内部リンク規約が意図どおりか seed バリデータ側で検証する。内容審査上の欠陥ではないためブロッキングではない。"
+    }
+  ],
+  "registeredCount": 3,
+  "qualityEligibleCount": 3,
+  "heldCount": 3,
+  "scheduledCount": 0,
+  "unverifiedSourceCount": 0,
+  "publishedCount": null,
+  "articles": [
+    {
+      "key": "realestate:jido-hattatsu-shien-bukken-youto-chiiki-shidou-kunren-shitsu",
+      "fingerprint": "535828e8cb6b18e874c20a329852ee7c7d421b6b6b35378505644020eeebc067",
+      "title": "児童発達支援（未就学・多機能型）の物件は用途地域と指導訓練室で決まる？",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録です",
+        "確認済みの公的な一次根拠が不足しています"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "realestate:souzoku-kyoyu-shidou-kussaku-shodaku-infra-hikikomi-baikyaku",
+      "fingerprint": "3f42e113294c178101bd8832e03b63d3b529a13809d5f4e8e9970537023d1470",
+      "title": "相続した家の前面が共有私道だと、売却前に掘削承諾がいるのはなぜ？",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:fuzoku-eigyo-4go-5go-game-center-mahjong-kyoka-youken",
+      "fingerprint": "5e395ca4f7ebfcd87d1119972a835f5daebe1e57dbbd02efb98ae6b16804b8a0",
+      "title": "ゲームセンターやまあじゃん店の営業許可（風適法4号・5号）は何が要件？",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です",
+        "確認済みの公的な一次根拠が不足しています"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:taiji-souzoku-886jo-isanbunkatsu-shussei-mae-torikai",
+      "fingerprint": "ce3450a5fc36e22625d2d32d560089fa55eb2bc07def90637fd27049ac1e982d",
+      "title": "胎児に相続権はある？出生前の遺産分割はどう扱われるのか",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:ninteikodomoen-hoiku-kyoyu-shift-shakaihoken-roumu",
+      "fingerprint": "152cd664aafa868b6fd51ea1c82108e4f8f89265786674896dfc8b39c149ef46",
+      "title": "認定こども園の保育教諭、シフトと社会保険の線引きはどうする？",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:nii-ijo-jigyosho-kinmu-todoke-yakuin-tanjikan-shaho",
+      "fingerprint": "007e059af6fff1615e3c406a7007d88d2a049077bbb327c40b57fe09324fb033",
+      "title": "複数の会社で働く・役員を兼ねると社会保険はどうなりますか？（二以上事業所勤務届）",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    }
+  ]
+}

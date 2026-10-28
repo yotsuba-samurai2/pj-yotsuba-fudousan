@@ -1,107 +1,108 @@
 {
-  "todayJst": "2026-10-28",
-  "runUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/40553875873",
+  "todayJst": "2026-10-29",
+  "runUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/40742794028",
   "generationStatus": "validated",
   "generatedCount": 6,
   "reviewResult": "success",
   "reviewReportAvailable": true,
-  "reviewPass": false,
+  "reviewPass": true,
   "findings": {
-    "blocker": 1,
+    "blocker": 0,
     "major": 0,
-    "minor": 0
+    "minor": 2
   },
   "reviewFindings": [
     {
-      "file": "scripts/realestate-columns/144-hikyojusha-chuka-owner-minpaku-jutaku-shukuhaku-kanri-itaku.md",
-      "severity": "blocker",
-      "issue": "住宅宿泊事業法第11条第1項第1号の委託義務の閾値を誤記。本文は『国土交通省令・厚生労働省令で定める居室数（住宅宿泊事業法施行規則で6室）を超えるとき』とするが、観光庁の公式ページ（host/entrust.html）および施行規則第9条では、省令で定める居室の数は『5』であり、委託義務は居室数が5を超える場合（＝6室以上）に生じる。本文の数字は省令値・閾値とも誤り（6室の家主居住型物件を委託不要と誤認させる）。en（『six rooms under the enforcement regulation』）・zh-tw・zh（『施行規則定為6室』）も同一の誤りを転写している。",
-      "fix": "省令の居室数は『5』、委託義務は居室数が5を超える（6室以上）ときと訂正し、4言語すべてを同期。出典としても観光庁の該当ページで数値を確認する。（審査者はファイルを変更しないため、生成担当が修正すること）"
+      "file": "scripts/legal-columns/139-fuzoku-eigyo-4go-5go-game-center-mahjong-kyoka-youken.md",
+      "severity": "minor",
+      "issue": "照度基準の根拠を「施行規則第7条」としているが、直接の一次読取り（e-GovはSPAで本文抽出不可）で条番号を確定できず、資料により第6条とするものもある。照度『10ルクス以下とならないための構造・設備』という実質基準自体は神奈川県警（lg.jp）および規則文言で確認済みで正しい。",
+      "fix": "公開前に現行の風営法施行規則をe-Govで直接参照し、4号・5号の構造設備技術基準（照度）の条番号が第7条で正しいか最終確認する。実質内容は正確なため本文修正は不要の可能性が高い。"
+    },
+    {
+      "file": "scripts/legal-columns/en/139-fuzoku-eigyo-4go-5go-game-center-mahjong-kyoka-youken.md",
+      "severity": "minor",
+      "issue": "souzoku/legal系の翻訳（139・140の en/zh-tw/zh）は内部リンクをロケール前置なしの絶対URL（例 https://luck428.com/legal/nagare）で出力している。realestate翻訳（/en/・/zh-tw/・/zh/前置）および labor翻訳（/en/labor/…）とは規約が異なる。翻訳本文の主張一致には影響しないが、英語・中国語読者のリンク先が日本語ページ階層へ解決する懸念がある。",
+      "fix": "legalサイトのURL規約（ロケール前置の要否）を確認し、翻訳の内部リンク規約が意図どおりか seed バリデータ側で検証する。内容審査上の欠陥ではないためブロッキングではない。"
     }
   ],
-  "registeredCount": 0,
-  "qualityEligibleCount": 0,
-  "heldCount": 6,
+  "registeredCount": 3,
+  "qualityEligibleCount": 3,
+  "heldCount": 3,
   "scheduledCount": 0,
   "unverifiedSourceCount": 0,
   "publishedCount": null,
   "articles": [
     {
-      "key": "realestate:hikyojusha-chuka-owner-minpaku-jutaku-shukuhaku-kanri-itaku",
-      "fingerprint": "993ed4edfb49181b2e19958982a343add45e2a8342996e0bc4407f8f5b39e402",
-      "title": "非居住の中国語オーナーが保有物件を民泊にするとき、不在のまま届出と管理はどうしますか？",
+      "key": "realestate:jido-hattatsu-shien-bukken-youto-chiiki-shidou-kunren-shitsu",
+      "fingerprint": "535828e8cb6b18e874c20a329852ee7c7d421b6b6b35378505644020eeebc067",
+      "title": "児童発達支援（未就学・多機能型）の物件は用途地域と指導訓練室で決まる？",
       "registered": false,
       "state": "held",
       "reasons": [
         "公開レビュー記録が未登録です",
-        "候補指紋と修正後原稿が一致しません",
-        "独立レビューの証跡不足、重複、またはレビュー後の原稿変更"
+        "確認済みの公的な一次根拠が不足しています"
       ],
       "sourceFailures": [],
       "sourceEvidenceAvailable": true
     },
     {
-      "key": "realestate:hozei-zochijo-souko-bukken-youken-yunyu",
-      "fingerprint": "a152dfe0d06b19c332d39225dedeb6f817889de006993c61800cddede96093e5",
-      "title": "輸入した貨物を関税前に置く「保税蔵置場」にできる倉庫物件の条件は？",
+      "key": "realestate:souzoku-kyoyu-shidou-kussaku-shodaku-infra-hikikomi-baikyaku",
+      "fingerprint": "3f42e113294c178101bd8832e03b63d3b529a13809d5f4e8e9970537023d1470",
+      "title": "相続した家の前面が共有私道だと、売却前に掘削承諾がいるのはなぜ？",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:fuzoku-eigyo-4go-5go-game-center-mahjong-kyoka-youken",
+      "fingerprint": "5e395ca4f7ebfcd87d1119972a835f5daebe1e57dbbd02efb98ae6b16804b8a0",
+      "title": "ゲームセンターやまあじゃん店の営業許可（風適法4号・5号）は何が要件？",
       "registered": false,
       "state": "held",
       "reasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
         "公開レビュー記録が未登録です",
-        "独立レビューに未解決の重大な指摘があります"
+        "確認済みの公的な一次根拠が不足しています"
       ],
       "sourceFailures": [],
       "sourceEvidenceAvailable": true
     },
     {
-      "key": "legal:zaigai-souzokunin-souzoku-houki-gentei-shonin-tetsuzuki",
-      "fingerprint": "055d6ca71aacd23fcac62ec3b5fc397b87cbde1d287c68931f0abf13bde9f013",
-      "title": "海外に住む相続人が日本の相続を放棄するには｜在外からの申述と3か月の起算",
+      "key": "legal:taiji-souzoku-886jo-isanbunkatsu-shussei-mae-torikai",
+      "fingerprint": "ce3450a5fc36e22625d2d32d560089fa55eb2bc07def90637fd27049ac1e982d",
+      "title": "胎児に相続権はある？出生前の遺産分割はどう扱われるのか",
       "registered": false,
       "state": "held",
       "reasons": [
-        "公開レビュー記録が未登録です",
-        "独立レビューに未解決の重大な指摘があります"
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です"
       ],
       "sourceFailures": [],
       "sourceEvidenceAvailable": true
     },
     {
-      "key": "legal:jidosha-recycle-hikitori-furon-kaishu-gyo-touroku",
-      "fingerprint": "dcca071a9ed6db41b35af7228315b9d2d50eb25f1282b1995bb89d8a30bcd768",
-      "title": "引取業・フロン類回収業の登録とは｜自動車リサイクル法の要件と流れ",
-      "registered": false,
-      "state": "held",
-      "reasons": [
-        "公開レビュー記録が未登録です",
-        "独立レビューに未解決の重大な指摘があります"
-      ],
+      "key": "labor:ninteikodomoen-hoiku-kyoyu-shift-shakaihoken-roumu",
+      "fingerprint": "152cd664aafa868b6fd51ea1c82108e4f8f89265786674896dfc8b39c149ef46",
+      "title": "認定こども園の保育教諭、シフトと社会保険の線引きはどうする？",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
       "sourceFailures": [],
       "sourceEvidenceAvailable": true
     },
     {
-      "key": "labor:tokutei-ginou-tenshoku-tenseki-shakaihoken-koyohoken-hikitsugi",
-      "fingerprint": "caa21c3e6e4cf1b101ffed44b8c4dc1351d9ad4581539fa0060ed742cac702c1",
-      "title": "特定技能の外国人が転職するとき、社会保険と雇用保険の手続はどう引き継ぎますか？",
-      "registered": false,
-      "state": "held",
-      "reasons": [
-        "公開レビュー記録が未登録です",
-        "独立レビューに未解決の重大な指摘があります"
-      ],
-      "sourceFailures": [],
-      "sourceEvidenceAvailable": true
-    },
-    {
-      "key": "labor:golf-jo-caddy-gyomuitaku-roudoushasei-henkei-roudoujikan",
-      "fingerprint": "1764f04d6cc4487c37c4bb975580591622b004f422b0aee27b06ac3b8ee7c87b",
-      "title": "ゴルフ場のキャディを業務委託にできますか？手待ち時間や季節変動はどう扱いますか？",
-      "registered": false,
-      "state": "held",
-      "reasons": [
-        "公開レビュー記録が未登録です",
-        "独立レビューに未解決の重大な指摘があります"
-      ],
+      "key": "labor:nii-ijo-jigyosho-kinmu-todoke-yakuin-tanjikan-shaho",
+      "fingerprint": "007e059af6fff1615e3c406a7007d88d2a049077bbb327c40b57fe09324fb033",
+      "title": "複数の会社で働く・役員を兼ねると社会保険はどうなりますか？（二以上事業所勤務届）",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
       "sourceFailures": [],
       "sourceEvidenceAvailable": true
     }
