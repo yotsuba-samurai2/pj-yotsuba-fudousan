@@ -1189,6 +1189,22 @@ const REQUIRED_HUB_LINKS: Record<string, string[]> = {
     "/legal/column/houtei-souzoku-bun",
     "/legal/column/souzoku-hajime-koseki-chosa-bunkyo",
   ],
+  "fuzoku-eigyo-5go-game-center-amusement-kyoka-youken-nagare": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/fuzoku-eigyo-4go-5go-game-center-mahjong-kyoka-youken",
+    "/legal/column/fuzoku-eigyo-1go-settai-inshoku-kyoka-bukken-kyori",
+    "/legal/column/shinya-shurui-teikyo-todokede-yoken",
+  ],
+  "souzokubun-torimodoshiken-minpo-905jo-daisansha-joto": [
+    "/legal/services/inheritance",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/souzoku",
+    "/legal/column/souzokubun-joto-tokubetsu-jueki-shomei",
+    "/legal/column/isan-bunkatsu-kyougisho",
+  ],
 };
 
 /** 表示コンプライアンス上の禁止語 */
@@ -3763,6 +3779,32 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "別事業体",
     "紹介料を受け取りません",
   ],
+  "fuzoku-eigyo-5go-game-center-amusement-kyoka-youken-nagare": [
+    "風俗営業等の規制及び業務の適正化等に関する法律",
+    "第2条第1項第5号",
+    "第3条第1項",
+    "第4条第1項",
+    "第4条第2項",
+    "第22条第1項第5号",
+    "標準処理期間",
+    "別々にご契約",
+    "独立した事業体",
+    "別事業体",
+    "紹介料を受け取りません",
+  ],
+  "souzokubun-torimodoshiken-minpo-905jo-daisansha-joto": [
+    "民法第905条",
+    "価額及び費用を償還",
+    "一箇月",
+    "遺産の分割前",
+    "共同相続人",
+    "形成権",
+    "民法第909条の2",
+    "別々にご契約",
+    "独立した事業体",
+    "別事業体",
+    "紹介料を受け取りません",
+  ],
 };
 
 /** 記事ごとに含めてはならない表現 */
@@ -3944,6 +3986,8 @@ const FORBIDDEN_PHRASES: Record<string, string[]> = {
   "jidosha-recycle-hikitori-furon-kaishu-gyo-touroku": [],
   "fuzoku-eigyo-4go-5go-game-center-mahjong-kyoka-youken": [],
   "taiji-souzoku-886jo-isanbunkatsu-shussei-mae-torikai": [],
+  "fuzoku-eigyo-5go-game-center-amusement-kyoka-youken-nagare": [],
+  "souzokubun-torimodoshiken-minpo-905jo-daisansha-joto": [],
 };
 
 /** 本セット外へ張る既存legalコラムslug（リポジトリの他シードで実在確認済み） */
@@ -7452,6 +7496,58 @@ const ARTICLES: Array<{
       "遺産分割",
       "法定相続分",
       "相続人の範囲",
+      "行政書士",
+    ],
+  },
+  {
+    file: "141-fuzoku-eigyo-5go-game-center-amusement-kyoka-youken-nagare.md",
+    slug: "fuzoku-eigyo-5go-game-center-amusement-kyoka-youken-nagare",
+    date: "2026-10-29",
+    title:
+      "ゲームセンターの風営法5号許可—構造設備・距離制限と申請の流れ",
+    category: "許認可の手続き（行政書士の実務から）",
+    excerpt:
+      "クレーンゲーム機や遊技機を置くゲームセンター・アミューズメント施設は、風営法第2条第1項第5号の風俗営業にあたり、第3条第1項により営業所ごとに都道府県公安委員会の許可が必要です。許可には人的要件（第4条第1項の欠格事由）、場所的要件（第4条第2項第2号・保全対象施設からの距離）、構造設備の技術上の基準（第4条第2項第1号・施行規則第7条の照度10ルクス等）をすべて満たすことが要り、申請書と図面を所轄警察署を経て提出し審査と実地調査を受けます。16歳未満・18歳未満の立入り（第22条第1項第5号）など営業時の順守事項、許可は行政書士、物件は不動産、図面は建築士、労務は社労士、処分への不服申立ては弁護士に分けて整理します。",
+    keywords: [
+      "ゲームセンター 風営法 5号 許可 要件",
+      "アミューズメント施設 風俗営業 第2条第1項第5号",
+      "風俗営業許可 申請 流れ 公安委員会 添付書類",
+      "保全対象施設 距離 施行令第6条 営業制限地域",
+      "ゲームセンター 16歳未満 18歳未満 立入り 午後10時 第22条",
+      "遊技場 構造設備 照度 10ルクス 標準処理期間",
+    ],
+    tags: [
+      "風営法",
+      "風俗営業許可",
+      "ゲームセンター",
+      "アミューズメント",
+      "許認可",
+      "行政書士",
+    ],
+  },
+  {
+    file: "142-souzokubun-torimodoshiken-minpo-905jo-daisansha-joto.md",
+    slug: "souzokubun-torimodoshiken-minpo-905jo-daisansha-joto",
+    date: "2026-10-29",
+    title:
+      "相続分を第三者に譲渡されたら—民法905条の取戻権と1か月の期限",
+    category: "相続の手続き（行政書士の実務から）",
+    excerpt:
+      "共同相続人の一人が遺産分割の前に相続分を第三者（買取業者など）へ譲り渡し、見知らぬ人が分割協議に入ってきた場合、他の共同相続人は、その価額及び費用を償還してその相続分を取り戻せます（民法第905条第1項）。ただしこの取戻権は一箇月以内に行使しなければなりません（同条第2項）。取戻権の要件・行使できる人、起算点と期間制限、償還する価額と費用の考え方を整理し、取戻しの意思表示や価額をめぐる争いは弁護士、登記は司法書士、相続税は税理士に分けて示します。",
+    keywords: [
+      "相続分 取戻権 民法第905条 第三者 譲渡",
+      "相続分譲渡 取り戻し 一箇月 価額及び費用を償還",
+      "遺産分割前 相続分 第三者 買取業者 分割協議",
+      "相続分取戻権 形成権 共同相続人 行使",
+      "民法第909条の2 預貯金 払戻し 相続分 違い",
+      "相続分 譲渡 取戻し 期間制限 起算点",
+    ],
+    tags: [
+      "相続",
+      "相続分の取戻権",
+      "相続分の譲渡",
+      "遺産分割",
+      "民法905条",
       "行政書士",
     ],
   },

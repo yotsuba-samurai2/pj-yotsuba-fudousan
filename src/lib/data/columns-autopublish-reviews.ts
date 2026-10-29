@@ -601,5 +601,92 @@ export const COLUMNS_AUTOPUBLISH_REVIEWS: readonly ColumnQualityReview[] = [
     },
     "reviewedAt": "2026-10-29",
     "validThrough": "2026-10-31"
+  },
+  {
+    "key": "realestate:delivery-senmon-ghost-kitchen-bukken-youto-haisui-grease",
+    "fingerprint": "edd9417a4ea85aad1b33244dcce7ae7ff0a89f7e610130aed0798bd5bc41be70",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.mhlw.go.jp/content/000772316.pdf",
+        "checkedAt": "2026-10-29",
+        "relevantClaim": "食品衛生法施行令第35条の許可営業は32業種で飲食店営業は第1号。平成30年改正(令和3年6月1日全面施行)で34→32に再編、許可不要営業は届出制(第57条)を新設。本文の『第55条第1項=営業許可／施行令第35条第1号=飲食店営業／2018改正・令和3年6月1日・届出制』と一致。",
+        "verified": true
+      },
+      {
+        "url": "https://www.mlit.go.jp/sogoseisaku/kanminrenkei/content/001373094.pdf",
+        "checkedAt": "2026-10-29",
+        "relevantClaim": "建築基準法別表第二の用途制限。飲食店は第二種低層住居専用150㎡以下かつ2階以下、第一種中高層500㎡以下、第二種中高層1,500㎡以下、第一種住居3,000㎡以下、第一種低層は原則不可、工業専用は不可。本文の床面積表と一致(MLIT技術的助言資料で150/500/3,000を直接確認、1,500は別表第二の標準値)。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/40929412093"
+    },
+    "reviewedAt": "2026-10-30",
+    "validThrough": "2026-11-01"
+  },
+  {
+    "key": "labor:net-cafe-manga-kissa-24ji-kamin-shinya-warimashi-hitori-roumu",
+    "fingerprint": "dec10a529db641033f55a25fc926bdaebd18f9548bb2efedb5de3e910c627369",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.mhlw.go.jp/bunya/roudoukijun/faq_kijyunhou_25.html",
+        "checkedAt": "2026-10-29",
+        "relevantClaim": "厚労省。深夜業は午後10時〜翌午前5時で割増率は2割5分以上(労働基準法第37条)。法定時間外が深夜に及ぶと合計5割以上、法定休日(3割5分)が深夜に及ぶと合計6割以上、月60時間超は5割以上。本文の深夜割増・率の加算・60時間超5割と一致。大星ビル管理事件(最高裁一小平成14年2月28日)は仮眠時間の労働時間性に関する確立した判例で本文の整理と一致。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/40929412093"
+    },
+    "reviewedAt": "2026-10-30",
+    "validThrough": "2026-11-01"
+  },
+  {
+    "key": "labor:kojin-jigyo-hojinnari-shakaihoken-roudouhoken-kirikae-tetsuzuki",
+    "fingerprint": "a909bd181bf79c2ec923242010ae9639029ccf1a07bb4a30b1419e71eaca2109",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.nenkin.go.jp/service/kounen/tekiyo/jigyosho/20150311.html",
+        "checkedAt": "2026-10-29",
+        "relevantClaim": "日本年金機構。法人(株式会社等)の事業所は強制適用で、新規適用届は事実発生から5日以内に、被保険者資格取得届も5日以内に日本年金機構(年金事務所/事務センター)へ提出。本文の『法人は人数を問わず強制適用／新規適用届・資格取得届を事実発生から5日以内』と一致(健康保険法第3条第3項・厚生年金保険法第6条の強制適用、第31条・第10条の任意適用も整合)。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/40929412093"
+    },
+    "reviewedAt": "2026-10-30",
+    "validThrough": "2026-11-01"
   }
 ];

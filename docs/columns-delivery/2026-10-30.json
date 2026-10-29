@@ -1,0 +1,105 @@
+{
+  "todayJst": "2026-10-30",
+  "runUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/40929412093",
+  "generationStatus": "validated",
+  "generatedCount": 6,
+  "reviewResult": "success",
+  "reviewReportAvailable": true,
+  "reviewPass": true,
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "minor": 0
+  },
+  "reviewFindings": [],
+  "registeredCount": 3,
+  "qualityEligibleCount": 3,
+  "heldCount": 3,
+  "scheduledCount": 0,
+  "unverifiedSourceCount": 1,
+  "publishedCount": null,
+  "articles": [
+    {
+      "key": "realestate:delivery-senmon-ghost-kitchen-bukken-youto-haisui-grease",
+      "fingerprint": "edd9417a4ea85aad1b33244dcce7ae7ff0a89f7e610130aed0798bd5bc41be70",
+      "title": "デリバリー専門（ゴーストキッチン）の店舗物件を選ぶ前に確認する用途地域・排水・保健所の条件",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "realestate:souzoku-tokutei-akiya-kankoku-jutakuyochi-tokurei-baikyaku",
+      "fingerprint": "5fd578f1d8b5f454f578983214040c4e22191d72ea2a81184fbf483cd2b5b964",
+      "title": "相続した実家が特定空家の勧告を受けると固定資産税が上がる—住宅用地特例が外れる前の動き方",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録です",
+        "確認済みの公的な一次根拠が不足しています"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:fuzoku-eigyo-5go-game-center-amusement-kyoka-youken-nagare",
+      "fingerprint": "77e913b65c8ec150a81e73f4194e8c7f330a059a9146b82047785a5619c8f721",
+      "title": "ゲームセンターの風営法5号許可—構造設備・距離制限と申請の流れ",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です",
+        "確認済みの公的な一次根拠が不足しています"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:souzokubun-torimodoshiken-minpo-905jo-daisansha-joto",
+      "fingerprint": "3dd731aec0fcba73eff65d0f4267977b81154aecda794b3ae4acbf100763d6d4",
+      "title": "相続分を第三者に譲渡されたら—民法905条の取戻権と1か月の期限",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です",
+        "記事別の一次根拠・重複・法的事項・翻訳整合が未完了"
+      ],
+      "sourceFailures": [
+        {
+          "url": "https://laws.e-gov.go.jp/law/129AC0000000089",
+          "checkedAt": "2026-10-29",
+          "relevantClaim": "民法第905条第1項(相続分の取戻権・価額及び費用の償還)・第2項(一箇月の期間制限)・第909条の2(遺産分割前の預貯金債権の行使)。本文の引用はいずれも周知の条文内容と一致するが、e-Gov法令検索がクライアント描画のSPAのため条文テキストをgo.jpで直接読取れず、go.jp一次ページでの直接確認は未達(法務省・裁判所サイトも第905条を直接掲載せず)。",
+          "verified": false
+        }
+      ],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:net-cafe-manga-kissa-24ji-kamin-shinya-warimashi-hitori-roumu",
+      "fingerprint": "dec10a529db641033f55a25fc926bdaebd18f9548bb2efedb5de3e910c627369",
+      "title": "ネットカフェ・漫画喫茶の24時間運営の労務—仮眠時間は労働時間か、深夜割増と一人勤務の設計",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:kojin-jigyo-hojinnari-shakaihoken-roudouhoken-kirikae-tetsuzuki",
+      "fingerprint": "a909bd181bf79c2ec923242010ae9639029ccf1a07bb4a30b1419e71eaca2109",
+      "title": "個人事業を法人成りしたときの社会保険・労働保険の切替—強制適用への移行と従業員の手続",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    }
+  ]
+}

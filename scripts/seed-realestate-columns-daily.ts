@@ -3008,6 +3008,46 @@ const ARTICLES: ArticleSpec[] = [
     localesWithTranslations: ["en", "zh-tw", "zh"],
     hubLinks: ["/souzoku"],
   },
+  {
+    file: "148-delivery-senmon-ghost-kitchen-bukken-youto-haisui-grease.md",
+    slug: "delivery-senmon-ghost-kitchen-bukken-youto-haisui-grease",
+    title: "デリバリー専門（ゴーストキッチン）の店舗物件を選ぶ前に確認する用途地域・排水・保健所の条件",
+    publishedAt: "2026-10-29",
+    category: "投資・事業用不動産",
+    excerpt:
+      "イートインを持たない宅配・テイクアウト専業（ゴーストキッチン）でも、客に出す食品を調理するなら飲食店営業の許可が要り（食品衛生法第55条第1項・施行令第35条第1号）、物件選びでは用途地域・排水・保健所の施設基準の3点が先に効きます。用途地域は建築基準法第48条・別表第二で、飲食店は第一種低層住居専用地域では原則建てられず、第二種低層は150㎡以下、第一種中高層は500㎡以下、第二種中高層は1,500㎡以下、第一種住居は3,000㎡以下、工業専用地域では建てられません。東京都文京区の宅地建物取引士が、契約前に確認できることを条文と国の資料から整理します。",
+    keywords: [
+      "ゴーストキッチン 物件",
+      "デリバリー専門 飲食店 許可",
+      "飲食店営業許可 テイクアウト 保健所",
+      "厨房 排水 グリストラップ 下水道法",
+      "飲食店 用途地域 床面積 建築基準法",
+    ],
+    tags: ["事業用不動産", "許認可", "用途地域", "食品衛生法"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/toushi", "/office"],
+  },
+  {
+    file: "149-souzoku-tokutei-akiya-kankoku-jutakuyochi-tokurei-baikyaku.md",
+    slug: "souzoku-tokutei-akiya-kankoku-jutakuyochi-tokurei-baikyaku",
+    title: "相続した実家が特定空家の勧告を受けると固定資産税が上がる—住宅用地特例が外れる前の動き方",
+    publishedAt: "2026-10-29",
+    category: "相続",
+    excerpt:
+      "相続した実家が特定空家等の「勧告」を受けると、その敷地は固定資産税の住宅用地特例から外れ、翌年度の賦課期日（1月1日）から土地の税額が大きく上がります。段階は助言・指導（空家特措法第22条第1項）→勧告（第22条第2項）→命令（第22条第3項）→行政代執行（第22条第9項）と進み、税が変わる境目は勧告です。住宅用地特例（地方税法第349条の3の2）は小規模住宅用地200㎡以下で価格の6分の1、一般住宅用地で3分の1に軽くする仕組みで、勧告を受けた敷地は対象から外れます。東京都文京区の宅地建物取引士が、売る・解体する・活用するの判断材料を条文と国の指針から整理します。",
+    keywords: [
+      "特定空家 勧告 固定資産税",
+      "住宅用地特例 外れる 地方税法349条の3の2",
+      "管理不全空家 2023年改正 勧告",
+      "空き家 相続 売却 解体 更地",
+      "空家特措法 第22条 助言 指導 勧告 命令",
+    ],
+    tags: ["相続", "空き家", "特定空家", "固定資産税", "売却"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/souzoku"],
+  },
 ];
 
 function toPlainText(md: string): string {
