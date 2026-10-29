@@ -772,6 +772,9 @@ function TenantFooter({ businessKey }: { businessKey: string }) {
     businessKey === "legal" &&
     locale === "ja" &&
     ["/legal", "/legal/"].includes(normalizePath(pathname ?? "/"));
+  // カスタマープラスのバナー（2026-10-29 設置）も、いい相続と同じ3条件で /legal トップだけに出す。
+  // 浦松指示（2026-10-29）「行政書士のトップページの一番下のほうに貼る」。
+  const isCustomerPlusBannerVisible = isISozokuBadgeVisible;
 
   const footerSections: FooterSection[] = useMemo(() => {
     const defs = FOOTER_NAV_HREFS[businessKey] ?? [];
@@ -1059,24 +1062,58 @@ function TenantFooter({ businessKey }: { businessKey: string }) {
                 相談導線より前に外部サイトへの出口を置かない。先方PPTは位置・大きさを指定していない。
               ・rel は noopener のみ。nofollow を付けない（相互リンクの趣旨を損なうため）。
                 noreferrer も付けない（先方側で当サイトからの流入を計測できるようにするため）。 */}
-          {isISozokuBadgeVisible && (
-            <div className="mt-6">
-              <a
-                href="https://www.i-sozoku.com/detail/oid1000790/"
-                target="_blank"
-                rel="noopener"
-                className="inline-flex flex-col items-center gap-2 text-[11px] text-text-muted"
-              >
-                <img
-                  src="https://www.i-sozoku.com/wp-content/themes/i-sozoku/images/badge/keisai-white.png"
-                  alt="当事務所は「いい相続」に掲載されています"
-                  width={110}
-                  height={110}
-                  loading="lazy"
-                  decoding="async"
-                />
-                <span className="underline">当事務所は「いい相続」に掲載されています</span>
-              </a>
+          {(isISozokuBadgeVisible || isCustomerPlusBannerVisible) && (
+            <div className="mt-6 flex flex-wrap items-start gap-x-10 gap-y-6">
+              {isISozokuBadgeVisible && (
+                <a
+                  href="https://www.i-sozoku.com/detail/oid1000790/"
+                  target="_blank"
+                  rel="noopener"
+                  className="inline-flex flex-col items-center gap-2 text-[11px] text-text-muted"
+                >
+                  <img
+                    src="https://www.i-sozoku.com/wp-content/themes/i-sozoku/images/badge/keisai-white.png"
+                    alt="当事務所は「いい相続」に掲載されています"
+                    width={110}
+                    height={110}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span className="underline">当事務所は「いい相続」に掲載されています</span>
+                </a>
+              )}
+
+              {/* 株式会社カスタマープラス（東京のバーチャルオフィス・ginza-plus.net）との相互リンク
+                  ── 2026-10-08 業務提携に関する覚書（電子署名）。先方サイトに当事務所の特設ページ
+                  （/service/startup_support_yotsuba/）が 2026-10-29 に公開され、同日のメールで
+                  先方から「貴社HPへ弊社のバナー設置を」と依頼（画像URL・リンク先URLは先方指定）。
+                  ・リンク先＝先方指定の URL をそのまま使う（先方が設置確認に使う URL。
+                    2026-10-29 時点では /service/other/ng-registration/ へ 301 するが、転送先に
+                    書き換えない）。
+                  ・画像＝先方ホストの PNG を先方指定のまま参照する（いい相続と同じ扱い）。
+                    実寸 200×191px（ファイル名の 200_147 と実寸が違う。2026-10-29 実測）。
+                  ・キャプションに「業務提携先」と明記し、提携関係を伏せない。
+                  ・表示条件・配置・rel の考え方はいい相続と同じ（上の注記のとおり）。 */}
+              {isCustomerPlusBannerVisible && (
+                <a
+                  href="https://www.ginza-plus.net/others/ng-registration/"
+                  target="_blank"
+                  rel="noopener"
+                  className="inline-flex flex-col items-center gap-2 text-[11px] text-text-muted"
+                >
+                  <img
+                    src="https://www.hitodeki.com/campaign/img/200_147_cplus202205.png"
+                    alt="株式会社カスタマープラス（東京のバーチャルオフィス）"
+                    width={200}
+                    height={191}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span className="underline">
+                    業務提携先：株式会社カスタマープラス（東京のバーチャルオフィス）
+                  </span>
+                </a>
+              )}
             </div>
           )}
         </div>
