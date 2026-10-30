@@ -1205,6 +1205,22 @@ const REQUIRED_HUB_LINKS: Record<string, string[]> = {
     "/legal/column/souzokubun-joto-tokubetsu-jueki-shomei",
     "/legal/column/isan-bunkatsu-kyougisho",
   ],
+  "tabako-kouri-hanbai-kyoka-kyori-kijun-nagare": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/shurui-kouri-menkyo-tenpo-bukken-yoken",
+    "/legal/column/inshokuten-eigyo-kyoka-hokenjo-setsubi-kijun-shokuhin-eisei",
+    "/legal/column/shinya-shurui-teikyo-todokede-yoken",
+  ],
+  "chuka-taiwan-nihon-hojin-seisan-tettai-zairyu-touki": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/taiwan-kigyo-nihon-shiten-gaikoku-kaisha-touki",
+    "/legal/column/keieikanri-zairyu-chuka-kigyousha-kaisha-setsuritsu",
+    "/legal/column/keieikanri-koshin-jigyo-keizokusei-rissho-chuka-taiwan",
+  ],
 };
 
 /** 表示コンプライアンス上の禁止語 */
@@ -3805,6 +3821,29 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "別事業体",
     "紹介料を受け取りません",
   ],
+  "tabako-kouri-hanbai-kyoka-kyori-kijun-nagare": [
+    "たばこ事業法第22条",
+    "たばこ事業法第23条",
+    "たばこ事業法施行規則",
+    "財務大臣の許可",
+    "標準処理期間",
+    "別々にご契約",
+    "独立した事業体",
+    "別事業体",
+    "紹介料を受け取りません",
+  ],
+  "chuka-taiwan-nihon-hojin-seisan-tettai-zairyu-touki": [
+    "会社法第471条",
+    "会社法第475条",
+    "会社法第499条",
+    "官報",
+    "経営・管理",
+    "外国為替及び外国貿易法第55条",
+    "別々にご契約",
+    "独立した事業体",
+    "別事業体",
+    "紹介料を受け取りません",
+  ],
 };
 
 /** 記事ごとに含めてはならない表現 */
@@ -3988,6 +4027,8 @@ const FORBIDDEN_PHRASES: Record<string, string[]> = {
   "taiji-souzoku-886jo-isanbunkatsu-shussei-mae-torikai": [],
   "fuzoku-eigyo-5go-game-center-amusement-kyoka-youken-nagare": [],
   "souzokubun-torimodoshiken-minpo-905jo-daisansha-joto": [],
+  "tabako-kouri-hanbai-kyoka-kyori-kijun-nagare": [],
+  "chuka-taiwan-nihon-hojin-seisan-tettai-zairyu-touki": [],
 };
 
 /** 本セット外へ張る既存legalコラムslug（リポジトリの他シードで実在確認済み） */
@@ -7548,6 +7589,58 @@ const ARTICLES: Array<{
       "相続分の譲渡",
       "遺産分割",
       "民法905条",
+      "行政書士",
+    ],
+  },
+  {
+    file: "143-tabako-kouri-hanbai-kyoka-kyori-kijun-nagare.md",
+    slug: "tabako-kouri-hanbai-kyoka-kyori-kijun-nagare",
+    date: "2026-10-30",
+    title:
+      "たばこ小売販売業の許可—距離基準・取扱予定高と申請の流れ",
+    category: "許認可の手続き（行政書士の実務から）",
+    excerpt:
+      "製造たばこの小売販売を業として行うには、営業所ごとに財務大臣の許可が必要です（たばこ事業法第22条第1項）。審査では、営業所の位置＝最寄りの既存販売店との距離（距離基準・施行規則第20条＝25メートルから300メートルの範囲内で財務大臣が定める距離）と、取扱いの予定高（取扱予定高基準・施行規則第21条＝標準月4万本）が中心に見られます。申請書は予定営業所の最寄りの日本たばこ産業（JT）の支社へ提出し、標準処理期間は申請書を受理した日の属する月の末日から2月以内、許可後は登録免許税15,000円が必要です。自動販売機・コンビニ併設の扱い、許可は行政書士、物件は不動産、設立登記は司法書士、税務は税理士に分けて整理します。",
+    keywords: [
+      "たばこ小売販売業 許可 距離基準 取扱予定高",
+      "たばこ事業法第22条 財務大臣 許可 営業所ごと",
+      "たばこ小売 距離基準 25メートル 300メートル 施行規則第20条",
+      "たばこ 取扱予定高 標準 月4万本 施行規則第21条",
+      "たばこ小売販売業 申請 JT 支社 標準処理期間 2月",
+      "たばこ 自動販売機 コンビニ併設 登録免許税 15000円",
+    ],
+    tags: [
+      "たばこ事業法",
+      "たばこ小売販売業許可",
+      "距離基準",
+      "取扱予定高",
+      "許認可",
+      "行政書士",
+    ],
+  },
+  {
+    file: "144-chuka-taiwan-nihon-hojin-seisan-tettai-zairyu-touki.md",
+    slug: "chuka-taiwan-nihon-hojin-seisan-tettai-zairyu-touki",
+    date: "2026-10-30",
+    title:
+      "中国・台湾企業が日本法人をたたむとき—解散・清算・撤退の在留資格と送金",
+    category: "許認可の手続き（行政書士の実務から）",
+    excerpt:
+      "中国・台湾企業が日本子会社をたたむときは、株主総会の解散決議から清算人による清算、債権者への官報公告と各別の催告（期間は2箇月を下ることができない）、残余財産の確定・分配、清算結了までを順に進めます（会社法第471条・第475条・第499条・第507条）。経営・管理の在留資格で来日した経営者は、会社の清算で在留資格の基盤が失われるため、変更か出国準備への切替えを入管が審査します。残余財産の本国送金には法人税の清算申告と、外国為替及び外国貿易法第55条の支払等の報告が関わります。清算登記は司法書士、在留資格・廃止届は行政書士、税務は税理士、送金は金融機関に分けて整理します。",
+    keywords: [
+      "日本法人 解散 清算 撤退 中国 台湾 企業",
+      "会社法第471条 解散 第499条 官報 公告 債権者 催告",
+      "経営・管理 在留資格 撤退 出国準備 特定活動 入管",
+      "清算 残余財産 送金 本国 法人税 清算確定申告",
+      "外国為替及び外国貿易法第55条 支払等の報告 対外送金",
+      "日本子会社 撤退 清算結了 登記 司法書士 税理士",
+    ],
+    tags: [
+      "会社法",
+      "解散・清算",
+      "経営・管理",
+      "在留資格",
+      "対外送金",
       "行政書士",
     ],
   },

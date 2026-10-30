@@ -1,0 +1,100 @@
+{
+  "todayJst": "2026-10-31",
+  "runUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/41102170285",
+  "generationStatus": "validated",
+  "generatedCount": 6,
+  "reviewResult": "success",
+  "reviewReportAvailable": true,
+  "reviewPass": true,
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "minor": 0
+  },
+  "reviewFindings": [],
+  "registeredCount": 2,
+  "qualityEligibleCount": 2,
+  "heldCount": 4,
+  "scheduledCount": 0,
+  "unverifiedSourceCount": 0,
+  "publishedCount": null,
+  "articles": [
+    {
+      "key": "realestate:kaigotsuki-yuryo-home-tokutei-shisetsu-bukken-youken",
+      "fingerprint": "f230e1a27a0ea91496f7acf0f70a015698563d05e73ecbc32fb1fd9cdde4893e",
+      "title": "介護付き有料老人ホーム（特定施設）の物件要件は？居室面積・耐火・総量規制",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録です",
+        "確認済みの公的な一次根拠が不足しています"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "realestate:souzoku-kaimodoshi-tokuyaku-karitouki-massho-baikyaku",
+      "fingerprint": "1ddc9d0f4e1a2396ec99214742b1cc2be822c73a0b9f0745946fbae1e2ec1dbb",
+      "title": "相続した土地に残る買戻特約・所有権移転請求権仮登記を抹消して売る流れ",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録です",
+        "確認済みの公的な一次根拠が不足しています"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:tabako-kouri-hanbai-kyoka-kyori-kijun-nagare",
+      "fingerprint": "1391dce4044b36d8d526796e00fc9077140fc8539d03d6a6df19d628e62e69cf",
+      "title": "たばこ小売販売業の許可—距離基準・取扱予定高と申請の流れ",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:chuka-taiwan-nihon-hojin-seisan-tettai-zairyu-touki",
+      "fingerprint": "1bf8b10cfdc82ba217d76a587de370ee07051807afe6ffa7ffc1f2b7edef077d",
+      "title": "中国・台湾企業が日本法人をたたむとき—解散・清算・撤退の在留資格と送金",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です",
+        "確認済みの公的な一次根拠が不足しています"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:tokutei-ginou-kensetsu-ukeire-roumu-gekkyu-ccus",
+      "fingerprint": "362f8ff457ca7d4f4ccf4bd98fd4ca0d39850b350b125cdd3c8b682977d72af5",
+      "title": "特定技能「建設」の受入れ労務—月給制の義務と建設キャリアアップシステム（CCUS）",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:roudousha-kyodo-kumiai-kumiaiin-roudo-keiyaku-shaho",
+      "fingerprint": "2da6eca2c830a7f08e9a8efbd374816c1756e1c4a33f5b50eea8c85b16a4a25e",
+      "title": "労働者協同組合の組合員は労働契約も結ぶ？社会保険と移行時の労務",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    }
+  ]
+}

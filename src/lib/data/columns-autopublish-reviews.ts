@@ -688,5 +688,71 @@ export const COLUMNS_AUTOPUBLISH_REVIEWS: readonly ColumnQualityReview[] = [
     },
     "reviewedAt": "2026-10-30",
     "validThrough": "2026-11-01"
+  },
+  {
+    "key": "labor:tokutei-ginou-kensetsu-ukeire-roumu-gekkyu-ccus",
+    "fingerprint": "362f8ff457ca7d4f4ccf4bd98fd4ca0d39850b350b125cdd3c8b682977d72af5",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.mlit.go.jp/common/001301477.pdf",
+        "checkedAt": "2026-10-30",
+        "relevantClaim": "建設分野は在留諸申請前に国土交通大臣の「建設特定技能受入計画」の認定が必要で、同等以上の報酬・月給制、受入企業と技能者のCCUS登録、JAC加入、建設業許可、1号特定技能外国人の数が常勤職員の総数以下であること等が認定基準、という本文の記述を国交省資料で確認。",
+        "verified": true
+      },
+      {
+        "url": "https://www.mlit.go.jp/report/press/totikensangyo14_hh_000852.html",
+        "checkedAt": "2026-10-30",
+        "relevantClaim": "建設特定技能受入計画の国土交通大臣認定の仕組み（受入企業が報酬額等を記載した計画について適当である旨の認定を受ける）を確認。入管法第2条の5・特定技能基準省令の同等報酬要件と整合。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/41102170285"
+    },
+    "reviewedAt": "2026-10-31",
+    "validThrough": "2026-11-02"
+  },
+  {
+    "key": "labor:roudousha-kyodo-kumiai-kumiaiin-roudo-keiyaku-shaho",
+    "fingerprint": "2da6eca2c830a7f08e9a8efbd374816c1756e1c4a33f5b50eea8c85b16a4a25e",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.roukyouhou.mhlw.go.jp/faq_detail/%E7%8F%BE%E3%81%AB%E6%B4%BB%E5%8B%95%E3%81%99%E3%82%8B%E4%BC%81%E6%A5%AD%E7%B5%84%E5%90%88%E5%8F%88%E3%81%AFnpo%E6%B3%95%E4%BA%BA%E3%81%AB%E8%AA%8D%E3%82%81%E3%82%89%E3%82%8C%E3%81%A6%E3%81%84",
+        "checkedAt": "2026-10-30",
+        "relevantClaim": "労働者協同組合法附則第4条の組織変更特例は法施行日から3年以内に限られる、という本文の記述を厚労省ポータルで直接確認。施行日2022年10月1日＋3年＝令和7年（2025年）9月30日で受付終了という本文の結論と整合。",
+        "verified": true
+      },
+      {
+        "url": "https://www.roukyouhou.mhlw.go.jp/page/9",
+        "checkedAt": "2026-10-30",
+        "relevantClaim": "厚労省ポータルが「企業組合・NPO法人から労働者協同組合への組織変更の期限は令和7年9月30日です」と明示しており、本記事が特例は既に終了していると記述している点が正確であることを確認。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/41102170285"
+    },
+    "reviewedAt": "2026-10-31",
+    "validThrough": "2026-11-02"
   }
 ];
