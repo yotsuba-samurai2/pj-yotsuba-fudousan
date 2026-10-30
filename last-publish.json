@@ -1,34 +1,34 @@
 {
   "dryRun": false,
-  "runAt": "2026-10-29T09:12:53.901Z",
-  "todayJst": "2026-10-29",
+  "runAt": "2026-10-30T09:26:41.636Z",
+  "todayJst": "2026-10-30",
   "targets": [
     {
-      "key": "labor:nii-ijo-jigyosho-kinmu-todoke-yakuin-tanjikan-shaho",
+      "key": "labor:kojin-jigyo-hojinnari-shakaihoken-roudouhoken-kirikae-tetsuzuki",
       "business": "labor",
-      "slug": "nii-ijo-jigyosho-kinmu-todoke-yakuin-tanjikan-shaho",
-      "title": "複数の会社で働く・役員を兼ねると社会保険はどうなりますか？（二以上事業所勤務届）",
-      "date": "2026-10-28",
+      "slug": "kojin-jigyo-hojinnari-shakaihoken-roudouhoken-kirikae-tetsuzuki",
+      "title": "個人事業を法人成りしたときの社会保険・労働保険の切替—強制適用への移行と従業員の手続",
+      "date": "2026-10-29",
       "category": "社会保険",
-      "path": "/labor/column/nii-ijo-jigyosho-kinmu-todoke-yakuin-tanjikan-shaho"
+      "path": "/labor/column/kojin-jigyo-hojinnari-shakaihoken-roudouhoken-kirikae-tetsuzuki"
     },
     {
-      "key": "labor:ninteikodomoen-hoiku-kyoyu-shift-shakaihoken-roumu",
+      "key": "labor:net-cafe-manga-kissa-24ji-kamin-shinya-warimashi-hitori-roumu",
       "business": "labor",
-      "slug": "ninteikodomoen-hoiku-kyoyu-shift-shakaihoken-roumu",
-      "title": "認定こども園の保育教諭、シフトと社会保険の線引きはどうする？",
-      "date": "2026-10-28",
-      "category": "業種別の労務管理",
-      "path": "/labor/column/ninteikodomoen-hoiku-kyoyu-shift-shakaihoken-roumu"
+      "slug": "net-cafe-manga-kissa-24ji-kamin-shinya-warimashi-hitori-roumu",
+      "title": "ネットカフェ・漫画喫茶の24時間運営の労務—仮眠時間は労働時間か、深夜割増と一人勤務の設計",
+      "date": "2026-10-29",
+      "category": "労働時間",
+      "path": "/labor/column/net-cafe-manga-kissa-24ji-kamin-shinya-warimashi-hitori-roumu"
     },
     {
-      "key": "realestate:souzoku-kyoyu-shidou-kussaku-shodaku-infra-hikikomi-baikyaku",
+      "key": "realestate:delivery-senmon-ghost-kitchen-bukken-youto-haisui-grease",
       "business": "realestate",
-      "slug": "souzoku-kyoyu-shidou-kussaku-shodaku-infra-hikikomi-baikyaku",
-      "title": "相続した家の前面が共有私道だと、売却前に掘削承諾がいるのはなぜ？",
-      "date": "2026-10-28",
-      "category": "相続",
-      "path": "/column/souzoku-kyoyu-shidou-kussaku-shodaku-infra-hikikomi-baikyaku"
+      "slug": "delivery-senmon-ghost-kitchen-bukken-youto-haisui-grease",
+      "title": "デリバリー専門（ゴーストキッチン）の店舗物件を選ぶ前に確認する用途地域・排水・保健所の条件",
+      "date": "2026-10-29",
+      "category": "投資・事業用不動産",
+      "path": "/column/delivery-senmon-ghost-kitchen-bukken-youto-haisui-grease"
     }
   ],
   "held": [
@@ -253,37 +253,79 @@
       "qualityHoldReasons": [
         "公開レビュー記録が未登録です"
       ]
+    },
+    {
+      "key": "legal:fuzoku-eigyo-5go-game-center-amusement-kyoka-youken-nagare",
+      "business": "legal",
+      "slug": "fuzoku-eigyo-5go-game-center-amusement-kyoka-youken-nagare",
+      "title": "ゲームセンターの風営法5号許可—構造設備・距離制限と申請の流れ",
+      "date": "2026-10-29",
+      "category": "許認可の手続き（行政書士の実務から）",
+      "path": "/legal/column/fuzoku-eigyo-5go-game-center-amusement-kyoka-youken-nagare",
+      "qualityHoldReasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "legal:souzokubun-torimodoshiken-minpo-905jo-daisansha-joto",
+      "business": "legal",
+      "slug": "souzokubun-torimodoshiken-minpo-905jo-daisansha-joto",
+      "title": "相続分を第三者に譲渡されたら—民法905条の取戻権と1か月の期限",
+      "date": "2026-10-29",
+      "category": "相続の手続き（行政書士の実務から）",
+      "path": "/legal/column/souzokubun-torimodoshiken-minpo-905jo-daisansha-joto",
+      "qualityHoldReasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "realestate:souzoku-tokutei-akiya-kankoku-jutakuyochi-tokurei-baikyaku",
+      "business": "realestate",
+      "slug": "souzoku-tokutei-akiya-kankoku-jutakuyochi-tokurei-baikyaku",
+      "title": "相続した実家が特定空家の勧告を受けると固定資産税が上がる—住宅用地特例が外れる前の動き方",
+      "date": "2026-10-29",
+      "category": "相続",
+      "path": "/column/souzoku-tokutei-akiya-kankoku-jutakuyochi-tokurei-baikyaku",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録です"
+      ]
     }
   ],
   "scheduled": [],
   "ok": false,
   "published": [
     {
-      "key": "labor:nii-ijo-jigyosho-kinmu-todoke-yakuin-tanjikan-shaho",
+      "key": "labor:kojin-jigyo-hojinnari-shakaihoken-roudouhoken-kirikae-tetsuzuki",
       "business": "labor",
-      "slug": "nii-ijo-jigyosho-kinmu-todoke-yakuin-tanjikan-shaho",
-      "title": "複数の会社で働く・役員を兼ねると社会保険はどうなりますか？（二以上事業所勤務届）",
-      "date": "2026-10-28",
+      "slug": "kojin-jigyo-hojinnari-shakaihoken-roudouhoken-kirikae-tetsuzuki",
+      "title": "個人事業を法人成りしたときの社会保険・労働保険の切替—強制適用への移行と従業員の手続",
+      "date": "2026-10-29",
       "category": "社会保険",
-      "path": "/labor/column/nii-ijo-jigyosho-kinmu-todoke-yakuin-tanjikan-shaho"
+      "path": "/labor/column/kojin-jigyo-hojinnari-shakaihoken-roudouhoken-kirikae-tetsuzuki"
     },
     {
-      "key": "labor:ninteikodomoen-hoiku-kyoyu-shift-shakaihoken-roumu",
+      "key": "labor:net-cafe-manga-kissa-24ji-kamin-shinya-warimashi-hitori-roumu",
       "business": "labor",
-      "slug": "ninteikodomoen-hoiku-kyoyu-shift-shakaihoken-roumu",
-      "title": "認定こども園の保育教諭、シフトと社会保険の線引きはどうする？",
-      "date": "2026-10-28",
-      "category": "業種別の労務管理",
-      "path": "/labor/column/ninteikodomoen-hoiku-kyoyu-shift-shakaihoken-roumu"
+      "slug": "net-cafe-manga-kissa-24ji-kamin-shinya-warimashi-hitori-roumu",
+      "title": "ネットカフェ・漫画喫茶の24時間運営の労務—仮眠時間は労働時間か、深夜割増と一人勤務の設計",
+      "date": "2026-10-29",
+      "category": "労働時間",
+      "path": "/labor/column/net-cafe-manga-kissa-24ji-kamin-shinya-warimashi-hitori-roumu"
     },
     {
-      "key": "realestate:souzoku-kyoyu-shidou-kussaku-shodaku-infra-hikikomi-baikyaku",
+      "key": "realestate:delivery-senmon-ghost-kitchen-bukken-youto-haisui-grease",
       "business": "realestate",
-      "slug": "souzoku-kyoyu-shidou-kussaku-shodaku-infra-hikikomi-baikyaku",
-      "title": "相続した家の前面が共有私道だと、売却前に掘削承諾がいるのはなぜ？",
-      "date": "2026-10-28",
-      "category": "相続",
-      "path": "/column/souzoku-kyoyu-shidou-kussaku-shodaku-infra-hikikomi-baikyaku"
+      "slug": "delivery-senmon-ghost-kitchen-bukken-youto-haisui-grease",
+      "title": "デリバリー専門（ゴーストキッチン）の店舗物件を選ぶ前に確認する用途地域・排水・保健所の条件",
+      "date": "2026-10-29",
+      "category": "投資・事業用不動産",
+      "path": "/column/delivery-senmon-ghost-kitchen-bukken-youto-haisui-grease"
     }
   ],
   "skipped": [],
@@ -359,9 +401,21 @@
     {
       "key": "realestate:jido-hattatsu-shien-bukken-youto-chiiki-shidou-kunren-shitsu",
       "message": "品質確認待ち：公開レビュー記録が未登録です"
+    },
+    {
+      "key": "legal:fuzoku-eigyo-5go-game-center-amusement-kyoka-youken-nagare",
+      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録です"
+    },
+    {
+      "key": "legal:souzokubun-torimodoshiken-minpo-905jo-daisansha-joto",
+      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録です"
+    },
+    {
+      "key": "realestate:souzoku-tokutei-akiya-kankoku-jutakuyochi-tokurei-baikyaku",
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
     }
   ],
-  "blocked": "18本は品質確認待ちのため自動公開しません。記事別の理由を確認してください。forceでも解除しません。",
+  "blocked": "21本は品質確認待ちのため自動公開しません。記事別の理由を確認してください。forceでも解除しません。",
   "outcome": "partial",
   "httpStatus": "409"
 }
