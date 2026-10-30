@@ -1,0 +1,7 @@
+.serif {
+  --font-noto-serif-jp: "Noto Serif JP Variable", "Yotsuba Serif Fallback";
+}
+
+.sans {
+  --font-noto-sans-jp: "Noto Sans JP Variable", "Yotsuba Sans Fallback";
+}

@@ -16,7 +16,7 @@ export function DeferredBrandFonts() {
       if (cancelled) return;
       firstFrame = requestAnimationFrame(() => {
         secondFrame = requestAnimationFrame(() => {
-          // next/font still self-hosts the unchanged, full CJK variable fonts.
+          // Bundled font CSS self-hosts the full CJK variable fonts.
           // A failed download leaves the metric-adjusted local fallback readable.
           import("@/app/fonts").then(async ({ fontVariables, notoSerifJP, notoSansJP }) => {
             if (cancelled) return;
