@@ -1,34 +1,25 @@
 {
   "dryRun": false,
-  "runAt": "2026-10-30T09:26:41.636Z",
-  "todayJst": "2026-10-30",
+  "runAt": "2026-10-31T09:11:07.724Z",
+  "todayJst": "2026-10-31",
   "targets": [
     {
-      "key": "labor:kojin-jigyo-hojinnari-shakaihoken-roudouhoken-kirikae-tetsuzuki",
+      "key": "labor:roudousha-kyodo-kumiai-kumiaiin-roudo-keiyaku-shaho",
       "business": "labor",
-      "slug": "kojin-jigyo-hojinnari-shakaihoken-roudouhoken-kirikae-tetsuzuki",
-      "title": "個人事業を法人成りしたときの社会保険・労働保険の切替—強制適用への移行と従業員の手続",
-      "date": "2026-10-29",
-      "category": "社会保険",
-      "path": "/labor/column/kojin-jigyo-hojinnari-shakaihoken-roudouhoken-kirikae-tetsuzuki"
+      "slug": "roudousha-kyodo-kumiai-kumiaiin-roudo-keiyaku-shaho",
+      "title": "労働者協同組合の組合員は労働契約も結ぶ？社会保険と移行時の労務",
+      "date": "2026-10-30",
+      "category": "業種別の労務管理",
+      "path": "/labor/column/roudousha-kyodo-kumiai-kumiaiin-roudo-keiyaku-shaho"
     },
     {
-      "key": "labor:net-cafe-manga-kissa-24ji-kamin-shinya-warimashi-hitori-roumu",
+      "key": "labor:tokutei-ginou-kensetsu-ukeire-roumu-gekkyu-ccus",
       "business": "labor",
-      "slug": "net-cafe-manga-kissa-24ji-kamin-shinya-warimashi-hitori-roumu",
-      "title": "ネットカフェ・漫画喫茶の24時間運営の労務—仮眠時間は労働時間か、深夜割増と一人勤務の設計",
-      "date": "2026-10-29",
-      "category": "労働時間",
-      "path": "/labor/column/net-cafe-manga-kissa-24ji-kamin-shinya-warimashi-hitori-roumu"
-    },
-    {
-      "key": "realestate:delivery-senmon-ghost-kitchen-bukken-youto-haisui-grease",
-      "business": "realestate",
-      "slug": "delivery-senmon-ghost-kitchen-bukken-youto-haisui-grease",
-      "title": "デリバリー専門（ゴーストキッチン）の店舗物件を選ぶ前に確認する用途地域・排水・保健所の条件",
-      "date": "2026-10-29",
-      "category": "投資・事業用不動産",
-      "path": "/column/delivery-senmon-ghost-kitchen-bukken-youto-haisui-grease"
+      "slug": "tokutei-ginou-kensetsu-ukeire-roumu-gekkyu-ccus",
+      "title": "特定技能「建設」の受入れ労務—月給制の義務と建設キャリアアップシステム（CCUS）",
+      "date": "2026-10-30",
+      "category": "外国人雇用",
+      "path": "/labor/column/tokutei-ginou-kensetsu-ukeire-roumu-gekkyu-ccus"
     }
   ],
   "held": [
@@ -295,40 +286,65 @@
       "qualityHoldReasons": [
         "公開レビュー記録が未登録です"
       ]
+    },
+    {
+      "key": "legal:chuka-taiwan-nihon-hojin-seisan-tettai-zairyu-touki",
+      "business": "legal",
+      "slug": "chuka-taiwan-nihon-hojin-seisan-tettai-zairyu-touki",
+      "title": "中国・台湾企業が日本法人をたたむとき—解散・清算・撤退の在留資格と送金",
+      "date": "2026-10-30",
+      "category": "許認可の手続き（行政書士の実務から）",
+      "path": "/legal/column/chuka-taiwan-nihon-hojin-seisan-tettai-zairyu-touki",
+      "qualityHoldReasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "legal:tabako-kouri-hanbai-kyoka-kyori-kijun-nagare",
+      "business": "legal",
+      "slug": "tabako-kouri-hanbai-kyoka-kyori-kijun-nagare",
+      "title": "たばこ小売販売業の許可—距離基準・取扱予定高と申請の流れ",
+      "date": "2026-10-30",
+      "category": "許認可の手続き（行政書士の実務から）",
+      "path": "/legal/column/tabako-kouri-hanbai-kyoka-kyori-kijun-nagare",
+      "qualityHoldReasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "realestate:kaigotsuki-yuryo-home-tokutei-shisetsu-bukken-youken",
+      "business": "realestate",
+      "slug": "kaigotsuki-yuryo-home-tokutei-shisetsu-bukken-youken",
+      "title": "介護付き有料老人ホーム（特定施設）の物件要件は？居室面積・耐火・総量規制",
+      "date": "2026-10-30",
+      "category": "投資・事業用不動産",
+      "path": "/column/kaigotsuki-yuryo-home-tokutei-shisetsu-bukken-youken",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "realestate:souzoku-kaimodoshi-tokuyaku-karitouki-massho-baikyaku",
+      "business": "realestate",
+      "slug": "souzoku-kaimodoshi-tokuyaku-karitouki-massho-baikyaku",
+      "title": "相続した土地に残る買戻特約・所有権移転請求権仮登記を抹消して売る流れ",
+      "date": "2026-10-30",
+      "category": "相続",
+      "path": "/column/souzoku-kaimodoshi-tokuyaku-karitouki-massho-baikyaku",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録です"
+      ]
     }
   ],
   "scheduled": [],
   "ok": false,
-  "published": [
-    {
-      "key": "labor:kojin-jigyo-hojinnari-shakaihoken-roudouhoken-kirikae-tetsuzuki",
-      "business": "labor",
-      "slug": "kojin-jigyo-hojinnari-shakaihoken-roudouhoken-kirikae-tetsuzuki",
-      "title": "個人事業を法人成りしたときの社会保険・労働保険の切替—強制適用への移行と従業員の手続",
-      "date": "2026-10-29",
-      "category": "社会保険",
-      "path": "/labor/column/kojin-jigyo-hojinnari-shakaihoken-roudouhoken-kirikae-tetsuzuki"
-    },
-    {
-      "key": "labor:net-cafe-manga-kissa-24ji-kamin-shinya-warimashi-hitori-roumu",
-      "business": "labor",
-      "slug": "net-cafe-manga-kissa-24ji-kamin-shinya-warimashi-hitori-roumu",
-      "title": "ネットカフェ・漫画喫茶の24時間運営の労務—仮眠時間は労働時間か、深夜割増と一人勤務の設計",
-      "date": "2026-10-29",
-      "category": "労働時間",
-      "path": "/labor/column/net-cafe-manga-kissa-24ji-kamin-shinya-warimashi-hitori-roumu"
-    },
-    {
-      "key": "realestate:delivery-senmon-ghost-kitchen-bukken-youto-haisui-grease",
-      "business": "realestate",
-      "slug": "delivery-senmon-ghost-kitchen-bukken-youto-haisui-grease",
-      "title": "デリバリー専門（ゴーストキッチン）の店舗物件を選ぶ前に確認する用途地域・排水・保健所の条件",
-      "date": "2026-10-29",
-      "category": "投資・事業用不動産",
-      "path": "/column/delivery-senmon-ghost-kitchen-bukken-youto-haisui-grease"
-    }
-  ],
-  "skipped": [],
+  "published": [],
   "errors": [
     {
       "key": "labor:gaikokujin-koyo-kanri-shishin-jigyonushi-doryoku-gimu",
@@ -413,9 +429,25 @@
     {
       "key": "realestate:souzoku-tokutei-akiya-kankoku-jutakuyochi-tokurei-baikyaku",
       "message": "品質確認待ち：公開レビュー記録が未登録です"
+    },
+    {
+      "key": "legal:chuka-taiwan-nihon-hojin-seisan-tettai-zairyu-touki",
+      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録です"
+    },
+    {
+      "key": "legal:tabako-kouri-hanbai-kyoka-kyori-kijun-nagare",
+      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録です"
+    },
+    {
+      "key": "realestate:kaigotsuki-yuryo-home-tokutei-shisetsu-bukken-youken",
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
+    },
+    {
+      "key": "realestate:souzoku-kaimodoshi-tokuyaku-karitouki-massho-baikyaku",
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
     }
   ],
-  "blocked": "21本は品質確認待ちのため自動公開しません。記事別の理由を確認してください。forceでも解除しません。",
-  "outcome": "partial",
+  "blocked": "公開待ちが27本あり、1回の上限（24本）を超えたため止めました。対象を確かめてから、管理画面の「今すぐ公開」か、手動実行（force）で公開してください。",
+  "outcome": "failure",
   "httpStatus": "409"
 }
