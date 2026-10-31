@@ -1,6 +1,6 @@
 {
-  "todayJst": "2026-10-31",
-  "runUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/41102170285",
+  "todayJst": "2026-11-01",
+  "runUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/41222784891",
   "generationStatus": "validated",
   "generatedCount": 6,
   "reviewResult": "success",
@@ -9,20 +9,37 @@
   "findings": {
     "blocker": 0,
     "major": 0,
-    "minor": 0
+    "minor": 1
   },
-  "reviewFindings": [],
-  "registeredCount": 2,
-  "qualityEligibleCount": 2,
-  "heldCount": 4,
+  "reviewFindings": [
+    {
+      "file": "scripts/legal-columns/145-lpgas-hanbai-jigyo-touroku-ekisekiho-hoan.md",
+      "severity": "minor",
+      "issue": "「LPガス取引の適正化・料金の透明化の観点から制度の見直しが進められており、液石法は令和6年法律第67号による改正を受けています」との記述が、料金透明化・商慣行是正の見直し（実際は2024年の施行規則＝省令改正で令和6年7月2日・令和7年4月2日に段階施行）と、令和6年法律第67号（消費生活用製品安全法等改正。液石法本体に対しては主に製品規制・技術的改正）を近接配置し、67号が料金透明化改正であるかのような印象を与えうる。公布日(2024-06-26)・施行日(2025-12-25)・法律名・液石法が改正対象であること自体は一次資料(衆議院・経産省)で確認でき正確。",
+      "fix": "料金透明化・商慣行是正は施行規則（省令）改正によるものである旨を分けて記し、令和6年法律第67号は液石法の最終改正としての位置づけに留める。核心の登録制度（第3条・第19条・第27条・第14条）の説明には影響がなく、本文も『最新案内で確認』と留保しているため軽微。"
+    }
+  ],
+  "registeredCount": 3,
+  "qualityEligibleCount": 3,
+  "heldCount": 3,
   "scheduledCount": 0,
   "unverifiedSourceCount": 0,
   "publishedCount": null,
   "articles": [
     {
-      "key": "realestate:kaigotsuki-yuryo-home-tokutei-shisetsu-bukken-youken",
-      "fingerprint": "f230e1a27a0ea91496f7acf0f70a015698563d05e73ecbc32fb1fd9cdde4893e",
-      "title": "介護付き有料老人ホーム（特定施設）の物件要件は？居室面積・耐火・総量規制",
+      "key": "realestate:mujin-24ji-fitness-gym-bukken-youto-shobo-hinan",
+      "fingerprint": "7b4b401bd67d7aa72050d70950c9168e3b47945ac8b765c6ae2bf70ee7cfd970",
+      "title": "24時間無人フィットネスジムに使える物件は？用途変更・消防・深夜無人営業の条件",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "realestate:souzoku-suiro-akamichi-houteigai-kokyobutsu-baikyaku",
+      "fingerprint": "3972795b8c9e598f850f22bdcc1ff1d55d9c0530959b85088d57352928503416",
+      "title": "相続した土地が水路・赤道（法定外公共物）に接している。売るには用途廃止と払下げが要る？",
       "registered": false,
       "state": "held",
       "reasons": [
@@ -33,22 +50,9 @@
       "sourceEvidenceAvailable": true
     },
     {
-      "key": "realestate:souzoku-kaimodoshi-tokuyaku-karitouki-massho-baikyaku",
-      "fingerprint": "1ddc9d0f4e1a2396ec99214742b1cc2be822c73a0b9f0745946fbae1e2ec1dbb",
-      "title": "相続した土地に残る買戻特約・所有権移転請求権仮登記を抹消して売る流れ",
-      "registered": false,
-      "state": "held",
-      "reasons": [
-        "公開レビュー記録が未登録です",
-        "確認済みの公的な一次根拠が不足しています"
-      ],
-      "sourceFailures": [],
-      "sourceEvidenceAvailable": true
-    },
-    {
-      "key": "legal:tabako-kouri-hanbai-kyoka-kyori-kijun-nagare",
-      "fingerprint": "1391dce4044b36d8d526796e00fc9077140fc8539d03d6a6df19d628e62e69cf",
-      "title": "たばこ小売販売業の許可—距離基準・取扱予定高と申請の流れ",
+      "key": "legal:lpgas-hanbai-jigyo-touroku-ekisekiho-hoan",
+      "fingerprint": "9351c3239fbe2ae25bc139694315130fd64a80bdddafede57bd7365f106e6198",
+      "title": "LPガス（液化石油ガス）販売事業の登録—要件・業務主任者・保安業務の流れ",
       "registered": false,
       "state": "held",
       "reasons": [
@@ -61,25 +65,24 @@
       "sourceEvidenceAvailable": true
     },
     {
-      "key": "legal:chuka-taiwan-nihon-hojin-seisan-tettai-zairyu-touki",
-      "fingerprint": "1bf8b10cfdc82ba217d76a587de370ee07051807afe6ffa7ffc1f2b7edef077d",
-      "title": "中国・台湾企業が日本法人をたたむとき—解散・清算・撤退の在留資格と送金",
+      "key": "legal:akiya-3000man-kakuninsho-shutoku-tetsuzuki-hisouzokunin-kyojuyo",
+      "fingerprint": "b22f2e05f8ac023edc21f5168e463eb520b1c1dd3ed495f9f1d617fc9d94d9a5",
+      "title": "空き家3,000万円控除に要る「被相続人居住用家屋等確認書」の取り方—市区町村への申請",
       "registered": false,
       "state": "held",
       "reasons": [
         "enの内部リンクに言語不一致があります",
         "zh-twの内部リンクに言語不一致があります",
         "zhの内部リンクに言語不一致があります",
-        "公開レビュー記録が未登録です",
-        "確認済みの公的な一次根拠が不足しています"
+        "公開レビュー記録が未登録です"
       ],
       "sourceFailures": [],
       "sourceEvidenceAvailable": true
     },
     {
-      "key": "labor:tokutei-ginou-kensetsu-ukeire-roumu-gekkyu-ccus",
-      "fingerprint": "362f8ff457ca7d4f4ccf4bd98fd4ca0d39850b350b125cdd3c8b682977d72af5",
-      "title": "特定技能「建設」の受入れ労務—月給制の義務と建設キャリアアップシステム（CCUS）",
+      "key": "labor:nenshousha-18sai-miman-shinya-jikangai-seigen-roumu",
+      "fingerprint": "fd2e34f727d866f0328a18afbafc2e40ee2d3b0f1e34a815e3e61483b5e77a20",
+      "title": "18歳未満（高校生）を雇うときの労務──深夜・時間外・危険業務の制限と年齢証明",
       "registered": true,
       "state": "quality-eligible",
       "reasons": [],
@@ -87,9 +90,9 @@
       "sourceEvidenceAvailable": true
     },
     {
-      "key": "labor:roudousha-kyodo-kumiai-kumiaiin-roudo-keiyaku-shaho",
-      "fingerprint": "2da6eca2c830a7f08e9a8efbd374816c1756e1c4a33f5b50eea8c85b16a4a25e",
-      "title": "労働者協同組合の組合員は労働契約も結ぶ？社会保険と移行時の労務",
+      "key": "labor:keizoku-koyo-rousikyotei-keikasochi-shuryo-2025",
+      "fingerprint": "07c6df0905af7a729e65120cb4cb06538d085829def2d60aa1b302801999afd7",
+      "title": "継続雇用の対象者を労使協定で絞れる経過措置が2025年3月末で終了。何が変わった？",
       "registered": true,
       "state": "quality-eligible",
       "reasons": [],

@@ -1221,6 +1221,23 @@ const REQUIRED_HUB_LINKS: Record<string, string[]> = {
     "/legal/column/keieikanri-zairyu-chuka-kigyousha-kaisha-setsuritsu",
     "/legal/column/keieikanri-koshin-jigyo-keizokusei-rissho-chuka-taiwan",
   ],
+  "lpgas-hanbai-jigyo-touroku-ekisekiho-hoan": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/denki-koji-gyo-touroku-eigyosho-shunin",
+    "/legal/column/dokugekibutsu-hanbaigyo-touroku-kozo-setsubi-kijun",
+    "/legal/column/kaitai-koji-gyo-touroku-kensetsu-kyoka-chigai",
+  ],
+  "akiya-3000man-kakuninsho-shutoku-tetsuzuki-hisouzokunin-kyojuyo": [
+    "/legal/services/inheritance",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/souzoku",
+    "/legal/column/souzoku-touki-nagare",
+    "/legal/column/isan-bunkatsu-kyougisho",
+    "/legal/column/souzoku-hajime-koseki-chosa-bunkyo",
+  ],
 };
 
 /** 表示コンプライアンス上の禁止語 */
@@ -3844,6 +3861,34 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "別事業体",
     "紹介料を受け取りません",
   ],
+  "lpgas-hanbai-jigyo-touroku-ekisekiho-hoan": [
+    "液化石油ガスの保安の確保及び取引の適正化に関する法律",
+    "液石法第3条",
+    "液石法第14条",
+    "液石法第19条",
+    "液石法第27条",
+    "業務主任者",
+    "保安機関",
+    "都道府県知事",
+    "経済産業大臣",
+    "別々にご契約",
+    "独立した事業体",
+    "別事業体",
+    "紹介料を受け取りません",
+  ],
+  "akiya-3000man-kakuninsho-shutoku-tetsuzuki-hisouzokunin-kyojuyo": [
+    "租税特別措置法第35条第3項",
+    "被相続人居住用家屋等確認書",
+    "3,000万円",
+    "市区町村長",
+    "昭和56年5月31日",
+    "令和9年12月31日",
+    "税理士",
+    "別々にご契約",
+    "独立した事業体",
+    "別事業体",
+    "紹介料を受け取りません",
+  ],
 };
 
 /** 記事ごとに含めてはならない表現 */
@@ -4029,6 +4074,8 @@ const FORBIDDEN_PHRASES: Record<string, string[]> = {
   "souzokubun-torimodoshiken-minpo-905jo-daisansha-joto": [],
   "tabako-kouri-hanbai-kyoka-kyori-kijun-nagare": [],
   "chuka-taiwan-nihon-hojin-seisan-tettai-zairyu-touki": [],
+  "lpgas-hanbai-jigyo-touroku-ekisekiho-hoan": [],
+  "akiya-3000man-kakuninsho-shutoku-tetsuzuki-hisouzokunin-kyojuyo": [],
 };
 
 /** 本セット外へ張る既存legalコラムslug（リポジトリの他シードで実在確認済み） */
@@ -7641,6 +7688,58 @@ const ARTICLES: Array<{
       "経営・管理",
       "在留資格",
       "対外送金",
+      "行政書士",
+    ],
+  },
+  {
+    file: "145-lpgas-hanbai-jigyo-touroku-ekisekiho-hoan.md",
+    slug: "lpgas-hanbai-jigyo-touroku-ekisekiho-hoan",
+    date: "2026-10-31",
+    title:
+      "LPガス（液化石油ガス）販売事業の登録—要件・業務主任者・保安業務の流れ",
+    category: "許認可の手続き（行政書士の実務から）",
+    excerpt:
+      "LPガス（液化石油ガス）の販売を業として行うには、「液化石油ガスの保安の確保及び取引の適正化に関する法律」（液石法）に基づく販売事業の登録が必要です（液石法第3条）。販売所が一の都道府県内のみなら都道府県知事、二以上の都道府県にまたがるなら経済産業大臣が登録を行います。登録事業者は販売所ごとに業務主任者を選任し（第19条）、保安業務を行う義務を負い（第27条）、認定を受けた保安機関へ委託することもできます（第28条・第29条）。一般消費者等と販売契約を結んだときは遅滞なく14条書面を交付します（第14条）。登録の拒否は第4条の拒否事由に限られ、許可とは性格が異なります。登録申請は行政書士、設備工事は設備士・施工業者、保安は保安機関、物件は不動産、設立登記は司法書士、税務は税理士、紛争は弁護士に分けて整理します。",
+    keywords: [
+      "LPガス 液化石油ガス 販売事業 登録 液石法",
+      "液石法第3条 販売事業 登録 都道府県知事 経済産業大臣",
+      "LPガス 業務主任者 液石法第19条 選任 販売所ごと",
+      "LPガス 保安業務 保安機関 委託 液石法第27条 第28条 第29条",
+      "LPガス 14条書面 液石法第14条 書面の交付 一般消費者",
+      "LPガス 登録 許可 違い 登録拒否 液石法第4条",
+    ],
+    tags: [
+      "液石法",
+      "LPガス販売事業登録",
+      "業務主任者",
+      "保安機関",
+      "許認可",
+      "行政書士",
+    ],
+  },
+  {
+    file: "146-akiya-3000man-kakuninsho-shutoku-tetsuzuki-hisouzokunin-kyojuyo.md",
+    slug: "akiya-3000man-kakuninsho-shutoku-tetsuzuki-hisouzokunin-kyojuyo",
+    date: "2026-10-31",
+    title:
+      "空き家3,000万円控除に要る「被相続人居住用家屋等確認書」の取り方—市区町村への申請",
+    category: "許認可の手続き（行政書士の実務から）",
+    excerpt:
+      "相続した実家（空き家）を売って「空き家の譲渡所得の3,000万円特別控除」（租税特別措置法第35条第3項）を使うには、確定申告に「被相続人居住用家屋等確認書」を添付する必要があります。この確認書は、売った家屋・土地の所在地を管轄する市区町村長が交付します。交付の申請には、被相続人の除票住民票、電気・ガス・水道の使用中止（閉栓）日が分かる書類、売買契約書の写しなどを添えます。対象は昭和56年5月31日以前建築・区分所有でない・相続直前に被相続人以外の居住者がいない家屋で、適用期間は平成28年4月1日から令和9年12月31日、譲渡対価1億円以下です。確認書申請は行政書士、特例の判断・申告は税理士、建物滅失登記は土地家屋調査士、相続登記は司法書士、売買は不動産に分けて整理します。",
+    keywords: [
+      "空き家 3000万円控除 被相続人居住用家屋等確認書 取り方",
+      "被相続人居住用家屋等確認書 市区町村 申請 必要書類",
+      "租税特別措置法第35条第3項 空き家 譲渡所得 特別控除",
+      "空き家 3000万円控除 昭和56年5月31日 区分所有 1億円以下",
+      "空き家控除 確認書 電気ガス水道 閉栓日 売買契約書 除票住民票",
+      "空き家 取壊し 耐震改修 翌年2月15日 令和9年12月31日",
+    ],
+    tags: [
+      "租税特別措置法",
+      "空き家3000万円控除",
+      "被相続人居住用家屋等確認書",
+      "相続",
+      "許認可",
       "行政書士",
     ],
   },

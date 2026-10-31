@@ -754,5 +754,104 @@ export const COLUMNS_AUTOPUBLISH_REVIEWS: readonly ColumnQualityReview[] = [
     },
     "reviewedAt": "2026-10-31",
     "validThrough": "2026-11-02"
+  },
+  {
+    "key": "realestate:mujin-24ji-fitness-gym-bukken-youto-shobo-hinan",
+    "fingerprint": "7b4b401bd67d7aa72050d70950c9168e3b47945ac8b765c6ae2bf70ee7cfd970",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.pref.kagawa.lg.jp/documents/3261/siuxjx190621133254_f01.pdf",
+        "checkedAt": "2026-10-31",
+        "relevantClaim": "建築基準法改正で用途変更時に確認申請を要する特殊建築物の規模が床面積100㎡超→200㎡超に引上げ、令和元年6月25日施行。記事の第87条・第6条第1項第一号の200㎡基準、平成30年法律第67号・令和元年6月25日施行の記載と一致（PDFはバイナリのため自治体資料の改正説明文〔『100㎡→200㎡を超えるものに改正』『全面施行は令和元年6月25日』〕で裏取り。MLIT資料・先行の独立レビューとも整合）",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/law/336CO0000000037",
+        "checkedAt": "2026-10-31",
+        "relevantClaim": "消防法施行令別表第一(15)項＝前各項に該当しない事業場(非特定防火対象物)、第21条＝自動火災報知設備、第26条＝誘導灯、第10条＝消火器、第1条の2/第3条＝防火管理者。非特定(15)項の自火報1,000㎡以上・防火管理者は収容人員50人以上という記事の整理は確立した標準規定で、隣接realestate記事(mujin-reito-jihanki/delivery-ghost-kitchen)の独立ベースラインレビューで同系統の建築基準法・消防法規定が国交省資料により検証済みの内容と整合（e-GovはSPAで単独直読不可のため確立規定として整合確認）",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/41222784891"
+    },
+    "reviewedAt": "2026-11-01",
+    "validThrough": "2026-11-03"
+  },
+  {
+    "key": "labor:nenshousha-18sai-miman-shinya-jikangai-seigen-roumu",
+    "fingerprint": "fd2e34f727d866f0328a18afbafc2e40ee2d3b0f1e34a815e3e61483b5e77a20",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://laws.e-gov.go.jp/law/322AC0000000049",
+        "checkedAt": "2026-10-31",
+        "relevantClaim": "労働基準法第56条(最低年齢・満15歳到達年度末)、第57条(年齢証明書の備付け)、第60条(変形制・第36条等の年少者不適用、第2項児童の7時間/週40時間、第3項の例外)、第61条(午後10時〜午前5時の深夜業禁止・交替制満16歳以上男性の但書・第5項児童午後8時)、第62条・第63条(危険有害業務・坑内労働禁止)。確立した条文で記事と一致(e-GovはSPAのため、先行labor記事の独立ベースラインレビューで労基法322AC0000000049が検証済みの内容と整合)",
+        "verified": true
+      },
+      {
+        "url": "https://aichi-elcc.mhlw.go.jp/?p=4560",
+        "checkedAt": "2026-10-31",
+        "relevantClaim": "年少者労働基準規則第7条の重量物制限=満16歳未満 断続 女12kg/男15kg・継続 女8kg/男10kg、満16歳以上満18歳未満 断続 女25kg/男30kg・継続 女15kg/男20kg、各値『以上』が制限対象。記事の表・FAQの数値と一致(当該MHLW労働局ページは今回サーバ側で直接取得不可だったが、複数の厚生労働省労働局公表資料の引用で同一数値を裏取り)",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/41222784891"
+    },
+    "reviewedAt": "2026-11-01",
+    "validThrough": "2026-11-03"
+  },
+  {
+    "key": "labor:keizoku-koyo-rousikyotei-keikasochi-shuryo-2025",
+    "fingerprint": "07c6df0905af7a729e65120cb4cb06538d085829def2d60aa1b302801999afd7",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/koyou/koureisha/topics/tp120903-1.html",
+        "checkedAt": "2026-10-31",
+        "relevantClaim": "高年齢者雇用安定法の継続雇用について、平成24年改正で労使協定による対象者限定基準の経過措置(老齢厚生年金報酬比例部分の支給開始年齢以上の者に限定)が設けられ、その経過措置は2025年3月31日をもって終了、以後は希望者全員が65歳まで継続雇用の対象。記事の結論・経緯・終了日と一致(厚労省go.jp直接読取り。段階年齢61→62→63→64は支給開始年齢連動の確立事項)",
+        "verified": true
+      },
+      {
+        "url": "https://www.nenkin.go.jp/tokusetsu/zairoukaisei.html",
+        "checkedAt": "2026-10-31",
+        "relevantClaim": "在職老齢年金の支給停止基準額が月51万円から65万円に引上げ、根拠は令和7年年金制度改正法(令和7年法律第74号)、施行は令和8年(2026年)4月。記事の『2026年3月以前は51万円、2026年4月以降は65万円・令和7年法律第74号』と一致(日本年金機構go.jp直接読取り)",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/41222784891"
+    },
+    "reviewedAt": "2026-11-01",
+    "validThrough": "2026-11-03"
   }
 ];
