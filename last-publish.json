@@ -1,7 +1,7 @@
 {
   "dryRun": false,
-  "runAt": "2026-10-31T09:11:07.724Z",
-  "todayJst": "2026-10-31",
+  "runAt": "2026-11-01T09:58:03.845Z",
+  "todayJst": "2026-11-01",
   "targets": [
     {
       "key": "labor:roudousha-kyodo-kumiai-kumiaiin-roudo-keiyaku-shaho",
@@ -20,6 +20,33 @@
       "date": "2026-10-30",
       "category": "外国人雇用",
       "path": "/labor/column/tokutei-ginou-kensetsu-ukeire-roumu-gekkyu-ccus"
+    },
+    {
+      "key": "labor:keizoku-koyo-rousikyotei-keikasochi-shuryo-2025",
+      "business": "labor",
+      "slug": "keizoku-koyo-rousikyotei-keikasochi-shuryo-2025",
+      "title": "継続雇用の対象者を労使協定で絞れる経過措置が2025年3月末で終了。何が変わった？",
+      "date": "2026-10-31",
+      "category": "労働法の基本",
+      "path": "/labor/column/keizoku-koyo-rousikyotei-keikasochi-shuryo-2025"
+    },
+    {
+      "key": "labor:nenshousha-18sai-miman-shinya-jikangai-seigen-roumu",
+      "business": "labor",
+      "slug": "nenshousha-18sai-miman-shinya-jikangai-seigen-roumu",
+      "title": "18歳未満（高校生）を雇うときの労務──深夜・時間外・危険業務の制限と年齢証明",
+      "date": "2026-10-31",
+      "category": "労働法の基本",
+      "path": "/labor/column/nenshousha-18sai-miman-shinya-jikangai-seigen-roumu"
+    },
+    {
+      "key": "realestate:mujin-24ji-fitness-gym-bukken-youto-shobo-hinan",
+      "business": "realestate",
+      "slug": "mujin-24ji-fitness-gym-bukken-youto-shobo-hinan",
+      "title": "24時間無人フィットネスジムに使える物件は？用途変更・消防・深夜無人営業の条件",
+      "date": "2026-10-31",
+      "category": "投資・事業用不動産",
+      "path": "/column/mujin-24ji-fitness-gym-bukken-youto-shobo-hinan"
     }
   ],
   "held": [
@@ -340,6 +367,48 @@
       "qualityHoldReasons": [
         "公開レビュー記録が未登録です"
       ]
+    },
+    {
+      "key": "legal:akiya-3000man-kakuninsho-shutoku-tetsuzuki-hisouzokunin-kyojuyo",
+      "business": "legal",
+      "slug": "akiya-3000man-kakuninsho-shutoku-tetsuzuki-hisouzokunin-kyojuyo",
+      "title": "空き家3,000万円控除に要る「被相続人居住用家屋等確認書」の取り方—市区町村への申請",
+      "date": "2026-10-31",
+      "category": "許認可の手続き（行政書士の実務から）",
+      "path": "/legal/column/akiya-3000man-kakuninsho-shutoku-tetsuzuki-hisouzokunin-kyojuyo",
+      "qualityHoldReasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "legal:lpgas-hanbai-jigyo-touroku-ekisekiho-hoan",
+      "business": "legal",
+      "slug": "lpgas-hanbai-jigyo-touroku-ekisekiho-hoan",
+      "title": "LPガス（液化石油ガス）販売事業の登録—要件・業務主任者・保安業務の流れ",
+      "date": "2026-10-31",
+      "category": "許認可の手続き（行政書士の実務から）",
+      "path": "/legal/column/lpgas-hanbai-jigyo-touroku-ekisekiho-hoan",
+      "qualityHoldReasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "realestate:souzoku-suiro-akamichi-houteigai-kokyobutsu-baikyaku",
+      "business": "realestate",
+      "slug": "souzoku-suiro-akamichi-houteigai-kokyobutsu-baikyaku",
+      "title": "相続した土地が水路・赤道（法定外公共物）に接している。売るには用途廃止と払下げが要る？",
+      "date": "2026-10-31",
+      "category": "相続",
+      "path": "/column/souzoku-suiro-akamichi-houteigai-kokyobutsu-baikyaku",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録です"
+      ]
     }
   ],
   "scheduled": [],
@@ -445,9 +514,21 @@
     {
       "key": "realestate:souzoku-kaimodoshi-tokuyaku-karitouki-massho-baikyaku",
       "message": "品質確認待ち：公開レビュー記録が未登録です"
+    },
+    {
+      "key": "legal:akiya-3000man-kakuninsho-shutoku-tetsuzuki-hisouzokunin-kyojuyo",
+      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録です"
+    },
+    {
+      "key": "legal:lpgas-hanbai-jigyo-touroku-ekisekiho-hoan",
+      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録です"
+    },
+    {
+      "key": "realestate:souzoku-suiro-akamichi-houteigai-kokyobutsu-baikyaku",
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
     }
   ],
-  "blocked": "公開待ちが27本あり、1回の上限（24本）を超えたため止めました。対象を確かめてから、管理画面の「今すぐ公開」か、手動実行（force）で公開してください。",
+  "blocked": "公開待ちが33本あり、1回の上限（24本）を超えたため止めました。対象を確かめてから、管理画面の「今すぐ公開」か、手動実行（force）で公開してください。",
   "outcome": "failure",
   "httpStatus": "409"
 }
