@@ -3128,6 +3128,46 @@ const ARTICLES: ArticleSpec[] = [
     localesWithTranslations: ["en", "zh-tw", "zh"],
     hubLinks: ["/souzoku"],
   },
+  {
+    file: "154-rentacar-jikayou-shako-jimusho-bukken-youken.md",
+    slug: "rentacar-jikayou-shako-jimusho-bukken-youken",
+    title: "レンタカー（自家用自動車有償貸渡）を始めるとき、車庫と事務所の物件は何が要るか",
+    publishedAt: "2026-11-01",
+    category: "投資・事業用不動産",
+    excerpt:
+      "レンタカー（道路運送法〈昭和26年法律第183号〉第80条第1項の自家用自動車有償貸渡）の物件で効くのは、事務所（営業所）と各車両の保管場所（車庫）の2つで、運送業のような営業所と車庫の距離や収容能力を審査基準に正面から置くわけではありません。許可申請は運輸支局、保管場所は保管場所法（昭和37年法律第145号）で使用の本拠の位置から直線距離2キロメートル以内・普通車は車庫証明が要り、無人のICT貸渡（カーシェア型）では無人の路外駐車場を配置場所にできる取扱いもあります。東京都文京区の宅地建物取引士が、契約前に確認できることを条文と公的資料から整理します。",
+    keywords: [
+      "レンタカー 物件 車庫",
+      "自家用自動車有償貸渡 道路運送法80条",
+      "レンタカー 保管場所 車庫証明 2km",
+      "レンタカー 事務所 バーチャルオフィス 自宅",
+      "レンタカー型カーシェアリング 無人 配置場所",
+    ],
+    tags: ["事業用不動産", "許認可", "レンタカー", "保管場所法"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/toushi", "/office"],
+  },
+  {
+    file: "155-souzoku-toshikeikaku-douro-yoteichi-seigen-baikyaku.md",
+    slug: "souzoku-toshikeikaku-douro-yoteichi-seigen-baikyaku",
+    title: "相続した土地が都市計画道路の予定地にかかっていたら、どう売るか",
+    publishedAt: "2026-11-01",
+    category: "相続",
+    excerpt:
+      "相続した土地が都市計画道路の予定地にかかっていても、土地は相続人の所有なので売れます。売り方を左右するのは、都市計画決定だけの段階か事業認可まで進んだ段階かの違いです。予定地では都市計画法（昭和43年法律第100号）第53条の建築許可が要り、第54条は階数2以下・地階なし・容易に移転除却できる建物なら許可するとします。事業認可後は第65条の制限・第67条の届出と先買い・第68条の買取請求が重なり、収用の対価補償金には租税特別措置法第33条の4の5000万円特別控除の余地があります。東京都文京区の宅地建物取引士が、契約前に確認できることを条文から整理します。",
+    keywords: [
+      "都市計画道路 予定地 売却",
+      "都市計画法 53条 54条 建築制限",
+      "都市計画事業 認可 65条 67条 68条",
+      "収用 5000万円特別控除 租税特別措置法33条の4",
+      "相続 土地 都市計画道路 かかる",
+    ],
+    tags: ["相続", "都市計画道路", "都市計画法", "収用", "売却"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/souzoku"],
+  },
 ];
 
 function toPlainText(md: string): string {

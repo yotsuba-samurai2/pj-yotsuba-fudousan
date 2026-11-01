@@ -1,101 +1,150 @@
 {
-  "todayJst": "2026-11-01",
-  "runUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/41222784891",
+  "todayJst": "2026-11-02",
+  "runUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/41333347997",
   "generationStatus": "validated",
   "generatedCount": 6,
   "reviewResult": "success",
   "reviewReportAvailable": true,
-  "reviewPass": true,
+  "reviewPass": false,
   "findings": {
     "blocker": 0,
-    "major": 0,
-    "minor": 1
+    "major": 4,
+    "minor": 2
   },
   "reviewFindings": [
     {
-      "file": "scripts/legal-columns/145-lpgas-hanbai-jigyo-touroku-ekisekiho-hoan.md",
+      "file": "scripts/realestate-columns/154-rentacar-jikayou-shako-jimusho-bukken-youken.md",
+      "severity": "major",
+      "issue": "出典節で『自動車の保管場所の確保等に関する法律施行令』を『昭和37年政令第340号』と誤記し、e-Govリンクを https://laws.e-gov.go.jp/law/337CO0000000340 としている。このIDは404で、正しい施行令は昭和37年政令第329号（337CO0000000329）。第1条の要件内容（本拠位置から直線2km以内・出入りと収容・使用権原）自体は正しいが、一次資料の政令番号とリンク先が誤っており、読者が一次情報に到達できない。",
+      "fix": "政令番号を『昭和37年政令第329号』に、URLを https://laws.e-gov.go.jp/law/337CO0000000329 に修正する。"
+    },
+    {
+      "file": "scripts/realestate-columns/en/154-rentacar-jikayou-shako-jimusho-bukken-youken.md",
+      "severity": "major",
+      "issue": "Sources節で保管場所法施行令のe-Govリンクが日本語版と同じ誤ID(...337CO0000000340, 404)。括弧内に政令番号の表記はないがリンクが死んでおり一次資料に到達できない。",
+      "fix": "URLを https://laws.e-gov.go.jp/law/337CO0000000329 に修正する。"
+    },
+    {
+      "file": "scripts/realestate-columns/zh-tw/154-rentacar-jikayou-shako-jimusho-bukken-youken.md",
+      "severity": "major",
+      "issue": "出處節で施行令を『昭和37年政令第340號』とし、リンクも ...337CO0000000340（404）。正しくは政令第329號。",
+      "fix": "『昭和37年政令第329號』に、URLを ...337CO0000000329 に修正する。"
+    },
+    {
+      "file": "scripts/realestate-columns/zh/154-rentacar-jikayou-shako-jimusho-bukken-youken.md",
+      "severity": "major",
+      "issue": "出处节で施行令を『昭和37年政令第340号』とし、リンクも ...337CO0000000340（404）。正しくは政令第329号。",
+      "fix": "『昭和37年政令第329号』に、URLを ...337CO0000000329 に修正する。"
+    },
+    {
+      "file": "scripts/labor-columns/zh-tw/187-seizogyo-kotai-kinmu-henkei-roudoujikan-shinya-roumu.md",
       "severity": "minor",
-      "issue": "「LPガス取引の適正化・料金の透明化の観点から制度の見直しが進められており、液石法は令和6年法律第67号による改正を受けています」との記述が、料金透明化・商慣行是正の見直し（実際は2024年の施行規則＝省令改正で令和6年7月2日・令和7年4月2日に段階施行）と、令和6年法律第67号（消費生活用製品安全法等改正。液石法本体に対しては主に製品規制・技術的改正）を近接配置し、67号が料金透明化改正であるかのような印象を与えうる。公布日(2024-06-26)・施行日(2025-12-25)・法律名・液石法が改正対象であること自体は一次資料(衆議院・経産省)で確認でき正確。",
-      "fix": "料金透明化・商慣行是正は施行規則（省令）改正によるものである旨を分けて記し、令和6年法律第67号は液石法の最終改正としての位置づけに留める。核心の登録制度（第3条・第19条・第27条・第14条）の説明には影響がなく、本文も『最新案内で確認』と留保しているため軽微。"
+      "issue": "原文の『労働基準法第41条第2号』(管理監督者) を『第41條第2項』と表記（号→項の誤り）。意味は管理監督者で保持されており主張の相違ではないが、条項号の表記が不正確。",
+      "fix": "『第41條第2款』または『第41條第2號』相当の表記に統一する（英語版は正しく item 2 としている）。"
+    },
+    {
+      "file": "scripts/labor-columns/zh/187-seizogyo-kotai-kinmu-henkei-roudoujikan-shinya-roumu.md",
+      "severity": "minor",
+      "issue": "原文の『労働基準法第41条第2号』(管理監督者) を『第41条第2项』と表記（号→項の誤り）。意味は保持。",
+      "fix": "『第41条第2款』相当の表記に修正する。"
     }
   ],
-  "registeredCount": 3,
-  "qualityEligibleCount": 3,
-  "heldCount": 3,
+  "registeredCount": 0,
+  "qualityEligibleCount": 0,
+  "heldCount": 6,
   "scheduledCount": 0,
-  "unverifiedSourceCount": 0,
+  "unverifiedSourceCount": 1,
   "publishedCount": null,
   "articles": [
     {
-      "key": "realestate:mujin-24ji-fitness-gym-bukken-youto-shobo-hinan",
-      "fingerprint": "7b4b401bd67d7aa72050d70950c9168e3b47945ac8b765c6ae2bf70ee7cfd970",
-      "title": "24時間無人フィットネスジムに使える物件は？用途変更・消防・深夜無人営業の条件",
-      "registered": true,
-      "state": "quality-eligible",
-      "reasons": [],
-      "sourceFailures": [],
-      "sourceEvidenceAvailable": true
-    },
-    {
-      "key": "realestate:souzoku-suiro-akamichi-houteigai-kokyobutsu-baikyaku",
-      "fingerprint": "3972795b8c9e598f850f22bdcc1ff1d55d9c0530959b85088d57352928503416",
-      "title": "相続した土地が水路・赤道（法定外公共物）に接している。売るには用途廃止と払下げが要る？",
+      "key": "realestate:rentacar-jikayou-shako-jimusho-bukken-youken",
+      "fingerprint": "7b480433f8e64506787ab5f4f40c8605ebb8564227cdc31d22d43f6d1f158f93",
+      "title": "レンタカー（自家用自動車有償貸渡）を始めるとき、車庫と事務所の物件は何が要るか",
       "registered": false,
       "state": "held",
       "reasons": [
         "公開レビュー記録が未登録です",
-        "確認済みの公的な一次根拠が不足しています"
+        "候補指紋と修正後原稿が一致しません",
+        "独立レビューの証跡不足、重複、またはレビュー後の原稿変更"
+      ],
+      "sourceFailures": [
+        {
+          "url": "https://laws.e-gov.go.jp/law/337CO0000000340",
+          "checkedAt": "2026-11-01",
+          "relevantClaim": "本文が保管場所法施行令として引用するe-Gov ID。HTTP 404で到達不能。政令番号『昭和37年政令第340号』も誤り。",
+          "verified": false
+        }
+      ],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "realestate:souzoku-toshikeikaku-douro-yoteichi-seigen-baikyaku",
+      "fingerprint": "b436a662572e182e73586bf59bc1e16824426a758f8ee9d55c4d9545f5bce72a",
+      "title": "相続した土地が都市計画道路の予定地にかかっていたら、どう売るか",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録です",
+        "独立レビューに未解決の重大な指摘があります"
       ],
       "sourceFailures": [],
       "sourceEvidenceAvailable": true
     },
     {
-      "key": "legal:lpgas-hanbai-jigyo-touroku-ekisekiho-hoan",
-      "fingerprint": "9351c3239fbe2ae25bc139694315130fd64a80bdddafede57bd7365f106e6198",
-      "title": "LPガス（液化石油ガス）販売事業の登録—要件・業務主任者・保安業務の流れ",
+      "key": "legal:kitchen-car-shokuhin-eigyo-kyoka-shikomi-basho-yoken",
+      "fingerprint": "a940822923847ee6a189204f6db629c3313f8f7cd9cc2ac1e703a9c9fa04bb5f",
+      "title": "キッチンカー（移動販売）の食品営業許可と「仕込み場所」の要件は何か",
       "registered": false,
       "state": "held",
       "reasons": [
         "enの内部リンクに言語不一致があります",
         "zh-twの内部リンクに言語不一致があります",
         "zhの内部リンクに言語不一致があります",
-        "公開レビュー記録が未登録です"
+        "公開レビュー記録が未登録です",
+        "独立レビューに未解決の重大な指摘があります"
       ],
       "sourceFailures": [],
       "sourceEvidenceAvailable": true
     },
     {
-      "key": "legal:akiya-3000man-kakuninsho-shutoku-tetsuzuki-hisouzokunin-kyojuyo",
-      "fingerprint": "b22f2e05f8ac023edc21f5168e463eb520b1c1dd3ed495f9f1d617fc9d94d9a5",
-      "title": "空き家3,000万円控除に要る「被相続人居住用家屋等確認書」の取り方—市区町村への申請",
+      "key": "legal:shozaitou-fumei-kyoyusha-mochibun-shutoku-262jo2",
+      "fingerprint": "4f0327f2940932a7276bd4c00889287f6b0564dbb037d1d624916af30a72baea",
+      "title": "共有者の一人が所在不明のとき、その持分を取得・処分する2023年の新制度（民法262条の2・262条の3）",
       "registered": false,
       "state": "held",
       "reasons": [
         "enの内部リンクに言語不一致があります",
         "zh-twの内部リンクに言語不一致があります",
         "zhの内部リンクに言語不一致があります",
-        "公開レビュー記録が未登録です"
+        "公開レビュー記録が未登録です",
+        "独立レビューに未解決の重大な指摘があります"
       ],
       "sourceFailures": [],
       "sourceEvidenceAvailable": true
     },
     {
-      "key": "labor:nenshousha-18sai-miman-shinya-jikangai-seigen-roumu",
-      "fingerprint": "fd2e34f727d866f0328a18afbafc2e40ee2d3b0f1e34a815e3e61483b5e77a20",
-      "title": "18歳未満（高校生）を雇うときの労務──深夜・時間外・危険業務の制限と年齢証明",
-      "registered": true,
-      "state": "quality-eligible",
-      "reasons": [],
+      "key": "labor:seizogyo-kotai-kinmu-henkei-roudoujikan-shinya-roumu",
+      "fingerprint": "25606f568c4a449b702c37ccb6a281c4b0c46d66ab25fc8db6eab41d50e24f38",
+      "title": "製造業の2交替・3交替勤務、変形労働時間制と深夜・交替手当はどう設計するか",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録です",
+        "独立レビューに未解決の重大な指摘があります"
+      ],
       "sourceFailures": [],
       "sourceEvidenceAvailable": true
     },
     {
-      "key": "labor:keizoku-koyo-rousikyotei-keikasochi-shuryo-2025",
-      "fingerprint": "07c6df0905af7a729e65120cb4cb06538d085829def2d60aa1b302801999afd7",
-      "title": "継続雇用の対象者を労使協定で絞れる経過措置が2025年3月末で終了。何が変わった？",
-      "registered": true,
-      "state": "quality-eligible",
-      "reasons": [],
+      "key": "labor:kaigai-saiyo-nyukoku-mae-naitei-coe-machi-roumu",
+      "fingerprint": "1dc9bcf4517318fa3a4a72c7fecf6393f380a2936dafe5468fd7360b685994d2",
+      "title": "海外で採用した外国人の『入社前』の労務──在留資格認定証明書の交付待ちと渡航遅延",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録です",
+        "独立レビューに未解決の重大な指摘があります"
+      ],
       "sourceFailures": [],
       "sourceEvidenceAvailable": true
     }

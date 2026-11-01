@@ -1238,6 +1238,23 @@ const REQUIRED_HUB_LINKS: Record<string, string[]> = {
     "/legal/column/isan-bunkatsu-kyougisho",
     "/legal/column/souzoku-hajime-koseki-chosa-bunkyo",
   ],
+  "kitchen-car-shokuhin-eigyo-kyoka-shikomi-basho-yoken": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/inshokuten-eigyo-kyoka-hokenjo-setsubi-kijun-shokuhin-eisei",
+    "/legal/column/shokuhin-seizogyo-kyoka-bukken-setsubi-kijun",
+    "/legal/column/tokutei-yukyo-inshokuten-eigyo-kyoka-youken",
+  ],
+  "shozaitou-fumei-kyoyusha-mochibun-shutoku-262jo2": [
+    "/legal/services/inheritance",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/souzoku",
+    "/legal/column/souzoku-nin-fuzai-seisannin-tokubetsu-enko",
+    "/legal/column/isan-bunkatsu-kyougisho",
+    "/legal/column/souzoku-hajime-koseki-chosa-bunkyo",
+  ],
 };
 
 /** 表示コンプライアンス上の禁止語 */
@@ -3889,6 +3906,32 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "別事業体",
     "紹介料を受け取りません",
   ],
+  "kitchen-car-shokuhin-eigyo-kyoka-shikomi-basho-yoken": [
+    "食品衛生法第55条",
+    "食品衛生法第54条",
+    "食品衛生法第51条",
+    "仕込み場所",
+    "食品衛生責任者",
+    "保健所",
+    "別々にご契約",
+    "独立した事業体",
+    "別事業体",
+    "紹介料を受け取りません",
+  ],
+  "shozaitou-fumei-kyoyusha-mochibun-shutoku-262jo2": [
+    "民法第262条の2",
+    "民法第262条の3",
+    "所在等不明共有者",
+    "非訟事件手続法",
+    "供託",
+    "時価相当額",
+    "弁護士",
+    "司法書士",
+    "別々にご契約",
+    "独立した事業体",
+    "別事業体",
+    "紹介料を受け取りません",
+  ],
 };
 
 /** 記事ごとに含めてはならない表現 */
@@ -4076,6 +4119,8 @@ const FORBIDDEN_PHRASES: Record<string, string[]> = {
   "chuka-taiwan-nihon-hojin-seisan-tettai-zairyu-touki": [],
   "lpgas-hanbai-jigyo-touroku-ekisekiho-hoan": [],
   "akiya-3000man-kakuninsho-shutoku-tetsuzuki-hisouzokunin-kyojuyo": [],
+  "kitchen-car-shokuhin-eigyo-kyoka-shikomi-basho-yoken": [],
+  "shozaitou-fumei-kyoyusha-mochibun-shutoku-262jo2": [],
 };
 
 /** 本セット外へ張る既存legalコラムslug（リポジトリの他シードで実在確認済み） */
@@ -7740,6 +7785,58 @@ const ARTICLES: Array<{
       "被相続人居住用家屋等確認書",
       "相続",
       "許認可",
+      "行政書士",
+    ],
+  },
+  {
+    file: "147-kitchen-car-shokuhin-eigyo-kyoka-shikomi-basho-yoken.md",
+    slug: "kitchen-car-shokuhin-eigyo-kyoka-shikomi-basho-yoken",
+    date: "2026-11-01",
+    title:
+      "キッチンカー（移動販売）の食品営業許可と「仕込み場所」の要件は何か",
+    category: "許認可の手続き（行政書士の実務から）",
+    excerpt:
+      "キッチンカー（移動販売）で飲食を提供するには、車両（自動車）そのものに対する食品営業許可を保健所から受ける必要があり、別に食材を下処理する「仕込み場所」にも用途に応じた営業許可が原則として必要です（食品衛生法第55条、施設の基準は同法第54条に基づく各都道府県の条例）。2021年6月1日施行の改正食品衛生法で、HACCPに沿った衛生管理が原則義務化され（第51条）、営業ごとに食品衛生責任者を選任します。車内でできる調理工程は自治体の取扱いで制限され、仕込みは営業許可を取得した固定施設で行うのが原則です。自宅の台所は原則認められません。許可の有効範囲は許可権者の区域で、同一都道府県内は複数の保健所をまたいで有効となる運用が広がっています。保健所への申請書類作成は行政書士、施設の基準の判定・検査は保健所、車両の構造・改造は製作業者、仕込み場所の物件は別事業体の四葉不動産株式会社に分けて整理します。",
+    keywords: [
+      "キッチンカー 移動販売 食品営業許可 仕込み場所 要件",
+      "キッチンカー 営業許可 食品衛生法第55条 自動車 食品移動営業",
+      "キッチンカー 施設基準 食品衛生法第54条 施行規則 保健所",
+      "キッチンカー 仕込み場所 営業許可 別途 固定施設 レンタルキッチン",
+      "キッチンカー HACCP 食品衛生法第51条 食品衛生責任者 衛生管理",
+      "キッチンカー 複数保健所 営業許可 有効範囲 都道府県",
+    ],
+    tags: [
+      "食品衛生法",
+      "キッチンカー",
+      "食品営業許可",
+      "仕込み場所",
+      "許認可",
+      "行政書士",
+    ],
+  },
+  {
+    file: "148-shozaitou-fumei-kyoyusha-mochibun-shutoku-262jo2.md",
+    slug: "shozaitou-fumei-kyoyusha-mochibun-shutoku-262jo2",
+    date: "2026-11-01",
+    title:
+      "共有者の一人が所在不明のとき、その持分を取得・処分する2023年の新制度（民法262条の2・262条の3）",
+    category: "相続手続き（行政書士の実務から）",
+    excerpt:
+      "共有不動産に連絡の取れない共有者（所在等不明共有者）がいても、2023年4月1日施行の改正民法で、裁判所の裁判を経てその持分を取得し、または持分を含めて第三者へ売れる制度ができました（民法第262条の2・第262条の3）。手続は不動産所在地の地方裁判所に申し立て、裁判所が定める時価相当額を供託して進みます（非訟事件手続法第87条・第88条）。公告の期間は3か月を下らず、供託をしないと申立ては却下されます。持分の譲渡は他の共有者全員が持分の全部を同じ買主へ譲渡することが条件で、裁判の効力発生後2か月以内に譲渡の効力が生じなければ失効します。裁判所への申立ての代理は弁護士、裁判所提出書類の作成と登記は司法書士、供託は法務局、共有不動産の売却の媒介は別事業体の四葉不動産株式会社に分けて整理します。行政書士は戸籍・登記記録等の調査と資料整理まで。",
+    keywords: [
+      "所在等不明共有者 持分 取得 処分 民法262条の2 262条の3",
+      "民法262条の2 所在等不明共有者 持分取得 裁判所 地方裁判所",
+      "民法262条の3 所在等不明共有者 持分譲渡 第三者 売却 権限付与",
+      "所在等不明共有者 供託 時価相当額 非訟事件手続法第87条 第88条",
+      "所在等不明共有者 2023年 令和5年4月1日 改正民法 共有制度",
+      "共有不動産 所在不明 共有者 申立て 弁護士 司法書士 行政書士",
+    ],
+    tags: [
+      "民法262条の2",
+      "所在等不明共有者",
+      "共有不動産",
+      "相続",
+      "改正民法",
       "行政書士",
     ],
   },

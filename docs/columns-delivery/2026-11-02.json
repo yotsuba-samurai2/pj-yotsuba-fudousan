@@ -1,0 +1,152 @@
+{
+  "todayJst": "2026-11-02",
+  "runUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/41333347997",
+  "generationStatus": "validated",
+  "generatedCount": 6,
+  "reviewResult": "success",
+  "reviewReportAvailable": true,
+  "reviewPass": false,
+  "findings": {
+    "blocker": 0,
+    "major": 4,
+    "minor": 2
+  },
+  "reviewFindings": [
+    {
+      "file": "scripts/realestate-columns/154-rentacar-jikayou-shako-jimusho-bukken-youken.md",
+      "severity": "major",
+      "issue": "出典節で『自動車の保管場所の確保等に関する法律施行令』を『昭和37年政令第340号』と誤記し、e-Govリンクを https://laws.e-gov.go.jp/law/337CO0000000340 としている。このIDは404で、正しい施行令は昭和37年政令第329号（337CO0000000329）。第1条の要件内容（本拠位置から直線2km以内・出入りと収容・使用権原）自体は正しいが、一次資料の政令番号とリンク先が誤っており、読者が一次情報に到達できない。",
+      "fix": "政令番号を『昭和37年政令第329号』に、URLを https://laws.e-gov.go.jp/law/337CO0000000329 に修正する。"
+    },
+    {
+      "file": "scripts/realestate-columns/en/154-rentacar-jikayou-shako-jimusho-bukken-youken.md",
+      "severity": "major",
+      "issue": "Sources節で保管場所法施行令のe-Govリンクが日本語版と同じ誤ID(...337CO0000000340, 404)。括弧内に政令番号の表記はないがリンクが死んでおり一次資料に到達できない。",
+      "fix": "URLを https://laws.e-gov.go.jp/law/337CO0000000329 に修正する。"
+    },
+    {
+      "file": "scripts/realestate-columns/zh-tw/154-rentacar-jikayou-shako-jimusho-bukken-youken.md",
+      "severity": "major",
+      "issue": "出處節で施行令を『昭和37年政令第340號』とし、リンクも ...337CO0000000340（404）。正しくは政令第329號。",
+      "fix": "『昭和37年政令第329號』に、URLを ...337CO0000000329 に修正する。"
+    },
+    {
+      "file": "scripts/realestate-columns/zh/154-rentacar-jikayou-shako-jimusho-bukken-youken.md",
+      "severity": "major",
+      "issue": "出处节で施行令を『昭和37年政令第340号』とし、リンクも ...337CO0000000340（404）。正しくは政令第329号。",
+      "fix": "『昭和37年政令第329号』に、URLを ...337CO0000000329 に修正する。"
+    },
+    {
+      "file": "scripts/labor-columns/zh-tw/187-seizogyo-kotai-kinmu-henkei-roudoujikan-shinya-roumu.md",
+      "severity": "minor",
+      "issue": "原文の『労働基準法第41条第2号』(管理監督者) を『第41條第2項』と表記（号→項の誤り）。意味は管理監督者で保持されており主張の相違ではないが、条項号の表記が不正確。",
+      "fix": "『第41條第2款』または『第41條第2號』相当の表記に統一する（英語版は正しく item 2 としている）。"
+    },
+    {
+      "file": "scripts/labor-columns/zh/187-seizogyo-kotai-kinmu-henkei-roudoujikan-shinya-roumu.md",
+      "severity": "minor",
+      "issue": "原文の『労働基準法第41条第2号』(管理監督者) を『第41条第2项』と表記（号→項の誤り）。意味は保持。",
+      "fix": "『第41条第2款』相当の表記に修正する。"
+    }
+  ],
+  "registeredCount": 0,
+  "qualityEligibleCount": 0,
+  "heldCount": 6,
+  "scheduledCount": 0,
+  "unverifiedSourceCount": 1,
+  "publishedCount": null,
+  "articles": [
+    {
+      "key": "realestate:rentacar-jikayou-shako-jimusho-bukken-youken",
+      "fingerprint": "7b480433f8e64506787ab5f4f40c8605ebb8564227cdc31d22d43f6d1f158f93",
+      "title": "レンタカー（自家用自動車有償貸渡）を始めるとき、車庫と事務所の物件は何が要るか",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録です",
+        "候補指紋と修正後原稿が一致しません",
+        "独立レビューの証跡不足、重複、またはレビュー後の原稿変更"
+      ],
+      "sourceFailures": [
+        {
+          "url": "https://laws.e-gov.go.jp/law/337CO0000000340",
+          "checkedAt": "2026-11-01",
+          "relevantClaim": "本文が保管場所法施行令として引用するe-Gov ID。HTTP 404で到達不能。政令番号『昭和37年政令第340号』も誤り。",
+          "verified": false
+        }
+      ],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "realestate:souzoku-toshikeikaku-douro-yoteichi-seigen-baikyaku",
+      "fingerprint": "b436a662572e182e73586bf59bc1e16824426a758f8ee9d55c4d9545f5bce72a",
+      "title": "相続した土地が都市計画道路の予定地にかかっていたら、どう売るか",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録です",
+        "独立レビューに未解決の重大な指摘があります"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:kitchen-car-shokuhin-eigyo-kyoka-shikomi-basho-yoken",
+      "fingerprint": "a940822923847ee6a189204f6db629c3313f8f7cd9cc2ac1e703a9c9fa04bb5f",
+      "title": "キッチンカー（移動販売）の食品営業許可と「仕込み場所」の要件は何か",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です",
+        "独立レビューに未解決の重大な指摘があります"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:shozaitou-fumei-kyoyusha-mochibun-shutoku-262jo2",
+      "fingerprint": "4f0327f2940932a7276bd4c00889287f6b0564dbb037d1d624916af30a72baea",
+      "title": "共有者の一人が所在不明のとき、その持分を取得・処分する2023年の新制度（民法262条の2・262条の3）",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です",
+        "独立レビューに未解決の重大な指摘があります"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:seizogyo-kotai-kinmu-henkei-roudoujikan-shinya-roumu",
+      "fingerprint": "25606f568c4a449b702c37ccb6a281c4b0c46d66ab25fc8db6eab41d50e24f38",
+      "title": "製造業の2交替・3交替勤務、変形労働時間制と深夜・交替手当はどう設計するか",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録です",
+        "独立レビューに未解決の重大な指摘があります"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:kaigai-saiyo-nyukoku-mae-naitei-coe-machi-roumu",
+      "fingerprint": "1dc9bcf4517318fa3a4a72c7fecf6393f380a2936dafe5468fd7360b685994d2",
+      "title": "海外で採用した外国人の『入社前』の労務──在留資格認定証明書の交付待ちと渡航遅延",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録です",
+        "独立レビューに未解決の重大な指摘があります"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    }
+  ]
+}

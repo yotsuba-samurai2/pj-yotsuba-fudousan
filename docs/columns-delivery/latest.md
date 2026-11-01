@@ -1,38 +1,53 @@
-# コラム生成・レビュー・公開判定（2026-11-01）
+# コラム生成・レビュー・公開判定（2026-11-02）
 
 - 生成・機械検証：成功 6本
-- レビュー処理：success ／ 判定：true
-- レビュー指摘：blocker 0／major 0／minor 1
-- 今回の候補指紋に対応する公開証跡登録：3本
-- 自動公開の品質候補：3本
-- 品質保留：3本 ／ 公開日待ち：0本
-- 未確認の一次資料：0件
+- レビュー処理：success ／ 判定：false
+- レビュー指摘：blocker 0／major 4／minor 2
+- 今回の候補指紋に対応する公開証跡登録：0本
+- 自動公開の品質候補：0本
+- 品質保留：6本 ／ 公開日待ち：0本
+- 未確認の一次資料：1件
 - 本番公開：この処理では実行していません。公開済み件数は未照会です。
 
-3本は品質確認済み候補です。手動保留・既存DB・公開日・有効期限を公開実行時に再判定します。公開完了は実行結果で確認してください。
+正午の自動公開に渡せる品質候補は0本です。6本は保留、0本は公開日待ちです。
 未確認記事の品質保留はforceでも解除しません。
 
 ## 記事別の判定
 
-- 24時間無人フィットネスジムに使える物件は？用途変更・消防・深夜無人営業の条件：quality-eligible（realestate:mujin-24ji-fitness-gym-bukken-youto-shobo-hinan）
-- 相続した土地が水路・赤道（法定外公共物）に接している。売るには用途廃止と払下げが要る？：held（realestate:souzoku-suiro-akamichi-houteigai-kokyobutsu-baikyaku）
+- レンタカー（自家用自動車有償貸渡）を始めるとき、車庫と事務所の物件は何が要るか：held（realestate:rentacar-jikayou-shako-jimusho-bukken-youken）
   - 公開レビュー記録が未登録です
-  - 確認済みの公的な一次根拠が不足しています
-- LPガス（液化石油ガス）販売事業の登録—要件・業務主任者・保安業務の流れ：held（legal:lpgas-hanbai-jigyo-touroku-ekisekiho-hoan）
+  - 候補指紋と修正後原稿が一致しません
+  - 独立レビューの証跡不足、重複、またはレビュー後の原稿変更
+  - 未確認一次資料：https://laws.e-gov.go.jp/law/337CO0000000340 — 本文が保管場所法施行令として引用するe-Gov ID。HTTP 404で到達不能。政令番号『昭和37年政令第340号』も誤り。
+- 相続した土地が都市計画道路の予定地にかかっていたら、どう売るか：held（realestate:souzoku-toshikeikaku-douro-yoteichi-seigen-baikyaku）
+  - 公開レビュー記録が未登録です
+  - 独立レビューに未解決の重大な指摘があります
+- キッチンカー（移動販売）の食品営業許可と「仕込み場所」の要件は何か：held（legal:kitchen-car-shokuhin-eigyo-kyoka-shikomi-basho-yoken）
   - enの内部リンクに言語不一致があります
   - zh-twの内部リンクに言語不一致があります
   - zhの内部リンクに言語不一致があります
   - 公開レビュー記録が未登録です
-- 空き家3,000万円控除に要る「被相続人居住用家屋等確認書」の取り方—市区町村への申請：held（legal:akiya-3000man-kakuninsho-shutoku-tetsuzuki-hisouzokunin-kyojuyo）
+  - 独立レビューに未解決の重大な指摘があります
+- 共有者の一人が所在不明のとき、その持分を取得・処分する2023年の新制度（民法262条の2・262条の3）：held（legal:shozaitou-fumei-kyoyusha-mochibun-shutoku-262jo2）
   - enの内部リンクに言語不一致があります
   - zh-twの内部リンクに言語不一致があります
   - zhの内部リンクに言語不一致があります
   - 公開レビュー記録が未登録です
-- 18歳未満（高校生）を雇うときの労務──深夜・時間外・危険業務の制限と年齢証明：quality-eligible（labor:nenshousha-18sai-miman-shinya-jikangai-seigen-roumu）
-- 継続雇用の対象者を労使協定で絞れる経過措置が2025年3月末で終了。何が変わった？：quality-eligible（labor:keizoku-koyo-rousikyotei-keikasochi-shuryo-2025）
+  - 独立レビューに未解決の重大な指摘があります
+- 製造業の2交替・3交替勤務、変形労働時間制と深夜・交替手当はどう設計するか：held（labor:seizogyo-kotai-kinmu-henkei-roudoujikan-shinya-roumu）
+  - 公開レビュー記録が未登録です
+  - 独立レビューに未解決の重大な指摘があります
+- 海外で採用した外国人の『入社前』の労務──在留資格認定証明書の交付待ちと渡航遅延：held（labor:kaigai-saiyo-nyukoku-mae-naitei-coe-machi-roumu）
+  - 公開レビュー記録が未登録です
+  - 独立レビューに未解決の重大な指摘があります
 
 ## レビューの指摘
 
-- [minor] scripts/legal-columns/145-lpgas-hanbai-jigyo-touroku-ekisekiho-hoan.md：「LPガス取引の適正化・料金の透明化の観点から制度の見直しが進められており、液石法は令和6年法律第67号による改正を受けています」との記述が、料金透明化・商慣行是正の見直し（実際は2024年の施行規則＝省令改正で令和6年7月2日・令和7年4月2日に段階施行）と、令和6年法律第67号（消費生活用製品安全法等改正。液石法本体に対しては主に製品規制・技術的改正）を近接配置し、67号が料金透明化改正であるかのような印象を与えうる。公布日(2024-06-26)・施行日(2025-12-25)・法律名・液石法が改正対象であること自体は一次資料(衆議院・経産省)で確認でき正確。 ／ 修正案：料金透明化・商慣行是正は施行規則（省令）改正によるものである旨を分けて記し、令和6年法律第67号は液石法の最終改正としての位置づけに留める。核心の登録制度（第3条・第19条・第27条・第14条）の説明には影響がなく、本文も『最新案内で確認』と留保しているため軽微。
+- [major] scripts/realestate-columns/154-rentacar-jikayou-shako-jimusho-bukken-youken.md：出典節で『自動車の保管場所の確保等に関する法律施行令』を『昭和37年政令第340号』と誤記し、e-Govリンクを https://laws.e-gov.go.jp/law/337CO0000000340 としている。このIDは404で、正しい施行令は昭和37年政令第329号（337CO0000000329）。第1条の要件内容（本拠位置から直線2km以内・出入りと収容・使用権原）自体は正しいが、一次資料の政令番号とリンク先が誤っており、読者が一次情報に到達できない。 ／ 修正案：政令番号を『昭和37年政令第329号』に、URLを https://laws.e-gov.go.jp/law/337CO0000000329 に修正する。
+- [major] scripts/realestate-columns/en/154-rentacar-jikayou-shako-jimusho-bukken-youken.md：Sources節で保管場所法施行令のe-Govリンクが日本語版と同じ誤ID(...337CO0000000340, 404)。括弧内に政令番号の表記はないがリンクが死んでおり一次資料に到達できない。 ／ 修正案：URLを https://laws.e-gov.go.jp/law/337CO0000000329 に修正する。
+- [major] scripts/realestate-columns/zh-tw/154-rentacar-jikayou-shako-jimusho-bukken-youken.md：出處節で施行令を『昭和37年政令第340號』とし、リンクも ...337CO0000000340（404）。正しくは政令第329號。 ／ 修正案：『昭和37年政令第329號』に、URLを ...337CO0000000329 に修正する。
+- [major] scripts/realestate-columns/zh/154-rentacar-jikayou-shako-jimusho-bukken-youken.md：出处节で施行令を『昭和37年政令第340号』とし、リンクも ...337CO0000000340（404）。正しくは政令第329号。 ／ 修正案：『昭和37年政令第329号』に、URLを ...337CO0000000329 に修正する。
+- [minor] scripts/labor-columns/zh-tw/187-seizogyo-kotai-kinmu-henkei-roudoujikan-shinya-roumu.md：原文の『労働基準法第41条第2号』(管理監督者) を『第41條第2項』と表記（号→項の誤り）。意味は管理監督者で保持されており主張の相違ではないが、条項号の表記が不正確。 ／ 修正案：『第41條第2款』または『第41條第2號』相当の表記に統一する（英語版は正しく item 2 としている）。
+- [minor] scripts/labor-columns/zh/187-seizogyo-kotai-kinmu-henkei-roudoujikan-shinya-roumu.md：原文の『労働基準法第41条第2号』(管理監督者) を『第41条第2项』と表記（号→項の誤り）。意味は保持。 ／ 修正案：『第41条第2款』相当の表記に修正する。
 
-実行証跡：https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/41222784891
+実行証跡：https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/41333347997
