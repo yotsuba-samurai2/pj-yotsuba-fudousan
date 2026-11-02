@@ -1,0 +1,84 @@
+{
+  "todayJst": "2026-11-03",
+  "runUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/41529730768",
+  "generationStatus": "validated",
+  "generatedCount": 5,
+  "reviewResult": "success",
+  "reviewReportAvailable": true,
+  "reviewPass": true,
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "minor": 0
+  },
+  "reviewFindings": [],
+  "registeredCount": 3,
+  "qualityEligibleCount": 3,
+  "heldCount": 2,
+  "scheduledCount": 0,
+  "unverifiedSourceCount": 0,
+  "publishedCount": null,
+  "articles": [
+    {
+      "key": "realestate:shogaisha-grouphome-kyodoseikatsu-enjo-bukken-youto-shobo",
+      "fingerprint": "d3e4bd7e704bd6149c7cb7cf35e171b37463148c9c34085c20cd1dfed9831ebb",
+      "title": "障害者グループホーム（共同生活援助）の物件は何を確認する？──用途地域・寄宿舎・用途変更・消防設備",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "realestate:souzoku-tochi-kokko-kizoku-kyakka-fushonin-unyo-jisseki",
+      "fingerprint": "82f5a70137b2398c776224872c26d7bc2eb3f8c03bc6333e35f2e92a694f20ec",
+      "title": "相続土地国庫帰属制度の運用実績——どんな土地が却下・不承認になったのか（最新統計で検証）",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:takuchi-tatemono-torihikigyo-menkyo-shinsei-senin-takkenshi-jimusho",
+      "fingerprint": "12a6141ce3ff1e692c041c646ca88797bf4d8e9b11fd221d781699096817bbd0",
+      "title": "宅地建物取引業の免許申請——専任の宅地建物取引士・事務所要件・保証協会",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:shiin-zoyo-keiyaku-yuigon-chigai-fudosan-karitouki",
+      "fingerprint": "b9e1010000bc1cfecab316d7469777b7cea24edb210d7740564f82e2359f14ac",
+      "title": "死因贈与契約と遺言は何が違うのか——不動産の死因贈与と始期付所有権移転仮登記",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です",
+        "確認済みの公的な一次根拠が不足しています"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:butsuryu-souko-ec-center-hendo-henkei-roudoujikan-tanjikan-roumu",
+      "fingerprint": "14b6710210a045436dec147c294b9bb92c2512d58baa3fe3fa617e25c4b4e18a",
+      "title": "物流倉庫・EC物流センターの労務——繁忙期の波動に対応する変形労働時間制と短時間パート",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    }
+  ]
+}

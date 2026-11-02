@@ -3168,6 +3168,46 @@ const ARTICLES: ArticleSpec[] = [
     localesWithTranslations: ["en", "zh-tw", "zh"],
     hubLinks: ["/souzoku"],
   },
+  {
+    file: "156-shogaisha-grouphome-kyodoseikatsu-enjo-bukken-youto-shobo.md",
+    slug: "shogaisha-grouphome-kyodoseikatsu-enjo-bukken-youto-shobo",
+    title: "障害者グループホーム（共同生活援助）の物件は何を確認する？──用途地域・寄宿舎・用途変更・消防設備",
+    publishedAt: "2026-11-02",
+    category: "投資・事業用不動産",
+    excerpt:
+      "障害者グループホーム（共同生活援助）の物件は用途地域ではほぼ詰まりません。建築基準法上は原則「寄宿舎」で、工業専用地域を除く全用途地域で建てられます（別表第二）。詰まるのは、戸建て・共同住宅の転用で用途部分が200平方メートル超なら用途変更の確認申請（第87条）、消防用設備が(6)項ロか(6)項ハで変わること、居室7.43平方メートル以上などの設備基準の3点。東京都文京区の宅地建物取引士が、契約前に確認できることを条文と公的資料から整理します。",
+    keywords: [
+      "障害者グループホーム 物件",
+      "共同生活援助 建築基準法 寄宿舎",
+      "グループホーム 用途変更 確認申請 200平方メートル",
+      "障害者グループホーム 消防 スプリンクラー (6)項ロ",
+      "共同生活援助 居室 7.43平方メートル 設備基準",
+    ],
+    tags: ["事業用不動産", "許認可", "障害福祉", "用途地域", "消防法"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/toushi", "/office"],
+  },
+  {
+    file: "157-souzoku-tochi-kokko-kizoku-kyakka-fushonin-unyo-jisseki.md",
+    slug: "souzoku-tochi-kokko-kizoku-kyakka-fushonin-unyo-jisseki",
+    title: "相続土地国庫帰属制度の運用実績——どんな土地が却下・不承認になったのか（最新統計で検証）",
+    publishedAt: "2026-11-02",
+    category: "相続",
+    excerpt:
+      "相続土地国庫帰属制度は、施行から約3年半で申請6,125件に対し帰属3,231件、却下86件、不承認103件、取下げ1,162件（法務省統計・令和8年9月30日現在の速報値）。申請の段階で却下されるのは建物が建つ土地・境界が明らかでない土地など（法第2条第3項）、審査で不承認になるのは管理に過分の費用を要する崖・地上の工作物樹木・地下の有体物がある土地など（第5条第1項）。東京都文京区の宅地建物取引士が、運用実績と却下・不承認時の別の出口を公的資料から整理します。",
+    keywords: [
+      "相続土地国庫帰属制度 却下 不承認",
+      "相続土地国庫帰属制度 統計 件数",
+      "相続土地国庫帰属法 第2条3項 第5条1項",
+      "国庫帰属 負担金 算定",
+      "売れない土地 相続 出口 売却 寄付",
+    ],
+    tags: ["相続", "国庫帰属", "売れない土地", "空き家", "売却"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/souzoku"],
+  },
 ];
 
 function toPlainText(md: string): string {

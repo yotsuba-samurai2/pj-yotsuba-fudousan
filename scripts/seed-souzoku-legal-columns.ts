@@ -1255,6 +1255,22 @@ const REQUIRED_HUB_LINKS: Record<string, string[]> = {
     "/legal/column/isan-bunkatsu-kyougisho",
     "/legal/column/souzoku-hajime-koseki-chosa-bunkyo",
   ],
+  "takuchi-tatemono-torihikigyo-menkyo-shinsei-senin-takkenshi-jimusho": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/chintai-jutaku-kanrigyo-touroku-sublease-kanyu",
+    "/legal/column/kensetsugyo-kyoka-yoken-keikan-sengi-zaisan",
+  ],
+  "shiin-zoyo-keiyaku-yuigon-chigai-fudosan-karitouki": [
+    "/legal/services/inheritance",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/souzoku",
+    "/legal/column/jihitsu-kosei-yuigon",
+    "/legal/column/kosei-shosho-yuigon-koshonin-shonin-hiyo",
+    "/legal/column/tokutei-zaisan-shokei-yuigon-izo-chigai",
+  ],
 };
 
 /** 表示コンプライアンス上の禁止語 */
@@ -3932,6 +3948,34 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "別事業体",
     "紹介料を受け取りません",
   ],
+  "takuchi-tatemono-torihikigyo-menkyo-shinsei-senin-takkenshi-jimusho": [
+    "宅地建物取引業法",
+    "第3条",
+    "第31条の3",
+    "第25条",
+    "第64条の9",
+    "専任の宅地建物取引士",
+    "営業保証金",
+    "弁済業務保証金分担金",
+    "保証協会",
+    "別々にご契約",
+    "独立した事業体",
+    "別事業体",
+    "紹介料を受け取りません",
+  ],
+  "shiin-zoyo-keiyaku-yuigon-chigai-fudosan-karitouki": [
+    "民法第554条",
+    "第549条",
+    "第960条",
+    "第1022条",
+    "死因贈与",
+    "始期付所有権移転仮登記",
+    "不動産登記法",
+    "別々にご契約",
+    "独立した事業体",
+    "別事業体",
+    "紹介料を受け取りません",
+  ],
 };
 
 /** 記事ごとに含めてはならない表現 */
@@ -4121,6 +4165,8 @@ const FORBIDDEN_PHRASES: Record<string, string[]> = {
   "akiya-3000man-kakuninsho-shutoku-tetsuzuki-hisouzokunin-kyojuyo": [],
   "kitchen-car-shokuhin-eigyo-kyoka-shikomi-basho-yoken": [],
   "shozaitou-fumei-kyoyusha-mochibun-shutoku-262jo2": [],
+  "takuchi-tatemono-torihikigyo-menkyo-shinsei-senin-takkenshi-jimusho": [],
+  "shiin-zoyo-keiyaku-yuigon-chigai-fudosan-karitouki": [],
 };
 
 /** 本セット外へ張る既存legalコラムslug（リポジトリの他シードで実在確認済み） */
@@ -7837,6 +7883,58 @@ const ARTICLES: Array<{
       "共有不動産",
       "相続",
       "改正民法",
+      "行政書士",
+    ],
+  },
+  {
+    file: "149-takuchi-tatemono-torihikigyo-menkyo-shinsei-senin-takkenshi-jimusho.md",
+    slug: "takuchi-tatemono-torihikigyo-menkyo-shinsei-senin-takkenshi-jimusho",
+    date: "2026-11-02",
+    title:
+      "宅地建物取引業の免許申請——専任の宅地建物取引士・事務所要件・保証協会",
+    category: "許認可の手続き（行政書士の実務から）",
+    excerpt:
+      "日本で不動産の売買・賃貸仲介業を新規に開業するには、宅地建物取引業法第3条の免許が必要です。事務所が1つの都道府県内だけなら知事免許、2以上にまたがれば大臣免許で、有効期間は5年（更新が必要）です。事務所ごとに業務従事者5人に1人以上の専任の宅地建物取引士を置く義務があり（第31条の3第1項、割合は施行規則第15条の5の3の5分の1）、事務所には独立性・継続性が求められます。営業前には、営業保証金（主たる事務所1,000万円・その他500万円。宅地建物取引業保証協会に加入すれば弁済業務保証金分担金60万円・30万円の納付で供託に代えられる）の手当てが必要です（第25条・第64条の9）。免許申請書類の作成・提出代理は行政書士、事務所物件は別事業体の不動産、法人設立の登記は司法書士、保証金・保証協会の手続は本人と協会、税務は税理士に分けて整理します。",
+    keywords: [
+      "宅地建物取引業 免許 申請 専任 宅地建物取引士 事務所 要件",
+      "宅建業免許 知事免許 大臣免許 違い 宅地建物取引業法第3条",
+      "専任の宅地建物取引士 5分の1 第31条の3 施行規則第15条の5の3",
+      "宅建業 事務所 要件 独立性 継続性 自宅 賃貸",
+      "営業保証金 1000万円 500万円 保証協会 弁済業務保証金分担金 第25条 第64条の9",
+      "宅建業 開業 行政書士 司法書士 保証協会 役割分担",
+    ],
+    tags: [
+      "宅地建物取引業法",
+      "宅建業免許",
+      "専任の宅地建物取引士",
+      "営業保証金",
+      "許認可",
+      "行政書士",
+    ],
+  },
+  {
+    file: "150-shiin-zoyo-keiyaku-yuigon-chigai-fudosan-karitouki.md",
+    slug: "shiin-zoyo-keiyaku-yuigon-chigai-fudosan-karitouki",
+    date: "2026-11-02",
+    title:
+      "死因贈与契約と遺言は何が違うのか——不動産の死因贈与と始期付所有権移転仮登記",
+    category: "相続の手続き（行政書士の実務から）",
+    excerpt:
+      "死因贈与は贈与者の死亡で効力を生ずる「契約」で、相手方の承諾により成立します（民法第549条・第554条）。遺言は一人で行う単独行為で、法定の方式に従う必要があります（第960条）。死因贈与には遺贈の規定が準用され、撤回は第1022条が方式部分を除き準用されるため、贈与者は生前いつでも撤回できるのが原則です（最判昭和47年5月25日）。ただし負担付死因贈与で負担の全部またはこれに類する程度を履行した後は、特段の事情がない限り撤回できません（最判昭和57年4月30日）。不動産では、遺贈と違い生前に「始期付所有権移転仮登記」ができます（不動産登記法第105条第2号）。税金は相続税の対象になる一方、不動産取得税は課税され、登録免許税は原則2.0%です。契約書作成は行政書士、仮登記・本登記は司法書士、税務は税理士、紛争は弁護士に分けて整理します。",
+    keywords: [
+      "死因贈与 遺言 違い 不動産 始期付所有権移転仮登記",
+      "死因贈与 民法第554条 第549条 遺贈 規定 準用",
+      "死因贈与 撤回 最高裁 昭和47年5月25日 負担付 昭和57年4月30日",
+      "死因贈与 始期付所有権移転仮登記 不動産登記法第105条第2号 生前",
+      "死因贈与 税金 相続税 不動産取得税 登録免許税 2%",
+      "死因贈与契約書 行政書士 仮登記 司法書士 税理士 弁護士",
+    ],
+    tags: [
+      "死因贈与",
+      "遺言",
+      "始期付所有権移転仮登記",
+      "不動産登記法",
+      "相続",
       "行政書士",
     ],
   },

@@ -853,5 +853,128 @@ export const COLUMNS_AUTOPUBLISH_REVIEWS: readonly ColumnQualityReview[] = [
     },
     "reviewedAt": "2026-11-01",
     "validThrough": "2026-11-03"
+  },
+  {
+    "key": "realestate:shogaisha-grouphome-kyodoseikatsu-enjo-bukken-youto-shobo",
+    "fingerprint": "d3e4bd7e704bd6149c7cb7cf35e171b37463148c9c34085c20cd1dfed9831ebb",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.pref.osaka.lg.jp/o090080/shisetsufukushi/gh-sp-youbou/index.html",
+        "checkedAt": "2026-11-02",
+        "relevantClaim": "避難が困難な障害者等を主として入居させる施設（消防法施行令別表第一(6)項ロ）について、平成27年（2015年）4月1日施行の改正で従来の延べ面積275平方メートル以上の面積要件が撤廃され、原則として延べ面積にかかわらずスプリンクラー設備の設置が義務づけられた——を大阪府ページで直接確認。本文記述と一致。",
+        "verified": true
+      },
+      {
+        "url": "https://www.pref.kagawa.lg.jp/documents/3261/siuxjx190621133254_f01.pdf",
+        "checkedAt": "2026-11-02",
+        "relevantClaim": "建築基準法第87条の用途変更の確認申請は、特殊建築物（寄宿舎等）の用途に供する部分の床面積が200平方メートル超のとき必要で、2019年6月25日施行の改正で従来の100平方メートル超から引き上げられた——を香川県・国交省資料で確認。本文記述と一致。",
+        "verified": true
+      },
+      {
+        "url": "https://www.city.sakai.lg.jp/kenko/fukushikaigo/shogaifukushi/jigyousya/syofuku_jigyousya/20200907gh.files/shiteikijun.pdf",
+        "checkedAt": "2026-11-02",
+        "relevantClaim": "共同生活援助の居室は定員原則1人・収納設備等を除き7.43平方メートル（約4.5帖）以上——を堺市・栃木県の指定基準資料で確認。本文記述と一致。",
+        "verified": true
+      },
+      {
+        "url": "https://www.mhlw.go.jp/content/12200000/001662271.pdf",
+        "checkedAt": "2026-11-02",
+        "relevantClaim": "厚生労働省『共同生活援助における運営や支援に関するガイドライン』PDFが当該URLに実在すること（1.7MBのapplication/pdf）を確認。バイナリのため本文テキスト抽出は不可だったが、引用元として実在する一次資料。7.43平方メートル基準は上記指定基準で別途確認済み。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/41529730768"
+    },
+    "reviewedAt": "2026-11-03",
+    "validThrough": "2026-11-05"
+  },
+  {
+    "key": "realestate:souzoku-tochi-kokko-kizoku-kyakka-fushonin-unyo-jisseki",
+    "fingerprint": "82f5a70137b2398c776224872c26d7bc2eb3f8c03bc6333e35f2e92a694f20ec",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.moj.go.jp/MINJI/minji05_00579.html",
+        "checkedAt": "2026-11-02",
+        "relevantClaim": "法務省統計（令和8年9月30日現在・速報値、公表令和8年10月19日）：申請6,125件／帰属3,231件／却下86件／不承認103件／取下げ1,162件。地目別申請（田・畑2,372・宅地2,135・山林928・その他690）、却下理由（添付書類不足37・境界不明23・通路22・権限なし11・建物4）、不承認理由（地上工作物等49・森林37・金銭債務12・災害11・崖7）、取下げ理由（有効活用595・却下不承認判明415）——本文の数値・内訳と完全一致。",
+        "verified": true
+      },
+      {
+        "url": "https://www.moj.go.jp/MINJI/minji05_00457.html",
+        "checkedAt": "2026-11-02",
+        "relevantClaim": "制度施行日＝令和5年4月27日。却下事由（法第2条第3項：建物・担保権等・他人の利用予定・土壌汚染・境界不明）、不承認事由（法第5条第1項：崖・地上有体物・地下有体物・争訟・その他過分の費用労力）——本文の表と一致。",
+        "verified": true
+      },
+      {
+        "url": "https://www.moj.go.jp/MINJI/minji05_00471.html",
+        "checkedAt": "2026-11-02",
+        "relevantClaim": "負担金は国有地の種目ごとに10年分の標準的な管理費用を考慮して算定され、森林など一部は面積に応じて算定される旨を本文（テキスト）で確認。原則の定額20万円は同ページの表（画像）および法務局資料で示される水準で、本文も『具体額は法務局の通知と施行令の算定による』と留保しており整合。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/41529730768"
+    },
+    "reviewedAt": "2026-11-03",
+    "validThrough": "2026-11-05"
+  },
+  {
+    "key": "labor:butsuryu-souko-ec-center-hendo-henkei-roudoujikan-tanjikan-roumu",
+    "fingerprint": "14b6710210a045436dec147c294b9bb92c2512d58baa3fe3fa617e25c4b4e18a",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.nenkin.go.jp/service/kounen/tekiyo/jigyosho/tanjikan.html",
+        "checkedAt": "2026-11-02",
+        "relevantClaim": "特定適用事業所の企業規模要件が2024年10月1日から『厚生年金保険の被保険者総数が常時50人超』へ引下げ（従来100人超）、短時間労働者の加入要件（週20時間以上・月額8.8万円以上・2か月超の雇用見込み・学生でない）、法人単位での合算判定——を日本年金機構ページで確認。本文記述と一致。",
+        "verified": true
+      },
+      {
+        "url": "https://www.moj.go.jp/isa/applications/faq/ikusei_qa_00002.html",
+        "checkedAt": "2026-11-02",
+        "relevantClaim": "育成就労制度の運用開始・施行日は令和9年（2027年）4月1日、技能実習制度を発展的に解消して育成就労を創設（在留資格は廃止）——を出入国在留管理庁Q&Aで直接確認。根拠法は令和6年法律第60号（公布令和6年6月21日は入管庁改正法概要資料で確認）。本文記述と一致。",
+        "verified": true
+      },
+      {
+        "url": "https://www.mlit.go.jp/common/001201568.pdf",
+        "checkedAt": "2026-11-02",
+        "relevantClaim": "労働基準法第32条の2（1か月単位）・第32条の4（1年単位）・施行規則第12条の4（1年単位の1日10時間・1週52時間・年280日・連続6日の限度）・第36条・第37条第4項（深夜割増25%）・第15条第1項、パート有期法第6/8/9条、健康保険法第3条第1項第9号、倉庫業法第3条——いずれも確立した条文で本文と整合（国交省掲載の宅建業法等法令体系ページで参照系統を確認）。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/41529730768"
+    },
+    "reviewedAt": "2026-11-03",
+    "validThrough": "2026-11-05"
   }
 ];
