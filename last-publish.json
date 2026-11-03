@@ -1,26 +1,8 @@
 {
   "dryRun": false,
-  "runAt": "2026-11-02T10:26:08.895Z",
-  "todayJst": "2026-11-02",
+  "runAt": "2026-11-03T10:23:56.899Z",
+  "todayJst": "2026-11-03",
   "targets": [
-    {
-      "key": "labor:roudousha-kyodo-kumiai-kumiaiin-roudo-keiyaku-shaho",
-      "business": "labor",
-      "slug": "roudousha-kyodo-kumiai-kumiaiin-roudo-keiyaku-shaho",
-      "title": "労働者協同組合の組合員は労働契約も結ぶ？社会保険と移行時の労務",
-      "date": "2026-10-30",
-      "category": "業種別の労務管理",
-      "path": "/labor/column/roudousha-kyodo-kumiai-kumiaiin-roudo-keiyaku-shaho"
-    },
-    {
-      "key": "labor:tokutei-ginou-kensetsu-ukeire-roumu-gekkyu-ccus",
-      "business": "labor",
-      "slug": "tokutei-ginou-kensetsu-ukeire-roumu-gekkyu-ccus",
-      "title": "特定技能「建設」の受入れ労務—月給制の義務と建設キャリアアップシステム（CCUS）",
-      "date": "2026-10-30",
-      "category": "外国人雇用",
-      "path": "/labor/column/tokutei-ginou-kensetsu-ukeire-roumu-gekkyu-ccus"
-    },
     {
       "key": "labor:keizoku-koyo-rousikyotei-keikasochi-shuryo-2025",
       "business": "labor",
@@ -47,6 +29,33 @@
       "date": "2026-10-31",
       "category": "投資・事業用不動産",
       "path": "/column/mujin-24ji-fitness-gym-bukken-youto-shobo-hinan"
+    },
+    {
+      "key": "labor:butsuryu-souko-ec-center-hendo-henkei-roudoujikan-tanjikan-roumu",
+      "business": "labor",
+      "slug": "butsuryu-souko-ec-center-hendo-henkei-roudoujikan-tanjikan-roumu",
+      "title": "物流倉庫・EC物流センターの労務——繁忙期の波動に対応する変形労働時間制と短時間パート",
+      "date": "2026-11-02",
+      "category": "労働時間",
+      "path": "/labor/column/butsuryu-souko-ec-center-hendo-henkei-roudoujikan-tanjikan-roumu"
+    },
+    {
+      "key": "realestate:shogaisha-grouphome-kyodoseikatsu-enjo-bukken-youto-shobo",
+      "business": "realestate",
+      "slug": "shogaisha-grouphome-kyodoseikatsu-enjo-bukken-youto-shobo",
+      "title": "障害者グループホーム（共同生活援助）の物件は何を確認する？──用途地域・寄宿舎・用途変更・消防設備",
+      "date": "2026-11-02",
+      "category": "投資・事業用不動産",
+      "path": "/column/shogaisha-grouphome-kyodoseikatsu-enjo-bukken-youto-shobo"
+    },
+    {
+      "key": "realestate:souzoku-tochi-kokko-kizoku-kyakka-fushonin-unyo-jisseki",
+      "business": "realestate",
+      "slug": "souzoku-tochi-kokko-kizoku-kyakka-fushonin-unyo-jisseki",
+      "title": "相続土地国庫帰属制度の運用実績——どんな土地が却下・不承認になったのか（最新統計で検証）",
+      "date": "2026-11-02",
+      "category": "相続",
+      "path": "/column/souzoku-tochi-kokko-kizoku-kyakka-fushonin-unyo-jisseki"
     }
   ],
   "held": [
@@ -315,6 +324,30 @@
       ]
     },
     {
+      "key": "labor:roudousha-kyodo-kumiai-kumiaiin-roudo-keiyaku-shaho",
+      "business": "labor",
+      "slug": "roudousha-kyodo-kumiai-kumiaiin-roudo-keiyaku-shaho",
+      "title": "労働者協同組合の組合員は労働契約も結ぶ？社会保険と移行時の労務",
+      "date": "2026-10-30",
+      "category": "業種別の労務管理",
+      "path": "/labor/column/roudousha-kyodo-kumiai-kumiaiin-roudo-keiyaku-shaho",
+      "qualityHoldReasons": [
+        "公開レビューの確認日または有効期限が不正・期限切れです"
+      ]
+    },
+    {
+      "key": "labor:tokutei-ginou-kensetsu-ukeire-roumu-gekkyu-ccus",
+      "business": "labor",
+      "slug": "tokutei-ginou-kensetsu-ukeire-roumu-gekkyu-ccus",
+      "title": "特定技能「建設」の受入れ労務—月給制の義務と建設キャリアアップシステム（CCUS）",
+      "date": "2026-10-30",
+      "category": "外国人雇用",
+      "path": "/labor/column/tokutei-ginou-kensetsu-ukeire-roumu-gekkyu-ccus",
+      "qualityHoldReasons": [
+        "公開レビューの確認日または有効期限が不正・期限切れです"
+      ]
+    },
+    {
       "key": "legal:chuka-taiwan-nihon-hojin-seisan-tettai-zairyu-touki",
       "business": "legal",
       "slug": "chuka-taiwan-nihon-hojin-seisan-tettai-zairyu-touki",
@@ -487,6 +520,36 @@
       "qualityHoldReasons": [
         "公開レビュー記録が未登録です"
       ]
+    },
+    {
+      "key": "legal:shiin-zoyo-keiyaku-yuigon-chigai-fudosan-karitouki",
+      "business": "legal",
+      "slug": "shiin-zoyo-keiyaku-yuigon-chigai-fudosan-karitouki",
+      "title": "死因贈与契約と遺言は何が違うのか——不動産の死因贈与と始期付所有権移転仮登記",
+      "date": "2026-11-02",
+      "category": "相続の手続き（行政書士の実務から）",
+      "path": "/legal/column/shiin-zoyo-keiyaku-yuigon-chigai-fudosan-karitouki",
+      "qualityHoldReasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "legal:takuchi-tatemono-torihikigyo-menkyo-shinsei-senin-takkenshi-jimusho",
+      "business": "legal",
+      "slug": "takuchi-tatemono-torihikigyo-menkyo-shinsei-senin-takkenshi-jimusho",
+      "title": "宅地建物取引業の免許申請——専任の宅地建物取引士・事務所要件・保証協会",
+      "date": "2026-11-02",
+      "category": "許認可の手続き（行政書士の実務から）",
+      "path": "/legal/column/takuchi-tatemono-torihikigyo-menkyo-shinsei-senin-takkenshi-jimusho",
+      "qualityHoldReasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です"
+      ]
     }
   ],
   "scheduled": [],
@@ -578,6 +641,14 @@
       "message": "品質確認待ち：公開レビュー記録が未登録です"
     },
     {
+      "key": "labor:roudousha-kyodo-kumiai-kumiaiin-roudo-keiyaku-shaho",
+      "message": "品質確認待ち：公開レビューの確認日または有効期限が不正・期限切れです"
+    },
+    {
+      "key": "labor:tokutei-ginou-kensetsu-ukeire-roumu-gekkyu-ccus",
+      "message": "品質確認待ち：公開レビューの確認日または有効期限が不正・期限切れです"
+    },
+    {
       "key": "legal:chuka-taiwan-nihon-hojin-seisan-tettai-zairyu-touki",
       "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録です"
     },
@@ -628,9 +699,17 @@
     {
       "key": "realestate:souzoku-toshikeikaku-douro-yoteichi-seigen-baikyaku",
       "message": "品質確認待ち：公開レビュー記録が未登録です"
+    },
+    {
+      "key": "legal:shiin-zoyo-keiyaku-yuigon-chigai-fudosan-karitouki",
+      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録です"
+    },
+    {
+      "key": "legal:takuchi-tatemono-torihikigyo-menkyo-shinsei-senin-takkenshi-jimusho",
+      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録です"
     }
   ],
-  "blocked": "公開待ちが39本あり、1回の上限（24本）を超えたため止めました。対象を確かめてから、管理画面の「今すぐ公開」か、手動実行（force）で公開してください。",
+  "blocked": "公開待ちが44本あり、1回の上限（24本）を超えたため止めました。対象を確かめてから、管理画面の「今すぐ公開」か、手動実行（force）で公開してください。",
   "outcome": "failure",
   "httpStatus": "409"
 }
