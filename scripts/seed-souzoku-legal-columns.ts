@@ -82,6 +82,22 @@ const AUTHOR = {
 
 /** 各記事が評価を集約すべきハブ（本文に必須の内部リンク）。verify() で機械検査する */
 const REQUIRED_HUB_LINKS: Record<string, string[]> = {
+  "koatsugas-hanbai-daiisshu-furon-juten-kaishu-touroku": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/jidosha-recycle-hikitori-furon-kaishu-gyo-touroku",
+    "/legal/column/dokugekibutsu-hanbaigyo-touroku-kozo-setsubi-kijun",
+    "/legal/column/denki-koji-gyo-touroku-eigyosho-shunin",
+  ],
+  "kodo-senmonshoku-2go-ikou-youken-chuka-taiwan": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/kodo-senmonshoku-1go-point-keisan-chuka-taiwan",
+    "/legal/column/eiju-kyoka-shinsei-chuka-taiwan-senmonshoku",
+    "/legal/column/kika-shinsei-yoken-kokusekiho-chuka-taiwan",
+  ],
   "ippan-shadan-houjin-setsuritsu-hieiri-teikan": [
     "/legal/services",
     "/legal/nagare",
@@ -1339,6 +1355,31 @@ function matchesRequiredPhrase(content: string, phrase: string): boolean {
 
 /** 記事ごとに必ず含めるべき表現（機械ゲート。最低限の合否判定） */
 const REQUIRED_PHRASES: Record<string, string[]> = {
+  "koatsugas-hanbai-daiisshu-furon-juten-kaishu-touroku": [
+    "高圧ガス保安法第20条の4",
+    "フロン類の使用の合理化及び管理の適正化に関する法律",
+    "第一種フロン類充塡回収業者",
+    "第一種特定製品",
+    "冷凍保安規則",
+    "都道府県知事",
+    "別々にご契約",
+    "独立した事業体",
+    "別事業体",
+    "紹介料を受け取りません",
+  ],
+  "kodo-senmonshoku-2go-ikou-youken-chuka-taiwan": [
+    "高度専門職2号",
+    "別表第一の二",
+    "在留資格変更許可申請",
+    "70点",
+    "3年以上",
+    "在留カードの有効期間は交付の日後の10回目の誕生日まで",
+    "入管法第19条の5",
+    "別々にご契約",
+    "独立した事業体",
+    "別事業体",
+    "紹介料を受け取りません",
+  ],
   "ippan-shadan-houjin-setsuritsu-hieiri-teikan": [
     "一般社団法人及び一般財団法人に関する法律",
     "第10条",
@@ -3980,6 +4021,8 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
 
 /** 記事ごとに含めてはならない表現 */
 const FORBIDDEN_PHRASES: Record<string, string[]> = {
+  "koatsugas-hanbai-daiisshu-furon-juten-kaishu-touroku": [],
+  "kodo-senmonshoku-2go-ikou-youken-chuka-taiwan": [],
   "ippan-shadan-houjin-setsuritsu-hieiri-teikan": [],
   "kodo-senmonshoku-1go-point-keisan-chuka-taiwan": [],
   "tantei-gyo-todokede-eigyosho-youken-koan": [],
@@ -7935,6 +7978,58 @@ const ARTICLES: Array<{
       "始期付所有権移転仮登記",
       "不動産登記法",
       "相続",
+      "行政書士",
+    ],
+  },
+  {
+    file: "151-koatsugas-hanbai-daiisshu-furon-juten-kaishu-touroku.md",
+    slug: "koatsugas-hanbai-daiisshu-furon-juten-kaishu-touroku",
+    date: "2026-11-03",
+    title:
+      "冷凍・空調設備事業の許認可—高圧ガス販売届出と第一種フロン類充塡回収業者登録",
+    category: "許認可の手続き（行政書士の実務から）",
+    excerpt:
+      "業務用の冷凍・空調設備を扱う事業では、行為ごとに別々の許認可が重なります。冷媒などの高圧ガスを販売するなら高圧ガス保安法第20条の4の販売事業の届出（販売所ごとに事業開始の日の20日前までに都道府県知事へ）、業務用エアコンや業務用冷凍冷蔵機器の冷媒フロン類を充塡・回収するならフロン排出抑制法第27条第1項の第一種フロン類充塡回収業者の登録（業務を行う区域を管轄する都道府県知事、有効期間5年＝第30条）が必要です。冷凍設備の設置（高圧ガスの製造）は冷凍能力に応じ高圧ガス保安法第5条の許可または届出に分かれ、冷凍保安規則が適用されます。家庭用エアコンは第一種特定製品に含まれず、カーエアコン（第二種特定製品）は自動車リサイクル法の別制度です。書類作成は行政書士、施工・保安は有資格者、物件は不動産、登記は司法書士、税務は税理士、労務は社会保険労務士に分けて整理します。",
+    keywords: [
+      "冷凍 空調 設備 許認可 高圧ガス フロン",
+      "高圧ガス保安法第20条の4 販売事業 届出 都道府県知事 20日前",
+      "第一種フロン類充塡回収業者 登録 フロン排出抑制法第27条 有効期間 5年",
+      "冷凍設備 高圧ガス 製造 第5条 許可 届出 冷凍保安規則",
+      "第一種特定製品 業務用エアコン 冷凍冷蔵機器 第二種特定製品 カーエアコン",
+      "冷凍倉庫 許認可 順番 行政書士 不動産 社労士",
+    ],
+    tags: [
+      "高圧ガス保安法",
+      "フロン排出抑制法",
+      "第一種フロン類充塡回収業者登録",
+      "冷凍倉庫",
+      "許認可",
+      "行政書士",
+    ],
+  },
+  {
+    file: "152-kodo-senmonshoku-2go-ikou-youken-chuka-taiwan.md",
+    slug: "kodo-senmonshoku-2go-ikou-youken-chuka-taiwan",
+    date: "2026-11-03",
+    title:
+      "高度専門職1号から2号へ—中国・台湾の専門職が永住に近い在留へ移る要件",
+    category: "許認可の手続き（行政書士の実務から）",
+    excerpt:
+      "高度専門職2号は、出入国管理及び難民認定法の別表第一の二の表に定める、在留期間が無期限の在留資格です。移行の中心的な要件は、高度専門職1号（またはこれに準じる高度人材としての特定活動）で3年以上その活動を行って在留していたことと、申請時点でポイント合計が70点以上であることの二つです（出入国在留管理庁の運用）。2号では1号イ・ロ・ハの活動に加えほぼ全ての就労系資格の活動を併せて行え、在留期間が無期限になります。ただし永住者と違い高度専門職としての活動が前提で、在留カードの有効期間は交付の日後の10回目の誕生日まで（入管法第19条の5）、活動を継続して6か月以上行わないと在留資格取消しの対象になり得ます（同法第22条の4）。書類作成・取次は申請取次行政書士、労務は社会保険労務士、税務は税理士、最終判断は出入国在留管理庁、争いは弁護士、住居は不動産に分けて整理します。",
+    keywords: [
+      "高度専門職2号 移行 要件 中国 台湾 専門職",
+      "高度専門職1号 3年以上 活動 70点 在留資格変更許可申請",
+      "高度専門職2号 在留期間 無期限 在留カード 10回目の誕生日 入管法第19条の5",
+      "高度専門職2号 就労 活動範囲 別表第一の二 取消し 第22条の4",
+      "高度専門職2号 永住 違い 在留歴 70点 3年 80点 1年",
+      "卒業証明 在職証明 中国 台湾 翻訳 認証 申請取次行政書士",
+    ],
+    tags: [
+      "高度専門職2号",
+      "出入国管理及び難民認定法",
+      "在留資格変更許可申請",
+      "高度人材ポイント制",
+      "申請取次",
       "行政書士",
     ],
   },

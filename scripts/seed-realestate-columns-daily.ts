@@ -3208,6 +3208,46 @@ const ARTICLES: ArticleSpec[] = [
     localesWithTranslations: ["en", "zh-tw", "zh"],
     hubLinks: ["/souzoku"],
   },
+  {
+    file: "158-reizo-reito-souko-butsuryu-bukken-youken.md",
+    slug: "reizo-reito-souko-butsuryu-bukken-youken",
+    title: "冷蔵・冷凍倉庫（低温物流センター）の物件はどこを見て選ぶ？",
+    publishedAt: "2026-11-03",
+    category: "投資・事業用不動産",
+    excerpt:
+      "冷蔵・冷凍倉庫（低温物流センター）の物件は、常温の普通倉庫と同じ目では選べません。物件側で先に確認するのは、用途地域（倉庫業を営む倉庫は準住居〜工業専用で可、住居系は不可。建築基準法別表第二）、床の積載荷重（登録倉庫の床は3,900N/㎡以上。建築基準法施行令第85条）、冷凍機・凝縮器を置くスペース、冷凍機を回す受電容量。東京都文京区の宅地建物取引士が、倉庫業法・高圧ガス保安法・フロン排出抑制法の振り先まで、契約前に確認できることを条文と国土交通省の資料から整理します。",
+    keywords: [
+      "冷蔵倉庫 物件 選び方",
+      "冷凍倉庫 用途地域 床荷重",
+      "倉庫業法 登録 冷蔵倉庫 10度以下",
+      "高圧ガス保安法 冷凍 フロン排出抑制法",
+      "低温物流センター 物件 受電容量",
+    ],
+    tags: ["事業用不動産", "許認可", "倉庫業", "用途地域", "建築基準法"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/toushi", "/office"],
+  },
+  {
+    file: "159-souzokunin-fuzai-seisannin-fudosan-baikyaku-kengengai-kyoka.md",
+    slug: "souzokunin-fuzai-seisannin-fudosan-baikyaku-kengengai-kyoka",
+    title: "相続人がいない不動産は誰がどう売る？相続財産清算人と家裁の許可",
+    publishedAt: "2026-11-03",
+    category: "相続",
+    excerpt:
+      "相続人がいない（または全員が相続放棄した）不動産は、所有者の死亡だけでは誰も売れません。まず家庭裁判所が相続財産の清算人を選任し（民法第952条。2023年〈令和5年〉4月1日施行の改正で「相続財産管理人」から名称変更）、清算人が家庭裁判所の権限外行為許可（民法第28条・第953条準用）を得てはじめて売却できます。東京都文京区の宅地建物取引士が、選任から権限外行為許可・換価・清算の順序までを民法の条文と裁判所の案内から整理します。選任申立ては弁護士・司法書士、登記は司法書士、税務は税理士の領域です。",
+    keywords: [
+      "相続人がいない 不動産 売却",
+      "相続財産清算人 選任 民法952条",
+      "権限外行為許可 民法28条 不動産売却",
+      "相続財産管理人 清算人 名称変更 令和5年",
+      "特別縁故者 国庫帰属 清算 順序",
+    ],
+    tags: ["相続", "相続財産清算人", "権限外行為許可", "空き家", "売却"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/souzoku"],
+  },
 ];
 
 function toPlainText(md: string): string {

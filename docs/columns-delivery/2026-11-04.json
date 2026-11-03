@@ -1,0 +1,141 @@
+{
+  "todayJst": "2026-11-04",
+  "runUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/41702089445",
+  "generationStatus": "validated",
+  "generatedCount": 6,
+  "reviewResult": "success",
+  "reviewReportAvailable": true,
+  "reviewPass": false,
+  "findings": {
+    "blocker": 1,
+    "major": 1,
+    "minor": 0
+  },
+  "reviewFindings": [
+    {
+      "file": "scripts/legal-columns/152-kodo-senmonshoku-2go-ikou-youken-chuka-taiwan.md",
+      "severity": "blocker",
+      "issue": "高度専門職2号の活動不行使による在留資格取消しの基準を一律『3か月（3個月/3个月/3 months）』と記載（結論・比較表・本文第3節・FAQ、en/zh-tw/zh全てに波及）。しかし引用根拠の入管法第22条の4第1項第6号は、高度専門職の在留資格（別表第一の二の表の高度専門職の項の下欄第二号＝高度専門職2号）をもって在留する者について括弧書きで『六月』と明記しており、正しくは6か月。記事の中核論点が、自ら引用する一次資料と矛盾している。",
+      "fix": "『3か月』を『6か月』に訂正（入管法第22条の4第1項第6号：高度専門職2号＝下欄第二号は六月）。日本語（結論・表・本文・FAQ）とen/zh-tw/zhの対応箇所、および『この記事の出典』の該当記述を同時に修正する。"
+    },
+    {
+      "file": "scripts/legal-columns/152-kodo-senmonshoku-2go-ikou-youken-chuka-taiwan.md",
+      "severity": "major",
+      "issue": "在留カードの有効期間を『7年（入管法第19条の3）』と記載（比較表の2行・本文・FAQ『7年ごとに更新』・出典、全4言語）。(1)条番号が誤り：在留カードの有効期間は第19条の5（第19条の3は中長期在留者の定義規定）。(2)値が旧基準：2026年6月14日施行の改正で、永住者・高度専門職2号（下欄第二号）の在留カード有効期間は第19条の5第1項第1号により『交付の日後の10回目の誕生日まで』の誕生日基準に変更された。参照日2026-11-03は施行後であり『7年』『7年ごとに更新』は現行法と不一致。",
+      "fix": "条番号を第19条の5に訂正し、有効期間を現行の『交付後10回目の誕生日まで（永住者〔18歳以上〕・高度専門職2号）』に改める。FAQの『7年ごとに更新』も現行基準に合わせ、全4言語と出典欄を更新する。"
+    }
+  ],
+  "registeredCount": 0,
+  "qualityEligibleCount": 0,
+  "heldCount": 6,
+  "scheduledCount": 0,
+  "unverifiedSourceCount": 3,
+  "publishedCount": null,
+  "articles": [
+    {
+      "key": "realestate:reizo-reito-souko-butsuryu-bukken-youken",
+      "fingerprint": "17e70f091070ba2c4d40b3799db14862f27c59e9bf67f6761ab704bc3eef18fd",
+      "title": "冷蔵・冷凍倉庫（低温物流センター）の物件はどこを見て選ぶ？",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録です",
+        "独立レビューに未解決の重大な指摘があります"
+      ],
+      "sourceFailures": [
+        {
+          "url": "https://laws.e-gov.go.jp/api/1/lawdata/331AC0000000121",
+          "checkedAt": "2026-11-03",
+          "relevantClaim": "冷蔵倉庫の『常時10℃以下・温度計・通報機』『2024年の温度帯区分細分化』は倉庫業法施行規則・告示によるもので本API本文からは直接確認できず（記事も国交省最新案内で確認と留保）",
+          "verified": false
+        }
+      ],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "realestate:souzokunin-fuzai-seisannin-fudosan-baikyaku-kengengai-kyoka",
+      "fingerprint": "0714552cbd4198e6b4172c24ae3f384f8fc18ee0cfa4329d89f5555b401e5e0c",
+      "title": "相続人がいない不動産は誰がどう売る？相続財産清算人と家裁の許可",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録です",
+        "独立レビューに未解決の重大な指摘があります"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:koatsugas-hanbai-daiisshu-furon-juten-kaishu-touroku",
+      "fingerprint": "173d15809fedbc3039eea01813b53b9300ceab1d9f370024d148f5927939758c",
+      "title": "冷凍・空調設備事業の許認可—高圧ガス販売届出と第一種フロン類充塡回収業者登録",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です",
+        "独立レビューに未解決の重大な指摘があります"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:kodo-senmonshoku-2go-ikou-youken-chuka-taiwan",
+      "fingerprint": "dd411ab5bfe902e9b86eadeed0c413c20720ee1ef4449d110306358d8f4c27a0",
+      "title": "高度専門職1号から2号へ—中国・台湾の専門職が永住に近い在留へ移る要件",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です",
+        "候補指紋と修正後原稿が一致しません",
+        "独立レビューの証跡不足、重複、またはレビュー後の原稿変更"
+      ],
+      "sourceFailures": [
+        {
+          "url": "https://laws.e-gov.go.jp/api/1/lawdata/326CO0000000319",
+          "checkedAt": "2026-11-03",
+          "relevantClaim": "入管法第22条の4第1項第6号：活動を継続して『三月（高度専門職の在留資格〔別表第一の二の表の高度専門職の項の下欄第二号に係るものに限る〕をもつて在留する者にあつては、六月）』以上行わないで在留。高度専門職2号は六月であり、本文の『3か月』は誤り（本文不一致）",
+          "verified": false
+        },
+        {
+          "url": "https://laws.e-gov.go.jp/api/1/lawdata/326CO0000000319",
+          "checkedAt": "2026-11-03",
+          "relevantClaim": "在留カードの有効期間は第19条の5第1項（本文の第19条の3は誤り）。第1号により永住者・高度専門職2号（下欄第二号）は『交付の日後の10回目の誕生日』まで。2026-06-14施行改正後の現行基準であり本文の『7年』は旧基準（本文不一致）",
+          "verified": false
+        }
+      ],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:reizo-reito-souko-teion-sagyo-roumu-anzeneisei",
+      "fingerprint": "73bd3e1ac94579483756c720c89ee6fa0cbcc6f2111786d1476202e08d1d5403",
+      "title": "冷蔵・冷凍倉庫（低温物流）の労務——低温作業の安全衛生と休憩・シフト",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録です",
+        "独立レビューに未解決の重大な指摘があります"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:gaikokujin-zairyu-shinseichu-shuro-tokurei-2kagetsu",
+      "fingerprint": "a42190695abc244bfb7bcf4c08ec2995d32e7e277b2bc851bc3a303f6361d171",
+      "title": "在留期間の更新・変更を申請中の外国人を、満了後も働かせてよい？",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録です",
+        "独立レビューに未解決の重大な指摘があります"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    }
+  ]
+}
