@@ -1,51 +1,37 @@
-# コラム生成・レビュー・公開判定（2026-11-04）
+# コラム生成・レビュー・公開判定（2026-11-05）
 
 - 生成・機械検証：成功 6本
-- レビュー処理：success ／ 判定：false
-- レビュー指摘：blocker 1／major 1／minor 0
-- 今回の候補指紋に対応する公開証跡登録：0本
-- 自動公開の品質候補：0本
-- 品質保留：6本 ／ 公開日待ち：0本
-- 未確認の一次資料：3件
+- レビュー処理：success ／ 判定：true
+- レビュー指摘：blocker 0／major 0／minor 2
+- 今回の候補指紋に対応する公開証跡登録：4本
+- 自動公開の品質候補：4本
+- 品質保留：2本 ／ 公開日待ち：0本
+- 未確認の一次資料：0件
 - 本番公開：この処理では実行していません。公開済み件数は未照会です。
 
-正午の自動公開に渡せる品質候補は0本です。6本は保留、0本は公開日待ちです。
+4本は品質確認済み候補です。手動保留・既存DB・公開日・有効期限を公開実行時に再判定します。公開完了は実行結果で確認してください。
 未確認記事の品質保留はforceでも解除しません。
 
 ## 記事別の判定
 
-- 冷蔵・冷凍倉庫（低温物流センター）の物件はどこを見て選ぶ？：held（realestate:reizo-reito-souko-butsuryu-bukken-youken）
-  - 公開レビュー記録が未登録です
-  - 独立レビューに未解決の重大な指摘があります
-  - 未確認一次資料：https://laws.e-gov.go.jp/api/1/lawdata/331AC0000000121 — 冷蔵倉庫の『常時10℃以下・温度計・通報機』『2024年の温度帯区分細分化』は倉庫業法施行規則・告示によるもので本API本文からは直接確認できず（記事も国交省最新案内で確認と留保）
-- 相続人がいない不動産は誰がどう売る？相続財産清算人と家裁の許可：held（realestate:souzokunin-fuzai-seisannin-fudosan-baikyaku-kengengai-kyoka）
-  - 公開レビュー記録が未登録です
-  - 独立レビューに未解決の重大な指摘があります
-- 冷凍・空調設備事業の許認可—高圧ガス販売届出と第一種フロン類充塡回収業者登録：held（legal:koatsugas-hanbai-daiisshu-furon-juten-kaishu-touroku）
+- ペット火葬場・動物霊園を開くための物件—用途地域と自治体条例の設置許可：quality-eligible（realestate:doubutsu-kasoujo-petto-reien-bukken-youto-jorei）
+- 中国・台湾のオーナー向け—日本の収益物件を「定期借家」で貸す：普通借家との違いと再契約：quality-eligible（realestate:chugokugo-owner-teiki-shakuya-futsu-chigai-saikeiyaku）
+- 風俗営業2号・3号（低照度飲食店・区画席飲食店）の許可—要件と物件の距離制限：held（legal:fuzoku-eigyo-2go-3go-teishoudo-kukakuseki-kyoka）
   - enの内部リンクに言語不一致があります
   - zh-twの内部リンクに言語不一致があります
   - zhの内部リンクに言語不一致があります
   - 公開レビュー記録が未登録です
-  - 独立レビューに未解決の重大な指摘があります
-- 高度専門職1号から2号へ—中国・台湾の専門職が永住に近い在留へ移る要件：held（legal:kodo-senmonshoku-2go-ikou-youken-chuka-taiwan）
+- 相続人に外国籍の人がいるとき—法定相続情報一覧図は使えるのか：held（legal:gaikokuseki-souzokunin-houtei-souzoku-ichiran-zu-kahi）
   - enの内部リンクに言語不一致があります
   - zh-twの内部リンクに言語不一致があります
   - zhの内部リンクに言語不一致があります
   - 公開レビュー記録が未登録です
-  - 候補指紋と修正後原稿が一致しません
-  - 独立レビューの証跡不足、重複、またはレビュー後の原稿変更
-  - 未確認一次資料：https://laws.e-gov.go.jp/api/1/lawdata/326CO0000000319 — 入管法第22条の4第1項第6号：活動を継続して『三月（高度専門職の在留資格〔別表第一の二の表の高度専門職の項の下欄第二号に係るものに限る〕をもつて在留する者にあつては、六月）』以上行わないで在留。高度専門職2号は六月であり、本文の『3か月』は誤り（本文不一致）
-  - 未確認一次資料：https://laws.e-gov.go.jp/api/1/lawdata/326CO0000000319 — 在留カードの有効期間は第19条の5第1項（本文の第19条の3は誤り）。第1号により永住者・高度専門職2号（下欄第二号）は『交付の日後の10回目の誕生日』まで。2026-06-14施行改正後の現行基準であり本文の『7年』は旧基準（本文不一致）
-- 冷蔵・冷凍倉庫（低温物流）の労務——低温作業の安全衛生と休憩・シフト：held（labor:reizo-reito-souko-teion-sagyo-roumu-anzeneisei）
-  - 公開レビュー記録が未登録です
-  - 独立レビューに未解決の重大な指摘があります
-- 在留期間の更新・変更を申請中の外国人を、満了後も働かせてよい？：held（labor:gaikokujin-zairyu-shinseichu-shuro-tokurei-2kagetsu）
-  - 公開レビュー記録が未登録です
-  - 独立レビューに未解決の重大な指摘があります
+- 外国人を解雇・雇止めするとき——在留資格と「特定活動（出国準備・就職活動）」への移行：quality-eligible（labor:gaikokujin-kaiko-yatoidome-zairyu-shikaku-tokutei-katsudo）
+- コールセンターの労務——シフト制・深夜割増・在宅混在の労働時間管理：quality-eligible（labor:callcenter-shift-shinya-zaitaku-roudoujikan-roumu）
 
 ## レビューの指摘
 
-- [blocker] scripts/legal-columns/152-kodo-senmonshoku-2go-ikou-youken-chuka-taiwan.md：高度専門職2号の活動不行使による在留資格取消しの基準を一律『3か月（3個月/3个月/3 months）』と記載（結論・比較表・本文第3節・FAQ、en/zh-tw/zh全てに波及）。しかし引用根拠の入管法第22条の4第1項第6号は、高度専門職の在留資格（別表第一の二の表の高度専門職の項の下欄第二号＝高度専門職2号）をもって在留する者について括弧書きで『六月』と明記しており、正しくは6か月。記事の中核論点が、自ら引用する一次資料と矛盾している。 ／ 修正案：『3か月』を『6か月』に訂正（入管法第22条の4第1項第6号：高度専門職2号＝下欄第二号は六月）。日本語（結論・表・本文・FAQ）とen/zh-tw/zhの対応箇所、および『この記事の出典』の該当記述を同時に修正する。
-- [major] scripts/legal-columns/152-kodo-senmonshoku-2go-ikou-youken-chuka-taiwan.md：在留カードの有効期間を『7年（入管法第19条の3）』と記載（比較表の2行・本文・FAQ『7年ごとに更新』・出典、全4言語）。(1)条番号が誤り：在留カードの有効期間は第19条の5（第19条の3は中長期在留者の定義規定）。(2)値が旧基準：2026年6月14日施行の改正で、永住者・高度専門職2号（下欄第二号）の在留カード有効期間は第19条の5第1項第1号により『交付の日後の10回目の誕生日まで』の誕生日基準に変更された。参照日2026-11-03は施行後であり『7年』『7年ごとに更新』は現行法と不一致。 ／ 修正案：条番号を第19条の5に訂正し、有効期間を現行の『交付後10回目の誕生日まで（永住者〔18歳以上〕・高度専門職2号）』に改める。FAQの『7年ごとに更新』も現行基準に合わせ、全4言語と出典欄を更新する。
+- [minor] scripts/realestate-columns/161-chugokugo-owner-teiki-shakuya-futsu-chigai-saikeiyaku.md：本文・FAQ・出典が「賃料を支払う借主が原則20.42%を源泉徴収して翌月10日までに納付」と述べ、国税庁No.2884を根拠に挙げるが、同ページ（直接確認済み）に『翌月10日』の納付期限は記載がない。20.42%・個人居住用の非課税・所法212/213・所令328は同ページで確認できたが、納付期限は所得税法本体の一般則。 ／ 修正案：納付期限の根拠として所得税法第212条（源泉徴収義務・翌月10日納付）を明示するか、No.2884に限定した記述に整える。法的には正しいため公開可否には影響しない。
+- [minor] scripts/legal-columns/en/153-fuzoku-eigyo-2go-3go-teishoudo-kukakuseki-kyoka.md：行政書士（legal）系の翻訳記事（153・154の en/zh-tw/zh）は内部リンク・著者リンクをロケール前置なし（例 https://luck428.com/legal/column/... , https://luck428.com/about/uramatsu）で出力している。不動産（/en/,/zh-tw/,/zh/）・社労士（/en/labor/ 等）の翻訳はロケール前置があり、方針が記事種別で不一致。legal セクションにロケール別ルートが存在する場合、英語・中国語読者が日本語ページに着地する。 ／ 修正案：legal セクションの i18n ルーティングを確認し、ロケール別ページが存在するなら翻訳の内部リンク・著者リンクにロケール前置を付す。存在しないなら現状で正しい（内容・法的正確性には影響しない）。
 
-実行証跡：https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/41702089445
+実行証跡：https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/41898462975

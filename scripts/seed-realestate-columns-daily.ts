@@ -3248,6 +3248,46 @@ const ARTICLES: ArticleSpec[] = [
     localesWithTranslations: ["en", "zh-tw", "zh"],
     hubLinks: ["/souzoku"],
   },
+  {
+    file: "160-doubutsu-kasoujo-petto-reien-bukken-youto-jorei.md",
+    slug: "doubutsu-kasoujo-petto-reien-bukken-youto-jorei",
+    title: "ペット火葬場・動物霊園を開くための物件—用途地域と自治体条例の設置許可",
+    publishedAt: "2026-11-04",
+    category: "投資・事業用不動産",
+    excerpt:
+      "ペット火葬場・動物霊園に使える物件は、人の斎場と同じ目で探すと外します。動物の火葬・埋葬は墓地埋葬法の対象外で全国一律の設置法がなく、効いてくるのは自治体条例の設置許可・事前協議、焚却炉のばい煙（大気汚染防止法）と悪臭（悪臭防止法）、近隣との距離、建築基準法上の用途の扱いです。東京都文京区の宅地建物取引士が、契約前に確認できることを条文と自治体条例から整理します。許認可は行政書士、建築確認は建築士、設備は専門業者、近隣紛争は弁護士へ、いずれも独立した事業体として別々にご契約でおつなぎします。",
+    keywords: [
+      "ペット火葬場 物件",
+      "動物霊園 設置 条例 許可",
+      "ペット火葬 墓地埋葬法 対象外",
+      "動物火葬場 用途地域 建築基準法51条",
+      "焼却炉 ばい煙 悪臭 規制地域",
+    ],
+    tags: ["事業用不動産", "許認可", "用途地域", "ペット"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/toushi", "/office"],
+  },
+  {
+    file: "161-chugokugo-owner-teiki-shakuya-futsu-chigai-saikeiyaku.md",
+    slug: "chugokugo-owner-teiki-shakuya-futsu-chigai-saikeiyaku",
+    title: "中国・台湾のオーナー向け—日本の収益物件を「定期借家」で貸す：普通借家との違いと再契約",
+    publishedAt: "2026-11-04",
+    category: "投資・事業用不動産",
+    excerpt:
+      "日本の収益物件を貸すとき、契約の型は普通借家と定期借家の2つ。最大の違いは更新の有無です。普通借家は原則更新され拒絶に正当事由が要りますが（借地借家法第26条・第28条）、定期借家は期間満了で確定的に終わります。ただし書面契約と事前の書面交付説明を欠くと更新がない旨が無効に（第38条）。中国語圏の非居住オーナー向けに、定期借家と普通借家の違い・中途解約・再契約・源泉徴収までを条文から整理します。管理受託は賃貸住宅管理業者、明渡し訴訟は弁護士、税務は税理士へ、いずれも独立した事業体として別々にご契約。",
+    keywords: [
+      "定期借家 普通借家 違い",
+      "借地借家法 38条 事前説明 無効",
+      "定期建物賃貸借 再契約 終了通知",
+      "非居住者 オーナー 賃料 源泉徴収 20.42%",
+      "中国語圏 オーナー 日本 収益物件 貸す",
+    ],
+    tags: ["投資・事業用不動産", "定期借家", "非居住者", "中国語圏"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/toushi"],
+  },
 ];
 
 function toPlainText(md: string): string {

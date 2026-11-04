@@ -1,0 +1,106 @@
+{
+  "todayJst": "2026-11-05",
+  "runUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/41898462975",
+  "generationStatus": "validated",
+  "generatedCount": 6,
+  "reviewResult": "success",
+  "reviewReportAvailable": true,
+  "reviewPass": true,
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "minor": 2
+  },
+  "reviewFindings": [
+    {
+      "file": "scripts/realestate-columns/161-chugokugo-owner-teiki-shakuya-futsu-chigai-saikeiyaku.md",
+      "severity": "minor",
+      "issue": "本文・FAQ・出典が「賃料を支払う借主が原則20.42%を源泉徴収して翌月10日までに納付」と述べ、国税庁No.2884を根拠に挙げるが、同ページ（直接確認済み）に『翌月10日』の納付期限は記載がない。20.42%・個人居住用の非課税・所法212/213・所令328は同ページで確認できたが、納付期限は所得税法本体の一般則。",
+      "fix": "納付期限の根拠として所得税法第212条（源泉徴収義務・翌月10日納付）を明示するか、No.2884に限定した記述に整える。法的には正しいため公開可否には影響しない。"
+    },
+    {
+      "file": "scripts/legal-columns/en/153-fuzoku-eigyo-2go-3go-teishoudo-kukakuseki-kyoka.md",
+      "severity": "minor",
+      "issue": "行政書士（legal）系の翻訳記事（153・154の en/zh-tw/zh）は内部リンク・著者リンクをロケール前置なし（例 https://luck428.com/legal/column/... , https://luck428.com/about/uramatsu）で出力している。不動産（/en/,/zh-tw/,/zh/）・社労士（/en/labor/ 等）の翻訳はロケール前置があり、方針が記事種別で不一致。legal セクションにロケール別ルートが存在する場合、英語・中国語読者が日本語ページに着地する。",
+      "fix": "legal セクションの i18n ルーティングを確認し、ロケール別ページが存在するなら翻訳の内部リンク・著者リンクにロケール前置を付す。存在しないなら現状で正しい（内容・法的正確性には影響しない）。"
+    }
+  ],
+  "registeredCount": 4,
+  "qualityEligibleCount": 4,
+  "heldCount": 2,
+  "scheduledCount": 0,
+  "unverifiedSourceCount": 0,
+  "publishedCount": null,
+  "articles": [
+    {
+      "key": "realestate:doubutsu-kasoujo-petto-reien-bukken-youto-jorei",
+      "fingerprint": "78ea6d72ba481178477b879037b7dd5c88da6c9e26bd11cca11919d1240ab899",
+      "title": "ペット火葬場・動物霊園を開くための物件—用途地域と自治体条例の設置許可",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "realestate:chugokugo-owner-teiki-shakuya-futsu-chigai-saikeiyaku",
+      "fingerprint": "261d7e7fb8eea89c0a757c73b1c7ab0c47f82a8367359bfa6faf6299c0ce4690",
+      "title": "中国・台湾のオーナー向け—日本の収益物件を「定期借家」で貸す：普通借家との違いと再契約",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:fuzoku-eigyo-2go-3go-teishoudo-kukakuseki-kyoka",
+      "fingerprint": "9ca6c2163aa2ee2ca7a6cdf4fb6c9529f0064b587d170b2a9250c6895b752b3b",
+      "title": "風俗営業2号・3号（低照度飲食店・区画席飲食店）の許可—要件と物件の距離制限",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:gaikokuseki-souzokunin-houtei-souzoku-ichiran-zu-kahi",
+      "fingerprint": "456657c3b74b063966d538e5994d0341df5cc168ffd0acd2d6747e8f297f7391",
+      "title": "相続人に外国籍の人がいるとき—法定相続情報一覧図は使えるのか",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:gaikokujin-kaiko-yatoidome-zairyu-shikaku-tokutei-katsudo",
+      "fingerprint": "5be5987a7fad51a2bb6da57ea1808ae3267d6ccb8dd4d53321a89e30ad2480d0",
+      "title": "外国人を解雇・雇止めするとき——在留資格と「特定活動（出国準備・就職活動）」への移行",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:callcenter-shift-shinya-zaitaku-roudoujikan-roumu",
+      "fingerprint": "921077843156704cbbf3088bb6e4c061af9837f0925173328ef2cef0bfd9af8b",
+      "title": "コールセンターの労務——シフト制・深夜割増・在宅混在の労働時間管理",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    }
+  ]
+}

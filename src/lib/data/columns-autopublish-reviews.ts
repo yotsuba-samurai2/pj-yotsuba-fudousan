@@ -976,5 +976,137 @@ export const COLUMNS_AUTOPUBLISH_REVIEWS: readonly ColumnQualityReview[] = [
     },
     "reviewedAt": "2026-11-03",
     "validThrough": "2026-11-05"
+  },
+  {
+    "key": "realestate:doubutsu-kasoujo-petto-reien-bukken-youto-jorei",
+    "fingerprint": "78ea6d72ba481178477b879037b7dd5c88da6c9e26bd11cca11919d1240ab899",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://laws.e-gov.go.jp/api/1/articles;lawId=323AC0000000048;article=2",
+        "checkedAt": "2026-11-04",
+        "relevantClaim": "墓地埋葬法第2条：埋葬＝死体を土中に葬ること、火葬＝死体を葬るために焼くこと。墳墓・墓地・納骨堂・火葬場は人の死体・焼骨を前提とする定義（動物は枠外）。",
+        "verified": true
+      },
+      {
+        "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/b161026.htm",
+        "checkedAt": "2026-11-04",
+        "relevantClaim": "政府答弁書（第161回国会・平成16年＝2004年）：墓地埋葬法は動物の死体に適用されず、動物霊園（ペット霊園）事業を規制する制度・法律が存在しない旨。",
+        "verified": true
+      },
+      {
+        "url": "https://www.env.go.jp/air/osen/law/t-kise-0.html",
+        "checkedAt": "2026-11-04",
+        "relevantClaim": "大気汚染防止法の対象となるばい煙発生施設：廃棄物焼却炉は火格子面積2m²以上、又は焼却能力200kg/時以上（施行令別表第一13の項）。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/41898462975"
+    },
+    "reviewedAt": "2026-11-05",
+    "validThrough": "2026-11-07"
+  },
+  {
+    "key": "realestate:chugokugo-owner-teiki-shakuya-futsu-chigai-saikeiyaku",
+    "fingerprint": "261d7e7fb8eea89c0a757c73b1c7ab0c47f82a8367359bfa6faf6299c0ce4690",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://laws.e-gov.go.jp/api/1/articles;lawId=403AC0000000090;article=38",
+        "checkedAt": "2026-11-04",
+        "relevantClaim": "借地借家法第38条：1項2項＝書面/電磁的記録による契約、3項＝事前の書面交付・説明、4項＝借主承諾で電磁的方法可、5項＝事前説明を怠ると更新がない旨の定めが無効、6項＝期間1年以上は満了の1年前〜6か月前に通知、7項＝床面積200㎡未満の居住用で借主からの中途解約（申入れから1か月）。本文の各項番号・内容と一致。",
+        "verified": true
+      },
+      {
+        "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/gensen/2884.htm",
+        "checkedAt": "2026-11-04",
+        "relevantClaim": "非居住者の不動産賃貸料の源泉徴収税率は20.42%、個人が自己又は親族の居住用に借り受けた場合は源泉徴収不要。根拠に所法212・213、所令328を掲記（本文の記述と一致。なお『翌月10日納付』は当該ページには記載なし＝所得税法本体の一般則）。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/41898462975"
+    },
+    "reviewedAt": "2026-11-05",
+    "validThrough": "2026-11-07"
+  },
+  {
+    "key": "labor:gaikokujin-kaiko-yatoidome-zairyu-shikaku-tokutei-katsudo",
+    "fingerprint": "5be5987a7fad51a2bb6da57ea1808ae3267d6ccb8dd4d53321a89e30ad2480d0",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://laws.e-gov.go.jp/api/1/articles;lawId=326CO0000000319;article=22_4",
+        "checkedAt": "2026-11-04",
+        "relevantClaim": "入管法第22条の4第1項第6号：別表第1の在留資格をもって在留する者が、正当な理由なく在留資格に応じた活動を継続して3か月（高度専門職2号は6か月）以上行わないで在留している場合は取消し対象。正当な理由がある場合は除外。本文と一致。",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/api/1/articles;lawId=326CO0000000319;article=19_16",
+        "checkedAt": "2026-11-04",
+        "relevantClaim": "入管法第19条の16：契約機関に関する届出（第2号＝技術・人文知識・国際業務／技能／特定技能等）・所属機関に関する届出（第1号＝経営・管理／留学等）を、事由発生日から14日以内に出入国在留管理庁長官へ届け出る義務。本文の『本人が14日以内』と一致。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/41898462975"
+    },
+    "reviewedAt": "2026-11-05",
+    "validThrough": "2026-11-07"
+  },
+  {
+    "key": "labor:callcenter-shift-shinya-zaitaku-roudoujikan-roumu",
+    "fingerprint": "921077843156704cbbf3088bb6e4c061af9837f0925173328ef2cef0bfd9af8b",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://laws.e-gov.go.jp/api/1/articles;lawId=322AC0000000049;article=37",
+        "checkedAt": "2026-11-04",
+        "relevantClaim": "労働基準法第37条：時間外・休日労働の割増は2割5分以上5割以下（休日35%は割増賃金令）、1項ただし書で1か月60時間超は5割以上、第4項で深夜（午後10時〜午前5時）は2割5分以上。本文の割増率・深夜帯と一致。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/41898462975"
+    },
+    "reviewedAt": "2026-11-05",
+    "validThrough": "2026-11-07"
   }
 ];

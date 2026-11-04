@@ -82,6 +82,23 @@ const AUTHOR = {
 
 /** 各記事が評価を集約すべきハブ（本文に必須の内部リンク）。verify() で機械検査する */
 const REQUIRED_HUB_LINKS: Record<string, string[]> = {
+  "fuzoku-eigyo-2go-3go-teishoudo-kukakuseki-kyoka": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/fuzoku-eigyo-1go-settai-inshoku-kyoka-bukken-kyori",
+    "/legal/column/shinya-shurui-teikyo-todokede-yoken",
+    "/legal/column/tokutei-yukyo-inshokuten-eigyo-kyoka-youken",
+  ],
+  "gaikokuseki-souzokunin-houtei-souzoku-ichiran-zu-kahi": [
+    "/legal/services/inheritance",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/souzoku",
+    "/legal/column/houtei-souzoku-jouhou-ichiran-zu",
+    "/legal/column/gaikokuseki-hisouzokunin-junkyoho-tsusokuho-36jo",
+    "/legal/column/souzoku-kaigai-gaikokuseki",
+  ],
   "koatsugas-hanbai-daiisshu-furon-juten-kaishu-touroku": [
     "/legal/services",
     "/legal/nagare",
@@ -4017,6 +4034,37 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
     "別事業体",
     "紹介料を受け取りません",
   ],
+  "fuzoku-eigyo-2go-3go-teishoudo-kukakuseki-kyoka": [
+    "風俗営業等の規制及び業務の適正化等に関する法律",
+    "第2条第1項第2号",
+    "第2条第1項第3号",
+    "第3条第1項",
+    "第4条第1項",
+    "第11条",
+    "第13条",
+    "第49条",
+    "10ルクス以下",
+    "5平方メートル以下",
+    "都道府県公安委員会",
+    "営業制限地域",
+    "別々にご契約",
+    "独立した事業体",
+    "別事業体",
+    "紹介料を受け取りません",
+  ],
+  "gaikokuseki-souzokunin-houtei-souzoku-ichiran-zu-kahi": [
+    "不動産登記規則第247条",
+    "法定相続情報証明制度",
+    "法定相続情報一覧図",
+    "本国法",
+    "法の適用に関する通則法第36条",
+    "司法書士",
+    "税理士",
+    "別々にご契約",
+    "独立した事業体",
+    "別事業体",
+    "紹介料を受け取りません",
+  ],
 };
 
 /** 記事ごとに含めてはならない表現 */
@@ -4210,6 +4258,8 @@ const FORBIDDEN_PHRASES: Record<string, string[]> = {
   "shozaitou-fumei-kyoyusha-mochibun-shutoku-262jo2": [],
   "takuchi-tatemono-torihikigyo-menkyo-shinsei-senin-takkenshi-jimusho": [],
   "shiin-zoyo-keiyaku-yuigon-chigai-fudosan-karitouki": [],
+  "fuzoku-eigyo-2go-3go-teishoudo-kukakuseki-kyoka": [],
+  "gaikokuseki-souzokunin-houtei-souzoku-ichiran-zu-kahi": [],
 };
 
 /** 本セット外へ張る既存legalコラムslug（リポジトリの他シードで実在確認済み） */
@@ -8030,6 +8080,58 @@ const ARTICLES: Array<{
       "在留資格変更許可申請",
       "高度人材ポイント制",
       "申請取次",
+      "行政書士",
+    ],
+  },
+  {
+    file: "153-fuzoku-eigyo-2go-3go-teishoudo-kukakuseki-kyoka.md",
+    slug: "fuzoku-eigyo-2go-3go-teishoudo-kukakuseki-kyoka",
+    date: "2026-11-04",
+    title:
+      "風俗営業2号・3号（低照度飲食店・区画席飲食店）の許可—要件と物件の距離制限",
+    category: "許認可の手続き（行政書士の実務から）",
+    excerpt:
+      "照明を10ルクス以下に落とした「低照度」の飲食店や、見通しが困難で5平方メートル以下の客席を設ける飲食店は、接待をしなくても風俗営業にあたり、営業所ごとに都道府県公安委員会の許可が要ります。根拠は風俗営業等の規制及び業務の適正化等に関する法律（風営法）で、低照度飲食店は第2条第1項第2号、区画席飲食店は第2条第1項第3号、許可は第3条第1項です。許可は届出と違い、場所的要件（営業制限地域＝保全対象施設からの距離・施行令第6条のおおむね100メートル限度）・構造的要件（照度・見通し・客席。第4条第2項第1号→施行規則第7条）・人的要件（第4条第1項の欠格事由）をすべて満たして下ります。2号・3号は風俗営業なので第13条第1項により原則として深夜（午前零時〜午前六時）は営業できず、特定遊興飲食店営業や深夜酒類提供飲食店営業の届出との線引きも必要です。無許可営業は第49条第1号、名義貸し（第11条）は第49条第3号の罰則対象です。許可申請は行政書士、物件・用途地域・距離の確認は宅地建物取引業者、図面は建築士、処分・刑事は弁護士に分けて整理します。",
+    keywords: [
+      "風俗営業 2号 3号 低照度飲食店 区画席飲食店 許可 要件",
+      "低照度飲食店 風営法第2条第1項第2号 照度10ルクス以下 許可",
+      "区画席飲食店 風営法第2条第1項第3号 見通し困難 5平方メートル以下",
+      "風俗営業 営業制限地域 保全対象施設 距離 施行令第6条 100メートル",
+      "風俗営業 2号 3号 営業時間 第13条 深夜 特定遊興 深夜酒類 違い",
+      "風俗営業 無許可 第49条 名義貸し 第11条 行政書士 公安委員会",
+    ],
+    tags: [
+      "風俗営業等の規制及び業務の適正化等に関する法律",
+      "低照度飲食店",
+      "区画席飲食店",
+      "営業制限地域",
+      "許認可",
+      "行政書士",
+    ],
+  },
+  {
+    file: "154-gaikokuseki-souzokunin-houtei-souzoku-ichiran-zu-kahi.md",
+    slug: "gaikokuseki-souzokunin-houtei-souzoku-ichiran-zu-kahi",
+    date: "2026-11-04",
+    title:
+      "相続人に外国籍の人がいるとき—法定相続情報一覧図は使えるのか",
+    category: "相続の手続き（行政書士の実務から）",
+    excerpt:
+      "法定相続情報一覧図は、戸籍から判明する相続人を一覧にして法務局の登記官が認証する制度（法定相続情報証明制度・不動産登記規則第247条）です。ところがこの制度は戸除籍謄抄本を提出できることが前提で、法務局は「被相続人や相続人が日本国籍を有しないなど、戸除籍謄抄本を提出することができない場合は、本制度を利用することができません」と案内しています。被相続人が外国籍で日本の戸籍がない場合は一覧図を作れず、相続人に戸籍のない外国籍の人がいる場合も利用できないことがあります。使えないときは、戸除籍に本国の公的書類（台湾の戸籍、中国大陸の公証処の親族関係公証書、在外公館のサイン証明など）と日本語訳を足し、相続関係説明図を添えて各手続を進めます。誰が相続人かは相続の準拠法（法の適用に関する通則法第36条＝被相続人の本国法、第41条の反致）で決まります。一覧図の申出代理と資料整理は行政書士、相続登記は司法書士、相続税は税理士、遺産分割の争いや準拠法の最終判断は弁護士に分けて整理します。",
+    keywords: [
+      "相続人 外国籍 法定相続情報一覧図 使えるか",
+      "被相続人 外国籍 戸籍なし 法定相続情報一覧図 作れない",
+      "法定相続情報証明制度 日本国籍を有しない 戸除籍謄抄本 利用できない",
+      "不動産登記規則第247条 法定相続情報一覧図 申出 代理人 行政書士",
+      "中国 台湾 相続人 公証処 除籍 サイン証明 相続関係説明図",
+      "相続 準拠法 通則法第36条 本国法 反致 一覧図 使えないとき 相続登記",
+    ],
+    tags: [
+      "法定相続情報一覧図",
+      "法定相続情報証明制度",
+      "不動産登記規則",
+      "外国籍",
+      "相続",
       "行政書士",
     ],
   },
