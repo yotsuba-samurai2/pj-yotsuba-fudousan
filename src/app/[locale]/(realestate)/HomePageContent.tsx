@@ -28,6 +28,7 @@ import { getNestedValue } from "@/lib/seo";
 import { getLatestColumns, getLocalizedColumn } from "@/lib/columns";
 import type { LangCode } from "@/config/languages";
 import { SR_BIO } from "@/lib/shared/sr-label";
+import { BusinessCertification } from "@/components/shared/BusinessCertification";
 
 const HOME_COLUMNS_HEADING: Record<LangCode, { title: string; all: string }> = {
   ja: { title: "お役立ちコラム", all: "コラム一覧へ" },
@@ -452,6 +453,10 @@ export default async function HomePageContent() {
           </div>
         </div>
       </section>
+
+      <div className="mx-auto mt-6 max-w-5xl px-4">
+        <BusinessCertification locale={locale} compact />
+      </div>
 
       <div className="px-4"><RentalEntry locale={locale} /></div>
 
