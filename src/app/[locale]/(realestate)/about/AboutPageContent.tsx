@@ -5,6 +5,7 @@ import { LocaleLink as Link } from "@/components/ui/LocaleLink";
 import { ArrowRight, MapPin } from "lucide-react";
 import { useTranslation } from "@/hooks/useTranslation";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
+import { BusinessCertification } from "@/components/shared/BusinessCertification";
 
 // 社労士カードは開業（SR_LAUNCHED=true・2026-09-01）まで非表示。
 // 翻訳DB側の realestate.aboutPage.groupBusinesses は3件あり、開業前は
@@ -216,6 +217,10 @@ export default function AboutPageContent() {
                 </dd>
               </div>
             ))}
+          </div>
+
+          <div className="mt-8">
+            <BusinessCertification locale={locale} />
           </div>
 
           {/* 所属団体（2026-08-01 新設）＝実在性の裏付け。各団体の会員名簿へ直接リンクする */}

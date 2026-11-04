@@ -74,6 +74,19 @@ export function OrganizationJsonLd({ businessKey }: { businessKey: string }) {
               })),
             }
           : {}),
+        ...(biz.certification
+          ? {
+              hasCertification: {
+                "@type": "Certification",
+                name: biz.certification.name,
+                certificationIdentification: biz.certification.institutionId,
+                validFrom: biz.certification.certifiedOn,
+                expires: biz.certification.validUntil,
+                url: biz.certification.url,
+                about: { "@id": `${biz.url}/#organization` },
+              },
+            }
+          : {}),
         url: biz.url,
         // アセットはルート配信のみ（実測2026-07-11：/legal/yotsuba/*.png=404、/yotsuba/*.png=200）
         // ＝結合ベースはbiz.urlでなくSITE_URL（realestateは出力同一）。logo=正方形ロゴ／image=OG優先で分離（P2仕様）

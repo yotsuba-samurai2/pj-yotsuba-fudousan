@@ -9,6 +9,7 @@ import { GBP_URL } from "@/lib/shared/office-public";
 import { SR_REGISTRATION_ID } from "@/lib/shared/sr-registration";
 import { DEFAULT_LOCALE, isValidLocale } from "@/lib/locale";
 import type { LangCode } from "@/config/languages";
+import { REALESTATE_CERTIFICATION } from "@/lib/certification";
 
 // ── Constants ──
 
@@ -413,6 +414,14 @@ export type BusinessSEOConfig = {
   taxID?: string;
   /** 公的識別子（JSON-LD identifier=PropertyValue）。法人番号・免許/登録番号など */
   identifiers?: { propertyID: string; value: string }[];
+  /** 法人の認定記録。記録ページは法人そのものとの sameAs ではなく Certification.url に置く。 */
+  certification?: {
+    name: string;
+    institutionId: string;
+    certifiedOn: string;
+    validUntil: string;
+    url: string;
+  };
   /**
    * 事業体ごとの設立・開設日（JSON-LD foundingDate）。
    * 未設定なら SHARED_ORG_INFO.foundingDate（グループとしての "2025"）にフォールバックする。
@@ -448,7 +457,9 @@ export const BUSINESS_SEO: Record<string, BusinessSEOConfig> = {
     identifiers: [
       { propertyID: "法人番号", value: "7010001259396" },
       { propertyID: "宅地建物取引業免許番号", value: "東京都知事(1)第113304号" },
+      { propertyID: "認定支援機関ID", value: REALESTATE_CERTIFICATION.institutionId },
     ],
+    certification: REALESTATE_CERTIFICATION,
   },
   legal: {
     url: "https://luck428.com/legal",

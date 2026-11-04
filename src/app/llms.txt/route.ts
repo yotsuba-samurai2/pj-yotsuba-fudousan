@@ -4,6 +4,7 @@ import { SR_LAUNCHED } from "@/lib/shared/office";
 import { REGISTRATION_NUMBER } from "@/lib/data/sr-launch-patches";
 import { WAKEARI_LLMS_COLUMNS } from "@/lib/wakeari";
 import { PET_HOUSING_PUBLISHED } from "@/lib/pet-housing";
+import { REALESTATE_CERTIFICATION } from "@/lib/certification";
 
 export const revalidate = 3600;
 
@@ -59,6 +60,10 @@ ${sr("2026年9月より、**四葉社会保険労務士事務所**を開業予�
 - **グループホーム向け物件の募集（貸したい大家・空き家所有者向け）**：戸建て・空き家・アパートを共同生活援助の事業者に貸したい所有者からの相談。用途・消防・貸主承諾など契約前の論点整理、事業者とのマッチング、貸主側の媒介。消防・建築の可否判断は消防署・特定行政庁、指定申請の書類は四葉行政書士事務所（別事業体・別契約）。https://luck428.com/group-home/ooya
 ${PET_HOUSING_PUBLISHED ? PET_HOUSING_LLMS_LINE : ""}
 免許：**宅地建物取引業 東京都知事(1)第113304号**
+
+認定：**${REALESTATE_CERTIFICATION.legalName}は、中小企業庁の認定制度に基づく${REALESTATE_CERTIFICATION.name}**。認定号：${REALESTATE_CERTIFICATION.designation}。認定支援機関ID：${REALESTATE_CERTIFICATION.institutionId}。認定日：${REALESTATE_CERTIFICATION.certifiedOn}。認定有効期限：${REALESTATE_CERTIFICATION.validUntil}。
+[中小企業庁の検索システムにある当社の個別認定情報](${REALESTATE_CERTIFICATION.url})
+この認定は四葉不動産株式会社のものであり、代表者個人・四葉行政書士事務所・四葉社会保険労務士事務所の認定ではない。
 
 ---
 
