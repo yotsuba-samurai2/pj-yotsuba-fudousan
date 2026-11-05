@@ -1,0 +1,136 @@
+{
+  "todayJst": "2026-11-06",
+  "runUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/42096784030",
+  "generationStatus": "validated",
+  "generatedCount": 6,
+  "reviewResult": "success",
+  "reviewReportAvailable": true,
+  "reviewPass": true,
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "minor": 1
+  },
+  "reviewFindings": [
+    {
+      "file": "scripts/legal-columns/en/155-souzoku-fuzoku-eigyo-kyoka-shoukei-minashi-todokede.md",
+      "severity": "minor",
+      "issue": "legal系の翻訳（en/zh/zh-tw）の内部リンクがロケール前置なしの絶対URL（https://luck428.com/legal/... ・ /souzoku）で、realestate・labor翻訳の /en/・/zh/・/zh-tw/ 前置と不統一。英語・中文の読者が日本語ページに着地する可能性がある（155・156の全訳文で同様）。",
+      "fix": "legalサイトのロケールルーティングを確認し、/en/legal/... 等のロケール前置が必要なら統一する。本文・法的正確性には影響しないため公開可否は左右しない。"
+    }
+  ],
+  "registeredCount": 1,
+  "qualityEligibleCount": 1,
+  "heldCount": 5,
+  "scheduledCount": 0,
+  "unverifiedSourceCount": 4,
+  "publishedCount": null,
+  "articles": [
+    {
+      "key": "realestate:shika-shinryojo-bukken-x-sen-boigo-kaisetsu-todokede",
+      "fingerprint": "c5d698587eab9eab69342f665cfbe8482e2142b7dc1b466977fc62c4d5e42d4d",
+      "title": "歯科診療所を開くための物件要件とは？エックス線室の防護構造と開設届の流れ",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録です",
+        "確認済みの公的な一次根拠が不足しています"
+      ],
+      "sourceFailures": [
+        {
+          "url": "https://laws.e-gov.go.jp/law/325AC0000000201",
+          "checkedAt": "2026-11-05",
+          "relevantClaim": "建築基準法別表第二＝用途地域内の建築物制限（無床診療所は全用途地域で建築可、病院は低層住専・工専等で制限）。確立した内容で記事と整合するが、本審査セッションで条文本体の直接取得は未実施。",
+          "verified": false
+        }
+      ],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "realestate:souzoku-koujou-asbestos-kaitai-genjo-baikyaku",
+      "fingerprint": "a9784b93aa57a1a643947fc4f42da6024ffcd9fcc52bacf48c1e3d3b866a1bab",
+      "title": "相続した工場・倉庫にアスベストがあるかも？現況のまま売るか除去してから売るか",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録です",
+        "確認済みの公的な一次根拠が不足しています"
+      ],
+      "sourceFailures": [
+        {
+          "url": "https://laws.e-gov.go.jp/law/343AC0000000097",
+          "checkedAt": "2026-11-05",
+          "relevantClaim": "大気汚染防止法第18条の15＝解体等工事の石綿事前調査結果報告（令和4年4月1日以降着工が対象、報告義務は元請業者・自主施工者＝施工者）。報告規模の目安（解体80㎡以上・改修/工作物100万円以上）、令和5年10月1日以降の有資格者調査も含め、確立した運用内容で記事と整合するが本セッションでの条文本体の直接取得は未実施。",
+          "verified": false
+        },
+        {
+          "url": "https://laws.e-gov.go.jp/law/129AC0000000089",
+          "checkedAt": "2026-11-05",
+          "relevantClaim": "民法第562条以下＝契約不適合責任、第572条＝担保責任を負わない特約でも知りながら告げなかった事実は免責されない。確立した条文で記事と整合するが本セッションでの直接取得は未実施。",
+          "verified": false
+        }
+      ],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:souzoku-fuzoku-eigyo-kyoka-shoukei-minashi-todokede",
+      "fingerprint": "035a5d22f8a5160f529c0d24e6516f3971c3151174a15704bc1bf95822e6d9c3",
+      "title": "風俗営業の許可は相続できるのか—60日以内の承継承認とみなし営業",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:moritsuchi-kisei-ho-takuchi-zosei-tokutei-moritsuchi-kyoka",
+      "fingerprint": "44e7260245ea8e82fcd7b910b068c7bbceba61f7f84b2b17afeabbec530ae008",
+      "title": "盛土規制法の許可はいつ必要になるのか—宅地造成・特定盛土等の区域と申請の流れ",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:chugoku-chuzai-tekiyo-shomeisho-encho-5nen-koe-shakaihosho",
+      "fingerprint": "b44dc9fc81d024d2b17192e3a6ddab9ff049b574ae7b60466aaa0058776afc93",
+      "title": "中国駐在が5年を超えたら社会保険はどうなるのか？適用証明書の延長と二重加入の回避",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:tsukin-saigai-daisansha-koui-saigai-jibaiseki-rosai",
+      "fingerprint": "aba00817148cf1dd72fcd16a7dc4a546190a06c5e6a427be487824cd8e3bec41",
+      "title": "通勤中の交通事故は労災か自賠責か？第三者行為災害の届出と求償",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録です",
+        "確認済みの公的な一次根拠が不足しています"
+      ],
+      "sourceFailures": [
+        {
+          "url": "https://www.mhlw.go.jp/bunya/roudoukijun/rousaihoken06/dl/06a.pdf",
+          "checkedAt": "2026-11-05",
+          "relevantClaim": "厚生労働省・労働局『第三者行為災害のしおり』：第三者行為災害届を遅滞なく提出、自賠責先行/労災先行は被災者が選択（同一事由で重複受給不可）、全部示談で示談額以外の請求権を放棄すると原則として示談成立後の労災給付は行われない、示談後は速やかに示談書写しを提出。記事の記述と整合（しおりの一般的運用として確認。参照URLは代表例であり本セッションでの当該PDF本体の直接取得は未実施）。",
+          "verified": false
+        }
+      ],
+      "sourceEvidenceAvailable": true
+    }
+  ]
+}

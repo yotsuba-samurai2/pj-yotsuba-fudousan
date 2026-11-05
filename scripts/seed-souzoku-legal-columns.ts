@@ -82,6 +82,22 @@ const AUTHOR = {
 
 /** 各記事が評価を集約すべきハブ（本文に必須の内部リンク）。verify() で機械検査する */
 const REQUIRED_HUB_LINKS: Record<string, string[]> = {
+  "souzoku-fuzoku-eigyo-kyoka-shoukei-minashi-todokede": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/souzoku",
+    "/legal/column/souzoku-jigyo-shokei-kyoninka-shoukei-saishutoku",
+    "/legal/column/fuzoku-eigyo-1go-settai-inshoku-kyoka-bukken-kyori",
+    "/legal/column/fuzoku-eigyo-2go-3go-teishoudo-kukakuseki-kyoka",
+  ],
+  "moritsuchi-kisei-ho-takuchi-zosei-tokutei-moritsuchi-kyoka": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/kaihatsu-kyoka-toshikeikakuho-29jo-nagare",
+    "/legal/column/nochi-tenyo-4jo-5jo-kyoka-nagare",
+  ],
   "fuzoku-eigyo-2go-3go-teishoudo-kukakuseki-kyoka": [
     "/legal/services",
     "/legal/nagare",
@@ -1372,6 +1388,34 @@ function matchesRequiredPhrase(content: string, phrase: string): boolean {
 
 /** 記事ごとに必ず含めるべき表現（機械ゲート。最低限の合否判定） */
 const REQUIRED_PHRASES: Record<string, string[]> = {
+  "souzoku-fuzoku-eigyo-kyoka-shoukei-minashi-todokede": [
+    "風俗営業等の規制及び業務の適正化等に関する法律",
+    "第7条",
+    "第7条の2",
+    "第7条の3",
+    "第4条第1項",
+    "60日",
+    "都道府県公安委員会",
+    "みなし営業",
+    "別々にご契約",
+    "独立した事業体",
+    "別事業体",
+    "紹介料を受け取りません",
+  ],
+  "moritsuchi-kisei-ho-takuchi-zosei-tokutei-moritsuchi-kyoka": [
+    "宅地造成及び特定盛土等規制法",
+    "第12条第1項",
+    "第30条第1項",
+    "第27条第1項",
+    "宅地造成等工事規制区域",
+    "特定盛土等規制区域",
+    "都道府県知事",
+    "令和5年5月26日",
+    "別々にご契約",
+    "独立した事業体",
+    "別事業体",
+    "紹介料を受け取りません",
+  ],
   "koatsugas-hanbai-daiisshu-furon-juten-kaishu-touroku": [
     "高圧ガス保安法第20条の4",
     "フロン類の使用の合理化及び管理の適正化に関する法律",
@@ -4069,6 +4113,8 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
 
 /** 記事ごとに含めてはならない表現 */
 const FORBIDDEN_PHRASES: Record<string, string[]> = {
+  "souzoku-fuzoku-eigyo-kyoka-shoukei-minashi-todokede": [],
+  "moritsuchi-kisei-ho-takuchi-zosei-tokutei-moritsuchi-kyoka": [],
   "koatsugas-hanbai-daiisshu-furon-juten-kaishu-touroku": [],
   "kodo-senmonshoku-2go-ikou-youken-chuka-taiwan": [],
   "ippan-shadan-houjin-setsuritsu-hieiri-teikan": [],
@@ -8132,6 +8178,58 @@ const ARTICLES: Array<{
       "不動産登記規則",
       "外国籍",
       "相続",
+      "行政書士",
+    ],
+  },
+  {
+    file: "155-souzoku-fuzoku-eigyo-kyoka-shoukei-minashi-todokede.md",
+    slug: "souzoku-fuzoku-eigyo-kyoka-shoukei-minashi-todokede",
+    date: "2026-11-05",
+    title:
+      "風俗営業の許可は相続できるのか—60日以内の承継承認とみなし営業",
+    category: "許認可の手続き（行政書士の実務から）",
+    excerpt:
+      "風俗営業の許可は、営業者が亡くなっても相続人に当然には引き継がれません。相続人が営業を続けるには、被相続人の死亡後60日以内に都道府県公安委員会の承認（相続による地位の承継の承認）を受ける必要があります（風俗営業等の規制及び業務の適正化等に関する法律第7条第1項）。申請をしておけば、死亡の日から承認または不承認の通知を受けるまでの間は、被相続人への許可が相続人に対してされたものとみなされ、営業を続けられます（第7条第2項＝みなし営業）。承認は第4条第1項の欠格事由に当たらないことが条件で（第7条第3項の準用）、破産して復権を得ない、1年以上の拘禁刑や風営法違反の刑から5年を経過しない、暴力的不法行為のおそれがあるなどに当たると承認されません。相続人が複数いるときは協議で承継する1人を定めて申請します。生前の合併・分割は第7条の2・第7条の3で事前の承認が要ります。承認申請・相続手続は行政書士、登記は司法書士、税務は税理士、遺産分割の争いや不服申立ては弁護士に分けて整理します。",
+    keywords: [
+      "風俗営業 許可 相続 承継 承認 60日 みなし営業",
+      "風営法第7条 相続 死亡後60日 都道府県公安委員会 承認申請",
+      "風俗営業 みなし営業 第7条第2項 審査期間 営業継続",
+      "風俗営業 相続人 複数 協議 承継 第7条第1項 行政書士",
+      "風俗営業 承継 欠格事由 第4条第1項 拘禁刑 破産 暴力団",
+      "風営法 合併 分割 第7条の2 第7条の3 事前 承認 事業承継",
+    ],
+    tags: [
+      "風俗営業等の規制及び業務の適正化等に関する法律",
+      "相続",
+      "地位の承継",
+      "みなし営業",
+      "許認可",
+      "行政書士",
+    ],
+  },
+  {
+    file: "156-moritsuchi-kisei-ho-takuchi-zosei-tokutei-moritsuchi-kyoka.md",
+    slug: "moritsuchi-kisei-ho-takuchi-zosei-tokutei-moritsuchi-kyoka",
+    date: "2026-11-05",
+    title:
+      "盛土規制法の許可はいつ必要になるのか—宅地造成・特定盛土等の区域と申請の流れ",
+    category: "許認可の手続き（行政書士の実務から）",
+    excerpt:
+      "盛土・切土・土石の堆積の工事は、区域と規模によっては着手前に都道府県知事の許可が要ります。根拠は2023年（令和5年）5月26日に全面施行された宅地造成及び特定盛土等規制法（盛土規制法）です。市街地やその周辺などの「宅地造成等工事規制区域」内では、政令で定める規模の宅地造成・特定盛土等・土石の堆積の工事に許可が必要です（第12条第1項）。その外側で指定される「特定盛土等規制区域」内では、政令で定める規模を超える大規模な特定盛土等・土石の堆積に許可が要り（第30条第1項）、規模未満でも着手30日前までの届出が必要です（第27条第1項）。規制対象は「宅地」に限らず、農地・山林・資材置場・残土処分場や太陽光の造成も規模を超えれば対象です。区域の指定日は全面施行日と一致せず都道府県・市ごとに異なります。無許可工事は第55条で3年以下の拘禁刑又は1000万円以下の罰金、法人は第60条で3億円以下の罰金の対象です。許可申請は行政書士、設計・構造計算は土木・建築の設計者、登記は司法書士、紛争は弁護士に分けて整理します。",
+    keywords: [
+      "盛土規制法 許可 いつ必要 宅地造成 特定盛土等 土石の堆積",
+      "宅地造成及び特定盛土等規制法 令和5年5月26日 全面施行 盛土",
+      "宅地造成等工事規制区域 特定盛土等規制区域 違い 許可 届出",
+      "盛土 許可 第12条第1項 第30条第1項 届出 第27条第1項 都道府県知事",
+      "盛土規制法 無許可 罰則 第55条 拘禁刑 法人 3億円 第60条",
+      "残土 堆積 山林 農地 太陽光 造成 規模 政令 行政書士",
+    ],
+    tags: [
+      "宅地造成及び特定盛土等規制法",
+      "盛土規制法",
+      "宅地造成等工事規制区域",
+      "特定盛土等規制区域",
+      "許認可",
       "行政書士",
     ],
   },

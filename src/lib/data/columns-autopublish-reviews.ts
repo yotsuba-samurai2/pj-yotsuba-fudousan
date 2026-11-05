@@ -1108,5 +1108,38 @@ export const COLUMNS_AUTOPUBLISH_REVIEWS: readonly ColumnQualityReview[] = [
     },
     "reviewedAt": "2026-11-05",
     "validThrough": "2026-11-07"
+  },
+  {
+    "key": "labor:chugoku-chuzai-tekiyo-shomeisho-encho-5nen-koe-shakaihosho",
+    "fingerprint": "b44dc9fc81d024d2b17192e3a6ddab9ff049b574ae7b60466aaa0058776afc93",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.nenkin.go.jp/service/shaho-kyotei/kunibetsu/notice/china.html",
+        "checkedAt": "2026-11-05",
+        "relevantClaim": "日本年金機構『協定相手国別注意事項（中国）』で逐語確認：『派遣開始日から5年間は派遣元国の年金制度のみに加入』『その延長期間は原則として5年を超えない』『特段の事情がある場合には派遣期間が合計10年を超える場合でも』さらなる延長の余地、『直前の派遣と再度の派遣が実質的に連続したものではないことが必要』（インターバルルールなし）、協定発効前からの派遣者は発効日に派遣とみなす。記事の記述と一致。",
+        "verified": true
+      },
+      {
+        "url": "https://www.mhlw.go.jp/stf/houdou_kouhou/kouhou_shuppan/magazine/201908_00005.html",
+        "checkedAt": "2026-11-05",
+        "relevantClaim": "日中社会保障協定の発効日2019年9月1日、対象は公的年金（医療保険等は対象外）、発効前からの派遣者は発効日に派遣されたものとして扱われ発効日から5年。厚労省広報誌および年金機構案内で確認し記事と一致。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/42096784030"
+    },
+    "reviewedAt": "2026-11-06",
+    "validThrough": "2026-11-08"
   }
 ];

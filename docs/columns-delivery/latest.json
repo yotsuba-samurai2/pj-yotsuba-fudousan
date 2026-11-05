@@ -1,6 +1,6 @@
 {
-  "todayJst": "2026-11-05",
-  "runUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/41898462975",
+  "todayJst": "2026-11-06",
+  "runUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/42096784030",
   "generationStatus": "validated",
   "generatedCount": 6,
   "reviewResult": "success",
@@ -9,53 +9,73 @@
   "findings": {
     "blocker": 0,
     "major": 0,
-    "minor": 2
+    "minor": 1
   },
   "reviewFindings": [
     {
-      "file": "scripts/realestate-columns/161-chugokugo-owner-teiki-shakuya-futsu-chigai-saikeiyaku.md",
+      "file": "scripts/legal-columns/en/155-souzoku-fuzoku-eigyo-kyoka-shoukei-minashi-todokede.md",
       "severity": "minor",
-      "issue": "本文・FAQ・出典が「賃料を支払う借主が原則20.42%を源泉徴収して翌月10日までに納付」と述べ、国税庁No.2884を根拠に挙げるが、同ページ（直接確認済み）に『翌月10日』の納付期限は記載がない。20.42%・個人居住用の非課税・所法212/213・所令328は同ページで確認できたが、納付期限は所得税法本体の一般則。",
-      "fix": "納付期限の根拠として所得税法第212条（源泉徴収義務・翌月10日納付）を明示するか、No.2884に限定した記述に整える。法的には正しいため公開可否には影響しない。"
-    },
-    {
-      "file": "scripts/legal-columns/en/153-fuzoku-eigyo-2go-3go-teishoudo-kukakuseki-kyoka.md",
-      "severity": "minor",
-      "issue": "行政書士（legal）系の翻訳記事（153・154の en/zh-tw/zh）は内部リンク・著者リンクをロケール前置なし（例 https://luck428.com/legal/column/... , https://luck428.com/about/uramatsu）で出力している。不動産（/en/,/zh-tw/,/zh/）・社労士（/en/labor/ 等）の翻訳はロケール前置があり、方針が記事種別で不一致。legal セクションにロケール別ルートが存在する場合、英語・中国語読者が日本語ページに着地する。",
-      "fix": "legal セクションの i18n ルーティングを確認し、ロケール別ページが存在するなら翻訳の内部リンク・著者リンクにロケール前置を付す。存在しないなら現状で正しい（内容・法的正確性には影響しない）。"
+      "issue": "legal系の翻訳（en/zh/zh-tw）の内部リンクがロケール前置なしの絶対URL（https://luck428.com/legal/... ・ /souzoku）で、realestate・labor翻訳の /en/・/zh/・/zh-tw/ 前置と不統一。英語・中文の読者が日本語ページに着地する可能性がある（155・156の全訳文で同様）。",
+      "fix": "legalサイトのロケールルーティングを確認し、/en/legal/... 等のロケール前置が必要なら統一する。本文・法的正確性には影響しないため公開可否は左右しない。"
     }
   ],
-  "registeredCount": 4,
-  "qualityEligibleCount": 4,
-  "heldCount": 2,
+  "registeredCount": 1,
+  "qualityEligibleCount": 1,
+  "heldCount": 5,
   "scheduledCount": 0,
-  "unverifiedSourceCount": 0,
+  "unverifiedSourceCount": 4,
   "publishedCount": null,
   "articles": [
     {
-      "key": "realestate:doubutsu-kasoujo-petto-reien-bukken-youto-jorei",
-      "fingerprint": "78ea6d72ba481178477b879037b7dd5c88da6c9e26bd11cca11919d1240ab899",
-      "title": "ペット火葬場・動物霊園を開くための物件—用途地域と自治体条例の設置許可",
-      "registered": true,
-      "state": "quality-eligible",
-      "reasons": [],
-      "sourceFailures": [],
+      "key": "realestate:shika-shinryojo-bukken-x-sen-boigo-kaisetsu-todokede",
+      "fingerprint": "c5d698587eab9eab69342f665cfbe8482e2142b7dc1b466977fc62c4d5e42d4d",
+      "title": "歯科診療所を開くための物件要件とは？エックス線室の防護構造と開設届の流れ",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録です",
+        "確認済みの公的な一次根拠が不足しています"
+      ],
+      "sourceFailures": [
+        {
+          "url": "https://laws.e-gov.go.jp/law/325AC0000000201",
+          "checkedAt": "2026-11-05",
+          "relevantClaim": "建築基準法別表第二＝用途地域内の建築物制限（無床診療所は全用途地域で建築可、病院は低層住専・工専等で制限）。確立した内容で記事と整合するが、本審査セッションで条文本体の直接取得は未実施。",
+          "verified": false
+        }
+      ],
       "sourceEvidenceAvailable": true
     },
     {
-      "key": "realestate:chugokugo-owner-teiki-shakuya-futsu-chigai-saikeiyaku",
-      "fingerprint": "261d7e7fb8eea89c0a757c73b1c7ab0c47f82a8367359bfa6faf6299c0ce4690",
-      "title": "中国・台湾のオーナー向け—日本の収益物件を「定期借家」で貸す：普通借家との違いと再契約",
-      "registered": true,
-      "state": "quality-eligible",
-      "reasons": [],
-      "sourceFailures": [],
+      "key": "realestate:souzoku-koujou-asbestos-kaitai-genjo-baikyaku",
+      "fingerprint": "a9784b93aa57a1a643947fc4f42da6024ffcd9fcc52bacf48c1e3d3b866a1bab",
+      "title": "相続した工場・倉庫にアスベストがあるかも？現況のまま売るか除去してから売るか",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録です",
+        "確認済みの公的な一次根拠が不足しています"
+      ],
+      "sourceFailures": [
+        {
+          "url": "https://laws.e-gov.go.jp/law/343AC0000000097",
+          "checkedAt": "2026-11-05",
+          "relevantClaim": "大気汚染防止法第18条の15＝解体等工事の石綿事前調査結果報告（令和4年4月1日以降着工が対象、報告義務は元請業者・自主施工者＝施工者）。報告規模の目安（解体80㎡以上・改修/工作物100万円以上）、令和5年10月1日以降の有資格者調査も含め、確立した運用内容で記事と整合するが本セッションでの条文本体の直接取得は未実施。",
+          "verified": false
+        },
+        {
+          "url": "https://laws.e-gov.go.jp/law/129AC0000000089",
+          "checkedAt": "2026-11-05",
+          "relevantClaim": "民法第562条以下＝契約不適合責任、第572条＝担保責任を負わない特約でも知りながら告げなかった事実は免責されない。確立した条文で記事と整合するが本セッションでの直接取得は未実施。",
+          "verified": false
+        }
+      ],
       "sourceEvidenceAvailable": true
     },
     {
-      "key": "legal:fuzoku-eigyo-2go-3go-teishoudo-kukakuseki-kyoka",
-      "fingerprint": "9ca6c2163aa2ee2ca7a6cdf4fb6c9529f0064b587d170b2a9250c6895b752b3b",
-      "title": "風俗営業2号・3号（低照度飲食店・区画席飲食店）の許可—要件と物件の距離制限",
+      "key": "legal:souzoku-fuzoku-eigyo-kyoka-shoukei-minashi-todokede",
+      "fingerprint": "035a5d22f8a5160f529c0d24e6516f3971c3151174a15704bc1bf95822e6d9c3",
+      "title": "風俗営業の許可は相続できるのか—60日以内の承継承認とみなし営業",
       "registered": false,
       "state": "held",
       "reasons": [
@@ -68,9 +88,9 @@
       "sourceEvidenceAvailable": true
     },
     {
-      "key": "legal:gaikokuseki-souzokunin-houtei-souzoku-ichiran-zu-kahi",
-      "fingerprint": "456657c3b74b063966d538e5994d0341df5cc168ffd0acd2d6747e8f297f7391",
-      "title": "相続人に外国籍の人がいるとき—法定相続情報一覧図は使えるのか",
+      "key": "legal:moritsuchi-kisei-ho-takuchi-zosei-tokutei-moritsuchi-kyoka",
+      "fingerprint": "44e7260245ea8e82fcd7b910b068c7bbceba61f7f84b2b17afeabbec530ae008",
+      "title": "盛土規制法の許可はいつ必要になるのか—宅地造成・特定盛土等の区域と申請の流れ",
       "registered": false,
       "state": "held",
       "reasons": [
@@ -83,9 +103,9 @@
       "sourceEvidenceAvailable": true
     },
     {
-      "key": "labor:gaikokujin-kaiko-yatoidome-zairyu-shikaku-tokutei-katsudo",
-      "fingerprint": "5be5987a7fad51a2bb6da57ea1808ae3267d6ccb8dd4d53321a89e30ad2480d0",
-      "title": "外国人を解雇・雇止めするとき——在留資格と「特定活動（出国準備・就職活動）」への移行",
+      "key": "labor:chugoku-chuzai-tekiyo-shomeisho-encho-5nen-koe-shakaihosho",
+      "fingerprint": "b44dc9fc81d024d2b17192e3a6ddab9ff049b574ae7b60466aaa0058776afc93",
+      "title": "中国駐在が5年を超えたら社会保険はどうなるのか？適用証明書の延長と二重加入の回避",
       "registered": true,
       "state": "quality-eligible",
       "reasons": [],
@@ -93,13 +113,23 @@
       "sourceEvidenceAvailable": true
     },
     {
-      "key": "labor:callcenter-shift-shinya-zaitaku-roudoujikan-roumu",
-      "fingerprint": "921077843156704cbbf3088bb6e4c061af9837f0925173328ef2cef0bfd9af8b",
-      "title": "コールセンターの労務——シフト制・深夜割増・在宅混在の労働時間管理",
-      "registered": true,
-      "state": "quality-eligible",
-      "reasons": [],
-      "sourceFailures": [],
+      "key": "labor:tsukin-saigai-daisansha-koui-saigai-jibaiseki-rosai",
+      "fingerprint": "aba00817148cf1dd72fcd16a7dc4a546190a06c5e6a427be487824cd8e3bec41",
+      "title": "通勤中の交通事故は労災か自賠責か？第三者行為災害の届出と求償",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録です",
+        "確認済みの公的な一次根拠が不足しています"
+      ],
+      "sourceFailures": [
+        {
+          "url": "https://www.mhlw.go.jp/bunya/roudoukijun/rousaihoken06/dl/06a.pdf",
+          "checkedAt": "2026-11-05",
+          "relevantClaim": "厚生労働省・労働局『第三者行為災害のしおり』：第三者行為災害届を遅滞なく提出、自賠責先行/労災先行は被災者が選択（同一事由で重複受給不可）、全部示談で示談額以外の請求権を放棄すると原則として示談成立後の労災給付は行われない、示談後は速やかに示談書写しを提出。記事の記述と整合（しおりの一般的運用として確認。参照URLは代表例であり本セッションでの当該PDF本体の直接取得は未実施）。",
+          "verified": false
+        }
+      ],
       "sourceEvidenceAvailable": true
     }
   ]
