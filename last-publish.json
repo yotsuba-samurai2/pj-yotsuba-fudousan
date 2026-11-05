@@ -1,13 +1,129 @@
 {
   "dryRun": false,
-  "runAt": "2026-11-04T10:18:58.154Z",
-  "todayJst": "2026-11-04",
-  "targets": [],
-  "held": [],
+  "runAt": "2026-11-05T10:12:26.848Z",
+  "todayJst": "2026-11-05",
+  "targets": [
+    {
+      "key": "labor:callcenter-shift-shinya-zaitaku-roudoujikan-roumu",
+      "business": "labor",
+      "slug": "callcenter-shift-shinya-zaitaku-roudoujikan-roumu",
+      "title": "コールセンターの労務——シフト制・深夜割増・在宅混在の労働時間管理",
+      "date": "2026-11-04",
+      "category": "労働時間",
+      "path": "/labor/column/callcenter-shift-shinya-zaitaku-roudoujikan-roumu"
+    },
+    {
+      "key": "labor:gaikokujin-kaiko-yatoidome-zairyu-shikaku-tokutei-katsudo",
+      "business": "labor",
+      "slug": "gaikokujin-kaiko-yatoidome-zairyu-shikaku-tokutei-katsudo",
+      "title": "外国人を解雇・雇止めするとき——在留資格と「特定活動（出国準備・就職活動）」への移行",
+      "date": "2026-11-04",
+      "category": "外国人雇用",
+      "path": "/labor/column/gaikokujin-kaiko-yatoidome-zairyu-shikaku-tokutei-katsudo"
+    },
+    {
+      "key": "realestate:chugokugo-owner-teiki-shakuya-futsu-chigai-saikeiyaku",
+      "business": "realestate",
+      "slug": "chugokugo-owner-teiki-shakuya-futsu-chigai-saikeiyaku",
+      "title": "中国・台湾のオーナー向け—日本の収益物件を「定期借家」で貸す：普通借家との違いと再契約",
+      "date": "2026-11-04",
+      "category": "投資・事業用不動産",
+      "path": "/column/chugokugo-owner-teiki-shakuya-futsu-chigai-saikeiyaku"
+    },
+    {
+      "key": "realestate:doubutsu-kasoujo-petto-reien-bukken-youto-jorei",
+      "business": "realestate",
+      "slug": "doubutsu-kasoujo-petto-reien-bukken-youto-jorei",
+      "title": "ペット火葬場・動物霊園を開くための物件—用途地域と自治体条例の設置許可",
+      "date": "2026-11-04",
+      "category": "投資・事業用不動産",
+      "path": "/column/doubutsu-kasoujo-petto-reien-bukken-youto-jorei"
+    }
+  ],
+  "held": [
+    {
+      "key": "legal:fuzoku-eigyo-2go-3go-teishoudo-kukakuseki-kyoka",
+      "business": "legal",
+      "slug": "fuzoku-eigyo-2go-3go-teishoudo-kukakuseki-kyoka",
+      "title": "風俗営業2号・3号（低照度飲食店・区画席飲食店）の許可—要件と物件の距離制限",
+      "date": "2026-11-04",
+      "category": "許認可の手続き（行政書士の実務から）",
+      "path": "/legal/column/fuzoku-eigyo-2go-3go-teishoudo-kukakuseki-kyoka",
+      "qualityHoldReasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "legal:gaikokuseki-souzokunin-houtei-souzoku-ichiran-zu-kahi",
+      "business": "legal",
+      "slug": "gaikokuseki-souzokunin-houtei-souzoku-ichiran-zu-kahi",
+      "title": "相続人に外国籍の人がいるとき—法定相続情報一覧図は使えるのか",
+      "date": "2026-11-04",
+      "category": "相続の手続き（行政書士の実務から）",
+      "path": "/legal/column/gaikokuseki-souzokunin-houtei-souzoku-ichiran-zu-kahi",
+      "qualityHoldReasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です"
+      ]
+    }
+  ],
   "scheduled": [],
-  "ok": true,
-  "published": [],
-  "errors": [],
-  "outcome": "success",
-  "httpStatus": "200"
+  "ok": false,
+  "published": [
+    {
+      "key": "labor:callcenter-shift-shinya-zaitaku-roudoujikan-roumu",
+      "business": "labor",
+      "slug": "callcenter-shift-shinya-zaitaku-roudoujikan-roumu",
+      "title": "コールセンターの労務——シフト制・深夜割増・在宅混在の労働時間管理",
+      "date": "2026-11-04",
+      "category": "労働時間",
+      "path": "/labor/column/callcenter-shift-shinya-zaitaku-roudoujikan-roumu"
+    },
+    {
+      "key": "labor:gaikokujin-kaiko-yatoidome-zairyu-shikaku-tokutei-katsudo",
+      "business": "labor",
+      "slug": "gaikokujin-kaiko-yatoidome-zairyu-shikaku-tokutei-katsudo",
+      "title": "外国人を解雇・雇止めするとき——在留資格と「特定活動（出国準備・就職活動）」への移行",
+      "date": "2026-11-04",
+      "category": "外国人雇用",
+      "path": "/labor/column/gaikokujin-kaiko-yatoidome-zairyu-shikaku-tokutei-katsudo"
+    },
+    {
+      "key": "realestate:chugokugo-owner-teiki-shakuya-futsu-chigai-saikeiyaku",
+      "business": "realestate",
+      "slug": "chugokugo-owner-teiki-shakuya-futsu-chigai-saikeiyaku",
+      "title": "中国・台湾のオーナー向け—日本の収益物件を「定期借家」で貸す：普通借家との違いと再契約",
+      "date": "2026-11-04",
+      "category": "投資・事業用不動産",
+      "path": "/column/chugokugo-owner-teiki-shakuya-futsu-chigai-saikeiyaku"
+    },
+    {
+      "key": "realestate:doubutsu-kasoujo-petto-reien-bukken-youto-jorei",
+      "business": "realestate",
+      "slug": "doubutsu-kasoujo-petto-reien-bukken-youto-jorei",
+      "title": "ペット火葬場・動物霊園を開くための物件—用途地域と自治体条例の設置許可",
+      "date": "2026-11-04",
+      "category": "投資・事業用不動産",
+      "path": "/column/doubutsu-kasoujo-petto-reien-bukken-youto-jorei"
+    }
+  ],
+  "skipped": [],
+  "errors": [
+    {
+      "key": "legal:fuzoku-eigyo-2go-3go-teishoudo-kukakuseki-kyoka",
+      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録です"
+    },
+    {
+      "key": "legal:gaikokuseki-souzokunin-houtei-souzoku-ichiran-zu-kahi",
+      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録です"
+    }
+  ],
+  "blocked": "2本は品質確認待ちのため自動公開しません。記事別の理由を確認してください。forceでも解除しません。",
+  "outcome": "partial",
+  "httpStatus": "409"
 }
