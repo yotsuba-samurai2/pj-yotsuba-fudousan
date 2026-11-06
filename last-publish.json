@@ -1,43 +1,16 @@
 {
   "dryRun": false,
-  "runAt": "2026-11-05T10:12:26.848Z",
-  "todayJst": "2026-11-05",
+  "runAt": "2026-11-06T10:16:15.175Z",
+  "todayJst": "2026-11-06",
   "targets": [
     {
-      "key": "labor:callcenter-shift-shinya-zaitaku-roudoujikan-roumu",
+      "key": "labor:chugoku-chuzai-tekiyo-shomeisho-encho-5nen-koe-shakaihosho",
       "business": "labor",
-      "slug": "callcenter-shift-shinya-zaitaku-roudoujikan-roumu",
-      "title": "コールセンターの労務——シフト制・深夜割増・在宅混在の労働時間管理",
-      "date": "2026-11-04",
-      "category": "労働時間",
-      "path": "/labor/column/callcenter-shift-shinya-zaitaku-roudoujikan-roumu"
-    },
-    {
-      "key": "labor:gaikokujin-kaiko-yatoidome-zairyu-shikaku-tokutei-katsudo",
-      "business": "labor",
-      "slug": "gaikokujin-kaiko-yatoidome-zairyu-shikaku-tokutei-katsudo",
-      "title": "外国人を解雇・雇止めするとき——在留資格と「特定活動（出国準備・就職活動）」への移行",
-      "date": "2026-11-04",
+      "slug": "chugoku-chuzai-tekiyo-shomeisho-encho-5nen-koe-shakaihosho",
+      "title": "中国駐在が5年を超えたら社会保険はどうなるのか？適用証明書の延長と二重加入の回避",
+      "date": "2026-11-05",
       "category": "外国人雇用",
-      "path": "/labor/column/gaikokujin-kaiko-yatoidome-zairyu-shikaku-tokutei-katsudo"
-    },
-    {
-      "key": "realestate:chugokugo-owner-teiki-shakuya-futsu-chigai-saikeiyaku",
-      "business": "realestate",
-      "slug": "chugokugo-owner-teiki-shakuya-futsu-chigai-saikeiyaku",
-      "title": "中国・台湾のオーナー向け—日本の収益物件を「定期借家」で貸す：普通借家との違いと再契約",
-      "date": "2026-11-04",
-      "category": "投資・事業用不動産",
-      "path": "/column/chugokugo-owner-teiki-shakuya-futsu-chigai-saikeiyaku"
-    },
-    {
-      "key": "realestate:doubutsu-kasoujo-petto-reien-bukken-youto-jorei",
-      "business": "realestate",
-      "slug": "doubutsu-kasoujo-petto-reien-bukken-youto-jorei",
-      "title": "ペット火葬場・動物霊園を開くための物件—用途地域と自治体条例の設置許可",
-      "date": "2026-11-04",
-      "category": "投資・事業用不動産",
-      "path": "/column/doubutsu-kasoujo-petto-reien-bukken-youto-jorei"
+      "path": "/labor/column/chugoku-chuzai-tekiyo-shomeisho-encho-5nen-koe-shakaihosho"
     }
   ],
   "held": [
@@ -70,46 +43,85 @@
         "zhの内部リンクに言語不一致があります",
         "公開レビュー記録が未登録です"
       ]
+    },
+    {
+      "key": "labor:tsukin-saigai-daisansha-koui-saigai-jibaiseki-rosai",
+      "business": "labor",
+      "slug": "tsukin-saigai-daisansha-koui-saigai-jibaiseki-rosai",
+      "title": "通勤中の交通事故は労災か自賠責か？第三者行為災害の届出と求償",
+      "date": "2026-11-05",
+      "category": "労働保険",
+      "path": "/labor/column/tsukin-saigai-daisansha-koui-saigai-jibaiseki-rosai",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "legal:moritsuchi-kisei-ho-takuchi-zosei-tokutei-moritsuchi-kyoka",
+      "business": "legal",
+      "slug": "moritsuchi-kisei-ho-takuchi-zosei-tokutei-moritsuchi-kyoka",
+      "title": "盛土規制法の許可はいつ必要になるのか—宅地造成・特定盛土等の区域と申請の流れ",
+      "date": "2026-11-05",
+      "category": "許認可の手続き（行政書士の実務から）",
+      "path": "/legal/column/moritsuchi-kisei-ho-takuchi-zosei-tokutei-moritsuchi-kyoka",
+      "qualityHoldReasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "legal:souzoku-fuzoku-eigyo-kyoka-shoukei-minashi-todokede",
+      "business": "legal",
+      "slug": "souzoku-fuzoku-eigyo-kyoka-shoukei-minashi-todokede",
+      "title": "風俗営業の許可は相続できるのか—60日以内の承継承認とみなし営業",
+      "date": "2026-11-05",
+      "category": "許認可の手続き（行政書士の実務から）",
+      "path": "/legal/column/souzoku-fuzoku-eigyo-kyoka-shoukei-minashi-todokede",
+      "qualityHoldReasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "realestate:shika-shinryojo-bukken-x-sen-boigo-kaisetsu-todokede",
+      "business": "realestate",
+      "slug": "shika-shinryojo-bukken-x-sen-boigo-kaisetsu-todokede",
+      "title": "歯科診療所を開くための物件要件とは？エックス線室の防護構造と開設届の流れ",
+      "date": "2026-11-06",
+      "category": "投資・事業用不動産",
+      "path": "/column/shika-shinryojo-bukken-x-sen-boigo-kaisetsu-todokede",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "realestate:souzoku-koujou-asbestos-kaitai-genjo-baikyaku",
+      "business": "realestate",
+      "slug": "souzoku-koujou-asbestos-kaitai-genjo-baikyaku",
+      "title": "相続した工場・倉庫にアスベストがあるかも？現況のまま売るか除去してから売るか",
+      "date": "2026-11-06",
+      "category": "相続",
+      "path": "/column/souzoku-koujou-asbestos-kaitai-genjo-baikyaku",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録です"
+      ]
     }
   ],
   "scheduled": [],
   "ok": false,
   "published": [
     {
-      "key": "labor:callcenter-shift-shinya-zaitaku-roudoujikan-roumu",
+      "key": "labor:chugoku-chuzai-tekiyo-shomeisho-encho-5nen-koe-shakaihosho",
       "business": "labor",
-      "slug": "callcenter-shift-shinya-zaitaku-roudoujikan-roumu",
-      "title": "コールセンターの労務——シフト制・深夜割増・在宅混在の労働時間管理",
-      "date": "2026-11-04",
-      "category": "労働時間",
-      "path": "/labor/column/callcenter-shift-shinya-zaitaku-roudoujikan-roumu"
-    },
-    {
-      "key": "labor:gaikokujin-kaiko-yatoidome-zairyu-shikaku-tokutei-katsudo",
-      "business": "labor",
-      "slug": "gaikokujin-kaiko-yatoidome-zairyu-shikaku-tokutei-katsudo",
-      "title": "外国人を解雇・雇止めするとき——在留資格と「特定活動（出国準備・就職活動）」への移行",
-      "date": "2026-11-04",
+      "slug": "chugoku-chuzai-tekiyo-shomeisho-encho-5nen-koe-shakaihosho",
+      "title": "中国駐在が5年を超えたら社会保険はどうなるのか？適用証明書の延長と二重加入の回避",
+      "date": "2026-11-05",
       "category": "外国人雇用",
-      "path": "/labor/column/gaikokujin-kaiko-yatoidome-zairyu-shikaku-tokutei-katsudo"
-    },
-    {
-      "key": "realestate:chugokugo-owner-teiki-shakuya-futsu-chigai-saikeiyaku",
-      "business": "realestate",
-      "slug": "chugokugo-owner-teiki-shakuya-futsu-chigai-saikeiyaku",
-      "title": "中国・台湾のオーナー向け—日本の収益物件を「定期借家」で貸す：普通借家との違いと再契約",
-      "date": "2026-11-04",
-      "category": "投資・事業用不動産",
-      "path": "/column/chugokugo-owner-teiki-shakuya-futsu-chigai-saikeiyaku"
-    },
-    {
-      "key": "realestate:doubutsu-kasoujo-petto-reien-bukken-youto-jorei",
-      "business": "realestate",
-      "slug": "doubutsu-kasoujo-petto-reien-bukken-youto-jorei",
-      "title": "ペット火葬場・動物霊園を開くための物件—用途地域と自治体条例の設置許可",
-      "date": "2026-11-04",
-      "category": "投資・事業用不動産",
-      "path": "/column/doubutsu-kasoujo-petto-reien-bukken-youto-jorei"
+      "path": "/labor/column/chugoku-chuzai-tekiyo-shomeisho-encho-5nen-koe-shakaihosho"
     }
   ],
   "skipped": [],
@@ -121,9 +133,29 @@
     {
       "key": "legal:gaikokuseki-souzokunin-houtei-souzoku-ichiran-zu-kahi",
       "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録です"
+    },
+    {
+      "key": "labor:tsukin-saigai-daisansha-koui-saigai-jibaiseki-rosai",
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
+    },
+    {
+      "key": "legal:moritsuchi-kisei-ho-takuchi-zosei-tokutei-moritsuchi-kyoka",
+      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録です"
+    },
+    {
+      "key": "legal:souzoku-fuzoku-eigyo-kyoka-shoukei-minashi-todokede",
+      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録です"
+    },
+    {
+      "key": "realestate:shika-shinryojo-bukken-x-sen-boigo-kaisetsu-todokede",
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
+    },
+    {
+      "key": "realestate:souzoku-koujou-asbestos-kaitai-genjo-baikyaku",
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
     }
   ],
-  "blocked": "2本は品質確認待ちのため自動公開しません。記事別の理由を確認してください。forceでも解除しません。",
+  "blocked": "7本は品質確認待ちのため自動公開しません。記事別の理由を確認してください。forceでも解除しません。",
   "outcome": "partial",
   "httpStatus": "409"
 }
