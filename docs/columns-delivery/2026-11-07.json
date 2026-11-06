@@ -1,0 +1,142 @@
+{
+  "todayJst": "2026-11-07",
+  "runUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/42276972124",
+  "generationStatus": "validated",
+  "generatedCount": 6,
+  "reviewResult": "success",
+  "reviewReportAvailable": true,
+  "reviewPass": true,
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "minor": 0
+  },
+  "reviewFindings": [],
+  "registeredCount": 1,
+  "qualityEligibleCount": 1,
+  "heldCount": 5,
+  "scheduledCount": 0,
+  "unverifiedSourceCount": 6,
+  "publishedCount": null,
+  "articles": [
+    {
+      "key": "realestate:iyakuhin-tenpo-drugstore-bukken-youto-chiiki-menseki",
+      "fingerprint": "5e204010bece016b15468a8ae5cdbac0de29ec8191144fe1190b2f3d952aeccd",
+      "title": "ドラッグストア（医薬品の店舗販売業）を開く物件は、用途地域と面積で何を見るのか",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録です",
+        "確認済みの公的な一次根拠が不足しています"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "realestate:souzoku-kukaku-seiri-kari-kanchi-seisankin-baikyaku",
+      "fingerprint": "37e6aba2126a7c5646ebb72dbab42114b3e18890865dbe80e168444755ceca51",
+      "title": "相続した土地が土地区画整理事業の施行地区内だった――仮換地・清算金のまま売れるのか",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:ippan-kashikiri-ryokaku-bus-kyoka-youken-nagare",
+      "fingerprint": "4ac3acde7f82a56f1634a71027bf05a0bbd43ea6e4fa8788603e731555fcf0c0",
+      "title": "一般貸切旅客自動車運送事業（貸切バス）の許可は、何が要件で、どんな流れで取るのか",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です",
+        "確認済みの公的な一次根拠が不足しています"
+      ],
+      "sourceFailures": [
+        {
+          "url": "https://laws.e-gov.go.jp/law/326AC0000000183",
+          "checkedAt": "2026-11-06",
+          "relevantClaim": "道路運送法第3条第1号ロ（国土交通省令で定める乗車定員＝11人以上を貸切り）・第4条第1項（許可）・第5条・第23条/第23条の2（運行管理者）・第78条（自家用有償運送の原則禁止）。e-Govはスクリプト描画で本文直接取得不可だが、記事の条項号は確立した法定条文と一致。",
+          "verified": false
+        }
+      ],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:tokutei-ginou-1go-2go-ikou-zairyu-henko-youken",
+      "fingerprint": "c44c95dc4dd5ea5ea716608554532d676e19bb58bb4ae84dc6a10ea58a2eb9f0",
+      "title": "特定技能1号から2号へ—在留資格の変更はどんな要件と手続で進むのか",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:drugstore-tenpo-hanbai-toroku-hanbaisha-shift-roumu",
+      "fingerprint": "57ea02a303a14b112afc15fcdcaa9ee0a51b1630b4ef5ac04a18e21ff007ecf4",
+      "title": "ドラッグストアの労務――登録販売者の在店義務と営業時間に合わせたシフトの組み方",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録です",
+        "確認済みの公的な一次根拠が不足しています"
+      ],
+      "sourceFailures": [
+        {
+          "url": "https://laws.e-gov.go.jp/law/322AC0000000049",
+          "checkedAt": "2026-11-06",
+          "relevantClaim": "労働基準法第32条・第32条の2・第32条の4・第34条・第35条・第36条・第37条（深夜22時〜翌5時2割5分以上）・第89条。記事の割増賃金・変形労働時間・就業規則の整理と一致（確立した法定条文）。",
+          "verified": false
+        },
+        {
+          "url": "https://laws.e-gov.go.jp/law/335AC0000000145",
+          "checkedAt": "2026-11-06",
+          "relevantClaim": "薬機法第28条第1項・第2項・第4項（店舗管理者は薬剤師又は登録販売者、他場所での薬事実務の原則禁止・兼務は知事許可）、施行規則第140条ほか（登録販売者の管理者要件＝過去5年に2年以上かつ1,920時間以上等）。記事と一致（記事は該当判断を薬事許可行政の領域と明示）。",
+          "verified": false
+        }
+      ],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:live-house-kougyo-staff-tanpatsu-hiyatoi-roumu",
+      "fingerprint": "b743f2d544e0dfc1f2d4b42f4a3f30b0b16773fda5548a85eec0709410cd027a",
+      "title": "ライブハウス・イベントの単発スタッフの労務――日雇の雇用保険と深夜割増",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録です",
+        "確認済みの公的な一次根拠が不足しています"
+      ],
+      "sourceFailures": [
+        {
+          "url": "https://laws.e-gov.go.jp/law/349AC0000000116",
+          "checkedAt": "2026-11-06",
+          "relevantClaim": "雇用保険法第42条（日雇労働者＝日々雇用又は30日以内の期間、前2月各月18日以上同一事業主等を除く）・第43条（日雇労働被保険者・日雇労働求職者給付金）・第44条（日雇労働被保険者手帳）。記事本文・FAQと一致（確立した法定条文）。",
+          "verified": false
+        },
+        {
+          "url": "https://laws.e-gov.go.jp/law/322AC0000000049",
+          "checkedAt": "2026-11-06",
+          "relevantClaim": "労働基準法第15条（労働条件明示）・第37条（深夜22時〜翌5時2割5分以上）、労働基準法施行規則第5条（2024年4月の明示事項追加＝就業場所業務の変更範囲・更新上限・無期転換）。記事の表・本文と一致（確立した法定条文）。",
+          "verified": false
+        },
+        {
+          "url": "https://www.mhlw.go.jp/bunya/roudoukijun/roudoujouken01/",
+          "checkedAt": "2026-11-06",
+          "relevantClaim": "労災保険は雇用形態・期間を問わず労働者を使用する事業に適用・保険料全額事業主負担、労働者性は契約名称でなく指揮監督下の労働等の実態で判断。記事の労災・労働者性の整理と一致（厚労省公表資料の確立した取扱い）。",
+          "verified": false
+        }
+      ],
+      "sourceEvidenceAvailable": true
+    }
+  ]
+}

@@ -1141,5 +1141,44 @@ export const COLUMNS_AUTOPUBLISH_REVIEWS: readonly ColumnQualityReview[] = [
     },
     "reviewedAt": "2026-11-06",
     "validThrough": "2026-11-08"
+  },
+  {
+    "key": "realestate:souzoku-kukaku-seiri-kari-kanchi-seisankin-baikyaku",
+    "fingerprint": "37e6aba2126a7c5646ebb72dbab42114b3e18890865dbe80e168444755ceca51",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://laws.e-gov.go.jp/api/1/lawdata/329AC0000000119",
+        "checkedAt": "2026-11-06",
+        "relevantClaim": "土地区画整理法 第99条第1項『従前の宅地については、使用し、又は収益することができない』・第99条第2項『使用収益を開始することができる日を…別に定めることができる』・第104条第8項『清算金は…公告があつた日の翌日において確定する』・第110条第1項『施行者は…確定した清算金を徴収し、又は交付しなければならない』。e-Gov本文を直接引用確認、記事の条項号・内容と完全一致。",
+        "verified": true
+      },
+      {
+        "url": "https://www.mlit.go.jp/toshi/city/sigaiti/toshi_urbanmainte_tk_000033.html",
+        "checkedAt": "2026-11-06",
+        "relevantClaim": "国土交通省の土地区画整理事業資料。清算金は法第104条・第110条により換地処分公告翌日の土地所有者等に徴収・交付、仮換地売買では重要事項説明で説明すべき旨。記事の媒介・重説の整理と一致。",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/law/327AC0000000176",
+        "checkedAt": "2026-11-06",
+        "relevantClaim": "宅地建物取引業法第35条（重要事項の説明）。仮換地の指定内容・土地区画整理法に基づく制限の説明。記事の『当社の調査と媒介の範囲』と一致（確立した法定条文）。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/42276972124"
+    },
+    "reviewedAt": "2026-11-07",
+    "validThrough": "2026-11-09"
   }
 ];

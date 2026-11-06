@@ -82,6 +82,22 @@ const AUTHOR = {
 
 /** 各記事が評価を集約すべきハブ（本文に必須の内部リンク）。verify() で機械検査する */
 const REQUIRED_HUB_LINKS: Record<string, string[]> = {
+  "ippan-kashikiri-ryokaku-bus-kyoka-youken-nagare": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/ippan-kamotsu-unso-kyoka-eigyosho-shako-yoken",
+    "/legal/column/kamotsu-riyo-unso-1shu-2shu-touroku-kyoka",
+    "/legal/column/kaigo-taxi-fukushi-yuso-kyoka-shako-yoken",
+  ],
+  "tokutei-ginou-1go-2go-ikou-zairyu-henko-youken": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/ginou-jisshu-ikusei-shuro-ikou-kanri-shien-kikan-kyoka",
+    "/legal/column/toroku-shien-kikan-touroku-shien-keikaku",
+    "/legal/column/kodo-senmonshoku-2go-ikou-youken-chuka-taiwan",
+  ],
   "souzoku-fuzoku-eigyo-kyoka-shoukei-minashi-todokede": [
     "/legal/services",
     "/legal/nagare",
@@ -1388,6 +1404,20 @@ function matchesRequiredPhrase(content: string, phrase: string): boolean {
 
 /** 記事ごとに必ず含めるべき表現（機械ゲート。最低限の合否判定） */
 const REQUIRED_PHRASES: Record<string, string[]> = {
+  "ippan-kashikiri-ryokaku-bus-kyoka-youken-nagare": [
+    "道路運送法",
+    "第4条第1項",
+    "第8条",
+    "第23条",
+    "道路運送車両法第50条",
+  ],
+  "tokutei-ginou-1go-2go-ikou-zairyu-henko-youken": [
+    "出入国管理及び難民認定法",
+    "別表第一の二",
+    "第20条",
+    "行政書士法第1条の2",
+    "第1条の3",
+  ],
   "souzoku-fuzoku-eigyo-kyoka-shoukei-minashi-todokede": [
     "風俗営業等の規制及び業務の適正化等に関する法律",
     "第7条",
@@ -4113,6 +4143,8 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
 
 /** 記事ごとに含めてはならない表現 */
 const FORBIDDEN_PHRASES: Record<string, string[]> = {
+  "ippan-kashikiri-ryokaku-bus-kyoka-youken-nagare": [],
+  "tokutei-ginou-1go-2go-ikou-zairyu-henko-youken": [],
   "souzoku-fuzoku-eigyo-kyoka-shoukei-minashi-todokede": [],
   "moritsuchi-kisei-ho-takuchi-zosei-tokutei-moritsuchi-kyoka": [],
   "koatsugas-hanbai-daiisshu-furon-juten-kaishu-touroku": [],
@@ -8229,6 +8261,58 @@ const ARTICLES: Array<{
       "盛土規制法",
       "宅地造成等工事規制区域",
       "特定盛土等規制区域",
+      "許認可",
+      "行政書士",
+    ],
+  },
+  {
+    file: "157-ippan-kashikiri-ryokaku-bus-kyoka-youken-nagare.md",
+    slug: "ippan-kashikiri-ryokaku-bus-kyoka-youken-nagare",
+    date: "2026-11-06",
+    title:
+      "一般貸切旅客自動車運送事業（貸切バス）の許可は、何が要件で、どんな流れで取るのか",
+    category: "許認可の手続き（行政書士の実務から）",
+    excerpt:
+      "観光や送迎で不特定の相手から運賃をもらってバスを貸し切って走らせるには、道路運送法第4条第1項の一般貸切旅客自動車運送事業の許可が要ります。乗車定員は国土交通省令で11人以上とされ（同法第3条第1号ロ）、自社の役員・従業員や自社の客を無償で送るだけなら許可は要りません。許可の中心は人・物・金・安全で、運行管理者（同法第23条）・整備管理者（道路運送車両法第50条）・営業所・車庫・損害賠償能力（任意保険）・所要資金をそろえ、車両数など具体的な基準は運輸局が公示する審査基準で定まります（基準は改定され得る）。許可は同法第8条により5年ごとの更新制です。許可申請・事業計画・選任届の作成は行政書士、運転者の拘束時間・休息期間など労務は社会保険労務士、営業所・車庫の物件は不動産、車両・保険は本人と保険会社に分けて整理します。",
+    keywords: [
+      "一般貸切旅客自動車運送事業 許可 要件 流れ 貸切バス",
+      "貸切バス 許可 道路運送法第4条第1項 乗車定員 11人以上",
+      "貸切バス 運行管理者 第23条 整備管理者 道路運送車両法第50条",
+      "貸切バス 営業所 車庫 任意保険 対物200万円 所要資金 車両数",
+      "貸切バス 許可 更新 5年 道路運送法第8条 運輸開始",
+      "白ナンバー 送迎 有償運送 自家輸送 第78条 行政書士",
+    ],
+    tags: [
+      "道路運送法",
+      "一般貸切旅客自動車運送事業",
+      "貸切バス",
+      "運行管理者",
+      "許認可",
+      "行政書士",
+    ],
+  },
+  {
+    file: "158-tokutei-ginou-1go-2go-ikou-zairyu-henko-youken.md",
+    slug: "tokutei-ginou-1go-2go-ikou-zairyu-henko-youken",
+    date: "2026-11-06",
+    title:
+      "特定技能1号から2号へ—在留資格の変更はどんな要件と手続で進むのか",
+    category: "許認可の手続き（行政書士の実務から）",
+    excerpt:
+      "特定技能1号から2号への移行は、出入国管理及び難民認定法別表第一の二の表の特定技能のうち1号を2号に切り替える手続で、同法第20条の在留資格変更許可申請で行います。2号は熟練した技能を要する業務の在留資格で、1号と違い在留期間に通算の上限がなく（3年・1年・6月の更新）、要件を満たせば配偶者・子を帯同でき、受入れ機関の支援義務もありません。2号の対象は出入国在留管理庁が示す11分野（ビルクリーニング、工業製品製造業、建設、造船・舶用工業、自動車整備、航空、宿泊、農業、漁業、飲食料品製造業、外食業）で、介護は含みません。移行には分野別の2号評価試験の合格と分野ごとの実務経験が中心的な要件です。書類作成・取次は申請取次行政書士、移行後の労務は社会保険労務士、技能試験・実務経験は本人、課税は税理士、最終判断は出入国在留管理庁、争いは弁護士、住居は不動産に分けて整理します。",
+    keywords: [
+      "特定技能1号 2号 移行 在留資格変更 要件 手続",
+      "特定技能2号 在留期間 上限なし 家族帯同 配偶者 子 第20条",
+      "特定技能2号 対象 11分野 介護 含まない 中国 台湾",
+      "特定技能2号 評価試験 実務経験 分野別運用方針 班長",
+      "在留資格変更許可申請 申請取次 行政書士法第1条の2 第1条の3",
+      "特定技能1号 通算5年 支援義務 登録支援機関 日本語試験",
+    ],
+    tags: [
+      "出入国管理及び難民認定法",
+      "特定技能2号",
+      "在留資格変更許可申請",
+      "申請取次",
       "許認可",
       "行政書士",
     ],
