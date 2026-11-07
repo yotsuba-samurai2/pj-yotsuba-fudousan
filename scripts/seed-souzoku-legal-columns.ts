@@ -82,6 +82,21 @@ const AUTHOR = {
 
 /** 各記事が評価を集約すべきハブ（本文に必須の内部リンク）。verify() で機械検査する */
 const REQUIRED_HUB_LINKS: Record<string, string[]> = {
+  "nochi-shoyu-tekikaku-hojin-setsuritsu-youken-nogyo-sannyu": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/nochi-tenyo-4jo-5jo-kyoka-nagare",
+    "/legal/column/souzoku-nochi-noringyoiinkai-todoke-3jo3",
+  ],
+  "kazoku-taizai-zairyu-shikakugai-katsudo-28jikan-yobiyose": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/nihonjin-haiguusha-biza-zairyu-koshin-henko-chuka-taiwan",
+    "/legal/column/kodo-senmonshoku-1go-point-keisan-chuka-taiwan",
+    "/legal/column/tokutei-ginou-1go-2go-ikou-zairyu-henko-youken",
+  ],
   "ippan-kashikiri-ryokaku-bus-kyoka-youken-nagare": [
     "/legal/services",
     "/legal/nagare",
@@ -1404,6 +1419,34 @@ function matchesRequiredPhrase(content: string, phrase: string): boolean {
 
 /** 記事ごとに必ず含めるべき表現（機械ゲート。最低限の合否判定） */
 const REQUIRED_PHRASES: Record<string, string[]> = {
+  "nochi-shoyu-tekikaku-hojin-setsuritsu-youken-nogyo-sannyu": [
+    "農地所有適格法人",
+    "農地法第2条第3項",
+    "農地法第3条",
+    "公開会社でない",
+    "農事組合法人",
+    "持分会社",
+    "農業委員会",
+    "平成27年法律第63号",
+    "農業生産法人",
+    "独立した事業体",
+    "別事業体",
+    "紹介料を受け取りません",
+  ],
+  "kazoku-taizai-zairyu-shikakugai-katsudo-28jikan-yobiyose": [
+    "家族滞在",
+    "別表第一の四",
+    "資格外活動許可",
+    "入管法第19条第2項",
+    "28時間",
+    "出入国在留管理庁長官",
+    "不法就労助長罪",
+    "入管法第73条の2",
+    "令和6年法律第60号",
+    "独立した事業体",
+    "別事業体",
+    "紹介料を受け取りません",
+  ],
   "ippan-kashikiri-ryokaku-bus-kyoka-youken-nagare": [
     "道路運送法",
     "第4条第1項",
@@ -4143,6 +4186,8 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
 
 /** 記事ごとに含めてはならない表現 */
 const FORBIDDEN_PHRASES: Record<string, string[]> = {
+  "nochi-shoyu-tekikaku-hojin-setsuritsu-youken-nogyo-sannyu": [],
+  "kazoku-taizai-zairyu-shikakugai-katsudo-28jikan-yobiyose": [],
   "ippan-kashikiri-ryokaku-bus-kyoka-youken-nagare": [],
   "tokutei-ginou-1go-2go-ikou-zairyu-henko-youken": [],
   "souzoku-fuzoku-eigyo-kyoka-shoukei-minashi-todokede": [],
@@ -8314,6 +8359,60 @@ const ARTICLES: Array<{
       "在留資格変更許可申請",
       "申請取次",
       "許認可",
+      "行政書士",
+    ],
+  },
+  {
+    file: "159-nochi-shoyu-tekikaku-hojin-setsuritsu-youken-nogyo-sannyu.md",
+    slug: "nochi-shoyu-tekikaku-hojin-setsuritsu-youken-nogyo-sannyu",
+    date: "2026-11-07",
+    title:
+      "農地所有適格法人として農業に参入するには、どんな要件を満たす必要があるか",
+    category: "許認可・開業の手続き（行政書士の実務から）",
+    excerpt:
+      "法人が農地を「所有」して農業に参入するには、農地法第2条第3項が定める農地所有適格法人の要件をすべて満たす必要があります。要件は4つで、①主たる事業が農業（関連事業を含む）であること、②農業関係者が総議決権の過半を占めること、③役員の過半が法人の農業に常時従事する構成員であること（原則年150日以上）、④役員又は重要な使用人のうち1人以上が農作業に従事すること（原則年60日以上）です。法人形態も農事組合法人・株式会社（公開会社でないもの）・持分会社の3類型に限られます。この制度は旧「農業生産法人」が平成27年法律第63号で名称・要件を見直され2016年（平成28年）4月1日から農地所有適格法人となったものです。農地の権利取得の許可（農地法第3条）は農業委員会の判断、設立・変更の登記は司法書士、法人税・消費税や納税猶予は税理士、紛争は弁護士が、それぞれ独立した事業体として別々に対応する分離受任を整理しました。農地を「借りる」だけなら農地法第3条第3項で一般法人も参入できる点も扱います。",
+    keywords: [
+      "農地所有適格法人 要件 農地法2条3項",
+      "法人 農地 所有 買う 農地所有適格法人",
+      "農地所有適格法人 役員要件 農作業 60日 常時従事 150日",
+      "農業生産法人 農地所有適格法人 名称変更 平成28年",
+      "農地法3条 許可 農業委員会 権利移動",
+      "一般法人 農地 借りる 農地法3条3項 リース",
+    ],
+    tags: [
+      "農地法",
+      "農地所有適格法人",
+      "農業参入",
+      "農業委員会",
+      "農地法3条",
+      "許認可",
+      "行政書士",
+    ],
+  },
+  {
+    file: "160-kazoku-taizai-zairyu-shikakugai-katsudo-28jikan-yobiyose.md",
+    slug: "kazoku-taizai-zairyu-shikakugai-katsudo-28jikan-yobiyose",
+    date: "2026-11-07",
+    title:
+      "家族滞在の在留資格で家族を呼び寄せ、本人が働くには何が必要か",
+    category: "外国人関連の手続き（行政書士の実務から）",
+    excerpt:
+      "家族滞在は、就労資格などで日本に在留する人の扶養を受ける配偶者又は子が日常的な活動を行う在留資格です（出入国管理及び難民認定法 別表第一の四の表）。呼び寄せるには、扶養する本人（扶養者）に扶養できる資力があり、本人が就労系・留学などの在留資格をもっていることが前提になります。家族滞在の人は原則就労できませんが、資格外活動許可（入管法第19条第2項。許可の主体は出入国在留管理庁長官）を受ければ、包括許可の範囲で1週28時間以内の就労ができます（風俗営業・性風俗関連の営業所での就労は除く）。28時間を超えると本人は在留資格の取消し・退去強制の対象になり得て、雇う側は不法就労助長罪（入管法第73条の2）に問われ得ます。この罪は令和6年法律第60号で罰則が引き上げられました。雇う側の労務は社労士、刑事・紛争は弁護士、扶養の税は税理士に振り分ける分離受任を、繁体字・簡体字を含む4言語で整理しました。",
+    keywords: [
+      "家族滞在 在留資格 配偶者 子 呼び寄せ 要件",
+      "家族滞在 資格外活動許可 週28時間 入管法19条",
+      "家族滞在 扶養者 収入 資力 条件 中国 台湾",
+      "28時間 超える 不法就労助長罪 入管法73条の2 罰則",
+      "家族滞在 子 進学 就職 在留資格変更 特定活動",
+      "出入国在留管理庁 家族滞在 包括許可 風俗営業 除く",
+    ],
+    tags: [
+      "出入国管理及び難民認定法",
+      "家族滞在",
+      "資格外活動許可",
+      "不法就労助長罪",
+      "在留資格",
+      "外国人関連",
       "行政書士",
     ],
   },

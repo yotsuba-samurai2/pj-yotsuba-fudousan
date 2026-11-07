@@ -1180,5 +1180,71 @@ export const COLUMNS_AUTOPUBLISH_REVIEWS: readonly ColumnQualityReview[] = [
     },
     "reviewedAt": "2026-11-07",
     "validThrough": "2026-11-09"
+  },
+  {
+    "key": "realestate:kenchiku-shoene-ho-shoene-seino-hyoji-koukoku-2024",
+    "fingerprint": "d01f4fda1fbf3e1a6865707c8ab849c968ede4646a9f618d2208ea76bd4cf293",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.mlit.go.jp/shoene-label/",
+        "checkedAt": "2026-11-07",
+        "relevantClaim": "国交省：2024年4月スタート、新築建築物の販売・賃貸広告が対象、努力義務、国交大臣が告示で表示方法を定め従わなければ勧告等、エネ消費性能=星（必須）・断熱性能（必須）・目安光熱費は任意で住戸ラベルのみ（住棟は表示なし）、既存建築物は表示推奨で勧告対象外。本文と一致。",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/law/427AC0000000053",
+        "checkedAt": "2026-11-07",
+        "relevantClaim": "建築物省エネ法（平成27年法律第53号）第27条第1項＝表示の努力義務、第27条第2項＝国交大臣の告示、第28条＝勧告・公表・命令。告示第970号（令和5年9月25日公布）は国交省資料で裏取り（告示はその後改正あり＝国交省サイトに2024.11.1改正の記載、本文も改正留保あり）。e-Gov本体はJS描画のため直接取得不可。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/42397339096"
+    },
+    "reviewedAt": "2026-11-08",
+    "validThrough": "2026-11-10"
+  },
+  {
+    "key": "labor:koyohoken-multi-job-holder-65sai-fukusu-jigyosho",
+    "fingerprint": "4f90f9926486e665691e7d9bc4ee952a679847474b6957f348d897e7eafd4b9e",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://jsite.mhlw.go.jp/yamagata-roudoukyoku/roudoukyoku/kanren_shisetsu/yonezawa-multijob.html",
+        "checkedAt": "2026-11-07",
+        "relevantClaim": "厚労省（山形労働局）：雇用保険マルチジョブホルダー制度＝令和4年1月1日施行、65歳以上、2つの事業所それぞれ週所定5時間以上20時間未満・合計週20時間以上、各事業所31日以上の雇用見込み、本人が住所管轄のハローワークへ申出、申出日から被保険者（遡及なし）。本文と一致。",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/law/349AC0000000116",
+        "checkedAt": "2026-11-07",
+        "relevantClaim": "雇用保険法附則（高年齢被保険者の特例＝マルチジョブホルダー制度）。高年齢求職者給付金は被保険者期間1年未満で基本手当日額30日分・1年以上で50日分。給付額は公的解説で裏取り。e-Gov本体はJS描画のため直接取得不可。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/42397339096"
+    },
+    "reviewedAt": "2026-11-08",
+    "validThrough": "2026-11-10"
   }
 ];

@@ -1,0 +1,108 @@
+{
+  "todayJst": "2026-11-08",
+  "runUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/42397339096",
+  "generationStatus": "validated",
+  "generatedCount": 6,
+  "reviewResult": "success",
+  "reviewReportAvailable": true,
+  "reviewPass": true,
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "minor": 1
+  },
+  "reviewFindings": [
+    {
+      "file": "scripts/legal-columns/160-kazoku-taizai-zairyu-shikakugai-katsudo-28jikan-yobiyose.md",
+      "severity": "minor",
+      "issue": "不法就労助長罪の厳罰化（令和6年法律第60号＝5年以下の拘禁刑又は500万円以下の罰金）を『引き上げられました』と完了形で記しているが、当該罰則の施行日は2027年4月1日で、本日（2026-11-07）時点では未施行（現行は3年以下／300万円以下）。本文は『施行日の詳細は官報・法務省の告示で確認してください』と留保しており虚偽ではなく、4言語で同一表現。",
+      "fix": "現行刑と改正後刑を分けて示し、改正後の5年/500万円は『改正法で定められたが未施行（施行は官報・法務省告示で確認）』である旨を明示するとより正確。ファイルは変更しない旨の指示のため指摘のみ。"
+    }
+  ],
+  "registeredCount": 2,
+  "qualityEligibleCount": 2,
+  "heldCount": 4,
+  "scheduledCount": 0,
+  "unverifiedSourceCount": 0,
+  "publishedCount": null,
+  "articles": [
+    {
+      "key": "realestate:juyo-tochi-chosa-ho-chushi-tokubetsu-chushi-torihiki-todokede",
+      "fingerprint": "fa370b0cf857abd2fd6af16075ac6440b1bfeca18f3b7592991456c1cc3fb984",
+      "title": "重要土地等調査法の注視区域・特別注視区域では、不動産取引で何の届出が要るか",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録です",
+        "確認済みの公的な一次根拠が不足しています"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "realestate:kenchiku-shoene-ho-shoene-seino-hyoji-koukoku-2024",
+      "fingerprint": "d01f4fda1fbf3e1a6865707c8ab849c968ede4646a9f618d2208ea76bd4cf293",
+      "title": "2024年4月からの省エネ性能表示制度で、不動産の売買・賃貸広告は何が変わったか",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:nochi-shoyu-tekikaku-hojin-setsuritsu-youken-nogyo-sannyu",
+      "fingerprint": "0715c11bca5781e5b82208d237c6a4492e2c09dd5abad52b5e05f9df2731c255",
+      "title": "農地所有適格法人として農業に参入するには、どんな要件を満たす必要があるか",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です",
+        "確認済みの公的な一次根拠が不足しています"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:kazoku-taizai-zairyu-shikakugai-katsudo-28jikan-yobiyose",
+      "fingerprint": "0900b666f52109f125f56fa008be1b725dffe73656c562251e35b08a0e462522",
+      "title": "家族滞在の在留資格で家族を呼び寄せ、本人が働くには何が必要か",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です",
+        "確認済みの公的な一次根拠が不足しています"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:ringyo-roumu-roudoujikan-41jo-bakuboku-tokubetsu-kyoiku",
+      "fingerprint": "92c2929d108c9573a29f22820979ed8e2aaf3419da71cc718b34c1b5b9e14a72",
+      "title": "林業の労務――労働時間の適用除外から外れる点とチェーンソーの特別教育",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録です",
+        "確認済みの公的な一次根拠が不足しています"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:koyohoken-multi-job-holder-65sai-fukusu-jigyosho",
+      "fingerprint": "4f90f9926486e665691e7d9bc4ee952a679847474b6957f348d897e7eafd4b9e",
+      "title": "65歳以上を複数の事業所で雇うとき、雇用保険マルチジョブホルダー制度はどう使う？",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    }
+  ]
+}

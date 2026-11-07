@@ -36046,5 +36046,371 @@ export const LABOR_COLUMNS_SEED: LaborSeedColumn[] = [
         ]
       }
     }
+  },
+  {
+    "business": "labor",
+    "slug": "ringyo-roumu-roudoujikan-41jo-bakuboku-tokubetsu-kyoiku",
+    "title": "林業の労務――労働時間の適用除外から外れる点とチェーンソーの特別教育",
+    "date": "2026-11-07",
+    "category": "労働時間",
+    "excerpt": "林業は農業と違い、労働基準法第41条第1号の労働時間・休憩・休日の適用除外に含まれません。別表第一第六号は括弧書きで「林業を除く」としているため、林業には法定労働時間（第32条）・休日（第35条）が原則どおり適用され、超えるには36協定（第36条）の届出と割増賃金（第37条）が必要です。建設業や自動車運転者のような上限規制の特例はなく原則の上限規制がかかります。チェーンソーを用いた立木の伐木・かかり木の処理・造材には特別教育が必要で（労働安全衛生規則第36条第8号。2020年〈令和2年〉8月1日施行の改正で直径区分の2種を統合）、下肢の切創防止用保護衣の着用義務（2019年〈令和元年〉8月1日施行）もあります。繁閑差は1年単位・1か月単位の変形労働時間制（第32条の4・第32条の2）で配分できますが深夜割増・年休・上限規制は残ります。林業は死傷年千人率が全産業で最も高く、労災は国籍・雇用形態を問わず適用、休業4日以上は死傷病報告（同規則第97条）が必要です。森林法の届出や素材生産の各種届出は行政書士、立木・山林売買の登記は司法書士、山林所得など税務は税理士の領域で、労務は社会保険労務士が、それぞれ独立した事業体として別々にご契約いただきます。",
+    "content": "**結論（先に要点）**：林業は農業と違い、労働基準法第41条第1号の適用除外に含まれません。労働時間・休憩・休日の規定が原則どおりかかり、チェーンソーを使う伐木・かかり木の処理・造材には特別教育（労働安全衛生規則第36条第8号）が要ります。許認可は行政書士、登記は司法書士、税務は税理士の領域です。\n\n「農業は労働時間のルールが適用されないから、林業も同じでよい」という思い込みが、未払い残業や労災事故につながります。素材生産・造林・伐採を行う林業事業者、森林組合、個人から法人化して人を雇い始めた経営者に向けて、労働時間・安全衛生・労災の守るべき範囲を、農業との違いを軸に整理します。\n\n## 林業は農業と同じく、労働時間の規定が適用除外なのか？\n\nいいえ。農業・畜産・養蚕・水産は労働基準法第41条第1号で労働時間・休憩・休日の規定が適用除外ですが、林業はこの適用除外から外れています。したがって、林業では1日8時間・週40時間の法定労働時間（第32条）、休憩（第34条）、休日（第35条）の規定が原則どおり適用され、これを超えて働かせるには36協定の締結・届出（第36条）と、時間外・休日労働の割増賃金（第37条）が必要です。\n\nこの違いは、農業の記事（[農業は労働時間が適用除外](/labor/column/nogyo-roudoujikan-jogai-41jo-tokutei-ginou-roumu)）と対になります。農業では時間外割増が発生しない場面でも、林業では同じ働き方が割増賃金の対象になります。\n\n## 労基法41条の適用除外に林業が含まれないのは、どういう経緯か？\n\n労働基準法第41条第1号は、別表第一の第六号と第七号に掲げる事業に従事する者を適用除外とします。このうち第六号は「土地の耕作若しくは開墾又は植物の栽植、栽培、採取若しくは伐採の事業その他農林の事業」と書かれていますが、同号は**括弧書きで「林業を除く」**としており、林業従事者は適用除外の対象になりません。\n\n| 事業 | 労基法41条1号の適用除外 | 労働時間・休日の規定 |\n|---|---|---|\n| 農業（耕作・栽培等） | 別表第一第六号（林業を除く）に該当＝**適用除外** | かからない（時間外割増なし） |\n| 畜産・養蚕・水産 | 別表第一第七号に該当＝**適用除外** | かからない |\n| **林業（伐採・造林・素材生産）** | 第六号から**明文で除外**＝適用除外にならない | **原則どおりかかる**（36協定・割増が必要） |\n\n林業は天候や季節に左右される点で農業と似ていますが、機械化された伐木・集材など事故の危険が大きい作業を含むため、労働時間の枠組みは一般の事業と同じく維持されています。なお、林業の時間外労働には、建設業や自動車運転者のような上限規制の特例（[建設業の上限規制](/labor/column/kensetsugyo-2024-jikangai-jougen-kyujitsu-roumu)で整理した年960時間等）は設けられておらず、原則の上限規制（月45時間・年360時間を原則とする枠）が適用されます。\n\n## 伐木・造材などの作業には、どんな特別教育・資格が必要か？\n\n危険・有害業務には、作業前に特別教育を修了させる義務があります（労働安全衛生法第59条第3項・労働安全衛生規則第36条）。林業で中心になるのは、2020年（令和2年）8月1日施行の改正で統合された、チェーンソーを用いた伐木等の特別教育です。\n\n| 業務 | 根拠 | 内容 |\n|---|---|---|\n| チェーンソーを用いて行う立木の伐木・かかり木の処理・造材の業務 | 労働安全衛生規則第36条第8号 | 2020年8月1日施行の改正で、立木の胸高直径で分かれていた2種類を**直径を問わない1つの特別教育に統合**。チェーンソーを用いない伐木等は対象から除外 |\n| 走行集材機械・簡易架線集材装置・機械集材装置等の運転・作業 | 労働安全衛生規則第36条の関係号（第7号の2・第7号の3等） | 集材・運材に用いる機械の運転等に特別教育が必要 |\n| 下肢の切創防止用保護衣の着用 | 労働安全衛生規則（2019年〈令和元年〉8月1日施行の改正） | チェーンソーによる伐木等の作業で、事業者は保護衣を**着用させる義務**、労働者は着用義務 |\n\nこのほか、チェーンソー取扱い作業では振動障害の予防が課題で、厚生労働省の「チェーンソー取扱い作業指針」（2009年〈平成21年〉7月10日付け基発0710第1号）が、防振型機械の選定、点検・整備、日々の作業時間の管理（日振動ばく露量にもとづく目安）などを定めています。振動業務に係る健康診断の具体的な実施項目・周期は事案で異なるため、本記事では個別の結論を出していません（**未検証**）。\n\n## 季節や天候で変動する作業時間は、どう管理すればよいのか？\n\n林業は繁忙・閑散の差や天候による中断が大きく、1日8時間の一律運用がなじみにくい面があります。労働時間の規定が原則どおりかかる以上、変動を枠内で吸収する仕組みとして、1年単位の変形労働時間制（労働基準法第32条の4）や1か月単位の変形労働時間制（第32条の2）が考えられます。繁忙期に所定を長く、閑散期に短く配分すれば、総枠の中で割増を抑えつつ運用できます。選び方は[変形労働時間制の選び方](/labor/column/henkei-roudoujikan-flextime-erabikata)で整理しています。\n\nただし、変形制を採っても法定の総枠や上限規制、深夜割増（午後10時〜午前5時は2割5分以上。第37条第4項）、年次有給休暇（第39条）は残ります。労使協定・就業規則への定め、始業・終業時刻の特定が必要で、就業規則は常時10人以上で作成・届出義務があります（第89条）。天候中断で早上がりさせた日の賃金の扱い（休業手当＝第26条が問題になる場面）も、あらかじめルール化しておくのが安全です。\n\n## 林業で起きやすい労災と、その補償・報告はどうなるのか？\n\n林業は死傷年千人率が全産業で最も高い業種です。林野庁の資料では、2022年（令和4年）の林業の死傷年千人率は23.5で、全産業の2.3の約10倍とされ、死亡災害の多くが伐木作業中に発生しています。労災保険は国籍・在留資格・雇用形態を問わず適用され、業務上の負傷・疾病には療養（補償）給付・休業（補償）給付等が支給されます。\n\n| 項目 | 根拠・内容 |\n|---|---|\n| 労災保険の適用 | 労働者災害補償保険法。1人でも労働者を雇えば原則加入。給付は国籍・在留資格を問わない |\n| 死傷病報告 | 労働安全衛生規則第97条。休業4日以上の労働災害は遅滞なく労働基準監督署へ報告（4日未満は期間ごとにまとめて報告） |\n| 外国人労働者の安全衛生教育 | 母語・平易な日本語での教育が重要（[外国人の安全衛生教育](/labor/column/gaikokujin-anzeneisei-kyoiku-bogoku-roudo-saigai-boshi)） |\n| 一人親方・事業主の扱い | 労働者でない一人親方・事業主は給付対象外。林業の一人親方等は特別加入の対象になり得る |\n\n労災の請求手続と療養・休業給付の流れは[労災の手続き](/labor/column/rousai-tetsuzuki-shishobyo-houkoku)で整理しています。なお、副業・兼業で複数の会社に雇われている場合の給付の合算は[複数事業労働者の労災](/labor/column/fukusu-jigyo-roudosha-rosai-kyufu-fukugyo)の論点です。\n\n## 許認可・立木売買・税務は、それぞれ誰に相談すればよいのか？\n\n労働時間の管理、36協定・就業規則の整備、安全衛生体制（特別教育の記録・保護具・健康管理）、労災の請求支援は社会保険労務士が担います。一方で、森林の土地所有者届出（森林法）や素材生産・伐採に伴う各種届出の作成・提出は行政書士の領域です。立木・山林の売買に伴う所有権移転などの登記は司法書士、山林所得や事業の税務申告は税理士が担います。許認可違反の罰則や係争は弁護士の領域です。これらはそれぞれ独立した事業体として別々にご契約いただき、当事務所は紹介料を受け取りません。\n\nご相談は無料です。費用は[報酬額表](/labor/ryokin)に、[サービス内容](/labor/services)と[ご相談の流れ](/labor/nagare)もあわせてご覧ください。\n\n## この記事の根拠\n\n- 労働基準法（昭和22年法律第49号）第41条第1号（別表第一第六号〈林業を除く。〉又は第七号に掲げる事業に従事する者について、労働時間・休憩・休日に関する規定を適用しない）・第32条（法定労働時間）・第36条（時間外・休日労働の協定）・第37条第1項・第4項（割増賃金。深夜は午後10時〜午前5時で2割5分以上）・第32条の2・第32条の4（変形労働時間制）・第89条（就業規則の作成・届出）\n- 労働基準法別表第一 第六号（土地の耕作若しくは開墾又は植物の栽植、栽培、採取若しくは伐採の事業その他農林の事業。ただし林業を除く）・第七号（動物の飼育又は水産動植物の採捕若しくは養殖の事業その他の畜産、養蚕又は水産の事業）\n- 労働安全衛生法（昭和47年法律第57号）第59条第3項（危険・有害業務の特別教育）、労働安全衛生規則（昭和47年労働省令第32号）第36条第8号（チェーンソーを用いて行う立木の伐木、かかり木の処理又は造材の業務の特別教育）。胸高直径で区分されていた2種類を統合する改正は2020年（令和2年）8月1日施行（基発0214第9号）\n- 労働安全衛生規則の一部改正（2019年〈平成31年〉2月12日公布、2019年〈令和元年〉8月1日施行、特別教育の統合部分は2020年〈令和2年〉8月1日施行）── チェーンソーによる伐木等の作業における下肢の切創防止用保護衣の着用義務、受け口を作るべき立木の対象を胸高直径20cm以上に拡大する等（2026年11月7日参照）\n- 厚生労働省「チェーンソー取扱い作業指針について」2009年（平成21年）7月10日付け基発0710第1号（防振型機械の選定・点検整備・日振動ばく露量にもとづく作業時間管理等）（2026年11月7日参照）\n- 労働者災害補償保険法（昭和22年法律第50号）── 労災保険の適用・給付。労働安全衛生規則第97条（労働者死傷病報告）\n- 林野庁「林業労働災害の発生状況」等（2022年〈令和4年〉の林業の死傷年千人率23.5＝全産業2.3の約10倍、死亡災害の多くが伐木作業中）（2026年11月7日参照）\n- 振動業務に係る健康診断の具体的な実施項目・周期、林業の一人親方等の特別加入の個別の適用、変形労働時間制の具体的な設計は、事案ごとに分かれます。本記事では個別の結論を出していません（**未検証**）\n\n本記事は一般的な情報提供です。個別のご事情に応じた判断は、面談のうえ有資格者が行います。四葉社会保険労務士事務所では、林業の労働時間管理・36協定・変形労働時間制、特別教育と保護具・健康管理などの安全衛生体制、労災の請求支援についてご相談いただけます。森林法に基づく届出や素材生産の各種届出は行政書士、立木・山林の売買の登記は司法書士、山林所得など税務は税理士、罰則や係争は弁護士が担います。それぞれ独立した事業体として別々にご契約いただき、当事務所は紹介料を受け取りません。よくいただくご質問は[よくあるご質問](/labor/faq)にまとめています。執筆は[浦松丈二](/about/uramatsu)（社会保険労務士・行政書士・宅地建物取引士）です。\n\n## よくある質問\n\n**Q. 林業も農業と同じで、残業代を払わなくてよいのですか？**\nA. いいえ。農業・畜産・養蚕・水産は労働基準法第41条第1号で労働時間・休憩・休日の規定が適用除外ですが、別表第一第六号は括弧書きで林業を除いています。林業にはこれらの規定が原則どおり適用されるため、1日8時間・週40時間を超えて働かせるには36協定の届出が必要で、時間外・休日労働には割増賃金（第37条）がかかります。\n\n**Q. チェーンソーで木を伐る作業に、資格や教育は要りますか？**\nA. 要ります。チェーンソーを用いて行う立木の伐木・かかり木の処理・造材の業務には、労働安全衛生規則第36条第8号の特別教育の修了が必要です。2020年（令和2年）8月1日施行の改正で、立木の直径で分かれていた2種類の教育が1つに統合されました。あわせて、伐木等の作業では下肢の切創防止用保護衣の着用も義務づけられています。\n\n**Q. 繁忙期と閑散期の差が大きく、毎日8時間では回りません。どうすればよいですか？**\nA. 1年単位または1か月単位の変形労働時間制（労働基準法第32条の4・第32条の2）を使うと、繁忙期に所定労働時間を長く、閑散期に短く配分でき、総枠の中で割増を抑えやすくなります。導入には労使協定・就業規則の整備が必要で、深夜割増や年次有給休暇、上限規制は変形制を採っても残ります。\n\n**Q. 伐採に伴う届出や山林の売買も、社会保険労務士に頼めますか？**\nA. いいえ。森林法に基づく森林の土地所有者届出や素材生産に伴う各種届出の作成・提出は行政書士、立木・山林の売買の登記は司法書士、山林所得など税務は税理士の領域です。社会保険労務士がお引き受けするのは、労働時間管理・36協定・安全衛生・労災といった労務です。他士業とはそれぞれ独立した事業体として、お客様から直接ご契約いただきます。",
+    "status": "published",
+    "author": {
+      "name": "浦松 丈二",
+      "title": "社会保険労務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+    },
+    "keywords": [
+      "林業 労働時間 適用除外 ではない",
+      "労基法41条 林業 除く 別表第一第六号",
+      "チェーンソー 特別教育 安衛則36条8号",
+      "林業 下肢 切創防止 保護衣 着用義務",
+      "林業 変形労働時間制 繁忙期",
+      "林業 労災 死傷年千人率 死傷病報告"
+    ],
+    "tags": [
+      "林業",
+      "労働時間",
+      "労働基準法41条",
+      "特別教育",
+      "安全衛生",
+      "労災"
+    ],
+    "locales": [],
+    "faq": [
+      {
+        "question": "林業も農業と同じで、残業代を払わなくてよいのですか？",
+        "answer": "いいえ。農業・畜産・養蚕・水産は労働基準法第41条第1号で労働時間・休憩・休日の規定が適用除外ですが、別表第一第六号は括弧書きで林業を除いています。林業にはこれらの規定が原則どおり適用されるため、1日8時間・週40時間を超えて働かせるには36協定の届出が必要で、時間外・休日労働には割増賃金（第37条）がかかります。"
+      },
+      {
+        "question": "チェーンソーで木を伐る作業に、資格や教育は要りますか？",
+        "answer": "要ります。チェーンソーを用いて行う立木の伐木・かかり木の処理・造材の業務には、労働安全衛生規則第36条第8号の特別教育の修了が必要です。2020年（令和2年）8月1日施行の改正で、立木の直径で分かれていた2種類の教育が1つに統合されました。あわせて、伐木等の作業では下肢の切創防止用保護衣の着用も義務づけられています。"
+      },
+      {
+        "question": "繁忙期と閑散期の差が大きく、毎日8時間では回りません。どうすればよいですか？",
+        "answer": "1年単位または1か月単位の変形労働時間制（労働基準法第32条の4・第32条の2）を使うと、繁忙期に所定労働時間を長く、閑散期に短く配分でき、総枠の中で割増を抑えやすくなります。導入には労使協定・就業規則の整備が必要で、深夜割増や年次有給休暇、上限規制は変形制を採っても残ります。"
+      },
+      {
+        "question": "伐採に伴う届出や山林の売買も、社会保険労務士に頼めますか？",
+        "answer": "いいえ。森林法に基づく森林の土地所有者届出や素材生産に伴う各種届出の作成・提出は行政書士、立木・山林の売買の登記は司法書士、山林所得など税務は税理士の領域です。社会保険労務士がお引き受けするのは、労働時間管理・36協定・安全衛生・労災といった労務です。他士業とはそれぞれ独立した事業体として、お客様から直接ご契約いただきます。"
+      }
+    ],
+    "translations": {
+      "en": {
+        "title": "Labour in forestry: how far must you observe working hours and safety?",
+        "excerpt": "Unlike agriculture, forestry is not in the Labour Standards Act Article 41(i) exemption. The working-hours, break and holiday rules apply in principle, and felling, clearing hung-up trees and bucking with a chainsaw require special education (Industrial Safety and Health Regulations Article 36(viii)). Permits are a Gyoseishoshi's area, registration a judicial scrivener's, tax a tax accountant's — each an independent entity engaged separately.",
+        "content": "**Bottom line first**: Unlike agriculture, forestry is not within the Labour Standards Act Article 41(i) exemption. The working-hours, break and holiday rules apply in principle, and felling, clearing hung-up trees and bucking with a chainsaw require special education (Industrial Safety and Health Regulations Article 36(viii)). Permits are a Gyoseishoshi's area, registration a judicial scrivener's and tax a tax accountant's.\n\nThe assumption that \"agriculture is exempt from working-hours rules, so forestry must be the same\" leads to unpaid overtime and accidents. For forestry operators doing timber production, afforestation and felling, forest co-operatives, and owners who have incorporated and begun hiring, this article sets out what must be observed in working hours, safety and health, and workers' compensation, with the contrast against agriculture as the axis.\n\n## Is forestry exempt from the working-hours rules like agriculture?\n\nNo. Agriculture, livestock, sericulture and fisheries are exempt from the working-hours, break and holiday rules under Labour Standards Act Article 41(i), but forestry is outside that exemption. So in forestry the statutory hours of 8 a day / 40 a week (Article 32), breaks (Article 34) and holidays (Article 35) apply in principle, and to work beyond them you need a filed Article 36 labour-management agreement and premium pay for overtime and holiday work (Article 37).\n\nThis is the mirror image of the agriculture article ([agriculture is exempt from working hours](/en/labor/column/nogyo-roudoujikan-jogai-41jo-tokutei-ginou-roumu)). The same pattern of work that triggers no overtime premium in agriculture does trigger premium pay in forestry.\n\n## Why is forestry left out of the Article 41 exemption?\n\nArticle 41(i) exempts those engaged in the businesses in Appended Table 1 items 6 and 7. Item 6 reads \"cultivation or clearing of land, or the planting, cultivation, gathering or felling of plants, and other agriculture/forestry businesses,\" but the item carries a **parenthetical \"excluding forestry,\"** so forestry workers are not in the exemption.\n\n| Business | Exempt under Art. 41(i)? | Working-hours / holiday rules |\n|---|---|---|\n| Agriculture (cultivation, etc.) | Table 1 item 6 (excluding forestry) — **exempt** | Do not apply (no overtime premium) |\n| Livestock, sericulture, fisheries | Table 1 item 7 — **exempt** | Do not apply |\n| **Forestry (felling, afforestation, timber production)** | **Expressly excluded** from item 6 — not exempt | **Apply in principle** (Art. 36 agreement and premiums needed) |\n\nForestry resembles agriculture in depending on weather and season, but because it involves mechanised felling and yarding with high accident risk, the working-hours framework is kept the same as for ordinary businesses. Forestry also has no special overtime cap like construction or drivers (the 960-hours-a-year type set out in [construction's overtime cap](/en/labor/column/kensetsugyo-2024-jikangai-jougen-kyujitsu-roumu)); the ordinary cap applies (the 45-hours-a-month / 360-hours-a-year principle).\n\n## What special education or qualifications do felling and bucking require?\n\nDangerous and harmful work requires completion of special education before the work (Industrial Safety and Health Act Article 59(3); Industrial Safety and Health Regulations Article 36). The core one in forestry is the special education for chainsaw felling work, consolidated by an amendment effective 1 August 2020.\n\n| Work | Basis | Content |\n|---|---|---|\n| Felling, clearing hung-up trees and bucking of standing trees using a chainsaw | Industrial Safety and Health Regulations Art. 36(viii) | The 1 Aug 2020 amendment **merged two trainings divided by trunk diameter into a single special education regardless of diameter**. Felling without a chainsaw was taken out of scope |\n| Operation of travelling yarders, simple cable yarding systems, yarding machines, etc. | Related items of Art. 36 | Special education needed for operating the machines used in yarding and hauling |\n| Wearing lower-limb cut-protection clothing | Industrial Safety and Health Regulations (amendment effective 1 Aug 2019) | In chainsaw felling work, the employer must **have workers wear** protective clothing, and workers must wear it |\n\nChainsaw work also raises vibration disorder, and the Ministry of Health, Labour and Welfare's \"Guidelines on Chainsaw Handling Work\" (notice Kihatsu 0710 No. 1 of 10 July 2009) sets the choice of anti-vibration machines, inspection and maintenance, and management of daily work time (a guide based on daily vibration exposure). The specific items and cycle of the health check for vibration work vary by case, so this article gives no individual conclusion (**unverified**).\n\n## How do you manage work hours that shift with season and weather?\n\nForestry has large busy/slack swings and weather interruptions, so a flat 8 hours a day fits poorly. Since the working-hours rules apply in principle, a one-year unit variable working-hours system (Labour Standards Act Article 32-4) or a one-month unit system (Article 32-2) can absorb the swings within the limits: set longer scheduled hours in the busy season and shorter in the slack season to keep premiums down within the total. See [choosing a variable working-hours system](/en/labor/column/henkei-roudoujikan-flextime-erabikata).\n\nEven with a variable system, the statutory total, the overtime cap, the late-night premium (at least 25% for 10 p.m.–5 a.m.; Article 37(4)) and annual paid leave (Article 39) remain. You need a labour-management agreement and work rules, with start and finish times specified; work rules must be drawn up and filed at 10 or more regular staff (Article 89). Rule in advance the wage treatment of a day cut short by weather (where the leave allowance under Article 26 can come into play).\n\n## What accidents are common in forestry, and how are compensation and reporting handled?\n\nForestry has the highest casualty rate per thousand workers a year of any industry. The Forestry Agency's materials put forestry's 2022 rate at 23.5, about ten times the all-industry 2.3, with most fatal accidents occurring during felling. Workers' compensation applies regardless of nationality, residence status or form of employment, and work-related injury or illness draws medical and leave (compensation) benefits.\n\n| Item | Basis / content |\n|---|---|\n| Workers' compensation coverage | Workers' Accident Compensation Insurance Act. Covered once you employ even one worker; benefits irrespective of nationality or status |\n| Casualty report | Industrial Safety and Health Regulations Art. 97. A casualty with 4+ days off reported to the Labour Standards Inspection Office without delay (under 4 days reported periodically) |\n| Safety and health education for foreign workers | Education in the native language or plain Japanese matters ([safety education for foreign workers](/en/labor/column/gaikokujin-anzeneisei-kyoiku-bogoku-roudo-saigai-boshi)) |\n| Sole proprietors / operators | Non-workers (sole proprietors, operators) are not covered; forestry sole proprietors may be eligible for special enrolment |\n\nThe claim procedure and the flow of medical and leave benefits are set out in [workers' compensation procedures](/en/labor/column/rousai-tetsuzuki-shishobyo-houkoku). Where a person is employed by more than one company in a side job, the aggregation of benefits is the issue in [workers' compensation for multiple-employment workers](/en/labor/column/fukusu-jigyo-roudosha-rosai-kyufu-fukugyo).\n\n## Who should you consult for permits, timber sales and tax?\n\nWorking-hours management, Article 36 agreements and work rules, the safety-and-health framework (records of special education, protective gear, health management) and claim support are a Shakai Hoken Roumushi's. Drawing up and filing the forest landowner notification (Forest Act) and the various notifications for timber production is a Gyoseishoshi's area. Registration of transfer of ownership on sales of standing trees and woodland is a judicial scrivener's; forestry income and business tax filing a tax accountant's. Penalties for permit breaches and disputes are a lawyer's. Each is engaged as a separate, independent entity under separate contracts, and this office takes no referral fee.\n\nYour first consultation is free. Please see the [fee schedule](/en/labor/ryokin), the [services](/en/labor/services) and [how we work](/en/labor/nagare).\n\n## Frequently asked questions\n\n**Q. Is forestry, like agriculture, free from paying overtime?**\nA. No. Agriculture, livestock, sericulture and fisheries are exempt from the working-hours, break and holiday rules under Article 41(i), but item 6 of Appended Table 1 carries a parenthetical excluding forestry. These rules apply to forestry in principle, so working beyond 8 hours a day / 40 a week needs a filed Article 36 agreement, and overtime and holiday work draw premium pay (Article 37).\n\n**Q. Do you need a qualification or training to fell trees with a chainsaw?**\nA. Yes. Felling, clearing hung-up trees and bucking standing trees with a chainsaw require completion of the special education under Industrial Safety and Health Regulations Article 36(viii). The amendment effective 1 August 2020 merged the two trainings previously divided by trunk diameter into one. Wearing lower-limb cut-protection clothing in felling work is also mandatory.\n\n**Q. The swing between busy and slack seasons is large; 8 hours a day doesn't work. What can we do?**\nA. A one-year or one-month unit variable working-hours system (Labour Standards Act Articles 32-4 and 32-2) lets you set longer scheduled hours in the busy season and shorter in the slack season, keeping premiums down within the total. It requires a labour-management agreement and work rules, and the late-night premium, annual leave and the overtime cap remain even under a variable system.\n\n**Q. Can a Shakai Hoken Roumushi also do the felling notifications and the woodland sale?**\nA. No. The forest landowner notification under the Forest Act and the various timber-production notifications are a Gyoseishoshi's area; registration on sales of standing trees and woodland is a judicial scrivener's; forestry income and tax a tax accountant's. A Shakai Hoken Roumushi handles labour — working-hours management, Article 36 agreements, safety and health, and workers' compensation. Each other profession is a separate, independent entity contracted directly by you.\n\n## This article's basis\n\n- Labour Standards Act (Act No. 49 of 1947) Article 41(i) (persons engaged in Appended Table 1 item 6 — excluding forestry — or item 7 are outside the working-hours, break and holiday provisions), Article 32 (statutory hours), Article 36 (overtime/holiday agreement), Article 37(1)(4) (premium pay; late-night 10 p.m.–5 a.m. at least 25%), Articles 32-2 and 32-4 (variable working-hours systems), Article 89 (work rules)\n- Labour Standards Act Appended Table 1 item 6 (cultivation or clearing of land, or planting, cultivation, gathering or felling of plants, and other agriculture/forestry businesses — excluding forestry) and item 7 (raising of animals, capture or culture of aquatic life, and other livestock, sericulture or fisheries businesses)\n- Industrial Safety and Health Act (Act No. 57 of 1972) Article 59(3) (special education for dangerous/harmful work); Industrial Safety and Health Regulations (Ministry of Labour Ordinance No. 32 of 1972) Article 36(viii) (special education for felling, clearing hung-up trees and bucking standing trees using a chainsaw). The amendment merging the two diameter-based trainings took effect 1 August 2020 (Kihatsu 0214 No. 9)\n- Amendment to the Industrial Safety and Health Regulations (promulgated 12 February 2019; effective 1 August 2019, with the special-education consolidation part effective 1 August 2020): the duty to have workers wear lower-limb cut-protection clothing in chainsaw felling work, and widening to 20 cm trunk diameter the trees for which an undercut must be made, etc. (accessed 7 November 2026)\n- Ministry of Health, Labour and Welfare \"Guidelines on Chainsaw Handling Work,\" notice Kihatsu 0710 No. 1 of 10 July 2009 (choice of anti-vibration machines, inspection and maintenance, management of work time by daily vibration exposure) (accessed 7 November 2026)\n- Workers' Accident Compensation Insurance Act (Act No. 50 of 1947): coverage and benefits. Industrial Safety and Health Regulations Article 97 (worker casualty report)\n- Forestry Agency \"Occurrence of labour accidents in forestry,\" etc. (forestry's casualty rate per thousand workers for 2022 was 23.5, about ten times the all-industry 2.3; most fatal accidents during felling) (accessed 7 November 2026)\n- The specific items and cycle of the health check for vibration work, the individual application of special enrolment for forestry sole proprietors, and the concrete design of a variable working-hours system vary case by case. This article gives no individual conclusion (**unverified**).\n\nThis article is general information. An individual judgment on your circumstances is made by a qualified professional after a meeting. At the Yotsuba Shakai Hoken Roumushi Office we can advise on forestry working-hours management, Article 36 agreements and variable working-hours systems, the safety-and-health framework of special education, protective gear and health management, and claim support for workers' compensation. Notifications under the Forest Act and timber-production notifications belong to a Gyoseishoshi, registration of sales of standing trees and woodland to a judicial scrivener, forestry income and tax to a tax accountant, and penalties and disputes to a lawyer — each a separate, independent entity engaged under separate contracts, with no referral fee. Common questions are gathered in the [FAQ](/en/labor/faq). Written by [Joji Uramatsu](/en/about/uramatsu) (Shakai Hoken Roumushi, Gyoseishoshi, Licensed Real Estate Transaction Agent).",
+        "category": "Working practices",
+        "keywords": [
+          "forestry working hours Article 41",
+          "forestry not exempt Labour Standards Act",
+          "chainsaw special education Article 36",
+          "forestry workers compensation accident rate",
+          "forestry variable working hours",
+          "forestry overtime premium"
+        ],
+        "tags": [
+          "Forestry",
+          "Working hours",
+          "Article 41",
+          "Special education",
+          "Chainsaw",
+          "Workers compensation"
+        ],
+        "author": {
+          "name": "Joji Uramatsu",
+          "title": "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所"
+        },
+        "faq": [
+          {
+            "question": "Is forestry, like agriculture, free from paying overtime?",
+            "answer": "No. Agriculture, livestock, sericulture and fisheries are exempt from the working-hours, break and holiday rules under Article 41(i), but item 6 of Appended Table 1 carries a parenthetical excluding forestry. These rules apply to forestry in principle, so working beyond 8 hours a day / 40 a week needs a filed Article 36 agreement, and overtime and holiday work draw premium pay (Article 37)."
+          },
+          {
+            "question": "Do you need a qualification or training to fell trees with a chainsaw?",
+            "answer": "Yes. Felling, clearing hung-up trees and bucking standing trees with a chainsaw require completion of the special education under Industrial Safety and Health Regulations Article 36(viii). The amendment effective 1 August 2020 merged the two trainings previously divided by trunk diameter into one. Wearing lower-limb cut-protection clothing in felling work is also mandatory."
+          },
+          {
+            "question": "The swing between busy and slack seasons is large; 8 hours a day doesn't work. What can we do?",
+            "answer": "A one-year or one-month unit variable working-hours system (Labour Standards Act Articles 32-4 and 32-2) lets you set longer scheduled hours in the busy season and shorter in the slack season, keeping premiums down within the total. It requires a labour-management agreement and work rules, and the late-night premium, annual leave and the overtime cap remain even under a variable system."
+          },
+          {
+            "question": "Can a Shakai Hoken Roumushi also do the felling notifications and the woodland sale?",
+            "answer": "No. The forest landowner notification under the Forest Act and the various timber-production notifications are a Gyoseishoshi's area; registration on sales of standing trees and woodland is a judicial scrivener's; forestry income and tax a tax accountant's. A Shakai Hoken Roumushi handles labour — working-hours management, Article 36 agreements, safety and health, and workers' compensation. Each other profession is a separate, independent entity contracted directly by you."
+          }
+        ]
+      },
+      "zh-tw": {
+        "title": "林業的勞務，勞動時間與安全衛生須遵守到何種程度？",
+        "excerpt": "與農業不同，林業不在勞動基準法第41條第1號的適用除外內。勞動時間・休息・休假規定原則上適用，使用鏈鋸的伐木・處理掛枝・造材須特別教育（勞動安全衛生規則第36條第8號）。許認可屬行政書士、登記屬司法書士、稅務屬稅理士，各為獨立事業體另行簽約。",
+        "content": "**結論（先講重點）**：與農業不同，林業不在勞動基準法第41條第1號的適用除外內。勞動時間・休息・休假規定原則上適用，使用鏈鋸的伐木・處理掛枝・造材須特別教育（勞動安全衛生規則第36條第8號）。許認可屬行政書士、登記屬司法書士、稅務屬稅理士的領域。\n\n「農業不適用勞動時間規定，故林業也相同即可」的誤解，會導致加班費未付與勞災事故。本文面向從事素材生產・造林・伐採的林業事業者、森林組合，以及由個人法人化後開始雇人的經營者，以與農業的差異為軸，整理勞動時間・安全衛生・勞災應遵守的範圍。\n\n## 林業是否與農業相同，勞動時間規定適用除外？\n\n不是。農業・畜產・養蠶・水產依勞動基準法第41條第1號，勞動時間・休息・休假規定適用除外，但林業被排除於此適用除外之外。因此林業中，1日8小時・週40小時的法定勞動時間（第32條）、休息（第34條）、休假（第35條）原則上適用，欲超過須締結並申報36協定（第36條），且加班・休假勞動須加給（第37條）。\n\n此差異與農業的文章（[農業勞動時間適用除外](/zh-tw/labor/column/nogyo-roudoujikan-jogai-41jo-tokutei-ginou-roumu)）成對。在農業不生加班加給的同樣工作方式，在林業便成為加給對象。\n\n## 林業為何不被納入第41條的適用除外？\n\n第41條第1號將附表第一第六號與第七號所列事業的從事者列為適用除外。其中第六號載「土地的耕作或開墾，或植物的栽植、栽培、採取或伐採的事業及其他農林事業」，但該號以**括弧書「不含林業」**排除，故林業從業者不屬適用除外。\n\n| 事業 | 第41條1號適用除外 | 勞動時間・休假規定 |\n|---|---|---|\n| 農業（耕作・栽培等） | 附表第一第六號（不含林業）該當＝**適用除外** | 不適用（無加班加給） |\n| 畜產・養蠶・水產 | 附表第一第七號該當＝**適用除外** | 不適用 |\n| **林業（伐採・造林・素材生產）** | 自第六號**明文排除**＝不適用除外 | **原則適用**（須36協定・加給） |\n\n林業雖與農業同樣受天候・季節左右，但因含機械化伐木・集材等危險大的作業，勞動時間框架與一般事業同樣維持。又，林業的加班未設如建設業或汽車駕駛的上限規制特例（[建設業的上限規制](/zh-tw/labor/column/kensetsugyo-2024-jikangai-jougen-kyujitsu-roumu)整理的年960小時等），適用原則的上限規制（以月45小時・年360小時為原則的框架）。\n\n## 伐木・造材等作業須何種特別教育・資格？\n\n危險・有害業務須於作業前使其修了特別教育（勞動安全衛生法第59條第3項・勞動安全衛生規則第36條）。林業的核心為2020年（令和2年）8月1日施行的修正所統合的，使用鏈鋸的伐木等特別教育。\n\n| 業務 | 依據 | 內容 |\n|---|---|---|\n| 使用鏈鋸行立木伐木・掛枝處理・造材的業務 | 勞動安全衛生規則第36條第8號 | 2020年8月1日施行的修正，將依立木胸高直徑區分的2種**統合為不問直徑的1種特別教育**。不使用鏈鋸的伐木等自對象中除外 |\n| 行走集材機械・簡易架線集材裝置・機械集材裝置等的運轉・作業 | 第36條相關各號 | 集材・運材所用機械的運轉等須特別教育 |\n| 下肢切創防止用保護衣的著用 | 勞動安全衛生規則（2019年〈令和元年〉8月1日施行的修正） | 鏈鋸伐木等作業中，事業者有使其**著用**保護衣的義務，勞工有著用義務 |\n\n此外，鏈鋸作業中振動障害的預防為課題，厚生勞動省「鏈鋸取扱作業指針」（2009年〈平成21年〉7月10日基發0710第1號）定有防振型機械的選定、點檢・整備、每日作業時間的管理（依日振動暴露量的目安）等。振動業務相關健康診斷的具體實施項目・週期因個案而異，本文不作個別結論（**未驗證**）。\n\n## 隨季節或天候變動的作業時間，應如何管理？\n\n林業繁忙・閑散差大、天候中斷多，1日8小時的一律運用難以契合。既然勞動時間規定原則適用，可用1年單位的變形勞動時間制（勞動基準法第32條之4）或1個月單位的變形勞動時間制（第32條之2），於框架內吸收變動：繁忙期所定長、閑散期短，於總框架內抑制加給運用。選法見[變形勞動時間制的選法](/zh-tw/labor/column/henkei-roudoujikan-flextime-erabikata)。\n\n惟即使採變形制，法定總框架、上限規制、深夜加給（午後10時〜午前5時2成5分以上。第37條第4項）、年度有薪假（第39條）仍在。須勞使協定・就業規則的訂定，並特定始業・終業時刻；就業規則於恆常10人以上有製作・申報義務（第89條）。因天候中斷提早下班之日的工資處理（第26條休業津貼可能成問題之場面）亦宜事先規則化。\n\n## 林業易發生的勞災，其補償與報告如何？\n\n林業的死傷年千人率為全產業最高的行業。林野廳資料指，2022年（令和4年）林業的死傷年千人率為23.5，約為全產業2.3的10倍，死亡災害多發生於伐木作業中。勞災保險不問國籍・在留資格・雇用形態一律適用，業務上的負傷・疾病支給療養（補償）給付・休業（補償）給付等。\n\n| 項目 | 依據・內容 |\n|---|---|\n| 勞災保險適用 | 勞動者災害補償保險法。雇1名勞工即原則加入，給付不問國籍・在留資格 |\n| 死傷病報告 | 勞動安全衛生規則第97條。休業4日以上的勞災須遲滯無遲向勞動基準監督署報告（未滿4日按期彙總報告） |\n| 外國人勞工的安全衛生教育 | 以母語・平易日語教育為重要（[外國人的安全衛生教育](/zh-tw/labor/column/gaikokujin-anzeneisei-kyoiku-bogoku-roudo-saigai-boshi)） |\n| 一人親方・事業主的處理 | 非勞工的一人親方・事業主非給付對象，林業的一人親方等可成特別加入對象 |\n\n勞災的請求手續與療養・休業給付流程見[勞災的手續](/zh-tw/labor/column/rousai-tetsuzuki-shishobyo-houkoku)。又，副業・兼業於複數公司受雇時的給付合算，為[複數事業勞工的勞災](/zh-tw/labor/column/fukusu-jigyo-roudosha-rosai-kyufu-fukugyo)的論點。\n\n## 許認可・立木買賣・稅務各應向誰諮詢？\n\n勞動時間管理、36協定・就業規則的整備、安全衛生體制（特別教育的記錄・保護具・健康管理）、勞災的請求支援由社會保險勞務士負責。另一方面，森林的土地所有者申報（森林法）及伴隨素材生產・伐採的各種申報的製作・提出屬行政書士領域。立木・山林買賣相關的所有權移轉等登記屬司法書士，山林所得及事業稅務申報屬稅理士。許認可違反的罰則與係爭屬律師領域。各為獨立事業體另行簽約，本所不收取介紹費。\n\n初次諮詢免費。費用請見[報酬額表](/zh-tw/labor/ryokin)，並參閱[服務內容](/zh-tw/labor/services)與[諮詢流程](/zh-tw/labor/nagare)。\n\n## 常見問題\n\n**Q. 林業也與農業相同，不必付加班費嗎？**\nA. 不是。農業・畜產・養蠶・水產依第41條第1號勞動時間・休息・休假規定適用除外，但附表第一第六號以括弧書排除林業。此等規定對林業原則適用，故超過1日8小時・週40小時須申報36協定，加班・休假勞動須加給（第37條）。\n\n**Q. 以鏈鋸伐木的作業，須資格或教育嗎？**\nA. 須要。以鏈鋸行立木伐木・掛枝處理・造材的業務，須修了勞動安全衛生規則第36條第8號的特別教育。2020年（令和2年）8月1日施行的修正，將依立木直徑區分的2種教育統合為1種。伐木等作業亦義務著用下肢切創防止用保護衣。\n\n**Q. 繁忙期與閑散期差大，每日8小時難以運作，怎麼辦？**\nA. 使用1年單位或1個月單位的變形勞動時間制（勞動基準法第32條之4・第32條之2），可於繁忙期將所定勞動時間拉長、閑散期縮短，於總框架內抑制加給。導入須勞使協定・就業規則，深夜加給、年度有薪假、上限規制即使採變形制仍在。\n\n**Q. 伴隨伐採的申報與山林買賣，也可委託社會保險勞務士嗎？**\nA. 不可。森林法的森林土地所有者申報與素材生產相關各種申報的製作・提出屬行政書士，立木・山林買賣的登記屬司法書士，山林所得等稅務屬稅理士。社會保險勞務士負責勞動時間管理・36協定・安全衛生・勞災等勞務。與其他士業各自作為獨立事業體，由您直接簽約。\n\n## 本文根據\n\n- 勞動基準法（昭和22年法律第49號）第41條第1號（從事附表第一第六號〈不含林業〉或第七號所列事業者，不適用勞動時間・休息・休假規定）・第32條（法定勞動時間）・第36條（加班・休假勞動協定）・第37條第1項・第4項（加給；深夜午後10時〜午前5時2成5分以上）・第32條之2・第32條之4（變形勞動時間制）・第89條（就業規則）\n- 勞動基準法附表第一 第六號（土地的耕作或開墾，或植物的栽植、栽培、採取或伐採的事業及其他農林事業。惟不含林業）・第七號（動物的飼育，或水產動植物的採捕或養殖的事業及其他畜產、養蠶或水產事業）\n- 勞動安全衛生法（昭和47年法律第57號）第59條第3項（危險・有害業務的特別教育）、勞動安全衛生規則（昭和47年勞動省令第32號）第36條第8號（使用鏈鋸行立木伐木、掛枝處理或造材業務的特別教育）。將依胸高直徑區分的2種統合的修正，2020年（令和2年）8月1日施行（基發0214第9號）\n- 勞動安全衛生規則一部修正（2019年〈平成31年〉2月12日公布，2019年〈令和元年〉8月1日施行，特別教育統合部分2020年〈令和2年〉8月1日施行）── 鏈鋸伐木等作業的下肢切創防止用保護衣著用義務，將應作受口的立木對象擴大至胸高直徑20cm以上等（2026年11月7日參照）\n- 厚生勞動省「關於鏈鋸取扱作業指針」2009年（平成21年）7月10日基發0710第1號（防振型機械的選定・點檢整備・依日振動暴露量的作業時間管理等）（2026年11月7日參照）\n- 勞動者災害補償保險法（昭和22年法律第50號）── 勞災保險的適用・給付。勞動安全衛生規則第97條（勞工死傷病報告）\n- 林野廳「林業勞動災害的發生狀況」等（2022年〈令和4年〉林業死傷年千人率23.5＝全產業2.3的約10倍，死亡災害多於伐木作業中）（2026年11月7日參照）\n- 振動業務相關健康診斷的具體實施項目・週期、林業一人親方等特別加入的個別適用、變形勞動時間制的具體設計，將因個案而異。本文不作個別結論（**未驗證**）\n\n本文為一般性資訊提供。依個別情事的判斷，由有資格者於面談後進行。四葉社会保険労務士事務所可就林業的勞動時間管理・36協定・變形勞動時間制，特別教育與保護具・健康管理等安全衛生體制，勞災的請求支援提供諮詢。森林法的申報與素材生產的各種申報屬行政書士，立木・山林買賣的登記屬司法書士，山林所得等稅務屬稅理士，罰則與係爭屬律師。各為獨立事業體另行簽約，本所不收取介紹費。常見問題整理於[常見問題](/zh-tw/labor/faq)。撰文為[浦松丈二](/zh-tw/about/uramatsu)（社會保險勞務士・行政書士・宅地建物取引士）。",
+        "category": "勞務實務",
+        "keywords": [
+          "林業 勞動時間 第41條",
+          "林業 不適用除外 勞動基準法",
+          "鏈鋸 特別教育 第36條",
+          "林業 勞災 死傷率",
+          "林業 變形勞動時間",
+          "林業 加班加給"
+        ],
+        "tags": [
+          "林業",
+          "勞動時間",
+          "第41條",
+          "特別教育",
+          "鏈鋸",
+          "勞災"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "林業也與農業相同，不必付加班費嗎？",
+            "answer": "不是。農業・畜產・養蠶・水產依第41條第1號勞動時間・休息・休假規定適用除外，但附表第一第六號以括弧書排除林業。此等規定對林業原則適用，故超過1日8小時・週40小時須申報36協定，加班・休假勞動須加給（第37條）。"
+          },
+          {
+            "question": "以鏈鋸伐木的作業，須資格或教育嗎？",
+            "answer": "須要。以鏈鋸行立木伐木・掛枝處理・造材的業務，須修了勞動安全衛生規則第36條第8號的特別教育。2020年（令和2年）8月1日施行的修正，將依立木直徑區分的2種教育統合為1種。伐木等作業亦義務著用下肢切創防止用保護衣。"
+          },
+          {
+            "question": "繁忙期與閑散期差大，每日8小時難以運作，怎麼辦？",
+            "answer": "使用1年單位或1個月單位的變形勞動時間制（勞動基準法第32條之4・第32條之2），可於繁忙期將所定勞動時間拉長、閑散期縮短，於總框架內抑制加給。導入須勞使協定・就業規則，深夜加給、年度有薪假、上限規制即使採變形制仍在。"
+          },
+          {
+            "question": "伴隨伐採的申報與山林買賣，也可委託社會保險勞務士嗎？",
+            "answer": "不可。森林法的森林土地所有者申報與素材生產相關各種申報的製作・提出屬行政書士，立木・山林買賣的登記屬司法書士，山林所得等稅務屬稅理士。社會保險勞務士負責勞動時間管理・36協定・安全衛生・勞災等勞務。與其他士業各自作為獨立事業體，由您直接簽約。"
+          }
+        ]
+      },
+      "zh": {
+        "title": "林业的劳务，劳动时间与安全卫生须遵守到何种程度？",
+        "excerpt": "与农业不同，林业不在劳动基准法第41条第1号的适用除外内。劳动时间・休息・休假规定原则上适用，使用链锯的伐木・处理挂枝・造材须特别教育（劳动安全卫生规则第36条第8号）。许认可属行政书士、登记属司法书士、税务属税理士，各为独立事业体另行签约。",
+        "content": "**结论（先讲重点）**：与农业不同，林业不在劳动基准法第41条第1号的适用除外内。劳动时间・休息・休假规定原则上适用，使用链锯的伐木・处理挂枝・造材须特别教育（劳动安全卫生规则第36条第8号）。许认可属行政书士、登记属司法书士、税务属税理士的领域。\n\n「农业不适用劳动时间规定，故林业也相同即可」的误解，会导致加班费未付与劳灾事故。本文面向从事素材生产・造林・伐采的林业事业者、森林组合，以及由个人法人化后开始雇人的经营者，以与农业的差异为轴，整理劳动时间・安全卫生・劳灾应遵守的范围。\n\n## 林业是否与农业相同，劳动时间规定适用除外？\n\n不是。农业・畜产・养蚕・水产依劳动基准法第41条第1号，劳动时间・休息・休假规定适用除外，但林业被排除于此适用除外之外。因此林业中，1日8小时・周40小时的法定劳动时间（第32条）、休息（第34条）、休假（第35条）原则上适用，欲超过须缔结并申报36协定（第36条），且加班・休假劳动须加给（第37条）。\n\n此差异与农业的文章（[农业劳动时间适用除外](/zh/labor/column/nogyo-roudoujikan-jogai-41jo-tokutei-ginou-roumu)）成对。在农业不生加班加给的同样工作方式，在林业便成为加给对象。\n\n## 林业为何不被纳入第41条的适用除外？\n\n第41条第1号将附表第一第六号与第七号所列事业的从事者列为适用除外。其中第六号载「土地的耕作或开垦，或植物的栽植、栽培、采取或伐采的事业及其他农林事业」，但该号以**括弧书「不含林业」**排除，故林业从业者不属适用除外。\n\n| 事业 | 第41条1号适用除外 | 劳动时间・休假规定 |\n|---|---|---|\n| 农业（耕作・栽培等） | 附表第一第六号（不含林业）该当＝**适用除外** | 不适用（无加班加给） |\n| 畜产・养蚕・水产 | 附表第一第七号该当＝**适用除外** | 不适用 |\n| **林业（伐采・造林・素材生产）** | 自第六号**明文排除**＝不适用除外 | **原则适用**（须36协定・加给） |\n\n林业虽与农业同样受天候・季节左右，但因含机械化伐木・集材等危险大的作业，劳动时间框架与一般事业同样维持。又，林业的加班未设如建设业或汽车驾驶的上限规制特例（[建设业的上限规制](/zh/labor/column/kensetsugyo-2024-jikangai-jougen-kyujitsu-roumu)整理的年960小时等），适用原则的上限规制（以月45小时・年360小时为原则的框架）。\n\n## 伐木・造材等作业须何种特别教育・资格？\n\n危险・有害业务须于作业前使其修了特别教育（劳动安全卫生法第59条第3项・劳动安全卫生规则第36条）。林业的核心为2020年（令和2年）8月1日施行的修正所统合的，使用链锯的伐木等特别教育。\n\n| 业务 | 依据 | 内容 |\n|---|---|---|\n| 使用链锯行立木伐木・挂枝处理・造材的业务 | 劳动安全卫生规则第36条第8号 | 2020年8月1日施行的修正，将依立木胸高直径区分的2种**统合为不问直径的1种特别教育**。不使用链锯的伐木等自对象中除外 |\n| 行走集材机械・简易架线集材装置・机械集材装置等的运转・作业 | 第36条相关各号 | 集材・运材所用机械的运转等须特别教育 |\n| 下肢切创防止用保护衣的著用 | 劳动安全卫生规则（2019年〈令和元年〉8月1日施行的修正） | 链锯伐木等作业中，事业者有使其**著用**保护衣的义务，劳工有著用义务 |\n\n此外，链锯作业中振动障害的预防为课题，厚生劳动省「链锯取扱作业指针」（2009年〈平成21年〉7月10日基发0710第1号）定有防振型机械的选定、点检・整备、每日作业时间的管理（依日振动暴露量的目安）等。振动业务相关健康诊断的具体实施项目・周期因个案而异，本文不作个别结论（**未验证**）。\n\n## 随季节或天候变动的作业时间，应如何管理？\n\n林业繁忙・闲散差大、天候中断多，1日8小时的一律运用难以契合。既然劳动时间规定原则适用，可用1年单位的变形劳动时间制（劳动基准法第32条之4）或1个月单位的变形劳动时间制（第32条之2），于框架内吸收变动：繁忙期所定长、闲散期短，于总框架内抑制加给运用。选法见[变形劳动时间制的选法](/zh/labor/column/henkei-roudoujikan-flextime-erabikata)。\n\n惟即使采变形制，法定总框架、上限规制、深夜加给（午后10时〜午前5时2成5分以上。第37条第4项）、年度有薪假（第39条）仍在。须劳使协定・就业规则的订定，并特定始业・终业时刻；就业规则于恒常10人以上有制作・申报义务（第89条）。因天候中断提早下班之日的工资处理（第26条休业津贴可能成问题之场面）亦宜事先规则化。\n\n## 林业易发生的劳灾，其补偿与报告如何？\n\n林业的死伤年千人率为全产业最高的行业。林野厅资料指，2022年（令和4年）林业的死伤年千人率为23.5，约为全产业2.3的10倍，死亡灾害多发生于伐木作业中。劳灾保险不问国籍・在留资格・雇用形态一律适用，业务上的负伤・疾病支给疗养（补偿）给付・休业（补偿）给付等。\n\n| 项目 | 依据・内容 |\n|---|---|\n| 劳灾保险适用 | 劳动者灾害补偿保险法。雇1名劳工即原则加入，给付不问国籍・在留资格 |\n| 死伤病报告 | 劳动安全卫生规则第97条。休业4日以上的劳灾须迟滞无迟向劳动基准监督署报告（未满4日按期汇总报告） |\n| 外国人劳工的安全卫生教育 | 以母语・平易日语教育为重要（[外国人的安全卫生教育](/zh/labor/column/gaikokujin-anzeneisei-kyoiku-bogoku-roudo-saigai-boshi)） |\n| 一人亲方・事业主的处理 | 非劳工的一人亲方・事业主非给付对象，林业的一人亲方等可成特别加入对象 |\n\n劳灾的请求手续与疗养・休业给付流程见[劳灾的手续](/zh/labor/column/rousai-tetsuzuki-shishobyo-houkoku)。又，副业・兼业于复数公司受雇时的给付合算，为[复数事业劳工的劳灾](/zh/labor/column/fukusu-jigyo-roudosha-rosai-kyufu-fukugyo)的论点。\n\n## 许认可・立木买卖・税务各应向谁咨询？\n\n劳动时间管理、36协定・就业规则的整备、安全卫生体制（特别教育的记录・保护具・健康管理）、劳灾的请求支援由社会保险劳务士负责。另一方面，森林的土地所有者申报（森林法）及伴随素材生产・伐采的各种申报的制作・提出属行政书士领域。立木・山林买卖相关的所有权移转等登记属司法书士，山林所得及事业税务申报属税理士。许认可违反的罚则与系争属律师领域。各为独立事业体另行签约，本所不收取介绍费。\n\n初次咨询免费。费用请见[报酬额表](/zh/labor/ryokin)，并参阅[服务内容](/zh/labor/services)与[咨询流程](/zh/labor/nagare)。\n\n## 常见问题\n\n**Q. 林业也与农业相同，不必付加班费吗？**\nA. 不是。农业・畜产・养蚕・水产依第41条第1号劳动时间・休息・休假规定适用除外，但附表第一第六号以括弧书排除林业。此等规定对林业原则适用，故超过1日8小时・周40小时须申报36协定，加班・休假劳动须加给（第37条）。\n\n**Q. 以链锯伐木的作业，须资格或教育吗？**\nA. 须要。以链锯行立木伐木・挂枝处理・造材的业务，须修了劳动安全卫生规则第36条第8号的特别教育。2020年（令和2年）8月1日施行的修正，将依立木直径区分的2种教育统合为1种。伐木等作业亦义务著用下肢切创防止用保护衣。\n\n**Q. 繁忙期与闲散期差大，每日8小时难以运作，怎么办？**\nA. 使用1年单位或1个月单位的变形劳动时间制（劳动基准法第32条之4・第32条之2），可于繁忙期将所定劳动时间拉长、闲散期缩短，于总框架内抑制加给。导入须劳使协定・就业规则，深夜加给、年度有薪假、上限规制即使采变形制仍在。\n\n**Q. 伴随伐采的申报与山林买卖，也可委托社会保险劳务士吗？**\nA. 不可。森林法的森林土地所有者申报与素材生产相关各种申报的制作・提出属行政书士，立木・山林买卖的登记属司法书士，山林所得等税务属税理士。社会保险劳务士负责劳动时间管理・36协定・安全卫生・劳灾等劳务。与其他士业各自作为独立事业体，由您直接签约。\n\n## 本文依据\n\n- 劳动基准法（昭和22年法律第49号）第41条第1号（从事附表第一第六号〈不含林业〉或第七号所列事业者，不适用劳动时间・休息・休假规定）・第32条（法定劳动时间）・第36条（加班・休假劳动协定）・第37条第1项・第4项（加给；深夜午后10时〜午前5时2成5分以上）・第32条之2・第32条之4（变形劳动时间制）・第89条（就业规则）\n- 劳动基准法附表第一 第六号（土地的耕作或开垦，或植物的栽植、栽培、采取或伐采的事业及其他农林事业。惟不含林业）・第七号（动物的饲育，或水产动植物的采捕或养殖的事业及其他畜产、养蚕或水产事业）\n- 劳动安全卫生法（昭和47年法律第57号）第59条第3项（危险・有害业务的特别教育）、劳动安全卫生规则（昭和47年劳动省令第32号）第36条第8号（使用链锯行立木伐木、挂枝处理或造材业务的特别教育）。将依胸高直径区分的2种统合的修正，2020年（令和2年）8月1日施行（基发0214第9号）\n- 劳动安全卫生规则一部修正（2019年〈平成31年〉2月12日公布，2019年〈令和元年〉8月1日施行，特别教育统合部分2020年〈令和2年〉8月1日施行）── 链锯伐木等作业的下肢切创防止用保护衣著用义务，将应作受口的立木对象扩大至胸高直径20cm以上等（2026年11月7日参照）\n- 厚生劳动省「关于链锯取扱作业指针」2009年（平成21年）7月10日基发0710第1号（防振型机械的选定・点检整备・依日振动暴露量的作业时间管理等）（2026年11月7日参照）\n- 劳动者灾害补偿保险法（昭和22年法律第50号）── 劳灾保险的适用・给付。劳动安全卫生规则第97条（劳工死伤病报告）\n- 林野厅「林业劳动灾害的发生状况」等（2022年〈令和4年〉林业死伤年千人率23.5＝全产业2.3的约10倍，死亡灾害多于伐木作业中）（2026年11月7日参照）\n- 振动业务相关健康诊断的具体实施项目・周期、林业一人亲方等特别加入的个别适用、变形劳动时间制的具体设计，将因个案而异。本文不作个别结论（**未验证**）\n\n本文为一般性资讯提供。依个别情事的判断，由有资格者于面谈后进行。四葉社会保険労務士事務所可就林业的劳动时间管理・36协定・变形劳动时间制，特别教育与保护具・健康管理等安全卫生体制，劳灾的请求支援提供咨询。森林法的申报与素材生产的各种申报属行政书士，立木・山林买卖的登记属司法书士，山林所得等税务属税理士，罚则与系争属律师。各为独立事业体另行签约，本所不收取介绍费。常见问题整理于[常见问题](/zh/labor/faq)。撰文为[浦松丈二](/zh/about/uramatsu)（社会保险劳务士・行政书士・宅地建物取引士）。",
+        "category": "劳务实务",
+        "keywords": [
+          "林业 劳动时间 第41条",
+          "林业 不适用除外 劳动基准法",
+          "链锯 特别教育 第36条",
+          "林业 劳灾 死伤率",
+          "林业 变形劳动时间",
+          "林业 加班加给"
+        ],
+        "tags": [
+          "林业",
+          "劳动时间",
+          "第41条",
+          "特别教育",
+          "链锯",
+          "劳灾"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "林业也与农业相同，不必付加班费吗？",
+            "answer": "不是。农业・畜产・养蚕・水产依第41条第1号劳动时间・休息・休假规定适用除外，但附表第一第六号以括弧书排除林业。此等规定对林业原则适用，故超过1日8小时・周40小时须申报36协定，加班・休假劳动须加给（第37条）。"
+          },
+          {
+            "question": "以链锯伐木的作业，须资格或教育吗？",
+            "answer": "须要。以链锯行立木伐木・挂枝处理・造材的业务，须修了劳动安全卫生规则第36条第8号的特别教育。2020年（令和2年）8月1日施行的修正，将依立木直径区分的2种教育统合为1种。伐木等作业亦义务著用下肢切创防止用保护衣。"
+          },
+          {
+            "question": "繁忙期与闲散期差大，每日8小时难以运作，怎么办？",
+            "answer": "使用1年单位或1个月单位的变形劳动时间制（劳动基准法第32条之4・第32条之2），可于繁忙期将所定劳动时间拉长、闲散期缩短，于总框架内抑制加给。导入须劳使协定・就业规则，深夜加给、年度有薪假、上限规制即使采变形制仍在。"
+          },
+          {
+            "question": "伴随伐采的申报与山林买卖，也可委托社会保险劳务士吗？",
+            "answer": "不可。森林法的森林土地所有者申报与素材生产相关各种申报的制作・提出属行政书士，立木・山林买卖的登记属司法书士，山林所得等税务属税理士。社会保险劳务士负责劳动时间管理・36协定・安全卫生・劳灾等劳务。与其他士业各自作为独立事业体，由您直接签约。"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "business": "labor",
+    "slug": "koyohoken-multi-job-holder-65sai-fukusu-jigyosho",
+    "title": "65歳以上を複数の事業所で雇うとき、雇用保険マルチジョブホルダー制度はどう使う？",
+    "date": "2026-11-07",
+    "category": "労働保険",
+    "excerpt": "雇用保険マルチジョブホルダー制度は、65歳以上で2つの事業所に雇われ、各事業所の週所定労働時間が5時間以上20時間未満・合計週20時間以上、各事業所で31日以上の雇用見込みがある人が、本人の申出で特例的に被保険者（マルチ高年齢被保険者）になれる制度です（2022年〈令和4年〉1月1日施行）。通常は事業主が手続しますが、この制度は本人が住居所管轄のハローワークへ申し出て、申出日から資格が成立し遡及適用はありません。一度加入すると任意脱退はできず、片方の事業所を離職すると残る1か所では要件を満たさず資格を喪失し、要件を満たせば高年齢求職者給付金（被保険者期間1年未満で基本手当日額30日分、1年以上で50日分の一時金）を受けられます。事業主は雇用の事実・所定労働時間・賃金・雇用見込みの確認資料に協力し、加入後は賃金から雇用保険料を控除します。複数事業の労災（給付基礎日額の合算）や在職老齢年金とは別制度です。給付の受給申請・相談はハローワーク、年金の請求・相談は年金事務所、加入手続・労務体制は社会保険労務士が、それぞれ独立した窓口・事業体として担います。",
+    "content": "**結論（先に要点）**：雇用保険マルチジョブホルダー制度は、65歳以上で2つの事業所に雇われ、各所が週5時間以上20時間未満・合計週20時間以上などの要件を満たす人が、本人の申出で特例的に被保険者になれる制度です（2022年〈令和4年〉1月1日施行）。給付の受給申請はハローワーク、年金との関係は年金事務所、手続と体制整備は社会保険労務士が担います。\n\n「1か所だけでは週20時間に届かず、雇用保険に入れられない」——シニア人材を短時間で掛け持ちで雇う事業者や、2か所で働く65歳以上の本人から、こうした相談が増えています。2022年1月に始まった雇用保険マルチジョブホルダー制度は、2つの事業所の労働時間を合算して加入できる特例です。対象の条件、申出の順序、片方を辞めたときの扱い、事業主の協力、労災・年金との切り分けを整理します。\n\n## 雇用保険マルチジョブホルダー制度とは何で、いつ始まったのか？\n\n雇用保険は本来、主たる事業所での週所定労働時間が20時間以上であることなどを加入の要件としており、1か所ごとに判定します。そのため、複数の短時間勤務を掛け持ちしても、どの事業所でも20時間に届かなければ被保険者になれませんでした。\n\nマルチジョブホルダー制度は、65歳以上の労働者について、**2つの事業所の労働時間を合算**して要件を満たす場合に、本人がハローワークに申し出ることで特例的に被保険者（**マルチ高年齢被保険者**）になれるようにした仕組みです。「雇用保険法等の一部を改正する法律」により、2022年（令和4年）1月1日から施行されました。\n\n## 対象になる年齢・労働時間・事業所数の条件はどうなっているのか？\n\n次の3つをすべて満たす必要があります。いずれも**2つの事業所**を前提とした判定です。\n\n| 要件 | 内容 |\n|---|---|\n| 年齢・事業所数 | 複数の事業所に雇用される**65歳以上**の労働者であること |\n| 労働時間 | 2つの事業所それぞれの週所定労働時間が**5時間以上20時間未満**で、その**合計が週20時間以上**であること |\n| 雇用見込み | 2つの事業所それぞれで**31日以上**の雇用見込みがあること |\n\n3つ以上の事業所で働いている場合は、要件を満たす2つの事業所を選んで申し出ます。1つの事業所だけで週20時間以上ある人は、そもそも通常の雇用保険（高年齢被保険者）の対象なので、この特例の対象ではありません。\n\n## 加入の申出は誰が、どこへ、どの順で行うのか？\n\n通常の雇用保険は事業主が加入手続を行いますが、この制度は**労働者本人が申し出る**点が大きく違います。\n\n1. 本人が、2つの事業所それぞれから「雇用の事実・所定労働時間・賃金・雇用見込み」などを確認できる書類（確認資料）の用意について協力を得る\n2. 本人が、**自身の住居所を管轄するハローワーク**に申出書と確認資料を提出する\n3. ハローワークが要件を確認し、**申し出た日**から被保険者資格が成立する（**過去にさかのぼっての適用はない**）\n\n一度マルチ高年齢被保険者になると、雇用が継続して要件を満たす間は、**本人の都合で任意に脱退することはできません**。加入は申出日以後の扱いで、遡及して過去分の保険料を納めるものではない点も、通常の加入と異なります。\n\n## 片方の仕事を辞めたら、給付や資格はどうなるのか？\n\n2つのうち1つの事業所を離職すると、残る1つだけでは週20時間以上の要件を満たさなくなるため、マルチ高年齢被保険者の資格を喪失します。このとき、離職前の一定期間に被保険者であったことなどの要件を満たせば、**高年齢求職者給付金**（一時金）を受けられます。\n\n| 区分 | 給付の内容 |\n|---|---|\n| 被保険者であった期間が1年未満 | 高年齢求職者給付金＝基本手当日額の**30日分**相当の一時金 |\n| 被保険者であった期間が1年以上 | 高年齢求職者給付金＝基本手当日額の**50日分**相当の一時金 |\n\n高年齢求職者給付金は、65歳以上の人が失業したときの一時金で、年金と併給できる点が65歳未満の基本手当と異なります。**受給の可否・金額を決めるのはハローワーク**であり、当事務所や会社が認定するものではありません。給付の受給申請や相談はハローワークの窓口で行います。\n\n## 事業主側は、どんな書類の協力や手続が必要になるのか？\n\n申出は本人が行いますが、事業主の協力なしには進みません。主に、雇用の事実・所定労働時間・賃金・雇用見込みを確認するための記載や証明が求められます。\n\n| 事業主の対応 | 中身 |\n|---|---|\n| 確認資料への協力 | 賃金台帳・出勤簿・労働条件通知書など、所定労働時間や雇用見込みを確認できる書類の提示・記載に協力する |\n| 加入後の雇用保険料 | 資格取得後は、**その事業所で支払う賃金から雇用保険料を控除**し、事業主も負担する（通常の被保険者と同様） |\n| 労働条件の明示・管理 | 短時間勤務でも労働条件の明示（労働基準法第15条）や労働時間・賃金の記録は必要。シニアの処遇は[70歳までの就業確保](/labor/column/teinen-saikoyo-70sai-shugyo-kakuho)もあわせて整理 |\n\n申出や資格喪失の時期で保険料の負担が変わるため、どの書類をいつ用意するか、社内の手続フローを整えておくと滞りません。\n\n## 複数事業の労災や年金とは、どう切り分けて考えればよいのか？\n\n掛け持ち勤務では、雇用保険・労災保険・年金が別の制度として並行して動きます。混同しないよう切り分けます。\n\n- **雇用保険**：マルチジョブホルダー制度で2事業所を合算して加入（本制度）。手続・体制整備は社会保険労務士\n- **労災保険**：複数事業労働者は、給付基礎日額が全勤務先の賃金を合算して算定される等の扱いがある（[複数事業労働者の労災](/labor/column/fukusu-jigyo-roudosha-rosai-kyufu-fukugyo)）。雇用保険の合算とは別制度\n- **年金**：在職中の老齢厚生年金の支給調整（在職老齢年金）は年金事務所の所管（[在職老齢年金と働き方](/labor/column/nenkin-jukyuchu-koyo-zaishoku-rorei)）。年金の請求・相談は年金事務所\n\n社会保険労務士は、雇用保険の加入・喪失手続や複数事業に対応した労務体制の整備をお引き受けします。一方、給付金そのものの受給申請・相談はハローワーク、年金の請求・相談は年金事務所の窓口です。これらはそれぞれ独立した窓口・事業体であり、当事務所は代行できる範囲を超えて給付や年金の決定を保証するものではありません。\n\nご相談は無料です。費用は[報酬額表](/labor/ryokin)に、[サービス内容](/labor/services)と[ご相談の流れ](/labor/nagare)もあわせてご覧ください。\n\n## この記事の根拠\n\n- 雇用保険法（昭和49年法律第116号）附則（高年齢被保険者の特例＝マルチジョブホルダー制度に関する規定）。制度は「雇用保険法等の一部を改正する法律」により2022年（令和4年）1月1日から施行\n- 厚生労働省・ハローワーク「雇用保険マルチジョブホルダー制度について」── 対象＝複数の事業所に雇用される65歳以上で、2つの事業所それぞれの週所定労働時間が5時間以上20時間未満かつ合計が週20時間以上、各事業所で31日以上の雇用見込みがあること。申出は本人が住居所を管轄するハローワークへ行い、申し出た日から被保険者（マルチ高年齢被保険者）となる（2026年11月7日参照）\n- 高年齢求職者給付金（雇用保険法の高年齢被保険者が失業した場合の一時金。被保険者であった期間が1年未満は基本手当日額の30日分、1年以上は50日分に相当）\n- 労働者災害補償保険法（昭和22年法律第50号）── 複数事業労働者の給付基礎日額の合算等（雇用保険の合算とは別制度）\n- 在職老齢年金による老齢厚生年金の支給調整は年金事務所の所管。給付金の受給申請・相談はハローワーク、年金の請求・相談は年金事務所\n- マルチ高年齢被保険者の資格喪失時の個別の給付の可否・金額、3つ以上の事業所で働く場合の具体的な当てはめ、個々の雇用見込みの判断は、事案ごとにハローワークが判定します。本記事では個別の結論を出していません（**未検証**）\n\n本記事は一般的な情報提供です。個別のご事情に応じた判断は、面談のうえ有資格者が行います。四葉社会保険労務士事務所では、雇用保険マルチジョブホルダー制度の加入・喪失手続、複数の短時間勤務に対応した労働時間・賃金の記録体制、シニア雇用の労務整備についてご相談いただけます。給付金の受給申請・相談はハローワーク、年金の請求・相談は年金事務所が窓口です。それぞれ独立した窓口・事業体として別々にご契約・ご相談いただき、当事務所は紹介料を受け取りません。よくいただくご質問は[よくあるご質問](/labor/faq)にまとめています。執筆は[浦松丈二](/about/uramatsu)（社会保険労務士・行政書士・宅地建物取引士）です。\n\n## よくある質問\n\n**Q. 1か所では週20時間に届きませんが、2か所合わせれば雇用保険に入れますか？**\nA. 65歳以上で、2つの事業所それぞれの週所定労働時間が5時間以上20時間未満、その合計が週20時間以上、各事業所で31日以上の雇用見込みがある場合は、本人の申出でマルチ高年齢被保険者として加入できます（2022年〈令和4年〉1月1日施行）。64歳以下はこの特例の対象外です。\n\n**Q. 加入の申出は会社がしてくれるのですか？**\nA. いいえ。通常の雇用保険と違い、この制度は労働者本人が、自身の住居所を管轄するハローワークに申し出ます。ただし事業主は、雇用の事実・所定労働時間・賃金・雇用見込みを確認できる書類の提示や記載に協力する必要があります。資格は申し出た日から成立し、過去にさかのぼっての加入はできません。\n\n**Q. 2か所のうち1か所を辞めたら、どうなりますか？**\nA. 残る1か所だけでは週20時間以上の要件を満たさなくなるため、マルチ高年齢被保険者の資格を喪失します。離職前の一定期間に被保険者であったなどの要件を満たせば、高年齢求職者給付金（被保険者期間1年未満で基本手当日額の30日分、1年以上で50日分相当の一時金）を受けられます。受給の可否と金額はハローワークが判定します。\n\n**Q. 高年齢求職者給付金の申請や、年金の手続も社会保険労務士に頼めますか？**\nA. 給付金の受給申請・相談はハローワーク、在職老齢年金など年金の請求・相談は年金事務所が窓口です。社会保険労務士がお引き受けするのは、雇用保険の加入・喪失手続や、複数の短時間勤務に対応した労務体制の整備です。ハローワーク・年金事務所はそれぞれ独立した窓口で、当事務所が給付や年金の決定を保証するものではありません。",
+    "status": "published",
+    "author": {
+      "name": "浦松 丈二",
+      "title": "社会保険労務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+    },
+    "keywords": [
+      "雇用保険 マルチジョブホルダー 65歳以上",
+      "マルチ高年齢被保険者 2事業所 合算 20時間",
+      "マルチジョブホルダー 申出 ハローワーク 本人",
+      "高年齢求職者給付金 30日分 50日分",
+      "複数事業所 雇用保険 加入 要件",
+      "2022年1月 雇用保険 65歳 特例"
+    ],
+    "tags": [
+      "労働保険",
+      "雇用保険",
+      "マルチジョブホルダー",
+      "高年齢被保険者",
+      "複数事業所",
+      "高齢雇用"
+    ],
+    "locales": [],
+    "faq": [
+      {
+        "question": "1か所では週20時間に届きませんが、2か所合わせれば雇用保険に入れますか？",
+        "answer": "65歳以上で、2つの事業所それぞれの週所定労働時間が5時間以上20時間未満、その合計が週20時間以上、各事業所で31日以上の雇用見込みがある場合は、本人の申出でマルチ高年齢被保険者として加入できます（2022年〈令和4年〉1月1日施行）。64歳以下はこの特例の対象外です。"
+      },
+      {
+        "question": "加入の申出は会社がしてくれるのですか？",
+        "answer": "いいえ。通常の雇用保険と違い、この制度は労働者本人が、自身の住居所を管轄するハローワークに申し出ます。ただし事業主は、雇用の事実・所定労働時間・賃金・雇用見込みを確認できる書類の提示や記載に協力する必要があります。資格は申し出た日から成立し、過去にさかのぼっての加入はできません。"
+      },
+      {
+        "question": "2か所のうち1か所を辞めたら、どうなりますか？",
+        "answer": "残る1か所だけでは週20時間以上の要件を満たさなくなるため、マルチ高年齢被保険者の資格を喪失します。離職前の一定期間に被保険者であったなどの要件を満たせば、高年齢求職者給付金（被保険者期間1年未満で基本手当日額の30日分、1年以上で50日分相当の一時金）を受けられます。受給の可否と金額はハローワークが判定します。"
+      },
+      {
+        "question": "高年齢求職者給付金の申請や、年金の手続も社会保険労務士に頼めますか？",
+        "answer": "給付金の受給申請・相談はハローワーク、在職老齢年金など年金の請求・相談は年金事務所が窓口です。社会保険労務士がお引き受けするのは、雇用保険の加入・喪失手続や、複数の短時間勤務に対応した労務体制の整備です。ハローワーク・年金事務所はそれぞれ独立した窓口で、当事務所が給付や年金の決定を保証するものではありません。"
+      }
+    ],
+    "translations": {
+      "en": {
+        "title": "Employing someone 65+ across two workplaces: how to use the employment-insurance multi-job-holder scheme",
+        "excerpt": "The employment-insurance multi-job-holder scheme lets a person aged 65+ employed at two workplaces — each 5 to under 20 hours a week, 20+ hours combined, and other requirements — become an insured person on their own application (effective 1 January 2022). Benefit claims go to Hello Work, pension matters to the Pension Office, and procedures and system-building are a Shakai Hoken Roumushi's area.",
+        "content": "**Bottom line first**: The employment-insurance multi-job-holder scheme lets a person aged 65+ employed at two workplaces — each 5 to under 20 hours a week, 20+ hours combined, and so on — become an insured person on their own application (effective 1 January 2022). Benefit claims go to Hello Work, pension matters to the Pension Office, and procedures and system-building are a Shakai Hoken Roumushi's area.\n\n\"At one job it's under 20 hours a week, so I can't enrol them in employment insurance\" — we hear this increasingly from employers hiring seniors part-time across several jobs, and from people 65+ working two jobs. The multi-job-holder scheme, which started in January 2022, is a special measure that aggregates the hours of two workplaces to allow enrolment. This article covers the eligibility, the order of the application, what happens if one job ends, the employer's cooperation, and how it differs from workers' compensation and pension for multiple employment.\n\n## What is the employment-insurance multi-job-holder scheme, and when did it start?\n\nEmployment insurance normally requires 20+ scheduled hours a week at the main workplace and judges each workplace separately. So however many short-time jobs a person held, if none reached 20 hours they could not be insured.\n\nThe multi-job-holder scheme lets a worker aged 65+ become an insured person (a **multi high-age insured person**) on application to Hello Work where the hours of **two workplaces combined** meet the requirement. It took effect on 1 January 2022 under the Act Partially Amending the Employment Insurance Act and others.\n\n## What are the age, hours and workplace-number requirements?\n\nAll three below must be met, and the judgment is premised on **two workplaces**.\n\n| Requirement | Content |\n|---|---|\n| Age / number of workplaces | A worker **aged 65 or over** employed at more than one workplace |\n| Hours | The scheduled hours at each of the two workplaces are **5 to under 20 a week**, and the **combined total is 20+ a week** |\n| Expected employment | At each of the two workplaces there is an expectation of employment of **31 days or more** |\n\nIf working at three or more workplaces, the worker picks two that meet the requirements and applies. Someone with 20+ hours at a single workplace is already covered by ordinary employment insurance (a high-age insured person) and is not the target of this special measure.\n\n## Who applies, where, and in what order?\n\nOrdinary employment insurance is handled by the employer, but a big difference here is that **the worker applies themselves**.\n\n1. The worker obtains each workplace's cooperation to prepare confirming documents (the fact of employment, scheduled hours, wages, expected employment, etc.)\n2. The worker submits the application and confirming documents to the **Hello Work with jurisdiction over their place of residence**\n3. Hello Work checks the requirements, and the insured status takes effect from the **day of application** (there is **no retroactive application to the past**)\n\nOnce a multi high-age insured person, the worker **cannot voluntarily withdraw at their own convenience** while employment continues and the requirements are met. That enrolment runs from the application day and does not involve paying back premiums for past periods differs from ordinary enrolment.\n\n## If one of the jobs ends, what happens to benefits and status?\n\nIf one of the two workplaces is left, the remaining one alone no longer meets the 20+ hours requirement, so the multi high-age insured status is lost. At that point, if requirements such as having been an insured person for a set period before leaving are met, a **high-age job-seeker benefit** (a lump sum) can be received.\n\n| Category | Benefit |\n|---|---|\n| Insured period under 1 year | High-age job-seeker benefit = lump sum equivalent to **30 days** of the basic daily allowance |\n| Insured period 1 year or more | High-age job-seeker benefit = lump sum equivalent to **50 days** of the basic daily allowance |\n\nThe high-age job-seeker benefit is a lump sum for people 65+ who become unemployed, and unlike the basic allowance for those under 65, it can be received alongside a pension. **Hello Work decides eligibility and amount**, not this office or the company. Claims and consultation are handled at a Hello Work window.\n\n## What documents and cooperation does the employer need to provide?\n\nThe worker applies, but it cannot proceed without the employer's cooperation. Mainly, entries and certification to confirm the fact of employment, scheduled hours, wages and expected employment are required.\n\n| Employer action | Content |\n|---|---|\n| Cooperation on confirming documents | Cooperate in presenting / filling in the wage ledger, attendance records, working-condition notice, etc., which confirm scheduled hours and expected employment |\n| Employment-insurance premiums after enrolment | After the status takes effect, **deduct the premium from the wages paid at that workplace**, with the employer also bearing its share (as for an ordinary insured person) |\n| Clarification and management of conditions | Even for short-time work, clarification of working conditions (Labour Standards Act Article 15) and records of hours and wages are needed. For senior treatment, see also [securing employment up to 70](/en/labor/column/teinen-saikoyo-70sai-shugyo-kakuho) |\n\nBecause the premium burden shifts with the timing of application and loss of status, deciding which documents to prepare and when, with an internal procedure flow, keeps things running smoothly.\n\n## How do you separate this from workers' compensation and pension for multiple employment?\n\nIn multiple employment, employment insurance, workers' compensation and pension run in parallel as separate systems. Keep them distinct.\n\n- **Employment insurance**: enrolment aggregating the two workplaces under the multi-job-holder scheme (this article). Procedures and system-building are a Shakai Hoken Roumushi's\n- **Workers' compensation**: a multiple-employment worker has treatment such as the benefit base being computed by aggregating wages across all workplaces ([workers' compensation for multiple-employment workers](/en/labor/column/fukusu-jigyo-roudosha-rosai-kyufu-fukugyo)). This is a system separate from the employment-insurance aggregation\n- **Pension**: the adjustment of the old-age employees' pension while working (the in-work old-age pension) is within the Pension Office's remit ([the in-work old-age pension and working](/en/labor/column/nenkin-jukyuchu-koyo-zaishoku-rorei)). Pension claims and consultation go to the Pension Office\n\nA Shakai Hoken Roumushi handles employment-insurance enrolment and loss procedures and the building of a labour framework for multiple employment. Benefit claims and consultation are a Hello Work window, and pension claims and consultation a Pension Office window. These are separate, independent windows and entities, and this office does not guarantee any decision on benefits or pension beyond the scope it can handle.\n\nYour first consultation is free. Please see the [fee schedule](/en/labor/ryokin), the [services](/en/labor/services) and [how we work](/en/labor/nagare).\n\n## Frequently asked questions\n\n**Q. One job is under 20 hours a week, but combined with another it reaches 20 — can they join employment insurance?**\nA. If aged 65+, with each of two workplaces at 5 to under 20 hours a week, a combined total of 20+ a week, and 31+ days of expected employment at each, they can enrol as a multi high-age insured person on their own application (effective 1 January 2022). Those 64 and under are not the target of this special measure.\n\n**Q. Does the company make the application?**\nA. No. Unlike ordinary employment insurance, under this scheme the worker applies themselves, to the Hello Work with jurisdiction over their place of residence. But the employer must cooperate in presenting and filling in documents that confirm the fact of employment, scheduled hours, wages and expected employment. The status takes effect from the day of application, with no retroactive enrolment to the past.\n\n**Q. What happens if one of the two jobs ends?**\nA. The remaining one alone no longer meets the 20+ hours requirement, so the multi high-age insured status is lost. If requirements such as having been an insured person for a set period before leaving are met, a high-age job-seeker benefit can be received (a lump sum of 30 days of the basic daily allowance for an insured period under 1 year, 50 days for 1 year or more). Hello Work decides eligibility and amount.\n\n**Q. Can a Shakai Hoken Roumushi also do the high-age job-seeker benefit claim and the pension procedures?**\nA. Benefit claims and consultation are a Hello Work window, and pension claims and consultation such as the in-work old-age pension are a Pension Office window. A Shakai Hoken Roumushi handles employment-insurance enrolment and loss procedures and the building of a labour framework for multiple short-time jobs. Hello Work and the Pension Office are each separate, independent windows, and this office does not guarantee any decision on benefits or pension.\n\n## This article's basis\n\n- Employment Insurance Act (Act No. 116 of 1974) Supplementary Provisions (provisions on the special measure for high-age insured persons = the multi-job-holder scheme). The scheme took effect on 1 January 2022 under the Act Partially Amending the Employment Insurance Act and others\n- Ministry of Health, Labour and Welfare / Hello Work \"On the employment-insurance multi-job-holder scheme\" — target = a worker aged 65+ employed at more than one workplace where the scheduled hours at each of two workplaces are 5 to under 20 a week and the combined total is 20+ a week, with 31+ days of expected employment at each. The worker applies to the Hello Work with jurisdiction over their place of residence, and becomes an insured person (multi high-age insured person) from the day of application (accessed 7 November 2026)\n- High-age job-seeker benefit (a lump sum when a high-age insured person under the Employment Insurance Act becomes unemployed; equivalent to 30 days of the basic daily allowance for an insured period under 1 year, 50 days for 1 year or more)\n- Workers' Accident Compensation Insurance Act (Act No. 50 of 1947) — aggregation of the benefit base across workplaces for a multiple-employment worker (a system separate from the employment-insurance aggregation)\n- The adjustment of the old-age employees' pension via the in-work old-age pension is within the Pension Office's remit. Benefit claims and consultation go to Hello Work; pension claims and consultation to the Pension Office\n- The individual eligibility and amount of benefits on loss of multi high-age insured status, the concrete application where working at three or more workplaces, and the judgment of each expected-employment period are determined case by case by Hello Work. This article gives no individual conclusion (**unverified**).\n\nThis article is general information. An individual judgment on your circumstances is made by a qualified professional after a meeting. At the Yotsuba Shakai Hoken Roumushi Office we can advise on enrolment and loss procedures for the employment-insurance multi-job-holder scheme, records of hours and wages for multiple short-time jobs, and the labour framework for senior employment. Benefit claims and consultation are a Hello Work window and pension claims and consultation a Pension Office window — each a separate, independent window and entity engaged or consulted separately, with no referral fee. Common questions are gathered in the [FAQ](/en/labor/faq). Written by [Joji Uramatsu](/en/about/uramatsu) (Shakai Hoken Roumushi, Gyoseishoshi, Licensed Real Estate Transaction Agent).",
+        "category": "Social insurance",
+        "keywords": [
+          "employment insurance multi-job-holder",
+          "65 and over two workplaces insurance",
+          "multi high-age insured person",
+          "combine weekly hours 20 hours",
+          "high-age job-seeker benefit",
+          "Hello Work application"
+        ],
+        "tags": [
+          "Employment insurance",
+          "Multi-job-holder",
+          "65 and over",
+          "Multiple workplaces",
+          "Social insurance",
+          "Senior employment"
+        ],
+        "author": {
+          "name": "Joji Uramatsu",
+          "title": "Shakai Hoken Roumushi (Certified Social Insurance and Labor Consultant), Gyoseishoshi (Certified Administrative Procedures Legal Specialist), Registered Real Estate Transaction Specialist — 四葉社会保険労務士事務所／四葉行政書士事務所"
+        },
+        "faq": [
+          {
+            "question": "One job is under 20 hours a week, but combined with another it reaches 20 — can they join employment insurance?",
+            "answer": "If aged 65+, with each of two workplaces at 5 to under 20 hours a week, a combined total of 20+ a week, and 31+ days of expected employment at each, they can enrol as a multi high-age insured person on their own application (effective 1 January 2022). Those 64 and under are not the target of this special measure."
+          },
+          {
+            "question": "Does the company make the application?",
+            "answer": "No. Unlike ordinary employment insurance, under this scheme the worker applies themselves, to the Hello Work with jurisdiction over their place of residence. But the employer must cooperate in presenting and filling in documents that confirm the fact of employment, scheduled hours, wages and expected employment. The status takes effect from the day of application, with no retroactive enrolment to the past."
+          },
+          {
+            "question": "What happens if one of the two jobs ends?",
+            "answer": "The remaining one alone no longer meets the 20+ hours requirement, so the multi high-age insured status is lost. If requirements such as having been an insured person for a set period before leaving are met, a high-age job-seeker benefit can be received (a lump sum of 30 days of the basic daily allowance for an insured period under 1 year, 50 days for 1 year or more). Hello Work decides eligibility and amount."
+          },
+          {
+            "question": "Can a Shakai Hoken Roumushi also do the high-age job-seeker benefit claim and the pension procedures?",
+            "answer": "Benefit claims and consultation are a Hello Work window, and pension claims and consultation such as the in-work old-age pension are a Pension Office window. A Shakai Hoken Roumushi handles employment-insurance enrolment and loss procedures and the building of a labour framework for multiple short-time jobs. Hello Work and the Pension Office are each separate, independent windows, and this office does not guarantee any decision on benefits or pension."
+          }
+        ]
+      },
+      "zh-tw": {
+        "title": "於多個事業所雇用65歲以上者時，雇用保險多重職務者制度如何運用？",
+        "excerpt": "雇用保險多重職務者制度，是65歲以上於2個事業所受雇、各所每週5小時以上20小時未滿且合計每週20小時以上等要件者，可由本人申出而特例成為被保險者的制度（2022年〈令和4年〉1月1日施行）。給付的受給申請屬公共職業安定所（Hello Work），與年金的關係屬年金事務所，手續與體制整備屬社會保險勞務士。",
+        "content": "**結論（先講重點）**：雇用保險多重職務者制度，是65歲以上於2個事業所受雇、各所每週5小時以上20小時未滿且合計每週20小時以上等要件者，可由本人申出而特例成為被保險者的制度（2022年〈令和4年〉1月1日施行）。給付的受給申請屬公共職業安定所（Hello Work），與年金的關係屬年金事務所，手續與體制整備屬社會保險勞務士。\n\n「僅1處不足每週20小時，無法加入雇用保險」——以短時間跨多處雇用高齡人才的事業者、於2處工作的65歲以上本人，愈來愈多此類諮詢。2022年1月開始的多重職務者制度，是合算2個事業所勞動時間以加入的特例。本文整理對象要件、申出順序、辭去一方時的處理、事業主的協力，以及與勞災・年金的切分。\n\n## 雇用保險多重職務者制度為何，何時開始？\n\n雇用保險原以主要事業所每週所定勞動時間20小時以上等為加入要件，並逐處判定。故即使兼多份短時間工作，若各處皆不足20小時便無法成為被保險者。\n\n多重職務者制度，使65歲以上勞工於**2個事業所的勞動時間合算**符合要件時，由本人向Hello Work申出而特例成為被保險者（**多重高齡被保險者**）。依「雇用保險法等一部修正的法律」，自2022年（令和4年）1月1日施行。\n\n## 對象的年齡・勞動時間・事業所數條件如何？\n\n須同時符合下列3項，且均以**2個事業所**為前提判定。\n\n| 要件 | 內容 |\n|---|---|\n| 年齡・事業所數 | 於複數事業所受雇的**65歲以上**勞工 |\n| 勞動時間 | 2個事業所各自每週所定勞動時間為**5小時以上20小時未滿**，其**合計為每週20小時以上** |\n| 雇用見込 | 2個事業所各自有**31日以上**的雇用見込 |\n\n於3個以上事業所工作時，選符合要件的2個事業所申出。僅1個事業所即有每週20小時以上者，本即通常雇用保險（高齡被保險者）的對象，非本特例對象。\n\n## 加入的申出由誰、向何處、依何順序進行？\n\n通常雇用保險由事業主辦理手續，但本制度**由勞工本人申出**為一大不同。\n\n1. 本人取得2個事業所對準備確認資料（雇用事實・所定勞動時間・工資・雇用見込等）的協力\n2. 本人向**管轄自身住居所的Hello Work**提出申出書與確認資料\n3. Hello Work確認要件，自**申出之日**起成立被保險者資格（**不溯及過去適用**）\n\n一旦成為多重高齡被保險者，於雇用持續且符合要件期間，**不能依本人方便任意脫退**。加入為申出日以後的處理，亦非溯及繳納過去的保險料，與通常加入不同。\n\n## 若辭去一方的工作，給付與資格如何？\n\n辭去2個事業所中的1個，僅餘1處便不符合每週20小時以上的要件，故喪失多重高齡被保險者資格。此時，若符合辭職前一定期間曾為被保險者等要件，可受**高齡求職者給付金**（一時金）。\n\n| 區分 | 給付內容 |\n|---|---|\n| 被保險者期間未滿1年 | 高齡求職者給付金＝相當於基本手當日額**30日分**的一時金 |\n| 被保險者期間1年以上 | 高齡求職者給付金＝相當於基本手當日額**50日分**的一時金 |\n\n高齡求職者給付金為65歲以上者失業時的一時金，與65歲未滿的基本手當不同，可與年金併給。**受給與否・金額由Hello Work判定**，非本所或公司認定。給付的受給申請與諮詢於Hello Work窗口辦理。\n\n## 事業主須提供何種書類協力與手續？\n\n申出由本人進行，但無事業主協力無法推進。主要須就雇用事實・所定勞動時間・工資・雇用見込進行記載或證明。\n\n| 事業主的對應 | 中身 |\n|---|---|\n| 確認資料的協力 | 協力提示・記載工資台帳・出勤簿・勞動條件通知書等，可確認所定勞動時間與雇用見込的書類 |\n| 加入後的雇用保險料 | 資格取得後，自該事業所支付的工資**扣除雇用保險料**，事業主亦負擔（與通常被保險者相同） |\n| 勞動條件的明示・管理 | 即使短時間勤務，勞動條件的明示（勞動基準法第15條）與勞動時間・工資的記錄仍必要。高齡者的處遇亦見[70歲前的就業確保](/zh-tw/labor/column/teinen-saikoyo-70sai-shugyo-kakuho) |\n\n因申出或資格喪失的時期使保險料負擔改變，宜整備何書類於何時準備的社內手續流程，以免遲滯。\n\n## 與複數事業的勞災或年金，應如何切分思考？\n\n兼職中，雇用保險・勞災保險・年金作為不同制度並行運作。勿混同，須切分。\n\n- **雇用保險**：以多重職務者制度合算2事業所加入（本制度）。手續・體制整備由社會保險勞務士負責\n- **勞災保險**：複數事業勞工，有給付基礎日額合算全勤務處工資算定等處理（[複數事業勞工的勞災](/zh-tw/labor/column/fukusu-jigyo-roudosha-rosai-kyufu-fukugyo)）。與雇用保險的合算為不同制度\n- **年金**：在職中老齡厚生年金的支給調整（在職老齡年金）屬年金事務所所管（[在職老齡年金與工作方式](/zh-tw/labor/column/nenkin-jukyuchu-koyo-zaishoku-rorei)）。年金的請求・諮詢向年金事務所\n\n社會保險勞務士承接雇用保險的加入・喪失手續，及對應複數事業的勞務體制整備。另一方面，給付金本身的受給申請・諮詢屬Hello Work，年金的請求・諮詢屬年金事務所窗口。各為獨立窗口・事業體，本所不就超出可代行範圍的給付或年金決定作保證。\n\n初次諮詢免費。費用請見[報酬額表](/zh-tw/labor/ryokin)，並參閱[服務內容](/zh-tw/labor/services)與[諮詢流程](/zh-tw/labor/nagare)。\n\n## 常見問題\n\n**Q. 1處不足每週20小時，但2處合計達20小時，可加入雇用保險嗎？**\nA. 65歲以上，2個事業所各自每週所定勞動時間5小時以上20小時未滿、合計每週20小時以上、各處31日以上雇用見込者，可由本人申出以多重高齡被保險者加入（2022年〈令和4年〉1月1日施行）。64歲以下非本特例對象。\n\n**Q. 加入的申出由公司代辦嗎？**\nA. 不是。與通常雇用保險不同，本制度由勞工本人向管轄自身住居所的Hello Work申出。惟事業主須協力提示或記載可確認雇用事實・所定勞動時間・工資・雇用見込的書類。資格自申出之日成立，不溯及過去加入。\n\n**Q. 辭去2處中的1處，會如何？**\nA. 僅餘1處便不符合每週20小時以上的要件，故喪失多重高齡被保險者資格。若符合辭職前一定期間曾為被保險者等要件，可受高齡求職者給付金（被保險者期間未滿1年為基本手當日額30日分、1年以上為50日分的一時金）。受給與否與金額由Hello Work判定。\n\n**Q. 高齡求職者給付金的申請與年金手續，也可委託社會保險勞務士嗎？**\nA. 給付金的受給申請・諮詢屬Hello Work，在職老齡年金等年金的請求・諮詢屬年金事務所窗口。社會保險勞務士承接的是雇用保險的加入・喪失手續，及對應複數短時間勤務的勞務體制整備。Hello Work・年金事務所各為獨立窗口，本所不就給付或年金決定作保證。\n\n## 本文根據\n\n- 雇用保險法（昭和49年法律第116號）附則（高齡被保險者的特例＝多重職務者制度相關規定）。制度依「雇用保險法等一部修正的法律」自2022年（令和4年）1月1日施行\n- 厚生勞動省・Hello Work「關於雇用保險多重職務者制度」── 對象＝於複數事業所受雇的65歲以上，2個事業所各自每週所定勞動時間5小時以上20小時未滿且合計每週20小時以上、各處31日以上雇用見込者。申出由本人向管轄自身住居所的Hello Work進行，自申出之日起成為被保險者（多重高齡被保險者）（2026年11月7日參照）\n- 高齡求職者給付金（雇用保險法的高齡被保險者失業時的一時金。被保險者期間未滿1年為基本手當日額30日分，1年以上為50日分相當）\n- 勞動者災害補償保險法（昭和22年法律第50號）── 複數事業勞工的給付基礎日額合算等（與雇用保險的合算為不同制度）\n- 在職老齡年金的老齡厚生年金支給調整屬年金事務所所管。給付金的受給申請・諮詢屬Hello Work，年金的請求・諮詢屬年金事務所\n- 多重高齡被保險者資格喪失時個別的給付與否・金額、於3個以上事業所工作時的具體認定、各雇用見込的判斷，由Hello Work逐案判定。本文不作個別結論（**未驗證**）\n\n本文為一般性資訊提供。依個別情事的判斷，由有資格者於面談後進行。四葉社会保険労務士事務所可就雇用保險多重職務者制度的加入・喪失手續，對應複數短時間勤務的勞動時間・工資記錄體制，高齡雇用的勞務整備提供諮詢。給付金的受給申請・諮詢屬Hello Work，年金的請求・諮詢屬年金事務所窗口。各為獨立窗口・事業體另行簽約・諮詢，本所不收取介紹費。常見問題整理於[常見問題](/zh-tw/labor/faq)。撰文為[浦松丈二](/zh-tw/about/uramatsu)（社會保險勞務士・行政書士・宅地建物取引士）。",
+        "category": "社會保險",
+        "keywords": [
+          "雇用保險 多重職務者",
+          "65歲以上 2事業所 加入",
+          "多重高齡被保險者",
+          "合計週20小時",
+          "高齡求職者給付金",
+          "Hello Work 申出"
+        ],
+        "tags": [
+          "雇用保險",
+          "多重職務者",
+          "65歲以上",
+          "複數事業所",
+          "社會保險",
+          "高齡雇用"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社會保險勞務士・行政書士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "1處不足每週20小時，但2處合計達20小時，可加入雇用保險嗎？",
+            "answer": "65歲以上，2個事業所各自每週所定勞動時間5小時以上20小時未滿、合計每週20小時以上、各處31日以上雇用見込者，可由本人申出以多重高齡被保險者加入（2022年〈令和4年〉1月1日施行）。64歲以下非本特例對象。"
+          },
+          {
+            "question": "加入的申出由公司代辦嗎？",
+            "answer": "不是。與通常雇用保險不同，本制度由勞工本人向管轄自身住居所的Hello Work申出。惟事業主須協力提示或記載可確認雇用事實・所定勞動時間・工資・雇用見込的書類。資格自申出之日成立，不溯及過去加入。"
+          },
+          {
+            "question": "辭去2處中的1處，會如何？",
+            "answer": "僅餘1處便不符合每週20小時以上的要件，故喪失多重高齡被保險者資格。若符合辭職前一定期間曾為被保險者等要件，可受高齡求職者給付金（被保險者期間未滿1年為基本手當日額30日分、1年以上為50日分的一時金）。受給與否與金額由Hello Work判定。"
+          },
+          {
+            "question": "高齡求職者給付金的申請與年金手續，也可委託社會保險勞務士嗎？",
+            "answer": "給付金的受給申請・諮詢屬Hello Work，在職老齡年金等年金的請求・諮詢屬年金事務所窗口。社會保險勞務士承接的是雇用保險的加入・喪失手續，及對應複數短時間勤務的勞務體制整備。Hello Work・年金事務所各為獨立窗口，本所不就給付或年金決定作保證。"
+          }
+        ]
+      },
+      "zh": {
+        "title": "于多个事业所雇用65岁以上者时，雇用保险多重职务者制度如何运用？",
+        "excerpt": "雇用保险多重职务者制度，是65岁以上于2个事业所受雇、各所每周5小时以上20小时未满且合计每周20小时以上等要件者，可由本人申出而特例成为被保险者的制度（2022年〈令和4年〉1月1日施行）。给付的受给申请属公共职业安定所（Hello Work），与年金的关系属年金事务所，手续与体制整备属社会保险劳务士。",
+        "content": "**结论（先讲重点）**：雇用保险多重职务者制度，是65岁以上于2个事业所受雇、各所每周5小时以上20小时未满且合计每周20小时以上等要件者，可由本人申出而特例成为被保险者的制度（2022年〈令和4年〉1月1日施行）。给付的受给申请属公共职业安定所（Hello Work），与年金的关系属年金事务所，手续与体制整备属社会保险劳务士。\n\n「仅1处不足每周20小时，无法加入雇用保险」——以短时间跨多处雇用高龄人才的事业者、于2处工作的65岁以上本人，愈来愈多此类咨询。2022年1月开始的多重职务者制度，是合算2个事业所劳动时间以加入的特例。本文整理对象要件、申出顺序、辞去一方时的处理、事业主的协力，以及与劳灾・年金的切分。\n\n## 雇用保险多重职务者制度为何，何时开始？\n\n雇用保险原以主要事业所每周所定劳动时间20小时以上等为加入要件，并逐处判定。故即使兼多份短时间工作，若各处皆不足20小时便无法成为被保险者。\n\n多重职务者制度，使65岁以上劳工于**2个事业所的劳动时间合算**符合要件时，由本人向Hello Work申出而特例成为被保险者（**多重高龄被保险者**）。依「雇用保险法等一部修正的法律」，自2022年（令和4年）1月1日施行。\n\n## 对象的年龄・劳动时间・事业所数条件如何？\n\n须同时符合下列3项，且均以**2个事业所**为前提判定。\n\n| 要件 | 内容 |\n|---|---|\n| 年龄・事业所数 | 于复数事业所受雇的**65岁以上**劳工 |\n| 劳动时间 | 2个事业所各自每周所定劳动时间为**5小时以上20小时未满**，其**合计为每周20小时以上** |\n| 雇用见込 | 2个事业所各自有**31日以上**的雇用见込 |\n\n于3个以上事业所工作时，选符合要件的2个事业所申出。仅1个事业所即有每周20小时以上者，本即通常雇用保险（高龄被保险者）的对象，非本特例对象。\n\n## 加入的申出由谁、向何处、依何顺序进行？\n\n通常雇用保险由事业主办理手续，但本制度**由劳工本人申出**为一大不同。\n\n1. 本人取得2个事业所对准备确认资料（雇用事实・所定劳动时间・工资・雇用见込等）的协力\n2. 本人向**管辖自身住居所的Hello Work**提出申出书与确认资料\n3. Hello Work确认要件，自**申出之日**起成立被保险者资格（**不溯及过去适用**）\n\n一旦成为多重高龄被保险者，于雇用持续且符合要件期间，**不能依本人方便任意脱退**。加入为申出日以后的处理，亦非溯及缴纳过去的保险料，与通常加入不同。\n\n## 若辞去一方的工作，给付与资格如何？\n\n辞去2个事业所中的1个，仅余1处便不符合每周20小时以上的要件，故丧失多重高龄被保险者资格。此时，若符合辞职前一定期间曾为被保险者等要件，可受**高龄求职者给付金**（一时金）。\n\n| 区分 | 给付内容 |\n|---|---|\n| 被保险者期间未满1年 | 高龄求职者给付金＝相当于基本手当日额**30日分**的一时金 |\n| 被保险者期间1年以上 | 高龄求职者给付金＝相当于基本手当日额**50日分**的一时金 |\n\n高龄求职者给付金为65岁以上者失业时的一时金，与65岁未满的基本手当不同，可与年金并给。**受给与否・金额由Hello Work判定**，非本所或公司认定。给付的受给申请与咨询于Hello Work窗口办理。\n\n## 事业主须提供何种书类协力与手续？\n\n申出由本人进行，但无事业主协力无法推进。主要须就雇用事实・所定劳动时间・工资・雇用见込进行记载或证明。\n\n| 事业主的对应 | 中身 |\n|---|---|\n| 确认资料的协力 | 协力提示・记载工资台账・出勤簿・劳动条件通知书等，可确认所定劳动时间与雇用见込的书类 |\n| 加入后的雇用保险料 | 资格取得后，自该事业所支付的工资**扣除雇用保险料**，事业主亦负担（与通常被保险者相同） |\n| 劳动条件的明示・管理 | 即使短时间勤务，劳动条件的明示（劳动基准法第15条）与劳动时间・工资的记录仍必要。高龄者的处遇亦见[70岁前的就业确保](/zh/labor/column/teinen-saikoyo-70sai-shugyo-kakuho) |\n\n因申出或资格丧失的时期使保险料负担改变，宜整备何书类于何时准备的社内手续流程，以免迟滞。\n\n## 与复数事业的劳灾或年金，应如何切分思考？\n\n兼职中，雇用保险・劳灾保险・年金作为不同制度并行运作。勿混同，须切分。\n\n- **雇用保险**：以多重职务者制度合算2事业所加入（本制度）。手续・体制整备由社会保险劳务士负责\n- **劳灾保险**：复数事业劳工，有给付基础日额合算全勤务处工资算定等处理（[复数事业劳工的劳灾](/zh/labor/column/fukusu-jigyo-roudosha-rosai-kyufu-fukugyo)）。与雇用保险的合算为不同制度\n- **年金**：在职中老龄厚生年金的支给调整（在职老龄年金）属年金事务所所管（[在职老龄年金与工作方式](/zh/labor/column/nenkin-jukyuchu-koyo-zaishoku-rorei)）。年金的请求・咨询向年金事务所\n\n社会保险劳务士承接雇用保险的加入・丧失手续，及对应复数事业的劳务体制整备。另一方面，给付金本身的受给申请・咨询属Hello Work，年金的请求・咨询属年金事务所窗口。各为独立窗口・事业体，本所不就超出可代行范围的给付或年金决定作保证。\n\n初次咨询免费。费用请见[报酬额表](/zh/labor/ryokin)，并参阅[服务内容](/zh/labor/services)与[咨询流程](/zh/labor/nagare)。\n\n## 常见问题\n\n**Q. 1处不足每周20小时，但2处合计达20小时，可加入雇用保险吗？**\nA. 65岁以上，2个事业所各自每周所定劳动时间5小时以上20小时未满、合计每周20小时以上、各处31日以上雇用见込者，可由本人申出以多重高龄被保险者加入（2022年〈令和4年〉1月1日施行）。64岁以下非本特例对象。\n\n**Q. 加入的申出由公司代办吗？**\nA. 不是。与通常雇用保险不同，本制度由劳工本人向管辖自身住居所的Hello Work申出。惟事业主须协力提示或记载可确认雇用事实・所定劳动时间・工资・雇用见込的书类。资格自申出之日成立，不溯及过去加入。\n\n**Q. 辞去2处中的1处，会如何？**\nA. 仅余1处便不符合每周20小时以上的要件，故丧失多重高龄被保险者资格。若符合辞职前一定期间曾为被保险者等要件，可受高龄求职者给付金（被保险者期间未满1年为基本手当日额30日分、1年以上为50日分的一时金）。受给与否与金额由Hello Work判定。\n\n**Q. 高龄求职者给付金的申请与年金手续，也可委托社会保险劳务士吗？**\nA. 给付金的受给申请・咨询属Hello Work，在职老龄年金等年金的请求・咨询属年金事务所窗口。社会保险劳务士承接的是雇用保险的加入・丧失手续，及对应复数短时间勤务的劳务体制整备。Hello Work・年金事务所各为独立窗口，本所不就给付或年金决定作保证。\n\n## 本文依据\n\n- 雇用保险法（昭和49年法律第116号）附则（高龄被保险者的特例＝多重职务者制度相关规定）。制度依「雇用保险法等一部修正的法律」自2022年（令和4年）1月1日施行\n- 厚生劳动省・Hello Work「关于雇用保险多重职务者制度」── 对象＝于复数事业所受雇的65岁以上，2个事业所各自每周所定劳动时间5小时以上20小时未满且合计每周20小时以上、各处31日以上雇用见込者。申出由本人向管辖自身住居所的Hello Work进行，自申出之日起成为被保险者（多重高龄被保险者）（2026年11月7日参照）\n- 高龄求职者给付金（雇用保险法的高龄被保险者失业时的一时金。被保险者期间未满1年为基本手当日额30日分，1年以上为50日分相当）\n- 劳动者灾害补偿保险法（昭和22年法律第50号）── 复数事业劳工的给付基础日额合算等（与雇用保险的合算为不同制度）\n- 在职老龄年金的老龄厚生年金支给调整属年金事务所所管。给付金的受给申请・咨询属Hello Work，年金的请求・咨询属年金事务所\n- 多重高龄被保险者资格丧失时个别的给付与否・金额、于3个以上事业所工作时的具体认定、各雇用见込的判断，由Hello Work逐案判定。本文不作个别结论（**未验证**）\n\n本文为一般性资讯提供。依个别情事的判断，由有资格者于面谈后进行。四葉社会保険労務士事務所可就雇用保险多重职务者制度的加入・丧失手续，对应复数短时间勤务的劳动时间・工资记录体制，高龄雇用的劳务整备提供咨询。给付金的受给申请・咨询属Hello Work，年金的请求・咨询属年金事务所窗口。各为独立窗口・事业体另行签约・咨询，本所不收取介绍费。常见问题整理于[常见问题](/zh/labor/faq)。撰文为[浦松丈二](/zh/about/uramatsu)（社会保险劳务士・行政书士・宅地建物取引士）。",
+        "category": "社会保险",
+        "keywords": [
+          "雇用保险 多重职务者",
+          "65岁以上 2事业所 加入",
+          "多重高龄被保险者",
+          "合计周20小时",
+          "高龄求职者给付金",
+          "Hello Work 申出"
+        ],
+        "tags": [
+          "雇用保险",
+          "多重职务者",
+          "65岁以上",
+          "复数事业所",
+          "社会保险",
+          "高龄雇用"
+        ],
+        "author": {
+          "name": "浦松 丈二",
+          "title": "社会保险劳务士・行政书士・宅地建物取引士（四葉社会保険労務士事務所／四葉行政書士事務所）"
+        },
+        "faq": [
+          {
+            "question": "1处不足每周20小时，但2处合计达20小时，可加入雇用保险吗？",
+            "answer": "65岁以上，2个事业所各自每周所定劳动时间5小时以上20小时未满、合计每周20小时以上、各处31日以上雇用见込者，可由本人申出以多重高龄被保险者加入（2022年〈令和4年〉1月1日施行）。64岁以下非本特例对象。"
+          },
+          {
+            "question": "加入的申出由公司代办吗？",
+            "answer": "不是。与通常雇用保险不同，本制度由劳工本人向管辖自身住居所的Hello Work申出。惟事业主须协力提示或记载可确认雇用事实・所定劳动时间・工资・雇用见込的书类。资格自申出之日成立，不溯及过去加入。"
+          },
+          {
+            "question": "辞去2处中的1处，会如何？",
+            "answer": "仅余1处便不符合每周20小时以上的要件，故丧失多重高龄被保险者资格。若符合辞职前一定期间曾为被保险者等要件，可受高龄求职者给付金（被保险者期间未满1年为基本手当日额30日分、1年以上为50日分的一时金）。受给与否与金额由Hello Work判定。"
+          },
+          {
+            "question": "高龄求职者给付金的申请与年金手续，也可委托社会保险劳务士吗？",
+            "answer": "给付金的受给申请・咨询属Hello Work，在职老龄年金等年金的请求・咨询属年金事务所窗口。社会保险劳务士承接的是雇用保险的加入・丧失手续，及对应复数短时间勤务的劳务体制整备。Hello Work・年金事务所各为独立窗口，本所不就给付或年金决定作保证。"
+          }
+        ]
+      }
+    }
   }
 ];
