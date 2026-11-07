@@ -1246,5 +1246,62 @@ export const COLUMNS_AUTOPUBLISH_REVIEWS: readonly ColumnQualityReview[] = [
     },
     "reviewedAt": "2026-11-08",
     "validThrough": "2026-11-10"
+  },
+  {
+    "key": "legal:kazoku-taizai-zairyu-shikakugai-katsudo-28jikan-yobiyose",
+    "fingerprint": "9a929d61dda36312b96d7f177d5f65a448e8fadf8a3bca52677b660701a59394",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://laws.e-gov.go.jp/api/1/lawdata/326CO0000000319",
+        "checkedAt": "2026-11-08",
+        "relevantClaim": "法令本文を直接確認。第19条第2項の許可主体は出入国在留管理庁長官。第73条の2第1項は現行3年以下拘禁刑・300万円以下罰金・併科可、第2項は無過失例外。別表第一の四は扶養を受ける配偶者又は子で、特定技能1号は基礎資格から除外。",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/api/1/lawdata/356M50000010054",
+        "checkedAt": "2026-11-08",
+        "relevantClaim": "法令本文を直接確認。第19条第5項第1号の週28時間と、営業所での活動3類型・従事4類型の除外を確認。",
+        "verified": true
+      },
+      {
+        "url": "https://www.shugiin.go.jp/internet/itdb_housei.nsf/html/housei/21320240621060.htm",
+        "checkedAt": "2026-11-08",
+        "relevantClaim": "2024年6月21日公布の令和6年法律第60号を直接取得。第1条は入管法73条の2第1項を3年から5年、300万円から500万円へ改正。附則第1条の施行日委任を確認。",
+        "verified": true
+      },
+      {
+        "url": "https://www.jil.go.jp/kokunai/mm/hourei/seirei/20251001a.html",
+        "checkedAt": "2026-11-08",
+        "relevantClaim": "2025年10月1日公布の令和7年政令第340号の掲載本文を直接取得。令和6年法律第60号の施行日が2027年4月1日であることを確認。",
+        "verified": true
+      },
+      {
+        "url": "https://www.mext.go.jp/a_menu/shotou/clarinet/004/1415154_00012.htm",
+        "checkedAt": "2026-11-08",
+        "relevantClaim": "2024年10月1日通知を直接取得。家族滞在で来日し高校等卒業後就労する者について、一定要件下の定住者・特定活動への変更の取扱いを確認。",
+        "verified": true
+      },
+      {
+        "url": "https://www.ssw.go.jp/km/files/pdf/guidebook.pdf",
+        "checkedAt": "2026-11-08",
+        "relevantClaim": "公的ガイドブックを直接取得。印刷25頁Q3で特定技能1号の家族呼寄せ不可、26頁Q4で2号は家族滞在の要件を満たす配偶者・子を呼寄せ可能と確認。古い分野数を含む資料であり、分野数は根拠として採用していない。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Family residence column independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/pull/504"
+    },
+    "reviewedAt": "2026-11-08",
+    "validThrough": "2026-11-10"
   }
 ];
