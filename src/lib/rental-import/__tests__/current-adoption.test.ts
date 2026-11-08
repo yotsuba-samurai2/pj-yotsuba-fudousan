@@ -1,6 +1,6 @@
 import { afterEach, expect, it, vi } from "vitest";
 import { fixture } from "./fixtures";
-import { CURRENT_RENTAL_ADOPTION_POLICY as policy, type CompanyIncomeEvidence } from "../adoption-policy";
+import { PREVIOUS_RENTAL_ADOPTION_POLICY as policy, type CompanyIncomeEvidence } from "../adoption-policy";
 import { isRecentMail, selectMailCandidates } from "../candidates";
 import { validateRentalImport, type RentalImport } from "../validation";
 import { rentalContentDigest } from "../content-review";
