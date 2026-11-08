@@ -53,11 +53,11 @@ export function getAdditionalLaborFaqs(locale: LangCode): FaqItem[] {
   const c = COPY[locale];
   const fees = LABOR_ANCILLARY_FEES[locale].sections;
   const consultationRows = fees[0].rows.map(r => `${r.name}: ${r.price} (${r.unit})`).join(" / ");
-  const pensionRows = fees[fees.length-1].rows.map(r => `${r.name}: ${r.price}`).join(" / ");
+  // Pension fees stay on the fee page: the last section may describe a different procedure.
   return [
     {q:c.consultation,a:c.consultationAnswer+" "+consultationRows},
     {q:c.rules,a:c.rulesAnswer},{q:c.benefits,a:c.benefitsAnswer},{q:c.assistance,a:c.assistanceAnswer},
     {q:c.register,a:c.registerAnswer},{q:c.disputes,a:c.disputesAnswer},{q:c.audit,a:c.auditAnswer},
-    {q:c.pension,a:c.pensionAnswer+" "+pensionRows},{q:c.area,a:c.areaAnswer},
+    {q:c.pension,a:c.pensionAnswer},{q:c.area,a:c.areaAnswer},
   ];
 }
