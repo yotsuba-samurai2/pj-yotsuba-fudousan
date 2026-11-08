@@ -10,8 +10,8 @@
 //  - ★登録番号の行を先に作る。9月1日の登録後に番号を埋める（行政書士側は既に第25087022号が入っている）
 //  - ★使用システム（freee人事労務）を出す。どの仕組みで回すかが最初に分かるほうが、
 //    乗り換えを検討している会社に実利がある
-//  - ★受任の前提（顧問契約が前提。障害年金と外部監査人は例外）を表に置く。
-//    問い合わせの空振りを減らす
+//  - ★受任の前提は、承認済みの手続き・給与計算の単独依頼可の方針に合わせる。
+//    表示側も同じ正本を使い、旧DB値による条件の巻き戻りを防ぐ
 //
 // 表記の決まり（luck428-column-seo 第9条）
 //  - 事務所名・会社名は繁体字版・簡体字版でも日本語表記のまま
@@ -27,7 +27,8 @@
 import type { LangCode } from "@/config/languages";
 import { SR_REGISTRATION_ID, SR_REGISTRATION_NUMBER } from "@/lib/shared/sr-registration";
 
-export type OfficeInfoRow = { label: string; value: string };
+import { LABOR_OFFICE_ENGAGEMENT, type OfficeInfoRow } from "@/lib/labor/office-engagement";
+export type { OfficeInfoRow } from "@/lib/labor/office-engagement";
 
 /**
  * 登録番号の欄の値。
@@ -58,11 +59,7 @@ export const LABOR_OFFICE_INFO: Record<LangCode, OfficeInfoRow[]> = {
     { label: "対応言語", value: "日本語・英語・中国語（繁体字／簡体字）" },
     { label: "対応地域", value: "東京都および近県。オンラインでの対応も承ります" },
     { label: "使用システム", value: "freee人事労務" },
-    {
-      label: "受任の前提",
-      value:
-        "法人・個人事業主のお客さまは顧問契約を前提としてお受けします。障害年金（個人のお客さま）と外部監査人（監理支援機関のお客さま）は、顧問契約を前提としません。",
-    },
+    LABOR_OFFICE_ENGAGEMENT.ja,
   ],
   en: [
     { label: "Name", value: "四葉社会保険労務士事務所" },
@@ -75,11 +72,7 @@ export const LABOR_OFFICE_INFO: Record<LangCode, OfficeInfoRow[]> = {
     { label: "Languages", value: "Japanese, English, Chinese (Traditional / Simplified)" },
     { label: "Area covered", value: "Tokyo and neighbouring prefectures. Online consultation is also available." },
     { label: "System used", value: "freee HR (freee人事労務)" },
-    {
-      label: "Terms of engagement",
-      value:
-        "For companies and sole proprietors, we work on a retainer basis. Disability pension claims (for individuals) and external auditor appointments (for supervising support organisations) do not require a retainer agreement.",
-    },
+    LABOR_OFFICE_ENGAGEMENT.en,
   ],
   "zh-tw": [
     { label: "名稱", value: "四葉社会保険労務士事務所" },
@@ -92,11 +85,7 @@ export const LABOR_OFFICE_INFO: Record<LangCode, OfficeInfoRow[]> = {
     { label: "對應語言", value: "日文・英文・中文（繁體／簡體）" },
     { label: "服務地區", value: "東京都及鄰近縣。亦可線上對應。" },
     { label: "使用系統", value: "freee人事労務" },
-    {
-      label: "受任前提",
-      value:
-        "法人與個人事業主的客戶，以簽訂顧問契約為前提承接。障礙年金（個人客戶）與外部稽核人員（監理支援機關的客戶），則不以顧問契約為前提。",
-    },
+    LABOR_OFFICE_ENGAGEMENT["zh-tw"],
   ],
   zh: [
     { label: "名称", value: "四葉社会保険労務士事務所" },
@@ -109,11 +98,7 @@ export const LABOR_OFFICE_INFO: Record<LangCode, OfficeInfoRow[]> = {
     { label: "对应语言", value: "日语・英语・中文（繁体／简体）" },
     { label: "服务地区", value: "东京都及邻近县。亦可线上对应。" },
     { label: "使用系统", value: "freee人事労務" },
-    {
-      label: "受任前提",
-      value:
-        "法人与个体工商户的客户，以签订顾问合同为前提承接。残障年金（个人客户）与外部审计人员（监理支援机构的客户），则不以顾问合同为前提。",
-    },
+    LABOR_OFFICE_ENGAGEMENT.zh,
   ],
 };
 

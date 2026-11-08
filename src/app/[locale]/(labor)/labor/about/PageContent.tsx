@@ -4,9 +4,10 @@ import Image from "next/image";
 import { LocaleLink as Link } from "@/components/ui/LocaleLink";
 import { ArrowRight } from "lucide-react";
 import { useTranslation } from "@/hooks/useTranslation";
+import { withLaborOfficeEngagement, type OfficeInfoRow } from "@/lib/labor/office-engagement";
 
 export function LaborAboutPageContent() {
-  const { t, tArray } = useTranslation();
+  const { t, tArray, locale } = useTranslation();
 
   const highlights = [
     { label: t("labor.aboutPage.highlights.previousJob.label"), value: t("labor.aboutPage.highlights.previousJob.value") },
@@ -15,7 +16,7 @@ export function LaborAboutPageContent() {
     { label: t("labor.aboutPage.highlights.status.label"), value: t("labor.aboutPage.highlights.status.value") },
   ];
 
-  const officeInfo = tArray<{ label: string; value: string }>("labor.aboutPage.officeInfo");
+  const officeInfo = withLaborOfficeEngagement(locale, tArray<OfficeInfoRow>("labor.aboutPage.officeInfo"));
 
   return (
     <>
