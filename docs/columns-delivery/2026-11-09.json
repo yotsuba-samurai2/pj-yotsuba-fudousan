@@ -1,0 +1,89 @@
+{
+  "todayJst": "2026-11-09",
+  "runUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/42506786823",
+  "generationStatus": "validated",
+  "generatedCount": 3,
+  "reviewResult": "success",
+  "reviewReportAvailable": true,
+  "reviewPass": false,
+  "findings": {
+    "blocker": 0,
+    "major": 1,
+    "minor": 1
+  },
+  "reviewFindings": [
+    {
+      "file": "scripts/realestate-columns/100-chugokugo-kokudo-riyo-keikaku-ho-jigo-todokede-menseki.md",
+      "severity": "major",
+      "issue": "「この記事の出典（一次情報）」節で https://www.mlit.go.jp/totikensangyo/totikensangyo_tk2_000018.html を「国土交通省『土地取引規制制度（国土利用計画法）』」として引用しているが、このURLは実際には『土地問題に関する国民の意識調査』という無関係のページを表示する（2026-11-08に2回取得して確認）。4言語（ja/en/zh-tw/zh）すべてに同一の誤URLが入る。法令内容自体はe-Gov法令検索・内閣府ページ・国交省PDF・複数のlg.jpで独立に裏取りでき読者を誤導しないが、一次情報の出典URLが称する内容と別ページを指す欠陥。",
+      "fix": "当該URLを実際の国交省『土地取引規制制度（国土利用計画法）』の正しいページ、または国交省の土地取引規制PDF（例: tochi_fudousan_kensetsugyo配下の該当資料）やe-Gov法令本文へ差し替える。4言語すべてを同時に修正する。"
+    },
+    {
+      "file": "scripts/legal-columns/161-keiei-kanri-zairyu-2025-kaisei-shihonkin-joukin-shokuin-chuka-taiwan.md",
+      "severity": "minor",
+      "issue": "日本語能力基準を『CEFRのB2相当以上』と表記しているが、出入国在留管理庁の公式表記は『日本語教育の参照枠』におけるB2相当以上。参照枠はCEFRを基に作られた国内の枠組みで近接するが、公式の呼称とは厳密には一致しない。",
+      "fix": "『「日本語教育の参照枠」のB2相当以上（CEFRのB2に相当）』のように公式呼称を主にして補足する形へ調整（任意。事実関係に誤りはない）。"
+    }
+  ],
+  "registeredCount": 0,
+  "qualityEligibleCount": 0,
+  "heldCount": 3,
+  "scheduledCount": 0,
+  "unverifiedSourceCount": 1,
+  "publishedCount": null,
+  "articles": [
+    {
+      "key": "realestate:chugokugo-kokudo-riyo-keikaku-ho-jigo-todokede-menseki",
+      "fingerprint": "dcc1004fc11099814f8c7485900eedb821a3a81e9fcd45fab146c2f81ad62cf6",
+      "title": "繁体字・簡体字対応｜中国・台湾の投資家が日本の土地を買うとき必要な国土利用計画法の事後届出",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です",
+        "候補指紋と修正後原稿が一致しません",
+        "独立レビューの証跡不足、重複、またはレビュー後の原稿変更"
+      ],
+      "sourceFailures": [
+        {
+          "url": "https://www.mlit.go.jp/totikensangyo/totikensangyo_tk2_000018.html",
+          "checkedAt": "2026-11-08",
+          "relevantClaim": "記事が『国土交通省「土地取引規制制度（国土利用計画法）」』として引用したURL。実際の表示内容は『土地問題に関する国民の意識調査』で、事後届出制度の解説ではない（引用先不一致）。",
+          "verified": false
+        }
+      ],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:keiei-kanri-zairyu-2025-kaisei-shihonkin-joukin-shokuin-chuka-taiwan",
+      "fingerprint": "18aaa879acd5ff62964d12a8a8284153fcc74d8f63c08ba1fe5aaa20eaa2eee8",
+      "title": "経営・管理ビザ2025年10月改正｜資本金3,000万円・常勤職員・経過措置の要点（中国・台湾の起業家向け）",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です",
+        "独立レビューに未解決の重大な指摘があります"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:insatsu-gyo-kaigyo-roumu-yuuki-youzai-shinya-anzen-eisei",
+      "fingerprint": "5c4a17a4e148dc6af883903dd9692e0d6fcb33f29925f72b4eec3474d9c058b5",
+      "title": "印刷会社の開業・労務——有機溶剤や深夜勤務の安全衛生と労働時間管理",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録です",
+        "独立レビューに未解決の重大な指摘があります"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    }
+  ]
+}

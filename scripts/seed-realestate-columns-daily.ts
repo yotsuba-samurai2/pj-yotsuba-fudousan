@@ -3408,6 +3408,26 @@ const ARTICLES: ArticleSpec[] = [
     localesWithTranslations: ["en", "zh-tw", "zh"],
     hubLinks: ["/toushi"],
   },
+  {
+    file: "100-chugokugo-kokudo-riyo-keikaku-ho-jigo-todokede-menseki.md",
+    slug: "chugokugo-kokudo-riyo-keikaku-ho-jigo-todokede-menseki",
+    title: "繁体字・簡体字対応｜中国・台湾の投資家が日本の土地を買うとき必要な国土利用計画法の事後届出",
+    publishedAt: "2026-11-08",
+    category: "投資・事業用不動産",
+    excerpt:
+      "外国人・外国法人でも、国籍を理由に制限されず日本の土地を取得できます。ただし一定面積以上の土地取引では国土利用計画法第23条の事後届出が必要で、届出義務者は買主（権利取得者）、期限は契約締結日から2週間以内、届出先は市町村長を経由して都道府県知事です。面積基準は市街化区域2,000㎡以上・市街化区域以外の都市計画区域5,000㎡以上・都市計画区域外10,000㎡以上。防衛施設周辺などの重要土地等調査法の事前届出や外為法の報告とは目的・根拠法が別です。東京都文京区の宅地建物取引士兼行政書士が条文から整理します。",
+    keywords: [
+      "国土利用計画法 事後届出",
+      "外国人 日本 土地 購入 届出",
+      "土地取引 面積要件 2000平方メートル",
+      "事後届出 買主 2週間",
+      "重要土地等調査法 国土利用計画法 違い",
+    ],
+    tags: ["中国語対応", "土地取引規制", "国土利用計画法", "外国人投資"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/toushi"],
+  },
 ];
 
 function toPlainText(md: string): string {
