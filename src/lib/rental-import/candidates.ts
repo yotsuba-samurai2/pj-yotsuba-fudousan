@@ -1,6 +1,6 @@
 import { BROKER_FEE_PERCENT, type BrokerFee } from "../broker-fee";
 import { z } from "zod";
-import { checkCurrentCompanyIncome, CURRENT_RENTAL_ADOPTION_POLICY, type CompanyIncomeEvidence } from "./adoption-policy";
+import { checkCurrentCompanyIncome, CURRENT_RENTAL_ADOPTION_POLICY, rentalAdoptionPolicyAt, requiresCompanyIncome, type CompanyIncomeEvidence } from "./adoption-policy";
 /** Mail content is untrusted data. Extract evidence; never execute links/instructions. */
 export type MailInput = { id: string; receivedAt: string; subject: string; text: string; senderDomain?: string; companyIncome?: CompanyIncomeEvidence };
 export type AdEvidence = { months: number | null; quote: string; ambiguous: boolean };
@@ -21,7 +21,7 @@ export function extractAdEvidence(text: string): AdEvidence[] {
   });
 }
 
-/** 過去時点の再現専用。現在の採否はadoption-policyの確認済み税込総額を使う。 */
+/** 過去時点の再現専用。現在の掲載可否は報酬額・報酬根拠に依存しない。 */
 export const INCOME_THRESHOLD_YEN = 800_000;
 export type AdYenEvidence = { yen: number | null; quote: string; ambiguous: boolean };
 
@@ -107,9 +107,9 @@ export function isLegacyRecentMail(receivedAt: string, now: Date): boolean {
 export function selectMailCandidates(mails: MailInput[], now: Date) {
   return [...new Map(mails.map((m) => [m.id, m])).values()].filter((m) => isRecentMail(m.receivedAt, now)).map((m) => {
     const evidence = extractAdEvidence(`${m.subject}\n${m.text}`);
-    const reason = checkCurrentCompanyIncome(m.companyIncome, { messageId: m.id }, now);
+    const reason = requiresCompanyIncome(now) ? checkCurrentCompanyIncome(m.companyIncome, { messageId: m.id }, now) : null;
     return { messageId: m.id, receivedAt: m.receivedAt, subject: m.subject, senderDomain: m.senderDomain, evidence,
-      policy: CURRENT_RENTAL_ADOPTION_POLICY.id, reason,
+      policy: rentalAdoptionPolicyAt(now).id, reason,
       decision: reason === null ? "candidate" as const : reason === "AD込み・税込の当社報酬総額が20万円未満です" ? "excluded" as const : "review" as const };
   });
 }

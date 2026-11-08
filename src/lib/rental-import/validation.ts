@@ -4,7 +4,7 @@ import { z } from "zod";
 import { propertyInputSchema } from "@/lib/property-validation";
 import { scanPropertyText, type PropertyInput } from "@/lib/property-shared";
 import { brokerIncomeYen, extractAdEvidence, INCOME_THRESHOLD_YEN, isLegacyRecentMail, isRecentMail, P033_INCOME_THRESHOLD_YEN, subtrackIncomeYen, SUBTRACK_INCOME_THRESHOLD_YEN } from "./candidates";
-import { checkCurrentCompanyIncome, companyIncomeEvidenceSchema, CURRENT_RENTAL_ADOPTION_POLICY, usesCurrentAdoptionPolicy } from "./adoption-policy";
+import { checkCurrentCompanyIncome, companyIncomeEvidenceSchema, rentalAdoptionPolicyAt, requiresCompanyIncome, usesCurrentAdoptionPolicy } from "./adoption-policy";
 import { portalCheckSchema, summarizePortalChecks } from "./portal-counts";
 import { evidenceSchema, titleHighlightSchema, validTitleHighlight, TITLE_HIGHLIGHT_LABELS, conditionChoiceSchema, rentEvidenceSchema, validRentEvidence, isPrimaryReference, RENTAL_IMPORT_POLICY, hasAdvertisingAllow, selectCondition, isCurrentEvidence } from "./policy";
 import { contentReviewSchema, rentalContentDigest } from "./content-review";
@@ -23,10 +23,10 @@ export const rentalImportSchema = z.object({
   intake: z.object({
     kind: z.literal("portal-search"),
     /**
-     * 現行は当社報酬のAD込み総額・税込20万円以上。旧IDは履歴互換のため受理するが、
-     * 現在の判定で旧閾値・賃料×手数料の推計を選ぶことはできない。
+     * 現行は報酬額・報酬根拠を掲載条件にしない。旧IDは履歴互換のため受理するが、
+     * 現在の判定で旧報酬閾値・賃料×手数料の推計を選ぶことはできない。
      */
-    policy: z.enum(["company-total-tax-included-200k-v1", "bunkyo-income800k", "eslife-new-income400k", "bunkyo-p033-income300k", "bunkyo-rent200k-ad30-or-rent250k"]),
+    policy: z.enum(["publication-evidence-only-v2", "company-total-tax-included-200k-v1", "bunkyo-income800k", "eslife-new-income400k", "bunkyo-p033-income300k", "bunkyo-rent200k-ad30-or-rent250k"]),
     updateEvidence: listingEvidenceSchema,
   }).optional(),
   supportingDocuments: z.array(evidenceSchema).max(10).optional(),
@@ -117,9 +117,12 @@ export function validateRentalImport(input: unknown, now: Date, mode: "draft" | 
   if (currentAdoption) {
     if (!directSearch && (!v.email || (!maintenance && !isRecentMail(v.email.receivedAt, now)))) reasons.push("メールが受信7日以内の対象外です");
     if (directSearch && !/^東京都\s*文京区/.test(v.source.address.normalize("NFKC"))) reasons.push("直接検索の対象エリアは文京区です");
-    const { provider, roomId, building, address, unit } = v.source;
-    const incomeError = checkCurrentCompanyIncome(v.companyIncome, { source: { provider, roomId, building, address, unit }, messageId: directSearch ? null : v.email?.messageId ?? null }, now);
-    if (incomeError) reasons.push(incomeError);
+    // Keep historical replay intact; current publication does not require private income evidence.
+    if (requiresCompanyIncome(now)) {
+      const { provider, roomId, building, address, unit } = v.source;
+      const incomeError = checkCurrentCompanyIncome(v.companyIncome, { source: { provider, roomId, building, address, unit }, messageId: directSearch ? null : v.email?.messageId ?? null }, now);
+      if (incomeError) reasons.push(incomeError);
+    }
   } else if (directSearch) {
     const provider = v.source.provider;
     const evidence = v.intake!.updateEvidence;
@@ -242,7 +245,7 @@ export function validateRentalImport(input: unknown, now: Date, mode: "draft" | 
     infoUpdatedAt: jstDate(now), nextUpdateAt: jstDate(new Date(now.getTime() + DAY)),
     publishedAt: mode === "published" ? jstDate(now) : undefined,
     internal: { rentalImport: { version: 2, policy: RENTAL_IMPORT_POLICY,
-      ...(currentAdoption ? { adoptionPolicy: CURRENT_RENTAL_ADOPTION_POLICY, companyIncome: v.companyIncome } : {}),
+      ...(currentAdoption ? { adoptionPolicy: rentalAdoptionPolicyAt(now), companyIncome: v.companyIncome } : {}),
       intake: v.intake, supportingDocuments: v.supportingDocuments, email: v.email, source: v.source, advertisingEvidence: v.advertisingEvidence, photoPermission: v.photoPermission, conditionChoices: v.conditionChoices, titleHighlights: v.titleHighlights, unconfirmedTerms: v.unconfirmedTerms, contentReview: v.contentReview, decisions, migration: v.reins ? { legacyReins: v.reins, legacyPortalChecks: summarizePortalChecks(v.portalChecks ?? []) } : undefined } },
   };
   // Audit the original address at intake. Public tags are recomputed from that
