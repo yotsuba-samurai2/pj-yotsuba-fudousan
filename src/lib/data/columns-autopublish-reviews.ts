@@ -1303,5 +1303,149 @@ export const COLUMNS_AUTOPUBLISH_REVIEWS: readonly ColumnQualityReview[] = [
     },
     "reviewedAt": "2026-11-08",
     "validThrough": "2026-11-10"
+  },
+  {
+    "key": "realestate:shogai-tanki-nyusho-shortstay-bukken-shitei-kijun",
+    "fingerprint": "b1271aecfe2d4c8d1f1f42f3d26a75b8c2f8520fcf7d100188b0f88745ba380b",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.shougaifukushi.metro.tokyo.lg.jp/Lib/Download.php?sqid=3972",
+        "checkedAt": "2026-11-09",
+        "relevantClaim": "短期入所 単独型事業所の居室：定員4人以下・地階に設けない・利用者1人あたり床面積8㎡以上（収納設備等を除く）・寝台またはこれに代わる設備・ブザー（省令171号 第117条相当。東京都福祉局 令和8年度版で一致を確認）",
+        "verified": true
+      },
+      {
+        "url": "https://www.mlit.go.jp/common/001294996.pdf",
+        "checkedAt": "2026-11-09",
+        "relevantClaim": "建築基準法第6条第1項第一号の特殊建築物（児童福祉施設等）への用途変更で、変更部分の床面積の合計が200㎡を超える場合に確認申請が必要（類似の用途相互間を除く）。令和元年改正で100㎡超→200㎡超",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/law/418M60000100171",
+        "checkedAt": "2026-11-09",
+        "relevantClaim": "障害者総合支援法に基づく指定障害福祉サービス基準省令（平成18年厚労省令第171号）第114〜118条＝短期入所の基本方針・人員・設備（併設型/空床利用型/単独型）。e-GovはJS描画で直接本文取得不可だが、条番号・内容を東京都福祉局資料で裏取り",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/42709135682"
+    },
+    "reviewedAt": "2026-11-10",
+    "validThrough": "2026-11-12"
+  },
+  {
+    "key": "realestate:souzoku-nochi-nozei-yuyo-uchikiri-baikyaku",
+    "fingerprint": "31c0e62a99486f1df007cf5e788416148943cb94ce32c4eb97bbcafaea526051",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/sozoku/4147.htm",
+        "checkedAt": "2026-11-09",
+        "relevantClaim": "農地等相続税の納税猶予（No.4147）：農業の継続または特定貸付け等が条件、農業相続人の死亡等で免除。特定貸付け等＝農地中間管理事業の推進に関する法律・都市農地の貸借の円滑化に関する法律・特定農地貸付けに関する農地法等の特例に関する法律等に基づく貸付け",
+        "verified": true
+      },
+      {
+        "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/sozoku/4147_qa.htm",
+        "checkedAt": "2026-11-09",
+        "relevantClaim": "措置法70条の6：特例農地等の譲渡等が全体の20%を超えると猶予税額の全部確定、20%以下はその部分に対応する猶予税額を一部確定し、いずれも利子税とあわせて納付（確定事由が生じた日から2か月を経過する日に確定）",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/42709135682"
+    },
+    "reviewedAt": "2026-11-10",
+    "validThrough": "2026-11-12"
+  },
+  {
+    "key": "labor:konbini-fc-kaigyo-roumu-shinya-ryugakusei-shift",
+    "fingerprint": "0f0832203e97384923ddeb2b0af2f8c38b09bcd0242d1dfcd64d8ef1f7683471",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/minimumichiran/",
+        "checkedAt": "2026-11-09",
+        "relevantClaim": "東京都の地域別最低賃金は2026年10月1日から時給1,280円（改定前1,226円・+54円）。令和8年度地域別最低賃金として厚労省が公表（東京労働局答申・報道で1,280円・54円引上げを確認）",
+        "verified": true
+      },
+      {
+        "url": "https://www.mhlw.go.jp/content/12500000/001633788.pdf",
+        "checkedAt": "2026-11-09",
+        "relevantClaim": "短時間労働者の社会保険：賃金（月額8.8万円）要件を令和8年（2026）年10月1日施行で撤廃。残る要件は週20時間以上・2か月超の雇用見込・学生でないこと・企業規模（原則51人以上、2027年10月に36人以上へ段階的引下げ）。政令・厚労省資料で確認（PDFはバイナリで直接本文取得不可のため検索結果で裏取り）",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/law/322AC0000000049",
+        "checkedAt": "2026-11-09",
+        "relevantClaim": "労働基準法第37条第4項（深夜割増2割5分以上・午後10時〜午前5時）、第34条（休憩）、第40条・施行規則第31条（商業の一斉休憩の適用除外）、第89条（就業規則10人以上）、第32条・第36条・第15条。入管法第19条第2項・施行規則の資格外活動（週28時間）。条番号・内容は確定した制度として一致",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/42709135682"
+    },
+    "reviewedAt": "2026-11-10",
+    "validThrough": "2026-11-12"
+  },
+  {
+    "key": "labor:zairyu-card-kakunin-fuho-shuro-josei-koyonushi-gimu",
+    "fingerprint": "b2acf2ea0d0d1c680ffbdf2a966841e8df1c6bfcac2a4cea71bb01be8f13bb9f",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.keishicho.metro.tokyo.lg.jp/kurashi/anzen/live_in_tokyo/tekiseikoyo.html",
+        "checkedAt": "2026-11-09",
+        "relevantClaim": "不法就労助長罪（入管法第73条の2）：3年以下の拘禁刑または300万円以下の罰金（併科あり）、第2項で相手が就労不可であることを知らなかったことを理由に処罰を免れない（ただし過失のないときを除く）、第76条の2の両罰規定で法人にも罰金。現行法定刑（引上げ施行日は未検証扱い）",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/law/341AC0000000132",
+        "checkedAt": "2026-11-09",
+        "relevantClaim": "労働施策総合推進法第28条第1項（外国人雇用状況届出）・第40条第1項第2号（30万円以下の罰金）。労基法第15条の労働条件明示（2024年4月1日施行改正）。国籍を問わず労基法・最賃法・労働保険・社会保険が適用。条番号・内容は確定制度として一致",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/42709135682"
+    },
+    "reviewedAt": "2026-11-10",
+    "validThrough": "2026-11-12"
   }
 ];

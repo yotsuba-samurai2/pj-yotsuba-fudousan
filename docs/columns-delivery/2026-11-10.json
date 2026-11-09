@@ -1,0 +1,95 @@
+{
+  "todayJst": "2026-11-10",
+  "runUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/42709135682",
+  "generationStatus": "validated",
+  "generatedCount": 6,
+  "reviewResult": "success",
+  "reviewReportAvailable": true,
+  "reviewPass": true,
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "minor": 0
+  },
+  "reviewFindings": [],
+  "registeredCount": 4,
+  "qualityEligibleCount": 4,
+  "heldCount": 2,
+  "scheduledCount": 0,
+  "unverifiedSourceCount": 0,
+  "publishedCount": null,
+  "articles": [
+    {
+      "key": "realestate:shogai-tanki-nyusho-shortstay-bukken-shitei-kijun",
+      "fingerprint": "b1271aecfe2d4c8d1f1f42f3d26a75b8c2f8520fcf7d100188b0f88745ba380b",
+      "title": "障害福祉の短期入所（ショートステイ）を始める物件は？併設型・単独型・空床利用型と指定基準",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "realestate:souzoku-nochi-nozei-yuyo-uchikiri-baikyaku",
+      "fingerprint": "31c0e62a99486f1df007cf5e788416148943cb94ce32c4eb97bbcafaea526051",
+      "title": "相続した農地で納税猶予を受けている——売るとどうなる？打切りと不動産の出口",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:kensetsugyo-kessan-henko-todoke-jigyo-nendo-shuryo",
+      "fingerprint": "7e2cec5c837c4ff940244a9f13e8037d0b0956070b132633a5d0db8502ff0ea9",
+      "title": "建設業許可を取った後の『決算変更届（事業年度終了届）』は毎年いる？出し忘れの影響と各種変更届",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です",
+        "確認済みの公的な一次根拠が不足しています"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:houkatsu-tokutei-izo-chigai-juisha-hoki",
+      "fingerprint": "81bdc028c8a027464e9770a21ee2e540b7018789206690e3872ee67b75655775",
+      "title": "『包括遺贈』と『特定遺贈』はどう違う？受遺者の権利義務と放棄の仕方",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です",
+        "確認済みの公的な一次根拠が不足しています"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:konbini-fc-kaigyo-roumu-shinya-ryugakusei-shift",
+      "fingerprint": "0f0832203e97384923ddeb2b0af2f8c38b09bcd0242d1dfcd64d8ef1f7683471",
+      "title": "コンビニ（フランチャイズ加盟店）を開く労務——24時間シフト・深夜割増・留学生アルバイト",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:zairyu-card-kakunin-fuho-shuro-josei-koyonushi-gimu",
+      "fingerprint": "b2acf2ea0d0d1c680ffbdf2a966841e8df1c6bfcac2a4cea71bb01be8f13bb9f",
+      "title": "外国人を雇う前の在留カード確認——不法就労助長罪を避けるために雇用主がやること",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    }
+  ]
+}
