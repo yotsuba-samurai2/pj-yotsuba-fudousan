@@ -1,45 +1,8 @@
 {
   "dryRun": false,
-  "runAt": "2026-11-10T10:40:45.156Z",
-  "todayJst": "2026-11-10",
-  "targets": [
-    {
-      "key": "labor:konbini-fc-kaigyo-roumu-shinya-ryugakusei-shift",
-      "business": "labor",
-      "slug": "konbini-fc-kaigyo-roumu-shinya-ryugakusei-shift",
-      "title": "コンビニ（フランチャイズ加盟店）を開く労務——24時間シフト・深夜割増・留学生アルバイト",
-      "date": "2026-11-09",
-      "category": "業種別の労務管理",
-      "path": "/labor/column/konbini-fc-kaigyo-roumu-shinya-ryugakusei-shift"
-    },
-    {
-      "key": "labor:zairyu-card-kakunin-fuho-shuro-josei-koyonushi-gimu",
-      "business": "labor",
-      "slug": "zairyu-card-kakunin-fuho-shuro-josei-koyonushi-gimu",
-      "title": "外国人を雇う前の在留カード確認——不法就労助長罪を避けるために雇用主がやること",
-      "date": "2026-11-09",
-      "category": "外国人雇用",
-      "path": "/labor/column/zairyu-card-kakunin-fuho-shuro-josei-koyonushi-gimu"
-    },
-    {
-      "key": "realestate:shogai-tanki-nyusho-shortstay-bukken-shitei-kijun",
-      "business": "realestate",
-      "slug": "shogai-tanki-nyusho-shortstay-bukken-shitei-kijun",
-      "title": "障害福祉の短期入所（ショートステイ）を始める物件は？併設型・単独型・空床利用型と指定基準",
-      "date": "2026-11-09",
-      "category": "投資・事業用不動産",
-      "path": "/column/shogai-tanki-nyusho-shortstay-bukken-shitei-kijun"
-    },
-    {
-      "key": "realestate:souzoku-nochi-nozei-yuyo-uchikiri-baikyaku",
-      "business": "realestate",
-      "slug": "souzoku-nochi-nozei-yuyo-uchikiri-baikyaku",
-      "title": "相続した農地で納税猶予を受けている——売るとどうなる？打切りと不動産の出口",
-      "date": "2026-11-09",
-      "category": "相続",
-      "path": "/column/souzoku-nochi-nozei-yuyo-uchikiri-baikyaku"
-    }
-  ],
+  "runAt": "2026-11-11T10:10:32.118Z",
+  "todayJst": "2026-11-11",
+  "targets": [],
   "held": [
     {
       "key": "labor:insatsu-gyo-kaigyo-roumu-yuuki-youzai-shinya-anzen-eisei",
@@ -116,45 +79,7 @@
   ],
   "scheduled": [],
   "ok": false,
-  "published": [
-    {
-      "key": "labor:konbini-fc-kaigyo-roumu-shinya-ryugakusei-shift",
-      "business": "labor",
-      "slug": "konbini-fc-kaigyo-roumu-shinya-ryugakusei-shift",
-      "title": "コンビニ（フランチャイズ加盟店）を開く労務——24時間シフト・深夜割増・留学生アルバイト",
-      "date": "2026-11-09",
-      "category": "業種別の労務管理",
-      "path": "/labor/column/konbini-fc-kaigyo-roumu-shinya-ryugakusei-shift"
-    },
-    {
-      "key": "labor:zairyu-card-kakunin-fuho-shuro-josei-koyonushi-gimu",
-      "business": "labor",
-      "slug": "zairyu-card-kakunin-fuho-shuro-josei-koyonushi-gimu",
-      "title": "外国人を雇う前の在留カード確認——不法就労助長罪を避けるために雇用主がやること",
-      "date": "2026-11-09",
-      "category": "外国人雇用",
-      "path": "/labor/column/zairyu-card-kakunin-fuho-shuro-josei-koyonushi-gimu"
-    },
-    {
-      "key": "realestate:shogai-tanki-nyusho-shortstay-bukken-shitei-kijun",
-      "business": "realestate",
-      "slug": "shogai-tanki-nyusho-shortstay-bukken-shitei-kijun",
-      "title": "障害福祉の短期入所（ショートステイ）を始める物件は？併設型・単独型・空床利用型と指定基準",
-      "date": "2026-11-09",
-      "category": "投資・事業用不動産",
-      "path": "/column/shogai-tanki-nyusho-shortstay-bukken-shitei-kijun"
-    },
-    {
-      "key": "realestate:souzoku-nochi-nozei-yuyo-uchikiri-baikyaku",
-      "business": "realestate",
-      "slug": "souzoku-nochi-nozei-yuyo-uchikiri-baikyaku",
-      "title": "相続した農地で納税猶予を受けている——売るとどうなる？打切りと不動産の出口",
-      "date": "2026-11-09",
-      "category": "相続",
-      "path": "/column/souzoku-nochi-nozei-yuyo-uchikiri-baikyaku"
-    }
-  ],
-  "skipped": [],
+  "published": [],
   "errors": [
     {
       "key": "labor:insatsu-gyo-kaigyo-roumu-yuuki-youzai-shinya-anzen-eisei",
@@ -178,6 +103,6 @@
     }
   ],
   "blocked": "5本は品質確認待ちのため自動公開しません。記事別の理由を確認してください。forceでも解除しません。",
-  "outcome": "partial",
+  "outcome": "held",
   "httpStatus": "409"
 }
