@@ -1447,5 +1447,71 @@ export const COLUMNS_AUTOPUBLISH_REVIEWS: readonly ColumnQualityReview[] = [
     },
     "reviewedAt": "2026-11-10",
     "validThrough": "2026-11-12"
+  },
+  {
+    "key": "labor:kaigo-ridatsu-boshi-kojin-shuchi-ikoukakunin-2025",
+    "fingerprint": "7095faaca6fd70e88008a165e1f2fc5a333286b15bf6a099aa1529b9989d6e72",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://ikuji-kaigo.mhlw.go.jp/?p=11381",
+        "checkedAt": "2026-11-12",
+        "relevantClaim": "厚労省公式。2025年4月施行項目=介護離職防止のための雇用環境整備/介護に直面した旨の申出をした労働者への個別周知・意向確認/40歳等の早期の情報提供/介護休暇の取得要件緩和。本文の第21条4項・5項、第22条2項・4項、介護休暇6か月未満除外撤廃の記載と整合。",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/law/403AC0000000076",
+        "checkedAt": "2026-11-12",
+        "relevantClaim": "育児・介護休業法(平成3年法律第76号)。介護休業は対象家族1人につき通算93日・3回まで(第11条)。雇用保険法第61条の4の介護休業給付金は本文どおり支給審査はハローワークと明記。制度骨子は標準的で正当。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/43293087025"
+    },
+    "reviewedAt": "2026-11-13",
+    "validThrough": "2026-11-15"
+  },
+  {
+    "key": "labor:roukisho-rinken-zesei-kankoku-taio-roumu",
+    "fingerprint": "b08d5f0fdd2533d5e29bc6fa85b72409c824b7d39adea220109617f6f92b1a62",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://laws.e-gov.go.jp/law/322AC0000000049",
+        "checkedAt": "2026-11-12",
+        "relevantClaim": "労働基準法(昭和22年法律第49号)。第101条=監督官の臨検・帳簿書類提出要求・尋問の権限、第120条=30万円以下の罰金(臨検拒否・虚偽記載等)、第102条=司法警察官の職務(送検)、第104条=労働者の申告と不利益取扱い禁止。本文の引用と一致、標準的で正当。",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/law/347AC0000000057",
+        "checkedAt": "2026-11-12",
+        "relevantClaim": "労働安全衛生法(昭和47年法律第57号)第91条=労働基準監督官の立入検査・質問・物件検査の権限。本文は是正勧告・指導票を『行政指導(不服申立ての対象となる行政処分ではない)』と正しく整理し、送検・企業名公表は弁護士領域と明記。標準的で正当。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/43293087025"
+    },
+    "reviewedAt": "2026-11-13",
+    "validThrough": "2026-11-15"
   }
 ];

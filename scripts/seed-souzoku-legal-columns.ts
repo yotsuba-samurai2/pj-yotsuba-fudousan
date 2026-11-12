@@ -82,6 +82,24 @@ const AUTHOR = {
 
 /** 各記事が評価を集約すべきハブ（本文に必須の内部リンク）。verify() で機械検査する */
 const REQUIRED_HUB_LINKS: Record<string, string[]> = {
+  "shurui-seizo-menkyo-craft-beer-happosyu-youken": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/shurui-kouri-menkyo-tenpo-bukken-yoken",
+    "/legal/column/inshokuten-eigyo-kyoka-hokenjo-setsubi-kijun-shokuhin-eisei",
+    "/legal/column/shokuhin-seizogyo-kyoka-bukken-setsubi-kijun",
+  ],
+  "gaikokuseki-nihon-zaiju-yuigon-houshiki-junkyoho-chuka-taiwan": [
+    "/legal/services/inheritance",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/souzoku",
+    "/legal/column/gaikokuseki-hisouzokunin-junkyoho-tsusokuho-36jo",
+    "/legal/column/kosei-shosho-yuigon-koshonin-shonin-hiyo",
+    "/legal/column/jihitsu-yuigon-hokan-seido-souzoku-tetsuzuki",
+    "/legal/column/jihitsu-kosei-yuigon",
+  ],
   "nochi-shoyu-tekikaku-hojin-setsuritsu-youken-nogyo-sannyu": [
     "/legal/services",
     "/legal/nagare",
@@ -1441,6 +1459,16 @@ function matchesRequiredPhrase(content: string, phrase: string): boolean {
 
 /** 記事ごとに必ず含めるべき表現（機械ゲート。最低限の合否判定） */
 const REQUIRED_PHRASES: Record<string, string[]> = {
+  "shurui-seizo-menkyo-craft-beer-happosyu-youken": [
+    "酒税法第7条第2項",
+    "最低製造数量基準",
+    "構造改革特別区域法",
+  ],
+  "gaikokuseki-nihon-zaiju-yuigon-houshiki-junkyoho-chuka-taiwan": [
+    "遺言の方式の準拠法に関する法律",
+    "公証人法第29条",
+    "法の適用に関する通則法第37条",
+  ],
   "nochi-shoyu-tekikaku-hojin-setsuritsu-youken-nogyo-sannyu": [
     "農地所有適格法人",
     "農地法第2条第3項",
@@ -4255,6 +4283,8 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
 
 /** 記事ごとに含めてはならない表現 */
 const FORBIDDEN_PHRASES: Record<string, string[]> = {
+  "shurui-seizo-menkyo-craft-beer-happosyu-youken": [],
+  "gaikokuseki-nihon-zaiju-yuigon-houshiki-junkyoho-chuka-taiwan": [],
   "nochi-shoyu-tekikaku-hojin-setsuritsu-youken-nogyo-sannyu": [],
   "kazoku-taizai-zairyu-shikakugai-katsudo-28jikan-yobiyose": [],
   "ippan-kashikiri-ryokaku-bus-kyoka-youken-nagare": [],
@@ -8566,6 +8596,60 @@ const ARTICLES: Array<{
       "遺贈の放棄",
       "包括受遺者",
       "相続",
+      "行政書士",
+    ],
+  },
+  {
+    file: "164-shurui-seizo-menkyo-craft-beer-happosyu-youken.md",
+    slug: "shurui-seizo-menkyo-craft-beer-happosyu-youken",
+    date: "2026-11-12",
+    title:
+      "クラフトビールや発泡酒の『酒類製造免許』をとる——最低製造数量基準・設備・特区と、申請の流れ",
+    category: "許認可の手続き（行政書士の実務から）",
+    excerpt:
+      "醸造所（ブルワリー）を開くには、品目別・製造場ごとに所轄税務署長の酒類製造免許が必要です（酒税法第7条第1項）。ビール60キロリットル・発泡酒・その他の醸造酒類6キロリットルの最低製造数量基準（第7条第2項）、場所・設備・需給調整の要件（第10条）、どぶろく特区・ワイン特区（構造改革特別区域法第25条・第26条）の緩和、申請の流れを行政書士の視点で整理しました。",
+    keywords: [
+      "酒類製造免許 クラフトビール",
+      "酒類製造免許 最低製造数量基準 ビール 60キロリットル",
+      "発泡酒 その他の醸造酒 6キロリットル 免許",
+      "どぶろく特区 ワイン特区 酒税法 特例",
+      "酒類製造免許 申請 所轄税務署",
+      "ブルワリー 開業 免許 行政書士",
+    ],
+    tags: [
+      "酒税法",
+      "酒類製造免許",
+      "クラフトビール",
+      "最低製造数量基準",
+      "構造改革特別区域法",
+      "許認可",
+      "行政書士",
+    ],
+  },
+  {
+    file: "165-gaikokuseki-nihon-zaiju-yuigon-houshiki-junkyoho-chuka-taiwan.md",
+    slug: "gaikokuseki-nihon-zaiju-yuigon-houshiki-junkyoho-chuka-taiwan",
+    date: "2026-11-12",
+    title:
+      "日本に住む中国籍・台湾籍の人が日本で遺言を作る——方式の準拠法・公正証書遺言の通訳・本国での効力",
+    category: "相続の手続き（行政書士の実務から）",
+    excerpt:
+      "日本に住む中国籍・台湾籍の人も日本で遺言を作れます。遺言の『方式』は行為地法・本国法・住所地法・常居所地法・不動産所在地法のいずれかに適合すれば有効（遺言の方式の準拠法に関する法律第2条）、『成立・効力』は本国法（通則法第37条）。公正証書遺言の通訳（公証人法第27条・第29条）、自筆証書遺言と保管制度、本国での効力、誰に頼むかの切り分けを行政書士の視点で整理しました。",
+    keywords: [
+      "外国籍 遺言 方式 準拠法",
+      "遺言の方式の準拠法に関する法律 第2条",
+      "公正証書遺言 外国人 通訳 公証人法",
+      "中国籍 台湾籍 遺言 日本",
+      "自筆証書遺言 外国語 保管制度",
+      "遺言 本国 効力 中国 台湾",
+    ],
+    tags: [
+      "遺言",
+      "準拠法",
+      "公正証書遺言",
+      "公証人法",
+      "中国籍",
+      "台湾籍",
       "行政書士",
     ],
   },

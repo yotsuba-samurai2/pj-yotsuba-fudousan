@@ -1,0 +1,113 @@
+{
+  "todayJst": "2026-11-13",
+  "runUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/43293087025",
+  "generationStatus": "validated",
+  "generatedCount": 6,
+  "reviewResult": "success",
+  "reviewReportAvailable": true,
+  "reviewPass": true,
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "minor": 0
+  },
+  "reviewFindings": [],
+  "registeredCount": 2,
+  "qualityEligibleCount": 2,
+  "heldCount": 4,
+  "scheduledCount": 0,
+  "unverifiedSourceCount": 2,
+  "publishedCount": null,
+  "articles": [
+    {
+      "key": "realestate:shoene-tekigo-gimuka-2025-chintai-shinchiku-bukken",
+      "fingerprint": "3c96306452be5cac2394966901b3742659c1981fab9c81780a47c3d0277fc5a4",
+      "title": "2025年4月から全建築物に省エネ基準適合義務——賃貸アパート・小規模テナントを新築するオーナーが物件計画で変わること",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録です",
+        "確認済みの公的な一次根拠が不足しています"
+      ],
+      "sourceFailures": [
+        {
+          "url": "https://www.mlit.go.jp/report/press/content/001841001.pdf",
+          "checkedAt": "2026-11-12",
+          "relevantClaim": "国交省の省エネ義務化広報資料。WebFetchではバイナリPDFのため本文テキスト抽出不可。施行日・対象拡大の骨子はlg.jp(札幌市)official及び他の公的案内で裏取り済み。",
+          "verified": false
+        }
+      ],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "realestate:chuka-pro-kyutaishin-kubun-mansion-dd",
+      "fingerprint": "d44e2fbe5dceca14bec04f8227c535d3b3afbd7b3cd7e6fe8fe62070474c1ec8",
+      "title": "中国・台湾の不動産プロが日本の旧耐震区分マンションを評価する——耐震診断・建替え決議・修繕積立金のデューデリ",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録です",
+        "確認済みの公的な一次根拠が不足しています"
+      ],
+      "sourceFailures": [
+        {
+          "url": "https://www.moj.go.jp/content/001460460.pdf",
+          "checkedAt": "2026-11-12",
+          "relevantClaim": "改正区分所有法の詳細(建替え緩和事由5類型・取壊し決議の全員同意→5分の4等)。WebFetchではバイナリPDFのため本文抽出不可。緩和の枠組み自体は複数の公的・専門解説で整合を確認。細目はe-Gov最新条文で要確認(本文も参照日付きで要確認を明記)。",
+          "verified": false
+        }
+      ],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:shurui-seizo-menkyo-craft-beer-happosyu-youken",
+      "fingerprint": "24be5a76662019f285dee3c7412a3274f6b81beeecece837b68ed030fb0e4a4c",
+      "title": "クラフトビールや発泡酒の『酒類製造免許』をとる——最低製造数量基準・設備・特区と、申請の流れ",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:gaikokuseki-nihon-zaiju-yuigon-houshiki-junkyoho-chuka-taiwan",
+      "fingerprint": "9054fe9c5ef84fe721f3083fb2ca74cef04da64a3ca4f9c82cda9f67366a7ed1",
+      "title": "日本に住む中国籍・台湾籍の人が日本で遺言を作る——方式の準拠法・公正証書遺言の通訳・本国での効力",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:kaigo-ridatsu-boshi-kojin-shuchi-ikoukakunin-2025",
+      "fingerprint": "7095faaca6fd70e88008a165e1f2fc5a333286b15bf6a099aa1529b9989d6e72",
+      "title": "介護離職を防ぐために会社がやること——2025年4月から義務化された個別の周知・意向確認と両立支援",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:roukisho-rinken-zesei-kankoku-taio-roumu",
+      "fingerprint": "b08d5f0fdd2533d5e29bc6fa85b72409c824b7d39adea220109617f6f92b1a62",
+      "title": "労働基準監督署の調査（臨検）が入ったら——是正勧告・指導票への対応と、ふだんの備え",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    }
+  ]
+}
