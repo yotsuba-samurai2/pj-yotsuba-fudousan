@@ -1,8 +1,27 @@
 {
   "dryRun": false,
-  "runAt": "2026-11-12T10:33:28.286Z",
-  "todayJst": "2026-11-12",
-  "targets": [],
+  "runAt": "2026-11-13T10:26:35.971Z",
+  "todayJst": "2026-11-13",
+  "targets": [
+    {
+      "key": "labor:kaigo-ridatsu-boshi-kojin-shuchi-ikoukakunin-2025",
+      "business": "labor",
+      "slug": "kaigo-ridatsu-boshi-kojin-shuchi-ikoukakunin-2025",
+      "title": "介護離職を防ぐために会社がやること——2025年4月から義務化された個別の周知・意向確認と両立支援",
+      "date": "2026-11-11",
+      "category": "仕事と介護の両立",
+      "path": "/labor/column/kaigo-ridatsu-boshi-kojin-shuchi-ikoukakunin-2025"
+    },
+    {
+      "key": "labor:roukisho-rinken-zesei-kankoku-taio-roumu",
+      "business": "labor",
+      "slug": "roukisho-rinken-zesei-kankoku-taio-roumu",
+      "title": "労働基準監督署の調査（臨検）が入ったら——是正勧告・指導票への対応と、ふだんの備え",
+      "date": "2026-11-12",
+      "category": "労務管理",
+      "path": "/labor/column/roukisho-rinken-zesei-kankoku-taio-roumu"
+    }
+  ],
   "held": [
     {
       "key": "labor:insatsu-gyo-kaigyo-roumu-yuuki-youzai-shinya-anzen-eisei",
@@ -75,11 +94,85 @@
         "zhの内部リンクに言語不一致があります",
         "公開レビュー記録が未登録です"
       ]
+    },
+    {
+      "key": "legal:gaikokuseki-nihon-zaiju-yuigon-houshiki-junkyoho-chuka-taiwan",
+      "business": "legal",
+      "slug": "gaikokuseki-nihon-zaiju-yuigon-houshiki-junkyoho-chuka-taiwan",
+      "title": "日本に住む中国籍・台湾籍の人が日本で遺言を作る——方式の準拠法・公正証書遺言の通訳・本国での効力",
+      "date": "2026-11-12",
+      "category": "相続の手続き（行政書士の実務から）",
+      "path": "/legal/column/gaikokuseki-nihon-zaiju-yuigon-houshiki-junkyoho-chuka-taiwan",
+      "qualityHoldReasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "legal:shurui-seizo-menkyo-craft-beer-happosyu-youken",
+      "business": "legal",
+      "slug": "shurui-seizo-menkyo-craft-beer-happosyu-youken",
+      "title": "クラフトビールや発泡酒の『酒類製造免許』をとる——最低製造数量基準・設備・特区と、申請の流れ",
+      "date": "2026-11-12",
+      "category": "許認可の手続き（行政書士の実務から）",
+      "path": "/legal/column/shurui-seizo-menkyo-craft-beer-happosyu-youken",
+      "qualityHoldReasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "realestate:chuka-pro-kyutaishin-kubun-mansion-dd",
+      "business": "realestate",
+      "slug": "chuka-pro-kyutaishin-kubun-mansion-dd",
+      "title": "中国・台湾の不動産プロが日本の旧耐震区分マンションを評価する——耐震診断・建替え決議・修繕積立金のデューデリ",
+      "date": "2026-11-12",
+      "category": "投資・事業用不動産",
+      "path": "/column/chuka-pro-kyutaishin-kubun-mansion-dd",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "realestate:shoene-tekigo-gimuka-2025-chintai-shinchiku-bukken",
+      "business": "realestate",
+      "slug": "shoene-tekigo-gimuka-2025-chintai-shinchiku-bukken",
+      "title": "2025年4月から全建築物に省エネ基準適合義務——賃貸アパート・小規模テナントを新築するオーナーが物件計画で変わること",
+      "date": "2026-11-12",
+      "category": "投資・事業用不動産",
+      "path": "/column/shoene-tekigo-gimuka-2025-chintai-shinchiku-bukken",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録です"
+      ]
     }
   ],
   "scheduled": [],
   "ok": false,
-  "published": [],
+  "published": [
+    {
+      "key": "labor:kaigo-ridatsu-boshi-kojin-shuchi-ikoukakunin-2025",
+      "business": "labor",
+      "slug": "kaigo-ridatsu-boshi-kojin-shuchi-ikoukakunin-2025",
+      "title": "介護離職を防ぐために会社がやること——2025年4月から義務化された個別の周知・意向確認と両立支援",
+      "date": "2026-11-11",
+      "category": "仕事と介護の両立",
+      "path": "/labor/column/kaigo-ridatsu-boshi-kojin-shuchi-ikoukakunin-2025"
+    },
+    {
+      "key": "labor:roukisho-rinken-zesei-kankoku-taio-roumu",
+      "business": "labor",
+      "slug": "roukisho-rinken-zesei-kankoku-taio-roumu",
+      "title": "労働基準監督署の調査（臨検）が入ったら——是正勧告・指導票への対応と、ふだんの備え",
+      "date": "2026-11-12",
+      "category": "労務管理",
+      "path": "/labor/column/roukisho-rinken-zesei-kankoku-taio-roumu"
+    }
+  ],
+  "skipped": [],
   "errors": [
     {
       "key": "labor:insatsu-gyo-kaigyo-roumu-yuuki-youzai-shinya-anzen-eisei",
@@ -100,9 +193,25 @@
     {
       "key": "legal:kensetsugyo-kessan-henko-todoke-jigyo-nendo-shuryo",
       "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録です"
+    },
+    {
+      "key": "legal:gaikokuseki-nihon-zaiju-yuigon-houshiki-junkyoho-chuka-taiwan",
+      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録です"
+    },
+    {
+      "key": "legal:shurui-seizo-menkyo-craft-beer-happosyu-youken",
+      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録です"
+    },
+    {
+      "key": "realestate:chuka-pro-kyutaishin-kubun-mansion-dd",
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
+    },
+    {
+      "key": "realestate:shoene-tekigo-gimuka-2025-chintai-shinchiku-bukken",
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
     }
   ],
-  "blocked": "5本は品質確認待ちのため自動公開しません。記事別の理由を確認してください。forceでも解除しません。",
-  "outcome": "held",
+  "blocked": "9本は品質確認待ちのため自動公開しません。記事別の理由を確認してください。forceでも解除しません。",
+  "outcome": "partial",
   "httpStatus": "409"
 }
