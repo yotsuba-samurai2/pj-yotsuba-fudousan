@@ -82,6 +82,22 @@ const AUTHOR = {
 
 /** 各記事が評価を集約すべきハブ（本文に必須の内部リンク）。verify() で機械検査する */
 const REQUIRED_HUB_LINKS: Record<string, string[]> = {
+  "shakai-fukushi-hojin-setsuritsu-ninka-nagare-shisan-youken": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/npo-hojin-setsuritsu-ninsho-nagare-shokatsucho",
+    "/legal/column/ippan-shadan-houjin-setsuritsu-hieiri-teikan",
+    "/legal/column/iryohojin-setsuritsu-ninka-nagare-shorui",
+  ],
+  "startup-visa-gaikokujin-kigyo-katsudo-sokushin-tokutei-katsudo": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/keiei-kanri-zairyu-2025-kaisei-shihonkin-joukin-shokuin-chuka-taiwan",
+    "/legal/column/keieikanri-zairyu-chuka-kigyousha-kaisha-setsuritsu",
+    "/legal/column/keieikanri-koshin-jigyo-keizokusei-rissho-chuka-taiwan",
+  ],
   "shurui-seizo-menkyo-craft-beer-happosyu-youken": [
     "/legal/services",
     "/legal/nagare",
@@ -1459,6 +1475,30 @@ function matchesRequiredPhrase(content: string, phrase: string): boolean {
 
 /** 記事ごとに必ず含めるべき表現（機械ゲート。最低限の合否判定） */
 const REQUIRED_PHRASES: Record<string, string[]> = {
+  "shakai-fukushi-hojin-setsuritsu-ninka-nagare-shisan-youken": [
+    "社会福祉法第31条",
+    "社会福祉法第30条",
+    "社会福祉法第34条",
+    "社会福祉法第25条",
+    "評議員会",
+    "基本財産",
+    "所轄庁",
+    "別々にご契約",
+    "独立した事業体",
+    "別事業体",
+    "紹介料を受け取りません",
+  ],
+  "startup-visa-gaikokujin-kigyo-katsudo-sokushin-tokutei-katsudo": [
+    "外国人起業活動促進事業",
+    "起業準備活動計画",
+    "特定活動",
+    "経営・管理",
+    "行政書士法第1条の3",
+    "別々にご契約",
+    "独立した事業体",
+    "別事業体",
+    "紹介料を受け取りません",
+  ],
   "shurui-seizo-menkyo-craft-beer-happosyu-youken": [
     "酒税法第7条第2項",
     "最低製造数量基準",
@@ -4283,6 +4323,8 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
 
 /** 記事ごとに含めてはならない表現 */
 const FORBIDDEN_PHRASES: Record<string, string[]> = {
+  "shakai-fukushi-hojin-setsuritsu-ninka-nagare-shisan-youken": [],
+  "startup-visa-gaikokujin-kigyo-katsudo-sokushin-tokutei-katsudo": [],
   "shurui-seizo-menkyo-craft-beer-happosyu-youken": [],
   "gaikokuseki-nihon-zaiju-yuigon-houshiki-junkyoho-chuka-taiwan": [],
   "nochi-shoyu-tekikaku-hojin-setsuritsu-youken-nogyo-sannyu": [],
@@ -8650,6 +8692,60 @@ const ARTICLES: Array<{
       "公証人法",
       "中国籍",
       "台湾籍",
+      "行政書士",
+    ],
+  },
+  {
+    file: "166-shakai-fukushi-hojin-setsuritsu-ninka-nagare-shisan-youken.md",
+    slug: "shakai-fukushi-hojin-setsuritsu-ninka-nagare-shisan-youken",
+    date: "2026-11-13",
+    title:
+      "社会福祉法人の設立認可の流れ｜所轄庁・資産要件・理事と評議員会",
+    category: "許認可の手続き（行政書士の実務から）",
+    excerpt:
+      "社会福祉法人は、社会福祉事業を行うことを目的として社会福祉法の定めにより設立される法人です（第22条）。設立には所轄庁（主たる事務所所在地の都道府県知事、事業がその区域内で完結する特別区・市では区長・市長／第30条）による定款の認可（第31条）と、社会福祉事業を行うのに必要な資産（第25条）が必要です。機関は評議員・評議員会・理事・理事会・監事が必須で（第36条）、理事6人以上・監事2人以上（第44条第3項）、評議員は理事の員数を超える数＝7人以上（第40条第3項）、一定規模の特定社会福祉法人は会計監査人も必要（第37条）。認可後に設立登記をして成立します（第34条）。設立認可申請＝行政書士／設立登記＝司法書士／労務・社会保険＝社労士／会計・税務＝税理士／物件＝不動産の分離受任を、別々にご契約いただく前提で整理しました。",
+    keywords: [
+      "社会福祉法人 設立認可 流れ",
+      "社会福祉法人 所轄庁 都道府県 市",
+      "社会福祉法人 資産要件 基本財産",
+      "社会福祉法人 理事 監事 評議員 員数",
+      "社会福祉法人 評議員会 平成28年改正",
+      "社会福祉法人 設立登記 第34条 成立",
+    ],
+    tags: [
+      "社会福祉法",
+      "社会福祉法人",
+      "設立認可",
+      "評議員会",
+      "基本財産",
+      "許認可",
+      "行政書士",
+    ],
+  },
+  {
+    file: "167-startup-visa-gaikokujin-kigyo-katsudo-sokushin-tokutei-katsudo.md",
+    slug: "startup-visa-gaikokujin-kigyo-katsudo-sokushin-tokutei-katsudo",
+    date: "2026-11-13",
+    title:
+      "スタートアップビザで日本に来て会社を作る｜外国人起業活動促進事業の在留",
+    category: "許認可の手続き（行政書士の実務から）",
+    excerpt:
+      "スタートアップビザは、経済産業省の外国人起業活動促進事業に基づく仕組みです。在留資格「経営・管理」の要件を直ちに満たせない外国人起業家が、自治体（実施団体）に起業準備活動計画の確認を受け、在留資格「特定活動」で会社設立などの準備を進められます。確認証明書の交付を受けて地方出入国在留管理局へ申請し、在留できる期間は更新を含め最長2年程度ですが、更新単位や対象自治体は自治体・計画で異なり、制度改定も多いので最新ページで必ず確認します。期間満了後も事業を続けるには「経営・管理」への変更が必要です。起業活動計画の確認申請・申請取次＝行政書士（行政書士法第1条の3）／会社設立登記＝司法書士／社会保険＝社労士／税務＝税理士／物件＝不動産の分離受任を、別々にご契約いただく前提で整理しました。",
+    keywords: [
+      "スタートアップビザ 外国人起業活動促進事業",
+      "スタートアップビザ 経営管理ビザ 違い",
+      "起業準備活動計画 確認証明書 自治体",
+      "特定活動 起業 在留期間 最長2年",
+      "スタートアップビザ 経営管理 変更 3000万円",
+      "外国人 起業 日本 会社設立 在留資格",
+    ],
+    tags: [
+      "スタートアップビザ",
+      "外国人起業活動促進事業",
+      "特定活動",
+      "経営・管理",
+      "在留資格",
+      "許認可",
       "行政書士",
     ],
   },

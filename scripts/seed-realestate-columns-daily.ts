@@ -3508,6 +3508,46 @@ const ARTICLES: ArticleSpec[] = [
     localesWithTranslations: ["en", "zh-tw", "zh"],
     hubLinks: ["/toushi"],
   },
+  {
+    file: "172-ev-kyusoku-juden-setsubi-chintai-shougyou-bukken-shoubou.md",
+    slug: "ev-kyusoku-juden-setsubi-chintai-shougyou-bukken-shoubou",
+    title: "EV急速充電設備を備えた賃貸・商業物件｜消防法の技術基準と導入の進め方",
+    publishedAt: "2026-11-13",
+    category: "投資・事業用不動産",
+    excerpt:
+      "賃貸・商業物件にEV充電設備を置くとき、物件側で先に効くのは『普通充電か急速充電か』の区分です。急速充電設備は消防法に基づく各市町村の火災予防条例の規制対象で、位置・構造・管理の基準と設置の届出が求められます。令和5年（2023年）の対象火気省令改正で全出力200キロワットの上限が撤廃されました。分譲マンションへの後付けは共用部分の変更として区分所有法の決議・専用使用権の整理が要ります。東京都文京区の宅地建物取引士兼行政書士が、消防法令と区分所有法の順に整理します。設置工事は登録電気工事業者、登録・補助金申請は行政書士、決議の紛争は弁護士、税務は税理士へ分離受任でご案内します。",
+    keywords: [
+      "EV充電設備 賃貸物件",
+      "急速充電設備 消防法 火災予防条例",
+      "急速充電設備 全出力 200kW 撤廃",
+      "EV充電 分譲マンション 区分所有法 決議",
+      "EV充電 受電容量 補助金",
+    ],
+    tags: ["事業用不動産", "EV充電", "消防法", "区分所有法"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/toushi", "/office"],
+  },
+  {
+    file: "173-chugokugo-buyer-keibai-kobai-bukken-nyusatsu-daikin-nouhu.md",
+    slug: "chugokugo-buyer-keibai-kobai-bukken-nyusatsu-daikin-nouhu",
+    title: "（中国語バイヤー向け）日本の競売・公売で不動産を買う｜入札から引渡しまで",
+    publishedAt: "2026-11-13",
+    category: "投資・事業用不動産",
+    excerpt:
+      "日本の裁判所競売（民事執行法）と税の滞納処分としての公売（国税徴収法・地方税法）は、入札で不動産を取得するルートですが、任意売買と手続もリスクも違います。競売は3点セット（物件明細書・現況調査報告書・評価書）を読み、売却基準価額の8割以上で入札、売却許可決定の確定後に代金を納付し、占有者が残れば引渡命令を申し立てます。東京都文京区の宅地建物取引士兼行政書士が、民事執行法・国税徴収法の順に整理します。登記は司法書士、明渡し紛争は弁護士、評価・譲渡所得税は不動産鑑定士・税理士、非居住者の納税管理人は税理士へ分離受任でご案内します。",
+    keywords: [
+      "不動産競売 公売 違い",
+      "競売 3点セット 物件明細書 現況調査報告書 評価書",
+      "競売 買受可能価額 売却基準価額 8割",
+      "引渡命令 民事執行法 83条",
+      "非居住者 競売 納税管理人 登記",
+    ],
+    tags: ["中国語対応", "競売", "公売", "民事執行法"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/toushi"],
+  },
 ];
 
 function toPlainText(md: string): string {
