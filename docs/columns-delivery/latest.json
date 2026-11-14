@@ -1,6 +1,6 @@
 {
-  "todayJst": "2026-11-14",
-  "runUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/43492128189",
+  "todayJst": "2026-11-15",
+  "runUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/43623226134",
   "generationStatus": "validated",
   "generatedCount": 6,
   "reviewResult": "success",
@@ -8,40 +8,111 @@
   "reviewPass": false,
   "findings": {
     "blocker": 0,
-    "major": 2,
-    "minor": 1
+    "major": 1,
+    "minor": 3
   },
   "reviewFindings": [
     {
-      "file": "scripts/realestate-columns/172-ev-kyusoku-juden-setsubi-chintai-shougyou-bukken-shoubou.md",
+      "file": "scripts/labor-columns/207-keikaku-nenkyu-rousi-kyotei-5nichi-gimu-kankei.md",
       "severity": "major",
-      "issue": "急速充電設備に関する対象火気省令の施行日を『令和5年4月1日』と結論・本文(24行)・FAQ(75行)・出典(87行)および英/繁/簡の4言語で断定しているが、官公庁(総務省消防庁)資料の経過措置は『令和5年10月1日施行の際現に設置され…改正後の対象火気省令第3条20号に規定する急速充電設備』と記しており、急速充電設備規定の省令施行日は令和5年10月1日。本文は逆に10月1日を『各自治体の火災予防条例の施行時期(松山市・今治市)』として省令施行日と切り分けており、施行日の帰属が誤り。公布日(令和5年2月21日)・消防予第113号・200kW上限撤廃・分離型整備は正しい。",
-      "fix": "『省令の施行日は令和5年4月1日』を『(急速充電設備に係る対象火気省令第3条20号の)施行日は令和5年10月1日』に修正し、4言語すべてで整合させる。原本の官報・省令附則で施行期日を直接確認のうえ訂正する(本レビューでは該当PDFがCID符号化で直接読取不能だったため、必ず一次附則で再確認)。"
+      "issue": "年5日取得義務からの控除（労働者の時季指定分・計画的付与分を5日から差し引く）規定を、結論・本文(46行)・表(50-51行)・FAQ(102行)・『この記事の根拠』(111行)の5か所で『労働基準法第39条第7項ただし書』と記載。e-Gov法令検索の原文で確認したところ、第39条第7項は『…与えなければならない。』で終わりただし書は存在せず、控除規定は独立した第39条第8項（『前項の規定にかかわらず、第五項若しくは第六項の規定により…与えた…日数…分については…時季を定めることにより与えることを要しない』）。実体的な結論は正しいが根拠条項の指定が誤り。en/zh/zh-tw全訳に波及。",
+      "fix": "『第7項ただし書』を『第8項』に、『同項ただし書』を『第8項』に全言語で修正（結論・46行・表・FAQ・根拠の5か所＋4言語）。原稿修正は本審査では行わない（ファイル不変更の指示のため指摘のみ）。"
     },
     {
-      "file": "scripts/realestate-columns/zh/172-ev-kyusoku-juden-setsubi-chintai-shougyou-bukken-shoubou.md",
-      "severity": "major",
-      "issue": "本文導入(10行目)の読者層に『关注日本法院拍卖物件』(日本の裁判所競売物件に関心のある)という記述があり、繁体字版(zh-tw)にも同じ『關注日本法院拍賣物件』が入っている。日本語原稿・英語版にはこの競売への言及はなく、別記事(173 競売・公売)の読者層の文がEV充電記事に混入した翻訳不一致。日本語にない主張が訳文に混じっている。",
-      "fix": "zh・zh-tw の導入文から競売物件への言及を削除し、日本語/英語と同じ『賃貸・商業ビルのオーナーやEV充電付き物件の取得・付加価値化を検討する投資家』に揃える。"
-    },
-    {
-      "file": "scripts/labor-columns/zh/206-mansion-kanrin-kanshi-danzoku-roudo-tekiyo-jogai-kyoka-roumu.md",
+      "file": "scripts/legal-columns/168-jokaso-koji-gyo-touroku-seiso-gyo-kyoka-nagare-youken.md",
       "severity": "minor",
-      "issue": "労働基準法『第41条3号』(号=item)を中国語訳で『第41條第3項』(項=paragraph)と訳出。簡体字・繁体字の両版で一貫しており、指す条文・内容は正しく英語版は『Article 41(iii)』と正しい。法的実質には影響しないが号/項の用語が不正確。",
-      "fix": "『第41條第3項』を『第41條第3款』(または『第41條第3号』)に修正し、英語版の item(iii) と整合させる。公開を止めるほどの問題ではない。"
+      "issue": "出典注記『浄化槽法…最終改正 令和8年5月22日公布・令和8年7月1日施行の内容を含む』を裏取りできず。go.jp/lg.jpを検索しても令和8年の浄化槽法本体の改正法は確認できない（確認できたのは令和8年の省令・告示・自治体要綱の改正のみ）。引用した各条文（21/29/33/35/36/42条）の内容自体はe-Gov原文と一致し、substantiveな誤りはない。",
+      "fix": "改正日を一次情報（官報・環境省ページ）で再確認するか、確認できない場合は『最終改正はe-Govで要確認』に留め、未確認の具体的公布日・施行日を断定的に記載しない。"
+    },
+    {
+      "file": "scripts/realestate-columns/en/174-seikatsu-kaigo-jigyosho-bukken-youken-shitei.md",
+      "severity": "minor",
+      "issue": "英語版で『この記事の出典（一次情報）』の節見出しが日本語のまま未翻訳（120行）。本文・一次情報の内容は日本語版と一致しており、体裁のみの不整合。",
+      "fix": "見出しを 'Sources (Primary Information)' 等に翻訳。"
+    },
+    {
+      "file": "scripts/realestate-columns/en/175-souzoku-kashiya-akewatashi-seitojiyu-tachinoki-ryo-baikyaku.md",
+      "severity": "minor",
+      "issue": "英語版で『この記事の出典（一次情報）』の節見出しが日本語のまま未翻訳（106行）。内容は日本語版と一致、体裁のみ。",
+      "fix": "見出しを 'Sources (Primary Information)' 等に翻訳。"
     }
   ],
   "registeredCount": 0,
   "qualityEligibleCount": 0,
   "heldCount": 6,
   "scheduledCount": 0,
-  "unverifiedSourceCount": 4,
+  "unverifiedSourceCount": 2,
   "publishedCount": null,
   "articles": [
     {
-      "key": "realestate:ev-kyusoku-juden-setsubi-chintai-shougyou-bukken-shoubou",
-      "fingerprint": "d0e6c6f2cc88620511866cadc491adf5fa83dd6c61d4e220c8ee6947df410b33",
-      "title": "EV急速充電設備を備えた賃貸・商業物件｜消防法の技術基準と導入の進め方",
+      "key": "realestate:seikatsu-kaigo-jigyosho-bukken-youken-shitei",
+      "fingerprint": "1a4e364b5c3a165aa9bcf945e437570cdc5e768e00fd720d57900efb1d7013cf",
+      "title": "生活介護事業所の物件は何を満たせばいい？設備基準・用途地域・消防の確認点",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録です",
+        "独立レビューに未解決の重大な指摘があります"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "realestate:souzoku-kashiya-akewatashi-seitojiyu-tachinoki-ryo-baikyaku",
+      "fingerprint": "e2b672d84a383c670f13ab8b9e1c6000ee7a237b5c52e47fb7fac80247ea1463",
+      "title": "相続した貸家は空けてから売る？正当事由・立退料と居付き売却の分かれ目",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録です",
+        "独立レビューに未解決の重大な指摘があります"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:jokaso-koji-gyo-touroku-seiso-gyo-kyoka-nagare-youken",
+      "fingerprint": "921b21cb7580f6981c5381bc86e99505654f71b88c68952805f2ac7f164c5d0c",
+      "title": "浄化槽工事業の登録と浄化槽清掃業の許可は何が違う？要件と流れ",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です",
+        "独立レビューに未解決の重大な指摘があります"
+      ],
+      "sourceFailures": [
+        {
+          "url": "https://laws.e-gov.go.jp/api/1/lawdata/358AC1000000043",
+          "checkedAt": "2026-11-14",
+          "relevantClaim": "出典注記の『浄化槽法 最終改正 令和8年5月22日公布・令和8年7月1日施行』。令和8年の浄化槽法本体改正法は公的検索で確認できず(省令・告示・自治体要綱の改正のみ確認)。引用条文の内容は現行法と一致するが、この改正日は裏取り不能。",
+          "verified": false
+        }
+      ],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:yuigon-to-kotonaru-isanbunkatsu-kyogi-kahi-youken",
+      "fingerprint": "794ebfab24abb5816874706217579b7ae42e82473f486ab75c21e3b43e9d6772",
+      "title": "遺言と違う内容で遺産分割協議はできる？できる条件と注意点",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です",
+        "独立レビューに未解決の重大な指摘があります"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:keikaku-nenkyu-rousi-kyotei-5nichi-gimu-kankei",
+      "fingerprint": "cdf1f27c02b250c929e5ce84e9ada0cac62016181176aca09e80e9896d754719",
+      "title": "計画年休（計画的付与）とは？労使協定の作り方と5日取得義務の関係",
       "registered": false,
       "state": "held",
       "reasons": [
@@ -51,104 +122,25 @@
       ],
       "sourceFailures": [
         {
-          "url": "https://www.fdma.go.jp/pressrelease/houdou/items/230221_yobou.pdf",
-          "checkedAt": "2026-11-13",
-          "relevantClaim": "本文の『省令施行日=令和5年4月1日』の裏付けは取得できず。fdma/総務省資料の経過措置は『令和5年10月1日施行の際現に…対象火気省令第3条20号に規定する急速充電設備』とし、急速充電設備規定の施行日は令和5年10月1日を示す。本PDFはCID符号化で直接機械読取が不能だった",
+          "url": "https://laws.e-gov.go.jp/api/1/lawdata/322AC0000000049",
+          "checkedAt": "2026-11-14",
+          "relevantClaim": "労基法第39条6項=労使協定による計画的付与は『5日を超える部分』が対象(本文と一致)。第39条7項=10労働日以上の労働者につき使用者が基準日から1年以内に5日を時季指定して与える義務(ただし書なし、『与えなければならない』で終わる)。控除規定は第39条第8項=『前項の規定にかかわらず、第五項若しくは第六項の規定により与えた日数(5日上限)分については時季を定めて与えることを要しない』。記事が控除根拠を『第7項ただし書』とする記載は誤り(正しくは第8項)。",
           "verified": false
         }
       ],
       "sourceEvidenceAvailable": true
     },
     {
-      "key": "realestate:chugokugo-buyer-keibai-kobai-bukken-nyusatsu-daikin-nouhu",
-      "fingerprint": "953a847733c91a4b4dac4b50efdd9b9c335ce6c51deacd95d931700dc19572f5",
-      "title": "（中国語バイヤー向け）日本の競売・公売で不動産を買う｜入札から引渡しまで",
+      "key": "labor:tsuki-60jikan-chokin-warimashi-daitai-kyuka-chusho",
+      "fingerprint": "a0ad3bb9bd676e0db10d7443fe6e42ebf011da44b6ee9c014cc95ad05fab4158",
+      "title": "月60時間超の残業は割増50%？中小企業の代替休暇制度の作り方",
       "registered": false,
       "state": "held",
       "reasons": [
-        "公開レビュー記録が未登録です",
-        "独立レビューに未解決の重大な指摘があります"
-      ],
-      "sourceFailures": [
-        {
-          "url": "https://laws.e-gov.go.jp/law/354AC0000000004",
-          "checkedAt": "2026-11-13",
-          "relevantClaim": "民執法60条=売却基準価額/買受可能価額(2割控除=8割以上)、66条=買受けの申出の保証、78条=代金納付、83条=引渡命令(代金納付から6か月・抵当建物使用者が占有していた建物は9か月)。本文の条文引用は確立した現行法と整合(e-GovがJSレンダリングのため直接機械読取は不可、既知の確立法で確認)",
-          "verified": false
-        }
-      ],
-      "sourceEvidenceAvailable": true
-    },
-    {
-      "key": "legal:shakai-fukushi-hojin-setsuritsu-ninka-nagare-shisan-youken",
-      "fingerprint": "106791e96ad1a365a05ee98e776a6fb9cb8ea99353b2acab226f453c7a796ca5",
-      "title": "社会福祉法人の設立認可の流れ｜所轄庁・資産要件・理事と評議員会",
-      "registered": false,
-      "state": "held",
-      "reasons": [
-        "enの内部リンクに言語不一致があります",
-        "zh-twの内部リンクに言語不一致があります",
-        "zhの内部リンクに言語不一致があります",
         "公開レビュー記録が未登録です",
         "独立レビューに未解決の重大な指摘があります"
       ],
       "sourceFailures": [],
-      "sourceEvidenceAvailable": true
-    },
-    {
-      "key": "legal:startup-visa-gaikokujin-kigyo-katsudo-sokushin-tokutei-katsudo",
-      "fingerprint": "347bce01fbe6c11830591d1e2fd783c74beccbeeea32ffba17eab022d6f58d78",
-      "title": "スタートアップビザで日本に来て会社を作る｜外国人起業活動促進事業の在留",
-      "registered": false,
-      "state": "held",
-      "reasons": [
-        "enの内部リンクに言語不一致があります",
-        "zh-twの内部リンクに言語不一致があります",
-        "zhの内部リンクに言語不一致があります",
-        "公開レビュー記録が未登録です",
-        "独立レビューに未解決の重大な指摘があります"
-      ],
-      "sourceFailures": [],
-      "sourceEvidenceAvailable": true
-    },
-    {
-      "key": "labor:kodo-professional-seido-dounyu-youken-roushi-iinkai-kenko-kakuho",
-      "fingerprint": "122443c47eeafa2f62113a7928e83ae00c4935a20ec8aab2f6800afe2cb1de63",
-      "title": "高度プロフェッショナル制度の導入要件——労使委員会・年104日休日・健康確保措置",
-      "registered": false,
-      "state": "held",
-      "reasons": [
-        "公開レビュー記録が未登録です",
-        "独立レビューに未解決の重大な指摘があります"
-      ],
-      "sourceFailures": [
-        {
-          "url": "https://laws.e-gov.go.jp/law/322AC0000000049",
-          "checkedAt": "2026-11-13",
-          "relevantClaim": "労基法41条の2=労使委員会5分の4以上の決議・本人の書面同意・所轄労基署長への届出を要件に労働時間/休憩/休日/深夜割増を適用除外、年104日以上かつ4週4日以上の休日。年収1,075万円・対象5業務・選択的措置は施規34条の2。本文と整合(e-Gov SPAのため直接機械読取は不可、確立した現行法で確認)",
-          "verified": false
-        }
-      ],
-      "sourceEvidenceAvailable": true
-    },
-    {
-      "key": "labor:mansion-kanrin-kanshi-danzoku-roudo-tekiyo-jogai-kyoka-roumu",
-      "fingerprint": "83c0965820e1673548218f57436962ebcda1f722cdeeda552543ee741dca3f7f",
-      "title": "マンション管理員の労働時間——監視・断続的労働の適用除外許可と手待時間",
-      "registered": false,
-      "state": "held",
-      "reasons": [
-        "公開レビュー記録が未登録です",
-        "独立レビューに未解決の重大な指摘があります"
-      ],
-      "sourceFailures": [
-        {
-          "url": "https://laws.e-gov.go.jp/law/322AC0000000049",
-          "checkedAt": "2026-11-13",
-          "relevantClaim": "労基法41条3号=監視・断続的労働で行政官庁の許可を受けた者は労働時間/休憩/休日の規定を適用除外(深夜割増は第37条4項で残存・基発1506号)。許可は施規34条の様式第14号。本文と整合。ただし中国語訳は『号』を『項』と訳出(軽微)。e-Gov SPAのため直接機械読取は不可、確立した現行法で確認",
-          "verified": false
-        }
-      ],
       "sourceEvidenceAvailable": true
     }
   ]

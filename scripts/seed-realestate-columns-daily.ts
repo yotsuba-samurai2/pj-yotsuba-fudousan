@@ -3548,6 +3548,46 @@ const ARTICLES: ArticleSpec[] = [
     localesWithTranslations: ["en", "zh-tw", "zh"],
     hubLinks: ["/toushi"],
   },
+  {
+    file: "174-seikatsu-kaigo-jigyosho-bukken-youken-shitei.md",
+    slug: "seikatsu-kaigo-jigyosho-bukken-youken-shitei",
+    title: "生活介護事業所の物件は何を満たせばいい？設備基準・用途地域・消防の確認点",
+    publishedAt: "2026-11-14",
+    category: "投資・事業用不動産",
+    excerpt:
+      "生活介護は障害者総合支援法第5条第7項の障害福祉サービスで、既存建物を転用できるかはまず設備・用途地域・消防の3点を物件目線で確認します。設備基準は平成18年厚生労働省令第171号第81条で、訓練・作業室、相談室、洗面所、便所、多目的室その他運営に必要な設備とされ、静養室・浴室は必須列挙ではありません。建築基準法では施行令第19条第1項の児童福祉施設等に当たり用途地域を別表第二で、消防は施行令別表第一（6）項で確認します。東京都文京区の宅地建物取引士兼行政書士が条文から整理します。指定申請は行政書士、用途変更・確認申請は建築士、人員配置・労務は社労士、報酬請求・税務は税理士へ分離受任でご案内します。",
+    keywords: [
+      "生活介護 物件 要件",
+      "生活介護 設備基準 厚生労働省令171号 81条",
+      "生活介護 静養室 浴室 必須",
+      "生活介護 用途地域 児童福祉施設等 建築基準法",
+      "生活介護 消防法 別表第一 6項",
+    ],
+    tags: ["事業用不動産", "障害福祉", "用途地域", "消防法"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/office", "/toushi"],
+  },
+  {
+    file: "175-souzoku-kashiya-akewatashi-seitojiyu-tachinoki-ryo-baikyaku.md",
+    slug: "souzoku-kashiya-akewatashi-seitojiyu-tachinoki-ryo-baikyaku",
+    title: "相続した貸家は空けてから売る？正当事由・立退料と居付き売却の分かれ目",
+    publishedAt: "2026-11-14",
+    category: "相続",
+    excerpt:
+      "賃借人が入居中の貸家を相続したとき、空けて売る（明渡しを取る）か居付き（オーナーチェンジ）で売るかは、普通借家か定期借家かで出口が変わります。普通借家では賃貸人からの更新拒絶・解約申入れに正当事由が要り（借地借家法第28条）、立退料は正当事由を補完する財産上の給付で一律の相場はありません。期間満了の1年前から6月前までの更新拒絶通知（第26条）、解約申入れから6月で終了（第27条）、定期借家との違い（第38条）まで、東京都文京区の宅地建物取引士兼行政書士が条文から整理します。明渡し交渉は弁護士（非弁回避）、立退料・譲渡所得税は税理士、相続登記は司法書士へ分離受任でご案内します。",
+    keywords: [
+      "相続 貸家 売却 明渡し",
+      "正当事由 借地借家法 28条",
+      "立退料 相場 財産上の給付",
+      "オーナーチェンジ 居付き 売却",
+      "定期借家 普通借家 違い 相続",
+    ],
+    tags: ["相続", "借地借家法", "立退料", "賃貸経営"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/souzoku"],
+  },
 ];
 
 function toPlainText(md: string): string {

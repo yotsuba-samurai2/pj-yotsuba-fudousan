@@ -82,6 +82,24 @@ const AUTHOR = {
 
 /** 各記事が評価を集約すべきハブ（本文に必須の内部リンク）。verify() で機械検査する */
 const REQUIRED_HUB_LINKS: Record<string, string[]> = {
+  "jokaso-koji-gyo-touroku-seiso-gyo-kyoka-nagare-youken": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/kaitai-koji-gyo-touroku-kensetsu-kyoka-chigai",
+    "/legal/column/sanpai-shushu-unpan-kyoka-torikata",
+    "/legal/column/kensetsugyo-kyoka-yoken-keikan-sengi-zaisan",
+  ],
+  "yuigon-to-kotonaru-isanbunkatsu-kyogi-kahi-youken": [
+    "/legal/services/inheritance",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/souzoku",
+    "/legal/column/yuigon-tekkai-teishoku-fukusu-yuigon-yuretsu",
+    "/legal/column/isan-bunkatsu-kyougisho",
+    "/legal/column/yuigon-shikkosha-shokumu-sennin-dare",
+    "/legal/column/isan-bunkatsu-kyogi-yarinaoshi-goui-kaijo",
+  ],
   "shakai-fukushi-hojin-setsuritsu-ninka-nagare-shisan-youken": [
     "/legal/services",
     "/legal/nagare",
@@ -1475,6 +1493,28 @@ function matchesRequiredPhrase(content: string, phrase: string): boolean {
 
 /** 記事ごとに必ず含めるべき表現（機械ゲート。最低限の合否判定） */
 const REQUIRED_PHRASES: Record<string, string[]> = {
+  "jokaso-koji-gyo-touroku-seiso-gyo-kyoka-nagare-youken": [
+    "浄化槽法第21条第1項",
+    "市町村長の許可",
+    "都道府県知事",
+    "浄化槽設備士",
+    "特例浄化槽工事業者",
+    "建設業者に関する特例",
+    "別事業体",
+    "独立した事業体",
+    "紹介料を受け取りません",
+  ],
+  "yuigon-to-kotonaru-isanbunkatsu-kyogi-kahi-youken": [
+    "民法第907条",
+    "民法第908条",
+    "民法第1012条",
+    "民法第1013条",
+    "民法第986条",
+    "遺言執行者",
+    "別事業体",
+    "独立した事業体",
+    "紹介料を受け取りません",
+  ],
   "shakai-fukushi-hojin-setsuritsu-ninka-nagare-shisan-youken": [
     "社会福祉法第31条",
     "社会福祉法第30条",
@@ -4323,6 +4363,8 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
 
 /** 記事ごとに含めてはならない表現 */
 const FORBIDDEN_PHRASES: Record<string, string[]> = {
+  "jokaso-koji-gyo-touroku-seiso-gyo-kyoka-nagare-youken": [],
+  "yuigon-to-kotonaru-isanbunkatsu-kyogi-kahi-youken": [],
   "shakai-fukushi-hojin-setsuritsu-ninka-nagare-shisan-youken": [],
   "startup-visa-gaikokujin-kigyo-katsudo-sokushin-tokutei-katsudo": [],
   "shurui-seizo-menkyo-craft-beer-happosyu-youken": [],
@@ -4553,6 +4595,60 @@ const ARTICLES: Array<{
   keywords: string[];
   tags: string[];
 }> = [
+  {
+    file: "168-jokaso-koji-gyo-touroku-seiso-gyo-kyoka-nagare-youken.md",
+    slug: "jokaso-koji-gyo-touroku-seiso-gyo-kyoka-nagare-youken",
+    date: "2026-11-14",
+    title:
+      "浄化槽工事業の登録と浄化槽清掃業の許可は何が違う？要件と流れ",
+    category: "許認可・開業の手続き（行政書士の実務から）",
+    excerpt:
+      "浄化槽の「設置工事」と「清掃」は、別々の制度で別々の役所に申請します。浄化槽工事業を営もうとする者は、業を行う区域を管轄する都道府県知事の登録を受けなければなりません（浄化槽法第21条第1項。有効期間5年・更新制）。一方、浄化槽清掃業を営もうとする者は、業を行う区域を管轄する市町村長の許可を受けなければなりません（同法第35条第1項）。つまり工事は「登録（都道府県）」、清掃は「許可（市町村）」で、根拠条文も窓口も違います。工事業は営業所ごとに浄化槽設備士を置く義務があり（同法第29条）、建設業法の土木・建築・管工事いずれかの許可を持つ建設業者は、登録の規定が適用されず開始時に都道府県知事へ届け出る特例があります（同法第33条）。登録・許可の申請代行は行政書士、施工は浄化槽設備士を擁する建設・設備業者、登記は司法書士、税務は税理士へ振り分ける前提で、四葉グループの行政書士が独立した事業体として受任する枠組みを整理しました。",
+    keywords: [
+      "浄化槽工事業 登録 清掃業 許可 違い",
+      "浄化槽工事業 登録 都道府県知事 5年",
+      "浄化槽清掃業 許可 市町村長",
+      "浄化槽設備士 設置 営業所 浄化槽法29条",
+      "建設業者 特例 浄化槽工事業 届出 浄化槽法33条",
+      "浄化槽 工事業 清掃業 行政書士",
+    ],
+    tags: [
+      "浄化槽法",
+      "浄化槽工事業",
+      "浄化槽清掃業",
+      "浄化槽設備士",
+      "登録",
+      "許可",
+      "行政書士",
+    ],
+  },
+  {
+    file: "169-yuigon-to-kotonaru-isanbunkatsu-kyogi-kahi-youken.md",
+    slug: "yuigon-to-kotonaru-isanbunkatsu-kyogi-kahi-youken",
+    date: "2026-11-14",
+    title:
+      "遺言と違う内容で遺産分割協議はできる？できる条件と注意点",
+    category: "相続の手続き（行政書士の実務から）",
+    excerpt:
+      "有効な遺言があっても、関係者全員が合意すれば、遺言と異なる内容の遺産分割協議はできる、というのが一般的な整理です。前提は、被相続人が遺言で遺産の分割を禁じていないこと（民法第908条第1項）。共同相続人は、遺言で分割を禁じた場合等を除き、いつでも協議で遺産を分割できます（同法第907条第1項）。合意に加わるべきなのは、相続人全員に加え、相続人以外の受遺者がいればその者（民法第964条・第990条）、遺言執行者がいる場合はその同意（同法第1012条・第1013条）です。受遺者は遺贈を放棄でき（同法第986条）、放棄分は相続人に帰属します（同法第995条）。税務では、相続人全員の協議で遺言と異なる分割をした場合、受遺者が遺贈を事実上放棄し遺産分割が行われたとみて原則として贈与税は課されません（国税庁 質疑応答事例）。全員合意後の協議書作成は行政書士、争いは弁護士、相続登記は司法書士、相続税は税理士へ分ける分離受任を示しました。",
+    keywords: [
+      "遺言 異なる 遺産分割協議 できる",
+      "遺言と違う遺産分割 相続人全員 合意",
+      "遺言執行者 同意 遺産分割 民法1013条",
+      "遺言と異なる遺産分割 贈与税 国税庁",
+      "受遺者 遺贈 放棄 民法986条",
+      "遺言と異なる遺産分割 行政書士",
+    ],
+    tags: [
+      "相続",
+      "遺言",
+      "遺産分割協議",
+      "遺言執行者",
+      "受遺者",
+      "民法907条",
+      "行政書士",
+    ],
+  },
   {
     file: "02-souzoku-hajime-koseki-chosa-bunkyo.md",
     slug: "souzoku-hajime-koseki-chosa-bunkyo",
