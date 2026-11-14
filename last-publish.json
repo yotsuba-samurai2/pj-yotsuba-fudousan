@@ -1,27 +1,8 @@
 {
   "dryRun": false,
-  "runAt": "2026-11-13T10:26:35.971Z",
-  "todayJst": "2026-11-13",
-  "targets": [
-    {
-      "key": "labor:kaigo-ridatsu-boshi-kojin-shuchi-ikoukakunin-2025",
-      "business": "labor",
-      "slug": "kaigo-ridatsu-boshi-kojin-shuchi-ikoukakunin-2025",
-      "title": "介護離職を防ぐために会社がやること——2025年4月から義務化された個別の周知・意向確認と両立支援",
-      "date": "2026-11-11",
-      "category": "仕事と介護の両立",
-      "path": "/labor/column/kaigo-ridatsu-boshi-kojin-shuchi-ikoukakunin-2025"
-    },
-    {
-      "key": "labor:roukisho-rinken-zesei-kankoku-taio-roumu",
-      "business": "labor",
-      "slug": "roukisho-rinken-zesei-kankoku-taio-roumu",
-      "title": "労働基準監督署の調査（臨検）が入ったら——是正勧告・指導票への対応と、ふだんの備え",
-      "date": "2026-11-12",
-      "category": "労務管理",
-      "path": "/labor/column/roukisho-rinken-zesei-kankoku-taio-roumu"
-    }
-  ],
+  "runAt": "2026-11-14T09:44:01.723Z",
+  "todayJst": "2026-11-14",
+  "targets": [],
   "held": [
     {
       "key": "labor:insatsu-gyo-kaigyo-roumu-yuuki-youzai-shinya-anzen-eisei",
@@ -148,31 +129,89 @@
       "qualityHoldReasons": [
         "公開レビュー記録が未登録です"
       ]
+    },
+    {
+      "key": "labor:kodo-professional-seido-dounyu-youken-roushi-iinkai-kenko-kakuho",
+      "business": "labor",
+      "slug": "kodo-professional-seido-dounyu-youken-roushi-iinkai-kenko-kakuho",
+      "title": "高度プロフェッショナル制度の導入要件——労使委員会・年104日休日・健康確保措置",
+      "date": "2026-11-13",
+      "category": "労働時間",
+      "path": "/labor/column/kodo-professional-seido-dounyu-youken-roushi-iinkai-kenko-kakuho",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "labor:mansion-kanrin-kanshi-danzoku-roudo-tekiyo-jogai-kyoka-roumu",
+      "business": "labor",
+      "slug": "mansion-kanrin-kanshi-danzoku-roudo-tekiyo-jogai-kyoka-roumu",
+      "title": "マンション管理員の労働時間——監視・断続的労働の適用除外許可と手待時間",
+      "date": "2026-11-13",
+      "category": "労働時間",
+      "path": "/labor/column/mansion-kanrin-kanshi-danzoku-roudo-tekiyo-jogai-kyoka-roumu",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "legal:shakai-fukushi-hojin-setsuritsu-ninka-nagare-shisan-youken",
+      "business": "legal",
+      "slug": "shakai-fukushi-hojin-setsuritsu-ninka-nagare-shisan-youken",
+      "title": "社会福祉法人の設立認可の流れ｜所轄庁・資産要件・理事と評議員会",
+      "date": "2026-11-13",
+      "category": "許認可の手続き（行政書士の実務から）",
+      "path": "/legal/column/shakai-fukushi-hojin-setsuritsu-ninka-nagare-shisan-youken",
+      "qualityHoldReasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "legal:startup-visa-gaikokujin-kigyo-katsudo-sokushin-tokutei-katsudo",
+      "business": "legal",
+      "slug": "startup-visa-gaikokujin-kigyo-katsudo-sokushin-tokutei-katsudo",
+      "title": "スタートアップビザで日本に来て会社を作る｜外国人起業活動促進事業の在留",
+      "date": "2026-11-13",
+      "category": "許認可の手続き（行政書士の実務から）",
+      "path": "/legal/column/startup-visa-gaikokujin-kigyo-katsudo-sokushin-tokutei-katsudo",
+      "qualityHoldReasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "realestate:chugokugo-buyer-keibai-kobai-bukken-nyusatsu-daikin-nouhu",
+      "business": "realestate",
+      "slug": "chugokugo-buyer-keibai-kobai-bukken-nyusatsu-daikin-nouhu",
+      "title": "（中国語バイヤー向け）日本の競売・公売で不動産を買う｜入札から引渡しまで",
+      "date": "2026-11-13",
+      "category": "投資・事業用不動産",
+      "path": "/column/chugokugo-buyer-keibai-kobai-bukken-nyusatsu-daikin-nouhu",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "realestate:ev-kyusoku-juden-setsubi-chintai-shougyou-bukken-shoubou",
+      "business": "realestate",
+      "slug": "ev-kyusoku-juden-setsubi-chintai-shougyou-bukken-shoubou",
+      "title": "EV急速充電設備を備えた賃貸・商業物件｜消防法の技術基準と導入の進め方",
+      "date": "2026-11-13",
+      "category": "投資・事業用不動産",
+      "path": "/column/ev-kyusoku-juden-setsubi-chintai-shougyou-bukken-shoubou",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録です"
+      ]
     }
   ],
   "scheduled": [],
   "ok": false,
-  "published": [
-    {
-      "key": "labor:kaigo-ridatsu-boshi-kojin-shuchi-ikoukakunin-2025",
-      "business": "labor",
-      "slug": "kaigo-ridatsu-boshi-kojin-shuchi-ikoukakunin-2025",
-      "title": "介護離職を防ぐために会社がやること——2025年4月から義務化された個別の周知・意向確認と両立支援",
-      "date": "2026-11-11",
-      "category": "仕事と介護の両立",
-      "path": "/labor/column/kaigo-ridatsu-boshi-kojin-shuchi-ikoukakunin-2025"
-    },
-    {
-      "key": "labor:roukisho-rinken-zesei-kankoku-taio-roumu",
-      "business": "labor",
-      "slug": "roukisho-rinken-zesei-kankoku-taio-roumu",
-      "title": "労働基準監督署の調査（臨検）が入ったら——是正勧告・指導票への対応と、ふだんの備え",
-      "date": "2026-11-12",
-      "category": "労務管理",
-      "path": "/labor/column/roukisho-rinken-zesei-kankoku-taio-roumu"
-    }
-  ],
-  "skipped": [],
+  "published": [],
   "errors": [
     {
       "key": "labor:insatsu-gyo-kaigyo-roumu-yuuki-youzai-shinya-anzen-eisei",
@@ -209,9 +248,33 @@
     {
       "key": "realestate:shoene-tekigo-gimuka-2025-chintai-shinchiku-bukken",
       "message": "品質確認待ち：公開レビュー記録が未登録です"
+    },
+    {
+      "key": "labor:kodo-professional-seido-dounyu-youken-roushi-iinkai-kenko-kakuho",
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
+    },
+    {
+      "key": "labor:mansion-kanrin-kanshi-danzoku-roudo-tekiyo-jogai-kyoka-roumu",
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
+    },
+    {
+      "key": "legal:shakai-fukushi-hojin-setsuritsu-ninka-nagare-shisan-youken",
+      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録です"
+    },
+    {
+      "key": "legal:startup-visa-gaikokujin-kigyo-katsudo-sokushin-tokutei-katsudo",
+      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録です"
+    },
+    {
+      "key": "realestate:chugokugo-buyer-keibai-kobai-bukken-nyusatsu-daikin-nouhu",
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
+    },
+    {
+      "key": "realestate:ev-kyusoku-juden-setsubi-chintai-shougyou-bukken-shoubou",
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
     }
   ],
-  "blocked": "9本は品質確認待ちのため自動公開しません。記事別の理由を確認してください。forceでも解除しません。",
-  "outcome": "partial",
+  "blocked": "15本は品質確認待ちのため自動公開しません。記事別の理由を確認してください。forceでも解除しません。",
+  "outcome": "held",
   "httpStatus": "409"
 }
