@@ -1,7 +1,7 @@
 {
   "dryRun": false,
-  "runAt": "2026-11-14T09:44:01.723Z",
-  "todayJst": "2026-11-14",
+  "runAt": "2026-11-15T10:17:01.226Z",
+  "todayJst": "2026-11-15",
   "targets": [],
   "held": [
     {
@@ -207,6 +207,84 @@
       "qualityHoldReasons": [
         "公開レビュー記録が未登録です"
       ]
+    },
+    {
+      "key": "labor:keikaku-nenkyu-rousi-kyotei-5nichi-gimu-kankei",
+      "business": "labor",
+      "slug": "keikaku-nenkyu-rousi-kyotei-5nichi-gimu-kankei",
+      "title": "計画年休（計画的付与）とは？労使協定の作り方と5日取得義務の関係",
+      "date": "2026-11-14",
+      "category": "手続と期限",
+      "path": "/labor/column/keikaku-nenkyu-rousi-kyotei-5nichi-gimu-kankei",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "labor:tsuki-60jikan-chokin-warimashi-daitai-kyuka-chusho",
+      "business": "labor",
+      "slug": "tsuki-60jikan-chokin-warimashi-daitai-kyuka-chusho",
+      "title": "月60時間超の残業は割増50%？中小企業の代替休暇制度の作り方",
+      "date": "2026-11-14",
+      "category": "労働時間",
+      "path": "/labor/column/tsuki-60jikan-chokin-warimashi-daitai-kyuka-chusho",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "legal:jokaso-koji-gyo-touroku-seiso-gyo-kyoka-nagare-youken",
+      "business": "legal",
+      "slug": "jokaso-koji-gyo-touroku-seiso-gyo-kyoka-nagare-youken",
+      "title": "浄化槽工事業の登録と浄化槽清掃業の許可は何が違う？要件と流れ",
+      "date": "2026-11-14",
+      "category": "許認可・開業の手続き（行政書士の実務から）",
+      "path": "/legal/column/jokaso-koji-gyo-touroku-seiso-gyo-kyoka-nagare-youken",
+      "qualityHoldReasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "legal:yuigon-to-kotonaru-isanbunkatsu-kyogi-kahi-youken",
+      "business": "legal",
+      "slug": "yuigon-to-kotonaru-isanbunkatsu-kyogi-kahi-youken",
+      "title": "遺言と違う内容で遺産分割協議はできる？できる条件と注意点",
+      "date": "2026-11-14",
+      "category": "相続の手続き（行政書士の実務から）",
+      "path": "/legal/column/yuigon-to-kotonaru-isanbunkatsu-kyogi-kahi-youken",
+      "qualityHoldReasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "realestate:seikatsu-kaigo-jigyosho-bukken-youken-shitei",
+      "business": "realestate",
+      "slug": "seikatsu-kaigo-jigyosho-bukken-youken-shitei",
+      "title": "生活介護事業所の物件は何を満たせばいい？設備基準・用途地域・消防の確認点",
+      "date": "2026-11-14",
+      "category": "投資・事業用不動産",
+      "path": "/column/seikatsu-kaigo-jigyosho-bukken-youken-shitei",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "realestate:souzoku-kashiya-akewatashi-seitojiyu-tachinoki-ryo-baikyaku",
+      "business": "realestate",
+      "slug": "souzoku-kashiya-akewatashi-seitojiyu-tachinoki-ryo-baikyaku",
+      "title": "相続した貸家は空けてから売る？正当事由・立退料と居付き売却の分かれ目",
+      "date": "2026-11-14",
+      "category": "相続",
+      "path": "/column/souzoku-kashiya-akewatashi-seitojiyu-tachinoki-ryo-baikyaku",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録です"
+      ]
     }
   ],
   "scheduled": [],
@@ -272,9 +350,33 @@
     {
       "key": "realestate:ev-kyusoku-juden-setsubi-chintai-shougyou-bukken-shoubou",
       "message": "品質確認待ち：公開レビュー記録が未登録です"
+    },
+    {
+      "key": "labor:keikaku-nenkyu-rousi-kyotei-5nichi-gimu-kankei",
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
+    },
+    {
+      "key": "labor:tsuki-60jikan-chokin-warimashi-daitai-kyuka-chusho",
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
+    },
+    {
+      "key": "legal:jokaso-koji-gyo-touroku-seiso-gyo-kyoka-nagare-youken",
+      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録です"
+    },
+    {
+      "key": "legal:yuigon-to-kotonaru-isanbunkatsu-kyogi-kahi-youken",
+      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録です"
+    },
+    {
+      "key": "realestate:seikatsu-kaigo-jigyosho-bukken-youken-shitei",
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
+    },
+    {
+      "key": "realestate:souzoku-kashiya-akewatashi-seitojiyu-tachinoki-ryo-baikyaku",
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
     }
   ],
-  "blocked": "15本は品質確認待ちのため自動公開しません。記事別の理由を確認してください。forceでも解除しません。",
+  "blocked": "21本は品質確認待ちのため自動公開しません。記事別の理由を確認してください。forceでも解除しません。",
   "outcome": "held",
   "httpStatus": "409"
 }
