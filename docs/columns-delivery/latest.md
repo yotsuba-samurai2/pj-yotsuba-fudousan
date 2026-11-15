@@ -1,52 +1,40 @@
-# コラム生成・レビュー・公開判定（2026-11-15）
+# コラム生成・レビュー・公開判定（2026-11-16）
 
 - 生成・機械検証：成功 6本
-- レビュー処理：success ／ 判定：false
-- レビュー指摘：blocker 0／major 1／minor 3
-- 今回の候補指紋に対応する公開証跡登録：0本
-- 自動公開の品質候補：0本
-- 品質保留：6本 ／ 公開日待ち：0本
-- 未確認の一次資料：2件
+- レビュー処理：success ／ 判定：true
+- レビュー指摘：blocker 0／major 0／minor 0
+- 今回の候補指紋に対応する公開証跡登録：2本
+- 自動公開の品質候補：2本
+- 品質保留：4本 ／ 公開日待ち：0本
+- 未確認の一次資料：0件
 - 本番公開：この処理では実行していません。公開済み件数は未照会です。
 
-正午の自動公開に渡せる品質候補は0本です。6本は保留、0本は公開日待ちです。
+2本は品質確認済み候補です。手動保留・既存DB・公開日・有効期限を公開実行時に再判定します。公開完了は実行結果で確認してください。
 未確認記事の品質保留はforceでも解除しません。
 
 ## 記事別の判定
 
-- 生活介護事業所の物件は何を満たせばいい？設備基準・用途地域・消防の確認点：held（realestate:seikatsu-kaigo-jigyosho-bukken-youken-shitei）
-  - 公開レビュー記録が未登録です
-  - 独立レビューに未解決の重大な指摘があります
-- 相続した貸家は空けてから売る？正当事由・立退料と居付き売却の分かれ目：held（realestate:souzoku-kashiya-akewatashi-seitojiyu-tachinoki-ryo-baikyaku）
-  - 公開レビュー記録が未登録です
-  - 独立レビューに未解決の重大な指摘があります
-- 浄化槽工事業の登録と浄化槽清掃業の許可は何が違う？要件と流れ：held（legal:jokaso-koji-gyo-touroku-seiso-gyo-kyoka-nagare-youken）
+- 食品製造業（セントラルキッチン）の物件はどこを見る？用途地域・排水・特定施設の要件：held（realestate:shokuhin-seizogyo-central-kitchen-bukken-youto-haisui-tokutei-shisetsu）
   - enの内部リンクに言語不一致があります
   - zh-twの内部リンクに言語不一致があります
   - zhの内部リンクに言語不一致があります
   - 公開レビュー記録が未登録です
-  - 独立レビューに未解決の重大な指摘があります
-  - 未確認一次資料：https://laws.e-gov.go.jp/api/1/lawdata/358AC1000000043 — 出典注記の『浄化槽法 最終改正 令和8年5月22日公布・令和8年7月1日施行』。令和8年の浄化槽法本体改正法は公的検索で確認できず(省令・告示・自治体要綱の改正のみ確認)。引用条文の内容は現行法と一致するが、この改正日は裏取り不能。
-- 遺言と違う内容で遺産分割協議はできる？できる条件と注意点：held（legal:yuigon-to-kotonaru-isanbunkatsu-kyogi-kahi-youken）
+- 相続した農地が「農用地区域（青地）」だったら売れる？農振除外から農地転用までの順序：held（realestate:souzoku-nochi-nouyouchi-kuiki-noshin-jogai-tenyo-baikyaku）
   - enの内部リンクに言語不一致があります
   - zh-twの内部リンクに言語不一致があります
   - zhの内部リンクに言語不一致があります
   - 公開レビュー記録が未登録です
-  - 独立レビューに未解決の重大な指摘があります
-- 計画年休（計画的付与）とは？労使協定の作り方と5日取得義務の関係：held（labor:keikaku-nenkyu-rousi-kyotei-5nichi-gimu-kankei）
+- 非営利の譲渡会・保護猫活動でも届出が要る？第二種動物取扱業の要件と第一種との違い：held（legal:dai-nishu-doubutsu-toriatsukai-todokede-hieiri-jotokai-youken）
+  - enの内部リンクに言語不一致があります
+  - zh-twの内部リンクに言語不一致があります
+  - zhの内部リンクに言語不一致があります
   - 公開レビュー記録が未登録です
-  - 候補指紋と修正後原稿が一致しません
-  - 独立レビューの証跡不足、重複、またはレビュー後の原稿変更
-  - 未確認一次資料：https://laws.e-gov.go.jp/api/1/lawdata/322AC0000000049 — 労基法第39条6項=労使協定による計画的付与は『5日を超える部分』が対象(本文と一致)。第39条7項=10労働日以上の労働者につき使用者が基準日から1年以内に5日を時季指定して与える義務(ただし書なし、『与えなければならない』で終わる)。控除規定は第39条第8項=『前項の規定にかかわらず、第五項若しくは第六項の規定により与えた日数(5日上限)分については時季を定めて与えることを要しない』。記事が控除根拠を『第7項ただし書』とする記載は誤り(正しくは第8項)。
-- 月60時間超の残業は割増50%？中小企業の代替休暇制度の作り方：held（labor:tsuki-60jikan-chokin-warimashi-daitai-kyuka-chusho）
+- 相続で事業の許認可はそのまま継げる？建設業・飲食・旅館・風営・産廃の承継可否を業種別に比較：held（legal:souzoku-kyoninka-shokei-gyoshu-betsu-kahi-hikaku）
+  - enの内部リンクに言語不一致があります
+  - zh-twの内部リンクに言語不一致があります
+  - zhの内部リンクに言語不一致があります
   - 公開レビュー記録が未登録です
-  - 独立レビューに未解決の重大な指摘があります
+- 自社の廃棄物を運ぶだけでも改善基準告示は適用される？産廃収集運搬ドライバーの拘束時間管理：quality-eligible（labor:sanpai-shushu-unpan-driver-kaizen-kijun-kokuji-kosoku-jikan-roumu）
+- がん治療をしながら働く社員をどう支える？両立支援・時間単位年休・傷病手当金の実務：quality-eligible（labor:chiryo-shigoto-ryoritsu-shien-jikan-tanni-nenkyu-roumu）
 
-## レビューの指摘
-
-- [major] scripts/labor-columns/207-keikaku-nenkyu-rousi-kyotei-5nichi-gimu-kankei.md：年5日取得義務からの控除（労働者の時季指定分・計画的付与分を5日から差し引く）規定を、結論・本文(46行)・表(50-51行)・FAQ(102行)・『この記事の根拠』(111行)の5か所で『労働基準法第39条第7項ただし書』と記載。e-Gov法令検索の原文で確認したところ、第39条第7項は『…与えなければならない。』で終わりただし書は存在せず、控除規定は独立した第39条第8項（『前項の規定にかかわらず、第五項若しくは第六項の規定により…与えた…日数…分については…時季を定めることにより与えることを要しない』）。実体的な結論は正しいが根拠条項の指定が誤り。en/zh/zh-tw全訳に波及。 ／ 修正案：『第7項ただし書』を『第8項』に、『同項ただし書』を『第8項』に全言語で修正（結論・46行・表・FAQ・根拠の5か所＋4言語）。原稿修正は本審査では行わない（ファイル不変更の指示のため指摘のみ）。
-- [minor] scripts/legal-columns/168-jokaso-koji-gyo-touroku-seiso-gyo-kyoka-nagare-youken.md：出典注記『浄化槽法…最終改正 令和8年5月22日公布・令和8年7月1日施行の内容を含む』を裏取りできず。go.jp/lg.jpを検索しても令和8年の浄化槽法本体の改正法は確認できない（確認できたのは令和8年の省令・告示・自治体要綱の改正のみ）。引用した各条文（21/29/33/35/36/42条）の内容自体はe-Gov原文と一致し、substantiveな誤りはない。 ／ 修正案：改正日を一次情報（官報・環境省ページ）で再確認するか、確認できない場合は『最終改正はe-Govで要確認』に留め、未確認の具体的公布日・施行日を断定的に記載しない。
-- [minor] scripts/realestate-columns/en/174-seikatsu-kaigo-jigyosho-bukken-youken-shitei.md：英語版で『この記事の出典（一次情報）』の節見出しが日本語のまま未翻訳（120行）。本文・一次情報の内容は日本語版と一致しており、体裁のみの不整合。 ／ 修正案：見出しを 'Sources (Primary Information)' 等に翻訳。
-- [minor] scripts/realestate-columns/en/175-souzoku-kashiya-akewatashi-seitojiyu-tachinoki-ryo-baikyaku.md：英語版で『この記事の出典（一次情報）』の節見出しが日本語のまま未翻訳（106行）。内容は日本語版と一致、体裁のみ。 ／ 修正案：見出しを 'Sources (Primary Information)' 等に翻訳。
-
-実行証跡：https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/43623226134
+実行証跡：https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/43748045704

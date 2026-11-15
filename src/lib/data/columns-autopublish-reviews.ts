@@ -1513,5 +1513,83 @@ export const COLUMNS_AUTOPUBLISH_REVIEWS: readonly ColumnQualityReview[] = [
     },
     "reviewedAt": "2026-11-13",
     "validThrough": "2026-11-15"
+  },
+  {
+    "key": "labor:sanpai-shushu-unpan-driver-kaizen-kijun-kokuji-kosoku-jikan-roumu",
+    "fingerprint": "fb3030ba5ffeac906aad34368d4d9c3ec481a19120e6ca690fce87bf3e328c18",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://wwwtb.mlit.go.jp/kinki/content/000306033.pdf",
+        "checkedAt": "2026-11-15",
+        "relevantClaim": "改善基準告示（2022年12月23日告示第367号・2024年4月1日適用）のトラック運転者拘束時間＝年3,300時間・月284時間・日13時間、労使協定で年3,400時間・月310時間・最大15時間、長距離宿泊で16時間。国交省運輸局資料で一致を確認。休息継続11時間基本・9時間下限、連続運転4時間以内は告示本文の標準値で記事と整合。",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/api/1/lawdata/322AC0000000049",
+        "checkedAt": "2026-11-15",
+        "relevantClaim": "労働基準法附則第140条第1項＝自動車運転の業務は時間外労働の上限を年960時間とし、月100時間未満・複数月平均80時間等の規定を適用しない。記事の『特別条項でも年960時間以内』と整合。第36条・第32条の枠組みも記事と一致。",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/law/345AC0000000137",
+        "checkedAt": "2026-11-15",
+        "relevantClaim": "廃棄物処理法第14条第1項ただし書＝事業者が自ら産業廃棄物を運搬する場合は収集運搬業許可不要。貨物自動車運送事業法第2条＝一般貨物自動車運送事業は『他人の需要に応じ有償で』貨物を運送する事業＝自社便の自社貨物運搬は非該当。改善基準告示は許可の有無と無関係という記事の中核主張と整合。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/43748045704"
+    },
+    "reviewedAt": "2026-11-16",
+    "validThrough": "2026-11-18"
+  },
+  {
+    "key": "labor:chiryo-shigoto-ryoritsu-shien-jikan-tanni-nenkyu-roumu",
+    "fingerprint": "316eb09a464f2a176e14579080e2ac0932bd6bf8cb5abdcd53d3b7b080ec73f8",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://laws.e-gov.go.jp/api/1/lawdata/322AC0000000049",
+        "checkedAt": "2026-11-15",
+        "relevantClaim": "労働基準法第39条第4項＝労使協定により年5日以内の範囲で時間を単位として年次有給休暇を与えられる。本文で『五日以内に限る』を確認。記事と一致。",
+        "verified": true
+      },
+      {
+        "url": "https://www.mhlw.go.jp/stf/newpage_22308.html",
+        "checkedAt": "2026-11-15",
+        "relevantClaim": "傷病手当金は令和3年法律第66号により令和4年1月1日から支給期間が通算化され、支給開始日から通算して1年6か月（途中就労で不支給の期間は繰越可）。待期3日。厚労省ページで施行日・通算化を確認。記事（健康保険法第99条、令和4年1月1日施行）と一致。報酬との調整（第108条第1項）は健保法の確立した規定で記事の記載と整合。",
+        "verified": true
+      },
+      {
+        "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000115267.html",
+        "checkedAt": "2026-11-15",
+        "relevantClaim": "『事業場における治療と仕事の両立支援のためのガイドライン』令和6年3月改訂（本人申出→主治医意見→産業医等の意見→両立支援プラン作成・運用）。労働安全衛生法第69条第1項は健康保持増進の努力義務。記事はガイドラインを法令上の義務でなく指針と正確に位置づけており整合。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/43748045704"
+    },
+    "reviewedAt": "2026-11-16",
+    "validThrough": "2026-11-18"
   }
 ];

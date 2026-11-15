@@ -82,6 +82,23 @@ const AUTHOR = {
 
 /** 各記事が評価を集約すべきハブ（本文に必須の内部リンク）。verify() で機械検査する */
 const REQUIRED_HUB_LINKS: Record<string, string[]> = {
+  "dai-nishu-doubutsu-toriatsukai-todokede-hieiri-jotokai-youken": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/dai-isshu-doubutsu-toriatsukai-touroku-youken",
+    "/legal/column/inshokuten-eigyo-kyoka-hokenjo-setsubi-kijun-shokuhin-eisei",
+    "/legal/column/npo-hojin-setsuritsu-ninsho-nagare-shokatsucho",
+  ],
+  "souzoku-kyoninka-shokei-gyoshu-betsu-kahi-hikaku": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/souzoku",
+    "/legal/column/souzoku-fuzoku-eigyo-kyoka-shoukei-minashi-todokede",
+    "/legal/column/souzoku-jigyo-shokei-kyoninka-shoukei-saishutoku",
+    "/legal/column/kensetsugyo-kyoka-yoken-keikan-sengi-zaisan",
+  ],
   "jokaso-koji-gyo-touroku-seiso-gyo-kyoka-nagare-youken": [
     "/legal/services",
     "/legal/nagare",
@@ -1493,6 +1510,26 @@ function matchesRequiredPhrase(content: string, phrase: string): boolean {
 
 /** 記事ごとに必ず含めるべき表現（機械ゲート。最低限の合否判定） */
 const REQUIRED_PHRASES: Record<string, string[]> = {
+  "dai-nishu-doubutsu-toriatsukai-todokede-hieiri-jotokai-youken": [
+    "動物の愛護及び管理に関する法律第24条の2の2",
+    "第二種動物取扱業",
+    "第一種動物取扱業",
+    "都道府県知事",
+    "飼養施設",
+    "独立した事業体",
+    "別事業体",
+    "紹介料を受け取りません",
+  ],
+  "souzoku-kyoninka-shokei-gyoshu-betsu-kahi-hikaku": [
+    "建設業法第17条の3",
+    "食品衛生法第56条",
+    "旅館業法第3条の4",
+    "風俗営業等の規制及び業務の適正化等に関する法律第7条",
+    "廃棄物処理法第14条",
+    "独立した事業体",
+    "別事業体",
+    "紹介料を受け取りません",
+  ],
   "jokaso-koji-gyo-touroku-seiso-gyo-kyoka-nagare-youken": [
     "浄化槽法第21条第1項",
     "市町村長の許可",
@@ -4363,6 +4400,8 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
 
 /** 記事ごとに含めてはならない表現 */
 const FORBIDDEN_PHRASES: Record<string, string[]> = {
+  "dai-nishu-doubutsu-toriatsukai-todokede-hieiri-jotokai-youken": [],
+  "souzoku-kyoninka-shokei-gyoshu-betsu-kahi-hikaku": [],
   "jokaso-koji-gyo-touroku-seiso-gyo-kyoka-nagare-youken": [],
   "yuigon-to-kotonaru-isanbunkatsu-kyogi-kahi-youken": [],
   "shakai-fukushi-hojin-setsuritsu-ninka-nagare-shisan-youken": [],
@@ -4595,6 +4634,61 @@ const ARTICLES: Array<{
   keywords: string[];
   tags: string[];
 }> = [
+  {
+    file: "170-dai-nishu-doubutsu-toriatsukai-todokede-hieiri-jotokai-youken.md",
+    slug: "dai-nishu-doubutsu-toriatsukai-todokede-hieiri-jotokai-youken",
+    date: "2026-11-15",
+    title:
+      "非営利の譲渡会・保護猫活動でも届出が要る？第二種動物取扱業の要件と第一種との違い",
+    category: "許認可・開業の手続き（行政書士の実務から）",
+    excerpt:
+      "非営利の保護活動でも、飼養施設を設けて一定頭数以上の動物を扱うなら届出が必要になることがあります。飼養施設を設置して動物の取扱業（譲渡し、保管、貸出し、訓練、展示その他）を業として行う場合、第一種動物取扱業の登録を受けるべき者などを除き、あらかじめ都道府県知事（指定都市では市長）に届け出なければなりません（動物の愛護及び管理に関する法律第24条の2の2第1項）。これが第二種動物取扱業の届出です。譲渡会・一時預かり・シェルター運営を非営利で反復継続していれば「業として」に当たり得ます。届出が必要になるのは、人の居住部分と区分できる飼養施設で環境省令の定める頭数以上を飼養・保管する場合で、環境省の整理では大型（ウシ・ウマ等）は合計3頭以上、中型（イヌ・ネコ等）は10頭以上、小型（ネズミ・リス等）は50頭以上が目安です。営利を目的とする取扱いは第一種動物取扱業の登録（同法第10条第1項）になり、第二種からは外れます。第二種届出・第一種登録の申請、飲食提供時の飲食店営業許可は行政書士、法人化の登記は司法書士、税務は税理士が、それぞれ独立した事業体として別々にご契約のうえ対応する枠組みを整理しました。",
+    keywords: [
+      "第二種動物取扱業 届出 非営利 譲渡会",
+      "第二種動物取扱業 頭数 大型3 中型10 小型50",
+      "第一種動物取扱業 登録 営利 違い",
+      "保護猫 シェルター 届出 飼養施設 都道府県知事",
+      "動物愛護管理法 第24条の2の2 届出",
+      "第二種動物取扱業 行政書士",
+    ],
+    tags: [
+      "動物愛護管理法",
+      "第二種動物取扱業",
+      "第一種動物取扱業",
+      "届出",
+      "保護猫",
+      "譲渡会",
+      "行政書士",
+    ],
+  },
+  {
+    file: "171-souzoku-kyoninka-shokei-gyoshu-betsu-kahi-hikaku.md",
+    slug: "souzoku-kyoninka-shokei-gyoshu-betsu-kahi-hikaku",
+    date: "2026-11-15",
+    title:
+      "相続で事業の許認可はそのまま継げる？建設業・飲食・旅館・風営・産廃の承継可否を業種別に比較",
+    category: "相続の手続き（行政書士の実務から）",
+    excerpt:
+      "事業の許認可は、預貯金や不動産のように相続で当然に引き継がれるわけではなく、業種ごとに承継の扱いが違います。建設業許可は、相続人が被相続人の死亡後30日以内に許可行政庁へ認可を申請すれば継げ、申請中はみなしで営業を続けられます（建設業法第17条の3）。飲食店の営業許可は、相続人が法律上当然に営業者の地位を承継し、遅滞なく届出をすれば足ります（食品衛生法第56条）。旅館業は相続人が死亡後60日以内に知事の承認を申請して継ぎ（旅館業法第3条の4）、風俗営業も相続人が死亡後60日以内に公安委員会の承認を受けて継ぎます（風俗営業等の規制及び業務の適正化等に関する法律第7条）。一方、産業廃棄物の収集運搬業・処分業の許可には相続による承継の規定が置かれておらず、相続人が事業を続けるには原則として新規の許可を取り直す必要があります（廃棄物処理法第14条）。承継申請・新規許可申請は行政書士、相続登記は司法書士、相続税は税理士、争いは弁護士が、それぞれ独立した事業体として別々にご契約のうえ対応する分離受任の枠組みを整理しました。",
+    keywords: [
+      "相続 許認可 承継 業種別 比較",
+      "建設業許可 相続 認可 30日 建設業法17条の3",
+      "飲食店営業 相続 承継 届出 食品衛生法56条",
+      "旅館業 風俗営業 相続 承認 60日",
+      "産業廃棄物 収集運搬業 相続 承継なし 新規許可",
+      "相続 許認可 承継 行政書士",
+    ],
+    tags: [
+      "相続",
+      "許認可承継",
+      "建設業許可",
+      "食品衛生法",
+      "旅館業法",
+      "風営法",
+      "廃棄物処理法",
+      "行政書士",
+    ],
+  },
   {
     file: "168-jokaso-koji-gyo-touroku-seiso-gyo-kyoka-nagare-youken.md",
     slug: "jokaso-koji-gyo-touroku-seiso-gyo-kyoka-nagare-youken",

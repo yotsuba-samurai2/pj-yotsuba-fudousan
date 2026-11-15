@@ -1,0 +1,103 @@
+{
+  "todayJst": "2026-11-16",
+  "runUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/43748045704",
+  "generationStatus": "validated",
+  "generatedCount": 6,
+  "reviewResult": "success",
+  "reviewReportAvailable": true,
+  "reviewPass": true,
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "minor": 0
+  },
+  "reviewFindings": [],
+  "registeredCount": 2,
+  "qualityEligibleCount": 2,
+  "heldCount": 4,
+  "scheduledCount": 0,
+  "unverifiedSourceCount": 0,
+  "publishedCount": null,
+  "articles": [
+    {
+      "key": "realestate:shokuhin-seizogyo-central-kitchen-bukken-youto-haisui-tokutei-shisetsu",
+      "fingerprint": "de452e0770fb8239a48b929e043d15d11a0edcf366fa882fb50c9d485832103a",
+      "title": "食品製造業（セントラルキッチン）の物件はどこを見る？用途地域・排水・特定施設の要件",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "realestate:souzoku-nochi-nouyouchi-kuiki-noshin-jogai-tenyo-baikyaku",
+      "fingerprint": "9c7e24b0a4197d943c841b76634d08b386c0945aa6693deb79321285686f5d40",
+      "title": "相続した農地が「農用地区域（青地）」だったら売れる？農振除外から農地転用までの順序",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:dai-nishu-doubutsu-toriatsukai-todokede-hieiri-jotokai-youken",
+      "fingerprint": "cd1c9a7aa8423c9973eae15733a26206ff823f63bc6598cffbe34efc3177237b",
+      "title": "非営利の譲渡会・保護猫活動でも届出が要る？第二種動物取扱業の要件と第一種との違い",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:souzoku-kyoninka-shokei-gyoshu-betsu-kahi-hikaku",
+      "fingerprint": "73a595c61be5661b0a4ef900922ace2b02c4e3f2d32885079659ab0f541b237a",
+      "title": "相続で事業の許認可はそのまま継げる？建設業・飲食・旅館・風営・産廃の承継可否を業種別に比較",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:sanpai-shushu-unpan-driver-kaizen-kijun-kokuji-kosoku-jikan-roumu",
+      "fingerprint": "fb3030ba5ffeac906aad34368d4d9c3ec481a19120e6ca690fce87bf3e328c18",
+      "title": "自社の廃棄物を運ぶだけでも改善基準告示は適用される？産廃収集運搬ドライバーの拘束時間管理",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:chiryo-shigoto-ryoritsu-shien-jikan-tanni-nenkyu-roumu",
+      "fingerprint": "316eb09a464f2a176e14579080e2ac0932bd6bf8cb5abdcd53d3b7b080ec73f8",
+      "title": "がん治療をしながら働く社員をどう支える？両立支援・時間単位年休・傷病手当金の実務",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    }
+  ]
+}
