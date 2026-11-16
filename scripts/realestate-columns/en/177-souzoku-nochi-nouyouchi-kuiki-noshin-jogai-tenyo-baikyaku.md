@@ -23,7 +23,7 @@ Blue land is the common name for farmland within an "agricultural-use zone" set 
 | White land (within agri-promotion area, outside the use zone) | Agri-promotion area but outside the zone | Subject to a farmland-conversion permit (judged by siting criteria) |
 | Farmland within an urbanisation-promotion area | Zone to be urbanised under city planning | Conversion needs only a notification, not a permit |
 
-Note that whether it is blue land cannot be known from the registry or the property-tax notice alone. Even if the land category is "paddy" or "field," it is not necessarily blue land; conversely, even if the current state looks like residential land, it may be within an agricultural-use zone. The reliable way is confirmation by the municipality's agricultural-land-use plan. The overall flow of selling or leasing inherited farmland is organised in [What to check first when selling or leasing inherited farmland](https://luck428.com/column/souzoku-nochi-baikyaku-kashidashi-nagare). This article narrows to the "blue land" case.
+Note that whether it is blue land cannot be known from the registry or the property-tax notice alone. Even if the land category is "paddy" or "field," it is not necessarily blue land; conversely, even if the current state looks like residential land, it may be within an agricultural-use zone. The reliable way is confirmation by the municipality's agricultural-land-use plan. The overall flow of selling or leasing inherited farmland is organised in [What to check first when selling or leasing inherited farmland](https://luck428.com/en/column/souzoku-nochi-baikyaku-kashidashi-nagare). This article narrows to the "blue land" case.
 
 ## Why does an agricultural-use zone require "agri-zone removal" before farmland conversion?
 
@@ -68,7 +68,7 @@ To sell or lease farmland as farmland for cultivation purposes, a permit under F
 | Sell / lease as farmland | Farmland Act art. 3 permit | Farmer / farmland-holding qualified corporation / via farmland bank, etc. |
 | Convert to residential land, etc. and sell | Agri-zone removal → Farmland Act arts. 4 and 5 permit | Buyer matching the post-conversion use |
 
-Selling as farmland can reach an exit faster than waiting for conversion, but buyers are limited and the price is valued as farmland. Which exit is realistic changes with the farmland's location, zone and the state of nearby core farmers. Inheriting productive green land is organised in [The flow of selling inherited productive green land](https://luck428.com/column/souzoku-seisan-ryokuchi-baikyaku-nagare), and the issue of combining a temporary conversion such as solar power on farmland in [A property for temporary conversion of inherited farmland to solar power](https://luck428.com/column/einou-taiyoko-nochi-ichiji-tenyo-bukken), each separately. We organise, as general information and together with property-side checks, the outlook of whether to sell as farmland or aim for conversion.
+Selling as farmland can reach an exit faster than waiting for conversion, but buyers are limited and the price is valued as farmland. Which exit is realistic changes with the farmland's location, zone and the state of nearby core farmers. Inheriting productive green land is organised in [The flow of selling inherited productive green land](https://luck428.com/en/column/souzoku-seisan-ryokuchi-baikyaku-nagare), and the issue of combining a temporary conversion such as solar power on farmland in [A property for temporary conversion of inherited farmland to solar power](https://luck428.com/en/column/einou-taiyoko-nochi-ichiji-tenyo-bukken), each separately. We organise, as general information and together with property-side checks, the outlook of whether to sell as farmland or aim for conversion.
 
 ## Whom do you ask for inheritance registration, tax and boundary, and whom for the sale?
 
@@ -87,7 +87,7 @@ Preparing the agri-zone removal (amendment of the agricultural-land-use plan) pe
 
 Selling inherited blue land goes fastest when, after fixing the premises of the inheritance notification and the blue/white confirmation, agri-zone removal, the conversion permit, inheritance registration and tax proceed in parallel with each professional. We help, as general information, with this allocation and the sale outlook / property-side checks, but we do not make the final judgment on whether removal or a permit is granted or on tax amounts.
 
-**[Consult Yotsuba Real Estate about selling inherited farmland (free consultation)](https://luck428.com/souzoku)**
+**[Consult Yotsuba Real Estate about selling inherited farmland (free consultation)](https://luck428.com/en/souzoku)**
 
 In your inquiry, please note the farmland's location, the land category, the inheritance status (whether registered, the number of heirs), the blue/white distinction if known, and whether you want to let it go as farmland or convert and sell. We start from organising the sale outlook and the referral targets to an administrative scrivener, judicial scrivener, tax accountant, land and house surveyor and lawyer.
 
@@ -116,6 +116,6 @@ The following are public materials that are starting points for confirmation. La
 
 This article is general information and does not guarantee individual agri-zone removal or a farmland-conversion permit. The sale (brokerage) and property-condition check are judged/handled by real estate (us); the agri-zone removal petition and the farmland-conversion-permit application by an administrative scrivener; inheritance registration by a judicial scrivener; inheritance tax / capital-gains tax by a tax accountant; boundary determination by a land and house surveyor; and estate-division disputes by a lawyer.
 
-Joji Uramatsu / Representative Director of Yotsuba Real Estate Co., Ltd., licensed real estate transaction specialist. As a licensed real estate transaction specialist in Bunkyo, Tokyo, I undertake surveys and brokerage of residential and commercial real estate. [Author profile](https://luck428.com/about/uramatsu)
+Joji Uramatsu / Representative Director of Yotsuba Real Estate Co., Ltd., licensed real estate transaction specialist. As a licensed real estate transaction specialist in Bunkyo, Tokyo, I undertake surveys and brokerage of residential and commercial real estate. [Author profile](https://luck428.com/en/about/uramatsu)
 
 Updated: 15 November 2026
