@@ -1591,5 +1591,38 @@ export const COLUMNS_AUTOPUBLISH_REVIEWS: readonly ColumnQualityReview[] = [
     },
     "reviewedAt": "2026-11-16",
     "validThrough": "2026-11-18"
+  },
+  {
+    "key": "labor:kazoku-taizai-haigusha-part-28jikan-shikaku-gai-shakaihoken-roumu",
+    "fingerprint": "d29c936148e17550e37527310019e9cc7003298a364c6d2cede9d3ff2cc81fda",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.moj.go.jp/isa/10_00274.html",
+        "checkedAt": "2026-11-16",
+        "relevantClaim": "出入国在留管理庁（ISA）の資格外活動許可案内＝家族滞在等の包括許可は1週について28時間以内、留学は1週28時間以内（長期休業期間は1日8時間以内）。家族滞在には留学生型の長期休業特例がない点を確認。本文の「原則週28時間以内・風俗営業等の従事を除く」「家族滞在は特例なし・通年28時間」と整合（入管法第19条第2項・施行規則第19条第5項の引用も適切）。",
+        "verified": true
+      },
+      {
+        "url": "https://www.mhlw.go.jp/stf/newpage_56671.html",
+        "checkedAt": "2026-11-16",
+        "relevantClaim": "2025年成立の年金制度改正法により、2026年10月に短時間労働者の社会保険加入の賃金要件（月額8.8万円＝いわゆる106万円の壁）を撤廃。週20時間以上・2か月超・非学生・企業規模（被保険者数51人超、2027年10月以降段階的引下げ）の要件は存続。複数の社労士解説および厚労省資料で施行時期・内容を確認し、本文の記述と整合。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/43964033167"
+    },
+    "reviewedAt": "2026-11-17",
+    "validThrough": "2026-11-19"
   }
 ];

@@ -82,6 +82,22 @@ const AUTHOR = {
 
 /** 各記事が評価を集約すべきハブ（本文に必須の内部リンク）。verify() で機械検査する */
 const REQUIRED_HUB_LINKS: Record<string, string[]> = {
+  "eisei-kensajo-rinsho-kensa-touroku-kozo-setsubi-kijun": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/shinryojo-kaisetsu-todokede-iryoho-8jo",
+    "/legal/column/iyakuhin-tenpo-hanbaigyo-drugstore-kozo-setsubi-touroku-hanbaisha",
+    "/legal/column/kodo-kanri-iryokiki-hanbai-kashidashi-kyoka-tenpo-kanrisha",
+  ],
+  "kikyuji-yuigon-shibo-kikyusha-minpo-976jo-kakunin": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/jihitsu-kosei-yuigon",
+    "/legal/column/yuigon-tekkai-teishoku-fukusu-yuigon-yuretsu",
+    "/legal/column/kosei-shosho-yuigon-koshonin-shonin-hiyo",
+  ],
   "dai-nishu-doubutsu-toriatsukai-todokede-hieiri-jotokai-youken": [
     "/legal/services",
     "/legal/nagare",
@@ -1510,6 +1526,26 @@ function matchesRequiredPhrase(content: string, phrase: string): boolean {
 
 /** 記事ごとに必ず含めるべき表現（機械ゲート。最低限の合否判定） */
 const REQUIRED_PHRASES: Record<string, string[]> = {
+  "eisei-kensajo-rinsho-kensa-touroku-kozo-setsubi-kijun": [
+    "臨床検査技師等に関する法律第20条の3",
+    "衛生検査所",
+    "検体検査",
+    "都道府県知事",
+    "精度管理責任者",
+    "独立した事業体",
+    "別事業体",
+    "紹介料を受け取りません",
+  ],
+  "kikyuji-yuigon-shibo-kikyusha-minpo-976jo-kakunin": [
+    "民法第976条",
+    "死亡の危急に迫った者",
+    "家庭裁判所",
+    "民法第983条",
+    "行政書士法第1条の2",
+    "独立した事業体",
+    "別事業体",
+    "紹介料を受け取りません",
+  ],
   "dai-nishu-doubutsu-toriatsukai-todokede-hieiri-jotokai-youken": [
     "動物の愛護及び管理に関する法律第24条の2の2",
     "第二種動物取扱業",
@@ -4400,6 +4436,8 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
 
 /** 記事ごとに含めてはならない表現 */
 const FORBIDDEN_PHRASES: Record<string, string[]> = {
+  "eisei-kensajo-rinsho-kensa-touroku-kozo-setsubi-kijun": [],
+  "kikyuji-yuigon-shibo-kikyusha-minpo-976jo-kakunin": [],
   "dai-nishu-doubutsu-toriatsukai-todokede-hieiri-jotokai-youken": [],
   "souzoku-kyoninka-shokei-gyoshu-betsu-kahi-hikaku": [],
   "jokaso-koji-gyo-touroku-seiso-gyo-kyoka-nagare-youken": [],
@@ -4634,6 +4672,60 @@ const ARTICLES: Array<{
   keywords: string[];
   tags: string[];
 }> = [
+  {
+    file: "172-eisei-kensajo-rinsho-kensa-touroku-kozo-setsubi-kijun.md",
+    slug: "eisei-kensajo-rinsho-kensa-touroku-kozo-setsubi-kijun",
+    date: "2026-11-16",
+    title:
+      "衛生検査所の登録はどう取る？臨床検査技師等法の構造設備・人員基準と申請の流れ",
+    category: "許認可・開業の手続き（行政書士の実務から）",
+    excerpt:
+      "受託で臨床検査（血液・病理・遺伝子検査など）を事業として行う「検体検査を業として行う場所」は、原則として衛生検査所の登録が要ります。衛生検査所を開設しようとする者は、その所在地の都道府県知事（保健所を設置する市ではその市長、特別区では区長）の登録を受けなければなりません（臨床検査技師等に関する法律第20条の3第1項）。構造設備・管理組織・検体検査の精度の確保の方法その他の事項が厚生労働省令で定める基準（同法施行規則第12条等）に適合しないと認めるときは登録してはならない、とされています（同法第20条の3第2項）。満たすべきなのは、検査室の区分・面積や検査用機械器具といった構造設備、管理者・精度管理責任者・各検査部門の責任者といった人員、内部精度管理・外部精度管理調査の受検や標準作業書・作業日誌の整備といった精度管理の仕組みです。登録申請の書類作成は行政書士、有資格者の配置は本人・医療法人等、施設の設計・建築確認は建築士、物件は不動産、法人化の登記は司法書士、税務は税理士が、それぞれ独立した事業体として別々にご契約のうえ対応する分離受任の枠組みを整理しました。",
+    keywords: [
+      "衛生検査所 登録 構造設備 人員 基準",
+      "衛生検査所 都道府県知事 保健所設置市 特別区 登録",
+      "臨床検査技師等法 第20条の3 検体検査",
+      "精度管理責任者 管理者 兼任 衛生検査所",
+      "衛生検査所 変更登録 廃止 届出 30日",
+      "衛生検査所 登録 行政書士",
+    ],
+    tags: [
+      "臨床検査技師等法",
+      "衛生検査所",
+      "検体検査",
+      "登録",
+      "精度管理責任者",
+      "構造設備基準",
+      "行政書士",
+    ],
+  },
+  {
+    file: "173-kikyuji-yuigon-shibo-kikyusha-minpo-976jo-kakunin.md",
+    slug: "kikyuji-yuigon-shibo-kikyusha-minpo-976jo-kakunin",
+    date: "2026-11-16",
+    title:
+      "入院中で公正証書遺言が間に合わないときは？死亡危急者遺言（民法976条）の作り方と家裁の確認",
+    category: "相続の手続き（行政書士の実務から）",
+    excerpt:
+      "入院中などで公正証書遺言も自筆証書遺言も間に合わないほど死亡の危急に迫っているときは、特別方式の死亡危急者遺言という選択肢があります。疾病その他の事由によって死亡の危急に迫った者が遺言をしようとするときは、証人3人以上の立会いをもって、その1人に遺言の趣旨を口授し、証人がこれを筆記して読み聞かせ、各証人が正確なことを承認した後に署名・押印します（民法第976条第1項）。この遺言は、遺言の日から20日以内に証人の1人または利害関係人から家庭裁判所に請求して確認を得なければ効力を生じません（同条第4項）。遺言者が普通の方式で遺言できるようになった時から6か月間生存すると失効します（民法第983条）。文案作成・証人手配の支援は行政書士、家庭裁判所への確認の申立て（裁判所提出書類）は本人または弁護士、相続登記は司法書士、相続税は税理士が、それぞれ独立した事業体として別々にご契約のうえ対応する分離受任の枠組みを整理しました。",
+    keywords: [
+      "死亡危急者遺言 民法976条 証人3人 口授",
+      "死亡危急者遺言 20日以内 家庭裁判所 確認",
+      "特別方式 遺言 6か月 失効 民法983条",
+      "死亡危急者遺言 証人 欠格事由 民法974条",
+      "遺言 文案 証人手配 行政書士 家裁 弁護士",
+      "死亡危急者遺言 公正証書遺言 違い",
+    ],
+    tags: [
+      "民法",
+      "死亡危急者遺言",
+      "特別方式遺言",
+      "遺言",
+      "家庭裁判所",
+      "業際",
+      "行政書士",
+    ],
+  },
   {
     file: "170-dai-nishu-doubutsu-toriatsukai-todokede-hieiri-jotokai-youken.md",
     slug: "dai-nishu-doubutsu-toriatsukai-todokede-hieiri-jotokai-youken",

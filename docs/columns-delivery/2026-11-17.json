@@ -1,0 +1,129 @@
+{
+  "todayJst": "2026-11-17",
+  "runUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/43964033167",
+  "generationStatus": "validated",
+  "generatedCount": 6,
+  "reviewResult": "success",
+  "reviewReportAvailable": true,
+  "reviewPass": true,
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "minor": 0
+  },
+  "reviewFindings": [],
+  "registeredCount": 1,
+  "qualityEligibleCount": 1,
+  "heldCount": 5,
+  "scheduledCount": 0,
+  "unverifiedSourceCount": 3,
+  "publishedCount": null,
+  "articles": [
+    {
+      "key": "realestate:tokutei-yukyo-inshokuten-club-bukken-youto-hozen-taisho",
+      "fingerprint": "d5145ad560f3b512c44fc6ae4e4e7455954e70712cfcc723390627fa2b0ce0b9",
+      "title": "特定遊興飲食店（クラブ・ラウンジ）の物件はどう選ぶ？用途地域と保全対象施設の距離で決まる",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です",
+        "確認済みの公的な一次根拠が不足しています"
+      ],
+      "sourceFailures": [
+        {
+          "url": "https://laws.e-gov.go.jp/law/322AC0000000233",
+          "checkedAt": "2026-11-16",
+          "relevantClaim": "食品衛生法第55条＝飲食店営業許可。特定遊興飲食店も飲食店営業にあたり同許可が同時に必要との整理。条文番号引用は適切（本文は未個別取得だが確立した条文で整合）。",
+          "verified": false
+        }
+      ],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "realestate:souzoku-minpaku-jutaku-shukuhaku-todokede-shokei-haigyo-baikyaku",
+      "fingerprint": "0e8aaf1bf6183651b4ec8d4cd57dc3a60839587e6acc84008e16372fae17812b",
+      "title": "民泊（住宅宿泊事業）を相続したらどうなる？届出は引き継げず、廃業・再届出・売却の判断が要る",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:eisei-kensajo-rinsho-kensa-touroku-kozo-setsubi-kijun",
+      "fingerprint": "106e372ecf32e2561609f21e200436d9eaf55ac8fe328fb53224f37df32954cf",
+      "title": "衛生検査所の登録はどう取る？臨床検査技師等法の構造設備・人員基準と申請の流れ",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:kikyuji-yuigon-shibo-kikyusha-minpo-976jo-kakunin",
+      "fingerprint": "1499e7c9e72a8a828f87aa8aba32e32dc16fba56caef2c54b398116c551d6fac",
+      "title": "入院中で公正証書遺言が間に合わないときは？死亡危急者遺言（民法976条）の作り方と家裁の確認",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です",
+        "確認済みの公的な一次根拠が不足しています"
+      ],
+      "sourceFailures": [
+        {
+          "url": "https://laws.e-gov.go.jp/law/421AC0000000052",
+          "checkedAt": "2026-11-16",
+          "relevantClaim": "家事事件手続法に基づく遺言の確認（家庭裁判所に対する手続）。行政書士法第1条の2・第1条の3により裁判所提出書類の作成・代理は行政書士の業務範囲外＝本人・弁護士が行うとの業際整理が正確（本文が明確に線引き）。条文番号引用は適切。",
+          "verified": false
+        }
+      ],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:kazoku-taizai-haigusha-part-28jikan-shikaku-gai-shakaihoken-roumu",
+      "fingerprint": "d29c936148e17550e37527310019e9cc7003298a364c6d2cede9d3ff2cc81fda",
+      "title": "家族滞在の配偶者をパートで雇うには？資格外活動28時間と社会保険の壁の実務",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:shiyonin-kenmu-yakuin-roudoshasei-zangyo-koyohoken-roumu",
+      "fingerprint": "ac10c7a7bf716d727087b60982e69bf12c95266e1c2d69e404d52bd8d08d68cb",
+      "title": "使用人兼務役員に残業代は要るのか？労働者性と雇用保険・社会保険の扱い",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録です",
+        "確認済みの公的な一次根拠が不足しています"
+      ],
+      "sourceFailures": [
+        {
+          "url": "https://laws.e-gov.go.jp/law/417AC0000000086",
+          "checkedAt": "2026-11-16",
+          "relevantClaim": "会社法第330条＝株式会社と役員及び会計監査人との関係は委任に関する規定に従う（取締役＝委任関係、民法第644条の善管注意義務）。e-Gov API目次で第330条が第3節（329〜338条）に位置することは確認したが、本文は同一フェッチ範囲に未到達。確立した条文で本文引用と整合。",
+          "verified": false
+        }
+      ],
+      "sourceEvidenceAvailable": true
+    }
+  ]
+}

@@ -1,40 +1,47 @@
-# コラム生成・レビュー・公開判定（2026-11-16）
+# コラム生成・レビュー・公開判定（2026-11-17）
 
 - 生成・機械検証：成功 6本
 - レビュー処理：success ／ 判定：true
 - レビュー指摘：blocker 0／major 0／minor 0
-- 今回の候補指紋に対応する公開証跡登録：2本
-- 自動公開の品質候補：2本
-- 品質保留：4本 ／ 公開日待ち：0本
-- 未確認の一次資料：0件
+- 今回の候補指紋に対応する公開証跡登録：1本
+- 自動公開の品質候補：1本
+- 品質保留：5本 ／ 公開日待ち：0本
+- 未確認の一次資料：3件
 - 本番公開：この処理では実行していません。公開済み件数は未照会です。
 
-2本は品質確認済み候補です。手動保留・既存DB・公開日・有効期限を公開実行時に再判定します。公開完了は実行結果で確認してください。
+1本は品質確認済み候補です。手動保留・既存DB・公開日・有効期限を公開実行時に再判定します。公開完了は実行結果で確認してください。
 未確認記事の品質保留はforceでも解除しません。
 
 ## 記事別の判定
 
-- 食品製造業（セントラルキッチン）の物件はどこを見る？用途地域・排水・特定施設の要件：held（realestate:shokuhin-seizogyo-central-kitchen-bukken-youto-haisui-tokutei-shisetsu）
+- 特定遊興飲食店（クラブ・ラウンジ）の物件はどう選ぶ？用途地域と保全対象施設の距離で決まる：held（realestate:tokutei-yukyo-inshokuten-club-bukken-youto-hozen-taisho）
   - enの内部リンクに言語不一致があります
   - zh-twの内部リンクに言語不一致があります
   - zhの内部リンクに言語不一致があります
   - 公開レビュー記録が未登録です
-- 相続した農地が「農用地区域（青地）」だったら売れる？農振除外から農地転用までの順序：held（realestate:souzoku-nochi-nouyouchi-kuiki-noshin-jogai-tenyo-baikyaku）
+  - 確認済みの公的な一次根拠が不足しています
+  - 未確認一次資料：https://laws.e-gov.go.jp/law/322AC0000000233 — 食品衛生法第55条＝飲食店営業許可。特定遊興飲食店も飲食店営業にあたり同許可が同時に必要との整理。条文番号引用は適切（本文は未個別取得だが確立した条文で整合）。
+- 民泊（住宅宿泊事業）を相続したらどうなる？届出は引き継げず、廃業・再届出・売却の判断が要る：held（realestate:souzoku-minpaku-jutaku-shukuhaku-todokede-shokei-haigyo-baikyaku）
   - enの内部リンクに言語不一致があります
   - zh-twの内部リンクに言語不一致があります
   - zhの内部リンクに言語不一致があります
   - 公開レビュー記録が未登録です
-- 非営利の譲渡会・保護猫活動でも届出が要る？第二種動物取扱業の要件と第一種との違い：held（legal:dai-nishu-doubutsu-toriatsukai-todokede-hieiri-jotokai-youken）
+- 衛生検査所の登録はどう取る？臨床検査技師等法の構造設備・人員基準と申請の流れ：held（legal:eisei-kensajo-rinsho-kensa-touroku-kozo-setsubi-kijun）
   - enの内部リンクに言語不一致があります
   - zh-twの内部リンクに言語不一致があります
   - zhの内部リンクに言語不一致があります
   - 公開レビュー記録が未登録です
-- 相続で事業の許認可はそのまま継げる？建設業・飲食・旅館・風営・産廃の承継可否を業種別に比較：held（legal:souzoku-kyoninka-shokei-gyoshu-betsu-kahi-hikaku）
+- 入院中で公正証書遺言が間に合わないときは？死亡危急者遺言（民法976条）の作り方と家裁の確認：held（legal:kikyuji-yuigon-shibo-kikyusha-minpo-976jo-kakunin）
   - enの内部リンクに言語不一致があります
   - zh-twの内部リンクに言語不一致があります
   - zhの内部リンクに言語不一致があります
   - 公開レビュー記録が未登録です
-- 自社の廃棄物を運ぶだけでも改善基準告示は適用される？産廃収集運搬ドライバーの拘束時間管理：quality-eligible（labor:sanpai-shushu-unpan-driver-kaizen-kijun-kokuji-kosoku-jikan-roumu）
-- がん治療をしながら働く社員をどう支える？両立支援・時間単位年休・傷病手当金の実務：quality-eligible（labor:chiryo-shigoto-ryoritsu-shien-jikan-tanni-nenkyu-roumu）
+  - 確認済みの公的な一次根拠が不足しています
+  - 未確認一次資料：https://laws.e-gov.go.jp/law/421AC0000000052 — 家事事件手続法に基づく遺言の確認（家庭裁判所に対する手続）。行政書士法第1条の2・第1条の3により裁判所提出書類の作成・代理は行政書士の業務範囲外＝本人・弁護士が行うとの業際整理が正確（本文が明確に線引き）。条文番号引用は適切。
+- 家族滞在の配偶者をパートで雇うには？資格外活動28時間と社会保険の壁の実務：quality-eligible（labor:kazoku-taizai-haigusha-part-28jikan-shikaku-gai-shakaihoken-roumu）
+- 使用人兼務役員に残業代は要るのか？労働者性と雇用保険・社会保険の扱い：held（labor:shiyonin-kenmu-yakuin-roudoshasei-zangyo-koyohoken-roumu）
+  - 公開レビュー記録が未登録です
+  - 確認済みの公的な一次根拠が不足しています
+  - 未確認一次資料：https://laws.e-gov.go.jp/law/417AC0000000086 — 会社法第330条＝株式会社と役員及び会計監査人との関係は委任に関する規定に従う（取締役＝委任関係、民法第644条の善管注意義務）。e-Gov API目次で第330条が第3節（329〜338条）に位置することは確認したが、本文は同一フェッチ範囲に未到達。確立した条文で本文引用と整合。
 
-実行証跡：https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/43748045704
+実行証跡：https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/43964033167
