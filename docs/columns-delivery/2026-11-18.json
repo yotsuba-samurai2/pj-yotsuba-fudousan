@@ -1,0 +1,106 @@
+{
+  "todayJst": "2026-11-18",
+  "runUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/44171868564",
+  "generationStatus": "validated",
+  "generatedCount": 6,
+  "reviewResult": "success",
+  "reviewReportAvailable": true,
+  "reviewPass": true,
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "minor": 2
+  },
+  "reviewFindings": [
+    {
+      "file": "scripts/legal-columns/174-kashikin-gyo-touroku-yoken-shunin-junshisan.md",
+      "severity": "minor",
+      "issue": "本文「割合が50分の1以上になる数…（貸金業法第12条の3）」は、第12条の3本体が『内閣府令で定める数』と委任しているのみで、『50分の1（端数切上げ）』の具体値は貸金業法施行規則（第10条の8）にある。数値自体は正確だが、根拠条文の帰属がやや不正確。",
+      "fix": "根拠条文を『第12条の3の委任を受けた施行規則』と明示できれば、より厳密（事実の修正は不要）。"
+    },
+    {
+      "file": "scripts/labor-columns/213-rodosha-haken-ukeire-teishokuhi-kanri-daicho-37gokokuji-roumu.md",
+      "severity": "minor",
+      "issue": "本文「台帳は3年間保存し（労働者派遣法施行規則第37条）」とあるが、派遣先管理台帳の3年間保存は法第42条第2項（条文本体）に定めがある。保存年数(3年)自体は正確だが、根拠の帰属が不正確（通知頻度『1か月に1回以上＝施行規則第38条』の帰属は正しい）。",
+      "fix": "保存の根拠を『法第42条第2項』と記すのが正確（事実の修正は不要）。"
+    }
+  ],
+  "registeredCount": 4,
+  "qualityEligibleCount": 4,
+  "heldCount": 2,
+  "scheduledCount": 0,
+  "unverifiedSourceCount": 0,
+  "publishedCount": null,
+  "articles": [
+    {
+      "key": "realestate:chugokugo-buyer-shido-ichi-shitei-douro-settei-dd",
+      "fingerprint": "bc06d38c35e549b010a823e97f311b576d4a28ba36c613afdd29a586f2fb9f0d",
+      "title": "中国語バイヤー向け：私道・位置指定道路の接道を買う前に確認する（再建築可否と持分の罠）",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "realestate:souzoku-kyoyu-bunkatsu-seikyu-kanka-baikyaku",
+      "fingerprint": "a818db08aa5ba7ff9c49c4518105f70ace84234d4b2bfd9bba106c3372b79cc8",
+      "title": "相続した共有不動産で話がまとまらない――共有物分割請求に至ったときの換価（任意売却・形式競売）の実務",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:kashikin-gyo-touroku-yoken-shunin-junshisan",
+      "fingerprint": "7c62c97b2e4c62347c8ed5888dc9b891d84d97e1a0c257bf1a33be88f6e9ebe0",
+      "title": "貸金業の登録を受けるには――純資産5000万円・貸金業務取扱主任者・営業所要件の全体像",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:souzoku-fuzaisha-zaisan-kanrinin-shisso-senkoku-erabikata",
+      "fingerprint": "09fdec93c52b46c957066057b241284e4c7f7c791f6812177a41a9e9a424419e",
+      "title": "相続人の中に生死不明の人がいる――不在者財産管理人と失踪宣告、どちらを選ぶか",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:rodosha-haken-ukeire-teishokuhi-kanri-daicho-37gokokuji-roumu",
+      "fingerprint": "c4cd768cd1f1883d901baa8078adb2609af224cadc1da96800fd07ceb0959daa",
+      "title": "派遣社員を受け入れる会社の労務――抵触日（個人・事業所単位）、派遣先管理台帳、偽装請負（37号告示）",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:eisei-kanrisha-sangyoi-eisei-iinkai-sennin-50nin-gimu",
+      "fingerprint": "1c29d10a42363498c7e8ab8d4249264df9b63366950ff902bcffb554630c7f76",
+      "title": "常時50人になったら――衛生管理者・産業医・衛生委員会の選任と届出",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    }
+  ]
+}

@@ -1,47 +1,37 @@
-# コラム生成・レビュー・公開判定（2026-11-17）
+# コラム生成・レビュー・公開判定（2026-11-18）
 
 - 生成・機械検証：成功 6本
 - レビュー処理：success ／ 判定：true
-- レビュー指摘：blocker 0／major 0／minor 0
-- 今回の候補指紋に対応する公開証跡登録：1本
-- 自動公開の品質候補：1本
-- 品質保留：5本 ／ 公開日待ち：0本
-- 未確認の一次資料：3件
+- レビュー指摘：blocker 0／major 0／minor 2
+- 今回の候補指紋に対応する公開証跡登録：4本
+- 自動公開の品質候補：4本
+- 品質保留：2本 ／ 公開日待ち：0本
+- 未確認の一次資料：0件
 - 本番公開：この処理では実行していません。公開済み件数は未照会です。
 
-1本は品質確認済み候補です。手動保留・既存DB・公開日・有効期限を公開実行時に再判定します。公開完了は実行結果で確認してください。
+4本は品質確認済み候補です。手動保留・既存DB・公開日・有効期限を公開実行時に再判定します。公開完了は実行結果で確認してください。
 未確認記事の品質保留はforceでも解除しません。
 
 ## 記事別の判定
 
-- 特定遊興飲食店（クラブ・ラウンジ）の物件はどう選ぶ？用途地域と保全対象施設の距離で決まる：held（realestate:tokutei-yukyo-inshokuten-club-bukken-youto-hozen-taisho）
+- 中国語バイヤー向け：私道・位置指定道路の接道を買う前に確認する（再建築可否と持分の罠）：quality-eligible（realestate:chugokugo-buyer-shido-ichi-shitei-douro-settei-dd）
+- 相続した共有不動産で話がまとまらない――共有物分割請求に至ったときの換価（任意売却・形式競売）の実務：quality-eligible（realestate:souzoku-kyoyu-bunkatsu-seikyu-kanka-baikyaku）
+- 貸金業の登録を受けるには――純資産5000万円・貸金業務取扱主任者・営業所要件の全体像：held（legal:kashikin-gyo-touroku-yoken-shunin-junshisan）
   - enの内部リンクに言語不一致があります
   - zh-twの内部リンクに言語不一致があります
   - zhの内部リンクに言語不一致があります
   - 公開レビュー記録が未登録です
-  - 確認済みの公的な一次根拠が不足しています
-  - 未確認一次資料：https://laws.e-gov.go.jp/law/322AC0000000233 — 食品衛生法第55条＝飲食店営業許可。特定遊興飲食店も飲食店営業にあたり同許可が同時に必要との整理。条文番号引用は適切（本文は未個別取得だが確立した条文で整合）。
-- 民泊（住宅宿泊事業）を相続したらどうなる？届出は引き継げず、廃業・再届出・売却の判断が要る：held（realestate:souzoku-minpaku-jutaku-shukuhaku-todokede-shokei-haigyo-baikyaku）
+- 相続人の中に生死不明の人がいる――不在者財産管理人と失踪宣告、どちらを選ぶか：held（legal:souzoku-fuzaisha-zaisan-kanrinin-shisso-senkoku-erabikata）
   - enの内部リンクに言語不一致があります
   - zh-twの内部リンクに言語不一致があります
   - zhの内部リンクに言語不一致があります
   - 公開レビュー記録が未登録です
-- 衛生検査所の登録はどう取る？臨床検査技師等法の構造設備・人員基準と申請の流れ：held（legal:eisei-kensajo-rinsho-kensa-touroku-kozo-setsubi-kijun）
-  - enの内部リンクに言語不一致があります
-  - zh-twの内部リンクに言語不一致があります
-  - zhの内部リンクに言語不一致があります
-  - 公開レビュー記録が未登録です
-- 入院中で公正証書遺言が間に合わないときは？死亡危急者遺言（民法976条）の作り方と家裁の確認：held（legal:kikyuji-yuigon-shibo-kikyusha-minpo-976jo-kakunin）
-  - enの内部リンクに言語不一致があります
-  - zh-twの内部リンクに言語不一致があります
-  - zhの内部リンクに言語不一致があります
-  - 公開レビュー記録が未登録です
-  - 確認済みの公的な一次根拠が不足しています
-  - 未確認一次資料：https://laws.e-gov.go.jp/law/421AC0000000052 — 家事事件手続法に基づく遺言の確認（家庭裁判所に対する手続）。行政書士法第1条の2・第1条の3により裁判所提出書類の作成・代理は行政書士の業務範囲外＝本人・弁護士が行うとの業際整理が正確（本文が明確に線引き）。条文番号引用は適切。
-- 家族滞在の配偶者をパートで雇うには？資格外活動28時間と社会保険の壁の実務：quality-eligible（labor:kazoku-taizai-haigusha-part-28jikan-shikaku-gai-shakaihoken-roumu）
-- 使用人兼務役員に残業代は要るのか？労働者性と雇用保険・社会保険の扱い：held（labor:shiyonin-kenmu-yakuin-roudoshasei-zangyo-koyohoken-roumu）
-  - 公開レビュー記録が未登録です
-  - 確認済みの公的な一次根拠が不足しています
-  - 未確認一次資料：https://laws.e-gov.go.jp/law/417AC0000000086 — 会社法第330条＝株式会社と役員及び会計監査人との関係は委任に関する規定に従う（取締役＝委任関係、民法第644条の善管注意義務）。e-Gov API目次で第330条が第3節（329〜338条）に位置することは確認したが、本文は同一フェッチ範囲に未到達。確立した条文で本文引用と整合。
+- 派遣社員を受け入れる会社の労務――抵触日（個人・事業所単位）、派遣先管理台帳、偽装請負（37号告示）：quality-eligible（labor:rodosha-haken-ukeire-teishokuhi-kanri-daicho-37gokokuji-roumu）
+- 常時50人になったら――衛生管理者・産業医・衛生委員会の選任と届出：quality-eligible（labor:eisei-kanrisha-sangyoi-eisei-iinkai-sennin-50nin-gimu）
 
-実行証跡：https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/43964033167
+## レビューの指摘
+
+- [minor] scripts/legal-columns/174-kashikin-gyo-touroku-yoken-shunin-junshisan.md：本文「割合が50分の1以上になる数…（貸金業法第12条の3）」は、第12条の3本体が『内閣府令で定める数』と委任しているのみで、『50分の1（端数切上げ）』の具体値は貸金業法施行規則（第10条の8）にある。数値自体は正確だが、根拠条文の帰属がやや不正確。 ／ 修正案：根拠条文を『第12条の3の委任を受けた施行規則』と明示できれば、より厳密（事実の修正は不要）。
+- [minor] scripts/labor-columns/213-rodosha-haken-ukeire-teishokuhi-kanri-daicho-37gokokuji-roumu.md：本文「台帳は3年間保存し（労働者派遣法施行規則第37条）」とあるが、派遣先管理台帳の3年間保存は法第42条第2項（条文本体）に定めがある。保存年数(3年)自体は正確だが、根拠の帰属が不正確（通知頻度『1か月に1回以上＝施行規則第38条』の帰属は正しい）。 ／ 修正案：保存の根拠を『法第42条第2項』と記すのが正確（事実の修正は不要）。
+
+実行証跡：https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/44171868564

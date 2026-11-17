@@ -82,6 +82,22 @@ const AUTHOR = {
 
 /** 各記事が評価を集約すべきハブ（本文に必須の内部リンク）。verify() で機械検査する */
 const REQUIRED_HUB_LINKS: Record<string, string[]> = {
+  "kashikin-gyo-touroku-yoken-shunin-junshisan": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/kensetsugyo-kyoka-yoken-keikan-sengi-zaisan",
+    "/legal/column/denki-koji-gyo-touroku-eigyosho-shunin",
+  ],
+  "souzoku-fuzaisha-zaisan-kanrinin-shisso-senkoku-erabikata": [
+    "/legal/services/inheritance",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/souzoku",
+    "/legal/column/souzoku-nin-fuzai-seisannin-tokubetsu-enko",
+    "/legal/column/souzoku-ninchisho-yukuefumei-miseinen",
+    "/legal/column/souzoku-touki-nagare",
+  ],
   "eisei-kensajo-rinsho-kensa-touroku-kozo-setsubi-kijun": [
     "/legal/services",
     "/legal/nagare",
@@ -1526,6 +1542,30 @@ function matchesRequiredPhrase(content: string, phrase: string): boolean {
 
 /** 記事ごとに必ず含めるべき表現（機械ゲート。最低限の合否判定） */
 const REQUIRED_PHRASES: Record<string, string[]> = {
+  "kashikin-gyo-touroku-yoken-shunin-junshisan": [
+    "貸金業法第3条",
+    "貸金業法第6条",
+    "貸金業法第12条の3",
+    "純資産額",
+    "貸金業務取扱主任者",
+    "別々にご契約",
+    "独立した事業体",
+    "別事業体",
+    "紹介料を受け取りません",
+  ],
+  "souzoku-fuzaisha-zaisan-kanrinin-shisso-senkoku-erabikata": [
+    "民法第25条",
+    "民法第28条",
+    "民法第30条",
+    "民法第31条",
+    "不在者財産管理人",
+    "失踪宣告",
+    "権限外行為",
+    "別々にご契約",
+    "独立した事業体",
+    "別事業体",
+    "紹介料を受け取りません",
+  ],
   "eisei-kensajo-rinsho-kensa-touroku-kozo-setsubi-kijun": [
     "臨床検査技師等に関する法律第20条の3",
     "衛生検査所",
@@ -4436,6 +4476,8 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
 
 /** 記事ごとに含めてはならない表現 */
 const FORBIDDEN_PHRASES: Record<string, string[]> = {
+  "kashikin-gyo-touroku-yoken-shunin-junshisan": [],
+  "souzoku-fuzaisha-zaisan-kanrinin-shisso-senkoku-erabikata": [],
   "eisei-kensajo-rinsho-kensa-touroku-kozo-setsubi-kijun": [],
   "kikyuji-yuigon-shibo-kikyusha-minpo-976jo-kakunin": [],
   "dai-nishu-doubutsu-toriatsukai-todokede-hieiri-jotokai-youken": [],
@@ -4672,6 +4714,60 @@ const ARTICLES: Array<{
   keywords: string[];
   tags: string[];
 }> = [
+  {
+    file: "174-kashikin-gyo-touroku-yoken-shunin-junshisan.md",
+    slug: "kashikin-gyo-touroku-yoken-shunin-junshisan",
+    date: "2026-11-17",
+    title:
+      "貸金業の登録を受けるには――純資産5000万円・貸金業務取扱主任者・営業所要件の全体像",
+    category: "許認可・開業の手続き（行政書士の実務から）",
+    excerpt:
+      "貸金業（事業者向けの融資や保証を含む）を営むには登録が必要です。二以上の都道府県の区域内に営業所等を置く場合は内閣総理大臣（権限は財務局長に委任）、一の都道府県の区域内だけの場合はその都道府県知事の登録を受けなければなりません（貸金業法第3条第1項）。登録の有効期間は3年で、更新を受けなければ失効します（同条第2項）。主なハードルは三つ。第一に財産的基礎として純資産額が政令で定める金額（5,000万円）以上あること（貸金業法第6条第1項第14号・第3項、貸金業法施行令第3条の2。純資産額の計算は同法第6条第4項・施行規則）。第二に営業所又は事務所ごとに、貸金業の業務に従事する者の数に対し50分の1以上の割合で貸金業務取扱主任者を常勤で置くこと（貸金業法第12条の3）。第三に登録拒否事由（同法第6条第1項各号）に該当しないこと。登録後の取立ては第21条の規制に服し、他人の債権回収の交渉・訴訟は弁護士（弁護士法第72条）、債権回収の受託はサービサー法の領域です。登録申請書類の作成は行政書士、決算書・純資産額の算定や税務は税理士、法人設立の登記は司法書士が、それぞれ独立した事業体として別々にご契約のうえ対応する分離受任の枠組みを整理しました。",
+    keywords: [
+      "貸金業 登録 要件 純資産 5000万円",
+      "貸金業務取扱主任者 営業所ごと 50分の1",
+      "貸金業法 第6条 登録拒否事由 財産的基礎",
+      "貸金業 登録 財務局長 都道府県知事 第3条",
+      "貸金業 取立て 債権回収 弁護士 サービサー 業際",
+      "貸金業 登録申請 行政書士",
+    ],
+    tags: [
+      "貸金業法",
+      "貸金業登録",
+      "財産的基礎",
+      "貸金業務取扱主任者",
+      "登録拒否事由",
+      "業際",
+      "行政書士",
+    ],
+  },
+  {
+    file: "175-souzoku-fuzaisha-zaisan-kanrinin-shisso-senkoku-erabikata.md",
+    slug: "souzoku-fuzaisha-zaisan-kanrinin-shisso-senkoku-erabikata",
+    date: "2026-11-17",
+    title:
+      "相続人の中に生死不明の人がいる――不在者財産管理人と失踪宣告、どちらを選ぶか",
+    category: "相続の手続き（行政書士の実務から）",
+    excerpt:
+      "相続人の中に、既知だが生死不明で連絡の取れない人が1人いると、遺産分割協議は相続人全員でしなければ無効になるため進められません。対応は大きく二択です。一つは不在者財産管理人の選任で、従来の住所又は居所を去って容易に戻る見込みのない不在者が財産の管理人を置いていないとき、家庭裁判所が利害関係人又は検察官の請求により必要な処分を命じて管理人を選びます（民法第25条第1項）。この管理人が遺産分割に加わるには、保存・利用・改良を超える行為なので、家庭裁判所の権限外行為の許可が必要です（民法第28条）。もう一つは失踪宣告で、生死が7年間不明なとき（普通失踪。民法第30条第1項）や、戦地・沈没した船舶中・その他死亡の原因となる危難に遭遇し危難が去った後1年間不明なとき（特別失踪＝危難失踪。同条第2項）に家庭裁判所が宣告し、普通失踪は7年満了の時、危難失踪は危難が去った時に死亡とみなされます（民法第31条）。家庭裁判所への選任・宣告の申立て（裁判所提出書類の作成・代理）は本人又は弁護士、戸籍収集や合意成立後の遺産分割協議書作成は行政書士、確定後の相続登記は司法書士、相続税は税理士が、それぞれ独立した事業体として別々にご契約のうえ対応する分離受任の枠組みを整理しました。",
+    keywords: [
+      "不在者財産管理人 失踪宣告 違い 選び方",
+      "失踪宣告 普通失踪 7年 危難失踪 1年 民法30条",
+      "不在者財産管理人 権限外行為許可 遺産分割 民法28条",
+      "相続人 生死不明 連絡取れない 遺産分割 進まない",
+      "失踪宣告 申立て 家庭裁判所 行政書士 弁護士 業際",
+      "不在者財産管理人 選任 民法25条",
+    ],
+    tags: [
+      "民法",
+      "不在者財産管理人",
+      "失踪宣告",
+      "権限外行為許可",
+      "遺産分割",
+      "業際",
+      "行政書士",
+    ],
+  },
   {
     file: "172-eisei-kensajo-rinsho-kensa-touroku-kozo-setsubi-kijun.md",
     slug: "eisei-kensajo-rinsho-kensa-touroku-kozo-setsubi-kijun",

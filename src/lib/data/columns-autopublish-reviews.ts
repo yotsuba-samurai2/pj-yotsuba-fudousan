@@ -1624,5 +1624,137 @@ export const COLUMNS_AUTOPUBLISH_REVIEWS: readonly ColumnQualityReview[] = [
     },
     "reviewedAt": "2026-11-17",
     "validThrough": "2026-11-19"
+  },
+  {
+    "key": "realestate:chugokugo-buyer-shido-ichi-shitei-douro-settei-dd",
+    "fingerprint": "bc06d38c35e549b010a823e97f311b576d4a28ba36c613afdd29a586f2fb9f0d",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://laws.e-gov.go.jp/api/1/articles;lawId=325AC0000000201;article=43",
+        "checkedAt": "2026-11-17",
+        "relevantClaim": "建築基準法第43条第1項＝敷地は道路に二メートル以上接する義務／第2項第1号＝認定(建築審査会同意不要)・第2号＝建築審査会の同意を得た許可の例外。本文の接道2m・42条2項例外の記述と一致。",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/api/1/articles;lawId=129AC0000000089;article=252",
+        "checkedAt": "2026-11-17",
+        "relevantClaim": "民法第252条第1項＝共有物の管理は持分の価格の過半数で決する／第5項＝保存行為は各共有者が単独で可能。私道の掘削(管理=過半数)・舗装補修(保存=単独)の記述と一致。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/44171868564"
+    },
+    "reviewedAt": "2026-11-18",
+    "validThrough": "2026-11-20"
+  },
+  {
+    "key": "realestate:souzoku-kyoyu-bunkatsu-seikyu-kanka-baikyaku",
+    "fingerprint": "a818db08aa5ba7ff9c49c4518105f70ace84234d4b2bfd9bba106c3372b79cc8",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://laws.e-gov.go.jp/api/1/articles;lawNum=%E6%98%8E%E6%B2%BB%E4%BA%8C%E5%8D%81%E4%B9%9D%E5%B9%B4%E6%B3%95%E5%BE%8B%E7%AC%AC%E5%85%AB%E5%8D%81%E4%B9%9D%E5%8F%B7;article=258",
+        "checkedAt": "2026-11-17",
+        "relevantClaim": "民法第258条＝第1項協議不調時の裁判所への分割請求・第2項1号現物分割/2号賠償分割・第3項競売(換価)・第4項給付命令。本文の分割方法の順序と一致。",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/api/1/articles;lawId=129AC0000000089;article=258%E3%81%AE2",
+        "checkedAt": "2026-11-17",
+        "relevantClaim": "民法第258条の2＝遺産分割すべき持分は258条分割不可(第1項)・相続開始から十年経過で258条分割可(第2項、異議申出は通知後2か月以内)。遺産共有の原則と10年例外の記述と一致。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/44171868564"
+    },
+    "reviewedAt": "2026-11-18",
+    "validThrough": "2026-11-20"
+  },
+  {
+    "key": "labor:rodosha-haken-ukeire-teishokuhi-kanri-daicho-37gokokuji-roumu",
+    "fingerprint": "c4cd768cd1f1883d901baa8078adb2609af224cadc1da96800fd07ceb0959daa",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://laws.e-gov.go.jp/api/1/articles;lawNum=%E6%98%AD%E5%92%8C%E5%85%AD%E5%8D%81%E5%B9%B4%E6%B3%95%E5%BE%8B%E7%AC%AC%E5%85%AB%E5%8D%81%E5%85%AB%E5%8F%B7;article=40%E3%81%AE2",
+        "checkedAt": "2026-11-17",
+        "relevantClaim": "労働者派遣法第40条の2＝事業所単位の派遣可能期間は三年(第2項)、三年を限り延長可(第3項)、意見聴取は抵触日の一月前の日まで(第4項)。本文の事業所単位3年・意見聴取1か月前と一致。",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/api/1/articles;lawNum=%E6%98%AD%E5%92%8C%E5%85%AD%E5%8D%81%E5%B9%B4%E6%B3%95%E5%BE%8B%E7%AC%AC%E5%85%AB%E5%8D%81%E5%85%AB%E5%8F%B7;article=42",
+        "checkedAt": "2026-11-17",
+        "relevantClaim": "労働者派遣法第42条＝派遣先管理台帳の作成(第1項)・三年間保存(第2項・条文本体)・派遣元への通知(第3項、頻度は省令委任)。保存年数3年は正確だが、本文は3年保存を施行規則第37条に帰属(実際は法42条2項、minor)。通知頻度1か月1回=施行規則第38条の帰属は正しい。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/44171868564"
+    },
+    "reviewedAt": "2026-11-18",
+    "validThrough": "2026-11-20"
+  },
+  {
+    "key": "labor:eisei-kanrisha-sangyoi-eisei-iinkai-sennin-50nin-gimu",
+    "fingerprint": "1c29d10a42363498c7e8ab8d4249264df9b63366950ff902bcffb554630c7f76",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://laws.e-gov.go.jp/api/1/articles;lawNum=%E6%98%AD%E5%92%8C%E5%9B%9B%E5%8D%81%E4%B8%83%E5%B9%B4%E5%8A%B4%E5%83%8D%E7%9C%81%E4%BB%A4%E7%AC%AC%E4%B8%89%E5%8D%81%E4%BA%8C%E5%8F%B7;article=7",
+        "checkedAt": "2026-11-17",
+        "relevantClaim": "労働安全衛生規則第7条＝衛生管理者は事由発生から十四日以内に選任/規模別人数(50-200人→1人,200超-500→2,500超-1000→3,1000超-2000→4,2000超-3000→5,3000超→6)/選任報告を所轄労基署長へ。本文の規模別人数表・14日と逐一一致。",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/api/1/articles;lawNum=%E6%98%AD%E5%92%8C%E5%9B%9B%E5%8D%81%E4%B8%83%E5%B9%B4%E5%8A%B4%E5%83%8D%E7%9C%81%E4%BB%A4%E7%AC%AC%E4%B8%89%E5%8D%81%E4%BA%8C%E5%8F%B7;article=23",
+        "checkedAt": "2026-11-17",
+        "relevantClaim": "労働安全衛生規則第23条＝衛生委員会等は毎月一回以上開催・議事の概要を労働者に周知・記録を三年間保存。本文の毎月1回以上・3年保存と一致。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/44171868564"
+    },
+    "reviewedAt": "2026-11-18",
+    "validThrough": "2026-11-20"
   }
 ];

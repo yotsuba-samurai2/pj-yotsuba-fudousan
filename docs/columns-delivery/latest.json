@@ -1,6 +1,6 @@
 {
-  "todayJst": "2026-11-17",
-  "runUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/43964033167",
+  "todayJst": "2026-11-18",
+  "runUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/44171868564",
   "generationStatus": "validated",
   "generatedCount": 6,
   "reviewResult": "success",
@@ -9,96 +9,33 @@
   "findings": {
     "blocker": 0,
     "major": 0,
-    "minor": 0
+    "minor": 2
   },
-  "reviewFindings": [],
-  "registeredCount": 1,
-  "qualityEligibleCount": 1,
-  "heldCount": 5,
+  "reviewFindings": [
+    {
+      "file": "scripts/legal-columns/174-kashikin-gyo-touroku-yoken-shunin-junshisan.md",
+      "severity": "minor",
+      "issue": "本文「割合が50分の1以上になる数…（貸金業法第12条の3）」は、第12条の3本体が『内閣府令で定める数』と委任しているのみで、『50分の1（端数切上げ）』の具体値は貸金業法施行規則（第10条の8）にある。数値自体は正確だが、根拠条文の帰属がやや不正確。",
+      "fix": "根拠条文を『第12条の3の委任を受けた施行規則』と明示できれば、より厳密（事実の修正は不要）。"
+    },
+    {
+      "file": "scripts/labor-columns/213-rodosha-haken-ukeire-teishokuhi-kanri-daicho-37gokokuji-roumu.md",
+      "severity": "minor",
+      "issue": "本文「台帳は3年間保存し（労働者派遣法施行規則第37条）」とあるが、派遣先管理台帳の3年間保存は法第42条第2項（条文本体）に定めがある。保存年数(3年)自体は正確だが、根拠の帰属が不正確（通知頻度『1か月に1回以上＝施行規則第38条』の帰属は正しい）。",
+      "fix": "保存の根拠を『法第42条第2項』と記すのが正確（事実の修正は不要）。"
+    }
+  ],
+  "registeredCount": 4,
+  "qualityEligibleCount": 4,
+  "heldCount": 2,
   "scheduledCount": 0,
-  "unverifiedSourceCount": 3,
+  "unverifiedSourceCount": 0,
   "publishedCount": null,
   "articles": [
     {
-      "key": "realestate:tokutei-yukyo-inshokuten-club-bukken-youto-hozen-taisho",
-      "fingerprint": "d5145ad560f3b512c44fc6ae4e4e7455954e70712cfcc723390627fa2b0ce0b9",
-      "title": "特定遊興飲食店（クラブ・ラウンジ）の物件はどう選ぶ？用途地域と保全対象施設の距離で決まる",
-      "registered": false,
-      "state": "held",
-      "reasons": [
-        "enの内部リンクに言語不一致があります",
-        "zh-twの内部リンクに言語不一致があります",
-        "zhの内部リンクに言語不一致があります",
-        "公開レビュー記録が未登録です",
-        "確認済みの公的な一次根拠が不足しています"
-      ],
-      "sourceFailures": [
-        {
-          "url": "https://laws.e-gov.go.jp/law/322AC0000000233",
-          "checkedAt": "2026-11-16",
-          "relevantClaim": "食品衛生法第55条＝飲食店営業許可。特定遊興飲食店も飲食店営業にあたり同許可が同時に必要との整理。条文番号引用は適切（本文は未個別取得だが確立した条文で整合）。",
-          "verified": false
-        }
-      ],
-      "sourceEvidenceAvailable": true
-    },
-    {
-      "key": "realestate:souzoku-minpaku-jutaku-shukuhaku-todokede-shokei-haigyo-baikyaku",
-      "fingerprint": "0e8aaf1bf6183651b4ec8d4cd57dc3a60839587e6acc84008e16372fae17812b",
-      "title": "民泊（住宅宿泊事業）を相続したらどうなる？届出は引き継げず、廃業・再届出・売却の判断が要る",
-      "registered": false,
-      "state": "held",
-      "reasons": [
-        "enの内部リンクに言語不一致があります",
-        "zh-twの内部リンクに言語不一致があります",
-        "zhの内部リンクに言語不一致があります",
-        "公開レビュー記録が未登録です"
-      ],
-      "sourceFailures": [],
-      "sourceEvidenceAvailable": true
-    },
-    {
-      "key": "legal:eisei-kensajo-rinsho-kensa-touroku-kozo-setsubi-kijun",
-      "fingerprint": "106e372ecf32e2561609f21e200436d9eaf55ac8fe328fb53224f37df32954cf",
-      "title": "衛生検査所の登録はどう取る？臨床検査技師等法の構造設備・人員基準と申請の流れ",
-      "registered": false,
-      "state": "held",
-      "reasons": [
-        "enの内部リンクに言語不一致があります",
-        "zh-twの内部リンクに言語不一致があります",
-        "zhの内部リンクに言語不一致があります",
-        "公開レビュー記録が未登録です"
-      ],
-      "sourceFailures": [],
-      "sourceEvidenceAvailable": true
-    },
-    {
-      "key": "legal:kikyuji-yuigon-shibo-kikyusha-minpo-976jo-kakunin",
-      "fingerprint": "1499e7c9e72a8a828f87aa8aba32e32dc16fba56caef2c54b398116c551d6fac",
-      "title": "入院中で公正証書遺言が間に合わないときは？死亡危急者遺言（民法976条）の作り方と家裁の確認",
-      "registered": false,
-      "state": "held",
-      "reasons": [
-        "enの内部リンクに言語不一致があります",
-        "zh-twの内部リンクに言語不一致があります",
-        "zhの内部リンクに言語不一致があります",
-        "公開レビュー記録が未登録です",
-        "確認済みの公的な一次根拠が不足しています"
-      ],
-      "sourceFailures": [
-        {
-          "url": "https://laws.e-gov.go.jp/law/421AC0000000052",
-          "checkedAt": "2026-11-16",
-          "relevantClaim": "家事事件手続法に基づく遺言の確認（家庭裁判所に対する手続）。行政書士法第1条の2・第1条の3により裁判所提出書類の作成・代理は行政書士の業務範囲外＝本人・弁護士が行うとの業際整理が正確（本文が明確に線引き）。条文番号引用は適切。",
-          "verified": false
-        }
-      ],
-      "sourceEvidenceAvailable": true
-    },
-    {
-      "key": "labor:kazoku-taizai-haigusha-part-28jikan-shikaku-gai-shakaihoken-roumu",
-      "fingerprint": "d29c936148e17550e37527310019e9cc7003298a364c6d2cede9d3ff2cc81fda",
-      "title": "家族滞在の配偶者をパートで雇うには？資格外活動28時間と社会保険の壁の実務",
+      "key": "realestate:chugokugo-buyer-shido-ichi-shitei-douro-settei-dd",
+      "fingerprint": "bc06d38c35e549b010a823e97f311b576d4a28ba36c613afdd29a586f2fb9f0d",
+      "title": "中国語バイヤー向け：私道・位置指定道路の接道を買う前に確認する（再建築可否と持分の罠）",
       "registered": true,
       "state": "quality-eligible",
       "reasons": [],
@@ -106,23 +43,63 @@
       "sourceEvidenceAvailable": true
     },
     {
-      "key": "labor:shiyonin-kenmu-yakuin-roudoshasei-zangyo-koyohoken-roumu",
-      "fingerprint": "ac10c7a7bf716d727087b60982e69bf12c95266e1c2d69e404d52bd8d08d68cb",
-      "title": "使用人兼務役員に残業代は要るのか？労働者性と雇用保険・社会保険の扱い",
+      "key": "realestate:souzoku-kyoyu-bunkatsu-seikyu-kanka-baikyaku",
+      "fingerprint": "a818db08aa5ba7ff9c49c4518105f70ace84234d4b2bfd9bba106c3372b79cc8",
+      "title": "相続した共有不動産で話がまとまらない――共有物分割請求に至ったときの換価（任意売却・形式競売）の実務",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:kashikin-gyo-touroku-yoken-shunin-junshisan",
+      "fingerprint": "7c62c97b2e4c62347c8ed5888dc9b891d84d97e1a0c257bf1a33be88f6e9ebe0",
+      "title": "貸金業の登録を受けるには――純資産5000万円・貸金業務取扱主任者・営業所要件の全体像",
       "registered": false,
       "state": "held",
       "reasons": [
-        "公開レビュー記録が未登録です",
-        "確認済みの公的な一次根拠が不足しています"
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です"
       ],
-      "sourceFailures": [
-        {
-          "url": "https://laws.e-gov.go.jp/law/417AC0000000086",
-          "checkedAt": "2026-11-16",
-          "relevantClaim": "会社法第330条＝株式会社と役員及び会計監査人との関係は委任に関する規定に従う（取締役＝委任関係、民法第644条の善管注意義務）。e-Gov API目次で第330条が第3節（329〜338条）に位置することは確認したが、本文は同一フェッチ範囲に未到達。確立した条文で本文引用と整合。",
-          "verified": false
-        }
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:souzoku-fuzaisha-zaisan-kanrinin-shisso-senkoku-erabikata",
+      "fingerprint": "09fdec93c52b46c957066057b241284e4c7f7c791f6812177a41a9e9a424419e",
+      "title": "相続人の中に生死不明の人がいる――不在者財産管理人と失踪宣告、どちらを選ぶか",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です"
       ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:rodosha-haken-ukeire-teishokuhi-kanri-daicho-37gokokuji-roumu",
+      "fingerprint": "c4cd768cd1f1883d901baa8078adb2609af224cadc1da96800fd07ceb0959daa",
+      "title": "派遣社員を受け入れる会社の労務――抵触日（個人・事業所単位）、派遣先管理台帳、偽装請負（37号告示）",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:eisei-kanrisha-sangyoi-eisei-iinkai-sennin-50nin-gimu",
+      "fingerprint": "1c29d10a42363498c7e8ab8d4249264df9b63366950ff902bcffb554630c7f76",
+      "title": "常時50人になったら――衛生管理者・産業医・衛生委員会の選任と届出",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
       "sourceEvidenceAvailable": true
     }
   ]
