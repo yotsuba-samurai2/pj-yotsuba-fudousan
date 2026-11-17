@@ -1,7 +1,7 @@
 {
   "dryRun": false,
-  "runAt": "2026-11-16T10:30:39.986Z",
-  "todayJst": "2026-11-16",
+  "runAt": "2026-11-17T11:25:11.395Z",
+  "todayJst": "2026-11-17",
   "targets": [
     {
       "key": "labor:chiryo-shigoto-ryoritsu-shien-jikan-tanni-nenkyu-roumu",
@@ -20,6 +20,15 @@
       "date": "2026-11-15",
       "category": "労働時間",
       "path": "/labor/column/sanpai-shushu-unpan-driver-kaizen-kijun-kokuji-kosoku-jikan-roumu"
+    },
+    {
+      "key": "labor:kazoku-taizai-haigusha-part-28jikan-shikaku-gai-shakaihoken-roumu",
+      "business": "labor",
+      "slug": "kazoku-taizai-haigusha-part-28jikan-shikaku-gai-shakaihoken-roumu",
+      "title": "家族滞在の配偶者をパートで雇うには？資格外活動28時間と社会保険の壁の実務",
+      "date": "2026-11-16",
+      "category": "外国人雇用",
+      "path": "/labor/column/kazoku-taizai-haigusha-part-28jikan-shikaku-gai-shakaihoken-roumu"
     }
   ],
   "held": [
@@ -364,6 +373,78 @@
         "zhの内部リンクに言語不一致があります",
         "公開レビュー記録が未登録です"
       ]
+    },
+    {
+      "key": "labor:shiyonin-kenmu-yakuin-roudoshasei-zangyo-koyohoken-roumu",
+      "business": "labor",
+      "slug": "shiyonin-kenmu-yakuin-roudoshasei-zangyo-koyohoken-roumu",
+      "title": "使用人兼務役員に残業代は要るのか？労働者性と雇用保険・社会保険の扱い",
+      "date": "2026-11-16",
+      "category": "労働時間",
+      "path": "/labor/column/shiyonin-kenmu-yakuin-roudoshasei-zangyo-koyohoken-roumu",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "legal:eisei-kensajo-rinsho-kensa-touroku-kozo-setsubi-kijun",
+      "business": "legal",
+      "slug": "eisei-kensajo-rinsho-kensa-touroku-kozo-setsubi-kijun",
+      "title": "衛生検査所の登録はどう取る？臨床検査技師等法の構造設備・人員基準と申請の流れ",
+      "date": "2026-11-16",
+      "category": "許認可・開業の手続き（行政書士の実務から）",
+      "path": "/legal/column/eisei-kensajo-rinsho-kensa-touroku-kozo-setsubi-kijun",
+      "qualityHoldReasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "legal:kikyuji-yuigon-shibo-kikyusha-minpo-976jo-kakunin",
+      "business": "legal",
+      "slug": "kikyuji-yuigon-shibo-kikyusha-minpo-976jo-kakunin",
+      "title": "入院中で公正証書遺言が間に合わないときは？死亡危急者遺言（民法976条）の作り方と家裁の確認",
+      "date": "2026-11-16",
+      "category": "相続の手続き（行政書士の実務から）",
+      "path": "/legal/column/kikyuji-yuigon-shibo-kikyusha-minpo-976jo-kakunin",
+      "qualityHoldReasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "realestate:souzoku-minpaku-jutaku-shukuhaku-todokede-shokei-haigyo-baikyaku",
+      "business": "realestate",
+      "slug": "souzoku-minpaku-jutaku-shukuhaku-todokede-shokei-haigyo-baikyaku",
+      "title": "民泊（住宅宿泊事業）を相続したらどうなる？届出は引き継げず、廃業・再届出・売却の判断が要る",
+      "date": "2026-11-16",
+      "category": "相続",
+      "path": "/column/souzoku-minpaku-jutaku-shukuhaku-todokede-shokei-haigyo-baikyaku",
+      "qualityHoldReasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "realestate:tokutei-yukyo-inshokuten-club-bukken-youto-hozen-taisho",
+      "business": "realestate",
+      "slug": "tokutei-yukyo-inshokuten-club-bukken-youto-hozen-taisho",
+      "title": "特定遊興飲食店（クラブ・ラウンジ）の物件はどう選ぶ？用途地域と保全対象施設の距離で決まる",
+      "date": "2026-11-16",
+      "category": "投資・事業用不動産",
+      "path": "/column/tokutei-yukyo-inshokuten-club-bukken-youto-hozen-taisho",
+      "qualityHoldReasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です"
+      ]
     }
   ],
   "scheduled": [],
@@ -469,9 +550,29 @@
     {
       "key": "realestate:souzoku-nochi-nouyouchi-kuiki-noshin-jogai-tenyo-baikyaku",
       "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録です"
+    },
+    {
+      "key": "labor:shiyonin-kenmu-yakuin-roudoshasei-zangyo-koyohoken-roumu",
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
+    },
+    {
+      "key": "legal:eisei-kensajo-rinsho-kensa-touroku-kozo-setsubi-kijun",
+      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録です"
+    },
+    {
+      "key": "legal:kikyuji-yuigon-shibo-kikyusha-minpo-976jo-kakunin",
+      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録です"
+    },
+    {
+      "key": "realestate:souzoku-minpaku-jutaku-shukuhaku-todokede-shokei-haigyo-baikyaku",
+      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録です"
+    },
+    {
+      "key": "realestate:tokutei-yukyo-inshokuten-club-bukken-youto-hozen-taisho",
+      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録です"
     }
   ],
-  "blocked": "公開待ちが27本あり、1回の上限（24本）を超えたため止めました。対象を確かめてから、管理画面の「今すぐ公開」か、手動実行（force）で公開してください。",
+  "blocked": "公開待ちが33本あり、1回の上限（24本）を超えたため止めました。対象を確かめてから、管理画面の「今すぐ公開」か、手動実行（force）で公開してください。",
   "outcome": "failure",
   "httpStatus": "409"
 }
