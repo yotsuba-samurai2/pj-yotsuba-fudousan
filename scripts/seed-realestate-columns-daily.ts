@@ -3528,7 +3528,7 @@ const ARTICLES: ArticleSpec[] = [
     tags: ["事業用不動産", "EV充電", "消防法", "区分所有法"],
     locales: ["ja", "en", "zh-tw", "zh"],
     localesWithTranslations: ["en", "zh-tw", "zh"],
-    hubLinks: ["/toushi", "/office"],
+    hubLinks: ["/toushi", "/contact"],
   },
   {
     file: "173-chugokugo-buyer-keibai-kobai-bukken-nyusatsu-daikin-nouhu.md",
@@ -3567,7 +3567,7 @@ const ARTICLES: ArticleSpec[] = [
     tags: ["事業用不動産", "障害福祉", "用途地域", "消防法"],
     locales: ["ja", "en", "zh-tw", "zh"],
     localesWithTranslations: ["en", "zh-tw", "zh"],
-    hubLinks: ["/office", "/toushi"],
+    hubLinks: ["/contact", "/toushi"],
   },
   {
     file: "175-souzoku-kashiya-akewatashi-seitojiyu-tachinoki-ryo-baikyaku.md",
@@ -3607,7 +3607,7 @@ const ARTICLES: ArticleSpec[] = [
     tags: ["事業用不動産", "許認可", "用途地域", "排水"],
     locales: ["ja", "en", "zh-tw", "zh"],
     localesWithTranslations: ["en", "zh-tw", "zh"],
-    hubLinks: ["/office", "/toushi"],
+    hubLinks: ["/contact", "/toushi"],
   },
   {
     file: "177-souzoku-nochi-nouyouchi-kuiki-noshin-jogai-tenyo-baikyaku.md",
@@ -3646,7 +3646,7 @@ const ARTICLES: ArticleSpec[] = [
     tags: ["事業用不動産", "許認可", "風営法", "用途地域"],
     locales: ["ja", "en", "zh-tw", "zh"],
     localesWithTranslations: ["en", "zh-tw", "zh"],
-    hubLinks: ["/office", "/toushi"],
+    hubLinks: ["/contact", "/toushi"],
   },
   {
     file: "179-souzoku-minpaku-jutaku-shukuhaku-todokede-shokei-haigyo-baikyaku.md",

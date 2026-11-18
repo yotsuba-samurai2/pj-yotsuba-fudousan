@@ -1343,7 +1343,6 @@
         "normalizedInternalPaths": [
           "/about/uramatsu",
           "/global",
-          "/legal/column/keiei-kanri-zairyu-2025-kaisei-shihonkin-joukin-shokuin-chuka-taiwan",
           "/legal/column/keieikanri-koshin-jigyo-keizokusei-rissho-chuka-taiwan",
           "/legal/column/keieikanri-zairyu-chuka-kigyousha-kaisha-setsuritsu",
           "/legal/nagare",
@@ -1355,6 +1354,7 @@
           "https://www.meti.go.jp/policy/newbusiness/startupvisa/index.html",
           "https://www.moj.go.jp/isa/03_00097.html",
           "https://www.moj.go.jp/isa/applications/resources/10_00237.html",
+          "https://www.moj.go.jp/isa/content/001448070.pdf",
           "https://www.moj.go.jp/isa/content/001448099.pdf"
         ]
       },
@@ -1369,7 +1369,6 @@
         "normalizedInternalPaths": [
           "/about/uramatsu",
           "/global",
-          "/legal/column/keiei-kanri-zairyu-2025-kaisei-shihonkin-joukin-shokuin-chuka-taiwan",
           "/legal/column/keieikanri-koshin-jigyo-keizokusei-rissho-chuka-taiwan",
           "/legal/column/keieikanri-zairyu-chuka-kigyousha-kaisha-setsuritsu",
           "/legal/nagare",
@@ -1381,6 +1380,7 @@
           "https://www.meti.go.jp/policy/newbusiness/startupvisa/index.html",
           "https://www.moj.go.jp/isa/03_00097.html",
           "https://www.moj.go.jp/isa/applications/resources/10_00237.html",
+          "https://www.moj.go.jp/isa/content/001448070.pdf",
           "https://www.moj.go.jp/isa/content/001448099.pdf"
         ]
       },
@@ -1395,7 +1395,6 @@
         "normalizedInternalPaths": [
           "/about/uramatsu",
           "/global",
-          "/legal/column/keiei-kanri-zairyu-2025-kaisei-shihonkin-joukin-shokuin-chuka-taiwan",
           "/legal/column/keieikanri-koshin-jigyo-keizokusei-rissho-chuka-taiwan",
           "/legal/column/keieikanri-zairyu-chuka-kigyousha-kaisha-setsuritsu",
           "/legal/nagare",
@@ -1407,6 +1406,7 @@
           "https://www.meti.go.jp/policy/newbusiness/startupvisa/index.html",
           "https://www.moj.go.jp/isa/03_00097.html",
           "https://www.moj.go.jp/isa/applications/resources/10_00237.html",
+          "https://www.moj.go.jp/isa/content/001448070.pdf",
           "https://www.moj.go.jp/isa/content/001448099.pdf"
         ]
       },
@@ -1421,7 +1421,6 @@
         "normalizedInternalPaths": [
           "/about/uramatsu",
           "/global",
-          "/legal/column/keiei-kanri-zairyu-2025-kaisei-shihonkin-joukin-shokuin-chuka-taiwan",
           "/legal/column/keieikanri-koshin-jigyo-keizokusei-rissho-chuka-taiwan",
           "/legal/column/keieikanri-zairyu-chuka-kigyousha-kaisha-setsuritsu",
           "/legal/nagare",
@@ -1433,6 +1432,7 @@
           "https://www.meti.go.jp/policy/newbusiness/startupvisa/index.html",
           "https://www.moj.go.jp/isa/03_00097.html",
           "https://www.moj.go.jp/isa/applications/resources/10_00237.html",
+          "https://www.moj.go.jp/isa/content/001448070.pdf",
           "https://www.moj.go.jp/isa/content/001448099.pdf"
         ]
       }
@@ -1557,14 +1557,14 @@
         "normalizedInternalPaths": [
           "/about/uramatsu",
           "/column/kenchiku-shoene-ho-shoene-seino-hyoji-koukoku-2024",
-          "/column/shoene-tekigo-gimuka-2025-chintai-shinchiku-bukken",
-          "/office",
+          "/contact",
           "/toushi"
         ],
         "sourceUrls": [
           "https://laws.e-gov.go.jp/law/337AC0000000069",
           "https://www.fdma.go.jp/laws/tutatsu/items/230221_yobo113v2.pdf",
           "https://www.fdma.go.jp/laws/tutatsu/items/230221_yobou_59v2.pdf",
+          "https://www.mlit.go.jp/common/001768045.pdf",
           "https://www.mlit.go.jp/jutakukentiku/house/content/001971486.pdf"
         ]
       },
@@ -1579,14 +1579,14 @@
         "normalizedInternalPaths": [
           "/about/uramatsu",
           "/column/kenchiku-shoene-ho-shoene-seino-hyoji-koukoku-2024",
-          "/column/shoene-tekigo-gimuka-2025-chintai-shinchiku-bukken",
-          "/office",
+          "/contact",
           "/toushi"
         ],
         "sourceUrls": [
           "https://laws.e-gov.go.jp/law/337AC0000000069",
           "https://www.fdma.go.jp/laws/tutatsu/items/230221_yobo113v2.pdf",
           "https://www.fdma.go.jp/laws/tutatsu/items/230221_yobou_59v2.pdf",
+          "https://www.mlit.go.jp/common/001768045.pdf",
           "https://www.mlit.go.jp/jutakukentiku/house/content/001971486.pdf"
         ]
       },
@@ -1601,14 +1601,14 @@
         "normalizedInternalPaths": [
           "/about/uramatsu",
           "/column/kenchiku-shoene-ho-shoene-seino-hyoji-koukoku-2024",
-          "/column/shoene-tekigo-gimuka-2025-chintai-shinchiku-bukken",
-          "/office",
+          "/contact",
           "/toushi"
         ],
         "sourceUrls": [
           "https://laws.e-gov.go.jp/law/337AC0000000069",
           "https://www.fdma.go.jp/laws/tutatsu/items/230221_yobo113v2.pdf",
           "https://www.fdma.go.jp/laws/tutatsu/items/230221_yobou_59v2.pdf",
+          "https://www.mlit.go.jp/common/001768045.pdf",
           "https://www.mlit.go.jp/jutakukentiku/house/content/001971486.pdf"
         ]
       },
@@ -1623,14 +1623,14 @@
         "normalizedInternalPaths": [
           "/about/uramatsu",
           "/column/kenchiku-shoene-ho-shoene-seino-hyoji-koukoku-2024",
-          "/column/shoene-tekigo-gimuka-2025-chintai-shinchiku-bukken",
-          "/office",
+          "/contact",
           "/toushi"
         ],
         "sourceUrls": [
           "https://laws.e-gov.go.jp/law/337AC0000000069",
           "https://www.fdma.go.jp/laws/tutatsu/items/230221_yobo113v2.pdf",
           "https://www.fdma.go.jp/laws/tutatsu/items/230221_yobou_59v2.pdf",
+          "https://www.mlit.go.jp/common/001768045.pdf",
           "https://www.mlit.go.jp/jutakukentiku/house/content/001971486.pdf"
         ]
       }
@@ -2090,9 +2090,9 @@
         "normalizedInternalPaths": [
           "/about/uramatsu",
           "/column/kensazumisho-nashi-bukken-fukushi-youto-henko",
+          "/contact",
           "/legal/column/seikatsu-kaigo-shitei-bukken-yoken",
           "/legal/services/shogai-fukushi",
-          "/office",
           "/toushi"
         ],
         "sourceUrls": [
@@ -2114,9 +2114,9 @@
         "normalizedInternalPaths": [
           "/about/uramatsu",
           "/column/kensazumisho-nashi-bukken-fukushi-youto-henko",
+          "/contact",
           "/legal/column/seikatsu-kaigo-shitei-bukken-yoken",
           "/legal/services/shogai-fukushi",
-          "/office",
           "/toushi"
         ],
         "sourceUrls": [
@@ -2138,9 +2138,9 @@
         "normalizedInternalPaths": [
           "/about/uramatsu",
           "/column/kensazumisho-nashi-bukken-fukushi-youto-henko",
+          "/contact",
           "/legal/column/seikatsu-kaigo-shitei-bukken-yoken",
           "/legal/services/shogai-fukushi",
-          "/office",
           "/toushi"
         ],
         "sourceUrls": [
@@ -2162,9 +2162,9 @@
         "normalizedInternalPaths": [
           "/about/uramatsu",
           "/column/kensazumisho-nashi-bukken-fukushi-youto-henko",
+          "/contact",
           "/legal/column/seikatsu-kaigo-shitei-bukken-yoken",
           "/legal/services/shogai-fukushi",
-          "/office",
           "/toushi"
         ],
         "sourceUrls": [
@@ -2508,7 +2508,7 @@
           "/column/delivery-senmon-ghost-kitchen-bukken-youto-haisui-grease",
           "/column/inshokuten-skeleton-bukken-haiki-grease",
           "/column/kitchen-car-shikomi-basho-bukken-eigyo-kyoka-youken",
-          "/office",
+          "/contact",
           "/toushi"
         ],
         "sourceUrls": [
@@ -2532,7 +2532,7 @@
           "/column/delivery-senmon-ghost-kitchen-bukken-youto-haisui-grease",
           "/column/inshokuten-skeleton-bukken-haiki-grease",
           "/column/kitchen-car-shikomi-basho-bukken-eigyo-kyoka-youken",
-          "/office",
+          "/contact",
           "/toushi"
         ],
         "sourceUrls": [
@@ -2556,7 +2556,7 @@
           "/column/delivery-senmon-ghost-kitchen-bukken-youto-haisui-grease",
           "/column/inshokuten-skeleton-bukken-haiki-grease",
           "/column/kitchen-car-shikomi-basho-bukken-eigyo-kyoka-youken",
-          "/office",
+          "/contact",
           "/toushi"
         ],
         "sourceUrls": [
@@ -2580,7 +2580,7 @@
           "/column/delivery-senmon-ghost-kitchen-bukken-youto-haisui-grease",
           "/column/inshokuten-skeleton-bukken-haiki-grease",
           "/column/kitchen-car-shikomi-basho-bukken-eigyo-kyoka-youken",
-          "/office",
+          "/contact",
           "/toushi"
         ],
         "sourceUrls": [
@@ -3163,8 +3163,8 @@
         ],
         "normalizedInternalPaths": [
           "/about/uramatsu",
+          "/contact",
           "/legal/column/tokutei-yukyo-inshokuten-eigyo-kyoka-youken",
-          "/office",
           "/toushi"
         ],
         "sourceUrls": [
@@ -3185,8 +3185,8 @@
         ],
         "normalizedInternalPaths": [
           "/about/uramatsu",
+          "/contact",
           "/legal/column/tokutei-yukyo-inshokuten-eigyo-kyoka-youken",
-          "/office",
           "/toushi"
         ],
         "sourceUrls": [
@@ -3207,8 +3207,8 @@
         ],
         "normalizedInternalPaths": [
           "/about/uramatsu",
+          "/contact",
           "/legal/column/tokutei-yukyo-inshokuten-eigyo-kyoka-youken",
-          "/office",
           "/toushi"
         ],
         "sourceUrls": [
@@ -3229,8 +3229,8 @@
         ],
         "normalizedInternalPaths": [
           "/about/uramatsu",
+          "/contact",
           "/legal/column/tokutei-yukyo-inshokuten-eigyo-kyoka-youken",
-          "/office",
           "/toushi"
         ],
         "sourceUrls": [

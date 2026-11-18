@@ -930,6 +930,7 @@ jobs:
           path: |
             .tmp/quality-delivery.json
             .tmp/quality-holds.json
+            .tmp/quality-projection.json
             docs/columns-delivery/
           include-hidden-files: true
           if-no-files-found: error

@@ -94,7 +94,7 @@ See the [Itabashi City guidance for service providers](https://www.city.itabashi
 
 Opening a seikatsu kaigo is quickest when you first firm up the property premise on the real-estate side and then proceed with the designation application, building, labor and tax in parallel with each expert. We help with this assignment and the property-side checks as general information, but we do not make the final judgment on whether designation is granted, building/fire-code conformity, or tax amounts.
 
-**[For advice on properties for disability welfare services such as seikatsu kaigo, bring it to Yotsuba Real Estate — initial consultation is free](/en/office)**／**[For advice on surveying and brokering commercial properties, here](/en/toushi)**
+**[For advice on properties for disability welfare services such as seikatsu kaigo, bring it to Yotsuba Real Estate — initial consultation is free](/en/contact)**／**[For advice on surveying and brokering commercial properties, here](/en/toushi)**
 
 In your inquiry, please note the property's location, the building type (detached house, a unit in a building, etc.), the expected user capacity, lease or purchase, and whether it is a conversion of an existing building or new. We start from organising what can be checked property-side and arranging the referrals to the administrative scrivener, architect, labor and social security attorney and tax accountant.
 

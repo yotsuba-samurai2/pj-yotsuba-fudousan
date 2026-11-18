@@ -80,7 +80,6 @@ const ROUTES: Readonly<Record<string, readonly string[]>> = {
   "legal:startup-visa-gaikokujin-kigyo-katsudo-sokushin-tokutei-katsudo": [
     "/about/uramatsu",
     "/global",
-    "/legal/column/keiei-kanri-zairyu-2025-kaisei-shihonkin-joukin-shokuin-chuka-taiwan",
     "/legal/column/keieikanri-koshin-jigyo-keizokusei-rissho-chuka-taiwan",
     "/legal/column/keieikanri-zairyu-chuka-kigyousha-kaisha-setsuritsu",
     "/legal/nagare",
@@ -96,8 +95,7 @@ const ROUTES: Readonly<Record<string, readonly string[]>> = {
   "realestate:ev-kyusoku-juden-setsubi-chintai-shougyou-bukken-shoubou": [
     "/about/uramatsu",
     "/column/kenchiku-shoene-ho-shoene-seino-hyoji-koukoku-2024",
-    "/column/shoene-tekigo-gimuka-2025-chintai-shinchiku-bukken",
-    "/office",
+    "/contact",
     "/toushi"
   ],
   "legal:jokaso-koji-gyo-touroku-seiso-gyo-kyoka-nagare-youken": [
@@ -125,7 +123,7 @@ const ROUTES: Readonly<Record<string, readonly string[]>> = {
     "/column/kensazumisho-nashi-bukken-fukushi-youto-henko",
     "/legal/column/seikatsu-kaigo-shitei-bukken-yoken",
     "/legal/services/shogai-fukushi",
-    "/office",
+    "/contact",
     "/toushi"
   ],
   "realestate:souzoku-kashiya-akewatashi-seitojiyu-tachinoki-ryo-baikyaku": [
@@ -158,7 +156,7 @@ const ROUTES: Readonly<Record<string, readonly string[]>> = {
     "/column/delivery-senmon-ghost-kitchen-bukken-youto-haisui-grease",
     "/column/inshokuten-skeleton-bukken-haiki-grease",
     "/column/kitchen-car-shikomi-basho-bukken-eigyo-kyoka-youken",
-    "/office",
+    "/contact",
     "/toushi"
   ],
   "realestate:souzoku-nochi-nouyouchi-kuiki-noshin-jogai-tenyo-baikyaku": [
@@ -200,7 +198,7 @@ const ROUTES: Readonly<Record<string, readonly string[]>> = {
   "realestate:tokutei-yukyo-inshokuten-club-bukken-youto-hozen-taisho": [
     "/about/uramatsu",
     "/legal/column/tokutei-yukyo-inshokuten-eigyo-kyoka-youken",
-    "/office",
+    "/contact",
     "/toushi"
   ],
   "legal:kashikin-gyo-touroku-yoken-shunin-junshisan": [

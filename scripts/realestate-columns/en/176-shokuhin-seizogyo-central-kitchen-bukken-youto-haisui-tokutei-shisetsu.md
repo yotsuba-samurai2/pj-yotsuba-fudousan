@@ -87,7 +87,7 @@ The food-manufacturing licence application (preparing and submitting documents i
 
 Opening a central kitchen goes fastest when, after the property premises are fixed on the real-estate side, the licence, use change, drainage and labor proceed in parallel with each professional. We help, as general information, with this allocation and the property-side checks, but we do not make the final judgment on whether a licence is granted, on building/drainage conformity, or on tax amounts.
 
-**[Consult Yotsuba Real Estate about central-kitchen / food-manufacturing properties (free consultation)](/en/office)** / **[Consult us about surveying and brokering commercial properties](/en/toushi)**
+**[Consult Yotsuba Real Estate about central-kitchen / food-manufacturing properties (free consultation)](/en/contact)** / **[Consult us about surveying and brokering commercial properties](/en/toushi)**
 
 In your inquiry, please note the property's location, the building type (standalone building, a unit in a building, etc.), the products to be manufactured (prepared food, confectionery, bread, etc.), the intended work-area scale, lease or purchase, and whether it is a conversion of an existing building or new. We start from organising what can be checked on the property side and the referral targets to an administrative scrivener, architect, labor and social security attorney and tax accountant. If you are at the stage of finding a prep location for a kitchen car, see also [Kitchen-car prep-location property and business-licence requirements](/en/column/kitchen-car-shikomi-basho-bukken-eigyo-kyoka-youken).
 

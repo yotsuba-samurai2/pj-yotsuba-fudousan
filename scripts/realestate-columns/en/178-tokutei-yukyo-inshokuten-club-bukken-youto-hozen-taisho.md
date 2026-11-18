@@ -104,7 +104,7 @@ Confirming the requirements for a specified-entertainment-restaurant licence and
 
 Opening a club or lounge goes fastest when, after fixing on the real-estate side whether the property meets the permitted area and the room standards, the licence, use change and tax proceed in parallel with each professional. We help, as general information, with this allocation and the property-side checks, but we do not make the final judgment on whether a licence is granted, on conformity of structure or use, or on tax amounts.
 
-**[Consult Yotsuba Real Estate about properties for clubs, lounges and other specified entertainment restaurants (free consultation)](/en/office)** / **[Consult us about surveying and brokering commercial properties](/en/toushi)**
+**[Consult Yotsuba Real Estate about properties for clubs, lounges and other specified entertainment restaurants (free consultation)](/en/contact)** / **[Consult us about surveying and brokering commercial properties](/en/toushi)**
 
 In your inquiry, please note the intended business form (whether there is entertainment such as dance/show/DJ, whether there is hospitality, the late-night hours), the desired area, lease or purchase, and whether it is an existing fit-out or new. We start from organising what can be checked on the property side and the referral targets to an administrative scrivener, architect, licensed real estate transaction specialist and tax accountant.
 

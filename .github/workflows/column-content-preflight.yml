@@ -8,7 +8,9 @@ on:
       - "scripts/seed-labor-columns.ts"
       - "scripts/seed-souzoku-legal-columns.ts"
       - "scripts/seed-realestate-columns-daily.ts"
-      - "src/lib/data/*columns*seed.ts"
+      - "src/lib/data/*columns*seed*.ts"
+      - "src/app/sitemap.ts"
+      - "scripts/columns-review-proof.ts"
       - "scripts/*column-projection.mjs"
       - ".github/workflows/column-content-preflight.yml"
 permissions:

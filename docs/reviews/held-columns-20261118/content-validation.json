@@ -1,5 +1,5 @@
 {
-  "checkedJst": "2026-11-18",
+  "checkedJst": "2026-11-19",
   "base": "2226aef",
   "inventory": 559,
   "held": 32,
@@ -1015,7 +1015,7 @@
       "key": "legal:startup-visa-gaikokujin-kigyo-katsudo-sokushin-tokutei-katsudo",
       "title": "スタートアップビザで日本に来て会社を作る｜外国人起業活動促進事業の在留",
       "date": "2026-11-13",
-      "fingerprint": "a284deaec225954b3771294970145e04affea86b4451e9f4f58bf2bb3da340f7",
+      "fingerprint": "654ab4ed431aaf97310b7308520929fd51cfc4b6466e70f9101c955e8c913765",
       "baseFingerprint": "347bce01fbe6c11830591d1e2fd783c74beccbeeea32ffba17eab022d6f58d78",
       "mechanicalGate": [
         "公開レビュー記録が未登録です"
@@ -1024,76 +1024,80 @@
         {
           "locale": "ja",
           "file": "scripts/legal-columns/167-startup-visa-gaikokujin-kigyo-katsudo-sokushin-tokutei-katsudo.md",
-          "sha256": "b170f27641d2cbaf238ad60b5ab022667df9b30ac6723a33549debfef37f06ce",
+          "sha256": "0c6e4b6cdfef599e8db524bd1bf41cc691a9d673e2e3a2ed9250b807115dec9d",
           "changedSinceBase": true,
           "sourceEqualsGenerated": true,
           "translatedMetadataMatchesGenerated": null,
           "faqCount": 4,
           "h2Count": 6,
-          "internalLinkOccurrences": 8,
+          "internalLinkOccurrences": 7,
           "internalTargetsRelativeAndLocalized": true,
           "externalSourceUrls": [
             "https://www.jetro.go.jp/en/invest/setting_up/section2/page12.html",
             "https://www.meti.go.jp/policy/newbusiness/startupvisa/index.html",
             "https://www.moj.go.jp/isa/03_00097.html",
             "https://www.moj.go.jp/isa/applications/resources/10_00237.html",
+            "https://www.moj.go.jp/isa/content/001448070.pdf",
             "https://www.moj.go.jp/isa/content/001448099.pdf"
           ]
         },
         {
           "locale": "en",
           "file": "scripts/legal-columns/en/167-startup-visa-gaikokujin-kigyo-katsudo-sokushin-tokutei-katsudo.md",
-          "sha256": "34d8d51370b32172f2f7ea24d2a70534d36c27476298722e741c0365bc6277ce",
+          "sha256": "ee5dddeb132217f641f25efc27478e40cf1bc1261497b36352a71a2d5a9636ef",
           "changedSinceBase": true,
           "sourceEqualsGenerated": true,
           "translatedMetadataMatchesGenerated": true,
           "faqCount": 4,
           "h2Count": 6,
-          "internalLinkOccurrences": 8,
+          "internalLinkOccurrences": 7,
           "internalTargetsRelativeAndLocalized": true,
           "externalSourceUrls": [
             "https://www.jetro.go.jp/en/invest/setting_up/section2/page12.html",
             "https://www.meti.go.jp/policy/newbusiness/startupvisa/index.html",
             "https://www.moj.go.jp/isa/03_00097.html",
             "https://www.moj.go.jp/isa/applications/resources/10_00237.html",
+            "https://www.moj.go.jp/isa/content/001448070.pdf",
             "https://www.moj.go.jp/isa/content/001448099.pdf"
           ]
         },
         {
           "locale": "zh-tw",
           "file": "scripts/legal-columns/zh-tw/167-startup-visa-gaikokujin-kigyo-katsudo-sokushin-tokutei-katsudo.md",
-          "sha256": "88c5bfe77753c2c7959b4f364ca97ad0514fd91f02519dc9303c683a754e0a83",
+          "sha256": "d8c00b7e12ab48c7cf76bc088ad743dd6ddd4092d0bca2080d07f5ccf9f05940",
           "changedSinceBase": true,
           "sourceEqualsGenerated": true,
           "translatedMetadataMatchesGenerated": true,
           "faqCount": 4,
           "h2Count": 6,
-          "internalLinkOccurrences": 8,
+          "internalLinkOccurrences": 7,
           "internalTargetsRelativeAndLocalized": true,
           "externalSourceUrls": [
             "https://www.jetro.go.jp/en/invest/setting_up/section2/page12.html",
             "https://www.meti.go.jp/policy/newbusiness/startupvisa/index.html",
             "https://www.moj.go.jp/isa/03_00097.html",
             "https://www.moj.go.jp/isa/applications/resources/10_00237.html",
+            "https://www.moj.go.jp/isa/content/001448070.pdf",
             "https://www.moj.go.jp/isa/content/001448099.pdf"
           ]
         },
         {
           "locale": "zh",
           "file": "scripts/legal-columns/zh/167-startup-visa-gaikokujin-kigyo-katsudo-sokushin-tokutei-katsudo.md",
-          "sha256": "688ce7077c4281ccb2667091e8b862ac090a728b7df60e4bc9df8b95d21c2689",
+          "sha256": "167ccda821cc8040fbddf4016a88f7cdaf92b436b5775f10c1927e976d8cd17b",
           "changedSinceBase": true,
           "sourceEqualsGenerated": true,
           "translatedMetadataMatchesGenerated": true,
           "faqCount": 4,
           "h2Count": 6,
-          "internalLinkOccurrences": 8,
+          "internalLinkOccurrences": 7,
           "internalTargetsRelativeAndLocalized": true,
           "externalSourceUrls": [
             "https://www.jetro.go.jp/en/invest/setting_up/section2/page12.html",
             "https://www.meti.go.jp/policy/newbusiness/startupvisa/index.html",
             "https://www.moj.go.jp/isa/03_00097.html",
             "https://www.moj.go.jp/isa/applications/resources/10_00237.html",
+            "https://www.moj.go.jp/isa/content/001448070.pdf",
             "https://www.moj.go.jp/isa/content/001448099.pdf"
           ]
         }
@@ -1189,7 +1193,7 @@
       "key": "realestate:ev-kyusoku-juden-setsubi-chintai-shougyou-bukken-shoubou",
       "title": "EV急速充電設備を備えた賃貸・商業物件｜消防法の技術基準と導入の進め方",
       "date": "2026-11-13",
-      "fingerprint": "00e48865b5e6aaa8cd918ea60fe0d779fa04015a95adf04ad637cd487008acfb",
+      "fingerprint": "ada5bcdad2d93e9721fac517e2e22a476d3a351eede1b105b07c53e6649b30cd",
       "baseFingerprint": "f63169d92787082e42849b06f38c0037a127226d2f3d6d5e6dbff1ea60b72699",
       "mechanicalGate": [
         "公開レビュー記録が未登録です"
@@ -1198,72 +1202,76 @@
         {
           "locale": "ja",
           "file": "scripts/realestate-columns/172-ev-kyusoku-juden-setsubi-chintai-shougyou-bukken-shoubou.md",
-          "sha256": "54371ff25f6e5ccd6f6444431644aab7d44a81974b1507cbd3f61208175307d7",
+          "sha256": "6d21dc5f65171986d6177e624d9409a26d9d1f3277ec6a5566e749e7622feae7",
           "changedSinceBase": true,
           "sourceEqualsGenerated": true,
           "translatedMetadataMatchesGenerated": null,
           "faqCount": 4,
           "h2Count": 6,
-          "internalLinkOccurrences": 5,
+          "internalLinkOccurrences": 4,
           "internalTargetsRelativeAndLocalized": true,
           "externalSourceUrls": [
             "https://laws.e-gov.go.jp/law/337AC0000000069",
             "https://www.fdma.go.jp/laws/tutatsu/items/230221_yobo113v2.pdf",
             "https://www.fdma.go.jp/laws/tutatsu/items/230221_yobou_59v2.pdf",
+            "https://www.mlit.go.jp/common/001768045.pdf",
             "https://www.mlit.go.jp/jutakukentiku/house/content/001971486.pdf"
           ]
         },
         {
           "locale": "en",
           "file": "scripts/realestate-columns/en/172-ev-kyusoku-juden-setsubi-chintai-shougyou-bukken-shoubou.md",
-          "sha256": "48329c4c1e6d5cda00dd9ebda11eb183a31fc83b7a3dd2e490a208134db5b62b",
+          "sha256": "b298d954930909b6f2c0a5f5b3f19a9eca6136e24be414a0a45abe4f0e26e3fc",
           "changedSinceBase": true,
           "sourceEqualsGenerated": true,
           "translatedMetadataMatchesGenerated": true,
           "faqCount": 4,
           "h2Count": 6,
-          "internalLinkOccurrences": 5,
+          "internalLinkOccurrences": 4,
           "internalTargetsRelativeAndLocalized": true,
           "externalSourceUrls": [
             "https://laws.e-gov.go.jp/law/337AC0000000069",
             "https://www.fdma.go.jp/laws/tutatsu/items/230221_yobo113v2.pdf",
             "https://www.fdma.go.jp/laws/tutatsu/items/230221_yobou_59v2.pdf",
+            "https://www.mlit.go.jp/common/001768045.pdf",
             "https://www.mlit.go.jp/jutakukentiku/house/content/001971486.pdf"
           ]
         },
         {
           "locale": "zh-tw",
           "file": "scripts/realestate-columns/zh-tw/172-ev-kyusoku-juden-setsubi-chintai-shougyou-bukken-shoubou.md",
-          "sha256": "c6badc7bb66e2e8a1042a5fe45bc154e026262e28609dfac8b36e6ca46a906e4",
+          "sha256": "6030241416809ea53116d139c986c0d0913251e7ac606b28573a8024aa924ac5",
           "changedSinceBase": true,
           "sourceEqualsGenerated": true,
           "translatedMetadataMatchesGenerated": true,
           "faqCount": 4,
           "h2Count": 6,
-          "internalLinkOccurrences": 5,
+          "internalLinkOccurrences": 4,
           "internalTargetsRelativeAndLocalized": true,
           "externalSourceUrls": [
             "https://laws.e-gov.go.jp/law/337AC0000000069",
             "https://www.fdma.go.jp/laws/tutatsu/items/230221_yobo113v2.pdf",
             "https://www.fdma.go.jp/laws/tutatsu/items/230221_yobou_59v2.pdf",
+            "https://www.mlit.go.jp/common/001768045.pdf",
             "https://www.mlit.go.jp/jutakukentiku/house/content/001971486.pdf"
           ]
         },
         {
           "locale": "zh",
           "file": "scripts/realestate-columns/zh/172-ev-kyusoku-juden-setsubi-chintai-shougyou-bukken-shoubou.md",
-          "sha256": "3890b58cd19aedea016551042ecad66597c7500c110ccbb40a394723e251fb66",
+          "sha256": "06d119685fb29f286ffbff2da9c529790811663a0e7cd48282acc24644fadf58",
           "changedSinceBase": true,
           "sourceEqualsGenerated": true,
           "translatedMetadataMatchesGenerated": true,
           "faqCount": 4,
           "h2Count": 6,
-          "internalLinkOccurrences": 5,
+          "internalLinkOccurrences": 4,
           "internalTargetsRelativeAndLocalized": true,
           "externalSourceUrls": [
             "https://laws.e-gov.go.jp/law/337AC0000000069",
             "https://www.fdma.go.jp/laws/tutatsu/items/230221_yobo113v2.pdf",
             "https://www.fdma.go.jp/laws/tutatsu/items/230221_yobou_59v2.pdf",
+            "https://www.mlit.go.jp/common/001768045.pdf",
             "https://www.mlit.go.jp/jutakukentiku/house/content/001971486.pdf"
           ]
         }
@@ -1582,7 +1590,7 @@
       "key": "realestate:seikatsu-kaigo-jigyosho-bukken-youken-shitei",
       "title": "生活介護の物件を借りる前に｜図面・内見・貸主承諾の確認チェックリスト",
       "date": "2026-11-14",
-      "fingerprint": "1310c3d06dc65a66ff4508df47b63747fdf207ec58c56bb257a92a29a65e8ce1",
+      "fingerprint": "7abc3f7d7dccc4e067853530a5eb49821d1ddfcf1799bffb26bb559e45d47c79",
       "baseFingerprint": "1a4e364b5c3a165aa9bcf945e437570cdc5e768e00fd720d57900efb1d7013cf",
       "mechanicalGate": [
         "公開レビュー記録が未登録です"
@@ -1591,7 +1599,7 @@
         {
           "locale": "ja",
           "file": "scripts/realestate-columns/174-seikatsu-kaigo-jigyosho-bukken-youken-shitei.md",
-          "sha256": "9acef34e938901efcd09612108bd261ad3d038f989c112804b4c1ee43e30398e",
+          "sha256": "9a88d563bbb05ab9ce5b4bbc1fbdb31a5e04036699b7ba6b3ed982a113d54a47",
           "changedSinceBase": true,
           "sourceEqualsGenerated": true,
           "translatedMetadataMatchesGenerated": null,
@@ -1610,7 +1618,7 @@
         {
           "locale": "en",
           "file": "scripts/realestate-columns/en/174-seikatsu-kaigo-jigyosho-bukken-youken-shitei.md",
-          "sha256": "4df2420f45fb0c6839b58238b5b0772c25f95ee6419e484a501058a52c5672e4",
+          "sha256": "35de05e6512d1491bf2f6b1cf195452cffa041d9831c310608c09f4b504715dc",
           "changedSinceBase": true,
           "sourceEqualsGenerated": true,
           "translatedMetadataMatchesGenerated": true,
@@ -1629,7 +1637,7 @@
         {
           "locale": "zh-tw",
           "file": "scripts/realestate-columns/zh-tw/174-seikatsu-kaigo-jigyosho-bukken-youken-shitei.md",
-          "sha256": "d3166c3b5e4406ff2e8f5f581f2ac0688a9674da6a2f9bc51fe86a01ab93ed90",
+          "sha256": "10a2d81d17a8fd7c2baa745c824fa4249c49a1ab4b1759e94e0cc5aa5fbd80f7",
           "changedSinceBase": true,
           "sourceEqualsGenerated": true,
           "translatedMetadataMatchesGenerated": true,
@@ -1648,7 +1656,7 @@
         {
           "locale": "zh",
           "file": "scripts/realestate-columns/zh/174-seikatsu-kaigo-jigyosho-bukken-youken-shitei.md",
-          "sha256": "2458d6f21f69a177e4ee79417f824bcdc9be05063ab99fca27cc158751ec7d78",
+          "sha256": "981a6fda30d5b631c370e4abe11a1a337076df19e548b21e2d7e8b4eb6a8ba3e",
           "changedSinceBase": true,
           "sourceEqualsGenerated": true,
           "translatedMetadataMatchesGenerated": true,
@@ -1914,7 +1922,7 @@
       "key": "realestate:shokuhin-seizogyo-central-kitchen-bukken-youto-haisui-tokutei-shisetsu",
       "title": "食品製造業（セントラルキッチン）の物件はどこを見る？用途地域・排水・特定施設の要件",
       "date": "2026-11-15",
-      "fingerprint": "f90f057c5f9cf9a1a273d973b52eba53b80aaa1f2361cbb29e0b8e0cacccdc22",
+      "fingerprint": "2f2d35989dbe3a04354466ac231dc70930b2f90dcd2a311dab759cca27f6a110",
       "baseFingerprint": "de452e0770fb8239a48b929e043d15d11a0edcf366fa882fb50c9d485832103a",
       "mechanicalGate": [
         "公開レビュー記録が未登録です"
@@ -1923,7 +1931,7 @@
         {
           "locale": "ja",
           "file": "scripts/realestate-columns/176-shokuhin-seizogyo-central-kitchen-bukken-youto-haisui-tokutei-shisetsu.md",
-          "sha256": "5d33b504f1ed3e825ccc5e1606d8539afc802d201a59521bf23f7205558cd495",
+          "sha256": "cbd98b96ea991104ea8ed671e343f3ce5429f71b6504632413d6684c40bdd4e7",
           "changedSinceBase": true,
           "sourceEqualsGenerated": true,
           "translatedMetadataMatchesGenerated": null,
@@ -1942,7 +1950,7 @@
         {
           "locale": "en",
           "file": "scripts/realestate-columns/en/176-shokuhin-seizogyo-central-kitchen-bukken-youto-haisui-tokutei-shisetsu.md",
-          "sha256": "cbad903e290125d32fe57e81281939abe96c4d3bbcfda3c915cdd358390c0e00",
+          "sha256": "35faef62341d06c4653eb591294088b13b359ad8e9230c8100b5411f8e11eef9",
           "changedSinceBase": true,
           "sourceEqualsGenerated": true,
           "translatedMetadataMatchesGenerated": true,
@@ -1961,7 +1969,7 @@
         {
           "locale": "zh-tw",
           "file": "scripts/realestate-columns/zh-tw/176-shokuhin-seizogyo-central-kitchen-bukken-youto-haisui-tokutei-shisetsu.md",
-          "sha256": "466f64ff352dbfa6c1411a73b921be13283f49b5066f43893745bbc7b36eaf48",
+          "sha256": "45a38046230a9cb722b36b529c914500063f5a221fc017fcb239ffe1a824c398",
           "changedSinceBase": true,
           "sourceEqualsGenerated": true,
           "translatedMetadataMatchesGenerated": true,
@@ -1980,7 +1988,7 @@
         {
           "locale": "zh",
           "file": "scripts/realestate-columns/zh/176-shokuhin-seizogyo-central-kitchen-bukken-youto-haisui-tokutei-shisetsu.md",
-          "sha256": "fa75db6a81cc25b818530f4adf8fd09912ae514670e322ea5b9c3405f7f921d5",
+          "sha256": "887fa844544cd04586c2af72efc1527a208ba2902320231ede4ad081e2c3ea59",
           "changedSinceBase": true,
           "sourceEqualsGenerated": true,
           "translatedMetadataMatchesGenerated": true,
@@ -2428,7 +2436,7 @@
       "key": "realestate:tokutei-yukyo-inshokuten-club-bukken-youto-hozen-taisho",
       "title": "クラブ・ラウンジの物件を借りる前に｜候補地・図面・貸主承諾の確認チェックリスト",
       "date": "2026-11-16",
-      "fingerprint": "ce2134222244068f0c9ec02e5b4474fdee3cbd1923c5f75502e7522a3e963a33",
+      "fingerprint": "581b60aba925908ec08ee425b446cb988f468d7fc97c760e433062f81cb689ed",
       "baseFingerprint": "d5145ad560f3b512c44fc6ae4e4e7455954e70712cfcc723390627fa2b0ce0b9",
       "mechanicalGate": [
         "公開レビュー記録が未登録です"
@@ -2437,7 +2445,7 @@
         {
           "locale": "ja",
           "file": "scripts/realestate-columns/178-tokutei-yukyo-inshokuten-club-bukken-youto-hozen-taisho.md",
-          "sha256": "2c5e555f60840cc8abdc6bf28595f794e23f1288c10dc5731fb4c4b922329096",
+          "sha256": "d435ee1380f0a15ccdc80fc708d47474da6d8ca261f7765f9fba27eb9b901c2c",
           "changedSinceBase": true,
           "sourceEqualsGenerated": true,
           "translatedMetadataMatchesGenerated": null,
@@ -2456,7 +2464,7 @@
         {
           "locale": "en",
           "file": "scripts/realestate-columns/en/178-tokutei-yukyo-inshokuten-club-bukken-youto-hozen-taisho.md",
-          "sha256": "491c42e7a54efaf688eb6a93656e983baa987dbc962e47f82df7aad2bd63452c",
+          "sha256": "38a3018d8ee6b1ac8a47da7aef9d1e5ecfd073e2037958d7fd4bbc5f14a86cbf",
           "changedSinceBase": true,
           "sourceEqualsGenerated": true,
           "translatedMetadataMatchesGenerated": true,
@@ -2475,7 +2483,7 @@
         {
           "locale": "zh-tw",
           "file": "scripts/realestate-columns/zh-tw/178-tokutei-yukyo-inshokuten-club-bukken-youto-hozen-taisho.md",
-          "sha256": "e3633637021a4170f720195437653e7c3a19bbb2c37b80e8f8bc6708439f073a",
+          "sha256": "d69df94d9e04a0f67f1cfbbac09d483ee702bde0c7f990fa4ee74a32a88027f8",
           "changedSinceBase": true,
           "sourceEqualsGenerated": true,
           "translatedMetadataMatchesGenerated": true,
@@ -2494,7 +2502,7 @@
         {
           "locale": "zh",
           "file": "scripts/realestate-columns/zh/178-tokutei-yukyo-inshokuten-club-bukken-youto-hozen-taisho.md",
-          "sha256": "bdc093cd5b9d359ed6e7d58154be5026d6371d6346e8604cd848f21aa90a35a2",
+          "sha256": "3eeb9e36e1d648075c77419a801ffc7136e08733306ac8b9183c94b87be10a1c",
           "changedSinceBase": true,
           "sourceEqualsGenerated": true,
           "translatedMetadataMatchesGenerated": true,

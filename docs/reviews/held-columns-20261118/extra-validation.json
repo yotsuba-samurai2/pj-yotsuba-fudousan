@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-18T14:09:39.557633+00:00",
+  "checkedAt": "2026-11-18T15:47:49.261463+00:00",
   "scope": "32 held articles, 128 source files; repository existence does not prove public deployment or professional approval",
   "summary": {
     "articles": 32,
@@ -8,7 +8,7 @@
     "extractedFaqPairs": 512,
     "matchingFiles": 128,
     "faqErrors": 0,
-    "internalUniqueUrls": 360,
+    "internalUniqueUrls": 352,
     "unresolvedRepositoryUrls": 0,
     "missingLocaleContent": 0,
     "externalSourceUrls": 101,
@@ -453,7 +453,7 @@
       "key": "legal:startup-visa-gaikokujin-kigyo-katsudo-sokushin-tokutei-katsudo",
       "locale": "ja",
       "file": "scripts/legal-columns/167-startup-visa-gaikokujin-kigyo-katsudo-sokushin-tokutei-katsudo.md",
-      "sha256": "b170f27641d2cbaf238ad60b5ab022667df9b30ac6723a33549debfef37f06ce",
+      "sha256": "0c6e4b6cdfef599e8db524bd1bf41cc691a9d673e2e3a2ed9250b807115dec9d",
       "faqCount": 4,
       "generatedCount": 4,
       "exactPlainTextMatch": true
@@ -462,7 +462,7 @@
       "key": "legal:startup-visa-gaikokujin-kigyo-katsudo-sokushin-tokutei-katsudo",
       "locale": "en",
       "file": "scripts/legal-columns/en/167-startup-visa-gaikokujin-kigyo-katsudo-sokushin-tokutei-katsudo.md",
-      "sha256": "34d8d51370b32172f2f7ea24d2a70534d36c27476298722e741c0365bc6277ce",
+      "sha256": "ee5dddeb132217f641f25efc27478e40cf1bc1261497b36352a71a2d5a9636ef",
       "faqCount": 4,
       "generatedCount": 4,
       "exactPlainTextMatch": true
@@ -471,7 +471,7 @@
       "key": "legal:startup-visa-gaikokujin-kigyo-katsudo-sokushin-tokutei-katsudo",
       "locale": "zh-tw",
       "file": "scripts/legal-columns/zh-tw/167-startup-visa-gaikokujin-kigyo-katsudo-sokushin-tokutei-katsudo.md",
-      "sha256": "88c5bfe77753c2c7959b4f364ca97ad0514fd91f02519dc9303c683a754e0a83",
+      "sha256": "d8c00b7e12ab48c7cf76bc088ad743dd6ddd4092d0bca2080d07f5ccf9f05940",
       "faqCount": 4,
       "generatedCount": 4,
       "exactPlainTextMatch": true
@@ -480,7 +480,7 @@
       "key": "legal:startup-visa-gaikokujin-kigyo-katsudo-sokushin-tokutei-katsudo",
       "locale": "zh",
       "file": "scripts/legal-columns/zh/167-startup-visa-gaikokujin-kigyo-katsudo-sokushin-tokutei-katsudo.md",
-      "sha256": "688ce7077c4281ccb2667091e8b862ac090a728b7df60e4bc9df8b95d21c2689",
+      "sha256": "167ccda821cc8040fbddf4016a88f7cdaf92b436b5775f10c1927e976d8cd17b",
       "faqCount": 4,
       "generatedCount": 4,
       "exactPlainTextMatch": true
@@ -525,7 +525,7 @@
       "key": "realestate:ev-kyusoku-juden-setsubi-chintai-shougyou-bukken-shoubou",
       "locale": "ja",
       "file": "scripts/realestate-columns/172-ev-kyusoku-juden-setsubi-chintai-shougyou-bukken-shoubou.md",
-      "sha256": "54371ff25f6e5ccd6f6444431644aab7d44a81974b1507cbd3f61208175307d7",
+      "sha256": "6d21dc5f65171986d6177e624d9409a26d9d1f3277ec6a5566e749e7622feae7",
       "faqCount": 4,
       "generatedCount": 4,
       "exactPlainTextMatch": true
@@ -534,7 +534,7 @@
       "key": "realestate:ev-kyusoku-juden-setsubi-chintai-shougyou-bukken-shoubou",
       "locale": "en",
       "file": "scripts/realestate-columns/en/172-ev-kyusoku-juden-setsubi-chintai-shougyou-bukken-shoubou.md",
-      "sha256": "48329c4c1e6d5cda00dd9ebda11eb183a31fc83b7a3dd2e490a208134db5b62b",
+      "sha256": "b298d954930909b6f2c0a5f5b3f19a9eca6136e24be414a0a45abe4f0e26e3fc",
       "faqCount": 4,
       "generatedCount": 4,
       "exactPlainTextMatch": true
@@ -543,7 +543,7 @@
       "key": "realestate:ev-kyusoku-juden-setsubi-chintai-shougyou-bukken-shoubou",
       "locale": "zh-tw",
       "file": "scripts/realestate-columns/zh-tw/172-ev-kyusoku-juden-setsubi-chintai-shougyou-bukken-shoubou.md",
-      "sha256": "c6badc7bb66e2e8a1042a5fe45bc154e026262e28609dfac8b36e6ca46a906e4",
+      "sha256": "6030241416809ea53116d139c986c0d0913251e7ac606b28573a8024aa924ac5",
       "faqCount": 4,
       "generatedCount": 4,
       "exactPlainTextMatch": true
@@ -552,7 +552,7 @@
       "key": "realestate:ev-kyusoku-juden-setsubi-chintai-shougyou-bukken-shoubou",
       "locale": "zh",
       "file": "scripts/realestate-columns/zh/172-ev-kyusoku-juden-setsubi-chintai-shougyou-bukken-shoubou.md",
-      "sha256": "3890b58cd19aedea016551042ecad66597c7500c110ccbb40a394723e251fb66",
+      "sha256": "06d119685fb29f286ffbff2da9c529790811663a0e7cd48282acc24644fadf58",
       "faqCount": 4,
       "generatedCount": 4,
       "exactPlainTextMatch": true
@@ -705,7 +705,7 @@
       "key": "realestate:seikatsu-kaigo-jigyosho-bukken-youken-shitei",
       "locale": "ja",
       "file": "scripts/realestate-columns/174-seikatsu-kaigo-jigyosho-bukken-youken-shitei.md",
-      "sha256": "9acef34e938901efcd09612108bd261ad3d038f989c112804b4c1ee43e30398e",
+      "sha256": "9a88d563bbb05ab9ce5b4bbc1fbdb31a5e04036699b7ba6b3ed982a113d54a47",
       "faqCount": 4,
       "generatedCount": 4,
       "exactPlainTextMatch": true
@@ -714,7 +714,7 @@
       "key": "realestate:seikatsu-kaigo-jigyosho-bukken-youken-shitei",
       "locale": "en",
       "file": "scripts/realestate-columns/en/174-seikatsu-kaigo-jigyosho-bukken-youken-shitei.md",
-      "sha256": "4df2420f45fb0c6839b58238b5b0772c25f95ee6419e484a501058a52c5672e4",
+      "sha256": "35de05e6512d1491bf2f6b1cf195452cffa041d9831c310608c09f4b504715dc",
       "faqCount": 4,
       "generatedCount": 4,
       "exactPlainTextMatch": true
@@ -723,7 +723,7 @@
       "key": "realestate:seikatsu-kaigo-jigyosho-bukken-youken-shitei",
       "locale": "zh-tw",
       "file": "scripts/realestate-columns/zh-tw/174-seikatsu-kaigo-jigyosho-bukken-youken-shitei.md",
-      "sha256": "d3166c3b5e4406ff2e8f5f581f2ac0688a9674da6a2f9bc51fe86a01ab93ed90",
+      "sha256": "10a2d81d17a8fd7c2baa745c824fa4249c49a1ab4b1759e94e0cc5aa5fbd80f7",
       "faqCount": 4,
       "generatedCount": 4,
       "exactPlainTextMatch": true
@@ -732,7 +732,7 @@
       "key": "realestate:seikatsu-kaigo-jigyosho-bukken-youken-shitei",
       "locale": "zh",
       "file": "scripts/realestate-columns/zh/174-seikatsu-kaigo-jigyosho-bukken-youken-shitei.md",
-      "sha256": "2458d6f21f69a177e4ee79417f824bcdc9be05063ab99fca27cc158751ec7d78",
+      "sha256": "981a6fda30d5b631c370e4abe11a1a337076df19e548b21e2d7e8b4eb6a8ba3e",
       "faqCount": 4,
       "generatedCount": 4,
       "exactPlainTextMatch": true
@@ -849,7 +849,7 @@
       "key": "realestate:shokuhin-seizogyo-central-kitchen-bukken-youto-haisui-tokutei-shisetsu",
       "locale": "ja",
       "file": "scripts/realestate-columns/176-shokuhin-seizogyo-central-kitchen-bukken-youto-haisui-tokutei-shisetsu.md",
-      "sha256": "5d33b504f1ed3e825ccc5e1606d8539afc802d201a59521bf23f7205558cd495",
+      "sha256": "cbd98b96ea991104ea8ed671e343f3ce5429f71b6504632413d6684c40bdd4e7",
       "faqCount": 4,
       "generatedCount": 4,
       "exactPlainTextMatch": true
@@ -858,7 +858,7 @@
       "key": "realestate:shokuhin-seizogyo-central-kitchen-bukken-youto-haisui-tokutei-shisetsu",
       "locale": "en",
       "file": "scripts/realestate-columns/en/176-shokuhin-seizogyo-central-kitchen-bukken-youto-haisui-tokutei-shisetsu.md",
-      "sha256": "cbad903e290125d32fe57e81281939abe96c4d3bbcfda3c915cdd358390c0e00",
+      "sha256": "35faef62341d06c4653eb591294088b13b359ad8e9230c8100b5411f8e11eef9",
       "faqCount": 4,
       "generatedCount": 4,
       "exactPlainTextMatch": true
@@ -867,7 +867,7 @@
       "key": "realestate:shokuhin-seizogyo-central-kitchen-bukken-youto-haisui-tokutei-shisetsu",
       "locale": "zh-tw",
       "file": "scripts/realestate-columns/zh-tw/176-shokuhin-seizogyo-central-kitchen-bukken-youto-haisui-tokutei-shisetsu.md",
-      "sha256": "466f64ff352dbfa6c1411a73b921be13283f49b5066f43893745bbc7b36eaf48",
+      "sha256": "45a38046230a9cb722b36b529c914500063f5a221fc017fcb239ffe1a824c398",
       "faqCount": 4,
       "generatedCount": 4,
       "exactPlainTextMatch": true
@@ -876,7 +876,7 @@
       "key": "realestate:shokuhin-seizogyo-central-kitchen-bukken-youto-haisui-tokutei-shisetsu",
       "locale": "zh",
       "file": "scripts/realestate-columns/zh/176-shokuhin-seizogyo-central-kitchen-bukken-youto-haisui-tokutei-shisetsu.md",
-      "sha256": "fa75db6a81cc25b818530f4adf8fd09912ae514670e322ea5b9c3405f7f921d5",
+      "sha256": "887fa844544cd04586c2af72efc1527a208ba2902320231ede4ad081e2c3ea59",
       "faqCount": 4,
       "generatedCount": 4,
       "exactPlainTextMatch": true
@@ -1065,7 +1065,7 @@
       "key": "realestate:tokutei-yukyo-inshokuten-club-bukken-youto-hozen-taisho",
       "locale": "ja",
       "file": "scripts/realestate-columns/178-tokutei-yukyo-inshokuten-club-bukken-youto-hozen-taisho.md",
-      "sha256": "2c5e555f60840cc8abdc6bf28595f794e23f1288c10dc5731fb4c4b922329096",
+      "sha256": "d435ee1380f0a15ccdc80fc708d47474da6d8ca261f7765f9fba27eb9b901c2c",
       "faqCount": 4,
       "generatedCount": 4,
       "exactPlainTextMatch": true
@@ -1074,7 +1074,7 @@
       "key": "realestate:tokutei-yukyo-inshokuten-club-bukken-youto-hozen-taisho",
       "locale": "en",
       "file": "scripts/realestate-columns/en/178-tokutei-yukyo-inshokuten-club-bukken-youto-hozen-taisho.md",
-      "sha256": "491c42e7a54efaf688eb6a93656e983baa987dbc962e47f82df7aad2bd63452c",
+      "sha256": "38a3018d8ee6b1ac8a47da7aef9d1e5ecfd073e2037958d7fd4bbc5f14a86cbf",
       "faqCount": 4,
       "generatedCount": 4,
       "exactPlainTextMatch": true
@@ -1083,7 +1083,7 @@
       "key": "realestate:tokutei-yukyo-inshokuten-club-bukken-youto-hozen-taisho",
       "locale": "zh-tw",
       "file": "scripts/realestate-columns/zh-tw/178-tokutei-yukyo-inshokuten-club-bukken-youto-hozen-taisho.md",
-      "sha256": "e3633637021a4170f720195437653e7c3a19bbb2c37b80e8f8bc6708439f073a",
+      "sha256": "d69df94d9e04a0f67f1cfbbac09d483ee702bde0c7f990fa4ee74a32a88027f8",
       "faqCount": 4,
       "generatedCount": 4,
       "exactPlainTextMatch": true
@@ -1092,7 +1092,7 @@
       "key": "realestate:tokutei-yukyo-inshokuten-club-bukken-youto-hozen-taisho",
       "locale": "zh",
       "file": "scripts/realestate-columns/zh/178-tokutei-yukyo-inshokuten-club-bukken-youto-hozen-taisho.md",
-      "sha256": "bdc093cd5b9d359ed6e7d58154be5026d6371d6346e8604cd848f21aa90a35a2",
+      "sha256": "3eeb9e36e1d648075c77419a801ffc7136e08733306ac8b9183c94b87be10a1c",
       "faqCount": 4,
       "generatedCount": 4,
       "exactPlainTextMatch": true
@@ -4376,62 +4376,6 @@
       "repositoryExists": true,
       "localeContentAvailable": true
     },
-    "/legal/column/keiei-kanri-zairyu-2025-kaisei-shihonkin-joukin-shokuin-chuka-taiwan": {
-      "path": "/legal/column/keiei-kanri-zairyu-2025-kaisei-shihonkin-joukin-shokuin-chuka-taiwan",
-      "locale": "ja",
-      "references": [
-        "scripts/legal-columns/167-startup-visa-gaikokujin-kigyo-katsudo-sokushin-tokutei-katsudo.md"
-      ],
-      "kind": "column",
-      "targetKey": "legal:keiei-kanri-zairyu-2025-kaisei-shihonkin-joukin-shokuin-chuka-taiwan",
-      "seedEvidence": [
-        "src/lib/data/souzoku-legal-columns-seed.ts"
-      ],
-      "repositoryExists": true,
-      "localeContentAvailable": true
-    },
-    "/en/legal/column/keiei-kanri-zairyu-2025-kaisei-shihonkin-joukin-shokuin-chuka-taiwan": {
-      "path": "/legal/column/keiei-kanri-zairyu-2025-kaisei-shihonkin-joukin-shokuin-chuka-taiwan",
-      "locale": "en",
-      "references": [
-        "scripts/legal-columns/en/167-startup-visa-gaikokujin-kigyo-katsudo-sokushin-tokutei-katsudo.md"
-      ],
-      "kind": "column",
-      "targetKey": "legal:keiei-kanri-zairyu-2025-kaisei-shihonkin-joukin-shokuin-chuka-taiwan",
-      "seedEvidence": [
-        "src/lib/data/souzoku-legal-columns-seed.ts"
-      ],
-      "repositoryExists": true,
-      "localeContentAvailable": true
-    },
-    "/zh-tw/legal/column/keiei-kanri-zairyu-2025-kaisei-shihonkin-joukin-shokuin-chuka-taiwan": {
-      "path": "/legal/column/keiei-kanri-zairyu-2025-kaisei-shihonkin-joukin-shokuin-chuka-taiwan",
-      "locale": "zh-tw",
-      "references": [
-        "scripts/legal-columns/zh-tw/167-startup-visa-gaikokujin-kigyo-katsudo-sokushin-tokutei-katsudo.md"
-      ],
-      "kind": "column",
-      "targetKey": "legal:keiei-kanri-zairyu-2025-kaisei-shihonkin-joukin-shokuin-chuka-taiwan",
-      "seedEvidence": [
-        "src/lib/data/souzoku-legal-columns-seed.ts"
-      ],
-      "repositoryExists": true,
-      "localeContentAvailable": true
-    },
-    "/zh/legal/column/keiei-kanri-zairyu-2025-kaisei-shihonkin-joukin-shokuin-chuka-taiwan": {
-      "path": "/legal/column/keiei-kanri-zairyu-2025-kaisei-shihonkin-joukin-shokuin-chuka-taiwan",
-      "locale": "zh",
-      "references": [
-        "scripts/legal-columns/zh/167-startup-visa-gaikokujin-kigyo-katsudo-sokushin-tokutei-katsudo.md"
-      ],
-      "kind": "column",
-      "targetKey": "legal:keiei-kanri-zairyu-2025-kaisei-shihonkin-joukin-shokuin-chuka-taiwan",
-      "seedEvidence": [
-        "src/lib/data/souzoku-legal-columns-seed.ts"
-      ],
-      "repositoryExists": true,
-      "localeContentAvailable": true
-    },
     "/column/souzoku-sashiosae-toki-ari-fudosan-baikyaku": {
       "path": "/column/souzoku-sashiosae-toki-ari-fudosan-baikyaku",
       "locale": "ja",
@@ -4488,22 +4432,8 @@
       "repositoryExists": true,
       "localeContentAvailable": true
     },
-    "/column/shoene-tekigo-gimuka-2025-chintai-shinchiku-bukken": {
-      "path": "/column/shoene-tekigo-gimuka-2025-chintai-shinchiku-bukken",
-      "locale": "ja",
-      "references": [
-        "scripts/realestate-columns/172-ev-kyusoku-juden-setsubi-chintai-shougyou-bukken-shoubou.md"
-      ],
-      "kind": "column",
-      "targetKey": "realestate:shoene-tekigo-gimuka-2025-chintai-shinchiku-bukken",
-      "seedEvidence": [
-        "src/lib/data/realestate-columns-daily-seed.ts"
-      ],
-      "repositoryExists": true,
-      "localeContentAvailable": true
-    },
-    "/office": {
-      "path": "/office",
+    "/contact": {
+      "path": "/contact",
       "locale": "ja",
       "references": [
         "scripts/realestate-columns/172-ev-kyusoku-juden-setsubi-chintai-shougyou-bukken-shoubou.md",
@@ -4515,22 +4445,8 @@
       "repositoryExists": true,
       "localeContentAvailable": null
     },
-    "/en/column/shoene-tekigo-gimuka-2025-chintai-shinchiku-bukken": {
-      "path": "/column/shoene-tekigo-gimuka-2025-chintai-shinchiku-bukken",
-      "locale": "en",
-      "references": [
-        "scripts/realestate-columns/en/172-ev-kyusoku-juden-setsubi-chintai-shougyou-bukken-shoubou.md"
-      ],
-      "kind": "column",
-      "targetKey": "realestate:shoene-tekigo-gimuka-2025-chintai-shinchiku-bukken",
-      "seedEvidence": [
-        "src/lib/data/realestate-columns-daily-seed.ts"
-      ],
-      "repositoryExists": true,
-      "localeContentAvailable": true
-    },
-    "/en/office": {
-      "path": "/office",
+    "/en/contact": {
+      "path": "/contact",
       "locale": "en",
       "references": [
         "scripts/realestate-columns/en/172-ev-kyusoku-juden-setsubi-chintai-shougyou-bukken-shoubou.md",
@@ -4542,22 +4458,8 @@
       "repositoryExists": true,
       "localeContentAvailable": null
     },
-    "/zh-tw/column/shoene-tekigo-gimuka-2025-chintai-shinchiku-bukken": {
-      "path": "/column/shoene-tekigo-gimuka-2025-chintai-shinchiku-bukken",
-      "locale": "zh-tw",
-      "references": [
-        "scripts/realestate-columns/zh-tw/172-ev-kyusoku-juden-setsubi-chintai-shougyou-bukken-shoubou.md"
-      ],
-      "kind": "column",
-      "targetKey": "realestate:shoene-tekigo-gimuka-2025-chintai-shinchiku-bukken",
-      "seedEvidence": [
-        "src/lib/data/realestate-columns-daily-seed.ts"
-      ],
-      "repositoryExists": true,
-      "localeContentAvailable": true
-    },
-    "/zh-tw/office": {
-      "path": "/office",
+    "/zh-tw/contact": {
+      "path": "/contact",
       "locale": "zh-tw",
       "references": [
         "scripts/realestate-columns/zh-tw/172-ev-kyusoku-juden-setsubi-chintai-shougyou-bukken-shoubou.md",
@@ -4569,22 +4471,8 @@
       "repositoryExists": true,
       "localeContentAvailable": null
     },
-    "/zh/column/shoene-tekigo-gimuka-2025-chintai-shinchiku-bukken": {
-      "path": "/column/shoene-tekigo-gimuka-2025-chintai-shinchiku-bukken",
-      "locale": "zh",
-      "references": [
-        "scripts/realestate-columns/zh/172-ev-kyusoku-juden-setsubi-chintai-shougyou-bukken-shoubou.md"
-      ],
-      "kind": "column",
-      "targetKey": "realestate:shoene-tekigo-gimuka-2025-chintai-shinchiku-bukken",
-      "seedEvidence": [
-        "src/lib/data/realestate-columns-daily-seed.ts"
-      ],
-      "repositoryExists": true,
-      "localeContentAvailable": true
-    },
-    "/zh/office": {
-      "path": "/office",
+    "/zh/contact": {
+      "path": "/contact",
       "locale": "zh",
       "references": [
         "scripts/realestate-columns/zh/172-ev-kyusoku-juden-setsubi-chintai-shougyou-bukken-shoubou.md",
@@ -6696,9 +6584,13 @@
       "host": "www.moj.go.jp",
       "references": [
         "scripts/legal-columns/161-keiei-kanri-zairyu-2025-kaisei-shihonkin-joukin-shokuin-chuka-taiwan.md",
+        "scripts/legal-columns/167-startup-visa-gaikokujin-kigyo-katsudo-sokushin-tokutei-katsudo.md",
         "scripts/legal-columns/en/161-keiei-kanri-zairyu-2025-kaisei-shihonkin-joukin-shokuin-chuka-taiwan.md",
+        "scripts/legal-columns/en/167-startup-visa-gaikokujin-kigyo-katsudo-sokushin-tokutei-katsudo.md",
         "scripts/legal-columns/zh-tw/161-keiei-kanri-zairyu-2025-kaisei-shihonkin-joukin-shokuin-chuka-taiwan.md",
-        "scripts/legal-columns/zh/161-keiei-kanri-zairyu-2025-kaisei-shihonkin-joukin-shokuin-chuka-taiwan.md"
+        "scripts/legal-columns/zh-tw/167-startup-visa-gaikokujin-kigyo-katsudo-sokushin-tokutei-katsudo.md",
+        "scripts/legal-columns/zh/161-keiei-kanri-zairyu-2025-kaisei-shihonkin-joukin-shokuin-chuka-taiwan.md",
+        "scripts/legal-columns/zh/167-startup-visa-gaikokujin-kigyo-katsudo-sokushin-tokutei-katsudo.md"
       ],
       "status": "unverified",
       "officialDomainCandidate": true,
@@ -6707,6 +6599,11 @@
       "retry": {
         "status": "http_403",
         "note": "2026-11-18 web__run open は403 Forbidden。本文未取得。検索snippetによる代替確認はしていない。"
+      },
+      "followupBodyCheck": {
+        "dateJst": "2026-11-19",
+        "result": "body_read",
+        "note": "入管庁資料本文：2025年10月16日施行、常勤職員と資本金等の要件、経過措置。この参照確認は記事の正式承認ではない。"
       }
     },
     "https://www.moj.go.jp/isa/content/001448099.pdf": {
@@ -7126,9 +7023,13 @@
       "host": "www.mlit.go.jp",
       "references": [
         "scripts/realestate-columns/170-shoene-tekigo-gimuka-2025-chintai-shinchiku-bukken.md",
+        "scripts/realestate-columns/172-ev-kyusoku-juden-setsubi-chintai-shougyou-bukken-shoubou.md",
         "scripts/realestate-columns/en/170-shoene-tekigo-gimuka-2025-chintai-shinchiku-bukken.md",
+        "scripts/realestate-columns/en/172-ev-kyusoku-juden-setsubi-chintai-shougyou-bukken-shoubou.md",
         "scripts/realestate-columns/zh-tw/170-shoene-tekigo-gimuka-2025-chintai-shinchiku-bukken.md",
-        "scripts/realestate-columns/zh/170-shoene-tekigo-gimuka-2025-chintai-shinchiku-bukken.md"
+        "scripts/realestate-columns/zh-tw/172-ev-kyusoku-juden-setsubi-chintai-shougyou-bukken-shoubou.md",
+        "scripts/realestate-columns/zh/170-shoene-tekigo-gimuka-2025-chintai-shinchiku-bukken.md",
+        "scripts/realestate-columns/zh/172-ev-kyusoku-juden-setsubi-chintai-shougyou-bukken-shoubou.md"
       ],
       "status": "unverified",
       "officialDomainCandidate": true,
@@ -7137,6 +7038,11 @@
       "retry": {
         "status": "body_obtained",
         "note": "2026-11-18 web__run open で公式実ページの本文を取得（5345行）。検索snippetのみではない。アクセス確認であり全主張照合・法令鮮度の保証ではない。"
+      },
+      "followupBodyCheck": {
+        "dateJst": "2026-11-19",
+        "result": "body_read",
+        "note": "国交省に掲載された2025年4月版マニュアル本文：省エネ基準適合義務と手続の構成。この参照確認は記事の正式承認ではない。"
       }
     },
     "https://laws.e-gov.go.jp/law/427AC0000000053": {
@@ -8259,5 +8165,6 @@
     "HTTP failure/403 does not prove nonexistence. Official domain candidate is not legal content validation.",
     "No database, quality ledger, source text, seed or pre-existing SEO report is modified."
   ],
-  "sourceProbeAt": "2026-11-18T14:04:39.520407+00:00"
+  "sourceProbeAt": "2026-11-18T14:04:39.520407+00:00",
+  "additionalFixedLocaleChecks": "Explicit sitemap locale declarations checked for current final 32: 0 failed, 0 unverified-route warnings. Availability of a deployed translation is not inferred from HTTP 200."
 }

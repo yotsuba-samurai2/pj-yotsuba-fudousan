@@ -162,7 +162,6 @@ const REQUIRED_HUB_LINKS: Record<string, string[]> = {
     "/legal/services",
     "/legal/nagare",
     "/legal/ryokin",
-    "/legal/column/keiei-kanri-zairyu-2025-kaisei-shihonkin-joukin-shokuin-chuka-taiwan",
     "/legal/column/keieikanri-zairyu-chuka-kigyousha-kaisha-setsuritsu",
     "/legal/column/keieikanri-koshin-jigyo-keizokusei-rissho-chuka-taiwan",
   ],
