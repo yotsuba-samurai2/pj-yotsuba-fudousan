@@ -1756,5 +1756,170 @@ export const COLUMNS_AUTOPUBLISH_REVIEWS: readonly ColumnQualityReview[] = [
     },
     "reviewedAt": "2026-11-18",
     "validThrough": "2026-11-20"
+  },
+  {
+    "key": "realestate:chugokugo-buyer-suigai-hazard-juyojiko-dd",
+    "fingerprint": "9614df3b22d09f8615da24b84dc6480c6c15e44e9b3b35c232ccebd80b2c230e",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.mlit.go.jp/totikensangyo/const/sosei_const_fr3_000074.html",
+        "checkedAt": "2026-11-18",
+        "relevantClaim": "宅地建物取引業法施行規則16条の4の3第3号の2による水害ハザードマップ上の所在地説明の義務化。公布令和2年7月17日・施行2020年8月28日（国土交通省令・内閣府令第2号）。洪水・内水・高潮の各図面で物件のおおむねの位置を示し、未作成時はその旨を説明する運用を確認。",
+        "verified": true
+      },
+      {
+        "url": "https://www.mlit.go.jp/totikensangyo/const/content/001354700.pdf",
+        "checkedAt": "2026-11-18",
+        "relevantClaim": "国交省Q&A。水防法に基づく洪水・雨水出水（内水）・高潮のハザードマップを提示し対象物件のおおむねの位置を示すこと、浸水想定区域外でも位置を示す必要があること、未作成時はその旨を説明することを確認。水防法14条/14条の2/14条の3の3区分と整合。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/44389057267"
+    },
+    "reviewedAt": "2026-11-19",
+    "validThrough": "2026-11-21"
+  },
+  {
+    "key": "realestate:chugokugo-buyer-chosei-kuiki-nochi-kounyu-kahi-dd",
+    "fingerprint": "f821effdd315366054647246222f8230e7b0bf50e07ed03645ab5e435c053190",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.maff.go.jp/j/keiei/koukai/chiiki_keikaku.html",
+        "checkedAt": "2026-11-18",
+        "relevantClaim": "農地取得時の下限面積要件（農地法第3条第2項）の廃止を農林水産省資料で確認。記事は令和4年法律第56号により2023年4月1日廃止、農作業常時従事・全部効率利用・地域調和の各要件は存続と記載し整合。",
+        "verified": true
+      },
+      {
+        "url": "https://www.maff.go.jp/j/keiei/koukai/kaikaku/pdf/kaisei_sh.pdf",
+        "checkedAt": "2026-11-18",
+        "relevantClaim": "改正農地法の概要。下限面積要件の廃止、農地法第3条の権利移動許可・第4条/第5条の転用許可の仕組み、農地区分（農用地区域内・甲種・第1種は原則不許可、第3種は原則許可）の枠組みを確認。都市計画法7/29/34/43条の区域区分・開発許可構造とも整合。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/44389057267"
+    },
+    "reviewedAt": "2026-11-19",
+    "validThrough": "2026-11-21"
+  },
+  {
+    "key": "legal:yuryo-shokugyo-shokai-jigyo-kyoka-youken",
+    "fingerprint": "5b614abf10fddb4ccca08a5d69bed3e54add30e3e3985c88dcaf3209c15f8c4e",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.mhlw.go.jp/general/seido/anteikyoku/jukyu/syoukai/dl/03.pdf",
+        "checkedAt": "2026-11-18",
+        "relevantClaim": "職業紹介事業の許可基準。基準資産額500万円×事業所数以上、自己名義の現金・預金150万円+60万円×(事業所数-1)以上、職業紹介責任者は事業所ごと・従業者おおむね50人に1人・申請受理日前5年以内の講習修了を確認（記事の金額・人数と整合）。",
+        "verified": true
+      },
+      {
+        "url": "https://jsite.mhlw.go.jp/fukui-roudoukyoku/var/rev0/0114/5099/201742682449.pdf",
+        "checkedAt": "2026-11-18",
+        "relevantClaim": "有料職業紹介では建設業務・港湾運送業務の職業紹介が禁止（職業安定法32条の11第1項）であることを労働局資料で確認。許可の有効期間（新規3年・更新後5年）、登録免許税9万円・手数料5万円+1.8万円×(事業所数-1)も厚労省パンフで整合。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/44389057267"
+    },
+    "reviewedAt": "2026-11-19",
+    "validThrough": "2026-11-21"
+  },
+  {
+    "key": "labor:sanzen-sango-kyugyo-boshi-kenko-kanri-roumu",
+    "fingerprint": "dd1f4f18e7dbce3870ba453cb12b96ab60678da4409271e011c29feb54688de4",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.bosei-navi.mhlw.go.jp/glossary/law02.html",
+        "checkedAt": "2026-11-18",
+        "relevantClaim": "男女雇用機会均等法の母性健康管理措置について、保健指導・健康診査を受けるための時間の確保は『法第17条』、指導事項を守ることができるようにするための措置は『法第18条』と現行の厚労省サイトで明記。記事の第17条・第18条の条番号が現行条文に一致することを確認（当初12/13条の疑義を解消）。",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/api/1/lawdata/347AC0000000113",
+        "checkedAt": "2026-11-18",
+        "relevantClaim": "e-Gov現行統合条文（API）で、均等法第17条＝妊娠中及び出産後の健康管理に関する措置（保健指導・健康診査の時間確保）、第18条＝指導事項を守るための勤務時間変更・勤務軽減等の措置であることを確認。健診時間確保の回数（23週まで4週に1回等）、労基法65/66/64の3、健保102/101/159の3、厚年81の2の2の各規定も記事と整合。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/44389057267"
+    },
+    "reviewedAt": "2026-11-19",
+    "validThrough": "2026-11-21"
+  },
+  {
+    "key": "labor:koueki-tsuhosha-naibu-tsuho-taisei-roumu",
+    "fingerprint": "b6474553c13b23d017d6b1a8c6f9555a3ba9b9bd29475c63df9df672cb032624",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.caa.go.jp/policies/policy/consumer_partnerships/whisleblower_protection_system/overview/",
+        "checkedAt": "2026-11-18",
+        "relevantClaim": "消費者庁の公式概要ページで、2025年改正法（令和7年法律第62号）の施行日が令和8年（2026年）12月1日であること、施行期日は令和7年政令第408号で定められたこと、改正4本柱（体制整備の徹底・保護対象拡大・阻害要因への対処・不利益取扱い抑止救済の強化）を確認。記事の施行日・政令番号・改正の方向性と一致。",
+        "verified": true
+      },
+      {
+        "url": "https://www.caa.go.jp/policies/policy/consumer_partnerships/whisleblower_protection_system/faq/assets/consumer_partnerships_cms205_260529_01.pdf",
+        "checkedAt": "2026-11-18",
+        "relevantClaim": "公益通報者保護制度Q&A（消費者庁）。第11条の従事者指定・体制整備義務（常時使用労働者301人以上が義務、300人以下は努力義務）、第12条の従事者守秘義務（通報者を特定させる事項）、第21条の30万円以下の罰金、第3条解雇無効・第5条不利益取扱い禁止の枠組みを確認。令和3年8月20日内閣府告示第118号の指針も整合。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/44389057267"
+    },
+    "reviewedAt": "2026-11-19",
+    "validThrough": "2026-11-21"
   }
 ];

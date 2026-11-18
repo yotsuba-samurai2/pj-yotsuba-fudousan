@@ -82,6 +82,20 @@ const AUTHOR = {
 
 /** 各記事が評価を集約すべきハブ（本文に必須の内部リンク）。verify() で機械検査する */
 const REQUIRED_HUB_LINKS: Record<string, string[]> = {
+  "yuryo-shokugyo-shokai-jigyo-kyoka-youken": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/kensetsugyo-kyoka-yoken-keikan-sengi-zaisan",
+    "/legal/column/toroku-shien-kikan-touroku-shien-keikaku",
+  ],
+  "ippan-haikibutsu-shushu-unpan-kyoka-jukyu-chosei": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/sanpai-shushu-unpan-kyoka-torikata",
+    "/legal/column/sanpai-shobun-gyo-chukan-shori-kyoka-shisetsu",
+  ],
   "kashikin-gyo-touroku-yoken-shunin-junshisan": [
     "/legal/services",
     "/legal/nagare",
@@ -1542,6 +1556,30 @@ function matchesRequiredPhrase(content: string, phrase: string): boolean {
 
 /** 記事ごとに必ず含めるべき表現（機械ゲート。最低限の合否判定） */
 const REQUIRED_PHRASES: Record<string, string[]> = {
+  "yuryo-shokugyo-shokai-jigyo-kyoka-youken": [
+    "職業安定法第30条",
+    "職業安定法第31条",
+    "職業安定法第32条の11",
+    "職業安定法第32条の14",
+    "職業紹介責任者",
+    "基準資産",
+    "別々にご契約",
+    "独立した事業体",
+    "別事業体",
+    "紹介料を受け取りません",
+  ],
+  "ippan-haikibutsu-shushu-unpan-kyoka-jukyu-chosei": [
+    "廃棄物処理法第7条",
+    "廃棄物処理法第6条",
+    "廃棄物処理法第14条",
+    "市町村長",
+    "一般廃棄物処理計画",
+    "平成26年1月28日",
+    "別々にご契約",
+    "独立した事業体",
+    "別事業体",
+    "紹介料を受け取りません",
+  ],
   "kashikin-gyo-touroku-yoken-shunin-junshisan": [
     "貸金業法第3条",
     "貸金業法第6条",
@@ -4476,6 +4514,8 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
 
 /** 記事ごとに含めてはならない表現 */
 const FORBIDDEN_PHRASES: Record<string, string[]> = {
+  "yuryo-shokugyo-shokai-jigyo-kyoka-youken": [],
+  "ippan-haikibutsu-shushu-unpan-kyoka-jukyu-chosei": [],
   "kashikin-gyo-touroku-yoken-shunin-junshisan": [],
   "souzoku-fuzaisha-zaisan-kanrinin-shisso-senkoku-erabikata": [],
   "eisei-kensajo-rinsho-kensa-touroku-kozo-setsubi-kijun": [],
@@ -4714,6 +4754,60 @@ const ARTICLES: Array<{
   keywords: string[];
   tags: string[];
 }> = [
+  {
+    file: "176-yuryo-shokugyo-shokai-jigyo-kyoka-youken.md",
+    slug: "yuryo-shokugyo-shokai-jigyo-kyoka-youken",
+    date: "2026-11-18",
+    title:
+      "有料職業紹介事業の許可は何が要るのか――資産・事務所・職業紹介責任者の要件と申請の順番",
+    category: "許認可・開業の手続き（行政書士の実務から）",
+    excerpt:
+      "人材紹介業（有料職業紹介事業）を始めるには、厚生労働大臣の許可が必要です（職業安定法第30条第1項）。許可の基準は、①当該事業を健全に遂行するに足りる財産的基礎、②個人情報を適正に管理し求人者・求職者等の秘密を守る措置、③事業を適正に遂行できる能力の三つです（同法第31条第1項）。実務では、財産的基礎として基準資産額（資産の総額から負債の総額を控除した額）が事業所あたり500万円以上、自己名義の現金・預金が150万円以上あることが求められ（厚生労働省『職業紹介事業の業務運営要領』の許可基準。参照日2026-11-17）、事業所ごとに職業紹介責任者を選任しなければなりません（同法第32条の14。従業者おおむね50人に1人・申請受理日前5年以内の職業紹介責任者講習修了）。許可の有効期間は新規で3年、更新後は5年です（同法第32条の6）。港湾運送業務・建設業務に就く職業は有料職業紹介の取扱いができません（同法第32条の11）。許可申請書類の作成は行政書士、労働者派遣を併せ行う場合の派遣元責任者・労務管理や採用後の社会保険・就業規則は社会保険労務士、賃金未払い等の労使紛争は弁護士、法人設立の登記は司法書士、決算・税務は税理士が、それぞれ独立した事業体として別々にご契約のうえ対応する分離受任の枠組みを整理しました。",
+    keywords: [
+      "有料職業紹介事業 許可 要件 職業安定法30条",
+      "有料職業紹介 財産的基礎 基準資産 500万円 現金預金 150万円",
+      "職業紹介責任者 事業所ごと 50人 職業紹介責任者講習",
+      "有料職業紹介 許可 有効期間 3年 更新 5年 32条の6",
+      "有料職業紹介 取扱職業 港湾運送 建設 32条の11",
+      "有料職業紹介 許可申請 行政書士",
+    ],
+    tags: [
+      "職業安定法",
+      "有料職業紹介事業",
+      "職業紹介責任者",
+      "財産的基礎",
+      "取扱職業の範囲",
+      "業際",
+      "行政書士",
+    ],
+  },
+  {
+    file: "177-ippan-haikibutsu-shushu-unpan-kyoka-jukyu-chosei.md",
+    slug: "ippan-haikibutsu-shushu-unpan-kyoka-jukyu-chosei",
+    date: "2026-11-18",
+    title:
+      "一般廃棄物の収集運搬業許可はなぜ下りにくいのか――産業廃棄物との違いと市町村の需給調整",
+    category: "許認可・開業の手続き（行政書士の実務から）",
+    excerpt:
+      "し尿・浄化槽汚泥・事業系の一般ごみなどの収集運搬を業として行うには、その区域を管轄する市町村長の許可が必要です（廃棄物処理法第7条第1項）。産業廃棄物の収集運搬が都道府県知事の許可（同法第14条第1項）であるのと、許可権者が違います。新規では下りにくいと言われる核心は許可基準にあり、市町村長は、申請が『当該市町村による一般廃棄物の収集又は運搬が困難であること』『一般廃棄物処理計画に適合するものであること』などすべてに適合すると認めるときでなければ許可をしてはなりません（同法第7条第5項）。最高裁平成26年1月28日判決（民集68巻1号49頁）も、既に許可を受けている既存業者が、同一区域で他者に対してされた許可処分の取消訴訟の原告適格を有するとしました。浄化槽の清掃は浄化槽法第35条第1項の別許可です。許可申請書類の作成は行政書士、廃棄物の区分や個別処分の適法性の最終判断は市町村・自治体、不許可処分を争う審査請求・訴訟は弁護士、法人設立の登記は司法書士、決算・税務は税理士が、それぞれ独立した事業体として別々にご契約のうえ対応する分離受任の枠組みを整理しました。",
+    keywords: [
+      "一般廃棄物 収集運搬業 許可 市町村長 廃棄物処理法7条",
+      "一般廃棄物 産業廃棄物 許可 違い 需給調整",
+      "一般廃棄物収集運搬業 新規許可 下りにくい 処理計画",
+      "浄化槽汚泥 し尿 収集運搬 許可 浄化槽清掃業",
+      "最高裁 平成26年1月28日 一般廃棄物 原告適格",
+      "一般廃棄物収集運搬業 許可申請 行政書士",
+    ],
+    tags: [
+      "廃棄物処理法",
+      "一般廃棄物収集運搬業",
+      "需給調整",
+      "一般廃棄物処理計画",
+      "浄化槽清掃業",
+      "業際",
+      "行政書士",
+    ],
+  },
   {
     file: "174-kashikin-gyo-touroku-yoken-shunin-junshisan.md",
     slug: "kashikin-gyo-touroku-yoken-shunin-junshisan",
