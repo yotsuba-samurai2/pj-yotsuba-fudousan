@@ -243,6 +243,8 @@ jobs:
             2. en / zh-tw / zh の3言語に訳す
                不動産翻訳のfrontmatterには faqHeading を、本文のFAQ H2見出しと完全一致で記す。
                3翻訳それぞれFAQ4問を本文とJSON-LDに含める。承認証跡ファイルは編集しない。
+               同一サイトへのリンクは絶対URLでも本文と同じ言語を先頭に置く。対応言語の実在を確認し、
+               日本語URLを訳文にコピーしたりリンク先を推測したりしない。外部一次資料のURLは変えない。
             3. 該当するseedスクリプトの ARTICLES（行政書士は4箇所）に登録する
 
             **git 操作はしない。--emit-ts も実行しない**（後段のジョブがやる）。
@@ -399,6 +401,13 @@ jobs:
             npx tsx "scripts/$s.ts" --emit-ts
           done
           git diff --stat -- src/lib/data/
+
+      # 診断のみ。有料修復の起動条件や、最終の独立レビュー・品質保留は変えない。
+      - name: 変更したseedの3翻訳を公開基準で事前点検する
+        continue-on-error: true
+        env:
+          COLUMN_PREFLIGHT_BASE: ${{ github.sha }}
+        run: node --import tsx scripts/inspect-daily-translation-links.ts
 
       - run: npx tsc --noEmit -p tsconfig.json
       - run: npx eslint $(git diff --name-only -- '*.ts' '*.tsx' | tr '\n' ' ') || true
@@ -574,6 +583,13 @@ jobs:
             npx tsx "scripts/$s.ts" --emit-ts
           done
           git diff --stat -- src/lib/data/
+
+      # 診断のみ。有料修復の起動条件や、最終の独立レビュー・品質保留は変えない。
+      - name: 変更したseedの3翻訳を公開基準で事前点検する
+        continue-on-error: true
+        env:
+          COLUMN_PREFLIGHT_BASE: ${{ github.sha }}
+        run: node --import tsx scripts/inspect-daily-translation-links.ts
 
       - run: npx tsc --noEmit -p tsconfig.json
       - run: npx eslint $(git diff --name-only -- '*.ts' '*.tsx' | tr '\n' ' ') || true

@@ -110,7 +110,7 @@ Cは記事数が最も少ない。配分に迷ったらCに寄せる。
 | seed | `seed-labor-columns.ts` の ARTICLES に1エントリ | `seed-souzoku-legal-columns.ts` の**4箇所**（`REQUIRED_HUB_LINKS` / `REQUIRED_PHRASES` / `FORBIDDEN_PHRASES`（空でも宣言）/ `ARTICLES`） | `seed-realestate-columns-daily.ts` の ARTICLES に1エントリ（`category` は記事ごと） |
 | **公開日（3サイトとも記事ごとに必須）** | `date: "YYYY-MM-DD"`。**省略すると開業クラスタと同じ 2026-09-01 で入る**（既定値が残っているのは開業75本のため）。日次で足す記事は必ず書く | `date: "YYYY-MM-DD"`。**必須**。既定値は2026-09-01に廃止したので、省略すると `verify()` が NG を出す | `publishedAt: "YYYY-MM-DD"` |
 | 管理画面 | `/admin/columns/seed-labor` | `/admin/columns/seed-souzoku-legal` | `/admin/columns/seed-realestate-daily` |
-| **翻訳の内部リンク** | **ロケール接頭辞つき相対** `](/zh/labor/ryokin)` | **絶対URL** `](https://luck428.com/legal/ryokin)`。相対はNG | **絶対URL**。相対はNG |
+| **翻訳の内部リンク** | 本文と同じ言語の相対パス（簡体字：`](/zh/labor/ryokin)`） | 新規記事のseedは絶対URL。必ず同じ言語へ（英語：`](https://luck428.com/en/legal/ryokin)`） | 新規記事のseedは絶対URL。必ず同じ言語へ（繁体字：`](https://luck428.com/zh-tw/about/uramatsu)`） |
 | **翻訳frontmatter必須** | `title` / `excerpt` / **`faqHeading`** | `title` / `excerpt` / **`category`** | `title` / `excerpt` / **`category`** |
 | frontmatterのクォート | **囲まない**（パーサが剥がさず、クォートごとタイトルになる） | 囲んでよい | 囲んでよい |
 | frontmatterのキー名 | **ハイフン不可**（`^([A-Za-z]+):` でしか読まない） | ハイフン可 | ハイフン可 |
@@ -133,9 +133,11 @@ Cは記事数が最も少ない。配分に迷ったらCに寄せる。
 `/column/<slug>` でリンクすると本番は404になる。slug が実在することは、
 そのルートに実在することを意味しない。**迷ったら本番URLに当てて200を確認してから書く。**
 
-翻訳（en / zh-tw / zh）は絶対URLなので `https://luck428.com/legal/column/<slug>` の形になる。
-バリデータの不明slug検査は `](/column/...)` の相対形しか見ないため、
-**翻訳側の取り違えは自動では止まらない。ja を直したら翻訳3本も必ず同じだけ直す。**
+同一サイトの訳文リンクは、相対・絶対のどちらの書式でも、先頭を訳文の言語（en / zh-tw / zh）にする。
+不動産の英語記事から行政書士の英語記事にリンクする例は `https://luck428.com/en/legal/column/<slug>`。
+リンク先の事業・slug・公開言語を確認する。日本語版の存在やURLに接頭辞を付けただけでは訳先の存在を証明しない。
+対応先を確認できない場合はURLを推測しない。外部の一次資料・画像・同一ページ内リンクには言語を付けない。
+通常の相対パス原則と上表の既存日次seed制約を混同せず、例外リストや公開基準を緩めて通さない。
 
 2026-08-24 の Daily Columns はこれで validate が落ちた
 （`group-home-bukken-sagashikata-youto-chiiki` は行政書士側の記事）。
