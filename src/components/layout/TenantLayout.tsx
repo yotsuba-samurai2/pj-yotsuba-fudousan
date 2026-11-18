@@ -42,7 +42,7 @@ const NAV_HREFS: Record<string, { href: string; key: string; labels?: Record<str
     // コード内4ロケールラベル（B1の教訓＝Firestoreに新キーを増やさない）。/bukken は同日に4ロケール公開＝locales制限なし。
     { href: "/bukken", key: "bukken", labels: { ja: "取扱物件", en: "Properties", "zh-tw": "銷售物件", zh: "在售房源" } },
     // 2026-09-22：学区特集（区の通学区域の一次データ）。取扱物件の隣に置く。
-    { href: "/gakku", key: "gakku", labels: { ja: "学区から探す", en: "School districts", "zh-tw": "依學區尋找", zh: "按学区查找" } },
+    { href: "/gakku", key: "gakku", labels: { ja: "通学区域を調べる", en: "School district boundaries", "zh-tw": "查詢學區範圍", zh: "查询学区范围" } },
     { href: "/about", key: "about" },
     { href: "/column", key: "column" },
     // 2026-07-10浦松指示：コラムの後にアクセス（/access・コード内4ロケールラベル）
@@ -142,7 +142,7 @@ const FOOTER_NAV_HREFS: Record<
         { href: "/services", key: "management", labels: { ja: "賃貸・売買・管理", en: "Rental, Sale & Management", "zh-tw": "租賃・買賣・管理", zh: "租赁・买卖・管理" } },
         // 2026-09-16浦松指示：取扱物件（/bukken・4ロケール）を基本業務の隣へ。ヘッダー NAV_HREFS と表記統一
         { href: "/bukken", key: "bukken", labels: { ja: "取扱物件", en: "Properties", "zh-tw": "銷售物件", zh: "在售房源" } },
-        { href: "/gakku", key: "gakku", labels: { ja: "学区から探す", en: "School districts", "zh-tw": "依學區尋找", zh: "按学区查找" } },
+        { href: "/gakku", key: "gakku", labels: { ja: "通学区域を調べる", en: "School district boundaries", "zh-tw": "查詢學區範圍", zh: "查询学区范围" } },
       ],
     },
     {

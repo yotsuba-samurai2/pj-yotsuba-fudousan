@@ -1,3 +1,4 @@
+import { SchoolEventsTeaser } from "./SchoolEventsTeaser";
 import { getRentalDiscovery } from "@/lib/rental-discovery-server";
 import { RentalDiscoveryStats, RentalFeeHubLink } from "./RentalDiscoveryStats";
 import { SCHOOL_SALE_COPY, schoolSalePath } from "@/lib/sale-school-district";
@@ -118,6 +119,8 @@ export async function SchoolDistrictPage({
         </section>
         <Link href={addLocalePrefix(schoolRentalPath(slug), locale)} className="mt-6 block rounded-xl border border-primary/25 bg-primary-tint p-5 font-semibold text-primary">{SCHOOL_RENTAL_COPY[locale].view} →</Link>
         <Link href={addLocalePrefix(schoolSalePath(slug), locale)} className="mt-3 block rounded-xl border border-primary/25 p-5 font-semibold text-primary">{SCHOOL_SALE_COPY[locale].view} →</Link>
+
+        <SchoolEventsTeaser locale={locale} school={slug} />
 
         <H2 id="district">{c.school.districtH2.replace("{school}", school.formalName)}</H2>
         <p className="mt-4 leading-relaxed text-text">{districtSummary(locale, school, rows)}</p>

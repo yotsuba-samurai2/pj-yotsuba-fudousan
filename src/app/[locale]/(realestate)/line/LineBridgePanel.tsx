@@ -13,6 +13,7 @@
 // （cta_band等）は「/lineへの入口タップ」になるため、location でファネルの段が区別できる。
 import { useState } from "react";
 import Link from "next/link";
+import type { HomeLineTopic } from "@/lib/home-conversion";
 import { gaEvent } from "@/lib/gtag";
 import { TelLink } from "@/components/shared/TelLink";
 
@@ -33,6 +34,7 @@ type Labels = {
 };
 
 type Props = {
+  topic?: HomeLineTopic;
   lineUrl: string;
   telHref: string;
   telDisplay: string;
@@ -41,7 +43,7 @@ type Props = {
   labels: Labels;
 };
 
-export function LineBridgePanel({ lineUrl, telHref, telDisplay, contactHref, labels: l }: Props) {
+export function LineBridgePanel({ lineUrl, telHref, telDisplay, contactHref, topic, labels: l }: Props) {
   const [copied, setCopied] = useState(false);
 
   const copyUrl = async () => {
@@ -76,7 +78,7 @@ export function LineBridgePanel({ lineUrl, telHref, telDisplay, contactHref, lab
       {/* ① 友だち追加ボタン＝素の<a>・同一タブ（target禁止）。onClickは計測のみ＝遷移を妨げない */}
       <a
         href={lineUrl}
-        onClick={() => gaEvent("cta_line_click", { location: "line_bridge" })}
+        onClick={() => gaEvent("cta_line_click", { location: "line_bridge", ...(topic ? { topic } : {}) })}
         className="inline-flex min-h-[52px] w-full max-w-sm items-center justify-center rounded-lg bg-primary px-6 py-3.5 text-base font-semibold text-white transition-colors hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-focus"
       >
         {l.addBtn}

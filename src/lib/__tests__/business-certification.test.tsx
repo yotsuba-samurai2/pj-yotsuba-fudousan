@@ -50,8 +50,11 @@ describe("real-estate company certification", () => {
     const position = about.indexOf("<BusinessCertification locale={locale} />");
     expect(position).toBeGreaterThan(about.indexOf("{companyInfo.map"));
     expect(position).toBeLessThan(about.indexOf("{AFFILIATION_TITLE[locale]"));
-    expect(home).toContain("<BusinessCertification locale={locale} compact />");
-    expect(home.indexOf("<BusinessCertification")).toBeGreaterThan(home.indexOf("{c.intro}"));
-    expect(home.indexOf("<BusinessCertification")).toBeLessThan(home.indexOf("<RentalEntry"));
+    const topics = readFileSync(resolve("src/components/shared/HomeTopicPanels.tsx"), "utf8");
+    expect(home).toContain("<HomeTopicPanels");
+    expect(home).not.toContain("<BusinessCertification");
+    expect(topics).toContain("<BusinessCertification locale={locale} compact />");
+    expect(topics.indexOf("<BusinessCertification")).toBeGreaterThan(topics.indexOf('id="home-business"'));
+    expect(topics.indexOf("<BusinessCertification")).toBeLessThan(topics.indexOf('id="home-inheritance"'));
   });
 });

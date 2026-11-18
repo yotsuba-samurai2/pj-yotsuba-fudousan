@@ -1,3 +1,6 @@
+import { SchoolEventsTeaser } from "@/components/gakku/SchoolEventsTeaser";
+// Availability counts must be evaluated against the current review deadline.
+export const dynamic = "force-dynamic";
 import { getRentalDiscovery } from "@/lib/rental-discovery-server";
 import { RentalDiscoveryStats, RentalFeeHubLink } from "@/components/gakku/RentalDiscoveryStats";
 import { SCHOOL_SALE_COPY, SCHOOL_SALE_INDEX_PATH, schoolSalePath } from "@/lib/sale-school-district";
@@ -112,6 +115,7 @@ export default async function GakkuHubPage() {
             </p>
           </figure>
         </header>
+        <SchoolEventsTeaser locale={locale} />
 
         {/* 学区参考図（4ロケール）。地図内の文言は ?lang= で切り替え、校名・所在地は日本語のまま
             （「校名沿用官方日文名稱」と同じ方針）。 */}
