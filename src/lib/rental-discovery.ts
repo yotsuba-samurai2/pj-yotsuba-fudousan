@@ -1,3 +1,4 @@
+import { isSchoolRentalSnapshotCurrent } from "./school-rental-freshness";
 import type { LangCode } from "@/config/languages";
 import type { PublicProperty } from "./property-shared";
 import { brokerFeeOf } from "./broker-fee";
@@ -19,6 +20,8 @@ function latest(dates: (string | null | undefined)[]) {
 }
 /** Public shapes only. Private feed records must never be passed to a view. */
 export function compileRentalDiscovery(properties: readonly PublicProperty[], summaries: readonly PublicRentalSummary[], locale: LangCode, checkedAt: string | null = null, now = new Date(), privateCounts: PrivateSchoolCounts | null = null) {
+  if (privateCounts && !isSchoolRentalSnapshotCurrent(privateCounts.checkedAt, now)) privateCounts = null;
+  if (!isSchoolRentalSnapshotCurrent(checkedAt, now)) checkedAt = null;
   const groups = groupSchoolRentals(properties, locale, now);
   const acceptedProperties: PublicProperty[] = [];
   for (const [slug, items] of groups) {
@@ -31,6 +34,7 @@ export function compileRentalDiscovery(properties: readonly PublicProperty[], su
   }
   const acceptedSummaries: PublicRentalSummary[] = [];
   for (const row of summaries) {
+    if (!isSchoolRentalSnapshotCurrent(row.checkedAt, now)) continue;
     if (!groups.has(row.schoolSlug ?? "")) continue;
     if (acceptedProperties.some(p => { const identity = registeredRentalIdentity(p); return identity && sameUnit(identity, row); })) continue;
     if (acceptedSummaries.some(other => row.id === other.id || sameUnit(row, other))) continue;
@@ -57,7 +61,7 @@ export type PrivateSchoolCounts = { counts: Record<string, number>; checkedAt: s
  * Counts cover only successfully validated complete saved feeds, never the whole market.
  */
 export function compilePrivateSchoolCounts(feeds: readonly RentalFeed[], registered: readonly Pick<RentalSummary, "building" | "unit" | "address">[] = [], now = new Date()): PrivateSchoolCounts | null {
-  if (!feeds.length || feeds.some(f => !feedSchema.safeParse(f).success || Date.parse(f.checkedAt) > now.getTime())) return null;
+  if (!feeds.length || feeds.some(f => !feedSchema.safeParse(f).success || !isSchoolRentalSnapshotCurrent(f.checkedAt, now))) return null;
   const rows = feeds.flatMap(feed => feed.records.map(row => ({ feed, row })))
     .sort((a, b) => Date.parse(b.feed.checkedAt) - Date.parse(a.feed.checkedAt));
   const withdrawals = rows.filter(({ row }) => row.availability === "closed" || row.application === "present");

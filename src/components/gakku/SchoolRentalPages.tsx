@@ -1,3 +1,4 @@
+import { SchoolCalendarLink } from "./SchoolEventsTeaser";
 import { compileRentalDiscovery, type SchoolRentalCount } from "@/lib/rental-discovery";
 import { RentalDiscoveryStats, RentalFeeHubLink } from "./RentalDiscoveryStats";
 import { RentalCampaignCta, RentalPageAnalytics } from "@/components/bukken/RentalCampaignCta";
@@ -86,6 +87,7 @@ export function SchoolRentalListings({ school, properties, locale, summaries = [
         <RentalFeeHubLink locale={locale} empty={stats.fee033Listings === 0} />
         <DistrictSourceNote locale={locale} />
       </header>
+      <SchoolCalendarLink locale={locale} school={school.slug} />
       {schoolRentalShowsDistrict(school.slug) && <SchoolDistrictSection school={school} locale={locale} />}
       {listings.length ? <ul className="mt-6 space-y-3">{listings.map(p => <li key={p.slug}><PropertyCard p={p} locale={locale} /></li>)}</ul>
         : !schoolSummaries.length && <p className="mt-6 rounded-xl border border-border p-6 leading-relaxed text-text">{c.empty}</p>}

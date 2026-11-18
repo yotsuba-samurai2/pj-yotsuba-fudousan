@@ -1,3 +1,4 @@
+import { SchoolCalendarLink } from "./SchoolEventsTeaser";
 import { Faq } from "@/components/shared/Faq";
 import { SCHOOL_SALE_HUB_FAQ } from "@/lib/rental-school-hub-faq";
 import Link from "next/link";
@@ -42,6 +43,7 @@ export function SchoolSaleListings({ school, properties, locale, type }: { schoo
   return <article className="mx-auto max-w-3xl px-4 py-8">
     <JsonLd data={buildPropertyItemListJsonLd(listings.map(p => ({ name: getLocalizedProperty(p, locale).title, url: canonicalUrl("realestate", `/bukken/${p.slug}`, locale) })), canonicalUrl("realestate", path, locale), locale)} />
     <h1 className="font-serif text-3xl font-semibold">{schoolSaleTitle(school, locale)}</h1>
+    <SchoolCalendarLink locale={locale} school={school.slug} />
     <p className="mt-4 leading-relaxed">{c.lead}</p>
     <p className="mt-4 text-xl font-semibold text-primary">{c.count.replace("{count}", String(listings.length))}</p>
     <nav aria-label={c.indexTitle} className="mt-4 flex flex-wrap gap-3">

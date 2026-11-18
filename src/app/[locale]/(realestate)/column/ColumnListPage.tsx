@@ -74,7 +74,7 @@ export async function renderColumnList(page: number) {
           locale={locale}
         />
       )}
-      <ColumnListPageContent columns={columns} page={page} total={result.total} totalPages={result.totalPages} />
+      <ColumnListPageContent locale={locale} columns={columns} page={page} total={result.total} totalPages={result.totalPages} />
       {/* ★2026-08-13 追加：CTA帯（LINE・お問い合わせ・電話）。
           3レーンとも column/[slug]・column・about だけ CtaBand が無く、
           PCでLINEへの導線が出ていなかった。contact / thanks には入れない。 */}

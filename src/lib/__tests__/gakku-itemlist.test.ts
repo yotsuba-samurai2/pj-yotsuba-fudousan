@@ -1,5 +1,5 @@
 // 学区ページ強化 作業手順書 v1・PR-1：ItemList を画面の件数と一致させる
-import { describe, expect, it, vi } from "vitest";
+import { describe, expect, it, vi, beforeEach, afterEach } from "vitest";
 import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { fixture } from "@/lib/rental-import/__tests__/fixtures";
@@ -38,6 +38,16 @@ function itemLists(html: string) {
 }
 
 describe("学区別ページの ItemList（PR-1）", () => {
+  beforeEach(() => { vi.useFakeTimers(); vi.setSystemTime(new Date("2026-09-23T03:30:00Z")); });
+  afterEach(() => vi.useRealTimers());
+  it.each(["ja", "en", "zh-tw", "zh"] as LangCode[])("%s: expired comparison rows leave public listings and consultation intact", locale => {
+    vi.setSystemTime(new Date("2026-11-18T00:00:00Z"));
+    const html = renderToStaticMarkup(createElement(SchoolRentalListings, { school: findSchoolBySlug("kanatomi")!, properties: [rental()], summaries: [summary("rental-expired", "kanatomi")], market: { total: 476, providers: ["reins"], checkedAt: "2026-10-31T00:00:00Z" }, locale }));
+    expect(itemLists(html)[0].numberOfItems).toBe(1);
+    expect(html).not.toContain("rental-expired");
+    expect(html).not.toContain("476");
+    expect(html).toContain("contact?intent=bukken");
+  });
   it.each(["ja", "en", "zh-tw", "zh"] as LangCode[])("%s: 自社物件＋フィード物件の件数が見出しの件数と一致する", locale => {
     const rows = [summary("rental-aaa", "kanatomi"), summary("rental-bbb", "kanatomi", "別マンション", "101"), summary("rental-zzz", "hongo")];
     const html = renderToStaticMarkup(createElement(SchoolRentalListings, { school: findSchoolBySlug("kanatomi")!, properties: [rental()], summaries: rows, locale }));

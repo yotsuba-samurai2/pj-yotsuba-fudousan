@@ -1,3 +1,4 @@
+import { compileCurrentSchoolRentals } from "./school-rental-freshness";
 import { cache } from "react";
 import { Prisma } from "@prisma/client";
 import { prisma } from "./prisma";
@@ -30,7 +31,7 @@ export const registeredRentalIdentities = cache(async () => {
 
 const compiledSchoolRentals = cache(async () => {
   const [feeds, existing] = await Promise.all([readSchoolRentalFeeds(), registeredRentalIdentities()]);
-  return compileRentalSummaries(feeds.map(f => f.feed), existing);
+  return compileCurrentSchoolRentals(feeds.map(f => f.feed), existing);
 });
 
 export const getSchoolRentalSummaries = cache(async () => (await compiledSchoolRentals()).summaries);

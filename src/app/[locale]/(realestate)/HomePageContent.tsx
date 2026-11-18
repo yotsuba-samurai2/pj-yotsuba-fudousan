@@ -1,23 +1,11 @@
-import { RentalEntry } from "@/components/bukken/RentalEntry";
+import { SchoolEventsTeaser } from "@/components/gakku/SchoolEventsTeaser";
+import { HomeTopicPanels } from "@/components/shared/HomeTopicPanels";
+import { HomeEditorialHero } from "@/components/shared/HomeEditorialHero";
+import { HomeSchoolFinder } from "@/components/gakku/HomeSchoolFinder";
+import styles from "@/components/shared/HomeEditorial.module.css";
 import { CustomerVoicesPreview } from "@/components/shared/CustomerVoices";
 import Image from "next/image";
-// /（型F・二本柱トップ）本文＝原稿_不動産 #1（E-1差し戻し対応・2026-07-10）
-// 【差し戻し対応の要点】
-//  1. i18n退行禁止：トップは既存が多言語＝新セクションのコピーを ja/en/zh-tw/zh の4ロケール分、
-//     コード内ロケールマップ（COPY）で保持。Firestore翻訳データは書き換えない（浦松承認事項のため）。
-//     ※en/zh-tw/zh訳はFable作成＝フェーズIの監修対象（繁体字は台湾コラム定訳準拠：不動產・繼承・文京區・團體家屋）。
-//  2. 社名保護：H1は全ロケールで先頭に「四葉不動産」（社名はブランド＝各言語同一表記）。
-//  3. 既存タグライン（realestate.home.heroTitle1-3＝Firestore翻訳・各locale値あり）はサブコピーへ移設（t()参照＝退行なし）。
-//  4. 旧トップ（3強み/サービス概要/代表メッセージ/アクセス構成）は本ファイルから撤去＝原稿#1構成へ全面置換。
-// 【1ページ1LINKA】本文の60秒診断枠がLINKA＝右下FABなし（TenantLayoutShell側でsuppressed）。
-// AI接続（/api/linka）はフェーズK＝「準備中」明記（優良誤認回避）。
-// JSON-LD＝layoutの OrganizationJsonLd／WebSiteJsonLd が出力済み＝ここでは出さない（@id重複防止）。
-// 2026-07-24 CTA刷新v2.1（浦松指摘「トップの希望条件メッセージが弱い」対応）：
-//   - 末尾のインラインCTA帯を共通CtaBand（variant="property-general"）に置換。
-//     旧インライン版は「共通CtaBandがja固定」時代の産物＝現在は4ロケール対応のため一本化。
-//     テンプレコピー・信頼行・GA計測・contactの?intent=bukkenがトップにも効く。
-//   - 60秒診断：LINKA挨拶に条件インテークの誘いを追記し、チップ「物件の希望条件を伝える」を追加
-//     （LINKA側はpropertyIntake＋joken実装済み＝条件を整理してコピー→LINE導線につながる）。
+// Local consultation home: human LINE and purpose-based routes first; retain existing specialist resources and four locales.
 import Link from "next/link";
 import { LazyLinkaWidget } from "@/components/linka/LazyLinkaWidget";
 import { CtaBand } from "@/components/shared/CtaBand";
@@ -27,8 +15,6 @@ import { fetchTranslations } from "@/lib/getTranslationData";
 import { getNestedValue } from "@/lib/seo";
 import { getLatestColumns, getLocalizedColumn } from "@/lib/columns";
 import type { LangCode } from "@/config/languages";
-import { SR_BIO } from "@/lib/shared/sr-label";
-import { BusinessCertification } from "@/components/shared/BusinessCertification";
 
 const HOME_COLUMNS_HEADING: Record<LangCode, { title: string; all: string }> = {
   ja: { title: "お役立ちコラム", all: "コラム一覧へ" },
@@ -37,14 +23,9 @@ const HOME_COLUMNS_HEADING: Record<LangCode, { title: string; all: string }> = {
   zh: { title: "实用专栏", all: "查看所有专栏" },
 };
 
-type PillarCopy = { tag: string; title: string; body: string; anchor: string };
 type QaCopy = { q: string; a: string; anchor: string };
 type TopCopy = {
   heroAlt: string;
-  h1: string;
-  intro: React.ReactNode;
-  pillars: [PillarCopy, PillarCopy, PillarCopy];
-  pillarHrefs: [string, string, string];
   diagnosisH2: string;
   diagnosisChips: { href: string; label: string }[];
   diagnosisNote: string;
@@ -59,7 +40,6 @@ type TopCopy = {
   // ＝共通CtaBand（variant="property-general"・4ロケール）へ一本化。
 };
 
-const PILLAR_HREFS: [string, string, string] = ["/souzoku", "/toushi", "/global"];
 // 2026-07-22：GHのトップ導線を開設ピラー /group-home（物件＋指定申請の完全ガイド）へ。物件 spoke /toushi/group-home は他ページから継続被リンク。
 const QA_HREFS = ["/souzoku", "/group-home", "/global", "/about"];
 // 2026-09-05 月次点検（INIT-06/NEW-SALE-1）：5問目＝売主向け入口（相続以外・海外在住も）。
@@ -70,35 +50,7 @@ const QA_HREFS_INTL = [...QA_HREFS, "/leaving-japan"];
 const COPY: Record<LangCode, TopCopy> = {
   ja: {
     heroAlt: "文京区・播磨坂の桜並木のイメージ",
-    h1: "四葉不動産｜文京区で、相続の不動産と投資・事業用の不動産を。",
-    intro: (
-      <>
-        <strong>四葉不動産株式会社は、東京都文京区小日向の不動産会社です。</strong>
-        親から受け継いだ家をどうするか。グループホームや社宅に使う物件をどう確保するか。——文京区・茗荷谷の地元で、元新聞記者の宅建士・行政書士である代表が、最初の一歩からお手伝いします。外国人の方のお部屋探しも、日本語・英語・中国語（繁体字・簡体字）で対応します。
-      </>
-    ),
-    pillars: [
-      {
-        tag: "承継するには？",
-        title: "相続した不動産、どうする？",
-        body: "出口は「管理・活用・売却」の3つ。期限のある相続登記から出口の選び方まで、1本のガイドに整理しました。",
-        anchor: "文京区で不動産を相続したら——完全ガイド",
-      },
-      {
-        tag: "物件を探すには？",
-        title: "投資用・事業用の不動産を探す",
-        body: "グループホーム物件・社宅・収益物件を、事業の目的から逆算してご提案します。",
-        anchor: "投資用・事業用不動産",
-      },
-      {
-        tag: "日本で暮らすには？",
-        title: "外国人のお部屋探し",
-        body: "必要な書類を集めて、翻訳するサポートもさせていただきます。",
-        anchor: "外国人・多言語のお部屋探し",
-      },
-    ],
-    pillarHrefs: PILLAR_HREFS,
-    diagnosisH2: "60秒で、あなたの「次の一歩」がわかります。",
+    diagnosisH2: "相談の前に、希望条件を整理する（LINKA）",
     diagnosisChips: [
       { href: "/souzoku", label: "相続の相談" },
       { href: "/toushi", label: "投資・事業用を探す" },
@@ -109,8 +61,7 @@ const COPY: Record<LangCode, TopCopy> = {
       "こんにちは、四葉不動産のLINKAです。相続・投資や事業用・お部屋探しなど、お困りごとを匿名でどうぞ。物件をお探しの方は、駅・賃料・広さなど希望条件だけでも大丈夫——条件を整理して、そのままLINEで送れる形にします。",
     repAlt: "四葉不動産株式会社 代表取締役 浦松丈二",
     repName: "浦松 丈二（うらまつ・じょうじ）",
-    repBio:
-      `元毎日新聞中国総局長（記者歴34年）。中国や台湾、タイに駐在。宅地建物取引士・行政書士。${SR_BIO.ja}。34年、記者として人の話を聞いてきました。あなたの事情を整理するところから、一緒に。`,
+    repBio: "文京区小日向で不動産の相談をお受けしている宅地建物取引士です。お部屋探し、事業用物件、相続した家の活用まで、まずはご事情を伺います。",
     profileLabel: "プロフィール：",
     qa: [
       {
@@ -125,12 +76,12 @@ const COPY: Record<LangCode, TopCopy> = {
       },
       {
         q: "外国人でも日本で部屋を借りられますか？",
-        a: "借りられます。審査・保証・言語の壁を、四葉不動産が母語でサポートします。",
+        a: "必要な書類や審査・保証の条件は物件ごとに異なります。日本語・英語・中国語でご案内します。",
         anchor: "多言語のお部屋探し",
       },
       {
         q: "四葉不動産はどんな会社ですか？",
-        a: "文京区小日向の宅地建物取引業者で、相続不動産と投資・事業用不動産が専門です。",
+        a: "文京区小日向の宅地建物取引業者です。学区からの住まい探し、事業用物件、相続不動産の管理・賃貸・売却を扱います。",
         anchor: "わたしたち",
       },
       {
@@ -150,35 +101,7 @@ const COPY: Record<LangCode, TopCopy> = {
   },
   en: {
     heroAlt: "Cherry blossoms along Harimazaka in Bunkyo, Tokyo",
-    h1: "四葉不動産｜Inherited Property & Investment / Business-Use Real Estate in Bunkyo, Tokyo",
-    intro: (
-      <>
-        <strong>Yotsuba Real Estate Co., Ltd. (四葉不動産株式会社) is a real estate company in Kohinata, Bunkyo-ku, Tokyo.</strong>{" "}
-        What should you do with the house you inherited? How do you secure a property for a group home or company housing? Based in the Myogadani neighborhood, our representative—a former newspaper journalist who is a Licensed Real Estate Transaction Specialist and Gyoseishoshi (Administrative Scrivener)—supports you from the very first step. Room-hunting support for international residents is available in Japanese, English, Traditional Chinese, and Simplified Chinese.
-      </>
-    ),
-    pillars: [
-      {
-        tag: "Inheriting a property?",
-        title: "Inherited a property—now what?",
-        body: "Your three exits are managing, utilizing, or selling. One guide covers everything from the registration deadline to choosing your exit.",
-        anchor: "Inheriting Property in Bunkyo: The Complete Guide",
-      },
-      {
-        tag: "Looking for a property?",
-        title: "Find investment & business-use property",
-        body: "Group-home properties, company housing, and income properties—proposed by working backward from your business goals.",
-        anchor: "Investment & Business-Use Real Estate",
-      },
-      {
-        tag: "Living in Japan?",
-        title: "Room hunting for international residents",
-        body: "We also help you gather and translate the documents you need.",
-        anchor: "Multilingual Room-Hunting Support",
-      },
-    ],
-    pillarHrefs: PILLAR_HREFS,
-    diagnosisH2: "Find your next step in 60 seconds.",
+    diagnosisH2: "Organize your preferences before getting in touch (LINKA)",
     diagnosisChips: [
       { href: "/souzoku", label: "Inheritance" },
       { href: "/toushi", label: "Investment & business use" },
@@ -190,8 +113,7 @@ const COPY: Record<LangCode, TopCopy> = {
     repAlt: "Joji Uramatsu, Representative Director of Yotsuba Real Estate Co., Ltd.",
     repName: "Joji Uramatsu",
     // 2026-09-05 月次点検（INIT-06）：開業予定の直書きを SR_BIO.en に（ja/zh-tw/zh と同方式・開業後は資格名のみ）
-    repBio:
-      `Former China General Bureau Chief of the Mainichi Shimbun (34 years as a journalist), stationed in China, Taiwan, and Thailand. Licensed Real Estate Transaction Specialist and Gyoseishoshi (Administrative Scrivener). ${SR_BIO.en}. For 34 years I listened to people's stories as a journalist—let's start by sorting out yours, together.`,
+    repBio: "Joji Uramatsu is a licensed real estate transaction specialist based in Kohinata. He helps families find a home, businesses find premises and owners weigh their choices for inherited property.",
     profileLabel: "Profile: ",
     qa: [
       {
@@ -211,7 +133,7 @@ const COPY: Record<LangCode, TopCopy> = {
       },
       {
         q: "What kind of company is Yotsuba Real Estate?",
-        a: "A licensed real estate brokerage in Kohinata, Bunkyo-ku, specializing in inherited properties and investment / business-use properties.",
+        a: "We are a licensed brokerage in Kohinata, Bunkyo. We help with housing by school district, business premises and inherited property.",
         anchor: "About us",
       },
       {
@@ -231,35 +153,7 @@ const COPY: Record<LangCode, TopCopy> = {
   },
   "zh-tw": {
     heroAlt: "東京文京區・播磨坂的櫻花並木",
-    h1: "四葉不動産｜文京區的繼承不動產與投資・事業用不動產",
-    intro: (
-      <>
-        <strong>四葉不動産株式会社是位於東京都文京區小日向的不動產公司。</strong>
-        從父母繼承的房子該怎麼辦？團體家屋（Group Home）或員工宿舍的物件該如何取得？——深耕文京區・茗荷谷在地，由曾任報社記者、具備宅建士與行政書士資格的代表，從第一步開始陪您處理。外國人士找房也提供日文、英文、中文（繁體・簡體）服務。
-      </>
-    ),
-    pillars: [
-      {
-        tag: "如何繼承不動產？",
-        title: "繼承的不動產，該怎麼辦？",
-        body: "出路有「管理・活用・出售」三種。從有期限的繼承登記到出路的選擇，整理成一份完整指南。",
-        anchor: "在文京區繼承不動產——完整指南",
-      },
-      {
-        tag: "如何尋找物件？",
-        title: "尋找投資用・事業用不動產",
-        body: "團體家屋物件、員工宿舍、收益物件——從事業目的反向推算，為您提案。",
-        anchor: "投資用・事業用不動產",
-      },
-      {
-        tag: "如何在日本生活？",
-        title: "外國人找房",
-        body: "也協助您蒐集所需文件並提供翻譯支援。",
-        anchor: "外國人・多語言找房服務",
-      },
-    ],
-    pillarHrefs: PILLAR_HREFS,
-    diagnosisH2: "60秒，找到您的「下一步」。",
+    diagnosisH2: "諮詢前先整理需求（LINKA）",
     diagnosisChips: [
       { href: "/souzoku", label: "繼承諮詢" },
       { href: "/toushi", label: "尋找投資・事業用物件" },
@@ -270,8 +164,7 @@ const COPY: Record<LangCode, TopCopy> = {
       "您好，我是四葉不動産的AI禮賓LINKA。繼承、投資・事業用物件、找房等，請以匿名方式告訴我您的狀況。若您正在找物件，只要告訴我車站・租金・面積等希望條件即可——我會為您整理成可直接用LINE傳送的內容。",
     repAlt: "四葉不動産株式会社 代表取締役 浦松丈二",
     repName: "浦松 丈二（Uramatsu Joji）",
-    repBio:
-      `曾任每日新聞中國總局長（記者資歷34年）、曾派駐中國、台灣、泰國。宅地建物取引士・行政書士。${SR_BIO.zhTw}。34年來，我以記者的身分傾聽人們的故事。就從整理您的狀況開始，一起前進。`,
+    repBio: "浦松丈二是位於文京區小日向的宅地建物取引士，受理家庭找房、營業場所及繼承房產的諮詢。",
     profileLabel: "個人檔案：",
     qa: [
       {
@@ -291,7 +184,7 @@ const COPY: Record<LangCode, TopCopy> = {
       },
       {
         q: "四葉不動産是什麼樣的公司？",
-        a: "位於文京區小日向的宅地建物取引業者，專精繼承不動產與投資・事業用不動產。",
+        a: "四葉不動産是位於文京區小日向的不動產仲介公司，提供學區找房、營業場所及繼承房產的服務。",
         anchor: "關於我們",
       },
       {
@@ -311,35 +204,7 @@ const COPY: Record<LangCode, TopCopy> = {
   },
   zh: {
     heroAlt: "东京文京区・播磨坂的樱花街道",
-    h1: "四葉不動産｜文京区的继承不动产与投资・事业用不动产",
-    intro: (
-      <>
-        <strong>四葉不動産株式会社是位于东京都文京区小日向的不动产公司。</strong>
-        从父母继承的房子该怎么办？团体家屋（Group Home）或员工宿舍的物件该如何取得？——扎根文京区・茗荷谷本地，由曾任报社记者、持有宅建士与行政书士资格的代表，从第一步开始陪您处理。外国人士找房也提供日语、英语、中文（繁体・简体）服务。
-      </>
-    ),
-    pillars: [
-      {
-        tag: "如何继承不动产？",
-        title: "继承的不动产，该怎么办？",
-        body: "出路有“管理・活用・出售”三种。从有期限的继承登记到出路的选择，整理成一份完整指南。",
-        anchor: "在文京区继承不动产——完整指南",
-      },
-      {
-        tag: "如何寻找房源？",
-        title: "寻找投资用・事业用不动产",
-        body: "团体家屋物件、员工宿舍、收益物件——从事业目的反向推算，为您提案。",
-        anchor: "投资用・事业用不动产",
-      },
-      {
-        tag: "如何在日本生活？",
-        title: "外国人找房",
-        body: "也协助您收集所需文件并提供翻译支持。",
-        anchor: "外国人・多语言找房服务",
-      },
-    ],
-    pillarHrefs: PILLAR_HREFS,
-    diagnosisH2: "60秒，找到您的“下一步”。",
+    diagnosisH2: "咨询前先整理需求（LINKA）",
     diagnosisChips: [
       { href: "/souzoku", label: "继承咨询" },
       { href: "/toushi", label: "寻找投资・事业用物件" },
@@ -350,8 +215,7 @@ const COPY: Record<LangCode, TopCopy> = {
       "您好，我是四葉不動産的AI礼宾LINKA。继承、投资・事业用物件、找房等，请以匿名方式告诉我您的情况。若您正在找物件，只要告诉我车站・租金・面积等希望条件即可——我会为您整理成可直接用LINE发送的内容。",
     repAlt: "四葉不動産株式会社 代表取缔役 浦松丈二",
     repName: "浦松 丈二（Uramatsu Joji）",
-    repBio:
-      `曾任每日新闻中国总局长（记者经历34年）、曾派驻中国、台湾、泰国。宅地建物取引士・行政书士。${SR_BIO.zh}。34年来，我以记者的身份倾听人们的故事。就从整理您的情况开始，一起前进。`,
+    repBio: "浦松丈二是位于文京区小日向的宅地建物取引士，受理家庭找房、经营场所及继承房产的咨询。",
     profileLabel: "个人简介：",
     qa: [
       {
@@ -371,7 +235,7 @@ const COPY: Record<LangCode, TopCopy> = {
       },
       {
         q: "四葉不動産是什么样的公司？",
-        a: "位于文京区小日向的宅地建物取引业者，专精继承不动产与投资・事业用不动产。",
+        a: "四葉不動産是位于文京区小日向的房地产经纪公司，提供学区找房、经营场所及继承房产服务。",
         anchor: "关于我们",
       },
       {
@@ -417,83 +281,15 @@ export default async function HomePageContent() {
   }
 
   return (
-    <>
-      {/* ヒーロー（H1＝全ロケール先頭に社名・回答ファースト・桜=bunkyo-sakura） */}
-      <section className="relative">
-        <div className="relative mx-auto max-w-6xl overflow-hidden rounded-b-3xl sm:mt-4 sm:rounded-3xl">
-          <picture>
-          <source
-            type="image/avif"
-            srcSet={[420, 750, 828, 1200, 1600].map(width => `/hero/bunkyo-sakura-${width}.avif ${width}w`).join(", ")}
-            sizes="(min-width: 1152px) 1152px, 100vw"
-          />
-          <Image
-            src="/hero/bunkyo-sakura-16x9.webp"
-            quality={60}
-            alt={c.heroAlt}
-            width={1600}
-            height={900}
-            className="h-[60vw] max-h-[480px] w-full object-cover sm:h-auto"
-            sizes="(min-width: 1152px) 1152px, 100vw"
-            loading="eager"
-            fetchPriority="high"
-          />
-          </picture>
-          {/* SP・小タブレット＝画像の下に縦積み（DESIGN.md§8「モバイルのヒーローは縦積み」＝パネルのクリップ/ヘッダーかぶり防止）／md+＝画像上のオーバーレイ */}
-          <div className="md:absolute md:inset-0 md:flex md:items-center">
-            <div className="hero-fade-in bg-surface p-5 md:m-8 md:max-w-2xl md:rounded-2xl md:bg-white/30 md:p-7 md:backdrop-blur-sm">
-              <h1 className="font-serif text-2xl font-bold leading-snug text-ink sm:text-3xl">{c.h1}</h1>
-              {tagline && (
-                <p className="mt-1.5 text-xs font-medium tracking-wide text-primary-dark sm:text-sm">
-                  {tagline}
-                </p>
-              )}
-              <p className="mt-3 text-sm leading-relaxed text-text sm:text-base">{c.intro}</p>
-            </div>
-          </div>
+    <div className={styles.page}>
+      <HomeEditorialHero locale={locale} heroAlt={c.heroAlt} />
+      <div className={styles.wrap}>
+        <div className={styles.grid}>
+          <div id="home-school"><HomeSchoolFinder locale={locale}/></div>
+          <div id="home-calendar"><SchoolEventsTeaser locale={locale}/></div>
         </div>
-      </section>
-
-      <div className="mx-auto mt-6 max-w-5xl px-4">
-        <BusinessCertification locale={locale} compact />
-      </div>
-
-      <div className="px-4"><RentalEntry locale={locale} /></div>
-
-      <main className="defer-page-sections mx-auto max-w-5xl px-4">
-        {/* 二本柱カード（＋横断） */}
-        <section aria-label="pillars" className="mt-10 grid gap-3 sm:grid-cols-3">
-          {c.pillars.map((p, i) => (
-            <Link
-              key={c.pillarHrefs[i]}
-              href={addLocalePrefix(c.pillarHrefs[i], locale)}
-              className="block rounded-2xl border border-border bg-surface p-5 transition-shadow hover:shadow-md"
-            >
-              <span className="inline-block rounded-full bg-primary-tint px-2.5 py-0.5 text-xs font-medium text-primary-dark">
-                {p.tag}
-              </span>
-              <div className="mt-2 font-serif text-lg font-semibold leading-snug text-ink">{p.title}</div>
-              <p className="mt-2 text-sm leading-relaxed text-text-muted">{p.body}</p>
-              <div className="mt-3 text-sm font-medium text-primary-dark">→ {p.anchor}</div>
-            </Link>
-          ))}
-        </section>
-
-        {/* 60秒診断＝LINKAインライン本体（フェーズK接続済み・1ページ1LINKA＝右下FABはこのページ非表示のまま） */}
-        <section aria-label="60-second diagnosis" className="mt-10 rounded-2xl bg-primary-tint p-4 sm:p-6">
-          <h2 className="text-center font-serif text-xl font-semibold text-ink">{c.diagnosisH2}</h2>
-          <div className="mx-auto mt-4 h-[520px] max-w-2xl overflow-hidden rounded-2xl border border-border bg-surface">
-            <LazyLinkaWidget
-              deferUntilVisible
-              site="realestate"
-              mode="concierge"
-              greeting={c.diagnosisNote}
-              chips={c.diagnosisChips.map((chip) => chip.label)}
-              className="h-full"
-            />
-          </div>
-        </section>
-
+        <div className={styles.rest}>
+        <HomeTopicPanels locale={locale} />
         {/* 代表紹介（E-E-A-T） */}
         <section className="mt-10 flex flex-col items-start gap-4 rounded-2xl border border-border bg-surface p-5 sm:flex-row">
           <Image
@@ -505,10 +301,11 @@ export default async function HomePageContent() {
             className="w-32 flex-shrink-0 rounded-xl object-cover sm:w-40"
           />
           <div>
+            {tagline && <p className="mb-1 text-xs font-semibold tracking-wide text-primary-dark">{tagline}</p>}
             <h2 className="font-serif text-lg font-semibold text-ink">{c.repName}</h2>
             <p className="mt-1 text-sm leading-relaxed text-text-muted">{c.repBio}</p>
             <p className="mt-2 text-xs">
-              {c.profileLabel}
+              {c.profileLabel} <Link href={addLocalePrefix("/about/uramatsu",locale)} className="text-primary-dark underline">{c.repName}</Link> ／
               <a
                 href="https://www.samurai.co.jp/samurai/reserve/uramatsu-joji"
                 target="_blank"
@@ -591,13 +388,29 @@ export default async function HomePageContent() {
           </section>
         )}
 
+        {/* 60秒診断＝LINKAインライン本体（フェーズK接続済み・1ページ1LINKA＝右下FABはこのページ非表示のまま） */}
+        <details className="mt-10 rounded-2xl bg-primary-tint p-4 sm:p-6">
+          <summary className="cursor-pointer font-serif text-lg font-semibold text-ink">{c.diagnosisH2}</summary>
+          <div className="mx-auto mt-4 h-[520px] max-w-2xl overflow-hidden rounded-2xl border border-border bg-surface">
+            <LazyLinkaWidget
+              deferUntilVisible
+              site="realestate"
+              mode="concierge"
+              greeting={c.diagnosisNote}
+              chips={c.diagnosisChips.map((chip) => chip.label)}
+              className="h-full"
+            />
+          </div>
+        </details>
+
         {/* CTA帯＝共通CtaBand（2026-07-24 v2.1）。variant="property-general"＝住まい・事業用の両対応の
             物件条件インテーク（テンプレコピー・信頼行・GA計測・contactの?intent=bukken込み・4ロケール）。
             旧インライン版は「共通CtaBandがja固定」時代の産物のため撤去・一本化。 */}
         <div className="my-4">
           <CtaBand businessKey="realestate" variant="property-general" />
         </div>
-      </main>
-    </>
+        </div>
+      </div>
+    </div>
   );
 }

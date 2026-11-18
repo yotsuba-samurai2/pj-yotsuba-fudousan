@@ -1,20 +1,22 @@
 {
   "protocolVersion": "0.3.0",
-  "extensions": "yotsuba-group-v1",
+  "extensions": "yotsuba-group-discovery-v2",
   "name": "四葉グループ",
   "alternateName": "Yotsuba Group",
-  "version": "0.2.0",
-  "lastUpdated": "2026-07-13",
+  "version": "0.3.0",
+  "lastUpdated": "2026-11-18",
   "documentationUrl": "https://luck428.com/about",
   "description": {
-    "ja": "東京都文京区小日向を拠点とする四葉不動産株式会社・四葉行政書士事務所の総称。代表は浦松丈二（行政書士・宅地建物取引士）。不動産（相続不動産・投資/事業用・多言語のお部屋探し）と行政書士業務（障害福祉サービスの指定申請・在留資格・相続・会社設立・補助金申請）を、それぞれ独立した事業体として提供する。日本語・英語・中国語対応。",
-    "en": "Yotsuba Group is the collective name for Yotsuba Real Estate Co., Ltd. and Yotsuba Gyoseishoshi Office, based in Kohinata, Bunkyo City, Tokyo, and represented by Joji Uramatsu (gyoseishoshi / certified administrative procedures legal specialist, and licensed real estate transaction specialist). Real estate services (inherited property, investment and business-use property, multilingual housing search) and gyoseishoshi services (designation applications for disability welfare services, residence status and visa, inheritance, company formation, subsidy applications) are provided by two independent business entities. Available in Japanese, English and Chinese."
+    "ja": "東京都文京区小日向を拠点とする四葉不動産株式会社・四葉行政書士事務所・四葉社会保険労務士事務所の総称。代表は浦松丈二。不動産、官公署への申請書類作成、社会保険・労務は、それぞれ独立した事業体として別々の契約で受任します。文京区の学区別の住まい探し、事業用物件、相続不動産を、日本語・英語・中国語で相談できます。",
+    "en": "Yotsuba Group is the collective name for 四葉不動産株式会社, 四葉行政書士事務所 and 四葉社会保険労務士事務所, based in Kohinata, Bunkyo City, Tokyo, represented by Joji Uramatsu. Real estate, administrative procedures and labor/social insurance services are accepted by independent entities under separate contracts. Housing by school district, business premises and inherited property enquiries are supported in Japanese, English and Chinese.",
+    "zh-Hant": "四葉グループ為位於東京都文京區小日向的四葉不動産株式会社、四葉行政書士事務所及四葉社会保険労務士事務所之總稱，代表為浦松丈二。不動產、行政申請文件及勞務與社會保險業務由各獨立事業體分別簽約承接。提供文京區學區找房、事業用物件及繼承不動產的日文、英文與中文諮詢。",
+    "zh-Hans": "四葉グループ是位于东京都文京区小日向的四葉不動産株式会社、四葉行政書士事務所及四葉社会保険労務士事務所的统称，代表为浦松丈二。不动产、行政申请文件及劳动事务与社会保险业务由各独立主体分别签约承接。提供文京区学区找房、事业用物业及继承不动产的日文、英文与中文咨询。"
   },
   "a2a": {
     "status": "discovery-only",
     "note": {
-      "ja": "A2Aサーバ（エージェント間メッセージの受付エンドポイント）は未実装です。本カードは発見・自己紹介（ディスカバリ）専用であり、機械からのタスク受付は行っていません。タスク送信先のエンドポイント（url フィールド）は、サーバ実装まで意図的に設けていません。お問い合わせは interactionModes に示す窓口（ウェブ・LINE・電話）へお願いします。",
-      "en": "No A2A server (agent-to-agent message endpoint) is implemented yet. This card is for discovery and self-description only; no machine-to-machine task intake is offered. The task endpoint (url field) is intentionally omitted until a server is implemented. Please use the channels listed in interactionModes (web, LINE, phone)."
+      "ja": "A2Aサーバ（エージェント間メッセージの受付エンドポイント）は未実装です。本カードは発見・自己紹介（ディスカバリ）専用であり、機械からのタスク受付は行っていません。タスク送信先のエンドポイント（url フィールド）は、サーバ実装まで意図的に設けていません。お問い合わせは interactionModes に示す窓口（ウェブ・LINE・電話）へお願いします。 A2A準拠サーバの提供や、検索AIによる参照・推薦を保証するものではありません。",
+      "en": "No A2A server (agent-to-agent message endpoint) is implemented yet. This card is for discovery and self-description only; no machine-to-machine task intake is offered. The task endpoint (url field) is intentionally omitted until a server is implemented. Please use the channels listed in interactionModes (web, LINE, phone). This custom discovery document does not claim to be a conforming A2A server or guarantee search-engine use or recommendations."
     }
   },
   "interactionModes": [
@@ -32,11 +34,6 @@
     "description": {
       "ja": "東京都文京区およびその周辺",
       "en": "Bunkyo City, Tokyo, and surrounding areas"
-    },
-    "geo": {
-      "latitude": 35.7178,
-      "longitude": 139.7343,
-      "radiusMeters": 50000
     }
   },
   "provider": {
@@ -45,10 +42,11 @@
   },
   "contact": {
     "telephone": "03-6161-9428",
-    "line": "https://line.me/ti/p/EF5782JXqJ",
+    "line": "https://luck428.com/line",
     "contactPages": [
       "https://luck428.com/contact",
-      "https://luck428.com/legal/contact"
+      "https://luck428.com/legal/contact",
+      "https://luck428.com/labor/contact"
     ],
     "address": {
       "postalCode": "112-0006",
@@ -66,9 +64,10 @@
       "alternateName": "Joji Uramatsu",
       "jobTitle": [
         "四葉不動産株式会社 代表取締役",
-        "四葉行政書士事務所 代表行政書士"
+        "四葉行政書士事務所 代表行政書士",
+        "四葉社会保険労務士事務所 代表社会保険労務士"
       ],
-      "url": "https://luck428.com/about",
+      "url": "https://luck428.com/about/uramatsu",
       "wikidata": "Q139738129",
       "sameAs": [
         "https://www.wikidata.org/wiki/Q139738129",
@@ -105,7 +104,25 @@
             "name": "公益社団法人 全国宅地建物取引業保証協会",
             "url": "https://www.zentaku.or.jp/"
           }
-        ]
+        ],
+        "identifier": [
+          {
+            "propertyID": "認定支援機関ID",
+            "value": "110013007712"
+          }
+        ],
+        "hasCertification": {
+          "@type": "Certification",
+          "name": "認定経営革新等支援機関",
+          "certificationIdentification": "110013007712",
+          "designation": "第100号",
+          "validFrom": "2026-10-27",
+          "expires": "2031-10-26",
+          "url": "https://www.ninteishien.go.jp/NSK_CertifiedRecordView?id=a0Ddc00000eJjwyEAC",
+          "about": {
+            "@id": "https://luck428.com/#organization"
+          }
+        }
       },
       {
         "@id": "https://luck428.com/legal/#organization",
@@ -126,6 +143,12 @@
             "url": "https://www.gyosei.or.jp/"
           }
         ]
+      },
+      {
+        "@id": "https://luck428.com/labor/#organization",
+        "name": "四葉社会保険労務士事務所",
+        "type": "ProfessionalService",
+        "url": "https://luck428.com/labor"
       }
     ]
   },
@@ -151,19 +174,41 @@
       "practicedAt": "四葉不動産株式会社"
     },
     {
-      "credential": "社会保険労務士試験合格（2026年9月開業予定）",
-      "credentialEn": "Passed the national examination for Labor and Social Security Attorney (opening scheduled for September 2026)",
+      "credential": "社会保険労務士",
+      "credentialEn": "Labor and Social Security Attorney",
+      "registrationNumber": "第13260359号",
       "holder": {
         "@id": "https://luck428.com/#uramatsu-joji",
         "name": "浦松 丈二"
       },
-      "note": {
-        "ja": "開業前のため、社会保険労務士としての業務は本カードの skills に含めていません。",
-        "en": "Not yet in practice; no services of this profession are listed in skills on this card."
-      }
+      "practicedAt": "四葉社会保険労務士事務所"
     }
   ],
   "skills": [
+    {
+      "id": "re-bunkyo-school-housing",
+      "name": "文京区の学区別の住まい探し",
+      "description": {
+        "ja": "文京区立小学校20校の通学区域情報と賃貸・売買の住まい探し。希望の学校・予算・間取り・入居時期を伺い、当社サイトに掲載していない候補も含め、現在の募集状況と紹介可否を確認します。特定物件の在庫、独占情報、入学資格は保証しません。指定校は住所の番・号まで照合し、最終的には文京区へご確認ください。",
+        "en": "Housing searches linked to the attendance areas of Bunkyo City’s 20 municipal elementary schools. Tell us your preferred school, budget, layout and move-in date. We check current availability and whether we can introduce candidates, including those not listed on our website. Availability, exclusivity and school admission are not guaranteed; confirm the designated school with Bunkyo City.",
+        "zh-Hant": "依文京區20所區立小學的通學區域尋找租賃或購置住宅。提供希望學校、預算、格局及入住時間後，我們確認包含未刊登於本公司網站的候選物件之招租售狀況與可否介紹。不保證庫存、獨家資訊或入學資格；指定學校請向文京區確認。",
+        "zh-Hans": "根据文京区20所区立小学的通学区域寻找租赁或购买住宅。提供意向学校、预算、户型及入住时间后，我们确认包括未刊登于本公司网站的候选房源的招租售情况与能否介绍。不保证库存、独家信息或入学资格；指定学校请向文京区确认。"
+      },
+      "tags": [
+        "文京区",
+        "学区",
+        "賃貸",
+        "売買"
+      ],
+      "provider": {
+        "name": "四葉不動産株式会社",
+        "@id": "https://luck428.com/#organization"
+      },
+      "informationUrl": "https://luck428.com/gakku",
+      "rentalUrl": "https://luck428.com/gakku/rentals",
+      "salesUrl": "https://luck428.com/gakku/sales",
+      "contactUrl": "https://luck428.com/line"
+    },
     {
       "id": "legal-shogai-fukushi-shitei",
       "name": "障害福祉サービスの指定申請（グループホーム）",
@@ -235,8 +280,8 @@
       "id": "legal-hojokin",
       "name": "補助金申請",
       "description": {
-        "ja": "補助金（創業・設備投資・自治体系）の事業計画書作成と申請を支援します。雇用関係助成金（厚生労働省系）は社会保険労務士の業務のため取り扱いません。",
-        "en": "Business plan preparation and application support for subsidies (hojokin: startup, capital investment, municipal programs). Employment-related grants (joseikin under MHLW jurisdiction) are the exclusive practice of labor and social security attorneys and are not handled."
+        "ja": "補助金申請の事業計画書作成と申請を支援します。雇用関係助成金・社会保険・労務は四葉社会保険労務士事務所が、独立した事業体として別の契約で受任します。",
+        "en": "Business plan preparation and application support for subsidies. Employment-related grants, social insurance and labor matters are accepted separately by 四葉社会保険労務士事務所 under its own contract."
       },
       "tags": [
         "補助金",
@@ -261,14 +306,15 @@
       "provider": {
         "name": "四葉不動産株式会社",
         "@id": "https://luck428.com/#organization"
-      }
+      },
+      "informationUrl": "https://luck428.com/souzoku"
     },
     {
       "id": "re-toushi-jigyoyo",
-      "name": "投資・事業用（グループホーム物件・社宅）",
+      "name": "事業用・投資用（店舗・事務所・グループホーム・社宅）",
       "description": {
-        "ja": "投資用・事業用不動産の仲介・コンサルティング。障害福祉グループホーム向け物件や社宅のご相談に対応します。",
-        "en": "Brokerage and consulting for investment and business-use real estate, including properties for disability welfare group homes and company housing."
+        "ja": "店舗・事務所・グループホーム・社宅など、用途と条件に応じた不動産探し。物件は四葉不動産株式会社が受任し、許認可書類は四葉行政書士事務所が独立した事業体として別契約で受任します。貸主の承諾や所管行政庁等への確認を経ず、利用可否を保証することはありません。",
+        "en": "Property searches for shops, offices, group homes, company housing and investments. Property services and permit documentation are separately contracted with 四葉不動産株式会社 and 四葉行政書士事務所. Use is subject to the landlord and relevant authorities; eligibility is not guaranteed."
       },
       "tags": [
         "不動産",
@@ -278,7 +324,8 @@
       "provider": {
         "name": "四葉不動産株式会社",
         "@id": "https://luck428.com/#organization"
-      }
+      },
+      "informationUrl": "https://luck428.com/toushi"
     },
     {
       "id": "re-tagengo-heyasagashi",
@@ -295,7 +342,25 @@
       "provider": {
         "name": "四葉不動産株式会社",
         "@id": "https://luck428.com/#organization"
-      }
+      },
+      "informationUrl": "https://luck428.com/global"
+    },
+    {
+      "id": "labor-social-insurance",
+      "name": "社会保険・労務相談",
+      "description": {
+        "ja": "社会保険・労務管理・給与計算等について四葉社会保険労務士事務所が独立した事業体として別契約で受任します。対応範囲・料金は公開サービスページをご確認ください。",
+        "en": "四葉社会保険労務士事務所 accepts social insurance, labor management and payroll enquiries as an independent practice under separate contracts. Consult the public service pages for scope and fees."
+      },
+      "tags": [
+        "社会保険",
+        "労務"
+      ],
+      "provider": {
+        "name": "四葉社会保険労務士事務所",
+        "@id": "https://luck428.com/labor/#organization"
+      },
+      "informationUrl": "https://luck428.com/labor"
     }
   ],
   "affiliations": [
@@ -345,23 +410,28 @@
   "boundaries": [
     {
       "id": "scope-of-service",
-      "ja": "本カードおよび本グループが運用するAIエージェント・自動応答は、一般的な情報提供と相談内容の一次整理までを行います。具体的な法的判断・可否の判断・官公署への手続きの代理は、有資格者（行政書士・宅地建物取引士）が個別の委任契約に基づいて行います。",
+      "ja": "本カードは公開情報の案内です。AIは一般的な情報提供と相談内容の一次整理にとどまり、個別の判断・受任は各事業体の資格者がその業務範囲と契約に基づいて行います。",
       "en": "This card and any AI agent or automated response operated by the group provide general information and preliminary organization of inquiries only. Specific legal judgments, eligibility determinations, and representation before authorities are performed by qualified professionals under individual engagement agreements."
     },
     {
       "id": "professional-scope",
-      "ja": "行政書士としての対応範囲は補助金申請までです。雇用関係助成金・労務管理・社会保険・年金・訴訟・登記・税務は行政書士の業務範囲外のため、提携する専門家（士業ドットコム参加士業など）を一般的な形でご案内します。",
-      "en": "The gyoseishoshi practice covers up to subsidy (hojokin) applications. Employment-related grants (joseikin), labor management, social insurance, pensions, litigation, real property registration, and tax matters are outside its statutory scope and are referred, in general terms, to partner professionals (such as members of 士業ドットコム, samurai.co.jp)."
+      "ja": "行政書士の申請書類作成と社労士の社会保険・労務業務は、それぞれ別契約です。登記は司法書士、税務は税理士、紛争は弁護士へ、それぞれ直接依頼いただく形をご案内します。",
+      "en": "Administrative-document work and labor/social insurance work require separate contracts with the respective practices. Registration, tax and disputes are referred for direct engagement with the appropriate judicial scrivener, tax accountant or attorney."
     },
     {
       "id": "independent-entities",
-      "ja": "四葉不動産株式会社と四葉行政書士事務所は、それぞれ独立した事業体として個別に受任します。事業体間および提携先との間で紹介料・成功報酬の授受は行いません。",
-      "en": "Yotsuba Real Estate Co., Ltd. and Yotsuba Gyoseishoshi Office are independent business entities and accept engagements separately. No referral fees or contingent payments are exchanged between the entities or with partner professionals."
+      "ja": "四葉不動産株式会社・四葉行政書士事務所・四葉社会保険労務士事務所は、それぞれ独立した事業体として別々の契約で受任します。事業体間および紹介先との間で紹介料・送客手数料の授受は行いません。",
+      "en": "四葉不動産株式会社, 四葉行政書士事務所 and 四葉社会保険労務士事務所 are independent entities with separate contracts. No referral fees are exchanged between these entities or referred professionals."
     },
     {
       "id": "no-sensitive-data",
       "ja": "本カードおよび公開エージェント経由では、個別の機微情報・個人情報を取り扱いません。個別のご相談は、電話・ウェブの問い合わせフォーム・LINEなどの窓口で承ります。",
       "en": "No sensitive or personal information is handled via this card or public-facing agents. Individual consultations are handled through the listed channels (phone, web contact forms, LINE)."
+    },
+    {
+      "id": "certification-scope",
+      "ja": "認定経営革新等支援機関の認定は四葉不動産株式会社に属します。他の事業体や代表個人の認定ではなく、物件の品質、融資・補助金の採択、許認可、契約の成立を保証するものではありません。",
+      "en": "The certified business-support institution designation belongs only to 四葉不動産株式会社, not to other practices or its representative. It does not guarantee property quality, finance, grant approval, permits or contract completion."
     }
   ],
   "relatedCards": [
@@ -375,5 +445,12 @@
       "url": "https://taiwan.luck428.com/.well-known/agent-card.json",
       "wikidata": "Q139738235"
     }
+  ],
+  "referencePages": [
+    "https://luck428.com/about",
+    "https://luck428.com/legal-notice",
+    "https://luck428.com/gakku",
+    "https://luck428.com/line",
+    "https://luck428.com/llms.txt"
   ]
 }

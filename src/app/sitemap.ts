@@ -125,6 +125,7 @@ const STATIC_REALESTATE: StaticPage[] = [
   // 2026-09-22：学区特集。区の通学区域（町丁目・番・号）の一次データ層。
   // ハブ＋4校（誠之・昭和・千駄木・窪町）。いずれもページ側 PAGE_LOCALES は4ロケール。
   { path: "/gakku", changeFrequency: "monthly", priority: 0.8 },
+  { path: "/gakku/calendar", changeFrequency: "weekly", priority: 0.7, lastModified: "2026-11-18" },
   { path: SCHOOL_SALE_INDEX_PATH, changeFrequency: "weekly", priority: 0.8 },
   ...listSchools().map(school => ({ path: schoolSalePath(school.slug), changeFrequency: "weekly" as const, priority: 0.7 })),
   { path: SCHOOL_RENTAL_INDEX_PATH, changeFrequency: "daily", priority: 0.8 },

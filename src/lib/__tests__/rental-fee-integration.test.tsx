@@ -73,8 +73,10 @@ describe("料金の全出力が物件の正本に一致する", () => {
     const secret = "PRIVATE-SECRET-BUILDING";
     const summary = { building: secret, unit: "909", address: "東京都文京区根津1丁目1番1号", rentYen: 299999, managementYen: null, commonYen: null, deposit: "", keyMoney: "", layout: "3LDK", areaSqm: 60, availabilityText: "", pets: "unknown", foreignNationals: "unknown", corporate: "unknown", petTerms: "", foreignTerms: "", corporateTerms: "", buildingType: "", access: "", built: "", structure: "", floors: "", contractType: "", contractPeriod: "", guaranteeDeposit: "", renewalFee: "", insurance: "", guarantor: "", otherFees: "" };
     const feed = { version: 1, provider: "atbb", scope: "bunkyo-rent-175000-area-48", checkedAt: "2026-09-27T00:00:00Z", complete: true, records: [{ sourceId: "secret-id", advertising: "not-allowed", advertisingQuote: "広告不可", availability: "active", application: "none", applicationQuote: "申込なし", adQuote: "", adStatus: "unknown", summary }] } as RentalFeed;
-    const result = compilePrivateSchoolCounts([feed], [], new Date("2026-09-27T12:00:00Z"));
+    const result = compilePrivateSchoolCounts([feed], [], new Date("2026-09-27T03:59:59Z"));
+    // Sunday 13:00 JST is the next review deadline; privacy is tested while current.
     expect(result).not.toBeNull();
+    expect(compilePrivateSchoolCounts([feed], [], new Date("2026-09-27T04:00:00Z"))).toBeNull();
     expect(Object.values(result!.counts).reduce((a,b) => a+b, 0)).toBe(1);
     const html = renderToStaticMarkup(<RentalDiscoveryStats locale="ja" stats={{ slug: "nezu", publicListings: 0, fee033Listings: 0, advertisingAllowedListings: 0, privateAvailableListings: result!.counts.nezu, totalAvailableListings: result!.counts.nezu, updatedAt: result!.checkedAt }} />);
     for (const value of [secret, "909", "299999", summary.address, "secret-id"]) expect(html).not.toContain(value);

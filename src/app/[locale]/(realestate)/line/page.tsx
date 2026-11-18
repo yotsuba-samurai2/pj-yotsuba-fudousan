@@ -2,6 +2,7 @@ export const dynamic = "force-dynamic";
 import { RentalLineMessage } from "@/components/bukken/RentalLineMessage";
 import { getPublicPropertyBySlug, isPropertyLocaleAllowed } from "@/lib/properties";
 import { findSchoolBySlug } from "@/lib/school-district";
+import { HOME_ENTRIES, getHomeLineTopic } from "@/lib/home-conversion";
 import { FEE033_PATH } from "@/lib/rental-campaign";
 // /line — LINE中継ページ（2026-09-01 新設・浦松指示）
 //
@@ -157,6 +158,7 @@ export default async function LineBridgePage({ searchParams }: { searchParams?: 
   const query = await searchParams ?? {};
   const campaign = typeof query.campaign === "string" && ["fee033", "gakku", "property", "external"].includes(query.campaign) ? query.campaign : null;
   const slug = typeof query.property === "string" && /^[a-z0-9-]{1,180}$/.test(query.property) ? query.property : null;
+  const topic = campaign ? null : getHomeLineTopic(query.topic);
   const candidate = campaign && slug ? await getPublicPropertyBySlug(slug) : null;
   const property = candidate && isPropertyLocaleAllowed(candidate, locale) ? candidate : null;
   const school = typeof query.school === "string" ? findSchoolBySlug(query.school) : undefined;
@@ -168,7 +170,7 @@ export default async function LineBridgePage({ searchParams }: { searchParams?: 
     ...(school ? [school.formalName] : []),
     `https://luck428.com${addLocalePrefix(source, locale)}`,
     `Source: ${campaign}`,
-  ].join("\n") : null;
+  ].join("\n") : topic ? HOME_ENTRIES[locale].lines[topic] : null;
   return (
     <section className="px-4 pb-16 pt-24 sm:pt-28">
       <div className="mx-auto max-w-lg text-center">
@@ -176,8 +178,9 @@ export default async function LineBridgePage({ searchParams }: { searchParams?: 
         <p className="mt-4 text-sm leading-relaxed text-text-muted">{c.lead}</p>
         {/* 表示コンプライアンス（必須・省略不可）：3事業の一体提供と誤認させない別契約の明示 */}
         <p className="mt-3 text-xs leading-relaxed text-text-muted">{c.compliance}</p>
-        {message && <RentalLineMessage message={message} locale={locale} />}
+        {message && <RentalLineMessage message={message} locale={locale} help={topic ? HOME_ENTRIES[locale].messageHelp : undefined} />}
         <LineBridgePanel
+          topic={topic ?? undefined}
           lineUrl={LINE_URL}
           telHref={OFFICE.telHref}
           telDisplay={OFFICE.tel}

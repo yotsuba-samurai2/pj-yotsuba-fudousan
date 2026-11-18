@@ -5,17 +5,20 @@ import { ArrowRight } from "lucide-react";
 import { ColumnPagination } from "@/components/column/ColumnPagination";
 import { useTranslation } from "@/hooks/useTranslation";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
+import { ColumnTopicGuides } from "@/components/column/ColumnTopicGuides";
+import type { LangCode } from "@/config/languages";
 import type { ColumnSummary } from "@/lib/column-shared";
 
 type Props = {
   /** server（page.tsx）で取得・ローカライズ済みのコラム配列。SSR HTML にリンクを出すため props で受け取る */
   columns: ColumnSummary[];
+  locale: LangCode;
   page: number;
   total: number;
   totalPages: number;
 };
 
-export default function ColumnListPageContent({ columns, page, total, totalPages }: Props) {
+export default function ColumnListPageContent({ columns, page, total, totalPages, locale }: Props) {
   const { t } = useTranslation();
 
   return (
@@ -47,6 +50,8 @@ export default function ColumnListPageContent({ columns, page, total, totalPages
           </p>
         </div>
       </section>
+
+      <div className="px-4"><ColumnTopicGuides locale={locale} /></div>
 
       {/* ─── 記事一覧 ─── */}
       <section className="py-14 sm:py-20 md:py-28">
@@ -100,26 +105,6 @@ export default function ColumnListPageContent({ columns, page, total, totalPages
         </div>
       </section>
 
-      {/* ─── CTA ─── */}
-      <section className="border-t border-border bg-surface-dim py-14 sm:py-20 md:py-28">
-        <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
-          <h2 className="text-xl font-bold sm:text-2xl md:text-3xl">
-            {t("common.cta.feelFreeToContact")}
-          </h2>
-          <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-text-muted">
-            {t("realestate.columnPage.ctaDescription")}
-          </p>
-          <div className="mt-10">
-            <Link
-              href="/contact"
-              className="gradient-line inline-flex items-center gap-2 rounded-md px-10 py-4 text-sm font-semibold text-white shadow-lg transition-all duration-200 hover:shadow-xl hover:brightness-110"
-            >
-              {t("common.cta.contactUs")}
-              <ArrowRight size={16} />
-            </Link>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }

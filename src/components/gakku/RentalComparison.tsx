@@ -1,3 +1,4 @@
+import { isSchoolRentalSnapshotCurrent } from "@/lib/school-rental-freshness";
 import Link from "next/link";
 import type { LangCode } from "@/config/languages";
 import { addLocalePrefix } from "@/lib/locale";
@@ -20,35 +21,36 @@ const consultationCopy = {
   ja: {
     title: "一覧にない物件もご紹介できます",
     selection: "この一覧は、不動産業者向けの流通サイトや住宅プラットフォームに掲載された物件のうち、管理会社（元付）が「広告可」としている物件に絞って掲載しています。",
-    market: "{date}時点で、不動産業者間の物件データベースには、文京区・賃料17万5,000円以上・48㎡以上の募集中の住戸が{total}件ありました（同じ住戸の重複を除く）。このうち、管理会社（元付）が当社ホームページへの掲載を認めている{listed}件を表示しています。掲載できるのは募集の一部です。",
+    market: "{date}に募集を確認した比較対象は{total}件です。掲載一覧とは集計対象が異なります。現在の紹介可否はお問い合わせください。",
     offer: "ご希望の学区・賃料・間取り・入居時期をお知らせいただければ、この一覧にない物件も含めて現在の募集状況と紹介の可否を確認し、ご案内します。",
     action: "一覧にない物件も含めて相談する",
   },
   en: {
     title: "We can introduce properties beyond this list",
     selection: "This list includes only rentals from real estate agent networks and housing platforms for which the managing or listing agent has granted advertising permission.",
-    market: "As of {date}, the real estate agents’ shared databases listed {total} available units in Bunkyo with rent from ¥175,000 and floor area from 48 m² (duplicates of the same unit removed). Of these, we show the {listed} units whose managing or listing agent permits advertising on our website. Only part of the market can be published.",
+    market: "The comparison snapshot checked on {date} covers {total} homes. Its scope differs from the published listings. Please ask us to confirm current availability.",
     offer: "Tell us your preferred school district, rent, layout and move-in date, and we will check current availability and whether we can introduce each property, including properties not on this list, before getting back to you.",
     action: "Ask about properties beyond this list",
   },
   "zh-tw": {
     title: "我們也能介紹列表以外的物件",
     selection: "本列表從不動產業者流通網站及住宅平台的物件中，僅刊登管理公司（原始委託業者）已允許刊登廣告的租屋物件。",
-    market: "截至{date}，不動產業者間的物件資料庫中，文京區、月租17萬5,000日圓以上、48平方公尺以上且仍在招租的房屋共有{total}件（已排除同一房屋的重複刊登）。其中，本列表顯示管理公司（原始委託業者）允許在本公司網站刊登的{listed}件。可公開刊登的僅為招租物件的一部分。",
+    market: "{date}確認的比較資料涵蓋{total}件房屋，與公開列表的統計範圍不同。最新可介紹情況請洽詢。",
     offer: "歡迎告知您希望的學區、租金、格局及入住時間。我們將確認包含本列表以外物件在內的最新招租狀況與可否介紹後，再為您說明。",
     action: "諮詢包含列表以外的物件",
   },
   zh: {
     title: "我们也能介绍列表以外的房源",
     selection: "本列表从不动产经纪流通网站及住宅平台的房源中，仅刊登管理公司（原始委托经纪方）已允许刊登广告的租赁房源。",
-    market: "截至{date}，不动产经纪间的房源数据库中，文京区、月租17万5,000日元以上、48平方米以上且仍在招租的房屋共有{total}套（已排除同一房屋的重复登记）。其中，本列表显示管理公司（原始委托经纪方）允许在本公司网站刊登的{listed}套。可公开刊登的仅为招租房源的一部分。",
+    market: "{date}确认的比较资料涵盖{total}套房源，与公开列表的统计范围不同。最新可介绍情况请咨询。",
     offer: "欢迎告知您希望的学区、租金、户型及入住时间。我们将确认包括本列表以外房源在内的最新招租情况与可否介绍后，再为您说明。",
     action: "咨询包含列表以外的房源",
   },
 } satisfies Record<LangCode, { title: string; selection: string; market: string; offer: string; action: string }>;
 
 export function RentalComparison({ rows, locale, market, listedTotal }: { rows: PublicRentalSummary[]; locale: LangCode; market?: RentalMarket | null; listedTotal?: number }) {
-  if (!rows.length) return null;
+  const now = new Date();
+  rows = rows.filter(row => isSchoolRentalSnapshotCurrent(row.checkedAt, now));
   const c = copy[locale];
   const consultation = consultationCopy[locale];
   const money = (amount: number | null) => amount === null ? c.unknown : `¥${amount.toLocaleString("ja-JP")}`;
@@ -56,22 +58,22 @@ export function RentalComparison({ rows, locale, market, listedTotal }: { rows: 
   const latest = rows.map(r => r.checkedAt).sort((a, b) => Date.parse(a) - Date.parse(b)).at(-1)!;
   const nextReview = rows.map(r => r.nextReviewAt).sort((a, b) => Date.parse(a) - Date.parse(b))[0];
   // 分母（募集規模）は区全体の数字。掲載数より小さい等の不整合があれば出さず、従来の説明文に戻す。
-  const showMarket = !!market?.checkedAt && listedTotal !== undefined && market.total > 0 && listedTotal <= market.total;
+  const showMarket = !!market && isSchoolRentalSnapshotCurrent(market.checkedAt, now) && listedTotal !== undefined && market.total > 0 && listedTotal <= market.total;
   const day = (value: string) => new Date(value).toLocaleDateString(locale === "ja" ? "ja-JP" : locale === "en" ? "en-GB" : locale === "zh-tw" ? "zh-TW" : "zh-CN", { timeZone: "Asia/Tokyo", year: "numeric", month: "long", day: "numeric" });
   const listingPath = (r: PublicRentalSummary) => r.schoolSlug ? `/gakku/${r.schoolSlug}/rentals` : "/gakku/rentals";
   return <RentalInquiryProvider locale={locale}><section className="mt-8" aria-label={c.title}>
     <h2 className="font-serif text-2xl font-semibold">{c.title}</h2>
-    <p className="mt-3 text-sm leading-relaxed">{c.lead}</p>
+    {rows.length > 0 && <p className="mt-3 text-sm leading-relaxed">{c.lead}</p>}
     <aside className="mt-4 rounded-xl border border-primary/20 bg-primary-tint p-4 sm:p-5" aria-label={consultation.title}>
       <h3 className="font-semibold text-ink">{consultation.title}</h3>
-      <p className="mt-2 text-sm leading-relaxed">{showMarket
+      {showMarket && <p className="mt-2 text-sm leading-relaxed">{showMarket
         ? consultation.market.replace("{date}", day(market!.checkedAt!)).replace("{total}", market!.total.toLocaleString("ja-JP")).replace("{listed}", listedTotal!.toLocaleString("ja-JP"))
-        : consultation.selection}</p>
+        : consultation.offer}</p>}
       <p className="mt-3 text-sm font-semibold leading-relaxed text-ink">{consultation.offer}</p>
       <Link href={addLocalePrefix("/contact?intent=bukken", locale)} className="mt-4 inline-block rounded-lg bg-primary px-4 py-3 text-sm font-semibold text-white hover:opacity-90">{consultation.action}</Link>
     </aside>
-    {c.original && <p className="mt-2 text-xs text-text-muted">{c.original}</p>}
-    <p className="mt-2 text-xs text-text-muted">{c.terms}</p>
+    {rows.length > 0 && c.original && <p className="mt-2 text-xs text-text-muted">{c.original}</p>}
+    {rows.length > 0 && <p className="mt-2 text-xs text-text-muted">{c.terms}</p>}
     <div className="mt-4 space-y-4">
       {rows.map(r => {
         const school = r.schoolSlug ? findSchoolBySlug(r.schoolSlug) : undefined;
@@ -99,6 +101,6 @@ export function RentalComparison({ rows, locale, market, listedTotal }: { rows: 
         </article>;
       })}
     </div>
-    <PropertyLegalBlock property={{ infoUpdatedAt: date(latest), nextUpdateAt: date(nextReview) }} locale={locale} />
+    {rows.length > 0 && <PropertyLegalBlock property={{ infoUpdatedAt: date(latest), nextUpdateAt: date(nextReview) }} locale={locale} />}
   </section></RentalInquiryProvider>;
 }

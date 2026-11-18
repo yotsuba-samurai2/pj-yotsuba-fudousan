@@ -12,6 +12,8 @@ import { CtaBand } from "@/components/shared/CtaBand";
 import { resolveRealestateColumnCta } from "@/lib/column-shared";
 import { getColumnIllustrationAlt, resolveColumnIllustration } from "@/lib/column-illustrations";
 import { getColumnConsultWindows } from "@/lib/column-consult-windows";
+import { ColumnTopicGuides } from "@/components/column/ColumnTopicGuides";
+import { resolveColumnTopics } from "@/lib/column-topic-routes";
 import { RelatedConsultWindows } from "@/components/column/RelatedConsultWindows";
 
 import type { Metadata } from "next";
@@ -122,7 +124,7 @@ export default async function ColumnDetailPage({ params }: Props) {
         // 受け皿は ja 先行公開のため ja のときだけ渡す（他ロケールに存在しないページへのリンクを作らない）。
         wakeariHubSlug={locale === "ja" ? slug : undefined}
         afterBody={<>
-          {consultWindows && <RelatedConsultWindows windows={consultWindows} />}
+          {consultWindows ? <RelatedConsultWindows windows={consultWindows} /> : <ColumnTopicGuides locale={locale} topics={resolveColumnTopics(base)} related />}
           {slug === NONRESIDENT_PROPERTY_COLUMN_SLUG && <NonresidentPropertyReview locale={locale} />}
         </>}
       />
