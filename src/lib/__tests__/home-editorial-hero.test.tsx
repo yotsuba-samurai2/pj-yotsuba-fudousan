@@ -30,7 +30,9 @@ describe("editorial home hero", () => {
     expect(hero).toContain('fetchPriority="high"');
     expect(hero).toContain(renderToStaticMarkup(<HomeOffMarketNote locale={code} />));
     const visible = html.replace(/<[^>]*>/g, "");
-    expect(visible).not.toMatch(/0[.．]33|多数|多數|大量|numerous|exclusive inventory|many off-market|公開前の確認事項|审批|審批/i);
+    expect(visible).not.toMatch(/0[.．]33|２００件|200\s*(?:件|properties|listings|套)|[二兩两]百|hundreds? of (?:properties|listings)|exclusive inventory|always available|常時紹介|独占物件|公開前の確認事項|审批|審批/i);
+    const note = renderToStaticMarkup(<HomeOffMarketNote locale={code} />);
+    expect(hero.indexOf(note)).toBeLessThan(hero.indexOf(`href="${homeLineHref("family", code)}"`));
     expect(html).not.toContain("chukai-033");
   });
   it("the actual parent owns the school target and mounts both native components", () => {

@@ -5,19 +5,19 @@ import { describe, expect, it } from "vitest";
 import { HomeOffMarketNote } from "../../components/shared/HomeOffMarketNote";
 
 const cases = [
-  ["ja", "ja", "サイト未掲載の物件も個別にお探しします。"],
-  ["en", "en", "We can also look for properties not listed on our website, based on your needs."],
-  ["zh-tw", "zh-Hant", "我們也會依您的需求，個別尋找網站上尚未刊登的物件。"],
-  ["zh", "zh-Hans", "我们也会根据您的需求，单独寻找网站上尚未刊登的房源。"],
+  ["ja", "ja", "非公開物件も多数ご案内"],
+  ["en", "en", "We can also introduce you to many properties that are not publicly listed."],
+  ["zh-tw", "zh-Hant", "也可為您介紹許多未公開刊登的物件。"],
+  ["zh", "zh-Hans", "也可为您介绍许多未公开发布的房源。"],
 ] as const;
 
-describe("safe off-market home note", () => {
+describe("owner-approved off-market home note", () => {
   for (const [locale, lang, expected] of cases) {
-    it(`${locale}: server-renders only natural customer copy without quantity or internal notes`, () => {
+    it(`${locale}: server-renders only the approved qualitative message without exact counts, guarantees or internal notes`, () => {
       const html = renderToStaticMarkup(<HomeOffMarketNote locale={locale} />);
       const text = html.replace(/<[^>]*>/g, "").trim();
       expect(text).toBe(expected);
-      expect(text).not.toMatch(/[0-9０-９]|多数|多數|大量|numerous|many|count|inventory|承認|审批|審批|未確認|未确认|確認事項|确认事项|公開前|公開前|社内|内部|internal|unverified|approval|pending/i);
+      expect(text).not.toMatch(/[0-9０-９]|[百佰千仟]|数十|數十|幾十|几十|hundred|dozens|guaranteed|exclusive|always available|常時|必ず|独占|獨家|独家|保證|保证|メール|飛び込|来訪|email|walk-in|承認|审批|審批|確認事項|公开前|公開前|社内|内部|internal|approval/i);
       expect(html).toMatch(new RegExp(`^<p lang="${lang}"`));
       expect(html).toContain(`<strong class="font-semibold">${expected}</strong>`);
       // Static information is readable in document flow, not a fake interactive
