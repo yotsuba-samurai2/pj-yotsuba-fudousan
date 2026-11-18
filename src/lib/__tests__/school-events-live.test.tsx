@@ -9,6 +9,22 @@ import { SchoolEventsList } from "../../components/gakku/SchoolEventsList";
 
 afterEach(() => { vi.useRealTimers(); vi.unstubAllGlobals(); hooks.setNow.mockClear(); });
 describe("live school-date refresh without network", () => {
+  it("refreshes exactly at the official start, not at an earlier reception time", () => {
+    vi.useFakeTimers();
+    // Seishi: reception 13:30 JST, briefing starts 14:00 JST.
+    vi.setSystemTime(new Date("2027-01-27T04:29:59.000Z"));
+    vi.stubGlobal("document", new EventTarget()); vi.stubGlobal("window", new EventTarget());
+    SchoolEventsList({ locale: "ja", school: "seishi", initialNow: "2027-01-27T04:00:00.000Z" });
+    const cleanup = hooks.effect!();
+    expect(hooks.setNow).toHaveBeenCalledTimes(1);
+    vi.advanceTimersByTime(1_000);
+    expect(hooks.setNow).toHaveBeenCalledTimes(1);
+    vi.advanceTimersByTime(30 * 60_000 + 25);
+    expect(hooks.setNow).toHaveBeenLastCalledWith("2027-01-27T05:00:00.025Z");
+    expect(vi.getTimerCount()).toBe(1);
+    cleanup();
+  });
+
   it("refreshes stale SSR on mount, at JST midnight, on focus, and cleans up", () => {
     vi.useFakeTimers();
     vi.setSystemTime(new Date("2026-11-21T14:59:59.000Z"));

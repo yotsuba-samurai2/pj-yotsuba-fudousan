@@ -18,6 +18,9 @@ describe("editorial home hero", () => {
     const html = renderToStaticMarkup(<><HomeEditorialHero locale={code} heroAlt="文京区・播磨坂の桜並木" /><div id="home-school"><HomeSchoolFinder locale={code} /></div><HomeTopicPanels locale={code} /></>);
     expect((hero.match(/<h1[ >]/g) ?? [])).toHaveLength(1);
     expect(hero).toContain("四葉不動産｜");
+    const admissionLabel = { ja: "学区・新入学説明会", en: "entry briefings", "zh-tw": "學區及新生入學說明會", zh: "学区与新生入学说明会" };
+    expect(hero).toContain(admissionLabel[code]);
+    expect(hero).not.toMatch(/学校行事|學校活動|学校活动|Homes &amp; schools/);
     expect(hero).toContain(`href="${homeLineHref("family", code)}"`);
     expect(gaEvent).not.toHaveBeenCalled();
     expect(hero).not.toMatch(/href="(?:https?:\/\/(?:line\.me|liff\.line\.me)|line:)|<form|<iframe|<script|http-equiv="refresh"/i);
