@@ -12,6 +12,7 @@ import { BlogPostingJsonLd } from "@/components/seo/BlogPostingJsonLd";
 import { FAQJsonLd } from "@/components/seo/FAQJsonLd";
 import { SpeakableJsonLd } from "@/components/seo/SpeakableJsonLd";
 import { CtaBand } from "@/components/shared/CtaBand";
+import { OverseasTaxReference } from "@/components/labor/OverseasTaxReference";
 import { ZehitomoLinks } from "@/components/labor/ZehitomoLinks";
 
 import { LaborColumnDetailPageContent } from "./PageContent";
@@ -111,6 +112,7 @@ export default async function LaborColumnDetailPage({ params }: Props) {
         linkOverrides={linkOverrides}
         illustration={illustration}
       />
+      <OverseasTaxReference slug={slug} locale={locale} />
       {/* ★2026-08-13 追加：コラム記事の末尾にCTA帯を置く。
           3レーンとも column/[slug]・column・about にだけ CtaBand が無く、
           PCではLINEへの導線が出ていなかった（SPは MobileStickyBar があるので出る）。
