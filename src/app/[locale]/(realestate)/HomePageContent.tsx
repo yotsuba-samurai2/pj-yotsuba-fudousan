@@ -128,7 +128,7 @@ const COPY: Record<LangCode, TopCopy> = {
       },
       {
         q: "Can foreign residents rent a home in Japan?",
-        a: "Yes. Yotsuba Real Estate supports you in your own language—through screening, guarantors, and paperwork.",
+        a: "Required documents, tenant screening and guarantor requirements vary by property. We provide guidance in Japanese, English and Chinese.",
         anchor: "Multilingual room hunting",
       },
       {
@@ -179,7 +179,7 @@ const COPY: Record<LangCode, TopCopy> = {
       },
       {
         q: "外國人也能在日本租屋嗎？",
-        a: "可以。審查、保證、語言的門檻，四葉不動産以您的母語協助您跨過。",
+        a: "所需文件、入住審查及保證條件因物件而異。我們提供日語、英語及中文的說明與協助。",
         anchor: "多語言找房服務",
       },
       {
@@ -230,7 +230,7 @@ const COPY: Record<LangCode, TopCopy> = {
       },
       {
         q: "外国人也能在日本租房吗？",
-        a: "可以。审查、担保、语言的门槛，四葉不動産以您的母语协助您跨过。",
+        a: "所需文件、入住审核及担保条件因房源而异。我们提供日语、英语及中文的说明与协助。",
         anchor: "多语言找房服务",
       },
       {
