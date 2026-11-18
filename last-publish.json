@@ -1,6 +1,6 @@
 {
-  "dryRun": true,
-  "runAt": "2026-11-18T15:50:00.968Z",
+  "dryRun": false,
+  "runAt": "2026-11-18T15:52:35.684Z",
   "todayJst": "2026-11-19",
   "targets": [
     {
@@ -521,7 +521,54 @@
   ],
   "scheduled": [],
   "ok": false,
-  "published": [],
+  "published": [
+    {
+      "key": "labor:eisei-kanrisha-sangyoi-eisei-iinkai-sennin-50nin-gimu",
+      "business": "labor",
+      "slug": "eisei-kanrisha-sangyoi-eisei-iinkai-sennin-50nin-gimu",
+      "title": "常時50人になったら――衛生管理者・産業医・衛生委員会の選任と届出",
+      "date": "2026-11-17",
+      "category": "安全衛生",
+      "path": "/labor/column/eisei-kanrisha-sangyoi-eisei-iinkai-sennin-50nin-gimu"
+    },
+    {
+      "key": "labor:kazoku-taizai-haigusha-part-28jikan-shikaku-gai-shakaihoken-roumu",
+      "business": "labor",
+      "slug": "kazoku-taizai-haigusha-part-28jikan-shikaku-gai-shakaihoken-roumu",
+      "title": "家族滞在の配偶者をパートで雇うには？資格外活動28時間と社会保険の壁の実務",
+      "date": "2026-11-16",
+      "category": "外国人雇用",
+      "path": "/labor/column/kazoku-taizai-haigusha-part-28jikan-shikaku-gai-shakaihoken-roumu"
+    },
+    {
+      "key": "labor:rodosha-haken-ukeire-teishokuhi-kanri-daicho-37gokokuji-roumu",
+      "business": "labor",
+      "slug": "rodosha-haken-ukeire-teishokuhi-kanri-daicho-37gokokuji-roumu",
+      "title": "派遣社員を受け入れる会社の労務――抵触日（個人・事業所単位）、派遣先管理台帳、偽装請負（37号告示）",
+      "date": "2026-11-17",
+      "category": "労働者派遣",
+      "path": "/labor/column/rodosha-haken-ukeire-teishokuhi-kanri-daicho-37gokokuji-roumu"
+    },
+    {
+      "key": "realestate:chugokugo-buyer-shido-ichi-shitei-douro-settei-dd",
+      "business": "realestate",
+      "slug": "chugokugo-buyer-shido-ichi-shitei-douro-settei-dd",
+      "title": "中国語バイヤー向け：私道・位置指定道路の接道を買う前に確認する（再建築可否と持分の罠）",
+      "date": "2026-11-17",
+      "category": "売りにくい土地・建物",
+      "path": "/column/chugokugo-buyer-shido-ichi-shitei-douro-settei-dd"
+    },
+    {
+      "key": "realestate:souzoku-kyoyu-bunkatsu-seikyu-kanka-baikyaku",
+      "business": "realestate",
+      "slug": "souzoku-kyoyu-bunkatsu-seikyu-kanka-baikyaku",
+      "title": "相続した共有不動産で話がまとまらない――共有物分割請求に至ったときの換価（任意売却・形式競売）の実務",
+      "date": "2026-11-17",
+      "category": "相続",
+      "path": "/column/souzoku-kyoyu-bunkatsu-seikyu-kanka-baikyaku"
+    }
+  ],
+  "skipped": [],
   "errors": [
     {
       "key": "labor:insatsu-gyo-kaigyo-roumu-yuuki-youzai-shinya-anzen-eisei",
@@ -661,6 +708,6 @@
     }
   ],
   "blocked": "34本は品質確認待ちのため自動公開しません。記事別の理由を確認してください。forceでも解除しません。",
-  "outcome": "dry-run",
+  "outcome": "partial",
   "httpStatus": "409"
 }
