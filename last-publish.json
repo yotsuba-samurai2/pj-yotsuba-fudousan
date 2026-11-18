@@ -1,7 +1,7 @@
 {
   "dryRun": false,
-  "runAt": "2026-11-17T11:25:11.395Z",
-  "todayJst": "2026-11-17",
+  "runAt": "2026-11-18T10:58:16.156Z",
+  "todayJst": "2026-11-18",
   "targets": [
     {
       "key": "labor:chiryo-shigoto-ryoritsu-shien-jikan-tanni-nenkyu-roumu",
@@ -29,6 +29,42 @@
       "date": "2026-11-16",
       "category": "外国人雇用",
       "path": "/labor/column/kazoku-taizai-haigusha-part-28jikan-shikaku-gai-shakaihoken-roumu"
+    },
+    {
+      "key": "labor:eisei-kanrisha-sangyoi-eisei-iinkai-sennin-50nin-gimu",
+      "business": "labor",
+      "slug": "eisei-kanrisha-sangyoi-eisei-iinkai-sennin-50nin-gimu",
+      "title": "常時50人になったら――衛生管理者・産業医・衛生委員会の選任と届出",
+      "date": "2026-11-17",
+      "category": "安全衛生",
+      "path": "/labor/column/eisei-kanrisha-sangyoi-eisei-iinkai-sennin-50nin-gimu"
+    },
+    {
+      "key": "labor:rodosha-haken-ukeire-teishokuhi-kanri-daicho-37gokokuji-roumu",
+      "business": "labor",
+      "slug": "rodosha-haken-ukeire-teishokuhi-kanri-daicho-37gokokuji-roumu",
+      "title": "派遣社員を受け入れる会社の労務――抵触日（個人・事業所単位）、派遣先管理台帳、偽装請負（37号告示）",
+      "date": "2026-11-17",
+      "category": "労働者派遣",
+      "path": "/labor/column/rodosha-haken-ukeire-teishokuhi-kanri-daicho-37gokokuji-roumu"
+    },
+    {
+      "key": "realestate:chugokugo-buyer-shido-ichi-shitei-douro-settei-dd",
+      "business": "realestate",
+      "slug": "chugokugo-buyer-shido-ichi-shitei-douro-settei-dd",
+      "title": "中国語バイヤー向け：私道・位置指定道路の接道を買う前に確認する（再建築可否と持分の罠）",
+      "date": "2026-11-17",
+      "category": "売りにくい土地・建物",
+      "path": "/column/chugokugo-buyer-shido-ichi-shitei-douro-settei-dd"
+    },
+    {
+      "key": "realestate:souzoku-kyoyu-bunkatsu-seikyu-kanka-baikyaku",
+      "business": "realestate",
+      "slug": "souzoku-kyoyu-bunkatsu-seikyu-kanka-baikyaku",
+      "title": "相続した共有不動産で話がまとまらない――共有物分割請求に至ったときの換価（任意売却・形式競売）の実務",
+      "date": "2026-11-17",
+      "category": "相続",
+      "path": "/column/souzoku-kyoyu-bunkatsu-seikyu-kanka-baikyaku"
     }
   ],
   "held": [
@@ -445,6 +481,36 @@
         "zhの内部リンクに言語不一致があります",
         "公開レビュー記録が未登録です"
       ]
+    },
+    {
+      "key": "legal:kashikin-gyo-touroku-yoken-shunin-junshisan",
+      "business": "legal",
+      "slug": "kashikin-gyo-touroku-yoken-shunin-junshisan",
+      "title": "貸金業の登録を受けるには――純資産5000万円・貸金業務取扱主任者・営業所要件の全体像",
+      "date": "2026-11-17",
+      "category": "許認可・開業の手続き（行政書士の実務から）",
+      "path": "/legal/column/kashikin-gyo-touroku-yoken-shunin-junshisan",
+      "qualityHoldReasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "legal:souzoku-fuzaisha-zaisan-kanrinin-shisso-senkoku-erabikata",
+      "business": "legal",
+      "slug": "souzoku-fuzaisha-zaisan-kanrinin-shisso-senkoku-erabikata",
+      "title": "相続人の中に生死不明の人がいる――不在者財産管理人と失踪宣告、どちらを選ぶか",
+      "date": "2026-11-17",
+      "category": "相続の手続き（行政書士の実務から）",
+      "path": "/legal/column/souzoku-fuzaisha-zaisan-kanrinin-shisso-senkoku-erabikata",
+      "qualityHoldReasons": [
+        "enの内部リンクに言語不一致があります",
+        "zh-twの内部リンクに言語不一致があります",
+        "zhの内部リンクに言語不一致があります",
+        "公開レビュー記録が未登録です"
+      ]
     }
   ],
   "scheduled": [],
@@ -570,9 +636,17 @@
     {
       "key": "realestate:tokutei-yukyo-inshokuten-club-bukken-youto-hozen-taisho",
       "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録です"
+    },
+    {
+      "key": "legal:kashikin-gyo-touroku-yoken-shunin-junshisan",
+      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録です"
+    },
+    {
+      "key": "legal:souzoku-fuzaisha-zaisan-kanrinin-shisso-senkoku-erabikata",
+      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録です"
     }
   ],
-  "blocked": "公開待ちが33本あり、1回の上限（24本）を超えたため止めました。対象を確かめてから、管理画面の「今すぐ公開」か、手動実行（force）で公開してください。",
+  "blocked": "公開待ちが39本あり、1回の上限（24本）を超えたため止めました。対象を確かめてから、管理画面の「今すぐ公開」か、手動実行（force）で公開してください。",
   "outcome": "failure",
   "httpStatus": "409"
 }
