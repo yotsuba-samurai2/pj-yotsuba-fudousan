@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { getColumns, getColumnById, updateColumn } from "@/lib/admin-api";
+import { getColumnById, updateColumn } from "@/lib/admin-api";
 import type { AdminColumn } from "@/lib/column-shared";
 import { KENSETSU_COLUMN_UPDATE } from "@/lib/data/columns-reviewed-kensetsu-20261119";
 import { applyReviewedUpdate, checkReviewedUpdate, type ReviewedUpdateCheck } from "@/lib/columns-reviewed-update";
@@ -19,11 +19,9 @@ export default function ReviewedKensetsuColumnUpdatePage() {
   async function inspect() {
     setBusy(true); setError(""); setNotice("");
     try {
-      const columns = await getColumns();
       const next = await Promise.all(KENSETSU_COLUMN_UPDATE.map(async target => {
-        const matches = columns.filter(column => column.business === target.business && column.slug === target.slug);
-        if (matches.length !== 1) return { state: "blocked" as const, reason: "対象記事がないか、重複しています。", selected: false };
-        const current = matches[0];
+        const current = await getColumnById("7cff7519-d3af-4494-8dc7-90fc8c8e2156");
+        if (!current) return { state: "blocked" as const, reason: "対象記事がありません。", selected: false };
         const check = await checkReviewedUpdate(current, target);
         return { ...check, id: current.id, current, selected: check.state === "ready" };
       }));
