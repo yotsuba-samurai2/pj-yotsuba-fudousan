@@ -205,6 +205,7 @@ describe("publishPendingColumns", () => {
   });
 
   it("上限を超えたら止める。force なら公開する", async () => {
+    expect(AUTOPUBLISH_MAX_PER_RUN).toBe(24); // Operational limit, independent of the implementation.
     mocks.seeds.realestate = Array.from({ length: AUTOPUBLISH_MAX_PER_RUN + 1 }, (_, i) =>
       article("realestate", `r${i}`, "2026-10-07"),
     );
@@ -214,6 +215,44 @@ describe("publishPendingColumns", () => {
     expect(mocks.create).not.toHaveBeenCalled();
     const forced = await publishPendingColumns({ now: NOW, force: true });
     expect(forced.published).toHaveLength(AUTOPUBLISH_MAX_PER_RUN + 2);
+  });
+
+  // Regression: the 2026-11-18 queue had 39 due articles, but only 7 could be written.
+  it.each([
+    { eligible: 7, held: 32, dryRun: false },
+    { eligible: 7, held: 32, dryRun: true },
+    { eligible: 0, held: 39, dryRun: false },
+    { eligible: 24, held: 15, dryRun: false },
+    { eligible: 25, held: 14, dryRun: false },
+    { eligible: 25, held: 14, dryRun: true },
+  ])("品質通過$eligible・保留$held・dryRun=$dryRun で実公開対象だけに24本上限を適用する", async ({ eligible, held, dryRun }) => {
+    const queue = Array.from({ length: eligible + held }, (_, i) =>
+      article("realestate", `r-${String(i).padStart(2, "0")}`, "2026-10-07") as ColumnInput);
+    const approved = queue.slice(0, eligible);
+    mocks.seeds.realestate = queue;
+    mocks.seeds.legal = [];
+    mocks.seeds.labor = [];
+    mocks.findMany.mockResolvedValue([]);
+    mocks.reviews = approved.map(item => qualityReview(item));
+    const result = await publishPendingColumns({ now: NOW, dryRun });
+    const overLimit = eligible > AUTOPUBLISH_MAX_PER_RUN;
+    const expectedWrites = dryRun || overLimit ? [] : approved.map(item => item.slug);
+    expect(result.targets.map(item => item.slug)).toEqual(approved.map(item => item.slug));
+    expect(result.published.map(item => item.slug)).toEqual(expectedWrites);
+    expect(mocks.create.mock.calls.map(([item]) => item.slug)).toEqual(expectedWrites);
+    expect(mocks.refresh).toHaveBeenCalledTimes(expectedWrites.length ? 1 : 0);
+    expect(result.held.map(item => item.slug)).toEqual(queue.slice(eligible).map(item => item.slug));
+    expect(result.held.every(item => item.qualityHoldReasons?.includes("公開レビュー記録が未登録です"))).toBe(true);
+    expect(result.errors).toHaveLength(held);
+    expect(result.ok).toBe(false); // Held articles must not disappear behind a successful write or dry-run.
+    if (overLimit) {
+      expect(result.blocked).toContain(`公開可能な記事が${eligible}本`);
+      expect(result.blocked).toContain("上限");
+    } else {
+      expect(result.blocked).toMatch(/^\d+本は品質確認待ちのため自動公開しません/);
+    }
+    expect(mocks.upsert).not.toHaveBeenCalled();
+    expect(mocks.update).not.toHaveBeenCalled();
   });
 
   it("1本の失敗で残りを止めず、失敗は errors に出す", async () => {

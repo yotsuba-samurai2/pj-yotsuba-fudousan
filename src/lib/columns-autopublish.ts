@@ -179,15 +179,16 @@ export async function publishPendingColumns(
       ...qualityHeld.map(({ article, reasons }) => ({ ...toItem(article), qualityHoldReasons: reasons }))],
     scheduled: c.scheduled.map((article) => toItem(article)),
   };
-  if (c.pending.length > AUTOPUBLISH_MAX_PER_RUN && !opts.force) {
+  // Limit what this run can actually write; a quality hold never reaches publishTargets.
+  if (eligible.length > AUTOPUBLISH_MAX_PER_RUN && !opts.force) {
     return {
       ...base,
       ok: false,
       published: [],
       errors: qualityErrors,
       blocked:
-        `公開待ちが${c.pending.length}本あり、1回の上限（${AUTOPUBLISH_MAX_PER_RUN}本）を超えたため止めました。` +
-        "対象を確かめてから、管理画面の「今すぐ公開」か、手動実行（force）で公開してください。",
+        `公開可能な記事が${eligible.length}本あり、1回の上限（${AUTOPUBLISH_MAX_PER_RUN}本）を超えたため、1本も公開していません。` +
+        `公開待ち合計${c.pending.length}本のうち品質確認待ちは${qualityHeld.length}本です。対象と保留理由を確認してください。`,
     };
   }
   const qualityBlocked = qualityHeld.length ? `${qualityHeld.length}本は品質確認待ちのため自動公開しません。記事別の理由を確認してください。forceでも解除しません。` : undefined;
