@@ -23,6 +23,15 @@ describe("home school finder", () => {
     expect(id).toBeTruthy();
     expect(html).toContain(`for="${id}"`);
     expect(html).not.toContain("0.33");
+    const scope = {
+      ja: ["入学予定児の保護者向け新入学説明会", "この学校の新入学説明会"],
+      en: ["parents and guardians of incoming pupils", "entry briefing"],
+      "zh-tw": ["預計入學兒童家長", "新生入學說明會"],
+      zh: ["拟入学儿童家长", "新生入学说明会"],
+    };
+    for (const text of scope[code]) expect(html).toContain(text);
+    expect(html).not.toMatch(/学校の予定|学校行事|學校日程|学校日程|school dates|予約不要|no reservation required/);
+
   });
   for (const {code} of languages) for (const school of listSchools()) {
     it(`${code}: selection ${school.slug} updates all four canonical routes`, () => {

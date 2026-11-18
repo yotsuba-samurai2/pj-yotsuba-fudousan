@@ -3,8 +3,9 @@ import { renderToStaticMarkup } from "react-dom/server";
 import { describe, expect, it, vi } from "vitest";
 import { readFileSync } from "node:fs";
 vi.mock("next/server", () => ({ connection: async () => undefined }));
-import { SchoolEventsTeaser, SchoolCalendarLink, SchoolEventRow } from "../../components/gakku/SchoolEventsTeaser";
-import { SCHOOL_EVENT_COPY, SCHOOL_EVENTS } from "../school-events";
+import { SchoolEventsTeaser, SchoolCalendarLink } from "../../components/gakku/SchoolEventsTeaser";
+import { SCHOOL_EVENT_COPY } from "../school-events";
+import { listSchools } from "../school-district";
 
 describe("school calendar server output", () => {
   for (const locale of ["ja", "en", "zh-tw", "zh"] as const) {
@@ -20,7 +21,11 @@ describe("school calendar server output", () => {
         expect(html).toContain("https://www.city.bunkyo.lg.jp/");
         expect(html).toContain("2026-11-18");
         expect(html).not.toContain('"@type":"Event"');
-        expect(renderToStaticMarkup(<SchoolCalendarLink locale={locale} school="otsuka" />)).toContain(`${path}#otsuka`);
+        for (const school of listSchools()) {
+          const link = renderToStaticMarkup(<SchoolCalendarLink locale={locale} school={school.slug} />);
+          expect(link).toContain(`${path}#${school.slug}`);
+          expect(link).toContain(SCHOOL_EVENT_COPY[locale].title);
+        }
       } finally { vi.useRealTimers(); }
     });
   }
@@ -34,30 +39,36 @@ describe("school calendar server output", () => {
   });
 });
 
-describe("school activities in server-rendered native UI", () => {
+describe("admission-only public school surfaces", () => {
   for (const locale of ["ja", "en", "zh-tw", "zh"] as const) {
-    it(`${locale}: renders both range endpoints, unknown attendance, latest source and natural order`, async () => {
+    it(`${locale}: only incoming-pupil briefings appear in the initial teaser HTML`, async () => {
       vi.useFakeTimers();
       vi.setSystemTime(new Date("2026-11-18T03:00:00Z"));
       try {
         const c = SCHOOL_EVENT_COPY[locale];
         const html = renderToStaticMarkup(await SchoolEventsTeaser({ locale }));
-        expect(html).toContain(c.presentation);
-        expect(html).toContain(c.exhibition);
-        expect(html).toContain(c.activityAudience);
-        expect(html).toContain("r8gyouzi_shou-2.pdf");
-        expect(html).not.toContain("r8gyouzi_shou.pdf");
-        expect(html).not.toContain(c.open + " ·");
-        expect(html).not.toContain(c.audience);
-        expect(html.indexOf("関口台町小学校")).toBeLessThan(html.indexOf("小日向台町小学校"));
-        expect(html.indexOf("小日向台町小学校")).toBeLessThan(html.indexOf("窪町小学校"));
-        const event = SCHOOL_EVENTS.find(e => e.kind === "presentation")!;
-        const row = renderToStaticMarkup(<SchoolEventRow event={event} locale={locale} />);
-        expect(row).toContain("19"); expect(row).toContain("21");
-        expect(row).not.toContain("00:00");
-        vi.setSystemTime(new Date("2026-11-21T15:00:00Z"));
-        expect(renderToStaticMarkup(await SchoolEventsTeaser({ locale }))).not.toContain(c.presentation);
+        expect(html).toContain(c.admission);
+        expect(html).toContain(c.audience);
+        expect(html).toContain("reiwa9nennsetumeikai.pdf");
+        expect(html).not.toMatch(/r8gyouzi|p002090|2026-11-19|2026-11-27|2026-12-04/);
+        expect(html).not.toMatch(/学習発表会|展覧会|授業公開|一般来校者|未確認|學校活動|学校活动|unverified|Student exhibition|learning showcase/);
+        expect(html).not.toContain('"@type":"Event"');
       } finally { vi.useRealTimers(); }
     });
   }
+  it("uses the same admission copy for calendar metadata, page, teaser and all reverse links", () => {
+    const page = readFileSync("src/app/[locale]/(realestate)/gakku/calendar/page.tsx", "utf8");
+    expect(page).toContain("title: c.title, description: c.lead");
+    expect(page).toContain("{ name: c.title }");
+    expect(page).toContain("{c.lead}");
+    expect(page).toContain("{c.note}");
+    const surfaces = [
+      ["src/app/[locale]/(realestate)/HomePageContent.tsx", "SchoolEventsTeaser"],
+      ["src/app/[locale]/(realestate)/gakku/page.tsx", "SchoolEventsTeaser"],
+      ["src/components/gakku/SchoolDistrictPage.tsx", "SchoolEventsTeaser"],
+      ["src/components/gakku/SchoolRentalPages.tsx", "SchoolCalendarLink"],
+      ["src/components/gakku/SchoolSalePages.tsx", "SchoolCalendarLink"],
+    ];
+    for (const [path, component] of surfaces) expect(readFileSync(path, "utf8")).toContain(`<${component}`);
+  });
 });
