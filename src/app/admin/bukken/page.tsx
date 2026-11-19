@@ -10,8 +10,6 @@ import {
   getAccessToken,
 } from "@/lib/admin-api";
 import {
-  isStaleListing,
-  daysSince,
   formatPropertyPrice,
   STATUS_LABELS,
   CATEGORY_LABELS,
@@ -21,6 +19,13 @@ import {
   type PropertyStatus,
 } from "@/lib/property-shared";
 
+import { propertyMaintenanceQueue, type MaintenanceReason } from "@/lib/property-sync/maintenance-queue";
+
+const maintenanceLabels: Record<MaintenanceReason, string> = {
+  availability_due: "募集状況の確認期限",
+  update_due: "次回更新予定日",
+  stale: `情報更新から${STALE_WARNING_DAYS}日超`,
+};
 const statusColors: Record<PropertyStatus, string> = {
   draft: "bg-yellow-100 text-yellow-700",
   published: "bg-green-100 text-green-700",
@@ -53,6 +58,7 @@ export default function BukkenListPage() {
   const [statusFilter, setStatusFilter] = useState<string>("all");
   const [busy, setBusy] = useState<string | null>(null);
   const [error, setError] = useState("");
+  const [maintenanceOnly, setMaintenanceOnly] = useState(false);
 
   const fetchProperties = async () => {
     setLoading(true);
@@ -113,29 +119,36 @@ export default function BukkenListPage() {
     }
   };
 
-  const now = new Date();
-  const stale = properties.filter((p) => isStaleListing(p, now));
+  const maintenance = propertyMaintenanceQueue(properties, new Date());
+  const maintenanceById = new Map(maintenance.map((item) => [item.id, item]));
+  const propertiesById = new Map(properties.map((property) => [property.id, property]));
+  const displayed = maintenanceOnly
+    ? maintenance.flatMap(({ id }) => {
+        const item = propertiesById.get(id);
+        return item ? [item] : [];
+      })
+    : properties;
 
   return (
     <div className="p-6">
-      {/* 鮮度警告（おとり広告の構造的回避：情報更新日から7日超の公開物件） */}
-      {stale.length > 0 && (
-        <div className="mb-4 rounded-xl border border-amber-300 bg-amber-50 p-4">
+      {!loading && !error && (statusFilter === "all" || statusFilter === "published") && (
+        <section aria-label="掲載の再確認" className="mb-4 rounded-xl border border-amber-300 bg-amber-50 p-4">
           <p className="flex items-center gap-2 text-sm font-semibold text-amber-900">
-            <AlertTriangle size={16} />
-            情報更新日から{STALE_WARNING_DAYS}日を超えた公開物件があります（内容を確認し、更新または成約処理をしてください）
+            <AlertTriangle size={16} aria-hidden="true" />
+            掲載の再確認：{maintenance.length}件
           </p>
-          <ul className="mt-2 space-y-1 text-xs text-amber-900">
-            {stale.map((p) => (
-              <li key={p.id}>
-                <Link href={`/admin/bukken/${p.id}/edit`} className="underline">
-                  {p.title}
-                </Link>
-                （更新日 {p.infoUpdatedAt}・{daysSince(p.infoUpdatedAt, now)}日経過）
-              </li>
-            ))}
-          </ul>
-        </div>
+          <p className="mt-2 text-xs text-amber-900">
+            期限の到来は募集終了を意味しません。最新の募集状況・広告可否を確認し、終了を確認したものだけ公開を止めます。
+            賃貸の再確認・新着取込・確認済みの公開停止は
+            <Link href="/admin/bukken/import" className="underline">賃貸取込・掲載確認</Link>
+            へ。ATBB側の掲載状態は別に照合してください。
+          </p>
+          <button type="button" aria-pressed={maintenanceOnly}
+            onClick={() => setMaintenanceOnly((value) => !value)}
+            className="mt-3 rounded border border-amber-500 px-3 py-1.5 text-xs font-semibold text-amber-900">
+            要確認の物件だけ表示
+          </button>
+        </section>
       )}
 
       <div className="mb-4 flex flex-wrap items-center gap-3">
@@ -145,7 +158,7 @@ export default function BukkenListPage() {
           {statuses.map((s) => (
             <button
               key={s}
-              onClick={() => setStatusFilter(s)}
+              onClick={() => { setMaintenanceOnly(false); setStatusFilter(s); }}
               className={`rounded-md px-3 py-1.5 text-xs font-medium transition-colors ${
                 statusFilter === s
                   ? "bg-surface text-text shadow-sm"
@@ -171,7 +184,7 @@ export default function BukkenListPage() {
       )}
 
       <p className="mb-3 text-xs text-text-muted">
-        {loading ? " " : `${properties.length}件の物件`}
+        {loading ? " " : `${displayed.length}件の物件`}
       </p>
 
       <div className="overflow-x-auto rounded-xl border border-border bg-surface">
@@ -194,14 +207,14 @@ export default function BukkenListPage() {
                   <div className="inline-block h-6 w-6 animate-spin rounded-full border-2 border-primary border-t-transparent" />
                 </td>
               </tr>
-            ) : properties.length === 0 ? (
+            ) : displayed.length === 0 ? (
               <tr>
                 <td colSpan={7} className="py-12 text-center text-sm text-text-muted">
-                  物件がありません
+                  {maintenanceOnly ? "再確認を要する物件はありません" : "物件がありません"}
                 </td>
               </tr>
             ) : (
-              properties.map((p) => (
+              displayed.map((p) => (
                 <tr
                   key={p.id}
                   className={`border-b border-border last:border-b-0 transition-colors hover:bg-surface-dim/50 ${
@@ -212,14 +225,15 @@ export default function BukkenListPage() {
                     <span className={`inline-block rounded-full px-2.5 py-0.5 text-[10px] font-medium ${statusColors[p.status]}`}>
                       {STATUS_LABELS[p.status]}
                     </span>
-                    {isStaleListing(p, now) && (
-                      <span className="ml-1 inline-block rounded-full bg-amber-100 px-2 py-0.5 text-[10px] font-medium text-amber-700">
-                        要更新
+                    {maintenanceById.get(p.id)?.reasons.map((reason) => (
+                      <span key={reason} className="ml-1 inline-block rounded-full bg-amber-100 px-2 py-0.5 text-[10px] font-medium text-amber-700">
+                        {maintenanceLabels[reason]}
                       </span>
-                    )}
+                    ))}
                   </td>
                   <td className="whitespace-nowrap px-4 py-3 text-xs tabular-nums text-text-muted">
-                    {p.infoUpdatedAt}
+                    <div>{p.infoUpdatedAt}</div>
+                    <div>次回 {p.nextUpdateAt}</div>
                   </td>
                   <td className="max-w-sm px-4 py-3">
                     <p className="truncate text-sm font-medium text-text">{p.title}</p>
