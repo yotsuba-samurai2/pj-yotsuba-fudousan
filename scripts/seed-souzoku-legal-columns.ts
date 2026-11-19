@@ -82,6 +82,27 @@ const AUTHOR = {
 
 /** 各記事が評価を集約すべきハブ（本文に必須の内部リンク）。verify() で機械検査する */
 const REQUIRED_HUB_LINKS: Record<string, string[]> = {
+  "jiritsu-kunren-seikatsu-kinou-shitei-shinsei-youken": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/seikatsu-kaigo-shitei-bukken-yoken",
+    "/legal/column/houkago-day-jido-hattatsu-shitei-shinsei-nagare",
+  ],
+  "tokutei-katsudo-rooshin-fuyo-yobiyose-chuka-taiwan": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/kazoku-taizai-zairyu-shikakugai-katsudo-28jikan-yobiyose",
+    "/legal/column/chuka-tairiku-apostille-ikou-souzoku-kaisha-shorui",
+  ],
+  "kikyuji-yuigon-tokubetsu-houshiki-youken-kakunin-shinpan": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/kikyuji-yuigon-shibo-kikyusha-minpo-976jo-kakunin",
+    "/legal/column/jihitsu-kosei-yuigon",
+  ],
   "yuryo-shokugyo-shokai-jigyo-kyoka-youken": [
     "/legal/services",
     "/legal/nagare",
@@ -1556,6 +1577,37 @@ function matchesRequiredPhrase(content: string, phrase: string): boolean {
 
 /** 記事ごとに必ず含めるべき表現（機械ゲート。最低限の合否判定） */
 const REQUIRED_PHRASES: Record<string, string[]> = {
+  "jiritsu-kunren-seikatsu-kinou-shitei-shinsei-youken": [
+    "障害者総合支援法第36条",
+    "指定障害福祉サービス事業者",
+    "サービス管理責任者",
+    "常勤換算",
+    "自立訓練",
+    "独立した事業体",
+    "別事業体",
+    "紹介料を受け取りません",
+  ],
+  "tokutei-katsudo-rooshin-fuyo-yobiyose-chuka-taiwan": [
+    "特定活動",
+    "家族滞在",
+    "告示外",
+    "老親扶養",
+    "別表第1の5",
+    "独立した事業体",
+    "別事業体",
+    "紹介料を受け取りません",
+  ],
+  "kikyuji-yuigon-tokubetsu-houshiki-youken-kakunin-shinpan": [
+    "民法第976条",
+    "民法第979条",
+    "民法第983条",
+    "家庭裁判所",
+    "遺言の確認",
+    "行政書士法第1条の2",
+    "独立した事業体",
+    "別事業体",
+    "紹介料を受け取りません",
+  ],
   "yuryo-shokugyo-shokai-jigyo-kyoka-youken": [
     "職業安定法第30条",
     "職業安定法第31条",
@@ -4514,6 +4566,9 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
 
 /** 記事ごとに含めてはならない表現 */
 const FORBIDDEN_PHRASES: Record<string, string[]> = {
+  "jiritsu-kunren-seikatsu-kinou-shitei-shinsei-youken": [],
+  "tokutei-katsudo-rooshin-fuyo-yobiyose-chuka-taiwan": [],
+  "kikyuji-yuigon-tokubetsu-houshiki-youken-kakunin-shinpan": [],
   "yuryo-shokugyo-shokai-jigyo-kyoka-youken": [],
   "ippan-haikibutsu-shushu-unpan-kyoka-jukyu-chosei": [],
   "kashikin-gyo-touroku-yoken-shunin-junshisan": [],
@@ -4754,6 +4809,87 @@ const ARTICLES: Array<{
   keywords: string[];
   tags: string[];
 }> = [
+  {
+    file: "178-jiritsu-kunren-seikatsu-kinou-shitei-shinsei-youken.md",
+    slug: "jiritsu-kunren-seikatsu-kinou-shitei-shinsei-youken",
+    date: "2026-11-19",
+    title:
+      "自立訓練（生活訓練・機能訓練）の指定申請は、どの要件をどの順番で満たしますか",
+    category: "障害福祉の許認可（行政書士の実務から）",
+    excerpt:
+      "障害福祉サービスの自立訓練（生活訓練・機能訓練）事業所を開くには、都道府県知事（指定都市・中核市はその市長）から指定障害福祉サービス事業者の指定を受けます（障害者総合支援法第36条第1項）。自立訓練は、身体的機能又は生活能力の向上のために必要な訓練を行う訓練等給付のサービスです（同法第5条第12項）。指定には、申請者が法人であり、人員・設備・運営の基準（都道府県の条例。従うべき基準は指定障害福祉サービスの人員・設備・運営基準省令＝平成18年厚生労働省令第171号）を満たすことが必要です（同法第36条第3項・第43条第1項）。人員は、機能訓練では看護職員・理学療法士又は作業療法士・生活支援員を常勤換算で利用者数÷6以上、ほかにサービス管理責任者と管理者を置き（省令第156条・第157条）、生活訓練では生活支援員とサービス管理責任者・管理者を置き、宿泊型では地域移行支援員を加えます（省令第166条・第167条）。指定日（多くの自治体で毎月1日）から逆算し、前月までの申請締切と事前協議に間に合わせます。指定申請書類の作成支援は行政書士、人員の常勤換算・就業規則・社会保険など労務は社会保険労務士、物件の用途地域・消防適合の調査は宅地建物取引業者、法人設立の登記は司法書士、報酬請求の税務は税理士が、それぞれ独立した事業体として別々にご契約のうえ対応する分離受任の枠組みを整理しました。",
+    keywords: [
+      "自立訓練 指定申請 要件 障害者総合支援法36条",
+      "自立訓練 機能訓練 生活訓練 人員基準 省令156条 166条",
+      "サービス管理責任者 生活支援員 常勤換算 利用者数6",
+      "自立訓練 設備基準 訓練室 相談室 省令158条 168条",
+      "障害福祉サービス 指定 法人格 定款 事業目的 事前協議",
+      "自立訓練 指定申請 行政書士",
+    ],
+    tags: [
+      "障害者総合支援法",
+      "自立訓練",
+      "指定障害福祉サービス",
+      "サービス管理責任者",
+      "常勤換算",
+      "業際",
+      "行政書士",
+    ],
+  },
+  {
+    file: "179-tokutei-katsudo-rooshin-fuyo-yobiyose-chuka-taiwan.md",
+    slug: "tokutei-katsudo-rooshin-fuyo-yobiyose-chuka-taiwan",
+    date: "2026-11-19",
+    title:
+      "中国・台湾の高齢の親を日本に呼び寄せるとき、特定活動（老親扶養）はどこまで認められますか",
+    category: "外国人関連の手続き（行政書士の実務から）",
+    excerpt:
+      "日本で就労・経営する中国本土・台湾出身の方が、本国の高齢の親を呼び寄せて扶養する場合、「家族滞在」は使えません。家族滞在（出入国管理及び難民認定法別表第1の4）が認める家族は配偶者と子に限られ、親は含まれないからです。親の呼び寄せが検討されうるのは、特定活動（同別表第1の5＝法務大臣が個々の外国人について特に指定する活動。同法第2条の2）のうち、告示に定めのない「告示外特定活動（老親扶養）」です。これは告示で要件が定められた類型ではなく入管の個別の裁量判断で、本国に扶養できる親族がいない・親が高齢で単身・日本側に扶養できる資力がある等が総合考慮されるとされますが、入管が公表した明確な許可基準ではありません。本国書類の認証は、中国本土が2023年11月7日発効のアポスティーユ、台湾が日本台湾交流協会の認証（ハーグ条約非締約）です。在留資格申請の取次と本国書類の公証・認証（翻訳証明を含む）の取得支援は行政書士、扶養控除など税務は税理士が、それぞれ独立した事業体として別々にご契約のうえ対応する分離受任の枠組みを整理しました。",
+    keywords: [
+      "特定活動 老親扶養 高齢の親 呼び寄せ 入管",
+      "家族滞在 親 呼べない 別表第1の4 別表第1の5",
+      "告示外特定活動 入管法2条の2 裁量判断",
+      "老親扶養 扶養の必要性 資力 立証 不許可",
+      "中国 アポスティーユ 台湾 日本台湾交流協会 認証",
+      "特定活動 在留資格 申請取次 行政書士",
+    ],
+    tags: [
+      "出入国管理及び難民認定法",
+      "特定活動",
+      "老親扶養",
+      "家族滞在",
+      "中国・台湾",
+      "業際",
+      "行政書士",
+    ],
+  },
+  {
+    file: "180-kikyuji-yuigon-tokubetsu-houshiki-youken-kakunin-shinpan.md",
+    slug: "kikyuji-yuigon-tokubetsu-houshiki-youken-kakunin-shinpan",
+    date: "2026-11-19",
+    title:
+      "特別方式の遺言には4種類ある――危急時遺言と隔絶地遺言は何が違い、どれに家庭裁判所の確認が要りますか",
+    category: "相続の手続き（行政書士の実務から）",
+    excerpt:
+      "普通方式（自筆・公正証書等）が間に合わない場面で使う特別方式の遺言は全部で4種類あり、死亡の危急に迫った場面の危急時遺言（一般危急時＝民法第976条、難船危急時＝民法第979条）と、交通が断たれた場所の隔絶地遺言（伝染病隔離者＝民法第977条、在船者＝民法第978条）に分かれます。本記事は4方式を一覧で見比べる全体像の記事で、一般危急時遺言（第976条）の証人3人・口授・筆記・20日以内の確認といった要件の詳細は別稿『死亡危急者遺言と家庭裁判所の確認』に委ね、難船危急時遺言（第979条）と隔絶地遺言（第977条・第978条）、および4方式の横断比較に軸足を置きます。危急時遺言（第976条・第979条）は家庭裁判所の「遺言の確認」を得なければ効力を生じませんが、隔絶地遺言（第977条・第978条）にはこの確認は要求されていません。この確認は家事事件手続法別表第1の審判事件（遺言の確認）です。普通方式で遺言できるようになった時から6か月間生存すると、4方式いずれも効力を失います（民法第983条）。遺言の文案作成・証人手配の支援は行政書士、家庭裁判所への確認の申立て（裁判所提出書類の作成・代理）は本人又は弁護士、遺言執行後の相続登記は司法書士、相続税は税理士、相続人間の紛争は弁護士が、それぞれ独立した事業体として別々にご契約のうえ対応する分離受任の枠組みを整理しました。",
+    keywords: [
+      "特別方式 遺言 4種類 危急時遺言 隔絶地遺言",
+      "難船危急時遺言 民法979条 証人2人 口頭 比較",
+      "隔絶地遺言 伝染病隔離者 在船者 民法977条 978条",
+      "危急時遺言 確認 要否 家庭裁判所 家事事件手続法 別表第1",
+      "特別方式遺言 失効 6か月 民法983条",
+      "特別方式遺言 業際 行政書士 弁護士",
+    ],
+    tags: [
+      "民法",
+      "特別方式",
+      "危急時遺言",
+      "隔絶地遺言",
+      "家事事件手続法",
+      "業際",
+      "行政書士",
+    ],
+  },
   {
     file: "176-yuryo-shokugyo-shokai-jigyo-kyoka-youken.md",
     slug: "yuryo-shokugyo-shokai-jigyo-kyoka-youken",

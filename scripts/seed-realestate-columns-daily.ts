@@ -3748,6 +3748,26 @@ const ARTICLES: ArticleSpec[] = [
     localesWithTranslations: ["en", "zh-tw", "zh"],
     hubLinks: ["/toushi"],
   },
+  {
+    file: "184-jiritsu-kunren-jigyosho-bukken-youto-chiiki-shobo.md",
+    slug: "jiritsu-kunren-jigyosho-bukken-youto-chiiki-shobo",
+    title: "自立訓練（生活訓練・機能訓練）の事業所物件は、どの用途地域・面積・消防で探せばよいですか",
+    publishedAt: "2026-11-19",
+    category: "投資・事業用不動産",
+    excerpt:
+      "自立訓練（障害者総合支援法の訓練等給付の生活訓練・機能訓練）の事業所物件は、先に3点を見ます。①用途地域（自立訓練事業所は建築基準法上「児童福祉施設等」に含まれ、工業専用地域を除きおおむね可）②訓練・作業室・相談室・洗面所・便所・多目的室が確保できるか（指定障害福祉サービス基準〈平成18年厚生労働省令第171号〉第168条・第158条→第81条準用）③消防法施行令別表第一の用途区分（自立訓練は原則(6)項ハ）と自動火災報知設備の要否。訓練室には「3㎡×定員」のような数値の面積基準はなく「支障がない広さ」とだけ定められます。東京都文京区の宅地建物取引士兼行政書士が、契約前に確認できることを条文から整理します。",
+    keywords: [
+      "自立訓練 事業所 物件",
+      "自立訓練 設備基準 訓練室",
+      "自立訓練 用途地域 児童福祉施設等",
+      "自立訓練 消防 6項ハ",
+      "指定障害福祉サービス基準 171号",
+    ],
+    tags: ["事業用不動産", "許認可", "用途地域", "消防法"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/toushi", "/office"],
+  },
 ];
 
 function toPlainText(md: string): string {

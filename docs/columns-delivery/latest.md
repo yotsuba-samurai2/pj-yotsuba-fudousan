@@ -1,26 +1,45 @@
-# コラム生成・レビュー・公開判定（2026-11-19）
+# コラム生成・レビュー・公開判定（2026-11-20）
 
 - 生成・機械検証：成功 6本
-- レビュー処理：success ／ 判定：true
-- レビュー指摘：blocker 0／major 0／minor 0
-- 今回の候補指紋に対応する公開証跡登録：5本
-- 自動公開の品質候補：5本
-- 品質保留：1本 ／ 公開日待ち：0本
-- 未確認の一次資料：0件
+- レビュー処理：success ／ 判定：false
+- レビュー指摘：blocker 0／major 2／minor 1
+- 今回の候補指紋に対応する公開証跡登録：0本
+- 自動公開の品質候補：0本
+- 品質保留：6本 ／ 公開日待ち：0本
+- 未確認の一次資料：1件
 - 本番公開：この処理では実行していません。公開済み件数は未照会です。
 
-5本は品質確認済み候補です。手動保留・既存DB・公開日・有効期限を公開実行時に再判定します。公開完了は実行結果で確認してください。
+正午の自動公開に渡せる品質候補は0本です。6本は保留、0本は公開日待ちです。
 未確認記事の品質保留はforceでも解除しません。
 
 ## 記事別の判定
 
-- 水害ハザードマップは重要事項説明でどう説明されるのか──中国語の買主・投資家が契約前に確認すること：quality-eligible（realestate:chugokugo-buyer-suigai-hazard-juyojiko-dd）
-- 市街化調整区域や農地の物件は、海外の買主でも買えるのか──建築・用途の制限と確認の順番：quality-eligible（realestate:chugokugo-buyer-chosei-kuiki-nochi-kounyu-kahi-dd）
-- 有料職業紹介事業の許可は何が要るのか――資産・事務所・職業紹介責任者の要件と申請の順番：quality-eligible（legal:yuryo-shokugyo-shokai-jigyo-kyoka-youken）
-- 一般廃棄物の収集運搬業許可はなぜ下りにくいのか――産業廃棄物との違いと市町村の需給調整：held（legal:ippan-haikibutsu-shushu-unpan-kyoka-jukyu-chosei）
+- 自立訓練（生活訓練・機能訓練）の事業所物件は、どの用途地域・面積・消防で探せばよいですか：held（realestate:jiritsu-kunren-jigyosho-bukken-youto-chiiki-shobo）
   - 公開レビュー記録が未登録です
-  - 確認済みの公的な一次根拠が不足しています
-- 妊娠した社員に、会社は何をすればよいのか――産前産後休業・母性健康管理と就業制限の実務：quality-eligible（labor:sanzen-sango-kyugyo-boshi-kenko-kanri-roumu）
-- 社員からの内部通報に、会社はどんな体制を作るのか――公益通報者保護法の窓口と担当者の義務：quality-eligible（labor:koueki-tsuhosha-naibu-tsuho-taisei-roumu）
+  - 独立レビューに未解決の重大な指摘があります
+- 自立訓練（生活訓練・機能訓練）の指定申請は、どの要件をどの順番で満たしますか：held（legal:jiritsu-kunren-seikatsu-kinou-shitei-shinsei-youken）
+  - 公開レビュー記録が未登録です
+  - 独立レビューに未解決の重大な指摘があります
+- 中国・台湾の高齢の親を日本に呼び寄せるとき、特定活動（老親扶養）はどこまで認められますか：held（legal:tokutei-katsudo-rooshin-fuyo-yobiyose-chuka-taiwan）
+  - 公開レビュー記録が未登録です
+  - 独立レビューに未解決の重大な指摘があります
+- 特別方式の遺言には4種類ある――危急時遺言と隔絶地遺言は何が違い、どれに家庭裁判所の確認が要りますか：held（legal:kikyuji-yuigon-tokubetsu-houshiki-youken-kakunin-shinpan）
+  - 公開レビュー記録が未登録です
+  - 候補指紋と修正後原稿が一致しません
+  - 独立レビューの証跡不足、重複、またはレビュー後の原稿変更
+- 自立訓練の事業所を開くとき、人員配置と常勤換算・サビ管の労務はどう組みますか：held（labor:jiritsu-kunren-jinin-haichi-jokin-kansan-sabikan-roumu）
+  - 公開レビュー記録が未登録です
+  - 候補指紋と修正後原稿が一致しません
+  - 独立レビューの証跡不足、重複、またはレビュー後の原稿変更
+  - 未確認一次資料：https://www.mhlw.go.jp/content/12401000/001523467.pdf — 年金制度改正法 施行日一覧（p.9/34）：賃金要件撤廃＝『公布から3年以内の政令で定める日』。企業規模要件撤廃＝36〜50人2027年10月・21〜35人2029年10月・11〜20人2032年10月・1〜10人2035年10月。『2026年10月〜』は新規加入者を支援する保険料負担軽減特例の開始時期。本文の『賃金要件は2026年10月に撤廃』は本文不一致。
+- 厚生年金の標準報酬月額の上限引上げ（2027年9月〜）は、給与計算にどう響きますか：held（labor:kousei-nenkin-hyojun-hoshu-getsugaku-jogen-hikiage-2027）
+  - 公開レビュー記録が未登録です
+  - 独立レビューに未解決の重大な指摘があります
 
-実行証跡：https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/44389057267
+## レビューの指摘
+
+- [major] scripts/labor-columns/217-jiritsu-kunren-jinin-haichi-jokin-kansan-sabikan-roumu.md：社会保険の短時間労働者適用拡大について『厚生労働省の資料によると、月8.8万円の賃金要件は2026年10月に撤廃が予定』と断定（4言語とも）。厚労省公式資料（年金制度改正法 施行日一覧, 001523467.pdf p.9/34）では賃金要件撤廃は『公布から3年以内の政令で定める日』。2026年10月は別施策（新規加入者の保険料負担軽減の3年特例）の開始時期であり、賃金要件撤廃日ではない。施行日の誤断定かつ厚労省資料への誤帰属。 ／ 修正案：賃金要件撤廃の時期を『公布から3年以内の政令で定める日（最賃1,016円到達を見極めて施行）』に訂正し、2026年10月は保険料負担軽減特例の開始時期である旨に分離する。en/zh/zh-twも同様に訂正。
+- [major] scripts/legal-columns/180-kikyuji-yuigon-tokubetsu-houshiki-youken-kakunin-shinpan.md：カニバリ回避の前提が本文で不成立。plan.jsonは『特別方式（危急時遺言）の要件と確認審判を扱う記事は存在しない』とするが、既存の173（kikyuji-yuigon-shibo-kikyusha-minpo-976jo-kakunin）が民法976条・20日確認・983条失効・業際を正面から扱う。180のH2見出し5本中4本（証人口授筆記／20日確認審判／6か月失効／役割分担）が173と重複し、重複意図が残る。 ／ 修正案：180は難船(979)・隔絶地(977/978)・特別方式の分類と比較に軸足を移し、976条の要件詳細は173へ委譲する形にリライトするか、編集者が重複可否を判断する。
+- [minor] scripts/legal-columns/178-jiritsu-kunren-seikatsu-kinou-shitei-shinsei-youken.md：『指定権者は都道府県知事…（障害者総合支援法第36条第1項）』の帰属がやや緩い。指定権者（都道府県知事）の基礎は第29条第1項で、第36条は指定の申請・手続規定。実害はないが条項帰属の精度の点。 ／ 修正案：指定権者の根拠を第29条第1項、申請・手続を第36条として整理するとより正確。
+
+実行証跡：https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/44607431908
