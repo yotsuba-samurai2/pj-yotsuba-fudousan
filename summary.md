@@ -1,16 +1,16 @@
-# コラムの自動公開とSearch Consoleの確認（2026/11/19 0:53:43）
+# コラムの自動公開とSearch Consoleの確認（2026/11/19 20:01:55）
 
 ## 正午の自動公開
 
 - 公開結果：部分成功
 - 公開した記事：5本
-  - https://luck428.com/labor/column/eisei-kanrisha-sangyoi-eisei-iinkai-sennin-50nin-gimu　常時50人になったら――衛生管理者・産業医・衛生委員会の選任と届出
-  - https://luck428.com/labor/column/kazoku-taizai-haigusha-part-28jikan-shikaku-gai-shakaihoken-roumu　家族滞在の配偶者をパートで雇うには？資格外活動28時間と社会保険の壁の実務
-  - https://luck428.com/labor/column/rodosha-haken-ukeire-teishokuhi-kanri-daicho-37gokokuji-roumu　派遣社員を受け入れる会社の労務――抵触日（個人・事業所単位）、派遣先管理台帳、偽装請負（37号告示）
-  - https://luck428.com/column/chugokugo-buyer-shido-ichi-shitei-douro-settei-dd　中国語バイヤー向け：私道・位置指定道路の接道を買う前に確認する（再建築可否と持分の罠）
-  - https://luck428.com/column/souzoku-kyoyu-bunkatsu-seikyu-kanka-baikyaku　相続した共有不動産で話がまとまらない――共有物分割請求に至ったときの換価（任意売却・形式競売）の実務
-- 公開保留：34本は品質確認待ちのため自動公開しません。記事別の理由を確認してください。forceでも解除しません。
-- 保留中（自動公開していない）：34本
+  - https://luck428.com/labor/column/koueki-tsuhosha-naibu-tsuho-taisei-roumu　社員からの内部通報に、会社はどんな体制を作るのか――公益通報者保護法の窓口と担当者の義務
+  - https://luck428.com/labor/column/sanzen-sango-kyugyo-boshi-kenko-kanri-roumu　妊娠した社員に、会社は何をすればよいのか――産前産後休業・母性健康管理と就業制限の実務
+  - https://luck428.com/legal/column/yuryo-shokugyo-shokai-jigyo-kyoka-youken　有料職業紹介事業の許可は何が要るのか――資産・事務所・職業紹介責任者の要件と申請の順番
+  - https://luck428.com/column/chugokugo-buyer-chosei-kuiki-nochi-kounyu-kahi-dd　市街化調整区域や農地の物件は、海外の買主でも買えるのか──建築・用途の制限と確認の順番
+  - https://luck428.com/column/chugokugo-buyer-suigai-hazard-juyojiko-dd　水害ハザードマップは重要事項説明でどう説明されるのか──中国語の買主・投資家が契約前に確認すること
+- 公開保留：35本は品質確認待ちのため自動公開しません。記事別の理由を確認してください。forceでも解除しません。
+- 保留中（自動公開していない）：35本
   - 印刷会社の開業・労務——有機溶剤や深夜勤務の安全衛生と労働時間管理
     - 公開レビュー記録が未登録です
   - 経営・管理ビザ2025年10月改正｜資本金3,000万円・常勤職員・経過措置の要点（中国・台湾の起業家向け）
@@ -139,90 +139,91 @@
     - zh-twの内部リンクに言語不一致があります
     - zhの内部リンクに言語不一致があります
     - 公開レビュー記録が未登録です
+  - 一般廃棄物の収集運搬業許可はなぜ下りにくいのか――産業廃棄物との違いと市町村の需給調整
+    - 公開レビュー記録が未登録です
 
 ## Search Console
 
 - サイトマップを送り直しました（https://luck428.com/sitemap.xml）
-- 確認の対象：直近45日の日本語コラム 198本（今回確かめたのは82本）
-- 登録済み（PASS）116本・除外（NEUTRAL）82本・エラー（FAIL）0本・未確認 0本
+- 確認の対象：直近45日の日本語コラム 205本（今回確かめたのは90本）
+- 登録済み（PASS）121本・除外（NEUTRAL）84本・エラー（FAIL）0本・未確認 0本
 
 ## 手でリクエストする候補（公開から3日以上たって未登録）
 
 - https://luck428.com/column/container-trailer-house-tenpo-bukken-kenchiku-kakunin-youto（2026-10-17・33日・URL が Google に認識されていません）
-- https://luck428.com/column/souzoku-kyoyu-mochibun-dai3sha-baikyaku-bunkatsu（2026-10-17・33日・検出 - インデックス未登録）
+- https://luck428.com/column/souzoku-kyoyu-mochibun-dai3sha-baikyaku-bunkatsu（2026-10-17・33日・URL が Google に認識されていません）
 - https://luck428.com/legal/column/tantei-gyo-todokede-eigyosho-youken-koan（2026-10-17・33日・URL が Google に認識されていません）
-- https://luck428.com/column/unten-daiko-eigyosho-zuihan-chushajo-bukken-youken（2026-10-18・32日・検出 - インデックス未登録）
+- https://luck428.com/column/unten-daiko-eigyosho-zuihan-chushajo-bukken-youken（2026-10-18・32日・URL が Google に認識されていません）
 - https://luck428.com/column/net-cafe-kobetsu-shitsu-bukken-shobo-honnin-kakunin（2026-10-20・30日・URL が Google に認識されていません）
-- https://luck428.com/column/yuigon-shikkosha-sentei-fudosan-baikyaku-toujisha（2026-10-20・30日・URL が Google に認識されていません）
+- https://luck428.com/column/yuigon-shikkosha-sentei-fudosan-baikyaku-toujisha（2026-10-20・30日・検出 - インデックス未登録）
 - https://luck428.com/legal/column/kodo-senmonshoku-1go-point-keisan-chuka-taiwan（2026-10-20・30日・検出 - インデックス未登録）
 - https://luck428.com/labor/column/dattai-ichijikin-haigusha-dai3go-60kagetsu（2026-10-21・29日・検出 - インデックス未登録）
 - https://luck428.com/labor/column/gaikokujin-keieisha-kikoku-zensou-kanpu-dattai（2026-10-21・29日・URL が Google に認識されていません）
 - https://luck428.com/column/souzoku-ninchisho-sozokunin-fudosan-baikyaku-koken-shobun-kyoka（2026-10-22・28日・検出 - インデックス未登録）
 - https://luck428.com/labor/column/tokutei-ginou-jidosha-unsogyo-ukeire-roumu-menkyo（2026-10-22・28日・検出 - インデックス未登録）
-- https://luck428.com/labor/column/kojin-jigyosha-anzen-eisei-2026-sochi-gimu（2026-10-23・27日・検出 - インデックス未登録）
+- https://luck428.com/labor/column/kojin-jigyosha-anzen-eisei-2026-sochi-gimu（2026-10-23・27日・URL が Google に認識されていません）
 - https://luck428.com/labor/column/kyoiku-kunren-kyuka-kyufukin-2025-mukyu-manabinaoshi（2026-10-23・27日・URL が Google に認識されていません）
-- https://luck428.com/legal/column/dokugekibutsu-hanbaigyo-touroku-kozo-setsubi-kijun（2026-10-23・27日・URL が Google に認識されていません）
-- https://luck428.com/legal/column/souzoku-hoki-jukuryo-kikan-shincho-kisanten（2026-10-23・27日・URL が Google に認識されていません）
+- https://luck428.com/legal/column/dokugekibutsu-hanbaigyo-touroku-kozo-setsubi-kijun（2026-10-23・27日・検出 - インデックス未登録）
+- https://luck428.com/legal/column/souzoku-hoki-jukuryo-kikan-shincho-kisanten（2026-10-23・27日・検出 - インデックス未登録）
 - https://luck428.com/column/kango-shoukibo-takino-bukken-youto-shobo-homon-kango（2026-10-24・26日・URL が Google に認識されていません）
 - https://luck428.com/column/souzoku-jikka-maizo-bunkazai-hozochi-baikyaku（2026-10-24・26日・URL が Google に認識されていません）
-- https://luck428.com/labor/column/gaikokujin-koyo-kanri-shishin-jigyonushi-doryoku-gimu（2026-10-24・26日・URL が Google に認識されていません）
+- https://luck428.com/labor/column/gaikokujin-koyo-kanri-shishin-jigyonushi-doryoku-gimu（2026-10-24・26日・検出 - インデックス未登録）
 - https://luck428.com/labor/column/shoyo-shakaihokenryo-hyojun-shoyogaku-jogen-shiharaitodoke（2026-10-24・26日・URL が Google に認識されていません）
-- https://luck428.com/legal/column/keshohin-seizo-hanbaigyo-seizogyo-kyoka-yakkiho（2026-10-24・26日・URL が Google に認識されていません）
-- https://luck428.com/legal/column/nihonjin-haiguusha-biza-zairyu-koshin-henko-chuka-taiwan（2026-10-24・26日・検出 - インデックス未登録）
+- https://luck428.com/legal/column/keshohin-seizo-hanbaigyo-seizogyo-kyoka-yakkiho（2026-10-24・26日・検出 - インデックス未登録）
+- https://luck428.com/legal/column/nihonjin-haiguusha-biza-zairyu-koshin-henko-chuka-taiwan（2026-10-24・26日・URL が Google に認識されていません）
 - https://luck428.com/column/ninteikodomoen-bukken-youto-engei-jien-chori（2026-10-25・25日・検出 - インデックス未登録）
-- https://luck428.com/column/souzoku-fudosan-ekkyo-oboegaki-233jo-baikyaku（2026-10-25・25日・URL が Google に認識されていません）
-- https://luck428.com/legal/column/saiten-souzoku-916jo-jukuryo-kikan-houki（2026-10-25・25日・URL が Google に認識されていません）
-- https://luck428.com/labor/column/spot-work-sukima-baito-roumu-kanri（2026-10-26・24日・検出 - インデックス未登録）
+- https://luck428.com/column/souzoku-fudosan-ekkyo-oboegaki-233jo-baikyaku（2026-10-25・25日・検出 - インデックス未登録）
+- https://luck428.com/legal/column/saiten-souzoku-916jo-jukuryo-kikan-houki（2026-10-25・25日・検出 - インデックス未登録）
+- https://luck428.com/labor/column/spot-work-sukima-baito-roumu-kanri（2026-10-26・24日・URL が Google に認識されていません）
 - https://luck428.com/column/hikyojusha-chuka-owner-minpaku-jutaku-shukuhaku-kanri-itaku（2026-10-27・23日・検出 - インデックス未登録）
 - https://luck428.com/column/hozei-zochijo-souko-bukken-youken-yunyu（2026-10-27・23日・URL が Google に認識されていません）
 - https://luck428.com/labor/column/golf-jo-caddy-gyomuitaku-roudoushasei-henkei-roudoujikan（2026-10-27・23日・URL が Google に認識されていません）
 - https://luck428.com/legal/column/jidosha-recycle-hikitori-furon-kaishu-gyo-touroku（2026-10-27・23日・URL が Google に認識されていません）
 - https://luck428.com/legal/column/zaigai-souzokunin-souzoku-houki-gentei-shonin-tetsuzuki（2026-10-27・23日・検出 - インデックス未登録）
-- https://luck428.com/column/jido-hattatsu-shien-bukken-youto-chiiki-shidou-kunren-shitsu（2026-10-28・22日・URL が Google に認識されていません）
+- https://luck428.com/column/jido-hattatsu-shien-bukken-youto-chiiki-shidou-kunren-shitsu（2026-10-28・22日・検出 - インデックス未登録）
 - https://luck428.com/labor/column/nii-ijo-jigyosho-kinmu-todoke-yakuin-tanjikan-shaho（2026-10-28・22日・検出 - インデックス未登録）
-- https://luck428.com/legal/column/fuzoku-eigyo-4go-5go-game-center-mahjong-kyoka-youken（2026-10-28・22日・検出 - インデックス未登録）
-- https://luck428.com/legal/column/taiji-souzoku-886jo-isanbunkatsu-shussei-mae-torikai（2026-10-28・22日・URL が Google に認識されていません）
+- https://luck428.com/legal/column/fuzoku-eigyo-4go-5go-game-center-mahjong-kyoka-youken（2026-10-28・22日・URL が Google に認識されていません）
+- https://luck428.com/legal/column/taiji-souzoku-886jo-isanbunkatsu-shussei-mae-torikai（2026-10-28・22日・検出 - インデックス未登録）
 - https://luck428.com/column/souzoku-tokutei-akiya-kankoku-jutakuyochi-tokurei-baikyaku（2026-10-29・21日・URL が Google に認識されていません）
-- https://luck428.com/legal/column/fuzoku-eigyo-5go-game-center-amusement-kyoka-youken-nagare（2026-10-29・21日・URL が Google に認識されていません）
+- https://luck428.com/legal/column/fuzoku-eigyo-5go-game-center-amusement-kyoka-youken-nagare（2026-10-29・21日・検出 - インデックス未登録）
 - https://luck428.com/legal/column/souzokubun-torimodoshiken-minpo-905jo-daisansha-joto（2026-10-29・21日・検出 - インデックス未登録）
-- https://luck428.com/column/kaigotsuki-yuryo-home-tokutei-shisetsu-bukken-youken（2026-10-30・20日・URL が Google に認識されていません）
+- https://luck428.com/column/kaigotsuki-yuryo-home-tokutei-shisetsu-bukken-youken（2026-10-30・20日・検出 - インデックス未登録）
 - https://luck428.com/column/souzoku-kaimodoshi-tokuyaku-karitouki-massho-baikyaku（2026-10-30・20日・URL が Google に認識されていません）
-- https://luck428.com/labor/column/tokutei-ginou-kensetsu-ukeire-roumu-gekkyu-ccus（2026-10-30・20日・URL が Google に認識されていません）
-- https://luck428.com/legal/column/chuka-taiwan-nihon-hojin-seisan-tettai-zairyu-touki（2026-10-30・20日・URL が Google に認識されていません）
+- https://luck428.com/labor/column/tokutei-ginou-kensetsu-ukeire-roumu-gekkyu-ccus（2026-10-30・20日・検出 - インデックス未登録）
+- https://luck428.com/legal/column/chuka-taiwan-nihon-hojin-seisan-tettai-zairyu-touki（2026-10-30・20日・検出 - インデックス未登録）
 - https://luck428.com/legal/column/tabako-kouri-hanbai-kyoka-kyori-kijun-nagare（2026-10-30・20日・URL が Google に認識されていません）
 - https://luck428.com/column/mujin-24ji-fitness-gym-bukken-youto-shobo-hinan（2026-10-31・19日・URL が Google に認識されていません）
-- https://luck428.com/column/souzoku-suiro-akamichi-houteigai-kokyobutsu-baikyaku（2026-10-31・19日・URL が Google に認識されていません）
+- https://luck428.com/column/souzoku-suiro-akamichi-houteigai-kokyobutsu-baikyaku（2026-10-31・19日・検出 - インデックス未登録）
 - https://luck428.com/labor/column/keizoku-koyo-rousikyotei-keikasochi-shuryo-2025（2026-10-31・19日・検出 - インデックス未登録）
-- https://luck428.com/labor/column/nenshousha-18sai-miman-shinya-jikangai-seigen-roumu（2026-10-31・19日・URL が Google に認識されていません）
-- https://luck428.com/legal/column/akiya-3000man-kakuninsho-shutoku-tetsuzuki-hisouzokunin-kyojuyo（2026-10-31・19日・検出 - インデックス未登録）
+- https://luck428.com/labor/column/nenshousha-18sai-miman-shinya-jikangai-seigen-roumu（2026-10-31・19日・検出 - インデックス未登録）
+- https://luck428.com/legal/column/akiya-3000man-kakuninsho-shutoku-tetsuzuki-hisouzokunin-kyojuyo（2026-10-31・19日・URL が Google に認識されていません）
 - https://luck428.com/legal/column/lpgas-hanbai-jigyo-touroku-ekisekiho-hoan（2026-10-31・19日・検出 - インデックス未登録）
-- https://luck428.com/column/souzoku-toshikeikaku-douro-yoteichi-seigen-baikyaku（2026-11-01・18日・URL が Google に認識されていません）
+- https://luck428.com/column/souzoku-toshikeikaku-douro-yoteichi-seigen-baikyaku（2026-11-01・18日・検出 - インデックス未登録）
 - https://luck428.com/labor/column/kaigai-saiyo-nyukoku-mae-naitei-coe-machi-roumu（2026-11-01・18日・URL が Google に認識されていません）
-- https://luck428.com/labor/column/seizogyo-kotai-kinmu-henkei-roudoujikan-shinya-roumu（2026-11-01・18日・URL が Google に認識されていません）
-- https://luck428.com/legal/column/kitchen-car-shokuhin-eigyo-kyoka-shikomi-basho-yoken（2026-11-01・18日・URL が Google に認識されていません）
+- https://luck428.com/labor/column/seizogyo-kotai-kinmu-henkei-roudoujikan-shinya-roumu（2026-11-01・18日・検出 - インデックス未登録）
+- https://luck428.com/legal/column/kitchen-car-shokuhin-eigyo-kyoka-shikomi-basho-yoken（2026-11-01・18日・検出 - インデックス未登録）
 - https://luck428.com/legal/column/shozaitou-fumei-kyoyusha-mochibun-shutoku-262jo2（2026-11-01・18日・検出 - インデックス未登録）
 - https://luck428.com/labor/column/butsuryu-souko-ec-center-hendo-henkei-roudoujikan-tanjikan-roumu（2026-11-02・17日・URL が Google に認識されていません）
 - https://luck428.com/legal/column/shiin-zoyo-keiyaku-yuigon-chigai-fudosan-karitouki（2026-11-02・17日・検出 - インデックス未登録）
 - https://luck428.com/legal/column/takuchi-tatemono-torihikigyo-menkyo-shinsei-senin-takkenshi-jimusho（2026-11-02・17日・検出 - インデックス未登録）
 - https://luck428.com/labor/column/gaikokujin-zairyu-shinseichu-shuro-tokurei-2kagetsu（2026-11-03・16日・URL が Google に認識されていません）
-- https://luck428.com/labor/column/reizo-reito-souko-teion-sagyo-roumu-anzeneisei（2026-11-03・16日・URL が Google に認識されていません）
-- https://luck428.com/legal/column/koatsugas-hanbai-daiisshu-furon-juten-kaishu-touroku（2026-11-03・16日・検出 - インデックス未登録）
-- https://luck428.com/legal/column/kodo-senmonshoku-2go-ikou-youken-chuka-taiwan（2026-11-03・16日・検出 - インデックス未登録）
+- https://luck428.com/labor/column/reizo-reito-souko-teion-sagyo-roumu-anzeneisei（2026-11-03・16日・検出 - インデックス未登録）
+- https://luck428.com/legal/column/koatsugas-hanbai-daiisshu-furon-juten-kaishu-touroku（2026-11-03・16日・URL が Google に認識されていません）
+- https://luck428.com/legal/column/kodo-senmonshoku-2go-ikou-youken-chuka-taiwan（2026-11-03・16日・URL が Google に認識されていません）
 - https://luck428.com/labor/column/callcenter-shift-shinya-zaitaku-roudoujikan-roumu（2026-11-04・15日・URL が Google に認識されていません）
 - https://luck428.com/legal/column/fuzoku-eigyo-2go-3go-teishoudo-kukakuseki-kyoka（2026-11-04・15日・URL が Google に認識されていません）
-- https://luck428.com/legal/column/gaikokuseki-souzokunin-houtei-souzoku-ichiran-zu-kahi（2026-11-04・15日・URL が Google に認識されていません）
-- https://luck428.com/labor/column/chugoku-chuzai-tekiyo-shomeisho-encho-5nen-koe-shakaihosho（2026-11-05・14日・検出 - インデックス未登録）
-- https://luck428.com/labor/column/tsukin-saigai-daisansha-koui-saigai-jibaiseki-rosai（2026-11-05・14日・URL が Google に認識されていません）
-- https://luck428.com/legal/column/souzoku-fuzoku-eigyo-kyoka-shoukei-minashi-todokede（2026-11-05・14日・検出 - インデックス未登録）
+- https://luck428.com/legal/column/gaikokuseki-souzokunin-houtei-souzoku-ichiran-zu-kahi（2026-11-04・15日・検出 - インデックス未登録）
+- https://luck428.com/labor/column/chugoku-chuzai-tekiyo-shomeisho-encho-5nen-koe-shakaihosho（2026-11-05・14日・URL が Google に認識されていません）
+- https://luck428.com/labor/column/tsukin-saigai-daisansha-koui-saigai-jibaiseki-rosai（2026-11-05・14日・検出 - インデックス未登録）
+- https://luck428.com/legal/column/souzoku-fuzoku-eigyo-kyoka-shoukei-minashi-todokede（2026-11-05・14日・URL が Google に認識されていません）
 - https://luck428.com/column/shika-shinryojo-bukken-x-sen-boigo-kaisetsu-todokede（2026-11-06・13日・検出 - インデックス未登録）
-- https://luck428.com/column/souzoku-koujou-asbestos-kaitai-genjo-baikyaku（2026-11-06・13日・URL が Google に認識されていません）
-- https://luck428.com/labor/column/drugstore-tenpo-hanbai-toroku-hanbaisha-shift-roumu（2026-11-06・13日・URL が Google に認識されていません）
+- https://luck428.com/column/souzoku-koujou-asbestos-kaitai-genjo-baikyaku（2026-11-06・13日・検出 - インデックス未登録）
 - https://luck428.com/legal/column/ippan-kashikiri-ryokaku-bus-kyoka-youken-nagare（2026-11-06・13日・URL が Google に認識されていません）
-- https://luck428.com/legal/column/tokutei-ginou-1go-2go-ikou-zairyu-henko-youken（2026-11-06・13日・URL が Google に認識されていません）
+- https://luck428.com/legal/column/tokutei-ginou-1go-2go-ikou-zairyu-henko-youken（2026-11-06・13日・検出 - インデックス未登録）
 - https://luck428.com/labor/column/ringyo-roumu-roudoujikan-41jo-bakuboku-tokubetsu-kyoiku（2026-11-07・12日・URL が Google に認識されていません）
 - https://luck428.com/legal/column/nochi-shoyu-tekikaku-hojin-setsuritsu-youken-nogyo-sannyu（2026-11-07・12日・URL が Google に認識されていません）
-- https://luck428.com/legal/column/kazoku-taizai-zairyu-shikakugai-katsudo-28jikan-yobiyose（2026-11-08・11日・URL が Google に認識されていません）
-- https://luck428.com/labor/column/zairyu-card-kakunin-fuho-shuro-josei-koyonushi-gimu（2026-11-09・10日・URL が Google に認識されていません）
+- https://luck428.com/legal/column/kazoku-taizai-zairyu-shikakugai-katsudo-28jikan-yobiyose（2026-11-08・11日・検出 - インデックス未登録）
+- https://luck428.com/labor/column/zairyu-card-kakunin-fuho-shuro-josei-koyonushi-gimu（2026-11-09・10日・検出 - インデックス未登録）
 - https://luck428.com/labor/column/kaigo-ridatsu-boshi-kojin-shuchi-ikoukakunin-2025（2026-11-11・8日・URL が Google に認識されていません）
-- https://luck428.com/labor/column/roukisho-rinken-zesei-kankoku-taio-roumu（2026-11-12・7日・URL が Google に認識されていません）
-- https://luck428.com/labor/column/kazoku-taizai-haigusha-part-28jikan-shikaku-gai-shakaihoken-roumu（2026-11-16・3日・URL が Google に認識されていません）
+- https://luck428.com/labor/column/roukisho-rinken-zesei-kankoku-taio-roumu（2026-11-12・7日・検出 - インデックス未登録）
+- https://luck428.com/labor/column/kazoku-taizai-haigusha-part-28jikan-shikaku-gai-shakaihoken-roumu（2026-11-16・3日・検出 - インデックス未登録）
