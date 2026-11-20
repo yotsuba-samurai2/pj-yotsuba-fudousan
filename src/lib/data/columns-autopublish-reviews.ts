@@ -1921,5 +1921,197 @@ export const COLUMNS_AUTOPUBLISH_REVIEWS: readonly ColumnQualityReview[] = [
     },
     "reviewedAt": "2026-11-19",
     "validThrough": "2026-11-21"
+  },
+  {
+    "key": "realestate:nokotsudo-okunai-biru-bukken-youto-boushika-kenchiku",
+    "fingerprint": "9c3e77bec47ea01784fc4b75e9f9b434bbcec0a8be91480080fd84fc58507d84",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://laws.e-gov.go.jp/api/1/lawdata/323AC0000000048",
+        "checkedAt": "2026-11-20",
+        "relevantClaim": "墓地、埋葬等に関する法律 第2条第6項＝納骨堂は都道府県知事の許可を受けた焼骨収蔵施設、第10条第1項＝墓地・納骨堂・火葬場の経営は都道府県知事の許可。e-Gov APIで条文本文を直接確認、記事の記載と一致。",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/api/1/lawdata/325AC0000000201",
+        "checkedAt": "2026-11-20",
+        "relevantClaim": "建築基準法 第2条第2号（特殊建築物・その他これらに類する用途）・第48条別表第二（用途地域制限）・第87条第1項（用途変更して法第6条第1項第一号の特殊建築物＝200㎡超とする場合の確認申請準用）。別表第二に『納骨堂』の明示区分がなく実態判断とする記事の整理は妥当。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/44805802692"
+    },
+    "reviewedAt": "2026-11-21",
+    "validThrough": "2026-11-23"
+  },
+  {
+    "key": "realestate:chugokugo-buyer-yoheki-gakechi-dd-anzensei",
+    "fingerprint": "9e3582917c586774f2bed123232f1c79f6450cc81e6bd8b5334c816af9518751",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.mlit.go.jp/toshi/web/morido.html",
+        "checkedAt": "2026-11-20",
+        "relevantClaim": "宅地造成及び特定盛土等規制法（盛土規制法）は旧・宅地造成等規制法を令和4年法律第55号で改正、令和5年（2023年）5月26日施行。国交省・農水省共管。記事の施行日・改正根拠と一致。",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/api/1/lawdata/325CO0000000338",
+        "checkedAt": "2026-11-20",
+        "relevantClaim": "建築基準法施行令 第138条第1項（高さ2m超の擁壁は法第88条第1項の政令指定工作物＝建築確認・完了検査の対象）・第142条（擁壁の技術基準：鉄筋コンクリート造等・水抜穴・構造計算。令142条1項3号の水抜穴を含む）。公的審査基準（福岡市・鹿児島県）でも裏付け確認、記事と一致。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/44805802692"
+    },
+    "reviewedAt": "2026-11-21",
+    "validThrough": "2026-11-23"
+  },
+  {
+    "key": "legal:jikayousha-katsuyo-jigyo-rideshare-kyoka",
+    "fingerprint": "9f285ecb5f31f71194f9566167cf5db8f3ce54066cfcfdf15ccffd4fb41bfae9",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://laws.e-gov.go.jp/api/1/lawdata/326AC0000000183",
+        "checkedAt": "2026-11-20",
+        "relevantClaim": "道路運送法 第78条＝自家用自動車の有償運送の原則禁止と例外。第2号＝自家用有償旅客運送（第79条の登録）、第3号＝国土交通大臣の許可を受けて地域又は期間を限定して運送。号の割当て（2号＝登録・3号＝許可）をe-Gov本文（附則の参照含む）で確認、記事と一致。",
+        "verified": true
+      },
+      {
+        "url": "https://www.mlit.go.jp/sogoseisaku/transport/content/001892264.pdf",
+        "checkedAt": "2026-11-20",
+        "relevantClaim": "自家用車活用事業（日本版ライドシェア）は道路運送法第78条第3号を根拠に令和6年3月創設、タクシー事業者が管理主体で運送責任を負う、第一種運転免許で足りる、国交省が地域・時期・時間帯と不足車両数を指定。国交省資料で確認、記事の制度説明と一致。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/44805802692"
+    },
+    "reviewedAt": "2026-11-21",
+    "validThrough": "2026-11-23"
+  },
+  {
+    "key": "legal:shichiya-eigyo-kyoka-koan-iinkai-youken",
+    "fingerprint": "8d16839eb6c3f8519d0a6bb722c66bc33899b44db06f5e8fff4c3be5e8f1f5d1",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://laws.e-gov.go.jp/api/1/lawdata/325AC0000000158",
+        "checkedAt": "2026-11-20",
+        "relevantClaim": "質屋営業法 第16条第2項＝流質期限は質契約成立の日から3月未満（取扱営業者は1月未満）としてはならない、第18条第1項＝流質期限経過で質物の所有権取得、第3条第1項第1号＝拘禁刑以上の刑の執行終了後3年未経過者は欠格、第2条第1項・第13条第1項の委任先は『内閣府令』。e-Gov APIで全条文を直接確認、記事と一致（拘禁刑への改正語も現行に反映）。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/44805802692"
+    },
+    "reviewedAt": "2026-11-21",
+    "validThrough": "2026-11-23"
+  },
+  {
+    "key": "labor:koshu-yokujo-sauna-roudoujikan-shinya-anzeneisei-roumu",
+    "fingerprint": "2053446f63e53dd0a7bfccf40dd9bab8bd99be877e107c1b5e60e10f4ae01ca6",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://jsite.mhlw.go.jp/miyazaki-roudoukyoku/content/contents/002251187.pdf",
+        "checkedAt": "2026-11-20",
+        "relevantClaim": "労働安全衛生規則第612条の2（熱中症対策）は令和7年厚生労働省令第57号で新設、令和7年（2025年）6月1日施行。対象はWBGT28度以上又は気温31度以上で連続1時間以上又は1日4時間超の作業。報告体制整備・悪化防止手順・周知を義務化。施行通達は基発0520第6号。労働局資料で確認、記事の数値・施行日と一致。",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/api/1/lawdata/322AC0000000049",
+        "checkedAt": "2026-11-20",
+        "relevantClaim": "労働基準法 第61条第1項＝満18歳未満は午後10時〜午前5時使用禁止（交替制の満16歳以上男性を除く）、第37条第4項＝深夜（午後10時〜午前5時）割増2割5分以上、第60条第1項＝変形労働時間制・第36条を満18歳未満に不適用。e-Gov APIで条文確認、記事と一致。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/44805802692"
+    },
+    "reviewedAt": "2026-11-21",
+    "validThrough": "2026-11-23"
+  },
+  {
+    "key": "labor:amusement-game-center-nenshousha-henkei-shift-roumu",
+    "fingerprint": "cd0960caac98943b705865b99e16457d157f5609675574582aa2dac8ef620867",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://laws.e-gov.go.jp/api/1/lawdata/323AC0000000122",
+        "checkedAt": "2026-11-20",
+        "relevantClaim": "風営法 第22条第1項第4号＝営業所で午後10時から翌日午前6時に18歳未満を客に接する業務に従事させる禁止、第5号＝5号営業では午後10時〜翌日午前6時の客としての立入り制限、第2条第1項第5号＝ゲーム機を備え客に遊技させる営業の定義。e-Gov APIで時間帯（午後10時〜翌日午前6時）を直接確認、記事の労基法（午後10時〜午前5時）との時間帯ずれの整理と一致。",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/api/1/lawdata/322AC0000000049",
+        "checkedAt": "2026-11-20",
+        "relevantClaim": "労働基準法 第60条第1項（満18歳未満への変形労働時間制・第36条不適用）・第61条第1項（深夜業禁止・交替制満16歳以上男性の例外）・第56条（最低年齢）・第37条第4項（深夜割増）。e-Gov APIで確認、記事と一致。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/44805802692"
+    },
+    "reviewedAt": "2026-11-21",
+    "validThrough": "2026-11-23"
   }
 ];

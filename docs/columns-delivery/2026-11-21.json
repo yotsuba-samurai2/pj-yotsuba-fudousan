@@ -1,0 +1,90 @@
+{
+  "todayJst": "2026-11-21",
+  "runUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/44805802692",
+  "generationStatus": "validated",
+  "generatedCount": 6,
+  "reviewResult": "success",
+  "reviewReportAvailable": true,
+  "reviewPass": true,
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "minor": 1
+  },
+  "reviewFindings": [
+    {
+      "file": "scripts/realestate-columns/en/186-chugokugo-buyer-yoheki-gakechi-dd-anzensei.md",
+      "severity": "minor",
+      "issue": "本文冒頭の関連記事リンクで、日本語原稿・zh-tw版にある売主向け記事 /column/gake-yoheki-tochi-baikyaku-bunkyo への内部リンクが en 版・zh 版で欠落している。カニバリ回避の説明で区別対象としている記事への導線が2言語で失われており、4言語間で内部リンク構成が不一致。内容・法的主張の相違ではなく導線の欠落。",
+      "fix": "en/186 と zh/186 の導入段落に、他2言語と同じく gake-yoheki-tochi-baikyaku-bunkyo への絶対URL内部リンク（/en/・/zh/ 前置）を追加して4言語で揃える。"
+    }
+  ],
+  "registeredCount": 6,
+  "qualityEligibleCount": 6,
+  "heldCount": 0,
+  "scheduledCount": 0,
+  "unverifiedSourceCount": 0,
+  "publishedCount": null,
+  "articles": [
+    {
+      "key": "realestate:nokotsudo-okunai-biru-bukken-youto-boushika-kenchiku",
+      "fingerprint": "9c3e77bec47ea01784fc4b75e9f9b434bbcec0a8be91480080fd84fc58507d84",
+      "title": "屋内納骨堂（ビル型）の物件は、用途地域・建築・消防で何を確認するのか？",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "realestate:chugokugo-buyer-yoheki-gakechi-dd-anzensei",
+      "fingerprint": "9e3582917c586774f2bed123232f1c79f6450cc81e6bd8b5334c816af9518751",
+      "title": "中国語圏の買主が崖地・擁壁付き物件を買うとき、安全性のデューデリで何を確認するのか？",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:jikayousha-katsuyo-jigyo-rideshare-kyoka",
+      "fingerprint": "9f285ecb5f31f71194f9566167cf5db8f3ce54066cfcfdf15ccffd4fb41bfae9",
+      "title": "日本版ライドシェア（自家用車活用事業）を始めるには、どんな許可が要るのか？",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:shichiya-eigyo-kyoka-koan-iinkai-youken",
+      "fingerprint": "8d16839eb6c3f8519d0a6bb722c66bc33899b44db06f5e8fff4c3be5e8f1f5d1",
+      "title": "質屋を開業するには、公安委員会の許可で何が要るのか？",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:koshu-yokujo-sauna-roudoujikan-shinya-anzeneisei-roumu",
+      "fingerprint": "2053446f63e53dd0a7bfccf40dd9bab8bd99be877e107c1b5e60e10f4ae01ca6",
+      "title": "サウナ・公衆浴場を開業するとき、深夜営業と長時間の労務はどう設計するのか",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:amusement-game-center-nenshousha-henkei-shift-roumu",
+      "fingerprint": "cd0960caac98943b705865b99e16457d157f5609675574582aa2dac8ef620867",
+      "title": "ゲームセンター（アミューズメント施設）の労務は、年少者とシフトでどこに注意するのか",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    }
+  ]
+}

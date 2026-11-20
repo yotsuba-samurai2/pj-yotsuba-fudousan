@@ -1,45 +1,28 @@
-# コラム生成・レビュー・公開判定（2026-11-20）
+# コラム生成・レビュー・公開判定（2026-11-21）
 
 - 生成・機械検証：成功 6本
-- レビュー処理：success ／ 判定：false
-- レビュー指摘：blocker 0／major 2／minor 1
-- 今回の候補指紋に対応する公開証跡登録：0本
-- 自動公開の品質候補：0本
-- 品質保留：6本 ／ 公開日待ち：0本
-- 未確認の一次資料：1件
+- レビュー処理：success ／ 判定：true
+- レビュー指摘：blocker 0／major 0／minor 1
+- 今回の候補指紋に対応する公開証跡登録：6本
+- 自動公開の品質候補：6本
+- 品質保留：0本 ／ 公開日待ち：0本
+- 未確認の一次資料：0件
 - 本番公開：この処理では実行していません。公開済み件数は未照会です。
 
-正午の自動公開に渡せる品質候補は0本です。6本は保留、0本は公開日待ちです。
+6本は品質確認済み候補です。手動保留・既存DB・公開日・有効期限を公開実行時に再判定します。公開完了は実行結果で確認してください。
 未確認記事の品質保留はforceでも解除しません。
 
 ## 記事別の判定
 
-- 自立訓練（生活訓練・機能訓練）の事業所物件は、どの用途地域・面積・消防で探せばよいですか：held（realestate:jiritsu-kunren-jigyosho-bukken-youto-chiiki-shobo）
-  - 公開レビュー記録が未登録です
-  - 独立レビューに未解決の重大な指摘があります
-- 自立訓練（生活訓練・機能訓練）の指定申請は、どの要件をどの順番で満たしますか：held（legal:jiritsu-kunren-seikatsu-kinou-shitei-shinsei-youken）
-  - 公開レビュー記録が未登録です
-  - 独立レビューに未解決の重大な指摘があります
-- 中国・台湾の高齢の親を日本に呼び寄せるとき、特定活動（老親扶養）はどこまで認められますか：held（legal:tokutei-katsudo-rooshin-fuyo-yobiyose-chuka-taiwan）
-  - 公開レビュー記録が未登録です
-  - 独立レビューに未解決の重大な指摘があります
-- 特別方式の遺言には4種類ある――危急時遺言と隔絶地遺言は何が違い、どれに家庭裁判所の確認が要りますか：held（legal:kikyuji-yuigon-tokubetsu-houshiki-youken-kakunin-shinpan）
-  - 公開レビュー記録が未登録です
-  - 候補指紋と修正後原稿が一致しません
-  - 独立レビューの証跡不足、重複、またはレビュー後の原稿変更
-- 自立訓練の事業所を開くとき、人員配置と常勤換算・サビ管の労務はどう組みますか：held（labor:jiritsu-kunren-jinin-haichi-jokin-kansan-sabikan-roumu）
-  - 公開レビュー記録が未登録です
-  - 候補指紋と修正後原稿が一致しません
-  - 独立レビューの証跡不足、重複、またはレビュー後の原稿変更
-  - 未確認一次資料：https://www.mhlw.go.jp/content/12401000/001523467.pdf — 年金制度改正法 施行日一覧（p.9/34）：賃金要件撤廃＝『公布から3年以内の政令で定める日』。企業規模要件撤廃＝36〜50人2027年10月・21〜35人2029年10月・11〜20人2032年10月・1〜10人2035年10月。『2026年10月〜』は新規加入者を支援する保険料負担軽減特例の開始時期。本文の『賃金要件は2026年10月に撤廃』は本文不一致。
-- 厚生年金の標準報酬月額の上限引上げ（2027年9月〜）は、給与計算にどう響きますか：held（labor:kousei-nenkin-hyojun-hoshu-getsugaku-jogen-hikiage-2027）
-  - 公開レビュー記録が未登録です
-  - 独立レビューに未解決の重大な指摘があります
+- 屋内納骨堂（ビル型）の物件は、用途地域・建築・消防で何を確認するのか？：quality-eligible（realestate:nokotsudo-okunai-biru-bukken-youto-boushika-kenchiku）
+- 中国語圏の買主が崖地・擁壁付き物件を買うとき、安全性のデューデリで何を確認するのか？：quality-eligible（realestate:chugokugo-buyer-yoheki-gakechi-dd-anzensei）
+- 日本版ライドシェア（自家用車活用事業）を始めるには、どんな許可が要るのか？：quality-eligible（legal:jikayousha-katsuyo-jigyo-rideshare-kyoka）
+- 質屋を開業するには、公安委員会の許可で何が要るのか？：quality-eligible（legal:shichiya-eigyo-kyoka-koan-iinkai-youken）
+- サウナ・公衆浴場を開業するとき、深夜営業と長時間の労務はどう設計するのか：quality-eligible（labor:koshu-yokujo-sauna-roudoujikan-shinya-anzeneisei-roumu）
+- ゲームセンター（アミューズメント施設）の労務は、年少者とシフトでどこに注意するのか：quality-eligible（labor:amusement-game-center-nenshousha-henkei-shift-roumu）
 
 ## レビューの指摘
 
-- [major] scripts/labor-columns/217-jiritsu-kunren-jinin-haichi-jokin-kansan-sabikan-roumu.md：社会保険の短時間労働者適用拡大について『厚生労働省の資料によると、月8.8万円の賃金要件は2026年10月に撤廃が予定』と断定（4言語とも）。厚労省公式資料（年金制度改正法 施行日一覧, 001523467.pdf p.9/34）では賃金要件撤廃は『公布から3年以内の政令で定める日』。2026年10月は別施策（新規加入者の保険料負担軽減の3年特例）の開始時期であり、賃金要件撤廃日ではない。施行日の誤断定かつ厚労省資料への誤帰属。 ／ 修正案：賃金要件撤廃の時期を『公布から3年以内の政令で定める日（最賃1,016円到達を見極めて施行）』に訂正し、2026年10月は保険料負担軽減特例の開始時期である旨に分離する。en/zh/zh-twも同様に訂正。
-- [major] scripts/legal-columns/180-kikyuji-yuigon-tokubetsu-houshiki-youken-kakunin-shinpan.md：カニバリ回避の前提が本文で不成立。plan.jsonは『特別方式（危急時遺言）の要件と確認審判を扱う記事は存在しない』とするが、既存の173（kikyuji-yuigon-shibo-kikyusha-minpo-976jo-kakunin）が民法976条・20日確認・983条失効・業際を正面から扱う。180のH2見出し5本中4本（証人口授筆記／20日確認審判／6か月失効／役割分担）が173と重複し、重複意図が残る。 ／ 修正案：180は難船(979)・隔絶地(977/978)・特別方式の分類と比較に軸足を移し、976条の要件詳細は173へ委譲する形にリライトするか、編集者が重複可否を判断する。
-- [minor] scripts/legal-columns/178-jiritsu-kunren-seikatsu-kinou-shitei-shinsei-youken.md：『指定権者は都道府県知事…（障害者総合支援法第36条第1項）』の帰属がやや緩い。指定権者（都道府県知事）の基礎は第29条第1項で、第36条は指定の申請・手続規定。実害はないが条項帰属の精度の点。 ／ 修正案：指定権者の根拠を第29条第1項、申請・手続を第36条として整理するとより正確。
+- [minor] scripts/realestate-columns/en/186-chugokugo-buyer-yoheki-gakechi-dd-anzensei.md：本文冒頭の関連記事リンクで、日本語原稿・zh-tw版にある売主向け記事 /column/gake-yoheki-tochi-baikyaku-bunkyo への内部リンクが en 版・zh 版で欠落している。カニバリ回避の説明で区別対象としている記事への導線が2言語で失われており、4言語間で内部リンク構成が不一致。内容・法的主張の相違ではなく導線の欠落。 ／ 修正案：en/186 と zh/186 の導入段落に、他2言語と同じく gake-yoheki-tochi-baikyaku-bunkyo への絶対URL内部リンク（/en/・/zh/ 前置）を追加して4言語で揃える。
 
-実行証跡：https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/44607431908
+実行証跡：https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/44805802692

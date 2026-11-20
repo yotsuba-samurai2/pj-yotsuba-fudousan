@@ -1,127 +1,88 @@
 {
-  "todayJst": "2026-11-20",
-  "runUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/44607431908",
+  "todayJst": "2026-11-21",
+  "runUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/44805802692",
   "generationStatus": "validated",
   "generatedCount": 6,
   "reviewResult": "success",
   "reviewReportAvailable": true,
-  "reviewPass": false,
+  "reviewPass": true,
   "findings": {
     "blocker": 0,
-    "major": 2,
+    "major": 0,
     "minor": 1
   },
   "reviewFindings": [
     {
-      "file": "scripts/labor-columns/217-jiritsu-kunren-jinin-haichi-jokin-kansan-sabikan-roumu.md",
-      "severity": "major",
-      "issue": "社会保険の短時間労働者適用拡大について『厚生労働省の資料によると、月8.8万円の賃金要件は2026年10月に撤廃が予定』と断定（4言語とも）。厚労省公式資料（年金制度改正法 施行日一覧, 001523467.pdf p.9/34）では賃金要件撤廃は『公布から3年以内の政令で定める日』。2026年10月は別施策（新規加入者の保険料負担軽減の3年特例）の開始時期であり、賃金要件撤廃日ではない。施行日の誤断定かつ厚労省資料への誤帰属。",
-      "fix": "賃金要件撤廃の時期を『公布から3年以内の政令で定める日（最賃1,016円到達を見極めて施行）』に訂正し、2026年10月は保険料負担軽減特例の開始時期である旨に分離する。en/zh/zh-twも同様に訂正。"
-    },
-    {
-      "file": "scripts/legal-columns/180-kikyuji-yuigon-tokubetsu-houshiki-youken-kakunin-shinpan.md",
-      "severity": "major",
-      "issue": "カニバリ回避の前提が本文で不成立。plan.jsonは『特別方式（危急時遺言）の要件と確認審判を扱う記事は存在しない』とするが、既存の173（kikyuji-yuigon-shibo-kikyusha-minpo-976jo-kakunin）が民法976条・20日確認・983条失効・業際を正面から扱う。180のH2見出し5本中4本（証人口授筆記／20日確認審判／6か月失効／役割分担）が173と重複し、重複意図が残る。",
-      "fix": "180は難船(979)・隔絶地(977/978)・特別方式の分類と比較に軸足を移し、976条の要件詳細は173へ委譲する形にリライトするか、編集者が重複可否を判断する。"
-    },
-    {
-      "file": "scripts/legal-columns/178-jiritsu-kunren-seikatsu-kinou-shitei-shinsei-youken.md",
+      "file": "scripts/realestate-columns/en/186-chugokugo-buyer-yoheki-gakechi-dd-anzensei.md",
       "severity": "minor",
-      "issue": "『指定権者は都道府県知事…（障害者総合支援法第36条第1項）』の帰属がやや緩い。指定権者（都道府県知事）の基礎は第29条第1項で、第36条は指定の申請・手続規定。実害はないが条項帰属の精度の点。",
-      "fix": "指定権者の根拠を第29条第1項、申請・手続を第36条として整理するとより正確。"
+      "issue": "本文冒頭の関連記事リンクで、日本語原稿・zh-tw版にある売主向け記事 /column/gake-yoheki-tochi-baikyaku-bunkyo への内部リンクが en 版・zh 版で欠落している。カニバリ回避の説明で区別対象としている記事への導線が2言語で失われており、4言語間で内部リンク構成が不一致。内容・法的主張の相違ではなく導線の欠落。",
+      "fix": "en/186 と zh/186 の導入段落に、他2言語と同じく gake-yoheki-tochi-baikyaku-bunkyo への絶対URL内部リンク（/en/・/zh/ 前置）を追加して4言語で揃える。"
     }
   ],
-  "registeredCount": 0,
-  "qualityEligibleCount": 0,
-  "heldCount": 6,
+  "registeredCount": 6,
+  "qualityEligibleCount": 6,
+  "heldCount": 0,
   "scheduledCount": 0,
-  "unverifiedSourceCount": 1,
+  "unverifiedSourceCount": 0,
   "publishedCount": null,
   "articles": [
     {
-      "key": "realestate:jiritsu-kunren-jigyosho-bukken-youto-chiiki-shobo",
-      "fingerprint": "fa18b062d6f8164b6b229d62ed5d3dafe14fb13c2a186c935056bd65b66931c2",
-      "title": "自立訓練（生活訓練・機能訓練）の事業所物件は、どの用途地域・面積・消防で探せばよいですか",
-      "registered": false,
-      "state": "held",
-      "reasons": [
-        "公開レビュー記録が未登録です",
-        "独立レビューに未解決の重大な指摘があります"
-      ],
+      "key": "realestate:nokotsudo-okunai-biru-bukken-youto-boushika-kenchiku",
+      "fingerprint": "9c3e77bec47ea01784fc4b75e9f9b434bbcec0a8be91480080fd84fc58507d84",
+      "title": "屋内納骨堂（ビル型）の物件は、用途地域・建築・消防で何を確認するのか？",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
       "sourceFailures": [],
       "sourceEvidenceAvailable": true
     },
     {
-      "key": "legal:jiritsu-kunren-seikatsu-kinou-shitei-shinsei-youken",
-      "fingerprint": "8e8d2d65a65b9bb45d1adc760f984bad844900473747d7268537270d395a8670",
-      "title": "自立訓練（生活訓練・機能訓練）の指定申請は、どの要件をどの順番で満たしますか",
-      "registered": false,
-      "state": "held",
-      "reasons": [
-        "公開レビュー記録が未登録です",
-        "独立レビューに未解決の重大な指摘があります"
-      ],
+      "key": "realestate:chugokugo-buyer-yoheki-gakechi-dd-anzensei",
+      "fingerprint": "9e3582917c586774f2bed123232f1c79f6450cc81e6bd8b5334c816af9518751",
+      "title": "中国語圏の買主が崖地・擁壁付き物件を買うとき、安全性のデューデリで何を確認するのか？",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
       "sourceFailures": [],
       "sourceEvidenceAvailable": true
     },
     {
-      "key": "legal:tokutei-katsudo-rooshin-fuyo-yobiyose-chuka-taiwan",
-      "fingerprint": "557813ec4a584ef3568398eca654307945c267e233c8795ce1a5b9f200913a51",
-      "title": "中国・台湾の高齢の親を日本に呼び寄せるとき、特定活動（老親扶養）はどこまで認められますか",
-      "registered": false,
-      "state": "held",
-      "reasons": [
-        "公開レビュー記録が未登録です",
-        "独立レビューに未解決の重大な指摘があります"
-      ],
+      "key": "legal:jikayousha-katsuyo-jigyo-rideshare-kyoka",
+      "fingerprint": "9f285ecb5f31f71194f9566167cf5db8f3ce54066cfcfdf15ccffd4fb41bfae9",
+      "title": "日本版ライドシェア（自家用車活用事業）を始めるには、どんな許可が要るのか？",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
       "sourceFailures": [],
       "sourceEvidenceAvailable": true
     },
     {
-      "key": "legal:kikyuji-yuigon-tokubetsu-houshiki-youken-kakunin-shinpan",
-      "fingerprint": "27a0f8db4363b75add811919102317b6a4bcfc3f8919c96c46c19ce09e504977",
-      "title": "特別方式の遺言には4種類ある――危急時遺言と隔絶地遺言は何が違い、どれに家庭裁判所の確認が要りますか",
-      "registered": false,
-      "state": "held",
-      "reasons": [
-        "公開レビュー記録が未登録です",
-        "候補指紋と修正後原稿が一致しません",
-        "独立レビューの証跡不足、重複、またはレビュー後の原稿変更"
-      ],
+      "key": "legal:shichiya-eigyo-kyoka-koan-iinkai-youken",
+      "fingerprint": "8d16839eb6c3f8519d0a6bb722c66bc33899b44db06f5e8fff4c3be5e8f1f5d1",
+      "title": "質屋を開業するには、公安委員会の許可で何が要るのか？",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
       "sourceFailures": [],
       "sourceEvidenceAvailable": true
     },
     {
-      "key": "labor:jiritsu-kunren-jinin-haichi-jokin-kansan-sabikan-roumu",
-      "fingerprint": "ae1f16d99b0defd32e0cdbed76049ce69a16e43ae34ebcbfc544da32d21020c8",
-      "title": "自立訓練の事業所を開くとき、人員配置と常勤換算・サビ管の労務はどう組みますか",
-      "registered": false,
-      "state": "held",
-      "reasons": [
-        "公開レビュー記録が未登録です",
-        "候補指紋と修正後原稿が一致しません",
-        "独立レビューの証跡不足、重複、またはレビュー後の原稿変更"
-      ],
-      "sourceFailures": [
-        {
-          "url": "https://www.mhlw.go.jp/content/12401000/001523467.pdf",
-          "checkedAt": "2026-11-19",
-          "relevantClaim": "年金制度改正法 施行日一覧（p.9/34）：賃金要件撤廃＝『公布から3年以内の政令で定める日』。企業規模要件撤廃＝36〜50人2027年10月・21〜35人2029年10月・11〜20人2032年10月・1〜10人2035年10月。『2026年10月〜』は新規加入者を支援する保険料負担軽減特例の開始時期。本文の『賃金要件は2026年10月に撤廃』は本文不一致。",
-          "verified": false
-        }
-      ],
+      "key": "labor:koshu-yokujo-sauna-roudoujikan-shinya-anzeneisei-roumu",
+      "fingerprint": "2053446f63e53dd0a7bfccf40dd9bab8bd99be877e107c1b5e60e10f4ae01ca6",
+      "title": "サウナ・公衆浴場を開業するとき、深夜営業と長時間の労務はどう設計するのか",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
       "sourceEvidenceAvailable": true
     },
     {
-      "key": "labor:kousei-nenkin-hyojun-hoshu-getsugaku-jogen-hikiage-2027",
-      "fingerprint": "a99e8b2e08f202921b9f51a515a4e1cb8c24bc97490e3313245cc96e1b080102",
-      "title": "厚生年金の標準報酬月額の上限引上げ（2027年9月〜）は、給与計算にどう響きますか",
-      "registered": false,
-      "state": "held",
-      "reasons": [
-        "公開レビュー記録が未登録です",
-        "独立レビューに未解決の重大な指摘があります"
-      ],
+      "key": "labor:amusement-game-center-nenshousha-henkei-shift-roumu",
+      "fingerprint": "cd0960caac98943b705865b99e16457d157f5609675574582aa2dac8ef620867",
+      "title": "ゲームセンター（アミューズメント施設）の労務は、年少者とシフトでどこに注意するのか",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
       "sourceFailures": [],
       "sourceEvidenceAvailable": true
     }

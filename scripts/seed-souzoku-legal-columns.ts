@@ -82,6 +82,20 @@ const AUTHOR = {
 
 /** 各記事が評価を集約すべきハブ（本文に必須の内部リンク）。verify() で機械検査する */
 const REQUIRED_HUB_LINKS: Record<string, string[]> = {
+  "jikayousha-katsuyo-jigyo-rideshare-kyoka": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/ippan-kashikiri-ryokaku-bus-kyoka-youken-nagare",
+    "/legal/column/kaigo-taxi-fukushi-yuso-kyoka-shako-yoken",
+  ],
+  "shichiya-eigyo-kyoka-koan-iinkai-youken": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/kobutsusho-kyoka-eigyosho-yoken",
+    "/legal/column/kashikin-gyo-touroku-yoken-shunin-junshisan",
+  ],
   "jiritsu-kunren-seikatsu-kinou-shitei-shinsei-youken": [
     "/legal/services",
     "/legal/nagare",
@@ -1577,6 +1591,29 @@ function matchesRequiredPhrase(content: string, phrase: string): boolean {
 
 /** 記事ごとに必ず含めるべき表現（機械ゲート。最低限の合否判定） */
 const REQUIRED_PHRASES: Record<string, string[]> = {
+  "jikayousha-katsuyo-jigyo-rideshare-kyoka": [
+    "道路運送法第78条",
+    "道路運送法第79条",
+    "自家用車活用事業",
+    "自家用有償旅客運送",
+    "国土交通大臣の許可",
+    "別々にご契約",
+    "独立した事業体",
+    "別事業体",
+    "紹介料を受け取りません",
+  ],
+  "shichiya-eigyo-kyoka-koan-iinkai-youken": [
+    "質屋営業法第1条",
+    "質屋営業法第2条",
+    "質屋営業法第3条",
+    "公安委員会",
+    "古物営業法",
+    "流質期限",
+    "別々にご契約",
+    "独立した事業体",
+    "別事業体",
+    "紹介料を受け取りません",
+  ],
   "jiritsu-kunren-seikatsu-kinou-shitei-shinsei-youken": [
     "障害者総合支援法第36条",
     "指定障害福祉サービス事業者",
@@ -4566,6 +4603,8 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
 
 /** 記事ごとに含めてはならない表現 */
 const FORBIDDEN_PHRASES: Record<string, string[]> = {
+  "jikayousha-katsuyo-jigyo-rideshare-kyoka": [],
+  "shichiya-eigyo-kyoka-koan-iinkai-youken": [],
   "jiritsu-kunren-seikatsu-kinou-shitei-shinsei-youken": [],
   "tokutei-katsudo-rooshin-fuyo-yobiyose-chuka-taiwan": [],
   "kikyuji-yuigon-tokubetsu-houshiki-youken-kakunin-shinpan": [],
@@ -9354,6 +9393,59 @@ const ARTICLES: Array<{
       "経営・管理",
       "在留資格",
       "許認可",
+      "行政書士",
+    ],
+  },
+  {
+    file: "181-jikayousha-katsuyo-jigyo-rideshare-kyoka.md",
+    slug: "jikayousha-katsuyo-jigyo-rideshare-kyoka",
+    date: "2026-11-20",
+    title:
+      "日本版ライドシェア（自家用車活用事業）を始めるには、どんな許可が要るのか？",
+    category: "許認可・開業の手続き（行政書士の実務から）",
+    excerpt:
+      "いわゆる「日本版ライドシェア」は、道路運送法上の自家用車活用事業です。タクシーが不足する地域・時期・時間帯に限り、タクシー事業者の管理のもとで一般ドライバーが自家用車で有償運送を行います。根拠は道路運送法（昭和26年法律第183号）第78条第3号で、原則として有償運送が禁じられる自家用自動車について、公共の福祉を確保するためやむを得ない場合に、国土交通大臣の許可を受けて地域又は期間を限定して運送の用に供します（参照日 2026-11-20）。これは市町村・NPO法人等が行う自家用有償旅客運送（第78条第2号。第79条の登録を受けて行う）とは、根拠号も手続（許可か登録か）も担い手も異なります。自家用車活用事業は令和6年（2024年）3月に制度が創設され、同年4月から運送が始まりました。許可・登録の申請書類の作成は行政書士、運行管理・車両整備管理・配車アプリの運用はタクシー事業者と運行管理者、雇用するドライバーの労務管理・社会保険は社会保険労務士、事故時の損害賠償は弁護士、任意保険は損害保険会社が、それぞれ独立した事業体として別々にご契約のうえ対応する分離受任の枠組みを整理しました。",
+    keywords: [
+      "日本版ライドシェア 自家用車活用事業 道路運送法78条3号",
+      "自家用車活用事業 自家用有償旅客運送 違い 78条2号 79条",
+      "自家用車活用事業 国土交通大臣 許可 タクシー事業者 運送責任",
+      "日本版ライドシェア ドライバー 第一種免許 第二種免許",
+      "自家用車活用事業 地域 時間帯 不足車両数 指定",
+      "日本版ライドシェア 許可申請 行政書士",
+    ],
+    tags: [
+      "道路運送法",
+      "自家用車活用事業",
+      "日本版ライドシェア",
+      "自家用有償旅客運送",
+      "業際",
+      "行政書士",
+    ],
+  },
+  {
+    file: "182-shichiya-eigyo-kyoka-koan-iinkai-youken.md",
+    slug: "shichiya-eigyo-kyoka-koan-iinkai-youken",
+    date: "2026-11-20",
+    title:
+      "質屋を開業するには、公安委員会の許可で何が要るのか？",
+    category: "許認可・開業の手続き（行政書士の実務から）",
+    excerpt:
+      "質屋を開業するには、営業所ごとに、その所在地を管轄する都道府県公安委員会の許可を受けなければなりません（質屋営業法〔昭和25年法律第158号〕第2条第1項。参照日 2026-11-20）。質屋営業とは、物品を質に取り、流質期限までに弁済を受けないときはその質物をもって弁済に充てる約款を付して、金銭を貸し付ける営業です（同法第1条第1項）。許可は、法律が定める欠格事由（第3条第1項第1号〜第11号）のいずれかに当たると受けられません。拘禁刑以上の刑の執行を終えて3年を経過しない者、破産手続開始の決定を受けて復権を得ない者、保管設備の基準（第7条）に適合しない者などが例です。開業後も、帳簿の記載・保存（第13条・第14条）、流質期限や掲示（第16条）、流質物の所有権取得（第18条）などの義務が続きます。古物を売買・交換する古物商許可（古物営業法）とは、根拠法も営業の中身も別の許可です。許可申請書類の作成は行政書士、店舗物件は宅地建物取引業者、貸付金利・会計は税理士、流質・取引の紛争は弁護士が、それぞれ独立した事業体として別々にご契約のうえ対応する分離受任の枠組みを整理しました。",
+    keywords: [
+      "質屋 開業 許可 公安委員会 質屋営業法2条",
+      "質屋営業 欠格事由 質屋営業法3条 拘禁刑 破産",
+      "質屋 保管設備 基準 質屋営業法7条 物的要件",
+      "質屋 帳簿 流質期限 3月 質屋営業法16条 18条",
+      "質屋営業許可 古物商許可 違い 古物営業法",
+      "質屋 開業 許可申請 行政書士",
+    ],
+    tags: [
+      "質屋営業法",
+      "質屋営業許可",
+      "公安委員会",
+      "流質",
+      "古物営業法",
+      "業際",
       "行政書士",
     ],
   },

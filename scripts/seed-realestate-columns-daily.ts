@@ -3768,6 +3768,46 @@ const ARTICLES: ArticleSpec[] = [
     localesWithTranslations: ["en", "zh-tw", "zh"],
     hubLinks: ["/toushi", "/office"],
   },
+  {
+    file: "185-nokotsudo-okunai-biru-bukken-youto-boushika-kenchiku.md",
+    slug: "nokotsudo-okunai-biru-bukken-youto-boushika-kenchiku",
+    title: "屋内納骨堂（ビル型）の物件は、用途地域・建築・消防で何を確認するのか？",
+    publishedAt: "2026-11-20",
+    category: "投資・事業用不動産",
+    excerpt:
+      "屋内納骨堂（ビル型・ロッカー式・自動搬送式）の物件で、不動産会社が契約前に確認できるのは用途地域・建築確認・消防という物件側の3点までです。別表第二に「納骨堂」の明示区分はなく、寺院付属か独立施設かで用途地域の可否が分かれうるため特定行政庁へ照会します。経営許可（墓地、埋葬等に関する法律第10条第1項）は行政書士、宗教法人の登記は司法書士、構造は建築士へ分離受任で振り分けます。東京都文京区の宅地建物取引士兼行政書士が条文から整理します。",
+    keywords: [
+      "納骨堂 物件 用途地域",
+      "ビル型 納骨堂 建築確認",
+      "納骨堂 消防法 施行令別表第一",
+      "納骨堂 経営許可 墓地埋葬法 10条",
+      "納骨堂 用途変更 確認申請",
+    ],
+    tags: ["事業用不動産", "許認可", "用途地域", "消防法"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/toushi", "/office"],
+  },
+  {
+    file: "186-chugokugo-buyer-yoheki-gakechi-dd-anzensei.md",
+    slug: "chugokugo-buyer-yoheki-gakechi-dd-anzensei",
+    title: "中国語圏の買主が崖地・擁壁付き物件を買うとき、安全性のデューデリで何を確認するのか？",
+    publishedAt: "2026-11-20",
+    category: "投資・事業用不動産",
+    excerpt:
+      "擁壁・崖地付きの物件を買う前に、不動産仲介・重要事項説明で確認できるのは「盛土規制法の規制区域内か」「擁壁の検査済証・確認済証があるか」「がけ条例が建て替えにどう効くか」の3点です。擁壁そのものが構造的に安全かの判断は不動産仲介の範囲ではなく建築士・土木の専門家へ、価格評価は不動産鑑定士、非居住者の源泉徴収を含む税務は税理士へ分離受任で振り分けます。東京都文京区の宅地建物取引士兼行政書士が、中国語圏のプロ買主向けに条文から整理します（繁体字・簡体字の各版の内部リンクは訳文の言語の絶対URL）。",
+    keywords: [
+      "擁壁 崖地 デューデリ 買主",
+      "盛土規制法 規制区域 擁壁",
+      "擁壁 検査済証 確認済証 高さ2メートル",
+      "がけ条例 東京都建築安全条例 6条",
+      "中国語 買主 擁壁 崖地 購入前確認",
+    ],
+    tags: ["投資・事業用不動産", "擁壁", "盛土規制法", "中国語"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/toushi"],
+  },
 ];
 
 function toPlainText(md: string): string {
