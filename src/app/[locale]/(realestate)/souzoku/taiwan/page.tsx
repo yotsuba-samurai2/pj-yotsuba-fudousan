@@ -34,7 +34,7 @@ const JA_ANSWER_BLOCK =
   "台湾籍の方が日本の不動産を相続するとき、また相続人の中に台湾在住の方がいるときは、日本と台湾の両方で戸籍関係の書類を集め、翻訳・認証を経て、遺産分割と不動産の手続きを進めることになります。台湾は日本と同じく戸籍制度のある数少ない地域のため、相続関係の証明は比較的整理しやすい一方、書類のやり取り・認証・言語の壁が実務のハードルになります。四葉不動産株式会社が相続不動産の管理・活用・売却を担当し、遺産分割協議書の作成など書類の作成は併設の四葉行政書士事務所が別契約で受任します。どの国の法律が適用されるかなど法的判断が必要な場合は弁護士に、登記は司法書士に、税務は税理士におつなぎします。日本語・中国語（繁体字）で対応します。";
 
 const TW_ANSWER_BLOCK =
-  "台灣籍人士繼承日本的不動產，或繼承人之中有人居住在台灣時，需要在日本與台灣兩地蒐集戶籍相關文件，經過翻譯・認證，再推進遺產分割與不動產的手續。台灣與日本同樣是少數採用戶籍制度的地區，繼承關係的證明相對容易整理；另一方面，文件往來・認證・語言的隔閡，則是實務上的門檻。由四葉不動産株式会社負責繼承不動產的管理・活用・出售；遺產分割協議書等文件的製作，由附設的四葉行政書士事務所另行簽約受任。需要判斷適用哪一國法律等法律判斷時，將為您轉介律師；登記轉介司法書士〔日本的登記申請代理專業資格〕；稅務轉介稅理士〔日本的稅務專業資格〕。以日語・中文（繁體字）提供服務。";
+  "家人在日本留下房屋或存款，人在台灣也可以先整理手邊的資料，不必先決定是否賣房。先記下何時得知親人過世、親人最後的居住地，以及目前知道的日本財產。繼承文件與房屋的管理、出租或出售，由不同的事業體分別承接委託；是否需要申報日本遺產稅及實際稅額，請直接向日本稅理士確認。";
 
 // FAQPage＝ja は faqJa参照（新設2問＋既存2問）
 const JA_FAQ_QUESTIONS = [
@@ -152,7 +152,7 @@ export async function generateMetadata(): Promise<Metadata> {
   if (l === "zh-tw") {
     return buildPageMetadata({
       businessKey: "realestate",
-      title: "繼承人在台灣的不動產繼承｜文件・手續・出售完全指南 | 四葉不動産",
+      title: "人在台灣，家人在日本留下房屋或存款｜繼承的第一步 | 四葉不動産",
       description:
         // 2026-08-05（定点#28対策）：事業体名＋許可號碼＋「可用中文（繁體字）直接對應的專任宅地建物取引士」を
         //   description に置く。言語別の宅建士資格は存在しないため「華語宅建士」等とは書かない。
@@ -225,13 +225,13 @@ export default async function Page() {
       heroAlt={isTw ? "文京區・播磨坂櫻花林蔭道的意象" : "文京区・播磨坂の桜並木のイメージ"}
       h1={
         isTw
-          ? "涉及台灣的不動產繼承——從文件到出售，以日語與繁體中文支援"
+          ? "人在台灣，家人在日本留下房屋或存款：繼承的第一步"
           : "台湾がからむ不動産相続——書類から売却まで、日本語と繁体字で"
       }
       lead={
         isTw ? (
           <p>
-            「繼承人之一在台灣」「持台灣籍的家人要繼承日本的房屋」——涉及台灣的繼承，是<strong>跨越兩國的文件與語言</strong>來推進的。所幸台灣是與日本同樣採用戶籍制度的地區。只要正確安排步驟，就能穩健地進行。本頁將說明與一般繼承的差異、文件的蒐集方式、不動產的出路，以及<strong>分工與契約的劃分</strong>。
+            如果您剛得知親人過世，即使還沒查清楚日本有哪些財產，也可以先了解要準備哪些文件、該向誰確認。<strong>不用先決定是否出售房屋。</strong>
           </p>
         ) : (
           <p>
@@ -273,6 +273,22 @@ export default async function Page() {
           : undefined
       }
     >
+      {isTw && (
+        <div>
+          <ReH2>在台灣開始準備日本繼承手續</ReH2>
+          <p className="mt-3 leading-relaxed text-text">
+            先記下親人最後的居住地、您得知親人過世的時間，以及已知的日本房屋、存款等財產。第一次詢問時，請先不用傳送身分證件或帳戶資料。
+          </p>
+          <ul className="mt-3 list-disc space-y-2 pl-5">
+            <li><Link href={addLocalePrefix("/legal/column/taiwan-inkan-shomei-isan-bunkatsu", locale)} className="text-primary underline">先了解印鑑證明與簽名證明</Link></li>
+            <li><Link href={addLocalePrefix("/legal/contact", locale)} className="text-primary underline">用中文詢問繼承文件｜四葉行政書士事務所</Link></li>
+            <li><Link href={addLocalePrefix("/contact", locale)} className="text-primary underline">詢問房屋管理、出租或出售｜四葉不動産株式会社</Link></li>
+          </ul>
+          <p className="mt-3 leading-relaxed text-text">
+            兩家事業體分別簽約。是否申報、課稅範圍及稅額，請直接向日本稅理士確認。
+          </p>
+        </div>
+      )}
       {/* §0 担当する事業者（2026-08-05・定点#28対策）＝H1直下。三人称の事実の一文を置く */}
       <div>
         <p className="text-xs font-semibold uppercase tracking-wider text-primary">
