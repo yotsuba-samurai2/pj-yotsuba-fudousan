@@ -54,13 +54,14 @@ export function resolveColumnLink(href: string, index: ColumnLocaleIndex): Colum
 }
 
 /**
- * 日本語以外のURLが404になる固定ページ（翻訳が無く、ページ側で notFound() を返す）。
- * 言語切替に404への切替先を出さない（ペット横断 指示書 版2.0 第16章・T18）。
- * 他言語のURLが日本語本文で200を返す既存の ja 先行ページ（/group-home/ooya 等）は、切替先が404ではないためここに入れない。
+ * 翻訳の実在する言語だけを切替に出す固定ページ。未翻訳URLが404になるページのほか、
+ * 台湾相続ガイドは en・zh のURLでも日本語本文で200になるため、その2つを翻訳として案内しない。
+ * ほかの固定ページの表示・直リンク時の動作は変えない。
  */
 const FIXED_PAGE_LOCALES: Record<string, readonly LangCode[]> = {
   [PET_HOUSING_PATH]: ["ja"],
   [FEE033_PATH]: ["ja"],
+  "/souzoku/taiwan": ["ja", "zh-tw"],
 };
 
 /** 言語切替の対象となる詳細ページ（記事・物件）を表のキーに解決する。それ以外は undefined。 */
