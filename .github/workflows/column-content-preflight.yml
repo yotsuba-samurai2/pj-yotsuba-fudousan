@@ -1,0 +1,35 @@
+name: Column content preflight
+on:
+  pull_request:
+    paths:
+      - "scripts/labor-columns/**/*.md"
+      - "scripts/legal-columns/**/*.md"
+      - "scripts/realestate-columns/**/*.md"
+      - "scripts/seed-labor-columns.ts"
+      - "scripts/seed-souzoku-legal-columns.ts"
+      - "scripts/seed-realestate-columns-daily.ts"
+      - "src/lib/data/*columns*seed*.ts"
+      - "src/app/sitemap.ts"
+      - "scripts/columns-review-proof.ts"
+      - "scripts/*column-projection.mjs"
+      - ".github/workflows/column-content-preflight.yml"
+permissions:
+  contents: read
+jobs:
+  check-changed-projections:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@v6
+        with:
+          node-version: "22"
+      - name: Exercise failure cases offline
+        run: node --test scripts/test-column-projection.mjs
+      - name: Compare changed source with generated article and translated destinations
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: node scripts/check-column-projection.mjs --base "$BASE_SHA"

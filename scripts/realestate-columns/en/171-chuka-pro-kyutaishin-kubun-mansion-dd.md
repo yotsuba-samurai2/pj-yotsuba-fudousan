@@ -22,13 +22,13 @@ An old-seismic sectional condominium is a point of caution because it may have b
 | New-seismic | On or after 1 June 1981 (Showa 56) | Designed to the current seismic standard. Relatively lower caution |
 | Old-seismic | Before 1 June 1981 | Seismic performance may fall short of the current standard. A candidate for seismic diagnosis / retrofit / rebuild |
 
-First confirm the subject property's building-confirmation date (or the date on the confirmation/inspection certificate, or the new-construction date in the register). Do not judge new- vs old-seismic from the completion year alone.
+First confirm the subject property's building-confirmation date (using the confirmation certificate or official confirmation ledger). Do not judge new- vs old-seismic from the completion year alone.
 
 ## Whether a seismic diagnosis was done, and where to confirm the result? (the difference from the inspection certificate)
 
 For old-seismic properties, what Chinese-speaking pros first tend to confuse is the "inspection certificate" and the "seismic diagnosis." The two differ entirely in purpose.
 
-The inspection certificate is a document showing that the building passed the Building Standards Act completion inspection and conformed to the law in force when built (inspection-certificate DD for a whole income building is covered in [how China/Taiwan real estate pros appraise a Japanese whole income building: inspection-certificate DD](https://luck428.com/en/column/chuka-pro-shuueki-biru-kensazumisho-dd)). This proves "it was legal when built"; it does not prove "it meets the current seismic standard." An old-seismic building, even with an inspection certificate, may fall short of the current standard in seismic performance.
+The inspection certificate is a document showing that the building passed the Building Standards Act completion inspection and conformed to the law in force when built (inspection-certificate DD for a whole income building is covered in [how China/Taiwan real estate pros appraise a Japanese whole income building: inspection-certificate DD](/en/column/chuka-pro-shuueki-biru-kensazumisho-dd)). This proves "it was legal when built"; it does not prove "it meets the current seismic standard." An old-seismic building, even with an inspection certificate, may fall short of the current standard in seismic performance.
 
 A seismic diagnosis is where an architect or seismic-diagnosis engineer evaluates how much seismic performance an existing building has against the current seismic standard. The basis is the Act on Promotion of Seismic Retrofitting of Buildings (Seismic Retrofitting Promotion Act = Act No. 123 of 1995), under which certain buildings bear a best-effort duty of diagnosis and retrofitting. When appraising an old-seismic sectional condominium, check whether the management association has carried out a seismic diagnosis and, if so, its result (score/judgment). Where to confirm: the general-meeting minutes, the long-term repair plan and the seismic-diagnosis report kept by the management association / management company.
 
@@ -36,7 +36,7 @@ A seismic diagnosis is where an architect or seismic-diagnosis engineer evaluate
 |---|---|---|
 | Inspection certificate | Conformity with the Building Standards Act when built | Management association / management company / competent authority's ledger |
 | Seismic-diagnosis report | Evaluation of seismic performance against the current standard (score/judgment) | Management association / management company (sometimes noted in minutes / long-term repair plan) |
-| Building-confirmation date / new-construction date | Material for judging new- vs old-seismic | Confirmation/inspection certificate / registration record |
+| Building-confirmation date | Confirm new- vs old-seismic | Confirmation certificate / official confirmation ledger; not the completion date |
 
 An old-seismic property that has not had a seismic diagnosis is in a state of "seismic performance unknown." Reading the diagnosis result and judging whether reinforcement design is needed is the field of an architect / seismic-diagnosis engineer; we do not judge seismic performance.
 
@@ -44,15 +44,15 @@ An old-seismic property that has not had a seismic diagnosis is in a state of "s
 
 The core of appraising an old-seismic property is whether the necessary work can be advanced by the owners' agreement. The basis of the resolution requirements is the Act on Building Unit Ownership (Unit Ownership Act = Act No. 69 of 1962).
 
-A rebuild resolution needs, in principle, agreement of four-fifths or more of both the sectional owners and the voting rights (Unit Ownership Act art. 62). Under the amended Unit Ownership Act enforced on 1 April 2026, where there are certain objective grounds such as insufficient seismic performance, this share was eased to three-quarters or more. On the other hand, a substantial change to common elements (a substantial large-scale repair) needs, in principle, three-quarters or more of both the sectional owners and the voting rights (Unit Ownership Act art. 17(1)).
+A rebuild resolution needs, in principle, agreement of four-fifths or more of both the sectional owners and the voting rights (Unit Ownership Act art. 62). Under the amended Unit Ownership Act enforced on 1 April 2026, where there are certain objective grounds such as insufficient seismic performance, this share was eased to three-quarters or more. On the other hand, a substantial change to common elements (a substantial large-scale repair) needs, in principle, a quorum of a majority of both owners and voting rights and approval of three-quarters of both attending owners and their voting rights (Unit Ownership Act art. 17(1), for meetings convened from 1 April 2026).
 
 | Type of resolution | Required share of agreement (in principle) | Basis |
 |---|---|---|
 | Rebuild resolution | Four-fifths or more of both sectional owners and voting rights. Eased to three-quarters or more where certain objective grounds such as insufficient seismic performance exist (amendment enforced 1 April 2026) | Unit Ownership Act art. 62 etc. |
-| Substantial change to common elements (substantial large-scale repair) | Three-quarters or more of both sectional owners and voting rights | Unit Ownership Act art. 17(1) |
+| Substantial change to common elements (substantial large-scale repair) | A majority quorum of owners/voting rights; three-quarters of attending owners and their voting rights | Unit Ownership Act art. 17(1) |
 | Demolition resolution | Eased by the amendment enforced 1 April 2026 from unanimity to four-fifths or more | Amended Unit Ownership Act |
 
-The grounds given for easing are roughly five categories: (1) insufficient seismic performance, (2) insufficient fire safety, (3) risk of harm to surroundings from falling exterior walls etc., (4) risk of serious insanitary harm from corroded water-supply/drainage pipes etc., and (5) non-conformity with barrier-free standards. In addition, under the Act on Facilitation of Reconstruction of Condominiums (the Condominium Reconstruction Facilitation Act), for a condominium that has received a "removal-required certification" from the competent authority for insufficient seismic performance etc., there is a mechanism to resolve on sale of the site by four-fifths or more of the sectional owners, the voting rights, and the shares in the site-use right.
+The grounds given for easing are roughly five categories: (1) insufficient seismic performance, (2) insufficient fire safety, (3) risk of harm to surroundings from falling exterior walls etc., (4) risk of serious insanitary harm from corroded water-supply/drainage pipes etc., and (5) non-conformity with barrier-free standards. Sales of the building/site and demolition are also affected by the April 2026 reform. Do not apply the former certified-demolition site-sale scheme without checking the current law and procedure for the chosen regeneration method.
 
 These are areas where the article, enforcement date and latest amendment move with amendments, so for a particular matter confirm the articles on e-Gov Law Search and the operation in MLIT / Ministry of Justice materials, noting the date consulted. Whether a resolution succeeds, legal judgment under the Unit Ownership Act, and disputes are the field of a lawyer; we do not judge whether a resolution passes.
 
@@ -60,7 +60,7 @@ These are areas where the article, enforcement date and latest amendment move wi
 
 Old-seismic or not, the repair reserve is indispensable in appraising a sectional condominium. A future large-scale repair or seismic retrofit costs a great deal, and the reserve is its source. If the reserve is short or arrears are high, even if the resolution for the necessary work passes, the funds may be insufficient and a lump-sum burden may fall to the buyer.
 
-The shortfall/surplus is read from the following documents. The management rules, the long-term repair plan, and the reserve balance and arrears can be confirmed in the "report on matters of importance" and the general-meeting minutes prepared/kept by the management association, and are obtained at acquisition through the seller. The detailed viewpoint for checking the management rules and long-term repair plan is also organised in [checking the management rules and long-term repair plan for Chinese-speaking buyers](https://luck428.com/en/column/chugokugo-buyer-kanri-kiyaku-shuzen-keikaku-check).
+The shortfall/surplus is read from the following documents. The management rules, the long-term repair plan, and the reserve balance and arrears can be confirmed in the "report on matters of importance" and the general-meeting minutes prepared/kept by the management association, and are obtained at acquisition through the seller. The detailed viewpoint for checking the management rules and long-term repair plan is also organised in [checking the management rules and long-term repair plan for Chinese-speaking buyers](/en/column/chugokugo-buyer-kanri-kiyaku-shuzen-keikaku-check).
 
 | Check item | In which document it shows | Point to look at |
 |---|---|---|
@@ -98,32 +98,36 @@ Where the client becomes a non-resident (overseas) owner, management after acqui
 | Tax accountant | Taxation on acquisition/holding/transfer/inheritance; tax agent |
 | Judicial scrivener | Ownership-transfer registration |
 
-The tax when a non-resident holds Japanese real estate (withholding on rent, appointing a tax agent, and the like) is also a useful reference in [the key points of the important-matters explanation to read before introducing a Japanese income property to a Chinese-speaking buyer](https://luck428.com/en/column/chugokugo-buyer-juyojiko-check-toushi-bukken). This article is organised specifically around DD unique to old-seismic sectional condominiums.
+The tax when a non-resident holds Japanese real estate (withholding on rent, appointing a tax agent, and the like) is also a useful reference in [the key points of the important-matters explanation to read before introducing a Japanese income property to a Chinese-speaking buyer](/en/column/chugokugo-buyer-juyojiko-check-toushi-bukken). This article is organised specifically around DD unique to old-seismic sectional condominiums.
 
-**[For advice on acquiring and DD of a Japanese sectional condominium, bring it to Yotsuba Real Estate — initial consultation is free](https://luck428.com/en/toushi)**
+**[For advice on acquiring and DD of a Japanese sectional condominium, bring it to Yotsuba Real Estate — initial consultation is free](/en/toushi)**
 
 In your message, write the subject property's location, the construction year (or building-confirmation date), whether a seismic diagnosis exists, whether the client is a resident or non-resident, and whether it will be rented after acquisition. We talk through organising the DD viewpoint on seismic diagnosis, rebuild resolutions and the repair reserve, and where to refer to an architect, a lawyer, a tax accountant and a judicial scrivener.
 
 ## Frequently asked questions
 
 **Q. Can I judge new- vs old-seismic from the building's completion year?**
-A. No. The basis is not the completion date but the date building confirmation was received. The new seismic standard applies to buildings confirmed on or after 1 June 1981 (Showa 56); buildings confirmed before that are old-seismic. Even if completed in late 1981, a building is classified as old-seismic if its confirmation predates 1 June 1981. Confirm the timing of building confirmation from the date on the confirmation/inspection certificate or the new-construction date in the register. The individual judgment of seismic performance is the field of an architect / seismic-diagnosis engineer.
+A. No. The basis is not the completion date but the date building confirmation was received. The new seismic standard applies to buildings confirmed on or after 1 June 1981 (Showa 56); buildings confirmed before that are old-seismic. Even if completed in late 1981, a building is classified as old-seismic if its confirmation predates 1 June 1981. Confirm the building-confirmation date from its certificate or official ledger. The inspection-certificate issue date and registered completion date are not substitutes. The individual judgment of seismic performance is the field of an architect / seismic-diagnosis engineer.
 
 **Q. If there is an inspection certificate, is the seismic performance fine?**
 A. No. The inspection certificate is a document showing conformity with the Building Standards Act when built; it does not prove conformity with the current seismic standard. An old-seismic building, even with an inspection certificate, may fall short of the current standard in seismic performance. Seismic performance against the current standard is evaluated by a seismic diagnosis by an architect / seismic-diagnosis engineer. Check whether the management association has carried out a seismic diagnosis and its result (score/judgment).
 
 **Q. What share of owners is needed to rebuild an old-seismic condominium?**
-A. A rebuild resolution needs, in principle, four-fifths or more of both the sectional owners and the voting rights (Unit Ownership Act art. 62). Under the amended Unit Ownership Act enforced on 1 April 2026, it was eased to three-quarters or more where there are certain objective grounds such as insufficient seismic performance. A substantial change to common elements (substantial large-scale repair) needs, in principle, three-quarters or more (art. 17(1)). As the article, enforcement date and latest amendment move with amendments, confirm on e-Gov Law Search and in MLIT / Ministry of Justice materials, noting the date consulted. Whether a resolution succeeds and legal judgment are the field of a lawyer.
+A. A rebuild resolution needs, in principle, four-fifths or more of both the sectional owners and the voting rights (Unit Ownership Act art. 62). Under the amended Unit Ownership Act enforced on 1 April 2026, it was eased to three-quarters or more where there are certain objective grounds such as insufficient seismic performance. A substantial change to common elements (substantial large-scale repair) needs, in principle, a majority quorum of owners/voting rights and three-quarters of attending owners and their voting rights (art. 17(1)). As the article, enforcement date and latest amendment move with amendments, confirm on e-Gov Law Search and in MLIT / Ministry of Justice materials, noting the date consulted. Whether a resolution succeeds and legal judgment are the field of a lawyer.
 
 **Q. Where can I tell whether the repair reserve is sufficient?**
 A. Confirm the timing and estimated cost of large-scale repair / seismic retrofit in the long-term repair plan, and match the reserve balance and arrears in the report on matters of importance and the general-meeting financial statements. A property whose balance is short against the plan and whose arrears are high may, even if the resolution for necessary work passes, lack funds, so a lump-sum burden can fall to the buyer. MLIT's long-term-repair-plan guideline shows a yardstick for the reserve, but whether it is sufficient is an individual appraisal.
 
 ## Sources
 
+- [国土交通省・マンションの再生等（現行法と手続）](https://www.mlit.go.jp/jutakukentiku/house/jutakukentiku_house_tk5_000050.html)（2026-11-18）
+
+- [国土交通省・改正マンション標準管理規約（2026年4月施行の決議ルール）](https://www.mlit.go.jp/jutakukentiku/house/content/001971486.pdf)（2026-11-18）
+
 The following public materials are starting points. Laws are amended, so check the current article, paragraph, item, enforcement date and latest amendment on e-Gov Law Search. In particular, the Unit Ownership Act changed its resolution requirements by the amendment enforced on 1 April 2026, so confirm the articles on e-Gov and the operation in MLIT / Ministry of Justice materials, noting the date consulted. The final judgment on a property's seismic performance, whether a resolution passes, the appraisal value and tax is the field of an architect, a seismic-diagnosis engineer, a lawyer, a tax accountant and a judicial scrivener, and the respective expert bodies. Public materials were all consulted on 12 November 2026. The sources below are in Japanese.
 
 - e-Gov Law Search: [Act on Building Unit Ownership](https://laws.e-gov.go.jp/law/337AC0000000069) (Act No. 69 of 1962; art. 62 = rebuild resolution, art. 17 = resolution requirement for changing common elements. The amendment enforced 1 April 2026 arranged the easing grounds for rebuild, the demolition resolution, etc. Confirm the latest article, enforcement date and latest amendment)
-- e-Gov Law Search: Act on Facilitation of Reconstruction of Condominiums (removal-required certification; a site-sale resolution by four-fifths or more of the sectional owners, voting rights and shares in the site-use right, etc. Confirm the latest articles)
+- [国土交通省・マンションの再生等について（2026年4月施行後の法令・手続）](https://www.mlit.go.jp/jutakukentiku/house/jutakukentiku_house_tk5_000050.html)（2026-11-18）
 - e-Gov Law Search: Act on Promotion of Seismic Retrofitting of Buildings (Act No. 123 of 1995; best-effort duties of seismic diagnosis and retrofitting, etc.)
 - MLIT / Ministry of Justice explanatory materials on the amended Unit Ownership Act (enforced 1 April 2026) (the five easing-ground categories for a rebuild resolution, the demolition resolution, and excluding owners of unknown whereabouts from the resolution denominator. Consulted 12 November 2026)
 - MLIT "Guideline for Preparing a Long-Term Repair Plan for Condominiums" (the idea of the plan period and the setting of the repair reserve. Consulted 12 November 2026)
@@ -131,6 +135,6 @@ The following public materials are starting points. Laws are amended, so check t
 
 This article provides general information and does not guarantee a property's seismic performance, whether a resolution succeeds, or the appraisal value. Transaction-DD information and rental brokerage/management are real estate's (ours); seismic diagnosis and reinforcement design an architect's / seismic-diagnosis engineer's; rebuild and legal judgment under the Unit Ownership Act and disputes a lawyer's; taxation on acquisition/holding/transfer/inheritance a tax accountant's; ownership-transfer registration a judicial scrivener's — each judged and handled by them.
 
-Joji Uramatsu (浦松 丈二), Representative Director and licensed real estate transaction specialist, Yotsuba Real Estate Co., Ltd. (四葉不動産株式会社). As a licensed real estate transaction specialist in Bunkyo, Tokyo, we provide surveys and brokerage of residential and commercial real estate. [Author profile](https://luck428.com/en/about/uramatsu)
+Joji Uramatsu (浦松 丈二), Representative Director and licensed real estate transaction specialist, Yotsuba Real Estate Co., Ltd. (四葉不動産株式会社). As a licensed real estate transaction specialist in Bunkyo, Tokyo, we provide surveys and brokerage of residential and commercial real estate. [Author profile](/en/about/uramatsu)
 
-Updated: 12 November 2026
+Updated: 18 November 2026

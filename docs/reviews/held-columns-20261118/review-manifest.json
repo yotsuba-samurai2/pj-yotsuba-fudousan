@@ -1,0 +1,423 @@
+[
+  {
+    "key": "labor:insatsu-gyo-kaigyo-roumu-yuuki-youzai-shinya-anzen-eisei",
+    "title": "印刷会社の開業・労務——有機溶剤や深夜勤務の安全衛生と労働時間管理",
+    "status": "HOLD: independent review required",
+    "files": [
+      "scripts/labor-columns/200-insatsu-gyo-kaigyo-roumu-yuuki-youzai-shinya-anzen-eisei.md",
+      "scripts/labor-columns/en/200-insatsu-gyo-kaigyo-roumu-yuuki-youzai-shinya-anzen-eisei.md",
+      "scripts/labor-columns/zh-tw/200-insatsu-gyo-kaigyo-roumu-yuuki-youzai-shinya-anzen-eisei.md",
+      "scripts/labor-columns/zh/200-insatsu-gyo-kaigyo-roumu-yuuki-youzai-shinya-anzen-eisei.md"
+    ],
+    "primarySourceCandidates": []
+  },
+  {
+    "key": "legal:keiei-kanri-zairyu-2025-kaisei-shihonkin-joukin-shokuin-chuka-taiwan",
+    "title": "経営・管理ビザ2025年10月改正｜資本金3,000万円・常勤職員・経過措置の要点（中国・台湾の起業家向け）",
+    "status": "HOLD: independent review required",
+    "files": [
+      "scripts/legal-columns/161-keiei-kanri-zairyu-2025-kaisei-shihonkin-joukin-shokuin-chuka-taiwan.md",
+      "scripts/legal-columns/en/161-keiei-kanri-zairyu-2025-kaisei-shihonkin-joukin-shokuin-chuka-taiwan.md",
+      "scripts/legal-columns/zh-tw/161-keiei-kanri-zairyu-2025-kaisei-shihonkin-joukin-shokuin-chuka-taiwan.md",
+      "scripts/legal-columns/zh/161-keiei-kanri-zairyu-2025-kaisei-shihonkin-joukin-shokuin-chuka-taiwan.md"
+    ],
+    "primarySourceCandidates": []
+  },
+  {
+    "key": "realestate:chugokugo-kokudo-riyo-keikaku-ho-jigo-todokede-menseki",
+    "title": "繁体字・簡体字対応｜中国・台湾の投資家が日本の土地を買うとき必要な国土利用計画法の事後届出",
+    "status": "HOLD: independent review required",
+    "files": [
+      "scripts/realestate-columns/100-chugokugo-kokudo-riyo-keikaku-ho-jigo-todokede-menseki.md",
+      "scripts/realestate-columns/en/100-chugokugo-kokudo-riyo-keikaku-ho-jigo-todokede-menseki.md",
+      "scripts/realestate-columns/zh-tw/100-chugokugo-kokudo-riyo-keikaku-ho-jigo-todokede-menseki.md",
+      "scripts/realestate-columns/zh/100-chugokugo-kokudo-riyo-keikaku-ho-jigo-todokede-menseki.md"
+    ],
+    "primarySourceCandidates": [
+      "https://laws.e-gov.go.jp/law/349AC1000000092",
+      "https://laws.e-gov.go.jp/law/503AC0000000084",
+      "https://www.cao.go.jp/tochi-chosa/todokede.html",
+      "https://www.mlit.go.jp/totikensangyo/totikensangyo_tk2_000019.html"
+    ]
+  },
+  {
+    "key": "legal:houkatsu-tokutei-izo-chigai-juisha-hoki",
+    "title": "『包括遺贈』と『特定遺贈』はどう違う？受遺者の権利義務と放棄の仕方",
+    "status": "HOLD: independent review required",
+    "files": [
+      "scripts/legal-columns/163-houkatsu-tokutei-izo-chigai-juisha-hoki.md",
+      "scripts/legal-columns/en/163-houkatsu-tokutei-izo-chigai-juisha-hoki.md",
+      "scripts/legal-columns/zh-tw/163-houkatsu-tokutei-izo-chigai-juisha-hoki.md",
+      "scripts/legal-columns/zh/163-houkatsu-tokutei-izo-chigai-juisha-hoki.md"
+    ],
+    "primarySourceCandidates": []
+  },
+  {
+    "key": "legal:kensetsugyo-kessan-henko-todoke-jigyo-nendo-shuryo",
+    "title": "建設業許可を取った後の『決算変更届（事業年度終了届）』は毎年いる？出し忘れの影響と各種変更届",
+    "status": "HOLD: independent review required",
+    "files": [
+      "scripts/legal-columns/162-kensetsugyo-kessan-henko-todoke-jigyo-nendo-shuryo.md",
+      "scripts/legal-columns/en/162-kensetsugyo-kessan-henko-todoke-jigyo-nendo-shuryo.md",
+      "scripts/legal-columns/zh-tw/162-kensetsugyo-kessan-henko-todoke-jigyo-nendo-shuryo.md",
+      "scripts/legal-columns/zh/162-kensetsugyo-kessan-henko-todoke-jigyo-nendo-shuryo.md"
+    ],
+    "primarySourceCandidates": []
+  },
+  {
+    "key": "legal:gaikokuseki-nihon-zaiju-yuigon-houshiki-junkyoho-chuka-taiwan",
+    "title": "日本に住む中国籍・台湾籍の人が日本で遺言を作る——方式の準拠法・公正証書遺言の通訳・本国での効力",
+    "status": "HOLD: independent review required",
+    "files": [
+      "scripts/legal-columns/165-gaikokuseki-nihon-zaiju-yuigon-houshiki-junkyoho-chuka-taiwan.md",
+      "scripts/legal-columns/en/165-gaikokuseki-nihon-zaiju-yuigon-houshiki-junkyoho-chuka-taiwan.md",
+      "scripts/legal-columns/zh-tw/165-gaikokuseki-nihon-zaiju-yuigon-houshiki-junkyoho-chuka-taiwan.md",
+      "scripts/legal-columns/zh/165-gaikokuseki-nihon-zaiju-yuigon-houshiki-junkyoho-chuka-taiwan.md"
+    ],
+    "primarySourceCandidates": []
+  },
+  {
+    "key": "legal:shurui-seizo-menkyo-craft-beer-happosyu-youken",
+    "title": "クラフトビールや発泡酒の『酒類製造免許』をとる——最低製造数量基準・設備・特区と、申請の流れ",
+    "status": "HOLD: independent review required",
+    "files": [
+      "scripts/legal-columns/164-shurui-seizo-menkyo-craft-beer-happosyu-youken.md",
+      "scripts/legal-columns/en/164-shurui-seizo-menkyo-craft-beer-happosyu-youken.md",
+      "scripts/legal-columns/zh-tw/164-shurui-seizo-menkyo-craft-beer-happosyu-youken.md",
+      "scripts/legal-columns/zh/164-shurui-seizo-menkyo-craft-beer-happosyu-youken.md"
+    ],
+    "primarySourceCandidates": []
+  },
+  {
+    "key": "realestate:chuka-pro-kyutaishin-kubun-mansion-dd",
+    "title": "中国・台湾の不動産プロが日本の旧耐震区分マンションを評価する——耐震診断・建替え決議・修繕積立金のデューデリ",
+    "status": "HOLD: independent review required",
+    "files": [
+      "scripts/realestate-columns/171-chuka-pro-kyutaishin-kubun-mansion-dd.md",
+      "scripts/realestate-columns/en/171-chuka-pro-kyutaishin-kubun-mansion-dd.md",
+      "scripts/realestate-columns/zh-tw/171-chuka-pro-kyutaishin-kubun-mansion-dd.md",
+      "scripts/realestate-columns/zh/171-chuka-pro-kyutaishin-kubun-mansion-dd.md"
+    ],
+    "primarySourceCandidates": [
+      "https://laws.e-gov.go.jp/law/337AC0000000069"
+    ]
+  },
+  {
+    "key": "realestate:shoene-tekigo-gimuka-2025-chintai-shinchiku-bukken",
+    "title": "2025年4月から全建築物に省エネ基準適合義務——賃貸アパート・小規模テナントを新築するオーナーが物件計画で変わること",
+    "status": "HOLD: independent review required",
+    "files": [
+      "scripts/realestate-columns/170-shoene-tekigo-gimuka-2025-chintai-shinchiku-bukken.md",
+      "scripts/realestate-columns/en/170-shoene-tekigo-gimuka-2025-chintai-shinchiku-bukken.md",
+      "scripts/realestate-columns/zh-tw/170-shoene-tekigo-gimuka-2025-chintai-shinchiku-bukken.md",
+      "scripts/realestate-columns/zh/170-shoene-tekigo-gimuka-2025-chintai-shinchiku-bukken.md"
+    ],
+    "primarySourceCandidates": [
+      "https://laws.e-gov.go.jp/law/427AC0000000053"
+    ]
+  },
+  {
+    "key": "labor:kodo-professional-seido-dounyu-youken-roushi-iinkai-kenko-kakuho",
+    "title": "高度プロフェッショナル制度の導入要件——労使委員会・年104日休日・健康確保措置",
+    "status": "HOLD: independent review required",
+    "files": [
+      "scripts/labor-columns/205-kodo-professional-seido-dounyu-youken-roushi-iinkai-kenko-kakuho.md",
+      "scripts/labor-columns/en/205-kodo-professional-seido-dounyu-youken-roushi-iinkai-kenko-kakuho.md",
+      "scripts/labor-columns/zh-tw/205-kodo-professional-seido-dounyu-youken-roushi-iinkai-kenko-kakuho.md",
+      "scripts/labor-columns/zh/205-kodo-professional-seido-dounyu-youken-roushi-iinkai-kenko-kakuho.md"
+    ],
+    "primarySourceCandidates": []
+  },
+  {
+    "key": "labor:mansion-kanrin-kanshi-danzoku-roudo-tekiyo-jogai-kyoka-roumu",
+    "title": "マンション管理員の労働時間——監視・断続的労働の適用除外許可と手待時間",
+    "status": "HOLD: independent review required",
+    "files": [
+      "scripts/labor-columns/206-mansion-kanrin-kanshi-danzoku-roudo-tekiyo-jogai-kyoka-roumu.md",
+      "scripts/labor-columns/en/206-mansion-kanrin-kanshi-danzoku-roudo-tekiyo-jogai-kyoka-roumu.md",
+      "scripts/labor-columns/zh-tw/206-mansion-kanrin-kanshi-danzoku-roudo-tekiyo-jogai-kyoka-roumu.md",
+      "scripts/labor-columns/zh/206-mansion-kanrin-kanshi-danzoku-roudo-tekiyo-jogai-kyoka-roumu.md"
+    ],
+    "primarySourceCandidates": []
+  },
+  {
+    "key": "legal:shakai-fukushi-hojin-setsuritsu-ninka-nagare-shisan-youken",
+    "title": "社会福祉法人の設立認可の流れ｜所轄庁・資産要件・理事と評議員会",
+    "status": "HOLD: independent review required",
+    "files": [
+      "scripts/legal-columns/166-shakai-fukushi-hojin-setsuritsu-ninka-nagare-shisan-youken.md",
+      "scripts/legal-columns/en/166-shakai-fukushi-hojin-setsuritsu-ninka-nagare-shisan-youken.md",
+      "scripts/legal-columns/zh-tw/166-shakai-fukushi-hojin-setsuritsu-ninka-nagare-shisan-youken.md",
+      "scripts/legal-columns/zh/166-shakai-fukushi-hojin-setsuritsu-ninka-nagare-shisan-youken.md"
+    ],
+    "primarySourceCandidates": []
+  },
+  {
+    "key": "legal:startup-visa-gaikokujin-kigyo-katsudo-sokushin-tokutei-katsudo",
+    "title": "スタートアップビザで日本に来て会社を作る｜外国人起業活動促進事業の在留",
+    "status": "HOLD: independent review required",
+    "files": [
+      "scripts/legal-columns/167-startup-visa-gaikokujin-kigyo-katsudo-sokushin-tokutei-katsudo.md",
+      "scripts/legal-columns/en/167-startup-visa-gaikokujin-kigyo-katsudo-sokushin-tokutei-katsudo.md",
+      "scripts/legal-columns/zh-tw/167-startup-visa-gaikokujin-kigyo-katsudo-sokushin-tokutei-katsudo.md",
+      "scripts/legal-columns/zh/167-startup-visa-gaikokujin-kigyo-katsudo-sokushin-tokutei-katsudo.md"
+    ],
+    "primarySourceCandidates": []
+  },
+  {
+    "key": "realestate:chugokugo-buyer-keibai-kobai-bukken-nyusatsu-daikin-nouhu",
+    "title": "（中国語バイヤー向け）日本の競売・公売で不動産を買う｜入札から引渡しまで",
+    "status": "HOLD: independent review required",
+    "files": [
+      "scripts/realestate-columns/173-chugokugo-buyer-keibai-kobai-bukken-nyusatsu-daikin-nouhu.md",
+      "scripts/realestate-columns/en/173-chugokugo-buyer-keibai-kobai-bukken-nyusatsu-daikin-nouhu.md",
+      "scripts/realestate-columns/zh-tw/173-chugokugo-buyer-keibai-kobai-bukken-nyusatsu-daikin-nouhu.md",
+      "scripts/realestate-columns/zh/173-chugokugo-buyer-keibai-kobai-bukken-nyusatsu-daikin-nouhu.md"
+    ],
+    "primarySourceCandidates": [
+      "https://laws.e-gov.go.jp/law/354AC0000000004"
+    ]
+  },
+  {
+    "key": "realestate:ev-kyusoku-juden-setsubi-chintai-shougyou-bukken-shoubou",
+    "title": "EV急速充電設備を備えた賃貸・商業物件｜消防法の技術基準と導入の進め方",
+    "status": "HOLD: independent review required",
+    "files": [
+      "scripts/realestate-columns/172-ev-kyusoku-juden-setsubi-chintai-shougyou-bukken-shoubou.md",
+      "scripts/realestate-columns/en/172-ev-kyusoku-juden-setsubi-chintai-shougyou-bukken-shoubou.md",
+      "scripts/realestate-columns/zh-tw/172-ev-kyusoku-juden-setsubi-chintai-shougyou-bukken-shoubou.md",
+      "scripts/realestate-columns/zh/172-ev-kyusoku-juden-setsubi-chintai-shougyou-bukken-shoubou.md"
+    ],
+    "primarySourceCandidates": [
+      "https://laws.e-gov.go.jp/law/337AC0000000069"
+    ]
+  },
+  {
+    "key": "labor:keikaku-nenkyu-rousi-kyotei-5nichi-gimu-kankei",
+    "title": "計画年休（計画的付与）とは？労使協定の作り方と5日取得義務の関係",
+    "status": "HOLD: independent review required",
+    "files": [
+      "scripts/labor-columns/207-keikaku-nenkyu-rousi-kyotei-5nichi-gimu-kankei.md",
+      "scripts/labor-columns/en/207-keikaku-nenkyu-rousi-kyotei-5nichi-gimu-kankei.md",
+      "scripts/labor-columns/zh-tw/207-keikaku-nenkyu-rousi-kyotei-5nichi-gimu-kankei.md",
+      "scripts/labor-columns/zh/207-keikaku-nenkyu-rousi-kyotei-5nichi-gimu-kankei.md"
+    ],
+    "primarySourceCandidates": []
+  },
+  {
+    "key": "labor:tsuki-60jikan-chokin-warimashi-daitai-kyuka-chusho",
+    "title": "月60時間超の残業は割増50%？中小企業の代替休暇制度の作り方",
+    "status": "HOLD: independent review required",
+    "files": [
+      "scripts/labor-columns/208-tsuki-60jikan-chokin-warimashi-daitai-kyuka-chusho.md",
+      "scripts/labor-columns/en/208-tsuki-60jikan-chokin-warimashi-daitai-kyuka-chusho.md",
+      "scripts/labor-columns/zh-tw/208-tsuki-60jikan-chokin-warimashi-daitai-kyuka-chusho.md",
+      "scripts/labor-columns/zh/208-tsuki-60jikan-chokin-warimashi-daitai-kyuka-chusho.md"
+    ],
+    "primarySourceCandidates": []
+  },
+  {
+    "key": "legal:jokaso-koji-gyo-touroku-seiso-gyo-kyoka-nagare-youken",
+    "title": "浄化槽工事業の登録と浄化槽清掃業の許可は何が違う？要件と流れ",
+    "status": "HOLD: independent review required",
+    "files": [
+      "scripts/legal-columns/168-jokaso-koji-gyo-touroku-seiso-gyo-kyoka-nagare-youken.md",
+      "scripts/legal-columns/en/168-jokaso-koji-gyo-touroku-seiso-gyo-kyoka-nagare-youken.md",
+      "scripts/legal-columns/zh-tw/168-jokaso-koji-gyo-touroku-seiso-gyo-kyoka-nagare-youken.md",
+      "scripts/legal-columns/zh/168-jokaso-koji-gyo-touroku-seiso-gyo-kyoka-nagare-youken.md"
+    ],
+    "primarySourceCandidates": []
+  },
+  {
+    "key": "legal:yuigon-to-kotonaru-isanbunkatsu-kyogi-kahi-youken",
+    "title": "遺言と違う内容で遺産分割協議はできる？できる条件と注意点",
+    "status": "HOLD: independent review required",
+    "files": [
+      "scripts/legal-columns/169-yuigon-to-kotonaru-isanbunkatsu-kyogi-kahi-youken.md",
+      "scripts/legal-columns/en/169-yuigon-to-kotonaru-isanbunkatsu-kyogi-kahi-youken.md",
+      "scripts/legal-columns/zh-tw/169-yuigon-to-kotonaru-isanbunkatsu-kyogi-kahi-youken.md",
+      "scripts/legal-columns/zh/169-yuigon-to-kotonaru-isanbunkatsu-kyogi-kahi-youken.md"
+    ],
+    "primarySourceCandidates": []
+  },
+  {
+    "key": "realestate:seikatsu-kaigo-jigyosho-bukken-youken-shitei",
+    "title": "生活介護事業所の物件は何を満たせばいい？設備基準・用途地域・消防の確認点",
+    "status": "HOLD: independent review required",
+    "files": [
+      "scripts/realestate-columns/174-seikatsu-kaigo-jigyosho-bukken-youken-shitei.md",
+      "scripts/realestate-columns/en/174-seikatsu-kaigo-jigyosho-bukken-youken-shitei.md",
+      "scripts/realestate-columns/zh-tw/174-seikatsu-kaigo-jigyosho-bukken-youken-shitei.md",
+      "scripts/realestate-columns/zh/174-seikatsu-kaigo-jigyosho-bukken-youken-shitei.md"
+    ],
+    "primarySourceCandidates": [
+      "https://laws.e-gov.go.jp/law/325AC0000000201",
+      "https://laws.e-gov.go.jp/law/417AC0000000123"
+    ]
+  },
+  {
+    "key": "realestate:souzoku-kashiya-akewatashi-seitojiyu-tachinoki-ryo-baikyaku",
+    "title": "相続した貸家は空けてから売る？正当事由・立退料と居付き売却の分かれ目",
+    "status": "HOLD: independent review required",
+    "files": [
+      "scripts/realestate-columns/175-souzoku-kashiya-akewatashi-seitojiyu-tachinoki-ryo-baikyaku.md",
+      "scripts/realestate-columns/en/175-souzoku-kashiya-akewatashi-seitojiyu-tachinoki-ryo-baikyaku.md",
+      "scripts/realestate-columns/zh-tw/175-souzoku-kashiya-akewatashi-seitojiyu-tachinoki-ryo-baikyaku.md",
+      "scripts/realestate-columns/zh/175-souzoku-kashiya-akewatashi-seitojiyu-tachinoki-ryo-baikyaku.md"
+    ],
+    "primarySourceCandidates": [
+      "https://laws.e-gov.go.jp/law/129AC0000000089",
+      "https://laws.e-gov.go.jp/law/403AC0000000090"
+    ]
+  },
+  {
+    "key": "legal:dai-nishu-doubutsu-toriatsukai-todokede-hieiri-jotokai-youken",
+    "title": "非営利の譲渡会・保護猫活動でも届出が要る？第二種動物取扱業の要件と第一種との違い",
+    "status": "HOLD: independent review required",
+    "files": [
+      "scripts/legal-columns/170-dai-nishu-doubutsu-toriatsukai-todokede-hieiri-jotokai-youken.md",
+      "scripts/legal-columns/en/170-dai-nishu-doubutsu-toriatsukai-todokede-hieiri-jotokai-youken.md",
+      "scripts/legal-columns/zh-tw/170-dai-nishu-doubutsu-toriatsukai-todokede-hieiri-jotokai-youken.md",
+      "scripts/legal-columns/zh/170-dai-nishu-doubutsu-toriatsukai-todokede-hieiri-jotokai-youken.md"
+    ],
+    "primarySourceCandidates": []
+  },
+  {
+    "key": "legal:souzoku-kyoninka-shokei-gyoshu-betsu-kahi-hikaku",
+    "title": "相続で事業の許認可はそのまま継げる？建設業・飲食・旅館・風営・産廃の承継可否を業種別に比較",
+    "status": "HOLD: independent review required",
+    "files": [
+      "scripts/legal-columns/171-souzoku-kyoninka-shokei-gyoshu-betsu-kahi-hikaku.md",
+      "scripts/legal-columns/en/171-souzoku-kyoninka-shokei-gyoshu-betsu-kahi-hikaku.md",
+      "scripts/legal-columns/zh-tw/171-souzoku-kyoninka-shokei-gyoshu-betsu-kahi-hikaku.md",
+      "scripts/legal-columns/zh/171-souzoku-kyoninka-shokei-gyoshu-betsu-kahi-hikaku.md"
+    ],
+    "primarySourceCandidates": []
+  },
+  {
+    "key": "realestate:shokuhin-seizogyo-central-kitchen-bukken-youto-haisui-tokutei-shisetsu",
+    "title": "食品製造業（セントラルキッチン）の物件はどこを見る？用途地域・排水・特定施設の要件",
+    "status": "HOLD: independent review required",
+    "files": [
+      "scripts/realestate-columns/176-shokuhin-seizogyo-central-kitchen-bukken-youto-haisui-tokutei-shisetsu.md",
+      "scripts/realestate-columns/en/176-shokuhin-seizogyo-central-kitchen-bukken-youto-haisui-tokutei-shisetsu.md",
+      "scripts/realestate-columns/zh-tw/176-shokuhin-seizogyo-central-kitchen-bukken-youto-haisui-tokutei-shisetsu.md",
+      "scripts/realestate-columns/zh/176-shokuhin-seizogyo-central-kitchen-bukken-youto-haisui-tokutei-shisetsu.md"
+    ],
+    "primarySourceCandidates": [
+      "https://laws.e-gov.go.jp/law/322AC0000000233",
+      "https://laws.e-gov.go.jp/law/325AC0000000201",
+      "https://laws.e-gov.go.jp/law/333AC0000000079",
+      "https://laws.e-gov.go.jp/law/345AC0000000138"
+    ]
+  },
+  {
+    "key": "realestate:souzoku-nochi-nouyouchi-kuiki-noshin-jogai-tenyo-baikyaku",
+    "title": "相続した農地が「農用地区域（青地）」だったら売れる？農振除外から農地転用までの順序",
+    "status": "HOLD: independent review required",
+    "files": [
+      "scripts/realestate-columns/177-souzoku-nochi-nouyouchi-kuiki-noshin-jogai-tenyo-baikyaku.md",
+      "scripts/realestate-columns/en/177-souzoku-nochi-nouyouchi-kuiki-noshin-jogai-tenyo-baikyaku.md",
+      "scripts/realestate-columns/zh-tw/177-souzoku-nochi-nouyouchi-kuiki-noshin-jogai-tenyo-baikyaku.md",
+      "scripts/realestate-columns/zh/177-souzoku-nochi-nouyouchi-kuiki-noshin-jogai-tenyo-baikyaku.md"
+    ],
+    "primarySourceCandidates": [
+      "https://laws.e-gov.go.jp/law/327AC0000000229",
+      "https://laws.e-gov.go.jp/law/344AC0000000058"
+    ]
+  },
+  {
+    "key": "labor:shiyonin-kenmu-yakuin-roudoshasei-zangyo-koyohoken-roumu",
+    "title": "使用人兼務役員に残業代は要るのか？労働者性と雇用保険・社会保険の扱い",
+    "status": "HOLD: independent review required",
+    "files": [
+      "scripts/labor-columns/212-shiyonin-kenmu-yakuin-roudoshasei-zangyo-koyohoken-roumu.md",
+      "scripts/labor-columns/en/212-shiyonin-kenmu-yakuin-roudoshasei-zangyo-koyohoken-roumu.md",
+      "scripts/labor-columns/zh-tw/212-shiyonin-kenmu-yakuin-roudoshasei-zangyo-koyohoken-roumu.md",
+      "scripts/labor-columns/zh/212-shiyonin-kenmu-yakuin-roudoshasei-zangyo-koyohoken-roumu.md"
+    ],
+    "primarySourceCandidates": []
+  },
+  {
+    "key": "legal:eisei-kensajo-rinsho-kensa-touroku-kozo-setsubi-kijun",
+    "title": "衛生検査所の登録はどう取る？臨床検査技師等法の構造設備・人員基準と申請の流れ",
+    "status": "HOLD: independent review required",
+    "files": [
+      "scripts/legal-columns/172-eisei-kensajo-rinsho-kensa-touroku-kozo-setsubi-kijun.md",
+      "scripts/legal-columns/en/172-eisei-kensajo-rinsho-kensa-touroku-kozo-setsubi-kijun.md",
+      "scripts/legal-columns/zh-tw/172-eisei-kensajo-rinsho-kensa-touroku-kozo-setsubi-kijun.md",
+      "scripts/legal-columns/zh/172-eisei-kensajo-rinsho-kensa-touroku-kozo-setsubi-kijun.md"
+    ],
+    "primarySourceCandidates": []
+  },
+  {
+    "key": "legal:kikyuji-yuigon-shibo-kikyusha-minpo-976jo-kakunin",
+    "title": "入院中で公正証書遺言が間に合わないときは？死亡危急者遺言（民法976条）の作り方と家裁の確認",
+    "status": "HOLD: independent review required",
+    "files": [
+      "scripts/legal-columns/173-kikyuji-yuigon-shibo-kikyusha-minpo-976jo-kakunin.md",
+      "scripts/legal-columns/en/173-kikyuji-yuigon-shibo-kikyusha-minpo-976jo-kakunin.md",
+      "scripts/legal-columns/zh-tw/173-kikyuji-yuigon-shibo-kikyusha-minpo-976jo-kakunin.md",
+      "scripts/legal-columns/zh/173-kikyuji-yuigon-shibo-kikyusha-minpo-976jo-kakunin.md"
+    ],
+    "primarySourceCandidates": []
+  },
+  {
+    "key": "realestate:souzoku-minpaku-jutaku-shukuhaku-todokede-shokei-haigyo-baikyaku",
+    "title": "民泊（住宅宿泊事業）を相続したらどうなる？届出は引き継げず、廃業・再届出・売却の判断が要る",
+    "status": "HOLD: independent review required",
+    "files": [
+      "scripts/realestate-columns/179-souzoku-minpaku-jutaku-shukuhaku-todokede-shokei-haigyo-baikyaku.md",
+      "scripts/realestate-columns/en/179-souzoku-minpaku-jutaku-shukuhaku-todokede-shokei-haigyo-baikyaku.md",
+      "scripts/realestate-columns/zh-tw/179-souzoku-minpaku-jutaku-shukuhaku-todokede-shokei-haigyo-baikyaku.md",
+      "scripts/realestate-columns/zh/179-souzoku-minpaku-jutaku-shukuhaku-todokede-shokei-haigyo-baikyaku.md"
+    ],
+    "primarySourceCandidates": [
+      "https://laws.e-gov.go.jp/law/323AC0000000138",
+      "https://laws.e-gov.go.jp/law/416AC0000000123",
+      "https://laws.e-gov.go.jp/law/429AC0000000065"
+    ]
+  },
+  {
+    "key": "realestate:tokutei-yukyo-inshokuten-club-bukken-youto-hozen-taisho",
+    "title": "特定遊興飲食店（クラブ・ラウンジ）の物件はどう選ぶ？用途地域と保全対象施設の距離で決まる",
+    "status": "HOLD: independent review required",
+    "files": [
+      "scripts/realestate-columns/178-tokutei-yukyo-inshokuten-club-bukken-youto-hozen-taisho.md",
+      "scripts/realestate-columns/en/178-tokutei-yukyo-inshokuten-club-bukken-youto-hozen-taisho.md",
+      "scripts/realestate-columns/zh-tw/178-tokutei-yukyo-inshokuten-club-bukken-youto-hozen-taisho.md",
+      "scripts/realestate-columns/zh/178-tokutei-yukyo-inshokuten-club-bukken-youto-hozen-taisho.md"
+    ],
+    "primarySourceCandidates": [
+      "https://laws.e-gov.go.jp/law/322AC0000000233",
+      "https://laws.e-gov.go.jp/law/323AC0000000122",
+      "https://laws.e-gov.go.jp/law/325AC0000000201",
+      "https://laws.e-gov.go.jp/law/359CO0000000319",
+      "https://laws.e-gov.go.jp/law/360M50400000001"
+    ]
+  },
+  {
+    "key": "legal:kashikin-gyo-touroku-yoken-shunin-junshisan",
+    "title": "貸金業の登録を受けるには――純資産5000万円・貸金業務取扱主任者・営業所要件の全体像",
+    "status": "HOLD: independent review required",
+    "files": [
+      "scripts/legal-columns/174-kashikin-gyo-touroku-yoken-shunin-junshisan.md",
+      "scripts/legal-columns/en/174-kashikin-gyo-touroku-yoken-shunin-junshisan.md",
+      "scripts/legal-columns/zh-tw/174-kashikin-gyo-touroku-yoken-shunin-junshisan.md",
+      "scripts/legal-columns/zh/174-kashikin-gyo-touroku-yoken-shunin-junshisan.md"
+    ],
+    "primarySourceCandidates": []
+  },
+  {
+    "key": "legal:souzoku-fuzaisha-zaisan-kanrinin-shisso-senkoku-erabikata",
+    "title": "相続人の中に生死不明の人がいる――不在者財産管理人と失踪宣告、どちらを選ぶか",
+    "status": "HOLD: independent review required",
+    "files": [
+      "scripts/legal-columns/175-souzoku-fuzaisha-zaisan-kanrinin-shisso-senkoku-erabikata.md",
+      "scripts/legal-columns/en/175-souzoku-fuzaisha-zaisan-kanrinin-shisso-senkoku-erabikata.md",
+      "scripts/legal-columns/zh-tw/175-souzoku-fuzaisha-zaisan-kanrinin-shisso-senkoku-erabikata.md",
+      "scripts/legal-columns/zh/175-souzoku-fuzaisha-zaisan-kanrinin-shisso-senkoku-erabikata.md"
+    ],
+    "primarySourceCandidates": []
+  }
+]

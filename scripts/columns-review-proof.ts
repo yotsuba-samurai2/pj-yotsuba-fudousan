@@ -1,4 +1,5 @@
 /** Offline bridge for the existing Daily independent review; never calls AI or DB. */
+import { inspectProjectionSet, constrainProjection } from "./check-column-projection.mjs";
 import { execFileSync } from "node:child_process";
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import type { ColumnInput } from "../src/lib/column-shared";
@@ -37,8 +38,23 @@ if (process.argv[2] === "prepare") {
   const reviewResult = process.env.REVIEW_RESULT ?? "unknown";
   let output: unknown;
   try { output = reviewResult === "success" ? JSON.parse(process.env.REVIEW ?? "") : undefined; } catch { output = undefined; }
-  const result = recordIndependentColumnReviews(candidates, output, inventory, baselineReviews,
+  // Re-run the read-only test here, not just on pull_request: Daily can push main directly.
+  // Never trust an article-provided path/result or create approval from a successful preflight.
+  const keys = candidates.map((c) => c.key);
+  let projection;
+  try { projection = inspectProjectionSet("--keys", keys); }
+  catch (error) { console.warn("Projection evidence unavailable; affected candidates remain held:", String(error)); }
+  if (projection?.warnings?.length) {
+    console.warn(`Column projection: ${projection.warnings.length} warning(s); unresolved targets were not counted as verified.`);
+    for (const warning of projection.warnings) console.warn(warning);
+  }
+  writeFileSync(".tmp/quality-projection.json", JSON.stringify({
+    checkedCandidates: keys, errors: projection ? Object.fromEntries(projection.errorsByKey) : null,
+    warnings: projection?.warnings ?? [], unavailable: !projection,
+  }, null, 2) + "\n");
+  const independentlyReviewed = recordIndependentColumnReviews(candidates, output, inventory, baselineReviews,
     todayInJst(new Date()), process.env.RUN_URL ?? "");
+  const result = constrainProjection(independentlyReviewed,keys,projection);
   writeFileSync("src/lib/data/columns-autopublish-reviews.ts",
     'import type { ColumnQualityReview } from "@/lib/columns-autopublish-quality";\n\n' +
     '// Recorded from independent review; changed or incomplete articles remain held.\n' +

@@ -1,7 +1,7 @@
 ---
 title: "Sell an inherited rental house after it is vacated? The dividing line between just cause, eviction money and selling with a tenant"
 excerpt: "When you inherit a rental house or apartment with a tenant in residence, whether to vacate it and sell (obtaining surrender) or to sell with the tenant (owner change) turns on whether it is an ordinary or a fixed-term lease. For an ordinary lease, a lessor's refusal to renew or notice of termination requires just cause (Land and Building Lease Act art. 28); eviction money is a 'property benefit' that supplements just cause and has no uniform market rate. From the renewal-refusal notice between one year and six months before expiry (art. 26), termination six months after a notice of termination (art. 27), to the difference from a fixed-term lease (art. 38) — a licensed real estate transaction specialist and administrative scrivener in Bunkyo, Tokyo organises it from the statutes. Eviction negotiation to a lawyer (avoiding unauthorised legal practice), eviction money and capital-gains tax to a tax accountant, inheritance registration to a judicial scrivener — by separate contracts."
-category: "相続"
+category: "Inheritance"
 faqHeading: "Frequently asked questions"
 ---
 
@@ -22,7 +22,7 @@ When selling after vacating, an ordinary lease needs just cause and, in many cas
 | Sell after vacating | For an ordinary lease, just cause + eviction money, and time for agreement or surrender | Want to sell to own-use buyers / sell after clearing the land |
 | Sell with tenant (owner change) | No surrender needed; sell succeeding to the lease as is | Want to sell quickly / sell to investors as an income property |
 
-The rights and withholding-tax practice when selling by owner change are organised separately in [withholding when an overseas-resident heir sells by owner change](https://luck428.com/en/column/kaigai-souzokunin-owner-change-baikyaku-gensen). First, confirm in the contract whether the inherited rental house is an ordinary or a fixed-term lease, and discern which exit is realistic.
+The rights and withholding-tax practice when selling by owner change are organised separately in [withholding when an overseas-resident heir sells by owner change](/en/column/kaigai-souzokunin-owner-change-baikyaku-gensen). First, confirm in the contract whether the inherited rental house is an ordinary or a fixed-term lease, and discern which exit is realistic.
 
 ## What does the 'just cause' needed for surrender of an ordinary lease refer to?
 
@@ -68,7 +68,7 @@ An ordinary lease, as seen so far, requires just cause (Land and Building Lease 
 | Eviction money | Tends to become an issue | Tends not to come to the fore |
 | Formation requirements | Can form even orally | Requirements of a document, prior explanation, etc. |
 
-Note that whether an inherited contract is a fixed-term or an ordinary lease is decided by the contract's wording and whether the formation requirements are met. Even if intended as a fixed-term lease, if it lacks the requirements it may be treated as an ordinary lease, and that judgment is a lawyer's field. The difference between a fixed-term and an ordinary lease and the practice of re-contracting are organised separately in [the difference between a fixed-term and an ordinary lease and the idea of re-contracting](https://luck428.com/en/column/chugokugo-owner-teiki-shakuya-futsu-chigai-saikeiyaku). We start from confirming the type of contract and look at the reality of the exit together.
+Note that whether an inherited contract is a fixed-term or an ordinary lease is decided by the contract's wording and whether the formation requirements are met. Even if intended as a fixed-term lease, if it lacks the requirements it may be treated as an ordinary lease, and that judgment is a lawyer's field. The difference between a fixed-term and an ordinary lease and the practice of re-contracting are organised separately in [the difference between a fixed-term and an ordinary lease and the idea of re-contracting](/en/column/chugokugo-owner-teiki-shakuya-futsu-chigai-saikeiyaku). We start from confirming the type of contract and look at the reality of the exit together.
 
 ## At what stage should you hand over to a lawyer, tax accountant or judicial scrivener?
 
@@ -80,12 +80,12 @@ First, a phase where eviction negotiation with the tenant reaches conflict is a 
 |---|---|---|
 | Exit organisation of with-tenant/surrender, brokerage and schedule | Discerning whether to sell vacated or with the tenant, and the sale | Real estate (us) |
 | Eviction negotiation / judgment of just cause | Negotiation with the tenant, legal evaluation (avoiding unauthorised practice) | Lawyer |
-| Eviction money / capital-gains tax | Estimating and filing the amount of eviction money and tax | Tax accountant |
+| Eviction money / capital-gains tax | Tax treatment of relocation payments; estimating and filing capital-gains tax | Tax accountant |
 | Inheritance registration | Name change to the heir (application obligation, Real Property Registration Act art. 76-2) | Judicial scrivener |
 
 If you are selling an inherited rental house, first confirm in the contract whether it is an ordinary or fixed-term lease, decide the policy of selling vacated or with the tenant, and hand over to a lawyer, tax accountant or judicial scrivener early as needed — that is the shortcut to proceeding smoothly. We help with this assignment and the exit organisation, brokerage and schedule-building as general information, but we do not make the final judgment on whether surrender is possible, the amount of eviction money, the tax or the registration.
 
-**[For advice on selling an inherited rental house or income property, bring it to Yotsuba Real Estate — initial consultation is free](https://luck428.com/en/souzoku)**
+**[For advice on selling an inherited rental house or income property, bring it to Yotsuba Real Estate — initial consultation is free](/en/souzoku)**
 
 In your inquiry, please note the property's location, the building type (detached house, apartment, unit, etc.), the type of contract (ordinary lease / fixed-term lease / unknown), the tenant's occupancy status, and whether you want to sell vacated or with the tenant. We start from organising the exit and arranging the referrals to the lawyer, tax accountant and judicial scrivener.
 
@@ -103,9 +103,11 @@ A. Yes. It is a sale by "owner change (with-tenant)," selling together with the 
 **Q. Can I ask a real-estate company to also negotiate the eviction with the tenant?**
 A. No. A phase where eviction negotiation with the tenant reaches conflict is a lawyer's field, and under Article 72 of the Lawyers Act (prohibition of unauthorised legal practice) we do not act as agent in negotiation for remuneration. What we handle is organising the exit of selling vacated or with the tenant, brokerage and building the sale schedule. Eviction money and capital-gains tax go to a tax accountant, inheritance registration to a judicial scrivener, and negotiation and legal judgment to a lawyer, in a form where each is an independent business contracted with separately, with us connecting you (no referral fees are exchanged).
 
-## この記事の出典（一次情報）
+## Primary sources
 
 The following are published materials that are the starting point for confirmation. Laws are amended, so confirm the article, paragraph, item, enforcement date and latest revision with e-Gov Law Search. The amount of eviction money and the judgment of just cause change with individual circumstances and case law, so confirm a specific outlook with a lawyer, taxation with a tax accountant, and registration with a judicial scrivener, each noting the reference date. The final judgment on whether surrender is possible, the amount of eviction money, the tax and the registration in an individual case is the field of a lawyer, a tax accountant and a judicial scrivener, and the court and the tax office. The reference date for the public materials is all 14 November 2026.
+
+- [MLIT: landlord termination and refusal to renew](https://www.mlit.go.jp/jutakukentiku/house/content/001493363.pdf) (2026-11-18).
 
 - e-Gov Law Search, "[Land and Building Lease Act](https://laws.e-gov.go.jp/law/403AC0000000090)" (Act No. 90 of 1991. Art. 26 = renewal etc. of a building lease contract — deemed renewed by law if no renewal-refusal notice is given between one year and six months before expiry; no fixed term after renewal; art. 27 = termination of a building lease by notice — where no fixed term, ends six months after the notice of termination; art. 28 = requirements for refusal to renew etc. — the elements of just cause and the property benefit = eviction money; art. 38 = fixed-term building lease. Confirm the latest text).
 - e-Gov Law Search, "[Civil Code](https://laws.e-gov.go.jp/law/129AC0000000089)" (Act No. 89 of 1896. Art. 601 = lease; art. 617 = notice of termination of a lease with no fixed term — three months for a building, but art. 27 of the Land and Building Lease Act takes priority for a building lease; art. 896 = succession of position by inheritance. Confirm the latest text).
@@ -115,6 +117,6 @@ The following are published materials that are the starting point for confirmati
 
 This article is general information and does not guarantee whether surrender is possible or the amount of eviction money in an individual case. The exit organisation of with-tenant/surrender, brokerage and schedule-building are handled by real estate (us); eviction negotiation and the legal judgment of just cause by a lawyer; eviction money and capital-gains tax by a tax accountant; inheritance registration by a judicial scrivener — each judging and handling their part.
 
-Joji Uramatsu, Representative Director and licensed real estate transaction specialist, Yotsuba Real Estate Co., Ltd. (四葉不動産株式会社). As a licensed real estate transaction specialist in Bunkyo, Tokyo, we provide surveys and brokerage of residential and commercial real estate. [Author profile](https://luck428.com/en/about/uramatsu)
+Joji Uramatsu, Representative Director and licensed real estate transaction specialist, Yotsuba Real Estate Co., Ltd. (四葉不動産株式会社). As a licensed real estate transaction specialist in Bunkyo, Tokyo, we provide surveys and brokerage of residential and commercial real estate. [Author profile](/en/about/uramatsu)
 
-Updated: 14 November 2026
+Updated: 18 November 2026

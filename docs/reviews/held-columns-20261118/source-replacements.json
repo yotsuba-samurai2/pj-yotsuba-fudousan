@@ -1,0 +1,17 @@
+{
+  "https://jsite.mhlw.go.jp/fukui-roudoukyoku/content/contents/001122018.pdf": {
+    "replacement": "https://jsite.mhlw.go.jp/fukui-roudoukyoku/hourei_seido_tetsuzuki/hourei_youshikishu/youshikishu/roudoukijyunhou.html",
+    "status": "body_obtained",
+    "note": "公式様式集307–321行で様式14・所轄署長の許可を確認"
+  },
+  "https://jsite.mhlw.go.jp/nagano-roudoukyoku/content/contents/roudoujyouken_handbook202502-honbun1.pdf": {
+    "replacement": "https://jsite.mhlw.go.jp/nagano-roudoukyoku/content/contents/roudoujyouken_handbook202602-9.pdf",
+    "status": "body_obtained",
+    "note": "2026年2月版の第9章PDFを取得。53・55–56頁で深夜割増・年休・許可を確認"
+  },
+  "https://jsite.mhlw.go.jp/kanagawa-hellowork/content/contents/002593239.pdf": {
+    "replacement": "https://jsite.mhlw.go.jp/hokkaido-hellowork/content/contents/001043154.pdf",
+    "status": "body_obtained",
+    "note": "公式PDF79行。2–8行・15–31行で代表者除外、労働者性と提出資料を確認"
+  }
+}

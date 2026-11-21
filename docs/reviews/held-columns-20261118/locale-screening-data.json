@@ -1,0 +1,3466 @@
+[
+  {
+    "index": 1,
+    "key": "labor:insatsu-gyo-kaigyo-roumu-yuuki-youzai-shinya-anzen-eisei",
+    "title": "印刷会社の開業・労務——有機溶剤や深夜勤務の安全衛生と労働時間管理",
+    "locales": [
+      {
+        "locale": "ja",
+        "file": "scripts/labor-columns/200-insatsu-gyo-kaigyo-roumu-yuuki-youzai-shinya-anzen-eisei.md",
+        "h2": 7,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/labor/column/36-kyotei-zangyo-sharoushi-doko-made",
+          "/labor/column/henkei-roudoujikan-flextime-erabikata",
+          "/labor/column/kagaku-busshitsu-jiritsuteki-kanri-sdsra",
+          "/labor/column/seizogyo-kotai-kinmu-henkei-roudoujikan-shinya-roumu",
+          "/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo",
+          "/labor/column/teiki-kenko-shindan-jisshi-gimu-hiyo-jikan",
+          "/labor/faq",
+          "/labor/ryokin"
+        ],
+        "sourceUrls": [
+          "https://www.mhlw.go.jp/file/06-Seisakujouhou-11300000-Roudoukijunkyokuanzeneiseibu/0000059138.pdf",
+          "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/faq/1.html",
+          "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/roudoukijun/anzeneisei10/qualificaton_education.html",
+          "https://www.mhlw.go.jp/web/t_doc?dataId=74090000"
+        ]
+      },
+      {
+        "locale": "en",
+        "file": "scripts/labor-columns/en/200-insatsu-gyo-kaigyo-roumu-yuuki-youzai-shinya-anzen-eisei.md",
+        "h2": 7,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/labor/column/36-kyotei-zangyo-sharoushi-doko-made",
+          "/labor/column/henkei-roudoujikan-flextime-erabikata",
+          "/labor/column/kagaku-busshitsu-jiritsuteki-kanri-sdsra",
+          "/labor/column/seizogyo-kotai-kinmu-henkei-roudoujikan-shinya-roumu",
+          "/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo",
+          "/labor/column/teiki-kenko-shindan-jisshi-gimu-hiyo-jikan",
+          "/labor/faq",
+          "/labor/ryokin"
+        ],
+        "sourceUrls": [
+          "https://www.mhlw.go.jp/file/06-Seisakujouhou-11300000-Roudoukijunkyokuanzeneiseibu/0000059138.pdf",
+          "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/faq/1.html",
+          "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/roudoukijun/anzeneisei10/qualificaton_education.html",
+          "https://www.mhlw.go.jp/web/t_doc?dataId=74090000"
+        ]
+      },
+      {
+        "locale": "zh-tw",
+        "file": "scripts/labor-columns/zh-tw/200-insatsu-gyo-kaigyo-roumu-yuuki-youzai-shinya-anzen-eisei.md",
+        "h2": 7,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/labor/column/36-kyotei-zangyo-sharoushi-doko-made",
+          "/labor/column/henkei-roudoujikan-flextime-erabikata",
+          "/labor/column/kagaku-busshitsu-jiritsuteki-kanri-sdsra",
+          "/labor/column/seizogyo-kotai-kinmu-henkei-roudoujikan-shinya-roumu",
+          "/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo",
+          "/labor/column/teiki-kenko-shindan-jisshi-gimu-hiyo-jikan",
+          "/labor/faq",
+          "/labor/ryokin"
+        ],
+        "sourceUrls": [
+          "https://www.mhlw.go.jp/file/06-Seisakujouhou-11300000-Roudoukijunkyokuanzeneiseibu/0000059138.pdf",
+          "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/faq/1.html",
+          "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/roudoukijun/anzeneisei10/qualificaton_education.html",
+          "https://www.mhlw.go.jp/web/t_doc?dataId=74090000"
+        ]
+      },
+      {
+        "locale": "zh",
+        "file": "scripts/labor-columns/zh/200-insatsu-gyo-kaigyo-roumu-yuuki-youzai-shinya-anzen-eisei.md",
+        "h2": 7,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/labor/column/36-kyotei-zangyo-sharoushi-doko-made",
+          "/labor/column/henkei-roudoujikan-flextime-erabikata",
+          "/labor/column/kagaku-busshitsu-jiritsuteki-kanri-sdsra",
+          "/labor/column/seizogyo-kotai-kinmu-henkei-roudoujikan-shinya-roumu",
+          "/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo",
+          "/labor/column/teiki-kenko-shindan-jisshi-gimu-hiyo-jikan",
+          "/labor/faq",
+          "/labor/ryokin"
+        ],
+        "sourceUrls": [
+          "https://www.mhlw.go.jp/file/06-Seisakujouhou-11300000-Roudoukijunkyokuanzeneiseibu/0000059138.pdf",
+          "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/faq/1.html",
+          "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/roudoukijun/anzeneisei10/qualificaton_education.html",
+          "https://www.mhlw.go.jp/web/t_doc?dataId=74090000"
+        ]
+      }
+    ],
+    "limitedAlignment": {
+      "h2CountMatches": true,
+      "faqCountMatches": true,
+      "sameInternalDestinations": true,
+      "sameSourceUrls": true
+    }
+  },
+  {
+    "index": 2,
+    "key": "legal:keiei-kanri-zairyu-2025-kaisei-shihonkin-joukin-shokuin-chuka-taiwan",
+    "title": "経営・管理ビザの更新準備｜2028年10月までの経過措置と新基準への適合資料",
+    "locales": [
+      {
+        "locale": "ja",
+        "file": "scripts/legal-columns/161-keiei-kanri-zairyu-2025-kaisei-shihonkin-joukin-shokuin-chuka-taiwan.md",
+        "h2": 6,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/global",
+          "/legal/column/keieikanri-koshin-jigyo-keizokusei-rissho-chuka-taiwan",
+          "/legal/column/keieikanri-zairyu-chuka-kigyousha-kaisha-setsuritsu",
+          "/legal/nagare",
+          "/legal/ryokin",
+          "/legal/services"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/326AC1000000004",
+          "https://www.jetro.go.jp/en/invest/setting_up/section2/page12.html",
+          "https://www.moj.go.jp/isa/applications/resources/10_00237.html",
+          "https://www.moj.go.jp/isa/applications/status/businessmanager.html",
+          "https://www.moj.go.jp/isa/content/001443284.pdf",
+          "https://www.moj.go.jp/isa/content/001448070.pdf",
+          "https://www.moj.go.jp/isa/content/001448099.pdf"
+        ]
+      },
+      {
+        "locale": "en",
+        "file": "scripts/legal-columns/en/161-keiei-kanri-zairyu-2025-kaisei-shihonkin-joukin-shokuin-chuka-taiwan.md",
+        "h2": 6,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/global",
+          "/legal/column/keieikanri-koshin-jigyo-keizokusei-rissho-chuka-taiwan",
+          "/legal/column/keieikanri-zairyu-chuka-kigyousha-kaisha-setsuritsu",
+          "/legal/nagare",
+          "/legal/ryokin",
+          "/legal/services"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/326AC1000000004",
+          "https://www.jetro.go.jp/en/invest/setting_up/section2/page12.html",
+          "https://www.moj.go.jp/isa/applications/resources/10_00237.html",
+          "https://www.moj.go.jp/isa/applications/status/businessmanager.html",
+          "https://www.moj.go.jp/isa/content/001443284.pdf",
+          "https://www.moj.go.jp/isa/content/001448070.pdf",
+          "https://www.moj.go.jp/isa/content/001448099.pdf"
+        ]
+      },
+      {
+        "locale": "zh-tw",
+        "file": "scripts/legal-columns/zh-tw/161-keiei-kanri-zairyu-2025-kaisei-shihonkin-joukin-shokuin-chuka-taiwan.md",
+        "h2": 6,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/global",
+          "/legal/column/keieikanri-koshin-jigyo-keizokusei-rissho-chuka-taiwan",
+          "/legal/column/keieikanri-zairyu-chuka-kigyousha-kaisha-setsuritsu",
+          "/legal/nagare",
+          "/legal/ryokin",
+          "/legal/services"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/326AC1000000004",
+          "https://www.jetro.go.jp/en/invest/setting_up/section2/page12.html",
+          "https://www.moj.go.jp/isa/applications/resources/10_00237.html",
+          "https://www.moj.go.jp/isa/applications/status/businessmanager.html",
+          "https://www.moj.go.jp/isa/content/001443284.pdf",
+          "https://www.moj.go.jp/isa/content/001448070.pdf",
+          "https://www.moj.go.jp/isa/content/001448099.pdf"
+        ]
+      },
+      {
+        "locale": "zh",
+        "file": "scripts/legal-columns/zh/161-keiei-kanri-zairyu-2025-kaisei-shihonkin-joukin-shokuin-chuka-taiwan.md",
+        "h2": 6,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/global",
+          "/legal/column/keieikanri-koshin-jigyo-keizokusei-rissho-chuka-taiwan",
+          "/legal/column/keieikanri-zairyu-chuka-kigyousha-kaisha-setsuritsu",
+          "/legal/nagare",
+          "/legal/ryokin",
+          "/legal/services"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/326AC1000000004",
+          "https://www.jetro.go.jp/en/invest/setting_up/section2/page12.html",
+          "https://www.moj.go.jp/isa/applications/resources/10_00237.html",
+          "https://www.moj.go.jp/isa/applications/status/businessmanager.html",
+          "https://www.moj.go.jp/isa/content/001443284.pdf",
+          "https://www.moj.go.jp/isa/content/001448070.pdf",
+          "https://www.moj.go.jp/isa/content/001448099.pdf"
+        ]
+      }
+    ],
+    "limitedAlignment": {
+      "h2CountMatches": true,
+      "faqCountMatches": true,
+      "sameInternalDestinations": true,
+      "sameSourceUrls": true
+    }
+  },
+  {
+    "index": 3,
+    "key": "realestate:chugokugo-kokudo-riyo-keikaku-ho-jigo-todokede-menseki",
+    "title": "繁体字・簡体字対応｜中国・台湾の投資家が日本の土地を買うとき必要な国土利用計画法の事後届出",
+    "locales": [
+      {
+        "locale": "ja",
+        "file": "scripts/realestate-columns/100-chugokugo-kokudo-riyo-keikaku-ho-jigo-todokede-menseki.md",
+        "h2": 8,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/column/chugokugo-buyer-juyojiko-check-toushi-bukken",
+          "/column/chuka-shihon-kisei-soukin-nihon-fudosan-kessai",
+          "/column/hikyojusha-baibai-baishu-gensen-10-21-chugokugo",
+          "/column/juyo-tochi-chosa-ho-chushi-tokubetsu-chushi-torihiki-todokede",
+          "/toushi"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/349AC1000000092",
+          "https://laws.e-gov.go.jp/law/503AC0000000084",
+          "https://www.cao.go.jp/tochi-chosa/todokede.html",
+          "https://www.mlit.go.jp/totikensangyo/totikensangyo_tk2_000019.html",
+          "https://www.mof.go.jp/policy/international_policy/gaitame_kawase/real_property/FAQ_J.pdf",
+          "https://www.mof.go.jp/policy/international_policy/gaitame_kawase/real_property/seido_gaiyo.html"
+        ]
+      },
+      {
+        "locale": "en",
+        "file": "scripts/realestate-columns/en/100-chugokugo-kokudo-riyo-keikaku-ho-jigo-todokede-menseki.md",
+        "h2": 8,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/column/chugokugo-buyer-juyojiko-check-toushi-bukken",
+          "/column/chuka-shihon-kisei-soukin-nihon-fudosan-kessai",
+          "/column/hikyojusha-baibai-baishu-gensen-10-21-chugokugo",
+          "/column/juyo-tochi-chosa-ho-chushi-tokubetsu-chushi-torihiki-todokede",
+          "/toushi"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/349AC1000000092",
+          "https://laws.e-gov.go.jp/law/503AC0000000084",
+          "https://www.cao.go.jp/tochi-chosa/todokede.html",
+          "https://www.mlit.go.jp/totikensangyo/totikensangyo_tk2_000019.html",
+          "https://www.mof.go.jp/policy/international_policy/gaitame_kawase/real_property/FAQ_J.pdf",
+          "https://www.mof.go.jp/policy/international_policy/gaitame_kawase/real_property/seido_gaiyo.html"
+        ]
+      },
+      {
+        "locale": "zh-tw",
+        "file": "scripts/realestate-columns/zh-tw/100-chugokugo-kokudo-riyo-keikaku-ho-jigo-todokede-menseki.md",
+        "h2": 8,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/column/chugokugo-buyer-juyojiko-check-toushi-bukken",
+          "/column/chuka-shihon-kisei-soukin-nihon-fudosan-kessai",
+          "/column/hikyojusha-baibai-baishu-gensen-10-21-chugokugo",
+          "/column/juyo-tochi-chosa-ho-chushi-tokubetsu-chushi-torihiki-todokede",
+          "/toushi"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/349AC1000000092",
+          "https://laws.e-gov.go.jp/law/503AC0000000084",
+          "https://www.cao.go.jp/tochi-chosa/todokede.html",
+          "https://www.mlit.go.jp/totikensangyo/totikensangyo_tk2_000019.html",
+          "https://www.mof.go.jp/policy/international_policy/gaitame_kawase/real_property/FAQ_J.pdf",
+          "https://www.mof.go.jp/policy/international_policy/gaitame_kawase/real_property/seido_gaiyo.html"
+        ]
+      },
+      {
+        "locale": "zh",
+        "file": "scripts/realestate-columns/zh/100-chugokugo-kokudo-riyo-keikaku-ho-jigo-todokede-menseki.md",
+        "h2": 8,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/column/chugokugo-buyer-juyojiko-check-toushi-bukken",
+          "/column/chuka-shihon-kisei-soukin-nihon-fudosan-kessai",
+          "/column/hikyojusha-baibai-baishu-gensen-10-21-chugokugo",
+          "/column/juyo-tochi-chosa-ho-chushi-tokubetsu-chushi-torihiki-todokede",
+          "/toushi"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/349AC1000000092",
+          "https://laws.e-gov.go.jp/law/503AC0000000084",
+          "https://www.cao.go.jp/tochi-chosa/todokede.html",
+          "https://www.mlit.go.jp/totikensangyo/totikensangyo_tk2_000019.html",
+          "https://www.mof.go.jp/policy/international_policy/gaitame_kawase/real_property/FAQ_J.pdf",
+          "https://www.mof.go.jp/policy/international_policy/gaitame_kawase/real_property/seido_gaiyo.html"
+        ]
+      }
+    ],
+    "limitedAlignment": {
+      "h2CountMatches": true,
+      "faqCountMatches": true,
+      "sameInternalDestinations": true,
+      "sameSourceUrls": true
+    }
+  },
+  {
+    "index": 4,
+    "key": "legal:houkatsu-tokutei-izo-chigai-juisha-hoki",
+    "title": "『包括遺贈』と『特定遺贈』はどう違う？受遺者の権利義務と放棄の仕方",
+    "locales": [
+      {
+        "locale": "ja",
+        "file": "scripts/legal-columns/163-houkatsu-tokutei-izo-chigai-juisha-hoki.md",
+        "h2": 7,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/legal/column/jihitsu-kosei-yuigon",
+          "/legal/column/souzoku-iryubun-kiso",
+          "/legal/column/tokutei-zaisan-shokei-yuigon-izo-chigai",
+          "/legal/nagare",
+          "/legal/ryokin",
+          "/legal/services/inheritance",
+          "/souzoku"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/129AC0000000089",
+          "https://www.courts.go.jp/saiban/syurui/syurui_kazi/kazi_06_25/index.html"
+        ]
+      },
+      {
+        "locale": "en",
+        "file": "scripts/legal-columns/en/163-houkatsu-tokutei-izo-chigai-juisha-hoki.md",
+        "h2": 7,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/legal/column/jihitsu-kosei-yuigon",
+          "/legal/column/souzoku-iryubun-kiso",
+          "/legal/column/tokutei-zaisan-shokei-yuigon-izo-chigai",
+          "/legal/nagare",
+          "/legal/ryokin",
+          "/legal/services/inheritance",
+          "/souzoku"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/129AC0000000089",
+          "https://www.courts.go.jp/saiban/syurui/syurui_kazi/kazi_06_25/index.html"
+        ]
+      },
+      {
+        "locale": "zh-tw",
+        "file": "scripts/legal-columns/zh-tw/163-houkatsu-tokutei-izo-chigai-juisha-hoki.md",
+        "h2": 7,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/legal/column/jihitsu-kosei-yuigon",
+          "/legal/column/souzoku-iryubun-kiso",
+          "/legal/column/tokutei-zaisan-shokei-yuigon-izo-chigai",
+          "/legal/nagare",
+          "/legal/ryokin",
+          "/legal/services/inheritance",
+          "/souzoku"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/129AC0000000089",
+          "https://www.courts.go.jp/saiban/syurui/syurui_kazi/kazi_06_25/index.html"
+        ]
+      },
+      {
+        "locale": "zh",
+        "file": "scripts/legal-columns/zh/163-houkatsu-tokutei-izo-chigai-juisha-hoki.md",
+        "h2": 7,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/legal/column/jihitsu-kosei-yuigon",
+          "/legal/column/souzoku-iryubun-kiso",
+          "/legal/column/tokutei-zaisan-shokei-yuigon-izo-chigai",
+          "/legal/nagare",
+          "/legal/ryokin",
+          "/legal/services/inheritance",
+          "/souzoku"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/129AC0000000089",
+          "https://www.courts.go.jp/saiban/syurui/syurui_kazi/kazi_06_25/index.html"
+        ]
+      }
+    ],
+    "limitedAlignment": {
+      "h2CountMatches": true,
+      "faqCountMatches": true,
+      "sameInternalDestinations": true,
+      "sameSourceUrls": true
+    }
+  },
+  {
+    "index": 5,
+    "key": "legal:kensetsugyo-kessan-henko-todoke-jigyo-nendo-shuryo",
+    "title": "建設業許可を取った後の『決算変更届（事業年度終了届）』は毎年いる？出し忘れの影響と各種変更届",
+    "locales": [
+      {
+        "locale": "ja",
+        "file": "scripts/legal-columns/162-kensetsugyo-kessan-henko-todoke-jigyo-nendo-shuryo.md",
+        "h2": 7,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/legal/column/keiei-jiko-shinsa-keishin-nyusatsu-sankaku-shikaku",
+          "/legal/column/kensetsugyo-kyoka-yoken-keikan-sengi-zaisan",
+          "/legal/nagare",
+          "/legal/ryokin",
+          "/legal/services"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/324AC0000000100",
+          "https://www.nta.go.jp/taxes/shiraberu/taxanswer/osirase/9204.htm",
+          "https://www.toshiseibi.metro.tokyo.lg.jp/kenchiku_kaihatsu/kenchiku_shidou/gyosya_shido/kensetsu/kensetsu_kyoka_tebiki3"
+        ]
+      },
+      {
+        "locale": "en",
+        "file": "scripts/legal-columns/en/162-kensetsugyo-kessan-henko-todoke-jigyo-nendo-shuryo.md",
+        "h2": 7,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/legal/column/keiei-jiko-shinsa-keishin-nyusatsu-sankaku-shikaku",
+          "/legal/column/kensetsugyo-kyoka-yoken-keikan-sengi-zaisan",
+          "/legal/nagare",
+          "/legal/ryokin",
+          "/legal/services"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/324AC0000000100",
+          "https://www.nta.go.jp/taxes/shiraberu/taxanswer/osirase/9204.htm",
+          "https://www.toshiseibi.metro.tokyo.lg.jp/kenchiku_kaihatsu/kenchiku_shidou/gyosya_shido/kensetsu/kensetsu_kyoka_tebiki3"
+        ]
+      },
+      {
+        "locale": "zh-tw",
+        "file": "scripts/legal-columns/zh-tw/162-kensetsugyo-kessan-henko-todoke-jigyo-nendo-shuryo.md",
+        "h2": 7,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/legal/column/keiei-jiko-shinsa-keishin-nyusatsu-sankaku-shikaku",
+          "/legal/column/kensetsugyo-kyoka-yoken-keikan-sengi-zaisan",
+          "/legal/nagare",
+          "/legal/ryokin",
+          "/legal/services"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/324AC0000000100",
+          "https://www.nta.go.jp/taxes/shiraberu/taxanswer/osirase/9204.htm",
+          "https://www.toshiseibi.metro.tokyo.lg.jp/kenchiku_kaihatsu/kenchiku_shidou/gyosya_shido/kensetsu/kensetsu_kyoka_tebiki3"
+        ]
+      },
+      {
+        "locale": "zh",
+        "file": "scripts/legal-columns/zh/162-kensetsugyo-kessan-henko-todoke-jigyo-nendo-shuryo.md",
+        "h2": 7,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/legal/column/keiei-jiko-shinsa-keishin-nyusatsu-sankaku-shikaku",
+          "/legal/column/kensetsugyo-kyoka-yoken-keikan-sengi-zaisan",
+          "/legal/nagare",
+          "/legal/ryokin",
+          "/legal/services"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/324AC0000000100",
+          "https://www.nta.go.jp/taxes/shiraberu/taxanswer/osirase/9204.htm",
+          "https://www.toshiseibi.metro.tokyo.lg.jp/kenchiku_kaihatsu/kenchiku_shidou/gyosya_shido/kensetsu/kensetsu_kyoka_tebiki3"
+        ]
+      }
+    ],
+    "limitedAlignment": {
+      "h2CountMatches": true,
+      "faqCountMatches": true,
+      "sameInternalDestinations": true,
+      "sameSourceUrls": true
+    }
+  },
+  {
+    "index": 6,
+    "key": "legal:gaikokuseki-nihon-zaiju-yuigon-houshiki-junkyoho-chuka-taiwan",
+    "title": "日本に住む中国籍・台湾籍の人が日本で遺言を作る——方式の準拠法・公正証書遺言の通訳・本国での効力",
+    "locales": [
+      {
+        "locale": "ja",
+        "file": "scripts/legal-columns/165-gaikokuseki-nihon-zaiju-yuigon-houshiki-junkyoho-chuka-taiwan.md",
+        "h2": 8,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/legal/column/gaikokuseki-hisouzokunin-junkyoho-tsusokuho-36jo",
+          "/legal/column/jihitsu-kosei-yuigon",
+          "/legal/column/jihitsu-yuigon-hokan-seido-souzoku-tetsuzuki",
+          "/legal/column/kosei-shosho-yuigon-koshonin-shonin-hiyo",
+          "/legal/nagare",
+          "/legal/ryokin",
+          "/legal/services/inheritance",
+          "/souzoku"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/339AC0000000100",
+          "https://laws.e-gov.go.jp/law/418AC0000000078",
+          "https://www.moj.go.jp/MINJI/02.html"
+        ]
+      },
+      {
+        "locale": "en",
+        "file": "scripts/legal-columns/en/165-gaikokuseki-nihon-zaiju-yuigon-houshiki-junkyoho-chuka-taiwan.md",
+        "h2": 8,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/legal/column/gaikokuseki-hisouzokunin-junkyoho-tsusokuho-36jo",
+          "/legal/column/jihitsu-kosei-yuigon",
+          "/legal/column/jihitsu-yuigon-hokan-seido-souzoku-tetsuzuki",
+          "/legal/column/kosei-shosho-yuigon-koshonin-shonin-hiyo",
+          "/legal/nagare",
+          "/legal/ryokin",
+          "/legal/services/inheritance",
+          "/souzoku"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/339AC0000000100",
+          "https://laws.e-gov.go.jp/law/418AC0000000078",
+          "https://www.moj.go.jp/MINJI/02.html"
+        ]
+      },
+      {
+        "locale": "zh-tw",
+        "file": "scripts/legal-columns/zh-tw/165-gaikokuseki-nihon-zaiju-yuigon-houshiki-junkyoho-chuka-taiwan.md",
+        "h2": 8,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/legal/column/gaikokuseki-hisouzokunin-junkyoho-tsusokuho-36jo",
+          "/legal/column/jihitsu-kosei-yuigon",
+          "/legal/column/jihitsu-yuigon-hokan-seido-souzoku-tetsuzuki",
+          "/legal/column/kosei-shosho-yuigon-koshonin-shonin-hiyo",
+          "/legal/nagare",
+          "/legal/ryokin",
+          "/legal/services/inheritance",
+          "/souzoku"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/339AC0000000100",
+          "https://laws.e-gov.go.jp/law/418AC0000000078",
+          "https://www.moj.go.jp/MINJI/02.html"
+        ]
+      },
+      {
+        "locale": "zh",
+        "file": "scripts/legal-columns/zh/165-gaikokuseki-nihon-zaiju-yuigon-houshiki-junkyoho-chuka-taiwan.md",
+        "h2": 8,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/legal/column/gaikokuseki-hisouzokunin-junkyoho-tsusokuho-36jo",
+          "/legal/column/jihitsu-kosei-yuigon",
+          "/legal/column/jihitsu-yuigon-hokan-seido-souzoku-tetsuzuki",
+          "/legal/column/kosei-shosho-yuigon-koshonin-shonin-hiyo",
+          "/legal/nagare",
+          "/legal/ryokin",
+          "/legal/services/inheritance",
+          "/souzoku"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/339AC0000000100",
+          "https://laws.e-gov.go.jp/law/418AC0000000078",
+          "https://www.moj.go.jp/MINJI/02.html"
+        ]
+      }
+    ],
+    "limitedAlignment": {
+      "h2CountMatches": true,
+      "faqCountMatches": true,
+      "sameInternalDestinations": true,
+      "sameSourceUrls": true
+    }
+  },
+  {
+    "index": 7,
+    "key": "legal:shurui-seizo-menkyo-craft-beer-happosyu-youken",
+    "title": "クラフトビールや発泡酒の『酒類製造免許』をとる——最低製造数量基準・設備・特区と、申請の流れ",
+    "locales": [
+      {
+        "locale": "ja",
+        "file": "scripts/legal-columns/164-shurui-seizo-menkyo-craft-beer-happosyu-youken.md",
+        "h2": 8,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/legal/column/inshokuten-eigyo-kyoka-hokenjo-setsubi-kijun-shokuhin-eisei",
+          "/legal/column/shokuhin-seizogyo-kyoka-bukken-setsubi-kijun",
+          "/legal/column/shurui-kouri-menkyo-tenpo-bukken-yoken",
+          "/legal/nagare",
+          "/legal/ryokin",
+          "/legal/services"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/328AC0000000006",
+          "https://www.nta.go.jp/law/tsutatsu/kihon/sake/2-07.htm",
+          "https://www.nta.go.jp/taxes/sake/menkyo/shinki/seizo/m01.pdf"
+        ]
+      },
+      {
+        "locale": "en",
+        "file": "scripts/legal-columns/en/164-shurui-seizo-menkyo-craft-beer-happosyu-youken.md",
+        "h2": 8,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/legal/column/inshokuten-eigyo-kyoka-hokenjo-setsubi-kijun-shokuhin-eisei",
+          "/legal/column/shokuhin-seizogyo-kyoka-bukken-setsubi-kijun",
+          "/legal/column/shurui-kouri-menkyo-tenpo-bukken-yoken",
+          "/legal/nagare",
+          "/legal/ryokin",
+          "/legal/services"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/328AC0000000006",
+          "https://www.nta.go.jp/law/tsutatsu/kihon/sake/2-07.htm",
+          "https://www.nta.go.jp/taxes/sake/menkyo/shinki/seizo/m01.pdf"
+        ]
+      },
+      {
+        "locale": "zh-tw",
+        "file": "scripts/legal-columns/zh-tw/164-shurui-seizo-menkyo-craft-beer-happosyu-youken.md",
+        "h2": 8,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/legal/column/inshokuten-eigyo-kyoka-hokenjo-setsubi-kijun-shokuhin-eisei",
+          "/legal/column/shokuhin-seizogyo-kyoka-bukken-setsubi-kijun",
+          "/legal/column/shurui-kouri-menkyo-tenpo-bukken-yoken",
+          "/legal/nagare",
+          "/legal/ryokin",
+          "/legal/services"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/328AC0000000006",
+          "https://www.nta.go.jp/law/tsutatsu/kihon/sake/2-07.htm",
+          "https://www.nta.go.jp/taxes/sake/menkyo/shinki/seizo/m01.pdf"
+        ]
+      },
+      {
+        "locale": "zh",
+        "file": "scripts/legal-columns/zh/164-shurui-seizo-menkyo-craft-beer-happosyu-youken.md",
+        "h2": 8,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/legal/column/inshokuten-eigyo-kyoka-hokenjo-setsubi-kijun-shokuhin-eisei",
+          "/legal/column/shokuhin-seizogyo-kyoka-bukken-setsubi-kijun",
+          "/legal/column/shurui-kouri-menkyo-tenpo-bukken-yoken",
+          "/legal/nagare",
+          "/legal/ryokin",
+          "/legal/services"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/328AC0000000006",
+          "https://www.nta.go.jp/law/tsutatsu/kihon/sake/2-07.htm",
+          "https://www.nta.go.jp/taxes/sake/menkyo/shinki/seizo/m01.pdf"
+        ]
+      }
+    ],
+    "limitedAlignment": {
+      "h2CountMatches": true,
+      "faqCountMatches": true,
+      "sameInternalDestinations": true,
+      "sameSourceUrls": true
+    }
+  },
+  {
+    "index": 8,
+    "key": "realestate:chuka-pro-kyutaishin-kubun-mansion-dd",
+    "title": "中国・台湾の不動産プロが日本の旧耐震区分マンションを評価する——耐震診断・建替え決議・修繕積立金のデューデリ",
+    "locales": [
+      {
+        "locale": "ja",
+        "file": "scripts/realestate-columns/171-chuka-pro-kyutaishin-kubun-mansion-dd.md",
+        "h2": 8,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/column/chugokugo-buyer-juyojiko-check-toushi-bukken",
+          "/column/chugokugo-buyer-kanri-kiyaku-shuzen-keikaku-check",
+          "/column/chuka-pro-shuueki-biru-kensazumisho-dd",
+          "/toushi"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/337AC0000000069",
+          "https://www.mlit.go.jp/jutakukentiku/house/content/001971486.pdf",
+          "https://www.mlit.go.jp/jutakukentiku/house/jutakukentiku_house_tk5_000050.html"
+        ]
+      },
+      {
+        "locale": "en",
+        "file": "scripts/realestate-columns/en/171-chuka-pro-kyutaishin-kubun-mansion-dd.md",
+        "h2": 8,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/column/chugokugo-buyer-juyojiko-check-toushi-bukken",
+          "/column/chugokugo-buyer-kanri-kiyaku-shuzen-keikaku-check",
+          "/column/chuka-pro-shuueki-biru-kensazumisho-dd",
+          "/toushi"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/337AC0000000069",
+          "https://www.mlit.go.jp/jutakukentiku/house/content/001971486.pdf",
+          "https://www.mlit.go.jp/jutakukentiku/house/jutakukentiku_house_tk5_000050.html"
+        ]
+      },
+      {
+        "locale": "zh-tw",
+        "file": "scripts/realestate-columns/zh-tw/171-chuka-pro-kyutaishin-kubun-mansion-dd.md",
+        "h2": 8,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/column/chugokugo-buyer-juyojiko-check-toushi-bukken",
+          "/column/chugokugo-buyer-kanri-kiyaku-shuzen-keikaku-check",
+          "/column/chuka-pro-shuueki-biru-kensazumisho-dd",
+          "/toushi"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/337AC0000000069",
+          "https://www.mlit.go.jp/jutakukentiku/house/content/001971486.pdf",
+          "https://www.mlit.go.jp/jutakukentiku/house/jutakukentiku_house_tk5_000050.html"
+        ]
+      },
+      {
+        "locale": "zh",
+        "file": "scripts/realestate-columns/zh/171-chuka-pro-kyutaishin-kubun-mansion-dd.md",
+        "h2": 8,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/column/chugokugo-buyer-juyojiko-check-toushi-bukken",
+          "/column/chugokugo-buyer-kanri-kiyaku-shuzen-keikaku-check",
+          "/column/chuka-pro-shuueki-biru-kensazumisho-dd",
+          "/toushi"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/337AC0000000069",
+          "https://www.mlit.go.jp/jutakukentiku/house/content/001971486.pdf",
+          "https://www.mlit.go.jp/jutakukentiku/house/jutakukentiku_house_tk5_000050.html"
+        ]
+      }
+    ],
+    "limitedAlignment": {
+      "h2CountMatches": true,
+      "faqCountMatches": true,
+      "sameInternalDestinations": true,
+      "sameSourceUrls": true
+    }
+  },
+  {
+    "index": 9,
+    "key": "realestate:shoene-tekigo-gimuka-2025-chintai-shinchiku-bukken",
+    "title": "2025年4月から全建築物に省エネ基準適合義務——賃貸アパート・小規模テナントを新築するオーナーが物件計画で変わること",
+    "locales": [
+      {
+        "locale": "ja",
+        "file": "scripts/realestate-columns/170-shoene-tekigo-gimuka-2025-chintai-shinchiku-bukken.md",
+        "h2": 8,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/column/kenchiku-shoene-ho-shoene-seino-hyoji-koukoku-2024",
+          "/toushi"
+        ],
+        "sourceUrls": [
+          "https://houmukyoku.moj.go.jp/homu/touki1.html",
+          "https://laws.e-gov.go.jp/law/427AC0000000053",
+          "https://www.mlit.go.jp/common/001768045.pdf"
+        ]
+      },
+      {
+        "locale": "en",
+        "file": "scripts/realestate-columns/en/170-shoene-tekigo-gimuka-2025-chintai-shinchiku-bukken.md",
+        "h2": 8,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/column/kenchiku-shoene-ho-shoene-seino-hyoji-koukoku-2024",
+          "/toushi"
+        ],
+        "sourceUrls": [
+          "https://houmukyoku.moj.go.jp/homu/touki1.html",
+          "https://laws.e-gov.go.jp/law/427AC0000000053",
+          "https://www.mlit.go.jp/common/001768045.pdf"
+        ]
+      },
+      {
+        "locale": "zh-tw",
+        "file": "scripts/realestate-columns/zh-tw/170-shoene-tekigo-gimuka-2025-chintai-shinchiku-bukken.md",
+        "h2": 8,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/column/kenchiku-shoene-ho-shoene-seino-hyoji-koukoku-2024",
+          "/toushi"
+        ],
+        "sourceUrls": [
+          "https://houmukyoku.moj.go.jp/homu/touki1.html",
+          "https://laws.e-gov.go.jp/law/427AC0000000053",
+          "https://www.mlit.go.jp/common/001768045.pdf"
+        ]
+      },
+      {
+        "locale": "zh",
+        "file": "scripts/realestate-columns/zh/170-shoene-tekigo-gimuka-2025-chintai-shinchiku-bukken.md",
+        "h2": 8,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/column/kenchiku-shoene-ho-shoene-seino-hyoji-koukoku-2024",
+          "/toushi"
+        ],
+        "sourceUrls": [
+          "https://houmukyoku.moj.go.jp/homu/touki1.html",
+          "https://laws.e-gov.go.jp/law/427AC0000000053",
+          "https://www.mlit.go.jp/common/001768045.pdf"
+        ]
+      }
+    ],
+    "limitedAlignment": {
+      "h2CountMatches": true,
+      "faqCountMatches": true,
+      "sameInternalDestinations": true,
+      "sameSourceUrls": true
+    }
+  },
+  {
+    "index": 10,
+    "key": "labor:kodo-professional-seido-dounyu-youken-roushi-iinkai-kenko-kakuho",
+    "title": "高度プロフェッショナル制度の導入要件——労使委員会・年104日休日・健康確保措置",
+    "locales": [
+      {
+        "locale": "ja",
+        "file": "scripts/labor-columns/205-kodo-professional-seido-dounyu-youken-roushi-iinkai-kenko-kakuho.md",
+        "h2": 7,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/labor/column/36-kyotei-zangyo-sharoushi-doko-made",
+          "/labor/column/henkei-roudoujikan-flextime-erabikata",
+          "/labor/column/isha-jikangai-jougen-2024-suijun-kenko-kakuho",
+          "/labor/column/kanri-kantokusha-nabakari-warimashi-shinya",
+          "/labor/column/kotei-zangyodai-tekiho-youken-sagaku-seisan",
+          "/labor/column/nenji-yukyu-5nichi-torikirenai",
+          "/labor/column/sairyo-roudo-honnin-doui-2024",
+          "/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo",
+          "/labor/faq",
+          "/labor/nagare",
+          "/labor/ryokin",
+          "/labor/services"
+        ],
+        "sourceUrls": [
+          "https://www.check-roudou.mhlw.go.jp/qa/roudousya/roudoujikan/q9.html",
+          "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/roudouzikan/202311.html"
+        ]
+      },
+      {
+        "locale": "en",
+        "file": "scripts/labor-columns/en/205-kodo-professional-seido-dounyu-youken-roushi-iinkai-kenko-kakuho.md",
+        "h2": 7,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/labor/column/36-kyotei-zangyo-sharoushi-doko-made",
+          "/labor/column/henkei-roudoujikan-flextime-erabikata",
+          "/labor/column/isha-jikangai-jougen-2024-suijun-kenko-kakuho",
+          "/labor/column/kanri-kantokusha-nabakari-warimashi-shinya",
+          "/labor/column/kotei-zangyodai-tekiho-youken-sagaku-seisan",
+          "/labor/column/nenji-yukyu-5nichi-torikirenai",
+          "/labor/column/sairyo-roudo-honnin-doui-2024",
+          "/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo",
+          "/labor/faq",
+          "/labor/nagare",
+          "/labor/ryokin",
+          "/labor/services"
+        ],
+        "sourceUrls": [
+          "https://www.check-roudou.mhlw.go.jp/qa/roudousya/roudoujikan/q9.html",
+          "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/roudouzikan/202311.html"
+        ]
+      },
+      {
+        "locale": "zh-tw",
+        "file": "scripts/labor-columns/zh-tw/205-kodo-professional-seido-dounyu-youken-roushi-iinkai-kenko-kakuho.md",
+        "h2": 7,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/labor/column/36-kyotei-zangyo-sharoushi-doko-made",
+          "/labor/column/henkei-roudoujikan-flextime-erabikata",
+          "/labor/column/isha-jikangai-jougen-2024-suijun-kenko-kakuho",
+          "/labor/column/kanri-kantokusha-nabakari-warimashi-shinya",
+          "/labor/column/kotei-zangyodai-tekiho-youken-sagaku-seisan",
+          "/labor/column/nenji-yukyu-5nichi-torikirenai",
+          "/labor/column/sairyo-roudo-honnin-doui-2024",
+          "/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo",
+          "/labor/faq",
+          "/labor/nagare",
+          "/labor/ryokin",
+          "/labor/services"
+        ],
+        "sourceUrls": [
+          "https://www.check-roudou.mhlw.go.jp/qa/roudousya/roudoujikan/q9.html",
+          "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/roudouzikan/202311.html"
+        ]
+      },
+      {
+        "locale": "zh",
+        "file": "scripts/labor-columns/zh/205-kodo-professional-seido-dounyu-youken-roushi-iinkai-kenko-kakuho.md",
+        "h2": 7,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/labor/column/36-kyotei-zangyo-sharoushi-doko-made",
+          "/labor/column/henkei-roudoujikan-flextime-erabikata",
+          "/labor/column/isha-jikangai-jougen-2024-suijun-kenko-kakuho",
+          "/labor/column/kanri-kantokusha-nabakari-warimashi-shinya",
+          "/labor/column/kotei-zangyodai-tekiho-youken-sagaku-seisan",
+          "/labor/column/nenji-yukyu-5nichi-torikirenai",
+          "/labor/column/sairyo-roudo-honnin-doui-2024",
+          "/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo",
+          "/labor/faq",
+          "/labor/nagare",
+          "/labor/ryokin",
+          "/labor/services"
+        ],
+        "sourceUrls": [
+          "https://www.check-roudou.mhlw.go.jp/qa/roudousya/roudoujikan/q9.html",
+          "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/roudouzikan/202311.html"
+        ]
+      }
+    ],
+    "limitedAlignment": {
+      "h2CountMatches": true,
+      "faqCountMatches": true,
+      "sameInternalDestinations": true,
+      "sameSourceUrls": true
+    }
+  },
+  {
+    "index": 11,
+    "key": "labor:mansion-kanrin-kanshi-danzoku-roudo-tekiyo-jogai-kyoka-roumu",
+    "title": "マンション管理員の労働時間——監視・断続的労働の適用除外許可と手待時間",
+    "locales": [
+      {
+        "locale": "ja",
+        "file": "scripts/labor-columns/206-mansion-kanrin-kanshi-danzoku-roudo-tekiyo-jogai-kyoka-roumu.md",
+        "h2": 8,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/labor/column/36-kyotei-zangyo-sharoushi-doko-made",
+          "/labor/column/biru-maintenance-seisou-tsusan-roudoujikan-tekiyo-kakudai-roumu",
+          "/labor/column/henkei-roudoujikan-flextime-erabikata",
+          "/labor/column/homon-kango-oncall-teate-jokin-kansan",
+          "/labor/column/iryo-kaigo-shukujitchoku-kyoka-kijun",
+          "/labor/column/kanri-kantokusha-nabakari-warimashi-shinya",
+          "/labor/column/keibigyo-kamin-dansoku-roudoujikan-roumu",
+          "/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo",
+          "/labor/column/tokutei-shisetsu-yuryo-home-jinin-haichi-yakin-roumu",
+          "/labor/faq",
+          "/labor/nagare",
+          "/labor/ryokin",
+          "/labor/services"
+        ],
+        "sourceUrls": [
+          "https://jsite.mhlw.go.jp/fukui-roudoukyoku/hourei_seido_tetsuzuki/hourei_youshikishu/youshikishu/roudoukijyunhou.html",
+          "https://jsite.mhlw.go.jp/nagano-roudoukyoku/content/contents/roudoujyouken_handbook202602-9.pdf",
+          "https://www.courts.go.jp/hanrei/35282/detail2/index.html"
+        ]
+      },
+      {
+        "locale": "en",
+        "file": "scripts/labor-columns/en/206-mansion-kanrin-kanshi-danzoku-roudo-tekiyo-jogai-kyoka-roumu.md",
+        "h2": 8,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/labor/column/36-kyotei-zangyo-sharoushi-doko-made",
+          "/labor/column/biru-maintenance-seisou-tsusan-roudoujikan-tekiyo-kakudai-roumu",
+          "/labor/column/henkei-roudoujikan-flextime-erabikata",
+          "/labor/column/homon-kango-oncall-teate-jokin-kansan",
+          "/labor/column/iryo-kaigo-shukujitchoku-kyoka-kijun",
+          "/labor/column/kanri-kantokusha-nabakari-warimashi-shinya",
+          "/labor/column/keibigyo-kamin-dansoku-roudoujikan-roumu",
+          "/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo",
+          "/labor/column/tokutei-shisetsu-yuryo-home-jinin-haichi-yakin-roumu",
+          "/labor/faq",
+          "/labor/nagare",
+          "/labor/ryokin",
+          "/labor/services"
+        ],
+        "sourceUrls": [
+          "https://jsite.mhlw.go.jp/fukui-roudoukyoku/hourei_seido_tetsuzuki/hourei_youshikishu/youshikishu/roudoukijyunhou.html",
+          "https://jsite.mhlw.go.jp/nagano-roudoukyoku/content/contents/roudoujyouken_handbook202602-9.pdf",
+          "https://www.courts.go.jp/hanrei/35282/detail2/index.html"
+        ]
+      },
+      {
+        "locale": "zh-tw",
+        "file": "scripts/labor-columns/zh-tw/206-mansion-kanrin-kanshi-danzoku-roudo-tekiyo-jogai-kyoka-roumu.md",
+        "h2": 8,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/labor/column/36-kyotei-zangyo-sharoushi-doko-made",
+          "/labor/column/biru-maintenance-seisou-tsusan-roudoujikan-tekiyo-kakudai-roumu",
+          "/labor/column/henkei-roudoujikan-flextime-erabikata",
+          "/labor/column/homon-kango-oncall-teate-jokin-kansan",
+          "/labor/column/iryo-kaigo-shukujitchoku-kyoka-kijun",
+          "/labor/column/kanri-kantokusha-nabakari-warimashi-shinya",
+          "/labor/column/keibigyo-kamin-dansoku-roudoujikan-roumu",
+          "/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo",
+          "/labor/column/tokutei-shisetsu-yuryo-home-jinin-haichi-yakin-roumu",
+          "/labor/faq",
+          "/labor/nagare",
+          "/labor/ryokin",
+          "/labor/services"
+        ],
+        "sourceUrls": [
+          "https://jsite.mhlw.go.jp/fukui-roudoukyoku/hourei_seido_tetsuzuki/hourei_youshikishu/youshikishu/roudoukijyunhou.html",
+          "https://jsite.mhlw.go.jp/nagano-roudoukyoku/content/contents/roudoujyouken_handbook202602-9.pdf",
+          "https://www.courts.go.jp/hanrei/35282/detail2/index.html"
+        ]
+      },
+      {
+        "locale": "zh",
+        "file": "scripts/labor-columns/zh/206-mansion-kanrin-kanshi-danzoku-roudo-tekiyo-jogai-kyoka-roumu.md",
+        "h2": 8,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/labor/column/36-kyotei-zangyo-sharoushi-doko-made",
+          "/labor/column/biru-maintenance-seisou-tsusan-roudoujikan-tekiyo-kakudai-roumu",
+          "/labor/column/henkei-roudoujikan-flextime-erabikata",
+          "/labor/column/homon-kango-oncall-teate-jokin-kansan",
+          "/labor/column/iryo-kaigo-shukujitchoku-kyoka-kijun",
+          "/labor/column/kanri-kantokusha-nabakari-warimashi-shinya",
+          "/labor/column/keibigyo-kamin-dansoku-roudoujikan-roumu",
+          "/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo",
+          "/labor/column/tokutei-shisetsu-yuryo-home-jinin-haichi-yakin-roumu",
+          "/labor/faq",
+          "/labor/nagare",
+          "/labor/ryokin",
+          "/labor/services"
+        ],
+        "sourceUrls": [
+          "https://jsite.mhlw.go.jp/fukui-roudoukyoku/hourei_seido_tetsuzuki/hourei_youshikishu/youshikishu/roudoukijyunhou.html",
+          "https://jsite.mhlw.go.jp/nagano-roudoukyoku/content/contents/roudoujyouken_handbook202602-9.pdf",
+          "https://www.courts.go.jp/hanrei/35282/detail2/index.html"
+        ]
+      }
+    ],
+    "limitedAlignment": {
+      "h2CountMatches": true,
+      "faqCountMatches": true,
+      "sameInternalDestinations": true,
+      "sameSourceUrls": true
+    }
+  },
+  {
+    "index": 12,
+    "key": "legal:shakai-fukushi-hojin-setsuritsu-ninka-nagare-shisan-youken",
+    "title": "社会福祉法人の設立認可の流れ｜所轄庁・資産要件・理事と評議員会",
+    "locales": [
+      {
+        "locale": "ja",
+        "file": "scripts/legal-columns/166-shakai-fukushi-hojin-setsuritsu-ninka-nagare-shisan-youken.md",
+        "h2": 7,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/legal/column/ippan-shadan-houjin-setsuritsu-hieiri-teikan",
+          "/legal/column/iryohojin-setsuritsu-ninka-nagare-shorui",
+          "/legal/column/npo-hojin-setsuritsu-ninsho-nagare-shokatsucho",
+          "/legal/nagare",
+          "/legal/ryokin",
+          "/legal/services"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/326AC0000000045",
+          "https://www.mhlw.go.jp/stf/newpage_12799.html",
+          "https://www.mhlw.go.jp/web/t_doc?dataId=00tb0069&dataType=1&pageNo=1",
+          "https://www.mhlw.go.jp/web/t_doc?dataId=00tc2294&dataType=1&pageNo=1"
+        ]
+      },
+      {
+        "locale": "en",
+        "file": "scripts/legal-columns/en/166-shakai-fukushi-hojin-setsuritsu-ninka-nagare-shisan-youken.md",
+        "h2": 7,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/legal/column/ippan-shadan-houjin-setsuritsu-hieiri-teikan",
+          "/legal/column/iryohojin-setsuritsu-ninka-nagare-shorui",
+          "/legal/column/npo-hojin-setsuritsu-ninsho-nagare-shokatsucho",
+          "/legal/nagare",
+          "/legal/ryokin",
+          "/legal/services"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/326AC0000000045",
+          "https://www.mhlw.go.jp/stf/newpage_12799.html",
+          "https://www.mhlw.go.jp/web/t_doc?dataId=00tb0069&dataType=1&pageNo=1",
+          "https://www.mhlw.go.jp/web/t_doc?dataId=00tc2294&dataType=1&pageNo=1"
+        ]
+      },
+      {
+        "locale": "zh-tw",
+        "file": "scripts/legal-columns/zh-tw/166-shakai-fukushi-hojin-setsuritsu-ninka-nagare-shisan-youken.md",
+        "h2": 7,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/legal/column/ippan-shadan-houjin-setsuritsu-hieiri-teikan",
+          "/legal/column/iryohojin-setsuritsu-ninka-nagare-shorui",
+          "/legal/column/npo-hojin-setsuritsu-ninsho-nagare-shokatsucho",
+          "/legal/nagare",
+          "/legal/ryokin",
+          "/legal/services"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/326AC0000000045",
+          "https://www.mhlw.go.jp/stf/newpage_12799.html",
+          "https://www.mhlw.go.jp/web/t_doc?dataId=00tb0069&dataType=1&pageNo=1",
+          "https://www.mhlw.go.jp/web/t_doc?dataId=00tc2294&dataType=1&pageNo=1"
+        ]
+      },
+      {
+        "locale": "zh",
+        "file": "scripts/legal-columns/zh/166-shakai-fukushi-hojin-setsuritsu-ninka-nagare-shisan-youken.md",
+        "h2": 7,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/legal/column/ippan-shadan-houjin-setsuritsu-hieiri-teikan",
+          "/legal/column/iryohojin-setsuritsu-ninka-nagare-shorui",
+          "/legal/column/npo-hojin-setsuritsu-ninsho-nagare-shokatsucho",
+          "/legal/nagare",
+          "/legal/ryokin",
+          "/legal/services"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/326AC0000000045",
+          "https://www.mhlw.go.jp/stf/newpage_12799.html",
+          "https://www.mhlw.go.jp/web/t_doc?dataId=00tb0069&dataType=1&pageNo=1",
+          "https://www.mhlw.go.jp/web/t_doc?dataId=00tc2294&dataType=1&pageNo=1"
+        ]
+      }
+    ],
+    "limitedAlignment": {
+      "h2CountMatches": true,
+      "faqCountMatches": true,
+      "sameInternalDestinations": true,
+      "sameSourceUrls": true
+    }
+  },
+  {
+    "index": 13,
+    "key": "legal:startup-visa-gaikokujin-kigyo-katsudo-sokushin-tokutei-katsudo",
+    "title": "スタートアップビザで日本に来て会社を作る｜外国人起業活動促進事業の在留",
+    "locales": [
+      {
+        "locale": "ja",
+        "file": "scripts/legal-columns/167-startup-visa-gaikokujin-kigyo-katsudo-sokushin-tokutei-katsudo.md",
+        "h2": 6,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/global",
+          "/legal/column/keieikanri-koshin-jigyo-keizokusei-rissho-chuka-taiwan",
+          "/legal/column/keieikanri-zairyu-chuka-kigyousha-kaisha-setsuritsu",
+          "/legal/nagare",
+          "/legal/ryokin",
+          "/legal/services"
+        ],
+        "sourceUrls": [
+          "https://www.jetro.go.jp/en/invest/setting_up/section2/page12.html",
+          "https://www.meti.go.jp/policy/newbusiness/startupvisa/index.html",
+          "https://www.moj.go.jp/isa/03_00097.html",
+          "https://www.moj.go.jp/isa/applications/resources/10_00237.html",
+          "https://www.moj.go.jp/isa/content/001448070.pdf",
+          "https://www.moj.go.jp/isa/content/001448099.pdf"
+        ]
+      },
+      {
+        "locale": "en",
+        "file": "scripts/legal-columns/en/167-startup-visa-gaikokujin-kigyo-katsudo-sokushin-tokutei-katsudo.md",
+        "h2": 6,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/global",
+          "/legal/column/keieikanri-koshin-jigyo-keizokusei-rissho-chuka-taiwan",
+          "/legal/column/keieikanri-zairyu-chuka-kigyousha-kaisha-setsuritsu",
+          "/legal/nagare",
+          "/legal/ryokin",
+          "/legal/services"
+        ],
+        "sourceUrls": [
+          "https://www.jetro.go.jp/en/invest/setting_up/section2/page12.html",
+          "https://www.meti.go.jp/policy/newbusiness/startupvisa/index.html",
+          "https://www.moj.go.jp/isa/03_00097.html",
+          "https://www.moj.go.jp/isa/applications/resources/10_00237.html",
+          "https://www.moj.go.jp/isa/content/001448070.pdf",
+          "https://www.moj.go.jp/isa/content/001448099.pdf"
+        ]
+      },
+      {
+        "locale": "zh-tw",
+        "file": "scripts/legal-columns/zh-tw/167-startup-visa-gaikokujin-kigyo-katsudo-sokushin-tokutei-katsudo.md",
+        "h2": 6,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/global",
+          "/legal/column/keieikanri-koshin-jigyo-keizokusei-rissho-chuka-taiwan",
+          "/legal/column/keieikanri-zairyu-chuka-kigyousha-kaisha-setsuritsu",
+          "/legal/nagare",
+          "/legal/ryokin",
+          "/legal/services"
+        ],
+        "sourceUrls": [
+          "https://www.jetro.go.jp/en/invest/setting_up/section2/page12.html",
+          "https://www.meti.go.jp/policy/newbusiness/startupvisa/index.html",
+          "https://www.moj.go.jp/isa/03_00097.html",
+          "https://www.moj.go.jp/isa/applications/resources/10_00237.html",
+          "https://www.moj.go.jp/isa/content/001448070.pdf",
+          "https://www.moj.go.jp/isa/content/001448099.pdf"
+        ]
+      },
+      {
+        "locale": "zh",
+        "file": "scripts/legal-columns/zh/167-startup-visa-gaikokujin-kigyo-katsudo-sokushin-tokutei-katsudo.md",
+        "h2": 6,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/global",
+          "/legal/column/keieikanri-koshin-jigyo-keizokusei-rissho-chuka-taiwan",
+          "/legal/column/keieikanri-zairyu-chuka-kigyousha-kaisha-setsuritsu",
+          "/legal/nagare",
+          "/legal/ryokin",
+          "/legal/services"
+        ],
+        "sourceUrls": [
+          "https://www.jetro.go.jp/en/invest/setting_up/section2/page12.html",
+          "https://www.meti.go.jp/policy/newbusiness/startupvisa/index.html",
+          "https://www.moj.go.jp/isa/03_00097.html",
+          "https://www.moj.go.jp/isa/applications/resources/10_00237.html",
+          "https://www.moj.go.jp/isa/content/001448070.pdf",
+          "https://www.moj.go.jp/isa/content/001448099.pdf"
+        ]
+      }
+    ],
+    "limitedAlignment": {
+      "h2CountMatches": true,
+      "faqCountMatches": true,
+      "sameInternalDestinations": true,
+      "sameSourceUrls": true
+    }
+  },
+  {
+    "index": 14,
+    "key": "realestate:chugokugo-buyer-keibai-kobai-bukken-nyusatsu-daikin-nouhu",
+    "title": "（中国語バイヤー向け）日本の競売・公売で不動産を買う｜入札から引渡しまで",
+    "locales": [
+      {
+        "locale": "ja",
+        "file": "scripts/realestate-columns/173-chugokugo-buyer-keibai-kobai-bukken-nyusatsu-daikin-nouhu.md",
+        "h2": 7,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/column/chugokugo-buyer-juyojiko-check-toushi-bukken",
+          "/column/souzoku-sashiosae-toki-ari-fudosan-baikyaku",
+          "/toushi"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/129AC0000000089",
+          "https://laws.e-gov.go.jp/law/354AC0000000004",
+          "https://www.courts.go.jp/tokyo/saiban/minzi_section21/kaiuketetuzuki_fudousan/index.html",
+          "https://www.nta.go.jp/taxes/shiraberu/taxanswer/osirase/9207.htm"
+        ]
+      },
+      {
+        "locale": "en",
+        "file": "scripts/realestate-columns/en/173-chugokugo-buyer-keibai-kobai-bukken-nyusatsu-daikin-nouhu.md",
+        "h2": 7,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/column/chugokugo-buyer-juyojiko-check-toushi-bukken",
+          "/column/souzoku-sashiosae-toki-ari-fudosan-baikyaku",
+          "/toushi"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/129AC0000000089",
+          "https://laws.e-gov.go.jp/law/354AC0000000004",
+          "https://www.courts.go.jp/tokyo/saiban/minzi_section21/kaiuketetuzuki_fudousan/index.html",
+          "https://www.nta.go.jp/taxes/shiraberu/taxanswer/osirase/9207.htm"
+        ]
+      },
+      {
+        "locale": "zh-tw",
+        "file": "scripts/realestate-columns/zh-tw/173-chugokugo-buyer-keibai-kobai-bukken-nyusatsu-daikin-nouhu.md",
+        "h2": 7,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/column/chugokugo-buyer-juyojiko-check-toushi-bukken",
+          "/column/souzoku-sashiosae-toki-ari-fudosan-baikyaku",
+          "/toushi"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/129AC0000000089",
+          "https://laws.e-gov.go.jp/law/354AC0000000004",
+          "https://www.courts.go.jp/tokyo/saiban/minzi_section21/kaiuketetuzuki_fudousan/index.html",
+          "https://www.nta.go.jp/taxes/shiraberu/taxanswer/osirase/9207.htm"
+        ]
+      },
+      {
+        "locale": "zh",
+        "file": "scripts/realestate-columns/zh/173-chugokugo-buyer-keibai-kobai-bukken-nyusatsu-daikin-nouhu.md",
+        "h2": 7,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/column/chugokugo-buyer-juyojiko-check-toushi-bukken",
+          "/column/souzoku-sashiosae-toki-ari-fudosan-baikyaku",
+          "/toushi"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/129AC0000000089",
+          "https://laws.e-gov.go.jp/law/354AC0000000004",
+          "https://www.courts.go.jp/tokyo/saiban/minzi_section21/kaiuketetuzuki_fudousan/index.html",
+          "https://www.nta.go.jp/taxes/shiraberu/taxanswer/osirase/9207.htm"
+        ]
+      }
+    ],
+    "limitedAlignment": {
+      "h2CountMatches": true,
+      "faqCountMatches": true,
+      "sameInternalDestinations": true,
+      "sameSourceUrls": true
+    }
+  },
+  {
+    "index": 15,
+    "key": "realestate:ev-kyusoku-juden-setsubi-chintai-shougyou-bukken-shoubou",
+    "title": "EV急速充電設備を備えた賃貸・商業物件｜消防法の技術基準と導入の進め方",
+    "locales": [
+      {
+        "locale": "ja",
+        "file": "scripts/realestate-columns/172-ev-kyusoku-juden-setsubi-chintai-shougyou-bukken-shoubou.md",
+        "h2": 6,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/column/kenchiku-shoene-ho-shoene-seino-hyoji-koukoku-2024",
+          "/contact",
+          "/toushi"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/337AC0000000069",
+          "https://www.fdma.go.jp/laws/tutatsu/items/230221_yobo113v2.pdf",
+          "https://www.fdma.go.jp/laws/tutatsu/items/230221_yobou_59v2.pdf",
+          "https://www.mlit.go.jp/common/001768045.pdf",
+          "https://www.mlit.go.jp/jutakukentiku/house/content/001971486.pdf"
+        ]
+      },
+      {
+        "locale": "en",
+        "file": "scripts/realestate-columns/en/172-ev-kyusoku-juden-setsubi-chintai-shougyou-bukken-shoubou.md",
+        "h2": 6,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/column/kenchiku-shoene-ho-shoene-seino-hyoji-koukoku-2024",
+          "/contact",
+          "/toushi"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/337AC0000000069",
+          "https://www.fdma.go.jp/laws/tutatsu/items/230221_yobo113v2.pdf",
+          "https://www.fdma.go.jp/laws/tutatsu/items/230221_yobou_59v2.pdf",
+          "https://www.mlit.go.jp/common/001768045.pdf",
+          "https://www.mlit.go.jp/jutakukentiku/house/content/001971486.pdf"
+        ]
+      },
+      {
+        "locale": "zh-tw",
+        "file": "scripts/realestate-columns/zh-tw/172-ev-kyusoku-juden-setsubi-chintai-shougyou-bukken-shoubou.md",
+        "h2": 6,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/column/kenchiku-shoene-ho-shoene-seino-hyoji-koukoku-2024",
+          "/contact",
+          "/toushi"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/337AC0000000069",
+          "https://www.fdma.go.jp/laws/tutatsu/items/230221_yobo113v2.pdf",
+          "https://www.fdma.go.jp/laws/tutatsu/items/230221_yobou_59v2.pdf",
+          "https://www.mlit.go.jp/common/001768045.pdf",
+          "https://www.mlit.go.jp/jutakukentiku/house/content/001971486.pdf"
+        ]
+      },
+      {
+        "locale": "zh",
+        "file": "scripts/realestate-columns/zh/172-ev-kyusoku-juden-setsubi-chintai-shougyou-bukken-shoubou.md",
+        "h2": 6,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/column/kenchiku-shoene-ho-shoene-seino-hyoji-koukoku-2024",
+          "/contact",
+          "/toushi"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/337AC0000000069",
+          "https://www.fdma.go.jp/laws/tutatsu/items/230221_yobo113v2.pdf",
+          "https://www.fdma.go.jp/laws/tutatsu/items/230221_yobou_59v2.pdf",
+          "https://www.mlit.go.jp/common/001768045.pdf",
+          "https://www.mlit.go.jp/jutakukentiku/house/content/001971486.pdf"
+        ]
+      }
+    ],
+    "limitedAlignment": {
+      "h2CountMatches": true,
+      "faqCountMatches": true,
+      "sameInternalDestinations": true,
+      "sameSourceUrls": true
+    }
+  },
+  {
+    "index": 16,
+    "key": "labor:keikaku-nenkyu-rousi-kyotei-5nichi-gimu-kankei",
+    "title": "計画年休（計画的付与）とは？労使協定の作り方と5日取得義務の関係",
+    "locales": [
+      {
+        "locale": "ja",
+        "file": "scripts/labor-columns/207-keikaku-nenkyu-rousi-kyotei-5nichi-gimu-kankei.md",
+        "h2": 9,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/labor/column/36-kyotei-zangyo-sharoushi-doko-made",
+          "/labor/column/jikantan-nenkyu-dounyu-roushi-kyotei-shugyokisoku",
+          "/labor/column/nenji-yukyu-5nichi-torikirenai",
+          "/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo",
+          "/labor/faq",
+          "/labor/nagare",
+          "/labor/ryokin",
+          "/labor/services"
+        ],
+        "sourceUrls": [
+          "https://www.mhlw.go.jp/content/000611834.pdf",
+          "https://www.mhlw.go.jp/stf/web_magazine/closeup/51.html"
+        ]
+      },
+      {
+        "locale": "en",
+        "file": "scripts/labor-columns/en/207-keikaku-nenkyu-rousi-kyotei-5nichi-gimu-kankei.md",
+        "h2": 9,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/labor/column/36-kyotei-zangyo-sharoushi-doko-made",
+          "/labor/column/jikantan-nenkyu-dounyu-roushi-kyotei-shugyokisoku",
+          "/labor/column/nenji-yukyu-5nichi-torikirenai",
+          "/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo",
+          "/labor/faq",
+          "/labor/nagare",
+          "/labor/ryokin",
+          "/labor/services"
+        ],
+        "sourceUrls": [
+          "https://www.mhlw.go.jp/content/000611834.pdf",
+          "https://www.mhlw.go.jp/stf/web_magazine/closeup/51.html"
+        ]
+      },
+      {
+        "locale": "zh-tw",
+        "file": "scripts/labor-columns/zh-tw/207-keikaku-nenkyu-rousi-kyotei-5nichi-gimu-kankei.md",
+        "h2": 9,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/labor/column/36-kyotei-zangyo-sharoushi-doko-made",
+          "/labor/column/jikantan-nenkyu-dounyu-roushi-kyotei-shugyokisoku",
+          "/labor/column/nenji-yukyu-5nichi-torikirenai",
+          "/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo",
+          "/labor/faq",
+          "/labor/nagare",
+          "/labor/ryokin",
+          "/labor/services"
+        ],
+        "sourceUrls": [
+          "https://www.mhlw.go.jp/content/000611834.pdf",
+          "https://www.mhlw.go.jp/stf/web_magazine/closeup/51.html"
+        ]
+      },
+      {
+        "locale": "zh",
+        "file": "scripts/labor-columns/zh/207-keikaku-nenkyu-rousi-kyotei-5nichi-gimu-kankei.md",
+        "h2": 9,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/labor/column/36-kyotei-zangyo-sharoushi-doko-made",
+          "/labor/column/jikantan-nenkyu-dounyu-roushi-kyotei-shugyokisoku",
+          "/labor/column/nenji-yukyu-5nichi-torikirenai",
+          "/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo",
+          "/labor/faq",
+          "/labor/nagare",
+          "/labor/ryokin",
+          "/labor/services"
+        ],
+        "sourceUrls": [
+          "https://www.mhlw.go.jp/content/000611834.pdf",
+          "https://www.mhlw.go.jp/stf/web_magazine/closeup/51.html"
+        ]
+      }
+    ],
+    "limitedAlignment": {
+      "h2CountMatches": true,
+      "faqCountMatches": true,
+      "sameInternalDestinations": true,
+      "sameSourceUrls": true
+    }
+  },
+  {
+    "index": 17,
+    "key": "labor:tsuki-60jikan-chokin-warimashi-daitai-kyuka-chusho",
+    "title": "月60時間超の残業は割増50%？中小企業の代替休暇制度の作り方",
+    "locales": [
+      {
+        "locale": "ja",
+        "file": "scripts/labor-columns/208-tsuki-60jikan-chokin-warimashi-daitai-kyuka-chusho.md",
+        "h2": 9,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/labor/column/36-kyotei-zangyo-sharoushi-doko-made",
+          "/labor/column/jikantan-nenkyu-dounyu-roushi-kyotei-shugyokisoku",
+          "/labor/column/kanri-kantokusha-nabakari-warimashi-shinya",
+          "/labor/column/kotei-zangyodai-tekiho-youken-sagaku-seisan",
+          "/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo",
+          "/labor/faq",
+          "/labor/nagare",
+          "/labor/ryokin",
+          "/labor/services"
+        ],
+        "sourceUrls": [
+          "https://www.mhlw.go.jp/content/11200000/tp1216-1j.pdf",
+          "https://www.mhlw.go.jp/web/t_doc?dataId=73023000&dataType=0&pageNo=1"
+        ]
+      },
+      {
+        "locale": "en",
+        "file": "scripts/labor-columns/en/208-tsuki-60jikan-chokin-warimashi-daitai-kyuka-chusho.md",
+        "h2": 9,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/labor/column/36-kyotei-zangyo-sharoushi-doko-made",
+          "/labor/column/jikantan-nenkyu-dounyu-roushi-kyotei-shugyokisoku",
+          "/labor/column/kanri-kantokusha-nabakari-warimashi-shinya",
+          "/labor/column/kotei-zangyodai-tekiho-youken-sagaku-seisan",
+          "/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo",
+          "/labor/faq",
+          "/labor/nagare",
+          "/labor/ryokin",
+          "/labor/services"
+        ],
+        "sourceUrls": [
+          "https://www.mhlw.go.jp/content/11200000/tp1216-1j.pdf",
+          "https://www.mhlw.go.jp/web/t_doc?dataId=73023000&dataType=0&pageNo=1"
+        ]
+      },
+      {
+        "locale": "zh-tw",
+        "file": "scripts/labor-columns/zh-tw/208-tsuki-60jikan-chokin-warimashi-daitai-kyuka-chusho.md",
+        "h2": 9,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/labor/column/36-kyotei-zangyo-sharoushi-doko-made",
+          "/labor/column/jikantan-nenkyu-dounyu-roushi-kyotei-shugyokisoku",
+          "/labor/column/kanri-kantokusha-nabakari-warimashi-shinya",
+          "/labor/column/kotei-zangyodai-tekiho-youken-sagaku-seisan",
+          "/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo",
+          "/labor/faq",
+          "/labor/nagare",
+          "/labor/ryokin",
+          "/labor/services"
+        ],
+        "sourceUrls": [
+          "https://www.mhlw.go.jp/content/11200000/tp1216-1j.pdf",
+          "https://www.mhlw.go.jp/web/t_doc?dataId=73023000&dataType=0&pageNo=1"
+        ]
+      },
+      {
+        "locale": "zh",
+        "file": "scripts/labor-columns/zh/208-tsuki-60jikan-chokin-warimashi-daitai-kyuka-chusho.md",
+        "h2": 9,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/labor/column/36-kyotei-zangyo-sharoushi-doko-made",
+          "/labor/column/jikantan-nenkyu-dounyu-roushi-kyotei-shugyokisoku",
+          "/labor/column/kanri-kantokusha-nabakari-warimashi-shinya",
+          "/labor/column/kotei-zangyodai-tekiho-youken-sagaku-seisan",
+          "/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo",
+          "/labor/faq",
+          "/labor/nagare",
+          "/labor/ryokin",
+          "/labor/services"
+        ],
+        "sourceUrls": [
+          "https://www.mhlw.go.jp/content/11200000/tp1216-1j.pdf",
+          "https://www.mhlw.go.jp/web/t_doc?dataId=73023000&dataType=0&pageNo=1"
+        ]
+      }
+    ],
+    "limitedAlignment": {
+      "h2CountMatches": true,
+      "faqCountMatches": true,
+      "sameInternalDestinations": true,
+      "sameSourceUrls": true
+    }
+  },
+  {
+    "index": 18,
+    "key": "legal:jokaso-koji-gyo-touroku-seiso-gyo-kyoka-nagare-youken",
+    "title": "浄化槽工事業の登録と浄化槽清掃業の許可は何が違う？要件と流れ",
+    "locales": [
+      {
+        "locale": "ja",
+        "file": "scripts/legal-columns/168-jokaso-koji-gyo-touroku-seiso-gyo-kyoka-nagare-youken.md",
+        "h2": 7,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/legal/column/kaitai-koji-gyo-touroku-kensetsu-kyoka-chigai",
+          "/legal/column/kensetsugyo-kyoka-yoken-keikan-sengi-zaisan",
+          "/legal/column/sanpai-shushu-unpan-kyoka-torikata",
+          "/legal/nagare",
+          "/legal/ryokin",
+          "/legal/services"
+        ],
+        "sourceUrls": [
+          "https://hourei.ndl.go.jp/simple/detail?current=-1&lawId=0000169979",
+          "https://laws.e-gov.go.jp/law/358AC1000000043/20260701_508AC0000000022",
+          "https://www.pref.kanagawa.jp/docs/u2h/cnt/f531856/p870528.html"
+        ]
+      },
+      {
+        "locale": "en",
+        "file": "scripts/legal-columns/en/168-jokaso-koji-gyo-touroku-seiso-gyo-kyoka-nagare-youken.md",
+        "h2": 7,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/legal/column/kaitai-koji-gyo-touroku-kensetsu-kyoka-chigai",
+          "/legal/column/kensetsugyo-kyoka-yoken-keikan-sengi-zaisan",
+          "/legal/column/sanpai-shushu-unpan-kyoka-torikata",
+          "/legal/nagare",
+          "/legal/ryokin",
+          "/legal/services"
+        ],
+        "sourceUrls": [
+          "https://hourei.ndl.go.jp/simple/detail?current=-1&lawId=0000169979",
+          "https://laws.e-gov.go.jp/law/358AC1000000043/20260701_508AC0000000022",
+          "https://www.pref.kanagawa.jp/docs/u2h/cnt/f531856/p870528.html"
+        ]
+      },
+      {
+        "locale": "zh-tw",
+        "file": "scripts/legal-columns/zh-tw/168-jokaso-koji-gyo-touroku-seiso-gyo-kyoka-nagare-youken.md",
+        "h2": 7,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/legal/column/kaitai-koji-gyo-touroku-kensetsu-kyoka-chigai",
+          "/legal/column/kensetsugyo-kyoka-yoken-keikan-sengi-zaisan",
+          "/legal/column/sanpai-shushu-unpan-kyoka-torikata",
+          "/legal/nagare",
+          "/legal/ryokin",
+          "/legal/services"
+        ],
+        "sourceUrls": [
+          "https://hourei.ndl.go.jp/simple/detail?current=-1&lawId=0000169979",
+          "https://laws.e-gov.go.jp/law/358AC1000000043/20260701_508AC0000000022",
+          "https://www.pref.kanagawa.jp/docs/u2h/cnt/f531856/p870528.html"
+        ]
+      },
+      {
+        "locale": "zh",
+        "file": "scripts/legal-columns/zh/168-jokaso-koji-gyo-touroku-seiso-gyo-kyoka-nagare-youken.md",
+        "h2": 7,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/legal/column/kaitai-koji-gyo-touroku-kensetsu-kyoka-chigai",
+          "/legal/column/kensetsugyo-kyoka-yoken-keikan-sengi-zaisan",
+          "/legal/column/sanpai-shushu-unpan-kyoka-torikata",
+          "/legal/nagare",
+          "/legal/ryokin",
+          "/legal/services"
+        ],
+        "sourceUrls": [
+          "https://hourei.ndl.go.jp/simple/detail?current=-1&lawId=0000169979",
+          "https://laws.e-gov.go.jp/law/358AC1000000043/20260701_508AC0000000022",
+          "https://www.pref.kanagawa.jp/docs/u2h/cnt/f531856/p870528.html"
+        ]
+      }
+    ],
+    "limitedAlignment": {
+      "h2CountMatches": true,
+      "faqCountMatches": true,
+      "sameInternalDestinations": true,
+      "sameSourceUrls": true
+    }
+  },
+  {
+    "index": 19,
+    "key": "legal:yuigon-to-kotonaru-isanbunkatsu-kyogi-kahi-youken",
+    "title": "遺言と違う内容で遺産分割協議はできる？できる条件と注意点",
+    "locales": [
+      {
+        "locale": "ja",
+        "file": "scripts/legal-columns/169-yuigon-to-kotonaru-isanbunkatsu-kyogi-kahi-youken.md",
+        "h2": 7,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/legal/column/isan-bunkatsu-kyogi-yarinaoshi-goui-kaijo",
+          "/legal/column/isan-bunkatsu-kyougisho",
+          "/legal/column/yuigon-shikkosha-shokumu-sennin-dare",
+          "/legal/column/yuigon-tekkai-teishoku-fukusu-yuigon-yuretsu",
+          "/legal/nagare",
+          "/legal/ryokin",
+          "/legal/services/inheritance",
+          "/souzoku"
+        ],
+        "sourceUrls": [
+          "https://www.nta.go.jp/taxes/shiraberu/taxanswer/sozoku/4176.htm"
+        ]
+      },
+      {
+        "locale": "en",
+        "file": "scripts/legal-columns/en/169-yuigon-to-kotonaru-isanbunkatsu-kyogi-kahi-youken.md",
+        "h2": 7,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/legal/column/isan-bunkatsu-kyogi-yarinaoshi-goui-kaijo",
+          "/legal/column/isan-bunkatsu-kyougisho",
+          "/legal/column/yuigon-shikkosha-shokumu-sennin-dare",
+          "/legal/column/yuigon-tekkai-teishoku-fukusu-yuigon-yuretsu",
+          "/legal/nagare",
+          "/legal/ryokin",
+          "/legal/services/inheritance",
+          "/souzoku"
+        ],
+        "sourceUrls": [
+          "https://www.nta.go.jp/taxes/shiraberu/taxanswer/sozoku/4176.htm"
+        ]
+      },
+      {
+        "locale": "zh-tw",
+        "file": "scripts/legal-columns/zh-tw/169-yuigon-to-kotonaru-isanbunkatsu-kyogi-kahi-youken.md",
+        "h2": 7,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/legal/column/isan-bunkatsu-kyogi-yarinaoshi-goui-kaijo",
+          "/legal/column/isan-bunkatsu-kyougisho",
+          "/legal/column/yuigon-shikkosha-shokumu-sennin-dare",
+          "/legal/column/yuigon-tekkai-teishoku-fukusu-yuigon-yuretsu",
+          "/legal/nagare",
+          "/legal/ryokin",
+          "/legal/services/inheritance",
+          "/souzoku"
+        ],
+        "sourceUrls": [
+          "https://www.nta.go.jp/taxes/shiraberu/taxanswer/sozoku/4176.htm"
+        ]
+      },
+      {
+        "locale": "zh",
+        "file": "scripts/legal-columns/zh/169-yuigon-to-kotonaru-isanbunkatsu-kyogi-kahi-youken.md",
+        "h2": 7,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/legal/column/isan-bunkatsu-kyogi-yarinaoshi-goui-kaijo",
+          "/legal/column/isan-bunkatsu-kyougisho",
+          "/legal/column/yuigon-shikkosha-shokumu-sennin-dare",
+          "/legal/column/yuigon-tekkai-teishoku-fukusu-yuigon-yuretsu",
+          "/legal/nagare",
+          "/legal/ryokin",
+          "/legal/services/inheritance",
+          "/souzoku"
+        ],
+        "sourceUrls": [
+          "https://www.nta.go.jp/taxes/shiraberu/taxanswer/sozoku/4176.htm"
+        ]
+      }
+    ],
+    "limitedAlignment": {
+      "h2CountMatches": true,
+      "faqCountMatches": true,
+      "sameInternalDestinations": true,
+      "sameSourceUrls": true
+    }
+  },
+  {
+    "index": 20,
+    "key": "realestate:seikatsu-kaigo-jigyosho-bukken-youken-shitei",
+    "title": "生活介護の物件を借りる前に｜図面・内見・貸主承諾の確認チェックリスト",
+    "locales": [
+      {
+        "locale": "ja",
+        "file": "scripts/realestate-columns/174-seikatsu-kaigo-jigyosho-bukken-youken-shitei.md",
+        "h2": 8,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/column/kensazumisho-nashi-bukken-fukushi-youto-henko",
+          "/contact",
+          "/legal/column/seikatsu-kaigo-shitei-bukken-yoken",
+          "/legal/services/shogai-fukushi",
+          "/toushi"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/325AC0000000201",
+          "https://laws.e-gov.go.jp/law/417AC0000000123",
+          "https://www.city.itabashi.tokyo.jp/kenko/shogai/jigyosha/1003333.html",
+          "https://www.mhlw.go.jp/web/t_doc?dataId=83aa8467&dataType=0&pageNo=1",
+          "https://www.nagasaki-kenoukumiai.jp/wp/wp/wp-content/uploads/2024/03/2-1seireibeppyou.pdf"
+        ]
+      },
+      {
+        "locale": "en",
+        "file": "scripts/realestate-columns/en/174-seikatsu-kaigo-jigyosho-bukken-youken-shitei.md",
+        "h2": 8,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/column/kensazumisho-nashi-bukken-fukushi-youto-henko",
+          "/contact",
+          "/legal/column/seikatsu-kaigo-shitei-bukken-yoken",
+          "/legal/services/shogai-fukushi",
+          "/toushi"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/325AC0000000201",
+          "https://laws.e-gov.go.jp/law/417AC0000000123",
+          "https://www.city.itabashi.tokyo.jp/kenko/shogai/jigyosha/1003333.html",
+          "https://www.mhlw.go.jp/web/t_doc?dataId=83aa8467&dataType=0&pageNo=1",
+          "https://www.nagasaki-kenoukumiai.jp/wp/wp/wp-content/uploads/2024/03/2-1seireibeppyou.pdf"
+        ]
+      },
+      {
+        "locale": "zh-tw",
+        "file": "scripts/realestate-columns/zh-tw/174-seikatsu-kaigo-jigyosho-bukken-youken-shitei.md",
+        "h2": 8,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/column/kensazumisho-nashi-bukken-fukushi-youto-henko",
+          "/contact",
+          "/legal/column/seikatsu-kaigo-shitei-bukken-yoken",
+          "/legal/services/shogai-fukushi",
+          "/toushi"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/325AC0000000201",
+          "https://laws.e-gov.go.jp/law/417AC0000000123",
+          "https://www.city.itabashi.tokyo.jp/kenko/shogai/jigyosha/1003333.html",
+          "https://www.mhlw.go.jp/web/t_doc?dataId=83aa8467&dataType=0&pageNo=1",
+          "https://www.nagasaki-kenoukumiai.jp/wp/wp/wp-content/uploads/2024/03/2-1seireibeppyou.pdf"
+        ]
+      },
+      {
+        "locale": "zh",
+        "file": "scripts/realestate-columns/zh/174-seikatsu-kaigo-jigyosho-bukken-youken-shitei.md",
+        "h2": 8,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/column/kensazumisho-nashi-bukken-fukushi-youto-henko",
+          "/contact",
+          "/legal/column/seikatsu-kaigo-shitei-bukken-yoken",
+          "/legal/services/shogai-fukushi",
+          "/toushi"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/325AC0000000201",
+          "https://laws.e-gov.go.jp/law/417AC0000000123",
+          "https://www.city.itabashi.tokyo.jp/kenko/shogai/jigyosha/1003333.html",
+          "https://www.mhlw.go.jp/web/t_doc?dataId=83aa8467&dataType=0&pageNo=1",
+          "https://www.nagasaki-kenoukumiai.jp/wp/wp/wp-content/uploads/2024/03/2-1seireibeppyou.pdf"
+        ]
+      }
+    ],
+    "limitedAlignment": {
+      "h2CountMatches": true,
+      "faqCountMatches": true,
+      "sameInternalDestinations": true,
+      "sameSourceUrls": true
+    }
+  },
+  {
+    "index": 21,
+    "key": "realestate:souzoku-kashiya-akewatashi-seitojiyu-tachinoki-ryo-baikyaku",
+    "title": "相続した貸家は空けてから売る？正当事由・立退料と居付き売却の分かれ目",
+    "locales": [
+      {
+        "locale": "ja",
+        "file": "scripts/realestate-columns/175-souzoku-kashiya-akewatashi-seitojiyu-tachinoki-ryo-baikyaku.md",
+        "h2": 7,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/column/chugokugo-owner-teiki-shakuya-futsu-chigai-saikeiyaku",
+          "/column/kaigai-souzokunin-owner-change-baikyaku-gensen",
+          "/souzoku"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/129AC0000000089",
+          "https://laws.e-gov.go.jp/law/403AC0000000090",
+          "https://www.mlit.go.jp/jutakukentiku/house/content/001493363.pdf"
+        ]
+      },
+      {
+        "locale": "en",
+        "file": "scripts/realestate-columns/en/175-souzoku-kashiya-akewatashi-seitojiyu-tachinoki-ryo-baikyaku.md",
+        "h2": 7,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/column/chugokugo-owner-teiki-shakuya-futsu-chigai-saikeiyaku",
+          "/column/kaigai-souzokunin-owner-change-baikyaku-gensen",
+          "/souzoku"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/129AC0000000089",
+          "https://laws.e-gov.go.jp/law/403AC0000000090",
+          "https://www.mlit.go.jp/jutakukentiku/house/content/001493363.pdf"
+        ]
+      },
+      {
+        "locale": "zh-tw",
+        "file": "scripts/realestate-columns/zh-tw/175-souzoku-kashiya-akewatashi-seitojiyu-tachinoki-ryo-baikyaku.md",
+        "h2": 7,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/column/chugokugo-owner-teiki-shakuya-futsu-chigai-saikeiyaku",
+          "/column/kaigai-souzokunin-owner-change-baikyaku-gensen",
+          "/souzoku"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/129AC0000000089",
+          "https://laws.e-gov.go.jp/law/403AC0000000090",
+          "https://www.mlit.go.jp/jutakukentiku/house/content/001493363.pdf"
+        ]
+      },
+      {
+        "locale": "zh",
+        "file": "scripts/realestate-columns/zh/175-souzoku-kashiya-akewatashi-seitojiyu-tachinoki-ryo-baikyaku.md",
+        "h2": 7,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/column/chugokugo-owner-teiki-shakuya-futsu-chigai-saikeiyaku",
+          "/column/kaigai-souzokunin-owner-change-baikyaku-gensen",
+          "/souzoku"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/129AC0000000089",
+          "https://laws.e-gov.go.jp/law/403AC0000000090",
+          "https://www.mlit.go.jp/jutakukentiku/house/content/001493363.pdf"
+        ]
+      }
+    ],
+    "limitedAlignment": {
+      "h2CountMatches": true,
+      "faqCountMatches": true,
+      "sameInternalDestinations": true,
+      "sameSourceUrls": true
+    }
+  },
+  {
+    "index": 22,
+    "key": "legal:dai-nishu-doubutsu-toriatsukai-todokede-hieiri-jotokai-youken",
+    "title": "非営利の譲渡会・保護猫活動でも届出が要る？第二種動物取扱業の要件と第一種との違い",
+    "locales": [
+      {
+        "locale": "ja",
+        "file": "scripts/legal-columns/170-dai-nishu-doubutsu-toriatsukai-todokede-hieiri-jotokai-youken.md",
+        "h2": 7,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/legal/column/dai-isshu-doubutsu-toriatsukai-touroku-youken",
+          "/legal/column/inshokuten-eigyo-kyoka-hokenjo-setsubi-kijun-shokuhin-eisei",
+          "/legal/column/npo-hojin-setsuritsu-ninsho-nagare-shokatsucho",
+          "/legal/nagare",
+          "/legal/ryokin",
+          "/legal/services"
+        ],
+        "sourceUrls": [
+          "https://www.env.go.jp/nature/dobutsu/aigo/1_law/trader_c2.html"
+        ]
+      },
+      {
+        "locale": "en",
+        "file": "scripts/legal-columns/en/170-dai-nishu-doubutsu-toriatsukai-todokede-hieiri-jotokai-youken.md",
+        "h2": 7,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/legal/column/dai-isshu-doubutsu-toriatsukai-touroku-youken",
+          "/legal/column/inshokuten-eigyo-kyoka-hokenjo-setsubi-kijun-shokuhin-eisei",
+          "/legal/column/npo-hojin-setsuritsu-ninsho-nagare-shokatsucho",
+          "/legal/nagare",
+          "/legal/ryokin",
+          "/legal/services"
+        ],
+        "sourceUrls": [
+          "https://www.env.go.jp/nature/dobutsu/aigo/1_law/trader_c2.html"
+        ]
+      },
+      {
+        "locale": "zh-tw",
+        "file": "scripts/legal-columns/zh-tw/170-dai-nishu-doubutsu-toriatsukai-todokede-hieiri-jotokai-youken.md",
+        "h2": 7,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/legal/column/dai-isshu-doubutsu-toriatsukai-touroku-youken",
+          "/legal/column/inshokuten-eigyo-kyoka-hokenjo-setsubi-kijun-shokuhin-eisei",
+          "/legal/column/npo-hojin-setsuritsu-ninsho-nagare-shokatsucho",
+          "/legal/nagare",
+          "/legal/ryokin",
+          "/legal/services"
+        ],
+        "sourceUrls": [
+          "https://www.env.go.jp/nature/dobutsu/aigo/1_law/trader_c2.html"
+        ]
+      },
+      {
+        "locale": "zh",
+        "file": "scripts/legal-columns/zh/170-dai-nishu-doubutsu-toriatsukai-todokede-hieiri-jotokai-youken.md",
+        "h2": 7,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/legal/column/dai-isshu-doubutsu-toriatsukai-touroku-youken",
+          "/legal/column/inshokuten-eigyo-kyoka-hokenjo-setsubi-kijun-shokuhin-eisei",
+          "/legal/column/npo-hojin-setsuritsu-ninsho-nagare-shokatsucho",
+          "/legal/nagare",
+          "/legal/ryokin",
+          "/legal/services"
+        ],
+        "sourceUrls": [
+          "https://www.env.go.jp/nature/dobutsu/aigo/1_law/trader_c2.html"
+        ]
+      }
+    ],
+    "limitedAlignment": {
+      "h2CountMatches": true,
+      "faqCountMatches": true,
+      "sameInternalDestinations": true,
+      "sameSourceUrls": true
+    }
+  },
+  {
+    "index": 23,
+    "key": "legal:souzoku-kyoninka-shokei-gyoshu-betsu-kahi-hikaku",
+    "title": "個人事業主が亡くなったら？遺族の許認可期限カレンダーと引継書類",
+    "locales": [
+      {
+        "locale": "ja",
+        "file": "scripts/legal-columns/171-souzoku-kyoninka-shokei-gyoshu-betsu-kahi-hikaku.md",
+        "h2": 7,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/legal/column/kensetsugyo-kyoka-yoken-keikan-sengi-zaisan",
+          "/legal/column/souzoku-fuzoku-eigyo-kyoka-shoukei-minashi-todokede",
+          "/legal/column/souzoku-jigyo-shokei-kyoninka-shoukei-saishutoku",
+          "/legal/nagare",
+          "/legal/ryokin",
+          "/legal/services",
+          "/souzoku"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/324AC0000000100",
+          "https://www.city.bunkyo.lg.jp/b026/p002897.html",
+          "https://www.mhlw.go.jp/content/001176618.pdf",
+          "https://www.police.pref.miyagi.jp/seian/kyoninka/fuuzokumenyu/youshikiichiran.html",
+          "https://www.pref.shimane.lg.jp/medical/yakuji/kikan/hamada_hoken/seikatueisei/ryokan/ryokankakusyutodokede.html"
+        ]
+      },
+      {
+        "locale": "en",
+        "file": "scripts/legal-columns/en/171-souzoku-kyoninka-shokei-gyoshu-betsu-kahi-hikaku.md",
+        "h2": 7,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/legal/column/kensetsugyo-kyoka-yoken-keikan-sengi-zaisan",
+          "/legal/column/souzoku-fuzoku-eigyo-kyoka-shoukei-minashi-todokede",
+          "/legal/column/souzoku-jigyo-shokei-kyoninka-shoukei-saishutoku",
+          "/legal/nagare",
+          "/legal/ryokin",
+          "/legal/services",
+          "/souzoku"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/324AC0000000100",
+          "https://www.city.bunkyo.lg.jp/b026/p002897.html",
+          "https://www.mhlw.go.jp/content/001176618.pdf",
+          "https://www.police.pref.miyagi.jp/seian/kyoninka/fuuzokumenyu/youshikiichiran.html",
+          "https://www.pref.shimane.lg.jp/medical/yakuji/kikan/hamada_hoken/seikatueisei/ryokan/ryokankakusyutodokede.html"
+        ]
+      },
+      {
+        "locale": "zh-tw",
+        "file": "scripts/legal-columns/zh-tw/171-souzoku-kyoninka-shokei-gyoshu-betsu-kahi-hikaku.md",
+        "h2": 7,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/legal/column/kensetsugyo-kyoka-yoken-keikan-sengi-zaisan",
+          "/legal/column/souzoku-fuzoku-eigyo-kyoka-shoukei-minashi-todokede",
+          "/legal/column/souzoku-jigyo-shokei-kyoninka-shoukei-saishutoku",
+          "/legal/nagare",
+          "/legal/ryokin",
+          "/legal/services",
+          "/souzoku"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/324AC0000000100",
+          "https://www.city.bunkyo.lg.jp/b026/p002897.html",
+          "https://www.mhlw.go.jp/content/001176618.pdf",
+          "https://www.police.pref.miyagi.jp/seian/kyoninka/fuuzokumenyu/youshikiichiran.html",
+          "https://www.pref.shimane.lg.jp/medical/yakuji/kikan/hamada_hoken/seikatueisei/ryokan/ryokankakusyutodokede.html"
+        ]
+      },
+      {
+        "locale": "zh",
+        "file": "scripts/legal-columns/zh/171-souzoku-kyoninka-shokei-gyoshu-betsu-kahi-hikaku.md",
+        "h2": 7,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/legal/column/kensetsugyo-kyoka-yoken-keikan-sengi-zaisan",
+          "/legal/column/souzoku-fuzoku-eigyo-kyoka-shoukei-minashi-todokede",
+          "/legal/column/souzoku-jigyo-shokei-kyoninka-shoukei-saishutoku",
+          "/legal/nagare",
+          "/legal/ryokin",
+          "/legal/services",
+          "/souzoku"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/324AC0000000100",
+          "https://www.city.bunkyo.lg.jp/b026/p002897.html",
+          "https://www.mhlw.go.jp/content/001176618.pdf",
+          "https://www.police.pref.miyagi.jp/seian/kyoninka/fuuzokumenyu/youshikiichiran.html",
+          "https://www.pref.shimane.lg.jp/medical/yakuji/kikan/hamada_hoken/seikatueisei/ryokan/ryokankakusyutodokede.html"
+        ]
+      }
+    ],
+    "limitedAlignment": {
+      "h2CountMatches": true,
+      "faqCountMatches": true,
+      "sameInternalDestinations": true,
+      "sameSourceUrls": true
+    }
+  },
+  {
+    "index": 24,
+    "key": "realestate:shokuhin-seizogyo-central-kitchen-bukken-youto-haisui-tokutei-shisetsu",
+    "title": "食品製造業（セントラルキッチン）の物件はどこを見る？用途地域・排水・特定施設の要件",
+    "locales": [
+      {
+        "locale": "ja",
+        "file": "scripts/realestate-columns/176-shokuhin-seizogyo-central-kitchen-bukken-youto-haisui-tokutei-shisetsu.md",
+        "h2": 7,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/column/delivery-senmon-ghost-kitchen-bukken-youto-haisui-grease",
+          "/column/inshokuten-skeleton-bukken-haiki-grease",
+          "/column/kitchen-car-shikomi-basho-bukken-eigyo-kyoka-youken",
+          "/contact",
+          "/toushi"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/322AC0000000233",
+          "https://laws.e-gov.go.jp/law/325AC0000000201",
+          "https://laws.e-gov.go.jp/law/333AC0000000079",
+          "https://laws.e-gov.go.jp/law/345AC0000000138",
+          "https://www.kankyo.metro.tokyo.lg.jp/application/bunya/water/pollution_prevention"
+        ]
+      },
+      {
+        "locale": "en",
+        "file": "scripts/realestate-columns/en/176-shokuhin-seizogyo-central-kitchen-bukken-youto-haisui-tokutei-shisetsu.md",
+        "h2": 7,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/column/delivery-senmon-ghost-kitchen-bukken-youto-haisui-grease",
+          "/column/inshokuten-skeleton-bukken-haiki-grease",
+          "/column/kitchen-car-shikomi-basho-bukken-eigyo-kyoka-youken",
+          "/contact",
+          "/toushi"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/322AC0000000233",
+          "https://laws.e-gov.go.jp/law/325AC0000000201",
+          "https://laws.e-gov.go.jp/law/333AC0000000079",
+          "https://laws.e-gov.go.jp/law/345AC0000000138",
+          "https://www.kankyo.metro.tokyo.lg.jp/application/bunya/water/pollution_prevention"
+        ]
+      },
+      {
+        "locale": "zh-tw",
+        "file": "scripts/realestate-columns/zh-tw/176-shokuhin-seizogyo-central-kitchen-bukken-youto-haisui-tokutei-shisetsu.md",
+        "h2": 7,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/column/delivery-senmon-ghost-kitchen-bukken-youto-haisui-grease",
+          "/column/inshokuten-skeleton-bukken-haiki-grease",
+          "/column/kitchen-car-shikomi-basho-bukken-eigyo-kyoka-youken",
+          "/contact",
+          "/toushi"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/322AC0000000233",
+          "https://laws.e-gov.go.jp/law/325AC0000000201",
+          "https://laws.e-gov.go.jp/law/333AC0000000079",
+          "https://laws.e-gov.go.jp/law/345AC0000000138",
+          "https://www.kankyo.metro.tokyo.lg.jp/application/bunya/water/pollution_prevention"
+        ]
+      },
+      {
+        "locale": "zh",
+        "file": "scripts/realestate-columns/zh/176-shokuhin-seizogyo-central-kitchen-bukken-youto-haisui-tokutei-shisetsu.md",
+        "h2": 7,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/column/delivery-senmon-ghost-kitchen-bukken-youto-haisui-grease",
+          "/column/inshokuten-skeleton-bukken-haiki-grease",
+          "/column/kitchen-car-shikomi-basho-bukken-eigyo-kyoka-youken",
+          "/contact",
+          "/toushi"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/322AC0000000233",
+          "https://laws.e-gov.go.jp/law/325AC0000000201",
+          "https://laws.e-gov.go.jp/law/333AC0000000079",
+          "https://laws.e-gov.go.jp/law/345AC0000000138",
+          "https://www.kankyo.metro.tokyo.lg.jp/application/bunya/water/pollution_prevention"
+        ]
+      }
+    ],
+    "limitedAlignment": {
+      "h2CountMatches": true,
+      "faqCountMatches": true,
+      "sameInternalDestinations": true,
+      "sameSourceUrls": true
+    }
+  },
+  {
+    "index": 25,
+    "key": "realestate:souzoku-nochi-nouyouchi-kuiki-noshin-jogai-tenyo-baikyaku",
+    "title": "相続した農地が「農用地区域（青地）」だったら売れる？農振除外から農地転用までの順序",
+    "locales": [
+      {
+        "locale": "ja",
+        "file": "scripts/realestate-columns/177-souzoku-nochi-nouyouchi-kuiki-noshin-jogai-tenyo-baikyaku.md",
+        "h2": 7,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/column/einou-taiyoko-nochi-ichiji-tenyo-bukken",
+          "/column/souzoku-nochi-baikyaku-kashidashi-nagare",
+          "/column/souzoku-seisan-ryokuchi-baikyaku-nagare",
+          "/souzoku"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/327AC0000000229",
+          "https://laws.e-gov.go.jp/law/344AC0000000058",
+          "https://www.maff.go.jp/j/nousin/noukei/totiriyo/t_sinko/sinko_01.html"
+        ]
+      },
+      {
+        "locale": "en",
+        "file": "scripts/realestate-columns/en/177-souzoku-nochi-nouyouchi-kuiki-noshin-jogai-tenyo-baikyaku.md",
+        "h2": 7,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/column/einou-taiyoko-nochi-ichiji-tenyo-bukken",
+          "/column/souzoku-nochi-baikyaku-kashidashi-nagare",
+          "/column/souzoku-seisan-ryokuchi-baikyaku-nagare",
+          "/souzoku"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/327AC0000000229",
+          "https://laws.e-gov.go.jp/law/344AC0000000058",
+          "https://www.maff.go.jp/j/nousin/noukei/totiriyo/t_sinko/sinko_01.html"
+        ]
+      },
+      {
+        "locale": "zh-tw",
+        "file": "scripts/realestate-columns/zh-tw/177-souzoku-nochi-nouyouchi-kuiki-noshin-jogai-tenyo-baikyaku.md",
+        "h2": 7,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/column/einou-taiyoko-nochi-ichiji-tenyo-bukken",
+          "/column/souzoku-nochi-baikyaku-kashidashi-nagare",
+          "/column/souzoku-seisan-ryokuchi-baikyaku-nagare",
+          "/souzoku"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/327AC0000000229",
+          "https://laws.e-gov.go.jp/law/344AC0000000058",
+          "https://www.maff.go.jp/j/nousin/noukei/totiriyo/t_sinko/sinko_01.html"
+        ]
+      },
+      {
+        "locale": "zh",
+        "file": "scripts/realestate-columns/zh/177-souzoku-nochi-nouyouchi-kuiki-noshin-jogai-tenyo-baikyaku.md",
+        "h2": 7,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/column/einou-taiyoko-nochi-ichiji-tenyo-bukken",
+          "/column/souzoku-nochi-baikyaku-kashidashi-nagare",
+          "/column/souzoku-seisan-ryokuchi-baikyaku-nagare",
+          "/souzoku"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/327AC0000000229",
+          "https://laws.e-gov.go.jp/law/344AC0000000058",
+          "https://www.maff.go.jp/j/nousin/noukei/totiriyo/t_sinko/sinko_01.html"
+        ]
+      }
+    ],
+    "limitedAlignment": {
+      "h2CountMatches": true,
+      "faqCountMatches": true,
+      "sameInternalDestinations": true,
+      "sameSourceUrls": true
+    }
+  },
+  {
+    "index": 26,
+    "key": "labor:shiyonin-kenmu-yakuin-roudoshasei-zangyo-koyohoken-roumu",
+    "title": "使用人兼務役員に残業代は要るのか？労働者性と雇用保険・社会保険の扱い",
+    "locales": [
+      {
+        "locale": "ja",
+        "file": "scripts/labor-columns/212-shiyonin-kenmu-yakuin-roudoshasei-zangyo-koyohoken-roumu.md",
+        "h2": 9,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/labor/column/36-kyotei-zangyo-sharoushi-doko-made",
+          "/labor/column/jigyo-shokei-daihyo-kotai-yakuin-shakaihoken-tetsuzuki",
+          "/labor/column/kanri-kantokusha-nabakari-warimashi-shinya",
+          "/labor/column/nii-ijo-jigyosho-kinmu-todoke-yakuin-tanjikan-shaho",
+          "/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo",
+          "/labor/faq",
+          "/labor/ryokin"
+        ],
+        "sourceUrls": [
+          "https://jsite.mhlw.go.jp/hokkaido-hellowork/content/contents/001043154.pdf",
+          "https://www.mhlw.go.jp/stf/houdou/0000190457_00024.html",
+          "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000140565.html",
+          "https://www.nenkin.go.jp/service/kounen/hokenryo/hoshu/20150515-01.html"
+        ]
+      },
+      {
+        "locale": "en",
+        "file": "scripts/labor-columns/en/212-shiyonin-kenmu-yakuin-roudoshasei-zangyo-koyohoken-roumu.md",
+        "h2": 9,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/labor/column/36-kyotei-zangyo-sharoushi-doko-made",
+          "/labor/column/jigyo-shokei-daihyo-kotai-yakuin-shakaihoken-tetsuzuki",
+          "/labor/column/kanri-kantokusha-nabakari-warimashi-shinya",
+          "/labor/column/nii-ijo-jigyosho-kinmu-todoke-yakuin-tanjikan-shaho",
+          "/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo",
+          "/labor/faq",
+          "/labor/ryokin"
+        ],
+        "sourceUrls": [
+          "https://jsite.mhlw.go.jp/hokkaido-hellowork/content/contents/001043154.pdf",
+          "https://www.mhlw.go.jp/stf/houdou/0000190457_00024.html",
+          "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000140565.html",
+          "https://www.nenkin.go.jp/service/kounen/hokenryo/hoshu/20150515-01.html"
+        ]
+      },
+      {
+        "locale": "zh-tw",
+        "file": "scripts/labor-columns/zh-tw/212-shiyonin-kenmu-yakuin-roudoshasei-zangyo-koyohoken-roumu.md",
+        "h2": 9,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/labor/column/36-kyotei-zangyo-sharoushi-doko-made",
+          "/labor/column/jigyo-shokei-daihyo-kotai-yakuin-shakaihoken-tetsuzuki",
+          "/labor/column/kanri-kantokusha-nabakari-warimashi-shinya",
+          "/labor/column/nii-ijo-jigyosho-kinmu-todoke-yakuin-tanjikan-shaho",
+          "/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo",
+          "/labor/faq",
+          "/labor/ryokin"
+        ],
+        "sourceUrls": [
+          "https://jsite.mhlw.go.jp/hokkaido-hellowork/content/contents/001043154.pdf",
+          "https://www.mhlw.go.jp/stf/houdou/0000190457_00024.html",
+          "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000140565.html",
+          "https://www.nenkin.go.jp/service/kounen/hokenryo/hoshu/20150515-01.html"
+        ]
+      },
+      {
+        "locale": "zh",
+        "file": "scripts/labor-columns/zh/212-shiyonin-kenmu-yakuin-roudoshasei-zangyo-koyohoken-roumu.md",
+        "h2": 9,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/labor/column/36-kyotei-zangyo-sharoushi-doko-made",
+          "/labor/column/jigyo-shokei-daihyo-kotai-yakuin-shakaihoken-tetsuzuki",
+          "/labor/column/kanri-kantokusha-nabakari-warimashi-shinya",
+          "/labor/column/nii-ijo-jigyosho-kinmu-todoke-yakuin-tanjikan-shaho",
+          "/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo",
+          "/labor/faq",
+          "/labor/ryokin"
+        ],
+        "sourceUrls": [
+          "https://jsite.mhlw.go.jp/hokkaido-hellowork/content/contents/001043154.pdf",
+          "https://www.mhlw.go.jp/stf/houdou/0000190457_00024.html",
+          "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000140565.html",
+          "https://www.nenkin.go.jp/service/kounen/hokenryo/hoshu/20150515-01.html"
+        ]
+      }
+    ],
+    "limitedAlignment": {
+      "h2CountMatches": true,
+      "faqCountMatches": true,
+      "sameInternalDestinations": true,
+      "sameSourceUrls": true
+    }
+  },
+  {
+    "index": 27,
+    "key": "legal:eisei-kensajo-rinsho-kensa-touroku-kozo-setsubi-kijun",
+    "title": "衛生検査所の登録はどう取る？臨床検査技師等法の構造設備・人員基準と申請の流れ",
+    "locales": [
+      {
+        "locale": "ja",
+        "file": "scripts/legal-columns/172-eisei-kensajo-rinsho-kensa-touroku-kozo-setsubi-kijun.md",
+        "h2": 8,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/legal/column/iyakuhin-tenpo-hanbaigyo-drugstore-kozo-setsubi-touroku-hanbaisha",
+          "/legal/column/kodo-kanri-iryokiki-hanbai-kashidashi-kyoka-tenpo-kanrisha",
+          "/legal/column/shinryojo-kaisetsu-todokede-iryoho-8jo",
+          "/legal/nagare",
+          "/legal/ryokin",
+          "/legal/services"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/333M50000100024/20261001_508M60000100107",
+          "https://www.city.akita.lg.jp/kurashi/kenko/1005375/1025939/1025618.html",
+          "https://www.mhlw.go.jp/content/10800000/000911181.pdf",
+          "https://www.mhlw.go.jp/web/t_doc?dataId=80020000&dataType=0&pageNo=1",
+          "https://www.pref.mie.lg.jp/GYOHSEI/000071155.htm"
+        ]
+      },
+      {
+        "locale": "en",
+        "file": "scripts/legal-columns/en/172-eisei-kensajo-rinsho-kensa-touroku-kozo-setsubi-kijun.md",
+        "h2": 8,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/legal/column/iyakuhin-tenpo-hanbaigyo-drugstore-kozo-setsubi-touroku-hanbaisha",
+          "/legal/column/kodo-kanri-iryokiki-hanbai-kashidashi-kyoka-tenpo-kanrisha",
+          "/legal/column/shinryojo-kaisetsu-todokede-iryoho-8jo",
+          "/legal/nagare",
+          "/legal/ryokin",
+          "/legal/services"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/333M50000100024/20261001_508M60000100107",
+          "https://www.city.akita.lg.jp/kurashi/kenko/1005375/1025939/1025618.html",
+          "https://www.mhlw.go.jp/content/10800000/000911181.pdf",
+          "https://www.mhlw.go.jp/web/t_doc?dataId=80020000&dataType=0&pageNo=1",
+          "https://www.pref.mie.lg.jp/GYOHSEI/000071155.htm"
+        ]
+      },
+      {
+        "locale": "zh-tw",
+        "file": "scripts/legal-columns/zh-tw/172-eisei-kensajo-rinsho-kensa-touroku-kozo-setsubi-kijun.md",
+        "h2": 8,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/legal/column/iyakuhin-tenpo-hanbaigyo-drugstore-kozo-setsubi-touroku-hanbaisha",
+          "/legal/column/kodo-kanri-iryokiki-hanbai-kashidashi-kyoka-tenpo-kanrisha",
+          "/legal/column/shinryojo-kaisetsu-todokede-iryoho-8jo",
+          "/legal/nagare",
+          "/legal/ryokin",
+          "/legal/services"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/333M50000100024/20261001_508M60000100107",
+          "https://www.city.akita.lg.jp/kurashi/kenko/1005375/1025939/1025618.html",
+          "https://www.mhlw.go.jp/content/10800000/000911181.pdf",
+          "https://www.mhlw.go.jp/web/t_doc?dataId=80020000&dataType=0&pageNo=1",
+          "https://www.pref.mie.lg.jp/GYOHSEI/000071155.htm"
+        ]
+      },
+      {
+        "locale": "zh",
+        "file": "scripts/legal-columns/zh/172-eisei-kensajo-rinsho-kensa-touroku-kozo-setsubi-kijun.md",
+        "h2": 8,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/legal/column/iyakuhin-tenpo-hanbaigyo-drugstore-kozo-setsubi-touroku-hanbaisha",
+          "/legal/column/kodo-kanri-iryokiki-hanbai-kashidashi-kyoka-tenpo-kanrisha",
+          "/legal/column/shinryojo-kaisetsu-todokede-iryoho-8jo",
+          "/legal/nagare",
+          "/legal/ryokin",
+          "/legal/services"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/333M50000100024/20261001_508M60000100107",
+          "https://www.city.akita.lg.jp/kurashi/kenko/1005375/1025939/1025618.html",
+          "https://www.mhlw.go.jp/content/10800000/000911181.pdf",
+          "https://www.mhlw.go.jp/web/t_doc?dataId=80020000&dataType=0&pageNo=1",
+          "https://www.pref.mie.lg.jp/GYOHSEI/000071155.htm"
+        ]
+      }
+    ],
+    "limitedAlignment": {
+      "h2CountMatches": true,
+      "faqCountMatches": true,
+      "sameInternalDestinations": true,
+      "sameSourceUrls": true
+    }
+  },
+  {
+    "index": 28,
+    "key": "legal:kikyuji-yuigon-shibo-kikyusha-minpo-976jo-kakunin",
+    "title": "入院中で公正証書遺言が間に合わないときは？死亡危急者遺言（民法976条）の作り方と家裁の確認",
+    "locales": [
+      {
+        "locale": "ja",
+        "file": "scripts/legal-columns/173-kikyuji-yuigon-shibo-kikyusha-minpo-976jo-kakunin.md",
+        "h2": 8,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/legal/column/jihitsu-kosei-yuigon",
+          "/legal/column/kosei-shosho-yuigon-koshonin-shonin-hiyo",
+          "/legal/column/yuigon-tekkai-teishoku-fukusu-yuigon-yuretsu",
+          "/legal/nagare",
+          "/legal/ryokin",
+          "/legal/services",
+          "/legal/services/inheritance"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/data/Act/129AC0000000089/637374_1/129AC0000000089_20260624_508AC0000000045_h1.pdf",
+          "https://laws.e-gov.go.jp/law/129AC0000000089",
+          "https://www.moj.go.jp/MINJI/minji115",
+          "https://www.sangiin.go.jp/japanese/joho1/kousei/gian/217/pdf/s0902170362170.pdf"
+        ]
+      },
+      {
+        "locale": "en",
+        "file": "scripts/legal-columns/en/173-kikyuji-yuigon-shibo-kikyusha-minpo-976jo-kakunin.md",
+        "h2": 8,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/legal/column/jihitsu-kosei-yuigon",
+          "/legal/column/kosei-shosho-yuigon-koshonin-shonin-hiyo",
+          "/legal/column/yuigon-tekkai-teishoku-fukusu-yuigon-yuretsu",
+          "/legal/nagare",
+          "/legal/ryokin",
+          "/legal/services",
+          "/legal/services/inheritance"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/data/Act/129AC0000000089/637374_1/129AC0000000089_20260624_508AC0000000045_h1.pdf",
+          "https://laws.e-gov.go.jp/law/129AC0000000089",
+          "https://www.moj.go.jp/MINJI/minji115",
+          "https://www.sangiin.go.jp/japanese/joho1/kousei/gian/217/pdf/s0902170362170.pdf"
+        ]
+      },
+      {
+        "locale": "zh-tw",
+        "file": "scripts/legal-columns/zh-tw/173-kikyuji-yuigon-shibo-kikyusha-minpo-976jo-kakunin.md",
+        "h2": 8,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/legal/column/jihitsu-kosei-yuigon",
+          "/legal/column/kosei-shosho-yuigon-koshonin-shonin-hiyo",
+          "/legal/column/yuigon-tekkai-teishoku-fukusu-yuigon-yuretsu",
+          "/legal/nagare",
+          "/legal/ryokin",
+          "/legal/services",
+          "/legal/services/inheritance"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/data/Act/129AC0000000089/637374_1/129AC0000000089_20260624_508AC0000000045_h1.pdf",
+          "https://laws.e-gov.go.jp/law/129AC0000000089",
+          "https://www.moj.go.jp/MINJI/minji115",
+          "https://www.sangiin.go.jp/japanese/joho1/kousei/gian/217/pdf/s0902170362170.pdf"
+        ]
+      },
+      {
+        "locale": "zh",
+        "file": "scripts/legal-columns/zh/173-kikyuji-yuigon-shibo-kikyusha-minpo-976jo-kakunin.md",
+        "h2": 8,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/legal/column/jihitsu-kosei-yuigon",
+          "/legal/column/kosei-shosho-yuigon-koshonin-shonin-hiyo",
+          "/legal/column/yuigon-tekkai-teishoku-fukusu-yuigon-yuretsu",
+          "/legal/nagare",
+          "/legal/ryokin",
+          "/legal/services",
+          "/legal/services/inheritance"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/data/Act/129AC0000000089/637374_1/129AC0000000089_20260624_508AC0000000045_h1.pdf",
+          "https://laws.e-gov.go.jp/law/129AC0000000089",
+          "https://www.moj.go.jp/MINJI/minji115",
+          "https://www.sangiin.go.jp/japanese/joho1/kousei/gian/217/pdf/s0902170362170.pdf"
+        ]
+      }
+    ],
+    "limitedAlignment": {
+      "h2CountMatches": true,
+      "faqCountMatches": true,
+      "sameInternalDestinations": true,
+      "sameSourceUrls": true
+    }
+  },
+  {
+    "index": 29,
+    "key": "realestate:souzoku-minpaku-jutaku-shukuhaku-todokede-shokei-haigyo-baikyaku",
+    "title": "民泊（住宅宿泊事業）を相続したらどうなる？届出は引き継げず、廃業・再届出・売却の判断が要る",
+    "locales": [
+      {
+        "locale": "ja",
+        "file": "scripts/realestate-columns/179-souzoku-minpaku-jutaku-shukuhaku-todokede-shokei-haigyo-baikyaku.md",
+        "h2": 8,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/column/hikyojusha-chuka-owner-minpaku-jutaku-shukuhaku-kanri-itaku",
+          "/column/souzoku-akiya-3000man-roujin-home-nyusho-kyojuyoken",
+          "/column/tokku-minpaku-bukken-youken-nintei",
+          "/legal/column/minpaku-jutaku-shukuhaku-todokede-yoken",
+          "/legal/column/souzoku-touki-nagare",
+          "/souzoku",
+          "/toushi"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/323AC0000000138",
+          "https://laws.e-gov.go.jp/law/416AC0000000123",
+          "https://laws.e-gov.go.jp/law/429AC0000000065",
+          "https://www.mlit.go.jp/kankocho/minpaku/content/001396589.pdf"
+        ]
+      },
+      {
+        "locale": "en",
+        "file": "scripts/realestate-columns/en/179-souzoku-minpaku-jutaku-shukuhaku-todokede-shokei-haigyo-baikyaku.md",
+        "h2": 8,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/column/hikyojusha-chuka-owner-minpaku-jutaku-shukuhaku-kanri-itaku",
+          "/column/souzoku-akiya-3000man-roujin-home-nyusho-kyojuyoken",
+          "/column/tokku-minpaku-bukken-youken-nintei",
+          "/legal/column/minpaku-jutaku-shukuhaku-todokede-yoken",
+          "/legal/column/souzoku-touki-nagare",
+          "/souzoku",
+          "/toushi"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/323AC0000000138",
+          "https://laws.e-gov.go.jp/law/416AC0000000123",
+          "https://laws.e-gov.go.jp/law/429AC0000000065",
+          "https://www.mlit.go.jp/kankocho/minpaku/content/001396589.pdf"
+        ]
+      },
+      {
+        "locale": "zh-tw",
+        "file": "scripts/realestate-columns/zh-tw/179-souzoku-minpaku-jutaku-shukuhaku-todokede-shokei-haigyo-baikyaku.md",
+        "h2": 8,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/column/hikyojusha-chuka-owner-minpaku-jutaku-shukuhaku-kanri-itaku",
+          "/column/souzoku-akiya-3000man-roujin-home-nyusho-kyojuyoken",
+          "/column/tokku-minpaku-bukken-youken-nintei",
+          "/legal/column/minpaku-jutaku-shukuhaku-todokede-yoken",
+          "/legal/column/souzoku-touki-nagare",
+          "/souzoku",
+          "/toushi"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/323AC0000000138",
+          "https://laws.e-gov.go.jp/law/416AC0000000123",
+          "https://laws.e-gov.go.jp/law/429AC0000000065",
+          "https://www.mlit.go.jp/kankocho/minpaku/content/001396589.pdf"
+        ]
+      },
+      {
+        "locale": "zh",
+        "file": "scripts/realestate-columns/zh/179-souzoku-minpaku-jutaku-shukuhaku-todokede-shokei-haigyo-baikyaku.md",
+        "h2": 8,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/column/hikyojusha-chuka-owner-minpaku-jutaku-shukuhaku-kanri-itaku",
+          "/column/souzoku-akiya-3000man-roujin-home-nyusho-kyojuyoken",
+          "/column/tokku-minpaku-bukken-youken-nintei",
+          "/legal/column/minpaku-jutaku-shukuhaku-todokede-yoken",
+          "/legal/column/souzoku-touki-nagare",
+          "/souzoku",
+          "/toushi"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/323AC0000000138",
+          "https://laws.e-gov.go.jp/law/416AC0000000123",
+          "https://laws.e-gov.go.jp/law/429AC0000000065",
+          "https://www.mlit.go.jp/kankocho/minpaku/content/001396589.pdf"
+        ]
+      }
+    ],
+    "limitedAlignment": {
+      "h2CountMatches": true,
+      "faqCountMatches": true,
+      "sameInternalDestinations": true,
+      "sameSourceUrls": true
+    }
+  },
+  {
+    "index": 30,
+    "key": "realestate:tokutei-yukyo-inshokuten-club-bukken-youto-hozen-taisho",
+    "title": "クラブ・ラウンジの物件を借りる前に｜候補地・図面・貸主承諾の確認チェックリスト",
+    "locales": [
+      {
+        "locale": "ja",
+        "file": "scripts/realestate-columns/178-tokutei-yukyo-inshokuten-club-bukken-youto-hozen-taisho.md",
+        "h2": 8,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/contact",
+          "/legal/column/tokutei-yukyo-inshokuten-eigyo-kyoka-youken",
+          "/toushi"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/322AC0000000233",
+          "https://laws.e-gov.go.jp/law/323AC0000000122",
+          "https://laws.e-gov.go.jp/law/325AC0000000201",
+          "https://laws.e-gov.go.jp/law/359CO0000000319",
+          "https://laws.e-gov.go.jp/law/360M50400000001"
+        ]
+      },
+      {
+        "locale": "en",
+        "file": "scripts/realestate-columns/en/178-tokutei-yukyo-inshokuten-club-bukken-youto-hozen-taisho.md",
+        "h2": 8,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/contact",
+          "/legal/column/tokutei-yukyo-inshokuten-eigyo-kyoka-youken",
+          "/toushi"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/322AC0000000233",
+          "https://laws.e-gov.go.jp/law/323AC0000000122",
+          "https://laws.e-gov.go.jp/law/325AC0000000201",
+          "https://laws.e-gov.go.jp/law/359CO0000000319",
+          "https://laws.e-gov.go.jp/law/360M50400000001"
+        ]
+      },
+      {
+        "locale": "zh-tw",
+        "file": "scripts/realestate-columns/zh-tw/178-tokutei-yukyo-inshokuten-club-bukken-youto-hozen-taisho.md",
+        "h2": 8,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/contact",
+          "/legal/column/tokutei-yukyo-inshokuten-eigyo-kyoka-youken",
+          "/toushi"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/322AC0000000233",
+          "https://laws.e-gov.go.jp/law/323AC0000000122",
+          "https://laws.e-gov.go.jp/law/325AC0000000201",
+          "https://laws.e-gov.go.jp/law/359CO0000000319",
+          "https://laws.e-gov.go.jp/law/360M50400000001"
+        ]
+      },
+      {
+        "locale": "zh",
+        "file": "scripts/realestate-columns/zh/178-tokutei-yukyo-inshokuten-club-bukken-youto-hozen-taisho.md",
+        "h2": 8,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/contact",
+          "/legal/column/tokutei-yukyo-inshokuten-eigyo-kyoka-youken",
+          "/toushi"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/322AC0000000233",
+          "https://laws.e-gov.go.jp/law/323AC0000000122",
+          "https://laws.e-gov.go.jp/law/325AC0000000201",
+          "https://laws.e-gov.go.jp/law/359CO0000000319",
+          "https://laws.e-gov.go.jp/law/360M50400000001"
+        ]
+      }
+    ],
+    "limitedAlignment": {
+      "h2CountMatches": true,
+      "faqCountMatches": true,
+      "sameInternalDestinations": true,
+      "sameSourceUrls": true
+    }
+  },
+  {
+    "index": 31,
+    "key": "legal:kashikin-gyo-touroku-yoken-shunin-junshisan",
+    "title": "貸金業の登録を受けるには――純資産5000万円・貸金業務取扱主任者・営業所要件の全体像",
+    "locales": [
+      {
+        "locale": "ja",
+        "file": "scripts/legal-columns/174-kashikin-gyo-touroku-yoken-shunin-junshisan.md",
+        "h2": 7,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/legal/column/denki-koji-gyo-touroku-eigyosho-shunin",
+          "/legal/column/kensetsugyo-kyoka-yoken-keikan-sengi-zaisan",
+          "/legal/nagare",
+          "/legal/ryokin",
+          "/legal/services"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/358AC1000000032",
+          "https://www.moj.go.jp/housei/servicer/kanbou_housei_chousa01",
+          "https://www.nta.go.jp/taxes/shiraberu/taxanswer/osirase/9204.htm",
+          "https://www.pref.niigata.lg.jp/uploaded/attachment/458052.pdf"
+        ]
+      },
+      {
+        "locale": "en",
+        "file": "scripts/legal-columns/en/174-kashikin-gyo-touroku-yoken-shunin-junshisan.md",
+        "h2": 7,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/legal/column/denki-koji-gyo-touroku-eigyosho-shunin",
+          "/legal/column/kensetsugyo-kyoka-yoken-keikan-sengi-zaisan",
+          "/legal/nagare",
+          "/legal/ryokin",
+          "/legal/services"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/358AC1000000032",
+          "https://www.moj.go.jp/housei/servicer/kanbou_housei_chousa01",
+          "https://www.nta.go.jp/taxes/shiraberu/taxanswer/osirase/9204.htm",
+          "https://www.pref.niigata.lg.jp/uploaded/attachment/458052.pdf"
+        ]
+      },
+      {
+        "locale": "zh-tw",
+        "file": "scripts/legal-columns/zh-tw/174-kashikin-gyo-touroku-yoken-shunin-junshisan.md",
+        "h2": 7,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/legal/column/denki-koji-gyo-touroku-eigyosho-shunin",
+          "/legal/column/kensetsugyo-kyoka-yoken-keikan-sengi-zaisan",
+          "/legal/nagare",
+          "/legal/ryokin",
+          "/legal/services"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/358AC1000000032",
+          "https://www.moj.go.jp/housei/servicer/kanbou_housei_chousa01",
+          "https://www.nta.go.jp/taxes/shiraberu/taxanswer/osirase/9204.htm",
+          "https://www.pref.niigata.lg.jp/uploaded/attachment/458052.pdf"
+        ]
+      },
+      {
+        "locale": "zh",
+        "file": "scripts/legal-columns/zh/174-kashikin-gyo-touroku-yoken-shunin-junshisan.md",
+        "h2": 7,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/legal/column/denki-koji-gyo-touroku-eigyosho-shunin",
+          "/legal/column/kensetsugyo-kyoka-yoken-keikan-sengi-zaisan",
+          "/legal/nagare",
+          "/legal/ryokin",
+          "/legal/services"
+        ],
+        "sourceUrls": [
+          "https://laws.e-gov.go.jp/law/358AC1000000032",
+          "https://www.moj.go.jp/housei/servicer/kanbou_housei_chousa01",
+          "https://www.nta.go.jp/taxes/shiraberu/taxanswer/osirase/9204.htm",
+          "https://www.pref.niigata.lg.jp/uploaded/attachment/458052.pdf"
+        ]
+      }
+    ],
+    "limitedAlignment": {
+      "h2CountMatches": true,
+      "faqCountMatches": true,
+      "sameInternalDestinations": true,
+      "sameSourceUrls": true
+    }
+  },
+  {
+    "index": 32,
+    "key": "legal:souzoku-fuzaisha-zaisan-kanrinin-shisso-senkoku-erabikata",
+    "title": "相続人の中に生死不明の人がいる――不在者財産管理人と失踪宣告、どちらを選ぶか",
+    "locales": [
+      {
+        "locale": "ja",
+        "file": "scripts/legal-columns/175-souzoku-fuzaisha-zaisan-kanrinin-shisso-senkoku-erabikata.md",
+        "h2": 7,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/legal/column/souzoku-nin-fuzai-seisannin-tokubetsu-enko",
+          "/legal/column/souzoku-ninchisho-yukuefumei-miseinen",
+          "/legal/column/souzoku-touki-nagare",
+          "/legal/nagare",
+          "/legal/ryokin",
+          "/legal/services/inheritance",
+          "/souzoku"
+        ],
+        "sourceUrls": [
+          "https://www.courts.go.jp/saiban/qa/qa_kazi/index.html",
+          "https://www.courts.go.jp/saiban/syurui/syurui_kazi/kazi_06_05/index.html",
+          "https://www.sangiin.go.jp/japanese/joho1/kousei/gian/217/pdf/s0902170362170.pdf"
+        ]
+      },
+      {
+        "locale": "en",
+        "file": "scripts/legal-columns/en/175-souzoku-fuzaisha-zaisan-kanrinin-shisso-senkoku-erabikata.md",
+        "h2": 7,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/legal/column/souzoku-nin-fuzai-seisannin-tokubetsu-enko",
+          "/legal/column/souzoku-ninchisho-yukuefumei-miseinen",
+          "/legal/column/souzoku-touki-nagare",
+          "/legal/nagare",
+          "/legal/ryokin",
+          "/legal/services/inheritance",
+          "/souzoku"
+        ],
+        "sourceUrls": [
+          "https://www.courts.go.jp/saiban/qa/qa_kazi/index.html",
+          "https://www.courts.go.jp/saiban/syurui/syurui_kazi/kazi_06_05/index.html",
+          "https://www.sangiin.go.jp/japanese/joho1/kousei/gian/217/pdf/s0902170362170.pdf"
+        ]
+      },
+      {
+        "locale": "zh-tw",
+        "file": "scripts/legal-columns/zh-tw/175-souzoku-fuzaisha-zaisan-kanrinin-shisso-senkoku-erabikata.md",
+        "h2": 7,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/legal/column/souzoku-nin-fuzai-seisannin-tokubetsu-enko",
+          "/legal/column/souzoku-ninchisho-yukuefumei-miseinen",
+          "/legal/column/souzoku-touki-nagare",
+          "/legal/nagare",
+          "/legal/ryokin",
+          "/legal/services/inheritance",
+          "/souzoku"
+        ],
+        "sourceUrls": [
+          "https://www.courts.go.jp/saiban/qa/qa_kazi/index.html",
+          "https://www.courts.go.jp/saiban/syurui/syurui_kazi/kazi_06_05/index.html",
+          "https://www.sangiin.go.jp/japanese/joho1/kousei/gian/217/pdf/s0902170362170.pdf"
+        ]
+      },
+      {
+        "locale": "zh",
+        "file": "scripts/legal-columns/zh/175-souzoku-fuzaisha-zaisan-kanrinin-shisso-senkoku-erabikata.md",
+        "h2": 7,
+        "faq": [
+          4,
+          4
+        ],
+        "normalizedInternalPaths": [
+          "/about/uramatsu",
+          "/legal/column/souzoku-nin-fuzai-seisannin-tokubetsu-enko",
+          "/legal/column/souzoku-ninchisho-yukuefumei-miseinen",
+          "/legal/column/souzoku-touki-nagare",
+          "/legal/nagare",
+          "/legal/ryokin",
+          "/legal/services/inheritance",
+          "/souzoku"
+        ],
+        "sourceUrls": [
+          "https://www.courts.go.jp/saiban/qa/qa_kazi/index.html",
+          "https://www.courts.go.jp/saiban/syurui/syurui_kazi/kazi_06_05/index.html",
+          "https://www.sangiin.go.jp/japanese/joho1/kousei/gian/217/pdf/s0902170362170.pdf"
+        ]
+      }
+    ],
+    "limitedAlignment": {
+      "h2CountMatches": true,
+      "faqCountMatches": true,
+      "sameInternalDestinations": true,
+      "sameSourceUrls": true
+    }
+  }
+]
