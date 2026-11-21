@@ -74,3 +74,20 @@ it("取込保存成功後のflush障害も保存済みを明示する", async ()
   expect(deps.create).toHaveBeenCalledOnce(); expect(deps.record).toHaveBeenCalledOnce();
   expect(deps.create.mock.invocationCallOrder[0]).toBeLessThan(deps.revalidate.mock.invocationCallOrder[0]);
 });
+
+it("実APIの保存後503を同一タブのバッチが保存済みとして保持し、2回目に書込まない", async () => {
+  const { applyWithReceipt, runReviewedBatch } = await import("../batch-review");
+  const input=fixture(); input.property.images.forEach((i:{url:string},n:number)=>{i.url=`https://demo.supabase.co/storage/v1/object/public/column-images/bukken/auto/${n}.jpg`;});
+  const check=async (row:typeof input)=>(await POST(req("check",row))).json();
+  const approved=await runReviewedBatch({records:[input],check,apply:()=>{throw Error("dry run wrote");}});
+  expect(approved[0].action).toBe("ready"); expect(deps.create).not.toHaveBeenCalled();
+  const data=new Map<string,string>();
+  const store={getItem:(k:string)=>data.get(k)??null,setItem:(k:string,v:string)=>{data.set(k,v);},removeItem:(k:string)=>{data.delete(k);}};
+  const send=vi.fn(async()=>{const res=await POST(req("apply",input));return {ok:res.ok,status:res.status,body:await res.json()};});
+  const apply=async()=>applyWithReceipt({store,slug:approved[0].slug!,intent:"a".repeat(64),closing:false,send});
+  deps.flush.mockRejectedValueOnce(new Error("PRIVATE_CACHE_SECRET"));
+  const execute=()=>runReviewedBatch({records:[input],approved,check,apply});
+  expect((await execute())[0].action).toBe("saved_refresh_pending");
+  expect((await execute())[0].action).toBe("saved_refresh_pending");
+  expect(send).toHaveBeenCalledOnce(); expect(deps.create).toHaveBeenCalledOnce(); expect(deps.record).toHaveBeenCalledOnce();
+});
