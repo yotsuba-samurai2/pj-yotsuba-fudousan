@@ -26,7 +26,7 @@ Under the Building Standards Act, a facility that manufactures food is treated a
 | Zoning focus | Allowed in broad zones | Mainly industrial zones; limited by work-area size |
 | Drainage focus | Grease trap, etc. | Scale/product can trigger a specified-facility notification |
 
-Running delivery-only cooking as a restaurant business (ghost kitchen) is organised separately in [Ghost kitchen (delivery-only cooking base) property, zoning and drainage](https://luck428.com/column/delivery-senmon-ghost-kitchen-bukken-youto-haisui-grease), and a restaurant skeleton/second-hand fit-out in [How to check drainage and grease traps in a second-hand restaurant property](https://luck428.com/column/inshokuten-skeleton-bukken-haiki-grease). This article assumes a factory property doing manufacturing and wholesale as a "food-manufacturing business," not a restaurant business.
+Running delivery-only cooking as a restaurant business (ghost kitchen) is organised separately in [Ghost kitchen (delivery-only cooking base) property, zoning and drainage](https://luck428.com/en/column/delivery-senmon-ghost-kitchen-bukken-youto-haisui-grease), and a restaurant skeleton/second-hand fit-out in [How to check drainage and grease traps in a second-hand restaurant property](https://luck428.com/en/column/inshokuten-skeleton-bukken-haiki-grease). This article assumes a factory property doing manufacturing and wholesale as a "food-manufacturing business," not a restaurant business.
 
 ## In which zones can you place a food-manufacturing factory?
 
@@ -87,9 +87,9 @@ The food-manufacturing licence application (preparing and submitting documents i
 
 Opening a central kitchen goes fastest when, after the property premises are fixed on the real-estate side, the licence, use change, drainage and labor proceed in parallel with each professional. We help, as general information, with this allocation and the property-side checks, but we do not make the final judgment on whether a licence is granted, on building/drainage conformity, or on tax amounts.
 
-**[Consult Yotsuba Real Estate about central-kitchen / food-manufacturing properties (free consultation)](https://luck428.com/office)** / **[Consult us about surveying and brokering commercial properties](https://luck428.com/toushi)**
+**[Consult Yotsuba Real Estate about central-kitchen / food-manufacturing properties (free consultation)](https://luck428.com/en/contact)** / **[Consult us about surveying and brokering commercial properties](https://luck428.com/en/toushi)**
 
-In your inquiry, please note the property's location, the building type (standalone building, a unit in a building, etc.), the products to be manufactured (prepared food, confectionery, bread, etc.), the intended work-area scale, lease or purchase, and whether it is a conversion of an existing building or new. We start from organising what can be checked on the property side and the referral targets to an administrative scrivener, architect, labor and social security attorney and tax accountant. If you are at the stage of finding a prep location for a kitchen car, see also [Kitchen-car prep-location property and business-licence requirements](https://luck428.com/column/kitchen-car-shikomi-basho-bukken-eigyo-kyoka-youken).
+In your inquiry, please note the property's location, the building type (standalone building, a unit in a building, etc.), the products to be manufactured (prepared food, confectionery, bread, etc.), the intended work-area scale, lease or purchase, and whether it is a conversion of an existing building or new. We start from organising what can be checked on the property side and the referral targets to an administrative scrivener, architect, labor and social security attorney and tax accountant. If you are at the stage of finding a prep location for a kitchen car, see also [Kitchen-car prep-location property and business-licence requirements](https://luck428.com/en/column/kitchen-car-shikomi-basho-bukken-eigyo-kyoka-youken).
 
 ## Frequently asked questions
 
@@ -117,6 +117,6 @@ The following are public materials that are starting points for confirmation. La
 
 This article is general information and does not guarantee a property's conformity with facility standards or whether a licence is granted. Checking the property's zoning, drainage and building conditions and the brokerage are judged/handled by real estate (us); the licence application (incl. HACCP) and the drainage specified-facility notification by an administrative scrivener; the use change / building confirmation / renovation design by an architect and designated confirmation body; factory labor by a labor and social security attorney; and tax by a tax accountant.
 
-Joji Uramatsu / Representative Director of Yotsuba Real Estate Co., Ltd., licensed real estate transaction specialist. As a licensed real estate transaction specialist in Bunkyo, Tokyo, I undertake surveys and brokerage of residential and commercial real estate. [Author profile](https://luck428.com/about/uramatsu)
+Joji Uramatsu / Representative Director of Yotsuba Real Estate Co., Ltd., licensed real estate transaction specialist. As a licensed real estate transaction specialist in Bunkyo, Tokyo, I undertake surveys and brokerage of residential and commercial real estate. [Author profile](https://luck428.com/en/about/uramatsu)
 
 Updated: 15 November 2026

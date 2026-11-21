@@ -24,7 +24,7 @@ faqHeading: "常見問題"
 | 深夜酒吧（無接待、遊興） | 無 | 無 | 有 | 深夜酒類提供飲食店營業（申報） |
 | 白天咖啡、餐廳 | 無 | 無 | 無 | 餐飲店營業（僅許可） |
 
-「讓客人享受遊興」被解為店方積極娛樂客人之行為（讓不特定客人跳舞、觀賞表演或現場演奏、以卡拉OK裝置讓不特定客人唱歌等）。因屬何類別依店的實態判斷，故在找物件前，先就自己的營業形態向警察署的生活安全課或行政書士確認、確定類別，才是順序。[網咖、個室型店舖物件與消防、本人確認](https://luck428.com/column/net-cafe-kobetsu-shitsu-bukken-shobo-honnin-kakunin)、[電子遊戲場（風營法5號營業）物件與用途地域](https://luck428.com/column/game-center-fuei-5go-bukken-youto-menseki)、[卡拉OK包廂店舖物件與用途地域、消防、噪音](https://luck428.com/column/karaoke-box-tenpo-bukken-youto-shoubou-soon)皆屬不同類別，所需確認亦不同。許可要件與手續本身，於行政書士的[特定遊興飲食店營業許可的要件](https://luck428.com/legal/column/tokutei-yukyo-inshokuten-eigyo-kyoka-youken)中說明。
+「讓客人享受遊興」被解為店方積極娛樂客人之行為（讓不特定客人跳舞、觀賞表演或現場演奏、以卡拉OK裝置讓不特定客人唱歌等）。因屬何類別依店的實態判斷，故在找物件前，先就自己的營業形態向警察署的生活安全課或行政書士確認、確定類別，才是順序。[網咖、個室型店舖物件與消防、本人確認](https://luck428.com/zh-tw/column/net-cafe-kobetsu-shitsu-bukken-shobo-honnin-kakunin)、[電子遊戲場（風營法5號營業）物件與用途地域](https://luck428.com/zh-tw/column/game-center-fuei-5go-bukken-youto-menseki)、[卡拉OK包廂店舖物件與用途地域、消防、噪音](https://luck428.com/zh-tw/column/karaoke-box-tenpo-bukken-youto-shoubou-soon)皆屬不同類別，所需確認亦不同。許可要件與手續本身，於行政書士的[特定遊興飲食店營業許可的要件](https://luck428.com/zh-tw/legal/column/tokutei-yukyo-inshokuten-eigyo-kyoka-youken)中說明。
 
 ## 哪種地域能取得營業許可（用途地域與「營業所設置許容地域」）？
 
@@ -107,7 +107,7 @@ faqHeading: "常見問題"
 
 夜店、Lounge的開業，宜先在不動產面確定物件是否符合許容地域與客室基準，再與各專家並行推進許可、用途變更、稅務，最為捷徑。本公司以一般性資訊協助此分工與物件面確認，但不就許可能否、構造或用途的符合、稅額作最終判斷。
 
-**[夜店、Lounge等特定遊興飲食店物件的諮詢，請洽四葉不動產（諮詢免費）](https://luck428.com/office)**／**[事業用物件的調查、仲介諮詢請點此](https://luck428.com/toushi)**
+**[夜店、Lounge等特定遊興飲食店物件的諮詢，請洽四葉不動產（諮詢免費）](https://luck428.com/zh-tw/contact)**／**[事業用物件的調查、仲介諮詢請點此](https://luck428.com/zh-tw/toushi)**
 
 洽詢時，請填寫預計的業態（有無跳舞、表演、DJ等遊興、有無接待、深夜營業時段）、希望區域、租賃或購買、既有居抜或新開。我們將從物件面可確認之事項的整理，以及向行政書士、建築士、宅地建物取引士、稅理士的轉介整理談起。
 
@@ -137,6 +137,6 @@ A. 否。本公司（不動產）負責的，是初步判斷物件是否落在�
 
 本文為一般性資訊提供，不保證個別物件落在營業所設置許容地域或能取得許可。初步判斷物件是否落在許容地域、確認用途地域與客室大小與仲介由不動產（本公司）負責；特定遊興飲食店與餐飲店營業許可申請由行政書士；用途變更、確認申請、改修設計由建築士、指定確認檢查機關；重要事項說明由宅地建物取引士；稅務由稅理士，各自判斷、負責。
 
-浦松丈二（Uramatsu Joji）／四葉不動產株式會社 代表取締役、宅地建物取引士。身為東京都文京區的宅地建物取引士，承辦住宅與事業用不動產的調查與仲介。[作者簡介](https://luck428.com/about/uramatsu)
+浦松丈二（Uramatsu Joji）／四葉不動產株式會社 代表取締役、宅地建物取引士。身為東京都文京區的宅地建物取引士，承辦住宅與事業用不動產的調查與仲介。[作者簡介](https://luck428.com/zh-tw/about/uramatsu)
 
 更新日：2026年11月16日
