@@ -39,6 +39,30 @@ describe("published column language links", () => {
       expect(getColumnSwitchLocales(path, index, "ja")).toEqual(SUPPORTED_LOCALES);
     },
   );
+  it.each([
+    ["/souzoku/taiwan", "ja"],
+    ["/ja/souzoku/taiwan", "ja"],
+    ["/zh-tw/souzoku/taiwan", "zh-tw"],
+    ["/en/souzoku/taiwan", "en"],
+    ["/zh/souzoku/taiwan", "zh"],
+  ])("offers only real translations of the Taiwan guide from %s", (path, locale) => {
+    state.pathname = path;
+    state.locale = locale;
+    const html = renderToStaticMarkup(createElement(LanguageSwitcher, { columnLocales: {} }));
+    expect(Array.from(html.matchAll(/href="([^"]+)"/g), match => match[1])).toEqual([
+      "/souzoku/taiwan", "/zh-tw/souzoku/taiwan",
+    ]);
+  });
+  it.each(["taiwan-inkan-shomei-isan-bunkatsu", "taiwan-koseki-jokoseki-shutoku"])(
+    "retains all published languages on the separate Taiwan article %s", slug => {
+      state.pathname = `/zh-tw/legal/column/${slug}`;
+      state.locale = "zh-tw";
+      const html = renderToStaticMarkup(createElement(LanguageSwitcher, { columnLocales: { [slug]: [] } }));
+      for (const prefix of ["", "/en", "/zh-tw", "/zh"]) {
+        expect(html).toContain(`href="${prefix}/legal/column/${slug}"`);
+      }
+    },
+  );
   it("does not guess translation URLs for an unknown or newly published article", () => {
     expect(getColumnSwitchLocales("/en/column/new-article", index, "en")).toEqual(["en"]);
     expect(getColumnSwitchLocales("/column/toString", {}, "ja")).toEqual(["ja"]);
