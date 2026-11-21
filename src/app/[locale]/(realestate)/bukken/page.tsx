@@ -1,6 +1,6 @@
 import { RentalCampaignCta } from "@/components/bukken/RentalCampaignCta";
 import { RENTAL_CAMPAIGN_COPY } from "@/lib/rental-campaign";
-import { filterProperties, rentalStations } from "@/lib/property-filters";
+import { filterProperties, rentalStations, stationFilterKey } from "@/lib/property-filters";
 import { listSchools } from "@/lib/school-district";
 // Availability expiry must be evaluated on each request, even if the worker is offline.
 export const dynamic = "force-dynamic";
@@ -137,7 +137,7 @@ export default async function BukkenListPage({ searchParams }: { searchParams?: 
             <label className="text-sm">{labels[2]}<select name="fee" defaultValue={filters.fee} className="mt-1 block w-full rounded border border-border p-2"><option value="">{labels[1]}</option><option value="p033">{RENTAL_CAMPAIGN_COPY[locale].fee}</option><option value="discount">{fee.filter}</option></select></label>
             <label className="text-sm">{labels[3]}<select name="school" defaultValue={filters.school} className="mt-1 block w-full rounded border border-border p-2"><option value="">{labels[1]}</option>{listSchools().map(s => <option key={s.slug} value={s.slug}>{s.formalName}</option>)}</select></label>
             <label className="text-sm">{labels[4]}<select name="layout" defaultValue={filters.layout} className="mt-1 block w-full rounded border border-border p-2"><option value="">{labels[1]}</option>{layouts.map(v => <option key={v}>{v}</option>)}</select></label>
-            <label className="text-sm">{labels[5]}<select name="station" defaultValue={filters.station} className="mt-1 block w-full rounded border border-border p-2"><option value="">{labels[1]}</option>{stations.map(v => <option key={v}>{v}</option>)}</select></label>
+            <label className="text-sm">{labels[5]}<select name="station" defaultValue={stationFilterKey(filters.station)} className="mt-1 block w-full rounded border border-border p-2"><option value="">{labels[1]}</option>{stations.map(v => <option key={v} value={v}>{v}</option>)}</select></label>
             <label className="text-sm">{labels[6]}<select name="pets" defaultValue={filters.pets} className="mt-1 block w-full rounded border border-border p-2"><option value="">{labels[1]}</option><option value="allowed">{labels[7]}</option><option value="multiple">{labels[8]}</option></select></label>
           </div><button type="submit" className="mt-4 min-h-11 rounded-lg bg-primary px-5 py-2 text-sm font-semibold text-white">{labels[9]}</button></fieldset>
         </form>
