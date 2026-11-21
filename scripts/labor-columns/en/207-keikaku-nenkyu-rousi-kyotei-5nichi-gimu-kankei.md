@@ -1,6 +1,6 @@
 ---
 title: Planned grant of annual paid leave — how to make the labour-management agreement and its link to the 5-day duty
-excerpt: Planned grant of annual paid leave lets the employer decide in advance, by a labour-management agreement, when leave is taken (Labour Standards Act Article 39(6)). Only the part exceeding 5 days of each person's leave can be planned; 5 days must remain for the worker to choose. Days given by planned grant count toward the employer's 5-day designation duty (Article 39(7)). The agreement need not be filed with the Labour Standards Inspection Office, but a work-rules provision is the premise. The agreement and work rules belong to a Shakai Hoken Roumushi, and negotiation or litigation over unused leave or disadvantageous treatment to an attorney, each contracted separately as an independent business entity.
+excerpt: In Japan, a workplace agreement can schedule only the portion of paid leave above five days, including unused leave carried over. Carryover does not count toward the separate ten-day entitlement threshold for the employer’s duty to ensure five days are taken. Half-days and hourly leave are treated differently.
 category: Working hours
 faqHeading: Frequently asked questions
 keywords: planned grant annual paid leave | labour-management agreement Article 39(6) | 5-day designation duty Article 39(7) | part exceeding 5 days | planned leave counts toward 5-day duty | no filing with inspection office
@@ -9,7 +9,7 @@ tags: Annual paid leave | Planned grant | Labour-management agreement | 5-day du
 
 **Bottom line first**: Planned grant of annual paid leave lets the employer decide in advance, by a labour-management agreement, when leave is taken (Labour Standards Act Article 39(6)). Only the part exceeding 5 days of each person's leave can be planned; 5 days must remain for the worker to choose freely. Days given by planned grant count toward the employer's 5-day designation duty (Article 39(7)). The agreement need not be filed with the Labour Standards Inspection Office, but a provision in the work rules is the premise. The agreement and work rules belong to a Shakai Hoken Roumushi, and negotiation or litigation over unused leave or disadvantageous treatment to an attorney, each contracted separately as an independent business entity.
 
-This page focuses on the labour-design side a Shakai Hoken Roumushi handles: the mechanism of planned grant and how it links to the 5-day acquisition duty. It is aimed at SME owners and labour staff who want to raise the take-up of paid leave.
+During a planned summer shutdown, some employees may have sufficient leave for an agreed allocation and others may not. This guide explains what an agreement can cover and how the leave counts toward the five-day obligation.
 
 ## What is planned grant, and how does it differ from ordinary paid leave?
 
@@ -34,7 +34,7 @@ Planned grant can cover the "part exceeding 5 days" of each worker's held paid l
 | 15 days | 10 days | 5 days |
 | 20 days | 15 days | 5 days |
 
-The "5 days" here is counted against the total leave the worker can actually take, including days carried over from the previous year. Where there is a carry-over, the part exceeding 5 days including the carry-over may be subject to planned grant (**unverified**; the concrete application of the carry-over turns on held days and take-up, so we do not conclude on the individual case). A work-rules provision for planned grant is usual; the duty to prepare work rules is in [From how many employees are work rules mandatory](/en/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo).
+For planned leave, include unused, unexpired days carried forward. For example, three carried-over days plus seven newly granted days, all unused, allow up to five days to be scheduled in advance. Do not use that combined balance for the separate ten-day test for compulsory annual take-up. See [From how many employees are work rules mandatory](/en/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo).
 
 ## What must the labour-management agreement set out?
 
@@ -52,7 +52,7 @@ The above is the general view in the Ministry's "Planned grant system for annual
 
 ## Does planned grant count toward the 5-day acquisition duty?
 
-It does. The employer has a duty, for a worker given 10 or more days of paid leave, to have 5 days taken by designating the date within a year of the base date (Labour Standards Act Article 39(7)). Article 39(8) provides that days the worker designated and took, and days given by planned grant (Article 39(6)), are deducted from those 5 days.
+It does. The employer has a duty, for a worker given 10 or more days of paid leave, to have 5 days taken by designating the date within a year of the base date (Labour Standards Act Article 39(7)). Article 39(8) provides that days the worker designated and took, and days given by planned grant (Article 39(6)), are deducted from those 5 days. The ten-day threshold uses the statutory entitlement newly granted on the reference date, not the balance including carry-over. Whole days and half days actually taken count; hourly leave does not count toward the five days.
 
 | What can be credited to the 5-day duty | Basis |
 |---|---|
@@ -114,6 +114,8 @@ A. Yes. The employer's 5-day designation duty (Labour Standards Act Article 39(7
 A. Preparing the planned-grant agreement and work rules, designing the credit against the 5-day duty, and responses for workers with little leave are the labour area of a Shakai Hoken Roumushi. Negotiation and litigation when unused leave or disadvantageous treatment becomes a labour dispute are the area of an attorney. 四葉社会保険労務士事務所 accepts labour work as an independent business entity, and where another professional is needed, we introduce them under a contract you conclude directly, separately.
 
 ## Basis for this article
+
+- Official sources checked on 18 November 2026: [MHLW: carry-over, planned leave and the five-day rule](https://www.mhlw.go.jp/stf/web_magazine/closeup/51.html) / [MHLW: who is subject to the five-day rule (Part 3, Q2)](https://www.mhlw.go.jp/content/000611834.pdf)
 
 - Labour Standards Act (Act No. 49 of 1947) Article 39(5) — the employer must grant annual paid leave on a date the worker requests, and may move it to another date where granting on the requested date would hinder normal business operation (right to designate / change the date)
 - Labour Standards Act Article 39(6) — where, by a written agreement with the majority union (or, if none, a representative of the majority of workers), a provision is made on the date to grant paid leave, the part exceeding 5 days of the paid-leave days may be granted by that provision (planned grant)

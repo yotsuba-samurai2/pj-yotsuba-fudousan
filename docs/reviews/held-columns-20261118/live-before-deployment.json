@@ -1,0 +1,9 @@
+{
+  "checkedUtc": "2026-11-18T15:26:50.248114+00:00",
+  "method": "GET; up to 120 kB on success; 10s timeout, concurrency 3",
+  "scope": "32 held article URLs, ja/en/zh-tw/zh, before merge",
+  "http": {
+    "404": 128
+  },
+  "isApproval": false
+}

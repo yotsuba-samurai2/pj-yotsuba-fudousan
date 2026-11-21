@@ -1,6 +1,6 @@
 ---
 title: 50% premium for overtime beyond 60 hours a month — how an SME builds a substitute-leave system
-excerpt: The part of monthly overtime exceeding 60 hours must be paid a premium of 50% or more of the ordinary wage (Labour Standards Act Article 37(1) proviso). This rise was once deferred for SMEs, but has applied to SMEs too since 1 April 2023. A "substitute leave" system can replace the extra premium with paid leave: by a labour-management agreement, the time matching the raised portion (the gap between 50% and 25%) of the over-60-hours part can be swapped for leave (Article 37(3)). Substitute leave is given in units of one day or half a day, within two months from the day after the month-end in which 60 hours were exceeded (Enforcement Regulations Article 19-2). Wage rules and the agreement belong to a Shakai Hoken Roumushi, and claims or disputes over unpaid premium wages to an attorney, each contracted separately as an independent business entity.
+excerpt: In Japan, statutory overtime over 60 hours in a month attracts a premium of at least 50%, including at small and medium-sized employers. Paid substitute leave can replace only the increase in the premium. The agreement must cover three matters, and wage payment depends on whether the worker chooses and actually takes the leave.
 category: Working hours
 faqHeading: Frequently asked questions
 keywords: overtime beyond 60 hours 50% premium | SME application 1 April 2023 | substitute leave Article 37(3) | conversion rate day or half day | within two months | unpaid premium wages
@@ -9,7 +9,7 @@ tags: Premium wages | 60 hours a month | Substitute leave | Labour-management ag
 
 **Bottom line first**: The part of monthly overtime exceeding 60 hours must be paid a premium of 50% or more of the ordinary wage (Labour Standards Act Article 37(1) proviso). This rise was once deferred for SMEs, but has applied to SMEs too since 1 April 2023. A "substitute leave" system can replace the extra premium with paid leave: by a labour-management agreement, the time matching the raised portion (the gap between 50% and 25%) of the over-60-hours part can be swapped for leave (Article 37(3)). Substitute leave is given in units of one day or half a day, within two months from the day after the month-end in which 60 hours were exceeded (Enforcement Regulations Article 19-2). Wage rules and the agreement belong to a Shakai Hoken Roumushi, and claims or disputes over unpaid premium wages to an attorney, each contracted separately as an independent business entity.
 
-This page focuses on the wage and labour-management-agreement design a Shakai Hoken Roumushi handles: the premium rate for over-60-hours monthly overtime and substitute leave. It is aimed at SME owners and labour staff with heavy overtime.
+When overtime crosses 60 hours, distinguish statutory overtime from statutory holiday work, track night hours, and establish whether the worker wishes to take substitute leave. This guide focuses on payroll and agreements for smaller businesses.
 
 ## When did the 50% premium for over-60-hours overtime apply to SMEs?
 
@@ -48,7 +48,7 @@ Substitute leave is a system that, for over-60-hours monthly overtime, gives pai
 | Period to give it | Within two months from the day after the month-end in which 60 hours were exceeded (same regulation) |
 | Taking is voluntary | Whether to take substitute leave is the worker's choice. If not taken, the raised-portion premium is paid |
 
-For example, at a workplace setting the rate at 50% and the take-substitute rate at 25%, if a month has 20 hours of over-60-hours overtime, the substitute-leave hours are 20 × (0.5 − 0.25) = 5 hours. Annual paid leave is excluded from this substitute leave (Labour Standards Act Article 37(3)) and is treated as a separate thing. The idea of leave units is also in [Introducing hourly paid leave and the labour-management agreement](/en/labor/column/jikantan-nenkyu-dounyu-roushi-kyotei-shugyokisoku).
+For example, at a workplace setting the rate at 50% and the take-substitute rate at 25%, if a month has 20 hours of over-60-hours overtime, the substitute-leave hours are 20 × (0.5 − 0.25) = 5 hours. Annual paid leave is excluded from this substitute leave (Labour Standards Act Article 37(3)) and is treated as a separate thing. The idea of leave units is also in [Introducing hourly paid leave and the labour-management agreement](/en/labor/column/jikantan-nenkyu-dounyu-roushi-kyotei-shugyokisoku). Five hours is the calculated equivalent, not an entitlement to take five arbitrary hours off. Any balance that is not actually and validly taken in the agreed day or half-day units must be paid at the applicable increased rate.
 
 ## What must the substitute-leave labour-management agreement set out?
 
@@ -59,9 +59,9 @@ To introduce substitute leave you need a written labour-management agreement wit
 | How to calculate substitute-leave hours | Multiply the over-60-hours time by the conversion rate (rate otherwise payable − rate when taken) |
 | Unit of substitute leave | One day or half a day |
 | Period in which it can be given | Within two months from the day after the month-end in which 60 hours were exceeded |
-| Payday for the premium | The wage-calculation period and payday for the raised portion if substitute leave is not taken |
+| Additional practical terms | How the worker’s choice is recorded and the premium pay date in each case |
 
-These are the items set in Labour Standards Act Enforcement Regulations Article 19-2. Unlike a 36 Agreement, the substitute-leave agreement need not be filed with the Labour Standards Inspection Office, but it is usual to place a basis provision in the work rules too. The duty to prepare work rules is in [From how many employees are work rules mandatory](/en/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo).
+Article 19-2(1) of the Enforcement Regulations requires the agreement to specify three things: calculation, the unit of leave and the period for granting it. Payday is a separate operational matter. If the worker declines or their intentions cannot be confirmed, the full premium is due on the original payday. If they intended to take leave but do not, pay the balance on the payday for the period when that becomes certain. The agreement itself need not be filed with the inspection office. See [From how many employees are work rules mandatory](/en/labor/column/shugyokisoku-10nin-gimu-nani-ga-hitsuyo).
 
 ## Where should you fix the work rules and wage rules?
 
@@ -116,6 +116,8 @@ A. It becomes 75% or more — the 50% for over-60-hours plus the 25% for late-ni
 A. Preparing the wage rules, agreement and work rules for the over-60-hours premium and substitute leave, and designing payroll that reflects each premium overlap, are the labour area of a Shakai Hoken Roumushi. Claims, disputes and litigation over unpaid premium wages are the area of an attorney. 四葉社会保険労務士事務所 accepts labour work as an independent business entity, and where another professional is needed, we introduce them under a contract you conclude directly, separately.
 
 ## Basis for this article
+
+- Official sources checked on 18 November 2026: [MHLW: compensatory leave agreements, worker choice and pay dates](https://www.mhlw.go.jp/content/11200000/tp1216-1j.pdf) / [MHLW: Regulations for Enforcement of the Labour Standards Act, Article 19-2](https://www.mhlw.go.jp/web/t_doc?dataId=73023000&dataType=0&pageNo=1)
 
 - Labour Standards Act (Act No. 49 of 1947) Article 37(1) — a premium of 25% or more (35% or more for holidays) is paid for overtime and holiday work; by the proviso, overtime exceeding 60 hours in a month must be paid a premium calculated at 50% or more
 - Labour Standards Act Article 37(3) — where, by a written agreement with the majority union (or, if none, a representative of the majority of workers), it is provided to give leave for which the ordinary wage is paid (excluding annual paid leave under Article 39) to a worker made to work beyond the time in the Article 37(1) proviso, and the worker takes that leave, the premium under the proviso need not be paid for the hours set by Ordinance (substitute leave)
