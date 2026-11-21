@@ -1,0 +1,230 @@
+{
+  "pass": true,
+  "findings": [],
+  "articles": [
+    {
+      "key": "realestate:data-center-server-room-bukken-youto-juden-shobo",
+      "fingerprint": "7151893bf43227367774f07d1c9db6297871651f8670a816c4a929eac9f7325f",
+      "requiresQualifiedReview": false,
+      "checks": {
+        "primarySources": "pass",
+        "duplicateIntent": "pass",
+        "legalClaims": "pass",
+        "translationAlignment": "pass"
+      },
+      "sources": [
+        {
+          "url": "https://www.shugiin.go.jp/Internet/itdb_shitsumon.nsf/html/shitsumon/b222001.htm",
+          "checkedAt": "2026-11-22",
+          "relevantClaim": "衆議院掲載の2026-10-16政府答弁「一」「二の２」：全国共通の事務所認定ではなく、実際の使われ方に応じ建築主事等・指定確認検査機関が判断。事務所・倉庫の例。",
+          "verified": true
+        },
+        {
+          "url": "https://laws.e-gov.go.jp/api/2/law_data/325AC0000000201?asof=2026-11-22&response_format=json",
+          "checkedAt": "2026-11-22",
+          "relevantClaim": "建築基準法第6条第1項第1号、第48条、第87条第1項：用途地域制限、列挙特殊用途への変更、200㎡「超」と類似用途の例外。",
+          "verified": true
+        },
+        {
+          "url": "https://laws.e-gov.go.jp/api/2/law_data/325CO0000000338?asof=2026-11-22&response_format=json",
+          "checkedAt": "2026-11-22",
+          "relevantClaim": "建築基準法施行令第85条第1項：積載荷重は実況に応じた計算を原則とし、表に掲げる室にただし書きがある。個別ラックの耐力を保証しない。",
+          "verified": true
+        },
+        {
+          "url": "https://laws.e-gov.go.jp/api/2/law_data/409M50000400052?asof=2026-11-22&response_format=json",
+          "checkedAt": "2026-11-22",
+          "relevantClaim": "電気設備に関する技術基準を定める省令第2条第1項第3号：特別高圧は7,000Vを超える電圧で、設備容量の基準ではない。",
+          "verified": true
+        },
+        {
+          "url": "https://www5.cao.go.jp/keizai1/jissen-cu/gaiyousyotouann-3.pdf",
+          "checkedAt": "2026-11-22",
+          "relevantClaim": "内閣府掲載の設備仕様検討書案（参考例）設61：電源に余裕を持たせ、変圧器等の定格容量などを確認。個々のビルの容量を保証する規格ではない。",
+          "verified": true
+        },
+        {
+          "url": "https://laws.e-gov.go.jp/api/2/law_data/336CO0000000037?asof=2026-11-22&response_format=json",
+          "checkedAt": "2026-11-22",
+          "relevantClaim": "消防法施行令第13条の表：通信機器室500㎡以上、対象の電気設備が設置される部分200㎡以上、いずれも不活性ガス・ハロゲン化物・粉末の三選択肢。",
+          "verified": true
+        },
+        {
+          "url": "https://www8.cao.go.jp/kisei-kaikaku/kisei/meeting/wg/2501_06ai/260515/ai10_0105.pdf",
+          "checkedAt": "2026-11-22",
+          "relevantClaim": "総務省消防庁資料p4：通信機器室の意味、面積の基準、配電盤・分電盤等の対象外の具体例。",
+          "verified": true
+        },
+        {
+          "url": "https://www.meti.go.jp/shingikai/sankoshin/hoan_shohi/denryoku_anzen/hoan_seido/pdf/016_01_02.pdf",
+          "checkedAt": "2026-11-22",
+          "relevantClaim": "経済産業省資料p19：電気工事業を営む事業者の対象業務等に応じ、登録・通知などの区分がある。借主の物件選びの手続と別である。",
+          "verified": true
+        },
+        {
+          "url": "https://www.pref.saitama.lg.jp/documents/182701/toriatsukai230907.pdf",
+          "checkedAt": "2026-11-22",
+          "relevantClaim": "埼玉県の取扱集第6版pp.4–5、表④：県所管の例では既存物販150㎡に事務所から変更する150㎡を合わせて200㎡超でも、用途変更確認の対象とはしていない。掲載例を他の所管の結論にはしていない。",
+          "verified": true
+        }
+      ],
+      "blockingFindings": []
+    },
+    {
+      "key": "realestate:souzoku-nochi-tsuki-akiya-kagen-menseki-haishi-2023-baikyaku",
+      "fingerprint": "5c0b4cb5b469a95f7c8127b72c4637bc19941cc58c3a33d605bc7c33a453510c",
+      "requiresQualifiedReview": false,
+      "checks": {
+        "primarySources": "pass",
+        "duplicateIntent": "pass",
+        "legalClaims": "pass",
+        "translationAlignment": "pass"
+      },
+      "sources": [
+        {
+          "url": "https://laws.e-gov.go.jp/api/2/law_data/327AC0000000229?asof=2026-11-22&response_format=json",
+          "checkedAt": "2026-11-22",
+          "relevantClaim": "農地法第2条、第3条第1項・第2項第1・4・6号、第3条の3第1項、第4条第1項本文/第7号、第5条第1項本文/第6号：農地の定義、権利移動の原則、相続後の届出、転用の許可と市街化区域内の事前届出の区別。",
+          "verified": true
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_housei.nsf/html/housei/20820220527056.htm",
+          "checkedAt": "2026-11-22",
+          "relevantClaim": "令和4年法律第56号第5条：農地法旧第3条第2項第5号を削除し、旧第6号・第7号を繰上げ。",
+          "verified": true
+        },
+        {
+          "url": "https://www.maff.go.jp/j/keiei/koukai/attach/pdf/chiiki_keikaku-32.pdf",
+          "checkedAt": "2026-11-22",
+          "relevantClaim": "農林水産事務次官通知（2023-03-31）pp.1–2：2023-04-01施行で旧最低面積要件を廃止。効率利用・常時従事・周辺農地との調和等の要件は存置。",
+          "verified": true
+        },
+        {
+          "url": "https://www.maff.go.jp/j/keiei/koukai/nouchi_souzoku.html",
+          "checkedAt": "2026-11-22",
+          "relevantClaim": "農林水産省・農地相続ポータル第1、2、3、4節：相続の届出と登記は別で、貸付・売買や転用には別の手続がある。",
+          "verified": true
+        },
+        {
+          "url": "https://www.mlit.go.jp/totikensangyo/content/001765865.pdf",
+          "checkedAt": "2026-11-22",
+          "relevantClaim": "国土交通省「農地付き空き家」の手引き（2024-10改訂）印刷p26：住宅敷地に付属しごく小面積で独立取引の対象と認められない栽培区画と独立農地を区別。その該当性は農業委員会が判断。",
+          "verified": true
+        },
+        {
+          "url": "https://laws.e-gov.go.jp/api/2/law_data/416AC0000000123?asof=2026-11-22&response_format=json",
+          "checkedAt": "2026-11-22",
+          "relevantClaim": "不動産登記法第76条の2第1項：自己のための相続開始及び当該所有権の取得を知った日から原則3年。",
+          "verified": true
+        },
+        {
+          "url": "https://houmukyoku.moj.go.jp/niigata/content/001458078.pdf",
+          "checkedAt": "2026-11-22",
+          "relevantClaim": "新潟地方法務局の制度説明、相続登記の申請義務化（2024-04-01施行）と、施行前から知っていた未登記相続は原則2027-03-31、施行後認識なら知った日から原則3年。",
+          "verified": true
+        }
+      ],
+      "blockingFindings": []
+    },
+    {
+      "key": "legal:tokutei-jido-unko-level4-kyoka-doukouhou-2023-shinsei",
+      "fingerprint": "2a509b3a42587e2f2979a4932458d8860006fca3d21bafa3130b6a9c35b05640",
+      "requiresQualifiedReview": false,
+      "checks": {
+        "primarySources": "pass",
+        "duplicateIntent": "pass",
+        "legalClaims": "pass",
+        "translationAlignment": "pass"
+      },
+      "sources": [
+        {
+          "url": "https://laws.e-gov.go.jp/api/2/law_data/335AC0000000105_20260721_508AC0000000052?asof=2026-11-22&response_format=json",
+          "checkedAt": "2026-11-22",
+          "relevantClaim": "道路交通法第2条第1項第17号の2、第4章の3、第75条の12–14、第75条の19–20、第77条第1項：無人の座席だけで決まらない定義、各委員会の経路別許可、基準5項目・聴取意見の分担、遠隔の現場措置役、道路使用許可との区別。",
+          "verified": true
+        },
+        {
+          "url": "https://www.npa.go.jp/hakusyo/r08/honbun/html/cc5545000.html",
+          "checkedAt": "2026-11-22",
+          "relevantClaim": "警察庁令和8年警察白書第5章第5項：令和4年改正道路交通法による制度開始は2023年4月1日。監視場所又は車内に主任者を置く。",
+          "verified": true
+        },
+        {
+          "url": "https://www.npa.go.jp/laws/notification/koutuu/tokuteijidounkokaisyakuunyo.pdf",
+          "checkedAt": "2026-11-22",
+          "relevantClaim": "警察庁交通局「解釈及び運用上の留意事項」：人が道路・交通等の状況に応じて運転操作することと、遠隔から監視することとは異なる。",
+          "verified": true
+        },
+        {
+          "url": "https://www.npa.go.jp/bureau/traffic/selfdriving/kouki29269325-2.pdf",
+          "checkedAt": "2026-11-22",
+          "relevantClaim": "警察庁交通局2026年3月記載要領：路線がまたぐ各都道府県の公安委員会への申請、条件・人員・事故対応の記載、現地利便・福祉の資料。",
+          "verified": true
+        },
+        {
+          "url": "https://www.keishicho.metro.tokyo.lg.jp/tetsuzuki/kotsu/application/tokutei_jidou.html",
+          "checkedAt": "2026-11-22",
+          "relevantClaim": "警視庁の申請手続、複数管轄の説明と「手数料」欄：東京の新規79,200円、計画変更許可78,500円。事前相談の案内。",
+          "verified": true
+        },
+        {
+          "url": "https://www.mlit.go.jp/jidosha/jidosha_tk7_000043.html",
+          "checkedAt": "2026-11-22",
+          "relevantClaim": "国土交通省の公道走行手引き入口：車両側の道路運送車両法の審査と運行側の道路交通法上の申請の双方を案内。",
+          "verified": true
+        }
+      ],
+      "blockingFindings": []
+    },
+    {
+      "key": "legal:zairyu-shikaku-nintei-shomeisho-fukoufu-saishinsei-chuka-taiwan",
+      "fingerprint": "af661624ed0dfdbd8d9f3f63a7f6aa4e48f61bc76b699e07fe803815ef87b783",
+      "requiresQualifiedReview": false,
+      "checks": {
+        "primarySources": "pass",
+        "duplicateIntent": "pass",
+        "legalClaims": "pass",
+        "translationAlignment": "pass"
+      },
+      "sources": [
+        {
+          "url": "https://laws.e-gov.go.jp/api/2/law_data/326CO0000000319_20261001_508AC0000000032?asof=2026-11-22&response_format=json",
+          "checkedAt": "2026-11-22",
+          "relevantClaim": "入管法第7条第1項第2号及び第7条の2第1項、第2項：COEが証明する上陸条件、申請代理人。COEは査証・上陸許可そのものではない。",
+          "verified": true
+        },
+        {
+          "url": "https://laws.e-gov.go.jp/api/2/law_data/356M50000010054_20261001_508M60000010047?asof=2026-11-22&response_format=json",
+          "checkedAt": "2026-11-22",
+          "relevantClaim": "入管法施行規則第6条の2第2–5項、第66条：資格ごとの資料と代理人、届出済み士業による提出との区別、不適合が明白な場合のただし書、外国語提出資料への訳文添付。",
+          "verified": true
+        },
+        {
+          "url": "https://laws.e-gov.go.jp/api/2/law_data/426AC0000000068_20260624_508AC0000000046?asof=2026-11-22&response_format=json",
+          "checkedAt": "2026-11-22",
+          "relevantClaim": "行政不服審査法第7条第1項第10号：外国人の出入国等に関する処分の同法上の審査請求の適用除外。裁判による救済可否の根拠にはしていない。",
+          "verified": true
+        },
+        {
+          "url": "https://www.courts.go.jp/assets/hanrei/hanrei-pdf-84753.pdf",
+          "checkedAt": "2026-11-22",
+          "relevantClaim": "裁判所公表の東京地裁2014-07-10・平成25年（行ウ）第235号、主文1・2及び請求：義務付け部分を却下、不交付取消請求を棄却。再申請と訴訟は異なり、個別の勝敗は推論しない。",
+          "verified": true
+        },
+        {
+          "url": "https://www8.cao.go.jp/kisei-kaikaku/suishin/meeting/committee/20180525/180525honkaigi05.pdf",
+          "checkedAt": "2026-11-22",
+          "relevantClaim": "内閣府の規制改革会議資料、2018年法務省回答・別添p6：原則は審査官署で説明し、全出張所が対応できるわけではない。今の全国共通の回数・予約方法を示す根拠にはしていない。",
+          "verified": true
+        },
+        {
+          "url": "https://www.mofa.go.jp/mofaj/toko/visa/faq.html",
+          "checkedAt": "2026-11-22",
+          "relevantClaim": "外務省「よくある質問」3-Q2/3：COEは査証を保証せず、原則6か月とは査証拒否後の同一目的の査証再申請の取扱い。COEの再申請に当然には適用されない。",
+          "verified": true
+        }
+      ],
+      "blockingFindings": []
+    }
+  ]
+}
