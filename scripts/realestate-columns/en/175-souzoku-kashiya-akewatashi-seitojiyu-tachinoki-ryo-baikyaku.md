@@ -103,7 +103,7 @@ A. Yes. It is a sale by "owner change (with-tenant)," selling together with the 
 **Q. Can I ask a real-estate company to also negotiate the eviction with the tenant?**
 A. No. A phase where eviction negotiation with the tenant reaches conflict is a lawyer's field, and under Article 72 of the Lawyers Act (prohibition of unauthorised legal practice) we do not act as agent in negotiation for remuneration. What we handle is organising the exit of selling vacated or with the tenant, brokerage and building the sale schedule. Eviction money and capital-gains tax go to a tax accountant, inheritance registration to a judicial scrivener, and negotiation and legal judgment to a lawyer, in a form where each is an independent business contracted with separately, with us connecting you (no referral fees are exchanged).
 
-## この記事の出典（一次情報）
+## Sources (Primary Information)
 
 The following are published materials that are the starting point for confirmation. Laws are amended, so confirm the article, paragraph, item, enforcement date and latest revision with e-Gov Law Search. The amount of eviction money and the judgment of just cause change with individual circumstances and case law, so confirm a specific outlook with a lawyer, taxation with a tax accountant, and registration with a judicial scrivener, each noting the reference date. The final judgment on whether surrender is possible, the amount of eviction money, the tax and the registration in an individual case is the field of a lawyer, a tax accountant and a judicial scrivener, and the court and the tax office. The reference date for the public materials is all 14 November 2026.
 
