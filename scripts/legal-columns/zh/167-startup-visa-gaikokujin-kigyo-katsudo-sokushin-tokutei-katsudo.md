@@ -7,7 +7,7 @@ category: "许可与开业手续（行政书士实务）"
 
 ## 创业签证与经营・管理签证有何不同？
 
-在留资格「经营・管理」是在日本从事事业经营・管理的正式在留资格。其基准已因令和7年（2025年）10月16日施行的上陆基准省令修正而提高，要求资本金・出资总额3,000万日元以上、雇用常勤职员1人以上等（修正的全貌整理于[日本出入国在留管理厅的修订概要（日文 PDF）](https://www.moj.go.jp/isa/content/001448070.pdf)，新设立流程整理于[中国、台湾的创业者如何取得「经营・管理」在留资格](https://luck428.com/zh/legal/column/keieikanri-zairyu-chuka-kigyousha-kaisha-setsuritsu)）。
+在留资格「经营・管理」是在日本从事事业经营・管理的正式在留资格。其基准已因令和7年（2025年）10月16日施行的上陆基准省令修正而提高，要求资本金等达到3,000万日元以上、雇用至少1名符合资格的全职员工等（主要修订内容见[香川县的制度说明第4节第1项（日文）](https://www.pref.kagawa.lg.jp/rosei/koyo/taisaku/gaikokujin/gaikokujin_seido.html)，新设立流程整理于[中国、台湾的创业者如何取得「经营・管理」在留资格](https://luck428.com/zh/legal/column/keieikanri-zairyu-chuka-kigyousha-kaisha-setsuritsu)）。
 
 如需咨询在留资格申请材料，请参阅[四葉行政書士事務所的在留资格服务](https://luck428.com/zh/legal/services/visa)。
 

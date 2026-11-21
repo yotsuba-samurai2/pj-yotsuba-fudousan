@@ -7,7 +7,7 @@ category: "許可與開業手續（行政書士實務）"
 
 ## 創業簽證與經營・管理簽證有何不同？
 
-在留資格「經營・管理」是在日本從事事業經營・管理的正式在留資格。其基準已因令和7年（2025年）10月16日施行的上陸基準省令修正而提高，要求資本金・出資總額3,000萬日圓以上、僱用常勤職員1人以上等（修正的全貌整理於[日本出入國在留管理廳的修正概要（日文 PDF）](https://www.moj.go.jp/isa/content/001448070.pdf)，新設立流程整理於[中國、台灣的創業者如何取得「經營・管理」在留資格](https://luck428.com/zh-tw/legal/column/keieikanri-zairyu-chuka-kigyousha-kaisha-setsuritsu)）。
+在留資格「經營・管理」是在日本從事事業經營・管理的正式在留資格。其基準已因令和7年（2025年）10月16日施行的上陸基準省令修正而提高，要求資本金等達3,000萬日圓以上、僱用至少1名符合資格的全職員工等（主要修正內容見[香川縣的制度說明第4節第1項（日文）](https://www.pref.kagawa.lg.jp/rosei/koyo/taisaku/gaikokujin/gaikokujin_seido.html)，新設立流程整理於[中國、台灣的創業者如何取得「經營・管理」在留資格](https://luck428.com/zh-tw/legal/column/keieikanri-zairyu-chuka-kigyousha-kaisha-setsuritsu)）。
 
 如需諮詢在留資格申請文件，請參閱[四葉行政書士事務所的在留資格服務](https://luck428.com/zh-tw/legal/services/visa)。
 
