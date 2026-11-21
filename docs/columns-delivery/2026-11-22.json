@@ -1,0 +1,121 @@
+{
+  "todayJst": "2026-11-22",
+  "runUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/44938212138",
+  "generationStatus": "validated",
+  "generatedCount": 6,
+  "reviewResult": "success",
+  "reviewReportAvailable": true,
+  "reviewPass": true,
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "minor": 2
+  },
+  "reviewFindings": [
+    {
+      "file": "scripts/legal-columns/184-zairyu-shikaku-nintei-shomeisho-fukoufu-saishinsei-chuka-taiwan.md",
+      "severity": "minor",
+      "issue": "中心的な出典である出入国在留管理庁の交付申請案内（moj.go.jp/isa/applications/procedures/16-1.html）がHTTP 403で一次ページを直読できず、「不服申立方法：なし」は二次的な検索断片でのみ裏取り。記事の論旨（再申請中心・争訟は弁護士）はこの記述に依存する。",
+      "fix": "資格者が moj.go.jp の交付申請案内表の『不服申立方法』欄を直接確認し、『なし』の記載を裏取りする。記事本文は争訟可否を弁護士に留保しており断定はしていないため、文面修正は不要（ファイル変更は本審査の対象外）。"
+    },
+    {
+      "file": "scripts/realestate-columns/188-souzoku-nochi-tsuki-akiya-kagen-menseki-haishi-2023-baikyaku.md",
+      "severity": "minor",
+      "issue": "表の『根拠』行が「令和4年法律第56号第5号の削除」と表記され、本文（令和4年法律第56号『第5条』による農地法改正＝農地法第3条第2項第5号の削除）と号/条の表記が不整合。事実関係（下限面積要件廃止・2023年4月1日施行）は正しい。",
+      "fix": "表記を本文に揃え『令和4年法律第56号第5条による農地法第3条第2項第5号の削除』とする（軽微・本審査ではファイル変更しない）。"
+    }
+  ],
+  "registeredCount": 2,
+  "qualityEligibleCount": 2,
+  "heldCount": 4,
+  "scheduledCount": 0,
+  "unverifiedSourceCount": 2,
+  "publishedCount": null,
+  "articles": [
+    {
+      "key": "realestate:data-center-server-room-bukken-youto-juden-shobo",
+      "fingerprint": "b4cbd9cc0459c64ae4ac43fdfdedb9c68f9c12bf6d2cd1114e4112adfe062af8",
+      "title": "データセンター・サーバー室に使える物件はどう見極める？用途地域・受電容量・消防の三点",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録です",
+        "確認済みの公的な一次根拠が不足しています"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "realestate:souzoku-nochi-tsuki-akiya-kagen-menseki-haishi-2023-baikyaku",
+      "fingerprint": "60ff31218d3c604327c49f4579dab54b13d491a1df089976973c0987c02f7a6a",
+      "title": "相続した「農地付き空き家」は売れる？下限面積要件が廃止された2023年以降の実務",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録です",
+        "確認済みの公的な一次根拠が不足しています"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:tokutei-jido-unko-level4-kyoka-doukouhou-2023-shinsei",
+      "fingerprint": "277af498d37c90bad7fd17a382a7420e67752d3aaffc88a36bb9dc66cf7222c6",
+      "title": "レベル4の自動運転（特定自動運行）を始めるには？2023年施行の許可申請の流れ",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録です",
+        "確認済みの公的な一次根拠が不足しています"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:zairyu-shikaku-nintei-shomeisho-fukoufu-saishinsei-chuka-taiwan",
+      "fingerprint": "33a7c7f7f3605d2084aa0c15e8cf1572b6efe2f4c3eed926ebf42839c9efcc98",
+      "title": "在留資格認定証明書が不交付になったら？理由の確認と再申請の実務（中国語実務者向け）",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録です",
+        "記事別の一次根拠・重複・法的事項・翻訳整合が未完了"
+      ],
+      "sourceFailures": [
+        {
+          "url": "https://www.moj.go.jp/isa/applications/procedures/16-1.html",
+          "checkedAt": "2026-11-21",
+          "relevantClaim": "在留資格認定証明書交付申請の根拠＝入管法第7条の2、手数料不要、オンライン申請可、標準処理1〜3か月、『不服申立方法：なし』。手数料無料・オンライン可は検索で確認したが、ページ自体がHTTP 403で直読不可。『不服申立方法：なし』は一次ページ直読での確認ができていない。",
+          "verified": false
+        },
+        {
+          "url": "https://www.investtokyo.metro.tokyo.lg.jp/jp/about/data-conference/012_006.pdf",
+          "checkedAt": "2026-11-21",
+          "relevantClaim": "在留資格認定証明書交付申請の標準処理期間は1か月〜3か月（東京都資料での言及。出入国在留管理庁の公式表そのものは未直読）。",
+          "verified": false
+        }
+      ],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:ikuji-kaigo-juunan-na-hatarakikata-sochi-gimu-2025-10",
+      "fingerprint": "ce6fc26d48cb4067297e6ed79f3c0c1e08ec73aba9536ef01ca5b3e5f234981d",
+      "title": "「柔軟な働き方を実現するための措置」とは。2025年10月施行の選択的措置義務で何をするのか",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:dansei-ikukyu-shutoku-jokyo-kouhyo-gimu-300nin-2025-04",
+      "fingerprint": "38a6a753d9c8dd382073c3c83c3d2e16225dd87effc8115adcaede2df6545a40",
+      "title": "男性の育児休業取得率の公表義務はどこから。2025年4月に常時300人超へ拡大",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    }
+  ]
+}

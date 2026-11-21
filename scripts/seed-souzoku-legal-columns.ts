@@ -82,6 +82,20 @@ const AUTHOR = {
 
 /** 各記事が評価を集約すべきハブ（本文に必須の内部リンク）。verify() で機械検査する */
 const REQUIRED_HUB_LINKS: Record<string, string[]> = {
+  "tokutei-jido-unko-level4-kyoka-doukouhou-2023-shinsei": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/jikayousha-katsuyo-jigyo-rideshare-kyoka",
+    "/legal/column/unten-daiko-nintei-eigyosho-zuihan-jidosha-yoken",
+  ],
+  "zairyu-shikaku-nintei-shomeisho-fukoufu-saishinsei-chuka-taiwan": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/keiei-kanri-zairyu-2025-kaisei-shihonkin-joukin-shokuin-chuka-taiwan",
+    "/legal/column/kodo-senmonshoku-1go-point-keisan-chuka-taiwan",
+  ],
   "jikayousha-katsuyo-jigyo-rideshare-kyoka": [
     "/legal/services",
     "/legal/nagare",
@@ -1591,6 +1605,28 @@ function matchesRequiredPhrase(content: string, phrase: string): boolean {
 
 /** 記事ごとに必ず含めるべき表現（機械ゲート。最低限の合否判定） */
 const REQUIRED_PHRASES: Record<string, string[]> = {
+  "tokutei-jido-unko-level4-kyoka-doukouhou-2023-shinsei": [
+    "道路交通法第75条の12",
+    "道路交通法第75条の13",
+    "道路交通法第75条の14",
+    "特定自動運行",
+    "特定自動運行主任者",
+    "公安委員会",
+    "別々にご契約",
+    "独立した事業体",
+    "別事業体",
+    "紹介料を受け取りません",
+  ],
+  "zairyu-shikaku-nintei-shomeisho-fukoufu-saishinsei-chuka-taiwan": [
+    "出入国管理及び難民認定法第7条の2",
+    "在留資格認定証明書",
+    "申請取次",
+    "再申請",
+    "別々にご契約",
+    "独立した事業体",
+    "別事業体",
+    "紹介料を受け取りません",
+  ],
   "jikayousha-katsuyo-jigyo-rideshare-kyoka": [
     "道路運送法第78条",
     "道路運送法第79条",
@@ -4603,6 +4639,8 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
 
 /** 記事ごとに含めてはならない表現 */
 const FORBIDDEN_PHRASES: Record<string, string[]> = {
+  "tokutei-jido-unko-level4-kyoka-doukouhou-2023-shinsei": [],
+  "zairyu-shikaku-nintei-shomeisho-fukoufu-saishinsei-chuka-taiwan": [],
   "jikayousha-katsuyo-jigyo-rideshare-kyoka": [],
   "shichiya-eigyo-kyoka-koan-iinkai-youken": [],
   "jiritsu-kunren-seikatsu-kinou-shitei-shinsei-youken": [],
@@ -9445,6 +9483,58 @@ const ARTICLES: Array<{
       "公安委員会",
       "流質",
       "古物営業法",
+      "業際",
+      "行政書士",
+    ],
+  },
+  {
+    file: "183-tokutei-jido-unko-level4-kyoka-doukouhou-2023-shinsei.md",
+    slug: "tokutei-jido-unko-level4-kyoka-doukouhou-2023-shinsei",
+    date: "2026-11-21",
+    title:
+      "レベル4の自動運転（特定自動運行）を始めるには？2023年施行の許可申請の流れ",
+    category: "許認可・開業の手続き（行政書士の実務から）",
+    excerpt:
+      "運転者が乗車しないレベル4相当の無人運行（特定自動運行）を行うには、特定自動運行を行おうとする場所を管轄する都道府県公安委員会の許可を受けなければなりません。根拠は道路交通法（昭和35年法律第105号）で、令和4年の改正（令和4年法律第32号）により第4章の2（特定自動運行）が新設され、関係政令の定めにより令和5年（2023年）4月1日から施行されました（参照日 2026-11-21）。許可の中心は道路交通法第75条の12第1項で、特定自動運行計画を記載した申請書を公安委員会に提出して許可を受けます。許可の基準は道路交通法第75条の13、欠格事由は道路交通法第75条の14に定められています。これは、有人運行を前提とする日本版ライドシェア（自家用車活用事業・道路運送法第78条第3号）や自動車運転代行業とは別の制度です。公安委員会に提出する許可申請書類の作成は行政書士、道路使用許可の取次や車両の登録も行政書士、事故時の損害賠償は弁護士、任意保険は損害保険会社が、それぞれ独立した事業体として別々にご契約のうえ対応する分離受任の枠組みを整理しました。",
+    keywords: [
+      "特定自動運行 レベル4 許可 公安委員会 道路交通法75条の12",
+      "特定自動運行 許可基準 道路交通法75条の13 欠格事由 75条の14",
+      "特定自動運行主任者 遠隔監視 現場措置業務実施者 配置",
+      "特定自動運行 ライドシェア 運転代行 違い 無人運行",
+      "特定自動運行 道路使用許可 車両登録 道路運送車両法",
+      "特定自動運行 許可申請 行政書士 2023年施行",
+    ],
+    tags: [
+      "道路交通法",
+      "特定自動運行",
+      "レベル4自動運転",
+      "公安委員会",
+      "業際",
+      "行政書士",
+    ],
+  },
+  {
+    file: "184-zairyu-shikaku-nintei-shomeisho-fukoufu-saishinsei-chuka-taiwan.md",
+    slug: "zairyu-shikaku-nintei-shomeisho-fukoufu-saishinsei-chuka-taiwan",
+    date: "2026-11-21",
+    title:
+      "在留資格認定証明書が不交付になったら？理由の確認と再申請の実務（中国語実務者向け）",
+    category: "許認可の手続き（行政書士の実務から）",
+    excerpt:
+      "在留資格認定証明書（COE）が不交付になったときは、まず不交付の理由を確認し、原因を解消できるかを見極めたうえで、立証資料を補強して再申請するのが実務の基本です。在留資格認定証明書は、出入国管理及び難民認定法（昭和26年政令第319号）に基づき、法務大臣が、上陸しようとする外国人について在留資格該当性や上陸許可基準への適合をあらかじめ審査し、適合すると認めたときに交付するもので、根拠は出入国管理及び難民認定法第7条の2です。出入国在留管理庁の案内では、この交付申請について「不服申立方法：なし」とされており（参照日 2026-11-21）、不交付に対しては同じ資料で押し返すのではなく、理由をふまえて立証を立て直した再申請が中心になります。不交付の理由の確認・再申請書類の作成・申請取次は申請取次行政書士が申請取次の範囲内で、不交付処分の処分性を争う訴訟など争訟の可否の判断と代理は弁護士が、それぞれ独立した事業体として別々にご契約のうえ対応する分離受任の枠組みを整理しました。",
+    keywords: [
+      "在留資格認定証明書 不交付 再申請 入管法7条の2 COE",
+      "COE 不交付通知書 理由 確認 地方出入国在留管理官署",
+      "在留資格認定証明書 再申請 理由書 立証 補強",
+      "COE 不交付 審査請求 不服申立 弁護士 行政書士",
+      "申請取次行政書士 在留資格認定証明書 申請取次 範囲",
+      "在留資格認定証明書 不交付 中国 台湾 呼寄せ 受入れ機関",
+    ],
+    tags: [
+      "出入国管理及び難民認定法",
+      "在留資格認定証明書",
+      "COE不交付",
+      "申請取次",
       "業際",
       "行政書士",
     ],

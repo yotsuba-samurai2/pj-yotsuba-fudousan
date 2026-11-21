@@ -2113,5 +2113,65 @@ export const COLUMNS_AUTOPUBLISH_REVIEWS: readonly ColumnQualityReview[] = [
     },
     "reviewedAt": "2026-11-21",
     "validThrough": "2026-11-23"
+  },
+  {
+    "key": "labor:ikuji-kaigo-juunan-na-hatarakikata-sochi-gimu-2025-10",
+    "fingerprint": "ce6fc26d48cb4067297e6ed79f3c0c1e08ec73aba9536ef01ca5b3e5f234981d",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.bosei-navi.mhlw.go.jp/glossary/returntowork08.html",
+        "checkedAt": "2026-11-21",
+        "relevantClaim": "育児・介護休業法第23条の3：3歳〜小学校就学前の子を養育する労働者につき、5つの措置（始業時刻変更等／テレワーク等月10日以上／保育施設等／養育両立支援休暇年10日以上／短時間勤務）から2つ以上を講じる義務。2025年10月1日施行。厚労省サイトで確認。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/44938212138"
+    },
+    "reviewedAt": "2026-11-22",
+    "validThrough": "2026-11-24"
+  },
+  {
+    "key": "labor:dansei-ikukyu-shutoku-jokyo-kouhyo-gimu-300nin-2025-04",
+    "fingerprint": "38a6a753d9c8dd382073c3c83c3d2e16225dd87effc8115adcaede2df6545a40",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/000103533_00006.html",
+        "checkedAt": "2026-11-21",
+        "relevantClaim": "育児・介護休業法第22条の2：男性労働者の育児休業取得状況の公表義務が2025年4月1日から常時雇用労働者1000人超から300人超(300人超1000人以下が追加)へ拡大。インターネット等で公表。厚労省ページで確認。",
+        "verified": true
+      },
+      {
+        "url": "https://jsite.mhlw.go.jp/tochigi-roudoukyoku/newpage_01469.html",
+        "checkedAt": "2026-11-21",
+        "relevantClaim": "公表は公表前事業年度終了後おおむね3か月以内（例：3月末決算→6月30日まで）。労働局案内で整合。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/44938212138"
+    },
+    "reviewedAt": "2026-11-22",
+    "validThrough": "2026-11-24"
   }
 ];
