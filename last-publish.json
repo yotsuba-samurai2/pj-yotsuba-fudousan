@@ -1,8 +1,54 @@
 {
   "dryRun": false,
-  "runAt": "2026-11-20T10:49:37.070Z",
-  "todayJst": "2026-11-20",
-  "targets": [],
+  "runAt": "2026-11-21T10:32:49.464Z",
+  "todayJst": "2026-11-21",
+  "targets": [
+    {
+      "key": "labor:amusement-game-center-nenshousha-henkei-shift-roumu",
+      "business": "labor",
+      "slug": "amusement-game-center-nenshousha-henkei-shift-roumu",
+      "title": "ゲームセンター（アミューズメント施設）の労務は、年少者とシフトでどこに注意するのか",
+      "date": "2026-11-20",
+      "category": "業種別の労務",
+      "path": "/labor/column/amusement-game-center-nenshousha-henkei-shift-roumu"
+    },
+    {
+      "key": "labor:koshu-yokujo-sauna-roudoujikan-shinya-anzeneisei-roumu",
+      "business": "labor",
+      "slug": "koshu-yokujo-sauna-roudoujikan-shinya-anzeneisei-roumu",
+      "title": "サウナ・公衆浴場を開業するとき、深夜営業と長時間の労務はどう設計するのか",
+      "date": "2026-11-20",
+      "category": "業種別の労務",
+      "path": "/labor/column/koshu-yokujo-sauna-roudoujikan-shinya-anzeneisei-roumu"
+    },
+    {
+      "key": "legal:jikayousha-katsuyo-jigyo-rideshare-kyoka",
+      "business": "legal",
+      "slug": "jikayousha-katsuyo-jigyo-rideshare-kyoka",
+      "title": "日本版ライドシェア（自家用車活用事業）を始めるには、どんな許可が要るのか？",
+      "date": "2026-11-20",
+      "category": "許認可・開業の手続き（行政書士の実務から）",
+      "path": "/legal/column/jikayousha-katsuyo-jigyo-rideshare-kyoka"
+    },
+    {
+      "key": "legal:shichiya-eigyo-kyoka-koan-iinkai-youken",
+      "business": "legal",
+      "slug": "shichiya-eigyo-kyoka-koan-iinkai-youken",
+      "title": "質屋を開業するには、公安委員会の許可で何が要るのか？",
+      "date": "2026-11-20",
+      "category": "許認可・開業の手続き（行政書士の実務から）",
+      "path": "/legal/column/shichiya-eigyo-kyoka-koan-iinkai-youken"
+    },
+    {
+      "key": "realestate:nokotsudo-okunai-biru-bukken-youto-boushika-kenchiku",
+      "business": "realestate",
+      "slug": "nokotsudo-okunai-biru-bukken-youto-boushika-kenchiku",
+      "title": "屋内納骨堂（ビル型）の物件は、用途地域・建築・消防で何を確認するのか？",
+      "date": "2026-11-20",
+      "category": "投資・事業用不動産",
+      "path": "/column/nokotsudo-okunai-biru-bukken-youto-boushika-kenchiku"
+    }
+  ],
   "held": [
     {
       "key": "labor:insatsu-gyo-kaigyo-roumu-yuuki-youzai-shinya-anzen-eisei",
@@ -559,7 +605,54 @@
   ],
   "scheduled": [],
   "ok": false,
-  "published": [],
+  "published": [
+    {
+      "key": "labor:amusement-game-center-nenshousha-henkei-shift-roumu",
+      "business": "labor",
+      "slug": "amusement-game-center-nenshousha-henkei-shift-roumu",
+      "title": "ゲームセンター（アミューズメント施設）の労務は、年少者とシフトでどこに注意するのか",
+      "date": "2026-11-20",
+      "category": "業種別の労務",
+      "path": "/labor/column/amusement-game-center-nenshousha-henkei-shift-roumu"
+    },
+    {
+      "key": "labor:koshu-yokujo-sauna-roudoujikan-shinya-anzeneisei-roumu",
+      "business": "labor",
+      "slug": "koshu-yokujo-sauna-roudoujikan-shinya-anzeneisei-roumu",
+      "title": "サウナ・公衆浴場を開業するとき、深夜営業と長時間の労務はどう設計するのか",
+      "date": "2026-11-20",
+      "category": "業種別の労務",
+      "path": "/labor/column/koshu-yokujo-sauna-roudoujikan-shinya-anzeneisei-roumu"
+    },
+    {
+      "key": "legal:jikayousha-katsuyo-jigyo-rideshare-kyoka",
+      "business": "legal",
+      "slug": "jikayousha-katsuyo-jigyo-rideshare-kyoka",
+      "title": "日本版ライドシェア（自家用車活用事業）を始めるには、どんな許可が要るのか？",
+      "date": "2026-11-20",
+      "category": "許認可・開業の手続き（行政書士の実務から）",
+      "path": "/legal/column/jikayousha-katsuyo-jigyo-rideshare-kyoka"
+    },
+    {
+      "key": "legal:shichiya-eigyo-kyoka-koan-iinkai-youken",
+      "business": "legal",
+      "slug": "shichiya-eigyo-kyoka-koan-iinkai-youken",
+      "title": "質屋を開業するには、公安委員会の許可で何が要るのか？",
+      "date": "2026-11-20",
+      "category": "許認可・開業の手続き（行政書士の実務から）",
+      "path": "/legal/column/shichiya-eigyo-kyoka-koan-iinkai-youken"
+    },
+    {
+      "key": "realestate:nokotsudo-okunai-biru-bukken-youto-boushika-kenchiku",
+      "business": "realestate",
+      "slug": "nokotsudo-okunai-biru-bukken-youto-boushika-kenchiku",
+      "title": "屋内納骨堂（ビル型）の物件は、用途地域・建築・消防で何を確認するのか？",
+      "date": "2026-11-20",
+      "category": "投資・事業用不動産",
+      "path": "/column/nokotsudo-okunai-biru-bukken-youto-boushika-kenchiku"
+    }
+  ],
+  "skipped": [],
   "errors": [
     {
       "key": "labor:insatsu-gyo-kaigyo-roumu-yuuki-youzai-shinya-anzen-eisei",
@@ -727,6 +820,6 @@
     }
   ],
   "blocked": "41本は品質確認待ちのため自動公開しません。記事別の理由を確認してください。forceでも解除しません。",
-  "outcome": "held",
+  "outcome": "partial",
   "httpStatus": "409"
 }
