@@ -8,6 +8,7 @@ import { checkCurrentCompanyIncome, companyIncomeEvidenceSchema, rentalAdoptionP
 import { portalCheckSchema, summarizePortalChecks } from "./portal-counts";
 import { evidenceSchema, titleHighlightSchema, validTitleHighlight, TITLE_HIGHLIGHT_LABELS, conditionChoiceSchema, rentEvidenceSchema, validRentEvidence, isPrimaryReference, RENTAL_IMPORT_POLICY, hasAdvertisingAllow, selectCondition, isCurrentEvidence } from "./policy";
 import { contentReviewSchema, rentalContentDigest } from "./content-review";
+import { DIRECT_RENTAL_SEARCH_AREA_LABEL, isDirectRentalSearchAddressAllowed } from "./direct-search-area";
 
 export const listingEvidenceSchema = evidenceSchema.extend({
   authenticated: z.boolean(), siteOperational: z.boolean(), exactRoomMatched: z.boolean(),
@@ -111,12 +112,13 @@ export function validateRentalImport(input: unknown, now: Date, mode: "draft" | 
   // SUUMO・アットホーム・HOME'Sは判定に使わない。REINSは広告可の確認だけ許可する。
   const directSearch = v.intake?.kind === "portal-search";
   const currentAdoption = usesCurrentAdoptionPolicy(now);
+  const isBunkyoAddress = /^東京都\s*文京区/.test(v.source.address.normalize("NFKC"));
   const subtrackPolicy = directSearch && v.intake!.policy === "eslife-new-income400k";
   const p033Policy = directSearch && v.intake!.policy === "bunkyo-p033-income300k";
   const incomePolicy = directSearch && (v.intake!.policy === "bunkyo-income800k" || subtrackPolicy || p033Policy);
   if (currentAdoption) {
     if (!directSearch && (!v.email || (!maintenance && !isRecentMail(v.email.receivedAt, now)))) reasons.push("メールが受信7日以内の対象外です");
-    if (directSearch && !/^東京都\s*文京区/.test(v.source.address.normalize("NFKC"))) reasons.push("直接検索の対象エリアは文京区です");
+    if (directSearch && !isDirectRentalSearchAddressAllowed(v.source.address)) reasons.push(`直接検索の対象エリアは${DIRECT_RENTAL_SEARCH_AREA_LABEL}です`);
     // Keep historical replay intact; current publication does not require private income evidence.
     if (requiresCompanyIncome(now)) {
       const { provider, roomId, building, address, unit } = v.source;
@@ -132,7 +134,7 @@ export function validateRentalImport(input: unknown, now: Date, mode: "draft" | 
     const hours = [...evidence.quote.normalize("NFKC").matchAll(/募集条件更新\s*(\d+)\s*時間前/g)].map(m => Number(m[1]));
     if (!maintenance && !incomePolicy && (!(provider === "itandi" || provider === "eslife") || !validListingEvidence(evidence, provider, now)
       || hours.length !== 1 || hours[0] >= 24 || hours[0] * 3600_000 + now.getTime() - Date.parse(evidence.checkedAt) >= 24 * 3600_000)) reasons.push("取得元で24時間以内の募集条件更新を確認してください");
-    if (!/^東京都\s*文京区/.test(v.source.address.normalize("NFKC"))) reasons.push("直接検索の対象エリアは文京区です");
+    if (!isBunkyoAddress) reasons.push("直接検索の対象エリアは文京区です");
     if (!incomePolicy && v.source.rent.yen < 200000) reasons.push("直接検索の賃料は20万円以上です");
   } else if (!v.email || (!maintenance && !isLegacyRecentMail(v.email.receivedAt, now))) reasons.push("メールが直近1暦月の対象外です");
   // Pre-replacement historical replay only. Never add AD or a presumed tenant fee to the confirmed total.
@@ -169,7 +171,8 @@ export function validateRentalImport(input: unknown, now: Date, mode: "draft" | 
   if (!(v.source.provider === "itandi" || v.source.provider === "eslife") || v.source.availability !== "available" || !validListingEvidence(v.source.listingEvidence, v.source.provider, now)) reasons.push("取得元で同一号室の現在の掲載を確認してください");
   if (!validRentEvidence(v.source.rent, v.source.provider === "eslife" ? "eslife" : "itandi", now)) reasons.push("取得元の賃料の原文と金額を確認してください");
   if (v.source.provider === "eslife") {
-    if (!/^東京都\s*文京区/.test(v.source.address.normalize("NFKC"))) reasons.push("いい生活の対象エリアを文京区に限定してください");
+    // Current direct search uses the common area gate above; mail intake and legacy replay are unchanged.
+    if ((!directSearch || !currentAdoption) && !isBunkyoAddress) reasons.push("いい生活の対象エリアを文京区に限定してください");
     if (v.source.applicationStatus !== "not-applied") reasons.push("申込あり・申込不明のいい生活物件は掲載できません");
   }
   v.property.priceYen = legacyMigration ? Math.max(v.source.rent.yen, v.reins!.rent.yen) : v.source.rent.yen;
