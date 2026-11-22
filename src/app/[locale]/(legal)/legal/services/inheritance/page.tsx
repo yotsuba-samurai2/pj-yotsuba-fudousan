@@ -9,6 +9,7 @@ import { addLocalePrefix } from "@/lib/locale";
 import Link from "next/link";
 import { LegalServicePage, H2 } from "@/components/shared/LegalServicePage";
 import { Placeholder } from "@/components/shared/Placeholder";
+import { InternationalInheritanceGuide, INHERITANCE_CONTACT_INTENT, INHERITANCE_DOCUMENT_SERVICES_ID } from "@/components/legal/international-inheritance/InternationalInheritanceGuide";
 import type { LangCode } from "@/config/languages";
 
 type InheritanceCopy = {
@@ -265,7 +266,7 @@ export default async function Page() {
     <LegalServicePage
       slug="inheritance"
       crumbLabel={c.crumbLabel}
-      ctaIntent="souzoku-legal"
+      ctaIntent={INHERITANCE_CONTACT_INTENT}
       serviceName="相続関係書類の作成・収集の支援"
       heroAlt={c.heroAlt}
       h1={c.h1}
@@ -277,7 +278,7 @@ export default async function Page() {
       }
       internalLinks={c.internalLinks}
     >
-      <div>
+      <div id={INHERITANCE_DOCUMENT_SERVICES_ID} className="scroll-mt-24">
         <H2>{c.scopeHeading}</H2>
         <p className="mt-3 text-sm leading-relaxed text-text-muted">
           {c.scopeIntro}
@@ -314,6 +315,8 @@ export default async function Page() {
         </p>
         <p className="mt-2 text-xs text-text-muted">{c.gaikokujinNote}</p>
       </div>
+
+      <InternationalInheritanceGuide locale={locale} />
 
       <div>
         <H2>{c.feesFlowHeading}</H2>

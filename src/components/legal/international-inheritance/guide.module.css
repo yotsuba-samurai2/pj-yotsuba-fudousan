@@ -1,0 +1,177 @@
+.guide {
+  --forest: #1b4332;
+  --tint: #e2ebe1;
+  --rule: #cbd9ce;
+  scroll-margin-top: 6rem;
+  border-block: 1px solid var(--rule);
+  padding-block: 1.75rem;
+  color: var(--color-text);
+  overflow-wrap: break-word;
+}
+
+.guide a {
+  color: var(--forest);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.guide a:hover { text-decoration-thickness: 2px; }
+.guide a:focus-visible {
+  outline: 2px solid var(--forest);
+  outline-offset: 4px;
+  border-radius: 0.125rem;
+}
+
+.hero {
+  display: grid;
+  align-items: center;
+  gap: 1.15rem;
+  border-radius: 1rem;
+  background: var(--color-bg);
+  padding: clamp(1rem, 3vw, 1.75rem);
+}
+
+.eyebrow {
+  margin-bottom: 0.5rem;
+  color: var(--forest);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.heroTitle,
+.sectionTitle {
+  color: var(--forest);
+  font-family: var(--font-serif);
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.heroTitle { font-size: clamp(1.55rem, 3.9vw, 2.2rem); }
+.sectionTitle { font-size: clamp(1.3rem, 3vw, 1.55rem); }
+
+.lead { margin-top: 0.6rem; line-height: 1.7; }
+.small { color: var(--color-text-muted); font-size: 0.875rem; }
+.heroImage,
+.detailImage {
+  display: block;
+  height: auto;
+  border-radius: 0.65rem;
+}
+
+.heroImage { width: 100%; }
+.detailImage { width: min(100%, 19rem); }
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem 1rem;
+  margin-block: 0.9rem 0.4rem;
+  font-size: 0.9rem;
+}
+
+.guide .button {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  border-radius: 0.5rem;
+  background: var(--forest);
+  padding: 0.55rem 0.85rem;
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.guide .button:hover { background: #295642; text-decoration: underline; }
+
+.navigation {
+  margin-top: 0.8rem;
+  padding-block: 0.75rem;
+  border-block: 1px solid var(--rule);
+}
+
+.navigation ul,
+.sources {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 1rem;
+  font-size: 0.875rem;
+}
+
+.section,
+.contact { margin-top: 2.35rem; scroll-margin-top: 6rem; }
+
+.illustratedHeading {
+  display: grid;
+  align-items: center;
+  gap: 0.65rem 1rem;
+}
+
+.cards,
+.steps,
+.timeline {
+  display: grid;
+  gap: 0.65rem;
+  margin-top: 0.85rem;
+}
+
+.card {
+  min-width: 0;
+  border: 1px solid var(--rule);
+  border-radius: 0.55rem;
+  background: var(--color-surface);
+  padding: 0.8rem;
+  font-size: 0.875rem;
+  line-height: 1.65;
+}
+
+.card p { margin-top: 0.35rem; }
+.card a { display: inline-block; margin-top: 0.5rem; font-size: 0.82rem; }
+.cardTitle { color: var(--forest); font-weight: 750; line-height: 1.45; }
+
+.tag {
+  display: block;
+  color: var(--forest);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.timeline .card { border-inline-start: 0.25rem solid var(--forest); }
+.duration { margin-bottom: 0.35rem; color: var(--forest); font-size: 1.25rem; font-weight: 750; }
+
+.sources { margin-top: 0.75rem; }
+
+.callout,
+.contact {
+  border-radius: 0.55rem;
+  background: var(--tint);
+  padding: 0.95rem 1rem;
+}
+
+.callout { margin-top: 0.9rem; border-inline-start: 0.25rem solid var(--forest); font-size: 0.9rem; }
+.contact .actions { margin-bottom: 0; }
+
+.roles { margin-top: 1rem; font-size: 0.875rem; line-height: 1.6; }
+.roles div { padding-block: 0.4rem; border-bottom: 1px solid var(--rule); }
+.roles dt { color: var(--forest); font-weight: 700; }
+
+.disclaimer { margin-top: 1rem; color: var(--color-text-muted); font-size: 0.8rem; }
+
+@media (min-width: 640px) {
+  .hero { grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr); }
+  .illustratedHeading { grid-template-columns: minmax(0, 1fr) 13rem; }
+  .detailImage { width: 100%; }
+  .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .steps, .timeline { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .roles div { display: grid; grid-template-columns: minmax(9.5rem, 1fr) minmax(0, 3fr); column-gap: 0.75rem; }
+  .timeline .card { border-inline-start-width: 1px; border-top: 0.25rem solid var(--forest); }
+}
+
+@media print {
+  .hero { padding: 0; background: transparent; }
+  .navigation, .actions { display: none; }
+  .section { margin-top: 1rem; }
+  .hero, .card, .contact { break-inside: avoid; }
+  .sectionHeading, .illustratedHeading { break-after: avoid; }
+}
