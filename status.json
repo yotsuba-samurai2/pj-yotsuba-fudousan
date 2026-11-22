@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-21T10:33:56.024Z",
+  "generatedAt": "2026-11-22T04:43:56.845Z",
   "siteUrl": "sc-domain:luck428.com",
   "windowDays": 45,
   "urls": {
@@ -2305,78 +2305,6 @@
       "robotsTxtState": "ALLOWED",
       "lastCrawlTime": "2026-11-14T01:47:22Z",
       "googleCanonical": "https://luck428.com/legal/column/tsukemono-seizogyo-kyoka-2024-haccp"
-    },
-    "https://luck428.com/column/hikyojusha-baibai-baishu-gensen-10-21-chugokugo": {
-      "verdict": "PASS",
-      "lastmod": "2026-10-07",
-      "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "checkedAt": "2026-11-15T10:31:37.630Z",
-      "coverageState": "送信して登録されました",
-      "indexingState": "INDEXING_ALLOWED",
-      "pageFetchState": "SUCCESSFUL",
-      "robotsTxtState": "ALLOWED",
-      "lastCrawlTime": "2026-10-08T00:30:08Z",
-      "googleCanonical": "https://luck428.com/column/hikyojusha-baibai-baishu-gensen-10-21-chugokugo"
-    },
-    "https://luck428.com/column/shuro-keizoku-shien-a-bukken-youto-chiiki": {
-      "verdict": "PASS",
-      "lastmod": "2026-10-07",
-      "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "checkedAt": "2026-11-15T10:31:43.973Z",
-      "coverageState": "送信して登録されました",
-      "indexingState": "INDEXING_ALLOWED",
-      "pageFetchState": "SUCCESSFUL",
-      "robotsTxtState": "ALLOWED",
-      "lastCrawlTime": "2026-10-25T02:19:57Z",
-      "googleCanonical": "https://luck428.com/column/shuro-keizoku-shien-a-bukken-youto-chiiki"
-    },
-    "https://luck428.com/labor/column/gaikokujin-ryo-soukei-tsukin-saigai-rosai-roumu": {
-      "verdict": "PASS",
-      "lastmod": "2026-10-07",
-      "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "checkedAt": "2026-11-15T10:18:38.066Z",
-      "coverageState": "送信して登録されました",
-      "indexingState": "INDEXING_ALLOWED",
-      "pageFetchState": "SUCCESSFUL",
-      "robotsTxtState": "ALLOWED",
-      "lastCrawlTime": "2026-11-14T12:29:29Z",
-      "googleCanonical": "https://luck428.com/labor/column/gaikokujin-ryo-soukei-tsukin-saigai-rosai-roumu"
-    },
-    "https://luck428.com/labor/column/kensetsugyo-2024-jikangai-jougen-kyujitsu-roumu": {
-      "verdict": "PASS",
-      "lastmod": "2026-10-07",
-      "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "checkedAt": "2026-11-21T10:43:54.321Z",
-      "coverageState": "送信して登録されました",
-      "indexingState": "INDEXING_ALLOWED",
-      "pageFetchState": "SUCCESSFUL",
-      "robotsTxtState": "ALLOWED",
-      "lastCrawlTime": "2026-11-14T09:40:05Z",
-      "googleCanonical": "https://luck428.com/labor/column/kensetsugyo-2024-jikangai-jougen-kyujitsu-roumu"
-    },
-    "https://luck428.com/legal/column/denki-koji-gyo-touroku-eigyosho-shunin": {
-      "verdict": "PASS",
-      "lastmod": "2026-10-07",
-      "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "checkedAt": "2026-11-15T10:18:44.430Z",
-      "coverageState": "送信して登録されました",
-      "indexingState": "INDEXING_ALLOWED",
-      "pageFetchState": "SUCCESSFUL",
-      "robotsTxtState": "ALLOWED",
-      "lastCrawlTime": "2026-11-14T19:19:12Z",
-      "googleCanonical": "https://luck428.com/legal/column/denki-koji-gyo-touroku-eigyosho-shunin"
-    },
-    "https://luck428.com/legal/column/kosei-shosho-yuigon-koshonin-shonin-hiyo": {
-      "verdict": "PASS",
-      "lastmod": "2026-10-07",
-      "firstSeenAt": "2026-10-09T09:54:26.225Z",
-      "checkedAt": "2026-11-21T10:44:00.874Z",
-      "coverageState": "送信して登録されました",
-      "indexingState": "INDEXING_ALLOWED",
-      "pageFetchState": "SUCCESSFUL",
-      "robotsTxtState": "ALLOWED",
-      "lastCrawlTime": "2026-11-13T13:16:18Z",
-      "googleCanonical": "https://luck428.com/legal/column/kosei-shosho-yuigon-koshonin-shonin-hiyo"
     }
   }
 }

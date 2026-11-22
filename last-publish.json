@@ -1,52 +1,43 @@
 {
-  "dryRun": false,
-  "runAt": "2026-11-21T10:32:49.464Z",
-  "todayJst": "2026-11-21",
+  "dryRun": true,
+  "runAt": "2026-11-22T04:43:01.845Z",
+  "todayJst": "2026-11-22",
   "targets": [
     {
-      "key": "labor:amusement-game-center-nenshousha-henkei-shift-roumu",
-      "business": "labor",
-      "slug": "amusement-game-center-nenshousha-henkei-shift-roumu",
-      "title": "ゲームセンター（アミューズメント施設）の労務は、年少者とシフトでどこに注意するのか",
-      "date": "2026-11-20",
-      "category": "業種別の労務",
-      "path": "/labor/column/amusement-game-center-nenshousha-henkei-shift-roumu"
-    },
-    {
-      "key": "labor:koshu-yokujo-sauna-roudoujikan-shinya-anzeneisei-roumu",
-      "business": "labor",
-      "slug": "koshu-yokujo-sauna-roudoujikan-shinya-anzeneisei-roumu",
-      "title": "サウナ・公衆浴場を開業するとき、深夜営業と長時間の労務はどう設計するのか",
-      "date": "2026-11-20",
-      "category": "業種別の労務",
-      "path": "/labor/column/koshu-yokujo-sauna-roudoujikan-shinya-anzeneisei-roumu"
-    },
-    {
-      "key": "legal:jikayousha-katsuyo-jigyo-rideshare-kyoka",
+      "key": "legal:tokutei-jido-unko-level4-kyoka-doukouhou-2023-shinsei",
       "business": "legal",
-      "slug": "jikayousha-katsuyo-jigyo-rideshare-kyoka",
-      "title": "日本版ライドシェア（自家用車活用事業）を始めるには、どんな許可が要るのか？",
-      "date": "2026-11-20",
+      "slug": "tokutei-jido-unko-level4-kyoka-doukouhou-2023-shinsei",
+      "title": "レベル4の自動運転（特定自動運行）の許可はどこに申請する？経路・車両・人員の準備",
+      "date": "2026-11-21",
       "category": "許認可・開業の手続き（行政書士の実務から）",
-      "path": "/legal/column/jikayousha-katsuyo-jigyo-rideshare-kyoka"
+      "path": "/legal/column/tokutei-jido-unko-level4-kyoka-doukouhou-2023-shinsei"
     },
     {
-      "key": "legal:shichiya-eigyo-kyoka-koan-iinkai-youken",
+      "key": "legal:zairyu-shikaku-nintei-shomeisho-fukoufu-saishinsei-chuka-taiwan",
       "business": "legal",
-      "slug": "shichiya-eigyo-kyoka-koan-iinkai-youken",
-      "title": "質屋を開業するには、公安委員会の許可で何が要るのか？",
-      "date": "2026-11-20",
-      "category": "許認可・開業の手続き（行政書士の実務から）",
-      "path": "/legal/column/shichiya-eigyo-kyoka-koan-iinkai-youken"
+      "slug": "zairyu-shikaku-nintei-shomeisho-fukoufu-saishinsei-chuka-taiwan",
+      "title": "在留資格認定証明書（COE）が不交付になったら？理由の確認と再申請の準備（中国・台湾の書類）",
+      "date": "2026-11-21",
+      "category": "許認可の手続き（行政書士の実務から）",
+      "path": "/legal/column/zairyu-shikaku-nintei-shomeisho-fukoufu-saishinsei-chuka-taiwan"
     },
     {
-      "key": "realestate:nokotsudo-okunai-biru-bukken-youto-boushika-kenchiku",
+      "key": "realestate:data-center-server-room-bukken-youto-juden-shobo",
       "business": "realestate",
-      "slug": "nokotsudo-okunai-biru-bukken-youto-boushika-kenchiku",
-      "title": "屋内納骨堂（ビル型）の物件は、用途地域・建築・消防で何を確認するのか？",
-      "date": "2026-11-20",
+      "slug": "data-center-server-room-bukken-youto-juden-shobo",
+      "title": "データセンター・サーバー室に使える物件はどう見極める？用途地域・受電容量・消防の三点",
+      "date": "2026-11-21",
       "category": "投資・事業用不動産",
-      "path": "/column/nokotsudo-okunai-biru-bukken-youto-boushika-kenchiku"
+      "path": "/column/data-center-server-room-bukken-youto-juden-shobo"
+    },
+    {
+      "key": "realestate:souzoku-nochi-tsuki-akiya-kagen-menseki-haishi-2023-baikyaku",
+      "business": "realestate",
+      "slug": "souzoku-nochi-tsuki-akiya-kagen-menseki-haishi-2023-baikyaku",
+      "title": "相続した「農地付き空き家」は売れる？下限面積要件が廃止された2023年以降の実務",
+      "date": "2026-11-21",
+      "category": "相続",
+      "path": "/column/souzoku-nochi-tsuki-akiya-kagen-menseki-haishi-2023-baikyaku"
     }
   ],
   "held": [
@@ -71,9 +62,6 @@
       "category": "許認可の手続き（行政書士の実務から）",
       "path": "/legal/column/keiei-kanri-zairyu-2025-kaisei-shihonkin-joukin-shokuin-chuka-taiwan",
       "qualityHoldReasons": [
-        "enの内部リンクに言語不一致があります",
-        "zh-twの内部リンクに言語不一致があります",
-        "zhの内部リンクに言語不一致があります",
         "公開レビュー記録が未登録です"
       ]
     },
@@ -86,9 +74,6 @@
       "category": "投資・事業用不動産",
       "path": "/column/chugokugo-kokudo-riyo-keikaku-ho-jigo-todokede-menseki",
       "qualityHoldReasons": [
-        "enの内部リンクに言語不一致があります",
-        "zh-twの内部リンクに言語不一致があります",
-        "zhの内部リンクに言語不一致があります",
         "公開レビュー記録が未登録です"
       ]
     },
@@ -101,9 +86,6 @@
       "category": "相続の手続き（行政書士の実務から）",
       "path": "/legal/column/houkatsu-tokutei-izo-chigai-juisha-hoki",
       "qualityHoldReasons": [
-        "enの内部リンクに言語不一致があります",
-        "zh-twの内部リンクに言語不一致があります",
-        "zhの内部リンクに言語不一致があります",
         "公開レビュー記録が未登録です"
       ]
     },
@@ -116,9 +98,6 @@
       "category": "許認可・開業の手続き（行政書士の実務から）",
       "path": "/legal/column/kensetsugyo-kessan-henko-todoke-jigyo-nendo-shuryo",
       "qualityHoldReasons": [
-        "enの内部リンクに言語不一致があります",
-        "zh-twの内部リンクに言語不一致があります",
-        "zhの内部リンクに言語不一致があります",
         "公開レビュー記録が未登録です"
       ]
     },
@@ -131,9 +110,6 @@
       "category": "相続の手続き（行政書士の実務から）",
       "path": "/legal/column/gaikokuseki-nihon-zaiju-yuigon-houshiki-junkyoho-chuka-taiwan",
       "qualityHoldReasons": [
-        "enの内部リンクに言語不一致があります",
-        "zh-twの内部リンクに言語不一致があります",
-        "zhの内部リンクに言語不一致があります",
         "公開レビュー記録が未登録です"
       ]
     },
@@ -146,9 +122,6 @@
       "category": "許認可の手続き（行政書士の実務から）",
       "path": "/legal/column/shurui-seizo-menkyo-craft-beer-happosyu-youken",
       "qualityHoldReasons": [
-        "enの内部リンクに言語不一致があります",
-        "zh-twの内部リンクに言語不一致があります",
-        "zhの内部リンクに言語不一致があります",
         "公開レビュー記録が未登録です"
       ]
     },
@@ -209,9 +182,6 @@
       "category": "許認可の手続き（行政書士の実務から）",
       "path": "/legal/column/shakai-fukushi-hojin-setsuritsu-ninka-nagare-shisan-youken",
       "qualityHoldReasons": [
-        "enの内部リンクに言語不一致があります",
-        "zh-twの内部リンクに言語不一致があります",
-        "zhの内部リンクに言語不一致があります",
         "公開レビュー記録が未登録です"
       ]
     },
@@ -224,9 +194,6 @@
       "category": "許認可の手続き（行政書士の実務から）",
       "path": "/legal/column/startup-visa-gaikokujin-kigyo-katsudo-sokushin-tokutei-katsudo",
       "qualityHoldReasons": [
-        "enの内部リンクに言語不一致があります",
-        "zh-twの内部リンクに言語不一致があります",
-        "zhの内部リンクに言語不一致があります",
         "公開レビュー記録が未登録です"
       ]
     },
@@ -287,9 +254,6 @@
       "category": "許認可・開業の手続き（行政書士の実務から）",
       "path": "/legal/column/jokaso-koji-gyo-touroku-seiso-gyo-kyoka-nagare-youken",
       "qualityHoldReasons": [
-        "enの内部リンクに言語不一致があります",
-        "zh-twの内部リンクに言語不一致があります",
-        "zhの内部リンクに言語不一致があります",
         "公開レビュー記録が未登録です"
       ]
     },
@@ -302,9 +266,6 @@
       "category": "相続の手続き（行政書士の実務から）",
       "path": "/legal/column/yuigon-to-kotonaru-isanbunkatsu-kyogi-kahi-youken",
       "qualityHoldReasons": [
-        "enの内部リンクに言語不一致があります",
-        "zh-twの内部リンクに言語不一致があります",
-        "zhの内部リンクに言語不一致があります",
         "公開レビュー記録が未登録です"
       ]
     },
@@ -365,9 +326,6 @@
       "category": "許認可・開業の手続き（行政書士の実務から）",
       "path": "/legal/column/dai-nishu-doubutsu-toriatsukai-todokede-hieiri-jotokai-youken",
       "qualityHoldReasons": [
-        "enの内部リンクに言語不一致があります",
-        "zh-twの内部リンクに言語不一致があります",
-        "zhの内部リンクに言語不一致があります",
         "公開レビュー記録が未登録です"
       ]
     },
@@ -380,9 +338,6 @@
       "category": "相続の手続き（行政書士の実務から）",
       "path": "/legal/column/souzoku-kyoninka-shokei-gyoshu-betsu-kahi-hikaku",
       "qualityHoldReasons": [
-        "enの内部リンクに言語不一致があります",
-        "zh-twの内部リンクに言語不一致があります",
-        "zhの内部リンクに言語不一致があります",
         "公開レビュー記録が未登録です"
       ]
     },
@@ -395,9 +350,6 @@
       "category": "投資・事業用不動産",
       "path": "/column/shokuhin-seizogyo-central-kitchen-bukken-youto-haisui-tokutei-shisetsu",
       "qualityHoldReasons": [
-        "enの内部リンクに言語不一致があります",
-        "zh-twの内部リンクに言語不一致があります",
-        "zhの内部リンクに言語不一致があります",
         "公開レビュー記録が未登録です"
       ]
     },
@@ -410,9 +362,6 @@
       "category": "相続",
       "path": "/column/souzoku-nochi-nouyouchi-kuiki-noshin-jogai-tenyo-baikyaku",
       "qualityHoldReasons": [
-        "enの内部リンクに言語不一致があります",
-        "zh-twの内部リンクに言語不一致があります",
-        "zhの内部リンクに言語不一致があります",
         "公開レビュー記録が未登録です"
       ]
     },
@@ -437,9 +386,6 @@
       "category": "許認可・開業の手続き（行政書士の実務から）",
       "path": "/legal/column/eisei-kensajo-rinsho-kensa-touroku-kozo-setsubi-kijun",
       "qualityHoldReasons": [
-        "enの内部リンクに言語不一致があります",
-        "zh-twの内部リンクに言語不一致があります",
-        "zhの内部リンクに言語不一致があります",
         "公開レビュー記録が未登録です"
       ]
     },
@@ -452,9 +398,6 @@
       "category": "相続の手続き（行政書士の実務から）",
       "path": "/legal/column/kikyuji-yuigon-shibo-kikyusha-minpo-976jo-kakunin",
       "qualityHoldReasons": [
-        "enの内部リンクに言語不一致があります",
-        "zh-twの内部リンクに言語不一致があります",
-        "zhの内部リンクに言語不一致があります",
         "公開レビュー記録が未登録です"
       ]
     },
@@ -467,9 +410,6 @@
       "category": "相続",
       "path": "/column/souzoku-minpaku-jutaku-shukuhaku-todokede-shokei-haigyo-baikyaku",
       "qualityHoldReasons": [
-        "enの内部リンクに言語不一致があります",
-        "zh-twの内部リンクに言語不一致があります",
-        "zhの内部リンクに言語不一致があります",
         "公開レビュー記録が未登録です"
       ]
     },
@@ -482,9 +422,6 @@
       "category": "投資・事業用不動産",
       "path": "/column/tokutei-yukyo-inshokuten-club-bukken-youto-hozen-taisho",
       "qualityHoldReasons": [
-        "enの内部リンクに言語不一致があります",
-        "zh-twの内部リンクに言語不一致があります",
-        "zhの内部リンクに言語不一致があります",
         "公開レビュー記録が未登録です"
       ]
     },
@@ -497,9 +434,6 @@
       "category": "許認可・開業の手続き（行政書士の実務から）",
       "path": "/legal/column/kashikin-gyo-touroku-yoken-shunin-junshisan",
       "qualityHoldReasons": [
-        "enの内部リンクに言語不一致があります",
-        "zh-twの内部リンクに言語不一致があります",
-        "zhの内部リンクに言語不一致があります",
         "公開レビュー記録が未登録です"
       ]
     },
@@ -512,9 +446,6 @@
       "category": "相続の手続き（行政書士の実務から）",
       "path": "/legal/column/souzoku-fuzaisha-zaisan-kanrinin-shisso-senkoku-erabikata",
       "qualityHoldReasons": [
-        "enの内部リンクに言語不一致があります",
-        "zh-twの内部リンクに言語不一致があります",
-        "zhの内部リンクに言語不一致があります",
         "公開レビュー記録が未登録です"
       ]
     },
@@ -601,58 +532,35 @@
       "qualityHoldReasons": [
         "公開レビュー記録が未登録です"
       ]
+    },
+    {
+      "key": "labor:dansei-ikukyu-shutoku-jokyo-kouhyo-gimu-300nin-2025-04",
+      "business": "labor",
+      "slug": "dansei-ikukyu-shutoku-jokyo-kouhyo-gimu-300nin-2025-04",
+      "title": "男性の育児休業取得率の公表義務はどこから。2025年4月に常時300人超へ拡大",
+      "date": "2026-11-21",
+      "category": "育児・介護",
+      "path": "/labor/column/dansei-ikukyu-shutoku-jokyo-kouhyo-gimu-300nin-2025-04",
+      "qualityHoldReasons": [
+        "原稿がレビュー時から変更されています"
+      ]
+    },
+    {
+      "key": "labor:ikuji-kaigo-juunan-na-hatarakikata-sochi-gimu-2025-10",
+      "business": "labor",
+      "slug": "ikuji-kaigo-juunan-na-hatarakikata-sochi-gimu-2025-10",
+      "title": "「柔軟な働き方を実現するための措置」とは。2025年10月施行の選択的措置義務で何をするのか",
+      "date": "2026-11-21",
+      "category": "育児・介護",
+      "path": "/labor/column/ikuji-kaigo-juunan-na-hatarakikata-sochi-gimu-2025-10",
+      "qualityHoldReasons": [
+        "原稿がレビュー時から変更されています"
+      ]
     }
   ],
   "scheduled": [],
   "ok": false,
-  "published": [
-    {
-      "key": "labor:amusement-game-center-nenshousha-henkei-shift-roumu",
-      "business": "labor",
-      "slug": "amusement-game-center-nenshousha-henkei-shift-roumu",
-      "title": "ゲームセンター（アミューズメント施設）の労務は、年少者とシフトでどこに注意するのか",
-      "date": "2026-11-20",
-      "category": "業種別の労務",
-      "path": "/labor/column/amusement-game-center-nenshousha-henkei-shift-roumu"
-    },
-    {
-      "key": "labor:koshu-yokujo-sauna-roudoujikan-shinya-anzeneisei-roumu",
-      "business": "labor",
-      "slug": "koshu-yokujo-sauna-roudoujikan-shinya-anzeneisei-roumu",
-      "title": "サウナ・公衆浴場を開業するとき、深夜営業と長時間の労務はどう設計するのか",
-      "date": "2026-11-20",
-      "category": "業種別の労務",
-      "path": "/labor/column/koshu-yokujo-sauna-roudoujikan-shinya-anzeneisei-roumu"
-    },
-    {
-      "key": "legal:jikayousha-katsuyo-jigyo-rideshare-kyoka",
-      "business": "legal",
-      "slug": "jikayousha-katsuyo-jigyo-rideshare-kyoka",
-      "title": "日本版ライドシェア（自家用車活用事業）を始めるには、どんな許可が要るのか？",
-      "date": "2026-11-20",
-      "category": "許認可・開業の手続き（行政書士の実務から）",
-      "path": "/legal/column/jikayousha-katsuyo-jigyo-rideshare-kyoka"
-    },
-    {
-      "key": "legal:shichiya-eigyo-kyoka-koan-iinkai-youken",
-      "business": "legal",
-      "slug": "shichiya-eigyo-kyoka-koan-iinkai-youken",
-      "title": "質屋を開業するには、公安委員会の許可で何が要るのか？",
-      "date": "2026-11-20",
-      "category": "許認可・開業の手続き（行政書士の実務から）",
-      "path": "/legal/column/shichiya-eigyo-kyoka-koan-iinkai-youken"
-    },
-    {
-      "key": "realestate:nokotsudo-okunai-biru-bukken-youto-boushika-kenchiku",
-      "business": "realestate",
-      "slug": "nokotsudo-okunai-biru-bukken-youto-boushika-kenchiku",
-      "title": "屋内納骨堂（ビル型）の物件は、用途地域・建築・消防で何を確認するのか？",
-      "date": "2026-11-20",
-      "category": "投資・事業用不動産",
-      "path": "/column/nokotsudo-okunai-biru-bukken-youto-boushika-kenchiku"
-    }
-  ],
-  "skipped": [],
+  "published": [],
   "errors": [
     {
       "key": "labor:insatsu-gyo-kaigyo-roumu-yuuki-youzai-shinya-anzen-eisei",
@@ -660,27 +568,27 @@
     },
     {
       "key": "legal:keiei-kanri-zairyu-2025-kaisei-shihonkin-joukin-shokuin-chuka-taiwan",
-      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録です"
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
     },
     {
       "key": "realestate:chugokugo-kokudo-riyo-keikaku-ho-jigo-todokede-menseki",
-      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録です"
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
     },
     {
       "key": "legal:houkatsu-tokutei-izo-chigai-juisha-hoki",
-      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録です"
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
     },
     {
       "key": "legal:kensetsugyo-kessan-henko-todoke-jigyo-nendo-shuryo",
-      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録です"
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
     },
     {
       "key": "legal:gaikokuseki-nihon-zaiju-yuigon-houshiki-junkyoho-chuka-taiwan",
-      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録です"
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
     },
     {
       "key": "legal:shurui-seizo-menkyo-craft-beer-happosyu-youken",
-      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録です"
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
     },
     {
       "key": "realestate:chuka-pro-kyutaishin-kubun-mansion-dd",
@@ -700,11 +608,11 @@
     },
     {
       "key": "legal:shakai-fukushi-hojin-setsuritsu-ninka-nagare-shisan-youken",
-      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録です"
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
     },
     {
       "key": "legal:startup-visa-gaikokujin-kigyo-katsudo-sokushin-tokutei-katsudo",
-      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録です"
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
     },
     {
       "key": "realestate:chugokugo-buyer-keibai-kobai-bukken-nyusatsu-daikin-nouhu",
@@ -724,11 +632,11 @@
     },
     {
       "key": "legal:jokaso-koji-gyo-touroku-seiso-gyo-kyoka-nagare-youken",
-      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録です"
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
     },
     {
       "key": "legal:yuigon-to-kotonaru-isanbunkatsu-kyogi-kahi-youken",
-      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録です"
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
     },
     {
       "key": "realestate:seikatsu-kaigo-jigyosho-bukken-youken-shitei",
@@ -748,19 +656,19 @@
     },
     {
       "key": "legal:dai-nishu-doubutsu-toriatsukai-todokede-hieiri-jotokai-youken",
-      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録です"
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
     },
     {
       "key": "legal:souzoku-kyoninka-shokei-gyoshu-betsu-kahi-hikaku",
-      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録です"
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
     },
     {
       "key": "realestate:shokuhin-seizogyo-central-kitchen-bukken-youto-haisui-tokutei-shisetsu",
-      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録です"
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
     },
     {
       "key": "realestate:souzoku-nochi-nouyouchi-kuiki-noshin-jogai-tenyo-baikyaku",
-      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録です"
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
     },
     {
       "key": "labor:shiyonin-kenmu-yakuin-roudoshasei-zangyo-koyohoken-roumu",
@@ -768,27 +676,27 @@
     },
     {
       "key": "legal:eisei-kensajo-rinsho-kensa-touroku-kozo-setsubi-kijun",
-      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録です"
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
     },
     {
       "key": "legal:kikyuji-yuigon-shibo-kikyusha-minpo-976jo-kakunin",
-      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録です"
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
     },
     {
       "key": "realestate:souzoku-minpaku-jutaku-shukuhaku-todokede-shokei-haigyo-baikyaku",
-      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録です"
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
     },
     {
       "key": "realestate:tokutei-yukyo-inshokuten-club-bukken-youto-hozen-taisho",
-      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録です"
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
     },
     {
       "key": "legal:kashikin-gyo-touroku-yoken-shunin-junshisan",
-      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録です"
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
     },
     {
       "key": "legal:souzoku-fuzaisha-zaisan-kanrinin-shisso-senkoku-erabikata",
-      "message": "品質確認待ち：enの内部リンクに言語不一致があります／zh-twの内部リンクに言語不一致があります／zhの内部リンクに言語不一致があります／公開レビュー記録が未登録です"
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
     },
     {
       "key": "legal:ippan-haikibutsu-shushu-unpan-kyoka-jukyu-chosei",
@@ -817,9 +725,17 @@
     {
       "key": "realestate:jiritsu-kunren-jigyosho-bukken-youto-chiiki-shobo",
       "message": "品質確認待ち：公開レビュー記録が未登録です"
+    },
+    {
+      "key": "labor:dansei-ikukyu-shutoku-jokyo-kouhyo-gimu-300nin-2025-04",
+      "message": "品質確認待ち：原稿がレビュー時から変更されています"
+    },
+    {
+      "key": "labor:ikuji-kaigo-juunan-na-hatarakikata-sochi-gimu-2025-10",
+      "message": "品質確認待ち：原稿がレビュー時から変更されています"
     }
   ],
-  "blocked": "41本は品質確認待ちのため自動公開しません。記事別の理由を確認してください。forceでも解除しません。",
-  "outcome": "partial",
+  "blocked": "43本は品質確認待ちのため自動公開しません。記事別の理由を確認してください。forceでも解除しません。",
+  "outcome": "dry-run",
   "httpStatus": "409"
 }
