@@ -1,45 +1,8 @@
 {
   "dryRun": false,
-  "runAt": "2026-11-22T04:49:53.408Z",
+  "runAt": "2026-11-22T10:37:18.391Z",
   "todayJst": "2026-11-22",
-  "targets": [
-    {
-      "key": "legal:tokutei-jido-unko-level4-kyoka-doukouhou-2023-shinsei",
-      "business": "legal",
-      "slug": "tokutei-jido-unko-level4-kyoka-doukouhou-2023-shinsei",
-      "title": "レベル4の自動運転（特定自動運行）の許可はどこに申請する？経路・車両・人員の準備",
-      "date": "2026-11-21",
-      "category": "許認可・開業の手続き（行政書士の実務から）",
-      "path": "/legal/column/tokutei-jido-unko-level4-kyoka-doukouhou-2023-shinsei"
-    },
-    {
-      "key": "legal:zairyu-shikaku-nintei-shomeisho-fukoufu-saishinsei-chuka-taiwan",
-      "business": "legal",
-      "slug": "zairyu-shikaku-nintei-shomeisho-fukoufu-saishinsei-chuka-taiwan",
-      "title": "在留資格認定証明書（COE）が不交付になったら？理由の確認と再申請の準備（中国・台湾の書類）",
-      "date": "2026-11-21",
-      "category": "許認可の手続き（行政書士の実務から）",
-      "path": "/legal/column/zairyu-shikaku-nintei-shomeisho-fukoufu-saishinsei-chuka-taiwan"
-    },
-    {
-      "key": "realestate:data-center-server-room-bukken-youto-juden-shobo",
-      "business": "realestate",
-      "slug": "data-center-server-room-bukken-youto-juden-shobo",
-      "title": "データセンター・サーバー室に使える物件はどう見極める？用途地域・受電容量・消防の三点",
-      "date": "2026-11-21",
-      "category": "投資・事業用不動産",
-      "path": "/column/data-center-server-room-bukken-youto-juden-shobo"
-    },
-    {
-      "key": "realestate:souzoku-nochi-tsuki-akiya-kagen-menseki-haishi-2023-baikyaku",
-      "business": "realestate",
-      "slug": "souzoku-nochi-tsuki-akiya-kagen-menseki-haishi-2023-baikyaku",
-      "title": "相続した「農地付き空き家」は売れる？下限面積要件が廃止された2023年以降の実務",
-      "date": "2026-11-21",
-      "category": "相続",
-      "path": "/column/souzoku-nochi-tsuki-akiya-kagen-menseki-haishi-2023-baikyaku"
-    }
-  ],
+  "targets": [],
   "held": [
     {
       "key": "labor:insatsu-gyo-kaigyo-roumu-yuuki-youzai-shinya-anzen-eisei",
@@ -560,45 +523,7 @@
   ],
   "scheduled": [],
   "ok": false,
-  "published": [
-    {
-      "key": "legal:tokutei-jido-unko-level4-kyoka-doukouhou-2023-shinsei",
-      "business": "legal",
-      "slug": "tokutei-jido-unko-level4-kyoka-doukouhou-2023-shinsei",
-      "title": "レベル4の自動運転（特定自動運行）の許可はどこに申請する？経路・車両・人員の準備",
-      "date": "2026-11-21",
-      "category": "許認可・開業の手続き（行政書士の実務から）",
-      "path": "/legal/column/tokutei-jido-unko-level4-kyoka-doukouhou-2023-shinsei"
-    },
-    {
-      "key": "legal:zairyu-shikaku-nintei-shomeisho-fukoufu-saishinsei-chuka-taiwan",
-      "business": "legal",
-      "slug": "zairyu-shikaku-nintei-shomeisho-fukoufu-saishinsei-chuka-taiwan",
-      "title": "在留資格認定証明書（COE）が不交付になったら？理由の確認と再申請の準備（中国・台湾の書類）",
-      "date": "2026-11-21",
-      "category": "許認可の手続き（行政書士の実務から）",
-      "path": "/legal/column/zairyu-shikaku-nintei-shomeisho-fukoufu-saishinsei-chuka-taiwan"
-    },
-    {
-      "key": "realestate:data-center-server-room-bukken-youto-juden-shobo",
-      "business": "realestate",
-      "slug": "data-center-server-room-bukken-youto-juden-shobo",
-      "title": "データセンター・サーバー室に使える物件はどう見極める？用途地域・受電容量・消防の三点",
-      "date": "2026-11-21",
-      "category": "投資・事業用不動産",
-      "path": "/column/data-center-server-room-bukken-youto-juden-shobo"
-    },
-    {
-      "key": "realestate:souzoku-nochi-tsuki-akiya-kagen-menseki-haishi-2023-baikyaku",
-      "business": "realestate",
-      "slug": "souzoku-nochi-tsuki-akiya-kagen-menseki-haishi-2023-baikyaku",
-      "title": "相続した「農地付き空き家」は売れる？下限面積要件が廃止された2023年以降の実務",
-      "date": "2026-11-21",
-      "category": "相続",
-      "path": "/column/souzoku-nochi-tsuki-akiya-kagen-menseki-haishi-2023-baikyaku"
-    }
-  ],
-  "skipped": [],
+  "published": [],
   "errors": [
     {
       "key": "labor:insatsu-gyo-kaigyo-roumu-yuuki-youzai-shinya-anzen-eisei",
@@ -774,6 +699,6 @@
     }
   ],
   "blocked": "43本は品質確認待ちのため自動公開しません。記事別の理由を確認してください。forceでも解除しません。",
-  "outcome": "partial",
+  "outcome": "held",
   "httpStatus": "409"
 }
