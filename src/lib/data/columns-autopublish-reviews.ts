@@ -2425,5 +2425,98 @@ export const COLUMNS_AUTOPUBLISH_REVIEWS: readonly ColumnQualityReview[] = [
     },
     "reviewedAt": "2026-11-22",
     "validThrough": "2026-11-24"
+  },
+  {
+    "key": "realestate:souzoku-zei-butsunou-fudosan-kanri-shobun-futekikaku-yoken",
+    "fingerprint": "75d626ac744b80690c9f6fe98665f0cab50436a2b9c71aa9d672db30edc696d3",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/sozoku/4214.htm",
+        "checkedAt": "2026-11-22",
+        "relevantClaim": "物納は金銭納付・延納でも困難な場合に申請。第1順位=不動産・国債・上場株式等、第3順位=動産。管理処分不適格財産に担保権設定・権利帰属の争い・境界が明らかでない土地・共有不動産（共有者全員が持分全部を申請する場合を除く）。物納劣後財産(無道路地・市街化調整区域内土地等)とは別。根拠法令=相法41〜45、相令17〜19の2。本文と一致。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/45059806249"
+    },
+    "reviewedAt": "2026-11-23",
+    "validThrough": "2026-11-25"
+  },
+  {
+    "key": "legal:kihatsuyu-hanbaigyo-touroku-hinkakuho-kikenbutsu-ss",
+    "fingerprint": "b046825e51060d3316f452bd67142b18c4b9cd37f864afaedb4eedc8f214a259",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.kanto.meti.go.jp/seisaku/sekiyu_jigyo/data/jigyouhenpanf201003.pdf",
+        "checkedAt": "2026-11-22",
+        "relevantClaim": "揮発油販売業を行おうとする者は経済産業大臣(経済産業局長)の登録=品確法第3条。第二章第一節 揮発油販売業者の登録は第3条〜第12条。本文は第3条と正しく記載し、第12条の2(揮発油特定加工業者)は別制度と区別=企画書(plan.json)の『第12条の2』の誤りを本文が訂正しており正確。",
+        "verified": true
+      },
+      {
+        "url": "https://www.japaneselawtranslation.go.jp/ja/laws/view/3772/ja",
+        "checkedAt": "2026-11-22",
+        "relevantClaim": "消防法 第11条(製造所等の設置許可=市町村長等)・第13条(危険物保安監督者=甲種/乙種で6月以上実務経験から選任・届出)・第13条の2(危険物取扱者免状=甲乙丙、都道府県知事交付)。本文と一致。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/45059806249"
+    },
+    "reviewedAt": "2026-11-23",
+    "validThrough": "2026-11-25"
+  },
+  {
+    "key": "labor:data-center-24ji-kanshi-danzoku-roudo-shukunikkin-roumu",
+    "fingerprint": "c581bf5541bab29d6572a20d94d892a4d1b1048a64365e4af103004066e5edde",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://jsite.mhlw.go.jp/nagano-roudoukyoku/content/contents/roudoujyouken_handbook202602-9.pdf",
+        "checkedAt": "2026-11-22",
+        "relevantClaim": "監視・断続的労働従事者/宿日直勤務者は労基署長の許可で労働時間等を全部または一部除外できるが、深夜労働の割増賃金・年次有給休暇の規定は適用除外にならない。本文の『どちらの許可でも深夜割増(第37条第4項)は免除されない』と一致。",
+        "verified": true
+      },
+      {
+        "url": "https://aichi-elcc.mhlw.go.jp/?p=4526",
+        "checkedAt": "2026-11-22",
+        "relevantClaim": "監視・断続的労働の定義、第41条第3号の適用除外、宿日直の労基署長許可。本文の制度整理と整合。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/45059806249"
+    },
+    "reviewedAt": "2026-11-23",
+    "validThrough": "2026-11-25"
   }
 ];

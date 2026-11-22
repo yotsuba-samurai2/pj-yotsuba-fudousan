@@ -3848,6 +3848,46 @@ const ARTICLES: ArticleSpec[] = [
     localesWithTranslations: ["en", "zh-tw", "zh"],
     hubLinks: ["/souzoku"],
   },
+  {
+    file: "189-glamping-camp-jo-jigyo-yochi-chosei-kuiki-nochi-shinrin.md",
+    slug: "glamping-camp-jo-jigyo-yochi-chosei-kuiki-nochi-shinrin",
+    title: "グランピング・キャンプ場の事業用地は、市街化調整区域・農地・山林でどの許可が要る？",
+    publishedAt: "2026-11-22",
+    category: "投資・事業用不動産",
+    excerpt:
+      "郊外や山林でグランピング／キャンプ場を開く用地は、市街化調整区域かどうか、登記地目が農地か、地域森林計画の対象となる民有林かで、取得前に確かめる許可が変わります。テントだけか、管理棟やトレーラーハウスという建築物を建てるかでも結論が動きます。都市計画法29条の開発許可、農地法4条・5条の転用、森林法10条の2の林地開発許可、建築基準法2条1号の建築物該当性、旅館業法の宿泊許可を条文から整理し、各申請は行政書士、登記は司法書士、税務は税理士へ分離受任で振り分けます。",
+    keywords: [
+      "グランピング キャンプ場 用地 許可",
+      "市街化調整区域 開発許可 都市計画法29条",
+      "キャンプ場 第二種特定工作物 1ヘクタール",
+      "農地転用 4条 5条 キャンプ場",
+      "林地開発許可 森林法10条の2 1ヘクタール",
+    ],
+    tags: ["投資・事業用不動産", "開発許可", "農地法", "森林法"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/toushi"],
+  },
+  {
+    file: "190-souzoku-zei-butsunou-fudosan-kanri-shobun-futekikaku-yoken.md",
+    slug: "souzoku-zei-butsunou-fudosan-kanri-shobun-futekikaku-yoken",
+    title: "相続税を不動産で物納するには何が要件か？管理処分不適格財産と境界確定",
+    publishedAt: "2026-11-22",
+    category: "相続",
+    excerpt:
+      "相続税は金銭での一括納付が原則で、延納でも払いきれないときに初めて、相続した不動産そのものでの物納が申請できます。境界が明らかでない土地、担保権の付いた不動産、共有者全員がそろわない持分は、管理処分不適格財産として受け付けられないのが基本です。相続税法41〜43条・施行令18条・19条を手がかりに、物納に向かう土地の物件側の要件（境界・権利関係・接道）を整理し、物納の可否は税理士、境界確定測量は土地家屋調査士、登記は司法書士へ分離受任で振り分けます。",
+    keywords: [
+      "相続税 物納 不動産 要件",
+      "管理処分不適格財産 相続税法施行令18条",
+      "物納 境界確定 測量 土地家屋調査士",
+      "物納劣後財産 相続税法施行令19条",
+      "共有持分 底地 物納 可否",
+    ],
+    tags: ["相続", "物納", "相続税法", "境界確定"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/souzoku"],
+  },
 ];
 
 function toPlainText(md: string): string {

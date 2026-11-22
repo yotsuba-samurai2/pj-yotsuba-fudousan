@@ -1,39 +1,41 @@
-# コラム生成・レビュー・公開判定（2026-11-22）
+# コラム生成・レビュー・公開判定（2026-11-23）
 
 - 生成・機械検証：成功 6本
 - レビュー処理：success ／ 判定：true
-- レビュー指摘：blocker 0／major 0／minor 2
-- 今回の候補指紋に対応する公開証跡登録：2本
-- 自動公開の品質候補：2本
-- 品質保留：4本 ／ 公開日待ち：0本
-- 未確認の一次資料：2件
+- レビュー指摘：blocker 0／major 0／minor 5
+- 今回の候補指紋に対応する公開証跡登録：3本
+- 自動公開の品質候補：3本
+- 品質保留：3本 ／ 公開日待ち：0本
+- 未確認の一次資料：3件
 - 本番公開：この処理では実行していません。公開済み件数は未照会です。
 
-2本は品質確認済み候補です。手動保留・既存DB・公開日・有効期限を公開実行時に再判定します。公開完了は実行結果で確認してください。
+3本は品質確認済み候補です。手動保留・既存DB・公開日・有効期限を公開実行時に再判定します。公開完了は実行結果で確認してください。
 未確認記事の品質保留はforceでも解除しません。
 
 ## 記事別の判定
 
-- データセンター・サーバー室に使える物件はどう見極める？用途地域・受電容量・消防の三点：held（realestate:data-center-server-room-bukken-youto-juden-shobo）
+- グランピング・キャンプ場の事業用地は、市街化調整区域・農地・山林でどの許可が要る？：held（realestate:glamping-camp-jo-jigyo-yochi-chosei-kuiki-nochi-shinrin）
   - 公開レビュー記録が未登録です
   - 確認済みの公的な一次根拠が不足しています
-- 相続した「農地付き空き家」は売れる？下限面積要件が廃止された2023年以降の実務：held（realestate:souzoku-nochi-tsuki-akiya-kagen-menseki-haishi-2023-baikyaku）
+  - 未確認一次資料：https://laws.e-gov.go.jp/law/343AC0000000100 — 都市計画法 第4条(特定工作物・開発行為の定義)・第29条(開発許可)・第34条(調整区域立地基準)・第43条。第二種特定工作物は原則1ha以上(施行令第1条)。確立した条文で本文と整合。
+- 相続税を不動産で物納するには何が要件か？管理処分不適格財産と境界確定：quality-eligible（realestate:souzoku-zei-butsunou-fudosan-kanri-shobun-futekikaku-yoken）
+- 電気通信事業は届出か登録か—オンラインサービス・ISP開業の手続：held（legal:denki-tsushin-jigyo-todokede-gyosha-touroku-chigai）
   - 公開レビュー記録が未登録です
   - 確認済みの公的な一次根拠が不足しています
-- レベル4の自動運転（特定自動運行）を始めるには？2023年施行の許可申請の流れ：held（legal:tokutei-jido-unko-level4-kyoka-doukouhou-2023-shinsei）
+  - 未確認一次資料：https://laws.e-gov.go.jp/law/359AC0000000086 — 電気通信事業法 第9条(登録)・第16条(届出)・第2条(定義)・第164条(第三号事業の適用除外)。本文の区分と整合（確立した条文）。
+- ガソリンスタンド開業に要る揮発油販売業者登録（品確法）と危険物施設の設置許可：quality-eligible（legal:kihatsuyu-hanbaigyo-touroku-hinkakuho-kikenbutsu-ss）
+- データセンターの24時間監視要員は断続的労働か。宿日直許可と労働時間をどう扱うのか：quality-eligible（labor:data-center-24ji-kanshi-danzoku-roudo-shukunikkin-roumu）
+- クラフトビール醸造所・酒類製造所の労務は、繁忙期の変形労働と外国人受入でどこに注意するのか：held（labor:shurui-seizo-brewery-henkei-roudoujikan-ginoujisshu-roumu）
   - 公開レビュー記録が未登録です
   - 確認済みの公的な一次根拠が不足しています
-- 在留資格認定証明書が不交付になったら？理由の確認と再申請の実務（中国語実務者向け）：held（legal:zairyu-shikaku-nintei-shomeisho-fukoufu-saishinsei-chuka-taiwan）
-  - 公開レビュー記録が未登録です
-  - 記事別の一次根拠・重複・法的事項・翻訳整合が未完了
-  - 未確認一次資料：https://www.moj.go.jp/isa/applications/procedures/16-1.html — 在留資格認定証明書交付申請の根拠＝入管法第7条の2、手数料不要、オンライン申請可、標準処理1〜3か月、『不服申立方法：なし』。手数料無料・オンライン可は検索で確認したが、ページ自体がHTTP 403で直読不可。『不服申立方法：なし』は一次ページ直読での確認ができていない。
-  - 未確認一次資料：https://www.investtokyo.metro.tokyo.lg.jp/jp/about/data-conference/012_006.pdf — 在留資格認定証明書交付申請の標準処理期間は1か月〜3か月（東京都資料での言及。出入国在留管理庁の公式表そのものは未直読）。
-- 「柔軟な働き方を実現するための措置」とは。2025年10月施行の選択的措置義務で何をするのか：quality-eligible（labor:ikuji-kaigo-juunan-na-hatarakikata-sochi-gimu-2025-10）
-- 男性の育児休業取得率の公表義務はどこから。2025年4月に常時300人超へ拡大：quality-eligible（labor:dansei-ikukyu-shutoku-jokyo-kouhyo-gimu-300nin-2025-04）
+  - 未確認一次資料：https://www.maff.go.jp/j/shokusan/sanki/soumu/tokuteiginou.html — 農林水産省 特定技能 飲食料品製造業分野FAQページ。酒類除外の根拠として引用。ただし本文が引く『令和8年3月更新版』の版名は未確認(確認できたのは令和7年2月版・2024年12月更新)。主張自体は上記ISA別表で確認済み。
 
 ## レビューの指摘
 
-- [minor] scripts/legal-columns/184-zairyu-shikaku-nintei-shomeisho-fukoufu-saishinsei-chuka-taiwan.md：中心的な出典である出入国在留管理庁の交付申請案内（moj.go.jp/isa/applications/procedures/16-1.html）がHTTP 403で一次ページを直読できず、「不服申立方法：なし」は二次的な検索断片でのみ裏取り。記事の論旨（再申請中心・争訟は弁護士）はこの記述に依存する。 ／ 修正案：資格者が moj.go.jp の交付申請案内表の『不服申立方法』欄を直接確認し、『なし』の記載を裏取りする。記事本文は争訟可否を弁護士に留保しており断定はしていないため、文面修正は不要（ファイル変更は本審査の対象外）。
-- [minor] scripts/realestate-columns/188-souzoku-nochi-tsuki-akiya-kagen-menseki-haishi-2023-baikyaku.md：表の『根拠』行が「令和4年法律第56号第5号の削除」と表記され、本文（令和4年法律第56号『第5条』による農地法改正＝農地法第3条第2項第5号の削除）と号/条の表記が不整合。事実関係（下限面積要件廃止・2023年4月1日施行）は正しい。 ／ 修正案：表記を本文に揃え『令和4年法律第56号第5条による農地法第3条第2項第5号の削除』とする（軽微・本審査ではファイル変更しない）。
+- [minor] scripts/realestate-columns/en/189-glamping-camp-jo-jigyo-yochi-chosei-kuiki-nochi-shinrin.md：英訳本文・H2見出しに日本語の「工作物」が未翻訳のまま混在（例: 'buildings or工作物?', 'specified工作物', 'type-2 specified工作物'）。意味は保たれており法的誤りではないが、英語読者向けの体裁上の欠陥。 ／ 修正案：'工作物' を 'structure'（または 'specified structure'）等へ訳出する。日中訳では問題なし。
+- [minor] scripts/labor-columns/en/223-data-center-24ji-kanshi-danzoku-roudo-shukunikkin-roumu.md：出典節の見出し「## この記事の根拠」が日本語のまま（EN・zh・zh-tw の 223/224 共通）。本文は訳されており内容一致。legal 185/186 では見出しが訳出されているため不統一。 ／ 修正案：見出しを各言語へ訳出（EN: 'Sources' 等）。内容への影響なし。
+- [minor] scripts/labor-columns/zh/223-data-center-24ji-kanshi-danzoku-roudo-shukunikkin-roumu.md：出典節（line 123付近）に『昭和63年3月14日发基第150号的改正＝基发第150号』という冗長で崩れた訳文の痕跡。zh-tw版は正常（昭和63年3月14日基發第150號）。意味は通じるが文として不自然。 ／ 修正案：zh-tw に合わせ『昭和63年3月14日基发第150号』へ整える。
+- [minor] scripts/labor-columns/224-shurui-seizo-brewery-henkei-roudoujikan-ginoujisshu-roumu.md：引用する農林水産省FAQの版名『令和8年3月更新版』は公的検索で独立確認できなかった（確認できたのは令和7年2月更新版および2024年12月更新）。ただし中核主張（酒類製造は飲食料品製造業の対象外）は出入国在留管理庁の公式別表『飲食料品（酒類を除く。）』で確認済みのため、主張自体に誤りはない。版名の精度のみの懸念。 ／ 修正案：投入前に農水省FAQ最新版の版名・更新日を実物で再確認し、版名を現行に合わせる。
+- [minor] scripts/labor-columns/223-data-center-24ji-kanshi-danzoku-roudo-shukunikkin-roumu.md：深夜割増が第41条の適用除外でも免除されない旨の行政解釈番号『昭和23年10月14日基発第1506号』を公的一次資料で直接確認できなかった。結論（監視・断続的労働/宿日直の許可を受けても深夜割増は要支払）は長野・愛知労働局資料で確認済みのため実体に誤りはない。通達番号の精度のみの懸念。 ／ 修正案：厚労省通達データベースで通達番号を実物確認するか、確認できない場合は番号を落として『行政解釈』の記載にとどめる。
 
-実行証跡：https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/44938212138
+実行証跡：https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/45059806249
