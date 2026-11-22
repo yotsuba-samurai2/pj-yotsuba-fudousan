@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { getLegalColumnBySlug, getLegalColumns, getLocalizedColumn, isLocaleAllowed } from "@/lib/columns";
 import { buildPageMetadata } from "@/lib/seo";
 import { NONRESIDENT_ARTICLE_SLUG } from "@/lib/legal/nonresident-review";
+import { fixMainlandInheritanceLinks } from "@/lib/legal/mainland-inheritance-links";
 import { getRequestLocale } from "@/lib/getRequestLocale";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { BlogPostingJsonLd } from "@/components/seo/BlogPostingJsonLd";
@@ -65,6 +66,7 @@ export default async function LegalColumnDetailPage({ params }: Props) {
   const locale: LangCode = await getRequestLocale();
   if (!isLocaleAllowed(base, locale)) notFound();
   const col = getLocalizedColumn(base, locale);
+  const body = fixMainlandInheritanceLinks(base, locale, col.content);
   const resolvedIllustration = resolveColumnIllustration(base);
   const illustration = {
     ...resolvedIllustration,
@@ -96,7 +98,7 @@ export default async function LegalColumnDetailPage({ params }: Props) {
       {col.faq && col.faq.length > 0 && <FAQJsonLd items={col.faq} />}
       <SpeakableJsonLd businessKey="legal" locale={locale} path={`/legal/column/${col.slug}`} headline={col.title} summary={col.excerpt} />
       <LegalColumnDetailContent
-        column={col}
+        column={body === col.content ? col : { ...col, content: body }}
         prev={prev}
         next={next}
         illustration={illustration}
