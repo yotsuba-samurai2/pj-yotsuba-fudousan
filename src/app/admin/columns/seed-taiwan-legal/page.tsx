@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { getColumns, upsertColumnBySlug } from "@/lib/admin-api";
-import type { ColumnStatus } from "@/lib/admin-api";
+import type { FirestoreColumn } from "@/lib/admin-api";
 import { TAIWAN_LEGAL_COLUMNS_SEED } from "@/lib/data/taiwan-legal-columns-seed";
 
 type ItemResult = {
@@ -21,8 +21,9 @@ type ItemResult = {
  *
  * 【この投入が触らないもの】seed 定数に該当キーを持たせていないため既存値がそのまま残る
  *   （src/lib/db/columns.ts の toUpdateInput が `if ("キー" in data)` で判定するため）
- *   ・translations（第2号はseedに含み更新する。第1号は既存値を温存）
- *   ・faq・tags・ogImage・modifiedDate
+ *   ・faq・tags・ogImage（modifiedDate は本文が変わる場合のみ自動で更新）
+ *
+ * 第1号の翻訳は現行の言語別キーワード・タグ・著者等を残し、seed の本文等だけを更新する。
  *
  * 【status】既存の記事は現在の公開状態を引き継ぐ。新規作成のときだけ seed の値を使う。
  *   2026-08-06 の seed-taiwan で「再投入すると公開中の記事が draft に戻る」問題があり
@@ -39,20 +40,18 @@ export default function SeedTaiwanLegalPage() {
   );
   const router = useRouter();
 
-  const handleRun = async () => {
+  const handleRun = async (onlySlug?: string) => {
     setRunning(true);
 
-    let existingStatusBySlug: Record<string, ColumnStatus>;
+    let existingBySlug: Map<string, FirestoreColumn>;
     try {
       const existing = await getColumns("legal");
-      existingStatusBySlug = Object.fromEntries(
-        existing.map((c) => [c.slug, c.status]),
-      );
+      existingBySlug = new Map(existing.map((c) => [c.slug, c]));
     } catch (err) {
       setResults((prev) =>
         prev.map((r) => ({
           ...r,
-          status: "error",
+          status: onlySlug && r.slug !== onlySlug ? r.status : "error",
           message: `既存コラムの取得に失敗したため中止しました（公開中の記事の状態を保てないため）: ${String(err)}`,
         })),
       );
@@ -62,8 +61,19 @@ export default function SeedTaiwanLegalPage() {
 
     for (let i = 0; i < TAIWAN_LEGAL_COLUMNS_SEED.length; i++) {
       const seeded = TAIWAN_LEGAL_COLUMNS_SEED[i];
-      const keptStatus = existingStatusBySlug[seeded.slug];
-      const article = keptStatus ? { ...seeded, status: keptStatus } : seeded;
+      if (onlySlug && onlySlug !== seeded.slug) continue;
+      const existing = existingBySlug.get(seeded.slug);
+      const article = existing ? { ...seeded, status: existing.status } : seeded;
+      if (seeded.slug === "taiwan-koseki-jokoseki-shutoku" && existing && seeded.translations) {
+        const translations = { ...existing.translations };
+        for (const locale of ["en", "zh-tw", "zh"] as const) {
+          const translated = seeded.translations[locale];
+          if (translated) {
+            translations[locale] = { ...translations[locale], ...translated };
+          }
+        }
+        article.translations = translations;
+      }
       try {
         const { action } = await upsertColumnBySlug(
           article.business,
@@ -92,7 +102,7 @@ export default function SeedTaiwanLegalPage() {
   return (
     <div className="p-6">
       <h1 className="mb-1 text-lg font-bold">
-        台湾×相続コラム2本（日本語本文＋第2号翻訳）バルク投入
+        台湾×相続コラム2本（4言語）バルク投入
       </h1>
       <p className="mb-4 text-sm text-text-muted">
         business=legal で upsert 投入します（slug基準・冪等）。再実行しても重複しません。
@@ -101,8 +111,8 @@ export default function SeedTaiwanLegalPage() {
       </p>
       <p className="mb-4 max-w-2xl rounded-lg bg-surface-dim p-3 text-xs text-text">
         この投入が更新するのは<strong>日本語の本文・タイトル・抜粋・キーワード・著者・公開言語</strong>です。
-        <strong>第2号は en・繁體・简体の翻訳も更新します。第1号の翻訳、FAQ、タグ、OG画像は触りません</strong>
-        （既存の値が残ります）。第1号の日本語をPRで直した場合は、翻訳を管理画面で別途更新してください。
+        <strong>両記事とも en・繁體・简体の翻訳も更新します。日本語FAQ、タグ、OG画像は触りません</strong>
+        （既存の値が残ります）。
       </p>
 
       <div className="max-w-2xl rounded-xl border border-border bg-surface p-6">
@@ -153,7 +163,7 @@ export default function SeedTaiwanLegalPage() {
 
         <div className="mt-5 flex gap-3">
           <button
-            onClick={handleRun}
+            onClick={() => handleRun()}
             disabled={running}
             className="relative overflow-hidden rounded-lg px-5 py-2 text-sm font-semibold text-text disabled:opacity-50"
           >
@@ -168,6 +178,13 @@ export default function SeedTaiwanLegalPage() {
                   ? "再実行（冪等）"
                   : "2本を投入する"}
             </span>
+          </button>
+          <button
+            onClick={() => handleRun("taiwan-koseki-jokoseki-shutoku")}
+            disabled={running}
+            className="rounded-lg border border-border bg-surface px-5 py-2 text-sm font-medium text-text hover:bg-surface-dim disabled:opacity-50"
+          >
+            除戸謄本の記事だけ投入（4言語）
           </button>
           {allDone && !hasError && !running && (
             <button
