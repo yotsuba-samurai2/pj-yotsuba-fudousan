@@ -12,7 +12,7 @@ A domestic estate division agreement is customarily sealed by all heirs with the
 | Category of heir | Document replacing the seal certificate | Issuer |
 | --- | --- | --- |
 | Japanese national, living abroad | Signature certification, certificate of residence abroad | Japanese diplomatic mission (embassy / consulate-general) |
-| Foreign national | Signature certification by a notary (Notary Public); a sworn statement (affidavit / statutory declaration) | A local notary, etc. |
+| Foreign national | Signature certification by a notary (Notary Public); a sworn statement (affidavit / statutory declaration) | A local notary, etc. Singapore notarial certificates require SAL authentication with an apostille. Where a Hong Kong apostille is needed, contact the High Court Registry. |
 
 The certificate of residence abroad is a document proving the address (in place of a residence record), and the signature certification proves that the signature is the person's own. Within the scope of administrative-scrivener work, Yotsuba Administrative Scrivener Office supports preparing the estate division agreement and other inheritance documents and organising the certifications required per destination. The acceptance of any individual document is a matter for the destination — the Legal Affairs Bureau or the financial institution.
 
@@ -23,14 +23,14 @@ Hong Kong and Singapore are both based on common law, and certification by a not
 - **Japanese-national heir**: you can obtain signature certification at the Consulate-General of Japan in Hong Kong or the Embassy of Japan in Singapore. There is a form where you sign before a consular officer and the document and the certificate are bound together (Form 1), and a form where the certificate is issued on its own (Form 2). Japanese inheritance procedures often require Form 1, bound with the agreement. You also obtain a certificate of residence abroad.
 - **Foreign-national heir**: because the mission's signature certification is for Japanese nationals, you use signature certification by a local notary (Notary Public) or a sworn statement. Hong Kong and Singapore have this system.
 
-Which to use is most reliably arranged after confirming, in advance, the form required by the destination (the Legal Affairs Bureau for inheritance registration, each financial institution for account closure).
+Before signing, ask the receiving institution in Japan whether notarisation is required and which format it accepts. If you use a Singapore notary public, the notarial certificate must be authenticated by the Singapore Academy of Law (SAL) through an apostille. For Hong Kong documents that need an apostille, the relevant office is the Hong Kong High Court Registry.
 
 ## How do you exchange the estate division agreement with an English-speaking heir (translation, mailing)?
 
 Exchanging the agreement with an overseas heir calls for care over comprehension and the time for the round trip.
 
 - **Attaching a translation**: the agreement is drawn up in Japanese, and a reference translation into English or another language is attached so the heir can understand it. It is customary to attach a Japanese translation to certificates and foreign-language attachments when submitting them to the destination.
-- **The signing and certification steps**: the completed agreement is mailed to the overseas heir, signed and certified at the mission or by a local notary, and returned. Because the round trip takes days, you guide the heir on where to sign and where to place the binding seals beforehand.
+- **The signing and certification steps**: Confirm the format with the receiving institution in Japan before signing. Certification at a Japanese diplomatic mission is distinct from local notarisation. If using a local notary, distinguish notarisation from any additional authentication. Check where to sign and which certificates to enclose before returning the papers.
 - **Time difference and formats**: line up the points often queried by the destination — the way the name is written (matching the alphabet and the kanji), the address, the date format.
 
 Where there are several overseas heirs, each person's document may be prepared separately. The order and the form of the exchange are designed to match the destination's requirements.
@@ -67,7 +67,7 @@ Yotsuba Administrative Scrivener Office and Yotsuba Real Estate Co., Ltd. are se
 A. You can. Instead of a seal certificate, you obtain signature certification at the Consulate-General of Japan in Hong Kong, and you show your address with a certificate of residence abroad. Japanese inheritance procedures often require the form bound with the agreement (Form 1), so confirm the destination's form before arranging the signing.
 
 **Q. There is a foreign-national heir living in Singapore. Can they get signature certification?**
-A. The mission's signature certification is for Japanese nationals. A foreign national typically uses signature certification by a local notary (Notary Public) or a sworn statement. Which form is accepted depends on the requirements of the Legal Affairs Bureau (for inheritance registration) or the financial institution (for account closure), so we confirm in advance.
+A. Japanese missions issue this signature certification for Japanese nationals. A foreign-national heir should check the accepted format with the receiving institution in Japan before signing. If a Singapore notary issues the certificate, it must be authenticated by the Singapore Academy of Law (SAL) with an apostille.
 
 **Q. Can the agreement be made in English?**
 A. An estate division agreement submitted to a Japanese destination is drawn up in Japanese, and a reference translation into English or another language is customarily attached for the overseas heir's understanding. A Japanese translation is attached to foreign-language certificates and attachments. We also line up the correspondence between the alphabet and the kanji for the name.
@@ -77,6 +77,8 @@ A. Agency in disputed negotiation, mediation or litigation is the work of a lawy
 
 ## Sources (Primary Information)
 
+- [Singapore Academy of Law (SAL): Notarial certificate authentication from 16 September 2021](https://legalisation.sal.sg/App/Templates/NPFAQs_Sep2021.pdf) (accessed 23 November 2026)
+- [Hong Kong Judiciary: High Court Registry Apostille Service guidance](https://www.judiciary.hk/doc/en/court_services_facilities/guidance_note_for_apostille_service_e-appointment_system_202512.pdf) (accessed 23 November 2026)
 - e-Gov Law Search, "Civil Code" (Act No. 89 of 1896), Article 907, paragraph 1, and Article 909 (accessed 2026-09-07)
 - e-Gov Law Search, "Order for Real Property Registration" (Cabinet Order No. 379 of 2004) and "Regulation for Real Property Registration" (Ministry of Justice Ordinance No. 18 of 2005) (treatment of signature certification and documents proving the address) (accessed 2026-09-07)
 - Ministry of Foreign Affairs, "Certification at diplomatic missions abroad (signature certification / certificate of residence abroad)" (accessed 2026-09-07)

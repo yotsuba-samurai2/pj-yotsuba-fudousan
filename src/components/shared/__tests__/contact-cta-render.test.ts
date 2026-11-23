@@ -2,6 +2,11 @@ import { createElement, type ComponentProps } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { describe, expect, it, vi } from "vitest";
 import { CONTACT_CTA_COPY } from "@/lib/shared/contact-cta-copy";
+import {
+  MAINLAND_INHERITANCE_COLUMN_PATH,
+  getMainlandInheritanceContact,
+} from "@/lib/legal/mainland-inheritance-contact";
+import { contactIntentPreset } from "@/lib/shared/contact-intent-preset";
 import { addLocalePrefix } from "@/lib/locale";
 import { CONTACT_HREF, OFFICE } from "@/lib/shared/office-public";
 import { StickyContactCta, InlineContactCta } from "../ContactCta";
@@ -59,5 +64,43 @@ describe("CTA server render (router hooks are mocked; not a Next E2E test)", () 
     const internal = renderToStaticMarkup(createElement(StickyContactCta, { businessKey: "legal" }));
     state.pathname = "/legal/column/test";
     expect(renderToStaticMarkup(createElement(StickyContactCta, { businessKey: "legal" }))).toBe(internal);
+  });
+});
+
+describe("mainland inheritance article contact", () => {
+  for (const locale of ["ja", "en", "zh"] as const) {
+    it("uses the existing inheritance category in both CTAs for " + locale, () => {
+      state.locale = locale;
+      state.pathname = addLocalePrefix(MAINLAND_INHERITANCE_COLUMN_PATH, locale);
+      const expectedHref = addLocalePrefix("/legal/contact?intent=souzoku-legal", locale);
+      const routeContact = getMainlandInheritanceContact(MAINLAND_INHERITANCE_COLUMN_PATH, locale);
+      expect(routeContact?.label).toBeTruthy();
+      const sticky = renderToStaticMarkup(createElement(StickyContactCta, { businessKey: "legal" }));
+      const inline = renderToStaticMarkup(createElement(InlineContactCta, { businessKey: "legal" }));
+      for (const html of [sticky, inline]) {
+        expect(html).toContain('href="' + expectedHref + '"');
+        expect(html).toContain(routeContact?.label);
+        expect(html).not.toContain('href="' + addLocalePrefix("/line", locale) + '"');
+        expect(html).not.toContain(CONTACT_CTA_COPY[locale].line);
+      }
+      expect(contactIntentPreset("souzoku-legal", "legal", locale)?.category).toBe("souzoku-legal");
+    });
+  }
+
+  it("leaves zh-tw and superficially similar paths on the existing CTA", () => {
+    for (const [locale, path] of [
+      ["zh-tw", MAINLAND_INHERITANCE_COLUMN_PATH],
+      ["zh", MAINLAND_INHERITANCE_COLUMN_PATH + "-different"],
+      ["en", "/legal/column/test"],
+    ] as const) {
+      state.locale = locale;
+      state.pathname = addLocalePrefix(path, locale);
+      expect(getMainlandInheritanceContact(path, locale)).toBeNull();
+      for (const Component of [StickyContactCta, InlineContactCta]) {
+        const html = renderToStaticMarkup(createElement(Component, { businessKey: "legal" }));
+        expect(html).toContain('href="' + addLocalePrefix("/line", locale) + '"');
+        expect(html).not.toContain("?intent=souzoku-legal");
+      }
+    }
   });
 });
