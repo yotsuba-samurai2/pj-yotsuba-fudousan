@@ -57,6 +57,11 @@ const FILES: Record<string, string> = {
 
 /** 翻訳原稿を持つ記事のみ translations を seed に載せる（無い記事は既存DB値を温存） */
 const TRANSLATION_FILES: Record<string, Record<"en" | "zh-tw" | "zh", string>> = {
+  "taiwan-koseki-jokoseki-shutoku": {
+    en: "en/01-taiwan-koseki-jokoseki-shutoku.md",
+    "zh-tw": "zh-tw/01-taiwan-koseki-jokoseki-shutoku.md",
+    zh: "zh/01-taiwan-koseki-jokoseki-shutoku.md",
+  },
   "taiwan-inkan-shomei-isan-bunkatsu": {
     en: "en/02-taiwan-inkan-shomei-isan-bunkatsu.md",
     "zh-tw": "zh-tw/02-taiwan-inkan-shomei-isan-bunkatsu.md",
@@ -114,12 +119,14 @@ function readTranslations(slug: string): Partial<Record<"en" | "zh-tw" | "zh", T
   for (const [locale, file] of Object.entries(files) as Array<["en" | "zh-tw" | "zh", string]>) {
     const p = join(MD_DIR, file);
     const { meta, body } = parseFrontmatter(readFileSync(p, "utf8"), file);
+    const faq = parseFaq(body, file, FAQ_HEADINGS[locale]);
     result[locale] = {
       title: meta.title,
       excerpt: meta.excerpt,
       category: meta.category,
       content: body,
-      faq: parseFaq(body, file, FAQ_HEADINGS[locale]),
+      // 第1号は本文にFAQがないため、既存の翻訳メタデータを上書きしない。
+      ...(faq.length > 0 || slug !== "taiwan-koseki-jokoseki-shutoku" ? { faq } : {}),
     };
   }
   return result;
