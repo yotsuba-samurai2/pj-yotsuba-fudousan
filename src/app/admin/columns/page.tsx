@@ -101,6 +101,7 @@ export default function ColumnsListPage() {
 
   return (
     <div className="p-6">
+      <Link href="/admin/columns/reviewed-inheritance-20261123" className="mb-3 inline-flex text-sm text-primary underline">国際相続5本の確認・訂正</Link>
       {/* Filter tabs + New */}
       <div className="mb-4 flex flex-wrap items-center gap-3">
         <div className="flex gap-1 rounded-lg bg-surface-dim p-1">
