@@ -82,7 +82,7 @@ const COPY: Record<LangCode, InheritanceCopy> = {
     independenceNote:
       "※四葉不動産株式会社・四葉行政書士事務所は、それぞれ別の事業体として独立してご依頼をお受けします（紹介料等の授受はありません）。",
     registrationNote:
-      "なお、相続登記は2024年4月1日から申請が義務化されています（不動産登記法第76条の2第1項・原則3年以内。2024年3月31日以前の相続分は2027年3月31日まで）。期限の観点でも、早めの着手をおすすめします。",
+      "相続登記は、自分が相続人になったことと、その不動産の所有権を相続で取得したことの両方を知った日から、原則3年以内に申請します。2024年4月1日より前に両方を知っていた未登記の不動産は、原則2027年3月31日までです。両方を知ったのが2024年4月1日以降なら、相続がそれ以前に始まっていても、知った日から原則3年以内です。",
     feesFlowHeading: "費用・受任の流れ",
     ryokinLinkLabel: "相続関連書類作成の報酬額（報酬額表）",
     nagareLinkLabel: "ご相談から完了までの受任の流れ",
@@ -135,7 +135,7 @@ const COPY: Record<LangCode, InheritanceCopy> = {
     independenceNote:
       "Note: 四葉不動産株式会社 and 四葉行政書士事務所 are separate businesses, and each accepts engagements independently (no referral fees are exchanged).",
     registrationNote:
-      "Please note that applying for inheritance registration has been mandatory since April 1, 2024 (Article 76-2, Paragraph 1 of the Real Property Registration Act; within three years in principle, and by March 31, 2027 for inheritances that occurred on or before March 31, 2024). The deadlines are one more reason to start early.",
+      "In principle, apply to register inherited property in Japan within three years of learning both that you are an heir and that you inherited ownership of the property. If you knew both before April 1, 2024 and the property remains unregistered in your name, the deadline is generally March 31, 2027. If you learned both on or after April 1, 2024, the three-year period runs from the date you learned both, even if the inheritance began earlier.",
     feesFlowHeading: "Fees & How Engagement Works",
     ryokinLinkLabel: "Fees for preparing inheritance-related documents (fee schedule)",
     nagareLinkLabel: "How engagement works, from consultation to completion",
@@ -184,7 +184,7 @@ const COPY: Record<LangCode, InheritanceCopy> = {
     independenceNote:
       "※四葉不動産株式会社與四葉行政書士事務所為各自獨立的事業體，分別獨立受理委託（不收受介紹費等）。",
     registrationNote:
-      "此外，繼承登記自2024年4月1日起已成為申請義務（不動產登記法第76條之2第1項・原則上3年以內。2024年3月31日以前發生的繼承，期限至2027年3月31日）。就期限而言，也建議及早著手。",
+      "原則上，應自知道自己是繼承人，且知道自己因繼承取得該筆不動產所有權之日起3年內，申請日本的繼承登記。若在2024年4月1日前已知悉這兩件事、但尚未登記，原則上應最遲於2027年3月31日提出申請。若於2024年4月1日當天或之後才知悉這兩件事，即使繼承早已開始，仍自知悉之日起算3年。",
     feesFlowHeading: "費用・受任流程",
     ryokinLinkLabel: "繼承相關文件製作的報酬額（報酬額表）",
     nagareLinkLabel: "從諮詢到完成的受任流程",
@@ -233,7 +233,7 @@ const COPY: Record<LangCode, InheritanceCopy> = {
     independenceNote:
       "※四葉不動産株式会社与四葉行政書士事務所为各自独立的事业体，分别独立受理委托（不收受介绍费等）。",
     registrationNote:
-      "此外，继承登记自2024年4月1日起已成为申请义务（不动产登记法第76条之2第1项・原则上3年以内。2024年3月31日以前发生的继承，期限至2027年3月31日）。从期限的角度，也建议尽早着手。",
+      "原则上，应在知道自己是继承人、且知道自己因继承取得该不动产所有权之日起3年内，申请日本的继承登记。如在2024年4月1日前已知晓这两项事实但尚未登记，原则上应于2027年3月31日之前（含当天）提出申请。如在2024年4月1日当天或之后才知晓这两项事实，即使继承早已开始，仍从知晓之日起计算3年。",
     feesFlowHeading: "费用・受任流程",
     ryokinLinkLabel: "继承相关文件制作的报酬额（报酬额表）",
     nagareLinkLabel: "从咨询到完成的受任流程",

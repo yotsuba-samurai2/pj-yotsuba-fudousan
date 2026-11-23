@@ -38,7 +38,9 @@ The general flow is:
 
 In other words, neither "foreign nationality means foreign law" nor "assets in Japan mean Japanese law" is always correct.
 
-If the deceased has multiple nationalities or is stateless, there are separate rules for how to determine the "national law" itself (Article 38). For multiple nationalities, the law of the country of habitual residence or of the most closely connected country is used; for a stateless person, the law of the place of habitual residence.
+If the deceased held more than one nationality and one was Japanese, Japanese law is their national law. Otherwise, their national law is the law of the country of nationality in which they were habitually resident. If they were not habitually resident in any country of nationality, it is the law of the country of nationality with which they had the closest connection.
+
+If the deceased was stateless, the law of their habitual residence applies in principle (Article 38, paragraph 2).
 
 Determining the applicable law, the range of heirs and the shares is a legal judgement of international private law, and an administrative scrivener does not judge it individually. It is reserved to an attorney.
 
@@ -191,7 +193,7 @@ A. Overseas residence or foreign nationality alone does not decide. The scope of
 
 - Act on General Rules for Application of Laws, Article 36 (inheritance governed by the deceased's national law)
 - Act on General Rules for Application of Laws, Article 37 (formation and effect of a will governed by the testator's national law)
-- Act on General Rules for Application of Laws, Article 38 (determination of national law in cases of multiple nationalities or statelessness)
+- [Act on General Rules for Application of Laws](https://laws.e-gov.go.jp/document?lawid=418AC0000000078), Article 38, paragraphs 1 and 2 (effective January 1, 2007; accessed November 23, 2026)
 - Act on General Rules for Application of Laws, Article 41 (renvoi)
 - Act on the Law Governing the Formalities of Wills
 - Legal Affairs Bureau, "Specific procedure of the statutory inheritance information certification system" (availability for foreign nationals)

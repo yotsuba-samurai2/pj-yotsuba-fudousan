@@ -18,6 +18,7 @@ import {
   type ContactCtaPlacement,
 } from "@/lib/shared/contact-cta";
 import { RENTAL_CAMPAIGN_COPY, rentalLineHref, type RentalCampaignKind } from "@/lib/rental-campaign";
+import { getMainlandInheritanceContact } from "@/lib/legal/mainland-inheritance-contact";
 import styles from "./ContactCta.module.css";
 
 function useContactActions(businessKey: BusinessKey, placement: ContactCtaPlacement) {
@@ -26,6 +27,7 @@ function useContactActions(businessKey: BusinessKey, placement: ContactCtaPlacem
   const copy = CONTACT_CTA_COPY[locale] ?? CONTACT_CTA_COPY.ja;
   const hrefs = contactCtaHrefs(businessKey);
   const base = contactBasePath(pathname) ?? "/";
+  const mainlandContact = businessKey === "legal" ? getMainlandInheritanceContact(base, locale) : null;
   const rentalKind: RentalCampaignKind | null = businessKey !== "realestate" ? null : base.startsWith("/bunkyo/chukai-033") ? "fee033" : base.startsWith("/gakku") ? "gakku" : base.startsWith("/bukken") ? "property" : null;
   if (rentalKind) hrefs.line = rentalLineHref({ sourcePage: base, kind: rentalKind, ...(base.startsWith("/bukken/") ? { propertyId: base.split("/")[2] } : {}), ...(base.startsWith("/gakku/") && !["rentals", "sales"].includes(base.split("/")[2]) ? { school: base.split("/")[2] } : {}) }, "ja");
   const track = (action: ContactCtaAction) => {
@@ -33,12 +35,12 @@ function useContactActions(businessKey: BusinessKey, placement: ContactCtaPlacem
     if (action === "line" && rentalKind) { gaEvent(`click_line_${rentalKind}`, { source_page: base, location: placement }); return; }
     gaEvent(contactEventName(placement, action), contactEventParams(businessKey, locale, pathname, placement));
   };
-  return { copy: rentalKind ? { ...copy, line: RENTAL_CAMPAIGN_COPY[locale].consult } : copy, hrefs, track, pathname };
+  return { copy: rentalKind ? { ...copy, line: RENTAL_CAMPAIGN_COPY[locale].consult } : copy, hrefs, track, pathname, mainlandContact };
 }
 
 /** TenantLayoutShellの既存マウントを再利用し、3事業×4言語を共通実装。 */
 export function StickyContactCta({ businessKey }: { businessKey: BusinessKey }) {
-  const { copy, hrefs, track, pathname } = useContactActions(businessKey, "sticky");
+  const { copy, hrefs, track, pathname, mainlandContact } = useContactActions(businessKey, "sticky");
   const visible = shouldShowContactCta(pathname, businessKey);
   const navRef = useRef<HTMLDivElement>(null);
 
@@ -70,19 +72,31 @@ export function StickyContactCta({ businessKey }: { businessKey: BusinessKey }) 
     <>
       <div className={styles.spacer} aria-hidden="true" />
       <div ref={navRef} role="navigation" aria-label={copy.nav} className={styles.sticky} data-contact-cta="sticky" data-nosnippet="">
-        <p className={styles.topic}>{copy.topic[businessKey]}</p>
-        <Link href={hrefs.line} onClick={() => track("line")} className={styles.primary}>
-          <MessageCircle size={20} aria-hidden="true" />
-          <span>{copy.line}</span>
-        </Link>
-        <a href={OFFICE.telHref} onClick={() => track("phone")} className={`${styles.secondary} ${styles.phone}`}>
-          <Phone size={18} aria-hidden="true" />
-          <span>{copy.phone}</span>
-        </a>
-        <Link href={hrefs.contact} onClick={() => track("contact")} className={`${styles.secondary} ${styles.desktopContact}`}>
-          <Mail size={18} aria-hidden="true" />
-          <span>{copy.contact}</span>
-        </Link>
+        {mainlandContact ? (
+          <>
+            <p className={styles.topic}>{mainlandContact.heading}</p>
+            <Link href={mainlandContact.href} onClick={() => track("contact")} className={styles.primary}>
+              <Mail size={20} aria-hidden="true" />
+              <span>{mainlandContact.label}</span>
+            </Link>
+          </>
+        ) : (
+          <>
+            <p className={styles.topic}>{copy.topic[businessKey]}</p>
+            <Link href={hrefs.line} onClick={() => track("line")} className={styles.primary}>
+              <MessageCircle size={20} aria-hidden="true" />
+              <span>{copy.line}</span>
+            </Link>
+            <a href={OFFICE.telHref} onClick={() => track("phone")} className={`${styles.secondary} ${styles.phone}`}>
+              <Phone size={18} aria-hidden="true" />
+              <span>{copy.phone}</span>
+            </a>
+            <Link href={hrefs.contact} onClick={() => track("contact")} className={`${styles.secondary} ${styles.desktopContact}`}>
+              <Mail size={18} aria-hidden="true" />
+              <span>{copy.contact}</span>
+            </Link>
+          </>
+        )}
       </div>
     </>
   );
@@ -90,7 +104,21 @@ export function StickyContactCta({ businessKey }: { businessKey: BusinessKey }) 
 
 /** 記事中の1か所に置く補助導線。料金・無料・即時返信は約束しない。 */
 export function InlineContactCta({ businessKey }: { businessKey: BusinessKey }) {
-  const { copy, hrefs, track } = useContactActions(businessKey, "mid_article");
+  const { copy, hrefs, track, mainlandContact } = useContactActions(businessKey, "mid_article");
+  if (mainlandContact) {
+    return (
+      <section className={"not-prose " + styles.inline} aria-label={mainlandContact.heading} data-contact-cta="mid_article" data-nosnippet="">
+        <p className={styles.inlineHeading}>{mainlandContact.heading}</p>
+        <p className={styles.inlineBody}>{mainlandContact.details}</p>
+        <div className={styles.inlineActions}>
+          <Link href={mainlandContact.href} onClick={() => track("contact")} className={styles.primary}>
+            <Mail size={20} aria-hidden="true" />
+            <span>{mainlandContact.label}</span>
+          </Link>
+        </div>
+      </section>
+    );
+  }
   return (
     <section className={`not-prose ${styles.inline}`} aria-label={copy.nav} data-contact-cta="mid_article" data-nosnippet="">
       <p className={styles.inlineHeading}>{copy.inlineHeading}</p>
