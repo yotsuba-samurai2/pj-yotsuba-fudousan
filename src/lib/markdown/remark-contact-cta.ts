@@ -7,6 +7,8 @@ export const CONTACT_CTA_SLOT_ID = "yotsuba-mid-article-cta";
 
 export interface MarkdownNode {
   type: string;
+  depth?: number;
+  value?: string;
   children?: MarkdownNode[];
   position?: { start: { offset?: number }; end: { offset?: number } };
   data?: { hName?: string; hProperties?: Record<string, unknown> };
@@ -16,13 +18,22 @@ const SAFE_PREVIOUS = new Set(["paragraph", "list", "table", "blockquote", "code
 const NON_BODY = new Set(["definition", "footnoteDefinition", "yaml", "toml"]);
 
 /** 最も中央に近い安全な境界を選ぶ。短文・単一ブロックは無理に分断しない。 */
-export function contactCtaInsertionIndex(tree: MarkdownNode): number | null {
+export function contactCtaInsertionIndex(tree: MarkdownNode, beforeHeading?: string): number | null {
   const nodes = tree.children;
   if (!nodes || nodes.length < 2) return null;
   if (nodes.some((node) => node.data?.hProperties?.id === CONTACT_CTA_SLOT_ID)) return null;
   const bodyNodes = nodes.filter((node) => !NON_BODY.has(node.type));
   const total = bodyNodes.at(-1)?.position?.end.offset;
   if (!total || total < 800) return null;
+
+  // 記事固有の見出しが編集された場合は、従来の安全な中央位置へ戻す。
+  if (beforeHeading) {
+    const index = nodes.findIndex((node, i) =>
+      i > 0 && SAFE_PREVIOUS.has(nodes[i - 1].type) && node.type === "heading" && node.depth === 2 &&
+      node.children?.length === 1 && node.children[0].value === beforeHeading,
+    );
+    if (index !== -1) return index;
+  }
 
   const candidates: { index: number; distance: number; ratio: number }[] = [];
   for (let i = 1; i < nodes.length; i += 1) {
@@ -38,9 +49,9 @@ export function contactCtaInsertionIndex(tree: MarkdownNode): number | null {
   return candidates[0]?.index ?? null;
 }
 
-export function remarkContactCta() {
+export function remarkContactCta({ beforeHeading }: { beforeHeading?: string } = {}) {
   return (tree: MarkdownNode): void => {
-    const index = contactCtaInsertionIndex(tree);
+    const index = contactCtaInsertionIndex(tree, beforeHeading);
     if (index === null || !tree.children) return;
     tree.children.splice(index, 0, {
       type: "paragraph",
