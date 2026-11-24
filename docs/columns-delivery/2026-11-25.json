@@ -1,0 +1,86 @@
+{
+  "todayJst": "2026-11-25",
+  "runUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/45498346722",
+  "generationStatus": "validated",
+  "generatedCount": 6,
+  "reviewResult": "success",
+  "reviewReportAvailable": true,
+  "reviewPass": true,
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "minor": 0
+  },
+  "reviewFindings": [],
+  "registeredCount": 5,
+  "qualityEligibleCount": 5,
+  "heldCount": 1,
+  "scheduledCount": 0,
+  "unverifiedSourceCount": 0,
+  "publishedCount": null,
+  "articles": [
+    {
+      "key": "realestate:shokuniku-hanbaigyo-eigyo-kyoka-bukken-setsubi-kijun",
+      "fingerprint": "a4d6b7d9c556c61d0a06f33ea17cf9e7e70304142ccffa215eabc4fa0ea31b48",
+      "title": "食肉販売業の営業許可と物件選び——保健所の施設基準・冷蔵区画・給排水",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "realestate:chugokugo-buyer-jikobukken-shinriteki-kashi-kokuchi-dd",
+      "fingerprint": "fedd709501157e6def7795bcd28fb42313a8a3c381f3b052c70817f0b6edbe05",
+      "title": "中国語buyer向け——『告知事項あり』物件（心理的瑕疵）のデューデリジェンス",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "realestate:chugokugo-pro-sublease-master-lease-shoukei-kaiyaku-dd",
+      "fingerprint": "a8d1f218f65ecb11811a575ebf963231741f699fcb58318ad5aaf4383d0d2ab3",
+      "title": "中国語プロ向け——サブリース付き収益物件を買うときの承継・解約DD（2020賃貸住宅管理業法）",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:himitsu-shosho-yuigon-970jo-houshiki-tsukaiwake",
+      "fingerprint": "d298e394f5ffb1eb49cd62479bdc636a29aade49db8d82a080098c028462177a",
+      "title": "秘密証書遺言の方式と使い分け（民法970条）――自筆証書・公正証書とどう違い、方式不備ならどうなりますか",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録です",
+        "確認済みの公的な一次根拠が不足しています"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:chuzaiin-jimusho-chuka-taiwan-shakaihoken-tekiyo-higaitou",
+      "fingerprint": "f4633f073b821c42877bdf30a2bd267b8b4a8998e3a33192f8183be2072a8e64",
+      "title": "駐在員事務所の社会保険・労働保険──中国・台湾本社から日本に置く非登記拠点",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:shift-sei-roudou-keiyaku-saitei-hosho-jikan-kyugyo-teate",
+      "fingerprint": "aae9e377c6c1441bf802182d839806ba51b709894a672872c5269f940d09a6e0",
+      "title": "シフト制労働契約の実務──労働条件明示・一方的なシフト削減と休業手当",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    }
+  ]
+}

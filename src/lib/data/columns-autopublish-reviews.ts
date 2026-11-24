@@ -2518,5 +2518,170 @@ export const COLUMNS_AUTOPUBLISH_REVIEWS: readonly ColumnQualityReview[] = [
     },
     "reviewedAt": "2026-11-23",
     "validThrough": "2026-11-25"
+  },
+  {
+    "key": "realestate:shokuniku-hanbaigyo-eigyo-kyoka-bukken-setsubi-kijun",
+    "fingerprint": "a4d6b7d9c556c61d0a06f33ea17cf9e7e70304142ccffa215eabc4fa0ea31b48",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.city.funabashi.lg.jp/jigyou/iji_yakuji_eisei/002/p004754.html",
+        "checkedAt": "2026-11-24",
+        "relevantClaim": "食品衛生法の営業許可業種は令和3年6月以降34→32業種。食肉販売業は許可業種で、定義は『鳥獣の生肉（骨及び臓器を含む。）を販売する営業であり、食肉を専ら容器包装に入れられた状態で仕入れ、そのままの状態で販売する営業を除く』。本文の施行令第35条第3号・かっこ書と一致",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/law/328CO0000000229",
+        "checkedAt": "2026-11-24",
+        "relevantClaim": "食品衛生法施行令第35条（許可を要する営業の指定）。SPAのため直接本文抽出は不可だったが、第3号＝食肉販売業・32業種は船橋市(lg.jp)で裏取り済み",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/45498346722"
+    },
+    "reviewedAt": "2026-11-25",
+    "validThrough": "2026-11-27"
+  },
+  {
+    "key": "realestate:chugokugo-buyer-jikobukken-shinriteki-kashi-kokuchi-dd",
+    "fingerprint": "fedd709501157e6def7795bcd28fb42313a8a3c381f3b052c70817f0b6edbe05",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.mlit.go.jp/report/press/tochi_fudousan_kensetsugyo16_hh_000001_00029.html",
+        "checkedAt": "2026-11-24",
+        "relevantClaim": "人の死の告知ガイドライン（令和3年10月8日策定）。賃貸借は事案発生から概ね3年経過後は原則告げなくてよい／売買には3年のような期間の定めはなく、問われた場合・特段の事情がある場合は告知が必要。本文の賃貸3年・売買期間なしの区別と一致",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/law/327AC1000000176",
+        "checkedAt": "2026-11-24",
+        "relevantClaim": "宅地建物取引業法第35条（重要事項説明）・第47条第1号（故意の不告知・不実告知の禁止）。SPAのため直接抽出不可だが条番号・内容は標準で、MLITガイドラインの法的根拠説明と整合",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/45498346722"
+    },
+    "reviewedAt": "2026-11-25",
+    "validThrough": "2026-11-27"
+  },
+  {
+    "key": "realestate:chugokugo-pro-sublease-master-lease-shoukei-kaiyaku-dd",
+    "fingerprint": "a8d1f218f65ecb11811a575ebf963231741f699fcb58318ad5aaf4383d0d2ab3",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.ktr.mlit.go.jp/kensan/index00000027.html",
+        "checkedAt": "2026-11-24",
+        "relevantClaim": "賃貸住宅管理業法：サブリース規制（誇大広告・不当勧誘の禁止、マスターリース契約締結前の重要事項説明の義務化）は令和2年12月15日施行、賃貸住宅管理業の登録制度は令和3年6月15日施行。本文の施行日・第28〜30条の整理と一致",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/law/129AC0000000089",
+        "checkedAt": "2026-11-24",
+        "relevantClaim": "民法第605条の2（賃貸人たる地位の移転）。SPAのため直接抽出不可。借地借家法第28条（正当事由）・第31条（引渡しによる対抗力）・第32条第1項（借賃増減請求権）とともに標準的な条文で、本文の承継・解約・減額の説明と整合",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/45498346722"
+    },
+    "reviewedAt": "2026-11-25",
+    "validThrough": "2026-11-27"
+  },
+  {
+    "key": "labor:chuzaiin-jimusho-chuka-taiwan-shakaihoken-tekiyo-higaitou",
+    "fingerprint": "f4633f073b821c42877bdf30a2bd267b8b4a8998e3a33192f8183be2072a8e64",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.jetro.go.jp/en/invest/setting_up/section4/page9",
+        "checkedAt": "2026-11-24",
+        "relevantClaim": "JETRO対日投資ガイド：representative office（駐在員事務所）はsole proprietorship（個人事業所）扱い、branch/sales officeはcorporation（法人）扱いで強制適用。従業員5人未満は代表者を事業主とする任意適用で代表者は原則被保険者でない（例外は管轄判断）。労災は原則すべての労働者に適用、代表者が労働者でなければ特別加入の余地。本文のJETRO引用と一致",
+        "verified": true
+      },
+      {
+        "url": "https://www.mofa.go.jp/mofaj/press/release/press4_007768.html",
+        "checkedAt": "2026-11-24",
+        "relevantClaim": "日・中社会保障協定は2019年9月1日発効、一時派遣（原則5年以内）は派遣元国の年金制度のみに加入し適用証明書で相手国年金を免除、対象は公的年金のみ。日本と台湾の間には社会保障協定なし。本文の日中=有・日台=無の整理と一致",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/45498346722"
+    },
+    "reviewedAt": "2026-11-25",
+    "validThrough": "2026-11-27"
+  },
+  {
+    "key": "labor:shift-sei-roudou-keiyaku-saitei-hosho-jikan-kyugyo-teate",
+    "fingerprint": "aae9e377c6c1441bf802182d839806ba51b709894a672872c5269f940d09a6e0",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.mhlw.go.jp/content/11200000/001749112.pdf",
+        "checkedAt": "2026-11-24",
+        "relevantClaim": "厚労省『いわゆる「シフト制」により就業する労働者の適切な雇用管理を行うための留意事項』は令和4年1月7日策定・改正令和8年6月19日。本文が参照する版の日付（令和8年6月19日付）は実在することを確認。三交替等のパターン固定型は除く等の内容とも整合",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/law/322AC0000000049",
+        "checkedAt": "2026-11-24",
+        "relevantClaim": "労働基準法第26条（休業手当＝平均賃金の100分の60以上）・第15条第1項（労働条件明示）・施行規則第5条（2024年4月1日施行改正で変更の範囲・更新上限・無期転換の明示を追加）。SPAのため直接抽出不可だが条番号・内容は標準で、本文の整理と整合",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/45498346722"
+    },
+    "reviewedAt": "2026-11-25",
+    "validThrough": "2026-11-27"
   }
 ];

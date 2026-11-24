@@ -82,6 +82,13 @@ const AUTHOR = {
 
 /** 各記事が評価を集約すべきハブ（本文に必須の内部リンク）。verify() で機械検査する */
 const REQUIRED_HUB_LINKS: Record<string, string[]> = {
+  "himitsu-shosho-yuigon-970jo-houshiki-tsukaiwake": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/jihitsu-kosei-yuigon",
+    "/legal/column/kosei-shosho-yuigon-koshonin-shonin-hiyo",
+  ],
   "tokutei-jido-unko-level4-kyoka-doukouhou-2023-shinsei": [
     "/legal/services",
     "/legal/nagare",
@@ -1635,6 +1642,17 @@ function matchesRequiredPhrase(content: string, phrase: string): boolean {
 
 /** 記事ごとに必ず含めるべき表現（機械ゲート。最低限の合否判定） */
 const REQUIRED_PHRASES: Record<string, string[]> = {
+  "himitsu-shosho-yuigon-970jo-houshiki-tsukaiwake": [
+    "民法第970条",
+    "民法第971条",
+    "民法第972条",
+    "公証人手数料令第28条",
+    "行政書士法第1条の2",
+    "別々にご契約",
+    "独立した事業体",
+    "別事業体",
+    "紹介料を受け取りません",
+  ],
   "tokutei-jido-unko-level4-kyoka-doukouhou-2023-shinsei": [
     "道路交通法第75条の12",
     "道路交通法第75条の13",
@@ -4719,6 +4737,7 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
 
 /** 記事ごとに含めてはならない表現 */
 const FORBIDDEN_PHRASES: Record<string, string[]> = {
+  "himitsu-shosho-yuigon-970jo-houshiki-tsukaiwake": [],
   "tokutei-jido-unko-level4-kyoka-doukouhou-2023-shinsei": [],
   "zairyu-shikaku-nintei-shomeisho-fukoufu-saishinsei-chuka-taiwan": [],
   "teiju-sha-kokuji-rikon-shibetsu-zairyu-henko-chuka-taiwan": [],
@@ -4970,6 +4989,33 @@ const ARTICLES: Array<{
   keywords: string[];
   tags: string[];
 }> = [
+  {
+    file: "189-himitsu-shosho-yuigon-970jo-houshiki-tsukaiwake.md",
+    slug: "himitsu-shosho-yuigon-970jo-houshiki-tsukaiwake",
+    date: "2026-11-24",
+    title:
+      "秘密証書遺言の方式と使い分け（民法970条）――自筆証書・公正証書とどう違い、方式不備ならどうなりますか",
+    category: "相続の手続き（行政書士の実務から）",
+    excerpt:
+      "秘密証書遺言は、遺言の内容を公証人にも誰にも見せず秘密にしたまま、遺言書が存在することと本人のものであることを公証人1人と証人2人以上に証明してもらう方式です（民法第970条）。その方式は、①証書への署名押印、②証書に用いた印章による封印、③公証人1人及び証人2人以上の前への封書の提出と自己の遺言書である旨・筆者の氏名住所の申述、④公証人による提出日付と申述の封紙への記載と遺言者・証人の署名押印、の4つです。本文は自書でなくてもよく、ワープロや第三者の代筆でも構わない点が、全文の自書を要する自筆証書遺言（第968条）との大きな違いです（証書への署名は本人が行います）。公証人の手数料は財産額に関わらず定額の1万3000円です（公証人手数料令第28条。参照日2026-11-24）。方式に欠けるものがあっても自筆証書の方式を備えていれば自筆証書遺言として効力を有し（民法第971条）、口がきけない者には通訳人の通訳による申述・封紙への自書の特則があります（第972条）。相続開始後は家庭裁判所の検認が必要です（民法第1004条）。遺言の文案作成・証人手配・公証役場との日程調整の支援は行政書士、遺言内容の法的効力や遺留分をめぐる紛争の判断は弁護士、遺言執行後の相続登記は司法書士、相続税は税理士が、それぞれ独立した事業体として別々にご契約のうえ対応する分離受任の枠組みを整理しました。",
+    keywords: [
+      "秘密証書遺言 方式 民法970条 公証人 証人2人",
+      "秘密証書遺言 自筆証書 公正証書 違い 使い分け",
+      "秘密証書遺言 手数料 1万3000円 公証人手数料令28条",
+      "秘密証書遺言 方式不備 自筆証書遺言 転換 民法971条",
+      "秘密証書遺言 検認 民法1004条 口がきけない者 972条",
+      "秘密証書遺言 業際 行政書士 弁護士",
+    ],
+    tags: [
+      "民法",
+      "秘密証書遺言",
+      "遺言の方式",
+      "公証人手数料令",
+      "検認",
+      "業際",
+      "行政書士",
+    ],
+  },
   {
     file: "178-jiritsu-kunren-seikatsu-kinou-shitei-shinsei-youken.md",
     slug: "jiritsu-kunren-seikatsu-kinou-shitei-shinsei-youken",
