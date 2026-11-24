@@ -1,36 +1,8 @@
 {
   "dryRun": false,
-  "runAt": "2026-11-23T11:39:10.230Z",
-  "todayJst": "2026-11-23",
-  "targets": [
-    {
-      "key": "labor:data-center-24ji-kanshi-danzoku-roudo-shukunikkin-roumu",
-      "business": "labor",
-      "slug": "data-center-24ji-kanshi-danzoku-roudo-shukunikkin-roumu",
-      "title": "データセンターの24時間監視要員は断続的労働か。宿日直許可と労働時間をどう扱うのか",
-      "date": "2026-11-22",
-      "category": "業種別の労務",
-      "path": "/labor/column/data-center-24ji-kanshi-danzoku-roudo-shukunikkin-roumu"
-    },
-    {
-      "key": "legal:kihatsuyu-hanbaigyo-touroku-hinkakuho-kikenbutsu-ss",
-      "business": "legal",
-      "slug": "kihatsuyu-hanbaigyo-touroku-hinkakuho-kikenbutsu-ss",
-      "title": "ガソリンスタンド開業に要る揮発油販売業者登録（品確法）と危険物施設の設置許可",
-      "date": "2026-11-22",
-      "category": "許認可の手続き（行政書士の実務から）",
-      "path": "/legal/column/kihatsuyu-hanbaigyo-touroku-hinkakuho-kikenbutsu-ss"
-    },
-    {
-      "key": "realestate:souzoku-zei-butsunou-fudosan-kanri-shobun-futekikaku-yoken",
-      "business": "realestate",
-      "slug": "souzoku-zei-butsunou-fudosan-kanri-shobun-futekikaku-yoken",
-      "title": "相続税を不動産で物納するには何が要件か？管理処分不適格財産と境界確定",
-      "date": "2026-11-22",
-      "category": "相続",
-      "path": "/column/souzoku-zei-butsunou-fudosan-kanri-shobun-futekikaku-yoken"
-    }
-  ],
+  "runAt": "2026-11-24T13:11:15.010Z",
+  "todayJst": "2026-11-24",
+  "targets": [],
   "held": [
     {
       "key": "labor:insatsu-gyo-kaigyo-roumu-yuuki-youzai-shinya-anzen-eisei",
@@ -583,40 +555,83 @@
       "qualityHoldReasons": [
         "公開レビュー記録が未登録です"
       ]
+    },
+    {
+      "key": "labor:kahansu-daihyosha-tekisei-sensyutsu-roushi-kyotei",
+      "business": "labor",
+      "slug": "kahansu-daihyosha-tekisei-sensyutsu-roushi-kyotei",
+      "title": "過半数代表者はどう選ぶのか──36協定や就業規則の届出が無効にならない選出手続",
+      "date": "2026-11-24",
+      "category": "労働法の基本",
+      "path": "/labor/column/kahansu-daihyosha-tekisei-sensyutsu-roushi-kyotei",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "labor:kyugyo-teate-26jo-heikin-chingin-roumu",
+      "business": "labor",
+      "slug": "kyugyo-teate-26jo-heikin-chingin-roumu",
+      "title": "休業させるとき手当はいくらか──労働基準法第26条の6割と不可抗力の線引き",
+      "date": "2026-11-24",
+      "category": "労働法の基本",
+      "path": "/labor/column/kyugyo-teate-26jo-heikin-chingin-roumu",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "legal:koueki-nintei-shinsei-koueki-shadan-zaidan-youken",
+      "business": "legal",
+      "slug": "koueki-nintei-shinsei-koueki-shadan-zaidan-youken",
+      "title": "公益認定とは何か──一般社団・財団から公益法人になる要件と2024年改正",
+      "date": "2026-11-24",
+      "category": "許認可の手続き（行政書士の実務から）",
+      "path": "/legal/column/koueki-nintei-shinsei-koueki-shadan-zaidan-youken",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "legal:teiju-sha-kokuji-rikon-shibetsu-zairyu-henko-chuka-taiwan",
+      "business": "legal",
+      "slug": "teiju-sha-kokuji-rikon-shibetsu-zairyu-henko-chuka-taiwan",
+      "title": "日本人配偶者と離婚・死別したら在留資格はどうなる？「定住者」への変更（告示外定住）",
+      "date": "2026-11-24",
+      "category": "許認可の手続き（行政書士の実務から）",
+      "path": "/legal/column/teiju-sha-kokuji-rikon-shibetsu-zairyu-henko-chuka-taiwan",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "realestate:chugokugo-buyer-dojou-osen-taisakuho-atochi-dd",
+      "business": "realestate",
+      "slug": "chugokugo-buyer-dojou-osen-taisakuho-atochi-dd",
+      "title": "工場・クリーニング店の跡地を買うとき、土壌汚染対策法のデューデリで何を確認するか",
+      "date": "2026-11-24",
+      "category": "投資・事業用不動産",
+      "path": "/column/chugokugo-buyer-dojou-osen-taisakuho-atochi-dd",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "realestate:chugokugo-buyer-kyokai-mikakutei-chiseki-koseki-dd",
+      "business": "realestate",
+      "slug": "chugokugo-buyer-kyokai-mikakutei-chiseki-koseki-dd",
+      "title": "境界が未確定の土地を買うとき、筆界・所有権界・地積更正をどう確認するか",
+      "date": "2026-11-24",
+      "category": "投資・事業用不動産",
+      "path": "/column/chugokugo-buyer-kyokai-mikakutei-chiseki-koseki-dd",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録です"
+      ]
     }
   ],
   "scheduled": [],
   "ok": false,
-  "published": [
-    {
-      "key": "labor:data-center-24ji-kanshi-danzoku-roudo-shukunikkin-roumu",
-      "business": "labor",
-      "slug": "data-center-24ji-kanshi-danzoku-roudo-shukunikkin-roumu",
-      "title": "データセンターの24時間監視要員は断続的労働か。宿日直許可と労働時間をどう扱うのか",
-      "date": "2026-11-22",
-      "category": "業種別の労務",
-      "path": "/labor/column/data-center-24ji-kanshi-danzoku-roudo-shukunikkin-roumu"
-    },
-    {
-      "key": "legal:kihatsuyu-hanbaigyo-touroku-hinkakuho-kikenbutsu-ss",
-      "business": "legal",
-      "slug": "kihatsuyu-hanbaigyo-touroku-hinkakuho-kikenbutsu-ss",
-      "title": "ガソリンスタンド開業に要る揮発油販売業者登録（品確法）と危険物施設の設置許可",
-      "date": "2026-11-22",
-      "category": "許認可の手続き（行政書士の実務から）",
-      "path": "/legal/column/kihatsuyu-hanbaigyo-touroku-hinkakuho-kikenbutsu-ss"
-    },
-    {
-      "key": "realestate:souzoku-zei-butsunou-fudosan-kanri-shobun-futekikaku-yoken",
-      "business": "realestate",
-      "slug": "souzoku-zei-butsunou-fudosan-kanri-shobun-futekikaku-yoken",
-      "title": "相続税を不動産で物納するには何が要件か？管理処分不適格財産と境界確定",
-      "date": "2026-11-22",
-      "category": "相続",
-      "path": "/column/souzoku-zei-butsunou-fudosan-kanri-shobun-futekikaku-yoken"
-    }
-  ],
-  "skipped": [],
+  "published": [],
   "errors": [
     {
       "key": "labor:insatsu-gyo-kaigyo-roumu-yuuki-youzai-shinya-anzen-eisei",
@@ -801,9 +816,33 @@
     {
       "key": "realestate:glamping-camp-jo-jigyo-yochi-chosei-kuiki-nochi-shinrin",
       "message": "品質確認待ち：公開レビュー記録が未登録です"
+    },
+    {
+      "key": "labor:kahansu-daihyosha-tekisei-sensyutsu-roushi-kyotei",
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
+    },
+    {
+      "key": "labor:kyugyo-teate-26jo-heikin-chingin-roumu",
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
+    },
+    {
+      "key": "legal:koueki-nintei-shinsei-koueki-shadan-zaidan-youken",
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
+    },
+    {
+      "key": "legal:teiju-sha-kokuji-rikon-shibetsu-zairyu-henko-chuka-taiwan",
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
+    },
+    {
+      "key": "realestate:chugokugo-buyer-dojou-osen-taisakuho-atochi-dd",
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
+    },
+    {
+      "key": "realestate:chugokugo-buyer-kyokai-mikakutei-chiseki-koseki-dd",
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
     }
   ],
-  "blocked": "46本は品質確認待ちのため自動公開しません。記事別の理由を確認してください。forceでも解除しません。",
-  "outcome": "partial",
+  "blocked": "52本は品質確認待ちのため自動公開しません。記事別の理由を確認してください。forceでも解除しません。",
+  "outcome": "held",
   "httpStatus": "409"
 }
