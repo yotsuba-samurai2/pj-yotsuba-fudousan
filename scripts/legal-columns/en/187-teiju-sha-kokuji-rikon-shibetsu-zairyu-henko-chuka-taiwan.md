@@ -1,38 +1,38 @@
 ---
-title: "Divorced or widowed from a Japanese spouse? Changing your status of residence to Long-Term Resident"
-excerpt: "For people from mainland China or Taiwan who held a Spouse of Japanese National visa and then divorced or lost their spouse: losing the marriage does not erase your status automatically. Many move to Long-Term Resident, usually as a non-notified category decided at the Minister's discretion."
+title: "Divorce or bereavement in Japan: the 14-day notice and changing your spouse-based status"
+excerpt: "If you are a mid- to long-term resident under Spouse or Child of Japanese National on the basis of your marriage, notify immigration within 14 days of divorce or your spouse’s death. This notice is separate from a change-of-status application."
 category: "Immigration and Residence Procedures (From the Practice of an Administrative Scrivener)"
 ---
-**In short:** Divorce or the death of a Japanese spouse does not automatically cancel your status of residence. If you plan to keep living in Japan after the substance of the Spouse of Japanese National status is gone, consider changing to Long-Term Resident. Most of these cases fall outside the listed notification categories and are decided at the Minister of Justice's discretion.
+**First, notify immigration.** If you are a mid- to long-term resident of Japan under “Spouse or Child of Japanese National” on the basis of your marriage, you must notify the Commissioner of the Immigration Services Agency within 14 days of your divorce or your spouse’s death. This is separate from municipal registration. Your status is not automatically lost, but the notice does not grant a new status. If you wish to stay, consider your options promptly, including Long-Term Resident.
 
 ## What happens to your status when you divorce or are widowed from a Japanese spouse?
 
-The Spouse of Japanese National status rests on the marital status of being married to a Japanese national. When divorce or death removes that premise, the status and period of stay are not revoked on the spot. However, if you remain without engaging in activities as a spouse for six months or more without a legitimate reason, the status can become subject to revocation (Immigration Control and Refugee Recognition Act, Article 22-4(1), item 7).
+The status name also covers children of Japanese nationals. This article is about people whose status is based on **marriage**. The 14-day notice deadline and the rule on revocation are different. Living in Japan for six consecutive months or longer without engaging in activities as a spouse, without a justifiable reason, can be grounds for revocation (Article 22-4(1)(vii)). Revocation is not automatic, and six months is not a guaranteed grace period after divorce. Check the expiry date on your residence card now. This ground for revocation excludes a spouse who is also a special adoptee of a Japanese national under Japanese law, or who was born as the child of a Japanese national.
 
-If you want to keep living in Japan, consider changing to another status before the period of stay expires, rather than waiting. Some people qualify for a work status or for Permanent Resident; when those do not fit, Long-Term Resident often serves as the alternative. Long-Term Resident is defined in Appended Table II as "a person who is authorized to reside by the Minister of Justice who designates a period of stay in consideration of special circumstances." The change is made through the application to change the status of residence under Article 20 of the Act, and under Article 20(3) it is granted only where there are reasonable grounds to find the change appropriate. Renewal and change during marriage are covered in [renewing or changing a Spouse of Japanese National visa](https://luck428.com/en/legal/column/nihonjin-haiguusha-biza-zairyu-koshin-henko-chuka-taiwan), and the Dependent status in [Dependent status and off-status work](https://luck428.com/en/legal/column/kazoku-taizai-zairyu-shikakugai-katsudo-28jikan-yobiyose).
+Your current job may qualify you for a work-based status. Your family life, ties to Japan or care of a child may instead make Long-Term Resident worth exploring. Under Article 20 of the Immigration Control Act, a change requires reasonable grounds for granting the new status. Filing the notice alone does not establish those grounds. If you need to change status to continue living in Japan, apply before your current period of stay expires. The 14-day notice does not extend it. Related guides: [renewing or changing a Spouse of Japanese National visa](https://luck428.com/en/legal/column/nihonjin-haiguusha-biza-zairyu-koshin-henko-chuka-taiwan); [Dependent status and off-status work](https://luck428.com/en/legal/column/kazoku-taizai-zairyu-shikakugai-katsudo-28jikan-yobiyose).
 
 ## Which Long-Term Resident categories may be granted (notified and non-notified)?
 
-Long-Term Resident splits into categories listed in the Long-Term Resident Notice (Ministry of Justice Notice No. 132 of 1990) — "notified" categories — and categories not set out in the notice — "non-notified" ones. A former spouse of a Japanese national after divorce or bereavement is not stated squarely in the notice, so in practice this is treated as a non-notified Long-Term Resident. Such cases turn on the Minister's discretionary, case-by-case judgment, as the words "in consideration of special circumstances" in Appended Table II indicate. No numeric threshold, such as the number of years of marriage required for approval, is written in the statute or the notice.
+Japan’s Long-Term Resident notice (Ministry of Justice Notice No. 132 of 1990) lists certain categories of people who may qualify. Divorce or bereavement alone is not a listed category. An application based on the former marriage is assessed individually, taking special circumstances into account. Neither a particular length of marriage nor a particular number of years in Japan guarantees approval.
 
 Notified and non-notified categories differ at the point of entry into the procedure. The table organizes the structural difference; it does not indicate any individual outcome.
 
 | Category | Position | Entry point (general) |
 |---|---|---|
-| Notified Long-Term Resident | Listed in the Long-Term Resident Notice | For calling someone from abroad, a Certificate of Eligibility application can be used |
-| Non-notified (divorce, bereavement, etc.) | Not in the notice; a discretionary, individual judgment | In principle made from within Japan by an application to change status (or to extend the period of stay) |
+| Categories in the notice | Listed in the Long-Term Resident notice | A prospective resident coming from abroad may apply for a Certificate of Eligibility |
+| Cases outside the notice, including some after divorce or bereavement | Individual circumstances are assessed | A person already in Japan applies to change from their current status to Long-Term Resident |
 
-Because the divorce and bereavement categories are not in the notice, they do not fit the framework of calling someone from abroad with a Certificate of Eligibility; typically a person already residing in Japan applies for the change domestically. Which status is appropriate, including work or status-based statuses, is confirmed individually.
+A change to Long-Term Resident based on a former marriage is normally considered through a change-of-status application by someone already in Japan. It is not a way to obtain a Certificate of Eligibility to enter Japan from abroad on the basis of the divorce or death alone.
 
-## What is looked at regarding length of marriage, livelihood and Japanese ability?
+## What evidence helps explain your circumstances?
 
-The judgment on non-notified Long-Term Resident is discretionary, and there are no published statutory pass/fail criteria. Reading the Immigration Services Agency's guidance on Long-Term Resident and the operation of status changes, it is generally explained that the examiner weighs matters comprehensively: your residence record so far (period of stay and fulfilment of notification duties), whether you can support yourself independently, and the degree of your settlement in Japanese society. These are not fixed requirements such as "approval after a set number of years"; the assessment shifts with the facts and the records of each case.
+The agency has published both approvals and refusals. In one approval, the parent had parental authority, was raising a child whose other parent was a Japanese national and earned income from work. In a refusal, the circumstances of the divorce and the applicant’s ties to Japan were relevant. The examples illustrate the evidence considered; they do not establish a required marriage length, salary or language-test score.
 
 The key here is not to assume, on unverified expectations, that "after so many years you will certainly pass." Explain how long the substance of the marriage lasted, your income and assets, and how you have met tax and residence-card notification duties, matching each to records you can confirm. Filling numeric hurdles by guesswork undermines the consistency of your account. Leave points you cannot establish as "unconfirmed," and separate them from what records can support.
 
 ## How do custody and care of a child relate to the residence decision?
 
-A foreign parent who, after divorce, actually has custody of and is raising a child born to a Japanese national (a child with Japanese nationality) may be granted residence as a non-notified Long-Term Resident. This too is discretionary: what is examined is not merely whether you hold parental authority, but whether there is a real situation of living with and caring for the child, and whether you can show that situation.
+If you are raising a minor child in Japan after divorce and the child’s other parent is a Japanese national, document both the parent–child relationship and who actually cares for the child. Having a Japanese parent and the child’s current nationality are separate facts. The entry naming a parent with parental authority does not settle the immigration decision.
 
 | Example of circumstances looked at | Example of how to show it |
 |---|---|
@@ -44,11 +44,11 @@ Disputes and arrangements over the divorce itself — parental authority, custod
 
 ## What is the flow of the change application and the documents needed?
 
-The application to change the status of residence is, in principle, made by the person appearing in person at a Regional Immigration Services Bureau (Immigration Control and Refugee Recognition Act, Article 61-8-3(1), item 3). That said, an employee of the accepting organization, or a lawyer or administrative scrivener who has filed notification through their bar or scrivener association, may submit the documents on the person's behalf (Enforcement Regulation, Article 59-4(2)). Using this submission by proxy, the procedure can proceed without the person appearing each time. Submission by a duly notified administrative scrivener or lawyer is itself subject to conditions.
+For an application at the immigration counter, the applicant ordinarily appears in person (Article 61-8-3(1)(iii)). If you are in Japan and ask a duly notified administrative scrivener or lawyer to submit it as an intermediary, you usually need not attend. Immigration may still require an interview. The exception is Article 61-8-3(4) and Article 59-4(4)(i) of the Enforcement Regulation, referring to Article 59-4(2)(i)(b).
 
 | Step | Content (general flow) |
 |---|---|
-| 1. Review the current situation | Confirm the current status and expiry, the timing of divorce or bereavement, and the state of livelihood and child-rearing |
+| 1. Notify immigration | Within 14 days of the divorce or death, notify the agency online, by post or in person. Check the expiry date on your residence card as well. |
 | 2. Consider the approach | Consider, on the facts, Long-Term Resident (non-notified) or another work/status-based status |
 | 3. Prepare documents | Prepare the application (Form 30), documents showing divorce/bereavement and family relationships, livelihood records, and a statement of reasons |
 | 4. Apply and examine | Apply to the Regional Immigration Services Bureau and respond to requests for additional materials |
@@ -57,21 +57,22 @@ The documents needed differ by case and are not fixed by nationality alone. When
 
 ## FAQ
 
-**Q. Do I have to change my status immediately after divorce?**
-A. Divorce does not automatically cancel your status, but if you do not engage in activities as a spouse for six months or more without a legitimate reason, the status can become subject to revocation (Act, Article 22-4(1), item 7). Consider your approach early, taking the expiry and your life plan into account.
+**Q. Do I have to complete a change of status within 14 days?**
+A. If you are a mid- to long-term resident under “Spouse or Child of Japanese National” on the basis of your marriage, you have 14 days to notify immigration of the divorce or your spouse’s death. A change-of-status application is a separate procedure and need not be filed simultaneously. The notice does not extend your current period of stay or give you six months to remain. If the notice is late, file it promptly.
 
 **Q. I heard "if you were married for X years or more you can get Long-Term Resident." Is that true?**
 A. Non-notified Long-Term Resident is discretionary, and the statute and the notice contain no fixed year criterion. Length of marriage is one factor considered, but it alone does not decide the outcome. Do not proceed on the basis of numbers you cannot verify.
 
 **Q. What if I am raising a child with Japanese nationality?**
-A. A foreign parent who, after divorce, actually has custody of and is raising a Japanese-national child may be granted residence as a non-notified Long-Term Resident. What is examined is not only parental authority but the reality of living together and caring, and the records that show it.
+A. Your child’s Japanese nationality alone does not determine your status. Gather records showing parental authority, the child’s living arrangements, who provides everyday care and who pays the expenses. Immigration considers the individual circumstances.
 
 **Q. How do an administrative scrivener and a lawyer divide the work?**
-A. 四葉行政書士事務所 helps organize records and prepare documents for the change of status and, where the requirements are met, submits the application by proxy. For divorce, custody or division-of-property mediation and litigation, and for inheritance procedures on bereavement, consult a lawyer or other qualified professional. See our [services](https://luck428.com/en/legal/services), [engagement process](https://luck428.com/en/legal/nagare) and [fees](https://luck428.com/en/legal/ryokin).
+A. Yotsuba Administrative Scrivener Office helps organize records and prepare documents for the change of status and, if eligible, submits the application as a duly notified filing intermediary. For divorce, custody or division-of-property mediation and litigation, and for inheritance procedures on bereavement, consult a lawyer or other qualified professional. See our [services](https://luck428.com/en/legal/services), [engagement process](https://luck428.com/en/legal/nagare) and [fees](https://luck428.com/en/legal/ryokin).
 
 ## Primary sources
 
-- [e-Gov: Immigration Control and Refugee Recognition Act (Cabinet Order No. 319 of 1951)](https://laws.e-gov.go.jp/law/326CO0000000319/20261001_508AC0000000032), Article 20 (change of status), Article 22-4(1) item 7 (revocation of status), Article 61-8-3(1) (duty to appear in person), and Appended Table II (Long-Term Resident); version effective 1 October 2026 (Act No. 32 of 2026). [Enforcement Regulation](https://laws.e-gov.go.jp/law/356M50000010054/20261001_508M60000010047), Article 20 (change of status; Form 30) and Article 59-4(2) (submission of applications by proxy); same effective date (Ministry of Justice Ordinance No. 47 of 2026).
-- [Immigration Services Agency: Status of Residence "Long-Term Resident"](https://www.moj.go.jp/isa/applications/status/longtermresident.html); [Long-Term Resident Notice (Ministry of Justice Notice No. 132 of 24 May 1990; last amended by Notice No. 220 of 28 October 2021)](https://www.moj.go.jp/isa/policies/bill/nyukan_hourei_h07-01-01.html) (the notified categories and their position). Sources checked 24 November 2026, Japan time.
+- [Immigration Control Act](https://laws.e-gov.go.jp/law/326CO0000000319): Articles 19-16(iii), 20, 22-4(1)(vii), 61-8-3(1)(iii) and (4); Appended Table II. [Enforcement Regulation](https://laws.e-gov.go.jp/law/356M50000010054): Articles 20 and 59-4(4)(i).
+- Immigration Services Agency: [spouse-related notice](https://www.moj.go.jp/isa/applications/procedures/nyuukokukanri10_00016.html), [notification Q&A](https://www.moj.go.jp/isa/applications/procedures/shozokunikansuru_00001.html) and [change-of-status application](https://www.moj.go.jp/isa/applications/procedures/16-2.html).
+- [Official Long-Term Resident guidance](https://www.moj.go.jp/isa/applications/procedures/zairyu_nintei8_01.html); [ministerial notice, National Diet Library index](https://hourei.ndl.go.jp/simple/detail?current=-1&lawId=0000076366); [decided cases (PDF)](https://www.moj.go.jp/isa/content/930002823.pdf); [an example of refusal](https://www.moj.go.jp/isa/applications/resources/nyukan_nyukan66.html). Checked 25 November 2026.
 
 This article provides general information. Whether a change is granted is decided by the examining authority at its discretion, and a qualified professional must review the facts of an individual application. 四葉行政書士事務所 and 四葉不動産株式会社 are separate entities. A lawyer, tax accountant or other adviser operates as an independent business under a separate engagement. We receive no referral fees. Author: [Joji Uramatsu](https://luck428.com/en/about/uramatsu), administrative scrivener and licensed real estate transaction specialist.
