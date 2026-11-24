@@ -4,6 +4,95 @@ import { LocaleLink as Link } from "@/components/ui/LocaleLink";
 import Image from "next/image";
 import { useTranslation } from "@/hooks/useTranslation";
 import ColumnBody from "@/components/column/ColumnBody";
+import { CONTACT_HREF } from "@/lib/shared/office-public";
+import {
+  ColumnArticleHero,
+  type ColumnArticleHeroIllustration,
+} from "@/components/column/ColumnArticleHero";
+import type { ReactNode } from "react";
+import type { Column, ColumnSummary } from "@/lib/column-shared";
+
+type Props = {
+  column: Column;
+  prev: ColumnSummary | null;
+  next: ColumnSummary | null;
+  illustration: ColumnArticleHeroIllustration;
+  /** 本文直後に差す要素（2026-09-24：コラム→受け皿の「この記事に関係する相談窓口」。page.tsx が ja・対象slugのときだけ渡す） */
+  afterBody?: ReactNode;
+};
+
+// 本文は再投入せず、この繁体字記事の既存の中間CTAだけを差し替える。
+const TAIWAN_SEAL_CONTACT = {
+  beforeHeading: "順序應如何進行？",
+  heading: "用台灣印鑑證明辦理日本的繼承手續",
+  details: "第一次來信時，請說明收件單位（例如日本的銀行或法務局）、要辦理的手續，以及對方指定的文件名稱（如有）。請勿提供證件號碼、銀行帳號或文件影本。",
+  label: "詢問印鑑證明的準備方式",
+  href: CONTACT_HREF.legal,
+};
+
+export default function LegalColumnDetailContent({ column: col, prev, next, illustration, afterBody }: Props) {
+  const { t, locale } = useTranslation();
+
+  return (
+    <>
+      <ColumnArticleHero
+        date={col.date}
+        category={col.category}
+        title={col.title}
+        illustration={illustration}
+      />
+
+      <section className="py-10 sm:py-16 md:py-24">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-12 flex items-center gap-4 border-b border-border pb-8">
+            <div className="h-12 w-12 shrink-0 overflow-hidden rounded-full">
+              <Image src="/uramatsu.png" alt={col.author?.name || t("legal.columnDetail.authorName")} width={48} height={48} className="h-full w-full object-cover" />
+            </div>
+            <div>
+              <p className="text-sm font-bold">{col.author?.name || t("legal.columnDetail.authorName")}</p>
+              <p className="text-xs text-text-muted">{col.author?.title || t("legal.columnDetail.authorTitle")}</p>
+              <a
+                href="https://www.samurai.co.jp/samurai/reserve/uramatsu-joji"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-0.5 inline-block text-xs text-primary hover:text-primary-dark"
+              >
+                {locale === "ja" ? "プロフィール（士業ドットコム）↗" : "Profile (samurai.co.jp) ↗"}
+              </a>
+            </div>
+          </div>
+          <p className="article-summary sr-only">{col.excerpt}</p>
+          <ColumnBody
+            content={col.content}
+            inlineContact={locale === "zh-tw" && col.slug === "taiwan-inkan-shomei-isan-bunkatsu"
+              ? TAIWAN_SEAL_CONTACT : undefined}
+          />
+          {afterBody}
+          <div className="mt-16 grid gap-4 border-t border-border pt-8 sm:grid-cols-2">
+            {prev ? (
+              <Link href={`/legal/column/${prev.slug}`} className="group rounded-lg border border-border bg-surface p-4 transition-all hover:border-primary/30 hover:shadow-md">
+                <p className="text-[10px] text-text-muted">{t("common.prevArticle")}</p>
+                <p className="mt-1 text-sm font-bold leading-relaxed group-hover:text-primary line-clamp-2">{prev.title}</p>
+              </Link>
+            ) : <div />}
+            {next ? (
+              <Link href={`/legal/column/${next.slug}`} className="group rounded-lg border border-border bg-surface p-4 text-right transition-all hover:border-primary/30 hover:shadow-md">
+                <p className="text-[10px] text-text-muted">{t("common.nextArticle")}</p>
+                <p className="mt-1 text-sm font-bold leading-relaxed group-hover:text-primary line-clamp-2">{next.title}</p>
+              </Link>
+            ) : <div />}
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
+"use client";
+
+import { LocaleLink as Link } from "@/components/ui/LocaleLink";
+import Image from "next/image";
+import { useTranslation } from "@/hooks/useTranslation";
+import ColumnBody from "@/components/column/ColumnBody";
 import {
   ColumnArticleHero,
   type ColumnArticleHeroIllustration,
