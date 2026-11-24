@@ -3888,6 +3888,46 @@ const ARTICLES: ArticleSpec[] = [
     localesWithTranslations: ["en", "zh-tw", "zh"],
     hubLinks: ["/souzoku"],
   },
+  {
+    file: "191-chugokugo-buyer-dojou-osen-taisakuho-atochi-dd.md",
+    slug: "chugokugo-buyer-dojou-osen-taisakuho-atochi-dd",
+    title: "工場・クリーニング店の跡地を買うとき、土壌汚染対策法のデューデリで何を確認するか",
+    publishedAt: "2026-11-24",
+    category: "投資・事業用不動産",
+    excerpt:
+      "工場やクリーニング店の跡地を買う前に確認するのは「土壌汚染対策法の調査義務がいつ発生するか（3条の廃止時・4条の形質変更時）」「要措置区域・形質変更時要届出区域に指定されていないか」「調査・対策の費用と期間の見込み」の3点です。実際の土壌汚染状況調査は環境大臣・都道府県知事が指定する調査機関が担い、不動産仲介が汚染の有無を判定するわけではありません。行政手続は行政書士、除去費用の税務は税理士、汚染をめぐる紛争は弁護士へ分離受任で振り分けます。東京都文京区の宅地建物取引士兼行政書士が、中国語圏のプロ買主向けに条文から整理します（各訳版の内部リンクは訳文の言語の絶対URL）。",
+    keywords: [
+      "工場 クリーニング店 跡地 土壌汚染 買主",
+      "土壌汚染対策法 3条 4条 調査義務",
+      "要措置区域 形質変更時要届出区域 指定",
+      "指定調査機関 土壌汚染状況調査",
+      "中国語 買主 跡地 土壌汚染 デューデリ",
+    ],
+    tags: ["投資・事業用不動産", "土壌汚染対策法", "跡地", "中国語"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/toushi"],
+  },
+  {
+    file: "192-chugokugo-buyer-kyokai-mikakutei-chiseki-koseki-dd.md",
+    slug: "chugokugo-buyer-kyokai-mikakutei-chiseki-koseki-dd",
+    title: "境界が未確定の土地を買うとき、筆界・所有権界・地積更正をどう確認するか",
+    publishedAt: "2026-11-24",
+    category: "投資・事業用不動産",
+    excerpt:
+      "境界が未確定の土地を買う前に確認するのは「筆界（登記上の境界）と所有権界（私法上の境界）の違い」「確定測量・筆界確認書・地積測量図の有無」「実測売買か公簿売買か、面積差の精算方法」の3点です。境界確定測量や地積更正登記は土地家屋調査士、所有権移転登記は司法書士、所有権界をめぐる紛争は弁護士、譲渡の税務は税理士へ分離受任で振り分けます。東京都文京区の宅地建物取引士兼行政書士が、中国語圏のプロ買主向けに不動産登記法の条文から整理します（各訳版の内部リンクは訳文の言語の絶対URL）。",
+    keywords: [
+      "境界 未確定 土地 筆界 買主",
+      "筆界 所有権界 違い 不動産登記法123条",
+      "筆界特定 法務局 131条",
+      "地積更正登記 地積測量図 不動産登記規則77条",
+      "実測売買 公簿売買 面積差 精算",
+    ],
+    tags: ["投資・事業用不動産", "筆界", "不動産登記法", "中国語"],
+    locales: ["ja", "en", "zh-tw", "zh"],
+    localesWithTranslations: ["en", "zh-tw", "zh"],
+    hubLinks: ["/toushi"],
+  },
 ];
 
 function toPlainText(md: string): string {

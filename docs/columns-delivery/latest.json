@@ -1,140 +1,126 @@
 {
-  "todayJst": "2026-11-23",
-  "runUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/45059806249",
+  "todayJst": "2026-11-24",
+  "runUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/45290686638",
   "generationStatus": "validated",
   "generatedCount": 6,
   "reviewResult": "success",
   "reviewReportAvailable": true,
-  "reviewPass": true,
+  "reviewPass": false,
   "findings": {
     "blocker": 0,
-    "major": 0,
-    "minor": 5
+    "major": 1,
+    "minor": 0
   },
   "reviewFindings": [
     {
-      "file": "scripts/realestate-columns/en/189-glamping-camp-jo-jigyo-yochi-chosei-kuiki-nochi-shinrin.md",
-      "severity": "minor",
-      "issue": "英訳本文・H2見出しに日本語の「工作物」が未翻訳のまま混在（例: 'buildings or工作物?', 'specified工作物', 'type-2 specified工作物'）。意味は保たれており法的誤りではないが、英語読者向けの体裁上の欠陥。",
-      "fix": "'工作物' を 'structure'（または 'specified structure'）等へ訳出する。日中訳では問題なし。"
-    },
-    {
-      "file": "scripts/labor-columns/en/223-data-center-24ji-kanshi-danzoku-roudo-shukunikkin-roumu.md",
-      "severity": "minor",
-      "issue": "出典節の見出し「## この記事の根拠」が日本語のまま（EN・zh・zh-tw の 223/224 共通）。本文は訳されており内容一致。legal 185/186 では見出しが訳出されているため不統一。",
-      "fix": "見出しを各言語へ訳出（EN: 'Sources' 等）。内容への影響なし。"
-    },
-    {
-      "file": "scripts/labor-columns/zh/223-data-center-24ji-kanshi-danzoku-roudo-shukunikkin-roumu.md",
-      "severity": "minor",
-      "issue": "出典節（line 123付近）に『昭和63年3月14日发基第150号的改正＝基发第150号』という冗長で崩れた訳文の痕跡。zh-tw版は正常（昭和63年3月14日基發第150號）。意味は通じるが文として不自然。",
-      "fix": "zh-tw に合わせ『昭和63年3月14日基发第150号』へ整える。"
-    },
-    {
-      "file": "scripts/labor-columns/224-shurui-seizo-brewery-henkei-roudoujikan-ginoujisshu-roumu.md",
-      "severity": "minor",
-      "issue": "引用する農林水産省FAQの版名『令和8年3月更新版』は公的検索で独立確認できなかった（確認できたのは令和7年2月更新版および2024年12月更新）。ただし中核主張（酒類製造は飲食料品製造業の対象外）は出入国在留管理庁の公式別表『飲食料品（酒類を除く。）』で確認済みのため、主張自体に誤りはない。版名の精度のみの懸念。",
-      "fix": "投入前に農水省FAQ最新版の版名・更新日を実物で再確認し、版名を現行に合わせる。"
-    },
-    {
-      "file": "scripts/labor-columns/223-data-center-24ji-kanshi-danzoku-roudo-shukunikkin-roumu.md",
-      "severity": "minor",
-      "issue": "深夜割増が第41条の適用除外でも免除されない旨の行政解釈番号『昭和23年10月14日基発第1506号』を公的一次資料で直接確認できなかった。結論（監視・断続的労働/宿日直の許可を受けても深夜割増は要支払）は長野・愛知労働局資料で確認済みのため実体に誤りはない。通達番号の精度のみの懸念。",
-      "fix": "厚労省通達データベースで通達番号を実物確認するか、確認できない場合は番号を落として『行政解釈』の記載にとどめる。"
+      "file": "scripts/labor-columns/226-kyugyo-teate-26jo-heikin-chingin-roumu.md",
+      "severity": "major",
+      "issue": "ノースウエスト航空事件の判例引用が誤り。本文および「この記事の根拠」節が、事件番号『昭和57(オ)1189』の最高裁第二小法廷 昭和62年7月17日判決（民集41巻5号1283頁）に対して、『同判決は…中間収入を…平均賃金の6割を超える部分に限られると判示している』と帰属させている。しかし昭和57(オ)1189は部分ストライキによる休業手当請求を棄却した事件であり（請求棄却のため控除対象となる賃金が存在しない）、中間収入控除（6割を超える部分に限る）の判旨は含まない。中間収入控除の判旨は同日・同名の別判決（解雇期間中のバックペイ事案・民集41巻5号1350頁）のものである。e-Gov/裁判例検索・判例解説で事件番号と争点を確認し、1189号には当該判旨がないことを裏取りした。第26条が民法536条2項より広いとの判旨は1189号で正しい。英・中（簡体・繁体）訳にも本文が同一内容で反映されている（訳文には事件番号の括弧書きはなく日付のみ）。『書かれていない事実（当該事件番号に存在しない判旨）』の付与に該当する。",
+      "fix": "中間収入控除の判旨を引く箇所では事件番号『昭和57(オ)1189』を外すか、当該判旨を含む同日の別判決（民集41巻5号1350頁）に明示的に差し替える。例：第26条との広狭関係＝昭和57(オ)1189（民集41-5-1283）、中間収入控除＝昭和62年7月17日 別判決（民集41-5-1350）と2件を分けて引用する。日本語本文・根拠節・4言語訳の該当箇所を揃えて修正する。"
     }
   ],
-  "registeredCount": 3,
-  "qualityEligibleCount": 3,
-  "heldCount": 3,
+  "registeredCount": 0,
+  "qualityEligibleCount": 0,
+  "heldCount": 6,
   "scheduledCount": 0,
   "unverifiedSourceCount": 3,
   "publishedCount": null,
   "articles": [
     {
-      "key": "realestate:glamping-camp-jo-jigyo-yochi-chosei-kuiki-nochi-shinrin",
-      "fingerprint": "97b8f13c7d05c92437d1a5aa4444263ca33384dbc38f6a229528c4d732aa8d36",
-      "title": "グランピング・キャンプ場の事業用地は、市街化調整区域・農地・山林でどの許可が要る？",
+      "key": "realestate:chugokugo-buyer-dojou-osen-taisakuho-atochi-dd",
+      "fingerprint": "06fdbb6cb782e4b46d8640d93387b4e536d314ceb906089596a3f9f18aa38494",
+      "title": "工場・クリーニング店の跡地を買うとき、土壌汚染対策法のデューデリで何を確認するか",
       "registered": false,
       "state": "held",
       "reasons": [
         "公開レビュー記録が未登録です",
-        "確認済みの公的な一次根拠が不足しています"
+        "独立レビューに未解決の重大な指摘があります"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "realestate:chugokugo-buyer-kyokai-mikakutei-chiseki-koseki-dd",
+      "fingerprint": "1868beb956ccf06eed8afb0335a4c36b090062c02fb6ffcc9b39f8b4ea8dac6c",
+      "title": "境界が未確定の土地を買うとき、筆界・所有権界・地積更正をどう確認するか",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録です",
+        "独立レビューに未解決の重大な指摘があります"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:teiju-sha-kokuji-rikon-shibetsu-zairyu-henko-chuka-taiwan",
+      "fingerprint": "cefc21204222b2948f17c5a580c9698435ab98c0bd2f530e6608eed0a390c36f",
+      "title": "日本人配偶者と離婚・死別したら在留資格はどうなる？「定住者」への変更（告示外定住）",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録です",
+        "独立レビューに未解決の重大な指摘があります"
       ],
       "sourceFailures": [
         {
-          "url": "https://laws.e-gov.go.jp/law/343AC0000000100",
-          "checkedAt": "2026-11-22",
-          "relevantClaim": "都市計画法 第4条(特定工作物・開発行為の定義)・第29条(開発許可)・第34条(調整区域立地基準)・第43条。第二種特定工作物は原則1ha以上(施行令第1条)。確立した条文で本文と整合。",
+          "url": "https://www.moj.go.jp/isa/policies/bill/nyukan_hourei_h07-01-01.html",
+          "checkedAt": "2026-11-24",
+          "relevantClaim": "定住者告示(平成2年法務省告示第132号・最近改正 令和3年第220号)および第61条の8の3第1項(本人出頭義務)・施行規則第59条の4第2項(弁護士・行政書士による申請取次)の各番号は、入管法本文で別表第二の定住者が告示で定める旨を確認した一方、告示本文および2026年10月1日施行版の第61条の8の3・第59条の4の個別条番号は本審査で直接取得できず未確認。英訳も同一の番号・趣旨で記載。読者の法的地位に直結する重大事項ではなく、核となる第20条・第22条の4は裏取り済み。",
           "verified": false
         }
       ],
       "sourceEvidenceAvailable": true
     },
     {
-      "key": "realestate:souzoku-zei-butsunou-fudosan-kanri-shobun-futekikaku-yoken",
-      "fingerprint": "75d626ac744b80690c9f6fe98665f0cab50436a2b9c71aa9d672db30edc696d3",
-      "title": "相続税を不動産で物納するには何が要件か？管理処分不適格財産と境界確定",
-      "registered": true,
-      "state": "quality-eligible",
-      "reasons": [],
-      "sourceFailures": [],
-      "sourceEvidenceAvailable": true
-    },
-    {
-      "key": "legal:denki-tsushin-jigyo-todokede-gyosha-touroku-chigai",
-      "fingerprint": "657a82be7943ace107f1999e2751e624519f30c799e26b36b05da49cfcf9116b",
-      "title": "電気通信事業は届出か登録か—オンラインサービス・ISP開業の手続",
+      "key": "legal:koueki-nintei-shinsei-koueki-shadan-zaidan-youken",
+      "fingerprint": "a98597e4c9e211bf8abaacdb39d03df15c7bdbc0f32dd09621fe4f1bf4e1e57f",
+      "title": "公益認定とは何か──一般社団・財団から公益法人になる要件と2024年改正",
       "registered": false,
       "state": "held",
       "reasons": [
         "公開レビュー記録が未登録です",
-        "確認済みの公的な一次根拠が不足しています"
+        "独立レビューに未解決の重大な指摘があります"
       ],
       "sourceFailures": [
         {
-          "url": "https://laws.e-gov.go.jp/law/359AC0000000086",
-          "checkedAt": "2026-11-22",
-          "relevantClaim": "電気通信事業法 第9条(登録)・第16条(届出)・第2条(定義)・第164条(第三号事業の適用除外)。本文の区分と整合（確立した条文）。",
+          "url": "https://www.koeki-info.go.jp/",
+          "checkedAt": "2026-11-24",
+          "relevantClaim": "2024年改正＝令和6年法律第29号(令和6年5月22日公布・主要規定2025年4月1日施行)の改正概要および収支相償・遊休財産規制の見直し。e-Gov現行条文(第14条・第16条)で改正後の枠組みは確認済みだが、公布日・施行日の官報／内閣府資料本体は本審査で直接取得せず未確認。",
           "verified": false
         }
       ],
       "sourceEvidenceAvailable": true
     },
     {
-      "key": "legal:kihatsuyu-hanbaigyo-touroku-hinkakuho-kikenbutsu-ss",
-      "fingerprint": "b046825e51060d3316f452bd67142b18c4b9cd37f864afaedb4eedc8f214a259",
-      "title": "ガソリンスタンド開業に要る揮発油販売業者登録（品確法）と危険物施設の設置許可",
-      "registered": true,
-      "state": "quality-eligible",
-      "reasons": [],
-      "sourceFailures": [],
-      "sourceEvidenceAvailable": true
-    },
-    {
-      "key": "labor:data-center-24ji-kanshi-danzoku-roudo-shukunikkin-roumu",
-      "fingerprint": "c581bf5541bab29d6572a20d94d892a4d1b1048a64365e4af103004066e5edde",
-      "title": "データセンターの24時間監視要員は断続的労働か。宿日直許可と労働時間をどう扱うのか",
-      "registered": true,
-      "state": "quality-eligible",
-      "reasons": [],
-      "sourceFailures": [],
-      "sourceEvidenceAvailable": true
-    },
-    {
-      "key": "labor:shurui-seizo-brewery-henkei-roudoujikan-ginoujisshu-roumu",
-      "fingerprint": "6140cc168b5a486c95f1f12e26739031b28ebd7132484e98ea3aee9e716311ba",
-      "title": "クラフトビール醸造所・酒類製造所の労務は、繁忙期の変形労働と外国人受入でどこに注意するのか",
+      "key": "labor:kahansu-daihyosha-tekisei-sensyutsu-roushi-kyotei",
+      "fingerprint": "2e09d1cb3684bd393dca67258d4c229707d57f903b9875d7f06be1c855f388b7",
+      "title": "過半数代表者はどう選ぶのか──36協定や就業規則の届出が無効にならない選出手続",
       "registered": false,
       "state": "held",
       "reasons": [
         "公開レビュー記録が未登録です",
-        "確認済みの公的な一次根拠が不足しています"
+        "独立レビューに未解決の重大な指摘があります"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:kyugyo-teate-26jo-heikin-chingin-roumu",
+      "fingerprint": "7cb17b2ea07f8cb530b4d0666dabd900558b019521f9dbc6668f919e00704fa9",
+      "title": "休業させるとき手当はいくらか──労働基準法第26条の6割と不可抗力の線引き",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録です",
+        "候補指紋と修正後原稿が一致しません",
+        "独立レビューの証跡不足、重複、またはレビュー後の原稿変更"
       ],
       "sourceFailures": [
         {
-          "url": "https://www.maff.go.jp/j/shokusan/sanki/soumu/tokuteiginou.html",
-          "checkedAt": "2026-11-22",
-          "relevantClaim": "農林水産省 特定技能 飲食料品製造業分野FAQページ。酒類除外の根拠として引用。ただし本文が引く『令和8年3月更新版』の版名は未確認(確認できたのは令和7年2月版・2024年12月更新)。主張自体は上記ISA別表で確認済み。",
+          "url": "https://www.courts.go.jp/",
+          "checkedAt": "2026-11-24",
+          "relevantClaim": "ノースウエスト航空事件 最高裁第二小法廷 昭和62年7月17日。事件番号 昭和57(オ)1189(民集41巻5号1283頁)は部分ストライキによる非スト労働者の休業手当請求を棄却した判決で、『第26条の使用者の責に帰すべき事由は民法536条2項より広い』旨を判示（この帰属は本文と一致＝正しい）。一方、本文が同事件番号に帰属させる『中間収入控除は平均賃金の6割を超える部分に限る』の判旨は同事件番号には存在せず、同日の別判決(解雇バックペイ事案・民集41巻5号1350頁)のもの。請求棄却事件に控除対象賃金は生じないため論理的にも1189号に当該判旨はない。本文（4言語）および日本語『根拠』節の帰属が一次記録と不一致。",
           "verified": false
         }
       ],
