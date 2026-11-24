@@ -11,6 +11,10 @@ import { addLocalePrefix } from "@/lib/locale";
 import { CONTACT_HREF, OFFICE } from "@/lib/shared/office-public";
 import { StickyContactCta, InlineContactCta } from "../ContactCta";
 import ColumnBody from "@/components/column/ColumnBody";
+import LegalColumnDetailContent from "@/app/[locale]/(legal)/legal/column/[slug]/LegalColumnDetailContent";
+import { TAIWAN_LEGAL_COLUMNS_SEED } from "@/lib/data/taiwan-legal-columns-seed";
+import { getLocalizedColumn, type Column } from "@/lib/column-shared";
+import type { LangCode } from "@/config/languages";
 
 const state = vi.hoisted(() => ({ pathname: "/column/test", locale: "ja" }));
 vi.mock("next/navigation", () => ({ usePathname: () => state.pathname }));
@@ -101,6 +105,46 @@ describe("mainland inheritance article contact", () => {
         expect(html).toContain('href="' + addLocalePrefix("/line", locale) + '"');
         expect(html).not.toContain("?intent=souzoku-legal");
       }
+    }
+  });
+});
+
+describe("Taiwan seal article inline contact", () => {
+  const slug = "taiwan-inkan-shomei-isan-bunkatsu";
+  const seed = TAIWAN_LEGAL_COLUMNS_SEED.find((article) => article.slug === slug)!;
+  function renderArticle(locale: LangCode, article: Column) {
+    state.locale = locale;
+    state.pathname = addLocalePrefix("/legal/column/" + article.slug, locale);
+    return renderToStaticMarkup(createElement(LegalColumnDetailContent, {
+      column: article, prev: null, next: null,
+      illustration: { src: "/illustration.png", alt: "", source: "test", theme: "test" },
+    }));
+  }
+  it("replaces just the generic mid-article block, directly after the recipient distinction", () => {
+    const html = renderArticle("zh-tw", getLocalizedColumn(seed, "zh-tw"));
+    const blocks = html.match(/<section [^>]*data-contact-cta="mid_article"[\s\S]*?<\/section>/g) ?? [];
+    expect(blocks).toHaveLength(1);
+    expect(blocks[0]?.match(/href="[^"]+"/g)).toEqual(['href="/zh-tw/legal/contact"']);
+    expect(blocks[0]).toContain("請勿提供證件號碼、銀行帳號或文件影本");
+    expect(html).toMatch(/接受何者而定。<\/p>\s*<section [^>]*data-contact-cta="mid_article"/);
+    expect(html).toMatch(/<\/section>\s*<h2>順序應如何進行？<\/h2>/);
+    expect(html).not.toContain(CONTACT_CTA_COPY["zh-tw"].inlineBody.legal);
+    expect(renderToStaticMarkup(createElement(StickyContactCta, { businessKey: "legal" }))).toContain('href="/zh-tw/line"');
+  });
+  it("still renders one contextual block if the editor renames the heading", () => {
+    const article = getLocalizedColumn(seed, "zh-tw");
+    const html = renderArticle("zh-tw", { ...article, content: article.content.replace("## 順序應如何進行？", "## 辦理步驟") });
+    expect(html.match(/data-contact-cta="mid_article"/g)).toHaveLength(1);
+    expect(html).toContain("詢問印鑑證明的準備方式");
+    expect(html).toContain("<h2>辦理步驟</h2>");
+  });
+  it("preserves the original rendered body for other editions and the other Taiwan article", () => {
+    const other = TAIWAN_LEGAL_COLUMNS_SEED.find((article) => article.slug !== slug)!;
+    for (const [locale, source] of [["ja", seed], ["en", seed], ["zh", seed], ["zh-tw", other]] as const) {
+      const article = getLocalizedColumn(source, locale);
+      const html = renderArticle(locale, article);
+      expect(html).toContain(renderToStaticMarkup(createElement(ColumnBody, { content: article.content })));
+      expect(html).toContain(CONTACT_CTA_COPY[locale].inlineBody.legal);
     }
   });
 });

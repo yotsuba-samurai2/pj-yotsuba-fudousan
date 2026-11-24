@@ -4,6 +4,7 @@ import { LocaleLink as Link } from "@/components/ui/LocaleLink";
 import Image from "next/image";
 import { useTranslation } from "@/hooks/useTranslation";
 import ColumnBody from "@/components/column/ColumnBody";
+import { CONTACT_HREF } from "@/lib/shared/office-public";
 import {
   ColumnArticleHero,
   type ColumnArticleHeroIllustration,
@@ -18,6 +19,15 @@ type Props = {
   illustration: ColumnArticleHeroIllustration;
   /** 本文直後に差す要素（2026-09-24：コラム→受け皿の「この記事に関係する相談窓口」。page.tsx が ja・対象slugのときだけ渡す） */
   afterBody?: ReactNode;
+};
+
+// 本文は再投入せず、この繁体字記事の既存の中間CTAだけを差し替える。
+const TAIWAN_SEAL_CONTACT = {
+  beforeHeading: "順序應如何進行？",
+  heading: "用台灣印鑑證明辦理日本的繼承手續",
+  details: "第一次來信時，請說明收件單位（例如日本的銀行或法務局）、要辦理的手續，以及對方指定的文件名稱（如有）。請勿提供證件號碼、銀行帳號或文件影本。",
+  label: "詢問印鑑證明的準備方式",
+  href: CONTACT_HREF.legal,
 };
 
 export default function LegalColumnDetailContent({ column: col, prev, next, illustration, afterBody }: Props) {
@@ -52,7 +62,11 @@ export default function LegalColumnDetailContent({ column: col, prev, next, illu
             </div>
           </div>
           <p className="article-summary sr-only">{col.excerpt}</p>
-          <ColumnBody content={col.content} />
+          <ColumnBody
+            content={col.content}
+            inlineContact={locale === "zh-tw" && col.slug === "taiwan-inkan-shomei-isan-bunkatsu"
+              ? TAIWAN_SEAL_CONTACT : undefined}
+          />
           {afterBody}
           <div className="mt-16 grid gap-4 border-t border-border pt-8 sm:grid-cols-2">
             {prev ? (

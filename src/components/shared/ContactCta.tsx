@@ -102,18 +102,21 @@ export function StickyContactCta({ businessKey }: { businessKey: BusinessKey }) 
   );
 }
 
+export type InlineContact = { heading: string; details: string; label: string; href: string };
+
 /** 記事中の1か所に置く補助導線。料金・無料・即時返信は約束しない。 */
-export function InlineContactCta({ businessKey }: { businessKey: BusinessKey }) {
+export function InlineContactCta({ businessKey, articleContact }: { businessKey: BusinessKey; articleContact?: InlineContact }) {
   const { copy, hrefs, track, mainlandContact } = useContactActions(businessKey, "mid_article");
-  if (mainlandContact) {
+  const contact = articleContact ?? mainlandContact;
+  if (contact) {
     return (
-      <section className={"not-prose " + styles.inline} aria-label={mainlandContact.heading} data-contact-cta="mid_article" data-nosnippet="">
-        <p className={styles.inlineHeading}>{mainlandContact.heading}</p>
-        <p className={styles.inlineBody}>{mainlandContact.details}</p>
+      <section className={"not-prose " + styles.inline} aria-label={contact.heading} data-contact-cta="mid_article" data-nosnippet="">
+        <p className={styles.inlineHeading}>{contact.heading}</p>
+        <p className={styles.inlineBody}>{contact.details}</p>
         <div className={styles.inlineActions}>
-          <Link href={mainlandContact.href} onClick={() => track("contact")} className={styles.primary}>
+          <Link href={contact.href} onClick={() => track("contact")} className={styles.primary}>
             <Mail size={20} aria-hidden="true" />
-            <span>{mainlandContact.label}</span>
+            <span>{contact.label}</span>
           </Link>
         </div>
       </section>
