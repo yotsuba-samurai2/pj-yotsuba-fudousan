@@ -2683,5 +2683,107 @@ export const COLUMNS_AUTOPUBLISH_REVIEWS: readonly ColumnQualityReview[] = [
     },
     "reviewedAt": "2026-11-25",
     "validThrough": "2026-11-27"
+  },
+  {
+    "key": "legal:teiju-sha-kokuji-rikon-shibetsu-zairyu-henko-chuka-taiwan",
+    "fingerprint": "fcb0ce4ca505ffe7f93d4b306b16ec20dd8b4c6c0300022ba96e9a3cb0701776",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.moj.go.jp/isa/content/001361043.pdf",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "離婚・死別に伴う配偶者の届出は14日以内。届出は在留許可を与える手続ではない。",
+        "verified": true
+      },
+      {
+        "url": "https://www.moj.go.jp/isa/content/930002823.pdf",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "本文の法22条の4第1項7号、配偶者の活動を行わない6か月・正当理由、法20条の裁量。許可例1・7及び不許可例、類似事案でも結論が異なることを確認。",
+        "verified": true
+      },
+      {
+        "url": "https://www.moj.go.jp/isa/content/001448099.pdf",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "入管の申請等取次制度資料。法定代理人と届出済みの取次者を区別し、本人出頭の原則と取次の関係を確認。",
+        "verified": true
+      },
+      {
+        "url": "https://www.moj.go.jp/content/001441435.pdf",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "100～101頁の告示列挙と特別な事情による告示外の区別。日本人等との離婚・死別後、実子扶養等で在留を希望する場合の例示であって許可は保証されない。",
+        "verified": true
+      },
+      {
+        "url": "https://www.moj.go.jp/isa/content/930004563.pdf",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "資料編4裁判例4、179～181頁の日本人の実子を扶養する外国人親の取扱い。子自身の国籍と出生時の親の国籍、親子関係・実際の養育の区別。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/pull/538"
+    },
+    "reviewedAt": "2026-11-25",
+    "validThrough": "2026-11-27"
+  },
+  {
+    "key": "labor:kahansu-daihyosha-tekisei-sensyutsu-roushi-kyotei",
+    "fingerprint": "ac6d393072b05d769d663e19362bd733acdaa7ce6d205f7fcb13aea9b60c83ac",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.mhlw.go.jp/web/t_doc_keyword?dataId=73023000&dataType=0&keyword=%E5%8A%B4%E5%83%8D%E5%9F%BA%E6%BA%96%E6%B3%95%E6%96%BD%E8%A1%8C%E8%A6%8F%E5%89%87&mode=0&pageNo=1",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "労基則6条の2の本文を確認。管理監督者でないこと・目的を明示した選出・使用者の意向によらないこと。全員が管理監督者の場合の2項の列挙に36条はない。",
+        "verified": true
+      },
+      {
+        "url": "https://www.mhlw.go.jp/content/11201250/001504157.pdf",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "行政の選出資料本文：パート等を含む事業場全労働者が参加、過半数の支持を確認、会社指名は認められない。",
+        "verified": true
+      },
+      {
+        "url": "https://www.mhlw.go.jp/web/t_doc?dataId=00tb8530&dataType=1&pageNo=1",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "労働契約法10条に関する行政解説：労基法89・90条の手続は同条の効果発生要件ではない。就業規則は意見聴取と実体的効力を区別。",
+        "verified": true
+      },
+      {
+        "url": "https://www.mhlw.go.jp/content/000709033.pdf",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "36協定を労使で締結することと、届出書自体の押印・署名の要否を区別する厚労省資料。",
+        "verified": true
+      },
+      {
+        "url": "https://www.mhlw.go.jp/content/11201250/001194506.pdf",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "82頁のトーコロ事件整理を開いて確認：親睦会の代表が当然に過半数代表者であるということにはならない。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/pull/538"
+    },
+    "reviewedAt": "2026-11-25",
+    "validThrough": "2026-11-27"
   }
 ];
