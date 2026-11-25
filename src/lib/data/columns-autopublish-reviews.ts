@@ -2785,5 +2785,68 @@ export const COLUMNS_AUTOPUBLISH_REVIEWS: readonly ColumnQualityReview[] = [
     },
     "reviewedAt": "2026-11-25",
     "validThrough": "2026-11-27"
+  },
+  {
+    "key": "legal:koueki-nintei-shinsei-koueki-shadan-zaidan-youken",
+    "fingerprint": "83ca1995286970ebca5b4d1cac8ae5a698537934db704f7c973e1c22b3cdb521",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://laws.e-gov.go.jp/law/418AC0000000049",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "公益認定法の行政庁・認定基準・財務規律・提出・監督及び取消しの規定。",
+        "verified": true
+      },
+      {
+        "url": "https://www.moj.go.jp/MINJI/minji153.html",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "一般社団・一般財団の定款認証を含む設立手続と一般財団の財産拠出。",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/law/418AC0000000048",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "一般法人法による法定会計監査人の資格と一般財団への準用。",
+        "verified": true
+      },
+      {
+        "url": "https://www.sangiin.go.jp/japanese/joho1/kousei/gian/213/meisai/m213080213044.htm",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "改正法の公布日と法律番号。",
+        "verified": true
+      },
+      {
+        "url": "https://www.koeki-info.go.jp/commissions/documents/mqi2l560ib.pdf",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "改正法の施行日を定める政令。",
+        "verified": true
+      },
+      {
+        "url": "https://www.koeki-info.go.jp/regulations/documents/byxewbt1b9.pdf",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "中期的収支均衡、予備財産および2025年改正財務規律。",
+        "verified": true
+      },
+      {
+        "url": "https://www.koeki-info.go.jp/activities/documents/9q32cxyfz2.pdf",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "公益認定申請の窓口、必要資料及び審査の手引。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/pull/540"
+    },
+    "reviewedAt": "2026-11-25",
+    "validThrough": "2026-11-27"
   }
 ];
