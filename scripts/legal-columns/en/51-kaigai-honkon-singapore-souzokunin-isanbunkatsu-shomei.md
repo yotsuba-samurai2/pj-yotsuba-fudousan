@@ -75,6 +75,12 @@ A. An estate division agreement submitted to a Japanese destination is drawn up 
 **Q. The heirs cannot agree on how to divide. Can I ask an administrative scrivener to negotiate?**
 A. Agency in disputed negotiation, mediation or litigation is the work of a lawyer; an administrative scrivener does not do it. Our office handles putting into writing content already agreed. If there is a dispute, consult a lawyer; for inheritance registration, a judicial scrivener; for inheritance tax, a tax accountant — each as an independent business under a separate contract. Our office receives no referral fee.
 
+## Further reading: when the estate includes assets in Singapore
+
+This column covers documents that heirs living in Hong Kong or Singapore submit in Japan. If the estate includes bank accounts, shares or real estate in Singapore, Zenbridge Law LLC explains wills covering Singapore assets and local estate administration after a death. Use its guide to understand the Singapore side of the process, not to determine which signature documents a Japanese authority or bank will accept.
+
+Source (in English)：Zenbridge Law LLC, [Cross-Border Wills and Probate in Singapore](https://zenbridgelaw.com/cross-border-wills-probate-singapore/)（accessed 2026-11-25）
+
 ## Sources (Primary Information)
 
 - [Singapore Academy of Law (SAL): Notarial certificate authentication from 16 September 2021](https://legalisation.sal.sg/App/Templates/NPFAQs_Sep2021.pdf) (accessed 23 November 2026)
