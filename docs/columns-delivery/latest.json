@@ -1,6 +1,6 @@
 {
-  "todayJst": "2026-11-25",
-  "runUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/45498346722",
+  "todayJst": "2026-11-26",
+  "runUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/45704422511",
   "generationStatus": "validated",
   "generatedCount": 6,
   "reviewResult": "success",
@@ -12,17 +12,17 @@
     "minor": 0
   },
   "reviewFindings": [],
-  "registeredCount": 5,
-  "qualityEligibleCount": 5,
-  "heldCount": 1,
+  "registeredCount": 3,
+  "qualityEligibleCount": 3,
+  "heldCount": 3,
   "scheduledCount": 0,
   "unverifiedSourceCount": 0,
   "publishedCount": null,
   "articles": [
     {
-      "key": "realestate:shokuniku-hanbaigyo-eigyo-kyoka-bukken-setsubi-kijun",
-      "fingerprint": "a4d6b7d9c556c61d0a06f33ea17cf9e7e70304142ccffa215eabc4fa0ea31b48",
-      "title": "食肉販売業の営業許可と物件選び——保健所の施設基準・冷蔵区画・給排水",
+      "key": "realestate:sanpai-chukan-shori-hasai-shisetsu-bukken-ricchi-youken",
+      "fingerprint": "095572bff021b26ff35941ed592eb671e0f741dd8d55e9bafcb04dfa69bd565a",
+      "title": "産廃の中間処理（破砕・選別）施設を開く物件：立地と都市計画でつまずかないために",
       "registered": true,
       "state": "quality-eligible",
       "reasons": [],
@@ -30,9 +30,9 @@
       "sourceEvidenceAvailable": true
     },
     {
-      "key": "realestate:chugokugo-buyer-jikobukken-shinriteki-kashi-kokuchi-dd",
-      "fingerprint": "fedd709501157e6def7795bcd28fb42313a8a3c381f3b052c70817f0b6edbe05",
-      "title": "中国語buyer向け——『告知事項あり』物件（心理的瑕疵）のデューデリジェンス",
+      "key": "realestate:chugokugo-buyer-saikenchiku-fuka-sesshado-43jo-dd",
+      "fingerprint": "06892feb1072e936b58675805d482f381685c27fed4e190f083a6c95b82f2020",
+      "title": "中国語で検討する日本の『再建築不可』物件：接道義務と43条の但し書きのデューデリジェンス",
       "registered": true,
       "state": "quality-eligible",
       "reasons": [],
@@ -40,19 +40,9 @@
       "sourceEvidenceAvailable": true
     },
     {
-      "key": "realestate:chugokugo-pro-sublease-master-lease-shoukei-kaiyaku-dd",
-      "fingerprint": "a8d1f218f65ecb11811a575ebf963231741f699fcb58318ad5aaf4383d0d2ab3",
-      "title": "中国語プロ向け——サブリース付き収益物件を買うときの承継・解約DD（2020賃貸住宅管理業法）",
-      "registered": true,
-      "state": "quality-eligible",
-      "reasons": [],
-      "sourceFailures": [],
-      "sourceEvidenceAvailable": true
-    },
-    {
-      "key": "legal:himitsu-shosho-yuigon-970jo-houshiki-tsukaiwake",
-      "fingerprint": "d298e394f5ffb1eb49cd62479bdc636a29aade49db8d82a080098c028462177a",
-      "title": "秘密証書遺言の方式と使い分け（民法970条）――自筆証書・公正証書とどう違い、方式不備ならどうなりますか",
+      "key": "legal:harikyu-massage-sejutsujo-kaisetsu-todokede-kozo-setsubi",
+      "fingerprint": "5fcc0c41a1b1804555ef2accb0579484310a2690b2f1576821b20c6a802242e0",
+      "title": "はり・きゅう・あん摩マッサージ指圧の施術所を開く：開設届と構造設備基準",
       "registered": false,
       "state": "held",
       "reasons": [
@@ -63,9 +53,9 @@
       "sourceEvidenceAvailable": true
     },
     {
-      "key": "labor:chuzaiin-jimusho-chuka-taiwan-shakaihoken-tekiyo-higaitou",
-      "fingerprint": "f4633f073b821c42877bdf30a2bd267b8b4a8998e3a33192f8183be2072a8e64",
-      "title": "駐在員事務所の社会保険・労働保険──中国・台湾本社から日本に置く非登記拠点",
+      "key": "legal:kigyonai-tenkin-zairyu-chuka-taiwan-chuzaiin-yobiyose",
+      "fingerprint": "32acc0c3d332bed63f7f6c8840a510c2eb54fa70abe364470b84750a975e96b5",
+      "title": "中国・台湾の親会社から駐在員を呼ぶ：「企業内転勤」の在留資格と手続",
       "registered": true,
       "state": "quality-eligible",
       "reasons": [],
@@ -73,12 +63,28 @@
       "sourceEvidenceAvailable": true
     },
     {
-      "key": "labor:shift-sei-roudou-keiyaku-saitei-hosho-jikan-kyugyo-teate",
-      "fingerprint": "aae9e377c6c1441bf802182d839806ba51b709894a672872c5269f940d09a6e0",
-      "title": "シフト制労働契約の実務──労働条件明示・一方的なシフト削減と休業手当",
-      "registered": true,
-      "state": "quality-eligible",
-      "reasons": [],
+      "key": "labor:bakery-yougashi-seizo-soucho-henkei-roudoujikan-roumu",
+      "fingerprint": "e0d14b83c3970b9b2f405da92e5446d892de5bdd6dc2e06837d4d329fba9584a",
+      "title": "パン・洋菓子の店を開く──早朝勤務・変形労働時間制・固定残業代の設計",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録です",
+        "確認済みの公的な一次根拠が不足しています"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:ginou-zairyu-chuka-cook-koyo-shakaihoken-saitei-chingin-roumu",
+      "fingerprint": "c5152e23aa2699830572acb8ecd64f63fa6d06fc3352a171c6c235fe14d11248",
+      "title": "中華・台湾料理店で外国人コックを雇う──在留資格「技能」の労務・社会保険・最低賃金",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録です",
+        "確認済みの公的な一次根拠が不足しています"
+      ],
       "sourceFailures": [],
       "sourceEvidenceAvailable": true
     }

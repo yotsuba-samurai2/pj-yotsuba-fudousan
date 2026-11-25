@@ -82,6 +82,21 @@ const AUTHOR = {
 
 /** 各記事が評価を集約すべきハブ（本文に必須の内部リンク）。verify() で機械検査する */
 const REQUIRED_HUB_LINKS: Record<string, string[]> = {
+  "harikyu-massage-sejutsujo-kaisetsu-todokede-kozo-setsubi": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/shinryojo-kaisetsu-todokede-iryoho-8jo",
+    "/legal/column/biyoushojo-kaisetsu-todokede-kozo-setsubi-kijun",
+  ],
+  "kigyonai-tenkin-zairyu-chuka-taiwan-chuzaiin-yobiyose": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/services/visa",
+    "/legal/column/zairyu-shikaku-nintei-shomeisho-fukoufu-saishinsei-chuka-taiwan",
+    "/legal/column/kodo-senmonshoku-1go-point-keisan-chuka-taiwan",
+  ],
   "himitsu-shosho-yuigon-970jo-houshiki-tsukaiwake": [
     "/legal/services",
     "/legal/nagare",
@@ -1642,6 +1657,28 @@ function matchesRequiredPhrase(content: string, phrase: string): boolean {
 
 /** 記事ごとに必ず含めるべき表現（機械ゲート。最低限の合否判定） */
 const REQUIRED_PHRASES: Record<string, string[]> = {
+  "harikyu-massage-sejutsujo-kaisetsu-todokede-kozo-setsubi": [
+    "あん摩マツサージ指圧師、はり師、きゆう師等に関する法律",
+    "第9条の2",
+    "第9条の5",
+    "施行規則第25条",
+    "柔道整復師法",
+    "別々にご契約",
+    "独立した事業体",
+    "別事業体",
+    "紹介料を受け取りません",
+  ],
+  "kigyonai-tenkin-zairyu-chuka-taiwan-chuzaiin-yobiyose": [
+    "出入国管理及び難民認定法",
+    "別表第1の2",
+    "上陸許可基準省令",
+    "第7条の2",
+    "企業内転勤",
+    "別々にご契約",
+    "独立した事業体",
+    "別事業体",
+    "紹介料を受け取りません",
+  ],
   "himitsu-shosho-yuigon-970jo-houshiki-tsukaiwake": [
     "民法第970条",
     "民法第971条",
@@ -4737,6 +4774,8 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
 
 /** 記事ごとに含めてはならない表現 */
 const FORBIDDEN_PHRASES: Record<string, string[]> = {
+  "harikyu-massage-sejutsujo-kaisetsu-todokede-kozo-setsubi": [],
+  "kigyonai-tenkin-zairyu-chuka-taiwan-chuzaiin-yobiyose": [],
   "himitsu-shosho-yuigon-970jo-houshiki-tsukaiwake": [],
   "tokutei-jido-unko-level4-kyoka-doukouhou-2023-shinsei": [],
   "zairyu-shikaku-nintei-shomeisho-fukoufu-saishinsei-chuka-taiwan": [],
@@ -4989,6 +5028,60 @@ const ARTICLES: Array<{
   keywords: string[];
   tags: string[];
 }> = [
+  {
+    file: "190-harikyu-massage-sejutsujo-kaisetsu-todokede-kozo-setsubi.md",
+    slug: "harikyu-massage-sejutsujo-kaisetsu-todokede-kozo-setsubi",
+    date: "2026-11-25",
+    title:
+      "はり・きゅう・あん摩マッサージ指圧の施術所を開く：開設届と構造設備基準",
+    category: "許認可の手続き（行政書士の実務から）",
+    excerpt:
+      "はり・きゅう・あん摩マッサージ指圧の施術所を開設したら、開設後10日以内に、開設の場所や業務に従事する施術者の氏名などを施術所の所在地の都道府県知事（保健所を設置する市・特別区では市長・区長）へ届け出ます（あん摩マツサージ指圧師、はり師、きゆう師等に関する法律第9条の2第1項）。構造設備は厚生労働省令の基準（施行規則第25条＝6.6平方メートル以上の専用施術室・3.3平方メートル以上の待合室・換気・消毒設備など）に適合させ、衛生上必要な措置（施行規則第26条）を講じます。都道府県知事の臨検検査（法第10条）や使用制限・改善命令（法第11条第2項）、広告の制限（法第7条）、出張専門の届出（法第9条の3）も整理します。接骨院（柔道整復）は別の国家資格で、開設届（柔道整復師法第19条）・構造設備（第20条）・広告（第24条）が別建てです。物件は不動産、労務・社会保険は社会保険労務士、税務は税理士へ、それぞれ独立した事業体として別々にご契約のうえ対応する分離受任の枠組みを整理しました。",
+    keywords: [
+      "施術所 開設届 10日以内 あん摩マツサージ指圧師はり師きゆう師法9条の2",
+      "施術所 構造設備基準 施行規則25条 6.6平方メートル 待合室 3.3平方メートル",
+      "施術所 消毒設備 換気 衛生措置 施行規則26条 採光 照明",
+      "施術所 広告制限 法7条 出張専門 届出 法9条の3",
+      "接骨院 柔道整復 開設届 柔道整復師法19条 違い はり きゅう",
+      "施術所 開設 業際 行政書士 社労士 税理士 不動産",
+    ],
+    tags: [
+      "あん摩マツサージ指圧師、はり師、きゆう師等に関する法律",
+      "施術所開設届",
+      "構造設備基準",
+      "柔道整復師法",
+      "広告の制限",
+      "業際",
+      "行政書士",
+    ],
+  },
+  {
+    file: "191-kigyonai-tenkin-zairyu-chuka-taiwan-chuzaiin-yobiyose.md",
+    slug: "kigyonai-tenkin-zairyu-chuka-taiwan-chuzaiin-yobiyose",
+    date: "2026-11-25",
+    title:
+      "中国・台湾の親会社から駐在員を呼ぶ：「企業内転勤」の在留資格と手続",
+    category: "外国人関連の手続き（行政書士の実務から）",
+    excerpt:
+      "中国・台湾の親会社・関連会社から日本拠点へ駐在員を受け入れるとき、「企業内転勤」は、海外にある事業所の職員が、期間を定めて日本の事業所へ転勤し、技術・人文知識・国際業務に当たる活動を行う在留資格です（出入国管理及び難民認定法別表第1の2）。上陸許可基準省令は、転勤の直前に外国の事業所で技術・人文知識・国際業務の業務に継続して1年以上従事していること（在日の企業内転勤期間は合算可）と、日本人と同等額以上の報酬を求めています。親会社・子会社・関連会社間の異動が含まれ得るかは資本関係と事業所の実態に照らした個別審査で、入国前の手続は在留資格認定証明書の交付申請（入管法第7条の2）です。提出書類はカテゴリー1〜4で異なり、令和8年（2026年）4月1日から提出書類の変更が運用されています。在留資格の申請取次は行政書士、着任後の社会保険・労務は社会保険労務士、登記は司法書士、税務は税理士へ、それぞれ独立した事業体として別々にご契約のうえ対応する分離受任の枠組みを整理しました。",
+    keywords: [
+      "企業内転勤 在留資格 中国 台湾 駐在員 呼び寄せ 入管法別表第1の2",
+      "企業内転勤 直前1年以上 継続勤務 上陸許可基準省令 日本人同等報酬",
+      "企業内転勤 技術人文知識国際業務 違い どちら 申請 転勤 新規採用",
+      "企業内転勤 在留資格認定証明書 交付申請 入管法7条の2 カテゴリー",
+      "企業内転勤 親会社 子会社 関連会社 資本関係 登記事項証明書",
+      "企業内転勤 着任後 社会保険 労務 社労士 登記 税務 行政書士",
+    ],
+    tags: [
+      "出入国管理及び難民認定法",
+      "企業内転勤",
+      "上陸許可基準省令",
+      "在留資格認定証明書",
+      "申請取次",
+      "業際",
+      "行政書士",
+    ],
+  },
   {
     file: "189-himitsu-shosho-yuigon-970jo-houshiki-tsukaiwake.md",
     slug: "himitsu-shosho-yuigon-970jo-houshiki-tsukaiwake",

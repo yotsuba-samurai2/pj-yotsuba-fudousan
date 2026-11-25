@@ -2785,5 +2785,122 @@ export const COLUMNS_AUTOPUBLISH_REVIEWS: readonly ColumnQualityReview[] = [
     },
     "reviewedAt": "2026-11-25",
     "validThrough": "2026-11-27"
+  },
+  {
+    "key": "realestate:sanpai-chukan-shori-hasai-shisetsu-bukken-ricchi-youken",
+    "fingerprint": "095572bff021b26ff35941ed592eb671e0f741dd8d55e9bafcb04dfa69bd565a",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.env.go.jp/content/900479509.pdf",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "廃プラスチック類（施行令第7条第7号）・がれき類等（第8号の2）の破砕施設で1日当たりの処理能力が5トンを超えるものは施設設置許可（廃棄物処理法第15条第1項）の対象。本文の『5トンを超える』と一致",
+        "verified": true
+      },
+      {
+        "url": "https://www.pref.chiba.lg.jp/haishi/shorigyou/procedure.html",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "産業廃棄物処分業許可（法第14条）と施設設置許可（法第15条）は別制度で、破砕施設は1日5トン超が設置許可対象という本文の区別を裏付け",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/law/325AC0000000201",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "建築基準法第51条＝都市計画区域内で処理施設の位置が都市計画に決定していなければ新築・増築不可、特定行政庁がただし書許可した場合を除く（複数のlg.jp運用資料で内容を照合）",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/45704422511"
+    },
+    "reviewedAt": "2026-11-26",
+    "validThrough": "2026-11-28"
+  },
+  {
+    "key": "realestate:chugokugo-buyer-saikenchiku-fuka-sesshado-43jo-dd",
+    "fingerprint": "06892feb1072e936b58675805d482f381685c27fed4e190f083a6c95b82f2020",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.toshiseibi.metro.tokyo.lg.jp/kenchiku/kijun/43.htm",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "建築基準法第43条第2項第1号＝認定（建築審査会の同意不要）・第2号＝許可（建築審査会の同意が必要）、基準は施行規則第10条の3。本文の区分と一致",
+        "verified": true
+      },
+      {
+        "url": "https://www.pref.saitama.lg.jp/b1103/kyotu2014/43tadasi.html",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "平成30年法律第67号で旧第43条第1項ただし書許可を第2項第1号認定・第2号許可へ再編、接道関係は2018年9月25日施行。本文の施行日・公布経緯と一致",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/law/325AC0000000201",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "第42条（道路の定義・原則幅員4m以上／2項みなし道路）・第43条第1項（敷地は道路に2m以上接する接道義務）。lg.jp運用資料で内容を照合",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/45704422511"
+    },
+    "reviewedAt": "2026-11-26",
+    "validThrough": "2026-11-28"
+  },
+  {
+    "key": "legal:kigyonai-tenkin-zairyu-chuka-taiwan-chuzaiin-yobiyose",
+    "fingerprint": "32acc0c3d332bed63f7f6c8840a510c2eb54fa70abe364470b84750a975e96b5",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.moj.go.jp/isa/content/001366542.pdf",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "企業内転勤の提出書類はカテゴリー1〜4で区分、カテゴリー2は前年分の法定調書合計表の源泉徴収税額1,000万円以上。本文のカテゴリー説明と一致（ISA共通区分）",
+        "verified": true
+      },
+      {
+        "url": "https://www.moj.go.jp/isa/applications/status/intracompanytransfee.html",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "企業内転勤の該当活動、在留期間（5年・3年・1年・3月）、提出書類の変更＝令和8年4月1日運用開始。本文と一致",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/law/402M50000010016",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "上陸許可基準省令 企業内転勤の項＝直前に外国事業所で技人国業務に継続1年以上従事・日本人同等額以上の報酬。本文の要件と一致",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/45704422511"
+    },
+    "reviewedAt": "2026-11-26",
+    "validThrough": "2026-11-28"
   }
 ];
