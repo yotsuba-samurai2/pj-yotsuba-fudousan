@@ -1,52 +1,25 @@
 {
-  "dryRun": false,
-  "runAt": "2026-11-25T11:59:07.649Z",
+  "dryRun": true,
+  "runAt": "2026-11-25T13:17:06.935Z",
   "todayJst": "2026-11-25",
   "targets": [
     {
-      "key": "labor:chuzaiin-jimusho-chuka-taiwan-shakaihoken-tekiyo-higaitou",
+      "key": "labor:kahansu-daihyosha-tekisei-sensyutsu-roushi-kyotei",
       "business": "labor",
-      "slug": "chuzaiin-jimusho-chuka-taiwan-shakaihoken-tekiyo-higaitou",
-      "title": "駐在員事務所の社会保険・労働保険──中国・台湾本社から日本に置く非登記拠点",
-      "date": "2026-11-24",
-      "category": "外国人雇用",
-      "path": "/labor/column/chuzaiin-jimusho-chuka-taiwan-shakaihoken-tekiyo-higaitou"
-    },
-    {
-      "key": "labor:shift-sei-roudou-keiyaku-saitei-hosho-jikan-kyugyo-teate",
-      "business": "labor",
-      "slug": "shift-sei-roudou-keiyaku-saitei-hosho-jikan-kyugyo-teate",
-      "title": "シフト制労働契約の実務──労働条件明示・一方的なシフト削減と休業手当",
+      "slug": "kahansu-daihyosha-tekisei-sensyutsu-roushi-kyotei",
+      "title": "過半数代表者はどう選ぶのか｜36協定と就業規則の意見聴取",
       "date": "2026-11-24",
       "category": "労働法の基本",
-      "path": "/labor/column/shift-sei-roudou-keiyaku-saitei-hosho-jikan-kyugyo-teate"
+      "path": "/labor/column/kahansu-daihyosha-tekisei-sensyutsu-roushi-kyotei"
     },
     {
-      "key": "realestate:chugokugo-buyer-jikobukken-shinriteki-kashi-kokuchi-dd",
-      "business": "realestate",
-      "slug": "chugokugo-buyer-jikobukken-shinriteki-kashi-kokuchi-dd",
-      "title": "中国語buyer向け——『告知事項あり』物件（心理的瑕疵）のデューデリジェンス",
+      "key": "legal:teiju-sha-kokuji-rikon-shibetsu-zairyu-henko-chuka-taiwan",
+      "business": "legal",
+      "slug": "teiju-sha-kokuji-rikon-shibetsu-zairyu-henko-chuka-taiwan",
+      "title": "日本人配偶者と離婚・死別したら在留資格はどうなる？「定住者」への変更（告示外定住）",
       "date": "2026-11-24",
-      "category": "投資・事業用不動産",
-      "path": "/column/chugokugo-buyer-jikobukken-shinriteki-kashi-kokuchi-dd"
-    },
-    {
-      "key": "realestate:chugokugo-pro-sublease-master-lease-shoukei-kaiyaku-dd",
-      "business": "realestate",
-      "slug": "chugokugo-pro-sublease-master-lease-shoukei-kaiyaku-dd",
-      "title": "中国語プロ向け——サブリース付き収益物件を買うときの承継・解約DD（2020賃貸住宅管理業法）",
-      "date": "2026-11-24",
-      "category": "投資・事業用不動産",
-      "path": "/column/chugokugo-pro-sublease-master-lease-shoukei-kaiyaku-dd"
-    },
-    {
-      "key": "realestate:shokuniku-hanbaigyo-eigyo-kyoka-bukken-setsubi-kijun",
-      "business": "realestate",
-      "slug": "shokuniku-hanbaigyo-eigyo-kyoka-bukken-setsubi-kijun",
-      "title": "食肉販売業の営業許可と物件選び——保健所の施設基準・冷蔵区画・給排水",
-      "date": "2026-11-24",
-      "category": "投資・事業用不動産",
-      "path": "/column/shokuniku-hanbaigyo-eigyo-kyoka-bukken-setsubi-kijun"
+      "category": "許認可の手続き（行政書士の実務から）",
+      "path": "/legal/column/teiju-sha-kokuji-rikon-shibetsu-zairyu-henko-chuka-taiwan"
     }
   ],
   "held": [
@@ -605,18 +578,6 @@
       ]
     },
     {
-      "key": "labor:kahansu-daihyosha-tekisei-sensyutsu-roushi-kyotei",
-      "business": "labor",
-      "slug": "kahansu-daihyosha-tekisei-sensyutsu-roushi-kyotei",
-      "title": "過半数代表者はどう選ぶのか──36協定や就業規則の届出が無効にならない選出手続",
-      "date": "2026-11-24",
-      "category": "労働法の基本",
-      "path": "/labor/column/kahansu-daihyosha-tekisei-sensyutsu-roushi-kyotei",
-      "qualityHoldReasons": [
-        "公開レビュー記録が未登録です"
-      ]
-    },
-    {
       "key": "legal:himitsu-shosho-yuigon-970jo-houshiki-tsukaiwake",
       "business": "legal",
       "slug": "himitsu-shosho-yuigon-970jo-houshiki-tsukaiwake",
@@ -636,18 +597,6 @@
       "date": "2026-11-24",
       "category": "許認可の手続き（行政書士の実務から）",
       "path": "/legal/column/koueki-nintei-shinsei-koueki-shadan-zaidan-youken",
-      "qualityHoldReasons": [
-        "公開レビュー記録が未登録です"
-      ]
-    },
-    {
-      "key": "legal:teiju-sha-kokuji-rikon-shibetsu-zairyu-henko-chuka-taiwan",
-      "business": "legal",
-      "slug": "teiju-sha-kokuji-rikon-shibetsu-zairyu-henko-chuka-taiwan",
-      "title": "日本人配偶者と離婚・死別したら在留資格はどうなる？「定住者」への変更（告示外定住）",
-      "date": "2026-11-24",
-      "category": "許認可の手続き（行政書士の実務から）",
-      "path": "/legal/column/teiju-sha-kokuji-rikon-shibetsu-zairyu-henko-chuka-taiwan",
       "qualityHoldReasons": [
         "公開レビュー記録が未登録です"
       ]
@@ -679,54 +628,7 @@
   ],
   "scheduled": [],
   "ok": false,
-  "published": [
-    {
-      "key": "labor:chuzaiin-jimusho-chuka-taiwan-shakaihoken-tekiyo-higaitou",
-      "business": "labor",
-      "slug": "chuzaiin-jimusho-chuka-taiwan-shakaihoken-tekiyo-higaitou",
-      "title": "駐在員事務所の社会保険・労働保険──中国・台湾本社から日本に置く非登記拠点",
-      "date": "2026-11-24",
-      "category": "外国人雇用",
-      "path": "/labor/column/chuzaiin-jimusho-chuka-taiwan-shakaihoken-tekiyo-higaitou"
-    },
-    {
-      "key": "labor:shift-sei-roudou-keiyaku-saitei-hosho-jikan-kyugyo-teate",
-      "business": "labor",
-      "slug": "shift-sei-roudou-keiyaku-saitei-hosho-jikan-kyugyo-teate",
-      "title": "シフト制労働契約の実務──労働条件明示・一方的なシフト削減と休業手当",
-      "date": "2026-11-24",
-      "category": "労働法の基本",
-      "path": "/labor/column/shift-sei-roudou-keiyaku-saitei-hosho-jikan-kyugyo-teate"
-    },
-    {
-      "key": "realestate:chugokugo-buyer-jikobukken-shinriteki-kashi-kokuchi-dd",
-      "business": "realestate",
-      "slug": "chugokugo-buyer-jikobukken-shinriteki-kashi-kokuchi-dd",
-      "title": "中国語buyer向け——『告知事項あり』物件（心理的瑕疵）のデューデリジェンス",
-      "date": "2026-11-24",
-      "category": "投資・事業用不動産",
-      "path": "/column/chugokugo-buyer-jikobukken-shinriteki-kashi-kokuchi-dd"
-    },
-    {
-      "key": "realestate:chugokugo-pro-sublease-master-lease-shoukei-kaiyaku-dd",
-      "business": "realestate",
-      "slug": "chugokugo-pro-sublease-master-lease-shoukei-kaiyaku-dd",
-      "title": "中国語プロ向け——サブリース付き収益物件を買うときの承継・解約DD（2020賃貸住宅管理業法）",
-      "date": "2026-11-24",
-      "category": "投資・事業用不動産",
-      "path": "/column/chugokugo-pro-sublease-master-lease-shoukei-kaiyaku-dd"
-    },
-    {
-      "key": "realestate:shokuniku-hanbaigyo-eigyo-kyoka-bukken-setsubi-kijun",
-      "business": "realestate",
-      "slug": "shokuniku-hanbaigyo-eigyo-kyoka-bukken-setsubi-kijun",
-      "title": "食肉販売業の営業許可と物件選び——保健所の施設基準・冷蔵区画・給排水",
-      "date": "2026-11-24",
-      "category": "投資・事業用不動産",
-      "path": "/column/shokuniku-hanbaigyo-eigyo-kyoka-bukken-setsubi-kijun"
-    }
-  ],
-  "skipped": [],
+  "published": [],
   "errors": [
     {
       "key": "labor:insatsu-gyo-kaigyo-roumu-yuuki-youzai-shinya-anzen-eisei",
@@ -913,19 +815,11 @@
       "message": "品質確認待ち：公開レビュー記録が未登録です"
     },
     {
-      "key": "labor:kahansu-daihyosha-tekisei-sensyutsu-roushi-kyotei",
-      "message": "品質確認待ち：公開レビュー記録が未登録です"
-    },
-    {
       "key": "legal:himitsu-shosho-yuigon-970jo-houshiki-tsukaiwake",
       "message": "品質確認待ち：公開レビュー記録が未登録です"
     },
     {
       "key": "legal:koueki-nintei-shinsei-koueki-shadan-zaidan-youken",
-      "message": "品質確認待ち：公開レビュー記録が未登録です"
-    },
-    {
-      "key": "legal:teiju-sha-kokuji-rikon-shibetsu-zairyu-henko-chuka-taiwan",
       "message": "品質確認待ち：公開レビュー記録が未登録です"
     },
     {
@@ -937,7 +831,7 @@
       "message": "品質確認待ち：公開レビュー記録が未登録です"
     }
   ],
-  "blocked": "52本は品質確認待ちのため自動公開しません。記事別の理由を確認してください。forceでも解除しません。",
-  "outcome": "partial",
+  "blocked": "50本は品質確認待ちのため自動公開しません。記事別の理由を確認してください。forceでも解除しません。",
+  "outcome": "dry-run",
   "httpStatus": "409"
 }

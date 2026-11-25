@@ -1,16 +1,14 @@
-# コラムの自動公開とSearch Consoleの確認（2026/11/25 21:00:15）
+# コラムの自動公開とSearch Consoleの確認（2026/11/25 22:18:20）
 
 ## 正午の自動公開
 
-- 公開結果：部分成功
-- 公開した記事：5本
-  - https://luck428.com/labor/column/chuzaiin-jimusho-chuka-taiwan-shakaihoken-tekiyo-higaitou　駐在員事務所の社会保険・労働保険──中国・台湾本社から日本に置く非登記拠点
-  - https://luck428.com/labor/column/shift-sei-roudou-keiyaku-saitei-hosho-jikan-kyugyo-teate　シフト制労働契約の実務──労働条件明示・一方的なシフト削減と休業手当
-  - https://luck428.com/column/chugokugo-buyer-jikobukken-shinriteki-kashi-kokuchi-dd　中国語buyer向け——『告知事項あり』物件（心理的瑕疵）のデューデリジェンス
-  - https://luck428.com/column/chugokugo-pro-sublease-master-lease-shoukei-kaiyaku-dd　中国語プロ向け——サブリース付き収益物件を買うときの承継・解約DD（2020賃貸住宅管理業法）
-  - https://luck428.com/column/shokuniku-hanbaigyo-eigyo-kyoka-bukken-setsubi-kijun　食肉販売業の営業許可と物件選び——保健所の施設基準・冷蔵区画・給排水
-- 公開保留：52本は品質確認待ちのため自動公開しません。記事別の理由を確認してください。forceでも解除しません。
-- 保留中（自動公開していない）：52本
+- 公開結果：dry-run
+- dry-run（公開していません）：公開予定 2本
+  - https://luck428.com/labor/column/kahansu-daihyosha-tekisei-sensyutsu-roushi-kyotei　過半数代表者はどう選ぶのか｜36協定と就業規則の意見聴取
+  - https://luck428.com/legal/column/teiju-sha-kokuji-rikon-shibetsu-zairyu-henko-chuka-taiwan　日本人配偶者と離婚・死別したら在留資格はどうなる？「定住者」への変更（告示外定住）
+- 公開した記事：0本
+- 公開保留：50本は品質確認待ちのため自動公開しません。記事別の理由を確認してください。forceでも解除しません。
+- 保留中（自動公開していない）：50本
   - 印刷会社の開業・労務——有機溶剤や深夜勤務の安全衛生と労働時間管理
     - 公開レビュー記録が未登録です
   - 経営・管理ビザ2025年10月改正｜資本金3,000万円・常勤職員・経過措置の要点（中国・台湾の起業家向け）
@@ -105,13 +103,9 @@
     - 公開レビュー記録が未登録です
   - グランピング・キャンプ場の事業用地は、市街化調整区域・農地・山林でどの許可が要る？
     - 公開レビュー記録が未登録です
-  - 過半数代表者はどう選ぶのか──36協定や就業規則の届出が無効にならない選出手続
-    - 公開レビュー記録が未登録です
   - 秘密証書遺言の方式と使い分け（民法970条）――自筆証書・公正証書とどう違い、方式不備ならどうなりますか
     - 公開レビュー記録が未登録です
   - 公益認定とは何か──一般社団・財団から公益法人になる要件と2024年改正
-    - 公開レビュー記録が未登録です
-  - 日本人配偶者と離婚・死別したら在留資格はどうなる？「定住者」への変更（告示外定住）
     - 公開レビュー記録が未登録です
   - 工場・クリーニング店の跡地を買うとき、土壌汚染対策法のデューデリで何を確認するか
     - 公開レビュー記録が未登録です
@@ -120,8 +114,8 @@
 
 ## Search Console
 
-- サイトマップを送り直しました（https://luck428.com/sitemap.xml）
-- 確認の対象：直近45日の日本語コラム 204本（今回確かめたのは97本）
+- dry-run のため、Search Console への接続・サイトマップ送信・URL検査を行っていません
+- 確認の対象：直近45日の日本語コラム 204本（今回確かめたのは0本）
 - 登録済み（PASS）111本・除外（NEUTRAL）93本・エラー（FAIL）0本・未確認 0本
 
 ## 手でリクエストする候補（公開から3日以上たって未登録）
