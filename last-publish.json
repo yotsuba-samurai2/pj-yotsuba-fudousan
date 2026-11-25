@@ -1,6 +1,6 @@
 {
-  "dryRun": true,
-  "runAt": "2026-11-25T13:17:06.935Z",
+  "dryRun": false,
+  "runAt": "2026-11-25T13:19:15.372Z",
   "todayJst": "2026-11-25",
   "targets": [
     {
@@ -628,7 +628,27 @@
   ],
   "scheduled": [],
   "ok": false,
-  "published": [],
+  "published": [
+    {
+      "key": "labor:kahansu-daihyosha-tekisei-sensyutsu-roushi-kyotei",
+      "business": "labor",
+      "slug": "kahansu-daihyosha-tekisei-sensyutsu-roushi-kyotei",
+      "title": "過半数代表者はどう選ぶのか｜36協定と就業規則の意見聴取",
+      "date": "2026-11-24",
+      "category": "労働法の基本",
+      "path": "/labor/column/kahansu-daihyosha-tekisei-sensyutsu-roushi-kyotei"
+    },
+    {
+      "key": "legal:teiju-sha-kokuji-rikon-shibetsu-zairyu-henko-chuka-taiwan",
+      "business": "legal",
+      "slug": "teiju-sha-kokuji-rikon-shibetsu-zairyu-henko-chuka-taiwan",
+      "title": "日本人配偶者と離婚・死別したら在留資格はどうなる？「定住者」への変更（告示外定住）",
+      "date": "2026-11-24",
+      "category": "許認可の手続き（行政書士の実務から）",
+      "path": "/legal/column/teiju-sha-kokuji-rikon-shibetsu-zairyu-henko-chuka-taiwan"
+    }
+  ],
+  "skipped": [],
   "errors": [
     {
       "key": "labor:insatsu-gyo-kaigyo-roumu-yuuki-youzai-shinya-anzen-eisei",
@@ -832,6 +852,6 @@
     }
   ],
   "blocked": "50本は品質確認待ちのため自動公開しません。記事別の理由を確認してください。forceでも解除しません。",
-  "outcome": "dry-run",
+  "outcome": "partial",
   "httpStatus": "409"
 }
