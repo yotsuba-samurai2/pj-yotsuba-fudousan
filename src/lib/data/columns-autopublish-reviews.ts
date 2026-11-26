@@ -2965,5 +2965,131 @@ export const COLUMNS_AUTOPUBLISH_REVIEWS: readonly ColumnQualityReview[] = [
     },
     "reviewedAt": "2026-11-25",
     "validThrough": "2026-11-27"
+  },
+  {
+    "key": "realestate:chugokugo-buyer-dojou-osen-taisakuho-atochi-dd",
+    "fingerprint": "50de6dc1415900558edc5adef315721ccd9cdb449a3a9c4c09d927f6d012f277",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://laws.e-gov.go.jp/api/2/law_data/414AC0000000053?asof=2026-11-25&law_full_text_format=json",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "土壌汚染対策法第3〜5条、第6〜9条、第11・12条。施設廃止・知事確認後の形質変更、第4条の30日前届出と調査命令、第5条の命令を区別。第7条の計画提出指示の相手、第8条による原因者への限度付き費用請求、第9・12条の形質変更制限・例外を現行条文で照合。",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/api/2/law_data/414M60001000029?asof=2026-11-25&law_full_text_format=json",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "同法施行規則第21条の4と第22条。確認後の対象行為は900㎡以上、第4条は原則3,000㎡、一定の工場等では900㎡。廃止済み施設について第3条の報告・ただし書確認のいずれもない場合と、それらを終えた土地を区別。",
+        "verified": true
+      },
+      {
+        "url": "https://www.env.go.jp/content/000075054.pdf",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "環境省ガイドライン「土壌汚染状況調査」の調査契機の説明。施設の実際の使用・廃止、健康被害のおそれ、面積、形質変更と各届出を区別し、単なる売買を法定調査の一律の契機としない。",
+        "verified": true
+      },
+      {
+        "url": "https://www.env.go.jp/water/dojo/gl-man.html",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "環境省ガイドライン・マニュアル等の公式索引。土地履歴、法定調査と措置の確認に使う実務資料への入口。",
+        "verified": true
+      },
+      {
+        "url": "https://www.env.go.jp/water/dojo/kikan.html",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "環境省の土壌汚染対策法に基づく指定調査機関一覧。仲介業者による説明と指定調査機関による法定調査を区別。",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/api/2/law_data/327AC1000000176?asof=2026-11-25&law_full_text_format=json",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "宅地建物取引業法第35条第1項第2号。媒介の重要事項説明は法令に基づく制限等が対象で、仲介業者自身を土壌調査機関とする規定ではない。",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/api/2/law_data/339CO0000000383?asof=2026-11-25&law_full_text_format=json",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "宅地建物取引業法施行令第3条第1項第57号：土壌汚染対策法第9条並びに第12条第1項及び第3項を明記。区域指定で直ちに売買禁止とはならない。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/pull/541"
+    },
+    "reviewedAt": "2026-11-25",
+    "validThrough": "2026-11-27"
+  },
+  {
+    "key": "realestate:chugokugo-buyer-kyokai-mikakutei-chiseki-koseki-dd",
+    "fingerprint": "ede94df8bec86aa41cc35a926fb11fc7ab53410309a3d6f935577e6185bb7d78",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://laws.e-gov.go.jp/api/2/law_data/416AC0000000123?asof=2026-11-25&law_full_text_format=json",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "不動産登記法第2条第15・16号、第37条、第123条第1・2号、第124・125条、第131条第1項、第143・148条。地目・地積の実際の変動後の申請と従来記録の錯誤の更正を区別し、筆界特定は所有権の範囲を決めない。",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/api/2/law_data/417M60000010018?asof=2026-11-25&law_full_text_format=json",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "不動産登記規則第77条第1項が地積測量図の記録項目を定める。地番区域の名称、方位、縮尺、対象及び隣地の地番、地積・求積方法、筆界点間の距離・座標値、境界標、測量年月日等を確認。",
+        "verified": true
+      },
+      {
+        "url": "https://www.moj.go.jp/MINJI/minji104",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "法務省「筆界特定制度」。もともとの筆界を特定する手続の対象、所有権の境界との違い、当事者だけの合意では筆界を変更できないこと。",
+        "verified": true
+      },
+      {
+        "url": "https://www.moj.go.jp/MINJI/minji05_00519.html",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "法務省の分筆・地積更正登記の取扱い。隣地所有者が分からない場合も、登記所備付けの精度の高い地図・地積測量図等で確認できる場合がある。すべての事案で隣接所有者の立会いや署名が無条件に不要という意味ではない。",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/api/2/law_data/325AC1000000228?asof=2026-11-25&law_full_text_format=json",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "土地家屋調査士法第3条第1項。表示に関する登記に必要な土地・家屋の調査測量、当該登記の申請代理等を規定。",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/api/2/law_data/325AC1000000197?asof=2026-11-25&law_full_text_format=json",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "司法書士法第3条第1項。登記に関する手続代理等を規定。土地の調査測量・地積更正と、所有権移転などの権利登記の相談先を分けた。",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/api/2/law_data/327AC1000000176?asof=2026-11-25&law_full_text_format=json",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "宅地建物取引業法第35条第1項に基づく登記された権利等の重要事項説明を、土地家屋調査士の測量や裁判所の判断とは区別。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/pull/541"
+    },
+    "reviewedAt": "2026-11-25",
+    "validThrough": "2026-11-27"
   }
 ];
