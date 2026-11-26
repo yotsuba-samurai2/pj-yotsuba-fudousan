@@ -82,6 +82,20 @@ const AUTHOR = {
 
 /** 各記事が評価を集約すべきハブ（本文に必須の内部リンク）。verify() で機械検査する */
 const REQUIRED_HUB_LINKS: Record<string, string[]> = {
+  "matsuge-ext-nail-salon-biyoujo-todokede-youhi": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/biyoushojo-kaisetsu-todokede-kozo-setsubi-kijun",
+  ],
+  "gijinkoku-zairyu-rissho-gakureki-shokumu-kanren-chuka-taiwan": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/services/visa",
+    "/legal/column/zairyu-shikaku-nintei-shomeisho-fukoufu-saishinsei-chuka-taiwan",
+    "/legal/column/kodo-senmonshoku-1go-point-keisan-chuka-taiwan",
+  ],
   "harikyu-massage-sejutsujo-kaisetsu-todokede-kozo-setsubi": [
     "/legal/services",
     "/legal/nagare",
@@ -1657,6 +1671,29 @@ function matchesRequiredPhrase(content: string, phrase: string): boolean {
 
 /** 記事ごとに必ず含めるべき表現（機械ゲート。最低限の合否判定） */
 const REQUIRED_PHRASES: Record<string, string[]> = {
+  "matsuge-ext-nail-salon-biyoujo-todokede-youhi": [
+    "美容師法",
+    "第2条第1項",
+    "第11条",
+    "第13条",
+    "医師法第17条",
+    "別々にご契約",
+    "独立した事業体",
+    "別事業体",
+    "紹介料を受け取りません",
+  ],
+  "gijinkoku-zairyu-rissho-gakureki-shokumu-kanren-chuka-taiwan": [
+    "出入国管理及び難民認定法",
+    "別表第一の二",
+    "上陸許可基準省令",
+    "第7条の2",
+    "在留資格認定証明書",
+    "申請取次",
+    "別々にご契約",
+    "独立した事業体",
+    "別事業体",
+    "紹介料を受け取りません",
+  ],
   "harikyu-massage-sejutsujo-kaisetsu-todokede-kozo-setsubi": [
     "あん摩マツサージ指圧師、はり師、きゆう師等に関する法律",
     "第9条の2",
@@ -4774,6 +4811,8 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
 
 /** 記事ごとに含めてはならない表現 */
 const FORBIDDEN_PHRASES: Record<string, string[]> = {
+  "matsuge-ext-nail-salon-biyoujo-todokede-youhi": [],
+  "gijinkoku-zairyu-rissho-gakureki-shokumu-kanren-chuka-taiwan": [],
   "harikyu-massage-sejutsujo-kaisetsu-todokede-kozo-setsubi": [],
   "kigyonai-tenkin-zairyu-chuka-taiwan-chuzaiin-yobiyose": [],
   "himitsu-shosho-yuigon-970jo-houshiki-tsukaiwake": [],
@@ -5028,6 +5067,60 @@ const ARTICLES: Array<{
   keywords: string[];
   tags: string[];
 }> = [
+  {
+    file: "192-matsuge-ext-nail-salon-biyoujo-todokede-youhi.md",
+    slug: "matsuge-ext-nail-salon-biyoujo-todokede-youhi",
+    date: "2026-11-26",
+    title:
+      "まつげエクステ・ネイルサロンの開業：美容所の届出が要る業態・要らない業態",
+    category: "許認可の手続き（行政書士の実務から）",
+    excerpt:
+      "まつげエクステ（まつエク）の施術は美容師法上の「美容」に当たり、美容師免許を持つ人が、あらかじめ保健所に届け出た美容所で行うのが前提です（美容師法第11条・厚生労働省通知）。美容師法第2条第1項は「美容」をパーマネントウエーブ・結髪・化粧等の方法で容姿を美しくすることと定義し、無免許での美容の営業（第6条）や美容所以外での営業（第7条）を禁じます。構造設備は第12条の検査・確認と第13条の措置（清潔・消毒設備・採光照明換気）が必要で、具体的な面積・区画は都道府県の条例・指導要領によります。ネイルのみのサロンは「美容」に明確には当たらず、美容師免許・美容所の開設届は原則対象外と解されますが（衛生は別建ての「ネイルサロンにおける衛生管理に関する指針」が目安）、最終判断は保健所・都道府県です。針で色素を注入するアートメイクは厚生労働省が医行為と整理し、医師でなければ業として行えません（医師法第17条）。美容所開設届の作成支援は行政書士、物件は不動産、労務は社会保険労務士、税務は税理士へ、それぞれ独立した事業体として別々にご契約のうえ対応する分離受任の枠組みを整理しました。",
+    keywords: [
+      "まつげエクステ 美容師免許 美容所 届出 必要 美容師法11条",
+      "ネイルサロン 美容師免許 不要 美容所 開設届 原則対象外",
+      "美容師法 美容 定義 第2条 第6条 第7条 無免許営業",
+      "美容所 構造設備 第12条 第13条 検査 確認 都道府県条例",
+      "アートメイク 医行為 医師法17条 まつ毛エクステ 境界",
+      "まつエク ネイル 開業 業際 行政書士 社労士 税理士 不動産",
+    ],
+    tags: [
+      "美容師法",
+      "美容所開設届",
+      "まつげエクステ",
+      "ネイルサロン",
+      "医師法",
+      "業際",
+      "行政書士",
+    ],
+  },
+  {
+    file: "193-gijinkoku-zairyu-rissho-gakureki-shokumu-kanren-chuka-taiwan.md",
+    slug: "gijinkoku-zairyu-rissho-gakureki-shokumu-kanren-chuka-taiwan",
+    date: "2026-11-26",
+    title:
+      "技人国ビザの立証：学歴・職歴と職務内容の関連性をどう示すか（中国・台湾人材）",
+    category: "外国人関連の手続き（行政書士の実務から）",
+    excerpt:
+      "技人国（技術・人文知識・国際業務）は、本邦の機関との契約に基づき、自然科学・人文科学の技術若しくは知識を要する業務、又は外国の文化に基盤を有する思考・感受性を必要とする業務に従事する在留資格です（出入国管理及び難民認定法 別表第一の二）。審査の中核は、本人の学歴（専攻）・職歴と実際の職務内容との関連性で、自然科学・人文科学の業務は、関連科目を専攻した大学卒業・本邦の専修学校専門課程修了・10年以上の実務経験のいずれかが基準になります（上陸許可基準省令）。国際業務は翻訳・通訳・語学指導等について関連業務3年以上の実務経験が必要ですが、大学卒業者が翻訳・通訳・語学指導に従事する場合は3年要件が不要です。いずれも日本人と同等額以上の報酬が共通基準です。入国前は在留資格認定証明書の交付申請（同法第7条の2）で、申請取次は行政書士が担います。採用後の労務は社会保険労務士、税務は税理士へ、それぞれ独立した事業体として別々にご契約のうえ対応する分離受任の枠組みを整理しました。",
+    keywords: [
+      "技人国 技術人文知識国際業務 在留資格 要件 中国 台湾 別表第一の二",
+      "技人国 学歴 専攻 職務内容 関連性 立証 上陸許可基準省令",
+      "技人国 実務経験 10年 国際業務 3年 大学卒業 翻訳通訳 例外",
+      "技人国 不交付 不許可 なりやすい ケース 単純労働 関連性",
+      "技人国 在留資格認定証明書 交付申請 入管法7条の2 申請取次 行政書士",
+      "技人国 雇用契約 賃金 日本人同等報酬 労務 社労士 税務",
+    ],
+    tags: [
+      "出入国管理及び難民認定法",
+      "技術・人文知識・国際業務",
+      "上陸許可基準省令",
+      "在留資格認定証明書",
+      "申請取次",
+      "業際",
+      "行政書士",
+    ],
+  },
   {
     file: "190-harikyu-massage-sejutsujo-kaisetsu-todokede-kozo-setsubi.md",
     slug: "harikyu-massage-sejutsujo-kaisetsu-todokede-kozo-setsubi",
