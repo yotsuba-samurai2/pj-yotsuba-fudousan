@@ -1,0 +1,92 @@
+{
+  "todayJst": "2026-11-28",
+  "runUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/46066984944",
+  "generationStatus": "validated",
+  "generatedCount": 6,
+  "reviewResult": "success",
+  "reviewReportAvailable": true,
+  "reviewPass": true,
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "minor": 0
+  },
+  "reviewFindings": [],
+  "registeredCount": 3,
+  "qualityEligibleCount": 3,
+  "heldCount": 3,
+  "scheduledCount": 0,
+  "unverifiedSourceCount": 0,
+  "publishedCount": null,
+  "articles": [
+    {
+      "key": "realestate:byoji-byogoji-hoiku-bukken-youken-anseishitsu",
+      "fingerprint": "2a4f69e54ba8de85f6066663f1ca7502ae61baf320dcee17e94895811781fb83",
+      "title": "病児・病後児保育室はどんな物件なら開ける？──安静室・医療連携・用途の確認ポイント",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録です",
+        "確認済みの公的な一次根拠が不足しています"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "realestate:souzoku-kubun-mansion-tainou-kanrihi-shokei-baikyaku",
+      "fingerprint": "f0c6a14f7410dcece6fbfe25fccd15f6e0feebe1cb08dd120220dd5f2987931a",
+      "title": "相続した分譲マンションに管理費・修繕積立金の滞納があるとき──買主に承継される仕組みと売り方",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:shuro-sentaku-shien-shitei-shinsei-2025-youken",
+      "fingerprint": "099d764ee18fedfac345926d051f420e0651313286a0f2f543f58bbdef936295",
+      "title": "就労選択支援事業（2025年10月創設）の指定申請──新サービスの人員・設備・申請の流れ",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録です",
+        "確認済みの公的な一次根拠が不足しています"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:souzoku-shakuchiken-jinushi-taio-meigi-koukan-fuyou",
+      "fingerprint": "f873c42c331be7fc0ece8df1640a7eb1e904cc38df9e43d8cf13150568297570",
+      "title": "借地上の建物を相続したら地主に何をすべき？──名義書換料は不要・更新料・建替承諾の整理",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:zoen-gaikou-koji-tenko-kisetsu-hitorioyakata-roumu",
+      "fingerprint": "c2106cbdf50b80b9791d6ebcdc8af8633854e3ff92b9737ec60eddf368d4f6f5",
+      "title": "造園・外構工事の労務管理──天候休・季節変動の労働時間と一人親方の労災特別加入",
+      "registered": true,
+      "state": "quality-eligible",
+      "reasons": [],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:josanjo-josanshi-oncall-shukuchoku-kyoka-hitori-kaigyo-roumu",
+      "fingerprint": "7a5aad21daadc8a9494993a4678d2bdc5df4fbe242021c960e20efa23a14402b",
+      "title": "助産所を開業する助産師の労務管理──オンコール手当・宿直許可・一人開業の労働保険",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録です",
+        "確認済みの公的な一次根拠が不足しています"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    }
+  ]
+}

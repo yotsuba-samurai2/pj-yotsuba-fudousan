@@ -82,6 +82,21 @@ const AUTHOR = {
 
 /** 各記事が評価を集約すべきハブ（本文に必須の内部リンク）。verify() で機械検査する */
 const REQUIRED_HUB_LINKS: Record<string, string[]> = {
+  "shuro-sentaku-shien-shitei-shinsei-2025-youken": [
+    "/legal/services",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/legal/column/shuro-keizoku-shien-ab-shitei-shinsei-youken",
+    "/legal/column/jiritsu-kunren-seikatsu-kinou-shitei-shinsei-youken",
+  ],
+  "souzoku-shakuchiken-jinushi-taio-meigi-koukan-fuyou": [
+    "/legal/services/inheritance",
+    "/legal/nagare",
+    "/legal/ryokin",
+    "/souzoku",
+    "/legal/column/souzoku-touki-nagare",
+    "/legal/column/isan-bunkatsu-kyougisho",
+  ],
   "matsuge-ext-nail-salon-biyoujo-todokede-youhi": [
     "/legal/services",
     "/legal/nagare",
@@ -1671,6 +1686,28 @@ function matchesRequiredPhrase(content: string, phrase: string): boolean {
 
 /** 記事ごとに必ず含めるべき表現（機械ゲート。最低限の合否判定） */
 const REQUIRED_PHRASES: Record<string, string[]> = {
+  "shuro-sentaku-shien-shitei-shinsei-2025-youken": [
+    "就労選択支援",
+    "第5条第13項",
+    "第173条の3",
+    "第173条の6",
+    "令和7年10月1日",
+    "指定障害福祉サービス事業者",
+    "独立した事業体",
+    "別事業体",
+    "紹介料を受け取りません",
+  ],
+  "souzoku-shakuchiken-jinushi-taio-meigi-koukan-fuyou": [
+    "民法第896条",
+    "民法第612条",
+    "借地借家法第17条",
+    "借地借家法第11条",
+    "名義書換料",
+    "借地非訟",
+    "独立した事業体",
+    "別事業体",
+    "紹介料を受け取りません",
+  ],
   "matsuge-ext-nail-salon-biyoujo-todokede-youhi": [
     "美容師法",
     "第2条第1項",
@@ -4811,6 +4848,8 @@ const REQUIRED_PHRASES: Record<string, string[]> = {
 
 /** 記事ごとに含めてはならない表現 */
 const FORBIDDEN_PHRASES: Record<string, string[]> = {
+  "shuro-sentaku-shien-shitei-shinsei-2025-youken": [],
+  "souzoku-shakuchiken-jinushi-taio-meigi-koukan-fuyou": [],
   "matsuge-ext-nail-salon-biyoujo-todokede-youhi": [],
   "gijinkoku-zairyu-rissho-gakureki-shokumu-kanren-chuka-taiwan": [],
   "harikyu-massage-sejutsujo-kaisetsu-todokede-kozo-setsubi": [],
@@ -5067,6 +5106,60 @@ const ARTICLES: Array<{
   keywords: string[];
   tags: string[];
 }> = [
+  {
+    file: "194-shuro-sentaku-shien-shitei-shinsei-2025-youken.md",
+    slug: "shuro-sentaku-shien-shitei-shinsei-2025-youken",
+    date: "2026-11-27",
+    title:
+      "就労選択支援事業（2025年10月創設）の指定申請──新サービスの人員・設備・申請の流れ",
+    category: "障害福祉の許認可（行政書士の実務から）",
+    excerpt:
+      "就労選択支援は、令和7年（2025年）10月1日に創設された障害福祉サービスで、就労を希望する障害者等と協同し、短期間の生産活動等を通じて就労に関する適性・知識・能力を評価し、本人の希望や配慮事項を整理する「就労アセスメント」を中心に行うサービスです（障害者総合支援法第5条第13項。改正法＝令和4年法律第104号による新設、令和7年10月1日施行）。既存の就労移行支援（第5条第14項）・就労継続支援A型B型（第5条第15項）が働く場を提供するのに対し、就労選択支援は本人に合う働き方を見立てる入口の支援で目的が異なります。指定は都道府県知事（指定都市・中核市は市長）から受け（同法第36条）、指定基準省令（平成18年厚生労働省令第171号）第十章の二（第173条の2〜第173条の9）の人員・設備・運営基準を満たす必要があります。就労選択支援員は常勤換算で利用者数を15で除した数以上（省令第173条の3）、実施主体は就労移行・就労継続の指定事業者であって過去3年以内に3人以上の利用者が新たに通常の事業所に雇用された等の実績を知事が認める者に限られます（省令第173条の6）。就労選択支援員は原則として就労選択支援員養成研修の修了者で、令和9年度末までは基礎的研修等の修了者をみなす経過措置があります（令和7年厚生労働省告示第89号）。指定申請書類の作成支援は行政書士、アセスメント等の支援内容の適否は有資格者・事業者、労務は社会保険労務士、物件は宅地建物取引業者、登記は司法書士、税務は税理士が、それぞれ独立した事業体として別々にご契約のうえ対応する分離受任の枠組みを整理しました。",
+    keywords: [
+      "就労選択支援 指定申請 2025年10月 障害者総合支援法第5条第13項 令和7年",
+      "就労選択支援 就労移行 就労継続 違い 就労アセスメント 入口",
+      "就労選択支援員 人員 常勤換算 利用者数15 省令173条の3 要件",
+      "就労選択支援 実施主体 省令173条の6 過去3年 一般就労 3人 要件",
+      "就労選択支援員 養成研修 基礎的研修 経過措置 令和9年度末 告示89号",
+      "就労選択支援 設備 定員10人 事前協議 指定 行政書士 業際",
+    ],
+    tags: [
+      "障害者総合支援法",
+      "就労選択支援",
+      "指定障害福祉サービス",
+      "就労選択支援員",
+      "指定基準省令",
+      "業際",
+      "行政書士",
+    ],
+  },
+  {
+    file: "195-souzoku-shakuchiken-jinushi-taio-meigi-koukan-fuyou.md",
+    slug: "souzoku-shakuchiken-jinushi-taio-meigi-koukan-fuyou",
+    date: "2026-11-27",
+    title:
+      "借地上の建物を相続したら地主に何をすべき？──名義書換料は不要・更新料・建替承諾の整理",
+    category: "相続の手続き（行政書士の実務から）",
+    excerpt:
+      "借地上の建物（借地権付き建物）を相続したとき、相続人は相続開始の時から被相続人の財産に属した一切の権利義務を当然に承継します（民法第896条）。借地権（土地の賃借権）も相続で承継され、これは第三者への「譲渡」ではないため、賃借権の譲渡・転貸に必要な賃貸人の承諾（民法第612条）は原則として不要で、地主へ支払う「名義書換料」も法律上の当然の支払義務はないと一般に解されています。承諾が要るのは、相続人以外への遺贈・生前贈与や、相続後に第三者へ売却する「譲渡」の場面で、借地借家法第19条（土地の賃借権の譲渡又は転貸の許可＝借地非訟）が関わります。相続後の建替え・増改築は、契約に増改築を制限する特約があるかが要点で、特約があり承諾が得られないときは借地借家法第17条の裁判（承諾に代わる許可）で求めます。地代の値上げは借地借家法第11条（地代等増減請求権）の枠組みで考えます。地主への通知文・合意書・覚書の作成は行政書士、承諾が得られない場合の借地非訟・地代をめぐる交渉や調停・訴訟は弁護士、建物の相続登記・表示に関する登記は司法書士・土地家屋調査士、譲渡・贈与の税務は税理士が、それぞれ独立した事業体として別々にご契約のうえ対応する分離受任の枠組みを整理しました。",
+    keywords: [
+      "借地権 相続 地主 承諾 名義書換料 不要 民法896条",
+      "借地権 相続 民法612条 譲渡 転貸 承諾 譲渡でない",
+      "借地 更新料 承諾料 支払義務 特約 慣行 法律",
+      "借地 相続 建替え 増改築 承諾 借地借家法17条 借地非訟",
+      "借地 地代 値上げ 増額請求 借地借家法11条 相当額",
+      "借地権 相続 通知書 合意書 行政書士 弁護士 司法書士 業際",
+    ],
+    tags: [
+      "民法",
+      "借地借家法",
+      "借地権",
+      "相続",
+      "借地非訟",
+      "業際",
+      "行政書士",
+    ],
+  },
   {
     file: "192-matsuge-ext-nail-salon-biyoujo-todokede-youhi.md",
     slug: "matsuge-ext-nail-salon-biyoujo-todokede-youhi",

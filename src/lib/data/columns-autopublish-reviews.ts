@@ -3091,5 +3091,116 @@ export const COLUMNS_AUTOPUBLISH_REVIEWS: readonly ColumnQualityReview[] = [
     },
     "reviewedAt": "2026-11-25",
     "validThrough": "2026-11-27"
+  },
+  {
+    "key": "realestate:souzoku-kubun-mansion-tainou-kanrihi-shokei-baikyaku",
+    "fingerprint": "f0c6a14f7410dcece6fbfe25fccd15f6e0feebe1cb08dd120220dd5f2987931a",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://laws.e-gov.go.jp/law/337AC0000000069",
+        "checkedAt": "2026-11-27",
+        "relevantClaim": "区分所有法第7条第1項（共用部分・規約・決議に基づく債権の先取特権）・第8条（前条第1項の債権は債務者たる区分所有者の特定承継人に対しても行使できる）。買主が前所有者の滞納管理費を承継し得るという本文の中核主張と一致（管理業協会Q&A・判例で裏付け）。",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/law/129AC0000000089",
+        "checkedAt": "2026-11-27",
+        "relevantClaim": "民法第896条（相続の包括承継）・第915条第1項（熟慮期間3か月）・第939条（放棄で初めから相続人でなかったとみなす）・第940条（放棄時占有財産の保存義務）。本文の相続・相続放棄の整理と一致（確立した条文）。",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/law/332M50004000012",
+        "checkedAt": "2026-11-27",
+        "relevantClaim": "宅建業法施行規則第16条の2第6号（修繕積立金の規約定め・既積立額）・第7号（通常の管理費用の額）＝重要事項。国交省解釈運用の滞納額開示（滞納があるときはその額を告げる）と併せ、本文の重要事項開示の記述と一致（確立した運用）。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/46066984944"
+    },
+    "reviewedAt": "2026-11-28",
+    "validThrough": "2026-11-30"
+  },
+  {
+    "key": "legal:souzoku-shakuchiken-jinushi-taio-meigi-koukan-fuyou",
+    "fingerprint": "f873c42c331be7fc0ece8df1640a7eb1e904cc38df9e43d8cf13150568297570",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://laws.e-gov.go.jp/law/129AC0000000089",
+        "checkedAt": "2026-11-27",
+        "relevantClaim": "民法第896条（相続の包括承継）・第612条（賃借権の譲渡・転貸は賃貸人の承諾要・無断は解除事由）。相続による借地権承継は第612条の『譲渡』に当たらず承諾・名義書換料は原則不要という本文の整理と一致（確立した条文・一般的法的理解）。",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/law/403AC0000000090",
+        "checkedAt": "2026-11-27",
+        "relevantClaim": "借地借家法第11条（地代等増減請求権・協議不調なら裁判確定まで相当額で足りる）・第17条（借地条件変更及び増改築の許可＝第1項条件変更・第2項承諾に代わる許可の借地非訟）・第19条（賃借権譲渡・転貸の許可）。本文の建替え・地代の各記述と一致（確立した条文）。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/46066984944"
+    },
+    "reviewedAt": "2026-11-28",
+    "validThrough": "2026-11-30"
+  },
+  {
+    "key": "labor:zoen-gaikou-koji-tenko-kisetsu-hitorioyakata-roumu",
+    "fingerprint": "c2106cbdf50b80b9791d6ebcdc8af8633854e3ff92b9737ec60eddf368d4f6f5",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.mhlw.go.jp/stf/newpage_45547.html",
+        "checkedAt": "2026-11-27",
+        "relevantClaim": "労働安全衛生規則第612条の2（令和7年厚生労働省令第57号・2025年4月15日公布・同年6月1日施行）＝熱中症のおそれがある労働者の早期把握体制、症状時の対応手順作成、関係労働者への周知を義務化。本文の2025/6/1熱中症義務化の記述と一致。",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/law/322AC0000000049",
+        "checkedAt": "2026-11-27",
+        "relevantClaim": "労基法第26条（使用者の責に帰すべき休業＝平均賃金60％以上の休業手当）・第32条の4（1年単位変形）・第36条第4〜6項（月45h年360h、1年単位変形は月42h年320h、特別条項年720h・単月100h未満・複数月平均80h）・第41条第1号（農業等の適用除外）、労基則第12条の4（1日10h・1週52h・280日・連続6日）。本文の各上限・休業手当と一致（確立した条文）。",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/law/322AC0000000050",
+        "checkedAt": "2026-11-27",
+        "relevantClaim": "労災保険法第33条第3号・第4号（一人親方等）・第35条（第2種特別加入・団体を通じて）。造園工事は建設の事業に含まれ、造園協同組合等が建設業一人親方等の特別加入団体として名簿登載される例。本文の一人親方労災の記述と一致（確立した枠組み）。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/46066984944"
+    },
+    "reviewedAt": "2026-11-28",
+    "validThrough": "2026-11-30"
   }
 ];
