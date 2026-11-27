@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-26T11:48:23.748Z",
+  "generatedAt": "2026-11-27T01:31:08.517Z",
   "siteUrl": "sc-domain:luck428.com",
   "windowDays": 45,
   "urls": {
@@ -2274,54 +2274,6 @@
       "robotsTxtState": "ALLOWED",
       "lastCrawlTime": "2026-11-14T20:33:22Z",
       "googleCanonical": "https://luck428.com/labor/column/unten-daiko-kaigyo-roumu-zuihan-untensha-shinya-2nin"
-    },
-    "https://luck428.com/labor/column/haigyo-kaisan-jugyoin-kaiko-yokoku-tatekae-barai-roumu": {
-      "verdict": "PASS",
-      "lastmod": "2026-10-12",
-      "firstSeenAt": "2026-10-18T07:41:54.146Z",
-      "checkedAt": "2026-11-21T10:45:39.257Z",
-      "coverageState": "送信して登録されました",
-      "indexingState": "INDEXING_ALLOWED",
-      "pageFetchState": "SUCCESSFUL",
-      "robotsTxtState": "ALLOWED",
-      "lastCrawlTime": "2026-11-14T06:13:35Z",
-      "googleCanonical": "https://luck428.com/labor/column/haigyo-kaisan-jugyoin-kaiko-yokoku-tatekae-barai-roumu"
-    },
-    "https://luck428.com/labor/column/sakoju-anpi-kakunin-seikatsu-soudan-yakan-taisei-roumu": {
-      "verdict": "PASS",
-      "lastmod": "2026-10-12",
-      "firstSeenAt": "2026-10-18T07:41:54.146Z",
-      "checkedAt": "2026-11-22T10:49:29.028Z",
-      "coverageState": "送信して登録されました",
-      "indexingState": "INDEXING_ALLOWED",
-      "pageFetchState": "SUCCESSFUL",
-      "robotsTxtState": "ALLOWED",
-      "lastCrawlTime": "2026-11-15T09:38:42Z",
-      "googleCanonical": "https://luck428.com/labor/column/sakoju-anpi-kakunin-seikatsu-soudan-yakan-taisei-roumu"
-    },
-    "https://luck428.com/legal/column/shitei-jidosha-seibi-jigyo-minkan-shaken-shitei-shinsei-youken": {
-      "verdict": "PASS",
-      "lastmod": "2026-10-12",
-      "firstSeenAt": "2026-10-18T07:41:54.146Z",
-      "checkedAt": "2026-11-21T10:45:45.821Z",
-      "coverageState": "送信して登録されました",
-      "indexingState": "INDEXING_ALLOWED",
-      "pageFetchState": "SUCCESSFUL",
-      "robotsTxtState": "ALLOWED",
-      "lastCrawlTime": "2026-11-13T12:37:56Z",
-      "googleCanonical": "https://luck428.com/legal/column/shitei-jidosha-seibi-jigyo-minkan-shaken-shitei-shinsei-youken"
-    },
-    "https://luck428.com/legal/column/souzoku-saimu-hoshou-saimu-chosa-junpro-kikan": {
-      "verdict": "PASS",
-      "lastmod": "2026-10-12",
-      "firstSeenAt": "2026-10-18T07:41:54.146Z",
-      "checkedAt": "2026-11-21T10:45:52.386Z",
-      "coverageState": "送信して登録されました",
-      "indexingState": "INDEXING_ALLOWED",
-      "pageFetchState": "SUCCESSFUL",
-      "robotsTxtState": "ALLOWED",
-      "lastCrawlTime": "2026-11-13T21:49:09Z",
-      "googleCanonical": "https://luck428.com/legal/column/souzoku-saimu-hoshou-saimu-chosa-junpro-kikan"
     }
   }
 }

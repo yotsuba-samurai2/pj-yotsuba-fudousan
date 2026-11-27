@@ -1,34 +1,34 @@
 {
-  "dryRun": false,
-  "runAt": "2026-11-26T11:47:08.330Z",
-  "todayJst": "2026-11-26",
+  "dryRun": true,
+  "runAt": "2026-11-27T01:29:51.660Z",
+  "todayJst": "2026-11-27",
   "targets": [
     {
-      "key": "legal:kigyonai-tenkin-zairyu-chuka-taiwan-chuzaiin-yobiyose",
+      "key": "legal:koueki-nintei-shinsei-koueki-shadan-zaidan-youken",
       "business": "legal",
-      "slug": "kigyonai-tenkin-zairyu-chuka-taiwan-chuzaiin-yobiyose",
-      "title": "中国・台湾の親会社から駐在員を呼ぶ：「企業内転勤」の在留資格と手続",
-      "date": "2026-11-25",
-      "category": "外国人関連の手続き（行政書士の実務から）",
-      "path": "/legal/column/kigyonai-tenkin-zairyu-chuka-taiwan-chuzaiin-yobiyose"
+      "slug": "koueki-nintei-shinsei-koueki-shadan-zaidan-youken",
+      "title": "公益認定を初めて申請する方へ：一般社団・財団の要件と2025年施行の財務ルール",
+      "date": "2026-11-24",
+      "category": "許認可の手続き（行政書士の実務から）",
+      "path": "/legal/column/koueki-nintei-shinsei-koueki-shadan-zaidan-youken"
     },
     {
-      "key": "realestate:chugokugo-buyer-saikenchiku-fuka-sesshado-43jo-dd",
+      "key": "realestate:chugokugo-buyer-dojou-osen-taisakuho-atochi-dd",
       "business": "realestate",
-      "slug": "chugokugo-buyer-saikenchiku-fuka-sesshado-43jo-dd",
-      "title": "中国語で検討する日本の『再建築不可』物件：接道義務と43条の但し書きのデューデリジェンス",
-      "date": "2026-11-25",
+      "slug": "chugokugo-buyer-dojou-osen-taisakuho-atochi-dd",
+      "title": "工場・クリーニング店の跡地を買うとき、土壌汚染対策法のデューデリで何を確認するか",
+      "date": "2026-11-24",
       "category": "投資・事業用不動産",
-      "path": "/column/chugokugo-buyer-saikenchiku-fuka-sesshado-43jo-dd"
+      "path": "/column/chugokugo-buyer-dojou-osen-taisakuho-atochi-dd"
     },
     {
-      "key": "realestate:sanpai-chukan-shori-hasai-shisetsu-bukken-ricchi-youken",
+      "key": "realestate:chugokugo-buyer-kyokai-mikakutei-chiseki-koseki-dd",
       "business": "realestate",
-      "slug": "sanpai-chukan-shori-hasai-shisetsu-bukken-ricchi-youken",
-      "title": "産廃の中間処理（破砕・選別）施設を開く物件：立地と都市計画でつまずかないために",
-      "date": "2026-11-25",
+      "slug": "chugokugo-buyer-kyokai-mikakutei-chiseki-koseki-dd",
+      "title": "境界が未確定の土地を買うとき、筆界・所有権界・地積更正をどう確認するか",
+      "date": "2026-11-24",
       "category": "投資・事業用不動産",
-      "path": "/column/sanpai-chukan-shori-hasai-shisetsu-bukken-ricchi-youken"
+      "path": "/column/chugokugo-buyer-kyokai-mikakutei-chiseki-koseki-dd"
     }
   ],
   "held": [
@@ -599,42 +599,6 @@
       ]
     },
     {
-      "key": "legal:koueki-nintei-shinsei-koueki-shadan-zaidan-youken",
-      "business": "legal",
-      "slug": "koueki-nintei-shinsei-koueki-shadan-zaidan-youken",
-      "title": "公益認定とは何か──一般社団・財団から公益法人になる要件と2024年改正",
-      "date": "2026-11-24",
-      "category": "許認可の手続き（行政書士の実務から）",
-      "path": "/legal/column/koueki-nintei-shinsei-koueki-shadan-zaidan-youken",
-      "qualityHoldReasons": [
-        "公開レビュー記録が未登録です"
-      ]
-    },
-    {
-      "key": "realestate:chugokugo-buyer-dojou-osen-taisakuho-atochi-dd",
-      "business": "realestate",
-      "slug": "chugokugo-buyer-dojou-osen-taisakuho-atochi-dd",
-      "title": "工場・クリーニング店の跡地を買うとき、土壌汚染対策法のデューデリで何を確認するか",
-      "date": "2026-11-24",
-      "category": "投資・事業用不動産",
-      "path": "/column/chugokugo-buyer-dojou-osen-taisakuho-atochi-dd",
-      "qualityHoldReasons": [
-        "公開レビュー記録が未登録です"
-      ]
-    },
-    {
-      "key": "realestate:chugokugo-buyer-kyokai-mikakutei-chiseki-koseki-dd",
-      "business": "realestate",
-      "slug": "chugokugo-buyer-kyokai-mikakutei-chiseki-koseki-dd",
-      "title": "境界が未確定の土地を買うとき、筆界・所有権界・地積更正をどう確認するか",
-      "date": "2026-11-24",
-      "category": "投資・事業用不動産",
-      "path": "/column/chugokugo-buyer-kyokai-mikakutei-chiseki-koseki-dd",
-      "qualityHoldReasons": [
-        "公開レビュー記録が未登録です"
-      ]
-    },
-    {
       "key": "labor:bakery-yougashi-seizo-soucho-henkei-roudoujikan-roumu",
       "business": "labor",
       "slug": "bakery-yougashi-seizo-soucho-henkei-roudoujikan-roumu",
@@ -669,40 +633,83 @@
       "qualityHoldReasons": [
         "公開レビュー記録が未登録です"
       ]
+    },
+    {
+      "key": "labor:rodosha-haken-jigyo-kyoka-shisan-youken-hakenmoto-sekininsha-roumu",
+      "business": "labor",
+      "slug": "rodosha-haken-jigyo-kyoka-shisan-youken-hakenmoto-sekininsha-roumu",
+      "title": "労働者派遣事業の許可を取る──資産要件・派遣元責任者・マージン率の情報公開",
+      "date": "2026-11-26",
+      "category": "労働者派遣",
+      "path": "/labor/column/rodosha-haken-jigyo-kyoka-shisan-youken-hakenmoto-sekininsha-roumu",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "labor:ses-jutaku-kaihatsu-gisou-ukeoi-roudoushasei-roumu",
+      "business": "labor",
+      "slug": "ses-jutaku-kaihatsu-gisou-ukeoi-roudoushasei-roumu",
+      "title": "受託開発・SESの偽装請負と労働者性──発注者・受注者が整えるべき線引き",
+      "date": "2026-11-26",
+      "category": "労働者派遣",
+      "path": "/labor/column/ses-jutaku-kaihatsu-gisou-ukeoi-roudoushasei-roumu",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "legal:gijinkoku-zairyu-rissho-gakureki-shokumu-kanren-chuka-taiwan",
+      "business": "legal",
+      "slug": "gijinkoku-zairyu-rissho-gakureki-shokumu-kanren-chuka-taiwan",
+      "title": "技人国ビザの立証：学歴・職歴と職務内容の関連性をどう示すか（中国・台湾人材）",
+      "date": "2026-11-26",
+      "category": "外国人関連の手続き（行政書士の実務から）",
+      "path": "/legal/column/gijinkoku-zairyu-rissho-gakureki-shokumu-kanren-chuka-taiwan",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "legal:matsuge-ext-nail-salon-biyoujo-todokede-youhi",
+      "business": "legal",
+      "slug": "matsuge-ext-nail-salon-biyoujo-todokede-youhi",
+      "title": "まつげエクステ・ネイルサロンの開業：美容所の届出が要る業態・要らない業態",
+      "date": "2026-11-26",
+      "category": "許認可の手続き（行政書士の実務から）",
+      "path": "/legal/column/matsuge-ext-nail-salon-biyoujo-todokede-youhi",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "realestate:iryo-mall-fukusu-clinic-bukken-youken-barrier-free",
+      "business": "realestate",
+      "slug": "iryo-mall-fukusu-clinic-bukken-youken-barrier-free",
+      "title": "医療モール（複数クリニック）の物件をつくる──用途地域・バリアフリー・消防と各科の開設届",
+      "date": "2026-11-26",
+      "category": "投資・事業用不動産",
+      "path": "/column/iryo-mall-fukusu-clinic-bukken-youken-barrier-free",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "realestate:souzoku-nisetai-jutaku-kubun-toki-kyoyu-baikyaku",
+      "business": "realestate",
+      "slug": "souzoku-nisetai-jutaku-kubun-toki-kyoyu-baikyaku",
+      "title": "相続した二世帯住宅を売る──区分登記か共有か、小規模宅地の特例と合併登記",
+      "date": "2026-11-26",
+      "category": "相続",
+      "path": "/column/souzoku-nisetai-jutaku-kubun-toki-kyoyu-baikyaku",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録です"
+      ]
     }
   ],
   "scheduled": [],
   "ok": false,
-  "published": [
-    {
-      "key": "legal:kigyonai-tenkin-zairyu-chuka-taiwan-chuzaiin-yobiyose",
-      "business": "legal",
-      "slug": "kigyonai-tenkin-zairyu-chuka-taiwan-chuzaiin-yobiyose",
-      "title": "中国・台湾の親会社から駐在員を呼ぶ：「企業内転勤」の在留資格と手続",
-      "date": "2026-11-25",
-      "category": "外国人関連の手続き（行政書士の実務から）",
-      "path": "/legal/column/kigyonai-tenkin-zairyu-chuka-taiwan-chuzaiin-yobiyose"
-    },
-    {
-      "key": "realestate:chugokugo-buyer-saikenchiku-fuka-sesshado-43jo-dd",
-      "business": "realestate",
-      "slug": "chugokugo-buyer-saikenchiku-fuka-sesshado-43jo-dd",
-      "title": "中国語で検討する日本の『再建築不可』物件：接道義務と43条の但し書きのデューデリジェンス",
-      "date": "2026-11-25",
-      "category": "投資・事業用不動産",
-      "path": "/column/chugokugo-buyer-saikenchiku-fuka-sesshado-43jo-dd"
-    },
-    {
-      "key": "realestate:sanpai-chukan-shori-hasai-shisetsu-bukken-ricchi-youken",
-      "business": "realestate",
-      "slug": "sanpai-chukan-shori-hasai-shisetsu-bukken-ricchi-youken",
-      "title": "産廃の中間処理（破砕・選別）施設を開く物件：立地と都市計画でつまずかないために",
-      "date": "2026-11-25",
-      "category": "投資・事業用不動産",
-      "path": "/column/sanpai-chukan-shori-hasai-shisetsu-bukken-ricchi-youken"
-    }
-  ],
-  "skipped": [],
+  "published": [],
   "errors": [
     {
       "key": "labor:insatsu-gyo-kaigyo-roumu-yuuki-youzai-shinya-anzen-eisei",
@@ -893,18 +900,6 @@
       "message": "品質確認待ち：公開レビュー記録が未登録です"
     },
     {
-      "key": "legal:koueki-nintei-shinsei-koueki-shadan-zaidan-youken",
-      "message": "品質確認待ち：公開レビュー記録が未登録です"
-    },
-    {
-      "key": "realestate:chugokugo-buyer-dojou-osen-taisakuho-atochi-dd",
-      "message": "品質確認待ち：公開レビュー記録が未登録です"
-    },
-    {
-      "key": "realestate:chugokugo-buyer-kyokai-mikakutei-chiseki-koseki-dd",
-      "message": "品質確認待ち：公開レビュー記録が未登録です"
-    },
-    {
       "key": "labor:bakery-yougashi-seizo-soucho-henkei-roudoujikan-roumu",
       "message": "品質確認待ち：公開レビュー記録が未登録です"
     },
@@ -915,9 +910,33 @@
     {
       "key": "legal:harikyu-massage-sejutsujo-kaisetsu-todokede-kozo-setsubi",
       "message": "品質確認待ち：公開レビュー記録が未登録です"
+    },
+    {
+      "key": "labor:rodosha-haken-jigyo-kyoka-shisan-youken-hakenmoto-sekininsha-roumu",
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
+    },
+    {
+      "key": "labor:ses-jutaku-kaihatsu-gisou-ukeoi-roudoushasei-roumu",
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
+    },
+    {
+      "key": "legal:gijinkoku-zairyu-rissho-gakureki-shokumu-kanren-chuka-taiwan",
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
+    },
+    {
+      "key": "legal:matsuge-ext-nail-salon-biyoujo-todokede-youhi",
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
+    },
+    {
+      "key": "realestate:iryo-mall-fukusu-clinic-bukken-youken-barrier-free",
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
+    },
+    {
+      "key": "realestate:souzoku-nisetai-jutaku-kubun-toki-kyoyu-baikyaku",
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
     }
   ],
-  "blocked": "53本は品質確認待ちのため自動公開しません。記事別の理由を確認してください。forceでも解除しません。",
-  "outcome": "partial",
+  "blocked": "56本は品質確認待ちのため自動公開しません。記事別の理由を確認してください。forceでも解除しません。",
+  "outcome": "dry-run",
   "httpStatus": "409"
 }
