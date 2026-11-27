@@ -1,0 +1,57 @@
+{
+  "pass": true,
+  "findings": [],
+  "articles": [
+    {
+      "key": "legal:gijinkoku-zairyu-rissho-gakureki-shokumu-kanren-chuka-taiwan",
+      "fingerprint": "2551dd984288bdb31e3545bc3ec642f621439441d8a549db92a0bed5fdb85740",
+      "requiresQualifiedReview": false,
+      "reviewedAt": "2026-11-27",
+      "checks": {
+        "primarySources": "pass",
+        "duplicateIntent": "pass",
+        "legalClaims": "pass",
+        "translationAlignment": "pass"
+      },
+      "sources": [
+        {
+          "url": "https://www.moj.go.jp/isa/content/001460430.pdf",
+          "checkedAt": "2026-11-27",
+          "relevantClaim": "技術・人文知識の専攻関連性は大学と専門課程で区別。国際業務の3年実務経験と大卒翻訳・通訳・語学指導例外、同等報酬を確認。",
+          "verified": true
+        },
+        {
+          "url": "https://www.moj.go.jp/isa/content/001413643.pdf",
+          "checkedAt": "2026-11-27",
+          "relevantClaim": "単体別紙4：主として言語能力を用いる対人業務で業務上の使用言語のCEFR B2相当。カテゴリー3・4の資料及び1・2への追加確認。",
+          "verified": true
+        },
+        {
+          "url": "https://www.moj.go.jp/isa/content/001344550.pdf",
+          "checkedAt": "2026-11-27",
+          "relevantClaim": "就労資格Q25・Q26：対象申請、転職など新たな対象業務、同様の業務を続ける更新は原則提出不要で個別追加あり。",
+          "verified": true
+        },
+        {
+          "url": "https://www.moj.go.jp/isa/content/001437255.pdf",
+          "checkedAt": "2026-11-27",
+          "relevantClaim": "カテゴリー3・4の提出資料第7・8・12・13：契約内容、学歴・職歴、代表者申告、対象の業務言語資料。",
+          "verified": true
+        },
+        {
+          "url": "https://www.mhlw.go.jp/web/t_doc?dataId=08ab4095&dataType=0&pageNo=1",
+          "checkedAt": "2026-11-27",
+          "relevantClaim": "行政不服審査法第7条第1項第10号の外国人の出入国処分除外を確認。COE再申請と裁判上の争いを区別。",
+          "verified": true
+        },
+        {
+          "url": "https://www.pref.kagawa.lg.jp/documents/61084/gengonouryokusyoumei.pdf",
+          "checkedAt": "2026-11-27",
+          "relevantClaim": "別紙4のB2・機関カテゴリー基本要件。入管の直リンクがアクセス制限となる場合にも閲覧できる県の参考資料として表示。",
+          "verified": true
+        }
+      ],
+      "blockingFindings": []
+    }
+  ]
+}

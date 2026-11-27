@@ -1,0 +1,70 @@
+{
+  "pass": true,
+  "findings": [],
+  "articles": [
+    {
+      "key": "realestate:souzoku-nisetai-jutaku-kubun-toki-kyoyu-baikyaku",
+      "fingerprint": "31b1987a2db38b2d2a115aa689358f584425c84ad50eb9689155723fed57ac9f",
+      "requiresQualifiedReview": false,
+      "checks": {
+        "primarySources": "pass",
+        "duplicateIntent": "pass",
+        "legalClaims": "pass",
+        "translationAlignment": "pass"
+      },
+      "sources": [
+        {
+          "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/sozoku/4124.htm",
+          "relevantClaim": "330平方メートル・80%、相続開始直前の用途、同居親族と配偶者の別、区分登記に応じた注2・注3の範囲。相続後の合併は直前の事実を変えない。",
+          "checkedAt": "2026-11-27",
+          "verified": true
+        },
+        {
+          "url": "https://www.japaneselawtranslation.go.jp/en/laws/download/4428/14/h16Aa001230504je15.0_r3A37.pdf",
+          "relevantClaim": "不動産登記法54条1項3号、56条。接続する区分建物の登記上の合併と、所有者・持分、抵当権等の制約。",
+          "checkedAt": "2026-11-27",
+          "verified": true
+        }
+      ],
+      "blockingFindings": []
+    },
+    {
+      "key": "legal:matsuge-ext-nail-salon-biyoujo-todokede-youhi",
+      "fingerprint": "ee09c9608adecf381d3f4943ff87e2d012ab08852fe72b56da956b1f2c383459",
+      "requiresQualifiedReview": false,
+      "checks": {
+        "primarySources": "pass",
+        "duplicateIntent": "pass",
+        "legalClaims": "pass",
+        "translationAlignment": "pass"
+      },
+      "sources": [
+        {
+          "url": "https://www.mhlw.go.jp/web/t_doc?dataId=79081000",
+          "relevantClaim": "美容師法2・6・7・8・11・12・12条の3：免許、開設届、使用前確認、管理美容師。",
+          "checkedAt": "2026-11-27",
+          "verified": true
+        },
+        {
+          "url": "https://www.city.saitama.lg.jp/002/002/011/003/p120178.html",
+          "relevantClaim": "まつ毛エクステ・まつ毛パーマは美容師が届け出た美容所で施術。",
+          "checkedAt": "2026-11-27",
+          "verified": true
+        },
+        {
+          "url": "https://faq.city.sasebo.lg.jp/faqfa2/public/web/knowledge1455.html?pageListSettingIdFromUrl=103",
+          "relevantClaim": "一般のネイル単独は美容所届不要、美容業を併設する場合は別。",
+          "checkedAt": "2026-11-27",
+          "verified": true
+        },
+        {
+          "url": "https://www.mhlw.go.jp/web/t_doc?dataId=00tc9325&dataType=1&pageNo=1",
+          "relevantClaim": "針で皮膚に色素を入れる眉・アイライン等のアートメイクは医行為。",
+          "checkedAt": "2026-11-27",
+          "verified": true
+        }
+      ],
+      "blockingFindings": []
+    }
+  ]
+}
