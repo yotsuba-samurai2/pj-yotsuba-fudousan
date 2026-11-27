@@ -1,19 +1,19 @@
 ---
-title: "What is public-interest certification? Requirements for a general association or foundation to become a public-interest corporation, and the 2024 reform"
-excerpt: "For general incorporated associations and foundations aiming at public-interest certification, and professionals following the new system: the certification criteria (Article 5), the 23 types of public-interest purpose business and the 50% ratio, and how the 2024 reform changed the balance-of-payments and idle-property rules."
+title: "Applying for public-interest status in Japan: eligibility and the financial rules in force since 2025"
+excerpt: "Who can benefit from your organization’s work, and how much will you spend on it? A first-time applicant’s guide to Japan’s 50% public-interest spending requirement, five-year financial balance rule, filing authority and annual deadlines."
 category: "Permits and Licensing (From the Practice of an Administrative Scrivener)"
 ---
-**In short:** Public-interest certification is the procedure by which a general incorporated association or foundation is recognized by the administrative agency as a "public-interest corporation." It must have public-interest purpose business as its main purpose and meet criteria such as a public-interest purpose business ratio of 50% or more (Act, Article 5). The 2024 reform revised the rules on revenue and property.
+**In short:** Forming an association or foundation in Japan does not grant it public-interest status. The organization must show whom its activities benefit, how much it spends on its public-interest work, and how it meets the other certification criteria. This guide explains what to prepare for a first application and how the financial rules changed in April 2025.
 
 ## What is public-interest certification, and how do general and public-interest corporations differ?
 
-Public-interest certification is the procedure by which an already-established general incorporated association or foundation is certified by the administrative agency as a public-interest corporation under the Act on Certification of Public Interest Incorporated Associations and Public Interest Incorporated Foundations (Act No. 49 of 2006; the "Public Interest Corporation Certification Act"). A general corporation can be established by registration alone, regardless of whether its business is in the public interest. A public-interest corporation, by contrast, has public-interest purpose business as its main purpose and is recognized as meeting the statutory criteria; it is distinguished from a general corporation in matters such as tax treatment.
+In Japan, a general incorporated association or foundation comes into existence upon registration after completing the required formation steps, including notarization of its articles of incorporation. A general incorporated foundation also requires an initial contribution of assets totaling at least ¥3 million. Public-interest certification is a separate decision made after formation under Japan’s Act on Authorization of Public Interest Incorporated Associations and Public Interest Incorporated Foundations (公益社団法人及び公益財団法人の認定等に関する法律).
 
-The certifying authority is the Prime Minister in certain cases, such as where offices are set up in two or more prefectures, and otherwise the governor of the prefecture where the principal office is located (Act, Article 3). A general association or foundation carrying out public-interest purpose business may receive this certification (Article 4). Establishment itself is a separate procedure: forming a general association is covered in [establishing a general incorporated association and a non-profit-type articles of incorporation](https://luck428.com/en/legal/column/ippan-shadan-houjin-setsuritsu-hieiri-teikan), NPO corporations in [the flow of NPO corporation certification](https://luck428.com/en/legal/column/npo-hojin-setsuritsu-ninsho-nagare-shokatsucho), and social welfare corporations in [establishment approval of a social welfare corporation](https://luck428.com/en/legal/column/shakai-fukushi-hojin-setsuritsu-ninka-nagare-shisan-youken).
+The filing authority does not depend on the head-office address alone. It is the Prime Minister if the organization has offices in more than one prefecture, if its articles provide for public-interest activities in more than one prefecture, or if it conducts a Cabinet Order-designated activity closely linked to the national government’s work. Otherwise it is the governor of the prefecture where the office is located (Article 3). For formation, see [general incorporated associations](https://luck428.com/en/legal/column/ippan-shadan-houjin-setsuritsu-hieiri-teikan) or [NPO corporations](https://luck428.com/en/legal/column/npo-hojin-setsuritsu-ninsho-nagare-shokatsucho).
 
-## What are the 23 types of public-interest purpose business and the public-interest purpose business ratio?
+## Which activities qualify as public-interest work?
 
-Public-interest purpose business means business of the types listed in each item of the Appended Table — academic, artistic, charitable and other public-interest matters — that contributes to the advancement of the interests of unspecified and many persons (Public Interest Corporation Certification Act, Article 2, item 4). The Appended Table lists, up to item 23, such businesses as promoting academic and scientific technology, promoting culture and the arts, advancing the welfare of the elderly, improving public health, and conserving the global environment. The premise is that the corporation's business falls within one of these types and contributes to the interests of unspecified and many persons.
+Two tests apply: an activity must fall within a category in the Act’s Appended Table and contribute to the interests of an indefinite and large number of people (Article 2, item 4). Items 1–22 cover fields such as research, culture, welfare for older people and public health. Item 23 covers other activities specified by Cabinet Order. Describe who can actually use the service and on what terms; the name of the project is not enough.
 
 The certification criteria are listed in Article 5 of the Act; the main ones are below. The actual decision rests with the administrative agency's examination.
 
@@ -24,37 +24,37 @@ The certification criteria are listed in Article 5 of the Act; the main ones are
 | No special benefit | Give no special benefit to related persons or for-profit operators and the like | Art. 5(3) and (4) |
 | Public-interest purpose business ratio | The ratio is expected to be 50% or more | Art. 5(8) and Art. 15 |
 
-The public-interest purpose business ratio is the share of public-interest purpose business costs in the total of public-interest purpose business, profit-making business, and the corporation's ordinary operating expenses; it must be 50% or more (Article 15). The details of the calculation are set by Cabinet Office ordinance, and verifying the three financial criteria is the domain of a certified public accountant or tax accountant.
+The ratio measures costs, not revenue. Its numerator is the cost of public-interest activities. Its denominator adds the costs of other activities, including revenue-generating business, and ordinary administration, as calculated under the Cabinet Office ordinance. Applicants must expect to reach at least 50%; after certification, the organization must meet the threshold every financial year (Articles 5, item 8 and 15).
 
-## How did the 2024 reform (Act No. 29 of 2024, effective 1 April 2025) change the balance-of-payments and idle-property rules?
+## How did the rules on financial balance and reserves change in April 2025?
 
-In the 2024 public-interest corporation system reform, the "Act partially amending the Act on Certification of Public Interest Incorporated Associations and Public Interest Incorporated Foundations" (Act No. 29 of 2024, promulgated 22 May 2024) was enacted, and its main provisions took effect on 1 April 2025. The aim is said to be to ease the rigidity of the financial rules so public-interest activities are easier to sustain.
+The 2024 amendment (Act No. 29 of 2024) was promulgated on 22 May 2024 and entered into force on 1 April 2025. The new financial rules generally apply from the financial year beginning on or after 1 April 2025.
 
 | Item | Pre-reform approach | After reform (current provisions) |
 |---|---|---|
-| Balance of payments (shūshi-shōshō) | A single-year balance was strongly emphasized | Organized as a "balance of revenue and expenditure" over a period set by Cabinet Office ordinance, judged over the medium term (Article 14) |
-| Idle-property rule | The scope and calculation of restricted property were rigid | Changed to a restriction on the amount of "property of unspecified use"; a reserve for continuing public-interest purpose business against disasters and the like can be held subject to disclosure (Article 16) |
+| Revenue and expenditure | The assessment centered on a single financial year | Balance is assessed over five years. Each year the organization checks that no surplus remains unspent beyond that period (Article 14; Enforcement Regulations, Articles 15 and 21). |
+| Assets held without a specified use | A cap applied to idle assets | A cap applies to assets without a specified use. Assets needed to keep public-interest work running after an unforeseen event such as a disaster are excluded only if the ordinance’s conditions are met. The organization must publish the amount and why the reserve is needed, among other details (Article 16). |
 
-These maintain the framework of the duty to apply income to public-interest purpose business so as to balance revenue and expenditure (Article 14) and the discipline of not hoarding property beyond what is needed (Article 16), while revising the judgment period and the scope of property that can be excluded. Because the details are set by Cabinet Office ordinance and guidelines, confirm specific figures and calculation methods in the latest Cabinet Office materials. Act No. 30 of 2024, which sets the related public-trust system, took effect on 1 April 2026, and the current provisions reflect it.
+A surplus in one year does not, by itself, mean that certification is lost. Track the year in which the surplus arose and how the organization will use it for public-interest work in subsequent years.
 
 ## How does the certification application proceed, and how is prior consultation with the agency handled?
 
-The application for public-interest certification is made, as provided by Cabinet Office ordinance, by submitting to the administrative agency an application stating the name, representative, business content and the like (Public Interest Corporation Certification Act, Article 7). An administrative scrivener can support preparing the application documents, while registration such as a name change is for a judicial scrivener, verification of the three financial criteria and the accounting audit are for a certified public accountant or tax accountant, and the certification itself is made by the administrative agency.
+File with the authority designated by Article 3, following the application procedure in Article 7. An administrative scrivener can help prepare the application. For registration filings consult a judicial scrivener; for tax advice and returns consult a licensed tax accountant. Only a certified public accountant or an audit firm may act as statutory accounting auditor (Act on General Incorporated Associations and General Incorporated Foundations, 一般社団法人及び一般財団法人に関する法律, Articles 68(1) and 177). The public authority decides whether to grant certification.
 
 | Step | Content (general flow) |
 |---|---|
 | 1. Organize the business | Confirm whether the purpose in the articles and the actual business fall within the Appended Table's public-interest purpose business |
 | 2. Prior consultation | Check the application framework and documents at the agency (Cabinet Office or prefecture) |
 | 3. Prepare documents | Prepare the application, the business plan and revenue-and-expenditure budget, and documents on the three financial criteria |
-| 4. Apply and examine | Apply to the agency and respond to the examination by the Public Interest Certification Commission and requests for additional materials |
+| 4. Submit the application | File with the competent authority. Applications are reviewed by the national commission or the prefecture’s designated advisory body, as applicable. Supply additional documents if requested. |
 
 How prior consultation is received and what materials are needed differ by agency and change over time. Before applying, check the Cabinet Office "Public Interest Corporation information" and the prefecture's guidance directly.
 
 ## What yearly business reporting and preparation for on-site inspection are needed after certification?
 
-After receiving public-interest certification, you must prepare an inventory of property, a business report, financial statements and the like each fiscal year and submit them to the administrative agency (Public Interest Corporation Certification Act, Article 22). The agency may, to the extent necessary to ensure proper operation of the business, require reports and have its officials enter the office for inspection (Article 27). Where the corporation ceases to meet the criteria, it may, through recommendation and order (Article 28), have its certification revoked (Article 29).
+Annual plans and year-end reports have different deadlines. In an ordinary financial year, file the business plan, budget and related documents by the day before the year begins. File the inventory of assets, business report and financial statements within three months after it ends. Special rules apply in the year certification is granted (Articles 21 and 22).
 
-Certification is not a goal but a system of continuing annual disclosure and maintenance of the criteria. A system is essential for continuously managing the public-interest purpose business ratio and the state of property of unspecified use, and for meeting submission deadlines (the inventory of property and the like are, in principle, within three months after the end of each fiscal year). Continuous verification of accounting and tax is engaged separately with a tax accountant or certified public accountant, and labor and social insurance with a labor and social security attorney.
+The authority may request reports or conduct an on-site inspection where necessary (Article 27). Recommendations and orders are governed by Article 28. Article 29 separately distinguishes cases in which certification must be revoked from cases in which it may be revoked. A recommendation or order does not precede every revocation.
 
 ## FAQ
 
@@ -65,14 +65,20 @@ A. No. Establishment (registration) and public-interest certification are separa
 A. It is a share of costs, not revenue. The costs of public-interest purpose business must be 50% or more of the total of public-interest purpose business, profit-making business, and the corporation's ordinary operating expenses (Article 15). The details of the calculation are set by Cabinet Office ordinance.
 
 **Q. Did the 2024 reform make it easier to accumulate money?**
-A. The balance-of-payments rule was reorganized into a "balance of revenue and expenditure" judged over the medium term (Article 14), and the idle-property rule was revised into a restriction on the amount of "property of unspecified use" (Article 16), allowing a reserve against disasters and the like to be held subject to disclosure. Specific caps and calculations are set by Cabinet Office ordinance.
+A. The reform does not allow unrestricted reserves. The balance of revenue and expenditure is assessed over five years. Qualifying reserves needed to keep public-interest work running during a disaster or other unforeseen event can be excluded from assets without a specified use. The organization must disclose the amount held and why it is needed.
 
 **Q. How far can an administrative scrivener be involved?**
-A. 四葉行政書士事務所 supports preparing the certification application documents and organizing prior consultation. Registration is for a judicial scrivener, verification of the three financial criteria and the accounting audit are for a certified public accountant or tax accountant, and the certification decision is for the administrative agency. See our [services](https://luck428.com/en/legal/services), [engagement process](https://luck428.com/en/legal/nagare) and [fees](https://luck428.com/en/legal/ryokin).
+A. 四葉行政書士事務所 (Yotsuba) can help prepare the certification documents and identify questions for a pre-application consultation. Engage a judicial scrivener separately for registration and a licensed tax accountant for tax advice. A statutory audit is a matter for a certified public accountant or an audit firm. See our [services](https://luck428.com/en/legal/services), [process](https://luck428.com/en/legal/nagare) and [fees](https://luck428.com/en/legal/ryokin).
 
 ## Primary sources
 
-- [e-Gov: Act on Certification of Public Interest Incorporated Associations and Public Interest Incorporated Foundations (Act No. 49 of 2006)](https://laws.e-gov.go.jp/law/418AC0000000049/20260401_506AC0000000030), Article 2 item 4 (public-interest purpose business), Article 3 (administrative agency), Article 4 (certification), Article 5 (criteria), Article 7 (application), Article 14 (balance of revenue and expenditure), Article 15 (public-interest purpose business ratio), Article 16 (amount of property of unspecified use), Article 22 (submission of inventory of property, etc.), Article 27 (reports and inspection), and the Appended Table (up to item 23); version effective 1 April 2026 (Act No. 30 of 2024).
-- Act partially amending the Act on Certification of Public Interest Incorporated Associations and Public Interest Incorporated Foundations (Act No. 29 of 2024; promulgated 22 May 2024; main provisions effective 1 April 2025; confirmed in the amendment history of the current e-Gov text). [Cabinet Office: Public Interest Corporation information](https://www.koeki-info.go.jp/) (certification criteria, application guide, explanation of the reform). Sources checked 24 November 2026, Japan time.
+- [e-Gov: Act on Authorization of Public Interest Incorporated Associations and Public Interest Incorporated Foundations](https://laws.e-gov.go.jp/law/418AC0000000049)
+- [Ministry of Justice: forming a general association or foundation](https://www.moj.go.jp/MINJI/minji153.html)
+- [e-Gov: General Corporations Act, Articles 68(1) and 177 (statutory auditor qualifications)](https://laws.e-gov.go.jp/law/418AC0000000048)
+- [House of Councillors: date of promulgation of Act No. 29 of 2024](https://www.sangiin.go.jp/japanese/joho1/kousei/gian/213/meisai/m213080213044.htm)
+- [Cabinet Office: Cabinet Order No. 322 sets 1 April 2025 as the effective date](https://www.koeki-info.go.jp/commissions/documents/mqi2l560ib.pdf)
+- [Cabinet Office: Certification Guidelines, Chapter 5 (financial rules)](https://www.koeki-info.go.jp/regulations/documents/byxewbt1b9.pdf)
+- [Cabinet Office: guide to applying for certification](https://www.koeki-info.go.jp/activities/documents/9q32cxyfz2.pdf)
+Sources checked on 25 November 2026. Government sources are in Japanese.
 
 This article provides general information. Whether certification is granted is decided by the examining authority, and a qualified professional must review the facts of an individual application. 四葉行政書士事務所 and 四葉不動産株式会社 are separate entities. A certified public accountant, tax accountant, judicial scrivener or other adviser operates as an independent business under a separate engagement. We receive no referral fees. Author: [Joji Uramatsu](https://luck428.com/en/about/uramatsu), administrative scrivener and licensed real estate transaction specialist.
