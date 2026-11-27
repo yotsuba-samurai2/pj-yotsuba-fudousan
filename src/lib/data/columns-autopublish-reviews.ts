@@ -3172,5 +3172,272 @@ export const COLUMNS_AUTOPUBLISH_REVIEWS: readonly ColumnQualityReview[] = [
     },
     "reviewedAt": "2026-11-27",
     "validThrough": "2026-11-29"
+  },
+  {
+    "key": "realestate:souzoku-nisetai-jutaku-kubun-toki-kyoyu-baikyaku",
+    "fingerprint": "31b1987a2db38b2d2a115aa689358f584425c84ad50eb9689155723fed57ac9f",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/sozoku/4124.htm",
+        "checkedAt": "2026-11-27",
+        "relevantClaim": "330平方メートル・80%、相続開始直前の用途、同居親族と配偶者の別、区分登記に応じた注2・注3の範囲。相続後の合併は直前の事実を変えない。",
+        "verified": true
+      },
+      {
+        "url": "https://www.japaneselawtranslation.go.jp/en/laws/download/4428/14/h16Aa001230504je15.0_r3A37.pdf",
+        "checkedAt": "2026-11-27",
+        "relevantClaim": "不動産登記法54条1項3号、56条。接続する区分建物の登記上の合併と、所有者・持分、抵当権等の制約。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/pull/545"
+    },
+    "reviewedAt": "2026-11-27",
+    "validThrough": "2026-11-29"
+  },
+  {
+    "key": "legal:matsuge-ext-nail-salon-biyoujo-todokede-youhi",
+    "fingerprint": "ee09c9608adecf381d3f4943ff87e2d012ab08852fe72b56da956b1f2c383459",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.mhlw.go.jp/web/t_doc?dataId=79081000",
+        "checkedAt": "2026-11-27",
+        "relevantClaim": "美容師法2・6・7・8・11・12・12条の3：免許、開設届、使用前確認、管理美容師。",
+        "verified": true
+      },
+      {
+        "url": "https://www.city.saitama.lg.jp/002/002/011/003/p120178.html",
+        "checkedAt": "2026-11-27",
+        "relevantClaim": "まつ毛エクステ・まつ毛パーマは美容師が届け出た美容所で施術。",
+        "verified": true
+      },
+      {
+        "url": "https://faq.city.sasebo.lg.jp/faqfa2/public/web/knowledge1455.html?pageListSettingIdFromUrl=103",
+        "checkedAt": "2026-11-27",
+        "relevantClaim": "一般のネイル単独は美容所届不要、美容業を併設する場合は別。",
+        "verified": true
+      },
+      {
+        "url": "https://www.mhlw.go.jp/web/t_doc?dataId=00tc9325&dataType=1&pageNo=1",
+        "checkedAt": "2026-11-27",
+        "relevantClaim": "針で皮膚に色素を入れる眉・アイライン等のアートメイクは医行為。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/pull/545"
+    },
+    "reviewedAt": "2026-11-27",
+    "validThrough": "2026-11-29"
+  },
+  {
+    "key": "legal:gijinkoku-zairyu-rissho-gakureki-shokumu-kanren-chuka-taiwan",
+    "fingerprint": "2551dd984288bdb31e3545bc3ec642f621439441d8a549db92a0bed5fdb85740",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.moj.go.jp/isa/content/001460430.pdf",
+        "checkedAt": "2026-11-27",
+        "relevantClaim": "技術・人文知識の専攻関連性は大学と専門課程で区別。国際業務の3年実務経験と大卒翻訳・通訳・語学指導例外、同等報酬を確認。",
+        "verified": true
+      },
+      {
+        "url": "https://www.moj.go.jp/isa/content/001413643.pdf",
+        "checkedAt": "2026-11-27",
+        "relevantClaim": "単体別紙4：主として言語能力を用いる対人業務で業務上の使用言語のCEFR B2相当。カテゴリー3・4の資料及び1・2への追加確認。",
+        "verified": true
+      },
+      {
+        "url": "https://www.moj.go.jp/isa/content/001344550.pdf",
+        "checkedAt": "2026-11-27",
+        "relevantClaim": "就労資格Q25・Q26：対象申請、転職など新たな対象業務、同様の業務を続ける更新は原則提出不要で個別追加あり。",
+        "verified": true
+      },
+      {
+        "url": "https://www.moj.go.jp/isa/content/001437255.pdf",
+        "checkedAt": "2026-11-27",
+        "relevantClaim": "カテゴリー3・4の提出資料第7・8・12・13：契約内容、学歴・職歴、代表者申告、対象の業務言語資料。",
+        "verified": true
+      },
+      {
+        "url": "https://www.mhlw.go.jp/web/t_doc?dataId=08ab4095&dataType=0&pageNo=1",
+        "checkedAt": "2026-11-27",
+        "relevantClaim": "行政不服審査法第7条第1項第10号の外国人の出入国処分除外を確認。COE再申請と裁判上の争いを区別。",
+        "verified": true
+      },
+      {
+        "url": "https://www.pref.kagawa.lg.jp/documents/61084/gengonouryokusyoumei.pdf",
+        "checkedAt": "2026-11-27",
+        "relevantClaim": "別紙4のB2・機関カテゴリー基本要件。入管の直リンクがアクセス制限となる場合にも閲覧できる県の参考資料として表示。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/pull/545"
+    },
+    "reviewedAt": "2026-11-27",
+    "validThrough": "2026-11-29"
+  },
+  {
+    "key": "labor:rodosha-haken-jigyo-kyoka-shisan-youken-hakenmoto-sekininsha-roumu",
+    "fingerprint": "0bf419d3bfb8ee4adffea3e96d214b48001c3d9b8cbea24a3491e133269fe022",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://laws.e-gov.go.jp/law/360AC0000000088/20261001_507AC0000000033",
+        "checkedAt": "2026-11-27",
+        "relevantClaim": "2026年10月1日施行の労働者派遣法。第5～7条、10条、23条5項、30条の2、36条。",
+        "verified": true
+      },
+      {
+        "url": "https://www.mhlw.go.jp/content/11600000/001496939.pdf",
+        "checkedAt": "2026-11-27",
+        "relevantClaim": "厚生労働省・許可手続の現行要領第3。事業所ごとの通常基準、派遣元責任者・キャリア支援・新規／更新審査。",
+        "verified": true
+      },
+      {
+        "url": "https://jsite.mhlw.go.jp/oita-roudoukyoku/content/contents/002878668.pdf",
+        "checkedAt": "2026-11-27",
+        "relevantClaim": "基準資産2,000万円・現金預金1,500万円に派遣事業所数を乗じ、基準資産は総負債の7分の1以上。監査証明を付す中間・月次決算と限定的な既存事業者の更新措置。",
+        "verified": true
+      },
+      {
+        "url": "https://www.mhlw.go.jp/content/11650000/000923942.pdf",
+        "checkedAt": "2026-11-27",
+        "relevantClaim": "特定地域づくり事業推進法第18条。認定組合による無期雇用職員の労働者派遣は法定の届出特例。",
+        "verified": true
+      },
+      {
+        "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/roudoushahakennjigyou.html",
+        "checkedAt": "2026-11-27",
+        "relevantClaim": "法23条5項に基づく情報提供義務。2021年4月1日以降は義務対象の全情報について常時インターネットによる提供を原則とする。",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/law/343AC1000000089",
+        "checkedAt": "2026-11-27",
+        "relevantClaim": "社会保険労務士法2条1項1号・1号の2、27条。報酬を得て業としての書類作成・提出代行の原則と法令上の例外。",
+        "verified": true
+      },
+      {
+        "url": "https://www.mhlw.go.jp/web/t_doc?dataId=84020000&dataType=0&pageNo=3",
+        "checkedAt": "2026-11-27",
+        "relevantClaim": "別表第一・二十の十一に労働者派遣法の掲載を照合。",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/law/326AC1000000004",
+        "checkedAt": "2026-11-27",
+        "relevantClaim": "2026年1月の条繰下げ後、他法令による書類作成の制限は行政書士法1条の3第2項。",
+        "verified": true
+      },
+      {
+        "url": "https://www.mhlw.go.jp/web/t_doc?dataId=00ta2422&dataType=1&pageNo=1",
+        "checkedAt": "2026-11-27",
+        "relevantClaim": "昭和55年行政書士法改正時の限られた対象への社労士法書類作成の経過措置。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/pull/545"
+    },
+    "reviewedAt": "2026-11-27",
+    "validThrough": "2026-11-29"
+  },
+  {
+    "key": "labor:ses-jutaku-kaihatsu-gisou-ukeoi-roudoushasei-roumu",
+    "fingerprint": "8d76120903a4d2a294f572a8749d6ad8ae2643d004a849a88ea22595a8396bf2",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://laws.e-gov.go.jp/law/360AC0000000088/20261001_507AC0000000033",
+        "checkedAt": "2026-11-27",
+        "relevantClaim": "派遣の定義（2条1号）、無許可受入れと偽装の別類型（40条の6第1項2号・5号）、承諾、無許可事業の罰則（59条2号）。",
+        "verified": true
+      },
+      {
+        "url": "https://www.mhlw.go.jp/web/t_doc?dataId=75024000",
+        "checkedAt": "2026-11-27",
+        "relevantClaim": "37号告示2条の自主管理・事業の独立性、設備等の自己調達又は企画・専門技術・経験の二つの選択肢、3条の故意の偽装。",
+        "verified": true
+      },
+      {
+        "url": "https://www.mhlw.go.jp/content/001704257.pdf",
+        "checkedAt": "2026-11-27",
+        "relevantClaim": "厚生労働省・疑義応答集第3集Q1～3。アジャイルと準委任にも実態判断を適用、対等な助言・提案は直ちに指揮命令ではなく受注者の責任者がすべての会議に出る必要はない。民法632、643、656条。",
+        "verified": true
+      },
+      {
+        "url": "https://www.startup-roudou.mhlw.go.jp/qa/zigyonushi/pato/q10.html",
+        "checkedAt": "2026-11-27",
+        "relevantClaim": "労働契約申込みみなしの違法受入れの類型、善意無過失の場合の除外、雇用成立には本人の承諾を要し違法派遣終了日から1年の期間。",
+        "verified": true
+      },
+      {
+        "url": "https://www.mhlw.go.jp/content/11654000/001629239.pdf",
+        "checkedAt": "2026-11-27",
+        "relevantClaim": "労働者派遣法59条第2号の無許可営業の罰則は派遣元側の問題であり、当然に労働契約が成立するものではない。",
+        "verified": true
+      },
+      {
+        "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/keiyaku/index02.html",
+        "checkedAt": "2026-11-27",
+        "relevantClaim": "労働基準法9条の労働者性は、諾否の自由、指揮監督、時間・場所の拘束、報酬の労務対償性等を個別の実態から総合評価する。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/pull/545"
+    },
+    "reviewedAt": "2026-11-27",
+    "validThrough": "2026-11-29"
   }
 ];
