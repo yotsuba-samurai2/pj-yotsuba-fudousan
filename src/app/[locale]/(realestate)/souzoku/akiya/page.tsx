@@ -595,8 +595,17 @@ export default async function Page() {
       relatedHeading={c.relatedHeading}
       authorAlt={c.authorAlt}
       authorLabel={c.authorLabel}
-      authorBio="浦松 丈二｜四葉不動産株式会社 代表取締役・専任宅地建物取引士"
+      authorBio={{
+        ja: "浦松 丈二｜四葉不動産株式会社 代表取締役・専任宅地建物取引士",
+        en: "Joji Uramatsu | Representative Director of Yotsuba Real Estate Co., Ltd. and full-time Licensed Real Estate Transaction Specialist",
+        "zh-tw": "浦松丈二｜四葉不動産株式会社 代表董事・專任宅地建物交易士",
+        zh: "浦松丈二｜四葉不動産株式会社 代表董事・专任宅地建物交易士",
+      }[locale]}
     >
+      <aside className="rounded-xl border border-border bg-surface p-4 leading-relaxed text-text">
+        <p>{rental.saleCaution}</p>
+        <Link href={AKIYA_TAX_SOURCE} className="mt-2 inline-block text-sm text-primary underline">国税庁 No.3306</Link>
+      </aside>
       <Section h2={rental.ways}>
         <div className="mt-4 grid gap-4 sm:grid-cols-2">
           <div className="rounded-xl border border-border bg-surface p-4">

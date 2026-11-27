@@ -6,7 +6,7 @@ type RentalCopy = {
   ways: string; home: string; homeText: string; group: string; groupText: string; groupLink: string;
   flow: string; steps: [string, string, string]; table: string; item: string; columns: [string, string];
   rows: [string, string, string][]; note: string; finalTitle: string; finalText: string;
-  tax: string; division: string; faq: FaqItem[];
+  tax: string; saleCaution: string; division: string; faq: FaqItem[];
 };
 
 export const AKIYA_TAX_SOURCE = "https://www.nta.go.jp/taxes/shiraberu/taxanswer/joto/3306.htm";
@@ -33,6 +33,7 @@ export const AKIYA_RENTAL = {
     note: "貸す条件が合わなければ、売却や当面の管理も比較します。費用がかかる作業は、始める前に範囲と金額をお伝えします。",
     finalTitle: "片付けを始める前に、空き家の状態をお聞かせください。", finalText: "最初は町名と、家具や荷物が残っているかが分かれば大丈夫です。写真や登記資料は最初のご相談には不要です。",
     tax: "特定空家等や管理不全空家等について市区町村から勧告を受けると、その敷地が住宅用地特例の対象から外れ、土地の税負担が増える場合があります。",
+    saleCaution: "相続空き家の売却特例には、相続後の所定の期間に貸し付けていないことが要件です。短期間でも貸し付けると、この要件を満たせません。売却もお考えなら、貸す前に税理士にご確認ください。",
     division: "遺産分割協議書などの書類作成は、四葉行政書士事務所が独立した事業体として別契約で受任します。登記申請の代理は司法書士へ、税務は税理士へ直接ご依頼ください。",
     faq: [
       { q: "家具や荷物が残っていても相談できますか？", a: "はい。片付けを始める前からご相談いただけます。誰が所有する家財かを確認し、撤去するもの、残すもの、処分を任せるものと費用負担を整理します。" },
@@ -60,6 +61,7 @@ export const AKIYA_RENTAL = {
     note: "If renting does not suit the property, we can compare selling or managing it for now. We explain the scope and cost of any paid work before it starts.",
     finalTitle: "Tell us about the home before you start clearing it out.", finalText: "The neighbourhood and whether belongings remain are enough to start. Photos and registration documents are not required for the initial enquiry.",
     tax: "If a local authority issues a formal recommendation concerning a designated or inadequately managed vacant property, its land may lose preferential residential land treatment, and the tax burden may increase.",
+    saleCaution: "Japan’s tax relief on the sale of an inherited vacant home requires that the property not be rented out during the prescribed period after inheritance. Even a short tenancy in that period fails this requirement. If you may sell, consult a tax accountant before renting it out.",
     division: "四葉行政書士事務所 is a separate business and handles work such as preparing inheritance division agreements under a separate contract. For registration applications, engage a judicial scrivener directly; for tax matters, engage a tax accountant directly.",
     faq: [
       { q: "Can I enquire if furniture or belongings are still there?", a: "Yes. Contact us before clearing them out. We check who owns the items and agree which will be removed, left for use or disposed of, and who will bear the costs." },
@@ -73,7 +75,7 @@ export const AKIYA_RENTAL = {
     lead: "繼承的老家即使還留著家具或物品，也可以在委託清理或整修之前先諮詢。四葉不動産會確認房屋及設備的狀況，說明是否能以接近現況的方式出租、哪些地方需要先修，以及預估租金。",
     contact: "在清理前諮詢空屋出租", compare: "比較出售、出租與管理",
     ways: "空屋出租的兩種方式",
-    home: "作為一般住宅出租", homeText: "先確認漏水、給排水等影響安全及日常使用的事項。壁紙或油漆等，可由承租人在取得屋主事前同意後施作。哪些家具有意保留、施工費由誰負擔，以及退租時需恢復到什麼程度，都在簽約前確認。",
+    home: "作為一般住宅出租", homeText: "先確認漏水、給排水等影響安全及日常使用的事項。壁紙或油漆等，可由承租人在取得屋主事前同意後施作。哪些家具要保留、施工費由誰負擔，以及退租時需恢復到什麼程度，都在簽約前確認。",
     group: "出租給團體家屋的營運法人", groupText: "若房屋條件合適，也可考慮出租給提供身心障礙者共同生活援助的法人。須分別確認屋主是否同意用途與改修、建築及消防條件，以及事業者取得指定的可行性。",
     groupLink: "給考慮出租給團體家屋的屋主（日文）",
     flow: "從諮詢到比較出租方案", steps: ["請先告訴我們房屋所在的町名，以及是否還留有家具或物品。", "到現場確認房屋及設備，整理必要修繕與可保留的物品。", "用一張A4比較預估費用與租金收支。"],
@@ -87,6 +89,7 @@ export const AKIYA_RENTAL = {
     note: "若房屋不適合出租，也可比較出售或暫時管理。需要付費的作業，會在開始前告知範圍及金額。",
     finalTitle: "開始清理之前，歡迎先告訴我們空屋的狀況。", finalText: "初次諮詢只要提供町名，以及是否還留有家具或物品。不必先準備照片或登記資料。",
     tax: "日本的特定空家等或管理不全空家等若收到地方政府的勸告，基地可能不再適用住宅用地特例，土地的稅負因而可能增加。",
+    saleCaution: "日本的繼承空屋出售稅務特例，要求在繼承後的法定期間內未曾出租；即使只出租短期，也不符合這項要件。若也在考慮出售，請先向稅理士確認，再決定是否出租。",
     division: "遺產分割協議書等文件的製作，由獨立經營的四葉行政書士事務所另行簽約辦理。登記申請代理請直接委託日本的司法書士，稅務請直接委託稅理士。",
     faq: [
       { q: "屋內還留著家具或物品，也可以諮詢嗎？", a: "可以，不必先清理。我們會先確認物品的所有人，再整理哪些要搬走、哪些可留用、哪些可委託處理，以及費用由誰負擔。" },
@@ -114,6 +117,7 @@ export const AKIYA_RENTAL = {
     note: "不适合出租时，也可比较出售或暂时管理。收费工作会在开始前说明范围和金额。",
     finalTitle: "开始清理前，欢迎先告诉我们空置房屋的情况。", finalText: "首次咨询只需提供町名，以及是否还留有家具或物品。不必先准备照片或登记材料。",
     tax: "日本的特定空家等或管理不全空家等收到地方政府的劝告后，房屋所在土地可能不再适用住宅用地税收优惠，土地税负可能增加。",
+    saleCaution: "日本的继承空置房屋出售税收优惠要求在继承后的规定期间内未曾出租；即使仅短期出租，也不符合这项要求。如果也在考虑出售，请在出租前向税理士确认。",
     division: "遗产分割协议书等文件由独立经营的四葉行政書士事務所另行签约制作。登记申请代理请直接委托日本的司法书士，税务请直接委托税理士。",
     faq: [
       { q: "屋内还有家具或物品，可以咨询吗？", a: "可以，不用先清理。先确认物品归属，再确定哪些要搬走、哪些可留用、哪些可委托处置，以及由谁承担费用。" },
