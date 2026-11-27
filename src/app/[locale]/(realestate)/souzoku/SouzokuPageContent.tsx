@@ -228,11 +228,10 @@ const COPY: Record<LangCode, SouzokuCopy> = {
     internalHeading: "あわせてご覧いただきたいページ",
     internalLinks: [
       {
-        // タスクC-4（2026-07-19）：相続空き家ページ新設に伴い追加（ja先行公開のためjaのみ）
         href: "/souzoku/akiya",
-        label: "文京区の空き家、どうする？",
+        label: "文京区の空き家：片付け前の賃貸相談",
         description:
-          "相続した空き家の放置リスクと、売却・賃貸活用・管理という3つの出口の選び方を解説しています。",
+          "家具や荷物が残る実家を大きく直さず貸せるか、売却・管理と並べて相談できます。",
       },
       {
         // 2026-07-25：中国語相続ハブ（定点#7・/souzoku/chinese）新設に伴い追加（ja先行公開のためjaのみ）
@@ -423,6 +422,7 @@ const COPY: Record<LangCode, SouzokuCopy> = {
     ],
     internalHeading: "Pages you may also want to see",
     internalLinks: [
+      { href: "/en/souzoku/akiya", label: "Vacant homes in Bunkyo: renting before renovations", description: "Compare renting, selling and managing before deciding what to clear or repair." },
       {
         href: "/services",
         label: "Our Services",
@@ -593,6 +593,7 @@ const COPY: Record<LangCode, SouzokuCopy> = {
     ],
     internalHeading: "建議一併閱覽的頁面",
     internalLinks: [
+      { href: "/zh-tw/souzoku/akiya", label: "文京區空屋：清理前的出租諮詢", description: "在決定清理或整修之前，先比較出租、出售與管理。" },
       {
         href: "/services",
         label: "服務一覽",
@@ -762,6 +763,7 @@ const COPY: Record<LangCode, SouzokuCopy> = {
     ],
     internalHeading: "建议一并浏览的页面",
     internalLinks: [
+      { href: "/zh/souzoku/akiya", label: "文京区空置房屋：清理前的出租咨询", description: "在决定清理或翻修之前，先比较出租、出售和管理。" },
       {
         href: "/services",
         label: "服务一览",
