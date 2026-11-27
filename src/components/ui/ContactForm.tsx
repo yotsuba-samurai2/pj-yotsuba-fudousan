@@ -70,6 +70,7 @@ export function ContactForm({ thanksPath = "/thanks", business = "realestate" }:
   const [serverError, setServerError] = useState("");
   // 来訪元（?intent=）。送信完了イベントに付け、どのページから来た相談かを GA4 で数える（2026-09-23）
   const [intentParam, setIntentParam] = useState("none");
+  const [messagePlaceholder, setMessagePlaceholder] = useState<string>();
 
   // CTA intent selects a displayed category and its matching localized template.
   // Use window inside the effect to keep static rendering; preserve already-entered values.
@@ -84,10 +85,12 @@ export function ContactForm({ thanksPath = "/thanks", business = "realestate" }:
       setMessage((m) => m || "民泊対応マンションの購入について相談したいです。");
       return;
     }
+    setMessagePlaceholder(undefined);
     if (!intent) return;
     const preset = contactIntentPreset(intent, business, lang);
     if (!preset) return;
     setCategory((c) => c || preset.category);
+    setMessagePlaceholder(preset.placeholder);
     // A sender's saved draft takes precedence over a blank template. Never overwrite user input.
     const prefill = takeContactPrefill(intent);
     if (prefill) setMessage((m) => m || prefill);
@@ -287,6 +290,7 @@ export function ContactForm({ thanksPath = "/thanks", business = "realestate" }:
             rows={5}
             required
             value={message}
+            placeholder={category === "akiya" ? messagePlaceholder : undefined}
             onChange={(e) => setMessage(e.target.value)}
             className={inputClass}
           />

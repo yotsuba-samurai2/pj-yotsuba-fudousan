@@ -1,3 +1,5 @@
+import Link from "next/link";
+import { addLocalePrefix } from "@/lib/locale";
 import { NonresidentPropertyReview } from "@/components/legal/NonresidentCompanyReview";
 import { NONRESIDENT_PROPERTY_COLUMN_SLUG } from "@/lib/legal/nonresident-review";
 import { notFound } from "next/navigation";
@@ -124,6 +126,16 @@ export default async function ColumnDetailPage({ params }: Props) {
         // 受け皿は ja 先行公開のため ja のときだけ渡す（他ロケールに存在しないページへのリンクを作らない）。
         wakeariHubSlug={locale === "ja" ? slug : undefined}
         afterBody={<>
+          {slug === "souzoku-jikka-zanchibutsu-ihin-genkyo-uri" && (
+            <aside className="my-8 rounded-xl border border-border bg-surface p-4">
+              <Link href={addLocalePrefix("/souzoku/akiya", locale)} className="font-semibold text-primary underline">
+                {{ ja: "売却とあわせて、片付け前の空き家の賃貸も検討する",
+                  en: "Compare selling with renting out a vacant home before clearing it out",
+                  "zh-tw": "除了出售，也可評估清理前的空屋出租方案",
+                  zh: "除出售外，也可评估清理前的空置房屋出租方案" }[locale]}
+              </Link>
+            </aside>
+          )}
           {consultWindows ? <RelatedConsultWindows windows={consultWindows} /> : <ColumnTopicGuides locale={locale} topics={resolveColumnTopics(base)} related />}
           {slug === NONRESIDENT_PROPERTY_COLUMN_SLUG && <NonresidentPropertyReview locale={locale} />}
         </>}

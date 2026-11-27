@@ -108,6 +108,8 @@ export type RealestateServicePageProps = {
   serviceExtra?: Record<string, unknown>;
   /** Page-specific introduction; defaults to the existing hero/header. */
   heroContent?: ReactNode;
+  /** Page-specific final call to action; other pages keep the existing CTA. */
+  footerContent?: ReactNode;
   wide?: boolean;
   children: ReactNode;
 };
@@ -232,12 +234,12 @@ export async function RealestateServicePage(p: RealestateServicePageProps) {
       </article>
 
       <div className="mx-auto max-w-3xl px-4">
-        <CtaBand
+        {p.footerContent ?? <CtaBand
           businessKey="realestate"
           variant={p.ctaVariant}
           intent={p.ctaIntent}
           contactHref={p.ctaContactHref}
-        />
+        />}
       </div>
     </>
   );
