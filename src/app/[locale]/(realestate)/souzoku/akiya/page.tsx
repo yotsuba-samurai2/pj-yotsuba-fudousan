@@ -4,6 +4,10 @@ import type { ReactNode } from "react";
 import type { LangCode } from "@/config/languages";
 import Link from "next/link";
 import Image from "next/image";
+import { AkiyaOwnerContact } from "@/components/shared/AkiyaOwnerContact";
+import { TelLink } from "@/components/shared/TelLink";
+import { LineLink } from "@/components/shared/LineLink";
+import { OFFICE } from "@/lib/shared/office-public";
 import { AKIYA_RENTAL, AKIYA_MLIT_SOURCE, AKIYA_TAX_SOURCE } from "@/lib/shared/akiya-rental-copy";
 import { buildPageMetadata, BCP47_BY_LOCALE } from "@/lib/seo";
 import { getRequestLocale } from "@/lib/getRequestLocale";
@@ -573,7 +577,7 @@ export default async function Page() {
             <h1 className="font-serif text-2xl font-semibold text-ink sm:text-3xl">{rental.h1}</h1>
             <p className="mt-3 leading-relaxed text-text">{rental.lead}</p>
             <div className="mt-4 flex flex-wrap items-center gap-4">
-              <OwnerContact href={contactHref}>{rental.contact}</OwnerContact>
+              <AkiyaOwnerContact href={contactHref} placement="hero">{rental.contact}</AkiyaOwnerContact>
               <Link href="#akiya-options" className="text-sm font-medium text-primary underline">{rental.compare}</Link>
             </div>
           </header>
@@ -586,7 +590,13 @@ export default async function Page() {
         <section className="my-8 rounded-xl border border-border bg-surface p-5 sm:p-8">
           <ReH2>{rental.finalTitle}</ReH2>
           <p className="mb-4 mt-3 text-text">{rental.finalText}</p>
-          <OwnerContact href={contactHref}>{rental.contact}</OwnerContact>
+          <div className="flex flex-wrap items-center gap-4">
+            <AkiyaOwnerContact href={contactHref} placement="footer">{rental.contact}</AkiyaOwnerContact>
+            {locale !== "zh" && <LineLink location="akiya_footer" page="akiya" className="text-sm text-primary underline">
+              {{ ja: "LINEで相談", en: "Ask via LINE", "zh-tw": "透過LINE諮詢" }[locale]}
+            </LineLink>}
+            <TelLink phone={OFFICE.tel} location="akiya_footer" className="text-sm text-primary underline">{OFFICE.tel}</TelLink>
+          </div>
         </section>
       }
       internalLinks={c.internalLinks}
@@ -604,7 +614,7 @@ export default async function Page() {
     >
       <aside className="rounded-xl border border-border bg-surface p-4 leading-relaxed text-text">
         <p>{rental.saleCaution}</p>
-        <Link href={AKIYA_TAX_SOURCE} className="mt-2 inline-block text-sm text-primary underline">国税庁 No.3306</Link>
+        <Link href={AKIYA_TAX_SOURCE} className="mt-2 inline-block text-sm text-primary underline">{{ ja: "国税庁 No.3306", en: "National Tax Agency No. 3306 (Japanese)", "zh-tw": "日本國稅廳 No.3306（日文）", zh: "日本国税厅 No.3306（日语）" }[locale]}</Link>
       </aside>
       <Section h2={rental.ways}>
         <div className="mt-4 grid gap-4 sm:grid-cols-2">
@@ -671,7 +681,7 @@ export default async function Page() {
       <Section h2={c.s1.h2}>
         <P>{rental.tax}</P>
         <P>{c.s1.p2}</P>
-        <Link href={AKIYA_MLIT_SOURCE} className="mt-2 inline-block text-sm text-primary underline">国土交通省</Link>
+        <Link href={AKIYA_MLIT_SOURCE} className="mt-2 inline-block text-sm text-primary underline">{{ ja: "国土交通省", en: "Ministry of Land, Infrastructure, Transport and Tourism (Japanese)", "zh-tw": "日本國土交通省（日文）", zh: "日本国土交通省（日语）" }[locale]}</Link>
         <p className="mt-3 text-xs text-text-muted">{c.s1.note}</p>
       </Section>
 
@@ -682,7 +692,7 @@ export default async function Page() {
       <Section h2={c.s3.h2}>
         <P>{c.s3.p1}</P>
         <P>{c.s3.p2}</P>
-        <Link href={AKIYA_TAX_SOURCE} className="mt-2 inline-block text-sm text-primary underline">国税庁 No.3306</Link>
+        <Link href={AKIYA_TAX_SOURCE} className="mt-2 inline-block text-sm text-primary underline">{{ ja: "国税庁 No.3306", en: "National Tax Agency No. 3306 (Japanese)", "zh-tw": "日本國稅廳 No.3306（日文）", zh: "日本国税厅 No.3306（日语）" }[locale]}</Link>
       </Section>
 
       {/* §4 条件の難しい物件。結果保証なし＝「売却の可否や条件をお約束するものではありませんが」を明示
@@ -758,8 +768,4 @@ function Section({ id, h2, children }: { id?: string; h2: string; children: Reac
 
 function P({ children }: { children: ReactNode }) {
   return <p className="mt-3 leading-relaxed text-text">{children}</p>;
-}
-
-function OwnerContact({ href, children }: { href: string; children: ReactNode }) {
-  return <Link href={href} className="inline-flex min-h-11 items-center rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">{children}</Link>;
 }
