@@ -1,6 +1,6 @@
 {
-  "dryRun": true,
-  "runAt": "2026-11-27T01:29:51.660Z",
+  "dryRun": false,
+  "runAt": "2026-11-27T01:32:38.844Z",
   "todayJst": "2026-11-27",
   "targets": [
     {
@@ -709,7 +709,36 @@
   ],
   "scheduled": [],
   "ok": false,
-  "published": [],
+  "published": [
+    {
+      "key": "legal:koueki-nintei-shinsei-koueki-shadan-zaidan-youken",
+      "business": "legal",
+      "slug": "koueki-nintei-shinsei-koueki-shadan-zaidan-youken",
+      "title": "公益認定を初めて申請する方へ：一般社団・財団の要件と2025年施行の財務ルール",
+      "date": "2026-11-24",
+      "category": "許認可の手続き（行政書士の実務から）",
+      "path": "/legal/column/koueki-nintei-shinsei-koueki-shadan-zaidan-youken"
+    },
+    {
+      "key": "realestate:chugokugo-buyer-dojou-osen-taisakuho-atochi-dd",
+      "business": "realestate",
+      "slug": "chugokugo-buyer-dojou-osen-taisakuho-atochi-dd",
+      "title": "工場・クリーニング店の跡地を買うとき、土壌汚染対策法のデューデリで何を確認するか",
+      "date": "2026-11-24",
+      "category": "投資・事業用不動産",
+      "path": "/column/chugokugo-buyer-dojou-osen-taisakuho-atochi-dd"
+    },
+    {
+      "key": "realestate:chugokugo-buyer-kyokai-mikakutei-chiseki-koseki-dd",
+      "business": "realestate",
+      "slug": "chugokugo-buyer-kyokai-mikakutei-chiseki-koseki-dd",
+      "title": "境界が未確定の土地を買うとき、筆界・所有権界・地積更正をどう確認するか",
+      "date": "2026-11-24",
+      "category": "投資・事業用不動産",
+      "path": "/column/chugokugo-buyer-kyokai-mikakutei-chiseki-koseki-dd"
+    }
+  ],
+  "skipped": [],
   "errors": [
     {
       "key": "labor:insatsu-gyo-kaigyo-roumu-yuuki-youzai-shinya-anzen-eisei",
@@ -937,6 +966,6 @@
     }
   ],
   "blocked": "56本は品質確認待ちのため自動公開しません。記事別の理由を確認してください。forceでも解除しません。",
-  "outcome": "dry-run",
+  "outcome": "partial",
   "httpStatus": "409"
 }
