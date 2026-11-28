@@ -684,6 +684,58 @@ const COPY: Record<LangCode, ToushiCopy> = {
   },
 };
 
+const INVESTMENT_SEARCH: Record<LangCode, {
+  heading: string;
+  approach: string;
+  experience: string;
+  details: string;
+  cta: string;
+  financingHeading: string;
+  financing: string;
+  financingNote: string;
+}> = {
+  ja: {
+    heading: "ウェブに出ていない投資物件も、ご希望から探します",
+    approach: "当社がご提案する投資物件の多くは、ウェブに掲載されていません。まずお客様のご希望を伺い、公開・非公開を問わず条件に合う物件を探します。",
+    experience: "これまでに、数千万円から100億円超まで、さまざまな価格帯の投資物件をご提案してきました。",
+    details: "ご予算、希望エリア、物件の種類や投資目的など、決まっている条件からお聞かせください。",
+    cta: "投資物件の希望条件を伝える",
+    financingHeading: "投資用不動産の融資相談",
+    financing: "築年数が経過した物件や既存不適格の物件をご検討の方、法人を設立して間もない方、永住権をお持ちでない方も、まずはご相談ください。物件とお客様のご状況を伺い、ご希望に応じて融資の相談先をご案内し、おつなぎします。",
+    financingNote: "融資の可否や条件は、金融機関の審査によって決まります。",
+  },
+  en: {
+    heading: "We look for investment properties that fit your criteria, including off-market opportunities",
+    approach: "Many of the investment properties we present are not listed online. We start by discussing your requirements, then look for a fit among both publicly listed and off-market properties.",
+    experience: "We have presented investment opportunities ranging from tens of millions of yen to more than ¥10 billion.",
+    details: "Tell us what you already have in mind, such as your budget, preferred area, property type or investment goals.",
+    cta: "Share your investment criteria",
+    financingHeading: "Financing inquiries for investment properties",
+    financing: "You are welcome to ask us about financing for older buildings or properties that no longer meet current standards because of subsequent rule changes. We also welcome inquiries from newly established companies and buyers without Japanese permanent residency. After discussing the property and your circumstances, we can put you in touch with a lender if you wish.",
+    financingNote: "Financing approval and terms are subject to the lender’s review.",
+  },
+  "zh-tw": {
+    heading: "依您的需求尋找投資物件，也納入未公開物件",
+    approach: "我們推薦的投資物件，有許多未在網路上刊登。我們會先了解您的需求，再從公開與未公開的物件中，尋找符合條件的標的。",
+    experience: "我們曾向客戶推薦不同價位的投資物件，價格從數千萬日圓到超過100億日圓。",
+    details: "您可以先告訴我們已確定的條件，例如預算、希望的地區、物件類型或投資目的。",
+    cta: "告訴我們您的投資物件需求",
+    financingHeading: "投資物件的融資諮詢",
+    financing: "無論您正在考慮屋齡較高的物件、興建時合法但因法規變更而不符合現行規定的物件，都歡迎先與我們聯繫。剛成立的公司，以及尚未取得日本永久居留資格的買家，也歡迎洽詢。我們會先了解物件及您的情況，再依您的意願協助聯繫可洽詢融資的金融機構。",
+    financingNote: "能否取得融資及實際條件，以金融機構的審查結果為準。",
+  },
+  zh: {
+    heading: "按您的需求寻找投资房产，也考虑未公开房源",
+    approach: "我们推荐的投资房产，有很多没有在网上发布。我们会先了解您的需求，再从公开和未公开的房源中寻找符合条件的房产。",
+    experience: "我们曾向客户推荐不同价位的投资房产，价格从数千万日元到超过100亿日元。",
+    details: "您可以先告诉我们已经确定的条件，例如预算、意向区域、房产类型或投资目的。",
+    cta: "告诉我们您的投资房产需求",
+    financingHeading: "投资房产融资咨询",
+    financing: "如果您正在考虑楼龄较高的房产、建成时合法但因法规变更而不符合现行规定的房产，欢迎先与我们联系。新成立的公司，以及尚未取得日本永久居留资格的买家，也欢迎咨询。我们会先了解房产和您的情况，再根据您的意愿协助联系可咨询融资的金融机构。",
+    financingNote: "能否获得融资及实际条件，以金融机构的审核结果为准。",
+  },
+};
+
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getRequestLocale();
   const c = COPY[locale] ?? COPY.ja;
@@ -701,6 +753,7 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function Page() {
   const locale = await getRequestLocale();
   const c = COPY[locale] ?? COPY.ja;
+  const investment = INVESTMENT_SEARCH[locale] ?? INVESTMENT_SEARCH.ja;
   const relatedColumns = filterColumnsByTheme(
     (await getColumns(locale)).map((col) => getLocalizedColumn(col, locale)),
     "toushi",
@@ -726,6 +779,29 @@ export default async function Page() {
       authorBio={c.authorBio}
       ctaVariant="property"
     >
+      <section
+        id="investment-search"
+        aria-labelledby="investment-search-heading"
+        className="rounded-2xl border border-border bg-surface p-5 sm:p-7"
+      >
+        <h2 id="investment-search-heading" className="font-serif text-xl font-semibold text-ink">
+          {investment.heading}
+        </h2>
+        <p className="mt-3 leading-relaxed text-text">{investment.approach}</p>
+        <p className="mt-3 font-semibold leading-relaxed text-ink">{investment.experience}</p>
+        <p className="mt-3 text-sm leading-relaxed text-text-muted">{investment.details}</p>
+        <div className="mt-5 border-t border-border pt-4">
+          <h3 className="font-semibold text-ink">{investment.financingHeading}</h3>
+          <p className="mt-2 text-sm leading-relaxed text-text">{investment.financing}</p>
+          <p className="mt-2 text-xs leading-relaxed text-text-muted">{investment.financingNote}</p>
+        </div>
+        <Link
+          href={addLocalePrefix("/contact", locale)}
+          className="mt-4 inline-flex min-h-12 items-center rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-white hover:bg-primary-dark focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
+        >
+          {investment.cta}
+        </Link>
+      </section>
       <PropertySearchSampleTeaser kind="investment" locale={locale} page="/toushi" />
       {c.sections(locale)}
       {/* FAQPage JSON-LD＝B-4の例外（浦松承認）。ja設問はB-3の40問を参照＝サイト内で文言一致。
