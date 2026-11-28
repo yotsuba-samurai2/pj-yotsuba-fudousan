@@ -1,0 +1,116 @@
+{
+  "todayJst": "2026-11-27",
+  "runUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/45896688157",
+  "generationStatus": "validated",
+  "generatedCount": 6,
+  "reviewResult": "success",
+  "reviewReportAvailable": true,
+  "reviewPass": false,
+  "findings": {
+    "blocker": 0,
+    "major": 1,
+    "minor": 0
+  },
+  "reviewFindings": [
+    {
+      "file": "scripts/realestate-columns/198-iryo-mall-fukusu-clinic-bukken-youken-barrier-free.md",
+      "severity": "major",
+      "issue": "消防法施行令別表第一の分類が不正確。本文「防火対象物の用途区分は消防法施行令別表第1で定められ、病院・診療所・助産所は（6）項イに当たります」および出典節の「別表第1（（6）項イ＝病院・診療所・助産所…）」が、無床診療所について誤り。2016年（平成28年）改正後、(6)項イは病院・有床診療所・有床助産所に限られ、無床診療所（患者を入院させる施設を有しない診療所）・無床助産所は(6)項ハに分類される。本稿は無床診療所を医療モールの『標準的なテナント』と位置づけており、この一次資料の条項号の不正確さが本文の整合性と直接矛盾する。FDMA・自治体資料で確認（2026-11-26）。同じ記述が生成物 src/lib/data/realestate-columns-daily-seed.ts と4言語訳にも波及。",
+      "fix": "該当箇所を『(6)項イ＝病院・有床診療所・有床助産所、無床診療所・無床助産所は(6)項ハ』と区分して記述し直す（出典節・各言語訳も同様に修正）。有床/無床で消防基準が分かれるという本文の既存の主旨に合致させる。"
+    }
+  ],
+  "registeredCount": 0,
+  "qualityEligibleCount": 0,
+  "heldCount": 6,
+  "scheduledCount": 0,
+  "unverifiedSourceCount": 1,
+  "publishedCount": null,
+  "articles": [
+    {
+      "key": "realestate:iryo-mall-fukusu-clinic-bukken-youken-barrier-free",
+      "fingerprint": "1211009588baf09bc83f8dfe190d6882e4c4960cf393775c53281ac6c81e4135",
+      "title": "医療モール（複数クリニック）の物件をつくる──用途地域・バリアフリー・消防と各科の開設届",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録です",
+        "候補指紋と修正後原稿が一致しません",
+        "独立レビューの証跡不足、重複、またはレビュー後の原稿変更"
+      ],
+      "sourceFailures": [
+        {
+          "url": "https://www.fdma.go.jp/singi_kento/kento/items/kento140_59_shiryo4-6.pdf",
+          "checkedAt": "2026-11-26",
+          "relevantClaim": "消防法施行令別表第一(6)項イは病院・有床診療所・有床助産所に限られ、無床診療所は(6)項ハに分類される。本文の『病院・診療所・助産所は(6)項イ』は無床診療所について不正確。",
+          "verified": false
+        }
+      ],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "realestate:souzoku-nisetai-jutaku-kubun-toki-kyoyu-baikyaku",
+      "fingerprint": "3f25277b898fbf37c112bce24c619b7ed489f3d499b63e2975ef5df01fdbea1a",
+      "title": "相続した二世帯住宅を売る──区分登記か共有か、小規模宅地の特例と合併登記",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録です",
+        "独立レビューに未解決の重大な指摘があります"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:matsuge-ext-nail-salon-biyoujo-todokede-youhi",
+      "fingerprint": "2476d9e4f1e34c8ac908dc25741a901539c3c8bd5c8b5dc55be4021dec652dac",
+      "title": "まつげエクステ・ネイルサロンの開業：美容所の届出が要る業態・要らない業態",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録です",
+        "独立レビューに未解決の重大な指摘があります"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "legal:gijinkoku-zairyu-rissho-gakureki-shokumu-kanren-chuka-taiwan",
+      "fingerprint": "59a42a9a0c4fea1d31648f7decc03b6970516c2bcb8e3ced205f9bd8b492a470",
+      "title": "技人国ビザの立証：学歴・職歴と職務内容の関連性をどう示すか（中国・台湾人材）",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録です",
+        "独立レビューに未解決の重大な指摘があります"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:rodosha-haken-jigyo-kyoka-shisan-youken-hakenmoto-sekininsha-roumu",
+      "fingerprint": "c87d19fc0d7ab7fa7bc5cbbc3b329dec7ddb1123d10f9a62fc19e68d51d78063",
+      "title": "労働者派遣事業の許可を取る──資産要件・派遣元責任者・マージン率の情報公開",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録です",
+        "独立レビューに未解決の重大な指摘があります"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    },
+    {
+      "key": "labor:ses-jutaku-kaihatsu-gisou-ukeoi-roudoushasei-roumu",
+      "fingerprint": "eb7f4366a66910785d517c72bee47c605de4ecd89bbac3e8e1f9e4452d704d15",
+      "title": "受託開発・SESの偽装請負と労働者性──発注者・受注者が整えるべき線引き",
+      "registered": false,
+      "state": "held",
+      "reasons": [
+        "公開レビュー記録が未登録です",
+        "独立レビューに未解決の重大な指摘があります"
+      ],
+      "sourceFailures": [],
+      "sourceEvidenceAvailable": true
+    }
+  ]
+}

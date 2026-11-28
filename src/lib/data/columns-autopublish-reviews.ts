@@ -2425,5 +2425,782 @@ export const COLUMNS_AUTOPUBLISH_REVIEWS: readonly ColumnQualityReview[] = [
     },
     "reviewedAt": "2026-11-22",
     "validThrough": "2026-11-24"
+  },
+  {
+    "key": "realestate:souzoku-zei-butsunou-fudosan-kanri-shobun-futekikaku-yoken",
+    "fingerprint": "75d626ac744b80690c9f6fe98665f0cab50436a2b9c71aa9d672db30edc696d3",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/sozoku/4214.htm",
+        "checkedAt": "2026-11-22",
+        "relevantClaim": "物納は金銭納付・延納でも困難な場合に申請。第1順位=不動産・国債・上場株式等、第3順位=動産。管理処分不適格財産に担保権設定・権利帰属の争い・境界が明らかでない土地・共有不動産（共有者全員が持分全部を申請する場合を除く）。物納劣後財産(無道路地・市街化調整区域内土地等)とは別。根拠法令=相法41〜45、相令17〜19の2。本文と一致。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/45059806249"
+    },
+    "reviewedAt": "2026-11-23",
+    "validThrough": "2026-11-25"
+  },
+  {
+    "key": "legal:kihatsuyu-hanbaigyo-touroku-hinkakuho-kikenbutsu-ss",
+    "fingerprint": "b046825e51060d3316f452bd67142b18c4b9cd37f864afaedb4eedc8f214a259",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.kanto.meti.go.jp/seisaku/sekiyu_jigyo/data/jigyouhenpanf201003.pdf",
+        "checkedAt": "2026-11-22",
+        "relevantClaim": "揮発油販売業を行おうとする者は経済産業大臣(経済産業局長)の登録=品確法第3条。第二章第一節 揮発油販売業者の登録は第3条〜第12条。本文は第3条と正しく記載し、第12条の2(揮発油特定加工業者)は別制度と区別=企画書(plan.json)の『第12条の2』の誤りを本文が訂正しており正確。",
+        "verified": true
+      },
+      {
+        "url": "https://www.japaneselawtranslation.go.jp/ja/laws/view/3772/ja",
+        "checkedAt": "2026-11-22",
+        "relevantClaim": "消防法 第11条(製造所等の設置許可=市町村長等)・第13条(危険物保安監督者=甲種/乙種で6月以上実務経験から選任・届出)・第13条の2(危険物取扱者免状=甲乙丙、都道府県知事交付)。本文と一致。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/45059806249"
+    },
+    "reviewedAt": "2026-11-23",
+    "validThrough": "2026-11-25"
+  },
+  {
+    "key": "labor:data-center-24ji-kanshi-danzoku-roudo-shukunikkin-roumu",
+    "fingerprint": "c581bf5541bab29d6572a20d94d892a4d1b1048a64365e4af103004066e5edde",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://jsite.mhlw.go.jp/nagano-roudoukyoku/content/contents/roudoujyouken_handbook202602-9.pdf",
+        "checkedAt": "2026-11-22",
+        "relevantClaim": "監視・断続的労働従事者/宿日直勤務者は労基署長の許可で労働時間等を全部または一部除外できるが、深夜労働の割増賃金・年次有給休暇の規定は適用除外にならない。本文の『どちらの許可でも深夜割増(第37条第4項)は免除されない』と一致。",
+        "verified": true
+      },
+      {
+        "url": "https://aichi-elcc.mhlw.go.jp/?p=4526",
+        "checkedAt": "2026-11-22",
+        "relevantClaim": "監視・断続的労働の定義、第41条第3号の適用除外、宿日直の労基署長許可。本文の制度整理と整合。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/45059806249"
+    },
+    "reviewedAt": "2026-11-23",
+    "validThrough": "2026-11-25"
+  },
+  {
+    "key": "realestate:shokuniku-hanbaigyo-eigyo-kyoka-bukken-setsubi-kijun",
+    "fingerprint": "a4d6b7d9c556c61d0a06f33ea17cf9e7e70304142ccffa215eabc4fa0ea31b48",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.city.funabashi.lg.jp/jigyou/iji_yakuji_eisei/002/p004754.html",
+        "checkedAt": "2026-11-24",
+        "relevantClaim": "食品衛生法の営業許可業種は令和3年6月以降34→32業種。食肉販売業は許可業種で、定義は『鳥獣の生肉（骨及び臓器を含む。）を販売する営業であり、食肉を専ら容器包装に入れられた状態で仕入れ、そのままの状態で販売する営業を除く』。本文の施行令第35条第3号・かっこ書と一致",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/law/328CO0000000229",
+        "checkedAt": "2026-11-24",
+        "relevantClaim": "食品衛生法施行令第35条（許可を要する営業の指定）。SPAのため直接本文抽出は不可だったが、第3号＝食肉販売業・32業種は船橋市(lg.jp)で裏取り済み",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/45498346722"
+    },
+    "reviewedAt": "2026-11-25",
+    "validThrough": "2026-11-27"
+  },
+  {
+    "key": "realestate:chugokugo-buyer-jikobukken-shinriteki-kashi-kokuchi-dd",
+    "fingerprint": "fedd709501157e6def7795bcd28fb42313a8a3c381f3b052c70817f0b6edbe05",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.mlit.go.jp/report/press/tochi_fudousan_kensetsugyo16_hh_000001_00029.html",
+        "checkedAt": "2026-11-24",
+        "relevantClaim": "人の死の告知ガイドライン（令和3年10月8日策定）。賃貸借は事案発生から概ね3年経過後は原則告げなくてよい／売買には3年のような期間の定めはなく、問われた場合・特段の事情がある場合は告知が必要。本文の賃貸3年・売買期間なしの区別と一致",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/law/327AC1000000176",
+        "checkedAt": "2026-11-24",
+        "relevantClaim": "宅地建物取引業法第35条（重要事項説明）・第47条第1号（故意の不告知・不実告知の禁止）。SPAのため直接抽出不可だが条番号・内容は標準で、MLITガイドラインの法的根拠説明と整合",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/45498346722"
+    },
+    "reviewedAt": "2026-11-25",
+    "validThrough": "2026-11-27"
+  },
+  {
+    "key": "realestate:chugokugo-pro-sublease-master-lease-shoukei-kaiyaku-dd",
+    "fingerprint": "a8d1f218f65ecb11811a575ebf963231741f699fcb58318ad5aaf4383d0d2ab3",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.ktr.mlit.go.jp/kensan/index00000027.html",
+        "checkedAt": "2026-11-24",
+        "relevantClaim": "賃貸住宅管理業法：サブリース規制（誇大広告・不当勧誘の禁止、マスターリース契約締結前の重要事項説明の義務化）は令和2年12月15日施行、賃貸住宅管理業の登録制度は令和3年6月15日施行。本文の施行日・第28〜30条の整理と一致",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/law/129AC0000000089",
+        "checkedAt": "2026-11-24",
+        "relevantClaim": "民法第605条の2（賃貸人たる地位の移転）。SPAのため直接抽出不可。借地借家法第28条（正当事由）・第31条（引渡しによる対抗力）・第32条第1項（借賃増減請求権）とともに標準的な条文で、本文の承継・解約・減額の説明と整合",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/45498346722"
+    },
+    "reviewedAt": "2026-11-25",
+    "validThrough": "2026-11-27"
+  },
+  {
+    "key": "labor:chuzaiin-jimusho-chuka-taiwan-shakaihoken-tekiyo-higaitou",
+    "fingerprint": "f4633f073b821c42877bdf30a2bd267b8b4a8998e3a33192f8183be2072a8e64",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.jetro.go.jp/en/invest/setting_up/section4/page9",
+        "checkedAt": "2026-11-24",
+        "relevantClaim": "JETRO対日投資ガイド：representative office（駐在員事務所）はsole proprietorship（個人事業所）扱い、branch/sales officeはcorporation（法人）扱いで強制適用。従業員5人未満は代表者を事業主とする任意適用で代表者は原則被保険者でない（例外は管轄判断）。労災は原則すべての労働者に適用、代表者が労働者でなければ特別加入の余地。本文のJETRO引用と一致",
+        "verified": true
+      },
+      {
+        "url": "https://www.mofa.go.jp/mofaj/press/release/press4_007768.html",
+        "checkedAt": "2026-11-24",
+        "relevantClaim": "日・中社会保障協定は2019年9月1日発効、一時派遣（原則5年以内）は派遣元国の年金制度のみに加入し適用証明書で相手国年金を免除、対象は公的年金のみ。日本と台湾の間には社会保障協定なし。本文の日中=有・日台=無の整理と一致",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/45498346722"
+    },
+    "reviewedAt": "2026-11-25",
+    "validThrough": "2026-11-27"
+  },
+  {
+    "key": "labor:shift-sei-roudou-keiyaku-saitei-hosho-jikan-kyugyo-teate",
+    "fingerprint": "aae9e377c6c1441bf802182d839806ba51b709894a672872c5269f940d09a6e0",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.mhlw.go.jp/content/11200000/001749112.pdf",
+        "checkedAt": "2026-11-24",
+        "relevantClaim": "厚労省『いわゆる「シフト制」により就業する労働者の適切な雇用管理を行うための留意事項』は令和4年1月7日策定・改正令和8年6月19日。本文が参照する版の日付（令和8年6月19日付）は実在することを確認。三交替等のパターン固定型は除く等の内容とも整合",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/law/322AC0000000049",
+        "checkedAt": "2026-11-24",
+        "relevantClaim": "労働基準法第26条（休業手当＝平均賃金の100分の60以上）・第15条第1項（労働条件明示）・施行規則第5条（2024年4月1日施行改正で変更の範囲・更新上限・無期転換の明示を追加）。SPAのため直接抽出不可だが条番号・内容は標準で、本文の整理と整合",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/45498346722"
+    },
+    "reviewedAt": "2026-11-25",
+    "validThrough": "2026-11-27"
+  },
+  {
+    "key": "legal:teiju-sha-kokuji-rikon-shibetsu-zairyu-henko-chuka-taiwan",
+    "fingerprint": "fcb0ce4ca505ffe7f93d4b306b16ec20dd8b4c6c0300022ba96e9a3cb0701776",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.moj.go.jp/isa/content/001361043.pdf",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "離婚・死別に伴う配偶者の届出は14日以内。届出は在留許可を与える手続ではない。",
+        "verified": true
+      },
+      {
+        "url": "https://www.moj.go.jp/isa/content/930002823.pdf",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "本文の法22条の4第1項7号、配偶者の活動を行わない6か月・正当理由、法20条の裁量。許可例1・7及び不許可例、類似事案でも結論が異なることを確認。",
+        "verified": true
+      },
+      {
+        "url": "https://www.moj.go.jp/isa/content/001448099.pdf",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "入管の申請等取次制度資料。法定代理人と届出済みの取次者を区別し、本人出頭の原則と取次の関係を確認。",
+        "verified": true
+      },
+      {
+        "url": "https://www.moj.go.jp/content/001441435.pdf",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "100～101頁の告示列挙と特別な事情による告示外の区別。日本人等との離婚・死別後、実子扶養等で在留を希望する場合の例示であって許可は保証されない。",
+        "verified": true
+      },
+      {
+        "url": "https://www.moj.go.jp/isa/content/930004563.pdf",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "資料編4裁判例4、179～181頁の日本人の実子を扶養する外国人親の取扱い。子自身の国籍と出生時の親の国籍、親子関係・実際の養育の区別。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/pull/538"
+    },
+    "reviewedAt": "2026-11-25",
+    "validThrough": "2026-11-27"
+  },
+  {
+    "key": "labor:kahansu-daihyosha-tekisei-sensyutsu-roushi-kyotei",
+    "fingerprint": "ac6d393072b05d769d663e19362bd733acdaa7ce6d205f7fcb13aea9b60c83ac",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.mhlw.go.jp/web/t_doc_keyword?dataId=73023000&dataType=0&keyword=%E5%8A%B4%E5%83%8D%E5%9F%BA%E6%BA%96%E6%B3%95%E6%96%BD%E8%A1%8C%E8%A6%8F%E5%89%87&mode=0&pageNo=1",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "労基則6条の2の本文を確認。管理監督者でないこと・目的を明示した選出・使用者の意向によらないこと。全員が管理監督者の場合の2項の列挙に36条はない。",
+        "verified": true
+      },
+      {
+        "url": "https://www.mhlw.go.jp/content/11201250/001504157.pdf",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "行政の選出資料本文：パート等を含む事業場全労働者が参加、過半数の支持を確認、会社指名は認められない。",
+        "verified": true
+      },
+      {
+        "url": "https://www.mhlw.go.jp/web/t_doc?dataId=00tb8530&dataType=1&pageNo=1",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "労働契約法10条に関する行政解説：労基法89・90条の手続は同条の効果発生要件ではない。就業規則は意見聴取と実体的効力を区別。",
+        "verified": true
+      },
+      {
+        "url": "https://www.mhlw.go.jp/content/000709033.pdf",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "36協定を労使で締結することと、届出書自体の押印・署名の要否を区別する厚労省資料。",
+        "verified": true
+      },
+      {
+        "url": "https://www.mhlw.go.jp/content/11201250/001194506.pdf",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "82頁のトーコロ事件整理を開いて確認：親睦会の代表が当然に過半数代表者であるということにはならない。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/pull/538"
+    },
+    "reviewedAt": "2026-11-25",
+    "validThrough": "2026-11-27"
+  },
+  {
+    "key": "realestate:sanpai-chukan-shori-hasai-shisetsu-bukken-ricchi-youken",
+    "fingerprint": "095572bff021b26ff35941ed592eb671e0f741dd8d55e9bafcb04dfa69bd565a",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.env.go.jp/content/900479509.pdf",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "廃プラスチック類（施行令第7条第7号）・がれき類等（第8号の2）の破砕施設で1日当たりの処理能力が5トンを超えるものは施設設置許可（廃棄物処理法第15条第1項）の対象。本文の『5トンを超える』と一致",
+        "verified": true
+      },
+      {
+        "url": "https://www.pref.chiba.lg.jp/haishi/shorigyou/procedure.html",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "産業廃棄物処分業許可（法第14条）と施設設置許可（法第15条）は別制度で、破砕施設は1日5トン超が設置許可対象という本文の区別を裏付け",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/law/325AC0000000201",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "建築基準法第51条＝都市計画区域内で処理施設の位置が都市計画に決定していなければ新築・増築不可、特定行政庁がただし書許可した場合を除く（複数のlg.jp運用資料で内容を照合）",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/45704422511"
+    },
+    "reviewedAt": "2026-11-26",
+    "validThrough": "2026-11-28"
+  },
+  {
+    "key": "realestate:chugokugo-buyer-saikenchiku-fuka-sesshado-43jo-dd",
+    "fingerprint": "06892feb1072e936b58675805d482f381685c27fed4e190f083a6c95b82f2020",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.toshiseibi.metro.tokyo.lg.jp/kenchiku/kijun/43.htm",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "建築基準法第43条第2項第1号＝認定（建築審査会の同意不要）・第2号＝許可（建築審査会の同意が必要）、基準は施行規則第10条の3。本文の区分と一致",
+        "verified": true
+      },
+      {
+        "url": "https://www.pref.saitama.lg.jp/b1103/kyotu2014/43tadasi.html",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "平成30年法律第67号で旧第43条第1項ただし書許可を第2項第1号認定・第2号許可へ再編、接道関係は2018年9月25日施行。本文の施行日・公布経緯と一致",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/law/325AC0000000201",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "第42条（道路の定義・原則幅員4m以上／2項みなし道路）・第43条第1項（敷地は道路に2m以上接する接道義務）。lg.jp運用資料で内容を照合",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/45704422511"
+    },
+    "reviewedAt": "2026-11-26",
+    "validThrough": "2026-11-28"
+  },
+  {
+    "key": "legal:kigyonai-tenkin-zairyu-chuka-taiwan-chuzaiin-yobiyose",
+    "fingerprint": "32acc0c3d332bed63f7f6c8840a510c2eb54fa70abe364470b84750a975e96b5",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.moj.go.jp/isa/content/001366542.pdf",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "企業内転勤の提出書類はカテゴリー1〜4で区分、カテゴリー2は前年分の法定調書合計表の源泉徴収税額1,000万円以上。本文のカテゴリー説明と一致（ISA共通区分）",
+        "verified": true
+      },
+      {
+        "url": "https://www.moj.go.jp/isa/applications/status/intracompanytransfee.html",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "企業内転勤の該当活動、在留期間（5年・3年・1年・3月）、提出書類の変更＝令和8年4月1日運用開始。本文と一致",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/law/402M50000010016",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "上陸許可基準省令 企業内転勤の項＝直前に外国事業所で技人国業務に継続1年以上従事・日本人同等額以上の報酬。本文の要件と一致",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/45704422511"
+    },
+    "reviewedAt": "2026-11-26",
+    "validThrough": "2026-11-28"
+  },
+  {
+    "key": "legal:koueki-nintei-shinsei-koueki-shadan-zaidan-youken",
+    "fingerprint": "83ca1995286970ebca5b4d1cac8ae5a698537934db704f7c973e1c22b3cdb521",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://laws.e-gov.go.jp/law/418AC0000000049",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "公益認定法の行政庁・認定基準・財務規律・提出・監督及び取消しの規定。",
+        "verified": true
+      },
+      {
+        "url": "https://www.moj.go.jp/MINJI/minji153.html",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "一般社団・一般財団の定款認証を含む設立手続と一般財団の財産拠出。",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/law/418AC0000000048",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "一般法人法による法定会計監査人の資格と一般財団への準用。",
+        "verified": true
+      },
+      {
+        "url": "https://www.sangiin.go.jp/japanese/joho1/kousei/gian/213/meisai/m213080213044.htm",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "改正法の公布日と法律番号。",
+        "verified": true
+      },
+      {
+        "url": "https://www.koeki-info.go.jp/commissions/documents/mqi2l560ib.pdf",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "改正法の施行日を定める政令。",
+        "verified": true
+      },
+      {
+        "url": "https://www.koeki-info.go.jp/regulations/documents/byxewbt1b9.pdf",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "中期的収支均衡、予備財産および2025年改正財務規律。",
+        "verified": true
+      },
+      {
+        "url": "https://www.koeki-info.go.jp/activities/documents/9q32cxyfz2.pdf",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "公益認定申請の窓口、必要資料及び審査の手引。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/pull/540"
+    },
+    "reviewedAt": "2026-11-25",
+    "validThrough": "2026-11-27"
+  },
+  {
+    "key": "realestate:chugokugo-buyer-dojou-osen-taisakuho-atochi-dd",
+    "fingerprint": "50de6dc1415900558edc5adef315721ccd9cdb449a3a9c4c09d927f6d012f277",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://laws.e-gov.go.jp/api/2/law_data/414AC0000000053?asof=2026-11-25&law_full_text_format=json",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "土壌汚染対策法第3〜5条、第6〜9条、第11・12条。施設廃止・知事確認後の形質変更、第4条の30日前届出と調査命令、第5条の命令を区別。第7条の計画提出指示の相手、第8条による原因者への限度付き費用請求、第9・12条の形質変更制限・例外を現行条文で照合。",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/api/2/law_data/414M60001000029?asof=2026-11-25&law_full_text_format=json",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "同法施行規則第21条の4と第22条。確認後の対象行為は900㎡以上、第4条は原則3,000㎡、一定の工場等では900㎡。廃止済み施設について第3条の報告・ただし書確認のいずれもない場合と、それらを終えた土地を区別。",
+        "verified": true
+      },
+      {
+        "url": "https://www.env.go.jp/content/000075054.pdf",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "環境省ガイドライン「土壌汚染状況調査」の調査契機の説明。施設の実際の使用・廃止、健康被害のおそれ、面積、形質変更と各届出を区別し、単なる売買を法定調査の一律の契機としない。",
+        "verified": true
+      },
+      {
+        "url": "https://www.env.go.jp/water/dojo/gl-man.html",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "環境省ガイドライン・マニュアル等の公式索引。土地履歴、法定調査と措置の確認に使う実務資料への入口。",
+        "verified": true
+      },
+      {
+        "url": "https://www.env.go.jp/water/dojo/kikan.html",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "環境省の土壌汚染対策法に基づく指定調査機関一覧。仲介業者による説明と指定調査機関による法定調査を区別。",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/api/2/law_data/327AC1000000176?asof=2026-11-25&law_full_text_format=json",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "宅地建物取引業法第35条第1項第2号。媒介の重要事項説明は法令に基づく制限等が対象で、仲介業者自身を土壌調査機関とする規定ではない。",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/api/2/law_data/339CO0000000383?asof=2026-11-25&law_full_text_format=json",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "宅地建物取引業法施行令第3条第1項第57号：土壌汚染対策法第9条並びに第12条第1項及び第3項を明記。区域指定で直ちに売買禁止とはならない。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/pull/541"
+    },
+    "reviewedAt": "2026-11-25",
+    "validThrough": "2026-11-27"
+  },
+  {
+    "key": "realestate:chugokugo-buyer-kyokai-mikakutei-chiseki-koseki-dd",
+    "fingerprint": "ede94df8bec86aa41cc35a926fb11fc7ab53410309a3d6f935577e6185bb7d78",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://laws.e-gov.go.jp/api/2/law_data/416AC0000000123?asof=2026-11-25&law_full_text_format=json",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "不動産登記法第2条第15・16号、第37条、第123条第1・2号、第124・125条、第131条第1項、第143・148条。地目・地積の実際の変動後の申請と従来記録の錯誤の更正を区別し、筆界特定は所有権の範囲を決めない。",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/api/2/law_data/417M60000010018?asof=2026-11-25&law_full_text_format=json",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "不動産登記規則第77条第1項が地積測量図の記録項目を定める。地番区域の名称、方位、縮尺、対象及び隣地の地番、地積・求積方法、筆界点間の距離・座標値、境界標、測量年月日等を確認。",
+        "verified": true
+      },
+      {
+        "url": "https://www.moj.go.jp/MINJI/minji104",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "法務省「筆界特定制度」。もともとの筆界を特定する手続の対象、所有権の境界との違い、当事者だけの合意では筆界を変更できないこと。",
+        "verified": true
+      },
+      {
+        "url": "https://www.moj.go.jp/MINJI/minji05_00519.html",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "法務省の分筆・地積更正登記の取扱い。隣地所有者が分からない場合も、登記所備付けの精度の高い地図・地積測量図等で確認できる場合がある。すべての事案で隣接所有者の立会いや署名が無条件に不要という意味ではない。",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/api/2/law_data/325AC1000000228?asof=2026-11-25&law_full_text_format=json",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "土地家屋調査士法第3条第1項。表示に関する登記に必要な土地・家屋の調査測量、当該登記の申請代理等を規定。",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/api/2/law_data/325AC1000000197?asof=2026-11-25&law_full_text_format=json",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "司法書士法第3条第1項。登記に関する手続代理等を規定。土地の調査測量・地積更正と、所有権移転などの権利登記の相談先を分けた。",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/api/2/law_data/327AC1000000176?asof=2026-11-25&law_full_text_format=json",
+        "checkedAt": "2026-11-25",
+        "relevantClaim": "宅地建物取引業法第35条第1項に基づく登記された権利等の重要事項説明を、土地家屋調査士の測量や裁判所の判断とは区別。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/pull/541"
+    },
+    "reviewedAt": "2026-11-25",
+    "validThrough": "2026-11-27"
+  },
+  {
+    "key": "realestate:souzoku-kubun-mansion-tainou-kanrihi-shokei-baikyaku",
+    "fingerprint": "f0c6a14f7410dcece6fbfe25fccd15f6e0feebe1cb08dd120220dd5f2987931a",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://laws.e-gov.go.jp/law/337AC0000000069",
+        "checkedAt": "2026-11-27",
+        "relevantClaim": "区分所有法第7条第1項（共用部分・規約・決議に基づく債権の先取特権）・第8条（前条第1項の債権は債務者たる区分所有者の特定承継人に対しても行使できる）。買主が前所有者の滞納管理費を承継し得るという本文の中核主張と一致（管理業協会Q&A・判例で裏付け）。",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/law/129AC0000000089",
+        "checkedAt": "2026-11-27",
+        "relevantClaim": "民法第896条（相続の包括承継）・第915条第1項（熟慮期間3か月）・第939条（放棄で初めから相続人でなかったとみなす）・第940条（放棄時占有財産の保存義務）。本文の相続・相続放棄の整理と一致（確立した条文）。",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/law/332M50004000012",
+        "checkedAt": "2026-11-27",
+        "relevantClaim": "宅建業法施行規則第16条の2第6号（修繕積立金の規約定め・既積立額）・第7号（通常の管理費用の額）＝重要事項。国交省解釈運用の滞納額開示（滞納があるときはその額を告げる）と併せ、本文の重要事項開示の記述と一致（確立した運用）。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/46066984944"
+    },
+    "reviewedAt": "2026-11-28",
+    "validThrough": "2026-11-30"
+  },
+  {
+    "key": "legal:souzoku-shakuchiken-jinushi-taio-meigi-koukan-fuyou",
+    "fingerprint": "f873c42c331be7fc0ece8df1640a7eb1e904cc38df9e43d8cf13150568297570",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://laws.e-gov.go.jp/law/129AC0000000089",
+        "checkedAt": "2026-11-27",
+        "relevantClaim": "民法第896条（相続の包括承継）・第612条（賃借権の譲渡・転貸は賃貸人の承諾要・無断は解除事由）。相続による借地権承継は第612条の『譲渡』に当たらず承諾・名義書換料は原則不要という本文の整理と一致（確立した条文・一般的法的理解）。",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/law/403AC0000000090",
+        "checkedAt": "2026-11-27",
+        "relevantClaim": "借地借家法第11条（地代等増減請求権・協議不調なら裁判確定まで相当額で足りる）・第17条（借地条件変更及び増改築の許可＝第1項条件変更・第2項承諾に代わる許可の借地非訟）・第19条（賃借権譲渡・転貸の許可）。本文の建替え・地代の各記述と一致（確立した条文）。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/46066984944"
+    },
+    "reviewedAt": "2026-11-28",
+    "validThrough": "2026-11-30"
+  },
+  {
+    "key": "labor:zoen-gaikou-koji-tenko-kisetsu-hitorioyakata-roumu",
+    "fingerprint": "c2106cbdf50b80b9791d6ebcdc8af8633854e3ff92b9737ec60eddf368d4f6f5",
+    "requiresQualifiedReview": false,
+    "sources": [
+      {
+        "url": "https://www.mhlw.go.jp/stf/newpage_45547.html",
+        "checkedAt": "2026-11-27",
+        "relevantClaim": "労働安全衛生規則第612条の2（令和7年厚生労働省令第57号・2025年4月15日公布・同年6月1日施行）＝熱中症のおそれがある労働者の早期把握体制、症状時の対応手順作成、関係労働者への周知を義務化。本文の2025/6/1熱中症義務化の記述と一致。",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/law/322AC0000000049",
+        "checkedAt": "2026-11-27",
+        "relevantClaim": "労基法第26条（使用者の責に帰すべき休業＝平均賃金60％以上の休業手当）・第32条の4（1年単位変形）・第36条第4〜6項（月45h年360h、1年単位変形は月42h年320h、特別条項年720h・単月100h未満・複数月平均80h）・第41条第1号（農業等の適用除外）、労基則第12条の4（1日10h・1週52h・280日・連続6日）。本文の各上限・休業手当と一致（確立した条文）。",
+        "verified": true
+      },
+      {
+        "url": "https://laws.e-gov.go.jp/law/322AC0000000050",
+        "checkedAt": "2026-11-27",
+        "relevantClaim": "労災保険法第33条第3号・第4号（一人親方等）・第35条（第2種特別加入・団体を通じて）。造園工事は建設の事業に含まれ、造園協同組合等が建設業一人親方等の特別加入団体として名簿登載される例。本文の一人親方労災の記述と一致（確立した枠組み）。",
+        "verified": true
+      }
+    ],
+    "blockingFindings": [],
+    "checks": {
+      "primarySources": "pass",
+      "duplicateIntent": "pass",
+      "legalClaims": "pass",
+      "translationAlignment": "pass"
+    },
+    "reviewer": {
+      "kind": "independent-model",
+      "name": "Daily Columns independent review",
+      "evidenceUrl": "https://github.com/yotsuba-samurai2/pj-yotsuba-fudousan/actions/runs/46066984944"
+    },
+    "reviewedAt": "2026-11-28",
+    "validThrough": "2026-11-30"
   }
 ];

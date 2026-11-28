@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { getSupabaseClient } from "@/lib/supabase/client";
 import type { RentalImport } from "@/lib/rental-import/validation";
+import { DIRECT_RENTAL_SEARCH_AREA_LABEL } from "@/lib/rental-import/direct-search-area";
 
 import { acknowledgeReadback, applyWithReceipt, batchAssets, operatorReceipts, inspectReceipt, intentDigest, isReady, runReviewedBatch, summaryReport, type BatchResult as Result } from "@/lib/rental-import/batch-review";
 const LABELS: Record<string, string> = { ready: "登録条件を確認済み", "ready-close": "掲載終了を確認済み・反映すると公開停止", held: "確認待ち", created: "登録済み", updated: "更新済み", closed: "募集終了に変更済み", unchanged: "変更なし", readback_required: "送信結果が不明・再送せず読戻し", saved_refresh_pending: "物件データは保存済み・公開ページの更新要求は失敗", saved_readback_required: "物件データは保存済み・送信記録の再確認が必要", previously_saved: "同じ入力の保存履歴あり・再送せず", already_reviewed: "読戻し済み・同じ入力は再送しません", confirmed_not_saved:"未保存を担当者が確認・同じ入力は再送しません" };
@@ -156,6 +157,7 @@ function RentalImportBatch({operator}:{operator:string}) {
     <div className="mx-auto max-w-3xl p-6">
       <Link href="/admin/bukken" className="text-sm text-primary underline">物件管理へ戻る</Link>
       <h1 className="mt-5 text-2xl font-semibold">賃貸物件の取込・掲載確認</h1>
+      <p className="mt-2 text-sm text-text-muted">四葉サイトの直接検索（ITANDI BB・いい生活Square）の対象は、東京都の{DIRECT_RENTAL_SEARCH_AREA_LABEL}です。文京区の学区別掲載は文京区内に限ります。</p>
       <p className="mt-2 text-sm text-text-muted">最新の募集状況と広告掲載の許可を確認して登録します。当社報酬の額や確認記録は掲載条件にしません。東京建物不動産販売のメールに同一号室の広告掲載可が明示されていればREINS確認を省略し、それ以外は同じ物件のどこか1か所で広告可を確認します。画像は、今回の掲載先で素材の利用条件を確認できたものだけを選択してください。賃料・諸条件はITANDIの記載、ペットは確認できた中で多い条件を採用します。既に登録済みの同一号室は重複登録を止め、更新時だけ「公開済み物件の再確認」を使います。</p>
       <section className="mt-5 rounded-lg border border-border p-4">
         <h2 className="font-semibold">公開後の監視対象</h2>

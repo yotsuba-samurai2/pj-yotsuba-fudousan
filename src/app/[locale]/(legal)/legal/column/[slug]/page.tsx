@@ -1,4 +1,7 @@
 import { notFound } from "next/navigation";
+import Link from "next/link";
+import { getMainlandInheritanceContact } from "@/lib/legal/mainland-inheritance-contact";
+import { addLocalePrefix } from "@/lib/locale";
 import { getLegalColumnBySlug, getLegalColumns, getLocalizedColumn, isLocaleAllowed } from "@/lib/columns";
 import { buildPageMetadata } from "@/lib/seo";
 import { NONRESIDENT_ARTICLE_SLUG } from "@/lib/legal/nonresident-review";
@@ -78,7 +81,8 @@ export default async function LegalColumnDetailPage({ params }: Props) {
   const next = idx > 0 ? sorted[idx - 1] : null;
 
   // 2026-09-24：コラム→受け皿ページの「この記事に関係する相談窓口」（対応表＝column-consult-windows.ts・ja のみ）
-  const consultWindows = locale === "ja" ? getColumnConsultWindows("legal", slug) : null;
+  const mainlandContact = getMainlandInheritanceContact("/legal/column/" + slug, locale);
+  const consultWindows = locale === "ja" && !mainlandContact ? getColumnConsultWindows("legal", slug) : null;
 
   return (
     <div>
@@ -108,7 +112,17 @@ export default async function LegalColumnDetailPage({ params }: Props) {
           コラムは検索・AIから直接入ってくる入口で、読み終えた直後がいちばん動く。
           contact / thanks には入れない（フォームの前後で導線が割れるため）。 */}
       <div className="mx-auto max-w-3xl px-4">
-        <CtaBand businessKey="legal" variant={slug === NONRESIDENT_ARTICLE_SLUG ? "company" : undefined} />
+        {mainlandContact ? (
+          <section aria-label={mainlandContact.heading} className="my-6 rounded-2xl bg-primary-tint px-6 py-8 text-center">
+            <h2 className="font-serif text-xl font-semibold text-ink">{mainlandContact.heading}</h2>
+            <p className="mx-auto mt-2 max-w-xl text-sm text-text-muted">{mainlandContact.details}</p>
+            <Link className="mt-4 inline-flex rounded-lg bg-primary px-5 py-3 font-semibold text-white" href={addLocalePrefix(mainlandContact.href, locale)}>
+              {mainlandContact.label}
+            </Link>
+          </section>
+        ) : (
+          <CtaBand businessKey="legal" variant={slug === NONRESIDENT_ARTICLE_SLUG ? "company" : undefined} />
+        )}
       </div>
     </div>
   );
