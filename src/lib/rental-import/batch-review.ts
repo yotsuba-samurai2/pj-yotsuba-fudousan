@@ -5,9 +5,12 @@ type Finished = { intent: string; state: "saved" | "reviewed" };
 type Receipt = { intent: string; state: "sending" | "saved" | "refresh_pending" | "reviewed"; recent?: Finished[] };
 const historyLimit = 32;
 /** A second signed-in operator does not inherit this operator's write markers. */
-export function operatorReceipts(raw: ReceiptStore, uid: string): ReceiptStore {
+function operatorPrefix(uid: string) {
   if (!/^[a-z0-9-]{1,128}$/i.test(uid)) throw Error("操作者を識別できません。");
-  const prefix = "yotsuba:operator:"+uid+":";
+  return "yotsuba:operator:"+uid+":";
+}
+export function operatorReceipts(raw: ReceiptStore, uid: string): ReceiptStore {
+  const prefix = operatorPrefix(uid);
   return { getItem:k=>raw.getItem(prefix+k), setItem:(k,v)=>raw.setItem(prefix+k,v), removeItem:k=>raw.removeItem(prefix+k) };
 }
 type Reply = { ok: boolean; status: number; body: unknown };
@@ -82,6 +85,27 @@ export function inspectReceipt(store: ReceiptStore, slug: string, intent: string
   if (!safeSlug.test(slug) || !safeDigest.test(intent)) return held("対象を識別できないため送信しません。");
   try { return fromReceipt(load(store, slug), slug, intent); } catch { return storageHeld(slug); }
 }
+/** Recover pending receipts after reloading the same tab, without retaining any input. */
+export function listPendingReceipts(raw: ReceiptStore & Pick<Storage,"length"|"key">, uid: string): BatchResult[] {
+  const prefix = operatorPrefix(uid) + key("");
+  const scoped = operatorReceipts(raw, uid);
+  const pending: BatchResult[] = [];
+  for (let i = 0; i < raw.length; i++) {
+    const k = raw.key(i);
+    if (!k?.startsWith(prefix)) continue;
+    const slug = k.slice(prefix.length);
+    if (!safeSlug.test(slug)) continue;
+    try {
+      const receipt = load(scoped, slug);
+      if (receipt?.state === "sending" || receipt?.state === "refresh_pending") {
+        const marker = fromReceipt(receipt,slug,receipt.intent);
+        if (marker) pending.push(marker);
+      }
+    } catch { pending.push(storageHeld(slug)); }
+  }
+  return pending.sort((a,b)=>(a.slug??"").localeCompare(b.slug??""));
+}
+
 /** Called only after the operator has compared a fresh inventory and explicitly acknowledged. Never a write authorization. */
 export function acknowledgeReadback(store: ReceiptStore, slug: string, seenIntent: string, finding: "reconciled"|"confirmed_not_saved" = "reconciled"): boolean {
   if (!safeSlug.test(slug) || !safeDigest.test(seenIntent)) return false;

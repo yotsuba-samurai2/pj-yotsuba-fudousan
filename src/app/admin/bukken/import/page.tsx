@@ -3,19 +3,22 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { getSupabaseClient } from "@/lib/supabase/client";
+import { buildRecheckQueue, parseVerificationBatch, type RecheckRow } from "@/lib/rental-import/recheck-queue";
 import type { RentalImport } from "@/lib/rental-import/validation";
 import { DIRECT_RENTAL_SEARCH_AREA_LABEL } from "@/lib/rental-import/direct-search-area";
 
-import { acknowledgeReadback, applyWithReceipt, batchAssets, operatorReceipts, inspectReceipt, intentDigest, isReady, runReviewedBatch, summaryReport, type BatchResult as Result } from "@/lib/rental-import/batch-review";
+import { acknowledgeReadback, applyWithReceipt, batchAssets, operatorReceipts, inspectReceipt, intentDigest, isReady, listPendingReceipts, runReviewedBatch, summaryReport, type BatchResult as Result } from "@/lib/rental-import/batch-review";
 const LABELS: Record<string, string> = { ready: "登録条件を確認済み", "ready-close": "掲載終了を確認済み・反映すると公開停止", held: "確認待ち", created: "登録済み", updated: "更新済み", closed: "募集終了に変更済み", unchanged: "変更なし", readback_required: "送信結果が不明・再送せず読戻し", saved_refresh_pending: "物件データは保存済み・公開ページの更新要求は失敗", saved_readback_required: "物件データは保存済み・送信記録の再確認が必要", previously_saved: "同じ入力の保存履歴あり・再送せず", already_reviewed: "読戻し済み・同じ入力は再送しません", confirmed_not_saved:"未保存を担当者が確認・同じ入力は再送しません" };
 
 export default function RentalImportPage() {
-  const [operator,setOperator] = useState<string|null>(null);
+  const [operator,setOperator] = useState<string|null|undefined>(undefined);
   useEffect(()=>{
     const {data:{subscription}} = getSupabaseClient().auth.onAuthStateChange((_event,session)=>setOperator(session?.user.id ?? null));
     return ()=>subscription.unsubscribe();
   },[]);
-  return operator ? <RentalImportBatch key={operator} operator={operator} /> : <p role="status" className="p-6">管理者セッションを確認しています。</p>;
+  if (operator === undefined) return <p role="status" className="p-6">管理者セッションを確認しています。</p>;
+  if (operator === null) return <div className="p-6"><p>四葉の管理画面にログインしてください。ITANDIへのログインとは別です。</p><Link className="underline" href="/admin/login">管理画面のログインへ</Link></div>;
+  return <RentalImportBatch key={operator} operator={operator} />;
 }
 type Observation = "managed"|"canonical"|"not_observed";
 function RentalImportBatch({operator}:{operator:string}) {
@@ -27,11 +30,16 @@ function RentalImportBatch({operator}:{operator:string}) {
   const [operation, setOperation] = useState<"new" | "maintenance" | "close">("new");
   const [results, setResults] = useState<Result[]>([]);
   const [watchData, setWatchData] = useState("");
+  const [queue, setQueue] = useState<{rows:RecheckRow[]; checkedAt:string}|null>(null);
+  const [showAll, setShowAll] = useState(false);
+  const [pasted, setPasted] = useState("");
+  const inputRef = useRef<HTMLInputElement>(null);
   const [error, setError] = useState("");
   const [busy, setBusy] = useState(false);
   const running = useRef(false);
   const fileVersion = useRef(0);
   const [assetInputKey, setAssetInputKey] = useState(0);
+  const [pendingReceipts,setPendingReceipts] = useState<Result[]>([]);
   const [observed, setObserved] = useState<Map<string,Observation>>(new Map());
   const [lastRun, setLastRun] = useState<{startedAt:string; stage:"check"|"apply"} | null>(null);
   const reset = () => { setResults([]); setError(""); setWatchData(""); setObserved(new Map()); setLastRun(null); };
@@ -109,15 +117,23 @@ function RentalImportBatch({operator}:{operator:string}) {
   }
   async function readInventory() {
     if (running.current) return;
-    running.current = true; setBusy(true); setError(""); setWatchData(""); setObserved(new Map());
+    running.current = true; setBusy(true); setError(""); setWatchData(""); setQueue(null); setPendingReceipts([]); setObserved(new Map());
     try {
       const res = await fetch("/api/admin/bukken/import", {cache:"no-store", signal:AbortSignal.timeout(45_000), headers:{Authorization:`Bearer ${await token()}`}});
+      if (res.status===401 || res.status===403) throw new Error("四葉の管理画面の認証を確認してください。ITANDIの募集終了とは判定しません。");
       const data = await res.json();
-      if (!res.ok || !Array.isArray(data.listings)) throw new Error("監視対象を取得できませんでした");
+      if (!res.ok || !Array.isArray(data.listings)) throw new Error("監視対象を取得できませんでした。募集終了とは判定していません。");
+      const now = new Date();
+      setQueue({rows:buildRecheckQueue(data.listings,now),checkedAt:new Intl.DateTimeFormat("ja-JP",{timeZone:"Asia/Tokyo",dateStyle:"short",timeStyle:"short"}).format(now)});
       setWatchData(JSON.stringify(data,null,2));
       // Presence is not proof of this request's completion. Never unlock just because a GET returned.
       const slugs = new Set(data.listings.map((v:{slug?:string}) => v.slug));
-      const unresolved = results.filter(r=>r.slug && r.receiptIntent);
+      let recovered:Result[] = [];
+      try { recovered = listPendingReceipts(window.sessionStorage,operator); }
+      catch { setError("このタブの送信記録を読み出せません。結果が不明な住戸は再送しないでください。"); }
+      const seen = new Set(results.filter(r=>r.receiptIntent).map(r=>r.slug+":"+r.receiptIntent));
+      setPendingReceipts(recovered.filter(r=>!seen.has(r.slug+":"+r.receiptIntent)));
+      const unresolved = [...results,...recovered.filter(r=>!seen.has(r.slug+":"+r.receiptIntent))].filter(r=>r.slug && r.receiptIntent);
       const matches = new Map<string,Observation>();
       for (const r of unresolved) if (slugs.has(r.slug)) matches.set(r.slug+":"+r.receiptIntent,"managed");
       if (unresolved.some(r=>!slugs.has(r.slug))) {
@@ -133,7 +149,7 @@ function RentalImportBatch({operator}:{operator:string}) {
     } catch(err) { setError(err instanceof Error ? err.message : "監視対象を取得できませんでした"); }
     finally { running.current=false; setBusy(false); }
   }
-  function recordReadback(row:number, result:Result) {
+  function recordReadback(result:Result, row?:number) {
     const {slug,receiptIntent}=result;
     if (!slug || !receiptIntent) return;
     const finding = observed.get(slug+":"+receiptIntent);
@@ -142,8 +158,19 @@ function RentalImportBatch({operator}:{operator:string}) {
     if (!window.confirm(absent
       ? "2つの一覧に見当たらないだけでは未保存の証明ではありません。元の送信処理が終了し、管理記録等を別途照合して未保存を特定できましたか？ 確証がなければキャンセルしてください。元の入力は再送せず、新しい根拠で再チェックします。"
       : "正本の同一住戸・保存内容と必要な公開画面を照合して、元の処理結果を特定できましたか？ 不明ならキャンセルしてください。元の入力は再送しません。")) return;
-    if (!acknowledgeReadback(storage(),slug,receiptIntent,absent ? "confirmed_not_saved" : "reconciled")) { setError("送信記録が一致しません。もう一度読み戻してください。"); return; }
-    setResults(prev=>prev.map((r,i)=>i===row ? {action:absent ? "confirmed_not_saved" : "already_reviewed",slug} : r));
+    try {
+      if (!acknowledgeReadback(storage(),slug,receiptIntent,absent ? "confirmed_not_saved" : "reconciled")) { setError("送信記録が一致しません。もう一度読み戻してください。"); return; }
+    } catch (err) { setError(err instanceof Error ? err.message : "送信記録を確認できません。"); return; }
+    if (row !== undefined) setResults(prev=>prev.map((r,i)=>i===row ? {action:absent ? "confirmed_not_saved" : "already_reviewed",slug} : r));
+    else setPendingReceipts(prev=>prev.filter(r=>r.slug!==slug || r.receiptIntent!==receiptIntent));
+  }
+  function loadPasted() {
+    if (running.current) return;
+    ++fileVersion.current;
+    if (inputRef.current) inputRef.current.value = "";
+    reset(); setRecords([]); setFiles([]); setAssetInputKey(k=>k+1);
+    try { setRecords(parseVerificationBatch(pasted)); }
+    catch(err) { setError(err instanceof Error ? err.message : "データを読み込めませんでした"); }
   }
   function downloadReport() {
     if (!lastRun) return;
@@ -153,6 +180,7 @@ function RentalImportBatch({operator}:{operator:string}) {
     const a=document.createElement("a"); a.href=url; a.download="yotsuba-rental-"+lastRun.startedAt.replace(/[:.]/g,"-")+"-"+lastRun.stage+".json";
     a.click(); setTimeout(()=>URL.revokeObjectURL(url),1000);
   }
+  const visibleQueue = queue?.rows.filter(r=>showAll || r.priority!=="current") ?? [];
   return (
     <div className="mx-auto max-w-3xl p-6">
       <Link href="/admin/bukken" className="text-sm text-primary underline">物件管理へ戻る</Link>
@@ -160,19 +188,55 @@ function RentalImportBatch({operator}:{operator:string}) {
       <p className="mt-2 text-sm text-text-muted">四葉サイトの直接検索（ITANDI BB・いい生活Square）の対象は、東京都の{DIRECT_RENTAL_SEARCH_AREA_LABEL}です。文京区の学区別掲載は文京区内に限ります。</p>
       <p className="mt-2 text-sm text-text-muted">最新の募集状況と広告掲載の許可を確認して登録します。当社報酬の額や確認記録は掲載条件にしません。東京建物不動産販売のメールに同一号室の広告掲載可が明示されていればREINS確認を省略し、それ以外は同じ物件のどこか1か所で広告可を確認します。画像は、今回の掲載先で素材の利用条件を確認できたものだけを選択してください。賃料・諸条件はITANDIの記載、ペットは確認できた中で多い条件を採用します。既に登録済みの同一号室は重複登録を止め、更新時だけ「公開済み物件の再確認」を使います。</p>
       <section className="mt-5 rounded-lg border border-border p-4">
-        <h2 className="font-semibold">公開後の監視対象</h2>
+        <h2 className="font-semibold">公開中の物件を再確認</h2>
+        <p className="mt-2 text-sm text-text-muted">期限が近い特典と、確認予定日を迎えた物件を先に表示します。一覧取得は四葉の掲載情報の読み取りだけです。ITANDI等への自動ログイン、募集終了の判定、公開情報の変更は行いません。</p>
         <button disabled={busy} className="mt-2 rounded border border-border px-3 py-2 text-sm disabled:opacity-40" onClick={readInventory}>監視対象を取得</button>
-        {watchData && <label className="mt-3 block text-sm">再確認用データ<textarea aria-label="再確認用データ" readOnly value={watchData} rows={12} className="mt-2 block w-full rounded border border-border p-2 font-mono text-xs" /></label>}
+        {queue && <div className="mt-3 text-sm">
+          <p>四葉の掲載情報を取得：{queue.checkedAt}（日本時間） ／ 公開中の管理対象 {queue.rows.length}室 ／ 要確認 {queue.rows.filter(r=>r.priority!=="current").length}室</p>
+          <label className="mt-2 flex items-center gap-2"><input type="checkbox" checked={showAll} onChange={e=>setShowAll(e.target.checked)} />要確認以外も表示する</label>
+          {visibleQueue.length===0 && <p className="mt-2">表示対象の物件はありません。</p>}
+          <ul className="mt-2 max-h-96 divide-y divide-border overflow-y-auto">
+            {visibleQueue.map(r=><li key={r.slug} className="py-3">
+              <p className="font-semibold">{r.title}</p>
+              {r.promotionEnds.length>0 && <p>要確認の特典期限：{r.promotionEnds.join("、")}</p>}
+              <p className="text-text-muted">再確認予定日：{r.nextUpdateAt??"記録なし"}{r.priority==="due" ? "（確認予定日到来）" : ""}</p>
+              <div className="mt-1 flex flex-wrap gap-x-4">
+                {r.sourceUrl ? <a href={r.sourceUrl} target="_blank" rel="noopener noreferrer" className="text-primary underline">{r.sourceLabel}の募集画面</a> : <span>取得元リンクなし</span>}
+                <Link href={`/bukken/${r.slug}`} target="_blank" rel="noopener noreferrer" className="text-primary underline">四葉の公開表示</Link>
+              </div>
+            </li>)}
+          </ul>
+        </div>}
+        {pendingReceipts.length>0 && <div className="mt-3 rounded border border-border p-3 text-sm">
+          <h3 className="font-semibold">このタブに残った未確認の送信記録</h3>
+          <p>前回の入力を読み直さなくても結果を確認できます。この一覧だけで保存・未保存を確定したり、再送したりしないでください。</p>
+          <ul className="mt-2 space-y-2">{pendingReceipts.map(r=>{
+            const finding = observed.get(r.slug+":"+r.receiptIntent);
+            return <li key={r.slug}>
+              <p>{r.slug} ／ {r.action==="held" ? "送信記録を読み取れません" : LABELS[r.action]}</p>
+              {finding && <p>{finding==="not_observed" ? "四葉の一覧には見当たりません（未保存とは断定できません）" : "四葉の一覧に同じ識別番号があります（処理結果は別途照合してください）"}</p>}
+              <Link className="underline" href="/admin/bukken" target="_blank" rel="noopener noreferrer">物件管理の正本を開く</Link>
+              {r.receiptIntent && <button type="button" disabled={busy || !finding || (finding==="not_observed" && r.action!=="readback_required")} className="ml-2 rounded border px-2 py-1 disabled:opacity-50" onClick={()=>recordReadback(r)}>{finding==="not_observed" ? "別の正本で未保存を特定した場合のみ記録" : "照合した結果を記録（再送しない）"}</button>}
+            </li>;
+          })}</ul>
+        </div>}
+        {watchData && <details className="mt-3 text-sm"><summary>再確認用データ（社内用JSON）</summary><textarea aria-label="再確認用データ" readOnly value={watchData} rows={12} className="mt-2 block w-full rounded border border-border p-2 font-mono text-xs" /></details>}
       </section>
       <div className="mt-6 space-y-5 rounded-xl border border-border bg-surface p-5">
         <label className="block text-sm font-medium">確認データ（JSON）
-          <input aria-label="確認データ（JSON）" type="file" accept=".json,application/json" disabled={busy} className="mt-2 block w-full text-sm" onChange={async (e) => {
-            const latest = ++fileVersion.current; reset(); setRecords([]); setFiles([]); setAssetInputKey(k=>k+1);
+          <input ref={inputRef} aria-label="確認データ（JSON）" type="file" accept=".json,application/json" disabled={busy} className="mt-2 block w-full text-sm" onChange={async (e) => {
+            const latest = ++fileVersion.current; setPasted(""); reset(); setRecords([]); setFiles([]); setAssetInputKey(k=>k+1);
             const file = e.target.files?.[0]; if (!file) return;
-            try { if (file.size > 2_000_000) throw new Error("2MB以下のデータを選択してください"); const data = JSON.parse(await file.text()); if (!Array.isArray(data) || data.length < 1 || data.length > 50) throw new Error("1〜50件の物件配列を選択してください"); if (latest === fileVersion.current) setRecords(data); }
+            try { if (file.size > 2_000_000) throw new Error("2MB以下のデータを選択してください"); const data = parseVerificationBatch(await file.text()); if (latest === fileVersion.current) setRecords(data); }
             catch (err) { if (latest === fileVersion.current) setError(err instanceof Error ? err.message : "データを読み込めませんでした"); }
           }} />
         </label>
+        <details className="text-sm">
+          <summary>確認データを貼り付ける（ファイル不要）</summary>
+          <p className="mt-2 text-text-muted">元の募集画面で同一号室を確認して用意した取込用JSONだけを読み込んでください。読み込むだけでは登録されません。</p>
+          <textarea disabled={busy} aria-label="確認データのJSONを貼り付け" value={pasted} onChange={e=>setPasted(e.target.value)} rows={5} className="mt-2 block w-full rounded border border-border p-2 font-mono text-xs" />
+          <button type="button" disabled={busy || !pasted.trim()} onClick={loadPasted} className="mt-2 rounded border border-border px-3 py-2 disabled:opacity-40">貼り付けた確認データを読み込む</button>
+        </details>
         <label className="block text-sm font-medium">処理
           <select aria-label="処理" value={operation} disabled={busy} onChange={(e) => { setOperation(e.target.value as typeof operation); reset(); }} className="mt-2 block w-full rounded border border-border p-2">
             <option value="new">新しい候補の登録</option><option value="maintenance">公開済み物件の再確認</option><option value="close">掲載終了・募集終了</option>
@@ -205,7 +269,7 @@ function RentalImportBatch({operator}:{operator:string}) {
           <p>「監視対象を取得」で最新一覧を読み戻し、必要な公開画面と突き合わせてください。確認できなければこの住戸だけ保留します。</p>
           {observed.get(r.slug+":"+r.receiptIntent)==="canonical" && <p>取込監視リストにありません。<Link className="underline" href="/admin/bukken" target="_blank">物件管理の正本</Link>で保存内容を確認してください。</p>}
           {observed.get(r.slug+":"+r.receiptIntent)==="not_observed" && <p>監視リスト・全件一覧とも未観測です。これだけで未保存とは断定できません。</p>}
-          <button type="button" disabled={busy || !observed.has(r.slug+":"+r.receiptIntent) || (observed.get(r.slug+":"+r.receiptIntent)==="not_observed" && r.action!=="readback_required")} className="mt-1 rounded border px-2 py-1 disabled:opacity-50" onClick={()=>recordReadback(i,r)}>{observed.get(r.slug+":"+r.receiptIntent)==="not_observed" ? "別の正本で未保存を特定した場合のみ記録" : "一致を確認して記録（再送しない）"}</button>
+          <button type="button" disabled={busy || !observed.has(r.slug+":"+r.receiptIntent) || (observed.get(r.slug+":"+r.receiptIntent)==="not_observed" && r.action!=="readback_required")} className="mt-1 rounded border px-2 py-1 disabled:opacity-50" onClick={()=>recordReadback(r,i)}>{observed.get(r.slug+":"+r.receiptIntent)==="not_observed" ? "別の正本で未保存を特定した場合のみ記録" : "一致を確認して記録（再送しない）"}</button>
         </div>}{r.reasons?.map((reason, j) => <p key={j} className="mt-1">{reason}</p>)}</div>)}
       </div>
       <p className="mt-5 text-xs text-text-muted">募集情報は毎回再確認します。掲載終了は履歴を残して公開を停止します。確認日時は再確認の目安で、時間の経過だけでは非公開になりません。</p>

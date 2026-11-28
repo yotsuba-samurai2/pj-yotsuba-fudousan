@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from "vitest";
-import { applyWithReceipt, inspectReceipt, acknowledgeReadback, runReviewedBatch, intentDigest, batchAssets, operatorReceipts, summaryReport, type BatchResult, type ReceiptStore } from "../batch-review";
+import { applyWithReceipt, inspectReceipt, acknowledgeReadback, runReviewedBatch, intentDigest, batchAssets, operatorReceipts, listPendingReceipts, summaryReport, type BatchResult, type ReceiptStore } from "../batch-review";
 
 const slug = "rent-" + "a".repeat(24);
 const slug2 = "rent-" + "b".repeat(24);
@@ -115,4 +115,29 @@ it("確定応答に別の型のslugがあれば結果不明。明示的な保存
 it("同じ素材を写真・間取り両方として入れた候補は送信前に保留",async()=>{
   const source={property:{images:[{url:"asset:one.jpg",kind:"photo"},{url:"asset:one.jpg",kind:"floorplan"}]}};
   const file=new File(["photo"],"one.jpg"); await expect(batchAssets([file]).signature(source,"published","new",false)).rejects.toThrow("兼用");
+});
+
+describe("同じタブの送信記録を再表示", () => {
+  it("入力を引き継がず、不明と公開更新失敗だけ復元し、他の操作者を除外する", async () => {
+    const {data,store}=memory();
+    const raw={...store,get length(){return data.size;},key:(i:number)=>[...data.keys()][i]??null};
+    const a=operatorReceipts(raw,"user-a"), b=operatorReceipts(raw,"user-b");
+    const slug3="rent-"+"c".repeat(24);
+    const slug4="rent-"+"d".repeat(24);
+    await applyWithReceipt({store:a,slug,intent:tag,closing:false,send:async()=>{throw Error("timeout");}});
+    await applyWithReceipt({store:a,slug:slug2,intent:tag,closing:false,send:async()=>({ok:false,status:503,body:{mutationSucceeded:true,publicationRefresh:"failed"}})});
+    await applyWithReceipt({store:a,slug:slug3,intent:tag,closing:false,send:async()=>({ok:true,status:200,body:{slug:slug3,action:"updated"}})});
+    await applyWithReceipt({store:b,slug:slug4,intent:tag,closing:false,send:async()=>{throw Error("timeout");}});
+    expect(listPendingReceipts(raw,"user-a").map(x=>[x.slug,x.action])).toEqual([[slug,"readback_required"],[slug2,"saved_refresh_pending"]]);
+    expect(listPendingReceipts(raw,"user-b").map(x=>x.slug)).toEqual([slug4]);
+    expect(acknowledgeReadback(a,slug,tag)).toBe(true);
+    expect(listPendingReceipts(raw,"user-a").map(x=>x.slug)).toEqual([slug2]);
+    expect(inspectReceipt(a,slug,tag)?.action).toBe("already_reviewed");
+  });
+  it("壊れた記録を未保存として扱わない", () => {
+    const {data,store}=memory();
+    const raw={...store,get length(){return data.size;},key:(i:number)=>[...data.keys()][i]??null};
+    raw.setItem("yotsuba:operator:user-a:yotsuba:rental-write:v1:"+slug,"invalid");
+    expect(listPendingReceipts(raw,"user-a")).toEqual([expect.objectContaining({slug,action:"held"})]);
+  });
 });
