@@ -1,3 +1,4 @@
+import { InheritanceExternalReading } from "@/components/legal/InheritanceExternalReading";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { getMainlandInheritanceContact } from "@/lib/legal/mainland-inheritance-contact";
@@ -104,7 +105,12 @@ export default async function LegalColumnDetailPage({ params }: Props) {
         prev={prev}
         next={next}
         illustration={illustration}
-        afterBody={consultWindows ? <RelatedConsultWindows windows={consultWindows} /> : undefined}
+        afterBody={
+          <>
+            <InheritanceExternalReading slug={slug} locale={locale} />
+            {consultWindows && <RelatedConsultWindows windows={consultWindows} />}
+          </>
+        }
       />
       {/* ★2026-08-13 追加：コラム記事の末尾にCTA帯を置く。
           3レーンとも column/[slug]・column・about にだけ CtaBand が無く、
