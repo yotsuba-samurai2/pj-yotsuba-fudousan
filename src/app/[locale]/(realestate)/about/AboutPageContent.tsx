@@ -7,6 +7,8 @@ import { useTranslation } from "@/hooks/useTranslation";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { BusinessCertification } from "@/components/shared/BusinessCertification";
 import { getAboutBrandContent } from "@/lib/about-brand-content";
+import { SR_LAUNCHED } from "@/lib/shared/office";
+import { srProfileQualificationHighlight, withSrProfileRegistration } from "@/lib/shared/about-qualification-label";
 import { AboutServices } from "./AboutServices";
 
 // 代表プロフィール導線のロケール別ラベル（翻訳チェック§J1・2026-07-20）。
@@ -65,7 +67,13 @@ export default function AboutPageContent() {
   const highlights = tObject<
     Record<string, { label: string; value: string }>
   >("realestate.aboutPage.highlights");
-  const highlightEntries = Object.values(highlights);
+  const highlightEntries = Object.entries(highlights).map(([key, row]) =>
+    key === "qualifications" ? { ...row, value: withSrProfileRegistration(row.value, locale) } : row
+  );
+
+  if (SR_LAUNCHED && !highlights.qualifications) {
+    highlightEntries.push(srProfileQualificationHighlight(locale));
+  }
 
   const bio = getAboutBrandContent(locale).realestateBio;
 
@@ -149,9 +157,8 @@ export default function AboutPageContent() {
                 ))}
               </div>
 
-              {/* 社労士は"試験合格"のみ別立て表記（登録済み資格と横並びにしない・
-                  社労士_試験合格表記_実装指示_v1 §0）。データ未投入時は非表示 */}
-              {t("representative.srExamNote") && (
+              {/* 開業前に限り、登録資格とは別に試験合格を表示する。 */}
+              {!SR_LAUNCHED && t("representative.srExamNote") && t("representative.srExamNote") !== "representative.srExamNote" && (
                 <p className="mt-3 text-xs text-text-muted">
                   {t("representative.srExamNote")}
                 </p>

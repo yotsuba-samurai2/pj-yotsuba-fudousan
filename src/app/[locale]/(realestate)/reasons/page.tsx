@@ -1,3 +1,4 @@
+import { srCredentialLabel } from "@/lib/shared/sr-registration";
 // /reasons（選ばれる理由）— 相談先型クエリの最大の受け皿
 // 正本＝Drive「四葉_社労士開業2026_サイト切替設計/01_設計書と進行表/00_設計書_社労士開業サイト再設計_v1.md」§1-3
 // 指示書＝11B_事前公開_reasons-network.md（v1.3・2026-08-05）
@@ -336,7 +337,7 @@ export default async function Page() {
               className="h-20 w-20 flex-shrink-0 rounded-full object-cover sm:h-24 sm:w-24"
             />
             <p className="leading-relaxed text-text">
-              浦松丈二。宅地建物取引士（東京）第293544号・行政書士（登録番号第25087022号）。毎日新聞の記者として34年間、取材・編集・海外報道に携わり、中国総局長として中国や台湾、タイに駐在しました。中国語と英語でのご相談に対応します。
+              浦松丈二。宅地建物取引士（東京）第293544号・行政書士（登録番号第25087022号）{SR_LAUNCHED ? `・${srCredentialLabel("ja")}` : ""}。毎日新聞の記者として34年間、取材・編集・海外報道に携わり、中国総局長として中国や台湾、タイに駐在しました。中国語と英語でのご相談に対応します。
             </p>
           </div>
           <p className="mt-3 text-sm">

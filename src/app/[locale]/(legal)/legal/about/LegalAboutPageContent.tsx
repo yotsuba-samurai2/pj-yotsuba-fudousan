@@ -5,16 +5,22 @@ import { LocaleLink as Link } from "@/components/ui/LocaleLink";
 import { ArrowRight, MapPin } from "lucide-react";
 import { useTranslation } from "@/hooks/useTranslation";
 import { getAboutBrandContent } from "@/lib/about-brand-content";
+import { SR_LAUNCHED } from "@/lib/shared/office";
+import { srProfileQualificationHighlight, withSrProfileRegistration } from "@/lib/shared/about-qualification-label";
 
 export default function LegalAboutPageContent() {
   const { t, tArray, locale } = useTranslation();
 
   const officeInfo = tArray<{ label: string; value: string }>("legal.aboutPage.officeInfo");
 
+  const qualificationKey = "legal.aboutPage.highlights.qualifications.value";
+  const qualificationValue = t(qualificationKey);
   const highlights = [
     { label: t("legal.aboutPage.highlights.previousJob.label"), value: t("legal.aboutPage.highlights.previousJob.value") },
     { label: t("legal.aboutPage.highlights.overseas.label"), value: t("legal.aboutPage.highlights.overseas.value") },
-    { label: t("legal.aboutPage.highlights.qualifications.label"), value: t("legal.aboutPage.highlights.qualifications.value") },
+    SR_LAUNCHED && qualificationValue === qualificationKey
+      ? srProfileQualificationHighlight(locale)
+      : { label: t("legal.aboutPage.highlights.qualifications.label"), value: withSrProfileRegistration(qualificationValue, locale) },
     { label: t("legal.aboutPage.highlights.languages.label"), value: t("legal.aboutPage.highlights.languages.value") },
   ];
 

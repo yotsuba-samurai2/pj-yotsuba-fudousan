@@ -1,3 +1,5 @@
+import { SR_LAUNCHED } from "@/lib/shared/office";
+import { srCredentialLabel } from "@/lib/shared/sr-registration";
 import { SchoolEventsTeaser } from "@/components/gakku/SchoolEventsTeaser";
 import { HomeTopicPanels } from "@/components/shared/HomeTopicPanels";
 import { HomeEditorialHero } from "@/components/shared/HomeEditorialHero";
@@ -304,6 +306,7 @@ export default async function HomePageContent() {
             {tagline && <p className="mb-1 text-xs font-semibold tracking-wide text-primary-dark">{tagline}</p>}
             <h2 className="font-serif text-lg font-semibold text-ink">{c.repName}</h2>
             <p className="mt-1 text-sm leading-relaxed text-text-muted">{c.repBio}</p>
+            {SR_LAUNCHED && <p className="mt-1 text-xs text-text-muted">{srCredentialLabel(locale)}</p>}
             <p className="mt-2 text-xs">
               {c.profileLabel} <Link href={addLocalePrefix("/about/uramatsu",locale)} className="text-primary-dark underline">{c.repName}</Link> ／
               <a
