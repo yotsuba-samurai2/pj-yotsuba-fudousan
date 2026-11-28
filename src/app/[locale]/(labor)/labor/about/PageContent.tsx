@@ -4,6 +4,7 @@ import Image from "next/image";
 import { LocaleLink as Link } from "@/components/ui/LocaleLink";
 import { ArrowRight } from "lucide-react";
 import { useTranslation } from "@/hooks/useTranslation";
+import { getAboutBrandContent } from "@/lib/about-brand-content";
 import { withLaborOfficeEngagement, type OfficeInfoRow } from "@/lib/labor/office-engagement";
 
 export function LaborAboutPageContent() {
@@ -17,6 +18,8 @@ export function LaborAboutPageContent() {
   ];
 
   const officeInfo = withLaborOfficeEngagement(locale, tArray<OfficeInfoRow>("labor.aboutPage.officeInfo"));
+
+  const bio = getAboutBrandContent(locale).laborBio;
 
   return (
     <>
@@ -46,8 +49,7 @@ export function LaborAboutPageContent() {
               <h2 className="mt-2 text-2xl font-bold sm:text-3xl">{t("labor.aboutPage.representativeTitle")}</h2>
               <p className="mt-1 text-sm text-text-muted">{t("representative.nameEn")}</p>
               <div className="mt-8 space-y-4 text-sm leading-[1.9] text-text-muted">
-                <p>{t("labor.aboutPage.representativeBio1")}</p>
-                <p>{t("labor.aboutPage.representativeBio2")}</p>
+                {bio.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
               </div>
               <div className="mt-8 grid gap-3 sm:grid-cols-2">
                 {highlights.map(({ label, value }) => (

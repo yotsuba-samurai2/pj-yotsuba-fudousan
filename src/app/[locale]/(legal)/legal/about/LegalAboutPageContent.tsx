@@ -4,9 +4,10 @@ import Image from "next/image";
 import { LocaleLink as Link } from "@/components/ui/LocaleLink";
 import { ArrowRight, MapPin } from "lucide-react";
 import { useTranslation } from "@/hooks/useTranslation";
+import { getAboutBrandContent } from "@/lib/about-brand-content";
 
 export default function LegalAboutPageContent() {
-  const { t, tArray } = useTranslation();
+  const { t, tArray, locale } = useTranslation();
 
   const officeInfo = tArray<{ label: string; value: string }>("legal.aboutPage.officeInfo");
 
@@ -16,6 +17,8 @@ export default function LegalAboutPageContent() {
     { label: t("legal.aboutPage.highlights.qualifications.label"), value: t("legal.aboutPage.highlights.qualifications.value") },
     { label: t("legal.aboutPage.highlights.languages.label"), value: t("legal.aboutPage.highlights.languages.value") },
   ];
+
+  const bio = getAboutBrandContent(locale).legalBio;
 
   return (
     <>
@@ -45,8 +48,7 @@ export default function LegalAboutPageContent() {
               <h2 className="mt-2 text-2xl font-bold sm:text-3xl">{t("legal.aboutPage.representativeTitle")}</h2>
               <p className="mt-1 text-sm text-text-muted">{t("representative.nameEn")}</p>
               <div className="mt-8 space-y-4 text-sm leading-[1.9] text-text-muted">
-                <p>{t("legal.aboutPage.representativeBio1")}</p>
-                <p>{t("legal.aboutPage.representativeBio2")}</p>
+                {bio.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
               </div>
               <div className="mt-8 grid gap-3 sm:grid-cols-2">
                 {highlights.map(({ label, value }) => (
