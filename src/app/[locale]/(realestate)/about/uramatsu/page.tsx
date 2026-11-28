@@ -38,7 +38,7 @@ import { Faq, type FaqItem } from "@/components/shared/Faq";
 import { CtaBand } from "@/components/shared/CtaBand";
 import { JsonLd } from "@/components/seo/JsonLd";
 import type { LangCode } from "@/config/languages";
-import { SR_REGISTRATION_ID, SR_REGISTRATION_NUMBER } from "@/lib/shared/sr-registration";
+import { SR_REGISTRATION_ID, SR_REGISTRATION_NUMBER, srCredentialLabel } from "@/lib/shared/sr-registration";
 
 type Section = { h2: string; body: React.ReactNode };
 type ProfileCopy = {
@@ -48,7 +48,7 @@ type ProfileCopy = {
   breadcrumbAbout: string;
   breadcrumbCurrent: string;
   h1: string;
-  /** 冒頭の回答ブロック（タスクB-2確定文言＝一字一句不変） */
+  /** 冒頭の代表プロフィール要約。 */
   answerBlock: string;
   portraitAlt: string;
   sections: Section[];
@@ -114,13 +114,13 @@ const SR_FAQ: Record<string, string> = SR_LAUNCHED
 const JA: ProfileCopy = {
   metaTitle: "代表・浦松丈二プロフィール｜元新聞記者の宅建士・行政書士",
   metaDesc:
-    "四葉不動産株式会社 代表取締役・浦松丈二のプロフィール。毎日新聞で記者を34年務め、中国総局長として中国や台湾、タイに駐在。宅地建物取引士（東京・第293544号）・行政書士（登録番号第25087022号）。相続や外国人対応の相談に日本語・英語・中国語で応じます。法務手続きは併設の四葉行政書士事務所が別契約で受任します。",
+    `四葉不動産株式会社 代表取締役・浦松丈二のプロフィール。毎日新聞で記者を34年務め、中国総局長として中国や台湾、タイに駐在。宅地建物取引士（東京・第293544号）・行政書士（登録番号第25087022号）${SR_LAUNCHED ? "・" + srCredentialLabel("ja") : ""}。相続や外国人対応の相談に日本語・英語・中国語で応じます。法務手続きは併設の四葉行政書士事務所が別契約で受任します。`,
   breadcrumbHome: "ホーム",
   breadcrumbAbout: "会社概要",
   breadcrumbCurrent: "代表プロフィール",
   h1: "浦松丈二（うらまつ・じょうじ）",
   answerBlock:
-    `浦松丈二は四葉不動産株式会社の代表取締役で、宅地建物取引士（東京・第293544号）および行政書士（登録番号第25087022号）です。毎日新聞で記者を34年務め、中国総局長として中国や台湾、タイに駐在しました。${SR_META.ja}相続や外国人対応の相談に、日本語・英語・中国語で応じます。不動産取引は四葉不動産、法務手続きは四葉行政書士事務所がそれぞれ別契約で担当します。`,
+    `浦松丈二は四葉不動産株式会社の代表取締役で、宅地建物取引士（東京・第293544号）、行政書士（登録番号第25087022号）${SR_LAUNCHED ? `、${srCredentialLabel("ja")}` : ""}です。毎日新聞で記者を34年務め、中国総局長として中国や台湾、タイに駐在しました。${SR_META.ja}相続や外国人対応の相談に、日本語・英語・中国語で応じます。不動産取引は四葉不動産、法務手続きは四葉行政書士事務所がそれぞれ別契約で担当します。`,
   portraitAlt: "四葉不動産株式会社 代表取締役 浦松丈二",
   sections: [
     {
@@ -213,13 +213,13 @@ const EN: ProfileCopy = {
   metaTitle:
     "Joji Uramatsu, Representative｜Former Newspaper Journalist, Real Estate Transaction Specialist and Gyoseishoshi",
   metaDesc:
-    "Profile of Joji Uramatsu, Representative Director of Yotsuba Real Estate Co., Ltd. He spent 34 years as a journalist at the Mainichi Shimbun and was stationed in China, Taiwan, and Thailand as its China General Bureau Chief. Licensed Real Estate Transaction Specialist (Tokyo, No. 293544) and Gyoseishoshi (Administrative Scrivener) (Registration No. 25087022). Consultations on inheritance and support for non-Japanese clients in Japanese, English, and Chinese. Legal paperwork is handled by the affiliated Yotsuba Gyoseishoshi Office, engaged under a separate contract.",
+    `Profile of Joji Uramatsu, Representative Director of Yotsuba Real Estate Co., Ltd. He spent 34 years as a journalist at the Mainichi Shimbun and was stationed in China, Taiwan, and Thailand as its China General Bureau Chief. Licensed Real Estate Transaction Specialist (Tokyo, No. 293544)${SR_LAUNCHED ? "," : " and"} Gyoseishoshi (Administrative Scrivener) (Registration No. 25087022)${SR_LAUNCHED ? `, and ${srCredentialLabel("en")}` : ""}. Consultations on inheritance and support for non-Japanese clients in Japanese, English, and Chinese. Legal paperwork is handled by the affiliated Yotsuba Gyoseishoshi Office, engaged under a separate contract.`,
   breadcrumbHome: "Home",
   breadcrumbAbout: "About Us",
   breadcrumbCurrent: "Representative's Profile",
   h1: "Joji Uramatsu (Uramatsu Joji)",
   answerBlock:
-    `Joji Uramatsu is Representative Director of Yotsuba Real Estate Co., Ltd., a Licensed Real Estate Transaction Specialist (Tokyo, No. 293544) and a Gyoseishoshi (Administrative Scrivener) (Registration No. 25087022). He spent 34 years as a journalist at the Mainichi Shimbun and was stationed in China, Taiwan, and Thailand as its China General Bureau Chief. ${SR_META.en} He handles consultations on inheritance and support for non-Japanese clients in Japanese, English, and Chinese. Real estate transactions are handled by Yotsuba Real Estate Co., Ltd. and legal procedures by Yotsuba Gyoseishoshi Office, each engaged under a separate contract.`,
+    `Joji Uramatsu is Representative Director of Yotsuba Real Estate Co., Ltd., a Licensed Real Estate Transaction Specialist (Tokyo, No. 293544)${SR_LAUNCHED ? "," : " and"} a Gyoseishoshi (Administrative Scrivener) (Registration No. 25087022)${SR_LAUNCHED ? `, and a ${srCredentialLabel("en")}` : ""}. He spent 34 years as a journalist at the Mainichi Shimbun and was stationed in China, Taiwan, and Thailand as its China General Bureau Chief. ${SR_META.en} He handles consultations on inheritance and support for non-Japanese clients in Japanese, English, and Chinese. Real estate transactions are handled by Yotsuba Real Estate Co., Ltd. and legal procedures by Yotsuba Gyoseishoshi Office, each engaged under a separate contract.`,
   portraitAlt: "Joji Uramatsu, Representative Director of Yotsuba Real Estate Co., Ltd.",
   sections: [
     {
@@ -310,13 +310,13 @@ const EN: ProfileCopy = {
 const ZH_TW: ProfileCopy = {
   metaTitle: "代表・浦松丈二簡介｜前報社記者的宅地建物交易士・行政書士",
   metaDesc:
-    "四葉不動産株式会社 代表取締役・浦松丈二的簡介。在每日新聞擔任記者34年，以中國總局長身分派駐中國、台灣與泰國。宅地建物交易士（日本語：宅地建物取引士／東京・第293544號）・行政書士（登錄號碼第25087022號）。以日語・英語・中文回應繼承與外國人對應的諮詢。法務手續由併設的四葉行政書士事務所另行簽訂契約承辦。",
+    `四葉不動産株式会社 代表取締役・浦松丈二的簡介。在每日新聞擔任記者34年，以中國總局長身分派駐中國、台灣與泰國。宅地建物交易士（日本語：宅地建物取引士／東京・第293544號）・行政書士（登錄號碼第25087022號）${SR_LAUNCHED ? "、" + srCredentialLabel("zh-tw") : ""}。以日語・英語・中文回應繼承與外國人對應的諮詢。法務手續由併設的四葉行政書士事務所另行簽訂契約承辦。`,
   breadcrumbHome: "首頁",
   breadcrumbAbout: "公司概要",
   breadcrumbCurrent: "代表簡介",
   h1: "浦松丈二（Joji Uramatsu）",
   answerBlock:
-    `浦松丈二是四葉不動産株式会社的代表取締役（負責人），並具備宅地建物交易士（日本語：宅地建物取引士／東京・第293544號）及行政書士（登錄號碼第25087022號）資格。在每日新聞擔任記者34年，以中國總局長身分派駐中國、台灣與泰國。${SR_META["zh-tw"]}以日語・英語・中文回應繼承與外國人對應的諮詢。不動產交易由四葉不動産、法務手續由四葉行政書士事務所各自另行簽訂契約負責。`,
+    `浦松丈二是四葉不動産株式会社的代表取締役（負責人），並具備宅地建物交易士（日本語：宅地建物取引士／東京・第293544號）、行政書士（登錄號碼第25087022號）${SR_LAUNCHED ? `及${srCredentialLabel("zh-tw")}` : ""}資格。在每日新聞擔任記者34年，以中國總局長身分派駐中國、台灣與泰國。${SR_META["zh-tw"]}以日語・英語・中文回應繼承與外國人對應的諮詢。不動產交易由四葉不動産、法務手續由四葉行政書士事務所各自另行簽訂契約負責。`,
   portraitAlt: "四葉不動産株式会社 代表取締役 浦松丈二",
   sections: [
     {
@@ -405,13 +405,13 @@ const ZH_TW: ProfileCopy = {
 const ZH: ProfileCopy = {
   metaTitle: "代表・浦松丈二简介｜前报社记者的宅地建物交易士・行政书士",
   metaDesc:
-    "四葉不動産株式会社 代表取締役・浦松丈二的简介。在每日新闻担任记者34年，以中国总局长身份派驻中国、台湾与泰国。宅地建物交易士（日本語：宅地建物取引士／东京・第293544号）・行政书士（登录号码第25087022号）。以日语・英语・中文回应继承与外国人对应的咨询。法务手续由并设的四葉行政书士事务所另行签订合同承办。",
+    `四葉不動産株式会社 代表取締役・浦松丈二的简介。在每日新闻担任记者34年，以中国总局长身份派驻中国、台湾与泰国。宅地建物交易士（日本語：宅地建物取引士／东京・第293544号）・行政书士（登录号码第25087022号）${SR_LAUNCHED ? "、" + srCredentialLabel("zh") : ""}。以日语・英语・中文回应继承与外国人对应的咨询。法务手续由并设的四葉行政书士事务所另行签订合同承办。`,
   breadcrumbHome: "首页",
   breadcrumbAbout: "公司概要",
   breadcrumbCurrent: "代表简介",
   h1: "浦松丈二（Joji Uramatsu）",
   answerBlock:
-    `浦松丈二是四葉不動産株式会社的代表取締役（负责人），并具备宅地建物交易士（日本語：宅地建物取引士／东京・第293544号）及行政书士（登录号码第25087022号）资格。在每日新闻担任记者34年，以中国总局长身份派驻中国、台湾与泰国。${SR_META.zh}以日语・英语・中文回应继承与外国人对应的咨询。不动产交易由四葉不動産、法务手续由四葉行政书士事务所各自另行签订合同负责。`,
+    `浦松丈二是四葉不動産株式会社的代表取締役（负责人），并具备宅地建物交易士（日本語：宅地建物取引士／东京・第293544号）、行政书士（登录号码第25087022号）${SR_LAUNCHED ? `及${srCredentialLabel("zh")}` : ""}资格。在每日新闻担任记者34年，以中国总局长身份派驻中国、台湾与泰国。${SR_META.zh}以日语・英语・中文回应继承与外国人对应的咨询。不动产交易由四葉不動産、法务手续由四葉行政书士事务所各自另行签订合同负责。`,
   portraitAlt: "四葉不動産株式会社 代表取締役 浦松丈二",
   sections: [
     {
@@ -675,7 +675,7 @@ export default async function Page() {
       <article className="mx-auto max-w-3xl px-4 pb-16">
         <header className="pt-2">
           <h1 className="font-serif text-2xl font-semibold text-ink sm:text-3xl">{c.h1}</h1>
-          {/* 冒頭の回答ブロック（タスクB-2確定文言） */}
+          {/* 冒頭の代表プロフィール要約 */}
           <p className="mt-4 rounded-xl border border-border bg-primary-tint p-4 leading-relaxed text-ink">
             {c.answerBlock}
           </p>

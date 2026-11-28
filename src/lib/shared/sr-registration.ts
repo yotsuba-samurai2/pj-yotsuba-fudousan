@@ -45,3 +45,14 @@ export function srRegParen(locale: string): string {
       return SR_REG_PAREN.ja;
   }
 }
+
+/** 代表プロフィールで使う、資格名と登録番号を組み合わせた表記。 */
+export function srCredentialLabel(locale: string): string {
+  const titles: Record<string, string> = {
+    ja: "社会保険労務士",
+    en: "Certified Social Insurance and Labor Consultant",
+    "zh-tw": "社會保險勞務士",
+    zh: "社会保险劳务士",
+  };
+  return (titles[locale] ?? titles.ja) + srRegParen(locale);
+}

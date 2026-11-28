@@ -5,15 +5,21 @@ import { LocaleLink as Link } from "@/components/ui/LocaleLink";
 import { ArrowRight } from "lucide-react";
 import { useTranslation } from "@/hooks/useTranslation";
 import { getAboutBrandContent } from "@/lib/about-brand-content";
+import { SR_LAUNCHED } from "@/lib/shared/office";
+import { srProfileQualificationHighlight, withSrProfileRegistration } from "@/lib/shared/about-qualification-label";
 import { withLaborOfficeEngagement, type OfficeInfoRow } from "@/lib/labor/office-engagement";
 
 export function LaborAboutPageContent() {
   const { t, tArray, locale } = useTranslation();
 
+  const qualificationKey = "labor.aboutPage.highlights.qualifications.value";
+  const qualificationValue = t(qualificationKey);
   const highlights = [
     { label: t("labor.aboutPage.highlights.previousJob.label"), value: t("labor.aboutPage.highlights.previousJob.value") },
     { label: t("labor.aboutPage.highlights.overseas.label"), value: t("labor.aboutPage.highlights.overseas.value") },
-    { label: t("labor.aboutPage.highlights.qualifications.label"), value: t("labor.aboutPage.highlights.qualifications.value") },
+    SR_LAUNCHED && qualificationValue === qualificationKey
+      ? srProfileQualificationHighlight(locale)
+      : { label: t("labor.aboutPage.highlights.qualifications.label"), value: withSrProfileRegistration(qualificationValue, locale) },
     { label: t("labor.aboutPage.highlights.status.label"), value: t("labor.aboutPage.highlights.status.value") },
   ];
 
