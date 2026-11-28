@@ -6,19 +6,8 @@ import { ArrowRight, MapPin } from "lucide-react";
 import { useTranslation } from "@/hooks/useTranslation";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { BusinessCertification } from "@/components/shared/BusinessCertification";
-
-// 社労士カードは開業（SR_LAUNCHED=true・2026-09-01）まで非表示。
-// 翻訳DB側の realestate.aboutPage.groupBusinesses は3件あり、開業前は
-// [locale]/layout.tsx の stripSrEntities が社労士エントリを落とす（法27条）。
-// カードの描画は groupBusinesses.slice(0, groupLogos.length) なので、
-// この配列の長さが「出す枚数」になる＝ここも同じ条件で出し分ける。
-const groupLogos = [
-  "/yotsuba/realestate-square.png",
-  "/yotsuba/legal-square.png",
-  ...(process.env.NEXT_PUBLIC_SR_LAUNCHED === "true"
-    ? ["/yotsuba/labor-square.png"]
-    : []),
-];
+import { getAboutBrandContent } from "@/lib/about-brand-content";
+import { AboutServices } from "./AboutServices";
 
 // 代表プロフィール導線のロケール別ラベル（翻訳チェック§J1・2026-07-20）。
 // Firestoreに新キーを増やさずコード内直書き（B-1フッター「料金」等と同方式）。
@@ -78,9 +67,7 @@ export default function AboutPageContent() {
   >("realestate.aboutPage.highlights");
   const highlightEntries = Object.values(highlights);
 
-  const groupBusinesses = tArray<{ name: string; description: string }>(
-    "realestate.aboutPage.groupBusinesses"
-  );
+  const bio = getAboutBrandContent(locale).realestateBio;
 
   return (
     <div>
@@ -112,6 +99,8 @@ export default function AboutPageContent() {
         </div>
       </section>
 
+      <AboutServices locale={locale} />
+
       {/* ─── 代表紹介 ─── */}
       <section className="py-14 sm:py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -142,12 +131,7 @@ export default function AboutPageContent() {
               </p>
 
               <div className="mt-8 space-y-4 text-sm leading-[1.9] text-text-muted">
-                <p>
-                  {t("realestate.aboutPage.representativeBio1")}
-                </p>
-                <p>
-                  {t("realestate.aboutPage.representativeBio2")}
-                </p>
+                {bio.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
               </div>
 
               {/* Highlights */}
@@ -283,54 +267,6 @@ export default function AboutPageContent() {
                 </p>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ─── グループ事業 ─── */}
-      <section className="border-t border-border bg-surface-dim py-14 sm:py-20 md:py-28">
-        <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
-          <p className="cta-gradient-text text-sm font-medium tracking-[0.2em]">
-            {t("brand.groupNameEn")}
-          </p>
-          <h2 className="mt-3 text-2xl font-bold sm:text-3xl">
-            {t("realestate.aboutPage.partnersTitle")}
-          </h2>
-          <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-text-muted">
-            {t("realestate.aboutPage.partnersDescription1")}
-            <br />
-            {t("realestate.aboutPage.partnersDescription2")}
-          </p>
-
-          <div className="mt-12 grid gap-6 sm:grid-cols-3">
-            {groupBusinesses.slice(0, groupLogos.length).map((biz, i) => {
-              const isCurrent = i === 0;
-              return (
-                <div
-                  key={biz.name}
-                  className={`relative overflow-hidden rounded-xl border bg-surface p-6 ${
-                    isCurrent
-                      ? "border-primary/30 shadow-md"
-                      : "border-border"
-                  }`}
-                >
-                  {isCurrent && (
-                    <span className="absolute right-3 top-3 rounded-full bg-primary/10 px-2 py-0.5 text-[9px] font-medium text-primary">
-                      {t("common.thisSite")}
-                    </span>
-                  )}
-                  <Image
-                    src={groupLogos[i]}
-                    alt={biz.name}
-                    width={64}
-                    height={64}
-                    className="mx-auto h-16 w-16 object-contain"
-                  />
-                  <p className="mt-4 text-sm font-bold">{biz.name}</p>
-                  <p className="mt-1 text-xs text-text-muted">{biz.description}</p>
-                </div>
-              );
-            })}
           </div>
         </div>
       </section>
