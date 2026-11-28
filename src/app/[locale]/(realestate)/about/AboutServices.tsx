@@ -24,7 +24,7 @@ export function AboutServices({ locale }: { locale: string }) {
         <article className="mt-7 grid overflow-hidden rounded-sm bg-[#193e31] text-white lg:grid-cols-[minmax(0,2fr)_minmax(0,3fr)]">
           <div className="flex flex-col justify-center px-6 py-7 sm:px-9 sm:py-9">
             <p className="text-xs font-semibold tracking-[0.2em] text-[#d0e2d3]" lang="en">REAL ESTATE</p>
-            <h3 className="mt-3 text-2xl leading-snug font-bold text-balance sm:text-3xl">{copy.investmentTitle}</h3>
+            <h3 className="mt-3 text-2xl leading-snug font-bold text-balance sm:text-3xl">{locale === "ja" ? <>不動産の購入・売却、<br />賃貸・管理。</> : copy.investmentTitle}</h3>
             <p className="mt-4 max-w-[42ch] text-sm leading-relaxed text-[#f1f5ef] sm:text-base">{copy.investmentCopy}</p>
             <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2">
               <Link href="/toushi" className="inline-flex min-h-11 items-center gap-2 rounded-sm bg-[#fff8eb] px-3 py-2 text-sm font-semibold text-[#193e31] hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
