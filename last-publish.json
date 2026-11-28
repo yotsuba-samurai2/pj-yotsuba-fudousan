@@ -1,8 +1,36 @@
 {
   "dryRun": false,
-  "runAt": "2026-11-27T11:40:43.486Z",
-  "todayJst": "2026-11-27",
-  "targets": [],
+  "runAt": "2026-11-28T11:15:23.845Z",
+  "todayJst": "2026-11-28",
+  "targets": [
+    {
+      "key": "labor:zoen-gaikou-koji-tenko-kisetsu-hitorioyakata-roumu",
+      "business": "labor",
+      "slug": "zoen-gaikou-koji-tenko-kisetsu-hitorioyakata-roumu",
+      "title": "造園・外構工事の労務管理──天候休・季節変動の労働時間と一人親方の労災特別加入",
+      "date": "2026-11-27",
+      "category": "労働時間",
+      "path": "/labor/column/zoen-gaikou-koji-tenko-kisetsu-hitorioyakata-roumu"
+    },
+    {
+      "key": "legal:souzoku-shakuchiken-jinushi-taio-meigi-koukan-fuyou",
+      "business": "legal",
+      "slug": "souzoku-shakuchiken-jinushi-taio-meigi-koukan-fuyou",
+      "title": "借地上の建物を相続したら地主に何をすべき？──名義書換料は不要・更新料・建替承諾の整理",
+      "date": "2026-11-27",
+      "category": "相続の手続き（行政書士の実務から）",
+      "path": "/legal/column/souzoku-shakuchiken-jinushi-taio-meigi-koukan-fuyou"
+    },
+    {
+      "key": "realestate:souzoku-kubun-mansion-tainou-kanrihi-shokei-baikyaku",
+      "business": "realestate",
+      "slug": "souzoku-kubun-mansion-tainou-kanrihi-shokei-baikyaku",
+      "title": "相続した分譲マンションに管理費・修繕積立金の滞納があるとき──買主に承継される仕組みと売り方",
+      "date": "2026-11-27",
+      "category": "相続",
+      "path": "/column/souzoku-kubun-mansion-tainou-kanrihi-shokei-baikyaku"
+    }
+  ],
   "held": [
     {
       "key": "labor:insatsu-gyo-kaigyo-roumu-yuuki-youzai-shinya-anzen-eisei",
@@ -677,11 +705,76 @@
       "qualityHoldReasons": [
         "公開レビュー記録が未登録です"
       ]
+    },
+    {
+      "key": "labor:josanjo-josanshi-oncall-shukuchoku-kyoka-hitori-kaigyo-roumu",
+      "business": "labor",
+      "slug": "josanjo-josanshi-oncall-shukuchoku-kyoka-hitori-kaigyo-roumu",
+      "title": "助産所を開業する助産師の労務管理──オンコール手当・宿直許可・一人開業の労働保険",
+      "date": "2026-11-27",
+      "category": "労働時間",
+      "path": "/labor/column/josanjo-josanshi-oncall-shukuchoku-kyoka-hitori-kaigyo-roumu",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "legal:shuro-sentaku-shien-shitei-shinsei-2025-youken",
+      "business": "legal",
+      "slug": "shuro-sentaku-shien-shitei-shinsei-2025-youken",
+      "title": "就労選択支援事業（2025年10月創設）の指定申請──新サービスの人員・設備・申請の流れ",
+      "date": "2026-11-27",
+      "category": "障害福祉の許認可（行政書士の実務から）",
+      "path": "/legal/column/shuro-sentaku-shien-shitei-shinsei-2025-youken",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録です"
+      ]
+    },
+    {
+      "key": "realestate:byoji-byogoji-hoiku-bukken-youken-anseishitsu",
+      "business": "realestate",
+      "slug": "byoji-byogoji-hoiku-bukken-youken-anseishitsu",
+      "title": "病児・病後児保育室はどんな物件なら開ける？──安静室・医療連携・用途の確認ポイント",
+      "date": "2026-11-27",
+      "category": "投資・事業用不動産",
+      "path": "/column/byoji-byogoji-hoiku-bukken-youken-anseishitsu",
+      "qualityHoldReasons": [
+        "公開レビュー記録が未登録です"
+      ]
     }
   ],
   "scheduled": [],
   "ok": false,
-  "published": [],
+  "published": [
+    {
+      "key": "labor:zoen-gaikou-koji-tenko-kisetsu-hitorioyakata-roumu",
+      "business": "labor",
+      "slug": "zoen-gaikou-koji-tenko-kisetsu-hitorioyakata-roumu",
+      "title": "造園・外構工事の労務管理──天候休・季節変動の労働時間と一人親方の労災特別加入",
+      "date": "2026-11-27",
+      "category": "労働時間",
+      "path": "/labor/column/zoen-gaikou-koji-tenko-kisetsu-hitorioyakata-roumu"
+    },
+    {
+      "key": "legal:souzoku-shakuchiken-jinushi-taio-meigi-koukan-fuyou",
+      "business": "legal",
+      "slug": "souzoku-shakuchiken-jinushi-taio-meigi-koukan-fuyou",
+      "title": "借地上の建物を相続したら地主に何をすべき？──名義書換料は不要・更新料・建替承諾の整理",
+      "date": "2026-11-27",
+      "category": "相続の手続き（行政書士の実務から）",
+      "path": "/legal/column/souzoku-shakuchiken-jinushi-taio-meigi-koukan-fuyou"
+    },
+    {
+      "key": "realestate:souzoku-kubun-mansion-tainou-kanrihi-shokei-baikyaku",
+      "business": "realestate",
+      "slug": "souzoku-kubun-mansion-tainou-kanrihi-shokei-baikyaku",
+      "title": "相続した分譲マンションに管理費・修繕積立金の滞納があるとき──買主に承継される仕組みと売り方",
+      "date": "2026-11-27",
+      "category": "相続",
+      "path": "/column/souzoku-kubun-mansion-tainou-kanrihi-shokei-baikyaku"
+    }
+  ],
+  "skipped": [],
   "errors": [
     {
       "key": "labor:insatsu-gyo-kaigyo-roumu-yuuki-youzai-shinya-anzen-eisei",
@@ -906,9 +999,21 @@
     {
       "key": "realestate:souzoku-nisetai-jutaku-kubun-toki-kyoyu-baikyaku",
       "message": "品質確認待ち：公開レビュー記録が未登録です"
+    },
+    {
+      "key": "labor:josanjo-josanshi-oncall-shukuchoku-kyoka-hitori-kaigyo-roumu",
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
+    },
+    {
+      "key": "legal:shuro-sentaku-shien-shitei-shinsei-2025-youken",
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
+    },
+    {
+      "key": "realestate:byoji-byogoji-hoiku-bukken-youken-anseishitsu",
+      "message": "品質確認待ち：公開レビュー記録が未登録です"
     }
   ],
-  "blocked": "56本は品質確認待ちのため自動公開しません。記事別の理由を確認してください。forceでも解除しません。",
-  "outcome": "held",
+  "blocked": "59本は品質確認待ちのため自動公開しません。記事別の理由を確認してください。forceでも解除しません。",
+  "outcome": "partial",
   "httpStatus": "409"
 }
