@@ -67,9 +67,15 @@ export default function AboutPageContent() {
   const highlights = tObject<
     Record<string, { label: string; value: string }>
   >("realestate.aboutPage.highlights");
-  const highlightEntries = Object.entries(highlights).map(([key, row]) =>
-    key === "qualifications" ? { ...row, value: withSrProfileRegistration(row.value, locale) } : row
-  );
+  const highlightEntries = Object.entries(highlights).map(([key, row]) => {
+    if (key === "qualifications") {
+      return { ...row, value: withSrProfileRegistration(row.value, locale) };
+    }
+    if (key === "overseas" && locale === "zh") {
+      return { ...row, value: "曾驻中国和泰国" };
+    }
+    return row;
+  });
 
   if (SR_LAUNCHED && !highlights.qualifications) {
     highlightEntries.push(srProfileQualificationHighlight(locale));
