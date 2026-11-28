@@ -5,9 +5,12 @@ type Finished = { intent: string; state: "saved" | "reviewed" };
 type Receipt = { intent: string; state: "sending" | "saved" | "refresh_pending" | "reviewed"; recent?: Finished[] };
 const historyLimit = 32;
 /** A second signed-in operator does not inherit this operator's write markers. */
-export function operatorReceipts(raw: ReceiptStore, uid: string): ReceiptStore {
+function operatorPrefix(uid: string) {
   if (!/^[a-z0-9-]{1,128}$/i.test(uid)) throw Error("操作者を識別できません。");
-  const prefix = "yotsuba:operator:"+uid+":";
+  return "yotsuba:operator:"+uid+":";
+}
+export function operatorReceipts(raw: ReceiptStore, uid: string): ReceiptStore {
+  const prefix = operatorPrefix(uid);
   return { getItem:k=>raw.getItem(prefix+k), setItem:(k,v)=>raw.setItem(prefix+k,v), removeItem:k=>raw.removeItem(prefix+k) };
 }
 type Reply = { ok: boolean; status: number; body: unknown };
@@ -82,6 +85,27 @@ export function inspectReceipt(store: ReceiptStore, slug: string, intent: string
   if (!safeSlug.test(slug) || !safeDigest.test(intent)) return held("対象を識別できないため送信しません。");
   try { return fromReceipt(load(store, slug), slug, intent); } catch { return storageHeld(slug); }
 }
+/** Recover pending receipts after reloading the same tab, without retaining any input. */
+export function listPendingReceipts(raw: ReceiptStore & Pick<Storage,"length"|"key">, uid: string): BatchResult[] {
+  const prefix = operatorPrefix(uid) + key("");
+  const scoped = operatorReceipts(raw, uid);
+  const pending: BatchResult[] = [];
+  for (let i = 0; i < raw.length; i++) {
+    const k = raw.key(i);
+    if (!k?.startsWith(prefix)) continue;
+    const slug = k.slice(prefix.length);
+    if (!safeSlug.test(slug)) continue;
+    try {
+      const receipt = load(scoped, slug);
+      if (receipt?.state === "sending" || receipt?.state === "refresh_pending") {
+        const marker = fromReceipt(receipt,slug,receipt.intent);
+        if (marker) pending.push(marker);
+      }
+    } catch { pending.push(storageHeld(slug)); }
+  }
+  return pending.sort((a,b)=>(a.slug??"").localeCompare(b.slug??""));
+}
+
 /** Called only after the operator has compared a fresh inventory and explicitly acknowledged. Never a write authorization. */
 export function acknowledgeReadback(store: ReceiptStore, slug: string, seenIntent: string, finding: "reconciled"|"confirmed_not_saved" = "reconciled"): boolean {
   if (!safeSlug.test(slug) || !safeDigest.test(seenIntent)) return false;
@@ -134,15 +158,35 @@ export async function applyWithReceipt({ store, slug, intent, closing, send }: {
   return {action:String(a), slug};
 }
 
+/** Whole-batch interruptions are distinct from an individual room being held. */
+export class BatchInterrupted extends Error {}
+export class RetryableReadInterruption extends BatchInterrupted {}
+
+/** Only safe preflight reads use this. A save or upload must never be passed in. */
+export async function retryPreflightRead<T>(
+  check:()=>Promise<T>,
+  wait:()=>Promise<void> = () => new Promise(resolve=>setTimeout(resolve,800)),
+): Promise<T> {
+  try { return await check(); }
+  catch (e) {
+    if (!(e instanceof RetryableReadInterruption)) throw e;
+    await wait();
+    return check();
+  }
+}
+
 /** Only the exact target/action approved in the visible dry run can be applied; fresh preflight remains mandatory. */
-export async function runReviewedBatch<T>({records, approved, check, apply, onProgress}: {
+export async function runReviewedBatch<T>({records, approved, check, apply, onProgress, completed = [], onPause}: {
   records: readonly T[]; approved?: readonly BatchResult[]; check: (r:T) => Promise<BatchResult>;
   apply: (r:T, checked:BatchResult) => Promise<BatchResult>; onProgress?:(snapshot:BatchResult[])=>void;
+  completed?: readonly BatchResult[]; onPause?:(reason:string)=>void;
 }): Promise<BatchResult[]> {
-  const results: BatchResult[] = [];
+  if (completed.length > records.length) throw new Error("前回の処理件数と入力が一致しません。");
+  const results: BatchResult[] = [...completed];
   const counts = new Map<string, number>();
   for (const r of approved ?? []) if (r.slug) counts.set(r.slug,(counts.get(r.slug) ?? 0)+1);
-  for (const [i, record] of records.entries()) {
+  for (let i = completed.length; i < records.length; i++) {
+    const record = records[i];
     let result: BatchResult;
     try {
       const prior = approved?.[i];
@@ -155,7 +199,13 @@ export async function runReviewedBatch<T>({records, approved, check, apply, onPr
           result = held("事前確認した住戸又は操作と一致しません。再確認してから反映してください。", prior?.slug);
         else result = await apply(record, fresh);
       }
-    } catch (e) { result = held(e instanceof Error ? e.message : "処理に失敗しました。"); }
+    } catch (e) {
+      if (e instanceof BatchInterrupted) {
+        onPause?.(e.message);
+        break;
+      }
+      result = held(e instanceof Error ? e.message : "処理に失敗しました。");
+    }
     results.push(result); onProgress?.([...results]);
   }
   return results;
