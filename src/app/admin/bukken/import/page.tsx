@@ -7,7 +7,7 @@ import { buildRecheckQueue, parseVerificationBatch, type RecheckRow } from "@/li
 import type { RentalImport } from "@/lib/rental-import/validation";
 import { DIRECT_RENTAL_SEARCH_AREA_LABEL } from "@/lib/rental-import/direct-search-area";
 
-import { acknowledgeReadback, applyWithReceipt, batchAssets, operatorReceipts, inspectReceipt, intentDigest, isReady, listPendingReceipts, runReviewedBatch, summaryReport, type BatchResult as Result } from "@/lib/rental-import/batch-review";
+import { BatchInterrupted, RetryableReadInterruption, retryPreflightRead, acknowledgeReadback, applyWithReceipt, batchAssets, operatorReceipts, inspectReceipt, intentDigest, isReady, listPendingReceipts, runReviewedBatch, summaryReport, type BatchResult as Result } from "@/lib/rental-import/batch-review";
 const LABELS: Record<string, string> = { ready: "登録条件を確認済み", "ready-close": "掲載終了を確認済み・反映すると公開停止", held: "確認待ち", created: "登録済み", updated: "更新済み", closed: "募集終了に変更済み", unchanged: "変更なし", readback_required: "送信結果が不明・再送せず読戻し", saved_refresh_pending: "物件データは保存済み・公開ページの更新要求は失敗", saved_readback_required: "物件データは保存済み・送信記録の再確認が必要", previously_saved: "同じ入力の保存履歴あり・再送せず", already_reviewed: "読戻し済み・同じ入力は再送しません", confirmed_not_saved:"未保存を担当者が確認・同じ入力は再送しません" };
 
 export default function RentalImportPage() {
@@ -41,21 +41,37 @@ function RentalImportBatch({operator}:{operator:string}) {
   const [assetInputKey, setAssetInputKey] = useState(0);
   const [pendingReceipts,setPendingReceipts] = useState<Result[]>([]);
   const [observed, setObserved] = useState<Map<string,Observation>>(new Map());
+  const [pause, setPause] = useState<{reason:string; write:boolean; approved?:Result[]}|null>(null);
   const [lastRun, setLastRun] = useState<{startedAt:string; stage:"check"|"apply"} | null>(null);
-  const reset = () => { setResults([]); setError(""); setWatchData(""); setObserved(new Map()); setLastRun(null); };
+  const reset = () => { setPause(null); setResults([]); setError(""); setWatchData(""); setObserved(new Map()); setLastRun(null); };
   async function token() {
-    const {data:{session}} = await getSupabaseClient().auth.getSession();
-    if (!active.current || !session || session.user.id !== operator) throw new Error("再ログインし、同じ操作者で登録前チェックから再開してください。");
+    const {data:{session},error} = await getSupabaseClient().auth.getSession().catch(()=>{
+      throw new BatchInterrupted("管理画面のログイン状態を確認できません。接続をご確認ください。");
+    });
+    if (error || !active.current || !session || session.user.id !== operator) throw new BatchInterrupted("四葉の管理画面の認証を確認してください。");
     return session.access_token;
   }
-  function post(body: Record<string, unknown> | FormData, access: string) {
+  function post(body: Record<string, unknown> | FormData, access: string, preflight = false) {
     if (!active.current) throw new Error("操作者が変わったため処理を停止しました。");
     const form = body instanceof FormData;
-    return fetch("/api/admin/bukken/import", { method: "POST", signal:AbortSignal.timeout(form ? 120_000 : 45_000), headers: { Authorization: `Bearer ${access}`, ...(!form ? { "Content-Type": "application/json" } : {}) }, body: form ? body : JSON.stringify(body) });
+    return fetch("/api/admin/bukken/import", { method: "POST", signal:AbortSignal.timeout(form ? 120_000 : preflight ? 20_000 : 45_000), headers: { Authorization: `Bearer ${access}`, ...(!form ? { "Content-Type": "application/json" } : {}) }, body: form ? body : JSON.stringify(body) });
   }
   async function request(body: Record<string, unknown> | FormData) {
-    const response = await post(body, await token());
-    const value = await response.json();
+    const access = await token();
+    const preflight = !(body instanceof FormData) && (body.action==="check" || body.action==="check-close");
+    const temporaryInterruption = preflight ? RetryableReadInterruption : BatchInterrupted;
+    let response: Response;
+    try { response = await post(body,access,preflight); }
+    catch { throw new temporaryInterruption("管理画面との通信が中断しました。接続が戻ったら再開してください。"); }
+    if (response.status === 401 || response.status === 403)
+      throw new BatchInterrupted("四葉の管理画面の認証または権限を確認してください。");
+    if (response.status === 429)
+      throw new BatchInterrupted("管理画面への接続が混み合っています。しばらくしてから再開してください。");
+    if (response.status >= 500)
+      throw new temporaryInterruption("管理画面が一時的に応答できません。しばらくしてから再開してください。");
+    let value;
+    try { value = await response.json(); }
+    catch { throw new BatchInterrupted("管理画面から結果を読み取れませんでした。接続を確認してください。"); }
     if (!response.ok) throw new Error(typeof value?.error === "string" ? value.error : "処理に失敗しました");
     return value;
   }
@@ -63,18 +79,20 @@ function RentalImportBatch({operator}:{operator:string}) {
     try { return operatorReceipts(window.sessionStorage,operator); }
     catch { throw new Error("このタブの送信記録を利用できないため、安全のため送信しません。"); }
   }
-  async function run(write: boolean) {
-    if (running.current || (write && !results.some(isReady))) return;
+  async function run(write: boolean, resume = false) {
+    if (running.current || (resume ? (!pause || pause.write !== write) : (!!pause || (write && !results.some(isReady))))) return;
     running.current = true;
-    const approved = write ? [...results] : undefined;
+    const approved = resume ? pause?.approved : write ? [...results] : undefined;
+    const completed = resume ? [...results] : [];
     const assets = batchAssets(files);
-    setBusy(true); setError(""); setResults([]); setObserved(new Map());
-    setLastRun({startedAt:new Date().toISOString(),stage:write ? "apply" : "check"});
+    setBusy(true); setError(""); setPause(null); setResults(completed); setObserved(new Map());
+    if (!resume) setLastRun({startedAt:new Date().toISOString(),stage:write ? "apply" : "check"});
     try {
       await runReviewedBatch({
-        records, approved, onProgress:setResults,
+        records, approved, completed, onProgress:setResults,
+        onPause:reason=>setPause({reason,write,approved}),
         check:async (record) => {
-          const checked: Result = await request({record, mode, maintenance:operation === "maintenance", action:operation === "close" ? "check-close" : "check"});
+          const checked: Result = await retryPreflightRead(() => request({record, mode, maintenance:operation === "maintenance", action:operation === "close" ? "check-close" : "check"}));
           // Server preflight remains authoritative. A local checkpoint can only inhibit a write.
           if (!checked.slug) return checked;
           const saved = storage();
@@ -254,10 +272,16 @@ function RentalImportBatch({operator}:{operator:string}) {
         </>}
         <p className="text-sm text-text-muted">読み込み：{records.length}件 ／ 画像：{files.length}点</p>
         <div className="flex flex-wrap gap-3">
-          <button disabled={busy || !records.length} onClick={() => run(false)} className="rounded-lg border border-border px-4 py-2 text-sm disabled:opacity-40">登録前チェック</button>
-          <button disabled={busy || !results.some(isReady)} onClick={() => run(true)} className="rounded-lg bg-primary px-4 py-2 text-sm text-white disabled:opacity-40">{busy ? "処理中…" : operation === "close" ? "確認済みの物件を募集終了にする" : "確認結果を反映する（登録・公開停止）"}</button>
+          <button disabled={busy || !!pause || !records.length} onClick={() => run(false)} className="rounded-lg border border-border px-4 py-2 text-sm disabled:opacity-40">登録前チェック</button>
+          <button disabled={busy || !!pause || !results.some(isReady)} onClick={() => run(true)} className="rounded-lg bg-primary px-4 py-2 text-sm text-white disabled:opacity-40">{busy ? "処理中…" : operation === "close" ? "確認済みの物件を募集終了にする" : "確認結果を反映する（登録・公開停止）"}</button>
         </div>
       </div>
+      {pause && <div role="status" className="mt-4 rounded-lg border border-border p-4 text-sm">
+        <p className="font-semibold">一時中断：{records.length}件中 {results.length}件まで処理</p>
+        <p>{pause.reason}</p>
+        <p>処理済みの行は再送しません。残りの行は最新の条件を再チェックします。入力や画像を変更すると、新しく確認し直します。</p>
+        <button type="button" disabled={busy} className="mt-2 rounded border border-border px-3 py-2 disabled:opacity-40" onClick={()=>run(pause.write,true)}>未処理分から再開</button>
+      </div>}
       {lastRun && <div className="mt-4 text-sm">
         <button type="button" disabled={busy} onClick={downloadReport} className="rounded border px-3 py-2">今回の処理記録を保存（社内用JSON）</button>
         <p className="mt-2 text-text-muted">保存済みは四葉の管理データの状態です。公開表示・ATBBは別途確認してください。応答不明の住戸は再送せず、他の通過分を進めます。</p>

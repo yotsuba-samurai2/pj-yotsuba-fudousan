@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from "vitest";
-import { applyWithReceipt, inspectReceipt, acknowledgeReadback, runReviewedBatch, intentDigest, batchAssets, operatorReceipts, listPendingReceipts, summaryReport, type BatchResult, type ReceiptStore } from "../batch-review";
+import { BatchInterrupted, RetryableReadInterruption, retryPreflightRead, applyWithReceipt, inspectReceipt, acknowledgeReadback, runReviewedBatch, intentDigest, batchAssets, operatorReceipts, listPendingReceipts, summaryReport, type BatchResult, type ReceiptStore } from "../batch-review";
 
 const slug = "rent-" + "a".repeat(24);
 const slug2 = "rent-" + "b".repeat(24);
@@ -139,5 +139,59 @@ describe("同じタブの送信記録を再表示", () => {
     const raw={...store,get length(){return data.size;},key:(i:number)=>[...data.keys()][i]??null};
     raw.setItem("yotsuba:operator:user-a:yotsuba:rental-write:v1:"+slug,"invalid");
     expect(listPendingReceipts(raw,"user-a")).toEqual([expect.objectContaining({slug,action:"held"})]);
+  });
+});
+
+describe("通信中断後の再開", () => {
+  it("反映済みの行を再送せず、残りだけ最新条件で再確認する", async () => {
+    const approved=[ready(),ready(slug2)];
+    const apply=vi.fn(async (_:number,r:BatchResult)=>({action:"updated",slug:r.slug}));
+    const pause=vi.fn();
+    const check=vi.fn(async (i:number)=>{
+      if (i===1) throw new BatchInterrupted("接続中断");
+      return ready();
+    });
+    const completed=await runReviewedBatch({records:[0,1],approved,check,apply,onPause:pause});
+    expect(completed).toEqual([{action:"updated",slug}]);
+    expect(pause).toHaveBeenCalledWith("接続中断");
+    const recheck=vi.fn(async()=>({action:"held",slug:slug2,reasons:["募集状況が変わった"]}));
+    const resumed=await runReviewedBatch({records:[0,1],approved,completed,check:recheck,apply});
+    expect(recheck.mock.calls).toHaveLength(1);
+    expect(apply.mock.calls.map(([index])=>index)).toEqual([0]);
+    expect(resumed.map(r=>r.action)).toEqual(["updated","held"]);
+  });
+  it("保存応答が不明な行は読み戻しとして保持し、再開でも再送しない", async () => {
+    const approved=[ready(),ready(slug2)];
+    const {store}=memory();
+    const send=vi.fn(async()=>{throw Error("timeout");});
+    const apply=vi.fn(async()=>request(store,send));
+    const pause=vi.fn();
+    const completed=await runReviewedBatch({records:[0,1],approved,check:async i=>{
+      if(i===1) throw new BatchInterrupted("中断");
+      return ready();
+    },apply,onPause:pause});
+    expect(completed.map(r=>r.action)).toEqual(["readback_required"]);
+    const next=vi.fn(async (_:number,r:BatchResult)=>({action:"updated",slug:r.slug}));
+    const resumed=await runReviewedBatch({records:[0,1],approved,completed,check:async()=>ready(slug2),apply:next});
+    expect(send).toHaveBeenCalledTimes(1);
+    expect(next.mock.calls.map(([index])=>index)).toEqual([1]);
+    expect(resumed.map(r=>r.action)).toEqual(["readback_required","updated"]);
+  });
+});
+
+describe("読取のみの再試行", () => {
+  it("一時的な失敗に限り、1回だけ確認し直す", async () => {
+    const wait=vi.fn(async()=>{});
+    const successful=vi.fn<()=>Promise<string>>()
+      .mockRejectedValueOnce(new RetryableReadInterruption("一時障害")).mockResolvedValueOnce("ready");
+    await expect(retryPreflightRead(successful,wait)).resolves.toBe("ready");
+    expect(successful).toHaveBeenCalledTimes(2);
+    expect(wait).toHaveBeenCalledTimes(1);
+    const down=vi.fn(async()=>{throw new RetryableReadInterruption("継続中");});
+    await expect(retryPreflightRead(down,wait)).rejects.toThrow("継続中");
+    expect(down).toHaveBeenCalledTimes(2);
+    const auth=vi.fn(async()=>{throw new BatchInterrupted("権限なし");});
+    await expect(retryPreflightRead(auth,wait)).rejects.toThrow("権限なし");
+    expect(auth).toHaveBeenCalledTimes(1);
   });
 });

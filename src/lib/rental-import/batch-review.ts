@@ -158,15 +158,35 @@ export async function applyWithReceipt({ store, slug, intent, closing, send }: {
   return {action:String(a), slug};
 }
 
+/** Whole-batch interruptions are distinct from an individual room being held. */
+export class BatchInterrupted extends Error {}
+export class RetryableReadInterruption extends BatchInterrupted {}
+
+/** Only safe preflight reads use this. A save or upload must never be passed in. */
+export async function retryPreflightRead<T>(
+  check:()=>Promise<T>,
+  wait:()=>Promise<void> = () => new Promise(resolve=>setTimeout(resolve,800)),
+): Promise<T> {
+  try { return await check(); }
+  catch (e) {
+    if (!(e instanceof RetryableReadInterruption)) throw e;
+    await wait();
+    return check();
+  }
+}
+
 /** Only the exact target/action approved in the visible dry run can be applied; fresh preflight remains mandatory. */
-export async function runReviewedBatch<T>({records, approved, check, apply, onProgress}: {
+export async function runReviewedBatch<T>({records, approved, check, apply, onProgress, completed = [], onPause}: {
   records: readonly T[]; approved?: readonly BatchResult[]; check: (r:T) => Promise<BatchResult>;
   apply: (r:T, checked:BatchResult) => Promise<BatchResult>; onProgress?:(snapshot:BatchResult[])=>void;
+  completed?: readonly BatchResult[]; onPause?:(reason:string)=>void;
 }): Promise<BatchResult[]> {
-  const results: BatchResult[] = [];
+  if (completed.length > records.length) throw new Error("前回の処理件数と入力が一致しません。");
+  const results: BatchResult[] = [...completed];
   const counts = new Map<string, number>();
   for (const r of approved ?? []) if (r.slug) counts.set(r.slug,(counts.get(r.slug) ?? 0)+1);
-  for (const [i, record] of records.entries()) {
+  for (let i = completed.length; i < records.length; i++) {
+    const record = records[i];
     let result: BatchResult;
     try {
       const prior = approved?.[i];
@@ -179,7 +199,13 @@ export async function runReviewedBatch<T>({records, approved, check, apply, onPr
           result = held("事前確認した住戸又は操作と一致しません。再確認してから反映してください。", prior?.slug);
         else result = await apply(record, fresh);
       }
-    } catch (e) { result = held(e instanceof Error ? e.message : "処理に失敗しました。"); }
+    } catch (e) {
+      if (e instanceof BatchInterrupted) {
+        onPause?.(e.message);
+        break;
+      }
+      result = held(e instanceof Error ? e.message : "処理に失敗しました。");
+    }
     results.push(result); onProgress?.([...results]);
   }
   return results;
